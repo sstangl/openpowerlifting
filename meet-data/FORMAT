@@ -1,12 +1,13 @@
 Meet data is stored in CSV format.
 
-[ 0] YEAR, always 4 digits.
-[ 1] MONTH, always 2 digits.
-[ 2] DAY, always 2 digits.
-[ 3] COUNTRY, usually "USA".
-[ 4] STATE, where applicable.
-[ 5] TOWN, where reported.
-[ 6] NAME, the optional name of the meet.
+[ 0] FEDERATION, in acronym form.
+[ 1] YEAR, always 4 digits.
+[ 2] MONTH, always 2 digits.
+[ 3] DAY, always 2 digits.
+[ 4] COUNTRY, usually "USA".
+[ 5] STATE, where applicable.
+[ 6] TOWN, where reported.
+[ 7] NAME, the optional name of the meet.
 
 Lift data is stored in CSV format.
 
