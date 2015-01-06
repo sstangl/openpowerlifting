@@ -1,0 +1,76 @@
+Meet data is stored in CSV format.
+
+[ 0] YEAR, always 4 digits.
+[ 1] MONTH, always 2 digits.
+[ 2] DAY, always 2 digits.
+[ 3] COUNTRY, usually "USA".
+[ 4] STATE, where applicable.
+[ 5] TOWN, where reported.
+[ 6] NAME, the optional name of the meet.
+
+Lift data is stored in CSV format.
+
+The goal of the format is to contain all uncalculatable lift information.
+Information that may be inferred from the data, such as totals, wilks, or specific records,
+should be calculated.
+
+The format is standardized for squat/bench/deadlift powerlifting. Some organizations include
+other lifts, such as the overhead press or barbell curls, and do not fit this format.
+
+All weights are in kg, unless otherwise specified by appending "lbs" to the field.
+Fields below that say "in kg" may be written as, e.g. for the squat, "-202.5*lbs".
+
+Note that lifters may be competing in more than one division, for example
+both in Masters and in Open. Such lifters will receive multiple entries.
+
+# General details for all lifters.
+[ 0] NAME, in First Middle Last order. The middle name is optional.
+
+[ 1] UID, an optional number used to uniquely identify a lifter across meets.
+     Blank if a UID is not being used.
+
+# Entry details for this particular competition.
+[ 2] SEX, M or F.
+
+[ 3] BODYWEIGHT, in kg. Sometimes meet results don't record the bodyweight, but only record
+     the weight class in which the lifter competed. In that case, BODYWEIGHT will be blank.
+
+[ 4] WEIGHTCLASS, either kg or "SHW". The range of the weightclass must be tracked per-federation.
+     The Super-Heavyweight class (SHW, usually 308+) is recorded as "SHW".
+
+[ 5] AGE, in years. Sometimes meet results don't record the age, but only record
+     the division in which the lifter competed, such as "Women's Open".
+     In that case, AGE will be blank. If the lifter is tracked via UID across several years,
+     AGE can be retroactively discovered and filled in.
+
+[ 6] DIVISION, a text field. Lifters in the same division compete against each other via the
+     Wilks formula (usually). Examples are "Women's Open" and "Teen Men 13-16".
+     If the lifter is competing Bench-Only or Deadlift-Only, this is tracked in the division
+     as, for example, "Bench-Only Women's Open".
+
+[ 7] EQUIPMENT, a text field. Normal entries are "Raw", "Wraps", "Single-Ply", and "Multi-Ply".
+     May be left blank if unspecified.
+
+# Lift details.
+# If a lift is entered as a negative value, the lift has been failed.
+# If a lift is blank, it was never attempted.
+# If only the max lift was recorded, it is left in the first slot.
+[ 8] SQUAT1, in kg, with an optional postfixed "*" if it was a record.
+[ 9] SQUAT2, in kg, with an optional postfixed "*" if it was a record.
+[10] SQUAT3, in kg, with an optional postfixed "*" if it was a record.
+[11] SQUAT4, in kg, with an optional postfixed "*" if it was a record.
+     A fourth squat is sometimes permitted when attempting to break a record.
+
+[12] BENCH1, in kg, with an optional postfixed "*" if it was a record.
+[13] BENCH2, in kg, with an optional postfixed "*" if it was a record.
+[14] BENCH3, in kg, with an optional postfixed "*" if it was a record.
+[15] BENCH4, in kg, with an optional postfixed "*" if it was a record.
+     A fourth bench is sometimes permitted when attempting to break a record.
+
+[16] DEADLIFT1, in kg, with an optional postfixed "*" if it was a record.
+[17] DEADLIFT2, in kg, with an optional postfixed "*" if it was a record.
+[18] DEADLIFT3, in kg, with an optional postfixed "*" if it was a record.
+[19] DEADLIFT4, in kg, with an optional postfixed "*" if it was a record.
+     A fourth deadlift is sometimes permitted when attempting to break a record.
+
+[20] TOTAL, in kg, with an optional postfixed "*" if it was a record.
