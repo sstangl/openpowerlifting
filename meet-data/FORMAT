@@ -49,8 +49,8 @@ both in Masters and in Open. Such lifters will receive multiple entries.
      If the lifter is competing Bench-Only or Deadlift-Only, this is tracked in the division
      as, for example, "Bench-Only Women's Open".
 
-[ 7] EQUIPMENT, a text field. Normal entries are "Raw", "Wraps", "Single-Ply", and "Multi-Ply".
-     May be left blank if unspecified.
+[ 7] EQUIPMENT, a text field. Normal entries are "R" for raw, "W" for knee wraps,
+     "S" for single-ply, and "M" for multi-ply. May be left blank if unspecified.
 
 # Lift details.
 # If a lift is entered as a negative value, the lift has been failed.
