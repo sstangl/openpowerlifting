@@ -1,0 +1,156 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+
+# Helper script for extract-csv.
+
+# Given a CSV file derived from a results.txt file, track stateful information such as
+# division, weight class, and sex, and automatically insert that information into the CSV.
+
+import sys
+
+lines = sys.stdin.read().splitlines()
+
+# Stateful things that we're tracking.
+sex = ''
+weightclass = ''
+division = ''
+
+# A little enum for referring to CSV row entries.
+NAME = 0
+UID = 1
+SEX = 2
+BODYWEIGHT = 3
+WEIGHTCLASS = 4
+AGE = 5
+DIVISION = 6
+EQUIPMENT = 7
+SQUAT1 = 8
+SQUAT2 = 9
+SQUAT3 = 10
+SQUAT4 = 11
+BENCH1 = 12
+BENCH2 = 13
+BENCH3 = 14
+BENCH4 = 15
+DEADLIFT1 = 16
+DEADLIFT2 = 17
+DEADLIFT3 = 18
+DEADLIFT4 = 19
+TOTAL = 20
+
+NUMFIELDS = 21
+
+# Check whether a given string is a floating-point number.
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+# Convert an array to a comma-separated string.
+def array_to_csv(a):
+    s = ''
+    for i in range(0, len(a)):
+        if i != 0:
+            s += ','
+        s += str(a[i])
+    return s
+
+# Operate on one line at a time.
+for line in lines:
+    # Make some common modifications that we refer to later.
+    lower = line.lower()
+    split = line.split(',')
+
+    # Is this line for a lifter, or is it stateful information?
+    # Names tend to have spaces in them. Sometimes order goes first.
+    if split[0].find(' ') >= 0 and len(split) > 1:
+        # Make the csv output row.
+        csv = ['']*NUMFIELDS
+        csv[NAME] = split[0]
+        csv[UID] = ''
+        csv[SEX] = sex
+        csv[BODYWEIGHT] = ''
+        csv[WEIGHTCLASS] = weightclass
+        csv[AGE] = ''
+        csv[DIVISION] = division
+        csv[EQUIPMENT] = ''
+
+        # Sometimes, weight class information is contained in the name field,
+        # looking like "Foozie Watkins (132)".
+        # Sometimes, that's also the age. Sometimes, both!
+        if csv[NAME].find('(') >= 0:
+            # If only one parenthesis is present, it's either age or weight.
+            if csv[NAME].count('(') == 1:
+                # Extract the number from the parens.
+                number = csv[NAME][csv[NAME].find('(')+1 : csv[NAME].find(')')]
+
+                # We can guess whether it's a weight or an age by its length.
+                if len(number) == 2:
+                    csv[AGE] = number
+                elif len(number) == 3:
+                    csv[WEIGHTCLASS] = number
+
+            # If two are present, than one is age, and the other is weight.
+            elif csv[NAME].count('(') == 2:
+                # Extract the first number.
+                number1 = csv[NAME][csv[NAME].find('(')+1 : csv[NAME].find(')')]
+                rest = csv[NAME][csv[NAME].find(')')+1 :]
+                number2 = rest[rest.find('(')+1 : rest.find(')')]
+
+                # Sometimes, these numbers use 'lb' to distinguish.
+                number1 = number1.replace('lb', '')
+                number2 = number2.replace('lb', '')
+
+                if len(number1) == 2 and len(number2) == 3:
+                    csv[AGE] = number1
+                    csv[WEIGHTCLASS] = number2
+                elif len(number1) == 3 and len(number2) == 2:
+                    csv[AGE] = number2
+                    csv[WEIGHCLASS] = number1
+
+            # Remove all parens and from the name field.           
+            csv[NAME] = csv[NAME][0 : csv[NAME].find('(')-1].rstrip()
+
+        # Collect all numbers for lifts. Don't know where they go, but whatever.
+        numbers = []
+        for entry in split:
+            if is_number(entry):
+                numbers.append(float(entry))
+
+        # Handle push/pull meets (bench/deadlift/total)
+        if len(numbers) == 3 and numbers[0] + numbers[1] == numbers[2]:
+            csv[BENCH1] = str(numbers[0])
+            csv[DEADLIFT1] = str(numbers[1])
+            csv[TOTAL] = str(numbers[2])
+
+        # Handle full pwoer meets (squat/bench/deadlift/total)
+        elif len(numbers) == 4 and numbers[0] + numbers[1] + numbers[2] == numbers[3]:
+            csv[SQUAT1] = str(numbers[0])
+            csv[BENCH1] = str(numbers[1])
+            csv[DEADLIFT1] = str(numbers[2])
+            csv[TOTAL] = str(numbers[3])
+
+        # Otherwise, just spread the numbers out into each field, and we'll deal with it manually.
+        else:
+            for i in range(0, len(numbers)):
+                csv[SQUAT1 + i] = numbers[i]
+
+        print(array_to_csv(csv))
+
+    # Otherwise, this is a line changing state, or some garbage line.
+    else:
+        # Guess sex. This mostly works, unless a woman's name is "Mendoza".
+        if lower.find('women') >= 0:
+            division = line
+            sex = 'F'
+        elif lower.find('men') >= 0:
+            division = line
+            sex = 'M'
+
+        # Guess weight class. Vertical whitespace generally separates classes.
+        if len(line) == 0:
+            weightclass = ''
+        elif line.find('lbs') >= 0:
+            weightclass = line.replace('lbs', '').strip()
