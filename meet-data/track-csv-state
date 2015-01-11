@@ -125,7 +125,11 @@ for line in lines:
             csv[DEADLIFT1] = str(numbers[1])
             csv[TOTAL] = str(numbers[2])
 
-        # Handle full pwoer meets (squat/bench/deadlift/total)
+        # Handle bench-only meets. If these are pull-only, fix manually.
+        elif len(numbers) == 1:
+            csv[BENCH1] = str(numbers[0])
+
+        # Handle full power meets (squat/bench/deadlift/total)
         elif len(numbers) == 4 and numbers[0] + numbers[1] + numbers[2] == numbers[3]:
             csv[SQUAT1] = str(numbers[0])
             csv[BENCH1] = str(numbers[1])
