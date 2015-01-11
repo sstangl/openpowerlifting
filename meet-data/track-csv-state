@@ -61,11 +61,18 @@ def array_to_csv(a):
 for line in lines:
     # Make some common modifications that we refer to later.
     lower = line.lower()
-    split = line.split(',')
+
+    # Always strip out spaces, since sometimes they're left over from the txt->csv.
+    split = map((lambda x: x.strip()), line.split(','))
+
+    # Sometimes the PDFs have place (e.g., "1") instead of the name, first.
+    # We don't care about that information, so if it's there, just ignore it.
+    if (len(split[0]) == 1 and split[0].isdigit()):
+        del split[0]
 
     # Is this line for a lifter, or is it stateful information?
     # Names tend to have spaces in them. Sometimes order goes first.
-    if split[0].find(' ') >= 0 and len(split) > 1:
+    if (split[0].find(' ') >= 0 and len(split) > 1):
         # Make the csv output row.
         csv = ['']*NUMFIELDS
         csv[NAME] = split[0]
