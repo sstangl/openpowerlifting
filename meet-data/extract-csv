@@ -15,4 +15,5 @@ cat lifters-header
 # Also gets rid of "-------", which is sometimes used to indicate complete failure without
 #  providing any meaningful data.
 # Also takes out some characters that we won't need, which represent record-setting lifts.
-sed 's/ \{2,\}/,/g' "${1}" | sed 's/-\{2,\}//g' | sed 's/\*//g' | sed 's/#//g' | ./track-csv-state
+sed 's/ \{2,\}/,/g' "${1}" | sed 's/-\{2,\}//g' \
+  | sed 's/!//g' | sed 's/\*//g' | sed 's/#//g' | ./track-csv-state
