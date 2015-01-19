@@ -171,7 +171,7 @@ def USPA_add_lifter_row(csv, columnRanges, line):
     # People often have complicated names.
     # Subtract 3 for slack adjustment, since it doesn't usually
     # line up perfectly.
-    name = line[0 : columnRanges[1][0] - 5]
+    name = line[0 : columnRanges[1][0] - 3]
 
     # We're going to keep the name field around for determining
     # its column length. Sometimes the column has whitespace on the left,
