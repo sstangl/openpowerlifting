@@ -407,7 +407,7 @@ def csv_extract_sex_and_equipment(csv):
         
         if 'raw' in divfield:
             equipment = 'Raw'
-        elif 'classic raw' in divfield:
+        elif 'classic' in divfield:
             equipment = 'Wraps'
         elif 'multi ply' in divfield or 'equipped' in divfield or 'multi-ply' in divfield:
             equipment = 'Multi-ply'
