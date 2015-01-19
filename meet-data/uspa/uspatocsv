@@ -154,9 +154,6 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
         elif lname == "wilksscore":
             name = "Wilks"
 
-        # Sometimes names have commas, which messes with the CSV format.
-        name = name.replace(',','')
-
         columns.append(name)
 
     csv.append(columns)
@@ -239,6 +236,9 @@ if len(sys.argv) != 2:
 filename = sys.argv[1]
 with open(filename) as fd:
     wholefile = fd.read()
+
+# Get rid of all commas, since we're moving to CSV format.
+wholefile = wholefile.replace(',', ' ')
 
 # After pdftotext , pages are separated by formfeeds (0x0c).
 # USPA's meet results always include column titles on each page,
