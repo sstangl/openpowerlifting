@@ -207,13 +207,13 @@ def USPA_add_4ths_row(csv, columnRanges, line):
     # Lines containing 4ths shouldn't have anything else on the line.
     words = line.split()
     for word in words:
-        assert('4th-' in word)
+        assert('4th-' in word or '4TH-' in word)
         
     # Construct the row, using columnRanges for placement.
     row = [''] * len(columnRanges)
 
     # Match ranges to a column.
-    ranges = find_word_ranges(line.replace('4th-','    '))
+    ranges = find_word_ranges(line.replace('4th-','    ').replace('4TH-','    '))
     fullranges = find_word_ranges(line)
     assert(len(ranges) == len(fullranges))
 
@@ -276,7 +276,7 @@ def parse_page(csv, page):
             USPA_add_lifter_row(csv, columnRanges, line)
 
         # 4th attempts for a given lifter are recorded on the next line.
-        elif '4th-' in line:
+        elif '4th-' in line or '4TH-' in line:
             USPA_add_4ths_row(csv, columnRanges, line)
 
         # Lifters are organized by divisions.
@@ -336,7 +336,7 @@ def csv_integrate_4ths(csv):
             continue
 
         for colnum in xrange(0, len(row)):
-            if '4th-' in row[colnum]:
+            if '4th-' in row[colnum].lower():
                 fourths.add(colnum)
 
     collist = list(fourths)
@@ -355,8 +355,8 @@ def csv_integrate_4ths(csv):
             row.insert(k+1, '')
 
             # Move the 4th attempt to that column in the previous row.
-            if '4th-' in row[k]:
-                csv[i-1][k+1] = row[k].replace('4th-','')
+            if '4th-' in row[k].lower():
+                csv[i-1][k+1] = row[k].replace('4th-','').replace('4TH-','')
                 row[k] = ''
 
         # Now figure out what the column header should be.
