@@ -171,7 +171,7 @@ def USPA_add_lifter_row(csv, columnRanges, line):
     # People often have complicated names.
     # Subtract 3 for slack adjustment, since it doesn't usually
     # line up perfectly.
-    name = line[0 : columnRanges[1][0] - 3]
+    name = line[0 : columnRanges[1][0] - 5]
 
     # We're going to keep the name field around for determining
     # its column length. Sometimes the column has whitespace on the left,
@@ -282,7 +282,7 @@ def parse_page(csv, page):
         # Lifters are organized by divisions.
         # Divisions are given their own rows.
         # They always precede a lifter row.
-        elif i + 1 < len(lines) and is_lifter_row(lines[i+1]):
+        elif i + 1 < len(lines) and is_lifter_row(lines[i+1]) and not 'NAME' in line:
             # Just output the division into the csv array.
             # We will modify the array in post-processing.
             csv.append(["DIVISION:" + line.strip()])
