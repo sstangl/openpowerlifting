@@ -88,6 +88,21 @@ for line in lines:
         csv[DIVISION] = division
         csv[EQUIPMENT] = ''
 
+        # Equipment is often encoded into the division, at least for USPA.
+        if division.lower().count("classic raw"):
+            csv[EQUIPMENT] = 'W' # Classic Raw uses knee wraps.
+        elif division.lower().count("raw"):
+            csv[EQUIPMENT] = 'R' # Otherwise, raw uses only belts and sleeves.
+
+        # Sometimes, numbers can sneak into the names, like "1 Hunter Higgins".
+        # We can just remove everything up to and including the first space.
+        if csv[NAME][0].isdigit():
+            csv[NAME] = csv[NAME][csv[NAME].find(' ')+1:].strip()
+
+            # Also prevent that number from sneaking into the numbers
+            # array we create below.
+            split[0] = csv[NAME]
+
         # Sometimes, weight class information is contained in the name field,
         # looking like "Foozie Watkins (132)".
         # Sometimes, that's also the age. Sometimes, both!
@@ -127,11 +142,35 @@ for line in lines:
         # Collect all numbers for lifts. Don't know where they go, but whatever.
         numbers = []
         for entry in split:
+            entry = entry.strip()
+
             if is_number(entry):
                 numbers.append(float(entry))
 
+            # Sometimes, numbers can get trapped in the spreadsheet due to
+            # inadequate spacing. This happens often with the "age" column.
+            # This liberates those numbers.
+            elif entry.count(' ') > 0:
+                for k in entry.split():
+                    k = k.strip()
+                    
+                    if is_number(k):
+                        numbers.append(float(k))
+
+        # Handle modern USPA meets using the standard spreadsheet.
+        # This only works for lifters who have not been disqualified.
+        # numbers[3] should be the age, so it's a quick format check.
+        if len(numbers) == 12 and numbers[2] < 100:
+            csv[WEIGHTCLASS] = int(numbers[0])
+            csv[BODYWEIGHT] = numbers[1]
+            csv[AGE] = int(numbers[2])
+            csv[SQUAT1] = numbers[8] # Pounds. We can convert everything en masse later.
+            csv[BENCH1] = numbers[9] # Pounds.
+            csv[DEADLIFT1] = numbers[10] # Pounds.
+            csv[TOTAL] = numbers[11] # Pounds.
+
         # Handle push/pull meets (bench/deadlift/total)
-        if len(numbers) == 3 and numbers[0] + numbers[1] == numbers[2]:
+        elif len(numbers) == 3 and numbers[0] + numbers[1] == numbers[2]:
             csv[BENCH1] = str(numbers[0])
             csv[DEADLIFT1] = str(numbers[1])
             csv[TOTAL] = str(numbers[2])
