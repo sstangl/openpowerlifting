@@ -9,12 +9,7 @@
 import sys
 
 def list_to_csv(x):
-    s = ''
-    for i in xrange(0, len(x)):
-        if i != 0:
-            s += ','
-        s += str(x[i])
-    return s
+    return ','.join(x)
 
 # Given a line, return a list of (left, right) word ranges.
 def find_word_ranges(line):
