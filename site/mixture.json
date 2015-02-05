@@ -1,0 +1,25 @@
+{
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "debug": false,
+  "domain": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "assets"
+  ],
+  "preprocessorScriptOutput": "assets/scripts",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.",
+  "projectName": "openpowerlifting",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}

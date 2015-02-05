@@ -1,0 +1,21 @@
+.nav {
+  @extend %grid__item;
+  @extend %two-thirds;
+
+  line-height: 20px;
+}
+
+.nav--main {
+  text-align: right;
+}
+
+.nav__link {
+  color: $primary;
+  font-size: .8em;
+  font-weight: 600;
+  text-decoration: none;
+
+  & + & {
+    margin-left: 20px;
+  }
+}

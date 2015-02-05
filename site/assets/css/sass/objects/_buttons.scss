@@ -1,0 +1,14 @@
+.btn {
+  color: inherit;
+  display: inline-block;
+  line-height: 15px;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: $green;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 500;
+}

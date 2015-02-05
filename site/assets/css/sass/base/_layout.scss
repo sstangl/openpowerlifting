@@ -1,0 +1,28 @@
+.l-container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+}
+
+.l-content {
+  @extend %grid__item;
+}
+
+.l-content--centered {
+  text-align: center;
+}
+
+.l-header {
+  @extend %grid;
+
+  border-bottom: 1px solid #f9f9f9;
+  margin: 20px;
+  padding-bottom: 15px;
+}
+
+.header__logo {
+  @extend %grid__item;
+  @extend %one-third;
+
+  > img { width: 200px; }
+}
