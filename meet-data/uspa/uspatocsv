@@ -261,11 +261,12 @@ def parse_page(csv, page):
         line = lines[i]
 
         # Lifter rows begin with a low number indicating place, or 'DQ'.
+        # Sometimes they begin with 'NS' for no good reason.
         def is_lifter_row(line):
             words = line.split()
             if len(words) == 0:
                 return False
-            return (words[0].isdigit() and int(words[0]) < 50) or words[0] == 'DQ'
+            return (words[0].isdigit() and int(words[0]) < 50) or words[0] in ['DQ', 'NS']
 
         if is_lifter_row(line):
             USPA_add_lifter_row(csv, columnRanges, line)
