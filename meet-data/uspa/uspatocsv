@@ -289,6 +289,10 @@ def parse_page(csv, page):
 for page in pages:
     parse_page(csv, page)
 
+# Remove all the 'DIVISION' line markers.
+def csv_remove_divisions(csv):
+    return filter(lambda x : 'DIVISION:' not in x[0], csv)
+
 # First, get rid of all the lines starting with "DIVISION:",
 # which we inserted for stateful division tracking.
 def csv_integrate_divisions(csv):
@@ -317,8 +321,8 @@ def csv_integrate_divisions(csv):
         else:
             csv[k].insert(divcolumn, '')
 
-    # Git rid of all the division lines.
-    return filter(lambda x : 'DIVISION:' not in x[0], csv)
+    return csv_remove_divisions(csv)
+
 
 def csv_integrate_4ths(csv):
     # The first line is for column headers and can be skipped.
@@ -374,6 +378,10 @@ def csv_extract_place_from_name(csv):
     for i in xrange(1, len(csv)):
         row = csv[i]
         namefield = row[0]
+
+        # This is sometimes useful if other passes are skipped.
+        if len(namefield.strip()) == 0:
+            continue
 
         # Either a number or "DQ"
         placement = namefield.split()[0]
