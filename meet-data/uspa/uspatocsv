@@ -202,6 +202,8 @@ def USPA_add_4ths_row(csv, columnRanges, line):
     # Lines containing 4ths shouldn't have anything else on the line.
     words = line.split()
     for word in words:
+        if not '4th-' in word and not '4TH-' in word:
+            print "Error on line: %s" % line
         assert('4th-' in word or '4TH-' in word)
         
     # Construct the row, using columnRanges for placement.
