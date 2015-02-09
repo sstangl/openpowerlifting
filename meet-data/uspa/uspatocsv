@@ -186,14 +186,14 @@ def USPA_add_lifter_row(csv, columnRanges, line):
         index = find_closest_range(r, columnRanges)
     
         # Emit debug output for failure case requiring manual intervention.
-        if len(row[index]) != 0:
+        if row[index]:
             print 'Column matching error (manually align columns):'
             print 'Matched "%s" to column already containing "%s"' % (line[r[0] : r[1]+1], row[index])
             print line
 
         # If this assert fires, the input file must be manually fixed to
         # align columns reasonably. Debug output helpfully provided above.
-        assert(len(row[index]) == 0)
+        assert(not row[index])
         row[index] = withoutName[r[0] : r[1]+1]
 
     csv.append(row)
@@ -219,7 +219,7 @@ def USPA_add_4ths_row(csv, columnRanges, line):
 
         index = find_closest_range(ranges[i], columnRanges)
 
-        assert(len(row[index]) == 0)
+        assert(not row[index])
         row[index] = line[fullranges[i][0] : fullranges[i][1]+1]
 
     csv.append(row)
@@ -253,7 +253,7 @@ def parse_page(csv, page):
     lines = page.split("\n")
 
     columnRanges = USPA_extract_sorted_page_column_ranges(lines)
-    if (len(columnRanges) == 0):
+    if not columnRanges:
         return # Not a page with data.
 
     USPA_get_column_names_once(csv, lines, columnRanges)
@@ -266,7 +266,7 @@ def parse_page(csv, page):
         # Sometimes they begin with 'NS' for no good reason.
         def is_lifter_row(line):
             words = line.split()
-            if len(words) == 0:
+            if not words:
                 return False
             return (words[0].isdigit() and int(words[0]) < 50) or words[0] in ['DQ', 'NS']
 
@@ -313,8 +313,8 @@ def csv_integrate_divisions(csv):
 
         # Otherwise, this is either a row for results, or a 4ths row.
         # Rows for results have names, so check for a name.
-        elif len(csv[k][0]) > 0:
-            assert(len(division) > 0)
+        elif csv[k][0]:
+            assert(division)
             csv[k].insert(divcolumn, division)
 
         # Otherwise, this is a 4ths row, and we just need to pad it.
@@ -334,7 +334,7 @@ def csv_integrate_4ths(csv):
     fourths = set()
     for row in csv:
         # Skip all rows that don't have fourth attempts.
-        if len(row[0]) != 0:
+        if row[0]:
             continue
 
         for colnum in xrange(0, len(row)):
@@ -380,7 +380,7 @@ def csv_extract_place_from_name(csv):
         namefield = row[0]
 
         # This is sometimes useful if other passes are skipped.
-        if len(namefield.strip()) == 0:
+        if not namefield.strip():
             continue
 
         # Either a number or "DQ"
