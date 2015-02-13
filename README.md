@@ -4,10 +4,20 @@ A permanent, accurate, convenient, accessible, open archive of the world's power
 
 **Powerlifting to the People.**
 
-## Licensing
+## Data Licensing
+
+All data is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.<br/>
+Please refer to the LICENSE file.
+
+You are free to copy, modify, and redistribute the data in any medium or format,<br/>
+provided that you follow the license terms.
+
+Attribution is required. Sample attribution text may be found in the LICENSE file.
+
+## Code Licensing
 
 All code is Free/Libre software under the GNU AGPLv3+.<br/>
-Refer to the LICENSE file.
+Please refer to the CODE-LICENSE file.
 
 All database data (\*.csv) is open under the ODC Database Contents License.<br/>
 Commercial use, sublicensing, modification, and redistribution are permitted.<br/>
