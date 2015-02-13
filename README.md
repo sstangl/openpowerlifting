@@ -14,6 +14,9 @@ provided that you follow the license terms.
 
 Attribution is required. Sample attribution text may be found in the LICENSE file.
 
+If you modify the data or add useful new data, please consider contributing<br/>
+the changes back so the entire powerlifting community may benefit.
+
 ## Code Licensing
 
 All code is Free/Libre software under the GNU AGPLv3+.<br/>
