@@ -18,7 +18,3 @@ Attribution is required. Sample attribution text may be found in the LICENSE fil
 
 All code is Free/Libre software under the GNU AGPLv3+.<br/>
 Please refer to the CODE-LICENSE file.
-
-All database data (\*.csv) is open under the ODC Database Contents License.<br/>
-Commercial use, sublicensing, modification, and redistribution are permitted.<br/>
-Refer to the DATA-LICENSE file.
