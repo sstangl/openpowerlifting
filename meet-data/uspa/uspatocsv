@@ -264,11 +264,12 @@ def parse_page(csv, page):
 
         # Lifter rows begin with a low number indicating place, or 'DQ'.
         # Sometimes they begin with 'NS' for no good reason.
+        # Sometimes lifters only count for records, which I'm using "NA" for.
         def is_lifter_row(line):
             words = line.split()
             if not words:
                 return False
-            return (words[0].isdigit() and int(words[0]) < 50) or words[0] in ['DQ', 'NS']
+            return (words[0].isdigit() and int(words[0]) < 50) or words[0] in ['DQ', 'NA', 'NS']
 
         if is_lifter_row(line):
             USPA_add_lifter_row(csv, columnRanges, line)
