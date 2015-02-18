@@ -101,6 +101,10 @@ def main(scriptname, filename):
     check_headers(csv[0])
 
     for row in csv[1:]:
+        if len(row) != len(csv[0]):
+            perror("Column count mismatch for row: %s" % ','.join(row))
+            continue
+
         for i, text in enumerate(row):
             if text and csv[0][i] in KnownHeaders:
                 HeaderHandlers[csv[0][i]](text)
