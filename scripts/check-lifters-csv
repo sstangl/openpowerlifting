@@ -1,0 +1,106 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple check script for lifters.csv files.
+# Used as part of "make check".
+#
+# Makes sure that:
+#
+# 1) All the column names are expected.
+# 2) Each column's data are in expected formats for that column type.
+#
+
+import sys
+
+def redden(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+def perror(s):
+    print >> sys.stderr, ' ' + redden(s)
+
+def check_column_name(s):
+    if s[0].isspace() or s[-1].isspace() or '  ' in s:
+        perror("Too much spacing for name: \"%s\"" % s)
+
+    # This only works for names written in English, but that's OK for now.
+    has_illegal_char = False
+    for c in s:
+        if not c.isalpha() and not c in ' "\'.-':
+            has_illegal_char = True
+            break
+    if has_illegal_char:
+        perror("Name contains illegal character(s): \"%s\"" % s)
+
+
+def check_column_sex(s):
+    if s != "M" and s != "F":
+        perror("Unknown sex: %s" % s)
+
+
+def check_column_age(s):
+    try:
+        int(s)
+    except ValueError:
+        perror("Age is not a number: %s" % s)
+
+
+def check_column_place(s):
+    if not s in ['DQ', 'NS']:
+        try:
+            int(s)
+        except ValueError:
+            perror("Place is not an integer or known exception: %s" % s)
+
+
+def check_column_event(s):
+    found_illegal_char = False
+    for c in s:
+        if not c in "SBD":
+            found_illegal_char = True
+
+        if "SBD".count(c) >= 2:
+            perror("Duplicate event character: %s" % s)
+
+    if found_illegal_char:
+        perror("Unknown event type: %s" % s)
+
+
+HeaderHandlers = {
+    'Name': check_column_name,
+    'Sex': check_column_sex,
+    'Age': check_column_age,
+    'Place': check_column_place,
+    'Event': check_column_event,
+}
+
+KnownHeaders = HeaderHandlers.keys()
+
+
+def check_headers(headers):
+    for header in headers:
+        if not header in KnownHeaders:
+            perror("Unknown column header: %s" % header)
+
+        if headers.count(headers) > 1:
+            perror("Duplicate column header: %s" % header)
+
+
+def main(scriptname, filename):
+    with open(filename) as fd:
+        csv = [x.strip().split(',') for x in fd.readlines()]
+
+    check_headers(csv[0])
+
+    for row in csv[1:]:
+        for i, text in enumerate(row):
+            if text and csv[0][i] in KnownHeaders:
+                HeaderHandlers[csv[0][i]](text)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print sys.argv
+        print >> stderr, " Usage: %s lifters.csv" % sys.argv[0]
+        sys.exit(1)
+
+    main(sys.argv[0], sys.argv[1])
