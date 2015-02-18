@@ -65,12 +65,21 @@ def check_column_event(s):
         perror("Unknown event type: %s" % s)
 
 
+def check_column_division(s):
+    if s.strip() != s or '  ' in s:
+        perror("Too much spacing for division: \"%s\"" % s)
+
+    if '"' in s:
+        perror("Illegal use of quote in division: %s" % s)
+
+
 HeaderHandlers = {
     'Name': check_column_name,
     'Sex': check_column_sex,
     'Age': check_column_age,
     'Place': check_column_place,
     'Event': check_column_event,
+    'Division': check_column_division,
 }
 
 KnownHeaders = HeaderHandlers.keys()
