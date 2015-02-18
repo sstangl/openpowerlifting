@@ -18,14 +18,17 @@ def redden(s):
 def perror(s):
     print >> sys.stderr, ' ' + redden(s)
 
+
 def check_column_name(s):
-    if s[0].isspace() or s[-1].isspace() or '  ' in s:
+    if '  ' in s:
         perror("Too much spacing for name: \"%s\"" % s)
+
+    special_legal_chars = ' "\'.-'
 
     # This only works for names written in English, but that's OK for now.
     has_illegal_char = False
     for c in s:
-        if not c.isalpha() and not c in ' "\'.-':
+        if not c.isalpha() and not c in special_legal_chars:
             has_illegal_char = True
             break
     if has_illegal_char:
@@ -106,6 +109,9 @@ def main(scriptname, filename):
             continue
 
         for i, text in enumerate(row):
+            if text.strip() != text:
+                perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
+
             if text and csv[0][i] in KnownHeaders:
                 HeaderHandlers[csv[0][i]](text)
 
