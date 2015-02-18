@@ -1,30 +1,30 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-L Vasquez,,F,176,181,,Women's Open,,,,,,225
-S Talavera,,F,103,105,40,Master 40-44,,,,,,121
-M Williams,,F,146,148,36,Submaster,,,,,,137
-S Ward,,M,154,165,,Men's Open,,,,,,402
-B Dunham,,M,226,242,,Men's Open,,,,,,534
-A Thompson,,M,242,242,,Men's Open,,,,,,534
-D Johnson,,M,223,242,,Men's Open,,,,,,341
-S Sims,,M,246,275,,Men's Open,,,,,,-
-K Lee,,M,178,181,40,Master 40-44,,,,,,413
-K Tate,,M,171,181,40,Master 40-44,,,,,,374
-M Brown,,M,197,198,40,Master 40-44,,,,,,281
-M Womelsdorf,,M,204,220,43,Master 40-44,,,,,,281
-S Winters,,M,216,220,47,Master 45-49,,,,,,330
-B Evans,,M,218,220,54,Master 50-54,,,,,,363
-B Garvey,,M,295,308,52,Master 50-54,,,,,,402
-D Carriger,,M,278,308,50,Master 50-54,,,,,,385
-G Brink,,M,314,SHW,51,Master 50-54,,,,,,-
-D Smith III,,M,226,242,57,Master 55-59,,,,,,413
-A Nerenberg,,M,197,198,60,Master 60-64,,,,,,303
-F Irons,,M,196,198,65,Master 65-69,,,,,,275
-S Colella,,M,213,220,68,Master 65-69,,,,,,281
-S Ward,,M,154,165,39,Submaster,,,,,,402
-S Marcinek,,M,191,198,37,Submaster,,,,,,402
-B Dunham,,M,226,242,,Submaster,,,,,,534
-O Walker,,M,313,SHW,38,Submaster,,,,,,457
-C Lewis,,M,342,SHW,39,Submaster,,,,,,440
-C Angello,,M,180,181,,Police/Fire,,,,,,308
-P Rebello,,M,184,198,,Police/Fire,,,,,,319
-B Garvey,,M,295,308,,Police/Fire,,,,,,402
+Name,Place,Sex,Bodyweight,Weightclass,Age,Division,Event,BenchLBS
+L Vasquez,1,F,176,181,,Women's Open,B,225
+S Talavera,1,F,103,105,40,Master 40-44,B,121
+M Williams,1,F,146,148,36,Submaster,B,137
+S Ward,1,M,154,165,,Men's Open,B,402
+B Dunham,1,M,226,242,,Men's Open,B,534
+A Thompson,2,M,242,242,,Men's Open,B,534
+D Johnson,3,M,223,242,,Men's Open,B,341
+S Sims,DQ,M,246,275,,Men's Open,B,
+K Lee,1,M,178,181,40,Master 40-44,B,413
+K Tate,2,M,171,181,40,Master 40-44,B,374
+M Brown,1,M,197,198,40,Master 40-44,B,281
+M Womelsdorf,1,M,204,220,43,Master 40-44,B,281
+S Winters,1,M,216,220,47,Master 45-49,B,330
+B Evans,1,M,218,220,54,Master 50-54,B,363
+B Garvey,1,M,295,308,52,Master 50-54,B,402
+D Carriger,2,M,278,308,50,Master 50-54,B,385
+G Brink,DQ,M,314,SHW,51,Master 50-54,B,
+D Smith III,1,M,226,242,57,Master 55-59,B,413
+A Nerenberg,1,M,197,198,60,Master 60-64,B,303
+F Irons,1,M,196,198,65,Master 65-69,B,275
+S Colella,1,M,213,220,68,Master 65-69,B,281
+S Ward,1,M,154,165,39,Submaster,B,402
+S Marcinek,1,M,191,198,37,Submaster,B,402
+B Dunham,1,M,226,242,,Submaster,B,534
+O Walker,1,M,313,SHW,38,Submaster,B,457
+C Lewis,2,M,342,SHW,39,Submaster,B,440
+C Angello,1,M,180,181,,Police/Fire,B,308
+P Rebello,1,M,184,198,,Police/Fire,B,319
+B Garvey,1,M,295,308,,Police/Fire,B,402

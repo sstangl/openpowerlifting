@@ -1,19 +1,19 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-Tammy Burgess,,F,,,,Open Women PL,,203.75,,,,137.75,,,,253.5,,,,595
-Bill Noda,,M,,148,,Men's Open,,297.5,,,,214.75,,,,363.75,,,,876
-Travis Winton,,M,,165,,Men's Open,,407,,,,270,,,,407,,,,1084
-George Carbajal,,M,,165,,Master 45-49,,424.25,,,,214.75,,,,429,,,,1068
-Ryan Winton,,M,,181,,Men's Open,,440.75,,,,264.5,,,,440.75,,,,1146
-Mike Snow,,M,,198,,Men's Open,,496,,,,303,,,,501.5,,,,1300.5
-Darrin Ike,,M,,198,,Men's Open,,413.25,,,,325,,,,473.75,,,,1212
-Steve Canchola,,M,,198,,Men's Open,,462.75,,,,225.75,,,,512.5,,,,1201
-Mike Swenson,,M,,198,,Master 45-49,,496,,,,303,,,,512.5,,,,1311.5
-Steve Waggoner,,M,,242,,Master 50-54,,369.25,,,,341.5,,,,352.5,,,,1063.25
-David Marques,,M,,165,,Men's Open,,,,,,319.5,,,,,,,,319.5
-Paul Sawai,,M,,181,,Men's Open,,,,,,314,,,,,,,,314
-Paul Miller,,M,,198,,Men's Open,,,,,,347,,,,,,,,347
-Edward Zine,,M,,198,,Master 50-54,,,,,,308.5,,,,,,,,308.5
-Jim Nichols,,M,,242,,Master 45-49,,,,,,192.75,,,,,,,,192.75
-Steve Waggoner,,M,,242,,Master 50-54,,,,,,341.5,,,,,,,,341.5
-John Heilmann,,M,,275,,Men's Open,,,,,,374.75,,,,,,,,374.75
-Dean Carriger,,M,,275,,Master 50-54,,,,,,385.75,,,,,,,,385.75
+Name,Place,Sex,Weightclass,Event,Division,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
+Tammy Burgess,1,F,,SBD,Open Women PL,203.75,137.75,253.5,595
+Bill Noda,1,M,148,SBD,Men's Open,297.5,214.75,363.75,876
+Travis Winton,1,M,165,SBD,Men's Open,407,270,407,1084
+George Carbajal,1,M,165,SBD,Master 45-49,424.25,214.75,429,1068
+Ryan Winton,1,M,181,SBD,Men's Open,440.75,264.5,440.75,1146
+Mike Snow,1,M,198,SBD,Men's Open,496,303,501.5,1300.5
+Darrin Ike,2,M,198,SBD,Men's Open,413.25,325,473.75,1212
+Steve Canchola,3,M,198,SBD,Men's Open,462.75,225.75,512.5,1201
+Mike Swenson,1,M,198,SBD,Master 45-49,496,303,512.5,1311.5
+Steve Waggoner,1,M,242,SBD,Master 50-54,369.25,341.5,352.5,1063.25
+David Marques,1,M,165,B,Men's Open,,319.5,,319.5
+Paul Sawai,1,M,181,B,Men's Open,,314,,314
+Paul Miller,1,M,198,B,Men's Open,,347,,347
+Edward Zine,1,M,198,B,Master 50-54,,308.5,,308.5
+Jim Nichols,1,M,242,B,Master 45-49,,192.75,,192.75
+Steve Waggoner,1,M,242,B,Master 50-54,,341.5,,341.5
+John Heilmann,1,M,275,B,Men's Open,,374.75,,374.75
+Dean Carriger,1,M,275,B,Master 50-54,,385.75,,385.75

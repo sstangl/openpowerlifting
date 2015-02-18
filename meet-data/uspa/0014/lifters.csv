@@ -1,61 +1,61 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-Stephanie Kubik,,F,,114,,Open Women,,225.75,,,,132.25,,,,242.5,,,,600.5
-Lisa Denison,,F,,165,,Open Women,,385.75,,,,187.25,,,,391.25,,,,964.25
-Disa Hatfield,,F,,198,,Open Women,,451.75,,,,292,,,,363.75,,,,1107.5
-Sasha Meshkov,,F,,148,,M 45-49 Women,,264.5,,,,132.25,,,,308.5,,,,705.25
-Mary Jacobson,,F,,165,,M 45-49 Women,,314,,,,231.25,,,,385.75,,,,931
-Steve Somerman,,M,,148,,Open Men,,407,,,,170.75,,,,402.25,,,,980
-Steve Somerman,,M,,148,,Natural,,407,,,,170.75,,,,402.25,,,,980
-Steve Somerman,,M,,148,,Master 50-54,,407,,,,170.75,,,,402.25,,,,980
-Brian Pearson,,M,,165,,Natural,,369.25,,,,319.5,,,,435.25,,,,1124
-Aaron Nadal,,M,,181,,Teen Men,,336,,,,220.25,,,231.25,358,,,,914.25
-Adrian Lopez,,M,,198,,Teen Men,,264.5,,,,154.25,,,,319.5,,,,738.25
-James Lee,,M,,198,,Open Men,,540,,,,435.25,,,,567.5,,,,1542.75
-Mike Belluscio,,M,,198,,Open Men,,490.5,,,,275.5,,,,501.5,,,,1267.5
-Charles Stocking,,M,,198,,Natural Men,,518,,,,259,,,,507,,,,1284
-Mike Belluscio,,M,,198,,Natural Men,,490.5,,,,275.5,,,,501.5,,,,1267.5
-Greg Shaver,,M,,198,,Natural Men,,292,,,,264.5,,,,363.75,,,,920.25
-Mike Belluscio,,M,,198,,Submaster,,490.5,,,,275.5,,,,501.5,,,,1267.5
-Tim Deran,,M,,198,,Master 40-44,,457.25,,,,275.5,,,,501.5,,,,1234.25
-Travis Vassallo,,M,,220,,Junior Men,,473.75,,,,341.5,,,,479.5,,,,1294.75
-Patrick McNeil,,M,,220,,Open Men,,562,,,,391.25,,,,540,,,,1493.25
-Billy Wayne,,M,,220,,Open Men,,529,,,,341.5,,,,562,,,,1432.5
-Paul Wondra,,M,,220,,Open Men,,297.5,,,,347,,,,473.75,,,,1118.25
-Michael Womelsdorf,,M,,220,,Master 40-44,,407,,,,303,,,,407,,,,1117
-Michael Brown,,M,,220,,Master 40-44,,369.25,,,,281,,,,435.25,,,,1085.5
-Ruben Arredondo,,M,,220,,Master 45-49,,529,,,,380.25,,,,479.5,,,,1388.75
-Paul Wondra,,M,,220,,Master 45-49,,297.5,,,,347,,,,473.75,,,,1118.25
-Steve Silver,,M,,242,,Open Men,,661.25,,,,501.5,,,,699.75,,,,1862.5
-Rob Meulenberg,,M,,242,,Open Men,,628.25,,,,418.75,,,,639.25,,,,1686.25
-Max Higgins,,M,,275,,Teen Men,,661.25,,,,396.75,,,,545.5,,,,1603.5
-Riccardo Magni,,M,,275,,Open Men,,606.25,,,,418.75,,,,595,,,,1620
-Delmer Brown,,M,,275,,Open Men,,551,,,,407,,,,-551,,,,
-Delmer Brown,,M,,275,,Master 45-49,,551,,,,407,,,,-551,,,,
-Toby Levers,,M,,308,,Natural Men,,705.25,,,,440.75,,,,722,,,,1868
-Donna Arndt,,F,,114,,M 40-44 Women,,,,,,187.25,,,,,,,,
-Gerrie Shapiro,,F,,132,,M 45-49 Women,,,,,,143.25,,,,,,,,
-Brian Crocker,,M,,148,,Submaster Men,,,,,,341.5,,,,,,,,
-Joe Drake,,M,,148,,Submaster Men,,,,,,-281,,,,,,,,
-Jim Merlino,,M,,165,,Master 60-64,,,,,,292,,,,,,,,
-Ken Fasulo,,M,,181,,Submaster Men,,,,,,314,,,,,,,,
-Josh Mouton,,M,,198,,Teen Men,,,,,,225.75,,,,,,,,
-James Lee,,M,,198,,Open Men,,,,,,435.25,,,,,,,,
-Michael Gray,,M,,198,,Open Men,,,,,,402.25,,,,,,,,
-Scott Marcinek,,M,,198,,Submaster Men,,,,,,446.25,,,,,,,,
-Ritchie Creevy,,M,,198,,Master 55-59,,,,,,314,,,,,,,,
-Len Sandberg,,M,,198,,Master 70-74,,,,,,209.25,,,214.75,,,,,
-Ryan Gerard,,M,,220,,Open Men,,,,,,440.75,,,,,,,,
-Paul Wondra,,M,,220,,Master 45-49,,,,,,347,,,,,,,,
-Richard Ciavarelli,,M,,220,,Master 60-64,,,,,,264.5,,,,,,,,
-Alvin Waldon,,M,,242,,Open Men,,,,,,462.75,,,,,,,,
-Joe Grissom,,M,,242,,Open Men,,,,,,407,,,,,,,,
-Michael Lohr,,M,,242,,Open Men,,,,,,374.75,,,,,,,,
-Alvin Waldon,,M,,242,,Natural Men,,,,,,462.75,,,,,,,,
-Scott Hoekstra,,M,,242,,Submaster Men,,,,,,473.75,,,,,,,,
-Alvin Waldon,,M,,242,,Master 50-54,,,,,,462.75,,,,,,,,
-Daniel Smith III,,M,,242,,Master 55-59,,,,,,424.25,,,,,,,,
-Daniel Smith,,M,,275,,Master 40-44,,,,,,440.75,,,,,,,,
-Kenneth Scott,,M,,275,,Master 40-44,,,,,,424.25,,,,,,,,
-Chuck McGuire,,M,,275,,Master 40-44,,,,,,-352,,,,,,,,
-Josh Bryant,,M,,308,,Junior Men,,,,,,606.25,,,,,,,,
-Neil Ferone,,M,,308,,Master 40-44,,,,,,424.5,,,,,,,,
+Name,Place,Sex,Weightclass,Age,Division,Event,SquatLBS,BenchLBS,BenchLBS4,DeadliftLBS,TotalLBS
+Stephanie Kubik,1,F,114,,Open Women,SBD,225.75,132.25,,242.5,600.5
+Lisa Denison,1,F,165,,Open Women,SBD,385.75,187.25,,391.25,964.25
+Disa Hatfield,1,F,198,,Open Women,SBD,451.75,292,,363.75,1107.5
+Sasha Meshkov,1,F,148,,M 45-49 Women,SBD,264.5,132.25,,308.5,705.25
+Mary Jacobson,1,F,165,,M 45-49 Women,SBD,314,231.25,,385.75,931
+Steve Somerman,1,M,148,,Open Men,SBD,407,170.75,,402.25,980
+Steve Somerman,1,M,148,,Natural,SBD,407,170.75,,402.25,980
+Steve Somerman,1,M,148,,Master 50-54,SBD,407,170.75,,402.25,980
+Brian Pearson,1,M,165,,Natural,SBD,369.25,319.5,,435.25,1124
+Aaron Nadal,1,M,181,,Teen Men,SBD,336,220.25,231.25,358,914.25
+Adrian Lopez,1,M,198,,Teen Men,SBD,264.5,154.25,,319.5,738.25
+James Lee,1,M,198,,Open Men,SBD,540,435.25,,567.5,1542.75
+Mike Belluscio,2,M,198,,Open Men,SBD,490.5,275.5,,501.5,1267.5
+Charles Stocking,1,M,198,,Natural Men,SBD,518,259,,507,1284
+Mike Belluscio,2,M,198,,Natural Men,SBD,490.5,275.5,,501.5,1267.5
+Greg Shaver,3,M,198,,Natural Men,SBD,292,264.5,,363.75,920.25
+Mike Belluscio,1,M,198,,Submaster,SBD,490.5,275.5,,501.5,1267.5
+Tim Deran,1,M,198,,Master 40-44,SBD,457.25,275.5,,501.5,1234.25
+Travis Vassallo,1,M,220,,Junior Men,SBD,473.75,341.5,,479.5,1294.75
+Patrick McNeil,1,M,220,,Open Men,SBD,562,391.25,,540,1493.25
+Billy Wayne,2,M,220,,Open Men,SBD,529,341.5,,562,1432.5
+Paul Wondra,3,M,220,,Open Men,SBD,297.5,347,,473.75,1118.25
+Michael Womelsdorf,1,M,220,,Master 40-44,SBD,407,303,,407,1117
+Michael Brown,2,M,220,,Master 40-44,SBD,369.25,281,,435.25,1085.5
+Ruben Arredondo,1,M,220,,Master 45-49,SBD,529,380.25,,479.5,1388.75
+Paul Wondra,2,M,220,,Master 45-49,SBD,297.5,347,,473.75,1118.25
+Steve Silver,1,M,242,,Open Men,SBD,661.25,501.5,,699.75,1862.5
+Rob Meulenberg,2,M,242,,Open Men,SBD,628.25,418.75,,639.25,1686.25
+Max Higgins,1,M,275,,Teen Men,SBD,661.25,396.75,,545.5,1603.5
+Riccardo Magni,1,M,275,,Open Men,SBD,606.25,418.75,,595,1620
+Delmer Brown,DQ,M,275,,Open Men,SBD,551,407,,-551,
+Delmer Brown,DQ,M,275,,Master 45-49,SBD,551,407,,-551,
+Toby Levers,1,M,308,,Natural Men,SBD,705.25,440.75,,722,1868
+Donna Arndt,1,F,114,,M 40-44 Women,B,,187.25,,,
+Gerrie Shapiro,1,F,132,,M 45-49 Women,B,,143.25,,,
+Brian Crocker,1,M,148,,Submaster Men,B,,341.5,,,
+Joe Drake,DQ,M,148,,Submaster Men,B,,-281,,,
+Jim Merlino,1,M,165,,Master 60-64,B,,292,,,
+Ken Fasulo,1,M,181,,Submaster Men,B,,314,,,
+Josh Mouton,1,M,198,,Teen Men,B,,225.75,,,
+James Lee,1,M,198,,Open Men,B,,435.25,,,
+Michael Gray,2,M,198,,Open Men,B,,402.25,,,
+Scott Marcinek,1,M,198,,Submaster Men,B,,446.25,,,
+Ritchie Creevy,1,M,198,,Master 55-59,B,,314,,,
+Len Sandberg,1,M,198,,Master 70-74,B,,209.25,214.75,,
+Ryan Gerard,1,M,220,,Open Men,B,,440.75,,,
+Paul Wondra,1,M,220,,Master 45-49,B,,347,,,
+Richard Ciavarelli,1,M,220,,Master 60-64,B,,264.5,,,
+Alvin Waldon,1,M,242,,Open Men,B,,462.75,,,
+Joe Grissom,2,M,242,,Open Men,B,,407,,,
+Michael Lohr,3,M,242,,Open Men,B,,374.75,,,
+Alvin Waldon,1,M,242,,Natural Men,B,,462.75,,,
+Scott Hoekstra,1,M,242,,Submaster Men,B,,473.75,,,
+Alvin Waldon,1,M,242,,Master 50-54,B,,462.75,,,
+Daniel Smith III,1,M,242,,Master 55-59,B,,424.25,,,
+Daniel Smith,1,M,275,,Master 40-44,B,,440.75,,,
+Kenneth Scott,2,M,275,,Master 40-44,B,,424.25,,,
+Chuck McGuire,DQ,M,275,,Master 40-44,B,,-352,,,
+Josh Bryant,1,M,308,,Junior Men,B,,606.25,,,
+Neil Ferone,1,M,308,,Master 40-44,B,,424.5,,,
