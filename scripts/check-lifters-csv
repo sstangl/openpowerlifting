@@ -15,13 +15,30 @@ import sys
 def redden(s):
     return "\033[1;31m" + s + "\033[0;m"
 
+def enyellow(s):
+    return "\033[1;33m" + s + "\033[0;m"
+
+havePrintedFilename = False
+
+def print_filename_once():
+    # This completely breaks the main() abstraction, but whatever.
+    global havePrintedFilename
+    if not havePrintedFilename:
+        print >> sys.stderr, sys.argv[1]
+        havePrintedFilename = True
+
 def perror(s):
+    print_filename_once()
     print >> sys.stderr, ' ' + redden(s)
+
+def pwarning(s):
+    print_filename_once()
+    print >> sys.stderr, ' ' + enyellow(s)
 
 
 def check_column_name(s):
     if '  ' in s:
-        perror("Too much spacing for name: \"%s\"" % s)
+        pwarning("Too much spacing for name: \"%s\"" % s)
 
     special_legal_chars = ' "\'.-'
 
@@ -70,7 +87,7 @@ def check_column_event(s):
 
 def check_column_division(s):
     if s.strip() != s or '  ' in s:
-        perror("Too much spacing for division: \"%s\"" % s)
+        pwarning("Too much spacing for division: \"%s\"" % s)
 
     if '"' in s:
         perror("Illegal use of quote in division: %s" % s)
@@ -91,7 +108,7 @@ KnownHeaders = HeaderHandlers.keys()
 def check_headers(headers):
     for header in headers:
         if not header in KnownHeaders:
-            perror("Unknown column header: %s" % header)
+            pwarning("Unknown column header: %s" % header)
 
         if headers.count(headers) > 1:
             perror("Duplicate column header: %s" % header)

@@ -2,4 +2,4 @@
 .PHONY: check
 
 check:
-	find . -name lifters.csv -type f -print -exec 'scripts/check-lifters-csv' '{}' ';'
+	find . -name lifters.csv -type f -exec 'scripts/check-lifters-csv' '{}' ';'
