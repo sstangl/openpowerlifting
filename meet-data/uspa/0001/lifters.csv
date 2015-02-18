@@ -1,35 +1,35 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-Cindy Bullara,,F,,123,,Women's Open,,203.75,,,,121.25,,,,248.00,,,,573.00
-Lisa Denison,,F,,148,,Women's Open,,314.00,,,,143.25,,,,347.00,,,,804.50
-Gretchen Ashton,,F,,148,,Women's Open,,225.75,,,,165.25,,,,253.50,,,,644.75
-Judy Payne,,F,,148,47,Women's Masters 40-49,,159.50,,,,132.25,,,,236.75,,,,528.50
-John Cano,,M,,148,13,Teen Men 13-16,,264.50,,,,143.25,,,,303.00,,,,710.75
-Chris Balanga,,M,,148,,Men's Open,,402.25,,,,336.00,,,,462.75,,,,1201.00
-Scott Layman,,M,,148,,Men's Open,,,,,,,,,,,,,,
-Paul Kelley,,M,,165,,Men's Open,,374.75,,,,303.00,,,,451.75,,,,1129.50
-Bill Cavalier,,M,,165,,Men's Open,,,,,,,,,,,,,,
-John Dorsten,,M,,181,,Men's Open,,567.50,,,,385.75,,,,617.25,,,,1570.50
-Roland Lopez,,M,,181,,Men's Open,,308.50,,,,286.50,,,,446.25,,,,1041.25
-Manuel Dinis,,M,,198,,Men's Open,,518.00,,,,303.00,,,,551.00,,,,1372.00
-Jesse Branham,,M,,220,,Men's Open,,650.25,,,,391.25,,,,611.75,,,,1653.25
-John Bostick,,M,,220,,Men's Open,,501.50,,,,374.75,,,,650.25,,,,1526.50
-Patrick McNeil,,M,,220,,Men's Open,,562.00,,,,407.00,,,,551.00,,,,1520.00
-William Charles,,M,,220,,Men's Open,,551.00,,,,347.00,,,,518.00,,,,1416.00
-Richard Marquez,,M,,220,,Men's Open,,352.50,,,,352.50,,,,440.75,,,,1145.75
-Victor Robles,,M,,220,,Men's Open,,402.25,,,,303.00,,,,369.25,,,,1074.50
-Steve Denison,,M,,242,,Men's Open,,611.75,,,,429.00,,,,650.25,,,,1691.00
-Zach Passman,,M,,242,,Men's Open,,518.00,,,,363.75,,,,573.00,,,,1454.75
-Junior German,,M,,242,,Men's Open,,540.00,,,,,,,,,,,,
-Brad Trujillo,,M,,275,,Men's Open,,573.00,,,,407.00,,,,556.50,,,,1536.50
-William McCaslin,,M,,275,,Men's Open,,523.50,,,,352.50,,,,435.25,,,,1311.25
-Scott Maxwell,,M,,275,,Men's Open,,62.50,,,,,,,,,,,,
-George Brink,,M,,308,,Men's Open,,705.25,,,,369.25,,,,749.50,,,,1824.00
-Joseph Jano,,M,,308,,Men's Open,,633.75,,,,385.75,,,,512.50,,,,1532.00
-William Anderson,,M,,308,,Men's Open,,440.75,,,,303.00,,,,429.00,,,,1172.75
-Manuel Rosales,,M,,SHW,,Men's Open,,600.75,,,,,,,,,,,,
-Brad King,,M,,220,47,Men's Masters 40-49,,644.75,,,,391.25,,,,688.75,,,,1724.75
-George Brink,,M,,308,49,Men's Masters 40-49,,705.25,,,,369.25,,,,749.50,,,,1824.00
-Roland Lopez,,M,,181,40,Men's Masters 40-49,,308.50,,,,286.50,,,,446.25,,,,1041.25
-Tom Miller,,M,,148,58,Men's Masters 50-59,,418.75,,,,209.25,,,,451.75,,,,1079.75
-Jim DeFoor,,M,,220,51,Men's Masters 50-59,,529.00,,,,413.25,,,,562.00,,,,1504.25
-Bob Evans,,M,,220,53,Men's Masters 50-59,,473.75,,,,358.00,,,,429.00,,,,1260.75
+Name,Place,Sex,Weightclass,Age,Division,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
+Cindy Bullara,1,F,123,,Women's Open,203.75,121.25,248,573
+Lisa Denison,1,F,148,,Women's Open,314,143.25,347,804.5
+Gretchen Ashton,2,F,148,,Women's Open,225.75,165.25,253.5,644.75
+Judy Payne,1,F,148,47,Women's Masters 40-49,159.5,132.25,236.75,528.5
+John Cano,1,M,148,13,Teen Men 13-16,264.5,143.25,303,710.75
+Chris Balanga,1,M,148,,Men's Open,402.25,336,462.75,1201
+Scott Layman,DQ,M,148,,Men's Open,,,,
+Paul Kelley,1,M,165,,Men's Open,374.75,303,451.75,1129.5
+Bill Cavalier,DQ,M,165,,Men's Open,,,,
+John Dorsten,1,M,181,,Men's Open,567.5,385.75,617.25,1570.5
+Roland Lopez,2,M,181,,Men's Open,308.5,286.5,446.25,1041.25
+Manuel Dinis,1,M,198,,Men's Open,518,303,551,1372
+Jesse Branham,1,M,220,,Men's Open,650.25,391.25,611.75,1653.25
+John Bostick,2,M,220,,Men's Open,501.5,374.75,650.25,1526.5
+Patrick McNeil,3,M,220,,Men's Open,562,407,551,1520
+William Charles,4,M,220,,Men's Open,551,347,518,1416
+Richard Marquez,5,M,220,,Men's Open,352.5,352.5,440.75,1145.75
+Victor Robles,6,M,220,,Men's Open,402.25,303,369.25,1074.5
+Steve Denison,1,M,242,,Men's Open,611.75,429,650.25,1691
+Zach Passman,2,M,242,,Men's Open,518,363.75,573,1454.75
+Junior German,DQ,M,242,,Men's Open,540,,,
+Brad Trujillo,1,M,275,,Men's Open,573,407,556.5,1536.5
+William McCaslin,2,M,275,,Men's Open,523.5,352.5,435.25,1311.25
+Scott Maxwell,DQ,M,275,,Men's Open,62.5,,,
+George Brink,1,M,308,,Men's Open,705.25,369.25,749.5,1824
+Joseph Jano,2,M,308,,Men's Open,633.75,385.75,512.5,1532
+William Anderson,3,M,308,,Men's Open,440.75,303,429,1172.75
+Manuel Rosales,DQ,M,SHW,,Men's Open,600.75,,,
+Brad King,1,M,220,47,Men's Masters 40-49,644.75,391.25,688.75,1724.75
+George Brink,2,M,308,49,Men's Masters 40-49,705.25,369.25,749.5,1824
+Roland Lopez,3,M,181,40,Men's Masters 40-49,308.5,286.5,446.25,1041.25
+Tom Miller,1,M,148,58,Men's Masters 50-59,418.75,209.25,451.75,1079.75
+Jim DeFoor,2,M,220,51,Men's Masters 50-59,529,413.25,562,1504.25
+Bob Evans,3,M,220,53,Men's Masters 50-59,473.75,358,429,1260.75

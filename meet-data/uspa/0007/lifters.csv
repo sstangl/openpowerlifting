@@ -1,65 +1,65 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-Mary Pennington,,F,,198,,Women's Open,,,,,,176,,,,,,,,
-Larry Tamura,,M,,132,,Master 50-54,,,,,,154,,,,,,,,
-Adam Contreras,,M,,148,13,Teen,,,,,,104,,,,,,,,
-Jose Chavez,,M,,165,,Men's Open,,,,,,225,,,,,,,,
-Richard Lopez,,M,,165,,Men's Open,,,,,,220,,,,,,,,
-Harrison Benner,,M,,165,80,Master 80+,,,,,,192,,,,,,,,
-Gary Nishida,,M,,181,,Men's Open,,,,,,303,,,,,,,,
-Ken Tate,,M,,181,,Submaster,,,,,,369,,,,,,,,
-Andrew Hoyos,,M,,181,,Master 40-44,,,,,,270,,,,,,,,
-Gary Nishida,,M,,181,,Master 45-49,,,,,,303,,,,,,,,
-Scott Marcinek,,M,,198,,Submaster,,,,,,374,,,,,,,,
-Lance Claggett,,M,,198,,Master 40-44,,,,,,286,,,,,,,,
-Sam Collela,,M,,198,,Master 65-69,,,,,,264,,,,,,,,
-Ricardo Echeverria,,M,,220,,Master 45-49,,,,,,413,,,,,,,,
-John Parker,,M,,220,,Master 55-59,,,,,,264,,,,,,,,
-Alberto Franco,,M,,242,,Men's Open,,,,,,501,,,,,,,,
-Bobby Lopez,,M,,242,,Men's Open,,,,,,440,,,,,,,,
-Darren Robuck,,M,,242,,Men's Open,,,,,,440,,,,,,,,
-Ray Cosio,,M,,242,,Men's Open,,,,,,407,,,,,,,,
-Alvin Waldon,,M,,242,,Men's Open,,,,,,,,,,,,,,
-Mike Nakamura,,M,,242,,Master 50-54,,,,,,286,,,,,,,,
-Robert Speno,,M,,275,,Men's Open,,,,,,446,,,,,,,,
-Mike Cunningham,,M,,275,,Master 55-59,,,,,,385,,,,,,,,
-Danny Herrera,,M,,275,,Master 60-64,,,,,,402,,,,,,,,
-Paul Leonard,,M,,308,,Men's Open,,,,,,534,,,,,,,,
-Steve Brown,,M,,308,,Master 45-49,,,,,,462,,,,,,,,
-Bill Garvey,,M,,308,,Master 50-54,,,,,,385,,,,,,,,
-Ollie Walker,,M,,308+,,Submaster,,,,,,451,,,,,,,,
-Leo Contreras,,M,,308+,,Master 45-49,,,,,,424,,,,,,,,
-Samantha Alves,,F,,114,,Women's Open,,44,,,,55,,,,115,,,,214
-Lisa Baldridge,,F,,198,,Women's Open,,214,,,,126,,,,264,,,,606
-Scott Layman,,M,,148,,Men's Open,,534,,,,363,,,,512,,,,1410
-Chris Balanga,,M,,148,,Men's Open,,429,,,,363,,,,479,,,,1272
-Gabe Covarrubias,,M,,165,,Men's Open,,473,,,,275,,,,551,,,,1300
-Andrew Hoyos,,M,,165,,Men's Open,,391,,,,270,,,,496,,,,1157
-Zane Gordon,,M,,181,,Junior 20-23,,325,,,,225,,,,391,,,,942
-Andrew Hoyos,,M,,181,,Master 40-44,,391,,,,270,,,,496,,,,1157
-Billy Wayne,,M,,198,,Submaster,,468,,,,303,,,,534,,,,1305
-Michael Brown,,M,,198,,Master 40-44,,402,,,,292,,,,462,,,,1157
-Jesse Branham,,M,,220,,Men's Open,,677,,,,396,,,,650,,,,1724
-John Bostick,,M,,220,,Men's Open,,490,,,,347,,,,600,,,,1438
-Mark Straley,,M,,220,,Master 40-44,,518,,,,314,,,,479,,,,1311
-Robert Meulenberg,,M,,242,,Junior 20-23,,556,,,,374,,,,611,,,,1543
-Steve Landry,,M,,242,,Men's Open,,622,,,,440,,,,661,,,,1724
-Darren Robuck,,M,,242,,Men's Open,,606,,,,440,,,,562,,,,1609
-Alfred Gonzales,,M,,242,,Men's Open,,595,,,,352,,,,655,,,,1603
-Steve Landry,,M,,242,,Submaster,,622,,,,440,,,,661,,,,1724
-Jeff Hayes,,M,,242,,Master 40-44,,501,,,,391,,,,551,,,,1443
-Clinton Haflich,,M,,242,,Master 60-64,,352,,,,259,,,,402,,,,1014
-Josh Bryant,,M,,275,,Teen 16-19,,727,,,,501,,,,501,,,,1730
-Andrew Austin,,M,,275,,Teen 16-19,,479,,,,314,,,,573,,,,1366
-Robert Speno,,M,,275,,Men's Open,,622,,,,446,,,,611,,,,1680
-Brad Trujillo,,M,,275,,Men's Open,,578,,,,429,,,,562,,,,1570
-Delmer Brown,,M,,275,,Men's Open,,551,,,,402,,,,562,,,,1515
-Delmer Brown,,M,,275,,Master 45-49,,551,,,,402,,,,562,,,,1515
-Gary Ridgeway,,M,,275,,Master 45-49,,551,,,,385,,,,534,,,,1470
-Danny Herrera,,M,,275,,Master 45-49,,220,,,,402,,,,220,,,,842
-Kevin Ezell,,M,,308,,Teen 13-15,,203,,,,198,,,,303,,,,705
-Art Labare,,M,,308,,Men's Open,,843,,,,518,,,,705,,,,2066
-Steve Brown,,M,,308,,Master 45-49,,551,,,,462,,,,551,,,,1565
-George Brink,,M,,308+,,Men's Open,,716,,,,424,,,,804,,,,1945
-Cliff Lewis,,M,,308+,,Men's Open,,633,,,,391,,,,661,,,,1686
-Kalika Alves,,M,,308+,,Submaster,,385,,,,407,,,,380,,,,1173
-George Brink,,M,,308+,,Master 50-54,,716,,,,424,,,,804,,,,1945
+Name,Place,Sex,Weightclass,Age,Division,Event,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
+Mary Pennington,1,F,198,,Women's Open,B,,176,,
+Larry Tamura,1,M,132,,Master 50-54,B,,154,,
+Adam Contreras,1,M,148,13,Teen,B,,104,,
+Jose Chavez,1,M,165,,Men's Open,B,,225,,
+Richard Lopez,2,M,165,,Men's Open,B,,220,,
+Harrison Benner,1,M,165,80,Master 80+,B,,192,,
+Gary Nishida,1,M,181,,Men's Open,B,,303,,
+Ken Tate,1,M,181,,Submaster,B,,369,,
+Andrew Hoyos,1,M,181,,Master 40-44,B,,270,,
+Gary Nishida,1,M,181,,Master 45-49,B,,303,,
+Scott Marcinek,1,M,198,,Submaster,B,,374,,
+Lance Claggett,1,M,198,,Master 40-44,B,,286,,
+Sam Collela,1,M,198,,Master 65-69,B,,264,,
+Ricardo Echeverria,1,M,220,,Master 45-49,B,,413,,
+John Parker,1,M,220,,Master 55-59,B,,264,,
+Alberto Franco,1,M,242,,Men's Open,B,,501,,
+Bobby Lopez,2,M,242,,Men's Open,B,,440,,
+Darren Robuck,3,M,242,,Men's Open,B,,440,,
+Ray Cosio,4,M,242,,Men's Open,B,,407,,
+Alvin Waldon,DQ,M,242,,Men's Open,B,,,,
+Mike Nakamura,1,M,242,,Master 50-54,B,,286,,
+Robert Speno,1,M,275,,Men's Open,B,,446,,
+Mike Cunningham,1,M,275,,Master 55-59,B,,385,,
+Danny Herrera,1,M,275,,Master 60-64,B,,402,,
+Paul Leonard,1,M,308,,Men's Open,B,,534,,
+Steve Brown,1,M,308,,Master 45-49,B,,462,,
+Bill Garvey,1,M,308,,Master 50-54,B,,385,,
+Ollie Walker,1,M,308+,,Submaster,B,,451,,
+Leo Contreras,1,M,308+,,Master 45-49,B,,424,,
+Samantha Alves,1,F,114,,Women's Open,SBD,44,55,115,214
+Lisa Baldridge,1,F,198,,Women's Open,SBD,214,126,264,606
+Scott Layman,1,M,148,,Men's Open,SBD,534,363,512,1410
+Chris Balanga,2,M,148,,Men's Open,SBD,429,363,479,1272
+Gabe Covarrubias,1,M,165,,Men's Open,SBD,473,275,551,1300
+Andrew Hoyos,1,M,165,,Men's Open,SBD,391,270,496,1157
+Zane Gordon,1,M,181,,Junior 20-23,SBD,325,225,391,942
+Andrew Hoyos,1,M,181,,Master 40-44,SBD,391,270,496,1157
+Billy Wayne,1,M,198,,Submaster,SBD,468,303,534,1305
+Michael Brown,1,M,198,,Master 40-44,SBD,402,292,462,1157
+Jesse Branham,1,M,220,,Men's Open,SBD,677,396,650,1724
+John Bostick,2,M,220,,Men's Open,SBD,490,347,600,1438
+Mark Straley,1,M,220,,Master 40-44,SBD,518,314,479,1311
+Robert Meulenberg,1,M,242,,Junior 20-23,SBD,556,374,611,1543
+Steve Landry,1,M,242,,Men's Open,SBD,622,440,661,1724
+Darren Robuck,2,M,242,,Men's Open,SBD,606,440,562,1609
+Alfred Gonzales,3,M,242,,Men's Open,SBD,595,352,655,1603
+Steve Landry,1,M,242,,Submaster,SBD,622,440,661,1724
+Jeff Hayes,1,M,242,,Master 40-44,SBD,501,391,551,1443
+Clinton Haflich,1,M,242,,Master 60-64,SBD,352,259,402,1014
+Josh Bryant,1,M,275,,Teen 16-19,SBD,727,501,501,1730
+Andrew Austin,2,M,275,,Teen 16-19,SBD,479,314,573,1366
+Robert Speno,1,M,275,,Men's Open,SBD,622,446,611,1680
+Brad Trujillo,2,M,275,,Men's Open,SBD,578,429,562,1570
+Delmer Brown,3,M,275,,Men's Open,SBD,551,402,562,1515
+Delmer Brown,1,M,275,,Master 45-49,SBD,551,402,562,1515
+Gary Ridgeway,2,M,275,,Master 45-49,SBD,551,385,534,1470
+Danny Herrera,1,M,275,,Master 45-49,SBD,220,402,220,842
+Kevin Ezell,1,M,308,,Teen 13-15,SBD,203,198,303,705
+Art Labare,1,M,308,,Men's Open,SBD,843,518,705,2066
+Steve Brown,1,M,308,,Master 45-49,SBD,551,462,551,1565
+George Brink,1,M,308+,,Men's Open,SBD,716,424,804,1945
+Cliff Lewis,2,M,308+,,Men's Open,SBD,633,391,661,1686
+Kalika Alves,1,M,308+,,Submaster,SBD,385,407,380,1173
+George Brink,1,M,308+,,Master 50-54,SBD,716,424,804,1945

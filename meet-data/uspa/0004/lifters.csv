@@ -1,32 +1,32 @@
-Name,UID,Sex,Bodyweight,Weightclass,Age,Division,Equipment,Squat1LBS,Squat2LBS,Squat3LBS,Squat4LBS,Bench1LBS,Bench2LBS,Bench3LBS,Bench4LBS,DL1LBS,DL2LBS,DL3LBS,DL4LBS,TotalLBS
-Matthew Prinster,,M,,123,,Special Olympian,,,,,,137.75,,,,231.25,,,,369
-Kevin Ezell,,M,,308,,Special Olympian,,,,,,159.5,,,,281,,,,440.5
-Lisa Denison,,F,,148,,Women's Open,,336,,,,154.25,,,,380.25,,,,870.5
-Priscilla Sanchez,,F,,148,,Women's Open,,225.75,,,,132.25,,,,275.5,,,,633.5
-Mary Pennington,,F,,181,,Women's Open,,143.25,,,,165.25,,,,248,,,,556.5
-Disa Hatfield,,F,,198,,Women's Open,,259,,,,165.25,,,,286.25,,,,710.5
-Scott Layman,,M,,148,,Men's Open,,540,,,,358,,,,529,,,,1427
-John Cano,,M,,165,,Men's Open,,308.5,,,,176.25,,,,319.5,,,,804.25
-Jesse Branham,,M,,220,,Men's Open,,677.75,,,,402.25,,,,661.25,,,,1741.25
-John Bostick,,M,,220,,Men's Open,,529,,,,391.25,,,,661.25,,,,1581.5
-Lord Elliott,,M,,220,,Men's Open,,507,,,,325,,,,512.5,,,,1344.5
-Steve Landry,,M,,242,,Men's Open,,611.75,,,,462.75,,,,622.75,,,,1697.25
-Darin Lovat,,M,,242,,Men's Open,,600.75,,,,380.25,,,,551,,,,1532
-Brad Trujillo,,M,,242,,Men's Open,,551,,,,385.75,,,,512.5,,,,1449.25
-Bill McCaslin,,M,,242,,Men's Open,,501.5,,,,325,,,,485,,,,1311.5
-Kevin Westbrook,,M,,242,,Men's Open,,424.25,,,,319.5,,,,385.75,,,,1129.5
-Andrew Austin,,M,,275,,Men's Open,,429,,,,259,,,,534.5,,,,1222.5
-George Brink,,M,,308,,Men's Open,,611.75,,,,402.25,,,,777,,,,1791
-Andrew Lopez ,,M,,132,,Men's Sub-Masters,,248,,,,170.75,,,,242.5,,,,661.25
-Steve Kato,,M,,148,,Men's Sub-Masters,,440.75,,,,303,,,,402.25,,,,1146
-Paul Kelley,,M,,198,,Men's Sub-Masters,,407,,,,363.75,,,,512.5,,,,1283.25
-Michael Brown,,M,,198,,Men's Sub-Masters,,352.5,,,,286.5,,,,485,,,,1124
-Kenneth Scott,,M,,275,,Men's Masters 40-44,,485,,,,468.25,,,,606.25,,,,1559.5
-Ruben Arredondo,,M,,220,,Men's Masters 45-49,,473.75,,,,352.5,,,,473.75,,,,1300
-Delmer Brown,,M,,242,,Men's Masters 45-49,,501.5,,,,341.5,,,,501.5,,,,1344.5
-Gary Ridgeway,,M,,275,,Men's Masters 45-49,,462.75,,,,352.5,,,,479.5,,,,1294.75
-Steve Hallman,,M,,242,,Men's Masters 50-54,,242.5,,,,231.25,,,,308.5,,,,782.25
-George Brink ,,M,,308,,Men's Masters 50-54,,611.75,,,,402.25,,,,777,,,,1791
-Edwin Hill,,M,,181,,Men's Masters 55-59,,132.25,,,,275.5,,,,264.5,,,,672.25
-Danny Herrera ,,M,,275,,Men's Masters 60-64,,402.25,,,,369.25,,,,402.25,,,,1173.75
-Clinton Haflich,,M,,275,,Men's Masters 60-64,,451.75,,,,,,,,,,,,
+Name,Place,Sex,Weightclass,Division,Event,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
+Matthew Prinster,1,M,123,Special Olympian,BD,,137.75,231.25,369
+Kevin Ezell,1,M,308,Special Olympian,BD,,159.5,281,440.5
+Lisa Denison,1,F,148,Women's Open,SBD,336,154.25,380.25,870.5
+Priscilla Sanchez,2,F,148,Women's Open,SBD,225.75,132.25,275.5,633.5
+Mary Pennington,1,F,181,Women's Open,SBD,143.25,165.25,248,556.5
+Disa Hatfield,1,F,198,Women's Open,SBD,259,165.25,286.25,710.5
+Scott Layman,1,M,148,Men's Open,SBD,540,358,529,1427
+John Cano,1,M,165,Men's Open,SBD,308.5,176.25,319.5,804.25
+Jesse Branham,1,M,220,Men's Open,SBD,677.75,402.25,661.25,1741.25
+John Bostick,2,M,220,Men's Open,SBD,529,391.25,661.25,1581.5
+Lord Elliott,3,M,220,Men's Open,SBD,507,325,512.5,1344.5
+Steve Landry,1,M,242,Men's Open,SBD,611.75,462.75,622.75,1697.25
+Darin Lovat,2,M,242,Men's Open,SBD,600.75,380.25,551,1532
+Brad Trujillo,3,M,242,Men's Open,SBD,551,385.75,512.5,1449.25
+Bill McCaslin,4,M,242,Men's Open,SBD,501.5,325,485,1311.5
+Kevin Westbrook,5,M,242,Men's Open,SBD,424.25,319.5,385.75,1129.5
+Andrew Austin,1,M,275,Men's Open,SBD,429,259,534.5,1222.5
+George Brink,1,M,308,Men's Open,SBD,611.75,402.25,777,1791
+Andrew Lopez ,1,M,132,Men's Sub-Masters,SBD,248,170.75,242.5,661.25
+Steve Kato,1,M,148,Men's Sub-Masters,SBD,440.75,303,402.25,1146
+Paul Kelley,1,M,198,Men's Sub-Masters,SBD,407,363.75,512.5,1283.25
+Michael Brown,2,M,198,Men's Sub-Masters,SBD,352.5,286.5,485,1124
+Kenneth Scott,1,M,275,Men's Masters 40-44,SBD,485,468.25,606.25,1559.5
+Ruben Arredondo,1,M,220,Men's Masters 45-49,SBD,473.75,352.5,473.75,1300
+Delmer Brown,1,M,242,Men's Masters 45-49,SBD,501.5,341.5,501.5,1344.5
+Gary Ridgeway,1,M,275,Men's Masters 45-49,SBD,462.75,352.5,479.5,1294.75
+Steve Hallman,1,M,242,Men's Masters 50-54,SBD,242.5,231.25,308.5,782.25
+George Brink ,1,M,308,Men's Masters 50-54,SBD,611.75,402.25,777,1791
+Edwin Hill,1,M,181,Men's Masters 55-59,SBD,132.25,275.5,264.5,672.25
+Danny Herrera ,1,M,275,Men's Masters 60-64,SBD,402.25,369.25,402.25,1173.75
+Clinton Haflich,DQ,M,275,Men's Masters 60-64,SBD,451.75,,,
