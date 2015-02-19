@@ -93,6 +93,27 @@ def check_column_division(s):
         perror("Illegal use of quote in division: %s" % s)
 
 
+def check_column_equipment(s):
+    if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply']:
+        perror("Unknown equipment value: \"%s\"" % s)
+
+
+def check_lift_column(s):
+    try:
+        float(s)
+    except ValueError:
+        perror("Invalid lift quantity: %s" % s)
+
+
+def check_positive_number_column(s):
+    try:
+        f = float(s)
+        if f < 0.0:
+            perror("Totals cannot be negative: %s" % s)
+    except ValueError:
+        perror("Invalid total quantity: %s" % s)
+
+
 HeaderHandlers = {
     'Name': check_column_name,
     'Sex': check_column_sex,
@@ -100,6 +121,33 @@ HeaderHandlers = {
     'Place': check_column_place,
     'Event': check_column_event,
     'Division': check_column_division,
+    'Equipment': check_column_equipment,
+
+    # Stat columns. Only Kg is valid.
+    'WeightClassKg': check_positive_number_column,
+    'BodyweightKg': check_positive_number_column,
+    'Wilks': check_positive_number_column,
+
+    # Lift columns. Only Kg is valid.
+    'BestSquatKg': check_lift_column,
+    'SquatKg1': check_lift_column,
+    'SquatKg2': check_lift_column,
+    'SquatKg3': check_lift_column,
+    'SquatKg4': check_lift_column,
+
+    'BestBenchKg': check_lift_column,
+    'BenchKg1': check_lift_column,
+    'BenchKg2': check_lift_column,
+    'BenchKg3': check_lift_column,
+    'BenchKg4': check_lift_column,
+
+    'BestDeadliftKg': check_lift_column,
+    'DeadliftKg1': check_lift_column,
+    'DeadliftKg2': check_lift_column,
+    'DeadliftKg3': check_lift_column,
+    'DeadliftKg4': check_lift_column,
+
+    'TotalKg': check_positive_number_column,
 }
 
 KnownHeaders = HeaderHandlers.keys()
