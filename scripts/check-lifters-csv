@@ -114,6 +114,12 @@ def check_positive_number_column(s):
         perror("Invalid field quantity: %s" % s)
 
 
+def check_column_weightclass(s):
+    if s[-1] is '+':
+        s = s[:-1]
+    check_positive_number_column(s)
+
+
 HeaderHandlers = {
     'Name': check_column_name,
     'Sex': check_column_sex,
@@ -124,7 +130,7 @@ HeaderHandlers = {
     'Equipment': check_column_equipment,
 
     # Stat columns. Only Kg is valid.
-    'WeightClassKg': check_positive_number_column,
+    'WeightClassKg': check_column_weightclass,
     'BodyweightKg': check_positive_number_column,
     'Wilks': check_positive_number_column,
 
