@@ -109,9 +109,9 @@ def check_positive_number_column(s):
     try:
         f = float(s)
         if f < 0.0:
-            perror("Totals cannot be negative: %s" % s)
+            perror("Field cannot be negative: %s" % s)
     except ValueError:
-        perror("Invalid total quantity: %s" % s)
+        perror("Invalid field quantity: %s" % s)
 
 
 HeaderHandlers = {
