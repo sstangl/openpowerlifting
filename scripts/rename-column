@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+# Simple in-place column replace script, so I don't have to remember the ed commands.
+
+if [ $# -ne 3 ]; then
+	echo " Usage: $0 file oldname newname"
+	exit 1
+fi
+
+ed -s "${1}" <<EOF
+	H
+	.s/${2},/${3},/
+	w
+EOF

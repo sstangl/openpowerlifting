@@ -374,7 +374,7 @@ def csv_extract_place_from_name(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
 
-    csv[0].insert(1, 'Placement')
+    csv[0].insert(1, 'Place')
 
     for i in xrange(1, len(csv)):
         row = csv[i]
