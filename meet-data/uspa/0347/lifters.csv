@@ -22,8 +22,8 @@ Blaine Hanson,1,220 Junior Men 20-23 Raw,M,Raw,MN,220,214.2,22,222.5,187.5,,272.
 Kinnon Ross MacKinnon,1,165 Open Men Raw,M,Raw,CAN,165,158,29,160,102.5,,200,462.5,340.499,352.74,225.97,,440.92,1019.63
 Lawrence Sullivan,2,165 Open Men Raw,M,Raw,OH,165,154.8,52,87.5,80,,105,272.5,203.727,192.9,176.37,,231.48,600.75
 Harry Yuen,3,165 Open Men Raw,M,Raw,CAN,165,164.2,52,97.5,62.5,,110,270,193.329,214.95,137.79,,242.51,595.24
-Jim Wight,DQ,165 Open Men Raw,M,Raw,VA,165,165.3,61,-112.5,,,,O,,-248.02,,,,O
-Christopher Thomas,DQ,165 Open Men Raw,M,Raw,MA,165,164.8,41,110,-75,,,O,,242.51,-165.35,,,O
+Jim Wight,DQ,165 Open Men Raw,M,Raw,VA,165,165.3,61,-112.5,,,,,,-248.02,,,,
+Christopher Thomas,DQ,165 Open Men Raw,M,Raw,MA,165,164.8,41,110,-75,,,,,242.51,-165.35,,,
 Naveen Rajan,1,181 Open Men Raw,M,Raw,CO,181,174.6,31,135,85,,165,385,264.528,297.62,187.39,,363.76,848.77
 Marc Giguere,2,181 Open Men Raw,M,Raw,OH,181,180.6,48,125,67.5,,170,362.5,243.876,275.58,148.81,,374.78,799.17
 Michael Calabrese,1,198 Open Men Raw,M,Raw,OH,198,197.2,49,117.5,90,,137.5,345,220.939,259.04,198.41,,303.13,760.59
@@ -36,18 +36,18 @@ Randy Evans,1,242 Open Men Raw,M,Raw,WI,242,241.2,50,140,105,,150,395,232.843,30
 Dominic Patmore,1,275 Open Men Raw,M,Raw,UK,275,264.2,34,232.5,167.5,,267.5,667.5,383.879,512.57,369.27,,589.73,1471.57
 Paul Mercurio,2,275 Open Men Raw,M,Raw,NY,275,271.6,34,205,130,,187.5,522.5,298.645,451.94,286.6,,413.36,1151.9
 Kyle Able,1,308 Open Men Raw,M,Raw,WA,308,292,43,275,192.5,,300,767.5,432.679,606.27,424.39,,661.38,1692.03
-Tony Lipscomb,DQ,SHW Open Men Raw,M,Raw,OH,SHW,311.6,46,160,-140,,,O,,352.74,-308.65,,,O
-Christopher Thomas,DQ,165 Master Men 40-44 Raw,M,Raw,MA,165,164.8,41,110,-75,,,O,,242.51,-165.35,,,O
+Tony Lipscomb,DQ,SHW Open Men Raw,M,Raw,OH,SHW,311.6,46,160,-140,,,,,352.74,-308.65,,,
+Christopher Thomas,DQ,165 Master Men 40-44 Raw,M,Raw,MA,165,164.8,41,110,-75,,,,,242.51,-165.35,,,
 Lawrence Sullivan,1,165 Master Men 50-54 Raw,M,Raw,OH,165,154.8,52,87.5,80,,105,272.5,237.342,192.9,176.37,,231.48,600.75
 Harry Yuen,2,165 Master Men 50-54 Raw,M,Raw,OH,165,164.2,52,97.5,62.5,,110,270,225.228,214.95,137.79,,242.51,595.24
-Jim Wight,DQ,165 Master Men 60-64 Raw,M,Raw,VA,165,165.3,61,-112.5,,,,O,,,-165.35,,,O
+Jim Wight,DQ,165 Master Men 60-64 Raw,M,Raw,VA,165,165.3,61,-112.5,,,,,,,-165.35,,,
 Marc Giguere,1,181 Master Men 45-49 Raw,M,Raw,OH,181,180.6,48,125,67.5,,170,362.5,267.532,275.58,148.81,,374.78,799.17
 Michael Calabrese,1,198 Master Men 45-49 Raw,M,Raw,OH,198,197.2,49,117.5,90,,137.5,345,245.905,259.04,198.41,,303.13,760.59
 James Washek,1,220 Master Men 45-49 Raw,M,Raw,MO,220,218.6,49,170,132.5,,195,497.5,338.142,374.78,292.11,,429.9,1096.79
 Tony DiLucente,1,220 Master Men 55-59 Raw,M,Raw,OH,220,218.2,56,160,140,,200,500,380.736,352.74,308.64,,440.92,1102.3
 Randy Evans,1,242 Master Men 50-54 Raw,M,Raw,WI,242,241.2,50,140,105,,150,395,263.113,308.64,231.48,,330.69,870.82
 Kyle Able,1,308 Master Men 40-44 Raw,M,Raw,WA,308,292,43,275,192.5,,300,767.5,446.092,606.27,424.39,,661.38,1692.03
-Tony Lipscomb,DQ,SHW Master Men 45-49 Raw,M,Raw,OH,SHW,311.6,46,160,-140,,,O,,352.74,-308.65,,,O
+Tony Lipscomb,DQ,SHW Master Men 45-49 Raw,M,Raw,OH,SHW,311.6,46,160,-140,,,,,352.74,-308.65,,,
 Jay Malone,1,198 Open Men Classic Raw,M,Raw,NY,198,183.4,41,195,140,,200,535,356.63,429.9,308.64,,440.92,1179.46
 Peter Wolfe,2,198 Open Men Classic Raw,M,Raw,IA,198,190.6,59,135,127.5,,170,432.5,282.041,297.62,281.09,,374.78,953.49
 John Dignan,1,242 Open Men Classic Raw,M,Raw,NV,242,239.6,46,217.5,140,,227.5,585,345.566,479.5,308.64,,501.55,1289.69
@@ -83,5 +83,5 @@ Misty Mercer,1,181 Open Women Raw,F,Raw,IN,181,179.2,31,,55,,137.5,192.5,174.61,
 Cheryl Keeling,1,114 Master Women 60-64 Raw,F,Raw,NY,114,108,63,,40,,52.5,92.5,171.473,,88.18,,115.74,203.93
 Ari Schabo,1,181 Open Men Raw,M,Raw,OH,181,180.1,30,,145,,187.5,332.5,224.07,,319.67,,413.36,733.03
 John Resor,1,242 Open Men Raw,M,Raw,OH,242,230,55,,100,,182.5,282.5,169.193,,220.46,,402.34,622.8
-Dusty Samples,DQ,308 Open Men Raw,M,Raw,OH,308,286.2,31,,137.5,,-205,O,,,303.13,,-451.95,O
+Dusty Samples,DQ,308 Open Men Raw,M,Raw,OH,308,286.2,31,,137.5,,-205,,,,303.13,,-451.95,O
 John Resor,1,242 Master Men 55-59 Raw,M,Raw,OH,242,230,55,,100,,182.5,282.5,207.262,,220.46,,402.34,622.8

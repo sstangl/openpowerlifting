@@ -54,7 +54,7 @@ Tony Mai,1,181 Open Men Raw,M,Raw,CA,181,175.50,27,197.50,,110.00,,215.00,,522.5
 Eric Lang,2,181 Open Men Raw,M,Raw,CA,181,177.10,24,165.00,,102.50,,232.50,,500.00,340.462,363.76,,225.97,,512.57,,1102.30
 Steve Covington,3,181 Open Men Raw,M,Raw,CA,181,181.40,53,145.00,,120.00,,170.00,,435.00,291.871,319.67,,264.55,,374.78,,959.00
 Zach Lockhart,4,181 Open Men Raw,M,Raw,CA,181,167.00,21,155.00,,77.50,,177.50,,410.00,290.146,341.71,,170.86,,391.32,,903.89
-Marty Gothard,DQ,181 Open Men Raw,M,Raw,CA,181,173.70,65,-122.50,,,,,,O,,-270.00,,,,,,O
+Marty Gothard,DQ,181 Open Men Raw,M,Raw,CA,181,173.70,65,-122.50,,,,,,,,-270.00,,,,,,
 Tim Hartley,1,198 Open Men Raw,M,Raw,CA,198,194.30,25,192.50,,135.00,,220.00,,547.50,353.345,424.39,,297.62,,485.01,,1207.02
 Eric Ritter,2,198 Open Men Raw,M,Raw,CA,198,191.50,46,195.00,,135.00,,215.00,,545.00,354.489,429.90,,297.62,,473.99,,1201.51
 Hossam Hassane,3,198 Open Men Raw,M,Raw,CA,198,185.70,17,162.50,,107.50,,185.00,,455.00,301.104,358.25,,236.99,,407.85,,1003.09
@@ -76,7 +76,7 @@ Daniel Polhemus,1,165 Submaster Men 35-39 Raw,M,Raw,NV,165,164.50,38,142.50,,120
 Ben Autrey,1,220 Submaster Men 35-39 Raw,M,Raw,CA,220,217.40,39,245.00,,162.50,,255.00,,662.50,425.763,540.13,,358.25,,562.17,,1460.55
 Doug Brownfield,2,220 Submaster Men 35-39 Raw,M,Raw,CA,220,215.80,38,212.50,,172.50,,260.00,,645.00,411.837,468.48,,380.29,,573.20,,1421.97
 Steve Covington,1,181 Master Men 50-54 Raw,M,Raw,CA,181,181.40,53,145.00,,120.00,,170.00,,435.00,345.576,319.67,,264.55,,374.78,,959.00
-Marty Gothard,DQ,181 Master Men 65-69 Raw,M,Raw,CA,181,173.70,65,-122.50,,,,,,O,,-270.00,,,,,,O
+Marty Gothard,DQ,181 Master Men 65-69 Raw,M,Raw,CA,181,173.70,65,-122.50,,,,,,,,-270.00,,,,,,
 Eric Ritter,1,198 Master Men 45-49 Raw,M,Raw,CA,198,191.50,46,195.00,,135.00,,215.00,,545.00,378.594,429.90,,297.62,,473.99,,1201.51
 Pete Collodi,2,198 Master Men 45-49 Raw,M,Raw,CA,198,194.00,49,142.50,,97.50,,170.00,,410.00,294.748,314.16,,214.95,,374.78,,903.89
 Greg Harper,1,198 Master Men 60-64 Raw,M,Raw,CA,198,185.70,64,136.50,,67.50,,172.50,,376.50,361.275,300.93,,148.81,,380.29,,830.03
@@ -135,7 +135,7 @@ Bettina Lutman,1,165 Open Women Raw,F,Raw,CA,165,157.30,38,,,60.00,,,,60.00,58.9
 Betsy Spann,2,165 Open Women Raw,F,Raw,CA,165,161.60,57,,,60.00,,,,60.00,57.877,,,132.28,,,,132.28
 Deirdre Rockefeller-Ramsey,1,132 Submaster Women 35-39 Raw,F,Raw,CA,132,131.00,37,,,57.50,,,,57.50,66.528,,,126.76,,,,126.76
 Bettina Lutman,1,165 Submaster Women 35-39 Raw,F,Raw,CA,165,157.30,38,,,,,60.00,62.5,60.00,61.275,,,132.28,137,,,132.28
-Tracy Snyder,DQ,132 Master Women 45-49 Raw,F,Raw,CA,132,129.90,47,,,-55.00,,,,O,,,,-121.00,,,,O
+Tracy Snyder,DQ,132 Master Women 45-49 Raw,F,Raw,CA,132,129.90,47,,,-55.00,,,,,,,,-121.00,,,,
 Betsy Spann,1,165 Master Women 55-59 Raw,F,Raw,CA,165,161.60,57,,,60.00,,,,60.00,73.389,,,132.28,,,,132.28
 Michael V. Russell,1,132 Open Men Raw,M,Raw,CA,132,131.60,58,,,87.50,,,,87.50,74.977,,,192.90,,,,192.90
 Gerardo Rivera,1,165 Open Men Raw,M,Raw,CA,165,163.20,25,,,142.50,,,,142.50,102.476,,,314.16,,,,314.16
@@ -152,13 +152,13 @@ Charlie Martin,1,198 Master Men 55-59 Raw,M,Raw,CA,198,189.50,58,,,145.00,,,,145
 Stacy Dedrick,1,220 Master Men 45-49 Raw,M,Raw,CA,220,211.10,48,,,197.50,,,,197.50,134.290,,,435.41,,,,435.41
 Harry Munro,1,220 Master Men 55-59 Raw,M,Raw,CA,220,218.60,57,,,127.50,,,,127.50,98.728,,,281.09,,,,281.09
 Dolores Garcia-Munro,1,132 Master Women 55-59 Single Ply,F,Single-ply,CA,132,132.00,55,,,52.50,,,,52.50,71.817,,,115.74,,,,115.74
-Dennis Cannataro,DQ,198 Open Men Single Ply,M,Single-ply,CA,198,190.70,56,,,-172.50,,,,O,,,,-380.00,,,,O
-Dan Dudgeon,DQ,198 Submaster Men 35-39 Single Ply,M,Single-ply,CA,198,193.70,38,,,-231.00,,,,O,,,,-509.00,,,,O
-Dennis Cannataro,DQ,198 Master Men 55-59 Single Ply,M,Single-ply,CA,198,190.70,56,,,-172.50,,,,O,,,,-380.00,,,,O
+Dennis Cannataro,DQ,198 Open Men Single Ply,M,Single-ply,CA,198,190.70,56,,,-172.50,,,,,,,,-380.00,,,,
+Dan Dudgeon,DQ,198 Submaster Men 35-39 Single Ply,M,Single-ply,CA,198,193.70,38,,,-231.00,,,,,,,,-509.00,,,,
+Dennis Cannataro,DQ,198 Master Men 55-59 Single Ply,M,Single-ply,CA,198,190.70,56,,,-172.50,,,,,,,,-380.00,,,,
 Joe Bernazzani,1,220 Master Men 60-64 Single Ply,M,Single-ply,CA,220,216.20,63,,,182.50,,,,182.50,159.093,,,402.34,,,,402.34
 Bruce Lee,1,308 Master Men 55-59 Single Ply,M,Single-ply,CA,308,291.00,55,,,230.00,,,,230.00,158.930,,,507.06,,,,507.06
 Nick Massey,1,242 Open Men Multi Ply,M,Multi-ply,CA,242,241.20,44,,,220.00,,,,220.00,129.685,,,485.01,,,,485.01
-Mike Tiktinsky,DQ,181 Master Men 65-69 Multi Ply,M,Multi-ply,CA,181,181.50,67,,,-85.00,,,,O,,,,-187.00,,,,O
+Mike Tiktinsky,DQ,181 Master Men 65-69 Multi Ply,M,Multi-ply,CA,181,181.50,67,,,-85.00,,,,,,,,-187.00,,,,
 Nick Massey,1,242 Master Men 40-44 Multi Ply,M,Multi-ply,CA,242,241.20,44,,,220.00,,,,220.00,135.261,,,485.01,,,,485.01
 Julie Ortiz,1,165 Junior Women 16-17 Raw,F,Raw,CA,165,163.50,16,,,,,120.00,,120.00,129.824,,,,,264.55,,264.55
 Natalie Sardinia,1,132 Open Women Raw,F,Raw,CA,132,131.50,34,,,,,157.50,,157.50,176.398,,,,,347.22,,347.22

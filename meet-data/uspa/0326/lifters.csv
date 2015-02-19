@@ -1,19 +1,19 @@
 Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks,SquatLBS,Squat4LBS,BenchLBS,Bench4LBS,DeadliftLBS,Deadlift4LBS,TotalLBS
 Brittany Jackson,1,165 Junior Women 18-19 Raw,F,Raw,TX,165,155,18,92.5,,45,,137.5,,275,289.124,203.93,,99.21,,303.13,,606.27
-Sheyenne Tercero,DQ,181 Junior Women 18-19 Raw,F,Raw,TX,181,175.7,19,135,,-87.5,,,,O,,297.62,,-192.9,,,,297.62
+Sheyenne Tercero,DQ,181 Junior Women 18-19 Raw,F,Raw,TX,181,175.7,19,135,,-87.5,,,,,,297.62,,-192.9,,,,297.62
 Bernice Pimentel,1,114 Open Women Raw,F,Raw,TX,114,114.4,28,77.5,,42.5,,102.5,,222.5,277.825,170.86,,93.7,,225.97,,490.52
 Jasmine Pando,1,123 Open Women Raw,F,Raw,TX,123,121,26,105,,57.5,,130,,292.5,349.623,231.48,,126.76,,286.6,,644.85
 Tammy McDonald,1,148 Open Women Raw,F,Raw,TX,148,135.8,42,135,,70,,187.5,,392.5,428.815,297.62,,154.32,,413.36,,865.31
 Danielle Moore,2,148 Open Women Raw,F,Raw,TX,148,146.8,27,102.5,,57.5,,140,,300,309.206,225.97,,126.76,,308.64,,661.38
-Michelle Smith,DQ,148 Open Women Raw,F,Raw,TX,148,147.3,25,-92.5,,,,,,O,,-203.93,,,,,,O
-Liz Escalada,DQ,148 Open Women Raw,F,Raw,TX,148,142.4,41,-82.5,,55,,117.5,,O,,-181.9,,,,,,O
+Michelle Smith,DQ,148 Open Women Raw,F,Raw,TX,148,147.3,25,-92.5,,,,,,,,-203.93,,,,,,
+Liz Escalada,DQ,148 Open Women Raw,F,Raw,TX,148,142.4,41,-82.5,,55,,117.5,,,,-181.9,,,,,,
 Tammy McDonald,1,148 Master Women 40-44 Raw,F,Raw,TX,148,135.8,42,135,,70,,187.5,,392.5,437.391,297.62,,154.32,,413.36,,865.31
 Edwin Morales,1,165 Junior Men 20-23 Raw,M,Raw,TX,165,162.54,23,165,,105,,215,,485,349.783,363.76,,231.48,,473.99,,1069.23
-Ramon Parada,DQ,181 Junior Men 20-23 Raw,M,Raw,TX,181,179.2,21,150,,-107.5,,,,O,,330.69,,-236.99,,,,O
+Ramon Parada,DQ,181 Junior Men 20-23 Raw,M,Raw,TX,181,179.2,21,150,,-107.5,,,,,,330.69,,-236.99,,,,
 Abram Ramirez,1,198 Junior Men 20-23 Raw,M,Raw,TX,198,188.12,21,217.5,,105,,265,,587.5,393.644,479.5,,231.48,,584.22,,1295.2
-Micheal Aimendarz,DQ,242 Junior Men 20-23 Raw,M,Raw,TX,242,226.4,22,-300,,,,,,O,,-661.4,,,,,,O
+Micheal Aimendarz,DQ,242 Junior Men 20-23 Raw,M,Raw,TX,242,226.4,22,-300,,,,,,,,-661.4,,,,,,
 Cadet Bryant,1,132 Open Men Raw,M,Raw,TX,132,130.44,40,152.5,,107.5,110,190,192.5,450,388.757,336.2,,236.99,242.5,418.87,424.4,992.07
-Kevin Richardson,DQ,181 Open Men Raw,M,Raw,TX,181,177.2,35,-205,,,,,,,,-451.9,,,,,,O
+Kevin Richardson,DQ,181 Open Men Raw,M,Raw,TX,181,177.2,35,-205,,,,,,,,-451.9,,,,,,
 Micheal Brady,1,198 Open Men Raw,M,Raw,TX,198,195.72,28,190,,130,,237.5,,557.5,358.422,418.87,,286.6,,523.59,,1229.06
 Miguel Fraire,2,198 Open Men Raw,M,Raw,TX,198,195.2,27,185,,115,,210,,510,328.342,407.85,,253.53,,462.97,,1124.35
 Andre Silva,3,198 Open Men Raw,M,Raw,TX,198,187.3,28,152.5,,120,,190,,462.5,304.566,336.2,,264.55,,418.87,,1019.63
@@ -22,7 +22,7 @@ Arturo Romero,2,220 Open Men Raw,M,Raw,TX,220,215.98,24,157.5,,152.5,,215,,525,3
 Micheal Aimendarz,DQ,242 Open Men Raw,M,Raw,TX,242,226.4,22,-300,,,,,,,,-661.4,,,,,,
 Marcos Chavez,1,275 Open Men Raw,M,Raw,TX,275,267.8,26,227.5,,182.5,,272.5,,682.5,391.296,501.55,,402.34,,600.75,,1504.64
 Eduardo Vasquez,1,308+ Open Men Raw,M,Raw,TX,308+,342.84,24,180,,167.5,,250,,597.5,328.91,396.83,,369.27,,551.15,,1317.25
-Kevin Richardson,DQ,181 Submaster Men 35-39 Raw,M,Raw,TX,181,177.2,35,-205,,,,,,O,,-451.9,,,,,,O
+Kevin Richardson,DQ,181 Submaster Men 35-39 Raw,M,Raw,TX,181,177.2,35,-205,,,,,,,,-451.9,,,,,,
 Cadet Bryant,1,132 Master Men 40-44 Raw,M,Raw,TX,132,130.44,40,152.5,,107.5,110,190,192.5,450,388.757,336.2,,236.99,242.5,418.87,424.4,992.07
 Joe Tittle,1,242 Master Men 45-49 Raw,M,Raw,TX,242,256.16,49,172.5,,135,,200,,507.5,327.317,380.29,,297.62,,440.92,,1118.83
 Estela Perez,1,148 Junior Women Classic Raw,F,Wraps,TX,148,144.4,23,100,,57.5,,150,,307.5,320.78,220.46,,126.76,,330.69,,677.91
@@ -33,7 +33,7 @@ Joaquin Padilla,1,181 Junior Men 20-23 Classic Raw,M,Wraps,TX,181,180.44,23,177.
 Robert Gray,2,181 Junior Men 20-23 Classic Raw,M,Wraps,TX,181,177.26,23,160,,155,,227.5,,542.5,369.193,352.74,,341.71,,501.55,,1196
 Victor Flores,1,198 Junior Men 18-19 Classic Raw,M,Wraps,TX,198,196.1,19,157.5,,105,,190,,452.5,302.247,347.22,,231.48,,418.87,,997.58
 Jordan Chavez,1,198 Junior Men 20-23 Classic Raw,M,Wraps,NM,198,196.72,23,217.5,,142.5,,292.5,,652.5,418.388,479.5,,314.16,,644.85,,1438.5
-Joshua Hernandez,DQ,220 Junior Men 16-17 Classic Raw,M,Wraps,TX,220,209.16,16,215,,-120,,,,O,,473.99,,-264.55,,,,O
+Joshua Hernandez,DQ,220 Junior Men 16-17 Classic Raw,M,Wraps,TX,220,209.16,16,215,,-120,,,,,,473.99,,-264.55,,,,
 Joe Valdez,1,242 Junior Men 20-23 Classic Raw,M,Wraps,TX,220,238.36,22,212.5,,140,,272.5,,625,373.506,468.48,,308.64,,600.75,,1377.88
 Steve Acosta,1,165 Open Men Classic Raw,M,Wraps,TX,165,163.34,33,210,,127.5,,232.5,,570,409.654,462.97,,281.09,,512.57,,1256.62
 Lazaro Cruzata,1,181 Open Men Classic Raw,M,Wraps,TX,181,181.1,27,240,,170,,277.5,,687.5,461.751,529.1,,374.78,,611.78,,1515.66
@@ -41,7 +41,7 @@ Dustin Contantine,2,181 Open Men Classic Raw,M,Wraps,TX,181,178.7,21,182.5,,142.
 Abraham Ayala,1,198 Open Men Classic Raw,M,Wraps,TX,198,196.54,33,250,,172.5,,257.5,,680,436.228,551.15,,380.29,,567.68,,1499.13
 Eric DeAnda,2,198 Open Men Classic Raw,M,Wraps,TX,198,197.14,27,215,,100,,245,,560,358.681,473.99,,220.46,,540.13,,1234.58
 Jordan Sonora,3,198 Open Men Classic Raw,M,Wraps,TX,198,196.38,24,172.5,,130,,227.5,,530,340.145,380.29,,286.6,,501.55,,1168.44
-Jonathon Lawson,DQ,198 Open Men Classic Raw,M,Wraps,TX,198,192.4,26,-185,,,,,,O,,-407.85,,,,,,O
+Jonathon Lawson,DQ,198 Open Men Classic Raw,M,Wraps,TX,198,192.4,26,-185,,,,,,,,-407.85,,,,,,
 Luis Vasquez,1,220 Open Men Classic Raw,M,Wraps,TX,220,218.72,34,305,,197.5,,300,,802.5,489.957,672.4,,435.41,,661.38,,1769.19
 Ismael Hernandez,2,220 Open Men Classic Raw,M,Wraps,TX,220,216.28,34,225,,192.5,,272.5,,690,423.23,496.04,,424.39,,600.75,,1521.17
 Jesse Serio,3,220 Open Men Classic Raw,M,Wraps,TX,220,206.72,36,187.5,,157.5,,245,,590,369.203,413.36,,347.22,,540.13,,1300.71
@@ -54,7 +54,7 @@ John Barela,1,242 Submaster Men Classic Raw,M,Wraps,TX,242,236.56,36,192.5,,145,
 Bert Harness,1,242 Master Men 45-49 Classic Raw,M,Wraps,TX,242,231.48,49,170,,170,,205,,545,362.469,374.78,,374.78,,451.94,,1201.51
 Ernest Batson,1,308 Master Men 40-44 Classic Raw,M,Wraps,TX,308,306,42,237.5,,155,,252.5,,645,368.116,523.59,,341.71,,556.66,,1421.97
 Karin Lax,1,198 Master Women 60-64 Single Ply,F,Single-ply,TX,198,187,62,92.5,95,42.5,,137.5,,272.5,336.875,203.93,209.4,93.7,,303.13,,600.75
-Joshua White,DQ,165 Junior Men 20-23 Single Ply,M,Single-ply,TX,165,158.7,23,-272.5,,,,,,O,,-600.75,,,,,,O
+Joshua White,DQ,165 Junior Men 20-23 Single Ply,M,Single-ply,TX,165,158.7,23,-272.5,,,,,,,,-600.75,,,,,,
 David Adamson,1,220 Open Men Single Ply,M,Single-ply,TX,220,212.98,34,190,,182.5,,280,,652.5,402.864,418.87,,402.34,,617.29,,1438.5
 Tim White,1,165 Master Men 50-54 Single Ply,M,Single-ply,TX,165,163.74,52,230,,135,,245,,610,509.855,507.06,,297.62,,540.13,,1344.81
 Justin Enriquez,1,198 Junior Men 20-23 Raw,M,Raw,TX,198,196.54,20,,,,,250,,250,165.189,,,,,551.15,,551.15

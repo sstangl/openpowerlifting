@@ -2,7 +2,7 @@ Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,
 Tara Maier,1,165 Junior Women 18-19 Raw,F,Raw,AZ,165,164.60,19,120.00,,93.00,,160.00,,373.00,369.820,264.55,,205.03,,352.74,,822.32
 Lisa Rothman,1,105 Open Women Raw,F,Raw,FL,105,105.70,37,100.00,,60.00,,156.00,,316.00,418.868,220.46,,132.28,,343.92,,696.65
 Lily Starobin,1,114 Open Women Raw,F,Raw,CA,114,113.80,25,62.50,,47.50,,110.00,,220.00,275.819,137.79,,104.72,,242.51,,485.01
-Suzanne Davis,DQ,123 Open Women Raw,F,Raw,AZ,123,116.60,42,92.50,,-60.00,,,,O,,203.93,,-132.00,,,,O
+Suzanne Davis,DQ,123 Open Women Raw,F,Raw,AZ,123,116.60,42,92.50,,-60.00,,,,,,203.93,,-132.00,,,,
 Jennifer Higgins,1,132 Open Women Raw,F,Raw,AZ,132,132.20,43,115.00,,60.00,,140.00,,315.00,351.346,253.53,,132.28,,308.64,,694.45
 Laurel Purdum,2,132 Open Women Raw,F,Raw,AZ,132,130.60,25,92.50,,50.00,,117.50,,260.00,292.754,203.93,,110.23,,259.04,,573.20
 Genevieve Betro,1,148 Open Women Raw,F,Raw,AZ,148,145.40,28,127.50,,75.00,,137.50,,340.00,352.891,281.09,,165.35,,303.13,,749.56
@@ -14,10 +14,10 @@ Liz Lukaszewski,3,165 Open Women Raw,F,Raw,CA,165,160.40,30,122.50,,80.00,,157.5
 Myra Balina,4,165 Open Women Raw,F,Raw,CA,165,153.80,33,115.00,,72.50,,160.00,,347.50,346.518,253.53,,159.83,,352.74,,766.10
 Marie Lemkul,5,165 Open Women Raw,F,Raw,CA,165,160.40,41,92.50,,62.50,,127.50,,282.50,273.834,203.93,,137.79,,281.09,,622.80
 Sariah Hafen,6,165 Open Women Raw,F,Raw,UT,165,164.60,27,107.50,,55.00,,120.00,,282.50,269.319,236.99,,121.25,,264.55,,622.80
-Stephanie Stephens,DQ,165 Open Women Raw,F,Raw,NV,165,156.60,33,-102.50,,,,,,O,,-225.00,,,,,,O
+Stephanie Stephens,DQ,165 Open Women Raw,F,Raw,NV,165,156.60,33,-102.50,,,,,,,,-225.00,,,,,,
 Lisa Rothman,1,105 Submaster Women 35-39 Raw,F,Raw,FL,105,105.70,37,100.00,,60.00,,156.00,,316.00,431.434,220.46,,132.28,,343.92,,696.65
 Tina Payne,1,97 Master Women 45-49 Raw,F,Raw,GA,97,96.80,45,62.50,,40.00,,85.00,,187.50,278.922,137.79,,88.18,,187.39,,413.36
-Suzanne Davis,DQ,123 Master Women 40-44 Raw,F,Raw,AZ,123,116.60,42,92.50,,-60.00,,,,O,,203.93,,-132.00,,,,O
+Suzanne Davis,DQ,123 Master Women 40-44 Raw,F,Raw,AZ,123,116.60,42,92.50,,-60.00,,,,,,203.93,,-132.00,,,,
 Jennifer Higgins,1,132 Master Women 40-44 Raw,F,Raw,AZ,132,132.20,43,115.00,,60.00,,140.00,,315.00,362.238,253.53,,132.28,,308.64,,694.45
 Heidi Bailey,1,148 Master Women 40-44 Raw,F,Raw,NV,148,146.40,44,85.00,,50.00,,112.50,,247.50,266.593,187.39,,110.23,,248.02,,545.64
 May Rodgers,1,148 Master Women 50-54 Raw,F,Raw,CA,148,148.40,50,77.50,,42.50,,107.50,,227.50,262.897,170.86,,93.70,,236.99,,501.55
@@ -28,9 +28,9 @@ Peter Pham,1,148 Junior Men 18-19 Raw,M,Raw,CA,148,145.60,19,180.00,,102.50,,207
 Phyman Dang,2,148 Junior Men 18-19 Raw,M,Raw,CA,148,140.20,18,142.50,,92.50,,165.00,,400.00,343.467,314.16,,203.93,,363.76,,881.84
 Kyle Ota,1,148 Junior Men 20-23 Raw,M,Raw,CA,148,148.40,21,175.00,,127.50,,207.50,,510.00,401.971,385.81,,281.09,,457.45,,1124.35
 Henry Nguyen,2,148 Junior Men 20-23 Raw,M,Raw,CA,148,147.80,20,160.00,,107.50,,182.50,,450.00,359.327,352.74,,236.99,,402.34,,992.07
-Tom Wadas,DQ,148 Junior Men 20-23 Raw,M,Raw,IL,148,148.70,23,-187.50,,,,,,O,,-413.00,,,,,,O
+Tom Wadas,DQ,148 Junior Men 20-23 Raw,M,Raw,IL,148,148.70,23,-187.50,,,,,,,,-413.00,,,,,,
 Ben Polak,1,165 Junior Men 16-17 Raw,M,Raw,CA,165,164.20,16,160.00,,107.50,,160.00,,427.50,345.897,352.74,,236.99,,352.74,,942.47
-Meng Vang,DQ,165 Junior Men 18-19 Raw,M,Raw,CA,165,163.80,18,-137.50,,107.50,,180.00,,O,,-303.00,,236.99,,396.83,,O
+Meng Vang,DQ,165 Junior Men 18-19 Raw,M,Raw,CA,165,163.80,18,-137.50,,107.50,,180.00,,,,-303.00,,236.99,,396.83,,O
 Corey Phillips,1,165 Junior Men 20-23 Raw,M,Raw,MO,165,162.40,22,160.00,,130.00,,220.00,227.5,510.00,371.720,352.74,,286.60,,485.01,501,1124.35
 Ryan Cordano,1,181 Junior Men 20-23 Raw,M,Raw,CA,181,180.80,21,205.00,,127.50,,247.50,,580.00,397.739,451.94,,281.09,,545.64,,1278.67
 Chas Leichner,2,181 Junior Men 20-23 Raw,M,Raw,AZ,181,176.80,22,180.00,,100.00,,215.00,,495.00,340.790,396.83,,220.46,,473.99,,1091.28
@@ -40,7 +40,7 @@ Brendon Cornwell,1,198 Junior Men 20-23 Raw,M,Raw,CA,198,197.80,21,200.00,,150.0
 Nadeem Hamidy,1,220 Junior Men 16-17 Raw,M,Raw,CA,220,218.40,17,170.00,,135.00,138,234.00,,539.00,355.619,374.78,,297.62,304,515.88,,1188.28
 Luigi Fagiani,1,220 Junior Men 20-23 Raw,M,Raw,NY,220,218.60,22,227.50,,190.00,,337.50,343,755.00,465.670,501.55,,418.87,,744.05,756,1664.47
 Grigor Khoudikian,2,220 Junior Men 20-23 Raw,M,Raw,CA,220,215.60,21,272.50,,177.50,,290.00,,740.00,463.590,600.75,,391.32,,639.33,,1631.40
-Zach Wittusen,DQ,220 Junior Men 20-23 Raw,M,Raw,CA,220,219.40,21,-225.00,,182.50,,290.00,,O,,-496.00,,402.34,,639.33,,O
+Zach Wittusen,DQ,220 Junior Men 20-23 Raw,M,Raw,CA,220,219.40,21,-225.00,,182.50,,290.00,,,,-496.00,,402.34,,639.33,,O
 Anthony Nocera,1,242 Junior Men 18-19 Raw,M,Raw,CA,242,234.60,19,210.00,,125.00,,240.00,,575.00,355.695,462.97,,275.58,,529.10,,1267.65
 Edward Wilson,1,242 Junior Men 20-23 Raw,M,Raw,NY,242,240.20,22,205.00,,190.00,,300.00,,695.00,414.322,451.94,,418.87,,661.38,,1532.20
 Eric Asatryan,2,242 Junior Men 20-23 Raw,M,Raw,CA,242,224.20,21,235.00,,162.50,,282.50,,680.00,419.350,518.08,,358.25,,622.80,,1499.13
@@ -54,13 +54,13 @@ Cory Campbell,4,148 Open Men Raw,M,Raw,WY,148,146.80,24,155.00,,125.00,,192.50,,
 Henry Nguyen,5,148 Open Men Raw,M,Raw,CA,148,147.80,20,160.00,,107.50,,182.50,,450.00,348.862,352.74,,236.99,,402.34,,992.07
 Christopher Leyva,6,148 Open Men Raw,M,Raw,CA,148,148.70,17,135.00,,102.50,,180.00,,417.50,322.091,297.62,,225.97,,396.83,,920.42
 Phyman Dang,7,148 Open Men Raw,M,Raw,CA,148,140.20,18,142.50,,92.50,,165.00,,400.00,324.025,314.16,,203.93,,363.76,,881.84
-Tom Wadas,DQ,148 Open Men Raw,M,Raw,IL,148,148.70,23,-187.50,,,,,,O,,-413.00,,,,,,O
+Tom Wadas,DQ,148 Open Men Raw,M,Raw,IL,148,148.70,23,-187.50,,,,,,,,-413.00,,,,,,
 Matthew Reep,1,165 Open Men Raw,M,Raw,CA,165,162.80,39,207.50,,173.50,177.5,252.50,,633.50,456.362,457.45,,382.50,391,556.66,,1396.61
 Nick Cambero,2,165 Open Men Raw,M,Raw,CA,165,163.80,25,227.50,,147.50,,240.00,,615.00,441.117,501.55,,325.18,,529.10,,1355.83
 Corey Phillips,3,165 Open Men Raw,M,Raw,MO,165,162.40,22,160.00,,130.00,,220.00,,510.00,368.040,352.74,,286.60,,485.01,,1124.35
 Matthew Chapman,4,165 Open Men Raw,M,Raw,HI,165,163.40,45,152.50,,127.50,,162.50,,442.50,317.938,336.20,,281.09,,358.25,,975.54
 Ben Polak,5,165 Open Men Raw,M,Raw,CA,165,164.20,16,160.00,,107.50,,160.00,,427.50,306.104,352.74,,236.99,,352.74,,942.47
-Meng Vang,DQ,165 Open Men Raw,M,Raw,CA,165,163.80,18,-137.50,,107.50,,180.00,,O,,-303.00,,236.99,,396.83,,O
+Meng Vang,DQ,165 Open Men Raw,M,Raw,CA,165,163.80,18,-137.50,,107.50,,180.00,,,,-303.00,,236.99,,396.83,,O
 Chris Garcia,1,181 Open Men Raw,M,Raw,CA,181,179.20,25,220.00,,150.00,,282.50,,652.50,441.067,485.01,,330.69,,622.80,,1438.50
 Ryan Cordano,2,181 Open Men Raw,M,Raw,CA,181,180.80,21,205.00,,127.50,,247.50,,580.00,389.941,451.94,,281.09,,545.64,,1278.67
 Chas Leichner,3,181 Open Men Raw,M,Raw,AZ,181,176.80,22,180.00,,100.00,,215.00,,495.00,337.416,396.83,,220.46,,473.99,,1091.28
@@ -85,7 +85,7 @@ Howard Myers,6,220 Open Men Raw,M,Raw,CA,220,209.80,67,197.50,,125.00,,275.00,,5
 Jason Conway,7,220 Open Men Raw,M,Raw,CA,220,216.80,26,212.50,,137.50,,217.50,,567.50,347.742,468.48,,303.13,,479.50,,1251.11
 Nadeem Hamidy,8,220 Open Men Raw,M,Raw,CA,220,218.40,17,170.00,,135.00,,234.00,,539.00,329.277,374.78,,297.62,,515.88,,1188.28
 Michael Womelsdorf,9,220 Open Men Raw,M,Raw,CA,220,214.20,55,115.00,,112.50,,147.50,,375.00,230.961,253.53,,248.02,,325.18,,826.73
-Zach Wittusen,DQ,220 Open Men Raw,M,Raw,CA,220,219.40,21,-225.00,,182.50,,290.00,,O,,-496.00,,402.34,,639.33,,O
+Zach Wittusen,DQ,220 Open Men Raw,M,Raw,CA,220,219.40,21,-225.00,,182.50,,290.00,,,,-496.00,,402.34,,639.33,,O
 Edward Wilson,1,242 Open Men Raw,M,Raw,NY,242,240.20,22,205.00,,190.00,,300.00,,695.00,410.219,451.94,,418.87,,661.38,,1532.20
 Eric Asatryan,2,242 Open Men Raw,M,Raw,CA,242,224.20,21,235.00,,162.50,,282.50,,680.00,411.127,518.08,,358.25,,622.80,,1499.13
 Logan Ketcher,3,242 Open Men Raw,M,Raw,NV,242,241.60,31,237.50,,165.00,,250.00,,652.50,384.435,523.59,,363.76,,551.15,,1438.50
@@ -95,13 +95,13 @@ Michael Wiegers,6,242 Open Men Raw,M,Raw,CA,242,232.20,32,205.00,,130.00,,255.00
 Anthony Nocera,7,242 Open Men Raw,M,Raw,CA,242,234.60,19,210.00,,125.00,,240.00,,575.00,342.015,462.97,,275.58,,529.10,,1267.65
 Gregory Cotterell,8,242 Open Men Raw,M,Raw,CA,242,235.00,53,175.00,,142.50,,242.50,,560.00,332.901,385.81,,314.16,,534.62,,1234.58
 Thomas Matlock,9,242 Open Men Raw,M,Raw,AZ,242,237.40,61,160.00,,115.00,,207.50,,482.50,285.866,352.74,,253.53,,457.45,,1063.72
-Emilio Paez,DQ,242 Open Men Raw,M,Raw,CA,242,240.40,33,255.00,,-195.00,,,,O,,562.17,,-429.00,,,,O
+Emilio Paez,DQ,242 Open Men Raw,M,Raw,CA,242,240.40,33,255.00,,-195.00,,,,,,562.17,,-429.00,,,,
 Rick Simmons,1,275 Open Men Raw,M,Raw,CA,275,267.40,35,242.50,,182.50,,275.00,,700.00,401.463,534.62,,402.34,,606.27,,1543.22
 Zachary Langdon,2,275 Open Men Raw,M,Raw,CA,275,271.40,23,247.50,,157.50,,272.50,,677.50,387.299,545.64,,347.22,,600.75,,1493.62
 Kevin Smith,3,275 Open Men Raw,M,Raw,CA,275,264.20,24,205.00,,142.50,,227.50,,575.00,330.682,451.94,,314.16,,501.55,,1267.65
 Bradley Humble,4,275 Open Men Raw,M,Raw,Aust,275,262.20,31,195.00,,160.00,,210.00,,565.00,325.515,429.90,,352.74,,462.97,,1245.60
 Joseph Llamas,1,308 Open Men Raw,M,Raw,CA,308,277.20,30,170.00,,155.00,,220.00,,545.00,310.198,374.78,,341.71,,485.01,,1201.51
-Eldon Smith,DQ,308 Open Men Raw,M,Raw,GA,308,296.60,49,210.00,,-172.50,,,,O,,462.97,,-380.00,,,,O
+Eldon Smith,DQ,308 Open Men Raw,M,Raw,GA,308,296.60,49,210.00,,-172.50,,,,,,462.97,,-380.00,,,,
 Michael Carter,1,308+ Open Men Raw,M,Raw,CA,308+,371.80,32,275.00,282.5,190.00,,320.00,,785.00,426.906,606.27,622,418.87,,705.47,,1730.61
 Wesley Bradley,2,308+ Open Men Raw,M,Raw,NV,308+,358.00,25,235.00,,200.00,,272.50,,707.50,387.005,518.08,,440.92,,600.75,,1559.75
 Steven Maradona,3,308+ Open Men Raw,M,Raw,CA,308+,335.00,20,247.50,,187.50,,265.00,,700.00,386.601,545.64,,413.36,,584.22,,1543.22
@@ -123,10 +123,10 @@ Tom Fahy,1,242 Master Men 45-49 Raw,M,Raw,MN,242,235.60,48,217.50,,152.50,,242.5
 Gregory Cotterell,1,242 Master Men-50-54 Raw,M,Raw,CA,242,235.00,53,175.00,,142.50,,242.50,,560.00,394.155,385.81,,314.16,,534.62,,1234.58
 Wayne Jandoc,1,242 Master Men-55-59 Raw,M,Raw,CA,242,239.40,55,210.00,217.5,160.00,,243.00,,613.00,443.698,462.97,479,352.74,,535.72,,1351.42
 Thomas Matlock,1,242 Master Men-60-64 Raw,M,Raw,AZ,242,237.40,61,160.00,,115.00,,207.50,,482.50,390.493,352.74,,253.53,,457.45,,1063.72
-Eldon Smith,DQ,308 Master Men 45-49 Raw,M,Raw,GA,308,296.60,49,210.00,,-172.50,,,,O,,462.97,,-380.00,,,,O
+Eldon Smith,DQ,308 Master Men 45-49 Raw,M,Raw,GA,308,296.60,49,210.00,,-172.50,,,,,,462.97,,-380.00,,,,
 Nisa Salazar,1,105 Junior Women 13-15 Classic Raw,F,Wraps,CA,105,104.40,14,37.50,,30.00,,72.50,,140.00,230.331,82.67,,66.14,,159.83,,308.64
 Kerri Nichols,1,114 Open Women Classic Raw,F,Wraps,Can,114,112.80,35,75.00,,52.50,,102.50,,230.00,290.319,165.35,,115.74,,225.97,,507.06
-Danielle Columby,DQ,114 Open Women Classic Raw,F,Wraps,AZ,114,109.20,29,112.50,,-67.50,,140.00,,O,,248.02,,-148.00,,308.64,,O
+Danielle Columby,DQ,114 Open Women Classic Raw,F,Wraps,AZ,114,109.20,29,112.50,,-67.50,,140.00,,,,248.02,,-148.00,,308.64,,O
 Becky Price,1,132 Master Women 45-49 Classic Raw,F,Wraps,OR,132,129.00,49,127.50,,90.00,,160.00,,377.50,477.654,281.09,,198.41,,352.74,,832.24
 Martha King,1,165 Master Women 50-54 Classic Raw,F,Wraps,CA,165,157.60,50,65.00,,37.50,,92.50,,195.00,216.101,143.30,,82.67,,203.93,,429.90
 Zee Helmick,1,181 Master Women 45-49 Classic Raw,F,Wraps,NV,181,175.00,46,75.00,,45.00,,102.50,,222.50,218.385,165.35,,99.21,,225.97,,490.52
@@ -136,7 +136,7 @@ Jorge Gonzalez,1,198 Junior Men 20-23 Classic Raw,M,Wraps,NV,198,198.00,23,227.5
 Eddie Sarabia Chavarria,2,198 Junior Men 20-23 Classic Raw,M,Wraps,CA,198,193.40,20,165.00,,100.00,,227.50,,492.50,328.196,363.76,,220.46,,501.55,,1085.77
 Hunter Rossman,1,242 Junior Men 16-17 Classic Raw,M,Wraps,NV,242,229.40,17,195.00,,127.50,,227.50,,550.00,356.089,429.90,,281.09,,501.55,,1212.53
 Kirk Sabalka,1,242 Junior Men 20-23 Classic Raw,M,Wraps,OR,242,236.00,22,275.50,,180.00,,287.50,,743.00,445.473,607.37,,396.83,,633.82,,1638.02
-Josh Sanderson,DQ,242 Junior Men 20-23 Classic Raw,M,Wraps,AZ,242,237.40,20,262.50,,-182.50,,252.50,,O,,578.71,,-402.00,,556.66,,O
+Josh Sanderson,DQ,242 Junior Men 20-23 Classic Raw,M,Wraps,AZ,242,237.40,20,262.50,,-182.50,,252.50,,,,578.71,,-402.00,,556.66,,O
 Carlos Zarate,1,148 Open Men Classic Raw,M,Wraps,CA,148,146.20,21,165.00,,112.50,,197.50,,475.00,371.512,363.76,,248.02,,435.41,,1047.19
 Joseph McMahan,2,148 Open Men Classic Raw,M,Wraps,CA,148,147.40,53,130.00,,125.00,,130.00,,385.00,299.125,286.60,,275.58,,286.60,,848.77
 Reggie Dukes,1,165 Open Men Classic Raw,M,Wraps,IN,165,164.00,27,230.00,,167.50,,262.50,,660.00,472.987,507.06,,369.27,,578.71,,1455.04
@@ -153,18 +153,18 @@ Joseph Vespo,6,198 Open Men Classic Raw,M,Wraps,NV,198,198.40,27,227.50,,120.00,
 Eddie Sarabia Chavarria,7,198 Open Men Classic Raw,M,Wraps,CA,198,193.40,20,165.00,,100.00,,227.50,,492.50,318.637,363.76,,220.46,,501.55,,1085.77
 John King,1,220 Open Men Classic Raw,M,Wraps,WY,220,217.20,42,257.50,,197.50,,227.50,,682.50,417.889,567.68,,435.41,,501.55,,1504.64
 Aaron Barnell,2,220 Open Men Classic Raw,M,Wraps,NV,220,214.40,36,232.50,,130.00,,227.50,,590.00,363.233,512.57,,286.60,,501.55,,1300.71
-Joseph Mundo,DQ,220 Open Men Classic Raw,M,Wraps,CA,220,217.40,31,-252.50,,-202.50,,,,O,,-556.00,,-446.00,,,,O
+Joseph Mundo,DQ,220 Open Men Classic Raw,M,Wraps,CA,220,217.40,31,-252.50,,-202.50,,,,,,-556.00,,-446.00,,,,
 Kirk Sabalka,1,242 Open Men Classic Raw,M,Wraps,OR,242,236.00,22,275.50,,180.00,,287.50,,743.00,441.062,607.37,,396.83,,633.82,,1638.02
 Freddie Tackett,2,242 Open Men Classic Raw,M,Wraps,CA,242,240.00,37,252.50,,175.00,,272.50,,700.00,413.279,556.66,,385.81,,600.75,,1543.22
 Robert Schleder,3,242 Open Men Classic Raw,M,Wraps,AZ,242,231.20,32,245.00,,145.00,,272.50,,662.50,396.049,540.13,,319.67,,600.75,,1460.55
 Hunter Rossman,4,242 Open Men Classic Raw,M,Wraps,NV,242,229.40,17,195.00,,127.50,,227.50,,550.00,329.712,429.90,,281.09,,501.55,,1212.53
-Josh Sanderson,DQ,242 Open Men Classic Raw,M,Wraps,AZ,242,237.40,20,262.50,,-182.50,,252.50,,O,,578.71,,-402.00,,556.66,,O
+Josh Sanderson,DQ,242 Open Men Classic Raw,M,Wraps,AZ,242,237.40,20,262.50,,-182.50,,252.50,,,,578.71,,-402.00,,556.66,,O
 David Zyski,1,275 Open Men Classic Raw,M,Wraps,CA,275,269.00,27,297.50,,197.50,,330.00,,825.00,472.527,655.87,,435.41,,727.52,,1818.80
 Garrett Brassington,2,275 Open Men Classic Raw,M,Wraps,CA,275,266.60,32,267.50,,185.00,,300.00,,752.50,431.864,589.73,,407.85,,661.38,,1658.96
 Tony Rodenburg,3,275 Open Men Classic Raw,M,Wraps,CA,275,273.20,56,50.00,,117.50,,220.00,,387.50,221.209,110.23,,259.04,,485.01,,854.28
-Paul Tabone,DQ,275 Open Men Classic Raw,M,Wraps,NV,275,247.40,34,275.00,,-175.00,,,,O,,606.27,,-385.00,,,,O
+Paul Tabone,DQ,275 Open Men Classic Raw,M,Wraps,NV,275,247.40,34,275.00,,-175.00,,,,,,606.27,,-385.00,,,,
 Mark Glusica,1,308+ Open Men Classic Raw,M,Wraps,NV,308+,346.80,27,237.50,,197.50,,295.00,,730.00,401.185,523.59,,435.41,,650.36,,1609.36
-AJ Hesser,DQ,308+ Open Men Classic Raw,M,Wraps,MO,308+,340.20,25,-305.00,,-192.50,,320.00,,O,,-672.00,,-424.00,,705.47,,O
+AJ Hesser,DQ,308+ Open Men Classic Raw,M,Wraps,MO,308+,340.20,25,-305.00,,-192.50,,320.00,,,,-672.00,,-424.00,,705.47,,O
 Matt Gaechter,1,198 Submaster Men 35-39 Classic Raw,M,Wraps,OR,198,194.60,35,275.00,,167.50,,285.00,,727.50,473.821,606.27,,369.27,,628.31,,1603.85
 Aaron Barnell,1,220 Submaster Men 35-39 Classic Raw,M,Wraps,NV,220,214.40,36,232.50,,130.00,,227.50,,590.00,370.498,512.57,,286.60,,501.55,,1300.71
 Freddie Tackett,1,242 Submaster Men 35-39 Classic Raw,M,Wraps,CA,242,240.00,37,252.50,,175.00,,272.50,,700.00,425.678,556.66,,385.81,,600.75,,1543.22
@@ -178,7 +178,7 @@ Dede Leinwohl,1,132 Open Women Single Ply,F,Single-ply,CA,132,132.00,41,120.00,,
 Gayle Arrowood,2,132 Open Women Single Ply,F,Single-ply,CA,132,131.20,53,112.50,,73.00,,130.50,,316.00,354.544,248.02,,160.94,,287.70,,696.65
 Anna Kelske,3,132 Open Women Single Ply,F,Single-ply,CA,132,129.20,31,105.00,,62.50,,142.50,,310.00,351.996,231.48,,137.79,,314.16,,683.43
 Nicki I'Anson,1,181 Open Women Single Ply,F,Single-ply,CA,181,181.60,47,187.50,,105.00,,185.00,,477.50,430.080,413.36,,231.48,,407.85,,1052.70
-Luvi Agpaoa,DQ,123 Master Women 40-44 Single Ply,F,Single-ply,HI,123,123.00,44,127.50,,-72.50,,122.50,,O,,281.09,,-159.00,,270.06,,O
+Luvi Agpaoa,DQ,123 Master Women 40-44 Single Ply,F,Single-ply,HI,123,123.00,44,127.50,,-72.50,,122.50,,,,281.09,,-159.00,,270.06,,O
 Dede Leinwohl,1,132 Master Women 40-44 Single Ply,F,Single-ply,CA,132,132.00,41,120.00,125,87.50,,143.00,,350.50,395.315,264.55,275,192.90,,315.26,,772.71
 Gayle Arrowood,1,132 Master Women 50-54 Single Ply,F,Single-ply,CA,132,131.20,53,112.50,,73.00,,130.50,132.5,316.00,419.780,248.02,,160.94,,287.70,292,696.65
 Karen Parnow,1,148 Master Women 55-59 Single Ply,F,Single-ply,CA,148,147.00,55,120.00,,85.00,87.5,137.50,142.5,342.50,432.011,264.55,,187.39,192,303.13,314,755.08
@@ -195,17 +195,17 @@ Bill Carlough,2,181 Open Men Single Ply,M,Single-ply,IL,181,179.00,52,260.00,,19
 Rudy Garcia,3,181 Open Men Single Ply,M,Single-ply,NV,181,181.70,38,225.00,,182.50,,235.00,,642.50,430.670,496.04,,402.34,,518.08,,1416.46
 Jose Hernandez,4,181 Open Men Single Ply,M,Single-ply,CA,181,179.20,45,235.00,,142.50,,227.50,,605.00,408.958,518.08,,314.16,,501.55,,1333.78
 Ron Scott,5,181 Open Men Single Ply,M,Single-ply,CA,181,166.40,67,175.00,,50.00,,195.00,,420.00,297.960,385.81,,110.23,,429.90,,925.93
-Peter Jezyk,DQ,181 Open Men Single Ply,M,Single-ply,AZ,181,175.00,73,-155.00,,,,,,O,,-341.00,,,,,,O
+Peter Jezyk,DQ,181 Open Men Single Ply,M,Single-ply,AZ,181,175.00,73,-155.00,,,,,,,,-341.00,,,,,,
 Shawn Buckley,1,198 Open Men Single Ply,M,Single-ply,CA,198,198.40,30,325.00,,205.00,,292.50,,822.50,525.098,716.50,,451.94,,644.85,,1813.28
 Roy Ericksen,2,198 Open Men Single Ply,M,Single-ply,NV,198,196.60,70,212.50,,142.50,,195.00,,550.00,352.776,468.48,,314.16,,429.90,,1212.53
 Bob Kinsey,3,198 Open Men Single Ply,M,Single-ply,CA,198,194.80,71,142.50,,90.00,,137.50,,370.00,238.466,314.16,,198.41,,303.13,,815.70
 Asa Barnes,1,220 Open Men Single Ply,M,Single-ply,AZ,220,219.20,49,332.50,,237.50,,257.50,,827.50,504.771,733.03,,523.59,,567.68,,1824.31
 Dylan Wade Tripp,2,220 Open Men Single Ply,M,Single-ply,UT,220,219.20,17,280.00,,135.00,,227.50,,642.50,391.922,617.29,,297.62,,501.55,,1416.46
 James Bell,3,220 Open Men Single Ply,M,Single-ply,MO,220,218.20,58,242.50,,145.00,,227.50,,615.00,375.847,534.62,,319.67,,501.55,,1355.83
-Jonathan Wiseman,DQ,220 Open Men Single Ply,M,Single-ply,AZ,220,215.60,48,285.00,,-185.00,,,,O,,628.31,,-407.00,,,,O
-Joe Reyes,DQ,220 Open Men Single Ply,M,Single-ply,AZ,220,205.60,30,297.50,,-195.00,,,,O,,655.87,,-429.00,,,,O
-Everett Cutburth,DQ,220 Open Men Single Ply,M,Single-ply,CA,220,216.40,65,152.50,,-105.00,,,,O,,336.20,,-231.00,,,,O
-Joseph Bernazzani,DQ,220 Open Men Single Ply,M,Single-ply,CA,220,216.80,62,195.00,,-175.00,,,,O,,429.90,,-385.00,,,,O
+Jonathan Wiseman,DQ,220 Open Men Single Ply,M,Single-ply,AZ,220,215.60,48,285.00,,-185.00,,,,,,628.31,,-407.00,,,,
+Joe Reyes,DQ,220 Open Men Single Ply,M,Single-ply,AZ,220,205.60,30,297.50,,-195.00,,,,,,655.87,,-429.00,,,,
+Everett Cutburth,DQ,220 Open Men Single Ply,M,Single-ply,CA,220,216.40,65,152.50,,-105.00,,,,,,336.20,,-231.00,,,,
+Joseph Bernazzani,DQ,220 Open Men Single Ply,M,Single-ply,CA,220,216.80,62,195.00,,-175.00,,,,,,429.90,,-385.00,,,,
 Mike Giunta,1,242 Open Men Single Ply,M,Single-ply,MO,242,235.80,21,360.00,,237.50,,290.00,,887.50,526.990,793.66,,523.59,,639.33,,1956.58
 Dennis Reneau,2,242 Open Men Single Ply,M,Single-ply,CA,242,242.20,42,275.00,,315.00,,282.50,,872.50,513.659,606.27,,694.45,,622.80,,1923.51
 Delbert Shay,3,242 Open Men Single Ply,M,Single-ply,OR,242,239.60,51,210.00,,160.00,,220.00,,590.00,348.520,462.97,,352.74,,485.01,,1300.71
@@ -218,19 +218,19 @@ Eric Welch,3,275 Open Men Single Ply,M,Single-ply,NV,275,273.20,50,235.00,,180.0
 David Douglas,1,308 Open Men Single Ply,M,Single-ply,CA,308,301.40,26,337.50,,330.00,,320.00,,987.50,553.832,744.05,,727.52,,705.47,,2177.04
 Henry Thomason,1,308+ Open Men Single Ply,M,Single-ply,TX,308+,314.00,33,417.50,,320.00,,275.00,,1012.50,564.357,920.42,,705.47,,606.27,,2232.16
 Rudy Garcia,1,181 Submaster Men 35-39 Single Ply,M,Single-ply,NV,181,181.70,38,225.00,,182.50,188,235.00,,642.50,447.897,496.04,,402.34,414,518.08,,1416.46
-Arlton Clifton,DQ,165 Master Men 45-49 Single Ply,M,Single-ply,CA,165,159.40,46,105.00,,-82.50,,,,O,,231.48,,-181.00,,,,O
+Arlton Clifton,DQ,165 Master Men 45-49 Single Ply,M,Single-ply,CA,165,159.40,46,105.00,,-82.50,,,,,,231.48,,-181.00,,,,
 Arthur Fu,1,165 Master Men 60-64-Single Ply,M,Single-ply,CA,165,163.20,61,195.00,,130.00,,215.00,,540.00,530.457,429.90,,286.60,,473.99,,1190.48
 Jose Hernandez,1,181 Master Men 45-49 Single Ply,M,Single-ply,CA,181,179.20,45,235.00,,142.50,,227.50,,605.00,431.451,518.08,,314.16,,501.55,,1333.78
 Bill Carlough,1,181 Master Men 50-54 Single Ply,M,Single-ply,IL,181,179.00,52,260.00,,190.50,,202.50,,653.00,514.589,573.20,,419.98,,446.43,,1439.60
 Ron Scott,1,181 Master Men 65-69 Single Ply,M,Single-ply,CA,181,166.40,67,175.00,,50.00,,195.00,200,420.00,459.752,385.81,,110.23,,429.90,440,925.93
-Peter Jezyk,DQ,181 Master Men 70-74 Single Ply,M,Single-ply,AZ,181,175.00,73,-155.00,,,,,,O,,-341.00,,,,,,O
+Peter Jezyk,DQ,181 Master Men 70-74 Single Ply,M,Single-ply,AZ,181,175.00,73,-155.00,,,,,,,,-341.00,,,,,,
 Roy Ericksen,1,198 Master Men 70-74 Single Ply,M,Single-ply,NV,198,196.60,70,212.50,,142.50,,195.00,,550.00,580.316,468.48,,314.16,,429.90,,1212.53
 Bob Kinsey,2,198 Master Men 70-74 Single Ply,M,Single-ply,CA,198,194.80,71,142.50,,90.00,,137.50,,370.00,400.861,314.16,,198.41,,303.13,,815.70
 Asa Barnes,1,220 Master Men 45-49 Single Ply,M,Single-ply,AZ,220,219.20,49,332.50,,237.50,,257.50,,827.50,561.810,733.03,,523.59,,567.68,,1824.31
-Jonathan Wiseman,DQ,220 Master Men 45-49 Single Ply,M,Single-ply,AZ,220,215.60,48,285.00,,-185.00,,,,O,,628.31,,-407.00,,,,O
+Jonathan Wiseman,DQ,220 Master Men 45-49 Single Ply,M,Single-ply,AZ,220,215.60,48,285.00,,-185.00,,,,,,628.31,,-407.00,,,,
 James Bell,1,220 Master Men 55-59 Single Ply,M,Single-ply,MO,220,218.20,58,242.50,,145.00,,227.50,,615.00,485.218,534.62,,319.67,,501.55,,1355.83
-Joseph Bernazzani,DQ,220 Master Men 60-64 Single Ply,M,Single-ply,CA,220,216.80,62,195.00,,-175.00,,,,O,,429.90,,-385.00,,,,O
-Everett Cutburth,DQ,220 Master Men 65-69 Single Ply,M,Single-ply,CA,220,216.40,65,152.50,,-105.00,,,,O,,336.20,,-231.00,,,,O
+Joseph Bernazzani,DQ,220 Master Men 60-64 Single Ply,M,Single-ply,CA,220,216.80,62,195.00,,-175.00,,,,,,429.90,,-385.00,,,,
+Everett Cutburth,DQ,220 Master Men 65-69 Single Ply,M,Single-ply,CA,220,216.40,65,152.50,,-105.00,,,,,,336.20,,-231.00,,,,
 Dennis Reneau,1,242 Master Men 40-44 Single Ply,M,Single-ply,CA,242,242.20,42,275.00,,315.00,,282.50,,872.50,523.933,606.27,,694.45,,622.80,,1923.51
 Delbert Shay,1,242 Master Men 50-54 Single Ply,M,Single-ply,OR,242,239.60,51,210.00,,160.00,,220.00,,590.00,399.752,462.97,,352.74,,485.01,,1300.71
 Ron Pagal,1,242 Master Men 65-69 Single Ply,M,Single-ply,CA,242,232.20,67,210.00,,160.00,,210.00,,580.00,534.197,462.97,,352.74,,462.97,,1278.67
@@ -264,7 +264,7 @@ Tom Delong,4,198 Open Men Raw,M,Raw,CA,198,196.60,55,,,157.50,,,,157.50,101.022,
 Stephen Schaap,5,198 Open Men Raw,M,Raw,CA,198,193.80,17,,,145.00,,,,145.00,93.708,,,319.67,,,,319.67
 Barry Moores,6,198 Open Men Raw,M,Raw,CA,198,198.00,67,,,137.50,,,,137.50,87.873,,,303.13,,,,303.13
 Brett Kempski,7,198 Open Men Raw,M,Raw,CA,198,184.40,17,,,115.00,,,,115.00,76.414,,,253.53,,,,253.53
-Mike Tiktinsky,DQ,198 Open Men Raw,M,Raw,CA,198,197.20,66,,,-92.50,,,,O,,,,-203.00,,,,O
+Mike Tiktinsky,DQ,198 Open Men Raw,M,Raw,CA,198,197.20,66,,,-92.50,,,,,,,,-203.00,,,,
 Stacy Dedrick,1,220 Open Men Raw,M,Raw,CA,220,219.20,48,,,202.50,,,,202.50,123.524,,,446.43,,,,446.43
 John King,2,220 Open Men Raw,M,Raw,WY,220,217.40,42,,,185.00,,,,185.00,113.231,,,407.85,,,,407.85
 Nadeem Hamidy,3,220 Open Men Raw,M,Raw,CA,220,220.20,17,,,137.50,,,,137.50,83.721,,,303.13,,,,303.13
@@ -294,7 +294,7 @@ Jess Santos,1,198 Master Men 40-44 Raw,M,Raw,CA,198,194.40,40,,,190.00,,,,190.00
 Willie White,2,198 Master Men 40-44 Raw,M,Raw,CA,198,193.20,42,,,160.00,,,,160.00,105.645,,,352.74,,,,352.74
 Tom Delong,1,198 Master Men 55-59 Raw,M,Raw,CA,198,196.60,55,,,157.50,,,,157.50,123.752,,,347.22,,,,347.22
 Barry Moores,1,198 Master Men 65-69 Raw,M,Raw,CA,198,198.00,67,,,137.50,,,,137.50,135.588,,,303.13,,,,303.13
-Mike Tiktinsky,DQ,198 Master Men 65-69 Raw,M,Raw,CA,198,197.20,66,,,-92.50,,,,O,,,,-203.00,,,,O
+Mike Tiktinsky,DQ,198 Master Men 65-69 Raw,M,Raw,CA,198,197.20,66,,,-92.50,,,,,,,,-203.00,,,,
 Steve Bloom,1,220 Master Men 70-74 Raw,M,Raw,CA,220,203.60,72,,,107.50,,,,107.50,116.405,,,236.99,,,,236.99
 John King,1,220 Master Men 40-44 Raw,M,Raw,WY,220,217.40,42,,,185.00,,,,185.00,115.495,,,407.85,,,,407.85
 Stacy Dedrick,1,220 Master Men 45-49 Raw,M,Raw,CA,220,219.20,48,,,202.50,,,,202.50,135.506,,,446.43,,,,446.43
@@ -307,7 +307,7 @@ Quinn Bremes,1,308+ Master Men 50-54 Raw,M,Raw,CA,308+,312.60,51,,,188.00,,,,188
 Trace Ryan,1,148 Open Women Single Ply,F,Single-ply,NV,148,147.00,43,,,92.50,,,,92.50,95.244,,,203.93,,,,203.93
 Romy Brubaker,2,148 Open Women Single Ply,F,Single-ply,CA,148,147.00,75,,,37.50,,,,37.50,38.613,,,82.67,,,,82.67
 Trace Ryan,1,148 Master Women 40-44 Single Ply,F,Single-ply,NV,148,147.00,43,,,92.50,,,,92.50,98.197,,,203.93,,,,203.93
-Karen Parnow,DQ,148 Master Women 55-59 Single Ply,F,Single-ply,CA,148,146.80,55,,,-80.00,,,,O,,,,-176.00,,,,O
+Karen Parnow,DQ,148 Master Women 55-59 Single Ply,F,Single-ply,CA,148,146.80,55,,,-80.00,,,,,,,,-176.00,,,,
 Romy Brubaker,1,148 Master Women 75-79 Single Ply,F,Single-ply,CA,148,147.00,75,,,37.50,,,,37.50,70.854,,,82.67,,,,82.67
 Tsunehiko Yagi,1,165 Open Men Single Ply,M,Single-ply,JPN,165,161.80,33,,,157.50,,,,157.50,113.961,,,347.22,,,,347.22
 Stacy Dedrick,1,220 Open Men Single Ply,M,Single-ply,CA,220,219.20,48,,,230.00,,,,230.00,140.299,,,507.06,,,,507.06
@@ -319,18 +319,18 @@ Bryon Brubaker,3,242 Open Men Single Ply,M,Single-ply,CA,242,235.40,50,,,265.00,
 Marc White,4,242 Open Men Single Ply,M,Single-ply,CA,242,235.20,41,,,250.00,,,,250.00,148.574,,,551.15,,,,551.15
 Wayne Jandoc,5,242 Open Men Single Ply,M,Single-ply,CA,242,238.40,55,,,220.50,,,,220.50,130.461,,,486.11,,,,486.11
 Herb Strange,6,242 Open Men Single Ply,M,Single-ply,KS,242,240.60,80,,,110.00,,,,110.00,64.893,,,242.51,,,,242.51
-Jeff Hunter,DQ,242 Open Men Single Ply,M,Single-ply,CA,242,233.40,52,,,-260.00,,,,O,,,,-573.00,,,,O
+Jeff Hunter,DQ,242 Open Men Single Ply,M,Single-ply,CA,242,233.40,52,,,-260.00,,,,,,,,-573.00,,,,
 Dennis Reneau,1,275 Open Men Single Ply,M,Single-ply,CA,275,244.40,42,,,300.00,,,,300.00,176.133,,,661.38,,,,661.38
-David Douglas,DQ,308 Open Men Single Ply,M,Single-ply,CA,308,301.40,26,,,-365.00,,,,O,,,,-804.00,,,,O
+David Douglas,DQ,308 Open Men Single Ply,M,Single-ply,CA,308,301.40,26,,,-365.00,,,,,,,,-804.00,,,,
 Henry Thomason,1,308+ Open Men Single Ply,M,Single-ply,TX,308+,311.80,33,,,320.00,,,,320.00,178.548,,,705.47,,,,705.47
 Cory Dexter,1,242 Submaster Men 35-39 Single Ply,M,Single-ply,NV,242,238.40,39,,,315.00,,,,315.00,195.692,,,694.45,,,,694.45
-Daren Dowell,DQ,198 Master Men 45-49 Single Ply,M,Single-ply,CA,198,196.20,46,,,-185.00,,,,O,,,,-407.00,,,,O
+Daren Dowell,DQ,198 Master Men 45-49 Single Ply,M,Single-ply,CA,198,196.20,46,,,-185.00,,,,,,,,-407.00,,,,
 John King,1,220 Master Men 40-44 Single Ply,M,Single-ply,CA,220,217.40,42,,,227.50,,,,227.50,142.028,,,501.55,,,,501.55
 Stacy Dedrick,1,220 Master Men 45-49 Single Ply,M,Single-ply,CA,220,219.20,48,,,230.00,,,,230.00,153.908,,,507.06,,,,507.06
 Everett Cutburth,1,220 Master Men 65-69 Single Ply,M,Single-ply,CA,220,217.80,65,,,107.50,,,,107.50,97.305,,,236.99,,,,236.99
 Marc White,1,242 Master Men 40-44 Single Ply,M,Single-ply,CA,242,235.20,41,,,250.00,,,,250.00,150.060,,,551.15,,,,551.15
 Bryon Brubaker,1,242 Master Men 50-54 Single Ply,M,Single-ply,CA,242,235.40,50,,,265.00,,,,265.00,177.912,,,584.22,,,,584.22
-Jeff Hunter,DQ,242 Master Men 50-54 Single Ply,M,Single-ply,CA,242,233.40,52,,,-260.00,,,,O,,,,-573.00,,,,O
+Jeff Hunter,DQ,242 Master Men 50-54 Single Ply,M,Single-ply,CA,242,233.40,52,,,-260.00,,,,,,,,-573.00,,,,
 Wayne Jandoc,1,242 Master Men 55-59 Single Ply,M,Single-ply,CA,242,238.40,55,,,220.50,,,,220.50,159.815,,,486.11,,,,486.11
 Herb Strange,1,242 Master Men 80+ Single Ply,M,Single-ply,CA,242,240.60,80,,,110.00,,,,110.00,133.030,,,242.51,,,,242.51
 Dennis Reneau,1,275 Master Men 40-44 Single Ply,M,Single-ply,CA,275,244.40,41,,,300.00,,,,300.00,177.894,,,661.38,,,,661.38

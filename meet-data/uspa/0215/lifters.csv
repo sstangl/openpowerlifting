@@ -1,6 +1,6 @@
 Name,Place,Division,Sex,Equipment,State/Country,Weight Class,Bodyweight,Age,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks,SquatLBS,Squat4LBS,BenchLBS,Bench4LBS,DeadliftLBS,Deadlift4LBS,TotalLBS
 Charlene Cohen,1,56kg/123 Open Women-Raw,F,Raw,CA-USA,123,123.40,32,97.50,,50.00,,142.50,,290.00,341.340,214.95,,110.23,,314.16,,639.33
-Erika Worger,DQ,56kg/123 Open Women-Raw,F,Raw,Canada,123,122.30,32,-122.50,,-72.50,,,,O,,-270.00,,-159.00,,,,O
+Erika Worger,DQ,56kg/123 Open Women-Raw,F,Raw,Canada,123,122.30,32,-122.50,,-72.50,,,,,,-270.00,,-159.00,,,,
 Susan Salazar,1,60kg/132 Open Women-Raw,F,Raw,HI-USA,132,131.30,36,145.00,,85.00,,170.00,182.5,400.00,448.524,319.67,,187.39,,374.78,402,881.84
 Jennifer Higgins,2,60kg/132 Open Women-Raw,F,Raw,AZ-USA,132,129.40,42,120.00,,60.00,,145.00,,325.00,368.583,264.55,,132.28,,319.67,,716.50
 Jennifer Higgins,1,60kg/132 Master Women 40+-Raw,F,Raw,AZ-USA,132,129.40,42,120.00,,60.00,,145.00,,325.00,375.955,264.55,,132.28,,319.67,,716.50
@@ -13,7 +13,7 @@ Trace Ryan,3,75kg/165 Open Women-Raw,F,Raw,NV-USA,165,152.20,42,92.50,,77.50,,13
 Lynne Castellanos,4,75kg/165 Open Women-Raw,F,Raw,CA-USA,165,157.60,53,72.50,,45.00,,137.50,,255.00,250.083,159.83,,99.21,,303.13,,562.17
 Trace Ryan,1,75kg/165 Master Women 40+-Raw,F,Raw,NV-USA,165,152.20,42,92.50,,77.50,,137.50,158,307.50,315.049,203.93,,170.86,,303.13,348,677.91
 Lynne Castellanos,1,75kg/165 Master Women 50+-Raw,F,Raw,CA-USA,165,157.60,53,72.50,,45.00,,137.50,,255.00,296.098,159.83,,99.21,,303.13,,562.17
-Tracie Marquez,DQ,82.5kg/181 Master Women 45+-Raw,F,Raw,CA-USA,181,173.90,49,-75.00,,,,,,,O,-165.00,,,,,,O
+Tracie Marquez,DQ,82.5kg/181 Master Women 45+-Raw,F,Raw,CA-USA,181,173.90,49,-75.00,,,,,,,,-165.00,,,,,,
 Cadet Bryant,1,60kg/132 Open Men-Raw,M,Raw,TX-USA,132,125.60,39,127.50,,100.00,,162.50,,390.00,349.163,281.09,,220.46,,358.25,,859.79
 Cory Campbell,1,67.5kg/148 Junior Men 20-23-Raw,M,Raw,WY-USA,148,141.00,23,145.00,,110.00,,200.00,,455.00,366.791,319.67,,242.51,,440.92,,1003.09
 Cody Lefever,1,67.5kg/148 Open Men-Raw,M,Raw,CA-USA,148,146.60,26,185.00,,125.00,,232.50,240,542.50,423.361,407.85,,275.58,,512.57,529,1196.00
@@ -21,7 +21,7 @@ Cory Campbell,2,67.5kg/148 Open Men-Raw,M,Raw,WY-USA,148,141.00,23,145.00,,110.0
 Henry Silva,3,67.5kg/148 Open Men-Raw,M,Raw,HI-USA,148,141.00,26,140.00,,120.00,,182.50,,442.50,356.714,308.64,,264.55,,402.34,,975.54
 Gordon Santee,1,67.5kg/148 Master Men M65+-Raw,M,Raw,CA-USA,148,139.20,66,90.00,,75.00,,182.50,190.5,347.50,427.971,198.41,,165.35,,402.34,419,766.10
 Cameron Hansen,1,75kg/165 JR Men 15-19-Raw,M,Raw,CA-USA,165,165.30,14,122.50,,67.50,,162.50,,352.50,309.007,270.06,,148.81,,358.25,,777.12
-Joe Francisco,DQ,75kg/165 JR Men 20-23-Raw,M,Raw,CA-USA,165,162.20,20,165.00,,-87.50,,,,,O,363.76,,-192.00,,,,O
+Joe Francisco,DQ,75kg/165 JR Men 20-23-Raw,M,Raw,CA-USA,165,162.20,20,165.00,,-87.50,,,,,,363.76,,-192.00,,,,
 Bob Yamasaki,1,75kg/165 Master Men M60+-Raw,M,Raw,CA-USA,165,162.60,60,197.50,,112.50,,220.00,,530.00,512.063,435.41,,248.02,,485.01,,1168.44
 Ryan Cordano,1,82.5kg/181 JR Men 20-23-Raw,M,Raw,CA-USA,181,178.00,20,197.50,,127.50,,267.50,,592.50,414.239,435.41,,281.09,,589.73,,1306.23
 Steve Melero,1,82.5kg/181 Open Men-Raw,M,Raw,CA-USA,181,179.80,30,212.50,,132.50,,265.00,272.5,610.00,411.495,468.48,,292.11,,584.22,600,1344.81
@@ -38,7 +38,7 @@ Joseph Vespo,5,90kg/198 Open Men-Raw,M,Raw,NV-USA,198,197.00,27,192.50,,110.00,,
 David Foster,6,90kg/198 Open Men-Raw,M,Raw,CA-USA,198,194.40,43,170.00,,115.00,,240.00,,525.00,338.732,374.78,,253.53,,529.10,,1157.42
 David Foster,1,90kg/198 Master Men 40-44-Raw,M,Raw,CA-USA,198,194.40,43,170.00,,115.00,,240.00,,525.00,349.233,374.78,,253.53,,529.10,,1157.42
 Rich Tsutsui,1,90kg/198 Master Men 65+-Raw,M,Raw,CA-USA,198,188.00,66,120.00,,65.00,,120.00,,305.00,302.842,264.55,,143.30,,264.55,,672.40
-Louie Hernandez,DQ,90kg/198 Master Men 65+-Raw,M,Raw,CA-USA,198,185.40,69,155.00,,87.50,,-230.00,,O,,341.71,,192.90,,-507.00,,O
+Louie Hernandez,DQ,90kg/198 Master Men 65+-Raw,M,Raw,CA-USA,198,185.40,69,155.00,,87.50,,-230.00,,,,341.71,,192.90,,-507.00,,O
 Alfred Franke,1,90kg/198 Master Men 70+-Raw,M,Raw,NV-USA,198,195.20,71,137.50,,125.00,,183.50,,446.00,482.679,303.13,,275.58,,404.54,,983.25
 Joseph Sonntag,1,100kg/220 JR Men 20-23-Raw,M,Raw,FL-USA,220,214.60,22,255.00,,170.00,,275.00,,700.00,435.090,562.17,,374.78,,606.27,,1543.22
 Zack McDole,1,100kg/220 Open Men-Raw,M,Raw,NV-USA,220,214.00,28,272.50,,202.50,,300.00,,775.00,477.510,600.75,,446.43,,661.38,,1708.57
@@ -53,18 +53,18 @@ Valeriy Bystrov,1,100kg/220 Master Men 70+-Raw,M,Raw,Russia,220,214.60,71,195.00
 Mike Cannon,1,110kg/242 Open Men-Raw,M,Raw,UT-USA,242,240.40,38,280.00,,192.50,,290.00,,762.50,449.943,617.29,,424.39,,639.33,,1681.01
 Emilio Paez,2,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,237.80,33,262.50,,177.50,,290.00,,730.00,432.265,578.71,,391.32,,639.33,,1609.36
 Joseph Mundo,3,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,237.80,30,227.50,,210.00,,265.00,,702.50,415.981,501.55,,462.97,,584.22,,1548.73
-Mynor Melgar,DQ,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,242.00,25,-240.00,,,,,,O,,-529.00,,,,,,O
+Mynor Melgar,DQ,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,242.00,25,-240.00,,,,,,,,-529.00,,,,,,
 Greg Mahin,1,125kg/275 JR Men 20-23-Raw,M,Raw,CA-USA,275,265.60,21,250.00,,190.00,,295.00,,735.00,430.626,551.15,,418.87,,650.36,,1620.38
 David Zyski,1,125kg/275 Open Men-Raw,M,Raw,CA-USA,275,268.00,27,295.00,,212.50,,315.00,,822.50,471.483,650.36,,468.48,,694.45,,1813.28
 Greg Mahin,2,125kg/275 Open Men-Raw,M,Raw,CA-USA,275,265.60,21,250.00,,190.00,,295.00,,735.00,422.182,551.15,,418.87,,650.36,,1620.38
 Joe Mass,1,140+kg/308+ Junior Men 20-23-Raw,M,Raw,CA-USA,308+,376.80,20,272.50,,172.50,,310.00,,755.00,422.013,600.75,,380.29,,683.43,,1664.47
 Joe Mass,1,140+kg/308+ Open Men-Raw,M,Raw,CA-USA,308+,376.80,20,272.50,,172.50,,310.00,,755.00,409.722,600.75,,380.29,,683.43,,1664.47
-Xavier Bradford,DQ,140+kg/308+ Open Men-Raw,M,Raw,CA-USA,308+,324.60,31,255.00,,-205.00,,,,O,,562.17,,-451.00,,,,O
-Kerri Nichols,DQ,52kg/114 Open Women-Classic Raw,F,Raw,Canada,114,112.40,34,-60.00,,47.50,,100.00,,,O,-132.00,,104.72,,220.46,,O
+Xavier Bradford,DQ,140+kg/308+ Open Men-Raw,M,Raw,CA-USA,308+,324.60,31,255.00,,-205.00,,,,,,562.17,,-451.00,,,,
+Kerri Nichols,DQ,52kg/114 Open Women-Classic Raw,F,Raw,Canada,114,112.40,34,-60.00,,47.50,,100.00,,,,-132.00,,104.72,,220.46,,O
 Kristina Kanemoto,1,56kg/123 Junior Women 20-23-Classic Raw,F,Raw,CA-USA,123,121.00,20,62.50,,37.50,,105.00,,205.00,252.386,137.79,,82.67,,231.48,,451.94
 Becky Price,1,60kg/132 Master Women 45+-Classic Raw,F,Raw,OR-USA,132,128.90,49,120.00,,85.00,,147.50,,352.50,446.291,264.55,,187.39,,325.18,,777.12
 Carrie Grissinger,1,67.5kg/148 Open Women-Classic Raw,F,Raw,MO-USA,148,147.40,34,110.00,,62.50,,120.00,,292.50,300.586,242.51,,137.79,,264.55,,644.85
-Nicki Crapotta,DQ,67.5kg/148 Open Women-Classic Raw,F,Raw,CA-USA,148,135.80,26,122.50,,-62.50,,,,O,,270.06,,-137.00,,,,O
+Nicki Crapotta,DQ,67.5kg/148 Open Women-Classic Raw,F,Raw,CA-USA,148,135.80,26,122.50,,-62.50,,,,,,270.06,,-137.00,,,,
 Mary Case,1,75kg/165 Master Women 55+-Classic Raw,F,Raw,CA-USA,165,155.20,58,100.00,,75.00,,125.00,,300.00,383.804,220.46,,165.35,,275.58,,661.38
 Patsy Wynne,1,75kg/165 Master Women 60+-Classic Raw,F,Raw,CA-USA,165,155.20,65,55.00,,32.50,,80.00,,167.50,245.662,121.25,,71.65,,176.37,,369.27
 Therese Janc,1,82.5kg/181 Open Women-Classic Raw,F,Raw,IL-USA,181,168.20,38,160.50,,100.00,,202.50,,463.00,435.520,353.84,,220.46,,446.43,,1020.73
@@ -90,7 +90,7 @@ Freddie Tackett,2,110kg/242 Open Men-Classic Raw,M,Raw,CA-USA,242,238.50,36,242.
 Karl Davenport,3,110kg/242 Open Men-Classic Raw,M,Raw,CA-USA,242,238.40,47,215.00,,145.00,,220.00,,580.00,343.164,473.99,,319.67,,485.01,,1278.67
 Jesse Griffin,1,110kg/242 Master Men 40+-Classic Raw,M,Raw,AZ-USA,242,233.40,43,275.00,,185.00,,267.50,,727.50,446.916,606.27,,407.85,,589.73,,1603.85
 Karl Davenport,1,110kg/242 Master Men 45+-Classic Raw,M,Raw,CA-USA,242,238.40,47,215.00,,145.00,,220.00,,580.00,371.303,473.99,,319.67,,485.01,,1278.67
-Tom Emelander,DQ,125kg/275 Open Men-Classic Raw,M,Raw,TX-USA,275,271.20,29,290.00,,227.50,,-320.00,,,O,639.33,,501.55,,-705.00,,O
+Tom Emelander,DQ,125kg/275 Open Men-Classic Raw,M,Raw,TX-USA,275,271.20,29,290.00,,227.50,,-320.00,,,,639.33,,501.55,,-705.00,,O
 Gayle Arrowood,1,60kg/132 Master Women 50+-Single Ply,F,Single-ply,CA-USA,132,131.10,52,120.00,122.5,72.50,,130.00,,322.50,421.789,264.55,270,159.83,,286.60,,710.98
 Karen Parnow,1,67.5kg/148 Open Women Single Ply,F,Single-ply,CA-USA,148,146.10,54,120.00,,80.00,,140.00,,340.00,351.655,264.55,,176.37,,308.64,,749.56
 Betsy Spann,2,67.5kg/148 Open Women Single Ply,F,Single-ply,CA-USA,148,146.60,55,113.00,,67.50,,133.00,,313.50,323.441,249.12,,148.81,,293.21,,691.14
@@ -123,13 +123,13 @@ Michael Azarian,1,90kg/198 Master Men 55+-Single Ply,M,Single-ply,NH-USA,198,196
 Roy Eriksen,1,90kg/198 Master Men 65+-Single Ply,M,Single-ply,NV-USA,198,196.00,69,207.50,,117.50,,200.00,,525.00,543.014,457.45,,259.04,,440.92,,1157.42
 Bob Kinsey,1,90kg/198 Master Men 70+-Single Ply,M,Single-ply,CA-USA,198,195.40,70,147.50,,92.50,,167.50,,407.50,431.336,325.18,,203.93,,369.27,,898.37
 Garrett Gumz,1,100kg/220 Teen Men 15-19-Single Ply,M,Single-ply,CA-USA,220,215.00,19,205.00,,140.00,,245.00,,590.00,377.312,451.94,,308.64,,540.13,,1300.71
-Dylan Tripp,DQ,100kg/220 Teen Men 15-19-Single Ply,M,Single-ply,UT-USA,220,215.00,16,272.50,,-200.00,,,,O,,600.75,,-440.00,,,,O
+Dylan Tripp,DQ,100kg/220 Teen Men 15-19-Single Ply,M,Single-ply,UT-USA,220,215.00,16,272.50,,-200.00,,,,,,600.75,,-440.00,,,,
 Mike Giunta,1,100kg/220 Junior Men 20-23-Single Ply,M,Single-ply,MO-USA,220,219.20,20,312.50,,227.50,,277.50,,817.50,513.631,688.94,,501.55,,611.78,,1802.26
 Valdimar Valdimarsson,1,100kg/220 Open Men-Single Ply,M,Single-ply,Iceland,220,217.40,37,327.50,,225.00,,295.00,,847.50,518.720,722.01,,496.04,,650.36,,1868.40
 Mike Giunta,2,100kg/220 Open Men-Single Ply,M,Single-ply,MO-USA,220,219.20,20,312.50,,227.50,,277.50,,817.50,498.671,688.94,,501.55,,611.78,,1802.26
 George Pessell,3,100kg/220 Open Men-Single Ply,M,Single-ply,CA-USA,220,208.80,53,287.50,,215.00,,275.00,,777.50,484.296,633.82,,473.99,,606.27,,1714.08
 John DeLuca,4,100kg/220 Open Men-Single Ply,M,Single-ply,CA-USA,220,216.00,43,222.50,,222.50,,230.00,,675.00,414.254,490.52,,490.52,,507.06,,1488.11
-David Aldrich,DQ,100kg/220 Open Men-Single Ply,M,Single-ply,CA-USA,220,219.00,36,272.50,,-260.00,,,,O,,600.75,,-573.00,,,,O
+David Aldrich,DQ,100kg/220 Open Men-Single Ply,M,Single-ply,CA-USA,220,219.00,36,272.50,,-260.00,,,,,,600.75,,-573.00,,,,
 John DeLuca,1,100kg/220 Master Men 40+-Single Ply,M,Single-ply,CA-USA,220,216.00,43,222.50,,222.50,,230.00,,675.00,427.096,490.52,,490.52,,507.06,,1488.11
 George Pessell,1,100kg/220 Master Men 50+-Single Ply,M,Single-ply,CA-USA,220,208.80,53,287.50,,215.00,,275.00,,777.50,573.406,633.82,,473.99,,606.27,,1714.08
 Everett Cutburth,1,100kg/220 Master Men 60+-Single Ply,M,Single-ply,CA-USA,220,212.40,64,147.50,,112.50,,155.00,,415.00,371.973,325.18,,248.02,,341.71,,914.91
@@ -152,30 +152,30 @@ Mark Menslage,1,125kg/275 Master Men 45+-Single Ply,M,Single-ply,CA-USA,275,253.
 Delbert Shay,1,125kg/275 Master Men 50+-Single Ply,M,Single-ply,OR-USA,275,248.40,50,250.00,,160.00,,215.00,,625.00,412.685,551.15,,352.74,,473.99,,1377.88
 Bill McEwen,1,125kg/275 Master Men 55+-Single Ply,M,Single-ply,CA-USA,275,258.20,58,190.00,,125.00,,187.50,,502.50,375.165,418.87,,275.58,,413.36,,1107.81
 Henry Thomason,DQ,140kg/308 Open Men-Single Ply,M,Single-ply,TX-USA,308,303.80,33,417.50,,-365.00,,,,52.50,29.408,920.42,,-804.00,,,,920.42
-Robert Speno,DQ,140kg/308 Open Men-Single Ply,M,Single-ply,CA-USA,308,289.60,43,335.00,,-235.00,,,,O,,738.54,,-518.00,,,,O
-Robert Speno,DQ,140kg/308 Master Men 40+-Single Ply,M,Single-ply,CA-USA,308,289.60,43,335.00,,-235.00,,,,,O,738.54,,-518.00,,,,O
+Robert Speno,DQ,140kg/308 Open Men-Single Ply,M,Single-ply,CA-USA,308,289.60,43,335.00,,-235.00,,,,,,738.54,,-518.00,,,,
+Robert Speno,DQ,140kg/308 Master Men 40+-Single Ply,M,Single-ply,CA-USA,308,289.60,43,335.00,,-235.00,,,,,,738.54,,-518.00,,,,
 Brian Meek,1,140kg/308 Master Men 65+-Single Ply,M,Single-ply,CA-USA,308,296.20,66,205.00,,182.50,,252.50,,640.00,543.872,451.94,,402.34,,556.66,,1410.94
 Eric Welch,1,140+kg/308+ Open Men-Single Ply,M,Single-ply,NV-USA,308+,312.00,50,240.00,,190.00,,312.50,,742.50,414.249,529.10,,418.87,,688.94,,1636.92
 Eric Welch,1,140+kg/308+ Master Men 50+-Single Ply,M,Single-ply,NV-USA,308+,312.00,50,240.00,,190.00,,312.50,,742.50,468.101,529.10,,418.87,,688.94,,1636.92
-Michelle Senger,DQ,67.5kg/148 Open Women-MultiPly,F,,Canada,148,145.60,45,-172.50,,-90.00,,,,,O,-380.00,,-198.00,,,,O
-Andrea McDougall,DQ,67.5kg/148 Open Women-MultiPly,F,,Canada,148,141.60,40,-125.00,,82.50,,125.00,,,O,-275.00,,181.88,,275.58,,O
-Andrea McDougall,DQ,67.5kg/148 Master Women 40+-MultiPly,F,,Canada,148,141.60,40,-125.00,,82.50,,125.00,,,O,-275.00,,181.88,,275.58,,O
-Michelle Senger,DQ,67.5kg/148 Master Women 45+-MultiPly,F,,Canada,148,145.60,45,-172.50,,-90.00,,,,,O,-380.00,,-198.00,,,,O
+Michelle Senger,DQ,67.5kg/148 Open Women-MultiPly,F,,Canada,148,145.60,45,-172.50,,-90.00,,,,,,-380.00,,-198.00,,,,
+Andrea McDougall,DQ,67.5kg/148 Open Women-MultiPly,F,,Canada,148,141.60,40,-125.00,,82.50,,125.00,,,,-275.00,,181.88,,275.58,,O
+Andrea McDougall,DQ,67.5kg/148 Master Women 40+-MultiPly,F,,Canada,148,141.60,40,-125.00,,82.50,,125.00,,,,-275.00,,181.88,,275.58,,O
+Michelle Senger,DQ,67.5kg/148 Master Women 45+-MultiPly,F,,Canada,148,145.60,45,-172.50,,-90.00,,,,,,-380.00,,-198.00,,,,
 Bernice Fuss,1,75kg/165 Open Women-MultiPly,F,,Canada,165,151.60,55,160.00,,117.50,,187.50,,465.00,468.371,352.74,,259.04,,413.36,,1025.14
 Bernice Fuss,1,75kg/165 Master Women 55+-MultiPly,F,,Canada,165,151.60,55,160.00,,117.50,,187.50,,465.00,573.754,352.74,,259.04,,413.36,,1025.14
-Dan Belisle,DQ,82.5kg/181 Open Men-Multiply,M,,Canada,181,180.40,39,-272.50,,172.50,,232.50,,,O,-600.00,,380.29,,512.57,,O
-Sean Lagimodiere,DQ,90kg/198 Junior Men 20-23-Multiply,M,,Canada,198,198.00,23,-275.00,,175.00,,240.00,,,O,-606.00,,385.81,,529.10,,O
+Dan Belisle,DQ,82.5kg/181 Open Men-Multiply,M,,Canada,181,180.40,39,-272.50,,172.50,,232.50,,,,-600.00,,380.29,,512.57,,O
+Sean Lagimodiere,DQ,90kg/198 Junior Men 20-23-Multiply,M,,Canada,198,198.00,23,-275.00,,175.00,,240.00,,,,-606.00,,385.81,,529.10,,O
 Misael Peraza,1,90kg/198 Open Men-Multiply,M,,CA-USA,198,196.80,25,280.00,,182.50,,262.50,,725.00,464.778,617.29,,402.34,,578.71,,1598.34
-Aaron Rubin,DQ,90kg/198 Open Men-Multiply,M,,Canada,198,192.60,39,-265.00,,200.00,,265.00,,O,,-584.00,,440.92,,584.22,,O
-Sean Lagimodiere,DQ,90kg/198 Open Men-Multiply,M,,Canada,198,198.00,23,-275.00,,175.00,,240.00,,O,,-606.00,,385.81,,529.10,,O
+Aaron Rubin,DQ,90kg/198 Open Men-Multiply,M,,Canada,198,192.60,39,-265.00,,200.00,,265.00,,,,-584.00,,440.92,,584.22,,O
+Sean Lagimodiere,DQ,90kg/198 Open Men-Multiply,M,,Canada,198,198.00,23,-275.00,,175.00,,240.00,,,,-606.00,,385.81,,529.10,,O
 Sean Clymer,1,100kg/220 Open Men-Multiply,M,,WY-USA,220,219.60,24,310.00,,227.50,,260.00,,797.50,486.112,683.43,,501.55,,573.20,,1758.17
 Stephen Bartlett,1,110kg/242 Open Men-Multiply,M,,CA-USA,242,239.40,27,372.50,,235.00,,275.00,,882.50,521.441,821.21,,518.08,,606.27,,1945.56
-Jeffrey Miller,DQ,110kg/242 Open Men-Multiply,M,,CA-USA,242,239.60,31,335.00,,-227.50,,,,O,,738.54,,-501.00,,,,O
+Jeffrey Miller,DQ,110kg/242 Open Men-Multiply,M,,CA-USA,242,239.60,31,335.00,,-227.50,,,,,,738.54,,-501.00,,,,
 Daniel Varela,1,110kg/242 Master Men 60+-Multiply,M,,CA-USA,242,236.20,63,272.50,,227.50,,272.50,,772.50,651.451,600.75,,501.55,,600.75,,1703.05
-Dalen Randa,DQ,125kg/275 Open Men-Multiply,M,,CA-USA,275,262.50,46,367.50,,-302.50,,,,,O,810.19,,-666.00,,,,O
+Dalen Randa,DQ,125kg/275 Open Men-Multiply,M,,CA-USA,275,262.50,46,367.50,,-302.50,,,,,,810.19,,-666.00,,,,
 Robert Lee,1,140kg/308 Open Men-Multiply,M,,CA-USA,308,295.80,36,340.00,,287.50,,260.00,,887.50,499.249,749.56,,633.82,,573.20,,1956.58
-Andreas Gallagher,DQ,140kg/308 Open Men-Multiply,M,,CA-USA,308,279.80,31,-440.00,,,,,,O,,-970.00,,,,,,O
-Ken Drake,DQ,140kg/308 Open Men-Multiply,M,,Canada,308,302.40,34,-225.00,,,,,,O,,-496.00,,,,,,O
+Andreas Gallagher,DQ,140kg/308 Open Men-Multiply,M,,CA-USA,308,279.80,31,-440.00,,,,,,,,-970.00,,,,,,
+Ken Drake,DQ,140kg/308 Open Men-Multiply,M,,Canada,308,302.40,34,-225.00,,,,,,,,-496.00,,,,,,
 Lori Vanyo,1,56kg/123 Open Women-Raw,F,Raw,CA-USA,123,122.70,46,,,61.50,,,,61.50,72.711,,,135.58,,,,135.58
 Anna Kelske,2,56kg/123 Open Women-Raw,F,Raw,CA-USA,123,123.00,30,,,55.00,,,,55.00,64.902,,,121.25,,,,121.25
 Lily Starobin,3,56kg/123 Open Women-Raw,F,Raw,CA-USA,123,119.40,24,,,50.00,,,,50.00,60.390,,,110.23,,,,110.23
@@ -223,11 +223,11 @@ Steve Bloom,1,100kg/220 Master Men 70+-Raw,M,Raw,CA-USA,220,201.80,71,,,110.00,,
 Charles Dedrick,1,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,237.40,47,,,172.50,,,,172.50,102.201,,,380.29,,,,380.29
 Wayne Jandoc,2,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,228.80,55,,,157.50,,,,157.50,94.507,,,347.22,,,,347.22
 Ron Cox,3,110kg/242 Open Men-Raw,M,Raw,TX-USA,242,236.20,51,,,150.00,,,,150.00,89.019,,,330.69,,,,330.69
-Scott Schmeckpeper,DQ,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,236.60,57,,,-120.00,,,,O,,,,-264.00,,,,O
+Scott Schmeckpeper,DQ,110kg/242 Open Men-Raw,M,Raw,CA-USA,242,236.60,57,,,-120.00,,,,,,,,-264.00,,,,
 Charles Dedrick,1,110kg/242 Master Men 45+-Raw,M,Raw,CA-USA,242,237.40,47,,,172.50,,,,172.50,110.581,,,380.29,,,,380.29
 Ron Cox,1,110kg/242 Master Men 50+-Raw,M,Raw,TX-USA,242,236.20,51,,,150.00,,,,150.00,102.104,,,330.69,,,,330.69
 Wayne Jandoc,1,110kg/242 Master Men 55+-Raw,M,Raw,CA-USA,242,228.80,55,,,157.50,,,,157.50,115.771,,,347.22,,,,347.22
-Scott Schmeckpeper,DQ,110kg/242 Master Men 55+-Raw,M,Raw,CA-USA,242,236.60,57,,,-120.00,,,,O,,,,-264.00,,,,O
+Scott Schmeckpeper,DQ,110kg/242 Master Men 55+-Raw,M,Raw,CA-USA,242,236.60,57,,,-120.00,,,,,,,,-264.00,,,,
 Daniel Smith III,1,110kg/242 Master Men 65+-Raw,M,Raw,CA-USA,242,229.80,69,,,165.00,,,,165.00,159.151,,,363.76,,,,363.76
 Herb Strange,1,110kg/242 Master Men 80+-Raw,M,Raw,KS-USA,242,234.20,80,,,97.50,,,,97.50,118.956,,,214.95,,,,214.95
 Scott Hoekstra,1,125kg/275 Open Men-Raw,M,Raw,CA-USA,275,252.40,46,,,235.00,245,,,235.00,136.711,,,518.08,540,,,518.08
@@ -262,10 +262,10 @@ Everett Cutburth,2,100kg/220 Master Men 60+-Single Ply,M,Single-ply,CA-USA,220,2
 Bryon Brubaker,1,110kg/242 Master Men 45+-Single Ply,M,Single-ply,CA-USA,242,237.40,49,,,265.00,,,,265.00,174.746,,,584.22,,,,584.22
 Herb Strange,1,110kg/242 Master Men 80+-Single Ply,M,Single-ply,KS-USA,242,234.20,80,,,105.00,,,,105.00,128.106,,,231.48,,,,231.48
 Ron Garcia,1,125kg/275 Open Men Single Ply,M,Single-ply,CA-USA,275,245.40,49,,,175.00,,,,175.00,102.619,,,385.81,,,,385.81
-Steve Denning,DQ,125kg/275 Open Men Single Ply,M,Single-ply,CA-USA,275,251.80,57,,,-200.00,,,,O,,,,-440.00,,,,O
+Steve Denning,DQ,125kg/275 Open Men Single Ply,M,Single-ply,CA-USA,275,251.80,57,,,-200.00,,,,,,,,-440.00,,,,
 Ron Garcia,1,125kg/275 Master Men 45-49 Single Ply,M,Single-ply,CA-USA,275,245.40,49,,,175.00,,,,175.00,114.215,,,385.81,,,,385.81
-Steve Denning,DQ,125kg/275 Master Men 55+-Single Ply,M,Single-ply,CA-USA,275,251.80,57,,,-200.00,,,,,O,,,-440.00,,,,O
-Doug Knapp,DQ,125kg/275 Master Men 65+- Single Ply,M,Single-ply,CA-USA,275,269.80,65,,,-190.50,,,,,O,,,-419.00,,,,O
+Steve Denning,DQ,125kg/275 Master Men 55+-Single Ply,M,Single-ply,CA-USA,275,251.80,57,,,-200.00,,,,,,,,-440.00,,,,
+Doug Knapp,DQ,125kg/275 Master Men 65+- Single Ply,M,Single-ply,CA-USA,275,269.80,65,,,-190.50,,,,,,,,-419.00,,,,
 David Douglas,1,140kg/308 Open Men-Single Ply,M,Single-ply,CA-USA,308,291.80,25,,,350.00,,,,350.00,197.336,,,771.61,,,,771.61
 Alan Aerts,2,140kg/308 Open Men-Single Ply,M,Single-ply,CA-USA,308,282.40,56,,,210.50,,,,210.50,119.381,,,464.07,,,,464.07
 Alan Aerts,1,140kg/308 Master Men 55+-Single Ply,M,Single-ply,CA-USA,308,282.40,56,,,210.50,,,,210.50,148.748,,,464.07,,,,464.07
@@ -297,7 +297,7 @@ Tracie Marquez,1,82.5kg/181 Master Women 45+-Raw,F,Raw,CA-USA,181,172.80,49,,,,,
 Lil Stewart,1,82.5kg/181 Master Women 65+-Raw,F,Raw,CA-USA,181,176.80,69,,,,,90.00,92.5,90.00,132.405,,,,,198.41,203,198.41
 Linda Hanley,1,90+kg/198+ Master Women 50+-Raw,F,Raw,CO-USA,198+,237.80,52,,,,,185.00,,185.00,175.986,,,,,407.85,,407.85
 Cadet Bryant,1,60kg/132 Open Men-Raw,M,Raw,TX-USA,132,127.00,39,,,,,160.00,,160.00,141.736,,,,,352.74,,352.74
-Darian Dadras,DQ,67.5kg/148 Junior Men 20-23-Raw,M,Raw,CA-USA,148,148.00,21,,,,,-220.00,,O,,,,,,-485.00,,O
+Darian Dadras,DQ,67.5kg/148 Junior Men 20-23-Raw,M,Raw,CA-USA,148,148.00,21,,,,,-220.00,,,,,,,,-485.00,,O
 Kevin Meskew,1,67.5kg/148 Master Men 55+-Raw,M,Raw,CA-USA,148,148.81,56,,,,,182.50,,182.50,175.326,,,,,402.34,,402.34
 Tsunehiko Yagi,1,75kg/165 Open Men-Raw,M,Raw,Japan,165,162.00,33,,,,,140.00,,140.00,101.209,,,,,308.64,,308.64
 Sam Brooks,1,82.5kg/181 Open Men-Raw,M,Raw,CA-USA,181,179.80,27,,,,,237.50,,237.50,160.213,,,,,523.59,,523.59
@@ -326,9 +326,9 @@ Trace Ryan,1,75kg/165 Master Women 40+-Single Ply,F,Single-ply,NV-USA,165,154.30
 Martha King,1,75kg/165 Master Women 45+-Single Ply,F,Single-ply,CA-USA,165,156.80,49,,,,,120.00,,120.00,131.434,,,,,264.55,,264.55
 Michael Martin,1,67.5kg/148 Master Men 50+-Single Ply,M,Single-ply,CA-USA,148,145.60,51,,,,,170.00,,170.00,153.022,,,,,374.78,,374.78
 Frank Du,1,75kg/165 Open Men-Single Ply,M,Single-ply,CA-USA,165,161.20,32,,,,,205.00,,205.00,148.727,,,,,451.94,,451.94
-Ryan Bowden,DQ,75kg/165 Open Men-Single Ply,M,Single-ply,CA-USA,165,161.20,27,,,,,-167.50,,O,,,,,,-369.00,,O
+Ryan Bowden,DQ,75kg/165 Open Men-Single Ply,M,Single-ply,CA-USA,165,161.20,27,,,,,-167.50,,,,,,,,-369.00,,O
 Charles LaMantia,1,82.5kg/181 Teen Men 15-19-Single Ply,M,Single-ply,CA-USA,181,173.80,16,,,,,172.50,,172.50,134.326,,,,,380.29,,380.29
-Michael Scurry,DQ,82.5kg/181 Open Men-Single Ply,M,Single-ply,CA-USA,181,180.20,39,,,,,-295.00,,O,,,,,,-650.00,,O
+Michael Scurry,DQ,82.5kg/181 Open Men-Single Ply,M,Single-ply,CA-USA,181,180.20,39,,,,,-295.00,,,,,,,,-650.00,,O
 Bruce Cochran,1,82.5kg/181 Master Men 45+-Single Ply,M,Single-ply,CA-USA,181,179.40,47,,,,,162.50,,162.50,118.770,,,,,358.25,,358.25
 Roy Taylor,1,82.5kg/181 Master Men 70+-Single Ply,M,Single-ply,CA-USA,181,181.00,72,,,,,182.50,,182.50,210.652,,,,,402.34,,402.34
 Jason Kelske,1,90kg/198 Open Men-Single Ply,M,Single-ply,CA-USA,198,197.60,31,,,,,287.50,,287.50,183.924,,,,,633.82,,633.82

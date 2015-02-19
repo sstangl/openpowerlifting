@@ -1,6 +1,6 @@
 Name,Place,Division,Sex,Equipment,Weight Class,Bodyweight,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks,SquatLBS,BenchLBS,DeadliftLBS,Deadlift4LBS,TotalLBS
-Carmela Bacqui,DQ,114 Master Women 45-49 Raw,F,Raw,114,110.8,46,-75,,,,O,,-165,,,,O
-Cheyenne Tavares,DQ,123 Junior Women 18-19 Raw,F,Raw,123,120,19,-90,,,,O,,-198,,,,O
+Carmela Bacqui,DQ,114 Master Women 45-49 Raw,F,Raw,114,110.8,46,-75,,,,,,-165,,,,
+Cheyenne Tavares,DQ,123 Junior Women 18-19 Raw,F,Raw,123,120,19,-90,,,,,,-198,,,,
 Ashlee Laing,1,123 Open Women Raw,F,Raw,123,119.8,26,92.5,47.5,102.5,,242.5,292.128,203.93,104.72,225.97,,534.62
 Abigail Castro,1,165 Junior Women 16-17 Raw,F,Raw,165,163,16,90,57.5,130,,277.5,300.805,198.41,126.76,286.6,,611.78
 Cathy LaMantia,1,165 Junior Women 20-23 Raw,F,Raw,165,162,21,60,35,92.5,,187.5,184.189,132.28,77.16,203.93,,413.36
@@ -23,7 +23,7 @@ Jorge Gonzales,1,181 Submaster Men 35-39 Raw,M,Raw,181,177.8,37,125,77.5,147.5,,
 Jason Roberts,1,181 Master Men 40-44 Raw,M,Raw,181,179.8,43,160,127.5,175,,462.5,321.666,352.74,281.09,385.81,,1019.63
 Nestor Bagayas,1,181 Master Men 45-49 Raw,M,Raw,181,174.2,47,137.5,115,170,,422.5,314.56,303.13,253.53,374.78,,931.44
 Emu Singh,1,198 Junior Men 20-23 Raw,M,Raw,198,198,22,122.5,110,165,,397.5,256.572,270.06,242.51,363.76,,876.33
-James Wagner,DQ,198 Junior Men 20-23 Raw,M,Raw,198,198.2,22,-257.5,,,,O,,-567,,,,O
+James Wagner,DQ,198 Junior Men 20-23 Raw,M,Raw,198,198.2,22,-257.5,,,,,,-567,,,,
 Mike Thorpe,1,198 Open Men Raw,M,Raw,198,197.8,28,175,110,192.5,,477.5,305.315,385.81,242.51,424.39,,1052.7
 Nathan Olaivar,1,220 Open Men Raw,M,Raw,220,219.8,28,227.5,182.5,260,,670,408.245,501.55,402.34,573.2,,1477.08
 Elliot Olinger,2,220 Open Men Raw,M,Raw,220,210.54,29,200,165,265,,630,390.954,440.92,363.76,584.22,,1388.9
@@ -32,7 +32,7 @@ Ricardo Vargas,4,220 Open Men Raw,M,Raw,220,215.2,28,140,82.5,182.5,,405,248.942
 Joshua Bernades,1,242 Junior Men 20-23 Raw,M,Raw,242,239.8,22,185,125,205,,515,307.177,407.85,275.58,451.94,,1135.37
 Rex Walters,1,242 Open Men Raw,M,Raw,242,239.6,28,205,160,230,,595,351.473,451.94,352.74,507.06,,1311.74
 Mark Hammond,2,242 Open Men Raw,M,Raw,242,241.2,29,147.5,110,175,,432.5,254.948,325.18,242.51,385.81,,953.49
-Chaz Mizumoto,DQ,242 Open Men Raw,M,Raw,242,235.8,33,-227.5,227.5,,,O,,-501,501.55,,,O
+Chaz Mizumoto,DQ,242 Open Men Raw,M,Raw,242,235.8,33,-227.5,227.5,,,,,-501,501.55,,,
 Monte Payne,1,275 Junior Men 13-15 Raw,M,Raw,275,253.8,14,85,90,137.5,,312.5,223.278,187.39,198.41,303.13,,688.94
 Aaron Moises,1,275 Open Men Raw,M,Raw,275,271.2,27,262.5,182.5,260,,705,403.083,578.71,402.34,573.2,,1554.24
 Kamuela Wassman,2,275 Open Men Raw,M,Raw,275,269.6,25,227.5,167.5,267.5,,662.5,379.268,501.55,369.27,589.73,,1460.55
@@ -40,15 +40,15 @@ Justin Pasko,3,275 Open Men Raw,M,Raw,275,258.6,26,167.5,112.5,212.5,,492.5,284.
 Jordan Silva,1,308+ Open Men Raw,M,Raw,308+,323.6,27,165,137.5,200,,502.5,278.882,363.76,303.13,440.92,,1107.81
 Donna Bareng,1,114 Open Women Single Ply,F,Single-ply,114,113.5,31,130,80,140,,350,439.696,286.6,176.37,308.64,,771.61
 Luvi Agpaoa,1,123 Master Women 40-44 Single Ply,F,Single-ply,123,123.2,44,120,72.5,115,,307.5,377.982,264.55,159.83,253.53,,677.91
-Shani Alvarado,DQ,181 Open Women Single Ply,F,Single-ply,181,165.6,30,177.5,-105,175,,O,,391.32,-231,385.81,,O
+Shani Alvarado,DQ,181 Open Women Single Ply,F,Single-ply,181,165.6,30,177.5,-105,175,,,,391.32,-231,385.81,,O
 Rowena Bagayas,1,198 Master Women 40-44 Single Ply,F,Single-ply,198,193,44,165,120,137.5,,422.5,385.34,363.76,264.55,303.13,,931.44
 Lance Villiatora,1,148 Junior Men 20-23 Single Ply,M,Single-ply,148,148.2,23,182.5,157.5,197.5,205,537.5,415.79,402.34,347.22,435.41,451,1184.97
-Ryu Sato,DQ,148 Open Men Single Ply,M,Single-ply,148,147.2,32,-205,,,,O,,-451,,,,O
+Ryu Sato,DQ,148 Open Men Single Ply,M,Single-ply,148,147.2,32,-205,,,,,,-451,,,,
 Edwin Manmanno,1,165 Open Men Single Ply,M,Single-ply,165,159.8,29,283,165,302.5,,750.5,547.944,623.9,363.76,666.89,,1654.55
 Justin Bagayas,2,165 Open Men Single Ply,M,Single-ply,165,158.6,24,227.5,137.5,192.5,,557.5,409.291,501.55,303.13,424.39,,1229.06
 Philip Runge,1,181 Open Men Single Ply,M,Single-ply,181,176.4,25,227.5,125,210,,562.5,383.974,501.55,275.58,462.97,,1240.09
 Kainoa Caballero,1,198 Junior Men 18-19 Single Ply,M,Single-ply,198,198,19,245,217.5,240,,702.5,466.907,540.13,479.5,529.1,,1548.73
 Joshua Jaggers,1,220 Junior Men 20-23 Single Ply,M,Single-ply,220,214.6,23,272.5,245,287.5,,805,495.4,600.75,540.13,633.82,,1774.7
 Quinton Bagayas,1,220 Open Men Single Ply,M,Single-ply,220,218,24,245,182.5,215,,642.5,392.801,540.13,402.34,473.99,,1416.46
-Neal Caballero,DQ,220 Master Men 45-49 Single Ply,M,Single-ply,220,213,46,305,-305,,,O,,672.4,-672,,,O
-RJ Kauhane,DQ,242 Open Men Single Ply,M,Single-ply,242,241.4,25,207.5,-265,250,,O,,457.45,-584,551.15,,O
+Neal Caballero,DQ,220 Master Men 45-49 Single Ply,M,Single-ply,220,213,46,305,-305,,,,,672.4,-672,,,
+RJ Kauhane,DQ,242 Open Men Single Ply,M,Single-ply,242,241.4,25,207.5,-265,250,,,,457.45,-584,551.15,,O
