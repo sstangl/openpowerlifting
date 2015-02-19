@@ -1,0 +1,126 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple check script for meet.csv files.
+# Used as part of "make check".
+#
+# Makes sure that:
+#
+# 1) All the column data is in the pre-set format.
+#
+
+import sys
+
+def redden(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+def enyellow(s):
+    return "\033[1;33m" + s + "\033[0;m"
+
+havePrintedFilename = False
+
+def print_filename_once():
+    # This completely breaks the main() abstraction, but whatever.
+    global havePrintedFilename
+    if not havePrintedFilename:
+        print >> sys.stderr, sys.argv[1]
+        havePrintedFilename = True
+
+def perror(s):
+    print_filename_once()
+    print >> sys.stderr, ' ' + redden(s)
+
+def pwarning(s):
+    print_filename_once()
+    print >> sys.stderr, ' ' + enyellow(s)
+
+
+KnownFederations = [
+    "USPF",
+    "USPA",
+    "USAPL",
+    "IPF",
+    "GPA",
+    "IPL",
+    "NASA",
+    "SPF",
+]
+
+
+def is_number(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+
+def main(scriptname, filename):
+    with open(filename) as fd:
+        csv = [x.strip().split(',') for x in fd.readlines()]
+
+    if len(csv) > 1:
+        perror("Meet file contains multiple lines")
+
+    row = csv[0]
+    if len(row) != 8:
+        perror("Meet file has incorrect number of columns")
+
+    for i, text in enumerate(row):
+        if text.strip() != text:
+            perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
+
+        if not text:
+            pwarning("Empty column")
+
+        # 0th entry: Federation
+        if i == 0:
+            if not text in KnownFederations:
+                perror("Unknown federation (add to check-meet-csv?): \"%s\"" % text)
+
+        # 1th entry: Year
+        if i == 1:
+            if len(text) != 4:
+                perror("Year must be 4 digits: \"%s\"" % text)
+            if not is_number(text):
+                perror("Year field must be a number: \"%s\"" % text)
+
+        # 2nd and 3rd entries: Month and Day, both always 2 digits
+        if i == 2 or i == 3:
+            fieldname = "Month" if i == 2 else "Day"
+            if len(text) != 2:
+                perror("%s must be 2 digits: \"%s\"" % (fieldname, text))
+            if not is_number(text):
+                perror("%s field must be a number: \"%s\"" % (fieldname, text))
+
+        # 4th, 5th, and 6th entries: country, state (or whatever), city
+        if i == 4 or i == 5 or i == 6:
+            found_illegal_char = False
+            for c in text:
+                if not c.isalpha() and not c in ' -.\'':
+                    found_illegal_char = True
+                    break
+
+            if found_illegal_char:
+                perror("Illegal character in: \"%s\"" % text)
+
+        # 7th entry: Free-form name of competition
+        if i == 7:
+            found_illegal_char = False
+            for c in text:
+                if not c.isalnum() and not c in ' -.\'/&':
+                    found_illegal_char = True
+                    break
+
+            if found_illegal_char:
+                perror("Illegal character in: \"%s\"" % text)
+
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print sys.argv
+        print >> stderr, " Usage: %s meet.csv" % sys.argv[0]
+        sys.exit(1)
+
+    main(sys.argv[0], sys.argv[1])
