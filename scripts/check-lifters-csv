@@ -136,22 +136,22 @@ HeaderHandlers = {
 
     # Lift columns. Only Kg is valid.
     'BestSquatKg': check_lift_column,
-    'SquatKg1': check_lift_column,
-    'SquatKg2': check_lift_column,
-    'SquatKg3': check_lift_column,
-    'SquatKg4': check_lift_column,
+    'Squat1Kg': check_lift_column,
+    'Squat2Kg': check_lift_column,
+    'Squat3Kg': check_lift_column,
+    'Squat4Kg': check_lift_column,
 
     'BestBenchKg': check_lift_column,
-    'BenchKg1': check_lift_column,
-    'BenchKg2': check_lift_column,
-    'BenchKg3': check_lift_column,
-    'BenchKg4': check_lift_column,
+    'Bench1Kg': check_lift_column,
+    'Bench2Kg': check_lift_column,
+    'Bench3Kg': check_lift_column,
+    'Bench4Kg': check_lift_column,
 
     'BestDeadliftKg': check_lift_column,
-    'DeadliftKg1': check_lift_column,
-    'DeadliftKg2': check_lift_column,
-    'DeadliftKg3': check_lift_column,
-    'DeadliftKg4': check_lift_column,
+    'Deadlift1Kg': check_lift_column,
+    'Deadlift2Kg': check_lift_column,
+    'Deadlift3Kg': check_lift_column,
+    'Deadlift4Kg': check_lift_column,
 
     'TotalKg': check_positive_number_column,
 }
