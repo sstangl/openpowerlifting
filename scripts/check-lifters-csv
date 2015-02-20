@@ -177,7 +177,7 @@ def check_headers(headers):
         if not header in KnownHeaders:
             pwarning("Unknown column header: %s" % header)
 
-        if headers.count(headers) > 1:
+        if headers.count(header) > 1:
             perror("Duplicate column header: %s" % header)
 
 
