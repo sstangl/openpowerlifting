@@ -1,23 +1,23 @@
-Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
-Maryam Rushdi,1,105 Junior Women 20-23 Raw,F,Raw,OR,105,102.00,22,85.00,93.00,42.50,45.00,117.50,122.5,245.00,336.5616
-Marley Kennedy,1,165 Open Women Raw,F,Raw,OR,165,156.00,25,75.00,,45.00,,95.00,,215.00,212.313
-Cindy Slone,1,165 Submaster Women 35-39 Raw,F,Raw,OR,165,158.00,36,135.00,137.5,70.00,,137.50,160.0,342.50,342.031
-Brad Acvat,1,165 Junior Men 13-15 Raw,M,Raw,OR,165,150.00,13,120.00,,95.00,,160.00,,375.00,367.749
-Bryan Peralta,1,181 Junior Men 20-23 Raw,M,Raw,HI,181,181.00,20,205.00,,137.50,,225.00,,567.50,392.720
-Alexander Munsee,2,181 Junior Men 20-23 Raw,M,Raw,OR,181,175.00,20,190.00,,115.00,,237.50,,542.50,383.364
-Cory James Furrow,3,181 Junior Men 20-23 Raw,M,Raw,OR,181,179.00,21,177.50,,145.00,,185.00,,507.50,350.153
-Alex Castro,DQ,148 Open Men Raw,M,Raw,OR,148,148.00,24,137.50,,-102.50,,,,,
-Seth Faust,1,165 Open Men Raw,M,Raw,OR,148,149.00,22,200.00,,102.50,,212.50,,515.00,396.669
-Abdul S. Alotaiba,2,165 Open Men Raw,M,Raw,OR,165,165.00,29,130.00,,70.00,,185.00,,385.00,274.735
-Buck Sowell,1,275 Open Men Raw,M,Raw,OR,275,262.00,24,195.00,,115.00,,240.00,,550.00,316.931
-Cindy Shockman,1,165 Open Women Classic Raw,F,Wraps,OR,165,165.00,47,132.50,137.5,105.00,107.5,165.00,172.5,402.50,383.134
-Erin Stanton,1,SHW Open Women Classic Raw,F,Wraps,OR,SHW,274.50,26,180.00,,92.50,,157.50,,430.00,341.612
-Cindy Shockman,1,165 Master Women 45-49 Classic Raw,F,Wraps,OR,165,165.00,47,132.50,137.5,105.00,107.5,165.00,172.5,402.50,414.551
-Kirk Sabalka,1,242 Open Men Classic Raw,M,Wraps,OR,242,240.00,23,280.00,,170.00,,300.00,,750.00,442.799
-Randy Monson,1,275 Open Men Classic Raw,M,Wraps,OR,275,257.00,31,227.50,,130.00,,245.00,,602.50,348.843
-Chuck McFarland,1,198 Master Men 60-64 Classic Raw,M,Wraps,OR,198,198.00,60,185.00,192.5,127.50,,225.50,237.5,538.00,460.721
-Abdul S. Alotaiba,1,165 Open Men Raw,M,Raw,OR,165,165.00,29,,,70.00,,,,70.00,49.952
-Peyton Bell,1,123 Junior Men 13-15 Single Ply,M,Single-ply,OR,123,123.00,15,,,90.00,,,,90.00,97.031
-Abdul S. Alotaiba,1,165 Open Men Raw,M,Raw,OR,165,162.00,29,,,,,185.00,,185.00,133.740
-Dustin McFarland,1,220 Open Men Multi Ply,M,Multi-ply,OR,220,204.00,29,,,,,270.00,,270.00,170.0184
-Dan Guches,1,198 Master Men 50 - 53 Multi Ply,M,Multi-ply,OR,198,190.00,53,,,,,265.00,,265.00,204.965
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
+Maryam Rushdi,1,105 Junior Women 20-23 Raw,F,Raw,OR,47.63,46.27,22,85.00,93.00,42.50,45.00,117.50,122.5,245.00,336.5616
+Marley Kennedy,1,165 Open Women Raw,F,Raw,OR,74.84,70.76,25,75.00,,45.00,,95.00,,215.00,212.313
+Cindy Slone,1,165 Submaster Women 35-39 Raw,F,Raw,OR,74.84,71.67,36,135.00,137.5,70.00,,137.50,160.0,342.50,342.031
+Brad Acvat,1,165 Junior Men 13-15 Raw,M,Raw,OR,74.84,68.04,13,120.00,,95.00,,160.00,,375.00,367.749
+Bryan Peralta,1,181 Junior Men 20-23 Raw,M,Raw,HI,82.10,82.10,20,205.00,,137.50,,225.00,,567.50,392.720
+Alexander Munsee,2,181 Junior Men 20-23 Raw,M,Raw,OR,82.10,79.38,20,190.00,,115.00,,237.50,,542.50,383.364
+Cory James Furrow,3,181 Junior Men 20-23 Raw,M,Raw,OR,82.10,81.19,21,177.50,,145.00,,185.00,,507.50,350.153
+Alex Castro,DQ,148 Open Men Raw,M,Raw,OR,67.13,67.13,24,137.50,,-102.50,,,,,
+Seth Faust,1,165 Open Men Raw,M,Raw,OR,67.13,67.59,22,200.00,,102.50,,212.50,,515.00,396.669
+Abdul S. Alotaiba,2,165 Open Men Raw,M,Raw,OR,74.84,74.84,29,130.00,,70.00,,185.00,,385.00,274.735
+Buck Sowell,1,275 Open Men Raw,M,Raw,OR,124.74,118.84,24,195.00,,115.00,,240.00,,550.00,316.931
+Cindy Shockman,1,165 Open Women Classic Raw,F,Wraps,OR,74.84,74.84,47,132.50,137.5,105.00,107.5,165.00,172.5,402.50,383.134
+Erin Stanton,1,SHW Open Women Classic Raw,F,Wraps,OR,139.71+,124.51,26,180.00,,92.50,,157.50,,430.00,341.612
+Cindy Shockman,1,165 Master Women 45-49 Classic Raw,F,Wraps,OR,74.84,74.84,47,132.50,137.5,105.00,107.5,165.00,172.5,402.50,414.551
+Kirk Sabalka,1,242 Open Men Classic Raw,M,Wraps,OR,109.77,108.86,23,280.00,,170.00,,300.00,,750.00,442.799
+Randy Monson,1,275 Open Men Classic Raw,M,Wraps,OR,124.74,116.57,31,227.50,,130.00,,245.00,,602.50,348.843
+Chuck McFarland,1,198 Master Men 60-64 Classic Raw,M,Wraps,OR,89.81,89.81,60,185.00,192.5,127.50,,225.50,237.5,538.00,460.721
+Abdul S. Alotaiba,1,165 Open Men Raw,M,Raw,OR,74.84,74.84,29,,,70.00,,,,70.00,49.952
+Peyton Bell,1,123 Junior Men 13-15 Single Ply,M,Single-ply,OR,55.79,55.79,15,,,90.00,,,,90.00,97.031
+Abdul S. Alotaiba,1,165 Open Men Raw,M,Raw,OR,74.84,73.48,29,,,,,185.00,,185.00,133.740
+Dustin McFarland,1,220 Open Men Multi Ply,M,Multi-ply,OR,99.79,92.53,29,,,,,270.00,,270.00,170.0184
+Dan Guches,1,198 Master Men 50 - 53 Multi Ply,M,Multi-ply,OR,89.81,86.18,53,,,,,265.00,,265.00,204.965

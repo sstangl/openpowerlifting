@@ -1,58 +1,58 @@
-Name,Place,Sex,Weightclass,Division,Event,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
-Cindy Bullara,1,F,114,Open Women,SBD,270,126.75,281,677.75
-Lisa Denison,1,F,148,Open Women,SBD,314,143.25,336,793.25
-Lisa Baldridge,1,F,198,Open Women,SBD,275.5,159.75,303,738.25
-Scott Layman,1,M,148,Open Men,SBD,589.5,363.75,534.5,1487.75
-Mike Lans,1,M,165,Open Men,SBD,402.25,231.25,424.25,1057.75
-Robin Gounder,2,M,165,Open Men,SBD,275.5,209.25,374.75,859.5
-Daniel Gounder,3,M,165,Open Men,SBD,248,209.25,358,815.25
-Zane Gordon,1,M,181,Open Men,SBD,352.5,203.75,391.25,947.5
-Mike Gray,1,M,198,Open Men,SBD,501,363.75,534.5,1399.25
-Victor Calia,2,M,198,Open Men,SBD,507,330.5,540,1377.5
-Roland Lopez,3,M,198,Open Men,SBD,396.75,303,490.5,1190.25
-Jesse Branham,1,M,220,Open Men,SBD,644.75,391.25,203.75,1239.75
-Wayne Whitzell,2,M,220,Open Men,SBD,440.75,369.25,402.25,1212.25
-Scott Waits,1,M,242,Open Men,SBD,694.25,468.25,617.25,1779.75
-Liborio Vargas,2,M,242,Open Men,SBD,529,369.25,551,1449.25
-Kellen Boyce,1,M,275,Open Men,SBD,600.75,347,556.5,1504.25
-Ricardo Magni,2,M,275,Open Men,SBD,518,374.75,589.5,1482.25
-Justin Lakin,1,M,275,Teen Men 16-17,SBD,225.75,159.75,281,666.5
-Charles Price,1,M,275,Men 18-19,SBD,314,341.5,573,1228.5
-Mike Lans,1,M,165,Junior Men 20-23,SBD,402.25,231.25,424.25,1057.75
-Zane Gordon,2,M,181,Junior Men 20-23,SBD,352.5,203.75,391.25,947.5
-Lance Rector,1,M,220,Junior Men 20-23,SBD,523.5,424.25,512.5,1460.25
-J.R. Mancini,2,M,220,Junior Men 20-23,SBD,451.75,358,507,1316.75
-Jim Oswood,1,M,275,Submaster Men 35-39,SBD,347,264.5,418.75,1030.25
-Angel Lopez,1,M,275,Submaster Men 35-39,SBD,617.25,418.75,512.5,1548.5
-Rodney Sheetz,2,M,275,Submaster Men 35-39,SBD,600.75,363.75,485,1449.5
-Keith Kanemoto,1,M,198,Master Men 40-44,SBD,661.2,446.25,540,1647.45
-Roland Lopez,2,M,198,Master Men 40-44,SBD,396.75,303,490.5,1190.25
-Troy Morris,1,M,275,Master Men 40-44,SBD,650.25,424.25,600.75,1675.25
-Nick Benjamin,2,M,SHW,Master Men 40-44,SBD,589.5,507,562,1658.5
-Jonathan Weeks,3,M,275,Master Men 40-44,SBD,611.75,369.25,611.75,1592.75
-Jeff Hayes,4,M,242,Master Men 40-44,SBD,507,413.25,545.5,1465.75
-Mike Brown,5,M,220,Master Men 40-44,SBD,385.75,281,418.75,1085.5
-Mike Womelsdorf,6,M,220,Master Men 40-44,SBD,391.25,286.5,380.25,1058
-Brad King,1,M,220,Master Men 45-49,SBD,578.5,358,628.25,1564.75
-Steve Brown,2,M,275,Master Men 45-49,SBD,551,435.25,551,1537.25
-Delmer Brown,3,M,275,Master Men 45-49,SBD,540,391.25,540,1471.25
-Ruben Arredondo,4,M,220,Master Men 45-49,SBD,479.5,352.5,462.75,1294.75
-Manuel Frutoze,1,M,242,Master Men 55-59,SBD,468.25,374.75,556.5,1399.5
-Pete Wilson,1,M,220,Master Men 60-64,SBD,440.75,352.5,440.75,1234
-Roland Lopez,1,M,198,Police/Fire/Military,SBD,396.75,303,490.5,1190.25
-Julia Santana,1,F,,Open Women,B,,159.75,,
-Chris Angello,1,M,181,Master 45-49,B,,308.5,,
-Joe Grissom,1,M,242,Junior Men 20-23,B,,319.5,,
-Russell Kitani,1,M,242,Open Men,B,,507,,
-Russell Kitani,1,M,242,Submaster Men 35-39,B,,507,,
-Ken Scott,1,M,275,Master Men 40-44,B,,457.25,,
-Chuck McGuire,2,M,275,Master Men 40-44,B,,341.5,,
-Mike Womelsdorf,3,M,220,Master Men 40-44,B,,286.5,,
-Steve Brown,1,M,275,Master 45-49,B,,435.25,,
-Julia Santana,1,F,148,Open Women,D,,,275.5,
-Leilani Wyatt,1,F,165,Police/Fire Women,D,,,203.75,
-Liborio Vargas,1,M,242,Open Men,D,,,551,
-Zach Passman,1,M,275,Open Men,D,,,672.25,
-Ken Scott,1,M,275,Master 40-44,D,,,573,
-Steve Brown,1,M,275,Master 45-49,D,,,551,
-Kent Bush,1,M,242,Master 50-54,D,,,628.25,
+Name,Place,Sex,WeightClassKg,Division,Event,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
+Cindy Bullara,1,F,51.71,Open Women,SBD,122.47,57.49,127.46,307.42
+Lisa Denison,1,F,67.13,Open Women,SBD,142.43,64.98,152.41,359.81
+Lisa Baldridge,1,F,89.81,Open Women,SBD,124.96,72.46,137.44,334.86
+Scott Layman,1,M,67.13,Open Men,SBD,267.39,164.99,242.45,674.83
+Mike Lans,1,M,74.84,Open Men,SBD,182.46,104.89,192.44,479.79
+Robin Gounder,2,M,74.84,Open Men,SBD,124.96,94.91,169.98,389.86
+Daniel Gounder,3,M,74.84,Open Men,SBD,112.49,94.91,162.39,369.79
+Zane Gordon,1,M,82.10,Open Men,SBD,159.89,92.42,177.47,429.78
+Mike Gray,1,M,89.81,Open Men,SBD,227.25,164.99,242.45,634.69
+Victor Calia,2,M,89.81,Open Men,SBD,229.97,149.91,244.94,624.82
+Roland Lopez,3,M,89.81,Open Men,SBD,179.96,137.44,222.49,539.89
+Jesse Branham,1,M,99.79,Open Men,SBD,292.45,177.47,92.42,562.34
+Wayne Whitzell,2,M,99.79,Open Men,SBD,199.92,167.49,182.46,549.87
+Scott Waits,1,M,109.77,Open Men,SBD,314.91,212.39,279.98,807.28
+Liborio Vargas,2,M,109.77,Open Men,SBD,239.95,167.49,249.93,657.37
+Kellen Boyce,1,M,124.74,Open Men,SBD,272.50,157.40,252.42,682.32
+Ricardo Magni,2,M,124.74,Open Men,SBD,234.96,169.98,267.39,672.34
+Justin Lakin,1,M,124.74,Teen Men 16-17,SBD,102.40,72.46,127.46,302.32
+Charles Price,1,M,124.74,Men 18-19,SBD,142.43,154.90,259.91,557.24
+Mike Lans,1,M,74.84,Junior Men 20-23,SBD,182.46,104.89,192.44,479.79
+Zane Gordon,2,M,82.10,Junior Men 20-23,SBD,159.89,92.42,177.47,429.78
+Lance Rector,1,M,99.79,Junior Men 20-23,SBD,237.46,192.44,232.47,662.36
+J.R. Mancini,2,M,99.79,Junior Men 20-23,SBD,204.91,162.39,229.97,597.27
+Jim Oswood,1,M,124.74,Submaster Men 35-39,SBD,157.40,119.98,189.94,467.31
+Angel Lopez,1,M,124.74,Submaster Men 35-39,SBD,279.98,189.94,232.47,702.39
+Rodney Sheetz,2,M,124.74,Submaster Men 35-39,SBD,272.50,164.99,219.99,657.48
+Keith Kanemoto,1,M,89.81,Master Men 40-44,SBD,299.92,202.42,244.94,747.27
+Roland Lopez,2,M,89.81,Master Men 40-44,SBD,179.96,137.44,222.49,539.89
+Troy Morris,1,M,124.74,Master Men 40-44,SBD,294.95,192.44,272.50,759.88
+Nick Benjamin,2,M,139.71+,Master Men 40-44,SBD,267.39,229.97,254.92,752.28
+Jonathan Weeks,3,M,124.74,Master Men 40-44,SBD,277.49,167.49,277.49,722.46
+Jeff Hayes,4,M,109.77,Master Men 40-44,SBD,229.97,187.45,247.43,664.85
+Mike Brown,5,M,99.79,Master Men 40-44,SBD,174.97,127.46,189.94,492.37
+Mike Womelsdorf,6,M,99.79,Master Men 40-44,SBD,177.47,129.95,172.48,479.90
+Brad King,1,M,99.79,Master Men 45-49,SBD,262.40,162.39,284.97,709.76
+Steve Brown,2,M,124.74,Master Men 45-49,SBD,249.93,197.43,249.93,697.28
+Delmer Brown,3,M,124.74,Master Men 45-49,SBD,244.94,177.47,244.94,667.35
+Ruben Arredondo,4,M,99.79,Master Men 45-49,SBD,217.50,159.89,209.90,587.29
+Manuel Frutoze,1,M,109.77,Master Men 55-59,SBD,212.39,169.98,252.42,634.80
+Pete Wilson,1,M,99.79,Master Men 60-64,SBD,199.92,159.89,199.92,559.73
+Roland Lopez,1,M,89.81,Police/Fire/Military,SBD,179.96,137.44,222.49,539.89
+Julia Santana,1,F,,Open Women,B,,72.46,,
+Chris Angello,1,M,82.10,Master 45-49,B,,139.93,,
+Joe Grissom,1,M,109.77,Junior Men 20-23,B,,144.92,,
+Russell Kitani,1,M,109.77,Open Men,B,,229.97,,
+Russell Kitani,1,M,109.77,Submaster Men 35-39,B,,229.97,,
+Ken Scott,1,M,124.74,Master Men 40-44,B,,207.41,,
+Chuck McGuire,2,M,124.74,Master Men 40-44,B,,154.90,,
+Mike Womelsdorf,3,M,99.79,Master Men 40-44,B,,129.95,,
+Steve Brown,1,M,124.74,Master 45-49,B,,197.43,,
+Julia Santana,1,F,67.13,Open Women,D,,,124.96,
+Leilani Wyatt,1,F,74.84,Police/Fire Women,D,,,92.42,
+Liborio Vargas,1,M,109.77,Open Men,D,,,249.93,
+Zach Passman,1,M,124.74,Open Men,D,,,304.93,
+Ken Scott,1,M,124.74,Master 40-44,D,,,259.91,
+Steve Brown,1,M,124.74,Master 45-49,D,,,249.93,
+Kent Bush,1,M,109.77,Master 50-54,D,,,284.97,

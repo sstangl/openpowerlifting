@@ -1,31 +1,31 @@
-Name,Place,Sex,Weightclass,Event,Division,SquatLBS,Squat4LBS,BenchLBS,Bench4LBS,DeadliftLBS,Deadlift4LBS,TotalLBS
-Matthew Prinster,1,M,123,BD,Special Olympian,,,137.75,,242.5,,380.25
-Donnie Tucker,1,M,165,BD,Special Olympian,,,137.75,,264.5,,402.25
-David Hutchinson,1,M,242,BD,Special Olympian,,,132.25,,264.5,,396.75
-Kevin Ezell,1,M,308,BD,Special Olympian,,,181.75,,281,,462.75
-Priscilla Sanchez,1,F,148,SBD,Junior Women 16-17,225.75,,148.75,,248,,622.5
-Danyelle Gonzales,DQ,F,165,SBD,Junior Women 16-17,94,,,,,,
-Renee Amour,1,F,165,SBD,Junior Women 20-23,288.75,,176.25,,314,,779.25
-John Garcia,1,M,123,SBD,Junior Men 14-15,121.25,137.75,154.25,165.25,187.25,,462.75
-Ryan Decker,1,M,198,SBD,Junior Men 14-15,341.5,,242.5,,363.75,,947.75
-Adam Demnowicz,1,M,220,SBD,Junior Men 14-15,253.5,,154.25,,347,,754.75
-Vito Console,2,M,220,SBD,Junior Men 14-15,198.25,,220.25,231.25,270,,688.5
-Bryan Wheeler,1,M,181,SBD,Junior Men 16-17,336,,231.25,,380.25,,947.5
-Ruben Ramirez,DQ,M,181,SBD,Junior Men 16-17,181.75,,242.5,,,,
-Josue Flores,1,M,220,SBD,Junior Men 16-17,192.75,,220.25,,303,,716
-Ozzie Burgos,1,M,242,SBD,Junior Men 16-17,225.75,,270,,358,,853.75
-Raul Aguilera,2,M,242,SBD,Junior Men 16-17,143.25,,248,,319.5,,710.75
-Anthony Flores,1,M,275,SBD,Junior Men 16-17,330.5,,319.5,,429,,1079
-Francisco Anguiano,2,M,275,SBD,Junior Men 16-17,275.5,,303,,407,,985.5
-Letroy Higgins,1,M,220,SBD,Junior Men 18-19,540,556.5,374.75,380.25,540,562,1454.75
-Myron Hurd,1,M,242,SBD,Junior Men 18-19,330.5,,275.5,,457.25,479.5,1063.25
-Kevin Westbrook,1,M,242,SBD,Junior Men 20-23,402.25,,319.5,,341.5,,1063.25
-Renee Amour,1,F,165,SBD,Novice Women,288.75,,176.25,,314,,779.25
-Lisa Baldridge,1,F,181,SBD,Novice Women,209.25,,94,,231.25,,534.5
-Shane Shaff,1,M,165,SBD,Novice Men,325,,231.25,,363.75,,920
-Wes Jensen,2,M,165,SBD,Novice Men,225.75,,148.75,,292,,666.5
-Edwin Hill,1,M,181,SBD,Novice Men,181.75,,281,,292,,754.75
-Mike Gray,1,M,198,SBD,Novice Men,440.75,,330.5,,462.75,,1234
-Jeff Hayes,DQ,M,242,SBD,Novice Men,485,,,,,,
-Brandon Cope,1,M,275,SBD,Novice Men,451.75,,325,,429,,1205.75
-Brad King,1,M,220,SBD,Open Men,573,,374.75,,639.25,,1587
+Name,Place,Sex,WeightClassKg,Event,Division,BestSquatKg,Squat4LBS,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4LBS,TotalKg
+Matthew Prinster,1,M,55.79,BD,Special Olympian,,,62.48,,110.00,,172.48
+Donnie Tucker,1,M,74.84,BD,Special Olympian,,,62.48,,119.98,,182.46
+David Hutchinson,1,M,109.77,BD,Special Olympian,,,59.99,,119.98,,179.96
+Kevin Ezell,1,M,139.71,BD,Special Olympian,,,82.44,,127.46,,209.90
+Priscilla Sanchez,1,F,67.13,SBD,Junior Women 16-17,102.40,,67.47,,112.49,,282.36
+Danyelle Gonzales,DQ,F,74.84,SBD,Junior Women 16-17,42.64,,,,,,
+Renee Amour,1,F,74.84,SBD,Junior Women 20-23,130.97,,79.95,,142.43,,353.46
+John Garcia,1,M,55.79,SBD,Junior Men 14-15,55.00,137.75,69.97,74.96,84.94,,209.90
+Ryan Decker,1,M,89.81,SBD,Junior Men 14-15,154.90,,110.00,,164.99,,429.89
+Adam Demnowicz,1,M,99.79,SBD,Junior Men 14-15,114.99,,69.97,,157.40,,342.35
+Vito Console,2,M,99.79,SBD,Junior Men 14-15,89.92,,99.90,104.89,122.47,,312.30
+Bryan Wheeler,1,M,82.10,SBD,Junior Men 16-17,152.41,,104.89,,172.48,,429.78
+Ruben Ramirez,DQ,M,82.10,SBD,Junior Men 16-17,82.44,,110.00,,,,
+Josue Flores,1,M,99.79,SBD,Junior Men 16-17,87.43,,99.90,,137.44,,324.77
+Ozzie Burgos,1,M,109.77,SBD,Junior Men 16-17,102.40,,122.47,,162.39,,387.25
+Raul Aguilera,2,M,109.77,SBD,Junior Men 16-17,64.98,,112.49,,144.92,,322.39
+Anthony Flores,1,M,124.74,SBD,Junior Men 16-17,149.91,,144.92,,194.59,,489.43
+Francisco Anguiano,2,M,124.74,SBD,Junior Men 16-17,124.96,,137.44,,184.61,,447.02
+Letroy Higgins,1,M,99.79,SBD,Junior Men 18-19,244.94,556.5,169.98,172.48,244.94,562,659.86
+Myron Hurd,1,M,109.77,SBD,Junior Men 18-19,149.91,,124.96,,207.41,479.5,482.28
+Kevin Westbrook,1,M,109.77,SBD,Junior Men 20-23,182.46,,144.92,,154.90,,482.28
+Renee Amour,1,F,74.84,SBD,Novice Women,130.97,,79.95,,142.43,,353.46
+Lisa Baldridge,1,F,82.10,SBD,Novice Women,94.91,,42.64,,104.89,,242.45
+Shane Shaff,1,M,74.84,SBD,Novice Men,147.42,,104.89,,164.99,,417.30
+Wes Jensen,2,M,74.84,SBD,Novice Men,102.40,,67.47,,132.45,,302.32
+Edwin Hill,1,M,82.10,SBD,Novice Men,82.44,,127.46,,132.45,,342.35
+Mike Gray,1,M,89.81,SBD,Novice Men,199.92,,149.91,,209.90,,559.73
+Jeff Hayes,DQ,M,109.77,SBD,Novice Men,219.99,,,,,,
+Brandon Cope,1,M,124.74,SBD,Novice Men,204.91,,147.42,,194.59,,546.92
+Brad King,1,M,99.79,SBD,Open Men,259.91,,169.98,,289.96,,719.85

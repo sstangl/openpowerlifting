@@ -1,31 +1,31 @@
-Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,SquatLBS,BenchLBS,Bench4LBS,DeadliftLBS,TotalLBS
-Rob Buxbaum,1,198 Open Men Raw,M,Raw,WA,198,190,24,505,305,,580,1390
-Matt Seath,1,220 Open Men Raw,M,Raw,WA,220,204,24,440,340,,600,1380
-Michael Horn,2,220 Open Men Raw,M,Raw,WA,220,210,30,385,255,,500,1140
-Joshua Lilly,3,220 Open Men Raw,M,Raw,WA,220,206,24,345,300,,405,1050
-Chad Anderson,1,242 Master Men 40-44 Raw,M,Raw,MT,242,232.5,41,475,350,,535,1360
-Jefferey Seath,1,275 Open Men Raw,M,Raw,WA,275,265,28,605,455,,780,1840
-Blake Fleming,2,275 Open Men Raw,M,Raw,WA,275,250.5,34,320,300,,440,1060
-Ashley Condray,1,148 Open Women Classic Raw,F,Wraps,WA,148,137,24,290,170,,385,845
-Kelly Keophilavanh,1,181 Junior Women 20-23 Classic Raw,F,Wraps,WA,181,180,20,285,115,,315,715
-James Fuller,1,165 Open Men Classic Raw,M,Wraps,WA,165,164,27,435,330,,405,1170
-Jesse Stone,DQ,198 Junior Men 20-23 Classic Raw,M,Wraps,WA,198,195,21,-400,240,,415,O
-Matt Moore,1,198 Open Men Classic Raw,M,Wraps,WA,198,198,28,590,400,,640,1630
-Ricardo Dailey,1,198 Master Men 55-59 Classic Raw,M,Wraps,OR,198,182,57,250,155,,365,770
-Josh Spaeth,1,275 Open Men Classic Raw,M,Wraps,WA,275,263,30,735,425,,665,1825
-Daniel Hollibaugh,1,275 Submaster Men 35-39 Classic Raw,M,Wraps,WA,275,273,38,455,335,,500,1290
-Adam Thomas,1,181 Open Men Raw,M,Raw,WA,181,175,28,,295,,,295
-Jerad Weaver,1,220 Junior Men 20-23 Raw,M,Raw,WA,220,211.5,20,,335,,,335
-Matt Phelps,1,242 Open Men Raw,M,Raw,ID,242,235,29,,530,,,530
-Mike Clark,2,242 Open Men Raw,M,Raw,WA,242,241,34,,365,,,365
-Ed Levesque,1,242 Master Men 45-49 Raw,M,Raw,WA,242,233,45,,335,,,335
-Justin Shumway,1,275 Open Men Raw,M,Raw,OR,275,248,35,,350,,,350
-James Scott O'Neal,1,308 Junior Men 18-19 Raw,M,Raw,WA,308,296,18,,295,305,,295
-Lani Powell,1,165 Open Women Single Ply,F,Single-ply,WA,165,152,53,,170,175,,170
-Lani Powell,1,165 Master Women 50-54 Single Ply,F,Single-ply,WA,165,152,53,,170,175,,170
-Michael Evans,1,181 Junior Men 18-19 Single Ply,M,Single-ply,WA,181,174,19,,265,275,,265
-Alonzo Belen,1,198 Open Men Single Ply,M,Single-ply,WA,198,192,49,,400,,,400
-Alonzo Belen,1,198 Master Men 45-49 Single Ply,M,Single-ply,WA,198,192,49,,400,,,400
-Bill Splawn,1,242 Master Men 40-44 Single Ply,M,Single-ply,WA,242,239,42,,375,,,375
-Mike Hernandez,1,165 Open Men Raw,M,Raw,WA,165,164,27,,,,560,560
-Adam Thomas,1,181 Open Men Raw,M,Raw,WA,181,175,28,,,,405,405
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,Bench4Kg,BestDeadliftKg,TotalLBS
+Rob Buxbaum,1,198 Open Men Raw,M,Raw,WA,89.81,86.18,24,229.06,138.35,,263.08,1390
+Matt Seath,1,220 Open Men Raw,M,Raw,WA,99.79,92.53,24,199.58,154.22,,272.16,1380
+Michael Horn,2,220 Open Men Raw,M,Raw,WA,99.79,95.25,30,174.63,115.67,,226.80,1140
+Joshua Lilly,3,220 Open Men Raw,M,Raw,WA,99.79,93.44,24,156.49,136.08,,183.70,1050
+Chad Anderson,1,242 Master Men 40-44 Raw,M,Raw,MT,109.77,105.46,41,215.46,158.76,,242.67,1360
+Jefferey Seath,1,275 Open Men Raw,M,Raw,WA,124.74,120.20,28,274.42,206.38,,353.80,1840
+Blake Fleming,2,275 Open Men Raw,M,Raw,WA,124.74,113.62,34,145.15,136.08,,199.58,1060
+Ashley Condray,1,148 Open Women Classic Raw,F,Wraps,WA,67.13,62.14,24,131.54,77.11,,174.63,845
+Kelly Keophilavanh,1,181 Junior Women 20-23 Classic Raw,F,Wraps,WA,82.10,81.65,20,129.27,52.16,,142.88,715
+James Fuller,1,165 Open Men Classic Raw,M,Wraps,WA,74.84,74.39,27,197.31,149.69,,183.70,1170
+Jesse Stone,DQ,198 Junior Men 20-23 Classic Raw,M,Wraps,WA,89.81,88.45,21,-181.44,108.86,,188.24,O
+Matt Moore,1,198 Open Men Classic Raw,M,Wraps,WA,89.81,89.81,28,267.62,181.44,,290.30,1630
+Ricardo Dailey,1,198 Master Men 55-59 Classic Raw,M,Wraps,OR,89.81,82.55,57,113.40,70.31,,165.56,770
+Josh Spaeth,1,275 Open Men Classic Raw,M,Wraps,WA,124.74,119.29,30,333.39,192.78,,301.64,1825
+Daniel Hollibaugh,1,275 Submaster Men 35-39 Classic Raw,M,Wraps,WA,124.74,123.83,38,206.38,151.95,,226.80,1290
+Adam Thomas,1,181 Open Men Raw,M,Raw,WA,82.10,79.38,28,,133.81,,,295
+Jerad Weaver,1,220 Junior Men 20-23 Raw,M,Raw,WA,99.79,95.93,20,,151.95,,,335
+Matt Phelps,1,242 Open Men Raw,M,Raw,ID,109.77,106.59,29,,240.40,,,530
+Mike Clark,2,242 Open Men Raw,M,Raw,WA,109.77,109.32,34,,165.56,,,365
+Ed Levesque,1,242 Master Men 45-49 Raw,M,Raw,WA,109.77,105.69,45,,151.95,,,335
+Justin Shumway,1,275 Open Men Raw,M,Raw,OR,124.74,112.49,35,,158.76,,,350
+James Scott O'Neal,1,308 Junior Men 18-19 Raw,M,Raw,WA,139.71,134.26,18,,133.81,138.35,,295
+Lani Powell,1,165 Open Women Single Ply,F,Single-ply,WA,74.84,68.95,53,,77.11,79.38,,170
+Lani Powell,1,165 Master Women 50-54 Single Ply,F,Single-ply,WA,74.84,68.95,53,,77.11,79.38,,170
+Michael Evans,1,181 Junior Men 18-19 Single Ply,M,Single-ply,WA,82.10,78.93,19,,120.20,124.74,,265
+Alonzo Belen,1,198 Open Men Single Ply,M,Single-ply,WA,89.81,87.09,49,,181.44,,,400
+Alonzo Belen,1,198 Master Men 45-49 Single Ply,M,Single-ply,WA,89.81,87.09,49,,181.44,,,400
+Bill Splawn,1,242 Master Men 40-44 Single Ply,M,Single-ply,WA,109.77,108.41,42,,170.10,,,375
+Mike Hernandez,1,165 Open Men Raw,M,Raw,WA,74.84,74.39,27,,,,254.01,560
+Adam Thomas,1,181 Open Men Raw,M,Raw,WA,82.10,79.38,28,,,,183.70,405

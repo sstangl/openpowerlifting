@@ -1,29 +1,29 @@
-Name,Place,Division,Sex,Equipment,STATE,Weight Class,Bodyweight,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks
-Jenny Yoon,1,165 Teen 16-17 Womens Powerlifting Classic RAW,F,Wraps,MO,165,165.2,16,77.5,45,115,237.5,255.268
-Carrie Gisslinger,1,165 Open Womens Powerlifting Classic RAW,F,Wraps,MO,165,163.4,36,162.5,80,172.5,415,405.427
-Sheena Hodges,2,165 Open Womens Powerlifting Classic RAW,F,Wraps,MO,165,158,31,105,70,127.5,302.5,296.163
-Kate Walker,1,165 Master 65-69 Womens Powerlifting Classic RAW,F,Wraps,MO,165,156,65,80,47.5,107.5,235,343.454
-Cassandra Johnson,1,181 Junior 20-23 Womens Powerlifting Classic RAW,F,Wraps,MO,181,175.4,23,105,50,117.5,272.5,250.109
-Bella Ordaz,1,181 Open Womens Powerlifting Classic RAW,F,Wraps,MO,181,177,26,87.5,52.5,110,250,228.299
-Jacob Hildenbrandt,1,148 Teen 13-15 Mens Powerlifting Classic RAW,M,Wraps,MO,148,148.7,15,125,107.5,167.5,400,364.136
-Frankie Murrieta,1,148 Open Mens Powerlifting Classic RAW,M,Wraps,MO,148,146.2,33,172.5,132.5,210,515,402.797
-David Coleman,1,181 Teen 13-15 Mens Powerlifting Classic RAW,M,Wraps,AR,181,179,15,127.5,57.5,152.5,337.5,269.388
-Jon Gerhold,1,181 Open Mens Powerlifting Classic RAW,M,Wraps,MO,181,181,28,235,177.5,245,657.5,441.749
-Aldus Cruz,2,181 Open Mens Powerlifting Classic RAW,M,Wraps,MO,181,180.8,34,205,135,192.5,532.5,358.006
-Michael Bellinger,1,198 Teen 18-19 Mens Powerlifting Classic RAW,M,Wraps,MO,198,190.2,19,147.5,85,152.5,385,261.411
-Chris Lukefahr,1,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,198,194.2,27,227.5,172.5,260,660,426.067
-Cotton Villar,2,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,198,197.4,28,227.5,142.5,195,565,361.639
-Rob Bradford,DQ,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,198,197.6,24,237.5,-177.5,,,
-Chase Willis,1,220 Teen 18-19 Mens Powerlifting Classic RAW,M,Wraps,MO,220,214.2,19,255,142.5,260,657.5,421.149
-Mark Olsen,1,220 Open Mens Powerlifting Classic RAW,M,Wraps,KS,220,218.4,27,227.5,152.5,250,630,384.869
-Kenneth Coleman,1,220 Submaster 35-39 Mens Powerlifting Classic RAW,M,Wraps,AR,220,218.2,37,275,212.5,320,807.5,508.295
-Ray Clayton,1,275 Open Mens Powerlifting Classic RAW,M,Wraps,MO,275,255.6,30,200,142.5,250,592.5,343.536
-Bill Duncan,1,SHW Master 55-59 Mens Powerlifting Classic RAW,M,Wraps,MO,SHW,407.6,55,220,135,205,560,367.659
-Landon Cross,1,220 Open Mens Powerlifting Single Ply,M,Single-ply,MO,220,218.6,30,267.5,185,102.5,555,338.925
-Jim Bell,1,242 Master 55-59 Mens Powerlifting Single Ply,M,Single-ply,MO,242,233,59,250,125,225,600,470.4
-Rodney Wood,1,220 Master Benchpress Single Ply Men,M,Single-ply,MO,220,219.6,47,,237.5,,237.5,214.2
-Holly Angle,1,148 Master 40-44 Bench Press RAW Women,F,Raw,MO,148,140.2,43,,52.5,,52.5,43.847
-Jon Gerhold,1,181 Open Bench Press RAW Men,M,Raw,MO,181,181,28,,177.5,,177.5,119.256
-Rob Bardford,DQ,198 Open Bench Press RAW Men,M,Raw,MO,198,197.6,25,,-177.5,,,
-David Beversdorf,1,SHW Master 45-49 Bench Press RAW Men,M,Raw,MO,SHW,313.2,49,,192.5,,192.5,119.467
-Holly Angle,1,148 Master 40-44 Deadlift Women RAW,F,Raw,MO,148,140.2,43,,,120,120,100.221
+Name,Place,Division,Sex,Equipment,STATE,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks
+Jenny Yoon,1,165 Teen 16-17 Womens Powerlifting Classic RAW,F,Wraps,MO,74.84,74.93,16,77.5,45,115,237.5,255.268
+Carrie Gisslinger,1,165 Open Womens Powerlifting Classic RAW,F,Wraps,MO,74.84,74.12,36,162.5,80,172.5,415,405.427
+Sheena Hodges,2,165 Open Womens Powerlifting Classic RAW,F,Wraps,MO,74.84,71.67,31,105,70,127.5,302.5,296.163
+Kate Walker,1,165 Master 65-69 Womens Powerlifting Classic RAW,F,Wraps,MO,74.84,70.76,65,80,47.5,107.5,235,343.454
+Cassandra Johnson,1,181 Junior 20-23 Womens Powerlifting Classic RAW,F,Wraps,MO,82.10,79.56,23,105,50,117.5,272.5,250.109
+Bella Ordaz,1,181 Open Womens Powerlifting Classic RAW,F,Wraps,MO,82.10,80.29,26,87.5,52.5,110,250,228.299
+Jacob Hildenbrandt,1,148 Teen 13-15 Mens Powerlifting Classic RAW,M,Wraps,MO,67.13,67.45,15,125,107.5,167.5,400,364.136
+Frankie Murrieta,1,148 Open Mens Powerlifting Classic RAW,M,Wraps,MO,67.13,66.32,33,172.5,132.5,210,515,402.797
+David Coleman,1,181 Teen 13-15 Mens Powerlifting Classic RAW,M,Wraps,AR,82.10,81.19,15,127.5,57.5,152.5,337.5,269.388
+Jon Gerhold,1,181 Open Mens Powerlifting Classic RAW,M,Wraps,MO,82.10,82.10,28,235,177.5,245,657.5,441.749
+Aldus Cruz,2,181 Open Mens Powerlifting Classic RAW,M,Wraps,MO,82.10,82.01,34,205,135,192.5,532.5,358.006
+Michael Bellinger,1,198 Teen 18-19 Mens Powerlifting Classic RAW,M,Wraps,MO,89.81,86.27,19,147.5,85,152.5,385,261.411
+Chris Lukefahr,1,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,89.81,88.09,27,227.5,172.5,260,660,426.067
+Cotton Villar,2,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,89.81,89.54,28,227.5,142.5,195,565,361.639
+Rob Bradford,DQ,198 Open Mens Powerlifting Classic RAW,M,Wraps,MO,89.81,89.63,24,237.5,-177.5,,,
+Chase Willis,1,220 Teen 18-19 Mens Powerlifting Classic RAW,M,Wraps,MO,99.79,97.16,19,255,142.5,260,657.5,421.149
+Mark Olsen,1,220 Open Mens Powerlifting Classic RAW,M,Wraps,KS,99.79,99.06,27,227.5,152.5,250,630,384.869
+Kenneth Coleman,1,220 Submaster 35-39 Mens Powerlifting Classic RAW,M,Wraps,AR,99.79,98.97,37,275,212.5,320,807.5,508.295
+Ray Clayton,1,275 Open Mens Powerlifting Classic RAW,M,Wraps,MO,124.74,115.94,30,200,142.5,250,592.5,343.536
+Bill Duncan,1,SHW Master 55-59 Mens Powerlifting Classic RAW,M,Wraps,MO,139.71+,184.88,55,220,135,205,560,367.659
+Landon Cross,1,220 Open Mens Powerlifting Single Ply,M,Single-ply,MO,99.79,99.16,30,267.5,185,102.5,555,338.925
+Jim Bell,1,242 Master 55-59 Mens Powerlifting Single Ply,M,Single-ply,MO,109.77,105.69,59,250,125,225,600,470.4
+Rodney Wood,1,220 Master Benchpress Single Ply Men,M,Single-ply,MO,99.79,99.61,47,,237.5,,237.5,214.2
+Holly Angle,1,148 Master 40-44 Bench Press RAW Women,F,Raw,MO,67.13,63.59,43,,52.5,,52.5,43.847
+Jon Gerhold,1,181 Open Bench Press RAW Men,M,Raw,MO,82.10,82.10,28,,177.5,,177.5,119.256
+Rob Bardford,DQ,198 Open Bench Press RAW Men,M,Raw,MO,89.81,89.63,25,,-177.5,,,
+David Beversdorf,1,SHW Master 45-49 Bench Press RAW Men,M,Raw,MO,139.71+,142.07,49,,192.5,,192.5,119.467
+Holly Angle,1,148 Master 40-44 Deadlift Women RAW,F,Raw,MO,67.13,63.59,43,,,120,120,100.221

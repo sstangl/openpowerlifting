@@ -1,29 +1,29 @@
-Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,Squat4Kg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
-Danielle Durante,1,123 Open Women Raw,F,Raw,CA,123,122.40,30,105.00,,57.50,115.00,,277.50,328.718
-Renee Watts,1,148 Open Women Raw,F,Raw,OR,148,132.90,44,102.50,,62.50,122.50,,287.50,319.364
-Renee Watts,1,148 Master Women 40-44 Raw,F,Raw,OR,148,132.90,44,102.50,,62.50,122.50,,287.50,333.097
-Nicholas Smith,DQ,165 Junior Men 16-17 Raw,M,Raw,OR,165,157.60,17,-142.50,,92.50,162.50,,,
-Eric Radcliffe,1,198 Junior Men 18-19 Raw,M,Raw,OR,198,188.20,18,182.50,,102.50,182.50,,467.50,325.446
-Sean McGillivray,1,165 Open Men Raw,M,Raw,OR,165,163.00,29,142.50,,100.00,205.00,,447.50,322.090
-Greg Larson,1,198 Open Men Raw,M,Raw,CA,198,198.20,27,220.00,,132.50,255.00,,607.50,388.038
-Jeffrey Huet,1,220 Open Men Raw,M,Raw,OR,220,208.80,34,220.00,,147.50,260.00,,627.50,390.863
-Becky Price,1,132 Master Women 45-49 Classic Raw,F,Wraps,OR,132,131.60,49,122.50,,82.50,147.50,,352.50,439.148
-Joseph McMahan,1,165 Master Men 50-54 Classic Raw,M,Wraps,CA,165,151.80,53,112.50,,115.00,125.00,,352.50,316.772
-Matt Gaechter,1,198 Open Men Classic Raw,M,Wraps,OR,198,197.20,35,272.50,,170.00,282.50,,725.00,464.291
-Matt Gaechter,1,198 Submaster Men 35-39 Classic Raw,M,Wraps,OR,198,197.20,35,272.50,,170.00,282.50,,725.00,468.934
-Tyler Carpenter,1,220 Junior Men 18-19 Classic Raw,M,Wraps,OR,220,199.20,19,197.50,,115.00,230.00,,542.50,359.462
-Kirk Sabalka,1,220 Junior Men 20-23 Classic Raw,M,Wraps,OR,220,218.60,22,250.00,,165.00,275.00,,690.00,425.580
-Nick Heppner,1,275 Open Men Classic Raw,M,Wraps,OR,275,273.40,28,332.50,,212.50,362.50,,907.50,517.978
-Travis Osborne,1,275 Submaster Men 35-39 Classic Raw,M,Wraps,OR,275,255.20,35,265.00,275,205.00,275.00,285,745.00,436.454
-Stetson Kinnison,1,242 Junior Men 16-17 Single Ply,M,Single-ply,OR,242,236.20,17,200.00,,142.50,205.00,,547.50,350.911
-Ron Hiebert,1,242 Open Men Single Ply,M,Single-ply,WA,242,235.40,45,265.00,,120.00,225.00,,610.00,362.418
-Delbert Shay,2,242 Open Men Single Ply,M,Single-ply,OR,242,238.20,51,227.50,,152.50,207.50,,587.50,347.695
-Ron Hiebert,1,242 Master Men 45-49 Single Ply,M,Single-ply,WA,242,235.40,45,265.00,,120.00,225.00,,610.00,382.351
-Delbert Shay,1,242 Master Men 50-54 Single Ply,M,Single-ply,OR,242,238.20,51,227.50,,152.50,207.50,,587.50,398.806
-Sharron Quackenbush,1,148 Master Women 65-69 Raw,F,Raw,OR,148,147.80,66,,,32.50,,,32.50,50.366
-Nicholas Smith,1,165 Junior Men 16-17 Raw,M,Raw,OR,165,157.60,17,,,92.50,,,92.50,73.686
-Robert Heriford,1,198 Open Men Raw,M,Raw,OR,198,188.60,68,,,115.00,,,115.00,75.435
-Robert Heriford,1,198 Master Men 65-69 Raw,M,Raw,OR,198,188.60,68,,,115.00,,,115.00,118.885
-Justin Shumway,1,275 Open Men Raw,M,Raw,OR,275,243.60,35,,,150.00,,,150.00,88.153
-Nicholas Smith,1,165 Junior Men 16-17 Raw,M,Raw,OR,165,157.60,17,,,,162.50,,162.50,129.449
-Zack Heppner,1,220 Junior Men 20-23 Raw,M,Raw,OR,220,219.40,23,,,,280.00,,280.00,170.735
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,Squat4Kg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
+Danielle Durante,1,123 Open Women Raw,F,Raw,CA,55.79,55.52,30,105.00,,57.50,115.00,,277.50,328.718
+Renee Watts,1,148 Open Women Raw,F,Raw,OR,67.13,60.28,44,102.50,,62.50,122.50,,287.50,319.364
+Renee Watts,1,148 Master Women 40-44 Raw,F,Raw,OR,67.13,60.28,44,102.50,,62.50,122.50,,287.50,333.097
+Nicholas Smith,DQ,165 Junior Men 16-17 Raw,M,Raw,OR,74.84,71.49,17,-142.50,,92.50,162.50,,,
+Eric Radcliffe,1,198 Junior Men 18-19 Raw,M,Raw,OR,89.81,85.37,18,182.50,,102.50,182.50,,467.50,325.446
+Sean McGillivray,1,165 Open Men Raw,M,Raw,OR,74.84,73.94,29,142.50,,100.00,205.00,,447.50,322.090
+Greg Larson,1,198 Open Men Raw,M,Raw,CA,89.81,89.90,27,220.00,,132.50,255.00,,607.50,388.038
+Jeffrey Huet,1,220 Open Men Raw,M,Raw,OR,99.79,94.71,34,220.00,,147.50,260.00,,627.50,390.863
+Becky Price,1,132 Master Women 45-49 Classic Raw,F,Wraps,OR,59.87,59.69,49,122.50,,82.50,147.50,,352.50,439.148
+Joseph McMahan,1,165 Master Men 50-54 Classic Raw,M,Wraps,CA,74.84,68.86,53,112.50,,115.00,125.00,,352.50,316.772
+Matt Gaechter,1,198 Open Men Classic Raw,M,Wraps,OR,89.81,89.45,35,272.50,,170.00,282.50,,725.00,464.291
+Matt Gaechter,1,198 Submaster Men 35-39 Classic Raw,M,Wraps,OR,89.81,89.45,35,272.50,,170.00,282.50,,725.00,468.934
+Tyler Carpenter,1,220 Junior Men 18-19 Classic Raw,M,Wraps,OR,99.79,90.36,19,197.50,,115.00,230.00,,542.50,359.462
+Kirk Sabalka,1,220 Junior Men 20-23 Classic Raw,M,Wraps,OR,99.79,99.16,22,250.00,,165.00,275.00,,690.00,425.580
+Nick Heppner,1,275 Open Men Classic Raw,M,Wraps,OR,124.74,124.01,28,332.50,,212.50,362.50,,907.50,517.978
+Travis Osborne,1,275 Submaster Men 35-39 Classic Raw,M,Wraps,OR,124.74,115.76,35,265.00,275,205.00,275.00,285,745.00,436.454
+Stetson Kinnison,1,242 Junior Men 16-17 Single Ply,M,Single-ply,OR,109.77,107.14,17,200.00,,142.50,205.00,,547.50,350.911
+Ron Hiebert,1,242 Open Men Single Ply,M,Single-ply,WA,109.77,106.78,45,265.00,,120.00,225.00,,610.00,362.418
+Delbert Shay,2,242 Open Men Single Ply,M,Single-ply,OR,109.77,108.05,51,227.50,,152.50,207.50,,587.50,347.695
+Ron Hiebert,1,242 Master Men 45-49 Single Ply,M,Single-ply,WA,109.77,106.78,45,265.00,,120.00,225.00,,610.00,382.351
+Delbert Shay,1,242 Master Men 50-54 Single Ply,M,Single-ply,OR,109.77,108.05,51,227.50,,152.50,207.50,,587.50,398.806
+Sharron Quackenbush,1,148 Master Women 65-69 Raw,F,Raw,OR,67.13,67.04,66,,,32.50,,,32.50,50.366
+Nicholas Smith,1,165 Junior Men 16-17 Raw,M,Raw,OR,74.84,71.49,17,,,92.50,,,92.50,73.686
+Robert Heriford,1,198 Open Men Raw,M,Raw,OR,89.81,85.55,68,,,115.00,,,115.00,75.435
+Robert Heriford,1,198 Master Men 65-69 Raw,M,Raw,OR,89.81,85.55,68,,,115.00,,,115.00,118.885
+Justin Shumway,1,275 Open Men Raw,M,Raw,OR,124.74,110.50,35,,,150.00,,,150.00,88.153
+Nicholas Smith,1,165 Junior Men 16-17 Raw,M,Raw,OR,74.84,71.49,17,,,,162.50,,162.50,129.449
+Zack Heppner,1,220 Junior Men 20-23 Raw,M,Raw,OR,99.79,99.52,23,,,,280.00,,280.00,170.735

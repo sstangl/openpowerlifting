@@ -1,29 +1,29 @@
-Name,Place,Division,Sex,Equipment,Weight Class,Bodyweight,Age,Squatkg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,SquatLBS
-Lindsay Craft,1,123 Open Women-Raw,F,Raw,123,118.50,24,120.00,80.00,145.00,345.00,419.163,264.55
-Cathy Cox,1,165 Open Women Raw,F,Raw,165,157.00,36,105.00,55.00,155.00,315.00,309.720,231.48
-Miguel Millan,1,148 Junior Men 16-17 Raw,M,Raw,148,147.50,16,152.50,102.50,197.50,452.50,397.055,336.20
-Brian Silverman,1,198 Open Men-Raw,M,Raw,198,196.00,25,145.00,140.00,192.50,477.50,306.760,319.67
-Judson Costas,1,198 Master Men 50-54 Raw,M,Raw,198,192.00,53,150.00,115.00,192.50,457.50,351.830,330.69
-Dennis Leusburg,1,242 Open Men-Raw,M,Raw,242,222.00,33,205.00,132.50,200.00,537.50,326.216,451.94
-Richard Ficca,1,308 Open Men-Raw,M,Raw,308,308.00,37,250.00,265.00,295.00,810.00,452.775,551.15
-Richard Ficca,1,308 Submaster Men- Raw,M,Raw,308,308.00,37,250.00,265.00,295.00,810.00,466.358,551.15
-Matthew Cuevas,1,148 Junior Men 18-19 Classic,M,Wraps,148,147.50,18,185.00,137.50,192.50,515.00,423.903,407.85
-Matt Levine,1,198 Open Men-Classic,M,Wraps,198,197.50,24,272.50,165.00,255.00,692.50,443.132,600.75
-Chris Marton,1,220 Junior Men 20-23 Classic,M,Wraps,220,204.00,23,167.50,120.00,182.50,470.00,295.958,369.27
-Juan Padilla Covarrubias,1,148 Junior 13-15 Single Ply,M,Single-ply,148,146.50,14,100.00,80.00,145.00,325.00,312.134,220.46
-Chen Deng,1,181 Junior Men 16-17 Single Ply,M,Single-ply,181,171.00,17,107.50,60.00,147.50,315.00,236.940,236.99
-Charles Pressley,1,198 Master Men 45-49 Single Ply,M,Single-ply,198,192.50,46,190.00,137.50,200.00,527.50,365.403,418.87
-April Shumaker,1,105 Open Women-Single Ply,F,Single-ply,105,104.50,46,,112.50,,112.50,150.373,
-Rocky Pallate,1,198 Master Men 50-54 Raw,M,Raw,198,196.00,50,,150.00,,150.00,108.892,
-David Whitehead,1,220 Master Men 50-54-Raw,M,Raw,220,208.00,50,,127.50,,127.50,89.900,
-Al Laporte,1,242 Open Men Raw,M,Raw,242,232.50,49,,160.00,,160.00,95.463,
-Al Laporte,1,242 Master Men 45-49-Raw,M,Raw,242,232.50,49,,160.00,,160.00,106.250,
-Bridget Kane,1,165 Open Women-Raw,F,Raw,165,159.00,26,,,125.00,125.00,121.868,
-Chuck Falcone,1,181 Master Men 65-69 Raw,M,Raw,181,180.50,66,,,162.50,162.50,165.244,
-Thomas Utts,1,220 Junior Men 20-23 Raw,M,Raw,220,214.50,22,,,210.00,210.00,130.553,
-Glen DelCampo,1,242 Open Men Raw,M,Raw,242,233.50,31,,,255.00,255.00,151.919,
-Mike King,1,242 Open Men Multiply,M,Multi-ply,242,228.50,33,,,282.50,,,
-Carlos Sandigo,1,181 Junior Men 18-19-Raw,M,Raw,181,171.10,18,,97.50,182.50,280.00,206.633,
-Colt McDonough,1,198 Open Men -Raw,M,Raw,198,197.00,25,,142.50,240.00,382.50,245.082,
-Jason Kowaleswki,1,242 Open Men -Raw,M,Raw,242,234.50,23,,165.00,227.50,392.50,233.496,
-Jim Jarboe,1,275 Master Men 70-74-Raw,M,Raw,275,265.50,70,,125.00,180.00,305.00,288.214,
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Squatkg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,BestSquatKg
+Lindsay Craft,1,123 Open Women-Raw,F,Raw,55.79,53.75,24,120.00,80.00,145.00,345.00,419.163,120.00
+Cathy Cox,1,165 Open Women Raw,F,Raw,74.84,71.21,36,105.00,55.00,155.00,315.00,309.720,105.00
+Miguel Millan,1,148 Junior Men 16-17 Raw,M,Raw,67.13,66.90,16,152.50,102.50,197.50,452.50,397.055,152.50
+Brian Silverman,1,198 Open Men-Raw,M,Raw,89.81,88.90,25,145.00,140.00,192.50,477.50,306.760,145.00
+Judson Costas,1,198 Master Men 50-54 Raw,M,Raw,89.81,87.09,53,150.00,115.00,192.50,457.50,351.830,150.00
+Dennis Leusburg,1,242 Open Men-Raw,M,Raw,109.77,100.70,33,205.00,132.50,200.00,537.50,326.216,205.00
+Richard Ficca,1,308 Open Men-Raw,M,Raw,139.71,139.71,37,250.00,265.00,295.00,810.00,452.775,250.00
+Richard Ficca,1,308 Submaster Men- Raw,M,Raw,139.71,139.71,37,250.00,265.00,295.00,810.00,466.358,250.00
+Matthew Cuevas,1,148 Junior Men 18-19 Classic,M,Wraps,67.13,66.90,18,185.00,137.50,192.50,515.00,423.903,185.00
+Matt Levine,1,198 Open Men-Classic,M,Wraps,89.81,89.58,24,272.50,165.00,255.00,692.50,443.132,272.50
+Chris Marton,1,220 Junior Men 20-23 Classic,M,Wraps,99.79,92.53,23,167.50,120.00,182.50,470.00,295.958,167.50
+Juan Padilla Covarrubias,1,148 Junior 13-15 Single Ply,M,Single-ply,67.13,66.45,14,100.00,80.00,145.00,325.00,312.134,100.00
+Chen Deng,1,181 Junior Men 16-17 Single Ply,M,Single-ply,82.10,77.56,17,107.50,60.00,147.50,315.00,236.940,107.50
+Charles Pressley,1,198 Master Men 45-49 Single Ply,M,Single-ply,89.81,87.32,46,190.00,137.50,200.00,527.50,365.403,190.00
+April Shumaker,1,105 Open Women-Single Ply,F,Single-ply,47.63,47.40,46,,112.50,,112.50,150.373,
+Rocky Pallate,1,198 Master Men 50-54 Raw,M,Raw,89.81,88.90,50,,150.00,,150.00,108.892,
+David Whitehead,1,220 Master Men 50-54-Raw,M,Raw,99.79,94.35,50,,127.50,,127.50,89.900,
+Al Laporte,1,242 Open Men Raw,M,Raw,109.77,105.46,49,,160.00,,160.00,95.463,
+Al Laporte,1,242 Master Men 45-49-Raw,M,Raw,109.77,105.46,49,,160.00,,160.00,106.250,
+Bridget Kane,1,165 Open Women-Raw,F,Raw,74.84,72.12,26,,,125.00,125.00,121.868,
+Chuck Falcone,1,181 Master Men 65-69 Raw,M,Raw,82.10,81.87,66,,,162.50,162.50,165.244,
+Thomas Utts,1,220 Junior Men 20-23 Raw,M,Raw,99.79,97.30,22,,,210.00,210.00,130.553,
+Glen DelCampo,1,242 Open Men Raw,M,Raw,109.77,105.91,31,,,255.00,255.00,151.919,
+Mike King,1,242 Open Men Multiply,M,Multi-ply,109.77,103.65,33,,,282.50,,,
+Carlos Sandigo,1,181 Junior Men 18-19-Raw,M,Raw,82.10,77.61,18,,97.50,182.50,280.00,206.633,
+Colt McDonough,1,198 Open Men -Raw,M,Raw,89.81,89.36,25,,142.50,240.00,382.50,245.082,
+Jason Kowaleswki,1,242 Open Men -Raw,M,Raw,109.77,106.37,23,,165.00,227.50,392.50,233.496,
+Jim Jarboe,1,275 Master Men 70-74-Raw,M,Raw,124.74,120.43,70,,125.00,180.00,305.00,288.214,

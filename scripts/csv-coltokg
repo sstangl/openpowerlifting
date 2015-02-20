@@ -43,7 +43,12 @@ except ValueError:
 csv[0][colindex] = newcolumnname
 
 for i in xrange(1, len(csv)):
-    csv[i][colindex] = to_kg(csv[i][colindex])
+    # This doesn't really belong here, but just deal with it man ok?
+    if 'SHW' in csv[i][colindex]:
+        csv[i][colindex] = '308+'
+
+    if csv[i][colindex]:
+        csv[i][colindex] = to_kg(csv[i][colindex])
 
 lines = [','.join(row) + "\n" for row in csv]
 

@@ -1,40 +1,40 @@
-Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks
-Katie Laurens,1,148 Open Women Raw,F,Raw,GA,148,144.6,26,92.5,47.5,105,245,255.321
-Shana White,1,198 Submaster Women 35-39 Raw,F,Raw,GA,198,188.4,35,115,67.5,160,342.5,305.893
-Brandon Joyner,1,148 Open Men Raw,M,Raw,GA,148,145.5,24,145,107.5,167.5,420,329.789
-Joe Destito,1,165 Master Men 50-54 Raw,M,Raw,GA,165,165.3,51,130,97.5,172.5,400,326.985
-Melton Harrell,1,181 Master Men 70-74 Raw,M,Raw,GA,181,179,73,130,90,160,380,451.367
-Mike Bailey,1,198 Junior Men 20-23 Raw,M,Raw,SC,198,186.2,22,195,150,245,590,393.736
-Chris Dunn,1,198 Open Men Raw,M,Raw,GA,198,193.3,29,245,182.5,300,727.5,470.807
-Mike Bailey,2,198 Open Men Raw,M,Raw,SC,198,186.2,22,195,150,245,590,389.838
-Jared Slack,3,198 Open Men Raw,M,Raw,TX,198,192.2,25,205,115,215,535,347.295
-Robert Cochran,4,198 Open Men Raw,M,Raw,GA,198,195.7,30,162.5,112.5,207.5,482.5,310.221
-Cardell Oliver,1,220 Open Men Raw,M,Raw,GA,220,217.5,34,237.5,187.5,295,720,440.598
-Christopher Parker,1,242 Junior Men 20-23 Raw,M,Raw,GA,242,238.9,23,210,167.5,205,582.5,344.411
-Jordan Wong,1,242 Open Men Raw,M,Raw,FL,242,241.4,22,327.5,210,280,817.5,481.772
-Hunter Benn,2,242 Open Men Raw,M,Raw,GA,242,242.2,35,195,167.5,250,612.5,360.592
-Jesse Pierce,3,242 Open Men Raw,M,Raw,GA,242,241.6,32,197.5,150,250,597.5,352.031
-Gary Brewer,4,242 Open Men Raw,M,Raw,GA,242,233,29,165,150,237.5,552.5,329.399
-Hunter Benn,1,242 Submaster Men 35-39 Raw,M,Raw,GA,242,242.2,35,195,167.5,250,612.5,364.198
-Micky McCormick,1,275 Open Men Raw,M,Raw,FL,275,268.7,26,170,137.5,207.5,515,295.044
-Eldon Smith,1,308 Open Men Raw,M,Raw,GA,308,300,49,207.5,177.5,212.5,597.5,335.35
-David Huckleby,1,308 Submaster Men 35-39 Raw,M,Raw,GA,308,281.9,39,197.5,142.5,215,555,330.605
-Eldon Smith,1,308 Master Men 45-49 Raw,M,Raw,GA,308,300,49,207.5,177.5,212.5,597.5,373.244
-Darrell Grizzle,1,308 Master Men 50-54 Raw,M,Raw,GA,308,304,51,117.5,85,150,352.5,226.456
-Yarnell Marks,1,181 Open Men Classic Raw,M,Wraps,MS,181,176.5,35,237.5,155,237.5,630,429.897
-Yarnell Marks,1,181 Submaster Men 35-39 Classic Raw,M,Wraps,MS,181,176.5,35,237.5,155,237.5,630,434.196
-Colin Evans,1,198 Open Men Classic Raw,M,Wraps,GA,198,196.6,25,275,210,265,750,481.058
-Mike Bishop,1,220 Open Men Classic Raw,M,Wraps,TN,220,218.7,39,260,172.5,295,727.5,444.183
-Tony Carlino,2,220 Open Men Classic Raw,M,Wraps,GA,220,215.1,25,265,175,247.5,687.5,422.671
-Mike Bishop,1,220 Submaster Men 35-39 Classic Raw,M,Wraps,TN,220,218.7,39,260,172.5,295,727.5,466.393
-Alex Walker,1,242 Open Men Classic Raw,M,Wraps,GA,242,236.9,24,300,205,300,805,477.267
-Jeremy Stevens,1,308+ Open Men Classic Raw,M,Wraps,TN,308+,320.1,32,252.5,147.5,232.5,632.5,351.573
-Kevin Eubanks,1,198 Master Men 40-44 Single Ply,M,Single-ply,GA,198,195.5,42,257.5,165,250,672.5,441.264
-Ron Fuller,DQ,198 Master Men 50-54 Single Ply,M,Single-ply,GA,198,197.7,53,277.5,-190,,,
-Matt Christie,1,242 Open Men Single Ply,M,Single-ply,GA,242,238.9,31,327.5,252.5,305,885,523.268
-Justin Bethune,1,275 Open Men Single Ply,M,Single-ply,GA,275,264.9,25,307.5,250,305,862.5,495.719
-Tracy Goodwin,1,198+ Master Women 40-44 Raw,F,Raw,GA,198+,281.5,40,,95,,95,75.135
-Anthony Evans,1,220 Open Men Raw,M,Raw,GA,220,211.6,28,,215,,215,133.123
-Eric Jackson,1,220 Master Men 45-49 Raw,M,Raw,GA,220,219.8,46,,147.5,,147.5,95.986
-Clay Goodwin,1,308+ Master Men 40-44 Raw,M,Raw,GA,308+,335.3,42,,110,,110,61.959
-Dustin Taps,1,220 Open Men Raw,M,Raw,GA,220,205,38,,150,250,400,251.292
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks
+Katie Laurens,1,148 Open Women Raw,F,Raw,GA,67.13,65.59,26,92.5,47.5,105,245,255.321
+Shana White,1,198 Submaster Women 35-39 Raw,F,Raw,GA,89.81,85.46,35,115,67.5,160,342.5,305.893
+Brandon Joyner,1,148 Open Men Raw,M,Raw,GA,67.13,66.00,24,145,107.5,167.5,420,329.789
+Joe Destito,1,165 Master Men 50-54 Raw,M,Raw,GA,74.84,74.98,51,130,97.5,172.5,400,326.985
+Melton Harrell,1,181 Master Men 70-74 Raw,M,Raw,GA,82.10,81.19,73,130,90,160,380,451.367
+Mike Bailey,1,198 Junior Men 20-23 Raw,M,Raw,SC,89.81,84.46,22,195,150,245,590,393.736
+Chris Dunn,1,198 Open Men Raw,M,Raw,GA,89.81,87.68,29,245,182.5,300,727.5,470.807
+Mike Bailey,2,198 Open Men Raw,M,Raw,SC,89.81,84.46,22,195,150,245,590,389.838
+Jared Slack,3,198 Open Men Raw,M,Raw,TX,89.81,87.18,25,205,115,215,535,347.295
+Robert Cochran,4,198 Open Men Raw,M,Raw,GA,89.81,88.77,30,162.5,112.5,207.5,482.5,310.221
+Cardell Oliver,1,220 Open Men Raw,M,Raw,GA,99.79,98.66,34,237.5,187.5,295,720,440.598
+Christopher Parker,1,242 Junior Men 20-23 Raw,M,Raw,GA,109.77,108.36,23,210,167.5,205,582.5,344.411
+Jordan Wong,1,242 Open Men Raw,M,Raw,FL,109.77,109.50,22,327.5,210,280,817.5,481.772
+Hunter Benn,2,242 Open Men Raw,M,Raw,GA,109.77,109.86,35,195,167.5,250,612.5,360.592
+Jesse Pierce,3,242 Open Men Raw,M,Raw,GA,109.77,109.59,32,197.5,150,250,597.5,352.031
+Gary Brewer,4,242 Open Men Raw,M,Raw,GA,109.77,105.69,29,165,150,237.5,552.5,329.399
+Hunter Benn,1,242 Submaster Men 35-39 Raw,M,Raw,GA,109.77,109.86,35,195,167.5,250,612.5,364.198
+Micky McCormick,1,275 Open Men Raw,M,Raw,FL,124.74,121.88,26,170,137.5,207.5,515,295.044
+Eldon Smith,1,308 Open Men Raw,M,Raw,GA,139.71,136.08,49,207.5,177.5,212.5,597.5,335.35
+David Huckleby,1,308 Submaster Men 35-39 Raw,M,Raw,GA,139.71,127.87,39,197.5,142.5,215,555,330.605
+Eldon Smith,1,308 Master Men 45-49 Raw,M,Raw,GA,139.71,136.08,49,207.5,177.5,212.5,597.5,373.244
+Darrell Grizzle,1,308 Master Men 50-54 Raw,M,Raw,GA,139.71,137.89,51,117.5,85,150,352.5,226.456
+Yarnell Marks,1,181 Open Men Classic Raw,M,Wraps,MS,82.10,80.06,35,237.5,155,237.5,630,429.897
+Yarnell Marks,1,181 Submaster Men 35-39 Classic Raw,M,Wraps,MS,82.10,80.06,35,237.5,155,237.5,630,434.196
+Colin Evans,1,198 Open Men Classic Raw,M,Wraps,GA,89.81,89.18,25,275,210,265,750,481.058
+Mike Bishop,1,220 Open Men Classic Raw,M,Wraps,TN,99.79,99.20,39,260,172.5,295,727.5,444.183
+Tony Carlino,2,220 Open Men Classic Raw,M,Wraps,GA,99.79,97.57,25,265,175,247.5,687.5,422.671
+Mike Bishop,1,220 Submaster Men 35-39 Classic Raw,M,Wraps,TN,99.79,99.20,39,260,172.5,295,727.5,466.393
+Alex Walker,1,242 Open Men Classic Raw,M,Wraps,GA,109.77,107.46,24,300,205,300,805,477.267
+Jeremy Stevens,1,308+ Open Men Classic Raw,M,Wraps,TN,139.71+,145.19,32,252.5,147.5,232.5,632.5,351.573
+Kevin Eubanks,1,198 Master Men 40-44 Single Ply,M,Single-ply,GA,89.81,88.68,42,257.5,165,250,672.5,441.264
+Ron Fuller,DQ,198 Master Men 50-54 Single Ply,M,Single-ply,GA,89.81,89.68,53,277.5,-190,,,
+Matt Christie,1,242 Open Men Single Ply,M,Single-ply,GA,109.77,108.36,31,327.5,252.5,305,885,523.268
+Justin Bethune,1,275 Open Men Single Ply,M,Single-ply,GA,124.74,120.16,25,307.5,250,305,862.5,495.719
+Tracy Goodwin,1,198+ Master Women 40-44 Raw,F,Raw,GA,89.81+,127.69,40,,95,,95,75.135
+Anthony Evans,1,220 Open Men Raw,M,Raw,GA,99.79,95.98,28,,215,,215,133.123
+Eric Jackson,1,220 Master Men 45-49 Raw,M,Raw,GA,99.79,99.70,46,,147.5,,147.5,95.986
+Clay Goodwin,1,308+ Master Men 40-44 Raw,M,Raw,GA,139.71+,152.09,42,,110,,110,61.959
+Dustin Taps,1,220 Open Men Raw,M,Raw,GA,99.79,92.99,38,,150,250,400,251.292

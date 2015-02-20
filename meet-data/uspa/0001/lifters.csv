@@ -1,35 +1,35 @@
-Name,Place,Sex,Weightclass,Age,Division,SquatLBS,BenchLBS,DeadliftLBS,TotalLBS
-Cindy Bullara,1,F,123,,Women's Open,203.75,121.25,248,573
-Lisa Denison,1,F,148,,Women's Open,314,143.25,347,804.5
-Gretchen Ashton,2,F,148,,Women's Open,225.75,165.25,253.5,644.75
-Judy Payne,1,F,148,47,Women's Masters 40-49,159.5,132.25,236.75,528.5
-John Cano,1,M,148,13,Teen Men 13-16,264.5,143.25,303,710.75
-Chris Balanga,1,M,148,,Men's Open,402.25,336,462.75,1201
-Scott Layman,DQ,M,148,,Men's Open,,,,
-Paul Kelley,1,M,165,,Men's Open,374.75,303,451.75,1129.5
-Bill Cavalier,DQ,M,165,,Men's Open,,,,
-John Dorsten,1,M,181,,Men's Open,567.5,385.75,617.25,1570.5
-Roland Lopez,2,M,181,,Men's Open,308.5,286.5,446.25,1041.25
-Manuel Dinis,1,M,198,,Men's Open,518,303,551,1372
-Jesse Branham,1,M,220,,Men's Open,650.25,391.25,611.75,1653.25
-John Bostick,2,M,220,,Men's Open,501.5,374.75,650.25,1526.5
-Patrick McNeil,3,M,220,,Men's Open,562,407,551,1520
-William Charles,4,M,220,,Men's Open,551,347,518,1416
-Richard Marquez,5,M,220,,Men's Open,352.5,352.5,440.75,1145.75
-Victor Robles,6,M,220,,Men's Open,402.25,303,369.25,1074.5
-Steve Denison,1,M,242,,Men's Open,611.75,429,650.25,1691
-Zach Passman,2,M,242,,Men's Open,518,363.75,573,1454.75
-Junior German,DQ,M,242,,Men's Open,540,,,
-Brad Trujillo,1,M,275,,Men's Open,573,407,556.5,1536.5
-William McCaslin,2,M,275,,Men's Open,523.5,352.5,435.25,1311.25
-Scott Maxwell,DQ,M,275,,Men's Open,62.5,,,
-George Brink,1,M,308,,Men's Open,705.25,369.25,749.5,1824
-Joseph Jano,2,M,308,,Men's Open,633.75,385.75,512.5,1532
-William Anderson,3,M,308,,Men's Open,440.75,303,429,1172.75
-Manuel Rosales,DQ,M,SHW,,Men's Open,600.75,,,
-Brad King,1,M,220,47,Men's Masters 40-49,644.75,391.25,688.75,1724.75
-George Brink,2,M,308,49,Men's Masters 40-49,705.25,369.25,749.5,1824
-Roland Lopez,3,M,181,40,Men's Masters 40-49,308.5,286.5,446.25,1041.25
-Tom Miller,1,M,148,58,Men's Masters 50-59,418.75,209.25,451.75,1079.75
-Jim DeFoor,2,M,220,51,Men's Masters 50-59,529,413.25,562,1504.25
-Bob Evans,3,M,220,53,Men's Masters 50-59,473.75,358,429,1260.75
+Name,Place,Sex,WeightClassKg,Age,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
+Cindy Bullara,1,F,55.79,,Women's Open,92.42,55.00,112.49,259.91
+Lisa Denison,1,F,67.13,,Women's Open,142.43,64.98,157.40,364.92
+Gretchen Ashton,2,F,67.13,,Women's Open,102.40,74.96,114.99,292.45
+Judy Payne,1,F,67.13,47,Women's Masters 40-49,72.35,59.99,107.39,239.72
+John Cano,1,M,67.13,13,Teen Men 13-16,119.98,64.98,137.44,322.39
+Chris Balanga,1,M,67.13,,Men's Open,182.46,152.41,209.90,544.76
+Scott Layman,DQ,M,67.13,,Men's Open,,,,
+Paul Kelley,1,M,74.84,,Men's Open,169.98,137.44,204.91,512.33
+Bill Cavalier,DQ,M,74.84,,Men's Open,,,,
+John Dorsten,1,M,82.10,,Men's Open,257.41,174.97,279.98,712.37
+Roland Lopez,2,M,82.10,,Men's Open,139.93,129.95,202.42,472.30
+Manuel Dinis,1,M,89.81,,Men's Open,234.96,137.44,249.93,622.33
+Jesse Branham,1,M,99.79,,Men's Open,294.95,177.47,277.49,749.90
+John Bostick,2,M,99.79,,Men's Open,227.48,169.98,294.95,692.41
+Patrick McNeil,3,M,99.79,,Men's Open,254.92,184.61,249.93,689.46
+William Charles,4,M,99.79,,Men's Open,249.93,157.40,234.96,642.29
+Richard Marquez,5,M,99.79,,Men's Open,159.89,159.89,199.92,519.70
+Victor Robles,6,M,99.79,,Men's Open,182.46,137.44,167.49,487.39
+Steve Denison,1,M,109.77,,Men's Open,277.49,194.59,294.95,767.02
+Zach Passman,2,M,109.77,,Men's Open,234.96,164.99,259.91,659.86
+Junior German,DQ,M,109.77,,Men's Open,244.94,,,
+Brad Trujillo,1,M,124.74,,Men's Open,259.91,184.61,252.42,696.94
+William McCaslin,2,M,124.74,,Men's Open,237.46,159.89,197.43,594.77
+Scott Maxwell,DQ,M,124.74,,Men's Open,28.35,,,
+George Brink,1,M,139.71,,Men's Open,319.90,167.49,339.97,827.35
+Joseph Jano,2,M,139.71,,Men's Open,287.46,174.97,232.47,694.90
+William Anderson,3,M,139.71,,Men's Open,199.92,137.44,194.59,531.95
+Manuel Rosales,DQ,M,139.71+,,Men's Open,272.50,,,
+Brad King,1,M,99.79,47,Men's Masters 40-49,292.45,177.47,312.41,782.33
+George Brink,2,M,139.71,49,Men's Masters 40-49,319.90,167.49,339.97,827.35
+Roland Lopez,3,M,82.10,40,Men's Masters 40-49,139.93,129.95,202.42,472.30
+Tom Miller,1,M,67.13,58,Men's Masters 50-59,189.94,94.91,204.91,489.77
+Jim DeFoor,2,M,99.79,51,Men's Masters 50-59,239.95,187.45,254.92,682.32
+Bob Evans,3,M,99.79,53,Men's Masters 50-59,214.89,162.39,194.59,571.87

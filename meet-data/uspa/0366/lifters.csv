@@ -1,37 +1,37 @@
-Name,Place,Division,Sex,Equipment,State,Weight Class,Bodyweight,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
-Cielona Boco,1,97 Junior Women 20-23 Raw,F,Raw,NJ,97,94.20,23,100.00,52.50,132.50,137.50,285.00,409.064
-Joanna Randazzo,1,132 Open Women Raw,F,Raw,MD,132,128.20,29,85.00,52.50,120.00,,257.50,294.163
-Sylwia Surowiec,1,181 Open Women Raw,F,Raw,MD,181,172.60,25,97.50,50.00,115.00,,262.50,243.157
-Menachem Pasternak,1,165 Junior Men 20-23 Raw,M,Raw,MD,165,160.60,21,192.50,92.50,200.00,,485.00,359.873
-Michael Lampart,1,181 Junior Men 20-23 Raw,M,Raw,MD,181,179.40,23,200.00,130.00,280.00,,610.00,412.056
-William Bowman,1,198 Junior Men 18-19 Raw,M,Raw,MD,198,193.40,19,220.00,140.00,207.50,,567.50,381.846
-Randy Cohen,1,198 Junior Men 20-23 Raw,M,Raw,MD,198,198.20,21,232.50,140.00,260.00,,632.50,412.086
-Martin Zirkle,2,198 Junior Men 20-23 Raw,M,Raw,MD,198,195.00,23,190.00,92.50,205.00,,487.50,314.025
-Gavin Miskimon,1,220 Junior Men 20-23 Raw,M,Raw,MD,220,217.80,21,180.00,120.00,205.00,,505.00,315.032
-Ahmed Eissa,1,242 Junior Men 20-23 Raw,M,Raw,MD,242,231.00,20,235.00,162.50,260.00,,657.50,404.976
-Adam Burke,1,275 Junior Men 18-19 Raw,M,Raw,MD,275,266.20,19,205.00,170.00,250.00,,625.00,373.166
-Ryan Pollard,1,132 Open Men Raw,M,Raw,MD,132,130.40,28,175.00,107.50,180.00,,462.50,399.669
-Michael Lampart,1,181 Open Men Raw,M,Raw,MD,181,179.40,23,200.00,130.00,280.00,,610.00,412.056
-Patrick Reeves,2,181 Open Men Raw,M,Raw,MD,181,180.00,25,200.00,135.00,235.00,,570.00,384.251
-Michael Shaffer,3,181 Open Men Raw,M,Raw,MD,181,176.80,25,175.00,137.50,255.00,,567.50,386.835
-Joseph Fitzwater,4,181 Open Men Raw,M,Raw,MD,181,171.60,30,187.50,130.00,227.50,,545.00,378.701
-Bradley Michaels,1,220 Open Men Raw,M,Raw,VA,220,211.40,28,220.00,152.50,225.00,,597.50,370.114
-Kyle Miner,1,242 Open Men Raw,M,Raw,MD,242,233.60,25,210.00,160.00,267.50,,637.50,379.741
-Christopher Neville,1,181 Master Men 40-44 Raw,M,Raw,MD,181,176.00,41,172.50,105.00,187.50,,465.00,321.053
-Tim Hadden,1,308 Master Men 40-44 Raw,M,Raw,VA,308,304.60,43,235.00,180.00,267.50,,682.50,393.995
-Abbott Ottinger,1,165 Junior Men 20-23 Raw,M,Raw,MD,165,161.20,21,,115.00,175.00,,290.00,214.602
-Anthony Ray,1,198 Open Men Raw,M,Raw,MD,198,188.40,21,,125.00,182.50,,307.50,201.826
-Erica Isaacs,1,148 Open Women Raw,F,Raw,DE,148,138.60,25,,60.00,,,60.00,64.539
-Ryan Wood,1,181 Junior Men 20-23 Raw,M,Raw,DE,181,175.60,20,,142.50,,,142.50,100.480
-Gustavo Rodriguez,1,132 Open Men Raw,M,Raw,CA,132,130.40,25,,95.00,,,95.00,82.094
-Mike Muskey,1,242 Open Men Raw,M,Raw,MD,242,238.20,46,,175.00,,,175.00,103.569
-Justin Isaacs,1,275 Open Men Raw,M,Raw,DE,275,270.40,25,,182.50,,,182.50,104.410
-Mike Muskey,1,242 Master Men 45-49 Raw,M,Raw,MD,242,238.20,46,,175.00,,,175.00,110.611
-Donald Frost,1,242 Master Men 65-69 Raw,M,Raw,MD,242,229.60,66,,142.50,,,142.50,129.037
-Robert O'Donnell,1,275 Master Men 60-64 Raw,M,Raw,PA,275,251.60,60,,147.50,,,147.50,115.082
-David Capozzoli,1,308 Master Men 55-59 Raw,M,Raw,MD,308,276.20,57,,187.50,,,187.50,135.419
-Nairanjan Singh,1,198 Master Men 65-69 Single Ply,M,Single-ply,MD,198,189.60,68,,117.50,172.50,,290.00,298.913
-Erica Isaacs,1,148 Open Women Raw,F,Raw,DE,148,138.60,25,,,130.00,,130.00,139.836
-Ryan Wood,1,181 Junior Men 20-23 Raw,M,Raw,DE,181,175.60,20,,,232.50,,232.50,163.941
-Gustavo Rodriguez,1,132 Open Men Raw,M,Raw,CA,132,130.40,25,,,145.00,,145.00,125.302
-Justin Isaacs,1,275 Open Men Raw,M,Raw,DE,275,270.40,25,,,272.50,,272.50,155.901
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
+Cielona Boco,1,97 Junior Women 20-23 Raw,F,Raw,NJ,44.00,42.73,23,100.00,52.50,132.50,137.50,285.00,409.064
+Joanna Randazzo,1,132 Open Women Raw,F,Raw,MD,59.87,58.15,29,85.00,52.50,120.00,,257.50,294.163
+Sylwia Surowiec,1,181 Open Women Raw,F,Raw,MD,82.10,78.29,25,97.50,50.00,115.00,,262.50,243.157
+Menachem Pasternak,1,165 Junior Men 20-23 Raw,M,Raw,MD,74.84,72.85,21,192.50,92.50,200.00,,485.00,359.873
+Michael Lampart,1,181 Junior Men 20-23 Raw,M,Raw,MD,82.10,81.37,23,200.00,130.00,280.00,,610.00,412.056
+William Bowman,1,198 Junior Men 18-19 Raw,M,Raw,MD,89.81,87.72,19,220.00,140.00,207.50,,567.50,381.846
+Randy Cohen,1,198 Junior Men 20-23 Raw,M,Raw,MD,89.81,89.90,21,232.50,140.00,260.00,,632.50,412.086
+Martin Zirkle,2,198 Junior Men 20-23 Raw,M,Raw,MD,89.81,88.45,23,190.00,92.50,205.00,,487.50,314.025
+Gavin Miskimon,1,220 Junior Men 20-23 Raw,M,Raw,MD,99.79,98.79,21,180.00,120.00,205.00,,505.00,315.032
+Ahmed Eissa,1,242 Junior Men 20-23 Raw,M,Raw,MD,109.77,104.78,20,235.00,162.50,260.00,,657.50,404.976
+Adam Burke,1,275 Junior Men 18-19 Raw,M,Raw,MD,124.74,120.75,19,205.00,170.00,250.00,,625.00,373.166
+Ryan Pollard,1,132 Open Men Raw,M,Raw,MD,59.87,59.15,28,175.00,107.50,180.00,,462.50,399.669
+Michael Lampart,1,181 Open Men Raw,M,Raw,MD,82.10,81.37,23,200.00,130.00,280.00,,610.00,412.056
+Patrick Reeves,2,181 Open Men Raw,M,Raw,MD,82.10,81.65,25,200.00,135.00,235.00,,570.00,384.251
+Michael Shaffer,3,181 Open Men Raw,M,Raw,MD,82.10,80.20,25,175.00,137.50,255.00,,567.50,386.835
+Joseph Fitzwater,4,181 Open Men Raw,M,Raw,MD,82.10,77.84,30,187.50,130.00,227.50,,545.00,378.701
+Bradley Michaels,1,220 Open Men Raw,M,Raw,VA,99.79,95.89,28,220.00,152.50,225.00,,597.50,370.114
+Kyle Miner,1,242 Open Men Raw,M,Raw,MD,109.77,105.96,25,210.00,160.00,267.50,,637.50,379.741
+Christopher Neville,1,181 Master Men 40-44 Raw,M,Raw,MD,82.10,79.83,41,172.50,105.00,187.50,,465.00,321.053
+Tim Hadden,1,308 Master Men 40-44 Raw,M,Raw,VA,139.71,138.16,43,235.00,180.00,267.50,,682.50,393.995
+Abbott Ottinger,1,165 Junior Men 20-23 Raw,M,Raw,MD,74.84,73.12,21,,115.00,175.00,,290.00,214.602
+Anthony Ray,1,198 Open Men Raw,M,Raw,MD,89.81,85.46,21,,125.00,182.50,,307.50,201.826
+Erica Isaacs,1,148 Open Women Raw,F,Raw,DE,67.13,62.87,25,,60.00,,,60.00,64.539
+Ryan Wood,1,181 Junior Men 20-23 Raw,M,Raw,DE,82.10,79.65,20,,142.50,,,142.50,100.480
+Gustavo Rodriguez,1,132 Open Men Raw,M,Raw,CA,59.87,59.15,25,,95.00,,,95.00,82.094
+Mike Muskey,1,242 Open Men Raw,M,Raw,MD,109.77,108.05,46,,175.00,,,175.00,103.569
+Justin Isaacs,1,275 Open Men Raw,M,Raw,DE,124.74,122.65,25,,182.50,,,182.50,104.410
+Mike Muskey,1,242 Master Men 45-49 Raw,M,Raw,MD,109.77,108.05,46,,175.00,,,175.00,110.611
+Donald Frost,1,242 Master Men 65-69 Raw,M,Raw,MD,109.77,104.14,66,,142.50,,,142.50,129.037
+Robert O'Donnell,1,275 Master Men 60-64 Raw,M,Raw,PA,124.74,114.12,60,,147.50,,,147.50,115.082
+David Capozzoli,1,308 Master Men 55-59 Raw,M,Raw,MD,139.71,125.28,57,,187.50,,,187.50,135.419
+Nairanjan Singh,1,198 Master Men 65-69 Single Ply,M,Single-ply,MD,89.81,86.00,68,,117.50,172.50,,290.00,298.913
+Erica Isaacs,1,148 Open Women Raw,F,Raw,DE,67.13,62.87,25,,,130.00,,130.00,139.836
+Ryan Wood,1,181 Junior Men 20-23 Raw,M,Raw,DE,82.10,79.65,20,,,232.50,,232.50,163.941
+Gustavo Rodriguez,1,132 Open Men Raw,M,Raw,CA,59.87,59.15,25,,,145.00,,145.00,125.302
+Justin Isaacs,1,275 Open Men Raw,M,Raw,DE,124.74,122.65,25,,,272.50,,272.50,155.901
