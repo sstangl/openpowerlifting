@@ -22,12 +22,10 @@ with open(csvname) as fd:
 
 while True:
     more_to_modify = False
-    remove_colnum = 0
 
     for i, header in enumerate(csv[0]):
         if pattern.match(header):
             more_to_modify = True
-            remove_colnum = i
             break
 
     if not more_to_modify:
