@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Converts the specified column from pounds to kilograms,
+# then gives the column a new name.
+# The first row must contain column names.
+#
+# Overwrites the input file if the column can be converted.
+#
+
+import sys
+
+# Round to two decimal places.
+def internal_to_kg_string(s):
+    try:
+        return "{:.2f}".format(float(s) / 2.20462262)
+    except ValueError:
+        print >> sys.stderr, "Field not a float: \"%s\"" % s
+        sys.exit(1)
+
+def to_kg(s):
+    if s[-1] is '+':
+        return internal_to_kg_string(s[:-1]) + '+'
+
+    return internal_to_kg_string(s)
+        
+
+if len(sys.argv) != 4:
+    print >> sys.stderr, ' Usage: %s csvfile column newname'
+    sys.exit(1)
+
+(scriptname, csvname, columnname, newcolumnname) = sys.argv
+
+with open(csvname) as fd:
+    csv = [x.strip().split(',') for x in fd.readlines()]
+
+try:
+    colindex = csv[0].index(columnname)
+except ValueError:
+    print >> sys.stderr, "Column not found"
+    sys.exit(1) # Column not found, do nothing
+
+csv[0][colindex] = newcolumnname
+
+for i in xrange(1, len(csv)):
+    csv[i][colindex] = to_kg(csv[i][colindex])
+
+lines = [','.join(row) + "\n" for row in csv]
+
+with open(csvname, 'w') as fd:
+    fd.writelines(lines)

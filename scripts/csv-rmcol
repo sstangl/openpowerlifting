@@ -35,7 +35,6 @@ while True:
         row.pop(i)
 
 lines = [','.join(row) + "\n" for row in csv]
-lines[-1] = lines[-1].replace("\n","")
 
 with open(csvname, 'w') as fd:
     fd.writelines(lines)
