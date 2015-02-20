@@ -1,4 +1,4 @@
-Name,Place,Sex,WeightClassKg,Event,Division,BestSquatKg,Squat4LBS,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4LBS,TotalKg
+Name,Place,Sex,WeightClassKg,Event,Division,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg
 Matthew Prinster,1,M,55.79,BD,Special Olympian,,,62.48,,110.00,,172.48
 Donnie Tucker,1,M,74.84,BD,Special Olympian,,,62.48,,119.98,,182.46
 David Hutchinson,1,M,109.77,BD,Special Olympian,,,59.99,,119.98,,179.96
@@ -6,7 +6,7 @@ Kevin Ezell,1,M,139.71,BD,Special Olympian,,,82.44,,127.46,,209.90
 Priscilla Sanchez,1,F,67.13,SBD,Junior Women 16-17,102.40,,67.47,,112.49,,282.36
 Danyelle Gonzales,DQ,F,74.84,SBD,Junior Women 16-17,42.64,,,,,,
 Renee Amour,1,F,74.84,SBD,Junior Women 20-23,130.97,,79.95,,142.43,,353.46
-John Garcia,1,M,55.79,SBD,Junior Men 14-15,55.00,137.75,69.97,74.96,84.94,,209.90
+John Garcia,1,M,55.79,SBD,Junior Men 14-15,55.00,62.48,69.97,74.96,84.94,,209.90
 Ryan Decker,1,M,89.81,SBD,Junior Men 14-15,154.90,,110.00,,164.99,,429.89
 Adam Demnowicz,1,M,99.79,SBD,Junior Men 14-15,114.99,,69.97,,157.40,,342.35
 Vito Console,2,M,99.79,SBD,Junior Men 14-15,89.92,,99.90,104.89,122.47,,312.30
@@ -17,8 +17,8 @@ Ozzie Burgos,1,M,109.77,SBD,Junior Men 16-17,102.40,,122.47,,162.39,,387.25
 Raul Aguilera,2,M,109.77,SBD,Junior Men 16-17,64.98,,112.49,,144.92,,322.39
 Anthony Flores,1,M,124.74,SBD,Junior Men 16-17,149.91,,144.92,,194.59,,489.43
 Francisco Anguiano,2,M,124.74,SBD,Junior Men 16-17,124.96,,137.44,,184.61,,447.02
-Letroy Higgins,1,M,99.79,SBD,Junior Men 18-19,244.94,556.5,169.98,172.48,244.94,562,659.86
-Myron Hurd,1,M,109.77,SBD,Junior Men 18-19,149.91,,124.96,,207.41,479.5,482.28
+Letroy Higgins,1,M,99.79,SBD,Junior Men 18-19,244.94,252.42,169.98,172.48,244.94,254.92,659.86
+Myron Hurd,1,M,109.77,SBD,Junior Men 18-19,149.91,,124.96,,207.41,217.50,482.28
 Kevin Westbrook,1,M,109.77,SBD,Junior Men 20-23,182.46,,144.92,,154.90,,482.28
 Renee Amour,1,F,74.84,SBD,Novice Women,130.97,,79.95,,142.43,,353.46
 Lisa Baldridge,1,F,82.10,SBD,Novice Women,94.91,,42.64,,104.89,,242.45
