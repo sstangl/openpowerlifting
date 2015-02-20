@@ -32,7 +32,7 @@ while True:
         break
 
     for row in csv:
-        row.pop(i)
+        del row[i]
 
 lines = [','.join(row) + "\n" for row in csv]
 
