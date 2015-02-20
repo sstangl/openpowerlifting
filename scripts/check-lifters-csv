@@ -120,6 +120,16 @@ def check_column_weightclass(s):
     check_positive_number_column(s)
 
 
+def check_column_state(s):
+    if '  ' in s:
+        pwarning("Too much spacing in state: \"%s\"" % s)
+
+    for c in s:
+        if not c.isalpha() and not c.isspace():
+            perror("Invalid character in state: \"%s\"" % s)
+            break
+
+
 HeaderHandlers = {
     'Name': check_column_name,
     'Sex': check_column_sex,
@@ -154,6 +164,9 @@ HeaderHandlers = {
     'Deadlift4Kg': check_lift_column,
 
     'TotalKg': check_positive_number_column,
+
+    # Columns that we don't really care about.
+    'State': check_column_state,
 }
 
 KnownHeaders = HeaderHandlers.keys()
