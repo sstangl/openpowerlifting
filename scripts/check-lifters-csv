@@ -129,6 +129,9 @@ def check_column_state(s):
             perror("Invalid character in state: \"%s\"" % s)
             break
 
+def ignore_column(s):
+    pass
+
 
 HeaderHandlers = {
     'Name': check_column_name,
@@ -167,6 +170,11 @@ HeaderHandlers = {
 
     # Columns that we don't really care about.
     'State': check_column_state,
+
+    # Columns that we totally ignore but aren't bad to keep around.
+    'Team': ignore_column,
+    'Country-State': ignore_column,
+    'College/University': ignore_column,
 }
 
 KnownHeaders = HeaderHandlers.keys()
