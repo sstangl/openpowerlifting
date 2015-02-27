@@ -315,7 +315,6 @@ def csv_integrate_divisions(csv):
         # Otherwise, this is either a row for results, or a 4ths row.
         # Rows for results have names, so check for a name.
         elif csv[k][0]:
-            assert(division)
             csv[k].insert(divcolumn, division)
 
         # Otherwise, this is a 4ths row, and we just need to pad it.
