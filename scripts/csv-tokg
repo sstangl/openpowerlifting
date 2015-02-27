@@ -37,6 +37,8 @@ for j in xrange(0, len(csv[0])):
     if 'LBS' not in csv[0][j]:
         continue
 
+    print ' Converting column "%s"' % csv[0][j]
+
     csv[0][j] = csv[0][j].replace('LBS', 'Kg')
 
     for i in xrange(1, len(csv)):
