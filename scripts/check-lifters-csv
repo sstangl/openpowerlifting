@@ -175,6 +175,7 @@ HeaderHandlers = {
     'Team': ignore_column,
     'Country-State': ignore_column,
     'College/University': ignore_column,
+    'School': ignore_column,
 }
 
 KnownHeaders = HeaderHandlers.keys()
