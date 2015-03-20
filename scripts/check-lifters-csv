@@ -188,6 +188,9 @@ def check_headers(headers):
     if not 'BodyweightKg' in headers and not 'WeightClassKg' in headers:
         perror('There must be a BodyweightKg or WeightClassKg column.')
 
+    if not 'Sex' in headers:
+        perror('There must be a Sex column.')
+
     for header in headers:
         if not header in KnownHeaders:
             pwarning("Unknown column header: %s" % header)
