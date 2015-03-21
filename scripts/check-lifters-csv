@@ -267,7 +267,9 @@ def check_row_weightclass_consistency(row, headers):
     # No female category should be this high.
     try:
         number = float(wtcls)
-        if number > 100:
+        # This is probably higher than it should be because some USPA
+        # meets put women in male weightclasses for no reason.
+        if number > 110:
             pwarning("Suspiciously high female weightclass: %s" % row[headers.index('WeightClassKg')])
     except ValueError:
         pass
