@@ -17,6 +17,8 @@ with open(sys.argv[1], 'r') as fd:
     pages = fd.read().split("\f")
 
 for i, page in enumerate(pages):
+    if not page.strip():
+        continue
     filename = 'page%u.csv' % i
     with open(filename, 'w') as fd:
         fd.write(page)
