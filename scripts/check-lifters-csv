@@ -40,6 +40,9 @@ def check_column_name(s):
     if '  ' in s:
         pwarning("Too much spacing for name: \"%s\"" % s)
 
+    if s[0] is '"':
+        pwarning("Name wrapped by quotes: %s" % s)
+
     special_legal_chars = ' "\'.-'
 
     # This only works for names written in English, but that's OK for now.
@@ -191,6 +194,10 @@ def check_headers(headers):
     if not 'Sex' in headers:
         perror('There must be a Sex column.')
 
+    # Not requiring the Event header yet, although it's probably a good idea.
+    #if not 'Event' in headers:
+    #    perror('There must be an Event column.')
+
     for header in headers:
         if not header in KnownHeaders:
             pwarning("Unknown column header: %s" % header)
@@ -198,24 +205,69 @@ def check_headers(headers):
         if headers.count(header) > 1:
             perror("Duplicate column header: %s" % header)
 
+        # If lift data is present, we need a corresponding 'Best' column.
+        if 'Squat' in header and not 'BestSquatKg' in headers:
+            pwarning('Squat data present, but missing BestSquatKg')
+        if 'Bench' in header and not 'BestBenchKg' in headers:
+            pwarning('Bench data present, but missing BestBenchKg')
+        if 'Deadlift' in header and not 'BestDeadliftKg' in headers:
+            pwarning('Deadlift data present, but missing BestDeadliftKg')
+
+
+def check_row_name_consistency(row, headers):
+    if 'Name' in headers:
+        name = row[headers.index('Name')]
+        if name is '':
+            perror("Name field empty.")
+
+
+# Assert that Event makes sense given the specified lifts.
+def check_row_event_consistency(row, headers):
+    if 'Event' in headers:
+        event = row[headers.index('Event')]
+
+        if 'S' not in event:
+            for i, header in enumerate(headers):
+                if 'Squat' in header and row[i]:
+                    perror("Squat entered for non-squat Event.")
+
+        if 'B' not in event:
+            for i, header in enumerate(headers):
+                if 'Bench' in header and row[i]:
+                    perror("Bench entered for non-bench Event.")
+
+        if 'D' not in event:
+            for i, header in enumerate(headers):
+                if 'Deadlift' in header and row[i]:
+                    perror("Deadlift entered for non-deadlift Event.")
+
+
+def check_row(row, headers):
+    check_row_name_consistency(row, headers)
+    check_row_event_consistency(row, headers)
+
+    # Check individual cell values in isolation.
+    for i, text in enumerate(row):
+        if text.strip() != text:
+            perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
+
+        if text and headers[i] in KnownHeaders:
+            HeaderHandlers[headers[i]](text)
+
 
 def main(scriptname, filename):
     with open(filename) as fd:
         csv = [x.strip().split(',') for x in fd.readlines()]
 
-    check_headers(csv[0])
+    headers = csv[0]
+    check_headers(headers)
 
     for row in csv[1:]:
-        if len(row) != len(csv[0]):
+        if len(row) != len(headers):
             perror("Column count mismatch for row: %s" % ','.join(row))
             continue
 
-        for i, text in enumerate(row):
-            if text.strip() != text:
-                perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
-
-            if text and csv[0][i] in KnownHeaders:
-                HeaderHandlers[csv[0][i]](text)
+        check_row(row, headers)
 
 
 if __name__ == '__main__':
