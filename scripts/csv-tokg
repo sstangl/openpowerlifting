@@ -25,7 +25,7 @@ def to_kg(s):
     return internal_to_kg_string(s)
 
 if len(sys.argv) != 2:
-    print >> sys.stderr, ' Usage: %s csvfile'
+    print >> sys.stderr, ' Usage: %s csvfile' % sys.argv[0]
     sys.exit(1)
 
 (scriptname, csvname) = sys.argv

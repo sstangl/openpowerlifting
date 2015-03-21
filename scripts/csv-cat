@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Concatenates the CSV files given as arguments,
+# where the first line of each CSV file specifies column names.
+#
+# Outputs to stdout.
+#
+
+import sys
+
+if len(sys.argv) < 3:
+    print >> sys.stderr, ' Usage: %s csv1 csv2 ...' % sys.argv[0]
+    sys.exit(1)
+
+# The final CSV file being built.
+# The first column is the header list and is assumed to always exist.
+csv = [[]]
+
+for filename in sys.argv[1:]:
+    with open(filename, 'r') as fd:
+        rows = [x.strip().split(',') for x in fd.readlines()]
+
+    # Guarantee that all headers are in the final file.
+    #TODO: Order the headers stably (although this requires rewriting each row..)
+    for header in rows[0]:
+        if not header in csv[0]:
+            csv[0].append(header)
+
+    # Map from column index in this file to column index in the csv table. 
+    mapping = [csv[0].index(header) for header in rows[0]]
+
+    # Insert this csv into the final table, given the mapping.
+    for row in rows[1:]:
+        build = ['' for x in xrange(0, len(csv[0]))]
+
+        for i, cell in enumerate(row):
+            build[mapping[i]] = cell
+
+        csv.append(build)
+
+# Final output.
+for row in csv:
+    print ','.join(row)
