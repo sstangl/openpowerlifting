@@ -125,6 +125,13 @@ def check_column_weightclass(s):
         s = s[:-1]
     check_positive_number_column(s)
 
+    try:
+        f = float(s)
+        if f < 30: # Nobody should weigh this little.
+            pwarning("Suspiciously low weight class: %s" % s)
+    except ValueError:
+        pass
+
 
 def check_column_state(s):
     if '  ' in s:
@@ -245,9 +252,31 @@ def check_row_event_consistency(row, headers):
                     perror("Deadlift entered for non-deadlift Event.")
 
 
+# Women shouldn't accidentally be given male SHW classes.
+def check_row_weightclass_consistency(row, headers):
+    if not 'Sex' in headers or not 'WeightClassKg' in headers:
+        return
+
+    if row[headers.index('Sex')] is not 'F':
+        return
+
+    wtcls = row[headers.index('WeightClassKg')].replace('+','')
+    if not wtcls:
+        return
+
+    # No female category should be this high.
+    try:
+        number = float(wtcls)
+        if number > 100:
+            pwarning("Suspiciously high female weightclass: %s" % row[headers.index('WeightClassKg')])
+    except ValueError:
+        pass
+
+
 def check_row(row, headers):
     check_row_name_consistency(row, headers)
     check_row_event_consistency(row, headers)
+    check_row_weightclass_consistency(row, headers)
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
