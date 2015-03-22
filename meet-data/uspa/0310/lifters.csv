@@ -106,8 +106,8 @@ Todd McWilliams,4,Junior Men 20-23,M,Raw,CA,109.77,107.23,21,167.50,,125.00,,267
 Matthew Hooyenga,5,Junior Men 20-23,M,Raw,CA,109.77,105.23,23,160.00,,117.50,,182.50,,460.00,274.660
 Matt McKillop,1,Junior Men 20-23,M,Raw,CA,124.74,122.65,23,187.50,,130.00,,227.50,,545.00,311.801
 Taim Audi,1,Junior Men 16-17,M,Raw,CA,139.71,138.53,16,182.50,,117.50,,165.00,,465.00,294.094
-Cereno Chavez,1,308+ Junior Men 16-17,M,Raw,IL,139.71+,151.41,17,227.50,232.5,145.00,147.5,227.50,,600.00,358.063
-Steven Maradona,1,308+ Junior Men 20-23,M,Raw,CA,139.71+,143.88,20,320.00,,227.50,,292.50,,840.00,481.546
+Cereno Chavez,1,Junior Men 16-17,M,Raw,IL,139.71+,151.41,17,227.50,232.5,145.00,147.5,227.50,,600.00,358.063
+Steven Maradona,1,Junior Men 20-23,M,Raw,CA,139.71+,143.88,20,320.00,,227.50,,292.50,,840.00,481.546
 Minardo Ordonez,1,Open Men,M,Raw,CA,55.79,55.79,21,102.50,,90.00,,145.00,,337.50,308.362
 Angel Rodriguez,2,Open Men,M,Raw,CA,55.79,53.52,23,95.00,,87.50,,137.50,,320.00,304.769
 James McCabe,1,Open Men,M,Raw,CA,59.87,59.87,23,215.00,,122.50,,227.50,,565.00,482.795
@@ -236,10 +236,10 @@ Kevin Smith,2,Open Men,M,Raw,CA,139.71,132.99,25,205.00,,150.00,,250.00,,605.00,
 Joseph Llamas,3,Open Men,M,Raw,CA,139.71,132.77,31,185.00,,165.00,,240.00,,590.00,332.478
 Kellen Boyce,4,Open Men,M,Raw,CA,139.71,129.91,48,232.50,,137.50,,205.00,,575.00,325.257
 Taim Audi,5,Open Men,M,Raw,CA,139.71,138.53,16,182.50,,117.50,,165.00,,465.00,260.260
-Steven Maradona,1,308+ Open Men,M,Raw,CA,139.71+,143.88,20,320.00,,227.50,,292.50,,840.00,467.521
-O'Neil Roussell,2,308+ Open Men,M,Raw,CA,139.71+,168.46,28,272.50,,197.50,,277.50,,747.50,406.581
-Cereno Chavez,3,308+ Open Men,M,Raw,IL,139.71+,151.41,17,227.50,232.5,145.00,,227.50,147.5,600.00,331.540
-Dave Dallmeyer,4,308+ Open Men,M,Raw,CA,139.71+,141.07,64,182.50,,127.50,,227.50,,537.50,300.019
+Steven Maradona,1,Open Men,M,Raw,CA,139.71+,143.88,20,320.00,,227.50,,292.50,,840.00,467.521
+O'Neil Roussell,2,Open Men,M,Raw,CA,139.71+,168.46,28,272.50,,197.50,,277.50,,747.50,406.581
+Cereno Chavez,3,Open Men,M,Raw,IL,139.71+,151.41,17,227.50,232.5,145.00,,227.50,147.5,600.00,331.540
+Dave Dallmeyer,4,Open Men,M,Raw,CA,139.71+,141.07,64,182.50,,127.50,,227.50,,537.50,300.019
 Carlton Johnson,1,Submaster Men 35-39,M,Raw,CA,89.81,88.54,36,220.00,,170.00,,250.00,,640.00,420.277
 Chris Mangano,2,Submaster Men 35-39,M,Raw,CA,89.81,87.09,37,227.50,,142.50,,247.50,,617.50,413.108
 Dustin Beckley,3,Submaster Men 35-39,M,Raw,CA,89.81,83.14,35,155.00,,95.00,,172.50,,422.50,284.546
@@ -263,7 +263,7 @@ Wayne Jandoc,1,Master Men 55-59,M,Raw,CA,109.77,107.41,56,205.00,,158.00,,238.00
 Fredrick Martinez,1,Master Men 45-49,M,Raw,CA,124.74,122.33,48,230.00,,185.00,,272.50,,687.50,431.723
 Robert Speno,1,Master Men 45-49,M,Raw,CA,139.71,137.98,45,280.00,,175.00,,265.00,,720.00,425.404
 Kellen Boyce,2,Master Men 45-49,M,Raw,CA,139.71,129.91,48,232.50,,137.50,,205.00,,575.00,356.807
-Dave Dallmeyer,1,308+ Master Men 60-64,M,Raw,CA,139.71+,141.07,64,182.50,,127.50,,227.50,,537.50,435.028
+Dave Dallmeyer,1,Master Men 60-64,M,Raw,CA,139.71+,141.07,64,182.50,,127.50,,227.50,,537.50,435.028
 Cassandra Hawthorne,1,Junior Women 20-23,F,Raw,CA,59.87,58.60,22,92.50,,47.50,,102.50,,242.50,278.105
 Ilyssa Russ,2,Junior Women 20-23,F,Raw,CA,59.87,59.51,23,90.00,,37.50,,97.50,,225.00,252.444
 Liz Cohen,1,Open Women,F,Raw,CA,55.79,55.84,28,102.50,,57.50,,120.00,,280.00,330.200
@@ -328,7 +328,7 @@ Karl Davenport,2,Master Men 45-49,M,Raw,CA,109.77,109.54,49,205.00,,142.50,,217.
 Cliff Privetera,1,Master Men 45-49,M,Raw,CA,124.74,113.26,46,260.00,,160.00,,260.00,,680.00,423.741
 Craig Lawrence,2,Master Men 45-49,M,Raw,CA,124.74,124.51,45,242.50,,155.00,,282.50,,680.00,409.133
 Dennis Alegre,3,Master Men 45-49,M,Raw,CA,124.74,119.52,49,210.00,,132.50,,250.00,,592.50,379.487
-Dan Liebster,1,308+ Master Men 45-49,M,Raw,CA,139.71+,148.64,47,212.50,,145.00,,235.00,,592.50,355.163
+Dan Liebster,1,Master Men 45-49,M,Raw,CA,139.71+,148.64,47,212.50,,145.00,,235.00,,592.50,355.163
 Karen Trim,1,Open Women,F,Single-ply,CA,67.13,63.41,52,142.50,,85.00,,170.00,,397.50,424.797
 Karen Parnow,2,Open Women,F,Single-ply,CA,67.13,66.50,55,125.00,,85.50,,140.00,,350.50,361.614
 Gia Blackwell,1,Open Women,F,Single-ply,CA,74.84,69.58,53,165.00,,97.50,,142.50,,405.00,404.585
@@ -349,7 +349,7 @@ Kyle Planeaux,2,Open Men,M,Single-ply,CA,89.81,89.99,23,238.00,,140.00,,252.50,,
 Ian Murphy,1,Open Men,M,Single-ply,CA,109.77,107.09,23,242.50,,152.50,,265.00,,660.00,391.737
 Dennis Reneau,DQ,Open Men,M,Single-ply,CA,109.77,109.36,42,-295.00,,,,,,,
 Mark Menslage,1,Open Men,M,Single-ply,CA,124.74,114.08,49,290.00,,182.50,,287.50,,760.00,442.558
-Steve Lee,1,308+ Open Men,M,Single-ply,CA,139.71+,150.64,34,332.50,,255.00,,240.00,,827.50,457.578
+Steve Lee,1,Open Men,M,Single-ply,CA,139.71+,150.64,34,332.50,,255.00,,240.00,,827.50,457.578
 Robert Lee,1,Submaster Men 35-39,M,Single-ply,CA,139.71,135.90,37,355.00,,307.50,,265.00,,927.50,536.295
 Jason Kahn,1,Master Men 40-44,M,Single-ply,CA,74.84,73.71,44,137.50,,110.00,,165.00,,412.50,310.343
 Thomas Miller,1,Master Men 70-74,M,Single-ply,CA,74.84,74.34,73,150.50,,80.00,,183.50,,414.00,521.215
@@ -371,7 +371,7 @@ Edward Alvarado,1,Junior Men 20-23,M,Raw,CA,99.79,97.34,20,,,127.50,,,,127.50,80
 Nadeem Hamidy,1,Junior Men 18-19,M,Raw,CA,109.77,108.09,18,,,150.00,,,,150.00,94.087
 Victor Dominguez,DQ,Junior Men 20-23,M,Raw,CA,109.77,109.09,22,,,-165.00,,,,,
 Henry Andrade,1,Junior Men 20-23,M,Raw,CA,124.74,110.63,21,,,175.00,,,,175.00,104.863
-Steven Maradona,1,308+ Junior Men 20-23,M,Raw,CA,139.71+,143.88,20,,,227.50,,,,227.50,130.419
+Steven Maradona,1,Junior Men 20-23,M,Raw,CA,139.71+,143.88,20,,,227.50,,,,227.50,130.419
 Gerardo Rivera,1,Open Men,M,Raw,CA,74.84,74.21,25,,,147.50,,,,147.50,105.888
 Rick Gutman,2,Open Men,M,Raw,CA,74.84,74.75,60,,,115.00,,,,115.00,82.133
 Jeffrey Stanley,3,Open Men,M,Raw,CA,74.84,73.30,56,,,100.00,,,,100.00,72.420
@@ -403,8 +403,8 @@ Quinn Bremes,1,Open Men,M,Raw,CA,139.71,139.43,52,,,213.00,,,,213.00,119.098
 Alan Aerts,2,Open Men,M,Raw,NV,139.71,130.00,57,,,187.50,,,,187.50,106.049
 Joseph Llamas,3,Open Men,M,Raw,CA,139.71,132.77,31,,,165.00,,,,165.00,92.981
 David Fitzgerald,4,Open Men,M,Raw,CA,139.71,139.39,46,,,165.00,,,,165.00,92.264
-Steven Maradona,1,308+ Open Men,M,Raw,CA,139.71+,143.88,20,,,227.50,,,,227.50,126.620
-Travis Heck,2,308+ Open Men,M,Raw,CA,139.71+,158.71,42,,,162.50,,,,162.50,89.190
+Steven Maradona,1,Open Men,M,Raw,CA,139.71+,143.88,20,,,227.50,,,,227.50,126.620
+Travis Heck,2,Open Men,M,Raw,CA,139.71+,158.71,42,,,162.50,,,,162.50,89.190
 Felipe Campos,1,Submaster Men 35-39,M,Raw,CA,82.10,82.01,37,,,145.00,,,,145.00,100.410
 Mike Portillo,1,Submaster Men 35-39,M,Raw,CA,99.79,97.75,39,,,195.50,,,,195.50,126.102
 Gordon Santee,1,Master Men 65-69,M,Raw,CA,67.13,64.27,67,,,77.50,,,,77.50,95.995
@@ -423,7 +423,7 @@ Steve Gutierrez,1,Master Men 50-54,M,Raw,CA,124.74,123.56,50,,,152.50,,,,152.50,
 David Fitzgerald,1,Master Men 45-49,M,Raw,CA,139.71,139.39,46,,,165.00,,,,165.00,98.537
 Quinn Bremes,1,Master Men 50-54,M,Raw,CA,139.71,139.43,52,,,213.00,,,,213.00,138.749
 Alan Aerts,1,Master Men 55-59,M,Raw,NV,139.71,130.00,57,,,187.50,190.5,,,187.50,134.470
-Travis Heck,1,308+ Master Men 40-44,M,Raw,CA,139.71+,158.71,42,,,162.50,,,,162.50,90.973
+Travis Heck,1,Master Men 40-44,M,Raw,CA,139.71+,158.71,42,,,162.50,,,,162.50,90.973
 Karen Parnow,1,Master Women 55-59,F,Single-ply,CA,67.13,66.50,55,,,85.50,,,,85.50,108.059
 Peter Pham,1,Junior Men 20-23,M,Single-ply,CA,74.84,71.49,22,,,170.00,,,,170.00,125.392
 Ronald Allen,1,Submaster Men 35-39,M,Single-ply,CA,124.74,111.36,39,,,182.50,,,,182.50,112.355
@@ -478,7 +478,7 @@ Vladimir Tsatsulin,1,Master Men 75-79,M,Raw,CA,89.81,88.50,77,,,,,180.00,,180.00
 Wayne Jandoc,1,Master Men 55-59,M,Raw,CA,109.77,107.41,56,,,,,238.00,,238.00,175.841
 Steve Gutierrez,1,Master Men 50-54,M,Raw,CA,124.74,123.56,50,,,,,227.50,,227.50,146.845
 David Fitzgerald,1,Master Men 45-49,M,Raw,CA,139.71,139.39,46,,,,,330.00,340,330.00,197.075
-Travis Heck,1,308+ Master Men 40-44,M,Raw,CA,139.71+,158.71,42,,,,,215.00,,215.00,120.365
+Travis Heck,1,Master Men 40-44,M,Raw,CA,139.71+,158.71,42,,,,,215.00,,215.00,120.365
 Mayra Salas,1,Open Women,F,Single-ply,CA,74.84,73.07,27,,,,,125.00,,125.00,120.821
 Karen Trim,1,Master Women 50-54,F,Single-ply,CA,67.13,63.41,52,,,,,170.00,,170.00,211.650
 Linda Adam,1,Master Women 55-59,F,Single-ply,CA,67.13,60.96,59,,,,,147.50,150,147.50,213.602

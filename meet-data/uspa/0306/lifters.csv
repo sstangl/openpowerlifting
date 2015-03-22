@@ -1,7 +1,7 @@
 Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,Squat4Kg,BestBenchKg,Bench4Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Wilks
 Devon Zajicek,1,Junior Women 20-23,F,Raw,AZ,67.13,64.77,22,122.50,,72.50,,125.00,,320.00,339.949
 Giorgianna Flagello,1,Junior 20-23 Women,F,Raw,AZ,82.10,81.92,21,120.00,,55.00,,140.00,,315.00,290.233
-Patricia Ocano,1,198+ Junior 20-23 Women,F,Raw,AZ,89.81+,109.77,23,110.00,,57.50,,130.00,,297.50,241.995
+Patricia Ocano,1,Junior 20-23 Women,F,Raw,AZ,89.81+,109.77,23,110.00,,57.50,,130.00,,297.50,241.995
 Meghan Merino,1,Open Women,F,Raw,AZ,47.63,47.90,27,60.00,,40.00,,110.00,,210.00,278.556
 Annalise Shingler,1,Open Women,F,Raw,AZ,51.71,50.71,25,100.00,,52.50,,117.50,,270.00,343.141
 Tanya Golden,1,Open Women,F,Raw,AZ,59.87,59.06,33,92.50,,60.00,,127.50,,280.00,316.028
@@ -17,12 +17,12 @@ Sylvia Millyard,3,Open Women,F,Raw,AZ,74.84,68.67,28,107.50,,52.50,,130.00,,290.
 Sophia Hussary,1,Open Women,F,Raw,AZ,82.10,81.37,36,115.00,,87.50,,183.00,,385.50,349.465
 Carmen Bell,2,Open Women,F,Raw,AZ,82.10,79.56,31,125.00,127.5,60.00,,142.50,,327.50,300.590
 Giorgianna Flagello,3,Open Women,F,Raw,AZ,82.10,81.92,21,120.00,,55.00,,140.00,,315.00,284.542
-Tiffany Martin,1,198+ Open Women,F,Raw,AZ,89.81+,106.14,42,125.00,,62.50,,165.00,,352.50,288.905
-Particia Ocano,2,198+ Open Women,F,Raw,AZ,89.81+,109.77,23,110.00,,57.50,,130.00,,297.50,241.995
+Tiffany Martin,1,Open Women,F,Raw,AZ,89.81+,106.14,42,125.00,,62.50,,165.00,,352.50,288.905
+Particia Ocano,2,Open Women,F,Raw,AZ,89.81+,109.77,23,110.00,,57.50,,130.00,,297.50,241.995
 Cheryl Heffelfinger,1,Submaster Women,F,Raw,AZ,67.13,62.60,35,82.50,,35.00,,115.00,,232.50,253.424
 Sophia Hussary,1,Submaster Women,F,Raw,AZ,82.10,81.37,36,115.00,,87.50,,183.00,,385.50,356.454
 Nichol Heltmach,1,Master Women 40-44,F,Raw,AZ,67.13,64.23,41,112.50,,67.50,,127.50,,307.50,328.730
-Tiffany Martin,1,198+ Master Women 40-44,F,Raw,AZ,89.81+,106.14,42,125.00,,62.50,,165.00,,352.50,294.683
+Tiffany Martin,1,Master Women 40-44,F,Raw,AZ,89.81+,106.14,42,125.00,,62.50,,165.00,,352.50,294.683
 Chevy Shumaker,1,Junior 13-15 Men,M,Raw,AZ,55.79,55.97,15,87.50,92.5,70.00,,145.00,,302.50,325.097
 Mario Mikah,1,Junior Men 20-23,M,Raw,AZ,67.13,66.59,23,137.50,,92.50,,145.00,,375.00,292.321
 Luis Ocampo,1,Junior Men 20-23,M,Raw,AZ,74.84,67.77,20,87.50,,90.00,,122.50,,300.00,237.493
@@ -83,7 +83,7 @@ Sophia Hussary,1,Submaster Women 35-39,F,Raw,AZ,82.10,81.37,36,,,87.50,,,,87.50,
 Nicholas Faylor,1,Junior Men 20-23,M,Raw,AZ,74.84,71.58,20,,,105.00,,,,105.00,79.697
 Ben O'brien,1,Open Men,M,Raw,AZ,99.79,98.97,34,,,210.00,,,,210.00,128.338
 Tom Matlock,1,Open Men,M,Raw,AZ,124.74,111.77,62,,,115.50,,,,115.50,67.648
-Michael Otero Jr.,1,308+ Open Men,M,Raw,NM,139.71+,167.19,26,,,232.50,,,,232.50,126.612
+Michael Otero Jr.,1,Open Men,M,Raw,NM,139.71+,167.19,26,,,232.50,,,,232.50,126.612
 Karl Davenport,1,Master Men 45-49,M,Raw,CA,109.77,109.04,49,,,140.00,,,,140.00,91.948
 Tom Matlock,1,Master Men 60-64,M,Raw,AZ,124.74,111.77,62,,,115.50,,,,115.50,94.233
 Mike Desrosiers,DQ,Open Men,M,Single-ply,AZ,124.74,115.67,40,,,-270.00,,,,,
@@ -92,7 +92,7 @@ Mike Desrosiers,DQ,Master Men 40-44,M,Single-ply,AZ,124.74,115.67,40,,,-270.00,,
 Leonetta Richardson,1,Open Women,F,Multi-ply,CA,74.84,74.93,36,,,172.50,,,,172.50,164.076
 Chuck Hudson,DQ,Open Men,M,Multi-ply,AZ,139.71,129.55,35,,,-365.00,,,,,
 Jimmy Seaver,DQ,Master Men 45-49,M,Multi-ply,AZ,99.79,99.52,45,,,-265.00,,,,,
-Michael Bowden,1,308+ Master Men 50-54,M,Multi-ply,AZ,139.71+,154.72,52,,,365.00,,,,365.00,234.247
+Michael Bowden,1,Master Men 50-54,M,Multi-ply,AZ,139.71+,154.72,52,,,365.00,,,,365.00,234.247
 Shaunynai Weatherly,1,Open Women,F,Raw,AZ,67.13,66.77,25,,,,,132.50,,132.50,136.297
 Sophia Hussary,1,Open Women,F,Raw,AZ,82.10,81.37,36,,,,,183.00,,183.00,165.894
 Sophia Hussary,1,Submaster Women,F,Raw,AZ,82.10,81.37,36,,,,,183.00,,183.00,169.212
@@ -105,7 +105,7 @@ Josh Sanderson,1,Open Men,M,Raw,AZ,124.74,111.04,21,,,,,295.50,,295.50,173.406
 Mike Desrosiers,2,Open Men,M,Raw,AZ,124.74,115.67,40,,,,,292.50,,292.50,169.698
 Tom Matlock,3,Open Men,M,Raw,AZ,124.74,111.77,62,,,,,220.00,,220.00,128.853
 Chuck Hudson,DQ,Open Men,M,Raw,AZ,139.71,129.55,35,,,,,-265.00,,,
-Michael Otero Jr.,1,308+ Open Men,M,Raw,NM,139.71+,167.19,26,,,,,365.00,,365.00,198.767
+Michael Otero Jr.,1,Open Men,M,Raw,NM,139.71+,167.19,26,,,,,365.00,,365.00,198.767
 Karl Davenport,1,Master Men 45-49,M,Raw,CA,109.77,109.04,49,,,,,217.50,,217.50,142.847
 Mike Derosiers,1,Master Men 40-44,M,Raw,AZ,124.74,115.67,40,,,,,292.50,,292.50,169.698
 Tom Matlcok,1,Master Men 60-64,M,Raw,AZ,124.74,111.77,62,,,,,220.00,,220.00,179.492

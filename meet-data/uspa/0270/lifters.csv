@@ -27,16 +27,16 @@ David Zyski Jr,4,Open Men,M,,CA,124.74,121.65,28,332.5,,255,,330,,917.5,525.853
 David Douglas,1,Open Men,M,,CA,139.71,137.08,26,352.5,,345,,345,,1042.5,584.436
 Bill Collins,2,Open Men,M,,WY,139.71,133.81,52,345,,255,,310,,910,512.135
 Robert Lee,3,Open Men,M,,CA,139.71,137.71,36,352.5,,285,,242.5,,880,492.983
-Henry Thomason,1,308+ Open Men,M,,TX,139.71+,142.61,34,437.5,,362.5,,292.5,,1092.5,608.836
-Tyler Butcher,2,308+ Open Men,M,,OH,139.71+,143.61,25,387.5,,325,,332.5,,1045,581.777
+Henry Thomason,1,Open Men,M,,TX,139.71+,142.61,34,437.5,,362.5,,292.5,,1092.5,608.836
+Tyler Butcher,2,Open Men,M,,OH,139.71+,143.61,25,387.5,,325,,332.5,,1045,581.777
 April Shumaker,1,Lightwt women-105-148,F,,FL,47.63,47.90,47,,,120,,,,120,159.175
 Maura Shuttleworth,2,Lightwt women-105-148,F,,MN,51.71,51.80,37,,,112.5,,,,112.5,140.663
 Trace Ryan,3,Lightwt women-105-148,F,,NV,67.13,64.59,43,,,85,,,,85,89.592
 Bernice Fuss,1,Middlewt women-165,F,,Can,74.84,70.22,56,,,125,,,,125,124.091
 Maryana Naumova,2,Middlewt women-165,F,,Rus,74.84,70.76,14,,,122.5,,,,122.5,120.969
-Victoria Sheludko,1,Heavywt women-181-198+,F,,Rus,89.81,86.36,39,,,210,,,,210,184.775
-Cathy Millen,2,Heavywt women-181-198+,F,,NZ,82.10,81.56,47,,,177.5,,,,177.5,160.716
-Brittany Pryor,3,Heavywt women-181-198+,F,,NV,89.81+,101.15,27,,,122.5,127.5,,,122.5,101.657
+Victoria Sheludko,1,Heavywt women-181,F,,Rus,89.81,86.36,39,,,210,,,,210,184.775
+Cathy Millen,2,Heavywt women-181,F,,NZ,82.10,81.56,47,,,177.5,,,,177.5,160.716
+Brittany Pryor,3,Heavywt women-181,F,,NV,89.81+,101.15,27,,,122.5,127.5,,,122.5,101.657
 Ilya Kokorev,1,Open Men,M,,Rus,74.84,74.39,40,,,215,,,,215,154.079
 Joe Mazza,1,Open Men,M,,NJ,82.10,80.83,47,,,280,,,,280,189.925
 Brian McLaughlin,DQ,Open Men,M,,OR,82.10,80.65,33,,,-185,,,,,
@@ -53,9 +53,9 @@ Anton Begalko,1,Open Men,M,,UKR,124.74,113.67,26,,,315,,,,315,183.61
 Matt Houser,1,Open Men,M,,IL,139.71,138.71,29,,,375,,,,375,209.845
 David Douglas,2,Open Men,M,,CA,139.71,138.25,26,,,355,,,,355,198.753
 Roger Ryan,DQ,Open Men,M,,IL,139.71,137.35,58,,,-337.5,,,,,
-Brandon Braner,1,308+ Open Men,M,,MN,139.71+,151.14,27,,,365,,,,365,201.738
-Alex Podshibyakin,2,308+ Open Men,M,,RUS,139.71+,160.75,49,,,255,,,,255,139.696
-Oleksii Lisogor,DQ,308+ Open Men,M,,UKR,139.71+,141.34,27,,,-295,,,,,
+Brandon Braner,1,Open Men,M,,MN,139.71+,151.14,27,,,365,,,,365,201.738
+Alex Podshibyakin,2,Open Men,M,,RUS,139.71+,160.75,49,,,255,,,,255,139.696
+Oleksii Lisogor,DQ,Open Men,M,,UKR,139.71+,141.34,27,,,-295,,,,,
 Gracie Vanasse,1,Lightwt women-114-148,F,,CA,59.87,59.96,25,,,,,192.5,,192.5,214.711
 Susan Salazar,2,Lightwt women-114-148,F,,CA,59.87,59.51,37,,,,,187.5,,187.5,210.37
 Maura Shuttleworth,3,Lightwt women-114-148,F,,MN,51.71,51.80,37,,,,,145,,145,181.299
@@ -63,8 +63,8 @@ Trace Ryan,4,Lightwt women-114-148,F,,NV,67.13,64.59,43,,,,,142.5,,142.5,150.198
 Kristy Scott,1,Middlewt women-165-181,F,,WA,82.10,80.74,30,,,,,237.5,,237.5,216.214
 Therese Janc,2,Middlewt women-165-181,F,,IL,82.10,77.66,39,,,,,205,,205,190.801
 Bernice Fuss,3,Middlewt women-165-181,F,,CAN,74.84,70.22,56,,,,,175,,175,173.728
-Brittany Pryor,1,Heavywt women-198-198+,F,,NV,89.81+,101.15,27,,,,,230.5,237.5,230.5,191.28
-Molly O'Rourke,2,Heavywt women-198-198+,F,,CA,89.81+,103.51,30,,,,,222.5,,222.5,183.496
+Brittany Pryor,1,Heavywt women-198,F,,NV,89.81+,101.15,27,,,,,230.5,237.5,230.5,191.28
+Molly O'Rourke,2,Heavywt women-198,F,,CA,89.81+,103.51,30,,,,,222.5,,222.5,183.496
 Ilya Kokorev,1,Open Men,M,,RUS,74.84,74.39,40,,,,,295,,295,211.411
 Chris McGrail,1,Open Men,M,,UT,82.10,81.74,34,,,,,305,,305,205.469
 Stanislav Pryakhin,2,Open Men,M,,RUS,82.10,81.92,38,,,,,280,,280,188.373
@@ -83,4 +83,4 @@ Patrick Holloway,1,Open Men,M,,AZ,124.74,121.65,46,,,,,380,,380,217.792
 Brian Billings,2,Open Men,M,,OH,124.74,118.66,29,,,,,350,,350,201.757
 Michael Harris,DQ,Open Men,M,,OH,124.74,124.56,37,,,,,-342.5,,,
 Brent Willis,1,Open Men,M,,CA,139.71,135.99,23,,,,,400,,400,224.526
-Shawn Doyle,1,308+ Open Men,M,,OR,139.71+,142.61,28,,,,,390,,390,217.342
+Shawn Doyle,1,Open Men,M,,OR,139.71+,142.61,28,,,,,390,,390,217.342
