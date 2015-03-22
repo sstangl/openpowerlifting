@@ -143,11 +143,17 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
         if lname == "name":
             name = "Name"
         elif lname == "bdywght":
-            name = "Bodyweight"
+            name = "BodyweightLBS"
         elif lname == "wtclass":
-            name = "Weight Class"
+            name = "WeightClassLBS"
         elif lname == "wilksscore":
             name = "Wilks"
+        elif lname == "BestBench":
+            name = "BestBenchLBS"
+        elif lname == "BestSquat":
+            name = "BestSquatLBS"
+        elif lname == "BestDeadlift":
+            name = "BestDeadliftLBS"
 
         columns.append(name)
 
@@ -312,6 +318,14 @@ def csv_integrate_divisions(csv):
         if 'DIVISION:' in csv[k][0]:
             division = csv[k][0][len('DIVISION:'):]
 
+            # Try to remove some common formatting stuff from the division name.
+            division = division.replace("(Wilks formula)", '')
+            if "Open Men" in division:
+                division = "Open Men"
+            if "Open Women" in division:
+                division = "Open Women"
+            division = division.strip()
+
         # Otherwise, this is either a row for results, or a 4ths row.
         # Rows for results have names, so check for a name.
         elif csv[k][0]:
@@ -363,7 +377,14 @@ def csv_integrate_4ths(csv):
 
         # Now figure out what the column header should be.
         # We can infer it from the previous column.
-        csv[0][k+1] = csv[0][k] + '4'
+        if csv[0][k] == "BestSquatLBS":
+            csv[0][k+1] = "Squat4LBS"
+        elif csv[0][k] == "BestBenchLBS":
+            csv[0][k+1] = "Bench4LBS"
+        elif csv[0][k] == "BestDeadliftLBS":
+            csv[0][k+1] = "Deadlift4LBS"
+        else:
+            csv[0][k+1] = csv[0][k] + '4'
 
     # Get rid of all the blanked rows.
     return filter(lambda x : len(x[0]) != 0, csv)
