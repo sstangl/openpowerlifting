@@ -1,6 +1,6 @@
 Name,Place,Division,Sex,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
 Catherine LaMantia,1,Junior Women 13-15,F,67.13,63.96,15,52.50,35.00,92.50,180.00
-Monica Sparango,1,148 Open Women,F,67.13,67.13,44,145.00,120.00,166.00,430.99
+Monica Sparango,1,Open Women,F,67.13,67.13,44,145.00,120.00,166.00,430.99
 Alison Barnhill,1,Master Women 40-49,F,59.87,56.52,44,100.00,62.50,132.50,295.00
 Tracie Marquez,2,Master Women 40-49,F,89.81,84.28,44,67.50,52.50,100.00,220.00
 Helene Tropp,DQ,Master Women 60+,F,47.63,47.26,68,52.50,42.50,-92.08,
@@ -9,22 +9,22 @@ O'Neil Roussell,1,Junior Men 19-23,M,139.71+,162.75,21,237.50,192.50,255.00,684.
 Lawrence Andrews,2,Junior Men 19-23,M,99.79,97.98,21,182.50,155.00,210.00,547.50
 Bryan Haske,3,Junior Men 19-23,M,99.79,95.71,21,142.50,107.50,210.00,460.00
 John Woolard,DQ,Junior Men 19-23,M,99.79,93.98,23,185.00,-164.65,,
-Charles LaMantia,1,114 Open Men,M,51.71,51.89,11,42.50,32.50,70.00,145.00
-Leon Sparango,1,181 Open Men,M,82.1,79.02,34,220.00,167.50,220.00,607.49
-Caesar Marciales,2,181 Open Men,M,82.1,80.47,26,142.50,87.50,175.00,404.99
-Jeff Blair,1,198 Open Men,M,89.81,87.54,40,182.50,142.50,185.00,510.00
-Daniel Gustafson,2,198 Open Men,M,89.81,87.54,39,157.50,105.00,230.00,492.50
-Mike Tronske,1,220 Open Men,M,99.79,97.7,43,260.00,205.00,262.50,727.49
-Jerry Tremblay,2,220 Open Men,M,99.79,96.71,44,262.50,182.50,265.00,709.99
-Jason Kelske,3,220 Open Men,M,99.79,99.06,25,227.50,182.50,290.00,699.99
-Davon Brazil,4,220 Open Men,M,99.79,95.62,33,215.00,182.50,282.50,679.99
-Shaun Myers,5,220 Open Men,M,99.79,96.16,32,192.50,150.00,227.50,569.99
-Daniel Simpson,6,220 Open Men,M,99.79,96.43,27,142.50,120.00,195.00,457.49
-James Campbell,7,220 Open Men,M,99.79,92.35,31,112.50,100.00,180.00,392.50
-Russ Ryan,1,242 Open Men,M,109.77,106.14,32,185.00,147.50,227.50,560.00
-Robert Speno,1,275 Open Men,M,124.74,123.56,38,320.00,235.00,277.50,832.49
-Ryan Girard,2,275 Open Men,M,124.74,112.49,31,207.50,305.00,275.00,787.49
-Emilio Paez,3,275 Open Men,M,124.74,124.1,27,287.50,172.50,275.00,734.99
+Charles LaMantia,1,Open Men,M,51.71,51.89,11,42.50,32.50,70.00,145.00
+Leon Sparango,1,Open Men,M,82.1,79.02,34,220.00,167.50,220.00,607.49
+Caesar Marciales,2,Open Men,M,82.1,80.47,26,142.50,87.50,175.00,404.99
+Jeff Blair,1,Open Men,M,89.81,87.54,40,182.50,142.50,185.00,510.00
+Daniel Gustafson,2,Open Men,M,89.81,87.54,39,157.50,105.00,230.00,492.50
+Mike Tronske,1,Open Men,M,99.79,97.7,43,260.00,205.00,262.50,727.49
+Jerry Tremblay,2,Open Men,M,99.79,96.71,44,262.50,182.50,265.00,709.99
+Jason Kelske,3,Open Men,M,99.79,99.06,25,227.50,182.50,290.00,699.99
+Davon Brazil,4,Open Men,M,99.79,95.62,33,215.00,182.50,282.50,679.99
+Shaun Myers,5,Open Men,M,99.79,96.16,32,192.50,150.00,227.50,569.99
+Daniel Simpson,6,Open Men,M,99.79,96.43,27,142.50,120.00,195.00,457.49
+James Campbell,7,Open Men,M,99.79,92.35,31,112.50,100.00,180.00,392.50
+Russ Ryan,1,Open Men,M,109.77,106.14,32,185.00,147.50,227.50,560.00
+Robert Speno,1,Open Men,M,124.74,123.56,38,320.00,235.00,277.50,832.49
+Ryan Girard,2,Open Men,M,124.74,112.49,31,207.50,305.00,275.00,787.49
+Emilio Paez,3,Open Men,M,124.74,124.1,27,287.50,172.50,275.00,734.99
 Mike Tronske,1,Master Men 40-49,M,99.79,97.7,43,260.00,205.00,262.50,727.49
 Mark Menslage,2,Master Men 40-49,M,124.74,115.03,42,265.00,177.50,260.00,702.49
 Dan Gilliland,3,Master Men 40-49,M,74.84,71.21,41,190.00,122.50,205.00,517.49
@@ -37,8 +37,8 @@ Lothar Vallot,3,Master Men 50-59,M,89.81,89.18,55,115.00,102.50,142.50,360.00
 Jeremy Neher,4,Master Men 50-59,M,99.79,91.08,53,115.00,72.50,137.50,325.00
 Shane O'Neill,1,Master Men 60+,M,89.81,83.82,64,182.50,122.50,190.00,495.00
 Larry Manly,2,Master Men 60+,M,82.1,78.65,71,120.00,97.50,147.50,365.00
-Bonnie Aerts,1,114 Open Women,F,51.71,50.35,48,,45.00,,45.00
-Lisa Hislop,1,181 Open Women,F,82.1,80.47,31,,50.00,,50.00
+Bonnie Aerts,1,Open Women,F,51.71,50.35,48,,45.00,,45.00
+Lisa Hislop,1,Open Women,F,82.1,80.47,31,,50.00,,50.00
 Jolene Jessie,DQ,198+ Open Women,F,89.81+,98.7,48,,-62.14,,
 Monica Sparango,1,Master Women 40-49,F,67.13,67.13,44,,120.00,,120.00
 Bonnie Aerts,2,Master Women 40-49,F,51.71,50.35,48,,45.00,,45.00
@@ -48,19 +48,19 @@ Hunter Hernandez,1,Junior Men 13-15,M,51.71,49.08,15,,60.00,,60.00
 Jonathan Hoffmann,1,Junior Men 19-23,M,109.77,109.86,19,,230.00,,230.00
 Brady Jones,2,Junior Men 19-23,M,99.79,97.61,19,,150.00,,150.00
 Brandon Castaneda,3,Junior Men 19-23,M,82.1,79.11,19,,100.00,,100.00
-Bruce Mendoza,1,198 Open Men,M,89.81,88.9,39,,220.00,,220.00
-Brandon Littlefield,2,198 Open Men,M,89.81,86.45,30,,197.50,,197.50
-Buck Drew,3,198 Open Men,M,89.81,88.63,35,,192.50,,192.50
-Anatoli Kaminsky,4,198 Open Men,M,89.81,87.82,37,,150.00,,150.00
-Hoddy Fritz,5,198 Open Men,M,89.81,82.92,41,,132.50,,132.50
-Cory Dexter,1,242 Open Men,M,109.77,108.86,33,,297.50,,297.50
-Ryan Girard,1,275 Open Men,M,124.74,112.49,31,,305.00,,305.00
-Ernie Delatorre,2,275 Open Men,M,124.74,119.57,38,,230.00,,230.00
-Dennis Reneau,3,275 Open Men,M,124.74,110.5,36,,215.00,,215.00
-Manuel Robles,4,275 Open Men,M,124.74,119.39,30,,197.50,,197.50
-Michael Borunda,DQ,275 Open Men,M,124.74,111.04,26,,-147.42,,
-Roberto Gutierrez,1,308 Open Men,M,139.71,139.89,32,,227.50,,227.50
-Alan Aerts,2,308 Open Men,M,139.71,125.55,51,,200.00,,200.00
+Bruce Mendoza,1,Open Men,M,89.81,88.9,39,,220.00,,220.00
+Brandon Littlefield,2,Open Men,M,89.81,86.45,30,,197.50,,197.50
+Buck Drew,3,Open Men,M,89.81,88.63,35,,192.50,,192.50
+Anatoli Kaminsky,4,Open Men,M,89.81,87.82,37,,150.00,,150.00
+Hoddy Fritz,5,Open Men,M,89.81,82.92,41,,132.50,,132.50
+Cory Dexter,1,Open Men,M,109.77,108.86,33,,297.50,,297.50
+Ryan Girard,1,Open Men,M,124.74,112.49,31,,305.00,,305.00
+Ernie Delatorre,2,Open Men,M,124.74,119.57,38,,230.00,,230.00
+Dennis Reneau,3,Open Men,M,124.74,110.5,36,,215.00,,215.00
+Manuel Robles,4,Open Men,M,124.74,119.39,30,,197.50,,197.50
+Michael Borunda,DQ,Open Men,M,124.74,111.04,26,,-147.42,,
+Roberto Gutierrez,1,Open Men,M,139.71,139.89,32,,227.50,,227.50
+Alan Aerts,2,Open Men,M,139.71,125.55,51,,200.00,,200.00
 Darrell Robideau,1,Master Men 40-49,M,89.81,88.36,42,,160.00,,160.00
 Alan Aerts,1,Master Men 50-59,M,139.71,125.55,51,,200.00,,200.00
 Paul Dyer,2,Master Men 50-59,M,89.81,89.27,54,,100.00,,100.00
@@ -69,25 +69,25 @@ Larry Negriff,1,Master Men 60+,M,99.79,98.16,66,,170.00,,170.00
 Danny Herrera,2,Master Men 60+,M,124.74,115.94,70,,137.50,,137.50
 Larry Manly,3,Master Men 60+,M,82.1,78.65,71,,97.50,,97.50
 Phil Crawford,4,Master Men 60+,M,124.74,115.03,62,,127.50,,127.50
-Bonnie Aerts,1,114 Open Women,F,51.71,50.35,48,,,87.50,87.50
-Lisa Hislop,1,181 Open Women,F,82.1,80.47,31,,,110.00,110.00
+Bonnie Aerts,1,Open Women,F,51.71,50.35,48,,,87.50,87.50
+Lisa Hislop,1,Open Women,F,82.1,80.47,31,,,110.00,110.00
 Jolene Jessie,DQ,198+ Open Women,F,89.81+,98.7,48,,,-99.79,
 Monica Sparango,1,Master Women 40-49,F,67.13,67.13,44,,,166.00,166.00
 Bonnie Aerts,2,Master Women 40-49,F,51.71,50.35,48,,,87.50,87.50
 Helene Tropp,DQ,Master Women 60+,F,47.63,47.26,68,,,-92.08,
 Chris Tremblay,1,Junior Men 16-18,M,82.1,79.83,18,,,190.00,190.00
 Brady Jones,1,Junior Men 19-23,M,99.79,97.61,19,,,207.50,207.50
-Dan Gilliland,1,165 Open Men,M,74.84,71.21,41,,,205.00,205.00
-Caesar Marciales,1,181 Open Men,M,82.1,80.47,26,,,175.00,175.00
-Chris Cei,1,198 Open Men,M,89.81,89.36,35,,,240.00,240.00
-Daniel Gustafson,2,198 Open Men,M,89.81,87.54,39,,,230.00,230.00
-Brandon Littlefield,3,198 Open Men,M,89.81,86.45,30,,,212.50,212.50
-Anatoli Kaminsky,4,198 Open Men,M,89.81,87.82,37,,,200.00,200.00
-Dave Willets,DQ,198 Open Men,M,89.81,89.72,43,,,-159.66,
-Adam Harris,1,220 Open Men,M,99.79,97.61,37,,,280.00,280.00
-Phil Andrews,1,275 Open Men,M,124.74,116.85,52,,,325.00,325.00
-Michael Borunda,2,275 Open Men,M,124.74,111.04,26,,,230.00,230.00
-Alan Aerts,1,308 Open Men,M,139.71,125.55,51,,,232.50,232.50
+Dan Gilliland,1,Open Men,M,74.84,71.21,41,,,205.00,205.00
+Caesar Marciales,1,Open Men,M,82.1,80.47,26,,,175.00,175.00
+Chris Cei,1,Open Men,M,89.81,89.36,35,,,240.00,240.00
+Daniel Gustafson,2,Open Men,M,89.81,87.54,39,,,230.00,230.00
+Brandon Littlefield,3,Open Men,M,89.81,86.45,30,,,212.50,212.50
+Anatoli Kaminsky,4,Open Men,M,89.81,87.82,37,,,200.00,200.00
+Dave Willets,DQ,Open Men,M,89.81,89.72,43,,,-159.66,
+Adam Harris,1,Open Men,M,99.79,97.61,37,,,280.00,280.00
+Phil Andrews,1,Open Men,M,124.74,116.85,52,,,325.00,325.00
+Michael Borunda,2,Open Men,M,124.74,111.04,26,,,230.00,230.00
+Alan Aerts,1,Open Men,M,139.71,125.55,51,,,232.50,232.50
 Jerry Tremblay,1,Master Men 40-49,M,99.79,96.71,44,,,265.00,265.00
 Mark Schultz,2,Master Men 40-49,M,67.13,64.59,49,,,187.50,187.50
 Dan Gilliland,3,Master Men 40-49,M,74.84,71.21,41,,,205.00,205.00
