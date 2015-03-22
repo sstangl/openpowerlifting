@@ -36,6 +36,14 @@ def pwarning(s):
     print >> sys.stderr, ' ' + enyellow(s)
 
 
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+
 def check_column_name(s):
     if '  ' in s:
         pwarning("Too much spacing for name: \"%s\"" % s)
@@ -97,6 +105,14 @@ def check_column_division(s):
 
     if '"' in s:
         perror("Illegal use of quote in division: %s" % s)
+
+    low = s.lower()
+
+    if 'raw' in low or 'single' in low or 'multi' in low or 'classic' in low:
+        pwarning('Division includes equipment: "%s"' % s)
+
+    if is_int(s.split()[0]):
+        pwarning('Division includes weight class: "%s"' % s)
 
 
 def check_column_equipment(s):
