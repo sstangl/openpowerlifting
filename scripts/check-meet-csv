@@ -70,9 +70,6 @@ def main(scriptname, filename):
         if text.strip() != text:
             perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
 
-        if not text:
-            pwarning("Empty column")
-
         # 0th entry: Federation
         if i == 0:
             if not text in KnownFederations:
