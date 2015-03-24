@@ -48,10 +48,9 @@ def check_column_name(s):
     if '  ' in s:
         pwarning("Too much spacing for name: \"%s\"" % s)
 
-    if s[0] is '"':
-        pwarning("Name wrapped by quotes: %s" % s)
-
-    special_legal_chars = ' "\'.-'
+    # Disallow " in all circumstances: we already have to allow ',
+    # so just use that for quotes.
+    special_legal_chars = ' \'.-'
 
     # This only works for names written in English, but that's OK for now.
     has_illegal_char = False
