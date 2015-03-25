@@ -205,6 +205,7 @@ HeaderHandlers = {
     # Columns that we totally ignore but aren't bad to keep around.
     'Team': ignore_column,
     'Country-State': ignore_column,
+    'Country': ignore_column,
     'College/University': ignore_column,
     'School': ignore_column,
 }

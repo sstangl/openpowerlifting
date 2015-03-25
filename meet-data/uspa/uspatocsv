@@ -318,6 +318,10 @@ def csv_integrate_divisions(csv):
         if 'DIVISION:' in csv[k][0]:
             division = csv[k][0][len('DIVISION:'):]
 
+            # Edit: Don't format division here, because it messes up
+            # the equipment extraction in the later function.
+            # Instead, use scripts/fix-division.
+            """
             # Try to remove some common formatting stuff from the division name.
             division = division.replace("(Wilks formula)", '')
             if "Open Men" in division:
@@ -325,6 +329,7 @@ def csv_integrate_divisions(csv):
             if "Open Women" in division:
                 division = "Open Women"
             division = division.strip()
+            """
 
         # Otherwise, this is either a row for results, or a 4ths row.
         # Rows for results have names, so check for a name.
