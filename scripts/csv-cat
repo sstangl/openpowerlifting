@@ -39,6 +39,16 @@ for filename in sys.argv[1:]:
 
         csv.append(build)
 
+# Every row needs the same number of columns.
+numcols = len(csv[0])
+for row in csv[1:]:
+    diff = numcols - len(row)
+    if (diff < 0):
+        sys.exit('Row has too many columns: %s' % ','.join(row))
+
+    for k in xrange(0, diff):
+        row.append('')
+
 # Final output.
 for row in csv:
     print ','.join(row)
