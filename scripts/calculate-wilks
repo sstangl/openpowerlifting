@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Calculates the Wilks column of the provided CSV.
+#
+# Overwrites the input file in-place.
+#
+
+import sys
+
+if len(sys.argv) < 2:
+    print >> sys.stderr, ' Usage: %s csv' % sys.argv[0]
+    sys.exit(1)
+
+filename = sys.argv[1]
+with open(filename, 'r') as fd:
+    csv = [x.strip().split(',') for x in fd.readlines()]
+
+headers = csv[0]
+
+# Certain columns have to exist for Wilks to be calculable.
+for col in ['Sex', 'BodyweightKg', 'TotalKg']:
+    if not col in headers:
+        print >> sys.stderr, ' Missing necessary column: %s' % col
+        sys.exit(1)
+
+# If a Wilks column doesn't exist currently, we can just create it.
+if not 'Wilks' in headers:
+    for row in csv:
+        row.append('')
+    row[0][-1] = 'Wilks'
+
+indexSex = headers.index('Sex')
+indexBodyweight = headers.index('BodyweightKg')
+indexTotal = headers.index('TotalKg')
+indexWilks = headers.index('Wilks')
+
+def wilksCoeff(a, b, c, d, e, f, x):
+    return 500 / (a + b*x + c*x**2 + d*x**3 + e*x**4 + f*x**5)
+
+def wilksCoeffMen(x): # Where x is BodyweightKg.
+    a = -216.0475144
+    b = 16.2606339
+    c = -0.002388645
+    d = -0.00113732
+    e = 7.01863E-06
+    f = -1.291E-08
+    return wilksCoeff(a, b, c, d, e, f, x)
+
+def wilksCoeffWomen(x): # Where x is BodyweightKg.
+    a = 594.31747775582
+    b = -27.23842536447
+    c = 0.82112226871
+    d = -0.00930733913
+    e = 0.00004731582
+    f = -0.00000009054
+    return wilksCoeff(a, b, c, d, e, f, x)
+
+def to_string(f):
+    try:
+        return "{:.2f}".format(f)
+    except ValueError:
+        print >> sys.stderr, "Field not a float: %f" % f
+        sys.exit(1)
+
+for row in csv[1:]:
+    # Skip any rows that already contain data from the federation.
+    if row[indexWilks]:
+        continue
+
+    sex = row[indexSex]
+    bodyweight = row[indexBodyweight]
+    total = row[indexTotal]
+
+    if not sex in ['M', 'F']:
+        continue
+
+    if not bodyweight:
+        continue
+    bodyweight = float(bodyweight)
+
+    if not total:
+        continue
+    total = float(total)
+
+    # Add the Wilks score to the row.
+    coeff = wilksCoeffMen(bodyweight) if sex is 'M' else wilksCoeffWomen(bodyweight)
+    wilks = total * coeff
+
+    row[indexWilks] = to_string(wilks)
+
+# Final output.
+lines = [','.join(row) + "\n" for row in csv]
+with open(sys.argv[1], 'w') as fd:
+    fd.writelines(lines)
