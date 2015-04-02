@@ -2,6 +2,7 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Calculates the Wilks column of the provided CSV.
+# New! Also calculates age-adjusted Wilks!
 #
 # Overwrites the input file in-place.
 #
@@ -19,7 +20,8 @@ with open(filename, 'r') as fd:
 headers = csv[0]
 
 # Certain columns have to exist for Wilks to be calculable.
-for col in ['Sex', 'BodyweightKg', 'TotalKg']:
+# Age is for the McCulloch/Foster total, but we'll include it.
+for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
     if not col in headers:
         print >> sys.stderr, ' Missing necessary column: %s' % col
         sys.exit(1)
@@ -28,12 +30,20 @@ for col in ['Sex', 'BodyweightKg', 'TotalKg']:
 if not 'Wilks' in headers:
     for row in csv:
         row.append('')
-    row[0][-1] = 'Wilks'
+    csv[0][-1] = 'Wilks'
+
+# If a McCulloch column doesn't exist currently, we can just create it.
+if not 'McCulloch' in headers:
+    for row in csv:
+        row.append('')
+    csv[0][-1] = 'McCulloch'
 
 indexSex = headers.index('Sex')
+indexAge = headers.index('Age')
 indexBodyweight = headers.index('BodyweightKg')
 indexTotal = headers.index('TotalKg')
 indexWilks = headers.index('Wilks')
+indexMcCulloch = headers.index('McCulloch')
 
 def wilksCoeff(a, b, c, d, e, f, x):
     return 500 / (a + b*x + c*x**2 + d*x**3 + e*x**4 + f*x**5)
@@ -56,12 +66,93 @@ def wilksCoeffWomen(x): # Where x is BodyweightKg.
     f = -0.00000009054
     return wilksCoeff(a, b, c, d, e, f, x)
 
+# This is a combinator of the Foster age coefficient for Juniors
+# and the McCulloch age coefficient for Masters.
+# These coefficients are the same for men and women.
+def ageCoeff(age): # Where age is an integer
+    # These coefficients don't actually exist, and are just low-balled best guesses.
+    # Kids really shouldn't be competing in this sport...
+    if age is  8: return 1.55
+    if age is  9: return 1.49
+    if age is 10: return 1.43
+    if age is 11: return 1.38
+    if age is 12: return 1.33
+    if age is 13: return 1.28
+
+    # Foster coefficients:
+    # http://www.usapl-sd.com/Formulas/Foster.htm
+    if age is 14: return 1.23
+    if age is 15: return 1.18
+    if age is 16: return 1.13
+    if age is 17: return 1.08
+    if age is 18: return 1.06
+    if age is 19: return 1.04
+    if age is 20: return 1.03
+    if age is 21: return 1.02
+    if age is 22: return 1.01
+
+    # 23-40 don't receive a handicap.
+    if age > 22 and age < 41: return 1.00
+
+    # McCulloch coefficients:
+    # http://www.usapl-sd.com/Formulas/Mcculloch.htm
+    if age is 41: return 1.01
+    if age is 42: return 1.02
+    if age is 43: return 1.031
+    if age is 44: return 1.043
+    if age is 45: return 1.055
+    if age is 46: return 1.068
+    if age is 47: return 1.082
+    if age is 48: return 1.097
+    if age is 49: return 1.113
+    if age is 50: return 1.130
+    if age is 51: return 1.147
+    if age is 52: return 1.165
+    if age is 53: return 1.184
+    if age is 54: return 1.204
+    if age is 55: return 1.225
+    if age is 56: return 1.246
+    if age is 57: return 1.258
+    if age is 58: return 1.292
+    if age is 59: return 1.315
+    if age is 60: return 1.340
+    if age is 61: return 1.366
+    if age is 62: return 1.393
+    if age is 63: return 1.421
+    if age is 64: return 1.450
+    if age is 65: return 1.480
+    if age is 66: return 1.511
+    if age is 67: return 1.543
+    if age is 68: return 1.578
+    if age is 69: return 1.610
+    if age is 70: return 1.645
+    if age is 71: return 1.681
+    if age is 72: return 1.718
+    if age is 73: return 1.756
+    if age is 74: return 1.795
+    if age is 75: return 1.835
+    if age is 76: return 1.876
+    if age is 77: return 1.918
+    if age is 78: return 1.961
+    if age is 79: return 2.005
+    if age is 80: return 2.050
+
+    print >> sys.stderr, "Missing age coefficient for age %d" % age
+    sys.exit(1)
+
 def to_string(f):
     try:
         return "{:.2f}".format(f)
     except ValueError:
         print >> sys.stderr, "Field not a float: %f" % f
         sys.exit(1)
+
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
 
 for row in csv[1:]:
     # Skip any rows that already contain data from the federation.
@@ -86,8 +177,15 @@ for row in csv[1:]:
     # Add the Wilks score to the row.
     coeff = wilksCoeffMen(bodyweight) if sex is 'M' else wilksCoeffWomen(bodyweight)
     wilks = total * coeff
-
     row[indexWilks] = to_string(wilks)
+
+    # Calculate the age-adusted score.
+    age = row[indexAge]
+    if not is_int(age):
+        continue
+    age = int(age)
+
+    row[indexMcCulloch] = to_string(wilks * ageCoeff(age))
 
 # Final output.
 lines = [','.join(row) + "\n" for row in csv]
