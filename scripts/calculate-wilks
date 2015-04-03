@@ -168,9 +168,12 @@ def is_int(s):
         return False
 
 for row in csv[1:]:
-    # TODO: We still want to calculate McCulloch points...
     # Skip any rows that already contain data from the federation.
-    if not row[indexWilks]:
+    if row[indexWilks]:
+        # Calculate McCulloch points even if the Wilks is provided.
+        # TODO: Check that the Wilks is actually correct!
+        if is_int(row[indexAge]):
+            row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(row[indexAge])))
         continue
 
     sex = row[indexSex]
