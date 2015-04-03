@@ -181,11 +181,11 @@ for row in csv[1:]:
 
     # Calculate the age-adusted score.
     age = row[indexAge]
-    if not is_int(age):
-        continue
-    age = int(age)
-
-    row[indexMcCulloch] = to_string(wilks * ageCoeff(age))
+    if is_int(age):
+        row[indexMcCulloch] = to_string(wilks * ageCoeff(int(age)))
+    else:
+        # Better than just leaving it blank, when we have some data.
+        row[indexMcCulloch] = row[indexWilks]
 
 # Final output.
 lines = [','.join(row) + "\n" for row in csv]
