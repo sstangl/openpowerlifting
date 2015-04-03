@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Remove columns with names matching a regexp from a file.
-# The first row must contain column names.
+# Remove columns with names from the provided list.
+# The first row of the csvfile must contain column names.
 #
 # Overwrites the input file.
 #
@@ -10,12 +10,12 @@
 import sys
 import re
 
-if len(sys.argv) != 3:
-    print >> sys.stderr, ' Usage: %s csvfile regexp'
+if len(sys.argv) < 3:
+    print >> sys.stderr, ' Usage: %s csvfile col1 col2 ...'
     sys.exit(1)
 
-(scriptname, csvname, regexp) = sys.argv
-pattern = re.compile(regexp)
+csvname = sys.argv[1]
+columnsToRemove = sys.argv[2:]
 
 with open(csvname) as fd:
     csv = [x.strip().split(',') for x in fd.readlines()]
@@ -24,7 +24,7 @@ while True:
     more_to_modify = False
 
     for i, header in enumerate(csv[0]):
-        if pattern.match(header):
+        if header in columnsToRemove:
             more_to_modify = True
             break
 

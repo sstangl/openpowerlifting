@@ -11,6 +11,7 @@ builddir:
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
 	find '${DATADIR}' -name lifters.csv -print0 | xargs -0 'scripts/csv-cat' > "${BUILDDIR}/openpowerlifting.csv"
+	scripts/csv-rmcol "${BUILDDIR}/openpowerlifting.csv" Team School Country-State Country College/University Category State
 	scripts/calculate-wilks "${BUILDDIR}/openpowerlifting.csv"
 
 # Make sure that all the fields in the CSV files are in expected formats.
