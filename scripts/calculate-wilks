@@ -137,6 +137,19 @@ def ageCoeff(age): # Where age is an integer
     if age is 79: return 2.005
     if age is 80: return 2.050
 
+    # These coefficients taken from:
+    # http://www.usapltwinportsrawopen.com/resources/USAPL+Age+Coefficients.pdf
+    if age is 81: return 2.096
+    if age is 82: return 2.143
+    if age is 83: return 2.190
+    if age is 84: return 2.238
+    if age is 85: return 2.287
+    if age is 86: return 2.337
+    if age is 87: return 2.388
+    if age is 88: return 2.440
+    if age is 89: return 2.494
+    if age is 90: return 2.549
+
     print >> sys.stderr, "Missing age coefficient for age %d" % age
     sys.exit(1)
 
@@ -155,8 +168,9 @@ def is_int(s):
         return False
 
 for row in csv[1:]:
+    # TODO: We still want to calculate McCulloch points...
     # Skip any rows that already contain data from the federation.
-    if row[indexWilks]:
+    if not row[indexWilks]:
         continue
 
     sex = row[indexSex]
