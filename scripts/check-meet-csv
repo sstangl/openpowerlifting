@@ -61,11 +61,19 @@ def main(scriptname, filename):
     with open(filename) as fd:
         csv = [x.strip().split(',') for x in fd.readlines()]
 
-    if len(csv) > 1:
-        perror("Meet file contains multiple lines")
+    if len(csv) != 2:
+        perror("Meet file contains incorrect number of lines")
 
-    row = csv[0]
-    if len(row) != 8:
+    fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
+    if len(fields) != len(csv[0]):
+        perror("Incorrect number of fields")
+
+    for i in xrange(0, len(fields)):
+        if fields[i] != csv[0][i]:
+            perror("Field %u must be %s" % (i, fields[i]))
+
+    row = csv[1]
+    if len(row) != 6:
         perror("Meet file has incorrect number of columns")
 
     for i, text in enumerate(row):
@@ -77,23 +85,13 @@ def main(scriptname, filename):
             if not text in KnownFederations:
                 perror("Unknown federation (add to check-meet-csv?): \"%s\"" % text)
 
-        # 1th entry: Year
+        # 1st entry: Date
         if i == 1:
-            if len(text) != 4:
-                perror("Year must be 4 digits: \"%s\"" % text)
-            if not is_number(text):
-                perror("Year field must be a number: \"%s\"" % text)
+            if len(text) != 10 or text[4] != '-' or text[7] != '-':
+                perror("Date in wrong format: \"%s\"" % text)
 
-        # 2nd and 3rd entries: Month and Day, both always 2 digits
-        if i == 2 or i == 3:
-            fieldname = "Month" if i == 2 else "Day"
-            if len(text) != 2:
-                perror("%s must be 2 digits: \"%s\"" % (fieldname, text))
-            if not is_number(text):
-                perror("%s field must be a number: \"%s\"" % (fieldname, text))
-
-        # 4th, 5th, and 6th entries: country, state (or whatever), city
-        if i == 4 or i == 5 or i == 6:
+        # 2nd, 3rd, and 4th entries: country, state (or whatever), city
+        if i == 2 or i == 3 or i == 4:
             found_illegal_char = False
             for c in text:
                 if not c.isalpha() and not c in ' -.\'':
@@ -103,8 +101,8 @@ def main(scriptname, filename):
             if found_illegal_char:
                 perror("Illegal character in: \"%s\"" % text)
 
-        # 7th entry: Free-form name of competition
-        if i == 7:
+        # 5th entry: Free-form name of competition
+        if i == 5:
             found_illegal_char = False
             for c in text:
                 if not c.isalnum() and not c in ' -.\'/&':
