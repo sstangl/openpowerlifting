@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Calculates the Wilks column of the provided CSV.
@@ -10,7 +10,7 @@
 import sys
 
 if len(sys.argv) < 2:
-    print >> sys.stderr, ' Usage: %s csv' % sys.argv[0]
+    print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
     sys.exit(1)
 
 filename = sys.argv[1]
@@ -23,7 +23,7 @@ headers = csv[0]
 # Age is for the McCulloch/Foster total, but we'll include it.
 for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
     if not col in headers:
-        print >> sys.stderr, ' Missing necessary column: %s' % col
+        print(' Missing necessary column: %s' % col, file=sys.stderr)
         sys.exit(1)
 
 # If a Wilks column doesn't exist currently, we can just create it.
@@ -150,14 +150,14 @@ def ageCoeff(age): # Where age is an integer
     if age is 89: return 2.494
     if age is 90: return 2.549
 
-    print >> sys.stderr, "Missing age coefficient for age %d" % age
+    print("Missing age coefficient for age %d" % age, file=sys.stderr)
     sys.exit(1)
 
 def to_string(f):
     try:
         return "{:.2f}".format(f)
     except ValueError:
-        print >> sys.stderr, "Field not a float: %f" % f
+        print("Field not a float: %f" % f, file=sys.stderr)
         sys.exit(1)
 
 def is_int(s):

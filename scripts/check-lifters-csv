@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Simple check script for lifters.csv files.
@@ -24,16 +24,16 @@ def print_filename_once():
     # This completely breaks the main() abstraction, but whatever.
     global havePrintedFilename
     if not havePrintedFilename:
-        print >> sys.stderr, sys.argv[1]
+        print(sys.argv[1], file=sys.stderr)
         havePrintedFilename = True
 
 def perror(s):
     print_filename_once()
-    print >> sys.stderr, ' ' + redden(s)
+    print(' ' + redden(s), file=sys.stderr)
 
 def pwarning(s):
     print_filename_once()
-    print >> sys.stderr, ' ' + enyellow(s)
+    print(' ' + enyellow(s), file=sys.stderr)
 
 
 def is_int(s):
@@ -326,8 +326,8 @@ def main(scriptname, filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print sys.argv
-        print >> stderr, " Usage: %s lifters.csv" % sys.argv[0]
+        print(sys.argv)
+        print(" Usage: %s lifters.csv" % sys.argv[0], file=sys.stderr)
         sys.exit(1)
 
     main(sys.argv[0], sys.argv[1])

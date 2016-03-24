@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Sometimes divisions look like '198 Open Men RAW'
@@ -14,14 +14,14 @@ with open(sys.argv[1], 'r') as fd:
 divindex = -1
 equipindex = -1
 
-for i in xrange(0, len(csv[0])):
+for i in range(0, len(csv[0])):
     if csv[0][i] == 'Division':
         divindex = i
     if csv[0][i] == 'Equipment':
         equipindex = i
 
 if divindex == -1:
-    print "Missing division"
+    print("Missing division")
     sys.exit(1)
 
 def is_int(x):
@@ -61,7 +61,7 @@ for row in csv[1:]:
 
     if row[divindex] != div and equipindex == -1:
         if row[equipindex] == '':
-            print "Need equipment information"
+            print("Need equipment information")
             sys.exit(1)
 
     div = div.replace('SHW','')

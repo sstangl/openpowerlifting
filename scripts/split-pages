@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Given a file converted by pdf2txt, which therefore has pages
@@ -10,7 +10,7 @@
 import sys
 
 if len(sys.argv) != 2:
-    print >> sys.stderr, ' Usage: %s results.txt' % sys.argv[0]
+    print(' Usage: %s results.txt' % sys.argv[0], file=sys.stderr)
     sys.exit(1)
 
 with open(sys.argv[1], 'r') as fd:
