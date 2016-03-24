@@ -21,3 +21,4 @@ check:
 
 clean:
 	rm -rf '${BUILDDIR}'
+	rm -rf 'scripts/__pycache__'

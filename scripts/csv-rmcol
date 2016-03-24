@@ -7,8 +7,8 @@
 # Overwrites the input file.
 #
 
+from csv import Csv
 import sys
-import re
 
 if len(sys.argv) < 3:
     print(' Usage: %s csvfile col1 col2 ...', file=sys.stderr)
@@ -17,24 +17,9 @@ if len(sys.argv) < 3:
 csvname = sys.argv[1]
 columnsToRemove = sys.argv[2:]
 
-with open(csvname) as fd:
-    csv = [x.strip().split(',') for x in fd.readlines()]
-
-while True:
-    more_to_modify = False
-
-    for i, header in enumerate(csv[0]):
-        if header in columnsToRemove:
-            more_to_modify = True
-            break
-
-    if not more_to_modify:
-        break
-
-    for row in csv:
-        del row[i]
-
-lines = [','.join(row) + "\n" for row in csv]
+csv = Csv(csvname)
+for column in columnsToRemove:
+    csv.remove_column_by_name(column)
 
 with open(csvname, 'w') as fd:
-    fd.writelines(lines)
+    csv.write_to(fd)
