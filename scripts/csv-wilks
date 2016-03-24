@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Calculates the Wilks column of the provided CSV.
+# New! Also calculates age-adjusted Wilks!
+#
+# Overwrites the input file in-place.
+#
+
+import sys
+from wilks import wilks,mcculloch,ageCoeff
+
+if len(sys.argv) < 2:
+    print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
+    sys.exit(1)
+
+filename = sys.argv[1]
+with open(filename, 'r') as fd:
+    csv = [x.strip().split(',') for x in fd.readlines()]
+
+headers = csv[0]
+
+# Certain columns have to exist for Wilks to be calculable.
+# Age is for the McCulloch/Foster total, but we'll include it.
+for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
+    if not col in headers:
+        print(' Missing necessary column: %s' % col, file=sys.stderr)
+        sys.exit(1)
+
+# If a Wilks column doesn't exist currently, we can just create it.
+if not 'Wilks' in headers:
+    for row in csv:
+        row.append('')
+    csv[0][-1] = 'Wilks'
+
+# If a McCulloch column doesn't exist currently, we can just create it.
+if not 'McCulloch' in headers:
+    for row in csv:
+        row.append('')
+    csv[0][-1] = 'McCulloch'
+
+indexSex = headers.index('Sex')
+indexAge = headers.index('Age')
+indexBodyweight = headers.index('BodyweightKg')
+indexTotal = headers.index('TotalKg')
+indexWilks = headers.index('Wilks')
+indexMcCulloch = headers.index('McCulloch')
+
+def to_string(f):
+    try:
+        return "{:.2f}".format(f)
+    except ValueError:
+        print("Field not a float: %f" % f, file=sys.stderr)
+        sys.exit(1)
+
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+for row in csv[1:]:
+    # Skip any rows that already contain data from the federation.
+    if row[indexWilks]:
+        # Calculate McCulloch points even if the Wilks is provided.
+        # TODO: Check that the Wilks is actually correct!
+        if is_int(row[indexAge]):
+            row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(row[indexAge])))
+        continue
+
+    sex = row[indexSex]
+    bodyweight = row[indexBodyweight]
+    total = row[indexTotal]
+
+    if not sex in ['M', 'F']:
+        continue
+
+    if not bodyweight:
+        continue
+    bodyweight = float(bodyweight)
+
+    if not total:
+        continue
+    total = float(total)
+
+    # Add the Wilks score to the row.
+    score = wilks(sex is 'M', bodyweight, total)
+    row[indexWilks] = to_string(score)
+
+    # Calculate the age-adusted score.
+    age = row[indexAge]
+    if is_int(age):
+        row[indexMcCulloch] = to_string(mcculloch(sex is 'M', int(age), bodyweight, total))
+    else:
+        # Better than just leaving it blank, when we have some data.
+        row[indexMcCulloch] = row[indexWilks]
+
+# Final output.
+lines = [','.join(row) + "\n" for row in csv]
+with open(sys.argv[1], 'w') as fd:
+    fd.writelines(lines)

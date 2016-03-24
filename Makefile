@@ -17,7 +17,7 @@ csvfile: builddir
 	find '${DATADIR}' -name meet.csv -print0 | xargs -0 'scripts/csv-cat' > "${BUILDDIR}/${MEETFILE}"
 	find '${DATADIR}' -name lifters.csv -print0 | xargs -0 'scripts/csv-cat' > "${BUILDDIR}/${PLFILE}"
 	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" Team School Country-State Country College/University Category State
-	scripts/calculate-wilks "${BUILDDIR}/${PLFILE}"
+	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
 web: csvfile
 	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "${BUILDDIR}/${JSFILE}"
