@@ -11,6 +11,7 @@
 #
 
 import sys
+import wilks
 
 def redden(s):
     return "\033[1;31m" + s + "\033[0;m"
@@ -224,6 +225,11 @@ def check_headers(headers):
     if not 'Sex' in headers:
         perror('There must be a Sex column.')
 
+    if 'Wilks' in headers and not 'TotalKg' in headers:
+        perror('Wilks requires a TotalKg column.')
+    if 'Wilks' in headers and not 'BodyweightKg' in headers:
+        perror('Wilks requires a BodyweightKg for exact bodyweight.')
+
     # Not requiring the Event header yet, although it's probably a good idea.
     #if not 'Event' in headers:
     #    perror('There must be an Event column.')
@@ -295,10 +301,79 @@ def check_row_weightclass_consistency(row, headers):
         pass
 
 
+def check_row_total_consistency(row, headers):
+    if not 'TotalKg' in headers:
+        return
+
+    def float2(s):
+        if s == '':
+            return 0.0
+        return float(s)
+
+    total = float2(row[headers.index('TotalKg')])
+    squat = float2(row[headers.index('BestSquatKg')]) if 'BestSquatKg' in headers else 0
+    bench = float2(row[headers.index('BestBenchKg')]) if 'BestBenchKg' in headers else 0
+    deadl = float2(row[headers.index('BestDeadliftKg')]) if 'BestDeadliftKg' in headers else 0
+
+    if total < 0 or squat < 0 or bench < 0 or deadl < 0:
+        return # Lifter bombed out of the meet.
+
+    if total == 0:
+        return # Disqualified, didn't finish the meet, etc.
+
+    # Most federations round to 0.01, so rounding errors get introduced.
+    # Only flag the ones that are obviously wrong, otherwise, believe the federation.
+    if abs(squat + bench + deadl - total) > 0.5:
+        perror("Total error: Calculated %f, but meet says %f" % (squat+bench+deadl, total))
+
+
+# Federations calculate Wilks themselves, but have errors.
+# From stupid things like using the wrong units.
+def check_row_wilks_consistency(row, headers):
+    if not 'Wilks' in headers:
+        return
+    if not 'BodyweightKg' in headers:
+        return
+    if not 'TotalKg' in headers:
+        return
+    if not 'Sex' in headers:
+        return
+
+    def float2(s):
+        if s == '':
+            return 0.0
+        return float(s)
+
+    total = float2(row[headers.index('TotalKg')])
+    bodyweight = float2(row[headers.index('BodyweightKg')])
+    sex = row[headers.index('Sex')]
+    score = float2(row[headers.index('Wilks')])
+
+    if score > 0:
+        if total <= 0:
+            perror("Wilks given but missing TotalKg in row.")
+        if bodyweight <= 0:
+            perror("Wilks given but missing BodyweightKg in row.")
+        if sex == '':
+            perror("Wilks given but missing Sex in row.")
+
+    if total <= 0 or bodyweight <= 0 or sex == '' or score <= 0:
+        return
+
+    calculated_score = wilks.wilks(sex == 'M', bodyweight, total)
+
+    # Federations induce a lot of rounding error, so believe them unless
+    # it's pretty egregiously wrong.
+    if abs(calculated_score - score) > 0.5:
+        perror("Wilks error: Calculated %f, but meet says %f" % (calculated_score, score))
+
+
 def check_row(row, headers):
     check_row_name_consistency(row, headers)
     check_row_event_consistency(row, headers)
     check_row_weightclass_consistency(row, headers)
+    check_row_total_consistency(row, headers)
+    check_row_wilks_consistency(row, headers)
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
