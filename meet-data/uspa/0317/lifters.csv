@@ -2,8 +2,8 @@ Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,BestSquat
 Amber Jones,1,Open Women,F,Raw,OH,67.13,61.23,32,90,52.5,115,257.5,282.603
 Theresa Hayes,1,Open Women,F,Raw,OH,89.81+,96.52,32,130,75,142.5,347.5,292.532
 Ben Steinhauer,1,Junior Men 20-23,M,Raw,OH,82.10,79.74,23,182.5,120,227.5,530,362.569
-Daniel Scheufler,2,Junior Men 20-23,M,Raw,OH,82.10,77.56,21,137.5,87.5,155,380,269.953
-Matt Wyborski,1,Junior Men 20-23,M,Raw,OH,99.79,97.98,22,157.5,87.5,160,405,251.038
+Daniel Scheufler,2,Junior Men 20-23,M,Raw,OH,82.10,77.56,21,137.5,87.5,155,380,264.67
+Matt Wyborski,1,Junior Men 20-23,M,Raw,OH,99.79,97.98,22,157.5,87.5,160,405,248.55
 Sung Kim,1,Open Men,M,Raw,OH,55.79,55.79,24,147.5,110,172.5,430,392.876
 Eric Chapman,1,Open Men,M,Raw,IL,82.10,80.29,21,185,110,227.5,522.5,355.909
 Matthew Swartout,1,Open Men,M,Raw,OH,89.81,88.00,31,200,150,260,610,394.005
@@ -14,11 +14,11 @@ Brian Robert,2,Open Men,M,Raw,OH,99.79,98.43,30,192.5,145,240,577.5,353.734
 Courtney Church,1,Open Men,M,Raw,OH,109.77,105.60,28,250,172.5,310,732.5,436.845
 Jeff Johnston,2,Open Men,M,Raw,MI,109.77,107.73,35,220,190,247.5,657.5,389.495
 Richard Acuna,3,Open Men,M,Raw,MI,109.77,105.14,28,192.5,135,260,587.5,350.895
-Jeff Johnston,1,Submaster Men 35-39,M,Raw,MI,109.77,107.73,35,220,190,247.5,657.5,393.39
-Tom Hole,1,Master Men 45-49,M,Raw,OH,99.79,92.53,48,135,100,205,440,303.942
+Jeff Johnston,1,Submaster Men 35-39,M,Raw,MI,109.77,107.73,35,220,190,247.5,657.5,389.49
+Tom Hole,1,Master Men 45-49,M,Raw,OH,99.79,92.53,48,135,100,205,440,277.07
 Glen Beddies,1,Master Men 40-44,M,Raw,OH,99.79,92.99,40,165,105,160,430,270.139
-Jamonah Nazario,1,Submaster Women 35-39,F,Wraps,OH,89.81+,102.06,39,122.5,67.5,142.5,332.5,289.006
-Garrett Peterson,1,Junior Men 20-23,M,Wraps,CA,67.13,64.41,21,142.5,92.5,182.5,417.5,341.239
+Jamonah Nazario,1,Submaster Women 35-39,F,Wraps,OH,89.81+,102.06,39,122.5,67.5,142.5,332.5,275.24
+Garrett Peterson,1,Junior Men 20-23,M,Wraps,CA,67.13,64.41,21,142.5,92.5,182.5,417.5,334.55
 Matthew Teijido,1,Junior Men 20-23,M,Wraps,IL,99.79,94.80,23,230,167.5,230,627.5,390.692
 Josh Combs,1,Junior Men 20-23,M,Wraps,IN,124.74,123.38,23,365,192.5,320,877.5,501.395
 Luke Starnes,1,Open Men,M,Wraps,OH,67.13,66.59,25,192.5,137.5,210,540,420.942
@@ -41,21 +41,21 @@ Joshua Shaffer,4,Open Men,M,Wraps,OH,124.74,118.39,29,210,115,220,545,314.339
 Todd Curtis,1,Open Men,M,Wraps,IA,139.71,128.28,50,235,112.5,232.5,580,328.847
 Ryan Clark,DQ,Open Men,M,Wraps,IN,139.71+,146.06,39,-300,197.5,272.5,,
 Ryan Clark,DQ,Submaster Men 35-39,M,Wraps,IN,139.71+,146.06,39,-300,197.5,272.5,,
-Willis McCoy,1,Master Men 45-49,M,Wraps,OH,67.13,66.59,45,172.5,115,205,492.5,405.03
-Brad Bishop,1,Master Men 50-54,M,Wraps,OH,89.81,89.81,50,240,170,282.5,692.5,500.091
-Jerry Wells,1,Master Men 70-74,M,Wraps,OH,89.81,88.90,71,145,110,162.5,417.5,450.869
-Todd Curtis,1,Master Men 50-54,M,Wraps,IA,139.71,128.14,50,235,112.5,232.5,580,371.671
-Chris Bomar,1,Junior Men 18-19,M,Single-ply,OH,82.10,80.29,19,197.5,120,197.5,515,364.832
+Willis McCoy,1,Master Men 45-49,M,Wraps,OH,67.13,66.59,45,172.5,115,205,492.5,383.91
+Brad Bishop,1,Master Men 50-54,M,Wraps,OH,89.81,89.81,50,240,170,282.5,692.5,442.56
+Jerry Wells,1,Master Men 70-74,M,Wraps,OH,89.81,88.90,71,145,110,162.5,417.5,268.22
+Todd Curtis,1,Master Men 50-54,M,Wraps,IA,139.71,128.14,50,235,112.5,232.5,580,328.91
+Chris Bomar,1,Junior Men 18-19,M,Single-ply,OH,82.10,80.29,19,197.5,120,197.5,515,350.79
 Chris Bomar,1,Open Men,M,Single-ply,OH,82.10,80.29,19,197.5,120,197.5,515,350.8
 Douglas Nostrant,1,Open Men,M,Single-ply,OH,89.81,89.27,46,250,175,185,610,391.055
 Jason Schauer,DQ,Open Men,M,Single-ply,OH,109.77,103.87,34,247.5,165,-227.5,,
-Douglas Nostrant,1,Master Men 45-49,M,Single-ply,OH,89.81,89.27,46,250,175,185,610,417.646
-Randy Naccarato,1,Master Men 50-54,M,Single-ply,IN,109.77,109.32,52,160,157.5,250,567.5,389.825
+Douglas Nostrant,1,Master Men 45-49,M,Single-ply,OH,89.81,89.27,46,250,175,185,610,391.05
+Randy Naccarato,1,Master Men 50-54,M,Single-ply,IN,109.77,109.32,52,160,157.5,250,567.5,334.61
 Matt Maloney,1,Open Men,M,Raw,OH,82.10,80.74,29,,122.5,,122.5,83.15
 Gerard McWhorter,1,Open Men,M,Raw,OH,139.71+,148.32,27,,242.5,,242.5,134.386
 Ryan Stone,2,Open Men,M,Raw,OH,139.71+,172.37,25,,205,,205,111.098
-Trace Conner,1,Master Men 50-54,M,Raw,IN,89.81,88.81,52,,180,,180,134.789
-Jerry Wells,1,Master Men 70-74,M,Raw,OH,89.81,88.90,71,,110,,110,118.792
+Trace Conner,1,Master Men 50-54,M,Raw,IN,89.81,88.81,52,,180,,180,115.70
+Jerry Wells,1,Master Men 70-74,M,Raw,OH,89.81,88.90,71,,110,,110,70.67
 Matt Hauser,DQ,Open Men,M,Single-ply,IL,139.71+,140.52,30,,-370,,,
-Martin Montgomery,1,Masters Men 70-74,M,Raw,IN,82.10,78.38,71,,,190,190,220.922
-Trace Conner,1,Master Men 50-54,M,Raw,IN,89.81,88.81,52,,,250,250,187.208
+Martin Montgomery,1,Masters Men 70-74,M,Raw,IN,82.10,78.38,71,,,190,190,131.42
+Trace Conner,1,Master Men 50-54,M,Raw,IN,89.81,88.81,52,,,250,250,160.70
