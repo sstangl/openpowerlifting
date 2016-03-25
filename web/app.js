@@ -34,7 +34,7 @@ function makeentry(row) {
 (function () {
     var indices = db_make_indices_list();
     indices = db_filter(indices, function(row) { return row[EQUIPMENT] == "Raw"; });
-    indices = db_sort_numeric_maxfirst(indices, MCCULLOCH);
+    indices = db_sort_numeric_maxfirst(indices, WILKS);
     indices = db_uniq_lifter(indices);
 
     var html = "<table>";
