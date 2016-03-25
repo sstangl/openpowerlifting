@@ -34,7 +34,7 @@ function makeentry(row) {
 (function () {
     var indices = db_make_indices_list();
     indices = db_filter(indices, function(row) { return row[EQUIPMENT] == "Raw"; });
-    indices = db_sort_maxfirst(indices, MCCULLOCH);
+    indices = db_sort_numeric_maxfirst(indices, MCCULLOCH);
     indices = db_uniq_lifter(indices);
 
     var html = "<table>";
@@ -50,7 +50,7 @@ function makeentry(row) {
     html += "<td>Wilks</td>";
     html += "<td>McCulloch</td>";
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < indices.length; i++) {
         var row = opldb[indices[i]];
         html += makeentry(row);
     }

@@ -19,13 +19,29 @@ function db_filter(indices, rowcmpfn) {
 }
 
 
-function db_sort_minfirst(indices, colidx) {
-    indices.sort(function (a, b) { return opldb[a][colidx] - opldb[b][colidx]; });
+function db_sort_numeric_minfirst(indices, colidx) {
+    indices.sort(function (a, b) {
+        var av = Number(opldb[a][colidx]);
+        var bv = Number(opldb[b][colidx]);
+        if (isNaN(av))
+            av = Number.MAX_SAFE_INTEGER;
+        if (isNaN(bv))
+            bv = Number.MAX_SAFE_INTEGER;
+        return av - bv;
+    });
     return indices;
 }
 
-function db_sort_maxfirst(indices, colidx) {
-    indices.sort(function (a, b) { return opldb[b][colidx] - opldb[a][colidx]; });
+function db_sort_numeric_maxfirst(indices, colidx) {
+    indices.sort(function (a, b) {
+        var av = Number(opldb[a][colidx]);
+        var bv = Number(opldb[b][colidx]);
+        if (isNaN(av))
+            av = Number.MIN_SAFE_INTEGER;
+        if (isNaN(bv))
+            bv = Number.MIN_SAFE_INTEGER;
+        return bv - av;
+    });
     return indices;
 }
 
