@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Fixes the Wilks column of the provided CSV
+# if the margin of error with the reported results is > 0.5.
+#
+# Overwrites the input file in-place.
+#
+
+from csv import *
+import sys
+from wilks import wilks
+
+if len(sys.argv) < 2:
+    print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
+    sys.exit(1)
+
+csv = Csv(sys.argv[1])
+
+# Certain columns have to exist for Wilks to be calculable.
+# Age is for the McCulloch/Foster total, but we'll include it.
+for col in ['Sex', 'BodyweightKg', 'TotalKg']:
+    if not col in csv.fieldnames:
+        print(' Missing necessary column: %s' % col, file=sys.stderr)
+        sys.exit(1)
+
+# If a Wilks column doesn't exist currently, we can just create it.
+if not 'Wilks' in csv.fieldnames:
+    csv.append_column('Wilks')
+
+indexSex = csv.fieldnames.index('Sex')
+indexBodyweight = csv.fieldnames.index('BodyweightKg')
+indexTotal = csv.fieldnames.index('TotalKg')
+indexWilks = csv.fieldnames.index('Wilks')
+
+def to_string(f):
+    try:
+        return "{:.2f}".format(f)
+    except ValueError:
+        print("Field not a float: %f" % f, file=sys.stderr)
+        sys.exit(1)
+
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+for row in csv.rows:
+    sex = row[indexSex]
+    bodyweight = row[indexBodyweight]
+    total = row[indexTotal]
+
+    if not sex in ['M', 'F']:
+        continue
+
+    if not bodyweight:
+        continue
+    bodyweight = float(bodyweight)
+
+    if not total:
+        continue
+    total = float(total)
+
+    score = wilks(sex is 'M', bodyweight, total)
+
+    # Add the Wilks score to the row if error is high.
+    if not row[indexWilks] or abs(score - float(row[indexWilks])) > 0.5:
+        row[indexWilks] = to_string(score)
+
+with open(sys.argv[1], 'w') as fd:
+    csv.write_to(fd)

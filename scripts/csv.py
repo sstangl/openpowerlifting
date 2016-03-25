@@ -13,6 +13,11 @@ class Csv:
     def __len__(self):
         return len(self.rows)
 
+    def append_column(self, name):
+        self.fieldnames.append(name)
+        for row in self.rows:
+            row.append('')
+
     def remove_column_by_index(self, idx):
         del self.fieldnames[idx]
         for row in self.rows:
