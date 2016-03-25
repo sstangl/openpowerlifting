@@ -12,3 +12,7 @@ To convert a modern (post-2010 or so) meet result spreadsheet PDF to CSV:
   8.  Redirect the output of `../uspatocsv results.txt` as lifters.csv.
   9.  Manually create meet.csv using the header in results.txt.
   10. Add the new folder to git and push.
+
+With regard to the Wilks column, USPA sometimes publishes scores marked Wilks
+that include the McCulloch age coefficient. These scores should be treated as
+incorrect and fixed, since Wilks and McCulloch are separately tracked.
