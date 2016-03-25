@@ -14,9 +14,10 @@ function weight(kg) {
 
 
 // Make the HTML for a single database row.
-function makeentry(row) {
+function makeentry(row, i) {
     var str = "<tr>";
 
+    str = str + "<td>" + String(i) + "</td>";
     str = str + "<td>" + row[NAME] + "</td>";
     str = str + "<td>" + row[SEX] + "</td>";
     str = str + "<td>" + row[AGE] + "</td>";
@@ -39,6 +40,7 @@ function makeentry(row) {
 
     var html = "<table>";
 
+    html += "<td>Rank</td>";
     html += "<td>Name</td>";
     html += "<td>Sex</td>";
     html += "<td>Age</td>";
@@ -52,7 +54,7 @@ function makeentry(row) {
 
     for (var i = 0; i < indices.length; i++) {
         var row = opldb[indices[i]];
-        html += makeentry(row);
+        html += makeentry(row, i);
     }
 
     html += "</table>";
