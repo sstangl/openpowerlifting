@@ -131,7 +131,6 @@ def parse(csv):
 
         # If the first position is filled in, it has place information.
         elif row[0] != '':
-            print(row)
             # Maybe USPA stopped using NA and NS? That would be nice.
             assert isint(row[0]) or row[0].lower() == 'dq'
 
@@ -158,9 +157,14 @@ def parse(csv):
         # If the first position is blank, this is state information, 4th attempts, or garbage.
         else:
             searcher = ';'.join(row).lower()
+            # Sometimes the rows just switch the sex state.
+            if ';women;' in searcher:
+                sexstate = 'F'
+            elif ';men;' in searcher:
+                sexstate = 'M'
 
             # This is a row that specifies 4th attempts for the last lifter.
-            if '4th' in searcher:
+            elif '4th' in searcher:
                 assert lifterstate
 
                 for i, text in enumerate(row):
@@ -174,38 +178,23 @@ def parse(csv):
                         lifterstate[newcolidx] = amount
 
             # This is a row that specifies division and other information.
-            elif 'men' in searcher:
-                
-                # Sometimes the rows just switch the sex state.
-                if ';women;' in searcher:
-                    sexstate = 'F'
-                    continue
-                elif ';men;' in searcher:
-                    sexstate = 'M'
-                    continue
-
+            elif 'open' in searcher or 'junior' in searcher or 'master' in searcher:
                 # If this is division information, it disregards columns.
                 info = ' '.join(row).strip().lower()
 
-                # Divisions are {Junior, Open, Master} + {Women, Men} + (Optional Age Range)
+                # Divisions are {Junior, Open, Submaster, Master} +
+                #  {Women, Men} + (Age Range if non-Open)
                 if not 'junior' in info and not 'open' in info and not 'master' in info:
                     continue
 
+                # Get the sex state.
+                if 'women' in info:
+                    sexstate = 'F'
+                elif 'men' in info:
+                    sexstate = 'M'
+
                 # Get the division state.
-                asstr = ' '.join(row).strip()
-                if 'junior' in info:
-                    # Junior divisions have three parts.
-                    idx = info.index('junior')
-                    divisionstate = ' '.join(asstr[idx:].split()[0:3])
-                elif 'open' in info:
-                    # Open divisions have two parts (no age range).
-                    idx = info.index('open')
-                    divisionstate = ' '.join(asstr[idx:].split()[0:2])
-                else:
-                    # Master divisions have three parts.
-                    assert 'master' in info
-                    idx = info.index('master')
-                    divisionstate = ' '.join(asstr[idx:].split()[0:3])
+                divisionstate = ' '.join(row).strip().replace(',', ' ')
 
                 # Get the equipment state.
                 if 'classic' in info:
@@ -216,12 +205,6 @@ def parse(csv):
                     equipmentstate = 'Single-ply'
                 elif 'multi' in info:
                     equipmentstate = 'Multi-ply'
-
-                # Get the sex state.
-                if 'women' in info:
-                    sexstate = 'F'
-                elif 'men' in info:
-                    sexstate = 'M'
 
     return rval
 
@@ -235,9 +218,12 @@ def main():
         for word in row:
             assert not ',' in word
 
-    # Print, and also fix up using O instead of 0, which happens everywhere.
+    # Print, and also fix up some common errors.
     for row in rval:
-        print(','.join(row).replace(',O,', ',0,'))
+        k = ','.join(row)
+        k = k.replace(',O,', ',0,')
+        k = k.replace(',DQ,', ',,') # Doesn't affect the Place, which is in the first col.
+        print(k)
 
 
 if __name__ == '__main__':
