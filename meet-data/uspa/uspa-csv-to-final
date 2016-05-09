@@ -29,12 +29,16 @@ def fixcolnames(columns):
             columns[i] = 'Name'
         elif low == 'place':
             columns[i] = 'Place'
+        elif low == 'division':
+            columns[i] = 'Division'
         elif low == 'state':
             columns[i] = 'State'
-        elif low == 'wt class':
+        elif low == 'wt class': # Sometimes lbs, sometimes kg, sigh.
             columns[i] = 'WeightClassKg'
         elif low == 'bdy wt(kg)':
             columns[i] = 'BodyweightKg'
+        elif low == 'bdy wght':
+            columns[i] = 'BodyweightLBS'
         elif low == 'age':
             columns[i] = 'Age'
         elif low == 'squat, kg':
@@ -127,13 +131,9 @@ def parse(csv):
 
         # If the first position is filled in, it has place information.
         elif row[0] != '':
+            print(row)
             # Maybe USPA stopped using NA and NS? That would be nice.
             assert isint(row[0]) or row[0].lower() == 'dq'
-
-            # Stateful information must have already been provided.
-            assert divisionstate
-            assert sexstate
-            assert equipmentstate
 
             # Insert the stateful information into the row.
             divisioncol = columns.index('Division')
@@ -141,10 +141,13 @@ def parse(csv):
             equipmentcol = columns.index('Equipment')
 
             if not row[divisioncol]:
+                assert divisionstate
                 row[divisioncol] = divisionstate
             if not row[sexcol]:
+                assert sexstate
                 row[sexcol] = sexstate
             if not row[equipmentcol]:
+                assert equipmentstate
                 row[equipmentcol] = equipmentstate
 
             rval.append(row)
