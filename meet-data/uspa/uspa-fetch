@@ -18,6 +18,68 @@ FETCHDIR = 'fetch-tmp' # Directory in CWD to use for fetchin'.
 RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/pubhtml/sheet?hl=en_US&headers=false&gid=0'
 
 
+states = {
+    'Alaska': 'AK',
+    'Alabama': 'AL',
+    'Arkansas': 'AR',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'District of Columbia': 'DC',
+    'Delaware': 'DE',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Iowa': 'IA',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Massachusetts': 'MA',
+    'Massachussetts': 'MA', # Work around spelling errors.
+    'Maryland': 'MD',
+    'Maine': 'ME',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Missouri': 'MO',
+    'Northern Mariana Islands': 'MP',
+    'Mississippi': 'MS',
+    'Montana': 'MT',
+    'National': 'NA',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Nebraska': 'NE',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'Nevada': 'NV',
+    'New York': 'NY',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Virginia': 'VA',
+    'Virgin Islands': 'VI',
+    'Vermont': 'VT',
+    'Washington': 'WA',
+    'Wisconsin': 'WI',
+    'West Virginia': 'WV',
+    'Wyoming': 'WY',
+}
+
+
 # Just a way to name a tuple.
 class Meet:
     def __init__(self, url, num, date, name, location):
@@ -113,7 +175,73 @@ def downloadpdf(meet):
         shutil.copyfileobj(r, fd)
 
 
-def main():
+def writemeetcsv(meet):
+    filename = FETCHDIR + os.sep + meet.num + '-meet.csv'
+
+    headers = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName"
+
+    federation = "USPA"
+
+    if '/' in meet.date:
+        # Given like 4/16/2016.
+        (month,day,year) = meet.date.split('/')
+    elif ',' in meet.date:
+        # Given like "April 2-3, 2016" or "May 5, 2012".
+        (month,day,year) = meet.date.split(' ')
+
+        # Sometimes abbreviated month names are used.
+        if 'Jan' in month:
+            month = '01'
+        elif 'Feb' in month:
+            month = '02'
+        elif 'Mar' in month:
+            month = '03'
+        elif 'Apr' in month:
+            month = '04'
+        elif 'May' in month:
+            month = '05'
+        elif 'Jun' in month:
+            month = '06'
+        elif 'Jul' in month:
+            month = '07'
+        elif 'Aug' in month:
+            month = '08'
+        elif 'Sep' in month:
+            month = '09'
+        elif 'Oct' in month:
+            month = '10'
+        elif 'Nov' in month:
+            month = '11'
+        elif 'Dec' in month:
+            month = '12'
+        else:
+            print("Unknown month: %s" % month)
+            sys.exit(1)
+
+        day = day.replace(',','')
+        if '-' in day:
+            day = day[:day.index('-')]
+
+    # Ensure left-padded with zeros.
+    month = ('0' * (2 - len(month))) + month
+    day = ('0' * (2 - len(day))) + day
+    date = "%s-%s-%s" % (year,month,day)
+
+    country = 'USA'
+    name = meet.name.replace(',','')
+
+    (town,state) = [x.strip() for x in meet.location.split(',')]
+    if len(state) > 2:
+        print(state)
+        assert state in states
+        state = states[state]
+
+    with open(filename, 'w') as fd:
+        fd.write(headers + '\n')
+        fd.write("%s,%s,%s,%s,%s,%s" % (federation, date, country, state, town, name))
+
+
+def main(fetchtype):
     html = gethtml()
     meets = getmeetlist(html)
     known = getknownmeets()
@@ -121,7 +249,10 @@ def main():
 
     for meet in remote:
         print('Fetching %s' % meet.num)
-        downloadpdf(meet)
+        if fetchtype == 'pdf':
+            downloadpdf(meet)
+        elif fetchtype == 'meetcsv':
+            writemeetcsv(meet)
 
 
 if __name__ == '__main__':
@@ -133,4 +264,10 @@ if __name__ == '__main__':
     if not os.path.exists(FETCHDIR):
         os.makedirs(FETCHDIR)
 
-    main()
+    if len(sys.argv) > 1:
+        if sys.argv[1] != '--meetcsv':
+            print(" Only valid argument is --meetcsv.")
+            sys.exit(1)
+        main('meetcsv')
+    else:
+        main('pdf')
