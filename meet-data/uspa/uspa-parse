@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 uspa-results.pdf"
+	exit 1
+fi
+
+CSVFILE=`mktemp`
+
+# Creates some HTML file.
+./uspa-pdf-to-bbox "$1"
+./uspa-bbox-to-csv *.html > ${CSVFILE}
+./uspa-csv-to-final ${CSVFILE} > lifters.csv
+
+# Yeah this line is a bad idea man.
+rm *.html
+rm ${CSVFILE}

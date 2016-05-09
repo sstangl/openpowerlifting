@@ -13,6 +13,14 @@ def error(text):
     sys.exit(1)
 
 
+def isint(str):
+    try:
+        int(str)
+        return True
+    except ValueError:
+        return False
+
+
 def fixcolnames(columns):
     for i, name in enumerate(columns):
         low = name.lower()
@@ -51,26 +59,29 @@ def fixcolnames(columns):
             error("Unknown column %s" % name)
 
 
+def colnameto4thname(colname):
+    if colname == 'BestSquatKg':
+        return 'Squat4Kg'
+    elif colname == 'BestSquatLBS':
+        return 'Squat4LBS'
+    elif colname == 'BestBenchKg':
+        return 'Bench4Kg'
+    elif colname == 'BestBenchLBS':
+        return 'Bench4LBS'
+    elif colname == 'BestDeadliftKg':
+        return 'Deadlift4Kg'
+    elif colname == 'BestDeadliftLBS':
+        return 'Deadlift4LBS'
+    else:
+        error("Don't know how to make 4th column out of %s" % colname)
+
+
 def add4thcolumns(columns, csv):
     for row in csv:
         for col, text in enumerate(row):
             if '4th' in text.lower():
                 colname = columns[col]
-
-                if colname == 'BestSquatKg':
-                    newcol = 'Squat4Kg'
-                elif colname == 'BestSquatLBS':
-                    newcol = 'Squat4LBS'
-                elif colname == 'BestBenchKg':
-                    newcol = 'Bench4Kg'
-                elif colname == 'BestBenchLBS':
-                    newcol = 'Bench4LBS'
-                elif colname == 'BestDeadliftKg':
-                    newcol = 'Deadlift4Kg'
-                elif colname == 'BestDeadliftLBS':
-                    newcol = 'Deadlift4LBS'
-                else:
-                    error("Don't know how to make 4th column out of %s" % colname)
+                newcol = colnameto4thname(colname)
 
                 if not newcol in columns:
                     columns.append(newcol)
@@ -93,16 +104,136 @@ def parse(csv):
     # Are there any 4th attempts? Then we'll need even more columns.
     add4thcolumns(columns, csv)
 
+    # Expand every row of the csv to have the right number of columns.
+    ncols = len(columns)
+    for row in csv:
+        while len(row) < len(columns):
+            row.append('')
+
+    # This is the final CSV-like array-of-arrays we're building up below.
+    rval = [columns]
+
+    divisionstate = None
+    sexstate = None
+    equipmentstate = None
+    lifterstate = None
+
     # Alright, we have all the columns we'll need set up!
     # Time to start running the state machine!
-    # TODO GET THIS SUCKA WORKIN
-    print(columns)
+    for row in csv:
+        # Column information: we already got that.
+        if row[0] == 'Place':
+            pass
+
+        # If the first position is filled in, it has place information.
+        elif row[0] != '':
+            # Maybe USPA stopped using NA and NS? That would be nice.
+            assert isint(row[0]) or row[0].lower() == 'dq'
+
+            # Stateful information must have already been provided.
+            assert divisionstate
+            assert sexstate
+            assert equipmentstate
+
+            # Insert the stateful information into the row.
+            divisioncol = columns.index('Division')
+            sexcol = columns.index('Sex')
+            equipmentcol = columns.index('Equipment')
+
+            if not row[divisioncol]:
+                row[divisioncol] = divisionstate
+            if not row[sexcol]:
+                row[sexcol] = sexstate
+            if not row[equipmentcol]:
+                row[equipmentcol] = equipmentstate
+
+            rval.append(row)
+
+            # Remember the last lifter processed in case we have to add 4th attempts.
+            lifterstate = row
+
+        # If the first position is blank, this is state information, 4th attempts, or garbage.
+        else:
+            searcher = ';'.join(row).lower()
+
+            # This is a row that specifies 4th attempts for the last lifter.
+            if '4th' in searcher:
+                assert lifterstate
+
+                for i, text in enumerate(row):
+                    text = text.lower()
+                    if '4th' in text:
+                        amount = text.replace('4th-','').strip()
+                        newcol = colnameto4thname(columns[i])
+                        assert newcol in columns
+
+                        newcolidx = columns.index(newcol)
+                        lifterstate[newcolidx] = amount
+
+            # This is a row that specifies division and other information.
+            elif 'men' in searcher:
+                
+                # Sometimes the rows just switch the sex state.
+                if ';women;' in searcher:
+                    sexstate = 'F'
+                    continue
+                elif ';men;' in searcher:
+                    sexstate = 'M'
+                    continue
+
+                # If this is division information, it disregards columns.
+                info = ' '.join(row).strip().lower()
+
+                # Divisions are {Junior, Open, Master} + {Women, Men} + (Optional Age Range)
+                if not 'junior' in info and not 'open' in info and not 'master' in info:
+                    continue
+
+                # Get the division state.
+                asstr = ' '.join(row).strip()
+                if 'junior' in info:
+                    # Junior divisions have three parts.
+                    idx = info.index('junior')
+                    divisionstate = ' '.join(asstr[idx:].split()[0:3])
+                elif 'open' in info:
+                    # Open divisions have two parts (no age range).
+                    idx = info.index('open')
+                    divisionstate = ' '.join(asstr[idx:].split()[0:2])
+                else:
+                    # Master divisions have three parts.
+                    assert 'master' in info
+                    idx = info.index('master')
+                    divisionstate = ' '.join(asstr[idx:].split()[0:3])
+
+                # Get the equipment state.
+                if 'classic' in info:
+                    equipmentstate = 'Wraps'
+                elif 'raw' in info:
+                    equipmentstate = 'Raw'
+                elif 'single' in info:
+                    equipmentstate = 'Single-ply'
+                elif 'multi' in info:
+                    equipmentstate = 'Multi-ply'
+
+                # Get the sex state.
+                if 'women' in info:
+                    sexstate = 'F'
+                elif 'men' in info:
+                    sexstate = 'M'
+
+    return rval
 
 
 def main():
     with open(sys.argv[1]) as fd:
         csv = [[y.strip() for y in x.split(';')] for x in fd.readlines()]
-    parse(csv)
+    rval = parse(csv)
+
+    for row in rval:
+        for word in row:
+            assert not ',' in word
+
+    for row in rval:
+        print(','.join(row))
 
 
 if __name__ == '__main__':
