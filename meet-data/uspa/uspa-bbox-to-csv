@@ -24,6 +24,10 @@ PrevColSpans = []
 class NoLifterInformationException(Exception):
     pass
 
+# For pages that don't contain any header information.
+class NoHeaderInformationException(Exception):
+    pass
+
 
 def error(text):
     print('Error: %s' % text)
@@ -119,11 +123,12 @@ def sortintorows(words):
 
 
 # Find the row with 'NAME' in it, for grounding on column information.
+# Some PDFs have header information on every page, some don't.
 def getheaderidx(rows):
     for i, row in enumerate(rows):
         if row[0].text == 'NAME':
             return i
-    error('No row with NAME found.')
+    raise NoHeaderInformationException
 
 
 # Find a row with a lifter that has a place.
@@ -195,25 +200,32 @@ def parsepage(page):
             assert len(colspans) == len(PrevColSpans)
         PrevColSpans = colspans
     except NoLifterInformationException:
+        assert PrevColSpans
+        colspans = PrevColSpans
+    except NoHeaderInformationException:
+        assert PrevColSpans
         colspans = PrevColSpans
 
-    # Output header information.
-    headeridx = getheaderidx(rows)
-    
-    # The column names for headers are spread over two rows.
-    # Make it easier by joining them up.
-    # This assumes that there is at most one word per row!
-    for word in rows[headeridx]:
-        for above in rows[headeridx-1]:
-            if word.aboveorbelow(above):
-                word.text = '%s %s' % (above.text, word.text)
-                break
+    # Output header information, if any.
+    try:
+        # The column names for headers are spread over two rows.
+        # Make it easier by joining them up.
+        # This assumes that there is at most one word per row!
+        headeridx = getheaderidx(rows)
+        for word in rows[headeridx]:
+            for above in rows[headeridx-1]:
+                if word.aboveorbelow(above):
+                    word.text = '%s %s' % (above.text, word.text)
+                    break
+        # Print the header information first.
+        csv = 'Place'
+        for word in rows[headeridx]:
+            csv += (SEP + word.text)
+        csv += '\n'
 
-    # Print the header information first.
-    csv = 'Place'
-    for word in rows[headeridx]:
-        csv += (SEP + word.text)
-    csv += '\n'
+    except NoHeaderInformationException:
+        csv = ''
+        headeridx = -1
 
     for row in rows[headeridx+1:]:
         newrow = rowtocsv(row, colspans)

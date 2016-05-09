@@ -214,9 +214,10 @@ def main():
         csv = [[y.strip() for y in x.split(';')] for x in fd.readlines()]
     rval = parse(csv)
 
+    # Sometimes commas get snuck into numbers, like "1,036.16". Sigh.
     for row in rval:
-        for word in row:
-            assert not ',' in word
+        for i, word in enumerate(row):
+            row[i] = word.replace(',','')
 
     # Print, and also fix up some common errors.
     for row in rval:
