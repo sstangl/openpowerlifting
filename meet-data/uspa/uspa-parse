@@ -10,7 +10,6 @@ fi
 CSVFILE=`mktemp`
 BASENAME=${1%.pdf}
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo $CSVFILE
 
 # Creates some HTML file.
 ${SCRIPTDIR}/uspa-pdf-to-bbox "$1"

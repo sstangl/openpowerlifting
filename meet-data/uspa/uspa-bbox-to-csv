@@ -30,7 +30,7 @@ class NoHeaderInformationException(Exception):
 
 
 def error(text):
-    print('Error: %s' % text)
+    print('Error: %s' % text, file=sys.stderr)
     sys.exit(1)
 
 
@@ -52,10 +52,9 @@ class Word:
             return self.xmax >= other.xmin
         return other.xmax >= self.xmin
 
-    def inspan(self, span):
-        if self.xmin <= span[0]:
-            return self.xmax >= span[0]
-        return span[1] >= self.xmin
+    # How much of this Word is covered by the span, in units?
+    def spancoverage(self, span):
+        return min(self.xmax, span[1]) - max(self.xmin, span[0])
 
     def xmid(self):
         return (self.xmin + self.xmax) / 2
@@ -79,10 +78,14 @@ def rowtocsv(row, colspans):
     # For each word, assign it to a span.
     # Iterating over words prevents repeating words that ignore the column system.
     for word in row:
+        bestcoverage = -999
+        bestidx = 0
         for i, span in enumerate(colspans):
-            if word.inspan(span):
-                columns[i] += (word.text + ' ')
-                break # At most one column.
+            coverage = word.spancoverage(span)
+            if coverage > bestcoverage:
+                bestcoverage = coverage
+                bestidx = i
+        columns[bestidx] += (word.text + ' ')
 
     columns = [x.strip() for x in columns]
     return SEP.join(columns)

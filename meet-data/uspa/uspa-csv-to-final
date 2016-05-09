@@ -9,7 +9,7 @@ import sys
 
 
 def error(text):
-    print("Error: %s" % text)
+    print("Error: %s" % text, file=sys.stderr)
     sys.exit(1)
 
 
@@ -36,6 +36,8 @@ def fixcolnames(columns):
         elif low == 'wt class': # Sometimes lbs, sometimes kg, sigh.
             columns[i] = 'WeightClassKg'
         elif low == 'bdy wt(kg)':
+            columns[i] = 'BodyweightKg'
+        elif low == 'wght( kg)':
             columns[i] = 'BodyweightKg'
         elif low == 'bdy wght':
             columns[i] = 'BodyweightLBS'
