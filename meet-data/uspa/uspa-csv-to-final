@@ -235,8 +235,9 @@ def main():
         for word in row:
             assert not ',' in word
 
+    # Print, and also fix up using O instead of 0, which happens everywhere.
     for row in rval:
-        print(','.join(row))
+        print(','.join(row).replace(',O,', ',0,'))
 
 
 if __name__ == '__main__':

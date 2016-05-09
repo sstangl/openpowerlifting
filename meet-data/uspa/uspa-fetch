@@ -232,7 +232,6 @@ def writemeetcsv(meet):
 
     (town,state) = [x.strip() for x in meet.location.split(',')]
     if len(state) > 2:
-        print(state)
         assert state in states
         state = states[state]
 
