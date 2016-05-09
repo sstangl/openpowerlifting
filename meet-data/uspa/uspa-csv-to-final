@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Given a CSV in PDF format, parse it to extract information
+# in the OpenPowerlifting internal format.
+#
+
+import sys
+
+
+def error(text):
+    print("Error: %s" % text)
+    sys.exit(1)
+
+
+def fixcolnames(columns):
+    for i, name in enumerate(columns):
+        low = name.lower()
+
+        if low == 'name':
+            columns[i] = 'Name'
+        elif low == 'place':
+            columns[i] = 'Place'
+        elif low == 'state':
+            columns[i] = 'State'
+        elif low == 'wt class':
+            columns[i] = 'WeightClassKg'
+        elif low == 'bdy wt(kg)':
+            columns[i] = 'BodyweightKg'
+        elif low == 'age':
+            columns[i] = 'Age'
+        elif low == 'squat, kg':
+            columns[i] = 'BestSquatKg'
+        elif low == 'squat lbs':
+            columns[i] = 'BestSquatLBS'
+        elif low == 'bench, kg':
+            columns[i] = 'BestBenchKg'
+        elif low == 'bench lbs':
+            columns[i] = 'BestBenchLBS'
+        elif low == 'deadlift kg':
+            columns[i] = 'BestDeadliftKg'
+        elif low == 'deadlift lbs':
+            columns[i] = 'BestDeadliftLBS'
+        elif low == 'total, kg':
+            columns[i] = 'TotalKg'
+        elif low == 'total lbs':
+            columns[i] = 'TotalLBS'
+        elif low == 'wilks score':
+            columns[i] = 'Wilks'
+        else:
+            error("Unknown column %s" % name)
+
+
+def add4thcolumns(columns, csv):
+    for row in csv:
+        for col, text in enumerate(row):
+            if '4th' in text.lower():
+                colname = columns[col]
+
+                if colname == 'BestSquatKg':
+                    newcol = 'Squat4Kg'
+                elif colname == 'BestSquatLBS':
+                    newcol = 'Squat4LBS'
+                elif colname == 'BestBenchKg':
+                    newcol = 'Bench4Kg'
+                elif colname == 'BestBenchLBS':
+                    newcol = 'Bench4LBS'
+                elif colname == 'BestDeadliftKg':
+                    newcol = 'Deadlift4Kg'
+                elif colname == 'BestDeadliftLBS':
+                    newcol = 'Deadlift4LBS'
+                else:
+                    error("Don't know how to make 4th column out of %s" % colname)
+
+                if not newcol in columns:
+                    columns.append(newcol)
+
+
+def parse(csv):
+    columns = csv[0]
+    assert columns[0].lower() == 'place'
+    assert columns[1].lower() == 'name'
+
+    fixcolnames(columns)
+
+    if not 'Sex' in columns:
+        columns.append('Sex')
+    if not 'Division' in columns:
+        columns.append('Division')
+    if not 'Equipment' in columns:
+        columns.append('Equipment')
+
+    # Are there any 4th attempts? Then we'll need even more columns.
+    add4thcolumns(columns, csv)
+
+    # Alright, we have all the columns we'll need set up!
+    # Time to start running the state machine!
+    # TODO GET THIS SUCKA WORKIN
+    print(columns)
+
+
+def main():
+    with open(sys.argv[1]) as fd:
+        csv = [[y.strip() for y in x.split(';')] for x in fd.readlines()]
+    parse(csv)
+
+
+if __name__ == '__main__':
+    main()
