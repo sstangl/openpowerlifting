@@ -173,6 +173,7 @@ def parse(csv):
                     text = text.lower()
                     if '4th' in text:
                         amount = text.replace('4th-','').strip()
+                        amount = text.replace('4th','').strip()
                         newcol = colnameto4thname(columns[i])
                         assert newcol in columns
 
@@ -199,7 +200,8 @@ def parse(csv):
                 # Normally looks like: "52kg/114 Junior Men 13-15 Classic Raw"
                 # and we want from that: "Junior 13-15"
                 if '-' in info: 
-                    k = [x for x in info.split() if '-' in x]
+                    # Extract 20-23, but don't extract "sub-master".
+                    k = [x for x in info.split() if '-' in x and x[0].isdigit()]
                     assert len(k) == 1
                     agerange = ' ' + k[0].replace(',','')
                 else:
