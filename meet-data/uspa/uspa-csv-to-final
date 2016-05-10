@@ -206,16 +206,12 @@ def parse(csv):
                     agerange = ''
 
                 if 'open' in info:
-                    assert not agerange
                     divisionstate = 'Open' + agerange
                 elif 'submaster' in info:
-                    assert agerange
                     divisionstate = 'Submaster' + agerange
                 elif 'junior' in info:
-                    assert agerange
                     divisionstate = 'Junior' + agerange
                 elif 'master' in info:
-                    assert agerange
                     divisionstate = 'Master' + agerange
                 else:
                     error('Unknown division: %s' % ' '.join(row).strip())
