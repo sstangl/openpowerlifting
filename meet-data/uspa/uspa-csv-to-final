@@ -134,7 +134,8 @@ def parse(csv):
         # If the first position is filled in, it has place information.
         elif row[0] != '':
             # Maybe USPA stopped using NA and NS? That would be nice.
-            assert isint(row[0]) or row[0].lower() == 'dq'
+            # G == Guest Lifter (no placement)
+            assert isint(row[0]) or row[0].lower() == 'dq' or row[0].lower() == 'g'
 
             # Insert the stateful information into the row.
             divisioncol = columns.index('Division')
