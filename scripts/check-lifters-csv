@@ -79,7 +79,7 @@ def check_column_age(s):
 
 
 def check_column_place(s):
-    if not s in ['DQ', 'NS']:
+    if not s in ['DQ', 'NS', 'G']:
         try:
             int(s)
         except ValueError:
