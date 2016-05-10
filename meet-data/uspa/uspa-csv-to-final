@@ -196,7 +196,29 @@ def parse(csv):
                     sexstate = 'M'
 
                 # Get the division state.
-                divisionstate = ' '.join(row).strip().replace(',', ' ')
+                # Normally looks like: "52kg/114 Junior Men 13-15 Classic Raw"
+                # and we want from that: "Junior 13-15"
+                if '-' in info: 
+                    k = [x for x in info.split() if '-' in x]
+                    assert len(k) == 1
+                    agerange = ' ' + k[0].replace(',','')
+                else:
+                    agerange = ''
+
+                if 'open' in info:
+                    assert not agerange
+                    divisionstate = 'Open' + agerange
+                elif 'submaster' in info:
+                    assert agerange
+                    divisionstate = 'Submaster' + agerange
+                elif 'junior' in info:
+                    assert agerange
+                    divisionstate = 'Junior' + agerange
+                elif 'master' in info:
+                    assert agerange
+                    divisionstate = 'Master' + agerange
+                else:
+                    error('Unknown division: %s' % ' '.join(row).strip())
 
                 # Get the equipment state.
                 if 'classic' in info:
@@ -211,14 +233,47 @@ def parse(csv):
     return rval
 
 
+# USPA SHW weightclasses are 140+ for men, 90+ for women.
+def fixshw(rows):
+    weightclassidx = rows[0].index('WeightClassKg')
+    assert weightclassidx >= 0
+
+    sexidx = rows[0].index('Sex')
+    assert sexidx >= 0
+
+    for row in rows[1:]:
+        if row[weightclassidx] == 'SHW':
+            if row[sexidx] == 'M':
+                row[weightclassidx] = '140+'
+            else:
+                row[weightclassidx] = '90+'
+
+
+# Remove a LBS column if there is a matching Kg column.
+# Needs to be very careful, since it's deleting data!
+def removeredundantlbs(rows):
+    cols = list([col for col in rows[0] if 'LBS' in col])
+    for col in cols:
+        if col.replace('LBS','Kg') in rows[0]:
+            i = rows[0].index(col)
+            for row in rows:
+                del row[i]
+
+
 def main():
     with open(sys.argv[1]) as fd:
         csv = [[y.strip() for y in x.split(';')] for x in fd.readlines()]
     rval = parse(csv)
 
+    # Fixups.
+    fixshw(rval)
+    removeredundantlbs(rval)
+
     # Sometimes commas get snuck into numbers, like "1,036.16". Sigh.
+    # Also get rid of quotation marks, since the JS doesn't like that.
     for row in rval:
         for i, word in enumerate(row):
+            row[i] = word.replace('"','\'')
             row[i] = word.replace(',','')
 
     # Print, and also fix up some common errors.

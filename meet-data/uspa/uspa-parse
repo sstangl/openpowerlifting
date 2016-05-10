@@ -10,11 +10,15 @@ fi
 CSVFILE=`mktemp`
 BASENAME=${1%.pdf}
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
 # Creates some HTML file.
 ${SCRIPTDIR}/uspa-pdf-to-bbox "$1"
 ${SCRIPTDIR}/uspa-bbox-to-csv ${BASENAME}.html > ${CSVFILE}
 ${SCRIPTDIR}/uspa-csv-to-final ${CSVFILE} > lifters.csv
+
+# Always recalculate the Wilks, since USPA uses age coefficients.
+${REPOSCRIPTDIR}/fix-wilks lifters.csv
 
 # Make the results.txt.
 pdftotext -layout "$1"
