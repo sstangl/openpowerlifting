@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Script to take data from fetch-tmp and import it into the directory.
+# Still done one-by-one so that there's some manual oversight.
+#
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 meetnum"
+	exit 1
+fi
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+mkdir "${DIR}/$1"
+mv "${DIR}/fetch-tmp/$1"* "${DIR}/$1"
+
+cd "${DIR}/$1"
+${DIR}/uspa-parse "$1.pdf"
+mv *meet* meet.csv
+rm "$1.pdf"
+
+git add results.txt lifters.csv meet.csv
