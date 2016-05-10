@@ -182,8 +182,10 @@ def getcolumnspans(rows):
     spans.insert(0, placespan)
 
     # Then the NAME span (spans[1]) is the start of the name
-    # until just before the beginning of the next column (spans[2]).
-    namespan = (rows[lifteridx][1].xmin, spans[2][0] - 5) # 5 is "a small amount".
+    # until roughly halfway before the beginning of the next column (spans[2]).
+    # This provides a buffer for if the next column is very long.
+    midpoint = spans[1][1] + ((spans[2][0] - spans[1][1]) / 2)
+    namespan = (rows[lifteridx][1].xmin, midpoint)
     spans[1] = namespan
 
     return spans
