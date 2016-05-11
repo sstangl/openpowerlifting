@@ -17,8 +17,8 @@ mkdir "${DIR}/$1"
 mv "${DIR}/fetch-tmp/$1"* "${DIR}/$1"
 
 cd "${DIR}/$1"
-${DIR}/uspa-parse "$1.pdf"
 mv *meet* meet.csv
+${DIR}/uspa-parse "$1.pdf"
 rm "$1.pdf"
 
 git add results.txt lifters.csv meet.csv
