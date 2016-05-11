@@ -35,6 +35,8 @@ def fixcolnames(columns):
             columns[i] = 'State'
         elif low == 'country, state':
             columns[i] = 'Country'
+        elif low == 'college- university':
+            columns[i] = 'College/University'
         elif low == 'wt class': # Sometimes lbs, sometimes kg, sigh.
             columns[i] = 'WeightClassKg'
         elif low == 'clas s':
@@ -319,6 +321,7 @@ def main():
     for row in rval:
         k = ','.join(row)
         k = k.replace(',O,', ',0,')
+        k = k.replace(',#VALUE!,', ',,')
         k = k.replace(',DQ,', ',,') # Doesn't affect the Place, which is in the first col.
         print(k)
 
