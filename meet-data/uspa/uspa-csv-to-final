@@ -215,8 +215,9 @@ def parse(csv):
                 if '-' in info: 
                     # Extract 20-23, but don't extract "sub-master".
                     k = [x for x in info.split() if '-' in x and x[0].isdigit()]
-                    assert len(k) == 1
-                    agerange = ' ' + k[0].replace(',','')
+                    # Don't assert on len(k): the freeform text at the bottom confuses it.
+                    if len(k) == 1:
+                        agerange = ' ' + k[0].replace(',','')
                 else:
                     agerange = ''
 
