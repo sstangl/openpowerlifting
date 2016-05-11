@@ -286,8 +286,8 @@ def main():
     # Also get rid of quotation marks, since the JS doesn't like that.
     for row in rval:
         for i, word in enumerate(row):
-            row[i] = word.replace('"','\'')
-            row[i] = word.replace(',','')
+            row[i] = row[i].replace('"','\'')
+            row[i] = row[i].replace(',','')
 
     # Print, and also fix up some common errors.
     for row in rval:
