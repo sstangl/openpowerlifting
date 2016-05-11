@@ -13,7 +13,7 @@ import sys
 import urllib.request
 
 
-CUTOFF = 300 # Ignore earlier meets, since they'll be in random formats.
+CUTOFF = 200 # Ignore earlier meets, since they have invalid URLs anyway.
 FETCHDIR = 'fetch-tmp' # Directory in CWD to use for fetchin'.
 RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/pubhtml/sheet?hl=en_US&headers=false&gid=0'
 
@@ -102,8 +102,8 @@ def gethtml():
 
 
 def getmeetinfo(tr):
-    # Meets that have information have a URL in a td of class s3.
-    urltd = tr.find('td', {'class':'s3'})
+    # The first column would have the URL.
+    urltd = tr.find('td')
     if urltd == None:
         return None
 
@@ -171,8 +171,11 @@ def downloadpdf(meet):
     pdfurl = getpdfurl(meet)
 
     filename = FETCHDIR + os.sep + meet.num + '.pdf'
-    with urllib.request.urlopen(pdfurl) as r, open(filename, 'wb') as fd:
-        shutil.copyfileobj(r, fd)
+    try:
+        with urllib.request.urlopen(pdfurl) as r, open(filename, 'wb') as fd:
+            shutil.copyfileobj(r, fd)
+    except urllib.error.HTTPError:
+        print("Couldn't download PDF (HTTP error).")
 
 
 def writemeetcsv(meet):
