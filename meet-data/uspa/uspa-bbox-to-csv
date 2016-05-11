@@ -56,6 +56,9 @@ class Word:
     def spancoverage(self, span):
         return min(self.xmax, span[1]) - max(self.xmin, span[0])
 
+    def height(self):
+        return self.ymax - self.ymin
+
     def xmid(self):
         return (self.xmin + self.xmax) / 2
 
@@ -129,7 +132,7 @@ def sortintorows(words):
 # Some PDFs have header information on every page, some don't.
 def getheaderidx(rows):
     for i, row in enumerate(rows):
-        if row[0].text == 'NAME':
+        if row[0].text.lower() == 'name':
             return i
     raise NoHeaderInformationException
 
@@ -163,12 +166,14 @@ def getcolumnspans(rows):
     # The row above the 'NAME' row will also contain column information.
     # Union the spans we have so far with any text in the pseudo-row above them.
     # This row contains stuff like "WT", "Squat", "Total", etc.
-    for x in rows[headeridx - 1]:
-        above = (x.xmin, x.xmax)
-        for i, span in enumerate(spans):
-            if spanintersects(above, span):
-                spans[i] = spanunion(above, span)
-                break
+    # Only do this if the column above is pretty close.
+    if rows[headeridx-1][0].ymin <= rows[headeridx][0].ymax + rows[headeridx][0].height():
+        for x in rows[headeridx - 1]:
+            above = (x.xmin, x.xmax)
+            for i, span in enumerate(spans):
+                if spanintersects(above, span):
+                    spans[i] = spanunion(above, span)
+                    break
 
     # There are then two special columns:
     # 1) The column for placement, which occurs before the name and isn't marked;
@@ -219,7 +224,7 @@ def parsepage(page):
         headeridx = getheaderidx(rows)
         for word in rows[headeridx]:
             for above in rows[headeridx-1]:
-                if word.aboveorbelow(above):
+                if above.ymin < word.ymax + word.height() and word.aboveorbelow(above):
                     word.text = '%s %s' % (above.text, word.text)
                     break
         # Print the header information first.

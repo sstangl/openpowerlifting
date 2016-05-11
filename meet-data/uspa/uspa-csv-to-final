@@ -47,21 +47,31 @@ def fixcolnames(columns):
             columns[i] = 'Age'
         elif low == 'squat, kg':
             columns[i] = 'BestSquatKg'
+        elif low == 'squat kg':
+            columns[i] = 'BestSquatKg'
         elif low == 'squat lbs':
             columns[i] = 'BestSquatLBS'
         elif low == 'bench, kg':
             columns[i] = 'BestBenchKg'
+        elif low == 'bench kg':
+            columns[i] = 'BestBenchKg'
         elif low == 'bench lbs':
             columns[i] = 'BestBenchLBS'
+        elif low == 'deadlift, kg':
+            columns[i] = 'BestDeadliftKg'
         elif low == 'deadlift kg':
             columns[i] = 'BestDeadliftKg'
         elif low == 'deadlift lbs':
             columns[i] = 'BestDeadliftLBS'
         elif low == 'total, kg':
             columns[i] = 'TotalKg'
+        elif low == 'total kg':
+            columns[i] = 'TotalKg'
         elif low == 'total lbs':
             columns[i] = 'TotalLBS'
         elif low == 'wilks score':
+            columns[i] = 'Wilks'
+        elif low == 'wilks total':
             columns[i] = 'Wilks'
         else:
             error("Unknown column %s" % name)
@@ -176,7 +186,7 @@ def parse(csv):
                     text = text.lower()
                     if '4th' in text:
                         amount = text.replace('4th-','').strip()
-                        amount = text.replace('4th','').strip()
+                        amount = amount.replace('4th','').strip()
                         newcol = colnameto4thname(columns[i])
                         assert newcol in columns
 
@@ -184,13 +194,13 @@ def parse(csv):
                         lifterstate[newcolidx] = amount
 
             # This is a row that specifies division and other information.
-            elif 'open' in searcher or 'junior' in searcher or 'master' in searcher:
+            elif 'open' in searcher or 'junior' in searcher or 'jr' in searcher or 'master' in searcher:
                 # If this is division information, it disregards columns.
                 info = ' '.join(row).strip().lower()
 
                 # Divisions are {Junior, Open, Submaster, Master} +
                 #  {Women, Men} + (Age Range if non-Open)
-                if not 'junior' in info and not 'open' in info and not 'master' in info:
+                if not 'junior' in info and not 'jr' in info and not 'open' in info and not 'master' in info:
                     continue
 
                 # Get the sex state.
@@ -215,6 +225,8 @@ def parse(csv):
                 elif 'submaster' in info:
                     divisionstate = 'Submaster' + agerange
                 elif 'junior' in info:
+                    divisionstate = 'Junior' + agerange
+                elif 'jr' in info:
                     divisionstate = 'Junior' + agerange
                 elif 'master' in info:
                     divisionstate = 'Master' + agerange
