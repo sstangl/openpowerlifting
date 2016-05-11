@@ -49,6 +49,8 @@ def fixcolnames(columns):
             columns[i] = 'BodyweightKg'
         elif low == 'bdy wght':
             columns[i] = 'BodyweightLBS'
+        elif low == 'wght( lb)':
+            columns[i] = 'BodyweightLBS'
         elif low == 'age':
             columns[i] = 'Age'
         elif low == 'squat':

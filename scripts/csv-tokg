@@ -20,7 +20,14 @@ def internal_to_kg_string(s):
 
 def to_kg(s):
     if s[-1] is '+':
-        return internal_to_kg_string(s[:-1]) + '+'
+        amount = internal_to_kg_string(s[:-1])
+        # Handle an error where the importer thought the weightclass was KG
+        # and converted 'SHW' to a number in Kg.
+        if amount == '40.82': # for women
+            return '90+'
+        if amount == '63.50': # for men
+            return '140+'
+        return amount + '+'
 
     return internal_to_kg_string(s)
 
