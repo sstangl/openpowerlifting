@@ -51,6 +51,8 @@ def fixcolnames(columns):
             columns[i] = 'BodyweightLBS'
         elif low == 'wght( lb)':
             columns[i] = 'BodyweightLBS'
+        elif low == 'wght lbs':
+            columns[i] = 'BodyweightLBS'
         elif low == 'age':
             columns[i] = 'Age'
         elif low == 'squat':
@@ -324,6 +326,7 @@ def main():
         k = ','.join(row)
         k = k.replace(',O,', ',0,')
         k = k.replace(',#VALUE!,', ',,')
+        k = k.replace(',#REF!,', ',,')
         k = k.replace(',DQ,', ',,') # Doesn't affect the Place, which is in the first col.
         print(k)
 
