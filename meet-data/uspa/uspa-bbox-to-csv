@@ -133,7 +133,7 @@ def sortintorows(words):
 def getheaderidx(rows):
     for i, row in enumerate(rows):
         # Sometimes the PDF has a 'Place' column header.
-        if row[0].text.lower() == 'name' or row[1].text.lower() == 'name':
+        if row[0].text.lower() == 'name' or (len(row)>1 and row[1].text.lower() == 'name'):
             return i
     raise NoHeaderInformationException
 
