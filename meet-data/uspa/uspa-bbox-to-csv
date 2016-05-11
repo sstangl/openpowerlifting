@@ -132,7 +132,8 @@ def sortintorows(words):
 # Some PDFs have header information on every page, some don't.
 def getheaderidx(rows):
     for i, row in enumerate(rows):
-        if row[0].text.lower() == 'name':
+        # Sometimes the PDF has a 'Place' column header.
+        if row[0].text.lower() == 'name' or row[1].text.lower() == 'name':
             return i
     raise NoHeaderInformationException
 
@@ -178,13 +179,15 @@ def getcolumnspans(rows):
     # There are then two special columns:
     # 1) The column for placement, which occurs before the name and isn't marked;
     # 2) The column for the name, which is actually very wide and needs to be expanded.
-    
     lifteridx = getlifteridx(rows)
-    placeword = rows[lifteridx][0]
-    placespan = (placeword.xmin, placeword.xmax)
+    
+    # Insert the Place column if it's not already there.
+    if rows[headeridx][0].text.lower() == 'name':
+        placeword = rows[lifteridx][0]
+        placespan = (placeword.xmin, placeword.xmax)
 
-    # The place comes before NAME, so insert at the beginning of the span list.
-    spans.insert(0, placespan)
+        # The place comes before NAME, so insert at the beginning of the span list.
+        spans.insert(0, placespan)
 
     # Then the NAME span (spans[1]) is the start of the name
     # until roughly halfway before the beginning of the next column (spans[2]).
@@ -228,9 +231,10 @@ def parsepage(page):
                     word.text = '%s %s' % (above.text, word.text)
                     break
         # Print the header information first.
-        csv = 'Place'
-        for word in rows[headeridx]:
-            csv += (SEP + word.text)
+        csv = ''
+        if rows[headeridx][0].text.lower() != 'place':
+            csv = 'Place;'
+        csv += SEP.join([word.text for word in rows[headeridx]])
         csv += '\n'
 
     except NoHeaderInformationException:

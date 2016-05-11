@@ -89,6 +89,8 @@ def fixcolnames(columns):
             columns[i] = 'Wilks'
         elif low == 'school':
             columns[i] = 'School'
+        elif low == 'lbs':
+            columns[i] = 'DELETEME'
         else:
             error("Unknown column %s" % name)
 
@@ -237,6 +239,8 @@ def parse(csv):
                     # Don't assert on len(k): the freeform text at the bottom confuses it.
                     if len(k) == 1:
                         agerange = ' ' + k[0].replace(',','')
+                    else:
+                        agerange = ''
                 else:
                     agerange = ''
 
