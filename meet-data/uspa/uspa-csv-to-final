@@ -73,6 +73,8 @@ def fixcolnames(columns):
             columns[i] = 'Wilks'
         elif low == 'wilks total':
             columns[i] = 'Wilks'
+        elif low == 'school':
+            columns[i] = 'School'
         else:
             error("Unknown column %s" % name)
 
