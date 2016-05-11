@@ -33,7 +33,11 @@ def fixcolnames(columns):
             columns[i] = 'Division'
         elif low == 'state':
             columns[i] = 'State'
+        elif low == 'country, state':
+            columns[i] = 'Country'
         elif low == 'wt class': # Sometimes lbs, sometimes kg, sigh.
+            columns[i] = 'WeightClassKg'
+        elif low == 'clas s':
             columns[i] = 'WeightClassKg'
         elif low == 'bdy wt(kg)':
             columns[i] = 'BodyweightKg'
@@ -201,6 +205,7 @@ def parse(csv):
                     if '4th' in text:
                         amount = text.replace('4th','').strip()
                         amount = amount.replace('-','').strip()
+                        amount = amount.replace(':','').strip()
                         newcol = colnameto4thname(columns[i])
                         assert newcol in columns
 
