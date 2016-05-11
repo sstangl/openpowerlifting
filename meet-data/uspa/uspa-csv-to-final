@@ -45,24 +45,32 @@ def fixcolnames(columns):
             columns[i] = 'BodyweightLBS'
         elif low == 'age':
             columns[i] = 'Age'
+        elif low == 'squat':
+            columns[i] = 'BestSquatKg'
         elif low == 'squat, kg':
             columns[i] = 'BestSquatKg'
         elif low == 'squat kg':
             columns[i] = 'BestSquatKg'
         elif low == 'squat lbs':
             columns[i] = 'BestSquatLBS'
+        elif low == 'bench':
+            columns[i] = 'BestBenchKg'
         elif low == 'bench, kg':
             columns[i] = 'BestBenchKg'
         elif low == 'bench kg':
             columns[i] = 'BestBenchKg'
         elif low == 'bench lbs':
             columns[i] = 'BestBenchLBS'
+        elif low == 'deadlift':
+            columns[i] = 'BestDeadliftKg'
         elif low == 'deadlift, kg':
             columns[i] = 'BestDeadliftKg'
         elif low == 'deadlift kg':
             columns[i] = 'BestDeadliftKg'
         elif low == 'deadlift lbs':
             columns[i] = 'BestDeadliftLBS'
+        elif low == 'total':
+            columns[i] = 'TotalKg'
         elif low == 'total, kg':
             columns[i] = 'TotalKg'
         elif low == 'total kg':
@@ -290,6 +298,8 @@ def main():
     for row in rval:
         for i, word in enumerate(row):
             row[i] = row[i].replace('"','\'')
+            row[i] = row[i].replace('(','\'')
+            row[i] = row[i].replace(')','\'')
             row[i] = row[i].replace(',','')
 
     # Print, and also fix up some common errors.
