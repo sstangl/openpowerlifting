@@ -9,6 +9,7 @@ var boxMulti = document.getElementById("multi");
 var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
 var boxAllResults = document.getElementById("showall");
+var boxOldschool = document.getElementById("oldschool");
 var btnShowMore = document.getElementById("showmore");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("class");
@@ -85,6 +86,7 @@ function redraw() {
     var wraps = boxWraps.checked;
     var single = boxSingle.checked;
     var multi = boxMulti.checked;
+    var oldschool = boxOldschool.checked;
     var men = boxMen.checked;
     var women = boxWomen.checked;
     var allresults = boxAllResults.checked;
@@ -163,7 +165,8 @@ function redraw() {
         return (raw && e == "Raw") ||
                (wraps && e == "Wraps") ||
                (single && e == "Single-ply") ||
-               (multi && e == "Multi-ply");
+               (multi && e == "Multi-ply") ||
+               (oldschool && e == "Oldschool");
     }
 
     var indices = db_make_indices_list();
@@ -200,6 +203,7 @@ function addEventListeners() {
     boxMulti.addEventListener("click", redraw);
     boxMen.addEventListener("click", redraw);
     boxWomen.addEventListener("click", redraw);
+    boxOldschool.addEventListener("click", redraw);
 
     boxAllResults.addEventListener("click", function()
         {
