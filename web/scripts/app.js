@@ -6,8 +6,13 @@ var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
 var boxSingle = document.getElementById("single");
 var boxMulti = document.getElementById("multi");
+var btnShowMore = document.getElementById("showmore")
 
+// Toggle between pounds or kilograms.
 var usingLbs = true;
+
+// Set to true if the "Show More" button is pressed.
+var showFullResults = false;
 
 
 function weight(kg) {
@@ -82,8 +87,20 @@ function redraw() {
     indices = db_sort_numeric_maxfirst(indices, WILKS);
     indices = db_uniq_lifter(indices);
 
+    var ntoshow = indices.length;
+    if (showFullResults === false) {
+        ntoshow = 500;
+        var left = indices.length - ntoshow;
+        if (left > 500) {
+            btnShowMore.style.visibility = "";
+            btnShowMore.innerText = String(indices.length - ntoshow) + " more... (Slow)"
+        } else {
+            btnShowMore.style.visibility = "hidden";
+        }
+    }
+
     var frag = document.createDocumentFragment();
-    for (var i = 0; i < indices.length; i++) {
+    for (var i = 0; i < ntoshow; i++) {
         var row = opldb[indices[i]];
         frag.appendChild(makeentry(row, i));
     }
@@ -97,6 +114,16 @@ function addEventListeners() {
     boxWraps.addEventListener("click", redraw);
     boxSingle.addEventListener("click", redraw);
     boxMulti.addEventListener("click", redraw);
+
+    btnShowMore.addEventListener("click", function ()
+        {
+            console.log("hi");
+            showFullResults = true;
+            btnShowMore.remove();
+            btnShowMore = undefined;
+            redraw();
+        }
+    );
 }
 
 
