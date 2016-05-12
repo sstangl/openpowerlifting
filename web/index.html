@@ -5,15 +5,42 @@
 
     <title>Open Powerlifting</title>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <script src="../build/openpowerlifting.js"></script>
-    <script src="database.js"></script>
-    <script src="app.js" defer></script>
+    <script src="scripts/database.js"></script>
+    <script src="scripts/app.js" defer></script>
   </head>
 
   <body>
     <div id="header">
     </div>
-    <div id="results">
-    </div>
+    <center>
+      <div id="controls">
+        <form>
+        <input type="checkbox" id="raw" checked="true">Raw
+        <input type="checkbox" id="wraps" checked="true">Wraps
+        <input type="checkbox" id="single">Single
+        <input type="checkbox" id="multi">Multi
+        </form>
+      </div>
+      <table>
+        <thead>
+          <td>Rank</td>
+          <td>Name</td>
+          <td>Sex</td>
+          <td>Age</td>
+          <td>Bodyweight</td>
+          <td>Squat</td>
+          <td>Bench</td>
+          <td>Deadlift</td>
+          <td>Total</td>
+          <td>Wilks</td>
+          <td>Age<br>Adjusted</td>
+        </thead>
+        <tbody id="results">
+        </tbody>
+      </table>
+    </center>
   </body>
 </html>
