@@ -10,6 +10,7 @@ var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
 var boxAllResults = document.getElementById("showall");
 var btnShowMore = document.getElementById("showmore");
+var selWeightType = document.getElementById("weighttype");
 
 // Toggle between pounds or kilograms.
 var usingLbs = true;
@@ -122,6 +123,15 @@ function redraw() {
 }
 
 
+function updateLbs() {
+    if (selWeightType.value == "lb")
+        usingLbs = true;
+    else
+        usingLbs = false;
+    redraw();
+}
+
+
 function addEventListeners() {
     boxRaw.addEventListener("click", redraw);
     boxWraps.addEventListener("click", redraw);
@@ -130,7 +140,7 @@ function addEventListeners() {
     boxMen.addEventListener("click", redraw);
     boxWomen.addEventListener("click", redraw);
 
-    boxAllResults.addEventListener("click", function (e)
+    boxAllResults.addEventListener("click", function()
         {
             if (boxAllResults.checked) {
                 btnShowMore.style.visibility = "hidden";
@@ -140,6 +150,14 @@ function addEventListeners() {
             redraw();
         }
     );
+
+    selWeightType.addEventListener("change", updateLbs);
+    selWeightType.addEventListener("keydown", function()
+        {
+            setTimeout(updateLbs, 0);
+        }
+    );
+
 
     var sortables = document.getElementsByClassName("sortable");
     for (var i = 0; i < sortables.length; ++i) {
