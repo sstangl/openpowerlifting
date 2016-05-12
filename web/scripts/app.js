@@ -93,7 +93,7 @@ function redraw() {
             return false;
         if (!men && row[SEX] == 'M')
             return false;
-        if (!women && row[SEX] == 'W')
+        if (!women && row[SEX] == 'F')
             return false;
 
         var e = row[EQUIPMENT];
