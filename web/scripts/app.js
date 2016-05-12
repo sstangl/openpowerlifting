@@ -12,7 +12,7 @@ var boxAllResults = document.getElementById("showall");
 var btnShowMore = document.getElementById("showmore");
 var selWeightType = document.getElementById("weighttype");
 
-// Toggle between pounds or kilograms.
+// Toggle between pounds or kilograms, used by weight().
 var usingLbs = true;
 
 // The column on which to sort.
@@ -72,6 +72,13 @@ function redraw() {
         results.removeChild(results.lastChild);
     }
 
+    // Update the global pounds setting.
+    // TODO: This should be carried in a local variable to avoid poking the global.
+    if (selWeightType.value == "lb")
+        usingLbs = true;
+    else
+        usingLbs = false;
+
     // Determine the filter to be used.
     var raw = boxRaw.checked;
     var wraps = boxWraps.checked;
@@ -123,15 +130,6 @@ function redraw() {
 }
 
 
-function updateLbs() {
-    if (selWeightType.value == "lb")
-        usingLbs = true;
-    else
-        usingLbs = false;
-    redraw();
-}
-
-
 function addEventListeners() {
     boxRaw.addEventListener("click", redraw);
     boxWraps.addEventListener("click", redraw);
@@ -151,10 +149,10 @@ function addEventListeners() {
         }
     );
 
-    selWeightType.addEventListener("change", updateLbs);
+    selWeightType.addEventListener("change", redraw);
     selWeightType.addEventListener("keydown", function()
         {
-            setTimeout(updateLbs, 0);
+            setTimeout(redraw, 0);
         }
     );
 
