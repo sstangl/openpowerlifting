@@ -119,7 +119,7 @@ def check_column_division(s):
 
 
 def check_column_equipment(s):
-    if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply']:
+    if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Oldschool']:
         perror("Unknown equipment value: \"%s\"" % s)
 
 
