@@ -14,6 +14,11 @@ body {
 #controls {
 }
 
+td.sortable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 table {
   border-spacing: 0;
 }

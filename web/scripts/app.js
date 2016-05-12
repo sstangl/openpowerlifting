@@ -6,13 +6,16 @@ var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
 var boxSingle = document.getElementById("single");
 var boxMulti = document.getElementById("multi");
-var btnShowMore = document.getElementById("showmore")
+var boxMen = document.getElementById("men");
+var boxWomen = document.getElementById("women");
+var boxAllResults = document.getElementById("showall");
+var btnShowMore = document.getElementById("showmore");
 
 // Toggle between pounds or kilograms.
 var usingLbs = true;
 
-// Set to true if the "Show More" button is pressed.
-var showFullResults = false;
+// The column on which to sort.
+var sortByGlobal = WILKS;
 
 
 function weight(kg) {
@@ -73,8 +76,18 @@ function redraw() {
     var wraps = boxWraps.checked;
     var single = boxSingle.checked;
     var multi = boxMulti.checked;
+    var men = boxMen.checked;
+    var women = boxWomen.checked;
+    var allresults = boxAllResults.checked;
 
     function filter(row) {
+        if (!men && !women)
+            return false;
+        if (!men && row[SEX] == 'M')
+            return false;
+        if (!women && row[SEX] == 'W')
+            return false;
+
         var e = row[EQUIPMENT];
         return (raw && e == "Raw") ||
                (wraps && e == "Wraps") ||
@@ -84,11 +97,11 @@ function redraw() {
 
     var indices = db_make_indices_list();
     indices = db_filter(indices, filter);
-    indices = db_sort_numeric_maxfirst(indices, WILKS);
+    indices = db_sort_numeric_maxfirst(indices, sortByGlobal);
     indices = db_uniq_lifter(indices);
 
     var ntoshow = indices.length;
-    if (showFullResults === false) {
+    if (allresults === false) {
         ntoshow = 500;
         var left = indices.length - ntoshow;
         if (left > 500) {
@@ -114,13 +127,47 @@ function addEventListeners() {
     boxWraps.addEventListener("click", redraw);
     boxSingle.addEventListener("click", redraw);
     boxMulti.addEventListener("click", redraw);
+    boxMen.addEventListener("click", redraw);
+    boxWomen.addEventListener("click", redraw);
+
+    boxAllResults.addEventListener("click", function (e)
+        {
+            if (boxAllResults.checked) {
+                btnShowMore.style.visibility = "hidden";
+            } else {
+                btnShowMore.style.visibility = "";
+            }
+            redraw();
+        }
+    );
+
+    var sortables = document.getElementsByClassName("sortable");
+    for (var i = 0; i < sortables.length; ++i) {
+        sortables[i].addEventListener("click", function(e)
+            {
+                if (e.target.id == "sort-bw")
+                    sortByGlobal = BODYWEIGHTKG;
+                else if (e.target.id == "sort-squat")
+                    sortByGlobal = BESTSQUATKG;
+                else if (e.target.id == "sort-bench")
+                    sortByGlobal = BESTBENCHKG;
+                else if (e.target.id == "sort-deadlift")
+                    sortByGlobal = BESTDEADLIFTKG;
+                else if (e.target.id == "sort-total")
+                    sortByGlobal = TOTALKG;
+                else if (e.target.id == "sort-wilks")
+                    sortByGlobal = WILKS;
+                else if (e.target.id == "sort-mcculloch")
+                    sortByGlobal = MCCULLOCH;
+                redraw();
+            }
+        );
+    }
 
     btnShowMore.addEventListener("click", function ()
         {
-            console.log("hi");
-            showFullResults = true;
-            btnShowMore.remove();
-            btnShowMore = undefined;
+            boxAllResults.checked = true;
+            btnShowMore.style.visibility = "hidden";
             redraw();
         }
     );
