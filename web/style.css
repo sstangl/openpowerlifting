@@ -11,7 +11,28 @@ body {
   font-family: verdana,helvetica,arial,sans-serif;
 }
 
+#header {
+  margin: 10px;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  font-variant: small-caps;
+}
+
 #controls {
+  margin: 10px;
+}
+
+.box {
+  display: inline-block;
+  width: 110px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+#showmore {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 td.sortable {

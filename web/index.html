@@ -14,23 +14,24 @@
 
   <body>
     <div id="header">
+      OpenPowerlifting<br>
+      Unsanctioned USPA Lifter Rankings
     </div>
     <center>
       <div id="controls">
         <form>
-        <input type="checkbox" id="raw" checked="true"><label for="raw">Raw</label>
-        <input type="checkbox" id="wraps" checked="true"><label for="wraps">Wraps</label>
-        <input type="checkbox" id="single"><label for="single">Single</label>
-        <input type="checkbox" id="multi"><label for="multi">Multi</label>
-        <input type="checkbox" id="men" checked="true"><label for="men">Men</label>
-        <input type="checkbox" id="women" checked="true"><label for="women">Women</label>
-        <input type="checkbox" id="showall"><label for="showall">All Results (Slow)</label>
-        <select id="weighttype">
-          <option value="lb">lbs</option>
-          <option value="kg">kg</option>
-        </select>
-        <select id="class">
-          <option value="all">All</option>
+        <div>
+        <span class="box"><input type="checkbox" id="raw" checked="true"><label for="raw">Raw</label></span>
+        <span class="box"><input type="checkbox" id="single"><label for="single">Single</label></span>
+        <span class="box"><input type="checkbox" id="men" checked="true"><label for="men">Men</label></span>
+        <span class="box"></span>
+        </div>
+        <div>
+        <span class="box"><input type="checkbox" id="wraps" checked="true"><label for="wraps">Wraps</label></span>
+        <span class="box"><input type="checkbox" id="multi"><label for="multi">Multi</label></span>
+        <span class="box"><input type="checkbox" id="women" checked="true"><label for="women">Women</label></span>
+        <select id="class" class="box">
+          <option value="all">All Classes</option>
           <option value="-44">-44</option>
           <option value="-48">-48</option>
           <option value="-52">-52</option>
@@ -46,6 +47,12 @@
           <option value="-125">-125</option>
           <option value="-140">-140</option>
           <option value="140+">140+</option>
+        </select>
+        </div>
+        <span class="box"><input type="checkbox" id="showall"><label for="showall">All Results</label></span>
+        <select id="weighttype" class="box">
+          <option value="lb">lbs</option>
+          <option value="kg">kg</option>
         </select>
         </form>
       </div>
