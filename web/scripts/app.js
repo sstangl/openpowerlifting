@@ -110,7 +110,7 @@ function redraw() {
 
     var ntoshow = indices.length;
     if (allresults === false) {
-        ntoshow = 500;
+        ntoshow = Math.min(500, indices.length);
         var left = indices.length - ntoshow;
         if (left > 500) {
             btnShowMore.style.visibility = "";
