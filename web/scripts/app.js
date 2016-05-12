@@ -157,7 +157,7 @@ function redraw() {
 
         if (selectonclass) {
             var bw = row[BODYWEIGHTKG];
-            if (bw <= bw_min || bw > bw_max)
+            if (bw === undefined || bw <= bw_min || bw > bw_max)
                 return false;
         }
 
