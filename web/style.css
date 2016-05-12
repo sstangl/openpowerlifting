@@ -11,6 +11,10 @@ body {
   font-family: verdana,helvetica,arial,sans-serif;
 }
 
+#oplurl {
+  color: red;
+}
+
 #header {
   margin: 10px;
   text-align: center;
