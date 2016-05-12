@@ -31,28 +31,38 @@ function string(str) {
 }
 
 
+function maketd(str) {
+    var td = document.createElement('td');
+    td.appendChild(document.createTextNode(str));
+    return td;
+}
+
+
 // Make the HTML for a single database row.
 function makeentry(row, i) {
-    var str = "<tr>";
-
-    str = str + "<td>" + String(i+1) + "</td>";
-    str = str + "<td>" + string(row[NAME]) + "</td>";
-    str = str + "<td>" + string(row[SEX]) + "</td>";
-    str = str + "<td>" + number(row[AGE]) + "</td>";
-    str = str + "<td>" + weight(row[BODYWEIGHTKG]) + "</td>";
-    str = str + "<td>" + weight(row[BESTSQUATKG]) + "</td>";
-    str = str + "<td>" + weight(row[BESTBENCHKG]) + "</td>";
-    str = str + "<td>" + weight(row[BESTDEADLIFTKG]) + "</td>";
-    str = str + "<td>" + weight(row[TOTALKG]) + "</td>";
-    str = str + "<td>" + number(row[WILKS]) + "</td>";
-    str = str + "<td>" + number(row[MCCULLOCH]) + "</td>";
-
-    return str + "</tr>";
+    var tr = document.createElement('tr');
+    tr.appendChild(maketd(String(i+1)));
+    tr.appendChild(maketd(string(row[NAME])));
+    tr.appendChild(maketd(string(row[SEX])));
+    tr.appendChild(maketd(number(row[AGE])));
+    tr.appendChild(maketd(weight(row[BODYWEIGHTKG])));
+    tr.appendChild(maketd(weight(row[BESTSQUATKG])));
+    tr.appendChild(maketd(weight(row[BESTBENCHKG])));
+    tr.appendChild(maketd(weight(row[BESTDEADLIFTKG])));
+    tr.appendChild(maketd(weight(row[TOTALKG])));
+    tr.appendChild(maketd(number(row[WILKS])));
+    tr.appendChild(maketd(number(row[MCCULLOCH])));
+    return tr;
 }
 
 
 // Fills in the <tbody> given the current selection state.
 function redraw() {
+    // Remove existing children.
+    while (results.lastChild) {
+        results.removeChild(results.lastChild);
+    }
+
     // Determine the filter to be used.
     var raw = boxRaw.checked;
     var wraps = boxWraps.checked;
@@ -72,12 +82,13 @@ function redraw() {
     indices = db_sort_numeric_maxfirst(indices, WILKS);
     indices = db_uniq_lifter(indices);
 
-    var html = '';
+    var frag = document.createDocumentFragment();
     for (var i = 0; i < indices.length; i++) {
         var row = opldb[indices[i]];
-        html += makeentry(row, i);
+        frag.appendChild(makeentry(row, i));
     }
-    results.innerHTML = html;
+
+    results.appendChild(frag);
 }
 
 
