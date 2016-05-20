@@ -1,7 +1,28 @@
 USPA conveniently numbers their meets and hosts results in a single location:
   http://uspla.org/home/competition-results
 
-To convert a modern (post-2010 or so) meet result spreadsheet PDF to CSV:
+New instructions (using the automatic scripts):
+
+To import a modern meet:
+  1. Run ./uspa-fetch to fetch all missing meets.
+  2. Run `ls fetch-tmp/` to list all missing meets.
+  3. Pick a meet by number, for example '0586'.
+  4. Run `./helper 0586` to pull that meet from fetch-tmp into a new folder.
+
+If helper failed, the meet could not be automatically imported. At that point,
+a number of temporary files will be left in the meet folder (e.g., '0586').
+
+You will have to manually fix the files (or the scripts to read them).
+To do that, the pipeline (as run by `uspa-parse`) is as follows:
+  1. uspa-pdf-to-bbox converts 0586.pdf to 0586.html with bounding box information.
+  2. uspa-bbox-to-csv converts 0586.html to 0586.csv with text arranged by row.
+  3. uspa-csv-to-final converts 0586.csv to lifters.csv by understanding row data.
+
+================================
+
+Old instructions (using manual column alignment in a text file):
+
+To convert an old (but still post-2010 or so) meet result spreadsheet PDF to CSV:
   1.  Create a folder named after the unique meet number.
   2.  Download the results PDF into that folder.
   3.  Run `pdftotext -layout *.pdf`.
