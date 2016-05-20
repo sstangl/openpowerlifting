@@ -243,18 +243,19 @@ def writemeetcsv(meet):
         fd.write("%s,%s,%s,%s,%s,%s" % (federation, date, country, state, town, name))
 
 
-def main(fetchtype):
+def main():
     html = gethtml()
     meets = getmeetlist(html)
     known = getknownmeets()
     remote = getunknownmeets(meets, known)
 
     for meet in remote:
-        print('Fetching %s' % meet.num)
-        if fetchtype == 'pdf':
-            downloadpdf(meet)
-        elif fetchtype == 'meetcsv':
-            writemeetcsv(meet)
+        print(' Fetching %s' % meet.num)
+        downloadpdf(meet)
+        writemeetcsv(meet)
+
+    if len(remote) == 0:
+        print(' No new meets found.')
 
 
 if __name__ == '__main__':
@@ -266,10 +267,4 @@ if __name__ == '__main__':
     if not os.path.exists(FETCHDIR):
         os.makedirs(FETCHDIR)
 
-    if len(sys.argv) > 1:
-        if sys.argv[1] != '--meetcsv':
-            print(" Only valid argument is --meetcsv.")
-            sys.exit(1)
-        main('meetcsv')
-    else:
-        main('pdf')
+    main()
