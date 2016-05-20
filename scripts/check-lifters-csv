@@ -230,6 +230,9 @@ def check_headers(headers):
     if 'Wilks' in headers and not 'BodyweightKg' in headers:
         perror('Wilks requires a BodyweightKg for exact bodyweight.')
 
+    if not 'Equipment' in headers:
+        perror('There must be an Equipment column.')
+
     # Not requiring the Event header yet, although it's probably a good idea.
     #if not 'Event' in headers:
     #    perror('There must be an Event column.')
