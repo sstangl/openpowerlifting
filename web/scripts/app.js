@@ -57,6 +57,7 @@ function makeentry(row, i) {
 
     var meetrow = meetdb.data[row[opldb.MEETID]];
     tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
+    tr.appendChild(maketd(string(meetrow[meetdb.DATE])));
 
     tr.appendChild(maketd(string(row[opldb.SEX])));
     tr.appendChild(maketd(number(row[opldb.AGE])));
