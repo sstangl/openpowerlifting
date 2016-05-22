@@ -38,6 +38,23 @@ class Csv:
         for field in x:
             self.remove_column_by_name(field)
 
+    # Integrate another Csv object into the current one.
+    def cat(self, other):
+        for header in other.fieldnames:
+            if not header in self.fieldnames:
+                self.append_column(header)
+
+        # An array mapping index in other.fieldnames to index in self.fieldnames.
+        mapping = [self.fieldnames.index(header) for header in other.fieldnames]
+
+        for row in other.rows:
+            build = ['' for x in range(0, len(self.fieldnames))]
+
+            for i, cell in enumerate(row):
+                build[mapping[i]] = cell
+
+            self.rows.append(build)
+
     def write_to(self, fd):
         fd.write(','.join(self.fieldnames) + "\n")
         fd.writelines([','.join(row) + "\n" for row in self.rows])

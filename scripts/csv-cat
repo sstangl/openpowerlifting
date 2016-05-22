@@ -7,48 +7,17 @@
 # Outputs to stdout.
 #
 
+from csv import Csv
 import sys
 
 if len(sys.argv) < 3:
     print(' Usage: %s csv1 csv2 ...' % sys.argv[0], file=sys.stderr)
     sys.exit(1)
 
-# The final CSV file being built.
-# The first column is the header list and is assumed to always exist.
-csv = [[]]
+csv = Csv(sys.argv[1])
 
-for filename in sys.argv[1:]:
-    with open(filename, 'r') as fd:
-        rows = [x.strip().split(',') for x in fd.readlines()]
+for filename in sys.argv[2:]:
+    c = Csv(filename)
+    csv.cat(c)
 
-    # Guarantee that all headers are in the final file.
-    #TODO: Order the headers stably (although this requires rewriting each row..)
-    for header in rows[0]:
-        if not header in csv[0]:
-            csv[0].append(header)
-
-    # Map from column index in this file to column index in the csv table. 
-    mapping = [csv[0].index(header) for header in rows[0]]
-
-    # Insert this csv into the final table, given the mapping.
-    for row in rows[1:]:
-        build = ['' for x in range(0, len(csv[0]))]
-
-        for i, cell in enumerate(row):
-            build[mapping[i]] = cell
-
-        csv.append(build)
-
-# Every row needs the same number of columns.
-numcols = len(csv[0])
-for row in csv[1:]:
-    diff = numcols - len(row)
-    if (diff < 0):
-        sys.exit('Row has too many columns: %s' % ','.join(row))
-
-    for k in range(0, diff):
-        row.append('')
-
-# Final output.
-for row in csv:
-    print(','.join(row))
+csv.write_to(sys.stdout)
