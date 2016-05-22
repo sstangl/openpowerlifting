@@ -61,6 +61,22 @@ function makeentry(row, i) {
 
     tr.appendChild(maketd(string(row[opldb.SEX])));
     tr.appendChild(maketd(number(row[opldb.AGE])));
+
+    var equipment = row[opldb.EQUIPMENT];
+    if (equipment === 'Raw') {
+        tr.appendChild(maketd('R'));
+    } else if (equipment === 'Wraps') {
+        tr.appendChild(maketd('W'));
+    } else if (equipment === 'Single-ply') {
+        tr.appendChild(maketd('S'));
+    } else if (equipment === 'Multi-ply') {
+        tr.appendChild(maketd('M'));
+    } else if (equipment === 'Oldschool') {
+        tr.appendChild(maketd('OS'));
+    } else {
+        tr.appendChild(maketd(''));
+    }
+
     tr.appendChild(maketd(weight(row[opldb.BODYWEIGHTKG])));
     tr.appendChild(maketd(weight(row[opldb.BESTSQUATKG])));
     tr.appendChild(maketd(weight(row[opldb.BESTBENCHKG])));
