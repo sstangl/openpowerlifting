@@ -15,6 +15,10 @@ body {
   color: red;
 }
 
+.datalink {
+  color: #FFFFFF;
+}
+
 #construction-left {
   float: left;
 }

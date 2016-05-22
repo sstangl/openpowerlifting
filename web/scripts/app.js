@@ -53,7 +53,18 @@ function maketd(str) {
 function makeentry(row, i) {
     var tr = document.createElement('tr');
     tr.appendChild(maketd(String(i+1)));
-    tr.appendChild(maketd(string(row[opldb.NAME])));
+
+    // The name should link to the lifter page.
+    var name = string(row[opldb.NAME]);
+    var lifterlink = document.createElement('a');
+    lifterlink.setAttribute('href', 'lifter.html?q=' + name);
+    lifterlink.setAttribute('class', 'datalink');
+    lifterlink.appendChild(document.createTextNode(name));
+
+    var liftertd = document.createElement('td');
+    liftertd.appendChild(lifterlink);
+    tr.appendChild(liftertd);
+    
 
     var meetrow = meetdb.data[row[opldb.MEETID]];
     tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
