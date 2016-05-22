@@ -62,6 +62,7 @@ function makeentry(row) {
     }
 
     tr.appendChild(maketd(weight(row[opldb.BODYWEIGHTKG])));
+    tr.appendChild(maketd(string(row[opldb.DIVISION])));
     tr.appendChild(maketd(weight(row[opldb.BESTSQUATKG])));
     tr.appendChild(maketd(weight(row[opldb.BESTBENCHKG])));
     tr.appendChild(maketd(weight(row[opldb.BESTDEADLIFTKG])));
