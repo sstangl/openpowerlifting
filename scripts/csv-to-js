@@ -14,11 +14,15 @@ csv = Csv(filename)
 
 print("'use strict';")
 
+# Use a module-like pattern.
+print("var %s = (function(){" % jsvarname)
+print("var obj = {};")
+
 # Blat out constants into the global JS namespace for now.
 for i, field in enumerate(csv.fieldnames):
-    print("const %s = %s;" % (field.upper(), i))
+    print("obj.%s = %s;" % (field.upper(), i))
 
-print("var %s = [" % jsvarname)
+print("obj.data = [")
 
 def isnumber(s):
     try:
@@ -50,3 +54,7 @@ for row in csv.rows:
 
 
 print("];")
+
+# End the module pattern.
+print("return obj;")
+print("}());")

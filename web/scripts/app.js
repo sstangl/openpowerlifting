@@ -18,7 +18,7 @@ var selClass = document.getElementById("class");
 var usingLbs = true;
 
 // The column on which to sort.
-var sortByGlobal = WILKS;
+var sortByGlobal = opldb.WILKS;
 
 
 function weight(kg) {
@@ -53,16 +53,20 @@ function maketd(str) {
 function makeentry(row, i) {
     var tr = document.createElement('tr');
     tr.appendChild(maketd(String(i+1)));
-    tr.appendChild(maketd(string(row[NAME])));
-    tr.appendChild(maketd(string(row[SEX])));
-    tr.appendChild(maketd(number(row[AGE])));
-    tr.appendChild(maketd(weight(row[BODYWEIGHTKG])));
-    tr.appendChild(maketd(weight(row[BESTSQUATKG])));
-    tr.appendChild(maketd(weight(row[BESTBENCHKG])));
-    tr.appendChild(maketd(weight(row[BESTDEADLIFTKG])));
-    tr.appendChild(maketd(weight(row[TOTALKG])));
-    tr.appendChild(maketd(number(row[WILKS])));
-    tr.appendChild(maketd(number(row[MCCULLOCH])));
+    tr.appendChild(maketd(string(row[opldb.NAME])));
+
+    var meetrow = meetdb.data[row[opldb.MEETID]];
+    tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
+
+    tr.appendChild(maketd(string(row[opldb.SEX])));
+    tr.appendChild(maketd(number(row[opldb.AGE])));
+    tr.appendChild(maketd(weight(row[opldb.BODYWEIGHTKG])));
+    tr.appendChild(maketd(weight(row[opldb.BESTSQUATKG])));
+    tr.appendChild(maketd(weight(row[opldb.BESTBENCHKG])));
+    tr.appendChild(maketd(weight(row[opldb.BESTDEADLIFTKG])));
+    tr.appendChild(maketd(weight(row[opldb.TOTALKG])));
+    tr.appendChild(maketd(number(row[opldb.WILKS])));
+    tr.appendChild(maketd(number(row[opldb.MCCULLOCH])));
     return tr;
 }
 
@@ -150,18 +154,18 @@ function redraw() {
     function filter(row) {
         if (!men && !women)
             return false;
-        if (!men && row[SEX] == 'M')
+        if (!men && row[opldb.SEX] == 'M')
             return false;
-        if (!women && row[SEX] == 'F')
+        if (!women && row[opldb.SEX] == 'F')
             return false;
 
         if (selectonclass) {
-            var bw = row[BODYWEIGHTKG];
+            var bw = row[opldb.BODYWEIGHTKG];
             if (bw === undefined || bw <= bw_min || bw > bw_max)
                 return false;
         }
 
-        var e = row[EQUIPMENT];
+        var e = row[opldb.EQUIPMENT];
         return (raw && e == "Raw") ||
                (wraps && e == "Wraps") ||
                (single && e == "Single-ply") ||
@@ -187,8 +191,9 @@ function redraw() {
     }
 
     var frag = document.createDocumentFragment();
+    var data = opldb.data;
     for (var i = 0; i < ntoshow; i++) {
-        var row = opldb[indices[i]];
+        var row = data[indices[i]];
         frag.appendChild(makeentry(row, i));
     }
 
@@ -235,19 +240,19 @@ function addEventListeners() {
         sortables[i].addEventListener("click", function(e)
             {
                 if (e.target.id == "sort-bw")
-                    sortByGlobal = BODYWEIGHTKG;
+                    sortByGlobal = opldb.BODYWEIGHTKG;
                 else if (e.target.id == "sort-squat")
-                    sortByGlobal = BESTSQUATKG;
+                    sortByGlobal = opldb.BESTSQUATKG;
                 else if (e.target.id == "sort-bench")
-                    sortByGlobal = BESTBENCHKG;
+                    sortByGlobal = opldb.BESTBENCHKG;
                 else if (e.target.id == "sort-deadlift")
-                    sortByGlobal = BESTDEADLIFTKG;
+                    sortByGlobal = opldb.BESTDEADLIFTKG;
                 else if (e.target.id == "sort-total")
-                    sortByGlobal = TOTALKG;
+                    sortByGlobal = opldb.TOTALKG;
                 else if (e.target.id == "sort-wilks")
-                    sortByGlobal = WILKS;
+                    sortByGlobal = opldb.WILKS;
                 else if (e.target.id == "sort-mcculloch")
-                    sortByGlobal = MCCULLOCH;
+                    sortByGlobal = opldb.MCCULLOCH;
                 redraw();
             }
         );

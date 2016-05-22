@@ -4,8 +4,9 @@ DATADIR = meet-data
 BUILDDIR = build
 
 PLFILE = openpowerlifting.csv
-JSFILE = openpowerlifting.js
+PLFILEJS = openpowerlifting.js
 MEETFILE = meets.csv
+MEETFILEJS = meets.js
 
 all: csvfile web
 
@@ -19,7 +20,8 @@ csvfile: builddir
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
 web: csvfile
-	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "${BUILDDIR}/${JSFILE}"
+	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "${BUILDDIR}/${PLFILEJS}"
+	scripts/csv-to-js "${BUILDDIR}/${MEETFILE}" meetdb > "${BUILDDIR}/${MEETFILEJS}"
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:

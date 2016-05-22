@@ -3,8 +3,8 @@
 
 
 function db_make_indices_list() {
-    var indices = Array(opldb.length);
-    for (var i = 0; i < opldb.length; ++i) {
+    var indices = Array(opldb.data.length);
+    for (var i = 0; i < opldb.data.length; ++i) {
         indices[i] = i;
     }
     return indices;
@@ -13,7 +13,7 @@ function db_make_indices_list() {
 
 function db_filter(indices, rowcmpfn) {
     return indices.filter(function (e) {
-        var row = opldb[e];
+        var row = opldb.data[e];
         return rowcmpfn(row);
     });
 }
@@ -21,8 +21,8 @@ function db_filter(indices, rowcmpfn) {
 
 function db_sort_numeric_minfirst(indices, colidx) {
     indices.sort(function (a, b) {
-        var av = Number(opldb[a][colidx]);
-        var bv = Number(opldb[b][colidx]);
+        var av = Number(opldb.data[a][colidx]);
+        var bv = Number(opldb.data[b][colidx]);
         if (isNaN(av))
             av = Number.MAX_SAFE_INTEGER;
         if (isNaN(bv))
@@ -34,8 +34,8 @@ function db_sort_numeric_minfirst(indices, colidx) {
 
 function db_sort_numeric_maxfirst(indices, colidx) {
     indices.sort(function (a, b) {
-        var av = Number(opldb[a][colidx]);
-        var bv = Number(opldb[b][colidx]);
+        var av = Number(opldb.data[a][colidx]);
+        var bv = Number(opldb.data[b][colidx]);
         if (isNaN(av))
             av = Number.MIN_SAFE_INTEGER;
         if (isNaN(bv))
@@ -55,7 +55,7 @@ function db_uniq_lifter(indices) {
     var name;
 
     for (var i = 0; i < indices.length; ++i) {
-        name = opldb[indices[i]][NAME];
+        name = opldb.data[indices[i]][opldb.NAME];
         if (seen[name]) {
             indices[i] = -1
         } else {
