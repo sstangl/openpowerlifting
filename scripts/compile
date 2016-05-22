@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Compiles all lifters.csv and meet.csv files into the final files.
+#
+
+from csv import Csv
+import os
+import sys
+
+
+MEETID = 0
+def nextmeetid():
+    global MEETID
+    x = MEETID
+    MEETID = MEETID + 1
+    return x
+
+
+# Appends to lifterscsv and meetscsv, while assigning a MeetID mapping.
+def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
+    newlifters = Csv(lifterspath)
+    newmeet = Csv(meetpath)
+
+    assert "MeetID" in lifterscsv.fieldnames
+    assert "MeetID" in meetscsv.fieldnames
+    assert not "MeetID" in newlifters.fieldnames
+    assert not "MeetID" in newmeet.fieldnames
+
+    meetid = str(nextmeetid())
+
+    newlifters.append_column('MeetID')
+    idx = newlifters.fieldnames.index('MeetID')
+    for row in newlifters.rows:
+        row[idx] = meetid
+
+    newmeet.append_column('MeetID')
+    idx = newmeet.fieldnames.index('MeetID')
+    for row in newmeet.rows:
+        row[idx] = meetid
+
+    lifterscsv.cat(newlifters)
+    meetscsv.cat(newmeet)
+
+
+def main(builddir, meetdir):
+    lifterscsv = Csv()
+    meetscsv = Csv()
+
+    lifterscsv.append_column('MeetID')
+    meetscsv.append_column('MeetID')
+
+    for dirname, subdirs, files in os.walk(meetdir):
+        if 'lifters.csv' in files:
+            assert 'meet.csv' in files
+            lifterspath = dirname + os.sep + 'lifters.csv'
+            meetpath = dirname + os.sep + 'meet.csv'
+            addmeet(lifterscsv, meetscsv, lifterspath, meetpath)
+
+    oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
+    meetscsvpath = builddir + os.sep + 'meets.csv'
+
+    with open(oplcsvpath, 'w') as fd:
+        lifterscsv.write_to(fd)
+    with open(meetscsvpath, 'w') as fd:
+        meetscsv.write_to(fd)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print(' Usage: %s builddir meetdir' % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1], sys.argv[2])

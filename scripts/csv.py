@@ -5,10 +5,14 @@
 #
 
 class Csv:
-    def __init__(self, filename):
-        with open(filename, 'r') as fd:
-            self.fieldnames = fd.readline().strip().split(',')
-            self.rows = [x.strip().split(',') for x in fd.readlines()]
+    def __init__(self, filename=None):
+        if filename:
+            with open(filename, 'r') as fd:
+                self.fieldnames = fd.readline().strip().split(',')
+                self.rows = [x.strip().split(',') for x in fd.readlines()]
+        else:
+            self.fieldnames = []
+            self.rows = []
 
     def __len__(self):
         return len(self.rows)

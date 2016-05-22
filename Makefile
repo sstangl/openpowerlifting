@@ -14,8 +14,7 @@ builddir:
 
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
-	find '${DATADIR}' -name meet.csv -print0 | xargs -0 'scripts/csv-cat' > "${BUILDDIR}/${MEETFILE}"
-	find '${DATADIR}' -name lifters.csv -print0 | xargs -0 'scripts/csv-cat' > "${BUILDDIR}/${PLFILE}"
+	scripts/compile "${BUILDDIR}" "${DATADIR}"
 	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" Team School Country-State Country College/University Category State
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
