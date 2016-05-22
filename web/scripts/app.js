@@ -64,7 +64,6 @@ function makeentry(row, i) {
     var liftertd = document.createElement('td');
     liftertd.appendChild(lifterlink);
     tr.appendChild(liftertd);
-    
 
     var meetrow = meetdb.data[row[opldb.MEETID]];
     tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
