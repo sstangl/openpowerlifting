@@ -27,6 +27,12 @@ def to_kg(s):
             return '90+'
         if amount == '63.50': # for men
             return '140+'
+
+        # Old USAPL classes.
+        if amount == '275+':
+            return '125+'
+        if amount == '198+':
+            return '90+'
         return amount + '+'
 
     return internal_to_kg_string(s)
