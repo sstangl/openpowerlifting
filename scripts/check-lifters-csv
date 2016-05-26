@@ -53,6 +53,9 @@ def check_column_name(s):
     # so just use that for quotes.
     special_legal_chars = ' \'.-'
 
+    if 'Jr.' in s or 'Sr.' in s:
+        perror("Junior/Senior in names must standardize on no period: \"%s\"" % s)
+
     # This only works for names written in English, but that's OK for now.
     has_illegal_char = False
     for c in s:
