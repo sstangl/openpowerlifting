@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-var results = document.getElementById("results");
+var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
 var boxSingle = document.getElementById("single");
@@ -97,10 +97,8 @@ function makeentry(row, i) {
 
 // Fills in the <tbody> given the current selection state.
 function redraw() {
-    // Remove existing children.
-    while (results.lastChild) {
-        results.removeChild(results.lastChild);
-    }
+    // Remove existing body in one fell swoop.
+    theTable.removeChild(theTable.getElementsByTagName("tbody")[0]);
 
     // Update the global pounds setting.
     // TODO: This should be carried in a local variable to avoid poking the global.
@@ -213,13 +211,16 @@ function redraw() {
     }
 
     var frag = document.createDocumentFragment();
+    var tbody = document.createElement("tbody");
+    frag.appendChild(tbody);
+
     var data = opldb.data;
     for (var i = 0; i < ntoshow; i++) {
         var row = data[indices[i]];
-        frag.appendChild(makeentry(row, i));
+        tbody.appendChild(makeentry(row, i));
     }
 
-    results.appendChild(frag);
+    theTable.appendChild(frag);
 }
 
 
