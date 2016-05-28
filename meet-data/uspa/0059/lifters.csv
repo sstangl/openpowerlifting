@@ -1,40 +1,40 @@
-Name,Division,Sex,WeightClassKg,BodyweightKg,Age,Event,BestBenchKg,BestDeadliftKg
-Catherine LaMantia,Open Women,F,67.13,63.05,14,B,32.5,
-T Merkelbach,Open Women,F,89.81+,92.08,21,B,57.5,
-Charles LaMantia,Open Men,M,51.71,46.95,10,B,25,
-C Marciales,Open Men,M,82.10,78.93,29,B,75,
-A Fregoso,Open Men,M,89.81,84.82,29,B,105,
-M Tronske,Open Men,M,109.77,101.15,43,B,197.5,
-K Tawzer,Open Men,M,109.77,104.55,55,B,147.5,
-R Ryan,Open Men,M,109.77,104.10,29,B,142.5,
-M Tronske,Master 40-44,M,109.77,101.15,43,B,197.5,
-M Brown,Master 45-49,M,99.79,92.99,46,B,130,
-S Brown,Master 50-54,M,139.71,132.68,53,B,232.5,
-K Tawzer,Master 55-59,M,109.77,104.55,55,B,147.5,
-F Irons,Master 70-74,M,89.81,88.90,71,B,122.5,
-O Roussell,Junior Men 20-23,M,139.71+,166.47,21,B,197.5,
-G Butler,Junior Men 20-23,M,99.79,97.07,22,B,172.5,
-L Guisinger,Junior Men 20-23,M,82.10,81.65,21,B,137.5,
-K Dougherty,Junior Men 20-23,M,89.81,88.45,22,B,112.5,
-J Decker,Submaster Men,M,89.81,88.90,36,B,147.5,
-K Tawzer,Police/Fire,M,109.77,104.55,55,B,147.5,
-Catherine LaMantia,Open Women,F,67.13,63.05,14,D,,85
-T Merkelbach,Open Women,F,89.81+,92.08,21,D,,107.5
-P Loera,W SubMaster,F,47.63,47.63,35,D,,102.5
-Charles LaMantia,Open Men,M,51.71,46.95,10,D,,65
-F Astilla,Open Men,M,74.84,73.26,29,D,,172.5
-C Marciales,Open Men,M,82.10,78.93,29,D,,182.5
-R Lewis,Open Men,M,99.79,98.66,29,D,,310
-J Grau,Open Men,M,109.77,107.05,29,D,,300
-K Tawzer,Open Men,M,109.77,104.55,55,D,,137.5
-R Ryan,Open Men,M,109.77,104.10,29,D,,
-M Tronske,Master 40-44,M,109.77,101.15,43,D,,250
-M Brown,Master 45-49,M,99.79,92.99,46,D,,200
-K Meskew,Master 50-54,M,55.79,55.34,51,D,,150
-K Tawzer,Master 55-59,M,109.77,104.55,55,D,,137.5
-F Irons,Master 70-74,M,89.81,88.90,71,D,,175
-J Thomson,Junior Men 20-23,M,99.79,98.88,21,D,,275
-O Roussell,Junior Men 20-23,M,139.71+,166.47,21,D,,250
-K Dougherty,Junior Men 20-23,M,89.81,88.45,22,D,,182.5
-J Decker,Submaster Men,M,89.81,88.90,36,D,,205
-K Tawzer,Police/Fire,M,109.77,104.55,55,D,,137.5
+Name,Division,Sex,WeightClassKg,BodyweightKg,Age,Event,BestBenchKg,BestDeadliftKg,Equipment
+Catherine LaMantia,Open Women,F,67.13,63.05,14,B,32.5,,Single-ply
+T Merkelbach,Open Women,F,89.81+,92.08,21,B,57.5,,Single-ply
+Charles LaMantia,Open Men,M,51.71,46.95,10,B,25,,Single-ply
+C Marciales,Open Men,M,82.10,78.93,29,B,75,,Single-ply
+A Fregoso,Open Men,M,89.81,84.82,29,B,105,,Single-ply
+M Tronske,Open Men,M,109.77,101.15,43,B,197.5,,Single-ply
+K Tawzer,Open Men,M,109.77,104.55,55,B,147.5,,Single-ply
+R Ryan,Open Men,M,109.77,104.10,29,B,142.5,,Single-ply
+M Tronske,Master 40-44,M,109.77,101.15,43,B,197.5,,Single-ply
+M Brown,Master 45-49,M,99.79,92.99,46,B,130,,Single-ply
+S Brown,Master 50-54,M,139.71,132.68,53,B,232.5,,Single-ply
+K Tawzer,Master 55-59,M,109.77,104.55,55,B,147.5,,Single-ply
+F Irons,Master 70-74,M,89.81,88.90,71,B,122.5,,Single-ply
+O Roussell,Junior Men 20-23,M,139.71+,166.47,21,B,197.5,,Single-ply
+G Butler,Junior Men 20-23,M,99.79,97.07,22,B,172.5,,Single-ply
+L Guisinger,Junior Men 20-23,M,82.10,81.65,21,B,137.5,,Single-ply
+K Dougherty,Junior Men 20-23,M,89.81,88.45,22,B,112.5,,Single-ply
+J Decker,Submaster Men,M,89.81,88.90,36,B,147.5,,Single-ply
+K Tawzer,Police/Fire,M,109.77,104.55,55,B,147.5,,Single-ply
+Catherine LaMantia,Open Women,F,67.13,63.05,14,D,,85,Single-ply
+T Merkelbach,Open Women,F,89.81+,92.08,21,D,,107.5,Single-ply
+P Loera,W SubMaster,F,47.63,47.63,35,D,,102.5,Single-ply
+Charles LaMantia,Open Men,M,51.71,46.95,10,D,,65,Single-ply
+F Astilla,Open Men,M,74.84,73.26,29,D,,172.5,Single-ply
+C Marciales,Open Men,M,82.10,78.93,29,D,,182.5,Single-ply
+R Lewis,Open Men,M,99.79,98.66,29,D,,310,Single-ply
+J Grau,Open Men,M,109.77,107.05,29,D,,300,Single-ply
+K Tawzer,Open Men,M,109.77,104.55,55,D,,137.5,Single-ply
+R Ryan,Open Men,M,109.77,104.10,29,D,,,Single-ply
+M Tronske,Master 40-44,M,109.77,101.15,43,D,,250,Single-ply
+M Brown,Master 45-49,M,99.79,92.99,46,D,,200,Single-ply
+K Meskew,Master 50-54,M,55.79,55.34,51,D,,150,Single-ply
+K Tawzer,Master 55-59,M,109.77,104.55,55,D,,137.5,Single-ply
+F Irons,Master 70-74,M,89.81,88.90,71,D,,175,Single-ply
+J Thomson,Junior Men 20-23,M,99.79,98.88,21,D,,275,Single-ply
+O Roussell,Junior Men 20-23,M,139.71+,166.47,21,D,,250,Single-ply
+K Dougherty,Junior Men 20-23,M,89.81,88.45,22,D,,182.5,Single-ply
+J Decker,Submaster Men,M,89.81,88.90,36,D,,205,Single-ply
+K Tawzer,Police/Fire,M,109.77,104.55,55,D,,137.5,Single-ply

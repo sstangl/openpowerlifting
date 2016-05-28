@@ -1,42 +1,42 @@
-Name,Division,Sex,WeightClassKg,BodyweightKg,Age,Event,BestBenchKg,BestDeadliftKg
-C LaMantia,Junior Women,F,67.13,62.37,15,B,40,
-M Tawzer,Master Women,F,89.81+,102.51,51,B,55,
-R Garcia,Open Men,M,74.84,73.03,,B,145,
-D Robideau,Open Men,M,89.81,88.22,,B,170,
-S Yargus,Open Men,M,89.81,87.54,,B,-160,
-J Campbell,Open Men,M,99.79,97.52,,B,117.5,
-K Tawzer,Open Men,M,109.77,106.14,,B,172.5,
-M Robles,Open Men,M,124.74,121.11,,B,227.5,
-J Dentice,Open Men,M,124.74,122.02,,B,190,
-C Tawzer,Open Men,M,139.71+,167.83,,B,180,
-M Brown,Master 45-49,M,89.81,89.81,47,B,122.5,
-A Fu,Master 55-59,M,82.1,80.29,55,B,152.5,
-K Tawzer,Master 55-59,M,109.77,106.14,55,B,172.5,
-B Evans,Master 60-64,M,109.77,106.14,61,B,192.5,
-F Irons,Master 70-74,M,89.81,89.81,71,B,115,
-R Simon,Master 75-79,M,82.1,79.83,76,B,-117.5,
-C LaMantia,Junior 13-15,M,55.79,52.39,10,B,32.5,
-K Wilson,Junior 16-17,M,99.79,96.16,16,B,165,
-M Nguyen,Junior 18-19,M,74.84,73.03,19,B,-147.5,
-J Fishbach,SubMaster,M,99.79,96.16,36,B,140,
-K Tawzer,Police/Fire,M,109.77,106.14,55,B,172.5,
-C LaMantia,Junior Women,F,67.13,62.37,15,D,,82.5
-M Tawzer,Master Women,F,89.81+,102.51,51,D,,112.5
-D Gustafson,Open Men,M,89.81,89.58,,D,,237.5
-D Robideau,Open Men,M,89.81,88.22,,D,,195
-S Yargus,Open Men,M,89.81,87.54,,D,,190
-A Fregoso,Open Men,M,89.81,85.73,,D,,185
-J Bostick,Open Men,M,99.79,94.8,,D,,295
-J Campbell,Open Men,M,99.79,97.52,,D,,190
-A Harris,Open Men,M,109.77,100.47,,D,,272.5
-J Dentice,Open Men,M,124.74,122.02,,D,,257.5
-M Brown,Master 45-49,M,89.81,89.81,47,D,,187.5
-A Fu,Master 55-59,M,82.1,80.29,55,D,,200
-E Lewis,Master 55-59,M,89.81,89.81,58,D,,205
-R Hill,Master 70-74,M,74.84,71.21,73,D,,182.5
-F Irons,Master 70-74,M,89.81,89.81,71,D,,182.5
-R Simon,Master 75-79,M,82.1,79.83,76,D,,155
-C LaMantia,Junior 13-15,M,55.79,52.39,10,D,,75
-M Nguyen,Junior 18-19,M,74.84,73.03,19,D,,192.5
-J Bostick,SubMaster,M,99.79,94.8,37,D,,295
-J Fishbach,SubMaster,M,99.79,96.16,36,D,,212.5
+Name,Division,Sex,WeightClassKg,BodyweightKg,Age,Event,BestBenchKg,BestDeadliftKg,Equipment
+C LaMantia,Junior Women,F,67.13,62.37,15,B,40,,Single-ply
+M Tawzer,Master Women,F,89.81+,102.51,51,B,55,,Single-ply
+R Garcia,Open Men,M,74.84,73.03,,B,145,,Single-ply
+D Robideau,Open Men,M,89.81,88.22,,B,170,,Single-ply
+S Yargus,Open Men,M,89.81,87.54,,B,-160,,Single-ply
+J Campbell,Open Men,M,99.79,97.52,,B,117.5,,Single-ply
+K Tawzer,Open Men,M,109.77,106.14,,B,172.5,,Single-ply
+M Robles,Open Men,M,124.74,121.11,,B,227.5,,Single-ply
+J Dentice,Open Men,M,124.74,122.02,,B,190,,Single-ply
+C Tawzer,Open Men,M,139.71+,167.83,,B,180,,Single-ply
+M Brown,Master 45-49,M,89.81,89.81,47,B,122.5,,Single-ply
+A Fu,Master 55-59,M,82.1,80.29,55,B,152.5,,Single-ply
+K Tawzer,Master 55-59,M,109.77,106.14,55,B,172.5,,Single-ply
+B Evans,Master 60-64,M,109.77,106.14,61,B,192.5,,Single-ply
+F Irons,Master 70-74,M,89.81,89.81,71,B,115,,Single-ply
+R Simon,Master 75-79,M,82.1,79.83,76,B,-117.5,,Single-ply
+C LaMantia,Junior 13-15,M,55.79,52.39,10,B,32.5,,Single-ply
+K Wilson,Junior 16-17,M,99.79,96.16,16,B,165,,Single-ply
+M Nguyen,Junior 18-19,M,74.84,73.03,19,B,-147.5,,Single-ply
+J Fishbach,SubMaster,M,99.79,96.16,36,B,140,,Single-ply
+K Tawzer,Police/Fire,M,109.77,106.14,55,B,172.5,,Single-ply
+C LaMantia,Junior Women,F,67.13,62.37,15,D,,82.5,Single-ply
+M Tawzer,Master Women,F,89.81+,102.51,51,D,,112.5,Single-ply
+D Gustafson,Open Men,M,89.81,89.58,,D,,237.5,Single-ply
+D Robideau,Open Men,M,89.81,88.22,,D,,195,Single-ply
+S Yargus,Open Men,M,89.81,87.54,,D,,190,Single-ply
+A Fregoso,Open Men,M,89.81,85.73,,D,,185,Single-ply
+J Bostick,Open Men,M,99.79,94.8,,D,,295,Single-ply
+J Campbell,Open Men,M,99.79,97.52,,D,,190,Single-ply
+A Harris,Open Men,M,109.77,100.47,,D,,272.5,Single-ply
+J Dentice,Open Men,M,124.74,122.02,,D,,257.5,Single-ply
+M Brown,Master 45-49,M,89.81,89.81,47,D,,187.5,Single-ply
+A Fu,Master 55-59,M,82.1,80.29,55,D,,200,Single-ply
+E Lewis,Master 55-59,M,89.81,89.81,58,D,,205,Single-ply
+R Hill,Master 70-74,M,74.84,71.21,73,D,,182.5,Single-ply
+F Irons,Master 70-74,M,89.81,89.81,71,D,,182.5,Single-ply
+R Simon,Master 75-79,M,82.1,79.83,76,D,,155,Single-ply
+C LaMantia,Junior 13-15,M,55.79,52.39,10,D,,75,Single-ply
+M Nguyen,Junior 18-19,M,74.84,73.03,19,D,,192.5,Single-ply
+J Bostick,SubMaster,M,99.79,94.8,37,D,,295,Single-ply
+J Fishbach,SubMaster,M,99.79,96.16,36,D,,212.5,Single-ply

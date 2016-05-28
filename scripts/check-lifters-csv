@@ -228,6 +228,9 @@ def check_headers(headers):
     if not 'Sex' in headers:
         perror('There must be a Sex column.')
 
+    if not 'Equipment' in headers:
+        perror('There must be an Equipment column.')
+
     if 'Wilks' in headers and not 'TotalKg' in headers:
         perror('Wilks requires a TotalKg column.')
     if 'Wilks' in headers and not 'BodyweightKg' in headers:
