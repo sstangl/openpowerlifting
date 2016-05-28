@@ -55,8 +55,6 @@ function makeentry(row) {
         tr.appendChild(maketd('S'));
     } else if (equipment === 'Multi-ply') {
         tr.appendChild(maketd('M'));
-    } else if (equipment === 'Oldschool') {
-        tr.appendChild(maketd('OS'));
     } else {
         tr.appendChild(maketd(''));
     }
