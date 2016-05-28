@@ -56,7 +56,7 @@ function makeentry(row, i) {
     // The name should link to the lifter page.
     var name = string(row[opldb.NAME]);
     var lifterlink = document.createElement('a');
-    lifterlink.setAttribute('href', 'lifter.html?q=' + name);
+    lifterlink.setAttribute('href', 'lifters.html?q=' + name);
     lifterlink.setAttribute('class', 'datalink');
     lifterlink.appendChild(document.createTextNode(name));
 

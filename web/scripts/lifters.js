@@ -112,7 +112,7 @@ function redraw(query) {
 }
 
 
-// Roughly parse lifter.html?q=foo&a=bar into an object {q: foo, a: bar}.
+// Roughly parse lifters.html?q=foo&a=bar into an object {q: foo, a: bar}.
 function getqueryobj() {
     var url = document.location.href;
     var i = url.indexOf('?');
