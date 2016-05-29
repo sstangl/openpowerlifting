@@ -63,10 +63,28 @@ html,body {
   padding-bottom: 5px;
 }
 
+/* From http://jsfiddle.net/danield770/YvCHW/4232/ */
 select {
+  padding: 3px;
   margin-left: 5px;
+  border: 1px solid #333333;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(images/select_dropdown.png) 96% / 15% no-repeat #3E4042;
+}
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) {
+  select {
+    background: none;
+  }
 }
 
+/* From http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
 input[type="checkbox"] {
   display: none;
 }
