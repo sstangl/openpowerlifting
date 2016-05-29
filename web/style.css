@@ -50,7 +50,7 @@ html,body {
 }
 
 #header {
-  margin: 5px;
+  margin: 10px 5px 0px 5px;
   font-size: 18pt;
   color: red;
   font-variant: small-caps;
@@ -68,6 +68,7 @@ select {
   padding: 3px;
   margin-left: 5px;
   border: 1px solid #333333;
+  border-radius: 4px;
   background-color: #3E4042;
   color: white;
   font-size: 10pt;
