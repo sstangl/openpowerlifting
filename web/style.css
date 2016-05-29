@@ -1,4 +1,4 @@
-body {
+html,body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -9,6 +9,17 @@ body {
   overflow-y: none;
 
   font-family: verdana,helvetica,arial,sans-serif;
+}
+
+.flexbox {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+}
+
+#theGrid {
+  width: 100%;
+  flex: 1;
 }
 
 #oplurl {
