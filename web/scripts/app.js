@@ -12,17 +12,13 @@ var boxWomen = document.getElementById("women");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("class");
 
-// Toggle between pounds or kilograms, used by weight().
-var usingLbs = true;
-
 // The column on which to sort.
 var sortByGlobal = opldb.WILKS;
-
 
 function weight(kg) {
     if (kg === undefined)
         return '';
-    if (!usingLbs)
+    if (selWeightType.value === "kg")
         return String(kg);
     return String(Math.round(kg * 2.2042262 * 100) / 100);
 }
@@ -37,60 +33,6 @@ function string(str) {
     if (str === undefined)
         return '';
     return str;
-}
-
-
-function maketd(str) {
-    var td = document.createElement('td');
-    td.appendChild(document.createTextNode(str));
-    return td;
-}
-
-
-// Make the HTML for a single database row.
-function makeentry(row, i) {
-    var tr = document.createElement('tr');
-    tr.appendChild(maketd(String(i+1)));
-
-    // The name should link to the lifter page.
-    var name = string(row[opldb.NAME]);
-    var lifterlink = document.createElement('a');
-    lifterlink.setAttribute('href', 'lifters.html?q=' + name);
-    lifterlink.setAttribute('class', 'datalink');
-    lifterlink.appendChild(document.createTextNode(name));
-
-    var liftertd = document.createElement('td');
-    liftertd.appendChild(lifterlink);
-    tr.appendChild(liftertd);
-
-    var meetrow = meetdb.data[row[opldb.MEETID]];
-    tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
-    tr.appendChild(maketd(string(meetrow[meetdb.DATE])));
-
-    tr.appendChild(maketd(string(row[opldb.SEX])));
-    tr.appendChild(maketd(number(row[opldb.AGE])));
-
-    var equipment = row[opldb.EQUIPMENT];
-    if (equipment === 'Raw') {
-        tr.appendChild(maketd('R'));
-    } else if (equipment === 'Wraps') {
-        tr.appendChild(maketd('W'));
-    } else if (equipment === 'Single-ply') {
-        tr.appendChild(maketd('S'));
-    } else if (equipment === 'Multi-ply') {
-        tr.appendChild(maketd('M'));
-    } else {
-        tr.appendChild(maketd(''));
-    }
-
-    tr.appendChild(maketd(weight(row[opldb.BODYWEIGHTKG])));
-    tr.appendChild(maketd(weight(row[opldb.BESTSQUATKG])));
-    tr.appendChild(maketd(weight(row[opldb.BESTBENCHKG])));
-    tr.appendChild(maketd(weight(row[opldb.BESTDEADLIFTKG])));
-    tr.appendChild(maketd(weight(row[opldb.TOTALKG])));
-    tr.appendChild(maketd(number(row[opldb.WILKS])));
-    tr.appendChild(maketd(number(row[opldb.MCCULLOCH])));
-    return tr;
 }
 
 
@@ -216,7 +158,7 @@ function makeItem(row, index) {
         sex: string(row[opldb.SEX]),
         age: string(row[opldb.AGE]),
         equip: parseEquipment(row[opldb.EQUIPMENT]),
-        bw: number(row[opldb.BODYWEIGHTKG]),
+        bw: weight(row[opldb.BODYWEIGHTKG]),
         squat: weight(row[opldb.BESTSQUATKG]),
         bench: weight(row[opldb.BESTBENCHKG]),
         deadlift: weight(row[opldb.BESTDEADLIFTKG]),
@@ -326,6 +268,7 @@ function onload() {
         enableColumnReorder: false,
         forceFitColumns: true,
         forceSyncScrolling: true,
+        fullWidthRows: true,
     };
 
     var data = makeDataProvider();
