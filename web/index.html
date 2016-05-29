@@ -5,7 +5,14 @@
 
     <title>Open Powerlifting</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="scripts/SlickGrid-2.2.6/slick.grid.css"/>
+    <link rel="stylesheet" type="text/css" href="scripts/SlickGrid-2.2.6/css/smoothness/jquery-ui-1.11.3.custom.min.css"/>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/slick.core.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/slick.grid.js"></script>
 
     <script src="../build/openpowerlifting.js"></script>
     <script src="../build/meets.js"></script>
@@ -14,8 +21,6 @@
   </head>
 
   <body>
-    <a href="https://github.com/sstangl/openpowerlifting"><img src="images/construction.gif" alt="Under Construction!" id="construction-left"></a>
-    <a href="https://github.com/sstangl/openpowerlifting"><img src="images/construction.gif" alt="Under Construction!" id="construction-right"></a>
     <div id="header">
       <a href="https://github.com/sstangl/openpowerlifting" id="oplurl">OpenPowerlifting</a><br>
       Unsanctioned Lifter Rankings
@@ -25,8 +30,9 @@
         <form>
         <div>
         <span class="box"><input type="checkbox" id="raw" checked="true"><label for="raw">Raw</label></span>
+        <span class="box"><input type="checkbox" id="wraps" checked="true"><label for="wraps">Wraps</label></span>
         <span class="box"><input type="checkbox" id="single"><label for="single">Single</label></span>
-        <span class="box"><input type="checkbox" id="men" checked="true"><label for="men">Men</label></span>
+        <span class="box"><input type="checkbox" id="multi"><label for="multi">Multi</label></span>
         <select id="class" class="box">
           <option value="all">All Classes</option>
           <option value="-44">-44</option>
@@ -45,43 +51,16 @@
           <option value="-140">-140</option>
           <option value="140+">140+</option>
         </select>
-        </div>
-        <div>
-        <span class="box"><input type="checkbox" id="wraps" checked="true"><label for="wraps">Wraps</label></span>
-        <span class="box"><input type="checkbox" id="multi"><label for="multi">Multi</label></span>
+        <span class="box"><input type="checkbox" id="men" checked="true"><label for="men">Men</label></span>
         <span class="box"><input type="checkbox" id="women" checked="true"><label for="women">Women</label></span>
         <select id="weighttype" class="box">
           <option value="lb">lbs</option>
           <option value="kg">kg</option>
         </select>
         </div>
-        <span class="box"><input type="checkbox" id="showall"><label for="showall">All Results</label></span>
-        <span class="box"></span>
-        <span class="box"></span>
-        <span class="box"></span>
         </form>
       </div>
-      <table id='thetable'>
-        <thead>
-          <td>Rank</td>
-          <td>Name</td>
-          <td>Fed</td>
-          <td>Date</td>
-          <td>Sex</td>
-          <td>Age</td>
-          <td>Equip</td>
-          <td class="sortable" id="sort-bw">Bodyweight</td>
-          <td class="sortable" id="sort-squat">Squat</td>
-          <td class="sortable" id="sort-bench">Bench</td>
-          <td class="sortable" id="sort-deadlift">Deadlift</td>
-          <td class="sortable" id="sort-total">Total</td>
-          <td class="sortable" id="sort-wilks">Wilks</td>
-          <td class="sortable" id="sort-mcculloch">Age<br>Adjusted</td>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <button type="button" id="showmore">Show More (Slow!)</button>
     </center>
+    <div id="theGrid" style="width:100%;height:400px;"></div>
   </body>
 </html>

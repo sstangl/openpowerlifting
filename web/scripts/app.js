@@ -1,6 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+var grid; // The SlickGrid.
 var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
@@ -8,8 +9,6 @@ var boxSingle = document.getElementById("single");
 var boxMulti = document.getElementById("multi");
 var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
-var boxAllResults = document.getElementById("showall");
-var btnShowMore = document.getElementById("showmore");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("class");
 
@@ -95,17 +94,9 @@ function makeentry(row, i) {
 }
 
 
-// Fills in the <tbody> given the current selection state.
-function redraw() {
-    // Remove existing body in one fell swoop.
-    theTable.removeChild(theTable.getElementsByTagName("tbody")[0]);
-
+// Return the ordered list of rows to display, by index into opldb.data.
+function getIndices() {
     // Update the global pounds setting.
-    // TODO: This should be carried in a local variable to avoid poking the global.
-    if (selWeightType.value == "lb")
-        usingLbs = true;
-    else
-        usingLbs = false;
 
     // Determine the filter to be used.
     var raw = boxRaw.checked;
@@ -114,7 +105,6 @@ function redraw() {
     var multi = boxMulti.checked;
     var men = boxMen.checked;
     var women = boxWomen.checked;
-    var allresults = boxAllResults.checked;
 
     var selectonclass = (selClass.value !== "all");
     var bw_min = 0.0; // Exclusive
@@ -197,30 +187,61 @@ function redraw() {
     indices = db_filter(indices, filter);
     indices = db_sort_numeric_maxfirst(indices, sortByGlobal);
     indices = db_uniq_lifter(indices);
+    return indices;
+}
 
-    var ntoshow = indices.length;
-    if (allresults === false) {
-        ntoshow = Math.min(500, indices.length);
-        var left = indices.length - ntoshow;
-        if (left > 500) {
-            btnShowMore.style.visibility = "";
-            btnShowMore.innerText = String(indices.length - ntoshow) + " more... (Slow)"
-        } else {
-            btnShowMore.style.visibility = "hidden";
-        }
+
+function parseEquipment(str) {
+    if (str === "Raw")
+        return "R";
+    if (str === "Wraps")
+        return "W";
+    if (str === "Single-ply")
+        return "S";
+    if (str === "Multi-ply")
+        return "M";
+    return "";
+}
+
+
+function makeItem(row, index) {
+    var meetrow = meetdb.data[row[opldb.MEETID]];
+    var name = row[opldb.NAME];
+
+    return {
+        rank: index+1,
+        name: '<a href="lifters.html?q='+name+'">'+name+'</a>',
+        fed: string(meetrow[meetdb.FEDERATION]),
+        date: string(meetrow[meetdb.DATE]),
+        sex: string(row[opldb.SEX]),
+        age: string(row[opldb.AGE]),
+        equip: parseEquipment(row[opldb.EQUIPMENT]),
+        bw: number(row[opldb.BODYWEIGHTKG]),
+        squat: weight(row[opldb.BESTSQUATKG]),
+        bench: weight(row[opldb.BESTBENCHKG]),
+        deadlift: weight(row[opldb.BESTDEADLIFTKG]),
+        total: weight(row[opldb.TOTALKG]),
+        wilks: number(row[opldb.WILKS]),
+        mcculloch: number(row[opldb.MCCULLOCH]),
+    };
+}
+
+
+function makeDataProvider() {
+    var indices = getIndices();
+
+    return {
+        getLength: function () { return indices.length; },
+        getItem: function(index) { return makeItem(opldb.data[indices[index]], index); }
     }
+}
 
-    var frag = document.createDocumentFragment();
-    var tbody = document.createElement("tbody");
-    frag.appendChild(tbody);
 
-    var data = opldb.data;
-    for (var i = 0; i < ntoshow; i++) {
-        var row = data[indices[i]];
-        tbody.appendChild(makeentry(row, i));
-    }
-
-    theTable.appendChild(frag);
+function redraw() {
+    var source = makeDataProvider();
+    grid.setData(source);
+    grid.invalidateAllRows();
+    grid.render();
 }
 
 
@@ -231,17 +252,6 @@ function addEventListeners() {
     boxMulti.addEventListener("click", redraw);
     boxMen.addEventListener("click", redraw);
     boxWomen.addEventListener("click", redraw);
-
-    boxAllResults.addEventListener("click", function()
-        {
-            if (boxAllResults.checked) {
-                btnShowMore.style.visibility = "hidden";
-            } else {
-                btnShowMore.style.visibility = "";
-            }
-            redraw();
-        }
-    );
 
     selWeightType.addEventListener("change", redraw);
     selWeightType.addEventListener("keydown", function()
@@ -279,20 +289,47 @@ function addEventListeners() {
             }
         );
     }
-
-    btnShowMore.addEventListener("click", function ()
-        {
-            boxAllResults.checked = true;
-            btnShowMore.style.visibility = "hidden";
-            redraw();
-        }
-    );
 }
 
 
 function onload() {
     addEventListeners();
-    redraw();
+
+    var rankWidth = 60;
+    var nameWidth = 240;
+    var stringWidth = 60;
+    var dateWidth = 100;
+    var numberWidth = 80;
+
+    function urlformatter(row, cell, value, columnDef, dataContext) {
+        return value;
+    }
+
+    var columns = [
+        {id: "rank", name: "Rank", field: "rank", width: rankWidth},
+        {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
+        {id: "fed", name: "Fed", field: "fed", width: stringWidth},
+        {id: "date", name: "Date", field: "date", width: dateWidth},
+        {id: "sex", name: "Sex", field: "sex", width: stringWidth},
+        {id: "age", name: "Age", field: "age", width: stringWidth},
+        {id: "equip", name: "Equip", field: "equip", width: stringWidth},
+        {id: "bw", name: "Weight", field: "bw", width: numberWidth},
+        {id: "squat", name: "Squat", field: "squat", width: numberWidth},
+        {id: "bench", name: "Bench", field: "bench", width: numberWidth},
+        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
+        {id: "total", name: "Total", field: "total", width: numberWidth},
+        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth},
+        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth},
+    ];
+
+    var options = {
+        enableColumnReorder: false,
+        forceFitColumns: true,
+        forceSyncScrolling: true,
+    };
+
+    var data = makeDataProvider();
+    grid = new Slick.Grid("#theGrid", data, columns, options);
 };
 
 
