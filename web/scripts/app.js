@@ -239,10 +239,9 @@ function onload() {
 
     var rankWidth = 40;
     var nameWidth = 200;
-    var fedWidth = 60;
     var shortWidth = 40;
     var dateWidth = 80;
-    var numberWidth = 60;
+    var numberWidth = 56;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
@@ -251,7 +250,7 @@ function onload() {
     var columns = [
         {id: "rank", name: "Rank", field: "rank", width: rankWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
-        {id: "fed", name: "Fed", field: "fed", width: fedWidth},
+        {id: "fed", name: "Fed", field: "fed", width: numberWidth},
         {id: "date", name: "Date", field: "date", width: dateWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
         {id: "age", name: "Age", field: "age", width: shortWidth},
@@ -268,6 +267,8 @@ function onload() {
     var options = {
         enableColumnReorder: false,
         forceSyncScrolling: true,
+        //forceFitColumns: true,
+        rowHeight: 23,
     };
 
     var data = makeDataProvider();
