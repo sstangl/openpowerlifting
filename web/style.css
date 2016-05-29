@@ -21,6 +21,10 @@ html,body {
   color: #FFFFFF;
 }
 
+.searchflashing {
+  background-color: #444444;
+}
+
 .slick-header-column {
   font-size: 9pt;
   color: red;
@@ -50,17 +54,25 @@ html,body {
 }
 
 #header {
-  margin: 10px 5px 0px 5px;
+  margin: 10px 5px 5px 5px;
   font-size: 18pt;
   color: red;
   font-variant: small-caps;
 }
 
 #controls {
+  display: flex;
   font-size: 10pt;
-  text-align: right;
+  padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 5px;
+}
+
+#controls-left {
+}
+
+#controls-right {
+  margin-left: auto;
 }
 
 /* From http://jsfiddle.net/danield770/YvCHW/4232/ */
@@ -83,6 +95,36 @@ select {
   select {
     background: none;
   }
+}
+
+input[type="text"] {
+  padding: 3px 5px 3px 5px;
+  margin-left: 5px;
+  border: 1px solid #333333;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 200px;
+}
+
+button {
+  padding: 3px 8px 3px 8px;
+  margin-left: 5px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 70px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #56585C;
+}
+
+button:active {
+  background-color: #303133;
 }
 
 /* From http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */

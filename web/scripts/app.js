@@ -11,6 +11,8 @@ var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("class");
+var searchfield = document.getElementById("searchfield");
+var searchbutton = document.getElementById("searchbutton");
 
 // The column on which to sort.
 var sortByGlobal = opldb.WILKS;
@@ -169,6 +171,7 @@ function makeItem(row, index) {
 
     return {
         rank: index+1,
+        searchname: name.toLowerCase(),
         name: '<a href="lifters.html?q='+name+'">'+name+'</a>',
         fed: string(meetrow[meetdb.FEDERATION]),
         date: string(meetrow[meetdb.DATE]),
@@ -206,6 +209,48 @@ function redraw() {
 }
 
 
+function search() {
+    var query = searchfield.value
+                           .toLowerCase()
+                           .trim()
+                           .replace("  "," ");
+    if (!query)
+        return;
+
+    var data = grid.getData();
+    var numrows = data.getLength();
+
+    var rowid = -1;
+
+    for (var i = 0; i < numrows; ++i) {
+        let row = data.getItem(i);
+        if (row.searchname == query) {
+            rowid = i;
+            break;
+        } else if (rowid < 0 && row.searchname.indexOf(query) >= 0) {
+            rowid = i;
+        }
+    }
+
+    if (rowid >= 0) {
+        var numColumns = grid.getColumns().length;
+
+        grid.scrollRowToTop(rowid);
+        for (var i = 0; i < numColumns; ++i) {
+            grid.flashCell(rowid, i, 100);
+        }
+    }
+}
+
+
+function searchOnEnter(keyevent) {
+    // keyCode is deprecated, but non-Firefox-desktop doesn't support key.
+    if (keyevent.keyCode === 13 || keyevent.key === "Enter") {
+        search();
+    }
+}
+
+
 function addEventListeners() {
     boxRaw.addEventListener("click", redraw);
     boxWraps.addEventListener("click", redraw);
@@ -227,6 +272,9 @@ function addEventListeners() {
             setTimeout(redraw, 0);
         }
     );
+
+    searchfield.addEventListener("keypress", searchOnEnter, false);
+    searchbutton.addEventListener("click", search, false);
 
     var sortables = document.getElementsByClassName("sortable");
     for (var i = 0; i < sortables.length; ++i) {
@@ -293,10 +341,12 @@ function onload() {
         forceFitColumns: true,
         rowHeight: 23,
         topPanelHeight: 23,
+        cellFlashingCssClass: "searchflashing",
     };
 
     var data = makeDataProvider();
     grid = new Slick.Grid("#theGrid", data, columns, options);
+    search();
 };
 
 
