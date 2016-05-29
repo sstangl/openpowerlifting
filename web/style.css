@@ -50,13 +50,11 @@ html,body {
 }
 
 #header {
-  margin: 10px;
-  text-align: center;
-  font-size: 40px;
+  margin: 5px;
+  font-size: 18pt;
   color: red;
   font-variant: small-caps;
 }
 
 #controls {
-  margin: 10px;
 }
