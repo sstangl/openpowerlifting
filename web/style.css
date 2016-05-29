@@ -6,9 +6,31 @@ html,body {
   background-color: #000000;
   color: #FFFFFF;
 
-  overflow-y: none;
-
   font-family: verdana,helvetica,arial,sans-serif;
+}
+
+.slick-cell {
+  color: #FFFFFF;
+  font-size: 9pt;
+  border: 0px;
+}
+
+.slick-cell a {
+  color: #FFFFFF;
+}
+
+.slick-header-column {
+  font-size: 9pt;
+  color: red;
+}
+
+.slick-header-column.ui-state-default {
+  border-right: 0px;
+  border-bottom: 1px red;
+}
+
+.slick-row.even {
+  background-color: #111111;
 }
 
 .flexbox {
@@ -18,23 +40,11 @@ html,body {
 }
 
 #theGrid {
-  width: 100%;
   flex: 1;
 }
 
 #oplurl {
   color: red;
-}
-
-.datalink {
-  color: #FFFFFF;
-}
-
-#construction-left {
-  float: left;
-}
-#construction-right {
-  float: right;
 }
 
 #header {
@@ -47,46 +57,4 @@ html,body {
 
 #controls {
   margin: 10px;
-}
-
-.box {
-  display: inline-block;
-  width: 110px;
-  text-align: left;
-  margin-top: 5px;
-}
-
-#showmore {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-td.sortable {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-table {
-  border-spacing: 0;
-}
-
-thead {
-  font-size: 12px;
-  color: red;
-}
-
-thead td {
-  padding: 4px;
-}
-
-tbody {
-  font-size: 12px;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #111111;
-}
-
-tbody td {
-  padding: 4px;
 }

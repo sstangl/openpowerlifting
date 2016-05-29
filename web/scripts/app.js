@@ -237,11 +237,12 @@ function addEventListeners() {
 function onload() {
     addEventListeners();
 
-    var rankWidth = 60;
-    var nameWidth = 240;
-    var stringWidth = 60;
-    var dateWidth = 100;
-    var numberWidth = 80;
+    var rankWidth = 40;
+    var nameWidth = 200;
+    var fedWidth = 60;
+    var shortWidth = 40;
+    var dateWidth = 80;
+    var numberWidth = 60;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
@@ -250,25 +251,23 @@ function onload() {
     var columns = [
         {id: "rank", name: "Rank", field: "rank", width: rankWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
-        {id: "fed", name: "Fed", field: "fed", width: stringWidth},
+        {id: "fed", name: "Fed", field: "fed", width: fedWidth},
         {id: "date", name: "Date", field: "date", width: dateWidth},
-        {id: "sex", name: "Sex", field: "sex", width: stringWidth},
-        {id: "age", name: "Age", field: "age", width: stringWidth},
-        {id: "equip", name: "Equip", field: "equip", width: stringWidth},
+        {id: "sex", name: "Sex", field: "sex", width: shortWidth},
+        {id: "age", name: "Age", field: "age", width: shortWidth},
+        {id: "equip", name: "Equip", field: "equip", width: shortWidth},
         {id: "bw", name: "Weight", field: "bw", width: numberWidth},
         {id: "squat", name: "Squat", field: "squat", width: numberWidth},
         {id: "bench", name: "Bench", field: "bench", width: numberWidth},
         {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
         {id: "total", name: "Total", field: "total", width: numberWidth},
         {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth},
-        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth},
+        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10},
     ];
 
     var options = {
         enableColumnReorder: false,
-        forceFitColumns: true,
         forceSyncScrolling: true,
-        fullWidthRows: true,
     };
 
     var data = makeDataProvider();
