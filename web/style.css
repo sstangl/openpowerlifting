@@ -9,13 +9,6 @@ html,body {
   font-family: verdana,helvetica,arial,sans-serif;
 }
 
-.slick-header-columns {
-}
-.slick-viewport {
-  display: flex;
-  justify-content: center;
-}
-
 .slick-cell {
   padding-top: 4px;
   padding-left: 5px;

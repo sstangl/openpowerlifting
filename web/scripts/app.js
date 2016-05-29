@@ -146,19 +146,38 @@ function parseEquipment(str) {
 }
 
 
+function parseWeightClass(x) {
+    if (x === undefined)
+        return "";
+    if (typeof x === "number")
+        return weight(x);
+    return weight(x.split('+')[0]) + '+';
+}
+
+
 function makeItem(row, index) {
     var meetrow = meetdb.data[row[opldb.MEETID]];
     var name = row[opldb.NAME];
+
+    var country = string(meetrow[meetdb.MEETCOUNTRY]);
+    var state = string(meetrow[meetdb.MEETSTATE]);
+
+    var location = country;
+    if (country && state) {
+        location = location + "-" + state;
+    }
 
     return {
         rank: index+1,
         name: '<a href="lifters.html?q='+name+'">'+name+'</a>',
         fed: string(meetrow[meetdb.FEDERATION]),
         date: string(meetrow[meetdb.DATE]),
+        location: location,
         sex: string(row[opldb.SEX]),
         age: string(row[opldb.AGE]),
         equip: parseEquipment(row[opldb.EQUIPMENT]),
         bw: weight(row[opldb.BODYWEIGHTKG]),
+        class: parseWeightClass(row[opldb.WEIGHTCLASSKG]),
         squat: weight(row[opldb.BESTSQUATKG]),
         bench: weight(row[opldb.BESTBENCHKG]),
         deadlift: weight(row[opldb.BESTDEADLIFTKG]),
@@ -238,7 +257,7 @@ function onload() {
     addEventListeners();
 
     var rankWidth = 40;
-    var nameWidth = 200;
+    var nameWidth = 280;
     var shortWidth = 40;
     var dateWidth = 80;
     var numberWidth = 56;
@@ -248,13 +267,17 @@ function onload() {
     }
 
     var columns = [
+        {id: "filler", width: 20, minWidth: 20, focusable: false,
+                       selectable: false, resizable: false},
         {id: "rank", name: "Rank", field: "rank", width: rankWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: "Fed", field: "fed", width: numberWidth},
         {id: "date", name: "Date", field: "date", width: dateWidth},
+        {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
         {id: "age", name: "Age", field: "age", width: shortWidth},
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
+        {id: "class", name: "Class", field: "class", width: numberWidth},
         {id: "bw", name: "Weight", field: "bw", width: numberWidth},
         {id: "squat", name: "Squat", field: "squat", width: numberWidth},
         {id: "bench", name: "Bench", field: "bench", width: numberWidth},
@@ -267,8 +290,9 @@ function onload() {
     var options = {
         enableColumnReorder: false,
         forceSyncScrolling: true,
-        //forceFitColumns: true,
+        forceFitColumns: true,
         rowHeight: 23,
+        topPanelHeight: 23,
     };
 
     var data = makeDataProvider();
