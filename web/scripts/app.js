@@ -256,7 +256,7 @@ function onload() {
     addEventListeners();
 
     var rankWidth = 40;
-    var nameWidth = 280;
+    var nameWidth = 200;
     var shortWidth = 40;
     var dateWidth = 80;
     var numberWidth = 56;
