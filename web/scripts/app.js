@@ -255,7 +255,6 @@ function addEventListeners() {
 function onload() {
     addEventListeners();
 
-    var rankWidth = 40;
     var nameWidth = 200;
     var shortWidth = 40;
     var dateWidth = 80;
@@ -268,7 +267,7 @@ function onload() {
     var columns = [
         {id: "filler", width: 20, minWidth: 20, focusable: false,
                        selectable: false, resizable: false},
-        {id: "rank", name: "Rank", field: "rank", width: rankWidth},
+        {id: "rank", name: "Rank", field: "rank", width: numberWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: "Fed", field: "fed", width: numberWidth},
         {id: "date", name: "Date", field: "date", width: dateWidth},
