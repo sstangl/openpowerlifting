@@ -5,41 +5,30 @@
 
     <title>Open Powerlifting</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="scripts/SlickGrid-2.2.6/slick.grid.css"/>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/slick.core.js"></script>
+    <script src="scripts/SlickGrid-2.2.6/slick.grid.js"></script>
 
     <script src="../build/openpowerlifting.js"></script>
     <script src="../build/meets.js"></script>
+    <script src="scripts/common.js"></script>
     <script src="scripts/database.js"></script>
     <script src="scripts/lifters.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
   <body>
+    <div class="flexbox">
     <div id="header">
-      <a href="https://github.com/sstangl/openpowerlifting" id="oplurl">OpenPowerlifting</a><br>
-      Unsanctioned Lifter Rankings
+      OpenPowerlifting Unsanctioned Lifter Rankings
     </div>
-    <center>
-      <table>
-        <thead>
-          <td>Place</td>
-          <td>Name</td>
-          <td>Fed</td>
-          <td>Date</td>
-          <td>Sex</td>
-          <td>Age</td>
-          <td>Equip</td>
-          <td>Bodyweight</td>
-          <td>Division</td>
-          <td>Squat</td>
-          <td>Bench</td>
-          <td>Deadlift</td>
-          <td>Total</td>
-          <td>Wilks</td>
-          <td>Age<br>Adjusted</td>
-        </thead>
-        <tbody id="results">
-        </tbody>
-      </table>
-    </center>
+    <div id="controls">
+    </div>
+    <div id="theGrid"></div>
+    </div>
   </body>
 </html>

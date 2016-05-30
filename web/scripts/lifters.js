@@ -1,6 +1,8 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+var grid; // The SlickGrid.
+
 // TODO: Actually have a toggle for this.
 var usingLbs = true;
 
@@ -73,14 +75,7 @@ function makeentry(row) {
 
 
 // Fills in the <tbody> given the current query.
-function redraw(query) {
-    var results = document.getElementById("results");
-
-    // Remove existing children.
-    while (results.lastChild) {
-        results.removeChild(results.lastChild);
-    }
-
+function getIndices(query) {
     // No query: nothing to draw.
     if (query.q === undefined) {
         return;
@@ -102,36 +97,102 @@ function redraw(query) {
         return adate < bdate;
     });
 
-
-    var frag = document.createDocumentFragment();
-    for (let index of indices) {
-        var row = opldb.data[index];
-        frag.appendChild(makeentry(row));
-    }
-    results.appendChild(frag);
+    return indices;
 }
 
 
-// Roughly parse lifters.html?q=foo&a=bar into an object {q: foo, a: bar}.
-function getqueryobj() {
-    var url = document.location.href;
-    var i = url.indexOf('?');
-    var args = url.slice(i+1);
+function makeItem(row, index) {
+    var meetrow = meetdb.data[row[opldb.MEETID]];
+    var name = row[opldb.NAME];
 
-    var obj = {};
-    for (let arg of args.split('&') ) {
-        if (arg.indexOf('=') >= 0) {
-            let v = unescape(arg).split('=');
-            obj[v[0]] = v[1];
-        }
+    var country = common.string(meetrow[meetdb.MEETCOUNTRY]);
+    var state = common.string(meetrow[meetdb.MEETSTATE]);
+
+    var location = country;
+    if (country && state) {
+        location = location + "-" + state;
     }
-    return obj;
+
+    return {
+        place:       common.string(row[opldb.PLACE]),
+        name:        common.string(name),
+        fed:         common.string(meetrow[meetdb.FEDERATION]),
+        date:        common.string(meetrow[meetdb.DATE]),
+        location:    location,
+        meetname:    common.string(meetrow[meetdb.MEETNAME]),
+        sex:         common.string(row[opldb.SEX]),
+        age:         common.string(row[opldb.AGE]),
+        equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
+        event:       common.string(row[opldb.EVENT]),
+        bw:          weight(row[opldb.BODYWEIGHTKG]),
+        class:       common.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
+        squat:       weight(row[opldb.BESTSQUATKG]),
+        bench:       weight(row[opldb.BESTBENCHKG]),
+        deadlift:    weight(row[opldb.BESTDEADLIFTKG]),
+        total:       weight(row[opldb.TOTALKG]),
+        wilks:       common.number(row[opldb.WILKS]),
+        mcculloch:   common.number(row[opldb.MCCULLOCH]),
+    };
+}
+
+
+function makeDataProvider(query) {
+    var indices = getIndices(query);
+
+    return {
+        getLength: function () { return indices.length; },
+        getItem: function(index) { return makeItem(opldb.data[indices[index]], index); }
+    }
 }
 
 
 function onload() {
-    var query = getqueryobj();
-    redraw(query);
+    var query = common.getqueryobj();
+
+    var rankWidth = 40;
+    var nameWidth = 280;
+    var shortWidth = 40;
+    var dateWidth = 80;
+    var numberWidth = 56;
+
+    function urlformatter(row, cell, value, columnDef, dataContext) {
+        return value;
+    }
+
+    var columns = [
+        {id: "filler", width: 20, minWidth: 20, focusable: false,
+                       selectable: false, resizable: false},
+        {id: "place", name: "Place", field: "place", width: rankWidth},
+        {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
+        {id: "fed", name: "Fed", field: "fed", width: numberWidth},
+        {id: "date", name: "Date", field: "date", width: dateWidth},
+        {id: "location", name: "Location", field: "location", width:dateWidth},
+        {id: "meetname", name: "Meet Name", field: "meetname", width: nameWidth},
+        {id: "sex", name: "Sex", field: "sex", width: shortWidth},
+        {id: "age", name: "Age", field: "age", width: shortWidth},
+        {id: "equip", name: "Equip", field: "equip", width: shortWidth},
+        {id: "event", name: "Event", field: "event", width: shortWidth},
+        {id: "class", name: "Class", field: "class", width: numberWidth},
+        {id: "bw", name: "Weight", field: "bw", width: numberWidth},
+        {id: "squat", name: "Squat", field: "squat", width: numberWidth},
+        {id: "bench", name: "Bench", field: "bench", width: numberWidth},
+        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
+        {id: "total", name: "Total", field: "total", width: numberWidth},
+        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth},
+        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10},
+    ];
+
+    var options = {
+        enableColumnReorder: false,
+        forceSyncScrolling: true,
+        forceFitColumns: true,
+        rowHeight: 23,
+        topPanelHeight: 23,
+        cellFlashingCssClass: "searchflashing",
+    };
+
+    var data = makeDataProvider(query);
+    grid = new Slick.Grid("#theGrid", data, columns, options);
 }
 
 

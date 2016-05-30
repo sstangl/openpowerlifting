@@ -11,6 +11,7 @@ var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("class");
+var selFed = document.getElementById("fedselect");
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
 
@@ -22,21 +23,8 @@ function weight(kg) {
         return '';
     if (selWeightType.value === "kg")
         return String(kg);
-    return String(Math.round(kg * 2.2042262 * 100) / 100);
+    return String(common.kg2lbs(kg));
 }
-
-function number(num) {
-    if (num === undefined)
-        return '';
-    return String(num);
-}
-
-function string(str) {
-    if (str === undefined)
-        return '';
-    return str;
-}
-
 
 // Return the ordered list of rows to display, by index into opldb.data.
 function getIndices() {
@@ -49,6 +37,9 @@ function getIndices() {
     var multi = boxMulti.checked;
     var men = boxMen.checked;
     var women = boxWomen.checked;
+
+    var selectonfed = (selFed.value !== "all");
+    var fed = selFed.value;
 
     var selectonclass = (selClass.value !== "all");
     var bw_min = 0.0; // Exclusive
@@ -120,6 +111,13 @@ function getIndices() {
                 return false;
         }
 
+        if (selectonfed) {
+            var meetrow = meetdb.data[row[opldb.MEETID]];
+            if (meetrow[meetdb.FEDERATION] !== fed) {
+                return false;
+            }
+        }
+
         var e = row[opldb.EQUIPMENT];
         return (raw && e == "Raw") ||
                (wraps && e == "Wraps") ||
@@ -135,34 +133,12 @@ function getIndices() {
 }
 
 
-function parseEquipment(str) {
-    if (str === "Raw")
-        return "R";
-    if (str === "Wraps")
-        return "W";
-    if (str === "Single-ply")
-        return "S";
-    if (str === "Multi-ply")
-        return "M";
-    return "";
-}
-
-
-function parseWeightClass(x) {
-    if (x === undefined)
-        return "";
-    if (typeof x === "number")
-        return weight(x);
-    return weight(x.split('+')[0]) + '+';
-}
-
-
 function makeItem(row, index) {
     var meetrow = meetdb.data[row[opldb.MEETID]];
     var name = row[opldb.NAME];
 
-    var country = string(meetrow[meetdb.MEETCOUNTRY]);
-    var state = string(meetrow[meetdb.MEETSTATE]);
+    var country = common.string(meetrow[meetdb.MEETCOUNTRY]);
+    var state = common.string(meetrow[meetdb.MEETSTATE]);
 
     var location = country;
     if (country && state) {
@@ -170,23 +146,23 @@ function makeItem(row, index) {
     }
 
     return {
-        rank: index+1,
-        searchname: name.toLowerCase(),
-        name: '<a href="lifters.html?q='+name+'">'+name+'</a>',
-        fed: string(meetrow[meetdb.FEDERATION]),
-        date: string(meetrow[meetdb.DATE]),
-        location: location,
-        sex: string(row[opldb.SEX]),
-        age: string(row[opldb.AGE]),
-        equip: parseEquipment(row[opldb.EQUIPMENT]),
-        bw: weight(row[opldb.BODYWEIGHTKG]),
-        class: parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat: weight(row[opldb.BESTSQUATKG]),
-        bench: weight(row[opldb.BESTBENCHKG]),
-        deadlift: weight(row[opldb.BESTDEADLIFTKG]),
-        total: weight(row[opldb.TOTALKG]),
-        wilks: number(row[opldb.WILKS]),
-        mcculloch: number(row[opldb.MCCULLOCH]),
+        rank:        index+1,
+        searchname:  name.toLowerCase(),
+        name:        '<a href="lifters.html?q='+name+'">'+name+'</a>',
+        fed:         common.string(meetrow[meetdb.FEDERATION]),
+        date:        common.string(meetrow[meetdb.DATE]),
+        location:    location,
+        sex:         common.string(row[opldb.SEX]),
+        age:         common.string(row[opldb.AGE]),
+        equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
+        bw:          weight(row[opldb.BODYWEIGHTKG]),
+        class:       common.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
+        squat:       weight(row[opldb.BESTSQUATKG]),
+        bench:       weight(row[opldb.BESTBENCHKG]),
+        deadlift:    weight(row[opldb.BESTDEADLIFTKG]),
+        total:       weight(row[opldb.TOTALKG]),
+        wilks:       common.number(row[opldb.WILKS]),
+        mcculloch:   common.number(row[opldb.MCCULLOCH]),
     };
 }
 
@@ -250,6 +226,14 @@ function searchOnEnter(keyevent) {
     }
 }
 
+function addSelectorListeners(selector) {
+    selector.addEventListener("change", redraw);
+    selector.addEventListener("keydown", function()
+        {
+            setTimeout(redraw, 0);
+        }
+    );
+}
 
 function addEventListeners() {
     boxRaw.addEventListener("click", redraw);
@@ -259,45 +243,12 @@ function addEventListeners() {
     boxMen.addEventListener("click", redraw);
     boxWomen.addEventListener("click", redraw);
 
-    selWeightType.addEventListener("change", redraw);
-    selWeightType.addEventListener("keydown", function()
-        {
-            setTimeout(redraw, 0);
-        }
-    );
-
-    selClass.addEventListener("change", redraw);
-    selClass.addEventListener("keydown", function()
-        {
-            setTimeout(redraw, 0);
-        }
-    );
+    addSelectorListeners(selWeightType);
+    addSelectorListeners(selClass);
+    addSelectorListeners(selFed);
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
-
-    var sortables = document.getElementsByClassName("sortable");
-    for (var i = 0; i < sortables.length; ++i) {
-        sortables[i].addEventListener("click", function(e)
-            {
-                if (e.target.id == "sort-bw")
-                    sortByGlobal = opldb.BODYWEIGHTKG;
-                else if (e.target.id == "sort-squat")
-                    sortByGlobal = opldb.BESTSQUATKG;
-                else if (e.target.id == "sort-bench")
-                    sortByGlobal = opldb.BESTBENCHKG;
-                else if (e.target.id == "sort-deadlift")
-                    sortByGlobal = opldb.BESTDEADLIFTKG;
-                else if (e.target.id == "sort-total")
-                    sortByGlobal = opldb.TOTALKG;
-                else if (e.target.id == "sort-wilks")
-                    sortByGlobal = opldb.WILKS;
-                else if (e.target.id == "sort-mcculloch")
-                    sortByGlobal = opldb.MCCULLOCH;
-                redraw();
-            }
-        );
-    }
 }
 
 
