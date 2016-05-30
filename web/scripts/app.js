@@ -219,6 +219,11 @@ function search() {
 }
 
 
+function onResize(evt) {
+    grid.resizeCanvas();
+}
+
+
 function searchOnEnter(keyevent) {
     // keyCode is deprecated, but non-Firefox-desktop doesn't support key.
     if (keyevent.keyCode === 13 || keyevent.key === "Enter") {
@@ -249,6 +254,8 @@ function addEventListeners() {
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
+
+    window.addEventListener("resize", onResize, false);
 }
 
 

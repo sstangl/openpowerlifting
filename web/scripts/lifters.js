@@ -193,6 +193,8 @@ function onload() {
 
     var data = makeDataProvider(query);
     grid = new Slick.Grid("#theGrid", data, columns, options);
+
+    window.addEventListener("resize", function(e) { grid.resizeCanvas(); }, false);
 }
 
 
