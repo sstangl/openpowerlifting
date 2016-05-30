@@ -56,6 +56,63 @@ return {
             return weight(x);
         return weight(x.split('+')[0]) + '+';
     },
+
+    colidToIndex: function(colid) {
+        switch (colid) {
+            case "fed": return meetdb.FEDERATION;
+            case "date": return meetdb.DATE;
+            case "bw": return opldb.BODYWEIGHTKG;
+            case "squat": return opldb.BESTSQUATKG;
+            case "bench": return opldb.BESTBENCHKG;
+            case "deadlift": return opldb.BESTDEADLIFTKG;
+            case "total": return opldb.TOTALKG;
+            case "wilks": return opldb.WILKS;
+            case "mcculloch": return opldb.MCCULLOCH;
+            default:
+                console.log("Unknown: colidToIndex(" + name + ")");
+                return;
+        }
+    },
+
+    getSortFn: function(colid, sortAsc) {
+        var index = this.colidToIndex(colid);
+        switch (colid) {
+            // Columns that use the meetdb.
+            case "fed":
+            case "date":
+                return function(a, b) {
+                    var ameetid = opldb.data[a][opldb.MEETID];
+                    var bmeetid = opldb.data[b][opldb.MEETID];
+                    var adata = meetdb.data[ameetid][index];
+                    var bdata = meetdb.data[bmeetid][index];
+                    if (sortAsc)
+                        return adata > bdata;
+                    return adata <= bdata;
+                }
+
+            // Columns that use the opldb.
+            case "bw":
+            case "squat":
+            case "bench":
+            case "deadlift":
+            case "total":
+            case "wilks":
+            case "mcculloch":
+                return function(a, b) {
+                    var adata = opldb.data[a][index];
+                    var bdata = opldb.data[b][index];
+                    if (sortAsc)
+                        return adata > bdata;
+                    return adata <= bdata;
+                }
+
+            default:
+                console.log("Unknown: gotSortFn(" + colid + ", " + sortAsc + ")");
+                return;
+        }
+    }
+
+
 };
 
 })();

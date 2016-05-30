@@ -2,6 +2,8 @@
 'use strict';
 
 var grid; // The SlickGrid.
+var sortCol = {id: 'wilks'}; // Initial column sorting information.
+var sortAsc = false; // Initial column sorting information.
 
 // TODO: Actually have a toggle for this.
 var usingLbs = true;
@@ -78,7 +80,7 @@ function makeentry(row) {
 function getIndices(query) {
     // No query: nothing to draw.
     if (query.q === undefined) {
-        return;
+        return [];
     }
 
     function filter(row) {
@@ -88,15 +90,8 @@ function getIndices(query) {
     var indices = db_make_indices_list();
     indices = db_filter(indices, filter);
 
-    // Sort by meet date, most recent first.
-    indices.sort(function(a, b) {
-        var ameetid = opldb.data[a][opldb.MEETID];
-        var bmeetid = opldb.data[b][opldb.MEETID];
-        var adate = meetdb.data[ameetid][meetdb.DATE];
-        var bdate = meetdb.data[bmeetid][meetdb.DATE];
-        return adate < bdate;
-    });
-
+    var sortFn = common.getSortFn(sortCol.id, sortAsc);
+    indices.sort(sortFn);
     return indices;
 }
 
@@ -164,8 +159,10 @@ function onload() {
                        selectable: false, resizable: false},
         {id: "place", name: "Place", field: "place", width: rankWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
-        {id: "fed", name: "Fed", field: "fed", width: numberWidth},
-        {id: "date", name: "Date", field: "date", width: dateWidth},
+        {id: "fed", name: "Fed", field: "fed", width: numberWidth,
+                    sortable: true, defaultSortAsc: true},
+        {id: "date", name: "Date", field: "date", width: dateWidth,
+                     sortable: true, defaultSortAsc: false},
         {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "meetname", name: "Meet Name", field: "meetname", width: nameWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
@@ -173,13 +170,20 @@ function onload() {
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
         {id: "event", name: "Event", field: "event", width: shortWidth},
         {id: "class", name: "Class", field: "class", width: numberWidth},
-        {id: "bw", name: "Weight", field: "bw", width: numberWidth},
-        {id: "squat", name: "Squat", field: "squat", width: numberWidth},
-        {id: "bench", name: "Bench", field: "bench", width: numberWidth},
-        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
-        {id: "total", name: "Total", field: "total", width: numberWidth},
-        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth},
-        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10},
+        {id: "bw", name: "Weight", field: "bw", width: numberWidth,
+                   sortable: true, defaultSortAsc: true},
+        {id: "squat", name: "Squat", field: "squat", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "bench", name: "Bench", field: "bench", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth,
+                         sortable: true, defaultSortAsc: false},
+        {id: "total", name: "Total", field: "total", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10,
+                          sortable: true, defaultSortAsc: false},
     ];
 
     var options = {
@@ -193,6 +197,19 @@ function onload() {
 
     var data = makeDataProvider(query);
     grid = new Slick.Grid("#theGrid", data, columns, options);
+
+    function redraw() {
+        var source = makeDataProvider(query);
+        grid.setData(source);
+        grid.invalidateAllRows();
+        grid.render();
+    }
+
+    grid.onSort.subscribe(function (e, args) {
+        sortCol = args.sortCol;
+        sortAsc = args.sortAsc;
+        redraw();
+    });
 
     window.addEventListener("resize", function(e) { grid.resizeCanvas(); }, false);
 }
