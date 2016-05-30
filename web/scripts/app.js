@@ -2,6 +2,9 @@
 'use strict';
 
 var grid; // The SlickGrid.
+var sortCol = {id: 'wilks'}; // Initial column sorting information.
+var sortAsc = false; // Initial column sorting information.
+
 var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
@@ -14,9 +17,6 @@ var selClass = document.getElementById("class");
 var selFed = document.getElementById("fedselect");
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
-
-// The column on which to sort.
-var sortByGlobal = opldb.WILKS;
 
 function weight(kg) {
     if (kg === undefined)
@@ -127,7 +127,12 @@ function getIndices() {
 
     var indices = db_make_indices_list();
     indices = db_filter(indices, filter);
-    indices = db_sort_numeric_maxfirst(indices, sortByGlobal);
+
+    if (sortAsc)
+        indices = db_sort_numeric_minfirst(indices, common.colidToIndex(sortCol.id));
+    else
+        indices = db_sort_numeric_maxfirst(indices, common.colidToIndex(sortCol.id));
+
     indices = db_uniq_lifter(indices);
     return indices;
 }
@@ -280,16 +285,24 @@ function onload() {
         {id: "date", name: "Date", field: "date", width: dateWidth},
         {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
-        {id: "age", name: "Age", field: "age", width: shortWidth},
+        {id: "age", name: "Age", field: "age", width: shortWidth,
+                    sortable: true, defaultSortAsc: false},
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
         {id: "class", name: "Class", field: "class", width: numberWidth},
-        {id: "bw", name: "Weight", field: "bw", width: numberWidth},
-        {id: "squat", name: "Squat", field: "squat", width: numberWidth},
-        {id: "bench", name: "Bench", field: "bench", width: numberWidth},
-        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
-        {id: "total", name: "Total", field: "total", width: numberWidth},
-        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth},
-        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10},
+        {id: "bw", name: "Weight", field: "bw", width: numberWidth,
+                   sortable: true, defaultSortAsc: false},
+        {id: "squat", name: "Squat", field: "squat", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "bench", name: "Bench", field: "bench", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth,
+                         sortable: true, defaultSortAsc: false},
+        {id: "total", name: "Total", field: "total", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth,
+                      sortable: true, defaultSortAsc: false},
+        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10,
+                      sortable: true, defaultSortAsc: false},
     ];
 
     var options = {
@@ -303,6 +316,13 @@ function onload() {
 
     var data = makeDataProvider();
     grid = new Slick.Grid("#theGrid", data, columns, options);
+
+    grid.onSort.subscribe(function(e, args) {
+        sortCol = args.sortCol;
+        sortAsc = args.sortAsc;
+        redraw();
+    });
+
     search();
 };
 

@@ -61,6 +61,7 @@ return {
         switch (colid) {
             case "fed": return meetdb.FEDERATION;
             case "date": return meetdb.DATE;
+            case "age": return opldb.AGE;
             case "bw": return opldb.BODYWEIGHTKG;
             case "squat": return opldb.BESTSQUATKG;
             case "bench": return opldb.BESTBENCHKG;
@@ -91,6 +92,7 @@ return {
                 }
 
             // Columns that use the opldb.
+            case "age":
             case "bw":
             case "squat":
             case "bench":

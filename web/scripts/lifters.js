@@ -2,7 +2,7 @@
 'use strict';
 
 var grid; // The SlickGrid.
-var sortCol = {id: 'wilks'}; // Initial column sorting information.
+var sortCol = {id: 'date'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
 
 // TODO: Actually have a toggle for this.
@@ -205,7 +205,7 @@ function onload() {
         grid.render();
     }
 
-    grid.onSort.subscribe(function (e, args) {
+    grid.onSort.subscribe(function(e, args) {
         sortCol = args.sortCol;
         sortAsc = args.sortAsc;
         redraw();
