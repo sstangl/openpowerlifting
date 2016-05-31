@@ -5,7 +5,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDead
 2,Cassandra Johnson,MO,75,74.90,23,115.00,52.50,122.50,290.00,275.916,F,Junior 20-23,Raw
 1,Alice Hwang,KS,48,47.60,27,75.00,37.50,95.00,207.50,276.508,F,Open,Raw
 1,Michelle Paquette,KS,60,58.80,30,102.50,60.00,147.50,310.00,351.085,F,Open,Raw
-DQ,Emmie Webb,KS,67.5,65.20,29,120.00,-80.00,,,0,F,Open,Raw
+DQ,Emmie Webb,KS,67.5,65.20,29,120.00,-80.00,,,,F,Open,Raw
 1,Sarah Jean Johnson,MO,75,74.00,21,132.50,87.50,182.50,402.50,385.896,F,Open,Raw
 2,Cassandra Johnson,MO,75,74.90,23,115.00,52.50,122.50,290.00,275.916,F,Open,Raw
 1,Rachael Hayden,MO,82.5,81.10,33,132.50,80.00,140.00,352.50,320.133,F,Open,Raw
@@ -29,7 +29,7 @@ DQ,Emmie Webb,KS,67.5,65.20,29,120.00,-80.00,,,0,F,Open,Raw
 2,John Dixon,MO,110,104.00,21,247.50,157.50,265.00,670.00,401.725,M,Open,Raw
 3,Eliot Myers,MO,110,109.60,26,245.00,137.50,250.00,632.50,372.640,M,Open,Raw
 4,Aaron Black,MO,110,107.70,27,215.00,175.00,230.00,620.00,367.313,M,Open,Raw
-DQ,Richard Rayzon,MO,110,107.10,31,157.50,-135.00,220.00,,0,M,Open,Raw
+DQ,Richard Rayzon,MO,110,107.10,31,157.50,-135.00,220.00,,,M,Open,Raw
 1,Billy Duncan,MO,140+,175.90,56,227.50,135.00,212.50,575.00,310.599,M,Open,Raw
 1,Jerry Delgado,MO,90,88.30,56,147.50,132.50,185.00,465.00,299.80,M,Master 55-59,Raw
 1,Monica Morris,MO,67.5,67.20,41,152.50,95.00,175.00,422.50,432.59,F,Open,Wraps
@@ -51,7 +51,7 @@ DQ,Richard Rayzon,MO,110,107.10,31,157.50,-135.00,220.00,,0,M,Open,Raw
 1,Keith Hoelting,MO,100,97.70,46,260.00,172.50,237.50,670.00,411.68,M,Master 45-49,Wraps
 1,Steve Lopez,KS,125,112.40,41,235.00,152.50,237.50,625.00,365.46,M,Master 40-45,Wraps
 1,Chuck Trosper,MO,140,126.00,55,200.00,137.50,240.00,577.50,328.56,M,Master 55-59,Wraps
-DQ,Chris McKnight,KS,140+,151.50,30,-327.50,,,,0,M,Master 55-59,Wraps
+DQ,Chris McKnight,KS,140+,151.50,30,-327.50,,,,,M,Master 55-59,Wraps
 1,Joe Walden,KS,75,74.50,58,227.50,112.50,227.50,567.50,406.27,M,Master 55-59,Single-ply
 1,Jim Bell,MO,110,106.70,59,240.00,135.00,227.50,602.50,358.05,M,Master 55-59,Single-ply
 1,Greg Denny,KS,100,100.00,32,365.00,227.50,250.00,842.50,512.736,M,Open,Multi-ply

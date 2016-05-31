@@ -16,11 +16,11 @@ Lori Dunn,1,Master Women 50-54,F,Raw,KS,74.84,74.93,51,87.5,,55,,142.5,,285,271.
 David Coleman,1,Junior Men 13-15,M,Raw,AR,82.10,79.02,15,97.5,,55,,127.5,130,280,192.696
 Scott Treece,1,Junior Men 20-23,M,Raw,AR,82.10,81.37,23,177.5,,112.5,,230,,520,351.208
 Sam McDermed,2,Junior Men 20-23,M,Raw,MO,82.10,80.10,20,175,,117.5,,217.5,,510,347.922
-Mason Cupp,DQ,Junior Men 16-17,M,Raw,MO,89.81,86.00,17,185,,95,,-215,,0,0
+Mason Cupp,DQ,Junior Men 16-17,M,Raw,MO,89.81,86.00,17,185,,95,,-215,,,
 Anthony Rodriguez Jr,1,Junior Men 20-23,M,Raw,IL,89.81,87.82,23,227.5,,150,,227.5,,605,391.2535
 Fahrudin Kostjerevac,2,Junior Men 20-23,M,Raw,MO,89.81,87.54,22,207.5,,122.5,,247.5,,577.5,374.16225
 Jeff Gustafson,3,Junior Men 20-23,M,Raw,MO,89.81,88.36,23,175,,110,,182.5,,467.5,301.257
-Daniel Gustafson,DQ,Junior Men 20-23,M,Raw,MO,89.81,,,0,,0,,0,,0,0
+Daniel Gustafson,DQ,Junior Men 20-23,M,Raw,MO,89.81,,,0,,0,,0,,,
 Daniel Wade,1,Junior Men 20-23,M,Raw,MO,99.79,99.88,21,235,,175,,272.5,,682.5,415.506
 Daniel Zhitomirsky,2,Junior Men 20-23,M,Raw,MO,99.79,96.80,22,227.5,,165,,252.5,,645,397.9005
 Clayton Puricelli,3,Junior Men 20-23,M,Raw,IL,99.79,94.71,23,210,,127.5,,237.5,,575,358.1675
@@ -28,7 +28,7 @@ Ian Penrod,1,Junior Men 20-23,M,Raw,MO,109.77,109.95,22,205,,122.5,,240,,567.5,3
 Cadet Bryant,1,Open Men,M,Raw,TX,59.87,59.24,40,147.5,,105,,185,,437.5,377.781
 Richie Stecker,1,Open Men,M,Raw,MO,67.13,64.86,26,152.5,,122.5,,175,,450,358.29
 Shane Mahoney,1,Open Men,M,Raw,MO,74.84,74.93,29,190,,142.5,,245,,577.5,411.873
-Ryan Lozano,DQ,Open Men,M,Raw,MO,74.84,,,0,,0,,0,,0,0
+Ryan Lozano,DQ,Open Men,M,Raw,MO,74.84,,,0,,0,,0,,,
 Daniel Velasquez,1,Open Men,M,Raw,MO,82.10,80.65,27,190,,115,,235,,540,366.93
 Bradley MacDonald,2,Open Men,M,Raw,MO,82.10,78.11,32,160,,130,,182.5,,472.5,327.584
 Thomas Kinnard,1,Open Men,M,Raw,IL,89.81,87.72,24,165,,147.5,,232.5,242.5,545,352.6695
@@ -74,7 +74,7 @@ Joshua Hearren,2,Submaster Men 35-39,M,Wraps,IL,99.79,96.62,37,202.5,,160,,250,,
 Brett Dworkis,1,Master Men 40-44,M,Wraps,KS,99.79,99.34,42,255,,182.5,,245,,682.5,416.47
 Mark Janitch,2,Master Men 40-44,M,Wraps,MO,99.79,99.70,43,245,,167.5,,250,,662.5,403.68
 William Sucik,3,Master Men 40-44,M,Wraps,SD,99.79,96.52,43,192.5,,152.5,,212.5,,557.5,344.35
-Steve Lillard,DQ,Master Men 65-69,M,Wraps,MO,99.79,99.38,66,-165,,,,,,0,0.00
+Steve Lillard,DQ,Master Men 65-69,M,Wraps,MO,99.79,99.38,66,-165,,,,,,,0.00
 Trace Walls,1,Master Men 40-44,M,Wraps,IL,109.77,109.68,41,307.5,,192.5,,272.5,,772.5,455.02
 James Jarvis,1,Master Men 40-44,M,Wraps,MO,124.74,117.21,41,255,,187.5,,265,,707.5,409.07
 Ashley Fitzgerald,1,Open Women,F,Single-ply,MO,67.13,63.78,26,183.5,,95,,165,,443.5,471.7953
@@ -91,13 +91,13 @@ Jeff Frank,1,Open Men,M,Single-ply,KS,139.71+,178.35,25,427.5,,275,,275,,977.5,5
 Mark Slivinski,1,Master Men 45-49,M,Single-ply,MO,99.79,98.52,49,297.5,,142.5,,290,,730,446.98
 Micah Marino,1,Junior Men 20-23,M,Multi-ply,MO,82.10,80.47,23,360,,265,,341,,966,656.88
 Micah Marino,1,Open Men,M,Multi-ply,MO,82.10,80.47,23,360,,265,,341,,966,656.88
-Nick Stenbach,DQ,Open Men Mutliply,M,,MO,89.81,89.45,25,-250,,0,,0,,0,0
+Nick Stenbach,DQ,Open Men Mutliply,M,,MO,89.81,89.45,25,-250,,0,,0,,,
 Greg Denny,1,Open Men,M,Multi-ply,KS,99.79,98.07,31,342.5,,212.5,,255,,810,496.854
 Curtis White,2,Open Men,M,Multi-ply,MO,99.79,95.80,21,290,,155,,272.5,290,717.5,444.63475
 Jimmy Daniel,3,Open Men,M,Multi-ply,MO,99.79,99.16,24,285,,227.5,,205,,717.5,438.1055
 Andrew Kneib,1,Open Men,M,Multi-ply,KS,109.77,106.05,26,310,,192.5,,262.5,,765,455.481
 Jeremy Frey,1,Open Men,M,Multi-ply,MO,124.74,116.66,32,417.5,,320,,342.5,,1080,625.104
-Mike Guthrey,DQ,Open Men,M,Multi-ply,MO,124.74,121.20,39,-332.5,,0,,0,,0,0
+Mike Guthrey,DQ,Open Men,M,Multi-ply,MO,124.74,121.20,39,-332.5,,0,,0,,,
 AJ Hesser,1,Open Men,M,Multi-ply,MO,139.71+,152.86,25,320,,262.5,,295,,877.5,484.2045
 Bob Zykan,1,Master Men 45-49,M,Multi-ply,MO,109.77,106.14,48,280,,185,,197.5,,662.5,394.40
 Patty Kueneke,1,Master Women 65-69,F,Raw,MO,55.79,54.61,66,0,,35,,0,,35,42.00
