@@ -39,40 +39,14 @@ function maketd(str) {
 }
 
 
-function makeentry(row) {
-    var tr = document.createElement('tr');
-    var meetrow = meetdb.data[row[opldb.MEETID]];
-
-    tr.appendChild(maketd(string(row[opldb.PLACE])));
-    tr.appendChild(maketd(string(row[opldb.NAME])));
-    tr.appendChild(maketd(string(meetrow[meetdb.FEDERATION])));
-    tr.appendChild(maketd(string(meetrow[meetdb.DATE])));
-    tr.appendChild(maketd(string(row[opldb.SEX])));
-    tr.appendChild(maketd(string(row[opldb.AGE])));
-
-    var equipment = row[opldb.EQUIPMENT];
-    if (equipment === 'Raw') {
-        tr.appendChild(maketd('R'));
-    } else if (equipment === 'Wraps') {
-        tr.appendChild(maketd('W'));
-    } else if (equipment === 'Single-ply') {
-        tr.appendChild(maketd('S'));
-    } else if (equipment === 'Multi-ply') {
-        tr.appendChild(maketd('M'));
-    } else {
-        tr.appendChild(maketd(''));
-    }
-
-    tr.appendChild(maketd(weight(row[opldb.BODYWEIGHTKG])));
-    tr.appendChild(maketd(string(row[opldb.DIVISION])));
-    tr.appendChild(maketd(weight(row[opldb.BESTSQUATKG])));
-    tr.appendChild(maketd(weight(row[opldb.BESTBENCHKG])));
-    tr.appendChild(maketd(weight(row[opldb.BESTDEADLIFTKG])));
-    tr.appendChild(maketd(weight(row[opldb.TOTALKG])));
-    tr.appendChild(maketd(number(row[opldb.WILKS])));
-    tr.appendChild(maketd(number(row[opldb.MCCULLOCH])));
-
-    return tr;
+function weightMax(row, cola, colb) {
+    var a = row[cola];
+    var b = row[colb];
+    if (a === undefined)
+        return weight(b);
+    if (b === undefined)
+        return weight(a);
+    return weight(Math.max(a,b));
 }
 
 
@@ -120,9 +94,9 @@ function makeItem(row, index) {
         equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
         bw:          weight(row[opldb.BODYWEIGHTKG]),
         class:       common.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat:       weight(row[opldb.BESTSQUATKG]),
-        bench:       weight(row[opldb.BESTBENCHKG]),
-        deadlift:    weight(row[opldb.BESTDEADLIFTKG]),
+        squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
+        bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
+        deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
         total:       weight(row[opldb.TOTALKG]),
         wilks:       common.number(row[opldb.WILKS]),
         mcculloch:   common.number(row[opldb.MCCULLOCH]),

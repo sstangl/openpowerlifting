@@ -138,6 +138,17 @@ function getIndices() {
 }
 
 
+function weightMax(row, cola, colb) {
+    var a = row[cola];
+    var b = row[colb];
+    if (a === undefined)
+        return weight(b);
+    if (b === undefined)
+        return weight(a);
+    return weight(Math.max(a,b));
+}
+
+
 function makeItem(row, index) {
     var meetrow = meetdb.data[row[opldb.MEETID]];
     var name = row[opldb.NAME];
@@ -162,9 +173,9 @@ function makeItem(row, index) {
         equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
         bw:          weight(row[opldb.BODYWEIGHTKG]),
         class:       common.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat:       weight(row[opldb.BESTSQUATKG]),
-        bench:       weight(row[opldb.BESTBENCHKG]),
-        deadlift:    weight(row[opldb.BESTDEADLIFTKG]),
+        squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
+        bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
+        deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
         total:       weight(row[opldb.TOTALKG]),
         wilks:       common.number(row[opldb.WILKS]),
         mcculloch:   common.number(row[opldb.MCCULLOCH]),
