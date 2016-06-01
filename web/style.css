@@ -39,6 +39,10 @@ html,body {
   background-color: #111111;
 }
 
+.slick-row:hover {
+  background-color: #444444;
+}
+
 .flexbox {
   display: flex;
   height: 100%;
