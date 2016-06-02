@@ -329,6 +329,8 @@ def check_row_total_consistency(row, headers):
 
     # Most federations round to 0.01, so rounding errors get introduced.
     # Only flag the ones that are obviously wrong, otherwise, believe the federation.
+    if squat + bench + deadl == 0:
+        return # Ignore that one RUPC meet that forgot to record what people lifted.
     if abs(squat + bench + deadl - total) > 0.5:
         perror("Total error: Calculated %f, but meet says %f" % (squat+bench+deadl, total))
 
