@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 
-from csv import *
+from oplcsv import Csv
 import sys
 
 if len(sys.argv) < 3:

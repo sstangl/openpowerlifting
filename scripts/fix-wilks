@@ -7,7 +7,7 @@
 # Overwrites the input file in-place.
 #
 
-from csv import *
+from oplcsv import Csv
 import sys
 from wilks import wilks
 

@@ -7,7 +7,7 @@
 # Outputs to stdout.
 #
 
-from csv import Csv
+from oplcsv import Csv
 import sys
 
 if len(sys.argv) < 3:

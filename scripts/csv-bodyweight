@@ -5,7 +5,7 @@
 # sets the bodyweight equal to the class maximum, except for SHW.
 #
 
-from csv import Csv
+from oplcsv import Csv
 import sys
 
 if len(sys.argv) != 2:

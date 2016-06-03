@@ -4,7 +4,7 @@
 # Compiles all lifters.csv and meet.csv files into the final files.
 #
 
-from csv import Csv
+from oplcsv import Csv
 import os
 import sys
 
