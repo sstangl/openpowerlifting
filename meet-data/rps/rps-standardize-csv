@@ -71,6 +71,17 @@ def standardize_fieldnames(csv):
             x = 'BestDeadliftLBS'
         elif s == 'total':
             x = 'TotalLBS'
+
+        elif s == 'sex':
+            x = 'Sex'
+        elif s == 'class':
+            x = 'Class'
+        elif s == 'equipment':
+            x = 'Equipment'
+        elif s == 'division':
+            x = 'Division'
+        elif s == 'weightclasslbs':
+            x = 'WeightClassLBS'
         else:
             error("Teach me what to do with column '%s'" % x)
 
@@ -88,6 +99,10 @@ def fixequipment(csv):
             x = 'Raw'
         elif s == 'raw classic':
             x = 'Wraps'
+        elif s == 'single-ply':
+            x = 'Single-ply'
+        elif s == 'multi-ply':
+            x = 'Multi-ply'
         else:
             error("Teach fixequipment() what to do with '%s'" % s)
 
@@ -134,6 +149,16 @@ def fixclass(csv):
             x = 'Pro'
         elif s == 'am':
             x = 'Amateur'
+        elif s == 'elite':
+            x = 'Elite'
+        elif s == 'military am':
+            x = 'Military Amateur'
+        elif s == 'mil am':
+            x = 'Military Amateur'
+        elif s == 'police am':
+            x = 'Police Amateur'
+        elif s == 'police pro':
+            x = 'Police Pro'
         else:
             error("Teach fixclass() what to do with '%s'" % s)
 
