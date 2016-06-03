@@ -327,6 +327,7 @@ function onload() {
 
     var data = makeDataProvider();
     grid = new Slick.Grid("#theGrid", data, columns, options);
+    grid.setSortColumn(sortCol.id, sortAsc);
 
     grid.onSort.subscribe(function(e, args) {
         sortCol = args.sortCol;

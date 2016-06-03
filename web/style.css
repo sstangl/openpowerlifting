@@ -35,6 +35,11 @@ html,body {
   border-bottom: 1px red;
 }
 
+.slick-header-column-sorted {
+  text-decoration: underline;
+  font-style: normal;
+}
+
 .slick-row.even {
   background-color: #111111;
 }
