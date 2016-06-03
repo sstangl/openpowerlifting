@@ -112,11 +112,9 @@ def fixequipment(csv):
             x = 'Raw'
         elif s == 'raw classic':
             x = 'Wraps'
-        elif s == 'single-ply':
+        elif s == 'single-ply' or s == 'single ply':
             x = 'Single-ply'
-        elif s == 'multi-ply':
-            x = 'Multi-ply'
-        elif s == 'mulit-ply':
+        elif s == 'multi-ply' or s == 'mulit-ply':
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
@@ -281,6 +279,8 @@ def main(filename):
         fixlift(csv, 'BestBenchLBS')
     if 'BestDeadliftLBS' in csv.fieldnames:
         fixlift(csv, 'BestDeadliftLBS')
+    if 'TotalLBS' in csv.fieldnames:
+        fixlift(csv, 'TotalLBS')
 
     csv.write(sys.stdout)
 
