@@ -67,7 +67,7 @@ def standardize_fieldnames(csv):
             x = 'WeightClassLBS'
         elif s == 'name':
             x = 'Name'
-        elif s == 'actual bwt.' or s == 'acutal b/w':
+        elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt':
             x = 'BodyweightLBS'
         elif s == 'squat':
             x = 'BestSquatLBS'
@@ -77,6 +77,8 @@ def standardize_fieldnames(csv):
             x = 'BestDeadliftLBS'
         elif s == 'total':
             x = 'TotalLBS'
+        elif s == 'place':
+            x = 'Place'
 
         elif s == 'squat4lbs':
             x = 'Squat4LBS'
@@ -210,12 +212,30 @@ def fixweightclass(csv):
 
 def isnumber(s):
     try:
-# Remove any commas in the html file before
-
         float(s)
         return True
     except ValueError:
         return False
+
+
+def fixplace(csv):
+    idx = csv.fieldnames.index('Place')
+    if idx < 0:
+        error("No Place column in fixplace().")
+
+    for row in csv.rows:
+        x = row[idx]
+        x = x.replace('pl','')
+        x = x.replace('st','')
+        x = x.replace('nd','')
+        x = x.replace('rd','')
+        x = x.replace('th','')
+        x = x.strip()
+
+        if not isnumber(x) and x != 'DQ':
+            error("Unknown place in fixplace(): '%s'" % s)
+
+        row[idx] = x
 
 
 def fixlift(csv, liftfield):
@@ -281,6 +301,9 @@ def main(filename):
         fixlift(csv, 'BestDeadliftLBS')
     if 'TotalLBS' in csv.fieldnames:
         fixlift(csv, 'TotalLBS')
+
+    if 'Place' in csv.fieldnames:
+        fixplace(csv)
 
     csv.write(sys.stdout)
 
