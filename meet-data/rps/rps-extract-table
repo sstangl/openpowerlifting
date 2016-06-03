@@ -21,27 +21,12 @@ def main(filename):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    divs = soup.find_all('div', class_='roster')
-    if len(divs) > 1:
-        error("More than one roster divs found.")
-    elif len(divs) < 1:
-        tables = soup.find_all('table')
-        if len(tables) > 1:
-            error("No roster div and more than one table.")
-        elif len(tables) < 1:
-            error("No roster div and no table.")
-        table = tables[0]
-        print(table)
-        return
-        
-    tables = divs[0].find_all('table')
-    if len(tables) > 1:
-        error("More than one table in the roster div found.")
-    elif len(tables) < 1:
-        error("No table found in the roster div.")
+    tables = soup.find_all('table')
+    if len(tables) < 1:
+        error("No tables found in the HTML.")
 
-    table = tables[0]
-    print(table)
+    for table in tables:
+        print(table)
 
 
 if __name__ == '__main__':
