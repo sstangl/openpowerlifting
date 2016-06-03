@@ -157,7 +157,7 @@ def fixname(csv):
         s = s.replace('Jr.','Jr')
         s = s.replace('Sr.','Sr')
 
-        if s.lower() == s:
+        if s.lower() == s or s.upper() == s:
             error("Name needs manual fixing: '%s'" % s )
 
         row[idx] = s

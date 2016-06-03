@@ -13,6 +13,10 @@ REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 # Download the website to results.html.
 wget --output-document=results.html "$1"
 
+# Save the website URL for future use, since it's pretty hard to tell
+# what meets on the site are tracked and which aren't.
+echo "$1" > URL
+
 # Extract just the results table from results.html.
 # Save it as results.xls so that libreoffice can convert to csv.
 ${SCRIPTDIR}/rps-extract-table results.html > results.xls
@@ -24,12 +28,10 @@ sed -i -e 's/,//g' results.xls
 # This creates results.csv.
 libreoffice --headless --convert-to csv results.xls
 
-# Use RPS-specific knowledge to parse results.csv into lifters.csv.
-${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
+# If CSV conversion completed successfully, remove the intermediary
+# files early to benefit terminal autocompletion.
+rm results.html results.xls
 
-# Convert to kg.
-${REPOSCRIPTDIR}/csv-tokg lifters.csv
-
-rm results.html results.xls results.csv
-
-echo "Done!"
+# Commands after this point were extracted into a separate file
+# since they had to be re-run by hand in case of error.
+${SCRIPTDIR}/rps-parse-post
