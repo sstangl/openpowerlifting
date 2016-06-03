@@ -25,7 +25,14 @@ def main(filename):
     if len(divs) > 1:
         error("More than one roster divs found.")
     elif len(divs) < 1:
-        error("No roster div found.")
+        tables = soup.find_all('table')
+        if len(tables) > 1:
+            error("No roster div and more than one table.")
+        elif len(tables) < 1:
+            error("No roster div and no table.")
+        table = tables[0]
+        print(table)
+        return
         
     tables = divs[0].find_all('table')
     if len(tables) > 1:

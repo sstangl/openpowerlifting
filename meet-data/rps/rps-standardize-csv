@@ -37,6 +37,12 @@ def remove_empty_rows(csv):
         del csv.rows[idx]
 
 
+def remove_stars(csv):
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            row[i] = x.replace('*','')
+
+
 def remove_zeros(csv):
     for row in csv.rows:
         for i,x in enumerate(row):
@@ -224,6 +230,7 @@ def main(filename):
 
     strip_whitespace(csv)
     remove_empty_rows(csv)
+    remove_stars(csv)
     remove_zeros(csv)
     standardize_fieldnames(csv)
 
