@@ -124,9 +124,12 @@ def fixequipment(csv):
 
     for row in csv.rows:
         s = row[idx].lower()
-        if s == 'raw modern':
+        # "Classic" means belt and wrist wraps only to the RPS.
+        if s == 'raw classic':
             x = 'Raw'
-        elif s == 'raw classic':
+        # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
+        # They track rankings for sleeves independently, but don't mark that anywhere.
+        elif s == 'raw modern':
             x = 'Wraps'
         elif s == 'single-ply' or s == 'single ply':
             x = 'Single-ply'
