@@ -103,6 +103,8 @@ def fixequipment(csv):
             x = 'Single-ply'
         elif s == 'multi-ply':
             x = 'Multi-ply'
+        elif s == 'mulit-ply':
+            x = 'Multi-ply'
         else:
             error("Teach fixequipment() what to do with '%s'" % s)
 
@@ -183,6 +185,25 @@ def fixweightclass(csv):
                 error("Unknown sex in fixweightclass(): '%s'" % s)
 
 
+def isnumber(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
+def fixlift(csv, liftfield):
+    idx = csv.fieldnames.index(liftfield)
+    if idx < 0:
+        error("No %s column in fixlift()." % liftfield)
+
+    # Get rid of things like 'bomb' and 'no lift'.
+    for row in csv.rows:
+        if not isnumber(row[idx]):
+            row[idx] = ''
+
+
 def mergeclassintodivision(csv):
     classidx = csv.fieldnames.index('Class')
     if classidx < 0:
@@ -225,6 +246,13 @@ def main(filename):
     # Depends on fixclass(), since it merges class into division.
     if 'Class' in csv.fieldnames and 'Division' in csv.fieldnames:
         mergeclassintodivision(csv)
+
+    if 'BestSquatLBS' in csv.fieldnames:
+        fixlift(csv, 'BestSquatLBS')
+    if 'BestBenchLBS' in csv.fieldnames:
+        fixlift(csv, 'BestBenchLBS')
+    if 'BestDeadliftLBS' in csv.fieldnames:
+        fixlift(csv, 'BestDeadliftLBS')
 
     csv.write(sys.stdout)
 
