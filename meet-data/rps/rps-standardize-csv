@@ -97,6 +97,20 @@ def standardize_fieldnames(csv):
             x = 'Division'
         elif s == 'weightclasslbs':
             x = 'WeightClassLBS'
+        elif s == 'bestsquatkg':
+            x = 'BestSquatKg'
+        elif s == 'bestbenchkg':
+            x = 'BestBenchKg'
+        elif s == 'bestdeadliftkg':
+            x = 'BestDeadliftKg'
+        elif s == 'totalkg':
+            x = 'TotalKg'
+        elif s == 'squat4kg':
+            x = 'Squat4Kg'
+        elif s == 'bench4kg':
+            x = 'Bench4Kg'
+        elif s == 'deadlift4kg':
+            x = 'Deadlift4Kg'
         else:
             error("Teach me what to do with column '%s'" % x)
 
@@ -293,14 +307,9 @@ def main(filename):
     if 'Class' in csv.fieldnames and 'Division' in csv.fieldnames:
         mergeclassintodivision(csv)
 
-    if 'BestSquatLBS' in csv.fieldnames:
-        fixlift(csv, 'BestSquatLBS')
-    if 'BestBenchLBS' in csv.fieldnames:
-        fixlift(csv, 'BestBenchLBS')
-    if 'BestDeadliftLBS' in csv.fieldnames:
-        fixlift(csv, 'BestDeadliftLBS')
-    if 'TotalLBS' in csv.fieldnames:
-        fixlift(csv, 'TotalLBS')
+    for f in csv.fieldnames:
+        if 'Squat' in f or 'Bench' in f or 'Deadlift' in f or 'Total' in f:
+            fixlift(csv, f)
 
     if 'Place' in csv.fieldnames:
         fixplace(csv)
