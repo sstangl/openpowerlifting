@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Standardize the results.csv to the OpenPowerlifting
+# internal format.
+#
+
+import sys
+from oplcsv import Csv
+
+
+def error(msg):
+    print("Error: %s" % msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def strip_whitespace(csv):
+    for i,x in enumerate(csv.fieldnames):
+        csv.fieldnames[i] = x.strip().replace('  ',' ')
+
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            row[i] = x.strip().replace('  ',' ')
+
+
+def remove_empty_rows(csv):
+    def getemptyidx(csv):
+        for i,row in enumerate(csv.rows):
+            if ''.join(row) == '':
+                return i
+        return -1
+
+    while True:
+        idx = getemptyidx(csv)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
+def remove_zeros(csv):
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            # The CSV conversion via LibreOffice already standardized
+            # all decimal forms of 0.00 and such to just '0'.
+            if x == '0':
+                row[i] = ''
+
+
+def standardize_fieldnames(csv):
+    for i,x in enumerate(csv.fieldnames):
+        s = x.lower()
+        if s == 'gender':
+            x = 'Sex'
+        elif s == 'class':
+            x = 'Class' # TODO: What to do with this
+        elif s == 'eq division':
+            x = 'Equipment'
+        elif s == 'age division':
+            x = 'Division'
+        elif s == 'wt':
+            x = 'WeightClassLBS'
+        elif s == 'name':
+            x = 'Name'
+        elif s == 'actual bwt.':
+            x = 'BodyweightLBS'
+        elif s == 'squat':
+            x = 'BestSquatLBS'
+        elif s == 'bench':
+            x = 'BestBenchLBS'
+        elif s == 'deadlift':
+            x = 'BestDeadliftLBS'
+        elif s == 'total':
+            x = 'TotalLBS'
+        else:
+            error("Teach me what to do with column '%s'" % x)
+
+        csv.fieldnames[i] = x
+
+
+def fixequipment(csv):
+    idx = csv.fieldnames.index('Equipment')
+    if idx < 0:
+        error("No Equipment column in fixequipment().")
+
+    for row in csv.rows:
+        s = row[idx].lower()
+        if s == 'raw modern':
+            x = 'Raw'
+        elif s == 'raw classic':
+            x = 'Wraps'
+        else:
+            error("Teach fixequipment() what to do with '%s'" % s)
+
+        row[idx] = x
+
+
+def fixsex(csv):
+    idx = csv.fieldnames.index('Sex')
+    if idx < 0:
+        error("No Sex column in fixsex().")
+
+    for row in csv.rows:
+        s = row[idx].lower()
+        if s == 'male':
+            x = 'M'
+        elif s == 'female':
+            x = 'F'
+        else:
+            error("Teach fixsex() what to do with '%s'" % s)
+
+        row[idx] = x
+
+
+def fixname(csv):
+    idx = csv.fieldnames.index('Name')
+    if idx < 0:
+        error("No Name column in fixname().")
+
+    for row in csv.rows:
+        s = row[idx]
+        s = s.replace('Jr.','Jr')
+        s = s.replace('Sr.','Sr')
+        row[idx] = s
+
+
+def fixclass(csv):
+    idx = csv.fieldnames.index('Class')
+    if idx < 0:
+        error("No Class column in fixclass().")
+
+    for row in csv.rows:
+        s = row[idx].lower()
+        if s == 'pro':
+            x = 'Pro'
+        elif s == 'am':
+            x = 'Amateur'
+        else:
+            error("Teach fixclass() what to do with '%s'" % s)
+
+        row[idx] = x
+
+
+def fixweightclass(csv):
+    idx = csv.fieldnames.index('WeightClassLBS')
+    if idx < 0:
+        error("No WeightClassLBS column in fixweightclass().")
+    sexidx = csv.fieldnames.index('Sex')
+    if sexidx < 0:
+        error("No Sex column in fixweightclass().")
+
+    for row in csv.rows:
+        if row[idx].lower() == 'shw':
+            if row[sexidx] == 'M':
+                row[idx] = '308+'
+            elif row[sexidx] == 'F':
+                row[idx] = '198+'
+            else:
+                error("Unknown sex in fixweightclass(): '%s'" % s)
+
+
+def mergeclassintodivision(csv):
+    classidx = csv.fieldnames.index('Class')
+    if classidx < 0:
+        error("No Class column in mergeclassintodivision().")
+    dividx = csv.fieldnames.index('Division')
+    if dividx < 0:
+        error("No Division column in mergeclassintodivision().")
+
+    for row in csv.rows:
+        x = "%s %s" % (row[classidx], row[dividx])
+        row[dividx] = x.strip()
+
+    csv.remove_column_by_index(classidx)
+
+
+def main(filename):
+    csv = Csv(filename)
+
+    strip_whitespace(csv)
+    remove_empty_rows(csv)
+    remove_zeros(csv)
+    standardize_fieldnames(csv)
+
+    if not 'Name' in csv.fieldnames:
+        error("Couldn't find a name column.")
+    if not 'Equipment' in csv.fieldnames:
+        error("Couldn't find an equipment column.")
+    if not 'Sex' in csv.fieldnames:
+        error("Couldn't find a sex column.")
+
+    fixequipment(csv)
+    fixsex(csv)
+    fixname(csv)
+    fixclass(csv)
+
+    # Depends on fixsex(), since it needs sex information for SHWs.
+    if 'WeightClassLBS' in csv.fieldnames:
+        fixweightclass(csv)
+
+    # Depends on fixclass(), since it merges class into division.
+    if 'Class' in csv.fieldnames and 'Division' in csv.fieldnames:
+        mergeclassintodivision(csv)
+
+    csv.write(sys.stdout)
+
+        
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s results.csv" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])

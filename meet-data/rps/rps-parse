@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 http://url/to/results/page"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Download the website to results.html.
+wget --output-document=results.html "$1"
+
+# Extract just the results table from results.html.
+# Save it as results.xls so that libreoffice can convert to csv.
+${SCRIPTDIR}/rps-extract-table results.html > results.xls
+
+# Use LibreOffice to automatically convert the <table> to a csv file.
+# This creates results.csv.
+libreoffice --headless --convert-to csv results.xls
+
+# Use RPS-specific knowledge to parse results.csv into lifters.csv.
+${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
+
+# Convert to kg.
+${REPOSCRIPTDIR}/csv-tokg lifters.csv
+
+rm results.html results.xls results.csv
+
+echo "Done!"

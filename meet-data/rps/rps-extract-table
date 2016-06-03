@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# With results.html downloaded from the RPS website,
+# extract only the results table, and write it to
+# stdout.
+#
+
+from bs4 import BeautifulSoup
+import sys
+
+
+def error(msg):
+    print("Error: %s" % msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def main(filename):
+    with open(filename, 'r') as fd:
+        html = fd.read()
+
+    soup = BeautifulSoup(html, 'html.parser')
+
+    divs = soup.find_all('div', class_='roster')
+    if len(divs) > 1:
+        error("More than one roster divs found.")
+    elif len(divs) < 1:
+        error("No roster div found.")
+        
+    tables = divs[0].find_all('table')
+    if len(tables) > 1:
+        error("More than one table in the roster div found.")
+    elif len(tables) < 1:
+        error("No table found in the roster div.")
+
+    table = tables[0]
+    print(table)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s results.html" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
