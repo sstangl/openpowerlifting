@@ -111,6 +111,8 @@ def standardize_fieldnames(csv):
             x = 'Bench4Kg'
         elif s == 'deadlift4kg':
             x = 'Deadlift4Kg'
+        elif s == 'state':
+            x = 'State'
         else:
             error("Teach me what to do with column '%s'" % x)
 
@@ -125,15 +127,15 @@ def fixequipment(csv):
     for row in csv.rows:
         s = row[idx].lower()
         # "Classic" means belt and wrist wraps only to the RPS.
-        if s == 'raw classic':
+        if s == 'raw classic' or s == 'raw clas':
             x = 'Raw'
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
         # They track rankings for sleeves independently, but don't mark that anywhere.
-        elif s == 'raw modern':
+        elif s == 'raw modern' or s == 'raw mod':
             x = 'Wraps'
         elif s == 'single-ply' or s == 'single ply':
             x = 'Single-ply'
-        elif s == 'multi-ply' or s == 'mulit-ply':
+        elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply':
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
@@ -173,6 +175,9 @@ def fixname(csv):
         s = row[idx]
         s = s.replace('Jr.','Jr')
         s = s.replace('Sr.','Sr')
+
+        # RPS uses this to look fancy in names like O'Brien.
+        s = s.replace("’","'")
 
         if s.upper() == s:
             error("Name looks all uppercase, needs manual fixing: '%s'" % s )

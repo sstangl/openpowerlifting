@@ -20,6 +20,6 @@ ${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
 ${REPOSCRIPTDIR}/csv-tokg lifters.csv
 
 # Show any warnings.
-${REPOSCRIPTDIR}/check-lifters lifters.csv
+${REPOSCRIPTDIR}/check-lifters-csv lifters.csv
 
 echo "Done! Don't forget about meet.csv!"
