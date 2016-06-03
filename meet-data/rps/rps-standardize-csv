@@ -113,6 +113,8 @@ def standardize_fieldnames(csv):
             x = 'Deadlift4Kg'
         elif s == 'state':
             x = 'State'
+        elif s == 'age':
+            x = 'Age'
         else:
             error("Teach me what to do with column '%s'" % x)
 
@@ -127,15 +129,20 @@ def fixequipment(csv):
     for row in csv.rows:
         s = row[idx].lower()
         # "Classic" means belt and wrist wraps only to the RPS.
-        if s == 'raw classic' or s == 'raw clas':
+        if s == 'raw classic' or s == 'raw clas' or s == 'raw c' or s == 'rc':
             x = 'Raw'
+
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
         # They track rankings for sleeves independently, but don't mark that anywhere.
-        elif s == 'raw modern' or s == 'raw mod':
+        elif s == 'raw modern' or s == 'raw mod' or s == 'raw m' or s == 'rm':
             x = 'Wraps'
-        elif s == 'single-ply' or s == 'single ply':
+
+        elif s == 'single-ply' or s == 'single ply' or s == 'sp':
             x = 'Single-ply'
-        elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply':
+
+        elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply' or s == 'eq':
+            x = 'Multi-ply'
+        elif s == 'multiply' or s == 'mp':
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
@@ -156,9 +163,9 @@ def fixsex(csv):
 
     for row in csv.rows:
         s = row[idx].lower()
-        if s == 'male':
+        if s == 'male' or s == 'm':
             x = 'M'
-        elif s == 'female':
+        elif s == 'female' or s == 'f':
             x = 'F'
         else:
             error("Teach fixsex() what to do with '%s'" % s)
@@ -179,12 +186,18 @@ def fixname(csv):
         # RPS uses this to look fancy in names like O'Brien.
         s = s.replace("’","'")
 
+        # The first argument is some weird unicode space that keeps
+        # creeping into the name field.
+        s = s.replace("  "," ")
+
         if s.upper() == s:
             error("Name looks all uppercase, needs manual fixing: '%s'" % s )
 
         for x in s.split():
-            if x.lower() == x or s.upper() == s:
-                error("Name needs proper casing: '%s'" % s)
+            if x.lower() == x or x.upper() == x:
+                # Except in names like "Louie de Leon" or for initials.
+                if len(x.replace('.','')) > 2 and x != 'III':
+                    error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s
 
@@ -214,6 +227,12 @@ def fixclass(csv):
             x = 'Military Pro'
         elif s == 'crossfit':
             x = 'Crossfit'
+
+        elif s == 'junior pro':
+            x = 'Junior Pro'
+        elif s == 'pro/ police fire':
+            x = 'Police-Fire Pro'
+
         else:
             error("Teach fixclass() what to do with '%s'" % s)
 
