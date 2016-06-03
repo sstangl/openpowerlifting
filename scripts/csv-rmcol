@@ -22,4 +22,4 @@ for column in columnsToRemove:
     csv.remove_column_by_name(column)
 
 with open(csvname, 'w') as fd:
-    csv.write_to(fd)
+    csv.write(fd)

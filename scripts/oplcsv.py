@@ -59,6 +59,6 @@ class Csv:
 
             self.rows.append(build)
 
-    def write_to(self, fd):
+    def write(self, fd):
         fd.write(','.join(self.fieldnames) + "\n")
         fd.writelines([','.join(row) + "\n" for row in self.rows])

@@ -70,4 +70,4 @@ for row in csv.rows:
         row[indexWilks] = to_string(score)
 
 with open(sys.argv[1], 'w') as fd:
-    csv.write_to(fd)
+    csv.write(fd)

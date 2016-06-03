@@ -61,9 +61,9 @@ def main(builddir, meetdir):
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
     with open(oplcsvpath, 'w') as fd:
-        lifterscsv.write_to(fd)
+        lifterscsv.write(fd)
     with open(meetscsvpath, 'w') as fd:
-        meetscsv.write_to(fd)
+        meetscsv.write(fd)
 
 
 if __name__ == '__main__':

@@ -20,4 +20,4 @@ for filename in sys.argv[2:]:
     c = Csv(filename)
     csv.cat(c)
 
-csv.write_to(sys.stdout)
+csv.write(sys.stdout)

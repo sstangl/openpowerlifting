@@ -26,4 +26,4 @@ for row in csv.rows:
             row[bidx] = row[widx]
 
 with open(sys.argv[1], 'w') as fd:
-    csv.write_to(fd)
+    csv.write(fd)
