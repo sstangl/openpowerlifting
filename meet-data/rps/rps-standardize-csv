@@ -61,7 +61,7 @@ def standardize_fieldnames(csv):
             x = 'WeightClassLBS'
         elif s == 'name':
             x = 'Name'
-        elif s == 'actual bwt.':
+        elif s == 'actual bwt.' or s == 'acutal b/w':
             x = 'BodyweightLBS'
         elif s == 'squat':
             x = 'BestSquatLBS'
