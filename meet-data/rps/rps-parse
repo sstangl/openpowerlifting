@@ -17,6 +17,9 @@ wget --output-document=results.html "$1"
 # Save it as results.xls so that libreoffice can convert to csv.
 ${SCRIPTDIR}/rps-extract-table results.html > results.xls
 
+# Remove any commas in the xls file.
+sed -i -e 's/,//g' results.xls
+
 # Use LibreOffice to automatically convert the <table> to a csv file.
 # This creates results.csv.
 libreoffice --headless --convert-to csv results.xls
