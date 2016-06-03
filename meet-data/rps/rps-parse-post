@@ -19,4 +19,7 @@ ${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
 # Convert to kg.
 ${REPOSCRIPTDIR}/csv-tokg lifters.csv
 
-echo "Done!"
+# Show any warnings.
+${REPOSCRIPTDIR}/check-lifters lifters.csv
+
+echo "Done! Don't forget about meet.csv!"

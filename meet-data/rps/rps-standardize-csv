@@ -174,8 +174,12 @@ def fixname(csv):
         s = s.replace('Jr.','Jr')
         s = s.replace('Sr.','Sr')
 
-        if s.lower() == s or s.upper() == s:
-            error("Name needs manual fixing: '%s'" % s )
+        if s.upper() == s:
+            error("Name looks all uppercase, needs manual fixing: '%s'" % s )
+
+        for x in s.split():
+            if x.lower() == x or s.upper() == s:
+                error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s
 
@@ -203,6 +207,8 @@ def fixclass(csv):
             x = 'Police Pro'
         elif s == 'military pro':
             x = 'Military Pro'
+        elif s == 'crossfit':
+            x = 'Crossfit'
         else:
             error("Teach fixclass() what to do with '%s'" % s)
 
