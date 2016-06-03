@@ -78,6 +78,13 @@ def standardize_fieldnames(csv):
         elif s == 'total':
             x = 'TotalLBS'
 
+        elif s == 'squat4lbs':
+            x = 'Squat4LBS'
+        elif s == 'bench4lbs':
+            x = 'Bench4LBS'
+        elif s == 'deadlift4lbs':
+            x = 'Deadlift4LBS'
+
         elif s == 'sex':
             x = 'Sex'
         elif s == 'class':
@@ -111,6 +118,12 @@ def fixequipment(csv):
             x = 'Multi-ply'
         elif s == 'mulit-ply':
             x = 'Multi-ply'
+
+        # This is used for benchers who have to choose between Raw or Wraps.
+        # Seriously, though, what the hell?
+        elif s == 'no choice made':
+            x = 'Wraps'
+
         else:
             error("Teach fixequipment() what to do with '%s'" % s)
 
@@ -165,8 +178,10 @@ def fixclass(csv):
             x = 'Military Amateur'
         elif s == 'police am':
             x = 'Police Amateur'
-        elif s == 'police pro':
+        elif s == 'police pro' or s == 'polce pro':
             x = 'Police Pro'
+        elif s == 'military pro':
+            x = 'Military Pro'
         else:
             error("Teach fixclass() what to do with '%s'" % s)
 
@@ -193,6 +208,8 @@ def fixweightclass(csv):
 
 def isnumber(s):
     try:
+# Remove any commas in the html file before
+
         float(s)
         return True
     except ValueError:
