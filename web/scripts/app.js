@@ -215,7 +215,7 @@ function search() {
     var rowid = -1;
 
     for (var i = 0; i < numrows; ++i) {
-        let row = data.getItem(i);
+        var row = data.getItem(i);
         if (row.searchname == query) {
             rowid = i;
             break;

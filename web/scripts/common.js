@@ -16,9 +16,9 @@ return {
         var args = url.slice(i+1);
 
         var obj = {};
-        for (let arg of args.split('&') ) {
+        for (var arg of args.split('&') ) {
             if (arg.indexOf('=') >= 0) {
-                let v = unescape(arg).split('=');
+                var v = unescape(arg).split('=');
                 obj[v[0]] = v[1];
             }
         }
