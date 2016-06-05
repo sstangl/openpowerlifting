@@ -2,7 +2,14 @@
 
 A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.
 
+Presentation of this data is available at [OpenPowerlifting.org](http://www.openpowerlifting.org).
+
 **Powerlifting to the People.**
+
+## Code Licensing
+
+All OpenPowerlifting code is Free/Libre software under the GNU AGPLv3+.<br/>
+Please refer to the LICENSE file.
 
 ## Data Licensing
 
@@ -27,8 +34,3 @@ Sample attribution text:
 
 If you modify the data or add useful new data, please consider contributing<br/>
 the changes back so the entire powerlifting community may benefit.
-
-## Code Licensing
-
-All OpenPowerlifting code is Free/Libre software under the GNU AGPLv3+.<br/>
-Please refer to the LICENSE file.
