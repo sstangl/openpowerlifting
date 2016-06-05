@@ -45,6 +45,8 @@ def remove_event_rows(csv):
                 k = k.lower()
                 if k == 'total' or k == 'deadlift' or k == 'bench' or k == 'squat':
                     return i
+                if k == 'bench only' or k == 'ironman' or k == 'deadlift only':
+                    return i
         return -1
 
     while True:
@@ -74,7 +76,7 @@ def standardize_fieldnames(csv):
     # If the first field is "Full Power", we can guess at some
     # of the other fieldnames, which are usually left blank.
     s = csv.fieldnames[0].lower()
-    if 'full power' in s or 'saturday am' in s:
+    if 'full power' in s or 'saturday am' in s or 'ironman' in s or 'push' in s:
         # The next 6 fieldnames must be empty.
         if ''.join(csv.fieldnames[1:6]) != '':
             error("Field names expected to be blank, but aren't!")
@@ -98,11 +100,11 @@ def standardize_fieldnames(csv):
             x = 'Division'
         elif s == 'wt':
             x = 'WeightClassLBS'
-        elif s == 'name':
+        elif s == 'name' or s == 'powerlifter' or s == 'lifter name':
             x = 'Name'
         elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt' or s == 'actual bwt':
             x = 'BodyweightLBS'
-        elif s == 'act. bwt' or s == 'act bwt':
+        elif s == 'act. bwt' or s == 'act bwt' or s == 'btw':
             x = 'BodyweightLBS'
         elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart':
             x = 'BestSquatLBS'
@@ -126,11 +128,11 @@ def standardize_fieldnames(csv):
             x = 'Sex'
         elif s == 'class':
             x = 'Class'
-        elif s == 'equipment':
+        elif s == 'equipment' or s == 'equip':
             x = 'Equipment'
         elif s == 'division':
             x = 'Division'
-        elif s == 'weightclasslbs':
+        elif s == 'weightclasslbs' or s == 'wclass':
             x = 'WeightClassLBS'
         elif s == 'bodyweightlbs':
             x = 'BodyweightLBS'
@@ -168,6 +170,9 @@ def fixequipment(csv):
         # "Classic" means belt and wrist wraps only to the RPS.
         if s == 'raw classic' or s == 'raw clas' or s == 'raw c' or s == 'rc':
             x = 'Raw'
+        # This one below looks the same, but actually has some unicode BS going on.
+        if s == 'raw clas' or s == 'raw classic':
+            x = 'Raw'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
         # They track rankings for sleeves independently, but don't mark that anywhere.
@@ -188,6 +193,7 @@ def fixequipment(csv):
             x = 'Wraps'
 
         else:
+            print("Full row: %s" % ','.join(row), file=sys.stderr)
             error("Teach fixequipment() what to do with '%s'" % s)
 
         row[idx] = x
@@ -200,9 +206,9 @@ def fixsex(csv):
 
     for row in csv.rows:
         s = row[idx].lower()
-        if s == 'male' or s == 'm':
+        if s == 'male' or s == 'm' or s == 'men':
             x = 'M'
-        elif s == 'female' or s == 'f':
+        elif s == 'female' or s == 'f' or s == 'women':
             x = 'F'
         else:
             error("Teach fixsex() what to do with '%s'" % s)
@@ -232,6 +238,9 @@ def fixname(csv):
         s = s.replace("  "," ") # A second kind of weird space.
         s = s.replace(" "," ") # Yet more more space.
 
+        # I'm not sure what this means, but it shows up in names.
+        s = s.replace("NSB","")
+
         if s.upper() == s:
             error("Name looks all uppercase, needs manual fixing: '%s'" % s )
 
@@ -253,21 +262,21 @@ def fixclass(csv):
         s = row[idx].lower()
         if s == 'pro':
             x = 'Pro'
-        elif s == 'am':
+        elif s == 'am' or s == 'amateur' or s == 'ameteur':
             x = 'Amateur'
         elif s == 'elite':
             x = 'Elite'
-        elif s == 'military am':
+        elif s == 'military am' or s == 'military':
             x = 'Military Amateur'
         elif s == 'mil am':
             x = 'Military Amateur'
-        elif s == 'police am' or s == 'pol am':
+        elif s == 'police am' or s == 'pol am' or s == 'police':
             x = 'Police Amateur'
         elif s == 'police pro' or s == 'polce pro' or s == 'pol pro':
             x = 'Police Pro'
-        elif s == 'military pro' or s == 'mil pro':
+        elif s == 'military pro' or s == 'mil pro' or s == 'pro mil' or s == 'militarypro':
             x = 'Military Pro'
-        elif s == 'crossfit':
+        elif s == 'crossfit' or s == 'cross fit':
             x = 'Crossfit'
         elif s == 'police/fire am':
             x = 'Police-Fire Amateur'
@@ -358,10 +367,10 @@ def mergeclassintodivision(csv):
 def main(filename):
     csv = Csv(filename)
 
+    remove_stars(csv)
     strip_whitespace(csv)
     remove_empty_rows(csv)
     remove_event_rows(csv)
-    remove_stars(csv)
     remove_zeros(csv)
     standardize_fieldnames(csv)
 
