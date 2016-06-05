@@ -65,12 +65,18 @@
 
       <select id="fedselect">
         <option value="all" selected>All Feds</option>
-        <option value="RPS">RPS (Incomplete)</option>
-        <option value="RUPC">RUPC</option>
-        <option value="SPF">SPF (Incomplete)</option>
-        <option value="USAPL">USAPL (Incomplete)</option>
-        <option value="USPA">USPA</option>
-        <option value="USPF">USPF (Incomplete)</option>
+        <optgroup label="United States">
+          <option value="RPS">RPS (WIP)</option>
+          <option value="RUPC">RUPC</option>
+          <option value="SPF">SPF (Incomplete)</option>
+          <option value="USAPL">USAPL (Incomplete)</option>
+          <option value="USPA">USPA</option>
+          <option value="USPF">USPF (Incomplete)</option>
+        </optgroup>
+        <optgroup label="Australia">
+          <option value="PA">PA (Incomplete)</option>
+          <option value="ProRaw">ProRaw (Incomplete)</option>
+        </optgroup>
       </select>
 
       <input type="checkbox" id="men" checked="true">
