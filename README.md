@@ -18,8 +18,9 @@ The work is published from the United States.
 
 Although you are under no requirement to do so, if you incorporate OpenPowerlifting</br>
 data into your project, please consider adding a statement of attribution,</br>
-so that people may know about this project and help contribute data.</br>
-Sample attribution text is below:
+so that people may know about this project and help contribute data.
+
+Sample attribution text:
 
 > This page uses data from the OpenPowerlifting project, http://www.openpowerlifting.org.<br/>
 > You may download a copy of the data at http://github.com/sstangl/openpowerlifting.
