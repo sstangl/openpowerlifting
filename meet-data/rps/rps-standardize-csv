@@ -189,6 +189,7 @@ def fixname(csv):
         # The first argument is some weird unicode space that keeps
         # creeping into the name field.
         s = s.replace("  "," ")
+        s = s.replace("  "," ") # A second kind of weird space.
 
         if s.upper() == s:
             error("Name looks all uppercase, needs manual fixing: '%s'" % s )
