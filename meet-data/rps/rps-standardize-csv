@@ -37,6 +37,23 @@ def remove_empty_rows(csv):
         del csv.rows[idx]
 
 
+# Removes rows that just contain things like "Bench" and "Ironman".
+def remove_event_rows(csv):
+    def geteventidx(csv):
+        for i,row in enumerate(csv.rows):
+            for k in row:
+                k = k.lower()
+                if k == 'total' or k == 'deadlift' or k == 'bench' or k == 'squat':
+                    return i
+        return -1
+
+    while True:
+        idx = geteventidx(csv)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
 def remove_stars(csv):
     for row in csv.rows:
         for i,x in enumerate(row):
@@ -53,6 +70,21 @@ def remove_zeros(csv):
 
 
 def standardize_fieldnames(csv):
+
+    # If the first field is "Full Power", we can guess at some
+    # of the other fieldnames, which are usually left blank.
+    if csv.fieldnames[0].lower() == 'full power':
+        # The next 6 fieldnames must be empty.
+        if ''.join(csv.fieldnames[1:6]) != '':
+            error("Field names expected to be blank, but aren't!")
+
+        csv.fieldnames[0] = 'Sex'
+        csv.fieldnames[1] = 'Class'
+        csv.fieldnames[2] = 'Equipment'
+        csv.fieldnames[3] = 'Division'
+        csv.fieldnames[4] = 'WeightClassLBS'
+        csv.fieldnames[5] = 'Name'
+
     for i,x in enumerate(csv.fieldnames):
         s = x.lower()
         if s == 'gender':
@@ -186,6 +218,9 @@ def fixname(csv):
         # RPS uses this to look fancy in names like O'Brien.
         s = s.replace("’","'")
 
+        # This is used to denote someone who entered amateur but totaled pro.
+        s = s.replace("†","")
+
         # The first argument is some weird unicode space that keeps
         # creeping into the name field.
         s = s.replace("  "," ")
@@ -228,10 +263,12 @@ def fixclass(csv):
             x = 'Military Pro'
         elif s == 'crossfit':
             x = 'Crossfit'
+        elif s == 'police/fire am':
+            x = 'Police-Fire Amateur'
 
         elif s == 'junior pro':
             x = 'Junior Pro'
-        elif s == 'pro/ police fire':
+        elif s == 'pro/ police fire' or s == 'police/fire pro':
             x = 'Police-Fire Pro'
 
         else:
@@ -317,6 +354,7 @@ def main(filename):
 
     strip_whitespace(csv)
     remove_empty_rows(csv)
+    remove_event_rows(csv)
     remove_stars(csv)
     remove_zeros(csv)
     standardize_fieldnames(csv)
