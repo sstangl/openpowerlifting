@@ -12,13 +12,13 @@ Please refer to the LICENSE file.
 
 ## Data Licensing
 
-OpenPowerlifting data under `meet-data/` is contributed to the public domain.
+OpenPowerlifting data (`*.csv`) under `meet-data/` is contributed to the public domain.
 
 The OpenPowerlifting database contains facts that, in and of themselves,<br/>
 are not protected by copyright law. However, the copyright laws of some jurisdictions<br/>
 may cover database design and structure.
 
-To the extent possible under law, all data in the `meet-data/` folder is waived</br>
+To the extent possible under law, all data (`*.csv`) in the `meet-data/` folder is waived</br>
 of all copyright and related or neighboring rights.</br>
 The work is published from the United States.
 
