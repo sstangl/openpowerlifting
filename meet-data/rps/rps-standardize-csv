@@ -73,7 +73,8 @@ def standardize_fieldnames(csv):
 
     # If the first field is "Full Power", we can guess at some
     # of the other fieldnames, which are usually left blank.
-    if csv.fieldnames[0].lower() == 'full power':
+    s = csv.fieldnames[0].lower()
+    if 'full power' in s or 'saturday am' in s:
         # The next 6 fieldnames must be empty.
         if ''.join(csv.fieldnames[1:6]) != '':
             error("Field names expected to be blank, but aren't!")
@@ -99,15 +100,17 @@ def standardize_fieldnames(csv):
             x = 'WeightClassLBS'
         elif s == 'name':
             x = 'Name'
-        elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt':
+        elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt' or s == 'actual bwt':
             x = 'BodyweightLBS'
-        elif s == 'squat':
+        elif s == 'act. bwt' or s == 'act bwt':
+            x = 'BodyweightLBS'
+        elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart':
             x = 'BestSquatLBS'
-        elif s == 'bench':
+        elif s == 'bench' or s == 'bestbenchlbs':
             x = 'BestBenchLBS'
-        elif s == 'deadlift':
+        elif s == 'deadlift' or s == 'bestdeadliftlbs':
             x = 'BestDeadliftLBS'
-        elif s == 'total':
+        elif s == 'total' or s == 'totallbs':
             x = 'TotalLBS'
         elif s == 'place':
             x = 'Place'
@@ -129,6 +132,8 @@ def standardize_fieldnames(csv):
             x = 'Division'
         elif s == 'weightclasslbs':
             x = 'WeightClassLBS'
+        elif s == 'bodyweightlbs':
+            x = 'BodyweightLBS'
         elif s == 'bestsquatkg':
             x = 'BestSquatKg'
         elif s == 'bestbenchkg':
@@ -169,12 +174,12 @@ def fixequipment(csv):
         elif s == 'raw modern' or s == 'raw mod' or s == 'raw m' or s == 'rm':
             x = 'Wraps'
 
-        elif s == 'single-ply' or s == 'single ply' or s == 'sp':
+        elif s == 'single-ply' or s == 'single ply' or s == 'sp' or s == 'singleply':
             x = 'Single-ply'
 
         elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply' or s == 'eq':
             x = 'Multi-ply'
-        elif s == 'multiply' or s == 'mp':
+        elif s == 'multiply' or s == 'mp' or s == 'multy ply':
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
@@ -225,6 +230,7 @@ def fixname(csv):
         # creeping into the name field.
         s = s.replace("  "," ")
         s = s.replace("  "," ") # A second kind of weird space.
+        s = s.replace(" "," ") # Yet more more space.
 
         if s.upper() == s:
             error("Name looks all uppercase, needs manual fixing: '%s'" % s )
@@ -235,7 +241,7 @@ def fixname(csv):
                 if len(x.replace('.','')) > 2 and x != 'III':
                     error("Name needs proper casing: '%s'" % s)
 
-        row[idx] = s
+        row[idx] = s.strip()
 
 
 def fixclass(csv):
@@ -255,11 +261,11 @@ def fixclass(csv):
             x = 'Military Amateur'
         elif s == 'mil am':
             x = 'Military Amateur'
-        elif s == 'police am':
+        elif s == 'police am' or s == 'pol am':
             x = 'Police Amateur'
-        elif s == 'police pro' or s == 'polce pro':
+        elif s == 'police pro' or s == 'polce pro' or s == 'pol pro':
             x = 'Police Pro'
-        elif s == 'military pro':
+        elif s == 'military pro' or s == 'mil pro':
             x = 'Military Pro'
         elif s == 'crossfit':
             x = 'Crossfit'

@@ -22,4 +22,7 @@ ${REPOSCRIPTDIR}/csv-tokg lifters.csv
 # Show any warnings.
 ${REPOSCRIPTDIR}/check-lifters-csv lifters.csv
 
+# Copy the template to the current directory for filling in.
+cp ${SCRIPTDIR}/../meet.template meet.csv
+
 echo "Done! Don't forget about meet.csv!"
