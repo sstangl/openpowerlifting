@@ -1,7 +1,6 @@
 # The Open Powerlifting Project
 
-A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.
-
+A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.<br/>
 Presentation of this data is available at [OpenPowerlifting.org](http://www.openpowerlifting.org).
 
 **Powerlifting to the People.**
