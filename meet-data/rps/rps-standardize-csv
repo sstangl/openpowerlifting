@@ -278,7 +278,7 @@ def fixname(csv):
         for x in s.split():
             if x.lower() == x or x.upper() == x:
                 # Except in names like "Louie de Leon" or for initials.
-                if len(x.replace('.','')) > 2 and x != 'III':
+                if len(x.replace('.','')) > 2 and x != 'III' and x != 'van':
                     error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s.strip()
@@ -295,7 +295,7 @@ def fixclass(csv):
             x = 'Pro'
         elif s == 'am' or s == 'amateur' or s == 'ameteur' or s == 'am af':
             x = 'Amateur'
-        elif s == 'elite' or s == 'elite am':
+        elif s == 'elite' or s == 'elite am' or s == 'el am':
             x = 'Elite'
         elif s == 'military am' or s == 'military':
             x = 'Military Amateur'
@@ -364,7 +364,7 @@ def fixplace(csv):
         x = x.strip()
 
         if not isnumber(x) and x != 'DQ':
-            error("Unknown place in fixplace(): '%s'" % s)
+            error("Unknown place in fixplace(): '%s'" % x)
 
         row[idx] = x
 
