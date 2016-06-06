@@ -174,6 +174,8 @@ def standardize_fieldnames(csv):
             x = 'Deadlift4Kg'
         elif s == 'state' or s == 'st':
             x = 'State'
+        elif s == 'country':
+            x = 'Country'
         elif s == 'age':
             x = 'Age'
         else:
@@ -195,17 +197,19 @@ def fixequipment(csv):
         # This one below looks the same, but actually has some unicode BS going on.
         elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
             x = 'Raw'
-        elif s == 'raw – u':
+        elif s == 'raw – u' or 'classic' in s:
             x = 'Raw'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
         # They track rankings for sleeves independently, but don't mark that anywhere.
         elif s == 'raw modern' or s == 'raw mod' or s == 'raw m' or s == 'rm':
             x = 'Wraps'
+        elif 'modern' in s:
+            x = 'Wraps'
 
         elif s == 'single-ply' or s == 'single ply' or s == 'sp' or s == 'singleply':
             x = 'Single-ply'
-        elif 'single' in s:
+        elif 'single' in s or s == 'sin ply':
             x = 'Single-ply'
 
         elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply' or s == 'eq':
