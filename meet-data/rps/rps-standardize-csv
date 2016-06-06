@@ -37,6 +37,24 @@ def remove_empty_rows(csv):
         del csv.rows[idx]
 
 
+def remove_rows_by_empty_column(csv, colname):
+    def getemptyidx(csv, colidx):
+        for i,row in enumerate(csv.rows):
+            if row[colidx] == '':
+                return i
+        return -1
+
+    colidx = csv.fieldnames.index(colname)
+    if colidx < 0:
+        error("Column %s not found in remove_rows_by_empty_column()." % colname)
+
+    while True:
+        idx = getemptyidx(csv, colidx)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
 # Removes rows that just contain things like "Bench" and "Ironman".
 def remove_event_rows(csv):
     def geteventidx(csv):
@@ -98,19 +116,19 @@ def standardize_fieldnames(csv):
             x = 'Equipment'
         elif s == 'age division':
             x = 'Division'
-        elif s == 'wt':
+        elif s == 'wt' or s == 'wt class':
             x = 'WeightClassLBS'
         elif s == 'name' or s == 'powerlifter' or s == 'lifter name':
             x = 'Name'
         elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt' or s == 'actual bwt':
             x = 'BodyweightLBS'
-        elif s == 'act. bwt' or s == 'act bwt' or s == 'btw':
+        elif s == 'act. bwt' or s == 'act bwt' or s == 'btw' or s == 'act wt':
             x = 'BodyweightLBS'
-        elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart':
+        elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart' or s == 'sq':
             x = 'BestSquatLBS'
-        elif s == 'bench' or s == 'bestbenchlbs':
+        elif s == 'bench' or s == 'bestbenchlbs' or s == 'bp':
             x = 'BestBenchLBS'
-        elif s == 'deadlift' or s == 'bestdeadliftlbs':
+        elif s == 'deadlift' or s == 'bestdeadliftlbs' or s == 'dl':
             x = 'BestDeadliftLBS'
         elif s == 'total' or s == 'totallbs':
             x = 'TotalLBS'
@@ -171,7 +189,9 @@ def fixequipment(csv):
         if s == 'raw classic' or s == 'raw clas' or s == 'raw c' or s == 'rc':
             x = 'Raw'
         # This one below looks the same, but actually has some unicode BS going on.
-        if s == 'raw clas' or s == 'raw classic':
+        elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
+            x = 'Raw'
+        elif s == 'raw – u':
             x = 'Raw'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
@@ -181,16 +201,23 @@ def fixequipment(csv):
 
         elif s == 'single-ply' or s == 'single ply' or s == 'sp' or s == 'singleply':
             x = 'Single-ply'
+        elif 'single' in s:
+            x = 'Single-ply'
 
         elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply' or s == 'eq':
             x = 'Multi-ply'
-        elif s == 'multiply' or s == 'mp' or s == 'multy ply':
+        elif s == 'multiply' or s == 'mp' or s == 'multy ply' or s == 'gear':
+            x = 'Multi-ply'
+        elif 'multi' in s:
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
         # Seriously, though, what the hell?
         elif s == 'no choice made':
             x = 'Wraps'
+
+        elif s == '':
+            x = ''
 
         else:
             print("Full row: %s" % ','.join(row), file=sys.stderr)
@@ -373,6 +400,9 @@ def main(filename):
     remove_event_rows(csv)
     remove_zeros(csv)
     standardize_fieldnames(csv)
+
+    # Enable as temporary fix for broken files.
+    #remove_rows_by_empty_column(csv, "Sex")
 
     if not 'Name' in csv.fieldnames:
         error("Couldn't find a name column.")
