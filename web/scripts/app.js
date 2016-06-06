@@ -325,6 +325,11 @@ function onload() {
         cellFlashingCssClass: "searchflashing",
     };
 
+    var query = common.getqueryobj();
+    if (query.fed !== undefined) {
+        selFed.value = query.fed;
+    }
+
     var data = makeDataProvider();
     grid = new Slick.Grid("#theGrid", data, columns, options);
     grid.setSortColumn(sortCol.id, sortAsc);
