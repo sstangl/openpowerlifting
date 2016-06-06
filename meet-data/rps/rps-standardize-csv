@@ -152,8 +152,12 @@ def standardize_fieldnames(csv):
             x = 'Division'
         elif s == 'weightclasslbs' or s == 'wclass':
             x = 'WeightClassLBS'
+        elif s == 'weightclasskg':
+            x = 'WeightClassKg'
         elif s == 'bodyweightlbs':
             x = 'BodyweightLBS'
+        elif s == 'bodyweightkg':
+            x = 'BodyweightKg'
         elif s == 'bestsquatkg':
             x = 'BestSquatKg'
         elif s == 'bestbenchkg':
@@ -168,7 +172,7 @@ def standardize_fieldnames(csv):
             x = 'Bench4Kg'
         elif s == 'deadlift4kg':
             x = 'Deadlift4Kg'
-        elif s == 'state':
+        elif s == 'state' or s == 'st':
             x = 'State'
         elif s == 'age':
             x = 'Age'
@@ -289,9 +293,9 @@ def fixclass(csv):
         s = row[idx].lower()
         if s == 'pro':
             x = 'Pro'
-        elif s == 'am' or s == 'amateur' or s == 'ameteur':
+        elif s == 'am' or s == 'amateur' or s == 'ameteur' or s == 'am af':
             x = 'Amateur'
-        elif s == 'elite':
+        elif s == 'elite' or s == 'elite am':
             x = 'Elite'
         elif s == 'military am' or s == 'military':
             x = 'Military Amateur'
