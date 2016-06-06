@@ -26,8 +26,8 @@ web: csvfile
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
-	find '${DATADIR}' -name lifters.csv -exec 'scripts/check-lifters-csv' '{}' ';'
-	find '${DATADIR}' -name meet.csv -exec 'scripts/check-meet-csv' '{}' ';'
+	scripts/check-lifters-csv
+	scripts/check-meet-csv
 
 clean:
 	rm -rf '${BUILDDIR}'

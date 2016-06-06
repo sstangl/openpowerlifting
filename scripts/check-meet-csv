@@ -9,6 +9,7 @@
 # 1) All the column data is in the pre-set format.
 #
 
+import os
 import sys
 
 def redden(s):
@@ -17,7 +18,14 @@ def redden(s):
 def enyellow(s):
     return "\033[1;33m" + s + "\033[0;m"
 
+globalFilename = ''
 havePrintedFilename = False
+
+def reset_filename_state(filename):
+    global globalFilename
+    global havePrintedFilename
+    globalFilename = filename
+    havePrintedFilename = False
 
 def print_filename_once():
     # This completely breaks the main() abstraction, but whatever.
@@ -61,7 +69,10 @@ def is_number(s):
         return False
 
 
-def main(scriptname, filename):
+def check(scriptname, filename):
+    # Pretty-printer helper (so we only print the name once).
+    reset_filename_state(filename)
+
     with open(filename) as fd:
         csv = [x.strip().split(',') for x in fd.readlines()]
 
@@ -119,9 +130,15 @@ def main(scriptname, filename):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print(sys.argv)
-        print(" Usage: %s meet.csv" % sys.argv[0], file=sys.stderr)
-        sys.exit(1)
+    # If arguments are provided, check only those files.
+    if len(sys.argv) > 1:
+        for f in sys.argv[1:]:
+            check(sys.argv[0], f)
 
-    main(sys.argv[0], sys.argv[1])
+    # Otherwise, check every file named meet.csv in the dirtree,
+    # which is much faster than using `find -exec`.
+    else:
+        for dirname, subdirs, files in os.walk(os.getcwd()):
+            if 'meet.csv' in files:
+                meetpath = dirname + os.sep + 'meet.csv'
+                check(sys.argv[0], meetpath)

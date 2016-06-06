@@ -10,6 +10,7 @@
 # 2) Each column's data are in expected formats for that column type.
 #
 
+import os
 import sys
 import wilks
 
@@ -19,13 +20,20 @@ def redden(s):
 def enyellow(s):
     return "\033[1;33m" + s + "\033[0;m"
 
+globalFilename = ''
 havePrintedFilename = False
+
+def reset_filename_state(filename):
+    global globalFilename
+    global havePrintedFilename
+    globalFilename = filename
+    havePrintedFilename = False
 
 def print_filename_once():
     # This completely breaks the main() abstraction, but whatever.
     global havePrintedFilename
     if not havePrintedFilename:
-        print(sys.argv[1], file=sys.stderr)
+        print(globalFilename, file=sys.stderr)
         havePrintedFilename = True
 
 def perror(s):
@@ -396,7 +404,10 @@ def check_row(row, headers):
             HeaderHandlers[headers[i]](text)
 
 
-def main(scriptname, filename):
+def check(scriptname, filename):
+    # Pretty-printer helper (so we only print the name once).
+    reset_filename_state(filename)
+
     with open(filename) as fd:
         csv = [x.strip().split(',') for x in fd.readlines()]
 
@@ -412,9 +423,15 @@ def main(scriptname, filename):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print(sys.argv)
-        print(" Usage: %s lifters.csv" % sys.argv[0], file=sys.stderr)
-        sys.exit(1)
+    # If arguments are provided, check only those files.
+    if len(sys.argv) > 1:
+        for f in sys.argv[1:]:
+            check(sys.argv[0], f)
 
-    main(sys.argv[0], sys.argv[1])
+    # Otherwise, check every file named lifters.csv in the dirtree,
+    # which is much faster than using `find -exec`.
+    else:
+        for dirname, subdirs, files in os.walk(os.getcwd()):
+            if 'lifters.csv' in files:
+                lifterspath = dirname + os.sep + 'lifters.csv'
+                check(sys.argv[0], lifterspath)
