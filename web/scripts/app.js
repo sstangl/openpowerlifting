@@ -335,6 +335,17 @@ function onload() {
         redraw();
     });
 
+    // From a post on StackOverflow.
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // A very simple, pretty ugly count of number of database rows.
+    // Hopefully this is a simple way for people to see that the
+    // site is changing.
+    var numentries = document.getElementById("numentries");
+    numentries.innerText = "(" + numberWithCommas(opldb.data.length) + " Entries)";
+
     search();
 };
 
