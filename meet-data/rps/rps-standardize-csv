@@ -212,7 +212,7 @@ def fixequipment(csv):
             x = 'Multi-ply'
         elif s == 'multiply' or s == 'mp' or s == 'multy ply' or s == 'gear':
             x = 'Multi-ply'
-        elif 'multi' in s:
+        elif 'multi' in s or 'multy' in s:
             x = 'Multi-ply'
 
         # This is used for benchers who have to choose between Raw or Wraps.
