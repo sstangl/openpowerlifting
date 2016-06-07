@@ -154,6 +154,15 @@ def check_positive_number_column(s):
         perror("Invalid field quantity: %s" % s)
 
 
+def check_column_birthyear(s):
+    if len(s) != 4:
+        perror("BirthYear must be 4 digits: '%s'" % s)
+    elif not s.isdigit():
+        perror("BirthYear must be digits: '%s'" % s)
+    elif s[0] != '1' and s[0] != '2':
+        pwarning("BirthYear looks implausible: '%s'" % s)
+
+
 def check_column_weightclass(s):
     if s[-1] is '+':
         s = s[:-1]
@@ -188,6 +197,9 @@ HeaderHandlers = {
     'Event': check_column_event,
     'Division': check_column_division,
     'Equipment': check_column_equipment,
+
+    # Temporary column for IPF, to be calculated as Age during compilation.
+    'BirthYear': check_column_birthyear,
 
     # Stat columns. Only Kg is valid.
     'WeightClassKg': check_column_weightclass,
