@@ -77,6 +77,9 @@ def check_column_name(s):
     if has_illegal_char:
         perror("Name contains illegal character(s): \"%s\"" % s)
 
+    if s.upper() == s or s.lower() == s:
+        perror("Name must be in proper case: \"%s\"" % s)
+
 
 def check_column_sex(s):
     if s != "M" and s != "F":
