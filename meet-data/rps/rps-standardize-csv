@@ -77,7 +77,7 @@ def remove_event_rows(csv):
 def remove_stars(csv):
     for row in csv.rows:
         for i,x in enumerate(row):
-            row[i] = x.replace('*','')
+            row[i] = x.replace('*','').replace("†","")
 
 
 def remove_zeros(csv):
