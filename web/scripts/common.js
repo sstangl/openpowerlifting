@@ -103,6 +103,10 @@ return {
                 return function(a, b) {
                     var adata = opldb.data[a][index];
                     var bdata = opldb.data[b][index];
+                    if (adata === undefined)
+                        adata = Number.MIN_SAFE_INTEGER;
+                    if (bdata === undefined)
+                        bdata = Number.MIN_SAFE_INTEGER;
                     if (sortAsc)
                         return adata > bdata;
                     return adata <= bdata;
