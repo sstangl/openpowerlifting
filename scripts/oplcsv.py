@@ -22,6 +22,11 @@ class Csv:
         for row in self.rows:
             row.append('')
 
+    def insert_column(self, index, name):
+        self.fieldnames.insert(index, name)
+        for row in self.rows:
+            row.insert(index, '')
+
     def remove_column_by_index(self, idx):
         del self.fieldnames[idx]
         for row in self.rows:

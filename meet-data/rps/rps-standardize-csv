@@ -241,9 +241,9 @@ def fixsex(csv):
 
     for row in csv.rows:
         s = row[idx].lower()
-        if s == 'male' or s == 'm' or s == 'men':
+        if s == 'male' or s == 'm' or 'men' in s:
             x = 'M'
-        elif s == 'female' or s == 'f' or s == 'women':
+        elif s == 'female' or s == 'f' or 'women' in s:
             x = 'F'
         else:
             error("Teach fixsex() what to do with '%s'" % s)
