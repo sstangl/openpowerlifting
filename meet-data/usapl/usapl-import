@@ -139,7 +139,6 @@ def makelifterscsv(soup):
     csv.append_column('Deadlift2Kg')
     csv.append_column('Deadlift3Kg')
     csv.append_column('TotalKg')
-    csv.append_column('Wilks')
 
     table = soup.find("table", {"id": "competition_view_results"})
     table = table.find("tbody")
@@ -157,7 +156,7 @@ def makelifterscsv(soup):
                 state_event = 'SBD'
             elif s == 'Squat':
                 state_event = 'S'
-            elif s == 'Bench':
+            elif s == 'Bench press':
                 state_event = 'B'
             elif s == 'Deadlift':
                 state_event = 'D'
@@ -191,7 +190,7 @@ def makelifterscsv(soup):
             deadlift2kg = cells[13].text.strip()
             deadlift3kg = cells[14].text.strip()
             totalkg = cells[15].text.strip()
-            wilks = cells[16].text.strip()
+            #wilks = cells[16].text.strip() # Not used. Always recalculated.
 
             row = ['' for x in csv.fieldnames]
             row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
@@ -210,7 +209,6 @@ def makelifterscsv(soup):
             row[csv.fieldnames.index('Deadlift2Kg')] = deadlift2kg
             row[csv.fieldnames.index('Deadlift3Kg')] = deadlift3kg
             row[csv.fieldnames.index('TotalKg')] = totalkg
-            row[csv.fieldnames.index('Wilks')] = wilks
             row[csv.fieldnames.index('Division')] = state_division
             row[csv.fieldnames.index('Equipment')] = state_equipment
             row[csv.fieldnames.index('Event')] = state_event
@@ -255,7 +253,8 @@ def makebestcolumns(csv):
         return float(s)
 
     def makebestcolumn(csv, lift):
-        if len(list(filter(lambda x: lift in x, csv.fieldnames))) == 3:
+        numcols = len(list(filter(lambda x: lift in x, csv.fieldnames)))
+        if numcols == 3:
             csv.insert_column(csv.fieldnames.index(lift+'3Kg')+1, 'Best'+lift+'Kg')
             
             idxbest = csv.fieldnames.index('Best'+lift+'Kg')
@@ -267,7 +266,7 @@ def makebestcolumns(csv):
                 best = max(tonumber(row[idx1]), tonumber(row[idx2]), tonumber(row[idx3]))
                 if best > 0:
                     row[idxbest] = str(best)
-        else:
+        elif numcols == 1:
             # If only one column is filled in, that's the best result column.
             idx1 = csv.fieldnames.index(lift+'1Kg')
             csv.fieldnames[idx1] = 'Best'+lift+'Kg'
@@ -275,6 +274,17 @@ def makebestcolumns(csv):
     makebestcolumn(csv, 'Squat')
     makebestcolumn(csv, 'Bench')
     makebestcolumn(csv, 'Deadlift')
+
+
+# The website incorrectly marks disqualified lifters as placing.
+# Normally it just doesn't include disqualified lifters... but sometimes it does.
+def markdqs(csv):
+    totalidx = csv.fieldnames.index('TotalKg')
+    placeidx = csv.fieldnames.index('Place')
+    for row in rows:
+        if row[totalidx] == '0':
+            row[totalidx] = ''
+            row[placeidx] = 'DQ'
 
 
 def makemeetcsv(soup):
@@ -330,6 +340,7 @@ def main(url):
     lifterscsv = makelifterscsv(soup)
     removeemptycolumns(lifterscsv)
     makebestcolumns(lifterscsv)
+    markdqs(lifterscsv)
 
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
