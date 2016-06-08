@@ -215,6 +215,8 @@ def makelifterscsv(soup):
             row[csv.fieldnames.index('Equipment')] = state_equipment
             row[csv.fieldnames.index('Event')] = state_event
 
+            for i,c in enumerate(row):
+                row[i] = c.replace(',', ' ')
             csv.rows.append(row)
 
         else:
