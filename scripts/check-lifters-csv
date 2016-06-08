@@ -102,7 +102,11 @@ def check_column_age(s):
 
 
 def check_column_place(s):
-    if not s in ['DQ', 'NS', 'G']:
+    # DQ = Disqualified
+    # NS = No-show
+    # G  = guest-lifter
+    # DD = disqualified by failing a drug test
+    if not s in ['DQ', 'NS', 'G', 'DD']:
         try:
             int(s)
         except ValueError:
