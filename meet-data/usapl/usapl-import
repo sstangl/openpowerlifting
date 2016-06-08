@@ -1,0 +1,354 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# USAPL has unfortunately stopped posting individual meet result spreadsheets,
+# and now uploads everything to this usapl.liftingdatabase.com service.
+# This script taken a liftingdatabase.com URL and converts the results to
+# the OpenPowerlifting internal format. It also creates the directory.
+#
+
+
+from bs4 import BeautifulSoup
+import errno
+from oplcsv import Csv
+import os
+import shutil
+import sys
+import urllib.request
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+# Copied from uspa-fetch. If we need this often, maybe share it?
+states = {
+    'Alaska': 'AK',
+    'Alabama': 'AL',
+    'Arkansas': 'AR',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'District of Columbia': 'DC',
+    'Delaware': 'DE',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Iowa': 'IA',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Massachusetts': 'MA',
+    'Massachussetts': 'MA', # Work around spelling errors.
+    'Maryland': 'MD',
+    'Maine': 'ME',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Missouri': 'MO',
+    'Northern Mariana Islands': 'MP',
+    'Mississippi': 'MS',
+    'Montana': 'MT',
+    'National': 'NA',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Nebraska': 'NE',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'Nevada': 'NV',
+    'New York': 'NY',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Virginia': 'VA',
+    'Virgin Islands': 'VI',
+    'Vermont': 'VT',
+    'Washington': 'WA',
+    'Wisconsin': 'WI',
+    'West Virginia': 'WV',
+    'Wyoming': 'WY',
+}
+
+
+# Returns a (division, equipment) tuple of strings.
+def parsedivision(div):
+    if 'Raw' in div:
+        eq = 'Raw'
+    else:
+        eq = 'Single-ply'
+
+    # If only USAPL would report Age.
+    # Sometimes the divisions are just "M1", when they really mean
+    # "both M1a and M1b", and it's impossible to distinguish the two.
+    s = div
+    s = s.replace('Raw ', 'R-') # As in "Raw Master 1a"
+    s = s.replace('Master', 'M') # As in "Master 1a"
+    s = s.replace('Teen', 'T') # As in "Teen 1"
+    s = s.replace('Collegiate', 'C')
+    s = s.replace('Open', 'O')
+    s = s.replace('Junior', 'JR')
+    s = s.replace('Youth', 'Y')
+    s = s.replace(' ', '')
+    if len(s) > 5:
+        error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
+
+    return (s, eq)
+
+
+def makelifterscsv(soup):
+    # The page contains everything we'd need to know, except for Sex. Sigh.
+    # That always has to be done manually, since men single-event can come
+    # after women, although men usually are placed higher.
+    csv = Csv()
+    csv.append_column('Place')
+    csv.append_column('Name')
+    csv.append_column('Event')
+    csv.append_column('Division')
+    csv.append_column('WeightClassKg')
+    csv.append_column('Equipment')
+    csv.append_column('Team')
+    csv.append_column('State')
+    csv.append_column('BodyweightKg')
+    csv.append_column('Squat1Kg')
+    csv.append_column('Squat2Kg')
+    csv.append_column('Squat3Kg')
+    csv.append_column('Bench1Kg')
+    csv.append_column('Bench2Kg')
+    csv.append_column('Bench3Kg')
+    csv.append_column('Deadlift1Kg')
+    csv.append_column('Deadlift2Kg')
+    csv.append_column('Deadlift3Kg')
+    csv.append_column('TotalKg')
+    csv.append_column('Wilks')
+
+    table = soup.find("table", {"id": "competition_view_results"})
+    table = table.find("tbody")
+
+    state_event = None
+    state_division = None
+    state_equipment = None
+
+    for row in table.find_all('tr'):
+        k = len(row.find_all('td'))
+        if k == 0:
+            # This is a control row, changing some state.
+            s = row.find('th').text.strip()
+            if s == 'Powerlifting':
+                state_event = 'SBD'
+            elif s == 'Squat':
+                state_event = 'S'
+            elif s == 'Bench':
+                state_event = 'B'
+            elif s == 'Deadlift':
+                state_event = 'D'
+            elif s == 'Push Pull':
+                state_event = 'BD'
+
+            else:
+                (state_division, state_equipment) = parsedivision(s)
+
+        elif k == 17:
+            # This is a results row.
+            assert state_event != None
+            assert state_division != None
+            assert state_equipment != None
+
+            cells = row.find_all('td')
+            weightclasskg = cells[0].text.replace('-', '').strip()
+            place = cells[1].text.replace('.','').strip()
+            name = cells[2].text.replace('Jr.','Jr').replace('Sr.','Sr').strip()
+            team = cells[3].text.strip()
+            state = cells[4].text.strip()
+            bodyweightkg = cells[5].text.strip()
+
+            squat1kg = cells[6].text.strip()
+            squat2kg = cells[7].text.strip()
+            squat3kg = cells[8].text.strip()
+            bench1kg = cells[9].text.strip()
+            bench2kg = cells[10].text.strip()
+            bench3kg = cells[11].text.strip()
+            deadlift1kg = cells[12].text.strip()
+            deadlift2kg = cells[13].text.strip()
+            deadlift3kg = cells[14].text.strip()
+            totalkg = cells[15].text.strip()
+            wilks = cells[16].text.strip()
+
+            row = ['' for x in csv.fieldnames]
+            row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
+            row[csv.fieldnames.index('Place')] = place
+            row[csv.fieldnames.index('Name')] = name
+            row[csv.fieldnames.index('Team')] = team
+            row[csv.fieldnames.index('State')] = state
+            row[csv.fieldnames.index('BodyweightKg')] = bodyweightkg
+            row[csv.fieldnames.index('Squat1Kg')] = squat1kg
+            row[csv.fieldnames.index('Squat2Kg')] = squat2kg
+            row[csv.fieldnames.index('Squat3Kg')] = squat3kg
+            row[csv.fieldnames.index('Bench1Kg')] = bench1kg
+            row[csv.fieldnames.index('Bench2Kg')] = bench2kg
+            row[csv.fieldnames.index('Bench3Kg')] = bench3kg
+            row[csv.fieldnames.index('Deadlift1Kg')] = deadlift1kg
+            row[csv.fieldnames.index('Deadlift2Kg')] = deadlift2kg
+            row[csv.fieldnames.index('Deadlift3Kg')] = deadlift3kg
+            row[csv.fieldnames.index('TotalKg')] = totalkg
+            row[csv.fieldnames.index('Wilks')] = wilks
+            row[csv.fieldnames.index('Division')] = state_division
+            row[csv.fieldnames.index('Equipment')] = state_equipment
+            row[csv.fieldnames.index('Event')] = state_event
+
+            csv.rows.append(row)
+
+        else:
+            error("Unexpected row length: %s" % str(k))
+
+    return csv
+
+
+# The CSV isn't quite in our format yet. Some post-processing is required.
+def removeemptycolumns(csv):
+
+    def getemptycol(csv):
+        for i in range(0, len(csv.fieldnames)):
+            hasdata = False
+            for row in csv.rows:
+                if row[i]:
+                    hasdata = True
+                    break
+            if not hasdata:
+                return i
+        return -1
+
+    # Remove all empty columns.
+    while True:
+        i = getemptycol(csv)
+        if i == -1:
+            break
+        else:
+            csv.remove_column_by_index(i)
+
+
+# Assumes that empty columns were removed.
+def makebestcolumns(csv):
+
+    def tonumber(s):
+        if not s:
+             return 0
+        return float(s)
+
+    def makebestcolumn(csv, lift):
+        if len(list(filter(lambda x: lift in x, csv.fieldnames))) == 3:
+            csv.insert_column(csv.fieldnames.index(lift+'3Kg')+1, 'Best'+lift+'Kg')
+            
+            idxbest = csv.fieldnames.index('Best'+lift+'Kg')
+            idx1 = csv.fieldnames.index(lift+'1Kg')
+            idx2 = csv.fieldnames.index(lift+'2Kg')
+            idx3 = csv.fieldnames.index(lift+'3Kg')
+
+            for row in csv.rows:
+                best = max(tonumber(row[idx1]), tonumber(row[idx2]), tonumber(row[idx3]))
+                if best > 0:
+                    row[idxbest] = str(best)
+        else:
+            # If only one column is filled in, that's the best result column.
+            idx1 = csv.fieldnames.index(lift+'1Kg')
+            csv.fieldnames[idx1] = 'Best'+lift+'Kg'
+
+    makebestcolumn(csv, 'Squat')
+    makebestcolumn(csv, 'Bench')
+    makebestcolumn(csv, 'Deadlift')
+
+
+def makemeetcsv(soup):
+    content = soup.find('div', {'id': 'content'})
+
+    meetname = content.find('h3').text.strip()
+    table = content.find('table')
+
+    # Date is given as MM/DD/YYYY
+    origdate = table.find_all('tr')[0].find('td').text.strip()
+    k = origdate.split('/')
+    date = k[2] + '-' + k[0] + '-' + k[1]
+
+    # State is given in long form.
+    state = table.find_all('tr')[2].find('td').text.strip()
+    if not state in states:
+        error("State not in the abbreviation lookup table: %s", state)
+    state = states[state]
+
+    csv = Csv()
+    csv.append_column('Federation')
+    csv.append_column('Date')
+    csv.append_column('MeetCountry')
+    csv.append_column('MeetState')
+    csv.append_column('MeetTown')
+    csv.append_column('MeetName')
+
+    row = ['USAPL', date, 'USA', state, '', meetname]
+    csv.rows.append(row)
+    return csv
+
+
+def getdirname(soup):
+    content = soup.find('div', {'id': 'content'})
+    table = content.find('table')
+    sanction = table.find_all('tr')[1].find('td').text.strip()
+
+    if sanction and sanction[0].isalpha():
+        return sanction
+
+    # If there's no sanction number, just use the date.
+    origdate = table.find_all('tr')[0].find('td').text.strip()
+    k = origdate.split('/')
+    date = k[2] + '-' + k[0] + '-' + k[1]
+    return date
+
+
+def main(url):
+    html = gethtml(url)
+
+    soup = BeautifulSoup(html, 'html.parser')
+
+    lifterscsv = makelifterscsv(soup)
+    removeemptycolumns(lifterscsv)
+    makebestcolumns(lifterscsv)
+
+    meetcsv = makemeetcsv(soup)
+    dirname = getdirname(soup)
+
+    try:
+        os.makedirs(dirname)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+        else:
+            error("Directory '%s' already exists." % dirname)
+
+    with open(dirname + os.sep + 'lifters.csv', 'w') as fd:
+        lifterscsv.write(fd)
+    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+        meetcsv.write(fd)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s url" % sys.argv[0])
+    main(sys.argv[1])

@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# USAPL has unfortunately stopped posting individual meet result spreadsheets,
+# and now uploads everything to this usapl.liftingdatabase.com service.
+# This script reports whether any new sanction strings showed up.
+# (IPF results and super old results are skipped, not having USAPL sanction numbers).
+#
+
+
+from bs4 import BeautifulSoup
+import os
+import shutil
+import sys
+import urllib.request
+
+
+MEETSURL = "http://usapl.liftingdatabase.com/competitions"
+BASEURL  = "http://usapl.liftingdatabase.com/"
+
+def gethtml():
+    with urllib.request.urlopen(MEETSURL) as r:
+        return r.read()
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+# Named tuple.
+class Meet:
+    def __init__(self, sanction, url):
+        self.sanction = sanction
+        self.url = url
+
+    def __str__(self):
+        return self.sanction
+
+    def __repr__(self):
+        return str(self)
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    tables = soup.find_all("table", {"class": "tabledata"})
+    if len(tables) > 1:
+        error("Too many tables found.")
+    elif len(tables) == 0:
+        error("No table found.")
+
+    meetlist = []
+
+    t = tables[0].find('tbody')
+    for row in t.find_all('tr'):
+        cells = row.find_all('td')
+        if len(cells) != 6:
+            error("Table row doesn't contain expected number of cells.")
+
+        sanction = cells[2].text.strip()
+        url = BASEURL + cells[1].find('a')['href']
+
+        # Only count those rows that begin with a letter, like "CA-2016-02".
+        if sanction and sanction[0].isalpha() and sanction.count('-') == 2:
+            meetlist.append(Meet(sanction, url))
+
+    return meetlist
+
+
+# Entered meets are stored in the current directory in a directory with the sanction ID.
+def getenteredmeets():
+    return os.listdir('.')   
+
+
+def main():
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredmeets()
+
+    for m in meetlist:
+        if not m.sanction in known:
+            print(m.url)
+
+
+if __name__ == '__main__':
+    main()

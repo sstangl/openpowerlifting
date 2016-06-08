@@ -247,7 +247,7 @@ KnownHeaders = HeaderHandlers.keys()
 
 def check_headers(headers):
     if not 'Name' in headers:
-        perror('The "Name" column is missing.')
+        perror('There must be a Name column.')
 
     if not 'BodyweightKg' in headers and not 'WeightClassKg' in headers:
         perror('There must be a BodyweightKg or WeightClassKg column.')

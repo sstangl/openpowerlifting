@@ -1,3 +1,4 @@
 *.swp
 build/
-scripts/__pycache__
+*__pycache__
+meet-data/uspa/fetch-tmp/

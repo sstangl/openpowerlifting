@@ -33,3 +33,4 @@ clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf 'scripts/__pycache__'
 	rm -rf 'meet-data/rps/__pycache__'
+	rm -rf 'meet-data/usapl/__pycache__'
