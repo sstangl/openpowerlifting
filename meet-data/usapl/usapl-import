@@ -166,6 +166,8 @@ def makelifterscsv(soup):
                 state_event = 'D'
             elif s == 'Push Pull':
                 state_event = 'BD'
+            elif s == 'DD':
+                state_event = 'DRUGTEST (Fix This Row)!'
 
             else:
                 (state_division, state_equipment) = parsedivision(s)
