@@ -77,7 +77,12 @@ def check_column_name(s):
     if has_illegal_char:
         perror("Name contains illegal character(s): \"%s\"" % s)
 
+    part = s.split()
     if s.upper() == s or s.lower() == s:
+        perror("Name must be in proper case: \"%s\"" % s)
+    elif not part[0][0].isupper():
+        perror("Name must be in proper case: \"%s\"" % s)
+    elif not part[-1][0].isupper() and not "d'" in part[-1] and not part[-1].startswith('de'):
         perror("Name must be in proper case: \"%s\"" % s)
 
 
