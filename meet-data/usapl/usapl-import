@@ -87,6 +87,8 @@ states = {
     'Wisconsin': 'WI',
     'West Virginia': 'WV',
     'Wyoming': 'WY',
+
+    'Nationals': '', # No information provided.
 }
 
 
@@ -145,7 +147,7 @@ def makelifterscsv(soup):
     table = soup.find("table", {"id": "competition_view_results"})
     table = table.find("tbody")
 
-    state_event = None
+    state_event = 'SBD'
     state_division = None
     state_equipment = None
 
@@ -291,6 +293,36 @@ def markdqs(csv):
             row[placeidx] = 'DQ'
 
 
+# Some sex information can be inferred from weightclass information.
+def infersex(csv):
+    csv.insert_column(csv.fieldnames.index('Name'), 'Sex')
+
+    sexidx = csv.fieldnames.index('Sex')
+    wcidx = csv.fieldnames.index('WeightClassKg')
+
+    # Note that ipf_men doesn't intersect ipf_women! Perfect matching!
+    ipf_men   = ['53','59','66','74','83','93','105','120','120+']
+    ipf_women = ['43','47','52','57','63','72','84','84+']
+
+    # These unfortunately do intersect.
+    old_men   = ['56','60','67.5','75','82.5','90','100','110','125','125+']
+    old_women = ['48','52','56','60','67.5','75','82.5','90','90+']
+
+    for row in csv.rows:
+        wc = row[wcidx]
+        if not wc:
+            continue
+
+        if wc in ipf_men:
+            row[sexidx] = 'M'
+        elif wc in ipf_women:
+            row[sexidx] = 'F'
+        elif wc in old_men and not wc in old_women:
+            row[sexidx] = 'M'
+        elif wc in old_women and not wc in old_men:
+            row[sexidx] = 'F'
+
+
 def makemeetcsv(soup):
     content = soup.find('div', {'id': 'content'})
 
@@ -307,7 +339,7 @@ def makemeetcsv(soup):
     # State is given in long form.
     state = table.find_all('tr')[2].find('td').text.strip()
     if not state in states:
-        error("State not in the abbreviation lookup table: %s", state)
+        error("State not in the abbreviation lookup table: %s" % state)
     state = states[state]
 
     csv = Csv()
@@ -349,6 +381,7 @@ def main(url):
     removeemptycolumns(lifterscsv)
     makebestcolumns(lifterscsv)
     markdqs(lifterscsv)
+    infersex(lifterscsv)
 
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
