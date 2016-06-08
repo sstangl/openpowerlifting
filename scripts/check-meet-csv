@@ -31,7 +31,7 @@ def print_filename_once():
     # This completely breaks the main() abstraction, but whatever.
     global havePrintedFilename
     if not havePrintedFilename:
-        print(sys.argv[1], file=sys.stderr)
+        print(globalFilename, file=sys.stderr)
         havePrintedFilename = True
 
 def perror(s):

@@ -104,7 +104,9 @@ def parsedivision(div):
     s = s.replace('Raw ', 'R-') # As in "Raw Master 1a"
     s = s.replace('Master', 'M') # As in "Master 1a"
     s = s.replace('Teen', 'T') # As in "Teen 1"
+    s = s.replace('High School', 'HS')
     s = s.replace('Collegiate', 'C')
+    s = s.replace('Special Olympian', 'SO')
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'JR')
     s = s.replace('Youth', 'Y')
@@ -281,7 +283,7 @@ def makebestcolumns(csv):
 def markdqs(csv):
     totalidx = csv.fieldnames.index('TotalKg')
     placeidx = csv.fieldnames.index('Place')
-    for row in rows:
+    for row in csv.rows:
         if row[totalidx] == '0':
             row[totalidx] = ''
             row[placeidx] = 'DQ'
@@ -295,6 +297,8 @@ def makemeetcsv(soup):
 
     # Date is given as MM/DD/YYYY
     origdate = table.find_all('tr')[0].find('td').text.strip()
+    if ' - ' in origdate:
+        origdate = origdate.split(' - ')[0]
     k = origdate.split('/')
     date = k[2] + '-' + k[0] + '-' + k[1]
 
@@ -327,6 +331,8 @@ def getdirname(soup):
 
     # If there's no sanction number, just use the date.
     origdate = table.find_all('tr')[0].find('td').text.strip()
+    if ' - ' in origdate:
+        origdate = origdate.split(' - ')[0]
     k = origdate.split('/')
     date = k[2] + '-' + k[0] + '-' + k[1]
     return date
@@ -358,7 +364,7 @@ def main(url):
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
-        fd.write(dirname)
+        fd.write(url)
 
     print("Imported into %s." % dirname)
 
