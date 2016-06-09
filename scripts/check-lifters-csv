@@ -427,6 +427,11 @@ def check_row(row, headers):
         if text and headers[i] in KnownHeaders:
             HeaderHandlers[headers[i]](text)
 
+    # Sex may not be missing.
+    if 'Sex' in headers and not row[headers.index('Sex')]:
+        perror("Missing sex: %s" % ','.join(row))
+        
+
 
 def check(scriptname, filename):
     # Pretty-printer helper (so we only print the name once).
