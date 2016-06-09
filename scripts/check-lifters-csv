@@ -430,6 +430,9 @@ def check_row(row, headers):
     # Sex may not be missing.
     if 'Sex' in headers and not row[headers.index('Sex')]:
         perror("Missing sex: %s" % ','.join(row))
+
+    if not row[headers.index('Name')]:
+        perror("Missing name: %s" % ','.join(row))
         
 
 
