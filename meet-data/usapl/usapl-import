@@ -112,6 +112,8 @@ def parsedivision(div):
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'JR')
     s = s.replace('Youth', 'Y')
+    s = s.replace('Police and fire', 'PF')
+    s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
     if len(s) > 5:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
@@ -167,7 +169,7 @@ def makelifterscsv(soup):
             elif s == 'Push Pull':
                 state_event = 'BD'
             elif s == 'DD':
-                state_event = 'DRUGTEST (Fix This Row)!'
+                state_event = 'DRUGTEST'
 
             else:
                 (state_division, state_equipment) = parsedivision(s)
@@ -181,7 +183,7 @@ def makelifterscsv(soup):
             cells = row.find_all('td')
             weightclasskg = cells[0].text.replace('-', '').strip()
             place = cells[1].text.replace('.','').strip()
-            name = cells[2].text.replace('Jr.','Jr').replace('Sr.','Sr').strip()
+            name = cells[2].text.replace('Jr.','Jr').replace('Sr.','Sr').replace('  ',' ').strip()
             team = cells[3].text.strip()
             state = cells[4].text.strip()
             bodyweightkg = cells[5].text.strip()
@@ -325,6 +327,19 @@ def infersex(csv):
             row[sexidx] = 'F'
 
 
+# If a lifter has an event of "DRUGTEST", we need to clean up their row.
+# The event type must be inferred from the lifts they received
+# which have all been marked as negative), and their Place must be marked "DD".
+def markdrugtest(csv):
+    placeidx = csv.fieldnames.index('Place')
+    eventidx = csv.fieldnames.index('Event')
+
+    for row in csv.rows:
+        if row[eventidx] == 'DRUGTEST':
+            row[placeidx] = 'DD'
+            row[eventidx] = 'SBD' # Good enough, who cares?
+
+
 def makemeetcsv(soup):
     content = soup.find('div', {'id': 'content'})
 
@@ -384,6 +399,7 @@ def main(url):
     makebestcolumns(lifterscsv)
     markdqs(lifterscsv)
     infersex(lifterscsv)
+    markdrugtest(lifterscsv)
 
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
