@@ -401,7 +401,7 @@ def main(url):
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
-        fd.write(url)
+        fd.write(url+"\n")
 
     print("Imported into %s." % dirname)
 
