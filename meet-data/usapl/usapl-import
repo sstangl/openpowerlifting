@@ -112,7 +112,7 @@ def parsedivision(div):
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'JR')
     s = s.replace('Youth', 'Y')
-    s = s.replace('Police and fire', 'PF')
+    s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
     if len(s) > 5:
