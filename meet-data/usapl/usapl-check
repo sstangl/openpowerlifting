@@ -31,7 +31,7 @@ def error(msg):
 # Named tuple.
 class Meet:
     def __init__(self, sanction, url):
-        self.sanction = sanction
+        self.sanction = sanction.replace(' ','').strip()
         self.url = url
 
     def __str__(self):
