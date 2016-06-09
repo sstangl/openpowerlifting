@@ -85,6 +85,10 @@ def check_column_name(s):
     elif not part[-1][0].isupper() and not "d'" in part[-1] and not part[-1].startswith('de'):
         perror("Name must be in proper case: \"%s\"" % s)
 
+    for p in part:
+        if p[0] == "'" and p[-1] == "'":
+            perror("Nicknames should be removed: \"%s\"" % s)
+
 
 def check_column_sex(s):
     if s != "M" and s != "F":
