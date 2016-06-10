@@ -247,6 +247,8 @@ function search() {
 
         // update searchInfo
         searchInfo.laststr = query;
+        // update button
+        searchbutton.innerHTML = "Next";
     }
 }
 
@@ -372,3 +374,6 @@ function onload() {
 
 
 document.addEventListener("DOMContentLoaded", onload);
+$("#searchfield").on("input", function () {
+    searchbutton.innerHTML = "Search";
+});
