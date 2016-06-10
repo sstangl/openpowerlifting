@@ -85,6 +85,9 @@ def check_column_name(s):
     elif not part[-1][0].isupper() and not "d'" in part[-1] and not part[-1].startswith('de'):
         perror("Name must be in proper case: \"%s\"" % s)
 
+    if part[0] == 'Jr' or part[0] == 'Sr': # USAPL does this.
+        perror("Jr marking must be moved to end of name: \"%s\"" % s)
+
     for p in part:
         if p[0] == "'" and p[-1] == "'":
             perror("Nicknames should be removed: \"%s\"" % s)
