@@ -217,23 +217,22 @@ function _search_from(query, rowid) {
 
 
 function search() {
-    var query = searchfield.value
-                           .toLowerCase()
-                           .trim()
-                           .replace("  "," ");
-    if (!query)
+    var query = searchfield.value.toLowerCase().trim().replace("  "," ");
+    if (!query) {
         return;
-
-    var rowid = grid.getViewport().top;
-
-    if (query !== searchInfo.laststr) {
-        rowid = -1;
     }
 
-    rowid = _search_from(query, rowid);
+    // Row after which the search is conducted, by default from the top.
+    var startrowid = -1;
+    // If the search string hasn't changed, do a "next"-style search.
+    if (query === searchInfo.laststr) {
+        startrowid = grid.getViewport().top;
+    }
 
-    // cycle back to first result
-    if (rowid == -1) {
+    var rowid = _search_from(query, startrowid);
+
+    // If in "next" mode, try searching again from the top.
+    if (startrowid >= 0 && rowid == -1) {
         rowid = _search_from(query, -1);
     }
 
@@ -245,9 +244,7 @@ function search() {
             grid.flashCell(rowid, i, 100);
         }
 
-        // update searchInfo
         searchInfo.laststr = query;
-        // update button
         searchbutton.innerHTML = "Next";
     }
 }
@@ -288,6 +285,10 @@ function addEventListeners() {
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
+
+    $("#searchfield").on("input", function () {
+        searchbutton.innerHTML = "Search";
+    });
 
     window.addEventListener("resize", onResize, false);
 }
@@ -374,6 +375,3 @@ function onload() {
 
 
 document.addEventListener("DOMContentLoaded", onload);
-$("#searchfield").on("input", function () {
-    searchbutton.innerHTML = "Search";
-});
