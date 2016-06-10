@@ -209,13 +209,11 @@ function _search_from(query, rowid) {
 
     for (var i = rowid + 1; i < numrows; ++i) {
         var row = data.getItem(i);
-        if (row.searchname == query || row.searchname.indexOf(query) >= 0) {
-            rowid = i;
-            next = true;
-            break;
+        if (row.searchname.indexOf(query) >= 0) {
+            return i;
         }
     }
-    return next ? rowid : -1;
+    return -1;
 }
 
 
