@@ -230,7 +230,9 @@ function search() {
     var rowid;
     if (query === searchInfo.laststr) {
         rowid = searchInfo.lastrow;
+        searchbutton.textContent = "Next";
     } else {
+        searchbutton.textContent = "Search";
         rowid = -1;
     }
 
