@@ -354,10 +354,13 @@ def makemeetcsv(soup):
     date = k[2] + '-' + k[0] + '-' + k[1]
 
     # State is given in long form.
-    state = table.find_all('tr')[2].find('td').text.strip()
-    if not state in states:
-        error("State not in the abbreviation lookup table: %s" % state)
-    state = states[state]
+    state = ''
+    trs = table.find_all('tr')
+    if len(trs) >= 3:
+        state = table.find_all('tr')[2].find('td').text.strip()
+        if not state in states:
+            error("State not in the abbreviation lookup table: %s" % state)
+        state = states[state]
 
     csv = Csv()
     csv.append_column('Federation')
@@ -377,7 +380,7 @@ def getdirname(soup):
     table = content.find('table')
     sanction = table.find_all('tr')[1].find('td').text.strip()
 
-    if sanction and sanction[0].isalpha():
+    if sanction and sanction[0].isalpha() and sanction.count('-') == 2:
         return sanction
 
     # If there's no sanction number, just use the date.
