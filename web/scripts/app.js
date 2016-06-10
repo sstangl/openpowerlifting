@@ -4,6 +4,7 @@
 var grid; // The SlickGrid.
 var sortCol = {id: 'wilks'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
+var searchInfo = {laststr: ''};
 
 var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
@@ -201,6 +202,20 @@ function redraw() {
 }
 
 
+function _search_from(query, rowid) {
+    var data = grid.getData();
+    var numrows = data.getLength();
+
+    for (var i = rowid + 1; i < numrows; ++i) {
+        var row = data.getItem(i);
+        if (row.searchname.indexOf(query) >= 0) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 function search() {
     var query = searchfield.value
                            .toLowerCase()
@@ -209,19 +224,17 @@ function search() {
     if (!query)
         return;
 
-    var data = grid.getData();
-    var numrows = data.getLength();
+    var rowid = grid.getViewport().top;
 
-    var rowid = -1;
+    if (query !== searchInfo.laststr) {
+        rowid = -1;
+    }
 
-    for (var i = 0; i < numrows; ++i) {
-        var row = data.getItem(i);
-        if (row.searchname == query) {
-            rowid = i;
-            break;
-        } else if (rowid < 0 && row.searchname.indexOf(query) >= 0) {
-            rowid = i;
-        }
+    rowid = _search_from(query, rowid);
+
+    // cycle back to first result
+    if (rowid == -1) {
+        rowid = _search_from(query, -1);
     }
 
     if (rowid >= 0) {
@@ -231,6 +244,11 @@ function search() {
         for (var i = 0; i < numColumns; ++i) {
             grid.flashCell(rowid, i, 100);
         }
+
+        // update searchInfo
+        searchInfo.laststr = query;
+        // update button
+        searchbutton.innerHTML = "Next";
     }
 }
 
@@ -356,3 +374,6 @@ function onload() {
 
 
 document.addEventListener("DOMContentLoaded", onload);
+$("#searchfield").on("input", function () {
+    searchbutton.innerHTML = "Search";
+});
