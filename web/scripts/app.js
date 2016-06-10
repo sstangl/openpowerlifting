@@ -206,7 +206,7 @@ function _search_from(query, rowid) {
     var data = grid.getData();
     var numrows = data.getLength();
 
-    for (var i = rowid + 1; i < numrows; ++i) {
+    for (var i = rowid; i < numrows; ++i) {
         var row = data.getItem(i);
         if (row.searchname.indexOf(query) >= 0) {
             return i;
@@ -222,18 +222,17 @@ function search() {
         return;
     }
 
-    // Row after which the search is conducted, by default from the top.
-    var startrowid = -1;
+    var startrowid = 0;
     // If the search string hasn't changed, do a "next"-style search.
     if (query === searchInfo.laststr) {
-        startrowid = grid.getViewport().top;
+        startrowid = grid.getViewport().top + 1;
     }
 
     var rowid = _search_from(query, startrowid);
 
-    // If in "next" mode, try searching again from the top.
-    if (startrowid >= 0 && rowid == -1) {
-        rowid = _search_from(query, -1);
+    // If nothing was found in "next" mode, try searching again from the top.
+    if (startrowid > 0 && rowid == -1) {
+        rowid = _search_from(query, 0);
     }
 
     if (rowid >= 0) {
