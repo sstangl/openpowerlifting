@@ -6,7 +6,6 @@ var sortCol = {id: 'wilks'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
 var searchInfo = {laststr: ''};
 
-var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
 var boxWraps = document.getElementById("wraps");
 var boxSingle = document.getElementById("single");
