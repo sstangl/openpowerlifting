@@ -4,6 +4,7 @@
 var grid; // The SlickGrid.
 var sortCol = {id: 'wilks'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
+var searchInfo = {lastrow: 0, laststr: ''};
 
 var theTable = document.getElementById("thetable");
 var boxRaw = document.getElementById("raw");
@@ -201,6 +202,23 @@ function redraw() {
 }
 
 
+function _search_from(query, rowid) {
+    var data = grid.getData();
+    var numrows = data.getLength();
+    var next = false;
+
+    for (var i = rowid + 1; i < numrows; ++i) {
+        var row = data.getItem(i);
+        if (row.searchname == query || row.searchname.indexOf(query) >= 0) {
+            rowid = i;
+            next = true;
+            break;
+        }
+    }
+    return next ? rowid : -1;
+}
+
+
 function search() {
     var query = searchfield.value
                            .toLowerCase()
@@ -209,19 +227,18 @@ function search() {
     if (!query)
         return;
 
-    var data = grid.getData();
-    var numrows = data.getLength();
+    var rowid;
+    if (query === searchInfo.laststr) {
+        rowid = searchInfo.lastrow;
+    } else {
+        rowid = -1;
+    }
 
-    var rowid = -1;
+    rowid = _search_from(query, rowid);
 
-    for (var i = 0; i < numrows; ++i) {
-        var row = data.getItem(i);
-        if (row.searchname == query) {
-            rowid = i;
-            break;
-        } else if (rowid < 0 && row.searchname.indexOf(query) >= 0) {
-            rowid = i;
-        }
+    // cycle back to first result
+    if (rowid == -1) {
+        rowid = _search_from(query, -1);
     }
 
     if (rowid >= 0) {
@@ -231,6 +248,10 @@ function search() {
         for (var i = 0; i < numColumns; ++i) {
             grid.flashCell(rowid, i, 100);
         }
+
+        // update searchInfo
+        searchInfo.laststr = query;
+        searchInfo.lastrow = rowid;
     }
 }
 
