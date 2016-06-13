@@ -261,7 +261,6 @@ function searchOnEnter(keyevent) {
 }
 
 function scrollOnPageUpDown(keyevent) {
-    console.log(keyevent.key);
     if (keyevent.keyCode === 33 || keyevent.key === "page up") {
         grid.scrollRowToTop(grid.getViewport().top - 5);
     } else if (keyevent.keyCode === 34 || keyevent.key === "page down") {
