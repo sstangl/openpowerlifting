@@ -30,7 +30,7 @@ function parseWeightClass(x) {
     if (x === undefined)
         return '';
     if (selWeightType.value === "kg")
-        return String(kg);
+        return String(x);
     if (typeof x === 'number')
         return String(Math.round(common.kg2lbs(x)));
     return String(Math.round(common.kg2lbs(x.split('+')[0]))) + '+';
