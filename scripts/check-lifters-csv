@@ -184,8 +184,22 @@ def check_column_birthyear(s):
 
 def check_column_weightclass(s):
     if s[-1] is '+':
-        s = s[:-1]
-    check_positive_number_column(s)
+        check_positive_number_column(s[:-1])
+
+    ipf_men   = ['53','59','66','74','83','93','105','120','120+']
+    ipf_women = ['30','35','40','43','47','52','57','63','72','84','84+']
+    ipl = ['48','52','56','60','67.5','75','82.5','90','90+','100','110','125','125+']
+    rum_extra = ['44','140','140+']
+
+    proraw_extra = ['75+','80','95','110+']
+    rps_extra = ['155']
+    spf_extra = ['117.5']
+    ipf_extra = ['60+']
+
+    classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
+              rps_extra + spf_extra + ipf_extra
+    if not s in classes:
+        pwarning("Unknown weight class: %s" % s)
 
     try:
         f = float(s)

@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+
+import oplcsv
+import sys
+
+filename = sys.argv[1]
+
+csv = oplcsv.Csv(filename)
+
+if not 'WeightClassKg' in csv.fieldnames:
+    sys.exit(0)
+
+idx = csv.fieldnames.index('WeightClassKg')
+
+changed = False
+
+for row in csv.rows:
+    x = row[idx]
+
+    if x == '89.81':
+        x = '90'
+    elif x == '139.71':
+        x = '140'
+    elif x == '139.71+':
+        x = '140+'
+    elif x == '109.77':
+        x = '110'
+    elif x == '51.71':
+        x = '52'
+    elif x == '55.69':
+        x = '56'
+    elif x == '59.87':
+        x = '60'
+    elif x == '67.13':
+        x = '67.5'
+    elif x == '74.84':
+        x = '75'
+    elif x == '82.10':
+        x = '82.5'
+    elif x == '89.81':
+        x = '90'
+    elif x == '99.79':
+        x = '100'
+    elif x == '124.74':
+        x = '125'
+    elif x == '55.79':
+        x = '56'
+    elif x == '51.98':
+        x = '52'
+    elif x == '89.81+':
+        x = '90+'
+    elif x == '82.1':
+        x = '82.5'
+    elif x == '47.63':
+        x = '48'
+    elif x == '44.00':
+        x = '44'
+    elif x == '124.74+':
+        x = '125+'
+    elif x == '124.96':
+        x = '125'
+    elif x == '99.9':
+        x = '100'
+    elif x == '89.92':
+        x = '90'
+    elif x == '47.99':
+        x = '48'
+    elif x == '59.99':
+        x = '60'
+    elif x == '74.96':
+        x = '75'
+    elif x == '82.44':
+        x = '82.5'
+    elif x == '89.99':
+        x = '90'
+    elif x == '100.00':
+        x = '100'
+    elif x == '55.97':
+        x = '56'
+    elif x == '67.49':
+        x = '67.5'
+    elif x == '74.98':
+        x = '75'
+    elif x == '99.97':
+        x = '100'
+    elif x == '82.46':
+        x = '82.5'
+    elif x == '110.00':
+        x = '110'
+    elif x == '125.19+':
+        x = '125+'
+    elif x == '125.65+':
+        x = '125+'
+    elif x == '126.10+':
+        x = '125+'
+    elif x == '126.55+':
+        x = '125+'
+    elif x == '127.01+':
+        x = '125+'
+    elif x == '67.50':
+        x = '67.5'
+    elif x == '88.90':
+        x = '90'
+    elif x == '47.5':
+        x = '48'
+    elif x == '67.4':
+        x = '67.5'
+    elif x == '82':
+        x = '82.5'
+    elif x == '67':
+        x = '67.5'
+    elif x == '108.86':
+        x = '110'
+    elif x == '56.7':
+        x = '56'
+    elif x == '57.83':
+        x = '56'
+    elif x == '67.47':
+        x = '67.5'
+    elif x == '99.90':
+        x = '100'
+    elif x == '139.82':
+        x = '140'
+    elif x == '139.98':
+        x = '140'
+    elif x == '48.08':
+        x = '48'
+    elif x == '52.44':
+        x = '52'
+    elif x == '125.19':
+        x = '125'
+    elif x == '117.48':
+        x = '117.5'
+
+    if x != row[idx]:
+        changed = True
+
+    row[idx] = x
+
+if not changed:
+    sys.exit(0)
+
+with open(filename, 'w') as fd:
+    csv.write(fd)
