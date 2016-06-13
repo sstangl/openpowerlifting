@@ -49,14 +49,6 @@ return {
         return "";
     },
 
-    parseWeightClass: function(x) {
-        if (x === undefined)
-            return "";
-        if (typeof x === "number")
-            return weight(x);
-        return weight(x.split('+')[0]) + '+';
-    },
-
     colidToIndex: function(colid) {
         switch (colid) {
             case "fed": return meetdb.FEDERATION;

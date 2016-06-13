@@ -17,6 +17,16 @@ function weight(kg) {
     return String(Math.round(kg * 2.2042262 * 100) / 100);
 }
 
+function parseWeightClass(x) {
+    if (x === undefined)
+        return '';
+    if (!usingLbs)
+        return String(kg);
+    if (typeof x === 'number')
+        return String(Math.round(common.kg2lbs(x)));
+    return String(Math.round(common.kg2lbs(x.split('+')[0]))) + '+';
+}
+
 
 function number(num) {
     if (num === undefined)
@@ -93,7 +103,7 @@ function makeItem(row, index) {
         age:         common.string(row[opldb.AGE]),
         equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
         bw:          weight(row[opldb.BODYWEIGHTKG]),
-        class:       common.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
+        class:       parseWeightClass(row[opldb.WEIGHTCLASSKG]),
         squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
         bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
         deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
