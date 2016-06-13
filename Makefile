@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile check
+.PHONY: builddir webbuilddir csvfile check
 
 DATADIR = meet-data
 BUILDDIR = build
@@ -12,6 +12,8 @@ all: csvfile web
 
 builddir:
 	mkdir -p '${BUILDDIR}'
+webbuilddir:
+	mkdir -p 'web/${BUILDDIR}'
 
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
@@ -21,9 +23,9 @@ csvfile: builddir
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
-web: csvfile
-	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "${BUILDDIR}/${PLFILEJS}"
-	scripts/csv-to-js "${BUILDDIR}/${MEETFILE}" meetdb > "${BUILDDIR}/${MEETFILEJS}"
+web: csvfile webbuilddir
+	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "web/${BUILDDIR}/${PLFILEJS}"
+	scripts/csv-to-js "${BUILDDIR}/${MEETFILE}" meetdb > "web/${BUILDDIR}/${MEETFILEJS}"
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
