@@ -260,6 +260,15 @@ function searchOnEnter(keyevent) {
     }
 }
 
+function scrollOnPageUpDown(keyevent) {
+    console.log(keyevent.key);
+    if (keyevent.keyCode === 33 || keyevent.key === "page up") {
+        grid.scrollRowToTop(grid.getViewport().top - 5);
+    } else if (keyevent.keyCode === 34 || keyevent.key === "page down") {
+        grid.scrollRowToTop(grid.getViewport().top + 5);
+    }
+}
+
 function addSelectorListeners(selector) {
     selector.addEventListener("change", redraw);
     selector.addEventListener("keydown", function()
@@ -287,6 +296,8 @@ function addEventListeners() {
     $("#searchfield").on("input", function () {
         searchbutton.innerHTML = "Search";
     });
+
+    $(window).on("keydown", scrollOnPageUpDown);
 
     window.addEventListener("resize", onResize, false);
 }
