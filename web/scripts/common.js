@@ -16,7 +16,9 @@ return {
         var args = url.slice(i+1);
 
         var obj = {};
-        for (var arg of args.split('&') ) {
+        var split = args.split('&');
+        for (var j = 0; j < split.length; ++j) {
+            var arg = split[j];
             if (arg.indexOf('=') >= 0) {
                 var v = unescape(arg).split('=');
                 obj[v[0]] = v[1];
@@ -63,7 +65,7 @@ return {
             case "mcculloch": return opldb.MCCULLOCH;
             default:
                 console.log("Unknown: colidToIndex(" + name + ")");
-                return;
+                return undefined;
         }
     },
 
@@ -81,7 +83,7 @@ return {
                     if (sortAsc)
                         return adata > bdata;
                     return adata <= bdata;
-                }
+                };
 
             // Columns that use the opldb.
             case "age":
@@ -102,11 +104,11 @@ return {
                     if (sortAsc)
                         return adata > bdata;
                     return adata <= bdata;
-                }
+                };
 
             default:
                 console.log("Unknown: gotSortFn(" + colid + ", " + sortAsc + ")");
-                return;
+                return undefined;
         }
     }
 

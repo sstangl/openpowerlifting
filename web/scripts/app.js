@@ -188,7 +188,7 @@ function makeItem(row, index) {
         deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
         total:       weight(row[opldb.TOTALKG]),
         wilks:       common.number(row[opldb.WILKS]),
-        mcculloch:   common.number(row[opldb.MCCULLOCH]),
+        mcculloch:   common.number(row[opldb.MCCULLOCH])
     };
 }
 
@@ -199,7 +199,7 @@ function makeDataProvider() {
     return {
         getLength: function () { return indices.length; },
         getItem: function(index) { return makeItem(opldb.data[indices[index]], index); }
-    }
+    };
 }
 
 
@@ -350,7 +350,7 @@ function onload() {
         {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth,
                       sortable: true, defaultSortAsc: false},
         {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10,
-                      sortable: true, defaultSortAsc: false},
+                      sortable: true, defaultSortAsc: false}
     ];
 
     var options = {
@@ -359,7 +359,7 @@ function onload() {
         forceFitColumns: true,
         rowHeight: 23,
         topPanelHeight: 23,
-        cellFlashingCssClass: "searchflashing",
+        cellFlashingCssClass: "searchflashing"
     };
 
     var query = common.getqueryobj();
@@ -389,7 +389,7 @@ function onload() {
     numentries.innerText = "(" + numberWithCommas(opldb.data.length) + " Entries)";
 
     search();
-};
+}
 
 
 document.addEventListener("DOMContentLoaded", onload);

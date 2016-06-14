@@ -51,13 +51,13 @@ function db_sort_numeric_maxfirst(indices, colidx) {
 // possible in a single iteration of the array, but it's nice to keep the array
 // in HTML presentation order.
 function db_uniq_lifter(indices) {
-    var seen = {}
+    var seen = {};
     var name;
 
     for (var i = 0; i < indices.length; ++i) {
         name = opldb.data[indices[i]][opldb.NAME];
         if (seen[name]) {
-            indices[i] = -1
+            indices[i] = -1;
         } else {
             seen[name] = true;
         }
