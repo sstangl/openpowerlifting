@@ -13,7 +13,7 @@ var boxMulti = document.getElementById("multi");
 var boxMen = document.getElementById("men");
 var boxWomen = document.getElementById("women");
 var selWeightType = document.getElementById("weighttype");
-var selClass = document.getElementById("class");
+var selClass = document.getElementById("weightclass");
 var selFed = document.getElementById("fedselect");
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
@@ -182,7 +182,7 @@ function makeItem(row, index) {
         age:         common.string(row[opldb.AGE]),
         equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
         bw:          weight(row[opldb.BODYWEIGHTKG]),
-        class:       parseWeightClass(row[opldb.WEIGHTCLASSKG]),
+        weightclass: parseWeightClass(row[opldb.WEIGHTCLASSKG]),
         squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
         bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
         deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
@@ -336,7 +336,7 @@ function onload() {
         {id: "age", name: "Age", field: "age", width: shortWidth,
                     sortable: true, defaultSortAsc: false},
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
-        {id: "class", name: "Class", field: "class", width: numberWidth},
+        {id: "weightclass", name: "Class", field: "weightclass", width: numberWidth},
         {id: "bw", name: "Weight", field: "bw", width: numberWidth,
                    sortable: true, defaultSortAsc: false},
         {id: "squat", name: "Squat", field: "squat", width: numberWidth,
