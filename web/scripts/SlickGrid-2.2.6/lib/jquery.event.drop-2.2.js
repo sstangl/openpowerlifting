@@ -299,4 +299,5 @@ drop = $.event.special.drop = {
 // share the same special event configuration with related events...
 $special.dropinit = $special.dropstart = $special.dropend = drop;
 
-})(jQuery); // confine scope	
+})(jQuery); // confine scope
+
