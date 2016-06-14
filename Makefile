@@ -1,4 +1,4 @@
-.PHONY: builddir webbuilddir csvfile check
+.PHONY: builddir csvfile check
 
 DATADIR = meet-data
 BUILDDIR = build
@@ -12,8 +12,6 @@ all: csvfile web
 
 builddir:
 	mkdir -p '${BUILDDIR}'
-webbuilddir:
-	mkdir -p 'web/${BUILDDIR}'
 
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
@@ -23,9 +21,8 @@ csvfile: builddir
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
-web: csvfile webbuilddir
-	scripts/csv-to-js "${BUILDDIR}/${PLFILE}" opldb > "web/${BUILDDIR}/${PLFILEJS}"
-	scripts/csv-to-js "${BUILDDIR}/${MEETFILE}" meetdb > "web/${BUILDDIR}/${MEETFILEJS}"
+web: csvfile
+	$(MAKE) -C web
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
@@ -37,3 +34,4 @@ clean:
 	rm -rf 'scripts/__pycache__'
 	rm -rf 'meet-data/rps/__pycache__'
 	rm -rf 'meet-data/usapl/__pycache__'
+	$(MAKE) -C web clean
