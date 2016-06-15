@@ -70,7 +70,7 @@ tr:nth-child(even) {
   background-color: #111111;
 }
 
-tr:hover {
+tbody tr:hover {
   background-color: #444444;
 }
 
