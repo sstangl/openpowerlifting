@@ -95,14 +95,19 @@ def main():
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
 
+        bestlifter = results[0][liftersnameidx]
+        bestwilks = results[0][lifterswilksidx]
+        if not bestwilks:
+            bestlifter = ''
+
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
         print('<td>%s</td>' % row[dateidx])
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[meetnameidx])
         print('<td>%d</td>' % len(results))
-        print('<td>%s</td>' % results[0][liftersnameidx])
-        print('<td>%s</td>' % results[0][lifterswilksidx])
+        print('<td>%s</td>' % bestlifter)
+        print('<td>%s</td>' % bestwilks)
         print('</tr>')
 
     print('</tbody>')
