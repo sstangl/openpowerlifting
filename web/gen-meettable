@@ -47,15 +47,13 @@ def getliftersfor(meetid, lifterscsv):
     while lowest > 0:
         if lifterscsv.rows[lowest-1][meetidx] != meetid:
             break
-        else:
-            lowest = lowest - 1
+        lowest = lowest - 1
 
     highest = x
     while highest < len(lifterscsv.rows) - 1:
         if lifterscsv.rows[highest+1][meetidx] != meetid:
             break
-        else:
-            highest = highest + 1
+        highest = highest + 1
 
     return lifterscsv.rows[lowest : highest + 1]
 
