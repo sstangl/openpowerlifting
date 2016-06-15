@@ -105,10 +105,14 @@ td a {
 }
 
 #header {
-  margin: 10px 5px 5px 5px;
-  font-size: 18pt;
+  padding: 8px;
+  font-size: 15pt;
   color: red;
   font-variant: small-caps;
+}
+
+#header a {
+  color: #FFFFFF;
 }
 
 #controls {
@@ -117,6 +121,8 @@ td a {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #111111;
 }
 
 #controls-left {

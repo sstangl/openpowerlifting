@@ -10,7 +10,19 @@ import sys
 
 def main(tabname):
     print('<div id="header">')
-    print('OpenPowerlifting Rankings')
+    print('OpenPowerlifting &mdash;')
+
+    assert tabname in ['rankings', 'lifters', 'meetlist']
+
+    if tabname == 'rankings':
+        print('Rankings')
+    else:
+        print('<a href="index.html">Rankings</a>')
+
+    if tabname == 'meetlist':
+        print('Meets')
+    else:
+        print('<a href="meetlist.html">Meets</a>')
     print('</div>')
 
 
