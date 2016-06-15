@@ -98,7 +98,9 @@ def main():
         bestlifter = results[0][liftersnameidx]
         bestwilks = results[0][lifterswilksidx]
         if not bestwilks:
-            bestlifter = ''
+            lifterhtml = ''
+        else:
+            lifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestlifter, bestlifter)
 
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
@@ -106,7 +108,7 @@ def main():
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[meetnameidx])
         print('<td>%d</td>' % len(results))
-        print('<td>%s</td>' % bestlifter)
+        print('<td>%s</td>' % lifterhtml)
         print('<td>%s</td>' % bestwilks)
         print('</tr>')
 

@@ -83,6 +83,10 @@ td {
   height: 17px;
 }
 
+td a {
+  color: #FFFFFF;
+}
+
 .flexbox {
   display: flex;
   height: 100%;
