@@ -51,7 +51,7 @@ def main(filename):
                 sys.exit(1)
             include(words[1].strip('"'))
 
-        if words[0] == "#exec":
+        elif words[0] == "#exec":
             if len(words) < 2:
                 print("Error: #exec directive takes at least one argument.", file=sys.stderr)
                 sys.exit(1)

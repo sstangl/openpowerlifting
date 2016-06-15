@@ -37,8 +37,8 @@ css: builddir
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
 
 html: builddir
-	cp templates/index.html ${BUILDDIR}/index.html
-	cp templates/lifters.html ${BUILDDIR}/lifters.html
+	./preprocess-html templates/index.html > ${BUILDDIR}/index.html
+	./preprocess-html templates/lifters.html > ${BUILDDIR}/lifters.html
 	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
 
 images: builddir
