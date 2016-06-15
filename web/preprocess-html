@@ -16,9 +16,9 @@ import subprocess
 import sys
 
 
+# Run the preprocessor over the included file as well.
 def include(filename):
-    with open(filename) as fd:
-        print(fd.read())
+    main(filename)
 
 
 def do_exec(program, arglist):
