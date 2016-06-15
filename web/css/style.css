@@ -48,6 +48,21 @@ html,body {
   background-color: #444444;
 }
 
+table {
+  font-size: 9pt;
+  border: 0px;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+thead {
+  color: red;
+}
+
+thead td {
+  min-width: 50px;
+}
+
 .flexbox {
   display: flex;
   height: 100%;

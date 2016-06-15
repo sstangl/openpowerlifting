@@ -22,6 +22,10 @@ def main():
     meetnameidx = csv.fieldnames.index('MeetName')
 
     print('<table>')
+    print('<thead>')
+    print('<tr><td>Federation</td><td>Date</td><td>Country</td><td>Name</td></tr>')
+    print('</thead>')
+    print('<tbody>')
     for row in csv.rows:
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
@@ -30,6 +34,7 @@ def main():
         print('<td>%s</td>' % row[meetnameidx])
         print('</tr>')
 
+    print('</tbody>')
     print('</table>')
 
 
