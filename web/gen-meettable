@@ -21,6 +21,9 @@ def main():
     townidx = csv.fieldnames.index('MeetTown')
     meetnameidx = csv.fieldnames.index('MeetName')
 
+    # By default, sort the list by date, most recent meets first.
+    csv.rows = sorted(csv.rows, key=lambda x : x[dateidx], reverse=True)
+
     print('<table>')
     print('<thead>')
     print('<tr><td>Federation</td><td>Date</td><td>Country</td><td>Name</td></tr>')
