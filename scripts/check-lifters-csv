@@ -358,7 +358,8 @@ def check_row_weightclass_consistency(row, headers):
         number = float(wtcls)
         # This is probably higher than it should be because some USPA
         # meets put women in male weightclasses for no reason.
-        if number > 110:
+        # Made even higher thanks to the SPF.
+        if number > 120:
             pwarning("Suspiciously high female weightclass: %s" % row[headers.index('WeightClassKg')])
     except ValueError:
         pass
