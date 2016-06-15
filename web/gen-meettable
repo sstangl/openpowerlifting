@@ -79,7 +79,7 @@ def main():
 
     print('<table>')
     print('<thead>')
-    print('<tr><td>Federation</td><td>Date</td><td>Location</td><td>Name</td><td>Lifters</td>')
+    print('<tr><td>Federation</td><td>Date</td><td>Location</td><td>Town</td><td>Name</td><td>Lifters</td>')
     print('<td>Best Lifter</td><td>Best Wilks</td></tr>')
     print('</thead>')
     print('<tbody>')
@@ -111,6 +111,7 @@ def main():
         print('<td>%s</td>' % row[fedidx])
         print('<td>%s</td>' % row[dateidx])
         print('<td>%s</td>' % location)
+        print('<td>%s</td>' % row[townidx])
         print('<td>%s</td>' % row[meetnameidx])
         print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % lifterhtml)
