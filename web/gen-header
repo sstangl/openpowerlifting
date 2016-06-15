@@ -23,6 +23,8 @@ def main(tabname):
         print('Meets')
     else:
         print('<a href="meetlist.html">Meets</a>')
+
+    print('<a href="https://github.com/sstangl/openpowerlifting">Source</a>')
     print('</div>')
 
 
