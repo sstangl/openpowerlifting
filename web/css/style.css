@@ -65,13 +65,19 @@ thead td {
   min-width: 50px;
 }
 
+tr:nth-child(even) {
+  background-color: #111111;
+}
+
 tr:hover {
   background-color: #444444;
 }
 
 td {
   border: 0px;
-  padding: 0px;
+  padding-top: 4px;
+  padding-left: 5px;
+  height: 17px;
 }
 
 .flexbox {
