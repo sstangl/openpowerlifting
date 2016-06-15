@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Generates the top site navigation part of the HTML page.
+# Argument must be one of the site parts.
+#
+
+import sys
+
+
+def main(tabname):
+    print('<div id="header">')
+    print('OpenPowerlifting Rankings')
+    print('</div>')
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s tabname" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
