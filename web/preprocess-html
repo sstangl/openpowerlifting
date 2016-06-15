@@ -22,7 +22,11 @@ def include(filename):
 
 
 def do_exec(program, arglist):
-    p = subprocess.Popen([program] + arglist, stdout=subprocess.PIPE)
+    try:
+        p = subprocess.Popen([program] + arglist, stdout=subprocess.PIPE)
+    except FileNotFoundError:
+        p = subprocess.Popen(['./'+program] + arglist, stdout=subprocess.PIPE)
+
     print(p.stdout.read().decode('utf8').rstrip())
 
     p.communicate()[0] # Forces p.returncode to be set.

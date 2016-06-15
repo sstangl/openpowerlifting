@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Generates a static table of meet information.
+#
+
+import oplcsv
+import sys
+
+LIFTERSCSV = '../build/openpowerlifting.csv'
+MEETCSV = '../build/meets.csv'
+
+
+def main():
+    csv = oplcsv.Csv(MEETCSV)
+
+    fedidx = csv.fieldnames.index('Federation')
+    dateidx = csv.fieldnames.index('Date')
+    countryidx = csv.fieldnames.index('MeetCountry')
+    stateidx = csv.fieldnames.index('MeetState')
+    townidx = csv.fieldnames.index('MeetTown')
+    meetnameidx = csv.fieldnames.index('MeetName')
+
+    print('<table>')
+    for row in csv.rows:
+        print('<tr>')
+        print('<td>%s</td>' % row[fedidx])
+        print('<td>%s</td>' % row[dateidx])
+        print('<td>%s</td>' % row[countryidx])
+        print('<td>%s</td>' % row[meetnameidx])
+        print('</tr>')
+
+    print('</table>')
+
+
+if __name__ == '__main__':
+    main()

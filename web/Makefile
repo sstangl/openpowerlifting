@@ -39,6 +39,7 @@ css: builddir
 html: builddir
 	cp templates/index.html ${BUILDDIR}/index.html
 	cp templates/lifters.html ${BUILDDIR}/lifters.html
+	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
 
 images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/images
@@ -49,3 +50,4 @@ check:
 
 clean:
 	rm -rf '${BUILDDIR}'
+	rm -rf __pycache__
