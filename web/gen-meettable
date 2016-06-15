@@ -27,7 +27,8 @@ def findsomelifterin(meetid, lifterscsv):
         else:
             x = x - step
 
-        step = int(step / 2)
+        # In edge cases, just keep stepping by one. It's fast enough.
+        step = max(1, int(step / 2))
         
     return x
 
