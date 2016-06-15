@@ -91,6 +91,12 @@ def main():
 
         # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).
 
+        # Lifters who entered multiple events should only count once.
+        names = []
+        for k in results:
+            if not k[liftersnameidx] in names:
+                names.append(k[liftersnameidx])
+
         location = row[countryidx]
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
@@ -107,7 +113,7 @@ def main():
         print('<td>%s</td>' % row[dateidx])
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[meetnameidx])
-        print('<td>%d</td>' % len(results))
+        print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % lifterhtml)
         print('<td>%s</td>' % bestwilks)
         print('</tr>')
