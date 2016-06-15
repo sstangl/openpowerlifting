@@ -4,11 +4,59 @@
 # Generates a static table of meet information.
 #
 
+import bisect
 import oplcsv
 import sys
 
 LIFTERSCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
+
+
+# Gets some row that contains the given meetid, using a super ham-fisted binary search.
+def findsomelifterin(meetid, lifterscsv):
+    meetidx = lifterscsv.fieldnames.index('MeetID')
+    rows = lifterscsv.rows
+
+    meetid = int(meetid)
+
+    x = int(len(rows) / 2)
+    step = int(len(rows) / 4)
+    while int(rows[x][meetidx]) != meetid:
+        if int(rows[x][meetidx]) < meetid:
+            x = x + step
+        else:
+            x = x - step
+
+        step = int(step / 2)
+        
+    return x
+
+
+# Knowing that the lifterscsv rows are in sorted order by MeetID,
+# perform a binary search and expand to grab nearby rows.
+def getliftersfor(meetid, lifterscsv):
+    meetidx = lifterscsv.fieldnames.index('MeetID')
+
+    # Bisect to find one of the lifters.
+    x = findsomelifterin(meetid, lifterscsv)
+
+    # The rest of the lifters are above and below that one.
+    # Find the lowest and highest indices for lifters in this meet, inclusive.
+    lowest = x
+    while lowest > 0:
+        if lifterscsv.rows[lowest-1][meetidx] != meetid:
+            break
+        else:
+            lowest = lowest - 1
+
+    highest = x
+    while highest < len(lifterscsv.rows) - 1:
+        if lifterscsv.rows[highest+1][meetidx] != meetid:
+            break
+        else:
+            highest = highest + 1
+
+    return lifterscsv.rows[lowest : highest + 1]
 
 
 def main():
@@ -38,8 +86,7 @@ def main():
     print('<tbody>')
     for row in csv.rows:
         # How many lifters competed?
-        # XXX FIXME This is very slow! Could just use binary search, since meetid is linear.
-        results = filter(lambda x : x[liftersmeetidx] == row[meetidx], lifters.rows)
+        results = getliftersfor(row[meetidx], lifters)
         results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
 
         # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).

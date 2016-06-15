@@ -53,6 +53,8 @@ table {
   border: 0px;
   color: #FFFFFF;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 thead {
@@ -61,6 +63,15 @@ thead {
 
 thead td {
   min-width: 50px;
+}
+
+tr:hover {
+  background-color: #444444;
+}
+
+td {
+  border: 0px;
+  padding: 0px;
 }
 
 .flexbox {
