@@ -80,7 +80,7 @@ def main():
 
     print('<table>')
     print('<thead>')
-    print('<tr><td>Federation</td><td>Date</td><td>Country</td><td>Name</td><td>Lifters</td>')
+    print('<tr><td>Federation</td><td>Date</td><td>Location</td><td>Name</td><td>Lifters</td>')
     print('<td>Best Lifter</td><td>Best Wilks</td></tr>')
     print('</thead>')
     print('<tbody>')
@@ -91,10 +91,14 @@ def main():
 
         # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).
 
+        location = row[countryidx]
+        if row[stateidx]:
+            location = "%s-%s" % (row[countryidx], row[stateidx])
+
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
         print('<td>%s</td>' % row[dateidx])
-        print('<td>%s</td>' % row[countryidx])
+        print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[meetnameidx])
         print('<td>%d</td>' % len(results))
         print('<td>%s</td>' % results[0][liftersnameidx])
