@@ -14,6 +14,7 @@ MEETCSV = '../build/meets.csv'
 def main():
     csv = oplcsv.Csv(MEETCSV)
 
+    meetidx = csv.fieldnames.index('MeetID')
     fedidx = csv.fieldnames.index('Federation')
     dateidx = csv.fieldnames.index('Date')
     countryidx = csv.fieldnames.index('MeetCountry')
@@ -24,17 +25,33 @@ def main():
     # By default, sort the list by date, most recent meets first.
     csv.rows = sorted(csv.rows, key=lambda x : x[dateidx], reverse=True)
 
+    lifters = oplcsv.Csv(LIFTERSCSV)
+    liftersmeetidx = lifters.fieldnames.index('MeetID')
+    lifterswilksidx = lifters.fieldnames.index('Wilks')
+    liftersnameidx = lifters.fieldnames.index('Name')
+
     print('<table>')
     print('<thead>')
-    print('<tr><td>Federation</td><td>Date</td><td>Country</td><td>Name</td></tr>')
+    print('<tr><td>Federation</td><td>Date</td><td>Country</td><td>Name</td><td>Lifters</td>')
+    print('<td>Best Lifter</td><td>Best Wilks</td></tr>')
     print('</thead>')
     print('<tbody>')
     for row in csv.rows:
+        # How many lifters competed?
+        # XXX FIXME This is very slow! Could just use binary search, since meetid is linear.
+        results = filter(lambda x : x[liftersmeetidx] == row[meetidx], lifters.rows)
+        results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
+
+        # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).
+
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
         print('<td>%s</td>' % row[dateidx])
         print('<td>%s</td>' % row[countryidx])
         print('<td>%s</td>' % row[meetnameidx])
+        print('<td>%d</td>' % len(results))
+        print('<td>%s</td>' % results[0][liftersnameidx])
+        print('<td>%s</td>' % results[0][lifterswilksidx])
         print('</tr>')
 
     print('</tbody>')
