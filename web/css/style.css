@@ -50,11 +50,12 @@ html,body {
 
 table {
   font-size: 9pt;
-  border: 0px;
   color: #FFFFFF;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  border-spacing: 0px;
+  border: none;
 }
 
 thead {
@@ -75,6 +76,7 @@ tr:hover {
 
 td {
   border: 0px;
+  padding-right: 0px;
   padding-top: 4px;
   padding-left: 5px;
   height: 17px;
