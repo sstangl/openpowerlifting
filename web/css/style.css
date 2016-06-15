@@ -86,6 +86,10 @@ td a {
   color: #FFFFFF;
 }
 
+.table-divider {
+  color: red;
+}
+
 .flexbox {
   display: flex;
   height: 100%;

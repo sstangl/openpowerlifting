@@ -58,6 +58,22 @@ def getliftersfor(meetid, lifterscsv):
     return lifterscsv.rows[lowest : highest + 1]
 
 
+def getmonth(m):
+    if m == '01': return 'January'
+    if m == '02': return 'February'
+    if m == '03': return 'March'
+    if m == '04': return 'April'
+    if m == '05': return 'May'
+    if m == '06': return 'June'
+    if m == '07': return 'July'
+    if m == '08': return 'August'
+    if m == '09': return 'September'
+    if m == '10': return 'October'
+    if m == '11': return 'November'
+    if m == '12': return 'December'
+    return ''
+
+
 def main():
     csv = oplcsv.Csv(MEETCSV)
 
@@ -77,12 +93,19 @@ def main():
     lifterswilksidx = lifters.fieldnames.index('Wilks')
     liftersnameidx = lifters.fieldnames.index('Name')
 
+    columns = ["Federation", "Date", "Location", "Town", "Name", "Lifters",
+               "Best Lifter", "Best Wilks"]
+
     print('<table>')
-    print('<thead>')
-    print('<tr><td>Federation</td><td>Date</td><td>Location</td><td>Town</td><td>Name</td><td>Lifters</td>')
-    print('<td>Best Lifter</td><td>Best Wilks</td></tr>')
-    print('</thead>')
+
+    print('<thead><tr>')
+    for c in columns:
+        print('<td>%s</td>' % c)
+    print('</tr></thead>')
+
     print('<tbody>')
+    lastmonth = ''
+
     for row in csv.rows:
         # How many lifters competed?
         results = getliftersfor(row[meetidx], lifters)
@@ -107,9 +130,19 @@ def main():
         else:
             lifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestlifter, bestlifter)
 
+        # If the month changed, emit a header row.
+        date = row[dateidx]
+        yrm = date[0:date.rindex('-')]
+        # Don't emit the first divider since it looks weird cutting off the headers.
+        if lastmonth != '' and lastmonth != yrm:
+            [year,month] = yrm.split('-')
+            print('<tr><td colspan="%d" class="table-divider">%s %s</td></tr>' % (len(columns), getmonth(month), year))
+            lastmonth = yrm
+        lastmonth = yrm
+
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
-        print('<td>%s</td>' % row[dateidx])
+        print('<td>%s</td>' % date)
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[townidx])
         print('<td>%s</td>' % row[meetnameidx])
