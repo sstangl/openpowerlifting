@@ -9,7 +9,7 @@ var lifterString = document.getElementById('lifter');
 // TODO: Actually have a toggle for this.
 var usingLbs = true;
 
-// TODO: Share this with app.js. A bunch of functions can be shared, actually.
+// TODO: Share this with main-index.js. A bunch of functions can be shared, actually.
 function weight(kg) {
     if (kg === undefined)
         return '';

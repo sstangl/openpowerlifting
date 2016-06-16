@@ -21,10 +21,10 @@ database: builddir
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
 
 scripts: builddir
-	cp scripts/app.js ${BUILDDIR}/scripts
 	cp scripts/common.js ${BUILDDIR}/scripts
 	cp scripts/database.js ${BUILDDIR}/scripts
-	cp scripts/lifters.js ${BUILDDIR}/scripts
+	cp scripts/main-index.js ${BUILDDIR}/scripts
+	cp scripts/main-lifters.js ${BUILDDIR}/scripts
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \
