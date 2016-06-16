@@ -4,6 +4,7 @@
 var grid; // The SlickGrid.
 var sortCol = {id: 'date'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
+var lifterString = document.getElementById('lifter');
 
 // TODO: Actually have a toggle for this.
 var usingLbs = true;
@@ -74,6 +75,15 @@ function getIndices(query) {
     var indices = db_make_indices_list();
     indices = db_filter(indices, filter);
 
+    // Update the name display here: if the name matches something
+    // in the database, we're safe from HTML injection.
+    if (indices.length > 0) {
+        lifterString.innerHTML = 'Meet Results for ' + query.q;
+    } else {
+        // Don't inject query.q here: may be HTML!
+        lifterString.innerHTML = 'Lifter not found.'
+    }
+
     var sortFn = common.getSortFn(sortCol.id, sortAsc);
     indices.sort(sortFn);
     return indices;
@@ -98,6 +108,7 @@ function makeItem(row, index) {
         fed:         common.string(meetrow[meetdb.FEDERATION]),
         date:        common.string(meetrow[meetdb.DATE]),
         location:    location,
+        division:    common.string(row[opldb.DIVISION]),
         meetname:    common.string(meetrow[meetdb.MEETNAME]),
         sex:         common.string(row[opldb.SEX]),
         age:         common.string(row[opldb.AGE]),
@@ -141,13 +152,13 @@ function onload() {
         {id: "filler", width: 20, minWidth: 20, focusable: false,
                        selectable: false, resizable: false},
         {id: "place", name: "Place", field: "place", width: rankWidth},
-        {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: "Fed", field: "fed", width: numberWidth,
                     sortable: true, defaultSortAsc: true},
         {id: "date", name: "Date", field: "date", width: dateWidth,
                      sortable: true, defaultSortAsc: false},
         {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "meetname", name: "Meet Name", field: "meetname", width: nameWidth},
+        {id: "division", name: "Division", field: "division"},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
         {id: "age", name: "Age", field: "age", width: shortWidth},
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},

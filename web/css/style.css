@@ -200,3 +200,8 @@ input[type="checkbox"] + label span {
 input[type="checkbox"]:checked + label span {
   background:url(images/check_radio_sheet.png) -19px top no-repeat;
 }
+
+#lifter {
+  font-size: 10pt;
+  margin-left: 4px;
+}
