@@ -116,6 +116,7 @@ td a {
 }
 
 #controls {
+  height: 28px;
   display: flex;
   font-size: 10pt;
   padding-left: 20px;
@@ -123,6 +124,8 @@ td a {
   padding-bottom: 5px;
   padding-top: 5px;
   background-color: #111111;
+  display: flex;
+  align-items: center;
 }
 
 #controls-left {
