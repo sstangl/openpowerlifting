@@ -12,7 +12,7 @@ def main(tabname):
     print('<div id="header">')
     print('OpenPowerlifting &mdash;')
 
-    assert tabname in ['rankings', 'lifters', 'meetlist']
+    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist']
 
     if tabname == 'rankings':
         print('Rankings')

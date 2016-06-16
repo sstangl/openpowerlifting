@@ -90,6 +90,14 @@ function getIndices(query) {
 }
 
 
+// FIXME: Need to share makeItem, makeLiftersUrl, and makeMeetUrl with common.js.
+function makeMeetUrl(fed, date, meetname) {
+    return "meet.html?f=" + escape(fed) +
+                    "&d=" + escape(date) +
+                    "&n=" + escape(meetname);
+}
+
+
 function makeItem(row, index) {
     var meetrow = meetdb.data[row[opldb.MEETID]];
     var name = row[opldb.NAME];
@@ -102,14 +110,18 @@ function makeItem(row, index) {
         location = location + "-" + state;
     }
 
+    var date = common.string(meetrow[meetdb.DATE]);
+    var fed = common.string(meetrow[meetdb.FEDERATION]);
+    var meetname = common.string(meetrow[meetdb.MEETNAME]);
+
     return {
         place:       common.string(row[opldb.PLACE]),
         name:        common.string(name),
-        fed:         common.string(meetrow[meetdb.FEDERATION]),
-        date:        common.string(meetrow[meetdb.DATE]),
+        fed:         fed,
+        date:        '<a href="' + makeMeetUrl(fed,date,meetname) + '">' + date + '</a>',
         location:    location,
         division:    common.string(row[opldb.DIVISION]),
-        meetname:    common.string(meetrow[meetdb.MEETNAME]),
+        meetname:    '<a href="' + makeMeetUrl(fed,date,meetname) + '">' + meetname + '</a>',
         sex:         common.string(row[opldb.SEX]),
         age:         common.string(row[opldb.AGE]),
         equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
@@ -155,9 +167,10 @@ function onload() {
         {id: "fed", name: "Fed", field: "fed", width: numberWidth,
                     sortable: true, defaultSortAsc: true},
         {id: "date", name: "Date", field: "date", width: dateWidth,
-                     sortable: true, defaultSortAsc: false},
+                     sortable: true, defaultSortAsc: false, formatter: urlformatter},
         {id: "location", name: "Location", field: "location", width:dateWidth},
-        {id: "meetname", name: "Meet Name", field: "meetname", width: nameWidth},
+        {id: "meetname", name: "Meet Name", field: "meetname", width: nameWidth,
+                         formatter: urlformatter},
         {id: "division", name: "Division", field: "division"},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
         {id: "age", name: "Age", field: "age", width: shortWidth},

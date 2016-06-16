@@ -26,6 +26,16 @@ return {
         }
         return obj;
     },
+
+    makeLiftersUrl: function(rowobj) {
+        return "lifters.html?q=" + escape(rowobj.name);
+    },
+
+    makeMeetUrl: function(rowobj) {
+        return "meet.html?f=" + escape(rowobj.fed) +
+                        "&d=" + escape(rowobj.date) +
+                        "&n=" + escape(rowobj.meetname);
+    },
     
     number: function(num) {
         if (num === undefined)

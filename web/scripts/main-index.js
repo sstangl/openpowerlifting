@@ -159,6 +159,14 @@ function weightMax(row, cola, colb) {
 }
 
 
+// FIXME: Need to share makeItem, makeLiftersUrl, and makeMeetUrl with common.js.
+function makeMeetUrl(fed, date, meetname) {
+    return "meet.html?f=" + escape(fed) +
+                    "&d=" + escape(date) +
+                    "&n=" + escape(meetname);
+}
+
+
 function makeItem(row, index) {
     var meetrow = meetdb.data[row[opldb.MEETID]];
     var name = row[opldb.NAME];
@@ -171,12 +179,16 @@ function makeItem(row, index) {
         location = location + "-" + state;
     }
 
+    var date = common.string(meetrow[meetdb.DATE]);
+    var fed = common.string(meetrow[meetdb.FEDERATION]);
+    var meetname = common.string(meetrow[meetdb.MEETNAME]);
+
     return {
         rank:        index+1,
         searchname:  name.toLowerCase(),
         name:        '<a href="lifters.html?q='+name+'">'+name+'</a>',
-        fed:         common.string(meetrow[meetdb.FEDERATION]),
-        date:        common.string(meetrow[meetdb.DATE]),
+        fed:         fed,
+        date:        '<a href="' + makeMeetUrl(fed,date,meetname) + '">' + date + '</a>',
         location:    location,
         sex:         common.string(row[opldb.SEX]),
         age:         common.string(row[opldb.AGE]),
@@ -330,7 +342,7 @@ function onload() {
         {id: "rank", name: "Rank", field: "rank", width: numberWidth},
         {id: "name", name: "Name", field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: "Fed", field: "fed", width: numberWidth},
-        {id: "date", name: "Date", field: "date", width: dateWidth},
+        {id: "date", name: "Date", field: "date", width: dateWidth, formatter: urlformatter},
         {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
         {id: "age", name: "Age", field: "age", width: shortWidth,

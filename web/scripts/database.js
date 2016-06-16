@@ -1,7 +1,6 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-
 function db_make_indices_list() {
     var indices = Array(opldb.data.length);
     for (var i = 0; i < opldb.data.length; ++i) {
@@ -31,6 +30,7 @@ function db_sort_numeric_minfirst(indices, colidx) {
     });
     return indices;
 }
+
 
 function db_sort_numeric_maxfirst(indices, colidx) {
     indices.sort(function (a, b) {
@@ -67,3 +67,22 @@ function db_uniq_lifter(indices) {
         return e >= 0;
     });
 }
+
+
+// Look up a meet by information.
+// MeetID is not suitable for URLs since it may change on recompilation.
+function db_get_meetid(fed, date, meetname) {
+    for (var i = 0; i < meetdb.data.length; ++i) {
+        var row = meetdb.data[i];
+        if (row[meetdb.FEDERATION] === fed &&
+            row[meetdb.DATE] === date &&
+            row[meetdb.MEETNAME] === meetname)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+// Get an array of indices 

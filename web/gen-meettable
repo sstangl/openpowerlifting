@@ -5,6 +5,7 @@
 #
 
 import bisect
+import html
 import oplcsv
 import sys
 
@@ -74,6 +75,13 @@ def getmonth(m):
     return ''
 
 
+def makemeeturl(fed, date, meetname):
+    fed = html.escape(fed)
+    date = html.escape(date)
+    meetname = html.escape(meetname)
+    return 'meet.html?f=%s&d=%s&n=%s' % (fed, date, meetname)
+
+
 def main():
     csv = oplcsv.Csv(MEETCSV)
 
@@ -140,12 +148,14 @@ def main():
             lastmonth = yrm
         lastmonth = yrm
 
+        meeturl = makemeeturl(row[fedidx], row[dateidx], row[meetnameidx])
+
         print('<tr>')
         print('<td>%s</td>' % row[fedidx])
-        print('<td>%s</td>' % date)
+        print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[townidx])
-        print('<td>%s</td>' % row[meetnameidx])
+        print('<td><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
         print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % lifterhtml)
         print('<td>%s</td>' % bestwilks)

@@ -25,6 +25,7 @@ scripts: builddir
 	cp scripts/database.js ${BUILDDIR}/scripts
 	cp scripts/main-index.js ${BUILDDIR}/scripts
 	cp scripts/main-lifters.js ${BUILDDIR}/scripts
+	cp scripts/main-meet.js ${BUILDDIR}/scripts
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \
@@ -39,6 +40,7 @@ css: builddir
 html: builddir
 	./preprocess-html templates/index.html > ${BUILDDIR}/index.html
 	./preprocess-html templates/lifters.html > ${BUILDDIR}/lifters.html
+	./preprocess-html templates/meet.html > ${BUILDDIR}/meet.html
 	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
 
 images: builddir

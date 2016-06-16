@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Open Powerlifting</title>
+
+    <script src="scripts/openpowerlifting.js"></script>
+    <script src="scripts/meets.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/database.js"></script>
+    <script src="scripts/main-meet.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+    <div class="flexbox">
+#exec python3 gen-header meet
+      <div id="controls"><span id="meet">No meet specified.</span></div>
+      <div id="content"></div>
+    </div>
+  </body>
+</html>
