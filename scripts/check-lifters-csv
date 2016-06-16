@@ -391,6 +391,7 @@ def check_row_total_consistency(row, headers):
         return # Ignore that one RUPC meet that forgot to record what people lifted.
     if abs(squat + bench + deadl - total) > 0.5:
         perror("Total error: Calculated %f, but meet says %f" % (squat+bench+deadl, total))
+        perror(" For row: %s" % row)
 
 
 # Federations calculate Wilks themselves, but have errors.
