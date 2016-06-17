@@ -51,13 +51,13 @@ return {
     
     parseEquipment: function(str) {
         if (str === "Raw")
-            return "R";
+            return "Raw";
         if (str === "Wraps")
-            return "W";
+            return "Wraps";
         if (str === "Single-ply")
-            return "S";
+            return "Single";
         if (str === "Multi-ply")
-            return "M";
+            return "Multi";
         return "";
     },
 
