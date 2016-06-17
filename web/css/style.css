@@ -208,3 +208,13 @@ input[type="checkbox"]:checked + label span {
   font-size: 10pt;
   margin-left: 4px;
 }
+
+div.topbar {
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+}
+
+div.content {
+  padding-top: 82px;
+}

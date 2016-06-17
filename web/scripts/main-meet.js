@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-var contentDiv = document.getElementById('content');
+var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
 
 // TODO: Actually have a toggle for this.
