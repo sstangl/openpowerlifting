@@ -18,6 +18,7 @@ function weight(kg) {
     return String(Math.round(kg * 2.2042262 * 100) / 100);
 }
 
+// FIXME: Move to common code.
 function parseWeightClass(x) {
     if (x === undefined)
         return '';
@@ -26,38 +27,6 @@ function parseWeightClass(x) {
     if (typeof x === 'number')
         return String(Math.round(common.kg2lbs(x)));
     return String(Math.round(common.kg2lbs(x.split('+')[0]))) + '+';
-}
-
-
-function number(num) {
-    if (num === undefined)
-        return '';
-    return String(num);
-}
-
-
-function string(str) {
-    if (str === undefined)
-        return '';
-    return str;
-}
-
-
-function maketd(str) {
-    var td = document.createElement('td');
-    td.appendChild(document.createTextNode(str));
-    return td;
-}
-
-
-function weightMax(row, cola, colb) {
-    var a = row[cola];
-    var b = row[colb];
-    if (a === undefined)
-        return weight(b);
-    if (b === undefined)
-        return weight(a);
-    return weight(Math.max(a,b));
 }
 
 
@@ -90,59 +59,16 @@ function getIndices(query) {
 }
 
 
-// FIXME: Need to share makeItem, makeLiftersUrl, and makeMeetUrl with common.js.
-function makeMeetUrl(fed, date, meetname) {
-    return "meet.html?f=" + escape(fed) +
-                    "&d=" + escape(date) +
-                    "&n=" + escape(meetname);
-}
-
-
-function makeItem(row, index) {
-    var meetrow = meetdb.data[row[opldb.MEETID]];
-    var name = row[opldb.NAME];
-
-    var country = common.string(meetrow[meetdb.MEETCOUNTRY]);
-    var state = common.string(meetrow[meetdb.MEETSTATE]);
-
-    var location = country;
-    if (country && state) {
-        location = location + "-" + state;
-    }
-
-    var date = common.string(meetrow[meetdb.DATE]);
-    var fed = common.string(meetrow[meetdb.FEDERATION]);
-    var meetname = common.string(meetrow[meetdb.MEETNAME]);
-
-    return {
-        place:       common.string(row[opldb.PLACE]),
-        name:        common.string(name),
-        fed:         fed,
-        date:        '<a href="' + makeMeetUrl(fed,date,meetname) + '">' + date + '</a>',
-        location:    location,
-        division:    common.string(row[opldb.DIVISION]),
-        meetname:    '<a href="' + makeMeetUrl(fed,date,meetname) + '">' + meetname + '</a>',
-        sex:         common.string(row[opldb.SEX]),
-        age:         common.string(row[opldb.AGE]),
-        equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
-        bw:          weight(row[opldb.BODYWEIGHTKG]),
-        weightclass: parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
-        bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
-        deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
-        total:       weight(row[opldb.TOTALKG]),
-        wilks:       common.number(row[opldb.WILKS]),
-        mcculloch:   common.number(row[opldb.MCCULLOCH])
-    };
-}
-
-
 function makeDataProvider(query) {
     var indices = getIndices(query);
 
     return {
-        getLength: function () { return indices.length; },
-        getItem: function(index) { return makeItem(opldb.data[indices[index]], index); }
+        getLength: function () {
+            return indices.length;
+        },
+        getItem: function(index) {
+            return common.makeRowObj(opldb.data[indices[index]], index);
+        }
     };
 }
 

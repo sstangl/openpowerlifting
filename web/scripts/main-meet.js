@@ -166,7 +166,7 @@ function buildtable(indices) {
 
         var rowobj = makeItem(opldb.data[indices[i]]);
         appendtd(tr, String(i+1));
-        appendtdlink(tr, rowobj.name, common.makeLiftersUrl(rowobj));
+        appendtdlink(tr, rowobj.name, common.makeLiftersUrl(rowobj.name));
         appendtd(tr, rowobj.division);
         appendtd(tr, rowobj.sex);
         appendtd(tr, rowobj.age);

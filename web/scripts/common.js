@@ -27,14 +27,56 @@ return {
         return obj;
     },
 
-    makeLiftersUrl: function(rowobj) {
-        return "lifters.html?q=" + escape(rowobj.name);
+    // Return an object with properties set as strings to be presented.
+    makeRowObj(row, index) {
+        var meetrow = meetdb.data[row[opldb.MEETID]];
+
+        var country = this.string(meetrow[meetdb.MEETCOUNTRY]);
+        var state = this.string(meetrow[meetdb.MEETSTATE]);
+        var location = country;
+        if (country && state) {
+            location = location + "-" + state;
+        }
+
+        var name = row[opldb.NAME];
+        var fed = this.string(meetrow[meetdb.FEDERATION]);
+        var date = this.string(meetrow[meetdb.DATE]);
+        var meetname = this.string(meetrow[meetdb.MEETNAME]);
+        var meeturl = this.makeMeetUrl(fed, date, meetname);
+
+        return {
+            rank:        index+1,
+            place:       this.string(row[opldb.PLACE]),
+            searchname:  name.toLowerCase(),
+            name:        '<a href="' + this.makeLiftersUrl(name) + '">' + name + '</a>',
+            fed:         fed,
+            date:        '<a href="' + meeturl + '">' + date + '</a>',
+            location:    location,
+            division:    this.string(row[opldb.DIVISION]),
+            meetname:    '<a href="' + meeturl + '">' + meetname + '</a>',
+            sex:         this.string(row[opldb.SEX]),
+            age:         this.string(row[opldb.AGE]),
+            equip:       this.parseEquipment(row[opldb.EQUIPMENT]),
+            bw:          weight(row[opldb.BODYWEIGHTKG]), // TODO: this.weight()
+            weightclass: parseWeightClass(row[opldb.WEIGHTCLASSKG]), // TODO: this.parseWeightClass()
+            squat:       this.weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
+            bench:       this.weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
+            deadlift:    this.weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
+            total:       weight(row[opldb.TOTALKG]), // TODO: this.weight()
+            wilks:       this.number(row[opldb.WILKS]),
+            mcculloch:   this.number(row[opldb.MCCULLOCH])
+        };
+
     },
 
-    makeMeetUrl: function(rowobj) {
-        return "meet.html?f=" + escape(rowobj.fed) +
-                        "&d=" + escape(rowobj.date) +
-                        "&n=" + escape(rowobj.meetname);
+    makeLiftersUrl: function(name) {
+        return "lifters.html?q=" + escape(name);
+    },
+
+    makeMeetUrl: function(fed, date, meetname) {
+        return "meet.html?f=" + escape(fed) +
+                        "&d=" + escape(date) +
+                        "&n=" + escape(meetname);
     },
     
     number: function(num) {
@@ -47,6 +89,17 @@ return {
         if (str === undefined)
             return '';
         return str;
+    },
+
+    // FIXME: Requires the enclosing page to define a weight() global.
+    weightMax: function(row, cola, colb) {
+        var a = row[cola];
+        var b = row[colb];
+        if (a === undefined)
+            return weight(b);
+        if (b === undefined)
+            return weight(a);
+        return weight(Math.max(a,b));
     },
     
     parseEquipment: function(str) {
