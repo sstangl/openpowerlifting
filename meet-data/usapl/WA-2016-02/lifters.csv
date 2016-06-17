@@ -2,17 +2,17 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,Team,State,BodyweightKg,Sq
 1,M,Mitchell Crowe,B,M2,93,Single-ply,,WA,91,,,,,150,-160,-165,150.0,,,,,150
 1,M,Paul Bernier,B,R-M3,120,Raw,,ID,112.3,,,,,-100,110,-120,110.0,,,,,110
 1,M,Ray Horak,B,R-M4,120,Raw,,WA,106.8,,,,,115,-117.5,117.5,117.5,,,,,117.5
-1,M,Zeff Gillespie,B,R-MO,83,Single-ply,,WA,77.9,,,,,110,122.5,-130,122.5,,,,,122.5
-1,M,Nicolas Jacobs,B,R-MO,105,Single-ply,,WA,96.6,,,,,135,142.5,146,146.0,,,,,146
+1,M,Zeff Gillespie,B,R-MO,83,Raw,,WA,77.9,,,,,110,122.5,-130,122.5,,,,,122.5
+1,M,Nicolas Jacobs,B,R-MO,105,Raw,,WA,96.6,,,,,135,142.5,146,146.0,,,,,146
 1,M,Philip Horner,B,R-O,59,Raw,,WA,56.8,,,,,-82.5,87.5,90,90.0,,,,,90
 1,M,Joel Woodard,B,R-O,93,Raw,,WA,88.2,,,,,160,167.5,172.5,172.5,,,,,172.5
 2,M,Mitchell Crowe,B,R-O,93,Raw,,WA,91,,,,,150,-160,-165,150.0,,,,,150
 1,F,Marie Brenden,B,R-M2,72,Raw,,WA,69.5,,,,,60,67.5,-75,67.5,,,,,67.5
 1,F,Marie Brenden,B,R-O,72,Raw,,WA,69.5,,,,,60,67.5,-75,67.5,,,,,67.5
 1,M,Paul Bernier,D,R-M3,120,Raw,,ID,112.3,,,,,,,,,145,,,145.0,145
-1,M,Troy Fryar,D,R-MM,105,Single-ply,,WA,104.6,,,,,,,,,260,285,295,295.0,295
-1,M,Zeff Gillespie,D,R-MO,83,Single-ply,,WA,77.9,,,,,,,,,-177.5,190,205,205.0,205
-1,M,Nicolas Jacobs,D,R-MO,105,Single-ply,,WA,96.6,,,,,,,,,195,-212.5,212.5,212.5,212.5
+1,M,Troy Fryar,D,R-MM,105,Raw,,WA,104.6,,,,,,,,,260,285,295,295.0,295
+1,M,Zeff Gillespie,D,R-MO,83,Raw,,WA,77.9,,,,,,,,,-177.5,190,205,205.0,205
+1,M,Nicolas Jacobs,D,R-MO,105,Raw,,WA,96.6,,,,,,,,,195,-212.5,212.5,212.5,212.5
 1,M,Myles Bogar,D,R-O,120,Raw,,ID,113.8,,,,,,,,,265,285,302.5,302.5,302.5
 1,M,James Crabtree,D,R-O,120+,Raw,,WA,122.5,,,,,,,,,-230,230,-245,230.0,230
 1,M,Caelob Ratliff,D,R-T1,66,Raw,,ID,64.3,,,,,,,,,150,155,-157.5,155.0,155
@@ -41,8 +41,8 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,Team,State,BodyweightKg,Sq
 1,M,Michael Lamoureux,SBD,R-M2,105,Raw,,WA,98.3,165,180,195,195.0,145,160,-165,160.0,210,227.5,232.5,232.5,587.5
 1,M,Quentin Rhoades,SBD,R-M2,120,Raw,,MT,109.2,-205,205,-227.5,205.0,110,115,-117.5,115.0,220,230,250,250.0,570
 DQ,M,Patrick White,SBD,R-M3,93,Raw,,WA,88.2,-82.5,-90,-97.5,,50,55,62.5,62.5,130,137.5,142.5,142.5,
-1,M,Zeff Gillespie,SBD,R-MO,83,Single-ply,,WA,77.9,157.5,172.5,182.5,182.5,110,122.5,-130,122.5,-177.5,190,205,205.0,510
-1,M,Nicolas Jacobs,SBD,R-MO,105,Single-ply,,WA,96.6,-175,175,-190,175.0,135,142.5,146,146.0,195,-212.5,212.5,212.5,533.5
+1,M,Zeff Gillespie,SBD,R-MO,83,Raw,,WA,77.9,157.5,172.5,182.5,182.5,110,122.5,-130,122.5,-177.5,190,205,205.0,510
+1,M,Nicolas Jacobs,SBD,R-MO,105,Raw,,WA,96.6,-175,175,-190,175.0,135,142.5,146,146.0,195,-212.5,212.5,212.5,533.5
 1,M,Choong Min Um,SBD,R-O,59,Raw,,WA,58.1,110,120,122.5,122.5,65,-70,72.5,72.5,115,125,130,130.0,325
 1,M,Sean Everett,SBD,R-O,74,Raw,,WA,74,-160,160,170,170.0,110,-122.5,-122.5,110.0,190,210,215,215.0,495
 2,M,Michael Reggio,SBD,R-O,74,Raw,,WA,72.6,152.5,162.5,-167.5,162.5,80,92.5,-97.5,92.5,202.5,-212.5,220,220.0,475
