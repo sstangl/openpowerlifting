@@ -201,7 +201,7 @@ function search() {
     var rowid = _search_from(query, startrowid);
 
     // If nothing was found in "next" mode, try searching again from the top.
-    if (startrowid > 0 && rowid == -1) {
+    if (startrowid > 0 && rowid === -1) {
         rowid = _search_from(query, 0);
     }
 

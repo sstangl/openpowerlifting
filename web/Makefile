@@ -26,6 +26,7 @@ scripts: builddir
 	cp scripts/main-index.js ${BUILDDIR}/scripts
 	cp scripts/main-lifters.js ${BUILDDIR}/scripts
 	cp scripts/main-meet.js ${BUILDDIR}/scripts
+	cp scripts/main-meetlist.js ${BUILDDIR}/scripts
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \

@@ -155,7 +155,7 @@ def main():
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)
         print('<td>%s</td>' % row[townidx])
-        print('<td><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
+        print('<td class="meetname"><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
         print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % lifterhtml)
         print('<td>%s</td>' % bestwilks)

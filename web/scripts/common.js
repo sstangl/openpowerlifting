@@ -173,9 +173,41 @@ return {
                 console.log("Unknown: gotSortFn(" + colid + ", " + sortAsc + ")");
                 return undefined;
         }
-    }
+    },
 
+    // Adapted from SlickGrid's flashCell().
+	flashRow: function(tr) {
+		function toggleCellClass(node, times) {
+			if (times === 0)
+				return;
+			setTimeout(
+				function () {
+                    var classes = node.getAttribute('class');
+                    if (!classes)
+                        classes = '';
 
+                    // Simple toggleClass() since no JQuery in some files.
+                    if (times % 2 == 0)
+                        classes += ' searchflashing ';
+                    else
+                        classes = classes.replace(' searchflashing ','');
+
+					node.setAttribute('class', classes);
+					toggleCellClass(node, times - 1);
+				},
+				100 // ms
+			);
+		}
+
+        // The flashing must be done by setting <td> classes, since the <tr>
+        // nth-line-color CSS overrules any flashing we might add.
+        for (var i = 0; i < tr.childNodes.length; ++i) {
+            // Only consider element nodes.
+            if (tr.childNodes[i].nodeType === 1) {
+		        toggleCellClass(tr.childNodes[i], 4);
+            }
+        }
+	}
 };
 
 })();
