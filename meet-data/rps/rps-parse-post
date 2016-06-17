@@ -18,6 +18,7 @@ ${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
 
 # Convert to kg.
 ${REPOSCRIPTDIR}/csv-tokg lifters.csv
+${REPOSCRIPTDIR}/fix-weightclasses lifters.csv
 
 # Show any warnings.
 ${REPOSCRIPTDIR}/check-lifters-csv lifters.csv
