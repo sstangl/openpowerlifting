@@ -28,7 +28,7 @@ return {
     },
 
     // Return an object with properties set as strings to be presented.
-    makeRowObj(row, index) {
+    makeRowObj: function(row, index) {
         var meetrow = meetdb.data[row[opldb.MEETID]];
 
         var country = this.string(meetrow[meetdb.MEETCOUNTRY]);
