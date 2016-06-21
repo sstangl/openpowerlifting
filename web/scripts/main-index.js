@@ -338,6 +338,7 @@ function onload() {
         redraw();
     });
 
+    /*
     // From a post on StackOverflow.
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -347,7 +348,9 @@ function onload() {
     // Hopefully this is a simple way for people to see that the
     // site is changing.
     var numentries = document.getElementById("numentries");
+    // FIXME: innerText is read-only on Safari.
     numentries.innerText = "(" + numberWithCommas(opldb.data.length) + " Entries)";
+    */
 
     search();
 }
