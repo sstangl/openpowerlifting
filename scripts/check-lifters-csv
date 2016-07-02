@@ -490,3 +490,6 @@ if __name__ == '__main__':
             if 'lifters.csv' in files:
                 lifterspath = dirname + os.sep + 'lifters.csv'
                 check(sys.argv[0], lifterspath)
+
+                if not 'meet.csv' in files:
+                    perror('Missing meet.csv')
