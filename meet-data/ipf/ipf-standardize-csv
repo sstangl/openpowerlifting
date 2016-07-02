@@ -66,6 +66,7 @@ def remove_non_lifter_rows(csv):
 
 def fixup_lift(csv, fieldname):
     idx = csv.fieldnames.index(fieldname)
+    placeidx = csv.fieldnames.index('Place')
 
     for row in csv.rows:
         amount = row[idx]
@@ -76,6 +77,11 @@ def fixup_lift(csv, fieldname):
             amount = amount.split('-')[0]
 
         if amount == 'X' or amount == 'DSQ' or amount == 'TD':
+            amount = ''
+
+        # Special handling for disqualification due to doping.
+        if amount == 'DD':
+            row[placeidx] = 'DD'
             amount = ''
 
         row[idx] = amount
