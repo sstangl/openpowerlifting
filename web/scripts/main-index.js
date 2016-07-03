@@ -125,7 +125,11 @@ function getIndices() {
 
         if (selectonfed) {
             var meetrow = meetdb.data[row[opldb.MEETID]];
-            if (meetrow[meetdb.FEDERATION] !== fed) {
+            if (fed === "tested") {
+                if (common.testedFederationList.indexOf(meetrow[meetdb.FEDERATION]) < 0) {
+                    return false;
+                }
+            } else if (meetrow[meetdb.FEDERATION] !== fed) {
                 return false;
             }
         }

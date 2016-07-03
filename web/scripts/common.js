@@ -207,7 +207,14 @@ return {
 		        toggleCellClass(tr.childNodes[i], 4);
             }
         }
-	}
+	},
+
+    // A list of federations using drug-testing.
+    testedFederationList: [
+        'IPF',
+        'PA',
+        'USAPL'
+    ]
 };
 
 })();
