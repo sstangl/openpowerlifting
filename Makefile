@@ -34,4 +34,5 @@ clean:
 	rm -rf 'scripts/__pycache__'
 	rm -rf 'meet-data/rps/__pycache__'
 	rm -rf 'meet-data/usapl/__pycache__'
+	rm -rf 'meet-data/ipf/__pycache__'
 	$(MAKE) -C web clean
