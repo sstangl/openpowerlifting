@@ -15,7 +15,7 @@ function weight(kg) {
         return '';
     if (!usingLbs)
         return String(kg);
-    return String(Math.round(kg * 2.2042262 * 100) / 100);
+    return String(Math.round(kg * 2.20462262 * 100) / 100);
 }
 
 // FIXME: Move to common code.

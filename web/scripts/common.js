@@ -6,7 +6,7 @@ var common = (function () {
 
 return {
     kg2lbs: function(kg) {
-        return Math.round(kg * 2.2042262 * 100) / 100;
+        return Math.round(kg * 2.20462262 * 100) / 100;
     },
     
     // Roughly parse index.html?q=foo&a=bar into an object {q: foo, a: bar}.
