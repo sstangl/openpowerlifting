@@ -243,7 +243,7 @@ def fixsex(csv):
         s = row[idx].lower()
         if s == 'male' or s == 'm' or 'men' in s:
             x = 'M'
-        elif s == 'female' or s == 'f' or 'women' in s:
+        elif s == 'female' or s == 'f' or 'women' in s or s == 'femaie':
             x = 'F'
         else:
             error("Teach fixsex() what to do with '%s'" % s)
@@ -310,6 +310,8 @@ def fixclass(csv):
         elif s == 'police pro' or s == 'polce pro' or s == 'pol pro':
             x = 'Police Pro'
         elif s == 'military pro' or s == 'mil pro' or s == 'pro mil' or s == 'militarypro':
+            x = 'Military Pro'
+        elif s == 'mil p':
             x = 'Military Pro'
         elif s == 'crossfit' or s == 'cross fit':
             x = 'Crossfit'
