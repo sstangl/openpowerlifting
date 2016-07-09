@@ -142,6 +142,8 @@ def standardize_fieldnames(csv):
         elif s == 'deadlift4lbs':
             x = 'Deadlift4LBS'
 
+        elif s == 'event':
+            x = 'Event'
         elif s == 'sex':
             x = 'Sex'
         elif s == 'class':
