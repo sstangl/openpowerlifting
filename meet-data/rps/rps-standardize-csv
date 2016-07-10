@@ -199,7 +199,7 @@ def fixequipment(csv):
         # This one below looks the same, but actually has some unicode BS going on.
         elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
             x = 'Raw'
-        elif s == 'raw – u' or 'classic' in s:
+        elif s == 'raw – u' or 'classic' in s or s == 'raw calssic':
             x = 'Raw'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
@@ -313,7 +313,7 @@ def fixclass(csv):
             x = 'Police Pro'
         elif s == 'military pro' or s == 'mil pro' or s == 'pro mil' or s == 'militarypro':
             x = 'Military Pro'
-        elif s == 'mil p':
+        elif s == 'mil p' or s == 'pro military':
             x = 'Military Pro'
         elif s == 'crossfit' or s == 'cross fit':
             x = 'Crossfit'
