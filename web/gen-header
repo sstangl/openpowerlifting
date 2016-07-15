@@ -5,10 +5,23 @@
 # Argument must be one of the site parts.
 #
 
+import locale
+import oplcsv
 import sys
 
 
+def showdbstats():
+    locale.setlocale(locale.LC_ALL, 'en_US')
+    csv = oplcsv.Csv('../build/openpowerlifting.csv')
+    meets = oplcsv.Csv('../build/meets.csv')
+
+    entries = locale.format('%d', len(csv.rows), grouping=True)
+
+    print(' (%s Entries)' % (entries))
+
+
 def main(tabname):
+
     print('<div id="header">')
     print('OpenPowerlifting &mdash;')
 
@@ -25,6 +38,9 @@ def main(tabname):
         print('<a href="meetlist.html">Meets</a>')
 
     print('<a href="https://github.com/sstangl/openpowerlifting">Source</a>')
+
+    showdbstats()
+
     print('</div>')
 
 
