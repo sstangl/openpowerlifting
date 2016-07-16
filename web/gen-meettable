@@ -100,9 +100,10 @@ def main():
     liftersmeetidx = lifters.fieldnames.index('MeetID')
     lifterswilksidx = lifters.fieldnames.index('Wilks')
     liftersnameidx = lifters.fieldnames.index('Name')
+    lifterseqidx = lifters.fieldnames.index('Equipment')
 
     columns = ["Federation", "Date", "Location", "Town", "Name", "Lifters",
-               "Best Lifter", "Best Wilks"]
+               "Best Raw Lifter", "Raw Wilks", "Best Geared Lifter", "Geared Wilks"]
 
     print('<table>')
 
@@ -120,6 +121,12 @@ def main():
         results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
 
         # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).
+        rawlifters = list(filter(lambda x : x[lifterseqidx] == 'Raw' or
+                                       x[lifterseqidx] == 'Wraps',
+                                 results))
+        gearedlifters = list(filter(lambda x : x[lifterseqidx] == 'Single-ply' or
+                                          x[lifterseqidx] == 'Multi-ply',
+                                    results))
 
         # Lifters who entered multiple events should only count once.
         names = []
@@ -131,12 +138,23 @@ def main():
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
 
-        bestlifter = results[0][liftersnameidx]
-        bestwilks = results[0][lifterswilksidx]
-        if not bestwilks:
-            lifterhtml = ''
+        if len(rawlifters) > 0:
+            bestrawlifter = rawlifters[0][liftersnameidx]
+            bestrawwilks = rawlifters[0][lifterswilksidx]
+            rawlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestrawlifter, bestrawlifter)
         else:
-            lifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestlifter, bestlifter)
+            bestrawlifter = ''
+            bestrawwilks = ''
+            rawlifterhtml = ''
+
+        if len(gearedlifters) > 0:
+            bestgearedlifter = gearedlifters[0][liftersnameidx]
+            bestgearedwilks = gearedlifters[0][lifterswilksidx]
+            gearedlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestgearedlifter, bestgearedlifter)
+        else:
+            bestgearedlifter = ''
+            bestgearedwilks = ''
+            gearedlifterhtml = ''
 
         # If the month changed, emit a header row.
         date = row[dateidx]
@@ -157,8 +175,10 @@ def main():
         print('<td>%s</td>' % row[townidx])
         print('<td class="meetname"><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
         print('<td>%d</td>' % len(names))
-        print('<td>%s</td>' % lifterhtml)
-        print('<td>%s</td>' % bestwilks)
+        print('<td>%s</td>' % rawlifterhtml)
+        print('<td>%s</td>' % bestrawwilks)
+        print('<td>%s</td>' % gearedlifterhtml)
+        print('<td>%s</td>' % bestgearedwilks)
         print('</tr>')
 
     print('</tbody>')
