@@ -5,6 +5,7 @@
 # Argument must be one of the site parts.
 #
 
+import datetime
 import locale
 import oplcsv
 import sys
@@ -16,8 +17,9 @@ def showdbstats():
     meets = oplcsv.Csv('../build/meets.csv')
 
     entries = locale.format('%d', len(csv.rows), grouping=True)
+    compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print(' (%s Entries)' % (entries))
+    print(' (%s Entries, Updated %s)' % (entries, compiledate))
 
 
 def main(tabname):
