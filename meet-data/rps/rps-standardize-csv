@@ -126,9 +126,15 @@ def standardize_fieldnames(csv):
             x = 'BodyweightLBS'
         elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart' or s == 'sq':
             x = 'BestSquatLBS'
+        elif s == 'squat lbs' or s == 'squatlbs':
+            x = 'BestSquatLBS'
         elif s == 'bench' or s == 'bestbenchlbs' or s == 'bp':
             x = 'BestBenchLBS'
+        elif s == 'bench lbs' or s == 'benchlbs':
+            x = 'BestBenchLBS'
         elif s == 'deadlift' or s == 'bestdeadliftlbs' or s == 'dl':
+            x = 'BestDeadliftLBS'
+        elif s == 'deadlift lbs' or s == 'deadliftlbs':
             x = 'BestDeadliftLBS'
         elif s == 'total' or s == 'totallbs':
             x = 'TotalLBS'
