@@ -22,6 +22,12 @@ class Csv:
         for row in self.rows:
             row.append('')
 
+    def append_columns(self, namelist):
+        self.fieldnames += namelist
+        addend = ['' for x in namelist]
+        for row in self.rows:
+            row += addend
+
     def insert_column(self, index, name):
         self.fieldnames.insert(index, name)
         for row in self.rows:
