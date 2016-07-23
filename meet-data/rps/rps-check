@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# RPS posts meets to a page separated by year.
+# Each meet has a distinct URL, which is saved in the repo.
+#
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+# URL needs updating every year.
+MEETSURL = "http://meets.revolutionpowerlifting.com/results/2016-meet-results/"
+if datetime.datetime.now().strftime("%Y") != "2016":
+    print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def gethtml():
+    with urllib.request.urlopen(MEETSURL) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    meetul = soup.find("ul", {"class": "display-pages-listing"})
+
+    urls = []
+    for a in meetul.find_all('a'):
+        urls.append(a['href'])
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                urls.append(fd.readline().strip())
+    return urls
+
+
+def main():
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(m)
+
+if __name__ == '__main__':
+    main()
