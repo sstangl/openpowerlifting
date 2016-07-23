@@ -1,54 +1,223 @@
-Sex,Equipment,Division,WeightClassKg,State,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
-F,Wraps,Amateur Mast 45-49,44,VT,Denise Bloom,43.45,68.04,43.09,81.65,192.78
-F,Raw,Amateur Open,44,VT,Victoria Hastings,43.00,70.31,45.36,120.20,235.87
-F,Raw,Amateur Open,56,VT,Kaelee Mohoney,52.53,88.45,54.43,113.40,256.28
-F,Raw,Amateur Mast 45-49,60,NH,Alena Pardoe,58.97,90.72,63.50,113.40,267.62
-F,Wraps,Amateur Teen 16-17,60,VT,Emily Antonivich,59.15,88.45,47.63,83.91,219.99
-F,Wraps,Pro Mast 40-44,67.5,VT,Tammy Howard,66.59,136.08,72.57,136.08,344.73
-F,Wraps,Amateur Mast 55-59,67.5,NH,Valerie Thompson,66.95,95.25,47.63,106.59,249.48
-F,Raw,Amateur Open,67.5,MA,Kelly Lemire,66.13,120.20,68.04,151.95,340.19
-F,Wraps,Amateur Open,67.5,VT,Erika Pierce,63.97,102.06,49.90,136.08,288.03
-F,Wraps,Amateur Open,67.5,VT,Nancy Powers,64.41,95.25,52.16,136.08,283.50
-F,Raw,Amateur Sub Mast,67.5,MA,Julie Armstrong,66.86,68.04,43.09,99.79,210.92
-F,Wraps,Amateur Open,82.5,RI,Mackenzie Richter,81.83,102.06,52.16,113.40,267.62
-M,Raw,Amateur Teen 14-15,67.5,MA,Saad Saleem,63.78,72.57,52.16,120.20,244.94
-M,Raw,Amateur Jun. 20-23,75,MA,Brian Owczarski,73.75,185.97,136.08,229.06,551.11
-M,Wraps,Amateur Mast 70-74,75,NH,Roger Penland,74.93,61.23,38.56,92.99,192.78
-M,Wraps,Amateur Mast 80-84,75,VT,Chuck McCleary,73.75,81.65,43.09,120.20,244.94
-M,Wraps,Amateur Teen 16-17,75,VT,Parker Day,70.76,120.20,83.91,129.27,333.39
-M,Raw,Amateur Jun. 20-23,82.5,CT,Benjamin Duell,80.29,199.58,127.01,242.67,569.26
-M,Wraps,Amateur Jun. 20-23,82.5,NY,Bryan Sherman,81.01,222.26,140.61,249.48,612.35
-M,Wraps,Amateur Mast 75-79,82.5,NH,Leon Pelletier,75.75,104.33,72.57,149.69,326.59
-M,Wraps,Amateur Mast 75-79,82.5,NH,William Secord,80.56,74.84,47.63,113.40,235.87
-M,Raw,Amateur Jun. 20-23,90,MA,Nick Guimaraes,89.54,170.10,92.99,208.65,471.74
-M,Wraps,Amateur Jun. 20-23,90,NY,Dustin Wilson,89.09,183.70,127.01,274.42,585.13
-M,Wraps,Amateur Mast 45-49,90,VT,Darrin Clement,89.90,161.03,113.40,199.58,474.00
-M,Wraps,Amateur Mast 50-54,90,NH,Michael Crate,85.37,131.54,92.99,149.69,374.21
-M,Wraps,Amateur Mast 70-74,90,NH,David Brooker,87.00,88.45,49.90,113.40,251.74
-M,Wraps,Amateur Mast 85-89,90,NH,Jack Stinson,88.36,70.31,63.50,102.06,235.87
-M,Raw,Amateur Open,90,NH,Bill Ryerson,87.54,192.78,111.13,260.82,564.72
-M,Wraps,Pro Open,90,VT,Aaron Fondry,89.18,249.48,142.88,297.10,689.46
-M,Wraps,Police-Fire Amateur Open,90,VT,Damon Angelo,88.45,167.83,154.22,217.72,539.77
-M,Wraps,Amateur Sub Mast,90,VT,Jim Fog,88.27,190.51,117.93,226.80,535.24
-M,Wraps,Amateur Sub Mast,90,NH,Stephen Boyer,87.72,192.78,122.47,229.06,544.31
-M,Wraps,Amateur Teen 18-19,90,CT,Dylan Krivickas,89.90,199.58,131.54,233.60,564.72
-M,Wraps,Amateur Jun. 20-23,100,VT,Bryan Crandall,96.25,190.51,136.08,226.80,553.38
-M,Wraps,Amateur Jun 18-19,100,VT,Mack Tomasi,95.07,213.19,151.95,226.80,591.94
-M,Wraps,Amateur Mast 50-54,100,VT,Clark Atwell,99.06,247.21,170.10,272.16,689.46
-M,Raw,Pro Mast 60-64,100,MA,David D'Alessandro,94.44,113.40,104.33,149.69,367.41
-M,Wraps,Pro Open,100,NH,Nicholas Perrault,99.70,269.89,158.76,272.16,700.80
-M,Wraps,Amateur Open,110,NH,Donnie Ross,107.59,229.06,151.95,276.69,657.71
-M,Wraps,Police Amateur Open,110,NH,Donnie Ross,107.59,229.06,151.95,276.69,657.71
-M,Wraps,Amateur Open,110,NH,Matthew Moran,108.05,238.14,158.76,272.16,669.05
-M,Raw,Pro Mast 50-54,125,HW,Damon Senaha,120.38,147.42,102.06,210.92,460.40
-M,Wraps,Amateur Mast 70-74,125,NH,Carl Wallin,118.12,129.27,70.31,190.51,390.09
-M,Wraps,Amateur Open,125,VT,Brandon Rolls,118.84,276.69,172.37,301.64,750.70
-M,Raw,Amateur Mast 45-49,90,NH,James LeClerc,87.91,,181.44,,181.44
-M,Raw,Police-Fire Amateur Mast 55-59,100,NY,Dan Welch,99.70,,149.69,,149.69
-M,Raw,Amateur Mast 90-94,60,NH,Peter Aptakin,59.96,,29.48,63.50,92.99
-M,Wraps,Amateur Teen 18-19,82.5,NY,Christopher Persons,82.19,,106.59,190.51,297.10
-M,Wraps,Amateur Mast 75-79,90,NH,Caleb Wolfe,85.91,,63.50,136.08,199.58
-M,Wraps,Amateur Mast 75-79,100,NY,David Shepherd,98.79,,92.99,206.38,299.37
-M,Raw,Amateur Open,90,NY,Nick Moffit,87.09,,,199.58,199.58
-M,Raw,Amateur Jun 20-23,100,VT,Cody Begnoche,94.62,,,235.87,235.87
-M,Raw,Amateur Jun 20-23,140,VT,Mike Scott,137.53,,,258.55,258.55
+Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
+F,Wraps,Amateur Junior,48,Marilu Solares,46.08,92.99,45.36,108.86,247.21
+F,Raw,Amateur Open,52,Lisa Tran,49.99,83.91,34.02,102.06,219.99
+F,Raw,Amateur Master 50-54,56,Sharon Fillmore,55.16,72.57,54.43,90.72,217.72
+F,Raw,Amateur Open,56,Sharon Fillmore,55.16,72.57,54.43,90.72,217.72
+F,Raw,Amateur Open,56,Shannon Schriver,55.61,79.38,56.70,129.27,265.35
+F,Raw,Amateur Open,56,Nicholl Kuhns,55.16,90.72,56.70,136.08,283.50
+F,Raw,Amateur Teen 18-19,56,Alice MacLaren,54.88,92.99,56.70,131.54,281.23
+F,Wraps,Amateur Master 45-49,56,Patti Coates,53.34,92.99,47.63,120.20,260.82
+F,Wraps,Amateur Master 45-49,56,Shira Bardfield,55.88,108.86,49.90,102.06,260.82
+F,Wraps,Amateur Open,56,Ling Phan,54.43,140.61,58.97,122.47,322.05
+F,Raw,Amateur Submaster,60,Shera Chase,59.60,79.38,49.90,115.67,244.94
+F,Wraps,Amateur Junior,60,Deshindri Natalia,58.24,104.33,43.09,129.27,276.69
+F,Wraps,Amateur Junior,60,Kendra Saffell,59.24,108.86,65.77,129.27,303.91
+F,Wraps,Amateur Teen 18-19,60,Kelsey Jordan,59.15,102.06,54.43,136.08,292.57
+F,Wraps,Pro Junior,60,Amanda Meyer,58.79,154.22,74.84,158.76,387.82
+F,Single-ply,Amateur Master,60,De'Borah Better,56.79,,,,
+F,Raw,Amateur Junior,67.5,Julia Bachman,66.95,83.91,54.43,102.06,240.40
+F,Raw,Amateur Junior,67.5,Amy Miller,66.22,95.25,34.02,122.47,251.74
+F,Raw,Amateur Master,67.5,Ruth Golden,63.50,49.90,,,
+F,Raw,Amateur Open,67.5,Catherine DeMartino,66.50,106.59,77.11,131.54,315.25
+F,Wraps,Amateur Open,67.5,Jewel Alloway,63.87,74.84,43.09,115.67,233.60
+F,Wraps,Amateur Submaster,67.5,Tiffany Martin,65.14,124.74,47.63,113.40,285.76
+F,Raw,Amateur Junior,75,Jessica Biemiller,68.40,97.52,68.04,117.93,283.50
+F,Raw,Amateur Open,75,Katie Bifano,71.94,97.52,58.97,127.01,283.50
+F,Raw,Amateur Open,75,Jessica Banotai,69.04,124.74,63.50,124.74,312.98
+F,Raw,Pro Master 45-49,75,Cynthia Line,70.76,129.27,72.57,151.95,353.80
+F,Raw,Pro Open,75,Cynthia Line,70.76,129.27,72.57,151.95,353.80
+F,Wraps,Pro Open,75,Sasha Stoddard,71.58,158.76,65.77,142.88,367.41
+F,Wraps,Pro Open,75,Amanda Pridgen,73.84,165.56,79.38,181.44,426.38
+F,Wraps,Pro submaster,75,Sasha Stoddard,71.58,158.76,65.77,142.88,367.41
+F,Raw,Amateur Master 50-54,82.5,Denise Demkowicz,79.83,111.13,54.43,129.27,294.84
+F,Raw,Amateur Open,82.5,Stephanie Bucari-Wold,81.19,102.06,65.77,120.20,288.03
+F,Raw,Amateur Open,82.5,Tenley Halaquist,80.01,104.33,54.43,136.08,294.84
+F,Raw,Amateur Open,82.5,Karrie Ann Macknair,81.47,90.72,,,
+F,Raw,Amateur Open,82.5,Heather Derechinsky,81.65,129.27,65.77,149.69,344.73
+F,Raw,Amateur Open,82.5,Erin Cymerman,80.01,120.20,79.38,147.42,347.00
+F,Wraps,Amateur Open,82.5,Kalina Kong,79.83,129.27,77.11,142.88,349.27
+F,Wraps,Amateur Open,90,Shelly Wampole,87.63,102.06,52.16,136.08,290.30
+F,Raw,Amateur Open,100,Mary Weeks,96.89,111.13,47.63,131.54,290.30
+F,Raw,Amateur Open,100,Morgan Brady,96.34,117.93,68.04,138.35,324.32
+F,Wraps,Amateur Open,100,Jamie desRosiers,98.61,158.76,74.84,170.10,403.70
+F,Raw,Amateur Master 40-44,90+,Kimberly Schlappich,128.46,156.49,74.84,129.27,360.61
+M,Raw,Amateur Open,60,David Ly,59.24,133.81,113.40,195.04,442.25
+M,Wraps,Amateur Open,60,Hau Phan,59.78,133.81,81.65,147.42,362.87
+M,Wraps,Amateur Open,60,Daniel Hoang,58.79,147.42,111.13,195.04,453.59
+M,Wraps,Amateur Open,60,Bill Tenerelli,59.96,181.44,129.27,229.06,539.77
+M,Raw,Amateur Teen 14-15,67.5,Remy Figueroa,64.68,113.40,70.31,151.95,335.66
+M,Wraps,Amateur Open,67.5,Dylan Boyer,67.49,204.12,113.40,226.80,544.31
+M,Wraps,Pro Master 45-49,67.5,John Childress,66.59,158.76,108.86,172.37,439.98
+M,Wraps,Pro Open,67.5,John Childress,66.59,158.76,108.86,172.37,439.98
+F,Raw,Amateur Master 45-49,90+,Deana Miller,149.59,,92.99,,92.99
+F,Multi-ply,Amateur Master 45-49,90+,Deana Miller,149.59,,113.40,,113.40
+F,Raw,Amateur Open,90+,Robyn Sheehan,134.99,,,161.03,161.03
+M,Multi-ply,Pro Master 75-79,67.5,Fred Glass,67.13,,,140.61,140.61
+M,Raw,Amateur Master 60-64,67.5,Christ Loutrary,65.41,,,190.51,190.51
+M,Wraps,Amateur Open,82.5,Alan Mui,78.83,176.90,124.74,195.04,496.68
+M,Raw,Pro,90,Brad Parkhurst,90.17,,174.63,,174.63
+M,Raw,Amateur Junior,75,Mitchell Moyer,74.57,149.69,113.40,165.56,428.64
+M,Raw,Amateur Junior,75,Craig Doughty,70.67,154.22,104.33,226.80,485.34
+M,Raw,Pro Junior,75,David McDonald,72.85,210.92,149.69,258.55,619.15
+M,Wraps,Amateur Open,75,Vo Pham,74.57,117.93,88.45,158.76,365.14
+M,Wraps,Amateur Open,75,George Sobetsky,74.98,156.49,129.27,199.58,485.34
+M,Wraps,Amateur Open,75,Brian Shim,74.03,213.19,127.01,238.14,578.33
+M,Raw,Amateur Junior,82.5,Frankie Orrego,81.47,147.42,92.99,174.63,415.04
+M,Raw,Amateur Junior,82.5,Ben Winters,79.83,181.44,124.74,215.46,521.63
+M,Raw,Amateur Open,82.5,Barry Larro,82.01,170.10,115.67,210.92,496.68
+M,Raw,Amateur Open,82.5,Michael Terruso,79.74,190.51,129.27,249.48,569.26
+M,Raw,Amateur Submaster,82.5,J.R. Murray,79.56,165.56,147.42,195.04,508.02
+M,Raw,Pro Open,82.5,Scott Handley,81.37,181.44,142.88,215.46,539.77
+M,Wraps,Amateur Junior,82.5,Cody Burch,75.48,147.42,86.18,188.24,421.84
+M,Wraps,Amateur Junior,82.5,Max Henry,76.29,170.10,111.13,204.12,485.34
+M,Wraps,Amateur Junior,82.5,Long Pham,80.65,176.90,122.47,210.92,510.29
+M,Wraps,Amateur Junior,82.5,Josh Gallone,81.47,199.58,138.35,238.14,576.06
+M,Wraps,Amateur Junior,82.5,Zach McNew,81.37,226.80,138.35,256.28,621.42
+M,Wraps,Amateur Open,82.5,Alan Mui,78.83,176.90,124.74,195.04,496.68
+M,Wraps,Amateur Open,82.5,Zach Michener,80.83,215.46,142.88,238.14,596.47
+M,Wraps,Amateur Teen,82.5,James Abraham,82.46,149.69,92.99,165.56,408.23
+M,Wraps,Pro Junior,82.5,Wyatt Gehring,81.19,249.48,142.88,278.96,671.32
+M,Wraps,Pro Open,82.5,Eric Reyner,77.29,86.18,97.52,183.70,367.41
+M,Multi-ply,Amateur Open,90,Michael Ferguson,87.27,,,,
+M,Raw,Amateur Junior,90,Andrew Donchez,86.36,165.56,129.27,233.60,528.44
+M,Raw,Amateur Junior,90,Max Grable,88.99,222.26,136.08,249.48,607.81
+M,Raw,Amateur Master 50-54,90,Burke Bennett,88.72,136.08,120.20,170.10,426.38
+M,Raw,Amateur Open,90,Jeff Popadines,86.18,147.42,106.59,188.24,442.25
+M,Raw,Amateur Open,90,Brian Eldredge,85.46,183.70,131.54,229.06,544.31
+M,Raw,Amateur Submaster,90,Ryan Johnson,88.00,165.56,124.74,206.38,496.68
+M,Raw,Amateur Teen 18-19,90,Jason Campbell,87.27,167.83,147.42,197.31,512.56
+M,Wraps,Amateur Junior,90,Michael Henry,86.91,176.90,113.40,197.31,487.61
+M,Wraps,Amateur Junior,90,Will Palma,89.27,185.97,138.35,256.28,580.60
+M,Wraps,Amateur Junior,90,Andrew Abt,87.45,226.80,151.95,238.14,616.89
+M,Wraps,Amateur Junior,90,Jamme Sinn,87.82,238.14,158.76,226.80,623.69
+M,Wraps,Amateur Junior,90,Craig Malkowicz,86.73,242.67,154.22,276.69,673.58
+M,Wraps,Amateur Open,90,Joseph Falchek,86.36,151.95,117.93,185.97,455.86
+M,Wraps,Amateur Open,90,Jamie Brown,85.64,204.12,120.20,208.65,532.97
+M,Wraps,Amateur Open,90,Brandon Ryan,85.55,185.97,136.08,226.80,548.85
+M,Wraps,Amateur Open,90,Richard Sheedy,89.99,197.31,117.93,242.67,557.92
+M,Wraps,Amateur Open,90,Craig Malkowicz,86.73,242.67,154.22,276.69,673.58
+M,Wraps,Pro Open,90,Ryan Smith,88.63,238.14,138.35,272.16,648.64
+M,Wraps,Pro Open,90,Stephen T Teeters,89.90,283.50,174.63,299.37,757.50
+M,Single-ply,Amateur Open,90,Lee Clemente,88.63,,,,
+M,Wraps,Amateur Open,100,Paul Tongiani,90.63,217.72,158.76,258.55,635.03
+M,Raw,Amateur Master 60-64,75,Robert J. Legg,72.03,,90.72,,90.72
+M,Raw,Pro Master 55-59,75,Scott Aron,71.85,,120.20,,120.20
+M,Raw,Amateur Open,82.5,Jordan Perretz,76.66,,124.74,,124.74
+M,Raw,Amateur Open,90,Jeff McDaniel,89.45,,195.04,,195.04
+M,Raw,Amateur submaster,90,Jeff McDaniel,89.45,,195.04,,195.04
+M,Raw,Pro Submaster,90,Brad Parkhurst,90.17,,174.63,,174.63
+M,Raw,Pro Submaster,90,Vincent DeMito,88.41,,190.51,,190.51
+M,Raw,Amateur Open,100,Jeffrey Durante,95.53,,156.49,,156.49
+M,Raw,Amateur Master 60-64,75,Robert J. Legg,72.03,,,138.35,138.35
+M,Raw,Amateur Open,75,Nicholas Rodriguez,73.75,,115.67,,115.67
+M,Raw,Police Amateur Master 50+,75,Robert J. Legg,72.03,,90.72,138.35,229.06
+M,Single-ply,Amateur Open,75,Nicholas Rodriguez,73.75,,115.67,206.38,322.05
+M,Multi-ply,Amateur Open,90,Michael Ferguson,87.27,,174.63,240.40,415.04
+M,Multi-ply,Amateur Open,100,Nick Graves,99.79,351.53,199.58,272.16,823.27
+M,Raw,Amateur Open,100,Kyle Mongelluzzo,96.34,170.10,106.59,215.46,492.15
+M,Raw,Amateur Open,100,Ryan DeFalco,98.88,226.80,163.29,208.65,598.74
+M,Raw,Amateur Open,100,Rob Dittert,94.89,208.65,145.15,276.69,630.49
+M,Raw,Amateur Open,100,Zach S Bonneville,93.35,215.46,154.22,265.35,635.03
+M,Raw,Crossfit Submaster,100,Zianeh Kemeh-Gama,94.62,170.10,120.20,208.65,498.95
+M,Raw,Pro Submaster,100,Andrew J Staiger,98.88,183.70,102.06,215.46,501.22
+M,Wraps,Amateur Junior,100,James Hodgins,99.79,204.12,147.42,235.87,587.40
+M,Wraps,Amateur Master 65-69,100,Harold Moss,95.71,190.51,108.86,222.26,521.63
+M,Wraps,Amateur Open,100,Michael Callahan,98.43,188.24,140.61,251.74,580.60
+M,Wraps,Amateur Open,100,Jordyn Confer,99.06,219.99,127.01,235.87,582.87
+M,Wraps,Amateur Open,100,Chris Pick,95.62,210.92,158.76,226.80,596.47
+M,Wraps,Amateur Open,100,Jason Hatfield,98.88,231.33,149.69,215.46,596.47
+M,Wraps,Amateur Open,100,Matthew Rys,99.16,240.40,129.27,256.28,625.96
+M,Wraps,Amateur Submaster,100,Jorge Marte,96.98,256.28,147.42,288.03,691.73
+M,Wraps,Pro Junior,100,Jordan Welker,99.25,294.84,170.10,265.35,730.28
+M,Wraps,Pro Open,100,Bill Emmons,94.89,192.78,136.08,278.96,607.81
+M,Wraps,Pro Open,100,Bryan Williams,99.88,290.30,192.78,288.03,771.11
+M,Single-ply,Pro Open,100,Ryan Yusella,99.25,317.51,142.88,272.16,732.55
+M,Raw,Amateur Submaster,110,Marty Derry,109.41,192.78,163.29,249.48,605.55
+M,Raw,Crossfit Master,110,Robert L Miller,104.51,158.76,115.67,197.31,471.74
+M,Raw,Pro Open,110,Louis Christopher,109.50,226.80,204.12,260.82,691.73
+M,Raw,Pro Open,110,Aaron Frazier,108.68,324.32,231.33,308.44,864.09
+M,Wraps,Amateur Master 55-59,110,Lawrence Blake,102.69,188.24,142.88,208.65,539.77
+M,Wraps,Police Amateur Open,110,Jason Collins,106.78,242.67,158.76,272.16,673.58
+M,Wraps,Police Pro Open,110,Kyle Decker,107.59,242.67,158.76,274.42,675.85
+M,Wraps,Pro Junior,110,Austin Pagani,102.51,249.48,183.70,294.84,728.02
+M,Wraps,Pro Master 40-44,110,Durand Carson,109.13,231.33,192.78,263.08,687.19
+M,Wraps,Pro Open,110,Rob Reznick,106.68,244.94,154.22,204.12,603.28
+M,Wraps,Pro Open,110,Jordon Mullins,105.69,272.16,192.78,240.40,705.34
+M,Wraps,Pro Open,110,Austin Pagani,102.51,249.48,183.70,294.84,728.02
+M,Raw,Amateur Open,125,Ryan Palmucci,119.02,231.33,167.83,310.71,709.87
+M,Raw,Pro Open,125,Gabe Bonneville,122.38,310.71,192.78,324.32,827.81
+M,Raw,Pro Open,125,Nam Shartzer,121.83,356.07,249.48,308.44,913.99
+M,Raw,Pro submaster,125,Gabe Bonneville,122.38,310.71,192.78,324.32,827.81
+M,Wraps,Amateur Open,125,Shawn George,119.02,142.88,108.86,238.14,489.88
+M,Wraps,Amateur Open,125,Timothy Shaw,120.56,204.12,147.42,272.16,623.69
+M,Wraps,Amateur Open,125,Dominique Thorpe,120.11,226.80,170.10,272.16,669.05
+M,Wraps,Amateur Open,125,Marc Masishin,121.29,272.16,188.24,283.50,743.89
+M,Wraps,Police Amateur Submaster,125,Jason Janis,119.48,231.33,147.42,242.67,621.42
+M,Wraps,Pro Junior,125,Cody Hernley,122.65,319.78,213.19,299.37,832.34
+M,Wraps,Pro Master 40-44,125,Mike Evans,121.93,283.50,179.17,249.48,712.14
+M,Wraps,Pro Open,125,Nick Sauble,120.11,265.35,170.10,,
+M,Raw,Amateur Open,140,Brian Sheehan,134.17,233.60,188.24,272.16,694.00
+M,Raw,Pro Open,140,John Skinner,125.10,215.46,176.90,235.87,628.23
+M,Wraps,Amateur Master 45-49,140,Lance Brierley,129.82,142.88,124.74,215.46,483.08
+M,Wraps,Amateur Open,140,Mike Scherer,128.91,249.48,170.10,272.16,691.73
+M,Wraps,Amateur Open,140,Wesley Grosso,134.17,278.96,170.10,294.84,743.89
+M,Wraps,Pro Master 55-59,140+,Steven Mesler,142.34,272.16,136.08,285.76,694.00
+M,Wraps,Pro Open,140+,Jason Supko,171.73,344.73,226.80,306.17,877.70
+M,Single-ply,Amateur Open,90,Andrei Oudovikine,89.68,,208.65,,208.65
+M,Single-ply,Amateur Master 40-44,90,Andrei Oudovikine,89.68,,208.65,,208.65
+M,Raw,Pro Master 40-44,110,Bob Zappolo,109.50,,222.26,,222.26
+M,Raw,Amateur Master 45-49,125,Ernest Eichenberg,116.39,,131.54,,131.54
+M,Raw,Amateur Open,90,Chris Yale,89.90,,127.01,181.44,308.44
+M,Wraps,Pro Master 40-44,100,Derek Riley,98.61,,154.22,231.33,385.55
+M,Raw,Amateur Open,110,Anthony Borreggine,107.41,,92.99,138.35,231.33
+M,Raw,Pro Open,125,Joseph Judd,116.66,,181.44,297.10,478.54
+F,Raw,Amateur Junior,48,Danielle Favinger,46.90,61.23,47.63,102.06,210.92
+F,Raw,Amateur Junior,60,Danielle Lawler,57.61,99.79,68.04,131.54,299.37
+F,Wraps,Amateur Master 45-49,60,Suzanne Cunningham,58.88,79.38,52.16,102.06,233.60
+F,Wraps,Amateur Open,67.5,Jeannie Nutter,63.96,124.74,65.77,158.76,349.27
+F,Raw,Amateur Submaster,75,Nicole Gieringer,74.12,127.01,83.91,147.42,358.34
+F,Wraps,Amateur Junior,75,Mackenzie Pezzi,74.57,133.81,77.11,170.10,381.02
+F,Wraps,Amateur Open,75,Mackenzie Pezzi,74.57,133.81,77.11,170.10,381.02
+F,Raw,Amateur Open,82.5,Amy Holliday,80.47,97.52,58.97,142.88,299.37
+F,Wraps,Amateur Master 50-54,82.5,Mary Ann Wieckowski,75.39,136.08,83.91,136.08,356.07
+M,Wraps,Amateur Open,60,Michael J. Miller,59.15,149.69,90.72,199.58,439.98
+M,Raw,Amateur Junior,75,Christopher McCray,72.67,106.59,79.38,165.56,351.53
+M,Wraps,Military Amateur Open,75,Travis Ritter,73.66,158.76,129.27,204.12,492.15
+M,Wraps,Amateur Open,82.5,Andrew Lane,79.02,179.17,117.93,190.51,487.61
+M,Raw,Amateur Open,90,Kyle Wodynski,89.72,165.56,111.13,233.60,510.29
+M,Wraps,Amateur Master 50-54,90,Mike S. Miller,86.27,154.22,81.65,185.97,421.84
+M,Raw,Amateur Open,100,Jeff Donnelly,98.79,215.46,158.76,242.67,616.89
+M,Raw,Elite Open,100,Ryan Donnelly,99.79,240.40,170.10,281.23,691.73
+M,Raw,Military Amateur Open,100,Luis Rivera,99.61,183.70,,,
+M,Wraps,Amateur Junior,100,Coleman Kubala,98.25,199.58,124.74,251.74,576.06
+M,Wraps,Amateur Open,100,Eric Neil,98.34,240.40,124.74,254.01,619.15
+M,Wraps,Amateur Teen 16-17,100,Devon Pfeifer,90.90,174.63,106.59,167.83,449.06
+M,Wraps,Pro Open,100,Vincent Raimondi,97.61,317.51,195.04,267.62,780.18
+M,Wraps,Pro Open,100,Nicholas Forte,97.79,278.96,213.19,,
+M,Wraps,Pro Submaster,100,Patrick Walker,98.34,263.08,174.63,244.94,682.66
+M,Raw,Amateur Junior,110,Dale Kopchik,103.06,183.70,136.08,226.80,546.58
+M,Raw,Pro Open,110,Adam Banotai,103.24,208.65,181.44,272.16,662.24
+M,Wraps,Amateur Junior,110,Aaron Broomell,107.41,199.58,142.88,233.60,576.06
+M,Wraps,Amateur Junior,110,Aaron Brophy,105.23,208.65,149.69,249.48,607.81
+M,Wraps,Amateur Master 55-59,110,Mark H Lemon,109.04,142.88,102.06,161.03,405.97
+M,Wraps,Amateur teen 16-17,110,Christopher Pearson,101.24,145.15,58.97,156.49,360.61
+M,Wraps,Pro Open,110,George Apostolopoulos,109.95,274.42,161.03,,
+M,Wraps,Pro Submaster,110,Timothy Ricci,109.50,210.92,136.08,242.67,589.67
+M,Raw,Amateur Submaster,125,Jedediah Lemon,112.67,201.85,142.88,244.94,589.67
+M,Raw,Military Amateur Open,125,Anthony Ash,118.75,183.70,136.08,226.80,546.58
+M,Raw,Pro Master 45-49,125,James Alpha,123.38,201.85,70.31,276.69,548.85
+M,Wraps,Pro Master 50-54,125,Shawn Nielsen,120.38,290.30,188.24,250.61,729.15
+M,Wraps,Pro Open,125,Jason Kenworthy,119.39,319.78,181.44,297.10,798.32
+M,Wraps,Pro Open,125,Paul Dougal,124.19,351.53,231.33,249.48,832.34
+M,Wraps,Pro Open,125,Tyler Cotton,120.11,310.71,192.78,331.12,834.61
+M,Wraps,Pro Open,125,Herbert Skinner,123.10,340.19,210.92,301.64,852.75
+M,Wraps,Pro Open,125,Bryan Mutek,122.65,351.53,195.04,351.53,898.11
+M,Wraps,Amateur Open,140,Gerald Rogers,128.46,303.91,172.37,278.96,755.23
+M,Raw,Amateur Open,140+,John C. Linthicumjr,180.80,199.58,120.20,197.31,517.10
+M,Raw,Amateur Junior,75,Jared Olah,68.40,,124.74,167.83,292.57
+M,Wraps,Police Pro Open,75,Adam Harshbarger,74.66,,140.61,204.12,344.73
+M,Wraps,Amateur Open,125,Jonathan Cotton,118.84,,181.44,283.50,464.93
+F,Raw,Pro Submaster,100,Angie Alpha,98.52,,108.86,,108.86
+M,Raw,Pro Master 50-54,110,Sam Esposito,103.51,,190.51,,190.51
+M,Raw,Pro Master 40-44,140,Doug Dolby,126.19,,215.46,,215.46
+M,Wraps,Pro Submaster,90,Gene Moisey,85.18,,,219.99,219.99
