@@ -27,19 +27,22 @@ def main(tabname):
     print('<div id="header">')
     print('OpenPowerlifting &mdash;')
 
-    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist']
+    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'downloads']
 
     if tabname == 'rankings':
-        print('Rankings')
+        print('<span class="currentlink">Rankings</span>')
     else:
         print('<a href="index.html">Rankings</a>')
 
     if tabname == 'meetlist':
-        print('Meets')
+        print('<span class="currentlink">Meets</span>')
     else:
         print('<a href="meetlist.html">Meets</a>')
 
-    print('<a href="https://github.com/sstangl/openpowerlifting">Source</a>')
+    if tabname == 'downloads':
+        print('<span class="currentlink">Downloads</span>')
+    else:
+        print('<a href="downloads.html">Downloads</a>')
 
     showdbstats()
 

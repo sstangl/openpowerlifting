@@ -14,11 +14,16 @@ builddir:
 	mkdir -p '${BUILDDIR}'
 	mkdir -p '${BUILDDIR}/scripts'
 	mkdir -p '${BUILDDIR}/images'
+	mkdir -p '${BUILDDIR}/data'
 
 # Depends on the main project already being built.
 database: builddir
 	${SCRIPTDIR}/csv-to-js "${PLFILE}" opldb > "${BUILDDIR}/scripts/${PLFILEJS}"
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
+
+data: builddir
+	cp ${PLFILE} ${BUILDDIR}/data
+	cp ${MEETFILE} ${BUILDDIR}/data
 
 scripts: builddir
 	cp scripts/common.js ${BUILDDIR}/scripts
@@ -38,11 +43,12 @@ css: builddir
 	cp css/style.css ${BUILDDIR}/style.css
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
 
-html: builddir
+html: builddir data
 	./preprocess-html templates/index.html > ${BUILDDIR}/index.html
 	./preprocess-html templates/lifters.html > ${BUILDDIR}/lifters.html
 	./preprocess-html templates/meet.html > ${BUILDDIR}/meet.html
 	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
+	./preprocess-html templates/downloads.html > ${BUILDDIR}/downloads.html
 
 images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/images

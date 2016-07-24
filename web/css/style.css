@@ -9,12 +9,20 @@ html,body {
   font-family: verdana,helvetica,arial,sans-serif;
 }
 
+.currentlink {
+  text-decoration: underline;
+}
+
 .slick-cell {
   padding-top: 4px;
   padding-left: 5px;
   color: #FFFFFF;
   font-size: 9pt;
   border: 0px;
+}
+
+a {
+  color: #FFFFFF;
 }
 
 .slick-cell a {
@@ -217,4 +225,24 @@ div.topbar {
 
 div.content {
   padding-top: 82px;
+}
+
+div.text-content {
+  padding: 82px 20px 20px 20px;
+  max-width: 800px;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.downloadbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.downloaditem {
+  border: 1px;
+  border-color: lime;
+  border-style: solid;
+  padding: 10px;
+  margin-right: 10px;
 }
