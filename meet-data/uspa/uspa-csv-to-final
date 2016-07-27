@@ -276,6 +276,10 @@ def parse(csv):
                     equipmentstate = 'Single-ply'
                 elif 'multi' in info:
                     equipmentstate = 'Multi-ply'
+                else:
+                    # This happens when the USPA forgets how to spell things.
+                    # For example, "Mulitply".
+                    error('Unknown equipment: %s' % ' '.join(row).strip())
 
     return rval
 
