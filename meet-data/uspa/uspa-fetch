@@ -224,6 +224,9 @@ def writemeetcsv(meet):
         day = day.replace(',','')
         if '-' in day:
             day = day[:day.index('-')]
+    elif meet.date.count('-') == 2:
+        # USPA suddenly started giving dates as 7-23-16 for no reason.
+        (month,day,year) = meet.date.split('-')
 
     # Ensure left-padded with zeros.
     month = ('0' * (2 - len(month))) + month
