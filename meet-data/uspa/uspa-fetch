@@ -231,6 +231,8 @@ def writemeetcsv(meet):
     # Ensure left-padded with zeros.
     month = ('0' * (2 - len(month))) + month
     day = ('0' * (2 - len(day))) + day
+    if len(year) == 2:
+        year = '20' + year
     date = "%s-%s-%s" % (year,month,day)
 
     country = 'USA'
