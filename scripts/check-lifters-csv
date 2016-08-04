@@ -169,6 +169,8 @@ def check_positive_number_column(s):
         f = float(s)
         if f < 0.0:
             perror("Field cannot be negative: %s" % s)
+        if f == 0.0:
+            perror("Field cannot be zero: %s" % s)
     except ValueError:
         perror("Invalid field quantity: %s" % s)
 
