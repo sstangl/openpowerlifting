@@ -129,6 +129,11 @@ def check(scriptname, filename):
             if found_illegal_char:
                 perror("Illegal character in: \"%s\"" % text)
 
+            if text.replace('  ',' ') != text:
+                pwarning("Excessive spacing in: \"%s\"" % text)
+            if text.strip() != text:
+                pwarning("Spacing on end: \"%s\"" % text)
+
 
 
 if __name__ == '__main__':
