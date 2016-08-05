@@ -103,6 +103,8 @@ def check_column_age(s):
         age = int(s)
         if age < 8: # USPA actually let some 8 year olds compete...
             pwarning("Age unexpectedly low: %s" % s)
+        if age > 90:
+            pwarning("Age unexpectedly high: %s" % s)
 
     except ValueError:
         perror("Age is not a number: %s" % s)
