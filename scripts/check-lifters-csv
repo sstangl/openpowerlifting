@@ -368,6 +368,16 @@ def check_row_weightclass_consistency(row, headers):
     except ValueError:
         pass
 
+    # USAPL's reporting site calculates weight class from bodyweight,
+    # so if they leave bodyweight blank it will assign the lowest weight class,
+    # giving the lifter a Wilks score of 1000+!
+    if 'usapl' in globalFilename and 'BodyweightKg' in headers:
+        if row[headers.index('BodyweightKg')].strip() == '':
+            if row[headers.index('WeightClassKg')].strip() != '':
+                perror("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
+                        row[headers.index('Name')])
+
+
 
 def check_row_total_consistency(row, headers):
     if not 'TotalKg' in headers:
