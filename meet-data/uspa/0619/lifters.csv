@@ -28,7 +28,7 @@ Place,Name,Division,Event,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Bes
 1,Chevy Shumaker,JR 16-17,SBD,M,Wraps,AZ,67.5,65.1,17,155,,92.5,,198,,445.5
 1,Drew Hagen,JR 20-23,SBD,M,Wraps,AZ,100,98.7,22,210,,160,,237.5,,607.5
 1,Josh Sanderson,JR 20-23,SBD,M,Wraps,AZ,125,123.3,23,272.5,,188,,262.5,,722.5
-DQ,Craig Recore,Open,SBD,M,Wraps,AZ,90,89.7,43,0,,0,,0,,0
+DQ,Craig Recore,Open,SBD,M,Wraps,AZ,90,89.7,43,,,,,,,
 1,Drew Hagen,Open,SBD,M,Wraps,AZ,100,98.7,22,210,,160,,237.5,,607.5
 1,Josh Sanderson,Open,SBD,M,Wraps,AZ,125,123.3,23,272.5,,188,,262.5,,722.5
 1,Paul Popoff,Open,SBD,M,Wraps,AZ,140,137.3,34,307.5,,193,,292.5,,792.5
@@ -39,8 +39,8 @@ DQ,Craig Recore,Master 40-44,SBD,M,Wraps,AZ,90,89.7,43,,,,,,,
 2,Tamara McElwee,Open,SBD,F,Single-ply,AZ,56,55.3,48,130,,92.5,,122.5,,345
 1,Suzanne Davis,Master 40-44,SBD,F,Single-ply,AZ,56,55.9,44,162.5,,89,93,210.5,,462
 1,Tamara McElwee,Master 45-49,SBD,F,Single-ply,AZ,56,55.3,48,130,,92.5,,122.5,,345
-DQ,Mike Early,Open,SBD,M,Single-ply,AZ,90,90,40,282.5,,233,,0,,0
-DQ,Mike Early,Master 40-44,SBD,M,Single-ply,AZ,90,90,40,282.5,,233,,0,,0
+DQ,Mike Early,Open,SBD,M,Single-ply,AZ,90,90,40,282.5,,233,,,,
+DQ,Mike Early,Master 40-44,SBD,M,Single-ply,AZ,90,90,40,282.5,,233,,,,
 1,Chad Drecksel,Master 60-64,SBD,M,Single-ply,AZ,110,104.1,61,230,,160,,250,,640
 1,Jared Ortega,JR 18-19,B,M,Raw,AZ,82.5,81.9,18,,,85,,,,85
 1,Atom Cook,JR 20-23,B,M,Raw,AZ,100,98.6,23,,,125,,,,125
