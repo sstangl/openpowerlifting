@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Cantarell';
+  font-weight: 400;
+  font-style: normal;
+  src: url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj1_Y6323mHUZFJMgTvxaG2iE.eot');
+  src: url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj1_Y6323mHUZFJMgTvxaG2iE.eot?#iefix') format('embedded-opentype'),
+       local('Cantarell Regular'),
+       local('Cantarell-regular'),
+       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj15Bw1xU1rKptJj_0jans920.woff2') format('woff2'),
+       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj17O3LdcAZYWl9Si6vvxL-qU.woff') format('woff'),
+       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj16CWcynf_cDxXwCLxiixG1c.ttf') format('truetype'),
+       url('http://fonts.gstatic.com/l/font?kit=V86VyqXbc09Sss3BPsMj15bd9NUM7myrQQz30yPaGQ4&skey=4fa1583b73a857db&v=v6#Cantarell') format('svg');
+}
+
 html,body {
   margin: 0;
   padding: 0;
@@ -6,7 +20,7 @@ html,body {
   background-color: #000000;
   color: #FFFFFF;
 
-  font-family: verdana,helvetica,arial,sans-serif;
+  font-family: Cantarell;
 }
 
 .currentlink {
