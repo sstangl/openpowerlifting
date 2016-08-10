@@ -247,12 +247,14 @@ def fixsex(csv):
     if idx < 0:
         error("No Sex column in fixsex().")
 
-    for row in csv.rows:
+    for i,row in enumerate(csv.rows):
         s = row[idx].lower()
         if s == 'male' or s == 'm' or 'men' in s:
             x = 'M'
         elif s == 'female' or s == 'f' or 'women' in s or s == 'femaie':
             x = 'F'
+        elif s == '' and i > 0:
+            x = csv.rows[i-1][idx]
         else:
             error("Teach fixsex() what to do with '%s'" % s)
 
@@ -290,7 +292,7 @@ def fixname(csv):
         for x in s.split():
             if x.lower() == x or x.upper() == x:
                 # Except in names like "Louie de Leon" or for initials.
-                if len(x.replace('.','')) > 2 and x != 'III' and x != 'van':
+                if len(x.replace('.','')) > 2 and x != 'III' and x != 'van' and x != '4th':
                     error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s.strip()
@@ -301,7 +303,7 @@ def fixclass(csv):
     if idx < 0:
         error("No Class column in fixclass().")
 
-    for row in csv.rows:
+    for i,row in enumerate(csv.rows):
         s = row[idx].lower()
         if s == 'pro':
             x = 'Pro'
@@ -330,6 +332,9 @@ def fixclass(csv):
             x = 'Junior Pro'
         elif s == 'pro/ police fire' or s == 'police/fire pro':
             x = 'Police-Fire Pro'
+
+        elif s == '' and i > 0:
+            x = csv.rows[i-1][idx]
 
         else:
             error("Teach fixclass() what to do with '%s'" % s)
