@@ -30,7 +30,7 @@ libreoffice --headless --convert-to csv results.xls
 
 # If CSV conversion completed successfully, remove the intermediary
 # files early to benefit terminal autocompletion.
-if [ -f results.csv]; then
+if [ -f results.csv ]; then
 	rm results.html results.xls
 fi
 
