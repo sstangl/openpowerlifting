@@ -65,6 +65,8 @@ def remove_event_rows(csv):
                     return i
                 if k == 'bench only' or k == 'ironman' or k == 'deadlift only':
                     return i
+                if k == 'squat only':
+                    return i
         return -1
 
     while True:
