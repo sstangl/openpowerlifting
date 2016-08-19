@@ -120,7 +120,6 @@ def main():
         results = getliftersfor(row[meetidx], lifters)
         results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
 
-        # TODO: Might need Best Raw (incl/wraps) / Best Geared (incl/multi).
         rawlifters = list(filter(lambda x : x[lifterseqidx] == 'Raw' or
                                        x[lifterseqidx] == 'Wraps',
                                  results))
@@ -138,7 +137,8 @@ def main():
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
 
-        if len(rawlifters) > 0:
+        # Only show best lifter if there was one, and they didn't bomb out.
+        if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
             bestrawlifter = rawlifters[0][liftersnameidx]
             bestrawwilks = rawlifters[0][lifterswilksidx]
             rawlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestrawlifter, bestrawlifter)
@@ -147,7 +147,7 @@ def main():
             bestrawwilks = ''
             rawlifterhtml = ''
 
-        if len(gearedlifters) > 0:
+        if len(gearedlifters) > 0 and gearedlifters[0][lifterswilksidx]:
             bestgearedlifter = gearedlifters[0][liftersnameidx]
             bestgearedwilks = gearedlifters[0][lifterswilksidx]
             gearedlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestgearedlifter, bestgearedlifter)
