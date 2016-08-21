@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+
+import oplcsv
+import sys
+
+
+def getcategory(csv, row):
+    dividx    = csv.fieldnames.index('Division')
+    eqidx     = csv.fieldnames.index('Equipment')
+    sexidx    = csv.fieldnames.index('Sex')
+    eventidx  = csv.fieldnames.index('Event')
+    wtclsidx  = csv.fieldnames.index('WeightClassKg')
+    return (row[dividx].lower(), row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
+
+
+def main(filename):
+    csv = oplcsv.Csv(filename)
+
+    if 'Place' in csv.fieldnames:
+        print("There's already a place field.", file=sys.stderr)
+        sys.exit(1)
+
+    for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
+        if not i in csv.fieldnames:
+            print("Missing field: %s" % i, file=sys.stderr)
+            sys.exit(1)
+
+    csv.append_column('Place')
+
+    placeidx  = csv.fieldnames.index('Place')
+    totalidx  = csv.fieldnames.index('TotalKg')
+    bwidx     = csv.fieldnames.index('BodyweightKg')
+
+    categories = []
+    for row in csv.rows:
+        cat = getcategory(csv, row)
+        if not cat in categories:
+            categories.append(cat)
+
+    for category in categories:
+        lifters = []
+
+        # Get a list of all the rows in this category that placed.
+        for row in csv.rows:
+            if getcategory(csv, row) == category:
+                if not row[totalidx] or row[totalidx] == 0:
+                    row[placeidx] = 'DQ'
+                else:
+                    lifters.append(row)
+
+        # Order the rows by greatest total.
+        # If total is the same, order within total by lowest bodyweight.
+        lifters.sort(key=lambda x : (float(x[totalidx]), -float(x[bwidx])), reverse=True)
+
+        for i, row in enumerate(lifters):
+            row[placeidx] = str(i+1)
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+        
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s file.csv" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
