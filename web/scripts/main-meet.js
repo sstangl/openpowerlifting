@@ -149,7 +149,7 @@ function buildtable(indices) {
     var tr = document.createElement("tr");
     thead.appendChild(tr);
 
-    var cols = ["Wilks Place", "Name", "Division", "Sex", "Age", "Equip", "Class",
+    var cols = ["Wilks Place", "Div Place", "Name", "Division", "Sex", "Age", "Equip", "Class",
                 "Weight", "Squat", "Bench", "Deadlift", "Total", "Wilks"];
     for (var i = 0; i < cols.length; ++i) {
         var td = document.createElement("td");
@@ -166,6 +166,7 @@ function buildtable(indices) {
 
         var rowobj = makeItem(opldb.data[indices[i]]);
         appendtd(tr, String(i+1));
+        appendtd(tr, rowobj.place);
         appendtdlink(tr, rowobj.name, common.makeLiftersUrl(rowobj.name));
         appendtd(tr, rowobj.division);
         appendtd(tr, rowobj.sex);
