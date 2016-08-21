@@ -34,8 +34,8 @@ function parseWeightClass(x) {
     if (selWeightType.value === "kg")
         return String(x);
     if (typeof x === 'number')
-        return String(Math.round(common.kg2lbs(x)));
-    return String(Math.round(common.kg2lbs(x.split('+')[0]))) + '+';
+        return String(Math.floor(common.kg2lbs(x)));
+    return String(Math.floor(common.kg2lbs(x.split('+')[0]))) + '+';
 }
 
 // Return the ordered list of rows to display, by index into opldb.data.
