@@ -54,6 +54,8 @@ for row in csv.rows:
         x = '90+'
     elif x == '82.1':
         x = '82.5'
+    elif x == '109.77+':
+        x = '110+'
     elif x == '47.63':
         x = '48'
     elif x == '44.00':

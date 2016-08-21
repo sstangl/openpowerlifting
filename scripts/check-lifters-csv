@@ -197,7 +197,7 @@ def check_column_weightclass(s):
 
     proraw_extra = ['70','70+','75+','80','95','110+']
     rps_extra = ['155']
-    spf_extra = ['117.5']
+    spf_extra = ['117.5','100+']
     ipf_extra = ['60+']
 
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
