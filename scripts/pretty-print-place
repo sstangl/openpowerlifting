@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+
+import oplcsv
+import sys
+
+
+def getcategory(csv, row):
+    dividx    = csv.fieldnames.index('Division')
+    eqidx     = csv.fieldnames.index('Equipment')
+    sexidx    = csv.fieldnames.index('Sex')
+    eventidx  = csv.fieldnames.index('Event')
+    wtclsidx  = csv.fieldnames.index('WeightClassKg')
+    return (row[dividx], row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
+
+
+def main(filename):
+    csv = oplcsv.Csv(filename)
+
+    for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
+        if not i in csv.fieldnames:
+            print("Missing field: %s" % i, file=sys.stderr)
+            sys.exit(1)
+
+    totalidx  = csv.fieldnames.index('TotalKg')
+    bwidx     = csv.fieldnames.index('BodyweightKg')
+    nameidx     = csv.fieldnames.index('Name')
+    bestsquatidx = csv.fieldnames.index('BestSquatKg')
+    bestbenchidx = csv.fieldnames.index('BestBenchKg')
+    bestdeadliftidx = csv.fieldnames.index('BestDeadliftKg')
+    totalidx = csv.fieldnames.index('TotalKg')
+    wilksidx = csv.fieldnames.index('Wilks')
+
+    categories = []
+    for row in csv.rows:
+        cat = getcategory(csv, row)
+        if not cat in categories:
+            categories.append(cat)
+
+    print('Place,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks')
+
+    for category in categories:
+        lifters = []
+
+        # Get a list of all the rows in this category that placed.
+        for row in csv.rows:
+            if getcategory(csv, row) == category:
+                if row[totalidx]:
+                    lifters.append(row)
+
+
+        # Ignore DQs
+        if len(lifters) == 0:
+            continue
+
+        # Order the rows by greatest total.
+        # If total is the same, order within total by lowest bodyweight.
+        lifters.sort(key=lambda x : (float(x[totalidx]), -float(x[bwidx])), reverse=True)
+
+        (div,eq,sex,event,cls) = category
+
+        if event == 'SBD':
+            event = 'Full Power'
+        elif event == 'B':
+            event = 'Bench-Only'
+        elif event == 'D':
+            event = 'Deadlift-Only'
+
+        if sex == 'M':
+            sex = 'Men'
+        elif sex == 'F':
+            sex = 'Women'
+
+
+
+        print(cls + 'kg', sex, div, eq, event)
+        for i, row in enumerate(lifters):
+            print(i+1, ',', row[nameidx], ',', row[bwidx], ',', row[bestsquatidx], ',', row[bestbenchidx], ',', row[bestdeadliftidx], ',', row[totalidx], ',', row[wilksidx])
+
+        print()
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s file.csv" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
