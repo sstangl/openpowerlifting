@@ -242,6 +242,7 @@ HeaderHandlers = {
     'WeightClassKg': check_column_weightclass,
     'BodyweightKg': check_positive_number_column,
     'Wilks': check_positive_number_column,
+    'McCulloch': check_positive_number_column,
 
     # Lift columns. Only Kg is valid.
     'BestSquatKg': check_lift_column,
