@@ -44,6 +44,8 @@ def pwarning(s):
 
 
 KnownFederations = [
+    "APF",
+    "AAPF",
     "USPF",
     "USPA",
     "USAPL",
