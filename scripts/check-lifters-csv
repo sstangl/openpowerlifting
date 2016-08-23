@@ -347,6 +347,7 @@ def check_row_event_consistency(row, headers):
 
 
 # Women shouldn't accidentally be given male SHW classes.
+# Bodyweight should match the weight class.
 def check_row_weightclass_consistency(row, headers):
     if not 'Sex' in headers or not 'WeightClassKg' in headers:
         return
@@ -368,6 +369,20 @@ def check_row_weightclass_consistency(row, headers):
             pwarning("Suspiciously high female weightclass: %s" % row[headers.index('WeightClassKg')])
     except ValueError:
         pass
+
+    if 'BodyweightKg' in headers:
+        bw = row[headers.index('BodyweightKg')]
+        if bw:
+            if '+' in row[headers.index('WeightClassKg')]:
+                if float(bw) <= float(wtcls):
+                    perror("Lifter %s BW (%s) does not match WtCls (%s)" %
+                        (row[headers.index('Name')], row[headers.index('BodyweightKg')],
+                         row[headers.index('WeightClassKg')]))
+            else:
+                if float(bw) > float(wtcls):
+                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                        (row[headers.index('Name')], row[headers.index('BodyweightKg')],
+                         row[headers.index('WeightClassKg')]))
 
     # USAPL's reporting site calculates weight class from bodyweight,
     # so if they leave bodyweight blank it will assign the lowest weight class,
