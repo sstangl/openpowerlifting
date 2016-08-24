@@ -375,7 +375,7 @@ def check_row_weightclass_consistency(row, headers):
         if bw:
             if '+' in row[headers.index('WeightClassKg')]:
                 if float(bw) <= float(wtcls):
-                    perror("Lifter %s BW (%s) does not match WtCls (%s)" %
+                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[headers.index('Name')], row[headers.index('BodyweightKg')],
                          row[headers.index('WeightClassKg')]))
             else:
