@@ -199,7 +199,7 @@ def fixequipment(csv):
     if idx < 0:
         error("No Equipment column in fixequipment().")
 
-    for row in csv.rows:
+    for i,row in enumerate(csv.rows):
         s = row[idx].lower()
         # "Classic" means belt and wrist wraps only to the RPS.
         if s == 'raw classic' or s == 'raw clas' or s == 'raw c' or s == 'rc':
@@ -234,8 +234,8 @@ def fixequipment(csv):
         elif s == 'no choice made':
             x = 'Wraps'
 
-        elif s == '':
-            x = ''
+        elif s == '' and i > 0:
+            x = csv.rows[i-1][idx]
 
         else:
             print("Full row: %s" % ','.join(row), file=sys.stderr)
@@ -288,8 +288,8 @@ def fixname(csv):
         # I'm not sure what this means, but it shows up in names.
         s = s.replace("NSB","")
 
-        if s.upper() == s:
-            error("Name looks all uppercase, needs manual fixing: '%s'" % s )
+        #if s.upper() == s:
+        #    error("Name looks all uppercase, needs manual fixing: '%s'" % s )
 
         for x in s.split():
             if x.lower() == x or x.upper() == x:
@@ -354,7 +354,7 @@ def fixweightclass(csv):
     if sexidx < 0:
         error("No Sex column in fixweightclass().")
 
-    for row in csv.rows:
+    for i,row in enumerate(csv.rows):
         if row[idx].lower() == 'shw':
             if row[sexidx] == 'M':
                 row[idx] = '308+'
@@ -362,6 +362,8 @@ def fixweightclass(csv):
                 row[idx] = '198+'
             else:
                 error("Unknown sex in fixweightclass(): '%s'" % s)
+        elif row[idx] == '' and i > 0:
+            row[idx] = csv.rows[i-1][idx]
 
 
 def isnumber(s):
