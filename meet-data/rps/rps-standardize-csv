@@ -219,7 +219,7 @@ def fixequipment(csv):
 
         elif s == 'single-ply' or s == 'single ply' or s == 'sp' or s == 'singleply':
             x = 'Single-ply'
-        elif 'single' in s or s == 'sin ply':
+        elif 'single' in s or s == 'sin ply' or s == 'singly-ply':
             x = 'Single-ply'
 
         elif s == 'multi-ply' or s == 'mulit-ply' or s == 'multi ply' or s == 'eq':
@@ -366,6 +366,14 @@ def fixweightclass(csv):
             row[idx] = csv.rows[i-1][idx]
 
 
+def fixdivision(csv):
+    idx = csv.fieldnames.index('Division')
+    nameidx = csv.fieldnames.index('Name')
+    for i,row in enumerate(csv.rows):
+        if i > 0 and row[nameidx] and not row[idx]:
+            row[idx] = csv.rows[i-1][idx]
+
+
 def isnumber(s):
     try:
         float(s)
@@ -440,6 +448,7 @@ def main(filename):
     if not 'Sex' in csv.fieldnames:
         error("Couldn't find a sex column.")
 
+    fixdivision(csv)
     fixequipment(csv)
     fixsex(csv)
     fixname(csv)
