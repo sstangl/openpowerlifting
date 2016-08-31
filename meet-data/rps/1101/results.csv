@@ -1,0 +1,41 @@
+class,equipment,division,weightclasslbs,name,Sex,actual bwt.,bench,squat,deadlift,Total,Event
+am,multi-ply,Open,165,Michael Kemper,M,163.2,340*,615*,610**,1565*,SBD
+am,raw classic,Open,165,Dan Antonucci,M,164.4,280,447.5*,575*,1302.5*,SBD
+am,raw classic,Junior 20-23,198,Patrick Campion,M,198.2,240,315,405,960,SBD
+pro,raw modern,Open,198,Jason Orellana,M,195.6,370**,500**,530**,1400**,SBD
+am,raw classic,Junior 20-23,220,Tim Yacksick,M,216,275*,435*,570*,1280*,SBD
+am,multi-ply,Open,220,David Balback,M,217,415,545,500,1460,SBD
+am,raw classic,Submaster,220,Mike Walter,M,217,305,430,420,1155,SBD
+am,single ply,Master 50+,220,Rory King,M,217.8,265**,560**,530**,1355**,SBD
+pro,raw classic,Junior 20-23,242,Isaac Zeng,M,239.2,395*,630**,640*,1665*,SBD
+am,multi-ply,Open,275,Timothy Davis,M,252.6,0,injury,,0,SBD
+am,multi-ply,Open,308,Scott Edmiston,M,307.8,545*,735*,555,1835*,SBD
+am,multi-ply,Master 45-49,308,Scott Edmiston,M,307.8,545*,735**,555*,1835**,SBD
+pro,multi-ply,Open,308,Scott Edmiston,M,307.8,545*,735*,555,1835*,SBD
+pro,multi-ply,Master 45-49,308,Scott Edmiston,M,307.8,545*,735**,555*,1835**,SBD
+am,raw classic,Open,SHW,Nathan Henderson,M,337.8,350,525*,530*,1405*,SBD
+Bench Only,,,,,,actual bwt.,bench,,,,
+am,multi-ply,Master 55-59,181,Thomas Lewis,M,176,525**,,,525**,B
+pro,multi-ply,Open,181,Rudy Hillyard,M,175.4,405,,,405,B
+am,raw classic,Open,198,Jeffrey McDaniel,M,189.2,415*,,,415*,B
+pro,multi-ply,Open,220,Deon Brauer,M,212,385,,,385,B
+am,single ply*,Teen 16-17,242,Todd Francisco,M,231.6,0,,,0,B
+am,multi-ply,Master 45-49,242,Brian Yoder,M,234.2,565**,,,565**,B
+am,raw classic,Master 50-54,242,Daryl Martin,M,233,275*,,,275*,B
+am,multi-ply,Master 50-54,242,Chuck Herman,M,228.6,400*,,,400*,B
+am,multi-ply,Open,308,Scott Edmiston,M,307.8,545*,,,545*,B
+am,multi-ply,Master 45-49,308,Scott Edmiston,M,307.8,545*,,,545*,B
+Ironman (Push/Pull),,,,,,actual bwt.,bench,,deadlift,Total,
+am,raw classic,Teen 14-15,148,Logan Dallas,M,144.8,255**,,400**,655*,BD
+pro,multi-ply,Master 45-49,220,Chuck Blough,M,217.8,440,,640,1080,BD
+pro,raw classic,Open,220,Seth Abrahams,M,206.6,325,,455*,780*,BD
+am,raw classic,Open,242,Zach Frankhouser,M,236.8,275,,525,800,BD
+am,raw classic,Open,242,Robert Hunt,M,230.6,335,,625*,960,BD
+pro,multi-ply,Junior 20-23,275,Andrew Cuenco,M,274.2,600*,,630,1230,BD
+am,multi-ply,Open,308,Scott Edmiston,M,307.8,545*,,555*,1100,BD
+am,multi-ply,Master 45-49,308,Scott Edmiston,M,307.8,545*,,555*,1100,BD
+pro,multi-ply,Open,308,Thomas Graver Sr.,M,296.4,285,,465,750,BD
+am,multi-ply,Open,SHW,George Underwood,M,312.8,535,,605*,1140,BD
+Deadlift Only,,,,,,actual bwt.,,,deadlift,,
+am,multi-ply,Open,308,Scott Edmiston,M,307.8,,,555*,555*,D
+am,multi-ply,Master 45-49,308,Scott Edmiston,M,307.8,,,555*,555*,D
