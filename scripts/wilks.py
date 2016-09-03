@@ -33,6 +33,8 @@ def wilksCoeffWomen(x): # Where x is BodyweightKg.
 def ageCoeff(age): # Where age is an integer
     # These coefficients don't actually exist, and are just low-balled best guesses.
     # Kids really shouldn't be competing in this sport...
+    if age is  5: return 1.73
+    if age is  6: return 1.67
     if age is  7: return 1.61
     if age is  8: return 1.55
     if age is  9: return 1.49
