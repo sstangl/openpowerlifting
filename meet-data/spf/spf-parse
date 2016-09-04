@@ -101,6 +101,8 @@ def fixevent(csv):
     for row in csv.rows:
         if row[idx] == 'Full Powerlifting':
             row[idx] = 'SBD'
+        elif row[idx] == 'Squat Only':
+            row[idx] = 'S'
         elif row[idx] == 'Bench Press Only':
             row[idx] = 'B'
         elif row[idx] == 'Deadlift Only':
@@ -129,6 +131,8 @@ def fixequipment(csv):
             row[eqidx] = "Multi-ply"
         elif eq == "Single-Ply":
             row[eqidx] = "Single-ply"
+        elif eq == '':
+            pass # This means copy from the row above, usually.
         else:
             error("Unknown equipment: %s" % row[eqidx])
 
@@ -144,7 +148,10 @@ def main(url):
     fixevent(csv)
     fixequipment(csv)
 
-    csv.write(sys.stdout)
+    with open('lifters.csv', 'w') as fd:
+        csv.write(fd)
+    with open('URL', 'w') as fd:
+        print(url, file=fd)
 
 
 if __name__ == '__main__':
