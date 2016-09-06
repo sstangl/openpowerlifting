@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes the XPC website for any new meets.
+# The XPC has a meet page, but they haven't posted any results on the
+# actual page since 2013. Instead, they post results in the "Meet Results" dropdown
+# in their menubar.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+XPCDIR = os.path.dirname(os.path.realpath(__file__))
+XPCURL = "http://www.xpcpowerlifting.com/events/meet-results/"
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    meet_a = soup.find("a", {"href": XPCURL})
+    if not meet_a:
+        error("Couldn't find the Meet Results drop-down menu bar.")
+
+    li = meet_a.parent
+    submenu = li.find("ul");
+    events = submenu.find_all("li")
+
+    urls = []
+    for e in events:
+        for a in e.find_all('a'):
+            url = a['href']
+            if not url in urls: # Sometimes the entries show up twice.
+                urls.append(url)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(XPCDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for j in fd.readlines():
+                    urls.append(j.strip())
+    return urls
+
+
+def main():
+    html = gethtml(XPCURL)
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print('[XPC] ' + m)
+
+if __name__ == '__main__':
+    main()

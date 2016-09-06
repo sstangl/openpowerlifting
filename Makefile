@@ -34,6 +34,7 @@ probe:
 	${DATADIR}/spf/spf-probe
 	${DATADIR}/usapl/usapl-probe
 	${DATADIR}/uspa/uspa-probe
+	${DATADIR}/xpc/xpc-probe
 
 clean:
 	rm -rf '${BUILDDIR}'
