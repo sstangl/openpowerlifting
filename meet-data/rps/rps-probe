@@ -18,6 +18,7 @@ import urllib.request
 MEETSURL = "http://meets.revolutionpowerlifting.com/results/2016-meet-results/"
 if datetime.datetime.now().strftime("%Y") != "2016":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
+RPSDIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def error(msg):
@@ -44,7 +45,7 @@ def getmeetlist(html):
 
 def getenteredurls():
     urls = []
-    for dirname, subdirs, files in os.walk(os.getcwd()):
+    for dirname, subdirs, files in os.walk(RPSDIR):
         if 'URL' in files:
             with open(dirname + os.sep + 'URL', 'r') as fd:
                 urls.append(fd.readline().strip())
@@ -58,7 +59,7 @@ def main():
 
     for m in meetlist:
         if not m in known:
-            print(m)
+            print('[RPS] ' + m)
 
 if __name__ == '__main__':
     main()

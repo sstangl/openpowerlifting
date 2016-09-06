@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile check
+.PHONY: builddir csvfile check probe
 
 DATADIR = meet-data
 BUILDDIR = build
@@ -28,6 +28,11 @@ web: csvfile
 check:
 	scripts/check-lifters-csv
 	scripts/check-meet-csv
+
+probe:
+	${DATADIR}/rps/rps-probe
+	${DATADIR}/usapl/usapl-probe
+	${DATADIR}/uspa/uspa-probe
 
 clean:
 	rm -rf '${BUILDDIR}'

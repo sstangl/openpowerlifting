@@ -17,6 +17,8 @@ import urllib.request
 
 MEETSURL = "http://usapl.liftingdatabase.com/competitions"
 BASEURL  = "http://usapl.liftingdatabase.com/"
+USAPLDIR = os.path.dirname(os.path.realpath(__file__))
+
 
 def gethtml():
     with urllib.request.urlopen(MEETSURL) as r:
@@ -70,7 +72,7 @@ def getmeetlist(html):
 
 # Entered meets are stored in the current directory in a directory with the sanction ID.
 def getenteredmeets():
-    return os.listdir('.')   
+    return os.listdir(USAPLDIR)
 
 
 def main():
@@ -80,7 +82,7 @@ def main():
 
     for m in meetlist:
         if not m.sanction in known:
-            print(m.url)
+            print("[USAPL] " + m.url)
 
 
 if __name__ == '__main__':
