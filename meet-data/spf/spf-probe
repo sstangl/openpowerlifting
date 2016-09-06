@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes the new-style (WordPress) SPF pages for any new meets.
+# Because of the calendering system they're using, only the last
+# NUMPAGES event pages are checked (10 results per page), so if
+# checking isn't done often enough, things might get lost.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+NUMPAGES = 1 # Number of pages to go back in results, 10 results per page.
+SPFDIR = os.path.dirname(os.path.realpath(__file__))
+SPFURL = "http://www.southernpowerlifting.com/events/list/?tribe_event_display=past"
+
+
+def getpageurl(n):
+    return SPFURL + "&tribe_paged=" + str(n)
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    events = soup.find_all("div", {"class": "tribe-events-content"})
+
+    urls = []
+    for e in events:
+        for a in e.find_all('a'):
+            url = a['href']
+            if not url in urls: # Sometimes the entries show up twice.
+                urls.append(url)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(SPFDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                urls.append(fd.readline().strip())
+    return urls
+
+
+def main():
+    meetlist = []
+    for i in range(1, NUMPAGES+1):
+        url = getpageurl(i)
+        html = gethtml(url)
+        meets = getmeetlist(html)
+        meetlist = meetlist + meets
+
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print('[SPF] ' + m)
+
+if __name__ == '__main__':
+    main()

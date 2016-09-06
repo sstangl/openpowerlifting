@@ -31,6 +31,7 @@ check:
 
 probe:
 	${DATADIR}/rps/rps-probe
+	${DATADIR}/spf/spf-probe
 	${DATADIR}/usapl/usapl-probe
 	${DATADIR}/uspa/uspa-probe
 
