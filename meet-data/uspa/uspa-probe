@@ -16,6 +16,10 @@ RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV
 USPADIR = os.path.dirname(os.path.realpath(__file__))
 
 
+def color(s):
+    return "\034[1;31m" + s + "\033[0;m"
+
+
 # Just a way to name a tuple.
 class Meet:
     def __init__(self, url, num, date, name, location):
@@ -100,7 +104,7 @@ def main():
     remote = getunknownmeets(meets, known)
 
     for meet in remote:
-        print('[USPA] ' + meet.url)
+        print(color('[USPA] ') + meet.url)
 
 
 if __name__ == '__main__':

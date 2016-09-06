@@ -29,6 +29,10 @@ def error(msg):
     sys.exit(1)
 
 
+def color(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+
 def gethtml(url):
     with urllib.request.urlopen(url) as r:
         return r.read()
@@ -70,7 +74,7 @@ def main():
 
     for m in meetlist:
         if not m in known:
-            print('[SPF] ' + m)
+            print(color('[SPF] ') + m)
 
 if __name__ == '__main__':
     main()

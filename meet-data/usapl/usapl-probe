@@ -30,6 +30,10 @@ def error(msg):
     sys.exit(1)
 
 
+def color(s):
+    return "\033[1;36m" + s + "\033[0;m"
+
+
 # Named tuple.
 class Meet:
     def __init__(self, sanction, url):
@@ -82,7 +86,7 @@ def main():
 
     for m in meetlist:
         if not m.sanction in known:
-            print("[USAPL] " + m.url)
+            print(color("[USAPL] ") + m.url)
 
 
 if __name__ == '__main__':

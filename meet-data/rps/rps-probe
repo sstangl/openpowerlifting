@@ -26,6 +26,10 @@ def error(msg):
     sys.exit(1)
 
 
+def color(s):
+    return "\033[1;32m" + s + "\033[0;m"
+
+
 def gethtml():
     with urllib.request.urlopen(MEETSURL) as r:
         return r.read()
@@ -59,7 +63,7 @@ def main():
 
     for m in meetlist:
         if not m in known:
-            print('[RPS] ' + m)
+            print(color('[RPS] ') + m)
 
 if __name__ == '__main__':
     main()
