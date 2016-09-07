@@ -35,6 +35,7 @@ probe:
 	${DATADIR}/rupc/rupc-probe
 	${DATADIR}/sct/sct-probe
 	${DATADIR}/spf/spf-probe
+	${DATADIR}/upa/upa-probe
 	${DATADIR}/usapl/usapl-probe
 	${DATADIR}/uspa/uspa-probe
 	${DATADIR}/xpc/xpc-probe
