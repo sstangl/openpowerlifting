@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for new RUPC meets from the official website.
+# Doesn't even look like they update the page anymore:
+# they never even bothered posting results from RUM 9.
+# But nevertheless.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+RUPCURL = "http://www.rawunitymeet.com/Results.html"
+BASEURL = "http://www.rawunitymeet.com"
+RUPCDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;33m" + s + "\033[0;m"
+
+
+def gethtml():
+    with urllib.request.urlopen(RUPCURL) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    tables = soup.find_all("table", {"class": "subLEFT_MENU"})
+    if len(tables) == 0:
+        error("Page layout seems to have changed.")
+    elif len(tables) > 1:
+        error("Multiple left menus found.")
+
+    urls = []
+    for a in tables[0].find_all('a'):
+        url = a['href']
+        if not 'http' in url:
+            url = BASEURL + '/' + url
+        if not url in urls:
+            urls.append(url)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(RUPCDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for k in fd.readlines():
+                    urls.append(k.strip())
+    return urls
+
+
+def main():
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(color('[RUPC] ') + m)
+
+
+if __name__ == '__main__':
+    main()
