@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for new FPO meets from the official calendar.
+# TODO: Future meets show up as false positives.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+URL = "http://fpopowerlifting.net/kilpailukalenteri/"
+BASEURL = "http://fpopowerlifting.net"
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;35m" + s + "\033[0;m"
+
+
+def gethtml():
+    with urllib.request.urlopen(URL) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    tables = soup.find_all("table", {"class": "tablepress"})
+    if len(tables) == 0:
+        error("Page layout seems to have changed.")
+
+    urls = []
+
+    for table in tables:
+        for a in table.find_all('a'):
+            url = a['href']
+            if not 'http' in url:
+                url = BASEURL + '/' + url
+            if not url in urls:
+                urls.append(url.strip())
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(FEDDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for k in fd.readlines():
+                    urls.append(k.strip())
+    return urls
+
+
+def main():
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(color('[FPO] ') + m)
+
+
+if __name__ == '__main__':
+    main()

@@ -30,6 +30,7 @@ check:
 	scripts/check-meet-csv
 
 probe:
+	${DATADIR}/fpo/fpo-probe
 	${DATADIR}/pa/pa-probe
 	${DATADIR}/rps/rps-probe
 	${DATADIR}/rupc/rupc-probe
