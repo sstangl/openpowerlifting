@@ -23,10 +23,33 @@ def strip_whitespace(csv):
             row[i] = x.strip().replace('  ',' ')
 
 
+def remove_record_info(csv):
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            if x == 'ar': # Australian Record
+                row[i] = ''
+
+
 def remove_empty_rows(csv):
     def getemptyidx(csv):
         for i,row in enumerate(csv.rows):
             if ''.join(row) == '':
+                return i
+        return -1
+
+    while True:
+        idx = getemptyidx(csv)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
+def remove_bottom_meet_info(csv):
+    def getemptyidx(csv):
+        for i,row in enumerate(csv.rows):
+            if 'Referees' in ','.join(row):
+                return i
+            if '= Australian Record' in ','.join(row):
                 return i
         return -1
 
@@ -173,7 +196,9 @@ def consume_first_column(csv):
 
         # Otherwise, change state and clear the row.
         else:
-            if row[0] == 'RAW':
+            if row[0] == '':
+                pass
+            elif row[0] == 'RAW':
                 equipment = 'Raw'
             elif row[0] == 'WOMEN':
                 pass
@@ -244,10 +269,14 @@ def main(filename):
     csv.rows = [x.strip().split(',') for x in lines]
 
     strip_whitespace(csv)
+    remove_record_info(csv)
     remove_empty_rows(csv)
     remove_empty_cols(csv)
 
     standardize_column_names(csv)
+
+    # Some referee information gets added to the bottom, sometimes.
+    remove_bottom_meet_info(csv)
 
     # At this point the leftmost column contains place information
     # and stateful weight class / equipment information.
