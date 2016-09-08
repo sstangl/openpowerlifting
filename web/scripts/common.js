@@ -212,6 +212,7 @@ return {
     // A list of federations using drug-testing.
     testedFederationList: [
         'IPF',
+        'NAPF',
         'PA',
         'USAPL'
     ]
