@@ -32,6 +32,7 @@ check:
 probe:
 	${DATADIR}/apf/apf-probe
 	${DATADIR}/fpo/fpo-probe
+	${DATADIR}/napf/napf-probe
 	${DATADIR}/pa/pa-probe
 	${DATADIR}/rps/rps-probe
 	${DATADIR}/rupc/rupc-probe
