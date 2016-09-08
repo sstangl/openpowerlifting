@@ -1,0 +1,278 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Standardize the results.csv to the OpenPowerlifting
+# internal format.
+#
+
+import sys
+from oplcsv import Csv
+
+
+def error(msg):
+    print("Error: %s" % msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def strip_whitespace(csv):
+    for i,x in enumerate(csv.fieldnames):
+        csv.fieldnames[i] = x.strip().replace('  ',' ')
+
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            row[i] = x.strip().replace('  ',' ')
+
+
+def remove_empty_rows(csv):
+    def getemptyidx(csv):
+        for i,row in enumerate(csv.rows):
+            if ''.join(row) == '':
+                return i
+        return -1
+
+    while True:
+        idx = getemptyidx(csv)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
+def remove_empty_cols(csv):
+    def iscolempty(csv, i):
+        if csv.fieldnames[i]:
+            return False
+        for row in csv.rows:
+            if row[i]:
+                return False
+        return True
+
+    def getemptyidx(csv):
+        for i,col in enumerate(csv.fieldnames):
+            if iscolempty(csv,i):
+                return i
+        return -1
+
+    while True:
+        idx = getemptyidx(csv)
+        if idx == -1:
+            return
+        csv.remove_column_by_index(idx)
+
+
+def remove_rows_by_empty_column(csv, colname):
+    def getemptyidx(csv, colidx):
+        for i,row in enumerate(csv.rows):
+            if row[colidx] == '':
+                return i
+        return -1
+
+    colidx = csv.fieldnames.index(colname)
+    if colidx < 0:
+        error("Column %s not found in remove_rows_by_empty_column()." % colname)
+
+    while True:
+        idx = getemptyidx(csv, colidx)
+        if idx == -1:
+            return
+        del csv.rows[idx]
+
+
+def remove_zeros(csv):
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            # The CSV conversion via LibreOffice already standardized
+            # all decimal forms of 0.00 and such to just '0'.
+            if x == '0':
+                row[i] = ''
+
+
+def remove_dashes(csv):
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            # The CSV conversion via LibreOffice already standardized
+            # all decimal forms of 0.00 and such to just '0'.
+            if x == '-':
+                row[i] = ''
+
+
+def standardize_column_names(csv):
+    for i,col in enumerate(csv.fieldnames):
+        if col == '':
+            pass
+        elif col == 'NAME':
+            csv.fieldnames[i] = 'Name'
+        elif col == 'DOB':
+            csv.fieldnames[i] = 'BirthYear'
+        elif col == 'M/F':
+            csv.fieldnames[i] = 'Sex'
+        elif col == 'BWT':
+            csv.fieldnames[i] = 'BodyweightKg'
+        elif col == 'SQ 1':
+            csv.fieldnames[i] = 'Squat1Kg'
+        elif col == 'SQ 2':
+            csv.fieldnames[i] = 'Squat2Kg'
+        elif col == 'SQ 3':
+            csv.fieldnames[i] = 'Squat3Kg'
+        elif col == 'BP1' or col == 'BP 1':
+            csv.fieldnames[i] = 'Bench1Kg'
+        elif col == 'BP 2':
+            csv.fieldnames[i] = 'Bench2Kg'
+        elif col == 'BP 3':
+            csv.fieldnames[i] = 'Bench3Kg'
+        elif col == 'DL 1':
+            csv.fieldnames[i] = 'Deadlift1Kg'
+        elif col == 'DL 2':
+            csv.fieldnames[i] = 'Deadlift2Kg'
+        elif col == 'DL 3':
+            csv.fieldnames[i] = 'Deadlift3Kg'
+        elif col == 'TOTAL':
+            csv.fieldnames[i] = 'TotalKg'
+        elif col == 'WILKS':
+            csv.fieldnames[i] = 'Wilks'
+        else:
+            error("Unknown column: \"%s\"" % col)
+
+
+def isint(s):
+    try:
+        int(s)
+        return True
+    except:
+        return False
+
+
+def consume_first_column(csv):
+    csv.fieldnames[0] = 'Place'
+    assert not 'Equipment' in csv.fieldnames
+    assert not 'WeightClassKg' in csv.fieldnames
+    assert not 'Event' in csv.fieldnames
+    csv.append_columns(['Equipment','WeightClassKg', 'Event'])
+
+    # Sex information is statefully present also, but there's usually a M/F column.
+    assert 'Sex' in csv.fieldnames
+
+    eqidx = csv.fieldnames.index('Equipment')
+    wtclsidx = csv.fieldnames.index('WeightClassKg')
+    evtidx = csv.fieldnames.index('Event')
+
+    # Walk down the rows, storing and writing state from the first column.
+    # Nuke the stateful rows as they're walked, for remove_empty_rows() later.
+    equipment = None
+    weightclasskg = None
+    event = 'SBD'
+
+    for row in csv.rows:
+        # If this is a placement, then write information.
+        if isint(row[0]):
+            assert equipment
+            assert weightclasskg
+
+            row[eqidx] = equipment
+            row[wtclsidx] = weightclasskg
+            row[evtidx] = event
+
+        # Otherwise, change state and clear the row.
+        else:
+            if row[0] == 'RAW':
+                equipment = 'Raw'
+            elif row[0] == 'WOMEN':
+                pass
+            elif row[0] == 'MEN':
+                pass
+            elif 'KG' in row[0]:
+                weightclasskg = row[0].replace('KG','').strip()
+            elif row[0] == 'BP':
+                event = 'B'
+            elif row[0] == 'EBP':
+                event = 'B'
+                equipment = 'Single-ply'
+            else:
+                error("Unknown state change in first column: \"%s\"" % row[0])
+
+            row[0] = ''
+
+
+# Sometimes a lifter that DQ'd will still be given a place, but Wilks or Total
+# will be marked "BMB" or "disq" or something like that.
+# Make a best effort to hunt that down.
+def hunt_dq_info(csv):
+    nameidx = csv.fieldnames.index('Name')
+    placeidx = csv.fieldnames.index('Place')
+
+    for row in csv.rows:
+        # Look just to the right of the Name row, to not get false positives from weird names.
+        s = ','.join(row[nameidx+1:]).lower()
+        if ',bmb' in s or ',disq' in s or ',dq' in s:
+            row[placeidx] = 'DQ'
+
+
+# Attempts are given, but not the BestSquatKg columns, etc.
+def calc_best_lift(csv, col, attemptlist):
+    if col in csv.fieldnames:
+        return
+
+    for k in attemptlist:
+        assert k in csv.fieldnames
+
+    csv.insert_column(csv.fieldnames.index(attemptlist[-1]) + 1, col)
+
+    for row in csv.rows:
+        best = 0
+        for k in attemptlist:
+            try:
+                attempt = float(row[csv.fieldnames.index(k)])
+            except:
+                attempt = 0
+            if attempt > best:
+                best = attempt
+        if best > 0:
+            row[csv.fieldnames.index(col)] = str(best)
+
+
+def main(filename):
+    csv = Csv()
+    with open(filename) as fd:
+        # Ignore all the bogus lines until we reach the 'NAME' row.
+        line = fd.readline()
+        while line and not 'NAME' in line:
+            line = fd.readline()
+        if not line:
+            error("No column with 'NAME' found.")
+        lines = fd.readlines()
+
+    csv.fieldnames = line.strip().split(',')
+    csv.rows = [x.strip().split(',') for x in lines]
+
+    strip_whitespace(csv)
+    remove_empty_rows(csv)
+    remove_empty_cols(csv)
+
+    standardize_column_names(csv)
+
+    # At this point the leftmost column contains place information
+    # and stateful weight class / equipment information.
+    assert csv.fieldnames[0] == ''
+    consume_first_column(csv)
+    remove_empty_rows(csv)
+
+    remove_zeros(csv)
+    remove_dashes(csv)
+
+    hunt_dq_info(csv)
+
+    # Wilks will be automatically calculated later. Feds get it wrong all the time.
+    if 'Wilks' in csv.fieldnames:
+        csv.remove_column_by_name('Wilks')
+
+    calc_best_lift(csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
+    calc_best_lift(csv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
+    calc_best_lift(csv, 'BestDeadliftKg', ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
+
+    csv.write(sys.stdout)
+        
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s results.csv" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])

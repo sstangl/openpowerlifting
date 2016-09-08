@@ -1,0 +1,47 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 http://url/to/results/page"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Download the website to results.html.
+wget --output-document=results.html "$1"
+
+# Save the website URL for future use, since it's pretty hard to tell
+# what meets on the site are tracked and which aren't.
+echo "$1" > URL
+
+# Extract just the results table from results.html.
+# Save it as results.xls so that libreoffice can convert to csv.
+${SCRIPTDIR}/pa-extract-table results.html > results.xls
+
+# Replace any commas in the xls file with periods.
+# Commas are used as decimal points in the European style.
+sed -i -e 's/,/\./g' results.xls
+
+# Use LibreOffice to automatically convert the <table> to a csv file.
+# This creates results.csv.
+libreoffice --headless --convert-to csv results.xls
+
+# Failed lifts are marked as "200x" or "202.5x". Replace with negatives.
+sed -i -e 's/,\([0-9][0-9]*\)x/,-\1/g' results.csv
+sed -i -e 's/,\([0-9][0-9]*\.[0-9][0-9]*\)x/,-\1/g' results.csv
+
+# Some nonsense that gets added all the way on the right.
+sed -i -e 's/,sort on/,/g' results.csv
+
+# If CSV conversion completed successfully, remove the intermediary
+# files early to benefit terminal autocompletion.
+if [ -f results.csv ]; then
+	rm results.html results.xls
+fi
+
+# Commands after this point were extracted into a separate file
+# since they had to be re-run by hand in case of error.
+${SCRIPTDIR}/pa-parse-post
