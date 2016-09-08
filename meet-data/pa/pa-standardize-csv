@@ -54,7 +54,9 @@ def remove_empty_rows(csv):
 def remove_bottom_meet_info(csv):
     def getemptyidx(csv):
         for i,row in enumerate(csv.rows):
-            if 'Referees:' in ','.join(row):
+            if 'Referees' in ','.join(row):
+                return i
+            if 'Referrees' in ','.join(row):
                 return i
             if 'Jury:' in ','.join(row):
                 return i
@@ -77,6 +79,17 @@ def remove_xs(csv):
             if i <= nameidx:
                 continue
             if x == 'x' or x == 'X':
+                row[i] = ''
+
+
+# Some meets have "x" or "X" when lifts are missed or not taken.
+def remove_strings(csv, sl):
+    nameidx = csv.fieldnames.index('Name')
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            if i <= nameidx:
+                continue
+            if x in sl:
                 row[i] = ''
 
 
@@ -235,7 +248,7 @@ def consume_first_column(csv):
             elif row[0] == 'EBP':
                 event = 'B'
                 equipment = 'Single-ply'
-            elif row[0] == 'EQP' or row[0] == 'EQ':
+            elif row[0] == 'EQP' or row[0] == 'EQ' or row[0] == 'EQD':
                 event = 'SBD'
                 equipment = 'Single-ply'
             else:
@@ -316,6 +329,7 @@ def main(filename):
     remove_xs(csv)
 
     hunt_dq_info(csv)
+    remove_strings(csv, ['BMB'])
 
     # Wilks will be automatically calculated later. Feds get it wrong all the time.
     if 'Wilks' in csv.fieldnames:
