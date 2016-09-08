@@ -13,7 +13,8 @@ import sys
 import urllib.request
 
 
-URL = "https://powerliftingaustralia.com/results/"
+URLS = ["https://powerliftingaustralia.com/results/",
+        "https://powerliftingaustralia.com/results/2015-results/"]
 BASEURL = "https://powerliftingaustralia.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -27,8 +28,8 @@ def color(s):
     return "\033[1;36m" + s + "\033[0;m"
 
 
-def gethtml():
-    with urllib.request.urlopen(URL) as r:
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
         return r.read()
 
 
@@ -63,8 +64,11 @@ def getenteredurls():
 
 
 def main():
-    html = gethtml()
-    meetlist = getmeetlist(html)
+    meetlist = []
+    for url in URLS:
+        html = gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
+
     known = getenteredurls()
 
     for m in meetlist:
