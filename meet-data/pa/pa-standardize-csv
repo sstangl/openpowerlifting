@@ -26,7 +26,11 @@ def strip_whitespace(csv):
 def remove_record_info(csv):
     for row in csv.rows:
         for i,x in enumerate(row):
-            if x == 'ar': # Australian Record
+            if x.lower() == 'ar': # Australian Record
+                row[i] = ''
+            if x == 'jr' or x == 'sjr': # Junior Record
+                row[i] = ''
+            if x == 'm1r' or x == 'm2r' or x == 'm3r' or x == 'm4r':
                 row[i] = ''
 
 
@@ -47,9 +51,9 @@ def remove_empty_rows(csv):
 def remove_bottom_meet_info(csv):
     def getemptyidx(csv):
         for i,row in enumerate(csv.rows):
-            if 'Referees' in ','.join(row):
+            if 'Referees:' in ','.join(row):
                 return i
-            if '= Australian Record' in ','.join(row):
+            if '=' and 'record' in ','.join(row).lower():
                 return i
         return -1
 
@@ -200,6 +204,7 @@ def consume_first_column(csv):
                 pass
             elif row[0] == 'RAW':
                 equipment = 'Raw'
+                event = 'SBD'
             elif row[0] == 'WOMEN':
                 pass
             elif row[0] == 'MEN':
@@ -210,6 +215,9 @@ def consume_first_column(csv):
                 event = 'B'
             elif row[0] == 'EBP':
                 event = 'B'
+                equipment = 'Single-ply'
+            elif row[0] == 'EQP' or row[0] == 'EQ':
+                event = 'SBD'
                 equipment = 'Single-ply'
             else:
                 error("Unknown state change in first column: \"%s\"" % row[0])
