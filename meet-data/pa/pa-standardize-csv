@@ -26,11 +26,14 @@ def strip_whitespace(csv):
 def remove_record_info(csv):
     for row in csv.rows:
         for i,x in enumerate(row):
-            if x.lower() == 'ar': # Australian Record
+            x = x.lower()
+            if x == 'ar' or x == 'ajr': # Australian Record
                 row[i] = ''
             if x == 'jr' or x == 'sjr': # Junior Record
                 row[i] = ''
             if x == 'm1r' or x == 'm2r' or x == 'm3r' or x == 'm4r':
+                row[i] = ''
+            if x == 'wr' or x == 'jwr' or x == 'wjr':
                 row[i] = ''
 
 
@@ -53,6 +56,8 @@ def remove_bottom_meet_info(csv):
         for i,row in enumerate(csv.rows):
             if 'Referees:' in ','.join(row):
                 return i
+            if 'Jury:' in ','.join(row):
+                return i
             if '=' and 'record' in ','.join(row).lower():
                 return i
         return -1
@@ -62,6 +67,17 @@ def remove_bottom_meet_info(csv):
         if idx == -1:
             return
         del csv.rows[idx]
+
+
+# Some meets have "x" or "X" when lifts are missed or not taken.
+def remove_xs(csv):
+    nameidx = csv.fieldnames.index('Name')
+    for row in csv.rows:
+        for i,x in enumerate(row):
+            if i <= nameidx:
+                continue
+            if x == 'x' or x == 'X':
+                row[i] = ''
 
 
 def remove_empty_cols(csv):
@@ -190,13 +206,16 @@ def consume_first_column(csv):
 
     for row in csv.rows:
         # If this is a placement, then write information.
-        if isint(row[0]):
+        if isint(row[0]) or row[0] == '-':
             assert equipment
             assert weightclasskg
 
             row[eqidx] = equipment
             row[wtclsidx] = weightclasskg
             row[evtidx] = event
+
+            if row[0] == '-':
+                row[0] = 'DQ'
 
         # Otherwise, change state and clear the row.
         else:
@@ -294,6 +313,7 @@ def main(filename):
 
     remove_zeros(csv)
     remove_dashes(csv)
+    remove_xs(csv)
 
     hunt_dq_info(csv)
 
