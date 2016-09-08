@@ -17,7 +17,7 @@ USPADIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def color(s):
-    return "\034[1;31m" + s + "\033[0;m"
+    return "\033[1;34m" + s + "\033[0;m"
 
 
 # Just a way to name a tuple.
