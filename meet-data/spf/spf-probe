@@ -75,6 +75,7 @@ def main():
     for m in meetlist:
         if not m in known:
             print(color('[SPF] ') + m)
+    print(color('[SPF] ') + 'Continue working through archive.')
 
 if __name__ == '__main__':
     main()

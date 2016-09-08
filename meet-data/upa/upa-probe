@@ -16,7 +16,7 @@ import sys
 import urllib.request
 
 
-NUMPAGES = 1 # Number of pages to go back in results, 10 results per page.
+NUMPAGES = 2 # Number of pages to go back in results, 10 results per page.
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 FEDURL = "http://www.upapower.com/development/?cat=52"
 
@@ -77,6 +77,7 @@ def main():
     for m in meetlist:
         if not m in known:
             print(color('[UPA] ') + m)
+    print(color('[UPA] ') + 'Continue working through archive.')
 
 if __name__ == '__main__':
     main()
