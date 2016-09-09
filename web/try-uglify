@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 # Usage: input | try-uglify filename
 
 if ! type uglifyjs > /dev/null; then
