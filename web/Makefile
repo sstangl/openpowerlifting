@@ -37,7 +37,7 @@ scripts: builddir
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \
 	    scripts/SlickGrid-2.2.6/slick.core.js \
 	    scripts/SlickGrid-2.2.6/slick.grid.js \
-	    | uglifyjs -o ${BUILDDIR}/scripts/jquery-slickgrid-2.2.6.min.js
+	    | ./try-uglify ${BUILDDIR}/scripts/jquery-slickgrid-2.2.6.min.js
 
 css: builddir
 	cp css/style.css ${BUILDDIR}/style.css
