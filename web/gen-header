@@ -25,7 +25,7 @@ def showdbstats():
 def main(tabname):
 
     print('<div id="header">')
-    print('OpenPowerlifting &mdash;')
+    print('OpenPowerlifting')
 
     print('<div class="nav">')
 
