@@ -31,9 +31,11 @@ def remove_record_info(csv):
                 row[i] = ''
             if x == 'jr' or x == 'sjr': # Junior Record
                 row[i] = ''
-            if x == 'm1r' or x == 'm2r' or x == 'm3r' or x == 'm4r':
+            if x == 'm1r' or x == 'm2r' or x == 'm3r' or x == 'm4r' or x == 'm3':
                 row[i] = ''
             if x == 'wr' or x == 'jwr' or x == 'wjr':
+                row[i] = ''
+            if x == 'w' or x == 'am1' or x == 'am2' or x == 'am3':
                 row[i] = ''
 
 
@@ -185,6 +187,8 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'TotalKg'
         elif col == 'WILKS':
             csv.fieldnames[i] = 'Wilks'
+        elif col == 'NATION':
+            csv.fieldnames[i] = 'Country'
         else:
             error("Unknown column: \"%s\"" % col)
 
@@ -219,7 +223,7 @@ def consume_first_column(csv):
 
     for row in csv.rows:
         # If this is a placement, then write information.
-        if isint(row[0]) or row[0] == '-':
+        if isint(row[0]) or row[0] == '-' or row[0] == 'DQ':
             assert equipment
             assert weightclasskg
 
@@ -330,6 +334,7 @@ def main(filename):
 
     hunt_dq_info(csv)
     remove_strings(csv, ['BMB'])
+    remove_strings(csv, ['????', '???', '??']) # Usually in BirthYear.
 
     # Wilks will be automatically calculated later. Feds get it wrong all the time.
     if 'Wilks' in csv.fieldnames:
