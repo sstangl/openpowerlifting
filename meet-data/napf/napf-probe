@@ -16,7 +16,7 @@ import urllib.request
 
 
 URLS = ["http://www.usapowerlifting.com/IPF-NorthAmerica/results.shtml"]
-BASEURL = "http://www.usapowerlifting.com/"
+BASEURL = "http://www.usapowerlifting.com/IPF-NorthAmerica/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
