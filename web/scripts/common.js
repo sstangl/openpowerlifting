@@ -209,6 +209,52 @@ return {
         }
 	},
 
+    // Returns a (min,max] tuple for the values in templates/weightclass.frag,
+    // which controls the weightclass selector.
+    getWeightRange: function(sel) {
+        switch (sel) {
+            // Traditional weights.
+            case 't44': return [0.0, 44.0];
+            case 't48': return [44.0, 48.0];
+            case 't52': return [48.0, 52.0];
+            case 't56': return [52.0, 56.0];
+            case 't60': return [56.0, 60.0];
+            case 't67.5': return [60.0, 67.5];
+            case 't75': return [67.5, 75.0];
+            case 't82.5': return [75.0, 82.5];
+            case 't90': return [82.5, 90.0];
+            case 't90+': return [90.0, 999.0];
+            case 't100': return [90.0, 100.0];
+            case 't110': return [100.0, 110.0];
+            case 't125': return [110.0, 125.0];
+            case 't140': return [125.0, 140.0];
+            case 't140+': return [140.0, 999.0];
+
+            // IPF Men.
+            case 'm53': return [0.0, 53.0];
+            case 'm59': return [53.0, 59.0];
+            case 'm66': return [59.0, 66.0];
+            case 'm74': return [66.0, 74.0];
+            case 'm83': return [74.0, 83.0];
+            case 'm93': return [83.0, 93.0];
+            case 'm105': return [93.0, 105.0];
+            case 'm120': return [105.0, 120.0];
+            case 'm120+': return [120.0, 999.0];
+
+            // IPF Women.
+            case 'f43': return [0.0, 43.0];
+            case 'f47': return [43.0, 47.0];
+            case 'f52': return [47.0, 52.0];
+            case 'f57': return [52.0, 57.0];
+            case 'f63': return [57.0, 63.0];
+            case 'f72': return [63.0, 72.0];
+            case 'f84': return [72.0, 84.0];
+            case 'f84+': return [84.0, 999.0];
+
+            default: return [0.0, 999.0];
+        }
+    },
+
     // A list of federations using drug-testing.
     testedFederationList: [
         'IPF',

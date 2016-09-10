@@ -54,60 +54,9 @@ function getIndices() {
     var fed = selFed.value;
 
     var selectonclass = (selClass.value !== "all");
-    var bw_min = 0.0; // Exclusive
-    var bw_max = 999.0;
-
-    if (selectonclass) {
-        if (selClass.value === "-44") {
-            bw_min = 0.0;
-            bw_max = 44.0;
-        } else if (selClass.value === "-48") {
-            bw_min = 44.0;
-            bw_max = 48.0;
-        } else if (selClass.value === "-52") {
-            bw_min = 48.0;
-            bw_max = 52.0;
-        } else if (selClass.value === "-56") {
-            bw_min = 52.0;
-            bw_max = 56.0;
-        } else if (selClass.value === "-60") {
-            bw_min = 56.0;
-            bw_max = 60.0;
-        } else if (selClass.value === "-67.5") {
-            bw_min = 60.0;
-            bw_max = 67.5;
-        } else if (selClass.value === "-75") {
-            bw_min = 67.5;
-            bw_max = 75.0;
-        } else if (selClass.value === "-82.5") {
-            bw_min = 75.0;
-            bw_max = 82.5;
-        } else if (selClass.value === "-90") {
-            bw_min = 82.5;
-            bw_max = 90.0;
-        } else if (selClass.value === "90+") {
-            bw_min = 90.0;
-            bw_max = 999.0;
-        } else if (selClass.value === "-100") {
-            bw_min = 90.0;
-            bw_max = 100.0;
-        } else if (selClass.value === "-110") {
-            bw_min = 100.0;
-            bw_max = 110.0;
-        } else if (selClass.value === "-125") {
-            bw_min = 110.0;
-            bw_max = 125.0;
-        } else if (selClass.value === "-140") {
-            bw_min = 125.0;
-            bw_max = 140.0;
-        } else if (selClass.value === "140+") {
-            bw_min = 140.0;
-            bw_max = 999.0;
-        } else {
-            console.log("Unknown class: " + selClass.value);
-            selectonclass = false;
-        }
-    }
+    var range = common.getWeightRange(selClass.value);
+    var bw_min = +range[0]; // Exclusive.
+    var bw_max = +range[1]; // Inclusive.
 
     function filter(row) {
         if (!men && !women)
