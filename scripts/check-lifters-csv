@@ -63,6 +63,8 @@ def check_column_name(s):
 
     if 'Jr.' in s or 'Sr.' in s:
         perror("Junior/Senior in names must standardize on no period: \"%s\"" % s)
+    if 'Esq.' in s:
+        perror("Esquire must be standardized on no period: \"%s\"" % s)
 
     k = s.split()
     if k[-1] == 'JR' or k[-1] == 'jr' or k[-1] == 'SR' or k[-1] == 'sr':
