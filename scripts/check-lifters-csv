@@ -414,11 +414,14 @@ def check_row_total_consistency(row, headers):
     bench = float2(row[headers.index('BestBenchKg')]) if 'BestBenchKg' in headers else 0
     deadl = float2(row[headers.index('BestDeadliftKg')]) if 'BestDeadliftKg' in headers else 0
 
-    if total < 0 or squat < 0 or bench < 0 or deadl < 0:
-        return # Lifter bombed out of the meet.
-
-    if total == 0:
-        return # Disqualified, didn't finish the meet, etc.
+    # Disqualified, didn't finish the meet, etc.
+    if total <= 0: # Should be zero.
+        if 'Place' in headers:
+            place = row[headers.index('Place')]
+            if place != 'DQ' and place != 'DD' and place != 'NS':
+                pwarning("Lifter has no total, but not marked DQ: \"%s\"" %
+                         row[headers.index('Name')])
+        return
 
     # Most federations round to 0.01, so rounding errors get introduced.
     # Only flag the ones that are obviously wrong, otherwise, believe the federation.

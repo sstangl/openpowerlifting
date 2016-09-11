@@ -1,14 +1,14 @@
 Name,Sex,Division,Age,WeightClassKg,School,Event,Equipment,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Place
 Jeff Juangco,M,Frosh/Soph,15,52,Stockdale,SBD,Raw,74.84,65.77,138.35,278.96,1
 Alex Magana,M,Frosh/Soph,15,52,Ridgeview,SBD,Raw,102.06,61.23,115.67,278.96,2
-Jay Garber,M,Frosh/Soph,15,52,Stockdale,SBD,Raw,77.11,-49.9,83.91,161.03,3
+Jay Garber,M,Frosh/Soph,15,52,Stockdale,SBD,Raw,77.11,-49.9,83.91,,DQ
 John Sy,M,Frosh/Soph,15,56,Golden Valley,SBD,Raw,115.67,83.91,122.47,322.05,1
 Tyler Watt,M,Frosh/Soph,15,56,Ridgeview,SBD,Raw,102.06,61.23,120.2,283.5,2
 Christian Reyes,M,Frosh/Soph,15,56,Golden Valley,SBD,Raw,95.25,74.84,108.86,278.96,3
 Andrew Yasania,M,Frosh/Soph,15,56,East,SBD,Raw,74.84,68.04,102.06,244.94,4
 Michael Barron,M,Frosh/Soph,15,56,Golden Valley,SBD,Raw,72.57,68.04,102.06,242.67,5
 Keith Hough,M,Frosh/Soph,15,56,Stockdale,SBD,Raw,70.31,52.16,88.45,210.92,6
-Kenny Geissel,M,Frosh/Soph,15,56,East,SBD,Raw,61.23,-40.82,,61.23,7
+Kenny Geissel,M,Frosh/Soph,15,56,East,SBD,Raw,61.23,-40.82,,,DQ
 Brandon Harris,M,Frosh/Soph,15,60,Ridgeview,SBD,Raw,124.74,72.57,122.47,319.78,1
 Gene Blair,M,Frosh/Soph,15,60,Ridgeview,SBD,Raw,102.06,63.5,138.35,303.91,2
 Ren Floyd,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,113.4,65.77,115.67,294.84,3
@@ -17,9 +17,9 @@ Ryan Kirschenman,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,83.91,72.57,120.2,276.69,5
 Mitch Bettes,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,83.91,70.31,113.4,267.62,6
 David Calderon,M,Frosh/Soph,15,60,Highland,SBD,Raw,70.31,52.16,142.88,265.35,7
 Josh Gil,M,Frosh/Soph,15,60,Highland,SBD,Raw,70.31,61.23,115.67,247.21,8
-Hector Vela,M,Frosh/Soph,15,60,Highland,SBD,Raw,-102.06,61.23,142.88,204.12,9
-Brandon Eggenburg,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,83.91,,,83.91,10
-Lance Claiborne,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,-97.52,,,,11
+Hector Vela,M,Frosh/Soph,15,60,Highland,SBD,Raw,-102.06,61.23,142.88,,DQ
+Brandon Eggenburg,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,83.91,,,,DQ
+Lance Claiborne,M,Frosh/Soph,15,60,Stockdale,SBD,Raw,-97.52,,,,DQ
 Jeff Jones,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,117.93,111.13,165.56,394.63,1
 Jeffrey McDonald,M,Frosh/Soph,15,67.5,East,SBD,Raw,142.88,83.91,149.69,376.48,2
 Moses Corbell,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,129.27,90.72,149.69,369.68,3
@@ -36,10 +36,10 @@ Garrett Thomas,M,Frosh/Soph,15,67.5,Highland,SBD,Raw,83.91,65.77,129.27,278.96,1
 Bricio Barranco,M,Frosh/Soph,15,67.5,Highland,SBD,Raw,79.38,70.31,124.74,274.42,14
 Derrick Shivers,M,Frosh/Soph,15,67.5,Golden Valley,SBD,Raw,102.06,61.23,102.06,265.35,15
 Alex Harrington,M,Frosh/Soph,15,67.5,Liberty,SBD,Raw,88.45,56.7,120.2,265.35,16
-Joseph Aguirre,M,Frosh/Soph,15,67.5,Highland,SBD,Raw,,74.84,113.4,188.24,17
-Travis Barnett,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,,68.04,117.93,185.97,18
-Marshall Mosely,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,,65.77,106.59,172.37,19
-Greg Bailey,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,-83.91,-79.38,-90.72,,20
+Joseph Aguirre,M,Frosh/Soph,15,67.5,Highland,SBD,Raw,,74.84,113.4,,DQ
+Travis Barnett,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,,68.04,117.93,,DQ
+Marshall Mosely,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,,65.77,106.59,,DQ
+Greg Bailey,M,Frosh/Soph,15,67.5,Stockdale,SBD,Raw,-83.91,-79.38,-90.72,,DQ
 Tim Armstrong,M,Frosh/Soph,15,75,Stockdale,SBD,Raw,165.56,115.67,192.78,474,1
 Andre Hayes,M,Frosh/Soph,15,75,East,SBD,Raw,151.95,120.2,192.78,464.93,2
 James Brown,M,Frosh/Soph,15,75,West,SBD,Raw,151.95,83.91,188.24,424.11,3
@@ -63,10 +63,10 @@ Miguel Martinez,M,Frosh/Soph,15,75,Highland,SBD,Raw,88.45,92.99,147.42,328.85,20
 Zach Hansen,M,Frosh/Soph,15,75,Stockdale,SBD,Raw,92.99,83.91,142.88,319.78,21
 Chris Luevano,M,Frosh/Soph,15,75,Highland,SBD,Raw,102.06,72.57,145.15,319.78,22
 Joseph Olivas,M,Frosh/Soph,15,75,Highland,SBD,Raw,79.38,52.16,129.27,260.82,23
-Heath Emmerson,M,Frosh/Soph,15,75,Ridgeview,SBD,Raw,92.99,,127.01,219.99,24
-Chris Johns,M,Frosh/Soph,15,75,Highland,SBD,Raw,61.23,,129.27,190.51,25
-Sergio Hernandez,M,Frosh/Soph,15,75,East,SBD,Raw,-145.15,-83.91,-142.88,,
-Martin Cabera,M,Frosh/Soph,15,75,Liberty,SBD,Raw,,-88.45,-90.72,,
+Heath Emmerson,M,Frosh/Soph,15,75,Ridgeview,SBD,Raw,92.99,,127.01,,DQ
+Chris Johns,M,Frosh/Soph,15,75,Highland,SBD,Raw,61.23,,129.27,,DQ
+Sergio Hernandez,M,Frosh/Soph,15,75,East,SBD,Raw,-145.15,-83.91,-142.88,,DQ
+Martin Cabera,M,Frosh/Soph,15,75,Liberty,SBD,Raw,,-88.45,-90.72,,DQ
 Jeremy Ramirez,M,Frosh/Soph,15,82.5,Stockdale,SBD,Raw,165.56,124.74,174.63,464.93,1
 Zack Burk,M,Frosh/Soph,15,82.5,Liberty,SBD,Raw,142.88,108.86,165.56,417.3,2
 Ray Calderon,M,Frosh/Soph,15,82.5,Orange Glen,SBD,Raw,147.42,88.45,181.44,417.3,3
@@ -94,7 +94,7 @@ Mark Renteria,M,Frosh/Soph,15,90,Highland,SBD,Raw,142.88,83.91,147.42,374.21,12
 Patrick Lewis,M,Frosh/Soph,15,90,Stockdale,SBD,Raw,113.4,79.38,147.42,340.19,13
 Will Sutton,M,Frosh/Soph,15,90,Liberty,SBD,Raw,111.13,83.91,145.15,340.19,14
 Michael Dixon,M,Frosh/Soph,15,90,Ridgeview,SBD,Raw,111.13,72.57,145.15,328.85,15
-Evan Cazares,M,Frosh/Soph,15,90,Stockdale,SBD,Raw,-136.08,92.99,142.88,235.87,16
+Evan Cazares,M,Frosh/Soph,15,90,Stockdale,SBD,Raw,-136.08,92.99,142.88,,DQ
 Trevor Goldberg,M,Frosh/Soph,15,100,Liberty,SBD,Raw,208.65,138.35,192.78,539.77,1
 Blake Abbott,M,Frosh/Soph,15,100,Centennial,SBD,Raw,176.9,120.2,208.65,505.76,2
 Brian McConnel,M,Frosh/Soph,15,100,Stockdale,SBD,Raw,158.76,151.95,183.7,494.42,3
@@ -105,7 +105,7 @@ Taylor West,M,Frosh/Soph,15,100,Liberty,SBD,Raw,124.74,111.13,183.7,419.57,7
 Anthony Marmolejo,M,Frosh/Soph,15,100,Highland,SBD,Raw,129.27,113.4,158.76,401.43,8
 Erik Chavez,M,Frosh/Soph,15,100,Highland,SBD,Raw,142.88,102.06,154.22,399.16,9
 Cody Blackburn,M,Frosh/Soph,15,100,Ridgeview,SBD,Raw,149.69,79.38,158.76,387.82,10
-Angel Montijo,M,Frosh/Soph,15,100,Highland,SBD,Raw,106.59,-97.52,142.88,249.48,11
+Angel Montijo,M,Frosh/Soph,15,100,Highland,SBD,Raw,106.59,-97.52,142.88,,DQ
 Matt Blakemore,M,Frosh/Soph,15,110,Liberty,SBD,Raw,183.7,111.13,185.97,480.81,1
 Nathan Mantle,M,Frosh/Soph,15,110,Liberty,SBD,Raw,156.49,124.74,174.63,455.86,2
 Vladimir Greene,M,Frosh/Soph,15,110,Ridgeview,SBD,Raw,156.49,113.4,183.7,453.59,3
@@ -118,14 +118,14 @@ Alberto Ramos,M,Frosh/Soph,15,110,Sylmar,SBD,Raw,113.4,83.91,208.65,405.97,9
 Matthew Vessell,M,Frosh/Soph,15,110,Highland,SBD,Raw,102.06,111.13,183.7,396.89,10
 Gino Salazar,M,Frosh/Soph,15,110,Highland,SBD,Raw,124.74,90.72,136.08,351.53,11
 Samuel Reynoso,M,Frosh/Soph,15,110,Highland,SBD,Raw,102.06,74.84,136.08,312.98,12
-Brock Mueller,M,Frosh/Soph,15,110,Liberty,SBD,Raw,-113.4,102.06,183.7,285.76,13
+Brock Mueller,M,Frosh/Soph,15,110,Liberty,SBD,Raw,-113.4,102.06,183.7,,DQ
 Jose Dominguez,M,Frosh/Soph,15,110,Highland,SBD,Raw,106.59,61.23,117.93,285.76,14
 Isaiah Aguilera,M,Frosh/Soph,15,110,Highland,SBD,Raw,111.13,61.23,111.13,283.5,15
-Daniel Herrera,M,Frosh/Soph,15,110,East,SBD,Raw,-113.4,-102.06,-133.81,,
+Daniel Herrera,M,Frosh/Soph,15,110,East,SBD,Raw,-113.4,-102.06,-133.81,,DQ
 Sal Gomez,M,Frosh/Soph,15,125,Orange Glenn,SBD,Raw,176.9,113.4,183.7,474,1
 Bo Brothers,M,Frosh/Soph,15,125,Stockdale,SBD,Raw,129.27,92.99,167.83,390.09,2
-Eric Martinez,M,Frosh/Soph,15,125,Stockdale,SBD,Raw,-142.88,106.59,165.56,272.16,3
-Michael Ferrone,M,Frosh/Soph,15,125,Stockdale,SBD,Raw,-102.06,77.11,151.95,229.06,4
+Eric Martinez,M,Frosh/Soph,15,125,Stockdale,SBD,Raw,-142.88,106.59,165.56,,DQ
+Michael Ferrone,M,Frosh/Soph,15,125,Stockdale,SBD,Raw,-102.06,77.11,151.95,,DQ
 Justin Lay,M,Junior/Senior,17,67.5,Stockdale,SBD,Raw,131.54,97.52,158.76,387.82,1
 German Portillo,M,Junior/Senior,17,67.5,Orange Glen,SBD,Raw,129.27,86.18,170.1,385.55,2
 Edson Perez,M,Junior/Senior,17,67.5,Orange Glen,SBD,Raw,127.01,88.45,163.29,378.75,3
@@ -140,7 +140,7 @@ Lee Gomez,M,Junior/Senior,17,75,Ridgeview,SBD,Raw,124.74,90.72,183.7,399.16,4
 Ruban Duran,M,Junior/Senior,17,75,Stockdale,SBD,Raw,115.67,124.74,156.49,396.89,5
 Ricky Garcia,M,Junior/Senior,17,75,Orange Glen,SBD,Raw,122.47,70.31,156.49,349.27,6
 Aaron Jackson,M,Junior/Senior,17,75,Highland,SBD,Raw,102.06,83.91,142.88,328.85,7
-Alex Solis,M,Junior/Senior,17,75,Stockdale,SBD,Raw,-104.33,102.06,142.88,244.94,8
+Alex Solis,M,Junior/Senior,17,75,Stockdale,SBD,Raw,-104.33,102.06,142.88,,DQ
 Spencer Bockman,M,Junior/Senior,17,82.5,Liberty,SBD,Raw,170.1,117.93,174.63,462.66,1
 Christian Ramirez,M,Junior/Senior,17,82.5,Orange Glenn,SBD,Raw,158.76,111.13,183.7,453.59,2
 Joseph Peffer,M,Junior/Senior,17,82.5,Stockdale,SBD,Raw,149.69,136.08,165.56,451.32,3
@@ -161,7 +161,7 @@ Mike Foster,M,Junior/Senior,17,90,Liberty,SBD,Raw,142.88,95.25,183.7,421.84,7
 Tom Brezinski,M,Junior/Senior,17,90,Stockdale,SBD,Raw,124.74,97.52,185.97,408.23,8
 John Cuddy,M,Junior/Senior,17,90,Ridgeview,SBD,Raw,133.81,92.99,165.56,392.36,9
 Victor Alomar,M,Junior/Senior,17,90,Highland,SBD,Raw,120.2,79.38,151.95,351.53,10
-Ryan Halstead,M,Junior/Senior,17,90,Stockdale,SBD,Raw,142.88,102.06,,244.94,11
+Ryan Halstead,M,Junior/Senior,17,90,Stockdale,SBD,Raw,142.88,102.06,,,DQ
 Neil Hopper,M,Junior/Senior,17,100,Stockdale,SBD,Raw,165.56,124.74,215.46,505.76,1
 Jon Jackson,M,Junior/Senior,17,100,Ridgeview,SBD,Raw,188.24,115.67,195.04,498.95,2
 Austin Sneed,M,Junior/Senior,17,100,Centennial,SBD,Raw,183.7,102.06,206.38,492.15,3
@@ -170,14 +170,14 @@ Mike Noonchester,M,Junior/Senior,17,100,Liberty,SBD,Raw,170.1,92.99,199.58,462.6
 Brandon Davis,M,Junior/Senior,17,100,East,SBD,Raw,142.88,111.13,183.7,437.72,6
 Daniel Renteria,M,Junior/Senior,17,100,Highland,SBD,Raw,183.7,102.06,113.4,399.16,7
 Aaron Gomez,M,Junior/Senior,17,100,Ridgeview,SBD,Raw,142.88,102.06,142.88,387.82,8
-Justin Hedrick,M,Junior/Senior,17,100,Stockdale,SBD,Raw,-183.7,115.67,183.7,299.37,9
+Justin Hedrick,M,Junior/Senior,17,100,Stockdale,SBD,Raw,-183.7,115.67,183.7,,DQ
 Omar Garza,M,Junior/Senior,17,110,Stockdale,SBD,Raw,183.7,136.08,206.38,526.17,1
 Jose Gomez,M,Junior/Senior,17,110,Liberty,SBD,Raw,183.7,122.47,183.7,489.88,2
 Nick Burnett,M,Junior/Senior,17,110,Highland,SBD,Raw,124.74,83.91,142.88,351.53,3
 Manuel Canez,M,Junior/Senior,17,125,East,SBD,Raw,147.42,108.86,174.63,430.91,1
 Jorge Garcia,M,Junior/Senior,17,125,Stockdale,SBD,Raw,136.08,92.99,145.15,374.21,2
-Brandon Harrison,M,Junior/Senior,17,125,Stockdale,SBD,Raw,,136.08,,136.08,3
-Bill Rauert,M,Junior/Senior,17,125,Stockdale,SBD,Raw,,92.99,,92.99,4
+Brandon Harrison,M,Junior/Senior,17,125,Stockdale,SBD,Raw,,136.08,,,DQ
+Bill Rauert,M,Junior/Senior,17,125,Stockdale,SBD,Raw,,92.99,,,DQ
 Nicholas Nunez,M,Junior/Senior,17,125+,Sylmar,SBD,Raw,226.8,102.06,208.65,537.51,1
 Jerry Miranda,M,Junior/Senior,17,125+,East,SBD,Raw,201.85,138.35,195.04,535.24,2
 Zach Aguirre,M,Junior/Senior,17,125+,Highland,SBD,Raw,102.06,102.06,158.76,362.87,3
