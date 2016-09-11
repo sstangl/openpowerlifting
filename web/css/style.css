@@ -252,6 +252,10 @@ div.text-content {
   margin-left: 10px;
 }
 
+#header .nav__link--active {
+  color: #FB3640;
+}
+
 .header__stats {
   display: inline-block;
   font-size: 12px;
