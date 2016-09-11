@@ -3,7 +3,7 @@ html,body {
   padding: 0;
   height: 100%;
 
-  background-color: #10171c;
+  background-color: #040404;
   color: #EDF2F4;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -45,7 +45,7 @@ a {
 }
 
 .slick-row.even {
-  background-color: #141c21;
+  background-color: #111111;
 }
 
 .slick-row:hover {
@@ -72,7 +72,7 @@ thead td {
 }
 
 tr:nth-child(even) {
-  background-color: #141c21;
+  background-color: #111111;
 }
 
 tbody tr:hover {
@@ -112,6 +112,7 @@ td a {
   padding: 6px;
   font-size: 14px;
   color: #FB3640;
+  background-color: #040404;
 }
 
 #header a {
@@ -126,7 +127,7 @@ td a {
   padding-right: 20px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background-color: #10171c;
+  background-color: #111111;
   display: flex;
   align-items: center;
 }
@@ -244,6 +245,7 @@ div.text-content {
 
 .nav {
   float: right;
+  padding-right: 10px;
 }
 
 .nav__link + .nav__link {
