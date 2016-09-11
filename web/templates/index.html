@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>Open Powerlifting</title>
+<head>
+  <meta charset="utf-8">
+  <title>Open Powerlifting</title>
+  <link rel="stylesheet" type="text/css" href="slick.grid.css" />
+  <script src="scripts/jquery-slickgrid-2.2.6.min.js"></script>
+  #include templates/analytics.frag
+  <script src="scripts/openpowerlifting.js"></script>
+  <script src="scripts/meets.js"></script>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/database.js"></script>
+  <script src="scripts/main-index.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-    <link rel="stylesheet" type="text/css" href="slick.grid.css"/>
-    <script src="scripts/jquery-slickgrid-2.2.6.min.js"></script>
-
-#include templates/analytics.frag
-
-    <script src="scripts/openpowerlifting.js"></script>
-    <script src="scripts/meets.js"></script>
-    <script src="scripts/common.js"></script>
-    <script src="scripts/database.js"></script>
-    <script src="scripts/main-index.js" defer></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-  </head>
-
-  <body>
-    <div class="flexbox">
-#exec python3 gen-header rankings
+<body>
+  <div class="flexbox">
+    #exec python3 gen-header rankings
     <div id="controls">
       <div id="controls-left">
-#include templates/search.frag
+        <input type="checkbox" id="raw" checked="true" />
+        <label for="raw"><span></span>Raw</label>
+
+        <input type="checkbox" id="wraps" checked="true" />
+        <label for="wraps"><span></span>Wraps</label>
+
+        <input type="checkbox" id="single" />
+        <label for="single"><span></span>Single</label>
+
+        <input type="checkbox" id="multi" />
+        <label for="multi"><span></span>Multi</label>
+
+        #include templates/weightclass.frag
+        #include templates/fedselect.frag
+
+        <input type="checkbox" id="men" checked="true">
+        <label for="men"><span></span>Men</label>
+
+        <input type="checkbox" id="women" checked="true">
+        <label for="women"><span></span>Women</label>
+
+        <select id="weighttype">
+          <option value="lb">lbs</option>
+          <option value="kg">kg</option>
+        </select>
       </div>
-      <div id ="controls-right">
-      <input type="checkbox" id="raw" checked="true"/>
-      <label for="raw"><span></span>Raw</label>
-
-      <input type="checkbox" id="wraps" checked="true"/>
-      <label for="wraps"><span></span>Wraps</label>
-
-      <input type="checkbox" id="single"/>
-      <label for="single"><span></span>Single</label>
-
-      <input type="checkbox" id="multi"/>
-      <label for="multi"><span></span>Multi</label>
-
-#include templates/weightclass.frag
-#include templates/fedselect.frag
-
-      <input type="checkbox" id="men" checked="true">
-      <label for="men"><span></span>Men</label>
-
-      <input type="checkbox" id="women" checked="true">
-      <label for="women"><span></span>Women</label>
-
-      <select id="weighttype">
-        <option value="lb">lbs</option>
-        <option value="kg">kg</option>
-      </select>
+      <div id="controls-right">
+        #include templates/search.frag
       </div>
     </div>
     <div id="theGrid"></div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

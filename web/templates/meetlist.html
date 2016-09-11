@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>Open Powerlifting</title>
+<head>
+  <meta charset="utf-8">
+  <title>Open Powerlifting</title>
+  #include templates/analytics.frag
+  <script src="scripts/common.js"></script>
+  <script src="scripts/main-meetlist.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-#include templates/analytics.frag
-
-    <script src="scripts/common.js"></script>
-    <script src="scripts/main-meetlist.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-  </head>
-
-  <body>
-
+<body>
   <div class="topbar">
-#exec python3 gen-header meetlist
+    #exec python3 gen-header meetlist
     <div id="controls">
       <div id="controls-left">
-#include templates/search.frag
+        #include templates/search.frag
       </div>
     </div>
   </div>
+  <div class="content">
+    #exec python3 gen-meettable
+  </div>
+</body>
 
-<div class="content">
-#exec python3 gen-meettable
-</div>
-
-  </body>
 </html>

@@ -1,46 +1,28 @@
-@font-face {
-  font-family: 'Cantarell';
-  font-weight: 400;
-  font-style: normal;
-  src: url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj1_Y6323mHUZFJMgTvxaG2iE.eot');
-  src: url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj1_Y6323mHUZFJMgTvxaG2iE.eot?#iefix') format('embedded-opentype'),
-       local('Cantarell Regular'),
-       local('Cantarell-regular'),
-       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj15Bw1xU1rKptJj_0jans920.woff2') format('woff2'),
-       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj17O3LdcAZYWl9Si6vvxL-qU.woff') format('woff'),
-       url('http://fonts.gstatic.com/s/cantarell/v6/V86VyqXbc09Sss3BPsMj16CWcynf_cDxXwCLxiixG1c.ttf') format('truetype'),
-       url('http://fonts.gstatic.com/l/font?kit=V86VyqXbc09Sss3BPsMj15bd9NUM7myrQQz30yPaGQ4&skey=4fa1583b73a857db&v=v6#Cantarell') format('svg');
-}
-
 html,body {
   margin: 0;
   padding: 0;
   height: 100%;
 
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #10171c;
+  color: #EDF2F4;
 
-  font-family: Cantarell;
-}
-
-.currentlink {
-  text-decoration: underline;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .slick-cell {
   padding-top: 3px;
   padding-left: 4px;
-  color: #FFFFFF;
+  color: #EDF2F4;
   font-size: 9pt;
   border: 0px;
 }
 
 a {
-  color: #FFFFFF;
+  color: #EDF2F4;
 }
 
 .slick-cell a {
-  color: #FFFFFF;
+  color: #EDF2F4;
 }
 
 .searchflashing {
@@ -49,12 +31,12 @@ a {
 
 .slick-header-column {
   font-size: 9pt;
-  color: red;
+  color: #FB3640;
 }
 
 .slick-header-column.ui-state-default {
   border-right: 0px;
-  border-bottom: 1px red;
+  border-bottom: 1px #FB3640;
 }
 
 .slick-header-column-sorted {
@@ -63,7 +45,7 @@ a {
 }
 
 .slick-row.even {
-  background-color: #111111;
+  background-color: #141c21;
 }
 
 .slick-row:hover {
@@ -72,7 +54,7 @@ a {
 
 table {
   font-size: 9pt;
-  color: #FFFFFF;
+  color: #EDF2F4;
   width: 100%;
   padding-left: 18px;
   padding-right: 18px;
@@ -82,7 +64,7 @@ table {
 }
 
 thead {
-  color: red;
+  color: #FB3640;
 }
 
 thead td {
@@ -90,7 +72,7 @@ thead td {
 }
 
 tr:nth-child(even) {
-  background-color: #111111;
+  background-color: #141c21;
 }
 
 tbody tr:hover {
@@ -105,11 +87,11 @@ td {
 }
 
 td a {
-  color: #FFFFFF;
+  color: #EDF2F4;
 }
 
 .table-divider {
-  color: red;
+  color: #FB3640;
 }
 
 .flexbox {
@@ -123,18 +105,17 @@ td a {
 }
 
 #oplurl {
-  color: red;
+  color: #FB3640;
 }
 
 #header {
   padding: 6px;
-  font-size: 15pt;
-  color: red;
-  font-variant: small-caps;
+  font-size: 14px;
+  color: #FB3640;
 }
 
 #header a {
-  color: #FFFFFF;
+  color: #EDF2F4;
 }
 
 #controls {
@@ -145,7 +126,7 @@ td a {
   padding-right: 20px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background-color: #111111;
+  background-color: #10171c;
   display: flex;
   align-items: center;
 }
@@ -234,7 +215,7 @@ input[type="checkbox"]:checked + label span {
 div.topbar {
   position: fixed;
   width: 100%;
-  background-color: #000000;
+  background-color: #10171c;
 }
 
 div.content {
@@ -259,4 +240,17 @@ div.text-content {
   border-style: solid;
   padding: 10px;
   margin-right: 10px;
+}
+
+.nav {
+  float: right;
+}
+
+.nav__link + .nav__link {
+  margin-left: 10px;
+}
+
+.header__stats {
+  display: inline-block;
+  font-size: 12px;
 }
