@@ -25,31 +25,39 @@ def showdbstats():
 def main(tabname):
 
     print('<div id="header">')
-    print('OpenPowerlifting &mdash;')
+    print('OpenPowerlifting')
+
+    print('<div class="nav">')
 
     assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'downloads', 'contact']
 
     if tabname == 'rankings':
-        print('<span class="currentlink">Rankings</span>')
+        print('<a href="index.html" class="nav__link nav__link--active">Rankings</a>')
     else:
-        print('<a href="index.html">Rankings</a>')
+        print('<a href="index.html" class="nav__link">Rankings</a>')
 
     if tabname == 'meetlist':
-        print('<span class="currentlink">Meets</span>')
+        print('<a href="meetlist.html" class="nav__link nav__link--active">Meets</a>')
     else:
-        print('<a href="meetlist.html">Meets</a>')
+        print('<a href="meetlist.html" class="nav__link">Meets</a>')
 
     if tabname == 'downloads':
-        print('<span class="currentlink">Downloads</span>')
+        print('<a href="downloads.html" class="nav__link nav__link--active">Downloads</a>')
     else:
-        print('<a href="downloads.html">Downloads</a>')
+        print('<a href="downloads.html" class="nav__link">Downloads</a>')
 
     if tabname == 'contact':
-        print('<span class="currentlink">Contact</span>')
+        print('<a href="contact.html" class="nav__link nav__link--active">Contact</a>')
     else:
-        print('<a href="contact.html">Contact</a>')
+        print('<a href="contact.html" class="nav__link">Contact</a>')
+
+    print('</div>')
+
+    print('<div class="header__stats">')
 
     showdbstats()
+
+    print('</div>')
 
     print('</div>')
 
