@@ -48,7 +48,7 @@ html: builddir data
 	./preprocess-html templates/lifters.html > ${BUILDDIR}/lifters.html
 	./preprocess-html templates/meet.html > ${BUILDDIR}/meet.html
 	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
-	./preprocess-html templates/downloads.html > ${BUILDDIR}/downloads.html
+	./preprocess-html templates/data.html > ${BUILDDIR}/data.html
 	./preprocess-html templates/contact.html > ${BUILDDIR}/contact.html
 
 images: builddir

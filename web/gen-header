@@ -29,7 +29,7 @@ def main(tabname):
 
     print('<div class="nav">')
 
-    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'downloads', 'contact']
+    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
 
     if tabname == 'rankings':
         print('<a href="index.html" class="nav__link nav__link--active">Rankings</a>')
@@ -41,10 +41,10 @@ def main(tabname):
     else:
         print('<a href="meetlist.html" class="nav__link">Meets</a>')
 
-    if tabname == 'downloads':
-        print('<a href="downloads.html" class="nav__link nav__link--active">Downloads</a>')
+    if tabname == 'data':
+        print('<a href="data.html" class="nav__link nav__link--active">Data</a>')
     else:
-        print('<a href="downloads.html" class="nav__link">Downloads</a>')
+        print('<a href="data.html" class="nav__link">Data</a>')
 
     if tabname == 'contact':
         print('<a href="contact.html" class="nav__link nav__link--active">Contact</a>')
