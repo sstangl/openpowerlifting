@@ -299,7 +299,7 @@ def consume_old_format(csv):
             equipment = 'Single-ply'
             event = 'SBD'
             row[0] = ''
-        elif row[0] == 'Equipped Bench Press':
+        elif row[0] == 'Equipped Bench Press' or row[0] == 'Equipped Bench Press Only':
             equipment = 'Single-ply'
             event = 'B'
             row[0] = ''
