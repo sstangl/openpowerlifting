@@ -60,6 +60,8 @@ def remove_bottom_meet_info(csv):
                 return i
             if 'Referrees' in ','.join(row):
                 return i
+            if 'Referee\'s' in ','.join(row):
+                return i
             if 'Jury:' in ','.join(row):
                 return i
             if '=' and 'record' in ','.join(row).lower():
@@ -163,7 +165,7 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'BirthYear'
         elif col == 'M/F':
             csv.fieldnames[i] = 'Sex'
-        elif col == 'BWT':
+        elif col == 'BWT' or col == 'BW':
             csv.fieldnames[i] = 'BodyweightKg'
         elif col == 'SQ 1' or col == 'SQ-1':
             csv.fieldnames[i] = 'Squat1Kg'
@@ -171,7 +173,7 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Squat2Kg'
         elif col == 'SQ 3' or col == 'SQ-3':
             csv.fieldnames[i] = 'Squat3Kg'
-        elif col == 'BP 1' or col == 'BP-1':
+        elif col == 'BP 1' or col == 'BP-1' or col == 'BP1':
             csv.fieldnames[i] = 'Bench1Kg'
         elif col == 'BP 2' or col == 'BP-2':
             csv.fieldnames[i] = 'Bench2Kg'
@@ -189,8 +191,10 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Wilks'
         elif col == 'NATION':
             csv.fieldnames[i] = 'Country'
-        elif col == 'CLASS':
+        elif col == 'CLASS' or col == 'DIV':
             csv.fieldnames[i] = 'WeightClassKg'
+        elif col == 'CAT':
+            csv.fieldnames[i] = 'Division'
         else:
             error("Unknown column: \"%s\"" % col)
 
@@ -219,7 +223,7 @@ def consume_first_column(csv):
 
     # Walk down the rows, storing and writing state from the first column.
     # Nuke the stateful rows as they're walked, for remove_empty_rows() later.
-    equipment = None
+    equipment =  None
     weightclasskg = None
     event = 'SBD'
 
@@ -297,6 +301,14 @@ def consume_old_format(csv):
             row[0] = ''
         elif row[0] == 'Equipped Bench Press':
             equipment = 'Single-ply'
+            event = 'B'
+            row[0] = ''
+        elif row[0] == 'Raw Powerlifting':
+            equipment = 'Raw'
+            event = 'SBD'
+            row[0] = ''
+        elif row[0] == 'Raw Bench Press' or row[0] == 'Raw Bench Press Only':
+            equipment = 'Raw'
             event = 'B'
             row[0] = ''
         # If no sex is specified, this is probabaly an unknown control row.
