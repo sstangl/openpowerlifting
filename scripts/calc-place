@@ -5,12 +5,17 @@ import sys
 
 
 def getcategory(csv, row):
-    dividx    = csv.fieldnames.index('Division')
+    if 'Division' in csv.fieldnames:
+        dividx    = csv.fieldnames.index('Division')
+        div = row[dividx].lower()
+    else:
+        div = 'Open'
+
     eqidx     = csv.fieldnames.index('Equipment')
     sexidx    = csv.fieldnames.index('Sex')
     eventidx  = csv.fieldnames.index('Event')
     wtclsidx  = csv.fieldnames.index('WeightClassKg')
-    return (row[dividx].lower(), row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
+    return (div, row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
 def main(filename):
@@ -20,7 +25,7 @@ def main(filename):
         print("There's already a place field.", file=sys.stderr)
         sys.exit(1)
 
-    for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
+    for i in ['Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
         if not i in csv.fieldnames:
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)

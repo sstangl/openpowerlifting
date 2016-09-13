@@ -165,23 +165,23 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Sex'
         elif col == 'BWT':
             csv.fieldnames[i] = 'BodyweightKg'
-        elif col == 'SQ 1':
+        elif col == 'SQ 1' or col == 'SQ-1':
             csv.fieldnames[i] = 'Squat1Kg'
-        elif col == 'SQ 2':
+        elif col == 'SQ 2' or col == 'SQ-2':
             csv.fieldnames[i] = 'Squat2Kg'
-        elif col == 'SQ 3':
+        elif col == 'SQ 3' or col == 'SQ-3':
             csv.fieldnames[i] = 'Squat3Kg'
-        elif col == 'BP1' or col == 'BP 1':
+        elif col == 'BP 1' or col == 'BP-1':
             csv.fieldnames[i] = 'Bench1Kg'
-        elif col == 'BP 2':
+        elif col == 'BP 2' or col == 'BP-2':
             csv.fieldnames[i] = 'Bench2Kg'
-        elif col == 'BP 3':
+        elif col == 'BP 3' or col == 'BP-3':
             csv.fieldnames[i] = 'Bench3Kg'
-        elif col == 'DL 1':
+        elif col == 'DL 1' or col == 'DL-1':
             csv.fieldnames[i] = 'Deadlift1Kg'
-        elif col == 'DL 2':
+        elif col == 'DL 2' or col == 'DL-2':
             csv.fieldnames[i] = 'Deadlift2Kg'
-        elif col == 'DL 3':
+        elif col == 'DL 3' or col == 'DL-3':
             csv.fieldnames[i] = 'Deadlift3Kg'
         elif col == 'TOTAL':
             csv.fieldnames[i] = 'TotalKg'
@@ -189,6 +189,8 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Wilks'
         elif col == 'NATION':
             csv.fieldnames[i] = 'Country'
+        elif col == 'CLASS':
+            csv.fieldnames[i] = 'WeightClassKg'
         else:
             error("Unknown column: \"%s\"" % col)
 
@@ -270,6 +272,43 @@ def consume_first_column(csv):
             row[0] = ''
 
 
+# For documents <= 2013, the place isn't given. Instead, there is a CLASS column,
+# and the event/gear is specified statefully by rows with colspan=16.
+def consume_old_format(csv):
+    assert csv.fieldnames[0] == 'Name'
+    assert 'WeightClassKg' in csv.fieldnames
+    assert 'Sex' in csv.fieldnames
+    assert not 'Equipment' in csv.fieldnames
+    assert not 'Event' in csv.fieldnames
+
+    csv.append_columns(['Equipment', 'Event'])
+
+    sexidx = csv.fieldnames.index('Sex')
+    eqidx = csv.fieldnames.index('Equipment')
+    evtidx = csv.fieldnames.index('Event')
+
+    equipment = None
+    event = None
+
+    for row in csv.rows:
+        if row[0] == 'Equipped Powerlifting':
+            equipment = 'Single-ply'
+            event = 'SBD'
+            row[0] = ''
+        elif row[0] == 'Equipped Bench Press':
+            equipment = 'Single-ply'
+            event = 'B'
+            row[0] = ''
+        # If no sex is specified, this is probabaly an unknown control row.
+        elif not row[sexidx]:
+            error("Unknown state change in old-style first column: \"%s\"" % row[0])
+        else:
+            assert equipment
+            assert event
+            row[eqidx] = equipment
+            row[evtidx] = event
+
+
 # Sometimes a lifter that DQ'd will still be given a place, but Wilks or Total
 # will be marked "BMB" or "disq" or something like that.
 # Make a best effort to hunt that down.
@@ -333,15 +372,22 @@ def main(filename):
 
     # At this point the leftmost column contains place information
     # and stateful weight class / equipment information.
-    assert csv.fieldnames[0] == ''
-    consume_first_column(csv)
+    if csv.fieldnames[0] == '':
+        consume_first_column(csv)
+    # Otherwise, this is an old-style (2013 and earlier) document,
+    elif csv.fieldnames[0] == 'Name':
+        consume_old_format(csv)
+    else:
+        error("Unknown format.")
     remove_empty_rows(csv)
 
     remove_zeros(csv)
     remove_dashes(csv)
     remove_xs(csv)
 
-    hunt_dq_info(csv)
+    # Old-style documents don't have a Place column, so we'll have to run calc-place after.
+    if 'Place' in csv.fieldnames:
+        hunt_dq_info(csv)
     remove_strings(csv, ['BMB'])
     remove_strings(csv, ['????', '???', '??']) # Usually in BirthYear.
 
