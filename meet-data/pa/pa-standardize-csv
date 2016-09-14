@@ -185,7 +185,7 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Deadlift2Kg'
         elif col == 'DL 3' or col == 'DL-3':
             csv.fieldnames[i] = 'Deadlift3Kg'
-        elif col == 'TOTAL' or col == 'Total' or col == 'TOT':
+        elif col == 'TOTAL' or col == 'Total' or col == 'TOT' or col == 'PL Total':
             csv.fieldnames[i] = 'TotalKg'
         elif col == 'WILKS':
             csv.fieldnames[i] = 'Wilks'
