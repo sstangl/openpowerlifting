@@ -38,6 +38,8 @@ libreoffice --headless --convert-to csv results.xls
 # Failed lifts are marked as "200x" or "202.5x". Replace with negatives.
 sed -i -e 's/,\([0-9][0-9]*\)x/,-\1/g' results.csv
 sed -i -e 's/,\([0-9][0-9]*\.[0-9][0-9]*\)x/,-\1/g' results.csv
+sed -i -e 's/,\([0-9][0-9]*\)X/,-\1/g' results.csv
+sed -i -e 's/,\([0-9][0-9]*\.[0-9][0-9]*\)X/,-\1/g' results.csv
 
 # Some nonsense that gets added all the way on the right.
 sed -i -e 's/,sort on/,/g' results.csv

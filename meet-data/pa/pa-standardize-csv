@@ -62,6 +62,8 @@ def remove_bottom_meet_info(csv):
                 return i
             if 'Referee\'s' in ','.join(row):
                 return i
+            if 'Referess' in ','.join(row):
+                return i
             if 'Jury:' in ','.join(row):
                 return i
             if '=' and 'record' in ','.join(row).lower():
@@ -163,27 +165,27 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Name'
         elif col == 'DOB':
             csv.fieldnames[i] = 'BirthYear'
-        elif col == 'M/F':
+        elif col == 'M/F' or col == 'M / F':
             csv.fieldnames[i] = 'Sex'
         elif col == 'BWT' or col == 'BW':
             csv.fieldnames[i] = 'BodyweightKg'
-        elif col == 'SQ 1' or col == 'SQ-1':
+        elif col == 'SQ 1' or col == 'SQ-1' or col == 'SQ1':
             csv.fieldnames[i] = 'Squat1Kg'
-        elif col == 'SQ 2' or col == 'SQ-2':
+        elif col == 'SQ 2' or col == 'SQ-2' or col == 'SQ2':
             csv.fieldnames[i] = 'Squat2Kg'
-        elif col == 'SQ 3' or col == 'SQ-3':
+        elif col == 'SQ 3' or col == 'SQ-3' or col == 'SQ3':
             csv.fieldnames[i] = 'Squat3Kg'
         elif col == 'BP 1' or col == 'BP-1' or col == 'BP1':
             csv.fieldnames[i] = 'Bench1Kg'
-        elif col == 'BP 2' or col == 'BP-2':
+        elif col == 'BP 2' or col == 'BP-2' or col == 'BP2':
             csv.fieldnames[i] = 'Bench2Kg'
-        elif col == 'BP 3' or col == 'BP-3':
+        elif col == 'BP 3' or col == 'BP-3' or col == 'BP3':
             csv.fieldnames[i] = 'Bench3Kg'
-        elif col == 'DL 1' or col == 'DL-1':
+        elif col == 'DL 1' or col == 'DL-1' or col == 'DL1':
             csv.fieldnames[i] = 'Deadlift1Kg'
-        elif col == 'DL 2' or col == 'DL-2':
+        elif col == 'DL 2' or col == 'DL-2' or col == 'DL2':
             csv.fieldnames[i] = 'Deadlift2Kg'
-        elif col == 'DL 3' or col == 'DL-3':
+        elif col == 'DL 3' or col == 'DL-3' or col == 'DL3':
             csv.fieldnames[i] = 'Deadlift3Kg'
         elif col == 'TOTAL' or col == 'Total' or col == 'TOT' or col == 'PL Total':
             csv.fieldnames[i] = 'TotalKg'
@@ -307,7 +309,7 @@ def consume_old_format(csv):
             equipment = 'Raw'
             event = 'SBD'
             row[0] = ''
-        elif row[0] == 'Raw Bench Press' or row[0] == 'Raw Bench Press Only':
+        elif row[0] == 'Raw Bench Press' or row[0].lower() == 'raw bench press only':
             equipment = 'Raw'
             event = 'B'
             row[0] = ''
@@ -407,9 +409,12 @@ def main(filename):
     if 'Wilks' in csv.fieldnames:
         csv.remove_column_by_name('Wilks')
 
-    calc_best_lift(csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
-    calc_best_lift(csv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
-    calc_best_lift(csv, 'BestDeadliftKg', ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
+    if 'Squat1Kg' in csv.fieldnames:
+        calc_best_lift(csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
+    if 'Bench1Kg' in csv.fieldnames:
+        calc_best_lift(csv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
+    if 'Deadlift1Kg' in csv.fieldnames:
+        calc_best_lift(csv, 'BestDeadliftKg', ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     csv.write(sys.stdout)
         
