@@ -197,7 +197,7 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'WeightClassKg'
         elif col == 'CAT':
             csv.fieldnames[i] = 'Division'
-        elif col == 'PLACE':
+        elif col == 'PLACE' or col == 'PLACING':
             csv.fieldnames[i] = 'Place'
         else:
             error("Unknown column: \"%s\"" % col)

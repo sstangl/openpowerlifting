@@ -17,7 +17,7 @@
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
   </optgroup>
   <optgroup label="Australia">
-    <option value="PA">PA - Powerlifting Australia [IPF] (2012+)</option>
+    <option value="PA">PA - Powerlifting Australia [IPF] (2011+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
