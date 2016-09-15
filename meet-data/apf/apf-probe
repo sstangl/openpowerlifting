@@ -13,8 +13,9 @@ import sys
 import urllib.request
 
 
-URL = "http://worldpowerliftingcongress.com/wpc-results/"
-ARCHIVEURL = "http://worldpowerliftingcongress.com/results-archive/"
+URLS = ["http://worldpowerliftingcongress.com/wpc-results/"]
+#        "http://worldpowerliftingcongress.com/results-archive/"]
+# TODO: Re-enable the archive once the current results have been worked through.
 
 BASEURL = "http://worldpowerliftingcongress.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -71,17 +72,17 @@ def getenteredurls():
 
 
 def main():
-    html = gethtml(URL)
-    meetlist = getmeetlist(html)
-
-    html = gethtml(ARCHIVEURL)
-    meetlist = meetlist + getmeetlist(html)
+    meetlist = []
+    for url in URLS:
+        html = gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
 
     known = getenteredurls()
 
     for m in meetlist:
         if not m in known:
             print(color('[APF] ') + m)
+    print(color('[APF] ') + "Continue working through archive.")
 
 
 if __name__ == '__main__':
