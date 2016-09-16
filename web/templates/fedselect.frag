@@ -17,6 +17,7 @@
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
   </optgroup>
   <optgroup label="Australia">
+    <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA] (Incomplete)</option>
     <option value="PA">PA - Powerlifting Australia [IPF] (2011+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>

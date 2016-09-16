@@ -46,6 +46,7 @@ def pwarning(s):
 KnownFederations = [
     "APF",
     "AAPF", # Amateur APF (drug-tested).
+    "CAPO", # Australian affiliate of the WPC/GPA.
     "USPF",
     "USPA",
     "USAPL",
