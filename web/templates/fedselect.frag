@@ -27,6 +27,9 @@
   <optgroup label="Finland">
     <option value="FPO">FPO - Finland Powerlifting Organization [GPC] (Incomplete)</option>
   </optgroup>
+  <optgroup label="Norway">
+    <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
+  </optgroup>
   <optgroup label="Russia">
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
   </optgroup>

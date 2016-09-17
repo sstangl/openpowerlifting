@@ -1,0 +1,283 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Import data from the extremely well-designed NSF website.
+# Since they use a database for all their meets, everything
+# is imported very easily, as with the USAPL.
+#
+# Except these guys actually show all of their data, and seem
+# to take it seriously.
+#
+
+
+from bs4 import BeautifulSoup
+import errno
+from oplcsv import Csv
+import os
+import shutil
+import sys
+import urllib.request
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read().decode('utf-8')
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+# URL will be like "/?page=protokoll_vis&id=3508".
+def getdirname(url):
+    return url.split('id=')[1]
+
+
+def getmeetinfo(soup):
+    csv = Csv()
+    csv.fieldnames = ['Federation','Date','MeetCountry','MeetState','MeetTown','MeetName']
+
+    # Get the facts table.
+    fakta = soup.find_all('h4', text='Fakta')
+    if len(fakta) != 1:
+        error("Couldn't find the facts table.")
+
+    # Go through td -> tr -> tbody.
+    tbody = fakta[0].parent.parent.parent
+
+    # Get the date.
+    dato = tbody.find('td', text='Dato')
+    # Skip to the next <td> in that row.
+    dotdate = dato.find_next('td').text
+    # The date is formatted as dd.mm.yyyy.
+    assert '.' in dotdate
+    [day,month,year] = dotdate.split('.')
+    date = '%s-%s-%s' % (year,month,day)
+
+    # Get the town.
+    sted = tbody.find('td', text='Sted')
+    # Skip to the next <td> in that row.
+    town = sted.next.next.next.text
+
+    # Get the competition name.
+    h2s = soup.find_all('h2')
+    if len(h2s) != 1:
+        error("Need a better way to figure out the competition name.")
+    name = h2s[0].text
+
+    fed = 'NSF'
+    country = 'Norway'
+    state = ''
+
+    csv.rows = [[fed,date,country,state,town,name]]
+    return csv
+
+
+def getresults(soup):
+    csv = Csv()
+
+    # Get the results table.
+    resultater = soup.find_all('h4', text='Resultater')
+    if len(resultater) != 1:
+        error("Couldn't find the results table.")
+
+    #print(resultater[0].next.next.next.next.next.next.next)
+    table = resultater[0].find_next('table')
+
+    trs = table.find_all('tr')
+
+    # Get column information.
+    headers = [x.text for x in trs[0].find_all('td')]
+    assert len(headers) == 10 # Just to ensure that nothing's changed.
+
+    csv.fieldnames = ['Place','WeightClassKg','Name','Equipment','Team','BodyweightKg',
+                      'Squat1Kg','Squat2Kg','Squat3Kg','Bench1Kg','Bench2Kg','Bench3Kg',
+                      'Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','TotalKg','Wilks',
+                      # These columns are added from the category rows.
+                      'Division','Sex']
+
+    divstate = None
+    sexstate = None
+
+    for tr in trs[1:]:
+        row = [x.text for x in tr.find_all('td')]
+
+        # Rows of length 17 are actual results, of length 1 are categories.
+        assert len(row) == 1 or len(row) == 17
+
+        if len(row) == 1:
+            # Extract sex information.
+            text = row[0].lower()
+            if 'damer' in text:
+                sexstate = 'F'
+                text = text.replace('damer','').strip()
+            elif 'herrer' in text:
+                sexstate = 'M'
+                text = text.replace('herrer','').strip()
+
+            # Extract division information.
+            if 'ungdom' in text:
+                divstate = text.replace('ungdom','Teen')
+            elif 'junior' in text:
+                divstate = text.replace('junior','Junior')
+            elif 'åpen' in text:
+                divstate = 'Open'
+            elif 'veteran' in text:
+                divstate = 'Master'
+            else:
+                error("Unknown state: \"%s\"" % row[0])
+
+        else:
+            assert divstate
+            assert sexstate
+
+            # Accumulate the row, but we need to look at the class of each td
+            # to figure out whether lifts were good or bad.
+            row = []
+            for td in tr.find_all('td'):
+                text = td.text
+                c = td.get('class')
+                if c and 'underkjent' in c: # Failed lift.
+                    text = '-' + text
+                if c and 'ikke_loftet' in c: # Skipped lift.
+                    text = ''
+                row.append(text)
+
+            row = row + [divstate, sexstate]
+            csv.rows += [row]
+
+    return csv
+
+
+# The place is reported as "1.", just remove the period.
+def fixplace(csv):
+    placeidx = csv.fieldnames.index('Place')
+    for row in csv.rows:
+        row[placeidx] = row[placeidx].replace('.','')
+
+
+# The weight class is reported as "-72" or "84+", just remove the dash.
+def fixclass(csv):
+    clsidx = csv.fieldnames.index('WeightClassKg')
+    for row in csv.rows:
+        row[clsidx] = row[clsidx].replace('-','')
+
+
+# The equipment is marked as "*" for Raw, or nothing for Single-ply.
+def fixequipment(csv):
+    eqidx = csv.fieldnames.index('Equipment')
+    for row in csv.rows:
+        if '*' in row[eqidx]:
+            row[eqidx] = 'Raw'
+        elif row[eqidx] == '':
+            row[eqidx] = 'Single-ply'
+        else:
+            error("Unknown equipment: \"%s\"" % row[eqidx])
+
+
+# Attempts are given, but not the BestSquatKg columns, etc.
+def calc_best_lift(csv, col, attemptlist):
+    if col in csv.fieldnames:
+        return
+
+    for k in attemptlist:
+        assert k in csv.fieldnames
+
+    csv.insert_column(csv.fieldnames.index(attemptlist[-1]) + 1, col)
+
+    for row in csv.rows:
+        best = 0
+        for k in attemptlist:
+            try:
+                attempt = float(row[csv.fieldnames.index(k)])
+            except:
+                attempt = 0
+            if attempt > best:
+                best = attempt
+        if best > 0:
+            row[csv.fieldnames.index(col)] = str(best)
+
+
+def markevent(csv):
+    assert not 'Event' in csv.fieldnames
+    csv.append_column('Event')
+
+    evtidx = csv.fieldnames.index('Event')
+
+    squatidxl = [csv.fieldnames.index(x) for x in ['Squat1Kg','Squat2Kg','Squat3Kg']]
+    benchidxl = [csv.fieldnames.index(x) for x in ['Bench1Kg','Bench2Kg','Bench3Kg']]
+    deadliftidxl = [csv.fieldnames.index(x) for x in ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg']]
+
+    for row in csv.rows:
+        evt = ''
+        for i in squatidxl:
+            if row[i] != '':
+                evt = evt + 'S'
+                break
+        for i in benchidxl:
+            if row[i] != '':
+                evt = evt + 'B'
+                break
+        for i in deadliftidxl:
+            if row[i] != '':
+                evt = evt + 'D'
+                break
+        row[evtidx] = evt
+
+
+def main(url):
+    html = gethtml(url)
+
+    # The HTML returned by the website is malformed, which breaks the parser.
+    # Part of the results table looks like: <tr>Totalt</th>, which is treated as </table>.
+    # Work around this by getting rid of all <th>.
+    html = html.replace('<th>','<td>')
+    html = html.replace('</th>','</td>')
+
+    soup = BeautifulSoup(html, 'html.parser')
+
+    meetcsv = getmeetinfo(soup)
+    dirname = getdirname(url)
+    lifterscsv = getresults(soup)
+
+    fixplace(lifterscsv)
+    fixclass(lifterscsv)
+    fixequipment(lifterscsv)
+
+    # Wilks will be automatically calculated later. Feds get it wrong all the time.
+    if 'Wilks' in lifterscsv.fieldnames:
+        lifterscsv.remove_column_by_name('Wilks')
+
+    if 'Squat1Kg' in lifterscsv.fieldnames:
+        calc_best_lift(lifterscsv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
+    if 'Bench1Kg' in lifterscsv.fieldnames:
+        calc_best_lift(lifterscsv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
+    if 'Deadlift1Kg' in lifterscsv.fieldnames:
+        calc_best_lift(lifterscsv, 'BestDeadliftKg', ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
+
+    # Figure out event information.
+    markevent(lifterscsv)
+
+    try:
+        os.makedirs(dirname)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+        else:
+            error("Directory '%s' already exists." % dirname)
+
+    with open(dirname + os.sep + 'lifters.csv', 'w') as fd:
+        lifterscsv.write(fd)
+    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+        meetcsv.write(fd)
+    with open(dirname + os.sep + 'URL', 'w') as fd:
+        fd.write(url+"\n")
+
+    print("Imported into %s." % dirname)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s url" % sys.argv[0])
+    main(sys.argv[1])
