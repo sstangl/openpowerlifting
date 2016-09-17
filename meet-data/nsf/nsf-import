@@ -1,4 +1,4 @@
-p!/usr/bin/env python3
+#!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Import data from the extremely well-designed NSF website.
@@ -70,7 +70,7 @@ def getmeetinfo(soup):
     country = 'Norway'
     state = ''
 
-    csv.rows = [[fed,date,country,state,town,name]]
+    csv.rows = [[fed.strip(),date.strip(),country.strip(),state.strip(),town.strip(),name.strip()]]
     return csv
 
 
@@ -142,7 +142,7 @@ def getresults(soup):
             elif 'åpen' in text:
                 divstate = 'Open'
             elif 'veteran' in text:
-                divstate = 'Master'
+                divstate = text.replace('veteran','Master')
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
@@ -171,8 +171,12 @@ def getresults(soup):
 # The place is reported as "1.", just remove the period.
 def fixplace(csv):
     placeidx = csv.fieldnames.index('Place')
+    totalidx = csv.fieldnames.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.','')
+        if row[placeidx] == '-':
+            row[placeidx] = 'DQ'
+            row[totalidx] = '' # Instead of a zero.
 
 
 # The weight class is reported as "-72" or "84+", just remove the dash.
