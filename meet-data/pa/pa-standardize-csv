@@ -191,7 +191,7 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'TotalKg'
         elif col == 'WILKS':
             csv.fieldnames[i] = 'Wilks'
-        elif col == 'NATION':
+        elif col == 'NATION' or col == "Country":
             csv.fieldnames[i] = 'Country'
         elif col == 'CLASS' or col == 'DIV':
             csv.fieldnames[i] = 'WeightClassKg'
@@ -199,6 +199,8 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Division'
         elif col == 'PLACE' or col == 'PLACING':
             csv.fieldnames[i] = 'Place'
+        elif col == 'TEAM':
+            csv.fieldnames[i] = 'Team'
         else:
             error("Unknown column: \"%s\"" % col)
 
@@ -295,8 +297,8 @@ def consume_old_format(csv):
     eqidx = csv.fieldnames.index('Equipment')
     evtidx = csv.fieldnames.index('Event')
 
-    equipment = None
-    event = None
+    equipment = 'Single-ply'
+    event = 'SBD'
 
     for row in csv.rows:
         if row[0] == 'Equipped Powerlifting':
@@ -314,6 +316,12 @@ def consume_old_format(csv):
         elif row[0] == 'Raw Bench Press' or row[0].lower() == 'raw bench press only':
             equipment = 'Raw'
             event = 'B'
+            row[0] = ''
+        elif row[0] == 'Bench Press Only':
+            event = 'B'
+            row[0] = ''
+        elif row[0] == 'Squat and Bench Press Only':
+            event = 'SB'
             row[0] = ''
         # If no sex is specified, this is probabaly an unknown control row.
         elif not row[sexidx]:
@@ -362,6 +370,26 @@ def calc_best_lift(csv, col, attemptlist):
             row[csv.fieldnames.index(col)] = str(best)
 
 
+# Old-style formats use the same labels for weight class and division,
+# so we label everything WeightClassKg then hunt for a fix-up here.
+def try_label_division_column(csv):
+    if 'Division' in csv.fieldnames:
+        return
+    if not 'WeightClassKg' in csv.fieldnames:
+        return
+
+    def hasdiv(csv,i):
+        for row in csv.rows:
+            if row[i] == 'O':
+                return True
+        return False
+
+    for i,field in enumerate(csv.fieldnames):
+        if field == 'WeightClassKg' and hasdiv(csv, i):
+            csv.fieldnames[i] = 'Division'
+            break
+
+
 def main(filename):
     csv = Csv()
     with open(filename) as fd:
@@ -404,8 +432,10 @@ def main(filename):
     # Old-style documents don't have a Place column, so we'll have to run calc-place after.
     if 'Place' in csv.fieldnames:
         hunt_dq_info(csv)
-    remove_strings(csv, ['BMB'])
+    remove_strings(csv, ['BMB','Disq'])
     remove_strings(csv, ['????', '???', '??']) # Usually in BirthYear.
+
+    try_label_division_column(csv)
 
     # Wilks will be automatically calculated later. Feds get it wrong all the time.
     if 'Wilks' in csv.fieldnames:

@@ -14,7 +14,7 @@ import urllib.request
 
 
 URLS = ["https://powerliftingaustralia.com/results/",
-        "https://powerliftingaustralia.com/results/2011-results/"]
+        "https://powerliftingaustralia.com/results/2010-results/"]
 BASEURL = "https://powerliftingaustralia.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
