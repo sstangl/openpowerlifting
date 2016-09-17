@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+p!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Import data from the extremely well-designed NSF website.
@@ -82,20 +82,40 @@ def getresults(soup):
     if len(resultater) != 1:
         error("Couldn't find the results table.")
 
-    #print(resultater[0].next.next.next.next.next.next.next)
     table = resultater[0].find_next('table')
 
     trs = table.find_all('tr')
 
     # Get column information.
     headers = [x.text for x in trs[0].find_all('td')]
-    assert len(headers) == 10 # Just to ensure that nothing's changed.
 
-    csv.fieldnames = ['Place','WeightClassKg','Name','Equipment','Team','BodyweightKg',
-                      'Squat1Kg','Squat2Kg','Squat3Kg','Bench1Kg','Bench2Kg','Bench3Kg',
-                      'Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','TotalKg','Wilks',
-                      # These columns are added from the category rows.
-                      'Division','Sex']
+    csv.fieldnames = []
+    for h in headers:
+        if h == '#':
+            csv.fieldnames += ['Place']
+        elif h == 'Kat.':
+            csv.fieldnames += ['WeightClassKg']
+        elif h == 'Navn':
+            csv.fieldnames += ['Name', 'Equipment']
+        elif h == 'Klubb':
+            csv.fieldnames += ['Team']
+        elif h == 'Kr.vekt':
+            csv.fieldnames += ['BodyweightKg']
+        elif h == 'Knebøy':
+            csv.fieldnames += ['Squat1Kg','Squat2Kg','Squat3Kg']
+        elif h == 'Benkpress':
+            csv.fieldnames += ['Bench1Kg','Bench2Kg','Bench3Kg']
+        elif h == 'Markløft':
+            csv.fieldnames += ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg']
+        elif h == 'Totalt':
+            csv.fieldnames += ['TotalKg']
+        elif h == 'Poeng':
+            csv.fieldnames += ['Wilks']
+        else:
+            error("Unknown column name: \"%s\"" % h)
+
+    # These columns are added from the category rows.
+    csv.fieldnames += ['Division','Sex']
 
     divstate = None
     sexstate = None
@@ -103,9 +123,7 @@ def getresults(soup):
     for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
 
-        # Rows of length 17 are actual results, of length 1 are categories.
-        assert len(row) == 1 or len(row) == 17
-
+        # Rows of length >1 are actual results, of length 1 are categories.
         if len(row) == 1:
             # Extract sex information.
             text = row[0].lower()
@@ -205,9 +223,20 @@ def markevent(csv):
 
     evtidx = csv.fieldnames.index('Event')
 
-    squatidxl = [csv.fieldnames.index(x) for x in ['Squat1Kg','Squat2Kg','Squat3Kg']]
-    benchidxl = [csv.fieldnames.index(x) for x in ['Bench1Kg','Bench2Kg','Bench3Kg']]
-    deadliftidxl = [csv.fieldnames.index(x) for x in ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg']]
+    try:
+        squatidxl = [csv.fieldnames.index(x) for x in ['Squat1Kg','Squat2Kg','Squat3Kg']]
+    except:
+        squatidxl = []
+
+    try:
+        benchidxl = [csv.fieldnames.index(x) for x in ['Bench1Kg','Bench2Kg','Bench3Kg']]
+    except:
+        benchidxl = []
+
+    try:
+        deadliftidxl = [csv.fieldnames.index(x) for x in ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg']]
+    except:
+        deadliftidxl = []
 
     for row in csv.rows:
         evt = ''
@@ -234,6 +263,13 @@ def main(url):
     # Work around this by getting rid of all <th>.
     html = html.replace('<th>','<td>')
     html = html.replace('</th>','</td>')
+    # An inline script is accidentally closed with too many quotation marks.
+    html = html.replace(';"" ',';" ')
+    # The following text occurs for bench-only meets:
+    #   <td align="center" colspan="3">Benkpress</strong>
+    # Which again trips up the parser.
+    html = html.replace('<strong>','')
+    html = html.replace('</strong>','')
 
     soup = BeautifulSoup(html, 'html.parser')
 
