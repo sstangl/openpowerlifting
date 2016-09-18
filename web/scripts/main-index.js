@@ -51,7 +51,7 @@ function getIndices() {
     var women = boxWomen.checked;
 
     var selectonfed = (selFed.value !== "all");
-    var fed = selFed.value;
+    var feds = selFed.value.split(',');
 
     var selectonclass = (selClass.value !== "all");
     var range = common.getWeightRange(selClass.value);
@@ -74,11 +74,8 @@ function getIndices() {
 
         if (selectonfed) {
             var meetrow = meetdb.data[row[opldb.MEETID]];
-            if (fed === "tested") {
-                if (common.testedFederationList.indexOf(meetrow[meetdb.FEDERATION]) < 0) {
-                    return false;
-                }
-            } else if (meetrow[meetdb.FEDERATION] !== fed) {
+            var fed = meetrow[meetdb.FEDERATION];
+            if (feds.indexOf(fed) < 0) {
                 return false;
             }
         }

@@ -253,17 +253,7 @@ return {
 
             default: return [0.0, 999.0];
         }
-    },
-
-    // A list of federations using drug-testing.
-    testedFederationList: [
-        'IPF',
-        'NAPF',
-        'NSF',
-        'PA',
-        'RAW',
-        'USAPL'
-    ]
+    }
 };
 
 })();

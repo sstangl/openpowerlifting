@@ -1,12 +1,17 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="tested">All Drug-Tested Feds</option>
+  <option value="IPF,NAPF,NSF,PA,RAW,USAPL">
+    All Drug-Tested Feds
+  </option>
   <optgroup label="International">
     <option value="GPC">GPC - Global Powerlifting Committee (Incomplete)</option>
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
+    <option value="RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
+      All United States Feds
+    </option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
     <option value="SPF">SPF - Southern Powerlifting Federation (Help Needed!)</option>
@@ -17,6 +22,9 @@
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
   </optgroup>
   <optgroup label="Australia">
+    <option value="CAPO,PA,ProRaw">
+      All Australian Feds
+    </option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA] (Incomplete)</option>
     <option value="PA">PA - Powerlifting Australia [IPF] (2010+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
