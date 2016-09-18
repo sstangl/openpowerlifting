@@ -4,6 +4,8 @@
 var searchInfo = {lastrowid: 0, laststr: ''};
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
+var selFed = document.getElementById("fedselect");
+var meettable = document.getElementById("meettable");
 
 
 function scrollIntoView(obj) {
@@ -75,9 +77,37 @@ function searchOnEnter(keyevent) {
 }
 
 
+function selectfed() {
+    var fedlist = selFed.value;
+    // If the selector is "all", remove all the classes.
+    if (fedlist === "all") {
+        meettable.className = "";
+        return;
+    }
+
+    // Otherwise, the selector is a comma-separated list of federation names.
+    // Also include the class "selectorActive" to get the CSS working.
+    var fedspaces = fedlist.replace(new RegExp(',', 'g'), ' ');
+    meettable.className = "selectorActive " + fedspaces;
+}
+
+
 function onload() {
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
+
+    selFed.addEventListener("change", selectfed);
+    selFed.addEventListener("keydown", function()
+        {
+            setTimeout(selectfed, 0);
+        }
+    );
+
+    var query = common.getqueryobj();
+    if (query.fed !== undefined) {
+        selFed.value = query.fed;
+        selectfed();
+    }
 }
 
 

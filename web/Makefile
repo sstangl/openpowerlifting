@@ -41,6 +41,7 @@ scripts: builddir
 
 css: builddir
 	cp css/style.css ${BUILDDIR}/style.css
+	./gen-meettable-css > ${BUILDDIR}/meettable.css
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
 
 html: builddir data

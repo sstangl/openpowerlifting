@@ -105,9 +105,9 @@ def main():
     columns = ["Federation", "Date", "Location", "Town", "Name", "Lifters",
                "Best Raw Lifter", "Raw Wilks", "Best Geared Lifter", "Geared Wilks"]
 
-    print('<table>')
+    print('<table id="meettable">')
 
-    print('<thead><tr>')
+    print('<thead><tr class="alwaysShow">')
     for c in columns:
         print('<td>%s</td>' % c)
     print('</tr></thead>')
@@ -115,7 +115,7 @@ def main():
     print('<tbody>')
     lastmonth = ''
 
-    for row in csv.rows:
+    for rowidx,row in enumerate(csv.rows):
         # How many lifters competed?
         results = getliftersfor(row[meetidx], lifters)
         results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
@@ -161,14 +161,26 @@ def main():
         yrm = date[0:date.rindex('-')]
         # Don't emit the first divider since it looks weird cutting off the headers.
         if lastmonth != '' and lastmonth != yrm:
+            # These rows should show if the federation selector is active and they have content.
+            # Accumulate a list of federations in this month.
+            fedlist = []
+            for i in range(rowidx, len(csv.rows)):
+                date2 = csv.rows[i][dateidx]
+                yrm2 = date2[0:date2.rindex('-')]
+                if yrm2 != yrm:
+                    break
+                if not csv.rows[i][fedidx] in fedlist:
+                    fedlist.append(csv.rows[i][fedidx])
+            
             [year,month] = yrm.split('-')
-            print('<tr><td colspan="%d" class="table-divider">%s %s</td></tr>' % (len(columns), getmonth(month), year))
+            print('<tr class="%s"><td colspan="%d" class="table-divider">%s %s</td></tr>'
+                   % (' '.join(fedlist), len(columns), getmonth(month), year))
             lastmonth = yrm
         lastmonth = yrm
 
         meeturl = makemeeturl(row[fedidx], row[dateidx], row[meetnameidx])
 
-        print('<tr>')
+        print('<tr class="%s">' % row[fedidx])
         print('<td>%s</td>' % row[fedidx])
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)

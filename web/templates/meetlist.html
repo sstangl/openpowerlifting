@@ -8,12 +8,16 @@
   <script src="scripts/common.js"></script>
   <script src="scripts/main-meetlist.js" defer></script>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="meettable.css" />
 </head>
 
 <body>
   <div class="topbar">
     #exec python3 gen-header meetlist
     <div id="controls">
+      <div id="controls-left">
+        #include templates/fedselect.frag
+      </div>
       <div id="controls-right">
         #include templates/search.frag
       </div>
