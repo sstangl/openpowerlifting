@@ -259,6 +259,7 @@ return {
     testedFederationList: [
         'IPF',
         'NAPF',
+        'NSF',
         'PA',
         'RAW',
         'USAPL'
