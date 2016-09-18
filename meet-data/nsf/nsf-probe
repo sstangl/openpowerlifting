@@ -43,6 +43,10 @@ def getmeetlist(html):
         if not 'page=protokoll_vis' in url:
             continue
 
+        # Easy way to visually see EPF and IPF meets.
+        klubb = a.next.next.next.next.text
+        url = url + ' (%s)' % klubb
+
         if not 'http' in url:
             url = BASEURL + url
             url = url.replace('../','')
@@ -71,7 +75,7 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if not m.split()[0] in known:
             print(color('[NSF] ') + m)
     print(color('[NSF] ') + "Continue working through archive.")
 

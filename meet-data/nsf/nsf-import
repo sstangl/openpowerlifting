@@ -70,7 +70,10 @@ def getmeetinfo(soup):
     country = 'Norway'
     state = ''
 
-    csv.rows = [[fed.strip(),date.strip(),country.strip(),state.strip(),town.strip(),name.strip()]]
+    row = [fed,date,country,state,town,name]
+    for i,r in enumerate(row):
+        row[i] = r.replace(',',' ').replace('  ',' ')
+    csv.rows = [row]
     return csv
 
 
@@ -160,7 +163,7 @@ def getresults(soup):
                     text = '-' + text
                 if c and 'ikke_loftet' in c: # Skipped lift.
                     text = ''
-                row.append(text.strip())
+                row.append(text.strip().replace('  ',' ').replace(',',' '))
 
             row = row + [divstate, sexstate]
             csv.rows += [row]
@@ -177,6 +180,8 @@ def fixplace(csv):
         if row[placeidx] == '-':
             row[placeidx] = 'DQ'
             row[totalidx] = '' # Instead of a zero.
+        elif row[placeidx].lower() == 'gj': # Guest lifter, I think.
+            row[placeidx] = 'G'
 
 
 # The weight class is reported as "-72" or "84+", just remove the dash.
@@ -300,6 +305,8 @@ def main(url):
     meetcsv = getmeetinfo(soup)
     dirname = getdirname(url)
     lifterscsv = getresults(soup)
+    if len(lifterscsv.rows) == 0:
+        error("No rows found!")
 
     fixplace(lifterscsv)
     fixclass(lifterscsv)
