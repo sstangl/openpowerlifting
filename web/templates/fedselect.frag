@@ -9,6 +9,7 @@
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
+    <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
