@@ -8,6 +8,9 @@
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
   </optgroup>
+  <optgroup label="Regional">
+    <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
+  </optgroup>
   <optgroup label="United States">
     <option value="RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
