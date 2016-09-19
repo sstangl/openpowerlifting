@@ -313,7 +313,7 @@ def fixclass(csv):
             x = 'Amateur'
         elif s == 'elite' or s == 'elite am' or s == 'el am':
             x = 'Elite'
-        elif s == 'military am' or s == 'military':
+        elif s == 'military am' or s == 'military' or s == 'am military':
             x = 'Military Amateur'
         elif s == 'mil am':
             x = 'Military Amateur'
@@ -329,6 +329,8 @@ def fixclass(csv):
             x = 'Crossfit'
         elif s == 'police/fire am':
             x = 'Police-Fire Amateur'
+        elif s == 'pro police/fire':
+            x = 'Police-Fire Pro'
         elif s == 'fire':
             x = 'Fire Amateur'
 
