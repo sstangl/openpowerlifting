@@ -20,7 +20,7 @@ return {
         for (var j = 0; j < split.length; ++j) {
             var arg = split[j];
             if (arg.indexOf('=') >= 0) {
-                var v = unescape(arg).split('=');
+                var v = decodeURIComponent(arg).split('=');
                 obj[v[0]] = v[1];
             }
         }
