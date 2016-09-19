@@ -31,7 +31,7 @@ def fixcolnames(columns):
             columns[i] = 'Place'
         elif low == 'division':
             columns[i] = 'Division'
-        elif low == 'state':
+        elif low == 'state' or low == 'st':
             columns[i] = 'State'
         elif low == 'country, state':
             columns[i] = 'Country'
