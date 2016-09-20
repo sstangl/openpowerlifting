@@ -13,10 +13,11 @@
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="APF,RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
+    <option value="APF,IPA,RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
+    <option value="IPA">IPA - International Powerlifting Association (Incomplete)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
     <option value="SPF">SPF - Southern Powerlifting Federation (Help Needed!)</option>
