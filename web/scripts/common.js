@@ -70,13 +70,13 @@ return {
     },
 
     makeLiftersUrl: function(name) {
-        return "lifters.html?q=" + escape(name);
+        return "lifters.html?q=" + encodeURIComponent(name);
     },
 
     makeMeetUrl: function(fed, date, meetname) {
-        return "meet.html?f=" + escape(fed) +
-                        "&d=" + escape(date) +
-                        "&n=" + escape(meetname);
+        return "meet.html?f=" + encodeURIComponent(fed) +
+                        "&d=" + encodeURIComponent(date) +
+                        "&n=" + encodeURIComponent(meetname);
     },
     
     number: function(num) {
