@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="IPF,NAPF,NSF,PA,RAW,USAPL">
+  <option value="FESUPO,IPF,NAPF,NSF,PA,RAW,USAPL">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -18,6 +18,7 @@
     </option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
     <option value="IPA">IPA - International Powerlifting Association (Incomplete)</option>
+    <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
     <option value="SPF">SPF - Southern Powerlifting Federation (Help Needed!)</option>
