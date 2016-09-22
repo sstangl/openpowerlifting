@@ -106,6 +106,10 @@ function onload() {
     var query = common.getqueryobj();
     if (query.fed !== undefined) {
         selFed.value = query.fed;
+    }
+
+    // Also handle the case of it being set by the browser.
+    if (selFed.value !== "all") {
         selectfed();
     }
 }
