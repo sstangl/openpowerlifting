@@ -33,7 +33,7 @@
       All Australian Feds
     </option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA] (Incomplete)</option>
-    <option value="PA">PA - Powerlifting Australia [IPF] (2010+)</option>
+    <option value="PA">PA - Powerlifting Australia [IPF] (2009+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
