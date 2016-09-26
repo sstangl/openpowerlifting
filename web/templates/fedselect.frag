@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="FESUPO,IPF,NAPF,NSF,PA,RAW,USAPL">
+  <option value="EPF,FESUPO,IPF,NAPF,NSF,PA,RAW,USAPL">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -9,6 +9,7 @@
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
+    <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
