@@ -33,6 +33,7 @@ probe:
 	${DATADIR}/apf/apf-probe
 	${DATADIR}/fesupo/fesupo-probe
 	${DATADIR}/fpo/fpo-probe
+	${DATADIR}/ipf/ipf-probe
 	${DATADIR}/napf/napf-probe
 	${DATADIR}/nsf/nsf-probe
 	${DATADIR}/pa/pa-probe
