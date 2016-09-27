@@ -8,6 +8,7 @@ import bisect
 import html
 import oplcsv
 import sys
+import urllib.parse
 
 LIFTERSCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
@@ -76,10 +77,15 @@ def getmonth(m):
 
 
 def makemeeturl(fed, date, meetname):
-    fed = html.escape(fed)
-    date = html.escape(date)
-    meetname = html.escape(meetname)
-    return 'meet.html?f=%s&d=%s&n=%s' % (fed, date, meetname)
+    fed = urllib.parse.quote(fed.encode("utf-8"))
+    date = urllib.parse.quote(date.encode("utf-8"))
+    meetname = urllib.parse.quote(meetname.encode("utf-8"))
+    return u'meet.html?f=%s&d=%s&n=%s' % (fed, date, meetname)
+
+
+def makelifterurl(liftername):
+    liftername = urllib.parse.quote(liftername.encode("utf-8"))
+    return u'lifters.html?q=%s' % (liftername)
 
 
 def main():
@@ -141,7 +147,7 @@ def main():
         if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
             bestrawlifter = rawlifters[0][liftersnameidx]
             bestrawwilks = rawlifters[0][lifterswilksidx]
-            rawlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestrawlifter, bestrawlifter)
+            rawlifterhtml = '<a href="%s">%s</a>' % (makelifterurl(bestrawlifter), bestrawlifter)
         else:
             bestrawlifter = ''
             bestrawwilks = ''
@@ -150,7 +156,7 @@ def main():
         if len(gearedlifters) > 0 and gearedlifters[0][lifterswilksidx]:
             bestgearedlifter = gearedlifters[0][liftersnameidx]
             bestgearedwilks = gearedlifters[0][lifterswilksidx]
-            gearedlifterhtml = '<a href="lifters.html?q=%s">%s</a>' % (bestgearedlifter, bestgearedlifter)
+            gearedlifterhtml = '<a href="%s">%s</a>' % (makelifterurl(bestgearedlifter), bestgearedlifter)
         else:
             bestgearedlifter = ''
             bestgearedwilks = ''
