@@ -38,6 +38,7 @@ probe:
 	${DATADIR}/napf/napf-probe
 	${DATADIR}/nsf/nsf-probe
 	${DATADIR}/pa/pa-probe
+	${DATADIR}/raw/raw-probe
 	${DATADIR}/rps/rps-probe
 	${DATADIR}/rupc/rupc-probe
 	${DATADIR}/sct/sct-probe

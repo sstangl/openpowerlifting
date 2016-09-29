@@ -15,7 +15,7 @@
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="APF,IPA,RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
+    <option value="APF,IPA,RAW,RPS,RUPC,SPF,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>

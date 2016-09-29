@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for meet results from the 100%RAW Federation (RAW).
+# RAW posts meets to a page separated by year.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+# URL needs updating every year.
+# Also be careful to check if there are any result links that don't contain
+# the string "results", since they won't get picked up by the script below.
+if datetime.datetime.now().strftime("%Y") != "2016":
+    print("Warning: RAW fetch URL needs updating for new year.", file=sys.stderr)
+
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+URL = "http://rawpowerlifting.com/2016-schedule/"
+BASEURL = "http://rawpowerlifting.com/2016-schedule/"
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;30m" + s + "\033[0;m"
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    tables = soup.find_all("table", {"id": "tablepress-16"})
+    if len(tables) == 0:
+        error("No tables found.")
+    if len(tables) > 1:
+        error("Too many result tables found.")
+
+    urls = []
+    for a in tables[0].find_all('a'):
+        # All the results have the text "Results" somewhere in the link.
+        if not 'results' in a.text.lower():
+            continue
+
+        url = a['href']
+        if not 'http://' in url:
+            url = BASEURL + url
+
+        if not url in urls:
+            urls.append(url)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(FEDDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for k in fd.readlines():
+                    urls.append(k.strip())
+    return urls
+
+
+def main():
+    meetlist = []
+
+    html = gethtml(URL)
+    meetlist = getmeetlist(html)
+
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(color('[RAW] ') + m)
+    print(color('[RAW] ') + "Continue working through archive.")
+
+if __name__ == '__main__':
+    main()
