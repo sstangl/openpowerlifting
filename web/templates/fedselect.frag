@@ -9,7 +9,7 @@
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
-    <option value="CPF">CPF - Commonwealth Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="CPF">CPF - Commonwealth Powerlifting Federation [IPF]</option>
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
