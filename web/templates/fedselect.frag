@@ -24,7 +24,7 @@
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
     <option value="SPF">SPF - Southern Powerlifting Federation (Help Needed!)</option>
-    <option value="UPA">UPA - United Powerlifting Association (Incomplete)</option>
+    <option value="UPA">UPA - United Powerlifting Association (2016+)</option>
     <option value="USAPL">USAPL - USA Powerlifting [IPF] (2014+)</option>
     <option value="USPA">USPA - United States Powerlifting Association</option>
     <option value="USPF">USPF - United States Powerlifting Federation (Incomplete)</option>
