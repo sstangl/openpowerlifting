@@ -399,6 +399,43 @@ def check_row_weightclass_consistency(row, headers):
                         row[headers.index('Name')])
 
 
+# Check that BestFooKg is actually the best of (Foo1Kg, Foo2Kg, Foo3Kg), if present.
+def check_row_lift_consistency(row, headers, bestcol, attemptcols):
+    if not bestcol in headers:
+        return
+
+    def float2(s):
+        if s == '':
+            return 0.0
+        return float(s)
+
+    # If the lifter was disqualified for doping, none of the attempts count.
+    if 'Place' in headers and row[headers.index('Place')] == 'DD':
+        return
+
+    attempts = []
+    for col in attemptcols:
+        attempt = float2(row[headers.index(col)]) if col in headers else 0.0
+        attempts.append(attempt)
+
+    best = max(attempts)
+
+    # If attempts aren't provided, then the best column is believed.
+    if best == 0:
+        return
+
+    # If the lifter bombed, the best column should be empty.
+    if best < 0:
+        if row[headers.index(bestcol)] != '':
+            perror("Lifter \"%s\" bombed on a lift, but column %s is not empty." %
+                    (row[headers.index('Name')], bestcol))
+        return
+
+    if best != float2(row[headers.index(bestcol)]):
+        perror("Entry for \"%s\" in column %s does not match attempts: expected %s, got %s" %
+               (row[headers.index('Name')], bestcol, str(best), row[headers.index(bestcol)]))
+
+
 
 def check_row_total_consistency(row, headers):
     if not 'TotalKg' in headers:
@@ -479,6 +516,11 @@ def check_row(row, headers):
     check_row_weightclass_consistency(row, headers)
     check_row_total_consistency(row, headers)
     check_row_wilks_consistency(row, headers)
+
+    check_row_lift_consistency(row, headers, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
+    check_row_lift_consistency(row, headers, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
+    check_row_lift_consistency(row, headers, 'BestDeadliftKg',
+                               ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg'])
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
