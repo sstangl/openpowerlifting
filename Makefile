@@ -31,6 +31,7 @@ check:
 
 probe:
 	${DATADIR}/apf/apf-probe
+	${DATADIR}/bp/bp-probe
 	${DATADIR}/cpf/cpf-probe
 	${DATADIR}/fesupo/fesupo-probe
 	${DATADIR}/fpo/fpo-probe

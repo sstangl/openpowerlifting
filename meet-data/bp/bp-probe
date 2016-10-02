@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for new meets from British Powerlifting.
+# Mercifully, all the results are on a single page.
+# The website will only return data if User-Agent is set.
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+URLS = ["https://www.britishpowerlifting.org/results"]
+BASEURL = "https://www.britishpowerlifting.org/"
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;34m" + s + "\033[0;m"
+
+
+def gethtml(url):
+    request = urllib.request.Request(url)
+    request.add_header('User-Agent', 'Mozilla/5.0 Gecko/20100101 Firefox/52.0')
+
+    with urllib.request.urlopen(request) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    content = soup.find_all("div", {"class": "c12"})
+    if len(content) == 0:
+        error("Page layout seems to have changed.")
+    elif len(content) != 4:
+        error("Page layout seems to have changed.")
+
+    urls = []
+    for a in content[2].find_all('a'):
+        url = a['href']
+        if not 'http' in url:
+            url = BASEURL + url
+        if not url in urls:
+            urls.append(url)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(FEDDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for k in fd.readlines():
+                    urls.append(k.strip())
+    return urls
+
+
+def main():
+    meetlist = []
+    for url in URLS:
+        html = gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
+
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(color('[BP] ') + m)
+    print(color('[BP] ') + "Continue working through archive.")
+
+
+if __name__ == '__main__':
+    main()
