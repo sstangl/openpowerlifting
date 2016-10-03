@@ -31,10 +31,10 @@ check:
 
 probe:
 	${DATADIR}/apf/apf-probe
-	${DATADIR}/bp/bp-probe
 	${DATADIR}/cpf/cpf-probe
 	${DATADIR}/fesupo/fesupo-probe
 	${DATADIR}/fpo/fpo-probe
+	${DATADIR}/gbpf/gbpf-probe
 	${DATADIR}/ipf/ipf-probe
 	${DATADIR}/napf/napf-probe
 	${DATADIR}/nsf/nsf-probe

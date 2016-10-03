@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="BP,CPF,EPF,FESUPO,IPF,NAPF,NSF,PA,RAW,USAPL">
+  <option value="CPF,EPF,FESUPO,GBPF,IPF,NAPF,NSF,PA,RAW,USAPL">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -51,6 +51,6 @@
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
   </optgroup>
   <optgroup label="United Kingdom">
-    <option value="BP">BP - British Powerlifting [IPF] (Incomplete)</option>
+    <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
   </optgroup>
 </select>

@@ -46,7 +46,6 @@ def pwarning(s):
 KnownFederations = [
     "APF",
     "AAPF", # Amateur APF (drug-tested).
-    "BP", # British Powerlifting.
     "CAPO", # Australian affiliate of the WPC/GPA.
     "CPF", # Commonwealth Powerlifting Federation.
     "USPF",
@@ -55,6 +54,7 @@ KnownFederations = [
     "CPL", # Canadian Powerlifting League.
     "FESUPO", # Federacion Sudamericana de Powerlifting
     "FPO", # Finland Powerlifting Organization (IPA).
+    "GBPF", # British Powerlifting.
     "GPA",
     "GPC",
     "IPA",
