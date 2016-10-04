@@ -108,7 +108,7 @@ def main():
     liftersnameidx = lifters.fieldnames.index('Name')
     lifterseqidx = lifters.fieldnames.index('Equipment')
 
-    columns = ["Federation", "Date", "Location", "Town", "Name", "Lifters",
+    columns = ["Federation", "Date", "Location", "Name", "Lifters",
                "Best Raw Lifter", "Raw Wilks", "Best Geared Lifter", "Geared Wilks"]
 
     print('<table id="meettable">')
@@ -142,6 +142,8 @@ def main():
         location = row[countryidx]
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
+        if row[townidx]:
+            location = location + ', ' + row[townidx]
 
         # Only show best lifter if there was one, and they didn't bomb out.
         if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
@@ -190,7 +192,6 @@ def main():
         print('<td>%s</td>' % row[fedidx])
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)
-        print('<td>%s</td>' % row[townidx])
         print('<td class="meetname"><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
         print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % rawlifterhtml)
