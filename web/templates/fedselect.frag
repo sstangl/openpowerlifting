@@ -4,6 +4,7 @@
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
+    <option value="GPA">GPA - Global Powerlifting Alliance (Incomplete)</option>
     <option value="GPC">GPC - Global Powerlifting Committee (Incomplete)</option>
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
