@@ -44,8 +44,9 @@ def pwarning(s):
 
 
 KnownFederations = [
-    "APF",
     "AAPF", # Amateur APF (drug-tested).
+    "APF",
+    "AsianPF", # Asian Powerlifting Federation, IPF.
     "CAPO", # Australian affiliate of the WPC/GPA.
     "CPF", # Commonwealth Powerlifting Federation.
     "USPF",
@@ -63,6 +64,7 @@ KnownFederations = [
     "NAPF", # North American Powerlifting Federation.
     "NASA",
     "NSF", # Norwegian branch of the IPF.
+    "OceaniaPF", # Oceania Powerlifting Federation, IPF.
     "SPF",
     "EPF",
     "RPS",
