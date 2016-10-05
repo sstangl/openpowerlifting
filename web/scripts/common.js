@@ -42,8 +42,8 @@ return {
         var name = '<a href="' + this.makeLiftersUrl(fullname) + '">' + fullname + '</a>';
 
         // Attempt to read in social media data, if present.
-        if (socialmedia !== undefined) {
-            var social = socialmedia[fullname];
+        if (window.socialmedia !== undefined) {
+            var social = window.socialmedia[fullname];
             if (social !== undefined) {
                 name = name + ' <a href="https://www.instagram.com/' + social[0] + '">'
                             + '<img class="instagram" src="images/instagram-glyph-logo_May2016.png">'
