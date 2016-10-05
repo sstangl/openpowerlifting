@@ -46,7 +46,7 @@ return {
             var social = window.socialmedia[fullname];
             if (social !== undefined) {
                 name = name + ' <a href="https://www.instagram.com/' + social[0] + '">'
-                            + '<img class="instagram" src="images/instagram-glyph-logo_May2016.png">'
+                            + '<img class="instagram" src="images/ig-glyph-logo_May2016.png">'
                             + '</a>';
             }
         }
