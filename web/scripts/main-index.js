@@ -259,8 +259,6 @@ function onload() {
         {id: "total", name: "Total", field: "total", width: numberWidth,
                       sortable: true, defaultSortAsc: false},
         {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth,
-                      sortable: true, defaultSortAsc: false},
-        {id: "mcculloch", name: "McCulloch", field: "mcculloch", width: numberWidth+10,
                       sortable: true, defaultSortAsc: false}
     ];
 
