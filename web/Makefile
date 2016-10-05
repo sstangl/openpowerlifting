@@ -20,6 +20,7 @@ builddir:
 database: builddir
 	${SCRIPTDIR}/csv-to-js "${PLFILE}" opldb > "${BUILDDIR}/scripts/${PLFILEJS}"
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
+	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 
 data: builddir
 	cp ${PLFILE} ${BUILDDIR}/data
@@ -55,6 +56,7 @@ html: builddir data
 images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/images
 	cp images/select_dropdown.png ${BUILDDIR}/images
+	cp images/instagram-glyph-logo_May2016.png "${BUILDDIR}/images"
 
 check:
 	echo "Nothing to check for the moment."

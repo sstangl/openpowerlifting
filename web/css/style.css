@@ -260,3 +260,10 @@ div.text-content {
   display: inline-block;
   font-size: 12px;
 }
+
+img.instagram {
+  height: 15px;
+  width: 15px;
+  padding-left: 4px;
+  margin-bottom: -2px; /* Gross, but centers image vertically without misaligning text. */
+}

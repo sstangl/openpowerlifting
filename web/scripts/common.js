@@ -38,7 +38,19 @@ return {
             location = location + "-" + state;
         }
 
-        var name = row[opldb.NAME];
+        var fullname = row[opldb.NAME];
+        var name = '<a href="' + this.makeLiftersUrl(fullname) + '">' + fullname + '</a>';
+
+        // Attempt to read in social media data, if present.
+        if (socialmedia !== undefined) {
+            var social = socialmedia[fullname];
+            if (social !== undefined) {
+                name = name + ' <a href="https://www.instagram.com/' + social[0] + '">'
+                            + '<img class="instagram" src="images/instagram-glyph-logo_May2016.png">'
+                            + '</a>';
+            }
+        }
+
         var fed = this.string(meetrow[meetdb.FEDERATION]);
         var date = this.string(meetrow[meetdb.DATE]);
         var meetname = this.string(meetrow[meetdb.MEETNAME]);
@@ -48,7 +60,7 @@ return {
             rank:        index+1,
             place:       this.string(row[opldb.PLACE]),
             searchname:  name.toLowerCase(),
-            name:        '<a href="' + this.makeLiftersUrl(name) + '">' + name + '</a>',
+            name:        name,
             fed:         fed,
             date:        '<a href="' + meeturl + '">' + date + '</a>',
             location:    location,
