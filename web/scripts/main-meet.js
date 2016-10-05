@@ -88,41 +88,6 @@ function getIndices(query) {
 }
 
 
-function makeItem(row) {
-    var meetrow = meetdb.data[row[opldb.MEETID]];
-    var name = row[opldb.NAME];
-
-    var country = common.string(meetrow[meetdb.MEETCOUNTRY]);
-    var state = common.string(meetrow[meetdb.MEETSTATE]);
-
-    var location = country;
-    if (country && state) {
-        location = location + "-" + state;
-    }
-
-    return {
-        place:       common.string(row[opldb.PLACE]),
-        name:        common.string(name),
-        fed:         common.string(meetrow[meetdb.FEDERATION]),
-        date:        common.string(meetrow[meetdb.DATE]),
-        location:    location,
-        division:    common.string(row[opldb.DIVISION]),
-        meetname:    common.string(meetrow[meetdb.MEETNAME]),
-        sex:         common.string(row[opldb.SEX]),
-        age:         common.string(row[opldb.AGE]),
-        equip:       common.parseEquipment(row[opldb.EQUIPMENT]),
-        bw:          weight(row[opldb.BODYWEIGHTKG]),
-        weightclass: parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat:       weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
-        bench:       weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
-        deadlift:    weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
-        total:       weight(row[opldb.TOTALKG]),
-        wilks:       common.number(row[opldb.WILKS]),
-        mcculloch:   common.number(row[opldb.MCCULLOCH])
-    };
-}
-
-
 function appendtd(tr, string) {
     var td = document.createElement("td");
     td.appendChild(document.createTextNode(string));
@@ -135,6 +100,12 @@ function appendtdlink(tr, string, url) {
     a.setAttribute('href', url);
     a.appendChild(document.createTextNode(string));
     td.appendChild(a);
+    tr.appendChild(td);
+}
+
+function appendtdraw(tr, innerHTML) {
+    var td = document.createElement("td");
+    td.innerHTML = innerHTML;
     tr.appendChild(td);
 }
 
@@ -164,10 +135,10 @@ function buildtable(indices) {
         var tr = document.createElement("tr");
         tbody.appendChild(tr);
 
-        var rowobj = makeItem(opldb.data[indices[i]]);
+        var rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
         appendtd(tr, String(i+1));
         appendtd(tr, rowobj.place);
-        appendtdlink(tr, rowobj.name, common.makeLiftersUrl(rowobj.name));
+        appendtdraw(tr, rowobj.name);
         appendtd(tr, rowobj.division);
         appendtd(tr, rowobj.sex);
         appendtd(tr, rowobj.age);
