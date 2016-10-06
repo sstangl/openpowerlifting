@@ -25,7 +25,7 @@ def main(filename):
         print("There's already a place field.", file=sys.stderr)
         sys.exit(1)
 
-    for i in ['Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
+    for i in ['Equipment', 'Sex', 'Event', 'WeightClassKg', 'TotalKg']:
         if not i in csv.fieldnames:
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)
@@ -34,7 +34,11 @@ def main(filename):
 
     placeidx  = csv.fieldnames.index('Place')
     totalidx  = csv.fieldnames.index('TotalKg')
-    bwidx     = csv.fieldnames.index('BodyweightKg')
+
+    if 'BodyweightKg' in csv.fieldnames:
+        bwidx = csv.fieldnames.index('BodyweightKg')
+    else:
+        bwidx = csv.fieldnames.index('TotalKg') # Equivalent to just ignoring bodyweight.
 
     categories = []
     for row in csv.rows:
