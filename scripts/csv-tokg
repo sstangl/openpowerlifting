@@ -13,6 +13,7 @@ import sys
 # Round to two decimal places.
 def internal_to_kg_string(s):
     try:
+        # NOTE: SPF uses "2.2046". Greater accuracy actually makes it worse.
         return "{:.2f}".format(float(s) / 2.20462262)
     except ValueError:
         print("Field not a float: \"%s\"" % s, file=sys.stderr)
