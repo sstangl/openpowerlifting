@@ -14,7 +14,11 @@ import sys
 def internal_to_kg_string(s):
     try:
         # NOTE: SPF uses "2.2046". Greater accuracy actually makes it worse.
-        return "{:.2f}".format(float(s) / 2.20462262)
+        r = "{:.2f}".format(float(s) / 2.20462262)
+        r = r.replace('.00','')
+        if '.' in r and r[-1] == '0':
+            r = r[:-1]
+        return r
     except ValueError:
         print("Field not a float: \"%s\"" % s, file=sys.stderr)
         sys.exit(1)

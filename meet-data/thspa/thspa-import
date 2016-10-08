@@ -1,0 +1,278 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# THSPA thankfully puts all their meets into a database, which is easy to scrape.
+# This script taken a thspa.us URL and converts the results to
+# the OpenPowerlifting internal format. It also creates the directory.
+#
+
+
+from bs4 import BeautifulSoup
+import errno
+from oplcsv import Csv
+import os
+import shutil
+import sys
+import urllib.request
+
+
+BASEURL = "http://www.thspa.us"
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read().decode('utf-8')
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def strtokg(s):
+    try:
+        f = float(s)
+        if f == 0.0:
+            return ''
+        r = "{:.2f}".format(f / 2.20462262)
+        r = r.replace('.00','')
+        if '.' in r and r[-1] == '0':
+            r = r[:-1]
+        return r
+    except ValueError:
+        print("Field not a float: \"%s\"" % s, file=sys.stderr)
+        sys.exit(1)
+
+
+def weightclass2kg(s, sex):
+    if s == '114':
+        return '52'
+    if s == '123':
+        return '56'
+    if s == '132':
+        return '60'
+    if s == '148':
+        return '67.5'
+    if s == '165':
+        return '75'
+    if s == '181':
+        return '82.5'
+    if s == '198':
+        return '90'
+    if s == '220':
+        return '100'
+    if s == '242':
+        return '110'
+    if s == '275':
+        return '125'
+    if s == 'SHW' and sex == 'M':
+        return '125+'
+    if s == 'SHW' and sex == 'F':
+        return '90+'
+    if s == 'UNC': # Unconfirmed.
+        return ''
+    error("Unknown weight class: %s" % (s))
+
+
+def makelifterscsv():
+    csv = Csv()
+    csv.append_column('Division')
+    csv.append_column('WeightClassKg')
+    csv.append_column('Place')
+    csv.append_column('Name')
+    csv.append_column('Team')
+    csv.append_column('BodyweightKg')
+    csv.append_column('BestSquatKg')
+    csv.append_column('BestBenchKg')
+    csv.append_column('BestDeadliftKg')
+    csv.append_column('TotalKg')
+    csv.append_column('Equipment')
+    csv.append_column('Event')
+    csv.append_column('Sex')
+    return csv
+
+
+def getdivisionurls(soup):
+    urls = []
+    for a in soup.find_all("a"):
+        try:
+            url = a['href']
+        except:
+            continue
+
+        if not 'passedDivisionID=' in url:
+            continue
+
+        if not 'http' in url:
+            url = BASEURL + url.replace('./','/')
+        if not url in urls:
+            urls.append(url)
+
+    return urls
+
+
+def enterdivision(csv, divurl):
+    soup = BeautifulSoup(gethtml(divurl), 'html.parser')
+
+    # Determine the division name from the lblHeading.
+    heading = soup.find('span', {'id': 'lblHeading'}).text
+
+    # The heading is formatted: "meetname - location - date - division".
+    division = heading.split(' - ')[3].replace('THSPA','').strip()
+
+    # Division contains sex information.
+    if 'boys' in division.lower() and not 'girls' in division.lower():
+        sex = 'M'
+    else:
+        error('Unknown division "%s" on page %s' % (division, divurl))
+
+
+    # Get the table.
+    table = soup.find('table', {'id': 'grdIndividualResults'})
+
+    # Skip the first row, since that contains column information, which is always the same.
+    trlist = table.find_all('tr')[1:]
+
+    for row in trlist:
+        cells = row.find_all('td')
+        assert len(cells) == 10
+
+        # First column is WeightClassLBS, needs conversion to Kg.
+        weightclass = weightclass2kg(cells[0].text.strip(), sex)
+
+        # Second column is Place. BO == Bombed-Out, SC == Scratched, DQ == Disqualified.
+        # No idea what NA means, but it shows up sometimes.
+        place = cells[1].text.replace('BO','DQ').replace('SC','DQ').replace('NA','DQ').strip()
+
+        # Third column is "School Class", which is unused.
+
+        # Fourth column is Name, given as "LASTNAME, FIRSTNAME".
+        name = cells[3].text.strip()
+        name = name.replace('.','')
+
+        if ',' in name:
+            assert name.count(',') == 1
+            [last,first] = name.split(',')
+
+            # Sometimes only the first name is all-caps, for no good reason.
+            if len(last) >= 5 and last == last.upper():
+                last = last.title()
+            if len(first) >= 5 and first == first.upper():
+                first = first.title()
+
+            name = first + ' ' + last
+            name = name.replace('  ',' ').strip()
+
+        if name == name.upper():
+            name = name.title() # Will get some things wrong, but not a lot of Scots in Texas.
+
+        # Fifth column is Team.
+        team = cells[4].text.strip()
+
+        # Sixth column is BodyweightLBS, needs conversion to Kg.
+        bw = strtokg(cells[5].text)
+
+        # 7-10 columns are Squat,Bench,Deadlift,Total, need conversion to Kg.
+        squat    = strtokg(cells[6].text)
+        bench    = strtokg(cells[7].text)
+        deadlift = strtokg(cells[8].text)
+        total    = strtokg(cells[9].text)
+
+        # The whole federation appears to be single-ply.
+        equipment = 'Single-ply'
+        event = 'SBD'
+
+        csv.rows.append([division,weightclass,place,name,team,bw,squat,bench,deadlift,total,
+                         equipment,event,sex])
+
+
+# The CSV isn't quite in our format yet. Some post-processing is required.
+def removeemptycolumns(csv):
+
+    def getemptycol(csv):
+        for i in range(0, len(csv.fieldnames)):
+            hasdata = False
+            for row in csv.rows:
+                if row[i]:
+                    hasdata = True
+                    break
+            if not hasdata:
+                return i
+        return -1
+
+    # Remove all empty columns.
+    while True:
+        i = getemptycol(csv)
+        if i == -1:
+            break
+        else:
+            csv.remove_column_by_index(i)
+
+
+def makemeetcsv(soup):
+    heading = soup.find('span', {'id': 'lblHeading'}).text
+    heading = heading.replace(',',' ')
+    heading = heading.replace('  ', ' ')
+
+    [meetname, location, origdate] = [x.strip() for x in heading.split(' - ')]
+
+    # Date is given as MM/DD/YYYY
+    k = origdate.split('/')
+    if len(k[0]) == 1:
+        k[0] = '0' + k[0]
+    if len(k[1]) == 1:
+        k[1] = '0' + k[1]
+    date = k[2] + '-' + k[0] + '-' + k[1]
+
+    location = location.replace('High School','').strip()
+
+    csv = Csv()
+    csv.append_column('Federation')
+    csv.append_column('Date')
+    csv.append_column('MeetCountry')
+    csv.append_column('MeetState')
+    csv.append_column('MeetTown')
+    csv.append_column('MeetName')
+
+    row = ['THSPA', date, 'USA', 'TX', location, meetname]
+    csv.rows.append(row)
+    return csv
+
+
+def getdirname(url):
+    return url.split('=')[1]
+
+
+def main(url):
+    lifterscsv = makelifterscsv()
+    soup = BeautifulSoup(gethtml(url), 'html.parser')
+    for divurl in getdivisionurls(soup):
+        enterdivision(lifterscsv, divurl)
+
+    removeemptycolumns(lifterscsv)
+
+    meetcsv = makemeetcsv(soup)
+    dirname = getdirname(url)
+
+    try:
+        os.makedirs(dirname)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+        else:
+            error("Directory '%s' already exists." % dirname)
+
+    with open(dirname + os.sep + 'lifters.csv', 'w') as fd:
+        lifterscsv.write(fd)
+    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+        meetcsv.write(fd)
+    with open(dirname + os.sep + 'URL', 'w') as fd:
+        fd.write(url+"\n")
+
+    print("Imported into %s." % dirname)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s url" % sys.argv[0])
+    main(sys.argv[1])
