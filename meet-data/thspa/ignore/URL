@@ -1,1 +1,5 @@
 http://www.thspa.us/meetsummary.aspx?passedMeetID=2414
+
+These URLs appears to result in potential SQL injection:
+http://www.thspa.us/meetsummary.aspx?passedMeetID=2398
+http://www.thspa.us/meetsummary.aspx?passedMeetID=2387

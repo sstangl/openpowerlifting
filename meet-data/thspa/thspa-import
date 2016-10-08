@@ -130,9 +130,11 @@ def enterdivision(csv, divurl):
     # Division contains sex information.
     if 'boys' in division.lower() and not 'girls' in division.lower():
         sex = 'M'
-    elif division == 'Junior Varsity':
+    elif division == 'Junior Varsity' or division == 'Varsity':
         sex = 'M'
     elif division == 'Freshmen':
+        sex = 'M'
+    elif division == 'Div 2':
         sex = 'M'
     else:
         error('Unknown division "%s" on page %s' % (division, divurl))
@@ -146,7 +148,10 @@ def enterdivision(csv, divurl):
 
     for row in trlist:
         cells = row.find_all('td')
-        assert len(cells) == 10
+
+        # The optional 11th cell specifies whether it was a state qualifying total.
+        # Very few meets actually have that.
+        assert len(cells) == 10 or len(cells) == 11
 
         # First column is WeightClassLBS, needs conversion to Kg.
         weightclass = weightclass2kg(cells[0].text.strip(), sex)
@@ -162,16 +167,22 @@ def enterdivision(csv, divurl):
         name = name.replace('.','')
 
         if ',' in name:
-            assert name.count(',') == 1
-            [last,first] = name.split(',')
+            if name.count(',') == 1:
+                [last,first] = name.split(',')
+                jr = ''
+            elif name.count(',') == 2: # "Saldivar, Jr, Mario"
+                [last,jr,first] = name.split(',')
+                jr = ' ' + jr
+            else:
+                error("Don't know how to split name: %s" % name)
 
             # Sometimes only the first name is all-caps, for no good reason.
-            if len(last) >= 3 and last == last.upper():
+            if len(last) >= 3 and last.isupper():
                 last = last.title()
-            if len(first) >= 3 and first == first.upper():
+            if len(first) >= 3 and first.isupper():
                 first = first.title()
 
-            name = first + ' ' + last
+            name = first + ' ' + last + jr
             name = name.replace('Iii','III')
             name = name.replace('  ',' ').strip()
 
@@ -226,9 +237,16 @@ def makemeetcsv(soup):
     heading = heading.replace(',',' ')
     heading = heading.replace('  ', ' ')
 
-    [meetname, location, origdate] = [x.strip() for x in heading.split(' - ')]
+    if heading.count(' - ') == 2:
+        [meetname, location, origdate] = [x.strip() for x in heading.split(' - ')]
+    elif heading.count(' - ') == 3:
+        # Division is ignored.
+        [meetname, division, location, origdate] = [x.strip() for x in heading.split(' - ')]
+    else:
+        error('Unknown header format: "%s"' % heading)
 
     # Date is given as MM/DD/YYYY
+    assert '/' in origdate
     k = origdate.split('/')
     if len(k[0]) == 1:
         k[0] = '0' + k[0]
