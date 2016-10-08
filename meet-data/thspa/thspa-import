@@ -69,8 +69,12 @@ def weightclass2kg(s, sex):
         return '125+'
     if s == 'SHW' and sex == 'F':
         return '90+'
+
     if s == 'UNC': # Unconfirmed.
         return ''
+    if s == 'N/A': # Getting the impression these are free-form string fields...
+        return ''
+
     error("Unknown weight class: %s" % (s))
 
 
@@ -118,10 +122,17 @@ def enterdivision(csv, divurl):
     heading = soup.find('span', {'id': 'lblHeading'}).text
 
     # The heading is formatted: "meetname - location - date - division".
-    division = heading.split(' - ')[3].replace('THSPA','').strip()
+    # Sometimes there's additional "Division 1" information after meetname.
+    # But the division is always the last one.
+    division = heading.split(' - ')[-1].replace('THSPA','').strip()
+    division = division.replace('  ',' ')
 
     # Division contains sex information.
     if 'boys' in division.lower() and not 'girls' in division.lower():
+        sex = 'M'
+    elif division == 'Junior Varsity':
+        sex = 'M'
+    elif division == 'Freshmen':
         sex = 'M'
     else:
         error('Unknown division "%s" on page %s' % (division, divurl))
@@ -155,12 +166,13 @@ def enterdivision(csv, divurl):
             [last,first] = name.split(',')
 
             # Sometimes only the first name is all-caps, for no good reason.
-            if len(last) >= 5 and last == last.upper():
+            if len(last) >= 3 and last == last.upper():
                 last = last.title()
-            if len(first) >= 5 and first == first.upper():
+            if len(first) >= 3 and first == first.upper():
                 first = first.title()
 
             name = first + ' ' + last
+            name = name.replace('Iii','III')
             name = name.replace('  ',' ').strip()
 
         if name == name.upper():
@@ -224,6 +236,8 @@ def makemeetcsv(soup):
         k[1] = '0' + k[1]
     date = k[2] + '-' + k[0] + '-' + k[1]
 
+    location = location.replace('TX','')
+    location = location.replace(' HS','')
     location = location.replace('High School','').strip()
 
     csv = Csv()
@@ -244,6 +258,11 @@ def getdirname(url):
 
 
 def main(url):
+    # Since the dirname is derived from the URL, we can fail early.
+    dirname = getdirname(url)
+    if os.path.isdir(dirname):
+        error("Directory '%s' already exists." % dirname)
+
     lifterscsv = makelifterscsv()
     soup = BeautifulSoup(gethtml(url), 'html.parser')
     for divurl in getdivisionurls(soup):
@@ -252,7 +271,6 @@ def main(url):
     removeemptycolumns(lifterscsv)
 
     meetcsv = makemeetcsv(soup)
-    dirname = getdirname(url)
 
     try:
         os.makedirs(dirname)
