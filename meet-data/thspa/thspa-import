@@ -254,7 +254,8 @@ def makemeetcsv(soup):
         k[1] = '0' + k[1]
     date = k[2] + '-' + k[0] + '-' + k[1]
 
-    location = location.replace('TX','')
+    location = location.replace(' TX','')
+    location = location.replace(' Tx','')
     location = location.replace(' HS','')
     location = location.replace('High School','').strip()
 
