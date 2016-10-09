@@ -16,7 +16,7 @@ import sys
 import urllib.request
 
 
-NUMPAGES = 2 # Number of pages to go back in results, 10 results per page.
+NUMPAGES = 5 # Number of pages to go through, 10 results per page.
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 FEDURL = "http://www.upapower.com/development/?cat=52"
 
