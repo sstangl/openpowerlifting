@@ -31,6 +31,7 @@ check:
 	scripts/check-meet-csv
 
 probe:
+	${DATADIR}/apf/apf-probe
 	${DATADIR}/cpf/cpf-probe
 	${DATADIR}/fesupo/fesupo-probe
 	${DATADIR}/fpo/fpo-probe
