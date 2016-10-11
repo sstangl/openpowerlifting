@@ -31,7 +31,7 @@
     <option value="THSPA">THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
     <option value="UPA">UPA - United Powerlifting Association (2016+)</option>
     <option value="USAPL">USAPL - USA Powerlifting [IPF] (2014+)</option>
-    <option value="USPA">USPA - United States Powerlifting Association</option>
+    <option value="USPA">USPA - United States Powerlifting Association [IPL]</option>
     <option value="USPF">USPF - United States Powerlifting Federation (Incomplete)</option>
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
   </optgroup>
