@@ -59,35 +59,6 @@ function weightMax(row, cola, colb) {
 }
 
 
-// Fills in the <tbody> given the current query.
-function getIndices(query) {
-    // No query: nothing to draw.
-    if (query.q === undefined) {
-        return [];
-    }
-
-    function filter(row) {
-        return row[opldb.NAME] === query.q;
-    }
-
-    var indices = db_make_indices_list();
-    indices = db_filter(indices, filter);
-
-    // Update the name display here: if the name matches something
-    // in the database, we're safe from HTML injection.
-    if (indices.length > 0) {
-        lifterString.innerHTML = 'Meet Results for ' + query.q;
-    } else {
-        // Don't inject query.q here: may be HTML!
-        lifterString.innerHTML = 'Lifter not found.'
-    }
-
-    var sortFn = common.getSortFn(sortCol.id, sortAsc);
-    indices.sort(sortFn);
-    return indices;
-}
-
-
 function appendtd(tr, string) {
     var td = document.createElement("td");
     td.appendChild(document.createTextNode(string));
@@ -100,12 +71,14 @@ function appendtdlink(tr, string, url) {
     a.setAttribute('href', url);
     a.appendChild(document.createTextNode(string));
     td.appendChild(a);
+    td.style.whiteSpace = "nowrap";
     tr.appendChild(td);
 }
 
 function appendtdraw(tr, innerHTML) {
     var td = document.createElement("td");
     td.innerHTML = innerHTML;
+    td.style.whiteSpace = "nowrap";
     tr.appendChild(td);
 }
 
