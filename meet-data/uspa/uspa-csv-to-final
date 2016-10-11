@@ -203,13 +203,19 @@ def parse(csv):
         else:
             searcher = ';'.join(row).lower()
             # Sometimes the rows just switch the sex state.
-            if ';women;' in searcher:
+            if ';women' in searcher:
                 sexstate = 'F'
-            elif ';men;' in searcher:
+            elif ';men' in searcher:
                 sexstate = 'M'
 
+            # Some PDFs put this information with the sexstate.
+            if ' classic raw' in searcher:
+                equipmentstate = 'Wraps'
+            elif ' raw' in searcher:
+                equipmentstate = 'Raw'
+
             # This is a row that specifies 4th attempts for the last lifter.
-            elif '4th' in searcher:
+            if '4th' in searcher:
                 assert lifterstate
 
                 for i, text in enumerate(row):
@@ -218,6 +224,8 @@ def parse(csv):
                         amount = text.replace('4th','').strip()
                         amount = amount.replace('-','').strip()
                         amount = amount.replace(':','').strip()
+                        if amount == "":
+                            error("4th amount split over rows: \"%s\"" % text)
                         newcol = colnameto4thname(columns[i])
                         assert newcol in columns
 
@@ -278,7 +286,8 @@ def parse(csv):
                     equipmentstate = 'Multi-ply'
                 else:
                     # This happens when the USPA forgets how to spell things.
-                    # For example, "Mulitply".
+                    # For example, "Mulitply". Comment out on a per-import basis.
+                    assert equipmentstate
                     error('Unknown equipment: %s' % ' '.join(row).strip())
 
     return rval
