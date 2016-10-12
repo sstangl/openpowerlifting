@@ -210,7 +210,7 @@ def writemeetcsv(meet):
             month = '07'
         elif 'Aug' in month:
             month = '08'
-        elif 'Sep' in month:
+        elif 'Sep' in month or month == 'Spetember': # Way to go
             month = '09'
         elif 'Oct' in month:
             month = '10'
