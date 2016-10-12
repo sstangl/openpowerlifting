@@ -33,6 +33,7 @@ check:
 probe:
 	${DATADIR}/apf/apf-probe
 	${DATADIR}/cpf/cpf-probe
+	${DATADIR}/epf/epf-probe
 	${DATADIR}/fesupo/fesupo-probe
 	${DATADIR}/fpo/fpo-probe
 	${DATADIR}/gbpf/gbpf-probe
