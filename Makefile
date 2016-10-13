@@ -31,26 +31,26 @@ check:
 	scripts/check-meet-csv
 
 probe:
-	${DATADIR}/apf/apf-probe
-	${DATADIR}/cpf/cpf-probe
-	${DATADIR}/epf/epf-probe
-	${DATADIR}/fesupo/fesupo-probe
-	${DATADIR}/fpo/fpo-probe
-	${DATADIR}/gbpf/gbpf-probe
-	${DATADIR}/ipf/ipf-probe
-	${DATADIR}/napf/napf-probe
-	${DATADIR}/nsf/nsf-probe
-	${DATADIR}/pa/pa-probe
-	${DATADIR}/raw/raw-probe
-	${DATADIR}/rps/rps-probe
-	${DATADIR}/rupc/rupc-probe
-	${DATADIR}/sct/sct-probe
-	${DATADIR}/spf/spf-probe
-	${DATADIR}/thspa/thspa-probe
-	${DATADIR}/upa/upa-probe
-	${DATADIR}/usapl/usapl-probe
-	${DATADIR}/uspa/uspa-probe
-	${DATADIR}/xpc/xpc-probe
+	${DATADIR}/apf/apf-probe || true
+	${DATADIR}/cpf/cpf-probe || true
+	${DATADIR}/epf/epf-probe || true
+	${DATADIR}/fesupo/fesupo-probe || true
+	${DATADIR}/fpo/fpo-probe || true
+	${DATADIR}/gbpf/gbpf-probe || true
+	${DATADIR}/ipf/ipf-probe || true
+	${DATADIR}/napf/napf-probe || true
+	${DATADIR}/nsf/nsf-probe || true
+	${DATADIR}/pa/pa-probe || true
+	${DATADIR}/raw/raw-probe || true
+	${DATADIR}/rps/rps-probe || true
+	${DATADIR}/rupc/rupc-probe || true
+	${DATADIR}/sct/sct-probe || true
+	${DATADIR}/spf/spf-probe || true
+	${DATADIR}/thspa/thspa-probe || true
+	${DATADIR}/upa/upa-probe || true
+	${DATADIR}/usapl/usapl-probe || true
+	${DATADIR}/uspa/uspa-probe || true
+	${DATADIR}/xpc/xpc-probe || true
 
 clean:
 	rm -rf '${BUILDDIR}'
