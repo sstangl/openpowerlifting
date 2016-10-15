@@ -56,6 +56,14 @@ return {
         var meetname = this.string(meetrow[meetdb.MEETNAME]);
         var meeturl = this.makeMeetUrl(fed, date, meetname);
 
+        // Age uses .5 to show imprecision. The lower bound is given.
+        // Tilde is shown at the end so numbers continue to line up,
+        // and as a hint to it being a lower bound.
+        var age = this.number(row[opldb.AGE]);
+        if (age.indexOf('.5') >= 0) {
+            age = age.replace('.5','~');
+        }
+
         return {
             rank:        index+1,
             place:       this.string(row[opldb.PLACE]),
@@ -67,7 +75,7 @@ return {
             division:    this.string(row[opldb.DIVISION]),
             meetname:    '<a href="' + meeturl + '">' + meetname + '</a>',
             sex:         this.string(row[opldb.SEX]),
-            age:         this.string(row[opldb.AGE]),
+            age:         age,
             equip:       this.parseEquipment(row[opldb.EQUIPMENT]),
             bw:          weight(row[opldb.BODYWEIGHTKG]), // TODO: this.weight()
             weightclass: parseWeightClass(row[opldb.WEIGHTCLASSKG]), // TODO: this.parseWeightClass()

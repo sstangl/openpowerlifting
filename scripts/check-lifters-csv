@@ -188,6 +188,9 @@ def check_column_birthyear(s):
         perror("BirthYear must be digits: '%s'" % s)
     elif s[0] != '1' and s[0] != '2':
         pwarning("BirthYear looks implausible: '%s'" % s)
+    else:
+        if int(s) <= 1900:
+            pwarning("BirthYear looks implausible: '%s'" % s)
 
 
 def check_column_weightclass(s):
