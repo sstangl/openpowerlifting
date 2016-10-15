@@ -76,6 +76,9 @@ def fixup_lift(csv, fieldname):
         if amount and amount[0] != '-' and '-' in amount:
             amount = amount.split('-')[0]
 
+        if ' ' in amount:
+            amount = amount.split()[0]
+
         if amount == 'X' or amount == 'DSQ' or amount == 'TD':
             amount = ''
 
