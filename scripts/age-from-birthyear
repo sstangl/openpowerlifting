@@ -41,7 +41,7 @@ def main(lifterfile, meetfile):
             date = getmeetdate(row[meetididx], meetcsv)
             [year,month,day] = date.split('-')
 
-            lower_age = int(year) - int(row[birthyearidx])
+            lower_age = int(year) - int(row[birthyearidx]) - 1
 
             # Sanity checks.
             assert lower_age < 100
