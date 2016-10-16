@@ -47,7 +47,9 @@ function getIndices(query) {
     // Update the name display here: if the name matches something
     // in the database, we're safe from HTML injection.
     if (indices.length > 0) {
-        lifterString.innerHTML = 'Meet Results for ' + query.q;
+        // Pretty-print the name using makeRowObj().
+        var rowobj = common.makeRowObj(opldb.data[indices[0]], 0);
+        lifterString.innerHTML = 'Meet Results for ' + rowobj.name;
     } else {
         // Don't inject query.q here: may be HTML!
         lifterString.innerHTML = 'Lifter not found.'
