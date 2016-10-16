@@ -121,7 +121,6 @@ td a {
 
 #controls {
   height: 28px;
-  display: flex;
   font-size: 10pt;
   padding-left: 20px;
   padding-right: 20px;
@@ -137,6 +136,14 @@ td a {
 
 #controls-right {
   margin-left: auto;
+}
+
+.info {
+  font-size: 10pt;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-top; 5px;
 }
 
 /* From http://jsfiddle.net/danield770/YvCHW/4232/ */
