@@ -128,11 +128,11 @@ def integrate_equipment_event(csv):
                 event = 'SBD'
                 equipment = 'Single-ply'
             elif 'Uneq PL' in category or category == 'Uneq HS PL' \
-                 or category == 'Uneq Powerlifting':
+                 or category == 'Uneq Powerlifting' or category == 'Unequipped PL':
                 event = 'SBD'
                 equipment = 'Raw'
-            elif 'Power Sports' in category: # Curl-Bench-Deadlift.
-                event = 'BD'
+            elif 'Power' in category and 'ports' in category: # Curl-Squat-Bench-Deadlift. Unknown.
+                event = ''
                 equipment = 'Raw'
             elif 'Equipped BP' in category:
                 event = 'B'
@@ -140,11 +140,15 @@ def integrate_equipment_event(csv):
             elif 'Uneq BP' in category:
                 event = 'B'
                 equipment = 'Raw'
-            elif 'Uneq PP' in category or 'Uneq Push Pull' in category \
-                 or category == 'Unequipped  PP':
+            elif 'Uneq PP' in category \
+                 or 'Uneq Push Pull' in category \
+                 or category == 'Unequipped  PP' \
+                 or category == 'Unequipped PP':
                 event = 'BD'
                 equipment = 'Raw'
-            elif 'Eq PP' in category or category == 'Equipped Push Pull':
+            elif 'Eq PP' in category \
+                 or category == 'Equipped Push Pull' \
+                 or category == 'Equipped PP':
                 event = 'BD'
                 equipment = 'Single-ply'
             elif 'Power Press' in category: # PowerClean-Bench
@@ -158,8 +162,8 @@ def integrate_equipment_event(csv):
                 error("Unknown category: \"%s\"" % (category))
 
         elif row[nameidx] and row[wtidx]:
-            assert event
-            assert equipment
+            assert event != None
+            assert equipment != None
             row[eventidx] = event
             row[equipmentidx] = equipment
 
