@@ -151,7 +151,7 @@ def check_column_division(s):
     if 'raw' in low or 'single' in low or 'multi' in low or 'classic' in low:
         pwarning('Division includes equipment: "%s"' % s)
 
-    if is_int(s.split()[0]) or 'SHW' in s or '+' in s.split()[0]:
+    if is_int(s.split()[0]) or 'SHW' in s or '+' in s.split()[0][-1]:
         pwarning('Division includes weight class: "%s"' % s)
 
     if s[-1] is '-':
