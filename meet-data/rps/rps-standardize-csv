@@ -67,6 +67,8 @@ def remove_event_rows(csv):
                     return i
                 if k == 'squat only':
                     return i
+                if k == 'push / pull':
+                    return i
         return -1
 
     while True:
@@ -188,6 +190,8 @@ def standardize_fieldnames(csv):
             x = 'Country'
         elif s == 'age':
             x = 'Age'
+        elif s == 'coef.' or s == 'total coef.':
+            x = 'DELETEME'
         else:
             error("Teach me what to do with column '%s'" % x)
 
