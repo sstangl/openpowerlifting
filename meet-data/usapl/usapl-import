@@ -115,7 +115,7 @@ def parsedivision(div):
     s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
-    if len(s) > 5:
+    if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
 
     return (s, eq)
