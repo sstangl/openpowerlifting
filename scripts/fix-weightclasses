@@ -140,6 +140,10 @@ for row in csv.rows:
         x = '140'
     elif x == '55.91':
         x = '56'
+    elif x == '51.94':
+        x = '52'
+    elif x == '44.23':
+        x = '44'
 
     if x != row[idx]:
         changed = True

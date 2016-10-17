@@ -8,6 +8,12 @@ REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 # Use NASA-specific knowledge to parse results.csv into lifters.csv.
 ${SCRIPTDIR}/nasa-standardize-csv results.csv > lifters.csv
 
+# Change 'X' in place to 'DQ'.
+sed -i -e "s/^X,/DQ,/g" lifters.csv
+
+# Fix up SHW for the scripts below.
+sed -i -e "s/,shw,/,SHW,/g" lifters.csv
+
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv
 

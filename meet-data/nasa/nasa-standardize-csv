@@ -60,6 +60,12 @@ def rename_fields(csv):
             csv.fieldnames[i] = 'BestDeadliftKg'
         elif field == 'TL Kgs':
             csv.fieldnames[i] = 'TotalKg'
+        elif field == 'SQ-4ar':
+            csv.fieldnames[i] = 'Squat4Kg'
+        elif field == 'BP-4ar':
+            csv.fieldnames[i] = 'Bench4Kg'
+        elif field == 'DL-4ar':
+            csv.fieldnames[i] = 'Deadlift4Kg'
         elif field == 'Name':
             pass
         elif field == 'Sex':
@@ -108,44 +114,50 @@ def integrate_equipment_event(csv):
     eventidx = csv.fieldnames.index('Event')
     equipmentidx = csv.fieldnames.index('Equipment')
     nameidx = csv.fieldnames.index('Name')
-    sexidx = csv.fieldnames.index('Sex')
+    wtidx = csv.fieldnames.index('WeightClassLBS')
 
     event = None
     equipment = None
 
     for row in csv.rows:
         # Detect category rows.
-        if row[nameidx] and not row[sexidx]:
+        if row[nameidx] and not row[wtidx]:
             category = ''.join(row)
 
-            if category == 'Equipped PL':
+            if 'Equipped PL' in category:
                 event = 'SBD'
                 equipment = 'Single-ply'
-            elif category == 'Uneq PL':
+            elif 'Uneq PL' in category or category == 'Uneq HS PL' \
+                 or category == 'Uneq Powerlifting':
                 event = 'SBD'
                 equipment = 'Raw'
-            elif category == 'Power Sports': # Curl-Bench-Deadlift.
+            elif 'Power Sports' in category: # Curl-Bench-Deadlift.
                 event = 'BD'
                 equipment = 'Raw'
-            elif category == 'Equipped BP':
+            elif 'Equipped BP' in category:
                 event = 'B'
                 equipment = 'Single-ply'
-            elif category == 'Uneq BP':
+            elif 'Uneq BP' in category:
                 event = 'B'
                 equipment = 'Raw'
-            elif category == 'Uneq Push Pull':
+            elif 'Uneq PP' in category or 'Uneq Push Pull' in category \
+                 or category == 'Unequipped  PP':
                 event = 'BD'
                 equipment = 'Raw'
-            elif category == 'Equipped Push Pull':
+            elif 'Eq PP' in category or category == 'Equipped Push Pull':
                 event = 'BD'
                 equipment = 'Single-ply'
-            elif category == 'Power Press': # PowerClean-Bench
+            elif 'Power Press' in category: # PowerClean-Bench
                 event = 'B'
                 equipment = 'Raw'
+
+            elif category.lower() == 'men':
+                pass
+
             else:
                 error("Unknown category: \"%s\"" % (category))
 
-        elif row[nameidx] and row[sexidx]:
+        elif row[nameidx] and row[wtidx]:
             assert event
             assert equipment
             row[eventidx] = event
@@ -154,11 +166,11 @@ def integrate_equipment_event(csv):
 
 def remove_category_rows(csv):
     nameidx = csv.fieldnames.index('Name')
-    sexidx = csv.fieldnames.index('Sex')
+    wtidx = csv.fieldnames.index('WeightClassLBS')
 
     def find_such_a_row(csv):
         for i,row in enumerate(csv.rows):
-            if row[nameidx] and not row[sexidx]:
+            if row[nameidx] and not row[wtidx]:
                 return i
         return -1
 
@@ -172,9 +184,6 @@ def remove_category_rows(csv):
 def internal_to_string(f):
     try:
         f = float(f)
-        if f == 0.0:
-            return ''
-
         r = "{:.2f}".format(f)
         r = r.replace('.00','')
         if '.' in r and r[-1] == '0':
@@ -189,7 +198,17 @@ def trim_numbers(csv, field):
     idx = csv.fieldnames.index(field)
 
     for row in csv.rows:
-        row[idx] = internal_to_string(row[idx])
+        num = internal_to_string(row[idx])
+        if num == '0':
+            num = ''
+        row[idx] = num
+
+
+def float2(s):
+    try:
+        return float(s)
+    except ValueError:
+        return 0
 
 
 def recalculate_totals(csv):
@@ -200,7 +219,7 @@ def recalculate_totals(csv):
     deadliftidx = csv.fieldnames.index('BestDeadliftKg')
 
     for row in csv.rows:
-        total = float(row[squatidx]) + float(row[benchidx]) + float(row[deadliftidx])
+        total = float2(row[squatidx]) + float2(row[benchidx]) + float2(row[deadliftidx])
         row[totalidx] = internal_to_string(total)
 
 
@@ -237,11 +256,14 @@ def main(filename):
     # The first row was actually a data row, so the fieldnames are not set correctly.
     def findfieldnames(rows):
         for row in rows:
-            if 'Name' in row and 'Sex' in row:
+            if 'Name' in row and 'B.W.T' in row:
                 return row
         error("Could not find fieldnames.")
     csv.rows.insert(0, csv.fieldnames)
     csv.fieldnames = findfieldnames(csv.rows)[:]
+
+    while '' in csv.fieldnames:
+        csv.remove_column_by_name('')
 
     # Remove some columns that don't get used.
     csv.remove_column_by_name("Tl. Lbs.")
@@ -249,6 +271,7 @@ def main(filename):
     csv.remove_column_by_name("TL Coef")
     csv.remove_column_by_name("Best PC") # Power Clean.
     csv.remove_column_by_name("Best-C") # Curl.
+    csv.remove_column_by_name("C-4ar") # Curl 4th attempt.
 
     aggregate_divisions(csv)
     rename_fields(csv)
@@ -268,8 +291,10 @@ def main(filename):
 
     hunt_dqs(csv)
 
-    capitalize(csv, 'Sex')
-    capitalize(csv, 'State')
+    if 'Sex' in csv.fieldnames:
+        capitalize(csv, 'Sex')
+    if 'State' in csv.fieldnames:
+        capitalize(csv, 'State')
 
     csv.write(sys.stdout)
 
