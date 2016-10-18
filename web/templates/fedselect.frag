@@ -18,7 +18,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="APA,APF,IPA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
+    <option value="APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
