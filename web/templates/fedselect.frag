@@ -8,6 +8,7 @@
     <option value="GPC">GPC - Global Powerlifting Committee (Incomplete)</option>
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
+    <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
