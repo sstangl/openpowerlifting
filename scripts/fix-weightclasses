@@ -144,6 +144,12 @@ for row in csv.rows:
         x = '52'
     elif x == '44.23':
         x = '44'
+    elif x == '89.92+':
+        x = '90+'
+    elif x == '56.02':
+        x = '56'
+    elif x == '124.96+':
+        x = '125+'
 
     if x != row[idx]:
         changed = True
