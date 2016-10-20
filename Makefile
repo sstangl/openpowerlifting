@@ -51,6 +51,7 @@ probe:
 	${DATADIR}/thspa/thspa-probe || true
 	${DATADIR}/upa/upa-probe || true
 	${DATADIR}/usapl/usapl-probe || true
+	${DATADIR}/usapl-archive/usapl-archive-probe || true
 	${DATADIR}/uspa/uspa-probe || true
 	${DATADIR}/xpc/xpc-probe || true
 
