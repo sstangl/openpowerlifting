@@ -23,7 +23,7 @@ def color(s):
 
 
 def getmeetlist():
-    with open('URLLIST', 'r') as fd:
+    with open(FEDDIR + os.sep + 'URLLIST', 'r') as fd:
         return [x.strip() for x in fd.readlines()]
 
 
