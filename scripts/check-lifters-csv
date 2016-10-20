@@ -207,9 +207,10 @@ def check_column_weightclass(s):
     rps_extra = ['155']
     spf_extra = ['117.5','100+']
     ipf_extra = ['60+']
+    old_usapl = ['145','145+']
 
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
-              rps_extra + spf_extra + ipf_extra + ipf_women_extra
+              rps_extra + spf_extra + ipf_extra + ipf_women_extra + old_usapl
     if not s in classes:
         pwarning("Unknown weight class: %s" % s)
 
