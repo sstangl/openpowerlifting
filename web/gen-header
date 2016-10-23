@@ -51,6 +51,12 @@ def main(tabname):
     else:
         print('<a href="contact.html" class="nav__link">Contact</a>')
 
+    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us</a>')
+    print('<a href="https://www.patreon.com/openpowerlifting">\
+             <img style="height: 15px; width: 15px" \
+                  src="images/patreon_navigation_logo_mini_orange.png"/>\
+           </a>')
+
     print('</div>')
 
     print('<div class="header__stats">')

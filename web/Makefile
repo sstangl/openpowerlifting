@@ -57,6 +57,7 @@ images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/images
 	cp images/select_dropdown.png ${BUILDDIR}/images
 	cp images/ig-glyph-logo_May2016.png "${BUILDDIR}/images"
+	cp images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images"
 
 check:
 	echo "Nothing to check for the moment."
