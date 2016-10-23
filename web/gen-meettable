@@ -99,8 +99,19 @@ def main():
     townidx = csv.fieldnames.index('MeetTown')
     meetnameidx = csv.fieldnames.index('MeetName')
 
-    # By default, sort the list by date, most recent meets first.
-    csv.rows = sorted(csv.rows, key=lambda x : x[dateidx], reverse=True)
+    # Order the meetcsv in the order of intended appearance.
+    def sorter(x):
+        # First, sort by date. Negate for higher dates first.
+        date = -int(x[dateidx].replace('-',''))
+        # Within a date, sort by federation.
+        fed = x[fedidx]
+        # Within a federation, sort by meet name.
+        name = x[meetnameidx]
+        # After all this, sort by location, for the benefit of Norway.
+        loc = str(x[countryidx]) + str(x[stateidx]) + str(x[townidx])
+        return (date, fed, name, loc)
+
+    csv.rows = sorted(csv.rows, key=sorter)
 
     lifters = oplcsv.Csv(LIFTERSCSV)
     liftersmeetidx = lifters.fieldnames.index('MeetID')
