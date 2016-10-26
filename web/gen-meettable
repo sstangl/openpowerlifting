@@ -153,8 +153,6 @@ def main():
         location = row[countryidx]
         if row[stateidx]:
             location = "%s-%s" % (row[countryidx], row[stateidx])
-        if row[townidx]:
-            location = location + ', ' + row[townidx]
 
         # Only show best lifter if there was one, and they didn't bomb out.
         if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
