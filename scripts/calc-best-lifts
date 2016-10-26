@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+import oplcsv
+import sys
+
+
+def float2(s):
+    if s == '':
+        return 0.0
+    return float(s)
+
+
+def add_best_column(csv, lift):
+    idx = csv.fieldnames.index(lift + '3Kg') + 1
+    csv.insert_column(idx, 'Best%sKg' % lift)
+
+    idx1 = csv.fieldnames.index(lift + '1Kg')
+    idx2 = csv.fieldnames.index(lift + '2Kg')
+    idx3 = csv.fieldnames.index(lift + '3Kg')
+
+    for row in csv.rows:
+        best = '0'
+        for i in [idx1, idx2, idx3]:
+            if float2(row[i]) > float2(best):
+                best = row[i]
+
+        if float2(best) > 0:
+            row[idx] = best # Keep as string.
+
+
+def main(filename):
+    csv = oplcsv.Csv(filename)
+
+    if 'Squat1Kg' in csv.fieldnames and not 'BestSquatKg' in csv.fieldnames:
+        add_best_column(csv, 'Squat')
+    if 'Bench1Kg' in csv.fieldnames and not 'BestBenchKg' in csv.fieldnames:
+        add_best_column(csv, 'Bench')
+    if 'Deadlift1Kg' in csv.fieldnames and not 'BestDeadliftKg' in csv.fieldnames:
+        add_best_column(csv, 'Deadlift')
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+        
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: %s file.csv" % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
