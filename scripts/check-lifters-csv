@@ -158,6 +158,11 @@ def check_column_division(s, row, csv):
     if s[-1] is '-':
         pwarning('Division ends in "-": "%s"' % s)
 
+    if 'guest' in low and 'Place' in csv.fieldnames:
+        if row[csv.fieldnames.index('Place')] not in ['G','DQ']:
+            pwarning('Lifter should be guest (Place = "G"): %s' %
+                    row[csv.fieldnames.index('Name')])
+
 
 def check_column_equipment(s, row, csv):
     if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply']:
