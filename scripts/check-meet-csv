@@ -9,6 +9,7 @@
 # 1) All the column data is in the pre-set format.
 #
 
+import oplcsv
 import os
 import sys
 
@@ -95,22 +96,18 @@ def check(scriptname, filename):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
 
-    with open(filename) as fd:
-        csv = [x.strip().split(',') for x in fd.readlines()]
-
-    if len(csv) != 2:
-        perror("Meet file contains incorrect number of lines")
+    csv = oplcsv.Csv(filename)
 
     fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
-    if len(fields) != len(csv[0]):
+    if len(fields) != len(csv.fieldnames):
         perror("Incorrect number of fields")
 
     for i in range(0, len(fields)):
-        if fields[i] != csv[0][i]:
+        if fields[i] != csv.fieldnames[i]:
             perror("Field %u must be %s" % (i, fields[i]))
 
-    row = csv[1]
-    if len(row) != 6:
+    row = csv.rows[0]
+    if len(row) != len(fields):
         perror("Meet file has incorrect number of columns")
 
     for i, text in enumerate(row):
