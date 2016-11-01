@@ -132,6 +132,7 @@ def makelifterscsv(soup):
     csv.append_column('Division')
     csv.append_column('WeightClassKg')
     csv.append_column('Equipment')
+    csv.append_column('BirthYear')
     csv.append_column('Team')
     csv.append_column('State')
     csv.append_column('BodyweightKg')
@@ -174,7 +175,7 @@ def makelifterscsv(soup):
             else:
                 (state_division, state_equipment) = parsedivision(s)
 
-        elif k == 17:
+        elif k == 18:
             # This is a results row.
             assert state_event != None
             assert state_division != None
@@ -184,26 +185,28 @@ def makelifterscsv(soup):
             weightclasskg = cells[0].text.replace('-', '').strip()
             place = cells[1].text.replace('.','').strip()
             name = cells[2].text.replace('Jr.','Jr').replace('Sr.','Sr').replace('  ',' ').strip()
-            team = cells[3].text.strip()
-            state = cells[4].text.strip()
-            bodyweightkg = cells[5].text.strip()
+            birthyear = cells[3].text.strip()
+            team = cells[4].text.strip()
+            state = cells[5].text.strip()
+            bodyweightkg = cells[6].text.strip()
 
-            squat1kg = cells[6].text.strip()
-            squat2kg = cells[7].text.strip()
-            squat3kg = cells[8].text.strip()
-            bench1kg = cells[9].text.strip()
-            bench2kg = cells[10].text.strip()
-            bench3kg = cells[11].text.strip()
-            deadlift1kg = cells[12].text.strip()
-            deadlift2kg = cells[13].text.strip()
-            deadlift3kg = cells[14].text.strip()
-            totalkg = cells[15].text.strip()
-            #wilks = cells[16].text.strip() # Not used. Always recalculated.
+            squat1kg = cells[7].text.strip()
+            squat2kg = cells[8].text.strip()
+            squat3kg = cells[9].text.strip()
+            bench1kg = cells[10].text.strip()
+            bench2kg = cells[11].text.strip()
+            bench3kg = cells[12].text.strip()
+            deadlift1kg = cells[13].text.strip()
+            deadlift2kg = cells[14].text.strip()
+            deadlift3kg = cells[15].text.strip()
+            totalkg = cells[16].text.strip()
+            #wilks = cells[17].text.strip() # Not used. Always recalculated.
 
             row = ['' for x in csv.fieldnames]
             row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
             row[csv.fieldnames.index('Place')] = place
             row[csv.fieldnames.index('Name')] = name
+            row[csv.fieldnames.index('BirthYear')] = birthyear
             row[csv.fieldnames.index('Team')] = team
             row[csv.fieldnames.index('State')] = state
             row[csv.fieldnames.index('BodyweightKg')] = bodyweightkg
@@ -226,7 +229,10 @@ def makelifterscsv(soup):
             csv.rows.append(row)
 
         else:
-            error("Unexpected row length: %s" % str(k))
+            cells = row.find_all('td')
+            for i,cell in enumerate(cells):
+                print("%d: %s" % (i,cell))
+            error("Unexpected row length: %s, debug information above" % str(k))
 
     return csv
 
