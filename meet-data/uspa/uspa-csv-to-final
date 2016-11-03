@@ -101,6 +101,8 @@ def fixcolnames(columns):
             columns[i] = 'School'
         elif low == 'lbs':
             columns[i] = 'DELETEME'
+        elif low == 'weightclasskg':
+            columns[i] = 'WeightClassKg'
         else:
             error("Unknown column %s" % name)
 
