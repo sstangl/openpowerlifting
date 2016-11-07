@@ -195,7 +195,7 @@ def check_column_birthyear(s, row, csv):
     elif s[0] != '1' and s[0] != '2':
         pwarning("BirthYear looks implausible: '%s'" % s)
     else:
-        if int(s) <= 1900:
+        if int(s) <= 1900 or int(s) >= 2014: # Needs updating now and then.
             pwarning("BirthYear looks implausible: '%s'" % s)
 
 
