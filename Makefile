@@ -41,6 +41,7 @@ probe:
 	${DATADIR}/ipf/ipf-probe || true
 	${DATADIR}/napf/napf-probe || true
 	${DATADIR}/nasa/nasa-probe || true
+	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/nsf/nsf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/raw/raw-probe || true
