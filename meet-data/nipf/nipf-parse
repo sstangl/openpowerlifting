@@ -36,11 +36,15 @@ libreoffice --headless --convert-to csv results.xls
 # files early to benefit terminal autocompletion.
 if [ -f results.csv ]; then
 	rm results.html results.xls
-
-	# Remove failure dashes.
-	sed -i -e "s/,-,/,,/g" results.csv
-	sed -i -e "s/,-,/,,/g" results.csv
 fi
 
-
 cp "${SCRIPTDIR}/../meet.template" "meet.csv"
+
+echo "Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Wilks,Place" > lifters.csv
+
+tail -n +2 results.csv >> lifters.csv
+
+# Remove failure dashes.
+sed -i -e "s/,-,/,,/g" lifters.csv
+sed -i -e "s/,-,/,,/g" lifters.csv
+sed -i -e "s/,-$/,DQ/g" lifters.csv
