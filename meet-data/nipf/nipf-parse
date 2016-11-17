@@ -48,3 +48,5 @@ tail -n +2 results.csv >> lifters.csv
 sed -i -e "s/,-,/,,/g" lifters.csv
 sed -i -e "s/,-,/,,/g" lifters.csv
 sed -i -e "s/,-$/,DQ/g" lifters.csv
+
+${SCRIPTDIR}/nipf-format-csv lifters.csv

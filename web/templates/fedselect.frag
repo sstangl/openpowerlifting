@@ -64,6 +64,6 @@
   </optgroup>
   <optgroup label="United Kingdom">
     <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
-    <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   </optgroup>
 </select>
