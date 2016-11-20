@@ -1,29 +1,29 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,Sex,Division,Equipment
-1,Mimi Ho,FL,48,46.70,22,102.50,70.00,110.00,282.50,381.69,F,Junior 20-23,Raw
-1,Helena Wu,NJ,56,53.50,17,95.00,55.00,161.00,311.00,379.24,F,Junior 16-17,Raw
-1,Jill Lewis,FL,56,56.00,21,97.50,47.50,140.00,285.00,335.33,F,Junior 20-23,Raw
-2,Kaitlyn Little,FL,56,54.00,21,80.00,40.00,92.50,212.50,257.25,F,Junior 20-23,Raw
-1,Trinh Nguyen,FL,60,58.00,19,127.50,52.50,107.50,287.50,329.10,F,Junior 18-19,Raw
-1,Marta Gorecka,FL,60,60.00,21,107.50,60.00,140.00,307.50,342.83,F,Junior 20-23,Raw
-2,Mary Babcock,FL,60,60.00,23,92.50,60.00,112.50,265.00,295.445,F,Junior 20-23,Raw
-1,Lily Burkhead,FL,75,73.10,15,130.00,67.50,150.00,347.50,335.81,F,Junior 13-15,Raw
-1,Kimberly David,FL,48,46.00,28,97.50,45.00,97.50,240.00,327.768,F,Open,Raw
-1,Jenn Rotsinger,FL,52,51.40,38,155.00,85.00,187.50,427.50,537.726,F,Open,Raw
-2,Dawn Molina,FL,52,51.80,37,122.50,68.00,152.50,343.00,428.870,F,Open,Raw
-1,Helena Wu,NJ,56,53.50,17,95.00,55.00,161.00,311.00,379.238,F,Open,Raw
-2,Jill Lewis,FL,56,56.00,21,97.50,47.50,140.00,285.00,335.332,F,Open,Raw
-3,Elizabeth Vigistain,FL,56,54.30,27,97.50,45.00,102.50,245.00,295.314,F,Open,Raw
-1,Cindy Rivera,FL,60,58.50,28,145.50,52.50,150.00,348.00,395.696,F,Open,Raw
-2,Diedre Fitzgerald,FL,60,59.60,27,107.50,62.50,147.50,317.50,355.818,F,Open,Raw
-1,Krystal Schankowitz,FL,67.5,63.90,33,120.00,60.00,140.00,320.00,340.012,F,Open,Raw
-2,Deja Ryman,FL,67.5,61.70,27,115.00,60.00,140.00,315.00,343.710,F,Open,Raw
-3,Annie Lamia,FL,67.5,65.30,26,107.50,52.50,132.50,292.50,305.819,F,Open,Raw
-1,Frances Negron,FL,90+,91.50,28,117.50,62.50,135.00,315.00,270.366,F,Open,Raw
-1,Dawn Molina,FL,52,49.90,37,122.50,68.00,152.50,343.00,441.299,F,Submaster 35-39,Raw
-2,Christy Shaw,FL,52,50.70,36,102.50,55.00,117.50,275.00,349.559,F,Submaster 35-39,Raw
-1,Hattie Attebery,FL,60,59.30,35,82.50,45.00,105.00,232.50,261.583,F,Submaster 35-39,Raw
-1,Valerie Wolfe,FL,67.5,64.40,39,105.00,60.00,120.00,285.00,301.063,F,Submaster 35-39,Raw
-1,Anna Murrill,GA,90+,98.40,36,112.50,77.50,142.50,332.50,278.183,F,Submaster 35-39,Raw
-1,Kristi Almeda,FL,82.5,77.00,41,102.50,65.00,125.00,292.50,273.62,F,Master 40-44,Raw
-1,Vaughan Chambers,FL,90+,112.80,42,,65.00,77.50,142.50,115.269,F,Open,Raw
-1,Vaughan Chambers,FL,90+,112.80,42,,65.00,77.50,142.50,115.27,F,Master 40-44,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Mimi Ho,FL,48,46.7,22,102.5,70,110,282.5,F,Junior 20-23,Raw,SBD
+1,Helena Wu,NJ,56,53.5,17,95,55,161,311,F,Junior 16-17,Raw,SBD
+1,Jill Lewis,FL,56,56,21,97.5,47.5,140,285,F,Junior 20-23,Raw,SBD
+2,Kaitlyn Little,FL,56,54,21,80,40,92.5,212.5,F,Junior 20-23,Raw,SBD
+1,Trinh Nguyen,FL,60,58,19,127.5,52.5,107.5,287.5,F,Junior 18-19,Raw,SBD
+1,Marta Gorecka,FL,60,60,21,107.5,60,140,307.5,F,Junior 20-23,Raw,SBD
+2,Mary Babcock,FL,60,60,23,92.5,60,112.5,265,F,Junior 20-23,Raw,SBD
+1,Lily Burkhead,FL,75,73.1,15,130,67.5,150,347.5,F,Junior 13-15,Raw,SBD
+1,Kimberly David,FL,48,46,28,97.5,45,97.5,240,F,Open,Raw,SBD
+1,Jenn Rotsinger,FL,52,51.4,38,155,85,177.5,417.5,F,Open,Raw,SBD
+2,Dawn Molina,FL,52,51.8,37,122.5,68,152.5,343,F,Open,Raw,SBD
+1,Helena Wu,NJ,56,53.5,17,95,55,161,311,F,Open,Raw,SBD
+2,Jill Lewis,FL,56,56,21,97.5,47.5,140,285,F,Open,Raw,SBD
+3,Elizabeth Vigistain,FL,56,54.3,27,97.5,45,102.5,245,F,Open,Raw,SBD
+1,Cindy Rivera,FL,60,58.5,28,145.5,52.5,150,348,F,Open,Raw,SBD
+2,Diedre Fitzgerald,FL,60,59.6,27,107.5,62.5,147.5,317.5,F,Open,Raw,SBD
+1,Krystal Schankowitz,FL,67.5,63.9,33,120,60,140,320,F,Open,Raw,SBD
+2,Deja Ryman,FL,67.5,61.7,27,115,60,140,315,F,Open,Raw,SBD
+3,Annie Lamia,FL,67.5,65.3,26,107.5,52.5,132.5,292.5,F,Open,Raw,SBD
+1,Frances Negron,FL,90+,91.5,28,117.5,62.5,135,315,F,Open,Raw,SBD
+1,Dawn Molina,FL,52,49.9,37,122.5,68,152.5,343,F,Submaster 35-39,Raw,SBD
+2,Christy Shaw,FL,52,50.7,36,102.5,55,117.5,275,F,Submaster 35-39,Raw,SBD
+1,Hattie Attebery,FL,60,59.3,35,82.5,45,105,232.5,F,Submaster 35-39,Raw,SBD
+1,Valerie Wolfe,FL,67.5,64.4,39,105,60,120,285,F,Submaster 35-39,Raw,SBD
+1,Anna Murrill,GA,90+,98.4,36,112.5,77.5,142.5,332.5,F,Submaster 35-39,Raw,SBD
+1,Kristi Almeda,FL,82.5,77,41,102.5,65,125,292.5,F,Master 40-44,Raw,SBD
+1,Vaughan Chambers,FL,90+,112.8,42,,65,77.5,142.5,F,Open,Raw,SBD
+1,Vaughan Chambers,FL,90+,112.8,42,,65,77.5,142.5,F,Master 40-44,Raw,SBD
