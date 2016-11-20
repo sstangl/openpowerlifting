@@ -1,6 +1,6 @@
 <select id="weightclass">
   <option value="all" selected>All Classes</option>
-  <optgroup label="Traditional"
+  <optgroup label="Traditional">
     <option value="t44">-44</option>
     <option value="t48">-48</option>
     <option value="t52">-52</option>
