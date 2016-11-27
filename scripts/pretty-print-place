@@ -13,6 +13,47 @@ def getcategory(csv, row):
     return (row[dividx], row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
+def sortcategories(categories):
+
+    def assigneq(eq):
+        if eq == 'Raw':
+            return 0
+        if eq == 'Wraps':
+            return 1
+        if eq == 'Single-ply':
+            return 2
+        if eq == 'Multi-ply':
+            return 3
+        return 4
+
+    def assignevent(evt):
+        if evt == 'SBD':
+            return 0
+        if evt == 'S':
+            return 1
+        if evt == 'B':
+            return 2
+        if evt == 'BD':
+            return 3
+        if evt == 'D':
+            return 4
+        return 5
+
+    def assignwtcls(wt):
+        wt = wt.replace('+','')
+        return float(wt)
+
+    categories.sort(key=lambda x :
+        (x[2], # F always before M.
+         assignevent(x[3]), # Then by event.
+         assigneq(x[1]), # Within event, by equipment.
+         x[0], # Within equipment, by division, alphabetically.
+         assignwtcls(x[4]), # Within division, by weight class, as float.
+        )
+    )
+
+
+
 def main(filename):
     csv = oplcsv.Csv(filename)
 
@@ -35,6 +76,8 @@ def main(filename):
         cat = getcategory(csv, row)
         if not cat in categories:
             categories.append(cat)
+
+    sortcategories(categories)
 
     print('Place,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks')
 
@@ -59,7 +102,7 @@ def main(filename):
         (div,eq,sex,event,cls) = category
 
         if event == 'SBD':
-            event = 'Full Power'
+            event = 'Powerlifting'
         elif event == 'B':
             event = 'Bench-Only'
         elif event == 'D':
