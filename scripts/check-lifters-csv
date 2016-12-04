@@ -243,6 +243,7 @@ def ignore_column(s, row, csv):
 
 HeaderHandlers = {
     'Name': check_column_name,
+    'InternationalName': ignore_column, # Names in their original format (e.g. Russian).
     'Sex': check_column_sex,
     'Age': check_column_age,
     'Place': check_column_place,
