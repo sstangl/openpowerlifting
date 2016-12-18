@@ -109,6 +109,8 @@ def fixevent(csv):
             row[idx] = 'D'
         elif row[idx] == 'Push/Pull':
             row[idx] = 'BD'
+        elif row[idx] == 'Bench for Reps':
+            row[idx] = 'reps-deleteme'
         else:
             error("Unknown event: %s" % row[idx])
 
