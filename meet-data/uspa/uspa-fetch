@@ -241,8 +241,12 @@ def writemeetcsv(meet):
 
     (town,state) = [x.strip() for x in meet.location.split(',')]
     if len(state) > 2:
-        assert state in states
-        state = states[state]
+        if state == 'Canada':
+            country = 'Canada'
+            state = ''
+        else:
+            assert state in states
+            state = states[state]
 
     with open(filename, 'w') as fd:
         fd.write(headers + '\n')
