@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AsianPF,CPF,EPF,FESUPO,GBPF,IPF,NAPF,NASA,NIPF,NSF,OceaniaPF,PA,RAW,THSPA,USAPL">
+  <option value="AsianPF,CPF,EPF,FESUPO,GBPF,IPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,THSPA,USAPL">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -51,6 +51,9 @@
   </optgroup>
   <optgroup label="Finland">
     <option value="FPO">FPO - Finland Powerlifting Organization [GPC] (Incomplete)</option>
+  </optgroup>
+  <optgroup label="New Zealand">
+    <option value="NZPF">NZPF - New Zealand Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Norway">
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
