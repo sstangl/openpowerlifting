@@ -261,6 +261,7 @@ def consume_first_column(csv):
                 weightclasskg = row[0].replace('KG','').strip()
             elif row[0] == 'BP' or row[0] == 'BENCH PRESS' or row[0] == 'APC BP':
                 event = 'B'
+                equipment = 'Raw'
             elif row[0] == 'EBP' or row[0] == 'EQP BP':
                 event = 'B'
                 equipment = 'Single-ply'

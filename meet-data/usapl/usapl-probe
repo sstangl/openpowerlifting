@@ -67,6 +67,10 @@ def getmeetlist(html):
         sanction = cells[2].text.strip()
         url = BASEURL + cells[1].find('a')['href']
 
+        # XXX: Disregard this one clearly-incorrect sanction. Remove when USAPL fixes.
+        if sanction == 'NS-016-07':
+            continue
+
         # Only count those rows that begin with a letter, like "CA-2016-02".
         if sanction and sanction[0].isalpha() and sanction.count('-') == 2:
             meetlist.append(Meet(sanction, url))
