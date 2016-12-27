@@ -165,7 +165,8 @@ def check_column_division(s, row, csv):
 
 
 def check_column_equipment(s, row, csv):
-    if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply']:
+    # FIXME: Straps is just for Yury Belkin for the moment. He competed single-ply.
+    if not s in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Straps']:
         perror("Unknown equipment value: \"%s\"" % s)
 
 

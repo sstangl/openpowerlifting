@@ -131,6 +131,8 @@ return {
             return "Single";
         if (str === "Multi-ply")
             return "Multi";
+        if (str === "Straps") // For Yury Belkin.
+            return "Straps";
         return "";
     },
 
