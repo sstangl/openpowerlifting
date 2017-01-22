@@ -41,6 +41,8 @@ def fixcolnames(columns):
             columns[i] = 'WeightClassKg'
         elif low == 'clas s':
             columns[i] = 'WeightClassKg'
+        elif low == 'weightclasskg':
+            columns[i] = 'WeightClassKg'
         elif low == 'bdy wt(kg)' or low == 'wght (kg)':
             columns[i] = 'BodyweightKg'
         elif low == 'wght(k g)':
@@ -50,6 +52,8 @@ def fixcolnames(columns):
         elif low == 'bdywt (kg)':
             columns[i] = 'BodyweightKg'
         elif low == 'wght( kg)':
+            columns[i] = 'BodyweightKg'
+        elif low == 'bdy (kg)':
             columns[i] = 'BodyweightKg'
         elif low == 'bdy wght':
             columns[i] = 'BodyweightLBS'
