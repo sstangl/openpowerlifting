@@ -206,7 +206,7 @@ def fixequipment(csv):
     for i,row in enumerate(csv.rows):
         s = row[idx].lower()
         # "Classic" means belt and wrist wraps only to the RPS.
-        if s == 'raw classic' or s == 'raw clas' or s == 'raw c' or s == 'rc':
+        if s == 'raw classic' or s == 'raw clas' or s == 'raw class' or s == 'raw c' or s == 'rc':
             x = 'Raw'
         # This one below looks the same, but actually has some unicode BS going on.
         elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
@@ -338,6 +338,10 @@ def fixclass(csv):
         elif s == 'fire':
             x = 'Fire Amateur'
 
+        elif s == 'armed forc pro':
+            x = 'Armed Forces Pro'
+        elif s == 'armed forc am':
+            x = 'Armed Forces Amateur'
         elif s == 'junior pro':
             x = 'Junior Pro'
         elif s == 'pro/ police fire' or s == 'police/fire pro':
