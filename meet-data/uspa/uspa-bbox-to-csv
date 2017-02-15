@@ -10,6 +10,11 @@ import sys
 import xml.etree.ElementTree as ET
 
 
+# Attempt to merge the line above the "Name" line into the header line?
+# This works on about half of the target PDFs. Thus the manual toggle.
+GlobalTryMergeHeader = False
+
+
 # Separator for the CSV file.
 SEP = ';'
 
@@ -225,11 +230,14 @@ def parsepage(page):
         # Make it easier by joining them up.
         # This assumes that there is at most one word per row!
         headeridx = getheaderidx(rows)
-        for word in rows[headeridx]:
-            for above in rows[headeridx-1]:
-                if above.ymin < word.ymax + word.height() and word.aboveorbelow(above):
-                    word.text = '%s %s' % (above.text, word.text)
-                    break
+
+        if GlobalTryMergeHeader:
+            for word in rows[headeridx]:
+                for above in rows[headeridx-1]:
+                    if above.ymin < word.ymax + word.height() and word.aboveorbelow(above):
+                        word.text = '%s %s' % (above.text, word.text)
+                        break
+
         # Print the header information first.
         csv = ''
         if rows[headeridx][0].text.lower() != 'place':

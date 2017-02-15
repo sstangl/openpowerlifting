@@ -107,6 +107,18 @@ def fixcolnames(columns):
             columns[i] = 'DELETEME'
         elif low == 'weightclasskg':
             columns[i] = 'WeightClassKg'
+        elif low == 'wt':
+            columns[i] = 'WeightClassKg'
+        elif low == 'weight':
+            columns[i] = 'BodyweightKg'
+        elif low == 'sq':
+            columns[i] = 'BestSquatKg'
+        elif low == 'bp':
+            columns[i] = 'BestBenchKg'
+        elif low == 'dl':
+            columns[i] = 'BestDeadliftKg'
+        elif low == 'mcc':
+            columns[i] = 'McCulloch'
         else:
             error("Unknown column %s" % name)
 
