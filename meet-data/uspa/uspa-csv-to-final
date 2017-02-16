@@ -97,6 +97,8 @@ def fixcolnames(columns):
             columns[i] = 'TotalLBS'
         elif low == 'wilks':
             columns[i] = 'Wilks'
+        elif low == 'score':
+            columns[i] = 'Wilks'
         elif low == 'wilks score':
             columns[i] = 'Wilks'
         elif low == 'wilks total':
@@ -119,6 +121,8 @@ def fixcolnames(columns):
             columns[i] = 'BestDeadliftKg'
         elif low == 'mcc':
             columns[i] = 'McCulloch'
+        elif low == 'lbs':
+            columns[i] = 'DELETEME'
         else:
             error("Unknown column %s" % name)
 
