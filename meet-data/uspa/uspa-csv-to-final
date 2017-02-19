@@ -140,6 +140,8 @@ def colnameto4thname(colname):
         return 'Deadlift4Kg'
     elif colname == 'BestDeadliftLBS':
         return 'Deadlift4LBS'
+    elif colname == 'DELETEME':
+        return 'DELETEME'
     else:
         error("Don't know how to make 4th column out of %s" % colname)
 
