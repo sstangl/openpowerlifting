@@ -123,6 +123,8 @@ def fixcolnames(columns):
             columns[i] = 'McCulloch'
         elif low == 'lbs':
             columns[i] = 'DELETEME'
+        elif low == 'college':
+            columns[i] = 'College'
         else:
             error("Unknown column %s" % name)
 
