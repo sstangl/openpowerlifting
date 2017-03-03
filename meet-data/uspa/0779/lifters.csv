@@ -1,4 +1,4 @@
-Place,Name,College,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Division,Equipment,Event,Squat4Kg,Deadlift4Kg
+Place,Name,School,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Division,Equipment,Event,Squat4Kg,Deadlift4Kg
 1,Sophia Duong,UCI,CA,48,46.5,21,80,42.5,98,220.5,F,Open,Raw,SBD,82.5,102.5
 1,Kieu Nguyen,CSUF,CA,52,51.2,22,82.5,45,140,267.5,F,Open,Raw,SBD,,
 2,Isabelle Nguyen,UCI,CA,52,51.2,18,85,42.5,107.5,235,F,Open,Raw,SBD,,
@@ -32,7 +32,7 @@ Place,Name,College,State,WeightClassKg,BodyweightKg,Age,BestSquatKg,BestBenchKg,
 6,Kevin Zhang,UCI,CA,75,73.2,20,162.5,120,187.5,470,M,Open,Raw,SBD,,
 7,Adrian Mercado,UCI,CA,75,70.9,20,135,75,142.5,352.5,M,Open,Raw,SBD,,
 8,Aiden Leonard,UCI,CA,75,74,19,127.5,80,145,352.5,M,Open,Raw,SBD,,
-DQ,David Borjon,UCI,CA,75,72.6,19,142.5,117.5,-167.5,0,M,Open,Raw,SBD,,
+DQ,David Borjon,UCI,CA,75,72.6,19,142.5,117.5,-167.5,,M,Open,Raw,SBD,,
 1,Phat Diep,UCI,CA,82.5,81.6,22,200,132.5,212.5,545,M,Open,Raw,SBD,,
 2,Roger Tsang,USC,CA,82.5,80,21,180,120,230,530,M,Open,Raw,SBD,,
 1,Justin Holcomb,UCSB,CA,90,86.6,19,200,155,237.5,592.5,M,Open,Raw,SBD,205,

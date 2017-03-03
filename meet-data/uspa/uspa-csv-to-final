@@ -314,7 +314,7 @@ def parse(csv):
                     # This happens when the USPA forgets how to spell things.
                     # For example, "Mulitply". Comment out on a per-import basis.
                     assert equipmentstate
-                    error('Unknown equipment: %s' % ' '.join(row).strip())
+                    #error('Unknown equipment: %s' % ' '.join(row).strip())
 
     return rval
 
