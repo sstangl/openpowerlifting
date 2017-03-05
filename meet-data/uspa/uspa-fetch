@@ -250,7 +250,7 @@ def writemeetcsv(meet):
 
     with open(filename, 'w') as fd:
         fd.write(headers + '\n')
-        fd.write("%s,%s,%s,%s,%s,%s" % (federation, date, country, state, town, name))
+        fd.write("%s,%s,%s,%s,%s,%s\n" % (federation, date, country, state, town, name))
 
 
 def main():
