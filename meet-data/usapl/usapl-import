@@ -176,7 +176,7 @@ def makelifterscsv(soup):
             else:
                 (state_division, state_equipment) = parsedivision(s)
 
-        elif k == 18:
+        elif k == 19:
             # This is a results row.
             assert state_event != None
             assert state_division != None
@@ -202,6 +202,7 @@ def makelifterscsv(soup):
             deadlift3kg = cells[15].text.strip()
             totalkg = cells[16].text.strip()
             #wilks = cells[17].text.strip() # Not used. Always recalculated.
+            #drugtested = cells[18].text.strip() # Not used.
 
             row = ['' for x in csv.fieldnames]
             row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
