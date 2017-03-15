@@ -172,7 +172,7 @@ def standardize_fieldnames(csv):
             x = 'BodyweightKg'
         elif s == 'bestsquatkg':
             x = 'BestSquatKg'
-        elif s == 'bestbenchkg':
+        elif s == 'bestbenchkg' or s == 'best bench':
             x = 'BestBenchKg'
         elif s == 'bestdeadliftkg':
             x = 'BestDeadliftKg'
