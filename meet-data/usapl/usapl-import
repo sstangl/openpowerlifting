@@ -95,7 +95,7 @@ states = {
 
 # Returns a (division, equipment) tuple of strings.
 def parsedivision(div):
-    if 'Raw' in div or div.startswith('R-'):
+    if 'Raw' in div or div.startswith('R-') or 'MR-' in div or 'FR-' in div:
         eq = 'Raw'
     else:
         eq = 'Single-ply'
