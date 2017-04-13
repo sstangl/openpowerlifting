@@ -173,7 +173,10 @@ def downloadpdf(meet):
 
     filename = FETCHDIR + os.sep + meet.num + '.pdf'
     try:
-        with urllib.request.urlopen(pdfurl) as r, open(filename, 'wb') as fd:
+        # The USPA site now requires User-Agent to be set.
+        useragent = 'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0'
+        request = urllib.request.Request(pdfurl, headers={'User-Agent': useragent})
+        with urllib.request.urlopen(request) as r, open(filename, 'wb') as fd:
             shutil.copyfileobj(r, fd)
     except urllib.error.HTTPError:
         print("Couldn't download PDF (HTTP error).")
