@@ -84,6 +84,7 @@ states = {
     'Virgin Islands': 'VI',
     'Vermont': 'VT',
     'Washington': 'WA',
+    'Washington DC': 'DC',
     'Wisconsin': 'WI',
     'West Virginia': 'WV',
     'Wyoming': 'WY',
@@ -116,6 +117,8 @@ def parsedivision(div):
     s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
+    s = s.replace('Female-','')
+    s = s.replace('Male-','')
     if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
 
