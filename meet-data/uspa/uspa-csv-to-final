@@ -176,6 +176,9 @@ def parse(csv):
     # Are there any 4th attempts? Then we'll need even more columns.
     add4thcolumns(columns, csv)
 
+    if not 'Event' in columns:
+        columns.append('Event')
+
     # Expand every row of the csv to have the right number of columns.
     ncols = len(columns)
     for row in csv:
@@ -189,6 +192,7 @@ def parse(csv):
     sexstate = None
     equipmentstate = None
     lifterstate = None
+    eventstate = None
 
     # Alright, we have all the columns we'll need set up!
     # Time to start running the state machine!
@@ -209,6 +213,7 @@ def parse(csv):
             divisioncol = columns.index('Division')
             sexcol = columns.index('Sex')
             equipmentcol = columns.index('Equipment')
+            eventcol = columns.index('Event')
 
             if not row[divisioncol]:
                 assert divisionstate
@@ -219,6 +224,9 @@ def parse(csv):
             if not row[equipmentcol]:
                 assert equipmentstate
                 row[equipmentcol] = equipmentstate
+            if not row[eventcol]:
+                assert eventstate
+                row[eventcol] = eventstate
 
             rval.append(row)
 
@@ -239,6 +247,20 @@ def parse(csv):
                 equipmentstate = 'Wraps'
             elif ' raw' in searcher:
                 equipmentstate = 'Raw'
+            elif ' single' in searcher:
+                equipmentstate = 'Single-ply'
+            elif ' multi' in searcher:
+                equipmentstate = 'Multi-ply'
+
+            # Event information is included... sometimes.
+            if 'powerlifting' in searcher:
+                eventstate = 'SBD'
+            elif 'bench' in searcher:
+                eventstate = 'B'
+            elif 'deadlift' in searcher:
+                eventstate = 'D'
+            elif ('push' in searcher and 'pull' in searcher) or 'ironman' in searcher:
+                eventstate = 'BD'
 
             # This is a row that specifies 4th attempts for the last lifter.
             if '4th' in searcher:
