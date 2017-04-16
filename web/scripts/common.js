@@ -15,12 +15,15 @@ return {
         var i = url.indexOf('?');
         var args = url.slice(i+1);
 
+        // Facebook mangles URLs, replacing ' ' with '+'.
+        var pluses = new RegExp('\\+', 'g');
+
         var obj = {};
         var split = args.split('&');
         for (var j = 0; j < split.length; ++j) {
             var arg = split[j];
             if (arg.indexOf('=') >= 0) {
-                var v = decodeURIComponent(arg).split('=');
+                var v = decodeURIComponent(arg).replace(pluses, ' ').split('=');
                 obj[v[0]] = v[1];
             }
         }
