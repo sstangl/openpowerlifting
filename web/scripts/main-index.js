@@ -15,6 +15,7 @@ var boxWomen = document.getElementById("women");
 var selWeightType = document.getElementById("weighttype");
 var selClass = document.getElementById("weightclass");
 var selFed = document.getElementById("fedselect");
+var selYear = document.getElementById("yearselect");
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
 
@@ -58,6 +59,9 @@ function getIndices() {
     var bw_min = +range[0]; // Exclusive.
     var bw_max = +range[1]; // Inclusive.
 
+    var selectonyear = (selYear.value !== "all");
+    var year = selYear.value;
+
     function filter(row) {
         if (!men && !women)
             return false;
@@ -72,11 +76,21 @@ function getIndices() {
                 return false;
         }
 
-        if (selectonfed) {
+        if (selectonfed || selectonyear) {
             var meetrow = meetdb.data[row[opldb.MEETID]];
-            var fed = meetrow[meetdb.FEDERATION];
-            if (feds.indexOf(fed) < 0) {
-                return false;
+
+            if (selectonfed) {
+                var fed = meetrow[meetdb.FEDERATION];
+                if (feds.indexOf(fed) < 0) {
+                    return false;
+                }
+            }
+
+            if (selectonyear) {
+                var date = meetrow[meetdb.DATE];
+                if (date.indexOf(year) < 0) {
+                    return false;
+                }
             }
         }
 
@@ -209,6 +223,7 @@ function addEventListeners() {
     addSelectorListeners(selWeightType);
     addSelectorListeners(selClass);
     addSelectorListeners(selFed);
+    addSelectorListeners(selYear);
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
