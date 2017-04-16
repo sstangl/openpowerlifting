@@ -142,7 +142,7 @@ def check(scriptname, filename):
         if i == 5:
             found_illegal_char = False
             for c in text:
-                if not c.isalnum() and not c in ' +-.\'/&':
+                if not c.isalnum() and not c in ' -.\'/&':
                     found_illegal_char = True
                     break
 
