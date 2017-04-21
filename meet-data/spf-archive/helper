@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo " Needs number argument."
+    exit 1
+fi
+
+FILENAME="todo/results-${1}.csv"
+
+if [ ! -f "${FILENAME}" ]; then
+    echo " File '${FILENAME}' not found."
+    exit 1
+fi
+
+mkdir "${1}"
+git mv "${FILENAME}" "${1}/results.csv"
+cp "${1}/results.csv" "${1}/lifters.csv"
+cp "../meet.template" "${1}/meet.csv"
