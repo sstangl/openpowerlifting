@@ -95,6 +95,9 @@ def check_column_name(s, row, csv):
         if p[0] == "'" and p[-1] == "'":
             perror("Nicknames should be removed: \"%s\"" % s)
 
+    if s[-4:] == ' Iii' or s[-3:] == ' Ii':
+        pwarning("Fix name casing: \"%s\"" % s)
+
     # Common name errors.
     if s == 'Charlie Galasso':
         pwarning('Charlie Galasso should be renamed to Charles.')
