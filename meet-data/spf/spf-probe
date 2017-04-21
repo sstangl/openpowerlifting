@@ -46,6 +46,12 @@ def getmeetlist(html):
     urls = []
     for e in events:
         for a in e.find_all('a'):
+            # SPF seems to always post result links in text like
+            # "View all results from North Alabama Classic".
+            # Gating on this cuts down false-positives.
+            if not 'result' in a.text.lower():
+                continue
+
             url = a['href']
             if not url in urls: # Sometimes the entries show up twice.
                 urls.append(url)

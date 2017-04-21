@@ -37,6 +37,7 @@ probe-quick:
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
 	${DATADIR}/sct/sct-probe || true
+	${DATADIR}/spf/spf-probe || true
 	${DATADIR}/usapl/usapl-probe || true
 	${DATADIR}/uspa/uspa-probe || true
 	${DATADIR}/xpc/xpc-probe || true
