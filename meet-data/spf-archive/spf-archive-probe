@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# All of the SPF archive meets are in the spf-archive/todo directory.
+# This script prints the number of results files remaining.
+
+
+import os
+
+ARCHIVEDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def color(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+
+def main():
+    tododir = ARCHIVEDIR + os.sep + 'todo'
+    n = len(os.listdir(tododir))
+    print(color('[SPF-Archive] ') + '%u meets remaining.' % n)
+
+if __name__ == '__main__':
+    main()
