@@ -31,6 +31,17 @@ check:
 	scripts/check-lifters-csv
 	scripts/check-meet-csv
 
+# List of probes for federations that should be fully up-to-date.
+probe-quick:
+	${DATADIR}/pa/pa-probe || true
+	${DATADIR}/rps/rps-probe || true
+	${DATADIR}/rupc/rupc-probe || true
+	${DATADIR}/sct/sct-probe || true
+	${DATADIR}/usapl/usapl-probe || true
+	${DATADIR}/uspa/uspa-probe || true
+	${DATADIR}/xpc/xpc-probe || true
+
+# List of all probes.
 probe:
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/cpf/cpf-probe || true
