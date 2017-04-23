@@ -35,6 +35,7 @@ check:
 # or at least are quick to read and not filled with noise.
 # Data showing up here should be immediately actionable.
 probe-quick:
+	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
@@ -48,7 +49,7 @@ probe-quick:
 # List of all probes.
 probe:
 	${DATADIR}/apf/apf-probe || true
-	${DATADIR}/cpf/cpf-probe || true
+	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/epf/epf-probe || true
 	${DATADIR}/fesupo/fesupo-probe || true
 	${DATADIR}/fpo/fpo-probe || true
