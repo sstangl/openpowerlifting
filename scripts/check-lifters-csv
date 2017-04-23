@@ -317,6 +317,9 @@ def check_headers(csv):
     if not 'Equipment' in csv.fieldnames:
         perror('There must be an Equipment column.')
 
+    if not 'Place' in csv.fieldnames:
+        pwarning("Missing a Place column.")
+
     if 'Wilks' in csv.fieldnames and not 'TotalKg' in csv.fieldnames:
         perror('Wilks requires a TotalKg column.')
     if 'Wilks' in csv.fieldnames and not 'BodyweightKg' in csv.fieldnames:
