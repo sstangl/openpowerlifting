@@ -169,24 +169,45 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Sex'
         elif col == 'BWT' or col == 'BW':
             csv.fieldnames[i] = 'BodyweightKg'
-        elif col == 'SQ 1' or col == 'SQ-1' or col == 'SQ1':
+        elif col == 'SQ 1' or col == 'SQ-1' or col == 'SQ1' or col == 'Squat1Kg':
             csv.fieldnames[i] = 'Squat1Kg'
-        elif col == 'SQ 2' or col == 'SQ-2' or col == 'SQ2':
+        elif col == 'SQ 2' or col == 'SQ-2' or col == 'SQ2' or col == 'Squat2Kg':
             csv.fieldnames[i] = 'Squat2Kg'
-        elif col == 'SQ 3' or col == 'SQ-3' or col == 'SQ3':
+        elif col == 'SQ 3' or col == 'SQ-3' or col == 'SQ3' or col == 'Squat3Kg':
             csv.fieldnames[i] = 'Squat3Kg'
-        elif col == 'BP 1' or col == 'BP-1' or col == 'BP1':
+        elif col == 'SQUAT':
+            if not csv.fieldnames[i+1] and not csv.fieldnames[i+2]:
+                csv.fieldnames[i]   = 'Squat1Kg'
+                csv.fieldnames[i+1] = 'Squat2Kg'
+                csv.fieldnames[i+2] = 'Squat3Kg'
+            else:
+                error("Old-style Squat parsing error.")
+        elif col == 'BP 1' or col == 'BP-1' or col == 'BP1' or col == 'Bench1Kg':
             csv.fieldnames[i] = 'Bench1Kg'
-        elif col == 'BP 2' or col == 'BP-2' or col == 'BP2':
+        elif col == 'BP 2' or col == 'BP-2' or col == 'BP2' or col == 'Bench2Kg':
             csv.fieldnames[i] = 'Bench2Kg'
-        elif col == 'BP 3' or col == 'BP-3' or col == 'BP3':
+        elif col == 'BP 3' or col == 'BP-3' or col == 'BP3' or col == 'Bench3Kg':
             csv.fieldnames[i] = 'Bench3Kg'
-        elif col == 'DL 1' or col == 'DL-1' or col == 'DL1':
+        elif col == 'BENCH PRESS':
+            if not csv.fieldnames[i+1] and not csv.fieldnames[i+2]:
+                csv.fieldnames[i]   = 'Bench1Kg'
+                csv.fieldnames[i+1] = 'Bench2Kg'
+                csv.fieldnames[i+2] = 'Bench3Kg'
+            else:
+                error("Old-style Bench parsing error.")
+        elif col == 'DL 1' or col == 'DL-1' or col == 'DL1' or col == 'Deadlift1Kg':
             csv.fieldnames[i] = 'Deadlift1Kg'
-        elif col == 'DL 2' or col == 'DL-2' or col == 'DL2':
+        elif col == 'DL 2' or col == 'DL-2' or col == 'DL2' or col == 'Deadlift2Kg':
             csv.fieldnames[i] = 'Deadlift2Kg'
-        elif col == 'DL 3' or col == 'DL-3' or col == 'DL3':
+        elif col == 'DL 3' or col == 'DL-3' or col == 'DL3' or col == 'Deadlift3Kg':
             csv.fieldnames[i] = 'Deadlift3Kg'
+        elif col == 'DEADLIFT':
+            if not csv.fieldnames[i+1] and not csv.fieldnames[i+2]:
+                csv.fieldnames[i]   = 'Deadlift1Kg'
+                csv.fieldnames[i+1] = 'Deadlift2Kg'
+                csv.fieldnames[i+2] = 'Deadlift3Kg'
+            else:
+                error("Old-style Deadlift parsing error.")
         elif col == 'TOTAL' or col == 'Total' or col == 'TOT' or col == 'PL Total':
             csv.fieldnames[i] = 'TotalKg'
         elif col.lower() == 'wilks' or col == 'Wilks Total':
@@ -197,10 +218,12 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'WeightClassKg'
         elif col == 'CAT':
             csv.fieldnames[i] = 'Division'
-        elif col.lower() == 'place' or col == 'PLACING':
+        elif col.lower() == 'place' or col == 'PLACING' or col == 'PL':
             csv.fieldnames[i] = 'Place'
         elif col == 'TEAM':
             csv.fieldnames[i] = 'Team'
+        elif col == 'SUB':
+            csv.fieldnames[i] = 'SubTotalDELETE'
         else:
             error("Unknown column: \"%s\"" % col)
 
