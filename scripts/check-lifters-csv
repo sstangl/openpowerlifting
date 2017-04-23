@@ -357,17 +357,17 @@ def check_row_event_consistency(row, csv):
         if 'S' not in event:
             for i, header in enumerate(csv.fieldnames):
                 if 'Squat' in header and row[i]:
-                    perror("Squat entered for non-squat Event.")
+                    perror("Squat entered for non-squat Event. Row: %s" % row)
 
         if 'B' not in event:
             for i, header in enumerate(csv.fieldnames):
                 if 'Bench' in header and row[i]:
-                    perror("Bench entered for non-bench Event.")
+                    perror("Bench entered for non-bench Event. Row: %s" % row)
 
         if 'D' not in event:
             for i, header in enumerate(csv.fieldnames):
                 if 'Deadlift' in header and row[i]:
-                    perror("Deadlift entered for non-deadlift Event.")
+                    perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
 
 
 # Women shouldn't accidentally be given male SHW classes.

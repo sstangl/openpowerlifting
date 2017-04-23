@@ -47,6 +47,7 @@
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
+    <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (Incomplete)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
   </optgroup>
   <optgroup label="Finland">
