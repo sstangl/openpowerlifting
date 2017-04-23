@@ -50,6 +50,7 @@ probe-quick:
 probe:
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
+	${DATADIR}/cpf/cpf-probe || true
 	${DATADIR}/epf/epf-probe || true
 	${DATADIR}/fesupo/fesupo-probe || true
 	${DATADIR}/fpo/fpo-probe || true
