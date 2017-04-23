@@ -39,6 +39,17 @@ def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     for row in newmeet.rows:
         row[idx] = meetid
 
+    # Derive the path (e.g., "uspa/0039").
+    # Input looks like "meet-path/uspa/0039/meet.csv".
+    assert not "MeetPath" in newmeet.fieldnames
+    path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)]
+    assert not ',' in path
+
+    newmeet.append_column("MeetPath")
+    idx = newmeet.fieldnames.index("MeetPath")
+    for row in newmeet.rows:
+        row[idx] = path
+
     lifterscsv.cat(newlifters)
     meetscsv.cat(newmeet)
 
@@ -49,6 +60,7 @@ def main(builddir, meetdir):
 
     lifterscsv.append_column('MeetID')
     meetscsv.append_column('MeetID')
+    meetscsv.append_column('MeetPath')
 
     for dirname, subdirs, files in os.walk(meetdir):
         if 'lifters.csv' in files:

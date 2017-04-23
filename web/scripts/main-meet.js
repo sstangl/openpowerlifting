@@ -3,6 +3,7 @@
 
 var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
+var editString = document.getElementById('editurl');
 
 // TODO: Actually have a toggle for this.
 var usingLbs = true;
@@ -139,7 +140,18 @@ function onload() {
     var indices = db_make_indices_list();
     indices = db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
 
-    meetString.innerHTML = query.f + " &nbsp;/ &nbsp;" + query.d + " &nbsp;/ &nbsp;" + query.n;
+    var meetrow = meetdb.data[meetid];
+    var meetfed = meetrow[meetdb.FEDERATION];
+    var meetdate = meetrow[meetdb.DATE];
+    var meetname = meetrow[meetdb.MEETNAME];
+    var meetpath = meetrow[meetdb.MEETPATH];
+    var editurl = "https://github.com/sstangl/openpowerlifting/tree/master/meet-data/" + meetpath;
+
+    meetString.innerHTML = meetfed
+                           + " &nbsp;/ &nbsp;" + meetdate
+                           + " &nbsp;/ &nbsp;" + meetname;
+
+    editString.innerHTML = '<a href="' + editurl + '">Edit Meet</a>';
 
     indices = db_sort_numeric_maxfirst(indices, opldb.WILKS);
     contentDiv.appendChild(buildtable(indices));
