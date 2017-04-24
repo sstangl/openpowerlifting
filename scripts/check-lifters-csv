@@ -23,6 +23,7 @@ def enyellow(s):
 
 globalFilename = ''
 havePrintedFilename = False
+hitError = False  # Determines return value at end.
 
 def reset_filename_state(filename):
     global globalFilename
@@ -38,6 +39,8 @@ def print_filename_once():
         havePrintedFilename = True
 
 def perror(s):
+    global hitError
+    hitError = True
     print_filename_once()
     print(' ' + redden(s), file=sys.stderr)
 
@@ -593,3 +596,6 @@ if __name__ == '__main__':
 
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')
+
+    if hitError:
+        sys.exit(1)
