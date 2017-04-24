@@ -1,5 +1,7 @@
 # The OpenPowerlifting Project
 
+[![Travis](https://img.shields.io/travis/sstangl/openpowerlifting.svg)](https://travis-ci.org/sstangl/openpowerlifting)
+
 A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.<br/>
 Presentation of this data is available at [OpenPowerlifting.org](http://www.openpowerlifting.org).
 
