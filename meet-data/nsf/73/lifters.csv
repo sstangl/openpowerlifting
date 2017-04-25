@@ -1,34 +1,34 @@
-Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,BestDeadliftKg,Division,Sex,Event
-DQ,67.5,Janna Isabell Braathen,Single-ply,Sundbyfoss SK,66.60,100,Teen 14-18,F,D
-DQ,60,Connie Marie Antonsen,Single-ply,Sundbyfoss SK,56.40,95,Open,F,D
-DQ,60,Mariann Martinsson,Single-ply,Brumunddal AK,59.80,102.5,Open,F,D
-DQ,75,Anita Sæbø,Single-ply,Brumunddal AK,67.90,145,Open,F,D
-DQ,75,Ragnhild Engeland,Single-ply,Brumunddal AK,73.90,160,Open,F,D
-DQ,75,Marius Nagel,Single-ply,Sundbyfoss SK,71.40,117.5,Teen 14-18,M,D
-DQ,67.5,David Andreas Haavik,Single-ply,Sundbyfoss SK,67.20,145,Teen 14-18,M,D
-DQ,75,Jon Rollef Omdal,Single-ply,Ulefoss AK,71.50,180,Teen 14-18,M,D
-DQ,100,Karl Fritz Jenssen,Single-ply,Ulefoss AK,92.70,215,Teen 14-18,M,D
-DQ,125,Bjørn Vidar Ramsberg,Single-ply,Brumunddal AK,121.60,220,Teen 14-18,M,D
-DQ,75,Rune Kollane,Single-ply,Sundbyfoss SK,73.50,140,Junior 19-23,M,D
-DQ,82.5,Arild Bokneberg,Single-ply,Karmøy SK,81.90,250,Junior 19-23,M,D
-DQ,75,Aslak Febakke,Single-ply,Ulefoss AK,71.30,215,Open,M,D
-DQ,82.5,Geir Antonsen,Single-ply,Sundbyfoss SK,76.70,192.5,Open,M,D
-DQ,82.5,Didrik Brovold,Single-ply,Brumunddal AK,76.70,235,Open,M,D
-DQ,90,Jens Petter Kjos,Single-ply,SPUVI,84.50,240,Open,M,D
-DQ,90,Richard Knutsen,Single-ply,Ulefoss AK,87.90,220,Open,M,D
-DQ,90,Tor Erik Rødsdalen,Single-ply,Brumunddal AK,88.40,255,Open,M,D
-DQ,100,Bjørn T.Newman Pay,Single-ply,SPUVI,94.00,280,Open,M,D
-DQ,100,Olav Sverre Kompelien,Single-ply,Brumunddal AK,96.30,280,Open,M,D
-DQ,100,Ulf Johansen,Single-ply,Askim SK,99.90,260,Open,M,D
-DQ,110,Frode Rui,Single-ply,Ulefoss AK,100.90,295,Open,M,D
-DQ,110,Bent Porslid,Single-ply,Kristiansand AK,103.40,270,Open,M,D
-DQ,110,Roald Kollåsen,Single-ply,Kristiansand AK,103.90,270,Open,M,D
-DQ,125,Vidar Helgesen,Single-ply,Brumunddal AK,118.40,290,Open,M,D
-DQ,125,Ronny Morterud,Single-ply,Brumunddal AK,119.10,330,Open,M,D
-DQ,125,Glenn Viktor Evensen,Single-ply,SPUVI,120.50,295,Open,M,D
-DQ,125,Roar Kollane,Single-ply,Sundbyfoss SK,123.10,115,Open,M,D
-DQ,125+,Stein Bjørnsen,Single-ply,Sande KK,138.50,280,Open,M,D
-DQ,75,Magnar Midtbø,Single-ply,Sundbyfoss SK,68.30,185,Master 40-49,M,D
-DQ,110,Jan Leif Lande,Single-ply,Kristiansand AK,102.60,250,Master 40-49,M,D
-DQ,82.5,Ketil Hodne,Single-ply,Brumunddal AK,82.10,200,Master 50-59,M,D
-DQ,125,Truls Kristensen,Single-ply,Fredrikstad SK,110.80,260,Master 50-59,M,D
+WeightClassKg,Name,Equipment,Team,BodyweightKg,BestDeadliftKg,TotalKg,Division,Sex,Event,Place
+67.5,Janna Isabell Braathen,Single-ply,Sundbyfoss SK,66.6,100,100,Teen 14-18,F,D,1
+60,Connie Marie Antonsen,Single-ply,Sundbyfoss SK,56.4,95,95,Open,F,D,2
+60,Mariann Martinsson,Single-ply,Brumunddal AK,59.8,102.5,102.5,Open,F,D,1
+75,Anita Sæbø,Single-ply,Brumunddal AK,67.9,145,145,Open,F,D,2
+75,Ragnhild Engeland,Single-ply,Brumunddal AK,73.9,160,160,Open,F,D,1
+75,Marius Nagel,Single-ply,Sundbyfoss SK,71.4,117.5,117.5,Teen 14-18,M,D,2
+67.5,David Andreas Haavik,Single-ply,Sundbyfoss SK,67.2,145,145,Teen 14-18,M,D,1
+75,Jon Rollef Omdal,Single-ply,Ulefoss AK,71.5,180,180,Teen 14-18,M,D,1
+100,Karl Fritz Jenssen,Single-ply,Ulefoss AK,92.7,215,215,Teen 14-18,M,D,1
+125,Bjørn Vidar Ramsberg,Single-ply,Brumunddal AK,121.6,220,220,Teen 14-18,M,D,1
+75,Rune Kollane,Single-ply,Sundbyfoss SK,73.5,140,140,Junior 19-23,M,D,1
+82.5,Arild Bokneberg,Single-ply,Karmøy SK,81.9,250,250,Junior 19-23,M,D,1
+75,Aslak Febakke,Single-ply,Ulefoss AK,71.3,215,215,Open,M,D,1
+82.5,Geir Antonsen,Single-ply,Sundbyfoss SK,76.7,192.5,192.5,Open,M,D,2
+82.5,Didrik Brovold,Single-ply,Brumunddal AK,76.7,235,235,Open,M,D,1
+90,Jens Petter Kjos,Single-ply,SPUVI,84.5,240,240,Open,M,D,2
+90,Richard Knutsen,Single-ply,Ulefoss AK,87.9,220,220,Open,M,D,3
+90,Tor Erik Rødsdalen,Single-ply,Brumunddal AK,88.4,255,255,Open,M,D,1
+100,Bjørn T.Newman Pay,Single-ply,SPUVI,94,280,280,Open,M,D,1
+100,Olav Sverre Kompelien,Single-ply,Brumunddal AK,96.3,280,280,Open,M,D,2
+100,Ulf Johansen,Single-ply,Askim SK,99.9,260,260,Open,M,D,3
+110,Frode Rui,Single-ply,Ulefoss AK,100.9,295,295,Open,M,D,1
+110,Bent Porslid,Single-ply,Kristiansand AK,103.4,270,270,Open,M,D,2
+110,Roald Kollåsen,Single-ply,Kristiansand AK,103.9,270,270,Open,M,D,3
+125,Vidar Helgesen,Single-ply,Brumunddal AK,118.4,290,290,Open,M,D,3
+125,Ronny Morterud,Single-ply,Brumunddal AK,119.1,330,330,Open,M,D,1
+125,Glenn Viktor Evensen,Single-ply,SPUVI,120.5,295,295,Open,M,D,2
+125,Roar Kollane,Single-ply,Sundbyfoss SK,123.1,115,115,Open,M,D,4
+125+,Stein Bjørnsen,Single-ply,Sande KK,138.5,280,280,Open,M,D,1
+75,Magnar Midtbø,Single-ply,Sundbyfoss SK,68.3,185,185,Master 40-49,M,D,1
+110,Jan Leif Lande,Single-ply,Kristiansand AK,102.6,250,250,Master 40-49,M,D,1
+82.5,Ketil Hodne,Single-ply,Brumunddal AK,82.1,200,200,Master 50-59,M,D,1
+125,Truls Kristensen,Single-ply,Fredrikstad SK,110.8,260,260,Master 50-59,M,D,1

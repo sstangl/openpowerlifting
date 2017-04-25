@@ -1,29 +1,29 @@
-Name,Place,Sex,Event,Division,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,Equipment
-Carin Fujisaki,DQ,F,B,M1 Women,48,-70,-70,-70,,,,,,Single-ply
-Chris Brigham,1,F,B,M3 Women,52,50,57.5,-62.5,57.5,,,,,Single-ply
-Theresa Merenkov,1,F,B,M2 Women,90+,-50,-57.5,57.5,57.5,,,,,Single-ply
-Susan O'Neill,1,F,B,M4 Women,90+,35,40,-42.5,40,,,,,Single-ply
-Carin Fujisaki,DQ,F,B,Open Women,48,-70,-70,-70,,,,,,Single-ply
-Ashley Merenkov,1,F,B,Open Women,52,-25,-25,25,25,,,,,Single-ply
-Kendal Buffington,1,F,B,Open Women,56,47.5,-55,55,55,,,,,Single-ply
-Mitchell Koufos,1,M,B,T1 Men,82.5,60,67.5,-72.4,67.5,,,,,Single-ply
-Adam Contreras,1,M,B,T2 Men,90,95,100,105,105,,,,,Single-ply
-Mike Ramos,1,M,B,T2 Men,110,110,125,-137.55,125,,,,,Single-ply
-Eric Johnson,1,M,B,T3 Men,125,170,-180,187.5,187.5,,,,,Single-ply
-Rick White,1,M,B,Junior Men,110,145,165,182.5,182.5,,,,,Single-ply
-Robert Fornachon,1,M,B,M8 Men,75,77.5,85,-92.5,85,,,,,Single-ply
-Todd Robinson,1,M,B,M2 Men,82.5,102.5,110,122.5,122.5,,,,,Single-ply
-Ferrel Gray,2,M,B,M2 Men,82.5,110,120,122.5,122.5,,,,,Single-ply
-Shane O'Neill,1,M,B,M5 Men,90,125,130,-135,130,,,,,Single-ply
-Donald Davis,DQ,M,B,M1 Men,100,-150,-160,-160,,,,,,Single-ply
-Ruben Arredondo,1,M,B,M5 Men,100,160,167.5,-175,167.5,,,,,Single-ply
-Mike Bonifield,1,M,B,M5 Men,110,127.5,-137.5,-137.5,127.5,,,,,Single-ply
-Leo Contreras,DQ,M,B,M3 Men,140,-175,-175,-175,,,,,,Single-ply
-Todd Robinson,1,M,D,Open Men,82.5,,,,,102.5,110,122.5,122.5,Single-ply
-Will Satterthwaite,1,M,D,Open Men,100,,,,,145,-160,-160,145,Single-ply
-Marlan Bacon,1,M,D,Open Men,110,,,,,175,182.5,-187.5,182.5,Single-ply
-Justin Tyler,2,M,D,Open Men,110,,,,,145,160,-167.5,160,Single-ply
-Dave Freeland,1,M,D,Open Men,125,,,,,230,-240,-247.5,230,Single-ply
-Ryan Hebeler,2,M,D,Open Men,125,,,,,172.5,-187.5,-187.5,172.5,Single-ply
-Riccardo Magni,DQ,M,D,Open Men,125,,,,,-215,-215,-215,,Single-ply
-Leo Contreras,DQ,M,D,Open Men,140,,,,,-175,-175,-175,,Single-ply
+Name,Place,Sex,Event,Division,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Equipment
+Carin Fujisaki,DQ,F,B,M1,48,-70,-70,-70,,,,,,,Single-ply
+Chris Brigham,1,F,B,M3,52,50,57.5,-62.5,57.5,,,,,57.5,Single-ply
+Theresa Merenkov,1,F,B,M2,90+,-50,-57.5,57.5,57.5,,,,,57.5,Single-ply
+Susan O'Neill,1,F,B,M4,90+,35,40,-42.5,40,,,,,40,Single-ply
+Carin Fujisaki,DQ,F,B,Open,48,-70,-70,-70,,,,,,,Single-ply
+Ashley Merenkov,1,F,B,Open,52,-25,-25,25,25,,,,,25,Single-ply
+Kendal Buffington,1,F,B,Open,56,47.5,-55,55,55,,,,,55,Single-ply
+Mitchell Koufos,1,M,B,T1,82.5,60,67.5,-72.4,67.5,,,,,67.5,Single-ply
+Adam Contreras,1,M,B,T2,90,95,100,105,105,,,,,105,Single-ply
+Mike Ramos,1,M,B,T2,110,110,125,-137.55,125,,,,,125,Single-ply
+Eric Johnson,1,M,B,T3,125,170,-180,187.5,187.5,,,,,187.5,Single-ply
+Rick White,1,M,B,Junior,110,145,165,182.5,182.5,,,,,182.5,Single-ply
+Robert Fornachon,1,M,B,M8,75,77.5,85,-92.5,85,,,,,85,Single-ply
+Todd Robinson,1,M,B,M2,82.5,102.5,110,122.5,122.5,,,,,122.5,Single-ply
+Ferrel Gray,2,M,B,M2,82.5,110,120,122.5,122.5,,,,,122.5,Single-ply
+Shane O'Neill,1,M,B,M5,90,125,130,-135,130,,,,,130,Single-ply
+Donald Davis,DQ,M,B,M1,100,-150,-160,-160,,,,,,,Single-ply
+Ruben Arredondo,1,M,B,M5,100,160,167.5,-175,167.5,,,,,167.5,Single-ply
+Mike Bonifield,1,M,B,M5,110,127.5,-137.5,-137.5,127.5,,,,,127.5,Single-ply
+Leo Contreras,DQ,M,B,M3,140,-175,-175,-175,,,,,,,Single-ply
+Todd Robinson,1,M,D,Open,82.5,,,,,102.5,110,122.5,122.5,122.5,Single-ply
+Will Satterthwaite,1,M,D,Open,100,,,,,145,-160,-160,145,145,Single-ply
+Marlan Bacon,1,M,D,Open,110,,,,,175,182.5,-187.5,182.5,182.5,Single-ply
+Justin Tyler,2,M,D,Open,110,,,,,145,160,-167.5,160,160,Single-ply
+Dave Freeland,1,M,D,Open,125,,,,,230,-240,-247.5,230,230,Single-ply
+Ryan Hebeler,2,M,D,Open,125,,,,,172.5,-187.5,-187.5,172.5,172.5,Single-ply
+Riccardo Magni,DQ,M,D,Open,125,,,,,-215,-215,-215,,,Single-ply
+Leo Contreras,DQ,M,D,Open,140,,,,,-175,-175,-175,,,Single-ply

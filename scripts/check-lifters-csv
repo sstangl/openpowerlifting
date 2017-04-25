@@ -23,7 +23,8 @@ def enyellow(s):
 
 globalFilename = ''
 havePrintedFilename = False
-hitError = False  # Determines return value at end.
+errorCount = 0
+warningCount = 0
 
 def reset_filename_state(filename):
     global globalFilename
@@ -39,12 +40,14 @@ def print_filename_once():
         havePrintedFilename = True
 
 def perror(s):
-    global hitError
-    hitError = True
+    global errorCount
+    errorCount += 1
     print_filename_once()
     print(' ' + redden(s), file=sys.stderr)
 
 def pwarning(s):
+    global warningCount
+    warningCount += 1
     print_filename_once()
     print(' ' + enyellow(s), file=sys.stderr)
 
@@ -323,7 +326,7 @@ def check_headers(csv):
         perror('There must be an Equipment column.')
 
     if not 'TotalKg' in csv.fieldnames:
-        pwarning('There must be a TotalKg column.')
+        perror('There must be a TotalKg column.')
 
     if not 'Place' in csv.fieldnames:
         pwarning("Missing a Place column.")
@@ -617,5 +620,7 @@ if __name__ == '__main__':
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')
 
-    if hitError:
+    print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
+
+    if errorCount > 0:
         sys.exit(1)

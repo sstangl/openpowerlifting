@@ -1,4 +1,4 @@
-Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,Division,Sex,Event
-DQ,90,Tollef Taksdal,Single-ply,Oslo SK,90.00,247.5,-255,-255,247.5,Junior 19-23,M,D
-DQ,100,Erlend Myhre,Single-ply,Oslo SK,99.50,215,-225,-225,215.0,Junior 19-23,M,D
-DQ,75,Bjørn Astad,Single-ply,Oslo SK,71.70,190,,,190.0,Open,M,D
+Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Sex,Event
+1,90,Tollef Taksdal,Single-ply,Oslo SK,90,247.5,-255,-255,247.5,247.5,Junior 19-23,M,D
+1,100,Erlend Myhre,Single-ply,Oslo SK,99.5,215,-225,-225,215,215,Junior 19-23,M,D
+1,75,Bjørn Astad,Single-ply,Oslo SK,71.7,190,,,190,190,Open,M,D
