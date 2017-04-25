@@ -386,11 +386,14 @@ def check_row_event_consistency(row, csv):
 
     # If this was a single-lift attempt, and the lifter wasn't disqualified,
     # the TotalKg must be filled in as well.
-    if len(event) == 1 and \
-      (not 'Place' in csv.fieldnames or not 'D' in row[csv.fieldnames.index('Place')]):
-        if not row[csv.fieldnames.index('TotalKg')]:
-            pwarning("Non-DQ'd Single Lift not marked in TotalKg. Row: %s" % row)
+    if len(event) == 1:
+        place = ''
+        if 'Place' in csv.fieldnames:
+            place = row[csv.fieldnames.index('Place')]
 
+        if place != 'DQ' and place != 'DD' and place != 'NS':
+            if not row[csv.fieldnames.index('TotalKg')]:
+                perror("Non-DQ'd Single Lift not marked in TotalKg. Row: %s" % row)
 
 
 # Women shouldn't accidentally be given male SHW classes.
