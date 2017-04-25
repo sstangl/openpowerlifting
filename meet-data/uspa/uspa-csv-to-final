@@ -253,7 +253,7 @@ def parse(csv):
                 equipmentstate = 'Multi-ply'
 
             # Event information is included... sometimes.
-            if 'powerlifting' in searcher:
+            if 'powerl' in searcher: # The full word is easy to misspell.
                 eventstate = 'SBD'
             elif 'bench' in searcher:
                 eventstate = 'B'
