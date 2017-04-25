@@ -182,7 +182,9 @@ def check_column_equipment(s, row, csv):
 
 def check_lift_column(s, row, csv):
     try:
-        float(s)
+        f = float(s)
+        if f == 0.0:
+            perror("Field cannot be zero: %s" % s)
     except ValueError:
         perror("Invalid lift quantity: %s" % s)
 
@@ -320,6 +322,9 @@ def check_headers(csv):
     if not 'Equipment' in csv.fieldnames:
         perror('There must be an Equipment column.')
 
+    if not 'TotalKg' in csv.fieldnames:
+        pwarning('There must be a TotalKg column.')
+
     if not 'Place' in csv.fieldnames:
         pwarning("Missing a Place column.")
 
@@ -357,23 +362,35 @@ def check_row_name_consistency(row, csv):
 
 # Assert that Event makes sense given the specified lifts.
 def check_row_event_consistency(row, csv):
-    if 'Event' in csv.fieldnames:
-        event = row[csv.fieldnames.index('Event')]
+    if not 'Event' in csv.fieldnames:
+        return
+    if not 'TotalKg' in csv.fieldnames:
+        return
 
-        if 'S' not in event:
-            for i, header in enumerate(csv.fieldnames):
-                if 'Squat' in header and row[i]:
-                    perror("Squat entered for non-squat Event. Row: %s" % row)
+    event = row[csv.fieldnames.index('Event')]
 
-        if 'B' not in event:
-            for i, header in enumerate(csv.fieldnames):
-                if 'Bench' in header and row[i]:
-                    perror("Bench entered for non-bench Event. Row: %s" % row)
+    if 'S' not in event:
+        for i, header in enumerate(csv.fieldnames):
+            if 'Squat' in header and row[i]:
+                perror("Squat entered for non-squat Event. Row: %s" % row)
 
-        if 'D' not in event:
-            for i, header in enumerate(csv.fieldnames):
-                if 'Deadlift' in header and row[i]:
-                    perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
+    if 'B' not in event:
+        for i, header in enumerate(csv.fieldnames):
+            if 'Bench' in header and row[i]:
+                perror("Bench entered for non-bench Event. Row: %s" % row)
+
+    if 'D' not in event:
+        for i, header in enumerate(csv.fieldnames):
+            if 'Deadlift' in header and row[i]:
+                perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
+
+    # If this was a single-lift attempt, and the lifter wasn't disqualified,
+    # the TotalKg must be filled in as well.
+    if len(event) == 1 and \
+      (not 'Place' in csv.fieldnames or not 'D' in row[csv.fieldnames.index('Place')]):
+        if not row[csv.fieldnames.index('TotalKg')]:
+            pwarning("Non-DQ'd Single Lift not marked in TotalKg. Row: %s" % row)
+
 
 
 # Women shouldn't accidentally be given male SHW classes.
