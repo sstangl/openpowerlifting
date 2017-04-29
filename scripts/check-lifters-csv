@@ -387,6 +387,10 @@ def check_row_event_consistency(row, csv):
             if 'Deadlift' in header and row[i]:
                 perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
 
+    if 'Equipment' in csv.fieldnames:
+        if not 'S' in event and row[csv.fieldnames.index('Equipment')] == "Wraps":
+            perror("Event category doesn't use wraps. Row: %s" % row)
+
     # If this was a single-lift attempt, and the lifter wasn't disqualified,
     # the TotalKg must be filled in as well.
     if len(event) == 1:
