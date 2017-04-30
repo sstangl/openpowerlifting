@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+#
+# The CPU maintains an online database of all meet results
+# from national competitions and per-state federations.
+#
+# This clones the database locally so that it can be sorted
+# better than the web interface allows for.
+#
+
+from bs4 import BeautifulSoup
+from oplcsv import Csv
+import os
+import re
+import sys
+import urllib.request
+
+
+# Database lookup, sorted by Year (but not sorted within that year).
+# Currently there are 88 pages: select page by appending "&pagenum=#".
+URL = "http://www.powerlifting.ca/cgi-bin/webdata_cpudb.pl?cgifunction=Search&cgisort=18&cgisortorder=1"
+
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+# The pagenum widget on the bottom shows how many pages there are:
+#   1 2 3 4 5 6 10 20 30 40 50 88
+# So look for the URL with the largest &pagenum=# link.
+def get_num_pages(soup):
+    # Python regexps appear to have an implied "^"...
+    regex = re.compile('.*pagenum=(\d+)')
+    maxpage = 1
+
+    for a in soup.find_all('a'):
+        m = regex.match(a['href'])
+        if not m:
+            continue
+
+        page = int(m.group(1))
+        if page > maxpage:
+            maxpage = page
+
+    assert maxpage > 80
+    return maxpage
+
+
+def format_cell(s):
+    return s.strip().replace(',',';').replace('"',"'").replace('  ',' ')
+
+
+def append_rows(csv, soup):
+    # There are multiple tables on the page, but the results table is the first.
+    table = soup.find('table')
+
+    meetnameidx = csv.fieldnames.index('MeetName')
+    nameidx = csv.fieldnames.index('Name')
+
+    for row in table.find_all('tr'):
+        # Make sure the number of columns matches, and skip empty rows.
+        cells = row.find_all('td')
+        numcols = len(cells)
+        if numcols == 0:
+            continue
+        assert numcols == len(csv.fieldnames)
+
+        row = [format_cell(cell.text) for cell in cells]
+        if not row[meetnameidx] or not row[nameidx]:
+            continue
+
+        csv.rows.append(row)
+
+
+MonthLookup = {
+    'Jan': '01',
+    'Feb': '02',
+    'Mar': '03',
+    'Apr': '04',
+    'May': '05',
+    'Jun': '06',
+    'Jul': '07',
+    'Aug': '08',
+    'Sep': '09',
+    'Oct': '10',
+    'Nov': '11',
+    'Dec': '12'
+}
+
+
+# Normally this could be done in a later phase, but we want to sort by date.
+def fix_dates(csv):
+    assert 'Year' in csv.fieldnames
+    assert 'Date' in csv.fieldnames
+    yearidx = csv.fieldnames.index('Year')
+    dateidx = csv.fieldnames.index('Date')
+
+    for row in csv.rows:
+        # In a format like "30-Mar-07".
+        olddate = row[dateidx]
+        d,m,y = olddate.split('-')
+        if len(d) == 1:
+            d = '0' + d
+
+        newdate = "%s-%s-%s" % (row[yearidx], MonthLookup[m], str(d))
+        row[dateidx] = newdate
+
+
+def main():
+    # Website table layout.
+    csv = Csv()
+    csv.append_column('MeetName')
+    csv.append_column('Date')
+    csv.append_column('Location')
+    csv.append_column('3Lift')
+    csv.append_column('Sex')
+    csv.append_column('Name')
+    csv.append_column('State') # The state that the lifter is from, not where the meet is.
+    csv.append_column('BodyweightKg')
+    csv.append_column('WeightClassOldKg')
+    csv.append_column('WeightClassNewKg')
+    csv.append_column('Division')
+    csv.append_column('BestSquatKg')
+    csv.append_column('BestBenchKg')
+    csv.append_column('BestDeadliftKg')
+    csv.append_column('TotalKg')
+    csv.append_column('Wilks')
+    csv.append_column('Year')
+    csv.append_column('Unequipped')
+
+    # Handle the first page specially, to extract num_pages.
+    html = gethtml(URL)
+    soup = BeautifulSoup(html, 'html.parser')
+    num_pages = get_num_pages(soup)
+    append_rows(csv, soup)
+
+    for page in range(2, num_pages+1):
+        print(" Fetching page %s" % str(page))
+        html = gethtml(URL + "&pagenum=%s" % str(page))
+        soup = BeautifulSoup(html, 'html.parser')
+        append_rows(csv, soup)
+
+    """
+    # Reformat the dates to OpenPowerlifting format so that they're sortable.
+    fix_dates(csv)
+
+    dateidx = csv.fieldnames.index('Date')
+    meetnameidx = csv.fieldnames.index('MeetName')
+    def sorter(r):
+        return (r[dateidx], r[meetnameidx])
+
+    csv.rows = sorted(csv.rows, key = lambda x : sorter(x), reverse=True)
+    """
+
+    with open('cpu_database.csv', 'w') as fd:
+        csv.write(fd)
+
+
+if __name__ == "__main__":
+    main()
+

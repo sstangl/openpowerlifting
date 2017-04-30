@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+#
+# Given the output from cpu-standardize-csv, file the meets
+# into their own folders with lifters.csv and meet.csv files.
+#
+
+from oplcsv import Csv
+import os
+import sys
+import zlib
+
+
+CPUDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+# Meets are filed into folders by a unique ID.
+def meethash(csv, row):
+    date = row[csv.fieldnames.index('Date')]
+    assert len(date) == 10
+
+    meetname = row[csv.fieldnames.index('MeetName')]
+    namehash = format(zlib.crc32(bytes(meetname, 'utf-8')), '08x')
+    assert len(namehash) == 8
+
+    return "%s-%s" % (date,namehash)
+
+
+# Add a row to the meets hash object.
+def add_row(meets, csv, row):
+    h = meethash(csv, row)
+    if not h in meets:
+        c = Csv()
+        c.fieldnames = csv.fieldnames[:]
+        c.rows.append(row)
+        meets[h] = c
+    else:
+        meets[h].rows.append(row)
+
+
+def makecsvs(path, csv):
+    # Generate the meet.csv. 
+    meetcsv = Csv()
+    meetcsv.fieldnames = ['Federation','Date','MeetCountry','MeetState','MeetTown','MeetName']
+
+    fed = 'CPU'
+    date = csv.rows[0][csv.fieldnames.index('Date')]
+    country = 'Canada'
+    state = csv.rows[0][csv.fieldnames.index('MeetState')]
+    town = csv.rows[0][csv.fieldnames.index('MeetTown')]
+    name = csv.rows[0][csv.fieldnames.index('MeetName')]
+    meetcsv.rows = [[fed, date, country, state, town, name]]
+
+    with open(path + os.sep + 'meet.csv', 'w') as fd:
+        meetcsv.write(fd)
+    meetcsv = None
+
+    # Generate the lifters.csv.
+    csv.remove_column_by_name('MeetName')
+    csv.remove_column_by_name('Date')
+    csv.remove_column_by_name('MeetState')
+    csv.remove_column_by_name('MeetTown')
+
+    with open(path + os.sep + 'lifters.csv', 'w') as fd:
+        csv.write(fd)
+
+
+def main(filename):
+    csv = Csv(filename)
+
+    # Make sure this is the standardized database.
+    assert 'MeetTown' in csv.fieldnames
+    assert 'WeightClassKg' in csv.fieldnames
+
+    # Group all the meets by meet hash.
+    meets = {}
+    for row in csv.rows:
+        add_row(meets,csv,row)
+
+    # For each meet hash, create a folder if valid.
+    for meethash, meetcsv in meets.items():
+        path = CPUDIR + os.sep + meethash
+        if os.path.exists(path):
+            continue
+
+        os.makedirs(path)
+        makecsvs(path, meetcsv)
+
+
+if __name__ == '__main__':
+    main(sys.argv[1])
