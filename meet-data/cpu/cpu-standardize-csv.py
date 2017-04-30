@@ -291,6 +291,7 @@ def remove_international_meets(csv):
 
 def standardize(csv):
     remove_international_meets(csv)
+    csv.remove_column_by_name('Wilks')
     standardize_date(csv)
     standardize_sex(csv)
     standardize_equipment(csv)
