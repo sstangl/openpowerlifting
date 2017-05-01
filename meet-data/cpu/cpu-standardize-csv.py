@@ -153,7 +153,7 @@ def standardize_weightclass(csv):
                 if row[sexidx] == 'F':
                     row[oldidx] = '90+'
                 else:
-                    row[oldidx] = '140+'
+                    row[oldidx] = '125+'
 
             row[newidx] = row[oldidx]
 
