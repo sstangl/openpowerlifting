@@ -49,7 +49,7 @@
   <optgroup label="Canada">
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (Incomplete)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
-    <option value="CPU">CPL - Canadian Powerlifting Union [IPF]</option>
+    <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
   </optgroup>
   <optgroup label="Finland">
     <option value="FPO">FPO - Finland Powerlifting Organization [GPC] (Incomplete)</option>
