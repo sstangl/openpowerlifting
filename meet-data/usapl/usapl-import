@@ -119,6 +119,7 @@ def parsedivision(div):
     s = s.replace(' ', '')
     s = s.replace('Female-','')
     s = s.replace('Male-','')
+    s = s.replace('GuestLifter','G')
     if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
 
@@ -338,6 +339,15 @@ def infersex(csv):
             row[sexidx] = 'F'
 
 
+def inferequipment(csv):
+    dividx = csv.fieldnames.index("Division")
+    eqpidx = csv.fieldnames.index("Equipment")
+
+    for row in csv.rows:
+        if 'R-' in row[dividx]:
+            row[eqpidx] = 'Raw'
+
+
 # If a lifter has an event of "DRUGTEST", we need to clean up their row.
 # The event type must be inferred from the lifts they received
 # which have all been marked as negative), and their Place must be marked "DD".
@@ -413,6 +423,7 @@ def main(url):
     makebestcolumns(lifterscsv)
     markdqs(lifterscsv)
     infersex(lifterscsv)
+    inferequipment(lifterscsv)
     markdrugtest(lifterscsv)
 
     meetcsv = makemeetcsv(soup)
