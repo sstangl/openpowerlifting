@@ -59,7 +59,7 @@ def main(filename):
 
         # Order the rows by greatest total.
         # If total is the same, order within total by lowest bodyweight.
-        lifters.sort(key=lambda x : (float(x[totalidx]), -float(x[bwidx])), reverse=True)
+        lifters.sort(key=lambda x : (float(x[totalidx] or 0), -float(x[bwidx] or 0)), reverse=True)
 
         for i, row in enumerate(lifters):
             row[placeidx] = str(i+1)
