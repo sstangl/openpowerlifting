@@ -68,7 +68,7 @@ def check_column_name(s, row, csv):
     # so just use that for quotes.
     special_legal_chars = ' \'.-'
 
-    if 'Jr.' in s or 'Sr.' in s:
+    if 'Jr.' in s or 'JR.' in s or 'Sr.' in s or 'SR.' in s:
         perror("Junior/Senior in names must standardize on no period: \"%s\"" % s)
     if 'Esq.' in s:
         perror("Esquire must be standardized on no period: \"%s\"" % s)
