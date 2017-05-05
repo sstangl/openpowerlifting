@@ -1,28 +1,28 @@
-Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg
-M,Wraps,Military Amateur Master 50+,90,Brig Seaver,79.95,105.00,77.50,160.00,,342.50
-M,Wraps,Amateur Master 60-64,90,Kent Smith,87.50,,,,,
-M,Wraps,Amateur Submaster,100,David Polisky,94.40,190.00,112.50,217.50,,520.00
-M,Raw,Military Amateur Open,100,Zachary Phillips,99.90,195.00,147.50,235.00,,577.50
-F,Raw,Military Amateur Open,67.5,Frances Young,66.60,122.50,75.00,145.00,,342.50
-F,Wraps,Amateur Junior 20-23,75,Sierra Nevels,71.70,155.00,92.50,162.50,,410.00
-M,Single-ply,Pro Open,110,Lance Olian,108.20,272.50,237.50,272.50,,782.50
-M,Multi-ply,Amateur Open,110,Jordan Lawler,107.65,305.00,217.50,250.00,,772.50
-M,Single-ply,Pro Open,125,Jeremy Schraw,124.60,365.00,167.50,305.00,,837.50
-F,Raw,Amateur Open,75,Mattie McClintock,72.45,122.50,67.50,130.00,,320.00
-F,Wraps,Amateur Open,90,Texana Holmes,81.00,117.50,62.50,142.50,,322.50
-F,Raw,Amateur Open,67.5,Lacey Hernandez,64.60,105.00,57.50,152.50,,315.00
-F,Wraps,Amateur Open,60,Amanda Bode,58.95,125.00,62.50,127.50,,315.00
-F,Wraps,Amateur Open,60,Rebecca Lough,59.30,105.00,,,,
-F,Wraps,Amateur Open,67.5,Katy Davis,66.66,80.00,45.00,120.00,,245.00
-M,Raw,Amateur Open,100,Chris Tejeda,100.00,267.50,165.00,232.50,,665.00
-M,Raw,Amateur Open,90,Chris Joslyn,89.80,232.50,142.50,257.50,,632.50
-M,Raw,Amateur Open,100,Robert Burns,96.00,192.50,115.00,275.00,,582.50
-M,Wraps,Pro Open,82.5,Cory Rebmann,81.85,217.50,140.00,222.50,,580.00
-M,Wraps,Amateur Open,100,John Nelson,107.60,277.50,185.00,300.00,,762.50
-M,Wraps,Amateur Open,100,Nathan Lunde,99.70,235.00,,,,
-M,Wraps,Amateur Master 45-49,75,Derek Moore,74.50,,118.50,185.00,191.00,303.50
-M,Raw,Military Amateur Open,100,Garsevan Mkrtichian,97.10,,155.00,227.50,,382.50
-F,Multi-ply,Military Amateur Open,100,Krystal Morris,99.15,,60.00,100.00,,160.00
-F,Multi-ply,Amateur Submaster,100,Krystal Morris,99.15,,60.00,100.00,,160.00
-M,Raw,Military Amateur Open,100,Garsevan Mkrtichian,97.10,,,227.50,,227.50
-M,Raw,Amateur Open,100,Robert Burns,96.00,,,275.00,,275.00
+Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,Deadlift4Kg,TotalKg,Event,Place
+M,Wraps,Military Amateur Master 50+,90,Brig Seaver,79.95,105,77.5,160,,342.5,SBD,1
+M,Wraps,Amateur Master 60-64,90,Kent Smith,87.5,,,,,,SBD,DQ
+M,Wraps,Amateur Submaster,100,David Polisky,94.4,190,112.5,217.5,,520,SBD,1
+M,Raw,Military Amateur Open,100,Zachary Phillips,99.9,195,147.5,235,,577.5,SBD,1
+F,Raw,Military Amateur Open,67.5,Frances Young,66.6,122.5,75,145,,342.5,SBD,1
+F,Wraps,Amateur Junior 20-23,75,Sierra Nevels,71.7,155,92.5,162.5,,410,SBD,1
+M,Single-ply,Pro Open,110,Lance Olian,108.2,272.5,237.5,272.5,,782.5,SBD,1
+M,Multi-ply,Amateur Open,110,Jordan Lawler,107.65,305,217.5,250,,772.5,SBD,1
+M,Single-ply,Pro Open,125,Jeremy Schraw,124.6,365,167.5,305,,837.5,SBD,1
+F,Raw,Amateur Open,75,Mattie McClintock,72.45,122.5,67.5,130,,320,SBD,1
+F,Wraps,Amateur Open,90,Texana Holmes,81,117.5,62.5,142.5,,322.5,SBD,1
+F,Raw,Amateur Open,67.5,Lacey Hernandez,64.6,105,57.5,152.5,,315,SBD,1
+F,Wraps,Amateur Open,60,Amanda Bode,58.95,125,62.5,127.5,,315,SBD,1
+F,Wraps,Amateur Open,60,Rebecca Lough,59.3,105,,,,,SBD,DQ
+F,Wraps,Amateur Open,67.5,Katy Davis,66.66,80,45,120,,245,SBD,1
+M,Raw,Amateur Open,100,Chris Tejeda,100,267.5,165,232.5,,665,SBD,1
+M,Raw,Amateur Open,90,Chris Joslyn,89.8,232.5,142.5,257.5,,632.5,SBD,1
+M,Raw,Amateur Open,100,Robert Burns,96,192.5,115,275,,582.5,SBD,2
+M,Wraps,Pro Open,82.5,Cory Rebmann,81.85,217.5,140,222.5,,580,SBD,1
+M,Wraps,Amateur Open,100,John Nelson,107.6,277.5,185,300,,762.5,SBD,1
+M,Wraps,Amateur Open,100,Nathan Lunde,99.7,235,,,,,SBD,DQ
+M,Raw,Amateur Master 45-49,75,Derek Moore,74.5,,118.5,185,191,303.5,BD,1
+M,Raw,Military Amateur Open,100,Garsevan Mkrtichian,97.1,,155,227.5,,382.5,BD,1
+F,Multi-ply,Military Amateur Open,100,Krystal Morris,99.15,,60,100,,160,BD,1
+F,Multi-ply,Amateur Submaster,100,Krystal Morris,99.15,,60,100,,160,BD,1
+M,Raw,Military Amateur Open,100,Garsevan Mkrtichian,97.1,,,227.5,,227.5,D,1
+M,Raw,Amateur Open,100,Robert Burns,96,,,275,,275,D,1

@@ -1,26 +1,26 @@
-Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
-F,Wraps,Amateur Open,67.5,Aliya Levy,62.05,129.27,61.23,158.76,349.27
-F,Wraps,Amateur Open,67.5,Kim Jones,63.5,77.11,54.43,104.33,235.87
-M,Raw,Amateur Junior 20-23,67.5,Matthew Reynoso,67.49,90.72,40.82,136.08,267.62
-M,Raw,Amateur Open,67.5,Eric Morales,66.41,90.72,90.72,120.2,301.64
-M,Raw,Amateur Open,67.5,Santiago Martin,66.68,142.88,95.25,147.42,385.55
-M,Wraps,Amateur Open,75,Patrick Alejandrino,74.84,163.29,108.86,181.44,453.59
-M,Wraps,Amateur Open,75,Travis Stephens,71.58,142.88,88.45,181.44,412.77
-M,Raw,Amateur Open,82.5,Joshua Elliot,82.1,181.44,117.93,183.7,483.08
-M,Raw,Amateur Open,82.5,Will Nelson,81.37,197.31,136.08,278.96,612.35
-M,Wraps,Amateur Open,82.5,Jorge Garcia,79.74,117.93,97.52,167.83,383.29
-M,Raw,Amateur Open,90,John Shu,82.64,147.42,97.52,226.8,471.74
-M,Wraps,Amateur Open,90,Byron Diaz,88.63,179.17,111.13,183.7,474
-M,Raw,Amateur Open,100,Jeremy Nicholson,98.79,195.04,122.47,208.65,526.17
-M,Wraps,Amateur Open,100,Cameron Sisti,90.99,226.8,142.88,231.33,601.01
-M,Wraps,Amateur Open,100,Nick McCray,97.34,140.61,,181.44,
-M,Wraps,Amateur Open,110,Taryn Jones,106.78,276.69,190.51,276.69,743.89
-M,Wraps,Amateur Open,125,Adam Eriksen,124.01,278.96,185.97,299.37,764.3
-M,Wraps,Amateur Open,125,Chris Wheatly,124.92,238.14,165.56,258.55,662.24
-M,Wraps,Amateur Open,125,Ryan Hargett,124.38,192.78,136.08,231.33,560.19
-M,Raw,Amateur Open,140,Steven Miler,126.46,197.31,131.54,215.46,544.31
-M,Wraps,Amateur Open,140+,Mario Reynoso,149.96,235.87,142.88,260.82,639.57
-M,Raw,Amateur Open,125,Noah Bryant,123.01,,,317.51,
-M,Raw,Amateur Open,82.5,Brandon Grajeda,81.74,,176.9,213.19,390.09
-M,Raw,Amateur Open,82.5,Chris Garcia,75.48,,111.13,195.04,306.17
-M,Raw,Amateur Open,110,Dario Traverso,105.51,,,249.48,249.48
+Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Place
+F,Wraps,Amateur Open,67.5,Aliya Levy,62.05,129.27,61.23,158.76,349.27,SBD,1
+F,Wraps,Amateur Open,67.5,Kim Jones,63.5,77.11,54.43,104.33,235.87,SBD,2
+M,Raw,Amateur Junior 20-23,67.5,Matthew Reynoso,67.49,90.72,40.82,136.08,267.62,SBD,1
+M,Raw,Amateur Open,67.5,Eric Morales,66.41,90.72,90.72,120.2,301.64,SBD,2
+M,Raw,Amateur Open,67.5,Santiago Martin,66.68,142.88,95.25,147.42,385.55,SBD,1
+M,Wraps,Amateur Open,75,Patrick Alejandrino,74.84,163.29,108.86,181.44,453.59,SBD,1
+M,Wraps,Amateur Open,75,Travis Stephens,71.58,142.88,88.45,181.44,412.77,SBD,2
+M,Raw,Amateur Open,82.5,Joshua Elliot,82.1,181.44,117.93,183.7,483.08,SBD,2
+M,Raw,Amateur Open,82.5,Will Nelson,81.37,197.31,136.08,278.96,612.35,SBD,1
+M,Wraps,Amateur Open,82.5,Jorge Garcia,79.74,117.93,97.52,167.83,383.29,SBD,1
+M,Raw,Amateur Open,90,John Shu,82.64,147.42,97.52,226.8,471.74,SBD,1
+M,Wraps,Amateur Open,90,Byron Diaz,88.63,179.17,111.13,183.7,474,SBD,1
+M,Raw,Amateur Open,100,Jeremy Nicholson,98.79,195.04,122.47,208.65,526.17,SBD,1
+M,Wraps,Amateur Open,100,Cameron Sisti,90.99,226.8,142.88,231.33,601.01,SBD,1
+M,Wraps,Amateur Open,100,Nick McCray,97.34,140.61,,181.44,,SBD,DQ
+M,Wraps,Amateur Open,110,Taryn Jones,106.78,276.69,190.51,276.69,743.89,SBD,1
+M,Wraps,Amateur Open,125,Adam Eriksen,124.01,278.96,185.97,299.37,764.3,SBD,1
+M,Wraps,Amateur Open,125,Chris Wheatly,124.92,238.14,165.56,258.55,662.24,SBD,2
+M,Wraps,Amateur Open,125,Ryan Hargett,124.38,192.78,136.08,231.33,560.19,SBD,3
+M,Raw,Amateur Open,140,Steven Miler,126.46,197.31,131.54,215.46,544.31,SBD,1
+M,Wraps,Amateur Open,140+,Mario Reynoso,149.96,235.87,142.88,260.82,639.57,SBD,1
+M,Raw,Amateur Open,125,Noah Bryant,123.01,,,317.51,,BD,DQ
+M,Raw,Amateur Open,82.5,Brandon Grajeda,81.74,,176.9,213.19,390.09,BD,1
+M,Raw,Amateur Open,82.5,Chris Garcia,75.48,,111.13,195.04,306.17,BD,2
+M,Raw,Amateur Open,110,Dario Traverso,105.51,,,249.48,249.48,D,1
