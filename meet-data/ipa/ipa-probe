@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# IPA posts meets to a different page each year.
+#
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+# URL needs updating every year.
+# This is the URL for 2017.
+MEETSURL = "http://www.ipapower.com/?page_id=2924"
+if datetime.datetime.now().strftime("%Y") != "2017":
+    print("Warning: IPA fetch URL needs updating for new year.", file=sys.stderr)
+IPADIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;32m" + s + "\033[0;m"
+
+
+def gethtml():
+    with urllib.request.urlopen(MEETSURL) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    alist = soup.find_all("a");
+
+    urls = []
+    for a in alist:
+        if 'results' in a.text.lower():
+            urls.append(a['href'])
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(IPADIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                urls.append(fd.readline().strip())
+    return urls
+
+
+def main():
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    for m in meetlist:
+        if not m in known:
+            print(color('[IPA] ') + m)
+    print(color('[IPA] ') + "Continue working through archive.")
+
+
+if __name__ == '__main__':
+    main()
