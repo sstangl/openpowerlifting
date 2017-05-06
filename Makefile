@@ -36,6 +36,7 @@ check:
 # Data showing up here should be immediately actionable.
 probe-quick:
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
+	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
@@ -55,6 +56,7 @@ probe:
 	${DATADIR}/fesupo/fesupo-probe || true
 	${DATADIR}/fpo/fpo-probe || true
 	${DATADIR}/gbpf/gbpf-probe || true
+	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/ipf/ipf-probe || true
 	${DATADIR}/napf/napf-probe || true
 	${DATADIR}/nasa/nasa-probe || true
