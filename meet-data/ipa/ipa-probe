@@ -18,6 +18,8 @@ import urllib.request
 MEETSURL = "http://www.ipapower.com/?page_id=2924"
 if datetime.datetime.now().strftime("%Y") != "2017":
     print("Warning: IPA fetch URL needs updating for new year.", file=sys.stderr)
+
+ARCHIVEURL = "http://www.ipapower.com/?page_id=1991"
 IPADIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -30,8 +32,8 @@ def color(s):
     return "\033[1;32m" + s + "\033[0;m"
 
 
-def gethtml():
-    with urllib.request.urlopen(MEETSURL) as r:
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
         return r.read()
 
 
@@ -59,9 +61,16 @@ def getenteredurls():
 
 
 def main():
-    html = gethtml()
+    html = gethtml(MEETSURL)
     meetlist = getmeetlist(html)
+
+    html = gethtml(ARCHIVEURL)
+    meetlist += getmeetlist(html)
+
     known = getenteredurls()
+    for m in known:
+        if "%20" in m:
+            known.append(m.replace("%20"," "))
 
     for m in meetlist:
         if not m in known:
