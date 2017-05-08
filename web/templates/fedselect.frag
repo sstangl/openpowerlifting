@@ -65,7 +65,7 @@
       All Russian Feds
     </option>
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
-    <option value="WRPF">WRPF - World Raw Powerlifting Federation</option>
+    <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
     <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
