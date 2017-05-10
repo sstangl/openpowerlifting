@@ -19,7 +19,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
+    <option value="365Strong,APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
@@ -47,6 +47,9 @@
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
+    <option value="CPF,CPL,CPU">
+      All Canadian Feds
+    </option>
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (Incomplete)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
