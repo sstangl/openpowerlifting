@@ -89,7 +89,7 @@ function selectfed() {
     // Also include the class "selectorActive" to get the CSS working.
     //
     // An underscore is prepended to each federation to handle federations
-    // beginning with numbers, like 365SPF.
+    // beginning with numbers, like 365Strong.
     var fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _');
     meettable.className = "selectorActive " + fedspaces;
 }
