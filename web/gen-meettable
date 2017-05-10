@@ -191,13 +191,13 @@ def main():
             
             [year,month] = yrm.split('-')
             print('<tr class="%s"><td colspan="%d" class="table-divider">%s %s</td></tr>'
-                   % (' '.join(fedlist), len(columns), getmonth(month), year))
+                   % ('_' + (' _'.join(fedlist)), len(columns), getmonth(month), year))
             lastmonth = yrm
         lastmonth = yrm
 
         meeturl = makemeeturl(row[fedidx], row[dateidx], row[meetnameidx])
 
-        print('<tr class="%s">' % row[fedidx])
+        print('<tr class="%s">' % ('_' + row[fedidx]))
         print('<td>%s</td>' % row[fedidx])
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)

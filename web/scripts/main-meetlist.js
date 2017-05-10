@@ -87,7 +87,10 @@ function selectfed() {
 
     // Otherwise, the selector is a comma-separated list of federation names.
     // Also include the class "selectorActive" to get the CSS working.
-    var fedspaces = fedlist.replace(new RegExp(',', 'g'), ' ');
+    //
+    // An underscore is prepended to each federation to handle federations
+    // beginning with numbers, like 365SPF.
+    var fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _');
     meettable.className = "selectorActive " + fedspaces;
 }
 
