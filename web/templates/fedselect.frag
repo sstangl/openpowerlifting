@@ -22,7 +22,7 @@
     <option value="APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
-    <option value="365SPF">365SPF - 365 Strength Powerlifting Federation</option>
+    <option value="365SPF">365SPF - 365 Strong Powerlifting Federation</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
     <option value="IPA">IPA - International Powerlifting Association (2017+)</option>
