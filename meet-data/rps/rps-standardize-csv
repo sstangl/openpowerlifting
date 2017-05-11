@@ -237,6 +237,9 @@ def fixequipment(csv):
         elif 'multi' in s or 'multy' in s:
             x = 'Multi-ply'
 
+        elif s == 'adaptive athlete':
+            x = 'Raw' # I guess
+
         # This is used for benchers who have to choose between Raw or Wraps.
         # Seriously, though, what the hell?
         elif s == 'no choice made':
