@@ -224,6 +224,8 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'Team'
         elif col == 'SUB':
             csv.fieldnames[i] = 'SubTotalDELETE'
+        elif col == 'NAT':
+            csv.fieldnames[i] = 'Country'
         else:
             error("Unknown column: \"%s\"" % col)
 
