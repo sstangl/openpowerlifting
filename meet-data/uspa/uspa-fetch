@@ -14,7 +14,7 @@ import urllib.request
 
 
 CUTOFF = 200 # Ignore earlier meets, since they have invalid URLs anyway.
-FETCHDIR = 'fetch-tmp' # Directory in CWD to use for fetchin'.
+FETCHDIR = 'fetch' # Directory in CWD to use for fetchin'.
 RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/pubhtml/sheet?hl=en_US&headers=false&gid=0'
 
 

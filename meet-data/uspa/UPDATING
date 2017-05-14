@@ -5,9 +5,9 @@ New instructions (using the automatic scripts):
 
 To import a modern meet:
   1. Run ./uspa-fetch to fetch all missing meets.
-  2. Run `ls fetch-tmp/` to list all missing meets.
+  2. Run `ls fetch/` to list all missing meets.
   3. Pick a meet by number, for example '0586'.
-  4. Run `./helper 0586` to pull that meet from fetch-tmp into a new folder.
+  4. Run `./helper 0586` to pull that meet from fetch into a new folder.
 
 If helper failed, the meet could not be automatically imported. At that point,
 a number of temporary files will be left in the meet folder (e.g., '0586').
