@@ -11,6 +11,7 @@ import zlib
 
 
 CPUDIR = os.path.dirname(os.path.realpath(__file__))
+IGNOREFILE = CPUDIR + os.sep + "IGNORE"
 
 
 # Meets are filed into folders by a unique ID.
@@ -76,8 +77,15 @@ def main(filename):
     for row in csv.rows:
         add_row(meets,csv,row)
 
+    # Some meethashes are ignored for being erroneous.
+    with open(IGNOREFILE, 'r') as fd:
+        ignored = [strip(x) for x in fd.readlines()]
+
     # For each meet hash, create a folder if valid.
     for meethash, meetcsv in meets.items():
+        if meethash in ignored:
+            continue
+
         path = CPUDIR + os.sep + meethash
         if os.path.exists(path):
             continue

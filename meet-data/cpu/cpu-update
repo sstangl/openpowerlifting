@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+FETCHDIR=${SCRIPTDIR}/fetch
+
+if [ ! -d "$FETCHDIR" ]; then
+	mkdir "${FETCHDIR}"
+fi
+
+# The scripts dump files to the cwd.
+cd "${FETCHDIR}"
+
+# Download the most recent 10 pages of the database,
+# and write that to "cpu_database.csv".
+#
+# There is a danger here: if only half of a meet gets seen, the part
+# that is unseen will be lost, without a way of verifying that.
+# So this number should be "high" (or, better, there could be logic that
+# downloads all the results for a single year, waiting until it sees a page
+# with the next year).
+${SCRIPTDIR}/cpu-clone-database 10
+
+# Takes the raw CSV dump and converts it to OPL's internal format.
+# Redirect the output into cpu_standardized.csv.
+${SCRIPTDIR}/cpu-standardize-csv "${FETCHDIR}/cpu_database.csv" > "${FETCHDIR}/cpu_standardized.csv"
+
+# Given cpu_standardized.csv, file the meets into their own folders.
+${SCRIPTDIR}/cpu-reify-database "${FETCHDIR}/cpu_standardized.csv"

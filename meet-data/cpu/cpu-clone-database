@@ -6,6 +6,8 @@
 # This clones the database locally so that it can be sorted
 # better than the web interface allows for.
 #
+# Usage: ./cpu-clone-database <optional: maximum number of database pages to consider>
+#
 
 from bs4 import BeautifulSoup
 from oplcsv import Csv
@@ -111,7 +113,7 @@ def fix_dates(csv):
         row[dateidx] = newdate
 
 
-def main():
+def main(max_pages):
     # Website table layout.
     csv = Csv()
     csv.append_column('MeetName')
@@ -139,6 +141,10 @@ def main():
     num_pages = get_num_pages(soup)
     append_rows(csv, soup)
 
+    # Only get the first n pages if requested.
+    if max_pages != 0:
+        num_pages = min(num_pages, max_pages)
+
     for page in range(2, num_pages+1):
         print(" Fetching page %s" % str(page))
         html = gethtml(URL + "&pagenum=%s" % str(page))
@@ -162,5 +168,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    max_pages = 0
+    if len(sys.argv) == 2:
+        max_pages = int(sys.argv[1])
+    main(max_pages)
 
