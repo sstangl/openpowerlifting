@@ -79,7 +79,7 @@ def main(filename):
 
     # Some meethashes are ignored for being erroneous.
     with open(IGNOREFILE, 'r') as fd:
-        ignored = [strip(x) for x in fd.readlines()]
+        ignored = [x.strip() for x in fd.readlines()]
 
     # For each meet hash, create a folder if valid.
     for meethash, meetcsv in meets.items():

@@ -24,7 +24,7 @@ ${SCRIPTDIR}/cpu-clone-database 10
 
 # Takes the raw CSV dump and converts it to OPL's internal format.
 # Redirect the output into cpu_standardized.csv.
-${SCRIPTDIR}/cpu-standardize-csv "${FETCHDIR}/cpu_database.csv" > "${FETCHDIR}/cpu_standardized.csv"
+${SCRIPTDIR}/cpu-standardize-csv.py "${FETCHDIR}/cpu_database.csv" > "${FETCHDIR}/cpu_standardized.csv"
 
 # Given cpu_standardized.csv, file the meets into their own folders.
 ${SCRIPTDIR}/cpu-reify-database "${FETCHDIR}/cpu_standardized.csv"
