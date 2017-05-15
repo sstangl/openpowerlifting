@@ -21,6 +21,16 @@ def isint(str):
         return False
 
 
+# Many CSVs are detected in the same useless way, with columns like:
+#  Place;NAME;State;Class;Wt(KG);Age;Kg;Bench,;Kg,;Kg;Kg;Score;LBS;LBS;LBS;LBS
+# This function tries to auto-correct those lines.
+def replace_common_fieldnames(csv):
+    s = ';'.join(csv[0])
+
+    if s == 'Place;NAME;State;Class;Wt(KG);Age;Kg;Bench,;Kg;Kg;Kg;Score;LBS;LBS;LBS;LBS':
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;bp;dl;total;Wilks;LBS;LBS;LBS;LBS'.split(';')
+
+
 def fixcolnames(columns):
     for i, name in enumerate(columns):
         low = name.lower()
@@ -371,6 +381,8 @@ def removeredundantlbs(rows):
 def main():
     with open(sys.argv[1]) as fd:
         csv = [[y.strip() for y in x.split(';')] for x in fd.readlines()]
+
+    replace_common_fieldnames(csv)
     rval = parse(csv)
 
     # Fixups.
