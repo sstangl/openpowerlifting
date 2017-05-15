@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+#
+# Given a CSV with only BodyweightKg but no WeightClassKg,
+# this creates a WeightClassKg column.
+
+import oplcsv
+import sys
+
+
+def getwtcls(classtype, sex, bw):
+    try:
+        bw = float(bw)
+    except ValueError:
+        print(" Could not convert bodyweight to float: %s" % bw)
+        sys.exit(1)
+
+    if classtype == 'trad':
+        if sex == 'F' and bw > 90:
+            return '90+'
+        if sex == 'M' and bw > 140:
+            return '140+'
+        weights = [0,44,48,52,56,60,67.5,75,82.5,90,100,110,125,140]
+    else:
+        assert classtype == 'ipf'
+        if sex == 'M':
+            if bw > 120:
+                return '120+'
+            weights = [0,53,59,66,74,83,93,105,120]
+        else:
+            assert sex == 'F'
+            if bw > 84:
+                return '84+'
+            weights = [0,43,47,52,57,63,72,84]
+            
+    assert weights[0] == 0
+    for i in range(1, len(weights)+1):
+        if bw <= weights[i] and bw > weights[i-1]:
+            return str(weights[i])
+
+    print(" Couldn't find weightclass for bodyweight %s" % bw)
+    sys.exit(1)
+
+
+def main(classtype, filename):
+    assert classtype in ['trad','ipf']
+
+    csv = oplcsv.Csv(filename)
+
+    if not 'BodyweightKg' in csv.fieldnames:
+        print(" Missing BodyweightKg column.")
+        sys.exit(1)
+
+    if not 'Sex' in csv.fieldnames:
+        print(" Missing Sex column.")
+        sys.exit(1)
+
+    if not 'WeightClassKg' in csv.fieldnames:
+        # Insert WeightClassKg before BodyweightKg.
+        csv.insert_column(csv.fieldnames.index('BodyweightKg'), 'WeightClassKg')
+
+    sexidx = csv.fieldnames.index('Sex')
+    bwidx = csv.fieldnames.index('BodyweightKg')
+    wtidx = csv.fieldnames.index('WeightClassKg')
+
+    for row in csv.rows:
+        if not row[bwidx]:
+            continue
+
+        if not row[wtidx]:
+            wtcls = getwtcls(classtype, row[sexidx], row[bwidx])
+            row[wtidx] = wtcls
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3 or not sys.argv[1] in ["trad","ipf"]:
+        print(" Usage: %s <trad,men,women> lifters.csv")
+        print(" Where: 'trad' is for the traditional weight classes")
+        print("    and 'ipf' is for the IPF weight classes.")
+        sys.exit(1)
+    main(sys.argv[1], sys.argv[2])
