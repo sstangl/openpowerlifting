@@ -133,6 +133,7 @@ def makelifterscsv(soup):
     csv = Csv()
     csv.append_column('Place')
     csv.append_column('Name')
+    csv.append_column('Sex')
     csv.append_column('Event')
     csv.append_column('Division')
     csv.append_column('WeightClassKg')
@@ -155,6 +156,7 @@ def makelifterscsv(soup):
     table = soup.find("table", {"id": "competition_view_results"})
     table = table.find("tbody")
 
+    state_sex = ''
     state_event = 'SBD'
     state_division = None
     state_equipment = None
@@ -162,6 +164,7 @@ def makelifterscsv(soup):
     for row in table.find_all('tr'):
         k = len(row.find_all('td'))
         if k == 0:
+            state_sex = ''
             # This is a control row, changing some state.
             s = row.find('th').text.strip()
             if s == 'Powerlifting':
@@ -179,6 +182,10 @@ def makelifterscsv(soup):
 
             else:
                 (state_division, state_equipment) = parsedivision(s)
+                if 'Female' in s:
+                    state_sex = 'F'
+                elif 'Male' in s:
+                    state_sex = 'M'
 
         elif k == 19:
             # This is a results row.
@@ -212,6 +219,7 @@ def makelifterscsv(soup):
             row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
             row[csv.fieldnames.index('Place')] = place
             row[csv.fieldnames.index('Name')] = name
+            row[csv.fieldnames.index('Sex')] = state_sex
             row[csv.fieldnames.index('BirthYear')] = birthyear
             row[csv.fieldnames.index('Team')] = team
             row[csv.fieldnames.index('State')] = state
@@ -311,7 +319,10 @@ def markdqs(csv):
 
 # Some sex information can be inferred from weightclass information.
 def infersex(csv):
-    csv.insert_column(csv.fieldnames.index('Name'), 'Sex')
+    # Some meets unfortunately don't use weight classes,
+    # and instead arrange lifters by sex manually.
+    if not 'WeightClassKg' in csv.fieldnames:
+        return
 
     sexidx = csv.fieldnames.index('Sex')
     wcidx = csv.fieldnames.index('WeightClassKg')
@@ -325,6 +336,9 @@ def infersex(csv):
     old_women = ['48','52','56','60','67.5','75','82.5','90','90+']
 
     for row in csv.rows:
+        if row[sexidx]:
+            continue
+
         wc = row[wcidx]
         if not wc:
             continue
