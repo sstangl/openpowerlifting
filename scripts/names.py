@@ -39,6 +39,30 @@ def standardize_upper_ascii(s):
     return s
 
 
+# Levenshtein algorithm taken from
+# https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python.
+def levenshtein(s1, s2):
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    # len(s1) >= len(s2)
+    if len(s2) == 0: 
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            # j+1 instead of j since previous_row and current_row are one character longer than s2.
+            insertions = previous_row[j + 1] + 1
+            deletions = current_row[j] + 1
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+    
+    return previous_row[-1]
+
+
 # Converts a part of a name to a four-character code, based on English phonetics,
 # which can be used to classify equivalent names. Intended for use on surnames.
 #
@@ -144,6 +168,7 @@ if __name__ == '__main__':
     names = [r[nameidx] for r in csv.rows]
 
     h = {}
+    counts = {}
 
     for name in names:
         comps = name.split()[0:2]
@@ -165,6 +190,19 @@ if __name__ == '__main__':
         elif not name in h[key]:
             h[key].append(name)
 
+        if not name in counts:
+            counts[name] = 1
+        else:
+            counts[name] += 1
+
     for k,v in h.items():
-        if len(v) > 1:
-            print(k,v)
+        if len(v) == 1:
+            continue
+
+        for i in range(1, len(v)):
+            # For the moment, since there are so many name conflicts,
+            # just consider the ones that have a minimal edit distance.
+            if levenshtein(v[0],v[i]) == 1:
+                print([(n,counts[n]) for n in v])
+                break
+
