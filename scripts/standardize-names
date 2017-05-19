@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple script that uses a list of names and their misspellings
+# to run over the Name column of all lifters.csv files under the cwd,
+# correcting names as it goes.
+#
+# The data file is formatted with one lifter per line, with spellings
+# separated by commas, the first spelling being the 'correct' one.
+#
+
+import oplcsv
+import os
+import sys
+
+
+# Creates a hashmap keyed on misspellings.
+def load_names(datafilepath):
+    h = {}
+    with open(datafilepath, 'r') as fd:
+        for line in fd.readlines():
+            names = line.split(',')  
+            assert len(names) >= 2
+
+            correct_name = names[0].strip()
+            assert correct_name
+
+            for incorrect_name in names[1:]:
+                incorrect_name = incorrect_name.strip()
+                assert incorrect_name
+                assert not incorrect_name in h
+                h[incorrect_name] = correct_name
+
+    return h
+
+
+def correct_names(namehash, lifterspath):
+    csv = oplcsv.Csv(lifterspath)
+    assert 'Name' in csv.fieldnames
+
+    nameidx = csv.fieldnames.index('Name')
+
+    changed = False
+    for row in csv.rows:
+        if row[nameidx] in namehash:
+            changed = True
+            row[nameidx] = namehash[row[nameidx]]
+
+    if changed:
+        with open(lifterspath, 'w') as fd:
+            csv.write(fd)
+
+
+def main(args):
+    if len(args) != 2:
+        print(" Usage: %s datafile" % args[0])
+        return 1
+
+    namehash = load_names(args[1])
+
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'lifters.csv' in files:
+            lifterspath = dirname + os.sep + 'lifters.csv'
+            correct_names(namehash, lifterspath)
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
+
