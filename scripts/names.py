@@ -199,6 +199,11 @@ if __name__ == '__main__':
         if len(v) == 1:
             continue
 
+        # Also, just for the moment, only consider the ones that
+        # have a bunch of samples.
+        if max([counts[n] for n in v]) < 10:
+            continue
+
         for i in range(1, len(v)):
             # For the moment, since there are so many name conflicts,
             # just consider the ones that have a minimal edit distance.
