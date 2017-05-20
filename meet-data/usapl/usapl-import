@@ -378,7 +378,13 @@ def markdrugtest(csv):
 def makemeetcsv(soup):
     content = soup.find('div', {'id': 'content'})
 
-    meetname = content.find('h3').text.strip()
+    meetname = content.find('h3').text
+
+    # Remove federation information from the meet name.
+    meetname = meetname.replace('USAPL','')
+    meetname = meetname.replace('USA Powerlifting','')
+    meetname = meetname.strip()
+
     table = content.find('table')
 
     # Date is given as MM/DD/YYYY
