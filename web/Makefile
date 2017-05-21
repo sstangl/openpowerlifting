@@ -16,15 +16,17 @@ builddir:
 	mkdir -p '${BUILDDIR}/images'
 	mkdir -p '${BUILDDIR}/data'
 
-# Depends on the main project already being built.
-database: builddir
-	${SCRIPTDIR}/csv-to-js "${PLFILE}" opldb > "${BUILDDIR}/scripts/${PLFILEJS}"
-	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
-	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
-
+# Copies the OPL database, and formats it for the Web.
+# A number of columns are omitted to save data.
 data: builddir
 	cp ${PLFILE} ${BUILDDIR}/data
+	${SCRIPTDIR}/csv-rmcol "${BUILDDIR}/data/openpowerlifting.csv" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg McCulloch Event
 	cp ${MEETFILE} ${BUILDDIR}/data
+
+database: data
+	${SCRIPTDIR}/csv-to-js "${BUILDDIR}/data/openpowerlifting.csv" opldb > "${BUILDDIR}/scripts/${PLFILEJS}"
+	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
+	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 
 scripts: builddir
 	cp scripts/common.js ${BUILDDIR}/scripts

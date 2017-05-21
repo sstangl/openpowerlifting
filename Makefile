@@ -18,7 +18,6 @@ csvfile: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}"
 	scripts/age-from-birthyear "${BUILDDIR}/${PLFILE}" "${BUILDDIR}/${MEETFILE}"
 	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" Team School Country-State Country College/University Category State BirthYear InternationalName
-	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg Event
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
