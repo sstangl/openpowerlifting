@@ -328,7 +328,7 @@ def check_headers(csv):
         perror('There must be a TotalKg column.')
 
     if not 'Place' in csv.fieldnames:
-        pwarning("Missing a Place column.")
+        perror("There must be a Place column.")
 
     if 'Wilks' in csv.fieldnames and not 'TotalKg' in csv.fieldnames:
         perror('Wilks requires a TotalKg column.')
@@ -336,7 +336,7 @@ def check_headers(csv):
         perror('Wilks requires a BodyweightKg for exact bodyweight.')
 
     # Not requiring the Event header yet, although it's probably a good idea.
-    #if not 'Event' in headers:
+    #if not 'Event' in csv.fieldnames:
     #    perror('There must be an Event column.')
 
     for header in csv.fieldnames:
