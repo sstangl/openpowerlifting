@@ -58,9 +58,48 @@ def main(builddir, meetdir):
     lifterscsv = Csv()
     meetscsv = Csv()
 
+    # Standardize the column order by hardcoding it here.
+    # This is necessary for SQL import statements to work.
+    # If this list is modified, also modify scripts/compile-sqlite.
     lifterscsv.append_column('MeetID')
+    lifterscsv.append_column('Name')
+    lifterscsv.append_column('Sex')
+    lifterscsv.append_column('Event')
+    lifterscsv.append_column('Equipment')
+    lifterscsv.append_column('Age')
+    lifterscsv.append_column('Division')
+    lifterscsv.append_column('BodyweightKg')
+    lifterscsv.append_column('WeightClassKg')
+    lifterscsv.append_column('Squat1Kg')
+    lifterscsv.append_column('Squat2Kg')
+    lifterscsv.append_column('Squat3Kg')
+    lifterscsv.append_column('Squat4Kg')
+    lifterscsv.append_column('BestSquatKg')
+    lifterscsv.append_column('Bench1Kg')
+    lifterscsv.append_column('Bench2Kg')
+    lifterscsv.append_column('Bench3Kg')
+    lifterscsv.append_column('Bench4Kg')
+    lifterscsv.append_column('BestBenchKg')
+    lifterscsv.append_column('Deadlift1Kg')
+    lifterscsv.append_column('Deadlift2Kg')
+    lifterscsv.append_column('Deadlift3Kg')
+    lifterscsv.append_column('Deadlift4Kg')
+    lifterscsv.append_column('BestDeadliftKg')
+    lifterscsv.append_column('TotalKg')
+    lifterscsv.append_column('Place')
+    lifterscsv.append_column('Wilks')
+    lifterscsv.append_column('McCulloch')
+    initial_lifterscsv_num_columns = len(lifterscsv.fieldnames)
+
     meetscsv.append_column('MeetID')
     meetscsv.append_column('MeetPath')
+    meetscsv.append_column('Federation')
+    meetscsv.append_column('Date')
+    meetscsv.append_column('MeetCountry')
+    meetscsv.append_column('MeetState')
+    meetscsv.append_column('MeetTown')
+    meetscsv.append_column('MeetName')
+    initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
     for dirname, subdirs, files in os.walk(meetdir):
         if 'lifters.csv' in files:
@@ -69,6 +108,16 @@ def main(builddir, meetdir):
             meetpath = dirname + os.sep + 'meet.csv'
             addmeet(lifterscsv, meetscsv, lifterspath, meetpath)
 
+    # Remove some columns that are allowed as data but are ignored.
+    lifterscsv.remove_column_by_name("BirthYear");
+    lifterscsv.remove_column_by_name("Country");
+    lifterscsv.remove_column_by_name("School");
+    lifterscsv.remove_column_by_name("Team");
+    lifterscsv.remove_column_by_name("State");
+    lifterscsv.remove_column_by_name("InternationalName");
+    lifterscsv.remove_column_by_name("Country-State");
+    lifterscsv.remove_column_by_name("College/University");
+
     oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
@@ -76,6 +125,13 @@ def main(builddir, meetdir):
         lifterscsv.write(fd)
     with open(meetscsvpath, 'w') as fd:
         meetscsv.write(fd)
+
+    # If these asserts fail, then new columns have been added.
+    # Check the written files: new columns are at the end.
+    # Columns need to be explicitly added above to be in a known order,
+    # and then scripts/compile-sqlite needs to be notified of the column type.
+    assert len(lifterscsv.fieldnames) == initial_lifterscsv_num_columns
+    assert len(meetscsv.fieldnames) == initial_meetscsv_num_columns
 
 
 if __name__ == '__main__':
