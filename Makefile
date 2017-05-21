@@ -8,7 +8,7 @@ PLFILEJS = openpowerlifting.js
 MEETFILE = meets.csv
 MEETFILEJS = meets.js
 
-all: csvfile web
+all: csvfile sqlite web
 
 builddir:
 	mkdir -p '${BUILDDIR}'
@@ -19,6 +19,9 @@ csvfile: builddir
 	scripts/age-from-birthyear "${BUILDDIR}/${PLFILE}" "${BUILDDIR}/${MEETFILE}"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
+
+sqlite: csvfile
+	scripts/compile-sqlite
 
 web: csvfile
 	$(MAKE) -C web

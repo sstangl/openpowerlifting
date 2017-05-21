@@ -1,0 +1,102 @@
+#!/bin/bash
+#
+# When called from the main project directory, compiles an SQLite version of the project.
+#
+
+set -e
+
+DBFILE="build/openpowerlifting.sqlite3"
+
+function require_dir {
+	if ! [ -d "$1" ]; then
+		echo "Error: Missing directory $1"
+		exit 1
+	fi
+}
+
+function require_file {
+	if ! [ -f "$1" ]; then
+		echo "Error: Missing file $1"
+		exit 1
+	fi
+}
+
+# Dependency checks.
+require_dir "build"
+require_file "build/openpowerlifting.csv"
+require_file "build/meets.csv"
+require_file "build/meets.csv"
+require_dir "lifter-data"
+require_file "lifter-data/social-media.csv"
+
+# If the database already exists, SQLite will add to existing tables
+# instead of parsing the CSV headers. So the DB needs to be nuked.
+rm -f "${DBFILE}"
+
+
+# The column ordering is hardcoded and must agree with scripts/compile.
+CREATEENTRIESTABLE="
+CREATE TABLE entries (
+  MeetID INTEGER,
+  Name TEXT,
+  Sex CHAR(1),
+  Event CHAR(3),
+  Equipment TEXT,
+  Age INTEGER,
+  Division TEXT,
+  BodyweightKg FLOAT,
+  WeightClassKg FLOAT,
+  Squat1Kg FLOAT,
+  Squat2Kg FLOAT,
+  Squat3Kg FLOAT,
+  Squat4Kg FLOAT,
+  BestSquatKg FLOAT,
+  Bench1Kg FLOAT,
+  Bench2Kg FLOAT,
+  Bench3Kg FLOAT,
+  Bench4Kg FLOAT,
+  BestBenchKg FLOAT,
+  Deadlift1Kg FLOAT,
+  Deadlift2Kg FLOAT,
+  Deadlift3Kg FLOAT,
+  Deadlift4Kg FLOAT,
+  BestDeadliftKg FLOAT,
+  TotalKg FLOAT,
+  Place TEXT,
+  Wilks FLOAT,
+  McCulloch FLOAT
+);
+"
+
+CREATEMEETSTABLE="
+CREATE TABLE meets (
+  MeetID INTEGER,
+  MeetPath TEXT,
+  Federation TEXT,
+  Date DATE,
+  MeetCountry TEXT,
+  MeetState TEXT,
+  MeetTown TEXT,
+  MeetName TEXT
+);
+"
+
+CREATESOCIALTABLE="
+CREATE TABLE social (
+  Name TEXT,
+  Instagram BLOB
+);
+"
+
+IMPORTCOMMAND="
+.mode csv
+
+${CREATEENTRIESTABLE}
+.import build/openpowerlifting.csv entries
+${CREATEMEETSTABLE}
+.import build/meets.csv meets
+${CREATESOCIALTABLE}
+.import lifter-data/social-media.csv social
+"
+
+echo "${IMPORTCOMMAND}" | sqlite3 "${DBFILE}"
