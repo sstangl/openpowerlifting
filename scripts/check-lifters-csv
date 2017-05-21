@@ -274,7 +274,6 @@ HeaderHandlers = {
     'WeightClassKg': check_column_weightclass,
     'BodyweightKg': check_positive_number_column,
     'Wilks': check_positive_number_column,
-    'McCulloch': check_positive_number_column,
 
     # Lift columns. Only Kg is valid.
     'BestSquatKg': check_lift_column,
@@ -342,7 +341,7 @@ def check_headers(csv):
 
     for header in csv.fieldnames:
         if not header in KnownHeaders:
-            pwarning("Unknown column header: %s" % header)
+            perror("Unknown column header: %s" % header)
 
         if csv.fieldnames.count(header) > 1:
             perror("Duplicate column header: %s" % header)

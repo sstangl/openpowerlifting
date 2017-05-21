@@ -21,7 +21,6 @@ csvfile: builddir
 	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg Event
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
-	scripts/csv-rmcol "${BUILDDIR}/${PLFILE}" McCulloch
 
 web: csvfile
 	$(MAKE) -C web
