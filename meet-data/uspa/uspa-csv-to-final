@@ -258,7 +258,7 @@ def parse(csv):
                 sexstate = 'M'
 
             # Some PDFs put this information with the sexstate.
-            if ' classic raw' in searcher:
+            if ' classic raw' in searcher or ' cl raw' in searcher:
                 equipmentstate = 'Wraps'
             elif ' raw' in searcher:
                 equipmentstate = 'Raw'
@@ -339,7 +339,7 @@ def parse(csv):
                     error('Unknown division: %s' % ' '.join(row).strip())
 
                 # Get the equipment state.
-                if 'classic' in info:
+                if 'classic' in info or 'cl raw' in info:
                     equipmentstate = 'Wraps'
                 elif 'raw' in info:
                     equipmentstate = 'Raw'
