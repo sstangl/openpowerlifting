@@ -38,6 +38,7 @@ check:
 probe-quick:
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/ipa/ipa-probe || true
+	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
