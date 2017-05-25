@@ -30,6 +30,7 @@ web: csvfile
 check:
 	scripts/check-lifters-csv
 	scripts/check-meet-csv
+	scripts/check-sex-consistency
 
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
