@@ -19,8 +19,8 @@ MEETSURL = "http://www.ipapower.com/?page_id=2924"
 if datetime.datetime.now().strftime("%Y") != "2017":
     print("Warning: IPA fetch URL needs updating for new year.", file=sys.stderr)
 
-# URL for 2015, needs updating once cleared.
-ARCHIVEURL = "http://www.ipapower.com/?page_id=418"
+# URL for 2014, needs updating once cleared.
+ARCHIVEURL = "https://ipapower.blogspot.com/2013/12/2014-meet-results.html"
 IPADIR = os.path.dirname(os.path.realpath(__file__))
 
 
