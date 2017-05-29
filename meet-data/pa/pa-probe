@@ -36,15 +36,22 @@ def gethtml(url):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    content = soup.find_all("div", {"class": "post-content"})
-    if len(content) == 0:
-        error("Page layout seems to have changed.")
-    elif len(content) > 1:
-        error("Multiple result areas found.")
+    # Just look at all links from the entire page.
+    # There seems to be a parsing error when looking just at the 'post-content'
+    # div, where some <a> tags at the end get overlooked for some unknown reason.
 
     urls = []
-    for a in content[0].find_all('a'):
-        url = a['href']
+    for a in soup.find_all('a'):
+        # Apparently some <a> tags don't have an href.
+        try:
+            url = a['href']
+        except:
+            continue
+
+        # All PA results are in /wp-content/uploads/results/.
+        if not '/wp-content/uploads/results/' in url:
+            continue
+
         if not 'http' in url:
             url = BASEURL + url
         if not url in urls:
