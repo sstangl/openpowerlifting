@@ -59,6 +59,11 @@ def is_int(s):
     except ValueError:
         return False
 
+def float2(s):
+    if s == '':
+        return 0.0
+    return float(s)
+
 
 def check_column_name(s, row, csv):
     if '  ' in s:
@@ -451,11 +456,6 @@ def check_row_lift_consistency(row, csv, bestcol, attemptcols):
     if not bestcol in csv.fieldnames:
         return
 
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
-
     # If the lifter was disqualified for doping, none of the attempts count.
     if 'Place' in csv.fieldnames and row[csv.fieldnames.index('Place')] == 'DD':
         return
@@ -487,11 +487,6 @@ def check_row_lift_consistency(row, csv, bestcol, attemptcols):
 def check_row_total_consistency(row, csv):
     if not 'TotalKg' in csv.fieldnames:
         return
-
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
 
     total = float2(row[csv.fieldnames.index('TotalKg')])
     squat = float2(row[csv.fieldnames.index('BestSquatKg')]) if 'BestSquatKg' in csv.fieldnames else 0
@@ -527,11 +522,6 @@ def check_row_wilks_consistency(row, csv):
         return
     if not 'Sex' in csv.fieldnames:
         return
-
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
 
     total = float2(row[csv.fieldnames.index('TotalKg')])
     bodyweight = float2(row[csv.fieldnames.index('BodyweightKg')])
