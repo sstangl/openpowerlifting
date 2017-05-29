@@ -467,6 +467,10 @@ def main(filename):
 
     try_label_division_column(csv)
 
+    # Columns with no header are used to mark records.
+    while '' in csv.fieldnames:
+        csv.remove_column_by_name('')
+
     # Wilks will be automatically calculated later. Feds get it wrong all the time.
     if 'Wilks' in csv.fieldnames:
         csv.remove_column_by_name('Wilks')
