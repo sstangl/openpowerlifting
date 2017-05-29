@@ -44,15 +44,6 @@ class Csv:
                 self.remove_column_by_index(i)
                 return
 
-    def select_columns_by_name(self, namelist):
-        x = []
-        for field in self.fieldnames:
-            if field not in namelist:
-                x.append(field)
-
-        for field in x:
-            self.remove_column_by_name(field)
-
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
