@@ -30,12 +30,12 @@ def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     meetid = str(nextmeetid())
 
     newlifters.append_column('MeetID')
-    idx = newlifters.fieldnames.index('MeetID')
+    idx = newlifters.index('MeetID')
     for row in newlifters.rows:
         row[idx] = meetid
 
     newmeet.append_column('MeetID')
-    idx = newmeet.fieldnames.index('MeetID')
+    idx = newmeet.index('MeetID')
     for row in newmeet.rows:
         row[idx] = meetid
 
@@ -46,7 +46,7 @@ def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     assert not ',' in path
 
     newmeet.append_column("MeetPath")
-    idx = newmeet.fieldnames.index("MeetPath")
+    idx = newmeet.index("MeetPath")
     for row in newmeet.rows:
         row[idx] = path
 

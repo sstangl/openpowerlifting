@@ -216,27 +216,27 @@ def makelifterscsv(soup):
             #drugtested = cells[18].text.strip() # Not used.
 
             row = ['' for x in csv.fieldnames]
-            row[csv.fieldnames.index('WeightClassKg')] = weightclasskg
-            row[csv.fieldnames.index('Place')] = place
-            row[csv.fieldnames.index('Name')] = name
-            row[csv.fieldnames.index('Sex')] = state_sex
-            row[csv.fieldnames.index('BirthYear')] = birthyear
-            row[csv.fieldnames.index('Team')] = team
-            row[csv.fieldnames.index('State')] = state
-            row[csv.fieldnames.index('BodyweightKg')] = bodyweightkg
-            row[csv.fieldnames.index('Squat1Kg')] = squat1kg
-            row[csv.fieldnames.index('Squat2Kg')] = squat2kg
-            row[csv.fieldnames.index('Squat3Kg')] = squat3kg
-            row[csv.fieldnames.index('Bench1Kg')] = bench1kg
-            row[csv.fieldnames.index('Bench2Kg')] = bench2kg
-            row[csv.fieldnames.index('Bench3Kg')] = bench3kg
-            row[csv.fieldnames.index('Deadlift1Kg')] = deadlift1kg
-            row[csv.fieldnames.index('Deadlift2Kg')] = deadlift2kg
-            row[csv.fieldnames.index('Deadlift3Kg')] = deadlift3kg
-            row[csv.fieldnames.index('TotalKg')] = totalkg
-            row[csv.fieldnames.index('Division')] = state_division
-            row[csv.fieldnames.index('Equipment')] = state_equipment
-            row[csv.fieldnames.index('Event')] = state_event
+            row[csv.index('WeightClassKg')] = weightclasskg
+            row[csv.index('Place')] = place
+            row[csv.index('Name')] = name
+            row[csv.index('Sex')] = state_sex
+            row[csv.index('BirthYear')] = birthyear
+            row[csv.index('Team')] = team
+            row[csv.index('State')] = state
+            row[csv.index('BodyweightKg')] = bodyweightkg
+            row[csv.index('Squat1Kg')] = squat1kg
+            row[csv.index('Squat2Kg')] = squat2kg
+            row[csv.index('Squat3Kg')] = squat3kg
+            row[csv.index('Bench1Kg')] = bench1kg
+            row[csv.index('Bench2Kg')] = bench2kg
+            row[csv.index('Bench3Kg')] = bench3kg
+            row[csv.index('Deadlift1Kg')] = deadlift1kg
+            row[csv.index('Deadlift2Kg')] = deadlift2kg
+            row[csv.index('Deadlift3Kg')] = deadlift3kg
+            row[csv.index('TotalKg')] = totalkg
+            row[csv.index('Division')] = state_division
+            row[csv.index('Equipment')] = state_equipment
+            row[csv.index('Event')] = state_event
 
             for i,c in enumerate(row):
                 row[i] = c.replace(',', ' ')
@@ -285,12 +285,12 @@ def makebestcolumns(csv):
     def makebestcolumn(csv, lift):
         numcols = len(list(filter(lambda x: lift in x, csv.fieldnames)))
         if numcols == 3:
-            csv.insert_column(csv.fieldnames.index(lift+'3Kg')+1, 'Best'+lift+'Kg')
+            csv.insert_column(csv.index(lift+'3Kg')+1, 'Best'+lift+'Kg')
             
-            idxbest = csv.fieldnames.index('Best'+lift+'Kg')
-            idx1 = csv.fieldnames.index(lift+'1Kg')
-            idx2 = csv.fieldnames.index(lift+'2Kg')
-            idx3 = csv.fieldnames.index(lift+'3Kg')
+            idxbest = csv.index('Best'+lift+'Kg')
+            idx1 = csv.index(lift+'1Kg')
+            idx2 = csv.index(lift+'2Kg')
+            idx3 = csv.index(lift+'3Kg')
 
             for row in csv.rows:
                 best = max(tonumber(row[idx1]), tonumber(row[idx2]), tonumber(row[idx3]))
@@ -298,7 +298,7 @@ def makebestcolumns(csv):
                     row[idxbest] = str(best)
         elif numcols == 1:
             # If only one column is filled in, that's the best result column.
-            idx1 = csv.fieldnames.index(lift+'1Kg')
+            idx1 = csv.index(lift+'1Kg')
             csv.fieldnames[idx1] = 'Best'+lift+'Kg'
 
     makebestcolumn(csv, 'Squat')
@@ -309,8 +309,8 @@ def makebestcolumns(csv):
 # The website incorrectly marks disqualified lifters as placing.
 # Normally it just doesn't include disqualified lifters... but sometimes it does.
 def markdqs(csv):
-    totalidx = csv.fieldnames.index('TotalKg')
-    placeidx = csv.fieldnames.index('Place')
+    totalidx = csv.index('TotalKg')
+    placeidx = csv.index('Place')
     for row in csv.rows:
         if row[totalidx] == '0':
             row[totalidx] = ''
@@ -324,8 +324,8 @@ def infersex(csv):
     if not 'WeightClassKg' in csv.fieldnames:
         return
 
-    sexidx = csv.fieldnames.index('Sex')
-    wcidx = csv.fieldnames.index('WeightClassKg')
+    sexidx = csv.index('Sex')
+    wcidx = csv.index('WeightClassKg')
 
     # Note that ipf_men doesn't intersect ipf_women! Perfect matching!
     ipf_men   = ['53','59','66','74','83','93','105','120','120+']
@@ -354,8 +354,8 @@ def infersex(csv):
 
 
 def inferequipment(csv):
-    dividx = csv.fieldnames.index("Division")
-    eqpidx = csv.fieldnames.index("Equipment")
+    dividx = csv.index("Division")
+    eqpidx = csv.index("Equipment")
 
     for row in csv.rows:
         if 'R-' in row[dividx]:
@@ -366,8 +366,8 @@ def inferequipment(csv):
 # The event type must be inferred from the lifts they received
 # which have all been marked as negative), and their Place must be marked "DD".
 def markdrugtest(csv):
-    placeidx = csv.fieldnames.index('Place')
-    eventidx = csv.fieldnames.index('Event')
+    placeidx = csv.index('Place')
+    eventidx = csv.index('Event')
 
     for row in csv.rows:
         if row[eventidx] == 'DRUGTEST':

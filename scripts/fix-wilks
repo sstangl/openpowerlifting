@@ -28,10 +28,10 @@ for col in ['Sex', 'BodyweightKg', 'TotalKg']:
         print(' Missing necessary column: %s' % col, file=sys.stderr)
         sys.exit(1)
 
-indexSex = csv.fieldnames.index('Sex')
-indexBodyweight = csv.fieldnames.index('BodyweightKg')
-indexTotal = csv.fieldnames.index('TotalKg')
-indexWilks = csv.fieldnames.index('Wilks')
+indexSex = csv.index('Sex')
+indexBodyweight = csv.index('BodyweightKg')
+indexTotal = csv.index('TotalKg')
+indexWilks = csv.index('Wilks')
 
 def to_string(f):
     try:

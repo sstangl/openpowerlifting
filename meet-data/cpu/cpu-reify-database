@@ -16,10 +16,10 @@ IGNOREFILE = CPUDIR + os.sep + "IGNORE"
 
 # Meets are filed into folders by a unique ID.
 def meethash(csv, row):
-    date = row[csv.fieldnames.index('Date')]
+    date = row[csv.index('Date')]
     assert len(date) == 10
 
-    meetname = row[csv.fieldnames.index('MeetName')]
+    meetname = row[csv.index('MeetName')]
     namehash = format(zlib.crc32(bytes(meetname, 'utf-8')), '08x')
     assert len(namehash) == 8
 
@@ -44,11 +44,11 @@ def makecsvs(path, csv):
     meetcsv.fieldnames = ['Federation','Date','MeetCountry','MeetState','MeetTown','MeetName']
 
     fed = 'CPU'
-    date = csv.rows[0][csv.fieldnames.index('Date')]
+    date = csv.rows[0][csv.index('Date')]
     country = 'Canada'
-    state = csv.rows[0][csv.fieldnames.index('MeetState')]
-    town = csv.rows[0][csv.fieldnames.index('MeetTown')]
-    name = csv.rows[0][csv.fieldnames.index('MeetName')]
+    state = csv.rows[0][csv.index('MeetState')]
+    town = csv.rows[0][csv.index('MeetTown')]
+    name = csv.rows[0][csv.index('MeetName')]
     meetcsv.rows = [[fed, date, country, state, town, name]]
 
     with open(path + os.sep + 'meet.csv', 'w') as fd:

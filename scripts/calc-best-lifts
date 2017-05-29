@@ -11,12 +11,12 @@ def float2(s):
 
 
 def add_best_column(csv, lift):
-    idx = csv.fieldnames.index(lift + '3Kg') + 1
+    idx = csv.index(lift + '3Kg') + 1
     csv.insert_column(idx, 'Best%sKg' % lift)
 
-    idx1 = csv.fieldnames.index(lift + '1Kg')
-    idx2 = csv.fieldnames.index(lift + '2Kg')
-    idx3 = csv.fieldnames.index(lift + '3Kg')
+    idx1 = csv.index(lift + '1Kg')
+    idx2 = csv.index(lift + '2Kg')
+    idx3 = csv.index(lift + '3Kg')
 
     for row in csv.rows:
         best = '0'

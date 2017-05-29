@@ -164,7 +164,7 @@ if __name__ == '__main__':
     import sys
 
     csv = oplcsv.Csv(sys.argv[1])
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
     names = [r[nameidx] for r in csv.rows]
 
     h = {}

@@ -17,6 +17,9 @@ class Csv:
     def __len__(self):
         return len(self.rows)
 
+    def index(self, name):
+        return self.fieldnames.index(name)
+
     def append_column(self, name):
         self.fieldnames.append(name)
         for row in self.rows:
@@ -51,7 +54,7 @@ class Csv:
                 self.append_column(header)
 
         # An array mapping index in other.fieldnames to index in self.fieldnames.
-        mapping = [self.fieldnames.index(header) for header in other.fieldnames]
+        mapping = [self.index(header) for header in other.fieldnames]
 
         for row in other.rows:
             build = ['' for x in range(0, len(self.fieldnames))]

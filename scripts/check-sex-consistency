@@ -53,8 +53,8 @@ def process_file(path):
         perror("Missing Sex column in %s" % path)
         return
 
-    nameidx = csv.fieldnames.index('Name')
-    sexidx = csv.fieldnames.index('Sex')
+    nameidx = csv.index('Name')
+    sexidx = csv.index('Sex')
 
     for row in csv.rows:
         name = row[nameidx]

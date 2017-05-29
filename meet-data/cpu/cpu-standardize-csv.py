@@ -27,8 +27,8 @@ MonthLookup = {
 def standardize_date(csv):
     assert 'Year' in csv.fieldnames
     assert 'Date' in csv.fieldnames
-    yearidx = csv.fieldnames.index('Year')
-    dateidx = csv.fieldnames.index('Date')
+    yearidx = csv.index('Year')
+    dateidx = csv.index('Date')
 
     for row in csv.rows:
         # In a format like "30-Mar-07".
@@ -77,7 +77,7 @@ def standardize_date(csv):
 
 def standardize_sex(csv):
     assert 'Sex' in csv.fieldnames
-    sexidx = csv.fieldnames.index('Sex')
+    sexidx = csv.index('Sex')
 
     for row in csv.rows:
         sex = row[sexidx]
@@ -90,7 +90,7 @@ def standardize_sex(csv):
 
 def standardize_equipment(csv):
     assert 'Unequipped' in csv.fieldnames
-    eqpidx = csv.fieldnames.index('Unequipped')
+    eqpidx = csv.index('Unequipped')
     csv.fieldnames[eqpidx] = 'Equipment'
 
     for row in csv.rows:
@@ -104,12 +104,12 @@ def standardize_equipment(csv):
 
 def standardize_event(csv):
     assert '3Lift' in csv.fieldnames
-    evtidx = csv.fieldnames.index('3Lift')
+    evtidx = csv.index('3Lift')
     csv.fieldnames[evtidx] = 'Event'
 
-    squatidx = csv.fieldnames.index('BestSquatKg')
-    benchidx = csv.fieldnames.index('BestBenchKg')
-    deadliftidx = csv.fieldnames.index('BestDeadliftKg')
+    squatidx = csv.index('BestSquatKg')
+    benchidx = csv.index('BestBenchKg')
+    deadliftidx = csv.index('BestDeadliftKg')
 
     for row in csv.rows:
         event = row[evtidx]
@@ -136,10 +136,10 @@ def standardize_event(csv):
 def standardize_weightclass(csv):
     assert 'WeightClassOldKg' in csv.fieldnames
     assert 'WeightClassNewKg' in csv.fieldnames
-    oldidx = csv.fieldnames.index('WeightClassOldKg')
-    newidx = csv.fieldnames.index('WeightClassNewKg')
-    sexidx = csv.fieldnames.index('Sex')
-    bodyweightidx = csv.fieldnames.index('BodyweightKg')
+    oldidx = csv.index('WeightClassOldKg')
+    newidx = csv.index('WeightClassNewKg')
+    sexidx = csv.index('Sex')
+    bodyweightidx = csv.index('BodyweightKg')
 
     csv.fieldnames[newidx] = 'WeightClassKg'
 
@@ -178,7 +178,7 @@ def standardize_weightclass(csv):
 
 def standardize_meetname(csv):
     assert 'MeetName' in csv.fieldnames
-    meetnameidx = csv.fieldnames.index('MeetName')
+    meetnameidx = csv.index('MeetName')
 
     for row in csv.rows:
         m = row[meetnameidx]
@@ -196,7 +196,7 @@ def standardize_meetname(csv):
 
 def standardize_name(csv):
     assert 'Name' in csv.fieldnames
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
 
     for row in csv.rows:
         name = row[nameidx]
@@ -213,12 +213,12 @@ def standardize_name(csv):
 
 def standardize_location(csv):
     assert 'Location' in csv.fieldnames
-    locationidx = csv.fieldnames.index('Location')
+    locationidx = csv.index('Location')
     csv.insert_column(locationidx+1, 'MeetTown')
     csv.insert_column(locationidx+1, 'MeetState')
-    locationidx = csv.fieldnames.index('Location')
-    townidx = csv.fieldnames.index('MeetTown')
-    stateidx = csv.fieldnames.index('MeetState')
+    locationidx = csv.index('Location')
+    townidx = csv.index('MeetTown')
+    stateidx = csv.index('MeetState')
 
     for row in csv.rows:
         loc = row[locationidx]
@@ -266,8 +266,8 @@ def standardize_location(csv):
 def remove_international_meets(csv):
     assert 'MeetName' in csv.fieldnames
     assert 'State' in csv.fieldnames # Lifter state. "CAN" if foreign.
-    meetnameidx = csv.fieldnames.index('MeetName')
-    stateidx = csv.fieldnames.index('State')
+    meetnameidx = csv.index('MeetName')
+    stateidx = csv.index('State')
 
     def helper(row):
         m = row[meetnameidx]
@@ -303,13 +303,13 @@ def standardize(csv):
 
     # Sort the database stably.
     # Order isn't too important, as long as it doesn't jump around a lot.
-    dateidx = csv.fieldnames.index('Date')
-    meetnameidx = csv.fieldnames.index('MeetName')
-    eventidx = csv.fieldnames.index('Event')
-    equipmentidx = csv.fieldnames.index('Equipment')
-    divisionidx = csv.fieldnames.index('Division')
-    weightclassidx = csv.fieldnames.index('WeightClassKg')
-    nameidx = csv.fieldnames.index('Name')
+    dateidx = csv.index('Date')
+    meetnameidx = csv.index('MeetName')
+    eventidx = csv.index('Event')
+    equipmentidx = csv.index('Equipment')
+    divisionidx = csv.index('Division')
+    weightclassidx = csv.index('WeightClassKg')
+    nameidx = csv.index('Name')
 
     def sorter(r):
         a = r[dateidx]

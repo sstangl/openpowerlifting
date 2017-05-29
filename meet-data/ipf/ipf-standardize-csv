@@ -22,8 +22,8 @@ def strip_whitespace(csv):
 
 def assign_class(csv):
     curclass = None
-    totalidx = csv.fieldnames.index('TotalKg')
-    wtclsidx = csv.fieldnames.index('WeightClassKg')
+    totalidx = csv.index('TotalKg')
+    wtclsidx = csv.index('WeightClassKg')
 
     for row in csv.rows:
         if 'kg' in row[0]:
@@ -34,8 +34,8 @@ def assign_class(csv):
 
 def assign_division(csv):
     curdiv = None
-    totalidx = csv.fieldnames.index('TotalKg')
-    dividx = csv.fieldnames.index('Division')
+    totalidx = csv.index('TotalKg')
+    dividx = csv.index('Division')
 
     for row in csv.rows:
         if row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
@@ -46,7 +46,7 @@ def assign_division(csv):
 
 def remove_non_lifter_rows(csv):
     # All lifter rows at this point, even if DQ'd, have totals given.
-    totalidx = csv.fieldnames.index('TotalKg')
+    totalidx = csv.index('TotalKg')
 
     def getbadidx(csv):
         for i,row in enumerate(csv.rows):
@@ -65,8 +65,8 @@ def remove_non_lifter_rows(csv):
 
 
 def fixup_lift(csv, fieldname):
-    idx = csv.fieldnames.index(fieldname)
-    placeidx = csv.fieldnames.index('Place')
+    idx = csv.index(fieldname)
+    placeidx = csv.index('Place')
 
     for row in csv.rows:
         amount = row[idx]
@@ -91,10 +91,10 @@ def fixup_lift(csv, fieldname):
 
 
 def assign_best(csv, liftname):
-    idx1 = csv.fieldnames.index('%s1Kg' % liftname)
-    idx2 = csv.fieldnames.index('%s2Kg' % liftname)
-    idx3 = csv.fieldnames.index('%s3Kg' % liftname)
-    bestidx = csv.fieldnames.index('Best%sKg' % liftname)
+    idx1 = csv.index('%s1Kg' % liftname)
+    idx2 = csv.index('%s2Kg' % liftname)
+    idx3 = csv.index('%s3Kg' % liftname)
+    bestidx = csv.index('Best%sKg' % liftname)
 
     def weight(str):
         try:
@@ -110,7 +110,7 @@ def assign_best(csv, liftname):
 
 
 def unreverse_names(csv):
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
 
     for row in csv.rows:
         parts = row[nameidx].split()
@@ -170,9 +170,9 @@ def main(filename):
     csv.remove_column_by_name('XXX_wilks')
     csv.remove_column_by_name('XXX_points')
 
-    csv.insert_column(csv.fieldnames.index('Squat3Kg')+1, 'BestSquatKg')
-    csv.insert_column(csv.fieldnames.index('Bench3Kg')+1, 'BestBenchKg')
-    csv.insert_column(csv.fieldnames.index('Deadlift3Kg')+1, 'BestDeadliftKg')
+    csv.insert_column(csv.index('Squat3Kg')+1, 'BestSquatKg')
+    csv.insert_column(csv.index('Bench3Kg')+1, 'BestBenchKg')
+    csv.insert_column(csv.index('Deadlift3Kg')+1, 'BestDeadliftKg')
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
 

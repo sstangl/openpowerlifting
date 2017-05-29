@@ -19,13 +19,13 @@ def error(msg):
 # Aggregate a bunch of columns that just report division information.
 def aggregate_divisions(csv):
     csv.append_column("Division")
-    dividx = csv.fieldnames.index('Division')
+    dividx = csv.index('Division')
 
     cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press']
 
     for col in cols:
         if col in csv.fieldnames:
-            idx = csv.fieldnames.index(col)
+            idx = csv.index(col)
             for row in csv.rows:
                 if row[idx]:
                     row[dividx] = row[idx]
@@ -35,7 +35,7 @@ def aggregate_divisions(csv):
 
 
 def capitalize(csv, field):
-    idx = csv.fieldnames.index(field)
+    idx = csv.index(field)
 
     for row in csv.rows:
         if row[idx]:
@@ -111,10 +111,10 @@ def integrate_equipment_event(csv):
     csv.append_column('Event')
     csv.append_column('Equipment')
 
-    eventidx = csv.fieldnames.index('Event')
-    equipmentidx = csv.fieldnames.index('Equipment')
-    nameidx = csv.fieldnames.index('Name')
-    wtidx = csv.fieldnames.index('WeightClassLBS')
+    eventidx = csv.index('Event')
+    equipmentidx = csv.index('Equipment')
+    nameidx = csv.index('Name')
+    wtidx = csv.index('WeightClassLBS')
 
     event = None
     equipment = None
@@ -169,8 +169,8 @@ def integrate_equipment_event(csv):
 
 
 def remove_category_rows(csv):
-    nameidx = csv.fieldnames.index('Name')
-    wtidx = csv.fieldnames.index('WeightClassLBS')
+    nameidx = csv.index('Name')
+    wtidx = csv.index('WeightClassLBS')
 
     def find_such_a_row(csv):
         for i,row in enumerate(csv.rows):
@@ -199,7 +199,7 @@ def internal_to_string(f):
 
 # TODO: Run the above function over all the Squat,Bench,Deadlift rows too.
 def trim_numbers(csv, field):
-    idx = csv.fieldnames.index(field)
+    idx = csv.index(field)
 
     for row in csv.rows:
         num = internal_to_string(row[idx])
@@ -216,11 +216,11 @@ def float2(s):
 
 
 def recalculate_totals(csv):
-    totalidx = csv.fieldnames.index('TotalKg')
+    totalidx = csv.index('TotalKg')
 
-    squatidx = csv.fieldnames.index('BestSquatKg')
-    benchidx = csv.fieldnames.index('BestBenchKg')
-    deadliftidx = csv.fieldnames.index('BestDeadliftKg')
+    squatidx = csv.index('BestSquatKg')
+    benchidx = csv.index('BestBenchKg')
+    deadliftidx = csv.index('BestDeadliftKg')
 
     for row in csv.rows:
         total = float2(row[squatidx]) + float2(row[benchidx]) + float2(row[deadliftidx])
@@ -231,12 +231,12 @@ def recalculate_totals(csv):
 # but failed to complete all of the lifts, they're given the total of their successes.
 # This fixes that.
 def hunt_dqs(csv):
-    squatidx = csv.fieldnames.index('BestSquatKg')
-    benchidx = csv.fieldnames.index('BestBenchKg')
-    deadliftidx = csv.fieldnames.index('BestDeadliftKg')
-    totalidx = csv.fieldnames.index('TotalKg')
-    eventidx = csv.fieldnames.index('Event')
-    placeidx = csv.fieldnames.index('Place')
+    squatidx = csv.index('BestSquatKg')
+    benchidx = csv.index('BestBenchKg')
+    deadliftidx = csv.index('BestDeadliftKg')
+    totalidx = csv.index('TotalKg')
+    eventidx = csv.index('Event')
+    placeidx = csv.index('Place')
 
     for row in csv.rows:
         dq = False

@@ -79,7 +79,7 @@ def remove_bottom_meet_info(csv):
 
 # Some meets have "x" or "X" when lifts are missed or not taken.
 def remove_xs(csv):
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
     for row in csv.rows:
         for i,x in enumerate(row):
             if i <= nameidx:
@@ -90,7 +90,7 @@ def remove_xs(csv):
 
 # Some meets have "x" or "X" when lifts are missed or not taken.
 def remove_strings(csv, sl):
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
     for row in csv.rows:
         for i,x in enumerate(row):
             if i <= nameidx:
@@ -128,7 +128,7 @@ def remove_rows_by_empty_column(csv, colname):
                 return i
         return -1
 
-    colidx = csv.fieldnames.index(colname)
+    colidx = csv.index(colname)
     if colidx < 0:
         error("Column %s not found in remove_rows_by_empty_column()." % colname)
 
@@ -248,9 +248,9 @@ def consume_first_column(csv):
     # Sex information is statefully present also, but there's usually a M/F column.
     assert 'Sex' in csv.fieldnames
 
-    eqidx = csv.fieldnames.index('Equipment')
-    wtclsidx = csv.fieldnames.index('WeightClassKg')
-    evtidx = csv.fieldnames.index('Event')
+    eqidx = csv.index('Equipment')
+    wtclsidx = csv.index('WeightClassKg')
+    evtidx = csv.index('Event')
 
     # Walk down the rows, storing and writing state from the first column.
     # Nuke the stateful rows as they're walked, for remove_empty_rows() later.
@@ -319,9 +319,9 @@ def consume_old_format(csv):
 
     csv.append_columns(['Equipment', 'Event'])
 
-    sexidx = csv.fieldnames.index('Sex')
-    eqidx = csv.fieldnames.index('Equipment')
-    evtidx = csv.fieldnames.index('Event')
+    sexidx = csv.index('Sex')
+    eqidx = csv.index('Equipment')
+    evtidx = csv.index('Event')
 
     equipment = 'Single-ply'
     event = 'SBD'
@@ -367,8 +367,8 @@ def consume_old_format(csv):
 # will be marked "BMB" or "disq" or something like that.
 # Make a best effort to hunt that down.
 def hunt_dq_info(csv):
-    nameidx = csv.fieldnames.index('Name')
-    placeidx = csv.fieldnames.index('Place')
+    nameidx = csv.index('Name')
+    placeidx = csv.index('Place')
 
     for row in csv.rows:
         # Look just to the right of the Name row, to not get false positives from weird names.
@@ -385,19 +385,19 @@ def calc_best_lift(csv, col, attemptlist):
     for k in attemptlist:
         assert k in csv.fieldnames
 
-    csv.insert_column(csv.fieldnames.index(attemptlist[-1]) + 1, col)
+    csv.insert_column(csv.index(attemptlist[-1]) + 1, col)
 
     for row in csv.rows:
         best = 0
         for k in attemptlist:
             try:
-                attempt = float(row[csv.fieldnames.index(k)])
+                attempt = float(row[csv.index(k)])
             except:
                 attempt = 0
             if attempt > best:
                 best = attempt
         if best > 0:
-            row[csv.fieldnames.index(col)] = str(best)
+            row[csv.index(col)] = str(best)
 
 
 # Old-style formats use the same labels for weight class and division,

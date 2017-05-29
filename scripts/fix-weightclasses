@@ -11,7 +11,7 @@ csv = oplcsv.Csv(filename)
 if not 'WeightClassKg' in csv.fieldnames:
     sys.exit(0)
 
-idx = csv.fieldnames.index('WeightClassKg')
+idx = csv.index('WeightClassKg')
 
 changed = False
 

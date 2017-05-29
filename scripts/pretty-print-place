@@ -5,11 +5,11 @@ import sys
 
 
 def getcategory(csv, row):
-    dividx    = csv.fieldnames.index('Division')
-    eqidx     = csv.fieldnames.index('Equipment')
-    sexidx    = csv.fieldnames.index('Sex')
-    eventidx  = csv.fieldnames.index('Event')
-    wtclsidx  = csv.fieldnames.index('WeightClassKg')
+    dividx    = csv.index('Division')
+    eqidx     = csv.index('Equipment')
+    sexidx    = csv.index('Sex')
+    eventidx  = csv.index('Event')
+    wtclsidx  = csv.index('WeightClassKg')
     return (row[dividx], row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
@@ -62,14 +62,14 @@ def main(filename):
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)
 
-    totalidx  = csv.fieldnames.index('TotalKg')
-    bwidx     = csv.fieldnames.index('BodyweightKg')
-    nameidx     = csv.fieldnames.index('Name')
-    bestsquatidx = csv.fieldnames.index('BestSquatKg')
-    bestbenchidx = csv.fieldnames.index('BestBenchKg')
-    bestdeadliftidx = csv.fieldnames.index('BestDeadliftKg')
-    totalidx = csv.fieldnames.index('TotalKg')
-    wilksidx = csv.fieldnames.index('Wilks')
+    totalidx  = csv.index('TotalKg')
+    bwidx     = csv.index('BodyweightKg')
+    nameidx     = csv.index('Name')
+    bestsquatidx = csv.index('BestSquatKg')
+    bestbenchidx = csv.index('BestBenchKg')
+    bestdeadliftidx = csv.index('BestDeadliftKg')
+    totalidx = csv.index('TotalKg')
+    wilksidx = csv.index('Wilks')
 
     categories = []
     for row in csv.rows:

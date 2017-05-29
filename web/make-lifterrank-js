@@ -14,7 +14,7 @@ import sys
 
 # Get list of unique names in the CSV file.
 def getnamedict(csv):
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
     namedict = {} # When using a dictionary, the key order will be pseudo-random each run. Is OK.
     for row in csv.rows:
         name = row[nameidx]
@@ -30,7 +30,7 @@ def main():
     # Better to do this only once at the top than everywhere else in the file.
     for field in ['BestSquatKg', 'Squat4Kg', 'BestBenchKg', 'Bench4Kg', 'BestDeadliftKg',
                   'Deadlift4Kg', 'TotalKg', 'Wilks', 'BodyweightKg']:
-        idx = csv.fieldnames.index(field)
+        idx = csv.index(field)
         for row in csv.rows:
             try:
                 row[idx] = float(row[idx])
@@ -40,8 +40,8 @@ def main():
     # First, a hack: have the Best column integrate 4th attempts.
     # This is OK for this file since we aren't displaying actual numbers.
     for lift in ['Squat', 'Bench', 'Deadlift']:
-        bestidx    = csv.fieldnames.index('Best%sKg' % lift)
-        fourthidx  = csv.fieldnames.index('%s4Kg' % lift)
+        bestidx    = csv.index('Best%sKg' % lift)
+        fourthidx  = csv.index('%s4Kg' % lift)
 
         for row in csv.rows:
             best = row[bestidx]
@@ -51,16 +51,16 @@ def main():
 
     # Get sorted variants of the rows.
     # We can use filter on these to extract weightclass information.
-    squatidx       = csv.fieldnames.index('BestSquatKg')
-    benchidx       = csv.fieldnames.index('BestBenchKg')
-    deadliftidx    = csv.fieldnames.index('BestDeadliftKg')
-    totalidx       = csv.fieldnames.index('TotalKg')
-    wilksidx       = csv.fieldnames.index('Wilks')
+    squatidx       = csv.index('BestSquatKg')
+    benchidx       = csv.index('BestBenchKg')
+    deadliftidx    = csv.index('BestDeadliftKg')
+    totalidx       = csv.index('TotalKg')
+    wilksidx       = csv.index('Wilks')
 
-    nameidx        = csv.fieldnames.index('Name')
-    equipidx       = csv.fieldnames.index('Equipment')
-    bodyweightidx  = csv.fieldnames.index('BodyweightKg')
-    sexidx         = csv.fieldnames.index('Sex')
+    nameidx        = csv.index('Name')
+    equipidx       = csv.index('Equipment')
+    bodyweightidx  = csv.index('BodyweightKg')
+    sexidx         = csv.index('Sex')
 
     bysquat     = sorted(csv.rows, key=lambda x : x[squatidx], reverse=True)
     bybench     = sorted(csv.rows, key=lambda x : x[benchidx], reverse=True)
@@ -79,10 +79,10 @@ def main():
 
     # Assign everyone their per-equipment overall Wilks rank.
     rankcsv.append_columns(['WilksRankRaw','WilksRankWraps','WilksRankSingle','WilksRankMulti'])
-    rawidx     = rankcsv.fieldnames.index('WilksRankRaw')
-    wrapsidx   = rankcsv.fieldnames.index('WilksRankWraps')
-    singleidx  = rankcsv.fieldnames.index('WilksRankSingle')
-    multiidx   = rankcsv.fieldnames.index('WilksRankMulti')
+    rawidx     = rankcsv.index('WilksRankRaw')
+    wrapsidx   = rankcsv.index('WilksRankWraps')
+    singleidx  = rankcsv.index('WilksRankSingle')
+    multiidx   = rankcsv.index('WilksRankMulti')
 
     mapping  = ['Raw', 'Wraps', 'Single-ply', 'Multi-ply']
     indices  = [rawidx, wrapsidx, singleidx, multiidx]
@@ -146,7 +146,7 @@ def main():
             i = matchsexdivision(bw, sex)
 
             rankidx = i
-            colidx = rankcsv.fieldnames.index('Total%s%s%s' %
+            colidx = rankcsv.index('Total%s%s%s' %
                     (sexdivisions[i][1],sexdivisions[i][2],equip.replace('-ply','')))
         except:
             continue
