@@ -30,6 +30,7 @@ web: csvfile
 check:
 	scripts/check-lifters-csv
 	scripts/check-meet-csv
+	scripts/check-sex-consistency
 
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
@@ -37,6 +38,7 @@ check:
 probe-quick:
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/ipa/ipa-probe || true
+	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true

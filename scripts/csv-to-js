@@ -46,7 +46,7 @@ def arrayify(s):
         return '' # JS will treat as undefined.
     if isnumber(s):
         return trimzeros(s)
-    return '"' + str(s) + '"'
+    return '"%s"' % s
 
 
 for row in csv.rows:

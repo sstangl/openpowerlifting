@@ -12,13 +12,13 @@ def main(filename):
     assert not 'Sex' in csv.fieldnames
     assert not 'WeightClassKg' in csv.fieldnames
 
-    csv.insert_column(csv.fieldnames.index('BodyweightKg'), 'Sex')
-    csv.insert_column(csv.fieldnames.index('BodyweightKg'), 'WeightClassKg')
+    csv.insert_column(csv.index('BodyweightKg'), 'Sex')
+    csv.insert_column(csv.index('BodyweightKg'), 'WeightClassKg')
 
-    dividx = csv.fieldnames.index('Division')
-    nameidx = csv.fieldnames.index('Name')
-    sexidx = csv.fieldnames.index('Sex')
-    wtclsidx = csv.fieldnames.index('WeightClassKg')
+    dividx = csv.index('Division')
+    nameidx = csv.index('Name')
+    sexidx = csv.index('Sex')
+    wtclsidx = csv.index('WeightClassKg')
 
 
     sex = None

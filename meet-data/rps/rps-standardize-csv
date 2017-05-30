@@ -48,7 +48,7 @@ def remove_rows_by_empty_column(csv, colname):
                 return i
         return -1
 
-    colidx = csv.fieldnames.index(colname)
+    colidx = csv.index(colname)
     if colidx < 0:
         error("Column %s not found in remove_rows_by_empty_column()." % colname)
 
@@ -203,7 +203,7 @@ def standardize_fieldnames(csv):
 
 
 def fixequipment(csv):
-    idx = csv.fieldnames.index('Equipment')
+    idx = csv.index('Equipment')
     if idx < 0:
         error("No Equipment column in fixequipment().")
 
@@ -256,7 +256,7 @@ def fixequipment(csv):
 
 
 def fixsex(csv):
-    idx = csv.fieldnames.index('Sex')
+    idx = csv.index('Sex')
     if idx < 0:
         error("No Sex column in fixsex().")
 
@@ -275,7 +275,7 @@ def fixsex(csv):
 
 
 def fixname(csv):
-    idx = csv.fieldnames.index('Name')
+    idx = csv.index('Name')
     if idx < 0:
         error("No Name column in fixname().")
 
@@ -312,7 +312,7 @@ def fixname(csv):
 
 
 def fixclass(csv):
-    idx = csv.fieldnames.index('Class')
+    idx = csv.index('Class')
     if idx < 0:
         error("No Class column in fixclass().")
 
@@ -366,10 +366,10 @@ def fixclass(csv):
 
 
 def fixweightclass(csv):
-    idx = csv.fieldnames.index('WeightClassLBS')
+    idx = csv.index('WeightClassLBS')
     if idx < 0:
         error("No WeightClassLBS column in fixweightclass().")
-    sexidx = csv.fieldnames.index('Sex')
+    sexidx = csv.index('Sex')
     if sexidx < 0:
         error("No Sex column in fixweightclass().")
 
@@ -386,8 +386,8 @@ def fixweightclass(csv):
 
 
 def fixdivision(csv):
-    idx = csv.fieldnames.index('Division')
-    nameidx = csv.fieldnames.index('Name')
+    idx = csv.index('Division')
+    nameidx = csv.index('Name')
     for i,row in enumerate(csv.rows):
         if i > 0 and row[nameidx] and not row[idx]:
             row[idx] = csv.rows[i-1][idx]
@@ -402,7 +402,7 @@ def isnumber(s):
 
 
 def fixplace(csv):
-    idx = csv.fieldnames.index('Place')
+    idx = csv.index('Place')
     if idx < 0:
         error("No Place column in fixplace().")
 
@@ -422,7 +422,7 @@ def fixplace(csv):
 
 
 def fixlift(csv, liftfield):
-    idx = csv.fieldnames.index(liftfield)
+    idx = csv.index(liftfield)
     if idx < 0:
         error("No %s column in fixlift()." % liftfield)
 
@@ -433,10 +433,10 @@ def fixlift(csv, liftfield):
 
 
 def mergeclassintodivision(csv):
-    classidx = csv.fieldnames.index('Class')
+    classidx = csv.index('Class')
     if classidx < 0:
         error("No Class column in mergeclassintodivision().")
-    dividx = csv.fieldnames.index('Division')
+    dividx = csv.index('Division')
     if dividx < 0:
         error("No Division column in mergeclassintodivision().")
 

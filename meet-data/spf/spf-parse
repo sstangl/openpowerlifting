@@ -81,8 +81,8 @@ def sexfromdivision(csv):
     assert not "Sex" in csv.fieldnames
 
     csv.append_column("Sex")
-    sexidx = csv.fieldnames.index("Sex")
-    dividx = csv.fieldnames.index("Division")
+    sexidx = csv.index("Sex")
+    dividx = csv.index("Division")
 
     for row in csv.rows:
         # Fill in the sex column.
@@ -96,7 +96,7 @@ def sexfromdivision(csv):
 
 
 def fixevent(csv):
-    idx = csv.fieldnames.index("Event")
+    idx = csv.index("Event")
 
     for row in csv.rows:
         if row[idx] == 'Full Powerlifting':
@@ -119,8 +119,8 @@ def fixevent(csv):
 
 # Depends on fixevent(), so that bench-only isn't marked Wraps.
 def fixequipment(csv):
-    eqidx = csv.fieldnames.index("Equipment")
-    evtidx = csv.fieldnames.index("Event")
+    eqidx = csv.index("Equipment")
+    evtidx = csv.index("Event")
 
     for row in csv.rows:
         eq = row[eqidx]

@@ -38,7 +38,7 @@ def correct_names(namehash, lifterspath):
     csv = oplcsv.Csv(lifterspath)
     assert 'Name' in csv.fieldnames
 
-    nameidx = csv.fieldnames.index('Name')
+    nameidx = csv.index('Name')
 
     changed = False
     for row in csv.rows:

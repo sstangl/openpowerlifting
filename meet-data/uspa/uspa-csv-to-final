@@ -384,6 +384,12 @@ def removeredundantlbs(rows):
             for row in rows:
                 del row[i]
 
+def remove_kg_from_weightclass(rows):
+    weightclassidx = rows[0].index('WeightClassKg')
+
+    for row in rows[1:]:
+        row[weightclassidx] = row[weightclassidx].replace('kg','')
+
 
 def main():
     with open(sys.argv[1]) as fd:
@@ -395,6 +401,7 @@ def main():
     # Fixups.
     fixshw(rval)
     removeredundantlbs(rval)
+    remove_kg_from_weightclass(rval)
 
     # Sometimes commas get snuck into numbers, like "1,036.16". Sigh.
     # Also get rid of quotation marks, since the JS doesn't like that.

@@ -59,6 +59,11 @@ def is_int(s):
     except ValueError:
         return False
 
+def float2(s):
+    if s == '':
+        return 0.0
+    return float(s)
+
 
 def check_column_name(s, row, csv):
     if '  ' in s:
@@ -103,10 +108,6 @@ def check_column_name(s, row, csv):
 
     if s[-4:] == ' Iii' or s[-3:] == ' Ii':
         pwarning("Fix name casing: \"%s\"" % s)
-
-    # Common name errors.
-    if s == 'Charlie Galasso':
-        pwarning('Charlie Galasso should be renamed to Charles.')
 
 
 def check_column_sex(s, row, csv):
@@ -172,9 +173,9 @@ def check_column_division(s, row, csv):
         pwarning('Division ends in "-": "%s"' % s)
 
     if 'guest' in low and 'Place' in csv.fieldnames:
-        if row[csv.fieldnames.index('Place')] not in ['G','DQ']:
+        if row[csv.index('Place')] not in ['G','DQ']:
             pwarning('Lifter should be guest (Place = "G"): %s' %
-                    row[csv.fieldnames.index('Name')])
+                    row[csv.index('Name')])
 
 
 def check_column_equipment(s, row, csv):
@@ -227,7 +228,7 @@ def check_column_weightclass(s, row, csv):
 
     proraw_extra = ['70','70+','75+','80','95','110+']
     rps_extra = ['155']
-    spf_extra = ['117.5','100+']
+    spf_extra = ['117.5','100+','67.5+']
     ipf_extra = ['60+']
     old_usapl = ['145','145+']
 
@@ -357,7 +358,7 @@ def check_headers(csv):
 
 def check_row_name_consistency(row, csv):
     if 'Name' in csv.fieldnames:
-        name = row[csv.fieldnames.index('Name')]
+        name = row[csv.index('Name')]
         if name is '':
             perror("Name field empty.")
 
@@ -369,7 +370,7 @@ def check_row_event_consistency(row, csv):
     if not 'TotalKg' in csv.fieldnames:
         return
 
-    event = row[csv.fieldnames.index('Event')]
+    event = row[csv.index('Event')]
 
     if 'S' not in event:
         for i, header in enumerate(csv.fieldnames):
@@ -387,7 +388,7 @@ def check_row_event_consistency(row, csv):
                 perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
 
     if 'Equipment' in csv.fieldnames:
-        if not 'S' in event and row[csv.fieldnames.index('Equipment')] == "Wraps":
+        if not 'S' in event and row[csv.index('Equipment')] == "Wraps":
             perror("Event category doesn't use wraps. Row: %s" % row)
 
     # If this was a single-lift attempt, and the lifter wasn't disqualified,
@@ -395,10 +396,10 @@ def check_row_event_consistency(row, csv):
     if len(event) == 1:
         place = ''
         if 'Place' in csv.fieldnames:
-            place = row[csv.fieldnames.index('Place')]
+            place = row[csv.index('Place')]
 
         if place != 'DQ' and place != 'DD' and place != 'NS':
-            if not row[csv.fieldnames.index('TotalKg')]:
+            if not row[csv.index('TotalKg')]:
                 perror("Non-DQ'd Single Lift not marked in TotalKg. Row: %s" % row)
 
 
@@ -408,10 +409,10 @@ def check_row_weightclass_consistency(row, csv):
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
-    if row[csv.fieldnames.index('Sex')] is not 'F':
+    if row[csv.index('Sex')] is not 'F':
         return
 
-    wtcls = row[csv.fieldnames.index('WeightClassKg')].replace('+','')
+    wtcls = row[csv.index('WeightClassKg')].replace('+','')
     if not wtcls:
         return
 
@@ -422,32 +423,32 @@ def check_row_weightclass_consistency(row, csv):
         # meets put women in male weightclasses for no reason.
         # Made even higher thanks to the SPF.
         if number > 120:
-            pwarning("Suspiciously high female weightclass: %s" % row[csv.fieldnames.index('WeightClassKg')])
+            pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
     except ValueError:
         pass
 
     if 'BodyweightKg' in csv.fieldnames:
-        bw = row[csv.fieldnames.index('BodyweightKg')]
+        bw = row[csv.index('BodyweightKg')]
         if bw:
-            if '+' in row[csv.fieldnames.index('WeightClassKg')]:
+            if '+' in row[csv.index('WeightClassKg')]:
                 if float(bw) <= float(wtcls):
                     perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
-                        (row[csv.fieldnames.index('Name')], row[csv.fieldnames.index('BodyweightKg')],
-                         row[csv.fieldnames.index('WeightClassKg')]))
+                        (row[csv.index('Name')], row[csv.index('BodyweightKg')],
+                         row[csv.index('WeightClassKg')]))
             else:
                 if float(bw) > float(wtcls):
                     perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
-                        (row[csv.fieldnames.index('Name')], row[csv.fieldnames.index('BodyweightKg')],
-                         row[csv.fieldnames.index('WeightClassKg')]))
+                        (row[csv.index('Name')], row[csv.index('BodyweightKg')],
+                         row[csv.index('WeightClassKg')]))
 
     # USAPL's reporting site calculates weight class from bodyweight,
     # so if they leave bodyweight blank it will assign the lowest weight class,
     # giving the lifter a Wilks score of 1000+!
     if 'usapl' in globalFilename and 'BodyweightKg' in csv.fieldnames:
-        if row[csv.fieldnames.index('BodyweightKg')].strip() == '':
-            if row[csv.fieldnames.index('WeightClassKg')].strip() != '':
+        if row[csv.index('BodyweightKg')].strip() == '':
+            if row[csv.index('WeightClassKg')].strip() != '':
                 perror("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
-                        row[csv.fieldnames.index('Name')])
+                        row[csv.index('Name')])
 
 
 # Check that BestFooKg is actually the best of (Foo1Kg, Foo2Kg, Foo3Kg), if present.
@@ -455,18 +456,13 @@ def check_row_lift_consistency(row, csv, bestcol, attemptcols):
     if not bestcol in csv.fieldnames:
         return
 
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
-
     # If the lifter was disqualified for doping, none of the attempts count.
-    if 'Place' in csv.fieldnames and row[csv.fieldnames.index('Place')] == 'DD':
+    if 'Place' in csv.fieldnames and row[csv.index('Place')] == 'DD':
         return
 
     attempts = []
     for col in attemptcols:
-        attempt = float2(row[csv.fieldnames.index(col)]) if col in csv.fieldnames else 0.0
+        attempt = float2(row[csv.index(col)]) if col in csv.fieldnames else 0.0
         attempts.append(attempt)
 
     best = max(attempts)
@@ -477,14 +473,14 @@ def check_row_lift_consistency(row, csv, bestcol, attemptcols):
 
     # If the lifter bombed, the best column should be empty.
     if best < 0:
-        if row[csv.fieldnames.index(bestcol)] != '':
+        if row[csv.index(bestcol)] != '':
             perror("Lifter \"%s\" bombed on a lift, but column %s is not empty." %
-                    (row[csv.fieldnames.index('Name')], bestcol))
+                    (row[csv.index('Name')], bestcol))
         return
 
-    if best != float2(row[csv.fieldnames.index(bestcol)]):
+    if best != float2(row[csv.index(bestcol)]):
         perror("Entry for \"%s\" in column %s does not match attempts: expected %s, got %s" %
-               (row[csv.fieldnames.index('Name')], bestcol, str(best), row[csv.fieldnames.index(bestcol)]))
+               (row[csv.index('Name')], bestcol, str(best), row[csv.index(bestcol)]))
 
 
 
@@ -492,23 +488,18 @@ def check_row_total_consistency(row, csv):
     if not 'TotalKg' in csv.fieldnames:
         return
 
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
-
-    total = float2(row[csv.fieldnames.index('TotalKg')])
-    squat = float2(row[csv.fieldnames.index('BestSquatKg')]) if 'BestSquatKg' in csv.fieldnames else 0
-    bench = float2(row[csv.fieldnames.index('BestBenchKg')]) if 'BestBenchKg' in csv.fieldnames else 0
-    deadl = float2(row[csv.fieldnames.index('BestDeadliftKg')]) if 'BestDeadliftKg' in csv.fieldnames else 0
+    total = float2(row[csv.index('TotalKg')])
+    squat = float2(row[csv.index('BestSquatKg')]) if 'BestSquatKg' in csv.fieldnames else 0
+    bench = float2(row[csv.index('BestBenchKg')]) if 'BestBenchKg' in csv.fieldnames else 0
+    deadl = float2(row[csv.index('BestDeadliftKg')]) if 'BestDeadliftKg' in csv.fieldnames else 0
 
     # Disqualified, didn't finish the meet, etc.
     if total <= 0: # Should be zero.
         if 'Place' in csv.fieldnames:
-            place = row[csv.fieldnames.index('Place')]
+            place = row[csv.index('Place')]
             if place != 'DQ' and place != 'DD' and place != 'NS':
                 pwarning("Lifter has no total, but not marked DQ: \"%s\"" %
-                         row[csv.fieldnames.index('Name')])
+                         row[csv.index('Name')])
         return
 
     # Most federations round to 0.01, so rounding errors get introduced.
@@ -532,15 +523,10 @@ def check_row_wilks_consistency(row, csv):
     if not 'Sex' in csv.fieldnames:
         return
 
-    def float2(s):
-        if s == '':
-            return 0.0
-        return float(s)
-
-    total = float2(row[csv.fieldnames.index('TotalKg')])
-    bodyweight = float2(row[csv.fieldnames.index('BodyweightKg')])
-    sex = row[csv.fieldnames.index('Sex')]
-    score = float2(row[csv.fieldnames.index('Wilks')])
+    total = float2(row[csv.index('TotalKg')])
+    bodyweight = float2(row[csv.index('BodyweightKg')])
+    sex = row[csv.index('Sex')]
+    score = float2(row[csv.index('Wilks')])
 
     if score > 0:
         if total <= 0:
@@ -582,10 +568,10 @@ def check_row(row, csv):
             HeaderHandlers[csv.fieldnames[i]](text, row, csv)
 
     # Sex may not be missing.
-    if 'Sex' in csv.fieldnames and not row[csv.fieldnames.index('Sex')]:
+    if 'Sex' in csv.fieldnames and not row[csv.index('Sex')]:
         perror("Missing sex: %s" % ','.join(row))
 
-    if not row[csv.fieldnames.index('Name')]:
+    if not row[csv.index('Name')]:
         perror("Missing name: %s" % ','.join(row))
 
 

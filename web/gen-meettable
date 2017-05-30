@@ -16,7 +16,7 @@ MEETCSV = '../build/meets.csv'
 
 # Gets some row that contains the given meetid, using a super ham-fisted binary search.
 def findsomelifterin(meetid, lifterscsv):
-    meetidx = lifterscsv.fieldnames.index('MeetID')
+    meetidx = lifterscsv.index('MeetID')
     rows = lifterscsv.rows
 
     meetid = int(meetid)
@@ -38,7 +38,7 @@ def findsomelifterin(meetid, lifterscsv):
 # Knowing that the lifterscsv rows are in sorted order by MeetID,
 # perform a binary search and expand to grab nearby rows.
 def getliftersfor(meetid, lifterscsv):
-    meetidx = lifterscsv.fieldnames.index('MeetID')
+    meetidx = lifterscsv.index('MeetID')
 
     # Bisect to find one of the lifters.
     x = findsomelifterin(meetid, lifterscsv)
@@ -91,13 +91,13 @@ def makelifterurl(liftername):
 def main():
     csv = oplcsv.Csv(MEETCSV)
 
-    meetidx = csv.fieldnames.index('MeetID')
-    fedidx = csv.fieldnames.index('Federation')
-    dateidx = csv.fieldnames.index('Date')
-    countryidx = csv.fieldnames.index('MeetCountry')
-    stateidx = csv.fieldnames.index('MeetState')
-    townidx = csv.fieldnames.index('MeetTown')
-    meetnameidx = csv.fieldnames.index('MeetName')
+    meetidx = csv.index('MeetID')
+    fedidx = csv.index('Federation')
+    dateidx = csv.index('Date')
+    countryidx = csv.index('MeetCountry')
+    stateidx = csv.index('MeetState')
+    townidx = csv.index('MeetTown')
+    meetnameidx = csv.index('MeetName')
 
     # Order the meetcsv in the order of intended appearance.
     def sorter(x):
@@ -114,10 +114,10 @@ def main():
     csv.rows = sorted(csv.rows, key=sorter)
 
     lifters = oplcsv.Csv(LIFTERSCSV)
-    liftersmeetidx = lifters.fieldnames.index('MeetID')
-    lifterswilksidx = lifters.fieldnames.index('Wilks')
-    liftersnameidx = lifters.fieldnames.index('Name')
-    lifterseqidx = lifters.fieldnames.index('Equipment')
+    liftersmeetidx = lifters.index('MeetID')
+    lifterswilksidx = lifters.index('Wilks')
+    liftersnameidx = lifters.index('Name')
+    lifterseqidx = lifters.index('Equipment')
 
     columns = ["Federation", "Date", "Location", "Name", "Lifters",
                "Best Raw Lifter", "Raw Wilks", "Best Geared Lifter", "Geared Wilks"]

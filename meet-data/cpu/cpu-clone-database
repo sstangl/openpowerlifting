@@ -61,8 +61,8 @@ def append_rows(csv, soup):
     # There are multiple tables on the page, but the results table is the first.
     table = soup.find('table')
 
-    meetnameidx = csv.fieldnames.index('MeetName')
-    nameidx = csv.fieldnames.index('Name')
+    meetnameidx = csv.index('MeetName')
+    nameidx = csv.index('Name')
 
     for row in table.find_all('tr'):
         # Make sure the number of columns matches, and skip empty rows.
@@ -99,8 +99,8 @@ MonthLookup = {
 def fix_dates(csv):
     assert 'Year' in csv.fieldnames
     assert 'Date' in csv.fieldnames
-    yearidx = csv.fieldnames.index('Year')
-    dateidx = csv.fieldnames.index('Date')
+    yearidx = csv.index('Year')
+    dateidx = csv.index('Date')
 
     for row in csv.rows:
         # In a format like "30-Mar-07".
@@ -155,8 +155,8 @@ def main(max_pages):
     # Reformat the dates to OpenPowerlifting format so that they're sortable.
     fix_dates(csv)
 
-    dateidx = csv.fieldnames.index('Date')
-    meetnameidx = csv.fieldnames.index('MeetName')
+    dateidx = csv.index('Date')
+    meetnameidx = csv.index('MeetName')
     def sorter(r):
         return (r[dateidx], r[meetnameidx])
 

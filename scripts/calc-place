@@ -6,15 +6,15 @@ import sys
 
 def getcategory(csv, row):
     if 'Division' in csv.fieldnames:
-        dividx    = csv.fieldnames.index('Division')
+        dividx    = csv.index('Division')
         div = row[dividx].lower()
     else:
         div = 'Open'
 
-    eqidx     = csv.fieldnames.index('Equipment')
-    sexidx    = csv.fieldnames.index('Sex')
-    eventidx  = csv.fieldnames.index('Event')
-    wtclsidx  = csv.fieldnames.index('WeightClassKg')
+    eqidx     = csv.index('Equipment')
+    sexidx    = csv.index('Sex')
+    eventidx  = csv.index('Event')
+    wtclsidx  = csv.index('WeightClassKg')
     return (div, row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
@@ -32,13 +32,13 @@ def main(filename):
 
     csv.append_column('Place')
 
-    placeidx  = csv.fieldnames.index('Place')
-    totalidx  = csv.fieldnames.index('TotalKg')
+    placeidx  = csv.index('Place')
+    totalidx  = csv.index('TotalKg')
 
     if 'BodyweightKg' in csv.fieldnames:
-        bwidx = csv.fieldnames.index('BodyweightKg')
+        bwidx = csv.index('BodyweightKg')
     else:
-        bwidx = csv.fieldnames.index('TotalKg') # Equivalent to just ignoring bodyweight.
+        bwidx = csv.index('TotalKg') # Equivalent to just ignoring bodyweight.
 
     categories = []
     for row in csv.rows:

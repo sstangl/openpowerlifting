@@ -8,7 +8,7 @@ class Csv:
     def __init__(self, filename=None):
         if filename:
             with open(filename, 'r') as fd:
-                self.fieldnames = fd.readline().strip().split(',')
+                self.fieldnames = fd.readline().rstrip().split(',')
                 self.rows = [x.strip().split(',') for x in fd.readlines()]
         else:
             self.fieldnames = []
@@ -16,6 +16,9 @@ class Csv:
 
     def __len__(self):
         return len(self.rows)
+
+    def index(self, name):
+        return self.fieldnames.index(name)
 
     def append_column(self, name):
         self.fieldnames.append(name)
@@ -44,15 +47,6 @@ class Csv:
                 self.remove_column_by_index(i)
                 return
 
-    def select_columns_by_name(self, namelist):
-        x = []
-        for field in self.fieldnames:
-            if field not in namelist:
-                x.append(field)
-
-        for field in x:
-            self.remove_column_by_name(field)
-
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
@@ -60,7 +54,7 @@ class Csv:
                 self.append_column(header)
 
         # An array mapping index in other.fieldnames to index in self.fieldnames.
-        mapping = [self.fieldnames.index(header) for header in other.fieldnames]
+        mapping = [self.index(header) for header in other.fieldnames]
 
         for row in other.rows:
             build = ['' for x in range(0, len(self.fieldnames))]
@@ -72,4 +66,5 @@ class Csv:
 
     def write(self, fd):
         fd.write(','.join(self.fieldnames) + "\n")
-        fd.writelines([','.join(row) + "\n" for row in self.rows])
+        for row in self.rows:
+            fd.write(','.join(row) + "\n")

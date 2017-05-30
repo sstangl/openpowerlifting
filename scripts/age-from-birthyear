@@ -11,8 +11,8 @@ import sys
 
 
 def getmeetdate(meetid, meetcsv):
-    ididx = meetcsv.fieldnames.index('MeetID')
-    dateidx = meetcsv.fieldnames.index('Date')
+    ididx = meetcsv.index('MeetID')
+    dateidx = meetcsv.index('Date')
 
     for row in meetcsv.rows:
         if row[ididx] == meetid:
@@ -32,9 +32,9 @@ def main(lifterfile, meetfile):
     if not 'Age' in csv.fieldnames:
         csv.append_column('Age')
 
-    meetididx = csv.fieldnames.index('MeetID')
-    birthyearidx = csv.fieldnames.index('BirthYear')
-    ageidx = csv.fieldnames.index('Age')
+    meetididx = csv.index('MeetID')
+    birthyearidx = csv.index('BirthYear')
+    ageidx = csv.index('Age')
 
     for row in csv.rows:
         if row[birthyearidx] and not row[ageidx]:

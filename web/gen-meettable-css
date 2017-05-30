@@ -16,7 +16,7 @@ def main():
     csv = oplcsv.Csv(MEETCSV)
 
     # Get a list of all federations.
-    fedidx = csv.fieldnames.index('Federation')
+    fedidx = csv.index('Federation')
 
     feds = []
     for row in csv.rows:
