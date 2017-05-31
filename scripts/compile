@@ -17,6 +17,28 @@ def nextmeetid():
     return x
 
 
+# Fills in the Age column from the BirthYear column if possible.
+# Inexact ages derived in this way are noted as '.5', for example '23.5',
+# designating "either 23 or 24".
+def age_from_birthyear(csv, date):
+    if not 'BirthYear' in csv.fieldnames:
+        return
+
+    if not 'Age' in csv.fieldnames:
+        csv.append_column('Age')
+
+    birthyearidx = csv.index('BirthYear')
+    ageidx = csv.index('Age')
+    [year,month,day] = date.split('-')
+
+    for row in csv.rows:
+        if row[birthyearidx] and not row[ageidx]:
+            lower_age = int(year) - int(row[birthyearidx]) - 1
+            assert lower_age < 100
+            assert lower_age > 3
+            row[ageidx] = str(lower_age) + '.5'
+
+
 # Appends to lifterscsv and meetscsv, while assigning a MeetID mapping.
 def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     newlifters = Csv(lifterspath)
@@ -42,13 +64,15 @@ def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     # Derive the path (e.g., "uspa/0039").
     # Input looks like "meet-path/uspa/0039/meet.csv".
     assert not "MeetPath" in newmeet.fieldnames
-    path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)]
+    path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)].replace(os.sep,'/')
     assert not ',' in path
 
     newmeet.append_column("MeetPath")
     idx = newmeet.index("MeetPath")
     for row in newmeet.rows:
         row[idx] = path
+
+    age_from_birthyear(newlifters, newmeet.rows[0][newmeet.index('Date')])
 
     lifterscsv.cat(newlifters)
     meetscsv.cat(newmeet)

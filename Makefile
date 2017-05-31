@@ -16,7 +16,6 @@ builddir:
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}"
-	scripts/age-from-birthyear "${BUILDDIR}/${PLFILE}" "${BUILDDIR}/${MEETFILE}"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
