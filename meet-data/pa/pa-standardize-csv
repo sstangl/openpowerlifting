@@ -226,6 +226,10 @@ def standardize_column_names(csv):
             csv.fieldnames[i] = 'SubTotalDELETE'
         elif col == 'NAT':
             csv.fieldnames[i] = 'Country'
+        elif col == 'AGE GROUP':
+            csv.fieldnames[i] = 'Division'
+        elif col == 'WC':
+            csv.fieldnames[i] = 'WeightClassKg'
         else:
             error("Unknown column: \"%s\"" % col)
 
