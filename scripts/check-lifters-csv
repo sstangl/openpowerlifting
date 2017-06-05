@@ -245,6 +245,17 @@ def check_column_weightclass(s, row, csv):
         pass
 
 
+def check_column_bodyweightkg(s, row, csv):
+    check_positive_number_column(s, row, csv)
+    try:
+        f = float(s)
+        # One federation had a pre-teen division where someone weighed ~19kg.
+        if f < 19 or f > 300:
+            pwarning("BodyweightKg looks implausible: '%s'" % s)
+    except ValueError:
+        pass
+
+
 def check_column_state(s, row, csv):
     if '  ' in s:
         pwarning("Too much spacing in state: \"%s\"" % s)
@@ -273,7 +284,7 @@ HeaderHandlers = {
 
     # Stat columns. Only Kg is valid.
     'WeightClassKg': check_column_weightclass,
-    'BodyweightKg': check_positive_number_column,
+    'BodyweightKg': check_column_bodyweightkg,
     'Wilks': check_positive_number_column,
 
     # Lift columns. Only Kg is valid.
