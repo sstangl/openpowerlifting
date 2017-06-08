@@ -25,7 +25,7 @@
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
-    <option value="IPA">IPA - International Powerlifting Association (2015+)</option>
+    <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
     <option value="NASA">NASA - Natural Athlete Strength Association (Incomplete)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
