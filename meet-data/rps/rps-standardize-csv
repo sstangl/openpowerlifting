@@ -59,19 +59,44 @@ def remove_rows_by_empty_column(csv, colname):
         del csv.rows[idx]
 
 
+# Helper for detecting events, used by thread_event_state() and remove_event_rows().
+def str_to_event(s):
+    s = s.lower()
+    if s == 'full power' or s == 'powerlifting':
+        return 'SBD'
+    if s == 'squat' or s == 'squat only':
+        return 'S'
+    if s == 'bench' or s == 'bench only':
+        return 'B'
+    if s == 'deadlift' or s == 'dl' or s == 'deadlift only' or s == 'dl only':
+        return 'D'
+    if s == 'ironman' or ('push' in s and 'pull' in s):
+        return 'BD'
+    return None
+
+
+# Mark events by keeping track of Event state.
+def thread_event_state(csv):
+    assert not 'Event' in csv.fieldnames
+    csv.append_column('Event')
+    evtidx = csv.index('Event')
+
+    state = 'SBD'
+
+    for row in csv.rows:
+        evt = str_to_event(row[0])
+        if evt:
+            state = evt
+        else:
+            row[evtidx] = state
+
+
 # Removes rows that just contain things like "Bench" and "Ironman".
 def remove_event_rows(csv):
     def geteventidx(csv):
         for i,row in enumerate(csv.rows):
             for k in row:
-                k = k.lower()
-                if k == 'total' or k == 'deadlift' or k == 'bench' or k == 'squat':
-                    return i
-                if k == 'bench only' or k == 'ironman' or k == 'deadlift only':
-                    return i
-                if k == 'squat only':
-                    return i
-                if k == 'push / pull':
+                if str_to_event(k):
                     return i
         return -1
 
@@ -432,6 +457,31 @@ def fixlift(csv, liftfield):
             row[idx] = ''
 
 
+# Fixes things like bench-only lifters where TotalLBS != BestBenchLBS.
+def fixtotals(csv):
+    if not 'Event' in csv.fieldnames:
+        return
+    if not 'TotalLBS' in csv.fieldnames:
+        return
+
+    for row in csv.rows:
+        # Only fill in blank cells.
+        if row[csv.index('TotalLBS')]:
+            continue
+
+        total = 0.0
+        event = row[csv.index('Event')]
+        if 'S' in event:
+            total += float(row[csv.index('BestSquatLBS')])
+        if 'B' in event:
+            total += float(row[csv.index('BestBenchLBS')])
+        if 'D' in event:
+            total += float(row[csv.index('BestDeadliftLBS')])
+
+        if total != 0.0:
+            row[csv.index('TotalLBS')] = "{:.2f}".format(total)
+
+
 def mergeclassintodivision(csv):
     classidx = csv.index('Class')
     if classidx < 0:
@@ -453,6 +503,7 @@ def main(filename):
     remove_stars(csv)
     strip_whitespace(csv)
     remove_empty_rows(csv)
+    thread_event_state(csv)
     remove_event_rows(csv)
     remove_zeros(csv)
     standardize_fieldnames(csv)
@@ -484,6 +535,8 @@ def main(filename):
     for f in csv.fieldnames:
         if 'Squat' in f or 'Bench' in f or 'Deadlift' in f or 'Total' in f:
             fixlift(csv, f)
+
+    fixtotals(csv)
 
     if 'Place' in csv.fieldnames:
         fixplace(csv)
