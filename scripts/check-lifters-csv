@@ -150,6 +150,13 @@ def check_column_event(s, row, csv):
         if "SBD".count(c) >= 2:
             perror("Duplicate event character: %s" % s)
 
+    if 'S' in s and not 'BestSquatKg' in csv.fieldnames:
+        perror("Squat event, but no BestSquatKg")
+    if 'B' in s and not 'BestBenchKg' in csv.fieldnames:
+        perror("Bench event, but no BestBenchKg")
+    if 'D' in s and not 'BestDeadliftKg' in csv.fieldnames:
+        perror("Deadlift event, but no BestDeadliftKg")
+
     if found_illegal_char:
         perror("Unknown event type: %s" % s)
 
