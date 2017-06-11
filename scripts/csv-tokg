@@ -9,6 +9,8 @@
 #
 
 import sys
+from oplcsv import Csv
+
 
 # Round to two decimal places.
 def internal_to_kg_string(s):
@@ -22,6 +24,7 @@ def internal_to_kg_string(s):
     except ValueError:
         print("Field not a float: \"%s\"" % s, file=sys.stderr)
         sys.exit(1)
+
 
 def to_kg(s):
     if s[-1] is '+':
@@ -42,32 +45,31 @@ def to_kg(s):
 
     return internal_to_kg_string(s)
 
-if len(sys.argv) != 2:
-    print(' Usage: %s csvfile' % sys.argv[0], file=sys.stderr)
-    sys.exit(1)
 
-(scriptname, csvname) = sys.argv
+def main(filename):
+    csv = Csv(filename)
+    changed = False
 
-with open(csvname) as fd:
-    csv = [x.strip().split(',') for x in fd.readlines()]
+    for i,field in enumerate(csv.fieldnames):
+        if not 'LBS' in field:
+            continue
 
-for j in range(0, len(csv[0])):
-    if 'LBS' not in csv[0][j]:
-        continue
+        print(' Converting column "%s"' % field)
+        changed = True
 
-    print(' Converting column "%s"' % csv[0][j])
+        csv.fieldnames[i] = field.replace('LBS','Kg')
 
-    csv[0][j] = csv[0][j].replace('LBS', 'Kg')
+        for row in csv.rows:
+            if row[i]:
+                row[i] = to_kg(row[i])
 
-    for i in range(1, len(csv)):
-        # This doesn't really belong here, but just deal with it man ok?
-        if 'SHW' in csv[i][j]:
-            csv[i][j] = '308+'
+    if changed:
+        with open(filename, 'w') as fd:
+            csv.write(fd)
 
-        if csv[i][j]:
-            csv[i][j] = to_kg(csv[i][j])
 
-lines = [','.join(row) + "\n" for row in csv]
-
-with open(csvname, 'w') as fd:
-    fd.writelines(lines)
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(' Usage: %s csvfile' % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])
