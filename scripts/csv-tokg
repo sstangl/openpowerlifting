@@ -61,7 +61,17 @@ def main(filename):
 
         for row in csv.rows:
             if row[i]:
-                row[i] = to_kg(row[i])
+                if row[i] == 'SHW':
+                    sex = row[csv.index('Sex')]
+                    assert sex in 'MF'
+
+                    # Hardcode the traditional classes.
+                    if sex == 'M':
+                        row[i] = '308+'
+                    else:
+                        row[i] = '198+'
+                else:
+                    row[i] = to_kg(row[i])
 
     if changed:
         with open(filename, 'w') as fd:
