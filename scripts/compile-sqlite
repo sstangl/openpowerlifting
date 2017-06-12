@@ -93,10 +93,17 @@ IMPORTCOMMAND="
 
 ${CREATEENTRIESTABLE}
 .import build/openpowerlifting.csv entries
+delete from entries where MeetID = 'MeetID';
+
 ${CREATEMEETSTABLE}
 .import build/meets.csv meets
+delete from meets where MeetID = 'MeetID';
+
 ${CREATESOCIALTABLE}
 .import lifter-data/social-media.csv social
+delete from social where Name = 'Name';
+
+vacuum;
 "
 
 echo "${IMPORTCOMMAND}" | sqlite3 "${DBFILE}"
