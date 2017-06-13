@@ -67,9 +67,9 @@ def main(filename):
 
                     # Hardcode the traditional classes.
                     if sex == 'M':
-                        row[i] = '308+'
+                        row[i] = '140+'
                     else:
-                        row[i] = '198+'
+                        row[i] = '90+'
                 else:
                     row[i] = to_kg(row[i])
 
