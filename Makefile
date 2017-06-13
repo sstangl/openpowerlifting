@@ -35,6 +35,7 @@ check:
 # or at least are quick to read and not filled with noise.
 # Data showing up here should be immediately actionable.
 probe-quick:
+	${DATADIR}/365strong/365strong-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/nipf/nipf-probe || true
@@ -50,6 +51,7 @@ probe-quick:
 
 # List of all probes.
 probe:
+	${DATADIR}/365strong/365strong-probe || true
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe || true
