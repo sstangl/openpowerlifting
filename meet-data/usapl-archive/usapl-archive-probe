@@ -33,17 +33,29 @@ def getenteredurls():
         if 'URL' in files:
             with open(dirname + os.sep + 'URL', 'r') as fd:
                 for k in fd.readlines():
-                    urls.append(k.strip())
+                    k = k.strip()
+                    if not k in urls:
+                        urls.append(k)
     return urls
 
 
 def main():
+    summarize = False
+    if len(sys.argv) == 2 and sys.argv[1] == '--quick':
+        summarize = True
+
     meetlist = getmeetlist()
     known = getenteredurls()
 
+    count = 0
     for m in meetlist:
         if not m in known:
-            print(color('[USAPL Archive] ') + m)
+            count += 1
+            if not summarize:
+                print(color('[USAPL Archive] ') + m)
+
+    if count > 0:
+        print(color('[USAPL Archive] ') + "%d meets remaining." % count)
 
 
 if __name__ == '__main__':

@@ -46,6 +46,7 @@ probe-quick:
 	${DATADIR}/spf/spf-probe || true
 	${DATADIR}/spf-archive/spf-archive-probe || true
 	${DATADIR}/usapl/usapl-probe || true
+	${DATADIR}/usapl-archive/usapl-archive --quick || true
 	${DATADIR}/uspa/uspa-probe || true
 	${DATADIR}/xpc/xpc-probe || true
 
