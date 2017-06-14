@@ -36,7 +36,9 @@ check:
 # Data showing up here should be immediately actionable.
 probe-quick:
 	${DATADIR}/365strong/365strong-probe || true
+	${DATADIR}/apf/apf-probe --quick || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
+	${DATADIR}/cpf/cpf-probe --quick || true
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/pa/pa-probe || true

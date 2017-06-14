@@ -39,7 +39,9 @@ def getmeetlist(html):
     urls = []
     for a in alist:
         if a.text != 'Register':
-            urls.append(a['href'])
+            k = a['href'].strip()
+            if not k in urls:
+                urls.append(k)
 
     return urls
 
@@ -54,13 +56,23 @@ def getenteredurls():
 
 
 def main():
+    quick = False
+    if '--quick' in sys.argv:
+        quick = True
+
     html = gethtml()
     meetlist = getmeetlist(html)
     known = getenteredurls()
 
+    count = 0
     for m in meetlist:
         if not m in known:
-            print(color('[CPF] ') + m)
+            count += 1
+            if not quick or count <= 5:
+                print(color('[CPF] ') + m)
+
+    if count > 0:
+        print(color('[CPF] ') + '%d meets remaining.' % count)
 
 if __name__ == '__main__':
     main()

@@ -72,6 +72,10 @@ def getenteredurls():
 
 
 def main():
+    quick = False
+    if '--quick' in sys.argv:
+        quick = True
+
     meetlist = []
     for url in URLS:
         html = gethtml(url)
@@ -79,9 +83,16 @@ def main():
 
     known = getenteredurls()
 
+    count = 0
     for m in meetlist:
         if not m in known:
-            print(color('[APF] ') + m)
+            count += 1
+            if not quick or count <= 6:
+                print(color('[APF] ') + m)
+
+    if count > 0:
+        print(color('[APF] ') + '%d meets remaining.' % count)
+
     print(color('[APF] ') + "Continue working through archive.")
 
 
