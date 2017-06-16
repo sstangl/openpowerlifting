@@ -37,6 +37,7 @@ check:
 probe-quick:
 	${DATADIR}/365strong/365strong-probe || true
 	${DATADIR}/apf/apf-probe --quick || true
+	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
 	${DATADIR}/ipa/ipa-probe || true
@@ -56,6 +57,7 @@ probe-quick:
 probe:
 	${DATADIR}/365strong/365strong-probe || true
 	${DATADIR}/apf/apf-probe || true
+	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe || true
 	${DATADIR}/epf/epf-probe || true

@@ -64,9 +64,10 @@
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
   </optgroup>
   <optgroup label="Russia">
-    <option value="SCT,WRPF">
+    <option value="BB,SCT,WRPF">
       All Russian Feds
     </option>
+    <option value="BB">BB - Bogatyr Brotherhood (Incomplete)</option>
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
