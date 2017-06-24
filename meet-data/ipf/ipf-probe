@@ -52,6 +52,9 @@ def getmeetlist(html):
             url = BASEURL + url
             url = url.replace('.com//','/')
         if not url in searchurls:
+            # Ignore some URLs that are clearly bogus.
+            if 'worldpowerlifting.info' in url:
+                continue
             searchurls.append(url)
 
     urls = []
@@ -63,10 +66,9 @@ def getmeetlist(html):
 
         sections = soup.find_all("section", {"id": "main_content"})
         if len(sections) == 0:
-            error("Page layout seems to have changed.")
+            error("Child page layout seems to have changed.")
         elif len(sections) > 1:
             error("Multiple result areas found.")
-
 
         for a in sections[0].find_all('a'):
             url = a['href']
