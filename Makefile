@@ -41,6 +41,7 @@ probe-quick:
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
 	${DATADIR}/ipa/ipa-probe || true
+	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
@@ -66,6 +67,7 @@ probe:
 	${DATADIR}/gbpf/gbpf-probe || true
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/ipf/ipf-probe || true
+	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/napf/napf-probe || true
 	${DATADIR}/nasa/nasa-probe || true
 	${DATADIR}/nipf/nipf-probe || true
