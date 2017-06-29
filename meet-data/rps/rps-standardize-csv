@@ -471,11 +471,11 @@ def fixtotals(csv):
 
         total = 0.0
         event = row[csv.index('Event')]
-        if 'S' in event:
+        if 'S' in event and row[csv.index('BestSquatLBS')]:
             total += float(row[csv.index('BestSquatLBS')])
-        if 'B' in event:
+        if 'B' in event and row[csv.index('BestBenchLBS')]:
             total += float(row[csv.index('BestBenchLBS')])
-        if 'D' in event:
+        if 'D' in event and row[csv.index('BestDeadliftLBS')]:
             total += float(row[csv.index('BestDeadliftLBS')])
 
         if total != 0.0:
