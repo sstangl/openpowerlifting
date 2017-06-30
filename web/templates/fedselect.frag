@@ -76,7 +76,7 @@
       All United Kingdom Feds
     </option>
     <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
-    <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF] (2017+)</option>
     <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   </optgroup>
 </select>
