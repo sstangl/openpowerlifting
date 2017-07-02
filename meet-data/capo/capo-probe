@@ -52,7 +52,8 @@ def getenteredurls():
     for dirname, subdirs, files in os.walk(FEDDIR):
         if 'URL' in files:
             with open(dirname + os.sep + 'URL', 'r') as fd:
-                urls.append(fd.readline().strip())
+                for k in fd.readlines():
+                    urls.append(k.strip())
     return urls
 
 
