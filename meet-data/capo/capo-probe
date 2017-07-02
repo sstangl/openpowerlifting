@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# CAPO posts all results to a single page.
+#
+
+
+from bs4 import BeautifulSoup
+import datetime
+import os
+import shutil
+import sys
+import urllib.request
+
+
+MEETSURL = "http://www.capoaustralianpowerlifting.com.au/index.php/calendar-2/results"
+ROOTURL = "http://www.capoaustralianpowerlifting.com.au"
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;35m" + s + "\033[0;m"
+
+
+def gethtml():
+    with urllib.request.urlopen(MEETSURL) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    meetul = soup.find("div", {"itemprop": "articleBody"})
+
+    urls = []
+    for a in meetul.find_all('a'):
+        href = a['href']
+        if href.startswith('/'):
+            href = ROOTURL + href
+        urls.append(href)
+
+    return urls
+
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(FEDDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                urls.append(fd.readline().strip())
+    return urls
+
+
+def main():
+    quick = False
+    if '--quick' in sys.argv:
+        quick = True
+
+    html = gethtml()
+    meetlist = getmeetlist(html)
+    known = getenteredurls()
+
+    count = 0
+    for m in meetlist:
+        if not m in known:
+            count += 1
+            if not quick or count <= 6:
+                print(color('[CAPO] ') + m)
+
+    if count > 0:
+        print(color('[CAPO] ') + '%d meets remaining.' % count)
+
+if __name__ == '__main__':
+    main()
