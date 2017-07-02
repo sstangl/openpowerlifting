@@ -12,7 +12,7 @@ import urllib.parse
 
 LIFTERSCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
-
+SOCIALFILE = '../lifter-data/social-media.csv'
 
 # Gets some row that contains the given meetid, using a super ham-fisted binary search.
 def findsomelifterin(meetid, lifterscsv):
@@ -88,6 +88,22 @@ def makelifterurl(liftername):
     return u'lifters.html?q=%s' % (liftername)
 
 
+SocialMediaCSV = None
+def makeinstagram(liftername):
+    global SocialMediaCSV
+    if not SocialMediaCSV:
+        SocialMediaCSV = oplcsv.Csv(SOCIALFILE)
+
+    nameidx = SocialMediaCSV.index('Name')
+    igidx = SocialMediaCSV.index('Instagram')
+
+    for row in SocialMediaCSV.rows:
+        if row[nameidx] == liftername and row[igidx]:
+            return '<a href="https://www.instagram.com/%s"><img class="instagram" src="images/ig-glyph-logo_May2016.png"></a>' % (row[igidx])
+
+    return ''
+
+
 def main():
     csv = oplcsv.Csv(MEETCSV)
 
@@ -158,7 +174,8 @@ def main():
         if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
             bestrawlifter = rawlifters[0][liftersnameidx]
             bestrawwilks = rawlifters[0][lifterswilksidx]
-            rawlifterhtml = '<a href="%s">%s</a>' % (makelifterurl(bestrawlifter), bestrawlifter)
+            rawlifterhtml = '<a href="%s">%s</a>%s' % (makelifterurl(bestrawlifter), \
+                    bestrawlifter, makeinstagram(bestrawlifter))
         else:
             bestrawlifter = ''
             bestrawwilks = ''
@@ -167,7 +184,9 @@ def main():
         if len(gearedlifters) > 0 and gearedlifters[0][lifterswilksidx]:
             bestgearedlifter = gearedlifters[0][liftersnameidx]
             bestgearedwilks = gearedlifters[0][lifterswilksidx]
-            gearedlifterhtml = '<a href="%s">%s</a>' % (makelifterurl(bestgearedlifter), bestgearedlifter)
+            gearedlifterhtml = '<a href="%s">%s</a>%s' % \
+                    (makelifterurl(bestgearedlifter), bestgearedlifter, \
+                     makeinstagram(bestgearedlifter))
         else:
             bestgearedlifter = ''
             bestgearedwilks = ''
