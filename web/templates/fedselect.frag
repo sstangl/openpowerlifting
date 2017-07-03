@@ -19,7 +19,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
+    <option value="365Strong,AAU,APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
