@@ -122,7 +122,7 @@ def check_column_age(s, row, csv):
                     # Then SPF let a 7 year old.
                     # Then UPA had 6 and 5 year olds... when does this end?
             pwarning("Age unexpectedly low: %s" % s)
-        if age > 90:
+        if age > 100:
             pwarning("Age unexpectedly high: %s" % s)
 
     except ValueError:
