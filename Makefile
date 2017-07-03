@@ -36,6 +36,7 @@ check:
 # Data showing up here should be immediately actionable.
 probe-quick:
 	${DATADIR}/365strong/365strong-probe || true
+	${DATADIR}/aau/aau-probe --quick || true
 	${DATADIR}/apf/apf-probe --quick || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/capo/capo-probe --quick || true
@@ -58,6 +59,7 @@ probe-quick:
 # List of all probes.
 probe:
 	${DATADIR}/365strong/365strong-probe || true
+	${DATADIR}/aau/aau-probe || true
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/capo/capo-probe || true
