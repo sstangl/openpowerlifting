@@ -50,6 +50,7 @@ def pwarning(s):
 KnownFederations = [
     "365Strong", # 365 Strong Powerlifting Federation.
     "AAPF", # Amateur APF (drug-tested).
+    "AAU", # Amateur Athletic Union.
     "APA",
     "APF",
     "AsianPF", # Asian Powerlifting Federation, IPF.

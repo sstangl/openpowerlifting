@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AsianPF,CommonwealthPF,CPU,EPF,FESUPO,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,THSPA,USAPL">
+  <option value="AAU,AsianPF,CommonwealthPF,CPU,EPF,FESUPO,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,THSPA,USAPL">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -23,6 +23,7 @@
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
+    <option value="AAU">AAU - Amateur Athletic Union (Incomplete)</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
