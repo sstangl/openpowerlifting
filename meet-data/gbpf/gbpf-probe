@@ -42,16 +42,15 @@ def getmeetlist(html):
     content = soup.find_all("div", {"class": "c12"})
     if len(content) == 0:
         error("Page layout seems to have changed.")
-    elif len(content) != 4:
-        error("Page layout seems to have changed.")
 
     urls = []
-    for a in content[2].find_all('a'):
-        url = a['href']
-        if not 'http' in url:
-            url = BASEURL + url
-        if not url in urls:
-            urls.append(url)
+    for c in content:
+        for a in c.find_all('a'):
+            url = a['href']
+            if not 'http' in url:
+                url = BASEURL + url
+            if not url in urls:
+                urls.append(url)
 
     return urls
 
@@ -67,6 +66,10 @@ def getenteredurls():
 
 
 def main():
+    quick = False
+    if '--quick' in sys.argv:
+        quick = True
+
     meetlist = []
     for url in URLS:
         html = gethtml(url)
@@ -74,10 +77,15 @@ def main():
 
     known = getenteredurls()
 
+    count = 0
     for m in meetlist:
         if not m in known:
-            print(color('[GBPF] ') + m)
-    print(color('[GBPF] ') + "Continue working through archive.")
+            count += 1
+            if not quick or count <= 6:
+                print(color('[GBPF] ') + m)
+
+    if count > 0:
+        print(color('[GBPF] ') + "%d meets remaining." % count)
 
 
 if __name__ == '__main__':

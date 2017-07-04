@@ -42,6 +42,7 @@ probe-quick:
 	${DATADIR}/capo/capo-probe --quick || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
+	${DATADIR}/gbpf/gbpf-probe --quick || true
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nipf/nipf-probe || true
