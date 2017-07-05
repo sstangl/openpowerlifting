@@ -11,10 +11,8 @@ import sys
 
 
 # Hashtable for sex lookup.
+# str -> [int, int] (left for male, right for female).
 NameToSexHash = {}
-
-# List of conflicts we've already printed.
-AlreadyPrintedList = []
 
 ###############################################
 
@@ -74,10 +72,12 @@ def process_file(path):
             continue
 
         if not name in NameToSexHash:
-            NameToSexHash[name] = sex
-        elif sex != NameToSexHash[name] and not name in AlreadyPrintedList:
-            pwarning("Sex conflict for %s." % name)
-            AlreadyPrintedList.append(name)
+            NameToSexHash[name] = [0,0]
+
+        if sex == 'M':
+            NameToSexHash[name][0] = NameToSexHash[name][0] + 1
+        else:
+            NameToSexHash[name][1] = NameToSexHash[name][1] + 1
 
 
 def main():
@@ -85,6 +85,10 @@ def main():
         if 'lifters.csv' in files:
             lifterspath = dirname + os.sep + 'lifters.csv'
             process_file(lifterspath)
+
+    for name,counts in NameToSexHash.items():
+        if counts[0] and counts[1]:
+            pwarning("Sex conflict for %s: %uM, %uF." % (name, counts[0], counts[1]))
 
     if errorCount > 0 or warningCount > 0:
         print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
