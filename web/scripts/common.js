@@ -44,6 +44,11 @@ return {
         var fullname = row[opldb.NAME];
         var name = '<a href="' + this.makeLiftersUrl(fullname) + '">' + fullname + '</a>';
 
+        // XXX: Bad hack to make Ben's name pink, per request.
+        if (fullname === "Ben Gianacakos") {
+            name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
+        }
+
         // Attempt to read in social media data, if present.
         if (window.socialmedia !== undefined) {
             var social = window.socialmedia[fullname];
