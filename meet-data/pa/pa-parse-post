@@ -24,7 +24,7 @@ sed -i -e "s/,\(-[0-9][0-9]*\)\.0,/,\1,/g" lifters.csv
 cp ${SCRIPTDIR}/../meet.template meet.csv
 
 # Calculate place for 2013 and earlier documents that don't self-report.
-${REPOSCRIPTDIR}/calc-place lifters.csv
+${REPOSCRIPTDIR}/calc-place lifters.csv || true
 
 # Show any warnings.
 ${REPOSCRIPTDIR}/check-lifters-csv lifters.csv
