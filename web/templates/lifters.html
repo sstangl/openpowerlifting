@@ -24,7 +24,13 @@
     <div class="flexbox">
 #exec python3 gen-header lifters
       <div id="controls">
-        <p><span id="lifter">No lifter specified.</span></p>
+        <div id="controls-left">
+          <span id="lifter">No lifter specified.</span>
+          <select id="weighttype">
+            <option value="lb">lbs</option>
+            <option value="kg">kg</option>
+          </select>
+        </div>
       </div>
       <div id="theGrid"></div>
       <div class="info">

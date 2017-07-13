@@ -5,15 +5,13 @@ var grid; // The SlickGrid.
 var sortCol = {id: 'date'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
 var lifterString = document.getElementById('lifter');
-
-// TODO: Actually have a toggle for this.
-var usingLbs = true;
+var selWeightType = document.getElementById("weighttype");
 
 // TODO: Share this with main-index.js. A bunch of functions can be shared, actually.
 function weight(kg) {
     if (kg === undefined)
         return '';
-    if (!usingLbs)
+    if (selWeightType.value === "kg")
         return String(kg);
     return String(common.kg2lbs(kg));
 }
@@ -22,7 +20,7 @@ function weight(kg) {
 function parseWeightClass(x) {
     if (x === undefined)
         return '';
-    if (!usingLbs)
+    if (selWeightType.value === "kg")
         return String(x);
     if (typeof x === 'number')
         return String(Math.floor(common.kg2lbs(x)));
@@ -75,7 +73,30 @@ function makeDataProvider(query) {
 }
 
 
+function addSelectorListeners(selector) {
+    selector.addEventListener("change", redraw);
+    selector.addEventListener("keydown", function()
+        {
+            setTimeout(redraw, 0);
+        }
+    );
+}
+
+
+function addEventListeners() {
+    addSelectorListeners(selWeightType);
+}
+
+
+function redraw() {
+    grid.invalidateAllRows();
+    grid.render();
+}
+
+
 function onload() {
+    addEventListeners();
+
     var query = common.getqueryobj();
 
     var rankWidth = 40;
@@ -130,13 +151,6 @@ function onload() {
     var data = makeDataProvider(query);
     grid = new Slick.Grid("#theGrid", data, columns, options);
     grid.setSortColumn(sortCol.id, sortAsc);
-
-    function redraw() {
-        var source = makeDataProvider(query);
-        grid.setData(source);
-        grid.invalidateAllRows();
-        grid.render();
-    }
 
     grid.onSort.subscribe(function(e, args) {
         sortCol = args.sortCol;
