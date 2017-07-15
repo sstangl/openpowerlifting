@@ -63,6 +63,7 @@ return {
         var date = this.string(meetrow[meetdb.DATE]);
         var meetname = this.string(meetrow[meetdb.MEETNAME]);
         var meeturl = this.makeMeetUrl(fed, date, meetname);
+        var sex = (row[opldb.SEX] === 0) ? 'M' : 'F';
 
         // Age uses .5 to show imprecision. The lower bound is given.
         // Tilde is shown at the end so numbers continue to line up,
@@ -82,7 +83,7 @@ return {
             location:    location,
             division:    this.string(row[opldb.DIVISION]),
             meetname:    '<a href="' + meeturl + '">' + meetname + '</a>',
-            sex:         this.string(row[opldb.SEX]),
+            sex:         sex,
             age:         age,
             equip:       this.parseEquipment(row[opldb.EQUIPMENT]),
             bw:          weight(row[opldb.BODYWEIGHTKG]), // TODO: this.weight()

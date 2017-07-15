@@ -25,6 +25,8 @@ data: builddir
 
 database: data
 	${SCRIPTDIR}/csv-to-js "${BUILDDIR}/data/openpowerlifting.csv" opldb > "${BUILDDIR}/scripts/${PLFILEJS}"
+	sed -i -e 's/,"M",/,0,/g' "${BUILDDIR}/scripts/${PLFILEJS}"
+	sed -i -e 's/,"F",/,1,/g' "${BUILDDIR}/scripts/${PLFILEJS}"
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
 	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 

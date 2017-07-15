@@ -65,9 +65,9 @@ function getIndices() {
     function filter(row) {
         if (!men && !women)
             return false;
-        if (!men && row[opldb.SEX] == 'M')
+        if (!men && row[opldb.SEX] === 0)
             return false;
-        if (!women && row[opldb.SEX] == 'F')
+        if (!women && row[opldb.SEX] === 1)
             return false;
 
         if (selectonclass) {
