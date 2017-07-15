@@ -132,15 +132,16 @@ return {
     },
     
     parseEquipment: function(str) {
-        if (str === "Raw")
+        // Values set by web/Makefile.
+        if (str === 0)
             return "Raw";
-        if (str === "Wraps")
+        if (str === 1)
             return "Wraps";
-        if (str === "Single-ply")
+        if (str === 2)
             return "Single";
-        if (str === "Multi-ply")
+        if (str === 3)
             return "Multi";
-        if (str === "Straps") // For Yury Belkin.
+        if (str === 4) // For Yury Belkin.
             return "Straps";
         return "";
     },

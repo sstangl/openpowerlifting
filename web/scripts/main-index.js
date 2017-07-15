@@ -95,10 +95,10 @@ function getIndices() {
         }
 
         var e = row[opldb.EQUIPMENT];
-        return (raw && e == "Raw") ||
-               (wraps && e == "Wraps") ||
-               (single && e == "Single-ply") ||
-               (multi && e == "Multi-ply");
+        return (raw && e === 0) ||
+               (wraps && e === 1) ||
+               (single && e === 2) ||
+               (multi && e === 3);
     }
 
     var indices = db_make_indices_list();
