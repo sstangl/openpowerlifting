@@ -6,6 +6,16 @@
 # Usage: ./helper 1602 "http://path/to/url.pdf"
 #
 
+if [ "$#" -ne 2 ]; then
+	echo " Usage: $0 1602 \"http://path/to/url.pdf\""
+	exit 1
+fi
+
+if [ -d "$1" ]; then
+	echo " Directory \"$1\" already exists."
+	exit 1
+fi
+
 mkdir "$1"
 cd "$1"
 echo "$2" > URL
