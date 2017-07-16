@@ -51,7 +51,7 @@
     <option value="CPF,CPL,CPU">
       All Canadian Feds
     </option>
-    <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (Incomplete)</option>
+    <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (2017+)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
   </optgroup>
