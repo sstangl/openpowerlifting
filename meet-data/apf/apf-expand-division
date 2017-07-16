@@ -41,7 +41,9 @@ def main(filename):
         else:
             raise Exception("unknown sex")
 
-        if 'CR_' in div or 'RA_' in div: # RA_ is used by the CPF.
+        # The CPF uses "Raw Assisted" (RA) and "Assisted Raw" (AR)
+        # as a category meaning "sleeves or wraps", so it counts as wraps.
+        if 'CR_' in div or 'RA_' in div or 'AR_' in div:
             row[eqpidx] = 'Wraps'
         elif 'R_' in div:
             row[eqpidx] = 'Raw'
