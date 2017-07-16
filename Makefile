@@ -95,6 +95,7 @@ probe:
 clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf 'scripts/__pycache__'
+	rm -rf '${DATADIR}/apf/__pycache__'
 	rm -rf '${DATADIR}/cpu/__pycache__'
 	rm -rf '${DATADIR}/nasa/__pycache__'
 	rm -rf '${DATADIR}/nipf/__pycache__'

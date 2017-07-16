@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+#
+# The APF encodes a lot of information in their division field.
+# This script expands the Division column into Sex and Equipment columns.
+#
+# This works for APF meets that use classes that look like "M_OCR_AAPF".
+#
+
+from oplcsv import Csv
+import sys
+
+def main(filename):
+    csv = Csv(filename)
+
+    if not 'Division' in csv.fieldnames:
+        return
+
+    if not 'Sex' in csv.fieldnames:
+        csv.insert_column(csv.index('Division'), 'Sex')
+
+    if not 'Equipment' in csv.fieldnames:
+        csv.insert_column(csv.index('Division'), 'Equipment')
+
+    dividx = csv.index('Division')
+    sexidx = csv.index('Sex')
+    eqpidx = csv.index('Equipment')
+
+    for row in csv.rows:
+        div = row[dividx]
+
+        if not div: 
+            continue
+        if div.count('_') != 2:
+            continue
+
+        if div.startswith('M_'):
+            row[sexidx] = 'M'
+        elif div.startswith('F_'):
+            row[sexidx] = 'F'
+        else:
+            raise Exception("unknown sex")
+
+        if 'CR_' in div:
+            row[eqpidx] = 'Wraps'
+        elif 'R_' in div:
+            row[eqpidx] = 'Raw'
+        elif 'EM_' in div:
+            row[eqpidx] = 'Multi-ply'
+        elif 'ES_' in div:
+            row[eqpidx] = 'Single-ply'
+        else:
+            raise Exception("unknown equipment")
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+
+if __name__ == '__main__':
+    main(sys.argv[1])
