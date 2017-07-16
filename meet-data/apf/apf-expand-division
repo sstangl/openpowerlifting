@@ -30,7 +30,7 @@ def main(filename):
 
         if not div: 
             continue
-        if div.count('_') != 2:
+        if div.count('_') < 2: # Also allow M_MR_4_APF.
             continue
 
         if div.startswith('M_'):
