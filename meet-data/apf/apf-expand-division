@@ -27,15 +27,16 @@ def main(filename):
 
     for row in csv.rows:
         div = row[dividx]
+        div = div.replace('-','_') # Sometimes dashes are used instead.
 
         if not div: 
             continue
         if div.count('_') < 2: # Also allow M_MR_4_APF.
             continue
 
-        if div.startswith('M_'):
+        if div.startswith('M'):
             row[sexidx] = 'M'
-        elif div.startswith('F_'):
+        elif div.startswith('F'):
             row[sexidx] = 'F'
         else:
             raise Exception("unknown sex")
