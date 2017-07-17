@@ -78,10 +78,6 @@ def check_column_name(s, row, csv):
     if 'Esq.' in s:
         perror("Esquire must be standardized on no period: \"%s\"" % s)
 
-    k = s.split()
-    if k[-1] == 'JR' or k[-1] == 'jr' or k[-1] == 'SR' or k[-1] == 'sr':
-        perror("Junior/Senior in names must be capitalized like 'Jr': \"%s\"" % s)
-
     # This only works for names written in English, but that's OK for now.
     has_illegal_char = False
     for c in s:
@@ -99,8 +95,14 @@ def check_column_name(s, row, csv):
     elif not part[-1][0].isupper() and not "d'" in part[-1] and not part[-1].startswith('de'):
         perror("Name must be in proper case: \"%s\"" % s)
 
-    if part[0] == 'Jr' or part[0] == 'Sr': # USAPL does this.
+    if part[-1] == 'JR' or part[-1] == 'jr' or part[-1] == 'SR' or part[-1] == 'sr':
+        perror("Junior/Senior in names must be capitalized like 'Jr': \"%s\"" % s)
+    elif part[0] == 'Jr' or part[0] == 'Sr': # USAPL does this.
         perror("Jr marking must be moved to end of name: \"%s\"" % s)
+
+    # Some federations mark drug-testing using "-DT".
+    if s.endswith('DT'):
+        perror("Drug-testing information present in name: \"%s\"" % s)
 
     for p in part:
         if p[0] == "'" and p[-1] == "'":
