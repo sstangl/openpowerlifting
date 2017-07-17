@@ -31,7 +31,7 @@
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
-    <option value="SPF">SPF - Southern Powerlifting Federation (Help Needed!)</option>
+    <option value="SPF">SPF - Southern Powerlifting Federation (2016+)</option>
     <option value="THSPA">THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
     <option value="UPA">UPA - United Powerlifting Association (2016+)</option>
     <option value="USAPL">USAPL - USA Powerlifting [IPF] (2014+)</option>
