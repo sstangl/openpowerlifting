@@ -85,4 +85,16 @@ function db_get_meetid(fed, date, meetname) {
 }
 
 
+// Look up a meet by meetpath.
+function db_get_meetid_by_meetpath(meetpath) {
+    for (var i = 0; i < meetdb.data.length; ++i) {
+        var row = meetdb.data[i];
+        if (row[meetdb.MEETPATH] === meetpath) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 // Get an array of indices 

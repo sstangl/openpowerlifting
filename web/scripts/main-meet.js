@@ -132,11 +132,19 @@ function buildtable(indices) {
 
 function onload() {
     var query = common.getqueryobj();
-    var meetid = db_get_meetid(query.f, query.d, query.n)
+    var meetid = -1;
+    if (query.m) {
+        meetid = db_get_meetid_by_meetpath(query.m);
+    } else {
+        meetid = db_get_meetid(query.f, query.d, query.n);
+    }
+
+    // Not found.
     if (meetid === -1)
         return;
 
     // TODO: This could be made faster by using binary search, since MeetID is sequential.
+    // TODO: That's actually a bad idea, since it prevents pre-sorting.
     var indices = db_make_indices_list();
     indices = db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
 
