@@ -123,7 +123,9 @@ def check(scriptname, filename):
 
     for i, text in enumerate(row):
         if text.strip() != text:
-            perror("Extraneous whitespace for %s in row %s" % (text, ','.join(row)))
+            perror("Extraneous whitespace for \"%s\"." % text)
+        if text.replace('  ', ' ') != text:
+            perror("Excessive spacing for \"%s\"." % text)
 
         # 0th entry: Federation
         if i == 0:
@@ -156,12 +158,6 @@ def check(scriptname, filename):
 
             if found_illegal_char:
                 perror("Illegal character in: \"%s\"" % text)
-
-            if text.replace('  ',' ') != text:
-                pwarning("Excessive spacing in: \"%s\"" % text)
-            if text.strip() != text:
-                pwarning("Spacing on end: \"%s\"" % text)
-
 
 
 if __name__ == '__main__':
