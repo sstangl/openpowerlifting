@@ -62,7 +62,7 @@ return {
         var fed = this.string(meetrow[meetdb.FEDERATION]);
         var date = this.string(meetrow[meetdb.DATE]);
         var meetname = this.string(meetrow[meetdb.MEETNAME]);
-        var meeturl = this.makeMeetUrl(fed, date, meetname);
+        var meeturl = this.makeMeetUrl(meetrow[meetdb.MEETPATH]);
         var sex = (row[opldb.SEX] === 0) ? 'M' : 'F';
 
         // Age uses .5 to show imprecision. The lower bound is given.
@@ -102,10 +102,8 @@ return {
         return "lifters.html?q=" + encodeURIComponent(name);
     },
 
-    makeMeetUrl: function(fed, date, meetname) {
-        return "meet.html?f=" + encodeURIComponent(fed) +
-                        "&d=" + encodeURIComponent(date) +
-                        "&n=" + encodeURIComponent(meetname);
+    makeMeetUrl: function(meetpath) {
+        return "meet.html?m=" + encodeURIComponent(meetpath);
     },
     
     number: function(num) {

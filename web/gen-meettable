@@ -76,11 +76,9 @@ def getmonth(m):
     return ''
 
 
-def makemeeturl(fed, date, meetname):
-    fed = urllib.parse.quote(fed.encode("utf-8"))
-    date = urllib.parse.quote(date.encode("utf-8"))
-    meetname = urllib.parse.quote(meetname.encode("utf-8"))
-    return u'meet.html?f=%s&d=%s&n=%s' % (fed, date, meetname)
+def makemeeturl(meetpath):
+    meetpath = urllib.parse.quote(meetpath.encode("utf-8"))
+    return u'meet.html?m=%s' % (meetpath)
 
 
 def makelifterurl(liftername):
@@ -114,6 +112,7 @@ def main():
     stateidx = csv.index('MeetState')
     townidx = csv.index('MeetTown')
     meetnameidx = csv.index('MeetName')
+    meetpathidx = csv.index('MeetPath')
 
     # Order the meetcsv in the order of intended appearance.
     def sorter(x):
@@ -214,7 +213,7 @@ def main():
             lastmonth = yrm
         lastmonth = yrm
 
-        meeturl = makemeeturl(row[fedidx], row[dateidx], row[meetnameidx])
+        meeturl = makemeeturl(row[meetpathidx]);
 
         print('<tr class="%s">' % ('_' + row[fedidx]))
         print('<td>%s</td>' % row[fedidx])
