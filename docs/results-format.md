@@ -61,4 +61,15 @@ The validity of meet.csv files is checked by the script `tests/check-meet-csv`.
 
 ## Structure of lifters.csv
 
+The file lifters.csv contains varying columns based on the information provided by the federation. Some columns are mandatory, and some columns are optional. The order of the columns does not matter, because the build step knows how to reorder them.
+
+Here is an example rendering, with illustrative data:
+
+| Place | Name              | Sex | BodyweightKg | WeightClassKg | Division   | Equipment  | BestSquatKg | BestBenchKg | BestDeadliftKg | TotalKg | Event |
+|-------|-------------------|-----|--------------|---------------|------------|------------|-------------|-------------|----------------|---------|-------|
+| 1     | Adam Blank        | M   | 98.8         | 100           | Open       | Raw        | 192.5       | 140         | 222.5          | 555     | SBD   |
+| 1     | Nicole Wallace    | F   | 73.2         | 75            | Masters 1  | Wraps      | 150         | 82.5        | 175            | 407.5   | SBD   |
+| 1     | Ed Mulligan       | M   | 155          | 140+          | Submasters | Multi-ply  |             | 330         |                | 330     | B     |
+| DQ    | Skeeter Valentine | M   | 63.2         | 67.5          | Juniors    | Single-ply | 140         |             | 130            |         | SBD   |
+
 TODO
