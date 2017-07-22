@@ -4,6 +4,14 @@ OpenPowerlifting can optionally associate lifters with their Instagram profiles.
 
 The list of Name to Instagram associations is tracked by the file [lifter-data/social-media.csv](https://github.com/sstangl/openpowerlifting/blob/master/lifter-data/social-media.csv).
 
+The file contains two columns, the first containing the lifter's name, the second containing the lifter's Instagram name. The rows are sorted in alphabetical order by Name, as in the example below:
+
+| Name              | Instagram           |
+|-------------------|---------------------|
+| Andrey Malanichev | andrey_malanichev   |
+| Dan Green         | dangreenpowerlifter |
+| Ed Coan           | eddycoan            |
+
 ## Adding a new Instagram association using the GitHub Edit Tool
 
 Because the associations are made in a single file, it is particularly convenient to add an Instagram using GitHub's online editor.
