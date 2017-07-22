@@ -55,7 +55,6 @@ The fields are specified as follows:
 - `MeetCountry` is the name of the country in which the meet was held.
 - `MeetState` is the name of the state/province in which the meet was held. If this is not known, or the country does not have states, it may be left blank.
 - `MeetTown` is the name of the city/town in which the meet was held. If this is not known, it may be left blank.
-w
 - `MeetName` is the name of the competition. To avoid repetition, remove year and federation informatino from the name. So "2016 SPF Iron Classic" would have the `MeetName` of "Iron Classic".
 
 The validity of meet.csv files is checked by the script `tests/check-meet-csv`.
