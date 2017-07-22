@@ -22,7 +22,7 @@ Each meet is represented by a folder inside the federation folder. For example, 
 
 The name given to the meet folder is extremely important: taken together with the federation folder, it forms the `MeetPath` that uniquely identifies the meet throughout the project.
 
-So for example, a meet that is stored in `meet-data/fpo/1601` will have the `MeetPath` of `fpo/1601`, and on the website it will be accessible at the address [http://www.openpowerlifting.org/meet.html?m=fpo/1601](http://www.openpowerlifting.org/meet.html?m=fpo/1601).
+So for example, a meet that is stored in `meet-data/fpo/1502` will have the `MeetPath` of `fpo/1502`, and on the website it will be accessible at the address [http://www.openpowerlifting.org/meet.html?m=fpo/1502](http://www.openpowerlifting.org/meet.html?m=fpo/1502).
 
 For most federations, each meet folder is named YYxx, where YY is the last two digits of the year in which the meet was held, and xx is a counter starting at 01. If a federation had three meets in 2015, they would receive folders named `1501`, `1502`, and `1503`, respectively. The order does not matter: it is OK for `1503` to have taken place before `1501`.
 
