@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Helpful script when adding meets, to just run all the tests on the CWD.
+#
+
+set -e
+
+TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+
+${TESTSDIR}/check-lifters-csv
+${TESTSDIR}/check-meet-csv
+${TESTSDIR}/check-sex-consistency

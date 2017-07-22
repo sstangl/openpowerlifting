@@ -27,9 +27,9 @@ web: csvfile
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
-	scripts/check-lifters-csv
-	scripts/check-meet-csv
-	scripts/check-sex-consistency
+	tests/check-lifters-csv
+	tests/check-meet-csv
+	tests/check-sex-consistency
 
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
@@ -95,6 +95,7 @@ probe:
 clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf 'scripts/__pycache__'
+	rm -rf 'tests/__pycache__'
 	rm -rf '${DATADIR}/apf/__pycache__'
 	rm -rf '${DATADIR}/cpu/__pycache__'
 	rm -rf '${DATADIR}/nasa/__pycache__'
