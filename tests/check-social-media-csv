@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple check script for lifter-data/social-media.csv.
+# Used as part of "make check".
+#
+
+import oplcsv
+import os
+import sys
+
+def redden(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+def enyellow(s):
+    return "\033[1;33m" + s + "\033[0;m"
+
+hitError = False  # Determines return value at end.
+
+def perror(s):
+    global hitError
+    hitError = True
+    print(' ' + redden(s), file=sys.stderr)
+
+def pwarning(s):
+    print(' ' + enyellow(s), file=sys.stderr)
+
+
+def main(filename):
+    global hitError
+    csv = oplcsv.Csv(filename)
+
+    # Check columns.
+    if len(csv.fieldnames) == 0:
+        perror("No columns found.")
+    if len(csv.fieldnames) >= 1 and csv.fieldnames[0] != "Name":
+        perror("First column must be 'Name'.")
+    if len(csv.fieldnames) >= 2 and csv.fieldnames[1] != "Instagram":
+        perror("Second column must be 'Instagram'.")
+    if len(csv.fieldnames) >= 3:
+        perror("Too many columns.")
+
+    lifters = set()
+    instagrams = set()
+
+    try:
+        nameidx = csv.index('Name')
+        instagramidx = csv.index('Instagram')
+    except:
+        return 1
+
+    # Check rows.
+    for row in csv.rows:
+        if len(row) != len(csv.fieldnames):
+            perror("Improper number of columns in row %s." % row)
+
+        # Check for whitespace problems.
+        for x in row:
+            if x.strip() != x:
+                perror("Extraneous whitespace in '%s.'" % x)
+            if x.replace('  ',' ') != x:
+                perror("Too much spacing in '%s'." % x)
+            if x.strip() == '':
+                perror("Blank column in row %s." % row)
+
+        # Prevent duplicate lifters.
+        if row[nameidx] in lifters:
+            perror("Duplicate entry for lifter '%s'." % row[nameidx])
+        else:
+            lifters.add(row[nameidx])
+
+        # Prevent duplicate instagrams.
+        if row[instagramidx] in instagrams:
+            perror("Instagram used by two different lifters: '%s'." % row[instagramidx])
+        else:
+            instagrams.add(row[instagramidx])
+
+    if hitError:
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s social-media.csv" % sys.argv[0])
+        sys.exit(1)
+    sys.exit(main(sys.argv[1]))

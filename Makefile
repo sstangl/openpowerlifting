@@ -30,6 +30,7 @@ check:
 	tests/check-lifters-csv
 	tests/check-meet-csv
 	tests/check-sex-consistency
+	tests/check-social-media-csv lifter-data/social-media.csv
 
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
