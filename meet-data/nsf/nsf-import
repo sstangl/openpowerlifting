@@ -72,7 +72,7 @@ def getmeetinfo(soup):
 
     row = [fed,date,country,state,town,name]
     for i,r in enumerate(row):
-        row[i] = r.replace(',',' ').replace('  ',' ')
+        row[i] = r.replace(',',' ').replace('  ',' ').strip()
     csv.rows = [row]
     return csv
 

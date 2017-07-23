@@ -9,7 +9,7 @@ class Csv:
         if filename:
             with open(filename, 'r') as fd:
                 self.fieldnames = fd.readline().rstrip().split(',')
-                self.rows = [x.strip().split(',') for x in fd.readlines()]
+                self.rows = [x.rstrip("\r\n").split(',') for x in fd.readlines()]
         else:
             self.fieldnames = []
             self.rows = []
