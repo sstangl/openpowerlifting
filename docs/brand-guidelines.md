@@ -49,6 +49,11 @@ Because we don't care about keeping users on the site as long as possible, we ar
 
 Basically: we don't care how often people visit the website, but when someone wants to look up powerlifting information, we want them to think of OpenPowerlifting. We accomplish that through data quality and reputation over a long term.
 
+The main page of the website is a ranking of all lifters by Wilks. This is intended to be motivating. The specific viewpoints that make it motivating are:
+
+  1. Because of the tremendous number of lifters, a small personal improvement results in a very large jump in the all-time rankings.
+  2. Because of the tremendous number of lifters, you can find someone at roughly your level with whom you can have motivating competition.
+
 
 ## How OpenPowerlifting Presents Itself
 
