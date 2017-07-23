@@ -52,6 +52,7 @@ probe-quick:
 	${DATADIR}/sct/sct-probe || true
 	${DATADIR}/spf/spf-probe || true
 	${DATADIR}/spf-archive/spf-archive-probe || true
+	${DATADIR}/upa/upa-probe || true
 	${DATADIR}/usapl/usapl-probe || true
 	${DATADIR}/usapl-archive/usapl-archive-probe --quick || true
 	${DATADIR}/uspa/uspa-probe || true
