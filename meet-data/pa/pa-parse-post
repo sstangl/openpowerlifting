@@ -12,6 +12,7 @@ set -e
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
 # Use PA-specific knowledge to parse results.csv into lifters.csv.
 ${SCRIPTDIR}/pa-standardize-csv results.csv > lifters.csv
@@ -27,6 +28,6 @@ cp ${SCRIPTDIR}/../meet.template meet.csv
 ${REPOSCRIPTDIR}/calc-place lifters.csv || true
 
 # Show any warnings.
-${REPOSCRIPTDIR}/check-lifters-csv lifters.csv
+${REPOTESTDIR}/check-lifters-csv lifters.csv
 
 echo "Done! Don't forget about meet.csv!"
