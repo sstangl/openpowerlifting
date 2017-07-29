@@ -26,9 +26,28 @@ def pwarning(s):
     print(' ' + enyellow(s), file=sys.stderr)
 
 
+def get_database_nameset():
+    names = set()
+
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if not 'lifters.csv' in files:
+            continue
+
+        csv = oplcsv.Csv(dirname + os.sep + 'lifters.csv')
+        if 'Name' in csv.fieldnames:
+            nameidx = csv.index('Name')
+            for row in csv.rows:
+                names.add(row[nameidx])
+
+    return names
+
+
 def main(filename):
     global hitError
     csv = oplcsv.Csv(filename)
+
+    # Get a list of all the Name entries throughout the whole project.
+    names = get_database_nameset()
 
     # Check columns.
     if len(csv.fieldnames) == 0:
@@ -74,6 +93,10 @@ def main(filename):
             perror("Instagram used by two different lifters: '%s'." % row[instagramidx])
         else:
             instagrams.add(row[instagramidx])
+
+        # Make sure that every name occurs in the 'names' set.
+        if not row[nameidx] in names:
+            perror("Lifter does not exist in database: '%s'." % row[nameidx])
 
     if hitError:
         return 1
