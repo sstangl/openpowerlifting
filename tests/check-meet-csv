@@ -9,6 +9,7 @@
 # 1) All the column data is in the pre-set format.
 #
 
+import datetime
 import oplcsv
 import os
 import sys
@@ -22,6 +23,7 @@ def enyellow(s):
 globalFilename = ''
 havePrintedFilename = False
 hitError = False  # Determines return value at end.
+currentYear = int(datetime.datetime.now().strftime("%Y"))
 
 def reset_filename_state(filename):
     global globalFilename
@@ -47,7 +49,7 @@ def pwarning(s):
     print(' ' + enyellow(s), file=sys.stderr)
 
 
-KnownFederations = [
+KnownFederations = {
     "365Strong", # 365 Strong Powerlifting Federation.
     "AAPF", # Amateur APF (drug-tested).
     "AAU", # Amateur Athletic Union.
@@ -93,7 +95,76 @@ KnownFederations = [
     "WRPF",
     "WUAP", # World United Amateur Powerlifting.
     "XPC",
-]
+}
+
+KnownCountries = {
+    "Argentina",
+    "Australia",
+    "Belarus",
+    "Brazil",
+    "Canada",
+    "Cayman Islands",
+    "Colombia",
+    "Czechia",
+    "Denmark",
+    "England",
+    "Estonia",
+    "Finland",
+    "Germany",
+    "Greece",
+    "India",
+    "Indonesia",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Kazakhstan",
+    "Luxembourg",
+    "Malaysia",
+    "Netherlands",
+    "New Caledonia",
+    "New Zealand",
+    "Norway",
+    "N.Ireland",
+    "Peru",
+    "Poland",
+    "Puerto Rico",
+    "Russia",
+    "Serbia",
+    "South Africa",
+    "Spain",
+    "Sweden",
+    "Ukraine",
+    "USA",
+    "US Virgin Islands",
+}
+
+KnownStates = {
+    "Australia": {
+        "ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"
+    },
+    "Brazil": {
+        "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT",
+        "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO",
+        "RR", "SC", "SP", "SE", "TO"
+    },
+    "Canada": {
+        "AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC",
+        "SK", "YT"
+    },
+    "India": {
+        "AP", "AR", "AS", "BR", "CG", "GA", "GJ", "HR", "HP", "JK", "JH",
+        "KA", "KL", "MP", "MH", "MN", "ML", "MZ", "NL", "OR", "PB", "RJ",
+        "SK", "TN", "TR", "UK", "UP", "WB", "AN", "CH", "DH", "DD", "DL",
+        "LD", "PY"
+    },
+    "USA": {
+        "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA",
+        "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
+        "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
+        "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX",
+        "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+    },
+}
 
 
 def is_number(s):
@@ -110,6 +181,7 @@ def check(scriptname, filename):
 
     csv = oplcsv.Csv(filename)
 
+    # Require fields to be present and in a set order.
     fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
     if len(fields) != len(csv.fieldnames):
         perror("Incorrect number of fields")
@@ -122,43 +194,84 @@ def check(scriptname, filename):
     if len(row) != len(fields):
         perror("Meet file has incorrect number of columns")
 
-    for i, text in enumerate(row):
+    fedidx = csv.index('Federation')
+    dateidx = csv.index('Date')
+    countryidx = csv.index('MeetCountry')
+    stateidx = csv.index('MeetState')
+    townidx = csv.index('MeetTown')
+    nameidx = csv.index('MeetName')
+
+    # Check for whitespace errors.
+    for text in row:
         if text.strip() != text:
             perror("Extraneous whitespace for \"%s\"." % text)
         if text.replace('  ', ' ') != text:
             perror("Excessive spacing for \"%s\"." % text)
 
-        # 0th entry: Federation
-        if i == 0:
-            if not text in KnownFederations:
-                perror("Unknown federation (add to check-meet-csv?): \"%s\"" % text)
+    # Check the Federation column.
+    if not row[fedidx] in KnownFederations:
+        perror("Unknown federation (add to check-meet-csv?): \"%s\"" % row[fedidx])
 
-        # 1st entry: Date
-        if i == 1:
-            if len(text) != 10 or text[4] != '-' or text[7] != '-':
-                perror("Date in wrong format: \"%s\"" % text)
+    # Check the Date column.
+    date = row[dateidx]
+    if len(date) != 10 or date.count('-') != 2:
+        perror("Date in wrong format: \"%s\". Must be \"YYYY-MM-DD\"." % date)
+    else:
+        # The split is valid. Check the individual Date components.
+        year,month,day = date.split('-')
 
-        # 2nd, 3rd, and 4th entries: country, state (or whatever), city
-        if i == 2 or i == 3 or i == 4:
-            found_illegal_char = False
-            for c in text:
-                if not c.isalpha() and not c in ' -.\'':
-                    found_illegal_char = True
-                    break
+        # Make sure the parts are all digits and of the right length.
+        if not year.isdigit() or len(year) != 4:
+            perror("Year is not a number of length 4: \"%s\"." % year)
+        if not month.isdigit() or len(month) != 2:
+            perror("Month is not a number of length 2: \"%s\"." % month)
+        if not day.isdigit() or len(day) != 2:
+            perror("Day is not a number of length 2: \"%s\"." % day)
 
-            if found_illegal_char:
-                perror("Illegal character in: \"%s\"" % text)
+        # Make sure that the numbers are in a plausible range.
+        year_int = int(year)
+        month_int = int(month)
+        day_int = int(day)
 
-        # 5th entry: Free-form name of competition
-        if i == 5:
-            found_illegal_char = False
-            for c in text:
-                if not c.isalnum() and not c in ' -.\'/&':
-                    found_illegal_char = True
-                    break
+        if year_int < 1945 or year_int > currentYear:
+            perror("Implausible year: \"%s\"." % year)
+        if month_int > 12:
+            perror("Implausible month: \"%s\"." % month)
+        if day_int > 31:
+            perror("Implausible day: \"%s\"." % day)
 
-            if found_illegal_char:
-                perror("Illegal character in: \"%s\"" % text)
+    # Check the MeetCountry column.
+    if not row[countryidx] in KnownCountries:
+        perror("Unknown country (add to check-meet-csv?): \"%s\"" % row[countryidx])
+
+    # Check the optional MeetState column.
+    if row[stateidx]:
+        if not row[countryidx] in KnownStates or not row[stateidx] in KnownStates[row[countryidx]]:
+            perror("Unknown state (add to check-meet-csv?): \"%s\"" % row[stateidx])
+
+    # Check the optional MeetTown column.
+    if row[townidx]:
+        found_illegal_char = False
+        for c in row[townidx]:
+            if not c.isalpha() and not c in ' -.\'':
+                found_illegal_char = True
+                break
+
+        if found_illegal_char:
+            perror("Illegal character in: \"%s\"" % row[townidx])
+
+    # Check the MeetName column.
+    if not row[nameidx]:
+        perror("Meet must have a MeetName.")
+    else:
+        found_illegal_char = False
+        for c in row[nameidx]:
+            if not c.isalnum() and not c in ' -.\'/&':
+                found_illegal_char = True
+                break
+
+        if found_illegal_char:
+            perror("Illegal character in: \"%s\"" % row[nameidx])
 
 
 if __name__ == '__main__':
