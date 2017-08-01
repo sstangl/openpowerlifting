@@ -27,9 +27,10 @@ Note that although the file contains rows with fields separated by commas, it is
 
 When adding a new row, be careful to make sure that none of the *correct names* or *incorrect names* occur elsewhere in the file. For example, adding the following two lines to `lifter-data/name-corrections.dat` would be erroneous:
 
-`John Snow,John Ashcroft`
-
-`John Ashcroft,John Snow`
+| (No Header)   |               |
+|---------------|---------------|
+| John Snow     | John Ashcroft |
+| John Ashcroft | John Snow     |
 
 This would cause the names to constantly switch back and forth every time `scripts/standardize-names` is run.
 
