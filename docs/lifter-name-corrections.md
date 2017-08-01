@@ -14,6 +14,8 @@ To add a new name correction, open the file `lifter-data/name-corrections.dat` i
 
 The format of the file is:
 
+| (No Header)      |                  |                     |
+|------------------|------------------|---------------------|
 | Mike Womack      | Michael Womack   |                     |
 | Jon Gruden       | Jon David Gruden | Jon David Gruden II |
 | LaRodrick Duncan | Larodrick Duncan | LaRodic Duncan      |
