@@ -25,6 +25,13 @@ The first column contains the *correct name*. All columns after that one contain
 
 Note that although the file contains rows with fields separated by commas, it is not a CSV file.
 
+When adding a new row, make sure that none of the *correct names* or *incorrect names* occur elsewhere in the file. For example, adding the following two lines to `lifter-data/name-corrections.dat` would be erroneous:
+
+> `John Snow,John Ashcroft`
+> `John Ashcroft,John Snow`
+
+This would cause the names to constantly switch back and forth every time `scripts/standardize-names` is run.
+
 ## Applying Name Corrections
 
 There is a script that will open every `lifters.csv` file in the directory tree, look for *incorrect names*, and automatically fix them to their associated *correct name*.
