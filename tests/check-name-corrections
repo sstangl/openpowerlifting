@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+import sys
+
+def redden(s):
+    return "\033[1;31m" + s + "\033[0;m"
+
+def enyellow(s):
+    return "\033[1;33m" + s + "\033[0;m"
+
+hitError = False  # Determines return value at end.
+
+def perror(s):
+    global hitError
+    hitError = True
+    print(' ' + redden(s), file=sys.stderr)
+
+def pwarning(s):
+    print(' ' + enyellow(s), file=sys.stderr)
+
+
+def main(filename):
+    nameset = set()
+
+    with open(filename) as fd:
+        for line in fd:
+            names = line.rstrip('\n').split(',')
+            for name in names:
+                # Check for whitespace errors.
+                if name.strip() != name or '  ' in name:
+                    perror("Extraneous whitespace for '%s'." % name)
+
+                # Check for duplicate names.
+                if name in nameset:
+                    perror("Name appears more than once: '%s'." % name)
+                nameset.add(name)
+
+    if hitError:
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s name-corrections.dat" % sys.argv[0])
+        sys.exit(1)
+
+    sys.exit(main(sys.argv[1]))
