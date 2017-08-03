@@ -4,15 +4,17 @@
 var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
 var editString = document.getElementById('editurl');
+var selWeightType = document.getElementById('weighttype');
 
-// TODO: Actually have a toggle for this.
-var usingLbs = true;
+// Only compute the indices once on load.
+var indices_cache;
+
 
 // TODO: Share this with main-index.js. A bunch of functions can be shared, actually.
 function weight(kg) {
     if (kg === undefined)
         return '';
-    if (!usingLbs)
+    if (selWeightType.value === "kg")
         return String(kg);
     return String(common.kg2lbs(kg));
 }
@@ -20,7 +22,7 @@ function weight(kg) {
 function parseWeightClass(x) {
     if (x === undefined)
         return '';
-    if (!usingLbs)
+    if (selWeightType.value === "kg")
         return String(x);
     if (typeof x === 'number')
         return String(Math.floor(common.kg2lbs(x)));
@@ -130,7 +132,34 @@ function buildtable(indices) {
 }
 
 
+function addSelectorListeners(selector) {
+    selector.addEventListener("change", redraw);
+    selector.addEventListener("keydown", function()
+        {
+            setTimeout(redraw, 0);
+        }
+    );
+}
+
+
+function addEventListeners() {
+    addSelectorListeners(selWeightType);
+}
+
+
+function redraw() {
+    // Knock out all of the content.
+    while (contentDiv.firstChild) {
+        contentDiv.removeChild(contentDiv.firstChild);
+    }
+    // Redraw the content.
+    contentDiv.appendChild(buildtable(indices_cache));
+}
+
+
 function onload() {
+    addEventListeners();
+
     var query = common.getqueryobj();
     var meetid = -1;
     if (query.m) {
@@ -143,8 +172,6 @@ function onload() {
     if (meetid === -1)
         return;
 
-    // TODO: This could be made faster by using binary search, since MeetID is sequential.
-    // TODO: That's actually a bad idea, since it prevents pre-sorting.
     var indices = db_make_indices_list();
     indices = db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
 
@@ -162,7 +189,9 @@ function onload() {
     editString.innerHTML = '<a href="' + editurl + '">Edit Meet</a>';
 
     indices = db_sort_numeric_maxfirst(indices, opldb.WILKS);
-    contentDiv.appendChild(buildtable(indices));
+    indices_cache = indices;
+
+    redraw();
 }
 
 
