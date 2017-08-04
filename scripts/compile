@@ -126,6 +126,10 @@ def main(builddir, meetdir):
     initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
     for dirname, subdirs, files in os.walk(meetdir):
+        # Modifying `subdirs` in-place will cause the next iteration of the os.walk()
+        # generated to operate over the sorted list.
+        subdirs.sort()
+
         if 'lifters.csv' in files:
             assert 'meet.csv' in files
             lifterspath = dirname + os.sep + 'lifters.csv'
