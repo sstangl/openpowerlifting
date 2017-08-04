@@ -127,7 +127,7 @@ def main(builddir, meetdir):
 
     for dirname, subdirs, files in os.walk(meetdir):
         # Modifying `subdirs` in-place will cause the next iteration of the os.walk()
-        # generated to operate over the sorted list.
+        # generator to operate over the sorted list.
         subdirs.sort()
 
         if 'lifters.csv' in files:
