@@ -19,13 +19,14 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,AAU,APA,APF,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
+    <option value="365Strong,AAU,APA,APF,Hercules,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
     <option value="AAU">AAU - Amateur Athletic Union (Incomplete)</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
+    <option value="Hercules">Hercules - Hercules Gym [XPC] (Incomplete)</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
     <option value="NASA">NASA - Natural Athlete Strength Association (Incomplete)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
