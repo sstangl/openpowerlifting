@@ -274,3 +274,7 @@ img.instagram {
   padding-left: 4px;
   margin-bottom: -2px; /* Gross, but centers image vertically without misaligning text. */
 }
+
+li {
+  margin-bottom: 10px;
+}
