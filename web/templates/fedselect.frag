@@ -26,7 +26,7 @@
     <option value="AAU">AAU - Amateur Athletic Union (Incomplete)</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
-    <option value="Hercules">Hercules - Hercules Gym [XPC] (Incomplete)</option>
+    <option value="Hercules">Hercules - Hercules Gym [XPC]</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
     <option value="NASA">NASA - Natural Athlete Strength Association (Incomplete)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
