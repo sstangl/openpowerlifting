@@ -46,25 +46,16 @@ function db_sort_numeric_maxfirst(indices, colidx) {
 }
 
 
-// Make a sorted list of indices unique on NAME, such that only the first
-// occurrence is kept. Really this should be done from the end to make removal
-// possible in a single iteration of the array, but it's nice to keep the array
-// in HTML presentation order.
+// Keep only the first occurrence of NAME. The indices list should already be sorted.
 function db_uniq_lifter(indices) {
     var seen = {};
-    var name;
-
-    for (var i = 0; i < indices.length; ++i) {
-        name = opldb.data[indices[i]][opldb.NAME];
-        if (seen[name]) {
-            indices[i] = -1;
-        } else {
-            seen[name] = true;
-        }
-    }
 
     return indices.filter(function (e) {
-        return e >= 0;
+        var name = opldb.data[e][opldb.NAME];
+        if (seen[name])
+            return false;
+        seen[name] = true;
+        return true;
     });
 }
 
