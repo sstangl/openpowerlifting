@@ -278,3 +278,7 @@ img.instagram {
 li {
   margin-bottom: 10px;
 }
+
+td.meetdivisiontext { /* used by meet.html */
+  color: #FB3640;
+}
