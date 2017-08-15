@@ -123,7 +123,9 @@ EIGHTIES_COEF = [
 # and the McCulloch age coefficient for Masters.
 # These coefficients are the same for men and women.
 def ageCoeff(age): # Where age is an integer
-    if age < 14:
+    if age < 5:
+        pass
+    elif age < 14:
         return PRETEEN_COEFF[age - 5]
     elif age < 23:
         return FOSTER_COEFF[age - 14]
