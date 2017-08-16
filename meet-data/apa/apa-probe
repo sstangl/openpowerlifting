@@ -24,7 +24,7 @@ def error(msg):
 
 
 def color(s):
-    return "\033[1;30m" + s + "\033[0;m"
+    return "\033[1;32m" + s + "\033[0;m"
 
 
 def gethtml(url):
