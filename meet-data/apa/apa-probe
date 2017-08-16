@@ -12,10 +12,15 @@ import shutil
 import sys
 import urllib.request
 
+# URL needs updating every year.
+# Also be careful to check if there are any result links that don't contain
+# the string "results", since they won't get picked up by the script below.
+if datetime.datetime.now().strftime("%Y") != "2017":
+    print("Warning: APA fetch URL needs updating for new year.", file=sys.stderr)
+
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-YEAR = datetime.datetime.now().strftime("%Y")
 URL = "http://www.apa-wpa.com/APA/?page_id=1763"
-BASEURL = "http://www.apa-wpa.com/APA/?page_id=1763"
+BASEURL = "http://www.apa-wpa.com/"
 
 
 def error(msg):
@@ -59,8 +64,6 @@ def getenteredurls():
 
 
 def main():
-    meetlist = []
-
     html = gethtml(URL)
     meetlist = getmeetlist(html)
 

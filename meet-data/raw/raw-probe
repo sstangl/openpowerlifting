@@ -72,8 +72,6 @@ def getenteredurls():
 
 
 def main():
-    meetlist = []
-
     html = gethtml(URL)
     meetlist = getmeetlist(html)
 
