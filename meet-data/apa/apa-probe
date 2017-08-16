@@ -14,8 +14,8 @@ import urllib.request
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 YEAR = datetime.datetime.now().strftime("%Y")
-URL = "http://rawpowerlifting.com/"+YEAR+"_results/"
-BASEURL = "http://rawpowerlifting.com/"+YEAR+"_results/"
+URL = "http://www.apa-wpa.com/APA/?page_id=1763"
+BASEURL = "http://www.apa-wpa.com/APA/?page_id=1763"
 
 
 def error(msg):
@@ -34,17 +34,10 @@ def gethtml(url):
 
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
+    entry_content = soup.find("div", {"class": "entry-content"})
 
     urls = []
-    for a in soup.find_all('a'):
-        # All the results have the text "Results" somewhere in the link.
-        if not 'results' in a.text.lower():
-            continue
-
-        # Also all the results have "uploads" in the URL.
-        if not '/uploads/' in a['href']:
-            continue
-
+    for a in entry_content.find_all('a'):
         url = a['href']
         if not 'http://' in url:
             url = BASEURL + url
@@ -75,8 +68,8 @@ def main():
 
     for m in meetlist:
         if not m in known:
-            print(color('[RAW] ') + m)
-    print(color('[RAW] ') + "Continue working through archive.")
+            print(color('[APA] ') + m)
+    print(color('[APA] ') + "Continue working through archive.")
 
 if __name__ == '__main__':
     main()
