@@ -12,16 +12,10 @@ import shutil
 import sys
 import urllib.request
 
-
-# URL needs updating every year.
-# Also be careful to check if there are any result links that don't contain
-# the string "results", since they won't get picked up by the script below.
-if datetime.datetime.now().strftime("%Y") != "2017":
-    print("Warning: RAW fetch URL needs updating for new year.", file=sys.stderr)
-
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://rawpowerlifting.com/2017_results/"
-BASEURL = "http://rawpowerlifting.com/2017_results/"
+YEAR = datetime.datetime.now().strftime("%Y")
+URL = "http://rawpowerlifting.com/"+YEAR+"_results/"
+BASEURL = "http://rawpowerlifting.com/"+YEAR+"_results/"
 
 
 def error(msg):
