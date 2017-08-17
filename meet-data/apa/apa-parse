@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 http://url/to/results/page"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Download the website to results.html.
+wget --output-document=results.html "$1"
+
+# Save the website URL for future use, since it's pretty hard to tell
+# what meets on the site are tracked and which aren't.
+echo "$1" > URL
+
+# Sometimes the documents are encoded in ISO-8859-1.
+file results.html | grep Non-ISO && iconv -f  ISO-8859-1 -t UTF-8 results.html > results2.html
+if [ -f results2.html ]; then
+    mv results2.html results.html
+fi
+
+mv results.html results.xls
+
+# Use LibreOffice to automatically convert the <table> to a csv file.
+# This creates results.csv.
+libreoffice --headless --convert-to csv results.xls
+
+# If CSV conversion completed successfully, remove the intermediary
+# files early to benefit terminal autocompletion.
+if [ -f results.csv ]; then
+        rm results.xls
+fi
+
+cp "${SCRIPTDIR}/../meet.template" "meet.csv"
