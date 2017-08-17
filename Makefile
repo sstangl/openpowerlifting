@@ -64,6 +64,7 @@ probe-quick:
 probe:
 	${DATADIR}/365strong/365strong-probe || true
 	${DATADIR}/aau/aau-probe || true
+	${DATADIR}/apa/apa-probe || true
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/capo/capo-probe || true

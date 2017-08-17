@@ -12,16 +12,15 @@ import shutil
 import sys
 import urllib.request
 
-
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
 # the string "results", since they won't get picked up by the script below.
 if datetime.datetime.now().strftime("%Y") != "2017":
-    print("Warning: RAW fetch URL needs updating for new year.", file=sys.stderr)
+    print("Warning: APA fetch URL needs updating for new year.", file=sys.stderr)
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://rawpowerlifting.com/2017_results/"
-BASEURL = "http://rawpowerlifting.com/2017_results/"
+URL = "http://www.apa-wpa.com/APA/?page_id=1763"
+BASEURL = "http://www.apa-wpa.com/"
 
 
 def error(msg):
@@ -30,7 +29,7 @@ def error(msg):
 
 
 def color(s):
-    return "\033[1;30m" + s + "\033[0;m"
+    return "\033[1;32m" + s + "\033[0;m"
 
 
 def gethtml(url):
@@ -40,17 +39,10 @@ def gethtml(url):
 
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
+    entry_content = soup.find("div", {"class": "entry-content"})
 
     urls = []
-    for a in soup.find_all('a'):
-        # All the results have the text "Results" somewhere in the link.
-        if not 'results' in a.text.lower():
-            continue
-
-        # Also all the results have "uploads" in the URL.
-        if not '/uploads/' in a['href']:
-            continue
-
+    for a in entry_content.find_all('a'):
         url = a['href']
         if not 'http://' in url:
             url = BASEURL + url
@@ -79,8 +71,8 @@ def main():
 
     for m in meetlist:
         if not m in known:
-            print(color('[RAW] ') + m)
-    print(color('[RAW] ') + "Continue working through archive.")
+            print(color('[APA] ') + m)
+    print(color('[APA] ') + "Continue working through archive.")
 
 if __name__ == '__main__':
     main()
