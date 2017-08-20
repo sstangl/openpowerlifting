@@ -63,6 +63,8 @@ def getenteredurls():
 
 
 def main():
+    quick = ('--quick' in sys.argv)
+
     meetlist = []
     for url in URLS:
         html = gethtml(url)
@@ -70,9 +72,15 @@ def main():
 
     known = getenteredurls()
 
+    count = 0
     for m in meetlist:
         if not m in known:
-            print(color('[NASA] ') + m)
+            count += 1
+            if not quick or count <= 5:
+                print(color('[NASA] ') + m)
+
+    if count > 0:
+        print(color('[NASA] ') + '%d meets remaining.' % count)
 
 
 if __name__ == '__main__':
