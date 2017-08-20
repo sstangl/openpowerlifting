@@ -28,7 +28,7 @@
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
     <option value="Hercules">Hercules - Hercules Gym [XPC]</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
-    <option value="NASA">NASA - Natural Athlete Strength Association (Incomplete)</option>
+    <option value="NASA">NASA - Natural Athlete Strength Association (2017+)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
