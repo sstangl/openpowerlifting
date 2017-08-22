@@ -304,7 +304,7 @@ def consume_first_column(csv):
                 pass
             elif row[0] == 'MASTERS 4' or row[0] == 'OPEN':
                 pass
-            elif row[0] == 'SUBJUNIOR' or row[0] == 'JUNIOR':
+            elif row[0] == 'SUBJUNIOR' or row[0] == 'JUNIOR' or row[0] == 'SUB JUNIOR':
                 pass
             else:
                 error("Unknown state change in first column: \"%s\"" % row[0])
