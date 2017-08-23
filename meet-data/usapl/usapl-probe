@@ -71,6 +71,9 @@ def getmeetlist(html):
         if sanction == 'NS-016-07':
             continue
 
+        if sanction == 'KS2017-01':
+            sanction = 'KS-2017-01'
+
         # Only count those rows that begin with a letter, like "CA-2016-02".
         if sanction and sanction[0].isalpha() and sanction.count('-') == 2:
             meetlist.append(Meet(sanction, url))
