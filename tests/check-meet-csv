@@ -194,6 +194,7 @@ def check(scriptname, filename):
     row = csv.rows[0]
     if len(row) != len(fields):
         perror("Meet file has incorrect number of columns")
+        return # Exit early -- this error is bad enough.
 
     fedidx = csv.index('Federation')
     dateidx = csv.index('Date')
