@@ -43,6 +43,7 @@ ${LIBREOFFICE} --headless --convert-to html "results.${EXTENSION}"
 
 # Convert <s> to "-".
 sed -i -e 's/<s>/-/g' results.html
+sed -i -e 's/<\/s>/-/g' results.html
 
 # Convert commas in numbers to periods, while avoiding commas in the HTML.
 sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' results.html
