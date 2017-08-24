@@ -42,7 +42,7 @@ def parse_sheetname(s):
     event = None
     amateur = 'Pro' # By default, unless otherwise specified.
     tested = '' # By default, unless otherwise specified.
-    equipment = 'Raw' # By default, unless otherwise specified.
+    equipment = 'Wraps' # By default, unless otherwise specified.
 
     # Parse word-by-word to make sure that every word is understood. 
     for word in s.lower().split():
@@ -55,18 +55,24 @@ def parse_sheetname(s):
             federation = 'SPR'
 
         # Events
-        elif word == 'пл':
+        elif word == 'пл' or word == 'пауэрлифтинг':
             assert not event
             event = 'SBD'
         elif word == 'жим':
             assert not event
             event = 'B'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
         elif word == 'тяга':
             assert not event
             event = 'D'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
         elif word == 'двоеборье':
             assert not event
             event = 'BD'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
 
         # Equipment
         elif word == 'однослой':
@@ -77,11 +83,15 @@ def parse_sheetname(s):
         # Booleans.
         elif word == 'люб.':
             amateur = 'Amateur'
-        elif word == 'дк':
+        elif word == 'pro':
+            assert amateur == 'Pro'
+        elif word == 'дк' or word == 'д_к':
             tested = 'Tested'
 
         # Grammatical ignorables.
         elif word == 'в':
+            pass
+        elif word == 'лежа':
             pass
 
         # Other ignorables.
@@ -130,8 +140,12 @@ def parse_fieldnames(sheet):
             fieldnames.append('Division-Age')
         elif text == 'Возрастная группа':
             fieldnames.append('Division-Age')
-        elif text == 'Собств. вес' or text == 'Собств. Вес' or text == 'Собств.':
+
+        elif text == 'Собств. вес' or text == 'Собств. Вес' or text == 'Собств.' or text == 'Соб.':
             fieldnames.append('BodyweightKg')
+        elif text == 'Собственный':
+            fieldnames.append('BodyweightKg')
+
         elif text == 'Wilks' or text == 'Gloss':
             fieldnames.append('IGNORE') # This is not the Wilks, but the WilksCoefficient.
         elif text == 'Команда': # Not sure what this is, but it's always "personal/individual".
@@ -143,10 +157,10 @@ def parse_fieldnames(sheet):
             assert header[i+1] == ''
             assert header[i+2] == ''
             assert header[i+3] == ''
-            assert header_next[i] == '1'
-            assert header_next[i+1] == '2'
-            assert header_next[i+2] == '3'
-            assert header_next[i+3] == 'Рек'
+            #assert header_next[i] == '1'
+            #assert header_next[i+1] == '2'
+            #assert header_next[i+2] == '3'
+            #assert header_next[i+3] == 'Рек'
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
@@ -191,6 +205,11 @@ def parse_fieldnames(sheet):
 
         elif text == 'Тренер':
             fieldnames.append('IGNORE')
+
+        elif text == 'Страна/клуб':
+            fieldnames.append('IGNORE')
+        elif text == 'Страна':
+            fieldnames.append('Country')
 
         elif text == '':
             fieldnames.append('IGNORE')
@@ -316,6 +335,8 @@ def standardize_division_age(csv):
             division = 'Masters 50-59'
         elif 'Мастера 60-69' in row[idx]:
             division = 'Masters 60-69'
+        elif 'Мастера 70-79' in row[idx]:
+            division = 'Masters 70-79'
 
         elif 'Открытая' in row[idx]:
             division = 'Open'
@@ -325,6 +346,9 @@ def standardize_division_age(csv):
             division = 'Juniors'
         elif 'Девушки' in row[idx]:
             division = 'Girls'
+
+        elif 'OPEN' in row[idx]:
+            division = 'Open'
 
         else:
             die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
@@ -341,7 +365,7 @@ def standardize_division_age(csv):
 def mark_dqs(csv):
     idx = csv.index('Place')
     for row in csv.rows:
-        if not row[idx]:
+        if not row[idx] or row[idx] == '-':
             row[idx] = 'DQ'
 
 
