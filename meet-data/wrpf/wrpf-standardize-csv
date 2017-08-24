@@ -38,7 +38,7 @@ def split_by_sheet(lines):
 def parse_sheetname(s):
     obj = {}
 
-    federation = None
+    federation = ''
     event = None
     amateur = 'Pro' # By default, unless otherwise specified.
     tested = '' # By default, unless otherwise specified.
@@ -64,6 +64,9 @@ def parse_sheetname(s):
         elif word == 'тяга':
             assert not event
             event = 'D'
+        elif word == 'двоеборье':
+            assert not event
+            event = 'BD'
 
         # Equipment
         elif word == 'однослой':
@@ -81,10 +84,13 @@ def parse_sheetname(s):
         elif word == 'в':
             pass
 
-        else:
-            die('Fix parse_sheet(): Unknown word "%s" in "%s"' % (word, s))
+        # Other ignorables.
+        elif word == 'сфо': # Not sure.
+            pass
 
-    assert federation
+        else:
+            die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+
     assert event
 
     obj['federation'] = federation
@@ -122,13 +128,15 @@ def parse_fieldnames(sheet):
             fieldnames.append('InternationalName')
         elif text == 'Весовая категория Дата рождения/возраст':
             fieldnames.append('Division-Age')
-        elif text == 'Собств. вес':
+        elif text == 'Возрастная группа':
+            fieldnames.append('Division-Age')
+        elif text == 'Собств. вес' or text == 'Собств. Вес' or text == 'Собств.':
             fieldnames.append('BodyweightKg')
-        elif text == 'Wilks':
+        elif text == 'Wilks' or text == 'Gloss':
             fieldnames.append('IGNORE') # This is not the Wilks, but the WilksCoefficient.
         elif text == 'Команда': # Not sure what this is, but it's always "personal/individual".
             fieldnames.append('IGNORE')
-        elif text == 'Город/ область':
+        elif text == 'Город/ область' or text == 'Город/область':
             fieldnames.append('IGNORE') # We don't care about city-level information.
 
         elif text == 'Присед':
@@ -173,6 +181,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('Deadlift4Kg')
             [next(iterable) for x in range(3)]
 
+        elif text == 'Сумма':
+            fieldnames.append('TotalKg')
         elif text == 'Результат':
             fieldnames.append('TotalKg')
 
@@ -200,7 +210,10 @@ def parse_sheet(sheet):
     csv = oplcsv.Csv()
 
     # Ignore some sheets that don't contain any powerlifting.
-    if 'судейская колегия' in sheet[0][0].lower():
+    if 'судейская кол' in sheet[0][0].lower():
+        return csv
+    if 'нж ' in sheet[0][0].lower():
+        # This is the "People's Bench", which I think is bench-for-reps.
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
@@ -241,6 +254,9 @@ def parse_sheet(sheet):
             continue
 
         # If we've made it this far, the line should be for a lifter!
+        # Make sure they have a name!
+        if not line[csv.index('InternationalName')]:
+            continue
         line.append(weightclass)
         line.append(obj['event'])
         line.append(obj['equipment'])
@@ -281,6 +297,7 @@ def standardize_division_age(csv):
             row[ageidx] = row[idx].split('/')[1].strip()
 
         # Fill in the Division.
+        # Handle the divisions with numbers first.
         if 'Открытая 20-23' in row[idx]:
             division = 'Open 20-23'
         elif 'Открытая 24-39' in row[idx]:
@@ -299,6 +316,16 @@ def standardize_division_age(csv):
             division = 'Masters 50-59'
         elif 'Мастера 60-69' in row[idx]:
             division = 'Masters 60-69'
+
+        elif 'Открытая' in row[idx]:
+            division = 'Open'
+        elif 'Юниоры' in row[idx]:
+            division = 'Juniors'
+        elif 'Юниорки' in row[idx]:
+            division = 'Juniors'
+        elif 'Девушки' in row[idx]:
+            division = 'Girls'
+
         else:
             die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
 

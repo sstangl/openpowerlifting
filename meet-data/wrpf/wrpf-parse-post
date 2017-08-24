@@ -22,6 +22,8 @@ ${REPOSCRIPTDIR}/calc-latin-names lifters.csv
 # Get rid of zero-columns.
 sed -i -e 's/,0,/,,/g' lifters.csv
 sed -i -e 's/,0,/,,/g' lifters.csv
+sed -i -e 's/,0\.0,/,,/g' lifters.csv
+sed -i -e 's/,0\.0,/,,/g' lifters.csv
 
 # Show any warnings.
 ${REPOTESTSDIR}/check-lifters-csv lifters.csv

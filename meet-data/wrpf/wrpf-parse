@@ -65,3 +65,5 @@ echo "WRPF," >> meet.csv
 if [ -f results.csv ]; then
 	rm results.html results.${EXTENSION}
 fi
+
+${SCRIPTDIR}/wrpf-parse-post
