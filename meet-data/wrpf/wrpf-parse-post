@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Often it happens that wrpf-standardize-csv fails, and
+# the scripts must be updated to handle the new csv format.
+#
+# This file contains the commands that would be executed at the end
+# of wrpf-parse, that I have to execute by hand in case things go wrong,
+# to save me some repetitive typing.
+#
+
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTSDIR="${SCRIPTDIR}/../../tests"
+
+${SCRIPTDIR}/wrpf-standardize-csv results.csv > lifters.csv
+
+${REPOSCRIPTDIR}/calc-best-lifts lifters.csv
+${REPOSCRIPTDIR}/calc-latin-names lifters.csv
+
+# Get rid of zero-columns.
+sed -i -e 's/,0,/,,/g' lifters.csv
+sed -i -e 's/,0,/,,/g' lifters.csv
+
+# Show any warnings.
+${REPOTESTSDIR}/check-lifters-csv lifters.csv
+
+echo "Done! Don't forget about meet.csv!"

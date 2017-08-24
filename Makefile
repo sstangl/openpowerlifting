@@ -104,6 +104,7 @@ clean:
 	rm -rf 'tests/__pycache__'
 	rm -rf '${DATADIR}/apf/__pycache__'
 	rm -rf '${DATADIR}/cpu/__pycache__'
+	rm -rf '${DATADIR}/ipf/__pycache__'
 	rm -rf '${DATADIR}/nasa/__pycache__'
 	rm -rf '${DATADIR}/nipf/__pycache__'
 	rm -rf '${DATADIR}/nsf/__pycache__'
@@ -112,5 +113,5 @@ clean:
 	rm -rf '${DATADIR}/spf/__pycache__'
 	rm -rf '${DATADIR}/thspa/__pycache__'
 	rm -rf '${DATADIR}/usapl/__pycache__'
-	rm -rf '${DATADIR}/ipf/__pycache__'
+	rm -rf '${DATADIR}/wrpf/__pycache__'
 	$(MAKE) -C web clean
