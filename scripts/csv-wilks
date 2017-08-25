@@ -7,44 +7,9 @@
 # Overwrites the input file in-place.
 #
 
+import oplcsv
 import sys
 from wilks import wilks,mcculloch,ageCoeff
-
-if len(sys.argv) < 2:
-    print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
-    sys.exit(1)
-
-filename = sys.argv[1]
-with open(filename, 'r') as fd:
-    csv = [x.strip().split(',') for x in fd.readlines()]
-
-headers = csv[0]
-
-# Certain columns have to exist for Wilks to be calculable.
-# Age is for the McCulloch/Foster total, but we'll include it.
-for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
-    if not col in headers:
-        print(' Missing necessary column: %s' % col, file=sys.stderr)
-        sys.exit(1)
-
-# If a Wilks column doesn't exist currently, we can just create it.
-if not 'Wilks' in headers:
-    for row in csv:
-        row.append('')
-    csv[0][-1] = 'Wilks'
-
-# If a McCulloch column doesn't exist currently, we can just create it.
-if not 'McCulloch' in headers:
-    for row in csv:
-        row.append('')
-    csv[0][-1] = 'McCulloch'
-
-indexSex = headers.index('Sex')
-indexAge = headers.index('Age')
-indexBodyweight = headers.index('BodyweightKg')
-indexTotal = headers.index('TotalKg')
-indexWilks = headers.index('Wilks')
-indexMcCulloch = headers.index('McCulloch')
 
 def to_string(f):
     try:
@@ -60,43 +25,75 @@ def is_int(s):
     except ValueError:
         return False
 
-for row in csv[1:]:
-    # Skip any rows that already contain data from the federation.
-    if row[indexWilks]:
-        # Calculate McCulloch points even if the Wilks is provided.
-        # TODO: Check that the Wilks is actually correct!
-        if is_int(row[indexAge]):
-            row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(row[indexAge])))
-        continue
+def main(filename):
+    csv = oplcsv.Csv(filename)
 
-    sex = row[indexSex]
-    bodyweight = row[indexBodyweight]
-    total = row[indexTotal]
+    # Certain columns have to exist for Wilks to be calculable.
+    # Age is for the McCulloch/Foster total, but we'll include it.
+    for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
+        if not col in csv.fieldnames:
+            print(' Missing necessary column: %s' % col, file=sys.stderr)
+            return 1
 
-    if not sex in ['M', 'F']:
-        continue
+    # If a Wilks column doesn't exist currently, we can just create it.
+    if not 'Wilks' in csv.fieldnames:
+        csv.append_column('Wilks')
 
-    if not bodyweight:
-        continue
-    bodyweight = float(bodyweight)
+    # If a McCulloch column doesn't exist currently, we can just create it.
+    if not 'McCulloch' in csv.fieldnames:
+        csv.append_column('McCulloch')
 
-    if not total:
-        continue
-    total = float(total)
+    indexSex = csv.index('Sex')
+    indexAge = csv.index('Age')
+    indexBodyweight = csv.index('BodyweightKg')
+    indexTotal = csv.index('TotalKg')
+    indexWilks = csv.index('Wilks')
+    indexMcCulloch = csv.index('McCulloch')
 
-    # Add the Wilks score to the row.
-    score = wilks(sex is 'M', bodyweight, total)
-    row[indexWilks] = to_string(score)
+    for row in csv.rows:
+        # Skip any rows that already contain data from the federation.
+        if row[indexWilks]:
+            # Calculate McCulloch points even if the Wilks is provided.
+            # TODO: Check that the Wilks is actually correct!
+            age = row[indexAge].replace('.5','') # Round down when unknown.
+            if is_int(age):
+                row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(age)))
+            continue
 
-    # Calculate the age-adusted score.
-    age = row[indexAge]
-    if is_int(age):
-        row[indexMcCulloch] = to_string(mcculloch(sex is 'M', int(age), bodyweight, total))
-    else:
-        # Better than just leaving it blank, when we have some data.
-        row[indexMcCulloch] = row[indexWilks]
+        sex = row[indexSex]
+        bodyweight = row[indexBodyweight]
+        total = row[indexTotal]
 
-# Final output.
-lines = [','.join(row) + "\n" for row in csv]
-with open(sys.argv[1], 'w') as fd:
-    fd.writelines(lines)
+        if not sex in ['M', 'F']:
+            continue
+
+        if not bodyweight:
+            continue
+        bodyweight = float(bodyweight)
+
+        if not total:
+            continue
+        total = float(total)
+
+        # Add the Wilks score to the row.
+        score = wilks(sex is 'M', bodyweight, total)
+        row[indexWilks] = to_string(score)
+
+        # Calculate the age-adusted score.
+        age = row[indexAge]
+        if is_int(age):
+            row[indexMcCulloch] = to_string(mcculloch(sex is 'M', int(age), bodyweight, total))
+        else:
+            # Better than just leaving it blank, when we have some data.
+            row[indexMcCulloch] = row[indexWilks]
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+    return 0
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    sys.exit(main(sys.argv[1]))
