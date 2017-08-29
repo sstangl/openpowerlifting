@@ -10,6 +10,7 @@ import os
 import shutil
 import sys
 sys.path.append('scripts')
+sys.path.append('../../scripts')
 import probe
 import urllib.request
 
