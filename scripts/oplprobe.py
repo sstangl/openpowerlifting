@@ -26,10 +26,10 @@ def getenteredurls(feddir):
                     urls.add(k.strip())
     return urls
 
-def getunknownmeets(meetlist, enteredmeets):
-    unknown = []
+def getunenteredurls(meetlist, enteredmeets):
+    unentered = []
     for m in meetlist:
         if not m in enteredmeets:
-            unknown.append(m)
-    return unknown
+            unentered.append(m)
+    return unentered
     

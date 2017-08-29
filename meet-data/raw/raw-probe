@@ -55,10 +55,10 @@ def main():
     html = oplprobe.gethtml(URL)
     meetlist = getmeetlist(html)
 
-    known = oplprobe.getenteredurls(FEDDIR)
-    unknown = oplprobe.getunknownmeets(meetlist, known)
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in unknown:
+    for m in unentered:
         print(color('[RAW] ') + m)
 
     print(color('[RAW] ') + "Continue working through archive.")
