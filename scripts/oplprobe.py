@@ -32,4 +32,4 @@ def getunenteredurls(meetlist, enteredmeets):
         if not m in enteredmeets:
             unentered.append(m)
     return unentered
-    
+
