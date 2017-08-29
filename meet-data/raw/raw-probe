@@ -4,14 +4,15 @@
 # Probes for meet results from the 100%RAW Federation (RAW).
 # RAW posts meets to a page separated by year.
 
-
 from bs4 import BeautifulSoup
 import datetime
 import os
 import shutil
 import sys
+sys.path.append('scripts')
+sys.path.append('../../scripts')
+import probe
 import urllib.request
-
 
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
@@ -24,21 +25,11 @@ URL = "http://rawpowerlifting.com/2017_results/"
 BASEURL = "http://rawpowerlifting.com/2017_results/"
 
 
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
-
-
 def color(s):
     return "\033[1;30m" + s + "\033[0;m"
 
-
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
-
-
 def getmeetlist(html):
+
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
@@ -60,26 +51,16 @@ def getmeetlist(html):
 
     return urls
 
-
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
-    html = gethtml(URL)
+    html = probe.gethtml(URL)
     meetlist = getmeetlist(html)
 
-    known = getenteredurls()
+    known = probe.getenteredurls(FEDDIR)
+    unknown = probe.getunknownmeets(meetlist, known)
 
-    for m in meetlist:
-        if not m in known:
-            print(color('[RAW] ') + m)
+    for m in unknown:
+        print(color('[RAW] ') + m)
+
     print(color('[RAW] ') + "Continue working through archive.")
 
 if __name__ == '__main__':
