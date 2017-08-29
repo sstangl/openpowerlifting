@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Library for probes for new meets
+# Library for common functionality for probe scripts.
+#
 
 import os
 import shutil

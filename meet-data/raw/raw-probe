@@ -11,7 +11,7 @@ import shutil
 import sys
 sys.path.append('scripts')
 sys.path.append('../../scripts')
-import probe
+import oplprobe
 import urllib.request
 
 # URL needs updating every year.
@@ -52,11 +52,11 @@ def getmeetlist(html):
     return urls
 
 def main():
-    html = probe.gethtml(URL)
+    html = oplprobe.gethtml(URL)
     meetlist = getmeetlist(html)
 
-    known = probe.getenteredurls(FEDDIR)
-    unknown = probe.getunknownmeets(meetlist, known)
+    known = oplprobe.getenteredurls(FEDDIR)
+    unknown = oplprobe.getunknownmeets(meetlist, known)
 
     for m in unknown:
         print(color('[RAW] ') + m)
