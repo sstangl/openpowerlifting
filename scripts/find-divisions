@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Looks for age divisions that are unknown
+
+import oplcsv
+import sys
+
+KNOWN_DIVISIONS = {
+    # IPF
+    "Sub-Juniors", "Juniors", "Master 1", "Master 2", "Master 3", "Master 4",
+    # USAPL
+    "Y1", "Y2", "Y3", "T1", "T2", "T3", "JR", "M1a", "M1b", "M2a", "M3a", "M3b", "M4a", "M4b"
+}
+
+def main(filename):
+    csv = oplcsv.Csv(filename)
+
+    if not 'Division' in csv.fieldnames:
+        print(" Missing Division column.")
+        sys.exit(1)
+    dividx = csv.fieldnames.index('Division')
+
+    # a frequency dictionary for unknown divisions
+    unknown = {}
+
+    for row in csv.rows:
+        if row[dividx] not in KNOWN_DIVISIONS:
+            frequency = unknown.get(row[dividx])
+            if frequency is not None:
+                unknown[row[dividx]] = frequency + 1
+            else:
+                unknown[row[dividx]] = 1
+    
+    if(len(unknown) != 0):
+        print(len(unknown), "unknown divisions!\n")
+
+    # convert dictionary to list
+    unknown_list = []
+    for key, value in unknown.items():
+        unknown_list.append((key, value))
+
+    # print unknown divisions sorted by their frequency
+    for division in sorted(unknown_list, reverse = True, key = lambda x: x[1]):
+        print(division[0],":",division[1])
+    
+
+if __name__ == '__main__':
+    if(len(sys.argv) != 2):
+        print("Usage: %s lifters.csv")
+        sys.exit(1)
+    main(sys.argv[1])
