@@ -4,25 +4,26 @@
 # Looks for age divisions that are unknown
 
 import oplcsv
+import os
 import sys
+
 
 KNOWN_DIVISIONS = {
     # IPF
     "Sub-Juniors", "Juniors", "Master 1", "Master 2", "Master 3", "Master 4",
     # USAPL
-    "Y1", "Y2", "Y3", "T1", "T2", "T3", "JR", "M1a", "M1b", "M2a", "M3a", "M3b", "M4a", "M4b"
+    "Y1", "Y2", "Y3", "T1", "T2", "T3", "JR", "O", "M1a", "M1b", "M2a", "M3a", "M3b", "M4a", "M4b"
 }
 
-def main(filename):
-    csv = oplcsv.Csv(filename)
+
+def find_divisions(unknown, lifterspath):
+    global KNOWN_DIVISIONS
+
+    csv = oplcsv.Csv(lifterspath)
 
     if not 'Division' in csv.fieldnames:
-        print(" Missing Division column.")
-        sys.exit(1)
-    dividx = csv.fieldnames.index('Division')
-
-    # a frequency dictionary for unknown divisions
-    unknown = {}
+        return
+    dividx = csv.index('Division')
 
     for row in csv.rows:
         if row[dividx] not in KNOWN_DIVISIONS:
@@ -31,22 +32,27 @@ def main(filename):
                 unknown[row[dividx]] = frequency + 1
             else:
                 unknown[row[dividx]] = 1
+
     
-    if(len(unknown) != 0):
+def main(args):
+    # Frequency dictionary for unknown divisions.
+    unknown = {}
+
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'lifters.csv' in files:
+            lifterspath = dirname + os.sep + 'lifters.csv'
+            find_divisions(unknown, lifterspath)
+
+    if len(unknown) != 0:
         print(len(unknown), "unknown divisions!\n")
 
-    # convert dictionary to list
-    unknown_list = []
-    for key, value in unknown.items():
-        unknown_list.append((key, value))
+    # Convert dictionary to list.
+    unknown_list = list(unknown.items())
 
-    # print unknown divisions sorted by their frequency
+    # Print unknown divisions sorted by frequency.
     for division in sorted(unknown_list, reverse = True, key = lambda x: x[1]):
         print(division[0],":",division[1])
-    
+
 
 if __name__ == '__main__':
-    if(len(sys.argv) != 2):
-        print("Usage: %s lifters.csv")
-        sys.exit(1)
-    main(sys.argv[1])
+    main(sys.argv)
