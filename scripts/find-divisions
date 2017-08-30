@@ -21,15 +21,29 @@ def main(filename):
         sys.exit(1)
     dividx = csv.fieldnames.index('Division')
 
-    unknown = set()
+    # a frequency dictionary for unknown divisions
+    unknown = {}
+
     for row in csv.rows:
         if row[dividx] not in KNOWN_DIVISIONS:
-            unknown.add(row[dividx])
+            frequency = unknown.get(row[dividx])
+            if frequency is not None:
+                unknown[row[dividx]] = frequency + 1
+            else:
+                unknown[row[dividx]] = 1
     
     if(len(unknown) != 0):
-        print(len(unknown), "unknown divisions!")
-    for division in unknown:
-        print(division)
+        print(len(unknown), "unknown divisions!\n")
+
+    # convert dictionary to list
+    unknown_list = []
+    for key, value in unknown.items():
+        unknown_list.append((key, value))
+
+    # print unknown divisions sorted by their frequency
+    for division in sorted(unknown_list, reverse = True, key = lambda x: x[1]):
+        print(division[0],":",division[1])
+    
 
 if __name__ == '__main__':
     if(len(sys.argv) != 2):
