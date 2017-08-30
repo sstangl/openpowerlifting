@@ -27,7 +27,7 @@ def main(filename):
             unknown.add(row[dividx])
     
     if(len(unknown) != 0):
-        print(len(unknown), " unknown divisions!")
+        print(len(unknown), "unknown divisions!")
     for division in unknown:
         print(division)
 
