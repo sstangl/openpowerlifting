@@ -9,6 +9,7 @@
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
     <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
+    <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
