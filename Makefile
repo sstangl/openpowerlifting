@@ -54,6 +54,7 @@ probe-quick:
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
+	${DATADIR}/scottishpl/scottishpl-probe --quick || true
 	${DATADIR}/spf/spf-probe || true
 	${DATADIR}/spf-archive/spf-archive-probe || true
 	${DATADIR}/upa/upa-probe || true
@@ -88,6 +89,7 @@ probe:
 	${DATADIR}/raw/raw-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
+	${DATADIR}/scottishpl/scottishpl-probe || true
 	${DATADIR}/spf/spf-probe || true
 	${DATADIR}/spf-archive/spf-archive-probe || true
 	${DATADIR}/thspa/thspa-probe || true
