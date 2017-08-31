@@ -14,7 +14,10 @@ def die(msg):
     sys.exit(1)
 
 def gethtml(url):
-    with urllib.request.urlopen(url) as r:
+    request = urllib.request.Request(url)
+    request.add_header('User-Agent', 'Mozilla/5.0 Gecko/20100101 Firefox/52.0')
+
+    with urllib.request.urlopen(request) as r:
         return r.read()
 
 def getenteredurls(feddir):
