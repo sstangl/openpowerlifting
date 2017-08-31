@@ -127,8 +127,26 @@ function makeDataProvider() {
     };
 }
 
+function generateWeightClasses() {
+    for(var i = 0; i < selClass.options.length; i++) {
+        var option = selClass.options[i];
+        var num = option.text.replace(/[^0-9\.]/g, '');
+        console.log(num);
+        if(option.text.indexOf('lbs') >= 0 && selWeightType.value === "kg") {
+            option.text = option.text.replace(num, Math.round(common.lbs2kg(num)));
+            option.text = option.text.replace('lbs', 'kg');
+        }
+        else if(option.text.indexOf('kg') >= 0 && selWeightType.value === "lb") {
+            option.text = option.text.replace(num, Math.round(common.kg2lbs(num)));
+            option.text = option.text.replace('kg', 'lbs');
+        }
+        console.log(option.text);
+    }
+}
 
 function redraw() {
+    generateWeightClasses();
+
     var source = makeDataProvider();
     grid.setData(source);
     grid.invalidateAllRows();
@@ -240,6 +258,7 @@ function addEventListeners() {
 
 function onload() {
     addEventListeners();
+    generateWeightClasses();
 
     var nameWidth = 200;
     var shortWidth = 40;
