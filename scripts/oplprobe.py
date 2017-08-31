@@ -9,9 +9,11 @@ import shutil
 import sys
 import urllib.request
 
+
 def die(msg):
     print(msg, file=sys.stderr)
     sys.exit(1)
+
 
 def gethtml(url):
     request = urllib.request.Request(url)
@@ -19,6 +21,7 @@ def gethtml(url):
 
     with urllib.request.urlopen(request) as r:
         return r.read()
+
 
 def getenteredurls(feddir):
     urls = set()
@@ -29,6 +32,7 @@ def getenteredurls(feddir):
                     urls.add(k.strip())
     return urls
 
+
 def getunenteredurls(meetlist, enteredmeets):
     unentered = []
     for m in meetlist:
@@ -36,3 +40,17 @@ def getunenteredurls(meetlist, enteredmeets):
             unentered.append(m)
     return unentered
 
+
+# Given a federation string and a list of unentered meets, print to stdout.
+def print_meets(fedstr, meetlist):
+    count = len(meetlist)
+
+    # If a quick mode was requested, just show the newest meets.
+    if '--quick' in sys.argv:
+        meetlist = meetlist[0:5]
+
+    for url in meetlist:
+        print("%s %s" % (fedstr, url))
+
+    if count > 3:
+        print("%s %d meets remaining." % (fedstr, count))
