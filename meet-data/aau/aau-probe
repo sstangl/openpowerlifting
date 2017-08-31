@@ -4,13 +4,13 @@
 # AAU posts all results to a single page.
 #
 
-
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-import urllib.request
+
+sys.path.append('scripts')
+sys.path.append('../../scripts')
+import oplprobe
 
 
 MEETSURL = "http://www.aaupowerlifting.org/Results/ResultsArchives.aspx"
@@ -18,18 +18,8 @@ ROOTURL = "http://www.aaupowerlifting.org"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
-
-
 def color(s):
     return "\033[1;35m" + s + "\033[0;m"
-
-
-def gethtml():
-    with urllib.request.urlopen(MEETSURL) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -53,34 +43,14 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
-    quick = False
-    if '--quick' in sys.argv:
-        quick = True
-
-    html = gethtml()
+    html = oplprobe.gethtml(MEETSURL)
     meetlist = getmeetlist(html)
-    known = getenteredurls()
 
-    count = 0
-    for m in meetlist:
-        if not m in known:
-            count += 1
-            if not quick or count <= 6:
-                print(color('[AAU] ') + m)
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
+    oplprobe.print_meets(color('[AAU]'), unentered)
 
-    if count > 0:
-        print(color('[AAU] ') + '%d meets remaining.' % count)
 
 if __name__ == '__main__':
     main()
