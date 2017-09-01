@@ -11,7 +11,7 @@ return {
     },
 
     lbs2kg: function(lb) {
-        return Math.round(lb / KG_CONVERSION *10) / 10;
+        return Math.round(lb / KG_CONVERSION * 10) / 10;
     },
     
     // Roughly parse index.html?q=foo&a=bar into an object {q: foo, a: bar}.

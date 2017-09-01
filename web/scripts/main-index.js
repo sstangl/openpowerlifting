@@ -127,20 +127,35 @@ function makeDataProvider() {
     };
 }
 
+const LB_CLASSES = [
+    // Traditional
+    "-97", "-106", "-115", "-123", "-132", "-149", "-165", "-182", "-198", "198+", "-220", "-243", "-276", "-309", "309+",
+    // IPF Men
+    "-117", "-130", "-146", "-163", "-183", "-205", "-231", "-265", "265+",
+    // IPF Women
+    "-94.75", "-104", "-115", "-126", "-139", "-158", "-185", "185+"
+]
+
+const KG_CLASSES = [
+    // Traditional
+    "-44", "-48", "-52", "-56", "-60", "-67.5", "-75", "-82.5", "-90", "90+", "-100", "-110", "-125", "-140", "140+",
+    // IPF Men
+    "-53", "-59", "-66", "-74", "-83", "-93", "-105", "-120", "120+",
+    // IPF Women
+    "-43", "-47", "-52", "-57", "-63", "-72", "-84", "84+"
+]
+
 function generateWeightClasses() {
-    for(var i = 0; i < selClass.options.length; i++) {
-        var option = selClass.options[i];
-        var num = option.text.replace(/[^0-9\.]/g, '');
-        console.log(num);
-        if(option.text.indexOf('lbs') >= 0 && selWeightType.value === "kg") {
-            option.text = option.text.replace(num, Math.round(common.lbs2kg(num)));
-            option.text = option.text.replace('lbs', 'kg');
+    if(selWeightType.value === "lb") {
+        for(var i = 1; i < selClass.options.length; i++) {
+            selClass.options[i].text = LB_CLASSES[i-1];
         }
-        else if(option.text.indexOf('kg') >= 0 && selWeightType.value === "lb") {
-            option.text = option.text.replace(num, Math.round(common.kg2lbs(num)));
-            option.text = option.text.replace('kg', 'lbs');
+    }
+
+    if(selWeightType.value === "kg") {
+        for(var i = 1; i < selClass.options.length; i++) {
+            selClass.options[i].text = KG_CLASSES[i-1];
         }
-        console.log(option.text);
     }
 }
 
