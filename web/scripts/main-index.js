@@ -146,16 +146,17 @@ const KG_CLASSES = [
 ]
 
 function generateWeightClasses() {
+    var weightclasses;
     if(selWeightType.value === "lb") {
-        for(var i = 1; i < selClass.options.length; i++) {
-            selClass.options[i].text = LB_CLASSES[i-1];
-        }
+        weightclasses = LB_CLASSES;
+    }
+    else {
+        weightclasses = KG_CLASSES;
     }
 
-    if(selWeightType.value === "kg") {
-        for(var i = 1; i < selClass.options.length; i++) {
-            selClass.options[i].text = KG_CLASSES[i-1];
-        }
+    // Offset iteration at i = 1 to skip over the "all" option
+    for(var i = 1; i < selClass.options.length; i++) {
+        selClass.options[i].text = weightclasses[i-1];
     }
 }
 
