@@ -129,11 +129,11 @@ function makeDataProvider() {
 
 const LB_CLASSES = [
     // Traditional
-    "-97", "-106", "-115", "-123", "-132", "-149", "-165", "-182", "-198", "198+", "-220", "-243", "-276", "-309", "309+",
+    "-97", "-106", "-114", "-123", "-132", "-148", "-165", "-181", "-198", "198+", "-220", "-242", "-275", "-308", "308+",
     // IPF Men
     "-117", "-130", "-146", "-163", "-183", "-205", "-231", "-265", "265+",
     // IPF Women
-    "-94.75", "-104", "-115", "-126", "-139", "-158", "-185", "185+"
+    "-95", "-104", "-115", "-126", "-138", "-158", "-185", "185+"
 ]
 
 const KG_CLASSES = [
@@ -146,19 +146,14 @@ const KG_CLASSES = [
 ]
 
 function generateWeightClasses() {
-    var weightclasses;
-    if(selWeightType.value === "lb") {
-        weightclasses = LB_CLASSES;
-    }
-    else {
-        weightclasses = KG_CLASSES;
-    }
+    var weightclasses = (selWeightType.value === "lb" ? LB_CLASSES : KG_CLASSES);
 
-    // Offset iteration at i = 1 to skip over the "all" option
-    for(var i = 1; i < selClass.options.length; i++) {
+    // Offset iteration at i = 1 to skip over the "all" option.
+    for (var i = 1; i < selClass.options.length; ++i) {
         selClass.options[i].text = weightclasses[i-1];
     }
 }
+
 
 function redraw() {
     generateWeightClasses();
