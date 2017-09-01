@@ -127,8 +127,42 @@ function makeDataProvider() {
     };
 }
 
+const LB_CLASSES = [
+    // Traditional
+    "-97", "-106", "-115", "-123", "-132", "-149", "-165", "-182", "-198", "198+", "-220", "-243", "-276", "-309", "309+",
+    // IPF Men
+    "-117", "-130", "-146", "-163", "-183", "-205", "-231", "-265", "265+",
+    // IPF Women
+    "-94.75", "-104", "-115", "-126", "-139", "-158", "-185", "185+"
+]
+
+const KG_CLASSES = [
+    // Traditional
+    "-44", "-48", "-52", "-56", "-60", "-67.5", "-75", "-82.5", "-90", "90+", "-100", "-110", "-125", "-140", "140+",
+    // IPF Men
+    "-53", "-59", "-66", "-74", "-83", "-93", "-105", "-120", "120+",
+    // IPF Women
+    "-43", "-47", "-52", "-57", "-63", "-72", "-84", "84+"
+]
+
+function generateWeightClasses() {
+    var weightclasses;
+    if(selWeightType.value === "lb") {
+        weightclasses = LB_CLASSES;
+    }
+    else {
+        weightclasses = KG_CLASSES;
+    }
+
+    // Offset iteration at i = 1 to skip over the "all" option
+    for(var i = 1; i < selClass.options.length; i++) {
+        selClass.options[i].text = weightclasses[i-1];
+    }
+}
 
 function redraw() {
+    generateWeightClasses();
+
     var source = makeDataProvider();
     grid.setData(source);
     grid.invalidateAllRows();
@@ -240,6 +274,7 @@ function addEventListeners() {
 
 function onload() {
     addEventListeners();
+    generateWeightClasses();
 
     var nameWidth = 200;
     var shortWidth = 40;

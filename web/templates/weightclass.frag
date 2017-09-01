@@ -1,3 +1,7 @@
+<!--
+  These values are also hard-coded in web/scripts/main-index.js
+-->
+
 <select id="weightclass">
   <option value="all" selected>All Classes</option>
   <optgroup label="Traditional">

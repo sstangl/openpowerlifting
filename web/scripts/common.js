@@ -1,12 +1,17 @@
 // vim: set ts=4 sts=4 sw=4 et:
 // Common code across the various OpenPowerlifting pages.
 'use strict';
+const KG_CONVERSION = 2.20462262;
 
 var common = (function () {
 
 return {
     kg2lbs: function(kg) {
-        return Math.round(kg * 2.20462262 * 10) / 10;
+        return Math.round(kg * KG_CONVERSION * 10) / 10;
+    },
+
+    lbs2kg: function(lb) {
+        return Math.round(lb / KG_CONVERSION * 10) / 10;
     },
     
     // Roughly parse index.html?q=foo&a=bar into an object {q: foo, a: bar}.
