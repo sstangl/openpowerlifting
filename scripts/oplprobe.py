@@ -59,8 +59,11 @@ def print_meets(fedstr, meetlist):
     if '--quick' in sys.argv:
         meetlist = meetlist[0:5]
 
-    for url in meetlist:
-        print("%s %s" % (fedstr, url.replace(' ','%20')))
+    try:
+        for url in meetlist:
+            print("%s %s" % (fedstr, url.replace(' ','%20')))
 
-    if count > 3:
-        print("%s %d meets remaining." % (fedstr, count))
+        if count > 3:
+            print("%s %d meets remaining." % (fedstr, count))
+    except BrokenPipeError:
+        pass
