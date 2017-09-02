@@ -60,7 +60,7 @@ def print_meets(fedstr, meetlist):
         meetlist = meetlist[0:5]
 
     for url in meetlist:
-        print("%s %s" % (fedstr, url))
+        print("%s %s" % (fedstr, url.replace(' ','%20')))
 
     if count > 3:
         print("%s %d meets remaining." % (fedstr, count))
