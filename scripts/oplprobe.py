@@ -34,6 +34,16 @@ def getenteredurls(feddir):
 
 
 def getunenteredurls(meetlist, enteredmeets):
+    # Calculate some variants of the entered meets.
+    variants = set()
+    for k in enteredmeets:
+        if "%20" in k:
+            variants.add(k.replace("%20"," "))
+        if " " in k:
+            variants.add(k.replace(" ","%20"))
+
+    enteredmeets = enteredmeets.union(variants)
+
     unentered = []
     for m in meetlist:
         if not m in enteredmeets:
