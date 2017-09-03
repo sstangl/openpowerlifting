@@ -20,7 +20,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-          plugins: ['minify-constant-folding']
+          plugins: [require('babel-plugin-minify-constant-folding')]
         }
       }
     ]
