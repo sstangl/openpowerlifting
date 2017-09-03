@@ -1,31 +1,14 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+import * as common from './common.js'
+import { db_make_indices_list, db_filter } from './database.js'
+
 var grid; // The SlickGrid.
 var sortCol = {id: 'date'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
 var lifterString = document.getElementById('lifter');
 var selWeightType = document.getElementById("weighttype");
-
-// TODO: Share this with main-index.js. A bunch of functions can be shared, actually.
-function weight(kg) {
-    if (kg === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(kg);
-    return String(common.kg2lbs(kg));
-}
-
-// FIXME: Move to common code.
-function parseWeightClass(x) {
-    if (x === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(x);
-    if (typeof x === 'number')
-        return String(Math.floor(common.kg2lbs(x)));
-    return String(Math.floor(common.kg2lbs(x.split('+')[0]))) + '+';
-}
 
 
 // Fills in the <tbody> given the current query.
@@ -89,6 +72,7 @@ function addEventListeners() {
 
 
 function redraw() {
+    common.setWeightTypeState(selWeightType.value);
     grid.invalidateAllRows();
     grid.render();
 }

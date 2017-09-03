@@ -1,6 +1,9 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+import * as common from './common.js'
+import * as database from './database.js'
+
 var grid; // The SlickGrid.
 var sortCol = {id: 'wilks'}; // Initial column sorting information.
 var sortAsc = false; // Initial column sorting information.
@@ -19,25 +22,6 @@ var selYear = document.getElementById("yearselect");
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
 
-// FIXME: Move to common code.
-function weight(kg) {
-    if (kg === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(kg);
-    return String(common.kg2lbs(kg));
-}
-
-// FIXME: Move to common code.
-function parseWeightClass(x) {
-    if (x === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(x);
-    if (typeof x === 'number')
-        return String(Math.floor(common.kg2lbs(x)));
-    return String(Math.floor(common.kg2lbs(x.split('+')[0]))) + '+';
-}
 
 // Return the ordered list of rows to display, by index into opldb.data.
 function getIndices() {
@@ -101,15 +85,15 @@ function getIndices() {
                (multi && e === 3);
     }
 
-    var indices = db_make_indices_list();
-    indices = db_filter(indices, filter);
+    var indices = database.db_make_indices_list();
+    indices = database.db_filter(indices, filter);
 
     if (sortAsc)
-        indices = db_sort_numeric_minfirst(indices, common.colidToIndex(sortCol.id));
+        indices = database.db_sort_numeric_minfirst(indices, common.colidToIndex(sortCol.id));
     else
-        indices = db_sort_numeric_maxfirst(indices, common.colidToIndex(sortCol.id));
+        indices = database.db_sort_numeric_maxfirst(indices, common.colidToIndex(sortCol.id));
 
-    indices = db_uniq_lifter(indices);
+    indices = database.db_uniq_lifter(indices);
     return indices;
 }
 
@@ -156,6 +140,7 @@ function generateWeightClasses() {
 
 
 function redraw() {
+    common.setWeightTypeState(selWeightType.value)
     generateWeightClasses();
 
     var source = makeDataProvider();

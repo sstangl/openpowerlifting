@@ -1,0 +1,25 @@
+{
+  "name": "openpowerlifting-web",
+  "version": "1.0.0",
+  "description": "The OpenPowerlifting website frontend.",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --env.prod --display-error-details --optimize-minimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sstangl/openpowerlifting.git"
+  },
+  "author": "Sean Stangl <sean.stangl@gmail.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sstangl/openpowerlifting/issues"
+  },
+  "homepage": "https://github.com/sstangl/openpowerlifting#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
+}

@@ -1,6 +1,9 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+import { flashRow, getQueryObj} from './common.js'
+
+
 var searchInfo = {lastrowid: 0, laststr: ''};
 var searchfield = document.getElementById("searchfield");
 var searchbutton = document.getElementById("searchbutton");
@@ -59,7 +62,7 @@ function search() {
 
     if (rowid >= 0) {
         scrollIntoView(tds[rowid]);
-        common.flashRow(tds[rowid].parentNode);
+        flashRow(tds[rowid].parentNode);
 
         searchInfo.laststr = query;
         searchInfo.lastrowid = rowid;
@@ -106,7 +109,7 @@ function onload() {
         }
     );
 
-    var query = common.getqueryobj();
+    var query = getqueryobj();
     if (query.fed !== undefined) {
         selFed.value = query.fed;
     }

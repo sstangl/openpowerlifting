@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-function db_make_indices_list() {
+export function db_make_indices_list() {
     var indices = Array(opldb.data.length);
     for (var i = 0; i < opldb.data.length; ++i) {
         indices[i] = i;
@@ -10,7 +10,7 @@ function db_make_indices_list() {
 }
 
 
-function db_filter(indices, rowcmpfn) {
+export function db_filter(indices, rowcmpfn) {
     return indices.filter(function (e) {
         var row = opldb.data[e];
         return rowcmpfn(row);
@@ -18,7 +18,7 @@ function db_filter(indices, rowcmpfn) {
 }
 
 
-function db_sort_numeric_minfirst(indices, colidx) {
+export function db_sort_numeric_minfirst(indices, colidx) {
     indices.sort(function (a, b) {
         var av = Number(opldb.data[a][colidx]);
         var bv = Number(opldb.data[b][colidx]);
@@ -32,7 +32,7 @@ function db_sort_numeric_minfirst(indices, colidx) {
 }
 
 
-function db_sort_numeric_maxfirst(indices, colidx) {
+export function db_sort_numeric_maxfirst(indices, colidx) {
     indices.sort(function (a, b) {
         var av = Number(opldb.data[a][colidx]);
         var bv = Number(opldb.data[b][colidx]);
@@ -47,7 +47,7 @@ function db_sort_numeric_maxfirst(indices, colidx) {
 
 
 // Keep only the first occurrence of NAME. The indices list should already be sorted.
-function db_uniq_lifter(indices) {
+export function db_uniq_lifter(indices) {
     var seen = {};
 
     return indices.filter(function (e) {
@@ -62,7 +62,7 @@ function db_uniq_lifter(indices) {
 
 // Look up a meet by information.
 // MeetID is not suitable for URLs since it may change on recompilation.
-function db_get_meetid(fed, date, meetname) {
+export function db_get_meetid(fed, date, meetname) {
     for (var i = 0; i < meetdb.data.length; ++i) {
         var row = meetdb.data[i];
         if (row[meetdb.FEDERATION] === fed &&
@@ -77,7 +77,7 @@ function db_get_meetid(fed, date, meetname) {
 
 
 // Look up a meet by meetpath.
-function db_get_meetid_by_meetpath(meetpath) {
+export function db_get_meetid_by_meetpath(meetpath) {
     for (var i = 0; i < meetdb.data.length; ++i) {
         var row = meetdb.data[i];
         if (row[meetdb.MEETPATH] === meetpath) {
@@ -86,6 +86,3 @@ function db_get_meetid_by_meetpath(meetpath) {
     }
     return -1;
 }
-
-
-// Get an array of indices 

@@ -10,6 +10,9 @@ MEETFILEJS = meets.js
 
 all: database scripts css html images
 
+npminit:
+	npm install
+
 builddir:
 	mkdir -p '${BUILDDIR}'
 	mkdir -p '${BUILDDIR}/scripts'
@@ -35,13 +38,10 @@ database: data
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
 	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 
-scripts: builddir
+scripts: builddir npminit
 	cp scripts/common.js ${BUILDDIR}/scripts
 	cp scripts/database.js ${BUILDDIR}/scripts
-	cp scripts/main-index.js ${BUILDDIR}/scripts
-	cp scripts/main-lifters.js ${BUILDDIR}/scripts
-	cp scripts/main-meet.js ${BUILDDIR}/scripts
-	cp scripts/main-meetlist.js ${BUILDDIR}/scripts
+	npm run webpack
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \

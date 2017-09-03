@@ -1,6 +1,9 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
+import * as common from './common.js'
+import * as database from './database.js'
+
 var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
 var editString = document.getElementById('editurl');
@@ -9,40 +12,6 @@ var selDisplayType = document.getElementById('displaytype');
 
 // Only compute the indices once on load.
 var indices_cache;
-
-
-// TODO: Share this with main-index.js. A bunch of functions can be shared, actually.
-function weight(kg) {
-    if (kg === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(kg);
-    return String(common.kg2lbs(kg));
-}
-
-function parseWeightClass(x) {
-    if (x === undefined)
-        return '';
-    if (selWeightType.value === "kg")
-        return String(x);
-    if (typeof x === 'number')
-        return String(Math.floor(common.kg2lbs(x)));
-    return String(Math.floor(common.kg2lbs(x.split('+')[0]))) + '+';
-}
-
-
-function number(num) {
-    if (num === undefined)
-        return '';
-    return String(num);
-}
-
-
-function string(str) {
-    if (str === undefined)
-        return '';
-    return str;
-}
 
 
 function maketd(str) {
@@ -339,7 +308,7 @@ function build_wilks_table(unsorted_indices) {
     });
 
     // Only show each lifter once, since divisions are hidden.
-    indices = db_uniq_lifter(indices);
+    indices = database.db_uniq_lifter(indices);
 
     var frag = document.createDocumentFragment();
     var table = document.createElement("table");
@@ -410,6 +379,8 @@ function addEventListeners() {
 
 
 function redraw() {
+    common.setWeightTypeState(selWeightType.value);
+
     // Knock out all of the content.
     while (contentDiv.firstChild) {
         contentDiv.removeChild(contentDiv.firstChild);
@@ -429,17 +400,17 @@ function onload() {
     var query = common.getqueryobj();
     var meetid = -1;
     if (query.m) {
-        meetid = db_get_meetid_by_meetpath(query.m);
+        meetid = database.db_get_meetid_by_meetpath(query.m);
     } else {
-        meetid = db_get_meetid(query.f, query.d, query.n);
+        meetid = database.db_get_meetid(query.f, query.d, query.n);
     }
 
     // Not found.
     if (meetid === -1)
         return;
 
-    var indices = db_make_indices_list();
-    indices = db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
+    var indices = database.db_make_indices_list();
+    indices = database.db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
 
     var meetrow = meetdb.data[meetid];
     var meetfed = meetrow[meetdb.FEDERATION];
