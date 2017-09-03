@@ -5,10 +5,10 @@ import * as common from './common.js'
 import * as database from './database.js'
 
 // Appease the TypeScript compiler.
-let $: any;
-let Slick: any;
-let opldb: any;
-let meetdb: any;
+declare var $;
+declare var Slick;
+declare var opldb;
+declare var meetdb;
 
 let grid; // The SlickGrid.
 let sortCol = {id: 'wilks'}; // Initial column sorting information.
