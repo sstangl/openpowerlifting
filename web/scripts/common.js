@@ -4,7 +4,7 @@
 'use strict';
 const KG_CONVERSION = 2.20462262;
 
-export var kg2lbs = kg => Math.round(kg * KG_CONVERSION * 10) / 10;
+export var kg2lbs = kg => Math.round(kg * (KG_CONVERSION * 10)) / 10;
 export var lbs2kg = lb => Math.round(lb / KG_CONVERSION * 10) / 10;
 
 // Remembers the selected weight type.
