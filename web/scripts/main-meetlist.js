@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-import { flashRow, getQueryObj} from './common.js'
+import { flashRow, getqueryobj } from './common.js'
 
 
 var searchInfo = {lastrowid: 0, laststr: ''};
