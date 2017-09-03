@@ -4,47 +4,51 @@
 import * as common from './common.js'
 import * as database from './database.js'
 
-var grid; // The SlickGrid.
-var sortCol = {id: 'wilks'}; // Initial column sorting information.
-var sortAsc = false; // Initial column sorting information.
-var searchInfo = {laststr: ''};
+// Appease the TypeScript compiler.
+let $: any;
+let Slick: any;
+let opldb: any;
+let meetdb: any;
 
-var boxRaw = document.getElementById("raw");
-var boxWraps = document.getElementById("wraps");
-var boxSingle = document.getElementById("single");
-var boxMulti = document.getElementById("multi");
-var boxMen = document.getElementById("men");
-var boxWomen = document.getElementById("women");
-var selWeightType = document.getElementById("weighttype");
-var selClass = document.getElementById("weightclass");
-var selFed = document.getElementById("fedselect");
-var selYear = document.getElementById("yearselect");
-var searchfield = document.getElementById("searchfield");
-var searchbutton = document.getElementById("searchbutton");
+let grid; // The SlickGrid.
+let sortCol = {id: 'wilks'}; // Initial column sorting information.
+let sortAsc = false; // Initial column sorting information.
+let searchInfo = {laststr: ''};
+
+let boxRaw = document.getElementById("raw") as HTMLInputElement;
+let boxWraps = document.getElementById("wraps") as HTMLInputElement;
+let boxSingle = document.getElementById("single") as HTMLInputElement;
+let boxMulti = document.getElementById("multi") as HTMLInputElement;
+let boxMen = document.getElementById("men") as HTMLInputElement;
+let boxWomen = document.getElementById("women") as HTMLInputElement;
+let selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
+let selClass = document.getElementById("weightclass") as HTMLSelectElement;
+let selFed = document.getElementById("fedselect") as HTMLSelectElement;
+let selYear = document.getElementById("yearselect") as HTMLSelectElement;
+let searchfield = document.getElementById("searchfield") as HTMLInputElement;
+let searchbutton = document.getElementById("searchbutton");
 
 
 // Return the ordered list of rows to display, by index into opldb.data.
 function getIndices() {
-    // Update the global pounds setting.
-
     // Determine the filter to be used.
-    var raw = boxRaw.checked;
-    var wraps = boxWraps.checked;
-    var single = boxSingle.checked;
-    var multi = boxMulti.checked;
-    var men = boxMen.checked;
-    var women = boxWomen.checked;
+    let raw = boxRaw.checked;
+    let wraps = boxWraps.checked;
+    let single = boxSingle.checked;
+    let multi = boxMulti.checked;
+    let men = boxMen.checked;
+    let women = boxWomen.checked;
 
-    var selectonfed = (selFed.value !== "all");
-    var feds = selFed.value.split(',');
+    let selectonfed = (selFed.value !== "all");
+    let feds = selFed.value.split(',');
 
-    var selectonclass = (selClass.value !== "all");
-    var range = common.getWeightRange(selClass.value);
-    var bw_min = +range[0]; // Exclusive.
-    var bw_max = +range[1]; // Inclusive.
+    let selectonclass = (selClass.value !== "all");
+    let range = common.getWeightRange(selClass.value);
+    let bw_min = +range[0]; // Exclusive.
+    let bw_max = +range[1]; // Inclusive.
 
-    var selectonyear = (selYear.value !== "all");
-    var year = selYear.value;
+    let selectonyear = (selYear.value !== "all");
+    let year = selYear.value;
 
     function filter(row) {
         if (!men && !women)
@@ -55,37 +59,37 @@ function getIndices() {
             return false;
 
         if (selectonclass) {
-            var bw = row[opldb.BODYWEIGHTKG];
+            let bw = row[opldb.BODYWEIGHTKG];
             if (bw === undefined || bw <= bw_min || bw > bw_max)
                 return false;
         }
 
         if (selectonfed || selectonyear) {
-            var meetrow = meetdb.data[row[opldb.MEETID]];
+            let meetrow = meetdb.data[row[opldb.MEETID]];
 
             if (selectonfed) {
-                var fed = meetrow[meetdb.FEDERATION];
+                let fed = meetrow[meetdb.FEDERATION];
                 if (feds.indexOf(fed) < 0) {
                     return false;
                 }
             }
 
             if (selectonyear) {
-                var date = meetrow[meetdb.DATE];
+                let date = meetrow[meetdb.DATE];
                 if (date.indexOf(year) < 0) {
                     return false;
                 }
             }
         }
 
-        var e = row[opldb.EQUIPMENT];
+        let e = row[opldb.EQUIPMENT];
         return (raw && e === 0) ||
                (wraps && e === 1) ||
                (single && e === 2) ||
                (multi && e === 3);
     }
 
-    var indices = database.db_make_indices_list();
+    let indices = database.db_make_indices_list();
     indices = database.db_filter(indices, filter);
 
     if (sortAsc)
@@ -99,7 +103,7 @@ function getIndices() {
 
 
 function makeDataProvider() {
-    var indices = getIndices();
+    let indices = getIndices();
 
     return {
         getLength: function () {
@@ -130,10 +134,10 @@ const KG_CLASSES = [
 ]
 
 function generateWeightClasses() {
-    var weightclasses = (selWeightType.value === "lb" ? LB_CLASSES : KG_CLASSES);
+    let weightclasses = (selWeightType.value === "lb" ? LB_CLASSES : KG_CLASSES);
 
     // Offset iteration at i = 1 to skip over the "all" option.
-    for (var i = 1; i < selClass.options.length; ++i) {
+    for (let i = 1; i < selClass.options.length; ++i) {
         selClass.options[i].text = weightclasses[i-1];
     }
 }
@@ -143,7 +147,7 @@ function redraw() {
     common.setWeightTypeState(selWeightType.value)
     generateWeightClasses();
 
-    var source = makeDataProvider();
+    let source = makeDataProvider();
     grid.setData(source);
     grid.invalidateAllRows();
     grid.render();
@@ -151,11 +155,11 @@ function redraw() {
 
 
 function _search_from(query, rowid) {
-    var data = grid.getData();
-    var numrows = data.getLength();
+    let data = grid.getData();
+    let numrows = data.getLength();
 
-    for (var i = rowid; i < numrows; ++i) {
-        var row = data.getItem(i);
+    for (let i = rowid; i < numrows; ++i) {
+        let row = data.getItem(i);
         if (row.searchname.indexOf(query) >= 0) {
             return i;
         }
@@ -165,18 +169,18 @@ function _search_from(query, rowid) {
 
 
 function search() {
-    var query = searchfield.value.toLowerCase().trim().replace("  "," ");
+    let query = searchfield.value.toLowerCase().trim().replace("  "," ");
     if (!query) {
         return;
     }
 
-    var startrowid = 0;
+    let startrowid = 0;
     // If the search string hasn't changed, do a "next"-style search.
     if (query === searchInfo.laststr) {
         startrowid = grid.getViewport().top + 1;
     }
 
-    var rowid = _search_from(query, startrowid);
+    let rowid = _search_from(query, startrowid);
 
     // If nothing was found in "next" mode, try searching again from the top.
     if (startrowid > 0 && rowid === -1) {
@@ -184,10 +188,10 @@ function search() {
     }
 
     if (rowid >= 0) {
-        var numColumns = grid.getColumns().length;
+        let numColumns = grid.getColumns().length;
 
         grid.scrollRowToTop(rowid);
-        for (var i = 0; i < numColumns; ++i) {
+        for (let i = 0; i < numColumns; ++i) {
             grid.flashCell(rowid, i, 100);
         }
 
@@ -217,7 +221,7 @@ function scrollOnPageUpDown(keyevent) {
     }
 }
 
-function addSelectorListeners(selector) {
+function addSelectorListeners(selector: HTMLSelectElement) {
     selector.addEventListener("change", redraw);
     selector.addEventListener("keydown", function()
         {
@@ -256,16 +260,16 @@ function onload() {
     addEventListeners();
     generateWeightClasses();
 
-    var nameWidth = 200;
-    var shortWidth = 40;
-    var dateWidth = 80;
-    var numberWidth = 56;
+    let nameWidth = 250;
+    let shortWidth = 40;
+    let dateWidth = 80;
+    let numberWidth = 56;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
     }
 
-    var columns = [
+    let columns = [
         {id: "filler", width: 20, minWidth: 20, focusable: false,
                        selectable: false, resizable: false},
         {id: "rank", name: "Rank", field: "rank", width: numberWidth},
@@ -292,7 +296,7 @@ function onload() {
                       sortable: true, defaultSortAsc: false}
     ];
 
-    var options = {
+    let options = {
         enableColumnReorder: false,
         forceSyncScrolling: true,
         forceFitColumns: true,
@@ -301,12 +305,12 @@ function onload() {
         cellFlashingCssClass: "searchflashing"
     };
 
-    var query = common.getqueryobj();
+    let query = common.getqueryobj();
     if (query.fed !== undefined) {
         selFed.value = query.fed;
     }
 
-    var data = makeDataProvider();
+    let data = makeDataProvider();
     grid = new Slick.Grid("#theGrid", data, columns, options);
     grid.setSortColumn(sortCol.id, sortAsc);
 
