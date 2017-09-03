@@ -260,7 +260,7 @@ function onload() {
     addEventListeners();
     generateWeightClasses();
 
-    let nameWidth = 250;
+    let nameWidth = 200;
     let shortWidth = 40;
     let dateWidth = 80;
     let numberWidth = 56;
