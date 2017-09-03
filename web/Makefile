@@ -39,8 +39,6 @@ database: data
 	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 
 scripts: builddir npminit
-	cp scripts/common.js ${BUILDDIR}/scripts
-	cp scripts/database.js ${BUILDDIR}/scripts
 	npm run webpack
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
