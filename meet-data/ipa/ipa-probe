@@ -8,9 +8,11 @@
 from bs4 import BeautifulSoup
 import datetime
 import os
-import shutil
 import sys
-import urllib.request
+
+sys.path.append('../../scripts')
+sys.path.append('scripts')
+import oplprobe
 
 
 # URL needs updating every year.
@@ -19,23 +21,11 @@ MEETSURL = "http://www.ipapower.com/?page_id=2924"
 if datetime.datetime.now().strftime("%Y") != "2017":
     print("Warning: IPA fetch URL needs updating for new year.", file=sys.stderr)
 
-# URL for 2013, needs updating once cleared.
-ARCHIVEURL = "https://ipapower.blogspot.com/2012/12/2013-meet-results.html"
-IPADIR = os.path.dirname(os.path.realpath(__file__))
-
-
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def color(s):
     return "\033[1;32m" + s + "\033[0;m"
-
-
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -51,32 +41,18 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(IPADIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
-    html = gethtml(MEETSURL)
+    html = oplprobe.gethtml(MEETSURL)
     meetlist = getmeetlist(html)
 
-    html = gethtml(ARCHIVEURL)
-    meetlist += getmeetlist(html)
+    with open(FEDDIR + os.sep + 'URLLIST') as fd:
+        for k in fd.readlines():
+            meetlist.append(k.strip())
 
-    known = getenteredurls()
-    for m in known:
-        if "%20" in m:
-            known.append(m.replace("%20"," "))
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if not m in known:
-            print(color('[IPA] ') + m)
-    print(color('[IPA] ') + "Continue working through archive.")
+    oplprobe.print_meets(color('[IPA]'), unentered)
 
 
 if __name__ == '__main__':

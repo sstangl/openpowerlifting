@@ -46,7 +46,7 @@ probe-quick:
 	${DATADIR}/cpf/cpf-probe --quick || true
 	${DATADIR}/gbpf/gbpf-probe --quick || true
 	${DATADIR}/hercules/hercules-probe || true
-	${DATADIR}/ipa/ipa-probe || true
+	${DATADIR}/ipa/ipa-probe --quick || true
 	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nasa/nasa-probe --quick || true
 	${DATADIR}/nipf/nipf-probe || true
