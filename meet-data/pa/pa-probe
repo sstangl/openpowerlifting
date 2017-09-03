@@ -6,31 +6,21 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-import urllib.request
+
+sys.path.append('../../scripts')
+sys.path.append('scripts')
+import oplprobe
 
 
-URLS = ["https://powerliftingaustralia.com/results/",
-        "https://powerliftingaustralia.com/results/2007-results/"]
+URLS = ["https://powerliftingaustralia.com/results/"]
 BASEURL = "https://powerliftingaustralia.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
-
-
 def color(s):
     return "\033[1;36m" + s + "\033[0;m"
-
-
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -60,28 +50,20 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
     meetlist = []
     for url in URLS:
-        html = gethtml(url)
+        html = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist(html)
 
-    known = getenteredurls()
+    with open(FEDDIR + os.sep + 'URLLIST') as fd:
+        for k in fd.readlines():
+            meetlist.append(k.strip())
 
-    for m in meetlist:
-        if not m in known:
-            print(color('[PA] ') + m)
-    print(color('[PA] ') + "Continue working through archive.")
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    oplprobe.print_meets(color('[PA]'), unentered)
 
 
 if __name__ == '__main__':

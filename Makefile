@@ -50,7 +50,7 @@ probe-quick:
 	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nasa/nasa-probe --quick || true
 	${DATADIR}/nipf/nipf-probe || true
-	${DATADIR}/pa/pa-probe || true
+	${DATADIR}/pa/pa-probe --quick || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
 	${DATADIR}/scottishpl/scottishpl-probe --quick || true
