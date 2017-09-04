@@ -2,7 +2,7 @@
 'use strict';
 
 import * as common from './common'
-import { db_make_indices_list, db_filter } from './database'
+import { OplDBColumn, MeetDBColumn, db_make_indices_list, db_filter } from './database'
 
 // Appease the TypeScript compiler.
 declare let Slick;
@@ -24,7 +24,7 @@ function getIndices(query: common.QueryObject): number[] {
     }
 
     function filter(row) {
-        return row[opldb.NAME] === query.q;
+        return row[OplDBColumn.Name] === query.q;
     }
 
     let indices = db_make_indices_list();

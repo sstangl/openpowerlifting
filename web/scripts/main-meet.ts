@@ -3,6 +3,7 @@
 
 import * as common from './common'
 import * as database from './database'
+import { OplDBColumn, MeetDBColumn } from './database'
 
 // Appease the TypeScript compiler.
 declare let opldb;
@@ -19,9 +20,9 @@ let editString = document.getElementById('editurl');
 let indices_cache;
 
 
-function maketd(str) {
+function maketd(s: string) {
     let td = document.createElement('td');
-    td.appendChild(document.createTextNode(str));
+    td.appendChild(document.createTextNode(s));
     return td;
 }
 
@@ -67,8 +68,8 @@ function build_division_rows(unsorted_indices: number[], tbody)
     // Sort by TotalKg descending, then by BodyweightKg ascending.
     let indices = unsorted_indices.sort(function (a, b) {
         // First sort by Wilks, descending.
-        let av = Number(opldb.data[a][opldb.TOTALKG]);
-        let bv = Number(opldb.data[b][opldb.TOTALKG]);
+        let av = Number(opldb.data[a][OplDBColumn.TotalKg]);
+        let bv = Number(opldb.data[b][OplDBColumn.TotalKg]);
         if (isNaN(av))
             av = Number.MIN_VALUE;
         if (isNaN(bv))
@@ -78,8 +79,8 @@ function build_division_rows(unsorted_indices: number[], tbody)
             return result;
 
         // Next sort by BodyweightKg, ascending.
-        av = Number(opldb.data[a][opldb.BODYWEIGHTKG]);
-        bv = Number(opldb.data[b][opldb.BODYWEIGHTKG]);
+        av = Number(opldb.data[a][OplDBColumn.BodyweightKg]);
+        bv = Number(opldb.data[b][OplDBColumn.BodyweightKg]);
         if (isNaN(av))
             av = Number.MAX_VALUE;
         if (isNaN(bv))
@@ -107,7 +108,7 @@ function build_division_rows(unsorted_indices: number[], tbody)
 }
 
 
-function infer_event(rowobj): string {
+function infer_event(rowobj: common.RowObject): string {
     // Infer the Event if a Total is given.
     let evstr = "";
     if (rowobj.total && rowobj.squat)
@@ -179,12 +180,12 @@ function draw_divisions(unsorted_indices: number[]) {
 
     // Filter out the DQ'd lifters.
     let list_dqd = unsorted_indices.filter(function (e) {
-        let place = opldb.data[e][opldb.PLACE];
+        let place = opldb.data[e][OplDBColumn.Place];
         return place === "DQ" || place === "NS" || place === "DD";
     });
 
     let indices = unsorted_indices.filter(function (e) {
-        let place = opldb.data[e][opldb.PLACE];
+        let place = opldb.data[e][OplDBColumn.Place];
         return place !== "DQ" && place !== "NS" && place !== "DD";
     });
 
@@ -295,8 +296,8 @@ function build_wilks_table(unsorted_indices: number[]) {
     // Sort by Wilks descending, then by BodyweightKg ascending.
     let indices = unsorted_indices.sort(function (a, b) {
         // First sort by Wilks, descending.
-        let av = Number(opldb.data[a][opldb.WILKS]);
-        let bv = Number(opldb.data[b][opldb.WILKS]);
+        let av = Number(opldb.data[a][OplDBColumn.Wilks]);
+        let bv = Number(opldb.data[b][OplDBColumn.Wilks]);
         if (isNaN(av))
             av = Number.MIN_VALUE;
         if (isNaN(bv))
@@ -306,8 +307,8 @@ function build_wilks_table(unsorted_indices: number[]) {
             return result;
 
         // Next sort by BodyweightKg, ascending.
-        av = Number(opldb.data[a][opldb.BODYWEIGHTKG]);
-        bv = Number(opldb.data[b][opldb.BODYWEIGHTKG]);
+        av = Number(opldb.data[a][OplDBColumn.BodyweightKg]);
+        bv = Number(opldb.data[b][OplDBColumn.BodyweightKg]);
         if (isNaN(av))
             av = Number.MAX_VALUE;
         if (isNaN(bv))
@@ -418,13 +419,13 @@ function onload() {
         return;
 
     let indices = database.db_make_indices_list();
-    indices = database.db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
+    indices = database.db_filter(indices, function(x) { return x[OplDBColumn.MeetID] === meetid; });
 
     let meetrow = meetdb.data[meetid];
-    let meetfed = meetrow[meetdb.FEDERATION];
-    let meetdate = meetrow[meetdb.DATE];
-    let meetname = meetrow[meetdb.MEETNAME];
-    let meetpath = meetrow[meetdb.MEETPATH];
+    let meetfed = meetrow[MeetDBColumn.Federation];
+    let meetdate = meetrow[MeetDBColumn.Date];
+    let meetname = meetrow[MeetDBColumn.MeetName];
+    let meetpath = meetrow[MeetDBColumn.MeetPath];
     let editurl = "https://github.com/sstangl/openpowerlifting/tree/master/meet-data/" + meetpath;
 
     meetString.innerHTML = meetfed

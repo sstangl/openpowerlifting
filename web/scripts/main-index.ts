@@ -3,6 +3,7 @@
 
 import * as common from './common'
 import * as database from './database'
+import { OplDBColumn, MeetDBColumn } from './database'
 
 // Appease the TypeScript compiler.
 declare var $;
@@ -53,36 +54,36 @@ function getIndices(): number[] {
     function filter(row): boolean {
         if (!men && !women)
             return false;
-        if (!men && row[opldb.SEX] === 0)
+        if (!men && row[OplDBColumn.Sex] === 0)
             return false;
-        if (!women && row[opldb.SEX] === 1)
+        if (!women && row[OplDBColumn.Sex] === 1)
             return false;
 
         if (selectonclass) {
-            let bw = row[opldb.BODYWEIGHTKG];
+            let bw = row[OplDBColumn.BodyweightKg];
             if (bw === undefined || bw <= bw_min || bw > bw_max)
                 return false;
         }
 
         if (selectonfed || selectonyear) {
-            let meetrow = meetdb.data[row[opldb.MEETID]];
+            let meetrow = meetdb.data[row[OplDBColumn.MeetID]];
 
             if (selectonfed) {
-                let fed = meetrow[meetdb.FEDERATION];
+                let fed = meetrow[MeetDBColumn.Federation];
                 if (feds.indexOf(fed) < 0) {
                     return false;
                 }
             }
 
             if (selectonyear) {
-                let date = meetrow[meetdb.DATE];
+                let date = meetrow[MeetDBColumn.Date];
                 if (date.indexOf(year) < 0) {
                     return false;
                 }
             }
         }
 
-        let e = row[opldb.EQUIPMENT];
+        let e = row[OplDBColumn.Equipment];
         return (raw && e === 0) ||
                (wraps && e === 1) ||
                (single && e === 2) ||

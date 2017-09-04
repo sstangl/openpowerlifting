@@ -2,10 +2,13 @@
 // Common code across the various OpenPowerlifting pages.
 'use strict';
 
+import { OplDBColumn, MeetDBColumn } from './database'
+
 // Appease the TypeScript compiler.
 declare var opldb;
 declare var meetdb;
 declare var socialmedia;
+
 
 const KG_CONVERSION = 2.20462262;
 
@@ -106,16 +109,16 @@ export interface RowObject {
 
 // Return an object with properties set as strings to be presented.
 export function makeRowObj(row, index?: number): RowObject {
-    let meetrow = meetdb.data[row[opldb.MEETID]];
+    let meetrow = meetdb.data[row[OplDBColumn.MeetID]];
 
-    let country = this.string(meetrow[meetdb.MEETCOUNTRY]);
-    let state = this.string(meetrow[meetdb.MEETSTATE]);
+    let country = this.string(meetrow[MeetDBColumn.MeetCountry]);
+    let state = this.string(meetrow[MeetDBColumn.MeetState]);
     let location = country;
     if (country && state) {
         location = location + "-" + state;
     }
 
-    let fullname = row[opldb.NAME];
+    let fullname = row[OplDBColumn.Name];
     let name = '<a href="' + this.makeLiftersUrl(fullname) + '">' + fullname + '</a>';
 
     // XXX: Bad hack to make Ben's name pink, per request.
@@ -133,66 +136,66 @@ export function makeRowObj(row, index?: number): RowObject {
         }
     }
 
-    let fed = this.string(meetrow[meetdb.FEDERATION]);
-    let date = this.string(meetrow[meetdb.DATE]);
-    let meetname = this.string(meetrow[meetdb.MEETNAME]);
-    let meeturl = this.makeMeetUrl(meetrow[meetdb.MEETPATH]);
-    let sex = (row[opldb.SEX] === 0) ? 'M' : 'F';
+    let fed = this.string(meetrow[MeetDBColumn.Federation]);
+    let date = this.string(meetrow[MeetDBColumn.Date]);
+    let meetname = this.string(meetrow[MeetDBColumn.MeetName]);
+    let meeturl = this.makeMeetUrl(meetrow[MeetDBColumn.MeetPath]);
+    let sex = (row[OplDBColumn.Sex] === 0) ? 'M' : 'F';
 
     // Age uses .5 to show imprecision. The lower bound is given.
     // Tilde is shown at the end so numbers continue to line up,
     // and as a hint to it being a lower bound.
-    let age = this.number(row[opldb.AGE]);
+    let age = this.number(row[OplDBColumn.Age]);
     if (age.indexOf('.5') >= 0) {
         age = age.replace('.5','~');
     }
 
     return {
         rank:        index+1,
-        place:       this.string(row[opldb.PLACE]),
+        place:       this.string(row[OplDBColumn.Place]),
         searchname:  name.toLowerCase(),
         name:        name,
         fed:         fed,
         date:        '<a href="' + meeturl + '">' + date + '</a>',
         location:    location,
-        division:    this.string(row[opldb.DIVISION]),
+        division:    this.string(row[OplDBColumn.Division]),
         meetname:    '<a href="' + meeturl + '">' + meetname + '</a>',
         sex:         sex,
         age:         age,
-        equip:       this.parseEquipment(row[opldb.EQUIPMENT]),
-        bw:          this.weight(row[opldb.BODYWEIGHTKG]),
-        weightclass: this.parseWeightClass(row[opldb.WEIGHTCLASSKG]),
-        squat:       this.weightMax(row, opldb.BESTSQUATKG, opldb.SQUAT4KG),
-        bench:       this.weightMax(row, opldb.BESTBENCHKG, opldb.BENCH4KG),
-        deadlift:    this.weightMax(row, opldb.BESTDEADLIFTKG, opldb.DEADLIFT4KG),
-        total:       this.weight(row[opldb.TOTALKG]),
-        wilks:       this.number(row[opldb.WILKS])
+        equip:       this.parseEquipment(row[OplDBColumn.Equipment]),
+        bw:          this.weight(row[OplDBColumn.BodyweightKg]),
+        weightclass: this.parseWeightClass(row[OplDBColumn.WeightClassKg]),
+        squat:       this.weightMax(row, OplDBColumn.BestSquatKg, OplDBColumn.Squat4Kg),
+        bench:       this.weightMax(row, OplDBColumn.BestBenchKg, OplDBColumn.Bench4Kg),
+        deadlift:    this.weightMax(row, OplDBColumn.BestDeadliftKg, OplDBColumn.Deadlift4Kg),
+        total:       this.weight(row[OplDBColumn.TotalKg]),
+        wilks:       this.number(row[OplDBColumn.Wilks])
     };
 
 }
 
-export function makeLiftersUrl(name) {
+export function makeLiftersUrl(name: string): string {
     return "lifters.html?q=" + encodeURIComponent(name);
 }
 
-export function makeMeetUrl(meetpath) {
+export function makeMeetUrl(meetpath: string): string {
     return "meet.html?m=" + encodeURIComponent(meetpath);
 }
 
-export function number(num) {
+export function number(num: number): string {
     if (num === undefined)
         return '';
     return String(num);
 }
 
-export function string(str) {
+export function string(str: string): string {
     if (str === undefined)
         return '';
     return str;
 }
 
 // FIXME: Requires the enclosing page to define a weight() global.
-export function weightMax(row, cola, colb) {
+export function weightMax(row, cola: OplDBColumn, colb: OplDBColumn) {
     let a = row[cola];
     let b = row[colb];
     if (a === undefined)
@@ -202,33 +205,32 @@ export function weightMax(row, cola, colb) {
     return weight(Math.max(a,b));
 }
 
-export function parseEquipment(str) {
+export function parseEquipment(n: number): string {
     // Values set by web/Makefile.
-    if (str === 0)
+    if (n === 0)
         return "Raw";
-    if (str === 1)
+    if (n === 1)
         return "Wraps";
-    if (str === 2)
+    if (n === 2)
         return "Single";
-    if (str === 3)
+    if (n === 3)
         return "Multi";
-    if (str === 4) // For Yury Belkin.
+    if (n === 4) // For Yury Belkin.
         return "Straps";
     return "";
 }
 
-export function colidToIndex(colid) {
+export function colidToIndex(colid: string): number {
     switch (colid) {
-        case "fed": return meetdb.FEDERATION;
-        case "date": return meetdb.DATE;
-        case "age": return opldb.AGE;
-        case "bw": return opldb.BODYWEIGHTKG;
-        case "squat": return opldb.BESTSQUATKG;
-        case "bench": return opldb.BESTBENCHKG;
-        case "deadlift": return opldb.BESTDEADLIFTKG;
-        case "total": return opldb.TOTALKG;
-        case "wilks": return opldb.WILKS;
-        case "mcculloch": return opldb.MCCULLOCH;
+        case "fed": return MeetDBColumn.Federation;
+        case "date": return MeetDBColumn.Date;
+        case "age": return OplDBColumn.Age;
+        case "bw": return OplDBColumn.BodyweightKg;
+        case "squat": return OplDBColumn.BestSquatKg;
+        case "bench": return OplDBColumn.BestBenchKg;
+        case "deadlift": return OplDBColumn.BestDeadliftKg;
+        case "total": return OplDBColumn.TotalKg;
+        case "wilks": return OplDBColumn.Wilks;
         default:
             console.log("Unknown: colidToIndex(" + name + ")");
     }
@@ -241,8 +243,8 @@ export function getSortFn(colid, sortAsc) {
         case "fed":
         case "date":
             return function(a, b) {
-                let ameetid = opldb.data[a][opldb.MEETID];
-                let bmeetid = opldb.data[b][opldb.MEETID];
+                let ameetid = opldb.data[a][OplDBColumn.MeetID];
+                let bmeetid = opldb.data[b][OplDBColumn.MeetID];
                 let adata = meetdb.data[ameetid][index];
                 let bdata = meetdb.data[bmeetid][index];
                 if (adata === bdata)
@@ -325,7 +327,7 @@ export function flashRow(tr) {
 
 // Returns a (min,max] tuple for the values in templates/weightclass.frag,
 // which controls the weightclass selector.
-export function getWeightRange(sel) {
+export function getWeightRange(sel: string): [number, number] {
     switch (sel) {
         // Traditional weights.
         case 't44': return [0.0, 44.0];
