@@ -15,22 +15,22 @@ let sortCol = {id: 'wilks'}; // Initial column sorting information.
 let sortAsc = false; // Initial column sorting information.
 let searchInfo = {laststr: ''};
 
-let boxRaw = document.getElementById("raw") as HTMLInputElement;
-let boxWraps = document.getElementById("wraps") as HTMLInputElement;
-let boxSingle = document.getElementById("single") as HTMLInputElement;
-let boxMulti = document.getElementById("multi") as HTMLInputElement;
-let boxMen = document.getElementById("men") as HTMLInputElement;
-let boxWomen = document.getElementById("women") as HTMLInputElement;
-let selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
-let selClass = document.getElementById("weightclass") as HTMLSelectElement;
-let selFed = document.getElementById("fedselect") as HTMLSelectElement;
-let selYear = document.getElementById("yearselect") as HTMLSelectElement;
-let searchfield = document.getElementById("searchfield") as HTMLInputElement;
-let searchbutton = document.getElementById("searchbutton");
+const boxRaw = document.getElementById("raw") as HTMLInputElement;
+const boxWraps = document.getElementById("wraps") as HTMLInputElement;
+const boxSingle = document.getElementById("single") as HTMLInputElement;
+const boxMulti = document.getElementById("multi") as HTMLInputElement;
+const boxMen = document.getElementById("men") as HTMLInputElement;
+const boxWomen = document.getElementById("women") as HTMLInputElement;
+const selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
+const selClass = document.getElementById("weightclass") as HTMLSelectElement;
+const selFed = document.getElementById("fedselect") as HTMLSelectElement;
+const selYear = document.getElementById("yearselect") as HTMLSelectElement;
+const searchfield = document.getElementById("searchfield") as HTMLInputElement;
+const searchbutton = document.getElementById("searchbutton");
 
 
 // Return the ordered list of rows to display, by index into opldb.data.
-function getIndices() {
+function getIndices(): number[] {
     // Determine the filter to be used.
     let raw = boxRaw.checked;
     let wraps = boxWraps.checked;
@@ -50,7 +50,7 @@ function getIndices() {
     let selectonyear = (selYear.value !== "all");
     let year = selYear.value;
 
-    function filter(row) {
+    function filter(row): boolean {
         if (!men && !women)
             return false;
         if (!men && row[opldb.SEX] === 0)
@@ -106,10 +106,10 @@ function makeDataProvider() {
     let indices = getIndices();
 
     return {
-        getLength: function () {
+        getLength: function(): number {
             return indices.length;
         },
-        getItem: function(index) {
+        getItem: function(index: number) {
             return common.makeRowObj(opldb.data[indices[index]], index);
         }
     };
@@ -154,7 +154,7 @@ function redraw() {
 }
 
 
-function _search_from(query, rowid) {
+function _search_from(query: string, rowid: number): number {
     let data = grid.getData();
     let numrows = data.getLength();
 
