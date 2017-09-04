@@ -26,7 +26,7 @@ const selClass = document.getElementById("weightclass") as HTMLSelectElement;
 const selFed = document.getElementById("fedselect") as HTMLSelectElement;
 const selYear = document.getElementById("yearselect") as HTMLSelectElement;
 const searchfield = document.getElementById("searchfield") as HTMLInputElement;
-const searchbutton = document.getElementById("searchbutton");
+const searchbutton = document.getElementById("searchbutton") as HTMLButtonElement;
 
 
 // Return the ordered list of rows to display, by index into opldb.data.

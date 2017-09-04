@@ -4,7 +4,7 @@
 import { flashRow, getqueryobj } from './common.js'
 
 const searchfield = document.getElementById("searchfield") as HTMLInputElement;
-const searchbutton = document.getElementById("searchbutton") as HTMLInputElement;
+const searchbutton = document.getElementById("searchbutton") as HTMLButtonElement;
 const selFed = document.getElementById("fedselect") as HTMLSelectElement;
 const meettable = document.getElementById("meettable") as HTMLTableElement;
 
@@ -12,7 +12,7 @@ let searchInfo = {lastrowid: 0, laststr: ''};
 
 
 function scrollIntoView(obj) {
-    var curtop = 0;
+    let curtop = 0;
     if (obj.offsetParent) {
         do {
             curtop += obj.offsetTop;
@@ -26,9 +26,10 @@ function scrollIntoView(obj) {
 }
 
 
-function _search_from(query, tds, rowid) {
-    for (var i = rowid; i < tds.length; ++i) {
-        var str = tds[i].textContent.toLowerCase();
+function _search_from(query: string, tds, rowid: number): number
+{
+    for (let i = rowid; i < tds.length; ++i) {
+        let str = tds[i].textContent.toLowerCase();
         if (str.indexOf(query) >= 0) {
             return i;
         }
@@ -38,22 +39,22 @@ function _search_from(query, tds, rowid) {
 
 
 function search() {
-    var query = searchfield.value.toLowerCase().trim().replace("  "," ");
+    let query = searchfield.value.toLowerCase().trim().replace("  "," ");
     if (!query) {
         return;
     }
 
     // <td> elements containing meet names have class "meetname".
-    var tds = document.getElementsByClassName("meetname");
+    let tds = document.getElementsByClassName("meetname");
 
-    var startrowid = 0;
+    let startrowid = 0;
     // If the search string hasn't changed, do a "next"-style search.
     if (query === searchInfo.laststr) {
         // FIXME: Search from top of viewport somehow and remove lastrowid.
         startrowid = searchInfo.lastrowid + 1;
     }
 
-    var rowid = _search_from(query, tds, startrowid);
+    let rowid = _search_from(query, tds, startrowid);
 
     // If nothing was found in "next" mode, try searching again from the top.
     if (startrowid > 0 && rowid === -1) {
@@ -81,7 +82,7 @@ function searchOnEnter(keyevent) {
 
 
 function selectfed() {
-    var fedlist = selFed.value;
+    let fedlist = selFed.value;
     // If the selector is "all", remove all the classes.
     if (fedlist === "all") {
         meettable.className = "";
@@ -93,7 +94,7 @@ function selectfed() {
     //
     // An underscore is prepended to each federation to handle federations
     // beginning with numbers, like 365Strong.
-    var fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _');
+    let fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _');
     meettable.className = "selectorActive " + fedspaces;
 }
 
@@ -109,7 +110,7 @@ function onload() {
         }
     );
 
-    var query = getqueryobj();
+    let query = getqueryobj();
     if (query.fed !== undefined) {
         selFed.value = query.fed;
     }
