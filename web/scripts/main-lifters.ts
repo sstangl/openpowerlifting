@@ -4,12 +4,17 @@
 import * as common from './common.js'
 import { db_make_indices_list, db_filter } from './database.js'
 
-var grid; // The SlickGrid.
-var sortCol = {id: 'date'}; // Initial column sorting information.
-var sortAsc = false; // Initial column sorting information.
-var lifterString = document.getElementById('lifter');
-var selWeightType = document.getElementById("weighttype");
+// Appease the TypeScript compiler.
+declare let Slick;
+declare let opldb;
+declare let meetdb;
 
+let grid; // The SlickGrid.
+let sortCol = {id: 'date'}; // Initial column sorting information.
+let sortAsc = false; // Initial column sorting information.
+let lifterString = document.getElementById('lifter');
+
+const selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
 
 // Fills in the <tbody> given the current query.
 function getIndices(query) {
@@ -22,28 +27,28 @@ function getIndices(query) {
         return row[opldb.NAME] === query.q;
     }
 
-    var indices = db_make_indices_list();
+    let indices = db_make_indices_list();
     indices = db_filter(indices, filter);
 
     // Update the name display here: if the name matches something
     // in the database, we're safe from HTML injection.
     if (indices.length > 0) {
         // Pretty-print the name using makeRowObj().
-        var rowobj = common.makeRowObj(opldb.data[indices[0]], 0);
+        let rowobj = common.makeRowObj(opldb.data[indices[0]], 0);
         lifterString.innerHTML = 'Meet Results for ' + rowobj.name;
     } else {
         // Don't inject query.q here: may be HTML!
         lifterString.innerHTML = 'Lifter not found.'
     }
 
-    var sortFn = common.getSortFn(sortCol.id, sortAsc);
+    let sortFn = common.getSortFn(sortCol.id, sortAsc);
     indices.sort(sortFn);
     return indices;
 }
 
 
 function makeDataProvider(query) {
-    var indices = getIndices(query);
+    let indices = getIndices(query);
 
     return {
         getLength: function () {
@@ -81,19 +86,19 @@ function redraw() {
 function onload() {
     addEventListeners();
 
-    var query = common.getqueryobj();
+    let query = common.getqueryobj();
 
-    var rankWidth = 40;
-    var nameWidth = 200;
-    var shortWidth = 40;
-    var dateWidth = 80;
-    var numberWidth = 56;
+    let rankWidth = 40;
+    let nameWidth = 200;
+    let shortWidth = 40;
+    let dateWidth = 80;
+    let numberWidth = 56;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
     }
 
-    var columns = [
+    let columns = [
         {id: "filler", width: 20, minWidth: 20, focusable: false,
                        selectable: false, resizable: false},
         {id: "place", name: "Place", field: "place", width: rankWidth},
@@ -123,7 +128,7 @@ function onload() {
                       sortable: true, defaultSortAsc: false}
     ];
 
-    var options = {
+    let options = {
         enableColumnReorder: false,
         forceSyncScrolling: true,
         forceFitColumns: true,
@@ -132,7 +137,7 @@ function onload() {
         cellFlashingCssClass: "searchflashing"
     };
 
-    var data = makeDataProvider(query);
+    let data = makeDataProvider(query);
     grid = new Slick.Grid("#theGrid", data, columns, options);
     grid.setSortColumn(sortCol.id, sortAsc);
 

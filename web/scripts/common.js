@@ -201,9 +201,14 @@ export function getSortFn(colid, sortAsc) {
                 var bmeetid = opldb.data[b][opldb.MEETID];
                 var adata = meetdb.data[ameetid][index];
                 var bdata = meetdb.data[bmeetid][index];
-                if (sortAsc)
-                    return adata > bdata;
-                return adata <= bdata;
+                if (adata === bdata)
+                    return 0;
+                if (sortAsc) {
+                    if (adata > bdata) return 1;
+                    return -1;
+                }
+                if (bdata > adata) return 1;
+                return -1;
             };
 
         // Columns that use the opldb.
@@ -222,14 +227,21 @@ export function getSortFn(colid, sortAsc) {
                     adata = Number.MIN_SAFE_INTEGER;
                 if (bdata === undefined)
                     bdata = Number.MIN_SAFE_INTEGER;
-                if (sortAsc)
-                    return adata > bdata;
-                return adata <= bdata;
+                if (adata === bdata)
+                    return 0;
+                if (sortAsc) {
+                    if (adata > bdata) return 1;
+                    return -1;
+                }
+                if (bdata > adata) return 1;
+                return -1;
             };
 
         default:
             console.log("Unknown: gotSortFn(" + colid + ", " + sortAsc + ")");
-            return undefined;
+            return function(a, b) {
+                return 0;
+            }
     }
 }
 
