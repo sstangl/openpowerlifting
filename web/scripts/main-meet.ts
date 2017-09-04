@@ -5,8 +5,8 @@ import * as common from './common.js'
 import * as database from './database.js'
 
 // Appease the TypeScript compiler.
-declare var opldb;
-declare var meetdb;
+declare let opldb;
+declare let meetdb;
 
 const contentDiv = document.getElementsByClassName('content')[0];
 const selWeightType = document.getElementById('weighttype') as HTMLSelectElement;
@@ -37,15 +37,15 @@ function weightMax(row, cola, colb) {
 }
 
 
-function appendtd(tr, s: string) {
-    var td = document.createElement("td");
+function appendtd(tr: HTMLTableRowElement, s: string) {
+    let td = document.createElement("td");
     td.appendChild(document.createTextNode(s));
     tr.appendChild(td);
 }
 
-function appendtdlink(tr, s: string, url) {
-    var td = document.createElement("td");
-    var a = document.createElement("a");
+function appendtdlink(tr: HTMLTableRowElement, s: string, url) {
+    let td = document.createElement("td");
+    let a = document.createElement("a");
     a.setAttribute('href', url);
     a.appendChild(document.createTextNode(s));
     td.appendChild(a);
@@ -53,8 +53,8 @@ function appendtdlink(tr, s: string, url) {
     tr.appendChild(td);
 }
 
-function appendtdraw(tr, innerHTML) {
-    var td = document.createElement("td");
+function appendtdraw(tr: HTMLTableRowElement, innerHTML: string) {
+    let td = document.createElement("td");
     td.innerHTML = innerHTML;
     td.style.whiteSpace = "nowrap";
     tr.appendChild(td);
@@ -62,7 +62,8 @@ function appendtdraw(tr, innerHTML) {
 
 
 // Adds <tr> rows to a table for the given division indices.
-function build_division_rows(unsorted_indices, tbody) {
+function build_division_rows(unsorted_indices: number[], tbody)
+{
     // Sort by TotalKg descending, then by BodyweightKg ascending.
     let indices = unsorted_indices.sort(function (a, b) {
         // First sort by Wilks, descending.
@@ -87,7 +88,7 @@ function build_division_rows(unsorted_indices, tbody) {
     });
 
     for (let i = 0; i < indices.length; ++i) {
-        var tr = document.createElement("tr");
+        let tr = document.createElement("tr");
         tbody.appendChild(tr);
 
         let rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
@@ -106,9 +107,9 @@ function build_division_rows(unsorted_indices, tbody) {
 }
 
 
-function infer_event(rowobj) {
+function infer_event(rowobj): string {
     // Infer the Event if a Total is given.
-    var evstr = "";
+    let evstr = "";
     if (rowobj.total && rowobj.squat)
         evstr = evstr + "S";
     if (rowobj.total && rowobj.bench)
@@ -119,14 +120,14 @@ function infer_event(rowobj) {
 }
 
 
-function get_division_text(index) {
-    var rowobj = common.makeRowObj(opldb.data[index]);
+function get_division_text(index: number) {
+    let rowobj = common.makeRowObj(opldb.data[index]);
 
     if (!rowobj.total) {
         return "Disqualified";
     }
 
-    var str = "";
+    let str = "";
 
     if (rowobj.sex === "M") {
         str += "Men ";
@@ -134,7 +135,7 @@ function get_division_text(index) {
         str += "Women ";
     }
 
-    var evt = infer_event(rowobj);
+    let evt = infer_event(rowobj);
     if (evt === "SBD") {
         // Do nothing.
     } else if (evt === "BD") {
@@ -169,27 +170,27 @@ function get_division_text(index) {
 
 // Draws division information into contentDiv.
 // Divisions are sorted by (Event, Equipment, Sex, Division, WeightClassKg) categories.
-function draw_divisions(unsorted_indices) {
+function draw_divisions(unsorted_indices: number[]) {
 
     // Internal helper: reduce a rowobj to a hash based on division.
-    var make_unique_division_hash = function(rowobj) {
+    let make_unique_division_hash = function(rowobj) {
         return infer_event(rowobj) + rowobj.equip + rowobj.sex + rowobj.division + rowobj.weightclass;
     }
 
     // Filter out the DQ'd lifters.
-    var list_dqd = unsorted_indices.filter(function (e) {
-        var place = opldb.data[e][opldb.PLACE];
+    let list_dqd = unsorted_indices.filter(function (e) {
+        let place = opldb.data[e][opldb.PLACE];
         return place === "DQ" || place === "NS" || place === "DD";
     });
 
-    var indices = unsorted_indices.filter(function (e) {
-        var place = opldb.data[e][opldb.PLACE];
+    let indices = unsorted_indices.filter(function (e) {
+        let place = opldb.data[e][opldb.PLACE];
         return place !== "DQ" && place !== "NS" && place !== "DD";
     });
 
     // Filter the indices into buckets by unique division hash.
-    var buckets = indices.reduce(function(acc, value) {
-        var hash = make_unique_division_hash(common.makeRowObj(opldb.data[value]));
+    let buckets = indices.reduce(function(acc, value) {
+        let hash = make_unique_division_hash(common.makeRowObj(opldb.data[value]));
         (acc[hash] = acc[hash] || []).push(value);
         return acc;
     }, {});
@@ -197,33 +198,33 @@ function draw_divisions(unsorted_indices) {
     if (list_dqd.length > 0)
         buckets['DQ'] = list_dqd;
 
-    var event_sort_order = ["SBD","BD","SB","SD","S","B","D",""];
-    var equipment_sort_order = ["Raw","Wraps","Single","Multi","Straps"];
-    var sex_sort_order = ["F","M"];
+    let event_sort_order = ["SBD","BD","SB","SD","S","B","D",""];
+    let equipment_sort_order = ["Raw","Wraps","Single","Multi","Straps"];
+    let sex_sort_order = ["F","M"];
 
     // Sort the divisions.
-    var divisions = Object.keys(buckets).sort(function(a: string,b: string) {
+    let divisions = Object.keys(buckets).sort(function(a: string,b: string) {
         // Get a representative rowobject from each bucket.
-        var a_obj = common.makeRowObj(opldb.data[buckets[a][0]]);
-        var b_obj = common.makeRowObj(opldb.data[buckets[b][0]]);
+        let a_obj = common.makeRowObj(opldb.data[buckets[a][0]]);
+        let b_obj = common.makeRowObj(opldb.data[buckets[b][0]]);
 
         // First, sort by event, per the event_sort_order table.
-        var a_event = event_sort_order.indexOf(infer_event(a_obj));
-        var b_event = event_sort_order.indexOf(infer_event(b_obj));
+        let a_event = event_sort_order.indexOf(infer_event(a_obj));
+        let b_event = event_sort_order.indexOf(infer_event(b_obj));
         if (a_event != b_event) {
             return a_event - b_event;
         }
 
         // Next, sort by Equipment, per equipment_sort_order.
-        var a_equip = equipment_sort_order.indexOf(a_obj.equip);
-        var b_equip = equipment_sort_order.indexOf(b_obj.equip);
+        let a_equip = equipment_sort_order.indexOf(a_obj.equip);
+        let b_equip = equipment_sort_order.indexOf(b_obj.equip);
         if (a_equip != b_equip) {
             return a_equip - b_equip;
         }
 
         // Next, sort by Sex, per sex_sort_order.
-        var a_sex = sex_sort_order.indexOf(a_obj.sex);
-        var b_sex = sex_sort_order.indexOf(b_obj.sex);
+        let a_sex = sex_sort_order.indexOf(a_obj.sex);
+        let b_sex = sex_sort_order.indexOf(b_obj.sex);
         if (a_sex != b_sex) {
             return a_sex - b_sex;
         }
@@ -242,38 +243,38 @@ function draw_divisions(unsorted_indices) {
         }
 
         // Finally, by WeightClassKg, lowest first.
-        var a_wtcls = Number(a_obj.weightclass.replace("+",""));
-        var b_wtcls = Number(b_obj.weightclass.replace("+",""));
+        let a_wtcls = Number(a_obj.weightclass.replace("+",""));
+        let b_wtcls = Number(b_obj.weightclass.replace("+",""));
         return a_wtcls - b_wtcls;
     });
 
 
     // Output the divisions into a large table.
-    var frag = document.createDocumentFragment();
-    var table = document.createElement("table");
+    let frag = document.createDocumentFragment();
+    let table = document.createElement("table");
     frag.appendChild(table);
 
-    var thead = document.createElement("thead");
+    let thead = document.createElement("thead");
     table.appendChild(thead);
-    var tr = document.createElement("tr");
+    let tr = document.createElement("tr");
     thead.appendChild(tr);
 
-    var cols = ["Div Place", "Name", "Sex", "Age",
+    let cols = ["Div Place", "Name", "Sex", "Age",
                 "Weight", "Squat", "Bench", "Deadlift", "Total", "Wilks"];
-    for (var i = 0; i < cols.length; ++i) {
-        var td = document.createElement("td");
+    for (let i = 0; i < cols.length; ++i) {
+        let td = document.createElement("td");
         td.appendChild(document.createTextNode(cols[i]));
         tr.appendChild(td);
     }
 
-    var tbody = document.createElement("tbody");
+    let tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
     // Output the divisions into a large table.
-    for (var i = 0; i < divisions.length; ++i) {
+    for (let i = 0; i < divisions.length; ++i) {
         // Output an informational row.
-        tr = document.createElement("tr");
-        td = document.createElement("td");
+        let tr = document.createElement("tr");
+        let td = document.createElement("td");
         td.setAttribute("colspan", String(cols.length));
         td.className = "meetdivisiontext";
         td.appendChild(document.createTextNode(get_division_text(buckets[divisions[i]][0])));
@@ -288,17 +289,17 @@ function draw_divisions(unsorted_indices) {
 }
 
 
-function build_wilks_table(unsorted_indices) {
+function build_wilks_table(unsorted_indices: number[]) {
     // Sort by Wilks descending, then by BodyweightKg ascending.
-    var indices = unsorted_indices.sort(function (a, b) {
+    let indices = unsorted_indices.sort(function (a, b) {
         // First sort by Wilks, descending.
-        var av = Number(opldb.data[a][opldb.WILKS]);
-        var bv = Number(opldb.data[b][opldb.WILKS]);
+        let av = Number(opldb.data[a][opldb.WILKS]);
+        let bv = Number(opldb.data[b][opldb.WILKS]);
         if (isNaN(av))
             av = Number.MIN_VALUE;
         if (isNaN(bv))
             bv = Number.MIN_VALUE;
-        var result = bv - av;
+        let result = bv - av;
         if (result != 0)
             return result;
 
@@ -315,33 +316,33 @@ function build_wilks_table(unsorted_indices) {
     // Only show each lifter once, since divisions are hidden.
     indices = database.db_uniq_lifter(indices);
 
-    var frag = document.createDocumentFragment();
-    var table = document.createElement("table");
+    let frag = document.createDocumentFragment();
+    let table = document.createElement("table");
     frag.appendChild(table);
 
-    var thead = document.createElement("thead");
+    let thead = document.createElement("thead");
     table.appendChild(thead);
-    var tr = document.createElement("tr");
+    let tr = document.createElement("tr");
     thead.appendChild(tr);
 
-    var cols = ["Wilks Place", "Name", "Sex", "Age", "Equip", "Class",
+    let cols = ["Wilks Place", "Name", "Sex", "Age", "Equip", "Class",
                 "Weight", "Squat", "Bench", "Deadlift", "Total", "Wilks"];
-    for (var i = 0; i < cols.length; ++i) {
-        var td = document.createElement("td");
+    for (let i = 0; i < cols.length; ++i) {
+        let td = document.createElement("td");
         td.appendChild(document.createTextNode(cols[i]));
         tr.appendChild(td);
     }
 
-    var tbody = document.createElement("tbody");
+    let tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
-    var wilkscounter = 1;
+    let wilkscounter = 1;
 
-    for (var i = 0; i < indices.length; ++i) {
-        var tr = document.createElement("tr");
+    for (let i = 0; i < indices.length; ++i) {
+        let tr = document.createElement("tr");
         tbody.appendChild(tr);
 
-        var rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
+        let rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
 
         if (rowobj.place !== "DQ" && rowobj.place !== "DD" && rowobj.place !== "NS") {
             appendtd(tr, String(wilkscounter));
@@ -367,7 +368,7 @@ function build_wilks_table(unsorted_indices) {
 }
 
 
-function addSelectorListeners(selector) {
+function addSelectorListeners(selector: HTMLSelectElement) {
     selector.addEventListener("change", redraw);
     selector.addEventListener("keydown", function()
         {
@@ -402,8 +403,8 @@ function redraw() {
 function onload() {
     addEventListeners();
 
-    var query = common.getqueryobj();
-    var meetid = -1;
+    let query = common.getqueryobj();
+    let meetid = -1;
     if (query.m) {
         meetid = database.db_get_meetid_by_meetpath(query.m);
     } else {
@@ -414,15 +415,15 @@ function onload() {
     if (meetid === -1)
         return;
 
-    var indices = database.db_make_indices_list();
+    let indices = database.db_make_indices_list();
     indices = database.db_filter(indices, function(x) { return x[opldb.MEETID] === meetid; });
 
-    var meetrow = meetdb.data[meetid];
-    var meetfed = meetrow[meetdb.FEDERATION];
-    var meetdate = meetrow[meetdb.DATE];
-    var meetname = meetrow[meetdb.MEETNAME];
-    var meetpath = meetrow[meetdb.MEETPATH];
-    var editurl = "https://github.com/sstangl/openpowerlifting/tree/master/meet-data/" + meetpath;
+    let meetrow = meetdb.data[meetid];
+    let meetfed = meetrow[meetdb.FEDERATION];
+    let meetdate = meetrow[meetdb.DATE];
+    let meetname = meetrow[meetdb.MEETNAME];
+    let meetpath = meetrow[meetdb.MEETPATH];
+    let editurl = "https://github.com/sstangl/openpowerlifting/tree/master/meet-data/" + meetpath;
 
     meetString.innerHTML = meetfed
                            + " &nbsp;/ &nbsp;" + meetdate
