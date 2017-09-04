@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-import { flashRow, getqueryobj } from './common.js'
+import { flashRow, getqueryobj } from './common'
 
 const searchfield = document.getElementById("searchfield") as HTMLInputElement;
 const searchbutton = document.getElementById("searchbutton") as HTMLButtonElement;

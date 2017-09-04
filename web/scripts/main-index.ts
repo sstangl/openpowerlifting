@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-import * as common from './common.js'
+import * as common from './common'
 import * as database from './database'
 
 // Appease the TypeScript compiler.

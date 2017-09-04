@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-import * as common from './common.js'
+import * as common from './common'
 import * as database from './database'
 
 // Appease the TypeScript compiler.
@@ -173,7 +173,7 @@ function get_division_text(index: number) {
 function draw_divisions(unsorted_indices: number[]) {
 
     // Internal helper: reduce a rowobj to a hash based on division.
-    let make_unique_division_hash = function(rowobj) {
+    let make_unique_division_hash = function(rowobj: common.RowObject) {
         return infer_event(rowobj) + rowobj.equip + rowobj.sex + rowobj.division + rowobj.weightclass;
     }
 
@@ -239,7 +239,9 @@ function draw_divisions(unsorted_indices: number[]) {
         }
 
         if (a_obj.division != b_obj.division) {
-            return a_obj.division - b_obj.division;
+            if (a_obj.division > b_obj.division)
+                return 1;
+            return -1;
         }
 
         // Finally, by WeightClassKg, lowest first.

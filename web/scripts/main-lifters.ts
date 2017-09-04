@@ -1,7 +1,7 @@
 // vim: set ts=4 sts=4 sw=4 et:
 'use strict';
 
-import * as common from './common.js'
+import * as common from './common'
 import { db_make_indices_list, db_filter } from './database'
 
 // Appease the TypeScript compiler.
@@ -17,7 +17,7 @@ let lifterString = document.getElementById('lifter');
 const selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
 
 // Fills in the <tbody> given the current query.
-function getIndices(query) {
+function getIndices(query: common.QueryObject): number[] {
     // No query: nothing to draw.
     if (query.q === undefined) {
         return [];
@@ -47,7 +47,7 @@ function getIndices(query) {
 }
 
 
-function makeDataProvider(query) {
+function makeDataProvider(query: common.QueryObject) {
     let indices = getIndices(query);
 
     return {
