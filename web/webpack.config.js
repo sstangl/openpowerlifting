@@ -2,6 +2,8 @@
 const path = require('path');
 const webpack = require('webpack')
 
+const BabelMinifyConstantFolding = require('babel-plugin-minify-constant-folding');
+
 module.exports = {
   entry: {
     index: "./scripts/main-index.ts",
@@ -22,7 +24,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-          plugins: [require('babel-plugin-minify-constant-folding')]
+          plugins: [BabelMinifyConstantFolding]
         }
       },
       {
@@ -33,7 +35,7 @@ module.exports = {
             loader: 'babel-loader',
             query: {
               presets: ['es2015'],
-              plugins: [require('babel-plugin-minify-constant-folding')]
+              plugins: [BabelMinifyConstantFolding]
             }
           },
           {
