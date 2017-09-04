@@ -7,8 +7,8 @@ import * as database from './database.js'
 var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
 var editString = document.getElementById('editurl');
-var selWeightType = (<HTMLInputElement>document.getElementById('weighttype'));
-var selDisplayType = (<HTMLInputElement>document.getElementById('displaytype'));
+var selWeightType = <HTMLInputElement>document.getElementById('weighttype');
+var selDisplayType = <HTMLInputElement>document.getElementById('displaytype');
 
 // Only compute the indices once on load.
 var indices_cache;

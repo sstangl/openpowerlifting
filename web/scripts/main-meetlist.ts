@@ -5,10 +5,10 @@ import { flashRow, getqueryobj } from './common.js'
 
 
 var searchInfo = {lastrowid: 0, laststr: ''};
-var searchfield = document.getElementById("searchfield");
-var searchbutton = document.getElementById("searchbutton");
-var selFed = document.getElementById("fedselect");
-var meettable = document.getElementById("meettable");
+var searchfield = <HTMLInputElement>document.getElementById("searchfield");
+var searchbutton = <HTMLInputElement>document.getElementById("searchbutton");
+var selFed = <HTMLInputElement>document.getElementById("fedselect");
+var meettable = <HTMLInputElement>document.getElementById("meettable");
 
 
 function scrollIntoView(obj) {
@@ -22,7 +22,7 @@ function scrollIntoView(obj) {
     // Compensate for the fixed topbar.
     // FIXME: Figure out the topbar height by just asking the topbar.
     curtop -= 80;
-    window.scroll(0, [curtop]);
+    window.scroll(0, curtop);
 }
 
 
