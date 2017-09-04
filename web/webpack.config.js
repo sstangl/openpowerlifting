@@ -8,8 +8,8 @@ module.exports = {
   entry: {
     index: "./scripts/main-index.ts",
     lifters: "./scripts/main-lifters.js",
-    meet: "./scripts/main-meet.js",
-    meetlist: "./scripts/main-meetlist.js"
+    meet: "./scripts/main-meet.ts",
+    meetlist: "./scripts/main-meetlist.ts"
   },
 
   output: {
