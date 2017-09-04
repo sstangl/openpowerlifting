@@ -50,6 +50,11 @@ module.exports = {
     ]
   },
 
+  // Allow use of "include" statements with TypeScript files.
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
+
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'

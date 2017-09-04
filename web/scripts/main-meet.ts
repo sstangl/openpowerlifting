@@ -2,7 +2,7 @@
 'use strict';
 
 import * as common from './common.js'
-import * as database from './database.js'
+import * as database from './database'
 
 // Appease the TypeScript compiler.
 declare let opldb;

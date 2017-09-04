@@ -2,7 +2,7 @@
 'use strict';
 
 import * as common from './common.js'
-import { db_make_indices_list, db_filter } from './database.js'
+import { db_make_indices_list, db_filter } from './database'
 
 // Appease the TypeScript compiler.
 declare let Slick;
