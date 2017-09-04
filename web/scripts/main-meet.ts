@@ -7,8 +7,8 @@ import * as database from './database.js'
 var contentDiv = document.getElementsByClassName('content')[0];
 var meetString = document.getElementById('meet');
 var editString = document.getElementById('editurl');
-var selWeightType = document.getElementById('weighttype');
-var selDisplayType = document.getElementById('displaytype');
+var selWeightType = (<HTMLInputElement>document.getElementById('weighttype'));
+var selDisplayType = (<HTMLInputElement>document.getElementById('displaytype'));
 
 // Only compute the indices once on load.
 var indices_cache;
@@ -64,9 +64,9 @@ function build_division_rows(unsorted_indices, tbody) {
         var av = Number(opldb.data[a][opldb.TOTALKG]);
         var bv = Number(opldb.data[b][opldb.TOTALKG]);
         if (isNaN(av))
-            av = Number.MIN_SAFE_INTEGER;
+            av = Number.MIN_VALUE;
         if (isNaN(bv))
-            bv = Number.MIN_SAFE_INTEGER;
+            bv = Number.MIN_VALUE;
         var result = bv - av;
         if (result != 0)
             return result;
@@ -75,9 +75,9 @@ function build_division_rows(unsorted_indices, tbody) {
         av = Number(opldb.data[a][opldb.BODYWEIGHTKG]);
         bv = Number(opldb.data[b][opldb.BODYWEIGHTKG]);
         if (isNaN(av))
-            av = Number.MAX_SAFE_INTEGER;
+            av = Number.MAX_VALUE;
         if (isNaN(bv))
-            bv = Number.MAX_SAFE_INTEGER;
+            bv = Number.MAX_VALUE;
         return av - bv;
     });
 
@@ -197,7 +197,7 @@ function draw_divisions(unsorted_indices) {
     var sex_sort_order = ["F","M"];
 
     // Sort the divisions.
-    var divisions = Object.keys(buckets).sort(function(a,b) {
+    var divisions = Object.keys(buckets).sort(function(a: string,b: string) {
         // Get a representative rowobject from each bucket.
         var a_obj = common.makeRowObj(opldb.data[buckets[a][0]]);
         var b_obj = common.makeRowObj(opldb.data[buckets[b][0]]);
@@ -233,13 +233,13 @@ function draw_divisions(unsorted_indices) {
         }
 
         if (a_obj.division != b_obj.division) {
-            return a_obj.division > b_obj.division;
+            return a_obj.division - b_obj.division;
         }
 
         // Finally, by WeightClassKg, lowest first.
         var a_wtcls = Number(a_obj.weightclass.replace("+",""));
         var b_wtcls = Number(b_obj.weightclass.replace("+",""));
-        return a_wtcls >= b_wtcls;
+        return a_wtcls - b_wtcls;
     });
 
 
@@ -290,9 +290,9 @@ function build_wilks_table(unsorted_indices) {
         var av = Number(opldb.data[a][opldb.WILKS]);
         var bv = Number(opldb.data[b][opldb.WILKS]);
         if (isNaN(av))
-            av = Number.MIN_SAFE_INTEGER;
+            av = Number.MIN_VALUE;
         if (isNaN(bv))
-            bv = Number.MIN_SAFE_INTEGER;
+            bv = Number.MIN_VALUE;
         var result = bv - av;
         if (result != 0)
             return result;
@@ -301,9 +301,9 @@ function build_wilks_table(unsorted_indices) {
         av = Number(opldb.data[a][opldb.BODYWEIGHTKG]);
         bv = Number(opldb.data[b][opldb.BODYWEIGHTKG]);
         if (isNaN(av))
-            av = Number.MAX_SAFE_INTEGER;
+            av = Number.MAX_VALUE;
         if (isNaN(bv))
-            bv = Number.MAX_SAFE_INTEGER;
+            bv = Number.MAX_VALUE;
         return av - bv;
     });
 
