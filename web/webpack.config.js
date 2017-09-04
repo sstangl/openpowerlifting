@@ -1,5 +1,6 @@
 // vim: set ts=2 sts=2 sw=2 et:
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack')
 
 module.exports = {
   entry: {
@@ -46,6 +47,12 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common'
+    })
+  ],
 
   stats: {
     colors: true
