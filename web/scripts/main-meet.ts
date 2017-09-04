@@ -4,45 +4,50 @@
 import * as common from './common.js'
 import * as database from './database.js'
 
-var contentDiv = document.getElementsByClassName('content')[0];
-var meetString = document.getElementById('meet');
-var editString = document.getElementById('editurl');
-var selWeightType = <HTMLInputElement>document.getElementById('weighttype');
-var selDisplayType = <HTMLInputElement>document.getElementById('displaytype');
+// Appease the TypeScript compiler.
+declare var opldb;
+declare var meetdb;
+
+const contentDiv = document.getElementsByClassName('content')[0];
+const selWeightType = document.getElementById('weighttype') as HTMLSelectElement;
+const selDisplayType = document.getElementById('displaytype') as HTMLSelectElement;
+
+let meetString = document.getElementById('meet');
+let editString = document.getElementById('editurl');
 
 // Only compute the indices once on load.
-var indices_cache;
+let indices_cache;
 
 
 function maketd(str) {
-    var td = document.createElement('td');
+    let td = document.createElement('td');
     td.appendChild(document.createTextNode(str));
     return td;
 }
 
 
 function weightMax(row, cola, colb) {
-    var a = row[cola];
-    var b = row[colb];
+    let a = row[cola];
+    let b = row[colb];
     if (a === undefined)
-        return weight(b);
+        return common.weight(b);
     if (b === undefined)
-        return weight(a);
-    return weight(Math.max(a,b));
+        return common.weight(a);
+    return common.weight(Math.max(a,b));
 }
 
 
-function appendtd(tr, string) {
+function appendtd(tr, s: string) {
     var td = document.createElement("td");
-    td.appendChild(document.createTextNode(string));
+    td.appendChild(document.createTextNode(s));
     tr.appendChild(td);
 }
 
-function appendtdlink(tr, string, url) {
+function appendtdlink(tr, s: string, url) {
     var td = document.createElement("td");
     var a = document.createElement("a");
     a.setAttribute('href', url);
-    a.appendChild(document.createTextNode(string));
+    a.appendChild(document.createTextNode(s));
     td.appendChild(a);
     td.style.whiteSpace = "nowrap";
     tr.appendChild(td);
@@ -59,15 +64,15 @@ function appendtdraw(tr, innerHTML) {
 // Adds <tr> rows to a table for the given division indices.
 function build_division_rows(unsorted_indices, tbody) {
     // Sort by TotalKg descending, then by BodyweightKg ascending.
-    var indices = unsorted_indices.sort(function (a, b) {
+    let indices = unsorted_indices.sort(function (a, b) {
         // First sort by Wilks, descending.
-        var av = Number(opldb.data[a][opldb.TOTALKG]);
-        var bv = Number(opldb.data[b][opldb.TOTALKG]);
+        let av = Number(opldb.data[a][opldb.TOTALKG]);
+        let bv = Number(opldb.data[b][opldb.TOTALKG]);
         if (isNaN(av))
             av = Number.MIN_VALUE;
         if (isNaN(bv))
             bv = Number.MIN_VALUE;
-        var result = bv - av;
+        let result = bv - av;
         if (result != 0)
             return result;
 
@@ -81,11 +86,11 @@ function build_division_rows(unsorted_indices, tbody) {
         return av - bv;
     });
 
-    for (var i = 0; i < indices.length; ++i) {
+    for (let i = 0; i < indices.length; ++i) {
         var tr = document.createElement("tr");
         tbody.appendChild(tr);
 
-        var rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
+        let rowobj = common.makeRowObj(opldb.data[indices[i]], 0);
 
         appendtd(tr, rowobj.place);
         appendtdraw(tr, rowobj.name);

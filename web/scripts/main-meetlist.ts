@@ -3,12 +3,12 @@
 
 import { flashRow, getqueryobj } from './common.js'
 
+const searchfield = document.getElementById("searchfield") as HTMLInputElement;
+const searchbutton = document.getElementById("searchbutton") as HTMLInputElement;
+const selFed = document.getElementById("fedselect") as HTMLSelectElement;
+const meettable = document.getElementById("meettable") as HTMLTableElement;
 
-var searchInfo = {lastrowid: 0, laststr: ''};
-var searchfield = <HTMLInputElement>document.getElementById("searchfield");
-var searchbutton = <HTMLInputElement>document.getElementById("searchbutton");
-var selFed = <HTMLInputElement>document.getElementById("fedselect");
-var meettable = <HTMLInputElement>document.getElementById("meettable");
+let searchInfo = {lastrowid: 0, laststr: ''};
 
 
 function scrollIntoView(obj) {
