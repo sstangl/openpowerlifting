@@ -25,9 +25,13 @@ def main(filename):
     # The text "Class " clearly designates new information.
     text = text.replace('Class ', 'Class\n')
 
+    text = text.replace(' lb. Class',' Class')
+
     # Look for some markers and dump them on their own lines.
+    text = text.replace(' 114 Class','\n114 Class')
     text = text.replace(' 123 Class','\n123 Class')
     text = text.replace(' 148 Class','\n148 Class')
+    text = text.replace(' 165 Class','\n165 Class')
     text = text.replace(' 181 Class','\n181 Class')
     text = text.replace(' 198 Class','\n198 Class')
     text = text.replace(' 220 Class','\n220 Class')
@@ -43,10 +47,12 @@ def main(filename):
     text = text.replace(' Women','\nWomen')
     text = text.replace(' Juniors','\nJuniors')
     text = text.replace(' Teen','\nTeen')
+    text = text.replace(' Pre-Teen','\nPre-Teen')
 
     text = text.replace(' Raw','\nRaw')
     text = text.replace(' Single','\nSingle')
     text = text.replace(' Multi','\nMulti')
+    text = text.replace(' Equipped','\nEquipped')
 
     # Get rid of trailing spaces.
     while ' \n' in text:
