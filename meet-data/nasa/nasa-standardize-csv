@@ -186,7 +186,7 @@ def aggregate_divisions(csv):
     csv.append_column("Division")
     dividx = csv.index('Division')
 
-    cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press']
+    cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press', 'P Pr']
 
     for col in cols:
         if col in csv.fieldnames:
@@ -290,7 +290,8 @@ def integrate_equipment_event_sex(csv):
     equipmentidx = csv.index('Equipment')
     nameidx = csv.index('Name')
     wtidx = csv.index('WeightClassLBS')
-    stateidx = csv.index('State')
+    if 'State' in csv.fieldnames: 
+        stateidx = csv.index('State')
     sexidx = csv.index('Sex')
 
     event = None
@@ -299,26 +300,30 @@ def integrate_equipment_event_sex(csv):
     first_category_detected = False
     for row in csv.rows:
         # Detect category rows.
-        if row[nameidx] and not row[wtidx] and not row[stateidx]:
+        if row[nameidx] and not row[wtidx]: #and not row[stateidx]:
             category = ''.join(row[nameidx]).replace('  ', ' ').lower()
-            if '(w)' in category or 'Women' in category:
+            if '(w)' in category or 'women' in category or 'girls' in category:
                 sex = 'F'
             else:
                 sex = None
 
             if 'uneq pl' in category or category == 'uneq hs pl' \
                  or category == 'uneq powerlifting' or category == 'unequipped pl' \
-                or category == 'uneq youth':
+                or category == 'uneq youth' \
+               or category =='uneq women pl':
                 event = 'SBD'
                 equipment = 'Wraps'
             elif 'equipped pl' in category or 'eq powerlifting' in category \
                     or 'equip pl' in category \
+                    or 'eq pl' in category\
                     or category == 'eqip pl':
                 event = 'SBD'
                 equipment = 'Single-ply'
 
                 #Powersports
-            elif 'power' in category and 'ports' in category: # Curl-Bench-Deadlift. Will
+            elif 'power' in category and 'ports' in category \
+                or category == 'women ps' \
+                or category == 'men ps': # Curl-Bench-Deadlift. Will
             #recalculate total later. Leave place untouched
                 event = 'BD'
                 equipment = 'Raw'
@@ -342,7 +347,7 @@ def integrate_equipment_event_sex(csv):
                 equipment = 'Raw'
             elif 'eq pp' in category \
                  or category == 'equipped push pull' \
-                 or category == 'equipped pp' \
+                 or 'equipped pp' in category\
                  or category =='eq push pull' \
                  or category  == 'push pull equipped' \
                  or "equip push pull" in category \
@@ -370,7 +375,8 @@ def integrate_equipment_event_sex(csv):
                 error("Unknown category: \"%s\"" % (category))
             first_category_detected = True
 
-        elif row[nameidx] and (row[wtidx] or row[stateidx]) and first_category_detected:
+        #elif row[nameidx] and (row[wtidx] or row[stateidx]) and first_category_detected:
+        elif row[nameidx] and row[wtidx] and first_category_detected:
             assert event != None
             assert equipment != None
             row[eventidx] = event
@@ -564,6 +570,7 @@ def main(filename):
         csv.remove_column_by_name('')
 
     # Remove some columns that don't get used.
+    csv.remove_column_by_name("Sub Tl")
     csv.remove_column_by_name("Tl. Lbs.")
     csv.remove_column_by_name("Coef")
     csv.remove_column_by_name("TL Coef")
