@@ -45,7 +45,7 @@ probe-quick:
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
 	${DATADIR}/gbpf/gbpf-probe --quick || true
-	${DATADIR}/hercules/hercules-probe || true
+	${DATADIR}/herc/herc-probe || true
 	${DATADIR}/ipa/ipa-probe --quick || true
 	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nasa/nasa-probe --quick || true
@@ -75,7 +75,7 @@ probe:
 	${DATADIR}/fesupo/fesupo-probe || true
 	${DATADIR}/fpo/fpo-probe || true
 	${DATADIR}/gbpf/gbpf-probe || true
-	${DATADIR}/hercules/hercules-probe || true
+	${DATADIR}/herc/herc-probe || true
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/ipf/ipf-probe || true
 	${DATADIR}/irishpf/irishpf-probe || true
