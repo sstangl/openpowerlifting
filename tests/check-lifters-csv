@@ -411,16 +411,12 @@ def check_row_event_consistency(row, csv):
         if not 'S' in event and row[csv.index('Equipment')] == "Wraps":
             perror("Event category doesn't use wraps. Row: %s" % row)
 
-    # If this was a single-lift attempt, and the lifter wasn't disqualified,
-    # the TotalKg must be filled in as well.
-    if len(event) == 1:
-        place = ''
-        if 'Place' in csv.fieldnames:
-            place = row[csv.index('Place')]
+    # Disqualified lifters must not have Totals.
+    if 'Place' in csv.fieldnames:
+        place = row[csv.index('Place')]
 
-        if place != 'DQ' and place != 'DD' and place != 'NS':
-            if not row[csv.index('TotalKg')]:
-                perror("Non-DQ'd Single Lift not marked in TotalKg. Row: %s" % row)
+        if place in ['DQ','NS','DD'] and row[csv.index('TotalKg')]:
+            perror("DQ'd lifter must not have a TotalKg. Row: %s" % row)
 
 
 # Women shouldn't accidentally be given male SHW classes.
