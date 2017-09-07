@@ -44,6 +44,7 @@ probe-quick:
 	${DATADIR}/capo/capo-probe --quick || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
+	${DATADIR}/cpl/cpl-probe --quick || true
 	${DATADIR}/gbpf/gbpf-probe --quick || true
 	${DATADIR}/herc/herc-probe || true
 	${DATADIR}/ipa/ipa-probe --quick || true
@@ -71,6 +72,7 @@ probe:
 	${DATADIR}/capo/capo-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe || true
+	${DATADIR}/cpl/cpl-probe || true
 	${DATADIR}/epf/epf-probe || true
 	${DATADIR}/fesupo/fesupo-probe || true
 	${DATADIR}/fpo/fpo-probe || true
