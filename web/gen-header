@@ -31,8 +31,8 @@ def main(tabname):
 
     print('<div class="nav">')
 
-    print('<a href="https://instagram.com/openpowerlifting" class="fa fa-instagram social-icon nav__link" ></a>')
-    print('<a href="https://facebook.com/openpowerlifting" class="fa fa-facebook social-icon nav__link" ></a>')
+    print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
+    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
 
     assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
 
