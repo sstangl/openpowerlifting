@@ -8,8 +8,9 @@
 # information. This cannot be done client-side, because it would take too long.
 #
 
-import oplcsv
 import sys
+sys.path.append('../scripts')
+import oplcsv
 
 
 # Get list of unique names in the CSV file.

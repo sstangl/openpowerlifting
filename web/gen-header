@@ -7,12 +7,13 @@
 
 import datetime
 import locale
-import oplcsv
 import sys
+sys.path.append('../scripts')
+import oplcsv
 
 
 def showdbstats():
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    locale.setlocale(locale.LC_ALL, 'en_US.utf8')
     csv = oplcsv.Csv('../build/openpowerlifting.csv')
     meets = oplcsv.Csv('../build/meets.csv')
 
