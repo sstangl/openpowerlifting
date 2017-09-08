@@ -282,3 +282,8 @@ li {
 td.meetdivisiontext { /* used by meet.html */
   color: #FB3640;
 }
+
+.social-icon {
+  color: #fff;
+  text-decoration:none;
+}
