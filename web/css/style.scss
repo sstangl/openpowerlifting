@@ -220,7 +220,7 @@ input[type="checkbox"]:checked + label span {
 div.topbar {
   position: fixed;
   width: 100%;
-  background-color: #10171c;
+  background-color: $background-color;
 }
 
 div.content {
