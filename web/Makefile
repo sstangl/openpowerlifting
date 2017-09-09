@@ -48,6 +48,7 @@ scripts: builddir npminit
 	    | ./try-uglify ${BUILDDIR}/scripts/jquery-slickgrid-2.2.6.min.js
 
 css: builddir
+	sass css/style.scss css/style.css --style compressed
 	cp css/style.css ${BUILDDIR}/style.css
 	./gen-meettable-css > ${BUILDDIR}/meettable.css
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
