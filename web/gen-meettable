@@ -6,8 +6,9 @@
 
 import bisect
 import html
-import oplcsv
 import sys
+sys.path.append('../scripts')
+import oplcsv
 import urllib.parse
 
 LIFTERSCSV = '../build/openpowerlifting.csv'
@@ -97,7 +98,7 @@ def makeinstagram(liftername):
 
     for row in SocialMediaCSV.rows:
         if row[nameidx] == liftername and row[igidx]:
-            return '<a href="https://www.instagram.com/%s"><img class="instagram" src="images/ig-glyph-logo_May2016.png"></a>' % (row[igidx])
+            return '<a href="https://instagram.com/%s" class="instagram"><i class="fa fa-instagram"></i></a>' % (row[igidx])
 
     return ''
 

@@ -48,6 +48,7 @@ scripts: builddir npminit
 	    | ./try-uglify ${BUILDDIR}/scripts/jquery-slickgrid-2.2.6.min.js
 
 css: builddir
+	sass css/style.scss css/style.css --style compressed
 	cp css/style.css ${BUILDDIR}/style.css
 	./gen-meettable-css > ${BUILDDIR}/meettable.css
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
@@ -63,7 +64,6 @@ html: builddir data
 images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/images
 	cp images/select_dropdown.png ${BUILDDIR}/images
-	cp images/ig-glyph-logo_May2016.png "${BUILDDIR}/images"
 	cp images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images"
 
 check:

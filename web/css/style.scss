@@ -1,0 +1,272 @@
+$background-color: #1E1E1E;
+$alt-color: #242424;
+
+$primary-color: #569cd6;
+$default-color: #D4D4D4;
+$hover-color: #444;
+
+html,body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $background-color;
+  color: $default-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.slick-cell {
+  padding-top: 3px;
+  padding-left: 4px;
+  color: $default-color;
+  font-size: 9pt;
+  border: 0px;
+}
+
+a {
+  color: $default-color;
+}
+
+.searchflashing {
+  background-color: $hover-color;
+}
+
+.slick-header-column {
+  font-size: 9pt;
+  color: $primary-color;
+}
+
+.slick-header-column.ui-state-default {
+  border-right: 0px;
+  border-bottom: 1px $primary-color;
+}
+
+.slick-header-column-sorted {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.slick-row.even {
+  background-color: $alt-color;
+}
+
+.slick-row:hover {
+  background-color: $hover-color;
+}
+
+table {
+  font-size: 9pt;
+  color: $default-color;
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  border-spacing: 0px;
+  border: none;
+}
+
+thead {
+  color: $primary-color;
+}
+
+thead td {
+  min-width: 80px;
+}
+
+tr:nth-child(even) {
+  background-color: $alt-color;
+}
+
+tbody tr:hover {
+  background-color: $hover-color;
+}
+
+td {
+  border: 0px;
+  padding-right: 0px;
+  padding-left: 5px;
+  height: 21px;
+}
+
+td a {
+  color: $default-color;
+}
+
+.table-divider {
+  color: $primary-color;
+}
+
+.flexbox {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+}
+
+#theGrid {
+  flex: 1;
+}
+
+#oplurl {
+  color: $primary-color;
+}
+
+#header {
+  padding: 6px;
+  font-size: 14px;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#controls {
+  height: 28px;
+  font-size: 10pt;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: $alt-color;
+  display: flex;
+  align-items: center;
+}
+
+#controls-right {
+  margin-left: auto;
+}
+
+.siteinfo {
+  float: right;
+  color: $primary-color;
+}
+
+.brand {
+  font-size: larger;
+}
+
+/* From http://jsfiddle.net/danield770/YvCHW/4232/ */
+select {
+  padding: 3px;
+  margin-left: 5px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(images/select_dropdown.png) 96% / 15% no-repeat #3E4042;
+}
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) {
+  select {
+    background: none;
+  }
+}
+
+input[type="text"] {
+  padding: 3px 5px 3px 5px;
+  margin-left: 5px;
+  border: 1px solid #333333;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 200px;
+}
+
+button {
+  padding: 3px 8px 3px 8px;
+  margin-left: 5px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #3E4042;
+  color: white;
+  font-size: 10pt;
+  width: 70px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #56585C;
+}
+
+button:active {
+  background-color: #303133;
+}
+
+/* From http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: 0px 1px 3px 5px;
+  vertical-align: middle;
+  background:url(images/check_radio_sheet.png) left top no-repeat;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label span {
+  background:url(images/check_radio_sheet.png) -19px top no-repeat;
+}
+
+#lifter {
+  font-size: 10pt;
+  margin-left: 4px;
+}
+
+div.topbar {
+  position: fixed;
+  width: 100%;
+  background-color: $background-color;
+}
+
+div.content {
+  padding-top: 82px;
+}
+
+div.text-content {
+  padding: 82px 20px 20px 20px;
+  max-width: 800px;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.downloadbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.downloaditem {
+  border: 1px;
+  border-color: lime;
+  border-style: solid;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.nav {
+  padding-right: 10px;
+}
+
+.nav__link + .nav__link {
+  margin-left: 10px;
+}
+
+.nav__link--active {
+  color: $primary-color;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+td.meetdivisiontext { /* used by meet.html */
+  color: $primary-color;
+}
+
+.instagram {
+  margin-left: 8px;
+}
