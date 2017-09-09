@@ -18,41 +18,33 @@ def showdbstats():
 
     num_entries = locale.format('%d', len(csv.rows), grouping=True)
     num_meets = locale.format('%d', len(meets.rows), grouping=True)
-    compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
+    compiledate = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    print(' (%s Entries; %s Meets; Updated %s)' % (num_entries, num_meets, compiledate))
+    print('%s Entries; %s Meets; Updated %s' % (num_entries, num_meets, compiledate))
 
 def addnav(activetab, tab, title):
     active = 'nav__link--active' if activetab == tab else ''
     print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(tab, active, title))
 
 def main(activetab):
-    print('<div id="header">')
-    print('OpenPowerlifting')
-    print('<div class="nav">')
-
-    print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
-    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
-
     assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
-
-    addnav(activetab, 'index', 'Rankings')
+    print('<div id="header">')
+    print('<div class="nav">')
+    print('<a href="index.html" class="nav__link brand">OpenPowerlifting</a>')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
     addnav(activetab, 'contact', 'Contact')
 
-    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us</a>')
-    print('<a href="https://www.patreon.com/openpowerlifting">\
-             <img style="height: 15px; width: 15px" \
-                  src="images/patreon_navigation_logo_mini_orange.png"/>\
-           </a>')
+    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us <img style="height: 15px; width: 15px" src="images/patreon_navigation_logo_mini_orange.png"/></a>')
+    print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
+    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
 
-    print('</div>')
-    print('<div class="header__stats">')
+    print('<span class="siteinfo">')
     showdbstats()
-    print('</div>')
-    print('</div>')
+    print('</span>')
 
+    print('</div>')
+    print('</div>')
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
