@@ -269,13 +269,6 @@ div.text-content {
   font-size: 12px;
 }
 
-img.instagram {
-  height: 15px;
-  width: 15px;
-  padding-left: 4px;
-  margin-bottom: -2px; /* Gross, but centers image vertically without misaligning text. */
-}
-
 li {
   margin-bottom: 10px;
 }
@@ -284,7 +277,11 @@ td.meetdivisiontext { /* used by meet.html */
   color: $primary-color;
 }
 
-.social-icon {
-  color: #fff;
-  text-decoration:none;
+.fa-resize {
+  font-size: 16px;
+}
+
+.instagram {
+  margin-left: 8px;
+  vertical-align: middle;
 }
