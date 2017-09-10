@@ -3,12 +3,11 @@
 #
 # Generates the top site navigation part of the HTML page.
 # Argument must be one of the site parts.
-#
 
 import datetime
 import locale
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
+import sys
+sys.path.append('../scripts')
 import oplcsv
 
 
@@ -21,57 +20,32 @@ def showdbstats():
     num_meets = locale.format('%d', len(meets.rows), grouping=True)
     compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print(' (%s Entries; %s Meets; Updated %s)' % (num_entries, num_meets, compiledate))
+    print('%s Entries; %s Meets; Updated %s' % (num_entries, num_meets, compiledate))
 
+def addnav(activetab, tab, title, filename = None):
+    filename = tab if filename == None else filename
+    active = 'nav__link--active' if activetab == tab else ''
+    print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(filename, active, title))
 
-def main(tabname):
-
+def main(activetab):
+    assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
     print('<div id="header">')
-    print('OpenPowerlifting')
-
     print('<div class="nav">')
+    addnav(activetab, 'rankings', 'OpenPowerlifting', 'index')
+    addnav(activetab, 'meetlist', 'Meets')
+    addnav(activetab, 'data', 'Data')
+    addnav(activetab, 'contact', 'Contact')
 
+    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us <img style="height: 15px; width: 15px" src="images/patreon_navigation_logo_mini_orange.png"/></a>')
     print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
-    print('<a href="https://facebook.com/openpowerlifting" class="nav__link"><i class="fa fa-facebook"></i></a>')
+    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
 
-    assert tabname in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
-
-    if tabname == 'rankings':
-        print('<a href="index.html" class="nav__link nav__link--active">Rankings</a>')
-    else:
-        print('<a href="index.html" class="nav__link">Rankings</a>')
-
-    if tabname == 'meetlist':
-        print('<a href="meetlist.html" class="nav__link nav__link--active">Meets</a>')
-    else:
-        print('<a href="meetlist.html" class="nav__link">Meets</a>')
-
-    if tabname == 'data':
-        print('<a href="data.html" class="nav__link nav__link--active">Data</a>')
-    else:
-        print('<a href="data.html" class="nav__link">Data</a>')
-
-    if tabname == 'contact':
-        print('<a href="contact.html" class="nav__link nav__link--active">Contact</a>')
-    else:
-        print('<a href="contact.html" class="nav__link">Contact</a>')
-
-    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us</a>')
-    print('<a href="https://www.patreon.com/openpowerlifting">\
-             <img style="height: 15px; width: 15px" \
-                  src="images/patreon_navigation_logo_mini_orange.png"/>\
-           </a>')
-
-    print('</div>')
-
-    print('<div class="header__stats">')
-
+    print('<span class="siteinfo">')
     showdbstats()
+    print('</span>')
 
     print('</div>')
-
     print('</div>')
-
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
