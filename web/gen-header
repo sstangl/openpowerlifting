@@ -20,7 +20,7 @@ def showdbstats():
     num_meets = locale.format('%d', len(meets.rows), grouping=True)
     compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print('%s Entries; %s Meets; Updated %s' % (num_entries, num_meets, compiledate))
+    print('%s Entries &mdash; %s Meets &mdash; Updated %s' % (num_entries, num_meets, compiledate))
 
 def addnav(activetab, tab, title, filename = None):
     filename = tab if filename == None else filename
