@@ -6,8 +6,9 @@
 
 import bisect
 import html
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
 import oplcsv
-import sys
 import urllib.parse
 
 LIFTERSCSV = '../build/openpowerlifting.csv'
