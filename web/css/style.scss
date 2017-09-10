@@ -115,14 +115,11 @@ td a {
 #header {
   padding: 6px;
   font-size: 14px;
-  color: $primary-color;
-  background-color: $background-color;
 }
 
 #header a {
-  color: $default-color;
+  text-decoration: none;
 }
-
 #controls {
   height: 28px;
   font-size: 10pt;
@@ -224,7 +221,6 @@ input[type="checkbox"]:checked + label span {
 div.topbar {
   position: fixed;
   width: 100%;
-  background-color: #10171c;
 }
 
 div.content {
@@ -252,7 +248,6 @@ div.text-content {
 }
 
 .nav {
-  float: right;
   padding-right: 10px;
 }
 
@@ -284,4 +279,9 @@ td.meetdivisiontext { /* used by meet.html */
 .instagram {
   margin-left: 8px;
   vertical-align: middle;
+}
+
+.siteinfo {
+  float: right;
+  color: $primary-color;
 }
