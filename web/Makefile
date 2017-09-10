@@ -8,7 +8,7 @@ PLFILEJS = openpowerlifting.js
 MEETFILE = ../build/meets.csv
 MEETFILEJS = meets.js
 
-all: database scripts css html images
+all: database npminit scripts css html images
 
 npminit:
 	npm install
@@ -38,7 +38,7 @@ database: data
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/scripts/${MEETFILEJS}"
 	./make-social-media-js > "${BUILDDIR}/scripts/social-media.js"
 
-scripts: builddir npminit
+scripts: builddir
 	npm run webpack
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
@@ -48,7 +48,7 @@ scripts: builddir npminit
 	    | ./try-uglify ${BUILDDIR}/scripts/jquery-slickgrid-2.2.6.min.js
 
 css: builddir
-	cp css/style.css ${BUILDDIR}/style.css
+	npm run sass
 	./gen-meettable-css > ${BUILDDIR}/meettable.css
 	cp scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/slick.grid.css
 

@@ -1,42 +1,46 @@
-html,body {
+$background-color: #040404;
+$hover-color: #444444;
+$alt-color: #111111;
+
+$default-color: #EDF2F4;
+$primary-color: #FB3640;
+
+$control-border-color: #333333;
+$control-background-color: #3E4042;
+
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-
-  background-color: #040404;
-  color: #EDF2F4;
-
+  background-color: $background-color;
+  color: $default-color;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .slick-cell {
   padding-top: 3px;
   padding-left: 4px;
-  color: #EDF2F4;
+  color: $default-color;
   font-size: 9pt;
   border: 0px;
 }
 
 a {
-  color: #EDF2F4;
-}
-
-.slick-cell a {
-  color: #EDF2F4;
+  color: $default-color;
 }
 
 .searchflashing {
-  background-color: #444444;
+  background-color: $hover-color;
 }
 
 .slick-header-column {
   font-size: 9pt;
-  color: #FB3640;
+  color: $primary-color;
 }
 
 .slick-header-column.ui-state-default {
   border-right: 0px;
-  border-bottom: 1px #FB3640;
+  border-bottom: 1px $primary-color;
 }
 
 .slick-header-column-sorted {
@@ -45,16 +49,16 @@ a {
 }
 
 .slick-row.even {
-  background-color: #111111;
+  background-color: $alt-color;
 }
 
 .slick-row:hover {
-  background-color: #444444;
+  background-color: $hover-color;
 }
 
 table {
   font-size: 9pt;
-  color: #EDF2F4;
+  color: $default-color;
   width: 100%;
   padding-left: 18px;
   padding-right: 18px;
@@ -64,7 +68,7 @@ table {
 }
 
 thead {
-  color: #FB3640;
+  color: $primary-color;
 }
 
 thead td {
@@ -72,11 +76,11 @@ thead td {
 }
 
 tr:nth-child(even) {
-  background-color: #111111;
+  background-color: $alt-color;
 }
 
 tbody tr:hover {
-  background-color: #444444;
+  background-color: $hover-color;
 }
 
 td {
@@ -87,11 +91,11 @@ td {
 }
 
 td a {
-  color: #EDF2F4;
+  color: $default-color;
 }
 
 .table-divider {
-  color: #FB3640;
+  color: $primary-color;
 }
 
 .flexbox {
@@ -105,18 +109,18 @@ td a {
 }
 
 #oplurl {
-  color: #FB3640;
+  color: $primary-color;
 }
 
 #header {
   padding: 6px;
   font-size: 14px;
-  color: #FB3640;
-  background-color: #040404;
+  color: $primary-color;
+  background-color: $background-color;
 }
 
 #header a {
-  color: #EDF2F4;
+  color: $default-color;
 }
 
 #controls {
@@ -126,12 +130,9 @@ td a {
   padding-right: 20px;
   padding-bottom: 5px;
   padding-top: 5px;
-  background-color: #111111;
+  background-color: $alt-color;
   display: flex;
   align-items: center;
-}
-
-#controls-left {
 }
 
 #controls-right {
@@ -150,16 +151,16 @@ td a {
 select {
   padding: 3px;
   margin-left: 5px;
-  border: 1px solid #333333;
+  border: 1px solid $control-border-color;
   border-radius: 4px;
-  background-color: #3E4042;
+  background-color: $control-background-color;
   color: white;
   font-size: 10pt;
   width: 100px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(images/select_dropdown.png) 96% / 15% no-repeat #3E4042;
+  background: url(images/select_dropdown.png) 96% / 15% no-repeat $control-background-color;
 }
 /*target Internet Explorer 9 and Internet Explorer 10:*/
 @media screen and (min-width:0\0) {
@@ -171,8 +172,8 @@ select {
 input[type="text"] {
   padding: 3px 5px 3px 5px;
   margin-left: 5px;
-  border: 1px solid #333333;
-  background-color: #3E4042;
+  border: 1px solid $control-border-color;
+  background-color: $control-background-color;
   color: white;
   font-size: 10pt;
   width: 200px;
@@ -181,9 +182,9 @@ input[type="text"] {
 button {
   padding: 3px 8px 3px 8px;
   margin-left: 5px;
-  border: 1px solid #333333;
+  border: 1px solid $control-border-color;
   border-radius: 4px;
-  background-color: #3E4042;
+  background-color: $control-background-color;
   color: white;
   font-size: 10pt;
   width: 70px;
@@ -260,7 +261,7 @@ div.text-content {
 }
 
 #header .nav__link--active {
-  color: #FB3640;
+  color: $primary-color;
 }
 
 .header__stats {
@@ -280,7 +281,7 @@ li {
 }
 
 td.meetdivisiontext { /* used by meet.html */
-  color: #FB3640;
+  color: $primary-color;
 }
 
 .social-icon {
