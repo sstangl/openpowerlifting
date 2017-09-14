@@ -41,7 +41,7 @@ CREATE TABLE entries (
   Sex CHAR(1),
   Event CHAR(3),
   Equipment TEXT,
-  Age INTEGER,
+  Age FLOAT,
   Division TEXT,
   BodyweightKg FLOAT,
   WeightClassKg FLOAT,

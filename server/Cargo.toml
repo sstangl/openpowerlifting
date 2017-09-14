@@ -1,0 +1,11 @@
+[package]
+name = "server"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+
+[dependencies]
+diesel = { version = "0.16.0", features = ["sqlite", "huge-tables"] }
+diesel_codegen = { version = "0.16.0", features = ["sqlite"] }
+dotenv = "0.10.1"
+rocket = "0.3.2"
+rocket_codegen = "0.3.2"
