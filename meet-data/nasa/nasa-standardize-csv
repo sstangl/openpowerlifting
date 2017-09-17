@@ -336,6 +336,9 @@ def integrate_equipment_event_sex(csv):
             elif 'equipped bp' in category:
                 event = 'B'
                 equipment = 'Single-ply'
+            elif category == 'equip bp':
+                event = 'B'
+                equipment = 'Single-ply'
             elif 'uneq pp' in category \
                  or 'uneq push pull' in category \
                  or 'unequipped pp' in category \
@@ -357,6 +360,9 @@ def integrate_equipment_event_sex(csv):
             elif 'power press' in category: # PowerClean-Bench
                 event = 'B'
                 equipment = 'Raw'
+            elif category == 'power clean/press':
+                event = 'B'
+                equipment = 'Raw'
             elif 'retro' in category and 'pl' in category:
                 event = 'SBD'
                 equipment = 'Raw'
@@ -369,6 +375,9 @@ def integrate_equipment_event_sex(csv):
             elif category == 'uneq dl only':
                 event = 'D'
                 equipment = 'Raw'
+            elif category == 'equipped dl':
+                event = 'D'
+                equipment = 'Single-ply'
             elif category == 'men':
                 pass
             else:
