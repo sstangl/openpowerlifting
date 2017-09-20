@@ -7,6 +7,7 @@ Abbreviation: FFForce
 Founded: January 17th, 2015
 
 Website: http://www.ffforce.fr ([results page](http://www.ffforce.fr/tous-les-resultats/), [federation rules](http://www.ffforce.fr/reglement-national/))
+
 Wikipedia: [French article](https://fr.wikipedia.org/wiki/F%C3%A9d%C3%A9ration_fran%C3%A7aise_de_force)
 
 ### History
@@ -52,6 +53,14 @@ Unranked athletes can only acquire a rank by participating at a regional or nati
   - 2: ages 50-59
   - 3: ages 60-69
   - 4: ages 70+
+
+The Cadet division features special rules:
+
+- on all 3 lifts, a lifter only has 2 attempts instead of 3;
+- judges grade a lifter's last attempt on every lift with a mark from 0 to 20 (based on the lifter's technique);
+- on every lift L (S, B or D), if a lifter's last successful attempt was done at weight X_l and was graded Y_l, this lifter's recorded best attempt at lift L is: X_l * Y_l/20.
+
+A lifter's total is computed as the sum of their recorded (thus modified) best attempt on every lift.
 
 ### Weight classes
 
@@ -99,6 +108,8 @@ Club competitions:
 ### Special considerations
 
 - Remember: FA is unequipped, PL is equipped, Open division only exists for Nationals.
+
+- Don't bother with special rules for the Cadet division. Keep the best actual attempt on every lift instead of using the modified recorded attempt, and recalculate totals accordingly. However, do not modify places.
 
 - Translations:
   - Bench press: "DC" / "Dec" / "Développé couché" (which serves as the name for both the lift and the discipline even though they're distinct)
