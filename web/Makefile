@@ -1,12 +1,12 @@
 .PHONY: builddir csvfile check
 
-BUILDDIR = build
-SCRIPTDIR = ../scripts
+BUILDDIR := build
+SCRIPTDIR := ../scripts
 
-PLFILE = ../build/openpowerlifting.csv
-PLFILEJS = openpowerlifting.js
-MEETFILE = ../build/meets.csv
-MEETFILEJS = meets.js
+PLFILE := ../build/openpowerlifting.csv
+PLFILEJS := openpowerlifting.js
+MEETFILE := ../build/meets.csv
+MEETFILEJS := meets.js
 
 all: database npminit scripts css html images
 

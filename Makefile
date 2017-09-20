@@ -1,12 +1,12 @@
 .PHONY: builddir csvfile check probe
 
-DATADIR = meet-data
-BUILDDIR = build
+DATADIR := meet-data
+BUILDDIR := build
 
-PLFILE = openpowerlifting.csv
-PLFILEJS = openpowerlifting.js
-MEETFILE = meets.csv
-MEETFILEJS = meets.js
+PLFILE := openpowerlifting.csv
+PLFILEJS := openpowerlifting.js
+MEETFILE := meets.csv
+MEETFILEJS := meets.js
 
 all: csvfile sqlite web
 
