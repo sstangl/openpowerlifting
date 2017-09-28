@@ -48,6 +48,7 @@ def main(filename):
     text = text.replace(' Juniors','\nJuniors')
     text = text.replace(' Teen','\nTeen')
     text = text.replace(' Pre-Teen','\nPre-Teen')
+    text = text.replace(' Police','\nPolice')
 
     text = text.replace(' Raw','\nRaw')
     text = text.replace(' Single','\nSingle')
