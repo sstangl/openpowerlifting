@@ -124,7 +124,7 @@ export function makeRowObj(row, index?: number): RowObject {
     // XXX: Bad hack to make Ben's name pink, per request.
     if (fullname === "Ben Gianacakos") {
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
-    } else if (fullname === "Kristy Hawkins") {
+    } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley") {
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
     }
 
