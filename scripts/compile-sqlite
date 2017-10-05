@@ -23,11 +23,9 @@ function require_file {
 
 # Dependency checks.
 require_dir "build"
-require_file "build/openpowerlifting.csv"
-require_file "build/meets.csv"
-require_file "build/meets.csv"
-require_dir "lifter-data"
-require_file "lifter-data/social-media.csv"
+require_file "build/sqlite-openpowerlifting.csv"
+require_file "build/sqlite-meets.csv"
+require_file "build/sqlite-social-media.csv"
 
 # If the database already exists, SQLite will add to existing tables
 # instead of parsing the CSV headers. So the DB needs to be nuked.
@@ -37,6 +35,7 @@ rm -f "${DBFILE}"
 # The column ordering is hardcoded and must agree with scripts/compile.
 CREATEENTRIESTABLE="
 CREATE TABLE entries (
+  id INTEGER PRIMARY KEY,
   MeetID INTEGER,
   Name TEXT,
   Sex CHAR(1),
@@ -70,10 +69,10 @@ CREATE TABLE entries (
 
 CREATEMEETSTABLE="
 CREATE TABLE meets (
-  MeetID INTEGER,
+  MeetID INTEGER PRIMARY KEY,
   MeetPath TEXT,
   Federation TEXT,
-  Date DATE,
+  MeetDate DATE,
   MeetCountry TEXT,
   MeetState TEXT,
   MeetTown TEXT,
@@ -83,6 +82,7 @@ CREATE TABLE meets (
 
 CREATESOCIALTABLE="
 CREATE TABLE social (
+  id INTEGER PRIMARY KEY,
   Name TEXT,
   Instagram BLOB
 );
@@ -92,16 +92,13 @@ IMPORTCOMMAND="
 .mode csv
 
 ${CREATEENTRIESTABLE}
-.import build/openpowerlifting.csv entries
-delete from entries where MeetID = 'MeetID';
+.import build/sqlite-openpowerlifting.csv entries
 
 ${CREATEMEETSTABLE}
-.import build/meets.csv meets
-delete from meets where MeetID = 'MeetID';
+.import build/sqlite-meets.csv meets
 
 ${CREATESOCIALTABLE}
-.import lifter-data/social-media.csv social
-delete from social where Name = 'Name';
+.import build/sqlite-social-media.csv social
 
 vacuum;
 "

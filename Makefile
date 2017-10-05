@@ -20,6 +20,7 @@ csvfile: builddir
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
 sqlite: csvfile
+	scripts/prepare-for-sqlite
 	scripts/compile-sqlite
 
 web: csvfile

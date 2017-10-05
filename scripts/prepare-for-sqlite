@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# It turns out that we can't just import the CSV files directly
+# into SQLite, because the Diesel ORM requires certain features
+# like a primary RowID column.
+#
+# But we also want to keep around the original CSV files, which
+# were intended for human readability.
+#
+# This script inputs the original CSV files and outputs temporary
+# CSV files into the build directory. Those temporary files can
+# then serve as the basis for the SQLite import.
+
+import sys
+from oplcsv import Csv
+
+
+def write_without_fieldnames(csv, path):
+    with open(path, 'w') as fd:
+        for row in csv.rows:
+            fd.write(','.join(row) + "\n")
+
+
+def handle_openpowerlifting():
+    csv = Csv('build/openpowerlifting.csv')
+
+    csv.insert_column(0, 'rowid')
+    for i, row in enumerate(csv.rows):
+        row[0] = str(i)
+
+    write_without_fieldnames(csv, 'build/sqlite-openpowerlifting.csv')
+
+
+def handle_meets():
+    csv = Csv('build/meets.csv')
+    write_without_fieldnames(csv, 'build/sqlite-meets.csv')
+
+
+def handle_social_media():
+    csv = Csv('lifter-data/social-media.csv')
+
+    csv.insert_column(0, 'rowid')
+    for i, row in enumerate(csv.rows):
+        row[0] = str(i)
+
+    write_without_fieldnames(csv, 'build/sqlite-social-media.csv')
+
+
+def main():
+    handle_openpowerlifting()
+    handle_meets()
+    handle_social_media()
+
+
+if __name__ == '__main__':
+    main()
