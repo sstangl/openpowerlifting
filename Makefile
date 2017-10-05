@@ -117,4 +117,5 @@ clean:
 	rm -rf '${DATADIR}/thspa/__pycache__'
 	rm -rf '${DATADIR}/usapl/__pycache__'
 	rm -rf '${DATADIR}/wrpf/__pycache__'
+	rm -rf 'server/target'
 	$(MAKE) -C web clean
