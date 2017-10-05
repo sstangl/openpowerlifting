@@ -35,9 +35,9 @@ rm -f "${DBFILE}"
 # The column ordering is hardcoded and must agree with scripts/compile.
 CREATEENTRIESTABLE="
 CREATE TABLE entries (
-  id INTEGER PRIMARY KEY,
-  MeetID INTEGER,
-  Name TEXT,
+  id INTEGER PRIMARY KEY NOT NULL,
+  MeetID INTEGER NOT NULL,
+  Name TEXT NOT NULL,
   Sex CHAR(1),
   Event CHAR(3),
   Equipment TEXT,
@@ -69,22 +69,22 @@ CREATE TABLE entries (
 
 CREATEMEETSTABLE="
 CREATE TABLE meets (
-  MeetID INTEGER PRIMARY KEY,
-  MeetPath TEXT,
-  Federation TEXT,
-  MeetDate DATE,
-  MeetCountry TEXT,
+  MeetID INTEGER PRIMARY KEY NOT NULL,
+  MeetPath TEXT NOT NULL,
+  Federation TEXT NOT NULL,
+  MeetDate DATE NOT NULL,
+  MeetCountry TEXT NOT NULL,
   MeetState TEXT,
   MeetTown TEXT,
-  MeetName TEXT
+  MeetName TEXT NOT NULL
 );
 "
 
 CREATESOCIALTABLE="
 CREATE TABLE social (
-  id INTEGER PRIMARY KEY,
-  Name TEXT,
-  Instagram BLOB
+  id INTEGER PRIMARY KEY NOT NULL,
+  Name TEXT NOT NULL,
+  Instagram BLOB NOT NULL
 );
 "
 

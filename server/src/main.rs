@@ -13,10 +13,9 @@ extern crate r2d2;
 use diesel::prelude::*;
 
 extern crate rocket;
-use rocket::http::Cookies;
 
 use std::error::Error;
-use std::path::{Path, PathBuf};
+use std::path::{PathBuf};
 
 mod schema;
 use schema::Entry;
@@ -25,7 +24,7 @@ use schema::DbConn;
 
 
 #[get("/")]
-fn index(cookies: Cookies) -> &'static str {
+fn index() -> &'static str {
     "Hello, world!"
 }
 
@@ -45,17 +44,14 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     }
 
     let meet = meet_result.unwrap();
-    let meetid: i32 = meet.id.unwrap();
-
-    let entries = schema::entries::table.filter(schema::entries::MeetID.eq(meetid))
+    let entries = schema::entries::table.filter(schema::entries::MeetID.eq(meet.id))
                   .load::<Entry>(&*conn)
                   .expect("Error loading entries.");
 
     let mut display = String::new();
 
     for entry in entries {
-        let name = entry.name.unwrap();
-        display.push_str(name.as_str());
+        display.push_str(entry.name.as_str());
         display.push_str("\n");
     }
 

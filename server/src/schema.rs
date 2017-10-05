@@ -57,9 +57,9 @@ infer_schema!("../build/openpowerlifting.sqlite3");
 
 #[derive(Queryable)]
 pub struct Entry {
-    pub id: Option<i32>,
-    pub meetid: Option<i32>,
-    pub name: Option<String>,
+    pub id: i32,
+    pub meetid: i32,
+    pub name: String,
     pub sex: Option<String>,
     pub event: Option<String>,
     pub equipment: Option<String>,
@@ -90,12 +90,19 @@ pub struct Entry {
 
 #[derive(Queryable)]
 pub struct Meet {
-    pub id: Option<i32>,
-    pub path: Option<String>,
-    pub federation: Option<String>,
-    pub date: Option<String>,
-    pub country: Option<String>,
+    pub id: i32,
+    pub path: String,
+    pub federation: String,
+    pub date: String,
+    pub country: String,
     pub state: Option<String>,
     pub town: Option<String>,
-    pub name: Option<String>,
+    pub name: String,
+}
+
+#[derive(Queryable)]
+pub struct Social {
+    pub id: i32,
+    pub name: String,
+    pub instagram: String,
 }
