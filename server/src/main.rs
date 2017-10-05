@@ -18,7 +18,7 @@ use rocket::http::Cookies;
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
-pub mod schema;
+mod schema;
 use schema::Entry;
 use schema::Meet;
 use schema::DbConn;
