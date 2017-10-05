@@ -34,23 +34,23 @@ fn index(cookies: Cookies) -> &'static str {
 // TODO: Don't use Box<Error> -- use a custom error type?
 #[get("/meet/<meetpath..>")]
 fn meet_handler(meetpath: PathBuf) -> Result<String, Box<Error>> {
-    let db = try!(get_db_connection());
+    let connection = try!(get_db_connection());
     let meetpath_str = try!(meetpath.to_str().ok_or(
         std::io::Error::new(std::io::ErrorKind::Other, "Malformed string.")));
 
-    let results = schema::meets::table.filter(schema::meets::MeetPath.eq(meetpath_str))
-                  .limit(1)
-                  .load::<Meet>(&db)
-                  .expect("Error loading meet.");
+    let meet_result: QueryResult<Meet> =
+        schema::meets::table.filter(schema::meets::MeetPath.eq(meetpath_str))
+        .first::<Meet>(&connection);
 
-    if results.len() == 0 {
+    if meet_result.is_err() {
         return Ok(String::from("Meet not found."));
     }
 
-    let meetid: i32 = results[0].id.unwrap();
+    let meet = meet_result.unwrap();
+    let meetid: i32 = meet.id.unwrap();
 
     let entries = schema::entries::table.filter(schema::entries::MeetID.eq(meetid))
-                  .load::<Entry>(&db)
+                  .load::<Entry>(&connection)
                   .expect("Error loading entries.");
 
     let mut display = String::new();
