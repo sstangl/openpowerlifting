@@ -7,6 +7,9 @@ extern crate diesel;
 #[macro_use]
 extern crate diesel_codegen;
 
+extern crate r2d2_diesel;
+extern crate r2d2;
+
 use diesel::prelude::*;
 
 extern crate rocket;
@@ -18,11 +21,7 @@ use std::path::{Path, PathBuf};
 pub mod schema;
 use schema::Entry;
 use schema::Meet;
-
-
-fn get_db_connection() -> ConnectionResult<SqliteConnection> {
-    SqliteConnection::establish("../build/openpowerlifting.sqlite3")
-}
+use schema::DbConn;
 
 
 #[get("/")]
@@ -33,14 +32,13 @@ fn index(cookies: Cookies) -> &'static str {
 
 // TODO: Don't use Box<Error> -- use a custom error type?
 #[get("/meet/<meetpath..>")]
-fn meet_handler(meetpath: PathBuf) -> Result<String, Box<Error>> {
-    let connection = try!(get_db_connection());
+fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     let meetpath_str = try!(meetpath.to_str().ok_or(
         std::io::Error::new(std::io::ErrorKind::Other, "Malformed string.")));
 
     let meet_result: QueryResult<Meet> =
         schema::meets::table.filter(schema::meets::MeetPath.eq(meetpath_str))
-        .first::<Meet>(&connection);
+        .first::<Meet>(&*conn);
 
     if meet_result.is_err() {
         return Ok(String::from("Meet not found."));
@@ -50,7 +48,7 @@ fn meet_handler(meetpath: PathBuf) -> Result<String, Box<Error>> {
     let meetid: i32 = meet.id.unwrap();
 
     let entries = schema::entries::table.filter(schema::entries::MeetID.eq(meetid))
-                  .load::<Entry>(&connection)
+                  .load::<Entry>(&*conn)
                   .expect("Error loading entries.");
 
     let mut display = String::new();
@@ -67,6 +65,7 @@ fn meet_handler(meetpath: PathBuf) -> Result<String, Box<Error>> {
 
 fn main() {
     rocket::ignite()
+        .manage(schema::init_pool())
         .mount("/", routes![index])
         .mount("/", routes![meet_handler])
         .launch();
