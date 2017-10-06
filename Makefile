@@ -40,7 +40,7 @@ check:
 probe-quick:
 	${DATADIR}/aau/aau-probe --quick || true
 	${DATADIR}/apa/apa-probe || true
-	${DATADIR}/apa/apc-probe --quick || true
+	${DATADIR}/apc/apc-probe --quick || true
 	${DATADIR}/apf/apf-probe --quick || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/capo/capo-probe --quick || true
@@ -69,7 +69,7 @@ probe-quick:
 probe:
 	${DATADIR}/aau/aau-probe || true
 	${DATADIR}/apa/apa-probe || true
-	${DATADIR}/apa/apc-probe || true
+	${DATADIR}/apc/apc-probe || true
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/capo/capo-probe || true
