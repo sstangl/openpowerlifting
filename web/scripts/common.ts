@@ -123,7 +123,7 @@ export function makeRowObj(row, index?: number): RowObject {
 
     // XXX: Bad hack to make Ben's name pink, per request.
     if (fullname === "Ben Gianacakos") {
-        // Red.
+        // Pink.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
     } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley") {
         // Green.
@@ -131,6 +131,9 @@ export function makeRowObj(row, index?: number): RowObject {
     } else if (fullname === "Boris Lerner") {
         // Light Blue.
         name = '<a style="text-decoration-color: #43D1FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #43D1FF;">' + fullname + '</span></a>';
+    } else if (fullname === "Thomas Schwarz") {
+        // Red.
+        name = '<a style="text-decoration-color: #FB3640;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FB3640;">' + fullname + '</span></a>';
     }
 
     // Attempt to read in social media data, if present.
