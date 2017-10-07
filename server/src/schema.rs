@@ -71,13 +71,13 @@ pub enum Sex {
     Female,
 }
 
-impl FromSqlRow<diesel::types::Text, DB> for Sex
+impl FromSqlRow<diesel::types::Bool, DB> for Sex
 {
     fn build_from_row<T: Row<DB>>(row: &mut T) -> Result<Self, Box<Error + Send + Sync>> {
         match row.take() {
-            Some(v) => match v.read_text() {
-                "M" => Ok(Sex::Male),
-                "F" => Ok(Sex::Female),
+            Some(v) => match v.read_integer() {
+                0 => Ok(Sex::Male),
+                1 => Ok(Sex::Female),
                 _ => Err("Unrecognized sex".into()),
             },
             None => Err("Unexpected null for sex column".into()),

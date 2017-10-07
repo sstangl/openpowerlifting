@@ -51,10 +51,7 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     let mut display = String::new();
 
     for entry in entries {
-        display.push_str(entry.name.as_str());
-        display.push_str(" - ");
-        display.push_str(format!("{}", entry.sex).as_str());
-        display.push_str("\n");
+        display.push_str(format!("{} - {}\n", entry.name, entry.sex).as_str());
     }
 
     Ok(display)
