@@ -95,6 +95,45 @@ impl fmt::Display for Sex {
 }
 
 
+/// A value from the mandatory "Equipment" column of the entries table.
+pub enum Equipment {
+    Raw,
+    Wraps,
+    Single,
+    Multi,
+    Straps,
+}
+
+impl FromSqlRow<diesel::types::Integer, DB> for Equipment
+{
+    fn build_from_row<T: Row<DB>>(row: &mut T) -> Result<Self, Box<Error + Send + Sync>> {
+        match row.take() {
+            Some(v) => match v.read_integer() {
+                0 => Ok(Equipment::Raw),
+                1 => Ok(Equipment::Wraps),
+                2 => Ok(Equipment::Single),
+                3 => Ok(Equipment::Multi),
+                4 => Ok(Equipment::Straps),
+                _ => Err("Unrecognized equipment".into()),
+            },
+            None => Err("Unexpected null for equipment column".into())
+        }
+    }
+}
+
+impl fmt::Display for Equipment {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            Equipment::Raw => write!(f, "Raw"),
+            Equipment::Wraps => write!(f, "Wraps"),
+            Equipment::Single => write!(f, "Single"),
+            Equipment::Multi => write!(f, "Multi"),
+            Equipment::Straps => write!(f, "Straps"),
+        }
+    }
+}
+
+
 #[derive(Queryable)]
 pub struct Entry {
     pub id: i32,
@@ -102,7 +141,7 @@ pub struct Entry {
     pub name: String,
     pub sex: Sex,
     pub event: Option<String>,
-    pub equipment: Option<String>,
+    pub equipment: Equipment,
     pub age: Option<f32>,
     pub division: Option<String>,
     pub bodyweightkg: Option<f32>,

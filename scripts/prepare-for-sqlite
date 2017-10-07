@@ -34,6 +34,11 @@ def handle_openpowerlifting():
     for row in csv.rows:
         row[sexidx] = str(['M','F'].index(row[sexidx]))
 
+    # Convert the Equipment column to integer.
+    eqpidx = csv.index('Equipment')
+    for row in csv.rows:
+        row[eqpidx] = str(['Raw','Wraps','Single-ply','Multi-ply','Straps'].index(row[eqpidx]))
+
     write_without_fieldnames(csv, 'build/sqlite-openpowerlifting.csv')
 
 

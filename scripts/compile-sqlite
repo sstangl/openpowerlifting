@@ -40,7 +40,7 @@ CREATE TABLE entries (
   Name TEXT NOT NULL,
   Sex BOOLEAN NOT NULL,
   Event CHAR(3),
-  Equipment TEXT,
+  Equipment INTEGER NOT NULL,
   Age FLOAT,
   Division TEXT,
   BodyweightKg FLOAT,
