@@ -60,7 +60,7 @@ pub struct Entry {
     pub id: i32,
     pub meetid: i32,
     pub name: String,
-    pub sex: Option<String>,
+    pub sex: String,
     pub event: Option<String>,
     pub equipment: Option<String>,
     pub age: Option<f32>,
