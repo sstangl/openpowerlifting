@@ -31,7 +31,7 @@ export function weight(kg) {
     if (kg === undefined)
         return '';
     if (getWeightTypeState() === "kg")
-        return String(kg);
+        return String(Math.round(kg*10)/10);
     return String(kg2lbs(kg));
 }
 
