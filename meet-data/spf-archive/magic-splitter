@@ -40,6 +40,7 @@ def main(filename):
     text = text.replace(' 275 Class','\n275 Class')
     text = text.replace(' 308 Class','\n308 Class')
     text = text.replace(' Super Heavy','\nSuper Heavy')
+    text = text.replace(' SHW','\nSHW')
 
     text = text.replace(' Sub-Masters','\nSubmasters')
     text = text.replace(' Masters','\nMasters')
