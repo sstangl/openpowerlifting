@@ -1,24 +1,36 @@
 // Definitions for accessing the database.
 
+extern crate diesel;
 extern crate r2d2;
 
+use diesel::row::Row;
 use diesel::sqlite::SqliteConnection;
+use diesel::types::FromSqlRow;
 use r2d2_diesel::ConnectionManager;
 
-use std::ops::Deref;
 use rocket::http::Status;
 use rocket::request::{self, FromRequest};
 use rocket::{Request, State, Outcome};
 
-// An alias to the type for a pool of Diesel SQLite connections.
+use std::fmt;
+use std::error::Error;
+use std::ops::Deref;
+
+
+/// Database type, to avoid hardcoding Sqlite in multiple places.
+type DB = diesel::sqlite::Sqlite;
+
+
+/// An alias to the type for a pool of Diesel SQLite connections.
 pub type Pool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
-// Connection request guard type: a wrapper around an r2d2 pooled connection.
+
+/// Connection request guard type: a wrapper around an r2d2 pooled connection.
 pub struct DbConn(pub r2d2::PooledConnection<ConnectionManager<SqliteConnection>>);
 
-// Attempts to retrieve a single connection from the managed database pool. If
-// no pool is currently managed, fails with an `InternalServerError` status. If
-// no connections are available, fails with a `ServiceUnavailable` status.
+/// Attempts to retrieve a single connection from the managed database pool. If
+/// no pool is currently managed, fails with an `InternalServerError` status. If
+/// no connections are available, fails with a `ServiceUnavailable` status.
 impl<'a, 'r> FromRequest<'a, 'r> for DbConn {
     type Error = ();
 
@@ -41,7 +53,7 @@ impl Deref for DbConn {
 }
 
 
-// Path to the database.
+/// Path to the database.
 // FIXME: Should use an environment variable instead of being hardcoded.
 static DATABASE_URL: &'static str = "../build/openpowerlifting.sqlite3";
 
@@ -53,14 +65,42 @@ pub fn init_pool() -> Pool {
 }
 
 
-infer_schema!("../build/openpowerlifting.sqlite3");
+/// A Value from the mandatory "Sex" column of the entries table.
+pub enum Sex {
+    Male,
+    Female,
+}
+
+impl FromSqlRow<diesel::types::Text, DB> for Sex
+{
+    fn build_from_row<T: Row<DB>>(row: &mut T) -> Result<Self, Box<Error + Send + Sync>> {
+        match row.take() {
+            Some(v) => match v.read_text() {
+                "M" => Ok(Sex::Male),
+                "F" => Ok(Sex::Female),
+                _ => Err("Unrecognized sex".into()),
+            },
+            None => Err("Unexpected null for sex column".into()),
+        }
+    }
+}
+
+impl fmt::Display for Sex {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            Sex::Male => write!(f, "M"),
+            Sex::Female => write!(f, "F"),
+        }
+    }
+}
+
 
 #[derive(Queryable)]
 pub struct Entry {
     pub id: i32,
     pub meetid: i32,
     pub name: String,
-    pub sex: String,
+    pub sex: Sex,
     pub event: Option<String>,
     pub equipment: Option<String>,
     pub age: Option<f32>,
@@ -106,3 +146,7 @@ pub struct Social {
     pub name: String,
     pub instagram: String,
 }
+
+// Reads in the database and generates type information for all tables.
+// The types are hardcoded upon DB creation, in `scripts/compile-sqlite`.
+infer_schema!("../build/openpowerlifting.sqlite3");
