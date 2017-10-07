@@ -591,6 +591,10 @@ def check_row(row, csv):
     if 'Sex' in csv.fieldnames and not row[csv.index('Sex')]:
         perror("Missing sex: %s" % ','.join(row))
 
+    # Equipment may not be missing.
+    if 'Equipment' in csv.fieldnames and not row[csv.index('Equipment')]:
+        perror("Missing equipment: %s" % ','.join(row))
+
     if not row[csv.index('Name')]:
         perror("Missing name: %s" % ','.join(row))
 
