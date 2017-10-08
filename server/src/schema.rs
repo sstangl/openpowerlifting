@@ -134,10 +134,24 @@ impl fmt::Display for Equipment {
 }
 
 
-#[derive(Queryable)]
+#[derive(Identifiable, Queryable)]
+pub struct Meet {
+    pub id: i32,
+    pub path: String,
+    pub federation: String,
+    pub date: String,
+    pub country: String,
+    pub state: Option<String>,
+    pub town: Option<String>,
+    pub name: String,
+}
+
+#[derive(Identifiable, Queryable, Associations)]
+#[table_name = "entries"]
+#[belongs_to(Meet, foreign_key="MeetID")]
 pub struct Entry {
     pub id: i32,
-    pub meetid: i32,
+    pub meet_id: i32,
     pub name: String,
     pub sex: Sex,
     pub event: Option<String>,
@@ -165,18 +179,6 @@ pub struct Entry {
     pub place: Option<String>,
     pub wilks: Option<f32>,
     pub mcculloch: Option<f32>,
-}
-
-#[derive(Queryable)]
-pub struct Meet {
-    pub id: i32,
-    pub path: String,
-    pub federation: String,
-    pub date: String,
-    pub country: String,
-    pub state: Option<String>,
-    pub town: Option<String>,
-    pub name: String,
 }
 
 #[derive(Queryable)]

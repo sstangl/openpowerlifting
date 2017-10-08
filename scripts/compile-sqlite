@@ -33,6 +33,19 @@ rm -f "${DBFILE}"
 
 
 # The column ordering is hardcoded and must agree with scripts/compile.
+CREATEMEETSTABLE="
+CREATE TABLE meets (
+  MeetID INTEGER PRIMARY KEY NOT NULL,
+  MeetPath TEXT UNIQUE NOT NULL,
+  Federation TEXT NOT NULL,
+  MeetDate DATE NOT NULL,
+  MeetCountry TEXT NOT NULL,
+  MeetState TEXT,
+  MeetTown TEXT,
+  MeetName TEXT NOT NULL
+);
+"
+
 CREATEENTRIESTABLE="
 CREATE TABLE entries (
   id INTEGER PRIMARY KEY NOT NULL,
@@ -63,20 +76,9 @@ CREATE TABLE entries (
   TotalKg FLOAT,
   Place TEXT,
   Wilks FLOAT,
-  McCulloch FLOAT
-);
-"
+  McCulloch FLOAT,
 
-CREATEMEETSTABLE="
-CREATE TABLE meets (
-  MeetID INTEGER PRIMARY KEY NOT NULL,
-  MeetPath TEXT UNIQUE NOT NULL,
-  Federation TEXT NOT NULL,
-  MeetDate DATE NOT NULL,
-  MeetCountry TEXT NOT NULL,
-  MeetState TEXT,
-  MeetTown TEXT,
-  MeetName TEXT NOT NULL
+  FOREIGN KEY(MeetID) REFERENCES meets(MeetID)
 );
 "
 
@@ -89,13 +91,14 @@ CREATE TABLE social (
 "
 
 IMPORTCOMMAND="
+PRAGMA foreign_keys = ON;
 .mode csv
-
-${CREATEENTRIESTABLE}
-.import build/sqlite-openpowerlifting.csv entries
 
 ${CREATEMEETSTABLE}
 .import build/sqlite-meets.csv meets
+
+${CREATEENTRIESTABLE}
+.import build/sqlite-openpowerlifting.csv entries
 
 ${CREATESOCIALTABLE}
 .import build/sqlite-social-media.csv social
