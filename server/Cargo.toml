@@ -9,5 +9,6 @@ diesel_codegen = { version = "0.16.0", features = ["sqlite"] }
 r2d2-diesel = "0.16.0"
 r2d2 = "0.7.4"
 dotenv = "0.10.1"
-rocket = "0.3.2"
-rocket_codegen = "0.3.2"
+rocket = "0.3.3"
+rocket_codegen = "0.3.3"
+rocket_contrib = { version = "0.3.3", features = ["handlebars_templates"] }

@@ -2,10 +2,9 @@
 #![plugin(rocket_codegen)]
 
 #![recursion_limit="256"] // For Diesel.
-#[macro_use]
-extern crate diesel;
-#[macro_use]
-extern crate diesel_codegen;
+#[macro_use] extern crate diesel;
+#[macro_use] extern crate diesel_codegen;
+
 
 extern crate r2d2_diesel;
 extern crate r2d2;
@@ -13,7 +12,11 @@ extern crate r2d2;
 use diesel::prelude::*;
 
 extern crate rocket;
+extern crate rocket_contrib;
 
+use rocket_contrib::Template;
+
+use std::collections::HashMap;
 use std::error::Error;
 use std::path::{PathBuf};
 
@@ -58,10 +61,19 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
 }
 
 
+#[get("/lifter/<name>")]
+fn lifter_handler(name: String, conn: DbConn) -> Template {
+    let context = HashMap::<String, String>::new();
+    Template::render("lifter", &context)
+}
+
+
 fn main() {
     rocket::ignite()
         .manage(schema::init_pool())
         .mount("/", routes![index])
+        .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
+        .attach(Template::fairing())
         .launch();
 }
