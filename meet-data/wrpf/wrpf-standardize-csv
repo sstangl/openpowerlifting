@@ -81,7 +81,7 @@ def parse_sheetname(s):
             equipment = 'Multi-ply'
 
         # Booleans.
-        elif word == 'люб.':
+        elif word == 'люб.' or word == 'любители':
             amateur = 'Amateur'
         elif word == 'pro':
             assert amateur == 'Pro'
@@ -96,6 +96,8 @@ def parse_sheetname(s):
 
         # Other ignorables.
         elif word == 'сфо': # Not sure.
+            pass
+        elif word == 'становая': # First word in 'deadlift'.
             pass
 
         else:

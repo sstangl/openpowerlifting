@@ -41,18 +41,22 @@ echo "$1" > URL
 # The spreadsheet will have multiple pages -- these will all be added to one document.
 ${LIBREOFFICE} --headless --convert-to html "results.${EXTENSION}"
 
+# Move the results.html to tmp.xls -- newer versions of LibreOffice don't
+# understand how to convert HTML -> CSV, but do understand XLS -> CSV.
+mv results.html tmp.xls
+
 # Convert <s> to "-".
-sed -i -e 's/<s>/-/g' results.html
-sed -i -e 's/<\/s>//g' results.html
+sed -i -e 's/<s>/-/g' tmp.xls
+sed -i -e 's/<\/s>//g' tmp.xls
 
 # Convert commas in numbers to periods, while avoiding commas in the HTML.
-sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' results.html
+sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' tmp.xls
 
 # Convert the HTML back to CSV.
 # The --infilter argument is necessary to get LibreOffice to stop parsing
 # the encoding as ISO-8859-1, and preserve the UTF8 encoding.
 # See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
-${LIBREOFFICE} --headless --convert-to csv --infilter=CSV:44,34,UTF8 results.html
+${LIBREOFFICE} --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
 
 # Remove some dash-only columns from the CSV.
 sed -i -e 's/,-,/,,/g' results.csv
@@ -64,7 +68,7 @@ echo "WRPF," >> meet.csv
 
 # Clean up.
 if [ -f results.csv ]; then
-	rm results.html results.${EXTENSION}
+	rm tmp.xls results.${EXTENSION}
 fi
 
 ${SCRIPTDIR}/wrpf-parse-post
