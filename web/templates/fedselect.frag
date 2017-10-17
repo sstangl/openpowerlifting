@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,AsianPF,CommonwealthPF,CPU,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,THSPA,USAPL">
+  <option value="AAU,AsianPF,CommonwealthPF,CPU,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,THSPA,USAPL,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -20,7 +20,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC">
+    <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
@@ -41,6 +41,7 @@
     <option value="USPA">USPA - United States Powerlifting Association [IPL]</option>
     <option value="USPF">USPF - United States Powerlifting Federation (Incomplete)</option>
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
+    <option value="WNPF">WNPF - World Natural Powerlifting Federation</option>
   </optgroup>
   <optgroup label="Australia">
     <option value="CAPO,PA,ProRaw">

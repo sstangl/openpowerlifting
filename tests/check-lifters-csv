@@ -240,12 +240,13 @@ def check_column_weightclass(s, row, csv):
     spf_extra = ['117.5','100+','67.5+']
     ipf_extra = ['60+']
     old_usapl = ['145','145+']
+    wnpf_extra = ['34']
 
     ffforce_extra = ['83+'] # Cadet division, for youth.
 
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
               rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
-              old_usapl + ffforce_extra
+              old_usapl + ffforce_extra + wnpf_extra
 
     if not s in classes:
         pwarning("Unknown weight class: %s" % s)
