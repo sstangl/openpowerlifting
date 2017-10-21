@@ -6,6 +6,24 @@ use schema::Entry;
 use schema::Meet;
 
 
+/// Count the number of rows in the "Entries" table.
+pub fn count_entries(conn: &DbConn) -> Option<i64> {
+    schema::entries::table
+        .count()
+        .get_result(&**conn)
+        .ok()
+}
+
+
+/// Count the number of rows in the "Meets" table.
+pub fn count_meets(conn: &DbConn) -> Option<i64> {
+    schema::meets::table
+        .count()
+        .get_result(&**conn)
+        .ok()
+}
+
+
 /// Look up a Meet by its human-readable MeetPath.
 pub fn get_meet_by_meetpath(meetpath: &str, conn: &DbConn) -> Option<Meet> {
     schema::meets::table
@@ -34,6 +52,18 @@ mod test {
 
     fn db() -> DbConn {
         DbConn(schema::init_pool().get().unwrap())
+    }
+
+    #[test]
+    fn test_count_entries() {
+        let count = count_entries(&db()).unwrap();
+        assert!(count > 300_000);
+    }
+
+    #[test]
+    fn test_count_meets() {
+        let count = count_meets(&db()).unwrap();
+        assert!(count > 7_000);
     }
 
     #[test]
