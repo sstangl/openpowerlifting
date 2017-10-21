@@ -40,18 +40,17 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     let meetpath_str = try!(meetpath.to_str().ok_or(
         std::io::Error::new(std::io::ErrorKind::Other, "Malformed string.")));
 
-    let meet_result: QueryResult<Meet> =
-        schema::meets::table.filter(schema::meets::MeetPath.eq(meetpath_str))
-        .first::<Meet>(&*conn);
-
-    if meet_result.is_err() {
+    let meet_option = queries::get_meet_by_meetpath(meetpath_str, &conn);
+    if meet_option.is_none() {
         return Ok(String::from("Meet not found."));
     }
+    let meet = meet_option.unwrap();
 
-    let meet = meet_result.unwrap();
-    let entries = schema::entries::table.filter(schema::entries::MeetID.eq(meet.id))
-                  .load::<Entry>(&*conn)
-                  .expect("Error loading entries.");
+    let entries_option = queries::get_entries_by_meetid(meet.id, &conn);
+    if entries_option.is_none() {
+        return Ok(String::from("Error loading entries."));
+    }
+    let entries = entries_option.unwrap();
 
     let mut display = String::new();
 
