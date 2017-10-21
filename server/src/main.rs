@@ -25,6 +25,8 @@ use schema::Entry;
 use schema::Meet;
 use schema::DbConn;
 
+mod queries;
+
 
 #[get("/")]
 fn index() -> &'static str {
