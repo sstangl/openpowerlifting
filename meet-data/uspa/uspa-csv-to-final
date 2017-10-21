@@ -37,6 +37,8 @@ def replace_common_fieldnames(csv):
         csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
     if s == 'Place;Name;State;Wt;class;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
         csv[0] = 'Place;Name;State;WeightClassKg;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
+    if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;Total':
+        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;bp;DL;dl;Total;Wilks;McC;lbs'
 
 def fixcolnames(columns):
     for i, name in enumerate(columns):
