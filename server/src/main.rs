@@ -35,9 +35,40 @@ fn static_handler(file: PathBuf) -> Option<NamedFile> {
 }
 
 
+#[get("/index.html")]
+fn index_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/index.html").ok()
+}
+
+#[get("/contact.html")]
+fn contact_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/contact.html").ok()
+}
+
+#[get("/data.html")]
+fn data_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/data.html").ok()
+}
+
+#[get("/lifters.html")]
+fn lifters_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/lifters.html").ok()
+}
+
+#[get("/meet.html")]
+fn meet_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/meet.html").ok()
+}
+
+#[get("/meetlist.html")]
+fn meetlist_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/meetlist.html").ok()
+}
+
+
 #[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+fn index() -> Option<NamedFile> {
+    index_html()
 }
 
 
@@ -83,6 +114,11 @@ fn main() {
         .mount("/", routes![static_handler])
         .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
+
+        // Old HTML handlers.
+        .mount("/", routes![index_html, contact_html, data_html,
+                            lifters_html, meet_html, meetlist_html])
+
         .attach(Template::fairing())
         .launch();
 }
