@@ -15,10 +15,11 @@ extern crate rocket;
 extern crate rocket_contrib;
 
 use rocket_contrib::Template;
+use rocket::response::NamedFile;
 
 use std::collections::HashMap;
 use std::error::Error;
-use std::path::{PathBuf};
+use std::path::{Path, PathBuf};
 
 mod schema;
 use schema::Entry;
@@ -26,6 +27,12 @@ use schema::Meet;
 use schema::DbConn;
 
 mod queries;
+
+
+#[get("/static/<file..>")]
+fn static_handler(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("static/").join(file)).ok()
+}
 
 
 #[get("/")]
@@ -73,6 +80,7 @@ fn main() {
     rocket::ignite()
         .manage(schema::init_pool())
         .mount("/", routes![index])
+        .mount("/", routes![static_handler])
         .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
         .attach(Template::fairing())
