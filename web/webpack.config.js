@@ -13,7 +13,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "build/scripts"),
+    path: path.resolve(__dirname, "build/static/scripts"),
     filename: "[name].bundle.js",
   },
 

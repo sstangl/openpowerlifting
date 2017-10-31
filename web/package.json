@@ -4,7 +4,7 @@
   "description": "The OpenPowerlifting website frontend.",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --output-style compressed css/style.scss build/style.css ",
+    "sass": "node-sass --output-style compressed css/style.scss build/static/style.css ",
     "webpack": "webpack --env.prod --display-error-details --optimize-minimize"
   },
   "repository": {
