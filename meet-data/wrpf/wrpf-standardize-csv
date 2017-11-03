@@ -53,9 +53,12 @@ def parse_sheetname(s):
         elif word == 'спр': # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
+        elif word == 'wrpf-pro':
+            assert not federation
+            federation = 'WRPF'
 
         # Events
-        elif word == 'пл' or word == 'пауэрлифтинг':
+        elif word == 'пл' or word == 'пауэрлифтинг' or word == 'pl':
             assert not event
             event = 'SBD'
         elif word == 'жим':
@@ -98,6 +101,8 @@ def parse_sheetname(s):
         elif word == 'сфо': # Not sure.
             pass
         elif word == 'становая': # First word in 'deadlift'.
+            pass
+        elif word == 'raw':
             pass
 
         else:
