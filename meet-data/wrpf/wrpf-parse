@@ -57,6 +57,7 @@ sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' tmp.xls
 # the encoding as ISO-8859-1, and preserve the UTF8 encoding.
 # See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
 ${LIBREOFFICE} --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
+mv tmp.csv results.csv
 
 # Remove some dash-only columns from the CSV.
 sed -i -e 's/,-,/,,/g' results.csv
