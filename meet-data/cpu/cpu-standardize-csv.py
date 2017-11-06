@@ -251,6 +251,11 @@ def standardize_location(csv):
         elif loc == 'Alberta':
             row[stateidx] = 'AB'
         else:
+            # Fix a particular erroneous row.
+            if row[csv.index('MeetName')] == 'Mike Laroche Memorial Open':
+                row[csv.index('MeetName')] = 'Mike LaRoche Memorial Open'
+                loc = 'Halifax; NS'
+
             assert ';' in loc
 
             # If there are more than two ';', it looks like:
