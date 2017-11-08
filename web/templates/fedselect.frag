@@ -65,6 +65,9 @@
   <optgroup label="France">
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
   </optgroup>
+  <optgroup label="Ireland">
+    <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
+  </optgroup>
   <optgroup label="New Zealand">
     <option value="NZPF">NZPF - New Zealand Powerlifting Federation [IPF] (Incomplete)</option>
   </optgroup>
@@ -80,11 +83,10 @@
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
-    <option value="GBPF,IrishPF,NIPF">
+    <option value="GBPF,NIPF">
       All United Kingdom Feds
     </option>
     <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
-    <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
     <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   </optgroup>
 </select>
