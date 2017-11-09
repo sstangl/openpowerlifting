@@ -188,19 +188,21 @@ def check(scriptname, filename):
     reset_filename_state(filename)
 
     csv = oplcsv.Csv(filename)
+    if len(csv.rows) != 1:
+        perror("Incorrect number of rows.")
 
     # Require fields to be present and in a set order.
     fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
     if len(fields) != len(csv.fieldnames):
-        perror("Incorrect number of fields")
+        perror("Incorrect number of fields.")
 
     for i in range(0, len(fields)):
         if fields[i] != csv.fieldnames[i]:
-            perror("Field %u must be %s" % (i, fields[i]))
+            perror("Field %u must be %s." % (i, fields[i]))
 
     row = csv.rows[0]
     if len(row) != len(fields):
-        perror("Meet file has incorrect number of columns")
+        perror("Meet file has incorrect number of columns.")
         return # Exit early -- this error is bad enough.
 
     fedidx = csv.index('Federation')
