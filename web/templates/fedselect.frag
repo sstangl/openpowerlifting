@@ -17,7 +17,7 @@
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
-    <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
     <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
@@ -48,7 +48,7 @@
       All Australian Feds
     </option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
-    <option value="PA">PA - Powerlifting Australia [IPF] (2008+)</option>
+    <option value="PA">PA - Powerlifting Australia (2008+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
