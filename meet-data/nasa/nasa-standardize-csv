@@ -333,7 +333,7 @@ def integrate_equipment_event_sex(csv):
             elif 'uneq b' in category or 'unequipped bp' in category:
                 event = 'B'
                 equipment = 'Raw'
-            elif 'equipped bp' in category:
+            elif 'equipped bp' in category or 'eq bp' in category:
                 event = 'B'
                 equipment = 'Single-ply'
             elif category == 'equip bp':
