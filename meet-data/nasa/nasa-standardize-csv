@@ -186,7 +186,7 @@ def aggregate_divisions(csv):
     csv.append_column("Division")
     dividx = csv.index('Division')
 
-    cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press', 'P Pr']
+    cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press', 'P Pr', 'PS', 'Retro']
 
     for col in cols:
         if col in csv.fieldnames:
@@ -330,7 +330,8 @@ def integrate_equipment_event_sex(csv):
             elif 'ps' in category and 'ind' in category: #individual lifts:
                 event = 'I'
                 equipment = 'I'
-            elif 'uneq b' in category or 'unequipped bp' in category:
+            elif 'uneq b' in category or 'unequipped bp' in category \
+                  or 'unequipped bench' in category:
                 event = 'B'
                 equipment = 'Raw'
             elif 'equipped bp' in category:
@@ -340,6 +341,7 @@ def integrate_equipment_event_sex(csv):
                 event = 'B'
                 equipment = 'Single-ply'
             elif 'uneq pp' in category \
+                 or 'unequipped push pull' in category \
                  or 'uneq push pull' in category \
                  or 'unequipped pp' in category \
                  or category == 'unequipped  pp' \
