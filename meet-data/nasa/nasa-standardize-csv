@@ -314,6 +314,7 @@ def integrate_equipment_event_sex(csv):
                 event = 'SBD'
                 equipment = 'Wraps'
             elif 'equipped pl' in category or 'eq powerlifting' in category \
+                    or "equipped powerlifting" in category \
                     or 'equip pl' in category \
                     or 'eq pl' in category\
                     or category == 'eqip pl':
@@ -445,6 +446,8 @@ def float2(s):
 
 
 def recalculate_totals(csv):
+    if 'TotalKg' not in csv.fieldnames:
+        csv.append_column('TotalKg')
     totalidx = csv.index('TotalKg')
 
     squatidx = csv.index('BestSquatKg')
