@@ -10,8 +10,9 @@ MEETFILEJS := meets.js
 
 all: database npminit scripts css html images
 
+# Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
-	npm install
+	if [ ! -d "node_modules" ]; then npm install; fi
 
 builddir:
 	mkdir -p '${BUILDDIR}'
@@ -72,3 +73,4 @@ check:
 clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf __pycache__
+	rm -rf node_modules
