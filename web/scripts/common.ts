@@ -27,7 +27,7 @@ export function getWeightTypeState(): string {
     return WeightTypeState;
 }
 
-export function weight(kg) {
+export function weight(kg?: number) {
     if (kg === undefined)
         return '';
     if (getWeightTypeState() === "kg")
@@ -35,7 +35,7 @@ export function weight(kg) {
     return String(kg2lbs(kg));
 }
 
-export function parseWeightClass(x) {
+export function parseWeightClass(x?: number|string) {
     if (x === undefined)
         return '';
     if (getWeightTypeState() == "kg")
@@ -245,13 +245,13 @@ export function colidToIndex(colid: string): number {
     }
 }
 
-export function getSortFn(colid, sortAsc) {
+export function getSortFn(colid: string, sortAsc: boolean) {
     let index = this.colidToIndex(colid);
     switch (colid) {
         // Columns that use the meetdb.
         case "fed":
         case "date":
-            return function(a, b) {
+            return function(a: number, b: number): number {
                 let ameetid = opldb.data[a][OplDBColumn.MeetID];
                 let bmeetid = opldb.data[b][OplDBColumn.MeetID];
                 let adata = meetdb.data[ameetid][index];
@@ -275,7 +275,7 @@ export function getSortFn(colid, sortAsc) {
         case "total":
         case "wilks":
         case "mcculloch":
-            return function(a, b) {
+            return function(a: number, b: number): number {
                 let adata = opldb.data[a][index];
                 let bdata = opldb.data[b][index];
                 if (adata === undefined)
@@ -294,7 +294,7 @@ export function getSortFn(colid, sortAsc) {
 
         default:
             console.log("Unknown: gotSortFn(" + colid + ", " + sortAsc + ")");
-            return function(a, b) {
+            return function(a: number, b: number): number {
                 return 0;
             }
     }
@@ -302,7 +302,7 @@ export function getSortFn(colid, sortAsc) {
 
 // Adapted from SlickGrid's flashCell().
 export function flashRow(tr) {
-    function toggleCellClass(node, times) {
+    function toggleCellClass(node, times: number) {
         if (times === 0)
             return;
         setTimeout(
