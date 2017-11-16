@@ -6,8 +6,8 @@ import { OplDBColumn, MeetDBColumn, db_make_indices_list, db_filter } from './da
 
 // Appease the TypeScript compiler.
 declare let Slick;
-declare let opldb;
-declare let meetdb;
+declare const opldb;
+declare const meetdb;
 
 let grid; // The SlickGrid.
 let sortCol = {id: 'date'}; // Initial column sorting information.

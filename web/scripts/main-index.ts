@@ -8,8 +8,8 @@ import { OplDBColumn, MeetDBColumn } from './database'
 // Appease the TypeScript compiler.
 declare var $;
 declare var Slick;
-declare var opldb;
-declare var meetdb;
+declare const opldb;
+declare const meetdb;
 
 let grid; // The SlickGrid.
 let sortCol = {id: 'wilks'}; // Initial column sorting information.

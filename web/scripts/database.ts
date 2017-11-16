@@ -2,8 +2,8 @@
 'use strict';
 
 // Appease TypeScript compiler.
-declare let opldb;
-declare let meetdb;
+declare const opldb;
+declare const meetdb;
 
 
 // Interface declarations for the opldb and meetdb.

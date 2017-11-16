@@ -5,9 +5,9 @@
 import { OplDBColumn, MeetDBColumn } from './database'
 
 // Appease the TypeScript compiler.
-declare var opldb;
-declare var meetdb;
-declare var socialmedia;
+declare const opldb;
+declare const meetdb;
+declare const socialmedia;
 
 
 const KG_CONVERSION = 2.20462262;

@@ -6,8 +6,8 @@ import * as database from './database'
 import { OplDBColumn, MeetDBColumn } from './database'
 
 // Appease the TypeScript compiler.
-declare let opldb;
-declare let meetdb;
+declare const opldb;
+declare const meetdb;
 
 const contentDiv = document.getElementsByClassName('content')[0];
 const selWeightType = document.getElementById('weighttype') as HTMLSelectElement;
