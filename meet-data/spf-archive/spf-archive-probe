@@ -17,7 +17,8 @@ def color(s):
 def main():
     tododir = ARCHIVEDIR + os.sep + 'todo'
     n = len(os.listdir(tododir))
-    print(color('[SPF-Archive] ') + '%u meets remaining.' % n)
+    if n > 0:
+        print(color('[SPF-Archive] ') + '%u meets remaining.' % n)
 
 if __name__ == '__main__':
     main()
