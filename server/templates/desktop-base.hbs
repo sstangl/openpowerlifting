@@ -12,6 +12,9 @@
 
   {{! Internal sources. }}
   <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+</head>
+<body>
+  {{~> body}}
 
   {{! Google Analytics code -- should move to Piwik to remove the Google dependency. }}
   <script>
@@ -22,8 +25,5 @@
     ga('create', 'UA-82103130-1', 'auto');
     ga('send', 'pageview');
   </script>
-</head>
-<body>
-  {{~> body}}
 </body>
 </html>
