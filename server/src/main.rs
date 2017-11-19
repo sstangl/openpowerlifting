@@ -102,7 +102,8 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
 
 #[get("/lifter/<name>")]
 fn lifter_handler(name: String, conn: DbConn) -> Template {
-    let context = HashMap::<String, String>::new();
+    let mut context = HashMap::<String, String>::new();
+    context.insert("title".to_string(), "testing".to_string());
     Template::render("lifter", &context)
 }
 
