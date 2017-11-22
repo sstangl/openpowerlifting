@@ -247,6 +247,8 @@ def writemeetcsv(meet):
         if state == 'Canada':
             country = 'Canada'
             state = ''
+        elif state == 'Maui': # Correct a USPA error.
+            state = 'HI'
         else:
             assert state in states
             state = states[state]
