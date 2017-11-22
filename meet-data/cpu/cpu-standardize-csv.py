@@ -262,6 +262,10 @@ def standardize_location(csv):
             # "Killeen; Texas; USA". So just grab the first 2.
             town,state = loc.split(';')[0:2]
 
+            # Sometimes 'QU' is harde-coded.
+            if state.strip() == 'QU':
+                state = 'QC'
+
             row[stateidx] = state.strip()
             row[townidx] = town.strip()
 
