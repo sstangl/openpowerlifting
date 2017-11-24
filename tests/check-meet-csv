@@ -190,6 +190,7 @@ def check(scriptname, filename):
     csv = oplcsv.Csv(filename)
     if len(csv.rows) != 1:
         perror("Incorrect number of rows.")
+        return
 
     # Require fields to be present and in a set order.
     fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
