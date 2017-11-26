@@ -26,17 +26,16 @@ def handle_openpowerlifting():
     csv = Csv('build/openpowerlifting.csv')
 
     csv.insert_column(0, 'rowid')
+    sexidx = csv.index('Sex')
+    eqpidx = csv.index('Equipment')
+
     for i, row in enumerate(csv.rows):
         row[0] = str(i)
 
-    # Convert the Sex column to boolean: M => 0, F => 1.
-    sexidx = csv.index('Sex')
-    for row in csv.rows:
+        # Convert the Sex column to boolean: M => 0, F => 1.
         row[sexidx] = str(['M','F'].index(row[sexidx]))
 
-    # Convert the Equipment column to integer.
-    eqpidx = csv.index('Equipment')
-    for row in csv.rows:
+        # Convert the Equipment column to integer.
         row[eqpidx] = str(['Raw','Wraps','Single-ply','Multi-ply','Straps'].index(row[eqpidx]))
 
     write_without_fieldnames(csv, 'build/sqlite-openpowerlifting.csv')
