@@ -146,13 +146,21 @@ pub struct Meet {
     pub name: String,
 }
 
+#[derive(Identifiable, Queryable)]
+pub struct Lifter {
+    pub id: i32,
+    pub name: String,
+    pub instagram: Option<String>,
+}
+
 #[derive(Identifiable, Queryable, Associations)]
 #[table_name = "entries"]
 #[belongs_to(Meet, foreign_key="MeetID")]
+#[belongs_to(Lifter, foreign_key="LifterID")]
 pub struct Entry {
     pub id: i32,
     pub meet_id: i32,
-    pub name: String,
+    pub lifter_id: i32,
     pub sex: Sex,
     pub event: Option<String>,
     pub equipment: Equipment,
@@ -179,13 +187,6 @@ pub struct Entry {
     pub place: Option<String>,
     pub wilks: Option<f32>,
     pub mcculloch: Option<f32>,
-}
-
-#[derive(Queryable)]
-pub struct Social {
-    pub id: i32,
-    pub name: String,
-    pub instagram: String,
 }
 
 // Reads in the database and generates type information for all tables.
