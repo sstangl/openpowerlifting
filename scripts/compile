@@ -5,6 +5,7 @@
 #
 
 from oplcsv import Csv
+from usernames import get_username
 import os
 import sys
 
@@ -131,6 +132,7 @@ def build_lifterscsv(lifterdir, builddir):
     lifterscsv = Csv()
     lifterscsv.append_column('LifterID')
     lifterscsv.append_column('Name')
+    lifterscsv.append_column('Username')
     lifterscsv.append_column('Instagram')
 
     for (name, lifterid) in ordered:
@@ -138,7 +140,9 @@ def build_lifterscsv(lifterdir, builddir):
         if name in socialmap:
             instagram = socialmap[name]
 
-        row = [str(lifterid), name, instagram]
+        username = get_username(name)
+
+        row = [str(lifterid), name, username, instagram]
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'

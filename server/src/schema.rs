@@ -150,6 +150,7 @@ pub struct Meet {
 pub struct Lifter {
     pub id: i32,
     pub name: String,
+    pub username: String,
     pub instagram: Option<String>,
 }
 
