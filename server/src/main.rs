@@ -16,6 +16,7 @@ extern crate rocket_contrib;
 
 use rocket_contrib::Template;
 use rocket::response::NamedFile;
+use rocket::http::Status;
 
 use std::collections::HashMap;
 use std::error::Error;
@@ -24,6 +25,7 @@ use std::path::{Path, PathBuf};
 mod schema;
 use schema::Entry;
 use schema::Meet;
+use schema::Lifter;
 use schema::DbConn;
 
 mod queries;
@@ -100,11 +102,24 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
 }
 
 
-#[get("/lifter/<name>")]
-fn lifter_handler(name: String, conn: DbConn) -> Template {
+#[get("/u/<username>")]
+fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
+    // Look up the Lifter by Username.
+    let lifter: Lifter =
+        queries::get_lifter_by_username(username.as_str(), &conn)
+        .ok_or(Status::NotFound)?;
+
+    // Look up all Entries corresponding to the Lifter.
+    // Every lifter in the database has done at least one meet.
+    let entries: Vec<(Entry, Meet)> =
+        queries::get_entries_by_lifterid(lifter.id, &conn).ok_or(Status::NotFound)?;
+
+    println!("{}", entries.len());
+
     let mut context = HashMap::<String, String>::new();
     context.insert("title".to_string(), "testing".to_string());
-    Template::render("lifter", &context)
+
+    Ok(Template::render("lifter", &context))
 }
 
 

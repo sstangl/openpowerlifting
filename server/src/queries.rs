@@ -4,6 +4,7 @@ use schema;
 use schema::DbConn;
 use schema::Entry;
 use schema::Meet;
+use schema::Lifter;
 
 
 /// Count the number of rows in the "Entries" table.
@@ -40,6 +41,24 @@ pub fn get_entries_by_meetid(meetid: i32, conn: &DbConn) -> Option<Vec<Entry>> {
         .ok()
 }
 
+/// Look up a Lifter by Username.
+pub fn get_lifter_by_username(username: &str, conn: &DbConn) -> Option<Lifter> {
+    schema::lifters::table
+        .filter(schema::lifters::Username.eq(username))
+        .first::<Lifter>(&**conn)
+        .ok()
+}
+
+/// Look up all Entries for a given LifterID.
+pub fn get_entries_by_lifterid(lifterid: i32, conn: &DbConn) -> Option<Vec<(Entry, Meet)>> {
+    schema::entries::table
+        .filter(schema::entries::LifterID.eq(lifterid))
+        .inner_join(schema::meets::table)
+        .order(schema::meets::MeetDate.desc())
+        .load(&**conn)
+        .ok()
+}
+
 
 #[cfg(test)]
 mod test {
@@ -48,6 +67,7 @@ mod test {
 
     use schema;
     use schema::Meet;
+    use schema::Lifter;
     use schema::DbConn;
 
     fn db() -> DbConn {
@@ -85,5 +105,14 @@ mod test {
         for entry in entries {
             assert_eq!(entry.meet_id, meet.id);
         }
+    }
+
+    #[test]
+    fn test_get_lifter_by_username() {
+        let conn = db();
+        let lifter = get_lifter_by_username("seanstangl", &conn).unwrap();
+        assert_eq!(lifter.id, 0);
+        assert_eq!(lifter.name, "Sean Stangl");
+        assert_eq!(lifter.instagram, Some("ferruix".into()));
     }
 }
