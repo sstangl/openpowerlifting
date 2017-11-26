@@ -11,14 +11,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 
 import oplcsv
 import urllib.parse
 
-LIFTERSCSV = '../build/openpowerlifting.csv'
+ENTRIESCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
 SOCIALFILE = '../lifter-data/social-media.csv'
 
 # Gets some row that contains the given meetid, using a super ham-fisted binary search.
-def findsomelifterin(meetid, lifterscsv):
-    meetidx = lifterscsv.index('MeetID')
-    rows = lifterscsv.rows
+def findsomelifterin(meetid, entriescsv):
+    meetidx = entriescsv.index('MeetID')
+    rows = entriescsv.rows
 
     meetid = int(meetid)
 
@@ -36,29 +36,29 @@ def findsomelifterin(meetid, lifterscsv):
     return x
 
 
-# Knowing that the lifterscsv rows are in sorted order by MeetID,
+# Knowing that the entriescsv rows are in sorted order by MeetID,
 # perform a binary search and expand to grab nearby rows.
-def getliftersfor(meetid, lifterscsv):
-    meetidx = lifterscsv.index('MeetID')
+def getliftersfor(meetid, entriescsv):
+    meetidx = entriescsv.index('MeetID')
 
     # Bisect to find one of the lifters.
-    x = findsomelifterin(meetid, lifterscsv)
+    x = findsomelifterin(meetid, entriescsv)
 
     # The rest of the lifters are above and below that one.
     # Find the lowest and highest indices for lifters in this meet, inclusive.
     lowest = x
     while lowest > 0:
-        if lifterscsv.rows[lowest-1][meetidx] != meetid:
+        if entriescsv.rows[lowest-1][meetidx] != meetid:
             break
         lowest = lowest - 1
 
     highest = x
-    while highest < len(lifterscsv.rows) - 1:
-        if lifterscsv.rows[highest+1][meetidx] != meetid:
+    while highest < len(entriescsv.rows) - 1:
+        if entriescsv.rows[highest+1][meetidx] != meetid:
             break
         highest = highest + 1
 
-    return lifterscsv.rows[lowest : highest + 1]
+    return entriescsv.rows[lowest : highest + 1]
 
 
 def getmonth(m):
@@ -129,7 +129,7 @@ def main():
 
     csv.rows = sorted(csv.rows, key=sorter)
 
-    lifters = oplcsv.Csv(LIFTERSCSV)
+    lifters = oplcsv.Csv(ENTRIESCSV)
     liftersmeetidx = lifters.index('MeetID')
     lifterswilksidx = lifters.index('Wilks')
     liftersnameidx = lifters.index('Name')

@@ -154,7 +154,7 @@ def main(url):
     fixevent(csv)
     fixequipment(csv)
 
-    with open('lifters.csv', 'w') as fd:
+    with open('entries.csv', 'w') as fd:
         csv.write(fd)
     with open('URL', 'w') as fd:
         print(url, file=fd)

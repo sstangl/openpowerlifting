@@ -14,18 +14,18 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
-${SCRIPTDIR}/wrpf-standardize-csv results.csv > lifters.csv
+${SCRIPTDIR}/wrpf-standardize-csv results.csv > entries.csv
 
-${REPOSCRIPTDIR}/calc-best-lifts lifters.csv
-${REPOSCRIPTDIR}/calc-latin-names lifters.csv
+${REPOSCRIPTDIR}/calc-best-lifts entries.csv
+${REPOSCRIPTDIR}/calc-latin-names entries.csv
 
 # Get rid of zero-columns.
-sed -i -e 's/,0,/,,/g' lifters.csv
-sed -i -e 's/,0,/,,/g' lifters.csv
-sed -i -e 's/,0\.0,/,,/g' lifters.csv
-sed -i -e 's/,0\.0,/,,/g' lifters.csv
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
 
 # Show any warnings.
-${REPOTESTSDIR}/check-lifters-csv lifters.csv
+${REPOTESTSDIR}/check-entries-csv entries.csv
 
 echo "Done! Don't forget about meet.csv!"

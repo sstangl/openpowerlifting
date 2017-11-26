@@ -7,6 +7,6 @@ set -e
 
 TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-${TESTSDIR}/check-lifters-csv
+${TESTSDIR}/check-entries-csv
 ${TESTSDIR}/check-meet-csv
 ${TESTSDIR}/check-sex-consistency

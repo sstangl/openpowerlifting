@@ -1,7 +1,7 @@
 #!/bin/bash
 #This script takes a file containing a list of URLs of nasa meet results.
 #One by one, it fetches the pdf, creates a new folder, moves the pdf to that folder, applies tabula to it
-#runs nasa-standardize to it, applies check-lifters and stores the output.
+#runs nasa-standardize to it, applies check-entries and stores the output.
 input="pdf_small"
 COUNTER=10
 while IFS= read -r var
@@ -13,8 +13,8 @@ do
 	for f in *;
 	do
 		java -jar /Users/blerner/openpowerlifting/tabula-1.0.1-jar-with-dependencies.jar -l $f >"results.csv"
-		python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "lifters.csv"
-		python /Users/blerner/openpowerlifting/tests/check-lifters-csv "lifters.csv"> check_lifters
+		python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "entries.csv"
+		python /Users/blerner/openpowerlifting/tests/check-entries-csv "entries.csv"> check_entries
 	done
 	echo $var > URL
 	cd ..

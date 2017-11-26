@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # Given the output from cpu-standardize-csv, file the meets
-# into their own folders with lifters.csv and meet.csv files.
+# into their own folders with entries.csv and meet.csv files.
 #
 
 from oplcsv import Csv
@@ -61,13 +61,13 @@ def makecsvs(path, csv):
         meetcsv.write(fd)
     meetcsv = None
 
-    # Generate the lifters.csv.
+    # Generate the entries.csv.
     csv.remove_column_by_name('MeetName')
     csv.remove_column_by_name('Date')
     csv.remove_column_by_name('MeetState')
     csv.remove_column_by_name('MeetTown')
 
-    with open(path + os.sep + 'lifters.csv', 'w') as fd:
+    with open(path + os.sep + 'entries.csv', 'w') as fd:
         csv.write(fd)
 
 

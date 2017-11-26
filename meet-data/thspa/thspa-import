@@ -78,7 +78,7 @@ def weightclass2kg(s, sex):
     error("Unknown weight class: %s" % (s))
 
 
-def makelifterscsv():
+def makeentriescsv():
     csv = Csv()
     csv.append_column('Division')
     csv.append_column('WeightClassKg')
@@ -282,12 +282,12 @@ def main(url):
     if os.path.isdir(dirname):
         error("Directory '%s' already exists." % dirname)
 
-    lifterscsv = makelifterscsv()
+    entriescsv = makeentriescsv()
     soup = BeautifulSoup(gethtml(url), 'html.parser')
     for divurl in getdivisionurls(soup):
-        enterdivision(lifterscsv, divurl)
+        enterdivision(entriescsv, divurl)
 
-    removeemptycolumns(lifterscsv)
+    removeemptycolumns(entriescsv)
 
     meetcsv = makemeetcsv(soup)
 
@@ -299,8 +299,8 @@ def main(url):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'lifters.csv', 'w') as fd:
-        lifterscsv.write(fd)
+    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
+        entriescsv.write(fd)
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:

@@ -24,18 +24,18 @@ mv *.pdf results.pdf
 pdftotext -layout results.pdf
 cp ../../meet.template meet.csv
 echo "CPF," >> meet.csv
-tabula-java -l results.pdf > lifters.csv
+tabula-java -l results.pdf > entries.csv
 
-sed -i -e "s/Squat 1/Squat1Kg/g" lifters.csv
-sed -i -e "s/Squat 2/Squat2Kg/g" lifters.csv
-sed -i -e "s/Squat 3/Squat3Kg/g" lifters.csv
-sed -i -e "s/Squat 4/Squat4Kg/g" lifters.csv
-sed -i -e "s/Bench 1/Bench1Kg/g" lifters.csv
-sed -i -e "s/Bench 2/Bench2Kg/g" lifters.csv
-sed -i -e "s/Bench 3/Bench3Kg/g" lifters.csv
-sed -i -e "s/Bench 4/Bench4Kg/g" lifters.csv
-sed -i -e "s/Deadlift 1/Deadlift1Kg/g" lifters.csv
-sed -i -e "s/Deadlift 2/Deadlift2Kg/g" lifters.csv
-sed -i -e "s/Deadlift 3/Deadlift3Kg/g" lifters.csv
-sed -i -e "s/Deadlift 4/Deadlift4Kg/g" lifters.csv
-sed -i -e "s/PL Total/TotalKg/g" lifters.csv
+sed -i -e "s/Squat 1/Squat1Kg/g" entries.csv
+sed -i -e "s/Squat 2/Squat2Kg/g" entries.csv
+sed -i -e "s/Squat 3/Squat3Kg/g" entries.csv
+sed -i -e "s/Squat 4/Squat4Kg/g" entries.csv
+sed -i -e "s/Bench 1/Bench1Kg/g" entries.csv
+sed -i -e "s/Bench 2/Bench2Kg/g" entries.csv
+sed -i -e "s/Bench 3/Bench3Kg/g" entries.csv
+sed -i -e "s/Bench 4/Bench4Kg/g" entries.csv
+sed -i -e "s/Deadlift 1/Deadlift1Kg/g" entries.csv
+sed -i -e "s/Deadlift 2/Deadlift2Kg/g" entries.csv
+sed -i -e "s/Deadlift 3/Deadlift3Kg/g" entries.csv
+sed -i -e "s/Deadlift 4/Deadlift4Kg/g" entries.csv
+sed -i -e "s/PL Total/TotalKg/g" entries.csv

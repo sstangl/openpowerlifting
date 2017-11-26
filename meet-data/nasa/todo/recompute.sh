@@ -7,8 +7,8 @@ do
         for f in *.pdf
         do
                 java -jar /Users/blerner/openpowerlifting/tabula-1.0.1-jar-with-dependencies.jar -l -p all $f >"results.csv"
-                python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "lifters.csv"
-                python /Users/blerner/openpowerlifting/tests/check-lifters-csv "lifters.csv"> check_lifters
+                python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "entries.csv"
+                python /Users/blerner/openpowerlifting/tests/check-entries-csv "entries.csv"> check_entries
         done
         let COUNTER=COUNTER+1
 done

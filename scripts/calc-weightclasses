@@ -76,7 +76,7 @@ def main(classtype, filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3 or not sys.argv[1] in ["trad","ipf"]:
-        print(" Usage: %s <trad,men,women> lifters.csv")
+        print(" Usage: %s <trad,men,women> entries.csv")
         print(" Where: 'trad' is for the traditional weight classes")
         print("    and 'ipf' is for the IPF weight classes.")
         sys.exit(1)

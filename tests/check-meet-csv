@@ -300,8 +300,8 @@ if __name__ == '__main__':
                 meetpath = dirname + os.sep + 'meet.csv'
                 check(sys.argv[0], meetpath)
 
-                if not 'lifters.csv' in files:
-                    perror('Missing lifters.csv')
+                if not 'entries.csv' in files:
+                    perror('Missing entries.csv')
 
     if hitError:
         sys.exit(1)

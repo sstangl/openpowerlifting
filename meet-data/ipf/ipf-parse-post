@@ -7,11 +7,11 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
-# Use IPF-specific knowledge to parse results.csv into lifters.csv.
-${SCRIPTDIR}/ipf-standardize-csv results.csv > lifters.csv
+# Use IPF-specific knowledge to parse results.csv into entries.csv.
+${SCRIPTDIR}/ipf-standardize-csv results.csv > entries.csv
 
 # Show any warnings.
-${REPOTESTDIR}/check-lifters-csv lifters.csv
+${REPOTESTDIR}/check-entries-csv entries.csv
 
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv

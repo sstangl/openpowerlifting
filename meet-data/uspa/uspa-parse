@@ -19,10 +19,10 @@ mv ${BASENAME}.txt results.txt
 # Creates some HTML file.
 ${SCRIPTDIR}/uspa-pdf-to-bbox "$1"
 ${SCRIPTDIR}/uspa-bbox-to-csv ${BASENAME}.html > ${CSVFILE}
-${SCRIPTDIR}/uspa-csv-to-final ${CSVFILE} > lifters.csv
+${SCRIPTDIR}/uspa-csv-to-final ${CSVFILE} > entries.csv
 
 # Don't store Wilks, since it will be recalculated.
-${REPOSCRIPTDIR}/csv-rmcol lifters.csv Wilks
+${REPOSCRIPTDIR}/csv-rmcol entries.csv Wilks
 
 rm ${BASENAME}.html
 rm ${CSVFILE}

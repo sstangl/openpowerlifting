@@ -8,10 +8,10 @@
 #
 
 #HOW TO USE:
-#1. Run the script e.g. python nasa-standardize-csv results.csv > lifters.csv
-#2. If no error is producded, great! Open lifters.csv and double check all the lifters
+#1. Run the script e.g. python nasa-standardize-csv results.csv > entries.csv
+#2. If no error is producded, great! Open entries.csv and double check all the entries
 #marked as DQ are in indeed disqualified. This is a week point of the script.
-#3 Run check check-lifters 
+#3 Run check check-entries 
 #4 If the script produced and error, most likely cause is that it didn't recognise a 
 # a certain category. Determine what the event and equipment should be for that category and
 # add it to the function integrate_equipment_event_sex below. Then re-run the script

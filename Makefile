@@ -28,7 +28,7 @@ web: csvfile
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
-	tests/check-lifters-csv
+	tests/check-entries-csv
 	tests/check-meet-csv
 	tests/check-sex-consistency
 	tests/check-social-media-csv lifter-data/social-media.csv

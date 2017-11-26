@@ -36,7 +36,7 @@ This would cause the names to constantly switch back and forth every time `scrip
 
 ## Applying Name Corrections
 
-There is a script that will open every `lifters.csv` file in the directory tree, look for *incorrect names*, and automatically fix them to their associated *correct name*.
+There is a script that will open every `entries.csv` file in the directory tree, look for *incorrect names*, and automatically fix them to their associated *correct name*.
 
 To apply name corrections, execute the following command from the project root:
 

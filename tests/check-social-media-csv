@@ -30,10 +30,10 @@ def get_database_nameset():
     names = set()
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
-        if not 'lifters.csv' in files:
+        if not 'entries.csv' in files:
             continue
 
-        csv = oplcsv.Csv(dirname + os.sep + 'lifters.csv')
+        csv = oplcsv.Csv(dirname + os.sep + 'entries.csv')
         if 'Name' in csv.fieldnames:
             nameidx = csv.index('Name')
             for row in csv.rows:

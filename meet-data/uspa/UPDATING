@@ -16,7 +16,7 @@ You will have to manually fix the files (or the scripts to read them).
 To do that, the pipeline (as run by `uspa-parse`) is as follows:
   1. uspa-pdf-to-bbox converts 0586.pdf to 0586.html with bounding box information.
   2. uspa-bbox-to-csv converts 0586.html to 0586.csv with text arranged by row.
-  3. uspa-csv-to-final converts 0586.csv to lifters.csv by understanding row data.
+  3. uspa-csv-to-final converts 0586.csv to entries.csv by understanding row data.
 
 ================================
 
@@ -30,7 +30,7 @@ To convert an old (but still post-2010 or so) meet result spreadsheet PDF to CSV
   5.  Delete the original PDF file.
   6.  Manually edit results.txt to vertically align columns.
   7.  From within the folder, run ../uspatocsv-old results.txt, changing results.txt until it passes.
-  8.  Redirect the output of `../uspatocsv-old results.txt` as lifters.csv.
+  8.  Redirect the output of `../uspatocsv-old results.txt` as entries.csv.
   9.  Manually create meet.csv using the header in results.txt.
   10. Add the new folder to git and push.
 

@@ -46,13 +46,13 @@ fi
 
 cp "${SCRIPTDIR}/../meet.template" "meet.csv"
 
-echo "Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Wilks,Place" > lifters.csv
+echo "Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Wilks,Place" > entries.csv
 
-tail -n +2 results.csv >> lifters.csv
+tail -n +2 results.csv >> entries.csv
 
 # Remove failure dashes.
-sed -i -e "s/,-,/,,/g" lifters.csv
-sed -i -e "s/,-,/,,/g" lifters.csv
-sed -i -e "s/,-$/,DQ/g" lifters.csv
+sed -i -e "s/,-,/,,/g" entries.csv
+sed -i -e "s/,-,/,,/g" entries.csv
+sed -i -e "s/,-$/,DQ/g" entries.csv
 
-${SCRIPTDIR}/nipf-format-csv lifters.csv
+${SCRIPTDIR}/nipf-format-csv entries.csv

@@ -126,7 +126,7 @@ def parsedivision(div):
     return (s, eq)
 
 
-def makelifterscsv(soup):
+def makeentriescsv(soup):
     # The page contains everything we'd need to know, except for Sex. Sigh.
     # That always has to be done manually, since men single-event can come
     # after women, although men usually are placed higher.
@@ -438,13 +438,13 @@ def main(url):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    lifterscsv = makelifterscsv(soup)
-    removeemptycolumns(lifterscsv)
-    makebestcolumns(lifterscsv)
-    markdqs(lifterscsv)
-    infersex(lifterscsv)
-    inferequipment(lifterscsv)
-    markdrugtest(lifterscsv)
+    entriescsv = makeentriescsv(soup)
+    removeemptycolumns(entriescsv)
+    makebestcolumns(entriescsv)
+    markdqs(entriescsv)
+    infersex(entriescsv)
+    inferequipment(entriescsv)
+    markdrugtest(entriescsv)
 
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
@@ -457,8 +457,8 @@ def main(url):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'lifters.csv', 'w') as fd:
-        lifterscsv.write(fd)
+    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
+        entriescsv.write(fd)
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:

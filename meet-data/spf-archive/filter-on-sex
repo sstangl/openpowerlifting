@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Rewrites lifters.csv so that it only contains rows with Sex data.
+# Rewrites entries.csv so that it only contains rows with Sex data.
 
 import sys
 sys.path.append('scripts')

@@ -14,15 +14,15 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
-# Use RPS-specific knowledge to parse results.csv into lifters.csv.
-${SCRIPTDIR}/rps-standardize-csv results.csv > lifters.csv
+# Use RPS-specific knowledge to parse results.csv into entries.csv.
+${SCRIPTDIR}/rps-standardize-csv results.csv > entries.csv
 
 # Convert to kg.
-${REPOSCRIPTDIR}/csv-tokg lifters.csv
-${REPOSCRIPTDIR}/fix-weightclasses lifters.csv
+${REPOSCRIPTDIR}/csv-tokg entries.csv
+${REPOSCRIPTDIR}/fix-weightclasses entries.csv
 
 # Show any warnings.
-${REPOTESTSDIR}/check-lifters-csv lifters.csv
+${REPOTESTSDIR}/check-entries-csv entries.csv
 
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv

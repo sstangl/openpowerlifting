@@ -30,7 +30,7 @@ Some federations give "sanction numbers" to their meets. In that case, the sanct
 
 ### Meet Files
 
-Each meet is described completely by files named `lifters.csv` and `meet.csv`, the internal structure of which is specified below.
+Each meet is described completely by files named `entries.csv` and `meet.csv`, the internal structure of which is specified below.
 
 In addition, there are some required-if-applicable files that are not currently used to build the database, but provide helpful information:
 
@@ -59,9 +59,9 @@ The fields are specified as follows:
 
 The validity of meet.csv files is checked by the script `tests/check-meet-csv`.
 
-## Structure of lifters.csv
+## Structure of entries.csv
 
-The file lifters.csv contains varying columns based on the information provided by the federation. Some columns are mandatory, and some columns are optional. The order of the columns does not matter, because the build step knows how to reorder them.
+The file entries.csv contains varying columns based on the information provided by the federation. Some columns are mandatory, and some columns are optional. The order of the columns does not matter, because the build step knows how to reorder them.
 
 Here is an example rendering, with illustrative data:
 

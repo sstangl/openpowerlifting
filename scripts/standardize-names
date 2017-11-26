@@ -2,7 +2,7 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Simple script that uses a list of names and their misspellings
-# to run over the Name column of all lifters.csv files under the cwd,
+# to run over the Name column of all entries.csv files under the cwd,
 # correcting names as it goes.
 #
 # The data file is formatted with one lifter per line, with spellings
@@ -34,8 +34,8 @@ def load_names(datafilepath):
     return h
 
 
-def correct_names(namehash, lifterspath):
-    csv = oplcsv.Csv(lifterspath)
+def correct_names(namehash, entriespath):
+    csv = oplcsv.Csv(entriespath)
     assert 'Name' in csv.fieldnames
 
     nameidx = csv.index('Name')
@@ -47,7 +47,7 @@ def correct_names(namehash, lifterspath):
             row[nameidx] = namehash[row[nameidx]]
 
     if changed:
-        with open(lifterspath, 'w') as fd:
+        with open(entriespath, 'w') as fd:
             csv.write(fd)
 
 
@@ -59,9 +59,9 @@ def main(args):
     namehash = load_names(args[1])
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
-        if 'lifters.csv' in files:
-            lifterspath = dirname + os.sep + 'lifters.csv'
-            correct_names(namehash, lifterspath)
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            correct_names(namehash, entriespath)
 
 
 if __name__ == '__main__':

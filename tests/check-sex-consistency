@@ -82,9 +82,9 @@ def process_file(path):
 
 def main():
     for dirname, subdirs, files in os.walk(os.getcwd()):
-        if 'lifters.csv' in files:
-            lifterspath = dirname + os.sep + 'lifters.csv'
-            process_file(lifterspath)
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            process_file(entriespath)
 
     for name,counts in NameToSexHash.items():
         if counts[0] and counts[1]:

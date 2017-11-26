@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Compiles all lifters.csv and meet.csv files into the final files.
+# Compiles all entries.csv and meet.csv files into the final files.
 #
 
 from oplcsv import Csv
@@ -39,21 +39,21 @@ def age_from_birthyear(csv, date):
             row[ageidx] = str(lower_age) + '.5'
 
 
-# Appends to lifterscsv and meetscsv, while assigning a MeetID mapping.
-def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
-    newlifters = Csv(lifterspath)
+# Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
+def addmeet(entriescsv, meetscsv, entriespath, meetpath):
+    newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
-    assert "MeetID" in lifterscsv.fieldnames
+    assert "MeetID" in entriescsv.fieldnames
     assert "MeetID" in meetscsv.fieldnames
-    assert not "MeetID" in newlifters.fieldnames
+    assert not "MeetID" in newentries.fieldnames
     assert not "MeetID" in newmeet.fieldnames
 
     meetid = str(nextmeetid())
 
-    newlifters.append_column('MeetID')
-    idx = newlifters.index('MeetID')
-    for row in newlifters.rows:
+    newentries.append_column('MeetID')
+    idx = newentries.index('MeetID')
+    for row in newentries.rows:
         row[idx] = meetid
 
     newmeet.append_column('MeetID')
@@ -72,48 +72,48 @@ def addmeet(lifterscsv, meetscsv, lifterspath, meetpath):
     for row in newmeet.rows:
         row[idx] = path
 
-    age_from_birthyear(newlifters, newmeet.rows[0][newmeet.index('Date')])
+    age_from_birthyear(newentries, newmeet.rows[0][newmeet.index('Date')])
 
-    lifterscsv.cat(newlifters)
+    entriescsv.cat(newentries)
     meetscsv.cat(newmeet)
 
 
 def main(builddir, meetdir):
-    lifterscsv = Csv()
+    entriescsv = Csv()
     meetscsv = Csv()
 
     # Standardize the column order by hardcoding it here.
     # This is necessary for SQL import statements to work.
     # If this list is modified, also modify scripts/compile-sqlite.
-    lifterscsv.append_column('MeetID')
-    lifterscsv.append_column('Name')
-    lifterscsv.append_column('Sex')
-    lifterscsv.append_column('Event')
-    lifterscsv.append_column('Equipment')
-    lifterscsv.append_column('Age')
-    lifterscsv.append_column('Division')
-    lifterscsv.append_column('BodyweightKg')
-    lifterscsv.append_column('WeightClassKg')
-    lifterscsv.append_column('Squat1Kg')
-    lifterscsv.append_column('Squat2Kg')
-    lifterscsv.append_column('Squat3Kg')
-    lifterscsv.append_column('Squat4Kg')
-    lifterscsv.append_column('BestSquatKg')
-    lifterscsv.append_column('Bench1Kg')
-    lifterscsv.append_column('Bench2Kg')
-    lifterscsv.append_column('Bench3Kg')
-    lifterscsv.append_column('Bench4Kg')
-    lifterscsv.append_column('BestBenchKg')
-    lifterscsv.append_column('Deadlift1Kg')
-    lifterscsv.append_column('Deadlift2Kg')
-    lifterscsv.append_column('Deadlift3Kg')
-    lifterscsv.append_column('Deadlift4Kg')
-    lifterscsv.append_column('BestDeadliftKg')
-    lifterscsv.append_column('TotalKg')
-    lifterscsv.append_column('Place')
-    lifterscsv.append_column('Wilks')
-    lifterscsv.append_column('McCulloch')
-    initial_lifterscsv_num_columns = len(lifterscsv.fieldnames)
+    entriescsv.append_column('MeetID')
+    entriescsv.append_column('Name')
+    entriescsv.append_column('Sex')
+    entriescsv.append_column('Event')
+    entriescsv.append_column('Equipment')
+    entriescsv.append_column('Age')
+    entriescsv.append_column('Division')
+    entriescsv.append_column('BodyweightKg')
+    entriescsv.append_column('WeightClassKg')
+    entriescsv.append_column('Squat1Kg')
+    entriescsv.append_column('Squat2Kg')
+    entriescsv.append_column('Squat3Kg')
+    entriescsv.append_column('Squat4Kg')
+    entriescsv.append_column('BestSquatKg')
+    entriescsv.append_column('Bench1Kg')
+    entriescsv.append_column('Bench2Kg')
+    entriescsv.append_column('Bench3Kg')
+    entriescsv.append_column('Bench4Kg')
+    entriescsv.append_column('BestBenchKg')
+    entriescsv.append_column('Deadlift1Kg')
+    entriescsv.append_column('Deadlift2Kg')
+    entriescsv.append_column('Deadlift3Kg')
+    entriescsv.append_column('Deadlift4Kg')
+    entriescsv.append_column('BestDeadliftKg')
+    entriescsv.append_column('TotalKg')
+    entriescsv.append_column('Place')
+    entriescsv.append_column('Wilks')
+    entriescsv.append_column('McCulloch')
+    initial_entriescsv_num_columns = len(entriescsv.fieldnames)
 
     meetscsv.append_column('MeetID')
     meetscsv.append_column('MeetPath')
@@ -130,27 +130,27 @@ def main(builddir, meetdir):
         # generator to operate over the sorted list.
         subdirs.sort()
 
-        if 'lifters.csv' in files:
+        if 'entries.csv' in files:
             assert 'meet.csv' in files
-            lifterspath = dirname + os.sep + 'lifters.csv'
+            entriespath = dirname + os.sep + 'entries.csv'
             meetpath = dirname + os.sep + 'meet.csv'
-            addmeet(lifterscsv, meetscsv, lifterspath, meetpath)
+            addmeet(entriescsv, meetscsv, entriespath, meetpath)
 
     # Remove some columns that are allowed as data but are ignored.
-    lifterscsv.remove_column_by_name("BirthYear");
-    lifterscsv.remove_column_by_name("Country");
-    lifterscsv.remove_column_by_name("School");
-    lifterscsv.remove_column_by_name("Team");
-    lifterscsv.remove_column_by_name("State");
-    lifterscsv.remove_column_by_name("InternationalName");
-    lifterscsv.remove_column_by_name("Country-State");
-    lifterscsv.remove_column_by_name("College/University");
+    entriescsv.remove_column_by_name("BirthYear");
+    entriescsv.remove_column_by_name("Country");
+    entriescsv.remove_column_by_name("School");
+    entriescsv.remove_column_by_name("Team");
+    entriescsv.remove_column_by_name("State");
+    entriescsv.remove_column_by_name("InternationalName");
+    entriescsv.remove_column_by_name("Country-State");
+    entriescsv.remove_column_by_name("College/University");
 
     oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
     with open(oplcsvpath, 'w') as fd:
-        lifterscsv.write(fd)
+        entriescsv.write(fd)
     with open(meetscsvpath, 'w') as fd:
         meetscsv.write(fd)
 
@@ -158,7 +158,7 @@ def main(builddir, meetdir):
     # Check the written files: new columns are at the end.
     # Columns need to be explicitly added above to be in a known order,
     # and then scripts/compile-sqlite needs to be notified of the column type.
-    assert len(lifterscsv.fieldnames) == initial_lifterscsv_num_columns
+    assert len(entriescsv.fieldnames) == initial_entriescsv_num_columns
     assert len(meetscsv.fieldnames) == initial_meetscsv_num_columns
 
 

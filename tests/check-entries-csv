@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Simple check script for lifters.csv files.
+# Simple check script for entries.csv files.
 # Used as part of "make check".
 #
 # Makes sure that:
@@ -623,13 +623,13 @@ if __name__ == '__main__':
         for f in sys.argv[1:]:
             check(sys.argv[0], f)
 
-    # Otherwise, check every file named lifters.csv in the dirtree,
+    # Otherwise, check every file named entries.csv in the dirtree,
     # which is much faster than using `find -exec`.
     else:
         for dirname, subdirs, files in os.walk(os.getcwd()):
-            if 'lifters.csv' in files:
-                lifterspath = dirname + os.sep + 'lifters.csv'
-                check(sys.argv[0], lifterspath)
+            if 'entries.csv' in files:
+                entriespath = dirname + os.sep + 'entries.csv'
+                check(sys.argv[0], entriespath)
 
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')

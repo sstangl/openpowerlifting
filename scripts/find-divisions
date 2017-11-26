@@ -16,10 +16,10 @@ KNOWN_DIVISIONS = {
 }
 
 
-def find_divisions(unknown, lifterspath):
+def find_divisions(unknown, entriespath):
     global KNOWN_DIVISIONS
 
-    csv = oplcsv.Csv(lifterspath)
+    csv = oplcsv.Csv(entriespath)
 
     if not 'Division' in csv.fieldnames:
         return
@@ -39,9 +39,9 @@ def main(args):
     unknown = {}
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
-        if 'lifters.csv' in files:
-            lifterspath = dirname + os.sep + 'lifters.csv'
-            find_divisions(unknown, lifterspath)
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            find_divisions(unknown, entriespath)
 
     if len(unknown) != 0:
         print(len(unknown), "unknown divisions!\n")
