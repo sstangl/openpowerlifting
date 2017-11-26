@@ -100,7 +100,7 @@ def check_social_media(names):
 
 # Dummy function to test out usernames -- not final version.
 def make_username(name):
-    return name.lower().replace(' ','').replace('.','').replace('\'','')
+    return name.lower().replace(' ','').replace('.','').replace('\'','').replace('-','')
 
 
 # Check (Name => Username) automatic compilation for duplicate entries.
