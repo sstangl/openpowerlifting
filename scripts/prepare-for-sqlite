@@ -38,6 +38,10 @@ def handle_openpowerlifting():
         # Convert the Equipment column to integer.
         row[eqpidx] = str(['Raw','Wraps','Single-ply','Multi-ply','Straps'].index(row[eqpidx]))
 
+    # The Web version keeps the Name column and deletes LifterID.
+    # The Server version keeps the LifterID column and deletes Name.
+    csv.remove_column_by_name('Name')
+
     write_without_fieldnames(csv, 'build/sqlite-openpowerlifting.csv')
 
 
@@ -46,20 +50,15 @@ def handle_meets():
     write_without_fieldnames(csv, 'build/sqlite-meets.csv')
 
 
-def handle_social_media():
-    csv = Csv('lifter-data/social-media.csv')
-
-    csv.insert_column(0, 'rowid')
-    for i, row in enumerate(csv.rows):
-        row[0] = str(i)
-
-    write_without_fieldnames(csv, 'build/sqlite-social-media.csv')
+def handle_lifters():
+    csv = Csv('build/lifters.csv')
+    write_without_fieldnames(csv, 'build/sqlite-lifters.csv')
 
 
 def main():
     handle_openpowerlifting()
     handle_meets()
-    handle_social_media()
+    handle_lifters()
 
 
 if __name__ == '__main__':

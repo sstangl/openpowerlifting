@@ -25,7 +25,7 @@ builddir:
 # A number of columns are omitted to save data.
 data: builddir
 	cp ${PLFILE} ${BUILDDIR}/static/data
-	${SCRIPTDIR}/csv-rmcol "${BUILDDIR}/static/data/openpowerlifting.csv" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg McCulloch Event
+	${SCRIPTDIR}/csv-rmcol "${BUILDDIR}/static/data/openpowerlifting.csv" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg McCulloch Event LifterID
 	cp ${MEETFILE} ${BUILDDIR}/static/data
 
 database: data

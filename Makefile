@@ -15,7 +15,7 @@ builddir:
 
 # Cram all the data into a single, huge CSV file.
 csvfile: builddir
-	scripts/compile "${BUILDDIR}" "${DATADIR}"
+	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 

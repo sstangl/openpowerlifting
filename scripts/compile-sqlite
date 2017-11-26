@@ -25,7 +25,7 @@ function require_file {
 require_dir "build"
 require_file "build/sqlite-openpowerlifting.csv"
 require_file "build/sqlite-meets.csv"
-require_file "build/sqlite-social-media.csv"
+require_file "build/sqlite-lifters.csv"
 
 # If the database already exists, SQLite will add to existing tables
 # instead of parsing the CSV headers. So the DB needs to be nuked.
@@ -50,7 +50,7 @@ CREATEENTRIESTABLE="
 CREATE TABLE entries (
   id INTEGER PRIMARY KEY NOT NULL,
   MeetID INTEGER NOT NULL,
-  Name TEXT NOT NULL,
+  LifterID INTEGER NOT NULL,
   Sex BOOLEAN NOT NULL,
   Event CHAR(3),
   Equipment INTEGER NOT NULL,
@@ -78,15 +78,16 @@ CREATE TABLE entries (
   Wilks FLOAT,
   McCulloch FLOAT,
 
-  FOREIGN KEY(MeetID) REFERENCES meets(MeetID)
+  FOREIGN KEY(MeetID) REFERENCES meets(MeetID),
+  FOREIGN KEY(LifterID) REFERENCES lifters(LifterID)
 );
 "
 
-CREATESOCIALTABLE="
-CREATE TABLE social (
-  id INTEGER PRIMARY KEY NOT NULL,
+CREATELIFTERSTABLE="
+CREATE TABLE lifters (
+  LifterID INTEGER PRIMARY KEY NOT NULL,
   Name TEXT UNIQUE NOT NULL,
-  Instagram TEXT UNIQUE NOT NULL
+  Instagram TEXT
 );
 "
 
@@ -97,11 +98,11 @@ PRAGMA foreign_keys = ON;
 ${CREATEMEETSTABLE}
 .import build/sqlite-meets.csv meets
 
+${CREATELIFTERSTABLE}
+.import build/sqlite-lifters.csv lifters
+
 ${CREATEENTRIESTABLE}
 .import build/sqlite-openpowerlifting.csv entries
-
-${CREATESOCIALTABLE}
-.import build/sqlite-social-media.csv social
 
 vacuum;
 "

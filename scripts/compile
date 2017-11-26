@@ -17,6 +17,28 @@ def nextmeetid():
     return x
 
 
+LIFTERID = 1 # Due to default seed of LIFTERIDMAP below.
+def nextlifterid():
+    global LIFTERID
+    x = LIFTERID
+    LIFTERID = LIFTERID + 1
+    return x
+
+
+# Global map of (Name => LifterID) mappings.
+LIFTERIDMAP = {
+  'Sean Stangl': 0
+}
+def get_lifterid(name):
+    global LIFTERIDMAP
+    try:
+        return LIFTERIDMAP[name]
+    except KeyError:
+        lifterid = nextlifterid()
+        LIFTERIDMAP[name] = lifterid
+        return lifterid
+
+
 # Fills in the Age column from the BirthYear column if possible.
 # Inexact ages derived in this way are noted as '.5', for example '23.5',
 # designating "either 23 or 24".
@@ -44,6 +66,8 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
+
+    # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
     assert "MeetID" in meetscsv.fieldnames
     assert not "MeetID" in newentries.fieldnames
@@ -72,13 +96,57 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     for row in newmeet.rows:
         row[idx] = path
 
+
+    # Add the LifterIDs.
+    newentries.append_column('LifterID')
+    idx = newentries.index('LifterID')
+    nameidx = newentries.index('Name')
+    for row in newentries.rows:
+        row[idx] = str(get_lifterid(row[nameidx]))
+
     age_from_birthyear(newentries, newmeet.rows[0][newmeet.index('Date')])
 
     entriescsv.cat(newentries)
     meetscsv.cat(newmeet)
 
 
-def main(builddir, meetdir):
+# Generates the lifters.csv from global state.
+def build_lifterscsv(lifterdir, builddir):
+    # The map of Name => LifterID has already been populated.
+    global LIFTERIDMAP
+    assert len(LIFTERIDMAP)
+
+    # Order by LifterID.
+    ordered = sorted(LIFTERIDMAP.items(), key=lambda x:x[1])
+
+    # Make a map of (Name => Instagram).
+    socialcsv = Csv(lifterdir + os.sep + 'social-media.csv')
+    nameidx = socialcsv.index('Name')
+    igidx = socialcsv.index('Instagram')
+    socialmap = dict()
+    for row in socialcsv.rows:
+        socialmap[row[nameidx]] = row[igidx]
+    socialcsv = None
+
+    lifterscsv = Csv()
+    lifterscsv.append_column('LifterID')
+    lifterscsv.append_column('Name')
+    lifterscsv.append_column('Instagram')
+
+    for (name, lifterid) in ordered:
+        instagram = ''
+        if name in socialmap:
+            instagram = socialmap[name]
+
+        row = [str(lifterid), name, instagram]
+        lifterscsv.rows.append(row)
+
+    lifterscsvpath = builddir + os.sep + 'lifters.csv'
+    with open(lifterscsvpath, 'w') as fd:
+        lifterscsv.write(fd)
+
+
+def main(builddir, meetdir, lifterdir):
     entriescsv = Csv()
     meetscsv = Csv()
 
@@ -86,6 +154,7 @@ def main(builddir, meetdir):
     # This is necessary for SQL import statements to work.
     # If this list is modified, also modify scripts/compile-sqlite.
     entriescsv.append_column('MeetID')
+    entriescsv.append_column('LifterID')
     entriescsv.append_column('Name')
     entriescsv.append_column('Sex')
     entriescsv.append_column('Event')
@@ -146,6 +215,9 @@ def main(builddir, meetdir):
     entriescsv.remove_column_by_name("Country-State");
     entriescsv.remove_column_by_name("College/University");
 
+    # Construct the lifters.csv.
+    build_lifterscsv(lifterdir, builddir)
+
     oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
@@ -163,7 +235,7 @@ def main(builddir, meetdir):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
-        print(' Usage: %s builddir meetdir' % sys.argv[0], file=sys.stderr)
+    if len(sys.argv) != 4:
+        print(' Usage: %s builddir meetdir lifterdir' % sys.argv[0], file=sys.stderr)
         sys.exit(1)
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
