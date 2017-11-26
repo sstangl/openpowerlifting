@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Simple check script for lifter-data/social-media.csv.
+# Simple check script for lifter-data/social-media.csv
+# and assorted files that get compiled into "lifters.csv".
+#
 # Used as part of "make check".
 #
 
@@ -42,12 +44,9 @@ def get_database_nameset():
     return names
 
 
-def main(filename):
-    global hitError
-    csv = oplcsv.Csv(filename)
 
-    # Get a list of all the Name entries throughout the whole project.
-    names = get_database_nameset()
+def check_social_media(names):
+    csv = oplcsv.Csv('lifter-data' + os.sep + 'social-media.csv')
 
     # Check columns.
     if len(csv.fieldnames) == 0:
@@ -98,13 +97,40 @@ def main(filename):
         if not row[nameidx] in names:
             perror("Lifter does not exist in database: '%s'." % row[nameidx])
 
+
+# Dummy function to test out usernames -- not final version.
+def make_username(name):
+    return name.lower().replace(' ','').replace('.','').replace('\'','')
+
+
+# Check (Name => Username) automatic compilation for duplicate entries.
+# Duplicates need to be eliminated by forcibly overriding a name.
+def check_usernames(names):
+    usernames = dict()
+    for name in names:
+        username = make_username(name)
+        if username in usernames:
+            pwarning('Multiple users with username %s: "%s", "%s".' % (username, name,
+                     usernames[username]))
+        else:
+            usernames[username] = name
+
+
+def main():
+    global hitError
+
+    # Get a list of all the Name entries throughout the whole project.
+    names = get_database_nameset()
+
+    check_social_media(names)
+    check_usernames(names)
+
     if hitError:
         return 1
     return 0
 
-
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print(" Usage: %s social-media.csv" % sys.argv[0])
+    if len(sys.argv) != 1:
+        print(" Usage: %s" % sys.argv[0])
         sys.exit(1)
-    sys.exit(main(sys.argv[1]))
+    sys.exit(main())
