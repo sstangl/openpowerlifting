@@ -8,6 +8,7 @@
 #
 
 import oplcsv
+from usernames import get_username
 import os
 import sys
 
@@ -26,6 +27,10 @@ def perror(s):
 
 def pwarning(s):
     print(' ' + enyellow(s), file=sys.stderr)
+
+
+def is_ascii(s):
+    return len(s) == len(s.encode())
 
 
 def get_database_nameset():
@@ -98,20 +103,22 @@ def check_social_media(names):
             perror("Lifter does not exist in database: '%s'." % row[nameidx])
 
 
-# Dummy function to test out usernames -- not final version.
-def make_username(name):
-    return name.lower().replace(' ','').replace('.','').replace('\'','').replace('-','')
-
-
 # Check (Name => Username) automatic compilation for duplicate entries.
 # Duplicates need to be eliminated by forcibly overriding a name.
 def check_usernames(names):
     usernames = dict()
     for name in names:
-        username = make_username(name)
+        username = get_username(name)
+        if not username:
+            perror('No username generated for Name "%s".' % name)
+        elif not username[0].isalpha():
+            perror('Username "%s" must start with a letter.' % username)
+        elif not is_ascii(username):
+            perror("Username is not ASCII: '%s'. Teach scripts/username.py." % username)
+
         if username in usernames:
-            pwarning('Multiple users with username %s: "%s", "%s".' % (username, name,
-                     usernames[username]))
+            perror('Multiple users with username %s: "%s", "%s".' % (username, name,
+                   usernames[username]))
         else:
             usernames[username] = name
 
