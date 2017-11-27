@@ -23,7 +23,7 @@ function require_file {
 
 # Dependency checks.
 require_dir "build"
-require_file "build/sqlite-openpowerlifting.csv"
+require_file "build/sqlite-entries.csv"
 require_file "build/sqlite-meets.csv"
 require_file "build/sqlite-lifters.csv"
 
@@ -103,7 +103,7 @@ ${CREATELIFTERSTABLE}
 .import build/sqlite-lifters.csv lifters
 
 ${CREATEENTRIESTABLE}
-.import build/sqlite-openpowerlifting.csv entries
+.import build/sqlite-entries.csv entries
 
 vacuum;
 "

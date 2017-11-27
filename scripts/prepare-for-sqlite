@@ -22,7 +22,7 @@ def write_without_fieldnames(csv, path):
             fd.write(','.join(row) + "\n")
 
 
-def handle_openpowerlifting():
+def handle_entries():
     csv = Csv('build/openpowerlifting.csv')
 
     csv.insert_column(0, 'rowid')
@@ -42,7 +42,7 @@ def handle_openpowerlifting():
     # The Server version keeps the LifterID column and deletes Name.
     csv.remove_column_by_name('Name')
 
-    write_without_fieldnames(csv, 'build/sqlite-openpowerlifting.csv')
+    write_without_fieldnames(csv, 'build/sqlite-entries.csv')
 
 
 def handle_meets():
@@ -56,7 +56,7 @@ def handle_lifters():
 
 
 def main():
-    handle_openpowerlifting()
+    handle_entries()
     handle_meets()
     handle_lifters()
 
