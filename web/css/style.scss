@@ -117,7 +117,7 @@ td a {
 #header {
   background-color: $background-color;
   padding: 6px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #header a {
@@ -255,7 +255,7 @@ div.text-content {
 }
 
 .nav__link + .nav__link {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 #header .nav__link--active {
@@ -288,4 +288,11 @@ td.meetdivisiontext { /* used by meet.html */
   float: right;
   color: $primary-color;
   font-size: 9pt;
+}
+
+.header-logo {
+  height: 68px;
+  width: 150px;
+  vertical-align: middle;
+  margin: -10px 0 -15px 0;
 }
