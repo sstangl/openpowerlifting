@@ -31,7 +31,7 @@ def main(activetab):
     assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
     print('<div id="header">')
     print('<div class="nav">')
-    addnav(activetab, 'rankings', 'OpenPowerlifting', 'index')
+    print('<a href="index.html"><img class="header-logo" src="static/images/logo-compressed.svg" /></a>')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
     addnav(activetab, 'contact', 'Contact')

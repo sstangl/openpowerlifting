@@ -7,6 +7,7 @@ PLFILE := ../build/openpowerlifting.csv
 PLFILEJS := openpowerlifting.js
 MEETFILE := ../build/meets.csv
 MEETFILEJS := meets.js
+LOGO := ../project-data/logo-compressed.svg
 
 all: database npminit scripts css html images
 
@@ -66,6 +67,7 @@ images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/static/images
 	cp images/select_dropdown.png ${BUILDDIR}/static/images
 	cp images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/static/images"
+	cp ${LOGO} ${BUILDDIR}/static/images
 
 check:
 	echo "Nothing to check for the moment."
