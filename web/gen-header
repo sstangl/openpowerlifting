@@ -32,6 +32,7 @@ def main(activetab):
     print('<div id="header">')
     print('<div class="nav">')
     print('<a href="index.html"><img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/></a>')
+    addnav(activetab, 'rankings', 'Rankings', 'index')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
     addnav(activetab, 'contact', 'Contact')
