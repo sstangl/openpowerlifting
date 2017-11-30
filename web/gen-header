@@ -28,13 +28,14 @@ def addnav(activetab, tab, title, filename = None):
     print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(filename, active, title))
 
 def main(activetab):
-    assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'data', 'contact']
+    assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'faq', 'data', 'contact']
     print('<div id="header">')
     print('<div class="nav">')
     print('<a href="index.html"><img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/></a>')
     addnav(activetab, 'rankings', 'Rankings', 'index')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
+    addnav(activetab, 'faq', 'FAQ')
     addnav(activetab, 'contact', 'Contact')
 
     print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us <img style="height: 15px; width: 15px" src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')

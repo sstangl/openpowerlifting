@@ -62,6 +62,7 @@ html: builddir data
 	./preprocess-html templates/meetlist.html > ${BUILDDIR}/meetlist.html
 	./preprocess-html templates/data.html > ${BUILDDIR}/data.html
 	./preprocess-html templates/contact.html > ${BUILDDIR}/contact.html
+	./preprocess-html templates/faq.html > ${BUILDDIR}/faq.html
 
 images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/static/images
