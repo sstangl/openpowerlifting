@@ -3,7 +3,7 @@
 
 #![recursion_limit="256"] // For Diesel.
 #[macro_use] extern crate diesel;
-#[macro_use] extern crate diesel_codegen;
+#[macro_use] extern crate diesel_infer_schema;
 
 
 extern crate r2d2_diesel;

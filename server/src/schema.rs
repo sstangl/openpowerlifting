@@ -3,8 +3,8 @@
 extern crate diesel;
 extern crate r2d2;
 
+use diesel::prelude::*;
 use diesel::row::Row;
-use diesel::sqlite::SqliteConnection;
 use diesel::types::FromSqlRow;
 use r2d2_diesel::ConnectionManager;
 
@@ -59,12 +59,11 @@ static DATABASE_URL: &'static str = "../build/openpowerlifting.sqlite3";
 
 
 pub fn init_pool() -> Pool {
-    let config = r2d2::Config::default();
     let manager = ConnectionManager::<SqliteConnection>::new(DATABASE_URL);
-    r2d2::Pool::new(config, manager).expect("Failed DB Pool creation.")
+    r2d2::Pool::new(manager).expect("Failed DB Pool creation.")
 }
 
-
+/*
 /// A Value from the mandatory "Sex" column of the entries table.
 pub enum Sex {
     Male,
@@ -93,8 +92,9 @@ impl fmt::Display for Sex {
         }
     }
 }
+*/
 
-
+/*
 /// A value from the mandatory "Equipment" column of the entries table.
 pub enum Equipment {
     Raw,
@@ -132,6 +132,7 @@ impl fmt::Display for Equipment {
         }
     }
 }
+*/
 
 
 #[derive(Identifiable, Queryable)]
@@ -162,9 +163,9 @@ pub struct Entry {
     pub id: i32,
     pub meet_id: i32,
     pub lifter_id: i32,
-    pub sex: Sex,
+    pub sex: bool, // FIXME -- use schema::Sex again.
     pub event: Option<String>,
-    pub equipment: Equipment,
+    pub equipment: i32, // FIXME -- use schema::Equipment again.
     pub age: Option<f32>,
     pub division: Option<String>,
     pub bodyweightkg: Option<f32>,
