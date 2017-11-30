@@ -63,11 +63,20 @@ pub fn init_pool() -> Pool {
     r2d2::Pool::new(manager).expect("Failed DB Pool creation.")
 }
 
-/*
+
 /// A Value from the mandatory "Sex" column of the entries table.
 pub enum Sex {
     Male,
     Female,
+}
+
+impl Queryable<diesel::types::Bool, DB> for Sex
+{
+    type Row = Self;
+
+    fn build(row: Self::Row) -> Self {
+        row
+    }
 }
 
 impl FromSqlRow<diesel::types::Bool, DB> for Sex
@@ -92,9 +101,9 @@ impl fmt::Display for Sex {
         }
     }
 }
-*/
 
-/*
+
+
 /// A value from the mandatory "Equipment" column of the entries table.
 pub enum Equipment {
     Raw,
@@ -102,6 +111,15 @@ pub enum Equipment {
     Single,
     Multi,
     Straps,
+}
+
+impl Queryable<diesel::types::Integer, DB> for Equipment
+{
+    type Row = Self;
+
+    fn build(row: Self::Row) -> Self {
+        row
+    }
 }
 
 impl FromSqlRow<diesel::types::Integer, DB> for Equipment
@@ -132,7 +150,7 @@ impl fmt::Display for Equipment {
         }
     }
 }
-*/
+
 
 
 #[derive(Identifiable, Queryable)]
@@ -163,9 +181,9 @@ pub struct Entry {
     pub id: i32,
     pub meet_id: i32,
     pub lifter_id: i32,
-    pub sex: bool, // FIXME -- use schema::Sex again.
+    pub sex: Sex,
     pub event: Option<String>,
-    pub equipment: i32, // FIXME -- use schema::Equipment again.
+    pub equipment: Equipment,
     pub age: Option<f32>,
     pub division: Option<String>,
     pub bodyweightkg: Option<f32>,
