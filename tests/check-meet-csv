@@ -188,8 +188,11 @@ def check(scriptname, filename):
     reset_filename_state(filename)
 
     csv = oplcsv.Csv(filename)
-    if len(csv.rows) != 1:
-        perror("Incorrect number of rows.")
+    if len(csv.rows) < 1:
+        perror("Meet file doesn't have any rows.")
+        return
+    if len(csv.rows) > 1:
+        perror("Meet file has too many rows.")
         return
 
     # Require fields to be present and in a set order.
