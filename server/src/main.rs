@@ -52,6 +52,11 @@ fn data_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/data.html").ok()
 }
 
+#[get("/faq.html")]
+fn faq_html() -> Option<NamedFile> {
+    NamedFile::open("htmltmp/faq.html").ok()
+}
+
 #[get("/lifters.html")]
 fn lifters_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/lifters.html").ok()
@@ -132,7 +137,7 @@ fn main() {
         .mount("/", routes![meet_handler])
 
         // Old HTML handlers.
-        .mount("/", routes![index_html, contact_html, data_html,
+        .mount("/", routes![index_html, contact_html, data_html, faq_html,
                             lifters_html, meet_html, meetlist_html])
 
         .attach(Template::fairing())
