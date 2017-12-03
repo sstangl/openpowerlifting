@@ -11,16 +11,13 @@ use std::env;
 extern crate r2d2_diesel;
 extern crate r2d2;
 
-use diesel::prelude::*;
-
 extern crate rocket;
 extern crate rocket_contrib;
 
 use rocket_contrib::Template;
 use rocket::response::{NamedFile, Redirect};
 use rocket::http::Status;
-use rocket::{Request, State, Outcome};
-use rocket::request::{self, FromRequest};
+use rocket::{State};
 
 use std::collections::HashMap;
 use std::error::Error;
