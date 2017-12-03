@@ -17,7 +17,7 @@ extern crate rocket;
 extern crate rocket_contrib;
 
 use rocket_contrib::Template;
-use rocket::response::NamedFile;
+use rocket::response::{NamedFile, Redirect};
 use rocket::http::Status;
 
 use std::collections::HashMap;
@@ -33,9 +33,42 @@ use schema::DbConn;
 mod queries;
 
 
+enum StaticResult {
+    Redirect(Redirect),
+    NamedFile(NamedFile),
+    NotFound,
+}
+
+impl<'r> rocket::response::Responder<'r> for StaticResult {
+    fn respond_to(self, req: &rocket::Request) -> Result<rocket::Response<'r>, Status> {
+        match self {
+            StaticResult::Redirect(v) => v.respond_to(req),
+            StaticResult::NamedFile(v) => v.respond_to(req),
+            StaticResult::NotFound => Err(Status::NotFound)
+        }
+    }
+}
+
 #[get("/static/<file..>")]
-fn static_handler(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/").join(file)).ok()
+fn static_handler(file: PathBuf) -> StaticResult {
+    match env::var("USE_GITHUB_FOR_STATICS").is_ok() {
+        true => {
+            match file.to_str() {
+                Some(v) => {
+                    let github_url = format!("https://sstangl.github.io/openpowerlifting-static/{}", v);
+                    let redirection = Redirect::to(github_url.as_str());
+                    StaticResult::Redirect(redirection)
+                },
+                None => StaticResult::NotFound
+            }
+        },
+        false => {
+            match NamedFile::open(Path::new("static/").join(file)).ok() {
+                Some(v) => StaticResult::NamedFile(v),
+                None => StaticResult::NotFound
+            }
+        }
+    }
 }
 
 
