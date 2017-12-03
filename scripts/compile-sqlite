@@ -105,6 +105,13 @@ ${CREATELIFTERSTABLE}
 ${CREATEENTRIESTABLE}
 .import build/sqlite-entries.csv entries
 
+UPDATE lifters SET instagram = NULL WHERE instagram = '';
+UPDATE meets SET state = NULL WHERE state = '';
+UPDATE meets SET town = NULL WHERE town = '';
+UPDATE entries SET event = NULL WHERE event = '';
+UPDATE entries SET division = NULL WHERE division = '';
+UPDATE entries SET place = NULL WHERE place = '';
+
 vacuum;
 "
 

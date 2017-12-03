@@ -71,7 +71,7 @@ mod test {
     use schema::DbConn;
 
     fn db() -> DbConn {
-        DbConn(schema::init_pool().get().unwrap())
+        DbConn(schema::init_pool("../build/openpowerlifting.sqlite3").get().unwrap())
     }
 
     #[test]
@@ -114,5 +114,14 @@ mod test {
         assert_eq!(lifter.id, 0);
         assert_eq!(lifter.name, "Sean Stangl");
         assert_eq!(lifter.instagram, Some("ferruix".into()));
+    }
+
+    #[test]
+    fn test_no_instagram_is_null() {
+        let conn = db();
+        // Select a lifter who is definitely not going to have an Instagram.
+        let lifter = get_lifter_by_username("lamargant", &conn).unwrap();
+        assert_eq!(lifter.name, "Lamar Gant");
+        assert_eq!(lifter.instagram, None);
     }
 }
