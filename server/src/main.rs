@@ -164,8 +164,9 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 
     println!("{}", entries.len());
 
-    let mut context = HashMap::<String, String>::new();
-    context.insert("title".to_string(), "testing".to_string());
+    let mut context = HashMap::<&str, String>::new();
+    context.insert("title", "testing".to_string());
+    context.insert("lifter_nameurl_html", schema::make_lifter_html(&lifter));
 
     Ok(Template::render("lifter", &context))
 }
