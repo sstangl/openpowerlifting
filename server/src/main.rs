@@ -88,8 +88,9 @@ fn data_html() -> Option<NamedFile> {
 }
 
 #[get("/faq.html")]
-fn faq_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/faq.html").ok()
+fn faq_html() -> Option<Template> {
+    let mut context = HashMap::<String, String>::new();
+    Some(Template::render("faq", &context))
 }
 
 #[get("/lifters.html")]
