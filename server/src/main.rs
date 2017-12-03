@@ -5,6 +5,8 @@
 #[macro_use] extern crate diesel;
 #[macro_use] extern crate diesel_infer_schema;
 
+extern crate dotenv;
+use std::env;
 
 extern crate r2d2_diesel;
 extern crate r2d2;
@@ -128,9 +130,13 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 }
 
 
-fn main() {
+fn rocket() -> rocket::Rocket {
+    let db_path = env::var("DATABASE_PATH").expect("DATABASE_PATH is not set.");
+    let db_pool = schema::init_pool(db_path.as_str());
+
     rocket::ignite()
-        .manage(schema::init_pool())
+        .manage(db_pool)
+
         .mount("/", routes![index])
         .mount("/", routes![static_handler])
         .mount("/", routes![lifter_handler])
@@ -141,5 +147,13 @@ fn main() {
                             lifters_html, meet_html, meetlist_html])
 
         .attach(Template::fairing())
-        .launch();
+}
+
+
+fn main() {
+    // Populate std::env with the contents of any .env file.
+    dotenv::from_filename("server.env").ok();
+
+    // Run the server loop.
+    rocket().launch();
 }

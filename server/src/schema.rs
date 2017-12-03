@@ -53,13 +53,8 @@ impl Deref for DbConn {
 }
 
 
-/// Path to the database.
-// FIXME: Should use an environment variable instead of being hardcoded.
-static DATABASE_URL: &'static str = "../build/openpowerlifting.sqlite3";
-
-
-pub fn init_pool() -> Pool {
-    let manager = ConnectionManager::<SqliteConnection>::new(DATABASE_URL);
+pub fn init_pool(path: &str) -> Pool {
+    let manager = ConnectionManager::<SqliteConnection>::new(path);
     r2d2::Pool::new(manager).expect("Failed DB Pool creation.")
 }
 
