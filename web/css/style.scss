@@ -10,6 +10,8 @@ $primary-color: #FB3640;
 $control-border-color: #333333;
 $control-background-color: #3E4042;
 
+$topbar-height: 82px;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -224,14 +226,15 @@ input[type="checkbox"]:checked + label span {
 div.topbar {
   position: fixed;
   width: 100%;
+  height: $topbar-height;
 }
 
 div.content {
-  padding-top: 82px;
+  padding-top: $topbar-height;
 }
 
 div.text-content {
-  padding: 82px 20px 20px 20px;
+  padding: $topbar-height 20px 20px 20px;
   max-width: 800px;
   text-align: left;
   font-size: 10pt;
