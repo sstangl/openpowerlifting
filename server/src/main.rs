@@ -19,6 +19,8 @@ extern crate rocket_contrib;
 use rocket_contrib::Template;
 use rocket::response::{NamedFile, Redirect};
 use rocket::http::Status;
+use rocket::{Request, State, Outcome};
+use rocket::request::{self, FromRequest};
 
 use std::collections::HashMap;
 use std::error::Error;
@@ -31,6 +33,12 @@ use schema::Lifter;
 use schema::DbConn;
 
 mod queries;
+
+
+struct DbStats {
+    num_entries: i64,
+    num_meets: i64,
+}
 
 
 enum StaticResult {
@@ -88,8 +96,10 @@ fn data_html() -> Option<NamedFile> {
 }
 
 #[get("/faq.html")]
-fn faq_html() -> Option<Template> {
-    let mut context = HashMap::<String, String>::new();
+fn faq_html(stats: State<DbStats>) -> Option<Template> {
+    let mut context = HashMap::new();
+    context.insert("num_entries", stats.num_entries);
+    context.insert("num_meets", stats.num_meets);
     Some(Template::render("faq", &context))
 }
 
@@ -165,11 +175,26 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 
 
 fn rocket() -> rocket::Rocket {
+    // Initialize an r2d2 database connection pool.
     let db_path = env::var("DATABASE_PATH").expect("DATABASE_PATH is not set.");
     let db_pool = schema::init_pool(db_path.as_str());
 
+    // Pre-cache some database information at boot.
+    // Because the database is read-only, this information is correct
+    // for the lifetime of the server.
+    let conn = DbConn(db_pool.get().expect("Failed to get a connection from pool."));
+    let num_entries = queries::count_entries(&conn).expect("Failed to count entries.");
+    let num_meets = queries::count_meets(&conn).expect("Failed to count meets.");
+
+    let db_stats = DbStats {
+        num_entries: num_entries,
+        num_meets: num_meets,
+    };
+
+    // Initialize the server.
     rocket::ignite()
         .manage(db_pool)
+        .manage(db_stats)
 
         .mount("/", routes![index])
         .mount("/", routes![static_handler])
