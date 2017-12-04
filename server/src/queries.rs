@@ -63,11 +63,7 @@ pub fn get_entries_by_lifterid(lifterid: i32, conn: &DbConn) -> Option<Vec<(Entr
 #[cfg(test)]
 mod test {
     use super::*;
-    use diesel::prelude::*;
-
     use schema;
-    use schema::Meet;
-    use schema::Lifter;
     use schema::DbConn;
 
     fn db() -> DbConn {
