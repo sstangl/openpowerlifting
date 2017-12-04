@@ -53,12 +53,6 @@ export interface QueryObject {
     // For referring to a Lifter by name.
     q?: string,
 
-    // Old ways of referring to meets.
-    // We can't get rid of them, because people still link to us using them.
-    f?: string, // Federation.
-    d?: string, // Date.
-    n?: string, // MeetName.
-
     // The new way of referring to a meet: by MeetPath.
     m?: string
 }

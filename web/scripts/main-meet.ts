@@ -408,11 +408,10 @@ function onload() {
 
     let query = common.getqueryobj();
     let meetid = -1;
-    if (query.m) {
-        meetid = database.db_get_meetid_by_meetpath(query.m);
-    } else {
-        meetid = database.db_get_meetid(query.f, query.d, query.n);
-    }
+    if (query.m === undefined)
+        return;
+
+    meetid = database.db_get_meetid_by_meetpath(query.m);
 
     // Not found.
     if (meetid === -1)
