@@ -168,17 +168,22 @@ pub struct Lifter {
     pub instagram: Option<String>,
 }
 
-pub fn make_lifter_html(lifter: &Lifter) -> String {
-    let mut s: String =
-        format!("<a href='/u/{username}'>{name}</a>",
-                username = lifter.username, name = lifter.name);
+impl Lifter {
+    /// Generate an HTML for linking to the Lifter's user page.
+    /// Social media links are included.
+    pub fn get_url(&self) -> String {
+        let mut s: String =
+            format!("<a href='/u/{username}'>{name}</a>",
+                    username = self.username, name = self.name);
 
-    if let Some(ref instagram) = lifter.instagram {
-        s.push_str(format!("<a href='https://www.instagram.com/{}' class='instagram'><i class='fa fa-instagram fa-resize'></i></a>", instagram).as_str());
+        if let Some(ref instagram) = self.instagram {
+            s.push_str(format!("<a href='https://www.instagram.com/{}' class='instagram'><i class='fa fa-instagram fa-resize'></i></a>", instagram).as_str());
+        }
+
+        s
     }
-
-    s
 }
+
 
 #[derive(Identifiable, Queryable, Associations)]
 #[table_name = "entries"]
