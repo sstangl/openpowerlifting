@@ -9,7 +9,7 @@ MEETFILE := ../build/meets.csv
 MEETFILEJS := meets.js
 LOGO := ../project-data/logo-compressed.svg
 
-all: database npminit scripts css html images
+all: database scripts css html images
 
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
@@ -41,7 +41,7 @@ database: data
 	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/static/scripts/${MEETFILEJS}"
 	./make-social-media-js > "${BUILDDIR}/static/scripts/social-media.js"
 
-scripts: builddir
+scripts: builddir npminit
 	npm run webpack
 	cat scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
 	    scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
