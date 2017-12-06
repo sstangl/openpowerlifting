@@ -17,8 +17,7 @@ This will run the Makefile, building the project.
 ## [Optional] Building the Backend
 
 Openpowerlifting is currently developing a backend in Rust using the Rocket web
-framework.  To install this
-subproject, see the following steps.
+framework.  To install this subproject, see the following steps.
 
 ### Installing Rust and Cargo
 
