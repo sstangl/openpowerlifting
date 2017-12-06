@@ -12,7 +12,13 @@ import oplcsv
 
 
 def showdbstats():
-    locale.setlocale(locale.LC_ALL, 'en_US.utf8')
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US.utf8')
+    except Exception as e:
+        # If we're on Mac OS X, the locale is named `en_US.UTF-8` so let's give
+        # it a try. Otherwise, we're missing the locale altogether.
+        locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+     
     csv = oplcsv.Csv('../build/openpowerlifting.csv')
     meets = oplcsv.Csv('../build/meets.csv')
 
