@@ -1,28 +1,28 @@
-Name,WeightClassKg,Division,Sex,BodyWeightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Place,Equipment,Event
-Laura Kennerley,67.5,Open,F,65,30,37.5,40,40,40,1,Single-Ply,B
-Honglu Shen,67.5,Junior,M,61.3,75,-85,85,85,85,1,Single-Ply,B
-Mike Steiner,75,Master 3,M,72.8,75,80,85,85,85,1,Single-Ply,B
-John Seonyong,75,Open,M,74,165,175,182.5,182.5,182.5,1,Single-Ply,B
-Dave Beaumont,82.5,Master 2,M,82.5,150,155,160,160,160,1,Single-Ply,B
-Michael Grey,82.5,Open,M,81.5,122.5,0,0,122.5,122.5,1,Single-Ply,B
-John Moss,82.5,Master 1,M,80,-160,0,0,0,0,,Single-Ply,B
-George Anderson,82.5,Master 3,M,80,105,110,112.5,112.5,112.5,1,Single-Ply,B
-Rodney Newman,82.5,Master 1,M,82.4,182.5,-195,-195,182.5,182.5,1,Single-Ply,B
-Martin Wallace,90,Open,M,87.4,130,-140,0,130,130,Guest,Single-Ply,B
-Ray Hansford,90,Open,M,86.5,85,-90,-90,85,85,1,Single-Ply,B
-Tony Thomas,90,Master 3,M,86,120,130,132.5,132.5,132.5,1,Single-Ply,B
-James Bradbury,100,Open,M,98.4,160,-170, ,160,160,Guest,Single-Ply,B
-Darren Neves,100,Open,M,90.9,150,160,-170,160,160,1,Single-Ply,B
-Raveen Nanayakkara,110,Open,M,107.2,180,-220,-220,180,180,3,Single-Ply,B
-Mark Mete,110,Open,M,106.1,185,195,205,195,195,2,Single-Ply,B
-Shazad Ibnul,110,Open,M,106.4,150,155,160,160,160,4,Single-Ply,B
-Mark Pora,110,Open,M,106,200,205,-220,205,205,1,Single-Ply,B
-Joe Tafua,110,Master 1,M,101.6,140,-150,-150,140,140,1,Single-Ply,B
-Bruce Potter,125,Open,M,113.3,200,220,-232.5,220,220,2,Single-Ply,B
-Ben Hunt,125,Open,M,119.1,200,210,-220,210,210,3,Single-Ply,B
-Timothy Gough,125,Open,M,121.3,135,140,-145,140,140,4,Single-Ply,B
-Steve Lousich,125,Open,M,118.1,232.5,-245,-245,232.5,232.5,1,Single-Ply,B
-Jarrod Bradbury,125,Open,M,118.1,-150,-150,0,0,0,,Single-Ply,B
-Jason Gerbich,125+,Novice,M,164.3,175,185,0,185,185,1,Single-Ply,B
-Neil Lauaki,125+,Open,M,136.6,230,-245,-247.5,230,230,1,Single-Ply,B
-Willie Tau,125+,Master 2,M,132.5,150,170,-180,170,170,1,Single-Ply,B
+Name,WeightClassKg,Division,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Equipment,Event,Place
+Laura Kennerley,67.5,Open,F,65,30,37.5,40,40,40,Single-ply,B,1
+Honglu Shen,67.5,Junior,M,61.3,75,-85,85,85,85,Single-ply,B,1
+Mike Steiner,75,Masters 3,M,72.8,75,80,85,85,85,Single-ply,B,1
+John Seonyong,75,Open,M,74,165,175,182.5,182.5,182.5,Single-ply,B,1
+Dave Beaumont,82.5,Masters 2,M,82.5,150,155,160,160,160,Single-ply,B,1
+Michael Grey,82.5,Open,M,81.5,122.5,,,122.5,122.5,Single-ply,B,1
+John Moss,82.5,Masters 1,M,80,-160,,,,,Single-ply,B,DQ
+George Anderson,82.5,Masters 3,M,80,105,110,112.5,112.5,112.5,Single-ply,B,1
+Rodney Newman,82.5,Masters 1,M,82.4,182.5,-195,-195,182.5,182.5,Single-ply,B,1
+Martin Wallace,90,Open,M,87.4,130,-140,,130,130,Single-ply,B,1
+Ray Hansford,90,Open,M,86.5,85,-90,-90,85,85,Single-ply,B,2
+Tony Thomas,90,Masters 3,M,86,120,130,132.5,132.5,132.5,Single-ply,B,1
+James Bradbury,100,Open,M,98.4,160,-170,,160,160,Single-ply,B,2
+Darren Neves,100,Open,M,90.9,150,160,-170,160,160,Single-ply,B,1
+Raveen Nanayakkara,110,Open,M,107.2,180,-220,-220,180,180,Single-ply,B,3
+Mark Mete,110,Open,M,106.1,185,195,-205,195,195,Single-ply,B,2
+Shazad Ibnul,110,Open,M,106.4,150,155,160,160,160,Single-ply,B,4
+Mark Pora,110,Open,M,106,200,205,-220,205,205,Single-ply,B,1
+Joe Tafua,110,Masters 1,M,101.6,140,-150,-150,140,140,Single-ply,B,1
+Bruce Potter,125,Open,M,113.3,200,220,-232.5,220,220,Single-ply,B,2
+Ben Hunt,125,Open,M,119.1,200,210,-220,210,210,Single-ply,B,3
+Timothy Gough,125,Open,M,121.3,135,140,-145,140,140,Single-ply,B,4
+Steve Lousich,125,Open,M,118.1,232.5,-245,-245,232.5,232.5,Single-ply,B,1
+Jarrod Bradbury,125,Open,M,118.1,-150,-150,,,,Single-ply,B,DQ
+Jason Gerbich,125+,Novice,M,164.3,175,185,,185,185,Single-ply,B,1
+Neil Lauaki,125+,Open,M,136.6,230,-245,-247.5,230,230,Single-ply,B,1
+Willie Tau,125+,Masters 2,M,132.5,150,170,-180,170,170,Single-ply,B,1
