@@ -31,7 +31,7 @@
     <option value="HERC">HERC - Hercules</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
     <option value="MHP">MHP - Maximum Human Performance (Incomplete)</option>
-    <option value="NASA">NASA - Natural Athlete Strength Association (2017+)</option>
+    <option value="NASA">NASA - Natural Athlete Strength Association (2016+)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
     <option value="RUPC">RUPC - Raw Unity Powerlifting Championships</option>
