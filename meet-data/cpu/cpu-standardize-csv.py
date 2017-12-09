@@ -95,6 +95,13 @@ def standardize_equipment(csv):
 
     for row in csv.rows:
         unequipped = row[eqpidx]
+
+        # Exciting error correction.
+        if unequipped == "yea":
+            unequipped = "yes"
+        elif unequipped == "YES":
+            unequipped = "yes"
+
         assert unequipped == '' or unequipped == 'yes'
         if unequipped == 'yes':
             row[eqpidx] = 'Raw'
