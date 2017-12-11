@@ -123,6 +123,31 @@ def check_usernames(names):
             usernames[username] = name
 
 
+def check_name_corrections(names):
+    filename = 'name-corrections.dat'
+    seenset = set() # Names seen in the file so far.
+
+    fd = open('lifter-data' + os.sep + filename)
+    for line in fd:
+        variants = line.rstrip('\n').split(',')
+
+        # Check that the "correct" variant is actually in the database.
+        if not variants[0] in names:
+            pwarning("%s: Lifter '%s' not in database." % (filename, variants[0]))
+
+        for variant in variants:
+            # Check for whitespace errors.
+            if variant.strip() != variant or '  ' in variant:
+                perror("%s: Extraneous whitespace for '%s'." % (filename, variant))
+
+            # Check for duplicate names.
+            if variant in seenset:
+                perror("%s: Name appears more than once: '%s'." % (filename, variant))
+            seenset.add(variant)
+
+    fd.close()
+
+
 def main():
     global hitError
 
@@ -131,6 +156,7 @@ def main():
 
     check_social_media(names)
     check_usernames(names)
+    check_name_corrections(names)
 
     if hitError:
         return 1
