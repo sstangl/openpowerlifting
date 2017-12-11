@@ -55,7 +55,7 @@ def pwarning(s):
 def is_int(s):
     try:
         int(s)
-        return True
+        return s.isdigit()
     except ValueError:
         return False
 
@@ -68,6 +68,19 @@ def float2(s):
 def check_column_name(s, row, csv):
     if '  ' in s:
         pwarning("Too much spacing for name: \"%s\"" % s)
+
+    # Lifters with the same name are disambiguated by tagging them
+    # with an integer preceded by the '#' character.
+    if '#' in s:
+        if s.count('#') != 1:
+            perror("Too many '#' characters in name '%s'." % s)
+        parts = s.split('#')
+        if len(parts) != 2 or not is_int(parts[1]):
+            perror("Variant for '%s' must be a number." % s)
+
+        # Conduct the rest of the check pretending that the variant
+        # isn't present.
+        s = parts[0].rstrip()
 
     # Disallow " in all circumstances: we already have to allow ',
     # so just use that for quotes.
