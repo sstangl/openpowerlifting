@@ -8,6 +8,8 @@ Additionally, we want to be able to remember the edits we've made, so that they 
 
 There is a helper mechanism to automatically make the changes and remember them. The two pieces are the data file `lifter-data/name-corrections.dat` and the script `scripts/standardize-names`.
 
+There is also a helper mechanism to catch errors when disambiguating lifters with the same name, `lifter-data/name-disambiguation.csv`, described below.
+
 ## Adding a new Name Correction
 
 To add a new name correction, open the file `lifter-data/name-corrections.dat` in a text editor.
@@ -45,3 +47,13 @@ To apply name corrections, execute the following command from the project root:
 To see what files were changed by the script, execute `git status`.
 
 To commit the name changes, execute `git commit -a`. The `-a` flag automatically adds changed files that were already tracked by git from previous commits.
+
+## Disambiguating Lifters with the Same Name
+
+Occasionally, two lifters can share the same name. There is a simple mechanism in place to separate them into unique lifters with separate entries in the rankings.
+
+Two lifters both named, for example, `Emily Hu`, may be renamed by naming one of them `Emily Hu #1` and the other `Emily Hu #2` in the relevant `entries.csv` file for the meet.
+
+To make sure that this special name syntax is used intentionally, an entry must be added to the file `lifter-data/name-disambiguation.csv` specifying both the name of the lifter and how many different lifters in the database share that name.
+
+Keeping with the above example, if in the future a meet contains `Emily Hu` without specifying which one, that will produce a warning at build-time, to be investigated and corrected later.

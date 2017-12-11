@@ -51,17 +51,18 @@ def get_database_nameset():
 
 
 def check_social_media(names):
-    csv = oplcsv.Csv('lifter-data' + os.sep + 'social-media.csv')
+    filename = 'social-media.csv'
+    csv = oplcsv.Csv('lifter-data' + os.sep + filename)
 
     # Check columns.
     if len(csv.fieldnames) == 0:
-        perror("No columns found.")
+        perror("%s: No columns found." % filename)
     if len(csv.fieldnames) >= 1 and csv.fieldnames[0] != "Name":
-        perror("First column must be 'Name'.")
+        perror("%s: First column must be 'Name'." % filename)
     if len(csv.fieldnames) >= 2 and csv.fieldnames[1] != "Instagram":
-        perror("Second column must be 'Instagram'.")
+        perror("%s: Second column must be 'Instagram'." % filename)
     if len(csv.fieldnames) >= 3:
-        perror("Too many columns.")
+        perror("%s: Too many columns." % filename)
 
     lifters = set()
     instagrams = set()
@@ -75,32 +76,34 @@ def check_social_media(names):
     # Check rows.
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
-            perror("Improper number of columns in row %s." % row)
+            perror("%s: Improper number of columns in row %s." % (filename,row))
 
         # Check for whitespace problems.
         for x in row:
             if x.strip() != x:
-                perror("Extraneous whitespace in '%s.'" % x)
+                perror("%s: Extraneous whitespace in '%s.'" % (filename,x))
             if x.replace('  ',' ') != x:
-                perror("Too much spacing in '%s'." % x)
+                perror("%s: Too much spacing in '%s'." % (filename,x))
             if x.strip() == '':
-                perror("Blank column in row %s." % row)
+                perror("%s: Blank column in row %s." % (filename,row))
 
         # Prevent duplicate lifters.
         if row[nameidx] in lifters:
-            perror("Duplicate entry for lifter '%s'." % row[nameidx])
+            perror("%s: Duplicate entry for lifter '%s'." % (filename,row[nameidx]))
         else:
             lifters.add(row[nameidx])
 
         # Prevent duplicate instagrams.
         if row[instagramidx] in instagrams:
-            perror("Instagram used by two different lifters: '%s'." % row[instagramidx])
+            perror("%s: Instagram used by two different lifters: '%s'." \
+                   % (filename,row[instagramidx]))
         else:
             instagrams.add(row[instagramidx])
 
         # Make sure that every name occurs in the 'names' set.
         if not row[nameidx] in names:
-            perror("Lifter does not exist in database: '%s'." % row[nameidx])
+            perror("%s: Lifter does not exist in database: '%s'." \
+                   % (filename,row[nameidx]))
 
 
 # Check (Name => Username) automatic compilation for duplicate entries.
@@ -148,6 +151,65 @@ def check_name_corrections(names):
     fd.close()
 
 
+def check_name_disambiguation(names):
+    filename = 'name-disambiguation.csv'
+    csv = oplcsv.Csv('lifter-data' + os.sep + filename)
+
+    # Names seen in the file so far.
+    # Stored as a map of Name => Count for use further below.
+    seenset = {}
+
+    if ','.join(csv.fieldnames) != "Name,Count":
+        perror("%s: CSV column names are wrong.", filename)
+        return
+
+    # Names with variants in the disambiguation file should occur in meet files.
+    for (name, count) in csv.rows:
+        # Each name can only occur once.
+        if name in seenset:
+            perror("%s: Name '%s' occurs more than once.", (filename, name))
+
+        # That name cannot have a '#' in it.
+        if '#' in name:
+            perror("%s: Name '%s' cannot contain the character '#'." % (filename, name))
+
+        # Count must be a number.
+        if not count.isdigit():
+            perror("%s: Count must be an integer.", filename)
+            continue
+
+        # That number must be >= 2.
+        if not int(count) >= 2:
+            perror("%s: Count must be >= 2.", filename)
+            continue
+
+        # The un-specified name should not occur without a number.
+        if name in names:
+            # Just use a warning, to avoid making meets really annoying to enter.
+            pwarning("Lifter '%s' needs disambiguation in some meet data." % name)
+
+        # All the variants of that name should be accounted for.
+        for k in range(1, int(count) + 1):
+            variant = "%s #%u" % (name, k)
+
+            if not variant in names:
+                perror("%s: No lifter named '%s' in any meets." % (filename, variant))
+
+        seenset[name] = int(count)
+
+    # Names with variants in meet files should be valid by the disambiguation file.
+    for name in filter(lambda x: '#' in x, names):
+        (part,index) = name.split('#')
+        part = part.rstrip() # Remove the space before the '#'.
+
+        if not part in seenset:
+            perror("%s: Name '%s' occurs in some meet, but isn't marked for disambiguation." % (filename, name))
+        else:
+            count = seenset[part]
+            if int(index) > int(count):
+                perror("%s: Name '%s' occurs in a meet, but only %s variants are known." % (filename, name, count))
+
+
 def main():
     global hitError
 
@@ -157,6 +219,7 @@ def main():
     check_social_media(names)
     check_usernames(names)
     check_name_corrections(names)
+    check_name_disambiguation(names)
 
     if hitError:
         return 1
