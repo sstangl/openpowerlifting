@@ -80,6 +80,7 @@ def process_file(path):
             NameToSexHash[name][1] = NameToSexHash[name][1] + 1
 
 
+
 def main():
     for dirname, subdirs, files in os.walk(os.getcwd()):
         if 'entries.csv' in files:

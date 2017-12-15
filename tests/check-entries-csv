@@ -604,7 +604,7 @@ def check_row(row, csv):
 def check(scriptname, filename):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
-
+    
     csv = oplcsv.Csv(filename)
 
     check_headers(csv)
