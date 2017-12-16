@@ -536,6 +536,16 @@ def check_row_total_consistency(row, csv):
                          row[csv.index('Name')])
         return
 
+    # Federation only reported partial data -- SBD, but only B data.
+    if 'Event' in csv.fieldnames:
+        event = row[csv.index('Event')]
+        if 'S' in event and squat == 0:
+            return
+        if 'B' in event and bench == 0:
+            return
+        if 'D' in event and deadl == 0:
+            return
+
     # Most federations round to 0.01, so rounding errors get introduced.
     # Only flag the ones that are obviously wrong, otherwise, believe the federation.
     if squat + bench + deadl == 0:
