@@ -293,6 +293,13 @@ def check(scriptname, filename):
         if found_illegal_char:
             perror("Illegal character in: \"%s\"" % row[nameidx])
 
+        # Check for some hints for commonly-confused state abbreviations.
+        if 'Maine' in row[nameidx] and row[stateidx] != 'ME':
+            perror("The abbreviation for Maine is 'ME', not '%s'." % row[stateidx])
+        if 'Missouri' in row[nameidx] and row[stateidx] != 'MO':
+            perror("The abbreviation for Missouri is 'MO', not '%s'." % row[stateidx])
+        if 'Montana' in row[nameidx] and row[stateidx] != 'MT':
+            perror("The abbreviation for Montana is 'MT', not '%s'." % row[stateidx])
 
 if __name__ == '__main__':
     # If arguments are provided, check only those files.
