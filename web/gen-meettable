@@ -206,7 +206,7 @@ def main():
                 if yrm2 != yrm:
                     break
                 if not csv.rows[i][fedidx] in fedlist:
-                    fedlist.append(csv.rows[i][fedidx])
+                    fedlist.append(csv.rows[i][fedidx].replace('-','_'))
             
             [year,month] = yrm.split('-')
             print('<tr class="%s"><td colspan="%d" class="table-divider">%s %s</td></tr>'
@@ -216,7 +216,7 @@ def main():
 
         meeturl = makemeeturl(row[meetpathidx]);
 
-        print('<tr class="%s">' % ('_' + row[fedidx]))
+        print('<tr class="%s">' % ('_' + row[fedidx].replace('-','_')))
         print('<td>%s</td>' % row[fedidx])
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)

@@ -45,10 +45,11 @@
     <option value="WNPF">WNPF - World Natural Powerlifting Federation</option>
   </optgroup>
   <optgroup label="Australia">
-    <option value="CAPO,PA,ProRaw">
+    <option value="CAPO,GPC-AUS,PA,ProRaw">
       All Australian Feds
     </option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
+    <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
   </optgroup>

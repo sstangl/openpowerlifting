@@ -29,6 +29,7 @@ def main():
     # Then output a rule that shows a federation if it's been selected.
     # Since these rules come later, they will override the other ones.
     for fed in feds:
+        fed = fed.replace('-','_')
         fedclass = '_' + fed
         print('table.%s tr.%s{display:table-row}' % (fedclass,fedclass))
 

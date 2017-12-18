@@ -94,7 +94,8 @@ function selectfed() {
     //
     // An underscore is prepended to each federation to handle federations
     // beginning with numbers, like 365Strong.
-    let fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _');
+    let fedspaces = '_' + fedlist.replace(new RegExp(',', 'g'), ' _')
+                                 .replace(new RegExp('-', 'g'), '_');
     meettable.className = "selectorActive " + fedspaces;
 }
 
