@@ -12,6 +12,9 @@ $control-background-color: #3E4042;
 
 $topbar-height: 82px;
 
+// Definitions for media queries.
+$mobile-cutoff: 600px;
+
 @import "header";
 
 html, body {

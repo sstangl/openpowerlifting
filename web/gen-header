@@ -47,6 +47,9 @@ def main(activetab):
     print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
     print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
 
+    # Hamburger menu for smaller screens, hidden by default by CSS.
+    print('<a class="nav__link header-hamburger" href="javascript:void(0)" onClick="document.getElementById(\'header\').classList.toggle(\'responsive\')">&#9776;</a>')
+
     print('<span class="siteinfo">')
     showdbstats()
     print('</span>')
