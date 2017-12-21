@@ -23,7 +23,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015'],
+          presets: ['env'],
           plugins: [BabelMinifyConstantFolding]
         }
       },
@@ -34,7 +34,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             query: {
-              presets: ['es2015'],
+              presets: ['env'],
               plugins: [BabelMinifyConstantFolding]
             }
           },
