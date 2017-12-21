@@ -276,8 +276,15 @@ def check_column_bodyweightkg(s, row, csv):
     check_positive_number_column(s, row, csv)
     try:
         f = float(s)
+
+        is_youth = False
+        if 'Division' in csv.fieldnames:
+            div = row[csv.index('Division')]
+            if 'y' in div.lower():
+                is_youth = True
+
         # One federation had a pre-teen division where someone weighed ~19kg.
-        if f < 19 or f > 300:
+        if (f < 19 and not is_youth) or f > 300:
             pwarning("BodyweightKg looks implausible: '%s'" % s)
     except ValueError:
         pass
