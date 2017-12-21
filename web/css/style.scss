@@ -17,6 +17,7 @@ $mobile-cutoff: 600px;
 
 @import "header";
 @import "tables";
+@import "controls";
 
 html, body {
   margin: 0;
@@ -39,104 +40,6 @@ a {
 
 #oplurl {
   color: $primary-color;
-}
-
-#controls {
-  height: 28px;
-  font-size: 10pt;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: $alt-color;
-  display: flex;
-  align-items: center;
-}
-
-#controls-right {
-  margin-left: auto;
-}
-
-.info {
-  font-size: 10pt;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-
-/* From http://jsfiddle.net/danield770/YvCHW/4232/ */
-select {
-  padding: 3px;
-  margin-left: 5px;
-  border: 1px solid $control-border-color;
-  border-radius: 4px;
-  background-color: $control-background-color;
-  color: white;
-  font-size: 10pt;
-  width: 100px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(images/select_dropdown.png) 96% / 15% no-repeat $control-background-color;
-}
-/*target Internet Explorer 9 and Internet Explorer 10:*/
-@media screen and (min-width:0\0) {
-  select {
-    background: none;
-  }
-}
-
-input[type="text"] {
-  padding: 3px 5px 3px 5px;
-  margin-left: 5px;
-  border: 1px solid $control-border-color;
-  background-color: $control-background-color;
-  color: white;
-  font-size: 10pt;
-  width: 200px;
-}
-
-button {
-  padding: 3px 8px 3px 8px;
-  margin-left: 5px;
-  border: 1px solid $control-border-color;
-  border-radius: 4px;
-  background-color: $control-background-color;
-  color: white;
-  font-size: 10pt;
-  width: 70px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #56585C;
-}
-
-button:active {
-  background-color: #303133;
-}
-
-/* From http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label span {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  margin: 0px 1px 3px 5px;
-  vertical-align: middle;
-  background:url(images/check_radio_sheet.png) left top no-repeat;
-  cursor: pointer;
-}
-input[type="checkbox"]:checked + label span {
-  background:url(images/check_radio_sheet.png) -19px top no-repeat;
-}
-
-#lifter {
-  font-size: 10pt;
-  margin-left: 4px;
 }
 
 div.topbar {
@@ -185,4 +88,11 @@ li {
 h2 {
   color: $primary-color;
   margin-left: -30px;
+}
+
+// This is for informational text at the bottom of the screen
+// on some pages. It can probably be removed.
+.info {
+  font-size: 10pt;
+  padding: 5px 20px 5px 20px;
 }
