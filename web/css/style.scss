@@ -10,10 +10,9 @@ $primary-color: #FB3640;
 $control-border-color: #333333;
 $control-background-color: #3E4042;
 
-/* Height of the top navigation element. */
-$header-height: 44px;
-
 $topbar-height: 82px;
+
+@import "header";
 
 html, body {
   margin: 0;
@@ -118,44 +117,6 @@ td a {
 #oplurl {
   color: $primary-color;
 }
-
-#header {
-  /* Resize all items to $header-height, preventing overflow. */
-  display: flex;
-  align-items: stretch;
-
-  background-color: $background-color;
-  color: $default-color;
-
-  height: $header-height;
-  width: 100%;
-  overflow: hidden;
-}
-
-#header a {
-  /* Make the <a> behave like a <div> for easier clicking. */
-  display: flex;
-  align-items: center;
-
-  color: $default_color;
-  font-size: 14px;
-  text-decoration: none;
-  padding: 10px;
-
-  /* Keep the "Support Us" link centered. */
-  white-space: nowrap;
-}
-
-/* Hovering over a navigation link should look clickable. */
-#header a.nav__link:hover {
-  color: $primary-color;
-}
-
-/* The current page should be highlighted. */
-#header .nav__link--active {
-  color: $primary-color;
-}
-
 
 #controls {
   height: 28px;
@@ -285,11 +246,6 @@ div.text-content {
   margin-right: 10px;
 }
 
-.header__stats {
-  display: inline-block;
-  font-size: 12px;
-}
-
 li {
   margin-bottom: 10px;
 }
@@ -305,21 +261,6 @@ td.meetdivisiontext { /* used by meet.html */
 .instagram {
   margin-left: 8px;
   vertical-align: middle;
-}
-
-.siteinfo {
-  float: right;
-  margin-left: auto;
-
-  color: $primary-color;
-  font-size: 9pt;
-
-  /* Push it away from the top-right corner just a little. */
-  padding: 5px 5px 0px 0px;
-}
-
-.header-logo {
-  height: $header-height;
 }
 
 h2 {

@@ -1,0 +1,62 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// Style definitions for the navigation header.
+
+/* Height of the top navigation element. */
+$header-height: 44px;
+
+#header {
+  /* Resize all items to $header-height, preventing overflow. */
+  display: flex;
+  align-items: stretch;
+
+  background-color: $background-color;
+  color: $default-color;
+
+  height: $header-height;
+  width: 100%;
+  overflow: hidden;
+}
+
+#header a {
+  /* Make the <a> behave like a <div> for easier clicking. */
+  display: flex;
+  align-items: center;
+
+  color: $default_color;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+
+  /* Keep the "Support Us" link centered. */
+  white-space: nowrap;
+}
+
+/* Hovering over a navigation link should look clickable. */
+#header a.nav__link:hover {
+  color: $primary-color;
+}
+
+/* The current page should be highlighted. */
+#header .nav__link--active {
+  color: $primary-color;
+}
+
+.siteinfo {
+  float: right;
+  margin-left: auto;
+
+  color: $primary-color;
+  font-size: 9pt;
+
+  /* Push it away from the top-right corner just a little. */
+  padding: 5px 5px 0px 0px;
+}
+
+.header-logo {
+  height: $header-height;
+}
+
+h2 {
+  color: $primary-color;
+  margin-left: -30px;
+}
