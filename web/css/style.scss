@@ -10,6 +10,9 @@ $primary-color: #FB3640;
 $control-border-color: #333333;
 $control-background-color: #3E4042;
 
+/* Height of the top navigation element. */
+$header-height: 44px;
+
 $topbar-height: 82px;
 
 html, body {
@@ -117,14 +120,43 @@ td a {
 }
 
 #header {
+  /* Resize all items to $header-height, preventing overflow. */
+  display: flex;
+  align-items: stretch;
+
   background-color: $background-color;
-  padding: 6px;
-  font-size: 14px;
+  color: $default-color;
+
+  height: $header-height;
+  width: 100%;
+  overflow: hidden;
 }
 
 #header a {
+  /* Make the <a> behave like a <div> for easier clicking. */
+  display: flex;
+  align-items: center;
+
+  color: $default_color;
+  font-size: 14px;
   text-decoration: none;
+  padding: 10px;
+
+  /* Keep the "Support Us" link centered. */
+  white-space: nowrap;
 }
+
+/* Hovering over a navigation link should look clickable. */
+#header a.nav__link:hover {
+  color: $primary-color;
+}
+
+/* The current page should be highlighted. */
+#header .nav__link--active {
+  color: $primary-color;
+}
+
+
 #controls {
   height: 28px;
   font-size: 10pt;
@@ -253,18 +285,6 @@ div.text-content {
   margin-right: 10px;
 }
 
-.nav {
-  padding-right: 10px;
-}
-
-.nav__link + .nav__link {
-  margin-left: 15px;
-}
-
-#header .nav__link--active {
-  color: $primary-color;
-}
-
 .header__stats {
   display: inline-block;
   font-size: 12px;
@@ -289,15 +309,17 @@ td.meetdivisiontext { /* used by meet.html */
 
 .siteinfo {
   float: right;
+  margin-left: auto;
+
   color: $primary-color;
   font-size: 9pt;
+
+  /* Push it away from the top-right corner just a little. */
+  padding: 5px 5px 0px 0px;
 }
 
 .header-logo {
-  height: 55px;
-  width: 120px;
-  vertical-align: middle;
-  margin: -10px 0 -15px 0;
+  height: $header-height;
 }
 
 h2 {

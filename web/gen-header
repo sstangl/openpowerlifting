@@ -36,15 +36,14 @@ def addnav(activetab, tab, title, filename = None):
 def main(activetab):
     assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'faq', 'data', 'contact']
     print('<div id="header">')
-    print('<div class="nav">')
-    print('<a href="index.html"><img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/></a>')
+    print('<img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/>')
     addnav(activetab, 'rankings', 'Rankings', 'index')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
     addnav(activetab, 'faq', 'FAQ')
     addnav(activetab, 'contact', 'Contact')
 
-    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us <img style="height: 15px; width: 15px" src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')
+    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us&nbsp;<img style="height: 15px; width: 15px" src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')
     print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
     print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
 
@@ -52,7 +51,6 @@ def main(activetab):
     showdbstats()
     print('</span>')
 
-    print('</div>')
     print('</div>')
 
 if __name__ == '__main__':
