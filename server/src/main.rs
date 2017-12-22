@@ -22,7 +22,6 @@ use rocket::response::{NamedFile, Redirect};
 use rocket::http::Status;
 use rocket::{State};
 
-use std::collections::HashMap;
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
@@ -175,11 +174,20 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 
     println!("{}", entries.len());
 
-    let mut context = HashMap::<&str, String>::new();
-    context.insert("title", "testing".to_string());
-    context.insert("lifter_nameurl_html", lifter.get_url());
+    let context = hbs::LifterContext {
+        lifter_nameurl_html: &lifter.get_url(),
 
-    Ok(Template::render("lifter", &context))
+        base: hbs::Base {
+            title: &lifter.name,
+
+            header: hbs::Header {
+                num_entries: 0, // TODO
+                num_meets: 0, // TODO
+            }
+        }
+    };
+
+    Ok(Template::render("lifter", context))
 }
 
 

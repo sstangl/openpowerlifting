@@ -24,3 +24,12 @@ pub struct Base<'a> {
 pub struct FaqContext<'a> {
     pub base: Base<'a>,
 }
+
+/// Variables used by templates/lifter.html.hbs.
+#[derive(Serialize)]
+pub struct LifterContext<'a> {
+    /// Lifter name with possible Instagram link, as HTML.
+    pub lifter_nameurl_html: &'a str,
+
+    pub base: Base<'a>,
+}
