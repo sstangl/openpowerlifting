@@ -74,6 +74,10 @@ td {
   height: 21px;
 }
 
+th {
+  text-align: left;
+}
+
 // Used by meet.html.
 td.meetdivisiontext {
   color: $primary-color;
