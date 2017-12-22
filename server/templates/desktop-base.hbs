@@ -15,35 +15,10 @@
 </head>
 <body>
   <div class="topbar">
-    <div id="header">
-      <img class="header-logo" src="/static/images/logo-compressed.svg" alt="OpenPowerlifting"/>
-      <a href="/index.html" class="nav__link">Rankings</a>
-      <a href="/meetlist.html" class="nav__link">Meets</a>
-      <a href="/data.html" class="nav__link">Data</a>
-      <a href="/faq.html" class="nav__link">FAQ</a>
-      <a href="/contact.html" class="nav__link">Contact</a>
-      <a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us&nbsp;<img style="height: 15p; width: 15px;" src="/static/images/patreon_navigation_logo_mini_orange.png"/></a>
-      <a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>
-      <a href="https://facebook.com/openpowerlifting" class="nav__link"><i class="fa fa-facebook"></i></a>
-      <a href="javascript:void(0)" class="nav__link header-hamburger" onClick="document.getElementById('header').classList.toggle('responsive')">&#9776;</a>
-
-      <span class="siteinfo">
-        {{num_entries}} Entries &mdash; {{num_meets}} Meets &mdash; Updated Sometime
-      </span>
-    </div>
+    {{> header}}
     {{~> controls}}
   </div>
-
   {{~> body}}
-
-  {{! Google Analytics code -- should move to Piwik to remove the Google dependency. }}
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-82103130-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  {{> google-analytics}}
 </body>
 </html>
