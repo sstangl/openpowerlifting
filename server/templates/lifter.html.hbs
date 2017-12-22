@@ -12,7 +12,44 @@
 
 {{#*inline "body"}}
   <div class="content">
-    Successfully rendered template!
+    <table>
+      <thead>
+        <th>Place</th>
+        <th>Fed</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Meet Name</th>
+        <th>Division</th>
+        <th>Sex</th>
+        <th>Equip</th>
+        <th>Class</th>
+        <th>Weight</th>
+        <th>Squat</th>
+        <th>Bench</th>
+        <th>Deadlift</th>
+        <th>Total</th>
+        <th>Wilks</th>
+      </thead>
+      {{#each entries}}
+        <tr>
+          <td>{{this.0.place}}</td>
+          <td>{{this.1.fed}}</td>
+          <td>{{this.1.date}}</td>
+          <td>{{this.1.country}}{{#if this.1.state}}-{{this.1.state}}{{/if}}</td>
+          <td>{{this.1.name}}</td>
+          <td>{{this.0.division}}</td>
+          <td>{{this.0.sex}}</td>
+          <td>{{this.0.equipment}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{this.0.wilks}}</td>
+        </tr>
+      {{/each}}
+    </table>
   </div>
 {{/inline}}
 

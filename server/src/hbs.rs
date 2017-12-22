@@ -1,5 +1,7 @@
 //! Defines custom structs for the variables used by the HBS templates.
 
+use schema::{Entry, Meet};
+
 /// Variables used by templates/header.hbs.
 #[derive(Serialize)]
 pub struct Header {
@@ -30,6 +32,8 @@ pub struct FaqContext<'a> {
 pub struct LifterContext<'a> {
     /// Lifter name with possible Instagram link, as HTML.
     pub lifter_nameurl_html: &'a str,
+
+    pub entries: &'a Vec<(Entry, Meet)>,
 
     pub base: Base<'a>,
 }

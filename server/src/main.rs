@@ -176,6 +176,7 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 
     let context = hbs::LifterContext {
         lifter_nameurl_html: &lifter.get_url(),
+        entries: &entries,
 
         base: hbs::Base {
             title: &lifter.name,

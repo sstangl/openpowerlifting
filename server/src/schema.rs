@@ -60,9 +60,10 @@ pub fn init_pool(path: &str) -> Pool {
 
 
 /// A Value from the mandatory "Sex" column of the entries table.
+#[derive(Serialize)]
 pub enum Sex {
-    Male,
-    Female,
+    M,
+    F,
 }
 
 impl Queryable<diesel::types::Bool, DB> for Sex
@@ -79,8 +80,8 @@ impl FromSqlRow<diesel::types::Bool, DB> for Sex
     fn build_from_row<T: Row<DB>>(row: &mut T) -> Result<Self, Box<Error + Send + Sync>> {
         match row.take() {
             Some(v) => match v.read_integer() {
-                0 => Ok(Sex::Male),
-                1 => Ok(Sex::Female),
+                0 => Ok(Sex::M),
+                1 => Ok(Sex::F),
                 _ => Err("Unrecognized sex".into()),
             },
             None => Err("Unexpected null for sex column".into()),
@@ -91,8 +92,8 @@ impl FromSqlRow<diesel::types::Bool, DB> for Sex
 impl fmt::Display for Sex {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Sex::Male => write!(f, "M"),
-            Sex::Female => write!(f, "F"),
+            Sex::M => write!(f, "M"),
+            Sex::F => write!(f, "F"),
         }
     }
 }
@@ -100,6 +101,7 @@ impl fmt::Display for Sex {
 
 
 /// A value from the mandatory "Equipment" column of the entries table.
+#[derive(Serialize)]
 pub enum Equipment {
     Raw,
     Wraps,
@@ -148,7 +150,7 @@ impl fmt::Display for Equipment {
 
 
 
-#[derive(Identifiable, Queryable)]
+#[derive(Identifiable, Queryable, Serialize)]
 pub struct Meet {
     pub id: i32,
     pub path: String,
@@ -160,7 +162,7 @@ pub struct Meet {
     pub name: String,
 }
 
-#[derive(Identifiable, Queryable)]
+#[derive(Identifiable, Queryable, Serialize)]
 pub struct Lifter {
     pub id: i32,
     pub name: String,
@@ -185,7 +187,7 @@ impl Lifter {
 }
 
 
-#[derive(Identifiable, Queryable, Associations)]
+#[derive(Identifiable, Queryable, Associations, Serialize)]
 #[table_name = "entries"]
 #[belongs_to(Meet, foreign_key="MeetID")]
 #[belongs_to(Lifter, foreign_key="LifterID")]
