@@ -172,7 +172,24 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
     let entries: Vec<(Entry, Meet)> =
         queries::get_entries_by_lifterid(lifter.id, &conn).ok_or(Status::NotFound)?;
 
-    println!("{}", entries.len());
+    let mut best_raw_squat: f32 = 0.0;
+    let mut best_raw_bench: f32 = 0.0;
+    let mut best_raw_deadlift: f32 = 0.0;
+    let mut best_raw_wilks: f32 = 0.0;
+
+    for entry in entries.iter() {
+        if entry.0.equipment.is_raw_or_wraps() {
+            best_raw_squat = best_raw_squat.max(entry.0.highest_squat());
+            best_raw_bench = best_raw_bench.max(entry.0.highest_bench());
+            best_raw_deadlift = best_raw_deadlift.max(entry.0.highest_deadlift());
+            best_raw_wilks = best_raw_wilks.max(entry.0.wilks.unwrap_or(0.0));
+        }
+    }
+
+    println!("best raw squat: {}", best_raw_squat);
+    println!("best raw bench: {}", best_raw_bench);
+    println!("best raw deadlift: {}", best_raw_deadlift);
+    println!("best raw wilks: {}", best_raw_wilks);
 
     let context = hbs::LifterContext {
         lifter_nameurl_html: &lifter.get_url(),

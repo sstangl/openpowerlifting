@@ -101,13 +101,20 @@ impl fmt::Display for Sex {
 
 
 /// A value from the mandatory "Equipment" column of the entries table.
-#[derive(Serialize)]
+#[derive(PartialEq, PartialOrd, Serialize)]
 pub enum Equipment {
     Raw,
     Wraps,
     Single,
     Multi,
     Straps,
+}
+
+impl Equipment {
+    pub fn is_raw_or_wraps(&self) -> bool {
+        debug_assert!(*self == Equipment::Raw || *self == Equipment::Wraps);
+        *self <= Equipment::Wraps
+    }
 }
 
 impl Queryable<diesel::types::Integer, DB> for Equipment
@@ -221,6 +228,26 @@ pub struct Entry {
     pub place: Option<String>,
     pub wilks: Option<f32>,
     pub mcculloch: Option<f32>,
+}
+
+impl Entry {
+    pub fn highest_squat(&self) -> f32 {
+        let bestsquatkg = self.bestsquatkg.unwrap_or(0.0);
+        let squat4kg = self.squat4kg.unwrap_or(0.0);
+        bestsquatkg.max(squat4kg)
+    }
+
+    pub fn highest_bench(&self) -> f32 {
+        let bestbenchkg = self.bestbenchkg.unwrap_or(0.0);
+        let bench4kg = self.bench4kg.unwrap_or(0.0);
+        bestbenchkg.max(bench4kg)
+    }
+
+    pub fn highest_deadlift(&self) -> f32 {
+        let bestdeadliftkg = self.bestdeadliftkg.unwrap_or(0.0);
+        let deadlift4kg = self.deadlift4kg.unwrap_or(0.0);
+        bestdeadliftkg.max(deadlift4kg)
+    }
 }
 
 // Reads in the database and generates type information for all tables.
