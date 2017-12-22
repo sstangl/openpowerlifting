@@ -5,6 +5,9 @@
 #[macro_use] extern crate diesel;
 #[macro_use] extern crate diesel_infer_schema;
 
+// For #[derive(Serialize)].
+#[macro_use] extern crate serde_derive;
+
 extern crate dotenv;
 use std::env;
 
@@ -30,6 +33,7 @@ use schema::Lifter;
 use schema::DbConn;
 
 mod queries;
+mod hbs;
 
 
 struct DbStats {
@@ -94,10 +98,17 @@ fn data_html() -> Option<NamedFile> {
 
 #[get("/faq.html")]
 fn faq_html(stats: State<DbStats>) -> Option<Template> {
-    let mut context = HashMap::new();
-    context.insert("num_entries", stats.num_entries);
-    context.insert("num_meets", stats.num_meets);
-    Some(Template::render("faq", &context))
+    let context = hbs::FaqContext {
+        base: hbs::Base {
+            title: "OpenPowerlifting FAQ",
+            header: hbs::Header {
+                num_entries: stats.num_entries,
+                num_meets: stats.num_meets,
+            }
+        }
+    };
+
+    Some(Template::render("faq", context))
 }
 
 #[get("/lifters.html")]
