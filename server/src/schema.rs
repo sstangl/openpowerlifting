@@ -112,7 +112,6 @@ pub enum Equipment {
 
 impl Equipment {
     pub fn is_raw_or_wraps(&self) -> bool {
-        debug_assert!(*self == Equipment::Raw || *self == Equipment::Wraps);
         *self <= Equipment::Wraps
     }
 }
