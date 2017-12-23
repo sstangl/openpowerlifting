@@ -185,7 +185,7 @@ impl Lifter {
                     username = self.username, name = self.name);
 
         if let Some(ref instagram) = self.instagram {
-            s.push_str(format!("<a href='https://www.instagram.com/{}' class='instagram'><i class='fa fa-instagram fa-resize'></i></a>", instagram).as_str());
+            s.push_str(&format!("<a href='https://www.instagram.com/{}' class='instagram'><i class='fa fa-instagram fa-resize'></i></a>", instagram));
         }
 
         s

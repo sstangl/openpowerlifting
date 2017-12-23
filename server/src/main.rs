@@ -64,7 +64,7 @@ fn static_handler(file: PathBuf) -> StaticResult {
             match file.to_str() {
                 Some(v) => {
                     let github_url = format!("https://sstangl.github.io/openpowerlifting-static/{}", v);
-                    let redirection = Redirect::to(github_url.as_str());
+                    let redirection = Redirect::to(&github_url);
                     StaticResult::Redirect(redirection)
                 },
                 None => StaticResult::NotFound
@@ -153,7 +153,7 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     let mut display = String::new();
 
     for entry in entries {
-        display.push_str(format!("{} - {}\n", entry.lifter_id, entry.sex).as_str());
+        display.push_str(&format!("{} - {}\n", entry.lifter_id, entry.sex));
     }
 
     Ok(display)
@@ -164,7 +164,7 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
 fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
     // Look up the Lifter by Username.
     let lifter: Lifter =
-        queries::get_lifter_by_username(username.as_str(), &conn)
+        queries::get_lifter_by_username(&username, &conn)
         .ok_or(Status::NotFound)?;
 
     // Look up all Entries corresponding to the Lifter.
@@ -212,7 +212,7 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
 fn rocket() -> rocket::Rocket {
     // Initialize an r2d2 database connection pool.
     let db_path = env::var("DATABASE_PATH").expect("DATABASE_PATH is not set.");
-    let db_pool = schema::init_pool(db_path.as_str());
+    let db_pool = schema::init_pool(&db_path);
 
     // Pre-cache some database information at boot.
     // Because the database is read-only, this information is correct
