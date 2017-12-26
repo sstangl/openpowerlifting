@@ -192,6 +192,7 @@ def aggregate_divisions(csv):
         if col in csv.fieldnames:
             idx = csv.index(col)
             for row in csv.rows:
+                print(row)
                 if row[idx]:
                     row[dividx] = row[idx]
 
@@ -310,11 +311,13 @@ def integrate_equipment_event_sex(csv):
             if 'uneq pl' in category or category == 'uneq hs pl' \
                  or category == 'uneq powerlifting' or category == 'unequipped pl' \
                 or category == 'uneq youth' \
-               or category =='uneq women pl':
+               or category =='uneq women pl'\
+               or category =='women pl':
                 event = 'SBD'
                 equipment = 'Wraps'
             elif 'equipped pl' in category or 'eq powerlifting' in category \
                     or "equipped powerlifting" in category \
+                    or category == 'eqipped pl' \
                     or 'equip pl' in category \
                     or 'eq pl' in category\
                     or category == 'eqip pl':
@@ -323,7 +326,9 @@ def integrate_equipment_event_sex(csv):
 
                 #Powersports
             elif 'power' in category and 'ports' in category \
+                or category == 'womens ps' \
                 or category == 'women ps' \
+                or category == 'girls ps' \
                 or category == 'men ps': # Curl-Bench-Deadlift. Will
             #recalculate total later. Leave place untouched
                 event = 'BD'
@@ -332,21 +337,29 @@ def integrate_equipment_event_sex(csv):
                 event = 'I'
                 equipment = 'I'
             elif 'uneq b' in category or 'unequipped bp' in category \
-                  or 'unequipped bench' in category:
+                  or 'unequipped bench' in category \
+                  or category =='retro bp'\
+                  or category =='ps bench only'\
+                  or category =='ps bench press'\
+                or category =='girls bp':
                 event = 'B'
                 equipment = 'Raw'
-            elif 'equipped bp' in category or 'eq bp' in category:
+            elif 'equipped bp' in category or 'eq bp' in category \
+                    or category =='bp equipped':
                 event = 'B'
                 equipment = 'Single-ply'
-            elif category == 'equip bp':
+            elif category == 'equip bp' or category == 'equipped benchpress'\
+                    or category =='equip bp women' or category =='equip bp men':
                 event = 'B'
                 equipment = 'Single-ply'
             elif 'uneq pp' in category \
                  or 'unequipped push pull' in category \
+                 or 'unequipped push/pull' in category \
                  or 'uneq push pull' in category \
                  or 'unequipped pp' in category \
                  or category == 'unequipped  pp' \
                  or category == 'unequipped pp' \
+                 or category =='push pull' \
                  or category =='push/pull' \
                  or "un push pull" in category:
                 event = 'BD'
@@ -354,6 +367,7 @@ def integrate_equipment_event_sex(csv):
             elif 'eq pp' in category \
                  or category == 'equipped push pull' \
                  or 'equipped pp' in category\
+                 or category == 'equip pp' \
                  or category =='eq push pull' \
                  or category  == 'push pull equipped' \
                  or "equip push pull" in category \
@@ -366,7 +380,8 @@ def integrate_equipment_event_sex(csv):
             elif category == 'power clean/press':
                 event = 'B'
                 equipment = 'Raw'
-            elif 'retro' in category and 'pl' in category:
+            elif 'retro' in category and 'pl' in category \
+                    or category =='retro powerlifting':
                 event = 'SBD'
                 equipment = 'Raw'
             elif 'curl only' in category:
@@ -378,7 +393,8 @@ def integrate_equipment_event_sex(csv):
             elif category == 'uneq dl only':
                 event = 'D'
                 equipment = 'Raw'
-            elif category == 'equipped dl':
+            elif category == 'equipped dl' \
+                 or category == 'equip dl women':
                 event = 'D'
                 equipment = 'Single-ply'
             elif category == 'men':
@@ -567,6 +583,32 @@ def add_open_division(csv):
         if not row[dividx]:
             row[dividx] = 'Open'
 
+def hunt_raw(csv):
+    dividx = csv.index("Division")
+    eqidx = csv.index("Equipment")
+    for row in csv.rows:
+        if 'retro' in row[dividx]:
+            row[eqidx] = 'Raw'
+            row[dividx]= row[dividx][row[dividx].index('retro')+5:]
+
+def update_event(csv):
+    eventidx = csv.index("Event")
+    dividx = csv.index("Division")
+    for row in csv.rows:
+        if 'dl' == row[dividx][0:2]:
+            row[dividx] = row[dividx][2:]
+            row[eventidx] = 'D'
+        if 'bp' == row[dividx][0:2]:
+            row[dividx] = row[dividx][2:]
+            row[eventidx] = 'B'
+
+def hunt_curl_only(csv):
+    dividx = csv.index("Division")
+    eventidx = csv.index("Event")
+    for row in csv.rows:
+        if len(row[dividx]) >0:
+            if 'c' == row[dividx][0]:
+                row[eventidx] = 'delete'
 
 def main(filename):
     csv = Csv(filename)
@@ -584,6 +626,9 @@ def main(filename):
         csv.remove_column_by_name('')
 
     # Remove some columns that don't get used.
+    csv.remove_column_by_name("S")
+    csv.remove_column_by_name("M")
+    csv.remove_column_by_name("Curl")
     csv.remove_column_by_name("Sub Tl")
     csv.remove_column_by_name("Tl. Lbs.")
     csv.remove_column_by_name("Coef")
@@ -609,6 +654,8 @@ def main(filename):
     remove_empty_rows(csv)
 
     # Some totals included events like "Curl" and "Power Clean".
+    remove_w(csv)
+    update_event(csv)
     recalculate_totals(csv)
     trim_numbers(csv, 'BestSquatKg')
     trim_numbers(csv, 'BestBenchKg')
@@ -618,12 +665,13 @@ def main(filename):
 
     hunt_dqs(csv)
 
- 
     convert_LBS_to_Kg(csv)
 
     add_open_division(csv)
-    remove_w(csv)
     fix_weightclasses(csv)
+    hunt_raw(csv)
+    hunt_curl_only(csv)
+    remove_non_pl_rows(csv)
     csv.write(sys.stdout)
 
 
