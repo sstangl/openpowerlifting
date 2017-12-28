@@ -52,6 +52,7 @@
     <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
+    <option value="WRPF-AUS">WRPF-AUS - WRPF Australia (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
     <option value="CPF,CPL,CPU">
