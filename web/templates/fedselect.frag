@@ -52,15 +52,16 @@
     <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
     <option value="ProRaw">ProRaw (Incomplete)</option>
-    <option value="WRPF-AUS">WRPF-AUS - WRPF Australia (Incomplete)</option>
+    <option value="WRPF-AUS">WRPF-AUS - WRPF Australia [WRPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
-    <option value="CPF,CPL,CPU">
+    <option value="CPF,CPL,CPU,WRPF-CAN">
       All Canadian Feds
     </option>
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
+    <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
   </optgroup>
   <optgroup label="Finland">
     <option value="FPO">FPO - Finland Powerlifting Organization [GPC] (Incomplete)</option>
