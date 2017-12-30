@@ -40,12 +40,13 @@
           <td>{{this.0.division}}</td>
           <td>{{this.0.sex}}</td>
           <td>{{this.0.equipment}}</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{this.0.weightclasskg}}</td>
+          <td>{{this.0.bodyweightkg}}</td>
+          {{! FIXME -- Need to take a max of BestFooKg and Foo4Kg. }}
+          <td>{{this.0.bestsquatkg}}</td>
+          <td>{{this.0.bestbenchkg}}</td>
+          <td>{{this.0.bestdeadliftkg}}</td>
+          <td>{{this.0.totalkg}}</td>
           <td>{{this.0.wilks}}</td>
         </tr>
       {{/each}}
