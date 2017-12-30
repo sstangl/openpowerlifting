@@ -175,6 +175,7 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
     let mut best_raw_squat: f32 = 0.0;
     let mut best_raw_bench: f32 = 0.0;
     let mut best_raw_deadlift: f32 = 0.0;
+    let mut best_raw_total: f32 = 0.0;
     let mut best_raw_wilks: f32 = 0.0;
 
     for entry in entries.iter() {
@@ -182,6 +183,7 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
             best_raw_squat = best_raw_squat.max(entry.0.highest_squat());
             best_raw_bench = best_raw_bench.max(entry.0.highest_bench());
             best_raw_deadlift = best_raw_deadlift.max(entry.0.highest_deadlift());
+            best_raw_total = best_raw_total.max(entry.0.totalkg.unwrap_or(0.0));
             best_raw_wilks = best_raw_wilks.max(entry.0.wilks.unwrap_or(0.0));
         }
     }
@@ -194,6 +196,17 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
     let context = hbs::LifterContext {
         lifter_nameurl_html: &lifter.get_url(),
         entries: &entries,
+
+        best_raw_squat:
+            if best_raw_squat != 0.0 { Some(best_raw_squat) } else { None },
+        best_raw_bench:
+            if best_raw_bench != 0.0 { Some(best_raw_bench) } else { None },
+        best_raw_deadlift:
+            if best_raw_deadlift != 0.0 { Some(best_raw_deadlift) } else { None },
+        best_raw_total:
+            if best_raw_total != 0.0 { Some(best_raw_total) } else { None },
+        best_raw_wilks:
+            if best_raw_wilks != 0.0 { Some(best_raw_wilks) } else { None },
 
         base: hbs::Base {
             title: &lifter.name,

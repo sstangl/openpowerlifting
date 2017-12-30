@@ -35,5 +35,11 @@ pub struct LifterContext<'a> {
 
     pub entries: &'a Vec<(Entry, Meet)>,
 
+    pub best_raw_squat: Option<f32>,
+    pub best_raw_bench: Option<f32>,
+    pub best_raw_deadlift: Option<f32>,
+    pub best_raw_total: Option<f32>,
+    pub best_raw_wilks: Option<f32>,
+
     pub base: Base<'a>,
 }

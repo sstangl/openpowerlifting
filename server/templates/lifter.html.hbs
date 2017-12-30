@@ -12,6 +12,29 @@
 
 {{#*inline "body"}}
   <div class="content">
+    {{! Best statistics table. }}
+    <table>
+      <thead>
+        <th>Equipment</th>
+        <th>Best Squat</th>
+	<th>Best Bench</th>
+	<th>Best Deadlift</th>
+	<th>Best Total</th>
+	<th>Best Wilks</th>
+      </thead>
+      <tbody>
+        <tr>
+	  <td>Raw/Wraps</td>
+	  <td>{{best_raw_squat}}</td>
+	  <td>{{best_raw_bench}}</td>
+	  <td>{{best_raw_deadlift}}</td>
+	  <td>{{best_raw_total}}</td>
+	  <td>{{best_raw_wilks}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    {{! Meet results table. }}
     <table>
       <thead>
         <th>Place</th>
