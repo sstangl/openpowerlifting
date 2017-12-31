@@ -96,7 +96,7 @@ fn data_html() -> Option<NamedFile> {
 }
 
 #[get("/faq.html")]
-fn faq_html(stats: State<DbStats>) -> Option<Template> {
+fn faq_handler(stats: State<DbStats>) -> Template {
     let context = hbs::FaqContext {
         base: hbs::Base {
             title: "OpenPowerlifting FAQ",
@@ -107,7 +107,22 @@ fn faq_html(stats: State<DbStats>) -> Option<Template> {
         }
     };
 
-    Some(Template::render("faq", context))
+    Template::render("faq", context)
+}
+
+#[get("/contact.html")]
+fn contact_handler(stats:State<DbStats>) -> Template {
+    let context = hbs::FaqContext {
+        base: hbs::Base {
+            title: "OpenPowerlifting Contacts",
+            header: hbs::Header {
+                num_entries: stats.num_entries,
+                num_meets: stats.num_meets,
+            }
+        }
+    };
+
+    Template::render("contact", context)
 }
 
 
@@ -272,13 +287,15 @@ fn rocket() -> rocket::Rocket {
         .mount("/", routes![static_handler])
         .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
+        .mount("/", routes![faq_handler])
+        .mount("/", routes![contact_handler])
 
         // Old HTML redirectors.
         .mount("/", routes![redirect_old_lifters_html,
                             redirect_old_meet_html])
 
         // Old HTML handlers.
-        .mount("/", routes![index_html, contact_html, data_html, faq_html, meetlist_html])
+        .mount("/", routes![index_html, data_html, meetlist_html])
 
         .attach(Template::fairing())
 }

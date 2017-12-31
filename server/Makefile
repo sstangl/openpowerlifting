@@ -17,7 +17,6 @@ database: builddir
 
 statics: builddir
 	mkdir -p "${BUILDDIR}/htmltmp"
-	cp htmltmp/contact.html "${BUILDDIR}/htmltmp/contact.html"
 	cp htmltmp/data.html "${BUILDDIR}/htmltmp/data.html"
 	cp htmltmp/index.html "${BUILDDIR}/htmltmp/index.html"
 	cp htmltmp/meetlist.html "${BUILDDIR}/htmltmp/meetlist.html"
