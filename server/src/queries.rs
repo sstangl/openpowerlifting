@@ -49,6 +49,16 @@ pub fn get_lifter_by_username(username: &str, conn: &DbConn) -> Option<Lifter> {
         .ok()
 }
 
+/// Look up a Lifter by Name.
+/// The lifter is not guaranteed to be unique -- this is just for legacy
+/// code compatibility.
+pub fn get_lifter_by_name_legacy(name: &str, conn: &DbConn) -> Option<Lifter> {
+    schema::lifters::table
+        .filter(schema::lifters::Name.eq(name))
+        .first::<Lifter>(&**conn)
+        .ok()
+}
+
 /// Look up all Entries for a given LifterID.
 pub fn get_entries_by_lifterid(lifterid: i32, conn: &DbConn) -> Option<Vec<(Entry, Meet)>> {
     schema::entries::table
@@ -109,6 +119,15 @@ mod test {
         let lifter = get_lifter_by_username("seanstangl", &conn).unwrap();
         assert_eq!(lifter.id, 0);
         assert_eq!(lifter.name, "Sean Stangl");
+        assert_eq!(lifter.instagram, Some("ferruix".into()));
+    }
+
+    #[test]
+    fn test_get_lifter_by_name_legacy() {
+        let conn = db();
+        let lifter = get_lifter_by_name_legacy("Sean Stangl", &conn).unwrap();
+        assert_eq!(lifter.id, 0);
+        assert_eq!(lifter.username, "seanstangl");
         assert_eq!(lifter.instagram, Some("ferruix".into()));
     }
 

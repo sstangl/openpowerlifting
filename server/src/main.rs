@@ -1,5 +1,6 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
+#![feature(custom_derive)]
 
 #![recursion_limit="256"] // For Diesel.
 #[macro_use] extern crate diesel;
@@ -110,10 +111,6 @@ fn faq_html(stats: State<DbStats>) -> Option<Template> {
     Some(Template::render("faq", context))
 }
 
-#[get("/lifters.html")]
-fn lifters_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/lifters.html").ok()
-}
 
 #[get("/meet.html")]
 fn meet_html() -> Option<NamedFile> {
@@ -124,7 +121,6 @@ fn meet_html() -> Option<NamedFile> {
 fn meetlist_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/meetlist.html").ok()
 }
-
 
 #[get("/")]
 fn index() -> Option<NamedFile> {
@@ -159,6 +155,23 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
     Ok(display)
 }
 
+#[derive(FromForm)]
+struct LiftersHtmlQueryParams {
+    /// The lifter's full name.
+    q: String,
+}
+
+#[get("/lifters.html?<params>")]
+fn redirect_old_lifters_html(params: LiftersHtmlQueryParams, conn: DbConn)
+    -> Result<Redirect, Status>
+{
+    let lifter: Lifter =
+        queries::get_lifter_by_name_legacy(&params.q, &conn)
+        .ok_or(Status::NotFound)?;
+
+    let userpage = format!("/u/{}", lifter.username);
+    Ok(Redirect::to(&userpage))
+}
 
 #[get("/u/<username>")]
 fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
@@ -187,11 +200,6 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
             best_raw_wilks = best_raw_wilks.max(entry.0.wilks.unwrap_or(0.0));
         }
     }
-
-    println!("best raw squat: {}", best_raw_squat);
-    println!("best raw bench: {}", best_raw_bench);
-    println!("best raw deadlift: {}", best_raw_deadlift);
-    println!("best raw wilks: {}", best_raw_wilks);
 
     let context = hbs::LifterContext {
         lifter_nameurl_html: &lifter.get_url(),
@@ -249,9 +257,12 @@ fn rocket() -> rocket::Rocket {
         .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
 
+        // Old HTML redirectors.
+        .mount("/", routes![redirect_old_lifters_html])
+
         // Old HTML handlers.
         .mount("/", routes![index_html, contact_html, data_html, faq_html,
-                            lifters_html, meet_html, meetlist_html])
+                            meet_html, meetlist_html])
 
         .attach(Template::fairing())
 }
