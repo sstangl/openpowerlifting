@@ -29,7 +29,7 @@ classes should alter those!
   line-height: 16px;
   margin: 0;
   padding: 4px;
-  border-right: 1px solid silver;
+  border-right: 0px solid silver;
   border-left: 0px !important;
   border-top: 0px !important;
   border-bottom: 0px !important;
@@ -89,8 +89,8 @@ classes should alter those!
 
 .slick-cell, .slick-headerrow-column {
   position: absolute;
-  border: 1px solid transparent;
-  border-right: 1px dotted silver;
+  border: 0px solid transparent;
+  border-right: 0px dotted silver;
   border-bottom-color: silver;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -120,7 +120,7 @@ classes should alter those!
 }
 
 .slick-cell.flashing {
-  border: 1px solid red !important;
+  border: 0px solid red !important;
 }
 
 .slick-cell.editable {

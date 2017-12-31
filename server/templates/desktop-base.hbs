@@ -12,13 +12,19 @@
 
   {{! Internal sources. }}
   <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  {{~> includes}}
 </head>
 <body>
-  <div class="topbar">
-    {{> header}}
-    {{~> controls}}
-  </div>
-  {{~> body}}
+  {{! This isn't great. The Rankings page wants one huge Flexbox, and the other
+      pages want specially-marked headers. So we do both, for the moment. Gross! }}
+  {{~> flexbox-hack}}
+    {{~> topbar-hack}}
+      {{> header}}
+      {{~> controls}}
+    {{~> topbar-hack-end}}
+    {{~> body}}
+  {{~> flexbox-hack-end}}
   {{> google-analytics}}
 </body>
 </html>

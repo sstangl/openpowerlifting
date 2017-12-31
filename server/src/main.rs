@@ -128,7 +128,7 @@ fn redirect_old_contact_html() -> Redirect {
 }
 
 #[get("/contact")]
-fn contact_handler(stats:State<DbStats>) -> Template {
+fn contact_handler(stats: State<DbStats>) -> Template {
     let context = hbs::BaseContext {
         base: hbs::Base {
             title: "OpenPowerlifting Contacts",
@@ -155,8 +155,18 @@ fn redirect_old_index_html() -> Redirect {
 }
 
 #[get("/")]
-fn index() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/index.html").ok()
+fn rankings_handler(stats: State<DbStats>) -> Template {
+    let context = hbs::BaseContext {
+        base: hbs::Base {
+            title: "OpenPowerlifting Rankings",
+            header: hbs::Header {
+                num_entries: stats.num_entries,
+                num_meets: stats.num_meets,
+            }
+        }
+    };
+
+    Template::render("rankings", context)
 }
 
 
@@ -306,7 +316,7 @@ fn rocket() -> rocket::Rocket {
         .manage(db_pool)
         .manage(db_stats)
 
-        .mount("/", routes![index])
+        .mount("/", routes![rankings_handler])
         .mount("/", routes![static_handler])
         .mount("/", routes![lifter_handler])
         .mount("/", routes![meet_handler])
