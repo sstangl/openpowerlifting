@@ -80,11 +80,6 @@ fn static_handler(file: PathBuf) -> StaticResult {
 }
 
 
-#[get("/index.html")]
-fn index_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/index.html").ok()
-}
-
 #[get("/contact.html")]
 fn contact_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/contact.html").ok()
@@ -141,9 +136,15 @@ fn meetlist_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/meetlist.html").ok()
 }
 
+
+#[get("/index.html")]
+fn redirect_old_index_html() -> Redirect {
+    Redirect::to("/")
+}
+
 #[get("/")]
 fn index() -> Option<NamedFile> {
-    index_html()
+    NamedFile::open("htmltmp/index.html").ok()
 }
 
 
@@ -303,10 +304,11 @@ fn rocket() -> rocket::Rocket {
 
         // Old HTML redirectors.
         .mount("/", routes![redirect_old_lifters_html,
-                            redirect_old_meet_html])
+                            redirect_old_meet_html,
+                            redirect_old_index_html])
 
         // Old HTML handlers.
-        .mount("/", routes![index_html, meetlist_html])
+        .mount("/", routes![meetlist_html])
 
         .attach(Template::fairing())
 }
