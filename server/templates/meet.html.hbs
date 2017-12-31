@@ -42,21 +42,26 @@
         <th>Total</th>
         <th>Wilks</th>
       </thead>
-      {{#each entries}}
+      {{~#each entries~}}
         <tr>
 	  <td>TODO</td>
-	  <td>{{this.name}}</td>
-          <td>{{this.sex}}</td>
-	  <td>{{this.age}}</td>
-          <td>{{this.equipment}}</td>
-          <td>{{this.weightclasskg}}</td>
-          <td>{{this.bodyweightkg}}</td>
+	  <td>
+            <a href="/u/{{this.1.username}}">{{this.1.name}}</a>
+            {{~#if this.1.instagram~}}
+              <a href="https://www.instagram.com/{{this.1.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>
+            {{/if}}
+          </td>
+          <td>{{this.0.sex}}</td>
+          <td>{{this.0.age}}</td>
+          <td>{{this.0.equipment}}</td>
+          <td>{{this.0.weightclasskg}}</td>
+          <td>{{this.0.bodyweightkg}}</td>
           {{! FIXME -- Need to take a max of BestFooKg and Foo4Kg. }}
-          <td>{{this.bestsquatkg}}</td>
-          <td>{{this.bestbenchkg}}</td>
-          <td>{{this.bestdeadliftkg}}</td>
-          <td>{{this.totalkg}}</td>
-          <td>{{this.wilks}}</td>
+          <td>{{this.0.bestsquatkg}}</td>
+          <td>{{this.0.bestbenchkg}}</td>
+          <td>{{this.0.bestdeadliftkg}}</td>
+          <td>{{this.0.totalkg}}</td>
+          <td>{{this.0.wilks}}</td>
         </tr>
       {{/each}}
     </table>

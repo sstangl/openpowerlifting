@@ -34,10 +34,12 @@ pub fn get_meet_by_meetpath(meetpath: &str, conn: &DbConn) -> Option<Meet> {
 }
 
 /// Look up all the Entries that correspond to a given MeetID.
-pub fn get_entries_by_meetid(meetid: i32, conn: &DbConn) -> Option<Vec<Entry>> {
+pub fn get_entries_by_meetid(meetid: i32, conn: &DbConn) -> Option<Vec<(Entry, Lifter)>> {
     schema::entries::table
         .filter(schema::entries::MeetID.eq(meetid))
-        .load::<Entry>(&**conn)
+        .inner_join(schema::lifters::table)
+        .order(schema::entries::Wilks.desc())
+        .load(&**conn)
         .ok()
 }
 
@@ -109,7 +111,7 @@ mod test {
 
         assert_eq!(entries.len(), 155);
         for entry in entries {
-            assert_eq!(entry.meet_id, meet.id);
+            assert_eq!(entry.0.meet_id, meet.id);
         }
     }
 

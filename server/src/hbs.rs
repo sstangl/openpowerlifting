@@ -1,7 +1,7 @@
 //! Defines custom structs for the variables used by the HBS templates.
 
 use schema;
-use schema::{Entry, Meet};
+use schema::{Entry, Meet, Lifter};
 
 fn render_weight(opt: Option<f32>) -> Option<String> {
     match opt {
@@ -148,7 +148,7 @@ pub struct MeetContext<'a> {
     pub meet_display_string: &'a str,
     pub meetpath: &'a str,
 
-    pub entries: &'a Vec<Entry>,
+    pub entries: &'a Vec<(Entry, Lifter)>,
 
     pub base: Base<'a>,
 }

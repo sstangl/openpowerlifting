@@ -191,7 +191,7 @@ fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<Template, Status> {
         queries::get_meet_by_meetpath(meetpath_str, &conn)
         .ok_or(Status::NotFound)?;
 
-    let entries: Vec<Entry> =
+    let entries: Vec<(Entry,Lifter)> =
         queries::get_entries_by_meetid(meet.id, &conn)
         .ok_or(Status::NotFound)?;
 
