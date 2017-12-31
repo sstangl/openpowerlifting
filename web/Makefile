@@ -30,7 +30,7 @@ data: builddir
 	cp ${MEETFILE} ${BUILDDIR}/static/data
 
 database: data
-	${SCRIPTDIR}/csv-to-js "${BUILDDIR}/static/data/openpowerlifting.csv" opldb > "${BUILDDIR}/static/scripts/${PLFILEJS}"
+	${SCRIPTDIR}/csvtojs.py "${BUILDDIR}/static/data/openpowerlifting.csv" opldb > "${BUILDDIR}/static/scripts/${PLFILEJS}"
 	sed -i -e 's/,"M",/,0,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
 	sed -i -e 's/,"F",/,1,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
 	sed -i -e 's/,"Raw",/,0,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
@@ -38,7 +38,7 @@ database: data
 	sed -i -e 's/,"Single-ply",/,2,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
 	sed -i -e 's/,"Multi-ply",/,3,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
 	sed -i -e 's/,"Straps",/,4,/g' "${BUILDDIR}/static/scripts/${PLFILEJS}"
-	${SCRIPTDIR}/csv-to-js "${MEETFILE}" meetdb > "${BUILDDIR}/static/scripts/${MEETFILEJS}"
+	${SCRIPTDIR}/csvtojs.py "${MEETFILE}" meetdb > "${BUILDDIR}/static/scripts/${MEETFILEJS}"
 	./make-social-media-js > "${BUILDDIR}/static/scripts/social-media.js"
 
 scripts: builddir npminit
