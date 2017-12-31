@@ -23,7 +23,6 @@ use rocket::response::{NamedFile, Redirect};
 use rocket::http::Status;
 use rocket::{State};
 
-use std::error::Error;
 use std::path::{Path, PathBuf};
 
 mod schema;
@@ -129,30 +128,36 @@ fn index() -> Option<NamedFile> {
 
 
 // TODO: Don't use Box<Error> -- use a custom error type?
-#[get("/meet/<meetpath..>")]
-fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<String, Box<Error>> {
-    let meetpath_str = try!(meetpath.to_str().ok_or(
-        std::io::Error::new(std::io::ErrorKind::Other, "Malformed string.")));
+#[get("/m/<meetpath..>")]
+fn meet_handler(meetpath: PathBuf, conn: DbConn) -> Result<Template, Status> {
+    let meetpath_str = meetpath.to_str().ok_or(Status::InternalServerError)?;
 
-    let meet_option = queries::get_meet_by_meetpath(meetpath_str, &conn);
-    if meet_option.is_none() {
-        return Ok(String::from("Meet not found."));
-    }
-    let meet = meet_option.unwrap();
+    let meet: Meet =
+        queries::get_meet_by_meetpath(meetpath_str, &conn)
+        .ok_or(Status::NotFound)?;
 
-    let entries_option = queries::get_entries_by_meetid(meet.id, &conn);
-    if entries_option.is_none() {
-        return Ok(String::from("Error loading entries."));
-    }
-    let entries = entries_option.unwrap();
+    let entries: Vec<Entry> =
+        queries::get_entries_by_meetid(meet.id, &conn)
+        .ok_or(Status::NotFound)?;
 
-    let mut display = String::new();
+    let context = hbs::MeetContext {
+        meet_display_string:
+            &format!("{} / {} / {}", meet.federation, meet.date, meet.name),
+        meetpath: meetpath_str,
 
-    for entry in entries {
-        display.push_str(&format!("{} - {}\n", entry.lifter_id, entry.sex));
-    }
+        entries: &entries,
 
-    Ok(display)
+        base: hbs::Base {
+            title: &meet.name,
+
+            header: hbs::Header {
+                num_entries: 0, // TODO
+                num_meets: 0, // TODO
+            }
+        }
+    };
+
+    Ok(Template::render("meet", context))
 }
 
 #[derive(FromForm)]

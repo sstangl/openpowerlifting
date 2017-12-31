@@ -43,3 +43,14 @@ pub struct LifterContext<'a> {
 
     pub base: Base<'a>,
 }
+
+/// Variables used by templates/meet.html.hbs.
+#[derive(Serialize)]
+pub struct MeetContext<'a> {
+    pub meet_display_string: &'a str,
+    pub meetpath: &'a str,
+
+    pub entries: &'a Vec<Entry>,
+
+    pub base: Base<'a>,
+}

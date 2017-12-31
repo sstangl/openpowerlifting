@@ -1,0 +1,59 @@
+{{#*inline "controls"}}
+  <div id="controls">
+    <div id="controls-left">
+      <span id="meet">{{meet_display_string}}</span>
+      <select id="displaytype">
+        <option value="wilks">By Wilks</option>
+	<option value="division">By Division</option>
+      </select>
+      <select id="weighttype">
+        <option value="lb">lbs</option>
+        <option value="kg">kg</option>
+      </select>
+    </div>
+    <div id="controls-right">
+      <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meetpath}}">Edit Meet</a>
+    </div>
+  </div>
+{{/inline}}
+
+{{#*inline "body"}}
+  <div class="content">
+    {{! Meet results table. }}
+    <table>
+      <thead>
+        <th>Wilks Place</th>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>Age</th>
+        <th>Equip</th>
+        <th>Class</th>
+        <th>Weight</th>
+        <th>Squat</th>
+        <th>Bench</th>
+        <th>Deadlift</th>
+        <th>Total</th>
+        <th>Wilks</th>
+      </thead>
+      {{#each entries}}
+        <tr>
+	  <td>TODO</td>
+	  <td>{{this.name}}</td>
+          <td>{{this.sex}}</td>
+	  <td>{{this.age}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclasskg}}</td>
+          <td>{{this.bodyweightkg}}</td>
+          {{! FIXME -- Need to take a max of BestFooKg and Foo4Kg. }}
+          <td>{{this.bestsquatkg}}</td>
+          <td>{{this.bestbenchkg}}</td>
+          <td>{{this.bestdeadliftkg}}</td>
+          <td>{{this.totalkg}}</td>
+          <td>{{this.wilks}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+{{/inline}}
+
+{{~> desktop-base}}
