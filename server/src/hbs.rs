@@ -20,7 +20,9 @@ fn render_weight(opt: Option<f32>) -> Option<String> {
     }
 }
 
-fn render_number(opt: Option<f32>) -> Option<String> {
+/// Function for rendering Wilks and McCulloch points.
+/// Trailing zeroes are not truncated.
+fn render_score(opt: Option<f32>) -> Option<String> {
     match opt {
         Some(w) => Some(format!("{:.2}", w)),
         None => None
@@ -92,8 +94,8 @@ impl<'a> From<Entry> for StringifiedEntry {
             bestdeadliftkg: render_weight(entry.bestdeadliftkg),
             totalkg: render_weight(entry.totalkg),
             place: entry.place,
-            wilks: render_number(entry.wilks),
-            mcculloch: render_number(entry.mcculloch),
+            wilks: render_score(entry.wilks),
+            mcculloch: render_score(entry.mcculloch),
 		}
 	}
 }
