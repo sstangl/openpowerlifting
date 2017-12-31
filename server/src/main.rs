@@ -213,9 +213,13 @@ fn lifter_handler(username: String, conn: DbConn) -> Result<Template, Status> {
         }
     }
 
+    // Convert the (Entry, Meet) list to a (StringifiedEntry, Meet) list.
+    let stringified: Vec<(hbs::StringifiedEntry, Meet)> =
+        entries.into_iter().map(|(e,m)| (hbs::StringifiedEntry::from(e), m)).collect();
+
     let context = hbs::LifterContext {
         lifter_nameurl_html: &lifter.get_url(),
-        entries: &entries,
+        entries: &stringified,
 
         best_raw_squat:
             if best_raw_squat != 0.0 { Some(best_raw_squat) } else { None },
