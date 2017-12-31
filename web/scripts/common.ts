@@ -168,9 +168,9 @@ export function makeRowObj(row, index?: number): RowObject {
         equip:       this.parseEquipment(row[OplDBColumn.Equipment]),
         bw:          this.weight(row[OplDBColumn.BodyweightKg]),
         weightclass: this.parseWeightClass(row[OplDBColumn.WeightClassKg]),
-        squat:       this.weightMax(row, OplDBColumn.BestSquatKg, OplDBColumn.Squat4Kg),
-        bench:       this.weightMax(row, OplDBColumn.BestBenchKg, OplDBColumn.Bench4Kg),
-        deadlift:    this.weightMax(row, OplDBColumn.BestDeadliftKg, OplDBColumn.Deadlift4Kg),
+        squat:       this.weight(row[OplDBColumn.SquatKg]),
+        bench:       this.weight(row[OplDBColumn.BenchKg]),
+        deadlift:    this.weight(row[OplDBColumn.DeadliftKg]),
         total:       this.weight(row[OplDBColumn.TotalKg]),
         wilks:       this.number(row[OplDBColumn.Wilks])
     };
@@ -229,9 +229,9 @@ export function colidToIndex(colid: string): number {
         case "date": return MeetDBColumn.Date;
         case "age": return OplDBColumn.Age;
         case "bw": return OplDBColumn.BodyweightKg;
-        case "squat": return OplDBColumn.BestSquatKg;
-        case "bench": return OplDBColumn.BestBenchKg;
-        case "deadlift": return OplDBColumn.BestDeadliftKg;
+        case "squat": return OplDBColumn.SquatKg;
+        case "bench": return OplDBColumn.BenchKg;
+        case "deadlift": return OplDBColumn.DeadliftKg;
         case "total": return OplDBColumn.TotalKg;
         case "wilks": return OplDBColumn.Wilks;
         default:
