@@ -91,8 +91,18 @@ fn contact_html() -> Option<NamedFile> {
 }
 
 #[get("/data.html")]
-fn data_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/data.html").ok()
+fn data_handler(stats: State<DbStats>) -> Template {
+    let context = hbs::FaqContext {
+        base: hbs::Base {
+            title: "OpenPowerlifting Data",
+            header: hbs::Header {
+                num_entries: stats.num_entries,
+                num_meets: stats.num_meets,
+            }
+        }
+    };
+
+    Template::render("data", context)
 }
 
 #[get("/faq.html")]
@@ -289,13 +299,14 @@ fn rocket() -> rocket::Rocket {
         .mount("/", routes![meet_handler])
         .mount("/", routes![faq_handler])
         .mount("/", routes![contact_handler])
+        .mount("/", routes![data_handler])
 
         // Old HTML redirectors.
         .mount("/", routes![redirect_old_lifters_html,
                             redirect_old_meet_html])
 
         // Old HTML handlers.
-        .mount("/", routes![index_html, data_html, meetlist_html])
+        .mount("/", routes![index_html, meetlist_html])
 
         .attach(Template::fairing())
 }
