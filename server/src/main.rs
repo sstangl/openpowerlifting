@@ -80,12 +80,13 @@ fn static_handler(file: PathBuf) -> StaticResult {
 }
 
 
-#[get("/contact.html")]
-fn contact_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/contact.html").ok()
+#[get("/data.html")]
+fn redirect_old_data_html() -> Redirect {
+    Redirect::to("/data")
 }
 
-#[get("/data.html")]
+
+#[get("/data")]
 fn data_handler(stats: State<DbStats>) -> Template {
     let context = hbs::BaseContext {
         base: hbs::Base {
@@ -100,7 +101,13 @@ fn data_handler(stats: State<DbStats>) -> Template {
     Template::render("data", context)
 }
 
+
 #[get("/faq.html")]
+fn redirect_old_faq_html() -> Redirect {
+    Redirect::to("/faq")
+}
+
+#[get("/faq")]
 fn faq_handler(stats: State<DbStats>) -> Template {
     let context = hbs::BaseContext {
         base: hbs::Base {
@@ -116,6 +123,11 @@ fn faq_handler(stats: State<DbStats>) -> Template {
 }
 
 #[get("/contact.html")]
+fn redirect_old_contact_html() -> Redirect {
+    Redirect::to("/contact")
+}
+
+#[get("/contact")]
 fn contact_handler(stats:State<DbStats>) -> Template {
     let context = hbs::BaseContext {
         base: hbs::Base {
@@ -303,7 +315,10 @@ fn rocket() -> rocket::Rocket {
         .mount("/", routes![data_handler])
 
         // Old HTML redirectors.
-        .mount("/", routes![redirect_old_lifters_html,
+        .mount("/", routes![redirect_old_contact_html,
+                            redirect_old_data_html,
+                            redirect_old_faq_html,
+                            redirect_old_lifters_html,
                             redirect_old_meet_html,
                             redirect_old_index_html])
 
