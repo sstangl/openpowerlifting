@@ -119,9 +119,9 @@ pub struct Base<'a> {
     pub header: Header,
 }
 
-/// Variables used by templates/faq.html.hbs.
+/// Variables used by static pages, only the base layout.
 #[derive(Serialize)]
-pub struct FaqContext<'a> {
+pub struct BaseContext<'a> {
     pub base: Base<'a>,
 }
 

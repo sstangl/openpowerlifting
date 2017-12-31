@@ -87,7 +87,7 @@ fn contact_html() -> Option<NamedFile> {
 
 #[get("/data.html")]
 fn data_handler(stats: State<DbStats>) -> Template {
-    let context = hbs::FaqContext {
+    let context = hbs::BaseContext {
         base: hbs::Base {
             title: "OpenPowerlifting Data",
             header: hbs::Header {
@@ -102,7 +102,7 @@ fn data_handler(stats: State<DbStats>) -> Template {
 
 #[get("/faq.html")]
 fn faq_handler(stats: State<DbStats>) -> Template {
-    let context = hbs::FaqContext {
+    let context = hbs::BaseContext {
         base: hbs::Base {
             title: "OpenPowerlifting FAQ",
             header: hbs::Header {
@@ -117,7 +117,7 @@ fn faq_handler(stats: State<DbStats>) -> Template {
 
 #[get("/contact.html")]
 fn contact_handler(stats:State<DbStats>) -> Template {
-    let context = hbs::FaqContext {
+    let context = hbs::BaseContext {
         base: hbs::Base {
             title: "OpenPowerlifting Contacts",
             header: hbs::Header {
