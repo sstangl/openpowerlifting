@@ -106,11 +106,34 @@ ${CREATEENTRIESTABLE}
 .import build/sqlite-entries.csv entries
 
 UPDATE lifters SET instagram = NULL WHERE instagram = '';
+
 UPDATE meets SET meetstate = NULL WHERE meetstate = '';
 UPDATE meets SET meettown = NULL WHERE meettown = '';
+
 UPDATE entries SET event = NULL WHERE event = '';
+UPDATE entries SET age = NULL WHERE age = '';
 UPDATE entries SET division = NULL WHERE division = '';
+UPDATE entries SET bodyweightkg = NULL WHERE bodyweightkg = '';
+UPDATE entries SET weightclasskg = NULL WHERE weightclasskg = '';
+UPDATE entries SET squat1kg = NULL WHERE squat1kg = '';
+UPDATE entries SET squat2kg = NULL WHERE squat2kg = '';
+UPDATE entries SET squat3kg = NULL WHERE squat3kg = '';
+UPDATE entries SET squat4kg = NULL WHERE squat4kg = '';
+UPDATE entries SET bestsquatkg = NULL WHERE bestsquatkg = '';
+UPDATE entries SET bench1kg = NULL WHERE bench1kg = '';
+UPDATE entries SET bench2kg = NULL WHERE bench2kg = '';
+UPDATE entries SET bench3kg = NULL WHERE bench3kg = '';
+UPDATE entries SET bench4kg = NULL WHERE bench4kg = '';
+UPDATE entries SET bestbenchkg = NULL WHERE bestbenchkg = '';
+UPDATE entries SET deadlift1kg = NULL WHERE deadlift1kg = '';
+UPDATE entries SET deadlift2kg = NULL WHERE deadlift2kg = '';
+UPDATE entries SET deadlift3kg = NULL WHERE deadlift3kg = '';
+UPDATE entries SET deadlift4kg = NULL WHERE deadlift4kg = '';
+UPDATE entries SET bestdeadliftkg = NULL WHERE bestdeadliftkg = '';
+UPDATE entries SET totalkg = NULL WHERE totalkg = '';
 UPDATE entries SET place = NULL WHERE place = '';
+UPDATE entries SET wilks = NULL WHERE wilks = '';
+UPDATE entries SET mcculloch = NULL WHERE mcculloch = '';
 
 vacuum;
 "
