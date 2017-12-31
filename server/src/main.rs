@@ -111,11 +111,6 @@ fn faq_html(stats: State<DbStats>) -> Option<Template> {
 }
 
 
-#[get("/meet.html")]
-fn meet_html() -> Option<NamedFile> {
-    NamedFile::open("htmltmp/meet.html").ok()
-}
-
 #[get("/meetlist.html")]
 fn meetlist_html() -> Option<NamedFile> {
     NamedFile::open("htmltmp/meetlist.html").ok()
@@ -124,6 +119,18 @@ fn meetlist_html() -> Option<NamedFile> {
 #[get("/")]
 fn index() -> Option<NamedFile> {
     index_html()
+}
+
+
+#[derive(FromForm)]
+struct MeetHtmlQueryParams {
+    /// The MeetPath.
+    m: String,
+}
+
+#[get("/meet.html?<params>")]
+fn redirect_old_meet_html(params: MeetHtmlQueryParams) -> Redirect {
+    Redirect::to(&format!("/m/{}", &params.m))
 }
 
 
@@ -263,11 +270,11 @@ fn rocket() -> rocket::Rocket {
         .mount("/", routes![meet_handler])
 
         // Old HTML redirectors.
-        .mount("/", routes![redirect_old_lifters_html])
+        .mount("/", routes![redirect_old_lifters_html,
+                            redirect_old_meet_html])
 
         // Old HTML handlers.
-        .mount("/", routes![index_html, contact_html, data_html, faq_html,
-                            meet_html, meetlist_html])
+        .mount("/", routes![index_html, contact_html, data_html, faq_html, meetlist_html])
 
         .attach(Template::fairing())
 }
