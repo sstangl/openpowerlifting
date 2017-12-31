@@ -20,7 +20,6 @@ statics: builddir
 	cp htmltmp/contact.html "${BUILDDIR}/htmltmp/contact.html"
 	cp htmltmp/data.html "${BUILDDIR}/htmltmp/data.html"
 	cp htmltmp/index.html "${BUILDDIR}/htmltmp/index.html"
-	cp htmltmp/meet.html "${BUILDDIR}/htmltmp/meet.html"
 	cp htmltmp/meetlist.html "${BUILDDIR}/htmltmp/meetlist.html"
 	cp -r -L static "${BUILDDIR}/static"
 	cp -r -L templates "${BUILDDIR}/templates"
