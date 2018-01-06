@@ -20,7 +20,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,MHP,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
+    <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,MHP,MM,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
@@ -31,6 +31,7 @@
     <option value="HERC">HERC - Hercules</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
     <option value="MHP">MHP - Maximum Human Performance (Incomplete)</option>
+    <option value="MM">MM - Metal Militia (Incomplete)</option>
     <option value="NASA">NASA - Natural Athlete Strength Association (2016+)</option>
     <option value="RAW">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
     <option value="RPS">RPS - Revolution Powerlifting Syndicate</option>
