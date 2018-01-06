@@ -87,9 +87,10 @@
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
-    <option value="GBPF,NIPF">
+    <option value="BPU,GBPF,NIPF">
       All United Kingdom Feds
     </option>
+    <option value="BPU">BPU - British Powerlifting Union [WPC] (Incomplete)</option>
     <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
     <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   </optgroup>
