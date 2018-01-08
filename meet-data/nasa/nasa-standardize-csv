@@ -192,7 +192,6 @@ def aggregate_divisions(csv):
         if col in csv.fieldnames:
             idx = csv.index(col)
             for row in csv.rows:
-                print(row)
                 if row[idx]:
                     row[dividx] = row[idx]
 

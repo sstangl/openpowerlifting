@@ -4,7 +4,7 @@
 # Standardize the results.csv to the OpenPowerlifting
 # internal format.
 #
-
+import codecs
 import sys
 from oplcsv import Csv
 
@@ -124,11 +124,15 @@ def unreverse_names(csv):
 
         row[nameidx] = name
 
-
+def hunt_dq(csv):
+    plidx = csv.index('Place')
+    for row in csv.rows:
+        if row[plidx] == '':
+            row[plidx] = 'DQ'
 def main(filename):
     csv = Csv()
-    with open(filename, 'r') as fd:
-        csv.rows = [x.strip().split(',') for x in fd.readlines()]
+    with codecs.open(filename, 'r', encoding="utf-8",  errors='ignore') as fd:
+        csv.rows = [x.strip().replace("?","").split(',') for x in fd.readlines()]
 
     # Fieldnames given for the detailed spreadsheet.
     fieldnames = []
@@ -189,6 +193,7 @@ def main(filename):
 
     strip_whitespace(csv)
     unreverse_names(csv)
+    hunt_dq(csv)
 
     csv.write(sys.stdout)
 
