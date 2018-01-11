@@ -13,12 +13,8 @@ sys.path.append('scripts')
 sys.path.append('../../scripts')
 import oplprobe
 
-# URL needs updating every year.
-if datetime.datetime.now().strftime("%Y") != "2017":
-    print("Warning: ScottishPL fetch URL needs updating for new year.", file=sys.stderr)
-
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://www.scottishpowerlifting.com/2017-results/"
+URL = "http://www.scottishpowerlifting.com/results/"
 BASEURL = "http://www.scottishpowerlifting.com/"
 
 
