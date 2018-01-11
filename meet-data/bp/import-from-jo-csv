@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+#
+# Converts from Jo's spreadsheet format to our internal format.
+# Requires that columns in the source spreadsheet match our internal names.
+#
+# Also requires that the "Male" and "Female" sheets be merged into one CSV.
+#
+
+
+from oplcsv import Csv
+import os
+import sys
+
+
+def process_row(csv, dirs, row):
+    (meetcsv, entriescsv, url) = dirs[row[csv.index('Competition')]]
+
+    if not url and row[csv.index('URL')]:
+        url = row[csv.index('URL')]
+
+    if len(meetcsv.rows) == 0:
+        (month,day,year) = row[csv.index('Date')].split('/')
+        meetcsv.rows = [[
+            "BP",
+            "%s-%s-%s" % (year, month.zfill(2), day.zfill(2)),
+            "Britain",
+            "",
+            "",
+            row[csv.index('Competition')]
+            ]]
+
+    newrow = [
+            row[csv.index('Name')],
+            row[csv.index('Sex')],
+            row[csv.index('Event')],
+            row[csv.index('Equipment')],
+            row[csv.index('Division')],
+            row[csv.index('Team')],
+            row[csv.index('BodyweightKg')],
+            row[csv.index('WeightClassKg')],
+            row[csv.index('Squat1Kg')],
+            row[csv.index('Squat2Kg')],
+            row[csv.index('Squat3Kg')],
+            row[csv.index('BestSquatKg')],
+            row[csv.index('Bench1Kg')],
+            row[csv.index('Bench2Kg')],
+            row[csv.index('Bench3Kg')],
+            row[csv.index('BestBenchKg')],
+            row[csv.index('Deadlift1Kg')],
+            row[csv.index('Deadlift2Kg')],
+            row[csv.index('Deadlift3Kg')],
+            row[csv.index('BestDeadliftKg')],
+            row[csv.index('TotalKg')]
+        ]
+
+    # Remove some common markings for "nothing in this column".
+    for i in range(len(newrow)):
+        if newrow[i] == 'x' or newrow[i] == 'X' or newrow[i] == '0':
+            newrow[i] = ''
+
+    entriescsv.rows.append(newrow)
+    dirs[row[csv.index('Competition')]] = (meetcsv, entriescsv, url)
+
+
+def main(filename):
+    csv = Csv(filename)
+
+    meetnames = set()
+    for row in csv.rows:
+        meetnames.add(row[csv.index('Competition')])
+
+    dirs = dict()
+    for meetname in meetnames:
+        meetcsv = Csv()
+        meetcsv.fieldnames = ["Federation","Date","MeetCountry","MeetState","MeetTown","MeetName"]
+
+        entriescsv = Csv()
+        entriescsv.fieldnames = ["Name","Sex","Event","Equipment","Division","Team","BodyweightKg","WeightClassKg","Squat1Kg","Squat2Kg","Squat3Kg","BestSquatKg","Bench1Kg","Bench2Kg","Bench3Kg","BestBenchKg","Deadlift1Kg","Deadlift2Kg","Deadlift3Kg","BestDeadliftKg","TotalKg"]
+
+        url = None
+
+        dirs[meetname] = (meetcsv,entriescsv,url)
+
+
+    for row in csv.rows:
+        process_row(csv, dirs, row)
+
+
+    num = 0
+    for meetname in sorted(list(meetnames)):
+        num += 1
+        dirname = '16' + str(num).zfill(2)
+
+        (meetcsv, entriescsv, url) = dirs[meetname]
+
+        os.mkdir(dirname)
+
+        with open(dirname + '/meet.csv', 'w') as fd:
+            meetcsv.write(fd)
+        with open(dirname + '/entries.csv', 'w') as fd:
+            entriescsv.write(fd)
+        if url:
+            with open(dirname + '/URL', 'w') as fd:
+                fd.write(url + "\n")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])

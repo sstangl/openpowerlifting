@@ -59,6 +59,7 @@ KnownFederations = {
     "AsianPF", # Asian Powerlifting Federation, IPF.
     "BB", # Bogatyr Brotherhood, a stand-alone and short-lived Russian federation.
     "BPU", # British Powerlifting Union.
+    "BP", # British Powerlifting, IPF. Used to be GBPF.
     "CAPO", # Australian affiliate of the WPC/GPA.
     "CommonwealthPF", # Commonwealth Powerlifting Federation.
     "CPF", # Canadian Powerlifting Federation (USPA/IPL).
@@ -114,6 +115,7 @@ KnownCountries = {
     "Australia",
     "Belarus",
     "Brazil",
+    "Britain", # TODO: This is a placeholder until we have more data, probably.
     "Canada",
     "Cayman Islands",
     "Colombia",
