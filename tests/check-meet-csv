@@ -100,6 +100,7 @@ KnownFederations = {
     "SCT", # Super-Cup of Titans.
     "THSPA", # Texas High School, single-ply only, drug-tested.
     "UPA",
+    "WelshPA", # Welsh Powerlifting Association, IPF.
     "WPC",
     "AWPC", # Amateur WPC (drug-tested).
     "WNPF", # World Natural Powerlifting Federation.
@@ -154,6 +155,7 @@ KnownCountries = {
     "Ukraine",
     "USA",
     "US Virgin Islands",
+    "Wales",
 }
 
 KnownStates = {
