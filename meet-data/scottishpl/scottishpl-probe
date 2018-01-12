@@ -47,7 +47,7 @@ def main():
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    oplprobe.print_meets(color('[ScottishPF]'), unentered)
+    oplprobe.print_meets(color('[ScottishPL]'), unentered)
 
 
 if __name__ == '__main__':
