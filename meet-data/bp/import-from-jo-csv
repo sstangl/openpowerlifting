@@ -13,10 +13,13 @@ import sys
 
 
 def process_row(csv, dirs, row):
-    (meetcsv, entriescsv, url) = dirs[row[csv.index('Competition')]]
+    (meetcsv, entriescsv, url, subfed) = dirs[row[csv.index('Competition')]]
 
     if not url and row[csv.index('URL')]:
         url = row[csv.index('URL')]
+
+    if not subfed and row[csv.index('Sub-Fed')]:
+        subfed = row[csv.index('Sub-Fed')]
 
     if len(meetcsv.rows) == 0:
         (month,day,year) = row[csv.index('Date')].split('/')
@@ -35,7 +38,6 @@ def process_row(csv, dirs, row):
             row[csv.index('Event')],
             row[csv.index('Equipment')],
             row[csv.index('Division')],
-            row[csv.index('Team')],
             row[csv.index('BodyweightKg')],
             row[csv.index('WeightClassKg')],
             row[csv.index('Squat1Kg')],
@@ -59,7 +61,7 @@ def process_row(csv, dirs, row):
             newrow[i] = ''
 
     entriescsv.rows.append(newrow)
-    dirs[row[csv.index('Competition')]] = (meetcsv, entriescsv, url)
+    dirs[row[csv.index('Competition')]] = (meetcsv, entriescsv, url, subfed)
 
 
 def main(filename):
@@ -75,11 +77,12 @@ def main(filename):
         meetcsv.fieldnames = ["Federation","Date","MeetCountry","MeetState","MeetTown","MeetName"]
 
         entriescsv = Csv()
-        entriescsv.fieldnames = ["Name","Sex","Event","Equipment","Division","Team","BodyweightKg","WeightClassKg","Squat1Kg","Squat2Kg","Squat3Kg","BestSquatKg","Bench1Kg","Bench2Kg","Bench3Kg","BestBenchKg","Deadlift1Kg","Deadlift2Kg","Deadlift3Kg","BestDeadliftKg","TotalKg"]
+        entriescsv.fieldnames = ["Name","Sex","Event","Equipment","Division","BodyweightKg","WeightClassKg","Squat1Kg","Squat2Kg","Squat3Kg","BestSquatKg","Bench1Kg","Bench2Kg","Bench3Kg","BestBenchKg","Deadlift1Kg","Deadlift2Kg","Deadlift3Kg","BestDeadliftKg","TotalKg"]
 
         url = None
+        subfed = None
 
-        dirs[meetname] = (meetcsv,entriescsv,url)
+        dirs[meetname] = (meetcsv,entriescsv,url,subfed)
 
 
     for row in csv.rows:
@@ -89,9 +92,13 @@ def main(filename):
     num = 0
     for meetname in sorted(list(meetnames)):
         num += 1
-        dirname = '16' + str(num).zfill(2)
+        dirname = '17' + str(num).zfill(2)
 
-        (meetcsv, entriescsv, url) = dirs[meetname]
+        (meetcsv, entriescsv, url, subfed) = dirs[meetname]
+
+        # These aren't great names, but at least they'll be unique.
+        if subfed:
+            dirname = "%s-%s" % (subfed,dirname)
 
         os.mkdir(dirname)
 
