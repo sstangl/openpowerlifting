@@ -5,13 +5,13 @@ Below are step-by-step instructions for setting up the project.
 ## Windows 10
 1. Enable Linux Subsystem for Windows
 
-  - https://docs.microsoft.com/en-us/windows/wsl/install-win10
-  - Choose Ubuntu
+   - https://docs.microsoft.com/en-us/windows/wsl/install-win10
+   - Choose Ubuntu
 
 2. Install prerequisites
 
-  - In Ubuntu type: `sudo apt-get update`
-  - Then: `sudo apt-get install automake git sqlite3 npm node.js poppler-utils`
+   - In Ubuntu type: `sudo apt-get update`
+   - Then: `sudo apt-get install automake git sqlite3 npm node.js poppler-utils`
 
 3. Node stuff
 
@@ -19,7 +19,7 @@ Below are step-by-step instructions for setting up the project.
 
 4. Clone Repo
 
-  - In Ubuntu type: `git clone https://github.com/sstangl/openpowerlifting.git`
+   - In Ubuntu type: `git clone https://github.com/sstangl/openpowerlifting.git`
 
 5. Change directory
 
