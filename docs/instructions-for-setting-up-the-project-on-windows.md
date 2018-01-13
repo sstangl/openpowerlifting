@@ -23,5 +23,5 @@ Below are step-by-step instructions for setting up the project.
    •In Ubuntu type: `sudo ln -s /usr/bin/nodejs /usr/bin/node`
 9. Change directory
    •In Ubuntu type: `cd openpowerlifting`
-10. Copy directory to PC  
+10. Copy directory to PC
    •In Ubuntu type: `make` -- this never worked
