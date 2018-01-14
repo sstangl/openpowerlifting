@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,AsianPF,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
+  <option value="AAU,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -88,12 +88,13 @@
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
-    <option value="BPU,EPA,GBPF,NIPF,ScottishPL,WelshPA">
+    <option value="BP,BPU,EPA,GBPF,NIPF,ScottishPL,WelshPA">
       All United Kingdom Feds
     </option>
+    <option value="BP,EPA,GBPF,NIPF,IrishPF,ScottishPL,WelshPA">BP - British Powerlifting [IPF] (Incomplete)</option>
     <option value="BPU">BPU - British Powerlifting Union [WPC] (Incomplete)</option>
     <option value="EPA">EPA - English Powerlifting Association [IPF] (Incomplete)</option>
-    <option value="GBPF">GBPF - British Powerlifting [IPF] (Incomplete)</option>
+    <option value="GBPF">GBPF - Great Britain Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="NIPF">NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
     <option value="ScottishPL">ScottishPL - Scottish Powerlifting [IPF] (Incomplete)</option>
     <option value="WelshPA">WelshPA - Welsh Powerlifting Association [IPF] (Incomplete)</option>
