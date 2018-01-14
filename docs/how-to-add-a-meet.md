@@ -55,7 +55,7 @@ For meets that are in pounds:
   - The next column should be labeled `Equipment`.
   - The next column should be labeled `BirthYear` or `Age`, depending on the federation, if reported.
   - The next column should be labeled `State` if reported.
-  - The next column should be labeled `BodyweightKg`.
+  - The next column should be labeled `BodyweightKg` if reported.
   - The next column should be labeled `Squat1Kg` if reported.
   - The next column should be labeled `Squat2Kg` if reported.
   - The next column should be labeled `Squat3Kg`.
@@ -79,7 +79,7 @@ For meets that are in pounds:
   - The next column should contain the equipment used by the competitor. `Raw`, `Wraps`, `Single-ply`, and `Multi-ply` are the equipment types.
   - The next column should contain the year the competitor was born (e.g. `1991`) or the age of the competitor at the competition (e.g. `43`), depending on the federation, if reported.
   - The next column should contain the state/province abbreviation from where the competitor is competing from (e.g. `VA`) if reported.
-  - The next column should contain the bodyweight of the competitor in kilograms (e.g. `102.2`).
+  - The next column should contain the bodyweight of the competitor in kilograms (e.g. `102.2`) if reported.
   - The next column should contain the competitor's first attempt squat in kilograms `Squat1Kg` if reported.
   - The next column should contain the competitor's second attempt in kilograms `Squat2Kg` if reported.
   - The next column should contain the competitor's third attempt in kilograms `Squat3Kg` if reported.
