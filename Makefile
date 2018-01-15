@@ -43,6 +43,7 @@ probe-quick:
 	${DATADIR}/apf/apf-probe --quick || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/bp/bp-probe --quick || true
+	${DATADIR}/bp/bpu-probe --quick || true
 	${DATADIR}/capo/capo-probe --quick || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe --quick || true
@@ -74,6 +75,7 @@ probe:
 	${DATADIR}/apf/apf-probe || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/bp/bp-probe || true
+	${DATADIR}/bp/bpu-probe || true
 	${DATADIR}/capo/capo-probe || true
 	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
 	${DATADIR}/cpf/cpf-probe || true
