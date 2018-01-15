@@ -302,6 +302,12 @@ def check_column_state(s, row, csv):
             perror("Invalid character in state: \"%s\"" % s)
             break
 
+
+def check_column_tested(s, row, csv):
+    if s != '' and s != 'Yes' and s != 'No':
+        perror("Tested column must be blank, 'Yes', or 'No', but found: \"%s\"" % s)
+
+
 def ignore_column(s, row, csv):
     pass
 
@@ -344,6 +350,8 @@ HeaderHandlers = {
     'Deadlift4Kg': check_lift_column,
 
     'TotalKg': check_positive_number_column,
+
+    'Tested': check_column_tested,
 
     # Columns that we don't really care about.
     'State': check_column_state,
