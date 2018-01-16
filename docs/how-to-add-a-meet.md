@@ -121,7 +121,7 @@ You are now ready to upload the `entries.csv`, `results.csv`, and `URL` files cr
 
 ### Step 1:  Add to directory (In Ubuntu)
 1. Go to the directory you just added, you are probably already there (you can check where you are by typing `pwd`). If so omit this step. Type `cd openpowerlifting/meet-data/${FEDNAME}/${DIRNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to and `${DIRNAME}` is the directory you just added).
-2. Upload the folder where you stored `meet.csv`, `entries.csv`, and `URL`. Type `cp /mnt/${FILEPATH}* ./`(where ${FILEPATH} is the file path to the folder where you stored `meet.csv`, `entries.csv`, and `URL`). *Note*: if your folder includes part of the directory name use a backslash (e.g. `/Documents/open\ pl/USPF/1701/* ./`)
+2. Upload the folder where you stored `meet.csv`, `entries.csv`, and `URL`. Type `cp /mnt/${FILEPATH}* ./`(where ${FILEPATH} is the file path to the folder where you stored `meet.csv`, `entries.csv`, and `URL`). *Note*: if your folder has a space use a backslash (e.g. `/Documents/open\ pl/USPF/1701/* ./`)
 
 ### Step 2: Check your work (In Ubuntu)
 1. You need to return to the main project directory so type `cd openpowerlifting`.
