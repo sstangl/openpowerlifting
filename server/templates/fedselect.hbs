@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,GBPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -20,7 +20,7 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,AAU,APA,APC,APF,HERC,IPA,MHP,MM,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
+    <option value="365Strong,ADFPA,AAU,APA,APC,APF,HERC,IPA,MHP,MM,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
@@ -39,7 +39,7 @@
     <option value="SPF">SPF - Southern Powerlifting Federation</option>
     <option value="THSPA">THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
     <option value="UPA">UPA - United Powerlifting Association</option>
-    <option value="USAPL">USAPL - USA Powerlifting [IPF] (2014+)</option>
+    <option value="ADFPA,USAPL">USAPL - USA Powerlifting [IPF] (2014+)</option>
     <option value="USPA">USPA - United States Powerlifting Association [IPL]</option>
     <option value="USPF">USPF - United States Powerlifting Federation (Incomplete)</option>
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
