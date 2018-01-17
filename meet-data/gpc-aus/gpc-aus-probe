@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for new GPC-AUS meets.
+# The GPC-AUS site is very slow to load from the USA,
+# so older meets are remembered in `todo/URLLIST`,
+# and this file just probes the current front results page,
+# which shows the most recent 5 meets.
+
+from bs4 import BeautifulSoup
+import os
+import sys
+
+sys.path.append('../../scripts')
+sys.path.append('scripts')
+import oplprobe
+
+RESULTS_URL = "http://www.gpcaustralia.com/index.php/results?limitstart=0"
+BASE_URL = "http://www.gpcaustralia.com"
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def color(s):
+    return "\033[1;32m" + s + "\033[0;m"
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # The most recent meet has a different class.
+    leading = soup.find_all("div", {"class": "items-leading"})
+    assert leading, "No <div> element with class `items-leading` found."
+
+    items = soup.find_all("div", {"class": "item"})
+    assert items, "No <div> element with class `item` found."
+
+    divs = leading + items
+
+    urls = []
+    for div in divs:
+        links = div.find_all("a")
+        for link in links:
+            url = link['href'].strip()
+
+            # All results are in a documents/ subdir.
+            if not 'results' in url:
+                continue
+
+            if not '://' in url:
+                url = BASE_URL + url
+
+            if not url in urls:
+                urls.append(url)
+
+    return urls
+
+
+def main():
+    html_content = oplprobe.gethtml(RESULTS_URL)
+    meets_list = getmeetlist(html_content)
+
+    with open(FEDDIR + '/todo/URLLIST') as fd:
+        for url in fd:
+            url = url.strip()
+            if not url in meets_list:
+                meets_list.append(url)
+
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meets_list, entered)
+
+    oplprobe.print_meets(color('[GPC-AUS]'), unentered)
+
+
+if __name__ == '__main__':
+    main()
