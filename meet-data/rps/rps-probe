@@ -15,8 +15,8 @@ import urllib.request
 
 
 # URL needs updating every year.
-MEETSURL = "http://meets.revolutionpowerlifting.com/results/2017-meet-results/"
-if datetime.datetime.now().strftime("%Y") != "2017":
+MEETSURL = "http://meets.revolutionpowerlifting.com/results/2018-meet-results/"
+if datetime.datetime.now().strftime("%Y") != "2018":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
 RPSDIR = os.path.dirname(os.path.realpath(__file__))
 
