@@ -33,6 +33,8 @@ use schema::DbConn;
 
 mod queries;
 mod hbs;
+mod opldb_enums;
+mod opldb;
 
 
 struct DbStats {

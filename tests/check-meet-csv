@@ -64,12 +64,10 @@ KnownFederations = {
     "CAPO", # Australian affiliate of the WPC/GPA.
     "CommonwealthPF", # Commonwealth Powerlifting Federation.
     "CPF", # Canadian Powerlifting Federation (USPA/IPL).
-    "USPF",
-    "USPA",
-    "USAPL",
     "CPL", # Canadian Powerlifting League.
     "CPU", # Canadian Powerlifting Union.
     "EPA", # English Powerlifting Association, IPF.
+    "EPF",
     "FESUPO", # Federacion Sudamericana de Powerlifting
     "FFForce", # Federation Francaise de Force, IPF.
     "FPO", # Finland Powerlifting Organization (IPA).
@@ -92,20 +90,21 @@ KnownFederations = {
     "NSF", # Norwegian branch of the IPF.
     "NZPF", # New Zealand Powerlifting Federation, IPF.
     "OceaniaPF", # Oceania Powerlifting Federation, IPF.
-    "SPF",
-    "EPF",
-    "RPS",
-    "RUPC", # Raw Unity.
     "ProRaw",
     "PA",
     "RAW", # 100% RAW Federation (drug-tested).
+    "RPS",
+    "RUPC", # Raw Unity.
     "ScottishPL", # Scottish Powerlifting, IPF.
     "SCT", # Super-Cup of Titans.
+    "SPF",
     "THSPA", # Texas High School, single-ply only, drug-tested.
     "UPA",
+    "USAPL",
+    "USPF",
+    "USPA",
     "WelshPA", # Welsh Powerlifting Association, IPF.
     "WPC",
-    "AWPC", # Amateur WPC (drug-tested).
     "WNPF", # World Natural Powerlifting Federation.
     "WRPF",
     "WRPF-AUS",
