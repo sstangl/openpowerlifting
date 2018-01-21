@@ -214,11 +214,46 @@ impl OplDb {
     }
 
     pub fn size_bytes(&self) -> usize {
+        // Size of owned vectors.
         let lifters_size = mem::size_of::<Lifter>() * self.lifters.len();
         let meets_size = mem::size_of::<Meet>() * self.meets.len();
         let entries_size = mem::size_of::<Entry>() * self.entries.len();
-        let struct_size = mem::size_of::<OplDb>();
-        lifters_size + meets_size + entries_size + struct_size
+        let owned_vectors = lifters_size + meets_size + entries_size;
+
+        // Size of owned Strings in those objects.
+        let mut owned_strings: usize = 0;
+        for ref lifter in &self.lifters {
+            owned_strings += mem::size_of::<String>() + lifter.name.len();
+            owned_strings += mem::size_of::<String>() + lifter.username.len();
+            if let Some(ref instagram) = lifter.instagram {
+                owned_strings += mem::size_of::<String>() + instagram.len();
+            }
+        }
+        for ref meet in &self.meets {
+            owned_strings += mem::size_of::<String>() + meet.path.len();
+            owned_strings += mem::size_of::<String>() + meet.date.len();
+            owned_strings += mem::size_of::<String>() + meet.country.len();
+            if let Some(ref state) = meet.state {
+                owned_strings += mem::size_of::<String>() + state.len();
+            }
+            if let Some(ref town) = meet.town {
+                owned_strings += mem::size_of::<String>() + town.len();
+            }
+            owned_strings += mem::size_of::<String>() + meet.name.len();
+        }
+        for ref entry in &self.entries {
+            if let Some(ref division) = entry.division {
+                owned_strings += mem::size_of::<String>() + division.len();
+            }
+            if let Some(ref weightclasskg) = entry.weightclasskg {
+                owned_strings += mem::size_of::<String>() + weightclasskg.len();
+            }
+            if let Some(ref place) = entry.place {
+                owned_strings += mem::size_of::<String>() + place.len();
+            }
+        }
+
+        mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
     pub fn get_lifter(&self, n: u32) -> &Lifter {
