@@ -347,7 +347,7 @@ fn rocket() -> rocket::Rocket {
 
 
 fn get_envvar_or_exit(key: &str) -> String {
-    env::var(key).map_err(|e| {
+    env::var(key).map_err(|_| {
         eprintln!("Environment variable '{}' not set.", key);
         process::exit(1);
     }).unwrap()
@@ -369,6 +369,8 @@ fn main() {
             process::exit(1);
         }
     };
+
+    println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
     // Run the server loop.
     rocket().launch();

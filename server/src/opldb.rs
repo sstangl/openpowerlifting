@@ -6,6 +6,7 @@
 
 use csv;
 use std::error::Error;
+use std::mem;
 
 pub use opldb_enums::*;
 
@@ -30,7 +31,7 @@ pub struct Meet {
     #[serde(rename = "MeetPath")]
     pub path: String,
     #[serde(rename = "Federation")]
-    pub federation: String, // XXX TODO: Use Federation.
+    pub federation: Federation,
     #[serde(rename = "Date")]
     pub date: String,
     #[serde(rename = "MeetCountry")]
@@ -52,11 +53,11 @@ pub struct Entry {
     #[serde(rename = "LifterID")]
     pub lifter_id: u32,
     #[serde(rename = "Sex")]
-    pub sex: String, // XXX TODO: Use Sex.
+    pub sex: Sex,
     #[serde(rename = "Event")]
     pub event: Option<String>,
     #[serde(rename = "Equipment")]
-    pub equipment: String, // XXX TODO: Use Equipment.
+    pub equipment: Equipment,
     #[serde(rename = "Age")]
     pub age: Option<f32>,
     #[serde(rename = "Division")]
@@ -163,7 +164,14 @@ impl OplDb {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
-
         Ok(OplDb { lifters, meets, entries })
+    }
+
+    pub fn size_bytes(&self) -> usize {
+        let lifters_size = mem::size_of::<Lifter>() * self.lifters.len();
+        let meets_size = mem::size_of::<Meet>() * self.meets.len();
+        let entries_size = mem::size_of::<Entry>() * self.entries.len();
+        let struct_size = mem::size_of::<OplDb>();
+        lifters_size + meets_size + entries_size + struct_size
     }
 }

@@ -1,19 +1,25 @@
 //! A collection of enums used by the database.
 
+#[derive(Deserialize)]
 pub enum Sex {
     M,
     F,
 }
 
+#[derive(Deserialize)]
 pub enum Equipment {
     Raw,
     Wraps,
+    #[serde(rename = "Single-ply")]
     Single,
+    #[serde(rename = "Multi-ply")]
     Multi,
     Straps,
 }
 
+#[derive(Deserialize)]
 pub enum Federation {
+    #[serde(rename = "365Strong")]
     _365Strong,
     AAPF,
     AAU,
@@ -38,7 +44,9 @@ pub enum Federation {
     GBPF,
     GPA,
     GPC,
+    #[serde(rename = "GPC-GB")]
     GPCGB,
+    #[serde(rename = "GPC-AUS")]
     GPCAUS,
     HERC,
     IPA,
@@ -71,7 +79,9 @@ pub enum Federation {
     WPC,
     WNPF,
     WRPF,
+    #[serde(rename = "WRPF-AUS")]
     WRPFAUS,
+    #[serde(rename = "WRPF-CAN")]
     WRPFCAN,
     WUAP,
     XPC,
