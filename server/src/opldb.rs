@@ -113,7 +113,7 @@ pub struct Entry {
     #[serde(deserialize_with = "deserialize_f32_with_default")]
     pub totalkg: f32,
     #[serde(rename = "Place")]
-    pub place: Option<String>,
+    pub place: Place,
     #[serde(rename = "Wilks")]
     #[serde(deserialize_with = "deserialize_f32_with_default")]
     pub wilks: f32,
@@ -247,9 +247,6 @@ impl OplDb {
             }
             if let Some(ref weightclasskg) = entry.weightclasskg {
                 owned_strings += mem::size_of::<String>() + weightclasskg.len();
-            }
-            if let Some(ref place) = entry.place {
-                owned_strings += mem::size_of::<String>() + place.len();
             }
         }
 

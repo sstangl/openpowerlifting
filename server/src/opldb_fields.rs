@@ -8,6 +8,7 @@ use serde;
 use serde::de::{self, Visitor, Deserialize};
 
 use std::error::Error;
+use std::num;
 use std::mem;
 use std::fmt;
 use std::str::FromStr;
@@ -91,7 +92,7 @@ impl<'de> Visitor<'de> for EventVisitor {
     type Value = Event;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("a string containing only the characters S,B,D.")
+        formatter.write_str("a string containing only the characters S,B,D")
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Event, E>
@@ -110,6 +111,58 @@ impl<'de> Deserialize<'de> for Event {
         where D: serde::Deserializer<'de>
     {
         deserializer.deserialize_str(EventVisitor)
+    }
+}
+
+#[derive(PartialEq)]
+pub enum Place {
+    P(u8),
+    G,
+    DQ,
+    DD,
+    NS,
+    None, // TODO: Require every row to have a Place.
+}
+
+impl FromStr for Place {
+    type Err = num::ParseIntError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "" => Ok(Place::None),
+            "G" => Ok(Place::G),
+            "DQ" => Ok(Place::DQ),
+            "DD" => Ok(Place::DD),
+            "NS" => Ok(Place::NS),
+            _ => {
+                let num = s.parse::<u8>()?;
+                Ok(Place::P(num))
+            }
+        }
+    }
+}
+
+struct PlaceVisitor;
+
+impl<'de> Visitor<'de> for PlaceVisitor {
+    type Value = Place;
+
+    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+        formatter.write_str("an integer or G, DQ, DD, NS")
+    }
+
+    fn visit_str<E>(self, value: &str) -> Result<Place, E>
+        where E: de::Error
+    {
+        Place::from_str(value).map_err(E::custom)
+    }
+}
+
+impl<'de> Deserialize<'de> for Place {
+    fn deserialize<D>(deserializer: D) -> Result<Place, D::Error>
+        where D: serde::Deserializer<'de>
+    {
+        deserializer.deserialize_str(PlaceVisitor)
     }
 }
 
