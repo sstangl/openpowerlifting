@@ -11,8 +11,6 @@ use std::mem;
 pub use opldb_enums::*;
 
 /// The definition of a Lifter in the database.
-/// The LifterID is implicit in the backing vector, as the index.
-/// The order of the lifters is arbitrary.
 #[derive(Deserialize)]
 pub struct Lifter {
     #[serde(rename = "Name")]
@@ -24,8 +22,6 @@ pub struct Lifter {
 }
 
 /// The definition of a Meet in the database.
-/// The MeetID is implicit in the backing vector, as the index.
-/// The order of the meets is arbitrary.
 #[derive(Deserialize)]
 pub struct Meet {
     #[serde(rename = "MeetPath")]
@@ -45,7 +41,6 @@ pub struct Meet {
 }
 
 /// The definition of an Entry in the database.
-/// The EntryID is implicit in the backing vector, as the index.
 #[derive(Deserialize)]
 pub struct Entry {
     #[serde(rename = "MeetID")]
@@ -108,8 +103,17 @@ pub struct Entry {
 
 /// The collection of data stores that constitute the complete dataset.
 pub struct OplDb {
+    /// The LifterID is implicit in the backing vector, as the index.
+    /// The order of the lifters is arbitrary.
     pub lifters: Vec<Lifter>,
+
+    /// The MeetID is implicit in the backing vector, as the index.
+    /// The order of the meets is arbitrary.
     pub meets: Vec<Meet>,
+
+    /// The EntryID is implicit in the backing vector, as the index.
+    /// The order of the entries is by increasing lifter_id.
+    /// Within the entries of a single lifter_id, the order is arbitrary.
     pub entries: Vec<Entry>,
 }
 
@@ -151,7 +155,10 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
         vec.push(entry);
     }
 
-    // TODO: Sort the vector by lifter_id.
+    // The entries database is sorted by lifter_id.
+    // This invariant allows for extremely efficient lifter-uniqueness
+    // filtering without constructing additional data structures.
+    vec.sort_unstable_by_key(|e| e.lifter_id);
 
     vec.shrink_to_fit();
     Ok(vec)
