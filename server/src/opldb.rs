@@ -6,41 +6,11 @@
 
 use csv;
 use serde;
-use serde::de::{self, Visitor};
 
 use std::error::Error;
 use std::mem;
-use std::fmt;
-use std::str::FromStr;
 
 pub use opldb_enums::*;
-
-/// Deserializes a f32 value from the CSV source,
-/// defaulting to 0.0 if the empty string is encountered.
-fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::Error>
-    where D: serde::Deserializer<'de>
-{
-    struct F32StrVisitor;
-
-    impl<'de> Visitor<'de> for F32StrVisitor {
-        type Value = f32;
-
-        fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-            formatter.write_str("f32 or the empty string")
-        }
-
-        fn visit_str<E>(self, value: &str) -> Result<f32, E>
-            where E: de::Error
-        {
-            if value.is_empty() {
-                return Ok(0.0);
-            }
-            f32::from_str(value).map_err(E::custom)
-        }
-    }
-
-    deserializer.deserialize_str(F32StrVisitor)
-}
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
@@ -82,7 +52,7 @@ pub struct Entry {
     #[serde(rename = "Sex")]
     pub sex: Sex,
     #[serde(rename = "Event")]
-    pub event: Option<String>,
+    pub event: Event,
     #[serde(rename = "Equipment")]
     pub equipment: Equipment,
     #[serde(rename = "Age")]
