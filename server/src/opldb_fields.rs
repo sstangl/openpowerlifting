@@ -166,6 +166,81 @@ impl<'de> Deserialize<'de> for Place {
     }
 }
 
+/// Our data uses imprecise dates in the "YYYY-MM-DD" format,
+/// with no timezone or time data.
+/// Dates in this format can be stored as a u32 with value YYYYMMDD.
+/// This format is compact and remains human-readable.
+pub struct Date {
+    value: u32,
+}
+
+pub enum ParseDateError {
+    FormatError,
+    ParseIntError(num::ParseIntError),
+}
+
+impl fmt::Display for ParseDateError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            ParseDateError::FormatError => write!(f, "date not in the correct format"),
+            ParseDateError::ParseIntError(ref p) => p.fmt(f),
+        }
+    }
+}
+
+impl FromStr for Date {
+    type Err = ParseDateError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let v: Vec<&str> = s.split("-").collect();
+        if v.len() != 3 {
+            return Err(ParseDateError::FormatError);
+        }
+
+        let year: u32 = v[0].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
+        let month: u32 = v[1].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
+        let day: u32 = v[2].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
+
+        if year < 1000 || year > 9999 {
+            return Err(ParseDateError::FormatError);
+        }
+        if month == 0 || month > 12 {
+            return Err(ParseDateError::FormatError);
+        }
+        if day == 0 || day > 31 {
+            return Err(ParseDateError::FormatError);
+        }
+
+        let value = (year * 10000) + (month * 100) + day;
+
+        Ok(Date { value })
+    }
+}
+
+struct DateVisitor;
+
+impl<'de> Visitor<'de> for DateVisitor {
+    type Value = Date;
+
+    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+        formatter.write_str("a string in the format YYYY-MM-DD")
+    }
+
+    fn visit_str<E>(self, value: &str) -> Result<Date, E>
+        where E: de::Error
+    {
+        Date::from_str(value).map_err(E::custom)
+    }
+}
+
+impl<'de> Deserialize<'de> for Date {
+    fn deserialize<D>(deserializer: D) -> Result<Date, D::Error>
+        where D: serde::Deserializer<'de>
+    {
+        deserializer.deserialize_str(DateVisitor)
+    }
+}
+
 #[derive(Deserialize,PartialEq)]
 pub enum Sex {
     M,
