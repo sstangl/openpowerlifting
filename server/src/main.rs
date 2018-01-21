@@ -26,6 +26,7 @@ use rocket::http::Status;
 use rocket::{State};
 
 use std::path::{Path, PathBuf};
+use std::process;
 
 mod schema;
 use schema::Entry;
@@ -37,6 +38,8 @@ mod queries;
 mod hbs;
 mod opldb_enums;
 mod opldb;
+
+use opldb::*;
 
 
 struct DbStats {
@@ -343,15 +346,29 @@ fn rocket() -> rocket::Rocket {
 }
 
 
+fn get_envvar_or_exit(key: &str) -> String {
+    env::var(key).map_err(|e| {
+        eprintln!("Environment variable '{}' not set.", key);
+        process::exit(1);
+    }).unwrap()
+}
+
+
 fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
 
-    /*
-    if let Err(e) = opldb::import_meets_csv("../build/meets.csv") {
-        eprintln!("Error: {}", e);
-    }
-    */
+    let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");
+    let meets_csv = get_envvar_or_exit("MEETS_CSV");
+    let entries_csv = get_envvar_or_exit("ENTRIES_CSV");
+
+    let opldb = match OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv) {
+        Ok(db) => db,
+        Err(e) => {
+            eprintln!("Error loading OplDb: {}", e);
+            process::exit(1);
+        }
+    };
 
     // Run the server loop.
     rocket().launch();
