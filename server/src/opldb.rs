@@ -5,10 +5,42 @@
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
 use csv;
+use serde;
+use serde::de::{self, Visitor};
+
 use std::error::Error;
 use std::mem;
+use std::fmt;
+use std::str::FromStr;
 
 pub use opldb_enums::*;
+
+/// Deserializes a f32 value from the CSV source,
+/// defaulting to 0.0 if the empty string is encountered.
+fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::Error>
+    where D: serde::Deserializer<'de>
+{
+    struct F32StrVisitor;
+
+    impl<'de> Visitor<'de> for F32StrVisitor {
+        type Value = f32;
+
+        fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+            formatter.write_str("f32 or the empty string")
+        }
+
+        fn visit_str<E>(self, value: &str) -> Result<f32, E>
+            where E: de::Error
+        {
+            if value.is_empty() {
+                return Ok(0.0);
+            }
+            f32::from_str(value).map_err(E::custom)
+        }
+    }
+
+    deserializer.deserialize_str(F32StrVisitor)
+}
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
@@ -58,47 +90,66 @@ pub struct Entry {
     #[serde(rename = "Division")]
     pub division: Option<String>,
     #[serde(rename = "BodyweightKg")]
-    pub bodyweightkg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bodyweightkg: f32,
     #[serde(rename = "WeightClassKg")]
     pub weightclasskg: Option<String>,
     #[serde(rename = "Squat1Kg")]
-    pub squat1kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub squat1kg: f32,
     #[serde(rename = "Squat2Kg")]
-    pub squat2kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub squat2kg: f32,
     #[serde(rename = "Squat3Kg")]
-    pub squat3kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub squat3kg: f32,
     #[serde(rename = "Squat4Kg")]
-    pub squat4kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub squat4kg: f32,
     #[serde(rename = "BestSquatKg")]
-    pub bestsquatkg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bestsquatkg: f32,
     #[serde(rename = "Bench1Kg")]
-    pub bench1kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bench1kg: f32,
     #[serde(rename = "Bench2Kg")]
-    pub bench2kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bench2kg: f32,
     #[serde(rename = "Bench3Kg")]
-    pub bench3kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bench3kg: f32,
     #[serde(rename = "Bench4Kg")]
-    pub bench4kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bench4kg: f32,
     #[serde(rename = "BestBenchKg")]
-    pub bestbenchkg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bestbenchkg: f32,
     #[serde(rename = "Deadlift1Kg")]
-    pub deadlift1kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub deadlift1kg: f32,
     #[serde(rename = "Deadlift2Kg")]
-    pub deadlift2kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub deadlift2kg: f32,
     #[serde(rename = "Deadlift3Kg")]
-    pub deadlift3kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub deadlift3kg: f32,
     #[serde(rename = "Deadlift4Kg")]
-    pub deadlift4kg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub deadlift4kg: f32,
     #[serde(rename = "BestDeadliftKg")]
-    pub bestdeadliftkg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub bestdeadliftkg: f32,
     #[serde(rename = "TotalKg")]
-    pub totalkg: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub totalkg: f32,
     #[serde(rename = "Place")]
     pub place: Option<String>,
     #[serde(rename = "Wilks")]
-    pub wilks: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub wilks: f32,
     #[serde(rename = "McCulloch")]
-    pub mcculloch: Option<f32>,
+    #[serde(deserialize_with = "deserialize_f32_with_default")]
+    pub mcculloch: f32,
 }
 
 /// The collection of data stores that constitute the complete dataset.
