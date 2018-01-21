@@ -37,7 +37,7 @@ use schema::DbConn;
 
 mod queries;
 mod hbs;
-mod opldb_enums;
+mod opldb_fields;
 mod opldb;
 
 use opldb::*;

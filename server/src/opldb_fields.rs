@@ -1,4 +1,8 @@
-//! A collection of enums used by the database.
+//! A collection of fields used by the database.
+//!
+//! This file exists to separate deserialization and internal
+//! representation details out from database definition file,
+//! to make it easier to see the design from a high level.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};

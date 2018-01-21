@@ -10,7 +10,7 @@ use serde;
 use std::error::Error;
 use std::mem;
 
-pub use opldb_enums::*;
+pub use opldb_fields::*;
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
