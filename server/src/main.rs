@@ -9,6 +9,8 @@
 // For #[derive(Serialize)].
 #[macro_use] extern crate serde_derive;
 
+extern crate csv;
+
 extern crate dotenv;
 use std::env;
 
@@ -344,6 +346,12 @@ fn rocket() -> rocket::Rocket {
 fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
+
+    /*
+    if let Err(e) = opldb::import_meets_csv("../build/meets.csv") {
+        eprintln!("Error: {}", e);
+    }
+    */
 
     // Run the server loop.
     rocket().launch();
