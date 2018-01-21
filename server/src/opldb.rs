@@ -56,7 +56,7 @@ pub struct Entry {
     #[serde(rename = "Equipment")]
     pub equipment: Equipment,
     #[serde(rename = "Age")]
-    pub age: Option<f32>,
+    pub age: Age,
     #[serde(rename = "Division")]
     pub division: Option<String>,
     #[serde(rename = "BodyweightKg")]
