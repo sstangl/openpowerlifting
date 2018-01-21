@@ -1,12 +1,12 @@
 //! A collection of enums used by the database.
 
-#[derive(Deserialize)]
+#[derive(Deserialize,PartialEq)]
 pub enum Sex {
     M,
     F,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize,PartialEq)]
 pub enum Equipment {
     Raw,
     Wraps,
@@ -17,7 +17,7 @@ pub enum Equipment {
     Straps,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize,PartialEq)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     _365Strong,

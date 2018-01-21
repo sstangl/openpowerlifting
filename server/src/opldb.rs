@@ -105,16 +105,34 @@ pub struct Entry {
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
     /// The order of the lifters is arbitrary.
-    pub lifters: Vec<Lifter>,
+    lifters: Vec<Lifter>,
 
     /// The MeetID is implicit in the backing vector, as the index.
     /// The order of the meets is arbitrary.
-    pub meets: Vec<Meet>,
+    meets: Vec<Meet>,
 
     /// The EntryID is implicit in the backing vector, as the index.
     /// The order of the entries is by increasing lifter_id.
     /// Within the entries of a single lifter_id, the order is arbitrary.
-    pub entries: Vec<Entry>,
+    entries: Vec<Entry>,
+}
+
+/// A list of indices into the OplDB's vector of Entries.
+///
+/// Accessing the Entry vector through indices allows effective
+/// creation of sublists. Union and Intersection operations allow
+/// for simple and extremely efficient construction of complex views.
+///
+/// The indices are in the same sort order as the Vec<Entry> list,
+/// by lifter_id.
+pub struct EntryFilter<'a> {
+    /// The index list should not outlive the database itself.
+    opldb: &'a OplDb,
+
+    /// A list of indices into the OplDb's Entry vector,
+    /// sorted and curated in some specific order.
+    // TODO: Make non-pub.
+    pub indices: Vec<u32>,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -180,5 +198,30 @@ impl OplDb {
         let entries_size = mem::size_of::<Entry>() * self.entries.len();
         let struct_size = mem::size_of::<OplDb>();
         lifters_size + meets_size + entries_size + struct_size
+    }
+
+    pub fn get_lifter(&self, n: u32) -> &Lifter {
+        &self.lifters[n as usize]
+    }
+
+    pub fn get_meet(&self, n: u32) -> &Meet {
+        &self.meets[n as usize]
+    }
+
+    pub fn get_entry(&self, n: u32) -> &Entry {
+        &self.entries[n as usize]
+    }
+
+    pub fn filter_entries<F>(&self, filter: F) -> EntryFilter
+        where F: Fn(&Entry) -> bool
+    {
+        let mut vec = Vec::new();
+        for i in 0 .. self.entries.len() {
+            if filter(&self.entries[i]) {
+                vec.push(i as u32);
+            }
+        }
+        vec.shrink_to_fit();
+        EntryFilter { opldb: &self, indices: vec }
     }
 }

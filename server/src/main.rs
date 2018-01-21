@@ -372,6 +372,11 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
+    let uspa_entries = opldb.filter_entries(|e|
+        opldb.get_meet(e.meet_id).federation == Federation::USPA
+    );
+    println!("USPA entries count: {}", uspa_entries.indices.len());
+
     // Run the server loop.
     rocket().launch();
 }
