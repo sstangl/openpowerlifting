@@ -9,6 +9,9 @@
 // For #[derive(Serialize)].
 #[macro_use] extern crate serde_derive;
 
+extern crate csv;
+extern crate serde;
+
 extern crate dotenv;
 use std::env;
 
@@ -24,6 +27,7 @@ use rocket::http::Status;
 use rocket::{State};
 
 use std::path::{Path, PathBuf};
+use std::process;
 
 mod schema;
 use schema::Entry;
@@ -33,6 +37,10 @@ use schema::DbConn;
 
 mod queries;
 mod hbs;
+mod opldb_fields;
+mod opldb;
+
+use opldb::*;
 
 
 struct DbStats {
@@ -339,9 +347,36 @@ fn rocket() -> rocket::Rocket {
 }
 
 
+fn get_envvar_or_exit(key: &str) -> String {
+    env::var(key).map_err(|_| {
+        eprintln!("Environment variable '{}' not set.", key);
+        process::exit(1);
+    }).unwrap()
+}
+
+
 fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
+
+    let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");
+    let meets_csv = get_envvar_or_exit("MEETS_CSV");
+    let entries_csv = get_envvar_or_exit("ENTRIES_CSV");
+
+    let opldb = match OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv) {
+        Ok(db) => db,
+        Err(e) => {
+            eprintln!("Error loading OplDb: {}", e);
+            process::exit(1);
+        }
+    };
+
+    println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
+
+    let uspa_entries = opldb.filter_entries(|e|
+        opldb.get_meet(e.meet_id).federation == Federation::USPA
+    );
+    println!("USPA entries count: {}", uspa_entries.indices.len());
 
     // Run the server loop.
     rocket().launch();
