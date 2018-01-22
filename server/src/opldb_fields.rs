@@ -310,6 +310,53 @@ impl<'de> Deserialize<'de> for Age {
     }
 }
 
+pub enum WeightClassKg {
+    UnderOrEqual(f32),
+    Over(f32),
+    None,
+}
+
+impl FromStr for WeightClassKg {
+    type Err = num::ParseFloatError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s.is_empty() {
+            return Ok(WeightClassKg::None);
+        }
+
+        if s.ends_with("+") {
+            let v = &s[..s.len()-1];
+            v.parse::<f32>().map(WeightClassKg::Over)
+        } else {
+            s.parse::<f32>().map(WeightClassKg::UnderOrEqual)
+        }
+    }
+}
+
+struct WeightClassKgVisitor;
+
+impl<'de> Visitor<'de> for WeightClassKgVisitor {
+    type Value = WeightClassKg;
+
+    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+        formatter.write_str("A floating-point value optionally ending with '+'")
+    }
+
+    fn visit_str<E>(self, value: &str) -> Result<WeightClassKg, E>
+        where E: de::Error
+    {
+        WeightClassKg::from_str(value).map_err(E::custom)
+    }
+}
+
+impl<'de> Deserialize<'de> for WeightClassKg {
+    fn deserialize<D>(deserializer: D) -> Result<WeightClassKg, D::Error>
+        where D: serde::Deserializer<'de>
+    {
+        deserializer.deserialize_str(WeightClassKgVisitor)
+    }
+}
+
 #[derive(Deserialize,PartialEq)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
