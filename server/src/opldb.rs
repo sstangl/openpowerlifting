@@ -5,7 +5,6 @@
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
 use csv;
-use serde;
 
 use std::error::Error;
 use std::mem;

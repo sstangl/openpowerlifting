@@ -7,9 +7,7 @@
 use serde;
 use serde::de::{self, Visitor, Deserialize};
 
-use std::error::Error;
 use std::num;
-use std::mem;
 use std::fmt;
 use std::str::FromStr;
 
