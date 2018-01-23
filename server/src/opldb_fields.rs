@@ -381,7 +381,6 @@ pub enum Federation {
     FESUPO,
     FFForce,
     FPO,
-    GBPF,
     GPA,
     GPC,
     #[serde(rename = "GPC-GB")]
