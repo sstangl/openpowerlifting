@@ -8,7 +8,7 @@ PLFILEJS := openpowerlifting.js
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
-all: csvfile sqlite web
+all: csvfile web
 
 builddir:
 	mkdir -p '${BUILDDIR}'
@@ -19,6 +19,7 @@ csvfile: builddir
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
+# Optionally build an SQLite3 version of the database.
 sqlite: csvfile
 	scripts/prepare-for-sqlite
 	scripts/compile-sqlite
