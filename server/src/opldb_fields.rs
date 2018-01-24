@@ -174,14 +174,25 @@ pub struct Date {
 }
 
 impl Date {
+    #[inline]
     pub fn year(&self) -> u32 {
         self.value / 10000
     }
+
+    #[inline]
     pub fn month(&self) -> u32 {
         (self.value / 100) % 100
     }
+
+    #[inline]
     pub fn day(&self) -> u32 {
         self.value % 100
+    }
+}
+
+impl fmt::Display for Date {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{:04}-{:02}-{:02}", self.year(), self.month(), self.day())
     }
 }
 
@@ -310,6 +321,12 @@ mod test {
         let d5 = "2017-01-12".parse::<Date>().unwrap();
         assert_eq!(d1, d5);
         assert_ne!(d1, d4);
+    }
+
+    #[test]
+    fn test_date_display() {
+        let date = "2017-03-04".parse::<Date>().unwrap();
+        assert_eq!(format!("{}", date), "2017-03-04");
     }
 }
 
