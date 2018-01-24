@@ -168,10 +168,24 @@ impl<'de> Deserialize<'de> for Place {
 /// with no timezone or time data.
 /// Dates in this format can be stored as a u32 with value YYYYMMDD.
 /// This format is compact and remains human-readable.
+#[derive(Debug,PartialEq,PartialOrd)]
 pub struct Date {
     value: u32,
 }
 
+impl Date {
+    pub fn year(&self) -> u32 {
+        self.value / 10000
+    }
+    pub fn month(&self) -> u32 {
+        (self.value / 100) % 100
+    }
+    pub fn day(&self) -> u32 {
+        self.value % 100
+    }
+}
+
+#[derive(Debug)]
 pub enum ParseDateError {
     FormatError,
     ParseIntError(num::ParseIntError),
@@ -191,7 +205,7 @@ impl FromStr for Date {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let v: Vec<&str> = s.split("-").collect();
-        if v.len() != 3 {
+        if v.len() != 3 || v[0].len() != 4 || v[1].len() != 2 || v[2].len() != 2 {
             return Err(ParseDateError::FormatError);
         }
 
@@ -199,7 +213,7 @@ impl FromStr for Date {
         let month: u32 = v[1].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
         let day: u32 = v[2].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
 
-        if year < 1000 || year > 9999 {
+        if year < 1000 {
             return Err(ParseDateError::FormatError);
         }
         if month == 0 || month > 12 {
@@ -236,6 +250,66 @@ impl<'de> Deserialize<'de> for Date {
         where D: serde::Deserializer<'de>
     {
         deserializer.deserialize_str(DateVisitor)
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_date_basic() {
+        let date = "2017-03-04".parse::<Date>().unwrap();
+        assert_eq!(date.year(), 2017);
+        assert_eq!(date.month(), 3);
+        assert_eq!(date.day(), 4);
+    }
+
+    #[test]
+    fn test_date_errors() {
+        // Malformed dates.
+        assert!("0007-03-04".parse::<Date>().is_err());
+        assert!("2017-03-04-05".parse::<Date>().is_err());
+        assert!("2017-03-004".parse::<Date>().is_err());
+        assert!("2017-003-04".parse::<Date>().is_err());
+        assert!("02017-03-04".parse::<Date>().is_err());
+        assert!("2017-3-4".parse::<Date>().is_err());
+        assert!("20170304".parse::<Date>().is_err());
+        assert!("".parse::<Date>().is_err());
+        assert!("nota-ni-nt".parse::<Date>().is_err());
+
+        // Impossible dates.
+        assert!("2017-13-04".parse::<Date>().is_err());
+        assert!("2017-03-32".parse::<Date>().is_err());
+        assert!("2017-00-04".parse::<Date>().is_err());
+        assert!("2017-03-00".parse::<Date>().is_err());
+        assert!("0000-03-04".parse::<Date>().is_err());
+    }
+
+    #[test]
+    fn test_date_ordering() {
+        let d1 = "2017-01-12".parse::<Date>().unwrap();
+        let d2 = "2016-01-12".parse::<Date>().unwrap();
+        let d3 = "2017-01-13".parse::<Date>().unwrap();
+        let d4 = "2017-02-11".parse::<Date>().unwrap();
+
+        // True assertions.
+        assert!(d1 > d2);
+        assert!(d2 < d1);
+        assert!(d3 > d1);
+        assert!(d4 > d1);
+        assert!(d3 < d4);
+
+        // False assertions.
+        assert_eq!(d1 < d2, false);
+        assert_eq!(d2 > d1, false);
+        assert_eq!(d3 < d1, false);
+        assert_eq!(d4 < d1, false);
+        assert_eq!(d3 > d4, false);
+
+        let d5 = "2017-01-12".parse::<Date>().unwrap();
+        assert_eq!(d1, d5);
+        assert_ne!(d1, d4);
     }
 }
 
