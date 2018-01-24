@@ -6,5 +6,4 @@ extern crate serde;
 extern crate rocket;
 extern crate rocket_contrib;
 
-mod opldb_fields;
 pub mod opldb;

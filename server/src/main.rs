@@ -83,7 +83,7 @@ fn main() {
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
     let uspa_entries = opldb.filter_entries(|e|
-        opldb.get_meet(e.meet_id).federation == opldb::Federation::USPA
+        opldb.get_meet(e.meet_id).federation == opldb::fields::Federation::USPA
     );
     println!("USPA entries count: {}", uspa_entries.indices.len());
 

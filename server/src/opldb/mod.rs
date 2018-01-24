@@ -9,7 +9,8 @@ use csv;
 use std::error::Error;
 use std::mem;
 
-pub use opldb_fields::*;
+pub mod fields;
+use self::fields::*;
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
