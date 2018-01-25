@@ -13,6 +13,8 @@ use std::str::FromStr;
 
 mod date;
 pub use self::date::*;
+mod event;
+pub use self::event::*;
 
 /// Deserializes a f32 field from the CSV source,
 /// defaulting to 0.0 if the empty string is encountered.
@@ -39,80 +41,6 @@ pub fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::E
     }
 
     deserializer.deserialize_str(F32StrVisitor)
-}
-
-/// The definition of the "Event" column.
-/// An Event is represented as a bitfield, with
-/// one bit for each of S, B, and D.
-#[derive(PartialEq)]
-pub struct Event {
-    bits: u8,
-}
-
-impl Event {
-    const BITFLAG_SQUAT: u8 = 0b100;
-    const BITFLAG_BENCH: u8 = 0b010;
-    const BITFLAG_DEADLIFT: u8  = 0b001;
-
-    #[inline]
-    pub fn has_squat(&self) -> bool {
-        self.bits & Self::BITFLAG_SQUAT == 0x1
-    }
-
-    #[inline]
-    pub fn has_bench(&self) -> bool {
-        self.bits & Self::BITFLAG_BENCH == 0x1
-    }
-
-    #[inline]
-    pub fn has_deadlift(&self) -> bool {
-        self.bits & Self::BITFLAG_DEADLIFT == 0x1
-    }
-}
-
-impl FromStr for Event {
-    type Err = &'static str;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut bits: u8 = 0;
-        for c in s.chars() {
-            match c {
-                'S' => bits = bits | Event::BITFLAG_SQUAT,
-                'B' => bits = bits | Event::BITFLAG_BENCH,
-                'D' => bits = bits | Event::BITFLAG_DEADLIFT,
-                _ => return Err("Unexpected event character."),
-            }
-        }
-        Ok(Event { bits })
-    }
-}
-
-struct EventVisitor;
-
-impl<'de> Visitor<'de> for EventVisitor {
-    type Value = Event;
-
-    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("a string containing only the characters S,B,D")
-    }
-
-    fn visit_str<E>(self, value: &str) -> Result<Event, E>
-        where E: de::Error
-    {
-        // TODO: Make Event a required field.
-        //if value.is_empty() {
-        //    return Err(E::custom("unexpected empty Event"));
-        //}
-        Event::from_str(value).map_err(E::custom)
-    }
-}
-
-impl<'de> Deserialize<'de> for Event {
-    fn deserialize<D>(deserializer: D) -> Result<Event, D::Error>
-        where D: serde::Deserializer<'de>
-    {
-        deserializer.deserialize_str(EventVisitor)
-    }
 }
 
 #[derive(PartialEq)]
