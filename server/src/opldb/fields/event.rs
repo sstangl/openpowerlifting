@@ -1,4 +1,4 @@
-//! Defines the Event field for the entries table.
+//! Defines the `Event` field for the `entries` table.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};
@@ -7,7 +7,7 @@ use std::fmt;
 use std::str::FromStr;
 
 /// The definition of the "Event" column.
-/// An Event is represented as a bitfield, with
+/// An `Event` is represented as a bitfield, with
 /// one bit for each of S, B, and D.
 #[derive(PartialEq)]
 pub struct Event {
@@ -60,9 +60,9 @@ impl FromStr for Event {
         let mut bits: u8 = 0;
         for c in s.chars() {
             match c {
-                'S' => bits = bits | Event::BITFLAG_SQUAT,
-                'B' => bits = bits | Event::BITFLAG_BENCH,
-                'D' => bits = bits | Event::BITFLAG_DEADLIFT,
+                'S' => bits |= Event::BITFLAG_SQUAT,
+                'B' => bits |= Event::BITFLAG_BENCH,
+                'D' => bits |= Event::BITFLAG_DEADLIFT,
                 _ => return Err("Unexpected event character."),
             }
         }

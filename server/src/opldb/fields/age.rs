@@ -1,4 +1,4 @@
-//! Defines the Age field for the entries table.
+//! Defines the `Age` field for the `entries` table.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};
@@ -26,7 +26,7 @@ impl FromStr for Age {
             return Ok(Age::None);
         }
 
-        let v: Vec<&str> = s.split(".").collect();
+        let v: Vec<&str> = s.split('.').collect();
         if v.len() == 1 {
             v[0].parse::<u8>().map(Age::Exact)
         } else {

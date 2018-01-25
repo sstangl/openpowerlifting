@@ -1,4 +1,4 @@
-//! Defines the Federation field for the meets table.
+//! Defines the `Federation` field for the `meets` table.
 
 #[derive(Deserialize,PartialEq)]
 pub enum Federation {

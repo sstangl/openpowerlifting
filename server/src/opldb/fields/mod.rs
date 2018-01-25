@@ -23,8 +23,8 @@ pub use self::place::*;
 mod weightclasskg;
 pub use self::weightclasskg::*;
 
-/// Deserializes a f32 field from the CSV source,
-/// defaulting to 0.0 if the empty string is encountered.
+/// Deserializes a `f32` field from the CSV source,
+/// defaulting to `0.0` if the empty string is encountered.
 pub fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::Error>
     where D: serde::Deserializer<'de>
 {

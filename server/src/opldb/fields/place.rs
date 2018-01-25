@@ -1,4 +1,4 @@
-//! Defines the Place field for the entries table.
+//! Defines the `Place` field for the `entries` table.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};

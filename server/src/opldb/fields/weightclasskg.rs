@@ -1,4 +1,4 @@
-//! Defines the WeightClassKg field for the entries table.
+//! Defines the `WeightClassKg` field for the `entries` table.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};
@@ -25,7 +25,7 @@ impl FromStr for WeightClassKg {
             return Ok(WeightClassKg::None);
         }
 
-        if s.ends_with("+") {
+        if s.ends_with('+') {
             let v = &s[..s.len()-1];
             v.parse::<f32>().map(WeightClassKg::Over)
         } else {
