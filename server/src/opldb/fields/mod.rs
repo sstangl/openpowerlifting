@@ -5,18 +5,23 @@
 //! to make it easier to see the design from a high level.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Visitor};
 
-use std::num;
 use std::fmt;
 use std::str::FromStr;
 
+mod age;
+pub use self::age::*;
 mod date;
 pub use self::date::*;
 mod event;
 pub use self::event::*;
+mod federation;
+pub use self::federation::*;
 mod place;
 pub use self::place::*;
+mod weightclasskg;
+pub use self::weightclasskg::*;
 
 /// Deserializes a f32 field from the CSV source,
 /// defaulting to 0.0 if the empty string is encountered.
@@ -60,172 +65,4 @@ pub enum Equipment {
     #[serde(rename = "Multi-ply")]
     Multi,
     Straps,
-}
-
-/// The reported age of the lifter at a given meet.
-/// In the CSV file, approximate ages are reported with '.5' added.
-pub enum Age {
-    /// The exact age of the lifter.
-    Exact(u8),
-    /// The lower possible age of the lifter.
-    Approximate(u8),
-    /// No age specified.
-    None,
-}
-
-impl FromStr for Age {
-    type Err = num::ParseIntError;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        if s.is_empty() {
-            return Ok(Age::None);
-        }
-
-        let v: Vec<&str> = s.split(".").collect();
-        if v.len() == 1 {
-            v[0].parse::<u8>().map(Age::Exact)
-        } else {
-            v[0].parse::<u8>().map(Age::Approximate)
-        }
-    }
-}
-
-struct AgeVisitor;
-
-impl<'de> Visitor<'de> for AgeVisitor {
-    type Value = Age;
-
-    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("an age (23) or approximate age (23.5)")
-    }
-
-    fn visit_str<E>(self, value: &str) -> Result<Age, E>
-        where E: de::Error
-    {
-        Age::from_str(value).map_err(E::custom)
-    }
-}
-
-impl<'de> Deserialize<'de> for Age {
-    fn deserialize<D>(deserializer: D) -> Result<Age, D::Error>
-        where D: serde::Deserializer<'de>
-    {
-        deserializer.deserialize_str(AgeVisitor)
-    }
-}
-
-pub enum WeightClassKg {
-    UnderOrEqual(f32),
-    Over(f32),
-    None,
-}
-
-impl FromStr for WeightClassKg {
-    type Err = num::ParseFloatError;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        if s.is_empty() {
-            return Ok(WeightClassKg::None);
-        }
-
-        if s.ends_with("+") {
-            let v = &s[..s.len()-1];
-            v.parse::<f32>().map(WeightClassKg::Over)
-        } else {
-            s.parse::<f32>().map(WeightClassKg::UnderOrEqual)
-        }
-    }
-}
-
-struct WeightClassKgVisitor;
-
-impl<'de> Visitor<'de> for WeightClassKgVisitor {
-    type Value = WeightClassKg;
-
-    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("A floating-point value optionally ending with '+'")
-    }
-
-    fn visit_str<E>(self, value: &str) -> Result<WeightClassKg, E>
-        where E: de::Error
-    {
-        WeightClassKg::from_str(value).map_err(E::custom)
-    }
-}
-
-impl<'de> Deserialize<'de> for WeightClassKg {
-    fn deserialize<D>(deserializer: D) -> Result<WeightClassKg, D::Error>
-        where D: serde::Deserializer<'de>
-    {
-        deserializer.deserialize_str(WeightClassKgVisitor)
-    }
-}
-
-#[derive(Deserialize,PartialEq)]
-pub enum Federation {
-    #[serde(rename = "365Strong")]
-    _365Strong,
-    AAPF,
-    AAU,
-    ADFPA,
-    APA,
-    APC,
-    APF,
-    AsianPF,
-    BB,
-    BPU,
-    BP,
-    CAPO,
-    CommonwealthPF,
-    CPF,
-    CPL,
-    CPU,
-    EPA,
-    EPF,
-    FESUPO,
-    FFForce,
-    FPO,
-    GPA,
-    GPC,
-    #[serde(rename = "GPC-GB")]
-    GPCGB,
-    #[serde(rename = "GPC-AUS")]
-    GPCAUS,
-    HERC,
-    IPA,
-    IPF,
-    IPL,
-    IrishPF,
-    MHP,
-    MM,
-    NAPF,
-    NASA,
-    NIPF,
-    NPA,
-    NSF,
-    NZPF,
-    OceaniaPF,
-    ProRaw,
-    PA,
-    RAW,
-    RPS,
-    RUPC,
-    ScottishPL,
-    SCT,
-    SPF,
-    THSPA,
-    UPA,
-    USAPL,
-    USPF,
-    USPA,
-    WelshPA,
-    WPC,
-    WNPF,
-    WRPF,
-    #[serde(rename = "WRPF-AUS")]
-    WRPFAUS,
-    #[serde(rename = "WRPF-CAN")]
-    WRPFCAN,
-    WUAP,
-    XPC,
 }
