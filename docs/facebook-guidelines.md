@@ -98,6 +98,9 @@ Staff is expected to communicate and coordinate with each other about who is pos
 3. If the staff member assigned to post cannot post he or she should let other staff know.
 4. Posting should follow the "Posting Frequency" guidelines mentioned above.
 
+## Post Approval/Disclaimer
+All posts should be posted in the #facebook-approvals channel for approval prior to posting. Either @sstangl or @trystanoakley will approve of the post or ask for changes. If changes are requested, please re-submit the new version for approval, even if it's something that should obviously be approved. All posts and graphics should include the following disclaimer: "As fetched on YEAR-MONTH-DAY. New and old meets are being added every day -- if you see an error or omission, please contact us!", the date on the disclaimer should be the date the data being used was collected from the website. 
+
 ## Summary
 
 When dealing with the Facebook audience staff is to seamlessly answer questions and address concerns. Doing this while maintaining the brand image will result in success for the OpenPowerlifting Project. Here is a summary of everything discussed in this document:
@@ -115,3 +118,5 @@ When dealing with the Facebook audience staff is to seamlessly answer questions 
 12. Tagging of federations and lifters is encouraged.
 13. Staff is expected to coordinate posts with each other and should form a posting schedule.
 14. This is all volunteer work, so the most important thing is having fun!
+15. All posts should be posted in the #facebook-approval channel to be approved prior to posting.
+16. The disclaimer above should be added to every Facebook posts or graphic.
