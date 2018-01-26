@@ -9,12 +9,13 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
+sys.path.append('../../scripts')
+sys.path.append('scripts')
+import oplprobe
 
 # If NUMPAGES is very large, iteration stops at the first 404.
 NUMPAGES = 2 # Number of pages to go through, 10 results per page.
@@ -35,11 +36,6 @@ def color(s):
     return "\033[1;31m" + s + "\033[0;m"
 
 
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
-
-
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -55,16 +51,6 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
     meetlist = []
 
@@ -72,17 +58,24 @@ def main():
     for i in range(1, NUMPAGES+1):
         url = getpageurl(i)
         try:
-            html = gethtml(url)
+            html = oplprobe.gethtml(url)
         except urllib.error.HTTPError:
             break
         meets = getmeetlist(html)
         meetlist = meetlist + meets
 
-    known = getenteredurls()
+    with open(FEDDIR + '/todo/URLLIST') as fd:
+        for line in fd:
+            line = line.strip()
+            if len(line) == 0 or line.startswith('#'):
+                continue
+            meetlist.append(line)
 
-    for m in meetlist:
-        if not m in known:
-            print(color('[UPA] ') + m)
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    oplprobe.print_meets(color('[UPA]'), unentered)
+
 
 if __name__ == '__main__':
     main()

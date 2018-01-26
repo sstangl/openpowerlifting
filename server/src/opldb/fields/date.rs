@@ -1,4 +1,4 @@
-//! Defines the Date field for the meets table.
+//! Defines the `Date` field for the `meets` table.
 
 use serde;
 use serde::de::{self, Visitor, Deserialize};
@@ -19,7 +19,7 @@ pub struct Date {
 impl Date {
     #[inline]
     pub fn year(&self) -> u32 {
-        self.value / 10000
+        self.value / 10_000
     }
 
     #[inline]
@@ -58,7 +58,7 @@ impl FromStr for Date {
     type Err = ParseDateError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let v: Vec<&str> = s.split("-").collect();
+        let v: Vec<&str> = s.split('-').collect();
         if v.len() != 3 || v[0].len() != 4 || v[1].len() != 2 || v[2].len() != 2 {
             return Err(ParseDateError::FormatError);
         }
@@ -77,7 +77,7 @@ impl FromStr for Date {
             return Err(ParseDateError::FormatError);
         }
 
-        let value = (year * 10000) + (month * 100) + day;
+        let value = (year * 10_000) + (month * 100) + day;
 
         Ok(Date { value })
     }

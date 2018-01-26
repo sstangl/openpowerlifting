@@ -1,7 +1,7 @@
 //! An in-memory data store for OpenPowerlifting data.
 //!
 //! Because our data is read-only at runtime, we can lay out data structures
-//! better than a "real" database like SQLite3 or PostreSQL. Additionally,
+//! better than a "real" database like SQLite3 or PostgreSQL. Additionally,
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
 use csv;
@@ -144,7 +144,7 @@ pub struct OplDb {
 /// creation of sublists. Union and Intersection operations allow
 /// for simple and extremely efficient construction of complex views.
 ///
-/// The indices are in the same sort order as the Vec<Entry> list,
+/// The indices are in the same sort order as the `Vec<Entry>` list,
 /// by lifter_id.
 pub struct EntryFilter<'a> {
     /// The index list should not outlive the database itself.
@@ -222,14 +222,14 @@ impl OplDb {
 
         // Size of owned Strings in those objects.
         let mut owned_strings: usize = 0;
-        for ref lifter in &self.lifters {
+        for lifter in &self.lifters {
             owned_strings += mem::size_of::<String>() + lifter.name.len();
             owned_strings += mem::size_of::<String>() + lifter.username.len();
             if let Some(ref instagram) = lifter.instagram {
                 owned_strings += mem::size_of::<String>() + instagram.len();
             }
         }
-        for ref meet in &self.meets {
+        for meet in &self.meets {
             owned_strings += mem::size_of::<String>() + meet.path.len();
             owned_strings += mem::size_of::<String>() + meet.country.len();
             if let Some(ref state) = meet.state {
@@ -240,7 +240,7 @@ impl OplDb {
             }
             owned_strings += mem::size_of::<String>() + meet.name.len();
         }
-        for ref entry in &self.entries {
+        for entry in &self.entries {
             if let Some(ref division) = entry.division {
                 owned_strings += mem::size_of::<String>() + division.len();
             }
