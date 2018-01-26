@@ -61,8 +61,16 @@ function getIndices(): number[] {
 
         if (selectonclass) {
             let bw = row[OplDBColumn.BodyweightKg];
-            if (bw === undefined || bw <= bw_min || bw > bw_max)
-                return false;
+
+            // "Undefined" bodyweights need to count for SHW.
+            // This is basically just for Big Dogs.
+            if (bw_max === 999.0) {
+                if (bw !== undefined && (bw <= bw_min))
+                    return false;
+            } else {
+                if (bw === undefined || bw <= bw_min || bw > bw_max)
+                    return false;
+            }
         }
 
         if (selectonfed || selectonyear) {
