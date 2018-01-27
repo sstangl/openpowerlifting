@@ -65,7 +65,7 @@
     <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
   </optgroup>
   <optgroup label="Finland">
-    <option value="FPO">FPO - Finland Powerlifting Organization [GPC] (Incomplete)</option>
+    <option value="FPO">FPO - Finland Powerlifting Organization [IPA] (Incomplete)</option>
   </optgroup>
   <optgroup label="France">
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
