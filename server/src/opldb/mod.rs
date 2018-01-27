@@ -204,6 +204,8 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
 }
 
 impl OplDb {
+    /// Constructs the `OplDb` from CSV files produces by the project
+    /// build script.
     pub fn from_csv(lifters_csv: &str, meets_csv: &str, entries_csv: &str)
         -> Result<OplDb, Box<Error>>
     {
@@ -213,6 +215,7 @@ impl OplDb {
         Ok(OplDb { lifters, meets, entries })
     }
 
+    /// Returns the size of owned data structures.
     pub fn size_bytes(&self) -> usize {
         // Size of owned vectors.
         let lifters_size = mem::size_of::<Lifter>() * self.lifters.len();
@@ -249,14 +252,29 @@ impl OplDb {
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
+    /// Gets a read-only lifter from the `lifters` list by index.
+    ///
+    /// # Panics
+    ///
+    /// If `n` is not a valid index into `lifters`.
     pub fn get_lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
+    /// Gets a read-only meet from the `meets` list by index.
+    ///
+    /// # Panics
+    ///
+    /// If `n` is not a valid index into `meets`.
     pub fn get_meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
+    /// Gets a read-only entry from the `entries` list by index.
+    ///
+    /// # Panics
+    ///
+    /// If `n` is not a valid index into `entries`.
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }
