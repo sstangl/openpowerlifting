@@ -11,10 +11,13 @@ use std::mem;
 
 pub mod fields;
 use self::fields::*;
+
 mod filter;
 pub use self::filter::Filter;
+
 mod filter_cache;
 use self::filter_cache::FilterCache;
+pub use self::filter_cache::CachedFilter;
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
@@ -127,6 +130,9 @@ pub struct Entry {
 }
 
 /// The collection of data stores that constitute the complete dataset.
+///
+/// The data structure is immutable. To prevent the owner from modifying
+/// owned data, the struct contents are private and accessed through getters.
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
     ///
@@ -145,7 +151,7 @@ pub struct OplDb {
     entries: Vec<Entry>,
 
     /// The cache of filters on the vectors.
-    pub filter_cache: FilterCache,
+    filter_cache: FilterCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -247,7 +253,7 @@ impl OplDb {
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
-    /// Gets a read-only lifter from the `lifters` list by index.
+    /// Borrows a `Lifter` by index.
     ///
     /// # Panics
     ///
@@ -256,7 +262,7 @@ impl OplDb {
         &self.lifters[n as usize]
     }
 
-    /// Gets a read-only meet from the `meets` list by index.
+    /// Borrows a `Meet` by index.
     ///
     /// # Panics
     ///
@@ -265,7 +271,7 @@ impl OplDb {
         &self.meets[n as usize]
     }
 
-    /// Gets a read-only entry from the `entries` list by index.
+    /// Borrows an `Entry` by index.
     ///
     /// # Panics
     ///
@@ -274,16 +280,8 @@ impl OplDb {
         &self.entries[n as usize]
     }
 
-    pub fn filter_entries<F>(&self, filter: F) -> Filter
-        where F: Fn(&Entry) -> bool
-    {
-        let mut vec = Vec::new();
-        for i in 0 .. self.entries.len() {
-            if filter(&self.entries[i]) {
-                vec.push(i as u32);
-            }
-        }
-        vec.shrink_to_fit();
-        Filter { list: vec }
+    /// Borrows a cached filter.
+    pub fn get_filter(&self, c: CachedFilter) -> &Filter {
+        &self.filter_cache.from_enum(c)
     }
 }

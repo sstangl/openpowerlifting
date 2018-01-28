@@ -8,6 +8,7 @@ use std::process;
 
 extern crate server;
 use server::opldb;
+use server::opldb::CachedFilter;
 
 /*
 fn rocket() -> rocket::Rocket {
@@ -83,9 +84,9 @@ fn main() {
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
     let raw_or_wraps_in_2017 =
-        opldb.filter_cache.equipment_raw
-            .union(&opldb.filter_cache.equipment_wraps)
-            .intersect(&opldb.filter_cache.year_2017);
+        opldb.get_filter(CachedFilter::EquipmentRaw)
+            .union(opldb.get_filter(CachedFilter::EquipmentWraps))
+            .intersect(opldb.get_filter(CachedFilter::Year2017));
 
     println!("Raw/Wraps in 2017 count: {}", raw_or_wraps_in_2017.list.len());
 
