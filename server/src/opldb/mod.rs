@@ -11,6 +11,8 @@ use std::mem;
 
 pub mod fields;
 use self::fields::*;
+mod filter;
+pub use self::filter::Filter;
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
@@ -138,24 +140,6 @@ pub struct OplDb {
     entries: Vec<Entry>,
 }
 
-/// A list of indices into the OplDB's vector of Entries.
-///
-/// Accessing the Entry vector through indices allows effective
-/// creation of sublists. Union and Intersection operations allow
-/// for simple and extremely efficient construction of complex views.
-///
-/// The indices are in the same sort order as the `Vec<Entry>` list,
-/// by lifter_id.
-pub struct EntryFilter<'a> {
-    /// The index list should not outlive the database itself.
-    opldb: &'a OplDb,
-
-    /// A list of indices into the OplDb's Entry vector,
-    /// sorted and curated in some specific order.
-    // TODO: Make non-pub.
-    pub indices: Vec<u32>,
-}
-
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
 fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<Error>> {
     let mut vec = Vec::with_capacity(140_000);
@@ -279,7 +263,7 @@ impl OplDb {
         &self.entries[n as usize]
     }
 
-    pub fn filter_entries<F>(&self, filter: F) -> EntryFilter
+    pub fn filter_entries<F>(&self, filter: F) -> Filter
         where F: Fn(&Entry) -> bool
     {
         let mut vec = Vec::new();
@@ -289,6 +273,6 @@ impl OplDb {
             }
         }
         vec.shrink_to_fit();
-        EntryFilter { opldb: &self, indices: vec }
+        Filter { list: vec }
     }
 }

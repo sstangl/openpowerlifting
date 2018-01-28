@@ -82,10 +82,14 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
-    let uspa_entries = opldb.filter_entries(|e|
-        opldb.get_meet(e.meet_id).federation == opldb::fields::Federation::USPA
+    let usapl_entries = opldb.filter_entries(|e|
+        opldb.get_meet(e.meet_id).federation == opldb::fields::Federation::USAPL
     );
-    println!("USPA entries count: {}", uspa_entries.indices.len());
+    let _93kg_entries = opldb.filter_entries(|e|
+        e.weightclasskg == opldb::fields::WeightClassKg::UnderOrEqual(93_f32)
+    );
+    let both = usapl_entries.intersect(&_93kg_entries);
+    println!("USAPL 93kg entries count: {}", both.list.len());
 
     // Run the server loop.
     //rocket().launch();
