@@ -253,29 +253,32 @@ impl OplDb {
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
+    /// Borrows the lifters vector.
+    pub fn get_lifters(&self) -> &Vec<Lifter> {
+        &self.lifters
+    }
+
+    /// Borrows the meets vector.
+    pub fn get_meets(&self) -> &Vec<Meet> {
+        &self.meets
+    }
+
+    /// Borrows the entries vector.
+    pub fn get_entries(&self) -> &Vec<Entry> {
+        &self.entries
+    }
+
     /// Borrows a `Lifter` by index.
-    ///
-    /// # Panics
-    ///
-    /// If `n` is not a valid index into `lifters`.
     pub fn get_lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
     /// Borrows a `Meet` by index.
-    ///
-    /// # Panics
-    ///
-    /// If `n` is not a valid index into `meets`.
     pub fn get_meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
     /// Borrows an `Entry` by index.
-    ///
-    /// # Panics
-    ///
-    /// If `n` is not a valid index into `entries`.
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }

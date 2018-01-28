@@ -27,21 +27,21 @@ pub enum CachedFilter {
 /// List of precomputed filters.
 pub struct FilterCache {
     // Equipment filters.
-    pub equipment_raw: Filter,
-    pub equipment_wraps: Filter,
-    pub equipment_single: Filter,
-    pub equipment_multi: Filter,
+    equipment_raw: Filter,
+    equipment_wraps: Filter,
+    equipment_single: Filter,
+    equipment_multi: Filter,
 
     // Sex filter.
-    pub sex_male: Filter,
-    pub sex_female: Filter,
+    sex_male: Filter,
+    sex_female: Filter,
 
     // Year filter.
-    pub year_2018: Filter,
-    pub year_2017: Filter,
-    pub year_2016: Filter,
-    pub year_2015: Filter,
-    pub year_2014: Filter,
+    year_2018: Filter,
+    year_2017: Filter,
+    year_2016: Filter,
+    year_2015: Filter,
+    year_2014: Filter,
 }
 
 impl FilterCache {
