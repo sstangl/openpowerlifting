@@ -87,7 +87,6 @@ impl Filter {
     }
 
     /// Tests that the list is monotonically increasing.
-    #[cfg(debug_assertions)]
     pub fn maintains_invariants(&self) -> bool {
         if self.list.len() == 0 {
             return true;
