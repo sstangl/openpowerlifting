@@ -82,14 +82,12 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
-    let usapl_entries = opldb.filter_entries(|e|
-        opldb.get_meet(e.meet_id).federation == opldb::fields::Federation::USAPL
-    );
-    let _93kg_entries = opldb.filter_entries(|e|
-        e.weightclasskg == opldb::fields::WeightClassKg::UnderOrEqual(93_f32)
-    );
-    let both = usapl_entries.intersect(&_93kg_entries);
-    println!("USAPL 93kg entries count: {}", both.list.len());
+    let raw_or_wraps_in_2017 =
+        opldb.filter_cache.equipment_raw
+            .union(&opldb.filter_cache.equipment_wraps)
+            .intersect(&opldb.filter_cache.year_2017);
+
+    println!("Raw/Wraps in 2017 count: {}", raw_or_wraps_in_2017.list.len());
 
     // Run the server loop.
     //rocket().launch();

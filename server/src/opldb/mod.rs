@@ -13,6 +13,8 @@ pub mod fields;
 use self::fields::*;
 mod filter;
 pub use self::filter::Filter;
+mod filter_cache;
+use self::filter_cache::FilterCache;
 
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
@@ -127,17 +129,23 @@ pub struct Entry {
 /// The collection of data stores that constitute the complete dataset.
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
+    ///
     /// The order of the lifters is arbitrary.
     lifters: Vec<Lifter>,
 
     /// The MeetID is implicit in the backing vector, as the index.
+    ///
     /// The order of the meets is arbitrary.
     meets: Vec<Meet>,
 
     /// The EntryID is implicit in the backing vector, as the index.
+    ///
     /// The order of the entries is by increasing lifter_id.
     /// Within the entries of a single lifter_id, the order is arbitrary.
     entries: Vec<Entry>,
+
+    /// The cache of filters on the vectors.
+    pub filter_cache: FilterCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -196,7 +204,10 @@ impl OplDb {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
-        Ok(OplDb { lifters, meets, entries })
+
+        let filter_cache = FilterCache::new(&meets, &entries);
+
+        Ok(OplDb { lifters, meets, entries, filter_cache })
     }
 
     /// Returns the size of owned data structures.
