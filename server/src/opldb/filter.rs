@@ -110,50 +110,50 @@ mod test {
 
     #[test]
     fn test_detect_nonmonotonic() {
-        let f = Filter { list: vec!(1,2,3,5,4) };
+        let f = Filter { list: vec![1,2,3,5,4] };
         assert!(!f.maintains_invariants());
     }
 
     #[test]
     fn test_union_basic() {
-        let f1 = Filter { list: vec!(1,2,3) };
+        let f1 = Filter { list: vec![1,2,3] };
         assert_eq!(f1.union(&f1), f1);
 
-        let f1 = Filter { list: vec!(0,2,6) };
-        let f2 = Filter { list: vec!(1,2,7) };
-        let expected = Filter { list: vec!(0,1,2,6,7) };
+        let f1 = Filter { list: vec![0,2,6] };
+        let f2 = Filter { list: vec![1,2,7] };
+        let expected = Filter { list: vec![0,1,2,6,7] };
         assert_eq!(f1.union(&f2), expected);
         assert_eq!(f2.union(&f1), expected);
     }
 
     #[test]
     fn test_union_empty() {
-        let empty = Filter { list: vec!() };
+        let empty = Filter { list: vec![] };
         assert_eq!(empty.union(&empty), empty);
 
-        let f2 = Filter { list: vec!(1,2,3) };
+        let f2 = Filter { list: vec![1,2,3] };
         assert_eq!(empty.union(&f2), f2);
         assert_eq!(f2.union(&empty), f2);
     }
 
     #[test]
     fn test_intersect_basic() {
-        let f1 = Filter { list: vec!(1,2,3) };
+        let f1 = Filter { list: vec![1,2,3] };
         assert_eq!(f1.intersect(&f1), f1);
 
-        let f1 = Filter { list: vec!(0,2,4,6,8) };
-        let f2 = Filter { list: vec!(0,3,4,8,10,12) };
-        let expected = Filter { list: vec!(0,4,8) };
+        let f1 = Filter { list: vec![0,2,4,6,8] };
+        let f2 = Filter { list: vec![0,3,4,8,10,12] };
+        let expected = Filter { list: vec![0,4,8] };
         assert_eq!(f1.intersect(&f2), expected);
         assert_eq!(f2.intersect(&f1), expected);
     }
 
     #[test]
     fn test_intersect_empty() {
-        let empty = Filter { list: vec!() };
+        let empty = Filter { list: vec![] };
         assert_eq!(empty.intersect(&empty), empty);
 
-        let f2 = Filter { list: vec!(1,2,3) };
+        let f2 = Filter { list: vec![1,2,3] };
         assert_eq!(empty.intersect(&f2), empty);
         assert_eq!(f2.intersect(&empty), empty);
     }
