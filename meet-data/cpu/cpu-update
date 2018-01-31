@@ -20,7 +20,7 @@ cd "${FETCHDIR}"
 # So this number should be "high" (or, better, there could be logic that
 # downloads all the results for a single year, waiting until it sees a page
 # with the next year).
-${SCRIPTDIR}/cpu-clone-database 10
+${SCRIPTDIR}/cpu-clone-database 20
 
 # Takes the raw CSV dump and converts it to OPL's internal format.
 # Redirect the output into cpu_standardized.csv.
