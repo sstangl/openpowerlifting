@@ -8,6 +8,7 @@ use std::fmt;
 use std::str::FromStr;
 
 /// The definition of the "WeightClassKg" column.
+#[derive(PartialEq)]
 pub enum WeightClassKg {
     /// A class defined as being under or equal to a maximum weight.
     UnderOrEqual(f32),

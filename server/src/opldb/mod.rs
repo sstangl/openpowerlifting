@@ -12,6 +12,13 @@ use std::mem;
 pub mod fields;
 use self::fields::*;
 
+mod filter;
+pub use self::filter::Filter;
+
+mod filter_cache;
+use self::filter_cache::FilterCache;
+pub use self::filter_cache::CachedFilter;
+
 /// The definition of a Lifter in the database.
 #[derive(Deserialize)]
 pub struct Lifter {
@@ -123,37 +130,28 @@ pub struct Entry {
 }
 
 /// The collection of data stores that constitute the complete dataset.
+///
+/// The data structure is immutable. To prevent the owner from modifying
+/// owned data, the struct contents are private and accessed through getters.
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
+    ///
     /// The order of the lifters is arbitrary.
     lifters: Vec<Lifter>,
 
     /// The MeetID is implicit in the backing vector, as the index.
+    ///
     /// The order of the meets is arbitrary.
     meets: Vec<Meet>,
 
     /// The EntryID is implicit in the backing vector, as the index.
+    ///
     /// The order of the entries is by increasing lifter_id.
     /// Within the entries of a single lifter_id, the order is arbitrary.
     entries: Vec<Entry>,
-}
 
-/// A list of indices into the OplDB's vector of Entries.
-///
-/// Accessing the Entry vector through indices allows effective
-/// creation of sublists. Union and Intersection operations allow
-/// for simple and extremely efficient construction of complex views.
-///
-/// The indices are in the same sort order as the `Vec<Entry>` list,
-/// by lifter_id.
-pub struct EntryFilter<'a> {
-    /// The index list should not outlive the database itself.
-    opldb: &'a OplDb,
-
-    /// A list of indices into the OplDb's Entry vector,
-    /// sorted and curated in some specific order.
-    // TODO: Make non-pub.
-    pub indices: Vec<u32>,
+    /// The cache of filters on the vectors.
+    filter_cache: FilterCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -204,15 +202,21 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
 }
 
 impl OplDb {
+    /// Constructs the `OplDb` from CSV files produces by the project
+    /// build script.
     pub fn from_csv(lifters_csv: &str, meets_csv: &str, entries_csv: &str)
         -> Result<OplDb, Box<Error>>
     {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
-        Ok(OplDb { lifters, meets, entries })
+
+        let filter_cache = FilterCache::new(&meets, &entries);
+
+        Ok(OplDb { lifters, meets, entries, filter_cache })
     }
 
+    /// Returns the size of owned data structures.
     pub fn size_bytes(&self) -> usize {
         // Size of owned vectors.
         let lifters_size = mem::size_of::<Lifter>() * self.lifters.len();
@@ -249,28 +253,38 @@ impl OplDb {
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
+    /// Borrows the lifters vector.
+    pub fn get_lifters(&self) -> &Vec<Lifter> {
+        &self.lifters
+    }
+
+    /// Borrows the meets vector.
+    pub fn get_meets(&self) -> &Vec<Meet> {
+        &self.meets
+    }
+
+    /// Borrows the entries vector.
+    pub fn get_entries(&self) -> &Vec<Entry> {
+        &self.entries
+    }
+
+    /// Borrows a `Lifter` by index.
     pub fn get_lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
+    /// Borrows a `Meet` by index.
     pub fn get_meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
+    /// Borrows an `Entry` by index.
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }
 
-    pub fn filter_entries<F>(&self, filter: F) -> EntryFilter
-        where F: Fn(&Entry) -> bool
-    {
-        let mut vec = Vec::new();
-        for i in 0 .. self.entries.len() {
-            if filter(&self.entries[i]) {
-                vec.push(i as u32);
-            }
-        }
-        vec.shrink_to_fit();
-        EntryFilter { opldb: &self, indices: vec }
+    /// Borrows a cached filter.
+    pub fn get_filter(&self, c: CachedFilter) -> &Filter {
+        &self.filter_cache.from_enum(c)
     }
 }
