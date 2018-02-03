@@ -21,9 +21,13 @@ def main(filename):
     if not 'Equipment' in csv.fieldnames:
         csv.insert_column(csv.index('Division'), 'Equipment')
 
+    if not 'Tested' in csv.fieldnames:
+        csv.append_column('Tested')
+
     dividx = csv.index('Division')
     sexidx = csv.index('Sex')
     eqpidx = csv.index('Equipment')
+    testedidx = csv.index('Tested')
 
     for row in csv.rows:
         div = row[dividx]
@@ -40,6 +44,9 @@ def main(filename):
             row[sexidx] = 'F'
         else:
             raise Exception("unknown sex")
+
+        if 'AAPF' in div:
+            row[testedidx] = 'Yes'
 
         # The CPF uses "Raw Assisted" (RA) and "Assisted Raw" (AR)
         # as a category meaning "sleeves or wraps", so it counts as wraps.

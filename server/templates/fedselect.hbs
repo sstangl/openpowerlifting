@@ -52,7 +52,7 @@
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
     <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
-    <option value="ProRaw">ProRaw (Incomplete)</option>
+    <option value="ProRaw">ProRaw</option>
     <option value="WRPF-AUS">WRPF-AUS - WRPF Australia [WRPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
