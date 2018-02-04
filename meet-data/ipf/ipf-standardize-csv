@@ -38,7 +38,9 @@ def assign_division(csv):
     dividx = csv.index('Division')
 
     for row in csv.rows:
-        if row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
+        if row[0].startswith('Best Lifters of'): # So we can correctly strip rows in Bench Only meets
+            curdiv = 'NON-LIFTER-ROW'
+        elif row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
             curdiv = row[0]
         elif curdiv and row[totalidx]:
             row[dividx] = curdiv
@@ -47,10 +49,13 @@ def assign_division(csv):
 def remove_non_lifter_rows(csv):
     # All lifter rows at this point, even if DQ'd, have totals given.
     totalidx = csv.index('TotalKg')
+    #For Bench Only meets we check the division to see if this is a lifter
+    dividx = csv.index('Division') 
+
 
     def getbadidx(csv):
         for i,row in enumerate(csv.rows):
-            if not row[totalidx]:
+            if not row[totalidx] or row[dividx]== 'NON-LIFTER-ROW':
                 return i
         return -1
 
@@ -124,41 +129,53 @@ def unreverse_names(csv):
 
         row[nameidx] = name
 
+def add_events(csv,events):
+    eventidx = csv.index('Event')
+    for row in csv.rows:
+        row[eventidx]=events
 
-def main(filename):
-    csv = Csv()
-    with open(filename, 'r') as fd:
-        csv.rows = [x.strip().split(',') for x in fd.readlines()]
 
+
+def standardize_full_meet(csv):
     # Fieldnames given for the detailed spreadsheet.
     fieldnames = []
-    if len(csv.rows[0]) == 22:
-        fieldnames.append('Place')
-        fieldnames.append('Name')
-        fieldnames.append('BirthYear')
-        fieldnames.append('Country')
-        fieldnames.append('BodyweightKg')
-        fieldnames.append('XXX_wilksfactor')
-        fieldnames.append('XXX_lot')
 
-        fieldnames.append('Squat1Kg')
-        fieldnames.append('Squat2Kg')
-        fieldnames.append('Squat3Kg')
-        fieldnames.append('XXX_squatplace')
+    fieldnames.append('Place')
+    fieldnames.append('Name')
+    fieldnames.append('BirthYear')
+    fieldnames.append('Country')
+    fieldnames.append('BodyweightKg')
+    fieldnames.append('XXX_wilksfactor')
+    fieldnames.append('XXX_lot')
 
-        fieldnames.append('Bench1Kg')
-        fieldnames.append('Bench2Kg')
-        fieldnames.append('Bench3Kg')
-        fieldnames.append('XXX_benchplace')
+    fieldnames.append('Squat1Kg')
+    fieldnames.append('Squat2Kg')
+    fieldnames.append('Squat3Kg')
+    fieldnames.append('XXX_squatplace')
 
-        fieldnames.append('Deadlift1Kg')
-        fieldnames.append('Deadlift2Kg')
-        fieldnames.append('Deadlift3Kg')
-        fieldnames.append('XXX_deadliftplace')
+    fieldnames.append('Bench1Kg')
+    fieldnames.append('Bench2Kg')
+    fieldnames.append('Bench3Kg')
+    fieldnames.append('XXX_benchplace')
 
-        fieldnames.append('TotalKg')
-        fieldnames.append('XXX_wilks') # Recalculate anyway.
-        fieldnames.append('XXX_points')
+    fieldnames.append('Deadlift1Kg')
+    fieldnames.append('Deadlift2Kg')
+    fieldnames.append('Deadlift3Kg')
+    fieldnames.append('XXX_deadliftplace')
+
+    fieldnames.append('TotalKg')
+    fieldnames.append('XXX_wilks') # Recalculate anyway.
+    fieldnames.append('XXX_points')
+
+    csv.fieldnames = fieldnames
+
+    csv.remove_column_by_name('XXX_wilksfactor')
+    csv.remove_column_by_name('XXX_lot')
+    csv.remove_column_by_name('XXX_squatplace')
+    csv.remove_column_by_name('XXX_benchplace')
+    csv.remove_column_by_name('XXX_deadliftplace')
+    csv.remove_column_by_name('XXX_wilks')
+    csv.remove_column_by_name('XXX_points')
 
     csv.fieldnames = fieldnames
 
@@ -175,9 +192,11 @@ def main(filename):
     csv.insert_column(csv.index('Deadlift3Kg')+1, 'BestDeadliftKg')
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
+    csv.append_column('Event')
 
     assign_class(csv)
     assign_division(csv)
+    add_events(csv,'SBD')
     remove_non_lifter_rows(csv)
 
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg',
@@ -187,8 +206,73 @@ def main(filename):
     for x in ['Squat', 'Bench', 'Deadlift']:
         assign_best(csv, x)
 
+
     strip_whitespace(csv)
     unreverse_names(csv)
+
+def standardize_bench_only(csv):
+    # Fieldnames given for the bench spreadsheet.
+    fieldnames = []
+
+    fieldnames.append('Place')
+    fieldnames.append('Name')
+    fieldnames.append('BirthYear')
+    fieldnames.append('Country')
+    fieldnames.append('BodyweightKg')
+    fieldnames.append('XXX_wilksfactor')
+    fieldnames.append('XXX_lot')
+
+    fieldnames.append('Bench1Kg')
+    fieldnames.append('Bench2Kg')
+    fieldnames.append('Bench3Kg')
+
+    fieldnames.append('TotalKg')
+    fieldnames.append('XXX_wilks') 
+    fieldnames.append('XXX_points')
+
+    csv.fieldnames = fieldnames
+
+    csv.remove_column_by_name('XXX_wilksfactor')
+    csv.remove_column_by_name('XXX_lot')
+    csv.remove_column_by_name('XXX_wilks')
+    csv.remove_column_by_name('XXX_points')
+
+    csv.insert_column(csv.index('Bench3Kg')+1, 'BestBenchKg')
+    csv.append_column('WeightClassKg')
+    csv.append_column('Division')
+    csv.append_column('Event')
+
+
+    assign_class(csv)
+    assign_division(csv)
+    add_events(csv,'B')
+
+    remove_non_lifter_rows(csv)
+
+    for x in ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']:
+        fixup_lift(csv, x)
+
+    assign_best(csv, 'Bench')
+
+
+    strip_whitespace(csv)
+    unreverse_names(csv)
+
+
+
+
+def main(filename):
+    csv = Csv()
+    with open(filename, 'r') as fd:
+        csv.rows = [x.strip().split(',') for x in fd.readlines()]
+
+    # Fieldnames given for the detailed spreadsheet.
+    if len(csv.rows[0]) == 22:
+        standardize_full_meet(csv)
+    elif len(csv.rows[0]) == 13:  # Bench only
+        standardize_bench_only(csv)      
+
+
 
     csv.write(sys.stdout)
 
