@@ -7,8 +7,12 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
-# Use IPF-specific knowledge to parse results.csv into entries.csv.
-${SCRIPTDIR}/ipf-standardize-csv results.csv > entries.csv
+if [-f results.csv];then
+	# Use IPF-specific knowledge to parse results.csv into entries.csv.
+	${SCRIPTDIR}/ipf-standardize-csv results.csv > entries.csv
+else
+	${SCRIPTDIR}/ipf-standardize-csv results1.csv > entries.csv
+fi
 
 # Show any warnings.
 ${REPOTESTDIR}/check-entries-csv entries.csv
