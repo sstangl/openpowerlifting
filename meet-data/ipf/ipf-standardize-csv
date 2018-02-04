@@ -134,6 +134,32 @@ def add_events(csv,events):
     for row in csv.rows:
         row[eventidx]=events
 
+def add_sex(csv,sex):
+    sexidx = csv.index('Sex')
+    for row in csv.rows:
+        row[sexidx]=sex
+
+
+#Finds the sex of the lifters in a meet from the weight classes
+def meet_sex(csv):
+    mens_classes = ['-53','-59','-66','-74','-83','-93','-105','-120','120+']
+    womens_classes = ['-43','-47','-52','-57','-63','-72','-84','84+']
+
+    old_mens_only = ['-100','-110','-125','125+']
+    old_womens_only = ['-44','48','90+']
+
+    all_mens = mens_classes + old_mens_only
+    all_womens = womens_classes + old_womens_only
+    for row in csv.rows:
+        if any(row[0].startswith(x) for x in all_mens):
+            return 'M'
+        elif any(row[0].startswith(x) for x in all_womens):
+            return 'F'
+
+    #Couldn't work out the sex of lifters from the weight classes for some reason
+    return ''
+
+
 
 
 def standardize_full_meet(csv):
@@ -193,10 +219,12 @@ def standardize_full_meet(csv):
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
     csv.append_column('Event')
+    csv.append_column('Sex')
 
     assign_class(csv)
     assign_division(csv)
     add_events(csv,'SBD')
+    add_sex(csv,meet_sex(csv))
     remove_non_lifter_rows(csv)
 
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg',
@@ -241,11 +269,13 @@ def standardize_bench_only(csv):
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
     csv.append_column('Event')
+    csv.append_column('Sex')
 
 
     assign_class(csv)
     assign_division(csv)
     add_events(csv,'B')
+    add_sex(csv,meet_sex(csv))
 
     remove_non_lifter_rows(csv)
 
@@ -265,6 +295,7 @@ def main(filename):
     csv = Csv()
     with open(filename, 'r') as fd:
         csv.rows = [x.strip().split(',') for x in fd.readlines()]
+
 
     # Fieldnames given for the detailed spreadsheet.
     if len(csv.rows[0]) == 22:
