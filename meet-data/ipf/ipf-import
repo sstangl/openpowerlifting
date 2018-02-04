@@ -8,7 +8,7 @@ set -e
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
 	echo "Usage: $0 dirname URL"
 	exit 1
 fi
@@ -16,42 +16,100 @@ fi
 mkdir "$1"
 cd "$1"
 
-# Download the results page.
-wget --output-document=results.html "$2"
-cp results.html results.xls
 
-# Save the website URL for future use, since it's pretty hard to tell
-# what meets on the site are tracked and which aren't.
-echo "$2" > URL
+#One file
+if [$# -e 2];then
+	# Download the results page.
+	wget --output-document=results.html "$2"
+	cp results.html results.xls
 
-# Replace any commas in the xls file with periods.
-# Commas are used as decimal points in the European style.
-sed -i -e 's/,/\./g' results.xls
+	# Save the website URL for future use, since it's pretty hard to tell
+	# what meets on the site are tracked and which aren't.
+	echo "$2" > URL
 
-# Strikethrough HTML is used to denote failures.
-# Replace <s> with '-' and remove </s>.
-sed -i -e 's/<s>/-/g' results.xls
-sed -i -e 's/<\/s>//g' results.xls
 
-# Use LibreOffice to automatically convert the <table> to a csv file.
-# This creates results.csv.
-libreoffice --headless --convert-to csv results.xls
-rm results.html results.xls
+	# Replace any commas in the xls file with periods.
+	# Commas are used as decimal points in the European style.
+	sed -i -e 's/,/\./g' results.xls
 
-# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
-sed -i -e 's/\xa0//g' results.csv
+	# Strikethrough HTML is used to denote failures.
+	# Replace <s> with '-' and remove </s>.
+	sed -i -e 's/<s>/-/g' results.xls
+	sed -i -e 's/<\/s>//g' results.xls
 
-# Remove redundant spacing.
-sed -i -e 's/  / /g' results.csv
-sed -i -e 's/, /,/g' results.csv
-sed -i -e 's/ ,/,/g' results.csv
+	# Use LibreOffice to automatically convert the <table> to a csv file.
+	# This creates results.csv.
+	libreoffice --headless --convert-to csv results.xls
+	rm results.html results.xls
 
-# Failures are denoted as "X", when we just want a blank space.
-sed -i -e 's/,X,/,,/g' results.csv
+	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
+	sed -i -e 's/\xa0//g' results.csv
 
-# Disqualifications use ascii 0x97, a long dash.
-sed -i -e 's/\x97/DQ/g' results.csv
+	# Remove redundant spacing.
+	sed -i -e 's/  / /g' results.csv
+	sed -i -e 's/, /,/g' results.csv
+	sed -i -e 's/ ,/,/g' results.csv
 
-# Commands after this point were extracted into a separate file
-# since they had to be re-run in case of error.
-${SCRIPTDIR}/ipf-parse-post
+	# Failures are denoted as "X", when we just want a blank space.
+	sed -i -e 's/,X,/,,/g' results.csv
+
+	# Disqualifications use ascii 0x97, a long dash.
+	sed -i -e 's/\x97/DQ/g' results.csv
+
+	# Commands after this point were extracted into a separate file
+	# since they had to be re-run in case of error.
+	${SCRIPTDIR}/ipf-parse-post
+
+else #Male and Female files
+	# Download the results page.
+	wget --output-document=results1.html "$2"
+	cp results1.html results1.xls
+
+	# Download the results page.
+	wget --output-document=results2.html "$2"
+	cp results2.html results2.xls
+
+	# Save the website URL for future use, since it's pretty hard to tell
+	# what meets on the site are tracked and which aren't.
+	echo "$2"  > URL
+	echo "$3"  > URL
+
+
+	# Replace any commas in the xls file with periods.
+	# Commas are used as decimal points in the European style.
+	sed -i -e 's/,/\./g' results1.xls results2.xls
+
+	# Strikethrough HTML is used to denote failures.
+	# Replace <s> with '-' and remove </s>.
+	sed -i -e 's/<s>/-/g' results1.xls results2.xls
+	sed -i -e 's/<\/s>//g' results1.xls results2.xls
+
+	# Use LibreOffice to automatically convert the <table> to a csv file.
+	# This creates results.csv.
+	libreoffice --headless --convert-to csv results1.xls results2.xls
+	rm results1.html results1.xls results2.html results2.xls
+
+	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
+	sed -i -e 's/\xa0//g' results1.csv results2.csv
+
+	# Remove redundant spacing.
+	sed -i -e 's/  / /g' results1.csv results2.csv
+	sed -i -e 's/, /,/g' results1.csv results2.csv
+	sed -i -e 's/ ,/,/g' results1.csv results2.csv
+
+	# Failures are denoted as "X", when we just want a blank space.
+	sed -i -e 's/,X,/,,/g' results1.csv results2.csv
+
+	# Disqualifications use ascii 0x97, a long dash.
+	sed -i -e 's/\x97/DQ/g' results1.csv results2.csv
+
+
+
+	# Commands after this point were extracted into a separate file
+	# since they had to be re-run in case of error.
+	${SCRIPTDIR}/ipf-parse-post
+
+fi
+
+
+
