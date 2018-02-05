@@ -33,7 +33,14 @@ fi
 # Show any warnings.
 #${REPOTESTDIR}/check-entries-csv entries.csv
 
-# Copy the template to the current directory for filling in.
-cp ${SCRIPTDIR}/../meet.template meet.csv
+# Experimental - generate meet.csv from the results file
+if [ -e results.csv ];then
+	${SCRIPTDIR}/create-meet-csv results1.csv results2.csv #> meet.csv
+else
+	results=($(seq 1 1 ${n}))
+	results=( "${results[@]/%/.csv}" )
+	results=( "${results[@]/#/results}" )
+	${SCRIPTDIR}/create-meet-csv ${results[@]} > meet.csv
+fi
 
 echo "Done! Don't forget about meet.csv!"

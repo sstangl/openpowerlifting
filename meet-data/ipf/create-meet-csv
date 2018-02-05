@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Partially populates meet.csv from the results file
+
+import sys
+import csv
+
+def main(*filenames):
+	meet_file = csv.writer(sys.stdout)
+
+	fieldnames = []
+	fieldnames.append('Federation')
+	fieldnames.append('Date')
+	fieldnames.append('MeetCountry')
+	fieldnames.append('MeetState')
+	fieldnames.append('MeetTown')
+	fieldnames.append('MeetName')
+
+	meet_file.writerow(fieldnames)
+
+	meet_name = ''
+	meet_date = ''
+	meet_country = ''
+	meet_state = ''
+	meet_town =''
+
+	#Lets us share a codebase for all the feds that use this format
+	fed_dict = {'INTERNATIONAL POWERLIFTING FEDERATION': 'IPF', 'EUROPEAN POWERLIFTING FEDERATION': 'EPF'}
+
+
+	results_file = open(filenames[0],'r')
+
+	results_reader = csv.reader(results_file)
+
+	results = list(results_reader)
+
+	fed = results[0][0]
+
+
+	#Try and get the OPL code
+	try:
+		fed_code=fed_dict[fed]
+	except Exception as e:
+		fed_code = ''
+
+	meet_info=results[1][0].split('.',2)
+
+	meet_name = meet_info[0]
+	meet_location = meet_info[1].strip()
+
+	#Need to deal with meets that cross over months
+	meet_date_orig = meet_info[2].split('.')
+	meet_day = meet_date_orig[0].split('-')[0].strip() #Date starts from first day
+	meet_date = meet_date_orig[-1]+'-'+meet_date_orig[-2]+'-'+meet_day
+
+	meet_country = meet_location[meet_location.find('(')+1:meet_location.rfind(')')].strip()
+	meet_state = '' #This needs to be done manually
+	meet_town = meet_location[0:meet_location.rfind('(')].strip()
+
+	results_file.close()
+
+	#If more than one results file has been passed, then see if we can extract more information
+	if len(filenames)>1:
+		for filename in filenames[1:]:
+			results_file = open(filename,'r')
+
+			results_reader = csv.reader(results_file)
+
+			results = list(results_reader)
+
+			meet_info=results[1][0].split('.',2)
+
+			#Men and womens results are named under different meets even though they were the same
+			new_meet_name = meet_info[0]
+			if new_meet_name != meet_name:
+				if "Men's" in meet_name and "Women's" in new_meet_name:
+					meet_name = meet_name.replace(" Men's","")
+				elif "Women's" in meet_name and "Men's" in new_meet_name:
+					meet_name = meet_name.replace(" Women's","")
+			#Still need to deal with meets that cross over months
+			new_meet_date_orig = meet_info[2].split('.')
+			new_meet_day = meet_date_orig[0].split('-')[0].strip() #Date starts from first day
+			new_meet_date = meet_date_orig[-1]+'-'+meet_date_orig[-2]+'-'+meet_day
+
+			if new_meet_date < meet_date:
+				meet_date = new_meet_date
+
+			results_file.close()
+	
+
+
+	meet_file.writerow([fed_code,meet_date,meet_country,meet_state,meet_town,meet_name])
+
+
+
+if __name__ == '__main__':
+	if len(sys.argv) < 2:
+		print(" Usage: %s results.csv" % sys.argv[0], file=sys.stderr)
+		sys.exit(1)
+	main(*sys.argv[1:])

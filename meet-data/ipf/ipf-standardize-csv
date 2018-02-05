@@ -244,6 +244,7 @@ def standardize_full_meet(csv):
     csv.append_column('Division')
     csv.append_column('Event')
     csv.append_column('Sex')
+    csv.append_column('Equipment')
 
     assign_class(csv)
     assign_division(csv)
