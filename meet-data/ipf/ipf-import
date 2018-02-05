@@ -18,7 +18,7 @@ cd "$1"
 
 
 #One file
-if [ $# -nt 2 ];then
+if [ $# -eq 2 ];then
 	# Download the results page.
 	wget --output-document=results.html "$2"
 	cp results.html results.xls
