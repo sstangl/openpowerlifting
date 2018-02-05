@@ -16,7 +16,6 @@ else
 	for (( ii=1; ii<=${n};ii++))
 	do
 		${SCRIPTDIR}/ipf-standardize-csv "results"$ii".csv" > "entries"$ii".csv"
-
 	done
 
 	entries=($(seq 1 1 ${n}))
@@ -29,10 +28,6 @@ else
 
 fi
 
-
-# Show any warnings.
-#${REPOTESTDIR}/check-entries-csv entries.csv
-
 # Experimental - generate meet.csv from the results file
 if [ -e results.csv ];then
 	${SCRIPTDIR}/create-meet-csv results.csv > meet.csv
@@ -42,5 +37,8 @@ else
 	results=( "${results[@]/#/results}" )
 	${SCRIPTDIR}/create-meet-csv ${results[@]} > meet.csv
 fi
+
+# Show any warnings.
+${REPOTESTDIR}/check-entries-csv entries.csv
 
 echo "Done! Don't forget about meet.csv!"

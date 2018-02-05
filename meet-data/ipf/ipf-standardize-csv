@@ -46,7 +46,6 @@ def assign_division(csv):
     if curdiv ==None:
         curdiv = 'Open'
 
-
     for row in csv.rows:
         if row[0].startswith('Best Lifters') or row[0].startswith('List of'): # So we can correctly strip rows in Bench Only meets
             curdiv = 'NON-LIFTER-ROW'
@@ -108,6 +107,7 @@ def fixup_lift(csv, fieldname):
 
         row[idx] = amount
 
+
 #In Bench meets doping disqualifications and bombs are marked in the total
 def fixup_total(csv): 
     totalidx = csv.index('TotalKg')
@@ -153,10 +153,12 @@ def unreverse_names(csv):
 
         row[nameidx] = name
 
+
 def add_events(csv,events):
     eventidx = csv.index('Event')
     for row in csv.rows:
         row[eventidx]=events
+
 
 def add_sex(csv,sex):
     sexidx = csv.index('Sex')
@@ -209,8 +211,6 @@ def add_equipment(csv):
     eqpidx = csv.index('Equipment')
     for row in csv.rows:
         row[eqpidx]=equip_type
-
-
 
 
 def standardize_full_meet(csv):
@@ -294,6 +294,7 @@ def standardize_full_meet(csv):
     strip_whitespace(csv)
     unreverse_names(csv)
 
+
 def standardize_bench_only(csv):
     # Fieldnames given for the bench spreadsheet.
     fieldnames = []
@@ -311,8 +312,10 @@ def standardize_bench_only(csv):
     fieldnames.append('Bench3Kg')
 
     fieldnames.append('TotalKg')
+    
     if len(csv.rows[0])==14: #Some IPF meets mark WRs and DQs in a seperate column
         fieldnames.append('WR_DQ')
+
     fieldnames.append('XXX_wilks') 
     fieldnames.append('XXX_points')
 
@@ -350,8 +353,6 @@ def standardize_bench_only(csv):
     unreverse_names(csv)
 
 
-
-
 def main(filename):
     csv = Csv()
     with open(filename, 'r') as fd:
@@ -362,8 +363,6 @@ def main(filename):
         standardize_full_meet(csv)
     elif len(csv.rows[0]) in [13,14] :  # Bench only
         standardize_bench_only(csv)      
-
-
 
     csv.write(sys.stdout)
 
