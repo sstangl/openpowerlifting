@@ -16,7 +16,6 @@ fi
 mkdir "$1"
 cd "$1"
 
-
 #One file
 if [ $# -eq 2 ];then
 	# Download the results page.
@@ -53,13 +52,16 @@ if [ $# -eq 2 ];then
 	# Failures are denoted as "X", when we just want a blank space.
 	sed -i -e 's/,X,/,,/g' results.csv
 
+	#Skips are sometimes denotes as "#"
+	sed -i -e 's/#//g' results.csv
+
+
 	# Disqualifications use ascii 0x97, a long dash.
 	sed -i -e 's/\x97/DQ/g' results.csv
 
 
 
 else #two or more files
-
 	for (( ii=2; ii<=$# ; ii++))
 	do
 		# Download the results page.
@@ -68,7 +70,7 @@ else #two or more files
 
 		# Save the website URL for future use, since it's pretty hard to tell
 		# what meets on the site are tracked and which aren't.
-		echo ${!ii}  > URL
+		echo ${!ii}  >> URL
 
 
 		# Replace any commas in the xls file with periods.
@@ -94,11 +96,14 @@ else #two or more files
 		sed -i -e 's/, /,/g' "results"$((ii-1))".csv"
 		sed -i -e 's/ ,/,/g' "results"$((ii-1))".csv"
 
-	# Failures are denoted as "X", when we just want a blank space.
-	sed -i -e 's/,X,/,,/g' "results"$((ii-1))".csv"
+		# Failures are denoted as "X", when we just want a blank space.
+		sed -i -e 's/,X,/,,/g' "results"$((ii-1))".csv"
 
-	# Disqualifications use ascii 0x97, a long dash.
-	sed -i -e 's/\x97/DQ/g' "results"$((ii-1))".csv"
+		#Skips are sometimes denotes as "#"
+		sed -i -e 's/,#,/,,/g' "results"$((ii-1))".csv"
+
+		# Disqualifications use ascii 0x97, a long dash.
+		sed -i -e 's/\x97/DQ/g' "results"$((ii-1))".csv"	
 	done
 
 fi

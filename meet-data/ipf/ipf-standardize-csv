@@ -48,7 +48,7 @@ def assign_division(csv):
 
 
     for row in csv.rows:
-        if row[0].startswith('Best Lifters of'): # So we can correctly strip rows in Bench Only meets
+        if row[0].startswith('Best Lifters') or row[0].startswith('List of'): # So we can correctly strip rows in Bench Only meets
             curdiv = 'NON-LIFTER-ROW'
         elif row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
             curdiv = row[0]
@@ -91,6 +91,10 @@ def fixup_lift(csv, fieldname):
         if amount and amount[0] != '-' and '-' in amount:
             amount = amount.split('-')[0]
 
+        # Some older meets have records as 123/w
+        if amount and amount[0] != '/' and '/' in amount:
+            amount = amount.split('/')[0]
+
         if ' ' in amount:
             amount = amount.split()[0]
 
@@ -103,6 +107,16 @@ def fixup_lift(csv, fieldname):
             amount = ''
 
         row[idx] = amount
+
+#In Bench meets doping disqualifications and bombs are marked in the total
+def fixup_total(csv): 
+    totalidx = csv.index('TotalKg')
+    for row in csv.rows:
+        if row[totalidx] == 'DD':
+            row[totalidx]=''
+            row[placeidx] = 'DD'
+        elif row[totalidx] in {'DSQ','DQ','Out'}:
+            row[totalidx]=''
 
 
 def assign_best(csv, liftname):
@@ -153,7 +167,7 @@ def add_sex(csv,sex):
 #Finds the sex of the lifters in a meet from the weight classes
 def meet_sex(csv):
     mens_classes = ['-53','-59','-66','-74','-83','-93','-105','-120','120+']
-    womens_classes = ['-43','-47','-52','-57','-63','-72','-84','84+']
+    womens_classes = ['-43','-47','-57','-63','-72','-84','84+'] #Don't have -52 as this overlaps with an old class
 
     old_mens_only = ['-100','-110','-125','125+']
     old_womens_only = ['-44','48','90+']
@@ -240,6 +254,8 @@ def standardize_full_meet(csv):
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg',
               'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'TotalKg']:
         fixup_lift(csv, x)
+    fixup_total(csv)
+
 
     for x in ['Squat', 'Bench', 'Deadlift']:
         assign_best(csv, x)
@@ -265,6 +281,8 @@ def standardize_bench_only(csv):
     fieldnames.append('Bench3Kg')
 
     fieldnames.append('TotalKg')
+    if len(csv.rows[0])==14: #Some IPF meets mark WRs and DQs in a seperate column
+        fieldnames.append('WR_DQ')
     fieldnames.append('XXX_wilks') 
     fieldnames.append('XXX_points')
 
@@ -272,6 +290,7 @@ def standardize_bench_only(csv):
 
     csv.remove_column_by_name('XXX_wilksfactor')
     csv.remove_column_by_name('XXX_lot')
+    csv.remove_column_by_name('WR_DQ')
     csv.remove_column_by_name('XXX_wilks')
     csv.remove_column_by_name('XXX_points')
 
@@ -291,6 +310,7 @@ def standardize_bench_only(csv):
 
     for x in ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']:
         fixup_lift(csv, x)
+    fixup_total(csv)
 
     assign_best(csv, 'Bench')
 
@@ -309,7 +329,7 @@ def main(filename):
     # Fieldnames given for the detailed spreadsheet.
     if len(csv.rows[0]) == 22:
         standardize_full_meet(csv)
-    elif len(csv.rows[0]) == 13:  # Bench only
+    elif len(csv.rows[0]) in [13,14] :  # Bench only
         standardize_bench_only(csv)      
 
 
