@@ -37,6 +37,16 @@ def assign_division(csv):
     totalidx = csv.index('TotalKg')
     dividx = csv.index('Division')
 
+
+    #Check that a division label is given somewhere in this meet - if not it's an open meet.
+    for row in csv.rows:
+        if row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
+            break
+
+    if curdiv ==None:
+        curdiv = 'Open'
+
+
     for row in csv.rows:
         if row[0].startswith('Best Lifters of'): # So we can correctly strip rows in Bench Only meets
             curdiv = 'NON-LIFTER-ROW'
@@ -295,7 +305,6 @@ def main(filename):
     csv = Csv()
     with open(filename, 'r') as fd:
         csv.rows = [x.strip().split(',') for x in fd.readlines()]
-
 
     # Fieldnames given for the detailed spreadsheet.
     if len(csv.rows[0]) == 22:

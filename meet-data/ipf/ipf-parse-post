@@ -7,15 +7,31 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
-if [-f results.csv];then
+if [ -e results.csv ];then
 	# Use IPF-specific knowledge to parse results.csv into entries.csv.
 	${SCRIPTDIR}/ipf-standardize-csv results.csv > entries.csv
 else
-	${SCRIPTDIR}/ipf-standardize-csv results1.csv > entries.csv
+	n=`ls  | grep 'results.*\.csv' | wc -l`
+
+	for (( ii=1; ii<=${n};ii++))
+	do
+		${SCRIPTDIR}/ipf-standardize-csv "results"$ii".csv" > "entries"$ii".csv"
+
+	done
+
+	entries=($(seq 1 1 ${n}))
+	entries=( "${entries[@]/%/.csv}" )
+	entries=( "${entries[@]/#/entries}" )
+
+	${SCRIPTDIR}/csv-cat ${entries[@]} > entries.csv
+	rm ${entries[@]}
+
+
 fi
 
+
 # Show any warnings.
-${REPOTESTDIR}/check-entries-csv entries.csv
+#${REPOTESTDIR}/check-entries-csv entries.csv
 
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv

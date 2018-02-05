@@ -18,7 +18,7 @@ cd "$1"
 
 
 #One file
-if [$# -e 2];then
+if [ $# -nt 2 ];then
 	# Download the results page.
 	wget --output-document=results.html "$2"
 	cp results.html results.xls
@@ -56,60 +56,54 @@ if [$# -e 2];then
 	# Disqualifications use ascii 0x97, a long dash.
 	sed -i -e 's/\x97/DQ/g' results.csv
 
-	# Commands after this point were extracted into a separate file
-	# since they had to be re-run in case of error.
-	${SCRIPTDIR}/ipf-parse-post
-
-else #Male and Female files
-	# Download the results page.
-	wget --output-document=results1.html "$2"
-	cp results1.html results1.xls
-
-	# Download the results page.
-	wget --output-document=results2.html "$2"
-	cp results2.html results2.xls
-
-	# Save the website URL for future use, since it's pretty hard to tell
-	# what meets on the site are tracked and which aren't.
-	echo "$2"  > URL
-	echo "$3"  > URL
 
 
-	# Replace any commas in the xls file with periods.
-	# Commas are used as decimal points in the European style.
-	sed -i -e 's/,/\./g' results1.xls results2.xls
+else #two or more files
 
-	# Strikethrough HTML is used to denote failures.
-	# Replace <s> with '-' and remove </s>.
-	sed -i -e 's/<s>/-/g' results1.xls results2.xls
-	sed -i -e 's/<\/s>//g' results1.xls results2.xls
+	for (( ii=2; ii<=$# ; ii++))
+	do
+		# Download the results page.
+		wget --output-document="results"$((ii-1))".html"  ${!ii}
+		cp "results"$((ii-1))".html" "results"$((ii-1))".xls"
 
-	# Use LibreOffice to automatically convert the <table> to a csv file.
-	# This creates results.csv.
-	libreoffice --headless --convert-to csv results1.xls results2.xls
-	rm results1.html results1.xls results2.html results2.xls
+		# Save the website URL for future use, since it's pretty hard to tell
+		# what meets on the site are tracked and which aren't.
+		echo ${!ii}  > URL
 
-	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
-	sed -i -e 's/\xa0//g' results1.csv results2.csv
 
-	# Remove redundant spacing.
-	sed -i -e 's/  / /g' results1.csv results2.csv
-	sed -i -e 's/, /,/g' results1.csv results2.csv
-	sed -i -e 's/ ,/,/g' results1.csv results2.csv
+		# Replace any commas in the xls file with periods.
+		# Commas are used as decimal points in the European style.
+		sed -i -e 's/,/\./g' "results"$((ii-1))".xls"
+
+		# Strikethrough HTML is used to denote failures.
+		# Replace <s> with '-' and remove </s>.
+		sed -i -e 's/<s>/-/g' "results"$((ii-1))".xls" 
+		sed -i -e 's/<\/s>//g' "results"$((ii-1))".xls"
+
+		# Use LibreOffice to automatically convert the <table> to a csv file.
+		# This creates results.csv.
+		libreoffice --headless --convert-to csv "results"$((ii-1))".xls"
+
+		rm "results"$((ii-1))".html" "results"$((ii-1))".xls"
+
+		# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
+		sed -i -e 's/\xa0//g' "results"$((ii-1))".csv"
+
+		# Remove redundant spacing.
+		sed -i -e 's/  / /g' "results"$((ii-1))".csv"
+		sed -i -e 's/, /,/g' "results"$((ii-1))".csv"
+		sed -i -e 's/ ,/,/g' "results"$((ii-1))".csv"
 
 	# Failures are denoted as "X", when we just want a blank space.
-	sed -i -e 's/,X,/,,/g' results1.csv results2.csv
+	sed -i -e 's/,X,/,,/g' "results"$((ii-1))".csv"
 
 	# Disqualifications use ascii 0x97, a long dash.
-	sed -i -e 's/\x97/DQ/g' results1.csv results2.csv
-
-
-
-	# Commands after this point were extracted into a separate file
-	# since they had to be re-run in case of error.
-	${SCRIPTDIR}/ipf-parse-post
+	sed -i -e 's/\x97/DQ/g' "results"$((ii-1))".csv"
+	done
 
 fi
 
 
-
+# Commands after this point were extracted into a separate file
+# since they had to be re-run in case of error.
+${SCRIPTDIR}/ipf-parse-post
