@@ -219,6 +219,7 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.remove_column_by_name("Country-State");
     entriescsv.remove_column_by_name("College/University");
     entriescsv.remove_column_by_name("Tested");
+    entriescsv.remove_column_by_name("AgeClass");
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
