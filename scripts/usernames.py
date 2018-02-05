@@ -7,7 +7,7 @@
 
 # UTF-8 => lookalike ASCII substitutions.
 SubstitutionMap = {
-    'á':'a', 'ä':'a', 'å':'a', 'ą':'a',
+    'á':'a', 'ä':'a', 'å':'a', 'ą':'a', 'ã':'a',
     'æ':'ae',
     'ć':'c', 'ç':'c', 'č':'c',
     'đ':'d', 'ð':'d', 'ď':'d',
