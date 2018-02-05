@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FESUPO,FFForce,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -71,6 +71,10 @@
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Ireland">
+    <option value="IDFPF,IrishPF">
+      All Irish Feds
+    </option>
+    <option value="IDFPF">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
   </optgroup>
   <optgroup label="New Zealand">
