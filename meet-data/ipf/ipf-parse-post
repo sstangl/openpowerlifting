@@ -35,7 +35,7 @@ fi
 
 # Experimental - generate meet.csv from the results file
 if [ -e results.csv ];then
-	${SCRIPTDIR}/create-meet-csv results1.csv results2.csv #> meet.csv
+	${SCRIPTDIR}/create-meet-csv results.csv > meet.csv
 else
 	results=($(seq 1 1 ${n}))
 	results=( "${results[@]/%/.csv}" )
