@@ -210,16 +210,16 @@ def main(builddir, meetdir, lifterdir):
             addmeet(entriescsv, meetscsv, entriespath, meetpath)
 
     # Remove some columns that are allowed as data but are ignored.
-    entriescsv.remove_column_by_name("BirthYear");
-    entriescsv.remove_column_by_name("Country");
-    entriescsv.remove_column_by_name("School");
-    entriescsv.remove_column_by_name("Team");
-    entriescsv.remove_column_by_name("State");
-    entriescsv.remove_column_by_name("InternationalName");
-    entriescsv.remove_column_by_name("Country-State");
-    entriescsv.remove_column_by_name("College/University");
-    entriescsv.remove_column_by_name("Tested");
-    entriescsv.remove_column_by_name("AgeClass");
+    entriescsv.remove_column_by_name("BirthYear")
+    entriescsv.remove_column_by_name("Country")
+    entriescsv.remove_column_by_name("School")
+    entriescsv.remove_column_by_name("Team")
+    entriescsv.remove_column_by_name("State")
+    entriescsv.remove_column_by_name("InternationalName")
+    entriescsv.remove_column_by_name("Country-State")
+    entriescsv.remove_column_by_name("College/University")
+    entriescsv.remove_column_by_name("Tested")
+    entriescsv.remove_column_by_name("AgeClass")
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
