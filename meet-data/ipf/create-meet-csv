@@ -13,12 +13,12 @@ fed_dict = {'INTERNATIONAL POWERLIFTING FEDERATION': 'IPF', 'EUROPEAN POWERLIFTI
 
 
 #Splits a string by split_char, only splitting if not within brackets - for countries like USA
-def split_no_brackets(s,split_char):
+def split_no_brackets(str,split_char):
 	brackets = 0
 	split_str = []
 	curr_str = ''
 
-	for c in s:
+	for c in str:
 		curr_str += c
 		if c == '(':
 			brackets += 1
@@ -33,6 +33,12 @@ def split_no_brackets(s,split_char):
 
 
 	return split_str
+
+def remove_all(str,substrs):
+	removed_str = str
+	for substr in substrs:
+    	removed_str = str.replace(substr,'')
+    return removed_str
 
 def main(*filenames):
 
@@ -107,10 +113,10 @@ def main(*filenames):
 					#Men and womens results are named under different meets even though they were the same
 					new_meet_name = meet_info[0]
 					if new_meet_name != meet_name:
-						if "Men's" in meet_name and "Women's" in new_meet_name:
-							meet_name = meet_name.replace(" Men's","")
-						elif "Women's" in meet_name and "Men's" in new_meet_name:
-							meet_name = meet_name.replace(" Women's","")
+						if ("men's" in meet_name.lower() or "mens" in meet_name.lower()) and ("women's" in meet_name.lower() or "womens" in new_meet_name.lower()):
+							meet_name = remove_all(meet_name,["mens","Mens","Men's","men's"])
+						elif ("women's" in meet_name.lower() or "womens" in meet_name.lower()) and ("men's" in meet_name.lower() or "mens" in new_meet_name.lower()):
+							meet_name = remove_all(meet_name,["womens","Womens","Women's","women's"])
 
 					#Still need to deal with meets that cross over months
 					new_meet_day = meet_info[2].split('-')[0].strip() #Date starts from first day
