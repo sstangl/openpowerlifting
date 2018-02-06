@@ -1,29 +1,58 @@
 Name,Place,Division,WeightClassKg,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Event,Equipment,Sex
-Hoi Lam Tang,1,Open,47,1988,HKG,46.3,42.5,45,-47.5,45,45,B,Raw,F
-Sarah Simpson,1,Open,57,1991,NZL,56.25,-92.5,92.5,-97.5,92.5,92.5,B,Single-ply,F
-Carlolina Dillen,1,Open,63,1983,NZL,62.8,77.5,80,-82.5,80,80,B,Raw,F
-Mei Mei Chan,2,Open,63,1968,HKG,62.15,50,55,60,60,60,B,Raw,F
-Jenna Beaumont,1,Open,72,1985,NZL,71.6,55,60,65,65,65,B,Raw,F
-Riria Ropata,1,Open,84+,1989,NZL,121.05,100,110,,110,110,B,Single-ply,F
-Malia Ahosivi,1,Open,84+,1980,NIU,141.7,50,55,-65,55,55,B,Raw,F
-Febrose Tsiode,1,Sub-Juniors,52,1999,NRU,51.95,85,90,100,100,100,B,Raw,F
-Fatima Dediya,1,Sub-Juniors,57,2001,NRU,55.45,40,45,-50,45,45,B,Raw,F
-Barbara Agigo,1,Sub-Juniors,63,2000,NRU,63,45,55,-60,55,55,B,Raw,F
-Atniza Batsiua,2,Sub-Juniors,63,1998,NRU-B,61.7,45,50,52.5,52.5,52.5,B,Raw,F
-Dolly Limen,1,Sub-Juniors,72,1999,NRU,63.75,50,-57.5,57.5,57.5,57.5,B,Raw,F
-Tanimoun Bop,2,Sub-Juniors,72,1999,NRU-B,71.1,45,50,-57.5,50,50,B,Raw,F
-Kilisitina Vea,3,Sub-Juniors,72,2001,NIU,69.45,35,-37.5,-37.5,35,35,B,Raw,F
-Win-Ed Canon,1,Sub-Juniors,84,2001,NRU,82.55,55,62.5,70,70,70,B,Raw,F
-Tori Itsimeara,2,Sub-Juniors,84,1999,NRU-B,80.8,40,45,-52.5,45,45,B,Raw,F
-Olivia Thompson,1,Juniors,63,1993,NZL,61.5,55,-60,60,60,60,B,Raw,F
-Jade Isbister,1,Juniors,72,1995,NZL,69.8,55,60,-62.5,60,60,B,Raw,F
-Ewawiay Derog,1,Juniors,84,1995,NRU,77.9,52.5,62.5,67.5,67.5,67.5,B,Raw,F
-Malia Vea,2,Juniors,84,1997,NIU,82,50,55,65,65,65,B,Raw,F
-Tiarne Augustine,1,Juniors,84+,1994,AUS,124.1,107.5,112.5,-118,112.5,112.5,B,Raw,F
-Yurika Kepae,2,Juniors,84+,1995,NRU,125.95,70,85,-90,85,85,B,Raw,F
-Tui Katene,1,Masters 1,72,1973,NZL,68.35,85,90,-92.5,90,90,B,Raw,F
-Jessica Hanara,1,Masters 1,84,1975,NZL,79.45,87.5,90,92.5,92.5,92.5,B,Raw,F
-Emiko Kiba,1,Masters 2,52,1962,JPN,50.75,70,75,-80,75,75,B,Raw,F
-Delwyn Evans,1,Masters 2,72,1964,NZL,70.75,72.5,76,-77.5,76,76,B,Raw,F
-Alison Fitzmaurice,1,Masters 2,84+,1966,NZL,133.25,90,95,-105.5,95,95,B,Raw,F
-Trish Muldrock,1,Masters 3,52,1954,NZL,47.4,55,60,-63,60,60,B,Raw,F
+Yuji Fujita,1,Open,59,1984,JPN,58.35,130,142.5,-145,142.5,142.5,B,Raw,M
+Jonathon George,1,Open,66,1989,AUS,65.8,135,140,142.5,142.5,142.5,B,Raw,M
+Ho Man Cheung,2,Open,66,1986,HKG,65.45,120,132.5,-140,132.5,132.5,B,Raw,M
+Kavwa Sichone,1,Open,74,1989,NZL,70.85,152.5,-157.5,157.5,157.5,157.5,B,Raw,M
+Jacco Daniel,1,Open,83,1983,NRU,82,155,160,165,165,165,B,Raw,M
+Matt Gordon,2,Open,83,1990,NZL,81,150,157.5,-160,157.5,157.5,B,Raw,M
+Simon Bergner,3,Open,83,1987,AUS,82.7,135,142.5,147.5,147.5,147.5,B,Raw,M
+Cam Billing,4,Open,83,1982,NZL,83,-100,100,-110,100,100,B,Raw,M
+Jesse Roland,1,Open,93,1991,NRU,92.3,180,190,198,198,198,B,Raw,M
+Munehisa Takeda,2,Open,93,1978,JPN,92.15,180,185,-190,185,185,B,Raw,M
+Chris Bennett,3,Open,93,1984,NZL,92.45,160,167.5,-172.5,167.5,167.5,B,Raw,M
+Denis Rybka,1,Open,105,1985,KAZ,103.35,200,210,-221,210,210,B,Raw,M
+Josh Cook,2,Open,105,1991,NRU,102.3,175,185,-190,185,185,B,Raw,M
+Ryan Cradock,3,Open,105,1989,NZL,104.6,160,-170,-170,160,160,B,Raw,M
+Richard Hozjan,1,Open,120,1982,AUS,111.05,197.5,205,-215.5,205,205,B,Raw,M
+Roman Pishayev,2,Open,120,1989,KAZ,109,190,200,-207.5,200,200,B,Raw,M
+Yoshiyuki Miyamoto,3,Open,120,1978,JPN,119.6,192.5,-200,-202.5,192.5,192.5,B,Raw,M
+Jezza Uepa,1,Open,120+,1980,NRU,181.5,240,-242.5,,240,240,B,Raw,M
+Maximus Tsiode,1,Sub-Juniors,59,2000,NRU,58.85,90,95,-97.5,95,95,B,Raw,M
+Josh Pierson,1,Sub-Juniors,74,1999,NZL,72.3,85,92.5,-100,92.5,92.5,B,Raw,M
+Manson Saxon,1,Sub-Juniors,93,1999,NRU,93,110,-120,120,120,120,B,Raw,M
+Harrison Harris,1,Juniors,74,1995,NRU,73.6,100,112.5,-115,112.5,112.5,B,Raw,M
+Ibn-Battuta Deireragea,2,Juniors,74,1996,NRU,71.5,100,110,-112.5,110,110,B,Raw,M
+Yuki Daibo,1,Juniors,83,1994,JPN,82.05,155,162.5,-170,162.5,162.5,B,Raw,M
+Dean Chen,2,Juniors,83,1995,AUS,82.6,152.5,-157.5,-165,152.5,152.5,B,Raw,M
+Rojay Weibeya,3,Juniors,83,1997,NRU,82.25,102.5,110,-115,110,110,B,Raw,M
+Jester Duburiya,1,Juniors,93,1995,NRU,91.8,165,172.5,181.5,181.5,181.5,B,Raw,M
+Angin Gadabu,2,Juniors,93,1995,NRU-B,89.15,165,175,-181.5,175,175,B,Raw,M
+Rory Lynch,3,Juniors,93,1994,NZL,89.95,142.5,147.5,-152.5,147.5,147.5,B,Raw,M
+Jivan Saimone,1,Juniors,120,1993,NZL,118.7,170,180,190,190,190,B,Raw,M
+David Greene,1,Masters 1,59,1972,AUS,58.65,115,119,122,122,122,B,Raw,M
+Brendon Cronin,2,Masters 1,59,1976,NZL,53.4,70,75,-80,75,75,B,Raw,M
+Hiroaki Koguchi,1,Masters 1,83,1974,JPN,82.05,145,152.5,160,160,160,B,Raw,M
+Kazuaki Ito,2,Masters 1,83,1967,JPN,81.95,135,-142.5,-142.5,135,135,B,Raw,M
+Adrian Brogan,3,Masters 1,83,1973,AUS,81.25,125,130,-135,130,130,B,Raw,M
+Paul Gattsche,1,Masters 1,105,1968,NZL,104.95,180,190,195,195,195,B,Raw,M
+Toshio Nakamura,2,Masters 1,105,1970,JPN,103.3,145,-165,-165,145,145,B,Raw,M
+Jason Wharton,1,Masters 1,120,1970,NRU,116.3,145,152.5,-155,152.5,152.5,B,Raw,M
+Sean Smith,1,Masters 1,120+,1972,AUS,134.6,147.5,155,160,160,160,B,Raw,M
+Yuji Takada,1,Masters 2,59,1965,JPN,58.45,117.5,122.5,-130,122.5,122.5,B,Raw,M
+Tsukasa Kameda,2,Masters 2,59,1961,JPN,58.9,107.5,-112.5,112.5,112.5,112.5,B,Raw,M
+Brian Froggatt,1,Masters 2,74,1958,NZL,73.77,130,-137.5,137.5,137.5,137.5,B,Raw,M
+Terry Pierson,1,Masters 2,83,1959,NZL,81.35,130,137.5,-147.5,137.5,137.5,B,Raw,M
+Rennie Soffe,1,Masters 2,93,1959,NZL,89.1,160,167.5,170,170,170,B,Raw,M
+Ben Jamieson,2,Masters 2,93,1965,NZL,91.35,155,165,-172.5,165,165,B,Raw,M
+Osamu Sano,3,Masters 2,93,1963,JPN,90.85,145,150,155,155,155,B,Raw,M
+Yukihiko Oguro,4,Masters 2,93,1960,JPN,89.4,135,145,-152.5,145,145,B,Raw,M
+Alan Puleosi,1,Masters 2,105,1957,NIU,93.45,80,100,-105,100,100,B,Raw,M
+Steve Lousich,1,Masters 2,120+,1965,NZL,128.45,180,190,198,198,198,B,Raw,M
+Brett Kirchner,2,Masters 2,120+,1963,AUS,124.9,145,152.5,-157.5,152.5,152.5,B,Raw,M
+Takeshi Shirakawa,1,Masters 3,59,1948,JPN,57.25,110,120,122.5,122.5,122.5,B,Raw,M
+Taire Teabuge,1,Masters 3,66,1951,NRU,63.55,-70,70,-75,70,70,B,Raw,M
+Geoffrey Lewis,1,Masters 3,74,1948,AUS,72.05,82.5,85,-87.5,85,85,B,Raw,M
+Roger Gedye,1,Masters 3,93,1956,NZL,90.4,107.5,110,-112.5,110,110,B,Raw,M
+Kevin Boatwood,1,Masters 3,120,1951,AUS,113.3,142.5,147.5,150,150,150,B,Raw,M
+Takao Morohoshi,1,Masters 4,74,1945,JPN,73.35,105,110.5,-115,110.5,110.5,B,Raw,M
+John Dellow,1,Masters 4,93,1941,AUS,92.05,127.5,-132.5,-132.5,127.5,127.5,B,Raw,M
