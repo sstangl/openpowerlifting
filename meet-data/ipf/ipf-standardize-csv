@@ -7,7 +7,7 @@
 
 import sys
 from oplcsv import Csv
-
+import shutil
 
 def error(msg):
     print("Error: %s" % msg, file=sys.stderr)
@@ -115,7 +115,7 @@ def fixup_total(csv):
         if row[totalidx] == 'DD':
             row[totalidx]=''
             row[placeidx] = 'DD'
-        elif row[totalidx] in {'DSQ','DQ','Out'}:
+        elif row[totalidx] in {'DSQ','DQ','Out','RD'}:
             row[totalidx]=''
 
 
@@ -358,12 +358,16 @@ def main(filename):
     with open(filename, 'r') as fd:
         csv.rows = [x.strip().split(',') for x in fd.readlines()]
 
-    # Fieldnames given for the detailed spreadsheet.
-    if len(csv.rows[0]) == 22:
+    
+    if len(csv.rows[0]) == 22: #Fieldnames given for the detailed spreadsheet.
         standardize_full_meet(csv)
-    elif len(csv.rows[0]) in [13,14] :  # Bench only
-        standardize_bench_only(csv)      
-
+    elif len(csv.rows[0]) in [13,14]: #Bench only
+        standardize_bench_only(csv)  
+    else: #Leave the csv exactly the same as the results file
+        with open(filename, "r") as fd:
+        	shutil.copyfileobj(fd, sys.stdout)
+        return
+    
     csv.write(sys.stdout)
 
 
