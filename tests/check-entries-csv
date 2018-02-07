@@ -254,6 +254,7 @@ def check_column_weightclass(s, row, csv):
     proraw_extra = ['70','70+','75+','80','95','110+']
     rps_extra = ['155']
     spf_extra = ['117.5','100+','67.5+']
+    idfpf_extra = ['47.5', '50.5', '55.5', '58.5']
     ipf_extra = ['60+']
     old_usapl = ['145','145+']
     wnpf_extra = ['34']
@@ -262,7 +263,8 @@ def check_column_weightclass(s, row, csv):
 
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
               rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
-              old_usapl + ffforce_extra + wnpf_extra + apa_extra
+              old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
+              idfpf_extra
 
     if not s in classes:
         pwarning("Unknown weight class: %s" % s)
@@ -357,6 +359,7 @@ HeaderHandlers = {
     'State': check_column_state,
 
     # Columns that we totally ignore but aren't bad to keep around.
+    'AgeClass': ignore_column,
     'Team': ignore_column,
     'Country-State': ignore_column,
     'Country': ignore_column,
