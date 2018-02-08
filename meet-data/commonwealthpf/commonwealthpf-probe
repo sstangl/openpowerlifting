@@ -14,7 +14,7 @@ import urllib.request
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://commonwealthpowerlifting.com/results.html"
+URLS = ["http://commonwealthpowerlifting.com/results.html","http://commonwealthpowerlifting.com/"]
 BASEURL = "http://commonwealthpowerlifting.com/"
 
 
@@ -66,8 +66,9 @@ def getenteredurls():
 def main():
     meetlist = []
 
-    html = gethtml(URL)
-    meetlist = getmeetlist(html)
+    for url in URLS:
+        html = gethtml(url)
+        meetlist = getmeetlist(html)
 
     known = getenteredurls()
 
