@@ -10,9 +10,11 @@
 # 2) Each column's data are in expected formats for that column type.
 #
 
-import oplcsv
-import os
 import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))+"\\scripts") 
+
+import oplcsv
 import wilks
 
 def redden(s):
