@@ -17,7 +17,7 @@
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
-    <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation (Incomplete)</option>
+    <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation</option>
   </optgroup>
   <optgroup label="United States">
     <option value="365Strong,ADFPA,AAU,APA,APC,APF,HERC,IPA,MHP,MM,NASA,RAW,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
@@ -78,7 +78,7 @@
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
   </optgroup>
   <optgroup label="New Zealand">
-    <option value="NZPF">NZPF - New Zealand Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="NZPF">NZPF - New Zealand Powerlifting Federation [IPF]</option>
   </optgroup>
   <optgroup label="Norway">
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
