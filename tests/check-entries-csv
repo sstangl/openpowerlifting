@@ -460,6 +460,7 @@ def check_row_event_consistency(row, csv):
 
 #Checks that athletes of the wrong sex are not in a single-sex weight class
 def check_row_weightclass_sex(row,csv):
+
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
