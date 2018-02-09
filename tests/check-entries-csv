@@ -464,7 +464,7 @@ def check_row_weightclass_sex(row,csv):
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
-    ipf_men   = ['53','59','66','74','83','93','105','120','120+']
+    ipf_men   = ['59','66','74','83','93','105','120','120+'] #No -53 as this is an IDFPF womens class
     trad_men_only = ['125','140','140+'] #No 100,110 due to SPF,USPA etc
     old_usapl_men_only = ['145','145+']
 
@@ -473,7 +473,7 @@ def check_row_weightclass_sex(row,csv):
     #No -52kg as this overlaps with a traditional weight-class
     ipf_women = ['43','47','57','63','72','84','84+']
     ipf_women_extra = ['30','35','40']
-    trad_women_only = ['44','48','90+']
+    trad_women_only = ['90+'] #SPF has 44 & 48 kg mens classes
 
     women_only = ipf_women+ipf_women_extra+trad_women_only
 

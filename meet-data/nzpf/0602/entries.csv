@@ -1,8 +1,8 @@
 WeightClassKg,BodyweightKg,Name,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Equipment,Event,Place
 60,59.65,Kathleen Fitton,F,Open,90,92.5,-105,,92.5,67.5,72.5,75,,75,110,120,-125,120,,287.5,Single-ply,SBD,2
-67.5,66.95,Patricia Buckman,F,Masters 1,90,-965,-100,,90,60,65,-70,,65,-95,100,110,110,,265,Single-ply,SBD,1
+67.5,66.95,Patricia Buckman,F,Masters 1,90,-95,-100,,90,60,65,-70,,65,-95,100,110,110,,265,Single-ply,SBD,1
 67.5,66.7,Marie Soffe,F,Masters 1,115,125,130,,130,-80,-80,-80,,,-160,-160,-160,,,,Single-ply,SBD,DQ
-52,51.15,Ali Gascoine,F,Masters 1,-200,-205,105,,105,-60,60,-65,,60,135,145,152.5,152.5,155,317.5,Single-ply,SBD,1
+52,51.15,Ali Gascoine,F,Masters 1,-100,-105,105,,105,-60,60,-65,,60,135,145,152.5,152.5,155,317.5,Single-ply,SBD,1
 56,55.35,Karen Thompson,F,Masters 1,105,115,-122.5,,115,82.5,85,87.5,90,87.5,115,125,-130,125,,327.5,Single-ply,SBD,1
 60,57.15,Maria Brightwater-Wharf,F,Masters 1,135,-145,-145,,135,75,80,-82.5,,80,-147.5,155,160,160,,375,Single-ply,SBD,1
 60,58.7,Tania Green,F,Open,120,125,-132.5,,125,87.5,92.5,-95,,92.5,117.5,125,-130,125,,342.5,Single-ply,SBD,1
@@ -12,7 +12,7 @@ WeightClassKg,BodyweightKg,Name,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg
 60,54.65,Celia McMillan,F,Open,112.5,120,127.5,,127.5,-75,-75,-75,,,112.5,-117.5,117.5,117.5,,,Single-ply,SBD,DQ
 52,49.75,Merina Foster,F,Open,75,80,85,,85,40,-45,-45,,40,100,105,110,110,,235,Single-ply,SBD,1
 75,73.4,Michael Gray,M,Juniors,167.5,170,-290,,170,107.5,112.5,-117.5,,112.5,162.5,-172.5,-172.5,162.5,,445,Single-ply,SBD,2
-75,68.25,Leigh Matheson,F,Open,-220,115,-122.5,,115,60,-65,65,,65,120,130,-135,130,,310,Single-ply,SBD,1
+75,68.25,Leigh Matheson,F,Open,-110,115,-122.5,,115,60,-65,65,,65,120,130,-135,130,,310,Single-ply,SBD,1
 75,68.65,Barbara Olah,F,Open,62.5,75,-87.5,,75,50,-55,-55,,50,92.5,-95,-115,92.5,,217.5,Single-ply,SBD,2
 82.5,75.45,Nicholas Fyfe,M,Juniors,80,90,100,,100,57.5,65,-72.5,,65,90,-110,-115,90,,255,Single-ply,SBD,1
 100,98.4,Rayon Williams,M,Juniors,-220,230,-250,,230,-180,-180,-180,,,-230,-230,-230,,,,Single-ply,SBD,DQ
@@ -26,7 +26,7 @@ WeightClassKg,BodyweightKg,Name,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg
 75,72.65,Glen Wright,M,Masters 1,-175,177.5,-190,,177.5,-125,-127.5,-127.5,,,-170,-170,170,170,,,Single-ply,SBD,DQ
 100,99.45,Warren Mackrell,M,Masters 1,-260,-260,260,,260,167.5,172.5,175,,175,240,250,255,255,,690,Single-ply,SBD,1
 100,99.7,Ted Anderson,M,Masters 1,-265,265,-272.5,,265,165,175,180,,180,230,240,245,245,,690,Single-ply,SBD,2
-82.5,81.45,Steven King,M,Masters 1,232.5,150,262.5,,262.5,130,137.5,-142.5,,137.5,220,242.5,-250,242.5,,642.5,Single-ply,SBD,1
+82.5,81.45,Steven King,M,Masters 1,232.5,250,262.5,,262.5,130,137.5,-142.5,,137.5,220,242.5,-250,242.5,,642.5,Single-ply,SBD,1
 90,87.65,Ian Pilkington,M,Masters 1,150,180,-190,,180,120,155,160,,160,140,160,-180,160,,500,Single-ply,SBD,1
 100,96.45,Joe Tafua,M,Masters 1,230,-245,-252.5,,230,160,-170,-170,,160,250,-265,-265,250,,640,Single-ply,SBD,4
 75,74.6,Paul Bontron,M,Masters 1,170,175,-180,,175,130,135,-140,,135,180,190,-200,190,,500,Single-ply,SBD,2
@@ -40,7 +40,7 @@ WeightClassKg,BodyweightKg,Name,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg
 125+,142.25,Lance Stewart,M,Masters 1,365,-380,-380,,365,175,185,190,,190,265,280,-292.5,280,,835,Single-ply,SBD,1
 90,82.7,Bill Farrant,M,Masters 4,75,-80,80,,80,60,65,-67.5,,65,100,110,-120,110,,255,Single-ply,SBD,1
 100,93.85,Bruce Wills,M,Masters 3,110,130,140,,140,110,117.5,-122.5,,117.5,140,160,170,170,,427.5,Single-ply,SBD,1
-125,121.2,Willie Pakoti,M,Masters 2,140,-142.5,-142.5,,140,100,-100,-100,,100,230,245,-250.5,245,,485,Single-ply,SBD,1
+125,121.2,Willie Pakoti,M,Masters 2,140,-142.5,-142.5,,140,-100,-100,100,,100,230,245,-250.5,245,,485,Single-ply,SBD,1
 125+,137.7,Peter Smith,M,Masters 1,-325,330,-340,,330,210,220,227.5,230,227.5,245,255,265,265,,822.5,Single-ply,SBD,2
 110,109.7,Steve Lousich,M,Masters 1,265,280,-290,,280,235,-242.5,-242.5,,235,225,235,245,245,,760,Single-ply,SBD,1
 90,89.95,Noel Frank,M,Open,260,270,280,,280,200,210,217.5,223,217.5,250,265,-270,265,,762.5,Single-ply,SBD,1
