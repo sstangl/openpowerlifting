@@ -460,18 +460,18 @@ def check_row_event_consistency(row, csv):
 
 #Checks that athletes of the wrong sex are not in a single-sex weight class
 def check_row_weightclass_sex(row,csv):
-    
+
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
     ipf_men   = ['53','59','66','74','83','93','105','120','120+']
     trad_men_only = ['125','140','140+'] #No 100,110 due to SPF,USPA etc
     old_usapl_men_only = ['145','145+']
-    
+
     men_only = ipf_men+trad_men_only +old_usapl_men_only
 
     #No -52kg as this overlaps with a traditional weight-class
-    ipf_women = ['43','47','57','63','72','84','84+'] 
+    ipf_women = ['43','47','57','63','72','84','84+']
     ipf_women_extra = ['30','35','40']
     trad_women_only = ['44','48','90+']
 
@@ -695,9 +695,7 @@ def check_row(row, csv):
 
     check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
     check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
-    check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])       
-
-
+    check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
