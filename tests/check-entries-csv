@@ -689,24 +689,13 @@ def check_row(row, csv):
     check_row_lift_consistency(row, csv, 'BestDeadliftKg',
                                           ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg'])
 
-    if 'Squat4Kg' in csv.fieldnames:
-        check_row_lift_order(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
-        check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
-    elif 'Squat3Kg' in csv.fieldnames: #If attempts are given at all
-        check_row_lift_order(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg'])
-        check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg'])
-    if 'Bench4Kg' in csv.fieldnames:
-        check_row_lift_order(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
-        check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
-    elif 'Bench3Kg' in csv.fieldnames:
-        check_row_lift_order(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg'])
-        check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg'])
-    if 'Deadlift4Kg' in csv.fieldnames:
-        check_row_lift_order(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])
-        check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])       
-    elif 'Deadlift3Kg' in csv.fieldnames:
-        check_row_lift_order(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg'])      
-        check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg'])  
+    check_row_lift_order(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
+    check_row_lift_order(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
+    check_row_lift_order(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])
+
+    check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
+    check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
+    check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])       
 
 
 
