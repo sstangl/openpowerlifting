@@ -7,10 +7,13 @@
 # Used as part of "make check".
 #
 
+import colorama
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
 import oplcsv
 from usernames import get_username
-import os
-import sys
+
 
 def redden(s):
     return "\033[1;31m" + s + "\033[0;m"
@@ -130,7 +133,7 @@ def check_name_corrections(names):
     filename = 'name-corrections.dat'
     seenset = set() # Names seen in the file so far.
 
-    fd = open('lifter-data' + os.sep + filename)
+    fd = open('lifter-data' + os.sep + filename,encoding='utf-8')
     for line in fd:
         variants = line.rstrip('\n').split(',')
 
@@ -213,6 +216,7 @@ def check_name_disambiguation(names):
 def main():
     global hitError
 
+    colorama.init()
     # Get a list of all the Name entries throughout the whole project.
     names = get_database_nameset()
 
@@ -220,6 +224,7 @@ def main():
     check_usernames(names)
     check_name_corrections(names)
     check_name_disambiguation(names)
+    colorama.deinit()
 
     if hitError:
         return 1

@@ -2,8 +2,11 @@
 # Checks if instagrams exist in lifter-data/social-media.csv
 # Takes a while to open all these urls
 
+import colorama
 import urllib.request
-import sys, os
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
 import oplcsv
 
 def enyellow(s):
@@ -38,7 +41,10 @@ def main(filename):
         if (not valid):
             errors += 1
         total += 1
+
+    colorama.init()
     print("{0} / {1} errors".format(errors, total))
+    colorama.deinit()
     return 0
 
 if __name__ == '__main__':

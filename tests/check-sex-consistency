@@ -5,9 +5,11 @@
 # that are listed as being both M and F.
 #
 
+import colorama
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
 import oplcsv
-import os
-import sys
 
 
 # Hashtable for sex lookup.
@@ -81,6 +83,7 @@ def process_file(path):
 
 
 def main():
+    colorama.init()
     for dirname, subdirs, files in os.walk(os.getcwd()):
         if 'entries.csv' in files:
             entriespath = dirname + os.sep + 'entries.csv'
@@ -93,6 +96,7 @@ def main():
     if errorCount > 0 or warningCount > 0:
         print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
 
+    colorama.deinit()
     if errorCount > 0:
         return 1
     return 0

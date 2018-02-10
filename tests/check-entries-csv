@@ -10,9 +10,9 @@
 # 2) Each column's data are in expected formats for that column type.
 #
 
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))+"\\scripts") 
+import colorama
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
 import oplcsv
 import wilks
@@ -737,6 +737,7 @@ def check(scriptname, filename):
 
 
 if __name__ == '__main__':
+    colorama.init()
     # If arguments are provided, check only those files.
     if len(sys.argv) > 1:
         for f in sys.argv[1:]:
@@ -754,6 +755,6 @@ if __name__ == '__main__':
                     perror('Missing meet.csv')
 
     print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
-
+    colorama.deinit()
     if errorCount > 0:
         sys.exit(1)

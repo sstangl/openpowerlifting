@@ -8,11 +8,12 @@
 #
 # 1) All the column data is in the pre-set format.
 #
-
+import colorama
 import datetime
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
 import oplcsv
-import os
-import sys
 
 def redden(s):
     return "\033[1;31m" + s + "\033[0;m"
@@ -323,6 +324,7 @@ def check(scriptname, filename):
             perror("The abbreviation for Texas is 'TX', not '%s'." % row[stateidx])
 
 if __name__ == '__main__':
+    colorama.init()
     # If arguments are provided, check only those files.
     if len(sys.argv) > 1:
         for f in sys.argv[1:]:
@@ -338,6 +340,8 @@ if __name__ == '__main__':
 
                 if not 'entries.csv' in files:
                     perror('Missing entries.csv')
+
+    colorama.deinit()
 
     if hitError:
         sys.exit(1)
