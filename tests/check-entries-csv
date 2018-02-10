@@ -9,7 +9,6 @@
 # 1) All the column names are expected.
 # 2) Each column's data are in expected formats for that column type.
 #
-
 import colorama
 import sys,os
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
