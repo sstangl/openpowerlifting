@@ -472,10 +472,9 @@ def check_row_weightclass_sex(row,csv):
 
     #No -52kg as this overlaps with a traditional weight-class
     ipf_women = ['43','47','57','63','72','84','84+']
-    ipf_women_extra = ['30','35','40']
     trad_women_only = ['90+'] #SPF has 44 & 48 kg mens classes
 
-    women_only = ipf_women+ipf_women_extra+trad_women_only
+    women_only = ipf_women+trad_women_only
 
 
     if row[csv.index('Sex')] is 'M' and row[csv.index('WeightClassKg')] in women_only:
