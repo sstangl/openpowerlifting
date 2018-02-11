@@ -3,7 +3,7 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 44,Kasey Parker,67.5,-72.5,-77.5,67.5,30,32.5,35,35,77.5,-87.5,-87.5,77.5,180,2,F,Junior Varsity,Single-ply,SBD
 48,Jennifer Ray,-90,-90,90,90,45,-50,50,50,110,115,-120,115,255,1,F,Junior Varsity,Single-ply,SBD
 48,Chelsea Richard,92.5,-97.5,-97.5,92.5,40,-45,45,45,92.5,102.5,110,110,247.5,2,F,Junior Varsity,Single-ply,SBD
-48,Jorden Ryder,52.5,57.5,-65,57.5,27.5,37.5,-35,37.5,70,80,85,85,180,3,F,Junior Varsity,Single-ply,SBD
+48,Jorden Ryder,52.5,57.5,-65,57.5,27.5,37.5,-45,37.5,70,80,85,85,180,3,F,Junior Varsity,Single-ply,SBD
 48,Jenny Beck,57.5,-60,-60,57.5,25,27.5,30,30,77.5,82.5,-90,82.5,170,4,F,Junior Varsity,Single-ply,SBD
 52,Jasmine Brewer,82.5,92.5,95,95,40,42.5,-45,42.5,120,125,-127.5,125,262.5,1,F,Junior Varsity,Single-ply,SBD
 52,Megan Payne,82.5,-90,90,90,35,40,42.5,42.5,90,100,-110,100,232.5,2,F,Junior Varsity,Single-ply,SBD
@@ -97,7 +97,7 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 67.5,Molly Dennany,117.5,130,135,135,60,65,70,70,120,-127.5,130,130,335,1,F,Varsity,Single-ply,SBD
 67.5,Amy Hasner,112.5,127.5,-135,127.5,45,-52.5,52.5,52.5,125,140,147.5,147.5,327.5,2,F,Varsity,Single-ply,SBD
 67.5,Randy Roberts,110,120,-127.5,120,52.5,60,-65,60,125,132.5,147.5,147.5,327.5,3,F,Varsity,Single-ply,SBD
-67.5,Leah Marie Brown,110,117.5,125,125,55,-52.5,-52.5,55,135,140,-145,140,320,4,F,Varsity,Single-ply,SBD
+67.5,Leah Marie Brown,110,117.5,125,125,-52.5,-52.5,55,55,135,140,-145,140,320,4,F,Varsity,Single-ply,SBD
 67.5,Ashley Proctor,115,-122.5,-125,115,52.5,-57.5,57.5,57.5,120,135,140,140,312.5,5,F,Varsity,Single-ply,SBD
 67.5,Kourtney Michiels,105,-117.5,120,120,52.5,57.5,-60,57.5,125,132.5,-142.5,132.5,310,6,F,Varsity,Single-ply,SBD
 67.5,Lydia Emnott,110,-122.5,-122.5,110,57.5,62.5,-67.5,62.5,122.5,-132.5,132.5,132.5,305,7,F,Varsity,Single-ply,SBD
@@ -205,8 +205,8 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 82.5,Ryan Chanbennet,140,147.5,155,155,85,92.5,97.5,97.5,152.5,160,170,170,422.5,5,M,Junior Varsity,Single-ply,SBD
 82.5,Tim Delbruegge,115,125,140,140,-102.5,-102.5,102.5,102.5,120,150,-165,150,392.5,6,M,Junior Varsity,Single-ply,SBD
 82.5,Dustin Barilani,-115,-115,115,115,90,95,100,100,137.5,142.5,152.5,152.5,367.5,7,M,Junior Varsity,Single-ply,SBD
-82.5,Andy Schwertel,105,-115,125,125,-72.5,72.5,8.5,72.5,135,157.5,-175,157.5,355,8,M,Junior Varsity,Single-ply,SBD
-90,Derek Brixius,215,227.5,227.5,227.5,125,135,-140,135,-230,230,242.5,242.5,605,1,M,Junior Varsity,Single-ply,SBD
+82.5,Andy Schwertel,105,-115,125,125,-72.5,72.5,-85,72.5,135,157.5,-175,157.5,355,8,M,Junior Varsity,Single-ply,SBD
+90,Derek Brixius,215,-227.5,227.5,227.5,125,135,-140,135,-230,230,242.5,242.5,605,1,M,Junior Varsity,Single-ply,SBD
 90,Garret Halphen,165,182.5,-192.5,182.5,107.5,117.5,120,120,182.5,207.5,222.5,222.5,525,2,M,Junior Varsity,Single-ply,SBD
 90,Ryan Greiser,167.5,-175,-175,167.5,105,-110,110,110,210,-220,225,225,502.5,3,M,Junior Varsity,Single-ply,SBD
 90,Jeff Eberenz,160,175,185,185,107.5,110,112.5,112.5,185,195,202.5,202.5,500,4,M,Junior Varsity,Single-ply,SBD
@@ -298,14 +298,14 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 75,Ryen Meninga,-180,180,-195,180,101.5,112.5,117.5,117.5,227.5,-242.5,-242.5,227.5,525,10,M,Varsity,Single-ply,SBD
 75,Justin Stratton,182.5,190,-197.5,190,122.5,-127.5,-127.5,122.5,-210,210,-227.5,210,522.5,11,M,Varsity,Single-ply,SBD
 75,Dustin Keel,175,192.5,205,205,107.5,115,-122.5,115,182.5,197.5,-215,197.5,517.5,12,M,Varsity,Single-ply,SBD
-75,Corey Saltzman,185,190,195,195,100,107.5,107.5,107.5,202.5,210,222.5,222.5,525,13,M,Varsity,Single-ply,SBD
+75,Corey Saltzman,185,190,195,195,100,-107.5,107.5,107.5,202.5,210,222.5,222.5,525,13,M,Varsity,Single-ply,SBD
 75,Jeff Grey,167.5,175,-182.5,175,117.5,-122.5,-125,117.5,200,215,-222.5,215,507.5,14,M,Varsity,Single-ply,SBD
 75,Jeremy Davidson,197.5,205,-215,205,105,115,-122.5,115,185,-197.5,-197.5,185,505,15,M,Varsity,Single-ply,SBD
 75,Mike Stith,170,177.5,185,185,105,-112.5,-112.5,105,205,-227.5,-227.5,205,495,16,M,Varsity,Single-ply,SBD
 75,Cole Fritsch,-170,-170,170,170,105,-117.5,117.5,117.5,205,-227.5,-227.5,205,492.5,17,M,Varsity,Single-ply,SBD
 75,Mike Komperud,162.5,175,185,185,90,100,102.5,102.5,170,180,185,185,472.5,18,M,Varsity,Single-ply,SBD
 75,Tanner Smith,157.5,170,-177.5,170,82.5,-92.5,-92.5,82.5,185,-195,197.5,197.5,450,19,M,Varsity,Single-ply,SBD
-75,Philip Paulsen,127.5,140,-147.5,140,97.5,112.5,-100,112.5,187.5,197.5,202.5,202.5,455,20,M,Varsity,Single-ply,SBD
+75,Philip Paulsen,127.5,140,-147.5,140,97.5,112.5,-120,112.5,187.5,197.5,202.5,202.5,455,20,M,Varsity,Single-ply,SBD
 75,Joshua Bendel,155,162.5,-167.5,162.5,80,-92.5,92.5,92.5,152.5,165,-170,165,420,21,M,Varsity,Single-ply,SBD
 75,Travis Jenkins,152.5,-165,-165,152.5,-77.5,-80,85,85,165,,,165,402.5,22,M,Varsity,Single-ply,SBD
 75,Parker Hodges,112.5,130,140,140,75,-80,-80,75,127.5,142.5,155,155,370,23,M,Varsity,Single-ply,SBD
@@ -315,7 +315,7 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 82.5,Ben Stumpf,220,-237.5,237.5,237.5,120,127.5,-137.5,127.5,227.5,240,-250,240,605,4,M,Varsity,Single-ply,SBD
 82.5,Dustin Stumpf,210,212.5,-217.5,212.5,112.5,120,-130,120,220,230,-240,230,562.5,5,M,Varsity,Single-ply,SBD
 82.5,Dustin Richard Smiuja,-212.5,212.5,-217.5,212.5,122.5,-127.5,-130,122.5,205,215,227.5,227.5,562.5,6,M,Varsity,Single-ply,SBD
-82.5,Bryan Golden,177.5,197.5,210,210,100,-112.5,115,115,235,262.5,-262.5,262.5,587.5,7,M,Varsity,Single-ply,SBD
+82.5,Bryan Golden,177.5,197.5,210,210,100,-112.5,115,115,235,-262.5,262.5,262.5,587.5,7,M,Varsity,Single-ply,SBD
 82.5,Nate Towner,192.5,-202.5,-202.5,192.5,-120,120,-127.5,120,217.5,235,-240,235,547.5,8,M,Varsity,Single-ply,SBD
 82.5,Warren Dupuis,192.5,202.5,210,210,-122.5,-122.5,122.5,122.5,200,220,-240,220,552.5,9,M,Varsity,Single-ply,SBD
 82.5,Keith Fox,185,207.5,215,215,95,-115,-115,95,207.5,227.5,-260,227.5,537.5,10,M,Varsity,Single-ply,SBD
@@ -337,7 +337,7 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 90,Harold Senegal,205,227.5,235,235,115,-127.5,127.5,127.5,250,275,285,285,647.5,8,M,Varsity,Single-ply,SBD
 90,Stephen Blackwell,-227.5,227.5,-232.5,227.5,-120,120,-127.5,120,212.5,222.5,-235,222.5,570,9,M,Varsity,Single-ply,SBD
 90,Jessie Betzinger,-220,220,-240,220,107.5,120,-130,120,222.5,-237.5,-237.5,222.5,562.5,10,M,Varsity,Single-ply,SBD
-90,Austin Gonzales-Randolph,162.5,172.5,195,195,-127,-125,125,125,215,227.5,240,240,560,11,M,Varsity,Single-ply,SBD
+90,Austin Gonzales-Randolph,162.5,172.5,195,195,-125,-125,125,125,215,227.5,240,240,560,11,M,Varsity,Single-ply,SBD
 90,Jerry Jarreau,207.5,222.5,-230,222.5,107.5,115,-120,115,-217.5,217.5,-232.5,217.5,555,12,M,Varsity,Single-ply,SBD
 90,Gerald Malbreaux Jr,195,-207.5,207.5,207.5,105,115,-125,115,200,225,230,230,552.5,13,M,Varsity,Single-ply,SBD
 90,J.E. Michael,175,200,-205,200,110,127.5,-137.5,127.5,200,220,-230,220,547.5,14,M,Varsity,Single-ply,SBD
@@ -363,12 +363,12 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 110,Ryan Arroyo,250,280,292.5,292.5,110,120,-127.5,120,250,280,290,290,702.5,2,M,Varsity,Single-ply,SBD
 110,Cody Walters,225,262.5,-267.5,262.5,155,160,-167.5,160,257.5,267.5,277.5,277.5,700,3,M,Varsity,Single-ply,SBD
 110,Nick Martin,255,-267.5,-267.5,255,125,137.5,142.5,142.5,260,267.5,-277.5,267.5,665,4,M,Varsity,Single-ply,SBD
-110,Ivory Grant,205,232.5,257.5,257.5,128,132.5,132.5,132.5,227.5,250,-277.5,250,640,5,M,Varsity,Single-ply,SBD
+110,Ivory Grant,205,232.5,257.5,257.5,127.5,-132.5,132.5,132.5,227.5,250,-277.5,250,640,5,M,Varsity,Single-ply,SBD
 110,John Robert IV,217.5,230,240,240,122.5,-127.5,-130,122.5,-202.5,267.5,-277.5,267.5,630,6,M,Varsity,Single-ply,SBD
 110,Nate Bagley,-215,215,222.5,222.5,127.5,-132.5,132.5,132.5,-187.5,187.5,190,190,545,7,M,Varsity,Single-ply,SBD
 125,Greg Theriet,292.5,-320,320,320,145,155,-160,155,262.5,282.5,287.5,287.5,762.5,1,M,Varsity,Single-ply,SBD
 125,Greg Kiriaki,245,255,265,265,160,-167.5,-167.5,160,235,242.5,252.5,252.5,677.5,2,M,Varsity,Single-ply,SBD
-125,Luke Hammonds,237.5,252.5,-265,252.5,120,132.5,-135,132.5,217.5,227.5,23.5,227.5,612.5,3,M,Varsity,Single-ply,SBD
+125,Luke Hammonds,237.5,252.5,-265,252.5,120,132.5,-135,132.5,217.5,227.5,-235,227.5,612.5,3,M,Varsity,Single-ply,SBD
 125,Deandre Wadlington,-215,-215,215,215,125,130,-137.5,130,245,262.5,-280,262.5,607.5,4,M,Varsity,Single-ply,SBD
 125,Kyle Kujala Konpela,205,-222.5,-222.5,205,-147.5,152.5,-165,152.5,217.5,-227.5,237.5,237.5,595,5,M,Varsity,Single-ply,SBD
 125,Edward Lewis III,192.5,212.5,-227.5,212.5,97.5,110,-120,110,205,240,260,260,582.5,6,M,Varsity,Single-ply,SBD
@@ -378,7 +378,7 @@ WeightClassKg,Name,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Benc
 125,Dustin Shoemaker,-175,175,180,180,120,125,-130,125,192.5,207.5,-225,207.5,512.5,10,M,Varsity,Single-ply,SBD
 125,Kyle Fischer,120,130,137.5,137.5,65,72.5,-75,72.5,145,162.5,170,170,380,11,M,Varsity,Single-ply,SBD
 125,Adam LaMarsh,102.5,-107.5,-115,102.5,97.5,102.5,107.5,107.5,-152.5,-152.5,152.5,152.5,362.5,12,M,Varsity,Single-ply,SBD
-125,Pat Osborne,237.5,245,-252.5,245,142.5,142.5,157.5,157.5,-200,-200,-200,,,DQ,M,Varsity,Single-ply,SBD
+125,Pat Osborne,237.5,245,-252.5,245,-142.5,142.5,157.5,157.5,-200,-200,-200,,,DQ,M,Varsity,Single-ply,SBD
 125,Dan Kennedy,-260,-277.5,-277.5,,,,,,,,,,,DQ,M,Varsity,Single-ply,SBD
 125+,Charlie Martin,275,290,295,295,160,165,175,175,240,255,-260,255,725,1,M,Varsity,Single-ply,SBD
 125+,Ryan Risner,242.5,262.5,275,275,195,207.5,-227.5,207.5,242.5,-252.5,-252.5,242.5,725,2,M,Varsity,Single-ply,SBD
