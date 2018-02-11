@@ -49,6 +49,7 @@ pub enum Federation {
     PA,
     RAW,
     RPS,
+    RUNI,
     RUPC,
     ScottishPL,
     SCT,
