@@ -48,6 +48,7 @@ pub enum Federation {
     ProRaw,
     PA,
     RAW,
+    RAWU,
     RPS,
     RUPC,
     ScottishPL,

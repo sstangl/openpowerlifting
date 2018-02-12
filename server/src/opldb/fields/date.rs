@@ -9,27 +9,25 @@ use std::str::FromStr;
 
 /// Our data uses imprecise dates in the "YYYY-MM-DD" format,
 /// with no timezone or time data.
-/// Dates in this format can be stored as a u32 with value YYYYMMDD.
+/// Dates in this format can be stored as a `u32` with value YYYYMMDD.
 /// This format is compact and remains human-readable.
 #[derive(Debug,PartialEq,PartialOrd)]
-pub struct Date {
-    value: u32,
-}
+pub struct Date(u32);
 
 impl Date {
     #[inline]
     pub fn year(&self) -> u32 {
-        self.value / 10_000
+        self.0 / 10_000
     }
 
     #[inline]
     pub fn month(&self) -> u32 {
-        (self.value / 100) % 100
+        (self.0 / 100) % 100
     }
 
     #[inline]
     pub fn day(&self) -> u32 {
-        self.value % 100
+        self.0 % 100
     }
 }
 
@@ -79,7 +77,7 @@ impl FromStr for Date {
 
         let value = (year * 10_000) + (month * 100) + day;
 
-        Ok(Date { value })
+        Ok(Date(value))
     }
 }
 
