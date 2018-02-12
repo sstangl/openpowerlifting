@@ -72,53 +72,37 @@ pub struct Entry {
     #[serde(rename = "WeightClassKg")]
     pub weightclasskg: WeightClassKg,
     #[serde(rename = "Squat1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat1kg: f32,
+    pub squat1kg: WeightKg,
     #[serde(rename = "Squat2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat2kg: f32,
+    pub squat2kg: WeightKg,
     #[serde(rename = "Squat3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat3kg: f32,
+    pub squat3kg: WeightKg,
     #[serde(rename = "Squat4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat4kg: f32,
+    pub squat4kg: WeightKg,
     #[serde(rename = "BestSquatKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestsquatkg: f32,
+    pub bestsquatkg: WeightKg,
     #[serde(rename = "Bench1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench1kg: f32,
+    pub bench1kg: WeightKg,
     #[serde(rename = "Bench2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench2kg: f32,
+    pub bench2kg: WeightKg,
     #[serde(rename = "Bench3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench3kg: f32,
+    pub bench3kg: WeightKg,
     #[serde(rename = "Bench4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench4kg: f32,
+    pub bench4kg: WeightKg,
     #[serde(rename = "BestBenchKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestbenchkg: f32,
+    pub bestbenchkg: WeightKg,
     #[serde(rename = "Deadlift1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift1kg: f32,
+    pub deadlift1kg: WeightKg,
     #[serde(rename = "Deadlift2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift2kg: f32,
+    pub deadlift2kg: WeightKg,
     #[serde(rename = "Deadlift3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift3kg: f32,
+    pub deadlift3kg: WeightKg,
     #[serde(rename = "Deadlift4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift4kg: f32,
+    pub deadlift4kg: WeightKg,
     #[serde(rename = "BestDeadliftKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestdeadliftkg: f32,
+    pub bestdeadliftkg: WeightKg,
     #[serde(rename = "TotalKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub totalkg: f32,
+    pub totalkg: WeightKg,
     #[serde(rename = "Place")]
     pub place: Place,
     #[serde(rename = "Wilks")]

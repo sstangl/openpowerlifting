@@ -9,10 +9,7 @@ use std::str::FromStr;
 /// The definition of the "Event" column.
 /// An `Event` is represented as a bitfield, with
 /// one bit for each of S, B, and D.
-#[derive(PartialEq)]
-pub struct Event {
-    bits: u8,
-}
+pub struct Event(u8);
 
 impl Event {
     const BITFLAG_SQUAT: u8 = 0b100;
@@ -22,19 +19,19 @@ impl Event {
     /// True iff the Event contains a Squat.
     #[inline]
     pub fn has_squat(&self) -> bool {
-        self.bits & Self::BITFLAG_SQUAT != 0x0
+        self.0 & Self::BITFLAG_SQUAT != 0x0
     }
 
     /// True iff the Event contains a Bench.
     #[inline]
     pub fn has_bench(&self) -> bool {
-        self.bits & Self::BITFLAG_BENCH != 0x0
+        self.0 & Self::BITFLAG_BENCH != 0x0
     }
 
     /// True iff the Event contains a Deadlift.
     #[inline]
     pub fn has_deadlift(&self) -> bool {
-        self.bits & Self::BITFLAG_DEADLIFT != 0x0
+        self.0 & Self::BITFLAG_DEADLIFT != 0x0
     }
 }
 
@@ -66,7 +63,7 @@ impl FromStr for Event {
                 _ => return Err("Unexpected event character."),
             }
         }
-        Ok(Event { bits })
+        Ok(Event(bits))
     }
 }
 
