@@ -30,6 +30,8 @@ pub enum Federation {
     GPCGB,
     #[serde(rename = "GPC-AUS")]
     GPCAUS,
+    #[serde(rename = "GPC-NZ")]
+    GPCNZ,
     HERC,
     IDFPF,
     IPA,
