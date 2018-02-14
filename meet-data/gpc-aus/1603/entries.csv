@@ -9,11 +9,11 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 1,Sarah Menis,27,F-OR,F,56,56,62.5,70,-72.5,,70,130,142.5,-145,,142.5,212.5,Australia,BD,Raw
 2,Ruchell Hutton,38,F-OR,F,55.2,56,50,55,-57.5,,55,142.5,150,-157.5,,150,205,Australia,BD,Raw
 3,Linda Radel,47,F-OR,F,55.2,56,55,62.5,-65,,62.5,117.5,125,130,,130,192.5,Australia,BD,Raw
-4,Tomica Robertson,36,F-OR,F,53.3,56,40,45,45,,45,100,107.5,115,,115,155,Australia,BD,Raw
+4,Tomica Robertson,36,F-OR,F,53.3,56,40,-45,-45,,40,100,107.5,115,,115,155,Australia,BD,Raw
 1,Bec Giles,30,F-OR,F,59.6,60,75,80,85,,85,145,155,160,-167.5,160,245,Australia,BD,Raw
 2,Lauren Hannon,36,F-OR,F,59.7,60,75,80,-85,,80,140,150,-160,,150,230,Australia,BD,Raw
 3,Shea Baker,27,F-OR,F,59.4,60,65,70,-77.5,,70,120,130,137.5,,137.5,207.5,Australia,BD,Raw
-4,Amy Binder,31,F-OR,F,57.7,60,47.5,52.5,57.5,,57.5,115,125,132.5,,132.5,185,Australia,BD,Raw
+4,Amy Binder,31,F-OR,F,57.7,60,47.5,52.5,-57.5,,52.5,115,125,132.5,,132.5,185,Australia,BD,Raw
 5,Emma Thow,21,F-OR,F,59.6,60,55,-60,-60,,55,120,125,130,,130,185,Australia,BD,Raw
 6,Nawal Davies,32,F-OR,F,57.05,60,35,40,50,,50,100,120,125,,125,175,South Africa,BD,Raw
 7,Tish Wasson,27,F-OR,F,59.4,60,40,45,50,,50,75,85,100,,100,150,Australia,BD,Raw
@@ -23,15 +23,15 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 2,Lauren Ashleigh,29,F-OR,F,65.6,67.5,70,80,-92.5,,80,160,185,-193,,185,265,Australia,BD,Raw
 3,Jac Quarisa,28,F-OR,F,62.84,67.5,70,75,,,75,155,167.5,177.5,,177.5,252.5,Australia,BD,Raw
 4,Leanne Simays,46,F-OR,F,65.7,67.5,70,75,80,,80,145,150,155,,155,235,New Zealand,BD,Raw
-5,Jacqueline Chmura,23,F-OR,F,65.2,67.5,67.5,72.5,75,,75,145,155,155,,155,227.5,Australia,BD,Raw
+5,Jacqueline Chmura,23,F-OR,F,65.2,67.5,67.5,72.5,-75,,72.5,145,-155,155,,155,227.5,Australia,BD,Raw
 6,Mikki Wescombe,22,F-OR,F,67,67.5,60,65,-70,,65,145,155,-162.5,,155,220,Australia,BD,Raw
 7,Melanie Collins,40,F-OR,F,66.7,67.5,60,62.5,,,62.5,120,130,140,,140,202.5,Australia,BD,Raw
 8,Velda Smit,47,F-OR,F,63.7,67.5,50,55,-60,,55,100,120,130,,130,185,South Africa,BD,Raw
 9,Katrina Appleby,44,F-OR,F,63.2,67.5,50,57.5,-62.5,,57.5,115,125,-132.5,,125,182.5,Australia,BD,Raw
 10,Lauren Mudd,23,F-OR,F,61.7,67.5,45,-55,-60,,45,80,95,105,,105,150,New Zealand,BD,Raw
-11,Bianca Strahan,33,F-OR,F,63.36,67.5,,,,,0,122.5,135,-142.5,,135,135,Australia,BD,Raw
-12,Helen Mcghee,71,F-OR,F,65.7,67.5,32.5,36,38,,38,65,70,75,,75,112.5,Australia,BD,Raw
-13,Kathleen Brock,71,F-OR,F,62.5,67.5,25,25,-27.5,,25,50,57.5,65,,65,90,Australia,BD,Raw
+11,Bianca Strahan,33,F-OR,F,63.36,67.5,,,,,,122.5,135,-142.5,,135,135,Australia,BD,Raw
+12,Helen McGhee,71,F-OR,F,65.7,67.5,32.5,36,38,,38,65,70,75,,75,112.5,Australia,BD,Raw
+13,Kathleen Brock,71,F-OR,F,62.5,67.5,-25,25,-27.5,,25,50,57.5,65,,65,90,Australia,BD,Raw
 1,Lyndall Vile,28,F-OR,F,75,75,90,95,97.5,,97.5,190,200,210,,210,307.5,Australia,BD,Raw
 2,Sarah Rodwell,33,F-OR,F,73.1,75,87.5,92.5,97.5,,97.5,200,-212.5,-212.5,,200,297.5,Australia,BD,Raw
 3,Rhiannon Keith,23,F-OR,F,73.7,75,-85,-85,93,95,93,170,180,190,200,190,282.5,Australia,BD,Raw
@@ -50,51 +50,51 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 3,Carey Boyce,38,F-OR,F,76.8,82.5,90,97.5,100,,100,170,185,,,185,285,Australia,BD,Raw
 4,Crystal Trace,32,F-OR,F,81,82.5,87.5,-92.5,92.5,,92.5,175,185,192.5,,192.5,285,Australia,BD,Raw
 5,Elise Cupitt,31,F-OR,F,82,82.5,72.5,77.5,80,,80,155,162.5,-167.5,,162.5,242.5,Australia,BD,Raw
-6,Amanda Brown,32,F-OR,F,81.1,82.5,72.5,77.5,80,,80,147.5,160,165,,165,240,Australia,BD,Raw
+6,Amanda Brown,32,F-OR,F,81.1,82.5,72.5,77.5,80,,80,147.5,160,-165,,160,240,Australia,BD,Raw
 7,Andy Kaladelfos,35,F-OR,F,76.3,82.5,70,77.5,-80,,77.5,132.5,145,155,,155,232.5,Australia,BD,Raw
 8,Cyan Osborne,25,F-OR,F,82.5,82.5,67.5,72.5,-75,,72.5,140,150,155,,155,227.5,Australia,BD,Raw
 9,Victoria Hoskin,36,F-OR,F,80.6,82.5,52.5,57.5,60,,60,100,110,120,,120,180,Australia,BD,Raw
-10,Kiara Small,26,F-OR,F,79.75,82.5,70,75,75,,75,145,155,160,,160,155,Australia,BD,Raw
+DQ,Kiara Small,26,F-OR,F,79.75,82.5,-70,-75,-75,,,145,155,-160,,155,,Australia,BD,Raw
 1,Chleo Van Wyk,26,F-OR,F,85.8,90,130,135,140,,140,235,240,245,,245,385,Australia,BD,Raw
 2,Nichole Bradley,43,F-OR,F,86.8,90,60,67.5,75,,75,100,115,127.5,,127.5,202.5,Australia,BD,Raw
 3,Margaret Taylor,57,F-OR,F,83.4,90,50,55,-60,,55,110,115,120,125,120,175,New Zealand,BD,Raw
 4,Lynne Wilson,26,F-OR,F,85.5,90,40,45,52.5,,52.5,105,112.5,117.5,,117.5,170,New Zealand,BD,Raw
 1,Trish Armstrong,50,F-OR,F,107.5,110,95,110,112.5,,112.5,177.5,190,200,,200,312.5,South Africa,BD,Raw
-2,Samantha Kettewell,28,F-OR,F,105.4,110,65,73,76,,76,120,130,140,,140,215,Australia,BD,Raw
+2,Samantha Kettewell,28,F-OR,F,105.4,110,65,73,76,,76,120,130,140,,140,216,Australia,BD,Raw
 3,Kaye Sperling,51,F-OR,F,99.2,110,50,65,-72.5,,65,70,80,97.5,,97.5,162.5,Australia,BD,Raw
 1,Jodie Elisara,34,F-OR,F,155.9,110+,75,80,85,,85,160,180,-200,,180,265,Australia,BD,Raw
-2,Jolanda Taljaard,44,F-OR,F,125.7,110+,75,77.5,77.5,,77.5,125,132.5,150,,150,227.5,Australia,BD,Raw
+2,Jolanda Taljaard,44,F-OR,F,125.7,110+,75,-77.5,77.5,,77.5,125,132.5,150,,150,227.5,Australia,BD,Raw
 3,Fiona Preston,43,F-OR,F,137.2,110+,52.5,55,-60,,55,102.5,110,120,,120,175,Australia,BD,Raw
 1,Simon Knechtli,48,M-OE,M,73.5,75,85,90,95,,95,140,150,155,,155,250,Australia,BD,Multi-ply
 1,Jarrod Slatter,24,M-OE,M,87.9,90,160,-172.5,-173,,160,240,-252.5,252.5,260,252.5,412.5,Australia,BD,Multi-ply
 1,David Burt,27,M-OE,M,97.4,100,170,180,-185,,180,275,290,-300,,290,470,Australia,BD,Multi-ply
 1,A J Ceronio,15,M-OR,M,56,56,40,45,55,,55,100,120,130,,130,185,South Africa,BD,Raw
 1,Francisco Dullona,44,M-OR,M,59.64,60,95,-100,100,,100,180,187.5,,,187.5,287.5,Australia,BD,Raw
-1,Justin Terry,25,M-OR,M,66.85,67.5,95,100,105,,105,200,212.5,220,,220,320,Australia,BD,Raw
+1,Justin Terry,25,M-OR,M,66.85,67.5,95,100,-105,,100,200,212.5,220,,220,320,Australia,BD,Raw
 2,Yin Hamilton,22,M-OR,M,64.6,67.5,65,70,75,,75,142.5,157.5,170,,170,245,New Zealand,BD,Raw
 3,Edward Teoh,66,M-OR,M,66.5,67.5,45,50,-55.5,,50,85,92.5,97.5,,97.5,147.5,Australia,BD,Raw
 1,Corey Ettia,26,M-OR,M,73.1,75,110,117.5,122.5,,122.5,260,270,277.5,,277.5,400,Australia,BD,Raw
 2,Dhiren Dunraj,28,M-OR,M,74.7,75,140,150,155,,155,235,245,-250,250,245,400,New Zealand,BD,Raw
-3,Corey Millar,25,M-OR,M,70.65,75,122.5,130,132.5,,132.5,235,247.5,252.5,,252.5,382.5,Australia,BD,Raw
-4,Shaun Jones,25,M-OR,M,70.1,75,115,122.5,127.5,,127.5,225,232.5,,,232.5,355,Australia,BD,Raw
+3,Corey Millar,25,M-OR,M,70.65,75,122.5,130,-132.5,,130,235,247.5,252.5,,252.5,382.5,Australia,BD,Raw
+4,Shaun Jones,25,M-OR,M,70.1,75,115,122.5,-127.5,,122.5,225,232.5,,,232.5,355,Australia,BD,Raw
 5,Daniel Khalaf,23,M-OR,M,74.1,75,100,,,,100,240,-252.5,-255,,240,340,Australia,BD,Raw
-6,Brad Mcmahon,31,M-OR,M,73.7,75,-105,112.5,122.5,,122.5,200,210,-220,,210,332.5,Australia,BD,Raw
+6,Brad McMahon,31,M-OR,M,73.7,75,-105,112.5,122.5,,122.5,200,210,-220,,210,332.5,Australia,BD,Raw
 7,Wesley Vick,23,M-OR,M,74.5,75,105,110,-115,,110,190,200,-205,,200,310,Australia,BD,Raw
 8,Beau Rutherford,25,M-OR,M,73.4,75,115,-120,-120,,115,180,190,-200,,190,305,Australia,BD,Raw
 9,Jax Wearing,30,M-OR,M,74.8,75,100,105,110,,110,160,170,180,,180,290,Australia,BD,Raw
 10,Jake Attard,16,M-OR,M,73.6,75,85,95,100.5,105,100.5,140,155,-160,,155,255,Australia,BD,Raw
-11,Michael Watt,34,M-OR,M,74.5,75,140,147.5,-153,,147.5,,,,,,,Australia,B,Raw
-1,Yianni Magoulias,25,M-OR,M,78.25,82.5,150,160,165,,165,280,300,300,,300,440,Australia,BD,Raw
-2,Critta Stamatiou,27,M-OR,M,76.8,82.5,135,150,165,,165,265,285,300,,300,435,Australia,BD,Raw
+11,Michael Watt,34,M-OR,M,74.5,75,140,147.5,-153,,147.5,,,,,,147.5,Australia,B,Raw
+1,Yianni Magoulias,25,M-OR,M,78.25,82.5,150,160,-165,,160,280,-300,-300,,280,440,Australia,BD,Raw
+2,Chris Stamatiou,27,M-OR,M,76.8,82.5,135,150,-165,,150,265,285,-300,,285,435,Australia,BD,Raw
 3,Aaron Simm,20,M-OR,M,79.8,82.5,115,120,125,,125,290,-300,300,310,300,425,Australia,BD,Raw
-4,Andrew Nguyen,31,M-OR,M,80.5,82.5,160,170,180,,180,240,255,,,255,425,Australia,BD,Raw
+4,Andrew Nguyen,31,M-OR,M,80.5,82.5,160,170,-180,,170,240,255,,,255,425,Australia,BD,Raw
 5,Nick Prendergast,26,M-OR,M,82.1,82.5,140,-147.5,-150,,140,240,260,-270,,260,400,New Zealand,BD,Raw
 6,Neil Martin,40,M-OR,M,80.8,82.5,120,125,127.5,,127.5,260,265,-270,,265,392.5,Australia,BD,Raw
 7,Brett Carruthers,31,M-OR,M,80.1,82.5,117.5,125,132.5,,132.5,225,240,250,,250,382.5,Australia,BD,Raw
 8,Kobus Bester,38,M-OR,M,81,82.5,130,140,-155,,140,180,200,225,,225,365,South Africa,BD,Raw
 9,Oran Royston,21,M-OR,M,80.6,82.5,127.5,132.5,-140,,132.5,210,225,-230,,225,357.5,Australia,BD,Raw
 10,Patrick Dickson,28,M-OR,M,81.9,82.5,-120,125,-130,,125,215,225,230,,230,355,Australia,BD,Raw
-11,Eoin Rice,26,M-OR,M,81.3,82.5,100,105,110,,110,215,225,235,,235,340,Australia,BD,Raw
+11,Eoin Rice,26,M-OR,M,81.3,82.5,100,105,-110,,105,215,225,235,,235,340,Australia,BD,Raw
 12,Ahmed Jacob,25,M-OR,M,81.9,82.5,115,125,-133,,125,180,200,210,,210,335,South Africa,BD,Raw
 13,Justin Faella,31,M-OR,M,79,82.5,90,100,,,100,217.5,-232.5,232.5,,232.5,332.5,Australia,BD,Raw
 14,Dinesh Kumar,29,M-OR,M,82.2,82.5,100,110,120,,120,180,200,210,,210,330,Australia,BD,Raw
@@ -103,17 +103,17 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 17,Shaun Roberts,39,M-OR,M,81.3,82.5,120,-127.5,-128,,120,152.5,165,172.5,,172.5,292.5,Australia,BD,Raw
 18,Karl Hyslop,38,M-OR,M,82.1,82.5,105,110,-115,,110,170,180,-185,,180,290,Australia,BD,Raw
 19,Cyrus Dickie,36,M-OR,M,80.2,82.5,95,100,-105,,100,150,170,-185,,170,270,Australia,BD,Raw
-20,Elliot Burton,26,M-OR,M,80.8,82.5,95,100,105,,105,175,190,190,,190,270,Australia,BD,Raw
-21,Jono Hussey,25,M-OR,M,81.65,82.5,90,105,105,,105,180,185,185,,185,270,Australia,BD,Raw
+20,Elliot Burton,26,M-OR,M,80.8,82.5,95,-100,-105,,95,175,-190,-190,,175,270,Australia,BD,Raw
+21,Jono Hussey,25,M-OR,M,81.65,82.5,90,-105,-105,,90,180,-185,-185,,180,270,Australia,BD,Raw
 22,Mitchell Niethe,15,M-OR,M,77.1,82.5,-50,55,-60,,55,-110,110,,,110,165,New Zealand,BD,Raw
 23,Wernher Bester,14,M-OR,M,81.8,82.5,35,40,-50,,40,90,100,110,,110,150,South Africa,BD,Raw
 24,Will Smit,27,M-OR,M,78.2,82.5,-120,140,-155,,140,,,,,,140,South Africa,B,Raw
 25,Martin Nel,30,M-OR,M,81.7,82.5,120,130,-135,,130,,,,,,130,South Africa,B,Raw
 26,Sunni Manning,19,M-OR,M,82,82.5,125,130,-133,,130,,,,,,130,Australia,B,Raw
-1,Patrick Morrison,26,M-OR,M,85.85,90,160,175,182.5,,182.5,310,325,340,,340,500,Australia,BD,Raw
+1,Patrick Morrison,26,M-OR,M,85.85,90,160,175,-182.5,,175,310,325,-340,,325,500,Australia,BD,Raw
 2,Jake Taylor,26,M-OR,M,89.6,90,147.5,152.5,-160,,152.5,290,307.5,-312.5,,307.5,460,Australia,BD,Raw
 3,Raymond Waters,30,M-OR,M,89.1,90,150,160,,,160,282.5,292.5,-295,,292.5,452.5,South Africa,BD,Raw
-4,Dean Carroll,39,M-OR,M,89.7,90,145,150,156,,156,275,290,-295,,290,445,Australia,BD,Raw
+4,Dean Carroll,39,M-OR,M,89.7,90,145,150,156,,156,275,290,-295,,290,446,Australia,BD,Raw
 5,Emad Nayef,39,M-OR,M,89.2,90,142.5,150,152.5,,152.5,250,270,-282.5,,270,422.5,Australia,BD,Raw
 6,John Saeck,35,M-OR,M,87.8,90,155,-165,165,,165,235,245,-250,,245,410,Australia,BD,Raw
 7,Paolo Wilkinson,29,M-OR,M,88.7,90,140,-145,,,140,270,-280,-280,,270,410,Australia,BD,Raw
@@ -127,17 +127,17 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 15,Thomas Jensen,25,M-OR,M,89.4,90,135,142.5,150,,150,195,210,220,,220,370,Australia,BD,Raw
 16,Josef Weir,29,M-OR,M,89.1,90,110,120,130,,130,220,235,-250,,235,365,Australia,BD,Raw
 17,Calvin Makondo,20,M-OR,M,84.9,90,135,145,147.5,,147.5,180,205,215,,215,362.5,South Africa,BD,Raw
-18,Tiki Manu,29,M-OR,M,85,90,110,120,125,,125,225,235,240,,240,355,Australia,BD,Raw
+18,Tiki Manu,29,M-OR,M,85,90,110,120,-125,,120,225,235,-240,,235,355,Australia,BD,Raw
 19,Shaun Fitzsimmons,20,M-OR,M,88.2,90,130,145,-153,,145,200,210,-220,,210,355,Australia,BD,Raw
 20,Trent Andersen,26,M-OR,M,88.5,90,135,142.5,-145,,142.5,200,212.5,-220,,212.5,355,Australia,BD,Raw
 21,Wes Horan,34,M-OR,M,84.8,90,135,142.5,-145,,142.5,185,200,210,,210,352.5,Australia,BD,Raw
 22,Franco Steenkamp,18,M-OR,M,87.3,90,112.5,120,-125,,120,200,225,,,225,345,South Africa,BD,Raw
 23,Matt Wilson,46,M-OR,M,87.7,90,110,117.5,120,,120,200,210,220,,220,340,Australia,BD,Raw
-24,Jack De'laney,24,M-OR,M,90,90,112.5,120,-125,,120,200,220,-230,,220,340,Australia,BD,Raw
+24,Jack Delaney,24,M-OR,M,90,90,112.5,120,-125,,120,200,220,-230,,220,340,Australia,BD,Raw
 25,Patrick Brownlie,23,M-OR,M,86,90,127.5,135,145,,145,170,185,190,,190,335,Australia,BD,Raw
 26,Harely Taylor,24,M-OR,M,89.2,90,110,-115,-115,,110,220,-235,-235,,220,330,Australia,BD,Raw
 27,Simon Watkins,57,M-OR,M,87,90,105,110,112.5,,112.5,185,195,200,,200,312.5,Australia,BD,Raw
-28,Ash Griggs,29,M-OR,M,84.65,90,105,110,112.5,,112.5,180,195,200,,200,310,Australia,BD,Raw
+28,Ash Griggs,29,M-OR,M,84.65,90,105,110,-112.5,,110,180,-195,200,,200,310,Australia,BD,Raw
 29,Justin Meyers,27,M-OR,M,88.9,90,120,125,130,,130,140,160,170,,170,300,Australia,BD,Raw
 30,Brodie De Rijk,17,M-OR,M,89.56,90,85,-95,-95,,85,190,207.5,,,207.5,292.5,Australia,BD,Raw
 31,Zane Watling,21,M-OR,M,84.7,90,85,90,97.5,,97.5,150,160,172.5,,172.5,270,New Zealand,BD,Raw
@@ -156,7 +156,7 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 11,Johan Steenkamp,46,M-OR,M,98.6,100,150,160,,,160,250,270,-280,,270,430,South Africa,BD,Raw
 12,Andrew Dowrick,26,M-OR,M,99.1,100,130,140,145,,145,255,270,-275,,270,415,Australia,BD,Raw
 13,Nicholas Cowan,31,M-OR,M,98.9,100,155,160,-165,,160,240,252.5,-260,,252.5,412.5,Australia,BD,Raw
-14,Adam Yeates,26,M-OR,M,97.8,100,140,150,155,,155,260,272.5,272.5,,272.5,410,Australia,BD,Raw
+14,Adam Yeates,26,M-OR,M,97.8,100,140,150,-155,,150,260,-272.5,-272.5,,260,410,Australia,BD,Raw
 15,Kurt Keough,21,M-OR,M,97.6,100,105,120,-130,,120,240,260,285,,285,405,South Africa,BD,Raw
 16,Tom Hardy,19,M-OR,M,97.9,100,150,160,165,170.5,165,240,-255,-255,,240,405,Australia,BD,Raw
 17,Beaudean Lines,31,M-OR,M,97.2,100,125,132.5,137.5,,137.5,235,255,265,,265,402.5,Australia,BD,Raw
@@ -166,27 +166,27 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 21,Brock Ridsdale,26,M-OR,M,98.6,100,140,147.5,155,,155,220,230,240,,240,395,Australia,BD,Raw
 22,Steve Jones,34,M-OR,M,98.2,100,125,132.5,-140,,132.5,225,245,260,,260,392.5,Australia,BD,Raw
 23,Mitch Mackinnon,40,M-OR,M,93.2,100,110,125,-135,,125,250,265,-280,,265,390,Australia,BD,Raw
-24,Mark Inglis,22,M-OR,M,95.95,100,125,125,125,,125,240,265,285,,285,390,Australia,BD,Raw
+24,Mark Inglis,22,M-OR,M,95.95,100,-125,-125,125,,125,240,265,-285,,265,390,Australia,BD,Raw
 25,Josh Whittle,26,M-OR,M,98.9,100,130,142.5,150,,150,200,230,-240,,230,380,New Zealand,BD,Raw
-26,Paul Rucci,38,M-OR,M,98,100,150,155,160,,160,220,235,235,,235,375,Australia,BD,Raw
+26,Paul Rucci,38,M-OR,M,98,100,150,155,-160,,155,220,-235,-235,,220,375,Australia,BD,Raw
 27,Jonny Nelson,34,M-OR,M,95.8,100,122.5,127.5,130,,130,230,242.5,-250,,242.5,372.5,Australia,BD,Raw
-28,Aidan Reynolds,28,M-OR,M,95.05,100,160,170,170,,170,200,207.5,215,,215,367.5,Australia,BD,Raw
+28,Aidan Reynolds,28,M-OR,M,95.05,100,160,-170,-170,,160,200,207.5,-215,,207.5,367.5,Australia,BD,Raw
 29,Rylee Captein,21,M-OR,M,98.8,100,-130,135,-145,145,135,220,-250,-250,-250,220,355,New Zealand,BD,Raw
 30,Mark Kruk,36,M-OR,M,97.8,100,120,125,-130,,125,210,220,-230,,220,345,Australia,BD,Raw
 31,Dennis Stephensen,33,M-OR,M,97.5,100,110,117.5,125,,125,175,190,205,,205,330,Australia,BD,Raw
 32,Jeremy Petheram,29,M-OR,M,96.3,100,87.5,92.5,-100,,92.5,180,190,-195,,190,282.5,Australia,BD,Raw
 33,Cain Steward,32,M-OR,M,98.4,100,65,75,77.5,,77.5,170,185,-200,,185,262.5,South Africa,BD,Raw
 34,James Mirzikiuiam,17,M-OR,M,98.9,100,90,95,100,,100,145,160,-175,,160,260,Australia,BD,Raw
-35,Morgan Mabunda,28,M-OR,M,93,100,-145,-145,,,-145,245,250,-255,,250,250,South Africa,BD,Raw
-36,Frank Harmon,67,M-OR,M,99.2,100,,,,,,160,170,175,,175,,Australia,D,Raw
-37,Ian Dorward,53,M-OR,M,98.6,100,165,170.5,,,170.5,,,,,,,Australia,B,Raw
+DQ,Morgan Mabunda,28,M-OR,M,93,100,-145,-145,,,,245,250,-255,,250,,South Africa,BD,Raw
+36,Frank Harmon,67,M-OR,M,99.2,100,,,,,,160,170,175,,175,175,Australia,D,Raw
+37,Ian Dorward,53,M-OR,M,98.6,100,165,170.5,,,170.5,,,,,,170.5,Australia,B,Raw
 1,Dale Shepherd,45,M-OR,M,104.8,110,180,-200,200,-205,200,310,330,-337.5,-337.5,330,530,New Zealand,BD,Raw
 2,Benjamin Kerr,24,M-OR,M,107.8,110,180,195,200,,200,240,262.5,275,,275,475,Australia,BD,Raw
-3,Dale Smith,33,M-OR,M,109.3,110,175,185,190,,190,285,305,305,,305,470,Australia,BD,Raw
+3,Dale Smith,33,M-OR,M,109.3,110,175,185,-190,,185,285,-305,-305,,285,470,Australia,BD,Raw
 4,Craig Topham,23,M-OR,M,105.3,110,170,185,-190,,185,280,-305,-305,,280,465,New Zealand,BD,Raw
 5,Jharryd Nemec,26,M-OR,M,107.9,110,155,165,-170,,165,275,287.5,300,,300,465,Australia,BD,Raw
 6,Ben Knight,37,M-OR,M,100.8,110,-160,160,170,,170,280,290,-300,,290,460,Australia,BD,Raw
-7,Daniel Part,26,M-OR,M,108.5,110,160,172.5,182.5,,182.5,255,270,280,,280,452.5,Australia,BD,Raw
+7,Daniel Part,26,M-OR,M,108.5,110,160,172.5,182.5,,182.5,255,270,-280,,270,452.5,Australia,BD,Raw
 8,Daniel Kandilas,32,M-OR,M,108,110,140,147.5,155,,155,280,290,-300,,290,445,Australia,BD,Raw
 9,Mark Brennan,52,M-OR,M,103.5,110,-155,160,165,,165,-255,265,-275,,265,430,Australia,BD,Raw
 10,Trent Mcfazden,37,M-OR,M,106.5,110,137.5,145,-150,,145,270,-290,-290,,270,415,Australia,BD,Raw
@@ -198,15 +198,15 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 16,Scott Weber,28,M-OR,M,104.9,110,-115,122.5,127.5,,127.5,215,230,240,,240,367.5,Australia,BD,Raw
 17,Juan Fourie,20,M-OR,M,106,110,120,-130,130,,130,220,-240,-250,,220,350,South Africa,BD,Raw
 18,Peter Kohlhagen,34,M-OR,M,109.9,110,-115,115,-120,,115,220,-230,-230,,220,335,Australia,BD,Raw
-19,Jenaro Menzzel,23,M-OR,M,107.4,110,100,107.5,120,,120,190,205,215,,215,322.5,Australia,BD,Raw
+19,Jenaro Menzzel,23,M-OR,M,107.4,110,100,107.5,-120,,107.5,190,205,215,,215,322.5,Australia,BD,Raw
 20,Josh Chambers,41,M-OR,M,106.7,110,90,100,-113,,100,-195,210,220,,220,320,Australia,BD,Raw
 21,Keaton Ben Le Roux,17,M-OR,M,104.2,110,90,100,105,,105,175,192.5,200,,200,305,South Africa,BD,Raw
 22,Chris Agius,27,M-OR,M,100.6,110,100,-107.5,-108,,100,190,200,,,200,300,Australia,BD,Raw
 23,Hennie Roodt,68,M-OR,M,107.7,110,110,125,-135,,125,125,145,155,,155,280,South Africa,BD,Raw
-24,Warrick Heron,32,M-OR,M,105.6,110,-100,-100,-100,,-100,200,-215,-215,,200,,Australia,BD,Raw
+DQ,Warrick Heron,32,M-OR,M,105.6,110,-100,-100,-100,,,200,-215,-215,,200,,Australia,BD,Raw
 1,Josh Tait,30,M-OR,M,122.9,125,220,235,245,252.5,245,280,300,315,,315,560,Australia,BD,Raw
 2,Tim Krause,36,M-OR,M,119.8,125,190,202.5,-208,,202.5,335,-352.5,-352.5,,335,537.5,Australia,BD,Raw
-3,Don D'ewes,39,M-OR,M,120.6,125,200,-210,,,200,305,320,-335,-335,320,520,New Zealand,BD,Raw
+3,Don D'Ewes,39,M-OR,M,120.6,125,200,-210,,,200,305,320,-335,-335,320,520,New Zealand,BD,Raw
 4,Ben Winstone,33,M-OR,M,123.5,125,170,190,200,,200,290,305,317.5,,317.5,517.5,Australia,BD,Raw
 5,Nigel Cordes,33,M-OR,M,113.4,125,210,217.5,222.5,-228,222.5,270,285,-300,,285,507.5,New Zealand,BD,Raw
 6,Ben Holmes,31,M-OR,M,119.1,125,180,190,-200,,190,300,-315,-320,,300,490,New Zealand,BD,Raw
@@ -215,7 +215,7 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 9,Andrew Caltabiano,27,M-OR,M,118,125,200,210,217.5,,217.5,250,260,-270,,260,477.5,Australia,BD,Raw
 10,Jamahl Beattie,26,M-OR,M,110.8,125,172.5,177.5,180,,180,265,-275,-275,,265,445,New Zealand,BD,Raw
 11,Dirk Venter,41,M-OR,M,115.6,125,140,-150,-160,,140,280,295,-310,,295,435,Australia,BD,Raw
-12,Jarred Hearle,31,M-OR,M,114.5,125,160,170,182.5,,182.5,240,250,260,,260,432.5,Australia,BD,Raw
+12,Jarred Hearle,31,M-OR,M,114.5,125,160,170,182.5,,182.5,240,250,-260,,250,432.5,Australia,BD,Raw
 13,Rhys Fowler,22,M-OR,M,118,125,140,147.5,152.5,,152.5,260,270,275,,275,427.5,Australia,BD,Raw
 14,Luan Kruger,26,M-OR,M,121.3,125,130,145,155,,155,230,255,265,,265,420,South Africa,BD,Raw
 15,Francois Swart,21,M-OR,M,113.9,125,140,-150,-150,,140,-250,250,270,,270,410,South Africa,BD,Raw
@@ -227,15 +227,15 @@ Place,Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3K
 21,Heinrich Storm,37,M-OR,M,119.4,125,160,-172.5,-173,,160,180,200,220,,220,380,South Africa,BD,Raw
 22,Slade O'callaghan,27,M-OR,M,114.5,125,125,135,-140,,135,-200,200,222.5,,222.5,357.5,Australia,BD,Raw
 23,Alex Sturm,22,M-OR,M,117.3,125,120,127.5,132.5,,132.5,-200,200,222.5,,222.5,355,Australia,BD,Raw
-24,Costa Fotias,33,M-OR,M,115.5,125,-160,-160,-160,,-160,160,170,200,,200,200,South Africa,BD,Raw
-25,Shannon Green,37,M-OR,M,125,125,170,175,-180,,175,,,,,,,Australia,B,Raw
+24,Costa Fotias,33,M-OR,M,115.5,125,-160,-160,-160,,,160,170,200,,200,200,South Africa,BD,Raw
+25,Shannon Green,37,M-OR,M,125,125,170,175,-180,,175,,,,,,175,Australia,B,Raw
 1,Tom Atkins,26,M-OR,M,126.1,140,157.5,162.5,-170,,162.5,300,320,330,,330,492.5,Australia,BD,Raw
-2,Richard Williams,25,M-OR,M,132.7,140,155,165,172.5,,172.5,275,280,285,,285,445,Australia,BD,Raw
+2,Richard Williams,25,M-OR,M,132.7,140,155,165,-172.5,,165,275,280,-285,,280,445,Australia,BD,Raw
 3,Teava Nanai,26,M-OR,M,139.8,140,135,-145,145,,145,245,255,-270,,255,400,Australia,BD,Raw
 4,Dale Caust,26,M-OR,M,127.1,140,85,90,95,,95,157.5,167.5,180,,180,275,Australia,BD,Raw
 1,Aaron Jackson,31,M-OR,M,146.1,140+,180,190,-200,,190,280,290,300,,300,490,Australia,BD,Raw
 2,David Niethe,48,M-OR,M,157.3,140+,180,-190,-190,,180,260,270,-275,,270,450,New Zealand,BD,Raw
 3,Michael Snooke,19,M-OR,M,167.9,140+,150,160,-170,,160,265,-285,285,,285,445,South Africa,BD,Raw
 4,John Sheridan,28,M-OR,M,141.8,140+,125,130,135,,135,235,250,262.5,,262.5,397.5,Australia,BD,Raw
-5,George Mclaren,32,M-OR,M,157.7,140+,25,,,,25,335,350,-355,,350,375,Australia,BD,Raw
-6,Christo Rothner,33,M-OR,M,152,140+,-200,-200,-200,,,260,290,315,,315,,South Africa,BD,Raw
+5,George McLaren,32,M-OR,M,157.7,140+,25,,,,25,335,350,-355,,350,375,Australia,BD,Raw
+DQ,Christo Rothner,33,M-OR,M,152,140+,-200,-200,-200,,,260,290,315,,315,,South Africa,BD,Raw
