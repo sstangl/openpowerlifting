@@ -79,6 +79,7 @@
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
   </optgroup>
   <optgroup label="New Zealand">
+    <option value="GPC-NZ">GPC-NZ - GPC New Zealand [GPC]</option>
     <option value="NZPF">NZPF - New Zealand Powerlifting Federation [IPF]</option>
   </optgroup>
   <optgroup label="Norway">
