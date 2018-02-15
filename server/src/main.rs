@@ -6,7 +6,6 @@ extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
-#[macro_use] extern crate serde_derive;
 
 use rocket_contrib::Template;
 use rocket::response::NamedFile;
