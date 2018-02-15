@@ -1,7 +1,7 @@
 //! Defines the `WeightClassKg` field for the `entries` table.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::num;
 use std::fmt;
@@ -27,7 +27,7 @@ impl FromStr for WeightClassKg {
         }
 
         if s.ends_with('+') {
-            let v = &s[..s.len()-1];
+            let v = &s[..s.len() - 1];
             v.parse::<f32>().map(WeightClassKg::Over)
         } else {
             s.parse::<f32>().map(WeightClassKg::UnderOrEqual)
@@ -45,7 +45,8 @@ impl<'de> Visitor<'de> for WeightClassKgVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<WeightClassKg, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         WeightClassKg::from_str(value).map_err(E::custom)
     }
@@ -53,7 +54,8 @@ impl<'de> Visitor<'de> for WeightClassKgVisitor {
 
 impl<'de> Deserialize<'de> for WeightClassKg {
     fn deserialize<D>(deserializer: D) -> Result<WeightClassKg, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(WeightClassKgVisitor)
     }

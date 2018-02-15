@@ -20,7 +20,7 @@ use self::filter_cache::FilterCache;
 pub use self::filter_cache::CachedFilter;
 
 /// The definition of a Lifter in the database.
-#[derive(Serialize,Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Lifter {
     #[serde(rename(deserialize = "Name"))]
     pub name: String,
@@ -188,16 +188,23 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
 impl OplDb {
     /// Constructs the `OplDb` from CSV files produces by the project
     /// build script.
-    pub fn from_csv(lifters_csv: &str, meets_csv: &str, entries_csv: &str)
-        -> Result<OplDb, Box<Error>>
-    {
+    pub fn from_csv(
+        lifters_csv: &str,
+        meets_csv: &str,
+        entries_csv: &str,
+    ) -> Result<OplDb, Box<Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
 
         let filter_cache = FilterCache::new(&meets, &entries);
 
-        Ok(OplDb { lifters, meets, entries, filter_cache })
+        Ok(OplDb {
+            lifters,
+            meets,
+            entries,
+            filter_cache,
+        })
     }
 
     /// Returns the size of owned data structures.
@@ -274,9 +281,9 @@ impl OplDb {
 
     /// Look up the lifter_id by username.
     pub fn get_lifter_id(&self, username: &str) -> Option<u32> {
-        for i in 0 .. self.lifters.len() {
+        for i in 0..self.lifters.len() {
             if self.lifters[i].username == username {
-                return Some(i as u32)
+                return Some(i as u32);
             }
         }
         None

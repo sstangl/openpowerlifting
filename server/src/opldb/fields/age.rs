@@ -1,7 +1,7 @@
 //! Defines the `Age` field for the `entries` table.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::num;
 use std::fmt;
@@ -45,7 +45,8 @@ impl<'de> Visitor<'de> for AgeVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Age, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         Age::from_str(value).map_err(E::custom)
     }
@@ -53,7 +54,8 @@ impl<'de> Visitor<'de> for AgeVisitor {
 
 impl<'de> Deserialize<'de> for Age {
     fn deserialize<D>(deserializer: D) -> Result<Age, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(AgeVisitor)
     }

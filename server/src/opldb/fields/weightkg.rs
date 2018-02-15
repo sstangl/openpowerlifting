@@ -1,7 +1,7 @@
 //! Defines fields that represent weights.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::f32;
 use std::fmt;
@@ -61,7 +61,8 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<WeightKg, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         WeightKg::from_str(value).map_err(E::custom)
     }
@@ -69,7 +70,8 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
 
 impl<'de> Deserialize<'de> for WeightKg {
     fn deserialize<D>(deserializer: D) -> Result<WeightKg, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(WeightKgVisitor)
     }
@@ -92,7 +94,6 @@ mod tests {
 
         let w = "-123.45".parse::<WeightKg>().unwrap();
         assert!(w.0 == -12345);
-
     }
 
     #[test]
@@ -107,7 +108,9 @@ mod tests {
         let w = format!("{}", f32::INFINITY).parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::NEG_INFINITY).parse::<WeightKg>().unwrap();
+        let w = format!("{}", f32::NEG_INFINITY)
+            .parse::<WeightKg>()
+            .unwrap();
         assert!(w.0 == 0);
     }
 

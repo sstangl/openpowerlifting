@@ -1,6 +1,6 @@
 //! Defines the `Federation` field for the `meets` table.
 
-#[derive(Deserialize,PartialEq)]
+#[derive(Deserialize, PartialEq)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     _365Strong,

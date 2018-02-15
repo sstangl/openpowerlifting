@@ -1,7 +1,7 @@
 //! Defines the `Date` field for the `meets` table.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::num;
 use std::fmt;
@@ -11,7 +11,7 @@ use std::str::FromStr;
 /// with no timezone or time data.
 /// Dates in this format can be stored as a `u32` with value YYYYMMDD.
 /// This format is compact and remains human-readable.
-#[derive(Debug,PartialEq,PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd)]
 pub struct Date(u32);
 
 impl Date {
@@ -33,7 +33,13 @@ impl Date {
 
 impl fmt::Display for Date {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{:04}-{:02}-{:02}", self.year(), self.month(), self.day())
+        write!(
+            f,
+            "{:04}-{:02}-{:02}",
+            self.year(),
+            self.month(),
+            self.day()
+        )
     }
 }
 
@@ -91,7 +97,8 @@ impl<'de> Visitor<'de> for DateVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Date, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         Date::from_str(value).map_err(E::custom)
     }
@@ -99,7 +106,8 @@ impl<'de> Visitor<'de> for DateVisitor {
 
 impl<'de> Deserialize<'de> for Date {
     fn deserialize<D>(deserializer: D) -> Result<Date, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(DateVisitor)
     }
