@@ -2,6 +2,13 @@
 #![plugin(rocket_codegen)]
 #![feature(custom_derive)]
 
+extern crate rocket;
+extern crate rocket_contrib;
+extern crate serde;
+#[macro_use] extern crate serde_derive;
+use rocket_contrib::Template;
+use rocket::State;
+
 extern crate dotenv;
 use std::env;
 use std::process;
@@ -9,52 +16,23 @@ use std::process;
 extern crate server;
 use server::opldb;
 use server::opldb::CachedFilter;
+use server::pages;
 
-/*
-fn rocket() -> rocket::Rocket {
-    // Initialize an r2d2 database connection pool.
-    let db_path = env::var("DATABASE_PATH").expect("DATABASE_PATH is not set.");
-    let db_pool = schema::init_pool(&db_path);
 
-    // Pre-cache some database information at boot.
-    // Because the database is read-only, this information is correct
-    // for the lifetime of the server.
-    let conn = DbConn(db_pool.get().expect("Failed to get a connection from pool."));
-    let num_entries = queries::count_entries(&conn).expect("Failed to count entries.");
-    let num_meets = queries::count_meets(&conn).expect("Failed to count meets.");
+#[get("/u/<username>")]
+fn lifter_handler(username: String, opldb: State<opldb::OplDb>) -> Template {
+    let context = pages::lifter::Context::new(&opldb, 0);
+    Template::render("lifter.html.hbs", &context)
+}
 
-    let db_stats = DbStats {
-        num_entries: num_entries,
-        num_meets: num_meets,
-    };
 
+fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
-        .manage(db_pool)
-        .manage(db_stats)
-
-        .mount("/", routes![rankings_handler])
-        .mount("/", routes![static_handler])
+        .manage(opldb)
         .mount("/", routes![lifter_handler])
-        .mount("/", routes![meet_handler])
-        .mount("/", routes![faq_handler])
-        .mount("/", routes![contact_handler])
-        .mount("/", routes![data_handler])
-
-        // Old HTML redirectors.
-        .mount("/", routes![redirect_old_contact_html,
-                            redirect_old_data_html,
-                            redirect_old_faq_html,
-                            redirect_old_lifters_html,
-                            redirect_old_meet_html,
-                            redirect_old_index_html])
-
-        // Old HTML handlers.
-        .mount("/", routes![meetlist_html])
-
         .attach(Template::fairing())
 }
-*/
 
 
 fn get_envvar_or_exit(key: &str) -> String {
@@ -83,13 +61,6 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
-    let raw_or_wraps_in_2017 =
-        opldb.get_filter(CachedFilter::EquipmentRaw)
-            .union(opldb.get_filter(CachedFilter::EquipmentWraps))
-            .intersect(opldb.get_filter(CachedFilter::Year2017));
-
-    println!("Raw/Wraps in 2017 count: {}", raw_or_wraps_in_2017.list.len());
-
     // Run the server loop.
-    //rocket().launch();
+    rocket(opldb).launch();
 }

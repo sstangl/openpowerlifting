@@ -20,7 +20,7 @@ use self::filter_cache::FilterCache;
 pub use self::filter_cache::CachedFilter;
 
 /// The definition of a Lifter in the database.
-#[derive(Deserialize)]
+#[derive(Serialize,Deserialize)]
 pub struct Lifter {
     #[serde(rename = "Name")]
     pub name: String,
