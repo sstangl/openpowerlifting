@@ -20,9 +20,14 @@ use server::pages;
 
 
 #[get("/u/<username>")]
-fn lifter_handler(username: String, opldb: State<opldb::OplDb>) -> Template {
-    let context = pages::lifter::Context::new(&opldb, 0);
-    Template::render("lifter.html.hbs", &context)
+fn lifter_handler(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
+    let lifter_id = match opldb.get_lifter_id(&username) {
+        None => return None,
+        Some(id) => id,
+    };
+
+    let context = pages::lifter::Context::new(&opldb, lifter_id);
+    Some(Template::render("lifter", &context))
 }
 
 

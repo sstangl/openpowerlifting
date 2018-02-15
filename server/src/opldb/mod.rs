@@ -271,4 +271,14 @@ impl OplDb {
     pub fn get_filter(&self, c: CachedFilter) -> &Filter {
         &self.filter_cache.from_enum(c)
     }
+
+    /// Look up the lifter_id by username.
+    pub fn get_lifter_id(&self, username: &str) -> Option<u32> {
+        for i in 0 .. self.lifters.len() {
+            if self.lifters[i].username == username {
+                return Some(i as u32)
+            }
+        }
+        None
+    }
 }
