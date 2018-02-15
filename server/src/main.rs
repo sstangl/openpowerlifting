@@ -2,15 +2,18 @@
 #![plugin(rocket_codegen)]
 #![feature(custom_derive)]
 
+extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 #[macro_use] extern crate serde_derive;
+
 use rocket_contrib::Template;
+use rocket::response::NamedFile;
 use rocket::State;
 
-extern crate dotenv;
 use std::env;
+use std::path::{Path, PathBuf};
 use std::process;
 
 extern crate server;
@@ -19,8 +22,14 @@ use server::opldb::CachedFilter;
 use server::pages;
 
 
+#[get("/static/<file..>")]
+fn statics(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("static/").join(file)).ok()
+}
+
+
 #[get("/u/<username>")]
-fn lifter_handler(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
+fn lifter(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
         Some(id) => id,
@@ -35,7 +44,7 @@ fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
-        .mount("/", routes![lifter_handler])
+        .mount("/", routes![lifter, statics])
         .attach(Template::fairing())
 }
 
