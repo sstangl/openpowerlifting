@@ -43,6 +43,8 @@ def main(activetab):
     addnav(activetab, 'faq', 'FAQ')
     addnav(activetab, 'contact', 'Contact')
 
+    print('<a href="https://openpowerlifting.bigcartel.com" class="nav__link">NEW! T-Shirts!</a>')
+
     print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us&nbsp;<img style="height: 15px; width: 15px" src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')
     print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
     print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')

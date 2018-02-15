@@ -150,7 +150,7 @@ def parse_fieldnames(sheet):
 
         elif text == 'Собств. вес' or text == 'Собств. Вес' or text == 'Собств.' or text == 'Соб.':
             fieldnames.append('BodyweightKg')
-        elif text == 'Собственный':
+        elif text == 'Собственный' or text == 'Собственный вес':
             fieldnames.append('BodyweightKg')
 
         elif text == 'Wilks' or text == 'Gloss':
@@ -344,6 +344,12 @@ def standardize_division_age(csv):
             division = 'Masters 60-69'
         elif 'Мастера 70-79' in row[idx]:
             division = 'Masters 70-79'
+        elif 'Мастера (' in row[idx]:
+            division = 'Masters'
+        elif 'Мастера 2' in row[idx]:
+            division = 'Masters 2'
+        elif 'Мастера 3' in row[idx]:
+            division = 'Masters 3'
 
         elif 'Открытая' in row[idx]:
             division = 'Open'
