@@ -1,7 +1,5 @@
 //! Logic for each lifter's personal page.
 
-use serde;
-
 use opldb;
 
 /// The context object passed to `templates/lifter.html.hbs`.

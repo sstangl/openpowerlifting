@@ -22,11 +22,11 @@ pub use self::filter_cache::CachedFilter;
 /// The definition of a Lifter in the database.
 #[derive(Serialize,Deserialize)]
 pub struct Lifter {
-    #[serde(rename = "Name")]
+    #[serde(rename(serialize = "name", deserialize = "Name"))]
     pub name: String,
-    #[serde(rename = "Username")]
+    #[serde(rename(serialize = "username", deserialize = "Username"))]
     pub username: String,
-    #[serde(rename = "Instagram")]
+    #[serde(rename(serialize = "instagram", deserialize = "Instagram"))]
     pub instagram: Option<String>,
 }
 
