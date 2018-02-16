@@ -1,30 +1,45 @@
-Name,Place,Equipment,Sex,Division,BodyweightKg,WeightClassKg,Age,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Event
-Trish Muldrock,1,Raw,F,Masters 2,45.8,47,57,55,60,-62.5,60,60,B
-Delwyn Evans,1,Raw,F,Masters 1,67.46,72,48,57.5,60,-62.6,60,60,B
-Debbie Turner,1,Single-ply,F,Masters 2,67,72,58,77.5,82.5,-87.5,82.5,82.5,B
-Colleen Cadman,2,Raw,F,Masters 2,63.54,72,58,52.5,-57.5,-57.5,52.5,52.5,B
-Wahbi Moradi,1,Single-ply,M,Juniors,69.62,74,18,105,-110,110,110,110,B
-Ming Ming Edgar,2,Raw,M,Juniors,72.84,74,22,85,90,-100,90,90,B
-Brian Froggatt,1,Raw,M,Masters 2,73.44,74,54,120,125,130,130,130,B
-Paul Renner,1,Raw,M,Open,72.76,74,25,95,105,-110,105,105,B
-Duncan Ferguson,2,Raw,M,Open,73.04,74,29,95,-100,100,100,100,B
-Dean Price,1,Raw,M,Sub-Juniors,71.8,74,17,120,125,-127.5,125,125,B
-Hayden Nauman,2,Single-ply,M,Sub-Juniors,71.42,74,16,92.5,100,-105,100,100,B
-Scott Parsons,1,Single-ply,M,Open,82.98,83,33,185,-192.5,197.5,197.5,197.5,B
-Miles Gunter,2,Single-ply,M,Open,82.74,83,26,150,160,-167.5,160,160,B
-Hugh Thomson,1,Raw,M,Sub-Juniors,82.18,83,16,85,90,92.5,92.5,92.5,B
-Steven Percy,1,Raw,M,Juniors,85.08,93,22,150,155,-157.5,155,155,B
-Chris Latham,2,Single-ply,M,Juniors,88,93,21,145,150,-155,150,150,B
-Liam Butler,3,Single-ply,M,Juniors,88.26,93,22,140,-150,-150,140,140,B
-Jason Blight,1,Single-ply,M,Open,83.74,93,34,150,155,157.5,157.5,157.5,B
-Rei Hamon,1,Single-ply,M,Juniors,100.62,105,23,140,155,-165,155,155,B
-Leethan Tau,2,Raw,M,Juniors,101.06,105,16,110,-115,-115,110,110,B
-Philip Middleton,1,Single-ply,M,Masters 1,104.82,105,40,170,180,-185,180,180,B
-Tony Vaka,2,Raw,M,Masters 1,104.91,105,40,145,152.5,160,160,160,B
-Alan Blowes,1,Single-ply,M,Masters 3,96.78,105,68,105,110,115,115,115,B
-Darren Neves,1,Single-ply,M,Open,102.54,105,31,185,-192.5,197.5,197.5,197.5,B
-James Bradbury,2,Raw,M,Open,101.3,105,35,160,-170,170,170,170,B
-Greg Turrell,1,Single-ply,M,Open,117.1,120,35,240,-250,250,250,250,B
-Jared Bradbury,2,Single-ply,M,Open,114.42,120,31,140,150,160,160,160,B
-Jason Cunningham-Gerbich,1,Single-ply,M,Open,174.82,120,38,240,-276,-276,240,240,B
-Marcus Mikahere,2,Raw,M,Open,123.16,120,35,200,217.5,-220,217.5,217.5,B
+Name,Equipment,Sex,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Event,Place
+Brett Gibbs,Single-ply,M,Juniors,81.6,83,240,-255,-262.5,240,180,190,-200,190,240,252.5,262.5,262.5,692.5,SBD,1
+Samuel Fowler,Single-ply,M,Open,80.6,83,185,195,-205,195,130,137.5,142.5,142.5,205,220,225,225,562.5,SBD,1
+James Wilson,Single-ply,M,Open,80.7,83,170,180,190,190,120,125,-130,125,200,210,-215,210,525,SBD,2
+McBride,Single-ply,M,Juniors,87.7,93,205,215,225,225,142.5,147.5,-150,147.5,205,215,-227.5,215,587.5,SBD,1
+Craig McMillan,Single-ply,M,Open,92.2,93,255,270,-282.5,270,175,-185,192.5,192.5,245,260,272.5,272.5,735,SBD,1
+Justin Brown,Single-ply,M,Open,90.2,93,210,230,-250,230,140,160,-170,160,210,230,-245,230,620,SBD,2
+Nick Toulis,Single-ply,M,Masters 2,93,93,210,-215,,210,60,,,60,210,230,-252.5,230,500,SBD,1
+Laurence Voight,Single-ply,M,Masters 2,92.9,93,130,140,,140,110,-117.5,117.5,117.5,160,175,190,190,447.5,SBD,2
+John Rippon,Single-ply,M,Masters 3,89.4,93,160,165,-170,165,-140,140,-145,140,200,210,-215,210,515,SBD,1
+Keiran Prisk,Wraps,M,Open,102.5,105,260,280,-290,280,140,145,,145,260,-275,,260,685,SBD,1
+Zane Waapu-Wairama,Wraps,M,Open,104,105,215,225,232.5,232.5,160,167.5,-175,167.5,240,260,-270,260,660,SBD,2
+Tyler Simpson,Wraps,M,Open,96.7,105,-190,200,-210,200,130,140,-145,140,240,250,-260,250,590,SBD,3
+Tony Oliver,Single-ply,M,Masters 1,98.7,105,-200,200,-225,200,120,130,140,140,200,225,-235,225,565,SBD,1
+William Quinn,Raw,M,Masters 2,103,105,200,-220,-225,200,100,105,110,110,220,240,-252.5,240,550,SBD,1
+Brett Guthrie,Single-ply,M,Masters 2,94.5,105,160,180,200,200,90,100,-105,100,200,230,-250,230,530,SBD,1
+John Geynge,Single-ply,M,Masters 2,95.2,105,140,-150,160,160,105,115,-120,115,-165,165,182.5,182.5,457.5,SBD,2
+Brendan Murray,Wraps,M,Masters 2,95.6,105,-137.5,-137.5,137.5,137.5,80,-85,-85,80,155,165,175,175,392.5,SBD,1
+William Duffy,Single-ply,M,Juniors,109.8,120,240,-255,-255,240,-145,-145,-145,,240,-250,-250,240,,SBD,DQ
+Damon Tafatu,Wraps,M,Open,118,120,250,280,-300,280,180,200,-210,200,250,-280,-280,250,730,SBD,1
+Tim Hintz,Single-ply,M,Open,117.5,120,-250,-280,280,280,160,175,-190,175,220,240,-260,240,695,SBD,1
+Trevor Walker,Single-ply,M,Masters 1,130.9,120+,-220,-220,-220,,140,-145,-145,140,200,-220,-220,200,,SBD,DQ
+Rosalie Watson,Wraps,F,Juniors,66.4,72,95,105,-115,105,60,65,-70,65,120,130,140,140,310,SBD,1
+Celia McMillan,Single-ply,F,Open,51.3,52,125,132.5,-140,132.5,77.5,85,90,90,122.5,132.5,-137.5,132.5,355,SBD,1
+Aimee Banks,Single-ply,F,Open,61.2,63,117.5,127.5,140,140,70,-75,-75,70,130,140,-152.5,140,350,SBD,1
+Lyndelle Neho,Single-ply,F,Open,71.4,72,130,140,150,150,70,-75,75,75,110,120,130,130,355,SBD,1
+Chris Webber,Single-ply,F,Masters 1,56.2,57,115,125,-132.5,125,70,-75,-75,70,115,123,130,130,325,SBD,1
+Annette Bormolini,Wraps,F,Masters 1,71.6,72,95,102.5,-105,102.5,52.5,-57.5,-60,52.5,108,115,122.5,122.5,277.5,SBD,1
+Brightwater-Wharf,Wraps,F,Masters 2,61.9,63,95,105,-112.5,105,57.5,60,-65,60,130,142.5,152.5,152.5,317.5,SBD,1
+Nicholas Fyfe,Single-ply,M,Open,69.8,74,100,-113,125,125,80,100,-107.5,100,130,-140,147.5,147.5,372.5,SBD,1
+Chris Basher,Single-ply,M,Masters 1,71.7,74,-170,170,190,190,80,90,-100,90,170,190,200,200,480,SBD,1
+John Rivers,Single-ply,M,Masters 2,81.2,83,170,180,190,190,117.5,-122.5,-122.5,117.5,175,190,-200,190,497.5,SBD,1
+Ian Prisk,Single-ply,M,Masters 2,77.75,83,150,165,180,180,92.5,100,105,105,180,200,-205,200,485,SBD,2
+Ailsa Bay,Raw,F,Masters 1,85.5,84+,100,105,-112.5,105,57.5,62.5,-67.5,62.5,110,120,130,130,297.5,SBD,1
+Sharnell Duncan,Raw,F,Open,54.3,57,87.5,95,100,100,50,55,-60,55,115,125,130,130,285,SBD,1
+Verena Tilson-Scoble,Raw,F,Open,60.9,63,-70,-70,70,70,42.5,-47.5,47.5,47.5,-102.5,102.5,-110,102.5,220,SBD,1
+Tasha Williams,Raw,F,Open,71.5,72,120,130,-135,130,82.5,-87.5,-87.5,82.5,170,-185,-185,170,382.5,SBD,1
+Joel Hintz,Raw,M,Sub-Juniors,102.7,105,160,-190,200,200,90,105,120,120,180,210,-230,210,530,SBD,1
+Tui Halatokua,Raw,M,Open,75.65,83,140,160,170,170,120,125,130,130,-140,165,180,180,480,SBD,1
+Hayden Pritchard,Raw,M,Open,89.4,93,200,215,227.5,227.5,120,135,,135,240,260,-267.5,260,622.5,SBD,1
+Aaron Koorey,Raw,M,Open,87.8,93,160,180,-195,180,-140,140,-155,140,180,210,220,220,540,SBD,2
+Pala Molisa,Raw,M,Open,89.2,93,160,170,-185,170,100,110,-115,110,220,-240,-240,220,500,SBD,3
+Jacob Parry,Raw,M,Open,96.2,105,175,187.5,200,200,125,-132.5,-135,125,215,225,237.5,237.5,562.5,SBD,1
+Michael Iovine,Raw,M,Masters 1,114.6,120,220,260,272.5,272.5,140,180,-200,180,240,290,305,305,757.5,SBD,1
+Geoffrey Holmes,Raw,M,Masters 2,117.9,120,170,185,195,195,80,100,-105,100,180,200,205,205,500,SBD,1
