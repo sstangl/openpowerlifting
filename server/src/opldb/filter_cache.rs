@@ -2,7 +2,7 @@
 
 use opldb::filter::Filter;
 use opldb::fields::*;
-use opldb::{Entry,Meet,Lifter};
+use opldb::{Entry, Lifter, Meet};
 
 /// The filters cached within the `OplDb`.
 ///
@@ -47,29 +47,17 @@ pub struct FilterCache {
 impl FilterCache {
     pub fn new(meets: &Vec<Meet>, entries: &Vec<Entry>) -> FilterCache {
         FilterCache {
-            equipment_raw: filter_on_entries(entries, |e| {
-                e.equipment == Equipment::Raw
-            }),
+            equipment_raw: filter_on_entries(entries, |e| e.equipment == Equipment::Raw),
 
-            equipment_wraps: filter_on_entries(entries, |e| {
-                e.equipment == Equipment::Wraps
-            }),
+            equipment_wraps: filter_on_entries(entries, |e| e.equipment == Equipment::Wraps),
 
-            equipment_single: filter_on_entries(entries, |e| {
-                e.equipment == Equipment::Single
-            }),
+            equipment_single: filter_on_entries(entries, |e| e.equipment == Equipment::Single),
 
-            equipment_multi: filter_on_entries(entries, |e| {
-                e.equipment == Equipment::Multi
-            }),
+            equipment_multi: filter_on_entries(entries, |e| e.equipment == Equipment::Multi),
 
-            sex_male: filter_on_entries(entries, |e| {
-                e.sex == Sex::M
-            }),
+            sex_male: filter_on_entries(entries, |e| e.sex == Sex::M),
 
-            sex_female: filter_on_entries(entries, |e| {
-                e.sex == Sex::F
-            }),
+            sex_female: filter_on_entries(entries, |e| e.sex == Sex::F),
 
             year_2018: filter_on_entries(entries, |e| {
                 meets[e.meet_id as usize].date.year() == 2018
@@ -113,10 +101,11 @@ impl FilterCache {
 }
 
 fn filter_on_entries<F>(entries: &Vec<Entry>, select: F) -> Filter
-    where F: Fn(&Entry) -> bool
+where
+    F: Fn(&Entry) -> bool,
 {
     let mut vec = Vec::new();
-    for i in 0 .. entries.len() {
+    for i in 0..entries.len() {
         if select(&entries[i]) {
             vec.push(i as u32);
         }

@@ -3,7 +3,8 @@
 // External dependencies.
 extern crate csv;
 extern crate serde;
-#[macro_use] extern crate serde_derive;
+#[macro_use]
+extern crate serde_derive;
 
 // Exported modules.
 pub mod opldb;

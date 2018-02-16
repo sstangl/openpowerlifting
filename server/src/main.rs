@@ -20,12 +20,10 @@ use server::opldb;
 use server::opldb::CachedFilter;
 use server::pages;
 
-
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/").join(file)).ok()
 }
-
 
 #[get("/u/<username>")]
 fn lifter(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
@@ -38,7 +36,6 @@ fn lifter(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
     Some(Template::render("lifter", &context))
 }
 
-
 fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
@@ -47,14 +44,14 @@ fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
         .attach(Template::fairing())
 }
 
-
 fn get_envvar_or_exit(key: &str) -> String {
-    env::var(key).map_err(|_| {
-        eprintln!("Environment variable '{}' not set.", key);
-        process::exit(1);
-    }).unwrap()
+    env::var(key)
+        .map_err(|_| {
+            eprintln!("Environment variable '{}' not set.", key);
+            process::exit(1);
+        })
+        .unwrap()
 }
-
 
 fn main() {
     // Populate std::env with the contents of any .env file.

@@ -28,7 +28,8 @@ pub use self::weightclasskg::*;
 /// Deserializes a `f32` field from the CSV source,
 /// defaulting to `0.0` if the empty string is encountered.
 pub fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::Error>
-    where D: serde::Deserializer<'de>
+where
+    D: serde::Deserializer<'de>,
 {
     struct F32StrVisitor;
 
@@ -40,7 +41,8 @@ pub fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::E
         }
 
         fn visit_str<E>(self, value: &str) -> Result<f32, E>
-            where E: de::Error
+        where
+            E: de::Error,
         {
             if value.is_empty() {
                 return Ok(0.0);
@@ -52,13 +54,13 @@ pub fn deserialize_f32_with_default<'de, D>(deserializer: D) -> Result<f32, D::E
     deserializer.deserialize_str(F32StrVisitor)
 }
 
-#[derive(Deserialize,PartialEq)]
+#[derive(Deserialize, PartialEq)]
 pub enum Sex {
     M,
     F,
 }
 
-#[derive(Deserialize,PartialEq)]
+#[derive(Deserialize, PartialEq)]
 pub enum Equipment {
     Raw,
     Wraps,
