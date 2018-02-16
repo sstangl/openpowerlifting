@@ -2,7 +2,7 @@
 
 use opldb::filter::Filter;
 use opldb::fields::*;
-use opldb::{Entry, Lifter, Meet};
+use opldb::{Entry, Meet};
 
 /// The filters cached within the `OplDb`.
 ///

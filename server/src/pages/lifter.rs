@@ -4,15 +4,15 @@ use opldb;
 
 #[derive(Serialize)]
 pub struct HeaderContext {
-    num_entries: u32,
-    num_meets: u32,
+    pub num_entries: u32,
+    pub num_meets: u32,
 }
 
 /// The context object passed to `templates/lifter.html.hbs`.
 #[derive(Serialize)]
 pub struct Context<'a> {
-    header: HeaderContext,
-    lifter: &'a opldb::Lifter,
+    pub header: HeaderContext,
+    pub lifter: &'a opldb::Lifter,
 }
 
 impl<'a> Context<'a> {

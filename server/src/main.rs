@@ -17,7 +17,6 @@ use std::process;
 
 extern crate server;
 use server::opldb;
-use server::opldb::CachedFilter;
 use server::pages;
 
 #[get("/static/<file..>")]
