@@ -1,12 +1,12 @@
-Name,Division,Sex,Team,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Place,Evemt,Equipment
-Maria Luisa Vasquez,Open,F,GUA,46.8,47,160,170,-180,170,72.5,77.5,80,80,135,142.5,-147.5,142.5,392.5,1,SBD,Single-ply
+Name,Division,Sex,Team,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Place,Event,Equipment
+María Luisa Vásquez,Open,F,GUA,46.8,47,160,170,-180,170,72.5,77.5,80,80,135,142.5,-147.5,142.5,392.5,1,SBD,Single-ply
 Rowena Lopez,Open,F,TX,55.1,57,-150,150,162.5,162.5,92.5,97.5,-102.5,97.5,150,170,175,175,435,1,SBD,Single-ply
 Katherine Clark,Open,F,WA,55.6,57,167.5,-177.5,-177.5,167.5,90,95,97.5,97.5,165,170,-172.5,170,435,2,SBD,Single-ply
 Monica Sobotka,Open,F,TX,56.9,57,-92.5,92.5,-100,92.5,70,72.5,-75,72.5,120,130,-132.5,130,295,3,SBD,Single-ply
-Janel Brown,Open,F,PA,55.5,57,-180,-180,-180,-180,,,,,,,,,,DQ,SBD,Single-ply
+Janel Brown,Open,F,PA,55.5,57,-180,-180,-180,,,,,,,,,,,DQ,SBD,Single-ply
 Irani Barbosa,Open,F,BRA,59.8,63,175,-187.5,187.5,187.5,97.5,102.5,107.5,107.5,150,160,170,170,465,1,SBD,Single-ply
 Heather Crocker,Open,F,MA,61.3,63,160,172.5,182.5,182.5,67.5,75,-77.5,75,167.5,182.5,-190,182.5,440,2,SBD,Single-ply
-Jennifer Thompson,Open,F,NC,59.7,63,-175,-175,-175,-175,,,,,,,,,,DQ,SBD,Single-ply
+Jennifer Thompson,Open,F,NC,59.7,63,-175,-175,-175,,,,,,,,,,,DQ,SBD,Single-ply
 Erica Bueno,Open,F,BRA,63.5,72,185,200,-205,200,125,135,-137.5,135,170,185,-202.5,185,520,1,SBD,Single-ply
 Erin Walterman,Open,F,WI,67.7,72,162.5,172.5,182.5,182.5,125,130,137.5,137.5,167.5,182.5,-200,182.5,502.5,2,SBD,Single-ply
 Sandra Sebastian,Open,F,TX,70.4,72,-175,182.5,-192.5,182.5,92.5,100,-110,100,-192.5,192.5,-210,192.5,475,3,SBD,Single-ply
@@ -27,7 +27,7 @@ Beau Moore,Master,M,FL,154.2,120+,320,-332.5,-332.5,320,232.5,-247.5,-247.5,232.
 Remi Carvalho,Master,M,BRA,73.3,74,-250,250,265,265,160,-170,-172.5,160,240,250,-260,250,675,3,SBD,Single-ply
 Miguel Ruelan,Master,M,MI,73.6,74,200,212.5,-227.5,212.5,195,-202.5,202.5,202.5,215,237.5,-250,237.5,652.5,4,SBD,Single-ply
 Greg Simmons,Master,M,IN,66,66,205,215,225,225,140,142.5,150,150,205,215,225,225,600,5,SBD,Single-ply
-Ivan Cancel,LW,M,PUR,58.3,59,-185,185,195,195,145,-150,-155,145,192.5,202.5,-205,202.5,542.5,1,SBD,Single-ply
+Iván Cancel,LW,M,PUR,58.3,59,-185,185,195,195,145,-150,-155,145,192.5,202.5,-205,202.5,542.5,1,SBD,Single-ply
 Alexander Kang,LW,M,MD,64.6,66,205,217.5,-227.5,217.5,75,-122.5,-122.5,75,192.5,212.5,-227.5,212.5,505,1,SBD,Single-ply
 Eric Oishi,LW,M,BRA,72.4,74,275,292.5,300,300,195,200,205,205,250,260,-270,260,765,1,SBD,Single-ply
 Marcus Williams,LW,M,GA,68.1,74,-255,255,272.5,272.5,175,-182.5,-182.5,175,-277.5,277.5,285,285,732.5,2,SBD,Single-ply
@@ -40,12 +40,12 @@ Erik Kasabuske,MW,M,CA,90.6,93,312.5,332.5,-340,332.5,192.5,-200,-205,192.5,310,
 Dustin Starer,MW,M,MD,91.4,93,235,242.5,252.5,252.5,150,157.5,165,165,245,265,-287.5,265,682.5,5,SBD,Single-ply
 Mike MacDonald,MW,M,CAN,101.3,105,320,-330,332.5,332.5,232.5,240,-250,240,320,335,-340,335,907.5,1,SBD,Single-ply
 John MacDonald,MW,M,CAN,103.8,105,322.5,332.5,-340,332.5,217.5,227.5,232.5,232.5,285,297.5,302.5,302.5,867.5,2,SBD,Single-ply
-Harold Millan,MW,M,PUR,104.4,105,-350,350,0,350,-193,192.5,-197.5,192.5,307.5,-310,-327.5,307.5,850,3,SBD,Single-ply
-Michael Kalter,MW,M,ME,104.4,105,290,310,0,310,185,-195,0,185,310,-322.5,-322.5,310,805,4,SBD,Single-ply
-Tim Durrett,MW,M,VA,103.8,105,282.5,-295,295,295,-213,-212.5,212.5,212.5,255,272.5,-282.5,272.5,780,5,SBD,Single-ply
+Harold Millan,MW,M,PUR,104.4,105,-350,350,,350,-192.5,192.5,-197.5,192.5,307.5,-310,-327.5,307.5,850,3,SBD,Single-ply
+Michael Kalter,MW,M,ME,104.4,105,290,310,,310,185,-195,,185,310,-322.5,-322.5,310,805,4,SBD,Single-ply
+Tim Durrett,MW,M,VA,103.8,105,282.5,-295,295,295,-212.5,-212.5,212.5,212.5,255,272.5,-282.5,272.5,780,5,SBD,Single-ply
 Mark Sonnichsen,MW,M,WA,102.4,105,265,277.5,-292.5,277.5,157.5,165,-172.5,165,260,277.5,-290,277.5,720,6,SBD,Single-ply
 Steve Mann,HW,M,PA,113.9,120,340,367.5,-372.5,367.5,245,265,-272.5,265,277.5,290,-302.5,290,922.5,1,SBD,Single-ply
 Gage Soehner,HW,M,CO,119.4,120,327.5,347.5,357.5,357.5,227.5,-245,-245,227.5,275,297.5,305,305,890,2,SBD,Single-ply
 David Balsdon,HW,M,NY,115.2,120,310,-320,320,320,220,-230,232.5,232.5,277.5,302.5,-310,302.5,855,3,SBD,Single-ply
 Randall Harris,HW,M,TX,161,120+,350,-385,-410,350,230,-275,275,275,320,340,362.5,362.5,987.5,1,SBD,Single-ply
-Beau Moore,HW,M,FL,154.2,120+,320,-332.5,-332.5,320,232.5,-247.5,-247.5,232.5,325,350,0,350,902.5,2,SBD,Single-ply
+Beau Moore,HW,M,FL,154.2,120+,320,-332.5,-332.5,320,232.5,-247.5,-247.5,232.5,325,350,,350,902.5,2,SBD,Single-ply
