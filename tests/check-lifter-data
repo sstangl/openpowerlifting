@@ -7,7 +7,6 @@
 # Used as part of "make check".
 #
 
-import colorama
 import sys,os
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
@@ -16,11 +15,16 @@ from usernames import get_username
 
 
 def redden(s):
-    return "\033[1;31m" + s + "\033[0;m"
+    if os.name != 'nt':
+        return "\033[1;31m" + s + "\033[0;m"
+    else: 
+        return s
 
 def enyellow(s):
-    return "\033[1;33m" + s + "\033[0;m"
-
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
+    else: 
+        return s
 hitError = False  # Determines return value at end.
 
 def perror(s):
@@ -216,7 +220,6 @@ def check_name_disambiguation(names):
 def main():
     global hitError
 
-    colorama.init()
     # Get a list of all the Name entries throughout the whole project.
     names = get_database_nameset()
 
@@ -224,7 +227,6 @@ def main():
     check_usernames(names)
     check_name_corrections(names)
     check_name_disambiguation(names)
-    colorama.deinit()
 
     if hitError:
         return 1

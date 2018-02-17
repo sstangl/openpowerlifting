@@ -4,8 +4,6 @@
 # Simple script to run over a list of names and output any
 # that are listed as being both M and F.
 #
-
-import colorama
 import sys,os
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
@@ -22,10 +20,16 @@ errorCount = 0
 warningCount = 0
 
 def redden(s):
-    return "\033[1;31m" + s + "\033[0;m"
+    if os.name != 'nt':
+        return "\033[1;31m" + s + "\033[0;m"
+    else: 
+        return s
 
 def enyellow(s):
-    return "\033[1;33m" + s + "\033[0;m"
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
+    else: 
+        return s
 
 def perror(s):
     global errorCount
@@ -83,7 +87,6 @@ def process_file(path):
 
 
 def main():
-    colorama.init()
     for dirname, subdirs, files in os.walk(os.getcwd()):
         if 'entries.csv' in files:
             entriespath = dirname + os.sep + 'entries.csv'
@@ -96,7 +99,6 @@ def main():
     if errorCount > 0 or warningCount > 0:
         print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
 
-    colorama.deinit()
     if errorCount > 0:
         return 1
     return 0
