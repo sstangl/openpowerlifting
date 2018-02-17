@@ -54,13 +54,13 @@ where
     deserializer.deserialize_str(F32StrVisitor)
 }
 
-#[derive(Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq)]
 pub enum Sex {
     M,
     F,
 }
 
-#[derive(Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq)]
 pub enum Equipment {
     Raw,
     Wraps,

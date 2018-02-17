@@ -50,7 +50,7 @@ pub struct Meet {
 }
 
 /// The definition of an Entry in the database.
-#[derive(Deserialize)]
+#[derive(Debug, Deserialize)]
 pub struct Entry {
     #[serde(rename(deserialize = "MeetID"))]
     pub meet_id: u32,
@@ -287,5 +287,41 @@ impl OplDb {
             }
         }
         None
+    }
+
+    /// Returns all entries with the given lifter_id.
+    ///
+    /// The vector of entries is sorted by lifter_id. This function uses binary
+    /// search followed by a bi-directional linear scan.
+    ///
+    /// Panics if the lifter_id is not found.
+    pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
+        // Perform a binary search on lifter_id.
+        let found_index = self.get_entries()
+            .binary_search_by_key(&lifter_id, |e| e.lifter_id).unwrap();
+
+        // All entries for a lifter are contiguous, so scan linearly to find the first.
+        let mut first_index = found_index;
+        for index in (0 .. found_index).rev() {
+            if self.get_entry(index as u32).lifter_id == lifter_id {
+                first_index = index;
+            } else {
+                break;
+            }
+        }
+
+        // Scan to find the last.
+        let mut last_index = found_index;
+        for index in found_index .. self.get_entries().len() {
+            if self.get_entry(index as u32).lifter_id == lifter_id {
+                last_index = index;
+            } else {
+                break;
+            }
+        }
+        assert!(first_index <= last_index);
+
+        // Collect entries between first_index and last_index, inclusive.
+        (first_index .. last_index + 1).map(|i| self.get_entry(i as u32)).collect()
     }
 }

@@ -18,6 +18,7 @@ pub struct Context<'a> {
 impl<'a> Context<'a> {
     pub fn new(opldb: &'a opldb::OplDb, lifter_id: u32) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
+        let entries = opldb.get_entries_for_lifter(lifter_id);
 
         Context {
             header: HeaderContext {
