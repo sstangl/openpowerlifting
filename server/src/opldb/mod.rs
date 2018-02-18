@@ -296,11 +296,12 @@ impl OplDb {
     pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
         // Perform a binary search on lifter_id.
         let found_index = self.get_entries()
-            .binary_search_by_key(&lifter_id, |e| e.lifter_id).unwrap();
+            .binary_search_by_key(&lifter_id, |e| e.lifter_id)
+            .unwrap();
 
         // All entries for a lifter are contiguous, so scan linearly to find the first.
         let mut first_index = found_index;
-        for index in (0 .. found_index).rev() {
+        for index in (0..found_index).rev() {
             if self.get_entry(index as u32).lifter_id == lifter_id {
                 first_index = index;
             } else {
@@ -310,7 +311,7 @@ impl OplDb {
 
         // Scan to find the last.
         let mut last_index = found_index;
-        for index in found_index .. self.get_entries().len() {
+        for index in found_index..self.get_entries().len() {
             if self.get_entry(index as u32).lifter_id == lifter_id {
                 last_index = index;
             } else {
@@ -320,6 +321,8 @@ impl OplDb {
         assert!(first_index <= last_index);
 
         // Collect entries between first_index and last_index, inclusive.
-        (first_index .. last_index + 1).map(|i| self.get_entry(i as u32)).collect()
+        (first_index..last_index + 1)
+            .map(|i| self.get_entry(i as u32))
+            .collect()
     }
 }
