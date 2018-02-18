@@ -14,21 +14,32 @@ use std::num;
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(i32);
+
+impl WeightKg {
+    pub fn zero() -> WeightKg {
+        WeightKg(0)
+    }
+}
 
 impl fmt::Display for WeightKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Displaying a weight only shows a single decimal place.
-        // Truncate the last number.
-        let integer = self.0 / 100;
-        let decimal = (self.0.abs() % 100) / 10;
-
-        // If the decimal can be avoided, don't write it.
-        if decimal != 0 {
-            write!(f, "{}.{}", integer, decimal)
+        // Don't display empty weights.
+        if self.0 == 0 {
+            Ok(())
         } else {
-            write!(f, "{}", integer)
+            // Displaying a weight only shows a single decimal place.
+            // Truncate the last number.
+            let integer = self.0 / 100;
+            let decimal = (self.0.abs() % 100) / 10;
+
+            // If the decimal can be avoided, don't write it.
+            if decimal != 0 {
+                write!(f, "{}.{}", integer, decimal)
+            } else {
+                write!(f, "{}", integer)
+            }
         }
     }
 }
@@ -149,7 +160,7 @@ mod tests {
         assert_eq!(format!("{}", w), "-123");
 
         let w = "-0.000".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "0");
+        assert_eq!(format!("{}", w), "");
     }
 
     #[test]

@@ -8,7 +8,7 @@ use std::fmt;
 use std::str::FromStr;
 
 /// The definition of the "Place" column.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Serialize)]
 pub enum Place {
     /// The placing assigned to the entry.
     P(u8),

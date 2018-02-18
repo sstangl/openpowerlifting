@@ -56,19 +56,19 @@ where
     deserializer.deserialize_str(F32StrVisitor)
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
 pub enum Sex {
     M,
     F,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
 pub enum Equipment {
     Raw,
     Wraps,
-    #[serde(rename = "Single-ply")]
+    #[serde(rename(deserialize = "Single-ply"))]
     Single,
-    #[serde(rename = "Multi-ply")]
+    #[serde(rename(deserialize = "Multi-ply"))]
     Multi,
     Straps,
 }

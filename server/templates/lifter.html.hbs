@@ -19,28 +19,6 @@
 
 {{#*inline "body"}}
   <div class="content">
-    {{! Best statistics table. }}
-    <table>
-      <thead>
-        <th>Equipment</th>
-        <th>Best Squat</th>
-	<th>Best Bench</th>
-	<th>Best Deadlift</th>
-	<th>Best Total</th>
-	<th>Best Wilks</th>
-      </thead>
-      <tbody>
-        <tr>
-	  <td>Raw/Wraps</td>
-	  <td>{{best_raw_squat}}</td>
-	  <td>{{best_raw_bench}}</td>
-	  <td>{{best_raw_deadlift}}</td>
-	  <td>{{best_raw_total}}</td>
-	  <td>{{best_raw_wilks}}</td>
-        </tr>
-      </tbody>
-    </table>
-
     {{! Meet results table. }}
     <table>
       <thead>
@@ -60,24 +38,23 @@
         <th>Total</th>
         <th>Wilks</th>
       </thead>
-      {{#each entries}}
+      {{#each meet_results}}
         <tr>
-          <td>{{this.0.place}}</td>
-          <td>{{this.1.federation}}</td>
-          <td>{{this.1.date}}</td>
-          <td>{{this.1.country}}{{#if this.1.state}}-{{this.1.state}}{{/if}}</td>
-          <td><a href="/m/{{this.1.path}}">{{this.1.name}}</a></td>
-          <td>{{this.0.division}}</td>
-          <td>{{this.0.sex}}</td>
-          <td>{{this.0.equipment}}</td>
-          <td>{{this.0.weightclasskg}}</td>
-          <td>{{this.0.bodyweightkg}}</td>
-          {{! FIXME -- Need to take a max of BestFooKg and Foo4Kg. }}
-          <td>{{this.0.bestsquatkg}}</td>
-          <td>{{this.0.bestbenchkg}}</td>
-          <td>{{this.0.bestdeadliftkg}}</td>
-          <td>{{this.0.totalkg}}</td>
-          <td>{{this.0.wilks}}</td>
+          <td>{{this.place}}</td>
+          <td>{{this.federation}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.country}}{{#if this.state}}-{{this.state}}{{/if}}</td>
+          <td><a href="/m/{{this.meet_path}}">{{this.meet_name}}</a></td>
+          <td>{{this.division}}</td>
+          <td>{{this.sex}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclasskg}}</td>
+          <td>{{this.bodyweightkg}}</td>
+          <td>{{this.squatkg}}</td>
+          <td>{{this.benchkg}}</td>
+          <td>{{this.deadliftkg}}</td>
+          <td>{{this.totalkg}}</td>
+          <td>{{this.wilks}}</td>
         </tr>
       {{/each}}
     </table>

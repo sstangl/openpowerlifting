@@ -11,7 +11,7 @@ use std::str::FromStr;
 /// with no timezone or time data.
 /// Dates in this format can be stored as a `u32` with value YYYYMMDD.
 /// This format is compact and remains human-readable.
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd, Ord, Eq, Serialize)]
 pub struct Date(u32);
 
 impl Date {

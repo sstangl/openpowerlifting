@@ -19,10 +19,15 @@ pub struct Points(i32);
 
 impl fmt::Display for Points {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Displaying points always shows two decimal places.
-        let integer = self.0 / 100;
-        let decimal = self.0.abs() % 100;
-        write!(f, "{}.{:02}", integer, decimal)
+        // Don't display empty points.
+        if self.0 == 0 {
+            Ok(())
+        } else {
+            // Displaying points always shows two decimal places.
+            let integer = self.0 / 100;
+            let decimal = self.0.abs() % 100;
+            write!(f, "{}.{:02}", integer, decimal)
+        }
     }
 }
 
@@ -140,7 +145,7 @@ mod tests {
         assert_eq!(format!("{}", w), "-123.00");
 
         let w = "-0.000".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "0.00");
+        assert_eq!(format!("{}", w), "");
     }
 
     #[test]
