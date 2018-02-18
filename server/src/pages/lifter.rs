@@ -45,7 +45,10 @@ pub struct MeetResultsRow<'a> {
 }
 
 impl<'a> MeetResultsRow<'a> {
-    pub fn from(opldb: &'a opldb::OplDb, entry: &'a opldb::Entry) -> MeetResultsRow<'a> {
+    fn from(opldb: &'a opldb::OplDb,
+            entry: &'a opldb::Entry,
+            prmarker: PrMarker)
+        -> MeetResultsRow<'a> {
         let meet: &'a opldb::Meet = opldb.get_meet(entry.meet_id);
 
         MeetResultsRow {
@@ -72,10 +75,10 @@ impl<'a> MeetResultsRow<'a> {
             totalkg: format!("{}", &entry.totalkg),
             wilks: format!("{}", &entry.wilks),
 
-            squat_is_pr: false,
-            bench_is_pr: false,
-            deadlift_is_pr: false,
-            total_is_pr: false,
+            squat_is_pr: prmarker.squat_is_pr,
+            bench_is_pr: prmarker.bench_is_pr,
+            deadlift_is_pr: prmarker.deadlift_is_pr,
+            total_is_pr: prmarker.total_is_pr,
         }
     }
 }
@@ -103,7 +106,7 @@ impl PrMarker {
 /// mark which lifts are PRs, taking equipment into consideration.
 ///
 /// Weightclasses are not considered.
-fn mark_prs(entries: &Vec<opldb::Entry>) -> Vec<PrMarker> {
+fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
     let mut best_squat_raw = fields::WeightKg::zero();
     let mut best_bench_raw = fields::WeightKg::zero();
     let mut best_deadlift_raw = fields::WeightKg::zero();
@@ -127,6 +130,9 @@ fn mark_prs(entries: &Vec<opldb::Entry>) -> Vec<PrMarker> {
     for i in 0..entries.len() {
         let entry = &entries[i];
 
+        // TODO FIXME -- If the lifter competed in multiple divisions on
+        // the same day, PRs should be shared across them.
+
         let mut prmarker = PrMarker::new();
 
         let squat = entry.highest_squatkg();
@@ -137,60 +143,76 @@ fn mark_prs(entries: &Vec<opldb::Entry>) -> Vec<PrMarker> {
             fields::Equipment::Raw => {
                 if *squat > best_squat_raw {
                     prmarker.squat_is_pr = true;
+                    best_squat_raw.0 = squat.0;
                 }
                 if *bench > best_bench_raw {
                     prmarker.bench_is_pr = true;
+                    best_bench_raw.0 = bench.0;
                 }
                 if *deadlift > best_deadlift_raw {
                     prmarker.deadlift_is_pr = true;
+                    best_deadlift_raw.0 = deadlift.0;
                 }
                 if entry.totalkg > best_total_raw {
                     prmarker.total_is_pr = true;
+                    best_total_raw.0 = entry.totalkg.0;
                 }
             },
             fields::Equipment::Wraps => {
                 if *squat > best_squat_wraps {
                     prmarker.squat_is_pr = true;
+                    best_squat_wraps.0 = squat.0;
                 }
                 if *bench > best_bench_raw {
                     prmarker.bench_is_pr = true;
+                    best_bench_raw.0 = bench.0;
                 }
                 if *deadlift > best_deadlift_raw {
                     prmarker.deadlift_is_pr = true;
+                    best_deadlift_raw.0 = deadlift.0;
                 }
                 if entry.totalkg > best_total_wraps {
                     prmarker.total_is_pr = true;
+                    best_total_wraps.0 = entry.totalkg.0;
                 }
             },
             fields::Equipment::Single => {
                 if *squat > best_squat_single {
                     prmarker.squat_is_pr = true;
+                    best_squat_single.0 = squat.0;
                 }
                 if *bench > best_bench_single {
                     prmarker.bench_is_pr = true;
+                    best_bench_single.0 = bench.0;
                 }
                 if *deadlift > best_deadlift_single {
                     prmarker.deadlift_is_pr = true;
+                    best_deadlift_single.0 = deadlift.0;
                 }
                 if entry.totalkg > best_total_single {
                     prmarker.total_is_pr = true;
+                    best_total_single.0 = entry.totalkg.0;
                 }
             },
             fields::Equipment::Multi => {
                 if *squat > best_squat_multi {
                     prmarker.squat_is_pr = true;
+                    best_squat_multi.0 = squat.0;
                 }
                 if *bench > best_bench_multi {
                     prmarker.bench_is_pr = true;
+                    best_bench_multi.0 = bench.0;
                 }
                 if *deadlift > best_deadlift_multi {
                     prmarker.deadlift_is_pr = true;
+                    best_deadlift_multi.0 = deadlift.0;
                 }
                 if entry.totalkg > best_total_multi {
                     prmarker.total_is_pr = true;
+                    best_total_multi.0 = entry.totalkg.0;
                 }
             },
-            fields::Equipment::Straps => (),
+            fields::Equipment::Straps => {},
         };
 
         acc.push(prmarker);
@@ -207,10 +229,13 @@ impl<'a> Context<'a> {
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
+        let prmarkers = mark_prs(&entries);
+
         // Display the meet results, most recent first.
         let meet_results = entries
             .iter()
-            .map(|e| MeetResultsRow::from(opldb, e))
+            .zip(prmarkers.into_iter())
+            .map(|(e,pr)| MeetResultsRow::from(opldb, e, pr))
             .rev()
             .collect();
 

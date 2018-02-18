@@ -15,7 +15,7 @@ use std::num;
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Debug, PartialEq, PartialOrd, Ord, Eq)]
-pub struct WeightKg(i32);
+pub struct WeightKg(pub i32);
 
 impl WeightKg {
     pub fn zero() -> WeightKg {
