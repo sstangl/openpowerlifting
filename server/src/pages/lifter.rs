@@ -45,10 +45,11 @@ pub struct MeetResultsRow<'a> {
 }
 
 impl<'a> MeetResultsRow<'a> {
-    fn from(opldb: &'a opldb::OplDb,
-            entry: &'a opldb::Entry,
-            prmarker: PrMarker)
-        -> MeetResultsRow<'a> {
+    fn from(
+        opldb: &'a opldb::OplDb,
+        entry: &'a opldb::Entry,
+        prmarker: PrMarker,
+    ) -> MeetResultsRow<'a> {
         let meet: &'a opldb::Meet = opldb.get_meet(entry.meet_id);
 
         MeetResultsRow {
@@ -111,7 +112,7 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
     let mut best_bench_raw = fields::WeightKg::zero();
     let mut best_deadlift_raw = fields::WeightKg::zero();
     let mut best_total_raw = fields::WeightKg::zero();
-    
+
     let mut best_squat_wraps = fields::WeightKg::zero();
     let mut best_total_wraps = fields::WeightKg::zero();
 
@@ -157,7 +158,7 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                     prmarker.total_is_pr = true;
                     best_total_raw.0 = entry.totalkg.0;
                 }
-            },
+            }
             fields::Equipment::Wraps => {
                 if *squat > best_squat_wraps {
                     prmarker.squat_is_pr = true;
@@ -175,7 +176,7 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                     prmarker.total_is_pr = true;
                     best_total_wraps.0 = entry.totalkg.0;
                 }
-            },
+            }
             fields::Equipment::Single => {
                 if *squat > best_squat_single {
                     prmarker.squat_is_pr = true;
@@ -193,7 +194,7 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                     prmarker.total_is_pr = true;
                     best_total_single.0 = entry.totalkg.0;
                 }
-            },
+            }
             fields::Equipment::Multi => {
                 if *squat > best_squat_multi {
                     prmarker.squat_is_pr = true;
@@ -211,8 +212,8 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                     prmarker.total_is_pr = true;
                     best_total_multi.0 = entry.totalkg.0;
                 }
-            },
-            fields::Equipment::Straps => {},
+            }
+            fields::Equipment::Straps => {}
         };
 
         acc.push(prmarker);
@@ -235,7 +236,7 @@ impl<'a> Context<'a> {
         let meet_results = entries
             .iter()
             .zip(prmarkers.into_iter())
-            .map(|(e,pr)| MeetResultsRow::from(opldb, e, pr))
+            .map(|(e, pr)| MeetResultsRow::from(opldb, e, pr))
             .rev()
             .collect();
 
