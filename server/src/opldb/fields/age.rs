@@ -19,6 +19,16 @@ pub enum Age {
     None,
 }
 
+impl fmt::Display for Age {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            Age::Exact(n) => write!(f, "{}", n),
+            Age::Approximate(n) => write!(f, "{}~", n),
+            Age::None => Ok(()),
+        }
+    }
+}
+
 impl FromStr for Age {
     type Err = num::ParseIntError;
 
@@ -59,5 +69,22 @@ impl<'de> Deserialize<'de> for Age {
         D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(AgeVisitor)
+    }
+}
+
+#[cfg(tests)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_age_display() {
+        let a = "29".parse::<Age>().unwrap();
+        assert_eq!(format!("{}", a), "29");
+
+        let a = "29.5".parse::<Age>().unwrap();
+        assert_eq!(format!("{}", a), "29~");
+
+        let a = "".parse::<Age>().unwrap();
+        assert_eq!(format!("{}", a), "");
     }
 }

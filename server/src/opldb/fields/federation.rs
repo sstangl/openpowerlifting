@@ -21,6 +21,7 @@ pub enum Federation {
     CPU,
     EPA,
     EPF,
+    FEMEPO,
     FESUPO,
     FFForce,
     FPO,

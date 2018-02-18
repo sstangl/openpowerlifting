@@ -351,4 +351,15 @@ impl OplDb {
             .map(|i| self.get_entry(i as u32))
             .collect()
     }
+
+    /// Returns all entries with the given meet_id.
+    ///
+    /// Those entries could be located anywhere in the entries vector,
+    /// so they are found using a linear scan.
+    pub fn get_entries_for_meet<'a>(&'a self, meet_id: u32) -> Vec<&'a Entry> {
+        self.get_entries()
+            .iter()
+            .filter(|&e| e.meet_id == meet_id)
+            .collect()
+    }
 }

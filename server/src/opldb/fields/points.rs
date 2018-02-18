@@ -15,7 +15,7 @@ use std::num;
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Debug, PartialEq, PartialOrd)]
-pub struct Points(i32);
+pub struct Points(pub i32);
 
 impl fmt::Display for Points {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

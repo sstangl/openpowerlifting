@@ -8,7 +8,7 @@
 {{#*inline "controls"}}
   <div id="controls">
     <div id="controls-left">
-      <span id="meet">{{meet_display_string}}</span>
+      <span id="meet">{{meet.federation}} &nbsp;/&nbsp; {{meet.date}} &nbsp;/&nbsp; {{meet.name}}</span>
       <select id="displaytype">
         <option value="wilks">By Wilks</option>
 	<option value="division">By Division</option>
@@ -42,26 +42,25 @@
         <th>Total</th>
         <th>Wilks</th>
       </thead>
-      {{~#each entries~}}
+      {{~#each rows~}}
         <tr>
-	  <td>TODO</td>
+	  <td>{{this.place}}</td>
 	  <td>
-            <a href="/u/{{this.1.username}}">{{this.1.name}}</a>
-            {{~#if this.1.instagram~}}
-              <a href="https://www.instagram.com/{{this.1.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>
+            <a href="/u/{{this.username}}">{{this.name}}</a>
+            {{~#if this.instagram~}}
+              <a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>
             {{/if}}
           </td>
-          <td>{{this.0.sex}}</td>
-          <td>{{this.0.age}}</td>
-          <td>{{this.0.equipment}}</td>
-          <td>{{this.0.weightclasskg}}</td>
-          <td>{{this.0.bodyweightkg}}</td>
-          {{! FIXME -- Need to take a max of BestFooKg and Foo4Kg. }}
-          <td>{{this.0.bestsquatkg}}</td>
-          <td>{{this.0.bestbenchkg}}</td>
-          <td>{{this.0.bestdeadliftkg}}</td>
-          <td>{{this.0.totalkg}}</td>
-          <td>{{this.0.wilks}}</td>
+          <td>{{this.sex}}</td>
+          <td>{{this.age}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclasskg}}</td>
+          <td>{{this.bodyweightkg}}</td>
+          <td>{{this.squatkg}}</td>
+          <td>{{this.benchkg}}</td>
+          <td>{{this.deadliftkg}}</td>
+          <td>{{this.totalkg}}</td>
+          <td>{{this.wilks}}</td>
         </tr>
       {{/each}}
     </table>
