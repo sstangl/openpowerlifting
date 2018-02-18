@@ -74,6 +74,7 @@ KnownFederations = {
     "CPU", # Canadian Powerlifting Union.
     "EPA", # English Powerlifting Association, IPF.
     "EPF",
+    "FEMEPO", # Federación Mexicana de Powerlifting A.C.
     "FESUPO", # Federacion Sudamericana de Powerlifting
     "FFForce", # Federation Francaise de Force, IPF.
     "FPO", # Finland Powerlifting Organization (IPA).
@@ -149,6 +150,7 @@ KnownCountries = {
     "Kazakhstan",
     "Luxembourg",
     "Malaysia",
+    "Mexico",
     "Netherlands",
     "New Caledonia",
     "New Zealand",
@@ -192,6 +194,11 @@ KnownStates = {
         "KA", "KL", "MP", "MH", "MN", "ML", "MZ", "NL", "OR", "PB", "RJ",
         "SK", "TN", "TR", "UK", "UP", "WB", "AN", "CH", "DH", "DD", "DL",
         "LD", "PY"
+    },
+    "Mexico": {
+        "AG", "BC", "BS", "CM", "CS", "CH", "CO", "CL", "DF", "DG", "GT",
+        "GR", "HG", "JA", "EM", "MI", "MO", "NA", "NL", "OA", "PU", "QT",
+        "QR", "SL", "SI", "SO", "TB", "TM", "TL", "VE", "YU", "ZA"
     },
     "New Zealand": {
         "NTL", "AKL", "WKO", "BOP", "GIS", "HKB", "TKI", "MWT", "WGN",
