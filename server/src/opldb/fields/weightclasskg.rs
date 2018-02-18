@@ -7,15 +7,30 @@ use std::num;
 use std::fmt;
 use std::str::FromStr;
 
+use opldb::fields::WeightKg;
+
 /// The definition of the "WeightClassKg" column.
 #[derive(Debug, PartialEq)]
 pub enum WeightClassKg {
     /// A class defined as being under or equal to a maximum weight.
-    UnderOrEqual(f32),
+    UnderOrEqual(WeightKg),
     /// A class defined as being over a minimum weight, for superheavies.
-    Over(f32),
+    Over(WeightKg),
     /// No weight class information supplied.
     None,
+}
+
+impl fmt::Display for WeightClassKg {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt:: Result {
+        match self {
+            &WeightClassKg::UnderOrEqual(ref x) => { x.fmt(f) }
+            &WeightClassKg::Over(ref x) => {
+                x.fmt(f)?;
+                write!(f, "+")
+            }
+            &WeightClassKg::None => Ok(())
+        }
+    }
 }
 
 impl FromStr for WeightClassKg {
@@ -28,9 +43,9 @@ impl FromStr for WeightClassKg {
 
         if s.ends_with('+') {
             let v = &s[..s.len() - 1];
-            v.parse::<f32>().map(WeightClassKg::Over)
+            v.parse::<WeightKg>().map(WeightClassKg::Over)
         } else {
-            s.parse::<f32>().map(WeightClassKg::UnderOrEqual)
+            s.parse::<WeightKg>().map(WeightClassKg::UnderOrEqual)
         }
     }
 }
@@ -58,5 +73,22 @@ impl<'de> Deserialize<'de> for WeightClassKg {
         D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(WeightClassKgVisitor)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_weightclasskg_display() {
+        let w = "140+".parse::<WeightClassKg>().unwrap();
+        assert_eq!(format!("{}", w), "140+");
+
+        let w = "82.5".parse::<WeightClassKg>().unwrap();
+        assert_eq!(format!("{}", w), "82.5");
+
+        let w = "".parse::<WeightClassKg>().unwrap();
+        assert_eq!(format!("{}", w), "");
     }
 }

@@ -8,7 +8,7 @@
 {{#*inline "controls"}}
   <div id="controls">
     <div id="controls-left">
-      <span id="lifter">Meet Results for {{lifter.name}}</span>
+      <span id="lifter">Meet Results for {{lifter.name}}{{#if lifter.instagram}}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{{/if}}</span>
       <select id="weighttype">
         <option value="lb">lbs</option>
         <option value="kg">kg</option>

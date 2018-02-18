@@ -31,6 +31,7 @@ pub struct MeetResultsRow<'a> {
     pub division: Option<&'a str>,
     pub sex: &'a fields::Sex,
     pub equipment: &'a fields::Equipment,
+    pub weightclasskg: String,
     pub bodyweightkg: String,
 
     pub squatkg: String,
@@ -70,6 +71,7 @@ impl<'a> MeetResultsRow<'a> {
             },
             sex: &entry.sex,
             equipment: &entry.equipment,
+            weightclasskg: format!("{}", entry.weightclasskg),
             bodyweightkg: format!("{}", entry.bodyweightkg),
 
             squatkg: format!("{}", entry.highest_squatkg()),
