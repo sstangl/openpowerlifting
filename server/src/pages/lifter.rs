@@ -234,7 +234,7 @@ impl<'a> Context<'a> {
 
         // Display the meet results, most recent first.
         let meet_results = entries
-            .iter()
+            .into_iter()
             .zip(prmarkers.into_iter())
             .map(|(e, pr)| MeetResultsRow::from(opldb, e, pr))
             .rev()
