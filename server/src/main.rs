@@ -35,11 +35,26 @@ fn lifter(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
     Some(Template::render("lifter", &context))
 }
 
+#[get("/m/<meetpath..>")]
+fn meet(meetpath: PathBuf, opldb: State<opldb::OplDb>) -> Option<Template> {
+    let meetpath_str: &str = match meetpath.to_str() {
+        None => return None,
+        Some(s) => s,
+    };
+    let meet_id = match opldb.get_meet_id(meetpath_str) {
+        None => return None,
+        Some(id) => id,
+    };
+
+    let context = pages::meet::Context::new(&opldb, meet_id);
+    Some(Template::render("meet", &context))
+}
+
 fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
-        .mount("/", routes![lifter, statics])
+        .mount("/", routes![lifter, meet, statics])
         .attach(Template::fairing())
 }
 

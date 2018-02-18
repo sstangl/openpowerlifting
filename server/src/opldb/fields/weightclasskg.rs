@@ -21,14 +21,14 @@ pub enum WeightClassKg {
 }
 
 impl fmt::Display for WeightClassKg {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt:: Result {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            &WeightClassKg::UnderOrEqual(ref x) => { x.fmt(f) }
+            &WeightClassKg::UnderOrEqual(ref x) => x.fmt(f),
             &WeightClassKg::Over(ref x) => {
                 x.fmt(f)?;
                 write!(f, "+")
             }
-            &WeightClassKg::None => Ok(())
+            &WeightClassKg::None => Ok(()),
         }
     }
 }

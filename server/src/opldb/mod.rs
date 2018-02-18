@@ -303,6 +303,16 @@ impl OplDb {
         None
     }
 
+    /// Look up the meet_id by MeetPath.
+    pub fn get_meet_id(&self, meetpath: &str) -> Option<u32> {
+        for i in 0..self.meets.len() {
+            if self.meets[i].path == meetpath {
+                return Some(i as u32);
+            }
+        }
+        None
+    }
+
     /// Returns all entries with the given lifter_id.
     ///
     /// The vector of entries is sorted by lifter_id. This function uses binary
