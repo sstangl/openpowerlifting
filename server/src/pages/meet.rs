@@ -53,6 +53,7 @@ impl<'a> MeetInfo<'a> {
 pub struct ResultsRow<'a> {
     pub place: String,
     pub name: &'a str,
+    pub username: &'a str,
     pub instagram: Option<&'a str>,
     pub sex: &'a fields::Sex,
     pub age: String,
@@ -74,6 +75,7 @@ impl<'a> ResultsRow<'a> {
         ResultsRow {
             place: format!("{}", &entry.place),
             name: &lifter.name,
+            username: &lifter.username,
             instagram: match lifter.instagram {
                 None => None,
                 Some(ref s) => Some(&s),
