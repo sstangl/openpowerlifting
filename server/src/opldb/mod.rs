@@ -106,11 +106,9 @@ pub struct Entry {
     #[serde(rename(deserialize = "Place"))]
     pub place: Place,
     #[serde(rename(deserialize = "Wilks"))]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub wilks: f32,
+    pub wilks: Points,
     #[serde(rename(deserialize = "McCulloch"))]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub mcculloch: f32,
+    pub mcculloch: Points,
 }
 
 /// The collection of data stores that constitute the complete dataset.

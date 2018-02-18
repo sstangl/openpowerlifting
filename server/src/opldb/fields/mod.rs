@@ -20,6 +20,8 @@ mod federation;
 pub use self::federation::*;
 mod place;
 pub use self::place::*;
+mod points;
+pub use self::points::*;
 mod weightkg;
 pub use self::weightkg::*;
 mod weightclasskg;
