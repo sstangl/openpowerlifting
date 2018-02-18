@@ -67,8 +67,7 @@ pub struct Entry {
     #[serde(rename(deserialize = "Division"))]
     pub division: Option<String>,
     #[serde(rename(deserialize = "BodyweightKg"))]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bodyweightkg: f32,
+    pub bodyweightkg: WeightKg,
     #[serde(rename(deserialize = "WeightClassKg"))]
     pub weightclasskg: WeightClassKg,
     #[serde(rename(deserialize = "Squat1Kg"))]

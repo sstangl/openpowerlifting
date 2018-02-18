@@ -8,9 +8,9 @@ use std::fmt;
 use std::str::FromStr;
 use std::num;
 
-/// Represents numbers describing bar weights.
+/// Represents numbers describing absolute weights.
 ///
-/// The database only tracks bar weights to two decimal places.
+/// The database only tracks weights to two decimal places.
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
