@@ -32,6 +32,7 @@
     {% block topbar_hack_end %}{% endblock topbar_hack_end %}
     {% block body %}{% endblock body %}
   {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
+  {% block custom_javascript %}{% endblock custom_javascript %}
   {% include "google-analytics" %}
 </body>
 </html>

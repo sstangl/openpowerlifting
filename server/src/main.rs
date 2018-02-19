@@ -9,7 +9,7 @@ extern crate rocket_contrib;
 extern crate serde;
 
 use rocket::{Outcome, State};
-use rocket::http::Status;
+use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::NamedFile;
 use rocket_contrib::Template;
@@ -39,13 +39,24 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     }
 }
 
-fn select_display_language(languages: AcceptLanguage) -> Language {
+fn select_display_language(languages: AcceptLanguage, cookies: Cookies) -> Language {
     let default = Language::en_US;
 
+    // The user may explicitly override the language choice by using
+    // a cookie named "lang".
+    if let Some(cookie) = cookies.get("lang") {
+        let value: &str = cookie.value();
+        if let Ok(lang) = value.parse::<Language>() {
+            return lang;
+        }
+    }
+
+    // If a language was not explicitly selected, the Accept-Language HTTP
+    // header is consulted, defaulting to English.
     match languages.0 {
         Some(s) => {
             // TODO: This vector should be static and in langpack.
-            let known_languages = vec!["en-US"];
+            let known_languages = vec!["en-US", "ru"];
             let valid_languages = accept_language::intersection(&s, known_languages);
 
             if valid_languages.len() == 0 {
@@ -68,15 +79,17 @@ fn lifter(
     username: String,
     opldb: State<opldb::OplDb>,
     languages: AcceptLanguage,
+    cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages);
+    let lang = select_display_language(languages, cookies);
+    println!("{:?}", lang);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
         Some(id) => id,
     };
 
-    let context = pages::lifter::Context::new(&opldb, lifter_id);
+    let context = pages::lifter::Context::new(&opldb, lang, lifter_id);
     Some(Template::render("lifter", &context))
 }
 
