@@ -7,5 +7,6 @@ extern crate serde;
 extern crate serde_derive;
 
 // Exported modules.
+pub mod langpack;
 pub mod opldb;
 pub mod pages;

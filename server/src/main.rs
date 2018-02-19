@@ -2,22 +2,61 @@
 #![plugin(rocket_codegen)]
 #![feature(custom_derive)]
 
+extern crate accept_language;
 extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 
-use rocket_contrib::Template;
+use rocket::{Outcome, State};
+use rocket::http::Status;
+use rocket::request::{self, FromRequest, Request};
 use rocket::response::NamedFile;
-use rocket::State;
+use rocket_contrib::Template;
 
 use std::env;
 use std::path::{Path, PathBuf};
 use std::process;
 
 extern crate server;
+use server::langpack::Language;
 use server::opldb;
 use server::pages;
+
+/// Request guard for reading the "Accept-Language" HTTP header.
+struct AcceptLanguage(pub Option<String>);
+
+impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
+    type Error = ();
+
+    fn from_request(request: &'a Request<'r>) -> request::Outcome<AcceptLanguage, ()> {
+        let keys: Vec<_> = request.headers().get("Accept-Language").collect();
+        match keys.len() {
+            0 => Outcome::Success(AcceptLanguage(None)),
+            1 => Outcome::Success(AcceptLanguage(Some(keys[0].to_string()))),
+            _ => return Outcome::Failure((Status::BadRequest, ())),
+        }
+    }
+}
+
+fn select_display_language(languages: AcceptLanguage) -> Language {
+    let default = Language::en_US;
+
+    match languages.0 {
+        Some(s) => {
+            // TODO: This vector should be static and in langpack.
+            let known_languages = vec!["en-US"];
+            let valid_languages = accept_language::intersection(&s, known_languages);
+
+            if valid_languages.len() == 0 {
+                default
+            } else {
+                valid_languages[0].parse::<Language>().unwrap_or(default)
+            }
+        },
+        None => default,
+    }
+}
 
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
@@ -25,7 +64,9 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
 }
 
 #[get("/u/<username>")]
-fn lifter(username: String, opldb: State<opldb::OplDb>) -> Option<Template> {
+fn lifter(username: String, opldb: State<opldb::OplDb>, languages: AcceptLanguage) -> Option<Template> {
+    let lang = select_display_language(languages);
+
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
         Some(id) => id,

@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 
 [dependencies]
+accept-language = "1.1"
 csv = "1.0.0-beta.5"
 dotenv = "0.10"
 serde = "1.0"
