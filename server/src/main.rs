@@ -53,7 +53,7 @@ fn select_display_language(languages: AcceptLanguage) -> Language {
             } else {
                 valid_languages[0].parse::<Language>().unwrap_or(default)
             }
-        },
+        }
         None => default,
     }
 }
@@ -64,7 +64,11 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
 }
 
 #[get("/u/<username>")]
-fn lifter(username: String, opldb: State<opldb::OplDb>, languages: AcceptLanguage) -> Option<Template> {
+fn lifter(
+    username: String,
+    opldb: State<opldb::OplDb>,
+    languages: AcceptLanguage,
+) -> Option<Template> {
     let lang = select_display_language(languages);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
