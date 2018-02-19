@@ -32,6 +32,7 @@
         <th>Meet Name</th>
         <th>Division</th>
         <th>Sex</th>
+        <th>Age</th>
         <th>Equip</th>
         <th>Class</th>
         <th>Weight</th>
@@ -50,6 +51,7 @@
           <td><a href="/m/{{this.meet_path}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
           <td>{{this.sex}}</td>
+          <td>{{this.age}}</td>
           <td>{{this.equipment}}</td>
           <td>{{this.weightclasskg}}</td>
           <td>{{this.bodyweightkg}}</td>
