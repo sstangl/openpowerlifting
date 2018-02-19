@@ -1,11 +1,13 @@
-{{#*inline "topbar-hack"}}
+{% extends "desktop-base" %}
+{% block topbar_hack %}
   <div class="topbar">
-{{/inline}}
-{{#*inline "topbar-hack-end"}}
-  </div>
-{{/inline}}
+{% endblock topbar_hack %}
 
-{{#*inline "controls"}}
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
   <div id="controls">
     <div id="controls-left">
       <span id="meet">{{meet.federation}} &nbsp;/&nbsp; {{meet.date}} &nbsp;/&nbsp; {{meet.name}}</span>
@@ -19,14 +21,13 @@
       </select>
     </div>
     <div id="controls-right">
-      <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meetpath}}">Edit Meet</a>
+      <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
     </div>
   </div>
-{{/inline}}
+{% endblock controls %}
 
-{{#*inline "body"}}
+{% block body %}
   <div class="content">
-    {{! Meet results table. }}
     <table>
       <thead>
         <th>Wilks Place</th>
@@ -42,14 +43,14 @@
         <th>Total</th>
         <th>Wilks</th>
       </thead>
-      {{~#each rows~}}
+      {% for this in rows %}
         <tr>
-	  <td>{{this.place}}</td>
-	  <td>
+          <td>{{this.place}}</td>
+          <td>
             <a href="/u/{{this.username}}">{{this.name}}</a>
-            {{~#if this.instagram~}}
+            {% if this.instagram %}
               <a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>
-            {{/if}}
+            {% endif %}
           </td>
           <td>{{this.sex}}</td>
           <td>{{this.age}}</td>
@@ -62,9 +63,7 @@
           <td>{{this.totalkg}}</td>
           <td>{{this.wilks}}</td>
         </tr>
-      {{/each}}
+      {% endfor %}
     </table>
   </div>
-{{/inline}}
-
-{{~> desktop-base}}
+{% endblock body %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {# Dynamic header parts. #}
+  <title>
+    {% if base.title %}
+      {{base.title}}
+    {% else %}
+      OpenPowerlifting
+    {% endif %}
+  </title>
+
+  {# Static header parts. #}
+  <meta charset="utf-8">
+
+  {# External sources -- these should be self-hosted eventually. #}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {# Internal sources. #}
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  {% block includes %}
+  {% endblock includes %}
+</head>
+<body>
+  {# This isn't great. The Rankings page wants one huge Flexbox, and the other
+     pages want specially-marked headers. So we do both, for the moment. Gross! #}
+  {% block flexbox_hack %}{% endblock flexbox_hack %}
+    {% block topbar_hack %}{% endblock topbar_hack %}
+      {% include "header" %}
+      {% block controls %}{% endblock controls %}
+    {% block topbar_hack_end %}{% endblock topbar_hack_end %}
+    {% block body %}{% endblock body %}
+  {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
+  {% include "google-analytics" %}
+</body>
+</html>

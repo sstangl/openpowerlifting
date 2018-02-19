@@ -1,25 +1,27 @@
-{{#*inline "topbar-hack"}}
-  <div class="topbar">
-{{/inline}}
-{{#*inline "topbar-hack-end"}}
-  </div>
-{{/inline}}
+{% extends "desktop-base" %}
 
-{{#*inline "controls"}}
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
   <div id="controls">
     <div id="controls-left">
-      <span id="lifter">Meet Results for {{lifter.name}}{{#if lifter.instagram}}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{{/if}}</span>
+      <span id="lifter">Meet Results for {{lifter.name}}{% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</span>
       <select id="weighttype">
         <option value="lb">lbs</option>
         <option value="kg">kg</option>
       </select>
     </div>
   </div>
-{{/inline}}
+{% endblock controls %}
 
-{{#*inline "body"}}
+{% block body %}
   <div class="content">
-    {{! Meet results table. }}
     <table>
       <thead>
         <th>Place</th>
@@ -38,27 +40,25 @@
         <th>Total</th>
         <th>Wilks</th>
       </thead>
-      {{#each meet_results}}
+      {% for this in meet_results %}
         <tr>
           <td>{{this.place}}</td>
           <td>{{this.federation}}</td>
           <td>{{this.date}}</td>
-          <td>{{this.country}}{{#if this.state}}-{{this.state}}{{/if}}</td>
+          <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
           <td><a href="/m/{{this.meet_path}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
           <td>{{this.sex}}</td>
           <td>{{this.equipment}}</td>
           <td>{{this.weightclasskg}}</td>
           <td>{{this.bodyweightkg}}</td>
-          <td>{{this.squatkg}}{{#if this.squat_is_pr}}*{{/if}}</td>
-          <td>{{this.benchkg}}{{#if this.bench_is_pr}}*{{/if}}</td>
-          <td>{{this.deadliftkg}}{{#if this.deadlift_is_pr}}*{{/if}}</td>
-          <td>{{this.totalkg}}{{#if this.total_is_pr}}*{{/if}}</td>
+          <td>{{this.squatkg}}{% if this.squat_is_pr %}*{% endif %}</td>
+          <td>{{this.benchkg}}{% if this.bench_is_pr %}*{% endif %}</td>
+          <td>{{this.deadliftkg}}{% if this.deadlift_is_pr %}*{% endif %}</td>
+          <td>{{this.totalkg}}{% if this.total_is_pr %}*{% endif %}</td>
           <td>{{this.wilks}}</td>
         </tr>
-      {{/each}}
+      {% endfor %}
     </table>
   </div>
-{{/inline}}
-
-{{~> desktop-base}}
+{% endblock body %}
