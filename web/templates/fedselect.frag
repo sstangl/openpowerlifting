@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,RAW,ScottishPL,THSPA,USAPL,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,RAW,ScottishPL,THSPA,USAPL,WABDL,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -9,6 +9,7 @@
     <option value="IPF">IPF - International Powerlifting Federation (Incomplete)</option>
     <option value="IPL">IPL - International Powerlifting League (Incomplete)</option>
     <option value="ParaPL">ParaPL - Para Powerlifting (Incomplete)</option>
+    <option value="WABDL">WABDL - World Association of Bench Pressers and Deadlifters (Incomplete)</option>
     <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>

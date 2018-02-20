@@ -64,6 +64,7 @@ pub enum Federation {
     USAPL,
     USPF,
     USPA,
+    WABDL,
     WelshPA,
     WPC,
     WNPF,
