@@ -45,10 +45,7 @@
         <tr>
           <td>{{this.place}}</td>
           <td>
-            <a href="/u/{{this.username}}">{{this.name}}</a>
-            {% if this.instagram %}
-              <a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>
-            {% endif %}
+            <a href="/u/{{this.username}}">{{this.name}}</a>{% if this.instagram %}<a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}
           </td>
           <td>{{this.sex}}</td>
           <td>{{this.age}}</td>
