@@ -56,6 +56,7 @@ pub enum Federation {
     RUPC,
     ScottishPL,
     SCT,
+    SPA,
     SPF,
     THSPA,
     UPA,

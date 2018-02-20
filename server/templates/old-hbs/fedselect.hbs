@@ -96,6 +96,9 @@
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
+  <optgroup label="Singapore">
+    <option value="SPA">SPA - Singapore Powerlifting Alliance [GPA] (Incomplete)</option>
+  </optgroup>
   <optgroup label="United Kingdom">
     <option value="BP,BPU,EPA,GPC-GB,NIPF,ScottishPL,WelshPA">
       All United Kingdom Feds
