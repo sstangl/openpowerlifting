@@ -17,6 +17,12 @@ use std::num;
 #[derive(Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(pub i32);
 
+/// Switch between Kg and Lbs, for weight formatting.
+pub enum WeightType {
+    Kg,
+    Lbs,
+}
+
 impl WeightKg {
     pub fn zero() -> WeightKg {
         WeightKg(0)

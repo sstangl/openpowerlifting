@@ -12,10 +12,9 @@
   <div id="controls">
     <div id="controls-left">
       <span id="lifter">Meet Results for {{lifter.name}}{% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</span>
-      <select id="weighttype">
-        <option value="lb">lbs</option>
-        <option value="kg">kg</option>
-      </select>
+    </div>
+    <div id="controls-right">
+      {% include "weighttype" %}
       {% include "langselect" %}
     </div>
   </div>

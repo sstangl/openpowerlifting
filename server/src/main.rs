@@ -82,7 +82,6 @@ fn lifter(
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, cookies);
-    println!("{:?}", lang);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
@@ -94,7 +93,14 @@ fn lifter(
 }
 
 #[get("/m/<meetpath..>")]
-fn meet(meetpath: PathBuf, opldb: State<opldb::OplDb>) -> Option<Template> {
+fn meet(
+    meetpath: PathBuf,
+    opldb: State<opldb::OplDb>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, cookies);
+
     let meetpath_str: &str = match meetpath.to_str() {
         None => return None,
         Some(s) => s,
@@ -104,7 +110,7 @@ fn meet(meetpath: PathBuf, opldb: State<opldb::OplDb>) -> Option<Template> {
         Some(id) => id,
     };
 
-    let context = pages::meet::Context::new(&opldb, meet_id);
+    let context = pages::meet::Context::new(&opldb, lang, meet_id);
     Some(Template::render("meet", &context))
 }
 

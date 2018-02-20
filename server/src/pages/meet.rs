@@ -2,6 +2,7 @@
 
 use opldb;
 use opldb::fields;
+use langpack::Language;
 
 #[derive(Serialize)]
 pub struct HeaderContext {
@@ -14,6 +15,8 @@ pub struct HeaderContext {
 pub struct Context<'a> {
     pub header: HeaderContext,
     pub meet: MeetInfo<'a>,
+    pub language: Language,
+
     pub rows: Vec<ResultsRow<'a>>,
 }
 
@@ -96,7 +99,7 @@ impl<'a> ResultsRow<'a> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, meet_id: u32) -> Context<'a> {
+    pub fn new(opldb: &'a opldb::OplDb, language: Language, meet_id: u32) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
 
         // Get a list of the entries for this meet, highest Wilks first.
@@ -113,6 +116,7 @@ impl<'a> Context<'a> {
                 num_entries: opldb.get_entries().len() as u32,
                 num_meets: opldb.get_meets().len() as u32,
             },
+            language: language,
             meet: MeetInfo::from(&meet),
             rows: rows,
         }

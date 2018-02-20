@@ -15,13 +15,11 @@
         <option value="wilks">By Wilks</option>
 	<option value="division">By Division</option>
       </select>
-      <select id="weighttype">
-        <option value="lb">lbs</option>
-        <option value="kg">kg</option>
-      </select>
     </div>
     <div id="controls-right">
       <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
+      {% include "weighttype" %}
+      {% include "langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -67,3 +65,14 @@
     </table>
   </div>
 {% endblock body %}
+
+{% block custom_javascript %}
+<script type="text/javascript">
+  function change_language() {
+    var l = document.getElementById("langselect");
+    document.cookie = "lang="+l.value+"; path=/";
+    location.reload(true);
+  }
+  document.getElementById("langselect").addEventListener("change", change_language);
+</script>
+{% endblock custom_javascript %}
