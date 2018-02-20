@@ -1,4 +1,5 @@
 <select id="langselect">
-  <option value="en-US" {% if language == "en-US" %}selected{% endif %}>English (US)</option>
+  <option value="en" {% if language == "en" %}selected{% endif %}>English</option>
+  <option value="eo" {% if language == "eo" %}selected{% endif %}>Esperanto</option>
   <option value="ru" {% if language == "ru" %}selected{% endif %}>Русский</option>
 </select>

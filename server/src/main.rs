@@ -40,7 +40,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
 }
 
 fn select_display_language(languages: AcceptLanguage, cookies: Cookies) -> Language {
-    let default = Language::en_US;
+    let default = Language::en;
 
     // The user may explicitly override the language choice by using
     // a cookie named "lang".
@@ -56,7 +56,7 @@ fn select_display_language(languages: AcceptLanguage, cookies: Cookies) -> Langu
     match languages.0 {
         Some(s) => {
             // TODO: This vector should be static and in langpack.
-            let known_languages = vec!["en-US", "ru"];
+            let known_languages = vec!["en", "eo", "ru"];
             let valid_languages = accept_language::intersection(&s, known_languages);
 
             if valid_languages.len() == 0 {

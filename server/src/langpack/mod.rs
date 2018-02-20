@@ -6,8 +6,11 @@ use std::str::FromStr;
 #[allow(non_camel_case_types)]
 #[derive(Debug, Serialize)]
 pub enum Language {
-    #[serde(rename = "en-US")]
-    en_US,
+    /// English, without regional variance (US).
+    en,
+    /// Esperanto.
+    eo,
+    /// Russian.
     ru,
 }
 
@@ -16,7 +19,8 @@ impl FromStr for Language {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            "en-US" => Ok(Language::en_US),
+            "en" => Ok(Language::en),
+            "eo" => Ok(Language::eo),
             "ru" => Ok(Language::ru),
             _ => Err(()),
         }
