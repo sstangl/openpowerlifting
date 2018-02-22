@@ -19,7 +19,7 @@ use std::path::{Path, PathBuf};
 use std::process;
 
 extern crate server;
-use server::langpack::Language;
+use server::langpack::{self, Language};
 use server::opldb;
 use server::pages;
 
@@ -78,6 +78,7 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
 fn lifter(
     username: String,
     opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -114,10 +115,11 @@ fn meet(
     Some(Template::render("meet", &context))
 }
 
-fn rocket(opldb: opldb::OplDb) -> rocket::Rocket {
+fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
+        .manage(langinfo)
         .mount("/", routes![lifter, meet, statics])
         .attach(Template::fairing())
 }
@@ -135,6 +137,7 @@ fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
 
+    // Load the OplDb.
     let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");
     let meets_csv = get_envvar_or_exit("MEETS_CSV");
     let entries_csv = get_envvar_or_exit("ENTRIES_CSV");
@@ -149,6 +152,14 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
+    // Load translations.
+    let mut langinfo = langpack::LangInfo::new();
+
+    // TODO: Fail on error.
+    langinfo.load_translations(Language::en, "translations/en.json");
+    langinfo.load_translations(Language::eo, "translations/eo.json");
+    langinfo.load_translations(Language::ru, "translations/ru.json");
+
     // Run the server loop.
-    rocket(opldb).launch();
+    rocket(opldb, langinfo).launch();
 }
