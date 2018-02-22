@@ -100,7 +100,12 @@ impl<'a> ResultsRow<'a> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, language: Language, langinfo: &'a langpack::LangInfo, meet_id: u32) -> Context<'a> {
+    pub fn new(
+        opldb: &'a opldb::OplDb,
+        language: Language,
+        langinfo: &'a langpack::LangInfo,
+        meet_id: u32,
+    ) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
 
         // Get a list of the entries for this meet, highest Wilks first.

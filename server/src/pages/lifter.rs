@@ -232,7 +232,12 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, language: Language, langinfo: &'a langpack::LangInfo, lifter_id: u32) -> Context<'a> {
+    pub fn new(
+        opldb: &'a opldb::OplDb,
+        language: Language,
+        langinfo: &'a langpack::LangInfo,
+        lifter_id: u32,
+    ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
 
         // Get a list of the entries for this lifter, oldest entries first.

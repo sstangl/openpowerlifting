@@ -126,10 +126,13 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
 }
 
 fn load_translations_or_exit(langinfo: &mut langpack::LangInfo, language: Language, file: &str) {
-    langinfo.load_translations(language, file).map_err(|e| {
-        eprintln!("Error loading translations: {}", e);
-        process::exit(1);
-    }).ok();
+    langinfo
+        .load_translations(language, file)
+        .map_err(|e| {
+            eprintln!("Error loading translations: {}", e);
+            process::exit(1);
+        })
+        .ok();
 }
 
 fn get_envvar_or_exit(key: &str) -> String {

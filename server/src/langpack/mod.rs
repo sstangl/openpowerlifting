@@ -73,7 +73,11 @@ impl LangInfo {
         }
     }
 
-    pub fn load_translations(&mut self, language: Language, filename: &str) -> Result<(), Box<Error>> {
+    pub fn load_translations(
+        &mut self,
+        language: Language,
+        filename: &str,
+    ) -> Result<(), Box<Error>> {
         let file = File::open(filename)?;
         let mut buf_reader = BufReader::new(file);
         let mut contents = String::new();
