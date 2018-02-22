@@ -2,7 +2,7 @@
 
 use opldb;
 use opldb::fields;
-use langpack::Language;
+use langpack::{self, Language};
 
 #[derive(Serialize)]
 pub struct HeaderContext {
@@ -16,6 +16,7 @@ pub struct Context<'a> {
     pub header: HeaderContext,
     pub lifter: &'a opldb::Lifter,
     pub language: Language,
+    pub strings: &'a langpack::Translations,
 
     pub meet_results: Vec<MeetResultsRow<'a>>,
 }
@@ -231,7 +232,7 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, language: Language, lifter_id: u32) -> Context<'a> {
+    pub fn new(opldb: &'a opldb::OplDb, language: Language, langinfo: &'a langpack::LangInfo, lifter_id: u32) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
 
         // Get a list of the entries for this lifter, oldest entries first.
@@ -254,6 +255,7 @@ impl<'a> Context<'a> {
                 num_meets: opldb.get_meets().len() as u32,
             },
             language: language,
+            strings: langinfo.get_translations(language),
             lifter: lifter,
             meet_results: meet_results,
         }

@@ -1,4 +1,4 @@
 <select id="weighttype">
-  <option value="lbs">lbs</option>
-  <option value="kg">kg</option>
+  <option value="lbs">{{strings.units.lbs}}</option>
+  <option value="kg">{{strings.units.kg}}</option>
 </select>

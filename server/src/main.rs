@@ -89,7 +89,7 @@ fn lifter(
         Some(id) => id,
     };
 
-    let context = pages::lifter::Context::new(&opldb, lang, lifter_id);
+    let context = pages::lifter::Context::new(&opldb, lang, &langinfo, lifter_id);
     Some(Template::render("lifter", &context))
 }
 
@@ -97,6 +97,7 @@ fn lifter(
 fn meet(
     meetpath: PathBuf,
     opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -111,7 +112,7 @@ fn meet(
         Some(id) => id,
     };
 
-    let context = pages::meet::Context::new(&opldb, lang, meet_id);
+    let context = pages::meet::Context::new(&opldb, lang, &langinfo, meet_id);
     Some(Template::render("meet", &context))
 }
 

@@ -11,7 +11,7 @@ use std::io::prelude::*;
 
 /// List of languages accepted by the project.
 #[allow(non_camel_case_types)]
-#[derive(Debug, Serialize)]
+#[derive(Clone, Copy, Debug, Serialize)]
 pub enum Language {
     /// English, without regional variance (US).
     en,
@@ -34,13 +34,13 @@ impl FromStr for Language {
     }
 }
 
-#[derive(Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct UnitsTranslations {
     pub lbs: String,
     pub kg: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct HeaderTranslations {
     pub rankings: String,
     pub meets: String,
@@ -50,7 +50,7 @@ pub struct HeaderTranslations {
     pub supportus: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Translations {
     pub units: UnitsTranslations,
     pub header: HeaderTranslations,
@@ -88,5 +88,13 @@ impl LangInfo {
         };
 
         Ok(())
+    }
+
+    pub fn get_translations<'a>(&'a self, language: Language) -> &'a Translations {
+        match language {
+            Language::en => self.en.as_ref().unwrap(),
+            Language::eo => self.eo.as_ref().unwrap(),
+            Language::ru => self.ru.as_ref().unwrap(),
+        }
     }
 }
