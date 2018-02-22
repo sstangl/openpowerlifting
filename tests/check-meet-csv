@@ -115,6 +115,7 @@ KnownFederations = {
     "USPF",
     "USPA",
     "WABDL", # World Association of Bench Pressers and Deadlifters.
+    "WDFPF", # World Drug Free Powerlifting Association
     "WelshPA", # Welsh Powerlifting Association, IPF.
     "WPC",
     "WNPF", # World Natural Powerlifting Federation.
@@ -129,6 +130,7 @@ KnownCountries = {
     "Argentina",
     "Australia",
     "Belarus",
+    "Belgium",
     "Brazil",
     "Britain", # TODO: This is a placeholder until we have more data, probably.
     "Canada",
