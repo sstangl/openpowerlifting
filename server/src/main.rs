@@ -125,6 +125,13 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .attach(Template::fairing())
 }
 
+fn load_translations_or_exit(langinfo: &mut langpack::LangInfo, language: Language, file: &str) {
+    langinfo.load_translations(language, file).map_err(|e| {
+        eprintln!("Error loading translations: {}", e);
+        process::exit(1);
+    }).ok();
+}
+
 fn get_envvar_or_exit(key: &str) -> String {
     env::var(key)
         .map_err(|_| {
@@ -155,11 +162,9 @@ fn main() {
 
     // Load translations.
     let mut langinfo = langpack::LangInfo::new();
-
-    // TODO: Fail on error.
-    langinfo.load_translations(Language::en, "translations/en.json");
-    langinfo.load_translations(Language::eo, "translations/eo.json");
-    langinfo.load_translations(Language::ru, "translations/ru.json");
+    load_translations_or_exit(&mut langinfo, Language::en, "translations/en.json");
+    load_translations_or_exit(&mut langinfo, Language::eo, "translations/eo.json");
+    load_translations_or_exit(&mut langinfo, Language::ru, "translations/ru.json");
 
     // Run the server loop.
     rocket(opldb, langinfo).launch();
