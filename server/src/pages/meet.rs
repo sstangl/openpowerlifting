@@ -17,6 +17,7 @@ pub struct Context<'a> {
     pub meet: MeetInfo<'a>,
     pub language: Language,
     pub strings: &'a langpack::Translations,
+    pub units: fields::WeightUnits,
 
     pub rows: Vec<ResultsRow<'a>>,
 }
@@ -73,7 +74,7 @@ pub struct ResultsRow<'a> {
 }
 
 impl<'a> ResultsRow<'a> {
-    fn from(opldb: &'a opldb::OplDb, entry: &'a opldb::Entry) -> ResultsRow<'a> {
+    fn from(opldb: &'a opldb::OplDb, units: fields::WeightUnits, entry: &'a opldb::Entry) -> ResultsRow<'a> {
         let lifter: &'a opldb::Lifter = opldb.get_lifter(entry.lifter_id);
 
         ResultsRow {
@@ -88,12 +89,12 @@ impl<'a> ResultsRow<'a> {
             age: format!("{}", &entry.age),
             equipment: &entry.equipment,
             weightclasskg: format!("{}", entry.weightclasskg),
-            bodyweightkg: format!("{}", entry.bodyweightkg),
+            bodyweightkg: format!("{}", entry.bodyweightkg.as_type(units)),
 
-            squatkg: format!("{}", entry.highest_squatkg()),
-            benchkg: format!("{}", entry.highest_benchkg()),
-            deadliftkg: format!("{}", entry.highest_deadliftkg()),
-            totalkg: format!("{}", &entry.totalkg),
+            squatkg: format!("{}", entry.highest_squatkg().as_type(units)),
+            benchkg: format!("{}", entry.highest_benchkg().as_type(units)),
+            deadliftkg: format!("{}", entry.highest_deadliftkg().as_type(units)),
+            totalkg: format!("{}", &entry.totalkg.as_type(units)),
             wilks: format!("{}", &entry.wilks),
         }
     }
@@ -104,6 +105,7 @@ impl<'a> Context<'a> {
         opldb: &'a opldb::OplDb,
         language: Language,
         langinfo: &'a langpack::LangInfo,
+        units: fields::WeightUnits,
         meet_id: u32,
     ) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
@@ -114,7 +116,7 @@ impl<'a> Context<'a> {
 
         let rows = entries
             .into_iter()
-            .map(|e| ResultsRow::from(opldb, e))
+            .map(|e| ResultsRow::from(opldb, units, e))
             .collect();
 
         Context {
@@ -124,6 +126,7 @@ impl<'a> Context<'a> {
             },
             language: language,
             strings: langinfo.get_translations(language),
+            units: units,
             meet: MeetInfo::from(&meet),
             rows: rows,
         }

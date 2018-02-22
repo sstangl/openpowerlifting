@@ -18,7 +18,7 @@
     </div>
     <div id="controls-right">
       <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
-      {% include "weighttype" %}
+      {% include "weightunits" %}
       {% include "langselect" %}
     </div>
   </div>
@@ -70,6 +70,13 @@
     document.cookie = "lang="+l.value+"; path=/";
     location.reload(true);
   }
+  function change_units() {
+    var w = document.getElementById("weightunits");
+    document.cookie = "units="+w.value+"; path=/";
+    location.reload(true);
+  }
+
   document.getElementById("langselect").addEventListener("change", change_language);
+  document.getElementById("weightunits").addEventListener("change", change_units);
 </script>
 {% endblock custom_javascript %}

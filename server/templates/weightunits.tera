@@ -1,0 +1,4 @@
+<select id="weightunits">
+  <option value="lbs" {% if units == "Lbs" %}selected{% endif %}>{{strings.units.lbs}}</option>
+  <option value="kg" {% if units == "Kg" %}selected{% endif %}>{{strings.units.kg}}</option>
+</select>

@@ -39,14 +39,13 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     }
 }
 
-fn select_display_language(languages: AcceptLanguage, cookies: Cookies) -> Language {
+fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Language {
     let default = Language::en;
 
     // The user may explicitly override the language choice by using
     // a cookie named "lang".
     if let Some(cookie) = cookies.get("lang") {
-        let value: &str = cookie.value();
-        if let Ok(lang) = value.parse::<Language>() {
+        if let Ok(lang) = cookie.value().parse::<Language>() {
             return lang;
         }
     }
@@ -69,6 +68,26 @@ fn select_display_language(languages: AcceptLanguage, cookies: Cookies) -> Langu
     }
 }
 
+fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::fields::WeightUnits {
+    // The user may explicitly override the weight unit choice by using
+    // a cookie named "units".
+    if let Some(cookie) = cookies.get("units") {
+        if let Ok(units) = cookie.value().parse::<opldb::fields::WeightUnits>() {
+            return units;
+        }
+    }
+
+    // Otherwise, infer based on the language.
+    // TODO: This should really be a feature of the language,
+    //       with the information stored in langpack.
+    // TODO: Also doesn't handle the Australia case (since no regional English variant).
+    match language {
+        Language::en => opldb::fields::WeightUnits::Lbs,
+        Language::eo => opldb::fields::WeightUnits::Kg,
+        Language::ru => opldb::fields::WeightUnits::Kg,
+    }
+}
+
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/").join(file)).ok()
@@ -82,14 +101,15 @@ fn lifter(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, cookies);
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
         Some(id) => id,
     };
 
-    let context = pages::lifter::Context::new(&opldb, lang, &langinfo, lifter_id);
+    let context = pages::lifter::Context::new(&opldb, lang, &langinfo, units, lifter_id);
     Some(Template::render("lifter", &context))
 }
 
@@ -101,7 +121,8 @@ fn meet(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, cookies);
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
 
     let meetpath_str: &str = match meetpath.to_str() {
         None => return None,
@@ -112,7 +133,7 @@ fn meet(
         Some(id) => id,
     };
 
-    let context = pages::meet::Context::new(&opldb, lang, &langinfo, meet_id);
+    let context = pages::meet::Context::new(&opldb, lang, &langinfo, units, meet_id);
     Some(Template::render("meet", &context))
 }
 

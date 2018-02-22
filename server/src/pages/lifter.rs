@@ -17,6 +17,7 @@ pub struct Context<'a> {
     pub lifter: &'a opldb::Lifter,
     pub language: Language,
     pub strings: &'a langpack::Translations,
+    pub units: fields::WeightUnits,
 
     pub meet_results: Vec<MeetResultsRow<'a>>,
 }
@@ -53,6 +54,7 @@ pub struct MeetResultsRow<'a> {
 impl<'a> MeetResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
+        units: fields::WeightUnits,
         entry: &'a opldb::Entry,
         prmarker: PrMarker,
     ) -> MeetResultsRow<'a> {
@@ -77,12 +79,12 @@ impl<'a> MeetResultsRow<'a> {
             age: format!("{}", entry.age),
             equipment: &entry.equipment,
             weightclasskg: format!("{}", entry.weightclasskg),
-            bodyweightkg: format!("{}", entry.bodyweightkg),
+            bodyweightkg: format!("{}", entry.bodyweightkg.as_type(units)),
 
-            squatkg: format!("{}", entry.highest_squatkg()),
-            benchkg: format!("{}", entry.highest_benchkg()),
-            deadliftkg: format!("{}", entry.highest_deadliftkg()),
-            totalkg: format!("{}", &entry.totalkg),
+            squatkg: format!("{}", entry.highest_squatkg().as_type(units)),
+            benchkg: format!("{}", entry.highest_benchkg().as_type(units)),
+            deadliftkg: format!("{}", entry.highest_deadliftkg().as_type(units)),
+            totalkg: format!("{}", &entry.totalkg.as_type(units)),
             wilks: format!("{}", &entry.wilks),
 
             squat_is_pr: prmarker.squat_is_pr,
@@ -236,6 +238,7 @@ impl<'a> Context<'a> {
         opldb: &'a opldb::OplDb,
         language: Language,
         langinfo: &'a langpack::LangInfo,
+        units: fields::WeightUnits,
         lifter_id: u32,
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
@@ -250,7 +253,7 @@ impl<'a> Context<'a> {
         let meet_results = entries
             .into_iter()
             .zip(prmarkers.into_iter())
-            .map(|(e, pr)| MeetResultsRow::from(opldb, e, pr))
+            .map(|(e, pr)| MeetResultsRow::from(opldb, units, e, pr))
             .rev()
             .collect();
 
@@ -261,6 +264,7 @@ impl<'a> Context<'a> {
             },
             language: language,
             strings: langinfo.get_translations(language),
+            units: units,
             lifter: lifter,
             meet_results: meet_results,
         }

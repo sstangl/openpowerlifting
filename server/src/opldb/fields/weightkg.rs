@@ -17,20 +17,57 @@ use std::num;
 #[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(pub i32);
 
-/// Switch between Kg and Lbs, for weight formatting.
-pub enum WeightType {
+/// Represents numbers describing absolute weights in their final
+/// format for printing (either Kg or Lbs).
+///
+/// Because the type of the weight is forgotten, these weights
+/// are incomparable with each other.
+#[derive(Copy, Clone, Debug)]
+pub struct WeightAny(pub i32);
+
+#[derive(Copy, Clone, Debug, Serialize)]
+pub enum WeightUnits {
     Kg,
     Lbs,
 }
 
+impl FromStr for WeightUnits {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "kg" => Ok(WeightUnits::Kg),
+            "lbs" => Ok(WeightUnits::Lbs),
+            _ => Err(()),
+        }
+    }
+}
+
 impl WeightKg {
-    pub fn as_lbs(&self) -> WeightKg {
+    pub fn as_kg(&self) -> WeightAny {
+        WeightAny(self.0)
+    }
+
+    pub fn as_lbs(&self) -> WeightAny {
         let f = (self.0 as f32) * 2.20462262;
-        WeightKg(f.round() as i32)
+        WeightAny(f.round() as i32)
+    }
+
+    pub fn as_type(&self, unit: WeightUnits) -> WeightAny {
+        match unit {
+            WeightUnits::Kg => self.as_kg(),
+            WeightUnits::Lbs => self.as_lbs(),
+        }
     }
 }
 
 impl fmt::Display for WeightKg {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        WeightAny(self.0).fmt(f)
+    }
+}
+
+impl fmt::Display for WeightAny {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         // Don't display empty weights.
         if self.0 == 0 {
