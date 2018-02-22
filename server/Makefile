@@ -1,4 +1,4 @@
-.PHONY: builddir binary release
+.PHONY: builddir binary data statics config release
 
 BUILDDIR := build
 
@@ -10,23 +10,26 @@ builddir:
 binary: builddir
 	cargo build --release
 	cp target/release/server "${BUILDDIR}/server"
-	strip "${BUILDDIR}/server"
 
-database: builddir
-	cp ../build/openpowerlifting.sqlite3 "${BUILDDIR}/openpowerlifting.sqlite3"
+data: builddir
+	mkdir -p "${BUILDDIR}/templates"
+	cp -r templates/* "${BUILDDIR}/templates/"
+	mkdir -p "${BUILDDIR}/translations"
+	cp -r translations/* "${BUILDDIR}/translations/"
+	mkdir -p "${BUILDDIR}/opldb"
+	cp ../build/lifters.csv "${BUILDDIR}/opldb/lifters.csv"
+	cp ../build/meets.csv "${BUILDDIR}/opldb/meets.csv"
+	cp ../build/openpowerlifting.csv "${BUILDDIR}/opldb/openpowerlifting.csv"
 
 statics: builddir
-	mkdir -p "${BUILDDIR}/htmltmp"
-	cp htmltmp/index.html "${BUILDDIR}/htmltmp/index.html"
-	cp htmltmp/meetlist.html "${BUILDDIR}/htmltmp/meetlist.html"
-	cp -r -L static "${BUILDDIR}/static"
-	cp -r -L templates "${BUILDDIR}/templates"
+	mkdir -p "${BUILDDIR}/static"
+	cp -r -L static/* "${BUILDDIR}/static/"
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"
 	cp Rocket.toml "${BUILDDIR}/Rocket.toml"
 
-release: binary database statics config
+release: binary data config statics
 	echo "Good luck!"
 
 clean:

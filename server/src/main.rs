@@ -11,7 +11,7 @@ extern crate serde;
 use rocket::{Outcome, State};
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
-use rocket::response::NamedFile;
+use rocket::response::{NamedFile, Redirect};
 use rocket_contrib::Template;
 
 use std::env;
@@ -116,12 +116,17 @@ fn meet(
     Some(Template::render("meet", &context))
 }
 
+#[get("/")]
+fn index() -> Redirect {
+    Redirect::to("/u/kristyhawkins")
+}
+
 fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
-        .mount("/", routes![lifter, meet, statics])
+        .mount("/", routes![index, lifter, meet, statics])
         .attach(Template::fairing())
 }
 
