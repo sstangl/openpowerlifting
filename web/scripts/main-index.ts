@@ -91,6 +91,11 @@ function getIndices(): number[] {
             }
         }
 
+        // DQ'd entries should be excluded.
+        let total = row[OplDBColumn.TotalKg];
+        if (total === undefined)
+            return false;
+
         let e = row[OplDBColumn.Equipment];
         return (raw && e === 0) ||
                (wraps && e === 1) ||
