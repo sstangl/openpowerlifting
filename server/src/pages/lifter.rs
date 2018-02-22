@@ -117,23 +117,23 @@ impl PrMarker {
 ///
 /// Weightclasses are not considered.
 fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
-    let mut best_squat_raw = fields::WeightKg::zero();
-    let mut best_bench_raw = fields::WeightKg::zero();
-    let mut best_deadlift_raw = fields::WeightKg::zero();
-    let mut best_total_raw = fields::WeightKg::zero();
+    let mut best_squat_raw = fields::WeightKg(0);
+    let mut best_bench_raw = fields::WeightKg(0);
+    let mut best_deadlift_raw = fields::WeightKg(0);
+    let mut best_total_raw = fields::WeightKg(0);
 
-    let mut best_squat_wraps = fields::WeightKg::zero();
-    let mut best_total_wraps = fields::WeightKg::zero();
+    let mut best_squat_wraps = fields::WeightKg(0);
+    let mut best_total_wraps = fields::WeightKg(0);
 
-    let mut best_squat_single = fields::WeightKg::zero();
-    let mut best_bench_single = fields::WeightKg::zero();
-    let mut best_deadlift_single = fields::WeightKg::zero();
-    let mut best_total_single = fields::WeightKg::zero();
+    let mut best_squat_single = fields::WeightKg(0);
+    let mut best_bench_single = fields::WeightKg(0);
+    let mut best_deadlift_single = fields::WeightKg(0);
+    let mut best_total_single = fields::WeightKg(0);
 
-    let mut best_squat_multi = fields::WeightKg::zero();
-    let mut best_bench_multi = fields::WeightKg::zero();
-    let mut best_deadlift_multi = fields::WeightKg::zero();
-    let mut best_total_multi = fields::WeightKg::zero();
+    let mut best_squat_multi = fields::WeightKg(0);
+    let mut best_bench_multi = fields::WeightKg(0);
+    let mut best_deadlift_multi = fields::WeightKg(0);
+    let mut best_total_multi = fields::WeightKg(0);
 
     let mut acc = Vec::with_capacity(entries.len());
 
@@ -151,15 +151,15 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
 
         match entry.equipment {
             fields::Equipment::Raw => {
-                if *squat > best_squat_raw {
+                if squat > best_squat_raw {
                     prmarker.squat_is_pr = true;
                     best_squat_raw.0 = squat.0;
                 }
-                if *bench > best_bench_raw {
+                if bench > best_bench_raw {
                     prmarker.bench_is_pr = true;
                     best_bench_raw.0 = bench.0;
                 }
-                if *deadlift > best_deadlift_raw {
+                if deadlift > best_deadlift_raw {
                     prmarker.deadlift_is_pr = true;
                     best_deadlift_raw.0 = deadlift.0;
                 }
@@ -169,15 +169,15 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                 }
             }
             fields::Equipment::Wraps => {
-                if *squat > best_squat_wraps {
+                if squat > best_squat_wraps {
                     prmarker.squat_is_pr = true;
                     best_squat_wraps.0 = squat.0;
                 }
-                if *bench > best_bench_raw {
+                if bench > best_bench_raw {
                     prmarker.bench_is_pr = true;
                     best_bench_raw.0 = bench.0;
                 }
-                if *deadlift > best_deadlift_raw {
+                if deadlift > best_deadlift_raw {
                     prmarker.deadlift_is_pr = true;
                     best_deadlift_raw.0 = deadlift.0;
                 }
@@ -187,15 +187,15 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                 }
             }
             fields::Equipment::Single => {
-                if *squat > best_squat_single {
+                if squat > best_squat_single {
                     prmarker.squat_is_pr = true;
                     best_squat_single.0 = squat.0;
                 }
-                if *bench > best_bench_single {
+                if bench > best_bench_single {
                     prmarker.bench_is_pr = true;
                     best_bench_single.0 = bench.0;
                 }
-                if *deadlift > best_deadlift_single {
+                if deadlift > best_deadlift_single {
                     prmarker.deadlift_is_pr = true;
                     best_deadlift_single.0 = deadlift.0;
                 }
@@ -205,15 +205,15 @@ fn mark_prs(entries: &Vec<&opldb::Entry>) -> Vec<PrMarker> {
                 }
             }
             fields::Equipment::Multi => {
-                if *squat > best_squat_multi {
+                if squat > best_squat_multi {
                     prmarker.squat_is_pr = true;
                     best_squat_multi.0 = squat.0;
                 }
-                if *bench > best_bench_multi {
+                if bench > best_bench_multi {
                     prmarker.bench_is_pr = true;
                     best_bench_multi.0 = bench.0;
                 }
-                if *deadlift > best_deadlift_multi {
+                if deadlift > best_deadlift_multi {
                     prmarker.deadlift_is_pr = true;
                     best_deadlift_multi.0 = deadlift.0;
                 }

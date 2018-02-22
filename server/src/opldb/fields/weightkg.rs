@@ -14,7 +14,7 @@ use std::num;
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Debug, PartialEq, PartialOrd, Ord, Eq)]
+#[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(pub i32);
 
 /// Switch between Kg and Lbs, for weight formatting.
@@ -24,8 +24,9 @@ pub enum WeightType {
 }
 
 impl WeightKg {
-    pub fn zero() -> WeightKg {
-        WeightKg(0)
+    pub fn as_lbs(&self) -> WeightKg {
+        let f = (self.0 as f32) * 2.20462262;
+        WeightKg(f.round() as i32)
     }
 }
 

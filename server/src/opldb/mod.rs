@@ -112,18 +112,18 @@ pub struct Entry {
 
 impl Entry {
     /// Returns max(bestsquatkg, squat4kg).
-    pub fn highest_squatkg(&self) -> &WeightKg {
-        (&self.bestsquatkg).max(&self.squat4kg)
+    pub fn highest_squatkg(&self) -> WeightKg {
+        self.bestsquatkg.max(self.squat4kg)
     }
 
     /// Returns max(bestbenchkg, bench4kg).
-    pub fn highest_benchkg(&self) -> &WeightKg {
-        (&self.bestbenchkg).max(&self.bench4kg)
+    pub fn highest_benchkg(&self) -> WeightKg {
+        self.bestbenchkg.max(self.bench4kg)
     }
 
     /// Returns max(bestdeadliftkg, deadlift4kg).
-    pub fn highest_deadliftkg(&self) -> &WeightKg {
-        (&self.bestdeadliftkg).max(&self.deadlift4kg)
+    pub fn highest_deadliftkg(&self) -> WeightKg {
+        self.bestdeadliftkg.max(self.deadlift4kg)
     }
 }
 
