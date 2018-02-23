@@ -28,18 +28,18 @@
   <div class="content">
     <table>
       <thead>
-        <th>Wilks Place</th>
-        <th>Name</th>
-        <th>Sex</th>
-        <th>Age</th>
-        <th>Equip</th>
-        <th>Class</th>
-        <th>Weight</th>
-        <th>Squat</th>
-        <th>Bench</th>
-        <th>Deadlift</th>
-        <th>Total</th>
-        <th>Wilks</th>
+        <th>{{strings.columns.formulaplace}}</th>
+        <th>{{strings.columns.liftername}}</th>
+        <th>{{strings.columns.sex}}</th>
+        <th>{{strings.columns.age}}</th>
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        <th>{{strings.columns.squat}}</th>
+        <th>{{strings.columns.bench}}</th>
+        <th>{{strings.columns.deadlift}}</th>
+        <th>{{strings.columns.total}}</th>
+        <th>{{strings.columns.wilks}}</th>
       </thead>
       {% for this in rows %}
         <tr>

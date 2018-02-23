@@ -24,22 +24,22 @@
   <div class="content">
     <table>
       <thead>
-        <th>Place</th>
-        <th>Fed</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Meet Name</th>
-        <th>Division</th>
-        <th>Sex</th>
-        <th>Age</th>
-        <th>Equip</th>
-        <th>Class</th>
-        <th>Weight</th>
-        <th>Squat</th>
-        <th>Bench</th>
-        <th>Deadlift</th>
-        <th>Total</th>
-        <th>Wilks</th>
+        <th>{{strings.columns.place}}</th>
+        <th>{{strings.columns.federation}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.location}}</th>
+        <th>{{strings.columns.meetname}}</th>
+        <th>{{strings.columns.division}}</th>
+        <th>{{strings.columns.sex}}</th>
+        <th>{{strings.columns.age}}</th>
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        <th>{{strings.columns.squat}}</th>
+        <th>{{strings.columns.bench}}</th>
+        <th>{{strings.columns.deadlift}}</th>
+        <th>{{strings.columns.total}}</th>
+        <th>{{strings.columns.wilks}}</th>
       </thead>
       {% for this in meet_results %}
         <tr>

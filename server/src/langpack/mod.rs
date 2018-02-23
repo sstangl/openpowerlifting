@@ -54,9 +54,32 @@ pub struct HeaderTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct ColumnTranslations {
+    pub place: String,
+    pub formulaplace: String,
+    pub liftername: String,
+    pub federation: String,
+    pub date: String,
+    pub location: String,
+    pub meetname: String,
+    pub division: String,
+    pub sex: String,
+    pub age: String,
+    pub equipment: String,
+    pub weightclass: String,
+    pub bodyweight: String,
+    pub squat: String,
+    pub bench: String,
+    pub deadlift: String,
+    pub total: String,
+    pub wilks: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct Translations {
     pub units: UnitsTranslations,
     pub header: HeaderTranslations,
+    pub columns: ColumnTranslations,
     pub search: String,
 }
 
