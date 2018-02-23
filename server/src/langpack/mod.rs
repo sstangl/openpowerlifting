@@ -17,6 +17,8 @@ pub enum Language {
     en,
     /// Esperanto.
     eo,
+    /// Spanish.
+    es,
     /// Russian.
     ru,
 }
@@ -28,6 +30,7 @@ impl FromStr for Language {
         match s {
             "en" => Ok(Language::en),
             "eo" => Ok(Language::eo),
+            "es" => Ok(Language::es),
             "ru" => Ok(Language::ru),
             _ => Err(()),
         }
@@ -61,6 +64,7 @@ pub struct Translations {
 pub struct LangInfo {
     en: Option<Translations>,
     eo: Option<Translations>,
+    es: Option<Translations>,
     ru: Option<Translations>,
 }
 
@@ -69,6 +73,7 @@ impl LangInfo {
         LangInfo {
             en: None,
             eo: None,
+            es: None,
             ru: None,
         }
     }
@@ -88,6 +93,7 @@ impl LangInfo {
         match language {
             Language::en => self.en = trans,
             Language::eo => self.eo = trans,
+            Language::es => self.es = trans,
             Language::ru => self.ru = trans,
         };
 
@@ -98,6 +104,7 @@ impl LangInfo {
         match language {
             Language::en => self.en.as_ref().unwrap(),
             Language::eo => self.eo.as_ref().unwrap(),
+            Language::es => self.es.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
         }
     }
