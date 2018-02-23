@@ -8,6 +8,7 @@ use csv;
 
 use std::error::Error;
 use std::mem;
+use std::str::FromStr;
 
 pub mod fields;
 use self::fields::*;
@@ -18,6 +19,24 @@ pub use self::filter::Filter;
 mod filter_cache;
 use self::filter_cache::FilterCache;
 pub use self::filter_cache::CachedFilter;
+
+#[derive(Copy, Clone, Debug, Serialize)]
+pub enum WeightUnits {
+    Kg,
+    Lbs,
+}
+
+impl FromStr for WeightUnits {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "kg" => Ok(WeightUnits::Kg),
+            "lbs" => Ok(WeightUnits::Lbs),
+            _ => Err(()),
+        }
+    }
+}
 
 /// The definition of a Lifter in the database.
 #[derive(Serialize, Deserialize)]

@@ -17,7 +17,7 @@ pub struct Context<'a> {
     pub lifter: &'a opldb::Lifter,
     pub language: Language,
     pub strings: &'a langpack::Translations,
-    pub units: fields::WeightUnits,
+    pub units: opldb::WeightUnits,
 
     pub meet_results: Vec<MeetResultsRow<'a>>,
 }
@@ -54,7 +54,7 @@ pub struct MeetResultsRow<'a> {
 impl<'a> MeetResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
-        units: fields::WeightUnits,
+        units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
         prmarker: PrMarker,
     ) -> MeetResultsRow<'a> {
@@ -238,7 +238,7 @@ impl<'a> Context<'a> {
         opldb: &'a opldb::OplDb,
         language: Language,
         langinfo: &'a langpack::LangInfo,
-        units: fields::WeightUnits,
+        units: opldb::WeightUnits,
         lifter_id: u32,
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);

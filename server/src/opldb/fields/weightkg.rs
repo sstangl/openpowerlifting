@@ -8,6 +8,8 @@ use std::fmt;
 use std::str::FromStr;
 use std::num;
 
+use opldb::WeightUnits;
+
 /// Represents numbers describing absolute weights.
 ///
 /// The database only tracks weights to two decimal places.
@@ -24,24 +26,6 @@ pub struct WeightKg(pub i32);
 /// are incomparable with each other.
 #[derive(Copy, Clone, Debug)]
 pub struct WeightAny(pub i32);
-
-#[derive(Copy, Clone, Debug, Serialize)]
-pub enum WeightUnits {
-    Kg,
-    Lbs,
-}
-
-impl FromStr for WeightUnits {
-    type Err = ();
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "kg" => Ok(WeightUnits::Kg),
-            "lbs" => Ok(WeightUnits::Lbs),
-            _ => Err(()),
-        }
-    }
-}
 
 impl WeightKg {
     pub fn as_kg(&self) -> WeightAny {

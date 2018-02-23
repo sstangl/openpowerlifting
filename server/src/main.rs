@@ -68,11 +68,11 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
     }
 }
 
-fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::fields::WeightUnits {
+fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUnits {
     // The user may explicitly override the weight unit choice by using
     // a cookie named "units".
     if let Some(cookie) = cookies.get("units") {
-        if let Ok(units) = cookie.value().parse::<opldb::fields::WeightUnits>() {
+        if let Ok(units) = cookie.value().parse::<opldb::WeightUnits>() {
             return units;
         }
     }
@@ -82,10 +82,10 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::fields::
     //       with the information stored in langpack.
     // TODO: Also doesn't handle the Australia case (since no regional English variant).
     match language {
-        Language::en => opldb::fields::WeightUnits::Lbs,
-        Language::eo => opldb::fields::WeightUnits::Kg,
-        Language::es => opldb::fields::WeightUnits::Kg,
-        Language::ru => opldb::fields::WeightUnits::Kg,
+        Language::en => opldb::WeightUnits::Lbs,
+        Language::eo => opldb::WeightUnits::Kg,
+        Language::es => opldb::WeightUnits::Kg,
+        Language::ru => opldb::WeightUnits::Kg,
     }
 }
 
