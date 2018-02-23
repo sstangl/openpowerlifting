@@ -74,7 +74,11 @@ pub struct ResultsRow<'a> {
 }
 
 impl<'a> ResultsRow<'a> {
-    fn from(opldb: &'a opldb::OplDb, units: opldb::WeightUnits, entry: &'a opldb::Entry) -> ResultsRow<'a> {
+    fn from(
+        opldb: &'a opldb::OplDb,
+        units: opldb::WeightUnits,
+        entry: &'a opldb::Entry,
+    ) -> ResultsRow<'a> {
         let lifter: &'a opldb::Lifter = opldb.get_lifter(entry.lifter_id);
 
         ResultsRow {
