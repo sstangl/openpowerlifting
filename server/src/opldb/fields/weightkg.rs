@@ -30,7 +30,8 @@ pub struct WeightAny(pub i32);
 
 impl Serialize for WeightAny {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-        where S: serde::Serializer
+    where
+        S: serde::Serializer,
     {
         // TODO: Write into a stack-allocated fixed-size buffer.
         serializer.serialize_str(&format!("{}", self))

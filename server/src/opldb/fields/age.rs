@@ -49,7 +49,8 @@ impl FromStr for Age {
 
 impl Serialize for Age {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-        where S: serde::Serializer
+    where
+        S: serde::Serializer,
     {
         // TODO: Write into a stack-allocated fixed-size buffer.
         serializer.serialize_str(&format!("{}", self))

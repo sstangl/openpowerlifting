@@ -153,7 +153,6 @@ impl LangInfo {
 }
 
 impl Translations {
-
     pub fn translate_equipment<'a>(&'a self, equip: fields::Equipment) -> &'a str {
         match equip {
             fields::Equipment::Raw => &self.equipment.raw,
