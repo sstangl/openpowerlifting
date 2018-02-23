@@ -44,6 +44,21 @@ pub struct UnitsTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct EquipmentTranslations {
+    pub raw: String,
+    pub wraps: String,
+    pub single: String,
+    pub multi: String,
+    pub straps: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct SexTranslations {
+    pub m: String,
+    pub f: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct HeaderTranslations {
     pub rankings: String,
     pub meets: String,
@@ -78,6 +93,8 @@ pub struct ColumnTranslations {
 #[derive(Serialize, Deserialize)]
 pub struct Translations {
     pub units: UnitsTranslations,
+    pub equipment: EquipmentTranslations,
+    pub sex: SexTranslations,
     pub header: HeaderTranslations,
     pub columns: ColumnTranslations,
     pub search: String,
