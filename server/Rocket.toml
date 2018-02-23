@@ -7,3 +7,4 @@ log = "normal"
 address = "0.0.0.0"
 port = 80
 log = "normal"
+workers = 8
