@@ -33,9 +33,9 @@ pub struct MeetResultsRow<'a> {
     pub meet_name: &'a str,
     pub meet_path: &'a str,
     pub division: Option<&'a str>,
-    pub sex: fields::Sex,
+    pub sex: &'a str,
     pub age: fields::Age,
-    pub equipment: fields::Equipment,
+    pub equipment: &'a str,
     pub weightclasskg: String,
     pub bodyweightkg: fields::WeightAny,
 
@@ -54,6 +54,7 @@ pub struct MeetResultsRow<'a> {
 impl<'a> MeetResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
+        strings: &'a langpack::Translations,
         units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
         prmarker: PrMarker,
@@ -75,9 +76,9 @@ impl<'a> MeetResultsRow<'a> {
                 None => None,
                 Some(ref s) => Some(&s),
             },
-            sex: entry.sex,
+            sex: strings.translate_sex(entry.sex),
             age: entry.age,
-            equipment: entry.equipment,
+            equipment: strings.translate_equipment(entry.equipment),
             weightclasskg: format!("{}", entry.weightclasskg),
             bodyweightkg: entry.bodyweightkg.as_type(units),
 
@@ -242,6 +243,7 @@ impl<'a> Context<'a> {
         lifter_id: u32,
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
+        let strings = langinfo.get_translations(language);
 
         // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
@@ -253,7 +255,7 @@ impl<'a> Context<'a> {
         let meet_results = entries
             .into_iter()
             .zip(prmarkers.into_iter())
-            .map(|(e, pr)| MeetResultsRow::from(opldb, units, e, pr))
+            .map(|(e, pr)| MeetResultsRow::from(opldb, strings, units, e, pr))
             .rev()
             .collect();
 
@@ -263,7 +265,7 @@ impl<'a> Context<'a> {
                 num_meets: opldb.get_meets().len() as u32,
             },
             language: language,
-            strings: langinfo.get_translations(language),
+            strings: strings,
             units: units,
             lifter: lifter,
             meet_results: meet_results,

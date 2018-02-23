@@ -60,9 +60,9 @@ pub struct ResultsRow<'a> {
     pub name: &'a str,
     pub username: &'a str,
     pub instagram: Option<&'a str>,
-    pub sex: fields::Sex,
+    pub sex: &'a str,
     pub age: fields::Age,
-    pub equipment: fields::Equipment,
+    pub equipment: &'a str,
     pub weightclasskg: String,
     pub bodyweightkg: fields::WeightAny,
 
@@ -76,6 +76,7 @@ pub struct ResultsRow<'a> {
 impl<'a> ResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
+        strings: &'a langpack::Translations,
         units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
     ) -> ResultsRow<'a> {
@@ -89,9 +90,9 @@ impl<'a> ResultsRow<'a> {
                 None => None,
                 Some(ref s) => Some(&s),
             },
-            sex: entry.sex,
+            sex: strings.translate_sex(entry.sex),
             age: entry.age,
-            equipment: entry.equipment,
+            equipment: strings.translate_equipment(entry.equipment),
             weightclasskg: format!("{}", entry.weightclasskg),
             bodyweightkg: entry.bodyweightkg.as_type(units),
 
@@ -113,6 +114,7 @@ impl<'a> Context<'a> {
         meet_id: u32,
     ) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
+        let strings = langinfo.get_translations(language);
 
         // Get a list of the entries for this meet, highest Wilks first.
         let mut entries = opldb.get_entries_for_meet(meet_id);
@@ -120,7 +122,7 @@ impl<'a> Context<'a> {
 
         let rows = entries
             .into_iter()
-            .map(|e| ResultsRow::from(opldb, units, e))
+            .map(|e| ResultsRow::from(opldb, strings, units, e))
             .collect();
 
         Context {
@@ -129,7 +131,7 @@ impl<'a> Context<'a> {
                 num_meets: opldb.get_meets().len() as u32,
             },
             language: language,
-            strings: langinfo.get_translations(language),
+            strings: strings,
             units: units,
             meet: MeetInfo::from(&meet),
             rows: rows,

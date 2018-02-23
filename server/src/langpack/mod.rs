@@ -9,6 +9,8 @@ use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
 
+use opldb::fields;
+
 /// List of languages accepted by the project.
 #[allow(non_camel_case_types)]
 #[derive(Clone, Copy, Debug, Serialize)]
@@ -146,6 +148,26 @@ impl LangInfo {
             Language::eo => self.eo.as_ref().unwrap(),
             Language::es => self.es.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
+        }
+    }
+}
+
+impl Translations {
+
+    pub fn translate_equipment<'a>(&'a self, equip: fields::Equipment) -> &'a str {
+        match equip {
+            fields::Equipment::Raw => &self.equipment.raw,
+            fields::Equipment::Wraps => &self.equipment.wraps,
+            fields::Equipment::Single => &self.equipment.single,
+            fields::Equipment::Multi => &self.equipment.multi,
+            fields::Equipment::Straps => &self.equipment.straps,
+        }
+    }
+
+    pub fn translate_sex<'a>(&'a self, sex: fields::Sex) -> &'a str {
+        match sex {
+            fields::Sex::M => &self.sex.m,
+            fields::Sex::F => &self.sex.f,
         }
     }
 }
