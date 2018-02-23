@@ -64,12 +64,12 @@ pub struct ResultsRow<'a> {
     pub age: String,
     pub equipment: &'a fields::Equipment,
     pub weightclasskg: String,
-    pub bodyweightkg: String,
+    pub bodyweightkg: fields::WeightAny,
 
-    pub squatkg: String,
-    pub benchkg: String,
-    pub deadliftkg: String,
-    pub totalkg: String,
+    pub squatkg: fields::WeightAny,
+    pub benchkg: fields::WeightAny,
+    pub deadliftkg: fields::WeightAny,
+    pub totalkg: fields::WeightAny,
     pub wilks: String,
 }
 
@@ -93,12 +93,12 @@ impl<'a> ResultsRow<'a> {
             age: format!("{}", &entry.age),
             equipment: &entry.equipment,
             weightclasskg: format!("{}", entry.weightclasskg),
-            bodyweightkg: format!("{}", entry.bodyweightkg.as_type(units)),
+            bodyweightkg: entry.bodyweightkg.as_type(units),
 
-            squatkg: format!("{}", entry.highest_squatkg().as_type(units)),
-            benchkg: format!("{}", entry.highest_benchkg().as_type(units)),
-            deadliftkg: format!("{}", entry.highest_deadliftkg().as_type(units)),
-            totalkg: format!("{}", &entry.totalkg.as_type(units)),
+            squatkg: entry.highest_squatkg().as_type(units),
+            benchkg: entry.highest_benchkg().as_type(units),
+            deadliftkg: entry.highest_deadliftkg().as_type(units),
+            totalkg: entry.totalkg.as_type(units),
             wilks: format!("{}", &entry.wilks),
         }
     }

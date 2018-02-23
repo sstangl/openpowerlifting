@@ -2,6 +2,7 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::f32;
 use std::fmt;
@@ -26,6 +27,14 @@ pub struct WeightKg(pub i32);
 /// are incomparable with each other.
 #[derive(Copy, Clone, Debug)]
 pub struct WeightAny(pub i32);
+
+impl Serialize for WeightAny {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+        where S: serde::Serializer
+    {
+        serializer.serialize_str(&format!("{}", self))
+    }
+}
 
 impl WeightKg {
     pub fn as_kg(&self) -> WeightAny {
