@@ -77,16 +77,11 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUn
         }
     }
 
+    // TODO: Check Accept-Language header for regional variants of English,
+    // for example Australia, to select Kg.
+
     // Otherwise, infer based on the language.
-    // TODO: This should really be a feature of the language,
-    //       with the information stored in langpack.
-    // TODO: Also doesn't handle the Australia case (since no regional English variant).
-    match language {
-        Language::en => opldb::WeightUnits::Lbs,
-        Language::eo => opldb::WeightUnits::Kg,
-        Language::es => opldb::WeightUnits::Kg,
-        Language::ru => opldb::WeightUnits::Kg,
-    }
+    language.default_units()
 }
 
 #[get("/static/<file..>")]

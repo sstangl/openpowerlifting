@@ -9,6 +9,7 @@ use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
 
+use opldb;
 use opldb::fields;
 
 /// List of languages accepted by the project.
@@ -23,6 +24,16 @@ pub enum Language {
     es,
     /// Russian.
     ru,
+}
+
+impl Language {
+    /// Returns the units associated with the language.
+    pub fn default_units(self) -> opldb::WeightUnits {
+        match self {
+            Language::en => opldb::WeightUnits::Lbs,
+            _ => opldb::WeightUnits::Kg,
+        }
+    }
 }
 
 impl FromStr for Language {
