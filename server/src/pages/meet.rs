@@ -60,9 +60,9 @@ pub struct ResultsRow<'a> {
     pub name: &'a str,
     pub username: &'a str,
     pub instagram: Option<&'a str>,
-    pub sex: &'a fields::Sex,
-    pub age: String,
-    pub equipment: &'a fields::Equipment,
+    pub sex: fields::Sex,
+    pub age: fields::Age,
+    pub equipment: fields::Equipment,
     pub weightclasskg: String,
     pub bodyweightkg: fields::WeightAny,
 
@@ -70,7 +70,7 @@ pub struct ResultsRow<'a> {
     pub benchkg: fields::WeightAny,
     pub deadliftkg: fields::WeightAny,
     pub totalkg: fields::WeightAny,
-    pub wilks: String,
+    pub wilks: fields::Points,
 }
 
 impl<'a> ResultsRow<'a> {
@@ -89,9 +89,9 @@ impl<'a> ResultsRow<'a> {
                 None => None,
                 Some(ref s) => Some(&s),
             },
-            sex: &entry.sex,
-            age: format!("{}", &entry.age),
-            equipment: &entry.equipment,
+            sex: entry.sex,
+            age: entry.age,
+            equipment: entry.equipment,
             weightclasskg: format!("{}", entry.weightclasskg),
             bodyweightkg: entry.bodyweightkg.as_type(units),
 
@@ -99,7 +99,7 @@ impl<'a> ResultsRow<'a> {
             benchkg: entry.highest_benchkg().as_type(units),
             deadliftkg: entry.highest_deadliftkg().as_type(units),
             totalkg: entry.totalkg.as_type(units),
-            wilks: format!("{}", &entry.wilks),
+            wilks: entry.wilks,
         }
     }
 }

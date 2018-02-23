@@ -21,13 +21,13 @@ pub use self::weightkg::*;
 mod weightclasskg;
 pub use self::weightclasskg::*;
 
-#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[derive(Clone, Copy, Debug, Deserialize, PartialEq, Serialize)]
 pub enum Sex {
     M,
     F,
 }
 
-#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[derive(Clone, Copy, Debug, Deserialize, PartialEq, Serialize)]
 pub enum Equipment {
     Raw,
     Wraps,

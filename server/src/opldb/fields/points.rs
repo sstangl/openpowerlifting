@@ -2,6 +2,7 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::f32;
 use std::fmt;
@@ -14,7 +15,7 @@ use std::num;
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Clone, Copy, Debug, PartialEq, PartialOrd)]
 pub struct Points(pub i32);
 
 impl fmt::Display for Points {
@@ -46,6 +47,15 @@ impl FromStr for Points {
                 Ok(Points(0))
             }
         }
+    }
+}
+
+impl Serialize for Points {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+        where S: serde::Serializer
+    {
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        serializer.serialize_str(&format!("{}", self))
     }
 }
 

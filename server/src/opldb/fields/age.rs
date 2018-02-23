@@ -2,6 +2,7 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::num;
 use std::fmt;
@@ -9,7 +10,7 @@ use std::str::FromStr;
 
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
-#[derive(Debug)]
+#[derive(Copy, Clone, Debug)]
 pub enum Age {
     /// The exact age of the lifter.
     Exact(u8),
@@ -43,6 +44,15 @@ impl FromStr for Age {
         } else {
             v[0].parse::<u8>().map(Age::Approximate)
         }
+    }
+}
+
+impl Serialize for Age {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+        where S: serde::Serializer
+    {
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        serializer.serialize_str(&format!("{}", self))
     }
 }
 
