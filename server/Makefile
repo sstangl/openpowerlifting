@@ -1,4 +1,4 @@
-.PHONY: builddir binary data statics config release
+.PHONY: builddir binary data oldstatics config release
 
 BUILDDIR := build
 
@@ -21,18 +21,26 @@ data: builddir
 	cp ../build/meets.csv "${BUILDDIR}/opldb/meets.csv"
 	cp ../build/openpowerlifting.csv "${BUILDDIR}/opldb/openpowerlifting.csv"
 
-statics: builddir
+oldstatics: builddir
 	mkdir -p "${BUILDDIR}/static"
-	cp -r -L static/* "${BUILDDIR}/static/"
-	rm "${BUILDDIR}/static/data/meets.csv"
-	rm "${BUILDDIR}/static/data/openpowerlifting.csv"
-	rmdir "${BUILDDIR}/static/data"
+	mkdir -p "${BUILDDIR}/static/images"
+	cp static/images/check_radio_sheet.png "${BUILDDIR}/static/images/"
+	cp static/images/logo-compressed.svg "${BUILDDIR}/static/images/"
+	cp static/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/static/images/"
+	cp static/images/select_dropdown.png "${BUILDDIR}/static/images/"
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"
 	cp Rocket.toml "${BUILDDIR}/Rocket.toml"
 
-release: binary data config statics
+client:
+	$(MAKE) -C client
+
+clientstatics: client
+	mkdir -p "${BUILDDIR}/static"
+	cp -r client/build/* "${BUILDDIR}/static"
+
+release: binary data config oldstatics clientstatics
 	echo "Good luck!"
 
 clean:

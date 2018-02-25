@@ -1,0 +1,92 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// Style definitions for the SlickGrid and SlickGrid-lookalike tables.
+
+#theGrid {
+  flex: 1;
+}
+
+.slick-cell {
+  padding-top: 3px;
+  padding-left: 4px;
+  color: $default-color;
+  font-size: 9pt;
+  border: 0px;
+}
+
+.searchflashing {
+  background-color: $hover-color;
+}
+
+.slick-header-column {
+  font-size: 9pt;
+  color: $primary-color;
+}
+
+.slick-header-column.ui-state-default {
+  border-right: 0px;
+  border-bottom: 1px $primary-color;
+}
+
+.slick-header-column-sorted {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.slick-row.even {
+  background-color: $alt-color;
+}
+
+.slick-row:hover {
+  background-color: $hover-color;
+}
+
+table {
+  font-size: 9pt;
+  color: $default-color;
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  border-spacing: 0px;
+  border: none;
+}
+
+thead {
+  color: $primary-color;
+}
+
+thead td {
+  min-width: 80px;
+}
+
+tr:nth-child(even) {
+  background-color: $alt-color;
+}
+
+tbody tr:hover {
+  background-color: $hover-color;
+}
+
+td {
+  border: 0px;
+  padding-right: 0px;
+  padding-left: 5px;
+  height: 21px;
+}
+
+th {
+  text-align: left;
+}
+
+// Used by meet.html.
+td.meetdivisiontext {
+  color: $primary-color;
+}
+
+td a {
+  color: $default-color;
+}
+
+.table-divider {
+  color: $primary-color;
+}

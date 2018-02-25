@@ -1,0 +1,22 @@
+{
+  "name": "openpowerlifting-client",
+  "version": "0.0.1",
+  "description": "The OpenPowerlifting website frontend.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --output-style compressed css/style.scss build/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sstangl/openpowerlifting.git"
+  },
+  "author": "Sean Stangl <sean.stangl@gmail.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sstangl/openpowerlifting/issues"
+  },
+  "homepage": "https://github.com/sstangl/openpowerlifting#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

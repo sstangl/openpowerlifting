@@ -2,12 +2,12 @@
 *.swo
 *.~*
 build/
+node_modules/
 *__pycache__
 meet-data/cpu/fetch/
 meet-data/spf/fetch/
 meet-data/uspa/fetch/
 meet-data/wrpf/fetch/
-web/node_modules/
 web/npm-debug.log
 server/target/
 .idea/*
