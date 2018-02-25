@@ -22,6 +22,8 @@ pub enum Language {
     eo,
     /// Spanish.
     es,
+    /// French.
+    fr,
     /// Russian.
     ru,
 }
@@ -44,6 +46,7 @@ impl FromStr for Language {
             "en" => Ok(Language::en),
             "eo" => Ok(Language::eo),
             "es" => Ok(Language::es),
+            "fr" => Ok(Language::fr),
             "ru" => Ok(Language::ru),
             _ => Err(()),
         }
@@ -118,6 +121,7 @@ pub struct LangInfo {
     en: Option<Translations>,
     eo: Option<Translations>,
     es: Option<Translations>,
+    fr: Option<Translations>,
     ru: Option<Translations>,
 }
 
@@ -127,6 +131,7 @@ impl LangInfo {
             en: None,
             eo: None,
             es: None,
+            fr: None,
             ru: None,
         }
     }
@@ -147,6 +152,7 @@ impl LangInfo {
             Language::en => self.en = trans,
             Language::eo => self.eo = trans,
             Language::es => self.es = trans,
+            Language::fr => self.fr = trans,
             Language::ru => self.ru = trans,
         };
 
@@ -158,6 +164,7 @@ impl LangInfo {
             Language::en => self.en.as_ref().unwrap(),
             Language::eo => self.eo.as_ref().unwrap(),
             Language::es => self.es.as_ref().unwrap(),
+            Language::fr => self.fr.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
         }
     }
