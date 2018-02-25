@@ -66,19 +66,6 @@
 {% endblock body %}
 
 {% block custom_javascript %}
-<script type="text/javascript">
-  function change_language() {
-    var l = document.getElementById("langselect");
-    document.cookie = "lang="+l.value+"; path=/";
-    location.reload(true);
-  }
-  function change_units() {
-    var w = document.getElementById("weightunits");
-    document.cookie = "units="+w.value+"; path=/";
-    location.reload(true);
-  }
-
-  document.getElementById("langselect").addEventListener("change", change_language);
-  document.getElementById("weightunits").addEventListener("change", change_units);
-</script>
+  {% include "langselect-script" %}
+  {% include "weightunits-script" %}
 {% endblock custom_javascript %}
