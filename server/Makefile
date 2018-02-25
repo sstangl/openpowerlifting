@@ -24,6 +24,9 @@ data: builddir
 statics: builddir
 	mkdir -p "${BUILDDIR}/static"
 	cp -r -L static/* "${BUILDDIR}/static/"
+	rm "${BUILDDIR}/static/data/meets.csv"
+	rm "${BUILDDIR}/static/data/openpowerlifting.csv"
+	rmdir "${BUILDDIR}/static/data"
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"
