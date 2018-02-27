@@ -234,7 +234,7 @@ def add_equipment(csv):
     if len(meet_info)>3:
         meet_year=meet_info[-1]
 
-    if meet_year.isdigit() and int(meet_year) < 2011:
+    if type(meet_year) is str and meet_year.isdigit() and int(meet_year) < 2011:
         equip_type='Single-ply'
 
 
