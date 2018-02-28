@@ -1,6 +1,6 @@
 //! Defines the `Federation` field for the `meets` table.
 
-#[derive(Deserialize,PartialEq)]
+#[derive(Deserialize, PartialEq, Serialize)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     _365Strong,
@@ -21,6 +21,7 @@ pub enum Federation {
     CPU,
     EPA,
     EPF,
+    FEMEPO,
     FESUPO,
     FFForce,
     FPO,
@@ -30,6 +31,8 @@ pub enum Federation {
     GPCGB,
     #[serde(rename = "GPC-AUS")]
     GPCAUS,
+    #[serde(rename = "GPC-NZ")]
+    GPCNZ,
     HERC,
     IDFPF,
     IPA,
@@ -45,20 +48,24 @@ pub enum Federation {
     NSF,
     NZPF,
     OceaniaPF,
-    ProRaw,
+    ParaPL,
     PA,
+    ProRaw,
     RAW,
     RAWU,
     RPS,
     RUPC,
     ScottishPL,
     SCT,
+    SPA,
     SPF,
     THSPA,
     UPA,
     USAPL,
     USPF,
     USPA,
+    WABDL,
+    WDFPF,
     WelshPA,
     WPC,
     WNPF,

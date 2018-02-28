@@ -1,34 +1,84 @@
 //! Defines fields that represent weights.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::f32;
 use std::fmt;
 use std::str::FromStr;
 use std::num;
 
-/// Represents numbers describing bar weights.
+use opldb::WeightUnits;
+
+/// Represents numbers describing absolute weights.
 ///
-/// The database only tracks bar weights to two decimal places.
+/// The database only tracks weights to two decimal places.
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(PartialEq, PartialOrd)]
-pub struct WeightKg(i32);
+#[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
+pub struct WeightKg(pub i32);
+
+/// Represents numbers describing absolute weights in their final
+/// format for printing (either Kg or Lbs).
+///
+/// Because the type of the weight is forgotten, these weights
+/// are incomparable with each other.
+#[derive(Copy, Clone, Debug)]
+pub struct WeightAny(pub i32);
+
+impl Serialize for WeightAny {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        serializer.serialize_str(&format!("{}", self))
+    }
+}
+
+impl WeightKg {
+    pub fn as_kg(&self) -> WeightAny {
+        WeightAny(self.0)
+    }
+
+    pub fn as_lbs(&self) -> WeightAny {
+        let f = (self.0 as f32) * 2.20462262;
+        WeightAny(f.round() as i32)
+    }
+
+    pub fn as_type(&self, unit: WeightUnits) -> WeightAny {
+        match unit {
+            WeightUnits::Kg => self.as_kg(),
+            WeightUnits::Lbs => self.as_lbs(),
+        }
+    }
+}
 
 impl fmt::Display for WeightKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Displaying a weight only shows a single decimal place.
-        // Truncate the last number.
-        let integer = self.0 / 100;
-        let decimal = (self.0.abs() % 100) / 10;
+        WeightAny(self.0).fmt(f)
+    }
+}
 
-        // If the decimal can be avoided, don't write it.
-        if decimal != 0 {
-            write!(f, "{}.{}", integer, decimal)
+impl fmt::Display for WeightAny {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        // Don't display empty weights.
+        if self.0 == 0 {
+            Ok(())
         } else {
-            write!(f, "{}", integer)
+            // Displaying a weight only shows a single decimal place.
+            // Truncate the last number.
+            let integer = self.0 / 100;
+            let decimal = (self.0.abs() % 100) / 10;
+
+            // If the decimal can be avoided, don't write it.
+            if decimal != 0 {
+                write!(f, "{}.{}", integer, decimal)
+            } else {
+                write!(f, "{}", integer)
+            }
         }
     }
 }
@@ -61,7 +111,8 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<WeightKg, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         WeightKg::from_str(value).map_err(E::custom)
     }
@@ -69,7 +120,8 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
 
 impl<'de> Deserialize<'de> for WeightKg {
     fn deserialize<D>(deserializer: D) -> Result<WeightKg, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(WeightKgVisitor)
     }
@@ -92,7 +144,6 @@ mod tests {
 
         let w = "-123.45".parse::<WeightKg>().unwrap();
         assert!(w.0 == -12345);
-
     }
 
     #[test]
@@ -107,7 +158,9 @@ mod tests {
         let w = format!("{}", f32::INFINITY).parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::NEG_INFINITY).parse::<WeightKg>().unwrap();
+        let w = format!("{}", f32::NEG_INFINITY)
+            .parse::<WeightKg>()
+            .unwrap();
         assert!(w.0 == 0);
     }
 
@@ -146,7 +199,7 @@ mod tests {
         assert_eq!(format!("{}", w), "-123");
 
         let w = "-0.000".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "0");
+        assert_eq!(format!("{}", w), "");
     }
 
     #[test]

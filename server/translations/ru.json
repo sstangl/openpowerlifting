@@ -1,0 +1,46 @@
+{
+	"units": {
+		"lbs": "фт",
+		"kg": "кг"
+	},
+	"equipment": {
+		"raw": "Без",
+		"wraps": "Wraps",
+		"single": "Одно",
+		"multi": "Много",
+		"straps": "Straps"
+	},
+	"sex": {
+		"m": "М",
+		"f": "Ж"
+	},
+	"header": {
+		"rankings": "Рэнкинги",
+		"meets": "Протоколы",
+		"data": "Данные",
+		"faq": "Вопросы-Ответы",
+		"contact": "Контакты",
+		"supportus": "Помогите Нам"
+	},
+	"columns": {
+		"place": "Место",
+		"formulaplace": "Formula Place",
+		"liftername": "Спортсмен",
+		"federation": "Фед",
+		"date": "Дата",
+		"location": "Местоположение",
+		"meetname": "Соревнование",
+		"division": "Дивизион",
+		"sex": "Пол",
+		"age": "Возраст",
+		"equipment": "Экип",
+		"weightclass": "Кат",
+		"bodyweight": "Вес",
+		"squat": "Присед",
+		"bench": "Жим",
+		"deadlift": "Тяга",
+		"total": "Сумма",
+		"wilks": "Вилкс"
+	},
+	"search": "Поиск"
+}

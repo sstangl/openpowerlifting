@@ -1,14 +1,14 @@
 //! Defines the `Place` field for the `entries` table.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::num;
 use std::fmt;
 use std::str::FromStr;
 
 /// The definition of the "Place" column.
-#[derive(Debug,PartialEq)]
+#[derive(Debug, PartialEq, Serialize)]
 pub enum Place {
     /// The placing assigned to the entry.
     P(u8),
@@ -65,7 +65,8 @@ impl<'de> Visitor<'de> for PlaceVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Place, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         Place::from_str(value).map_err(E::custom)
     }
@@ -73,7 +74,8 @@ impl<'de> Visitor<'de> for PlaceVisitor {
 
 impl<'de> Deserialize<'de> for Place {
     fn deserialize<D>(deserializer: D) -> Result<Place, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(PlaceVisitor)
     }

@@ -1,0 +1,71 @@
+{% extends "desktop-base" %}
+
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-left">
+      <span id="lifter">Meet Results for {{lifter.name}}{% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</span>
+    </div>
+    <div id="controls-right">
+      {% include "weightunits" %}
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="content">
+    <table>
+      <thead>
+        <th>{{strings.columns.place}}</th>
+        <th>{{strings.columns.federation}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.location}}</th>
+        <th>{{strings.columns.meetname}}</th>
+        <th>{{strings.columns.division}}</th>
+        <th>{{strings.columns.sex}}</th>
+        <th>{{strings.columns.age}}</th>
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        <th>{{strings.columns.squat}}</th>
+        <th>{{strings.columns.bench}}</th>
+        <th>{{strings.columns.deadlift}}</th>
+        <th>{{strings.columns.total}}</th>
+        <th>{{strings.columns.wilks}}</th>
+      </thead>
+      {% for this in meet_results %}
+        <tr>
+          <td>{{this.place}}</td>
+          <td>{{this.federation}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
+          <td><a href="/m/{{this.meet_path}}">{{this.meet_name}}</a></td>
+          <td>{{this.division}}</td>
+          <td>{{this.sex}}</td>
+          <td>{{this.age}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclasskg}}</td>
+          <td>{{this.bodyweightkg}}</td>
+          <td>{{this.squatkg}}{% if this.squat_is_pr %}*{% endif %}</td>
+          <td>{{this.benchkg}}{% if this.bench_is_pr %}*{% endif %}</td>
+          <td>{{this.deadliftkg}}{% if this.deadlift_is_pr %}*{% endif %}</td>
+          <td>{{this.totalkg}}{% if this.total_is_pr %}*{% endif %}</td>
+          <td>{{this.wilks}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock body %}
+
+{% block custom_javascript %}
+  {% include "langselect-script" %}
+  {% include "weightunits-script" %}
+{% endblock custom_javascript %}

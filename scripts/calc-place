@@ -64,6 +64,12 @@ def main(filename):
         for i, row in enumerate(lifters):
             row[placeidx] = str(i+1)
 
+    # Mark Guest entries.
+    for row in csv.rows:
+        div = row[csv.index('Division')]
+        if '-G' in div and row[totalidx]:
+            row[placeidx] = 'G'
+
     with open(filename, 'w') as fd:
         csv.write(fd)
         

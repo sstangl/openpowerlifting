@@ -1,7 +1,7 @@
 //! Defines the `Event` field for the `entries` table.
 
 use serde;
-use serde::de::{self, Visitor, Deserialize};
+use serde::de::{self, Deserialize, Visitor};
 
 use std::fmt;
 use std::str::FromStr;
@@ -9,12 +9,13 @@ use std::str::FromStr;
 /// The definition of the "Event" column.
 /// An `Event` is represented as a bitfield, with
 /// one bit for each of S, B, and D.
+#[derive(Debug)]
 pub struct Event(u8);
 
 impl Event {
     const BITFLAG_SQUAT: u8 = 0b100;
     const BITFLAG_BENCH: u8 = 0b010;
-    const BITFLAG_DEADLIFT: u8  = 0b001;
+    const BITFLAG_DEADLIFT: u8 = 0b001;
 
     /// True iff the Event contains a Squat.
     #[inline]
@@ -77,7 +78,8 @@ impl<'de> Visitor<'de> for EventVisitor {
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Event, E>
-        where E: de::Error
+    where
+        E: de::Error,
     {
         // TODO: Make Event a required field.
         //if value.is_empty() {
@@ -89,7 +91,8 @@ impl<'de> Visitor<'de> for EventVisitor {
 
 impl<'de> Deserialize<'de> for Event {
     fn deserialize<D>(deserializer: D) -> Result<Event, D::Error>
-        where D: serde::Deserializer<'de>
+    where
+        D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(EventVisitor)
     }

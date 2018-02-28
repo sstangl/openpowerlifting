@@ -7,7 +7,9 @@
 
 def standardize_upper_ascii(s):
     s = s.upper()
+    s = s.replace('Ň','N')
     s = s.replace('Ö','O')
+    s = s.replace('Ã','A')
     s = s.replace('Ä','A')
     s = s.replace('Ü','U')
     s = s.replace('Ø','O')

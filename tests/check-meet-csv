@@ -8,17 +8,23 @@
 #
 # 1) All the column data is in the pre-set format.
 #
-
 import datetime
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
 import oplcsv
-import os
-import sys
 
 def redden(s):
-    return "\033[1;31m" + s + "\033[0;m"
+    if os.name != 'nt':
+        return "\033[1;31m" + s + "\033[0;m"
+    else: 
+        return s
 
 def enyellow(s):
-    return "\033[1;33m" + s + "\033[0;m"
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
+    else: 
+        return s
 
 globalFilename = ''
 havePrintedFilename = False
@@ -68,6 +74,7 @@ KnownFederations = {
     "CPU", # Canadian Powerlifting Union.
     "EPA", # English Powerlifting Association, IPF.
     "EPF",
+    "FEMEPO", # Federación Mexicana de Powerlifting A.C.
     "FESUPO", # Federacion Sudamericana de Powerlifting
     "FFForce", # Federation Francaise de Force, IPF.
     "FPO", # Finland Powerlifting Organization (IPA).
@@ -75,6 +82,7 @@ KnownFederations = {
     "GPC", # Global Powerlifting Committee.
     "GPC-GB", # British branch of the GPC.
     "GPC-AUS", # Australian branch of the GPC.
+    "GPC-NZ", # New Zealand branch of the GPC.
     "HERC", # Hercules Gym in Syracuse, NY. Run by Rheta West.
     "IDFPF", # Irish Drug-Free Powerlifting Federation.
     "IPA",
@@ -90,20 +98,24 @@ KnownFederations = {
     "NSF", # Norwegian branch of the IPF.
     "NZPF", # New Zealand Powerlifting Federation, IPF.
     "OceaniaPF", # Oceania Powerlifting Federation, IPF.
-    "ProRaw",
+    "ParaPL", # Para Powerlifting.
     "PA",
+    "ProRaw",
     "RAW", # 100% RAW Federation (drug-tested).
     "RAWU", # Raw United Federation
     "RPS",
     "RUPC", # Raw Unity.
     "ScottishPL", # Scottish Powerlifting, IPF.
     "SCT", # Super-Cup of Titans.
+    "SPA", #Singapore Powerlifting Alliance
     "SPF",
     "THSPA", # Texas High School, single-ply only, drug-tested.
     "UPA",
     "USAPL",
     "USPF",
     "USPA",
+    "WABDL", # World Association of Bench Pressers and Deadlifters.
+    "WDFPF", # World Drug Free Powerlifting Association
     "WelshPA", # Welsh Powerlifting Association, IPF.
     "WPC",
     "WNPF", # World Natural Powerlifting Federation.
@@ -118,6 +130,7 @@ KnownCountries = {
     "Argentina",
     "Australia",
     "Belarus",
+    "Belgium",
     "Brazil",
     "Britain", # TODO: This is a placeholder until we have more data, probably.
     "Canada",
@@ -142,6 +155,7 @@ KnownCountries = {
     "Kazakhstan",
     "Luxembourg",
     "Malaysia",
+    "Mexico",
     "Netherlands",
     "New Caledonia",
     "New Zealand",
@@ -185,6 +199,11 @@ KnownStates = {
         "KA", "KL", "MP", "MH", "MN", "ML", "MZ", "NL", "OR", "PB", "RJ",
         "SK", "TN", "TR", "UK", "UP", "WB", "AN", "CH", "DH", "DD", "DL",
         "LD", "PY"
+    },
+    "Mexico": {
+        "AG", "BC", "BS", "CM", "CS", "CH", "CO", "CL", "DF", "DG", "GT",
+        "GR", "HG", "JA", "EM", "MI", "MO", "NA", "NL", "OA", "PU", "QT",
+        "QR", "SL", "SI", "SO", "TB", "TM", "TL", "VE", "YU", "ZA"
     },
     "New Zealand": {
         "NTL", "AKL", "WKO", "BOP", "GIS", "HKB", "TKI", "MWT", "WGN",
@@ -339,6 +358,7 @@ if __name__ == '__main__':
 
                 if not 'entries.csv' in files:
                     perror('Missing entries.csv')
+
 
     if hitError:
         sys.exit(1)

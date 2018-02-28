@@ -1,0 +1,97 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+
+$background-color: #040404;
+$hover-color: #444444;
+$alt-color: #111111;
+
+$default-color: #EDF2F4;
+$primary-color: #FB3640;
+
+$control-border-color: #333333;
+$control-background-color: #3E4042;
+
+$topbar-height: 82px;
+
+// Definitions for media queries.
+$mobile-cutoff: 600px;
+
+@import "header";
+@import "tables";
+@import "controls";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $background-color;
+  color: $default-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+  color: $default-color;
+}
+
+.flexbox {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+}
+
+#oplurl {
+  color: $primary-color;
+}
+
+div.topbar {
+  position: fixed;
+  width: 100%;
+  height: $topbar-height;
+}
+
+div.content {
+  padding-top: $topbar-height;
+}
+
+div.text-content {
+  padding: $topbar-height 20px 20px 20px;
+  max-width: 800px;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.downloadbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.downloaditem {
+  border: 1px;
+  border-color: lime;
+  border-style: solid;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.fa-resize {
+  font-size: 16px;
+}
+
+.instagram {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+// This is for informational text at the bottom of the screen
+// on some pages. It can probably be removed.
+.info {
+  font-size: 10pt;
+  padding: 5px 20px 5px 20px;
+}

@@ -1,0 +1,46 @@
+{
+	"units": {
+		"lbs": "lbs",
+		"kg": "kg"
+	},
+	"equipment": {
+		"raw": "Raw",
+		"wraps": "Wraps",
+		"single": "Single",
+		"multi": "Multi",
+		"straps": "Straps"
+	},
+	"sex": {
+		"m": "M",
+		"f": "F"
+	},
+	"header": {
+		"rankings": "Rankings",
+		"meets": "Meets",
+		"data": "Data",
+		"faq": "FAQ",
+		"contact": "Contact",
+		"supportus": "Support Us"
+	},
+	"columns": {
+		"place": "Place",
+		"formulaplace": "Formula Place",
+		"liftername": "Name",
+		"federation": "Fed",
+		"date": "Date",
+		"location": "Location",
+		"meetname": "Meet Name",
+		"division": "Division",
+		"sex": "Sex",
+		"age": "Age",
+		"equipment": "Equip",
+		"weightclass": "Class",
+		"bodyweight": "Weight",
+		"squat": "Squat",
+		"bench": "Bench",
+		"deadlift": "Deadlift",
+		"total": "Total",
+		"wilks": "Wilks"
+	},
+	"search": "Search"
+}

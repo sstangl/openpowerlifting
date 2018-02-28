@@ -1,0 +1,46 @@
+{
+	"units": {
+		"lbs": "libras",
+		"kg": "kg"
+	},
+	"equipment": {
+		"raw": "Raw",
+		"wraps": "Wraps",
+		"single": "Single",
+		"multi": "Multi",
+		"straps": "Straps"
+	},
+	"sex": {
+		"m": "M",
+		"f": "F"
+	},
+	"header": {
+		"rankings": "Posiciones",
+		"meets": "Competencias",
+		"data": "Datos",
+		"faq": "Preguntas y Respuestas",
+		"contact": "Contáctenos",
+		"supportus": "Apóyenos"
+	},
+	"columns": {
+		"place": "Posición",
+		"formulaplace": "Formula Place",
+		"liftername": "Nombre",
+		"federation": "Federación",
+		"date": "Fecha",
+		"location": "Lugar",
+		"meetname": "Nombre de la Competencia",
+		"division": "División",
+		"sex": "Sexo",
+		"age": "Años",
+		"equipment": "Equip",
+		"weightclass": "Clase",
+		"bodyweight": "Peso",
+		"squat": "Sentadilla",
+		"bench": "Banca",
+		"deadlift": "Peso muerto",
+		"total": "Total",
+		"wilks": "Wilks"
+	},
+	"search": "Búsqueda"
+}
