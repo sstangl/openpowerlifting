@@ -15,11 +15,11 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg
 2,Ivar Hellerud Alf,1969,NOR,90.6,210,215,220,220,220,93,Masters 1,B,M,Single-ply
 3,Tomy Rabineau,1973,FRA,91.6,210,215,-220,215,215,93,Masters 1,B,M,Single-ply
 4,Attila Barsony,1966,HUN,88.55,210,-217.5,-220,210,210,93,Masters 1,B,M,Single-ply
-5,Bo Jensen Henrik,1967,DEN,91.65,180,190,-195,190,190,93,Masters 1,B,M,Single-ply
+5,Henrik Bo Jensen,1967,DEN,91.65,180,190,-195,190,190,93,Masters 1,B,M,Single-ply
 DQ,Grzegorz Nocek,1973,POL,88.5,-252.5,-252.5,-252.5,,,93,Masters 1,B,M,Single-ply
 DQ,Petteri Laurikainen,1969,FIN,90.65,-235,-235,-235,,,93,Masters 1,B,M,Single-ply
 DQ,Robert Dawidowicz,1972,SWE,92.5,-215,-215,-217.5,,,93,Masters 1,B,M,Single-ply
-1,Arild Krakenes,1968,NOR,104.8,247.5,-260,-260,247.5,247.5,105,Masters 1,B,M,Single-ply
+1,Arild Kråkenes,1968,NOR,104.8,247.5,-260,-260,247.5,247.5,105,Masters 1,B,M,Single-ply
 2,Juha Pohjonen,1966,FIN,104.55,230,245,-250,245,245,105,Masters 1,B,M,Single-ply
 3,Gilbert Bier,1970,FRA,104.15,-242.5,242.5,-247.5,242.5,242.5,105,Masters 1,B,M,Single-ply
 4,Balazs Szabo,1969,HUN,100.75,210,-215,-215,210,210,105,Masters 1,B,M,Single-ply
@@ -32,10 +32,10 @@ DQ,Khaled Ghazal,1972,CZE,102.6,-220,-220,-230,,,105,Masters 1,B,M,Single-ply
 5,Petr Lahoda,1970,CZE,117.75,240,255,-272.5,255,255,120,Masters 1,B,M,Single-ply
 DQ,Mikael Jaldefors,1966,SWE,117.5,-282.5,-282.5,-282.5,,,120,Masters 1,B,M,Single-ply
 DQ,Conny Blomgren,1968,SWE,118.3,-280,-280,-280,,,120,Masters 1,B,M,Single-ply
-1,Jaroslav Soukal,1972,CZE,152.5,280,292.5,300,300,300,120+,Masters 1,B,M,Single-ply
+1,Jaroslav Šoukal,1972,CZE,152.5,280,292.5,300,300,300,120+,Masters 1,B,M,Single-ply
 2,Charles Duval,1972,FRA,128.5,-280,280,282.5,282.5,282.5,120+,Masters 1,B,M,Single-ply
 3,Vitaliy Morozevich,1966,RUS,190.5,-282.5,-282.5,282.5,282.5,282.5,120+,Masters 1,B,M,Single-ply
-4,Georg Oksendal,1973,NOR,126.6,265,270,-280,270,270,120+,Masters 1,B,M,Single-ply
+4,Georg Øksendal,1973,NOR,126.6,265,270,-280,270,270,120+,Masters 1,B,M,Single-ply
 5,Robert Blom,1966,SWE,123.6,252.5,-265,-270,252.5,252.5,120+,Masters 1,B,M,Single-ply
 6,Dominik Wieslaw,1965,POL,128.8,235,242.5,250,250,250,120+,Masters 1,B,M,Single-ply
 7,Renaud Mathon,1969,FRA,133.1,240,-260,-267.5,240,240,120+,Masters 1,B,M,Single-ply
@@ -43,7 +43,7 @@ DQ,Dariusz Wdowinski,1965,POL,138,-280,-280,-285,,,120+,Masters 1,B,M,Single-ply
 1,Henryk Hintzke,1957,POL,58.5,102.5,107.5,-110,107.5,107.5,59,Masters 2,B,M,Single-ply
 2,Alexander Moiseev,1954,BLR,57.8,95,-102.5,-110,95,95,59,Masters 2,B,M,Single-ply
 1,Karsten Gelhar,1957,GER,65.75,-92.5,92.5,107.5,107.5,107.5,66,Masters 2,B,M,Single-ply
-2,Birger Sundstol,1954,NOR,64.75,90,100,105,105,105,66,Masters 2,B,M,Single-ply
+2,Birger Sundstøl,1954,NOR,64.75,90,100,105,105,105,66,Masters 2,B,M,Single-ply
 1,Charles Smith,1960,NED,67.65,160,165,172.5,172.5,172.5,74,Masters 2,B,M,Single-ply
 2,Pekka Kovalainen,1961,FIN,72.7,170,172.5,-175,172.5,172.5,74,Masters 2,B,M,Single-ply
 3,Eric Verhaege,1963,FRA,73.1,155,160,-167.5,160,160,74,Masters 2,B,M,Single-ply
@@ -139,7 +139,7 @@ DQ,Dainis Reinholds,1951,LAT,120.35,-220,-220,-220,,,120+,Masters 3,B,M,Single-p
 1,Regina Haas,1962,GER,71,120,125,-130,125,125,72,Masters 2,B,F,Single-ply
 2,Evelyne Herbin,1956,FRA,66.7,90,95,-102.5,95,95,72,Masters 2,B,F,Single-ply
 3,Aline Leroy,1962,FRA,67.95,75,85,-97.5,85,85,72,Masters 2,B,F,Single-ply
-1,Hana Takacova,1954,CZE,83.4,130,137.5,142.5,142.5,142.5,84,Masters 2,B,F,Single-ply
+1,Hana Takáčová,1954,CZE,83.4,130,137.5,142.5,142.5,142.5,84,Masters 2,B,F,Single-ply
 2,Asa Halvarsson,1961,SWE,76.55,102.5,107.5,110,110,110,84,Masters 2,B,F,Single-ply
 3,Eva Speth,1954,GER,78.65,102.5,107.5,-110,107.5,107.5,84,Masters 2,B,F,Single-ply
 1,Merja Mynttinen,1958,FIN,94.4,130,135,141,141,141,84+,Masters 2,B,F,Single-ply

@@ -20,7 +20,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg
 8,Christophe Gauthier,1964,FRA,82.05,190,-195,-195,190,190,82.5,Masters 1,B,M,Single-ply
 9,Andrew Howard,1969,GBR,81.1,180,-190,-190,180,180,82.5,Masters 1,B,M,Single-ply
 DQ,Jukka Saunamaki,1961,SWE,82,-185,-185,-185,,,82.5,Masters 1,B,M,Single-ply
-1,Jiri Kati,1965,CZE,89.35,230,-240,-240,230,230,90,Masters 1,B,M,Single-ply
+1,Jiří Kati,1965,CZE,89.35,230,-240,-240,230,230,90,Masters 1,B,M,Single-ply
 2,Miroslav Paukert,1963,CZE,89.75,215,222.5,-232.5,222.5,222.5,90,Masters 1,B,M,Single-ply
 3,Frans Van Der Putten,1962,NED,89.1,220,-225,-230,220,220,90,Masters 1,B,M,Single-ply
 4,Tony Skalare,1966,SWE,88.7,175,-180,180,180,180,90,Masters 1,B,M,Single-ply
@@ -55,7 +55,7 @@ DQ,Jan Westergaard,1966,DEN,121.05,-192.5,-192.5,,,,125,Masters 1,B,M,Single-ply
 DQ,Rene Hamers,1968,NED,155.8,-225,-225,-230,,,125+,Masters 1,B,M,Single-ply
 1,Alexander Moiseev,1954,BLR,56,85,95,100,100,100,56,Masters 2,B,M,Single-ply
 1,Seppo Flink,1953,FIN,59.6,100,102.5,105,105,105,60,Masters 2,B,M,Single-ply
-2,Birger Sundstol,1954,NOR,59.35,90,-100,102.5,102.5,102.5,60,Masters 2,B,M,Single-ply
+2,Birger Sundstøl,1954,NOR,59.35,90,-100,102.5,102.5,102.5,60,Masters 2,B,M,Single-ply
 1,Peter Muigg,1958,AUT,67,142.5,-147.5,147.5,147.5,147.5,67.5,Masters 2,B,M,Single-ply
 2,Karsten Gelhar,1957,GER,67.3,-140,142.5,145,145,145,67.5,Masters 2,B,M,Single-ply
 3,Erkki Rautiainen,1956,FIN,66.85,105,115,125,125,125,67.5,Masters 2,B,M,Single-ply
@@ -99,7 +99,7 @@ DQ,Kari Alakorpi,1959,FIN,131.3,-215,-215,-215,,,125+,Masters 2,B,M,Single-ply
 2,Dieter Schuck,1948,GER,67.35,122.5,127.5,-130,127.5,127.5,67.5,Masters 3,B,M,Single-ply
 3,Heimo Torma,1950,FIN,67,105,112.5,-117.5,112.5,112.5,67.5,Masters 3,B,M,Single-ply
 1,Alexander Lee,1942,GBR,74.8,150,-155,155,155,155,75,Masters 3,B,M,Single-ply
-2,Joergen Joergensen Hans,1944,DEN,73.3,-150,150,-152.5,150,150,75,Masters 3,B,M,Single-ply
+2,Hans Joergen Joergensen,1944,DEN,73.3,-150,150,-152.5,150,150,75,Masters 3,B,M,Single-ply
 3,Jacques Bette,1950,FRA,74.25,145,-152.5,-152.5,145,145,75,Masters 3,B,M,Single-ply
 4,Sergey Nikiforov,1947,RUS,74.55,-140,-140,140,140,140,75,Masters 3,B,M,Single-ply
 5,Karl-Heinz Spahn,1948,GER,74.65,-120,-120,120,120,120,75,Masters 3,B,M,Single-ply
@@ -120,7 +120,7 @@ DQ,Kari Alakorpi,1959,FIN,131.3,-215,-215,-215,,,125+,Masters 2,B,M,Single-ply
 DQ,Karel Achtner,1944,CZE,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Single-ply
 1,Matti Silvander,1944,FIN,99.25,180,190,-200,190,190,100,Masters 3,B,M,Single-ply
 2,Gunter Wittkowski,1940,GER,90.9,155,165,167.5,167.5,167.5,100,Masters 3,B,M,Single-ply
-3,Jiri Hornik,1948,CZE,97.35,-160,-160,162.5,162.5,162.5,100,Masters 3,B,M,Single-ply
+3,Jiří Horník,1948,CZE,97.35,-160,-160,162.5,162.5,162.5,100,Masters 3,B,M,Single-ply
 4,Tom Collins,1946,GBR,98.1,162.5,-167.5,-167.5,162.5,162.5,100,Masters 3,B,M,Single-ply
 5,Peer Bjaaland,1942,NOR,90.4,-155,155,-162.5,155,155,100,Masters 3,B,M,Single-ply
 6,Rolf Roye,1948,GER,98.15,152.5,-160,-160,152.5,152.5,100,Masters 3,B,M,Single-ply
@@ -150,7 +150,7 @@ DQ,Karel Achtner,1944,CZE,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Single-pl
 1,Sylvie Mingot,1969,FRA,53.85,110,115,120,120,120,56,Masters 1,B,F,Single-ply
 2,Gabriela Hirner,1965,GER,54.95,95,100,-102.5,100,100,56,Masters 1,B,F,Single-ply
 3,Ann Kristin Olsen,1967,NOR,55.3,75,85,92.5,92.5,92.5,56,Masters 1,B,F,Single-ply
-1,Christine Pracella Marie,1965,FRA,57.55,110,115,120.5,120.5,120.5,60,Masters 1,B,F,Single-ply
+1,Marie Christine Pracella,1965,FRA,57.55,110,115,120.5,120.5,120.5,60,Masters 1,B,F,Single-ply
 2,Monika Schnoltzer,1961,GER,59.95,90,100,-102.5,100,100,60,Masters 1,B,F,Single-ply
 1,Isabelle Iliev,1967,FRA,61.75,110,-115,115,115,115,67.5,Masters 1,B,F,Single-ply
 2,Patricia Maciejewski,1961,FRA,65.3,97.5,102.5,105,105,105,67.5,Masters 1,B,F,Single-ply
@@ -182,7 +182,7 @@ DQ,Karel Achtner,1944,CZE,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Single-pl
 2,Martine Laurent,1951,FRA,74.1,70,75,77.5,77.5,77.5,75,Masters 2,B,F,Single-ply
 3,Maritta Jaurola,1950,FIN,71.1,65,70,-75,70,70,75,Masters 2,B,F,Single-ply
 1,Anke Beninga,1954,GER,76.9,82.5,87.5,-92.5,87.5,87.5,82.5,Masters 2,B,F,Single-ply
-1,Hana Takacova,1954,CZE,84.85,135,140,143,143,143,90,Masters 2,B,F,Single-ply
+1,Hana Takáčová,1954,CZE,84.85,135,140,143,143,143,90,Masters 2,B,F,Single-ply
 2,Pirkko Inkinen,1950,FIN,83.5,55,60,67.5,67.5,67.5,90,Masters 2,B,F,Single-ply
 1,Eva Speth,1954,GER,99.6,130,135,137.5,137.5,137.5,90+,Masters 2,B,F,Single-ply
 2,Tiiu Kimber,1948,EST,91.7,85,-87.5,-90,85,85,90+,Masters 2,B,F,Single-ply

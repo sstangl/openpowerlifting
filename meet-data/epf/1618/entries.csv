@@ -1,6 +1,6 @@
 Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
 1,Dariusz Wszola,1978,POL,58.9,175,-180,180,180,180,59,Open,B,M,Single-ply
-2,Eskil Myrvang Fredrik,1990,NOR,56.95,165,167.5,-175,167.5,167.5,59,Open,B,M,Single-ply
+2,Fredrik Eskil Myrvang,1990,NOR,56.95,165,167.5,-175,167.5,167.5,59,Open,B,M,Single-ply
 1,Yan Urusov,1989,RUS,65.95,225,232.5,-241.5,232.5,232.5,66,Open,B,M,Single-ply
 1,Renars Dronga,1988,LAT,73.4,-235,235,240,240,240,74,Open,B,M,Single-ply
 2,Arthur Mashinskiy,1987,RUS,73.5,240,-247.5,-247.5,240,240,74,Open,B,M,Single-ply
@@ -21,14 +21,14 @@ DQ,Amit Selberg,1976,SWE,73.35,-245,-245,-247.5,,,74,Open,B,M,Single-ply
 7,Zdenek Tuhacek,1986,CZE,91.45,-215,-215,215,215,215,93,Open,B,M,Single-ply
 1,Stefan Jamroz,1980,SWE,104.75,-312.5,317.5,-336.5,317.5,317.5,105,Open,B,M,Single-ply
 2,Milan Selinger,1984,CZE,104.25,262.5,270,-282.5,270,270,105,Open,B,M,Single-ply
-3,Orn Gudnason Einar,1991,ISL,104.5,230,-240,240,240,240,105,Open,B,M,Single-ply
+3,Einar Örn Guðnason,1991,ISL,104.5,230,-240,240,240,240,105,Open,B,M,Single-ply
 4,Adrian Caluseriu,1984,ROU,104.55,180,-190,200,200,200,105,Open,B,M,Single-ply
-DD,Patrick van der Putten,1980,NED,103.45,-275,-280,-292.5,,,105,Open,B,M,Single-ply
+DD,Patrick Van Der Putten,1980,NED,103.45,-275,-280,-292.5,,,105,Open,B,M,Single-ply
 1,Kevin Jaeger,1995,GER,119.95,340,-350.5,355.5,355.5,355.5,120,Open,B,M,Single-ply
 2,Sergey Selezen,1980,RUS,119.8,320,330,-340,330,330,120,Open,B,M,Single-ply
 3,Ruslan Pavlikov,1978,RUS,117.6,310,315,-340,315,315,120,Open,B,M,Single-ply
-4,Fridrich Matejik,1983,SVK,119.05,300,305,310,310,310,120,Open,B,M,Single-ply
-5,Zbynek Krejca,1974,CZE,119.1,300,-310,-310,300,300,120,Open,B,M,Single-ply
+4,Fridrich Matejík,1983,SVK,119.05,300,305,310,310,310,120,Open,B,M,Single-ply
+5,Zbyněk Krejča,1974,CZE,119.1,300,-310,-310,300,300,120,Open,B,M,Single-ply
 6,Lasse Leinonen,1973,FIN,119.35,300,-310,-317.5,300,300,120,Open,B,M,Single-ply
 7,Markus Larsson,1974,SWE,117.95,285,-300,-312.5,285,285,120,Open,B,M,Single-ply
 8,Sorin Cazacu,1973,ROU,119.5,260,272.5,280,280,280,120,Open,B,M,Single-ply
@@ -38,9 +38,9 @@ DD,Patrick van der Putten,1980,NED,103.45,-275,-280,-292.5,,,105,Open,B,M,Single
 3,Christian Wackernell,1980,AUT,150.1,320,-375,-402,320,320,120+,Open,B,M,Single-ply
 4,Kaido Leesmann,1969,EST,133.55,300,-315,-320,300,300,120+,Open,B,M,Single-ply
 DQ,Niklas Pettersson,1991,SWE,149.45,-320,-320,-350,,,120+,Open,B,M,Single-ply
-DQ,Jaroslav Soukal,1972,CZE,156.2,-345,-345,-347.5,,,120+,Open,B,M,Single-ply
-1,Ingi Gautason Aron,1995,ISL,65.9,125,-132.5,-142.5,125,125,66,Juniors,B,M,Single-ply
-1,Daudon Bakken Sebastian,1993,NOR,81.1,207.5,212.5,220,220,220,83,Juniors,B,M,Single-ply
+DQ,Jaroslav Šoukal,1972,CZE,156.2,-345,-345,-347.5,,,120+,Open,B,M,Single-ply
+1,Aron Ingi Gautason,1995,ISL,65.9,125,-132.5,-142.5,125,125,66,Juniors,B,M,Single-ply
+1,Sebastian Daudon Bakken,1993,NOR,81.1,207.5,212.5,220,220,220,83,Juniors,B,M,Single-ply
 2,Ari Normann Dagfinnur,1993,ISL,82.15,200,212.5,217.5,217.5,217.5,83,Juniors,B,M,Single-ply
 1,Anton Loeve Karl,1997,ISL,92.85,-195,195,-215,195,195,93,Juniors,B,M,Single-ply
 1,Ralf Male,1994,NOR,101.65,262.5,267.5,-272.5,267.5,267.5,105,Juniors,B,M,Single-ply
@@ -58,7 +58,7 @@ DQ,Jaroslav Soukal,1972,CZE,156.2,-345,-345,-347.5,,,120+,Open,B,M,Single-ply
 2,Anna Birgevaiya,1992,RUS,56.25,132.5,-140,140,140,140,57,Open,B,F,Single-ply
 3,Karolina Arvidson,1985,SWE,56.65,97.5,102.5,115,115,115,57,Open,B,F,Single-ply
 4,Jana Jansone,1990,LAT,55.95,85,92.5,-95,92.5,92.5,57,Open,B,F,Single-ply
-1,Fanney Hauksdottir,1992,ISL,62.55,-150,150,155,155,155,63,Open,B,F,Single-ply
+1,Fanney Hauksdóttir,1992,ISL,62.55,-150,150,155,155,155,63,Open,B,F,Single-ply
 2,Agnieszka Tuczykont,1985,POL,62.55,-127.5,127.5,-152.5,127.5,127.5,63,Open,B,F,Single-ply
 3,Ekaterina Nikolaeva,1984,RUS,61.5,-125,125,-135,125,125,63,Open,B,F,Single-ply
 1,Yulia Chistiakova,1989,RUS,71.7,-155,155,165,165,165,72,Open,B,F,Single-ply
@@ -73,9 +73,9 @@ DQ,Jaroslav Soukal,1972,CZE,156.2,-345,-345,-347.5,,,120+,Open,B,M,Single-ply
 2,Kathrine Hoås,1992,NOR,72.6,140,145,-147.5,145,145,84,Open,B,F,Single-ply
 DQ,Hulda Waage,1985,ISL,73.5,-120,-125,-125,,,84,Open,B,F,Single-ply
 DQ,Kathrine Kristensen,1987,DEN,83.85,-125,-127.5,-127.5,,,84,Open,B,F,Single-ply
-1,Brenda Van Der Meulen,1978,NED,111.65,187.5,195,202.5,202.5,202.5,84+,Open,B,F,Single-ply
+1,Brenda van der Meulen,1978,NED,111.65,187.5,195,202.5,202.5,202.5,84+,Open,B,F,Single-ply
 2,Annette Rehoff Christensen,1965,DEN,126.1,180,190,200,200,200,84+,Open,B,F,Single-ply
 DQ,Osk Steinarsdottir Ardis,1987,ISL,129.2,-170,,,,,84+,Open,B,F,Single-ply
 1,Kara Gautadottir,1996,ISL,56.1,75,80,85,85,85,57,Juniors,B,F,Single-ply
 1,Maaike De Vries,1994,NED,71.1,70,-120,120,120,120,72,Juniors,B,F,Single-ply
-1,Helene Fossbakk Kine,1994,NOR,95.25,-147.5,147.5,152.5,152.5,152.5,84+,Juniors,B,F,Single-ply
+1,Kine Helene Fossbakk,1994,NOR,95.25,-147.5,147.5,152.5,152.5,152.5,84+,Juniors,B,F,Single-ply
