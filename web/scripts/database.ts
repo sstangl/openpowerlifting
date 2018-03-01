@@ -54,29 +54,51 @@ export function db_filter(indices: number[], rowcmpfn): number[] {
 }
 
 
-export function db_sort_numeric_minfirst(indices: number[], colidx): number[] {
+export function db_sort_numeric(indices: number[], colidx: number, minFirst: boolean): number[] {
     indices.sort(function (a, b) {
         let av = Number(opldb.data[a][colidx]);
         let bv = Number(opldb.data[b][colidx]);
+
+        let extreme = minFirst ? Number.MAX_VALUE : Number.MIN_VALUE;
         if (isNaN(av))
-            av = Number.MAX_VALUE;
+            av = extreme;
         if (isNaN(bv))
-            bv = Number.MAX_VALUE;
-        return av - bv;
+            bv = extreme;
+
+        let comparison = minFirst ? (av - bv) : (bv - av);
+
+        return comparison;
     });
     return indices;
 }
 
 
-export function db_sort_numeric_maxfirst(indices: number[], colidx): number[] {
+export function db_multicol_sort_numeric(indices: number[], col1idx: number, col2idx: number, minFirst: boolean): number[] {
     indices.sort(function (a, b) {
-        let av = Number(opldb.data[a][colidx]);
-        let bv = Number(opldb.data[b][colidx]);
-        if (isNaN(av))
-            av = Number.MIN_VALUE;
-        if (isNaN(bv))
-            bv = Number.MIN_VALUE;
-        return bv - av;
+        let av1 = Number(opldb.data[a][col1idx]);
+        let bv1 = Number(opldb.data[b][col1idx]);
+
+        let av2 = Number(opldb.data[a][col2idx]);
+        let bv2 = Number(opldb.data[b][col2idx]);
+
+        let extreme = minFirst ? Number.MAX_VALUE : Number.MIN_VALUE;
+        if (isNaN(av1))
+            av1 = extreme;
+        if (isNaN(bv1))
+            bv1 = extreme;
+        if (isNaN(av2))
+            av2 = extreme;
+        if (isNaN(bv2))
+            bv2 = extreme;
+
+        // Default comparison from the single-col sort
+        let comparison = minFirst ? (av1 - bv1) : (bv1 - av1);
+
+        // If the first column is equal, compare the second
+        if (av1 === bv1)
+            comparison = minFirst ? (av2 - bv2) : (bv2 - av2);
+            
+        return comparison;
     });
     return indices;
 }
