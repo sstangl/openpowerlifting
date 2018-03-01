@@ -6,4 +6,5 @@ log = "normal"
 [production]
 address = "0.0.0.0"
 port = 80
-log = "critical"
+log = "normal"
+workers = 8

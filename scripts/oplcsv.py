@@ -7,7 +7,7 @@
 class Csv:
     def __init__(self, filename=None):
         if filename:
-            with open(filename, 'r') as fd:
+            with open(filename, 'r',encoding='utf-8') as fd:
                 self.fieldnames = fd.readline().rstrip().split(',')
                 self.rows = [x.rstrip("\r\n").split(',') for x in fd.readlines()]
         else:

@@ -5,7 +5,7 @@ WeightClassKg,Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,
 60,T1,Kevin Gaskell,59.9,105,-120,122.5,122.5,67.5,-75,-75,67.5,-145,160,-175,160,350,M,SBD,Single-ply,2
 60,T2,Justin Maile,60,205,220,227.5,227.5,100,110,115,115,197.5,210,-218.5,210,552.5,M,SBD,Single-ply,1
 60,T2,Ryan Renn,59.6,137.5,-152.5,-152.5,137.5,80,85,-90,85,177.5,190,-195,190,412.5,M,SBD,Single-ply,2
-60,T2,Jason Heagney,59.2,137.5,145,147.5,147.5,80,85,87.5,87.5,145,145,155,155,390,M,SBD,Single-ply,3
+60,T2,Jason Heagney,59.2,137.5,145,147.5,147.5,80,85,87.5,87.5,-145,145,155,155,390,M,SBD,Single-ply,3
 67.5,JR,TJ Hoerner,66.2,242.5,255,262.5,262.5,140,145,147.5,147.5,245,257.5,260,260,670,M,SBD,Single-ply,1
 67.5,JR,Jeremy Arias,64.2,227.5,242,247.5,247.5,142.5,155,162.5,162.5,240,-252.5,-252.5,240,650,M,SBD,Single-ply,2
 67.5,JR,Ari Silkey,65.6,182.5,-197.5,-197.5,182.5,135,-145,-147.5,135,182.5,195,-207.5,195,512.5,M,SBD,Single-ply,3
@@ -19,7 +19,7 @@ WeightClassKg,Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,
 67.5,T2,Clint Galvas,63.8,-147.5,147.5,-175,147.5,70,80,-85,80,147.5,170,-185,170,397.5,M,SBD,Single-ply,4
 67.5,T2,Jake Sarr,67.5,-137.5,-137.5,-137.5,,,,,,,,,,,M,SBD,Single-ply,DQ
 67.5,T2,James Rego,,,,,,,,,,,,,,,M,SBD,Single-ply,DQ
-67.5,T3,Dominic Curatolo,66.2,182.5,-195,195,195,142.5,142.5,-152.5,142.5,195,202.5,205,205,542.5,M,SBD,Single-ply,1
+67.5,T3,Dominic Curatolo,66.2,182.5,-195,195,195,-142.5,142.5,-152.5,142.5,195,202.5,205,205,542.5,M,SBD,Single-ply,1
 67.5,T3,Jesse Kempf,67.5,175,182.5,190,190,140,145,147.5,147.5,-195,195,-207.5,195,532.5,M,SBD,Single-ply,2
 67.5,T3,Albert Snipes,66.5,152.5,-165,-165,152.5,95,100,-105,100,182.5,187.5,,187.5,440,M,SBD,Single-ply,3
 67.5,T3,Kyle Kibler,66,197.5,210,-215,210,87.5,100,105,105,-200,-217.5,-217.5,,,M,SBD,Single-ply,DQ
@@ -97,7 +97,7 @@ WeightClassKg,Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,
 110,JR,Mike O'Donnell,109.8,285,-300,-300,285,180,-190,-190,180,265,,-290,265,730,M,SBD,Single-ply,2
 110,JR,Charlie Bradford,106.6,215,227.5,230,230,152.5,160,165,165,252.5,267.5,-270,267.5,662.5,M,SBD,Single-ply,3
 110,T1,Joshua Chovanec,106.2,207.5,-227.5,-250,207.5,125,150,-157.5,150,210,240,-260,240,597.5,M,SBD,Single-ply,1
-110,T2,Joel Stainbrook,108.1,220,220,-227.5,220,125,-132.5,-132.5,125,225,232.5,-257.5,232.5,577.5,M,SBD,Single-ply,1
+110,T2,Joel Stainbrook,108.1,-220,220,-227.5,220,125,-132.5,-132.5,125,225,232.5,-257.5,232.5,577.5,M,SBD,Single-ply,1
 110,T2,Chris Stoddard,108.8,185,192.5,197.5,197.5,145,155,-165,155,207.5,215,-232.5,215,567.5,M,SBD,Single-ply,2
 110,T2,Craig Everson,102.3,-197.5,-197.5,-197.5,,,,,,,,,,,M,SBD,Single-ply,DQ
 110,T3,Matt Maltby,104,240,255,265,265,-165,165,-177.5,165,227.5,242.5,-252.5,242.5,672.5,M,SBD,Single-ply,1
@@ -111,7 +111,7 @@ WeightClassKg,Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,
 125,T2,Greg Stoddard,114.7,-182.5,182.5,-190,182.5,127.5,-137.5,142.5,142.5,207.5,212.5,-215,212.5,537.5,M,SBD,Single-ply,5
 125,T2,Chris Soyka,118.5,197.5,-207.5,-217.5,197.5,147.5,-155,-155,147.5,-207.5,215,225,225,570,M,SBD,Single-ply,2
 125,T2,T.J. Nelson,122.5,205,227.5,245,245,105,115,122.5,122.5,185,-202.5,-202.5,185,552.5,M,SBD,Single-ply,4
-125,T3,Bill Gassen,111.7,285,285,-300,285,167.5,177.5,187.5,187.5,-260,260,260,260,732.5,M,SBD,Single-ply,1
+125,T3,Bill Gassen,111.7,-285,285,-300,285,167.5,177.5,187.5,187.5,-260,-260,260,260,732.5,M,SBD,Single-ply,1
 125,T3,Matt Wenning,116.3,245,265,-275,265,170,185,190,190,247.5,255,-257.5,255,710,M,SBD,Single-ply,2
 125+,JR,Christopher Nelson,126.5,300,-327.5,340,340,160,177.5,185,185,250,272.5,-297.5,272.5,797.5,M,SBD,Single-ply,1
 125+,T1,Charles Webb,,,,,,,,,,,,,,,M,SBD,Single-ply,DQ

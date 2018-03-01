@@ -61,7 +61,7 @@ probe-quick:
 	${DATADIR}/rupc/rupc-probe || true
 	${DATADIR}/scottishpl/scottishpl-probe --quick || true
 	${DATADIR}/spf/spf-probe || true
-	${DATADIR}/upa/upa-probe || true
+	${DATADIR}/upa/upa-probe --quick || true
 	${DATADIR}/usapl/usapl-probe || true
 	${DATADIR}/usapl-archive/usapl-archive-probe --quick || true
 	${DATADIR}/uspa/uspa-probe || true

@@ -1,0 +1,7 @@
+<script>
+function change_language() {
+ document.cookie="lang="+document.getElementById("langselect").value+"; path=/";
+ location.reload(true);
+}
+document.getElementById("langselect").addEventListener("change", change_language);
+</script>

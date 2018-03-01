@@ -1,13 +1,46 @@
-Name,Sex,Division,WeightClassKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Place,Event,Equipment
-Kara Brash,M,Open,59,,42.5,100,,DQ,SBD,Raw
-Marie Soffe,F,Masters 2,72,105,70,162.5,337.5,1,SBD,Raw
-Dylan Lewis,M,Open,74,170,110,240,520,1,SBD,Raw
-Tyla Watt,M,Sub-Juniors,74,160,82.5,185,427.5,1,SBD,Raw
-Taylor Blackler,M,Sub-Juniors,74,140,105,180,425,2,SBD,Raw
-Caleb Robinson,M,Open,83,150,92.5,190,432.5,1,SBD,Raw
-Ryan Stewart,M,Open,59,85,70,137.5,292.5,1,SBD,Raw
-Bruce Park,M,Masters 4,74,120,72.5,150,342.5,1,SBD,Raw
-Sean Kennedy,M,Sub-Juniors,83,130,77.5,150,357.5,1,SBD,Raw
-Chris Tavite,M,Open,93,125,70,110,305,1,SBD,Raw
-Ryan Doherty,M,Juniors,83,92.5,67.5,110,270,1,SBD,Raw
-Lucas Hall,M,Open,59,47.5,37.5,100,185,2,SBD,Raw
+Division,Sex,Equipment,Name,WeightClassKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Place
+Masters 1,F,Raw,Maxine Karl,84,105,45,115,265,SBD,1
+Masters 3,F,Raw,Lesley Procter,72,72.5,52.5,130,255,SBD,1
+Open,F,Raw,Michele Wilson,57,112.5,62.5,130,305,SBD,1
+Open,F,Raw,Elishia Mako,63,117.5,72.5,145,335,SBD,1
+Open,F,Raw,Emma Vermey,63,107.5,65,150,322.5,SBD,2
+Open,F,Raw,Nicole Stowers,72,135,75,155,365,SBD,1
+Open,F,Raw,Anna Thompson,72,117.5,67.5,172.5,357.5,SBD,2
+Open,F,Raw,Soraya Engelken,72,125,75,140,340,SBD,3
+Open,F,Raw,Amanda O'Connor,72,95,47.5,132.5,275,SBD,4
+Open,F,Raw,Amy Ferris,84,130,60,160,350,SBD,4
+Open,F,Raw,Mel Webster,84,107.5,67.5,160,335,SBD,5
+Open,F,Raw,Fiona Park,84,105,72.5,150,327.5,SBD,6
+Open,F,Raw,Ana de Joux,84,160,80,190,430,SBD,1
+Open,F,Raw,Jennie Bell,84,152.5,92.5,185,430,SBD,2
+Open,F,Raw,Julie Stechmann,84,135,77.5,140,352.5,SBD,3
+Open,F,Raw,Emily Ide,84,132.5,65,130,327.5,SBD,7
+Juniors,F,Raw,Orla Harris,57,117.5,72.5,105,295,SBD,1
+Juniors,F,Raw,Ciara Corrigan,63,115,75,135,325,SBD,1
+Juniors,F,Raw,Xanthe Musgrave,84,115,75,180,370,SBD,1
+Masters 1,M,Raw,Rene de Joux,83,145,87.5,202.5,435,SBD,1
+Masters 1,M,Raw,Jason Boyce,105,205,150,240,595,SBD,1
+Masters 2,M,Raw,Neil Andrews,83,,100,210,,SBD,DQ
+Masters 2,M,Raw,Mark Fields,120,210,135,195,540,SBD,1
+Open,M,Raw,Ryan Stewart,59,87.5,75,137.5,300,SBD,1
+Open,M,Raw,Harinder Bhandal,66,82.5,62.5,107.5,252.5,SBD,1
+Open,M,Raw,Joel Larter,74,202.5,122.5,235,560,SBD,1
+Open,M,Raw,Dylan Lewis,74,175,110,230,515,SBD,2
+Open,M,Raw,David Cooper,83,185,117.5,257.5,560,SBD,1
+Open,M,Raw,Jonathan Christie,83,182.5,115,217.5,515,SBD,2
+Open,M,Raw,Mark Vanner,93,240,130,240,610,SBD,1
+Open,M,Raw,Ryan Lester,93,212.5,102.5,225,540,SBD,2
+Open,M,Raw,Ken McLean,93,187.5,122.5,210,520,SBD,3
+Open,M,Raw,Chris Tavite,93,130,75,117.5,322.5,SBD,4
+Open,M,Raw,Shane Drozdzak,120,225,145,250,620,SBD,2
+Open,M,Raw,James Mathieson,120,272.5,140,257.5,670,SBD,1
+Sub-Juniors,M,Raw,Liam Davidson,74,160,102.5,190,452.5,SBD,1
+Sub-Juniors,M,Raw,Sean Ford,83,142.5,85,147.5,375,SBD,1
+Sub-Juniors,M,Raw,Tyla Watt,83,,100,,,SBD,DQ
+Juniors,M,Raw,Jayden Pinfold,74,140,122.5,185,447.5,SBD,1
+Juniors,M,Raw,Doug Roake,83,185,92.5,240,517.5,SBD,1
+Juniors,M,Raw,Jacob Hoekstra,83,137.5,82.5,200,420,SBD,2
+Juniors,M,Raw,Bradley Caffell,83,117.5,75,147.5,340,SBD,3
+Juniors,M,Raw,Ryan Doherty,83,100,75,120,295,SBD,4
+Juniors,M,Raw,Tom Hart,93,245,130,260,635,SBD,1
+Open,M,Single-ply,Sam Coleman,93,230,192.5,275,697.5,SBD,1

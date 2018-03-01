@@ -99,7 +99,7 @@ Staff is expected to communicate and coordinate with each other about who is pos
 4. Posting should follow the "Posting Frequency" guidelines mentioned above.
 
 ## Post Approval/Disclaimer
-All posts should be posted in the #facebook-approvals channel for approval prior to posting. Either @sstangl or @trystanoakley will approve of the post or ask for changes. If changes are requested, please re-submit the new version for approval, even if it's something that should obviously be approved. All posts and graphics should include the following disclaimer: "As fetched on YEAR-MONTH-DAY. New and old meets are being added every day -- if you see an error or omission, please contact us!", the date on the disclaimer should be the previous date. 
+All posts should be posted in the #facebook-approvals channel for approval prior to posting. Either @sstangl or @trystanoakley will approve of the post or ask for changes. If changes are requested, please re-submit the new version for approval, even if it's something that should obviously be approved. All posts and graphics should include the following disclaimer: "As fetched on YEAR-MONTH-DAY. New and old meets are being added every day -- if you see an error or omission, please contact us!", the date on the disclaimer should be the date the data being used was collected from the website. 
 
 ## Summary
 

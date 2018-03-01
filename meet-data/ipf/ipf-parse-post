@@ -7,13 +7,51 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
-# Use IPF-specific knowledge to parse results.csv into entries.csv.
-${SCRIPTDIR}/ipf-standardize-csv results.csv > entries.csv
 
-# Show any warnings.
-${REPOTESTDIR}/check-entries-csv entries.csv
+n=`ls  | grep 'results.*\.csv' | wc -l`
 
-# Copy the template to the current directory for filling in.
-cp ${SCRIPTDIR}/../meet.template meet.csv
+r_nums=($(seq 1 1 ${n}))
+if [ ${n} == 1 ];then #Result files are only numbered if there is more than one
+	r_nums[0]=''
+fi
+
+process_success=true
+for (( ii=1; ii<=${n};ii++))
+do
+	${SCRIPTDIR}/ipf-standardize-csv "results"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
+	#Check if ipf-standardize-csv was able to deal with this file
+	if cmp -s "results"${r_nums[$((ii-1))]}".csv" "entries"${r_nums[$((ii-1))]}".csv" ; then
+		echo "Error: ipf-standardize-csv does not know how to handle this format. Leaving entries"${r_nums[$((ii-1))]}".csv unstandardized."
+		process_success=false
+	fi
+done
+
+entries=($(seq 1 1 ${n}))
+entries=("${entries[@]/%/.csv}")
+entries=("${entries[@]/#/entries}")
+
+#Only merge entry files if they have all processed correctly
+if [ ${n} -gt 1 ] && [ "$process_success" == true ];then
+	${REPOSCRIPTDIR}/csv-cat ${entries[@]} > entries.csv
+	rm ${entries[@]}
+fi
+
+
+results=( "${r_nums[@]/%/.csv}" )
+results=( "${results[@]/#/results}" )
+
+# Experimental - generate meet.csv from the results file
+${SCRIPTDIR}/create-meet-csv ${results[@]} > meet.csv
+
+#Check if create-meet-csv was able to deal with this file
+if cmp -s meet.csv ${SCRIPTDIR}/../meet.template ; then
+   echo "Error: create-meet-csv does not know how to handle this format. Leaving meet.csv unfilled."
+fi
+
+#Checking this after create-meet-csv so we still have a meet file even with errors
+if [ "$process_success" == true ];then
+	# Show any warnings.
+	${REPOTESTDIR}/check-entries-csv entries.csv
+fi
 
 echo "Done! Don't forget about meet.csv!"

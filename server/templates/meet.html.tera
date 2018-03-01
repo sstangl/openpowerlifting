@@ -1,0 +1,69 @@
+{% extends "desktop-base" %}
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-left">
+      <span id="meet">{{meet.federation}} &nbsp;/&nbsp; {{meet.date}} &nbsp;/&nbsp; {{meet.name}}</span>
+      <select id="displaytype">
+        <option value="wilks">By Wilks</option>
+	<option value="division">By Division</option>
+      </select>
+    </div>
+    <div id="controls-right">
+      <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
+      {% include "weightunits" %}
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="content">
+    <table>
+      <thead>
+        <th>{{strings.columns.formulaplace}}</th>
+        <th>{{strings.columns.liftername}}</th>
+        <th>{{strings.columns.sex}}</th>
+        <th>{{strings.columns.age}}</th>
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        <th>{{strings.columns.squat}}</th>
+        <th>{{strings.columns.bench}}</th>
+        <th>{{strings.columns.deadlift}}</th>
+        <th>{{strings.columns.total}}</th>
+        <th>{{strings.columns.wilks}}</th>
+      </thead>
+      {% for this in rows %}
+        <tr>
+          <td>{{this.place}}</td>
+          <td>
+            <a href="/u/{{this.username}}">{{this.name}}</a>{% if this.instagram %}<a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}
+          </td>
+          <td>{{this.sex}}</td>
+          <td>{{this.age}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclasskg}}</td>
+          <td>{{this.bodyweightkg}}</td>
+          <td>{{this.squatkg}}</td>
+          <td>{{this.benchkg}}</td>
+          <td>{{this.deadliftkg}}</td>
+          <td>{{this.totalkg}}</td>
+          <td>{{this.wilks}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock body %}
+
+{% block custom_javascript %}
+  {% include "langselect-script" %}
+  {% include "weightunits-script" %}
+{% endblock custom_javascript %}

@@ -1,159 +1,174 @@
 //! An in-memory data store for OpenPowerlifting data.
 //!
 //! Because our data is read-only at runtime, we can lay out data structures
-//! better than a "real" database like SQLite3 or PostreSQL. Additionally,
+//! better than a "real" database like SQLite3 or PostgreSQL. Additionally,
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
 use csv;
 
 use std::error::Error;
 use std::mem;
+use std::str::FromStr;
 
 pub mod fields;
 use self::fields::*;
 
+mod filter;
+pub use self::filter::Filter;
+
+mod filter_cache;
+use self::filter_cache::FilterCache;
+pub use self::filter_cache::CachedFilter;
+
+#[derive(Copy, Clone, Debug, Serialize)]
+pub enum WeightUnits {
+    Kg,
+    Lbs,
+}
+
+impl FromStr for WeightUnits {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "kg" => Ok(WeightUnits::Kg),
+            "lbs" => Ok(WeightUnits::Lbs),
+            _ => Err(()),
+        }
+    }
+}
+
 /// The definition of a Lifter in the database.
-#[derive(Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Lifter {
-    #[serde(rename = "Name")]
+    #[serde(rename(deserialize = "Name"))]
     pub name: String,
-    #[serde(rename = "Username")]
+    #[serde(rename(deserialize = "Username"))]
     pub username: String,
-    #[serde(rename = "Instagram")]
+    #[serde(rename(deserialize = "Instagram"))]
     pub instagram: Option<String>,
 }
 
 /// The definition of a Meet in the database.
 #[derive(Deserialize)]
 pub struct Meet {
-    #[serde(rename = "MeetPath")]
+    #[serde(rename(deserialize = "MeetPath"))]
     pub path: String,
-    #[serde(rename = "Federation")]
+    #[serde(rename(deserialize = "Federation"))]
     pub federation: Federation,
-    #[serde(rename = "Date")]
+    #[serde(rename(deserialize = "Date"))]
     pub date: Date,
-    #[serde(rename = "MeetCountry")]
+    #[serde(rename(deserialize = "MeetCountry"))]
     pub country: String,
-    #[serde(rename = "MeetState")]
+    #[serde(rename(deserialize = "MeetState"))]
     pub state: Option<String>,
-    #[serde(rename = "MeetTown")]
+    #[serde(rename(deserialize = "MeetTown"))]
     pub town: Option<String>,
-    #[serde(rename = "MeetName")]
+    #[serde(rename(deserialize = "MeetName"))]
     pub name: String,
 }
 
 /// The definition of an Entry in the database.
-#[derive(Deserialize)]
+#[derive(Debug, Deserialize)]
 pub struct Entry {
-    #[serde(rename = "MeetID")]
+    #[serde(rename(deserialize = "MeetID"))]
     pub meet_id: u32,
-    #[serde(rename = "LifterID")]
+    #[serde(rename(deserialize = "LifterID"))]
     pub lifter_id: u32,
-    #[serde(rename = "Sex")]
+    #[serde(rename(deserialize = "Sex"))]
     pub sex: Sex,
-    #[serde(rename = "Event")]
+    #[serde(rename(deserialize = "Event"))]
     pub event: Event,
-    #[serde(rename = "Equipment")]
+    #[serde(rename(deserialize = "Equipment"))]
     pub equipment: Equipment,
-    #[serde(rename = "Age")]
+    #[serde(rename(deserialize = "Age"))]
     pub age: Age,
-    #[serde(rename = "Division")]
+    #[serde(rename(deserialize = "Division"))]
     pub division: Option<String>,
-    #[serde(rename = "BodyweightKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bodyweightkg: f32,
-    #[serde(rename = "WeightClassKg")]
+    #[serde(rename(deserialize = "BodyweightKg"))]
+    pub bodyweightkg: WeightKg,
+    #[serde(rename(deserialize = "WeightClassKg"))]
     pub weightclasskg: WeightClassKg,
-    #[serde(rename = "Squat1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat1kg: f32,
-    #[serde(rename = "Squat2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat2kg: f32,
-    #[serde(rename = "Squat3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat3kg: f32,
-    #[serde(rename = "Squat4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub squat4kg: f32,
-    #[serde(rename = "BestSquatKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestsquatkg: f32,
-    #[serde(rename = "Bench1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench1kg: f32,
-    #[serde(rename = "Bench2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench2kg: f32,
-    #[serde(rename = "Bench3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench3kg: f32,
-    #[serde(rename = "Bench4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bench4kg: f32,
-    #[serde(rename = "BestBenchKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestbenchkg: f32,
-    #[serde(rename = "Deadlift1Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift1kg: f32,
-    #[serde(rename = "Deadlift2Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift2kg: f32,
-    #[serde(rename = "Deadlift3Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift3kg: f32,
-    #[serde(rename = "Deadlift4Kg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub deadlift4kg: f32,
-    #[serde(rename = "BestDeadliftKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub bestdeadliftkg: f32,
-    #[serde(rename = "TotalKg")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub totalkg: f32,
-    #[serde(rename = "Place")]
+    #[serde(rename(deserialize = "Squat1Kg"))]
+    pub squat1kg: WeightKg,
+    #[serde(rename(deserialize = "Squat2Kg"))]
+    pub squat2kg: WeightKg,
+    #[serde(rename(deserialize = "Squat3Kg"))]
+    pub squat3kg: WeightKg,
+    #[serde(rename(deserialize = "Squat4Kg"))]
+    pub squat4kg: WeightKg,
+    #[serde(rename(deserialize = "BestSquatKg"))]
+    pub bestsquatkg: WeightKg,
+    #[serde(rename(deserialize = "Bench1Kg"))]
+    pub bench1kg: WeightKg,
+    #[serde(rename(deserialize = "Bench2Kg"))]
+    pub bench2kg: WeightKg,
+    #[serde(rename(deserialize = "Bench3Kg"))]
+    pub bench3kg: WeightKg,
+    #[serde(rename(deserialize = "Bench4Kg"))]
+    pub bench4kg: WeightKg,
+    #[serde(rename(deserialize = "BestBenchKg"))]
+    pub bestbenchkg: WeightKg,
+    #[serde(rename(deserialize = "Deadlift1Kg"))]
+    pub deadlift1kg: WeightKg,
+    #[serde(rename(deserialize = "Deadlift2Kg"))]
+    pub deadlift2kg: WeightKg,
+    #[serde(rename(deserialize = "Deadlift3Kg"))]
+    pub deadlift3kg: WeightKg,
+    #[serde(rename(deserialize = "Deadlift4Kg"))]
+    pub deadlift4kg: WeightKg,
+    #[serde(rename(deserialize = "BestDeadliftKg"))]
+    pub bestdeadliftkg: WeightKg,
+    #[serde(rename(deserialize = "TotalKg"))]
+    pub totalkg: WeightKg,
+    #[serde(rename(deserialize = "Place"))]
     pub place: Place,
-    #[serde(rename = "Wilks")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub wilks: f32,
-    #[serde(rename = "McCulloch")]
-    #[serde(deserialize_with = "deserialize_f32_with_default")]
-    pub mcculloch: f32,
+    #[serde(rename(deserialize = "Wilks"))]
+    pub wilks: Points,
+    #[serde(rename(deserialize = "McCulloch"))]
+    pub mcculloch: Points,
+}
+
+impl Entry {
+    /// Returns max(bestsquatkg, squat4kg).
+    pub fn highest_squatkg(&self) -> WeightKg {
+        self.bestsquatkg.max(self.squat4kg)
+    }
+
+    /// Returns max(bestbenchkg, bench4kg).
+    pub fn highest_benchkg(&self) -> WeightKg {
+        self.bestbenchkg.max(self.bench4kg)
+    }
+
+    /// Returns max(bestdeadliftkg, deadlift4kg).
+    pub fn highest_deadliftkg(&self) -> WeightKg {
+        self.bestdeadliftkg.max(self.deadlift4kg)
+    }
 }
 
 /// The collection of data stores that constitute the complete dataset.
+///
+/// The data structure is immutable. To prevent the owner from modifying
+/// owned data, the struct contents are private and accessed through getters.
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
+    ///
     /// The order of the lifters is arbitrary.
     lifters: Vec<Lifter>,
 
     /// The MeetID is implicit in the backing vector, as the index.
+    ///
     /// The order of the meets is arbitrary.
     meets: Vec<Meet>,
 
     /// The EntryID is implicit in the backing vector, as the index.
+    ///
     /// The order of the entries is by increasing lifter_id.
     /// Within the entries of a single lifter_id, the order is arbitrary.
     entries: Vec<Entry>,
-}
 
-/// A list of indices into the OplDB's vector of Entries.
-///
-/// Accessing the Entry vector through indices allows effective
-/// creation of sublists. Union and Intersection operations allow
-/// for simple and extremely efficient construction of complex views.
-///
-/// The indices are in the same sort order as the Vec<Entry> list,
-/// by lifter_id.
-pub struct EntryFilter<'a> {
-    /// The index list should not outlive the database itself.
-    opldb: &'a OplDb,
-
-    /// A list of indices into the OplDb's Entry vector,
-    /// sorted and curated in some specific order.
-    // TODO: Make non-pub.
-    pub indices: Vec<u32>,
+    /// The cache of filters on the vectors.
+    filter_cache: FilterCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -204,15 +219,28 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
 }
 
 impl OplDb {
-    pub fn from_csv(lifters_csv: &str, meets_csv: &str, entries_csv: &str)
-        -> Result<OplDb, Box<Error>>
-    {
+    /// Constructs the `OplDb` from CSV files produces by the project
+    /// build script.
+    pub fn from_csv(
+        lifters_csv: &str,
+        meets_csv: &str,
+        entries_csv: &str,
+    ) -> Result<OplDb, Box<Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
-        Ok(OplDb { lifters, meets, entries })
+
+        let filter_cache = FilterCache::new(&meets, &entries);
+
+        Ok(OplDb {
+            lifters,
+            meets,
+            entries,
+            filter_cache,
+        })
     }
 
+    /// Returns the size of owned data structures.
     pub fn size_bytes(&self) -> usize {
         // Size of owned vectors.
         let lifters_size = mem::size_of::<Lifter>() * self.lifters.len();
@@ -222,14 +250,14 @@ impl OplDb {
 
         // Size of owned Strings in those objects.
         let mut owned_strings: usize = 0;
-        for ref lifter in &self.lifters {
+        for lifter in &self.lifters {
             owned_strings += mem::size_of::<String>() + lifter.name.len();
             owned_strings += mem::size_of::<String>() + lifter.username.len();
             if let Some(ref instagram) = lifter.instagram {
                 owned_strings += mem::size_of::<String>() + instagram.len();
             }
         }
-        for ref meet in &self.meets {
+        for meet in &self.meets {
             owned_strings += mem::size_of::<String>() + meet.path.len();
             owned_strings += mem::size_of::<String>() + meet.country.len();
             if let Some(ref state) = meet.state {
@@ -240,7 +268,7 @@ impl OplDb {
             }
             owned_strings += mem::size_of::<String>() + meet.name.len();
         }
-        for ref entry in &self.entries {
+        for entry in &self.entries {
             if let Some(ref division) = entry.division {
                 owned_strings += mem::size_of::<String>() + division.len();
             }
@@ -249,28 +277,108 @@ impl OplDb {
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
+    /// Borrows the lifters vector.
+    pub fn get_lifters(&self) -> &Vec<Lifter> {
+        &self.lifters
+    }
+
+    /// Borrows the meets vector.
+    pub fn get_meets(&self) -> &Vec<Meet> {
+        &self.meets
+    }
+
+    /// Borrows the entries vector.
+    pub fn get_entries(&self) -> &Vec<Entry> {
+        &self.entries
+    }
+
+    /// Borrows a `Lifter` by index.
     pub fn get_lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
+    /// Borrows a `Meet` by index.
     pub fn get_meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
+    /// Borrows an `Entry` by index.
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }
 
-    pub fn filter_entries<F>(&self, filter: F) -> EntryFilter
-        where F: Fn(&Entry) -> bool
-    {
-        let mut vec = Vec::new();
-        for i in 0 .. self.entries.len() {
-            if filter(&self.entries[i]) {
-                vec.push(i as u32);
+    /// Borrows a cached filter.
+    pub fn get_filter(&self, c: CachedFilter) -> &Filter {
+        &self.filter_cache.from_enum(c)
+    }
+
+    /// Look up the lifter_id by username.
+    pub fn get_lifter_id(&self, username: &str) -> Option<u32> {
+        for i in 0..self.lifters.len() {
+            if self.lifters[i].username == username {
+                return Some(i as u32);
             }
         }
-        vec.shrink_to_fit();
-        EntryFilter { opldb: &self, indices: vec }
+        None
+    }
+
+    /// Look up the meet_id by MeetPath.
+    pub fn get_meet_id(&self, meetpath: &str) -> Option<u32> {
+        for i in 0..self.meets.len() {
+            if self.meets[i].path == meetpath {
+                return Some(i as u32);
+            }
+        }
+        None
+    }
+
+    /// Returns all entries with the given lifter_id.
+    ///
+    /// The vector of entries is sorted by lifter_id. This function uses binary
+    /// search followed by a bi-directional linear scan.
+    ///
+    /// Panics if the lifter_id is not found.
+    pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
+        // Perform a binary search on lifter_id.
+        let found_index = self.get_entries()
+            .binary_search_by_key(&lifter_id, |e| e.lifter_id)
+            .unwrap();
+
+        // All entries for a lifter are contiguous, so scan linearly to find the first.
+        let mut first_index = found_index;
+        for index in (0..found_index).rev() {
+            if self.get_entry(index as u32).lifter_id == lifter_id {
+                first_index = index;
+            } else {
+                break;
+            }
+        }
+
+        // Scan to find the last.
+        let mut last_index = found_index;
+        for index in found_index..self.get_entries().len() {
+            if self.get_entry(index as u32).lifter_id == lifter_id {
+                last_index = index;
+            } else {
+                break;
+            }
+        }
+        assert!(first_index <= last_index);
+
+        // Collect entries between first_index and last_index, inclusive.
+        (first_index..last_index + 1)
+            .map(|i| self.get_entry(i as u32))
+            .collect()
+    }
+
+    /// Returns all entries with the given meet_id.
+    ///
+    /// Those entries could be located anywhere in the entries vector,
+    /// so they are found using a linear scan.
+    pub fn get_entries_for_meet<'a>(&'a self, meet_id: u32) -> Vec<&'a Entry> {
+        self.get_entries()
+            .iter()
+            .filter(|&e| e.meet_id == meet_id)
+            .collect()
     }
 }

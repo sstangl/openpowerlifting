@@ -1,1 +1,0 @@
-../scripts/usernames.py

@@ -1,0 +1,106 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// Style definitions for the navigation header.
+
+/* Height of the top navigation element. */
+$header-height: 44px;
+
+#header {
+  /* Resize all items to $header-height, preventing overflow. */
+  display: flex;
+  align-items: stretch;
+
+  background-color: $background-color;
+  color: $default-color;
+
+  height: $header-height;
+  width: 100%;
+  overflow: hidden;
+}
+
+#header a {
+  /* Make the <a> behave like a <div> for easier clicking. */
+  display: flex;
+  align-items: center;
+
+  color: $default_color;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+
+  /* Keep the "Support Us" link centered. */
+  white-space: nowrap;
+}
+
+/* Hovering over a navigation link should look clickable. */
+#header a.nav__link:hover {
+  color: $primary-color;
+}
+
+/* The current page should be highlighted. */
+#header .nav__link--active {
+  color: $primary-color;
+}
+
+.siteinfo {
+  float: right;
+  margin-left: auto;
+
+  color: $primary-color;
+  font-size: 9pt;
+
+  /* Push it away from the top-right corner just a little. */
+  padding: 5px 5px 0px 0px;
+}
+
+.header-logo {
+  height: $header-height;
+}
+
+// Hide the hamburger menu by default.
+#header a.header-hamburger {
+  display: none;
+  font-size: 17px;
+}
+
+// When the screen is small, replace the header navigation links
+// with a hamburger menu.
+@media screen and (max-width: $mobile-cutoff) {
+  // Hide all the links.
+  // If the hamburger menu is clicked, JS will display them.
+  #header a {
+    display: none;
+  }
+
+  // Unhide the hamburger menu and move it to the right.
+  #header a.header-hamburger {
+    margin-left: auto;
+    display: block;
+  }
+
+  // Hide database statistics.
+  #header .siteinfo {
+    display: none;
+  }
+
+  // If the hamburger menu is clicked, expand the header
+  // so that the links can be displayed inline vertically.
+  #header.responsive {
+    display: block;
+    height: auto;
+  }
+
+  // If the hamburger menu is clicked, make sure the hamburger
+  // menu stays in the top-right corner.
+  #header.responsive a.header-hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  // If the hamburger menu is clicked, show all the links.
+  #header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

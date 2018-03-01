@@ -4,10 +4,12 @@ version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 
 [dependencies]
+accept-language = "1.1"
 csv = "1.0.0-beta.5"
 dotenv = "0.10"
 serde = "1.0"
 serde_derive = "1.0"
+serde_json = "1.0"
 rocket = "0.3.6"
 rocket_codegen = "0.3.6"
-rocket_contrib = { version = "0.3.6", features = ["handlebars_templates"] }
+rocket_contrib = { version = "0.3.6", features = ["tera_templates"] }

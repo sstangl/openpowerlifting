@@ -73,6 +73,8 @@ def getmeetlist(html):
 
         if sanction == 'KS2017-01':
             sanction = 'KS-2017-01'
+        if sanction == 'LA-2018- 02':
+            sanction = 'LA-2018-02'
 
         # Only count those rows that begin with a letter, like "CA-2016-02".
         if sanction and sanction[0].isalpha() and sanction.count('-') == 2:

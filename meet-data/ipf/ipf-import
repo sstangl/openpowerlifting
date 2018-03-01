@@ -8,7 +8,7 @@ set -e
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
 	echo "Usage: $0 dirname URL"
 	exit 1
 fi
@@ -16,41 +16,56 @@ fi
 mkdir "$1"
 cd "$1"
 
-# Download the results page.
-wget --output-document=results.html "$2"
-cp results.html results.xls
+r_nums=($(seq 1 1 $(($# -1)))) 
+if [ $# == 2 ];then #Only number the result files if there is more than one
+	r_nums[0]=''
+fi
 
-# Save the website URL for future use, since it's pretty hard to tell
-# what meets on the site are tracked and which aren't.
-echo "$2" > URL
 
-# Replace any commas in the xls file with periods.
-# Commas are used as decimal points in the European style.
-sed -i -e 's/,/\./g' results.xls
+#Process $#-1 meet files
+for (( ii=2; ii<=$# ; ii++))
+do
+	# Download the results page.
+	wget --output-document="results"${r_nums[$((ii-2))]}".html"  ${!ii}
+	cp "results"${r_nums[$((ii-2))]}".html" "results"${r_nums[$((ii-2))]}".xls"
 
-# Strikethrough HTML is used to denote failures.
-# Replace <s> with '-' and remove </s>.
-sed -i -e 's/<s>/-/g' results.xls
-sed -i -e 's/<\/s>//g' results.xls
+	# Save the website URL for future use, since it's pretty hard to tell
+	# what meets on the site are tracked and which aren't.
+	echo ${!ii}  >> URL
 
-# Use LibreOffice to automatically convert the <table> to a csv file.
-# This creates results.csv.
-libreoffice --headless --convert-to csv results.xls
-rm results.html results.xls
 
-# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
-sed -i -e 's/\xa0//g' results.csv
+	# Replace any commas in the xls file with periods.
+	# Commas are used as decimal points in the European style.
+	sed -i -e 's/,/\./g' "results"${r_nums[$((ii-2))]}".xls"
 
-# Remove redundant spacing.
-sed -i -e 's/  / /g' results.csv
-sed -i -e 's/, /,/g' results.csv
-sed -i -e 's/ ,/,/g' results.csv
+	# Strikethrough HTML is used to denote failures.
+	# Replace <s> with '-' and remove </s>.
+	sed -i -e 's/<s>/-/g' "results"${r_nums[$((ii-2))]}".xls" 
+	sed -i -e 's/<\/s>//g' "results"${r_nums[$((ii-2))]}".xls"
 
-# Failures are denoted as "X", when we just want a blank space.
-sed -i -e 's/,X,/,,/g' results.csv
+	# Use LibreOffice to automatically convert the <table> to a csv file.
+	# This creates results.csv.
+	libreoffice --headless --convert-to csv "results"${r_nums[$((ii-2))]}".xls"
 
-# Disqualifications use ascii 0x97, a long dash.
-sed -i -e 's/\x97/DQ/g' results.csv
+	rm "results"${r_nums[$((ii-2))]}".html" "results"${r_nums[$((ii-2))]}".xls"
+
+	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
+	sed -i -e 's/\xa0//g' "results"${r_nums[$((ii-2))]}".csv"
+
+	# Remove redundant spacing.
+	sed -i -e 's/  / /g' "results"${r_nums[$((ii-2))]}".csv"
+	sed -i -e 's/, /,/g' "results"${r_nums[$((ii-2))]}".csv"
+	sed -i -e 's/ ,/,/g' "results"${r_nums[$((ii-2))]}".csv"
+
+	# Failures are denoted as "X", when we just want a blank space.
+	sed -i -e 's/,X,/,,/g' "results"${r_nums[$((ii-2))]}".csv"
+
+	#Skips are sometimes denotes as "#"
+	sed -i -e 's/,#,/,,/g' "results"${r_nums[$((ii-2))]}".csv"
+
+	# Disqualifications use ascii 0x97, a long dash.
+	sed -i -e 's/\x97/DQ/g' "results"${r_nums[$((ii-2))]}".csv"	
+done
 
 # Commands after this point were extracted into a separate file
 # since they had to be re-run in case of error.
