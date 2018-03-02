@@ -3,5 +3,6 @@
   <option value="es" {% if language == "es" %}selected{% endif %}>Español</option>
   <option value="eo" {% if language == "eo" %}selected{% endif %}>Esperanto</option>
   <option value="fr" {% if language == "fr" %}selected{% endif %}>Français</option>
+  <option value="it" {% if language == "it" %}selected{% endif %}>Italiano</option>
   <option value="ru" {% if language == "ru" %}selected{% endif %}>Русский</option>
 </select>
