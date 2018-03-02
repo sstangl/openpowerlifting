@@ -48,6 +48,17 @@ impl WeightKg {
         WeightAny(f.round() as i32)
     }
 
+    /// Report as the "common name" of the weight class.
+    pub fn as_lbs_class(&self) -> WeightAny {
+        let lbs = self.as_lbs();
+        let truncated: i32 = (lbs.0 / 100) * 100;
+
+        match truncated {
+            182_00 => WeightAny(183_00),
+            _ => WeightAny(truncated),
+        }
+    }
+
     pub fn as_type(&self, unit: WeightUnits) -> WeightAny {
         match unit {
             WeightUnits::Kg => self.as_kg(),
