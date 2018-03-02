@@ -78,27 +78,28 @@ export function db_multicol_sort_numeric(indices: number[], col1idx: number, col
         let av1 = Number(opldb.data[a][col1idx]);
         let bv1 = Number(opldb.data[b][col1idx]);
 
-        let av2 = Number(opldb.data[a][col2idx]);
-        let bv2 = Number(opldb.data[b][col2idx]);
-
         let extreme = minFirst ? Number.MAX_VALUE : Number.MIN_VALUE;
         if (isNaN(av1))
             av1 = extreme;
         if (isNaN(bv1))
             bv1 = extreme;
-        if (isNaN(av2))
-            av2 = extreme;
-        if (isNaN(bv2))
-            bv2 = extreme;
 
-        // Default comparison from the single-col sort
-        let comparison = minFirst ? (av1 - bv1) : (bv1 - av1);
 
         // If the first column is equal, compare the second
-        if (av1 === bv1)
-            comparison = minFirst ? (av2 - bv2) : (bv2 - av2);
-            
-        return comparison;
+        if (av1 === bv1) {
+            let av2 = Number(opldb.data[a][col2idx]);
+            let bv2 = Number(opldb.data[b][col2idx]);
+
+            if (isNaN(av2))
+                av2 = extreme;
+            if (isNaN(bv2))
+                bv2 = extreme;
+
+            return minFirst ? (av2 - bv2) : (bv2 - av2);
+        }
+
+        // Otherwise, use default comparison from the single-col sort
+        return minFirst ? (av1 - bv1) : (bv1 - av1);
     });
     return indices;
 }
