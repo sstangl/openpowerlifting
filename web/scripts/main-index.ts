@@ -106,10 +106,12 @@ function getIndices(): number[] {
     let indices = database.db_make_indices_list();
     indices = database.db_filter(indices, filter);
 
-    if (sortAsc)
-        indices = database.db_sort_numeric_minfirst(indices, common.colidToIndex(sortCol.id));
-    else
-        indices = database.db_sort_numeric_maxfirst(indices, common.colidToIndex(sortCol.id));
+    if ("total" === sortCol.id) {
+        // Secondary sort by wilks when sorting by total
+        indices = database.db_multicol_sort_numeric(indices, common.colidToIndex(sortCol.id), common.colidToIndex("wilks"), sortAsc);
+    } else {
+        indices = database.db_sort_numeric(indices, common.colidToIndex(sortCol.id), sortAsc);
+    }
 
     indices = database.db_uniq_lifter(indices);
     return indices;
