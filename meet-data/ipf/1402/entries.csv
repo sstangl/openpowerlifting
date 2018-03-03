@@ -1,180 +1,264 @@
-Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,WeightClassKg,Division,Sex,Equipment,Event
-1,Olga Golubeva,1970,RUS,46.9,105,110,115,115,80,85,91,91,130,140,,140,346,47,Open,F,Raw,SBD
-2,Rie Kani,1979,JPN,46.5,100,105,107.5,107.5,67.5,70,72.5,72.5,135,145,-150,145,325,47,Open,F,Raw,SBD
-3,Steph Puddicome,1986,CAN,46.05,110,115,-117.5,115,52.5,-57.5,-57.5,52.5,142.5,-150,152.5,152.5,320,47,Open,F,Raw,SBD
-4,Stéphanie Legard,1981,FRA,46.1,105,110,115,115,65,70,-72.5,70,120,127.5,135,135,320,47,Open,F,Raw,SBD
-5,Yvelise Martin,1982,FRA,46.6,-105,105,-110,105,67.5,70,-72.5,70,115,122.5,-127.5,122.5,297.5,47,Open,F,Raw,SBD
-6,Priscilla Smoot,1979,AUS,46.15,85,-90,90,90,50,55,-57.5,55,115,122.5,125,125,270,47,Open,F,Raw,SBD
-7,Tessa Hart,1986,GBR,46.25,-82.5,-82.5,82.5,82.5,50,52.5,-55,52.5,110,120,-127.5,120,255,47,Open,F,Raw,SBD
-1,Sofia Loft,1990,SWE,50.55,125,132.5,140,140,75,80,82.5,82.5,150,157.5,162.5,162.5,385,52,Open,F,Raw,SBD
-2,Miia Grandas Liimatainen,1986,SWE,50.65,125,132.5,140,140,70,-72.5,72.5,72.5,150,160,167.5,167.5,380,52,Open,F,Raw,SBD
-3,Vilma Ochoa Vargas,1980,ECU,51.9,132.5,142.5,147.5,147.5,75,80,82.5,82.5,150,-160,-162.5,150,380,52,Open,F,Raw,SBD
-4,Suzanne Hartwig-Gary,1968,USA,51.15,132.5,142.5,150,150,65,-70,70,70,132.5,142.5,152.5,152.5,372.5,52,Open,F,Raw,SBD
-5,Marisa Inda,1976,USA,49.9,112.5,122.5,-127.5,122.5,70,75,-80,75,140,150,155,155,352.5,52,Open,F,Raw,SBD
-6,Elizabeth Craven,1975,AUS,51.4,127.5,132.5,-137.5,132.5,70,-75,75,75,135,-145,-145,135,342.5,52,Open,F,Raw,SBD
-7,Farana Van Heerden,1988,RSA,47.7,80,90,105,105,35,40,-42.5,40,110,120,125,125,270,52,Open,F,Raw,SBD
-1,Inna Filimonova,1976,RUS,55.95,150,160,167.5,167.5,70,77.5,-82.5,77.5,165,177.5,185,185,430,57,Open,F,Raw,SBD
-2,Rosa Castro,1979,ECU,56.6,-142.5,-147.5,147.5,147.5,80,85,87.5,87.5,155,165,172.5,172.5,407.5,57,Open,F,Raw,SBD
-3,Vita Abdulina,1967,UKR,56,-140,145,152.5,152.5,80,85,-87.5,85,150,160,167.5,167.5,405,57,Open,F,Raw,SBD
-4,Hui-Chun Wu,1986,TPE,56.3,115,125,-130,125,85,92.5,97.5,97.5,155,165,175,175,397.5,57,Open,F,Raw,SBD
-5,Jessica Benedetto,1981,CAN,55.35,125,135,-140,135,87.5,92.5,95,95,142.5,152.5,-162.5,152.5,382.5,57,Open,F,Raw,SBD
-6,Yulia Vavilova,1979,RUS,56.8,130,137.5,142.5,142.5,82.5,87.5,-90,87.5,145,-150,-150,145,375,57,Open,F,Raw,SBD
-7,Rosimery Lima,1977,GBR,55.85,120,127.5,-132.5,127.5,72.5,77.5,80,80,145,155,-165,155,362.5,57,Open,F,Raw,SBD
-8,Louise Murray,1988,GBR,54.85,125,-130,130,130,72.5,77.5,82.5,82.5,140,145,147.5,147.5,360,57,Open,F,Raw,SBD
-9,Alix Newton,1986,AUS,55.7,120,125,-127.5,125,75,77.5,-80,77.5,-132.5,132.5,-137.5,132.5,335,57,Open,F,Raw,SBD
-10,Alyssa Haveson,1988,USA,56.2,105,115,-117.5,115,60,65,70,70,137.5,150,-157.5,150,335,57,Open,F,Raw,SBD
-11,Bronwyn Stevens,1970,NZL,56.9,130,-137.5,-137.5,130,62.5,-65,65,65,137.5,-142.5,-142.5,137.5,332.5,57,Open,F,Raw,SBD
-12,Yuko Sakuyama,1987,JPN,55.95,115,-125,-125,115,85,90,-95,90,125,-135,-135,125,330,57,Open,F,Raw,SBD
-13,Kseniya Prokhorova,1983,UKR,56.95,110,-117.5,-117.5,110,82.5,-85,-85,82.5,132.5,-140,-142.5,132.5,325,57,Open,F,Raw,SBD
-14,Seritha Plaaitjies,1982,RSA,56.15,75,85,95,95,60,65,-70,65,120,132.5,142.5,142.5,302.5,57,Open,F,Raw,SBD
-15,Ilona Wilson,1977,RSA,56.1,95,-105,105,105,35,40,42.5,42.5,125,137.5,147.5,147.5,295,57,Open,F,Raw,SBD
-1,Jennifer Thompson,1973,USA,60.65,130,142.5,-150,142.5,125,137.5,-140.5,137.5,160,190,197.5,197.5,477.5,63,Open,F,Raw,SBD
-2,Jenny Adolfsson,1982,SWE,62.4,142.5,150,-152.5,150,105,110,112.5,112.5,162.5,172.5,177.5,177.5,440,63,Open,F,Raw,SBD
-3,Cicera Tavares,1976,BRA,61.85,-155,-155,160,160,75,80,-82.5,80,175,182.5,-192.5,182.5,422.5,63,Open,F,Raw,SBD
-4,Olga Vorotnikova,1975,RUS,62.25,140,145,-150,145,95,-100,-100,95,165,172.5,180,180,420,63,Open,F,Raw,SBD
-5,Maria Dubenskaya,1988,RUS,61.95,127.5,135,142.5,142.5,102.5,107.5,-110,107.5,160,167.5,-175,167.5,417.5,63,Open,F,Raw,SBD
-6,Meghan Pellatt,1984,USA,61.25,120,135,137.5,137.5,72.5,77.5,-85,77.5,165,175,182.5,182.5,397.5,63,Open,F,Raw,SBD
-7,Kelli Clarke,1980,AUS,62.35,-145,145,152.5,152.5,67.5,72.5,-75,72.5,150,162.5,-170,162.5,387.5,63,Open,F,Raw,SBD
-8,Lisa Basson,1984,RSA,62.75,100,110,-115,110,65,70,75,75,130,147.5,162.5,162.5,347.5,63,Open,F,Raw,SBD
-8,Silvia Stuetz,1978,GER,62.75,100,105,-110,105,80,-87.5,-87.5,80,150,162.5,-170,162.5,347.5,63,Open,F,Raw,SBD
-10,Abi Graham,1978,GBR,60.65,100,115,122.5,122.5,65,70,72.5,72.5,140,150,-157.5,150,345,63,Open,F,Raw,SBD
-DQ,Danel Van Jaarveld,1977,RSA,61.35,-110,-110,-110,,60,62.5,-65,62.5,125,130,135,135,,63,Open,F,Raw,SBD
-1,Kimberly Walford,1978,USA,65.25,160,172.5,-182.5,172.5,97.5,107.5,-110,107.5,215,230,-233,230,510,72,Open,F,Raw,SBD
-2,Ana Castellain,1985,BRA,68.15,175,185.5,-190,185.5,115,120,122.5,122.5,192.5,200,-205,200,508,72,Open,F,Raw,SBD
-3,Johanna Kankus,1984,FIN,71.05,155,-165,165,165,95,102.5,-110,102.5,150,160,-175,160,427.5,72,Open,F,Raw,SBD
-4,Eileen DuPlooy,1983,CAN,71.4,145,150,155,155,85,-90,-90,85,165,172.5,-175,172.5,412.5,72,Open,F,Raw,SBD
-5,Tamara Thomsen,1982,GER,67.65,145,152.5,-157.5,152.5,75,80,-82.5,80,155,160,-162.5,160,392.5,72,Open,F,Raw,SBD
-6,Louise Richardson,1977,GBR,68.25,-137.5,137.5,150,150,60,65,70,70,160,172.5,-177.5,172.5,392.5,72,Open,F,Raw,SBD
-7,Tarryn-Leigh Merifield,1987,RSA,68.85,110,117.5,122.5,122.5,60,65,-70,65,145,152.5,160,160,347.5,72,Open,F,Raw,SBD
-8,Kyoko Suzuki,1977,JPN,66.2,112.5,120,125,125,55,60,-65,60,127.5,135,-145,135,320,72,Open,F,Raw,SBD
-9,Candice Coetzer,1985,RSA,67,100,110,-115,110,50,55,-60,55,130,145,-162.5,145,310,72,Open,F,Raw,SBD
-1,Ielja Strik,1973,NED,83,195,-205.5,-205.5,195,127.5,-136,-136,127.5,180,190,-197.5,190,512.5,84,Open,F,Raw,SBD
-2,Valeria Timoshchuk,1988,RUS,79.85,170,180,-190,180,102.5,107.5,110,110,175,185,190,190,480,84,Open,F,Raw,SBD
-3,Marzena Piter,1989,POL,75.5,152.5,162.5,-167.5,162.5,90,97.5,100,100,187.5,195,202.5,202.5,465,84,Open,F,Raw,SBD
-4,Chleo Van Wyk,1990,AUS,80.1,160,-167.5,-167.5,160,97.5,105,-107.5,105,185,192.5,-200,192.5,457.5,84,Open,F,Raw,SBD
-5,Jessica Gilbert,1989,AUS,77.9,-160,170,-172.5,170,92.5,102.5,107.5,107.5,165,175,-182.5,175,452.5,84,Open,F,Raw,SBD
-6,Charlie Shotton-Gale,1983,GBR,84,140,150,155,155,85,-90,,85,170,-177.5,-177.5,170,410,84,Open,F,Raw,SBD
-1,Bonica Lough,1988,USA,121.8,205,222.5,230,230,112.5,-132.5,-132.5,112.5,202.5,217.5,-236.5,217.5,560,84+,Open,F,Raw,SBD
-2,Fang-Yun Su,1992,TPE,112.5,210,222.5,230.5,230.5,90,95,102.5,102.5,170,175,180,180,513,84+,Open,F,Raw,SBD
-3,Sonia Manaena,1961,NZL,124.15,-175,175,,175,102.5,,,102.5,210,220,230,230,507.5,84+,Open,F,Raw,SBD
-4,Samantha Viteri,1990,ECU,106.1,140,152.5,160,160,80,87.5,-92.5,87.5,172.5,182.5,185,185,432.5,84+,Open,F,Raw,SBD
-5,Anna Macnab,1984,GBR,108.75,160,170,-175,170,75,80,82.5,82.5,170,180,-185,180,432.5,84+,Open,F,Raw,SBD
-6,Catherine Greene,1984,AUS,85,-145,145,-152.5,145,75,80,-82.5,80,165,-175,-175,165,390,84+,Open,F,Raw,SBD
-1,Anna Zamorina,1999,RUS,46.55,60,67.5,-72.5,67.5,35,40,-45,40,80,90,95,95,202.5,47,Subjuniors,F,Raw,SBD
-1,Miranda Chambers,2000,USA,51.2,-100,100,102.5,102.5,57.5,60,-62.5,60,110,122.5,132.5,132.5,295,52,Subjuniors,F,Raw,SBD
-2,Aliaksandra Burykina,1999,BLR,50.9,105,110,112.5,112.5,60,-67.5,-67.5,60,110,115,120,120,292.5,52,Subjuniors,F,Raw,SBD
-3,Kerri-Anne Cauchi,1996,AUS,50.95,80,85,-87.5,85,42.5,45,-47.5,45,112.5,120,122.5,122.5,252.5,52,Subjuniors,F,Raw,SBD
-4,Rochelle De Beer,1999,RSA,51.15,-62.5,62.5,67.5,67.5,35,37.5,40,40,85,92.5,97.5,97.5,205,52,Subjuniors,F,Raw,SBD
-1,Katinka Van Baalen,1996,NED,56.5,100,105,-107.5,105,67.5,72.5,75,75,125,132.5,137.5,137.5,317.5,57,Subjuniors,F,Raw,SBD
-2,Oksana Ledeneva,1996,RUS,56.75,100,110,-115,110,60,65,67.5,67.5,110,122.5,137.5,137.5,315,57,Subjuniors,F,Raw,SBD
-3,Megan Leighton,1996,RSA,55.4,92.5,100,-105,100,52.5,57.5,-60,57.5,115,-125,-125,115,272.5,57,Subjuniors,F,Raw,SBD
-4,Shelby Bruce,1997,RSA,56.1,65,70,75,75,37.5,-42.5,-42.5,37.5,90,100,105,105,217.5,57,Subjuniors,F,Raw,SBD
-1,Majken Hansen,1996,DEN,63,100,107.5,110,110,60,-65,-65,60,140,150.5,153,153,323,63,Subjuniors,F,Raw,SBD
-2,Tuulia Lohivuo,1997,FIN,60.65,107.5,112.5,117.5,117.5,62.5,-67.5,-67.5,62.5,135,140,142.5,142.5,322.5,63,Subjuniors,F,Raw,SBD
-3,Aleksandra Borisova,1997,RUS,62.75,100,-107.5,-107.5,100,62.5,65,67.5,67.5,145,150,-155.5,150,317.5,63,Subjuniors,F,Raw,SBD
-4,Anastasiya Potrashkova,1996,RUS,61,105,112.5,117.5,117.5,62.5,67.5,-70,67.5,125,130,-137.5,130,315,63,Subjuniors,F,Raw,SBD
-1,Alina Davletshina,1996,RUS,70.15,120,130,137.5,137.5,-70,72.5,77.5,77.5,130,140,145,145,360,72,Subjuniors,F,Raw,SBD
-2,Lydia Mele,1998,USA,71.4,112.5,120,-125,120,57.5,65,-67.5,65,122.5,130,137.5,137.5,322.5,72,Subjuniors,F,Raw,SBD
-3,Anastasiia Derevianko,1998,RUS,63.9,100,105,107.5,107.5,60,-65,65,65,120,125,-130,125,297.5,72,Subjuniors,F,Raw,SBD
-DQ,Caitlyn Gant,1997,USA,70.1,107.5,112.5,-120,112.5,52.5,-57.5,-57.5,52.5,-130,-130,-130,,,72,Subjuniors,F,Raw,SBD
-1,Aino Autio,1997,FIN,82.25,115,122.5,130,130,70,-75,-75,70,140,150,152.5,152.5,352.5,84,Subjuniors,F,Raw,SBD
-2,Iuliia Gracheva,1996,RUS,79.25,-110,-110,110,110,50,60,62.5,62.5,120,135,150,150,322.5,84,Subjuniors,F,Raw,SBD
-3,Ella Lowenberg,1996,USA,81.45,90,-110,-110,90,52.5,57.5,-60,57.5,115,120,122.5,122.5,270,84,Subjuniors,F,Raw,SBD
-1,Jenessa Ward,1996,CAN,131.6,100,110,120,120,40,52.5,57.5,57.5,110,-160,160,160,337.5,84+,Subjuniors,F,Raw,SBD
-1,Mariia Starostina,1991,RUS,42.7,82.5,-90,90,90,52.5,60,65,65,102.5,115,-122.5,115,270,43,Juniors,F,Raw,SBD
-1,Aleksandra Otchenashko,1991,BLR,45.85,110,120,-130,120,55,60,65,65,135,140,145,145,330,47,Juniors,F,Raw,SBD
-2,Molly Zunker,1991,USA,45.55,95,100,102.5,102.5,55,57.5,-60,57.5,127.5,137.5,-150,137.5,297.5,47,Juniors,F,Raw,SBD
-3,Alexandra Churkina,1992,RUS,46.8,90,95,-100,95,55,60,-62.5,60,105,112.5,120,120,275,47,Juniors,F,Raw,SBD
-4,Ayasa Minami,1993,JPN,47,80,-85,85,85,52.5,55,57.5,57.5,90,100,-105,100,242.5,47,Juniors,F,Raw,SBD
-1,Inna Filimonova,1994,RUS,51.4,120,127.5,130,130,85,92.5,97.5,97.5,120,-127.5,127.5,127.5,355,52,Juniors,F,Raw,SBD
-2,Mareen Wendlandt,1991,GER,51.9,115,120,122.5,122.5,65,70,-72.5,70,130,142.5,-152.5,142.5,335,52,Juniors,F,Raw,SBD
-3,Breann Thiessen,1992,CAN,52,117.5,122.5,127.5,127.5,60,65,67.5,67.5,130,135,-142.5,135,330,52,Juniors,F,Raw,SBD
-4,Klaudia Rusztyn,1993,POL,51.8,90,97.5,-102.5,97.5,50,55,-57.5,55,135,142.5,150,150,302.5,52,Juniors,F,Raw,SBD
-5,Sarah Simpson,1991,NZL,51.5,75,85,90,90,65,67.5,-70,67.5,125,130,135,135,292.5,52,Juniors,F,Raw,SBD
-6,Stacey Bryant,1992,RSA,49.55,80,-95,-95,80,50,52.5,-55,52.5,110,120,-125,120,252.5,52,Juniors,F,Raw,SBD
-7,Jordan Dayes,1992,AUS,50.75,97.5,-105,-105,97.5,40,42.5,45,45,105,-115,-115,105,247.5,52,Juniors,F,Raw,SBD
-8,Alushka September,1995,RSA,50.25,60,65,70,70,45,47.5,-52.5,47.5,112.5,117.5,-122.5,117.5,235,52,Juniors,F,Raw,SBD
-9,Ashlee Alteri,1993,USA,51.05,72.5,80,-92.5,80,42.5,47.5,-52.5,47.5,85,95,100,100,227.5,52,Juniors,F,Raw,SBD
-1,Kenia Monserate,1991,ECU,55.5,120,130,135,135,75,80,-82.5,80,130,140,152.5,152.5,367.5,57,Juniors,F,Raw,SBD
-2,Laura McGuill,1991,USA,55.8,105,112.5,122.5,122.5,-52.5,52.5,60,60,130,142.5,152.5,152.5,335,57,Juniors,F,Raw,SBD
-3,Samantha Solie,1994,CAN,55.45,110,120,-122.5,120,60,65,-67.5,65,110,-117.5,117.5,117.5,302.5,57,Juniors,F,Raw,SBD
-4,Chihiro Teraishi,1993,JPN,56.55,85,92.5,-100,92.5,65,67.5,70,70,110,120,127.5,127.5,290,57,Juniors,F,Raw,SBD
-5,Tamara Navarro,1992,AUS,56.75,110,-117.5,-117.5,110,47.5,50,-52.5,50,117.5,122.5,-132.5,122.5,282.5,57,Juniors,F,Raw,SBD
-1,Johanna Aguinaga,1993,ECU,62.75,125,132.5,137.5,137.5,85,90,-95,90,135,142.5,150,150,377.5,63,Juniors,F,Raw,SBD
-2,Maruru Terahara,1993,JPN,61.55,130,-140,140,140,60,65,-67.5,65,140,152.5,157.5,157.5,362.5,63,Juniors,F,Raw,SBD
-3,Ashley Templeton,1991,NZL,62.5,122.5,-127.5,-127.5,122.5,77.5,82.5,85,85,147.5,-152.5,-157.5,147.5,355,63,Juniors,F,Raw,SBD
-4,Ariel Symon,1992,AUS,60.95,117.5,125,-127.5,125,70,-77.5,-77.5,70,125,130,135,135,330,63,Juniors,F,Raw,SBD
-5,Ewa Januszkiewicz,1991,USA,60.85,92.5,102.5,110,110,52.5,60,-65,60,140,152.5,157.5,157.5,327.5,63,Juniors,F,Raw,SBD
-6,Anastasia Lysenko,1994,RUS,62.7,110,115,117.5,117.5,75,80,82.5,82.5,117.5,-122.5,122.5,122.5,322.5,63,Juniors,F,Raw,SBD
-7,Natalia Malihina,1991,RUS,61.65,100,112.5,-117.5,112.5,65,70,75,75,130,-140,-145,130,317.5,63,Juniors,F,Raw,SBD
-8,Elin Melgar,1992,ISL,59.35,110,-117.5,-117.5,110,67.5,72.5,-75,72.5,115,125,-132.5,125,307.5,63,Juniors,F,Raw,SBD
-9,Melisa Heinonen,1995,FIN,60.25,-100,-100,100,100,57.5,60,-62.5,60,120,132.5,-140,132.5,292.5,63,Juniors,F,Raw,SBD
-10,Heli Jokela,1994,FIN,61.7,100,105,-107.5,105,67.5,-70,-70,67.5,120,-125,-125,120,292.5,63,Juniors,F,Raw,SBD
-1,Mikelina Belaineh,1991,USA,70.1,132.5,142.5,147.5,147.5,82.5,85,-87.5,85,167.5,177.5,-195,177.5,410,72,Juniors,F,Raw,SBD
-2,Alesya Lishinskaya,1995,UZB,66.45,150,-160,-160,150,70,-80,-80,70,120,130,137.5,137.5,357.5,72,Juniors,F,Raw,SBD
-3,Rachel Ellering,1992,USA,69.7,130,137.5,140,140,65,-70,-70,65,120,132.5,140,140,345,72,Juniors,F,Raw,SBD
-4,Samantha Taylor,1991,CAN,71.05,110,117.5,120,120,55,57.5,-62.5,57.5,140,147.5,155,155,332.5,72,Juniors,F,Raw,SBD
-5,Kristin Elliott,1991,CAN,70.05,-102.5,102.5,-110,102.5,52.5,57.5,60,60,125,135,142.5,142.5,305,72,Juniors,F,Raw,SBD
-6,Tammy Goosen,1993,RSA,69.35,90,-105,-105,90,47.5,50,-52.5,50,115,125,-135,125,265,72,Juniors,F,Raw,SBD
-1,Ekaterina Bratus,1991,RUS,82.95,150,160,165,165,90,97.5,102.5,102.5,145,157.5,167.5,167.5,435,84,Juniors,F,Raw,SBD
-2,Kseniia Subbota,1994,RUS,82.4,125,135,145,145,70,75,80,80,135,150,165,165,390,84,Juniors,F,Raw,SBD
-3,Kamila Kasperska,1992,POL,75.5,130,140,145,145,60,65,67.5,67.5,147.5,162.5,-177.5,162.5,375,84,Juniors,F,Raw,SBD
-4,Karolina Ruta,1992,POL,82,125,132.5,135,135,65,70,-72.5,70,145,155,167.5,167.5,372.5,84,Juniors,F,Raw,SBD
-5,Stephanie Mahan,1992,USA,82,130,137.5,142.5,142.5,65,70,72.5,72.5,137.5,147.5,155,155,370,84,Juniors,F,Raw,SBD
-6,Jenny Nocas,1993,USA,78.65,115,122.5,130,130,72.5,77.5,80,80,135,142.5,147.5,147.5,357.5,84,Juniors,F,Raw,SBD
-1,Matile Sitagata,1992,SAM,115.7,185,195,-200,195,80,82.5,-85,82.5,190,210,-220.5,210,487.5,84+,Juniors,F,Raw,SBD
-2,Maria Koteles,1992,HUN,138.9,155,165,172.5,172.5,120,-130,-130,120,165,-177.5,180,180,472.5,84+,Juniors,F,Raw,SBD
-3,Juanita Visser,1991,RSA,112.35,130,-145,150,150,80,-87.5,-87.5,80,170,190,-220.5,190,420,84+,Juniors,F,Raw,SBD
-4,Samantha Pretty,1994,CAN,104.5,132.5,140,147.5,147.5,80,-85,-87.5,80,147.5,155,165,165,392.5,84+,Juniors,F,Raw,SBD
-5,Tiarne Augustine,1994,AUS,115.65,132.5,142.5,150,150,85,-90,-90,85,120,125,130,130,365,84+,Juniors,F,Raw,SBD
-6,Eveliina Hytonen,1992,FIN,87.9,132.5,137.5,-145,137.5,65,70,-72.5,70,140,147.5,-157.5,147.5,355,84+,Juniors,F,Raw,SBD
-1,Nathalie Feraud,1967,FRA,46.9,85,90,95,95,65,70,-72.5,70,120,125,-130,125,290,47,Masters 1,F,Raw,SBD
-2,Kelli Lowenberg,1973,USA,42.85,65,72.5,-75,72.5,37.5,40,-42.5,40,100,105,-110,105,217.5,47,Masters 1,F,Raw,SBD
-1,Elisabeth Barry,1973,RSA,49.95,80,85,90,90,40,-42.5,-42.5,40,120,127.5,130,130,260,52,Masters 1,F,Raw,SBD
-2,Véronique Gaillard,1966,FRA,51.2,92.5,97.5,102.5,102.5,50,52.5,-55,52.5,95,-102.5,102.5,102.5,257.5,52,Masters 1,F,Raw,SBD
-3,Isabelle Collignon,1971,FRA,51.35,-77.5,82.5,-85,82.5,-42.5,42.5,-45,42.5,122.5,125,-130,125,250,52,Masters 1,F,Raw,SBD
-4,Anita Kidgell,1968,GBR,51.5,65,70,-75,70,50,52.5,-55,52.5,107.5,112.5,-117.5,112.5,235,52,Masters 1,F,Raw,SBD
-5,Yayoi Saga,1965,JPN,50.85,70,-80,80,80,40,45,-47.5,45,90,100,107.5,107.5,232.5,52,Masters 1,F,Raw,SBD
-1,Antoinette Kriel,1971,RSA,55.55,110,117.5,122.5,122.5,75,-80,80,80,132.5,145,-147.5,145,347.5,57,Masters 1,F,Raw,SBD
-2,Catherine Sorrenson,1972,AUS,56.35,-115,122.5,-127.5,122.5,75,80,85,85,127.5,-140,-142.5,127.5,335,57,Masters 1,F,Raw,SBD
-3,Cathleen Mele,1966,USA,56.65,77.5,82.5,-87.5,82.5,52.5,-55,-55,52.5,117.5,125,132.5,132.5,267.5,57,Masters 1,F,Raw,SBD
-4,Iwona Mazur-Zmuda,1973,POL,56.25,80,85,-90,85,35,40,-42.5,40,110,120,-142.5,120,245,57,Masters 1,F,Raw,SBD
-1,Isabelle Iliev,1967,FRA,61.55,115,122.5,-127.5,122.5,80,85,-87.5,85,135,140,145,145,352.5,63,Masters 1,F,Raw,SBD
-2,Satu Luoto,1969,FIN,61.6,117.5,125,130,130,85,87.5,-90,87.5,125,130,132.5,132.5,350,63,Masters 1,F,Raw,SBD
-3,Vicki Botha,1973,RSA,57.7,100,110,115,115,70,-75,-75,70,145,152.5,-167.5,152.5,337.5,63,Masters 1,F,Raw,SBD
-4,Beverley Rodgers,1972,GBR,62,90,97.5,102.5,102.5,67.5,70,72.5,72.5,120,127.5,132.5,132.5,307.5,63,Masters 1,F,Raw,SBD
-5,Lin Donevska,1960,AUS,62.45,-92.5,92.5,100,100,60,65,-67.5,65,110,-117.5,117.5,117.5,282.5,63,Masters 1,F,Raw,SBD
-1,Sheryl Condon,1972,USA,71.15,120,127.5,135,135,70,75,77.5,77.5,155,165,172.5,172.5,385,72,Masters 1,F,Raw,SBD
-2,Jennifer Kroken,1974,USA,71.3,122.5,130,137.5,137.5,67.5,72.5,75,75,132.5,142.5,150,150,362.5,72,Masters 1,F,Raw,SBD
-3,Laura De Wet,1974,RSA,67.7,120,130,-140,130,60,65,-67.5,65,135,150,-160,150,345,72,Masters 1,F,Raw,SBD
-4,Farhana Booley,1973,RSA,68.15,95,105,112.5,112.5,52.5,-57.5,57.5,57.5,120,-125,-125,120,290,72,Masters 1,F,Raw,SBD
-1,Alicia Webb,1971,USA,82.55,157.5,177.5,182.5,182.5,90,95,100,100,157.5,177.5,187.5,187.5,470,84,Masters 1,F,Raw,SBD
-2,Tina Robinson,1967,USA,80.3,142.5,150,152.5,152.5,102.5,107.5,110,110,157.5,170,175,175,437.5,84,Masters 1,F,Raw,SBD
-3,Karita Kraufvelin,1973,FIN,79.15,115,120,125,125,50,-55,-55,50,150,165,175,175,350,84,Masters 1,F,Raw,SBD
-4,Janita Kruger,1967,RSA,83.8,112.5,122.5,132.5,132.5,60,65,-67.5,65,135,-150,-150,135,332.5,84,Masters 1,F,Raw,SBD
-5,Linda Vixner,1972,SWE,75.75,120,-127.5,127.5,127.5,60,65,-67.5,65,120,130,137.5,137.5,330,84,Masters 1,F,Raw,SBD
-6,Bonita Hein,1970,RSA,74.95,90,105,110,110,55,62.5,-70,62.5,140,150,155,155,327.5,84,Masters 1,F,Raw,SBD
-7,Jo Whiteley,1970,GBR,83.25,95,-105,-105,95,-62.5,62.5,-67.5,62.5,132.5,142.5,147.5,147.5,305,84,Masters 1,F,Raw,SBD
-1,Katariina Nokua,1973,FIN,107.25,160,170,177.5,177.5,102.5,-107.5,-107.5,102.5,175,-180,180,180,460,84+,Masters 1,F,Raw,SBD
-2,Tracy Ludwig,1973,RSA,117.1,160,170,175,175,77.5,82.5,-87.5,82.5,182.5,200,-205,200,457.5,84+,Masters 1,F,Raw,SBD
-3,Jerriann Doll,1968,USA,96.45,100,105,110,110,80,-92.5,92.5,92.5,150,167.5,-175,167.5,370,84+,Masters 1,F,Raw,SBD
-4,Karen Towersey,1966,GBR,86,92.5,100,-105,100,55,60,65,65,120,130,135,135,300,84+,Masters 1,F,Raw,SBD
-1,Noriko Tsuji,1964,JPN,45.95,80,90,-95,90,57.5,60,62.5,62.5,110,115,-120,115,267.5,47,Masters 2,F,Raw,SBD
-2,Sylviane Bechar,1959,FRA,42.95,75,85,-90,85,55,60,62.5,62.5,100,110,-120,110,257.5,47,Masters 2,F,Raw,SBD
-1,Jennifer Hunter,1958,GBR,51.75,-70,70,75,75,62.5,67.5,70,70,120,130,138,138,283,52,Masters 2,F,Raw,SBD
-2,Lucienne Bonnet Arnal,1957,FRA,51.95,80,-85,85,85,55,60,-62.5,60,110,-115,-115,110,255,52,Masters 2,F,Raw,SBD
-1,Lynne Homan,1962,USA,56.45,90,97.5,100,100,70,-78,-78,70,130,135,140,140,310,57,Masters 2,F,Raw,SBD
-2,Edith Guennec,1956,FRA,54.2,-92.5,-92.5,92.5,92.5,47.5,50,-52.5,50,135,143,145,145,287.5,57,Masters 2,F,Raw,SBD
-3,Miriam Sinclair,1958,RSA,54.9,70,80,90,90,47.5,52.5,-55,52.5,115,125,-130,125,267.5,57,Masters 2,F,Raw,SBD
-1,Riitta Liimatainen,1963,SWE,60.75,130,140,-150,140,77.5,82.5,85,85,132.5,142.5,-151,142.5,367.5,63,Masters 2,F,Raw,SBD
-2,Judith Drenth,1958,USA,61.4,85,-92.5,-92.5,85,57.5,-62.5,62.5,62.5,105,117.5,130,130,277.5,63,Masters 2,F,Raw,SBD
-1,Cathleen Marksteiner,1958,USA,64.05,100,107.5,112.5,112.5,65,70,-75,70,110,120,127.5,127.5,310,72,Masters 2,F,Raw,SBD
-2,Sue Giles,1960,GBR,70.9,70,80,85,85,52.5,57.5,60,60,105,115,122.5,122.5,267.5,72,Masters 2,F,Raw,SBD
-1,Jackie Blasbery,1963,GBR,83.5,120,130,135,135,75,82.5,90,90,150,160,170,170,395,84,Masters 2,F,Raw,SBD
-1,Karen Richardson,1964,GBR,102.8,130,140,147.5,147.5,60,65,70,70,150,165,180,180,397.5,84+,Masters 2,F,Raw,SBD
-DQ,Susan Hallen,1957,USA,104.7,-130,-135,-135,,80,90,-100,90,137.5,147.5,-155,147.5,,84+,Masters 2,F,Raw,SBD
-1,Marina Cornwall,1954,GBR,44.45,70,75,77.5,77.5,45,47.5,-50,47.5,110,115,120,120,245,47,Masters 3,F,Raw,SBD
-2,Susan Elwyn,1947,USA,45.25,72.5,80,-85,80,42.5,45,-47.5,45,110,115,-120,115,240,47,Masters 3,F,Raw,SBD
-1,Vuokko Viitasaari,1954,FIN,50.65,85,95,105,105,50,-55,-55,50,110,125,137.5,137.5,292.5,52,Masters 3,F,Raw,SBD
-1,Annemarie Kemmerer,1953,USA,62.1,75,80,85,85,55,60,-62.5,60,115,125,132.5,132.5,277.5,63,Masters 3,F,Raw,SBD
-1,Patricia Kroken,1947,USA,84.7,67.5,75,-82.5,75,25,,,25,92.5,97.5,102.5,102.5,202.5,84+,Masters 3,F,Raw,SBD
+Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
+1,Koji Yoshino,1969,JPN,58.6,102.5,140,-150,140,140,59,Masters 1,B,M,Single-ply
+1,Takashi Hazeyama,1972,JPN,64.8,-187.5,187.5,192.5,192.5,192.5,66,Masters 1,B,M,Single-ply
+2,Jeffrey Hadad,1966,USA,65.4,160,185,-190,185,185,66,Masters 1,B,M,Single-ply
+3,Olivier Waymel,1966,FRA,65.6,185,-190,-192.5,185,185,66,Masters 1,B,M,Single-ply
+DQ,Keisuke Takahashi,1973,JPN,65.8,-222.5,-222.5,-222.5,,,66,Masters 1,B,M,Single-ply
+1,Alphonse Cucuzella,1966,FRA,72.8,220,-225,-232.5,220,220,74,Masters 1,B,M,Single-ply
+2,Phillip Richard,1971,GBR,74,210,217.5,-222.5,217.5,217.5,74,Masters 1,B,M,Single-ply
+3,Shigenari Suzuki,1973,JPN,73,-200,-200,207.5,207.5,207.5,74,Masters 1,B,M,Single-ply
+4,Kouichi Furukawa,1966,JPN,72.4,205,-215,-220,205,205,74,Masters 1,B,M,Single-ply
+5,Henrikki Syrjala,1971,FIN,73.6,195,200,-207.5,200,200,74,Masters 1,B,M,Single-ply
+6,Bartosz Zelazko,1973,POL,73.8,187.5,192.5,-197.5,192.5,192.5,74,Masters 1,B,M,Single-ply
+7,Andreas Poehls,1968,GER,73.8,190,-195,-202.5,190,190,74,Masters 1,B,M,Single-ply
+8,Jon Mouzon,1972,USA,73,-185,185,-190,185,185,74,Masters 1,B,M,Single-ply
+9,Rafal Szendera,1971,POL,74,-155,155,-162.5,155,155,74,Masters 1,B,M,Single-ply
+10,Robert Biro,1970,HUN,71.8,90,-110,-115,90,90,74,Masters 1,B,M,Single-ply
+1,Tomi Vikla,1970,FIN,83,235,-240,-247.5,235,235,83,Masters 1,B,M,Single-ply
+2,Istvan Gyuricska,1967,HUN,80.1,230,-237.5,-240,230,230,83,Masters 1,B,M,Single-ply
+3,Cyril Pinguet,1972,FRA,81.7,225,-232.5,-237.5,225,225,83,Masters 1,B,M,Single-ply
+4,Aleš Kośtál,1974,CZE,81,215,-225,-225,215,215,83,Masters 1,B,M,Single-ply
+5,Vladimir Nebola,1970,CZE,82.5,207.5,-215,-215,207.5,207.5,83,Masters 1,B,M,Single-ply
+6,Hiroaki Shinyashiki,1966,JPN,81,190,200,-210,200,200,83,Masters 1,B,M,Single-ply
+7,Daniel Cieplak,1973,POL,82.8,197.5,-205,-205,197.5,197.5,83,Masters 1,B,M,Single-ply
+DQ,Donovan Thompson,1966,USA,81,-207.5,-207.5,-207.5,,,83,Masters 1,B,M,Single-ply
+1,Masahiko Kassai,1971,JPN,91.7,255,265,272.5,272.5,272.5,93,Masters 1,B,M,Single-ply
+2,Pete Grohoski,1970,USA,92.55,247.5,257.5,267.5,267.5,267.5,93,Masters 1,B,M,Single-ply
+3,Thomas Wetzstein,1974,AUT,92.7,245,255,-270,255,255,93,Masters 1,B,M,Single-ply
+4,Olav Farstad Svein,1965,NOR,92.75,245,-250,-257.5,245,245,93,Masters 1,B,M,Single-ply
+5,Battsengel Bataa,1970,MGL,92.55,220,230,-257.5,230,230,93,Masters 1,B,M,Single-ply
+6,Tony Rabineau,1973,FRA,92.3,225,-230,-230,225,225,93,Masters 1,B,M,Single-ply
+7,Stefano Cellario,1972,ITA,91.05,-217.5,217.5,-222.5,217.5,217.5,93,Masters 1,B,M,Single-ply
+8,Sheridan Wray,1974,GBR,92.2,210,-220,-230,210,210,93,Masters 1,B,M,Single-ply
+1,Timothy Anderson,1972,USA,103.5,290,-300,-300,290,290,105,Masters 1,B,M,Single-ply
+2,Ronny Olaisen,1971,NOR,101.4,-265,265,-267.5,265,265,105,Masters 1,B,M,Single-ply
+3,Mike Ferrantelli,1966,USA,104.2,245,-267.5,-267.5,245,245,105,Masters 1,B,M,Single-ply
+4,Miki Okayama,1972,JPN,104,235,-252.5,-252.5,235,235,105,Masters 1,B,M,Single-ply
+5,Sangheet Dhillon,1971,GBR,103.7,205,215,220,220,220,105,Masters 1,B,M,Single-ply
+6,Wieslaw Dominik,1965,POL,104,210,215,220,220,220,105,Masters 1,B,M,Single-ply
+7,Mats Rindemark,1970,SWE,104.5,220,-230,-230,220,220,105,Masters 1,B,M,Single-ply
+8,Jan Kuehl,1971,GER,103.2,200,-210,215,215,215,105,Masters 1,B,M,Single-ply
+9,Thomas Kraemer,1970,GER,103.5,190,200,212.5,212.5,212.5,105,Masters 1,B,M,Single-ply
+DQ,Gilbert Bier,1970,FRA,104.5,-250,-250,-250,,,105,Masters 1,B,M,Single-ply
+DQ,Arild Kråkenes,1968,NOR,104.8,-250,-250,-260,,,105,Masters 1,B,M,Single-ply
+1,Dean Bowring,1974,GBR,120,292.5,297.5,305.5,305.5,305.5,120,Masters 1,B,M,Single-ply
+2,Jarmo Myller,1968,FIN,118.9,285,-290,290,290,290,120,Masters 1,B,M,Single-ply
+3,Zbyněk Krejča,1974,CZE,119.4,290,-292.5,-292.5,290,290,120,Masters 1,B,M,Single-ply
+4,Lasse Leinonen,1973,FIN,119.4,-287.5,287.5,-292.5,287.5,287.5,120,Masters 1,B,M,Single-ply
+5,Conny Blomgren,1968,SWE,119.1,-280,-280,280,280,280,120,Masters 1,B,M,Single-ply
+6,Patrick Gudd,1971,GER,116.4,260,270,-287.5,270,270,120,Masters 1,B,M,Single-ply
+7,Petar Antic,1968,GER,117.35,240,-260,260,260,260,120,Masters 1,B,M,Single-ply
+8,Einar Voldseth Kurt,1966,NOR,118.1,-240,240,-255,240,240,120,Masters 1,B,M,Single-ply
+DQ,Steven Gott,1971,GBR,118.75,-230,-235,-235,,,120,Masters 1,B,M,Single-ply
+1,Jaroslav Šoukal,1972,CZE,156.3,295,305,310,310,310,120+,Masters 1,B,M,Single-ply
+2,Joe Dibert,1969,USA,136.2,280,295,-312.5,295,295,120+,Masters 1,B,M,Single-ply
+3,Robert Blom,1966,SWE,126.4,280,285,-295,285,285,120+,Masters 1,B,M,Single-ply
+4,Georg Haug,1965,GER,140.8,215,235,-250,235,235,120+,Masters 1,B,M,Single-ply
+5,Jan Vestergaard,1966,DEN,125.5,205,210,-212.5,210,210,120+,Masters 1,B,M,Single-ply
+6,John Beres,1967,CAN,141.2,180,200,207.5,207.5,207.5,120+,Masters 1,B,M,Single-ply
+DQ,Charles Duval,1972,FRA,129.25,-280,-285,-287.5,,,120+,Masters 1,B,M,Single-ply
+DQ,Jeff Lewis,1970,USA,240,-322.5,-322.5,-322.5,,,120+,Masters 1,B,M,Single-ply
+1,Hiroyuki Ishiwatari,1959,JPN,57,140,-150,-175.5,140,140,59,Masters 2,B,M,Single-ply
+2,Jay Helms,1964,USA,58.2,125,-132.5,-142.5,125,125,59,Masters 2,B,M,Single-ply
+1,Hideyuki Yano,1959,JPN,65,-172.5,172.5,182.5,182.5,182.5,66,Masters 2,B,M,Single-ply
+2,Charles Smith,1960,NED,65.4,165,-175,-175,165,165,66,Masters 2,B,M,Single-ply
+3,Roger Pardo,1961,FRA,65.2,135,145,-150,145,145,66,Masters 2,B,M,Single-ply
+4,Giovanni D'Alessandro,1962,ITA,64.8,142.5,-147.5,-147.5,142.5,142.5,66,Masters 2,B,M,Single-ply
+5,Gary Prater,1963,GBR,65.2,120,-127.5,-127.5,120,120,66,Masters 2,B,M,Single-ply
+1,Tadashi Mishima,1962,JPN,73,-205,205,212.5,212.5,212.5,74,Masters 2,B,M,Single-ply
+2,Erkki Rajala,1962,FIN,73.6,207.5,-212.5,-213,207.5,207.5,74,Masters 2,B,M,Single-ply
+3,Lance Slaughter,1962,USA,73.4,190,-195,-197.5,190,190,74,Masters 2,B,M,Single-ply
+4,Eric Verhaege,1963,FRA,73.4,160,170,-192.5,170,170,74,Masters 2,B,M,Single-ply
+1,Wesley Kipp,1962,USA,82.3,200,207.5,-212.5,207.5,207.5,83,Masters 2,B,M,Single-ply
+2,Jukka Saunamaki,1961,SWE,82.3,-197.5,197.5,-210,197.5,197.5,83,Masters 2,B,M,Single-ply
+3,Patrick LeBlevennec,1963,FRA,82.3,-195,195,-200,195,195,83,Masters 2,B,M,Single-ply
+4,Tomas Ring,1960,SWE,82.8,192.5,-200,-200,192.5,192.5,83,Masters 2,B,M,Single-ply
+5,Stig Bjorgvist,1960,FIN,82.1,-190,190,-195,190,190,83,Masters 2,B,M,Single-ply
+6,Veiko Friedrich,1964,GER,81.4,187.5,-192.5,-195,187.5,187.5,83,Masters 2,B,M,Single-ply
+7,Krzysztof Kuchnio,1956,POL,82.2,180,-187.5,187.5,187.5,187.5,83,Masters 2,B,M,Single-ply
+8,Douglas D'Gama,1962,GBR,82.3,-145,145,-150,145,145,83,Masters 2,B,M,Single-ply
+DQ,Naoki Ishimoto,1962,JPN,81.5,-205,-205,-207.5,,,83,Masters 2,B,M,Single-ply
+DQ,Frank Heinrich,1958,GER,82.3,-195,-195,-202.5,,,83,Masters 2,B,M,Single-ply
+1,Frans Van Der Putten,1962,NED,92.4,245,250,-260,250,250,93,Masters 2,B,M,Single-ply
+2,Kazunori Sato,1961,JPN,90.8,222.5,230,235,235,235,93,Masters 2,B,M,Single-ply
+3,Klaus Semskij,1964,GER,91.9,-230,230,-237.5,230,230,93,Masters 2,B,M,Single-ply
+4,Miroslav Paukert,1963,CZE,92.05,-215,-222.5,222.5,222.5,222.5,93,Masters 2,B,M,Single-ply
+5,Peter Ericson,1963,SWE,92.8,200,205,-207.5,205,205,93,Masters 2,B,M,Single-ply
+6,Seppo Norpila,1963,FIN,92.9,-192.5,192.5,197.5,197.5,197.5,93,Masters 2,B,M,Single-ply
+7,Conny Andersson,1959,SWE,92,195,-200,-205,195,195,93,Masters 2,B,M,Single-ply
+8,Tarmo Vanhamaki,1960,FIN,92.35,185,195,-210,195,195,93,Masters 2,B,M,Single-ply
+9,Chris Cooper,1962,GBR,92.6,170,-177.5,177.5,177.5,177.5,93,Masters 2,B,M,Single-ply
+DQ,Takeshi Kitagawa,1958,JPN,87.75,-232.5,-237.5,-240,,,93,Masters 2,B,M,Single-ply
+DQ,Bakyt Kerimbekov,1961,KGZ,92.15,-230,-230,-232.5,,,93,Masters 2,B,M,Single-ply
+1,Kohei Wada,1964,JPN,104.1,272.5,-277.5,285,285,285,105,Masters 2,B,M,Single-ply
+2,Mariusz Hadrysiak,1961,POL,104.9,275,280,-287.5,280,280,105,Masters 2,B,M,Single-ply
+3,Rolf Dilbat,1963,GER,100,242.5,247.5,262.5,262.5,262.5,105,Masters 2,B,M,Single-ply
+4,Juha Lehto,1964,FIN,104.9,235,247.5,-255,247.5,247.5,105,Masters 2,B,M,Single-ply
+5,Philippe Szezepanski,1964,FRA,100.9,235,242.5,-252.5,242.5,242.5,105,Masters 2,B,M,Single-ply
+6,Peer Haensicke,1961,GER,101.3,-235,235,-250,235,235,105,Masters 2,B,M,Single-ply
+7,Marius Vermeulen,1957,NED,102.8,220,-235,-235,220,220,105,Masters 2,B,M,Single-ply
+DQ,Fabrice Leroy,1963,FRA,103.3,-225,-225,-237.5,,,105,Masters 2,B,M,Single-ply
+DQ,Charles Turco,1956,USA,104.1,-237.5,-237.5,-237.5,,,105,Masters 2,B,M,Single-ply
+1,David Doan,1964,USA,117.85,277.5,282.5,286,286,286,120,Masters 2,B,M,Single-ply
+2,Bradley Klinger,1956,USA,117.8,275,-280,-285.5,275,275,120,Masters 2,B,M,Single-ply
+3,Motohisa Kojo,1958,JPN,118.9,262.5,-267.5,-272.5,262.5,262.5,120,Masters 2,B,M,Single-ply
+4,Jiri Krcmar,1962,CZE,114.95,220,230,240,240,240,120,Masters 2,B,M,Single-ply
+5,Bjorn Iversen,1956,SWE,115.5,230,240,-262.5,240,240,120,Masters 2,B,M,Single-ply
+6,Stewart Cowan,1963,GBR,109.6,210,215,-217.5,215,215,120,Masters 2,B,M,Single-ply
+7,Allan Hulme,1956,GBR,111.25,195,200,205,205,205,120,Masters 2,B,M,Single-ply
+8,Timo Rantala,1963,FIN,116.75,175,-205,-222.5,175,175,120,Masters 2,B,M,Single-ply
+9,Joerg Pollmann,1959,GER,117.3,170,-225,,170,170,120,Masters 2,B,M,Single-ply
+10,Ian Sullivan,1960,AUS,108.75,160,165,-170,165,165,120,Masters 2,B,M,Single-ply
+DQ,Andrej Hermann,1963,GER,118,-260,-260,-270,,,120,Masters 2,B,M,Single-ply
+1,Daniel Gaudreau,1960,USA,152.3,-295,295,306.5,306.5,306.5,120+,Masters 2,B,M,Single-ply
+2,William Campbell,1957,USA,144,290,-305,306,306,306,120+,Masters 2,B,M,Single-ply
+3,Morten Kaland,1959,NOR,125.45,-255,-255,260,260,260,120+,Masters 2,B,M,Single-ply
+4,Juergen Loether,1963,GER,129.3,-255,255,-262.5,255,255,120+,Masters 2,B,M,Single-ply
+5,Matthew Mackey,1961,GBR,164.3,215,-220,222.5,222.5,222.5,120+,Masters 2,B,M,Single-ply
+6,Brian Lee,1961,GBR,124.7,200,210,220,220,220,120+,Masters 2,B,M,Single-ply
+7,Rudolf Fenyvesi,1959,HUN,125.6,150,157.5,-165,157.5,157.5,120+,Masters 2,B,M,Single-ply
+1,Sam Felts,1952,USA,58.6,110,115,125,125,125,59,Masters 3,B,M,Single-ply
+2,Seppo Flink,1951,FIN,58.4,97.5,100,-102.5,100,100,59,Masters 3,B,M,Single-ply
+3,Alexander Moiseev,1954,BLR,57.8,92.5,-97.5,-100,92.5,92.5,59,Masters 3,B,M,Single-ply
+1,Keiji Sato,1952,JPN,65.4,155,162.5,-171.5,162.5,162.5,66,Masters 3,B,M,Single-ply
+2,Claude Sitruk,1950,FRA,65.2,145,-155,-162.5,145,145,66,Masters 3,B,M,Single-ply
+3,Tsutomu Ichikawa,1947,JPN,65,135,-140,-140,135,135,66,Masters 3,B,M,Single-ply
+4,Birger Sundstøl,1954,NOR,64.6,100,-110,-110,100,100,66,Masters 3,B,M,Single-ply
+DQ,Joachim Lietzau,1950,GER,63.8,-125,-132.5,-135,,,66,Masters 3,B,M,Single-ply
+DQ,Markku Kemppainen,1949,FIN,63.8,-120,-125,-125,,,66,Masters 3,B,M,Single-ply
+1,Takeshi Monoe,1952,JPN,73,-155,155,157.5,157.5,157.5,74,Masters 3,B,M,Single-ply
+2,Michel Dernoncourt,1946,FRA,73.2,145,150,-157.5,150,150,74,Masters 3,B,M,Single-ply
+3,Antero Kauranen,1948,FIN,73.6,-150,150,-157.5,150,150,74,Masters 3,B,M,Single-ply
+4,Joga Singh,1953,GBR,72.8,125,132.5,-137.5,132.5,132.5,74,Masters 3,B,M,Single-ply
+5,Stanley Macrow,1949,GBR,71.2,122.5,127.5,130,130,130,74,Masters 3,B,M,Single-ply
+6,Chip Hultquist,1949,USA,73.8,110,-115,115,115,115,74,Masters 3,B,M,Single-ply
+DQ,Hannu Lavonius,1953,FIN,69,-140,-140,-150,,,74,Masters 3,B,M,Single-ply
+1,Bjarne Synstad,1951,NOR,82,205,-217.5,-217.5,205,205,83,Masters 3,B,M,Single-ply
+2,Nikolay Volkov,1951,RUS,81.9,167.5,175,-205,175,175,83,Masters 3,B,M,Single-ply
+3,Tilman Gallant,1948,CAN,81.8,-160,160,-165,160,160,83,Masters 3,B,M,Single-ply
+4,Gerhard Baumeister,1952,GER,82.3,-140,140,-162.5,140,140,83,Masters 3,B,M,Single-ply
+5,Laszlo Dr Dozsa,1953,HUN,82.5,125,-132.5,132.5,132.5,132.5,83,Masters 3,B,M,Single-ply
+DQ,Alain Collard,1952,FRA,80.6,-140,-140,-140,,,83,Masters 3,B,M,Single-ply
+DQ,David Williams,1953,GBR,81.7,-165,-165,-175,,,83,Masters 3,B,M,Single-ply
+1,Arne Boe Kjell,1952,NOR,89,200,-207.5,207.5,207.5,207.5,93,Masters 3,B,M,Single-ply
+2,Ilkka Launonen,1954,FIN,91.2,195,-202.5,202.5,202.5,202.5,93,Masters 3,B,M,Single-ply
+3,Osamu Iijima,1954,JPN,87,200,-205,-207.5,200,200,93,Masters 3,B,M,Single-ply
+4,Brian Kline,1950,USA,92.6,-175,175,182.5,182.5,182.5,93,Masters 3,B,M,Single-ply
+5,Pierre Courtehoux,1953,FRA,92.25,180,-190,-197.5,180,180,93,Masters 3,B,M,Single-ply
+6,Stanislas Couchy,1953,FRA,93,170,-182.5,-197.5,170,170,93,Masters 3,B,M,Single-ply
+7,Malcolm Slinger,1945,AUS,90.55,150,157.5,160,160,160,93,Masters 3,B,M,Single-ply
+8,Raymond Penland,1952,USA,92.2,130,-135,135,135,135,93,Masters 3,B,M,Single-ply
+9,Mike Edwards,1949,GBR,90.3,-125,125,-130,125,125,93,Masters 3,B,M,Single-ply
+DQ,Gyorgy Tabori,1954,HUN,89.45,-170,-170,-170,,,93,Masters 3,B,M,Single-ply
+1,Wojciech Grabowski,1952,POL,103.1,230,-240,-240,230,230,105,Masters 3,B,M,Single-ply
+2,Wladimir Marinin,1952,RUS,100.9,-210,210,-230,210,210,105,Masters 3,B,M,Single-ply
+3,Kevin Hutchinson,1954,USA,103.7,195,-200,-205,195,195,105,Masters 3,B,M,Single-ply
+4,Jean-Pierre Aymon,1954,SUI,104.4,190,-197.5,-197.5,190,190,105,Masters 3,B,M,Single-ply
+5,Harri Tirronen,1953,FIN,102.9,185,-195,-195,185,185,105,Masters 3,B,M,Single-ply
+6,Tom Collins,1946,GBR,103.7,185,-190,-202.5,185,185,105,Masters 3,B,M,Single-ply
+7,Kenneth Mattsson,1949,SWE,101.5,160,165,170,170,170,105,Masters 3,B,M,Single-ply
+1,Greg Chrun,1951,USA,110.4,-232.5,232.5,245,245,245,120,Masters 3,B,M,Single-ply
+2,Gerard Oumailia,1951,FRA,107.05,200,210,-232.5,210,210,120,Masters 3,B,M,Single-ply
+3,Allan Fuglsang,1950,DEN,112.8,190,197.5,-202.5,197.5,197.5,120,Masters 3,B,M,Single-ply
+4,Janos Pokornyi,1952,HUN,108.1,190,-200,-202.5,190,190,120,Masters 3,B,M,Single-ply
+5,David Brooks,1952,GBR,117.45,180,-187.5,-187.5,180,180,120,Masters 3,B,M,Single-ply
+6,James Dulling,1949,GBR,105.6,150,155,160,160,160,120,Masters 3,B,M,Single-ply
+7,Erik Wallin Sven,1951,SWE,114.65,-150,150,-157.5,150,150,120,Masters 3,B,M,Single-ply
+8,Ivan Veselý,1949,CZE,118.2,-142.5,142.5,-167.5,142.5,142.5,120,Masters 3,B,M,Single-ply
+1,Goran Andersson,1953,SWE,130.2,235,238,240,240,240,120+,Masters 3,B,M,Single-ply
+2,Robert Crawford,1951,USA,144.6,185,-215,-215,185,185,120+,Masters 3,B,M,Single-ply
+3,Ronald Beuch,1950,USA,144.35,100,165,-185,165,165,120+,Masters 3,B,M,Single-ply
+1,Masami Otaki,1942,JPN,52.2,82.5,-95,95,95,95,59,Masters 4,B,M,Single-ply
+2,Ludwig Werner,1938,GER,58.2,75,80,85,85,85,59,Masters 4,B,M,Single-ply
+1,Ivan Zwick,1939,USA,64,-110,110,-117.5,110,110,66,Masters 4,B,M,Single-ply
+2,Hideharu Akagi,1944,JPN,65.4,110,-115,-115,110,110,66,Masters 4,B,M,Single-ply
+1,Alexander Lee,1944,GBR,72.6,140,142.5,-145,142.5,142.5,74,Masters 4,B,M,Single-ply
+2,Boleslaw Maka,1942,POL,73.2,-140,140,-147.5,140,140,74,Masters 4,B,M,Single-ply
+3,Börje Eriksson,1942,SWE,72.6,100,110,115,115,115,74,Masters 4,B,M,Single-ply
+4,Tamio Yasui,1942,JPN,72.6,100,107.5,112.5,112.5,112.5,74,Masters 4,B,M,Single-ply
+DQ,Manabu Ogata,1941,JPN,70.6,-130,-130,-130,,,74,Masters 4,B,M,Single-ply
+1,Jorgen Jorgensen Hans,1944,DEN,82.2,-145,145,-156.5,145,145,83,Masters 4,B,M,Single-ply
+2,Marc Huchet,1938,FRA,80.7,125,127.5,130,130,130,83,Masters 4,B,M,Single-ply
+3,Horst Lorenz,1940,GER,78.8,115,-125,-125,115,115,83,Masters 4,B,M,Single-ply
+4,Sam Penner,1930,USA,79.3,-70,70,77.5,77.5,77.5,83,Masters 4,B,M,Single-ply
+1,Katsuji Kawabe,1942,JPN,91.9,155,160,-162.5,160,160,93,Masters 4,B,M,Single-ply
+2,Daniel Reybrouck,1942,BEL,85.1,152.5,-160,-160,152.5,152.5,93,Masters 4,B,M,Single-ply
+3,Peer Bjaaland,1942,NOR,90.35,115,125,130,130,130,93,Masters 4,B,M,Single-ply
+1,Larry Negriff,1941,USA,101.7,-182.5,182.5,-195,182.5,182.5,105,Masters 4,B,M,Single-ply
+1,Christer Nylund,1944,FIN,107.8,-165,-165,165,165,165,120,Masters 4,B,M,Single-ply
+2,William Helmich,1942,USA,107.9,142.5,150,-165,150,150,120,Masters 4,B,M,Single-ply
+3,Joseph Ferrantelli,1943,USA,105.1,85,-142.5,142.5,142.5,142.5,120,Masters 4,B,M,Single-ply
+4,Chris Gladding,1940,GBR,116.2,142.5,-150,-150,142.5,142.5,120,Masters 4,B,M,Single-ply
+1,Marion Friedrich,1965,GER,46.2,90,92.5,95,95,95,47,Masters 1,B,F,Single-ply
+2,Nathalie Feraud,1967,FRA,46.2,80,-87.5,-95,80,80,47,Masters 1,B,F,Single-ply
+1,Tomoko Miyamoto,1967,JPN,51.6,95,-97.5,-100,95,95,52,Masters 1,B,F,Single-ply
+2,Magdolna Petroczki,1968,HUN,51.6,85,87.5,90,90,90,52,Masters 1,B,F,Single-ply
+3,Anzhela Rodygina,1970,RUS,51.8,82.5,87.5,-90,87.5,87.5,52,Masters 1,B,F,Single-ply
+4,Tammy Cutrona,1966,USA,51.2,-70,70,-77.5,70,70,52,Masters 1,B,F,Single-ply
+1,Tomoko Sakamaki,1965,JPN,55.8,100,105,110,110,110,57,Masters 1,B,F,Single-ply
+2,Ann Kristin Olsen,1967,NOR,56.4,97.5,102.5,-110,102.5,102.5,57,Masters 1,B,F,Single-ply
+3,Danna Snow,1969,USA,55.8,87.5,92.5,-97.5,92.5,92.5,57,Masters 1,B,F,Single-ply
+4,Véronique Descours,1971,FRA,57,80,87.5,-95,87.5,87.5,57,Masters 1,B,F,Single-ply
+1,Isabelle Iliev,1967,FRA,61,115,120,-130,120,120,63,Masters 1,B,F,Single-ply
+2,Tarja Uppala,1965,FIN,62.2,105,-110,-122.5,105,105,63,Masters 1,B,F,Single-ply
+3,Lara Sturm,1968,USA,62.2,-95,95,100,100,100,63,Masters 1,B,F,Single-ply
+4,Hannele Syrjala,1973,FIN,62.2,87.5,92.5,97.5,97.5,97.5,63,Masters 1,B,F,Single-ply
+5,Chieko Kudo,1967,JPN,61,80,85,-95,85,85,63,Masters 1,B,F,Single-ply
+1,Andrea Lange,1965,GER,68.05,112.5,115,117.5,117.5,117.5,72,Masters 1,B,F,Single-ply
+2,Satu Luoto,1969,FIN,65.3,92.5,95,100,100,100,72,Masters 1,B,F,Single-ply
+3,Wendie Kirkland,1972,GBR,68.9,77.5,-85,-90,77.5,77.5,72,Masters 1,B,F,Single-ply
+4,Virve Ilves,1970,FIN,71.85,75,-80,-80,75,75,72,Masters 1,B,F,Single-ply
+5,Lauren Pardue,1970,USA,63.85,60,-62.5,-65,60,60,72,Masters 1,B,F,Single-ply
+DQ,Erzsebet Schneider,1965,HUN,71.6,-90,-90,-90,,,72,Masters 1,B,F,Single-ply
+1,Ielja Strik,1973,NED,83.75,172.5,-185,-185,172.5,172.5,84,Masters 1,B,F,Single-ply
+2,Cydney Smith,1971,USA,76.2,-122.5,122.5,127.5,127.5,127.5,84,Masters 1,B,F,Single-ply
+3,Jennifer Nicholl,1966,GBR,83.3,100,105,-125,105,105,84,Masters 1,B,F,Single-ply
+1,Katariina Nokua,1973,FIN,107.45,160,-165,-170,160,160,84+,Masters 1,B,F,Single-ply
+2,Dorota Szczepanik,1969,POL,84.25,130,140,-152.5,140,140,84+,Masters 1,B,F,Single-ply
+3,Kimberly Eastin,1970,USA,110.05,110,-115,-115,110,110,84+,Masters 1,B,F,Single-ply
+4,Mami Komatsu,1969,JPN,102.5,-95,95,-110,95,95,84+,Masters 1,B,F,Single-ply
+DQ,Tammy Walker,1968,USA,86.85,-152.5,-152.5,-152.5,,,84+,Masters 1,B,F,Single-ply
+1,Hiroko Arai,1963,JPN,46.2,-100,-100,100,100,100,47,Masters 2,B,F,Single-ply
+1,Akemi Masuyama,1962,JPN,50,-105,-105,105,105,105,52,Masters 2,B,F,Single-ply
+2,Martine Roche,1956,FRA,51.2,80,82.5,85,85,85,52,Masters 2,B,F,Single-ply
+3,Jennifer Hunter,1958,GBR,51.8,75,80,-87.5,80,80,52,Masters 2,B,F,Single-ply
+1,Fumie Mizuno,1959,JPN,52.4,82.5,85,90,90,90,57,Masters 2,B,F,Single-ply
+2,Irina Bekhtereva,1959,RUS,54.8,-82.5,82.5,-87.5,82.5,82.5,57,Masters 2,B,F,Single-ply
+3,Pia Kring,1957,GER,55.6,-80,80,-85,80,80,57,Masters 2,B,F,Single-ply
+4,Lizz Smullen,1962,USA,56.6,75,-82.5,-82.5,75,75,57,Masters 2,B,F,Single-ply
+5,Eva Fulopne Sahin,1962,HUN,56,70,-75,-75,70,70,57,Masters 2,B,F,Single-ply
+1,Patricia Maciejewski,1961,FRA,62,102.5,-107.5,-114.5,102.5,102.5,63,Masters 2,B,F,Single-ply
+2,Monika Schnoelzer,1961,GER,61,85,90,-92.5,90,90,63,Masters 2,B,F,Single-ply
+3,Daisy Blondan,1959,FRA,61.4,77.5,80,-82.5,80,80,63,Masters 2,B,F,Single-ply
+4,Sinikka Naslund,1960,FIN,61.8,72.5,-80,-82.5,72.5,72.5,63,Masters 2,B,F,Single-ply
+1,Regina Haas,1962,GER,70.4,115,117.5,,117.5,117.5,72,Masters 2,B,F,Single-ply
+2,Donna Marts,1960,USA,70.4,105,-107.5,-107.5,105,105,72,Masters 2,B,F,Single-ply
+3,Evelyne Herbin,1956,FRA,68.8,87.5,92.5,97.5,97.5,97.5,72,Masters 2,B,F,Single-ply
+4,Aline Leroy,1962,FRA,68.7,90,92.5,-97.5,92.5,92.5,72,Masters 2,B,F,Single-ply
+1,Jackie Blasbery,1963,GBR,83.55,105,115,117.5,117.5,117.5,84,Masters 2,B,F,Single-ply
+2,Asa Halvarsson,1961,SWE,76.95,102.5,107.5,115,115,115,84,Masters 2,B,F,Single-ply
+3,Holly Oxford,1958,USA,83.2,92.5,102.5,-110,102.5,102.5,84,Masters 2,B,F,Single-ply
+4,Patricia Boord,1955,USA,81.9,62.5,67.5,-72.5,67.5,67.5,84,Masters 2,B,F,Single-ply
+1,Deborah Ferrell,1964,USA,124.4,-165,165,-168,165,165,84+,Masters 2,B,F,Single-ply
+2,Merja Mynttinen,1958,FIN,94.2,132.5,137.5,142.5,142.5,142.5,84+,Masters 2,B,F,Single-ply
+3,Annika Jutila,1962,FIN,102.8,107.5,-112.5,112.5,112.5,112.5,84+,Masters 2,B,F,Single-ply
+4,Paullete Calhoun,1958,USA,103,-105,105,-110,105,105,84+,Masters 2,B,F,Single-ply
+1,Susan Elwyn,1947,USA,46.4,42.5,52.5,-55,52.5,52.5,47,Masters 3,B,F,Single-ply
+1,Aira Knutars,1954,FIN,51.6,75,77.5,80,80,80,52,Masters 3,B,F,Single-ply
+2,Vuokko Viitasaari,1954,FIN,50.8,57.5,62.5,-67.5,62.5,62.5,52,Masters 3,B,F,Single-ply
+3,Denise Johnson,1947,USA,50.4,30,35,37.5,37.5,37.5,52,Masters 3,B,F,Single-ply
+1,Kumiko Nakazawa,1948,JPN,55.2,57.5,62.5,-70,62.5,62.5,57,Masters 3,B,F,Single-ply
+1,Chiyomi Sawa,1949,JPN,62.2,95,-105,-105,95,95,63,Masters 3,B,F,Single-ply
+2,Anita Thimm,1950,GER,61.2,70,72.5,75,75,75,63,Masters 3,B,F,Single-ply
+3,Anne Kemmerer,1953,USA,61.8,65,67.5,-70,67.5,67.5,63,Masters 3,B,F,Single-ply
+1,Sara Del Luca,1954,ITA,70.85,87.5,92.5,-95,92.5,92.5,72,Masters 3,B,F,Single-ply
+2,Martine Laurent,1951,FRA,71.05,65,72.5,75,75,75,72,Masters 3,B,F,Single-ply
+1,Hana Takáčová,1954,CZE,83.8,135,140,-142.5,140,140,84,Masters 3,B,F,Single-ply
+2,Eva Speth,1954,GER,80.65,100,102.5,105,105,105,84,Masters 3,B,F,Single-ply
+1,Masako Okumura,1930,JPN,46.8,40,-42.5,42.5,42.5,42.5,47,Masters 4,B,F,Single-ply
+1,Yoshiko Furukawa,1930,JPN,51.2,55,60,62.5,62.5,62.5,52,Masters 4,B,F,Single-ply
+2,Françoise Heligon,1943,FRA,47.8,50,-55,55,55,55,52,Masters 4,B,F,Single-ply
+3,Bebe Burns,1942,USA,49.6,40,45,-47.5,45,45,52,Masters 4,B,F,Single-ply
+1,Adina Hyková,1943,CZE,59,60,65,70,70,70,63,Masters 4,B,F,Single-ply
+2,Marietta Roberts,1944,USA,61.2,35,40,-47.5,40,40,63,Masters 4,B,F,Single-ply
+DQ,Sharon Hernstadt,1939,USA,70.15,-50,-50,-50,,,72,Masters 4,B,F,Single-ply

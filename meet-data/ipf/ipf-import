@@ -60,8 +60,11 @@ do
 	# Failures are denoted as "X", when we just want a blank space.
 	sed -i -e 's/,X,/,,/g' "results"${r_nums[$((ii-2))]}".csv"
 
-	#Skips are sometimes denotes as "#"
-	sed -i -e 's/,#,/,,/g' "results"${r_nums[$((ii-2))]}".csv"
+	# Skips are sometimes denotes as "#"
+	sed -i -e 's/#//g' "results"${r_nums[$((ii-2))]}".csv"
+
+	# Birth year sometimes has a question mark
+	sed -i -e 's/,?,/,,/g' "results"${r_nums[$((ii-2))]}".csv"
 
 	# Disqualifications use ascii 0x97, a long dash.
 	sed -i -e 's/\x97/DQ/g' "results"${r_nums[$((ii-2))]}".csv"	
