@@ -8,7 +8,6 @@
 
 
 from bs4 import BeautifulSoup
-import colorama
 import sys,os
 from os.path import join,realpath,dirname
 sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
@@ -81,7 +80,6 @@ def getmeetlist(html):
 
 
 def main():
-    colorama.init()
     meetlist = []
     for url in URLS:
         html = oplprobe.gethtml(url)
@@ -91,7 +89,6 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[IPF]'), unentered)
-    colorama.deinit()
 
 if __name__ == '__main__':
     main()
