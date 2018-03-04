@@ -2,15 +2,17 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::num;
 use std::fmt;
 use std::str::FromStr;
 
-use opldb::fields::WeightKg;
+use opldb::fields::{WeightAny, WeightKg};
+use opldb::WeightUnits;
 
 /// The definition of the "WeightClassKg" column.
-#[derive(Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum WeightClassKg {
     /// A class defined as being under or equal to a maximum weight.
     UnderOrEqual(WeightKg),
@@ -20,15 +22,68 @@ pub enum WeightClassKg {
     None,
 }
 
+/// Displayable, unit-less variant of WeightClassKg.
+///
+/// Becasue the type of the weight is forgotten, these weights
+/// are incomparable with each other.
+#[derive(Copy, Clone, Debug)]
+pub enum WeightClassAny {
+    UnderOrEqual(WeightAny),
+    Over(WeightAny),
+    None,
+}
+
+impl Serialize for WeightClassAny {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        // TODO: Short-circuit "None" case.
+        serializer.serialize_str(&format!("{}", self))
+    }
+}
+
+impl WeightClassKg {
+    pub fn as_kg(&self) -> WeightClassAny {
+        match *self {
+            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_kg()),
+            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_kg()),
+            WeightClassKg::None => WeightClassAny::None,
+        }
+    }
+
+    pub fn as_lbs(&self) -> WeightClassAny {
+        match *self {
+            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_lbs_class()),
+            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_lbs_class()),
+            WeightClassKg::None => WeightClassAny::None,
+        }
+    }
+
+    pub fn as_type(&self, unit: WeightUnits) -> WeightClassAny {
+        match unit {
+            WeightUnits::Kg => self.as_kg(),
+            WeightUnits::Lbs => self.as_lbs(),
+        }
+    }
+}
+
 impl fmt::Display for WeightClassKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        self.as_kg().fmt(f)
+    }
+}
+
+impl fmt::Display for WeightClassAny {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            &WeightClassKg::UnderOrEqual(ref x) => x.fmt(f),
-            &WeightClassKg::Over(ref x) => {
+            &WeightClassAny::UnderOrEqual(ref x) => x.fmt(f),
+            &WeightClassAny::Over(ref x) => {
                 x.fmt(f)?;
                 write!(f, "+")
             }
-            &WeightClassKg::None => Ok(()),
+            &WeightClassAny::None => Ok(()),
         }
     }
 }
@@ -90,5 +145,51 @@ mod tests {
 
         let w = "".parse::<WeightClassKg>().unwrap();
         assert_eq!(format!("{}", w), "");
+    }
+
+    fn assert_kg_to_lbs(kg: &str, lbs: &str) {
+        let w = kg.parse::<WeightClassKg>().unwrap();
+        assert_eq!(format!("{}", w.as_lbs()), lbs);
+    }
+
+    #[test]
+    fn test_lbs_rounding() {
+        // Traditional classes.
+        assert_kg_to_lbs("44", "97");
+        assert_kg_to_lbs("48", "105");
+        assert_kg_to_lbs("52", "114");
+        assert_kg_to_lbs("56", "123");
+        assert_kg_to_lbs("60", "132");
+        assert_kg_to_lbs("67.5", "148");
+        assert_kg_to_lbs("75", "165");
+        assert_kg_to_lbs("82.5", "181");
+        assert_kg_to_lbs("90", "198");
+        assert_kg_to_lbs("90+", "198+");
+        assert_kg_to_lbs("100", "220");
+        assert_kg_to_lbs("110", "242");
+        assert_kg_to_lbs("125", "275");
+        assert_kg_to_lbs("140", "308");
+        assert_kg_to_lbs("140+", "308+");
+
+        // IPF Men.
+        assert_kg_to_lbs("53", "116");
+        assert_kg_to_lbs("59", "130");
+        assert_kg_to_lbs("66", "145");
+        assert_kg_to_lbs("74", "163");
+        assert_kg_to_lbs("83", "183");
+        assert_kg_to_lbs("93", "205");
+        assert_kg_to_lbs("105", "231");
+        assert_kg_to_lbs("120", "264");
+        assert_kg_to_lbs("120+", "264+");
+
+        // IPF Women.
+        assert_kg_to_lbs("43", "94");
+        assert_kg_to_lbs("47", "103");
+        assert_kg_to_lbs("52", "114");
+        assert_kg_to_lbs("57", "125");
+        assert_kg_to_lbs("63", "138");
+        assert_kg_to_lbs("72", "158");
+        assert_kg_to_lbs("84", "185");
+        assert_kg_to_lbs("84+", "185+");
     }
 }

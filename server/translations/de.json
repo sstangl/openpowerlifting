@@ -1,0 +1,46 @@
+{
+	"units": {
+		"lbs": "Pfund",
+		"kg": "Kilogramm"
+	},
+	"equipment": {
+		"raw": "Raw",
+		"wraps": "Kniebandagen",
+		"single": "Single",
+		"multi": "Multi",
+		"straps": "Zughilfen"
+	},
+	"sex": {
+		"m": "M",
+		"f": "W"
+	},
+	"header": {
+		"rankings": "Platzierungen",
+		"meets": "Wettkämpfe",
+		"data": "Daten",
+		"faq": "FAQ",
+		"contact": "Kontakt",
+		"supportus": "Unterstütze uns"
+	},
+	"columns": {
+		"place": "Rang",
+		"formulaplace": "Rang nach Wilks",
+		"liftername": "Name",
+		"federation": "Verband",
+		"date": "Datum",
+		"location": "Austragungsort",
+		"meetname": "Wettkampf",
+		"division": "Kategorie",
+		"sex": "Geschlecht",
+		"age": "Alter",
+		"equipment": "Ausrüstung",
+		"weightclass": "Gewichtsklasse",
+		"bodyweight": "Körpergewicht",
+		"squat": "Kniebeuge",
+		"bench": "Bankdrücken",
+		"deadlift": "Kreuzheben",
+		"total": "Total",
+		"wilks": "Wilks"
+	},
+	"search": "Suche"
+}

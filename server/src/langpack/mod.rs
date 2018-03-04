@@ -16,14 +16,20 @@ use opldb::fields;
 #[allow(non_camel_case_types)]
 #[derive(Clone, Copy, Debug, Serialize)]
 pub enum Language {
+    /// German, without regional variance.
+    de,
     /// English, without regional variance (US).
     en,
     /// Esperanto.
     eo,
     /// Spanish.
     es,
+    /// Finnish.
+    fi,
     /// French.
     fr,
+    /// Italian.
+    it,
     /// Russian.
     ru,
 }
@@ -43,10 +49,13 @@ impl FromStr for Language {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
+            "de" => Ok(Language::de),
             "en" => Ok(Language::en),
             "eo" => Ok(Language::eo),
             "es" => Ok(Language::es),
+            "fi" => Ok(Language::fi),
             "fr" => Ok(Language::fr),
+            "it" => Ok(Language::it),
             "ru" => Ok(Language::ru),
             _ => Err(()),
         }
@@ -118,20 +127,26 @@ pub struct Translations {
 
 /// Owner struct of all translation state.
 pub struct LangInfo {
+    de: Option<Translations>,
     en: Option<Translations>,
     eo: Option<Translations>,
     es: Option<Translations>,
+    fi: Option<Translations>,
     fr: Option<Translations>,
+    it: Option<Translations>,
     ru: Option<Translations>,
 }
 
 impl LangInfo {
     pub fn new() -> LangInfo {
         LangInfo {
+            de: None,
             en: None,
             eo: None,
             es: None,
+            fi: None,
             fr: None,
+            it: None,
             ru: None,
         }
     }
@@ -149,10 +164,13 @@ impl LangInfo {
         let trans = serde_json::from_str(&contents)?;
 
         match language {
+            Language::de => self.de = trans,
             Language::en => self.en = trans,
             Language::eo => self.eo = trans,
             Language::es => self.es = trans,
+            Language::fi => self.fi = trans,
             Language::fr => self.fr = trans,
+            Language::it => self.it = trans,
             Language::ru => self.ru = trans,
         };
 
@@ -161,10 +179,13 @@ impl LangInfo {
 
     pub fn get_translations<'a>(&'a self, language: Language) -> &'a Translations {
         match language {
+            Language::de => self.de.as_ref().unwrap(),
             Language::en => self.en.as_ref().unwrap(),
             Language::eo => self.eo.as_ref().unwrap(),
             Language::es => self.es.as_ref().unwrap(),
+            Language::fi => self.fi.as_ref().unwrap(),
             Language::fr => self.fr.as_ref().unwrap(),
+            Language::it => self.it.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
         }
     }
