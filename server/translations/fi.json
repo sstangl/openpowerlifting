@@ -1,0 +1,46 @@
+{
+	"units": {
+		"lbs": "lbs",
+		"kg": "kg"
+	},
+	"equipment": {
+		"raw": "Raw",
+		"wraps": "Polvisiteet",
+		"single": "Single",
+		"multi": "Multi",
+		"straps": "Vetoremmit"
+	},
+	"sex": {
+		"m": "M",
+		"f": "N"
+	},
+	"header": {
+		"rankings": "Sijoitukset",
+		"meets": "Kilpailut",
+		"data": "Data",
+		"faq": "UKK",
+		"contact": "Ota Yhteyttä",
+		"supportus": "Tue Meitä"
+	},
+	"columns": {
+		"place": "Sija",
+		"formulaplace": "Sija Pisteillä",
+		"liftername": "Nimi",
+		"federation": "Liitto",
+		"date": "Päivämäärä",
+		"location": "Sijainti",
+		"meetname": "Kilpailun Nimi",
+		"division": "Sarja",
+		"sex": "Sukupuoli",
+		"age": "Ikä",
+		"equipment": "Varusteet",
+		"weightclass": "Painoluokka",
+		"bodyweight": "Paino",
+		"squat": "Jalkakyykky",
+		"bench": "Penkkipunnerrus",
+		"deadlift": "Maastaveto",
+		"total": "Yhteistulos",
+		"wilks": "Wilks"
+	},
+	"search": "Haku"
+}

@@ -1,35 +1,257 @@
-Name,Country,Equipment,Event,Sex,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Place
-Steph Puddicome,CAN,Single-ply,SBD,F,F-O,52.54,57,152.5,-162.5,165,165,85,92.5,97.5,97.5,150,167.5,175,175,437.5,1
-Eliraz Katz,ISR,Single-ply,SBD,F,F-O,62.46,63,155,-165,-165,155,-82.5,-82.5,-82.5,,155,-167.5,-167.5,155,,DQ
-Jessica O'Donnell,USA,Single-ply,SBD,F,F-O,97.32,84+,-220,-225,230,230,155,165,170,170,205,215,-220,215,615,1
-Marisa Inda,USA,Raw,SBD,F,FR-O,50.27,52,127.5,132.5,-137.5,132.5,82.5,-85,-85,82.5,155,165,175,175,390,1
-Tina Daneshmand,USA,Raw,SBD,F,FR-O,51.13,52,110,117.5,125,125,72.5,77.5,80,80,155,165,170,170,375,2
-Lauren Rutan,USA,Raw,SBD,F,FR-O,56.57,57,135,-142.5,-142.5,135,80,-85,-85,80,145,155,-157.5,155,370,1
-Jennifer Thompson,USA,Raw,SBD,F,FR-O,61.67,63,130,142.5,147.5,147.5,125,137.5,141,141,160,192.5,197.5,197.5,486,1
-Victoria Liang,USA,Raw,SBD,F,FR-O,62.61,63,147.5,-152.5,152.5,152.5,95,100,-105,100,165,-177.5,177.5,177.5,430,2
-Chelsea Savit,USA,Raw,SBD,F,FR-O,71.71,72,155,165,172.5,172.5,107.5,112.5,117.5,117.5,185,195,202.5,202.5,492.5,1
-Natalie Hanson,USA,Raw,SBD,F,FR-O,82.67,84,180,190,197.5,197.5,100,105,-110,105,182.5,195,202.5,202.5,505,1
-Alicia Webb,USA,Raw,SBD,F,FR-O,82.84,84,170,177.5,182.5,182.5,107.5,115,-120,115,165,175,185,185,482.5,2
-LeeAnn Hewitt,USA,Raw,SBD,F,FR-O,151.57,84+,235,-250,-250,235,102.5,110,112.5,112.5,210,-227.5,227.5,227.5,575,1
-Alexander Kang,USA,Single-ply,SBD,M,M-O,65.59,66,230,-245,-245,230,75,135,-142.5,135,227.5,247.5,-262.5,247.5,612.5,1
-Basem El Karnkouti,USA,Single-ply,SBD,M,M-O,92.74,93,290,300,305,305,220,225,230,230,310,320,325,325,860,1
-Erik Kasabuske,USA,Single-ply,SBD,M,M-O,92.66,93,310,322.5,-327.5,322.5,187.5,195,-200,195,295,307.5,-342.5,307.5,825,2
-Joakim Lakso,SWE,Single-ply,SBD,M,M-O,104.55,105,305,315,325,325,220,230,235,235,275,285,300,300,860,1
-Blaine Sumner,USA,Single-ply,SBD,M,M-O,167.51,120+,425,475,500,500,215,375,401.5,401.5,305,330,370,370,1271.5,1
-Fredrik Svensson,SWE,Single-ply,SBD,M,M-O,156.57,120+,345,360,370,370,340,-355,-355,340,287.5,312.5,-335,312.5,1022.5,2
-Scott Dobbins,USA,Single-ply,SBD,M,M-O,123.8,120+,375,-400,400,400,275,285,295,295,-285,287.5,310,310,1005,3
-Dustin Meaux,USA,Single-ply,SBD,M,M-O,153.6,120+,355,367.5,377.5,377.5,-300,-300,-300,,225,275,295,295,,DQ
-Keith McHoney,USA,Raw,SBD,M,MR-O,64.78,66,220,235,237.5,237.5,137.5,142.5,150,150,252.5,262.5,267.5,267.5,655,1
-Brett Gibbs,CAN,Raw,SBD,M,MR-O,82.48,83,-275,-275,275,275,190,-206,206,206,295,320,-330,320,801,1
-Sean Noriega,USA,Raw,SBD,M,MR-O,81.9,83,235,250,-260,250,157.5,165,170,170,262.5,282.5,287.5,287.5,707.5,2
-John Downing,USA,Raw,SBD,M,MR-O,82.23,83,-270,-270,-270,,155,165,-180,165,250,260,-265,260,,DQ
-LS McClain,USA,Raw,SBD,M,MR-O,92.84,93,257.5,-270,270,270,207.5,217.5,222.5,222.5,285,300,-312.5,300,792.5,1
-Ryan Doris,USA,Raw,SBD,M,MR-O,91.39,93,260,280,292.5,292.5,160,170,177.5,177.5,260,280,-297.5,280,750,2
-David Ricks,USA,Raw,SBD,M,MR-O,91.73,93,262.5,-282.5,-282.5,262.5,172.5,185,192.5,192.5,257.5,280,292.5,292.5,747.5,3
-Bryce Lewis,USA,Raw,SBD,M,MR-O,103.08,105,272.5,290,302.5,302.5,192.5,202.5,212.5,212.5,315,332.5,345.5,345.5,860.5,1
-Eli Burks,USA,Raw,SBD,M,MR-O,103.5,105,272.5,287.5,297.5,297.5,175,185,190,190,325,342.5,362.5,362.5,850,2
-Dennis Cornelius,USA,Raw,SBD,M,MR-O,119.18,120,342.5,362.5,376,376,232.5,243,250.5,250.5,320,332.5,345,345,971.5,1
-Hifon Smith,USA,Raw,SBD,M,MR-O,119.5,120,352.5,362.5,367.5,367.5,197.5,202.5,205,205,357.5,372,-375,372,944.5,2
-Michael Tuchscherer,USA,Raw,SBD,M,MR-O,119.21,120,-312.5,312.5,332.5,332.5,192.5,-207.5,207.5,207.5,335,-357.5,,335,875,3
-Ray Williams,USA,Raw,SBD,M,MR-O,180.77,120+,-390,-412.5,412.5,412.5,225,235,-245,235,330,350,365,365,1012.5,1
-Andy Askow,USA,Raw,SBD,M,MR-O,170.03,120+,335,345,365,365,212.5,225,-237.5,225,297.5,312.5,-332.5,312.5,902.5,2
+Name,Equipment,Event,Sex,Division,WeightClassKg,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Place
+Koji Higashisaka,Raw,B,M,Open,59,1979,JPN,58.8,155,160,-162.5,160,160,1
+Dariusz Wszola,Raw,B,M,Open,59,1978,POL,58.6,140,147.5,-152.5,147.5,147.5,2
+Trelles Niel Moises Garcia,Raw,B,M,Open,59,1973,PER,58.2,130,140,-150,140,140,3
+Ivan Chuprynko,Raw,B,M,Open,66,1986,UKR,65.8,180,186,188,188,,DD
+Tsotne Bezhashvili,Raw,B,M,Open,66,1985,GEO,65.6,175,185,187.5,187.5,,DD
+Keita Saito,Raw,B,M,Open,66,1982,JPN,65.4,160,-167.5,167.5,167.5,167.5,1
+Masashi Fukuda,Raw,B,M,Open,66,1984,JPN,65.6,152.5,162.5,-170,162.5,162.5,2
+Adam Balawejder,Raw,B,M,Open,66,1981,POL,66,162.5,-170,-170,162.5,162.5,3
+Machiel Botha,Raw,B,M,Open,66,1989,RSA,64.2,132.5,137.5,-140,137.5,137.5,4
+Phillipp Ziemer,Raw,B,M,Open,66,1990,GER,64.9,130,137.5,-140,137.5,137.5,5
+Ivan Vers,Raw,B,M,Open,66,1991,RSA,64.8,120,130,-140,130,130,6
+Daiki Kodama,Raw,B,M,Open,74,1979,JPN,72,202.5,207.5,-211.5,207.5,207.5,1
+Yusuke Suzuki,Raw,B,M,Open,74,1984,JPN,71.9,190,-202.5,-202.5,190,190,2
+Paul Campbell,Raw,B,M,Open,74,1983,GBR,73.2,135,140,145,145,145,3
+Jonathan Kariv,Raw,B,M,Open,74,1983,RSA,73.7,130,137.5,-142.5,137.5,137.5,4
+Caleb Voice,Raw,B,M,Open,83,1989,AUS,82,190,197.5,200,200,200,1
+Levani Giligashvili,Raw,B,M,Open,83,1982,GEO,82.5,182.5,192.5,200,200,200,2
+Yasuhiro Shida,Raw,B,M,Open,83,1988,JPN,82.3,190,-197.5,-200,190,190,3
+Edward Karim,Raw,B,M,Open,83,1990,GBR,81.4,170,175,182.5,182.5,182.5,4
+Dennis Cieri,Raw,B,M,Open,93,1968,USA,92.4,-220,220,222.5,222.5,222.5,1
+LS McClain,Raw,B,M,Open,93,1978,USA,92.6,210,215,222.5,222.5,222.5,2
+Davit Gabelaia,Raw,B,M,Open,93,1989,GEO,92.5,210,217.5,-225,217.5,217.5,3
+Pekka Kulju,Raw,B,M,Open,93,1984,FIN,92.3,192.5,200,-215,200,200,4
+Marcus Grahn,Raw,B,M,Open,93,1990,SWE,92.2,180,190,-200,190,190,5
+Edvard Heimen,Raw,B,M,Open,93,1988,NOR,92.7,190,-200,-200,190,190,6
+Naoki Hasegawa,Raw,B,M,Open,93,1992,JPN,92.1,-200,-200,-200,,,DQ
+Sami Pullinen,Raw,B,M,Open,105,1983,FIN,104.7,205,215,220,220,220,1
+Kohlton Parenteau,Raw,B,M,Open,105,1990,CAN,103.2,212.5,-217.5,217.5,217.5,217.5,2
+Denis Rybka,Raw,B,M,Open,105,1985,KAZ,103.5,-212.5,-212.5,212.5,212.5,212.5,3
+Tommy Janusz,Raw,B,M,Open,105,1986,USA,95.5,185,195,210,210,210,4
+Jarno Leppamaki,Raw,B,M,Open,105,1985,FIN,103.9,210,-215,-215,210,210,5
+Anthony Succarotte,Raw,B,M,Open,105,1965,USA,103,192.5,-202.5,-202.5,192.5,192.5,6
+Nicholas Deetlefs,Raw,B,M,Open,105,1984,RSA,104.2,190,-200,-200,190,190,7
+Tomasz Obcowski,Raw,B,M,Open,105,1979,POL,103.6,-210,-210,-210,,,DQ
+Majid Shahnavaz,Raw,B,M,Open,105,1981,IRI,104.8,-200,-200,-212.5,,,DQ
+Andreas Henning,Raw,B,M,Open,105,1982,SWE,105,-207.5,-207.5,-207.5,,,DQ
+Timo Hokkanen,Raw,B,M,Open,120,1979,FIN,117.55,230,240,245,245,245,1
+Robert Zajicek III,Raw,B,M,Open,120,1990,USA,116.55,232.5,237.5,-240,237.5,237.5,2
+Benedict Bucarizza,Raw,B,M,Open,120,1991,RSA,116.75,230,-237.5,-240,230,230,3
+Markus Karner,Raw,B,M,Open,120,1970,AUT,118.7,225,-232.5,-232.5,225,225,4
+Pavol Demčák,Raw,B,M,Open,120,1977,CZE,119.05,215,225,-232.5,225,225,5
+Shinto Kinoshita,Raw,B,M,Open,120,1985,JPN,118.45,195,207.5,212.5,212.5,212.5,6
+Gerard Correia,Raw,B,M,Open,120,1978,RSA,115.85,202.5,-210,210,210,210,7
+Valerii Melnyk,Raw,B,M,Open,120,1987,UKR,115.8,200,-210,-210,200,200,8
+Thomas Davis,Raw,B,M,Open,120+,1992,USA,196.1,257.5,272.5,282.5,282.5,,DD
+Reza Jahangir Mohammad,Raw,B,M,Open,120+,1989,IRI,161.15,232.5,242.5,252.5,252.5,252.5,1
+Alvin Roswell,Raw,B,M,Open,120+,1990,USA,145.05,220,227.5,235,235,235,2
+Jaroslav Šoukal,Raw,B,M,Open,120+,1972,CZE,170.85,222.5,230,-237.5,230,230,3
+Bela Csullog,Raw,B,M,Open,120+,1988,HUN,127.5,200,220,-230,220,220,4
+Ali Jahangir Mohammad,Raw,B,M,Open,120+,1981,IRI,166.3,180,192.5,202.5,202.5,202.5,5
+Damon Langeveldt,Raw,B,M,Sub-Juniors,53,1998,RSA,51.9,75,80,-82.5,80,80,1
+Aibol Kurmanov,Raw,B,M,Sub-Juniors,66,1998,KAZ,64.8,112.5,120,127.5,127.5,127.5,1
+Mpho Hlanyane,Raw,B,M,Sub-Juniors,66,2000,RSA,62.7,90,-95,-97.5,90,90,2
+Ruben van der Linde,Raw,B,M,Sub-Juniors,66,1998,RSA,62.7,-90,90,-95,90,90,3
+Yonela Mbembe,Raw,B,M,Sub-Juniors,74,1998,RSA,71.8,145,155,160,160,160,1
+Zhavlan Shaukatov,Raw,B,M,Sub-Juniors,74,1998,KAZ,73.7,130,140,-156,140,140,2
+Orbert Booysen,Raw,B,M,Sub-Juniors,74,1998,RSA,71.7,105,112.5,-117.5,112.5,112.5,3
+Hossein Saghaei,Raw,B,M,Sub-Juniors,74,1999,IRI,71.9,87.5,97.5,-102.5,97.5,97.5,4
+Jemali Nandoshvili,Raw,B,M,Sub-Juniors,83,1998,GEO,77.6,150,167,172,172,172,1
+Elan Donninger,Raw,B,M,Sub-Juniors,83,1999,RSA,74.4,105,112.5,117.5,117.5,117.5,2
+Alexander Voigt,Raw,B,M,Sub-Juniors,93,1999,GER,91.2,110,117.5,122.5,122.5,122.5,1
+Bulelani Ngaki,Raw,B,M,Sub-Juniors,93,2000,RSA,86.5,110,115,120,120,120,2
+Dawid Grzegorczuk,Raw,B,M,Sub-Juniors,105,1998,POL,101.6,200,210,217.5,217.5,217.5,1
+Takhirzhan Abdurakhmanov,Raw,B,M,Sub-Juniors,105,1998,KAZ,100.2,110,122.5,130,130,130,2
+Aaref Almahri,Raw,B,M,Sub-Juniors,105,2000,UAE,99.6,40,60,70,70,70,3
+Islam Karabayev,Raw,B,M,Sub-Juniors,120,1998,KAZ,110.7,110,125,132.5,132.5,132.5,1
+Ryuki Fujimoto,Raw,B,M,Sub-Juniors,120+,2000,JPN,127.7,210,-222.5,-222.5,210,210,1
+Mahdi Saghaei,Raw,B,M,Sub-Juniors,120+,1998,IRI,147.3,137.5,147.5,152.5,152.5,152.5,2
+Johnde Victor,Raw,B,M,Sub-Juniors,120+,1998,RSA,138,132.5,145,150,150,150,3
+Eldar Iristayev,Raw,B,M,Juniors,53,1995,KAZ,52.2,70,80,87.5,87.5,87.5,1
+Alisher Makhmudov,Raw,B,M,Juniors,59,1995,KAZ,58.2,122.5,127.5,132.5,132.5,132.5,1
+Masashi Kishimoto,Raw,B,M,Juniors,59,1993,JPN,57.9,120,125,130,130,130,2
+Andrzej Paszko,Raw,B,M,Juniors,66,1994,POL,64.6,132.5,142.5,-155,142.5,142.5,1
+Nicholas Vinciguerra,Raw,B,M,Juniors,66,1996,USA,64.6,130,-140,-145,130,130,2
+Masatatsu Hondo,Raw,B,M,Juniors,74,1995,JPN,66.4,160,167.5,-175,167.5,167.5,1
+Hubert Klak,Raw,B,M,Juniors,74,1996,POL,72.4,155,165,-175,165,165,2
+Patrick Hartung,Raw,B,M,Juniors,74,1994,GER,73.1,145,-152.5,152.5,152.5,152.5,3
+Tadahiro Fukuda,Raw,B,M,Juniors,74,1996,JPN,71.8,135,145,-152.5,145,145,4
+Dusan Sedivy,Raw,B,M,Juniors,74,1995,CZE,72.6,145,-152.5,-152.5,145,145,5
+James Macintosh,Raw,B,M,Juniors,74,1993,RSA,73,125,-130,130,130,130,6
+Sindwillis Pietersen,Raw,B,M,Juniors,74,1995,RSA,72.8,115,122.5,127.5,127.5,127.5,7
+Dullah Miah,Raw,B,M,Juniors,74,1994,GBR,68.4,115,-125,125,125,125,8
+Matias Kulmala,Raw,B,M,Juniors,83,1994,FIN,82.6,175,180,185,185,185,1
+Yuki Daido,Raw,B,M,Juniors,83,1994,JPN,81.6,147.5,155,160,160,160,2
+Tshepo Rapoo,Raw,B,M,Juniors,83,1993,RSA,80.3,135,-140,140,140,140,3
+Elfranco Holder,Raw,B,M,Juniors,93,1993,RSA,87,167.5,172.5,-177.5,172.5,172.5,1
+Sam Hinks,Raw,B,M,Juniors,93,1994,GBR,92.5,165,172.5,-177.5,172.5,172.5,2
+Adrian Smith,Raw,B,M,Juniors,93,1995,RSA,91.5,140,150,155,155,155,3
+Francois Maritz,Raw,B,M,Juniors,105,1993,RSA,102.2,165,172.5,-180,172.5,172.5,1
+Balal Ahmed,Raw,B,M,Juniors,105,1993,GBR,101.5,125,132.5,140,140,140,2
+Mariusz Hintzke,Raw,B,M,Juniors,105,1994,POL,98.5,-200,-200,-200,,,DQ
+Dmytro Vovk,Raw,B,M,Juniors,120,1996,UKR,118.2,-210,210,222.5,222.5,222.5,1
+Yevhen Vasyliev,Raw,B,M,Juniors,120,1993,UKR,116.7,200,210,-215,210,210,2
+Graham Mellor,Raw,B,M,Juniors,120+,1994,GBR,156.9,160,-170,170,170,170,1
+Edgar Katushabe,Raw,B,M,Juniors,120+,1993,RSA,129.7,140,150,160,160,160,2
+Eitaro Yoshizawa,Raw,B,M,Masters 1,59,1974,JPN,58.5,-127.5,127.5,142.5,142.5,142.5,1
+Mitsuo Kametani,Raw,B,M,Masters 1,66,1971,JPN,65,150,-152.5,155,155,155,1
+Tomi Halmesmaki,Raw,B,M,Masters 1,66,1976,FIN,65.2,140,-150,-152.5,140,140,2
+Tetsuo Moriyama,Raw,B,M,Masters 1,74,1971,JPN,72.8,155,160,-170,160,160,1
+Steve Petrencak,Raw,B,M,Masters 1,74,1968,USA,69.5,130,135,145,145,145,2
+Marlon Daniels,Raw,B,M,Masters 1,74,1975,RSA,72.8,140,145,-147.5,145,145,3
+Farhad Saiepour,Raw,B,M,Masters 1,74,1974,GBR,71.8,110,117.5,120,120,120,4
+Markus Schick,Raw,B,M,Masters 1,83,1976,GER,81.8,-182.5,182.5,-195.5,182.5,182.5,1
+Leonid Plotnytskiy,Raw,B,M,Masters 1,83,1973,UKR,80.1,165,170,-182.5,170,170,2
+Horitaka Koguchi,Raw,B,M,Masters 1,83,1974,JPN,81.3,140,150,-160,150,150,3
+Christian Clark,Raw,B,M,Masters 1,83,1972,USA,80.4,-125,125,130,130,130,4
+Sheridan Wray,Raw,B,M,Masters 1,93,1974,GBR,92.1,177.5,180,-182.5,180,180,1
+Michael Carroll,Raw,B,M,Masters 1,93,1970,AUS,90.4,150,-155,-155,150,150,2
+Thomas Mazzotta,Raw,B,M,Masters 1,93,1967,USA,86.3,90,100,-107.5,100,100,3
+Masaya Watanabe,Raw,B,M,Masters 1,93,1973,JPN,91.6,-170,-170,-170,,,DQ
+Anders Henriksson,Raw,B,M,Masters 1,105,1975,SWE,103.7,195,200,-205,200,200,1
+Sami Makela,Raw,B,M,Masters 1,105,1973,FIN,104.3,180,192.5,-205,192.5,192.5,2
+Clint Poore,Raw,B,M,Masters 1,105,1973,USA,103.8,190,-197.5,-197.5,190,190,3
+Toshio Nakamura,Raw,B,M,Masters 1,105,1970,JPN,103.3,157.5,167.5,-177.5,167.5,167.5,4
+Richard Twycross-Lewis,Raw,B,M,Masters 1,105,1976,GBR,103.3,157.5,165,-170,165,165,5
+Ron Doiron,Raw,B,M,Masters 1,105,1967,USA,101,140,155,-170,155,155,6
+Malone Horn,Raw,B,M,Masters 1,120,1970,RSA,116.5,200,205,210,210,210,1
+Ronny Reimling,Raw,B,M,Masters 1,120,1976,GER,118.7,190,202.5,-212.5,202.5,202.5,2
+Takatoshi Ishii,Raw,B,M,Masters 1,120+,1973,JPN,172.8,207.5,217.5,222.5,222.5,222.5,1
+Joe Dibert,Raw,B,M,Masters 1,120+,1969,USA,140.5,195,205,212.5,212.5,212.5,2
+Omar Aldhaheri,Raw,B,M,Masters 1,120+,1971,UAE,185.3,212.5,-222.5,-222.5,212.5,212.5,3
+Ian Mouton,Raw,B,M,Masters 1,120+,1974,RSA,140.2,205,-215,-215,205,205,4
+Fanie du Preez,Raw,B,M,Masters 1,120+,1973,RSA,132.5,140,147.5,150,150,150,5
+Yuji Takada,Raw,B,M,Masters 2,59,1965,JPN,58.1,140,148,-152,148,148,1
+Takashi Ono,Raw,B,M,Masters 2,59,1964,JPN,58.4,95,115,-120,115,115,2
+Oleksandr Chernyshov,Raw,B,M,Masters 2,66,1966,UKR,65.2,135.5,141,-150.5,141,141,1
+Norio Ikegami,Raw,B,M,Masters 2,66,1963,JPN,65.26,125,130,-135,130,130,2
+Tahvo Jauhojärvi,Raw,B,M,Masters 2,66,1961,FIN,64.7,110,-117.5,-117.5,110,110,3
+Frank Wunderlich,Raw,B,M,Masters 2,66,1964,GER,63.9,100,102.5,-110,102.5,102.5,4
+JC Bruce,Raw,B,M,Masters 2,66,1963,RSA,64.4,82.5,-87.5,-87.5,82.5,82.5,5
+Vincent Patty,Raw,B,M,Masters 2,74,1964,AUS,71.4,145,150,152.5,152.5,152.5,1
+Lars Karlsson,Raw,B,M,Masters 2,74,1966,SWE,72.7,140,145,-155,145,145,2
+Juji Otani,Raw,B,M,Masters 2,74,1957,JPN,72.2,130,137.5,140,140,140,3
+Ari Oksanen,Raw,B,M,Masters 2,74,1964,FIN,72.2,132.5,137.5,-142.5,137.5,137.5,4
+Mike Grizibek,Raw,B,M,Masters 2,74,1966,GER,72.3,125,-130,-130,125,125,5
+Tommie de Nysschen,Raw,B,M,Masters 2,74,1963,RSA,73.1,105,112.5,117.5,117.5,117.5,6
+Markku Vaisanen,Raw,B,M,Masters 2,83,1965,FIN,81.8,165,170.5,-180,170.5,170.5,1
+Katsunobu Kojima,Raw,B,M,Masters 2,83,1966,JPN,82.1,150,155,-165,155,155,2
+Jack Rubio,Raw,B,M,Masters 2,83,1964,USA,78.5,142.5,-145,145,145,145,3
+Arthur Hirner,Raw,B,M,Masters 2,83,1957,GER,81.7,142.5,-145,-145,142.5,142.5,4
+Jun Yamane,Raw,B,M,Masters 2,83,1965,JPN,75.9,135,-142.5,-142.5,135,135,5
+Mohammad Bahaeddin Azizibaneh,Raw,B,M,Masters 2,83,1959,IRI,81.7,130,-140,-145,130,130,6
+Mike Burns,Raw,B,M,Masters 2,93,1966,USA,90.1,167.5,172.5,175,175,175,1
+Tadafumi Nakazawa,Raw,B,M,Masters 2,93,1966,JPN,92.2,167.5,172.5,175,175,175,2
+Howard Sturman,Raw,B,M,Masters 2,93,1958,USA,90.5,155,162.5,167.5,167.5,167.5,3
+Prem Bajaj,Raw,B,M,Masters 2,93,1966,AUS,89.6,157.5,162.5,-165,162.5,162.5,4
+Stuart Hamilton,Raw,B,M,Masters 2,93,1964,GBR,90.3,162.5,-167.5,-167.5,162.5,,DD
+Andrew Rigby,Raw,B,M,Masters 2,105,1962,GBR,104.3,200,210,217.5,217.5,217.5,1
+Reza Saghaei,Raw,B,M,Masters 2,105,1966,IRI,96,192.5,200,-210,200,200,2
+Greg Titus,Raw,B,M,Masters 2,105,1966,USA,99.7,172.5,180,182.5,182.5,182.5,3
+Ennis White,Raw,B,M,Masters 2,105,1964,USA,104.6,175,-182.5,-187.5,175,175,4
+Kazuhisa Ono,Raw,B,M,Masters 2,105,1962,JPN,98.9,170,-180,-180,170,170,5
+Colin Young,Raw,B,M,Masters 2,105,1957,RSA,102.1,140,147.5,-150,147.5,147.5,6
+Christo Schoonraad,Raw,B,M,Masters 2,105,1963,RSA,100.8,-130,130,-147.5,130,130,7
+Gerhardus Oosthuizen,Raw,B,M,Masters 2,120,1964,RSA,117.7,190,200,205,205,205,1
+Andree Vogel,Raw,B,M,Masters 2,120,1966,GER,116.1,177.5,-182.5,182.5,182.5,182.5,2
+Marc Giles,Raw,B,M,Masters 2,120,1964,GBR,110.9,155,162.5,177.5,177.5,177.5,3
+Andrew Ludik,Raw,B,M,Masters 2,120,1957,RSA,113.1,125,135,-140,135,135,4
+Lance Robbins,Raw,B,M,Masters 2,120,1963,USA,108.6,120,-135,-137.5,120,120,5
+Brett Robbins,Raw,B,M,Masters 2,120,1963,USA,109.9,120,-137.5,-137.5,120,120,6
+Georg Haug,Raw,B,M,Masters 2,120+,1965,GER,146.9,187.5,195,-200,195,195,1
+Carl Werda,Raw,B,M,Masters 2,120+,1966,USA,141.6,152.5,170,-180,170,170,2
+Sam Felts,Raw,B,M,Masters 3,59,1952,USA,58.1,95,105,-108,105,105,1
+Mel Tatsumi,Raw,B,M,Masters 3,59,1948,USA,53.4,62.5,67.5,-75,67.5,67.5,2
+Seppo Flink,Raw,B,M,Masters 3,66,1953,FIN,65,80,85,-90,85,85,1
+Antero Kauranen,Raw,B,M,Masters 3,74,1948,FIN,72,117.5,-122.5,122.5,122.5,122.5,1
+Youji Shimoyama,Raw,B,M,Masters 3,74,1951,JPN,71.5,115,120,-122.5,120,120,2
+Gerhard Baumeister,Raw,B,M,Masters 3,83,1952,GER,81.6,130,135,-148.5,135,135,1
+Voitto Ahopelto,Raw,B,M,Masters 3,83,1956,FIN,82.4,115,-117.5,117.5,117.5,117.5,2
+Akio Fujimoto,Raw,B,M,Masters 3,83,1949,JPN,78.6,110,112.5,115,115,115,3
+Claude Welcome,Raw,B,M,Masters 3,93,1951,USA,88.7,135,140,-145,140,140,1
+Lutz Schuricht,Raw,B,M,Masters 3,93,1951,GER,90.6,132.5,140,-142.5,140,140,2
+Floyd Givens,Raw,B,M,Masters 3,105,1951,USA,97,105,120,132.5,132.5,132.5,1
+Kevin Hutchinson,Raw,B,M,Masters 3,120,1954,USA,110.8,137.5,145,157.5,157.5,157.5,1
+Allan Fuglsang,Raw,B,M,Masters 3,120,1950,DEN,110.7,135,142.5,-155,142.5,142.5,2
+David Wolf,Raw,B,M,Masters 3,120+,1954,USA,123.3,112.5,127.5,-137.5,127.5,127.5,1
+Hideharu Akagi,Raw,B,M,Masters 4,66,1944,JPN,65.2,95,105,110,110,110,1
+Iosif Plagov,Raw,B,M,Masters 4,74,1935,USA,67.4,80,90,97.5,97.5,97.5,1
+Dan Oppenheim,Raw,B,M,Masters 4,74,1945,RSA,72.3,90,95,-100,95,95,2
+Mike Settles,Raw,B,M,Masters 4,83,1944,USA,81.1,122.5,130,-135.5,130,130,1
+Yasushi Iida,Raw,B,M,Masters 4,83,1943,JPN,81.7,120,130,-135.5,130,130,2
+Alexander Lee,Raw,B,M,Masters 4,83,1944,GBR,78.9,115,120,125,125,125,3
+Kazimierz Forys,Raw,B,M,Masters 4,93,1945,GER,90.6,130,135,-140,135,135,1
+Peer Bjaaland,Raw,B,M,Masters 4,93,1942,NOR,87.8,120,125,127.5,127.5,127.5,2
+John Dellow,Raw,B,M,Masters 4,93,1941,AUS,91.5,120,127.5,-130,127.5,127.5,3
+Tom Collins,Raw,B,M,Masters 4,105,1946,GBR,103.7,142.5,152.5,155,155,155,1
+John Moore,Raw,B,M,Masters 4,105,1937,USA,98.1,95,107.5,115,115,115,2
+Mujir El Alami,Raw,B,M,Masters 4,120,1946,SWE,108.2,110,130,-145,130,130,1
+Brian Donnelly,Raw,B,M,Masters 4,120+,1942,USA,134.6,117.5,127.5,-137.5,127.5,127.5,1
+Mariska Casey,Raw,B,F,Open,47,1978,RSA,46.9,50,55,-57.5,55,55,1
+Hanna Rantala,Raw,B,F,Open,52,1982,FIN,51.4,87.5,92.5,95,95,95,1
+Ganna Kadatska,Raw,B,F,Open,52,1977,UKR,51.4,85,90,-97.5,90,90,2
+Antoinette Kriel,Raw,B,F,Open,52,1971,RSA,51.4,82.5,87.5,-92.5,87.5,87.5,3
+Danielle Malcolm,Raw,B,F,Open,52,1991,GBR,51.4,70,72.5,75,75,75,4
+Daiva Zaroviene,Raw,B,F,Open,57,1965,LTU,55.7,92.5,97.5,102.5,102.5,102.5,1
+Monika Sroczyk,Raw,B,F,Open,57,1992,POL,56.6,95,100,-105,100,100,2
+Nina Eriksson,Raw,B,F,Open,57,1989,SWE,56.2,77.5,82.5,87.5,87.5,87.5,3
+Serita Plaaitjies,Raw,B,F,Open,57,1982,RSA,57,75,80,-85,80,80,4
+Fanney Hauksdóttir,Raw,B,F,Open,63,1992,ISL,61.6,102.5,105,-110,105,105,1
+Karolina Arvidson,Raw,B,F,Open,63,1985,SWE,63,72.5,77.5,80,80,80,2
+Hollie Johnson,Raw,B,F,Open,63,1991,GBR,61.7,67.5,72.5,-77.5,72.5,72.5,3
+Amanda Bowker,Raw,B,F,Open,63,1991,USA,61.3,62.5,70,-77.5,70,70,4
+Anna Kennett,Raw,B,F,Open,63,1983,GBR,62.1,67.5,70,-77.5,70,70,5
+Allison Hind,Raw,B,F,Open,72,1981,USA,70,107.5,112.5,117.5,117.5,117.5,1
+Johanna Kankus,Raw,B,F,Open,72,1984,FIN,71.4,102.5,105,-115,105,105,2
+Tetyana Melnyk,Raw,B,F,Open,72,1985,UKR,66.1,100,-102.5,-105,100,100,3
+Ruta Lendraitiene,Raw,B,F,Open,72,1979,GBR,69.3,-85,85,-87.5,85,85,4
+Ilze-Mari Maritz,Raw,B,F,Open,72,1988,RSA,67,77.5,82.5,-87.5,82.5,82.5,5
+Anastasia Zinchenko,Raw,B,F,Open,72,1985,GBR,68.7,67.5,72.5,-75,72.5,72.5,6
+Silvia Szarvas,Raw,B,F,Open,84,1984,GER,80.9,100,110,-117.5,110,110,1
+Dana Sandler,Raw,B,F,Open,84,1979,CAN,83.9,72.5,77.5,82.5,82.5,82.5,2
+Sandri Van Staden,Raw,B,F,Open,84,1988,RSA,81.1,75,80,-85,80,80,3
+Agnes Szabo,Raw,B,F,Open,84+,1988,HUN,115.3,135,140,-145,140,140,1
+Tetiana Bilousova,Raw,B,F,Open,84+,1975,UKR,101.4,105,110,115,115,115,2
+Camille Holland,Raw,B,F,Open,84+,1988,GBR,117,95,102.5,107.5,107.5,107.5,3
+Laura Berry,Raw,B,F,Open,84+,1982,GBR,101.8,95,102.5,105,105,105,4
+Christi de Jager,Raw,B,F,Open,84+,1986,RSA,104.9,90,-97.5,-97.5,90,90,5
+Katarina Hennessey,Raw,B,F,Sub-Juniors,52,1999,USA,49.6,42.5,47.5,-50,47.5,47.5,1
+Rouxchelle Roux,Raw,B,F,Sub-Juniors,57,1998,RSA,56.4,42.5,-47.5,47.5,47.5,47.5,1
+Kaylie Ball,Raw,B,F,Sub-Juniors,57,2001,USA,54.1,40,42.5,-47.5,42.5,42.5,2
+Susanna Torronen,Raw,B,F,Sub-Juniors,72,1998,FIN,71.2,110,-113.5,-113.5,110,110,1
+Bronwyn Marshall,Raw,B,F,Sub-Juniors,72,1998,RSA,69.6,47.5,52.5,-57.5,52.5,52.5,2
+Marta Sroczyk,Raw,B,F,Juniors,52,1995,POL,51.2,75,82.5,87.5,87.5,87.5,1
+Caitlyn Buck,Raw,B,F,Juniors,57,1994,USA,56.7,57.5,65,-67.5,65,65,1
+Megan Leighton,Raw,B,F,Juniors,63,1996,RSA,58.7,60,65,67.5,67.5,67.5,1
+Jessika Lowe,Raw,B,F,Juniors,72,1996,SWE,71.1,82.5,87.5,92.5,92.5,92.5,1
+Kim Halgreen,Raw,B,F,Juniors,72,1993,RSA,71.5,82.5,87.5,-95,87.5,87.5,2
+Paulina Lechowicz,Raw,B,F,Juniors,84,1996,POL,80.2,80,85,90,90,90,1
+Kashka Hobbs,Raw,B,F,Juniors,84,1993,RSA,72.1,65,70,-72.5,70,70,2
+Naoko Kobayashi,Raw,B,F,Masters 1,47,1970,JPN,45.4,85,90,92.5,92.5,92.5,1
+Katie Cooke,Raw,B,F,Masters 1,52,1968,GBR,50.9,62.5,65,67.5,67.5,67.5,1
+Martina Rummel,Raw,B,F,Masters 1,57,1976,GER,54.1,62.5,67.5,-70,67.5,67.5,1
+Theresa Ball,Raw,B,F,Masters 1,57,1973,USA,55.9,50,55,57.5,57.5,57.5,2
+Ronel Reyneke,Raw,B,F,Masters 1,63,1969,RSA,61.8,57.5,60,62.5,62.5,62.5,1
+Carmit Ingel,Raw,B,F,Masters 1,63,1975,RSA,61.2,-50,50,55,55,55,2
+Satu Luoto,Raw,B,F,Masters 1,72,1969,FIN,67.3,80,85,90,90,90,1
+Kristine Kobza,Raw,B,F,Masters 1,72,1967,USA,69.9,72.5,75,77.5,77.5,77.5,2
+Miyuki Sakurai,Raw,B,F,Masters 1,72,1969,JPN,70.7,67.5,75,-77.5,75,75,3
+Laura De Wet,Raw,B,F,Masters 1,72,1974,RSA,71,70,75,-77.5,75,75,4
+Wendie Kirkland,Raw,B,F,Masters 1,72,1972,GBR,69.8,67.5,72.5,-75,72.5,72.5,5
+Theresa Willis,Raw,B,F,Masters 1,72,1970,USA,67.3,47.5,55,-60,55,55,6
+Sanet Momberg,Raw,B,F,Masters 1,84,1972,RSA,77,120,130,-140,130,130,1
+Corien Potgieter,Raw,B,F,Masters 1,84,1970,RSA,72.4,77.5,82.5,-87.5,82.5,82.5,2
+Carol Anthony,Raw,B,F,Masters 2,57,1966,RSA,56.1,-40,40,45,45,45,1
+Tammy Lauer,Raw,B,F,Masters 2,63,1964,USA,60.3,55,57.5,60,60,60,1
+Michelle Franklin,Raw,B,F,Masters 2,63,1966,GBR,61,52.5,55,60,60,60,2
+Regina Haas,Raw,B,F,Masters 2,72,1962,GER,70.3,95,100,105,105,105,1
+Delwyn Evans,Raw,B,F,Masters 2,72,1964,NZL,70,70,-75,-77.5,70,70,2
+Julia Fabrizi,Raw,B,F,Masters 2,84,1964,GBR,79.6,77.5,82.5,-85,82.5,82.5,1
+Laurie MacDonald,Raw,B,F,Masters 2,84,1962,USA,78.7,70,77.5,-82.5,77.5,77.5,2
+Julie Henderson,Raw,B,F,Masters 2,84,1966,AUS,80.3,75,-80,-80,75,75,3
+Sylvia Wunderlich,Raw,B,F,Masters 2,84+,1965,GER,85.8,75,80,-90,80,80,1
+Holly Oxford,Raw,B,F,Masters 2,84+,1958,USA,94.1,-77.5,80,-95,80,80,2
+Cherry Wilson,Raw,B,F,Masters 3,57,1950,NZL,56.7,37.5,40,-42.5,40,40,1
+Eva Speth,Raw,B,F,Masters 3,84,1954,GER,82.9,85,90,92.5,92.5,92.5,1
+Sharon Hernstadt,Raw,B,F,Masters 4,72,1939,USA,68.8,30,35,40,40,40,1

@@ -1,7 +1,10 @@
 <select id="langselect">
+  <option value="de" {% if language == "de" %}selected{% endif %}>Deutsch</option>
   <option value="en" {% if language == "en" %}selected{% endif %}>English</option>
   <option value="es" {% if language == "es" %}selected{% endif %}>Español</option>
   <option value="eo" {% if language == "eo" %}selected{% endif %}>Esperanto</option>
   <option value="fr" {% if language == "fr" %}selected{% endif %}>Français</option>
+  <option value="it" {% if language == "it" %}selected{% endif %}>Italiano</option>
   <option value="ru" {% if language == "ru" %}selected{% endif %}>Русский</option>
+  <option value="fi" {% if language == "fi" %}selected{% endif %}>Suomi</option>
 </select>

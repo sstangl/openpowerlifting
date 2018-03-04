@@ -36,7 +36,7 @@ pub struct MeetResultsRow<'a> {
     pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,
-    pub weightclasskg: String,
+    pub weightclasskg: fields::WeightClassAny,
     pub bodyweightkg: fields::WeightAny,
 
     pub squatkg: fields::WeightAny,
@@ -79,7 +79,7 @@ impl<'a> MeetResultsRow<'a> {
             sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclasskg: format!("{}", entry.weightclasskg),
+            weightclasskg: entry.weightclasskg.as_type(units),
             bodyweightkg: entry.bodyweightkg.as_type(units),
 
             squatkg: entry.highest_squatkg().as_type(units),

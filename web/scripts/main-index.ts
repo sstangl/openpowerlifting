@@ -106,8 +106,8 @@ function getIndices(): number[] {
     let indices = database.db_make_indices_list();
     indices = database.db_filter(indices, filter);
 
-    if ("total" === sortCol.id) {
-        // Secondary sort by wilks when sorting by total
+    if ("total" === sortCol.id || "squat" === sortCol.id || "bench" === sortCol.id || "deadlift" === sortCol.id) {
+        // Secondary sort by wilks when sorting by total, or one of the lifts
         indices = database.db_multicol_sort_numeric(indices, common.colidToIndex(sortCol.id), common.colidToIndex("wilks"), sortAsc);
     } else {
         indices = database.db_sort_numeric(indices, common.colidToIndex(sortCol.id), sortAsc);
