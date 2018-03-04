@@ -55,6 +55,7 @@ probe-quick:
 	${DATADIR}/irishpf/irishpf-probe || true
 	${DATADIR}/nasa/nasa-probe --quick || true
 	${DATADIR}/nipf/nipf-probe || true
+	${DATADIR}/nzpf/nzpf-probe --quick || true
 	${DATADIR}/oceaniapf/oceaniapf-probe --quick || true
 	${DATADIR}/pa/pa-probe --quick || true
 	${DATADIR}/rps/rps-probe || true
@@ -93,6 +94,7 @@ probe:
 	${DATADIR}/nasa/nasa-probe || true
 	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/nsf/nsf-probe || true
+	${DATADIR}/nzpf/nzpf-probe || true
 	${DATADIR}/oceaniapf/oceaniapf-probe || true
 	${DATADIR}/pa/pa-probe || true
 	${DATADIR}/raw/raw-probe || true
