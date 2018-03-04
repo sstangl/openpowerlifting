@@ -187,9 +187,11 @@ fn main() {
 
     // Load translations.
     let mut langinfo = langpack::LangInfo::new();
+    load_translations_or_exit(&mut langinfo, Language::de, "translations/de.json");
     load_translations_or_exit(&mut langinfo, Language::en, "translations/en.json");
     load_translations_or_exit(&mut langinfo, Language::eo, "translations/eo.json");
     load_translations_or_exit(&mut langinfo, Language::es, "translations/es.json");
+    load_translations_or_exit(&mut langinfo, Language::fi, "translations/fi.json");
     load_translations_or_exit(&mut langinfo, Language::fr, "translations/fr.json");
     load_translations_or_exit(&mut langinfo, Language::it, "translations/it.json");
     load_translations_or_exit(&mut langinfo, Language::ru, "translations/ru.json");
