@@ -55,7 +55,7 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
     match languages.0 {
         Some(s) => {
             // TODO: This vector should be static and in langpack.
-            let known_languages = vec!["en", "eo", "es", "fr", "it", "ru"];
+            let known_languages = vec!["de", "en", "eo", "es", "fi", "fr", "it", "ru"];
             let valid_languages = accept_language::intersection(&s, known_languages);
 
             if valid_languages.len() == 0 {
