@@ -1,25 +1,25 @@
-Division,Powerlifting,WeightClassKg,Sex,BirthYear,Bwt,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Event,Equipment,Place
-Open,Norma Melo,63,F,1977,Per,57.6,60,65,70,70,70,SBD,Single-ply,1
-M2,Sanz Sandra,63,F,1964,Arg,59.55,70,-75,-75,70,70,SBD,Single-ply,1
-M1/Open,Coronel Monica,72,F,1970,Arg,70.1,92.5,97.5,100,100,100,SBD,Single-ply,1
-M1/Open,Silva Cristiane,72,F,1977,Bra,71.3,80,-85,85,85,85,SBD,Single-ply,2
-M2/Open,Toledo Cristina,84,F,1965,Bra,80.19,70,75,80,80,80,SBD,Single-ply,1
-Open,Oishi Eric,66,M,1979,Bra,65.85,180,198,203,203,203,SBD,Single-ply,1
-Open,Villagra Sebastian,74,M,1986,Arg,73.1,190,200,207.5,207.5,207.5,SBD,Single-ply,1
-Junior,Rafael Carrasco,74,M,1996,Per,73.5,110,120,127.5,127.5,127.5,SBD,Single-ply,1
-M1,Ariel Arias,74,M,1975,Arg,72.9,155,160,170,170,170,SBD,Single-ply,1
-M2,Blanco Mario,74,M,1959,Uru,69.95,80,85,-90,85,85,SBD,Single-ply,1
-Open,Víctor Raimil,83,M,1991,Chi,82.2,130,140,147.5,147.5,147.5,SBD,Single-ply,1
-Subjunior,Fabian Silva,83,M,2001,Per,81.7,90,105,115,115,115,SBD,Single-ply,1
-M2,Miguel Palomas,83,M,1967,Arg,82.25,145,-155,-155,145,145,SBD,Single-ply,1
-Open,Grahl Thiago,93,M,1987,Bra,92.75,-290,290,-310,290,290,SBD,Single-ply,1
-Open,Marcelo Mendoza,93,M,1977,Arg,86.4,185,197.5,-212.5,197.5,197.5,SBD,Single-ply,2
-M1,Zen Vinicius,93,M,1976,Bra,92.45,220,230,237.5,237.5,237.5,SBD,Single-ply,1
-M1,Juan Galdeano,93,M,1976,Arg,88.25,130,-140,140,140,140,SBD,Single-ply,2
-M2,Aristi Oscar,93,M,1966,Arg,91.6,-160,170,-182.5,170,170,SBD,Single-ply,1
-M3,José M. Rodriguez,93,M,1952,Arg,86.95,85,90,92.5,92.5,92.5,SBD,Single-ply,1
-Open,Barbosa Vanderlei,105,M,1987,Bra,102.7,-305,305,315,315,315,SBD,Single-ply,1
-Junior,Franco Cornejo,105,M,1998,Per,103.4,120,130,140,140,140,SBD,Single-ply,1
-M1,Casulo Rafael,105,M,1968,Uru,98.25,190,200,210,210,210,SBD,Single-ply,1
-M2,Encina Ricardo,105,M,1964,Arg,98.55,160,175,190,190,190,SBD,Single-ply,1
-Open,Nehemías Rivera,120,M,1985,Chi,117.6,190,200,-205,200,200,SBD,Single-ply,1
+Division,Name,WeightClassKg,Sex,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Event,Equipment,Place
+Open,Norma Melo,63,F,1977,Per,57.6,60,65,70,70,70,B,Single-ply,1
+M2,Sanz Sandra,63,F,1964,Arg,59.55,70,-75,-75,70,70,B,Single-ply,1
+M1/Open,Coronel Monica,72,F,1970,Arg,70.1,92.5,97.5,100,100,100,B,Single-ply,1
+M1/Open,Silva Cristiane,72,F,1977,Bra,71.3,80,-85,85,85,85,B,Single-ply,2
+M2/Open,Toledo Cristina,84,F,1965,Bra,80.19,70,75,80,80,80,B,Single-ply,1
+Open,Oishi Eric,66,M,1979,Bra,65.85,180,198,203,203,203,B,Single-ply,1
+Open,Villagra Sebastian,74,M,1986,Arg,73.1,190,200,207.5,207.5,207.5,B,Single-ply,1
+Junior,Rafael Carrasco,74,M,1996,Per,73.5,110,120,127.5,127.5,127.5,B,Single-ply,1
+M1,Ariel Arias,74,M,1975,Arg,72.9,155,160,170,170,170,B,Single-ply,1
+M2,Blanco Mario,74,M,1959,Uru,69.95,80,85,-90,85,85,B,Single-ply,1
+Open,Víctor Raimil,83,M,1991,Chi,82.2,130,140,147.5,147.5,147.5,B,Single-ply,1
+Subjunior,Fabian Silva,83,M,2001,Per,81.7,90,105,115,115,115,B,Single-ply,1
+M2,Miguel Palomas,83,M,1967,Arg,82.25,145,-155,-155,145,145,B,Single-ply,1
+Open,Grahl Thiago,93,M,1987,Bra,92.75,-290,290,-310,290,290,B,Single-ply,1
+Open,Marcelo Mendoza,93,M,1977,Arg,86.4,185,197.5,-212.5,197.5,197.5,B,Single-ply,2
+M1,Zen Vinicius,93,M,1976,Bra,92.45,220,230,237.5,237.5,237.5,B,Single-ply,1
+M1,Juan Galdeano,93,M,1976,Arg,88.25,130,-140,140,140,140,B,Single-ply,2
+M2,Aristi Oscar,93,M,1966,Arg,91.6,-160,170,-182.5,170,170,B,Single-ply,1
+M3,José M. Rodriguez,93,M,1952,Arg,86.95,85,90,92.5,92.5,92.5,B,Single-ply,1
+Open,Barbosa Vanderlei,105,M,1987,Bra,102.7,-305,305,315,315,315,B,Single-ply,1
+Junior,Franco Cornejo,105,M,1998,Per,103.4,120,130,140,140,140,B,Single-ply,1
+M1,Casulo Rafael,105,M,1968,Uru,98.25,190,200,210,210,210,B,Single-ply,1
+M2,Encina Ricardo,105,M,1964,Arg,98.55,160,175,190,190,190,B,Single-ply,1
+Open,Nehemías Rivera,120,M,1985,Chi,117.6,190,200,-205,200,200,B,Single-ply,1
