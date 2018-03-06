@@ -121,7 +121,7 @@ def build_lifterscsv(lifterdir, builddir):
     ordered = sorted(LIFTERIDMAP.items(), key=lambda x:x[1])
 
     # Make a map of (Name => Instagram).
-    socialcsv = Csv(lifterdir + os.sep + 'social-media.csv')
+    socialcsv = Csv(lifterdir + os.sep + 'social-instagram.csv')
     nameidx = socialcsv.index('Name')
     igidx = socialcsv.index('Instagram')
     socialmap = dict()

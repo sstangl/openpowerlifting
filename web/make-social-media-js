@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Translates the social-media.csv file into social-media.js,
+# Translates the social-instagram.csv file into social-media.js,
 # a dictionary (Name -> Array) lookup table for mapping lifters
 # to social media accounts.
 #
@@ -10,7 +10,7 @@ import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
 import oplcsv
 
-SOCIALFILE = '../lifter-data/social-media.csv'
+SOCIALFILE = '../lifter-data/social-instagram.csv'
 
 
 def main():
