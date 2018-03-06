@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Probes for meet results from the Commonwealth Powerlifting Federation.
-# All the results are on a single page, very nice! Meets are very rare.
+# Probes for meet results from the NZ Powerlifting Federation.
 
 
 from bs4 import BeautifulSoup
