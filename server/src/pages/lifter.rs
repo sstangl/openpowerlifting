@@ -15,6 +15,7 @@ pub struct HeaderContext {
 pub struct Context<'a> {
     pub header: HeaderContext,
     pub lifter: &'a opldb::Lifter,
+    pub lifter_sex: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: opldb::WeightUnits,
@@ -33,7 +34,6 @@ pub struct MeetResultsRow<'a> {
     pub meet_name: &'a str,
     pub meet_path: &'a str,
     pub division: Option<&'a str>,
-    pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,
     pub weightclasskg: fields::WeightClassAny,
@@ -76,7 +76,6 @@ impl<'a> MeetResultsRow<'a> {
                 None => None,
                 Some(ref s) => Some(&s),
             },
-            sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
             weightclasskg: entry.weightclasskg.as_type(units),
@@ -249,6 +248,8 @@ impl<'a> Context<'a> {
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
+        let lifter_sex = strings.translate_sex(entries[0].sex);
+
         let prmarkers = mark_prs(&entries);
 
         // Display the meet results, most recent first.
@@ -268,6 +269,7 @@ impl<'a> Context<'a> {
             strings: strings,
             units: units,
             lifter: lifter,
+            lifter_sex: lifter_sex,
             meet_results: meet_results,
         }
     }

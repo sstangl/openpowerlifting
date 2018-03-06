@@ -11,7 +11,7 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      <span id="lifter">Meet Results for {{lifter.name}}{% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</span>
+      <span id="lifter">Meet Results for {{lifter.name}} ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</span>
     </div>
     <div id="controls-right">
       {% include "weightunits" %}
@@ -30,7 +30,6 @@
         <th>{{strings.columns.location}}</th>
         <th>{{strings.columns.meetname}}</th>
         <th>{{strings.columns.division}}</th>
-        <th>{{strings.columns.sex}}</th>
         <th>{{strings.columns.age}}</th>
         <th>{{strings.columns.equipment}}</th>
         <th>{{strings.columns.weightclass}}</th>
@@ -49,7 +48,6 @@
           <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
           <td><a href="/m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
-          <td>{{this.sex}}</td>
           <td>{{this.age}}</td>
           <td>{{this.equipment}}</td>
           <td>{{this.weightclasskg}}</td>
