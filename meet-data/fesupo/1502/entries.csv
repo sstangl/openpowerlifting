@@ -1,25 +1,28 @@
-Division,Name,WeightClassKg,Sex,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Event,Equipment,Place
-Open,Vilma Ochoa,57,F,1980,Ecuador,55.9,100,107.5,115,115,115,B,Single-ply,1
-Open,Kenia Monserrate,57,F,1990,Ecuador,53.7,85,90,-95,90,90,B,Single-ply,2
-Junior,Cuba Nora,57,F,1992,Peru,56,55,-60,60,60,60,B,Single-ply,1
-Junior/Open,Johanna Aguinaga,63,F,1993,Ecuador,63,130,-137.5,137.5,137.5,137.5,B,Single-ply,1
-Open,Rosa Castro,63,F,1979,Ecuador,63,105,110,117.5,117.5,117.5,B,Single-ply,1
-Open,Judith Reitmann,84+,F,1967,Uruguay,93.4,142.5,149,-152.5,149,149,B,Single-ply,1
-Open,Niel Garcia ,59,M,1973,Peru,58.8,160,167.5,175,175,175,B,Single-ply,1
-Open,Leon Franklin,59,M,1983,Ecuador,59,160,167.5,175,175,175,B,Single-ply,2
-Open,Gabriel Quispe,66,M,1980,Peru,66,172.5,180,-185,180,180,B,Single-ply,1
-Open,Enrique Mejía,74,M,1988,Peru,73.7,175,185,192.5,192.5,192.5,B,Single-ply,1
-Open,Jhony Rosas,74,M,1989,Uruguay,69.2,145,155,160,160,160,B,Single-ply,2
-M1,Jacob Carrasco,74,M,1966,Peru,70.6,140,150,152.5,152.5,152.5,B,Single-ply,1
-Junior,Rafael Carrasco,74,M,1996,Peru,72.1,100,107.5,-112.5,107.5,107.5,B,Single-ply,1
-M1/Open,Sanchez Marcos,83,M,1974,Ecuador,83,190,200,207.5,207.5,207.5,B,Single-ply,1
-Open,Enrique Molina,83,M,1988,Peru,81.2,190,200,-210,200,200,B,Single-ply,1
-M1,Luis Huere,83,M,1971,Peru,82.1,-145,-145,-145,,,B,Single-ply,DQ
-Sub,Fabián Silva ,83,M,2001,Peru,80.4,80,90,-97.5,90,90,B,Single-ply,1
-Open,Nicolas Urioste,93,M,1968,Uruguay,92.1,170,180,-190,180,180,B,Single-ply,1
-M1,Aristi Adalberto,93,M,1966,Argentina,89,170,182.5,-190,182.5,182.5,B,Single-ply,1
-M2,Encina Ricardo,105,M,1964,Argentina,98.9,170,185,-200,185,185,B,Single-ply,1
-M2/Open,Eduardo Rodriguez,105,M,1961,Uruguay,99.1,150,160,-165,160,160,B,Single-ply,1
-M1/Open,Rafael Casulo,120,M,1968,Uruguay,114.5,140,232.5,-240,232.5,232.5,B,Single-ply,1
-Open,Marcelo Quintao,120,M,1986,Brasil,118.9,232.5,-237.5,-237.5,232.5,232.5,B,Single-ply,1
-Open,Edmur Pessoa,120+,M,1967,Brasil,120.9,180,-250,-250,180,180,B,Single-ply,1
+Division,Name,BirthYear,Sex,Event,Equipment,WeightClassKg,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Place
+Sub,Rosa Ramos,2001,F,SBD,Raw,52,Peru,51.8,70,-80,-80,70,30,-35,35,35,85,95,100,100,205,1
+Junior,Nora Cuba,1992,F,SBD,Raw,57,Peru,55.8,95,105,110,110,50,-52.5,52.5,52.5,125,132.5,-135,132.5,295,1
+Open,Veronika Alvarado,1991,F,SBD,Raw,57,Peru,56.2,130,-137.5,137.5,137.5,55,62.5,-67.5,62.5,145,157.5,165,165,365,1
+Junior,Catalina Pacce,1995,F,SBD,Raw,63,Uruguay,61.6,-112.5,112.5,-115,112.5,55,62.5,65,65,120,130,-132.5,130,307.5,1
+M1,Monica Coronel,1971,F,SBD,Raw,72,Argentina,69.8,120,-128,-128,120,62.5,67.5,-70,67.5,130,140,145,145,332.5,1
+Open,Flavia Torres,1989,F,SBD,Raw,84+,Argentina,93.8,107.5,120,132.5,132.5,50,55,60,60,120,137.5,150,150,342.5,1
+Sub,Heberth Rodriguez,1998,M,SBD,Raw,59,Peru,59,100,110,-117.5,110,57.5,65,70,70,150,160,170,170,350,1
+Junior,Tony Ramirez,1994,M,SBD,Raw,66,Peru,65.9,-120,-130,135,135,65,72.5,80,80,170,180,190.5,190.5,405.5,1
+Open,Gabriel Quispe,1980,M,SBD,Raw,66,Peru,65.9,-180,-185,-185,,,,,,,,,,,DQ
+M2,Pedro Solano,1965,M,SBD,Raw,74,Peru,70.7,162.5,172.5,-185,172.5,122.5,127.5,130,130,185,195,202.5,202.5,505,1
+Open,Hugo Salhuana,1990,M,SBD,Raw,74,Peru,72.3,197.5,205,210,210,130,135,140,140,235,250,261,261,611,1
+M1,Cesar Mejia,1974,M,SBD,Raw,83,Peru,82.6,185,-195,195,195,132.5,137.5,-140,137.5,200,205,210,210,542.5,1
+Sub,Mauricio Rivera,1998,M,SBD,Raw,83,Peru,78.7,-200,-200,-200,,125,127.5,130,130,225,235,240,240,,DQ
+Open,Jesus Garcia,1986,M,SBD,Raw,93,Peru,92.1,210,220,227.5,227.5,130,137.5,140,140,200,215,225,225,592.5,1
+Open,Diego Doroteo,1984,M,SBD,Raw,93,Peru,88.6,-180,180,-190,180,120,-122.5,-122.5,120,200,-220,-220,200,500,2
+Junior,Constantino Sulopulos,1993,M,SBD,Raw,105,Peru,103.5,210,220,232.5,232.5,155,163.5,,163.5,235,260,275.5,275.5,671.5,1
+M1,Angel Eyzaguirre,1975,M,SBD,Raw,105,Peru,111,150,,,150,135,140,-145,140,180,200,,200,490,1
+Open,Norma Melo,1977,F,SBD,Single-ply,57,Peru,55.3,-100,110,,110,65,-70,70,70,115,125,-130,125,305,1
+Open,Henry Reategui,1985,M,SBD,Single-ply,59,Peru,56.9,-160,160,-190,160,90,-107.5,-107.5,90,190,-200,-200,190,440,1
+M1,Jacob Carrasco,1966,M,SBD,Single-ply,74,Peru,70.5,-225,225,,225,140,150,,150,230,-245,245,245,620,1
+Open,Jacob Carrasco,1966,M,SBD,Single-ply,74,Peru,70.5,-225,225,,225,140,150,,150,230,-245,245,245,620,1
+M1,Kenji Nakama,1974,M,SBD,Single-ply,74,Peru,72.2,-200,-200,200,200,140,-145,,140,185,195,202.5,202.5,542.5,2
+Junior,Rafael Carrasco,1996,M,SBD,Single-ply,74,Peru,71.8,190,-200,200,200,100,107.5,112.5,112.5,200,210,-215,210,522.5,1
+Open,Enrique Molina,1988,M,SBD,Single-ply,83,Peru,82.3,-270,270,-300,270,-190,190,-215,190,240,-275,-275,240,700,1
+Open,Diego Paniagua,1980,M,SBD,Single-ply,83,Peru,78.5,-170,-170,170,170,110,-125,125,125,200,-210,,200,495,2
+Sub,Fabian Silva,2001,M,SBD,Single-ply,83,Peru,81.1,135,145,,145,80,90,95,95,135,160,170,170,410,1
+Open,Walter Gervacio,1979,M,SBD,Single-ply,105,Peru,94.9,245,-255,-255,245,-175,-175,-175,,220,-230,-230,220,,DQ
