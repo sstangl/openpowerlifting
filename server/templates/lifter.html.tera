@@ -47,7 +47,7 @@
           <td>{{this.federation}}</td>
           <td>{{this.date}}</td>
           <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
-          <td><a href="/m/{{this.meet_path}}">{{this.meet_name}}</a></td>
+          <td><a href="/m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
           <td>{{this.sex}}</td>
           <td>{{this.age}}</td>
