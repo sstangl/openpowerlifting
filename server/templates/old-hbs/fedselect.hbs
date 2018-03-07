@@ -18,7 +18,7 @@
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="CommonwealthPF">CommonwealthPF - Commonwealth Powerlifting Federation [IPF]</option>
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
-    <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
+    <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF]</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation</option>
   </optgroup>
