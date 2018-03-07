@@ -2,13 +2,7 @@
 <html>
 <head>
   {# Dynamic header parts. #}
-  <title>
-    {% if base.title %}
-      {{base.title}}
-    {% else %}
-      OpenPowerlifting
-    {% endif %}
-  </title>
+  <title>{{page_title}}</title>
 
   {# Static header parts. #}
   <meta charset="utf-8">

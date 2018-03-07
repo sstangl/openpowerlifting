@@ -13,6 +13,7 @@ pub struct HeaderContext {
 /// The context object passed to `templates/lifter.html.hbs`.
 #[derive(Serialize)]
 pub struct Context<'a> {
+    pub page_title: String,
     pub header: HeaderContext,
     pub lifter: &'a opldb::Lifter,
     pub lifter_sex: &'a str,
@@ -261,6 +262,7 @@ impl<'a> Context<'a> {
             .collect();
 
         Context {
+            page_title: format!("{}", lifter.name),
             header: HeaderContext {
                 num_entries: opldb.get_entries().len() as u32,
                 num_meets: opldb.get_meets().len() as u32,
