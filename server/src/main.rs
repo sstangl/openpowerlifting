@@ -133,6 +133,19 @@ fn meet(
     Some(Template::render("meet", &context))
 }
 
+#[get("/status")]
+fn status(
+    opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::status::Context::new(&opldb, lang, &langinfo);
+    Some(Template::render("status", &context))
+}
+
 #[get("/")]
 fn index() -> Redirect {
     Redirect::to("/u/kristyhawkins")
@@ -143,7 +156,7 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
-        .mount("/", routes![index, lifter, meet, statics])
+        .mount("/", routes![index, lifter, meet, statics, status])
         .attach(Template::fairing())
 }
 

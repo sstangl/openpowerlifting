@@ -1,0 +1,12 @@
+{% extends "desktop-base" %}
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block custom_javascript %}
+  {% include "langselect-script" %}
+{% endblock custom_javascript %}
