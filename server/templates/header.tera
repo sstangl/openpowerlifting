@@ -3,6 +3,7 @@
   <a href="/" class="nav__link">{{strings.header.rankings}}</a>
   <a href="/meetlist.html" class="nav__link">{{strings.header.meets}}</a>
   <a href="/data" class="nav__link">{{strings.header.data}}</a>
+  <a href="/status" class="nav__link">{{strings.header.status}}</a>
   <a href="/faq" class="nav__link">{{strings.header.faq}}</a>
   <a href="/contact" class="nav__link">{{strings.header.contact}}</a>
   <a href="https://www.patreon.com/openpowerlifting" class="nav__link">{{strings.header.supportus}}&nbsp;<img style="height: 15p; width: 15px;" src="/static/images/patreon_navigation_logo_mini_orange.png"/></a>

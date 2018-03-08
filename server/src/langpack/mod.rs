@@ -88,6 +88,7 @@ pub struct HeaderTranslations {
     pub rankings: String,
     pub meets: String,
     pub data: String,
+    pub status: String,
     pub faq: String,
     pub contact: String,
     pub supportus: String,
