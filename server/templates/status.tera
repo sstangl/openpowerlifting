@@ -18,19 +18,23 @@
 {% block body %}
 
   <div class="content">
-  <h1>Project Status</h1>
-    WIP
+    <h1>Project Status</h1>
+        We are currently in beta. OpenPowerlifting is a work in progress.
+    <h2>Meets</h2>
+        We have currently entered {{num_meets}} meets, and {{num_entries}} total entries.
 
     <h2>Federations</h2>
     <table>
       <thead>
         <th>Name</th>
         <th>Status</th>
+        <th>Meets In Database</th>
       </thead>
       {% for this in fed_statuses %}
         <tr>
-          <td>{{this.name}}</td>
+          <td>{{this.fed}}</td>
           <td>{{this.status}}</td>
+          <td>{{this.meet_count}}</td>
         </tr>
       {% endfor %}
     </table>
