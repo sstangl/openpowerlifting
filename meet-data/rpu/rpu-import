@@ -1,0 +1,58 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 http://url/to/results.xls"
+	exit 1
+fi
+
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Remember whether it's XLS or XLSX.
+EXTENSION="${1##*.}"
+
+# Download the website to results.xls(s)
+wget --output-document="results.${EXTENSION}" "$1"
+
+# Save the website URL for future use, since it's pretty hard to tell
+# what meets on the site are tracked and which aren't.
+echo "$1" > URL
+
+# Convert the spreadsheet to HTML.
+# The spreadsheet will have multiple pages -- these will all be added to one document.
+libreoffice --headless --convert-to html "results.${EXTENSION}"
+
+# Move the results.html to tmp.xls -- newer versions of LibreOffice don't
+# understand how to convert HTML -> CSV, but do understand XLS -> CSV.
+mv results.html tmp.xls
+
+# Convert <s> to "-".
+sed -i -e 's/<s>/-/g' tmp.xls
+sed -i -e 's/<\/s>//g' tmp.xls
+
+# Convert commas in numbers to periods, while avoiding commas in the HTML.
+sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' tmp.xls
+
+# Convert the HTML back to CSV.
+# The --infilter argument is necessary to get LibreOffice to stop parsing
+# the encoding as ISO-8859-1, and preserve the UTF8 encoding.
+# See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
+libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
+mv tmp.csv results.csv
+
+# Remove some dash-only columns from the CSV.
+sed -i -e 's/,-,/,,/g' results.csv
+sed -i -e 's/,-,/,,/g' results.csv
+
+# Create the empty meet.csv file.
+#cp "../../meet.template" "meet.csv"
+
+# Clean up.
+if [ -f results.csv ]; then
+	rm tmp.xls results.${EXTENSION}
+fi
+
+${SCRIPTDIR}/rpu-parse-post

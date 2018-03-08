@@ -1,0 +1,429 @@
+#!/usr/bin/env python3
+# Given a results.csv as outputted by wrpf-parse, parse each sheet one at a time
+# and join all the sheets together into an OpenPowerlifting-formatted CSV file.
+
+import sys
+
+sys.path.append('../../scripts')
+sys.path.append('scripts')
+import oplcsv
+
+
+def die(s):
+    print(s, file=sys.stderr)
+    sys.exit(1)
+
+
+# Given the array of lines, split it up into an array per-sheet.
+def split_by_sheet(lines):
+    # Skip past the overview.
+    assert lines[0][0] == 'Overview'
+    for i in range(len(lines)):
+        if 'Sheet' in lines[i][0]:
+            break
+    assert i < len(lines)
+    assert 'Sheet' in lines[i][0]
+
+    sheetlist = []
+    sheet = None
+
+    for line in lines[i:]:
+        # If this line starts a new sheet, generate a new array.
+        if 'Sheet' in line[0]:
+            sheet = []
+            sheetlist.append(sheet)
+        sheet.append(line)
+
+    return sheetlist
+
+
+# Given the name of a sheet, return a dictionary describing the sheet.
+def parse_sheetname(s):
+    obj = {}
+
+    federation = ''
+    event = None
+    amateur = 'Pro' # By default, unless otherwise specified.
+    tested = '' # By default, unless otherwise specified.
+    equipment = 'Wraps' # By default, unless otherwise specified.
+
+    # Parse word-by-word to make sure that every word is understood. 
+    for word in s.lower().split():
+        # Federations
+        if word == 'wrpf':
+            assert not federation
+            federation = 'WRPF'
+        elif word == 'спр': # Some other federation that does multi-ply.
+            assert not federation
+            federation = 'SPR'
+        elif word == 'wrpf-pro':
+            assert not federation
+            federation = 'WRPF'
+
+        # Events
+        elif word == 'пл' or word == 'пауэрлифтинг' or word == 'pl':
+            assert not event
+            event = 'SBD'
+        elif word == 'присед':
+            assert not event
+            event = 'S'
+        elif word == 'жим':
+            assert not event
+            event = 'B'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+        elif word == 'тяга':
+            assert not event
+            event = 'D'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+        elif word == 'двоеборье':
+            assert not event
+            event = 'BD'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+
+        # Equipment
+        elif word == 'однослой':
+            equipment = 'Single-ply'
+        elif word == 'экипировке':
+            equipment = 'Multi-ply'
+        elif word == 'бинты':
+            equipment = 'Wraps'
+
+        # Booleans.
+        elif word == 'люб.' or word == 'любители':
+            amateur = 'Amateur'
+        elif word == 'pro':
+            assert amateur == 'Pro'
+        elif word == 'дк' or word == 'д_к':
+            tested = 'Tested'
+
+        # Grammatical ignorables.
+        elif word == 'в':
+            pass
+        elif word == 'лежа':
+            pass
+
+        # Other ignorables.
+        elif word == 'сфо': # Not sure.
+            pass
+        elif word == 'становая': # First word in 'deadlift'.
+            pass
+        elif word == 'raw':
+            pass
+        elif word == 'без' : # Without
+            pass
+        elif word == 'экипировки' : #Equipment
+            pass
+
+        else:
+            die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+
+    assert event
+
+    obj['federation'] = federation
+    obj['event'] = event
+    obj['amateur'] = amateur
+    obj['tested'] = tested
+    obj['equipment'] = equipment
+
+    return obj
+
+
+# Find the line that contains column information (the line below does also).
+def get_header_linenum(sheet):
+    for i in range(len(sheet)):
+        if sheet[i][0] == 'Место':
+            return i
+    die("get_header_linenum() failed to find the header.")
+
+
+def parse_fieldnames(sheet):
+    fieldnames = []
+
+    headernum = get_header_linenum(sheet)
+    header = sheet[headernum]
+    header_next = sheet[headernum+1]
+
+    # Name all the columns.
+    iterable = iter(range(len(header)))
+    for i in iterable:
+        text = header[i]
+
+        if text == 'Место':
+            fieldnames.append('Place')
+        elif text == 'ФИО':
+            fieldnames.append('InternationalName')
+        elif text == 'Весовая категория Дата рождения/возраст':
+            fieldnames.append('Division-Age')
+        elif text == 'Возрастная группа':
+            fieldnames.append('Division-Age')
+
+        elif text == 'Собств. вес' or text == 'Собств. Вес' or text == 'Собств.' or text == 'Соб.' or text == 'Вес':
+            fieldnames.append('BodyweightKg')
+        elif text == 'Собственный' or text == 'Собственный вес':
+            fieldnames.append('BodyweightKg')
+
+        elif text == 'Wilks' or text == 'Gloss' or text == 'Коэф':
+            fieldnames.append('IGNORE') # This is not the Wilks, but the WilksCoefficient.
+        elif text == 'Команда': # Not sure what this is, but it's always "personal/individual".
+            fieldnames.append('IGNORE')
+        elif text == 'Город/ область' or text == 'Город/область' or text== 'Город':
+            fieldnames.append('IGNORE') # We don't care about city-level information.
+
+        elif text == 'Присед':
+            assert header[i+1] == ''
+            assert header[i+2] == ''
+            assert header[i+3] == ''
+            #assert header_next[i] == '1'
+            #assert header_next[i+1] == '2'
+            #assert header_next[i+2] == '3'
+            #assert header_next[i+3] == 'Рек'
+            fieldnames.append('Squat1Kg')
+            fieldnames.append('Squat2Kg')
+            fieldnames.append('Squat3Kg')
+            fieldnames.append('Squat4Kg')
+            [next(iterable) for x in range(3)]
+
+        elif text == 'Жим':
+            assert header[i+1] == ''
+            assert header[i+2] == ''
+            assert header[i+3] == ''
+            assert header_next[i] == '1'
+            assert header_next[i+1] == '2'
+            assert header_next[i+2] == '3'
+            assert header_next[i+3] == 'Рек'
+            fieldnames.append('Bench1Kg')
+            fieldnames.append('Bench2Kg')
+            fieldnames.append('Bench3Kg')
+            fieldnames.append('Bench4Kg')
+            [next(iterable) for x in range(3)]
+
+        elif text == 'Тяга':
+            assert header[i+1] == ''
+            assert header[i+2] == ''
+            assert header[i+3] == ''
+            assert header_next[i] == '1'
+            assert header_next[i+1] == '2'
+            assert header_next[i+2] == '3'
+            assert header_next[i+3] == 'Рек'
+            fieldnames.append('Deadlift1Kg')
+            fieldnames.append('Deadlift2Kg')
+            fieldnames.append('Deadlift3Kg')
+            fieldnames.append('Deadlift4Kg')
+            [next(iterable) for x in range(3)]
+
+        elif text == 'Сумма':
+            fieldnames.append('TotalKg')
+        elif text == 'Результат':
+            fieldnames.append('TotalKg')
+
+        elif text == 'Очки': # This is the Wilks. But we prefer to re-calculate it ourselves.
+            fieldnames.append('IGNORE')
+
+        elif text == 'Тренер':
+            fieldnames.append('IGNORE')
+
+        elif text == 'Страна/клуб':
+            fieldnames.append('IGNORE')
+        elif text == 'Страна':
+            fieldnames.append('Country')
+
+        elif text == '':
+            fieldnames.append('IGNORE')
+
+        else:
+            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+
+    return fieldnames
+
+
+# Given a list of lines all of which belong to the same sheet, parse that
+# into an OpenPowerlifting-style CSV.
+def parse_sheet(sheet):
+    assert 'Sheet' in sheet[0][0]
+    assert sheet[0][0].count(':') == 1
+
+    csv = oplcsv.Csv()
+
+    # Ignore some sheets that don't contain any powerlifting.
+    if 'судейская кол' in sheet[0][0].lower():
+        return csv
+    if 'нж ' in sheet[0][0].lower() or 'народный жим' in sheet[0][0].lower():
+        # This is the "People's Bench", which I think is bench-for-reps.
+        return csv
+
+    # Figure out event, equipment, etc., and store in obj.
+    obj = parse_sheetname(sheet[0][0].split(':')[1])
+
+    # Look through the sheet for column information and mark up the CSV.
+    # All columns are given a name -- the extra ones are removed later.
+    csv.fieldnames = parse_fieldnames(sheet)
+
+    # The WeightClassKg information is stateful, between rows.
+    assert not 'WeightClassKg' in csv.fieldnames
+    csv.fieldnames.append('WeightClassKg')
+    assert not 'Event' in csv.fieldnames
+    csv.fieldnames.append('Event')
+    assert not 'Equipment' in csv.fieldnames
+    csv.fieldnames.append('Equipment')
+    csv.fieldnames.append('Amateur')
+    csv.fieldnames.append('Tested')
+    csv.fieldnames.append('Federation')
+
+    weightclass = None
+
+    # Iterate over each line, skipping the two header lines.
+    for line in sheet[get_header_linenum(sheet)+2:]:
+        text = ''.join(line)
+
+        # Stop iteration once the 'Best Lifters' section is reached.
+        if 'Абсолютный зачёт' in text:
+            break
+
+        # Skip empty lines.
+        if text == '':
+            continue
+
+        # Detect lines that set WeightClassKg state.
+        if 'ВЕСОВАЯ КАТЕГОРИЯ' in text:
+            weightclass = text.split()[2]
+            continue
+
+        # If we've made it this far, the line should be for a lifter!
+        # Make sure they have a name!
+        if not line[csv.index('InternationalName')]:
+            continue
+        line.append(weightclass)
+        line.append(obj['event'])
+        line.append(obj['equipment'])
+        line.append(obj['amateur'])
+        line.append(obj['tested'])
+        line.append(obj['federation'])
+
+        assert len(line) == len(csv.fieldnames)
+        csv.rows.append(line)
+
+    # Remove all the columns named 'IGNORE' before returning the CSV for integration.
+    while 'IGNORE' in csv.fieldnames:
+        csv.remove_column_by_name('IGNORE')
+    return csv
+
+
+# Handles the Division-Age column, which looks like below:
+#   Открытая 20-23 (21.11.1986)/30
+# Converts to English and separates into Division and Age columns.
+def standardize_division_age(csv):
+    assert 'Division-Age' in csv.fieldnames
+    assert 'Tested' in csv.fieldnames
+    assert 'Amateur' in csv.fieldnames
+    assert not 'Division' in csv.fieldnames
+    assert not 'Age' in csv.fieldnames
+
+    csv.append_columns(['Division','Age'])
+
+    idx = csv.index('Division-Age')
+    dividx = csv.index('Division')
+    ageidx = csv.index('Age')
+    amateuridx = csv.index('Amateur')
+    testedidx = csv.index('Tested')
+
+    for row in csv.rows:
+        # Fill in the Age.
+        if '/' in row[idx]:
+            row[ageidx] = row[idx].split('/')[1].strip()
+
+        # Fill in the Division.
+        # Handle the divisions with numbers first.
+        if 'Открытая 20-23' in row[idx]:
+            division = 'Open 20-23'
+        elif 'Открытая 24-39' in row[idx]:
+            division = 'Open 24-39'
+        elif 'Юниорки 20-23' in row[idx] or 'Juniors 20-23' in row[idx]:
+            division = 'Juniors 20-23'
+        elif 'Юноши 18-19' in row[idx] or 'Teen 18-19' in row[idx]:
+            division = 'Teen 17-19'
+        elif 'Юноши 14-16' in row[idx]:
+            division = 'Youth 14-16'
+        elif 'Мастера 40-44' in row[idx] or 'Masters 40-44' in row[idx]:
+            division = 'Masters 40-44'
+        elif 'Мастера 45-49' in row[idx] or 'Masters 44-49' in row[idx]:
+            division = 'Masters 45-49'
+        elif 'Мастера 50-54' in row[idx] or 'Masters 50-54' in row[idx]:
+            division = 'Masters 50-54'
+        elif 'Мастера 55-59' in row[idx] or 'Masters 55-59' in row[idx]:
+            division = 'Masters 55-59'
+        elif 'Мастера 60-64' in row[idx] or 'Мasters 60-64' in row[idx]:
+            division = 'Masters 60-64'
+        elif 'Мастера 70-79' in row[idx]:
+            division = 'Masters 70-79'
+        elif 'Мастера (' in row[idx]:
+            division = 'Masters'
+        elif 'Мастера 2' in row[idx]:
+            division = 'Masters 2'
+        elif 'Мастера 3' in row[idx]:
+            division = 'Masters 3'
+
+        elif 'Открытая' in row[idx] or 'Open' in row[idx]:
+            division = 'Open'
+        elif 'Юниоры' in row[idx]:
+            division = 'Juniors'
+        elif 'Юниорки' in row[idx]:
+            division = 'Juniors'
+        elif 'Девушки' in row[idx]:
+            division = 'Girls'
+
+        elif 'OPEN' in row[idx]:
+            division = 'Open'
+
+        else:
+            die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
+
+        division = row[testedidx] + ' ' + row[amateuridx] + ' ' + division
+        row[dividx] = division.replace('  ',' ').strip()
+
+    # Remove the now-extraneous columns.
+    csv.remove_column_by_name('Division-Age')
+    csv.remove_column_by_name('Amateur')
+    csv.remove_column_by_name('Tested')
+
+
+def mark_dqs(csv):
+    idx = csv.index('Place')
+    for row in csv.rows:
+        if not row[idx] or row[idx] == '-':
+            row[idx] = 'DQ'
+
+
+def main(filename):
+    # Since the input is comma-separated, store the file as a list of lists.
+    with open(filename) as fd:
+        lines = [x.strip().split(',') for x in fd.readlines()]
+
+    # Split the input filename into sheets, each of which is an independent CSV.
+    sheetlist = split_by_sheet(lines)
+
+    # Parse each sheet independently, then join them all together into a single CSV.
+    csv = oplcsv.Csv()
+    for sheet in sheetlist:
+        sheetcsv = parse_sheet(sheet)
+        csv.cat(sheetcsv)
+
+    # Now it's time to standardize the CSV a little bit!
+    # We have some temporary columns hanging out.
+    standardize_division_age(csv)
+    mark_dqs(csv)
+
+    # At the moment, this is not useful information.
+    csv.remove_column_by_name('Federation')
+
+    csv.write(sys.stdout)
+    return 0
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(" Usage: %s results.csv > entries.csv" % sys.argv[0])
+        sys.exit(1)
+    sys.exit(main(sys.argv[1]))
