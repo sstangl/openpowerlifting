@@ -13,7 +13,7 @@ pub struct HeaderContext {
 /// The context object passed to `templates/status.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
-    pub page_title: String,
+    pub page_title: &'a str,
     pub header: HeaderContext,
     pub language: Language,
     pub strings: &'a langpack::Translations,
@@ -46,6 +46,7 @@ impl<'a> Context<'a> {
         langinfo: &'a langpack::LangInfo,
     ) -> Context<'a> {
         let strings = langinfo.get_translations(language);
+        let page_title = &strings.header.status;
         let mut fed_statuses: Vec<FederationStatus> = vec![];
         let mut feds: Vec<Federation> = vec![];
         feds.push(Federation::USAPL);
@@ -65,13 +66,13 @@ impl<'a> Context<'a> {
         }
 
         Context {
-            page_title: "Project Status".to_string(),
+            page_title: page_title,
             header: HeaderContext {
                 num_entries: opldb.get_entries().len() as u32,
                 num_meets: opldb.get_meets().len() as u32,
             },
-            language: language,
             strings: strings,
+            language: language,
             fed_statuses: fed_statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,
