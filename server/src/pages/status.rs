@@ -17,7 +17,27 @@ pub struct Context<'a> {
     pub header: HeaderContext,
     pub language: Language,
     pub strings: &'a langpack::Translations,
+    pub fed_statuses: Vec<FederationStatus<'a>>
 }
+
+#[derive(Serialize)]
+pub struct FederationStatus<'a> {
+    pub name: &'a str,
+    pub status: &'a str
+}
+
+impl<'a> FederationStatus<'a> {
+    fn from(
+        name: &'a str,
+        status: &'a str
+    ) -> FederationStatus<'a> {
+        FederationStatus {
+            name: name,
+            status: status
+        }
+    }
+}
+
 
 impl<'a> Context<'a> {
     pub fn new(
@@ -26,6 +46,11 @@ impl<'a> Context<'a> {
         langinfo: &'a langpack::LangInfo,
     ) -> Context<'a> {
         let strings = langinfo.get_translations(language);
+        let mut fed_statuses: Vec<FederationStatus> = vec![];
+        let fed_name = "Fed1";
+        let fed_status = "Status1";
+        let fed1 = FederationStatus::from(fed_name, fed_status);
+        fed_statuses.push(fed1);
 
         Context {
             page_title: "Status".to_string(),
@@ -34,7 +59,8 @@ impl<'a> Context<'a> {
                 num_meets: opldb.get_meets().len() as u32,
             },
             language: language,
-            strings: strings
+            strings: strings,
+            fed_statuses: fed_statuses
         }
     }
 }

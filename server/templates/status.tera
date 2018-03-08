@@ -7,6 +7,31 @@
   </div>
 {% endblock topbar_hack_end %}
 
+{% block controls %}
+  <div id="controls">
+    <div id="controls-right">
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+
+  <div class="content">
+    <table>
+      <thead>
+        <th>Test</th>
+      </thead>
+      {% for this in fed_statuses %}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.status}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock body %}
+
 {% block custom_javascript %}
   {% include "langselect-script" %}
 {% endblock custom_javascript %}
