@@ -18,9 +18,14 @@
 {% block body %}
 
   <div class="content">
+  <h1>Project Status</h1>
+    WIP
+
+    <h2>Federations</h2>
     <table>
       <thead>
-        <th>Test</th>
+        <th>Name</th>
+        <th>Status</th>
       </thead>
       {% for this in fed_statuses %}
         <tr>

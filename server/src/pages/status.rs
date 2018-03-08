@@ -17,27 +17,23 @@ pub struct Context<'a> {
     pub header: HeaderContext,
     pub language: Language,
     pub strings: &'a langpack::Translations,
-    pub fed_statuses: Vec<FederationStatus<'a>>
+    pub fed_statuses: Vec<FederationStatus<'a>>,
 }
 
 #[derive(Serialize)]
 pub struct FederationStatus<'a> {
     pub name: &'a str,
-    pub status: &'a str
+    pub status: &'a str,
 }
 
 impl<'a> FederationStatus<'a> {
-    fn from(
-        name: &'a str,
-        status: &'a str
-    ) -> FederationStatus<'a> {
+    fn from(name: &'a str, status: &'a str) -> FederationStatus<'a> {
         FederationStatus {
             name: name,
-            status: status
+            status: status,
         }
     }
 }
-
 
 impl<'a> Context<'a> {
     pub fn new(
@@ -60,7 +56,7 @@ impl<'a> Context<'a> {
             },
             language: language,
             strings: strings,
-            fed_statuses: fed_statuses
+            fed_statuses: fed_statuses,
         }
     }
 }
