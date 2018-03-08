@@ -86,7 +86,8 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUn
 
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/").join(file)).ok()
+    let staticdir = env::var("STATICDIR").unwrap();
+    NamedFile::open(Path::new(&staticdir).join(file)).ok()
 }
 
 #[get("/u/<username>")]
@@ -169,6 +170,9 @@ fn get_envvar_or_exit(key: &str) -> String {
 fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
+
+    // Ensure that "STATICDIR" is set.
+    get_envvar_or_exit("STATICDIR");
 
     // Load the OplDb.
     let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");
