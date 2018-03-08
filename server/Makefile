@@ -1,4 +1,4 @@
-.PHONY: builddir binary data oldstatics config release
+.PHONY: builddir binary data oldstatics config client clientstatics release clean
 
 BUILDDIR := build
 
