@@ -17,8 +17,9 @@
 
 {% block body %}
 
-  <div class="content">
-    <h1>Project Status</h1>
+<center>
+  <div class="text-content">
+    <h1>{{page_title}}</h1>
         We are currently in beta. OpenPowerlifting is a work in progress.
     <h2>Meets</h2>
         We have currently entered {{num_meets}} meets, and {{num_entries}} total entries.
@@ -39,6 +40,7 @@
       {% endfor %}
     </table>
   </div>
+</center>
 {% endblock body %}
 
 {% block custom_javascript %}

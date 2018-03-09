@@ -2,7 +2,7 @@
 
 use std::fmt;
 
-#[derive(Copy, Clone, Deserialize, PartialEq, Serialize)]
+#[derive(Copy, Clone, Deserialize, PartialEq, Serialize, EnumIterator)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     _365Strong,
