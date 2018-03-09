@@ -29,12 +29,24 @@ libreoffice --headless --convert-to html "results.${EXTENSION}"
 # understand how to convert HTML -> CSV, but do understand XLS -> CSV.
 mv results.html tmp.xls
 
+
+#Remove red font colour in front of <s> tags
+sed -i -e 's/<font color="#FF0000">//g' tmp.xls
+sed -i -e 's/<\/font>//g' tmp.xls
+
+#Remove sdvals from html
+sed -i -e 's/sdval="[^\"]*"//g' tmp.xls
+
+
+
 # Convert <s> to "-".
 sed -i -e 's/<s>/-/g' tmp.xls
 sed -i -e 's/<\/s>//g' tmp.xls
 
-# Convert commas in numbers to periods, while avoiding commas in the HTML.
-sed -i -e 's/\([0-9]\),\([0-9]\)/\1.\2/g' tmp.xls
+
+
+# Convert commas in numbers to periods
+sed -i -e 's/,/\./g' tmp.xls
 
 # Convert the HTML back to CSV.
 # The --infilter argument is necessary to get LibreOffice to stop parsing
