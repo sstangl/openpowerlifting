@@ -37,14 +37,14 @@ pub struct MeetResultsRow<'a> {
     pub division: Option<&'a str>,
     pub age: fields::Age,
     pub equipment: &'a str,
-    pub weightclasskg: fields::WeightClassAny,
-    pub bodyweightkg: fields::WeightAny,
+    pub weightclass: langpack::LocalizedWeightClassAny,
+    pub bodyweight: langpack::LocalizedWeightAny,
 
-    pub squatkg: fields::WeightAny,
-    pub benchkg: fields::WeightAny,
-    pub deadliftkg: fields::WeightAny,
-    pub totalkg: fields::WeightAny,
-    pub wilks: fields::Points,
+    pub squat: langpack::LocalizedWeightAny,
+    pub bench: langpack::LocalizedWeightAny,
+    pub deadlift: langpack::LocalizedWeightAny,
+    pub total: langpack::LocalizedWeightAny,
+    pub wilks: langpack::LocalizedPoints,
 
     pub squat_is_pr: bool,
     pub bench_is_pr: bool,
@@ -56,6 +56,7 @@ impl<'a> MeetResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
         strings: &'a langpack::Translations,
+        number_format: langpack::NumberFormat,
         units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
         prmarker: PrMarker,
@@ -79,14 +80,23 @@ impl<'a> MeetResultsRow<'a> {
             },
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclasskg: entry.weightclasskg.as_type(units),
-            bodyweightkg: entry.bodyweightkg.as_type(units),
+            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
+            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
 
-            squatkg: entry.highest_squatkg().as_type(units),
-            benchkg: entry.highest_benchkg().as_type(units),
-            deadliftkg: entry.highest_deadliftkg().as_type(units),
-            totalkg: entry.totalkg.as_type(units),
-            wilks: entry.wilks,
+            squat: entry
+                .highest_squatkg()
+                .as_type(units)
+                .in_format(number_format),
+            bench: entry
+                .highest_benchkg()
+                .as_type(units)
+                .in_format(number_format),
+            deadlift: entry
+                .highest_deadliftkg()
+                .as_type(units)
+                .in_format(number_format),
+            total: entry.totalkg.as_type(units).in_format(number_format),
+            wilks: entry.wilks.in_format(number_format),
 
             squat_is_pr: prmarker.squat_is_pr,
             bench_is_pr: prmarker.bench_is_pr,
@@ -244,6 +254,7 @@ impl<'a> Context<'a> {
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
         let strings = langinfo.get_translations(language);
+        let number_format = language.number_format();
 
         // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
@@ -257,7 +268,7 @@ impl<'a> Context<'a> {
         let meet_results = entries
             .into_iter()
             .zip(prmarkers.into_iter())
-            .map(|(e, pr)| MeetResultsRow::from(opldb, strings, units, e, pr))
+            .map(|(e, pr)| MeetResultsRow::from(opldb, strings, number_format, units, e, pr))
             .rev()
             .collect();
 

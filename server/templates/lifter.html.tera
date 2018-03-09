@@ -50,12 +50,12 @@
           <td>{{this.division}}</td>
           <td>{{this.age}}</td>
           <td>{{this.equipment}}</td>
-          <td>{{this.weightclasskg}}</td>
-          <td>{{this.bodyweightkg}}</td>
-          <td>{{this.squatkg}}{% if this.squat_is_pr %}*{% endif %}</td>
-          <td>{{this.benchkg}}{% if this.bench_is_pr %}*{% endif %}</td>
-          <td>{{this.deadliftkg}}{% if this.deadlift_is_pr %}*{% endif %}</td>
-          <td>{{this.totalkg}}{% if this.total_is_pr %}*{% endif %}</td>
+          <td>{{this.weightclass}}</td>
+          <td>{{this.bodyweight}}</td>
+          <td>{{this.squat}}{% if this.squat_is_pr %}*{% endif %}</td>
+          <td>{{this.bench}}{% if this.bench_is_pr %}*{% endif %}</td>
+          <td>{{this.deadlift}}{% if this.deadlift_is_pr %}*{% endif %}</td>
+          <td>{{this.total}}{% if this.total_is_pr %}*{% endif %}</td>
           <td>{{this.wilks}}</td>
         </tr>
       {% endfor %}

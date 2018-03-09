@@ -10,6 +10,7 @@ use std::str::FromStr;
 
 use opldb::fields::{WeightAny, WeightKg};
 use opldb::WeightUnits;
+use langpack::{self, LocalizedWeightClassAny};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, PartialEq)]
@@ -72,6 +73,28 @@ impl WeightClassKg {
 impl fmt::Display for WeightClassKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.as_kg().fmt(f)
+    }
+}
+
+impl WeightClassAny {
+    // TODO: Reduce duplication.
+    pub fn format_comma(self) -> String {
+        match self {
+            WeightClassAny::UnderOrEqual(x) => x.format_comma(),
+            WeightClassAny::Over(x) => {
+                let mut s = x.format_comma();
+                s.push('+');
+                s
+            }
+            WeightClassAny::None => String::new(),
+        }
+    }
+
+    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightClassAny {
+        LocalizedWeightClassAny {
+            format: format,
+            class: self,
+        }
     }
 }
 

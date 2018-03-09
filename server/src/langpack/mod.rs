@@ -1,6 +1,8 @@
 //! Internationalization facilities.
 
 use serde_json;
+use serde;
+use serde::ser::Serialize;
 
 use std::error::Error;
 use std::str::FromStr;
@@ -208,5 +210,95 @@ impl Translations {
             fields::Sex::M => &self.sex.m,
             fields::Sex::F => &self.sex.f,
         }
+    }
+}
+
+/// Selects the localized format of displayed numbers.
+#[derive(Copy, Clone, Serialize, Deserialize)]
+pub enum NumberFormat {
+    /// Arabic numerals with a period as decimal separator, like "1234.5".
+    ArabicPeriod,
+    /// Arabic numerals with a comma as decimal separator, like "1234,5".
+    ArabicComma,
+}
+
+impl Language {
+    /// Gets the number format for the given language.
+    pub fn number_format(self) -> NumberFormat {
+        // Taken from the following list:
+        // https://en.wikipedia.org/wiki/Decimal_separator
+        match self {
+            Language::de => NumberFormat::ArabicComma,
+            Language::en => NumberFormat::ArabicPeriod,
+            Language::eo => NumberFormat::ArabicComma,
+            Language::es => NumberFormat::ArabicPeriod, // TODO: Only Central America.
+            Language::fi => NumberFormat::ArabicComma,
+            Language::fr => NumberFormat::ArabicComma,
+            Language::it => NumberFormat::ArabicComma,
+            Language::ru => NumberFormat::ArabicComma,
+        }
+    }
+}
+
+/// Type that gets serialized into a localized `WeightAny`.
+///
+/// This is the final weight type that should be stored in the `Context`
+/// and passed to the `Template`.
+#[derive(Copy, Clone)]
+pub struct LocalizedWeightAny {
+    pub format: NumberFormat,
+    pub weight: fields::WeightAny,
+}
+
+impl Serialize for LocalizedWeightAny {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        let s: String = match self.format {
+            NumberFormat::ArabicPeriod => format!("{}", self.weight),
+            NumberFormat::ArabicComma => self.weight.format_comma(),
+        };
+        serializer.serialize_str(&s)
+    }
+}
+
+/// Type that gets serialized into a localized `Points`.
+#[derive(Copy, Clone)]
+pub struct LocalizedPoints {
+    pub format: NumberFormat,
+    pub points: fields::Points,
+}
+
+impl Serialize for LocalizedPoints {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        let s: String = match self.format {
+            NumberFormat::ArabicPeriod => format!("{}", self.points),
+            NumberFormat::ArabicComma => self.points.format_comma(),
+        };
+        serializer.serialize_str(&s)
+    }
+}
+
+/// Type that gets serialized into a localized `WeightClassAny`.
+#[derive(Copy, Clone)]
+pub struct LocalizedWeightClassAny {
+    pub format: NumberFormat,
+    pub class: fields::WeightClassAny,
+}
+
+impl Serialize for LocalizedWeightClassAny {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        let s: String = match self.format {
+            NumberFormat::ArabicPeriod => format!("{}", self.class),
+            NumberFormat::ArabicComma => self.class.format_comma(),
+        };
+        serializer.serialize_str(&s)
     }
 }
