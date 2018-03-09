@@ -312,6 +312,15 @@ def check(scriptname, filename):
         if day_int > 31:
             perror("Implausible day: \"%s\"." % day)
 
+        # Check that the meet date is not in the future
+        future_date = datetime.datetime.today() + datetime.timedelta(days=2)
+        meet_date = datetime.datetime.strptime(
+            date,
+            "%Y-%m-%d"
+        )
+        if meet_date >= future_date:
+            perror("Implausible date: %s is a future date" % date)
+        
     # Check the MeetCountry column.
     if not row[countryidx] in KnownCountries:
         perror("Unknown country (add to check-meet-csv?): \"%s\"" % row[countryidx])
