@@ -29,10 +29,10 @@ pub enum Federation {
     FPO,
     GPA,
     GPC,
-    #[serde(rename = "GPC-GB")]
-    GPCGB,
     #[serde(rename = "GPC-AUS")]
     GPCAUS,
+    #[serde(rename = "GPC-GB")]
+    GPCGB,
     #[serde(rename = "GPC-NZ")]
     GPCNZ,
     HERC,
