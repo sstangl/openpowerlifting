@@ -48,20 +48,16 @@ impl<'a> Context<'a> {
         let strings = langinfo.get_translations(language);
         let page_title = &strings.header.status;
         let mut fed_statuses: Vec<FederationStatus> = vec![];
-        let mut feds: Vec<Federation> = vec![];
-        feds.push(Federation::USAPL);
-        feds.push(Federation::RPS);
-        feds.push(Federation::USPA);
 
-        for federation in feds.iter() {
+        for federation in Federation::iter_variants() {
             let fed_status = "Incomplete";
             // TODO: Make this more efficient
             let fed_meet_count = opldb
                 .get_meets()
                 .iter()
-                .filter(|m| m.federation == *federation)
+                .filter(|m| m.federation == federation)
                 .count();
-            let fed_status = FederationStatus::from(*federation, fed_status, fed_meet_count);
+            let fed_status = FederationStatus::from(federation, fed_status, fed_meet_count);
             fed_statuses.push(fed_status);
         }
 
