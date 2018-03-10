@@ -7,6 +7,14 @@
   </div>
 {% endblock topbar_hack_end %}
 
+{% block controls %}
+  <div id="controls">
+    <div id="controls-right">
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
 {% block body %}
 <center>
 <div class="text-content">
