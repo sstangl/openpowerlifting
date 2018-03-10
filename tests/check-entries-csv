@@ -337,7 +337,6 @@ HeaderHandlers = {
     # Stat columns. Only Kg is valid.
     'WeightClassKg': check_column_weightclass,
     'BodyweightKg': check_column_bodyweightkg,
-    'Wilks': check_positive_number_column,
 
     # Lift columns. Only Kg is valid.
     'BestSquatKg': check_lift_column,
@@ -396,11 +395,6 @@ def check_headers(csv):
 
     if not 'Place' in csv.fieldnames:
         perror("There must be a Place column.")
-
-    if 'Wilks' in csv.fieldnames and not 'TotalKg' in csv.fieldnames:
-        perror('Wilks requires a TotalKg column.')
-    if 'Wilks' in csv.fieldnames and not 'BodyweightKg' in csv.fieldnames:
-        perror('Wilks requires a BodyweightKg for exact bodyweight.')
 
     # Not requiring the Event header yet, although it's probably a good idea.
     #if not 'Event' in csv.fieldnames:
@@ -646,49 +640,12 @@ def check_row_total_consistency(row, csv):
         perror(" For row: %s" % row)
 
 
-# Federations calculate Wilks themselves, but have errors.
-# From stupid things like using the wrong units.
-def check_row_wilks_consistency(row, csv):
-    if not 'Wilks' in csv.fieldnames:
-        return
-    if not 'BodyweightKg' in csv.fieldnames:
-        return
-    if not 'TotalKg' in csv.fieldnames:
-        return
-    if not 'Sex' in csv.fieldnames:
-        return
-
-    total = float2(row[csv.index('TotalKg')])
-    bodyweight = float2(row[csv.index('BodyweightKg')])
-    sex = row[csv.index('Sex')]
-    score = float2(row[csv.index('Wilks')])
-
-    if score > 0:
-        if total <= 0:
-            perror("Wilks given but missing TotalKg in row.")
-        if bodyweight <= 0:
-            perror("Wilks given but missing BodyweightKg in row.")
-        if sex == '':
-            perror("Wilks given but missing Sex in row.")
-
-    if total <= 0 or bodyweight <= 0 or sex == '' or score <= 0:
-        return
-
-    calculated_score = wilks.wilks(sex == 'M', bodyweight, total)
-
-    # Federations induce a lot of rounding error, so believe them unless
-    # it's pretty egregiously wrong.
-    if abs(calculated_score - score) > 0.5:
-        perror("Wilks error: Calculated %f, but meet says %f" % (calculated_score, score))
-
-
 def check_row(row, csv):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
     check_row_weightclass_consistency(row, csv)
     check_row_weightclass_sex(row,csv)
     check_row_total_consistency(row, csv)
-    check_row_wilks_consistency(row, csv)
 
     check_row_lift_consistency(row, csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
     check_row_lift_consistency(row, csv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])

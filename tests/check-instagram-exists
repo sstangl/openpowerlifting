@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Checks if instagrams exist in lifter-data/social-media.csv
+# Checks if instagrams exist in lifter-data/social-instagram.csv
 # Takes a while to open all these urls
 
 import urllib.request
@@ -49,6 +49,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s social-media.csv" % sys.argv[0])
+        print("Usage: %s social-instagram.csv" % sys.argv[0])
         sys.exit(1)
     sys.exit(main(sys.argv[1]))

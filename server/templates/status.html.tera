@@ -1,0 +1,48 @@
+{% extends "desktop-base" %}
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-right">
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+
+<center>
+  <div class="text-content">
+    <h1>{{page_title}}</h1>
+        We are currently in beta. OpenPowerlifting is a work in progress.
+    <h2>Meets</h2>
+        We have currently entered {{num_meets}} meets, and {{num_entries}} total entries.
+
+    <h2>Federations</h2>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Meets In Database</th>
+      </thead>
+      {% for this in fed_statuses %}
+        <tr>
+          <td>{{this.fed}}</td>
+          <td>{{this.status}}</td>
+          <td>{{this.meet_count}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</center>
+{% endblock body %}
+
+{% block custom_javascript %}
+  {% include "langselect-script" %}
+{% endblock custom_javascript %}

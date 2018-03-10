@@ -1,4 +1,4 @@
-.PHONY: builddir binary data oldstatics config release
+.PHONY: builddir binary data oldstatics config client clientstatics release clean
 
 BUILDDIR := build
 
@@ -20,14 +20,6 @@ data: builddir
 	cp ../build/lifters.csv "${BUILDDIR}/opldb/lifters.csv"
 	cp ../build/meets.csv "${BUILDDIR}/opldb/meets.csv"
 	cp ../build/openpowerlifting.csv "${BUILDDIR}/opldb/openpowerlifting.csv"
-
-oldstatics: builddir
-	mkdir -p "${BUILDDIR}/static"
-	mkdir -p "${BUILDDIR}/static/images"
-	cp static/images/check_radio_sheet.png "${BUILDDIR}/static/images/"
-	cp static/images/logo-compressed.svg "${BUILDDIR}/static/images/"
-	cp static/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/static/images/"
-	cp static/images/select_dropdown.png "${BUILDDIR}/static/images/"
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"
