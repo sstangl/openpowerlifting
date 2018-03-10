@@ -190,8 +190,9 @@ def check_name_disambiguation(names):
             perror("%s: Count must be >= 2.", filename)
             continue
 
+        usernames = [get_username(lifter_name) for lifter_name in names]
         # The un-specified name should not occur without a number.
-        if name in names:
+        if get_username(name) in usernames:
             # Just use a warning, to avoid making meets really annoying to enter.
             pwarning("Lifter '%s' needs disambiguation in some meet data." % name)
 
@@ -199,20 +200,20 @@ def check_name_disambiguation(names):
         for k in range(1, int(count) + 1):
             variant = "%s #%u" % (name, k)
 
-            if not variant in names:
+            if not get_username(variant) in usernames:
                 perror("%s: No lifter named '%s' in any meets." % (filename, variant))
 
-        seenset[name] = int(count)
+        seenset[get_username(name)] = int(count)
 
     # Names with variants in meet files should be valid by the disambiguation file.
     for name in filter(lambda x: '#' in x, names):
         (part,index) = name.split('#')
         part = part.rstrip() # Remove the space before the '#'.
 
-        if not part in seenset:
+        if not get_username(part) in seenset:
             perror("%s: Name '%s' occurs in some meet, but isn't marked for disambiguation." % (filename, name))
         else:
-            count = seenset[part]
+            count = seenset[get_username(part)]
             if int(index) > int(count):
                 perror("%s: Name '%s' occurs in a meet, but only %s variants are known." % (filename, name, count))
 
