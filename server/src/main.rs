@@ -149,15 +149,38 @@ fn status(
 
 #[get("/data")]
 fn data(
-    opldb: State<opldb::OplDb>,
     langinfo: State<langpack::LangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
 
-    let context = pages::data::Context::new(&opldb, lang, &langinfo);
+    let context = pages::data::Context::new(lang, &langinfo);
     Some(Template::render("data", &context))
+}
+
+#[get("/faq")]
+fn faq(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::faq::Context::new(lang, &langinfo);
+    Some(Template::render("faq", &context))
+}
+
+#[get("/contact")]
+fn contact(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::contact::Context::new(lang, &langinfo);
+    Some(Template::render("contact", &context))
 }
 
 #[get("/")]
@@ -170,7 +193,10 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
-        .mount("/", routes![index, lifter, meet, statics, status, data])
+        .mount(
+            "/",
+            routes![index, lifter, meet, statics, status, data, faq, contact],
+        )
         .attach(Template::fairing())
 }
 
