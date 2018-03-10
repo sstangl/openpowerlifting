@@ -171,6 +171,18 @@ fn faq(
     Some(Template::render("faq", &context))
 }
 
+#[get("/contact")]
+fn contact(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::contact::Context::new(lang, &langinfo);
+    Some(Template::render("contact", &context))
+}
+
 #[get("/")]
 fn index() -> Redirect {
     Redirect::to("/u/kristyhawkins")
@@ -183,7 +195,7 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .mount(
             "/",
-            routes![index, lifter, meet, statics, status, data, faq],
+            routes![index, lifter, meet, statics, status, data, faq, contact],
         )
         .attach(Template::fairing())
 }
