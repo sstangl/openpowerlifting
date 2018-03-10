@@ -1,8 +1,8 @@
-//! Logic for the data page.
+//! Logic for the contact page.
 
 use langpack::{self, Language};
 
-/// The context object passed to `templates/data.html.tera`
+/// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
     pub page_title: &'a str,
@@ -13,7 +13,7 @@ pub struct Context<'a> {
 impl<'a> Context<'a> {
     pub fn new(language: Language, langinfo: &'a langpack::LangInfo) -> Context<'a> {
         let strings = langinfo.get_translations(language);
-        let page_title = &strings.header.data;
+        let page_title = &strings.header.contact;
 
         Context {
             page_title: page_title,

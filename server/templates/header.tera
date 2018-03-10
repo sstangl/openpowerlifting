@@ -10,8 +10,4 @@
   <a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>
   <a href="https://facebook.com/openpowerlifting" class="nav__link"><i class="fa fa-facebook"></i></a>
   <a href="javascript:void(0)" class="nav__link header-hamburger" onClick="document.getElementById('header').classList.toggle('responsive')">&#9776;</a>
-
-  <span class="siteinfo">
-    {{header.num_entries}} Entries &mdash; {{header.num_meets}} Meets &mdash; Updated Sometime
-  </span>
 </div>
