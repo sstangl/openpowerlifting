@@ -10,6 +10,7 @@
 #
 import datetime
 import sys,os
+import re
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
 import oplcsv
@@ -363,6 +364,12 @@ def check(scriptname, filename):
             perror("The abbreviation for Montana is 'MT', not '%s'." % row[stateidx])
         if 'Texas' in row[nameidx] and row[stateidx] != 'TX':
             perror("The abbreviation for Texas is 'TX', not '%s'." % row[stateidx])
+
+        # Check if MeetName column contains the year or the fed name
+        if year in row[nameidx] or row[fedidx] in row[nameidx]:
+            pwarning("The meet %s contains either the year or the federation name" % row[nameidx])
+
+
 
 if __name__ == '__main__':
     # If arguments are provided, check only those files.
