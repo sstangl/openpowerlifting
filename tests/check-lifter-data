@@ -162,6 +162,8 @@ def check_name_disambiguation(names):
     filename = 'name-disambiguation.csv'
     csv = oplcsv.Csv('lifter-data' + os.sep + filename)
 
+    usernames = [get_username(lifter_name) for lifter_name in names]
+
     # Names seen in the file so far.
     # Stored as a map of Name => Count for use further below.
     seenset = {}
@@ -190,7 +192,6 @@ def check_name_disambiguation(names):
             perror("%s: Count must be >= 2.", filename)
             continue
 
-        usernames = [get_username(lifter_name) for lifter_name in names]
         # The un-specified name should not occur without a number.
         if get_username(name) in usernames:
             # Just use a warning, to avoid making meets really annoying to enter.
