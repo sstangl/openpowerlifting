@@ -4,7 +4,7 @@ use opldb;
 use opldb::fields::Federation;
 use langpack::{self, Language};
 
-/// The context object passed to `templates/status.tera`
+/// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
     pub page_title: &'a str,

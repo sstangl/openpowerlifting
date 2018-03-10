@@ -4,7 +4,7 @@ use opldb;
 use opldb::fields;
 use langpack::{self, Language};
 
-/// The context object passed to `templates/meet.tera`
+/// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
     pub page_title: String,

@@ -2,7 +2,7 @@
 
 use langpack::{self, Language};
 
-/// The context object passed to `templates/data.tera`
+/// The context object passed to `templates/data.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
     pub page_title: &'a str,
