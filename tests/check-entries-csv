@@ -493,35 +493,33 @@ def check_row_weightclass_consistency(row, csv):
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
-    if row[csv.index('Sex')] is not 'F':
-        return
-
     wtcls = row[csv.index('WeightClassKg')].replace('+','')
     if not wtcls:
         return
 
     # No female category should be this high.
-    try:
-        number = float(wtcls)
-        # This is probably higher than it should be because some USPA
-        # meets put women in male weightclasses for no reason.
-        # Made even higher thanks to the SPF.
-        if number > 120:
-            pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
-    except ValueError:
-        pass
+    if row[csv.index('Sex')] == 'F':
+        try:
+            number = float(wtcls)
+            # This is probably higher than it should be because some USPA
+            # meets put women in male weightclasses for no reason.
+            # Made even higher thanks to the SPF.
+            if number > 120:
+                pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
+        except ValueError:
+            pass
 
     if 'BodyweightKg' in csv.fieldnames:
         bw = row[csv.index('BodyweightKg')]
         if bw:
             if '+' in row[csv.index('WeightClassKg')]:
                 if float(bw) <= float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
             else:
                 if float(bw) > float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
 
@@ -531,7 +529,7 @@ def check_row_weightclass_consistency(row, csv):
     if 'usapl' in globalFilename and 'BodyweightKg' in csv.fieldnames:
         if row[csv.index('BodyweightKg')].strip() == '':
             if row[csv.index('WeightClassKg')].strip() != '':
-                perror("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
+                pwarning("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
                         row[csv.index('Name')])
 
 
