@@ -119,7 +119,7 @@ export function makeRowObj(row, index?: number): RowObject {
     if (fullname === "Ben Gianacakos") {
         // Pink.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
-    } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley") {
+    } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley" || fullname === "Amanda Kohatsu") {
         // Green.
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
     } else if (fullname === "Boris Lerner" || fullname === "Esther Lee") {
