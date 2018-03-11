@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Often it happens that rpu-standardize-csv fails, and
+# the scripts must be updated to handle the new csv format.
+#
+# This file contains the commands that would be executed at the end
+# of rpu-parse, that I have to execute by hand in case things go wrong,
+# to save me some repetitive typing.
+#
+
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTSDIR="${SCRIPTDIR}/../../tests"
+
+${SCRIPTDIR}/wpa-ukr-standardize-csv results.csv > entries.csv
+
+${REPOSCRIPTDIR}/calc-latin-names entries.csv
+
+cp ${SCRIPTDIR}/../meet.template meet.csv
+
+
+# Show any warnings.
+${REPOTESTSDIR}/check-entries-csv entries.csv
+
+echo "Done! Don't forget about meet.csv!"
