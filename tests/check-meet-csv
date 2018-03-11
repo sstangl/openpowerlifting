@@ -365,8 +365,10 @@ def check(scriptname, filename):
             perror("The abbreviation for Texas is 'TX', not '%s'." % row[stateidx])
 
         # Check if MeetName column contains the year or the fed name
-        if year in row[nameidx] or row[fedidx] in row[nameidx]:
-            pwarning("The meet %s contains either the year or the federation name" % row[nameidx])
+        if year in row[nameidx]:
+            perror("MeetName should not have the year.")
+        if row[fedidx] in row[nameidx]:
+            perror("MeetName should not have the federation.")
 
 
 if __name__ == '__main__':
