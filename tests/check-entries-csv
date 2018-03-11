@@ -526,7 +526,7 @@ def check_row_weightclass_consistency(row, csv):
     # USAPL's reporting site calculates weight class from bodyweight,
     # so if they leave bodyweight blank it will assign the lowest weight class,
     # giving the lifter a Wilks score of 1000+!
-    if 'usapl' in globalFilename and 'BodyweightKg' in csv.fieldnames:
+    if 'usapl/' in globalFilename and 'BodyweightKg' in csv.fieldnames:
         if row[csv.index('BodyweightKg')].strip() == '':
             if row[csv.index('WeightClassKg')].strip() != '':
                 pwarning("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
