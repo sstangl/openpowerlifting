@@ -369,7 +369,6 @@ def check(scriptname, filename):
             pwarning("The meet %s contains either the year or the federation name" % row[nameidx])
 
 
-
 if __name__ == '__main__':
     # If arguments are provided, check only those files.
     if len(sys.argv) > 1:
