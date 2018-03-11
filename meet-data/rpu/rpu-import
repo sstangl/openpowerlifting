@@ -2,24 +2,27 @@
 
 set -e
 
-if [ $# -ne 1 ]; then
-	echo " Usage: $0 http://url/to/results.xls"
+if [ $# -ne 2 ]; then
+	echo " Usage: $0 dirname url"
 	exit 1
 fi
-
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
+
+mkdir "$1"
+cd "$1"
+
 # Remember whether it's XLS or XLSX.
-EXTENSION="${1##*.}"
+EXTENSION="${2##*.}"
 
 # Download the website to results.xls(s)
-wget --output-document="results.${EXTENSION}" "$1"
+wget --output-document="results.${EXTENSION}" "$2"
 
 # Save the website URL for future use, since it's pretty hard to tell
 # what meets on the site are tracked and which aren't.
-echo "$1" > URL
+echo "$2" > URL
 
 # Convert the spreadsheet to HTML.
 # The spreadsheet will have multiple pages -- these will all be added to one document.
@@ -41,16 +44,8 @@ sed -i -e 's/<s>/-/g' tmp.xls
 sed -i -e 's/<\/s>//g' tmp.xls
 
 
-
-
-#Remove sdvals from html
+#Remove sdvals from html, otherwise LibreOffice ignores negatives when converting to csv
 sed -i -e 's/sdval="[^\"]*"//g' tmp.xls
-
-
-
-
-
-
 
 # Convert commas in numbers to periods
 sed -i -e 's/,/\./g' tmp.xls
@@ -66,8 +61,6 @@ mv tmp.csv results.csv
 sed -i -e 's/,-,/,,/g' results.csv
 sed -i -e 's/,-,/,,/g' results.csv
 
-# Create the empty meet.csv file.
-#cp "../../meet.template" "meet.csv"
 
 # Clean up.
 if [ -f results.csv ]; then
