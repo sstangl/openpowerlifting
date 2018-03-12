@@ -16,6 +16,7 @@ REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
 ${SCRIPTDIR}/wpa-ukr-standardize-csv results.csv > entries.csv
 
+${REPOSCRIPTDIR}/calc-best-lifts entries.csv
 ${REPOSCRIPTDIR}/calc-latin-names entries.csv
 
 cp ${SCRIPTDIR}/../meet.template meet.csv

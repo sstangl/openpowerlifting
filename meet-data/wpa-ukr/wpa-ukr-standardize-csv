@@ -10,397 +10,466 @@ from os.path import join,realpath,dirname
 sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
 
 from oplcsv import Csv
-import shutil
+import re
 
-def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+
+#!/usr/bin/env python3
+# Given a results.csv as outputted by wrpf-parse, parse each sheet one at a time
+# and join all the sheets together into an OpenPowerlifting-formatted CSV file.
+
+import oplcsv
+import sys
+
+
+def die(s):
+    print(s, file=sys.stderr)
     sys.exit(1)
 
 
-def strip_whitespace(csv):
-    for row in csv.rows:
-        for i,x in enumerate(row):
-            row[i] = x.strip().replace('  ',' ')
+# Given the array of lines, split it up into an array per-sheet.
+def split_by_sheet(lines):
+    for i in range(len(lines)):
+        if 'Sheet' in lines[i][0]:
+            break
+    assert i < len(lines)
+    assert 'Sheet' in lines[i][0]
+
+    sheetlist = []
+    sheet = None
+
+    for line in lines[i:]:
+        # If this line starts a new sheet, generate a new array.
+        if 'Sheet' in line[0]:
+            sheet = []
+            sheetlist.append(sheet)
+        sheet.append(line)
+
+    return sheetlist
 
 
-def assign_class(csv):
-    curclass = None
-    totalidx = csv.index('TotalKg')
-    wtclsidx = csv.index('WeightClassKg')
+# Given the name of a sheet, return a dictionary describing the sheet.
+def parse_sheetname(s):
+    obj = {}
 
-    for row in csv.rows:
-        if 'kg' in row[0]:
-            curclass = row[0].replace('-','').replace('kg','')
-        elif curclass and row[totalidx]:
-            row[wtclsidx] = curclass
+    federation = ''
+    event = None
+    amateur = 'Pro' # By default, unless otherwise specified.
+    tested = '' # By default, unless otherwise specified.
+    equipment = 'Wraps' # By default, unless otherwise specified.
 
-#Try and get the name of the meet from the csv file
-def get_meet_name(csv):
-    meet_info=[""]
-    for ii in range(0,3):
-        if len(csv.rows[ii])!= 0:
-            meet_info= csv.rows[ii][0].split('.')
-            if len(meet_info)>3: #Looks like we've found the meet info
-                break
-    if len(meet_info)!=0:
-        return meet_info[0]
+    # Parse word-by-word to make sure that every word is understood. 
+    for word in s.lower().split():
+        # Federations
+        if word == 'wrpf':
+            assert not federation
+            federation = 'WRPF'
+        elif word == 'спр': # Some other federation that does multi-ply.
+            assert not federation
+            federation = 'SPR'
+        elif word == 'wrpf-pro':
+            assert not federation
+            federation = 'WRPF'
 
-    return ""
+        # Events
+        elif word == 'пл' or word == 'пауэрлифтинг' or word == 'pl':
+            assert not event
+            event = 'SBD'
+        elif word == 'жим' or word =='им':
+            assert not event
+            event = 'B'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+        elif word == 'тяга':
+            assert not event
+            event = 'D'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+        elif word == 'двоеборье':
+            assert not event
+            event = 'BD'
+            if equipment == 'Wraps':
+                equipment = 'Raw'
+
+        # Equipment
+        elif word == 'однослой':
+            equipment = 'Single-ply'
+        elif word == 'экипировке':
+            equipment = 'Multi-ply'
+
+        # Booleans.
+        elif word == 'люб.' or word == 'любители':
+            amateur = 'Amateur'
+        elif word == 'pro':
+            assert amateur == 'Pro'
+        elif word == 'дк' or word == 'д_к':
+            tested = 'Tested'
+
+        # Grammatical ignorables.
+        elif word == 'в':
+            pass
+        elif word == 'лежа':
+            pass
+        
+        elif word == 'протокол': #Results
+            assert not event
+            event = 'SBD' 
 
 
-def assign_division(csv):
-    curdiv = None
-    totalidx = csv.index('TotalKg')
+        # Other ignorables.
+        elif word == 'сфо': # Not sure.
+            pass
+        elif word == 'становая': # First word in 'deadlift'.
+            pass
+        elif word == 'raw':
+            pass
+        elif word == 'штанги': #Barbell
+            pass
+        elif word == 'лежачи': #Lying (as in bench)
+            pass
+        else:
+            die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+
+    assert event
+
+    obj['federation'] = federation
+    obj['event'] = event
+    obj['amateur'] = amateur
+    obj['tested'] = tested
+    obj['equipment'] = equipment
+
+    return obj
+
+
+# Find the line that contains column information (the line below does also).
+def get_header_linenum(sheet):
+    for i in range(len(sheet)):
+        if len(sheet[i]) >1 and sheet[i][1] in ['П.І.','Имя']:
+            return i
+    die("get_header_linenum() failed to find the header.")
+
+
+def parse_fieldnames(sheet):
+    fieldnames = []
+
+    headernum = get_header_linenum(sheet)
+    header = sheet[headernum]
+    header_next = sheet[headernum+1]
+
+    # Name all the columns.
+    iterable = iter(range(len(header)))
+
+    #First column is place, has no label
+    next(iterable)
+    fieldnames.append('Place')
+    for i in iterable:
+        text = header[i]
+
+        if text == 'Место':
+            fieldnames.append('Place')
+        elif text =='П.І.' or text =='Имя':
+            fieldnames.append('InternationalName')
+        elif text == 'МІСЦЕ': #City
+            fieldnames.append('IGNORE')
+        elif text =='Город': #Home city/gym
+            fieldnames.append('IGNORE')
+        elif text == 'Дата народ.'or text =='День рождения': #Birthdate
+            fieldnames.append('BirthDate')
+        elif text == 'власна вага' or text =='Вес': #Bodyweight
+            fieldnames.append('BodyweightKg')
+        elif text == 'Сума по коеф.' or text=='Абсолют': #Wilks
+            fieldnames.append('IGNORE')
+        elif text == 'Виконаний норматив': #Some kind of points?
+            fieldnames.append('IGNORE')
+        elif text == 'Страна': #Country
+            fieldnames.append('Country')
+        elif text =='Звание': #Rank
+            fieldnames.append('IGNORE')
+        elif text == 'Тренера': #Coach
+            fieldnames.append('IGNORE')
+
+        elif text == 'Сумма':
+            fieldnames.append('TotalKg')
+
+        elif text == 'Присед 1':
+            assert header[i+1] == 'Присед 2'
+            assert header[i+2] == 'Присед 3'
+            fieldnames.append('Squat1Kg')
+            fieldnames.append('Squat2Kg')
+            fieldnames.append('Squat3Kg')
+            if header[i+3] == 'Присед 4':
+                fieldnames.append('Squat4Kg')
+                [next(iterable) for x in range(3)]
+
+        elif text == 'Жим 1':
+            assert header[i+1] == 'Жим 2'
+            assert header[i+2] == 'Жим 3'
+            fieldnames.append('Bench1Kg')
+            fieldnames.append('Bench2Kg')
+            fieldnames.append('Bench3Kg')
+            if header[i+3] == 'Сумма':
+                fieldnames.append('BestBenchKg')
+                [next(iterable) for x in range(3)]
+            elif header[i+3] == 'Жим 4':
+                fieldnames.append('Bench4Kg')
+                [next(iterable) for x in range(3)]
+
+        elif text == 'Тяга 1':
+            assert header[i+1] == 'Тяга 2'
+            assert header[i+2] == 'Тяга 3'
+            fieldnames.append('Deadlift1Kg')
+            fieldnames.append('Deadlift2Kg')
+            fieldnames.append('Deadlift3Kg')
+            if header[i+3] == 'Сумма':
+                fieldnames.append('BestDeadliftKg')
+                [next(iterable) for x in range(3)]
+            elif header[i+3] == 'Тяга 4':
+                fieldnames.append('Deadlift4Kg')
+                [next(iterable) for x in range(3)]
+
+        else:
+            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+
+    return fieldnames
+
+
+# Given a list of lines all of which belong to the same sheet, parse that
+# into an OpenPowerlifting-style CSV.
+def parse_sheet(sheet):
+    assert 'Sheet' in sheet[0][0]
+    assert sheet[0][0].count(':') == 1
+
+    csv = oplcsv.Csv()
+
+    title=sheet[0][0].lower()
+    # Ignore some sheets that don't contain any powerlifting.
+    if 'судейская кол' in title:
+        return csv
+    elif 'нж ' in title:
+        # This is the "People's Bench", which I think is bench-for-reps.
+        return csv
+    elif 'багатоповторний'  in title: #Multiple probably bench for reps
+        return csv
+
+    # Figure out event, equipment, etc., and store in obj.
+    obj = parse_sheetname(sheet[0][0].split(':')[1])
+
+    # Look through the sheet for column information and mark up the CSV.
+    # All columns are given a name -- the extra ones are removed later.
+    csv.fieldnames = parse_fieldnames(sheet)
+
+    # The WeightClassKg information is stateful, between rows.
+    assert not 'WeightClassKg' in csv.fieldnames
+    csv.fieldnames.append('WeightClassKg')
+    assert not 'Division' in csv.fieldnames
+    csv.fieldnames.append('Division')
+    assert not 'Sex' in csv.fieldnames
+    csv.fieldnames.append('Sex')
+    assert not 'Event' in csv.fieldnames
+    csv.fieldnames.append('Event')
+    assert not 'Equipment' in csv.fieldnames
+    csv.fieldnames.append('Equipment')
+    csv.fieldnames.append('Amateur')
+    csv.fieldnames.append('Tested')
+    csv.fieldnames.append('Federation')
+
+    weightclass = None
+    division = None
+    sex = None
+    equipment = None
+    amateur = None
+
+
+    #There's often a bunch of nonsense at the bottom
+    
+
+    if len([c for c in line if c !='']) < 3:
+            break
+
+
+
+    # Iterate over each line, skipping the two header lines.
+    for line in sheet[get_header_linenum(sheet)+2:]:
+        text = ''.join(line)
+
+        # Stop iteration once the 'Best Lifters' section is reached.
+        if 'Абсолютный зачёт' in text:
+            break
+
+        # Skip empty lines.
+        if text == '':
+            continue
+
+        # Detect lines that set WeightClassKg state.
+        if ' кг' in text:
+            weightclass = re.findall(r"\d*\.\d+|(\d+|\+)",text)[0]
+            continue
+
+        if 'Жен.' in text:
+            sex = 'F'
+            division = re.findall(r"\((.*?)\)",text)[0]
+            continue
+        elif 'Муж.' in text:
+            sex = 'M'
+            division = re.findall(r"\((.*?)\)",text)[0]
+            continue
+
+        if 'raw' in text.lower():
+            equipment = 'Wraps'
+            amateur = text.split()[-1].title()
+            continue
+        elif 'eq' in text.lower():
+            equipment = 'Multi-ply' #Check this
+            amateur = text.split()[-1].title()
+            continue 
+
+        # If we've made it this far, the line should be for a lifter!
+        # Make sure they have a name!
+        if not line[csv.index('InternationalName')]:
+            continue
+        line.append(weightclass)
+        line.append(division)
+        line.append(sex)
+        line.append(obj['event'])
+        line.append(obj['equipment'])
+        line.append(obj['amateur'])
+        line.append(obj['tested'])
+        line.append(obj['federation'])
+
+        assert len(line) == len(csv.fieldnames)
+        csv.rows.append(line)
+
+    # Remove all the columns named 'IGNORE' before returning the CSV for integration.
+    while 'IGNORE' in csv.fieldnames:
+        csv.remove_column_by_name('IGNORE')
+    return csv
+
+
+# Handles the Division and Age columns, which looks like below:
+#   Открытая 20-23 (21.11.1986)/30
+# Converts to English and separates into Division and Age columns.
+def standardize_division_age(csv):
+    assert 'Tested' in csv.fieldnames
+    assert 'Amateur' in csv.fieldnames
+    assert 'Division' in csv.fieldnames
+    assert 'BirthDate' in csv.fieldnames
+
+    csv.append_columns(['BirthYear'])
+    
     dividx = csv.index('Division')
-
-
-    for row in csv.rows[4:]: #Skip the title
-        if row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
-            break
-
-    if curdiv ==None: #Try and work out the division of single division meets - note masters meets always have multiple divisions
-        if 'Open' in get_meet_name(csv):
-            curdiv='Open'
-        elif 'Sub' in get_meet_name(csv):
-            curdiv='Sub-Junior'
-        elif 'Junior' in get_meet_name(csv):
-            curdiv='Junior'
+    bdidx = csv.index('BirthDate')
+    byidx = csv.index('BirthYear')
+    amateuridx = csv.index('Amateur')
+    testedidx = csv.index('Tested')
 
     for row in csv.rows:
-        if any(title in row[0].lower() for title in ['best lifters','list of','champion of']): # So we can correctly strip rows in Bench Only meets
-            curdiv = 'NON-LIFTER-ROW'
-        elif row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:# and 'best' not in row[0].lower():
-            curdiv = row[0].replace('Women','').replace('Men','').strip()
-        elif curdiv and row[totalidx]:
-            row[dividx] = curdiv
+        # Fill in the Age.
+        if '.' in row[bdidx]:
+            row[byidx] = row[bdidx].split('.')[-1].strip()
 
-def remove_non_lifter_rows(csv):
-    # All lifter rows at this point, even if DQ'd, have totals given.
-    totalidx = csv.index('TotalKg')
-    #For Bench Only meets we check the division to see if this is a lifter
-    dividx = csv.index('Division') 
+        # Fill in the Division.
+        # Handle the divisions with numbers first.
+        if 'Children 8' in row[dividx]:
+            division = 'Youth 8'
+        elif 'Children 9' in row[dividx]:
+            division = 'Youth 9'
+        elif 'Children 11-12' in row[dividx]:
+            division = 'Youth 11-12'
+        elif 'Teenagers 13-15' in row[dividx]:
+            division = 'Teen 13-15'
+        elif 'Teenagers 16-17' in row[dividx]:
+            division = 'Teen 16-17'
+        elif 'Teenagers 18-19' in row[dividx]:
+            division = 'Teen 18-19'
+        elif 'Juniors 20-23' in row[dividx]:
+            division = 'Juniors 20-23'
+        elif 'Submasters 33-39' in row[dividx]:
+            division = 'Submasters 33-39'
+        elif 'Masters 40-44' in row[dividx]:
+            division = 'Masters 40-44'
+        elif 'Masters 45-49' in row[dividx]:
+            division = 'Masters 45-49'
+        elif 'Masters 50-54' in row[dividx]:
+            division = 'Masters 50-54'
+        elif 'Masters 55-59' in row[dividx]:
+            division = 'Masters 55-59'
+        elif 'Masters 60-64' in row[dividx]:
+            division = 'Masters 60-64'
+        elif 'Masters 75-79' in row[dividx]:
+            division = 'Masters 75-79'
+
+        elif 'Open' in row[dividx]:
+            division = 'Open'
+        elif 'MPF' in row[dividx]:
+            division = 'Military/Fire/Police'
+        else:
+            die('Fix standardize_division_age(): Unknown division "%s"' % row[dividx])
+
+        division = row[testedidx] + ' ' + row[amateuridx] + ' ' + division
+        row[dividx] = division.replace('  ',' ').strip()
+
+    # Remove the now-extraneous columns.
+    csv.remove_column_by_name('BirthDate')
+    csv.remove_column_by_name('Amateur')
+    csv.remove_column_by_name('Tested')
 
 
-    def getbadidx(csv):
-        for i,row in enumerate(csv.rows):
-            if not row[totalidx] or row[dividx]== 'NON-LIFTER-ROW':
-                return i
-        return -1
-
-    while True:
-        idx = getbadidx(csv)
-        if idx == -1:
-            break
-        del csv.rows[idx]
-
-    if csv.rows[0][0] == 'PL.':
-        del csv.rows[0]
-
-
-def fixup_lift(csv, fieldname):
-    idx = csv.index(fieldname)
-    placeidx = csv.index('Place')
-
+def mark_dqs(csv):
+    idx = csv.index('Place')
     for row in csv.rows:
-        amount = row[idx]
+        if not row[idx] or row[idx] == '-':
+            row[idx] = 'DQ'
+        elif row[idx] =='DT':
+            row[idx] = 'DD'
 
-        # Records are like: '234-w'.
-        # Failed record attempts aren't marked as records.
-        if amount and amount[0] != '-' and '-' in amount:
-            amount = amount.split('-')[0]
+def cleanup_lift(csv, fieldname):
+    if fieldname in csv.fieldnames:
+        idx = csv.index(fieldname)
 
-        # Some older meets have records as 123/w
-        if amount and amount[0] != '/' and '/' in amount:
-            amount = amount.split('/')[0]
+        for row in csv.rows:
+            amount = row[idx]
 
-        if ' ' in amount:
-            amount = amount.split()[0]
+            amount = ''.join(c for c in amount if c.isdigit() or c in ['.','-'])
+            amount = amount.replace('.00','').replace('.0','')
 
-        if amount == 'X' or amount == 'DSQ' or amount == 'TD':
-            amount = ''
 
-        # Special handling for disqualification due to doping.
-        if amount == 'DD':
-            row[placeidx] = 'DD'
-            amount = ''
+            if amount == 'X' or amount.replace('-','') == '0' or not any(c.isdigit() for c in amount):
+                amount = ''
 
-        row[idx] = amount
+            #Sometimes numbers have more than 2 commas, if so remove the second one
+            if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
+                amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
 
-
-#In Bench meets doping disqualifications and bombs are marked in the total
-def fixup_total(csv): 
-    totalidx = csv.index('TotalKg')
-    placeidx = csv.index('Place')
-    for row in csv.rows:
-        if row[totalidx] == 'DD':
-            row[totalidx]=''
-            row[placeidx] = 'DD'
-        elif not row[totalidx].replace('.','',1).isdigit():
-            row[totalidx]=''
-
-        #There are some older IPF meets where despite a DQ the total is not blank
-        if row[placeidx] in ['DQ','DD','RD']:
-            row[totalidx]=''
-
-
-def assign_best(csv, liftname):
-    idx1 = csv.index('%s1Kg' % liftname)
-    idx2 = csv.index('%s2Kg' % liftname)
-    idx3 = csv.index('%s3Kg' % liftname)
-    bestidx = csv.index('Best%sKg' % liftname)
-
-    def weight(str):
-        try:
-            return float(str)
-        except ValueError:
-            return 0.0
-
-    for row in csv.rows:
-        best = max(weight(row[idx1]), weight(row[idx2]), weight(row[idx3]))
-
-        if float(best) > 0:
-            row[bestidx] = str(best)
-
-
-def unreverse_names(csv):
-    nameidx = csv.index('Name')
-    for row in csv.rows:
-        parts = row[nameidx].split()
-        parts = [name.title() for name in parts]
-
-        # The last name is probably the given first name.
-        fixed = [parts[-1]] + parts[:-1]
-        name = ' '.join(fixed)
-
-        name = name.replace('Jr.', 'Jr')
-        name = name.replace('Sr.', 'Sr')
-
-        row[nameidx] = name
-
-
-def add_events(csv,events):
-    eventidx = csv.index('Event')
-    for row in csv.rows:
-        row[eventidx]=events
-
-
-def add_sex(csv,sex):
-    sexidx = csv.index('Sex')
-    for row in csv.rows:
-        row[sexidx]=sex
-
-
-#Finds the sex of the lifters in a meet from the weight classes
-def meet_sex(csv):
-    mens_classes = ['-53','-59','-66','-74','-83','-93','-105','-120','120+']
-    womens_classes = ['-43','-47','-57','-63','-72','-84','84+'] #Don't have -52 as this overlaps with an old class
-
-    old_mens_only = ['-100','-110','-125','125+']
-    old_womens_only = ['-44','48','90+']
-
-    all_mens = mens_classes + old_mens_only
-    all_womens = womens_classes + old_womens_only
-    for row in csv.rows:
-        if any(row[0].startswith(x) for x in all_mens):
-            return 'M'
-        elif any(row[0].startswith(x) for x in all_womens):
-            return 'F'
-
-    #Couldn't work out the sex of lifters from the weight classes for some reason
-    return ''
-
-
-#See if we can determine whether this meet was single-ply
-def add_equipment(csv):
-    equip_type = ''
-    
-    #Check the field that usually has the meet name to see if it tells us the equipment
-    meet_info=[""]
-    for ii in range(0,3):
-        if len(csv.rows[ii])!= 0:
-            meet_info= csv.rows[ii][0].split('.')
-            if len(meet_info)>3: #Looks like we've found the meet info
-                break
-    meet_name = meet_info[0]
-
-    if 'open' in meet_name.lower() or 'equipped' in meet_name.lower():
-        equip_type = 'Single-ply'
-    elif 'classic' in meet_name.lower():
-        equip_type='Raw'
-
-
-    #Check the year, if < 2011 then it was single-ply
-    meet_year = 9999
-    if len(meet_info)>3:
-        meet_year=meet_info[-1]
-
-    if meet_year.isdigit() and int(meet_year) < 2011:
-        equip_type='Single-ply'
-
-
-    eqpidx = csv.index('Equipment')
-    for row in csv.rows:
-        row[eqpidx]=equip_type
-
-
-def standardize_full_meet(csv):
-    # Fieldnames given for the detailed spreadsheet.
-    fieldnames = []
-
-    fieldnames.append('Place')
-    fieldnames.append('Name')
-    fieldnames.append('BirthYear')
-    fieldnames.append('Country')
-    fieldnames.append('BodyweightKg')
-    fieldnames.append('XXX_wilksfactor')
-
-    if len(csv.rows[0])==22: #Lot number is not always given
-        fieldnames.append('XXX_lot')
-
-    fieldnames.append('Squat1Kg')
-    fieldnames.append('Squat2Kg')
-    fieldnames.append('Squat3Kg')
-    fieldnames.append('XXX_squatplace')
-
-    fieldnames.append('Bench1Kg')
-    fieldnames.append('Bench2Kg')
-    fieldnames.append('Bench3Kg')
-    fieldnames.append('XXX_benchplace')
-
-    fieldnames.append('Deadlift1Kg')
-    fieldnames.append('Deadlift2Kg')
-    fieldnames.append('Deadlift3Kg')
-    fieldnames.append('XXX_deadliftplace')
-
-    fieldnames.append('TotalKg')
-    fieldnames.append('XXX_wilks') # Recalculate anyway.
-    fieldnames.append('XXX_points')
-
-    csv.fieldnames = fieldnames
-
-    csv.remove_column_by_name('XXX_wilksfactor')
-    csv.remove_column_by_name('XXX_lot')
-    csv.remove_column_by_name('XXX_squatplace')
-    csv.remove_column_by_name('XXX_benchplace')
-    csv.remove_column_by_name('XXX_deadliftplace')
-    csv.remove_column_by_name('XXX_wilks')
-    csv.remove_column_by_name('XXX_points')
-
-    csv.fieldnames = fieldnames
-
-    csv.remove_column_by_name('XXX_wilksfactor')
-    csv.remove_column_by_name('XXX_lot')
-    csv.remove_column_by_name('XXX_squatplace')
-    csv.remove_column_by_name('XXX_benchplace')
-    csv.remove_column_by_name('XXX_deadliftplace')
-    csv.remove_column_by_name('XXX_wilks')
-    csv.remove_column_by_name('XXX_points')
-
-    csv.insert_column(csv.index('Squat3Kg')+1, 'BestSquatKg')
-    csv.insert_column(csv.index('Bench3Kg')+1, 'BestBenchKg')
-    csv.insert_column(csv.index('Deadlift3Kg')+1, 'BestDeadliftKg')
-    csv.append_column('WeightClassKg')
-    csv.append_column('Division')
-    csv.append_column('Event')
-    csv.append_column('Sex')
-    csv.append_column('Equipment')
-
-    assign_class(csv)
-    assign_division(csv)
-    add_events(csv,'SBD')
-    add_sex(csv,meet_sex(csv))
-    add_equipment(csv)
-
-    remove_non_lifter_rows(csv)
-
-    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg',
-              'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'TotalKg']:
-        fixup_lift(csv, x)
-    fixup_total(csv)
-
-
-    for x in ['Squat', 'Bench', 'Deadlift']:
-        assign_best(csv, x)
-
-
-    strip_whitespace(csv)
-    unreverse_names(csv)
-
-
-def standardize_bench_only(csv):
-    # Fieldnames given for the bench spreadsheet.
-    fieldnames = []
-
-    fieldnames.append('Place')
-    fieldnames.append('Name')
-    fieldnames.append('BirthYear')
-    fieldnames.append('Country')
-    fieldnames.append('BodyweightKg')
-    fieldnames.append('XXX_wilksfactor')
-    fieldnames.append('XXX_lot')
-
-    fieldnames.append('Bench1Kg')
-    fieldnames.append('Bench2Kg')
-    fieldnames.append('Bench3Kg')
-
-    fieldnames.append('TotalKg')
-    
-    if len(csv.rows[0])==14: #Some IPF meets mark WRs and DQs in a seperate column
-        fieldnames.append('WR_DQ')
-
-    fieldnames.append('XXX_wilks') 
-    fieldnames.append('XXX_points')
-
-    csv.fieldnames = fieldnames
-
-    csv.remove_column_by_name('XXX_wilksfactor')
-    csv.remove_column_by_name('XXX_lot')
-    csv.remove_column_by_name('WR_DQ')
-    csv.remove_column_by_name('XXX_wilks')
-    csv.remove_column_by_name('XXX_points')
-
-    csv.insert_column(csv.index('Bench3Kg')+1, 'BestBenchKg')
-    csv.append_column('WeightClassKg')
-    csv.append_column('Division')
-    csv.append_column('Event')
-    csv.append_column('Sex')
-    csv.append_column('Equipment')
-
-    assign_class(csv)
-    assign_division(csv)
-    add_events(csv,'B')
-    add_sex(csv,meet_sex(csv))
-    add_equipment(csv)
-
-    remove_non_lifter_rows(csv)
-
-    for x in ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']:
-        fixup_lift(csv, x)
-    fixup_total(csv)
-
-    assign_best(csv, 'Bench')
-
-
-    strip_whitespace(csv)
-    unreverse_names(csv)
-
+            row[idx] = amount
 
 def main(filename):
-    csv = Csv()
-    with open(filename, 'r',encoding='utf8') as fd:
-        csv.rows = [x.strip().split(',') for x in fd.readlines()]
+    # Since the input is comma-separated, store the file as a list of lists.
+    with open(filename) as fd:
+        lines = [x.strip().split(',') for x in fd.readlines()]
 
-    
-    if len(csv.rows[0]) in [21,22]: #Fieldnames given for the detailed spreadsheet.
-        standardize_full_meet(csv)
-    elif len(csv.rows[0]) in [13,14]: #Bench only
-        standardize_bench_only(csv)  
-    else: #Leave the csv exactly the same as the results file
-        with open(filename, "r") as fd:
-        	shutil.copyfileobj(fd, sys.stdout)
-        return
-    
+    # Split the input filename into sheets, each of which is an independent CSV.
+    sheetlist = split_by_sheet(lines)
+
+    # Parse each sheet independently, then join them all together into a single CSV.
+    csv = oplcsv.Csv()
+    for sheet in sheetlist:
+        sheetcsv = parse_sheet(sheet)
+        csv.cat(sheetcsv)
+
+
+    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg',
+            'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg', 'TotalKg']:
+        cleanup_lift(csv, x)
+
+    # Now it's time to standardize the CSV a little bit!
+    # We have some temporary columns hanging out.
+    standardize_division_age(csv)
+    mark_dqs(csv)
+
+    # At the moment, this is not useful information.
+    csv.remove_column_by_name('Federation')
+
     csv.write(sys.stdout)
+    return 0
 
 
 if __name__ == '__main__':

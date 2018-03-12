@@ -67,13 +67,8 @@ do
 	sed -i -e 's/<s>/-/g' "results"${r_nums[$ii]}".xls" 
 	sed -i -e 's/<\/s>//g' "results"${r_nums[$ii]}".xls"
 
-	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
-	#Replacing this is creating corrupted characters for some reason
-	#sed -i -e 's/\xa0//g' "results"${r_nums[$ii]}".xls"
 
 
-	# Disqualifications use ascii 0x97, a long dash.
-	sed -i -e 's/\x97/DQ/g' "results"${r_nums[$ii]}".xls"
 
 	# Use LibreOffice to automatically convert the <table> to a csv file.
 	# This creates results.csv.
@@ -81,7 +76,9 @@ do
 
 	rm "results"${r_nums[$ii]}".html" "results"${r_nums[$ii]}".xls"
 
-
+	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
+	#Using \xa0 was corrupting characters for some reason
+	sed -i -e 's/ //g' "results"${r_nums[$ii]}".csv"
 
 	# Remove redundant spacing.
 	sed -i -e 's/  / /g' "results"${r_nums[$ii]}".csv"
@@ -96,8 +93,6 @@ do
 
 	# Birth year sometimes has a question mark
 	sed -i -e 's/,?,/,,/g' "results"${r_nums[$ii]}".csv"
-
-
 
 
 	#Now write the sheet name to the first line
