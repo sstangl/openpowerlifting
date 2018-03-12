@@ -280,15 +280,18 @@ def parse_sheet(sheet):
 
 
     #There's often a bunch of nonsense at the bottom
-    
-
-    if len([c for c in line if c !='']) < 3:
+    end_line = len(sheet[get_header_linenum(sheet)+2:])
+    for ii in range(len(sheet[get_header_linenum(sheet)+2:]),0,-1):
+        if len([c for c in sheet[ii] if c !='']) > 3:
             break
+        else:
+            end_line = ii
+
 
 
 
     # Iterate over each line, skipping the two header lines.
-    for line in sheet[get_header_linenum(sheet)+2:]:
+    for line in sheet[get_header_linenum(sheet)+2:end_line]:
         text = ''.join(line)
 
         # Stop iteration once the 'Best Lifters' section is reached.
@@ -341,6 +344,10 @@ def parse_sheet(sheet):
     # Remove all the columns named 'IGNORE' before returning the CSV for integration.
     while 'IGNORE' in csv.fieldnames:
         csv.remove_column_by_name('IGNORE')
+
+    unreverse_names(csv)
+
+        
     return csv
 
 
@@ -440,6 +447,23 @@ def cleanup_lift(csv, fieldname):
                 amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
 
             row[idx] = amount
+
+
+def unreverse_names(csv):
+
+    if 'InternationalName' in csv.fieldnames:
+        nameidx = csv.index('InternationalName')
+    elif 'Name' in csv.fieldnames:
+        nameidx= csv.index('Name')
+    for row in csv.rows:
+        parts = row[nameidx].split()
+        parts = [name.title() for name in parts]
+
+        # The last name is probably the given first name.
+        fixed = [parts[-1]] + parts[:-1]
+        name = ' '.join(fixed)
+
+        row[nameidx] = name
 
 def main(filename):
     # Since the input is comma-separated, store the file as a list of lists.
