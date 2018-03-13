@@ -2,20 +2,24 @@
 
 set -e
 
-if [ $# -ne 1 ]; then
-	echo " Usage: $0 http://url/to/results/page"
+if [ $# -ne 2 ]; then
+	echo " Usage: $0 dirname url"
 	exit 1
 fi
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
+
+mkdir "$1"
+cd "$1"
+
 # Download the website, keep the original name so sheet references work
-wget --output-document=main.html "$1"
+wget --output-document=main.html "$2"
 
 # Save the website URL for future use, since it's pretty hard to tell
 # what meets on the site are tracked and which aren't.
-echo "$1" > URL
+echo "$2" > URL
 
 
 # Sometimes the documents are encoded in WINDOWS-1251.
@@ -46,7 +50,7 @@ fi
 #Expand the sheet links into full paths
 for (( ii=0; ii!= $((${#sheet_links[@]}/2)) ;++ii))
 do
-  wget --output-document="results"${r_nums[$ii]}".html" ${1%/*}"/"${sheet_links[$((2*ii+1))]} #Link is every second line
+  wget --output-document="results"${r_nums[$ii]}".html" ${2%/*}"/"${sheet_links[$((2*ii+1))]} #Link is every second line
 
     #file is returning 8859 when it's formatted in 1251 for some reason
     file "results"${r_nums[$ii]}".html" | grep ISO-8859 && iconv -f WINDOWS-1251 -t UTF8 "results"${r_nums[$ii]}".html" > temp.html

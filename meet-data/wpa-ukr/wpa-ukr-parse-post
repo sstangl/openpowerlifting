@@ -19,6 +19,12 @@ ${SCRIPTDIR}/wpa-ukr-standardize-csv results.csv > entries.csv
 ${REPOSCRIPTDIR}/calc-best-lifts entries.csv
 ${REPOSCRIPTDIR}/calc-latin-names entries.csv
 
+# Get rid of zero-columns.
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
+
 cp ${SCRIPTDIR}/../meet.template meet.csv
 
 

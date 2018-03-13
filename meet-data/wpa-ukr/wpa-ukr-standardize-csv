@@ -37,6 +37,8 @@ def split_by_sheet(lines):
     event_types =['only bench press','only deadlift','full power','single bench press','single deadlift',
     'push & pull','bench press','станова тяга','жим штанги лежачи','bench press (single)','deadlift (single)','жим без экипировки']
 
+    exclude_text = ['multy','багатоповторний']
+
     for ii in range(start_ii,len(lines)):
         line = lines[ii]
         # If this line starts a new sheet, generate a new array.
@@ -44,8 +46,7 @@ def split_by_sheet(lines):
             sheet = []
             sheetlist.append(sheet)
             sheet.append(line)
-        elif any(event in ''.join(line[0]).lower() for event in event_types) and ii >start_ii+6 :
-            print(line)
+        elif any(event in ''.join(line[0]).lower() for event in event_types) and not any(event in''.join(line[0]).lower()for event in exclude_text) and ii >start_ii+6 :
             if len(sheet) <3 or not any(is_header(test_line) for test_line in sheet): #Then this is the event listing for an exisiting sheet, Replace the title with it
                 sheet[0][0]='Sheet : '+''.join(line[0]).lower()
             else: #Start a new sheet
@@ -58,7 +59,7 @@ def split_by_sheet(lines):
                     sheet.append(sheetlist[-2][get_header_linenum(sheetlist[-2])]) #Use the previous sheets header
                     #Change the attempt labels to the right events
 
-        elif 'multy rep' in ''.join(line[0]).lower() or 'results in pounds' in ''.join(line[0]).lower():
+        elif 'results in pounds' in ''.join(line[0]).lower() or ''.join(line[0]) == 'MULTY REP BENCH' or 'багатоповторний' in ''.join(line[0]).lower():
             break
         else:
             sheet.append(line)
@@ -183,7 +184,6 @@ def parse_fieldnames(sheet):
     fieldnames = []
     headernum = get_header_linenum(sheet)
     header = sheet[headernum]
-    header_next = sheet[headernum+1]
 
     # Name all the columns.
     iterable = iter(range(len(header)))
@@ -210,7 +210,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('BirthDate')
         elif any(check_str in text for check_str in ['власна вага','вес','pw','weight','вл вага']): #Bodyweight
             fieldnames.append('BodyweightKg')
-        elif any(check_str in text for check_str in ['сума по коеф','абсолют','coef','kоеф','best','absolut']): #Wilks
+        elif any(check_str in text for check_str in ['сума по коеф','абсолют','coef','коеф','best','absolut']): #Wilks
             fieldnames.append('IGNORE')
         elif text in ['виконаний норматив','викон норматив','вик норматив впа україна']: #Some kind of points?
             fieldnames.append('IGNORE')
@@ -218,9 +218,9 @@ def parse_fieldnames(sheet):
             fieldnames.append('Country')
         elif any(check_str in text for check_str in ['звание','rank','звання','class','classif']): #Rank
             fieldnames.append('IGNORE')
-        elif text in ['тренера','coach','coaches','тренер','тренери','розряд']: #Coach
-            fieldnames.append('IGNORE')
         elif text == 'best of the best':
+            fieldnames.append('IGNORE')
+        elif text in ['тренера','coach','coaches','тренер','тренери','країна']: #Coach
             fieldnames.append('IGNORE')
         elif text == 'вікова категорія':
             fieldnames.append('Division')
@@ -246,8 +246,7 @@ def parse_fieldnames(sheet):
             elif header[i+3].lower() in ['присед 4','sq 4','squat 4','присід 4']:
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
-
-        elif text in ['жим 1','bp 1','benchpress 1','BP1']:
+        elif text in ['жим 1','bp 1','benchpress 1','bp1']:
             assert header[i+1].lower() in ['жим 2','bp 2','benchpress 2','bp2']
             assert header[i+2].lower() in ['жим 3','bp 3','benchpress 3','bp3']
             fieldnames.append('Bench1Kg')
@@ -357,7 +356,8 @@ def parse_sheet(sheet):
 
         # Detect lines that set WeightClassKg state.
         if ' кг' in text or ' kg' in text:
-            weightclass = ''.join(re.findall(r"\d*\.\d+|(\d+|\+)",text))
+
+            weightclass = ''.join(re.findall(r"(\d*\.\d+)|(\d+|\+)",text)[0])
             continue
 
 
@@ -446,19 +446,18 @@ def standardize_division_age(csv):
 
     for row in csv.rows:
         # Fill in the BirthYear.
-        if '.' in row[bdidx]:
-            row[byidx] = max(row[bdidx].split('.'),key=len)
+        row[byidx] = max(re.split('[. -]',row[bdidx]),key=len)
 
         # Fill in the Division.
         # Handle the divisions with numbers first.
         if 'children 8' in row[dividx]:
-            division = 'Youth 8'
+            division = 'Children 8'
         elif 'children 9' in row[dividx]:
-            division = 'Youth 9'
+            division = 'Children 9'
         elif 'children 10' in row[dividx]:
-            division = 'Youth 10'
+            division = 'Children 10'
         elif 'children 11-12' in row[dividx]:
-            division = 'Youth 11-12'
+            division = 'Children 11-12'
         elif 'teenagers 13-15' in row[dividx]:
             division = 'Teen 13-15'
         elif 'teenagers 16-17' in row[dividx]:
@@ -492,6 +491,8 @@ def standardize_division_age(csv):
             division = 'Paralympian'
         elif 'open' in row[dividx]:
             division = 'Open'
+        elif 'masters' in row[dividx]:
+            division = 'Masters'
         elif 'mpf' in row[dividx]:
             division = 'Military/Fire/Police'
 
