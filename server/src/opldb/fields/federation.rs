@@ -69,6 +69,7 @@ pub enum Federation {
     WABDL,
     WDFPF,
     WelshPA,
+    WPA,
     WPC,
     WNPF,
     WRPF,

@@ -11,6 +11,7 @@
     <option value="ParaPL">ParaPL - Para Powerlifting (Incomplete)</option>
     <option value="WABDL">WABDL - World Association of Bench Pressers and Deadlifters (Incomplete)</option>
     <option value="WDFPF">WDFPF - World Drug-Free Powerlifting Federation (Incomplete)</option>
+    <option value="WPA">WPA - World Powerlifting Alliance (Incomplete)</option>
     <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
