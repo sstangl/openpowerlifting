@@ -117,6 +117,7 @@ KnownFederations = {
     "WABDL", # World Association of Bench Pressers and Deadlifters.
     "WDFPF", # World Drug Free Powerlifting Association
     "WelshPA", # Welsh Powerlifting Association, IPF.
+    "WPA", # World Powerlifting Alliance.
     "WPC",
     "WNPF", # World Natural Powerlifting Federation.
     "WRPF",
@@ -143,6 +144,7 @@ KnownCountries = {
     "Czechia",
     "Czech Republic",
     "Denmark",
+    "Ecuador",
     "England",
     "Estonia",
     "Fiji",
@@ -189,6 +191,7 @@ KnownCountries = {
     "Uruguay",
     "USA",
     "US Virgin Islands",
+    "Venezuala",
     "Wales",
 }
 
@@ -310,6 +313,15 @@ def check(scriptname, filename):
         if day_int > 31:
             perror("Implausible day: \"%s\"." % day)
 
+        # Check that the meet date is not in the future
+        future_date = datetime.datetime.today() + datetime.timedelta(days=2)
+        meet_date = datetime.datetime.strptime(
+            date,
+            "%Y-%m-%d"
+        )
+        if meet_date >= future_date:
+            perror("Implausible date: %s is a future date" % date)
+        
     # Check the MeetCountry column.
     if not row[countryidx] in KnownCountries:
         perror("Unknown country (add to check-meet-csv?): \"%s\"" % row[countryidx])
@@ -352,6 +364,13 @@ def check(scriptname, filename):
             perror("The abbreviation for Montana is 'MT', not '%s'." % row[stateidx])
         if 'Texas' in row[nameidx] and row[stateidx] != 'TX':
             perror("The abbreviation for Texas is 'TX', not '%s'." % row[stateidx])
+
+        # Check if MeetName column contains the year or the fed name
+        if year in row[nameidx]:
+            perror("MeetName should not have the year.")
+        if row[fedidx] in row[nameidx]:
+            perror("MeetName should not have the federation.")
+
 
 if __name__ == '__main__':
     # If arguments are provided, check only those files.

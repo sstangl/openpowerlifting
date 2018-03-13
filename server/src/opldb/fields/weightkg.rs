@@ -10,6 +10,7 @@ use std::str::FromStr;
 use std::num;
 
 use opldb::WeightUnits;
+use langpack::{self, LocalizedWeightAny};
 
 /// Represents numbers describing absolute weights.
 ///
@@ -70,6 +71,35 @@ impl WeightKg {
 impl fmt::Display for WeightKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         WeightAny(self.0).fmt(f)
+    }
+}
+
+impl WeightAny {
+    // FIXME -- remove code duplication with fmt() somehow.
+    pub fn format_comma(&self) -> String {
+        // Don't display empty weights.
+        if self.0 == 0 {
+            String::new()
+        } else {
+            // Displaying a weight only shows a single decimal place.
+            // Truncate the last number.
+            let integer = self.0 / 100;
+            let decimal = (self.0.abs() % 100) / 10;
+
+            // If the decimal can be avoided, don't write it.
+            if decimal != 0 {
+                format!("{},{}", integer, decimal)
+            } else {
+                format!("{}", integer)
+            }
+        }
+    }
+
+    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightAny {
+        LocalizedWeightAny {
+            format: format,
+            weight: self,
+        }
     }
 }
 

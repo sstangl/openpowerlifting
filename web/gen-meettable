@@ -13,7 +13,7 @@ import urllib.parse
 
 ENTRIESCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
-SOCIALFILE = '../lifter-data/social-media.csv'
+SOCIALFILE = '../lifter-data/social-instagram.csv'
 
 # Gets some row that contains the given meetid, using a super ham-fisted binary search.
 def findsomelifterin(meetid, entriescsv):

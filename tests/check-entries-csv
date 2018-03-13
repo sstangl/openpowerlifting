@@ -337,7 +337,6 @@ HeaderHandlers = {
     # Stat columns. Only Kg is valid.
     'WeightClassKg': check_column_weightclass,
     'BodyweightKg': check_column_bodyweightkg,
-    'Wilks': check_positive_number_column,
 
     # Lift columns. Only Kg is valid.
     'BestSquatKg': check_lift_column,
@@ -396,11 +395,6 @@ def check_headers(csv):
 
     if not 'Place' in csv.fieldnames:
         perror("There must be a Place column.")
-
-    if 'Wilks' in csv.fieldnames and not 'TotalKg' in csv.fieldnames:
-        perror('Wilks requires a TotalKg column.')
-    if 'Wilks' in csv.fieldnames and not 'BodyweightKg' in csv.fieldnames:
-        perror('Wilks requires a BodyweightKg for exact bodyweight.')
 
     # Not requiring the Event header yet, although it's probably a good idea.
     #if not 'Event' in csv.fieldnames:
@@ -499,45 +493,43 @@ def check_row_weightclass_consistency(row, csv):
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
-    if row[csv.index('Sex')] is not 'F':
-        return
-
     wtcls = row[csv.index('WeightClassKg')].replace('+','')
     if not wtcls:
         return
 
     # No female category should be this high.
-    try:
-        number = float(wtcls)
-        # This is probably higher than it should be because some USPA
-        # meets put women in male weightclasses for no reason.
-        # Made even higher thanks to the SPF.
-        if number > 120:
-            pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
-    except ValueError:
-        pass
+    if row[csv.index('Sex')] == 'F':
+        try:
+            number = float(wtcls)
+            # This is probably higher than it should be because some USPA
+            # meets put women in male weightclasses for no reason.
+            # Made even higher thanks to the SPF.
+            if number > 120:
+                pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
+        except ValueError:
+            pass
 
     if 'BodyweightKg' in csv.fieldnames:
         bw = row[csv.index('BodyweightKg')]
         if bw:
             if '+' in row[csv.index('WeightClassKg')]:
                 if float(bw) <= float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
             else:
                 if float(bw) > float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
 
     # USAPL's reporting site calculates weight class from bodyweight,
     # so if they leave bodyweight blank it will assign the lowest weight class,
     # giving the lifter a Wilks score of 1000+!
-    if 'usapl' in globalFilename and 'BodyweightKg' in csv.fieldnames:
+    if 'usapl/' in globalFilename and 'BodyweightKg' in csv.fieldnames:
         if row[csv.index('BodyweightKg')].strip() == '':
             if row[csv.index('WeightClassKg')].strip() != '':
-                perror("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
+                pwarning("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
                         row[csv.index('Name')])
 
 
@@ -646,49 +638,12 @@ def check_row_total_consistency(row, csv):
         perror(" For row: %s" % row)
 
 
-# Federations calculate Wilks themselves, but have errors.
-# From stupid things like using the wrong units.
-def check_row_wilks_consistency(row, csv):
-    if not 'Wilks' in csv.fieldnames:
-        return
-    if not 'BodyweightKg' in csv.fieldnames:
-        return
-    if not 'TotalKg' in csv.fieldnames:
-        return
-    if not 'Sex' in csv.fieldnames:
-        return
-
-    total = float2(row[csv.index('TotalKg')])
-    bodyweight = float2(row[csv.index('BodyweightKg')])
-    sex = row[csv.index('Sex')]
-    score = float2(row[csv.index('Wilks')])
-
-    if score > 0:
-        if total <= 0:
-            perror("Wilks given but missing TotalKg in row.")
-        if bodyweight <= 0:
-            perror("Wilks given but missing BodyweightKg in row.")
-        if sex == '':
-            perror("Wilks given but missing Sex in row.")
-
-    if total <= 0 or bodyweight <= 0 or sex == '' or score <= 0:
-        return
-
-    calculated_score = wilks.wilks(sex == 'M', bodyweight, total)
-
-    # Federations induce a lot of rounding error, so believe them unless
-    # it's pretty egregiously wrong.
-    if abs(calculated_score - score) > 0.5:
-        perror("Wilks error: Calculated %f, but meet says %f" % (calculated_score, score))
-
-
 def check_row(row, csv):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
     check_row_weightclass_consistency(row, csv)
     check_row_weightclass_sex(row,csv)
     check_row_total_consistency(row, csv)
-    check_row_wilks_consistency(row, csv)
 
     check_row_lift_consistency(row, csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
     check_row_lift_consistency(row, csv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])

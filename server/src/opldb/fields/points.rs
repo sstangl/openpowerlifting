@@ -9,6 +9,8 @@ use std::fmt;
 use std::str::FromStr;
 use std::num;
 
+use langpack::{self, LocalizedPoints};
+
 /// Represents numbers describing points, like Wilks and Glossbrenner.
 ///
 /// The database only tracks points to two decimal places.
@@ -17,6 +19,28 @@ use std::num;
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Clone, Copy, Debug, PartialEq, PartialOrd)]
 pub struct Points(pub i32);
+
+impl Points {
+    // TODO: Remove this duplicate code.
+    pub fn format_comma(self) -> String {
+        // Don't display empty points.
+        if self.0 == 0 {
+            String::new()
+        } else {
+            // Displaying points always shows two decimal places.
+            let integer = self.0 / 100;
+            let decimal = self.0.abs() % 100;
+            format!("{},{:02}", integer, decimal)
+        }
+    }
+
+    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedPoints {
+        LocalizedPoints {
+            format: format,
+            points: self,
+        }
+    }
+}
 
 impl fmt::Display for Points {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

@@ -4,16 +4,10 @@ use opldb;
 use opldb::fields;
 use langpack::{self, Language};
 
-#[derive(Serialize)]
-pub struct HeaderContext {
-    pub num_entries: u32,
-    pub num_meets: u32,
-}
-
-/// The context object passed to `templates/lifter.html.hbs`.
+/// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
-    pub header: HeaderContext,
+    pub page_title: String,
     pub meet: MeetInfo<'a>,
     pub language: Language,
     pub strings: &'a langpack::Translations,
@@ -63,20 +57,21 @@ pub struct ResultsRow<'a> {
     pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,
-    pub weightclasskg: fields::WeightClassAny,
-    pub bodyweightkg: fields::WeightAny,
+    pub weightclass: langpack::LocalizedWeightClassAny,
+    pub bodyweight: langpack::LocalizedWeightAny,
 
-    pub squatkg: fields::WeightAny,
-    pub benchkg: fields::WeightAny,
-    pub deadliftkg: fields::WeightAny,
-    pub totalkg: fields::WeightAny,
-    pub wilks: fields::Points,
+    pub squat: langpack::LocalizedWeightAny,
+    pub bench: langpack::LocalizedWeightAny,
+    pub deadlift: langpack::LocalizedWeightAny,
+    pub total: langpack::LocalizedWeightAny,
+    pub wilks: langpack::LocalizedPoints,
 }
 
 impl<'a> ResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
         strings: &'a langpack::Translations,
+        number_format: langpack::NumberFormat,
         units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
     ) -> ResultsRow<'a> {
@@ -93,14 +88,23 @@ impl<'a> ResultsRow<'a> {
             sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclasskg: entry.weightclasskg.as_type(units),
-            bodyweightkg: entry.bodyweightkg.as_type(units),
+            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
+            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
 
-            squatkg: entry.highest_squatkg().as_type(units),
-            benchkg: entry.highest_benchkg().as_type(units),
-            deadliftkg: entry.highest_deadliftkg().as_type(units),
-            totalkg: entry.totalkg.as_type(units),
-            wilks: entry.wilks,
+            squat: entry
+                .highest_squatkg()
+                .as_type(units)
+                .in_format(number_format),
+            bench: entry
+                .highest_benchkg()
+                .as_type(units)
+                .in_format(number_format),
+            deadlift: entry
+                .highest_deadliftkg()
+                .as_type(units)
+                .in_format(number_format),
+            total: entry.totalkg.as_type(units).in_format(number_format),
+            wilks: entry.wilks.in_format(number_format),
         }
     }
 }
@@ -115,6 +119,7 @@ impl<'a> Context<'a> {
     ) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
         let strings = langinfo.get_translations(language);
+        let number_format = language.number_format();
 
         // Get a list of the entries for this meet, highest Wilks first.
         let mut entries = opldb.get_entries_for_meet(meet_id);
@@ -122,14 +127,11 @@ impl<'a> Context<'a> {
 
         let rows = entries
             .into_iter()
-            .map(|e| ResultsRow::from(opldb, strings, units, e))
+            .map(|e| ResultsRow::from(opldb, strings, number_format, units, e))
             .collect();
 
         Context {
-            header: HeaderContext {
-                num_entries: opldb.get_entries().len() as u32,
-                num_meets: opldb.get_meets().len() as u32,
-            },
+            page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
             language: language,
             strings: strings,
             units: units,

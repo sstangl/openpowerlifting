@@ -2,6 +2,8 @@
 
 // External dependencies.
 extern crate csv;
+#[macro_use]
+extern crate enum_iterator_derive;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;

@@ -50,12 +50,12 @@
           <td>{{this.sex}}</td>
           <td>{{this.age}}</td>
           <td>{{this.equipment}}</td>
-          <td>{{this.weightclasskg}}</td>
-          <td>{{this.bodyweightkg}}</td>
-          <td>{{this.squatkg}}</td>
-          <td>{{this.benchkg}}</td>
-          <td>{{this.deadliftkg}}</td>
-          <td>{{this.totalkg}}</td>
+          <td>{{this.weightclass}}</td>
+          <td>{{this.bodyweight}}</td>
+          <td>{{this.squat}}</td>
+          <td>{{this.bench}}</td>
+          <td>{{this.deadlift}}</td>
+          <td>{{this.total}}</td>
           <td>{{this.wilks}}</td>
         </tr>
       {% endfor %}

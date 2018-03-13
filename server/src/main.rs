@@ -55,7 +55,7 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
     match languages.0 {
         Some(s) => {
             // TODO: This vector should be static and in langpack.
-            let known_languages = vec!["en", "eo", "es", "fr", "it", "ru"];
+            let known_languages = vec!["de", "en", "eo", "es", "fi", "fr", "it", "ru"];
             let valid_languages = accept_language::intersection(&s, known_languages);
 
             if valid_languages.len() == 0 {
@@ -86,7 +86,8 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUn
 
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("static/").join(file)).ok()
+    let staticdir = env::var("STATICDIR").unwrap();
+    NamedFile::open(Path::new(&staticdir).join(file)).ok()
 }
 
 #[get("/u/<username>")]
@@ -133,6 +134,55 @@ fn meet(
     Some(Template::render("meet", &context))
 }
 
+#[get("/status")]
+fn status(
+    opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::status::Context::new(&opldb, lang, &langinfo);
+    Some(Template::render("status", &context))
+}
+
+#[get("/data")]
+fn data(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::data::Context::new(lang, &langinfo);
+    Some(Template::render("data", &context))
+}
+
+#[get("/faq")]
+fn faq(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::faq::Context::new(lang, &langinfo);
+    Some(Template::render("faq", &context))
+}
+
+#[get("/contact")]
+fn contact(
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+
+    let context = pages::contact::Context::new(lang, &langinfo);
+    Some(Template::render("contact", &context))
+}
+
 #[get("/")]
 fn index() -> Redirect {
     Redirect::to("/u/kristyhawkins")
@@ -143,7 +193,10 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
-        .mount("/", routes![index, lifter, meet, statics])
+        .mount(
+            "/",
+            routes![index, lifter, meet, statics, status, data, faq, contact],
+        )
         .attach(Template::fairing())
 }
 
@@ -169,6 +222,9 @@ fn get_envvar_or_exit(key: &str) -> String {
 fn main() {
     // Populate std::env with the contents of any .env file.
     dotenv::from_filename("server.env").ok();
+
+    // Ensure that "STATICDIR" is set.
+    get_envvar_or_exit("STATICDIR");
 
     // Load the OplDb.
     let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");

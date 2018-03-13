@@ -11,6 +11,7 @@
     <option value="ParaPL">ParaPL - Para Powerlifting (Incomplete)</option>
     <option value="WABDL">WABDL - World Association of Bench Pressers and Deadlifters (Incomplete)</option>
     <option value="WDFPF">WDFPF - World Drug-Free Powerlifting Federation (Incomplete)</option>
+    <option value="WPA">WPA - World Powerlifting Alliance (Incomplete)</option>
     <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
@@ -18,7 +19,7 @@
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="CommonwealthPF">CommonwealthPF - Commonwealth Powerlifting Federation [IPF]</option>
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
-    <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF] (Incomplete)</option>
+    <option value="FESUPO">FESUPO - Federación Sudamericana de Powerlifting [IPF]</option>
     <option value="NAPF">NAPF - North American Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation</option>
   </optgroup>
