@@ -145,6 +145,7 @@ impl fmt::Display for Federation {
             Federation::WABDL => write!(f, "WABDL"),
             Federation::WDFPF => write!(f, "WDFPF"),
             Federation::WelshPA => write!(f, "WelshPA"),
+            Federation::WPA => write!(f, "WPA"),
             Federation::WPC => write!(f, "WPC"),
             Federation::WNPF => write!(f, "WNPF"),
             Federation::WRPF => write!(f, "WRPF"),
