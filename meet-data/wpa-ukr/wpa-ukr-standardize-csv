@@ -12,11 +12,6 @@ sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
 from oplcsv import Csv
 import re
 
-
-#!/usr/bin/env python3
-# Given a results.csv as outputted by wrpf-parse, parse each sheet one at a time
-# and join all the sheets together into an OpenPowerlifting-formatted CSV file.
-
 import oplcsv
 import sys
 
@@ -40,7 +35,7 @@ def split_by_sheet(lines):
     start_ii=ii
 
     event_types =['only bench press','only deadlift','full power','single bench press','single deadlift',
-    'push & pull','bench press','станова тяга','жим штанги лежачи ','bench press (single)','deadlift (single)','Жим без экипировки']
+    'push & pull','bench press','станова тяга','жим штанги лежачи','bench press (single)','deadlift (single)','жим без экипировки']
 
     for ii in range(start_ii,len(lines)):
         line = lines[ii]
@@ -50,6 +45,7 @@ def split_by_sheet(lines):
             sheetlist.append(sheet)
             sheet.append(line)
         elif any(event in ''.join(line[0]).lower() for event in event_types) and ii >start_ii+6 :
+            print(line)
             if len(sheet) <3 or not any(is_header(test_line) for test_line in sheet): #Then this is the event listing for an exisiting sheet, Replace the title with it
                 sheet[0][0]='Sheet : '+''.join(line[0]).lower()
             else: #Start a new sheet
@@ -79,9 +75,16 @@ def parse_sheetname(s):
 
     s=s.replace(' & ','&')
     s=s.replace('-','')
+  
+    if 'без екіпірування' in s:
+        equipment = 'Raw'
+        s=s.replace('без екіпірування','').strip()
+
+
+    s = s.replace("(","").replace(")","").strip()
     # Parse word-by-word to make sure that every word is understood. 
     for word in s.lower().split():
-        word = word.replace("(","").replace(")","")
+        
         # Events
         if word == 'пл' or word == 'пауэрлифтинг' or word == 'pl' or word =='power' or word =='powerlifting':
             assert not event or event =='SBD'
@@ -121,6 +124,8 @@ def parse_sheetname(s):
             pass
         elif word == 'лежа':
             pass
+        elif word == 'про':
+        	pass
         
         elif word == 'протокол': #Results
             pass
@@ -149,18 +154,6 @@ def parse_sheetname(s):
             pass
         elif word == 'results':
             pass
-        elif word.replace('-','') in ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th']:
-            pass
-        elif word == 'wpa':
-            pass
-        elif word == 'world':
-            pass
-        elif word == 'cup':
-            pass
-        elif word =='лист1': #Sheet 1
-            pass
-        elif word =='kilos':
-        	pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
 
@@ -182,7 +175,7 @@ def get_header_linenum(sheet):
 
 #Returns whether a line is a header
 def is_header(line):
-    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname','Фамилия и имя']:
+    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname','Фамилия и имя',"Прізвище/Ім'я"]:
             return True
     return False
 
@@ -203,50 +196,58 @@ def parse_fieldnames(sheet):
         text=text.replace('.',' ')
         text =text.replace('  ',' ')
         text = text.replace('*','')
-        text=text.strip()
+        text=text.lower().strip()
 
-        if text == 'Место':
+        if text == 'место':
             fieldnames.append('Place')
-        elif text.lower() in ['п і','имя',"прізвище та ім'я",'nme','name surname','name']:
+        elif text in ['п і','имя',"прізвище та ім'я",'nme','name surname','name',"прізвище/ім'я"]:
             fieldnames.append('InternationalName')
-        elif text.lower() in ['city','місто','місце']: #City
+        elif text in ['city','місто','місце','регіон']: #City /region
             fieldnames.append('IGNORE')
-        elif text.lower() in ['город','city / team','city \ club','city / club','спорт клуб'] : #Home city/gym
+        elif text in ['город','city / team','city \ club','city / club','спорт клуб','клуб'] : #Home city/gym
             fieldnames.append('IGNORE')
-        elif text.lower() in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth']: #Birthdate
+        elif text in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth']: #Birthdate
             fieldnames.append('BirthDate')
-        elif any(check_str in text.lower() for check_str in ['власна вага','вес','pw','weight']): #Bodyweight
+        elif any(check_str in text for check_str in ['власна вага','вес','pw','weight','вл вага']): #Bodyweight
             fieldnames.append('BodyweightKg')
-        elif any(check_str in text.lower() for check_str in ['сума по коеф','абсолют','coef','kоеф','best','absolut']): #Wilks
+        elif any(check_str in text for check_str in ['сума по коеф','абсолют','coef','kоеф','best','absolut']): #Wilks
             fieldnames.append('IGNORE')
-        elif text.lower() in ['виконаний норматив','викон норматив','вик норматив впа україна']: #Some kind of points?
+        elif text in ['виконаний норматив','викон норматив','вик норматив впа україна']: #Some kind of points?
             fieldnames.append('IGNORE')
-        elif text.lower() in ['страна','country','kраїна','coutry','contry']: #Country
+        elif text in ['страна','country','країна','coutry','contry']: #Country
             fieldnames.append('Country')
-        elif any(check_str in text.lower() for check_str in ['звание','rank','звання','class','classif']): #Rank
+        elif any(check_str in text for check_str in ['звание','rank','звання','class','classif']): #Rank
             fieldnames.append('IGNORE')
-        elif text.lower() in ['тренера','coach','coaches','тренер','тренери']: #Coach
+        elif text in ['тренера','coach','coaches','тренер','тренери','розряд']: #Coach
             fieldnames.append('IGNORE')
-        elif text.lower() == 'best of the best':
+        elif text == 'best of the best':
+            fieldnames.append('IGNORE')
+        elif text == 'вікова категорія':
+            fieldnames.append('Division')
+        elif text == 'сп тов': #Not sure
+            fieldnames.append('IGNORE')
+        elif text == 'дюсш': #Youth?
+            fieldnames.append('IGNORE')
+        elif text == 'к шварца малоуна': #Wilks coefficient
             fieldnames.append('IGNORE')
 
-        elif text.lower() in ['сумма','total','result','результат','results','total sum']:
+        elif text in ['сумма','total','result','результат','results','total sum','сума','підсумок']:
             fieldnames.append('TotalKg')
 
-        elif text.lower() in ['присед 1','sq 1','squat 1']:
-            assert header[i+1].lower() in ['присед 2','sq 2','squat 2']
-            assert header[i+2].lower() in ['присед 3','sq 3','squat 3']
+        elif text in ['присед 1','sq 1','squat 1','присід 1']:
+            assert header[i+1].lower() in ['присед 2','sq 2','squat 2','присід 2']
+            assert header[i+2].lower() in ['присед 3','sq 3','squat 3','присід 3']
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
             if header[i+3] == 'Сумма':
                 fieldnames.append('BestSquatKg')
                 [next(iterable) for x in range(3)]
-            elif header[i+3].lower() in ['присед 4','sq 4','squat 4']:
+            elif header[i+3].lower() in ['присед 4','sq 4','squat 4','присід 4']:
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
 
-        elif text.lower() in ['жим 1','bp 1','benchpress 1','BP1']:
+        elif text in ['жим 1','bp 1','benchpress 1','BP1']:
             assert header[i+1].lower() in ['жим 2','bp 2','benchpress 2','bp2']
             assert header[i+2].lower() in ['жим 3','bp 3','benchpress 3','bp3']
             fieldnames.append('Bench1Kg')
@@ -259,7 +260,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
 
-        elif text.lower() in ['тяга 1','dl 1','deadlift 1']:
+        elif text in ['тяга 1','dl 1','deadlift 1']:
             assert header[i+1].lower() in ['тяга 2','dl 2','deadlift 2']
             assert header[i+2].lower() in ['тяга 3','dl 3','deadlift 3']
             fieldnames.append('Deadlift1Kg')
@@ -319,8 +320,8 @@ def parse_sheet(sheet):
     # The WeightClassKg information is stateful, between rows.
     assert not 'WeightClassKg' in csv.fieldnames
     csv.fieldnames.append('WeightClassKg')
-    assert not 'Division' in csv.fieldnames
-    csv.fieldnames.append('Division')
+    if not 'Division' in csv.fieldnames:
+        csv.fieldnames.append('Division')
     assert not 'Sex' in csv.fieldnames
     csv.fieldnames.append('Sex')
     assert not 'Event' in csv.fieldnames
@@ -361,14 +362,14 @@ def parse_sheet(sheet):
 
 
         # Sex and division are given between lifter rows
-        if 'жен. (' in text or 'woman (' in text or 'female' in text or 'women.' in text:
+        if any(search_str in  text for search_str in['жен. (','woman (','female','women.','женщины']):
             sex = 'F'
             if '(' in text:
                 division = re.findall(r"\((.*?)\)",text)[0]
             else:
                 division = ''
             continue
-        elif 'муж. (' in text or 'men (' in text or 'male' in text or 'men.' in text:
+        elif any(search_str in text for search_str in ['муж. (','men (','male','men.','мужчины']):
             sex = 'M'
             if '(' in text:
                 division = re.findall(r"\((.*?)\)",text)[0]
@@ -419,8 +420,6 @@ def parse_sheet(sheet):
     # Remove all the columns named 'IGNORE' before returning the CSV for integration.
     while 'IGNORE' in csv.fieldnames:
         csv.remove_column_by_name('IGNORE')
-
-
 
     unreverse_names(csv)
 
