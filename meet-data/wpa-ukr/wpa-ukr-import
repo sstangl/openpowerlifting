@@ -94,14 +94,17 @@ do
 	# Birth year sometimes has a question mark
 	sed -i -e 's/,?,/,,/g' "results"${r_nums[$ii]}".csv"
 
+    actualsize=$(wc -c <'results'${r_nums[$ii]}'.csv')
+    
+    #Check that the sheet isn't empty
+    if [ $actualsize -ge 2 ]; then
+		# #Now write the sheet name to the first line
+		echo -e 'Sheet '$ii': '${sheet_links[$((2*ii))]}'\n' | cat - 'results'${r_nums[$ii]}'.csv' > temp && mv temp 'results'${r_nums[$ii]}'.csv'
 
-	#Now write the sheet name to the first line
-	echo -e 'Sheet '$ii': '${sheet_links[$((2*ii))]}'\n' | cat - 'results'${r_nums[$ii]}'.csv' > temp && mv temp 'results'${r_nums[$ii]}'.csv'
-
-    #Now combine all the sheets into one big csv
-	cat 'results'${r_nums[$ii]}'.csv' >> results.csv
-	echo >> results.csv
-
+	    #Now combine all the sheets into one big csv
+		cat 'results'${r_nums[$ii]}'.csv' >> results.csv
+		echo >> results.csv
+	fi
 	rm 'results'${r_nums[$ii]}'.csv'
 done
 
