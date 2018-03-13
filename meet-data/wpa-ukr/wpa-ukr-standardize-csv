@@ -39,7 +39,8 @@ def split_by_sheet(lines):
 
     start_ii=ii
 
-    event_types =['only bench press','only deadlift','full power','single bench press','single deadlift','жим','push & pull','bench press']
+    event_types =['only bench press','only deadlift','full power','single bench press','single deadlift',
+    'push & pull','bench press','станова тяга','жим штанги лежачи ','bench press (single)','deadlift (single)','Жим без экипировки']
 
     for ii in range(start_ii,len(lines)):
         line = lines[ii]
@@ -49,15 +50,15 @@ def split_by_sheet(lines):
             sheetlist.append(sheet)
             sheet.append(line)
         elif any(event in ''.join(line[0]).lower() for event in event_types) and ii >start_ii+6 :
-            if len(sheet) <3 or not any(is_header(test_line) for test_line in sheet): #Then this is the event listing for an exisiting sheet, add it to the title
-                sheet[0][0]=sheet[0][0]+" "+''.join(line[0]).lower()
+            if len(sheet) <3 or not any(is_header(test_line) for test_line in sheet): #Then this is the event listing for an exisiting sheet, Replace the title with it
+                sheet[0][0]='Sheet : '+''.join(line[0]).lower()
             else: #Start a new sheet
                 sheet = []
                 sheetlist.append(sheet)
                 sheet.append(['Sheet : ' +''.join(line[0])])
 
                 #Check that this sheet has a header
-                if not is_header(lines[ii+1]):
+                if not is_header(lines[ii+1]) and not is_header(lines[ii+2]) :
                     sheet.append(sheetlist[-2][get_header_linenum(sheetlist[-2])]) #Use the previous sheets header
                     #Change the attempt labels to the right events
 
@@ -128,7 +129,7 @@ def parse_sheetname(s):
         # Other ignorables.
         elif word == 'сфо': # Not sure.
             pass
-        elif word == 'становая': # First word in 'deadlift'.
+        elif word == 'станова': # First word in 'deadlift'.
             pass
         elif word == 'raw':
             pass
@@ -158,6 +159,8 @@ def parse_sheetname(s):
             pass
         elif word =='лист1': #Sheet 1
             pass
+        elif word =='kilos':
+        	pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
 
@@ -179,7 +182,7 @@ def get_header_linenum(sheet):
 
 #Returns whether a line is a header
 def is_header(line):
-    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname']:
+    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname','Фамилия и имя']:
             return True
     return False
 
@@ -197,33 +200,37 @@ def parse_fieldnames(sheet):
     fieldnames.append('Place')
     for i in iterable:
         text = header[i]
+        text=text.replace('.',' ')
+        text =text.replace('  ',' ')
+        text = text.replace('*','')
+        text=text.strip()
 
         if text == 'Место':
             fieldnames.append('Place')
-        elif text.lower() in ['п.і.','имя',"прізвище та ім'я",'nme','name surname','name']:
+        elif text.lower() in ['п і','имя',"прізвище та ім'я",'nme','name surname','name']:
             fieldnames.append('InternationalName')
         elif text.lower() in ['city','місто','місце']: #City
             fieldnames.append('IGNORE')
-        elif text.lower() in ['город','city / team','city \ club','city / club'] : #Home city/gym
+        elif text.lower() in ['город','city / team','city \ club','city / club','спорт клуб'] : #Home city/gym
             fieldnames.append('IGNORE')
-        elif text.lower() in ['дата народ.','день рождения','db','дата народження','birthday','bp','bd']: #Birthdate
+        elif text.lower() in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth']: #Birthdate
             fieldnames.append('BirthDate')
         elif any(check_str in text.lower() for check_str in ['власна вага','вес','pw','weight']): #Bodyweight
             fieldnames.append('BodyweightKg')
         elif any(check_str in text.lower() for check_str in ['сума по коеф','абсолют','coef','kоеф','best','absolut']): #Wilks
             fieldnames.append('IGNORE')
-        elif text == 'Виконаний норматив': #Some kind of points?
+        elif text.lower() in ['виконаний норматив','викон норматив','вик норматив впа україна']: #Some kind of points?
             fieldnames.append('IGNORE')
         elif text.lower() in ['страна','country','kраїна','coutry','contry']: #Country
             fieldnames.append('Country')
         elif any(check_str in text.lower() for check_str in ['звание','rank','звання','class','classif']): #Rank
             fieldnames.append('IGNORE')
-        elif text.lower() in ['тренера','coach','coaches','тренер']: #Coach
+        elif text.lower() in ['тренера','coach','coaches','тренер','тренери']: #Coach
             fieldnames.append('IGNORE')
         elif text.lower() == 'best of the best':
             fieldnames.append('IGNORE')
 
-        elif text.lower() in ['сумма','total','result','результат','results']:
+        elif text.lower() in ['сумма','total','result','результат','results','total sum']:
             fieldnames.append('TotalKg')
 
         elif text.lower() in ['присед 1','sq 1','squat 1']:
@@ -239,29 +246,29 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
 
-        elif text == 'Жим 1' or text =='BP 1' or text =='Benchpress 1' or text =='BP1':
-            assert header[i+1] in ['Жим 2','BP 2','Benchpress 2','BP2']
-            assert header[i+2] in ['Жим 3','BP 3','Benchpress 3','BP3']
+        elif text.lower() in ['жим 1','bp 1','benchpress 1','BP1']:
+            assert header[i+1].lower() in ['жим 2','bp 2','benchpress 2','bp2']
+            assert header[i+2].lower() in ['жим 3','bp 3','benchpress 3','bp3']
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
-            if header[i+3] == 'Сумма':
+            if header[i+3].lower() == 'сумма':
                 fieldnames.append('BestBenchKg')
                 [next(iterable) for x in range(3)]
-            elif header[i+3] in ['Жим 4','BP 4','Benchpress 4','BP4']:
+            elif header[i+3].lower() in ['жим 4','bp 4','benchpress 4','bp4']:
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
 
-        elif text == 'Тяга 1' or text =='DL 1' or text == 'Deadlift 1':
-            assert header[i+1] in ['Тяга 2','DL 2','Deadlift 2']
-            assert header[i+2] in ['Тяга 3','DL 3','Deadlift 3']
+        elif text.lower() in ['тяга 1','dl 1','deadlift 1']:
+            assert header[i+1].lower() in ['тяга 2','dl 2','deadlift 2']
+            assert header[i+2].lower() in ['тяга 3','dl 3','deadlift 3']
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
-            if header[i+3] == 'Сумма':
+            if header[i+3].lower() == 'сумма':
                 fieldnames.append('BestDeadliftKg')
                 [next(iterable) for x in range(3)]
-            elif header[i+3] in ['Тяга 4','DL 4','Deadlift 4']:
+            elif header[i+3].lower() in ['тяга 4','dl 4','deadlift 4']:
                 fieldnames.append('Deadlift4Kg')
                 [next(iterable) for x in range(3)]
 
@@ -369,7 +376,6 @@ def parse_sheet(sheet):
                 division = ''
             continue
 
-        print(line)
         #Equipment and amateur/pro are given between rows
         if 'raw' in text:
             text.replace('amatur',"amateur")
@@ -551,6 +557,8 @@ def cleanup_lift(csv, fieldname):
             if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
                 amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
 
+
+
             row[idx] = amount
 
 
@@ -563,6 +571,7 @@ def cleanup_names(csv):
 
     for row in csv.rows:
         row[nameidx]= re.sub('\(.*\)','',row[nameidx])
+        row[nameidx] = ''.join([c for c in row[nameidx] if not c.isdigit()])
         row[nameidx]=row[nameidx].strip()
 
 def cleanup_bodyweight(csv):
@@ -570,7 +579,7 @@ def cleanup_bodyweight(csv):
         idx = csv.index('BodyweightKg')
         for row in csv.rows:
             row[idx]=row[idx].strip('-')
-            if float(row[idx]) == 0.0:
+            if row[idx].replace('.','').isdigit() and float(row[idx]) == 0.0:
                 row[idx]=''
 
 def assign_best(csv, liftname):
@@ -653,6 +662,13 @@ def main(filename):
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg',
             'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg', 'TotalKg']:
         cleanup_lift(csv, x)
+
+    if 'BestSquatKg' in csv.fieldnames:
+    	cleanup_lift(csv,'BestSquatKg')
+    if 'BestBenchKg' in csv.fieldnames:
+    	cleanup_lift(csv,'BestBenchKg')
+    if 'BestDeadliftKg' in csv.fieldnames:
+    	cleanup_lift(csv,'BestDeadliftKg')
 
     if 'BestSquatKg' not in csv.fieldnames and 'Squat1Kg' in csv.fieldnames:
         csv.append_column('BestSquatKg')
