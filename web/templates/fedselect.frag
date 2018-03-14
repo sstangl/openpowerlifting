@@ -103,6 +103,9 @@
   <optgroup label="Singapore">
     <option value="SPA">SPA - Singapore Powerlifting Alliance [GPA] (Incomplete)</option>
   </optgroup>
+  <optgroup label="Ukraine">
+    <option value="WPAU">WPAU - World Powerlifting Alliance Ukraine [WPA] (Incomplete)</option>
+  </optgroup>
   <optgroup label="United Kingdom">
     <option value="BP,BPU,EPA,GPC-GB,NIPF,ScottishPL,WelshPA">
       All United Kingdom Feds
