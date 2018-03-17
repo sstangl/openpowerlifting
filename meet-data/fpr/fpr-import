@@ -22,6 +22,8 @@ wget --output-document="results.${EXTENSION}" "$1"
 # what meets on the site are tracked and which aren't.
 echo "$1" > URL
 
+mapfile -t sheet_names < <( ${SCRIPTDIR}/get-sheet-names "results.${EXTENSION}" )
+
 # Convert the spreadsheet to HTML.
 # The spreadsheet will have multiple pages -- these will all be added to one document.
 libreoffice --headless --convert-to html "results.${EXTENSION}"
@@ -54,6 +56,13 @@ sed -i -e 's/,/\./g' tmp.xls
 # See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
 libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
 mv tmp.csv results.csv
+
+
+#If there was only one sheet we will have lost the sheet name, so add it back
+if [ ${#sheet_names[*]} == 1 ]; then
+	echo -e 'Sheet 1: '$sheet_names'\n' | cat - results.csv > temp && mv temp results.csv
+fi
+
 
 # Remove some dash-only columns from the CSV.
 sed -i -e 's/,-,/,,/g' results.csv
