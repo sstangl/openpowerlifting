@@ -186,7 +186,7 @@ def parse_sheet(sheet):
             continue
 
 
-        if line[0] == '':
+        if line[0] == '': #Skip lines without a number, I think that these are always not lifter data 
             continue
 
 
