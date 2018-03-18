@@ -264,6 +264,7 @@ def check_column_weightclass(s, row, csv):
     ipf_extra = ['60+']
     old_usapl = ['145','145+']
     wnpf_extra = ['34']
+    wpau_extra = ['155','155+']
 
     ffforce_extra = ['83+'] # Cadet division, for youth.
     parapl_extra = ['82.5+']
@@ -271,7 +272,7 @@ def check_column_weightclass(s, row, csv):
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
               rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
               old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
-              idfpf_extra + parapl_extra
+              idfpf_extra + parapl_extra +wpau_extra
 
     if not s in classes:
         pwarning("Unknown weight class: %s" % s)
@@ -468,8 +469,9 @@ def check_row_weightclass_sex(row,csv):
     ipf_men   = ['59','66','74','83','93','105','120','120+'] #No -53 as this is an IDFPF womens class
     trad_men_only = ['125','140','140+'] #No 100,110 due to SPF,USPA etc
     old_usapl_men_only = ['145','145+']
+    wpau_men_only = ['155','155+']
 
-    men_only = ipf_men+trad_men_only +old_usapl_men_only
+    men_only = ipf_men+trad_men_only +old_usapl_men_only+wpau_men_only
 
     #No -52kg as this overlaps with a traditional weight-class
     ipf_women = ['43','47','57','63','72','84','84+']
