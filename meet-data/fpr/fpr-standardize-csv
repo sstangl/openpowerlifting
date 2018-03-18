@@ -39,11 +39,43 @@ def split_by_sheet(lines):
 # Find the line that contains column information (the line below does also).
 def get_header_linenum(sheet):
     for ii in range(len(sheet)):
-
+        if is_header(sheet[ii]):
+            return ii
 
 
     die("get_header_linenum() failed to find the header.")
 
+
+def is_header(line):
+    if 'фамилия. имя' in ''.join(line).lower():
+        return True
+    return False
+
+
+
+# Header is two merged rows, recombine these back into one row here
+def fix_headers(sheet):
+    headernum=get_header_linenum(sheet)
+    header = sheet[headernum]
+
+    lineabove = sheet[headernum-1] #Need some error checking here
+    linebelow = sheet[headernum+1]
+
+    #Name has split below rest of data
+    if header[1] == '' and lineabove[1] != '':
+        header = [(lineabove[ii]+" "+header[ii]).strip() for ii in range(0,len(header))]
+        sheet[headernum] =['' for x in header]
+        headernum=headernum-1
+    elif header[1] == '' and linebelow[1] != '':
+        header = [(header[ii]+" "+linebelow[ii]).strip() for ii in range(0,len(header))]
+        sheet[headernum+1] =['' for x in linebelow]
+    else: #Attempt numbers always split below
+        header = [header[0]]+[header[1]]+[(header[ii]+" "+linebelow[ii]).strip() for ii in range(2,len(header))]
+        sheet[headernum-1] =['' for x in linebelow]
+
+    sheet[headernum]=header
+
+    return sheet
 
 
 
@@ -52,17 +84,60 @@ def parse_fieldnames(sheet):
 
     headernum = get_header_linenum(sheet)
 
-
     header = sheet[headernum]
     # Name all the columns.
     iterable = iter(range(len(header)))
 
     for i in iterable:
         text = header[i].lower().replace('.','')
+        text= text.lower()
+        
+        if '№' in text:
+            fieldnames.append('IGNORE')
+        elif 'место' in text:
+            fieldnames.append('Place')
+        elif 'фамилия имя' in text:
+            fieldnames.append('Name')
+        elif 'год родж' in text:
+            fieldnames.append('BirthYear')
+        elif 'звание разряд' in text or 'вып разр' in text: #Rank
+            fieldnames.append('IGNORE')
+        elif 'команда / регион' in text: #Region
+            fieldnames.append('IGNORE')
+        elif 'город' in text: #City
+            fieldnames.append('IGNORE')
+        elif 'собств вес' in text:
+            fieldnames.append('BodyweightKg')
+        elif 'ком очки' in text:
+            fieldnames.append('IGNORE')
+        elif 'очки по вилксу' in text: #Wilks
+            fieldnames.append('IGNORE')
+        elif 'тренеры' in text:
+            fieldnames.append('IGNORE')
 
+
+
+        elif 'рез-т присед' in text:
+            fieldnames.append('BestSquatKg')
+        elif 'рез-т жим' in text:
+            fieldnames.append('BestBenchKg')
+        elif 'рез-т тяга' in text:
+            fieldnames.append('BestDeadliftKg')
+
+        elif 'сумма троеб' in text:
+            fieldnames.append('TotalKg')
+
+
+
+
+
+
+
+
+        elif text == '': #FPR fills their spreadsheets with lots of merged blank columns
+            fieldnames.append('IGNORE')
 
         else:
-            print(header)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
     return fieldnames
@@ -71,37 +146,172 @@ def parse_fieldnames(sheet):
 # Given a list of lines all of which belong to the same sheet, parse that
 # into an OpenPowerlifting-style CSV.
 def parse_sheet(sheet):
- 
+    assert 'Sheet' in sheet[0][0]
+    assert sheet[0][0].count(':') == 1
+
+    csv = oplcsv.Csv()
+    title =sheet[0][0].lower()
+
+    #FPR splits headers across multiple lines,fix this
+    sheet = fix_headers(sheet)
+
+
+    # Look through the sheet for column information and mark up the CSV.
+    # All columns are given a name -- the extra ones are removed later.
+    csv.fieldnames = parse_fieldnames(sheet)
+
+    csv.fieldnames.append('WeightClassKg')
+    csv.fieldnames.append('Event')
+    csv.fieldnames.append('Equipment')
+
+
+    weightclass = None
+    event = None
+    equipment = None
+
+
+
+
+    for line in sheet[get_header_linenum(sheet)+2:]:
+        text = ''.join(line)
+
+        # Skip empty lines.
+        if text == '':
+            continue
+
+
+        # Detect lines that set WeightClassKg state.
+        if 'Весовая категория' in text:
+            weightclass = re.findall(r"\d*\.\d+|(\d+|\+)",text)[0]
+            continue
+
+
+        if line[0] == '':
+            continue
+
+
+        line.append(weightclass)
+        line.append(event)
+        line.append(equipment)
+
+
+        assert len(line) == len(csv.fieldnames)
+        csv.rows.append(line)
+
+    # Remove all the columns named 'IGNORE' before returning the CSV for integration.
+    while 'IGNORE' in csv.fieldnames:
+        csv.remove_column_by_name('IGNORE')
+
+    unreverse_names(csv)
+
     return csv
 
 
-# Handles the Division-Age column, which looks like below:
-#   Открытая 20-23 (21.11.1986)/30
-# Converts to English and separates into Division and Age columns.
-def standardize_division_age(csv):
+#Convert division to english
+def standardize_division(csv):
+    if 'Division' in csv.fieldnames:
+        idx = csv.index('Division')
+        for row in csv.rows:
+            row[idx] = row[idx].lower()
+
+            if row[idx] == 'open':
+                divisoin = 'Open'
+
+            else:
+                die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
+
+            row[idx]=division
     
 
 #Mark DQs properly and make sure that place is an integer.
 def cleanup_place(csv):
+    if 'Place' in csv.fieldnames:
+        place_idx = csv.index('Place')
+        total_idx = csv.index('TotalKg')
+        for row in csv.rows:
+            if '.00' in row[place_idx]: #Convert place to an integer if it wasn't already
+                row[place_idx]=str(int(float(row[place_idx])))
 
+            #Somewhat convoluted way of checking if a lifter is marked DQ and has a nonzero total
+            if row[place_idx] == 'DQ' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
+                row[place_idx] ='DD'
+                row[total_idx]=''
+            elif row[place_idx] == '' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
+                row[place_idx] ='DD'
+                row[total_idx]=''
+            #Everything else is a regular DQ
+            elif not row[place_idx] or row[place_idx] == '-':
+                row[place_idx] = 'DQ'
+            elif row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])==0.0:
+                row[place_idx] = 'DQ'
+                row[total_idx]=''
+            elif row[total_idx] == '':
+                row[place_idx] = 'DQ'
         
 def unreverse_names(csv):
 
+    if 'InternationalName' in csv.fieldnames:
+        nameidx = csv.index('InternationalName')
+    elif 'Name' in csv.fieldnames:
+        nameidx= csv.index('Name')
+    for row in csv.rows:
+        parts = row[nameidx].split()
+        parts = [name.title() for name in parts]
+
+        # The last name is probably the given first name.
+        fixed = [parts[-1]] + parts[:-1]
+        name = ' '.join(fixed)
+
+        row[nameidx] = name
 
 #Names sometimes have something in brackets after them - extra divisions maybe?
 def cleanup_names(csv):
+    if 'InternationalName' in csv.fieldnames:
+        nameidx = csv.index('InternationalName')
+    elif 'Name' in csv.fieldnames:
+        nameidx= csv.index('Name')
 
+    for row in csv.rows:
+        row[nameidx]= re.sub('\(.*\)','',row[nameidx])
+        row[nameidx]=row[nameidx].strip()
 
 def cleanup_lift(csv, fieldname):
-    
+    if fieldname in csv.fieldnames:
+        idx = csv.index(fieldname)
+
+        for row in csv.rows:
+            amount = row[idx]
+
+            amount = ''.join(c for c in amount if c.isdigit() or c in ['.','-'])
+            amount = amount.replace('.00','').replace('.0','')
+
+
+            if amount == 'X' or amount.replace('-','') == '0' or not any(c.isdigit() for c in amount):
+                amount = ''
+
+            #Sometimes numbers have more than 2 commas, if so remove the second one
+            if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
+                amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
+
+            row[idx] = amount
 
 
 #Remove '.0' from weightclasses
 def cleanup_weightclass(csv):
-
+    if 'WeightClassKg' in csv.fieldnames:
+        idx = csv.index('WeightClassKg')
+        for row in csv.rows:
+            if '.0' in row[idx]:
+                row[idx] = row[idx].replace('.0','')
 
 #Sometimes weight class is also given after bodyweight
 def cleanup_bodyweight(csv):
+    if 'BodyweightKg' in csv.fieldnames:
+        idx = csv.index('BodyweightKg')
+        for row in csv.rows:
+            row[idx]=row[idx].split()[0]
+
+
 
 
 
@@ -126,8 +336,7 @@ def main(filename):
 
 
     # Now it's time to standardize the CSV a little bit!
-    # We have some temporary columns hanging out.
-    standardize_division_age(csv)
+    standardize_division(csv)
     cleanup_place(csv)
     cleanup_names(csv)
     cleanup_weightclass(csv)
