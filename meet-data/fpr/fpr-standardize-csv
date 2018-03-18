@@ -92,13 +92,13 @@ def parse_fieldnames(sheet):
         text = header[i].lower().replace('.','')
         text= text.lower()
         
-        if '№' in text:
+        if '№' in text or 'номер' in text:
             fieldnames.append('IGNORE')
         elif 'место' in text:
             fieldnames.append('Place')
         elif 'фамилия имя' in text:
-            fieldnames.append('Name')
-        elif 'год родж' in text:
+            fieldnames.append('InternationalName')
+        elif 'год родж' in text or 'год рожд' in text:
             fieldnames.append('BirthYear')
         elif 'звание разряд' in text or 'вып разр' in text: #Rank
             fieldnames.append('IGNORE')
@@ -114,6 +114,26 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif 'тренеры' in text:
             fieldnames.append('IGNORE')
+        elif 'жре бий' in text: #Individual points
+            fieldnames.append('IGNORE')
+
+
+        elif text in ['жим 1']:
+            assert header[i+3].lower() in ['жим 2']
+            assert header[i+6].lower() in ['жим 3']
+            assert header[i+9].lower() in ['рез-т жим']
+            fieldnames.append('Bench1Kg')
+            fieldnames.append('IGNORE')
+            fieldnames.append('IGNORE')
+            fieldnames.append('Bench2Kg')
+            fieldnames.append('IGNORE')
+            fieldnames.append('IGNORE')
+            fieldnames.append('Bench3Kg')
+            fieldnames.append('IGNORE')
+            fieldnames.append('IGNORE')
+            fieldnames.append('BestBenchKg')
+            [next(iterable) for x in range(9)]
+
 
 
 
@@ -167,7 +187,18 @@ def parse_sheet(sheet):
 
     weightclass = None
     event = None
-    equipment = None
+    equipment = 'Single-ply' #Need to check titles for "Classic"
+
+
+
+    if event == None: #Might add code to search for events in titles later
+        event = ''
+        if 'Squat1Kg' in csv.fieldnames or 'BestSquatKg' in csv.fieldnames:
+            event += 'S'
+        if 'Bench1Kg' in csv.fieldnames or 'BestBenchKg' in csv.fieldnames:
+            event += 'B'
+        if 'Deadlift1Kg' in csv.fieldnames or 'BestDeadliftKg' in csv.fieldnames:
+            event +='D'
 
 
 
@@ -182,18 +213,27 @@ def parse_sheet(sheet):
 
         # Detect lines that set WeightClassKg state.
         if 'Весовая категория' in text:
-            weightclass = re.findall(r"\d*\.\d+|(\d+|\+)",text)[0]
+            weightclass = ''.join(re.findall(r"\d*\.\d+|(\d+|\+)",text))
+            if '+' in weightclass: #Put the plus at the end
+                weightclass = weightclass.replace('+','')+'+'
             continue
 
 
-        if line[0] == '': #Skip lines without a number, I think that these are always not lifter data 
+        if 'Результаты' in text:
+            continue
+        elif 'судейская' in text:
+            continue
+        elif 'Место' in text: #Another header
+            continue
+
+
+        if line[0].strip() == '' or line[0].strip() =='-': #Skip lines without a number, I think that these are always not lifter data 
             continue
 
 
         line.append(weightclass)
         line.append(event)
         line.append(equipment)
-
 
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
@@ -215,7 +255,7 @@ def standardize_division(csv):
             row[idx] = row[idx].lower()
 
             if row[idx] == 'open':
-                divisoin = 'Open'
+                division = 'Open'
 
             else:
                 die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
@@ -257,7 +297,6 @@ def unreverse_names(csv):
     for row in csv.rows:
         parts = row[nameidx].split()
         parts = [name.title() for name in parts]
-
         # The last name is probably the given first name.
         fixed = [parts[-1]] + parts[:-1]
         name = ' '.join(fixed)
@@ -311,7 +350,30 @@ def cleanup_bodyweight(csv):
         for row in csv.rows:
             row[idx]=row[idx].split()[0]
 
+def assign_total(csv):
 
+    if 'TotalKg' not in csv.fieldnames:
+        csv.append_column('TotalKg')
+    idx = csv.index('TotalKg')
+
+    def weight(str):
+        try:
+            return float(str)
+        except ValueError:
+            return 0.0
+
+    for row in csv.rows:
+        if row[idx] == '':
+            total = 0.0
+            if 'BestSquatKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestSquatKg')])
+            if 'BestBenchKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestBenchKg')])
+            if 'BestDeadliftKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestDeadliftKg')])
+
+            if total != 0.0:
+                row[idx] = str(total)       
 
 
 
@@ -333,6 +395,8 @@ def main(filename):
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg',
             'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg', 'TotalKg']:
         cleanup_lift(csv, x)
+
+    assign_total(csv)
 
 
     # Now it's time to standardize the CSV a little bit!
