@@ -120,6 +120,7 @@ def parsedivision(div):
     s = s.replace('Female-','')
     s = s.replace('Male-','')
     s = s.replace('GuestLifter','G')
+    s = s.replace('Varsity','V')
     if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
 
