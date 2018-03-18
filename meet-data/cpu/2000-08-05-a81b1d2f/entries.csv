@@ -1,19 +1,19 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
-SBD,M,Neil MacIsaac,PE,67.5,67.5,Open,200.0,130.0,200.0,530.0,Single-ply,1
-SBD,M,Avery Kuryluk,PE,110,110,Open,240.0,190.0,240.0,670.0,Single-ply,1
-SBD,M,Paul Williams,NF,100,100,Open,255.0,155.0,255.0,665.0,Single-ply,1
-SBD,M,Frank Williams,NF,100,100,Master 2,182.5,102.5,185.0,470.0,Single-ply,1
-SBD,M,John Fraser,NS,90,90,Master 1,245.0,177.5,257.5,680.0,Single-ply,1
-SBD,M,Byron Monstur,PE,100,100,Master 1,232.5,132.5,230.0,595.0,Single-ply,1
-SBD,M,Jamie Emberley,PE,90,90,Junior,280.0,170.0,260.0,710.0,Single-ply,1
-SBD,M,Peter Siepierski,NS,75,75,Junior,150.0,102.5,185.0,437.5,Single-ply,2
-SBD,M,Paul MacDonald,NF,75,75,Junior,182.5,120.0,227.5,530.0,Single-ply,1
-SBD,M,Ryan Cooper,NF,100,100,Junior,197.5,117.5,232.5,547.5,Single-ply,1
-B,M,Chris Cormier,NF,139.6,140+,Open,,192.5,,192.5,Single-ply,1
-B,M,Noel Doucette,PE,125,125,Open,,205.0,,205.0,Single-ply,1
-B,M,Jamie Jury,NF,125,125,Open,,177.5,,177.5,Single-ply,2
-B,M,Avery Kuryluk,PE,110,110,Open,,190.0,,190.0,Single-ply,1
-B,M,John Fraser,NS,82.5,82.5,Master 1,,177.5,,177.5,Single-ply,1
-B,M,Byron Monstur,PE,100,100,Master 1,,130.0,,130.0,Single-ply,1
-B,M,Jamie Emberly,PE,90,90,Junior,,170.0,,170.0,Single-ply,1
-B,M,Paul MacDonald,NF,75,75,Junior,,122.5,,122.5,Single-ply,1
+Event,Sex,Name,State,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
+SBD,M,Neil MacIsaac,PE,67.5,Open,200,130,200,530,Single-ply,1
+SBD,M,Avery Kuryluk,PE,110,Open,240,190,240,670,Single-ply,1
+SBD,M,Paul Williams,NF,100,Open,255,155,255,665,Single-ply,1
+SBD,M,Frank Williams,NF,100,Master 2,182.5,102.5,185,470,Single-ply,1
+SBD,M,John Fraser,NS,90,Master 1,245,177.5,257.5,680,Single-ply,1
+SBD,M,Byron Monstur,PE,100,Master 1,232.5,132.5,230,595,Single-ply,1
+SBD,M,Jamie Emberley,PE,90,Junior,280,170,260,710,Single-ply,1
+SBD,M,Peter Siepierski,NS,75,Junior,150,102.5,185,437.5,Single-ply,2
+SBD,M,Paul MacDonald,NF,75,Junior,182.5,120,227.5,530,Single-ply,1
+SBD,M,Ryan Cooper,NF,100,Junior,197.5,117.5,232.5,547.5,Single-ply,1
+B,M,Chris Cormier,NF,140+,Open,,192.5,,192.5,Single-ply,1
+B,M,Noel Doucette,PE,125,Open,,205,,205,Single-ply,1
+B,M,Jamie Jury,NF,125,Open,,177.5,,177.5,Single-ply,2
+B,M,Avery Kuryluk,PE,110,Open,,190,,190,Single-ply,1
+B,M,John Fraser,NS,82.5,Master 1,,177.5,,177.5,Single-ply,1
+B,M,Byron Monstur,PE,100,Master 1,,130,,130,Single-ply,1
+B,M,Jamie Emberly,PE,90,Junior,,170,,170,Single-ply,1
+B,M,Paul MacDonald,NF,75,Junior,,122.5,,122.5,Single-ply,1

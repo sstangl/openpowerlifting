@@ -1,26 +1,26 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
-SBD,M,Robert McIntyre,ON,90,90,Open,200,115,215,530,Single-ply,1
-SBD,M,Everett Beachey,ON,75,75,Open,200,167.5,255,622.5,Single-ply,1
-SBD,M,David Potvin,ON,67.5,67.5,Open,160,80,190,430,Single-ply,1
-SBD,M,Kerry LeBlond,ON,139.6,140+,Open,225,167.5,245,637.5,Single-ply,1
-SBD,M,Tom Lamb,ON,125,125,Open,250,155,290,695,Single-ply,1
-SBD,M,James Bezaire,ON,125,125,Open,240,165,265,670,Single-ply,2
-SBD,M,Doug Theal,ON,125,125,Open,227.5,187.5,240,655,Single-ply,3
-SBD,M,Ken Smalko,ON,110,110,Open,222.5,137.5,227.5,587.5,Single-ply,1
-SBD,M,Martin Walsh,ON,100,100,Open,222.5,187.5,225,635,Single-ply,2
-SBD,M,Jason Platts,ON,100,100,Open,260,190,275,725,Single-ply,1
-SBD,M,James Grenier,ON,100,100,Open,205,130,207.5,542.5,Single-ply,3
-SBD,M,Marvin Kelso,ON,90,90,Master 3,200,150,185,535,Single-ply,1
-SBD,M,George Flikas,ON,125,125,Master 3,67.5,185,140,392.5,Single-ply,1
-SBD,M,John Bourgoin,ON,75,75,Master 2,215,112.5,200,527.5,Single-ply,1
-SBD,M,Patrick Hartwick,ON,110,110,Master 2,285,155,245,685,Single-ply,1
-SBD,M,Byron Monstur,ON,100,100,Master 2,240,147.5,255,642.5,Single-ply,1
-SBD,F,Wendy Hlywka,ON,82.5,82.5,Master 1,102.5,70,132.5,305,Single-ply,1
-SBD,M,Mike Kelso,ON,82.5,82.5,Master 1,210,142.5,227.5,580,Single-ply,1
-SBD,M,Mark Glofcheskie,ON,110,110,Master 1,260,190,262.5,712.5,Single-ply,2
-SBD,M,Bruce McIntyre,ON,110,110,Master 1,260,232.5,280,772.5,Single-ply,1
-SBD,M,Steve Chomitz,ON,100,100,Master 1,267.5,197.5,277.5,742.5,Single-ply,1
-SBD,M,Paul Francis,ON,100,100,Master 1,217.5,147.5,245,610,Single-ply,2
-SBD,M,Dan Shea,ON,67.5,67.5,Junior,152.5,110,177.5,440,Single-ply,1
-SBD,M,Joe Montgomery,ON,139.6,140+,Junior,210,155,245,610,Single-ply,1
-SBD,M,Anton Migounov,ON,110,110,Junior,247.5,160,275,682.5,Single-ply,1
+Event,Sex,Name,State,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
+SBD,M,Robert McIntyre,ON,90,Open,200,115,215,530,Single-ply,1
+SBD,M,Everett Beachey,ON,75,Open,200,167.5,255,622.5,Single-ply,1
+SBD,M,David Potvin,ON,67.5,Open,160,80,190,430,Single-ply,1
+SBD,M,Kerry LeBlond,ON,140+,Open,225,167.5,245,637.5,Single-ply,1
+SBD,M,Tom Lamb,ON,125,Open,250,155,290,695,Single-ply,1
+SBD,M,James Bezaire,ON,125,Open,240,165,265,670,Single-ply,2
+SBD,M,Doug Theal,ON,125,Open,227.5,187.5,240,655,Single-ply,3
+SBD,M,Ken Smalko,ON,110,Open,222.5,137.5,227.5,587.5,Single-ply,1
+SBD,M,Martin Walsh,ON,100,Open,222.5,187.5,225,635,Single-ply,2
+SBD,M,Jason Platts,ON,100,Open,260,190,275,725,Single-ply,1
+SBD,M,James Grenier,ON,100,Open,205,130,207.5,542.5,Single-ply,3
+SBD,M,Marvin Kelso,ON,90,Master 3,200,150,185,535,Single-ply,1
+SBD,M,George Flikas,ON,125,Master 3,67.5,185,140,392.5,Single-ply,1
+SBD,M,John Bourgoin,ON,75,Master 2,215,112.5,200,527.5,Single-ply,1
+SBD,M,Patrick Hartwick,ON,110,Master 2,285,155,245,685,Single-ply,1
+SBD,M,Byron Monstur,ON,100,Master 2,240,147.5,255,642.5,Single-ply,1
+SBD,F,Wendy Hlywka,ON,82.5,Master 1,102.5,70,132.5,305,Single-ply,1
+SBD,M,Mike Kelso,ON,82.5,Master 1,210,142.5,227.5,580,Single-ply,1
+SBD,M,Mark Glofcheskie,ON,110,Master 1,260,190,262.5,712.5,Single-ply,2
+SBD,M,Bruce McIntyre,ON,110,Master 1,260,232.5,280,772.5,Single-ply,1
+SBD,M,Steve Chomitz,ON,100,Master 1,267.5,197.5,277.5,742.5,Single-ply,1
+SBD,M,Paul Francis,ON,100,Master 1,217.5,147.5,245,610,Single-ply,2
+SBD,M,Dan Shea,ON,67.5,Junior,152.5,110,177.5,440,Single-ply,1
+SBD,M,Joe Montgomery,ON,140+,Junior,210,155,245,610,Single-ply,1
+SBD,M,Anton Migounov,ON,110,Junior,247.5,160,275,682.5,Single-ply,1
