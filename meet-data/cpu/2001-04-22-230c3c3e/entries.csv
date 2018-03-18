@@ -1,13 +1,13 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
-SBD,M,Michael Thompson,BC,82.5,82.5,SO,,95.0,172.5,267.5,Single-ply,1
-SBD,M,Emmanuel Skyrianos,BC,82.5,82.5,SO,,70.0,105.0,175.0,Single-ply,2
-SBD,M,Bryan Bils,BC,82.5,82.5,SO,,40.0,97.5,137.5,Single-ply,3
-SBD,M,Trevor Dyck,BC,67.5,67.5,SO,,45.0,87.5,132.5,Single-ply,1
-SBD,F,Jojo Lentz,BC,67.5,67.5,SO,,45.0,90.0,135.0,Single-ply,1
-SBD,F,Elisabeth Etmans,BC,67.5,67.5,SO,,20.0,70.0,90.0,Single-ply,2
-SBD,M,Jason Chang,BC,56,56,SO,,50.0,105.0,155.0,Single-ply,1
-SBD,M,Kirk Smith,BC,139.6,140+,SO,,100.0,140.0,240.0,Single-ply,1
-SBD,M,Darren Muir,BC,139.6,140+,SO,,80.0,135.0,215.0,Single-ply,2
-SBD,M,Tim Lord,BC,100,100,SO,,75.0,135.0,210.0,Single-ply,1
-SBD,M,Paul Cutler,BC,100,100,SO,,62.5,140.0,202.5,Single-ply,3
-SBD,M,David Baxter,BC,100,100,SO,,85.0,122.5,207.5,Single-ply,2
+Event,Sex,Name,State,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
+SBD,M,Michael Thompson,BC,82.5,SO,,95,172.5,267.5,Single-ply,1
+SBD,M,Emmanuel Skyrianos,BC,82.5,SO,,70,105,175,Single-ply,2
+SBD,M,Bryan Bils,BC,82.5,SO,,40,97.5,137.5,Single-ply,3
+SBD,M,Trevor Dyck,BC,67.5,SO,,45,87.5,132.5,Single-ply,1
+SBD,F,Jojo Lentz,BC,67.5,SO,,45,90,135,Single-ply,1
+SBD,F,Elisabeth Etmans,BC,67.5,SO,,20,70,90,Single-ply,2
+SBD,M,Jason Chang,BC,56,SO,,50,105,155,Single-ply,1
+SBD,M,Kirk Smith,BC,140+,SO,,100,140,240,Single-ply,1
+SBD,M,Darren Muir,BC,140+,SO,,80,135,215,Single-ply,2
+SBD,M,Tim Lord,BC,100,SO,,75,135,210,Single-ply,1
+SBD,M,Paul Cutler,BC,100,SO,,62.5,140,202.5,Single-ply,3
+SBD,M,David Baxter,BC,100,SO,,85,122.5,207.5,Single-ply,2
