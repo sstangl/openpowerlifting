@@ -1,32 +1,32 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
-SBD,M,Dave Devison,BC,90,90,Open,102.5,102.5,182.5,387.5,Single-ply,1
-SBD,M,Justin Yeo,BC,75,75,Open,25.0,77.5,182.5,285.0,Single-ply,1
-SBD,M,Simardeep Virk,BC,67.5,67.5,Open,120.0,42.5,135.0,297.5,Single-ply,2
-SBD,M,Justin Gray,BC,67.5,67.5,Open,167.5,115.0,210.0,492.5,Single-ply,1
-SBD,F,Kathryn Rhodes,BC,56,56,Open,60.0,35.0,72.5,167.5,Single-ply,1
-SBD,F,Julie Joyal,BC,52,52,Open,97.5,47.5,97.5,242.5,Single-ply,1
-SBD,M,Eylon Lindonfield,BC,52,52,Open,62.5,37.5,75.0,175.0,Single-ply,1
-SBD,F,Melody Ludski,BC,48,48,Open,70.0,32.5,87.5,190.0,Single-ply,1
-SBD,M,Warren Orr,BC,139.6,140+,Open,175.0,147.5,185.0,507.5,Single-ply,4
-SBD,M,Tom Horlitz,BC,139.6,140+,Open,227.5,157.5,200.0,585.0,Single-ply,3
-SBD,M,Tim Vandergrift,BC,139.6,140+,Open,245.0,140.0,257.5,642.5,Single-ply,2
-SBD,M,Jeff Toms,BC,139.6,140+,Open,272.5,190.0,245.0,707.5,Single-ply,1
-SBD,M,Surinder Virk,BC,125,125,Open,265.0,165.0,255.0,685.0,Single-ply,1
-SBD,M,Anton Dirkin,BC,125,125,Open,220.0,140.0,250.0,610.0,Single-ply,2
-SBD,M,Gibby Chasse,BC,110,110,Open,242.5,222.5,260.0,725.0,Single-ply,1
-SBD,M,Raghbir Sahota,BC,100,100,Open,205.0,140.0,200.0,545.0,Single-ply,3
-SBD,M,Martin Ellis-White,BC,100,100,Open,247.5,132.5,250.0,630.0,Single-ply,2
-SBD,M,Greg St George,BC,100,100,Open,260.0,185.0,255.0,700.0,Single-ply,1
-SBD,M,Eric Becker,BC,100,100,Open,40.0,70.0,140.0,250,Single-ply,5
-SBD,M,Clay Thiessen,BC,100,100,Open,202.5,115.0,205.0,522.5,Single-ply,4
-SBD,M,Grant Armour,BC,125,125,Master 2,220.0,165.0,257.5,642.5,Single-ply,1
-SBD,M,Harold Schwenk,BC,90,90,Master 1,205.0,107.5,212.5,525.0,Single-ply,1
-SBD,M,Harnek Sanghera,BC,90,90,Master 1,210.0,90.0,220.0,520.0,Single-ply,2
-SBD,M,Chris Robb,BC,90,90,Master 1,190.0,100.0,187.5,477.5,Single-ply,3
-SBD,M,Bruce Ball,BC,82.5,82.5,Master 1,152.5,100.0,157.5,410.0,Single-ply,1
-SBD,M,Bob Hindley,BC,75,75,Master 1,235.0,130.0,265.0,630.0,Single-ply,1
-SBD,M,Jason Rai,BC,90,90,Junior,85.0,40.0,115.0,240.0,Single-ply,2
-SBD,M,Bryce Winstanley,BC,90,90,Junior,142.5,77.5,175.0,395.0,Single-ply,1
-SBD,M,Abdula Ghasempour,BC,75,75,Junior,160.0,87.5,200.0,447.5,Single-ply,1
-SBD,F,Anita Purewal,BC,67.5,67.5,Junior,85.0,45.0,110.0,240.0,Single-ply,1
-SBD,M,Tommy Buchmann,BC,110,110,Junior,240.0,155.0,252.5,647.5,Single-ply,1
+Event,Sex,Name,State,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
+SBD,M,Dave Devison,BC,90,Open,102.5,102.5,182.5,387.5,Single-ply,1
+SBD,M,Justin Yeo,BC,75,Open,25,77.5,182.5,285,Single-ply,1
+SBD,M,Simardeep Virk,BC,67.5,Open,120,42.5,135,297.5,Single-ply,2
+SBD,M,Justin Gray,BC,67.5,Open,167.5,115,210,492.5,Single-ply,1
+SBD,F,Kathryn Rhodes,BC,56,Open,60,35,72.5,167.5,Single-ply,1
+SBD,F,Julie Joyal,BC,52,Open,97.5,47.5,97.5,242.5,Single-ply,1
+SBD,M,Eylon Lindonfield,BC,52,Open,62.5,37.5,75,175,Single-ply,1
+SBD,F,Melody Ludski,BC,48,Open,70,32.5,87.5,190,Single-ply,1
+SBD,M,Warren Orr,BC,140+,Open,175,147.5,185,507.5,Single-ply,4
+SBD,M,Tom Horlitz,BC,140+,Open,227.5,157.5,200,585,Single-ply,3
+SBD,M,Tim Vandergrift,BC,140+,Open,245,140,257.5,642.5,Single-ply,2
+SBD,M,Jeff Toms,BC,140+,Open,272.5,190,245,707.5,Single-ply,1
+SBD,M,Surinder Virk,BC,125,Open,265,165,255,685,Single-ply,1
+SBD,M,Anton Dirkin,BC,125,Open,220,140,250,610,Single-ply,2
+SBD,M,Gibby Chasse,BC,110,Open,242.5,222.5,260,725,Single-ply,1
+SBD,M,Raghbir Sahota,BC,100,Open,205,140,200,545,Single-ply,3
+SBD,M,Martin Ellis-White,BC,100,Open,247.5,132.5,250,630,Single-ply,2
+SBD,M,Greg St George,BC,100,Open,260,185,255,700,Single-ply,1
+SBD,M,Eric Becker,BC,100,Open,40,70,140,250,Single-ply,5
+SBD,M,Clay Thiessen,BC,100,Open,202.5,115,205,522.5,Single-ply,4
+SBD,M,Grant Armour,BC,125,Master 2,220,165,257.5,642.5,Single-ply,1
+SBD,M,Harold Schwenk,BC,90,Master 1,205,107.5,212.5,525,Single-ply,1
+SBD,M,Harnek Sanghera,BC,90,Master 1,210,90,220,520,Single-ply,2
+SBD,M,Chris Robb,BC,90,Master 1,190,100,187.5,477.5,Single-ply,3
+SBD,M,Bruce Ball,BC,82.5,Master 1,152.5,100,157.5,410,Single-ply,1
+SBD,M,Bob Hindley,BC,75,Master 1,235,130,265,630,Single-ply,1
+SBD,M,Jason Rai,BC,90,Junior,85,40,115,240,Single-ply,2
+SBD,M,Bryce Winstanley,BC,90,Junior,142.5,77.5,175,395,Single-ply,1
+SBD,M,Abdula Ghasempour,BC,75,Junior,160,87.5,200,447.5,Single-ply,1
+SBD,F,Anita Purewal,BC,67.5,Junior,85,45,110,240,Single-ply,1
+SBD,M,Tommy Buchmann,BC,110,Junior,240,155,252.5,647.5,Single-ply,1
