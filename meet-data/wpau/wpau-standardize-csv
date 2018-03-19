@@ -94,7 +94,7 @@ def parse_sheetname(s):
     for word in s.lower().split():
         
         # Events
-        if word == 'пл' or word == 'пауэрлифтинг' or word == 'pl' or word =='power' or word =='powerlifting' or word == 'пауерліфтинг':
+        if word == 'пл' or word == 'пауэрлифтинг' or word == 'pl' or word =='power' or word =='powerlifting' or word == 'пауерліфтинг' or word =='powerlifitng':
             assert not event or event =='SBD'
             event = 'SBD'
         elif word == 'жим' or word =='им' or word=='bench':
@@ -193,7 +193,7 @@ def is_header(line):
             return True
     return False
 
-def parse_fieldnames(sheet):
+def parse_fieldnames(sheet,obj):
     fieldnames = []
     headernum = get_header_linenum(sheet)
     header = sheet[headernum]
@@ -219,7 +219,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text in ['город','city / team','city \ club','city / club','спорт клуб','клуб'] : #Home city/gym
             fieldnames.append('IGNORE')
-       elif text in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth','b date','дата рождения']: #Birthdate
+        elif text in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth','b date','дата рождения']: #Birthdate
             fieldnames.append('BirthDate')
         elif any(check_str in text for check_str in ['власна вага','вес','pw','weight','вл вага']): #Bodyweight
             fieldnames.append('BodyweightKg')
@@ -292,6 +292,16 @@ def parse_fieldnames(sheet):
             else:
                 [next(iterable) for x in range(2)]
 
+
+
+        elif text in ["1 att"]: #Events aren't given in header, try to work them out attempt labels event
+            assert header[i+1].replace('.','').lower().strip() in ["2 att"]
+            assert header[i+2].replace('.','').lower().strip() in ["3 att"]
+            if obj['event'] == 'B':
+                fieldnames.append('Bench1Kg')
+                fieldnames.append('Bench2Kg')
+                fieldnames.append('Bench3Kg')
+                [next(iterable) for x in range(2)]
         elif text == '':
             fieldnames.append('IGNORE')
 
@@ -321,7 +331,7 @@ def parse_sheet(sheet):
 
     # Look through the sheet for column information and mark up the CSV.
     # All columns are given a name -- the extra ones are removed later.
-    csv.fieldnames = parse_fieldnames(sheet)
+    csv.fieldnames = parse_fieldnames(sheet,obj)
 
 
     #No events listed in sheet titles, see if we can reconstruct them from the header
@@ -379,24 +389,24 @@ def parse_sheet(sheet):
             continue
 
         # Detect lines that set WeightClassKg state.
-        if ' кг' in text or ' kg' in text or 'до' in text:
-
-            weightclass = ''.join(re.findall(r"(\d*\.\d+)|(\d+|\+)",text)[0])
+        if ' кг' in text or ' kg' in text or ' до' in text:
+            weightclass = ''.join(re.findall(r"\d*\.\d+|(\d+|\+)",text)[0])
+            if '+' in weightclass: #Put the plus at the end
+                weightclass = weightclass.replace('+','')+'+'
             continue
 
-
         # Sex and division are given between lifter rows
-        if any(search_str in  text for search_str in['жен. (','woman (','female','women.','женщины']):
+        if any(search_str in  text for search_str in['жен. (','woman (','female','women.','женщины','women']):
             sex = 'F'
-            if '(' in text:
-                division = re.findall(r"\((.*?)\)",text)[0]
+            if '(' in text or '\\' in text:
+                division = ''.join(re.findall(r"\((.*?)\)|\\(.*)$",text)[0]).strip()
             else:
                 division = ''
             continue
-        elif any(search_str in text for search_str in ['муж. (','men (','male','men.','мужчины']):
+        elif any(search_str in text for search_str in ['муж. (','men (','male','men.','мужчины','men']):
             sex = 'M'
-            if '(' in text:
-                division = re.findall(r"\((.*?)\)",text)[0]
+            if '(' in text or '\\' in text:
+                division = ''.join(re.findall(r"\((.*?)\)|\\(.*)$",text)[0]).strip()
             else:
                 division = ''
             continue
@@ -522,7 +532,7 @@ def standardize_division_age(csv):
             division = 'Open'
         elif 'masters' in row[dividx]:
             division = 'Masters'
-        elif 'mpf' in row[dividx]:
+        elif 'mpf' in row[dividx] or 'm/p/f' in row[dividx]:
             division = 'Military/Fire/Police'
         elif 'юніор' in row[dividx]:
             division = 'Juniors'
