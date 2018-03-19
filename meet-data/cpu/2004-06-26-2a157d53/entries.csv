@@ -1,28 +1,28 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
-SBD,F,Treena Anthony,AB,90,90,Open,172.5,92.5,200.0,465.0,Single-ply,1
-SBD,M,Jason Duclos,AB,82.5,82.5,Open,222.5,142.5,250.0,615.0,Single-ply,1
-SBD,M,Andrew Bryant,BC,82.5,82.5,Open,170.0,100.0,180.0,450.0,Single-ply,2
-SBD,F,Kim Dennis,BC,67.5,67.5,Open,152.5,87.5,152.5,392.5,Single-ply,1
-SBD,F,Karen Scott,BC,67.5,67.5,Open,75.0,45.0,100.0,220.0,Single-ply,3
-SBD,M,Justin Gray,BC,67.5,67.5,Open,162.5,107.5,210.0,480.0,Single-ply,1
-SBD,F,Judith Franklin,BC,67.5,67.5,Open,112.5,62.5,140.0,315.0,Single-ply,2
-SBD,M,Flavio Formigoni,BC,67.5,67.5,Open,120.0,95.0,152.5,367.5,Single-ply,2
-SBD,M,Surinder Virk,BC,125,125,Open,240.0,160.0,250.0,650.0,Single-ply,1
-SBD,M,Joe Oliveira,BC,100,100,Open,257.5,172.5,252.5,682.5,Single-ply,2
-SBD,M,Greg St George,BC,100,100,Open,272.5,182.5,255.0,710.0,Single-ply,1
-SBD,M,Robert O Smith,BC,139.6,140+,Master 3,200.0,220.0,200.0,620.0,Single-ply,1
-SBD,M,Darwin Eckstrom,AB,110,110,Master 2,230.0,187.5,210.0,627.5,Single-ply,1
-SBD,M,Harold Schwenk,BC,90,90,Master 1,192.5,107.5,197.5,497.5,Single-ply,2
-SBD,M,Harnek Sanghera,BC,90,90,Master 1,210.0,92.5,215.0,517.5,Single-ply,1
-SBD,M,Bruce Ball,BC,82.5,82.5,Master 1,152.5,97.5,160.0,410.0,Single-ply,1
-SBD,F,Jackie Sandu,BC,56,56,Master 1,120.0,65.0,145.0,330.0,Single-ply,1
-SBD,M,Raghvir Sahota,BC,100,100,Master 1,200.0,142.5,195.0,537.5,Single-ply,1
-SBD,F,Katherine Gauthier,AB,100,90+,Junior,140.0,87.5,145.0,372.5,Single-ply,1
-SBD,M,Kellan Eckstrom,AB,90,90,Junior,200.0,110.0,237.5,547.5,Single-ply,1
-SBD,M,Harveer Nijjar,BC,82.5,82.5,Junior,160.0,85.0,190.0,435.0,Single-ply,2
-SBD,M,Aaron Ziffle,SK,82.5,82.5,Junior,157.5,132.5,175.0,465.0,Single-ply,1
-SBD,M,Simardeep Virk,BC,67.5,67.5,Junior,130.0,50.0,140.0,320.0,Single-ply,1
-SBD,F,Rhaea Fowler,SK,67.5,67.5,Junior,157.5,75.0,170.0,402.5,Single-ply,1
-SBD,M,Aaron Thomas,SK,60,60,Junior,145.0,105.0,180.0,430,Single-ply,1
-SBD,M,Tommy Buchmann,BC,110,110,Junior,265.0,155.0,260.0,680.0,Single-ply,1
-SBD,M,Nathan Higginson,BC,100,100,Junior,162.5,145.0,235.0,542.5,Single-ply,1
+Event,Sex,Name,State,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Place
+SBD,F,Treena Anthony,AB,90,Open,172.5,92.5,200,465,Single-ply,1
+SBD,M,Jason Duclos,AB,82.5,Open,222.5,142.5,250,615,Single-ply,1
+SBD,M,Andrew Bryant,BC,82.5,Open,170,100,180,450,Single-ply,2
+SBD,F,Kim Dennis,BC,67.5,Open,152.5,87.5,152.5,392.5,Single-ply,1
+SBD,F,Karen Scott,BC,67.5,Open,75,45,100,220,Single-ply,3
+SBD,M,Justin Gray,BC,67.5,Open,162.5,107.5,210,480,Single-ply,1
+SBD,F,Judith Franklin,BC,67.5,Open,112.5,62.5,140,315,Single-ply,2
+SBD,M,Flavio Formigoni,BC,67.5,Open,120,95,152.5,367.5,Single-ply,2
+SBD,M,Surinder Virk,BC,125,Open,240,160,250,650,Single-ply,1
+SBD,M,Joe Oliveira,BC,100,Open,257.5,172.5,252.5,682.5,Single-ply,2
+SBD,M,Greg St George,BC,100,Open,272.5,182.5,255,710,Single-ply,1
+SBD,M,Robert O Smith,BC,140+,Master 3,200,220,200,620,Single-ply,1
+SBD,M,Darwin Eckstrom,AB,110,Master 2,230,187.5,210,627.5,Single-ply,1
+SBD,M,Harold Schwenk,BC,90,Master 1,192.5,107.5,197.5,497.5,Single-ply,2
+SBD,M,Harnek Sanghera,BC,90,Master 1,210,92.5,215,517.5,Single-ply,1
+SBD,M,Bruce Ball,BC,82.5,Master 1,152.5,97.5,160,410,Single-ply,1
+SBD,F,Jackie Sandu,BC,56,Master 1,120,65,145,330,Single-ply,1
+SBD,M,Raghvir Sahota,BC,100,Master 1,200,142.5,195,537.5,Single-ply,1
+SBD,F,Katherine Gauthier,AB,90+,Junior,140,87.5,145,372.5,Single-ply,1
+SBD,M,Kellan Eckstrom,AB,90,Junior,200,110,237.5,547.5,Single-ply,1
+SBD,M,Harveer Nijjar,BC,82.5,Junior,160,85,190,435,Single-ply,2
+SBD,M,Aaron Ziffle,SK,82.5,Junior,157.5,132.5,175,465,Single-ply,1
+SBD,M,Simardeep Virk,BC,67.5,Junior,130,50,140,320,Single-ply,1
+SBD,F,Rhaea Fowler,SK,67.5,Junior,157.5,75,170,402.5,Single-ply,1
+SBD,M,Aaron Thomas,SK,60,Junior,145,105,180,430,Single-ply,1
+SBD,M,Tommy Buchmann,BC,110,Junior,265,155,260,680,Single-ply,1
+SBD,M,Nathan Higginson,BC,100,Junior,162.5,145,235,542.5,Single-ply,1

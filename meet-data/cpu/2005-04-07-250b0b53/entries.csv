@@ -45,7 +45,7 @@ SBD,F,Tracy Coderre,QU,52.7,56,Open,100,,45,,120,265,Single-ply,2
 SBD,F,Batten Annette,MB,54.6,56,Open,125,,60,,152.5,337.5,Single-ply,1
 SBD,F,Diane Richard,SK,52,52,Open,105,,60,,110,275,Single-ply,1
 SBD,F,Melody Ludski,BC,46.4,48,Open,90,,35,,112.5,237.5,Single-ply,1
-SBD,M,Chris Yantha,ON,132.9,140+,Open,282.5,,200,,312.5,795,Single-ply,1
+SBD,M,Chris Yantha,ON,132.9,140,Open,282.5,,200,,312.5,795,Single-ply,1
 SBD,M,Steve Magistrale,ON,116.8,125,Open,305,,227.5,,307.5,840,Single-ply,3
 SBD,M,Steve Campbell,NL,115.7,125,Open,280,,200,,282.5,762.5,Single-ply,5
 SBD,M,Mark Holloway,NL,122.5,125,Open,335,,265.5,,300,900,Single-ply,1
@@ -62,7 +62,7 @@ SBD,M,Eric Gagnon,ON,100,100,Open,335,,190,,287.5,812.5,Single-ply,2
 SBD,M,Darren Weatherbie,PE,94.6,100,Open,335,,242.5,,300,877.5,Single-ply,1
 SBD,M,Brian George,NL,99.5,100,Open,285,,175,,285,745,Single-ply,3
 SBD,M,Hans Franczak,AB,87.1,90,Master 3,155,,82.5,,170,407.5,Single-ply,1
-SBD,M,Robert O Smith,BC,138.8,140+,Master 3,200,,220,,230,650,Single-ply,1
+SBD,M,Robert O Smith,BC,138.8,140,Master 3,200,,220,,230,650,Single-ply,1
 SBD,M,Hal Mulholland,IN,111.7,125,Master 3,220,,167.5,,265,652.5,Single-ply,1
 SBD,M,Ray Villeneuve,ON,97.9,100,Master 3,160,,112.5,,185,457.5,Single-ply,1
 SBD,M,Serge Charest,QU,85.5,90,Master 2,195,,110,,217.5,522.5,Single-ply,2
@@ -88,8 +88,8 @@ SBD,M,Réjean Talon,QU,67.4,67.5,Master 1,230,,155,,230,615,Single-ply,1
 SBD,F,Jane Smith,BC,66.2,67.5,Master 1,97.5,,67.5,,107.5,272.5,Single-ply,2
 SBD,M,Bryan Brothers,BC,67.5,67.5,Master 1,192.5,,92.5,,225,510,Single-ply,2
 SBD,F,Sandu Jackie,BC,52,52,Master 1,130,,65,,155,350,Single-ply,1
-SBD,M,Shawn O'Halloran,ON,132.7,140+,Master 1,330,331,285,,275,890,Single-ply,1
-SBD,M,Brock Haywood,MB,130.7,140+,Master 1,277.5,,177.5,,255,710,Single-ply,2
+SBD,M,Shawn O'Halloran,ON,132.7,140,Master 1,330,331,285,,275,890,Single-ply,1
+SBD,M,Brock Haywood,MB,130.7,140,Master 1,277.5,,177.5,,255,710,Single-ply,2
 SBD,M,Tom Nicholls,PE,119.1,125,Master 1,340,,255,,330,925,Single-ply,1
 SBD,M,Ron Strong,ON,109.4,110,Master 1,260,,172.5,,295,727.5,Single-ply,1
 SBD,M,Paul Gidney,NS,96.9,100,Master 1,235,,165,,260,660,Single-ply,1
@@ -104,7 +104,7 @@ SBD,M,Jesse Jamison,ON,74.5,75,Junior,192.5,,100,,197.5,490,Single-ply,2
 SBD,M,Daniel Young,ON,75,75,Junior,227.5,,137.5,,205,570,Single-ply,1
 SBD,F,Ebony Rutko,BC,59.6,60,Junior,140,,75,,137.5,352.5,Single-ply,1
 SBD,M,David Heisel,ON,59.9,60,Junior,180,,107.5,,195,482.5,Single-ply,1
-SBD,M,Ryan Fowler,SK,136.6,140+,Junior,275,,207.5,,250,732.5,Single-ply,1
+SBD,M,Ryan Fowler,SK,136.6,140,Junior,275,,207.5,,250,732.5,Single-ply,1
 SBD,M,Justin Hancock,BC,112.1,125,Junior,227.5,,162.5,,255,645,Single-ply,1
 SBD,M,John MacDonald,PE,108.5,110,Junior,265,,207.5,,277.5,750,Single-ply,1
 SBD,M,Jason Byrne,ON,109.7,110,Junior,265,,195,,290,750,Single-ply,2
@@ -153,7 +153,7 @@ B,M,Mark Vezina,BC,84.1,90,Master 1,,,150,,,150,Single-ply,1
 B,M,Jerry Marentette,ON,82.2,82.5,Master 1,,,180.5,,,180,Single-ply,1
 B,M,Réjean Talon,QU,66.9,67.5,Master 1,,,155,,,155,Single-ply,1
 B,F,Jane Smith,BC,65.8,67.5,Master 1,,,70,,,70,Single-ply,1
-B,M,Shawn O'Halloran,ON,132.9,140+,Master 1,,,282.5,,,282.5,Single-ply,1
+B,M,Shawn O'Halloran,ON,132.9,140,Master 1,,,282.5,,,282.5,Single-ply,1
 B,M,Kevin Breiter,AB,142.5,140+,Master 1,,,200,,,200,Single-ply,2
 B,M,John Kirkbride,BC,114.5,125,Master 1,,,200,,,200,Single-ply,1
 B,M,Daniel Royer,QU,107.9,110,Master 1,,,170,,,170,Single-ply,1
@@ -168,7 +168,7 @@ B,F,Karyne Turcotte,QU,75.5,82.5,Junior,,,70,,,70,Single-ply,1
 B,M,Harveer Nijjar,BC,82.3,82.5,Junior,,,100,,,100,Single-ply,3
 B,M,Boyd Lyon,AB,81.4,82.5,Junior,,,150,,,150,Single-ply,2
 B,M,Rudy Privé,QU,74.4,75,Junior,,,155,,,155,Single-ply,1
-B,M,Ryan Fowler,SK,136.7,140+,Junior,,,205,,,205,Single-ply,1
+B,M,Ryan Fowler,SK,136.7,140,Junior,,,205,,,205,Single-ply,1
 B,M,David Bennett,AB,111,125,Junior,,,182.5,,,182.5,Single-ply,1
 B,M,John MacDonald,PE,108.9,110,Junior,,,212.5,,,212.5,Single-ply,1
 B,M,Nathan Higginson,BC,96.7,100,Junior,,,180,,,180,Single-ply,1

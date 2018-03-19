@@ -264,6 +264,7 @@ def check_column_weightclass(s, row, csv):
     ipf_extra = ['60+']
     old_usapl = ['145','145+']
     wnpf_extra = ['34']
+    wpau_extra = ['155','155+']
 
     ffforce_extra = ['83+'] # Cadet division, for youth.
     parapl_extra = ['82.5+']
@@ -271,7 +272,7 @@ def check_column_weightclass(s, row, csv):
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
               rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
               old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
-              idfpf_extra + parapl_extra
+              idfpf_extra + parapl_extra +wpau_extra
 
     if not s in classes:
         pwarning("Unknown weight class: %s" % s)
@@ -468,8 +469,9 @@ def check_row_weightclass_sex(row,csv):
     ipf_men   = ['59','66','74','83','93','105','120','120+'] #No -53 as this is an IDFPF womens class
     trad_men_only = ['125','140','140+'] #No 100,110 due to SPF,USPA etc
     old_usapl_men_only = ['145','145+']
+    wpau_men_only = ['155','155+']
 
-    men_only = ipf_men+trad_men_only +old_usapl_men_only
+    men_only = ipf_men+trad_men_only +old_usapl_men_only+wpau_men_only
 
     #No -52kg as this overlaps with a traditional weight-class
     ipf_women = ['43','47','57','63','72','84','84+']
@@ -505,7 +507,7 @@ def check_row_weightclass_consistency(row, csv):
             # meets put women in male weightclasses for no reason.
             # Made even higher thanks to the SPF.
             if number > 120:
-                pwarning("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
+                perror("Suspiciously high female weightclass: %s" % row[csv.index('WeightClassKg')])
         except ValueError:
             pass
 
@@ -514,12 +516,12 @@ def check_row_weightclass_consistency(row, csv):
         if bw:
             if '+' in row[csv.index('WeightClassKg')]:
                 if float(bw) <= float(wtcls):
-                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
             else:
                 if float(bw) > float(wtcls):
-                    pwarning("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
+                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
 
@@ -529,7 +531,7 @@ def check_row_weightclass_consistency(row, csv):
     if 'usapl/' in globalFilename and 'BodyweightKg' in csv.fieldnames:
         if row[csv.index('BodyweightKg')].strip() == '':
             if row[csv.index('WeightClassKg')].strip() != '':
-                pwarning("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
+                perror("WeightClass for %s must be zeroed (USAPL failed to enter bodyweight)" %
                         row[csv.index('Name')])
 
 
