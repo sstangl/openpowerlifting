@@ -1,9 +1,9 @@
 Name,Equipment,Sex,Event,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Place
-Daniel Mcgauley,Raw,M,SBD,M-SO-Open,55.8,59,90,95,-100,95,72.5,75,77.5,77.5,92.5,-105,105,105,277.5,1
-David Martin,Raw,M,BD,M-SO-Open,104.5,105,,,,0,55,-57.5,57.5,57.5,90,100,110,110,167.5,1
+Daniel McGauley,Raw,M,SBD,M-SO-Open,55.8,59,90,95,-100,95,72.5,75,77.5,77.5,92.5,-105,105,105,277.5,1
+David Martin,Raw,M,BD,M-SO-Open,104.5,105,,,,,55,-57.5,57.5,57.5,90,100,110,110,167.5,1
 Charles-lee Fourie,Raw,M,SBD,M-SO-Junior,73.3,74,132.5,137.5,-140,137.5,77.5,82.5,85,85,185,195,200,200,422.5,1
 Keaton Anthony,Raw,M,SBD,M-SO-Junior,82.2,83,50,60,-70,60,50,55,57.5,57.5,110,120,127.5,127.5,245,1
-Minu Gogoi,Single-ply,F,SBD,F-E-Open,46.4,47,107.5,120,125,125,45,50,-55,50,115,125,130,130,300,1
+Minu Gogoi,Single-ply,F,SBD,F-E-Open,46.4,47,107.5,120,-125,120,45,50,-55,50,115,125,130,130,300,1
 Elisabeth Barry,Single-ply,F,SBD,F-E-Open,46.55,47,105,110,115,115,45,-47.5,47.5,47.5,125,130,-135,130,292.5,2
 Dehingia Minoti,Single-ply,F,SBD,F-E-Open,51.7,52,115,,125,125,-57.5,57.5,62.5,62.5,115,125,132.5,132.5,320,1
 Arannanee Gogoi,Single-ply,F,SBD,F-E-Open,62.8,63,140,-145,-145,140,-80,80,82.5,82.5,140,142.5,150,150,372.5,1
@@ -14,13 +14,13 @@ Shweta Sahni,Single-ply,F,SBD,F-E-Open,69.15,72,90,105,-110,105,50,55,-60,55,110
 B Chandrika,Single-ply,F,SBD,F-E-Open,81.7,84,140,-150,155,155,55,65,-72.5,65,140,150,157.5,157.5,377.5,1
 Jacqui Rees,Single-ply,F,SBD,F-E-Open,95.15,84+,170,-182.5,182.5,182.5,-95,95,-100,95,155,170,-180,170,447.5,1
 Sampa Guha,Single-ply,F,SBD,F-E-Open,86.35,84+,105,120,-150,120,70,82.5,,82.5,-105,105,,105,307.5,2
-v Nivetha,Single-ply,F,SBD,F-E-Sub-junior,41.95,43,50,60,70,70,30,37.5,42.5,42.5,60,80,95,95,207.5,1
+V Nivetha,Single-ply,F,SBD,F-E-Sub-junior,41.95,43,50,60,70,70,30,37.5,42.5,42.5,60,80,95,95,207.5,1
 Rouxchelle Roux,Single-ply,F,SBD,F-E-Juniors,51.5,52,135,-142.5,142.5,142.5,62.5,-67.5,67.5,67.5,117.5,122.5,127.5,127.5,337.5,1
 Genevieve Vrettas,Single-ply,F,SBD,F-E-Juniors,50.75,52,105,115,-120,115,47.5,50,-52.5,50,110,120,125,125,290,2
-Jaspreet Kaur,Single-ply,F,SBD,F-E-Juniors,50.8,52,80,90,90,90,30,35,-40,35,85,95,105,105,230,3
+Jaspreet Kaur,Single-ply,F,SBD,F-E-Juniors,50.8,52,80,-90,90,90,30,35,-40,35,85,95,105,105,230,3
 Minati Dihingia,Single-ply,F,SBD,F-E-Juniors,51.7,52,115,117.5,125,125,-57.5,-57.5,-57.5,,,,,,,DQ
 Megan Leighton,Single-ply,F,SBD,F-E-Juniors,56.95,57,125,137.5,-142.5,137.5,-95,95,-103,95,132.5,142.5,155,155,387.5,1
-Mousumi Bora,Single-ply,F,SBD,F-E-Juniors,96.9,105,-160,-160,160,160,80,-85,-85,80,-150,150,160,160,400,1
+Mousumi Bora,Single-ply,F,SBD,F-E-Juniors,96.9,84+,-160,-160,160,160,80,-85,-85,80,-150,150,160,160,400,1
 Jain Archana,Single-ply,F,SBD,F-E-M1,50.75,52,70,85,-90,85,45,50,55,55,90,100,,100,240,1
 Vinutha Raghunath,Single-ply,F,SBD,F-E-M1,55.85,57,-112.5,112.5,,112.5,40,42.5,45,45,115,,,115,272.5,1
 Gogia Chug Kapila,Single-ply,F,SBD,F-E-M1,62.35,63,60,65,,65,40,45,,45,60,75,,75,185,1
@@ -33,8 +33,8 @@ M Ilango,Single-ply,M,SBD,M-E-Open,59.7,66,130,190,-200,190,70,-110,110,110,130,
 B Vishwanatha,Single-ply,M,SBD,M-E-Open,83,83,270,-285,-285,270,145,-155,155,155,280,302.5,-307.5,302.5,727.5,1
 K Acharya Singh,Single-ply,M,SBD,M-E-Open,81.7,83,260,-270,-270,260,180,187.5,195,195,240,255,-275,255,710,2
 Jaspreet Singh,Single-ply,M,SBD,M-E-Open,81.65,83,-270,-270,-270,,-170,,,,-245,,,,,DQ
- Raj  Bakkiya,Single-ply,M,SBD,M-E-Open,91.45,93,220,240,252.5,252.5,-130,130,142.5,142.5,230,245,257.5,257.5,652.5,1
-a.m.d Kodikara,Single-ply,M,SBD,M-E-Open,91.4,93,235,245,-255,245,140,155,162.5,162.5,225,235,242.5,242.5,650,2
+Raj Bakkiya,Single-ply,M,SBD,M-E-Open,91.45,93,220,240,252.5,252.5,-130,130,142.5,142.5,230,245,257.5,257.5,652.5,1
+A.M.D Kodikara,Single-ply,M,SBD,M-E-Open,91.4,93,235,245,-255,245,140,155,162.5,162.5,225,235,242.5,242.5,650,2
 Indika Paranagama,Single-ply,M,SBD,M-E-Open,102.85,105,240,260,280,280,150,165,175,175,250,265,-280,265,720,2
 Melvin Vincent,Single-ply,M,SBD,M-E-Open,102.9,105,270,-290,-290,270,150,160,165,165,260,272.5,-302.5,272.5,707.5,1
 Francois Maritz,Single-ply,M,SBD,M-E-Open,114.8,120,340,360,380,380,210,220,-230,220,290,300,-310,300,900,2
@@ -42,12 +42,12 @@ D.K.R Jayathilaka,Single-ply,M,SBD,M-E-Open,118.4,120,285,300,305,305,145,160,16
 Mathys Herbst,Single-ply,M,SBD,M-E-Open,149.7,120+,345,355,,355,-240,-240,240,240,300,310,,310,905,1
 Darin Weerasinghe,Single-ply,M,SBD,M-E-Open,121.9,120+,200,210,225,225,-200,200,-205,200,210,225,240,240,665,2
 Malik Pardeep,Single-ply,M,SBD,M-E-Open,130.3,120+,-175,-185,185,185,-165,165,180,180,175,200,,200,565,3
-Mihir Soni,Single-ply,M,SBD,M-E-Sub-junior,57.8,59,160,170,170,170,70,80,-85,80,170,-187.5,-187.5,170,420,1
+Mihir Soni,Single-ply,M,SBD,M-E-Sub-junior,57.8,59,160,-170,170,170,70,80,-85,80,170,-187.5,-187.5,170,420,1
 P Matheshwaran,Single-ply,M,SBD,M-E-Sub-junior,63.8,66,90,100,107.5,107.5,-40,60,-70,60,100,125,140,140,307.5,1
 Gurpreet Singh,Single-ply,M,SBD,M-E-Sub-junior,64,66,80,-115,-115,80,-55,75,-80,75,80,135,-150,135,290,2
 Manjit Singh,Single-ply,M,SBD,M-E-Sub-junior,80.85,83,-140,140,-150,140,90,-100,100,100,160,180,200,200,440,1
 Sukhpal Singh,Single-ply,M,SBD,M-E-Sub-junior,81.45,83,-110,110,-130,110,-50,50,60,60,80,120,-150,120,290,2
-Israr Pasa,Single-ply,M,SBD,M-E-Sub-junior,111.4,120,185,190,190,190,-115,115,120,120,150,180,192.5,192.5,497.5,1
+Israr Pasa,Single-ply,M,SBD,M-E-Sub-junior,111.4,120,185,-190,-190,185,-115,115,120,120,150,180,192.5,192.5,497.5,1
 Pranav Khule,Single-ply,M,SBD,M-E-Sub-junior,122.7,120+,180,190,,190,85,100,110,110,170,190,200,200,500,1
 Marcel Vorster,Single-ply,M,SBD,M-E-Junior,65.75,66,220,232.5,242.5,242.5,165,173,-177.5,173,190,-205,-205,190,605.5,1
 Barath Palansamy,Single-ply,M,SBD,M-E-Junior,66.82,74,110,130,150,150,70,85,95,95,130,180,-200,180,425,1
@@ -86,10 +86,10 @@ Catherine Graham,Raw,F,SBD,F-C-Open,55.45,57,105,112.5,-120,112.5,75,-80,80,80,1
 Jeanri Bezuidenhout,Raw,F,SBD,F-C-Open,56,57,130,135,-137.5,135,60,65,67.5,67.5,120,130,-142.5,130,332.5,4
 Toni Coetzee,Raw,F,SBD,F-C-Open,56.75,57,110,-117.5,-117.5,110,52.5,57.5,-60,57.5,127.5,132.5,135,135,302.5,5
 Lauren Katz,Raw,F,SBD,F-C-Open,55.95,57,90,100,-107.5,100,62.5,67.5,-70,67.5,115,125,-137.5,125,292.5,6
-Roisin Meeham,Raw,F,SBD,F-C-Open,56.85,57,95,100,-107.5,100,47.5,-50,-50,47.5,110,110,-115,110,257.5,7
+Roisin Meeham,Raw,F,SBD,F-C-Open,56.85,57,95,100,-107.5,100,47.5,-50,-50,47.5,-110,110,-115,110,257.5,7
 R Ghattamaneni Sai,Raw,F,SBD,F-C-Open,61.95,63,125,135,-140,135,45,50,-55,50,160,170,-175,170,355,1
 Lisa Basson,Raw,F,SBD,F-C-Open,60.2,63,-110,-110,110,110,70,75,-80,75,140,150,-160,150,335,2
-Leigh-Ann Mcquillan,Raw,F,SBD,F-C-Open,58,63,102.5,107.5,110,110,50,52.5,55,55,132.5,142.5,150,150,315,3
+Leigh-Ann McQuillan,Raw,F,SBD,F-C-Open,58,63,102.5,107.5,110,110,50,52.5,55,55,132.5,142.5,150,150,315,3
 Lauren Elder,Raw,F,SBD,F-C-Open,60.85,63,102.5,110,-115,110,52.5,55,-57.5,55,135,147.5,-155,147.5,312.5,4
 Chloe Graham,Raw,F,SBD,F-C-Open,62.5,63,107.5,112.5,-115,112.5,57.5,60,62.5,62.5,127.5,132.5,-140,132.5,307.5,5
 Usha Usha,Raw,F,SBD,F-C-Open,62.35,63,-130,-130,-130,,80,90,-95,90,130,140,150,150,,DQ
@@ -105,10 +105,10 @@ Wendy Macfairlane,Raw,F,SBD,F-C-Open,83.1,84,-165,-165,-165,,80,82.5,85,85,160,1
 Lauren Norton,Raw,F,SBD,F-C-Open,108.55,84+,155,165,175,175,95,100,105,105,170,192.5,205,205,485,1
 Brydie Anderson,Raw,F,SBD,F-C-Open,116.9,84+,140,150,152.5,152.5,75,82.5,85,85,170,180,190,190,427.5,2
 Sarah Hammerton,Raw,F,SBD,F-C-Open,89.95,84+,130,140,150,150,75,80,82.5,82.5,130,140,150,150,382.5,3
-Nafi Khan  Hudaibia,Raw,F,SBD,F-C-Open,105.25,84+,135,-145,147.5,147.5,62.5,67.5,72.5,72.5,140,150,157.5,157.5,377.5,4
-v Nivetha,Raw,F,SBD,F-C-Sub-junior,41.65,43,65,70,,70,35,40,45,45,90,95,-100,95,210,1
+Nafi Khan Hudaibia,Raw,F,SBD,F-C-Open,105.25,84+,135,-145,147.5,147.5,62.5,67.5,72.5,72.5,140,150,157.5,157.5,377.5,4
+V Nivetha,Raw,F,SBD,F-C-Sub-junior,41.65,43,65,70,,70,35,40,45,45,90,95,-100,95,210,1
 Patricia Harding,Raw,F,SBD,F-C-Sub-junior,46.5,47,52.5,57.5,-60,57.5,32.5,35,-37.5,35,92.5,97.5,-100,97.5,190,1
-Cayla Colling,Raw,F,SBD,F-C-Sub-junior,56.15,57,75,82.5,87.5,87.5,45,50,50,50,100,107.5,112.5,112.5,250,1
+Cayla Colling,Raw,F,SBD,F-C-Sub-junior,56.15,57,75,82.5,87.5,87.5,45,-50,50,50,100,107.5,112.5,112.5,250,1
 Rochelle De Beer,Raw,F,SBD,F-C-Sub-junior,55.2,57,80,-85,-85,80,42.5,45,-50,45,105,110,115,115,240,2
 Caitlin Poxon,Raw,F,SBD,F-C-Sub-junior,61.75,63,112.5,115,120,120,57.5,-62.5,-62.5,57.5,115,120,-130,120,297.5,1
 Emily Killick,Raw,F,SBD,F-C-Sub-junior,70.4,72,110,117.5,-122.5,117.5,50,55,60,60,120,-132.5,132.5,132.5,310,1
@@ -126,7 +126,7 @@ Kara Swankie,Raw,F,SBD,F-C-Junior,71.45,72,130,135,140,140,67.5,72.5,75,75,162.5
 Dina Power,Raw,F,SBD,F-C-Junior,70.4,72,110,117.5,122.5,122.5,55,60,-65,60,-135,150,160,160,342.5,2
 Jade Isbister,Raw,F,SBD,F-C-Junior,68.8,72,110,-117.5,117.5,117.5,62.5,67.5,-70,67.5,127.5,135,-140,135,320,3
 Lezaan Jordaan,Raw,F,SBD,F-C-Junior,82.7,84,140,150,157.5,157.5,75,-80,-80,75,165,180,192.5,192.5,425,1
-Kay-Lee Steyn,Raw,F,SBD,F-C-Junior,110.35,120,147.5,152.5,155,155,65,67.5,-70,67.5,140,152.5,155,155,377.5,1
+Kay-Lee Steyn,Raw,F,SBD,F-C-Junior,110.35,84+,147.5,152.5,155,155,65,67.5,-70,67.5,140,152.5,155,155,377.5,1
 Elisabeth Barry,Raw,F,SBD,F-C-M1,46.5,47,82.5,-87.5,-87.5,82.5,37.5,-40,40,40,120,125,127.5,127.5,250,1
 Catriona Duncan,Raw,F,SBD,F-C-M1,50,52,95,-100,-100,95,55,60,62.5,62.5,110,115,120,120,277.5,1
 Rachel Smith,Raw,F,SBD,F-C-M1,51.65,52,70,75,77.5,77.5,35,37.5,-40,37.5,100,107.5,-112.5,107.5,222.5,2
@@ -187,7 +187,7 @@ Owen Lockwood,Raw,M,SBD,M-C-Open,82.75,83,227.5,237.5,245,245,137.5,145,-150,145
 Matthew Coppenhall,Raw,M,SBD,M-C-Open,81.85,83,210,225,230,230,150,157.5,160,160,245,-252.5,262.5,262.5,652.5,3
 Jonathan Baptista,Raw,M,SBD,M-C-Open,82.6,83,235,-245,-245,235,150,157.5,-162.5,157.5,240,250,-260,250,642.5,4
 Jaspreet Singh,Raw,M,SBD,M-C-Open,80.5,83,-160,-170,190,190,120,135,142.5,142.5,200,230,250,250,582.5,5
-Wenshuo Huang,Raw,M,SBD,M-C-Open,82.7,83,-225,-225,-232.5,-225,130,140,-150,140,235,250,-257.5,250,,DQ
+Wenshuo Huang,Raw,M,SBD,M-C-Open,82.7,83,-225,-225,-232.5,,130,140,-150,140,235,250,-257.5,250,,DQ
 James Blundell,Raw,M,SBD,M-C-Open,91.25,93,230,240,247.5,247.5,160,167.5,175,175,260,275,287.5,287.5,710,1
 Peter Davison,Raw,M,SBD,M-C-Open,88.45,93,222.5,235,245,245,155,162.5,165,165,270,285,-300,285,695,2
 Jean-Arth Pretorius,Raw,M,SBD,M-C-Open,89.25,93,220,230,-240,230,150,157.5,-162.5,157.5,280,300,-310,300,687.5,3
@@ -224,7 +224,7 @@ Joshua Kiggen,Raw,M,SBD,M-C-Sub-junior,92.65,93,230,240,247.5,247.5,142.5,152.5,
 Jaydin Lensing,Raw,M,SBD,M-C-Sub-junior,94.4,105,150,160,170,170,90,-100,,90,190,-207.5,-210,190,450,1
 Bradley May,Raw,M,SBD,M-C-Sub-junior,119.3,120,275,-300.5,-300.5,275,142.5,152.5,-157.5,152.5,240,265,-277.5,265,692.5,1
 Israr Pasa,Raw,M,SBD,M-C-Sub-junior,111.75,120,147.5,160,170,170,90,95,-100,95,177.5,190,205,205,470,2
-Lee Mccafferty,Raw,M,SBD,M-C-Sub-junior,113.45,120,140,152.5,162.5,162.5,100,107.5,-112.5,107.5,185,195,-200,195,465,3
+Lee McCafferty,Raw,M,SBD,M-C-Sub-junior,113.45,120,140,152.5,162.5,162.5,100,107.5,-112.5,107.5,185,195,-200,195,465,3
 Brendon Chaithoo,Raw,M,SBD,M-C-Junior,51.25,53,145,155,-160.5,155,97.5,102.5,-107.5,102.5,175,190.5,,190.5,448,1
 Sha Wiesendanger,Raw,M,SBD,M-C-Junior,64.2,66,180,192.5,200,200,102.5,110,115,115,215,227.5,230,230,545,1
 Elliot Stone,Raw,M,SBD,M-C-Junior,65,66,190,200,207.5,207.5,117.5,125,-132.5,125,200,212.5,-222.5,212.5,545,2
@@ -289,8 +289,8 @@ Lauren Katz,Raw,F,B,F-C-Open,56.15,57,,,,,62.5,65,-70,65,,,,,65,2
 Nidhi Chadha,Raw,F,B,F-C-Open,56.6,57,,,,,47.5,55,57.5,57.5,,,,,57.5,3
 Gemma Marshall,Raw,F,B,F-C-Open,59.75,63,,,,,80,85,-87.5,85,,,,,85,1
 Lisa Basson,Raw,F,B,F-C-Open,61.65,63,,,,,72.5,77.5,80,80,,,,,80,2
-Rowan Hendry-Horne,Raw,F,B,F-C-Open,70.45,74,,,,,80,85,90,90,,,,,90,1
-Christi De Jager,Raw,F,B,F-C-Open,83.55,84,,,,,85,-90,-90,85,,,,,85,1
+Rowan Hendry-Horne,Raw,F,B,F-C-Open,70.45,72,,,,,80,85,90,90,,,,,90,1
+Christi de Jager,Raw,F,B,F-C-Open,83.55,84,,,,,85,-90,-90,85,,,,,85,1
 Lauren Norton,Raw,F,B,F-C-Open,107.55,84+,,,,,95,100,102.5,102.5,,,,,102.5,1
 Hudaibia Khan,Raw,F,B,F-C-Open,104.45,84+,,,,,60,67.5,70,70,,,,,70,2
 Patricia Harding,Raw,F,B,F-C-Sub-junior,47,47,,,,,32.5,35,-37.5,35,,,,,35,1
@@ -324,7 +324,7 @@ Darin Weerasinghe,Raw,M,B,M-C-Open,123.5,120+,,,,,165,170,-177.5,170,,,,,170,3
 Kai Gajewiak,Raw,M,B,M-C-Sub-junior,58.75,59,,,,,100,105,110,110,,,,,110,1
 Wynand Kuhn,Raw,M,B,M-C-Sub-junior,66.5,74,,,,,90,97.5,-100,97.5,,,,,97.5,1
 Yogesh Yogesh,Raw,M,B,M-C-Sub-junior,80.2,83,,,,,-85,85,-100,85,,,,,85,1
-Pasa Israr,Raw,M,B,M-C-Sub-junior,112.1,120,,,,,82.5,90,-95,90,,,,,90,1
+Israr Pasa,Raw,M,B,M-C-Sub-junior,112.1,120,,,,,82.5,90,-95,90,,,,,90,1
 Samrendra Routray,Raw,M,B,M-C-Junior,65.95,66,,,,,105,115,120,120,,,,,120,1
 James Leaper,Raw,M,B,M-C-Junior,64.5,66,,,,,92.5,100,-107.5,100,,,,,100,2
 Mark Harvey,Raw,M,B,M-C-Junior,72.05,74,,,,,105,110,115,115,,,,,115,1
@@ -341,9 +341,9 @@ Jorncy Page,Raw,M,B,M-C-M1,92.6,93,,,,,135,142.5,145,145,,,,,145,3
 Kamran Butt Ather,Raw,M,B,M-C-M1,103.25,105,,,,,145,150,-160,150,,,,,150,1
 Malone Horn,Raw,M,B,M-C-M1,114.6,120,,,,,190,200,-207.5,200,,,,,200,1
 Neeraj Chawla,Raw,M,B,M-C-M1,112.5,120,,,,,130,140,,140,,,,,140,2
-Fanie Du Preez,Raw,M,B,M-C-M1,130.35,120+,,,,,145,150,155,155,,,,,155,1
-Jc Bruce,Raw,M,B,M-C-M2,65.25,66,,,,,80,85,-90,85,,,,,85,1
-Tommie De Nysschen,Raw,M,B,M-C-M2,73.7,74,,,,,110,-115,-115,110,,,,,110,1
+Fanie du Preez,Raw,M,B,M-C-M1,130.35,120+,,,,,145,150,155,155,,,,,155,1
+JC Bruce,Raw,M,B,M-C-M2,65.25,66,,,,,80,85,-90,85,,,,,85,1
+Tommie de Nysschen,Raw,M,B,M-C-M2,73.7,74,,,,,110,-115,-115,110,,,,,110,1
 Satpal Satpal,Raw,M,B,M-C-M2,73.35,74,,,,,90,100,-102.5,100,,,,,100,2
 Craig Van Wyk,Raw,M,B,M-C-M2,117.95,120,,,,,170,180,-185,180,,,,,180,1
 Ian Furman,Raw,M,B,M-C-M2,128.8,120+,,,,,-200,200,-205,200,,,,,200,1
@@ -356,11 +356,11 @@ Usha Usha,Single-ply,F,B,F-E-Open,62.45,63,,,,,100,105,-110,105,,,,,105,1
 Karyn Turcotte,Single-ply,F,B,F-E-Open,61.3,63,,,,,-85,-85,-85,,,,,,,DQ
 Shweta Sahni,Single-ply,F,B,F-E-Open,69.5,72,,,,,40,55,-62.5,55,,,,,55,1
 Iti Sehgal,Single-ply,F,B,F-E-Open,69.55,72,,,,,47.5,52.5,-60,52.5,,,,,52.5,2
-Christi De Jager,Single-ply,F,B,F-E-Open,83.55,84,,,,,-115,115,122.5,122.5,,,,,122.5,1
+Christi de Jager,Single-ply,F,B,F-E-Open,83.55,84,,,,,-115,115,122.5,122.5,,,,,122.5,1
 Sandri van Staden,Single-ply,F,B,F-E-Open,82.3,84,,,,,107.5,-112.5,112.5,112.5,,,,,112.5,2
 Ramandeep Kaur,Single-ply,F,B,F-E-Open,88.4,84+,,,,,90,-100,100,100,,,,,100,1
 Sampa Guha,Single-ply,F,B,F-E-Open,86.7,84+,,,,,77.5,90,92.5,92.5,,,,,92.5,2
-Nafis Khan  Hudaibia,Single-ply,F,B,F-E-Open,104.4,84+,,,,,70,77.5,85,85,,,,,85,3
+Nafis Khan Hudaibia,Single-ply,F,B,F-E-Open,104.4,84+,,,,,70,77.5,85,85,,,,,85,3
 Archana Jain,Single-ply,F,B,F-E-M1,51,52,,,,,47.5,55,-57.5,55,,,,,55,1
 Gogie Chug Kapila,Single-ply,F,B,F-E-M1,61.9,63,,,,,40,42.5,45,45,,,,,45,1
 Inderjeet Inderjeet,Single-ply,F,B,F-E-M2,48.55,52,,,,,25,30,,30,,,,,30,1
@@ -374,13 +374,13 @@ Pradeep Malik,Single-ply,M,B,M-E-Open,131.2,120+,,,,,190,195,200,200,,,,,200,2
 Kunal Taneja,Single-ply,M,B,M-E-Open,146.05,120+,,,,,160,170,,170,,,,,170,3
 Daniel Lotter,Single-ply,M,B,M-E-Sub-junior,63.1,66,,,,,-105,-105,105,105,,,,,105,1
 Yogesh Yogesh,Single-ply,M,B,M-E-Sub-junior,80.2,83,,,,,80,95,,95,,,,,95,1
-Ruben Van Der Linde,Single-ply,M,B,M-E-Junior,68.4,74,,,,,110,115,-120,115,,,,,115,1
+Ruben van der Linde,Single-ply,M,B,M-E-Junior,68.4,74,,,,,110,115,-120,115,,,,,115,1
 Osura Bangamuwa,Single-ply,M,B,M-E-Junior,89.45,93,,,,,-160,160,-185,160,,,,,160,1
 Koustabh Ghosh,Single-ply,M,B,M-E-Junior,89.25,93,,,,,105,115,-117.5,115,,,,,115,2
 Ankit Khatri,Single-ply,M,B,M-E-Junior,133.5,120+,,,,,120,135,-142.5,135,,,,,135,1
 Rajiv Sharma,Single-ply,M,B,M-E-M1,63.05,66,,,,,110,115,130,130,,,,,130,1
 Glen Van Der Linde,Single-ply,M,B,M-E-M1,71.8,74,,,,,115,125,130,130,,,,,130,1
-Anand Mandia,Single-ply,M,B,M-E-M1,81.85,83,,,,,140,-150,130,130,,,,,130,1
+Anand Mandia,Single-ply,M,B,M-E-M1,81.85,83,,,,,130,-140,-150,130,,,,,130,1
 Javed Mehta,Single-ply,M,B,M-E-M1,90.9,93,,,,,130,140,150,150,,,,,150,1
 Mohit Suri,Single-ply,M,B,M-E-M1,85,93,,,,,90,100,-110,100,,,,,100,2
 Kamran Butt Ather,Single-ply,M,B,M-E-M1,103.25,105,,,,,-175,175,-190,175,,,,,175,1
@@ -390,4 +390,4 @@ Satpal Satpal,Single-ply,M,B,M-E-M2,73.35,74,,,,,100,110,-112.5,110,,,,,110,1
 Ramprakash Ramprakash,Single-ply,M,B,M-E-M3,71,74,,,,,40,50,60,60,,,,,60,1
 Singh Inderjeet,Single-ply,M,B,M-E-M3,81.25,83,,,,,125,132.5,-140,132.5,,,,,132.5,1
 Royer Daniel,Single-ply,M,B,M-E-M3,101.85,105,,,,,110,120,,120,,,,,120,1
-Ludik Andre,Single-ply,M,B,M-E-M3,114.35,120+,,,,,110,117.5,,117.5,,,,,117.5,1
+Ludik Andre,Single-ply,M,B,M-E-M3,114.35,120,,,,,110,117.5,,117.5,,,,,117.5,1
