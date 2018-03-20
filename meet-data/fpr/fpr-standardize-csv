@@ -262,9 +262,9 @@ def parse_sheet(sheet):
             continue
 
         #Detect lines that set sex
-        if 'Мужчины' in text:
+        if 'mужчины' in text.lower():
             sex = 'M'
-        elif 'Женщины' in text:
+        elif 'женщины' in text.lower():
             sex = 'F'
 
 

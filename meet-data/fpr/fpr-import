@@ -85,7 +85,7 @@ do
 	# Clean up.
 	if [ -f "results${r_nums[$((ii-2))]}.csv" ]; then
 		rm tmp.xls "results${r_nums[$((ii-2))]}.${EXTENSION}"
-		rm *.png #FPR results have embedded images which we don't want
+		rm -f *.png #FPR results have embedded images which we don't want
 	fi
 done
 
