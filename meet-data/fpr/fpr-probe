@@ -21,7 +21,7 @@ URLS = ['http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm']#['http://fpr-
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def color(s):
+def colour(s):
     return "\033[1;33m" + s + "\033[0;m"
 
 
@@ -71,10 +71,8 @@ def fix_html(html):
 
 def getmeetlist(html,main_url):
     base_url = main_url.rsplit('/',1)[0]
-    html =str(html,'windows-1251')
 
-
-    html =fix_html(html)
+    html =fix_html(str(html,'windows-1251'))
 
     soup = BeautifulSoup(html, 'html.parser')
     outfile = open('text.html','w')
@@ -90,11 +88,9 @@ def getmeetlist(html,main_url):
     if divs == []: 
         divs = soup.find_all("table", {"id": ["table11","table12"]}) #09
 
-
-
-
     urls = []
     for div in divs:
+<<<<<<< HEAD
         for a in div.find_all('a'):
             url = a['href']
 
@@ -103,6 +99,17 @@ def getmeetlist(html,main_url):
                 url = url.replace('.com//','/')
                 if not url in urls:
                     urls.append(url)
+=======
+	    for a in div.find_all('a'):
+	        url = a['href']
+
+            #Non relative links are meet photos and international meets, mir =Worlds,evr =Euros
+	        if not any(test_str in url for test_str in['http','mir','arnold','evr']): 
+	            url = base_url +"/" + url
+	            url = url.replace('.com//','/')
+	            if not url in urls:
+	                urls.append(url)
+>>>>>>> 9c19c0a229356022a4e7fc0bb45b8b6f9e136a4d
 
     return urls
 
@@ -118,7 +125,7 @@ def main():
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    oplprobe.print_meets(color('[RPU]'), unentered)
+    oplprobe.print_meets(colour('[RPU]'), unentered)
 
 
 if __name__ == '__main__':
