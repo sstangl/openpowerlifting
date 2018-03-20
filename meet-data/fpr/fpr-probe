@@ -14,10 +14,10 @@ sys.path.append('../../scripts')
 sys.path.append('scripts')
 import oplprobe
 
-URLS = ['http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm']#['http://fpr-info.ru/protokol.htm','http://fpr-info.ru/___protokoly/prot_2017/prot_2017.htm','http://fpr-info.ru/___protokoly/prot_2016/prot_2016.htm',
-# 'http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm','http://fpr-info.ru/___protokoly/prot_2014/prot_14.htm','http://fpr-info.ru/___protokoly/prot_2013/prot_13.htm',
-# 'http://fpr-info.ru/___protokoly/prot_2012/prot_12.htm','http://fpr-info.ru/___protokoly/prot_2011/prot_11.htm','http://fpr-info.ru/___protokoly/prot_2010/prot_10.htm',
-# 'http://fpr-info.ru/___protokoly/prot_2009/prot_09.htm','http://fpr-info.ru/___protokoly/prot_2008/prot_08.htm','http://fpr-info.ru/___protokoly/prot_2007/prot_07.htm']
+URLS = ['http://fpr-info.ru/protokol.htm','http://fpr-info.ru/___protokoly/prot_2017/prot_2017.htm','http://fpr-info.ru/___protokoly/prot_2016/prot_2016.htm',
+ 'http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm','http://fpr-info.ru/___protokoly/prot_2014/prot_14.htm','http://fpr-info.ru/___protokoly/prot_2013/prot_13.htm',
+ 'http://fpr-info.ru/___protokoly/prot_2012/prot_12.htm','http://fpr-info.ru/___protokoly/prot_2011/prot_11.htm','http://fpr-info.ru/___protokoly/prot_2010/prot_10.htm',
+ 'http://fpr-info.ru/___protokoly/prot_2009/prot_09.htm','http://fpr-info.ru/___protokoly/prot_2008/prot_08.htm','http://fpr-info.ru/___protokoly/prot_2007/prot_07.htm']
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -90,16 +90,6 @@ def getmeetlist(html,main_url):
 
     urls = []
     for div in divs:
-<<<<<<< HEAD
-        for a in div.find_all('a'):
-            url = a['href']
-
-            if not 'http' in url: #Non relative links are meet photos and international meets
-                url = base_url +"/" + url
-                url = url.replace('.com//','/')
-                if not url in urls:
-                    urls.append(url)
-=======
 	    for a in div.find_all('a'):
 	        url = a['href']
 
@@ -109,8 +99,6 @@ def getmeetlist(html,main_url):
 	            url = url.replace('.com//','/')
 	            if not url in urls:
 	                urls.append(url)
->>>>>>> 9c19c0a229356022a4e7fc0bb45b8b6f9e136a4d
-
     return urls
 
 
