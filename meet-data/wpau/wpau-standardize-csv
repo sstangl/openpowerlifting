@@ -178,7 +178,7 @@ def get_header_linenum(sheet):
 
 #Returns whether a line is a header
 def is_header(line):
-    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname','Фамилия и имя',"Прізвище/Ім'я",'Full name']:
+    if len(line) >1 and line[1] in ['П.І.','Имя','NAME','Name',"Прізвище та ім'я",'Nme','Name Surname','Фамилия и имя',"Прізвище/Ім'я",'Full name','Lifters']:
             return True
     return False
 
@@ -202,21 +202,21 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'норматив впа':
             fieldnames.append('Place')
-        elif text in ['п і','имя',"прізвище та ім'я",'nme','name surname','name',"прізвище/ім'я",'фамилия и имя','full name']:
+        elif text in ['п і','имя',"прізвище та ім'я",'nme','name surname','name',"прізвище/ім'я",'фамилия и имя','full name','lifters']:
             fieldnames.append('InternationalName')
         elif text in ['city','місто','місце','регіон']: #City /region
             fieldnames.append('IGNORE')
         elif text in ['город','city / team','city \ club','city / club','спорт клуб','клуб'] : #Home city/gym
             fieldnames.append('IGNORE')
-        elif text in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth','дата рождения']: #Birthdate
+        elif text in ['дата народ','день рождения','db','дата народження','birthday','bp','bd','date of birth','дата рождения','b date']: #Birthdate
             fieldnames.append('BirthDate')
         elif any(check_str in text for check_str in ['власна вага','вес','pw','weight','вл вага']): #Bodyweight
             fieldnames.append('BodyweightKg')
-        elif any(check_str in text for check_str in ['сума по коеф','абсолют','coef','коеф','best','absolut']): #Wilks
+        elif any(check_str in text for check_str in ['сума по коеф','абсолют','coef','коеф','best','absolut','mf sum']): #Wilks
             fieldnames.append('IGNORE')
         elif text in ['виконаний норматив','викон норматив','вик норматив впа україна','вик розр']: #Some kind of points?
             fieldnames.append('IGNORE')
-        elif text in ['страна','country','країна','coutry','contry']: #Country
+        elif text in ['страна','country','країна','coutry','contry','nation']: #Country
             fieldnames.append('Country')
         elif any(check_str in text for check_str in ['звание','rank','звання','class','classif','розряд']): #Rank
             fieldnames.append('IGNORE')
@@ -230,9 +230,11 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'дюсш': #Youth?
             fieldnames.append('IGNORE')
-        elif text == 'к шварца малоуна': #Wilks coefficient
+        elif text in ['к шварца малоуна','mf']: #Wilks coefficient
             fieldnames.append('IGNORE')
         elif text == 'очк': # No idea
+            fieldnames.append('IGNORE')
+        elif text == 'mam': #Age coefficient?
             fieldnames.append('IGNORE')
 
         elif text in ['сумма','total','result','результат','results','total sum','сума','підсумок']:
