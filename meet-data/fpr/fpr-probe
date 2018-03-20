@@ -8,7 +8,6 @@
 from bs4 import BeautifulSoup
 import os
 import sys
-import re
 
 sys.path.append('../../scripts')
 sys.path.append('scripts')
@@ -83,9 +82,6 @@ def getmeetlist(html,main_url):
         divs = soup.find_all("table", {"id": ["table7","table4"]}) #08
     if divs == []: 
         divs = soup.find_all("table", {"id": ["table11","table12"]}) #09
-
-
-
 
     urls = []
     for div in divs:
