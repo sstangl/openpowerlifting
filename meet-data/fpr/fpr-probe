@@ -8,6 +8,7 @@
 from bs4 import BeautifulSoup
 import os
 import sys
+import re
 
 sys.path.append('../../scripts')
 sys.path.append('scripts')
@@ -20,7 +21,7 @@ URLS = ['http://fpr-info.ru/protokol.htm','http://fpr-info.ru/___protokoly/prot_
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def color(s):
+def colour(s):
     return "\033[1;33m" + s + "\033[0;m"
 
 
@@ -70,6 +71,7 @@ def fix_html(html):
 def getmeetlist(html,main_url):
     base_url = main_url.rsplit('/',1)[0]
     html =fix_html(str(html,'windows-1251'))
+
     soup = BeautifulSoup(html, 'html.parser')
 
     divs = soup.find_all("table",{"width":"101%"})
@@ -90,7 +92,8 @@ def getmeetlist(html,main_url):
 	    for a in div.find_all('a'):
 	        url = a['href']
 
-	        if not 'http' in url: #Non relative links are meet photos and international meets
+            #Non relative links are meet photos and international meets, mir =Worlds,evr =Euros
+	        if not any(test_str in url for test_str in['http','mir','arnold','evr']): 
 	            url = base_url +"/" + url
 	            url = url.replace('.com//','/')
 	            if not url in urls:
@@ -110,7 +113,7 @@ def main():
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    oplprobe.print_meets(color('[RPU]'), unentered)
+    oplprobe.print_meets(colour('[RPU]'), unentered)
 
 
 if __name__ == '__main__':
