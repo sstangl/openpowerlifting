@@ -188,6 +188,18 @@ def get_equipment(sheet):
     return equipment
 
 
+#Search above the header for sex
+def get_initial_sex(sheet):
+    headernum = get_header_linenum(sheet)
+    sex = ''
+    for row in sheet[0:headernum]:
+        rowtext = ''.join(row).lower()
+        if 'мужчины' in rowtext:
+            sex = 'M'
+        elif 'женщины' in rowtext:
+            sex = 'F'
+
+    return sex
 
 
 # Given a list of lines all of which belong to the same sheet, parse that
@@ -211,12 +223,14 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Event')
     csv.fieldnames.append('Equipment')
     csv.fieldnames.append('Division')
+    csv.fieldnames.append('Sex')
 
 
     weightclass = None
     event = None
     equipment = get_equipment(sheet)
     division = get_division(sheet)
+    sex = get_initial_sex(sheet) 
 
 
 
@@ -247,6 +261,12 @@ def parse_sheet(sheet):
                 weightclass = weightclass.replace('+','')+'+'
             continue
 
+        #Detect lines that set sex
+        if 'Мужчины' in text:
+            sex = 'M'
+        elif 'Женщины' in text:
+            sex = 'F'
+
 
         if 'Результаты' in text:
             continue
@@ -264,6 +284,7 @@ def parse_sheet(sheet):
         line.append(event)
         line.append(equipment)
         line.append(division)
+        line.append(sex)
 
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
