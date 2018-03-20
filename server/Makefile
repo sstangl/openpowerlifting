@@ -1,7 +1,7 @@
 .PHONY: builddir binary data oldstatics config client clientstatics release clean
 
 BUILDDIR := build
-BUILDFILE := build.tar.bz2
+BUILDFILE := server.tar.bz2
 
 all: release
 
@@ -34,6 +34,7 @@ clientstatics: client
 	cp -r client/build/* "${BUILDDIR}/static"
 
 release: binary data config oldstatics clientstatics
+	touch "${BUILDDIR}/${BUILDFILE}"
 	tar cvjf "${BUILDDIR}/${BUILDFILE}" --exclude="${BUILDFILE}" "${BUILDDIR}"
 	echo "Good luck!"
 
