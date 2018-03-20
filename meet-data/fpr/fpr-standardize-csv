@@ -4,7 +4,7 @@
 
 import sys
 
-sys.path.append('../../scripts')
+sys.path.append('../../../scripts')
 sys.path.append('scripts')
 import oplcsv
 import re
@@ -163,6 +163,33 @@ def parse_fieldnames(sheet):
     return fieldnames
 
 
+#Finds the division of a meet from the preamble
+def get_division(sheet):
+    headernum = get_header_linenum(sheet)
+    division = 'Open'
+    for row in sheet[0:headernum]:
+        rowtext = ''.join(row).lower()
+        if 'юниорок' in rowtext or 'средиюниоров' in rowtext:
+            division = 'Juniors'  
+        elif 'юношей' in rowtext or 'девушек' in rowtext:
+            division = 'Sub-Juniors'
+
+    return division
+
+#Search the preamble for equipment
+def get_equipment(sheet):
+    headernum = get_header_linenum(sheet)
+    equipment = 'Single-ply'
+    for row in sheet[0:headernum]:
+        rowtext = ''.join(row).lower()
+        if 'классическому' in rowtext:
+            equipment = 'Raw'  
+
+    return equipment
+
+
+
+
 # Given a list of lines all of which belong to the same sheet, parse that
 # into an OpenPowerlifting-style CSV.
 def parse_sheet(sheet):
@@ -183,11 +210,13 @@ def parse_sheet(sheet):
     csv.fieldnames.append('WeightClassKg')
     csv.fieldnames.append('Event')
     csv.fieldnames.append('Equipment')
+    csv.fieldnames.append('Division')
 
 
     weightclass = None
     event = None
-    equipment = 'Single-ply' #Need to check titles for "Classic"
+    equipment = get_equipment(sheet)
+    division = get_division(sheet)
 
 
 
@@ -234,6 +263,7 @@ def parse_sheet(sheet):
         line.append(weightclass)
         line.append(event)
         line.append(equipment)
+        line.append(division)
 
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
@@ -247,28 +277,28 @@ def parse_sheet(sheet):
     return csv
 
 
-#Convert division to english
-def standardize_division(csv):
-    if 'Division' in csv.fieldnames:
-        idx = csv.index('Division')
-        for row in csv.rows:
-            row[idx] = row[idx].lower()
 
-            if row[idx] == 'open':
-                division = 'Open'
-
-            else:
-                die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
-
-            row[idx]=division
-    
 
 #Mark DQs properly and make sure that place is an integer.
 def cleanup_place(csv):
     if 'Place' in csv.fieldnames:
         place_idx = csv.index('Place')
+        div_idx = csv.index('Division')
         total_idx = csv.index('TotalKg')
         for row in csv.rows:
+            if 'М1' in row[place_idx]: #There are weird Russian M's
+                row[place_idx]=row[place_idx].replace('М1','').strip()
+                row[div_idx] = 'Masters 1'
+            elif 'М2' in row[place_idx]:
+                row[place_idx]=row[place_idx].replace('М2','').strip()
+                row[div_idx] = 'Masters 2'
+            elif 'М3' in row[place_idx]:
+                row[place_idx]=row[place_idx].replace('М3','').strip()
+                row[div_idx] = 'Masters 3'
+            elif 'М4' in row[place_idx]:
+                row[place_idx]=row[place_idx].replace('М4','').strip()
+                row[div_idx] = 'Masters 4'
+
             if '.00' in row[place_idx]: #Convert place to an integer if it wasn't already
                 row[place_idx]=str(int(float(row[place_idx])))
 
@@ -303,7 +333,7 @@ def unreverse_names(csv):
 
         row[nameidx] = name
 
-#Names sometimes have something in brackets after them - extra divisions maybe?
+#Names sometimes have something in brackets after them 
 def cleanup_names(csv):
     if 'InternationalName' in csv.fieldnames:
         nameidx = csv.index('InternationalName')
@@ -321,6 +351,7 @@ def cleanup_lift(csv, fieldname):
         for row in csv.rows:
             amount = row[idx]
 
+
             amount = ''.join(c for c in amount if c.isdigit() or c in ['.','-'])
             amount = amount.replace('.00','').replace('.0','')
 
@@ -331,6 +362,8 @@ def cleanup_lift(csv, fieldname):
             #Sometimes numbers have more than 2 commas, if so remove the second one
             if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
                 amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
+            
+
 
             row[idx] = amount
 
@@ -348,7 +381,9 @@ def cleanup_bodyweight(csv):
     if 'BodyweightKg' in csv.fieldnames:
         idx = csv.index('BodyweightKg')
         for row in csv.rows:
-            row[idx]=row[idx].split()[0]
+            row[idx]=row[idx].replace('сн.вр.','')
+            if row[idx] != '':
+                row[idx]=row[idx].split()[0]
 
 def assign_total(csv):
 
@@ -392,15 +427,14 @@ def main(filename):
         sheetcsv = parse_sheet(sheet)
         csv.cat(sheetcsv)
 
-    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg',
-            'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg', 'TotalKg']:
+    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg','BestSquatKg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg','BestBenchKg',
+            'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg','BestDeadliftKg', 'TotalKg']:
         cleanup_lift(csv, x)
 
     assign_total(csv)
 
 
     # Now it's time to standardize the CSV a little bit!
-    standardize_division(csv)
     cleanup_place(csv)
     cleanup_names(csv)
     cleanup_weightclass(csv)
