@@ -69,7 +69,7 @@ def parse_sheetname(s):
 
     for word in s.split():
         # Federations
-        if word in ['wrpf','wrpf-pro','wprf']:
+        if word in ['wrpf','wrpf-pro','wprf','wepf']:
             assert not federation
             federation = 'WRPF'
         elif word == 'спр': # Some other federation that does multi-ply.
@@ -105,14 +105,14 @@ def parse_sheetname(s):
         # Equipment
         elif word in ['однослой','однослое','односл','s ply','однослойной','1-ой','1ply','однослойная','однослойный','однолойной']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка']:
+        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн']:
             equipment = 'Multi-ply'
         elif word in ['slinghot','sling-shot','soft','СПР','софт','облегченная','облегченной','слинг']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
             equipment = 'Wraps'
-        elif word in ['безкипировки','raw','безэкип']:
+        elif word in ['безкипировки','raw','безэкип','классический']:
             equipment = 'Raw'
 
         # Booleans.
@@ -146,7 +146,7 @@ def parse_sheetname(s):
             pass
         elif word == 'handicaped': #We don't seperately track Paralympic bench right now
             pass
-        elif word in ['spr','ultra','standart','стандарт','ультра','шоте']: #Extra terms for slingshot bench
+        elif word in ['spr','ultra','standart','стандарт','ультра','шоте','жесткая']: #Extra terms for slingshot bench
             pass
         elif word =='фжд': #Don't know what this means
             pass
@@ -167,6 +167,10 @@ def parse_sheetname(s):
         elif word == 'лежа-народные': #Something to do with amateur bench, not sure
             pass
         elif word == 'забавы': #Fun? Maybe amateurs
+            pass
+        elif word == 'класс': #Class
+            pass
+        elif word == 'сл': #Layer
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
@@ -245,7 +249,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif text == 'фио' or text =='имя' or 'прізвище' in text:
+        elif 'фио' in text or text =='имя' or 'прізвище' in text:
             fieldnames.append('InternationalName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -323,7 +327,6 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
 
         else:
-            print(header)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
     return fieldnames
@@ -369,11 +372,11 @@ def parse_sheet(sheet):
         return csv
     elif 'рулетка' in title: #From the Russian Roulette division haha
         return csv
-    elif any(x in title for x in ['много','фжд','военный','1 вес','жд любители','армейский','тяговое','военный','двоеборье','1_2 веса']): #Bench reps
+    elif any(x in title for x in ['много','фжд','военный','1 вес','жд любители','армейский','тяговое','военный','двоеборье','1_2 веса','многоповтор']): #Bench reps
         return csv
     elif 'богатырский' in title: #Heroic Press ?? Some kind of overhead press maybe
         return csv
-    elif any(x in title for x in ['корпус','судейски','командный зачёт','абсолютный','судейство']): #Results
+    elif any(x in title for x in ['корпус','судейски','командный зачёт','абсолютный','судейство','судейская']): #Results
         return csv
     elif 'арм' in title: #Arm wrestling
         return csv
