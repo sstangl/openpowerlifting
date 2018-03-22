@@ -63,30 +63,31 @@ def parse_sheetname(s):
     if 'без дк' in s: #Do 'Without drug test' seperately
         s=s.replace('без дк','')
 
-    s= s.replace('.',' ').replace('"','').replace('_',' ').replace('(',' ').replace(')',' ')
+    s= s.replace('.',' ').replace('"','').replace('_',' ').replace('(',' ').replace(')',' ').replace('-','')
     s = s.replace(' & ','&')
     s=s.replace('д к','дк') #Drug tested
 
+
     for word in s.split():
         # Federations
-        if word in ['wrpf','wrpf-pro','wprf','wepf']:
+        if word in ['wrpf','wrpfpro','wprf','wepf']:
             assert not federation
             federation = 'WRPF'
         elif word == 'спр': # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
-        elif word in ['gpa','gpa-ipo-d','gpa-ipo']:
+        elif word in ['gpa','gpaipod','gpaipo']:
             assert not federation
             federation = 'GPA'
 
         # Events
-        elif word in ['пл','пауэрлифтинг','pl','пауэрифтинг','пауэлифтинг','ча-пл','ка-пл','паурлифтинг']:
+        elif word in ['пл','пауэрлифтинг','pl','пауэрифтинг','пауэлифтинг','чапл','капл','паурлифтинг','пауэрлифинг']:
             assert not event
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим','bp','bench','жд']:
+        elif word in ['жим','bp','bench','жд','press']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
@@ -96,32 +97,34 @@ def parse_sheetname(s):
             event = 'D'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word in ['двоеборье','pp','ж+т','bp+dl','push&pull','cил']:
+        elif word in ['двоеборье','pp','ж+т','bp+dl','push&pull','cил','сд']:
             assert not event
             event = 'BD'
             if equipment == 'Wraps':
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['однослой','однослое','односл','s ply','однослойной','1-ой','1ply','однослойная','однослойный','однолойной']:
+        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн']:
-            equipment = 'Multi-ply'
-        elif word in ['slinghot','sling-shot','soft','СПР','софт','облегченная','облегченной','слинг']:
+        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке']:
+            if equipment == '': #Otherwise we might accidently mark single as multi
+                equipment = 'Multi-ply'
+        elif word in ['slinghot','slingshot','soft','СПР','софт','облегченная','облегченной','слинг']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
             equipment = 'Wraps'
-        elif word in ['безкипировки','raw','безэкип','классический']:
+        elif word in ['безкипировки','raw','безэкип','классический','классич']:
             equipment = 'Raw'
 
         # Booleans.
         elif word == 'люб.' or word == 'любители':
             amateur = 'Amateur'
-        elif word == 'pro' or word == 'pro-':
+        elif word == 'pro' or word == 'pro' or word == 'pr':
             assert amateur == 'Pro'
         elif word in ['дк','dr test','dt','д к ','dc']:
             tested = 'Yes'
+            amateur = 'Amateur'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -164,13 +167,15 @@ def parse_sheetname(s):
             pass
         elif word == 'воен': #Military
             pass
-        elif word == 'лежа-народные': #Something to do with amateur bench, not sure
+        elif word == 'лежанародные': #Something to do with amateur bench, not sure
             pass
         elif word == 'забавы': #Fun? Maybe amateurs
             pass
         elif word == 'класс': #Class
             pass
         elif word == 'сл': #Layer
+            pass
+        elif word == 'женщины':#Women
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
@@ -249,7 +254,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif 'фио' in text or text =='имя' or 'прізвище' in text:
+        elif 'фио' in text or 'имя' in text or 'прізвище' in text:
             fieldnames.append('InternationalName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -271,7 +276,11 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE') # We don't care about city-level information.
         elif text == 'сountry/city/state' or text =='страна/город/область':
             fieldnames.append('Country/City/State')
-        elif text in ['присед 1','squat 1','присяд 1','приседание 1','sq1']:
+        elif text == 'разряд/звание': #Rank
+            fieldnames.append('IGNORE')
+
+
+        elif text in ['присед 1','squat 1','присяд 1','приседание 1','sq1','писед 1','приседания 1']:
             assert header[i+1].lower() in ['2','sq2']
             assert header[i+2].lower() in ['3','sq3']
             fieldnames.append('Squat1Kg')
@@ -295,7 +304,7 @@ def parse_fieldnames(sheet):
             else:
                 [next(iterable) for x in range(2)]
 
-        elif text in ['тяга','тяга 1','deadlift 1','становая тяга 1','dl1']:
+        elif text in ['тяга','тяга 1','deadlift 1','становая тяга 1','dl1','тяга становая 1']:
             assert header[i+1].lower() in ['2','dl2']
             assert header[i+2].lower() in ['3','dl3']
             fieldnames.append('Deadlift1Kg')
@@ -306,6 +315,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
+
+
 
         elif text in ['сумма','total','result','сумма баллов','резульат','результат bp','результат','итог']:
             fieldnames.append('TotalKg')
@@ -663,14 +674,18 @@ def cleanup_lift(csv, fieldname):
 def cleanup_weightclass(csv):
     idx = csv.index('WeightClassKg')
     for row in csv.rows:
-        if '.0' in row[idx]:
-            row[idx] = row[idx].replace('.0','')
+        if row[idx]:
+            if '.0' in row[idx]:
+                row[idx] = row[idx].replace('.0','')
+        else:
+            row[idx]=''
 
 #Sometimes weight class is also given after bodyweight
 def cleanup_bodyweight(csv):
     idx = csv.index('BodyweightKg')
     for row in csv.rows:
-        row[idx]=row[idx].split()[0]
+        if row[idx] != '':
+            row[idx]=row[idx].split()[0]
 
 
 
