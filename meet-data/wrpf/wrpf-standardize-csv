@@ -585,7 +585,7 @@ def standardize_division_age(csv):
         elif 'девушки' in row[idx]:
             division = 'Girls'
         elif 'ветераны' in row[idx]:
-            division = 'Veterans'
+            division = 'Masters'
         elif row[idx] !='':
             die('Fix standardize_division_age(): Unknown division "%s"' % row[idx])
         else: #Sometimes division is left blank for whatever reason
