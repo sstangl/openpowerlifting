@@ -301,7 +301,8 @@ def parse_sheet(sheet):
 
     title=sheet[0][0].lower()
     # Ignore some sheets that don't contain any powerlifting.
-    if 'багатоповторний'  in title or 'multy' in title: #Multiple- probably bench for reps
+    print(title)
+    if 'багатоповторний'  in title or 'multy' in title or 'нар' in title: #Bench for reps
         return csv
 
 

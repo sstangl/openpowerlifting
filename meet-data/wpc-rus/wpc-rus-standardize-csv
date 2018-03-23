@@ -72,6 +72,9 @@ def parse_sheetname(s):
     if '1 слой' in s:
     	s =s.replace('1 слой','1слой')
 
+    if '1 ply' in s:
+        s =s.replace('1 ply','1ply')
+
 
     if 'без дк' in s: #Do 'Without drug test' seperately
         s=s.replace('без дк','')
@@ -80,10 +83,10 @@ def parse_sheetname(s):
 
     for word in s.split():
         # Federations
-        if word in ['wpc']:
+        if word in ['wpc','wpa']:
             assert not federation
             federation = 'WPC'
-        elif word in ['awpc']:
+        elif word in ['awpc','awpa']:
             assert not federation
             federation = 'WPC'  
             amateur = 'Amateur'     	
@@ -95,8 +98,6 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-            if equipment =='Raw':
-            	equipment ='Wraps'
         elif word in ['жим','bp','bench','жд','press']:
             assert not event or event == 'B'
             event = 'B'
@@ -112,7 +113,7 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой']:
+        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','standart']:
             equipment = 'Single-ply'
         elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк']:
             if equipment == '': #Otherwise we might accidently mark single as multi
@@ -120,10 +121,11 @@ def parse_sheetname(s):
         elif word in ['slinghot','slingshot','soft','СПР','софт','облегченная','облегченной','слинг']:
             equipment = 'Multi-ply'
             event = 'B'
-        elif 'бинт' in word or word == 'wraps':
+        elif  word in  ['бинт','wraps','classic','класс']:
             equipment = 'Wraps'
-        elif word in ['безкипировки','raw','безэкип','классический','классич']:
-            equipment = 'Raw'
+        elif word in ['безкипировки','raw','безэкип']:
+            if equipment != 'Wraps': #So we don't mark classic raw as raw
+                equipment = 'Raw'
 
         # Booleans.
         elif word == 'люб.' or word == 'любители':
@@ -157,7 +159,7 @@ def parse_sheetname(s):
             pass
         elif word == 'handicaped': #We don't seperately track Paralympic bench right now
             pass
-        elif word in ['spr','ultra','standart','стандарт','ультра','шоте','жесткая']: #Extra terms for slingshot bench
+        elif word in ['spr','ultra','стандарт','ультра','шоте','жесткая']: #Extra terms for slingshot bench
             pass
         elif word =='фжд': #Don't know what this means
             pass
@@ -204,7 +206,7 @@ def parse_sheetname(s):
 def get_header_linenum(sheet):
     #Find name column
     for ii in range(len(sheet)):
-        if sheet[ii][0] == 'ФИО':
+        if sheet[ii][0] in ['ФИО','Name']:
             return ii
     die("get_header_linenum() failed to find the header.")
 
@@ -263,7 +265,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('InternationalName')
         elif text == 'name':
             fieldnames.append('Name')
-        elif any(x in text for x in['возра','возро','категорія','дивизион','возр груп']): #There are a stupid number of ways to write this column so using this as a catch-all
+        elif any(x in text for x in['возра','возро','категорія','дивизион','возр груп','age categoty']): #There are a stupid number of ways to write this column so using this as a catch-all
             fieldnames.append('Division-Age')
         elif 'дата' in text: #Catch all for birthyear if this isn't a division-age column
             fieldnames.append('BirthYear')
@@ -273,11 +275,11 @@ def parse_fieldnames(sheet):
             fieldnames.append('WeightClassKg')
         elif text == 'team':
             fieldnames.append('Team')
-        elif any(x in text  for x in['gloss','коэф','resh','залуцкий','рейшел','залутский']):
+        elif any(x in text  for x in['gloss','коэф','resh','залуцкий','рейшел','залутский','shv/mel']):
             fieldnames.append('IGNORE') # This is not the Wilks, but the WilksCoefficient.
         elif text == 'команда' or text =='coach': # Coach
             fieldnames.append('IGNORE')
-        elif 'город' in text or 'регіон' in text:
+        elif 'город' in text or 'регіон' in text or 'town' in text:
             fieldnames.append('IGNORE') # We don't care about city-level information.
         elif text == 'сountry/city/state' or text =='страна/город/область':
             fieldnames.append('Country/City/State')
@@ -323,11 +325,11 @@ def parse_fieldnames(sheet):
 
 
 
-        elif text in ['сумма','total','result','сумма баллов','резульат','результат bp','результат','итог']:
+        elif text in ['сумма','total','result','сумма баллов','резульат','результат bp','результат','итог','totall']:
             fieldnames.append('TotalKg')
 
 
-        elif text in['wilks','wpoints','willks','очки','points','vilks','вилкс','абс']: # This is the Wilks. But we prefer to re-calculate it ourselves.
+        elif text in['wilks','wpoints','willks','очки','points','vilks','вилкс','абс','pts']: # This is the Wilks. But we prefer to re-calculate it ourselves.
             fieldnames.append('IGNORE')
 
         elif text == 'тренер':
@@ -359,7 +361,7 @@ def parse_sheet(sheet):
     # Ignore some sheets that don't contain any powerlifting.
     if 'судейская кол' in title:
         return csv
-    elif 'нж' in title or 'народный' in title:
+    elif 'нж' in title or 'народный' in title or 'нар' in title or 'm-rep' in title:
         # This is the "People's Bench", which I think is bench-for-reps.
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title:
