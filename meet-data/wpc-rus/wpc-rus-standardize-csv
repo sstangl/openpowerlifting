@@ -17,7 +17,6 @@ def die(s):
 # Given the array of lines, split it up into an array per-sheet.
 def split_by_sheet(lines):
     # Skip past the overview.
-    assert lines[0][0] == 'Overview'
     for i in range(len(lines)):
         if 'Sheet' in lines[i][0]:
             break
@@ -68,12 +67,28 @@ def parse_sheetname(s):
     elif 'б э' in s:
         s =s.replace('б э','')
         equipment ='Raw'
+    elif 'без э' in s:
+        s = s.replace('без э','')
+        equipment ='Raw'
 
     if '1 слой' in s:
     	s =s.replace('1 слой','1слой')
 
     if '1 ply' in s:
         s =s.replace('1 ply','1ply')
+
+    if '2 ply' in s:
+        s=s.replace('2 ply','2ply')
+
+    if 'мн слой' in s:
+        s=s.replace('мн слой','мнслой')
+
+    if 'std eq' in s:
+        s=s.replace('std eq','stdeq')
+
+    if 'soft equip' in s:
+        s=s.replace('soft equip','softequip')
+       
 
 
     if 'без дк' in s: #Do 'Without drug test' seperately
@@ -86,10 +101,13 @@ def parse_sheetname(s):
         if word in ['wpc','wpa']:
             assert not federation
             federation = 'WPC'
-        elif word in ['awpc','awpa']:
+        elif word in ['awpc','awpa','аwpc']:
             assert not federation
             federation = 'WPC'  
-            amateur = 'Amateur'     	
+            amateur = 'Amateur'    
+            tested = 'Yes' 	
+        elif word in ['gpc']: #I think this is someone getting confused, not actually GPC
+            federation = 'GPC'
 
         # Events
         elif word in ['пл','пауэрлифтинг','pl','пауэрифтинг','пауэлифтинг','чапл','капл','паурлифтинг','пауэрлифинг']:
@@ -98,7 +116,7 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим','bp','bench','жд','press']:
+        elif word in ['жим','bp','bench','жд','press','benchpress']:
             assert not event or event == 'B'
             event = 'B'
         elif word == 'тяга' or word == 'dl':
@@ -113,12 +131,12 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','standart']:
+        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','standart','односло','однослойно','софт','soft','softequip']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк']:
+        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','stdeq']:
             if equipment == '': #Otherwise we might accidently mark single as multi
                 equipment = 'Multi-ply'
-        elif word in ['slinghot','slingshot','soft','СПР','софт','облегченная','облегченной','слинг']:
+        elif word in ['slinghot','slingshot','СПР','облегченная','облегченной','слинг']:
             equipment = 'Multi-ply'
             event = 'B'
         elif  word in  ['бинт','wraps','classic','класс']:
@@ -206,7 +224,7 @@ def parse_sheetname(s):
 def get_header_linenum(sheet):
     #Find name column
     for ii in range(len(sheet)):
-        if sheet[ii][0] in ['ФИО','Name']:
+        if sheet[ii][0] in ['ФИО','Name','Имя'] or sheet[ii][1] in ['ФИО','Name','Имя']:
             return ii
     die("get_header_linenum() failed to find the header.")
 
@@ -293,7 +311,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
-            if  header[i+3].lower().replace('.','') in ['рек','rec','sq4']:
+            if  header[i+3].lower().replace('.','') in ['рек','rec','sq4','4']:
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -305,7 +323,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
-            if  header[i+3].lower().replace('.','') in ['рек','rec','bp4']:
+            if  header[i+3].lower().replace('.','') in ['рек','rec','bp4','4']:
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -317,7 +335,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
-            if  header[i+3].lower().replace('.','') in ['рек','rec','dl4']:
+            if  header[i+3].lower().replace('.','') in ['рек','rec','dl4','4']:
                 fieldnames.append('Deadlift4Kg')
                 [next(iterable) for x in range(3)]
             else:
