@@ -112,6 +112,12 @@ def parse_sheetname(s):
             federation = 'WPC'  
             amateur = 'Amateur'    
             tested = 'Yes' 	
+        elif word == 'awpcpl':
+            assert not federation
+            federation = 'WPC'  
+            amateur = 'Amateur'    
+            tested = 'Yes'
+            event = 'SBD' 	        	
         elif word in ['gpc']: #I think this is someone getting confused, not actually GPC
             federation = 'GPC'
 
@@ -146,9 +152,10 @@ def parse_sheetname(s):
             equipment = 'Wraps'
 
         # Equipment
-        elif word in ['однослой','однослое','односл','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','односло','однослойно','софт','soft','softequip','sply','softequipment','singleply','одн']:
+        elif word in ['однослой','однослое','односл','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','односло'
+        ,'однослойно','софт','soft','softequip','sply','softequipment','singleply','одн','stdeq','standart','st']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','stdeq','standart','эки','multiply','multyply','multi']:
+        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','эки','multiply','multyply','multi','mylti']:
             if equipment != 'Single-ply': #Otherwise we might accidently mark single as multi
                 equipment = 'Multi-ply'
         elif word in ['slinghot','slingshot','СПР','облегченная','облегченной','слинг']:
@@ -156,7 +163,7 @@ def parse_sheetname(s):
             event = 'B'
         elif  word in  ['бинт','wraps','classic','класс','класичесский','классический']:
             equipment = 'Wraps'
-        elif word in ['безкипировки','raw','безэкип']:
+        elif word in ['безкипировки','raw','безэкип','бэ']:
             if equipment != 'Wraps': #So we don't mark classic raw as raw
                 equipment = 'Raw'
 
@@ -222,6 +229,8 @@ def parse_sheetname(s):
             pass
         elif word == 'элита': #Elite
             pass
+        elif word == 'ply':
+        	pass
         elif word.isdigit():
         	pass
         else:
@@ -240,9 +249,11 @@ def parse_sheetname(s):
 # Find the line that contains column information (the line below does also).
 def get_header_linenum(sheet):
     #Find name column
+    name_list =['ФИО','Name','Имя','Фамилия. имя','фамилия имя отчество']
     for ii in range(len(sheet)):
-        if sheet[ii][0] in ['ФИО','Name','Имя'] or (len(sheet[ii])>1 and  sheet[ii][1] in ['ФИО','Name','Имя','Фамилия. имя']):
+        if sheet[ii][0] in name_list or (len(sheet[ii])>1 and  sheet[ii][1] in name_list):
             return ii
+
     die("get_header_linenum() failed to find the header.")
 
 # Header is two merged rows, recombine these back into one row here
@@ -292,7 +303,7 @@ def parse_fieldnames(sheet):
     # Name all the columns.
     iterable = iter(range(len(header)))
     for i in iterable:
-        text = header[i].lower().replace('.','')
+        text = header[i].lower().replace('.','').replace('-',' ')
 
         if text == 'место' or text == 'place' or text == '№':
             fieldnames.append('Place')
@@ -306,7 +317,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('Division')
         elif 'дата' in text or 'год рожд' in text: #Catch all for birthyear if this isn't a division-age column
             fieldnames.append('BirthYear')
-        elif text in ['собств вес','собств','соб','вес','собственный вес','собственный','body weight','собcтвенный вес','собст вес','соб вес','собстввес','вага','св','с вес']:
+        elif text in ['собств вес','собств','соб','вес','собственный вес','собственный','body weight','собcтвенный вес',
+        'собст вес','соб вес','собстввес','вага','св','с вес','вес при взвешивании']:
             fieldnames.append('BodyweightKg')
         elif text == 'весовая категория':
             fieldnames.append('WeightClassKg')
@@ -314,7 +326,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Team')
         elif any(x in text  for x in['gloss','коэф','resh','залуцкий','рейшел','залутский','shv/mel']):
             fieldnames.append('IGNORE') # This is not the Wilks, but the WilksCoefficient.
-        elif text == 'команда' or text =='coach': # Coach
+        elif text in ['команда','coach','тренер/клуб']: # Coach
             fieldnames.append('IGNORE')
         elif 'город' in text or 'регіон' in text or 'town' in text:
             fieldnames.append('IGNORE') # We don't care about city-level information.
@@ -322,11 +334,13 @@ def parse_fieldnames(sheet):
             fieldnames.append('Country/City/State')
         elif text == 'разряд/звание' or text == 'вып разряд': #Rank
             fieldnames.append('IGNORE')
+        elif text == 'пол':
+        	fieldnames.append('Sex')
 
 
         elif text in ['присед 1','squat 1','присяд 1','приседание 1','sq1','писед 1','приседания 1']:
-            assert header[i+1].lower() in ['2','sq2']
-            assert header[i+2].lower() in ['3','sq3']
+            assert header[i+1].lower().replace('-',' ') in ['2','sq2','присед 2']
+            assert header[i+2].lower().replace('-',' ') in ['3','sq3','присед 3']
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
@@ -337,8 +351,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['жим','жим 1','benchpress 1','жим макс кг 1','жим на максимум 1','жим вес','жим лежа 1','bp1']:
-            assert header[i+1].lower() in ['2','bp2']
-            assert header[i+2].lower() in ['3','bp3']
+            assert header[i+1].lower().replace('-',' ') in ['2','bp2','жим 2']
+            assert header[i+2].lower().replace('-',' ') in ['3','bp3','жим 3']
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
@@ -349,8 +363,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['тяга','тяга 1','deadlift 1','становая тяга 1','dl1','тяга становая 1']:
-            assert header[i+1].lower() in ['2','dl2']
-            assert header[i+2].lower() in ['3','dl3']
+            assert header[i+1].lower().replace('-',' ') in ['2','dl2','тяга 2']
+            assert header[i+2].lower().replace('-',' ') in ['3','dl3','тяга 3']
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
@@ -457,9 +471,12 @@ def parse_sheet(sheet):
     # All columns are given a name -- the extra ones are removed later.
     csv.fieldnames = parse_fieldnames(sheet)
 
+
+    append_wc = False
     # The WeightClassKg information is stateful, between rows.
     if 'WeightClassKg' not in csv.fieldnames:
         csv.fieldnames.append('WeightClassKg')
+        append_wc =True
     assert not 'Event' in csv.fieldnames
     csv.fieldnames.append('Event')
     assert not 'Equipment' in csv.fieldnames
@@ -468,7 +485,7 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Tested')
     csv.fieldnames.append('Federation')
 
-    weightclass = None
+    weightclass = ''
 
     # Iterate over each line, skipping the two header lines.
     for line in sheet[get_header_linenum(sheet)+2:]:
@@ -499,14 +516,13 @@ def parse_sheet(sheet):
 
             line[totalidx] = str(max(weight(line[idx1]), weight(line[idx2]), weight(line[idx3])))
 
-
-        line.append(weightclass)
+        if append_wc:
+            line.append(weightclass)
         line.append(obj['event'])
         line.append(obj['equipment'])
         line.append(obj['amateur'])
         line.append(obj['tested'])
         line.append(obj['federation'])
-
 
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
@@ -583,13 +599,13 @@ def standardize_division_age(csv):
             division = 'Sub Masters 33-39'
         elif 'masters 40+' in row[idx]:
             division = 'Masters 40+'
-        elif 'мастера 40-44' in row[idx] or 'masters 40-44' in row[idx]:
+        elif '40-44' in row[idx]:
             division = 'Masters 40-44'
         elif 'masters 40-45' in row[idx]:
             division = 'Masters 40-45'
         elif 'master 40-49' in row[idx] or 'masters 40-49' in row[idx] or 'мастера 40-49' in row[idx]:
             division = 'Masters 40-49'
-        elif 'мастера 45-49' in row[idx] or 'masters 45-49' in row[idx]:
+        elif '45-49' in row[idx]:
             division = 'Masters 45-49'
         elif 'masters 45-50' in row[idx]:
             division = 'Masters 45-50'
@@ -625,9 +641,9 @@ def standardize_division_age(csv):
             division ='Teen'
         elif 'мастера' in row[idx]or 'master' in row[idx]:
             division = 'Masters'
-        elif 'открытая' in row[idx] or 'open' in row[idx] or 'o' in row[idx]:
+        elif 'открытая' in row[idx] or 'open' in row[idx] or row[idx] =='o' or 'орен' in row[idx]:
             division = 'Open'
-        elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
+        elif 'юниор' in row[idx] or 'junior' in row[idx] or row[idx] =='j':
             division = 'Juniors'
         elif 'девушки' in row[idx]:
             division = 'Girls'
@@ -647,27 +663,28 @@ def standardize_division_age(csv):
 
 #Mark DQs properly and make sure that place is an integer.
 def cleanup_place(csv):
-    place_idx = csv.index('Place')
-    total_idx = csv.index('TotalKg')
-    for row in csv.rows:
-        if '.00' in row[place_idx]: #Convert place to an integer if it wasn't already
-            row[place_idx]=str(int(float(row[place_idx])))
+	if 'Place'in csv.fieldnames:
+	    place_idx = csv.index('Place')
+	    total_idx = csv.index('TotalKg')
+	    for row in csv.rows:
+	        if '.00' in row[place_idx]: #Convert place to an integer if it wasn't already
+	            row[place_idx]=str(int(float(row[place_idx])))
 
-        #Somewhat convoluted way of checking if a lifter is marked DQ and has a nonzero total
-        if row[place_idx] == 'DQ' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
-            row[place_idx] ='DD'
-            row[total_idx]=''
-        elif row[place_idx] == '' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
-            row[place_idx] ='DD'
-            row[total_idx]=''
-        #Everything else is a regular DQ
-        elif not row[place_idx] or row[place_idx] == '-':
-            row[place_idx] = 'DQ'
-        elif row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])==0.0:
-            row[place_idx] = 'DQ'
-            row[total_idx]=''
-        elif row[total_idx] == '':
-            row[place_idx] = 'DQ'
+	        #Somewhat convoluted way of checking if a lifter is marked DQ and has a nonzero total
+	        if row[place_idx] == 'DQ' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
+	            row[place_idx] ='DD'
+	            row[total_idx]=''
+	        elif row[place_idx] == '' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
+	            row[place_idx] ='DD'
+	            row[total_idx]=''
+	        #Everything else is a regular DQ
+	        elif not row[place_idx] or row[place_idx] == '-':
+	            row[place_idx] = 'DQ'
+	        elif row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])==0.0:
+	            row[place_idx] = 'DQ'
+	            row[total_idx]=''
+	        elif row[total_idx] == '':
+	            row[place_idx] = 'DQ'
         
 def unreverse_names(csv):
 
@@ -694,11 +711,15 @@ def cleanup_names(csv):
         nameidx= csv.index('Name')
 
     add_place = False
-    if 'Place' not in csv.fieldnames: #Sometimes place is in the same column as name
-    	csv.append_columns(['Place'])
-    	add_place= True
+
+    for row in csv.rows:
+    	if "." in row[nameidx] and 'Place' not in csv.fieldnames:
+    	    add_place= True
+    	    csv.append_columns(['Place'])
+    	    placeidx = csv.index('Place')
+    	    break
     
-    placeidx = csv.index('Place')
+    
 
 
     for row in csv.rows:
@@ -747,6 +768,30 @@ def cleanup_bodyweight(csv):
         if row[idx] != '':
             row[idx]=row[idx].split()[0]
 
+def assign_total(csv):
+
+    if 'TotalKg' not in csv.fieldnames:
+        csv.append_column('TotalKg')
+    idx = csv.index('TotalKg')
+
+    def weight(str):
+        try:
+            return float(str)
+        except ValueError:
+            return 0.0
+
+    for row in csv.rows:
+        if row[idx] == '':
+            total = 0.0
+            if 'BestSquatKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestSquatKg')])
+            if 'BestBenchKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestBenchKg')])
+            if 'BestDeadliftKg' in csv.fieldnames:
+                total += weight(row[csv.index('BestDeadliftKg')])
+
+            if total != 0.0:
+                row[idx] = str(total)       
 
 
 
@@ -767,6 +812,8 @@ def main(filename):
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg','Squat4Kg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg','Bench4Kg',
             'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg','Deadlift4Kg', 'TotalKg']:
         cleanup_lift(csv, x)
+
+    assign_total(csv)
 
 
     # Now it's time to standardize the CSV a little bit!
