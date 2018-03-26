@@ -16,6 +16,7 @@ import oplcsv
 import wilks
 import json
 import copy
+from bisect import bisect_left
 
 def redden(s):
     if os.name != 'nt':
@@ -534,10 +535,12 @@ def check_row_weightclass_consistency(row, csv,weightclasses):
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
                 elif weightclasses: #If we know the weightclasses make sure we are above the next weightclass down
-                    curr_wc= [float(wc.replace('+','')) for wc in weightclasses]
-                    if float(bw) > min(curr_wc):
-                        next_down = max(wc for wc in curr_wc if wc < float(row[csv.index('WeightClassKg')]))
-                        if float(bw) <= float(next_down):
+                    wcs= [float(wc.replace('+','')) for wc in weightclasses]
+                    #Assumes weight classes are sorted for a slight time saving
+                    if float(bw) > wcs[0]:
+
+                        next_down = max(wc for wc in wcs if wc < float(row[csv.index('WeightClassKg')]))
+                        if float(bw) <= wcs[bisect_left(wcs, float(row[csv.index('WeightClassKg')]))-1]:
                             pwarning("Lifter \"%s\" BW (%s) is too light for WtCls (%s)" %
                                 (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                                 row[csv.index('WeightClassKg')]))
@@ -692,24 +695,19 @@ def check_row_division(row,csv,divisions,meetyear):
             (row[csv.index('Name')],row[csv.index('Division')] ))
    
 
-def check_row(row, csv,configjson,meetdate,testexclude):
+def check_row(row, csv,meet_config):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
 
 
-    if configjson:
-        curr_wc_list  = None
+    if meet_config:
         curr_wc_group = None
 
-        #Find the correct list of weight classes based on date
-        for wc_list in configjson["WeightClassesList"]:
-            if wc_list["StartDate"] <= meetdate and (wc_list["EndDate"] >= meetdate or wc_list["EndDate"] == ""):  
-                curr_wc_list = wc_list
-                break
+ 
 
         #Now find the correct weightclass group based on sex and division
         if 'Sex' in csv.fieldnames and row[csv.index('Sex')]: #Need a sex to get the right weightclasses
-            for wc_group in curr_wc_list["WeightClassGroups"]:
+            for wc_group in meet_config["WeightClassList"]:
                 if 'Division' in csv.fieldnames and row[csv.index('Division')]: #Use the division if we have one
                     if row[csv.index('Division')] in wc_group["Divisions"] and row[csv.index('Sex')]==wc_group["Sex"]:
                         curr_wc_group = wc_group["WeightClass"]
@@ -717,15 +715,11 @@ def check_row(row, csv,configjson,meetdate,testexclude):
                     curr_wc_group = wc_group["WeightClass"]
 
 
-
-
-        meetyear = int(meetdate.split("-")[0])
-
-        if not testexclude["check_row_weightclass_sex"]:
+        if not meet_config["TestExclusions"]["check_row_weightclass_sex"]:
             check_row_weightclass_sex(row,csv,curr_wc_group)
-        if not testexclude["check_row_division"]:
-            check_row_division(row,csv,configjson["Divisions"],meetyear)
-        if not testexclude["check_row_weightclass_consistency"]:
+        if not meet_config["TestExclusions"]["check_row_division"]:
+            check_row_division(row,csv,meet_config["Divisions"],meet_config["MeetYear"])
+        if not meet_config["TestExclusions"]["check_row_weightclass_consistency"]:
             check_row_weightclass_consistency(row, csv,curr_wc_group)
     elif not configjson:
         check_row_weightclass_sex(row,csv,None)
@@ -776,26 +770,45 @@ def check(scriptname, filename,configjson,meetpath):
 
     check_headers(csv)
 
-    testexclude =None
-    if configjson:
-        testexclude = copy.deepcopy(configjson["TestExclusions"]) #Python is stupid and does shallow copies without telling you
 
-        for test in testexclude.keys():
-            if os.path.basename(os.path.dirname(filename)) in testexclude[test]:
-                testexclude[test]=True
-            else:
-                testexclude[test]=False
+    meet_config = None 
 
-    if meetpath != '':
-        meet = oplcsv.Csv(meetpath)
-        meetdate = meet.rows[0][meet.index("Date")]
+    #Unpack the relative information from CONFIG and the meet file to a dict
+    if configjson and meetpath != '':
+        meet_config = {}
+        if meetpath != '':
+            meet = oplcsv.Csv(meetpath)
+            meet_date = meet.rows[0][meet.index("Date")]
+            meet_config["MeetYear"] = int(meet_date.split('-')[0])
+
+
+            #Note which tests this meet is excluded from
+            meet_config["TestExclusions"] = copy.deepcopy(configjson["TestExclusions"]) #Python is stupid and does shallow copies without telling you
+
+            for test in meet_config["TestExclusions"].keys():
+                if os.path.basename(os.path.dirname(filename)) in meet_config["TestExclusions"][test]:
+                    meet_config["TestExclusions"][test]=True
+                else:
+                    meet_config["TestExclusions"][test]=False
+
+
+            #Find the correct list of weight classes based on date
+            for wc_list in configjson["WeightClassesList"]:
+                if wc_list["StartDate"] <= meet_date and (wc_list["EndDate"] >= meet_date or wc_list["EndDate"] == ""):  
+                    meet_config["WeightClassList"] = wc_list["WeightClassGroups"]
+                    break
+
+
+            meet_config["Divisions"] = configjson["Divisions"]
+
+
 
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
             perror("Column count mismatch for row: %s" % ','.join(row))
             continue
     
-        check_row(row, csv,configjson,meetdate,testexclude)
+        check_row(row, csv,meet_config)
 
 
 if __name__ == '__main__':
