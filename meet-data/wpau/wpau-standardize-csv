@@ -410,8 +410,8 @@ def parse_sheet(sheet):
             continue
 
         # Detect lines that set WeightClassKg state.
-        if ' кг' in text or ' kg' in text or ' до' in text:
-            weightclass = ''.join(re.findall(r"(\d*\.\d+)|(\d+|\+)",text)[0])
+        if ' кг' in text or ' kg' in text or 'до' in text:
+            weightclass = ''.join(re.findall(r"\d*\.\d+|(\d+|\+)",text))
             if '+' in weightclass: #Put the plus at the end
                 weightclass = weightclass.replace('+','')+'+'
             continue
