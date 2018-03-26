@@ -76,11 +76,12 @@
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Ireland">
-    <option value="IDFPF,IrishPF">
+    <option value="IDFPF,IrishPF,IrishPO">
       All Irish Feds
     </option>
     <option value="IDFPF">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
+    <option value="IrishPO">IrishPO - Irish Powerlifting Organization [IPL] (Incomplete)</option>
   </optgroup>
   <optgroup label="Mexico">
     <option value="FEMEPO">FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF] (Incomplete)</option>
