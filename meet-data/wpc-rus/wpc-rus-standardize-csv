@@ -153,7 +153,7 @@ def parse_sheetname(s):
 
         # Equipment
         elif word in ['однослой','однослое','односл','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','односло'
-        ,'однослойно','софт','soft','softequip','sply','softequipment','singleply','одн','stdeq','standart','st']:
+        ,'однослойно','софт','soft','softequip','sply','softequipment','singleply','одн','stdeq','standart','st','sp']:
             equipment = 'Single-ply'
         elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','эки','multiply','multyply','multi','mylti']:
             if equipment != 'Single-ply': #Otherwise we might accidently mark single as multi
@@ -161,7 +161,7 @@ def parse_sheetname(s):
         elif word in ['slinghot','slingshot','СПР','облегченная','облегченной','слинг']:
             equipment = 'Multi-ply'
             event = 'B'
-        elif  word in  ['бинт','wraps','classic','класс','класичесский','классический']:
+        elif  word in  ['бинт','wraps','classic','класс','класичесский','классический','cl']:
             equipment = 'Wraps'
         elif word in ['безкипировки','raw','безэкип','бэ']:
             if equipment != 'Wraps': #So we don't mark classic raw as raw
