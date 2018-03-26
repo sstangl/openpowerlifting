@@ -422,7 +422,11 @@ def parse_sheet(sheet):
 
         # Detect lines that set WeightClassKg state.
         if 'ВЕСОВАЯ КАТЕГОРИЯ' in text or 'Body Weight Category' in text or 'Мужчины до' in text:
-            weightclass = re.findall(r"\d*\.\d+|(\d+|\+)",text)[0]
+            wc_text = re.findall(r"(\d*\.\d+)|(\d+|\+)",text)
+
+            weightclass = ''.join([str(s[0]+s[1]) for s in wc_text])
+            if '+' in weightclass: #Put the plus at the end
+                weightclass = weightclass.replace('+','')+'+'
             continue
 
         # If we've made it this far, the line should be for a lifter!
