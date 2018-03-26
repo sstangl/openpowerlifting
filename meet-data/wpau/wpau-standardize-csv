@@ -232,7 +232,7 @@ def parse_fieldnames(sheet,obj):
             fieldnames.append('IGNORE')
         elif text in ['страна','country','країна','coutry','contry','nation']: #Country
             fieldnames.append('Country')
-        elif any(check_str in text for check_str in ['звание','rank','звання','class','classif','розряд','вик нор-матив впа']): #Rank
+        elif any(check_str in text for check_str in ['звание','rank','звання','class','classif','розряд','вик нор-матив впа','норматив','вик']): #Rank
             fieldnames.append('IGNORE')
         elif text == 'best of the best':
             fieldnames.append('IGNORE')
@@ -343,7 +343,7 @@ def parse_sheet(sheet):
 
     title=sheet[0][0].lower()
     # Ignore some sheets that don't contain any powerlifting.
-    if 'багатоповторний'  in title or 'multy' in title or 'popular' in title: #Multiple- probably bench for reps
+    if 'багатоповторний'  in title or 'multy' in title or 'popular' in title or 'народний' in title: #Multiple- probably bench for reps
         return csv
 
 
@@ -367,11 +367,6 @@ def parse_sheet(sheet):
             event +='D'
         if event != '':
         	obj['event']=event
-
-
-
-
-
 
     append_div = False
 
@@ -568,13 +563,13 @@ def standardize_division_age(csv):
             division = 'Submasters'
         elif 'paralympian' in row[dividx]:
             division = 'Paralympian'
-        elif 'open' in row[dividx] or 'ореn' in row[dividx]:
+        elif 'open' in row[dividx] or 'seniors' in row[dividx]:
             division = 'Open'
         elif 'master' in row[dividx]:
             division = 'Masters'
         elif 'mpf' in row[dividx] or 'm/p/f' in row[dividx]:
             division = 'Military/Fire/Police'
-        elif 'юніор' in row[dividx]:
+        elif 'юніор' in row[dividx] or 'juniors' in row[dividx]:
             division = 'Juniors'
         elif 'teenagers' in row[dividx]:
             division = 'Teen'
