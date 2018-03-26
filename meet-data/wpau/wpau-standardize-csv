@@ -248,6 +248,8 @@ def parse_fieldnames(sheet,obj):
             fieldnames.append('IGNORE')
         elif text == 'очк': # No idea
             fieldnames.append('IGNORE')
+        elif text == 'mam': #Age coefficient?
+            fieldnames.append('IGNORE')
 
         elif text in ['сумма','total','result','результат','results','total sum','сума','підсумок']:
             fieldnames.append('TotalKg')
@@ -364,7 +366,12 @@ def parse_sheet(sheet):
         if 'Deadlift1Kg' in csv.fieldnames:
             event +='D'
         if event != '':
-            obj['event']=event
+        	obj['event']=event
+
+
+
+
+
 
     append_div = False
 
@@ -520,6 +527,8 @@ def standardize_division_age(csv):
         # Handle the divisions with numbers first.
         if '13-15' in row[dividx]:
             division = 'Teen 13-15'
+        elif '13-19' in row[dividx]:
+            division = 'Teen 13-19'
         elif '16-17' in row[dividx]:
             division = 'Teen 16-17'
         elif '18-19' in row[dividx]:
@@ -555,11 +564,13 @@ def standardize_division_age(csv):
         elif '11-12' in row[dividx]:
             division = 'Children 11-12'
 
-        elif 'paralympians' in row[dividx]:
+        elif 'submaster' in row[dividx]:
+            division = 'Submasters'
+        elif 'paralympian' in row[dividx]:
             division = 'Paralympian'
         elif 'open' in row[dividx] or 'ореn' in row[dividx]:
             division = 'Open'
-        elif 'masters' in row[dividx]:
+        elif 'master' in row[dividx]:
             division = 'Masters'
         elif 'mpf' in row[dividx] or 'm/p/f' in row[dividx]:
             division = 'Military/Fire/Police'
@@ -567,6 +578,11 @@ def standardize_division_age(csv):
             division = 'Juniors'
         elif 'teenagers' in row[dividx]:
             division = 'Teen'
+        elif 'teenager' in row[dividx]:
+            division = 'Teen'
+        elif 'child' in row[dividx]:
+            division = 'Children'
+        
 
         elif row[dividx]=='':
             division = 'Open'
@@ -623,6 +639,13 @@ def cleanup_lift(csv, fieldname):
 	            amount = ''.join(c for c in amount if c.isdigit() or c in ['.','-'])
 	            amount = amount.replace('.00','').replace('.0','')
 
+
+	            if amount == 'X' or amount.replace('-','') == '0' or not any(c.isdigit() for c in amount):
+	                amount = ''
+
+	            #Sometimes numbers have more than 2 commas, if so remove the second one
+	            if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
+	                amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
 
 	            if amount == 'X' or amount.replace('-','') == '0' or not any(c.isdigit() for c in amount):
 	                amount = ''
