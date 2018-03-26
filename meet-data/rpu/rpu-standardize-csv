@@ -91,7 +91,7 @@ def parse_sheetname(s):
             event = 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word == 'тяга' or word == 'dl':
+        elif word in ['тяга','dl','тяге']:
             assert not event
             event = 'D'
             if equipment == 'Wraps':
