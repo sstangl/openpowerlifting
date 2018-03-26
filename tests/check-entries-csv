@@ -152,7 +152,6 @@ def check_column_age(s, row, csv):
     except ValueError:
         perror("Age is not a number: %s" % s)
 
-
 def check_column_place(s, row, csv):
     # DQ = Disqualified
     # NS = No-show
@@ -693,6 +692,23 @@ def check_row_division(row,csv,divisions,meetyear):
 
     pwarning("Lifter \"%s\" has an unknown division: %s" %
             (row[csv.index('Name')],row[csv.index('Division')] ))
+
+
+def check_row_birthyear(row,csv,meet_year):
+
+    try:
+        if row[csv.index('BirthYear')] != '':
+            birthyear = int(row[csv.index('BirthYear')])
+            age = meet_year - birthyear
+            if age < 5: 
+                pwarning("BirthYear unexpectedly late: %s" % birthyear)
+            if age > 100:
+                pwarning("BirthYear unexpectedly early: %s" % birthyear)
+
+    except ValueError:
+        perror("BirthYear is not a number: %s" % row[csv.index('BirthYear')])
+
+
    
 
 def check_row(row, csv,meet_config):
@@ -700,7 +716,7 @@ def check_row(row, csv,meet_config):
     check_row_event_consistency(row, csv)
 
 
-    if meet_config:
+    if "WeightClassList" in meet_config: #Then we actually have a config file
         curr_wc_group = None
 
  
@@ -717,14 +733,20 @@ def check_row(row, csv,meet_config):
 
         if not meet_config["TestExclusions"]["check_row_weightclass_sex"]:
             check_row_weightclass_sex(row,csv,curr_wc_group)
-        if not meet_config["TestExclusions"]["check_row_division"]:
+        if not meet_config["TestExclusions"]["check_row_division"] and "MeetYear" in meet_config:
             check_row_division(row,csv,meet_config["Divisions"],meet_config["MeetYear"])
         if not meet_config["TestExclusions"]["check_row_weightclass_consistency"]:
             check_row_weightclass_consistency(row, csv,curr_wc_group)
-    elif not configjson:
+
+
+
+    else:
         check_row_weightclass_sex(row,csv,None)
         check_row_weightclass_consistency(row, csv,None)
  
+    if 'BirthYear' in csv.fieldnames and 'MeetYear' in meet_config:
+        check_row_birthyear(row,csv,meet_config["MeetYear"])
+
 
     check_row_total_consistency(row, csv)
 
@@ -740,6 +762,7 @@ def check_row(row, csv,meet_config):
     check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
     check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
     check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])
+
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
@@ -771,35 +794,37 @@ def check(scriptname, filename,configjson,meetpath):
     check_headers(csv)
 
 
-    meet_config = None 
+    meet_config = {} 
+
+    if meetpath != '':
+        meet = oplcsv.Csv(meetpath)
+        meet_date = meet.rows[0][meet.index("Date")]
+        meet_config["MeetYear"] = int(meet_date.split('-')[0])
 
     #Unpack the relative information from CONFIG and the meet file to a dict
     if configjson and meetpath != '':
         meet_config = {}
-        if meetpath != '':
-            meet = oplcsv.Csv(meetpath)
-            meet_date = meet.rows[0][meet.index("Date")]
-            meet_config["MeetYear"] = int(meet_date.split('-')[0])
 
 
-            #Note which tests this meet is excluded from
-            meet_config["TestExclusions"] = copy.deepcopy(configjson["TestExclusions"]) #Python is stupid and does shallow copies without telling you
 
-            for test in meet_config["TestExclusions"].keys():
-                if os.path.basename(os.path.dirname(filename)) in meet_config["TestExclusions"][test]:
-                    meet_config["TestExclusions"][test]=True
-                else:
-                    meet_config["TestExclusions"][test]=False
+        #Note which tests this meet is excluded from
+        meet_config["TestExclusions"] = copy.deepcopy(configjson["TestExclusions"]) #Python is stupid and does shallow copies without telling you
 
-
-            #Find the correct list of weight classes based on date
-            for wc_list in configjson["WeightClassesList"]:
-                if wc_list["StartDate"] <= meet_date and (wc_list["EndDate"] >= meet_date or wc_list["EndDate"] == ""):  
-                    meet_config["WeightClassList"] = wc_list["WeightClassGroups"]
-                    break
+        for test in meet_config["TestExclusions"].keys():
+            if os.path.basename(os.path.dirname(filename)) in meet_config["TestExclusions"][test]:
+                meet_config["TestExclusions"][test]=True
+            else:
+                meet_config["TestExclusions"][test]=False
 
 
-            meet_config["Divisions"] = configjson["Divisions"]
+        #Find the correct list of weight classes based on date
+        for wc_list in configjson["WeightClassesList"]:
+            if wc_list["StartDate"] <= meet_date and (wc_list["EndDate"] >= meet_date or wc_list["EndDate"] == ""):  
+                meet_config["WeightClassList"] = wc_list["WeightClassGroups"]
+                break
+
+
+        meet_config["Divisions"] = configjson["Divisions"]
 
 
 
