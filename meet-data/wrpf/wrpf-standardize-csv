@@ -70,9 +70,11 @@ def parse_sheetname(s):
 
     for word in s.split():
         # Federations
-        if word in ['wrpf','wrpfpro','wprf','wepf']:
+        if word in ['wrpf','wrpfpro','wprf']:
             assert not federation
             federation = 'WRPF'
+        elif word in ['wepf']:
+            federation = 'WEPF'
         elif word == 'спр': # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
