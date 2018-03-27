@@ -1,0 +1,59 @@
+#!/bin/bash
+#
+# Often it happens that rpu-standardize-csv fails, and
+# the scripts must be updated to handle the new csv format.
+#
+# This file contains the commands that would be executed at the end
+# of rpu-parse, that I have to execute by hand in case things go wrong,
+# to save me some repetitive typing.
+#
+
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTDIR="${SCRIPTDIR}/../../tests"
+n=`ls  | grep 'results.*\.csv' | wc -l`
+
+r_nums=($(seq 1 1 ${n}))
+if [ ${n} == 1 ];then #Result files are only numbered if there is more than one
+	r_nums[0]=''
+fi
+
+process_success=true
+for (( ii=1; ii<=${n};ii++))
+do
+    ${SCRIPTDIR}/fpr-standardize-csv "results"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
+	#Check if fpr-standardize-csv was able to deal with this file
+	if cmp -s "results"${r_nums[$((ii-1))]}".csv" "entries"${r_nums[$((ii-1))]}".csv" ; then
+		echo "Error: fpr-standardize-csv does not know how to handle this format. Leaving entries"${r_nums[$((ii-1))]}".csv unstandardized."
+		process_success=false
+	fi
+done
+
+entries=($(seq 1 1 ${n}))
+entries=("${entries[@]/%/.csv}")
+entries=("${entries[@]/#/entries}")
+
+#Only merge entry files if they have all processed correctly
+if [ ${n} -gt 1 ] && [ "$process_success" == true ];then
+	${REPOSCRIPTDIR}/csv-cat ${entries[@]} > entries.csv
+	rm ${entries[@]}
+fi
+
+if [ $process_success == true ];then
+	${REPOSCRIPTDIR}/calc-best-lifts entries.csv
+    ${REPOSCRIPTDIR}/calc-latin-names entries.csv
+fi
+
+
+cp ${SCRIPTDIR}/../meet.template meet.csv
+
+
+#Checking this after create-meet-csv so we still have a meet file even with errors
+if [ "$process_success" == true ];then
+	# Show any warnings.
+	${REPOTESTDIR}/check-entries-csv entries.csv
+fi
+
+echo "Done! Don't forget about meet.csv!"
