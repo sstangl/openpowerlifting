@@ -144,18 +144,34 @@ def parse_sheetname(s):
             if equipment == 'Wraps':
                 equipment = 'Raw'
 
+        elif word == 'plsp':
+            event = 'SBD'
+            equipment = 'Single-ply'
         elif word =='plraw':
             event = 'SBD'
             equipment = 'Raw'
         elif word == 'clpl':
             event = 'SBD'
             equipment = 'Wraps'
+        elif word == 'bpsp':
+            event = 'B'
+            equipment = 'Single-ply'
+        elif word == 'bpraw' or word == 'bpdis':
+            event = 'B'
+            equipment = 'Raw'
+        elif word == 'dlsp':
+            event = 'D'
+            equipment = 'Single-ply'
+        elif word == 'dlraw':
+            event = 'D'
+            equipment = 'Raw'
+
 
         # Equipment
         elif word in ['однослой','однослое','односл','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл','1слой','односло'
         ,'однослойно','софт','soft','softequip','sply','softequipment','singleply','одн','stdeq','standart','st','sp']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','эки','multiply','multyply','multi','mylti']:
+        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке','эк','2ply','мнслой','эки','multiply','multyply','multi','mylti','mply']:
             if equipment != 'Single-ply': #Otherwise we might accidently mark single as multi
                 equipment = 'Multi-ply'
         elif word in ['slinghot','slingshot','СПР','облегченная','облегченной','слинг']:
@@ -332,7 +348,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE') # We don't care about city-level information.
         elif text == 'сountry/city/state' or text =='страна/город/область':
             fieldnames.append('Country/City/State')
-        elif text == 'разряд/звание' or text == 'вып разряд': #Rank
+        elif text == 'разряд/звание' or text == 'вып разряд' or text == 'выполненный норматив': #Rank
             fieldnames.append('IGNORE')
         elif text == 'пол':
         	fieldnames.append('Sex')
@@ -565,7 +581,7 @@ def standardize_division_age(csv):
 
         # Fill in the Division.
         # Handle the divisions with numbers first.
-        if 'открытая 20-23' in row[idx]:
+        if '20-23' in row[idx]:
             division = 'Open 20-23'
         elif 'открытая 24-39' in row[idx]:
             division = 'Open 24-39'
