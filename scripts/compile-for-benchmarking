@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Compiles all entries.csv and meet.csv files into the final files.
+# This is a version of `scripts/compile` that uses the same data to generate
+# variants of the existing data into an entries.csv with more than
+# 10 million rows.
 #
 
 from oplcsv import Csv
@@ -63,7 +65,7 @@ def age_from_birthyear(csv, date):
 
 
 # Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
-def addmeet(entriescsv, meetscsv, entriespath, meetpath):
+def addmeet(permutation_name, entriescsv, meetscsv, entriespath, meetpath):
     newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
@@ -77,7 +79,6 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     newentries.remove_column_by_name("Country-State")
     newentries.remove_column_by_name("College/University")
     newentries.remove_column_by_name("Tested")
-    newentries.remove_column_by_name("AgeClass")
 
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
@@ -101,6 +102,7 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     # Input looks like "meet-path/uspa/0039/meet.csv".
     assert not "MeetPath" in newmeet.fieldnames
     path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)].replace(os.sep,'/')
+    path = path + '-' + permutation_name
     assert not ',' in path
 
     newmeet.append_column("MeetPath")
@@ -108,12 +110,14 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     for row in newmeet.rows:
         row[idx] = path
 
+    newmeet.rows[0][newmeet.index('MeetName')] += ' ' + permutation_name
 
     # Add the LifterIDs.
     newentries.append_column('LifterID')
     idx = newentries.index('LifterID')
     nameidx = newentries.index('Name')
     for row in newentries.rows:
+        row[nameidx] = row[nameidx] + ' ' + permutation_name
         row[idx] = str(get_lifterid(row[nameidx]))
 
     age_from_birthyear(newentries, newmeet.rows[0][newmeet.index('Date')])
@@ -209,16 +213,27 @@ def main(builddir, meetdir, lifterdir):
     meetscsv.append_column('MeetName')
     initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
-    for dirname, subdirs, files in os.walk(meetdir):
-        # Modifying `subdirs` in-place will cause the next iteration of the os.walk()
-        # generator to operate over the sorted list.
-        subdirs.sort()
+    # Enough permutations to guarantee > 10_000_000 entries.
+    permutations = ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon',
+                    'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa',
+                    'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron',
+                    'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon',
+                    'Phi', 'Chi', 'Psi', 'Omega']
 
-        if 'entries.csv' in files:
-            assert 'meet.csv' in files
-            entriespath = dirname + os.sep + 'entries.csv'
-            meetpath = dirname + os.sep + 'meet.csv'
-            addmeet(entriescsv, meetscsv, entriespath, meetpath)
+    for permutation in permutations:
+        for dirname, subdirs, files in os.walk(meetdir):
+            # Modifying `subdirs` in-place will cause the next iteration of the os.walk()
+            # generator to operate over the sorted list.
+            subdirs.sort()
+
+            if 'entries.csv' in files:
+                assert 'meet.csv' in files
+                entriespath = dirname + os.sep + 'entries.csv'
+                meetpath = dirname + os.sep + 'meet.csv'
+                addmeet(permutation, entriescsv, meetscsv, entriespath, meetpath)
+        print("Done with %s..." % permutation)
+
+    entriescsv.remove_column_by_name("AgeClass")
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
