@@ -71,7 +71,9 @@ do
 	sed -i -e 's/<s>/-/g' "results"${r_nums[$ii]}".xls" 
 	sed -i -e 's/<\/s>//g' "results"${r_nums[$ii]}".xls"
 
-
+    #Convert red background to fails
+    sed -i -e 's/<font color="#000000">//g' "results"${r_nums[$ii]}".xls"
+    sed -i -e 's/bgcolor="#FF0000".*sdnum="3081;">/sdnum="3081;">-/g' "results"${r_nums[$ii]}".xls"
 
 
 	# Use LibreOffice to automatically convert the <table> to a csv file.
@@ -111,6 +113,11 @@ do
 	fi
 	rm 'results'${r_nums[$ii]}'.csv'
 done
+
+
+if [ ${#sheet_names[*]} == 1 ]; then
+	echo -e 'Sheet 1: '$sheet_names'\n' | cat - results.csv > temp && mv temp results.csv
+fi
 
 
 # Commands after this point were extracted into a separate file

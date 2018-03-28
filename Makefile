@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile check probe
+.PHONY: builddir csvfile benchdata check probe
 
 DATADIR := meet-data
 BUILDDIR := build
@@ -18,6 +18,13 @@ csvfile: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
+
+# Generate a large amount of test data: entries.csv with > 10million entries.
+benchdata: builddir
+	mkdir -p "${BUILDDIR}/bench-data"
+	scripts/compile-for-benchmarking "${BUILDDIR}/bench-data" "${DATADIR}" "lifter-data"
+	scripts/csv-bodyweight "${BUILDDIR}/bench-data/${PLFILE}"
+	scripts/csv-wilks "${BUILDDIR}/bench-data/${PLFILE}"
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csvfile
@@ -55,6 +62,7 @@ probe-quick:
 	${DATADIR}/herc/herc-probe || true
 	${DATADIR}/ipa/ipa-probe --quick || true
 	${DATADIR}/irishpf/irishpf-probe || true
+	${DATADIR}/irishpo/irishpo-probe --quick || true
 	${DATADIR}/nasa/nasa-probe --quick || true
 	${DATADIR}/nipf/nipf-probe || true
 	${DATADIR}/nzpf/nzpf-probe --quick || true
@@ -93,6 +101,7 @@ probe:
 	${DATADIR}/ipa/ipa-probe || true
 	${DATADIR}/ipf/ipf-probe || true
 	${DATADIR}/irishpf/irishpf-probe || true
+	${DATADIR}/irishpo/irishpo-probe || true
 	${DATADIR}/napf/napf-probe || true
 	${DATADIR}/nasa/nasa-probe || true
 	${DATADIR}/nipf/nipf-probe || true
