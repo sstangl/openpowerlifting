@@ -30,7 +30,7 @@ def nextlifterid():
 
 # Global map of (Name => LifterID) mappings.
 LIFTERIDMAP = {
-  'Sean Stangl': 0
+  'Sean Stangl Alpha': 0
 }
 def get_lifterid(name):
     global LIFTERIDMAP
