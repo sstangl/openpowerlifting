@@ -94,12 +94,13 @@
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
   </optgroup>
   <optgroup label="Russia">
-    <option value="BB,FPR,SCT,WRPF">
+    <option value="BB,FPR,SCT,WPC-RUS,WRPF">
       All Russian Feds
     </option>
     <option value="BB">BB - Bogatyr Brotherhood [GPA]</option>
     <option value="FPR">FPR - Russian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
+    <option value="WPC-RUS">WPC-RUS - WPC Russia (Incomplete)</option>
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="Singapore">

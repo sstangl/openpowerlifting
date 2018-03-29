@@ -74,6 +74,8 @@ pub enum Federation {
     WPA,
     WPAU,
     WPC,
+    #[serde(rename = "WPC-RUS")]
+    WPCRUS,
     WNPF,
     WRPF,
     #[serde(rename = "WRPF-AUS")]
@@ -153,6 +155,7 @@ impl fmt::Display for Federation {
             Federation::WPA => write!(f, "WPA"),
             Federation::WPAU => write!(f, "WPAU"),
             Federation::WPC => write!(f, "WPC"),
+            Federation::WPCRUS => write!(f, "WPC-RUS"),
             Federation::WNPF => write!(f, "WNPF"),
             Federation::WRPF => write!(f, "WRPF"),
             Federation::WRPFAUS => write!(f, "WRPF-AUS"),
