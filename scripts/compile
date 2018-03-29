@@ -57,7 +57,7 @@ def age_from_birthyear(csv, date):
     for row in csv.rows:
         if row[birthyearidx] and not row[ageidx]:
             lower_age = int(year) - int(row[birthyearidx]) - 1
-            assert lower_age < 100
+            assert lower_age < 120
             assert lower_age > 3
             row[ageidx] = str(lower_age) + '.5'
 
@@ -67,6 +67,17 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
+    # Remove some columns that are allowed as data but are ignored.
+    newentries.remove_column_by_name("BirthYear")
+    newentries.remove_column_by_name("Country")
+    newentries.remove_column_by_name("School")
+    newentries.remove_column_by_name("Team")
+    newentries.remove_column_by_name("State")
+    newentries.remove_column_by_name("InternationalName")
+    newentries.remove_column_by_name("Country-State")
+    newentries.remove_column_by_name("College/University")
+    newentries.remove_column_by_name("Tested")
+    newentries.remove_column_by_name("AgeClass")
 
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
@@ -208,18 +219,6 @@ def main(builddir, meetdir, lifterdir):
             entriespath = dirname + os.sep + 'entries.csv'
             meetpath = dirname + os.sep + 'meet.csv'
             addmeet(entriescsv, meetscsv, entriespath, meetpath)
-
-    # Remove some columns that are allowed as data but are ignored.
-    entriescsv.remove_column_by_name("BirthYear")
-    entriescsv.remove_column_by_name("Country")
-    entriescsv.remove_column_by_name("School")
-    entriescsv.remove_column_by_name("Team")
-    entriescsv.remove_column_by_name("State")
-    entriescsv.remove_column_by_name("InternationalName")
-    entriescsv.remove_column_by_name("Country-State")
-    entriescsv.remove_column_by_name("College/University")
-    entriescsv.remove_column_by_name("Tested")
-    entriescsv.remove_column_by_name("AgeClass")
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
