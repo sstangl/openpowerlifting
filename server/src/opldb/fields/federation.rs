@@ -27,6 +27,7 @@ pub enum Federation {
     FESUPO,
     FFForce,
     FPO,
+    FPR,
     GPA,
     GPC,
     #[serde(rename = "GPC-AUS")]
@@ -108,6 +109,7 @@ impl fmt::Display for Federation {
             Federation::FESUPO => write!(f, "FESUPO"),
             Federation::FFForce => write!(f, "FFForce"),
             Federation::FPO => write!(f, "FPO"),
+            Federation::FPR => write!(f, "FPR"),
             Federation::GPA => write!(f, "GPA"),
             Federation::GPC => write!(f, "GPC"),
             Federation::GPCGB => write!(f, "GPC-GB"),

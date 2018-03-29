@@ -24,6 +24,8 @@ sed -i -e "s/,\(-[0-9][0-9]*\)\.0,/,\1,/g" entries.csv
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv
 
+echo PA, >> meet.csv
+
 # Calculate place for 2013 and earlier documents that don't self-report.
 ${REPOSCRIPTDIR}/calc-place entries.csv || true
 

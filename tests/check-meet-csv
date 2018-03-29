@@ -78,6 +78,7 @@ KnownFederations = {
     "FESUPO", # Federacion Sudamericana de Powerlifting
     "FFForce", # Federation Francaise de Force, IPF.
     "FPO", # Finland Powerlifting Organization (IPA).
+    "FPR", # Powerlifting Federation of Russia, IPF.
     "GPA",
     "GPC", # Global Powerlifting Committee.
     "GPC-GB", # British branch of the GPC.
@@ -121,6 +122,7 @@ KnownFederations = {
     "WPA", # World Powerlifting Alliance.
     "WPAU", #World Powerlifting Alliance Ukraine.
     "WPC",
+    "WPC-RUS", 
     "WNPF", # World Natural Powerlifting Federation.
     "WRPF",
     "WRPF-AUS",
@@ -188,6 +190,7 @@ KnownCountries = {
     "Sweden",
     "Tahiti",
     "Taiwan",
+    "Turkey",
     "UK", # Meaning "Somewhere in the UK, but we don't know where."
     "Ukraine",
     "Uruguay",
