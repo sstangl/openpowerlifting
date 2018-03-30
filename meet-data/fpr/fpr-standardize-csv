@@ -42,12 +42,11 @@ def get_header_linenum(sheet):
         if is_header(sheet[ii]):
             return ii
 
-
-    die("get_header_linenum() failed to find the header.")
+    return -1
 
 
 def is_header(line):
-    if 'фамилия. имя' in ''.join(line).lower():
+    if '№' in ''.join(line).lower() or 'место' in ''.join(line).lower():
         return True
     return False
 
@@ -56,24 +55,15 @@ def is_header(line):
 # Header is two merged rows, recombine these back into one row here
 def fix_headers(sheet):
     headernum=get_header_linenum(sheet)
-    header = sheet[headernum]
+    if headernum != -1:
+        header = sheet[headernum]
 
-    lineabove = sheet[headernum-1] #Need some error checking here
-    linebelow = sheet[headernum+1]
+        linebelow = sheet[headernum+1]
 
-    #Name has split below rest of data
-    if header[1] == '' and lineabove[1] != '':
-        header = [(lineabove[ii]+" "+header[ii]).strip() for ii in range(0,len(header))]
-        sheet[headernum] =['' for x in header]
-        headernum=headernum-1
-    elif header[1] == '' and linebelow[1] != '':
         header = [(header[ii]+" "+linebelow[ii]).strip() for ii in range(0,len(header))]
-        sheet[headernum+1] =['' for x in linebelow]
-    else: #Attempt numbers always split below
-        header = [header[0]]+[header[1]]+[(header[ii]+" "+linebelow[ii]).strip() for ii in range(2,len(header))]
         sheet[headernum-1] =['' for x in linebelow]
 
-    sheet[headernum]=header
+        sheet[headernum]=header
 
     return sheet
 
@@ -83,82 +73,99 @@ def parse_fieldnames(sheet):
     fieldnames = []
 
     headernum = get_header_linenum(sheet)
+    if headernum != -1:
 
-    header = sheet[headernum]
-    # Name all the columns.
-    iterable = iter(range(len(header)))
+        header = sheet[headernum]
+        # Name all the columns.
+        iterable = iter(range(len(header)))
 
-    for i in iterable:
-        text = header[i].lower().replace('.','')
-        text= text.lower()
-        
-        if '№' in text or 'номер' in text:
-            fieldnames.append('IGNORE')
-        elif 'место' in text:
-            fieldnames.append('Place')
-        elif 'фамилия имя' in text:
-            fieldnames.append('InternationalName')
-        elif 'год родж' in text or 'год рожд' in text:
-            fieldnames.append('BirthYear')
-        elif 'звание разряд' in text or 'вып разр' in text: #Rank
-            fieldnames.append('IGNORE')
-        elif 'команда / регион' in text: #Region
-            fieldnames.append('IGNORE')
-        elif 'город' in text: #City
-            fieldnames.append('IGNORE')
-        elif 'собств вес' in text:
-            fieldnames.append('BodyweightKg')
-        elif 'ком очки' in text:
-            fieldnames.append('IGNORE')
-        elif 'очки по вилксу' in text: #Wilks
-            fieldnames.append('IGNORE')
-        elif 'тренеры' in text:
-            fieldnames.append('IGNORE')
-        elif 'жре бий' in text: #Individual points
-            fieldnames.append('IGNORE')
+        for i in iterable:
+            text = header[i].lower().replace('.','')
+            text= text.lower()
 
-
-        elif text in ['жим 1']:
-            assert header[i+3].lower() in ['жим 2']
-            assert header[i+6].lower() in ['жим 3']
-            assert header[i+9].lower() in ['рез-т жим']
-            fieldnames.append('Bench1Kg')
-            fieldnames.append('IGNORE')
-            fieldnames.append('IGNORE')
-            fieldnames.append('Bench2Kg')
-            fieldnames.append('IGNORE')
-            fieldnames.append('IGNORE')
-            fieldnames.append('Bench3Kg')
-            fieldnames.append('IGNORE')
-            fieldnames.append('IGNORE')
-            fieldnames.append('BestBenchKg')
-            [next(iterable) for x in range(9)]
+            if  text == '№' or 'номер' in text:
+                fieldnames.append('IGNORE')
+            elif 'место' in text:
+                fieldnames.append('Place')
+            elif 'фамилия имя' in text:
+                fieldnames.append('InternationalName')
+            elif 'год родж' in text or 'год рожд' in text:
+                fieldnames.append('BirthYear')
+            elif 'разряд' in text or 'вып разр' in text: #Rank
+                fieldnames.append('IGNORE')
+            elif 'команда / регион' in text: #Region
+                fieldnames.append('IGNORE')
+            elif 'город' in text or 'субьект рф' in text: #City
+                fieldnames.append('IGNORE')
+            elif 'собств вес' in text or 'соб вес' in text:
+                fieldnames.append('BodyweightKg')
+            elif 'ком очки' in text:
+                fieldnames.append('IGNORE')
+            elif 'очки по вилксу' in text: #Wilks
+                fieldnames.append('IGNORE')
+            elif 'тренеры' in text:
+                fieldnames.append('IGNORE')
+            elif 'жре бий' in text or 'оч- ки' in text: #Individual points
+                fieldnames.append('IGNORE')
+            elif text == 'дсо': #Something to do with referees?
+                fieldnames.append('IGNORE')
 
 
-
-
-        elif 'рез-т присед' in text:
-            fieldnames.append('BestSquatKg')
-        elif 'рез-т жим' in text:
-            fieldnames.append('BestBenchKg')
-        elif 'рез-т тяга' in text:
-            fieldnames.append('BestDeadliftKg')
-
-        elif 'сумма троеб' in text:
-            fieldnames.append('TotalKg')
+            elif text in ['жим 1']:
+                assert header[i+3].lower() in ['жим 2']
+                assert header[i+6].lower() in ['жим 3']
+                assert header[i+9].lower() in ['рез-т жим']
+                fieldnames.append('Bench1Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('Bench2Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('Bench3Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('BestBenchKg')
+                [next(iterable) for x in range(9)]
 
 
 
 
+            elif 'рез-т присед' in text or text =='прис':
+                fieldnames.append('BestSquatKg')
+            elif 'рез-т жим' in text or text == 'жим':
+                fieldnames.append('BestBenchKg')
+            elif 'рез-т тяга' in text or text =='тяга':
+                fieldnames.append('BestDeadliftKg')
+
+            elif 'сумма троеб' in text or text =='сумма':
+                fieldnames.append('TotalKg')
 
 
 
 
-        elif text == '': #FPR fills their spreadsheets with lots of merged blank columns
-            fieldnames.append('IGNORE')
+            elif text == '': #FPR fills their spreadsheets with lots of merged blank columns
+                fieldnames.append('IGNORE')
 
-        else:
-            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+            else:
+                die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+    else: #No header was given, use the default
+
+        fieldnames = ['Place','IGNORE','InternationalName']
+        fieldnames.extend(['IGNORE']*10)
+        fieldnames.append('BirthYear')
+        fieldnames.extend(['IGNORE']*26)
+        fieldnames.append('BodyweightKg')
+        fieldnames.extend(['IGNORE']*2)
+        fieldnames.append('BestSquatKg')
+        fieldnames.extend(['IGNORE']*2)
+        fieldnames.append('BestBenchKg')
+        fieldnames.extend(['IGNORE']*2)
+        fieldnames.append('BestDeadliftKg')
+        fieldnames.extend(['IGNORE']*2)
+        fieldnames.append('TotalKg')
+
+        #fieldnames = ['Place','InternationalNameName','BirthYear','IGNORE','IGNORE','IGNORE','BodyweightKg','Squat1Kg','Squat2Kg','Squat3Kg']
+
 
     return fieldnames
 
@@ -264,8 +271,10 @@ def parse_sheet(sheet):
         #Detect lines that set sex
         if 'mужчины' in text.lower():
             sex = 'M'
-        elif 'женщины' in text.lower():
+            continue
+        elif 'женщины' in text.lower() or 'жюри' in text.lower():
             sex = 'F'
+            continue
 
 
         if 'Результаты' in text:
@@ -275,8 +284,13 @@ def parse_sheet(sheet):
         elif 'Место' in text: #Another header
             continue
 
+        if line[0].strip() == '': #Skip lines without a number, I think that these are always not lifter data 
+            continue
 
-        if line[0].strip() == '' or line[0].strip() =='-': #Skip lines without a number, I think that these are always not lifter data 
+        if line[csv.index('InternationalName')].strip() == '': #Skip lines without a name
+            continue
+
+        if is_header(line):
             continue
 
 
@@ -285,6 +299,9 @@ def parse_sheet(sheet):
         line.append(equipment)
         line.append(division)
         line.append(sex)
+
+        if len(line) != len(csv.fieldnames):
+            csv.fieldnames.extend(['IGNORE']*(len(line)-len(csv.fieldnames)))
 
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
@@ -333,6 +350,8 @@ def cleanup_place(csv):
             #Everything else is a regular DQ
             elif not row[place_idx] or row[place_idx] == '-':
                 row[place_idx] = 'DQ'
+            elif row[place_idx] == 'дск':
+                row[place_idx]='DQ'
             elif row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])==0.0:
                 row[place_idx] = 'DQ'
                 row[total_idx]=''
@@ -347,6 +366,9 @@ def unreverse_names(csv):
         nameidx= csv.index('Name')
     for row in csv.rows:
         parts = row[nameidx].split()
+        if parts[-1] == 'дк':
+            parts.pop()
+
         parts = [name.title() for name in parts]
         # The last name is probably the given first name.
         fixed = [parts[-1]] + parts[:-1]
@@ -402,7 +424,9 @@ def cleanup_bodyweight(csv):
     if 'BodyweightKg' in csv.fieldnames:
         idx = csv.index('BodyweightKg')
         for row in csv.rows:
-            row[idx]=row[idx].replace('сн.вр.','')
+            row[idx]=row[idx].replace('сн.вр.','').replace('снята врачом','')
+            row[idx]=row[idx].replace('снят врачом','').replace('снят','')
+            row[idx]=row[idx].replace('неявка','')
             if row[idx] != '':
                 row[idx]=row[idx].split()[0]
 
@@ -427,6 +451,14 @@ def assign_total(csv):
                 total += weight(row[csv.index('BestBenchKg')])
             if 'BestDeadliftKg' in csv.fieldnames:
                 total += weight(row[csv.index('BestDeadliftKg')])
+
+            if weight(row[csv.index('BestSquatKg')]) < 0 or row[csv.index('BestSquatKg')] =='':
+                total = 0.0
+            elif weight(row[csv.index('BestBenchKg')]) < 0 or row[csv.index('BestBenchKg')] =='':
+                total=0.0
+            elif weight(row[csv.index('BestDeadliftKg')]) < 0 or row[csv.index('BestDeadliftKg')] == '':
+                total = 0.0 
+
 
             if total != 0.0:
                 row[idx] = str(total)       
