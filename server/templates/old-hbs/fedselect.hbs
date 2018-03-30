@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PZKFiTS,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -92,6 +92,9 @@
   </optgroup>
   <optgroup label="Norway">
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
+  </optgroup>
+  <optgroup label="Poland">
+    <option value="PZKFiTS">PZKFiTS - Polski Związek Kulturystyki Fitness [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Russia">
     <option value="BB,FPR,SCT,WPC-RUS,WRPF">
