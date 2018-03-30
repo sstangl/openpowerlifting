@@ -181,6 +181,11 @@ def parse_sheetname(s):
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
     assert event
 
+    # As a catch-all, right at the end, make sure that squat events are at least wrapped,
+    # since the WRPF doesn't have wrapless divisions.
+    if 'S' in event and equipment == "Raw":
+        equipment = "Wraps"
+
     obj['federation'] = federation
     obj['event'] = event
     obj['amateur'] = amateur
