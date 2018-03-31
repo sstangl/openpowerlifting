@@ -1,6 +1,7 @@
 #![feature(test)]
 
 extern crate server;
+use server::opldb::CachedFilter;
 use server::opldb::OplDb;
 
 use std::sync::{Once, ONCE_INIT};
@@ -24,7 +25,7 @@ fn db() -> &'static OplDb {
 }
 
 mod benches {
-    use super::db;
+    use super::*;
 
     extern crate test;
     use self::test::Bencher;
@@ -42,6 +43,17 @@ mod benches {
         let opldb = db();
         b.iter(|| {
             opldb.get_entries_for_meet(0);
+        });
+    }
+
+    #[bench]
+    fn bench_filter_raw_intersect_2017(b: &mut Bencher) {
+        let opldb = db();
+        let filter_raw = opldb.get_filter(CachedFilter::EquipmentRaw);
+        let filter_2017 = opldb.get_filter(CachedFilter::Year2017);
+
+        b.iter(|| {
+            filter_raw.intersect(filter_2017);
         });
     }
 }
