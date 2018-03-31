@@ -52,7 +52,7 @@ def parse_sheetname(s):
 
 
     if 'без экип' in s: #Need to do 'without equipment' seperately
-        equipment = 'Raw'
+        equipment = 'Wraps'
         #We want to remove all strings that start with 'без экип'
         s =s.replace('без','')
         split_str = s.split()
@@ -70,9 +70,11 @@ def parse_sheetname(s):
 
     for word in s.split():
         # Federations
-        if word in ['wrpf','wrpfpro','wprf','wepf']:
+        if word in ['wrpf','wrpfpro','wprf']:
             assert not federation
             federation = 'WRPF'
+        elif word in ['wepf']:
+            federation = 'WEPF'
         elif word == 'спр': # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
@@ -115,7 +117,9 @@ def parse_sheetname(s):
         elif 'бинт' in word or word == 'wraps':
             equipment = 'Wraps'
         elif word in ['безкипировки','raw','безэкип','классический','классич']:
-            equipment = 'Raw'
+             die('Fix parse_sheetname(): Meet contains raw and wraps results, this needs to be done manually.')
+       	
+            equipment = 'Wraps'
 
         # Booleans.
         elif word == 'люб.' or word == 'любители':
