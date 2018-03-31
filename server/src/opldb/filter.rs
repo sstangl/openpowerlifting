@@ -67,21 +67,40 @@ impl Filter {
         // March and matching elements to the list.
         let mut acc = Vec::<u32>::new();
 
+        if self.list.len() == 0 || other.list.len() == 0 {
+            return Filter { list: acc };
+        }
+
         let mut self_index = 0;
         let mut other_index = 0;
 
-        while self_index < self.list.len() && other_index < other.list.len() {
-            let a = self.list[self_index];
-            let b = other.list[other_index];
+        let mut a = self.list[self_index];
+        let mut b = other.list[other_index];
 
+        loop {
             if a == b {
                 acc.push(a);
                 self_index += 1;
                 other_index += 1;
+
+                if self_index == self.list.len() || other_index == other.list.len() {
+                    break;
+                }
+
+                a = self.list[self_index];
+                b = other.list[other_index];
             } else if a < b {
                 self_index += 1;
+                if self_index == self.list.len() {
+                    break;
+                }
+                a = self.list[self_index];
             } else {
                 other_index += 1;
+                if other_index == other.list.len() {
+                    break;
+                }
+                b = other.list[other_index];
             }
         }
 
