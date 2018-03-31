@@ -1,5 +1,7 @@
 //! Definition and testing of filters for `OplDb` data.
 
+use std::mem;
+
 /// A list of indices to vector items that all have the same property.
 ///
 /// Accessing the vectors through indices allows effective
@@ -100,6 +102,11 @@ impl Filter {
             prev = i;
         }
         return true;
+    }
+
+    /// Returns the size of owned data structures.
+    pub fn size_bytes(&self) -> usize {
+        mem::size_of::<Filter>() + (self.list.capacity() * 4)
     }
 }
 

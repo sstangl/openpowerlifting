@@ -274,7 +274,7 @@ impl OplDb {
             }
         }
 
-        mem::size_of::<OplDb>() + owned_vectors + owned_strings
+        mem::size_of::<OplDb>() + owned_vectors + owned_strings + self.filter_cache.size_bytes()
     }
 
     /// Borrows the lifters vector.

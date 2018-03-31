@@ -4,6 +4,8 @@ use opldb::filter::Filter;
 use opldb::fields::*;
 use opldb::{Entry, Meet};
 
+use std::mem;
+
 /// The filters cached within the `OplDb`.
 ///
 /// This exists so that the `OplDb::FilterCache` may be private,
@@ -97,6 +99,15 @@ impl FilterCache {
             CachedFilter::Year2015 => &self.year_2015,
             CachedFilter::Year2014 => &self.year_2014,
         }
+    }
+
+    pub fn size_bytes(&self) -> usize {
+        mem::size_of::<FilterCache>() + self.equipment_raw.size_bytes()
+            + self.equipment_wraps.size_bytes() + self.equipment_single.size_bytes()
+            + self.equipment_multi.size_bytes() + self.sex_male.size_bytes()
+            + self.sex_female.size_bytes() + self.year_2018.size_bytes()
+            + self.year_2017.size_bytes() + self.year_2016.size_bytes()
+            + self.year_2015.size_bytes() + self.year_2014.size_bytes()
     }
 }
 
