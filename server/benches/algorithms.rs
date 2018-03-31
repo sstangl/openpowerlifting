@@ -56,4 +56,15 @@ mod benches {
             filter_raw.intersect(filter_2017);
         });
     }
+
+    #[bench]
+    fn bench_union_2016_2017(b: &mut Bencher) {
+        let opldb = db();
+        let filter_2016 = opldb.get_filter(CachedFilter::Year2016);
+        let filter_2017 = opldb.get_filter(CachedFilter::Year2017);
+
+        b.iter(|| {
+            filter_2016.union(filter_2017);
+        });
+    }
 }

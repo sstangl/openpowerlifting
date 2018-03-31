@@ -82,11 +82,9 @@ impl Filter {
                 acc.push(a);
                 self_index += 1;
                 other_index += 1;
-
                 if self_index == self.list.len() || other_index == other.list.len() {
                     break;
                 }
-
                 a = self.list[self_index];
                 b = other.list[other_index];
             } else if a < b {
