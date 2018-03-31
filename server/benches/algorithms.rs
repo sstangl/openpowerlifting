@@ -15,7 +15,8 @@ fn db() -> &'static OplDb {
 
     unsafe {
         OPLDB_INIT.call_once(|| {
-            OPLDB_GLOBAL = Some(OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap())
+            OPLDB_GLOBAL =
+                Some(OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap())
         });
 
         OPLDB_GLOBAL.as_ref().unwrap()

@@ -50,7 +50,8 @@ impl<'a> Context<'a> {
                 .iter()
                 .filter(|m| m.federation == federation)
                 .count();
-            let fed_status = FederationStatus::from(federation, fed_status, fed_meet_count);
+            let fed_status =
+                FederationStatus::from(federation, fed_status, fed_meet_count);
             fed_statuses.push(fed_status);
         }
 

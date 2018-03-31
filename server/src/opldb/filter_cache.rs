@@ -51,11 +51,17 @@ impl FilterCache {
         FilterCache {
             equipment_raw: filter_on_entries(entries, |e| e.equipment == Equipment::Raw),
 
-            equipment_wraps: filter_on_entries(entries, |e| e.equipment == Equipment::Wraps),
+            equipment_wraps: filter_on_entries(entries, |e| {
+                e.equipment == Equipment::Wraps
+            }),
 
-            equipment_single: filter_on_entries(entries, |e| e.equipment == Equipment::Single),
+            equipment_single: filter_on_entries(entries, |e| {
+                e.equipment == Equipment::Single
+            }),
 
-            equipment_multi: filter_on_entries(entries, |e| e.equipment == Equipment::Multi),
+            equipment_multi: filter_on_entries(entries, |e| {
+                e.equipment == Equipment::Multi
+            }),
 
             sex_male: filter_on_entries(entries, |e| e.sex == Sex::M),
 
@@ -103,7 +109,8 @@ impl FilterCache {
 
     pub fn size_bytes(&self) -> usize {
         mem::size_of::<FilterCache>() + self.equipment_raw.size_bytes()
-            + self.equipment_wraps.size_bytes() + self.equipment_single.size_bytes()
+            + self.equipment_wraps.size_bytes()
+            + self.equipment_single.size_bytes()
             + self.equipment_multi.size_bytes() + self.sex_male.size_bytes()
             + self.sex_female.size_bytes() + self.year_2018.size_bytes()
             + self.year_2017.size_bytes() + self.year_2016.size_bytes()

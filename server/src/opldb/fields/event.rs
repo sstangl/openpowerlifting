@@ -82,9 +82,9 @@ impl<'de> Visitor<'de> for EventVisitor {
         E: de::Error,
     {
         // TODO: Make Event a required field.
-        //if value.is_empty() {
+        // if value.is_empty() {
         //    return Err(E::custom("unexpected empty Event"));
-        //}
+        // }
         Event::from_str(value).map_err(E::custom)
     }
 }

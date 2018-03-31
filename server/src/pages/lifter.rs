@@ -261,7 +261,9 @@ impl<'a> Context<'a> {
         let meet_results = entries
             .into_iter()
             .zip(prmarkers.into_iter())
-            .map(|(e, pr)| MeetResultsRow::from(opldb, strings, number_format, units, e, pr))
+            .map(|(e, pr)| {
+                MeetResultsRow::from(opldb, strings, number_format, units, e, pr)
+            })
             .rev()
             .collect();
 

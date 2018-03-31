@@ -200,7 +200,11 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .attach(Template::fairing())
 }
 
-fn load_translations_or_exit(langinfo: &mut langpack::LangInfo, language: Language, file: &str) {
+fn load_translations_or_exit(
+    langinfo: &mut langpack::LangInfo,
+    language: Language,
+    file: &str,
+) {
     langinfo
         .load_translations(language, file)
         .map_err(|e| {
