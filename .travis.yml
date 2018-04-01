@@ -1,7 +1,10 @@
 language: python
 python:
   - "3.5"
-install: true
+
+install:
+  - pip install toml
+
 script: make check
 notifications:
   email:
