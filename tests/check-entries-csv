@@ -714,18 +714,18 @@ def check_row(row, csv,configtoml,meet_date,meet_id):
                 wc_rule = configtoml["weightclasses"][wc_key]
 
                 if 'Division' in csv.fieldnames and row[csv.index('Division')]: #Use the division if we have one
-
-                    if ("divisions" in wc_rule and row[csv.index('Division')] in wc_rule["divisions"]) or "divisions" not in wc_rule:
-                        if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
-                            if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
+                    if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
+                        if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
+                            if "divisions" in wc_rule and row[csv.index('Division')]:
                                 weight_classes = wc_rule["classes"]
-                                print(meet_date,wc_rule["date_range"][0],wc_rule["date_range"][1])
+                            elif "divisions" not in wc_rule and weight_classes == None: #This is a default, rule use it only if we haven't found other rules
+                                weight_classes = wc_rule["classes"]
+
 
                 elif "divisions" not in wc_rule: #Otherwise use default
                     if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
                         if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up               
                             weight_classes = wc_rule["classes"]
-                            print(meet_date,wc_rule["date_range"][0],wc_rule["date_range"][1])
 
 
         if meet_id in configtoml["exclusions"]:
