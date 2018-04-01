@@ -14,7 +14,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__
 
 import oplcsv
 import wilks
-import json
+import toml
 import copy
 from bisect import bisect_left
 
@@ -665,23 +665,23 @@ def check_row_division(row,csv,divisions,meetyear):
     if not 'Division' in csv.fieldnames:
         return
 
-    divnames = [div["Name"] for div in divisions]
-    for div in divisions:
-        if row[csv.index('Division')] == div["Name"]:
-            if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')] !='':
+    for div_key in divisions:
+        div = divisions[div_key]
+        if row[csv.index('Division')] == div["name"]:
+            if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')].isdigit():
                 approxage = meetyear-int(row[csv.index('BirthYear')])
-                if div["MaxAge"] !="" and approxage > int(div["MaxAge"]):
+                if approxage > int(div["max"]):
                     pwarning("Lifter \"%s\" is too old(~%s) for division: %s" %
                             (row[csv.index('Name')],approxage,row[csv.index('Division')] ))
-                elif div["MinAge"] !="" and approxage < int(div["MinAge"]):
+                elif approxage < int(div["min"]):
                     pwarning("Lifter \"%s\" is too young(~%s) for division: %s" %
                             (row[csv.index('Name')],approxage,row[csv.index('Division')] ))
 
-            elif 'Age' in csv.fieldnames and row[csv.index('Age')] !="":
-                if div["MaxAge"] !="" and row[csv.index('Age')] > div["MaxAge"]:
+            elif 'Age' in csv.fieldnames and row[csv.index('Age')].isdigit():
+                if int(row[csv.index('Age')]) > div["max"]:
                     pwarning("Lifter \"%s\" is too old(%s) for division: %s" %
                             (row[csv.index('Name')],row[csv.index('Age')],row[csv.index('Division')] ))
-                elif div["MinAge"] !="" and row[csv.index('Age')] < div["MinAge"]:
+                elif int(row[csv.index('Age')]) < div["min"]:
                     pwarning("Lifter \"%s\" is too young(%s) for division: %s" %
                             (row[csv.index('Name')],row[csv.index('Age')],row[csv.index('Division')] ))
 
@@ -694,58 +694,55 @@ def check_row_division(row,csv,divisions,meetyear):
             (row[csv.index('Name')],row[csv.index('Division')] ))
 
 
-def check_row_birthyear(row,csv,meet_year):
 
-    try:
-        if row[csv.index('BirthYear')] != '':
-            birthyear = int(row[csv.index('BirthYear')])
-            age = meet_year - birthyear
-            if age < 5: 
-                pwarning("BirthYear unexpectedly late: %s" % birthyear)
-            if age > 100:
-                pwarning("BirthYear unexpectedly early: %s" % birthyear)
-
-    except ValueError:
-        perror("BirthYear is not a number: %s" % row[csv.index('BirthYear')])
-
-
-   
-
-def check_row(row, csv,meet_config):
+def check_row(row, csv,configtoml,meet_date,meet_id):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
 
 
-    if "WeightClassList" in meet_config: #Then we actually have a config file
-        curr_wc_group = None
+    if configtoml and meet_date: #Then we actually have a config file
 
- 
+
+        weight_classes = None
+
+        meet_year = int(meet_date.split('-')[0])
+
 
         #Now find the correct weightclass group based on sex and division
         if 'Sex' in csv.fieldnames and row[csv.index('Sex')]: #Need a sex to get the right weightclasses
-            for wc_group in meet_config["WeightClassList"]:
+            for wc_key in configtoml["weightclasses"]:
+                wc_rule = configtoml["weightclasses"][wc_key]
+
                 if 'Division' in csv.fieldnames and row[csv.index('Division')]: #Use the division if we have one
-                    if row[csv.index('Division')] in wc_group["Divisions"] and row[csv.index('Sex')]==wc_group["Sex"]:
-                        curr_wc_group = wc_group["WeightClass"]
-                elif "Open" in wc_group["Divisions"] and row[csv.index('Sex')]==wc_group["Sex"]: #Otherwise use Open
-                    curr_wc_group = wc_group["WeightClass"]
+
+                    if ("divisions" in wc_rule and row[csv.index('Division')] in wc_rule["divisions"]) or "divisions" not in wc_rule:
+                        if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
+                            if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
+                                weight_classes = wc_rule["classes"]
+
+                elif "divisions" not in wc_rule: #Otherwise use default
+                    if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
+                        if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up               
+                            weight_classes = wc_rule["classes"]
 
 
-        if not meet_config["TestExclusions"]["check_row_weightclass_sex"]:
-            check_row_weightclass_sex(row,csv,curr_wc_group)
-        if not meet_config["TestExclusions"]["check_row_division"] and "MeetYear" in meet_config:
-            check_row_division(row,csv,meet_config["Divisions"],meet_config["MeetYear"])
-        if not meet_config["TestExclusions"]["check_row_weightclass_consistency"]:
-            check_row_weightclass_consistency(row, csv,curr_wc_group)
+        if meet_id in configtoml["exclusions"]:
+            if "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]:
+                check_row_weightclass_sex(row,csv,weight_classes)
+            if "check_row_division" not in configtoml["exclusions"][meet_id]:
+                check_row_division(row,csv,configtoml["divisions"],meet_year)
+            if "check_row_weightclass_consistency" not in configtoml["exclusions"][meet_id]:
+                check_row_weightclass_consistency(row, csv,weight_classes)
+        else:
+            check_row_weightclass_sex(row,csv,weight_classes)
+            check_row_division(row,csv,configtoml["divisions"],meet_year)
+            check_row_weightclass_consistency(row, csv,weight_classes)
 
 
 
-    else:
+    else: #Run the default tests
         check_row_weightclass_sex(row,csv,None)
         check_row_weightclass_consistency(row, csv,None)
- 
-    if 'BirthYear' in csv.fieldnames and 'MeetYear' in meet_config:
-        check_row_birthyear(row,csv,meet_config["MeetYear"])
 
 
     check_row_total_consistency(row, csv)
@@ -785,46 +782,24 @@ def check_row(row, csv,meet_config):
 
 
 
-def check(scriptname, filename,configjson,meetpath):
+def check(scriptname, filename,configtoml,meetpath):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
 
     csv = oplcsv.Csv(filename)
 
+    meet_id = os.path.basename(os.path.dirname(filename))
+    meet_date = None
+
     check_headers(csv)
-
-
-    meet_config = {} 
 
     if meetpath != '':
         meet = oplcsv.Csv(meetpath)
-        meet_date = meet.rows[0][meet.index("Date")]
-        meet_config["MeetYear"] = int(meet_date.split('-')[0])
-
-    #Unpack the relative information from CONFIG and the meet file to a dict
-    if configjson and meetpath != '':
-        meet_config = {}
-
-
-
-        #Note which tests this meet is excluded from
-        meet_config["TestExclusions"] = copy.deepcopy(configjson["TestExclusions"]) #Python is stupid and does shallow copies without telling you
-
-        for test in meet_config["TestExclusions"].keys():
-            if os.path.basename(os.path.dirname(filename)) in meet_config["TestExclusions"][test]:
-                meet_config["TestExclusions"][test]=True
-            else:
-                meet_config["TestExclusions"][test]=False
-
-
-        #Find the correct list of weight classes based on date
-        for wc_list in configjson["WeightClassesList"]:
-            if wc_list["StartDate"] <= meet_date and (wc_list["EndDate"] >= meet_date or wc_list["EndDate"] == ""):  
-                meet_config["WeightClassList"] = wc_list["WeightClassGroups"]
-                break
-
-
-        meet_config["Divisions"] = configjson["Divisions"]
+        #Make sure that we have a proper date
+        if len(meet.rows) ==1 and "Date" in meet.fieldnames:
+            meet_date = meet.rows[0][meet.index("Date")]
+            if meet_date.count('-') != 2 or not meet_date.replace('-','').isdigit():
+                meet_date = None
 
 
 
@@ -833,20 +808,20 @@ def check(scriptname, filename,configjson,meetpath):
             perror("Column count mismatch for row: %s" % ','.join(row))
             continue
     
-        check_row(row, csv,meet_config)
+        check_row(row, csv,configtoml,meet_date,meet_id)
 
 
 if __name__ == '__main__':
     # If arguments are provided, check only those files.
     if len(sys.argv) > 1:
         for f in sys.argv[1:]:
-            check(sys.argv[0], f)
+            check(sys.argv[0], f,None,None) #Need to think of a good syntax for passing config files
 
     # Otherwise, check every file named entries.csv in the dirtree,
     # which is much faster than using `find -exec`.
     else:
         configpath = ''
-        configjson = None
+        configtoml = None
         configfile = None
         for dirname, subdirs, files in os.walk(os.getcwd()):
             if 'entries.csv' in files:
@@ -854,23 +829,23 @@ if __name__ == '__main__':
 
 
                 meetpath =''
-                if os.path.isfile(os.path.dirname(dirname)+os.sep+'CONFIG'):
-                    if configpath != os.path.dirname(dirname)+os.sep+'CONFIG': #Only load the file if it has changed
-                        configpath =os.path.dirname(dirname)+os.sep+'CONFIG'
+                if os.path.isfile(os.path.dirname(dirname)+os.sep+'CONFIG.toml'):
+                    if configpath != os.path.dirname(dirname)+os.sep+'CONFIG.toml': #Only load the file if it has changed
+                        configpath =os.path.dirname(dirname)+os.sep+'CONFIG.toml'
                         configfile = open(configpath, 'r',encoding='utf-8')
-                        configjson = json.load(configfile)
+                        configtoml = toml.load(configfile)
                 else:
                     congigpath = ''
-                    if configjson != None:
+                    if configfile != None:
                         configfile.close()
                     configfile = None
-                    configjson = None
+                    configtoml = None
 
 
                 if 'meet.csv' in files:
                     meetpath = dirname + os.sep + 'meet.csv'
 
-                check(sys.argv[0], entriespath,configjson,meetpath)
+                check(sys.argv[0], entriespath,configtoml,meetpath)
 
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')
