@@ -263,6 +263,10 @@ def standardize_location(csv):
                 row[csv.index('MeetName')] = 'Mike LaRoche Memorial Open'
                 loc = 'Halifax; NS'
 
+            # Work around typos.
+            if loc == "Toronto. ON":
+                loc = "Toronto; ON"
+
             assert ';' in loc
 
             # If there are more than two ';', it looks like:

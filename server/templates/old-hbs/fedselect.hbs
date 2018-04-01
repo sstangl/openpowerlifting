@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PZKFiTS,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -76,11 +76,12 @@
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Ireland">
-    <option value="IDFPF,IrishPF">
+    <option value="IDFPF,IrishPF,IrishPO">
       All Irish Feds
     </option>
     <option value="IDFPF">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
+    <option value="IrishPO">IrishPO - Irish Powerlifting Organization [IPL] (Incomplete)</option>
   </optgroup>
   <optgroup label="Mexico">
     <option value="FEMEPO">FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF] (Incomplete)</option>
@@ -92,12 +93,17 @@
   <optgroup label="Norway">
     <option value="NSF">NSF - Norges Styrkeløftforbund [IPF]</option>
   </optgroup>
+  <optgroup label="Poland">
+    <option value="PZKFiTS">PZKFiTS - Polski Związek Kulturystyki Fitness [IPF] (Incomplete)</option>
+  </optgroup>
   <optgroup label="Russia">
-    <option value="BB,SCT,WRPF">
+    <option value="BB,FPR,SCT,WPC-RUS,WRPF">
       All Russian Feds
     </option>
     <option value="BB">BB - Bogatyr Brotherhood [GPA]</option>
+    <option value="FPR">FPR - Russian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
+    <option value="WPC-RUS">WPC-RUS - WPC Russia (Incomplete)</option>
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>
   </optgroup>
   <optgroup label="Singapore">

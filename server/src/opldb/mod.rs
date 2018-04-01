@@ -275,6 +275,7 @@ impl OplDb {
         }
 
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
+            + self.filter_cache.size_bytes()
     }
 
     /// Borrows the lifters vector.
@@ -377,7 +378,7 @@ impl OplDb {
     /// so they are found using a linear scan.
     pub fn get_entries_for_meet<'a>(&'a self, meet_id: u32) -> Vec<&'a Entry> {
         self.get_entries()
-            .iter()
+            .into_iter()
             .filter(|&e| e.meet_id == meet_id)
             .collect()
     }
