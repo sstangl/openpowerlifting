@@ -488,6 +488,7 @@ def check_row_weightclass_sex(row,csv,weightclasses):
             pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
                             (row[csv.index('Name')], row[csv.index('Sex')],
                              row[csv.index('WeightClassKg')]))
+            print(row[csv.index('Division')])
     else:
         if row[csv.index('Sex')] is 'M' and row[csv.index('WeightClassKg')] in women_only:
             pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
