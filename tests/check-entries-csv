@@ -488,7 +488,6 @@ def check_row_weightclass_sex(row,csv,weightclasses):
             pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
                             (row[csv.index('Name')], row[csv.index('Sex')],
                              row[csv.index('WeightClassKg')]))
-            print(weightclasses)
     else:
         if row[csv.index('Sex')] is 'M' and row[csv.index('WeightClassKg')] in women_only:
             pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
@@ -720,11 +719,13 @@ def check_row(row, csv,configtoml,meet_date,meet_id):
                         if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
                             if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
                                 weight_classes = wc_rule["classes"]
+                                print(meet_date,wc_rule["date_range"][0],wc_rule["date_range"][1])
 
                 elif "divisions" not in wc_rule: #Otherwise use default
                     if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
                         if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up               
                             weight_classes = wc_rule["classes"]
+                            print(meet_date,wc_rule["date_range"][0],wc_rule["date_range"][1])
 
 
         if meet_id in configtoml["exclusions"]:
