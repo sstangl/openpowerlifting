@@ -826,23 +826,20 @@ if __name__ == '__main__':
         configtoml = None
         configfile = None
         for dirname, subdirs, files in os.walk(os.getcwd()):
+            if configpath and os.path.dirname(configpath) not in dirname:
+            	configpath = ''
+            	configfile.close()
+            	configtoml = None
+            	configfile = None
+
+
+            if 'CONFIG.toml' in files:
+                configpath =dirname+os.sep+'CONFIG.toml'
+                configfile = open(configpath, 'r',encoding='utf-8')
+                configtoml = toml.load(configfile)
+
             if 'entries.csv' in files:
                 entriespath = dirname + os.sep + 'entries.csv'
-
-
-                meetpath =''
-                if os.path.isfile(os.path.dirname(dirname)+os.sep+'CONFIG.toml'):
-                    if configpath != os.path.dirname(dirname)+os.sep+'CONFIG.toml': #Only load the file if it has changed
-                        configpath =os.path.dirname(dirname)+os.sep+'CONFIG.toml'
-                        configfile = open(configpath, 'r',encoding='utf-8')
-                        configtoml = toml.load(configfile)
-                else:
-                    congigpath = ''
-                    if configfile != None:
-                        configfile.close()
-                    configfile = None
-                    configtoml = None
-
 
                 if 'meet.csv' in files:
                     meetpath = dirname + os.sep + 'meet.csv'
@@ -851,6 +848,10 @@ if __name__ == '__main__':
 
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')
+        
+
+        if configfile != None:
+            configfile.close()        
 
     print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
     if errorCount > 0:

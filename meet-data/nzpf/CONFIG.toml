@@ -2,7 +2,11 @@
     open = {name ="Open",min=0,max=999}
     novice = {name ="Novice",min=0,max=999}
     special_olympics = {name ="Special Olympics",min=0,max=999}
+    special_olympics_juniors = {name ="Special Olympics (Juniors)",min=0,max=23}
+    special_olympics_subjuniors = {name ="Special Olympics (Sub-Juniors)",min=0,max=18}
     blind = {name ="Blind",min=0,max=999}
+    blind_juniors = {name ="Blind (Juniors)",min=0,max=23}
+    blind_subjuniors = {name ="Blind (Sub-Juniors)",min=0,max=18}
     juniors = {name = "Juniors",min=0,max=23}
     subjuniors = {name = "Sub-Juniors",min=0,max=18}
     masters1 = {name = "Masters 1",min=39,max=999}
