@@ -6,8 +6,12 @@
 #
 
 import sys
-from os.path import join,realpath,dirname
-sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
+# from os.path import join,realpath,dirname
+# sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
+
+sys.path.append('../../../scripts')
+sys.path.append('scripts')
+from oplcsv import Csv
 
 from oplcsv import Csv
 import shutil

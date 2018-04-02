@@ -14,6 +14,9 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__
 
 import oplcsv
 import wilks
+import toml
+import copy
+from bisect import bisect_left
 
 def redden(s):
     if os.name != 'nt':
@@ -148,7 +151,6 @@ def check_column_age(s, row, csv):
 
     except ValueError:
         perror("Age is not a number: %s" % s)
-
 
 def check_column_place(s, row, csv):
     # DQ = Disqualified
@@ -461,7 +463,7 @@ def check_row_event_consistency(row, csv):
 
 
 #Checks that athletes of the wrong sex are not in a single-sex weight class
-def check_row_weightclass_sex(row,csv):
+def check_row_weightclass_sex(row,csv,weightclasses):
 
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
@@ -480,18 +482,25 @@ def check_row_weightclass_sex(row,csv):
     women_only = ipf_women+trad_women_only
 
 
-    if row[csv.index('Sex')] is 'M' and row[csv.index('WeightClassKg')] in women_only:
-        pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
-                        (row[csv.index('Name')], row[csv.index('Sex')],
-                         row[csv.index('WeightClassKg')]))
-    elif row[csv.index('Sex')] is 'F' and row[csv.index('WeightClassKg')] in men_only:
-        pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
-                        (row[csv.index('Name')], row[csv.index('Sex')],
-                         row[csv.index('WeightClassKg')]))
+    if weightclasses and row[csv.index('WeightClassKg')] != "":
+
+        if row[csv.index('WeightClassKg')] not in weightclasses:
+            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
+                            (row[csv.index('Name')], row[csv.index('Sex')],
+                             row[csv.index('WeightClassKg')]))
+    else:
+        if row[csv.index('Sex')] is 'M' and row[csv.index('WeightClassKg')] in women_only:
+            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
+                            (row[csv.index('Name')], row[csv.index('Sex')],
+                             row[csv.index('WeightClassKg')]))
+        elif row[csv.index('Sex')] is 'F' and row[csv.index('WeightClassKg')] in men_only:
+            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
+                            (row[csv.index('Name')], row[csv.index('Sex')],
+                             row[csv.index('WeightClassKg')]))
 
 # Women shouldn't accidentally be given male SHW classes.
 # Bodyweight should match the weight class.
-def check_row_weightclass_consistency(row, csv):
+def check_row_weightclass_consistency(row, csv,weightclasses):
     if not 'Sex' in csv.fieldnames or not 'WeightClassKg' in csv.fieldnames:
         return
 
@@ -524,6 +533,18 @@ def check_row_weightclass_consistency(row, csv):
                     perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                         (row[csv.index('Name')], row[csv.index('BodyweightKg')],
                          row[csv.index('WeightClassKg')]))
+                elif weightclasses: #If we know the weightclasses make sure we are above the next weightclass down
+                    wcs= [float(wc.replace('+','')) for wc in weightclasses]
+                    #Assumes weight classes are sorted for a slight time saving
+                    if float(bw) > wcs[0]:
+
+                        next_down = max(wc for wc in wcs if wc < float(row[csv.index('WeightClassKg')]))
+                        if float(bw) <= wcs[bisect_left(wcs, float(row[csv.index('WeightClassKg')]))-1]:
+                            pwarning("Lifter \"%s\" BW (%s) is too light for WtCls (%s)" %
+                                (row[csv.index('Name')], row[csv.index('BodyweightKg')],
+                                row[csv.index('WeightClassKg')]))
+
+
 
     # USAPL's reporting site calculates weight class from bodyweight,
     # so if they leave bodyweight blank it will assign the lowest weight class,
@@ -639,12 +660,93 @@ def check_row_total_consistency(row, csv):
         perror("Total error: Calculated %f, but meet says %f" % (squat+bench+deadl, total))
         perror(" For row: %s" % row)
 
+def check_row_division(row,csv,divisions,meetyear):
 
-def check_row(row, csv):
+    if not 'Division' in csv.fieldnames:
+        return
+
+    for div_key in divisions:
+        div = divisions[div_key]
+        if row[csv.index('Division')] == div["name"]:
+            if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')].isdigit():
+                approxage = meetyear-int(row[csv.index('BirthYear')])
+                if approxage > int(div["max"]):
+                    pwarning("Lifter \"%s\" is too old(~%s) for division: %s" %
+                            (row[csv.index('Name')],approxage,row[csv.index('Division')] ))
+                elif approxage < int(div["min"]):
+                    pwarning("Lifter \"%s\" is too young(~%s) for division: %s" %
+                            (row[csv.index('Name')],approxage,row[csv.index('Division')] ))
+
+            elif 'Age' in csv.fieldnames and row[csv.index('Age')].isdigit():
+                if int(row[csv.index('Age')]) > div["max"]:
+                    pwarning("Lifter \"%s\" is too old(%s) for division: %s" %
+                            (row[csv.index('Name')],row[csv.index('Age')],row[csv.index('Division')] ))
+                elif int(row[csv.index('Age')]) < div["min"]:
+                    pwarning("Lifter \"%s\" is too young(%s) for division: %s" %
+                            (row[csv.index('Name')],row[csv.index('Age')],row[csv.index('Division')] ))
+
+            
+            return
+
+
+
+    pwarning("Lifter \"%s\" has an unknown division: %s" %
+            (row[csv.index('Name')],row[csv.index('Division')] ))
+
+
+
+def check_row(row, csv,configtoml,meet_date,meet_id):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
-    check_row_weightclass_consistency(row, csv)
-    check_row_weightclass_sex(row,csv)
+
+
+    if configtoml and meet_date: #Then we actually have a config file
+
+
+        weight_classes = None
+
+        meet_year = int(meet_date.split('-')[0])
+
+
+        #Now find the correct weightclass group based on sex and division
+        if 'Sex' in csv.fieldnames and row[csv.index('Sex')]: #Need a sex to get the right weightclasses
+            for wc_key in configtoml["weightclasses"]:
+                wc_rule = configtoml["weightclasses"][wc_key]
+
+                if 'Division' in csv.fieldnames and row[csv.index('Division')]: #Use the division if we have one
+                    if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
+                        if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
+                            if "divisions" in wc_rule and row[csv.index('Division')]:
+                                weight_classes = wc_rule["classes"]
+                            elif "divisions" not in wc_rule and weight_classes == None: #This is a default, rule use it only if we haven't found other rules
+                                weight_classes = wc_rule["classes"]
+
+
+                elif "divisions" not in wc_rule: #Otherwise use default
+                    if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
+                        if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up               
+                            weight_classes = wc_rule["classes"]
+
+
+        if meet_id in configtoml["exclusions"]:
+            if "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]:
+                check_row_weightclass_sex(row,csv,weight_classes)
+            if "check_row_division" not in configtoml["exclusions"][meet_id]:
+                check_row_division(row,csv,configtoml["divisions"],meet_year)
+            if "check_row_weightclass_consistency" not in configtoml["exclusions"][meet_id]:
+                check_row_weightclass_consistency(row, csv,weight_classes)
+        else:
+            check_row_weightclass_sex(row,csv,weight_classes)
+            check_row_division(row,csv,configtoml["divisions"],meet_year)
+            check_row_weightclass_consistency(row, csv,weight_classes)
+
+
+
+    else: #Run the default tests
+        check_row_weightclass_sex(row,csv,None)
+        check_row_weightclass_consistency(row, csv,None)
+
+
     check_row_total_consistency(row, csv)
 
     check_row_lift_consistency(row, csv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
@@ -659,6 +761,7 @@ def check_row(row, csv):
     check_row_success_consistency(row, csv,['Squat1Kg','Squat2Kg','Squat3Kg','Squat4Kg'])
     check_row_success_consistency(row, csv,['Bench1Kg','Bench2Kg','Bench3Kg','Bench4Kg'])
     check_row_success_consistency(row, csv,['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','Deadlift4Kg'])
+
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):
@@ -681,38 +784,74 @@ def check_row(row, csv):
 
 
 
-def check(scriptname, filename):
+def check(scriptname, filename,configtoml,meetpath):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
 
     csv = oplcsv.Csv(filename)
 
+    meet_id = os.path.basename(os.path.dirname(filename))
+    meet_date = None
+
     check_headers(csv)
+
+    if meetpath != '':
+        meet = oplcsv.Csv(meetpath)
+        #Make sure that we have a proper date
+        if len(meet.rows) ==1 and "Date" in meet.fieldnames:
+            meet_date = meet.rows[0][meet.index("Date")]
+            if meet_date.count('-') != 2 or not meet_date.replace('-','').isdigit():
+                meet_date = None
+
+
 
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
             perror("Column count mismatch for row: %s" % ','.join(row))
             continue
-
-        check_row(row, csv)
+    
+        check_row(row, csv,configtoml,meet_date,meet_id)
 
 
 if __name__ == '__main__':
     # If arguments are provided, check only those files.
     if len(sys.argv) > 1:
         for f in sys.argv[1:]:
-            check(sys.argv[0], f)
+            check(sys.argv[0], f,None,None) #Need to think of a good syntax for passing config files
 
     # Otherwise, check every file named entries.csv in the dirtree,
     # which is much faster than using `find -exec`.
     else:
+        configpath = ''
+        configtoml = None
+        configfile = None
         for dirname, subdirs, files in os.walk(os.getcwd()):
+            if configpath and os.path.dirname(configpath) not in dirname:
+            	configpath = ''
+            	configfile.close()
+            	configtoml = None
+            	configfile = None
+
+
+            if 'CONFIG.toml' in files:
+                configpath =dirname+os.sep+'CONFIG.toml'
+                configfile = open(configpath, 'r',encoding='utf-8')
+                configtoml = toml.load(configfile)
+
             if 'entries.csv' in files:
                 entriespath = dirname + os.sep + 'entries.csv'
-                check(sys.argv[0], entriespath)
+
+                if 'meet.csv' in files:
+                    meetpath = dirname + os.sep + 'meet.csv'
+
+                check(sys.argv[0], entriespath,configtoml,meetpath)
 
                 if not 'meet.csv' in files:
                     perror('Missing meet.csv')
+        
+
+        if configfile != None:
+            configfile.close()        
 
     print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
     if errorCount > 0:
