@@ -6,6 +6,6 @@
   <option value="fr" {% if language == "fr" %}selected{% endif %}>Français</option>
   <option value="it" {% if language == "it" %}selected{% endif %}>Italiano</option>
   <option value="ru" {% if language == "ru" %}selected{% endif %}>Русский</option>
-  <option value="sl" {% if language == "sl" %}selected{% endif %}>Slovenski</option>
+  <option value="sl" {% if language == "sl" %}selected{% endif %}>Slovenščina</option>
   <option value="fi" {% if language == "fi" %}selected{% endif %}>Suomi</option>
 </select>
