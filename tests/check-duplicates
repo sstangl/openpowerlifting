@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple script to run over a list of names and output any
+# that are listed as being both M and F.
+#
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+
+import oplcsv
+
+
+# Hashtable for total lookup.
+# str -> [int, str] (totalKg, meetname).
+MeetHash = {}
+
+###############################################
+
+errorCount = 0
+warningCount = 0
+
+def redden(s):
+    if os.name != 'nt':
+        return "\033[1;31m" + s + "\033[0;m"
+    else: 
+        return s
+
+def enyellow(s):
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
+    else: 
+        return s
+
+def perror(s):
+    global errorCount
+    errorCount += 1
+    print(' ' + redden(s), file=sys.stderr)
+
+def pwarning(s):
+    global warningCount
+    warningCount += 1
+    print(' ' + enyellow(s), file=sys.stderr)
+
+###############################################
+
+def check_duplicates(entriespath,meetpath):
+    global MeetHash
+    global AlreadyPrintedList
+
+    entriescsv = oplcsv.Csv(entriespath)
+    meetcsv = oplcsv.Csv(meetpath)
+
+    dateidx = meetcsv.index('Date')
+    meetnameidx = meetcsv.index('MeetName')
+
+    row = meetcsv.rows[0]
+
+
+    meetdate = row[dateidx]
+    meetname = row[meetnameidx]
+
+
+
+    nameidx = entriescsv.index('Name')
+    totalidx = entriescsv.index('TotalKg')
+
+    for row in entriescsv.rows:
+        name = row[nameidx]
+        total = row[totalidx]
+
+        name_date = name + meetdate
+
+        if not name in MeetHash:
+            MeetHash[name_date] = [total,meetname]
+        elif MeetHash[name_date][0]==total:
+            perror("Duplicate meets: %s, %s" % (MeetHash[name_date][1],meetname))
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            meetpath = dirname + os.sep + 'meet.csv'
+            check_duplicates(entriespath,meetpath)
+
+    print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
+    if errorCount > 0:
+        sys.exit(1)
