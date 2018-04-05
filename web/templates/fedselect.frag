@@ -110,7 +110,7 @@
     <option value="SPA">SPA - Singapore Powerlifting Alliance [GPA] (Incomplete)</option>
   </optgroup>
   <optgroup label="Slovenia">
-    <option value="PLZS">PLZS - Powerlifting zveza Slovenije [IPF] (Incomplete)</option>
+    <option value="PLZS">PLZS - Powerlifting zveza Slovenije [IPF]</option>
   </optgroup>
   <optgroup label="Ukraine">
     <option value="WPAU">WPAU - World Powerlifting Alliance Ukraine [WPA] (Incomplete)</option>
