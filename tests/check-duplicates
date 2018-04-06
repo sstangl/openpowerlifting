@@ -17,10 +17,18 @@ MeetHash = {}
 ###############################################
 
 errorCount = 0
+warningCount = 0
+
 
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
+    else: 
+        return s
+
+def enyellow(s):
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
     else: 
         return s
 
@@ -29,6 +37,12 @@ def perror(s):
     global errorCount
     errorCount += 1
     print(' ' + redden(s), file=sys.stderr)
+
+
+def pwarning(s):
+    global warningCount
+    warningCount += 1
+    print(' ' + enyellow(s), file=sys.stderr)
 
 ###############################################
 
@@ -60,7 +74,7 @@ def check_duplicates(entriespath,meetpath):
         if not name_date in MeetHash:
             MeetHash[name_date] = [total,entriespath]
         elif total != '' and MeetHash[name_date][0]==total and MeetHash[name_date][1] != entriespath:
-            perror("Duplicate meets: %s, %s." % (MeetHash[name_date][1],entriespath))
+            pwarning("Duplicate meets: %s, %s." % (MeetHash[name_date][1],entriespath))
             break
 
 
@@ -76,6 +90,6 @@ if __name__ == '__main__':
             meetpath = dirname + os.sep + 'meet.csv'
             check_duplicates(entriespath,meetpath)
 
-    print("Summary: %u errors." % errorCount)
+    print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
     if errorCount > 0:
         sys.exit(1)
