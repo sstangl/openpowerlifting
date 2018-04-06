@@ -2,7 +2,7 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Creates a dictionary of lifter performances and finds
-# any possible duplicates meets.
+# any possible duplicate meets.
 import sys,os
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
