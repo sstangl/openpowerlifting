@@ -34,16 +34,16 @@ def main(filename):
     # Certain columns have to exist for Wilks to be calculable.
     # Age is for the McCulloch/Foster total, but we'll include it.
     for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
-        if not col in csv.fieldnames:
+        if col not in csv.fieldnames:
             print(' Missing necessary column: %s' % col, file=sys.stderr)
             return 1
 
     # If a Wilks column doesn't exist currently, we can just create it.
-    if not 'Wilks' in csv.fieldnames:
+    if 'Wilks' not in csv.fieldnames:
         csv.append_column('Wilks')
 
     # If a McCulloch column doesn't exist currently, we can just create it.
-    if not 'McCulloch' in csv.fieldnames:
+    if 'McCulloch' not in csv.fieldnames:
         csv.append_column('McCulloch')
 
     indexSex = csv.index('Sex')
@@ -68,7 +68,7 @@ def main(filename):
         bodyweight = row[indexBodyweight]
         total = row[indexTotal]
 
-        if not sex in ['M', 'F']:
+        if sex not in ['M', 'F']:
             continue
 
         if not bodyweight:

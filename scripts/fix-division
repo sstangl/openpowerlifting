@@ -32,6 +32,7 @@ def is_int(x):
     except ValueError:
         return False
 
+
 for row in csv[1:]:
     div = row[divindex]
 

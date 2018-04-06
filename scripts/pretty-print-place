@@ -57,8 +57,9 @@ def sortcategories(categories):
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg', 'WeightClassKg', 'TotalKg']:
-        if not i in csv.fieldnames:
+    for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg',
+              'WeightClassKg', 'TotalKg']:
+        if i not in csv.fieldnames:
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)
 
@@ -74,7 +75,7 @@ def main(filename):
     categories = []
     for row in csv.rows:
         cat = getcategory(csv, row)
-        if not cat in categories:
+        if cat not in categories:
             categories.append(cat)
 
     sortcategories(categories)
@@ -115,10 +116,11 @@ def main(filename):
 
         print(cls + 'kg', sex, div, eq, event)
         for i, row in enumerate(lifters):
-            print(i + 1, ',', row[nameidx], ',', row[bwidx], ',', row[bestsquatidx], ',', row[
-                  bestbenchidx], ',', row[bestdeadliftidx], ',', row[totalidx], ',', row[wilksidx])
-
+            print(i + 1, ',', row[nameidx], ',', row[bwidx], ',',
+                  row[bestsquatidx], ',', row[bestbenchidx], ',',
+                  row[bestdeadliftidx], ',', row[totalidx], ',', row[wilksidx])
         print()
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

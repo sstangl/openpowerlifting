@@ -37,7 +37,7 @@ def calc_bw(is_male, wtcls, totalkg, target):
 def main(filename):
     csv = Csv(filename)
 
-    if not 'BodyweightKg' in csv.fieldnames:
+    if 'BodyweightKg' not in csv.fieldnames:
         csv.append_column('BodyweightKg')
     bwidx = csv.index('BodyweightKg')
 
@@ -62,6 +62,7 @@ def main(filename):
 
     with open(filename, 'w') as fd:
         csv.write(fd)
+
 
 if __name__ == '__main__':
     main(sys.argv[1])

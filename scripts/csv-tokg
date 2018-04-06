@@ -51,7 +51,7 @@ def main(filename):
     changed = False
 
     for i, field in enumerate(csv.fieldnames):
-        if not 'LBS' in field:
+        if 'LBS' not in field:
             continue
 
         print(' Converting column "%s"' % field)

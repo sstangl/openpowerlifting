@@ -47,15 +47,15 @@ def main(classtype, filename):
 
     csv = oplcsv.Csv(filename)
 
-    if not 'BodyweightKg' in csv.fieldnames:
+    if 'BodyweightKg' not in csv.fieldnames:
         print(" Missing BodyweightKg column.")
         sys.exit(1)
 
-    if not 'Sex' in csv.fieldnames:
+    if 'Sex' not in csv.fieldnames:
         print(" Missing Sex column.")
         sys.exit(1)
 
-    if not 'WeightClassKg' in csv.fieldnames:
+    if 'WeightClassKg' not in csv.fieldnames:
         # Insert WeightClassKg before BodyweightKg.
         csv.insert_column(csv.fieldnames.index(
             'BodyweightKg'), 'WeightClassKg')
