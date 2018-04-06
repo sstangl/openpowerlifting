@@ -56,8 +56,8 @@ def main(filename):
 
         elif words[0] == "#exec":
             if len(words) < 2:
-                print(
-                    "Error: #exec directive takes at least one argument.", file=sys.stderr)
+                print("Error: #exec directive takes at least one argument.",
+                      file=sys.stderr)
                 sys.exit(1)
             do_exec(words[1], words[2:])
 

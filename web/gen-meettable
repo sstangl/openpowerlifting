@@ -4,14 +4,17 @@
 # Generates a static table of meet information.
 #
 
-import bisect
-import html
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', 'scripts')))
-import oplcsv
+
 import urllib.parse
+
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.abspath(os.path.join(
+        os.path.dirname(__file__), '..', 'scripts')))
+    import oplcsv
 
 ENTRIESCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
@@ -117,7 +120,9 @@ def makeinstagram(liftername):
 
     for row in SocialMediaCSV.rows:
         if row[nameidx] == liftername and row[igidx]:
-            return '<a href="https://www.instagram.com/%s" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>' % (row[igidx])
+            return ('<a href="https://www.instagram.com/%s"'
+                    ' class="instagram"><i class="fa fa-instagram fa-resize"></i></a>'
+                    % (row[igidx]))
 
     return ''
 
@@ -149,7 +154,6 @@ def main():
     csv.rows = sorted(csv.rows, key=sorter)
 
     lifters = oplcsv.Csv(ENTRIESCSV)
-    liftersmeetidx = lifters.index('MeetID')
     lifterswilksidx = lifters.index('Wilks')
     liftersnameidx = lifters.index('Name')
     lifterseqidx = lifters.index('Equipment')
@@ -195,7 +199,8 @@ def main():
             bestrawlifter = rawlifters[0][liftersnameidx]
             bestrawwilks = rawlifters[0][lifterswilksidx]
             rawlifterhtml = '<a href="%s">%s</a>%s' % (makelifterurl(bestrawlifter),
-                                                       bestrawlifter, makeinstagram(bestrawlifter))
+                                                       bestrawlifter,
+                                                       makeinstagram(bestrawlifter))
         else:
             bestrawlifter = ''
             bestrawwilks = ''
@@ -218,7 +223,8 @@ def main():
         # Don't emit the first divider since it looks weird cutting off the
         # headers.
         if lastmonth != '' and lastmonth != yrm:
-            # These rows should show if the federation selector is active and they have content.
+            # These rows should show if the federation selector is active
+            # and they have content.
             # Accumulate a list of federations in this month.
             fedlist = []
             for i in range(rowidx, len(csv.rows)):
