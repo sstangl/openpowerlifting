@@ -42,6 +42,10 @@ check:
 	tests/check-lifter-data
 	tests/check-duplicates
 
+# TODO: incorporate into "check" once tests pass.
+check-style:
+	tests/check-python-style
+
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
 # Data showing up here should be immediately actionable.

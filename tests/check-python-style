@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Fail immediately on error.
+set -e
+
+# From https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
+find . -type f -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} + | grep -v "node_modules/" | while read i; do
+	flake8 --show-source "$i"
+done
