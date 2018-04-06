@@ -38,9 +38,9 @@ def getunenteredurls(meetlist, enteredmeets):
     variants = set()
     for k in enteredmeets:
         if "%20" in k:
-            variants.add(k.replace("%20"," "))
+            variants.add(k.replace("%20", " "))
         if " " in k:
-            variants.add(k.replace(" ","%20"))
+            variants.add(k.replace(" ", "%20"))
 
     enteredmeets = enteredmeets.union(variants)
 
@@ -61,7 +61,7 @@ def print_meets(fedstr, meetlist):
 
     try:
         for url in meetlist:
-            print("%s %s" % (fedstr, url.replace(' ','%20')))
+            print("%s %s" % (fedstr, url.replace(' ', '%20')))
 
         if count > 3:
             print("%s %d meets remaining." % (fedstr, count))

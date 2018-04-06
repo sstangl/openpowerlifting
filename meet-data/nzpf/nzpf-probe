@@ -21,15 +21,16 @@ BASEURL_SPORTY = "http://www.sporty.co.nz/asset/downloadasset?id="
 
 
 URL_WBOP = "http://www.sporty.co.nz/wbop/Results-1"
-URL_AKL  = "http://www.sporty.co.nz/aucklandpowerlifting/Results"
-URL_NTL  = "http://www.sporty.co.nz/northlandpowerlifting/NPLA-Records-Results"
-URL_OTA  = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
+URL_AKL = "http://www.sporty.co.nz/aucklandpowerlifting/Results"
+URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/NPLA-Records-Results"
+URL_OTA = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
 
 URLS_NZPF = ["http://www.nzpowerlifting.co.nz/results/nz-events",
-"http://www.nzpowerlifting.co.nz/results/national-pl-championship",
-"http://www.nzpowerlifting.co.nz/results/national-classic-pl-championship",
-"http://www.nzpowerlifting.co.nz/results/national-bp-championships",
-"http://www.nzpowerlifting.co.nz/results/northsouth-island"]
+             "http://www.nzpowerlifting.co.nz/results/national-pl-championship",
+             "http://www.nzpowerlifting.co.nz/results/national-classic-pl-championship",
+             "http://www.nzpowerlifting.co.nz/results/national-bp-championships",
+             "http://www.nzpowerlifting.co.nz/results/northsouth-island"]
+
 
 def error(msg):
     print(msg, file=sys.stderr)
@@ -40,12 +41,13 @@ def color(s):
     return "\033[1;36m" + s + "\033[0;m"
 
 
-#Fetch Otago and National level meets
+# Fetch Otago and National level meets
 def getmeetlist_sporty(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     div = soup.find("div", {"class": "splitter-column-sortable"})
-    splitter_settings = BeautifulSoup(div['data-widgetsettings'],'html.parser')
+    splitter_settings = BeautifulSoup(
+        div['data-widgetsettings'], 'html.parser')
     urls = []
 
     for a in splitter_settings.find_all('a'):
@@ -59,28 +61,31 @@ def getmeetlist_sporty(html):
 
     return urls
 
-#Get the Auckland,WBOP and Northland meets which use file IDs instead of links
-def getmeetlist_sporty_partial(html,code):
+# Get the Auckland,WBOP and Northland meets which use file IDs instead of links
+
+
+def getmeetlist_sporty_partial(html, code):
     soup = BeautifulSoup(html, 'html.parser')
 
     div = soup.find("div", {"class": "splitter-column-sortable"})
 
-    #Links are passed to widget as an html string so need to expand it again
-    splitter_settings = BeautifulSoup(div['data-widgetsettings'],'html.parser')
+    # Links are passed to widget as an html string so need to expand it again
+    splitter_settings = BeautifulSoup(
+        div['data-widgetsettings'], 'html.parser')
     urls = []
 
-    #Now need to extract the links from the list of parameters
-    list_str =splitter_settings.find("input", {"id":"hdnDocuments_"+code})['value']
-    
-    list_str=list_str[1:-1] #Remove the square brackets
+    # Now need to extract the links from the list of parameters
+    list_str = splitter_settings.find(
+        "input", {"id": "hdnDocuments_" + code})['value']
 
-    split_list=list_str.split("},")
-    split_list=[x+"}" for x in split_list] #Add the curly brackets back
+    list_str = list_str[1:-1]  # Remove the square brackets
 
-    for link in split_list: 
-        end_link=link.find('"',7)
-        file_ext = link[7:end_link] #Now we finally have the file ID!
+    split_list = list_str.split("},")
+    split_list = [x + "}" for x in split_list]  # Add the curly brackets back
 
+    for link in split_list:
+        end_link = link.find('"', 7)
+        file_ext = link[7:end_link]  # Now we finally have the file ID!
 
         url = BASEURL_SPORTY + file_ext
 
@@ -89,36 +94,36 @@ def getmeetlist_sporty_partial(html,code):
     return urls
 
 
-
 def main():
     meetlist = []
 
     html_WBOP = oplprobe.gethtml(URL_WBOP)
-    meetlist_WBOP = getmeetlist_sporty_partial(html_WBOP,"584859")
+    meetlist_WBOP = getmeetlist_sporty_partial(html_WBOP, "584859")
 
     html_AKL = oplprobe.gethtml(URL_AKL)
-    meetlist_AKL = getmeetlist_sporty_partial(html_AKL,"357445")
+    meetlist_AKL = getmeetlist_sporty_partial(html_AKL, "357445")
 
     html_NTL = oplprobe.gethtml(URL_NTL)
-    meetlist_NTL = getmeetlist_sporty_partial(html_NTL,"417723")
+    meetlist_NTL = getmeetlist_sporty_partial(html_NTL, "417723")
 
     html_OTA = oplprobe.gethtml(URL_OTA)
     meetlist_OTA = getmeetlist_sporty(html_OTA)
 
-    meetlist_NZPF =[]
+    meetlist_NZPF = []
     for url in URLS_NZPF:
         html_NZPF = oplprobe.gethtml(url)
-        meetlist_NZPF=meetlist_NZPF+getmeetlist_sporty(html_NZPF)
+        meetlist_NZPF = meetlist_NZPF + getmeetlist_sporty(html_NZPF)
 
-
-    meetlist = meetlist_WBOP+meetlist_AKL+meetlist_NTL+meetlist_OTA+meetlist_NZPF
+    meetlist = meetlist_WBOP + meetlist_AKL + \
+        meetlist_NTL + meetlist_OTA + meetlist_NZPF
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[NZPF]'), unentered)
     print(color('[NZPF] ') + 'Check Canterbury Powerlifting Facebook page.')
-    print(color('[NZPF] ') + 'Check Central Districts Powerlifting Facebook page.')
+    print(color('[NZPF] ') +
+          'Check Central Districts Powerlifting Facebook page.')
 
 if __name__ == '__main__':
     main()

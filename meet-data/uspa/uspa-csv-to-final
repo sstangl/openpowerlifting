@@ -28,17 +28,24 @@ def replace_common_fieldnames(csv):
     s = ';'.join(csv[0])
 
     if s == 'Place;NAME;State;Class;Wt(KG);Age;Kg;Bench,;Kg;Kg;Kg;Score;LBS;LBS;LBS;LBS':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;bp;dl;total;Wilks;LBS;LBS;LBS;LBS'.split(';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;bp;dl;total;Wilks;LBS;LBS;LBS;LBS'.split(
+            ';')
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Kg;Wilks;McC;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;total;wilks;wilks;lbs'.split(';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;total;wilks;wilks;lbs'.split(
+            ';')
     if s == 'Place;NAME;State;Class;Wt(KG);Age;Kg;Kg;Kg;Kg;Score;LBS;LBS;LBS;LBS':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;dl;total;wilks;lbs;lbs;lbs;lbs'.split(';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;dl;total;wilks;lbs;lbs;lbs;lbs'.split(
+            ';')
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(
+            ';')
     if s == 'Place;Name;State;Wt;class;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
+        csv[0] = 'Place;Name;State;WeightClassKg;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(
+            ';')
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;Total':
-        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;bp;DL;dl;Total;Wilks;McC;lbs'.split(';')
+        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;bp;DL;dl;Total;Wilks;McC;lbs'.split(
+            ';')
+
 
 def fixcolnames(columns):
     for i, name in enumerate(columns):
@@ -56,7 +63,7 @@ def fixcolnames(columns):
             columns[i] = 'Country'
         elif low == 'college- university':
             columns[i] = 'College/University'
-        elif low == 'wt class': # Sometimes lbs, sometimes kg, sigh.
+        elif low == 'wt class':  # Sometimes lbs, sometimes kg, sigh.
             columns[i] = 'WeightClassKg'
         elif low == 'clas s':
             columns[i] = 'WeightClassKg'
@@ -226,7 +233,8 @@ def parse(csv):
             # G == Guest Lifter (no placement)
             if row[0].lower() == 'gl' or row[0].lower() == 'guest':
                 row[0] = 'G'
-            assert isint(row[0]) or row[0].lower() == 'dq' or row[0].lower() == 'g'
+            assert isint(row[0]) or row[0].lower(
+            ) == 'dq' or row[0].lower() == 'g'
 
             # Insert the stateful information into the row.
             divisioncol = columns.index('Division')
@@ -249,10 +257,12 @@ def parse(csv):
 
             rval.append(row)
 
-            # Remember the last lifter processed in case we have to add 4th attempts.
+            # Remember the last lifter processed in case we have to add 4th
+            # attempts.
             lifterstate = row
 
-        # If the first position is blank, this is state information, 4th attempts, or garbage.
+        # If the first position is blank, this is state information, 4th
+        # attempts, or garbage.
         else:
             searcher = ';'.join(row).lower()
             # Sometimes the rows just switch the sex state.
@@ -272,7 +282,7 @@ def parse(csv):
                 equipmentstate = 'Multi-ply'
 
             # Event information is included... sometimes.
-            if 'powerl' in searcher: # The full word is easy to misspell.
+            if 'powerl' in searcher:  # The full word is easy to misspell.
                 eventstate = 'SBD'
             elif 'bench' in searcher:
                 eventstate = 'B'
@@ -288,9 +298,9 @@ def parse(csv):
                 for i, text in enumerate(row):
                     text = text.lower()
                     if '4th' in text:
-                        amount = text.replace('4th','').strip()
-                        amount = amount.replace('-','').strip()
-                        amount = amount.replace(':','').strip()
+                        amount = text.replace('4th', '').strip()
+                        amount = amount.replace('-', '').strip()
+                        amount = amount.replace(':', '').strip()
                         if amount == "":
                             error("4th amount split over rows: \"%s\"" % text)
                         newcol = colnameto4thname(columns[i])
@@ -318,12 +328,13 @@ def parse(csv):
                 # Get the division state.
                 # Normally looks like: "52kg/114 Junior Men 13-15 Classic Raw"
                 # and we want from that: "Junior 13-15"
-                if '-' in info: 
+                if '-' in info:
                     # Extract 20-23, but don't extract "sub-master".
                     k = [x for x in info.split() if '-' in x and x[0].isdigit()]
-                    # Don't assert on len(k): the freeform text at the bottom confuses it.
+                    # Don't assert on len(k): the freeform text at the bottom
+                    # confuses it.
                     if len(k) == 1:
-                        agerange = ' ' + k[0].replace(',','')
+                        agerange = ' ' + k[0].replace(',', '')
                     else:
                         agerange = ''
                 else:
@@ -353,7 +364,8 @@ def parse(csv):
                     equipmentstate = 'Multi-ply'
                 else:
                     # This happens when the USPA forgets how to spell things.
-                    # For example, "Mulitply". Comment out on a per-import basis.
+                    # For example, "Mulitply". Comment out on a per-import
+                    # basis.
                     assert equipmentstate
                     #error('Unknown equipment: %s' % ' '.join(row).strip())
 
@@ -381,16 +393,17 @@ def fixshw(rows):
 def removeredundantlbs(rows):
     cols = list([col for col in rows[0] if 'LBS' in col])
     for col in cols:
-        if col.replace('LBS','Kg') in rows[0]:
+        if col.replace('LBS', 'Kg') in rows[0]:
             i = rows[0].index(col)
             for row in rows:
                 del row[i]
+
 
 def remove_kg_from_weightclass(rows):
     weightclassidx = rows[0].index('WeightClassKg')
 
     for row in rows[1:]:
-        row[weightclassidx] = row[weightclassidx].replace('kg','')
+        row[weightclassidx] = row[weightclassidx].replace('kg', '')
 
 
 def main():
@@ -409,10 +422,10 @@ def main():
     # Also get rid of quotation marks, since the JS doesn't like that.
     for row in rval:
         for i, word in enumerate(row):
-            row[i] = row[i].replace('"','\'')
-            row[i] = row[i].replace('(','\'')
-            row[i] = row[i].replace(')','\'')
-            row[i] = row[i].replace(',','')
+            row[i] = row[i].replace('"', '\'')
+            row[i] = row[i].replace('(', '\'')
+            row[i] = row[i].replace(')', '\'')
+            row[i] = row[i].replace(',', '')
 
     # Print, and also fix up some common errors.
     for row in rval:
@@ -420,7 +433,8 @@ def main():
         k = k.replace(',O,', ',0,')
         k = k.replace(',#VALUE!,', ',,')
         k = k.replace(',#REF!,', ',,')
-        k = k.replace(',DQ,', ',,') # Doesn't affect the Place, which is in the first col.
+        # Doesn't affect the Place, which is in the first col.
+        k = k.replace(',DQ,', ',,')
         print(k)
 
 

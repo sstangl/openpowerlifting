@@ -33,7 +33,7 @@ def find_divisions(unknown, entriespath):
             else:
                 unknown[row[dividx]] = 1
 
-    
+
 def main(args):
     # Frequency dictionary for unknown divisions.
     unknown = {}
@@ -50,8 +50,8 @@ def main(args):
     unknown_list = list(unknown.items())
 
     # Print unknown divisions sorted by frequency.
-    for division in sorted(unknown_list, reverse = True, key = lambda x: x[1]):
-        print(division[0],":",division[1])
+    for division in sorted(unknown_list, reverse=True, key=lambda x: x[1]):
+        print(division[0], ":", division[1])
 
 
 if __name__ == '__main__':

@@ -15,8 +15,8 @@ sys.path.append('scripts')
 import oplprobe
 
 
-URLS = ["http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2015","http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2016",
-"http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2017","http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2018"]
+URLS = ["http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2015", "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2016",
+        "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2017", "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2018"]
 BASEURL = "http://russia-powerlifting.ru/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -28,8 +28,8 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    content = soup.find("article", {"class": "item-page"});
-    alist = content.find_all("a");
+    content = soup.find("article", {"class": "item-page"})
+    alist = content.find_all("a")
 
     urls = []
     for a in alist:
@@ -44,10 +44,10 @@ def getmeetlist(html):
 
 def main():
 
-    meetlist=[]
+    meetlist = []
     for url in URLS:
         html = oplprobe.gethtml(url)
-        meetlist = meetlist+getmeetlist(html)
+        meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

@@ -54,11 +54,12 @@ def get_num_pages(soup):
 
 
 def format_cell(s):
-    return s.strip().replace(',',';').replace('"',"'").replace('  ',' ')
+    return s.strip().replace(',', ';').replace('"', "'").replace('  ', ' ')
 
 
 def append_rows(csv, soup):
-    # There are multiple tables on the page, but the results table is the first.
+    # There are multiple tables on the page, but the results table is the
+    # first.
     table = soup.find('table')
 
     meetnameidx = csv.index('MeetName')
@@ -105,7 +106,7 @@ def fix_dates(csv):
     for row in csv.rows:
         # In a format like "30-Mar-07".
         olddate = row[dateidx]
-        d,m,y = olddate.split('-')
+        d, m, y = olddate.split('-')
         if len(d) == 1:
             d = '0' + d
 
@@ -122,7 +123,8 @@ def main(max_pages):
     csv.append_column('3Lift')
     csv.append_column('Sex')
     csv.append_column('Name')
-    csv.append_column('State') # The state that the lifter is from, not where the meet is.
+    # The state that the lifter is from, not where the meet is.
+    csv.append_column('State')
     csv.append_column('BodyweightKg')
     csv.append_column('WeightClassOldKg')
     csv.append_column('WeightClassNewKg')
@@ -145,7 +147,7 @@ def main(max_pages):
     if max_pages != 0:
         num_pages = min(num_pages, max_pages)
 
-    for page in range(2, num_pages+1):
+    for page in range(2, num_pages + 1):
         print(" Fetching page %s" % str(page))
         html = gethtml(URL + "&pagenum=%s" % str(page))
         soup = BeautifulSoup(html, 'html.parser')
@@ -172,4 +174,3 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         max_pages = int(sys.argv[1])
     main(max_pages)
-

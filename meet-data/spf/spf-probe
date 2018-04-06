@@ -15,7 +15,7 @@ import sys
 import urllib.request
 
 
-NUMPAGES = 1 # Number of pages to go back in results, 10 results per page.
+NUMPAGES = 1  # Number of pages to go back in results, 10 results per page.
 SPFDIR = os.path.dirname(os.path.realpath(__file__))
 SPFURL = "http://www.southernpowerlifting.com/events/list/?tribe_event_display=past"
 
@@ -53,7 +53,7 @@ def getmeetlist(html):
                 continue
 
             url = a['href']
-            if not url in urls: # Sometimes the entries show up twice.
+            if not url in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls
@@ -71,7 +71,7 @@ def getenteredurls():
 
 def main():
     meetlist = []
-    for i in range(1, NUMPAGES+1):
+    for i in range(1, NUMPAGES + 1):
         url = getpageurl(i)
         html = gethtml(url)
         meets = getmeetlist(html)

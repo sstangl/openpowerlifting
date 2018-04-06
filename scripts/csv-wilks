@@ -9,7 +9,8 @@
 
 import oplcsv
 import sys
-from wilks import wilks,mcculloch,ageCoeff
+from wilks import wilks, mcculloch, ageCoeff
+
 
 def to_string(f):
     try:
@@ -18,12 +19,14 @@ def to_string(f):
         print("Field not a float: %f" % f, file=sys.stderr)
         sys.exit(1)
 
+
 def is_int(s):
     try:
         int(s)
         return True
     except ValueError:
         return False
+
 
 def main(filename):
     csv = oplcsv.Csv(filename)
@@ -55,9 +58,10 @@ def main(filename):
         if row[indexWilks]:
             # Calculate McCulloch points even if the Wilks is provided.
             # TODO: Check that the Wilks is actually correct!
-            age = row[indexAge].replace('.5','') # Round down when unknown.
+            age = row[indexAge].replace('.5', '')  # Round down when unknown.
             if is_int(age):
-                row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(age)))
+                row[indexMcCulloch] = to_string(
+                    float(row[indexWilks]) * ageCoeff(int(age)))
             continue
 
         sex = row[indexSex]
@@ -82,7 +86,8 @@ def main(filename):
         # Calculate the age-adusted score.
         age = row[indexAge]
         if is_int(age):
-            row[indexMcCulloch] = to_string(mcculloch(sex is 'M', int(age), bodyweight, total))
+            row[indexMcCulloch] = to_string(
+                mcculloch(sex is 'M', int(age), bodyweight, total))
         else:
             # Better than just leaving it blank, when we have some data.
             row[indexMcCulloch] = row[indexWilks]

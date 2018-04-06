@@ -14,10 +14,10 @@ sys.path.append('../../scripts')
 sys.path.append('scripts')
 import oplprobe
 
-URLS = ['http://fpr-info.ru/protokol.htm','http://fpr-info.ru/___protokoly/prot_2017/prot_2017.htm','http://fpr-info.ru/___protokoly/prot_2016/prot_2016.htm',
- 'http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm','http://fpr-info.ru/___protokoly/prot_2014/prot_14.htm','http://fpr-info.ru/___protokoly/prot_2013/prot_13.htm',
- 'http://fpr-info.ru/___protokoly/prot_2012/prot_12.htm','http://fpr-info.ru/___protokoly/prot_2011/prot_11.htm','http://fpr-info.ru/___protokoly/prot_2010/prot_10.htm',
- 'http://fpr-info.ru/___protokoly/prot_2009/prot_09.htm','http://fpr-info.ru/___protokoly/prot_2008/prot_08.htm','http://fpr-info.ru/___protokoly/prot_2007/prot_07.htm']
+URLS = ['http://fpr-info.ru/protokol.htm', 'http://fpr-info.ru/___protokoly/prot_2017/prot_2017.htm', 'http://fpr-info.ru/___protokoly/prot_2016/prot_2016.htm',
+        'http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm', 'http://fpr-info.ru/___protokoly/prot_2014/prot_14.htm', 'http://fpr-info.ru/___protokoly/prot_2013/prot_13.htm',
+        'http://fpr-info.ru/___protokoly/prot_2012/prot_12.htm', 'http://fpr-info.ru/___protokoly/prot_2011/prot_11.htm', 'http://fpr-info.ru/___protokoly/prot_2010/prot_10.htm',
+        'http://fpr-info.ru/___protokoly/prot_2009/prot_09.htm', 'http://fpr-info.ru/___protokoly/prot_2008/prot_08.htm', 'http://fpr-info.ru/___protokoly/prot_2007/prot_07.htm']
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -25,90 +25,88 @@ def colour(s):
     return "\033[1;33m" + s + "\033[0;m"
 
 
-
-#FPR has malformed html on their results page, remove the extra tags
+# FPR has malformed html on their results page, remove the extra tags
 def fix_html(html):
     tag_dict = {}
     remove_tags = []
 
-    ii=0
-    split_html =html.split('<')
+    ii = 0
+    split_html = html.split('<')
 
-    #Find unopened tags
+    # Find unopened tags
     for tag_start in split_html:
         if tag_start != '':
-            if tag_start[0] == '/': #Close tag
+            if tag_start[0] == '/':  # Close tag
                 close_idx = tag_start.find(">")
                 tag_type = tag_start[1:tag_start.find(">")]
                 if not tag_type in tag_dict:
                     remove_tags.append(ii)
-                elif tag_dict[tag_type] ==0:
+                elif tag_dict[tag_type] == 0:
                     remove_tags.append(ii)
                 else:
-                    tag_dict[tag_type]-=1
+                    tag_dict[tag_type] -= 1
 
-            elif '/>' not in tag_start and tag_start[0] != 'p': #Open tag
+            elif '/>' not in tag_start and tag_start[0] != 'p':  # Open tag
                 close_idx = tag_start.find(">")
                 tag_type = tag_start[0:tag_start.find(">")].split(" ")[0]
                 if not tag_type in tag_dict:
-                    tag_dict[tag_type]=1
+                    tag_dict[tag_type] = 1
                 else:
-                    tag_dict[tag_type]+=1
-        ii=ii+1
+                    tag_dict[tag_type] += 1
+        ii = ii + 1
 
-    #Remove the unopened tags
+    # Remove the unopened tags
     for idx in remove_tags:
         close_idx = split_html[idx].find(">")
-        if len(split_html[idx]) > close_idx+1:
-            split_html[idx] = split_html[idx][close_idx+1:]
+        if len(split_html[idx]) > close_idx + 1:
+            split_html[idx] = split_html[idx][close_idx + 1:]
         else:
-            split_html[idx]=''
+            split_html[idx] = ''
 
-    split_html = ["<"+line for line in split_html if line != '']
+    split_html = ["<" + line for line in split_html if line != '']
     return ''.join(split_html)
 
 
+def getmeetlist(html, main_url):
+    base_url = main_url.rsplit('/', 1)[0]
 
-def getmeetlist(html,main_url):
-    base_url = main_url.rsplit('/',1)[0]
-
-    html =fix_html(str(html,'windows-1251'))
+    html = fix_html(str(html, 'windows-1251'))
 
     soup = BeautifulSoup(html, 'html.parser')
-    outfile = open('text.html','w')
+    outfile = open('text.html', 'w')
     outfile.write(soup.prettify())
     outfile.close()
-    divs = soup.find_all("table",{"width":"101%"})
+    divs = soup.find_all("table", {"width": "101%"})
 
-    #Pre 2010 the tables are slightly different
+    # Pre 2010 the tables are slightly different
     if divs == []:
-        divs = soup.find_all("table",{"id":"table2"}) #07
+        divs = soup.find_all("table", {"id": "table2"})  # 07
     if divs == []:
-        divs = soup.find_all("table", {"id": ["table7","table4"]}) #08
-    if divs == []: 
-        divs = soup.find_all("table", {"id": ["table11","table12"]}) #09
+        divs = soup.find_all("table", {"id": ["table7", "table4"]})  # 08
+    if divs == []:
+        divs = soup.find_all("table", {"id": ["table11", "table12"]})  # 09
 
     urls = []
     for div in divs:
-	    for a in div.find_all('a'):
-	        url = a['href']
+        for a in div.find_all('a'):
+            url = a['href']
 
-            #Non relative links are meet photos and international meets, mir =Worlds,evr =Euros
-	        if not any(test_str in url for test_str in['http','mir','arnold','evr']): 
-	            url = base_url +"/" + url
-	            url = url.replace('.com//','/')
-	            if not url in urls:
-	                urls.append(url)
+        # Non relative links are meet photos and international meets, mir
+        # =Worlds,evr =Euros
+            if not any(test_str in url for test_str in['http', 'mir', 'arnold', 'evr']):
+                url = base_url + "/" + url
+                url = url.replace('.com//', '/')
+                if not url in urls:
+                    urls.append(url)
     return urls
-
 
 
 def main():
 
-    meetlist=[]
+    meetlist = []
     for url in URLS:
         html = oplprobe.gethtml(url)
-        meetlist = meetlist+getmeetlist(html,url)
+        meetlist = meetlist + getmeetlist(html, url)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

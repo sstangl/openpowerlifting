@@ -19,17 +19,17 @@ def error(msg):
 
 
 def strip_whitespace(csv):
-    for i,x in enumerate(csv.fieldnames):
-        csv.fieldnames[i] = x.strip().replace('  ',' ')
+    for i, x in enumerate(csv.fieldnames):
+        csv.fieldnames[i] = x.strip().replace('  ', ' ')
 
     for row in csv.rows:
-        for i,x in enumerate(row):
-            row[i] = x.strip().replace('  ',' ')
+        for i, x in enumerate(row):
+            row[i] = x.strip().replace('  ', ' ')
 
 
 def remove_empty_rows(csv):
     def getemptyidx(csv):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if ''.join(row) == '':
                 return i
         return -1
@@ -43,7 +43,7 @@ def remove_empty_rows(csv):
 
 def remove_rows_by_empty_column(csv, colname):
     def getemptyidx(csv, colidx):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if row[colidx] == '':
                 return i
         return -1
@@ -59,7 +59,8 @@ def remove_rows_by_empty_column(csv, colname):
         del csv.rows[idx]
 
 
-# Helper for detecting events, used by thread_event_state() and remove_event_rows().
+# Helper for detecting events, used by thread_event_state() and
+# remove_event_rows().
 def str_to_event(s):
     s = s.lower()
     if s == 'full power' or s == 'powerlifting':
@@ -94,7 +95,7 @@ def thread_event_state(csv):
 # Removes rows that just contain things like "Bench" and "Ironman".
 def remove_event_rows(csv):
     def geteventidx(csv):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             for k in row:
                 if str_to_event(k):
                     return i
@@ -109,13 +110,13 @@ def remove_event_rows(csv):
 
 def remove_stars(csv):
     for row in csv.rows:
-        for i,x in enumerate(row):
-            row[i] = x.replace('*','').replace("†","")
+        for i, x in enumerate(row):
+            row[i] = x.replace('*', '').replace("†", "")
 
 
 def remove_zeros(csv):
     for row in csv.rows:
-        for i,x in enumerate(row):
+        for i, x in enumerate(row):
             # The CSV conversion via LibreOffice already standardized
             # all decimal forms of 0.00 and such to just '0'.
             if x == '0':
@@ -139,12 +140,12 @@ def standardize_fieldnames(csv):
         csv.fieldnames[4] = 'WeightClassLBS'
         csv.fieldnames[5] = 'Name'
 
-    for i,x in enumerate(csv.fieldnames):
+    for i, x in enumerate(csv.fieldnames):
         s = x.lower()
         if s == 'gender':
             x = 'Sex'
         elif s == 'class':
-            x = 'Class' # TODO: What to do with this
+            x = 'Class'  # TODO: What to do with this
         elif s == 'eq division':
             x = 'Equipment'
         elif s == 'age division':
@@ -232,19 +233,21 @@ def fixequipment(csv):
     if idx < 0:
         error("No Equipment column in fixequipment().")
 
-    for i,row in enumerate(csv.rows):
+    for i, row in enumerate(csv.rows):
         s = row[idx].lower().replace(weirdspace, ' ')
         # "Classic" means belt and wrist wraps only to the RPS.
         if s == 'raw classic' or s == 'raw clas' or s == 'raw class' or s == 'raw c' or s == 'rc':
             x = 'Raw'
-        # This one below looks the same, but actually has some unicode BS going on.
+        # This one below looks the same, but actually has some unicode BS going
+        # on.
         elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
             x = 'Raw'
         elif s == 'raw – u' or 'classic' in s or s == 'raw calssic':
             x = 'Raw'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
-        # They track rankings for sleeves independently, but don't mark that anywhere.
+        # They track rankings for sleeves independently, but don't mark that
+        # anywhere.
         elif s == 'raw modern' or s == 'raw mod' or s == 'raw m' or s == 'rm':
             x = 'Wraps'
         elif 'modern' in s:
@@ -263,7 +266,7 @@ def fixequipment(csv):
             x = 'Multi-ply'
 
         elif s == 'adaptive athlete':
-            x = 'Raw' # I guess
+            x = 'Raw'  # I guess
 
         # This is used for benchers who have to choose between Raw or Wraps.
         # Seriously, though, what the hell?
@@ -271,7 +274,7 @@ def fixequipment(csv):
             x = 'Wraps'
 
         elif s == '' and i > 0:
-            x = csv.rows[i-1][idx]
+            x = csv.rows[i - 1][idx]
 
         else:
             print("Full row: %s" % ','.join(row), file=sys.stderr)
@@ -285,14 +288,14 @@ def fixsex(csv):
     if idx < 0:
         error("No Sex column in fixsex().")
 
-    for i,row in enumerate(csv.rows):
+    for i, row in enumerate(csv.rows):
         s = row[idx].lower()
         if s == 'male' or s == 'm' or 'men' in s:
             x = 'M'
         elif s == 'female' or s == 'f' or 'women' in s or s == 'femaie':
             x = 'F'
         elif s == '' and i > 0:
-            x = csv.rows[i-1][idx]
+            x = csv.rows[i - 1][idx]
         else:
             error("Teach fixsex() what to do with '%s'" % s)
 
@@ -306,31 +309,31 @@ def fixname(csv):
 
     for row in csv.rows:
         s = row[idx]
-        s = s.replace('Jr.','Jr')
-        s = s.replace('Sr.','Sr')
+        s = s.replace('Jr.', 'Jr')
+        s = s.replace('Sr.', 'Sr')
 
         # RPS uses this to look fancy in names like O'Brien.
-        s = s.replace("’","'")
+        s = s.replace("’", "'")
 
         # This is used to denote someone who entered amateur but totaled pro.
-        s = s.replace("†","")
+        s = s.replace("†", "")
 
         # The first argument is some weird unicode space that keeps
         # creeping into the name field.
-        s = s.replace("  "," ")
-        s = s.replace("  "," ") # A second kind of weird space.
-        s = s.replace(" "," ") # Yet more more space.
+        s = s.replace("  ", " ")
+        s = s.replace("  ", " ")  # A second kind of weird space.
+        s = s.replace(" ", " ")  # Yet more more space.
 
         # I'm not sure what this means, but it shows up in names.
-        s = s.replace("NSB","")
+        s = s.replace("NSB", "")
 
-        #if s.upper() == s:
+        # if s.upper() == s:
         #    error("Name looks all uppercase, needs manual fixing: '%s'" % s )
 
         for x in s.split():
             if x.lower() == x or x.upper() == x:
                 # Except in names like "Louie de Leon" or for initials.
-                if len(x.replace('.','')) > 2 and x != 'III' and x != 'van' and x != '4th':
+                if len(x.replace('.', '')) > 2 and x != 'III' and x != 'van' and x != '4th':
                     error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s.strip()
@@ -341,7 +344,7 @@ def fixclass(csv):
     if idx < 0:
         error("No Class column in fixclass().")
 
-    for i,row in enumerate(csv.rows):
+    for i, row in enumerate(csv.rows):
         s = row[idx].lower()
         if s == 'pro':
             x = 'Pro'
@@ -382,7 +385,7 @@ def fixclass(csv):
             x = 'Police-Fire'
 
         elif s == '' and i > 0:
-            x = csv.rows[i-1][idx]
+            x = csv.rows[i - 1][idx]
 
         else:
             error("Teach fixclass() what to do with '%s'" % s)
@@ -398,7 +401,7 @@ def fixweightclass(csv):
     if sexidx < 0:
         error("No Sex column in fixweightclass().")
 
-    for i,row in enumerate(csv.rows):
+    for i, row in enumerate(csv.rows):
         if row[idx].lower() == 'shw':
             if row[sexidx] == 'M':
                 row[idx] = '308+'
@@ -407,15 +410,15 @@ def fixweightclass(csv):
             else:
                 error("Unknown sex in fixweightclass(): '%s'" % s)
         elif row[idx] == '' and i > 0:
-            row[idx] = csv.rows[i-1][idx]
+            row[idx] = csv.rows[i - 1][idx]
 
 
 def fixdivision(csv):
     idx = csv.index('Division')
     nameidx = csv.index('Name')
-    for i,row in enumerate(csv.rows):
+    for i, row in enumerate(csv.rows):
         if i > 0 and row[nameidx] and not row[idx]:
-            row[idx] = csv.rows[i-1][idx]
+            row[idx] = csv.rows[i - 1][idx]
 
 
 def isnumber(s):
@@ -433,11 +436,11 @@ def fixplace(csv):
 
     for row in csv.rows:
         x = row[idx]
-        x = x.replace('pl','')
-        x = x.replace('st','')
-        x = x.replace('nd','')
-        x = x.replace('rd','')
-        x = x.replace('th','')
+        x = x.replace('pl', '')
+        x = x.replace('st', '')
+        x = x.replace('nd', '')
+        x = x.replace('rd', '')
+        x = x.replace('th', '')
         x = x.strip()
 
         if not isnumber(x) and x != 'DQ':
@@ -543,7 +546,6 @@ def main(filename):
 
     csv.write(sys.stdout)
 
-        
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

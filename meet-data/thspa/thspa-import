@@ -35,7 +35,7 @@ def strtokg(s):
         if f == 0.0:
             return ''
         r = "{:.2f}".format(f / 2.20462262)
-        r = r.replace('.00','')
+        r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
         return r
@@ -70,9 +70,10 @@ def weightclass2kg(s, sex):
     if s == 'SHW' and sex == 'F':
         return '90+'
 
-    if s == 'UNC': # Unconfirmed.
+    if s == 'UNC':  # Unconfirmed.
         return ''
-    if s == 'N/A': # Getting the impression these are free-form string fields...
+    # Getting the impression these are free-form string fields...
+    if s == 'N/A':
         return ''
 
     error("Unknown weight class: %s" % (s))
@@ -108,7 +109,7 @@ def getdivisionurls(soup):
             continue
 
         if not 'http' in url:
-            url = BASEURL + url.replace('./','/')
+            url = BASEURL + url.replace('./', '/')
         if not url in urls:
             urls.append(url)
 
@@ -124,8 +125,8 @@ def enterdivision(csv, divurl):
     # The heading is formatted: "meetname - location - date - division".
     # Sometimes there's additional "Division 1" information after meetname.
     # But the division is always the last one.
-    division = heading.split(' - ')[-1].replace('THSPA','').strip()
-    division = division.replace('  ',' ')
+    division = heading.split(' - ')[-1].replace('THSPA', '').strip()
+    division = division.replace('  ', ' ')
 
     # Division contains sex information.
     if 'boys' in division.lower() and not 'girls' in division.lower():
@@ -139,11 +140,11 @@ def enterdivision(csv, divurl):
     else:
         error('Unknown division "%s" on page %s' % (division, divurl))
 
-
     # Get the table.
     table = soup.find('table', {'id': 'grdIndividualResults'})
 
-    # Skip the first row, since that contains column information, which is always the same.
+    # Skip the first row, since that contains column information, which is
+    # always the same.
     trlist = table.find_all('tr')[1:]
 
     for row in trlist:
@@ -158,20 +159,21 @@ def enterdivision(csv, divurl):
 
         # Second column is Place. BO == Bombed-Out, SC == Scratched, DQ == Disqualified.
         # No idea what NA means, but it shows up sometimes.
-        place = cells[1].text.replace('BO','DQ').replace('SC','DQ').replace('NA','DQ').strip()
+        place = cells[1].text.replace('BO', 'DQ').replace(
+            'SC', 'DQ').replace('NA', 'DQ').strip()
 
         # Third column is "School Class", which is unused.
 
         # Fourth column is Name, given as "LASTNAME, FIRSTNAME".
         name = cells[3].text.strip()
-        name = name.replace('.','')
+        name = name.replace('.', '')
 
         if ',' in name:
             if name.count(',') == 1:
-                [last,first] = name.split(',')
+                [last, first] = name.split(',')
                 jr = ''
-            elif name.count(',') == 2: # "Saldivar, Jr, Mario"
-                [last,jr,first] = name.split(',')
+            elif name.count(',') == 2:  # "Saldivar, Jr, Mario"
+                [last, jr, first] = name.split(',')
                 jr = ' ' + jr
             else:
                 error("Don't know how to split name: %s" % name)
@@ -183,11 +185,12 @@ def enterdivision(csv, divurl):
                 first = first.title()
 
             name = first + ' ' + last + jr
-            name = name.replace('Iii','III')
-            name = name.replace('  ',' ').strip()
+            name = name.replace('Iii', 'III')
+            name = name.replace('  ', ' ').strip()
 
         if name == name.upper():
-            name = name.title() # Will get some things wrong, but not a lot of Scots in Texas.
+            # Will get some things wrong, but not a lot of Scots in Texas.
+            name = name.title()
 
         # Fifth column is Team.
         team = cells[4].text.strip()
@@ -196,17 +199,17 @@ def enterdivision(csv, divurl):
         bw = strtokg(cells[5].text)
 
         # 7-10 columns are Squat,Bench,Deadlift,Total, need conversion to Kg.
-        squat    = strtokg(cells[6].text)
-        bench    = strtokg(cells[7].text)
+        squat = strtokg(cells[6].text)
+        bench = strtokg(cells[7].text)
         deadlift = strtokg(cells[8].text)
-        total    = strtokg(cells[9].text)
+        total = strtokg(cells[9].text)
 
         # The whole federation appears to be single-ply.
         equipment = 'Single-ply'
         event = 'SBD'
 
-        csv.rows.append([division,weightclass,place,name,team,bw,squat,bench,deadlift,total,
-                         equipment,event,sex])
+        csv.rows.append([division, weightclass, place, name, team, bw, squat, bench, deadlift, total,
+                         equipment, event, sex])
 
 
 # The CSV isn't quite in our format yet. Some post-processing is required.
@@ -234,14 +237,16 @@ def removeemptycolumns(csv):
 
 def makemeetcsv(soup):
     heading = soup.find('span', {'id': 'lblHeading'}).text
-    heading = heading.replace(',',' ')
+    heading = heading.replace(',', ' ')
     heading = heading.replace('  ', ' ')
 
     if heading.count(' - ') == 2:
-        [meetname, location, origdate] = [x.strip() for x in heading.split(' - ')]
+        [meetname, location, origdate] = [x.strip()
+                                          for x in heading.split(' - ')]
     elif heading.count(' - ') == 3:
         # Division is ignored.
-        [meetname, division, location, origdate] = [x.strip() for x in heading.split(' - ')]
+        [meetname, division, location, origdate] = [x.strip()
+                                                    for x in heading.split(' - ')]
     else:
         error('Unknown header format: "%s"' % heading)
 
@@ -254,10 +259,10 @@ def makemeetcsv(soup):
         k[1] = '0' + k[1]
     date = k[2] + '-' + k[0] + '-' + k[1]
 
-    location = location.replace(' TX','')
-    location = location.replace(' Tx','')
-    location = location.replace(' HS','')
-    location = location.replace('High School','').strip()
+    location = location.replace(' TX', '')
+    location = location.replace(' Tx', '')
+    location = location.replace(' HS', '')
+    location = location.replace('High School', '').strip()
 
     csv = Csv()
     csv.append_column('Federation')
@@ -304,7 +309,7 @@ def main(url):
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
-        fd.write(url+"\n")
+        fd.write(url + "\n")
 
     print("Imported into %s." % dirname)
 

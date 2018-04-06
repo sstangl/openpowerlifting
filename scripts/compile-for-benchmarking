@@ -13,6 +13,8 @@ import sys
 
 
 MEETID = 0
+
+
 def nextmeetid():
     global MEETID
     x = MEETID
@@ -20,7 +22,9 @@ def nextmeetid():
     return x
 
 
-LIFTERID = 1 # Due to default seed of LIFTERIDMAP below.
+LIFTERID = 1  # Due to default seed of LIFTERIDMAP below.
+
+
 def nextlifterid():
     global LIFTERID
     x = LIFTERID
@@ -30,8 +34,10 @@ def nextlifterid():
 
 # Global map of (Name => LifterID) mappings.
 LIFTERIDMAP = {
-  'Sean Stangl Alpha': 0
+    'Sean Stangl Alpha': 0
 }
+
+
 def get_lifterid(name):
     global LIFTERIDMAP
     try:
@@ -54,7 +60,7 @@ def age_from_birthyear(csv, date):
 
     birthyearidx = csv.index('BirthYear')
     ageidx = csv.index('Age')
-    [year,month,day] = date.split('-')
+    [year, month, day] = date.split('-')
 
     for row in csv.rows:
         if row[birthyearidx] and not row[ageidx]:
@@ -101,7 +107,8 @@ def addmeet(permutation_name, entriescsv, meetscsv, entriespath, meetpath):
     # Derive the path (e.g., "uspa/0039").
     # Input looks like "meet-path/uspa/0039/meet.csv".
     assert not "MeetPath" in newmeet.fieldnames
-    path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)].replace(os.sep,'/')
+    path = meetpath[meetpath.index(
+        os.sep) + 1: meetpath.rindex(os.sep)].replace(os.sep, '/')
     path = path + '-' + permutation_name
     assert not ',' in path
 
@@ -133,7 +140,7 @@ def build_lifterscsv(lifterdir, builddir):
     assert len(LIFTERIDMAP)
 
     # Order by LifterID.
-    ordered = sorted(LIFTERIDMAP.items(), key=lambda x:x[1])
+    ordered = sorted(LIFTERIDMAP.items(), key=lambda x: x[1])
 
     # Make a map of (Name => Instagram).
     socialcsv = Csv(lifterdir + os.sep + 'social-instagram.csv')
@@ -230,7 +237,8 @@ def main(builddir, meetdir, lifterdir):
                 assert 'meet.csv' in files
                 entriespath = dirname + os.sep + 'entries.csv'
                 meetpath = dirname + os.sep + 'meet.csv'
-                addmeet(permutation, entriescsv, meetscsv, entriespath, meetpath)
+                addmeet(permutation, entriescsv,
+                        meetscsv, entriespath, meetpath)
         print("Done with %s..." % permutation)
 
     entriescsv.remove_column_by_name("AgeClass")
@@ -256,6 +264,7 @@ def main(builddir, meetdir, lifterdir):
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print(' Usage: %s builddir meetdir lifterdir' % sys.argv[0], file=sys.stderr)
+        print(' Usage: %s builddir meetdir lifterdir' %
+              sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2], sys.argv[3])

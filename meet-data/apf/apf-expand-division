@@ -9,6 +9,7 @@
 from oplcsv import Csv
 import sys
 
+
 def main(filename):
     csv = Csv(filename)
 
@@ -31,11 +32,11 @@ def main(filename):
 
     for row in csv.rows:
         div = row[dividx]
-        div = div.replace('-','_') # Sometimes dashes are used instead.
+        div = div.replace('-', '_')  # Sometimes dashes are used instead.
 
-        if not div: 
+        if not div:
             continue
-        if div.count('_') < 2: # Also allow M_MR_4_APF.
+        if div.count('_') < 2:  # Also allow M_MR_4_APF.
             continue
 
         if div.startswith('M'):

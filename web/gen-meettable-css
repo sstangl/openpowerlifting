@@ -5,8 +5,10 @@
 
 import bisect
 import html
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'scripts')))
 import oplcsv
 
 MEETCSV = '../build/meets.csv'
@@ -23,15 +25,16 @@ def main():
         if row[fedidx] not in feds:
             feds.append(row[fedidx])
 
-    # First output rules that hide all federations if there's an active selector.
+    # First output rules that hide all federations if there's an active
+    # selector.
     print('table.selectorActive tr{display:none;}')
 
     # Then output a rule that shows a federation if it's been selected.
     # Since these rules come later, they will override the other ones.
     for fed in feds:
-        fed = fed.replace('-','_')
+        fed = fed.replace('-', '_')
         fedclass = '_' + fed
-        print('table.%s tr.%s{display:table-row}' % (fedclass,fedclass))
+        print('table.%s tr.%s{display:table-row}' % (fedclass, fedclass))
 
     # Rule to always show these rows (used for the header).
     print('table tr.alwaysShow{display:table-row}')

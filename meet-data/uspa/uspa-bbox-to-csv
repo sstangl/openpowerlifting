@@ -30,6 +30,8 @@ class NoLifterInformationException(Exception):
     pass
 
 # For pages that don't contain any header information.
+
+
 class NoHeaderInformationException(Exception):
     pass
 
@@ -40,6 +42,7 @@ def error(text):
 
 
 class Word:
+
     def __init__(self, word):
         self.xmin = float(word.get('xMin'))
         self.xmax = float(word.get('xMax'))
@@ -72,7 +75,7 @@ class Word:
 
     def __str__(self):
         return "%s (%s, %s) -> (%s, %s)" % (self.text, str(self.xmin), str(self.ymin),
-                                             str(self.xmax), str(self.ymax))
+                                            str(self.xmax), str(self.ymax))
 
     def __repr__(self):
         return self.text
@@ -84,7 +87,8 @@ def rowtocsv(row, colspans):
     columns = [''] * len(colspans)
 
     # For each word, assign it to a span.
-    # Iterating over words prevents repeating words that ignore the column system.
+    # Iterating over words prevents repeating words that ignore the column
+    # system.
     for word in row:
         bestcoverage = -999
         bestidx = 0
@@ -116,7 +120,7 @@ def parseword(word):
 # with each row sorted by x-value.
 def sortintorows(words):
     # The input data looks mostly-sorted, but unfortunately isn't actually.
-    words = sorted(words, key=lambda x : x.ymin)
+    words = sorted(words, key=lambda x: x.ymin)
     rows = []
 
     row = [words[0]]
@@ -124,11 +128,11 @@ def sortintorows(words):
         if row[0].samerowas(word):
             row.append(word)
         else:
-            row = sorted(row, key=lambda x : x.xmin)
+            row = sorted(row, key=lambda x: x.xmin)
             rows.append(row)
             row = [word]
 
-    row = sorted(row, key=lambda x : x.xmin)
+    row = sorted(row, key=lambda x: x.xmin)
     rows.append(row)
     return rows
 
@@ -138,7 +142,7 @@ def sortintorows(words):
 def getheaderidx(rows):
     for i, row in enumerate(rows):
         # Sometimes the PDF has a 'Place' column header.
-        if row[0].text.lower() == 'name' or (len(row)>1 and row[1].text.lower() == 'name'):
+        if row[0].text.lower() == 'name' or (len(row) > 1 and row[1].text.lower() == 'name'):
             return i
     raise NoHeaderInformationException
 
@@ -151,14 +155,14 @@ def getlifteridx(rows):
     raise NoLifterInformationException
 
 
-def spanintersects(a,b):
+def spanintersects(a, b):
     if a[0] <= b[0]:
         return a[1] >= b[0]
     return b[1] >= a[0]
 
 
-def spanunion(a,b):
-    return (min(a[0],b[0]), max(a[1],b[1]))
+def spanunion(a, b):
+    return (min(a[0], b[0]), max(a[1], b[1]))
 
 
 # Now that we know the rows, we can hardcode some information about how
@@ -173,7 +177,7 @@ def getcolumnspans(rows):
     # Union the spans we have so far with any text in the pseudo-row above them.
     # This row contains stuff like "WT", "Squat", "Total", etc.
     # Only do this if the column above is pretty close.
-    if rows[headeridx-1][0].ymin <= rows[headeridx][0].ymax + rows[headeridx][0].height():
+    if rows[headeridx - 1][0].ymin <= rows[headeridx][0].ymax + rows[headeridx][0].height():
         for x in rows[headeridx - 1]:
             above = (x.xmin, x.xmax)
             for i, span in enumerate(spans):
@@ -183,15 +187,17 @@ def getcolumnspans(rows):
 
     # There are then two special columns:
     # 1) The column for placement, which occurs before the name and isn't marked;
-    # 2) The column for the name, which is actually very wide and needs to be expanded.
+    # 2) The column for the name, which is actually very wide and needs to be
+    # expanded.
     lifteridx = getlifteridx(rows)
-    
+
     # Insert the Place column if it's not already there.
     if rows[headeridx][0].text.lower() == 'name':
         placeword = rows[lifteridx][0]
         placespan = (placeword.xmin, placeword.xmax)
 
-        # The place comes before NAME, so insert at the beginning of the span list.
+        # The place comes before NAME, so insert at the beginning of the span
+        # list.
         spans.insert(0, placespan)
 
     # Then the NAME span (spans[1]) is the start of the name
@@ -233,7 +239,7 @@ def parsepage(page):
 
         if GlobalTryMergeHeader:
             for word in rows[headeridx]:
-                for above in rows[headeridx-1]:
+                for above in rows[headeridx - 1]:
                     if above.ymin < word.ymax + word.height() and word.aboveorbelow(above):
                         word.text = '%s %s' % (above.text, word.text)
                         break
@@ -249,7 +255,7 @@ def parsepage(page):
         csv = ''
         headeridx = -1
 
-    for row in rows[headeridx+1:]:
+    for row in rows[headeridx + 1:]:
         newrow = rowtocsv(row, colspans)
         csv += newrow + '\n'
 

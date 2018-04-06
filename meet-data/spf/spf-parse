@@ -40,7 +40,8 @@ columnmap = {
 
 
 def gettable(soup):
-    # The page isn't really standardized, but make sure that we understand all the headers.
+    # The page isn't really standardized, but make sure that we understand all
+    # the headers.
     tables = soup.find_all("table", {"class": "tablesorter"})
     if len(tables) == 0:
         error("Table not found.")
@@ -64,14 +65,14 @@ def gettable(soup):
         tds = row.find_all('td')
         r = []
         for td in tds:
-            r.append(td.text.strip().replace('  ',' '))
+            r.append(td.text.strip().replace('  ', ' '))
         csv.rows.append(r)
-        
+
     return csv
 
 
 def fixcolumnnames(csv):
-    for i,x in enumerate(csv.fieldnames):
+    for i, x in enumerate(csv.fieldnames):
         csv.fieldnames[i] = columnmap[x]
 
 
@@ -92,7 +93,7 @@ def sexfromdivision(csv):
             row[sexidx] = 'M'
 
         # Also remove sex information from the Division column.
-        row[dividx] = row[dividx].replace("Womens","").strip()
+        row[dividx] = row[dividx].replace("Womens", "").strip()
 
 
 def fixevent(csv):
@@ -138,7 +139,7 @@ def fixequipment(csv):
         elif eq == "Slingshot":
             row[eqidx] = "Slingshot"
         elif eq == '':
-            pass # This means copy from the row above, usually.
+            pass  # This means copy from the row above, usually.
         else:
             error("Unknown equipment: %s" % row[eqidx])
 

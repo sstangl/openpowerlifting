@@ -48,9 +48,9 @@ def getmeetlist(html):
                 url = BASEURL + url
 
             # Should do this for all the federations, honestly.
-            url = url.replace(' ','%20')
+            url = url.replace(' ', '%20')
 
-            if not url in urls: # Sometimes the entries show up twice.
+            if not url in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls

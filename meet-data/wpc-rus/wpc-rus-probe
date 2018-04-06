@@ -3,7 +3,6 @@
 #
 
 
-
 from bs4 import BeautifulSoup
 import os
 import sys
@@ -25,13 +24,13 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    alist = soup.find_all("a");
+    alist = soup.find_all("a")
 
     urls = []
     for a in alist:
         link = a['href']
         if 'files' not in link:
-        	continue
+            continue
         # A bunch of links are just '/files/foo.xls'
         if link.startswith('/'):
             link = BASEURL + link
@@ -42,10 +41,10 @@ def getmeetlist(html):
 
 def main():
 
-    meetlist=[]
+    meetlist = []
     for url in URLS:
         html = oplprobe.gethtml(url)
-        meetlist = meetlist+getmeetlist(html)
+        meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

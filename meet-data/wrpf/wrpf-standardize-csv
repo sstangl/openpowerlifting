@@ -9,6 +9,7 @@ sys.path.append('scripts')
 import oplcsv
 import re
 
+
 def die(s):
     print(s, file=sys.stderr)
     sys.exit(1)
@@ -43,53 +44,52 @@ def parse_sheetname(s):
 
     federation = ''
     event = None
-    amateur = 'Pro' # By default, unless otherwise specified.
-    tested = 'No' # By default, unless otherwise specified.
-    equipment = 'Wraps' # By default, unless otherwise specified.
+    amateur = 'Pro'  # By default, unless otherwise specified.
+    tested = 'No'  # By default, unless otherwise specified.
+    equipment = 'Wraps'  # By default, unless otherwise specified.
 
-    # Parse word-by-word to make sure that every word is understood. 
-    s=s.lower()
+    # Parse word-by-word to make sure that every word is understood.
+    s = s.lower()
 
-
-    if 'без экип' in s: #Need to do 'without equipment' seperately
+    if 'без экип' in s:  # Need to do 'without equipment' seperately
         equipment = 'Wraps'
-        #We want to remove all strings that start with 'без экип'
-        s =s.replace('без','')
+        # We want to remove all strings that start with 'без экип'
+        s = s.replace('без', '')
         split_str = s.split()
         index = [ii for ii, s in enumerate(split_str) if 'экип' in s][0]
         del split_str[index]
         s = ' '.join(split_str)
 
-    if 'без дк' in s: #Do 'Without drug test' seperately
-        s=s.replace('без дк','')
+    if 'без дк' in s:  # Do 'Without drug test' seperately
+        s = s.replace('без дк', '')
 
-    s= s.replace('.',' ').replace('"','').replace('_',' ').replace('(',' ').replace(')',' ').replace('-','')
-    s = s.replace(' & ','&')
-    s=s.replace('д к','дк') #Drug tested
-
+    s = s.replace('.', ' ').replace('"', '').replace(
+        '_', ' ').replace('(', ' ').replace(')', ' ').replace('-', '')
+    s = s.replace(' & ', '&')
+    s = s.replace('д к', 'дк')  # Drug tested
 
     for word in s.split():
         # Federations
-        if word in ['wrpf','wrpfpro','wprf']:
+        if word in ['wrpf', 'wrpfpro', 'wprf']:
             assert not federation
             federation = 'WRPF'
         elif word in ['wepf']:
             federation = 'WEPF'
-        elif word == 'спр': # Some other federation that does multi-ply.
+        elif word == 'спр':  # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
-        elif word in ['gpa','gpaipod','gpaipo']:
+        elif word in ['gpa', 'gpaipod', 'gpaipo']:
             assert not federation
             federation = 'GPA'
 
         # Events
-        elif word in ['пл','пауэрлифтинг','pl','пауэрифтинг','пауэлифтинг','чапл','капл','паурлифтинг','пауэрлифинг']:
+        elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг', 'чапл', 'капл', 'паурлифтинг', 'пауэрлифинг']:
             assert not event
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим','bp','bench','жд','press']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'press']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
@@ -99,26 +99,26 @@ def parse_sheetname(s):
             event = 'D'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word in ['двоеборье','pp','ж+т','bp+dl','push&pull','cил','сд']:
+        elif word in ['двоеборье', 'pp', 'ж+т', 'bp+dl', 'push&pull', 'cил', 'сд']:
             assert not event
             event = 'BD'
             if equipment == 'Wraps':
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['однослой','однослое','односл','s ply','однослойной','1ой','1ply','однослойная','однослойный','однолойной','1сл','односл']:
+        elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной', '1ой', '1ply', 'однослойная', 'однослойный', 'однолойной', '1сл', 'односл']:
             equipment = 'Single-ply'
-        elif word in ['экипировке','m ply','eq','многослой','экипировка','мн','эипировке']:
-            if equipment == '': #Otherwise we might accidently mark single as multi
+        elif word in ['экипировке', 'm ply', 'eq', 'многослой', 'экипировка', 'мн', 'эипировке']:
+            if equipment == '':  # Otherwise we might accidently mark single as multi
                 equipment = 'Multi-ply'
-        elif word in ['slinghot','slingshot','soft','СПР','софт','облегченная','облегченной','слинг']:
+        elif word in ['slinghot', 'slingshot', 'soft', 'СПР', 'софт', 'облегченная', 'облегченной', 'слинг']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
             equipment = 'Wraps'
-        elif word in ['безкипировки','raw','безэкип','классический','классич']:
+        elif word in ['безкипировки', 'raw', 'безэкип', 'классический', 'классич']:
              die('Fix parse_sheetname(): Meet contains raw and wraps results, this needs to be done manually.')
-       	
+
             equipment = 'Wraps'
 
         # Booleans.
@@ -205,7 +205,7 @@ def get_header_linenum(sheet):
         if 'Место' in sheet[ii][0] or 'Place' in sheet[ii][0] or 'Місце' in sheet[ii][0]:
             sheet[ii][0] = 'Место'
             return ii
-    #Sometimes place is not labelled, if not find name
+    # Sometimes place is not labelled, if not find name
     for ii in range(len(sheet)):
         if sheet[ii][1] == 'ФИО':
             sheet[ii][0]='Место'
@@ -220,7 +220,7 @@ def fix_headers(sheet):
     lineabove = sheet[headernum-1] #Need some error checking here
     linebelow = sheet[headernum+1]
 
-    #Name has split below rest of data
+    # Name has split below rest of data
     if header[1] == '' and lineabove[1] != '':
         header = [(lineabove[ii]+" "+header[ii]).strip() for ii in range(0,len(header))]
         sheet[headernum] =['' for x in header]
@@ -237,7 +237,7 @@ def fix_headers(sheet):
     return sheet
 
 
-#Sometimes we get country/city/state instead of just country
+# Sometimes we get country/city/state instead of just country
 def split_country(csv):
     if 'Country/City/State' in csv.fieldnames:
         idx = csv.index('Country/City/State')
@@ -414,7 +414,7 @@ def parse_sheet(sheet):
     # Figure out event, equipment, etc., and store in obj.
     obj = parse_sheetname(sheet[0][0].split(':')[1])
 
-    #wrpf often splits headers across multiple lines,fix this
+    # wrpf often splits headers across multiple lines,fix this
     sheet = fix_headers(sheet)
 
 
@@ -582,7 +582,7 @@ def standardize_division_age(csv):
         elif 'мастера 4' in row[idx] or 'm4' in row[idx]:
             division = 'Masters 4'
         
-        #Catch all for remaining divisions
+        # Catch all for remaining divisions
         elif 'teen' in row[idx] or 'юноши' in row[idx]:
             division ='Teen'
         elif 'мастера' in row[idx]or 'master' in row[idx]:
@@ -607,7 +607,7 @@ def standardize_division_age(csv):
     csv.remove_column_by_name('Division-Age')
     csv.remove_column_by_name('Amateur')
 
-#Mark DQs properly and make sure that place is an integer.
+# Mark DQs properly and make sure that place is an integer.
 def cleanup_place(csv):
     place_idx = csv.index('Place')
     total_idx = csv.index('TotalKg')
@@ -615,14 +615,14 @@ def cleanup_place(csv):
         if '.00' in row[place_idx]: #Convert place to an integer if it wasn't already
             row[place_idx]=str(int(float(row[place_idx])))
 
-        #Somewhat convoluted way of checking if a lifter is marked DQ and has a nonzero total
+        # Somewhat convoluted way of checking if a lifter is marked DQ and has a nonzero total
         if row[place_idx] == 'DQ' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
             row[place_idx] ='DD'
             row[total_idx]=''
         elif row[place_idx] == '' and row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])!=0.0:
             row[place_idx] ='DD'
             row[total_idx]=''
-        #Everything else is a regular DQ
+        # Everything else is a regular DQ
         elif not row[place_idx] or row[place_idx] == '-':
             row[place_idx] = 'DQ'
         elif row[total_idx].replace('.','').replace('-','').isdigit() and float(row[total_idx])==0.0:
@@ -647,7 +647,7 @@ def unreverse_names(csv):
 
         row[nameidx] = name
 
-#Names sometimes have something in brackets after them - extra divisions maybe?
+# Names sometimes have something in brackets after them - extra divisions maybe?
 def cleanup_names(csv):
     if 'InternationalName' in csv.fieldnames:
         nameidx = csv.index('InternationalName')
@@ -672,14 +672,14 @@ def cleanup_lift(csv, fieldname):
             if amount == 'X' or amount.replace('-','') == '0' or not any(c.isdigit() for c in amount):
                 amount = ''
 
-            #Sometimes numbers have more than 2 commas, if so remove the second one
+            # Sometimes numbers have more than 2 commas, if so remove the second one
             if len([ii for ii, a in enumerate(amount) if a == '.']) >1:
                 amount = amount[:amount.rfind('.')]+amount[amount.rfind('.')+1:]
 
             row[idx] = amount
 
 
-#Remove '.0' from weightclasses
+# Remove '.0' from weightclasses
 def cleanup_weightclass(csv):
     idx = csv.index('WeightClassKg')
     for row in csv.rows:
@@ -689,7 +689,7 @@ def cleanup_weightclass(csv):
         else:
             row[idx]=''
 
-#Sometimes weight class is also given after bodyweight
+# Sometimes weight class is also given after bodyweight
 def cleanup_bodyweight(csv):
     idx = csv.index('BodyweightKg')
     for row in csv.rows:

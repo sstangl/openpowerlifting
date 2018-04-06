@@ -8,9 +8,10 @@
 
 
 from bs4 import BeautifulSoup
-import sys,os
-from os.path import join,realpath,dirname
-sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
+import sys
+import os
+from os.path import join, realpath, dirname
+sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
 
 import oplcsv
 import wilks
@@ -47,7 +48,7 @@ def getmeetlist(html):
         url = a['href']
         if not 'http' in url:
             url = BASEURL + url
-            url = url.replace('.com//','/')
+            url = url.replace('.com//', '/')
         if not url in searchurls:
             # Ignore some URLs that are clearly bogus.
             if 'worldpowerlifting.info' in url:
@@ -72,7 +73,7 @@ def getmeetlist(html):
 
             if not 'http' in url:
                 url = BASEURL + url
-                url = url.replace('.com//','/')
+                url = url.replace('.com//', '/')
             if not url in urls:
                 urls.append(url)
 

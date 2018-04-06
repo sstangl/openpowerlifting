@@ -17,7 +17,7 @@ def internal_to_kg_string(s):
     try:
         # NOTE: SPF uses "2.2046". Greater accuracy actually makes it worse.
         r = "{:.2f}".format(float(s) / 2.20462262)
-        r = r.replace('.00','')
+        r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
         return r
@@ -31,9 +31,9 @@ def to_kg(s):
         amount = internal_to_kg_string(s[:-1])
         # Handle an error where the importer thought the weightclass was KG
         # and converted 'SHW' to a number in Kg.
-        if amount == '40.82': # for women
+        if amount == '40.82':  # for women
             return '90+'
-        if amount == '63.50': # for men
+        if amount == '63.50':  # for men
             return '140+'
 
         # Old USAPL classes.
@@ -50,14 +50,14 @@ def main(filename):
     csv = Csv(filename)
     changed = False
 
-    for i,field in enumerate(csv.fieldnames):
+    for i, field in enumerate(csv.fieldnames):
         if not 'LBS' in field:
             continue
 
         print(' Converting column "%s"' % field)
         changed = True
 
-        csv.fieldnames[i] = field.replace('LBS','Kg')
+        csv.fieldnames[i] = field.replace('LBS', 'Kg')
 
         for row in csv.rows:
             if row[i]:

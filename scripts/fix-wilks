@@ -33,12 +33,14 @@ indexBodyweight = csv.index('BodyweightKg')
 indexTotal = csv.index('TotalKg')
 indexWilks = csv.index('Wilks')
 
+
 def to_string(f):
     try:
         return "{:.2f}".format(f)
     except ValueError:
         print("Field not a float: %f" % f, file=sys.stderr)
         sys.exit(1)
+
 
 def is_int(s):
     try:

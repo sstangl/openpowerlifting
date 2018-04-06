@@ -21,6 +21,7 @@ BASEURL = "http://www.oceaniapowerlifting.com/"
 def color(s):
     return "\033[1;30m" + s + "\033[0;m"
 
+
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -38,6 +39,7 @@ def getmeetlist(html):
             urls.append(url)
 
     return urls
+
 
 def main():
     html = oplprobe.gethtml(URL)

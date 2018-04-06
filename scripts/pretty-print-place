@@ -5,11 +5,11 @@ import sys
 
 
 def getcategory(csv, row):
-    dividx    = csv.index('Division')
-    eqidx     = csv.index('Equipment')
-    sexidx    = csv.index('Sex')
-    eventidx  = csv.index('Event')
-    wtclsidx  = csv.index('WeightClassKg')
+    dividx = csv.index('Division')
+    eqidx = csv.index('Equipment')
+    sexidx = csv.index('Sex')
+    eventidx = csv.index('Event')
+    wtclsidx = csv.index('WeightClassKg')
     return (row[dividx], row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
@@ -40,18 +40,18 @@ def sortcategories(categories):
         return 5
 
     def assignwtcls(wt):
-        wt = wt.replace('+','')
+        wt = wt.replace('+', '')
         return float(wt)
 
-    categories.sort(key=lambda x :
-        (x[2], # F always before M.
-         assignevent(x[3]), # Then by event.
-         assigneq(x[1]), # Within event, by equipment.
-         x[0], # Within equipment, by division, alphabetically.
-         assignwtcls(x[4]), # Within division, by weight class, as float.
-        )
-    )
-
+    categories.sort(key=lambda x:
+                    (x[2],  # F always before M.
+                     assignevent(x[3]),  # Then by event.
+                     assigneq(x[1]),  # Within event, by equipment.
+                        x[0],  # Within equipment, by division, alphabetically.
+                        # Within division, by weight class, as float.
+                        assignwtcls(x[4]),
+                     )
+                    )
 
 
 def main(filename):
@@ -62,9 +62,9 @@ def main(filename):
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)
 
-    totalidx  = csv.index('TotalKg')
-    bwidx     = csv.index('BodyweightKg')
-    nameidx     = csv.index('Name')
+    totalidx = csv.index('TotalKg')
+    bwidx = csv.index('BodyweightKg')
+    nameidx = csv.index('Name')
     bestsquatidx = csv.index('BestSquatKg')
     bestbenchidx = csv.index('BestBenchKg')
     bestdeadliftidx = csv.index('BestDeadliftKg')
@@ -90,16 +90,16 @@ def main(filename):
                 if row[totalidx]:
                     lifters.append(row)
 
-
         # Ignore DQs
         if len(lifters) == 0:
             continue
 
         # Order the rows by greatest total.
         # If total is the same, order within total by lowest bodyweight.
-        lifters.sort(key=lambda x : (float(x[totalidx]), -float(x[bwidx])), reverse=True)
+        lifters.sort(key=lambda x: (
+            float(x[totalidx]), -float(x[bwidx])), reverse=True)
 
-        (div,eq,sex,event,cls) = category
+        (div, eq, sex, event, cls) = category
 
         if event == 'SBD':
             event = 'Powerlifting'
@@ -113,11 +113,10 @@ def main(filename):
         elif sex == 'F':
             sex = 'Women'
 
-
-
         print(cls + 'kg', sex, div, eq, event)
         for i, row in enumerate(lifters):
-            print(i+1, ',', row[nameidx], ',', row[bwidx], ',', row[bestsquatidx], ',', row[bestbenchidx], ',', row[bestdeadliftidx], ',', row[totalidx], ',', row[wilksidx])
+            print(i + 1, ',', row[nameidx], ',', row[bwidx], ',', row[bestsquatidx], ',', row[
+                  bestbenchidx], ',', row[bestdeadliftidx], ',', row[totalidx], ',', row[wilksidx])
 
         print()
 

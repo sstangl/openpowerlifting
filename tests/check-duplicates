@@ -3,8 +3,10 @@
 #
 # Creates a dictionary of lifter performances and finds
 # any possible duplicate meets.
-import sys,os
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__))), "scripts"))
 
 import oplcsv
 
@@ -22,13 +24,14 @@ warningCount = 0
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else: 
+    else:
         return s
+
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else: 
+    else:
         return s
 
 
@@ -47,6 +50,8 @@ def pwarning(s):
 
 # Given a name like "/home/foobar/dev/openpowerlifting/meet-data/apf/1503/entries.csv",
 # returns a name like "apf/1503".
+
+
 def prettify_path(path):
     # Only include things after "/meet-data/".
     try:
@@ -57,7 +62,7 @@ def prettify_path(path):
     return path.rstrip('/entries.csv')
 
 
-def check_duplicates(entriespath,meetpath):
+def check_duplicates(entriespath, meetpath):
     global MeetHash
 
     entriescsv = oplcsv.Csv(entriespath)
@@ -76,12 +81,13 @@ def check_duplicates(entriespath,meetpath):
         name_date = name + meetdate
 
         if not name_date in MeetHash:
-            MeetHash[name_date] = (total,entriespath)
+            MeetHash[name_date] = (total, entriespath)
         elif total != '' and MeetHash[name_date][0] == total and MeetHash[name_date][1] != entriespath:
             left = prettify_path(MeetHash[name_date][1])
             right = prettify_path(entriespath)
             pwarning("Duplicate meets: %s, %s." % (left, right))
             break
+
 
 def main():
     for dirname, subdirs, files in os.walk(os.getcwd()):
@@ -97,4 +103,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    

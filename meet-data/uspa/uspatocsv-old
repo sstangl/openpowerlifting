@@ -8,14 +8,17 @@
 
 import sys
 
+
 def list_to_csv(x):
     return ','.join(x)
 
 # Given a line, return a list of (left, right) word ranges.
+
+
 def find_word_ranges(line):
-    ranges = [] # The accumulated list of ranges.
-    inWord = False # State tracker: whether currently constructing a range.
-    leftIndex = 0 # if inWord, then the left index of the range.
+    ranges = []  # The accumulated list of ranges.
+    inWord = False  # State tracker: whether currently constructing a range.
+    leftIndex = 0  # if inWord, then the left index of the range.
 
     # For simplification below, guarantee that line ends with a space.
     # This guarantees that the append() call below will always finish a span.
@@ -24,24 +27,30 @@ def find_word_ranges(line):
     for j in range(0, len(line)):
         if not line[j].isspace():
             if not inWord:
-                leftIndex = j;
+                leftIndex = j
                 inWord = True
-        else: 
+        else:
             if inWord:
-                ranges.append((leftIndex, j-1))
+                ranges.append((leftIndex, j - 1))
                 inWord = False
 
     return ranges
 
 # Given two (left, right) pair ranges, check whether they overlap.
+
+
 def ranges_overlap(x, y):
     return x[1] > y[0] and x[0] < y[1]
 
 # Sort the range list by left index.
+
+
 def sort_range_list(r):
-    return sorted(r, key = lambda x : x[0])
+    return sorted(r, key=lambda x: x[0])
 
 # Given two sets of range pairs, return a set with the ranges unioned.
+
+
 def union_ranges(r1, r2):
 
     # For each element in r1, attempt to expand it via r2.
@@ -71,14 +80,16 @@ def union_ranges(r1, r2):
 
 # Given a range and a list of ranges, return the index of the range that
 # most closely matches the range input.
+
+
 def find_closest_range(r, ranges):
     bestMatch = 999999
     bestIndex = -1
 
     for i in range(0, len(ranges)):
         # The columns often don't line up well.
-        midpoint1 = r[0] + (r[1] - r[0])/2
-        midpoint2 = ranges[i][0] + (ranges[i][1] - ranges[i][0])/2
+        midpoint1 = r[0] + (r[1] - r[0]) / 2
+        midpoint2 = ranges[i][0] + (ranges[i][1] - ranges[i][0]) / 2
         distance = abs(midpoint1 - midpoint2)
 
         if distance < bestMatch:
@@ -90,6 +101,8 @@ def find_closest_range(r, ranges):
 
 # Spreadsheet columns are represented as (left index, right index) tuples,
 # with the indices inclusive. Builds that list for the lines of the given page.
+
+
 def USPA_extract_sorted_page_column_ranges(lines):
     for i in range(0, len(lines)):
         line = lines[i]
@@ -113,8 +126,10 @@ def USPA_extract_sorted_page_column_ranges(lines):
     # Some pages at the end have garbage data.
     return []
 
-# Once again, 
+# Once again,
 WroteColumnNames = False
+
+
 def USPA_get_column_names_once(csv, lines, columnRanges):
     global WroteColumnNames
 
@@ -132,11 +147,11 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
 
     columns = []
 
-    line1 = lines[i-1]
+    line1 = lines[i - 1]
     line2 = lines[i]
-    
+
     for r in columnRanges:
-        name = line1[r[0] : r[1]+1].strip() + line2[r[0] : r[1]+1].strip()
+        name = line1[r[0]: r[1] + 1].strip() + line2[r[0]: r[1] + 1].strip()
         lname = name.lower()
 
         # Make some common transformations.
@@ -162,6 +177,8 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
 # Add a USPA lifter line.
 # This uses a literal parsing of the text file's column headers,
 # so place will be, for now, recorded in the name field.
+
+
 def USPA_add_lifter_row(csv, columnRanges, line):
     words = line.split()
 
@@ -172,7 +189,7 @@ def USPA_add_lifter_row(csv, columnRanges, line):
     # People often have complicated names.
     # Subtract 3 for slack adjustment, since it doesn't usually
     # line up perfectly.
-    name = line[0 : columnRanges[1][0] - 3]
+    name = line[0: columnRanges[1][0] - 3]
 
     # We're going to keep the name field around for determining
     # its column length. Sometimes the column has whitespace on the left,
@@ -180,7 +197,7 @@ def USPA_add_lifter_row(csv, columnRanges, line):
     row[0] = name.strip()
 
     # After the name, all the fields should be space-delimited.
-    withoutName = (' ' * len(name)) + line[len(name) :]
+    withoutName = (' ' * len(name)) + line[len(name):]
 
     # Get the boundaries of each word.
     # We'll use this to look up each word in the columnRanges table,
@@ -190,19 +207,21 @@ def USPA_add_lifter_row(csv, columnRanges, line):
     # For each word, look up what column range it mostly closely matches.
     for r in ranges:
         index = find_closest_range(r, columnRanges)
-    
+
         # Emit debug output for failure case requiring manual intervention.
         if row[index]:
             print('Column matching error (manually align columns):')
-            print('Matched "%s" to column already containing "%s"' % (line[r[0] : r[1]+1], row[index]))
+            print('Matched "%s" to column already containing "%s"' %
+                  (line[r[0]: r[1] + 1], row[index]))
             print(line)
 
         # If this assert fires, the input file must be manually fixed to
         # align columns reasonably. Debug output helpfully provided above.
         assert(not row[index])
-        row[index] = withoutName[r[0] : r[1]+1]
+        row[index] = withoutName[r[0]: r[1] + 1]
 
     csv.append(row)
+
 
 def USPA_add_4ths_row(csv, columnRanges, line):
     # Lines containing 4ths shouldn't have anything else on the line.
@@ -211,12 +230,13 @@ def USPA_add_4ths_row(csv, columnRanges, line):
         if not '4th-' in word and not '4TH-' in word:
             print("Error on line: %s" % line)
         assert('4th-' in word or '4TH-' in word)
-        
+
     # Construct the row, using columnRanges for placement.
     row = [''] * len(columnRanges)
 
     # Match ranges to a column.
-    ranges = find_word_ranges(line.replace('4th-','    ').replace('4TH-','    '))
+    ranges = find_word_ranges(line.replace(
+        '4th-', '    ').replace('4TH-', '    '))
     fullranges = find_word_ranges(line)
     assert(len(ranges) == len(fullranges))
 
@@ -226,7 +246,7 @@ def USPA_add_4ths_row(csv, columnRanges, line):
         index = find_closest_range(ranges[i], columnRanges)
 
         assert(not row[index])
-        row[index] = line[fullranges[i][0] : fullranges[i][1]+1]
+        row[index] = line[fullranges[i][0]: fullranges[i][1] + 1]
 
     csv.append(row)
 
@@ -255,12 +275,14 @@ pages = wholefile.split("\f")
 csv = []
 
 # Parse and append the page's data to the csv array.
+
+
 def parse_page(csv, page):
     lines = page.split("\n")
 
     columnRanges = USPA_extract_sorted_page_column_ranges(lines)
     if not columnRanges:
-        return # Not a page with data.
+        return  # Not a page with data.
 
     USPA_get_column_names_once(csv, lines, columnRanges)
 
@@ -287,7 +309,7 @@ def parse_page(csv, page):
         # Lifters are organized by divisions.
         # Divisions are given their own rows.
         # They always precede a lifter row.
-        elif i + 1 < len(lines) and is_lifter_row(lines[i+1]) and not 'NAME' in line:
+        elif i + 1 < len(lines) and is_lifter_row(lines[i + 1]) and not 'NAME' in line:
             # Just output the division into the csv array.
             # We will modify the array in post-processing.
             csv.append(["DIVISION:" + line.strip()])
@@ -297,11 +319,15 @@ for page in pages:
     parse_page(csv, page)
 
 # Remove all the 'DIVISION' line markers.
+
+
 def csv_remove_divisions(csv):
     return [x for x in csv if 'DIVISION:' not in x[0]]
 
 # First, get rid of all the lines starting with "DIVISION:",
 # which we inserted for stateful division tracking.
+
+
 def csv_integrate_divisions(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -373,28 +399,31 @@ def csv_integrate_4ths(csv):
             row = csv[i]
 
             # Insert a row to the right of the one containing the 4th attempt.
-            row.insert(k+1, '')
+            row.insert(k + 1, '')
 
             # Move the 4th attempt to that column in the previous row.
             if '4th-' in row[k].lower():
-                csv[i-1][k+1] = row[k].replace('4th-','').replace('4TH-','')
+                csv[i - 1][k +
+                           1] = row[k].replace('4th-', '').replace('4TH-', '')
                 row[k] = ''
 
         # Now figure out what the column header should be.
         # We can infer it from the previous column.
         if csv[0][k] == "BestSquatLBS":
-            csv[0][k+1] = "Squat4LBS"
+            csv[0][k + 1] = "Squat4LBS"
         elif csv[0][k] == "BestBenchLBS":
-            csv[0][k+1] = "Bench4LBS"
+            csv[0][k + 1] = "Bench4LBS"
         elif csv[0][k] == "BestDeadliftLBS":
-            csv[0][k+1] = "Deadlift4LBS"
+            csv[0][k + 1] = "Deadlift4LBS"
         else:
-            csv[0][k+1] = csv[0][k] + '4'
+            csv[0][k + 1] = csv[0][k] + '4'
 
     # Get rid of all the blanked rows.
     return [x for x in csv if len(x[0]) != 0]
 
 # The name field looks like "1 Maggie Haywood". Put that 1 into its own field.
+
+
 def csv_extract_place_from_name(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -420,6 +449,8 @@ def csv_extract_place_from_name(csv):
 
 # The division field contains sex and equipment classification.
 # Extract that into separate fields for easier parsing.
+
+
 def csv_extract_sex_and_equipment(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -428,15 +459,15 @@ def csv_extract_sex_and_equipment(csv):
     divcol = 2
     assert(csv[0][divcol] == 'Division')
 
-    csv[0].insert(divcol+1, 'Sex')
-    csv[0].insert(divcol+2, 'Equipment')
+    csv[0].insert(divcol + 1, 'Sex')
+    csv[0].insert(divcol + 2, 'Equipment')
 
     for i in range(1, len(csv)):
         row = csv[i]
         divfield = row[divcol].lower()
 
         sex = 'F' if 'women' in divfield else 'M'
-        
+
         if 'raw' in divfield and not 'classic' in divfield:
             equipment = 'Raw'
         elif 'classic' in divfield:
@@ -448,8 +479,8 @@ def csv_extract_sex_and_equipment(csv):
         else:
             equipment = ''
 
-        row.insert(divcol+1, sex)
-        row.insert(divcol+2, equipment)
+        row.insert(divcol + 1, sex)
+        row.insert(divcol + 2, equipment)
 
     return csv
 

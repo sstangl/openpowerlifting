@@ -28,7 +28,8 @@ def getmeetlist(html):
 
     # Just look at all links from the entire page.
     # There seems to be a parsing error when looking just at the 'post-content'
-    # div, where some <a> tags at the end get overlooked for some unknown reason.
+    # div, where some <a> tags at the end get overlooked for some unknown
+    # reason.
 
     urls = []
     for a in soup.find_all('a'):

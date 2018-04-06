@@ -27,8 +27,8 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    content = soup.find("main", {"class": "content"});
-    alist = content.find_all("a");
+    content = soup.find("main", {"class": "content"})
+    alist = content.find_all("a")
 
     urls = []
     for a in alist:

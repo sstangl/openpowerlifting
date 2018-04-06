@@ -18,5 +18,5 @@ for row in csv.rows:
         rows2.append(row)
 
 csv.rows = rows2
-with open(sys.argv[1],'w') as fd:
+with open(sys.argv[1], 'w') as fd:
     csv.write(fd)

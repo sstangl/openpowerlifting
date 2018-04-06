@@ -36,7 +36,8 @@ def getdirname(url):
 
 def getmeetinfo(soup):
     csv = Csv()
-    csv.fieldnames = ['Federation','Date','MeetCountry','MeetState','MeetTown','MeetName']
+    csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
+                      'MeetState', 'MeetTown', 'MeetName']
 
     # Get the facts table.
     fakta = soup.find_all('h4', text='Fakta')
@@ -52,8 +53,8 @@ def getmeetinfo(soup):
     dotdate = dato.find_next('td').text
     # The date is formatted as dd.mm.yyyy.
     assert '.' in dotdate
-    [day,month,year] = dotdate.split('.')
-    date = '%s-%s-%s' % (year,month,day)
+    [day, month, year] = dotdate.split('.')
+    date = '%s-%s-%s' % (year, month, day)
 
     # Get the town.
     sted = tbody.find('td', text='Sted')
@@ -70,9 +71,9 @@ def getmeetinfo(soup):
     country = 'Norway'
     state = ''
 
-    row = [fed,date,country,state,town,name]
-    for i,r in enumerate(row):
-        row[i] = r.replace(',',' ').replace('  ',' ').strip()
+    row = [fed, date, country, state, town, name]
+    for i, r in enumerate(row):
+        row[i] = r.replace(',', ' ').replace('  ', ' ').strip()
     csv.rows = [row]
     return csv
 
@@ -105,11 +106,11 @@ def getresults(soup):
         elif h == 'Kr.vekt':
             csv.fieldnames += ['BodyweightKg']
         elif h == 'Knebøy':
-            csv.fieldnames += ['Squat1Kg','Squat2Kg','Squat3Kg']
+            csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
         elif h == 'Benkpress':
-            csv.fieldnames += ['Bench1Kg','Bench2Kg','Bench3Kg']
+            csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
         elif h == 'Markløft':
-            csv.fieldnames += ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg']
+            csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
         elif h == 'Totalt':
             csv.fieldnames += ['TotalKg']
         elif h == 'Poeng':
@@ -118,7 +119,7 @@ def getresults(soup):
             error("Unknown column name: \"%s\"" % h)
 
     # These columns are added from the category rows.
-    csv.fieldnames += ['Division','Sex']
+    csv.fieldnames += ['Division', 'Sex']
 
     divstate = None
     sexstate = None
@@ -132,20 +133,20 @@ def getresults(soup):
             text = row[0].lower()
             if 'damer' in text:
                 sexstate = 'F'
-                text = text.replace('damer','').strip()
+                text = text.replace('damer', '').strip()
             elif 'herrer' in text:
                 sexstate = 'M'
-                text = text.replace('herrer','').strip()
+                text = text.replace('herrer', '').strip()
 
             # Extract division information.
             if 'ungdom' in text:
-                divstate = text.replace('ungdom','Teen')
+                divstate = text.replace('ungdom', 'Teen')
             elif 'junior' in text:
-                divstate = text.replace('junior','Junior')
+                divstate = text.replace('junior', 'Junior')
             elif 'åpen' in text:
                 divstate = 'Open'
             elif 'veteran' in text:
-                divstate = text.replace('veteran','Master')
+                divstate = text.replace('veteran', 'Master')
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
@@ -159,11 +160,11 @@ def getresults(soup):
             for td in tr.find_all('td'):
                 text = td.text
                 c = td.get('class')
-                if c and 'underkjent' in c: # Failed lift.
+                if c and 'underkjent' in c:  # Failed lift.
                     text = '-' + text
-                if c and 'ikke_loftet' in c: # Skipped lift.
+                if c and 'ikke_loftet' in c:  # Skipped lift.
                     text = ''
-                row.append(text.strip().replace('  ',' ').replace(',',' '))
+                row.append(text.strip().replace('  ', ' ').replace(',', ' '))
 
             row = row + [divstate, sexstate]
             csv.rows += [row]
@@ -176,11 +177,11 @@ def fixplace(csv):
     placeidx = csv.index('Place')
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
-        row[placeidx] = row[placeidx].replace('.','')
+        row[placeidx] = row[placeidx].replace('.', '')
         if row[placeidx] == '-':
             row[placeidx] = 'DQ'
-            row[totalidx] = '' # Instead of a zero.
-        elif row[placeidx].lower() == 'gj': # Guest lifter, I think.
+            row[totalidx] = ''  # Instead of a zero.
+        elif row[placeidx].lower() == 'gj':  # Guest lifter, I think.
             row[placeidx] = 'G'
 
 
@@ -188,7 +189,7 @@ def fixplace(csv):
 def fixclass(csv):
     clsidx = csv.index('WeightClassKg')
     for row in csv.rows:
-        row[clsidx] = row[clsidx].replace('-','')
+        row[clsidx] = row[clsidx].replace('-', '')
 
 
 # The equipment is marked as "*" for Raw, or nothing for Single-ply.
@@ -240,11 +241,13 @@ def markevent(csv):
             except:
                 pass
         return l
-                
 
-    squatidxl = getevtindices(csv, ['Squat1Kg','Squat2Kg','Squat3Kg','BestSquatKg'])
-    benchidxl = getevtindices(csv, ['Bench1Kg','Bench2Kg','Bench3Kg','BestBenchKg'])
-    deadliftidxl = getevtindices(csv, ['Deadlift1Kg','Deadlift2Kg','Deadlift3Kg','BestDeadliftKg'])
+    squatidxl = getevtindices(
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
+    benchidxl = getevtindices(
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
+    deadliftidxl = getevtindices(
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
 
     for row in csv.rows:
         evt = ''
@@ -271,8 +274,8 @@ def remove_empty_cols_ignore_fieldname(csv):
         return True
 
     def getemptyidx(csv):
-        for i,col in enumerate(csv.fieldnames):
-            if iscolempty(csv,i):
+        for i, col in enumerate(csv.fieldnames):
+            if iscolempty(csv, i):
                 return i
         return -1
 
@@ -283,22 +286,21 @@ def remove_empty_cols_ignore_fieldname(csv):
         csv.remove_column_by_index(idx)
 
 
-
 def main(url):
     html = gethtml(url)
 
     # The HTML returned by the website is malformed, which breaks the parser.
     # Part of the results table looks like: <tr>Totalt</th>, which is treated as </table>.
     # Work around this by getting rid of all <th>.
-    html = html.replace('<th>','<td>')
-    html = html.replace('</th>','</td>')
+    html = html.replace('<th>', '<td>')
+    html = html.replace('</th>', '</td>')
     # An inline script is accidentally closed with too many quotation marks.
-    html = html.replace(';"" ',';" ')
+    html = html.replace(';"" ', ';" ')
     # The following text occurs for bench-only meets:
     #   <td align="center" colspan="3">Benkpress</strong>
     # Which again trips up the parser.
-    html = html.replace('<strong>','')
-    html = html.replace('</strong>','')
+    html = html.replace('<strong>', '')
+    html = html.replace('</strong>', '')
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -313,7 +315,8 @@ def main(url):
     fixequipment(entriescsv)
 
     # For old meets, the 1-2-3 results are blank, and only one of them is filled in.
-    # If after removing empty columns, only one lift is left, then that's a Best column.
+    # If after removing empty columns, only one lift is left, then that's a
+    # Best column.
     remove_empty_cols_ignore_fieldname(entriescsv)
     if 'Squat1Kg' in entriescsv.fieldnames:
         if not 'Squat2Kg' in entriescsv.fieldnames and not 'Squat3Kg' in entriescsv.fieldnames:
@@ -323,18 +326,23 @@ def main(url):
             entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'BestBenchKg'
     if 'Deadlift1Kg' in entriescsv.fieldnames:
         if not 'Deadlift2Kg' in entriescsv.fieldnames and not 'Deadlift3Kg' in entriescsv.fieldnames:
-            entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'BestDeadliftKg'
+            entriescsv.fieldnames[entriescsv.index(
+                'Deadlift1Kg')] = 'BestDeadliftKg'
 
-    # Wilks will be automatically calculated later. Feds get it wrong all the time.
+    # Wilks will be automatically calculated later. Feds get it wrong all the
+    # time.
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
 
     if 'Squat1Kg' in entriescsv.fieldnames and not 'BestSquatKg' in entriescsv.fieldnames:
-        calc_best_lift(entriescsv, 'BestSquatKg', ['Squat1Kg','Squat2Kg','Squat3Kg'])
+        calc_best_lift(entriescsv, 'BestSquatKg', [
+                       'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
     if 'Bench1Kg' in entriescsv.fieldnames and not 'BestBenchKg' in entriescsv.fieldnames:
-        calc_best_lift(entriescsv, 'BestBenchKg', ['Bench1Kg','Bench2Kg','Bench3Kg'])
+        calc_best_lift(entriescsv, 'BestBenchKg', [
+                       'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
     if 'Deadlift1Kg' in entriescsv.fieldnames and not 'BestDeadliftKg' in entriescsv.fieldnames:
-        calc_best_lift(entriescsv, 'BestDeadliftKg', ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
+        calc_best_lift(entriescsv, 'BestDeadliftKg', [
+                       'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     # Figure out event information.
     markevent(entriescsv)
@@ -352,7 +360,7 @@ def main(url):
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
-        fd.write(url+"\n")
+        fd.write(url + "\n")
 
     print("Imported into %s." % dirname)
 

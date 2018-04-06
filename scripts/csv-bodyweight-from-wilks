@@ -5,12 +5,13 @@ import sys
 from oplcsv import Csv
 from wilks import wilks
 
+
 def bounded_search(is_male, totalkg, target, lower, upper):
     delta = upper - lower
     if delta < 0.05:
         return upper
 
-    mid = lower + delta/2
+    mid = lower + delta / 2
     points = wilks(is_male, mid, totalkg)
 
     # Too many points -- increase the bodyweight.
@@ -31,7 +32,7 @@ def calc_bw(is_male, wtcls, totalkg, target):
 
     # Too few points -- lower the bodyweight.
     return bounded_search(is_male, totalkg, target, wtcls - 15, wtcls)
-    
+
 
 def main(filename):
     csv = Csv(filename)
@@ -51,12 +52,13 @@ def main(filename):
         wtcls = row[wtclsidx]
         totalkg = row[totalkgidx]
         if '+' in wtcls:
-            wtcls = wtcls.replace('+','')
+            wtcls = wtcls.replace('+', '')
 
         if not sex or not wilks or not wtcls or not totalkg:
             continue
 
-        row[bwidx] = str(calc_bw(sex == 'M', float(wtcls), float(totalkg), float(wilks)))
+        row[bwidx] = str(calc_bw(sex == 'M', float(
+            wtcls), float(totalkg), float(wilks)))
 
     with open(filename, 'w') as fd:
         csv.write(fd)

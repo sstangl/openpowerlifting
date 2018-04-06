@@ -12,7 +12,7 @@ import sys
 import urllib.request
 
 
-NUMPAGES = 1 # Number of pages to go back in results, 10 results per page.
+NUMPAGES = 1  # Number of pages to go back in results, 10 results per page.
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 FEDURL = "http://www.irishpowerliftingfederation.com/competitions/results/"
 
@@ -34,13 +34,14 @@ def gethtml(url):
     with urllib.request.urlopen(url) as r:
         return r.read()
 
+
 def getmeetlist(html):
     # The HTML is malformed, for example as follows:
     #   <p><a href="foo"></p><p></a></p>
     # Work around this by deleting all the <p> tags.
     html = str(html, 'utf-8')
-    html = html.replace('<p>','')
-    html = html.replace('</p>','')
+    html = html.replace('<p>', '')
+    html = html.replace('</p>', '')
 
     soup = BeautifulSoup(html, 'html.parser')
     content = soup.find("div", {"class": "entry-content"})

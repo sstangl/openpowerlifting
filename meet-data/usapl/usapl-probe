@@ -16,7 +16,7 @@ import urllib.request
 
 
 MEETSURL = "http://usapl.liftingdatabase.com/competitions"
-BASEURL  = "http://usapl.liftingdatabase.com/"
+BASEURL = "http://usapl.liftingdatabase.com/"
 USAPLDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -36,8 +36,9 @@ def color(s):
 
 # Named tuple.
 class Meet:
+
     def __init__(self, sanction, url):
-        self.sanction = sanction.replace(' ','').strip()
+        self.sanction = sanction.replace(' ', '').strip()
         self.url = url
 
     def __str__(self):
@@ -67,7 +68,8 @@ def getmeetlist(html):
         sanction = cells[2].text.strip()
         url = BASEURL + cells[1].find('a')['href']
 
-        # XXX: Disregard this one clearly-incorrect sanction. Remove when USAPL fixes.
+        # XXX: Disregard this one clearly-incorrect sanction. Remove when USAPL
+        # fixes.
         if sanction == 'NS-016-07':
             continue
 
@@ -83,7 +85,8 @@ def getmeetlist(html):
     return meetlist
 
 
-# Entered meets are stored in the current directory in a directory with the sanction ID.
+# Entered meets are stored in the current directory in a directory with
+# the sanction ID.
 def getenteredmeets():
     return os.listdir(USAPLDIR)
 

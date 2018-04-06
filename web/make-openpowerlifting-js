@@ -20,7 +20,8 @@
 import os
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
+sys.path.append(os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'scripts')))
 import oplcsv
 import csvtojs
 
@@ -28,7 +29,7 @@ ENTRIESCSV = 'build/static/data/openpowerlifting.csv'
 
 
 # Returns the greater of two strings, as interpreted as floats.
-def strmax(a,b):
+def strmax(a, b):
     if a == '':
         return b
     if b == '':
@@ -54,7 +55,8 @@ def main():
         row[csv.index('BenchKg')] = \
             strmax(row[csv.index('BestBenchKg')], row[csv.index('Bench4Kg')])
         row[csv.index('DeadliftKg')] = \
-            strmax(row[csv.index('BestDeadliftKg')], row[csv.index('Deadlift4Kg')])
+            strmax(row[csv.index('BestDeadliftKg')],
+                   row[csv.index('Deadlift4Kg')])
 
         # Represent Equipment as an integer.
         eqp = row[csv.index('Equipment')]

@@ -20,7 +20,6 @@ def main(filename):
     sexidx = csv.index('Sex')
     wtclsidx = csv.index('WeightClassKg')
 
-
     sex = None
     wtcls = None
 

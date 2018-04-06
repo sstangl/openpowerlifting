@@ -6,8 +6,10 @@
 # to social media accounts.
 #
 
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'scripts')))
 import oplcsv
 
 SOCIALFILE = '../lifter-data/social-instagram.csv'
@@ -17,8 +19,8 @@ def main():
     csv = oplcsv.Csv(SOCIALFILE)
     assert csv.fieldnames[0] == 'Name'
 
-    for i,field in enumerate(csv.fieldnames[1:]):
-        print('var socialmedia_%s = %d;' % (field,i))
+    for i, field in enumerate(csv.fieldnames[1:]):
+        print('var socialmedia_%s = %d;' % (field, i))
 
     print('var socialmedia = (function() {')
     print('var s = {};')
@@ -28,7 +30,6 @@ def main():
 
     print('return s;')
     print('})();')
-    
 
 
 if __name__ == '__main__':

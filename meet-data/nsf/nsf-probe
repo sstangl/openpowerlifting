@@ -49,7 +49,7 @@ def getmeetlist(html):
 
         if not 'http' in url:
             url = BASEURL + url
-            url = url.replace('../','')
+            url = url.replace('../', '')
         if not url in urls:
             urls.append(url)
 

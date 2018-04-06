@@ -32,6 +32,7 @@ BASEURL = "http://www.americanpowerliftingcommittee-usa.com/"
 def color(s):
     return "\033[1;36m" + s + "\033[0;m"
 
+
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -53,6 +54,7 @@ def getmeetlist(html):
 
     return urls
 
+
 def get_irondawg_meetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -69,6 +71,7 @@ def get_irondawg_meetlist(html):
             urls.append(url)
 
     return urls
+
 
 def main():
     meetlist = get_irondawg_meetlist(oplprobe.gethtml(IRONDAWGURL))

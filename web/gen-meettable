@@ -6,8 +6,10 @@
 
 import bisect
 import html
-import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'scripts')))
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'scripts')))
 import oplcsv
 import urllib.parse
 
@@ -15,7 +17,10 @@ ENTRIESCSV = '../build/openpowerlifting.csv'
 MEETCSV = '../build/meets.csv'
 SOCIALFILE = '../lifter-data/social-instagram.csv'
 
-# Gets some row that contains the given meetid, using a super ham-fisted binary search.
+# Gets some row that contains the given meetid, using a super ham-fisted
+# binary search.
+
+
 def findsomelifterin(meetid, entriescsv):
     meetidx = entriescsv.index('MeetID')
     rows = entriescsv.rows
@@ -32,7 +37,7 @@ def findsomelifterin(meetid, entriescsv):
 
         # In edge cases, just keep stepping by one. It's fast enough.
         step = max(1, int(step / 2))
-        
+
     return x
 
 
@@ -48,32 +53,44 @@ def getliftersfor(meetid, entriescsv):
     # Find the lowest and highest indices for lifters in this meet, inclusive.
     lowest = x
     while lowest > 0:
-        if entriescsv.rows[lowest-1][meetidx] != meetid:
+        if entriescsv.rows[lowest - 1][meetidx] != meetid:
             break
         lowest = lowest - 1
 
     highest = x
     while highest < len(entriescsv.rows) - 1:
-        if entriescsv.rows[highest+1][meetidx] != meetid:
+        if entriescsv.rows[highest + 1][meetidx] != meetid:
             break
         highest = highest + 1
 
-    return entriescsv.rows[lowest : highest + 1]
+    return entriescsv.rows[lowest: highest + 1]
 
 
 def getmonth(m):
-    if m == '01': return 'January'
-    if m == '02': return 'February'
-    if m == '03': return 'March'
-    if m == '04': return 'April'
-    if m == '05': return 'May'
-    if m == '06': return 'June'
-    if m == '07': return 'July'
-    if m == '08': return 'August'
-    if m == '09': return 'September'
-    if m == '10': return 'October'
-    if m == '11': return 'November'
-    if m == '12': return 'December'
+    if m == '01':
+        return 'January'
+    if m == '02':
+        return 'February'
+    if m == '03':
+        return 'March'
+    if m == '04':
+        return 'April'
+    if m == '05':
+        return 'May'
+    if m == '06':
+        return 'June'
+    if m == '07':
+        return 'July'
+    if m == '08':
+        return 'August'
+    if m == '09':
+        return 'September'
+    if m == '10':
+        return 'October'
+    if m == '11':
+        return 'November'
+    if m == '12':
+        return 'December'
     return ''
 
 
@@ -88,6 +105,8 @@ def makelifterurl(liftername):
 
 
 SocialMediaCSV = None
+
+
 def makeinstagram(liftername):
     global SocialMediaCSV
     if not SocialMediaCSV:
@@ -118,7 +137,7 @@ def main():
     # Order the meetcsv in the order of intended appearance.
     def sorter(x):
         # First, sort by date. Negate for higher dates first.
-        date = -int(x[dateidx].replace('-',''))
+        date = -int(x[dateidx].replace('-', ''))
         # Within a date, sort by federation.
         fed = x[fedidx]
         # Within a federation, sort by meet name.
@@ -148,16 +167,17 @@ def main():
     print('<tbody>')
     lastmonth = ''
 
-    for rowidx,row in enumerate(csv.rows):
+    for rowidx, row in enumerate(csv.rows):
         # How many lifters competed?
         results = getliftersfor(row[meetidx], lifters)
-        results = sorted(results, key=lambda x : float(x[lifterswilksidx] or 0.0), reverse=True)
+        results = sorted(results, key=lambda x: float(
+            x[lifterswilksidx] or 0.0), reverse=True)
 
-        rawlifters = list(filter(lambda x : x[lifterseqidx] == 'Raw' or
-                                       x[lifterseqidx] == 'Wraps',
+        rawlifters = list(filter(lambda x: x[lifterseqidx] == 'Raw' or
+                                 x[lifterseqidx] == 'Wraps',
                                  results))
-        gearedlifters = list(filter(lambda x : x[lifterseqidx] == 'Single-ply' or
-                                          x[lifterseqidx] == 'Multi-ply',
+        gearedlifters = list(filter(lambda x: x[lifterseqidx] == 'Single-ply' or
+                                    x[lifterseqidx] == 'Multi-ply',
                                     results))
 
         # Lifters who entered multiple events should only count once.
@@ -174,8 +194,8 @@ def main():
         if len(rawlifters) > 0 and rawlifters[0][lifterswilksidx]:
             bestrawlifter = rawlifters[0][liftersnameidx]
             bestrawwilks = rawlifters[0][lifterswilksidx]
-            rawlifterhtml = '<a href="%s">%s</a>%s' % (makelifterurl(bestrawlifter), \
-                    bestrawlifter, makeinstagram(bestrawlifter))
+            rawlifterhtml = '<a href="%s">%s</a>%s' % (makelifterurl(bestrawlifter),
+                                                       bestrawlifter, makeinstagram(bestrawlifter))
         else:
             bestrawlifter = ''
             bestrawwilks = ''
@@ -185,8 +205,8 @@ def main():
             bestgearedlifter = gearedlifters[0][liftersnameidx]
             bestgearedwilks = gearedlifters[0][lifterswilksidx]
             gearedlifterhtml = '<a href="%s">%s</a>%s' % \
-                    (makelifterurl(bestgearedlifter), bestgearedlifter, \
-                     makeinstagram(bestgearedlifter))
+                (makelifterurl(bestgearedlifter), bestgearedlifter,
+                 makeinstagram(bestgearedlifter))
         else:
             bestgearedlifter = ''
             bestgearedwilks = ''
@@ -195,7 +215,8 @@ def main():
         # If the month changed, emit a header row.
         date = row[dateidx]
         yrm = date[0:date.rindex('-')]
-        # Don't emit the first divider since it looks weird cutting off the headers.
+        # Don't emit the first divider since it looks weird cutting off the
+        # headers.
         if lastmonth != '' and lastmonth != yrm:
             # These rows should show if the federation selector is active and they have content.
             # Accumulate a list of federations in this month.
@@ -206,21 +227,22 @@ def main():
                 if yrm2 != yrm:
                     break
                 if not csv.rows[i][fedidx] in fedlist:
-                    fedlist.append(csv.rows[i][fedidx].replace('-','_'))
-            
-            [year,month] = yrm.split('-')
+                    fedlist.append(csv.rows[i][fedidx].replace('-', '_'))
+
+            [year, month] = yrm.split('-')
             print('<tr class="%s"><td colspan="%d" class="table-divider">%s %s</td></tr>'
-                   % ('_' + (' _'.join(fedlist)), len(columns), getmonth(month), year))
+                  % ('_' + (' _'.join(fedlist)), len(columns), getmonth(month), year))
             lastmonth = yrm
         lastmonth = yrm
 
-        meeturl = makemeeturl(row[meetpathidx]);
+        meeturl = makemeeturl(row[meetpathidx])
 
-        print('<tr class="%s">' % ('_' + row[fedidx].replace('-','_')))
+        print('<tr class="%s">' % ('_' + row[fedidx].replace('-', '_')))
         print('<td>%s</td>' % row[fedidx])
         print('<td><a href="%s">%s</a></td>' % (meeturl, date))
         print('<td>%s</td>' % location)
-        print('<td class="meetname"><a href="%s">%s</a></td>' % (meeturl, row[meetnameidx]))
+        print('<td class="meetname"><a href="%s">%s</a></td>' %
+              (meeturl, row[meetnameidx]))
         print('<td>%d</td>' % len(names))
         print('<td>%s</td>' % rawlifterhtml)
         print('<td>%s</td>' % bestrawwilks)

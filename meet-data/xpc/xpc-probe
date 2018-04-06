@@ -41,14 +41,14 @@ def getmeetlist(html):
         error("Couldn't find the Meet Results drop-down menu bar.")
 
     li = meet_a.parent
-    submenu = li.find("ul");
+    submenu = li.find("ul")
     events = submenu.find_all("li")
 
     urls = []
     for e in events:
         for a in e.find_all('a'):
             url = a['href']
-            if not url in urls: # Sometimes the entries show up twice.
+            if not url in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls

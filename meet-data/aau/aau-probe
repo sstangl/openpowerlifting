@@ -32,7 +32,7 @@ def getmeetlist(html):
         href = a['href']
 
         # AAU keeps generating invalid URLs, solved by this replace.
-        href = href.replace('ing//results','ing/results')
+        href = href.replace('ing//results', 'ing/results')
 
         if href.startswith('/'):
             href = ROOTURL + href

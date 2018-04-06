@@ -18,7 +18,7 @@ def showdbstats():
         # If we're on Mac OS X, the locale is named `en_US.UTF-8` so let's give
         # it a try. Otherwise, we're missing the locale altogether.
         locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
-     
+
     csv = oplcsv.Csv('../build/openpowerlifting.csv')
     meets = oplcsv.Csv('../build/meets.csv')
 
@@ -26,15 +26,20 @@ def showdbstats():
     num_meets = locale.format('%d', len(meets.rows), grouping=True)
     compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print('%s Entries &mdash; %s Meets &mdash; Updated %s' % (num_entries, num_meets, compiledate))
+    print('%s Entries &mdash; %s Meets &mdash; Updated %s' %
+          (num_entries, num_meets, compiledate))
 
-def addnav(activetab, tab, title, filename = None):
+
+def addnav(activetab, tab, title, filename=None):
     filename = tab if filename == None else filename
     active = 'nav__link--active' if activetab == tab else ''
-    print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(filename, active, title))
+    print(
+        '<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(filename, active, title))
+
 
 def main(activetab):
-    assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'faq', 'data', 'contact']
+    assert activetab in ['rankings', 'lifters',
+                         'meet', 'meetlist', 'faq', 'data', 'contact']
     print('<div id="header">')
     print('<img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/>')
     addnav(activetab, 'rankings', 'Rankings', 'index')

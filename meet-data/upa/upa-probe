@@ -18,7 +18,7 @@ sys.path.append('scripts')
 import oplprobe
 
 # If NUMPAGES is very large, iteration stops at the first 404.
-NUMPAGES = 2 # Number of pages to go through, 10 results per page.
+NUMPAGES = 2  # Number of pages to go through, 10 results per page.
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 FEDURL = "http://www.upapower.com/development/?cat=52"
 
@@ -45,7 +45,7 @@ def getmeetlist(html):
     for e in events:
         for a in e.find_all('a'):
             url = a['href']
-            if not url in urls: # Sometimes the entries show up twice.
+            if not url in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls
@@ -55,7 +55,7 @@ def main():
     meetlist = []
 
     # Iterate through pages until the site returns a 404.
-    for i in range(1, NUMPAGES+1):
+    for i in range(1, NUMPAGES + 1):
         url = getpageurl(i)
         try:
             html = oplprobe.gethtml(url)

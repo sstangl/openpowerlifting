@@ -6,15 +6,15 @@ import sys
 
 def getcategory(csv, row):
     if 'Division' in csv.fieldnames:
-        dividx    = csv.index('Division')
+        dividx = csv.index('Division')
         div = row[dividx].lower()
     else:
         div = 'Open'
 
-    eqidx     = csv.index('Equipment')
-    sexidx    = csv.index('Sex')
-    eventidx  = csv.index('Event')
-    wtclsidx  = csv.index('WeightClassKg')
+    eqidx = csv.index('Equipment')
+    sexidx = csv.index('Sex')
+    eventidx = csv.index('Event')
+    wtclsidx = csv.index('WeightClassKg')
     return (div, row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
@@ -32,13 +32,13 @@ def main(filename):
 
     csv.append_column('Place')
 
-    placeidx  = csv.index('Place')
-    totalidx  = csv.index('TotalKg')
+    placeidx = csv.index('Place')
+    totalidx = csv.index('TotalKg')
 
     if 'BodyweightKg' in csv.fieldnames:
         bwidx = csv.index('BodyweightKg')
     else:
-        bwidx = csv.index('TotalKg') # Equivalent to just ignoring bodyweight.
+        bwidx = csv.index('TotalKg')  # Equivalent to just ignoring bodyweight.
 
     categories = []
     for row in csv.rows:
@@ -59,10 +59,11 @@ def main(filename):
 
         # Order the rows by greatest total.
         # If total is the same, order within total by lowest bodyweight.
-        lifters.sort(key=lambda x : (float(x[totalidx] or 0), -float(x[bwidx] or 999)), reverse=True)
+        lifters.sort(key=lambda x: (
+            float(x[totalidx] or 0), -float(x[bwidx] or 999)), reverse=True)
 
         for i, row in enumerate(lifters):
-            row[placeidx] = str(i+1)
+            row[placeidx] = str(i + 1)
 
     # Mark Guest entries.
     for row in csv.rows:
@@ -72,7 +73,7 @@ def main(filename):
 
     with open(filename, 'w') as fd:
         csv.write(fd)
-        
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
