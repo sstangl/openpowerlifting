@@ -45,6 +45,18 @@ def pwarning(s):
 
 ###############################################
 
+# Given a name like "/home/foobar/dev/openpowerlifting/meet-data/apf/1503/entries.csv",
+# returns a name like "apf/1503".
+def prettify_path(path):
+    # Only include things after "/meet-data/".
+    try:
+        idx = path.index('/meet-data/') + len('/meet-data/')
+        path = path[idx:]
+    except:
+        pass
+    return path.rstrip('/entries.csv')
+
+
 def check_duplicates(entriespath,meetpath):
     global MeetHash
 
@@ -52,11 +64,7 @@ def check_duplicates(entriespath,meetpath):
     meetcsv = oplcsv.Csv(meetpath)
 
     dateidx = meetcsv.index('Date')
-    meetnameidx = meetcsv.index('MeetName')
-
-    row = meetcsv.rows[0]
-    meetdate = row[dateidx]
-
+    meetdate = meetcsv.rows[0][dateidx]
 
     nameidx = entriescsv.index('Name')
     totalidx = entriescsv.index('TotalKg')
@@ -69,22 +77,22 @@ def check_duplicates(entriespath,meetpath):
 
         if not name_date in MeetHash:
             MeetHash[name_date] = (total,entriespath)
-        elif total != '' and MeetHash[name_date][0]==total and MeetHash[name_date][1] != entriespath:
-            pwarning("Duplicate meets: %s, %s." % (MeetHash[name_date][1],entriespath))
+        elif total != '' and MeetHash[name_date][0] == total and MeetHash[name_date][1] != entriespath:
+            left = prettify_path(MeetHash[name_date][1])
+            right = prettify_path(entriespath)
+            pwarning("Duplicate meets: %s, %s." % (left, right))
             break
 
 def main():
     for dirname, subdirs, files in os.walk(os.getcwd()):
-            if 'entries.csv' in files:
-                entriespath = dirname + os.sep + 'entries.csv'
-                meetpath = dirname + os.sep + 'meet.csv'
-                check_duplicates(entriespath,meetpath)
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            meetpath = dirname + os.sep + 'meet.csv'
+            check_duplicates(entriespath, meetpath)
 
     print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
     if errorCount > 0:
         sys.exit(1)
-
-
 
 
 if __name__ == '__main__':
