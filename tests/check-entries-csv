@@ -716,7 +716,7 @@ def check_row(row, csv,configtoml,meet_date,meet_id):
                 if 'Division' in csv.fieldnames and row[csv.index('Division')]: #Use the division if we have one
                     if meet_date >= wc_rule["date_range"][0] and meet_date <= wc_rule["date_range"][1]: #Check the dates line up
                         if ("sex" in wc_rule and row[csv.index('Sex')] == wc_rule["sex"]) or "sex" not in wc_rule: #Check the sex lines up
-                            if "divisions" in wc_rule and row[csv.index('Division')]:
+                            if "divisions" in wc_rule and row[csv.index('Division')] in wc_rule["divisions"]:
                                 weight_classes = wc_rule["classes"]
                             elif "divisions" not in wc_rule and weight_classes == None: #This is a default, rule use it only if we haven't found other rules
                                 weight_classes = wc_rule["classes"]
