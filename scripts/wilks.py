@@ -4,8 +4,6 @@
 # Helper library for Wilks calculation.
 #
 
-import sys
-
 
 def wilksCoeff(a, b, c, d, e, f, x):
     return 500 / (a + b * x + c * x**2 + d * x**3 + e * x**4 + f * x**5)
@@ -29,6 +27,7 @@ def wilksCoeffWomen(x):  # Where x is BodyweightKg.
     e = 0.00004731582
     f = -0.00000009054
     return wilksCoeff(a, b, c, d, e, f, x)
+
 
 # Array of age coefficients, such that AGE_COEFFICIENTS[age]
 # is the coefficient for that age.

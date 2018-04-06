@@ -110,7 +110,7 @@ def phonex(s):
     #    of A,E,H,I,O,U,W,Y in other positions.
     k = s[0]
     for c in s[1:]:
-        if not c in 'AEHIOUWY':
+        if c not in 'AEHIOUWY':
             k += c
     s = k
 
@@ -137,14 +137,14 @@ def phonex(s):
             if c_next != 'C':
                 n = '3'
         elif c == 'L':
-            if not c_next in 'AEIOUY':  # The empty string is in all strings.
+            if c_next not in 'AEIOUY':  # The empty string is in all strings.
                 n = '4'
         elif c in 'MN':
             n = '5'
             if c_next in 'DG':
                 i += 1
         elif c == 'R':
-            if not c_next in 'AEIOUY':
+            if c_next not in 'AEIOUY':
                 n = '6'
         else:
             raise ValueError("Unhandled character: %s" % c)
@@ -189,12 +189,12 @@ if __name__ == '__main__':
 
         key = '%s-%s' % (first, second)
 
-        if not key in h:
+        if key not in h:
             h[key] = [name]
-        elif not name in h[key]:
+        elif name not in h[key]:
             h[key].append(name)
 
-        if not name in counts:
+        if name not in counts:
             counts[name] = 1
         else:
             counts[name] += 1

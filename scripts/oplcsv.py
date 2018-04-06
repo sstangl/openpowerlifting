@@ -53,7 +53,7 @@ class Csv:
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
-            if not header in self.fieldnames:
+            if header not in self.fieldnames:
                 self.append_column(header)
 
         # An array mapping index in other.fieldnames to index in

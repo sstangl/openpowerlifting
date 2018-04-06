@@ -5,7 +5,6 @@
 #
 
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -46,7 +45,7 @@ def getunenteredurls(meetlist, enteredmeets):
 
     unentered = []
     for m in meetlist:
-        if not m in enteredmeets:
+        if m not in enteredmeets:
             unentered.append(m)
     return unentered
 
