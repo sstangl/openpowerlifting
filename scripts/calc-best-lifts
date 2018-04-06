@@ -25,22 +25,23 @@ def add_best_column(csv, lift):
                 best = row[i]
 
         if float2(best) > 0:
-            row[idx] = best # Keep as string.
+            row[idx] = best  # Keep as string.
 
 
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    if 'Squat1Kg' in csv.fieldnames and not 'BestSquatKg' in csv.fieldnames:
+    if 'Squat1Kg' in csv.fieldnames and 'BestSquatKg' not in csv.fieldnames:
         add_best_column(csv, 'Squat')
-    if 'Bench1Kg' in csv.fieldnames and not 'BestBenchKg' in csv.fieldnames:
+    if 'Bench1Kg' in csv.fieldnames and 'BestBenchKg' not in csv.fieldnames:
         add_best_column(csv, 'Bench')
-    if 'Deadlift1Kg' in csv.fieldnames and not 'BestDeadliftKg' in csv.fieldnames:
+    if ('Deadlift1Kg' in csv.fieldnames
+            and 'BestDeadliftKg' not in csv.fieldnames):
         add_best_column(csv, 'Deadlift')
 
     with open(filename, 'w') as fd:
         csv.write(fd)
-        
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
