@@ -11,13 +11,12 @@ import oplcsv
 
 
 # Hashtable for total lookup.
-# str -> [int, str] (totalKg, meetname).
+# str -> [int, str] (totalKg, meetpath).
 MeetHash = {}
 
 ###############################################
 
 errorCount = 0
-warningCount = 0
 
 def redden(s):
     if os.name != 'nt':
@@ -25,21 +24,11 @@ def redden(s):
     else: 
         return s
 
-def enyellow(s):
-    if os.name != 'nt':
-        return "\033[1;33m" + s + "\033[0;m"
-    else: 
-        return s
 
 def perror(s):
     global errorCount
     errorCount += 1
     print(' ' + redden(s), file=sys.stderr)
-
-def pwarning(s):
-    global warningCount
-    warningCount += 1
-    print(' ' + enyellow(s), file=sys.stderr)
 
 ###############################################
 
@@ -57,8 +46,6 @@ def check_duplicates(entriespath,meetpath):
 
 
     meetdate = row[dateidx]
-    meetname = row[meetnameidx]
-
 
 
     nameidx = entriescsv.index('Name')
@@ -70,10 +57,11 @@ def check_duplicates(entriespath,meetpath):
 
         name_date = name + meetdate
 
-        if not name in MeetHash:
-            MeetHash[name_date] = [total,meetname]
-        elif MeetHash[name_date][0]==total:
-            perror("Duplicate meets: %s, %s" % (MeetHash[name_date][1],meetname))
+        if not name_date in MeetHash:
+            MeetHash[name_date] = [total,entriespath]
+        elif total != '' and MeetHash[name_date][0]==total and MeetHash[name_date][1] != entriespath:
+            perror("Duplicate meets: %s, %s." % (MeetHash[name_date][1],entriespath))
+            break
 
 
 
@@ -88,6 +76,6 @@ if __name__ == '__main__':
             meetpath = dirname + os.sep + 'meet.csv'
             check_duplicates(entriespath,meetpath)
 
-    print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
+    print("Summary: %u errors." % errorCount)
     if errorCount > 0:
         sys.exit(1)
