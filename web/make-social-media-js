@@ -8,9 +8,14 @@
 
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', 'scripts')))
-import oplcsv
+
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.abspath(os.path.join(
+        os.path.dirname(__file__), '..', 'scripts')))
+    import oplcsv
+
 
 SOCIALFILE = '../lifter-data/social-instagram.csv'
 

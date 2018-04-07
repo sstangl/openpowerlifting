@@ -3,13 +3,16 @@
 #
 # Generates CSS rules that allow the federation selector to work.
 
-import bisect
-import html
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', 'scripts')))
-import oplcsv
+
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.abspath(os.path.join(
+        os.path.dirname(__file__), '..', 'scripts')))
+    import oplcsv
+
 
 MEETCSV = '../build/meets.csv'
 
@@ -38,6 +41,7 @@ def main():
 
     # Rule to always show these rows (used for the header).
     print('table tr.alwaysShow{display:table-row}')
+
 
 if __name__ == '__main__':
     main()
