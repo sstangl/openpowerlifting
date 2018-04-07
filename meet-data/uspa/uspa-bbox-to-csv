@@ -142,7 +142,8 @@ def sortintorows(words):
 def getheaderidx(rows):
     for i, row in enumerate(rows):
         # Sometimes the PDF has a 'Place' column header.
-        if row[0].text.lower() == 'name' or (len(row) > 1 and row[1].text.lower() == 'name'):
+        if (row[0].text.lower() == 'name' or
+                (len(row) > 1 and row[1].text.lower() == 'name')):
             return i
     raise NoHeaderInformationException
 
@@ -177,7 +178,8 @@ def getcolumnspans(rows):
     # Union the spans we have so far with any text in the pseudo-row above them.
     # This row contains stuff like "WT", "Squat", "Total", etc.
     # Only do this if the column above is pretty close.
-    if rows[headeridx - 1][0].ymin <= rows[headeridx][0].ymax + rows[headeridx][0].height():
+    if rows[headeridx - 1][0].ymin <= \
+            rows[headeridx][0].ymax + rows[headeridx][0].height():
         for x in rows[headeridx - 1]:
             above = (x.xmin, x.xmax)
             for i, span in enumerate(spans):
@@ -240,7 +242,8 @@ def parsepage(page):
         if GlobalTryMergeHeader:
             for word in rows[headeridx]:
                 for above in rows[headeridx - 1]:
-                    if above.ymin < word.ymax + word.height() and word.aboveorbelow(above):
+                    if (above.ymin < word.ymax + word.height() and
+                            word.aboveorbelow(above)):
                         word.text = '%s %s' % (above.text, word.text)
                         break
 

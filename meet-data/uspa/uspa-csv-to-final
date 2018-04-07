@@ -28,23 +28,25 @@ def replace_common_fieldnames(csv):
     s = ';'.join(csv[0])
 
     if s == 'Place;NAME;State;Class;Wt(KG);Age;Kg;Bench,;Kg;Kg;Kg;Score;LBS;LBS;LBS;LBS':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;bp;dl;total;Wilks;LBS;LBS;LBS;LBS'.split(
-            ';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;' \
+                 'sq;bp;bp;dl;total;Wilks;LBS;LBS;LBS;LBS'.split(';')
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Kg;Wilks;McC;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;total;wilks;wilks;lbs'.split(
-            ';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;' \
+                 'sq;sq;bp;bp;dl;dl;total;total;wilks;wilks;lbs'.split(';')
     if s == 'Place;NAME;State;Class;Wt(KG);Age;Kg;Kg;Kg;Kg;Score;LBS;LBS;LBS;LBS':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;bp;dl;total;wilks;lbs;lbs;lbs;lbs'.split(
-            ';')
-    if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(
-            ';')
-    if s == 'Place;Name;State;Wt;class;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
-        csv[0] = 'Place;Name;State;WeightClassKg;WeightClassKg;BodyweightKg;Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(
-            ';')
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;' \
+                 'sq;bp;dl;total;wilks;lbs;lbs;lbs;lbs'.split(';')
+    if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;' \
+            'Wilks;McC;SQ;BP;DL;Total':
+        csv[0] = 'Place;Name;State;WeightClassKg;BodyweightKg;Age;' \
+                 'sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
+    if s == 'Place;Name;State;Wt;class;Weight;Age;SQ;Kg;BP' \
+            ';Kg;DL;Kg;Total;Wilks;McC;SQ;BP;DL;Total':
+        csv[0] = 'Place;Name;State;WeightClassKg;WeightClassKg;BodyweightKg;' \
+                 'Age;sq;sq;bp;bp;dl;dl;total;wilks;wilks;lbs;lbs;lbs;lbs'.split(';')
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;Total':
-        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;bp;DL;dl;Total;Wilks;McC;lbs'.split(
-            ';')
+        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;' \
+                 'bp;DL;dl;Total;Wilks;McC;lbs'.split(';')
 
 
 def fixcolnames(columns):
@@ -181,7 +183,7 @@ def add4thcolumns(columns, csv):
                 colname = columns[col]
                 newcol = colnameto4thname(colname)
 
-                if not newcol in columns:
+                if newcol not in columns:
                     columns.append(newcol)
 
 
@@ -192,21 +194,20 @@ def parse(csv):
 
     fixcolnames(columns)
 
-    if not 'Sex' in columns:
+    if 'Sex' not in columns:
         columns.append('Sex')
-    if not 'Division' in columns:
+    if 'Division' not in columns:
         columns.append('Division')
-    if not 'Equipment' in columns:
+    if 'Equipment' not in columns:
         columns.append('Equipment')
 
     # Are there any 4th attempts? Then we'll need even more columns.
     add4thcolumns(columns, csv)
 
-    if not 'Event' in columns:
+    if 'Event' not in columns:
         columns.append('Event')
 
     # Expand every row of the csv to have the right number of columns.
-    ncols = len(columns)
     for row in csv:
         while len(row) < len(columns):
             row.append('')
@@ -310,13 +311,15 @@ def parse(csv):
                         lifterstate[newcolidx] = amount
 
             # This is a row that specifies division and other information.
-            elif 'open' in searcher or 'junior' in searcher or 'jr' in searcher or 'master' in searcher:
+            elif ('open' in searcher or 'junior' in searcher or
+                    'jr' in searcher or 'master' in searcher):
                 # If this is division information, it disregards columns.
                 info = ' '.join(row).strip().lower()
 
                 # Divisions are {Junior, Open, Submaster, Master} +
                 #  {Women, Men} + (Age Range if non-Open)
-                if not 'junior' in info and not 'jr' in info and not 'open' in info and not 'master' in info:
+                if ('junior' not in info and 'jr' not in info and
+                        'open' not in info and 'master' not in info):
                     continue
 
                 # Get the sex state.
@@ -367,7 +370,7 @@ def parse(csv):
                     # For example, "Mulitply". Comment out on a per-import
                     # basis.
                     assert equipmentstate
-                    #error('Unknown equipment: %s' % ' '.join(row).strip())
+                    # error('Unknown equipment: %s' % ' '.join(row).strip())
 
     return rval
 

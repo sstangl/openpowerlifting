@@ -12,9 +12,8 @@ import sys
 def list_to_csv(x):
     return ','.join(x)
 
+
 # Given a line, return a list of (left, right) word ranges.
-
-
 def find_word_ranges(line):
     ranges = []  # The accumulated list of ranges.
     inWord = False  # State tracker: whether currently constructing a range.
@@ -36,21 +35,18 @@ def find_word_ranges(line):
 
     return ranges
 
+
 # Given two (left, right) pair ranges, check whether they overlap.
-
-
 def ranges_overlap(x, y):
     return x[1] > y[0] and x[0] < y[1]
 
+
 # Sort the range list by left index.
-
-
 def sort_range_list(r):
     return sorted(r, key=lambda x: x[0])
 
+
 # Given two sets of range pairs, return a set with the ranges unioned.
-
-
 def union_ranges(r1, r2):
 
     # For each element in r1, attempt to expand it via r2.
@@ -78,10 +74,9 @@ def union_ranges(r1, r2):
     # Remove duplicate elements.
     return sort_range_list(list(s1.union(s2)))
 
+
 # Given a range and a list of ranges, return the index of the range that
 # most closely matches the range input.
-
-
 def find_closest_range(r, ranges):
     bestMatch = 999999
     bestIndex = -1
@@ -99,10 +94,9 @@ def find_closest_range(r, ranges):
     assert(bestIndex != -1)
     return bestIndex
 
+
 # Spreadsheet columns are represented as (left index, right index) tuples,
 # with the indices inclusive. Builds that list for the lines of the given page.
-
-
 def USPA_extract_sorted_page_column_ranges(lines):
     for i in range(0, len(lines)):
         line = lines[i]
@@ -110,7 +104,7 @@ def USPA_extract_sorted_page_column_ranges(lines):
         # The header at the top of the page is variable-length, but there is always
         # a column named NAME. Column names are distributed on that line and on
         # the line before that one. Look for "NAME".
-        if not 'NAME' in line:
+        if 'NAME' not in line:
             continue
 
         # Guess roughly where the columns are by where the headers appear.
@@ -126,6 +120,7 @@ def USPA_extract_sorted_page_column_ranges(lines):
     # Some pages at the end have garbage data.
     return []
 
+
 # Once again,
 WroteColumnNames = False
 
@@ -138,11 +133,8 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
 
     WroteColumnNames = True
 
-    # Find the line that has "NAME" in it, again.
-    # This line must exist because we already extracted column ranges.
     for i in range(0, len(lines)):
         if 'NAME' in lines[i]:
-            namelineindex = i
             break
 
     columns = []
@@ -174,14 +166,11 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
 
     csv.append(columns)
 
+
 # Add a USPA lifter line.
 # This uses a literal parsing of the text file's column headers,
 # so place will be, for now, recorded in the name field.
-
-
 def USPA_add_lifter_row(csv, columnRanges, line):
-    words = line.split()
-
     # Construct the row, using columnRanges for placement.
     row = [''] * len(columnRanges)
 
@@ -227,7 +216,7 @@ def USPA_add_4ths_row(csv, columnRanges, line):
     # Lines containing 4ths shouldn't have anything else on the line.
     words = line.split()
     for word in words:
-        if not '4th-' in word and not '4TH-' in word:
+        if '4th-' not in word and '4TH-' not in word:
             print("Error on line: %s" % line)
         assert('4th-' in word or '4TH-' in word)
 
@@ -250,8 +239,8 @@ def USPA_add_4ths_row(csv, columnRanges, line):
 
     csv.append(row)
 
-# Begin main script.
 
+# Begin main script.
 if len(sys.argv) != 2:
     print(" Usage: " + sys.argv[0] + " results.txt")
     sys.exit(1)
@@ -274,9 +263,8 @@ pages = wholefile.split("\f")
 # This is a list of string lists.
 csv = []
 
+
 # Parse and append the page's data to the csv array.
-
-
 def parse_page(csv, page):
     lines = page.split("\n")
 
@@ -297,7 +285,8 @@ def parse_page(csv, page):
             words = line.split()
             if not words:
                 return False
-            return (words[0].isdigit() and int(words[0]) < 50) or words[0] in ['DQ', 'NA', 'NS']
+            return (words[0].isdigit() and int(words[0]) < 50) or \
+                words[0] in ['DQ', 'NA', 'NS']
 
         if is_lifter_row(line):
             USPA_add_lifter_row(csv, columnRanges, line)
@@ -309,25 +298,24 @@ def parse_page(csv, page):
         # Lifters are organized by divisions.
         # Divisions are given their own rows.
         # They always precede a lifter row.
-        elif i + 1 < len(lines) and is_lifter_row(lines[i + 1]) and not 'NAME' in line:
+        elif i + 1 < len(lines) and is_lifter_row(lines[i + 1]) and 'NAME' not in line:
             # Just output the division into the csv array.
             # We will modify the array in post-processing.
             csv.append(["DIVISION:" + line.strip()])
+
 
 # Get the page data into the csv array.
 for page in pages:
     parse_page(csv, page)
 
+
 # Remove all the 'DIVISION' line markers.
-
-
 def csv_remove_divisions(csv):
     return [x for x in csv if 'DIVISION:' not in x[0]]
 
+
 # First, get rid of all the lines starting with "DIVISION:",
 # which we inserted for stateful division tracking.
-
-
 def csv_integrate_divisions(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -421,9 +409,8 @@ def csv_integrate_4ths(csv):
     # Get rid of all the blanked rows.
     return [x for x in csv if len(x[0]) != 0]
 
+
 # The name field looks like "1 Maggie Haywood". Put that 1 into its own field.
-
-
 def csv_extract_place_from_name(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -447,10 +434,9 @@ def csv_extract_place_from_name(csv):
 
     return csv
 
+
 # The division field contains sex and equipment classification.
 # Extract that into separate fields for easier parsing.
-
-
 def csv_extract_sex_and_equipment(csv):
     # The first line is for column headers and can be skipped.
     assert(csv[0][0] == 'Name')
@@ -468,7 +454,7 @@ def csv_extract_sex_and_equipment(csv):
 
         sex = 'F' if 'women' in divfield else 'M'
 
-        if 'raw' in divfield and not 'classic' in divfield:
+        if 'raw' in divfield and 'classic' not in divfield:
             equipment = 'Raw'
         elif 'classic' in divfield:
             equipment = 'Wraps'

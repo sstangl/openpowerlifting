@@ -15,7 +15,9 @@ import urllib.request
 
 CUTOFF = 200  # Ignore earlier meets, since they have invalid URLs anyway.
 FETCHDIR = 'fetch'  # Directory in CWD to use for fetchin'.
-RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/pubhtml/sheet?hl=en_US&headers=false&gid=0'
+RESULTSURL = 'https://docs.google.com/spreadsheets/d/' \
+             '1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/' \
+             'pubhtml/sheet?hl=en_US&headers=false&gid=0'
 
 
 states = {
@@ -106,11 +108,11 @@ def gethtml():
 def getmeetinfo(tr):
     # The first column would have the URL.
     urltd = tr.find('td')
-    if urltd == None:
+    if urltd is None:
         return None
 
     a = urltd.find('a')
-    if a == None:
+    if a is None:
         return None
     url = a.get('href')
 
@@ -173,11 +175,10 @@ def downloadpdf(meet):
     pdfurl = getpdfurl(meet)
 
     filename = FETCHDIR + os.sep + meet.num + '.pdf'
+    useragent = 'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0'
     try:
         # The USPA site now requires User-Agent to be set.
-        useragent = 'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0'
-        request = urllib.request.Request(
-            pdfurl, headers={'User-Agent': useragent})
+        request = urllib.request.Request(pdfurl, headers={'User-Agent': useragent})
         with urllib.request.urlopen(request) as r, open(filename, 'wb') as fd:
             shutil.copyfileobj(r, fd)
     except urllib.error.HTTPError:
