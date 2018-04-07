@@ -78,8 +78,12 @@ def main(filename):
                               "MeetCountry", "MeetState", "MeetTown", "MeetName"]
 
         entriescsv = Csv()
-        entriescsv.fieldnames = ["Name", "Sex", "Event", "Equipment", "Division", "BodyweightKg", "WeightClassKg", "Squat1Kg", "Squat2Kg", "Squat3Kg",
-                                 "BestSquatKg", "Bench1Kg", "Bench2Kg", "Bench3Kg", "BestBenchKg", "Deadlift1Kg", "Deadlift2Kg", "Deadlift3Kg", "BestDeadliftKg", "TotalKg"]
+        entriescsv.fieldnames = ["Name", "Sex", "Event", "Equipment", "Division",
+                                 "BodyweightKg", "WeightClassKg", "Squat1Kg",
+                                 "Squat2Kg", "Squat3Kg", "BestSquatKg", "Bench1Kg",
+                                 "Bench2Kg", "Bench3Kg", "BestBenchKg", "Deadlift1Kg",
+                                 "Deadlift2Kg", "Deadlift3Kg", "BestDeadliftKg",
+                                 "TotalKg"]
 
         url = None
         subfed = None

@@ -12,7 +12,6 @@ from bs4 import BeautifulSoup
 import errno
 from oplcsv import Csv
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -190,9 +189,9 @@ def makeentriescsv(soup):
 
         elif k == 19:
             # This is a results row.
-            assert state_event != None
-            assert state_division != None
-            assert state_equipment != None
+            assert state_event is not None
+            assert state_division is not None
+            assert state_equipment is not None
 
             cells = row.find_all('td')
             weightclasskg = cells[0].text.replace('-', '').strip()
@@ -326,7 +325,7 @@ def markdqs(csv):
 def infersex(csv):
     # Some meets unfortunately don't use weight classes,
     # and instead arrange lifters by sex manually.
-    if not 'WeightClassKg' in csv.fieldnames:
+    if 'WeightClassKg' not in csv.fieldnames:
         return
 
     sexidx = csv.index('Sex')
@@ -353,9 +352,9 @@ def infersex(csv):
             row[sexidx] = 'M'
         elif wc in ipf_women:
             row[sexidx] = 'F'
-        elif wc in old_men and not wc in old_women:
+        elif wc in old_men and wc not in old_women:
             row[sexidx] = 'M'
-        elif wc in old_women and not wc in old_men:
+        elif wc in old_women and wc not in old_men:
             row[sexidx] = 'F'
 
 
@@ -405,7 +404,7 @@ def makemeetcsv(soup):
     trs = table.find_all('tr')
     if len(trs) >= 3:
         state = table.find_all('tr')[2].find('td').text.strip()
-        if not state in states:
+        if state not in states:
             error("State not in the abbreviation lookup table: %s" % state)
         state = states[state]
 

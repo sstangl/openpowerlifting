@@ -2,20 +2,19 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Probes for new meets from the IPF.
-# One main page branches to a page per-year,
-# all of which must be checked.
+# One main page branches to a page per-year, all of which must be checked.
 #
-
 
 from bs4 import BeautifulSoup
 import sys
 import os
 from os.path import join, realpath, dirname
-sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
 
-import oplcsv
-import wilks
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.powerlifting-ipf.com/championships/results/"]
@@ -46,10 +45,10 @@ def getmeetlist(html):
     searchurls = []
     for a in sections[0].find_all('a'):
         url = a['href']
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
             url = url.replace('.com//', '/')
-        if not url in searchurls:
+        if url not in searchurls:
             # Ignore some URLs that are clearly bogus.
             if 'worldpowerlifting.info' in url:
                 continue
@@ -71,10 +70,10 @@ def getmeetlist(html):
         for a in sections[0].find_all('a'):
             url = a['href']
 
-            if not 'http' in url:
+            if 'http' not in url:
                 url = BASEURL + url
                 url = url.replace('.com//', '/')
-            if not url in urls:
+            if url not in urls:
                 urls.append(url)
 
     return urls
@@ -90,6 +89,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[IPF]'), unentered)
+
 
 if __name__ == '__main__':
     main()

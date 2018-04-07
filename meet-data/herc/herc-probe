@@ -5,9 +5,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -42,7 +40,7 @@ def getmeetlist(html):
             url = a['href']
 
             # Hercules Gym malformats their URLs all over the place.
-            if not url.startswith('/') and not 'herculesgym.net' in url:
+            if not url.startswith('/') and 'herculesgym.net' not in url:
                 url = BASEURL + '/' + url
             elif url.startswith('/'):
                 url = BASEURL + url
@@ -50,7 +48,7 @@ def getmeetlist(html):
             # Should do this for all the federations, honestly.
             url = url.replace(' ', '%20')
 
-            if not url in urls:  # Sometimes the entries show up twice.
+            if url not in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls
@@ -74,8 +72,9 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             print(color('[Hercules] ') + m)
+
 
 if __name__ == '__main__':
     main()

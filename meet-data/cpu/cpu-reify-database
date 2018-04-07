@@ -29,7 +29,7 @@ def meethash(csv, row):
 # Add a row to the meets hash object.
 def add_row(meets, csv, row):
     h = meethash(csv, row)
-    if not h in meets:
+    if h not in meets:
         c = Csv()
         c.fieldnames = csv.fieldnames[:]
         c.rows.append(row)

@@ -5,16 +5,16 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-import urllib.request
-import ast
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
+
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 BASEURL_SPORTY = "http://www.sporty.co.nz/asset/downloadasset?id="
@@ -56,7 +56,7 @@ def getmeetlist_sporty(html):
         if 'sportsground' in url:
             continue
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -89,7 +89,7 @@ def getmeetlist_sporty_partial(html, code):
 
         url = BASEURL_SPORTY + file_ext
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
     return urls
 
@@ -124,6 +124,7 @@ def main():
     print(color('[NZPF] ') + 'Check Canterbury Powerlifting Facebook page.')
     print(color('[NZPF] ') +
           'Check Central Districts Powerlifting Facebook page.')
+
 
 if __name__ == '__main__':
     main()

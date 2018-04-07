@@ -7,12 +7,15 @@
 from bs4 import BeautifulSoup
 import datetime
 import os
-import shutil
 import sys
-sys.path.append('scripts')
-sys.path.append('../../scripts')
-import oplprobe
-import urllib.request
+
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
+
 
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
@@ -36,18 +39,18 @@ def getmeetlist(html):
     urls = []
     for a in soup.find_all('a'):
         # All the results have the text "Results" somewhere in the link.
-        if not 'results' in a.text.lower():
+        if 'results' not in a.text.lower():
             continue
 
         # Also all the results have "uploads" in the URL.
-        if not '/uploads/' in a['href']:
+        if '/uploads/' not in a['href']:
             continue
 
         url = a['href']
-        if not 'http://' in url:
+        if 'http://' not in url:
             url = BASEURL + url
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -62,6 +65,7 @@ def main():
 
     oplprobe.print_meets(color('[RAW]'), unentered)
     print(color('[RAW] ') + "Continue working through archive.")
+
 
 if __name__ == '__main__':
     main()

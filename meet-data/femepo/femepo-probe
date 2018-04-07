@@ -7,10 +7,13 @@
 from bs4 import BeautifulSoup
 import sys
 import os
-from os.path import join, realpath, dirname
-sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
 
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.powerlifting-femepo.com.mx/resultados.html"]
@@ -36,10 +39,10 @@ def getmeetlist(html):
     for a in div.find_all('a'):
         url = a['href']
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
             url = url.replace('.com//', '/')
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls

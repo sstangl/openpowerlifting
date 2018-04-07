@@ -6,15 +6,15 @@
 #
 
 import sys
-# from os.path import join,realpath,dirname
-# sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))),"scripts"))
-
-sys.path.append('../../../scripts')
-sys.path.append('scripts')
-from oplcsv import Csv
-
-from oplcsv import Csv
+import os
 import shutil
+
+try:
+    from oplcsv import Csv
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    from oplcsv import Csv
 
 
 def error(msg):
@@ -61,10 +61,13 @@ def assign_division(csv):
     dividx = csv.index('Division')
 
     for row in csv.rows[4:]:  # Skip the title
-        if row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
+        if (row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or
+                'Masters' in row[0]):
             break
 
-    if curdiv == None:  # Try and work out the division of single division meets - note masters meets always have multiple divisions
+    # Try and work out the division of single division meets.
+    # Masters meets always have multiple divisions.
+    if curdiv is None:
         if 'Open' in get_meet_name(csv):
             curdiv = 'Open'
         elif 'Sub' in get_meet_name(csv):
@@ -74,10 +77,12 @@ def assign_division(csv):
 
     for row in csv.rows:
         # So we can correctly strip rows in Bench Only meets
-        if any(title in row[0].lower() for title in ['best lifters', 'list of', 'champion of']):
+        if (any(title in row[0].lower() for title in
+                ['best lifters', 'list of', 'champion of'])):
             curdiv = 'NON-LIFTER-ROW'
         # and 'best' not in row[0].lower():
-        elif row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or 'Masters' in row[0]:
+        elif (row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or
+                'Masters' in row[0]):
             curdiv = row[0].replace('Women', '').replace('Men', '').strip()
         elif curdiv and row[totalidx]:
             row[dividx] = curdiv

@@ -4,14 +4,16 @@
 # Probes for meet results from OceaniaPF, all of which are on one page.
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-sys.path.append('scripts')
-sys.path.append('../../scripts')
-import oplprobe
-import urllib.request
+
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
+
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 URL = "http://www.oceaniapowerlifting.com/results.htm"
@@ -28,14 +30,14 @@ def getmeetlist(html):
     urls = []
     for a in soup.find_all('a'):
         # All the results are served from a Results/ subdirectory.
-        if not 'results' in a['href'].lower():
+        if 'results' not in a['href'].lower():
             continue
 
         url = a['href']
-        if not 'http://' in url:
+        if 'http://' not in url:
             url = BASEURL + url
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -49,6 +51,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[OceaniaPF]'), unentered)
+
 
 if __name__ == '__main__':
     main()

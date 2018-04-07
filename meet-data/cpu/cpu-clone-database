@@ -11,7 +11,6 @@
 
 from bs4 import BeautifulSoup
 from oplcsv import Csv
-import os
 import re
 import sys
 import urllib.request
@@ -19,7 +18,8 @@ import urllib.request
 
 # Database lookup, sorted by Year (but not sorted within that year).
 # Currently there are 88 pages: select page by appending "&pagenum=#".
-URL = "http://www.powerlifting.ca/cgi-bin/webdata_cpudb.pl?cgifunction=Search&cgisort=18&cgisortorder=1"
+URL = "http://www.powerlifting.ca/cgi-bin/webdata_cpudb.pl?" \
+      "cgifunction=Search&cgisort=18&cgisortorder=1"
 
 
 def gethtml(url):

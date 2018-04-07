@@ -5,7 +5,6 @@
 
 import sys
 import csv
-import re
 
 # Lets us share a codebase for all the feds that use this format
 fed_dict = {'INTERNATIONAL POWERLIFTING FEDERATION': 'IPF',
@@ -119,9 +118,11 @@ def main(*filenames):
                                     " Men's", " men's", "men"]
                         women_text = [" womens", " Womens",
                                       " Women's", " women's", "women"]
-                        if any(text in meet_name for text in men_text) and any(text in new_meet_name for text in women_text):
+                        if (any(text in meet_name for text in men_text) and
+                                any(text in new_meet_name for text in women_text)):
                             meet_name = remove_all(meet_name, men_text)
-                        elif any(text in meet_name for text in women_text) and any(text in new_meet_name for text in men_text):
+                        elif (any(text in meet_name for text in women_text) and
+                                any(text in new_meet_name for text in men_text)):
                             meet_name = remove_all(meet_name, women_text)
                     # Still need to deal with meets that cross over months
                     new_meet_day = meet_info[2].split(

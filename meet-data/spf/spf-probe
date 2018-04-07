@@ -8,9 +8,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -49,11 +47,11 @@ def getmeetlist(html):
             # SPF seems to always post result links in text like
             # "View all results from North Alabama Classic".
             # Gating on this cuts down false-positives.
-            if not 'result' in a.text.lower():
+            if 'result' not in a.text.lower():
                 continue
 
             url = a['href']
-            if not url in urls:  # Sometimes the entries show up twice.
+            if url not in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls
@@ -80,8 +78,9 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             print(color('[SPF] ') + m)
+
 
 if __name__ == '__main__':
     main()

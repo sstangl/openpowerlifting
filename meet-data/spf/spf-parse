@@ -6,12 +6,9 @@
 # future results.
 
 from bs4 import BeautifulSoup
-import errno
-from oplcsv import Csv
-import os
-import shutil
 import sys
 import urllib.request
+from oplcsv import Csv
 
 
 def gethtml(url):
@@ -79,7 +76,7 @@ def fixcolumnnames(csv):
 # SPF doesn't have a column for Sex, but puts "Women" in the Division.
 def sexfromdivision(csv):
     assert "Division" in csv.fieldnames
-    assert not "Sex" in csv.fieldnames
+    assert "Sex" not in csv.fieldnames
 
     csv.append_column("Sex")
     sexidx = csv.index("Sex")
@@ -128,10 +125,10 @@ def fixequipment(csv):
         if eq == "Raw – No Wraps":
             row[eqidx] = 'Raw'
         elif eq == "Raw":
-            if not 'S' in row[evtidx]:
-                row[eqidx] = 'Raw'
-            else:
+            if 'S' in row[evtidx]:
                 row[eqidx] = 'Wraps'
+            else:
+                row[eqidx] = 'Raw'
         elif eq == "Multi-Ply":
             row[eqidx] = "Multi-ply"
         elif eq == "Single-Ply":

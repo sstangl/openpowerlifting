@@ -78,7 +78,7 @@ def str_to_event(s):
 
 # Mark events by keeping track of Event state.
 def thread_event_state(csv):
-    assert not 'Event' in csv.fieldnames
+    assert 'Event' not in csv.fieldnames
     csv.append_column('Event')
     evtidx = csv.index('Event')
 
@@ -236,7 +236,8 @@ def fixequipment(csv):
     for i, row in enumerate(csv.rows):
         s = row[idx].lower().replace(weirdspace, ' ')
         # "Classic" means belt and wrist wraps only to the RPS.
-        if s == 'raw classic' or s == 'raw clas' or s == 'raw class' or s == 'raw c' or s == 'rc':
+        if (s == 'raw classic' or s == 'raw clas' or s == 'raw class' or
+                s == 'raw c' or s == 'rc'):
             x = 'Raw'
         # This one below looks the same, but actually has some unicode BS going
         # on.
@@ -333,7 +334,8 @@ def fixname(csv):
         for x in s.split():
             if x.lower() == x or x.upper() == x:
                 # Except in names like "Louie de Leon" or for initials.
-                if len(x.replace('.', '')) > 2 and x != 'III' and x != 'van' and x != '4th':
+                if (len(x.replace('.', '')) > 2 and x != 'III' and
+                        x != 'van' and x != '4th'):
                     error("Name needs proper casing: '%s'" % s)
 
         row[idx] = s.strip()
@@ -360,9 +362,8 @@ def fixclass(csv):
             x = 'Police Amateur'
         elif s == 'police pro' or s == 'polce pro' or s == 'pol pro':
             x = 'Police Pro'
-        elif s == 'military pro' or s == 'mil pro' or s == 'pro mil' or s == 'militarypro':
-            x = 'Military Pro'
-        elif s == 'mil p' or s == 'pro military':
+        elif (s == 'military pro' or s == 'mil pro' or s == 'pro mil' or
+                s == 'militarypro' or s == 'mil p' or s == 'pro military'):
             x = 'Military Pro'
         elif s == 'crossfit' or s == 'cross fit' or s == 'crossift':
             x = 'Crossfit'
@@ -408,7 +409,7 @@ def fixweightclass(csv):
             elif row[sexidx] == 'F':
                 row[idx] = '198+'
             else:
-                error("Unknown sex in fixweightclass(): '%s'" % s)
+                error("Unknown sex in fixweightclass(): '%s'" % row[sexidx])
         elif row[idx] == '' and i > 0:
             row[idx] = csv.rows[i - 1][idx]
 
@@ -462,9 +463,9 @@ def fixlift(csv, liftfield):
 
 # Fixes things like bench-only lifters where TotalLBS != BestBenchLBS.
 def fixtotals(csv):
-    if not 'Event' in csv.fieldnames:
+    if 'Event' not in csv.fieldnames:
         return
-    if not 'TotalLBS' in csv.fieldnames:
+    if 'TotalLBS' not in csv.fieldnames:
         return
 
     for row in csv.rows:
@@ -512,13 +513,13 @@ def main(filename):
     standardize_fieldnames(csv)
 
     # Enable as temporary fix for broken files.
-    #remove_rows_by_empty_column(csv, "Sex")
+    # remove_rows_by_empty_column(csv, "Sex")
 
-    if not 'Name' in csv.fieldnames:
+    if 'Name' not in csv.fieldnames:
         error("Couldn't find a name column.")
-    if not 'Equipment' in csv.fieldnames:
+    if 'Equipment' not in csv.fieldnames:
         error("Couldn't find an equipment column.")
-    if not 'Sex' in csv.fieldnames:
+    if 'Sex' not in csv.fieldnames:
         error("Couldn't find a sex column.")
 
     fixdivision(csv)

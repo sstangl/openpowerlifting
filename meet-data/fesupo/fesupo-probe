@@ -6,15 +6,15 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-import urllib.request
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.powerlifting.com.ar/fesupo%20resultados.htm"]
@@ -38,10 +38,10 @@ def getmeetlist(html):
     for a in soup.find_all('a'):
         url = a['href']
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
             url = url.replace('.com//', '/')
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls

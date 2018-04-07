@@ -10,7 +10,6 @@
 
 from bs4 import BeautifulSoup
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -97,7 +96,7 @@ def main():
     known = getenteredmeets()
 
     for m in meetlist:
-        if not m.sanction in known:
+        if m.sanction not in known:
             print(color("[USAPL] ") + m.url)
 
 

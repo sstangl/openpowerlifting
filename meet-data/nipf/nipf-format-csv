@@ -9,8 +9,8 @@ import oplcsv
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    assert not 'Sex' in csv.fieldnames
-    assert not 'WeightClassKg' in csv.fieldnames
+    assert 'Sex' not in csv.fieldnames
+    assert 'WeightClassKg' not in csv.fieldnames
 
     csv.insert_column(csv.index('BodyweightKg'), 'Sex')
     csv.insert_column(csv.index('BodyweightKg'), 'WeightClassKg')
