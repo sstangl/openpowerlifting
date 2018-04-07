@@ -8,27 +8,30 @@
 #
 # 1) All the column data is in the pre-set format.
 #
+
 import datetime
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(
-    os.path.dirname(os.path.realpath(__file__))), "scripts"))
 
-import oplcsv
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
 
 
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else:
-        return s
+    return s
 
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else:
-        return s
+    return s
+
 
 globalFilename = ''
 havePrintedFilename = False
@@ -349,7 +352,8 @@ def check(scriptname, filename):
 
     # Check the optional MeetState column.
     if row[stateidx]:
-        if not row[countryidx] in KnownStates or not row[stateidx] in KnownStates[row[countryidx]]:
+        if (row[countryidx] not in KnownStates or row[stateidx] not in
+                KnownStates[row[countryidx]]):
             perror("Unknown state (add to check-meet-csv?): \"%s\"" %
                    row[stateidx])
 
@@ -357,7 +361,7 @@ def check(scriptname, filename):
     if row[townidx]:
         found_illegal_char = False
         for c in row[townidx]:
-            if not c.isalpha() and not c in ' -.\'':
+            if not c.isalpha() and c not in ' -.\'':
                 found_illegal_char = True
                 break
 
@@ -370,7 +374,7 @@ def check(scriptname, filename):
     else:
         found_illegal_char = False
         for c in row[nameidx]:
-            if not c.isalnum() and not c in ' -.\'/&':
+            if not c.isalnum() and c not in ' -.\'/&':
                 found_illegal_char = True
                 break
 
@@ -412,7 +416,7 @@ if __name__ == '__main__':
                 meetpath = dirname + os.sep + 'meet.csv'
                 check(sys.argv[0], meetpath)
 
-                if not 'entries.csv' in files:
+                if 'entries.csv' not in files:
                     perror('Missing entries.csv')
 
     if hitError:

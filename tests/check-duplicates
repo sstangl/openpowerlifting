@@ -5,10 +5,13 @@
 # any possible duplicate meets.
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(
-    os.path.dirname(os.path.realpath(__file__))), "scripts"))
 
-import oplcsv
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
 
 
 # Hashtable for total lookup.
@@ -24,15 +27,13 @@ warningCount = 0
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else:
-        return s
+    return s
 
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else:
-        return s
+    return s
 
 
 def perror(s):
@@ -80,9 +81,10 @@ def check_duplicates(entriespath, meetpath):
 
         name_date = name + meetdate
 
-        if not name_date in MeetHash:
+        if name_date not in MeetHash:
             MeetHash[name_date] = (total, entriespath)
-        elif total != '' and MeetHash[name_date][0] == total and MeetHash[name_date][1] != entriespath:
+        elif (total != '' and MeetHash[name_date][0] == total and
+                MeetHash[name_date][1] != entriespath):
             left = prettify_path(MeetHash[name_date][1])
             right = prettify_path(entriespath)
             pwarning("Duplicate meets: %s, %s." % (left, right))

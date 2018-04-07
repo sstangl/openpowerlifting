@@ -9,25 +9,29 @@
 
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(
-    os.path.dirname(os.path.realpath(__file__))), "scripts"))
 
-import oplcsv
-from usernames import get_username
+try:
+    import oplcsv
+    from usernames import get_username
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
+    from usernames import get_username
 
 
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else:
-        return s
+    return s
 
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else:
-        return s
+    return s
+
+
 hitError = False  # Determines return value at end.
 
 
@@ -49,7 +53,7 @@ def get_database_nameset():
     names = set()
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
-        if not 'entries.csv' in files:
+        if 'entries.csv' not in files:
             continue
 
         csv = oplcsv.Csv(dirname + os.sep + 'entries.csv')
@@ -133,8 +137,8 @@ def check_usernames(names):
             perror("Username is not ASCII: '%s'. Teach scripts/username.py." % username)
 
         if username in usernames:
-            perror('Multiple users with username %s: "%s", "%s".' % (username, name,
-                                                                     usernames[username]))
+            perror('Multiple users with username %s: "%s", "%s".'
+                   % (username, name, usernames[username]))
         else:
             usernames[username] = name
 
@@ -226,13 +230,13 @@ def check_name_disambiguation(names):
         part = part.rstrip()  # Remove the space before the '#'.
 
         if not get_username(part) in seenset:
-            perror("%s: Name '%s' occurs in some meet, but isn't marked for disambiguation." % (
-                filename, name))
+            perror("%s: Name '%s' occurs in some meet, "
+                   "but isn't marked for disambiguation." % (filename, name))
         else:
             count = seenset[get_username(part)]
             if int(index) > int(count):
-                perror("%s: Name '%s' occurs in a meet, but only %s variants are known." % (
-                    filename, name, count))
+                perror("%s: Name '%s' occurs in a meet,"
+                       " but only %s variants are known." % (filename, name, count))
 
 
 def main():
@@ -249,6 +253,7 @@ def main():
     if hitError:
         return 1
     return 0
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 1:

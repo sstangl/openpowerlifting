@@ -5,17 +5,19 @@
 import urllib.request
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(
-    os.path.dirname(os.path.realpath(__file__))), "scripts"))
 
-import oplcsv
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
 
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else:
-        return s
+    return s
 
 
 def pwarning(s):
@@ -52,6 +54,7 @@ def main(filename):
 
     print("{0} / {1} errors".format(errors, total))
     return 0
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
