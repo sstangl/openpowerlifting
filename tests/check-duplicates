@@ -8,7 +8,7 @@ import os
 
 try:
     import oplcsv
-except:
+except ModuleNotFoundError:
     sys.path.append(os.path.join(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__))), "scripts"))
     import oplcsv
@@ -58,7 +58,7 @@ def prettify_path(path):
     try:
         idx = path.index('/meet-data/') + len('/meet-data/')
         path = path[idx:]
-    except:
+    except ValueError:
         pass
     return path.rstrip('/entries.csv')
 

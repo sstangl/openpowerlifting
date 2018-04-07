@@ -13,7 +13,7 @@ import os
 try:
     import oplcsv
     from usernames import get_username
-except:
+except ModuleNotFoundError:
     sys.path.append(os.path.join(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__))), "scripts"))
     import oplcsv
@@ -85,7 +85,7 @@ def check_social_media(names):
     try:
         nameidx = csv.index('Name')
         instagramidx = csv.index('Instagram')
-    except:
+    except ValueError:
         return 1
 
     # Check rows.

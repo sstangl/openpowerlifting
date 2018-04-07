@@ -101,7 +101,7 @@ def getdivisionurls(soup):
     for a in soup.find_all("a"):
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         if 'passedDivisionID=' not in url:

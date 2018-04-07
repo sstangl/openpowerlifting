@@ -38,7 +38,7 @@ def getmeetlist(html):
         # Some links are just JS targets.
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         # All the meet URLs have this parameter, luckily.

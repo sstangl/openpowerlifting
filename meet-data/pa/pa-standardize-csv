@@ -238,7 +238,7 @@ def isint(s):
     try:
         int(s)
         return True
-    except:
+    except ValueError:
         return False
 
 
@@ -400,7 +400,7 @@ def calc_best_lift(csv, col, attemptlist):
         for k in attemptlist:
             try:
                 attempt = float(row[csv.index(k)])
-            except:
+            except ValueError:
                 attempt = 0
             if attempt > best:
                 best = attempt

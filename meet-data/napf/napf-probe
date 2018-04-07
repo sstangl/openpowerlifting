@@ -46,7 +46,7 @@ def getmeetlist(html):
         # Some URLs are bogus and just JS targets.
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         # Simple false-positive detector.

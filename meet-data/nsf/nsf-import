@@ -218,7 +218,7 @@ def calc_best_lift(csv, col, attemptlist):
         for k in attemptlist:
             try:
                 attempt = float(row[csv.index(k)])
-            except:
+            except ValueError:
                 attempt = 0
             if attempt > best:
                 best = attempt
@@ -237,7 +237,7 @@ def markevent(csv):
         for f in fieldl:
             try:
                 l.append(csv.index(f))
-            except:
+            except ValueError:
                 pass
         return l
 

@@ -23,7 +23,7 @@ import sys
 try:
     import oplcsv
     import csvtojs
-except:
+except ModuleNotFoundError:
     sys.path.append(os.path.abspath(os.path.join(
         os.path.dirname(__file__), '..', 'scripts')))
     import oplcsv

@@ -10,7 +10,7 @@ import sys
 
 try:
     import oplprobe
-except:
+except ModuleNotFoundError:
     sys.path.append(os.path.join(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__))), "scripts"))
     import oplprobe
@@ -38,7 +38,7 @@ def getmeetlist(html):
         # Apparently some <a> tags don't have an href.
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         # All PA results are in /wp-content/uploads/results/.

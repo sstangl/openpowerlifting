@@ -32,7 +32,7 @@ SubstitutionMap = {
 def sub_from(m, c):
     try:
         return m[c]
-    except:
+    except KeyError:
         return c
 
 
