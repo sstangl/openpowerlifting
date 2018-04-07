@@ -41,9 +41,6 @@ check:
 	tests/check-sex-consistency
 	tests/check-lifter-data
 	tests/check-duplicates
-
-# TODO: incorporate into "check" once tests pass.
-check-style:
 	tests/check-python-style
 
 # List of probes for federations that should be fully up-to-date,
