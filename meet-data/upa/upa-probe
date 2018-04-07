@@ -13,9 +13,13 @@ import os
 import sys
 import urllib.request
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
+
 
 # If NUMPAGES is very large, iteration stops at the first 404.
 NUMPAGES = 2  # Number of pages to go through, 10 results per page.
@@ -45,7 +49,7 @@ def getmeetlist(html):
     for e in events:
         for a in e.find_all('a'):
             url = a['href']
-            if not url in urls:  # Sometimes the entries show up twice.
+            if url not in urls:  # Sometimes the entries show up twice.
                 urls.append(url)
 
     return urls

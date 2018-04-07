@@ -5,9 +5,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -40,17 +38,17 @@ def getmeetlist(html):
         url = a['href']
 
         # Result visualization.
-        if not 'page=protokoll_vis' in url:
+        if 'page=protokoll_vis' not in url:
             continue
 
         # Easy way to visually see EPF and IPF meets.
         klubb = a.next.next.next.next.text
         url = url + ' (%s)' % klubb
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
             url = url.replace('../', '')
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -75,7 +73,7 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m.split()[0] in known:
+        if m.split()[0] not in known:
             print(color('[NSF] ') + m)
     print(color('[NSF] ') + "Continue working through archive.")
 

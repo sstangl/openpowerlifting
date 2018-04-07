@@ -4,4 +4,4 @@
 PYTHONFILES=$(find . \( -type f -o -name "*.py" \) -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} + | grep -v "node_modules/")
 
 # Invoking flake8 once is much faster.
-flake8 --show-source --count --max-line-length=89 ${PYTHONFILES}
+flake8 --show-source --max-line-length=89 ${PYTHONFILES}

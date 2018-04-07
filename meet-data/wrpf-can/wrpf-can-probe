@@ -5,14 +5,16 @@
 # as HTML tables.
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-sys.path.append('scripts')
-sys.path.append('../../scripts')
-import oplprobe
-import urllib.request
+
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
+
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 URL = "https://wrpfcanada.com/resultats/"
@@ -28,20 +30,20 @@ def getmeetlist(html):
 
     urls = []
     for a in soup.find_all('a'):
-        if not 'href=' in str(a):
+        if 'href=' not in str(a):
             continue
 
-        if not '#' in a['href']:
+        if '#' not in a['href']:
             continue
 
         url = a['href']
-        if not 'https://' in url:
+        if 'https://' not in url:
             url = BASEURL + url
 
         if url == "https://wrpfcanada.com/resultats/#":
             continue
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -55,6 +57,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[WPRF-CAN]'), unentered)
+
 
 if __name__ == '__main__':
     main()

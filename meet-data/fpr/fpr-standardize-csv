@@ -3,11 +3,15 @@
 # and join all the sheets together into an OpenPowerlifting-formatted CSV file.
 
 import sys
-
-sys.path.append('../../../scripts')
-sys.path.append('scripts')
-import oplcsv
+import os
 import re
+
+try:
+    import oplcsv
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
 
 
 def die(s):
@@ -136,13 +140,13 @@ def parse_fieldnames(sheet):
             elif 'сумма троеб' in text or text == 'сумма':
                 fieldnames.append('TotalKg')
 
-            elif text == '':  # FPR fills their spreadsheets with lots of merged blank columns
+            # FPR fills their spreadsheets with lots of merged blank columns
+            elif text == '':
                 fieldnames.append('IGNORE')
 
             else:
                 die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     else:  # No header was given, use the default
-
         fieldnames = ['Place', 'IGNORE', 'InternationalName']
         fieldnames.extend(['IGNORE'] * 10)
         fieldnames.append('BirthYear')
@@ -157,7 +161,9 @@ def parse_fieldnames(sheet):
         fieldnames.extend(['IGNORE'] * 2)
         fieldnames.append('TotalKg')
 
-        #fieldnames = ['Place','InternationalNameName','BirthYear','IGNORE','IGNORE','IGNORE','BodyweightKg','Squat1Kg','Squat2Kg','Squat3Kg']
+        # fieldnames = ['Place','InternationalNameName','BirthYear',
+        #               'IGNORE','IGNORE','IGNORE','BodyweightKg','Squat1Kg',
+        #               'Squat2Kg','Squat3Kg']
 
     return fieldnames
 
@@ -210,7 +216,6 @@ def parse_sheet(sheet):
     assert sheet[0][0].count(':') == 1
 
     csv = oplcsv.Csv()
-    title = sheet[0][0].lower()
 
     # FPR splits headers across multiple lines,fix this
     sheet = fix_headers(sheet)
@@ -231,7 +236,7 @@ def parse_sheet(sheet):
     division = get_division(sheet)
     sex = get_initial_sex(sheet)
 
-    if event == None:  # Might add code to search for events in titles later
+    if event is None:  # Might add code to search for events in titles later
         event = ''
         if 'Squat1Kg' in csv.fieldnames or 'BestSquatKg' in csv.fieldnames:
             event += 'S'
@@ -274,7 +279,8 @@ def parse_sheet(sheet):
         if line[0].strip() == '':
             continue
 
-        if line[csv.index('InternationalName')].strip() == '':  # Skip lines without a name
+        # Skip lines without a name
+        if line[csv.index('InternationalName')].strip() == '':
             continue
 
         if is_header(line):
@@ -323,15 +329,20 @@ def cleanup_place(csv):
                 row[place_idx] = row[place_idx].replace('М4', '').strip()
                 row[div_idx] = 'Masters 4'
 
-            if '.00' in row[place_idx]:  # Convert place to an integer if it wasn't already
+            # Convert place to an integer if it wasn't already
+            if '.00' in row[place_idx]:
                 row[place_idx] = str(int(float(row[place_idx])))
 
             # Somewhat convoluted way of checking if a lifter is marked DQ and
             # has a nonzero total
-            if row[place_idx] == 'DQ' and row[total_idx].replace('.', '').replace('-', '').isdigit() and float(row[total_idx]) != 0.0:
+            if (row[place_idx] == 'DQ' and
+                    row[total_idx].replace('.', '').replace('-', '').isdigit() and
+                    float(row[total_idx]) != 0.0):
                 row[place_idx] = 'DD'
                 row[total_idx] = ''
-            elif row[place_idx] == '' and row[total_idx].replace('.', '').replace('-', '').isdigit() and float(row[total_idx]) != 0.0:
+            elif (row[place_idx] == '' and
+                    row[total_idx].replace('.', '').replace('-', '').isdigit() and
+                    float(row[total_idx]) != 0.0):
                 row[place_idx] = 'DD'
                 row[total_idx] = ''
             # Everything else is a regular DQ
@@ -339,7 +350,8 @@ def cleanup_place(csv):
                 row[place_idx] = 'DQ'
             elif row[place_idx] == 'дск':
                 row[place_idx] = 'DQ'
-            elif row[total_idx].replace('.', '').replace('-', '').isdigit() and float(row[total_idx]) == 0.0:
+            elif (row[total_idx].replace('.', '').replace('-', '').isdigit() and
+                    float(row[total_idx]) == 0.0):
                 row[place_idx] = 'DQ'
                 row[total_idx] = ''
             elif row[total_idx] == '':
@@ -385,11 +397,11 @@ def cleanup_lift(csv, fieldname):
         for row in csv.rows:
             amount = row[idx]
 
-            amount = ''.join(c for c in amount if c.isdigit()
-                             or c in ['.', '-'])
+            amount = ''.join(c for c in amount if c.isdigit() or c in ['.', '-'])
             amount = amount.replace('.00', '').replace('.0', '')
 
-            if amount == 'X' or amount.replace('-', '') == '0' or not any(c.isdigit() for c in amount):
+            if (amount == 'X' or amount.replace('-', '') == '0' or
+                    not any(c.isdigit() for c in amount)):
                 amount = ''
 
             # Sometimes numbers have more than 2 commas, if so remove the
@@ -446,11 +458,14 @@ def assign_total(csv):
             if 'BestDeadliftKg' in csv.fieldnames:
                 total += weight(row[csv.index('BestDeadliftKg')])
 
-            if weight(row[csv.index('BestSquatKg')]) < 0 or row[csv.index('BestSquatKg')] == '':
+            if (weight(row[csv.index('BestSquatKg')]) < 0 or
+                    row[csv.index('BestSquatKg')] == ''):
                 total = 0.0
-            elif weight(row[csv.index('BestBenchKg')]) < 0 or row[csv.index('BestBenchKg')] == '':
+            elif (weight(row[csv.index('BestBenchKg')]) < 0 or
+                    row[csv.index('BestBenchKg')] == ''):
                 total = 0.0
-            elif weight(row[csv.index('BestDeadliftKg')]) < 0 or row[csv.index('BestDeadliftKg')] == '':
+            elif (weight(row[csv.index('BestDeadliftKg')]) < 0 or
+                    row[csv.index('BestDeadliftKg')] == ''):
                 total = 0.0
 
             if total != 0.0:
@@ -473,8 +488,10 @@ def main(filename):
         sheetcsv = parse_sheet(sheet)
         csv.cat(sheetcsv)
 
-    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'BestSquatKg', 'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'BestBenchKg',
-              'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg', 'BestDeadliftKg', 'TotalKg']:
+    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'BestSquatKg',
+              'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'BestBenchKg',
+              'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg',
+              'BestDeadliftKg', 'TotalKg']:
         cleanup_lift(csv, x)
 
     assign_total(csv)

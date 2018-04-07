@@ -13,16 +13,16 @@ import sys
 def main(filename):
     csv = Csv(filename)
 
-    if not 'Division' in csv.fieldnames:
+    if 'Division' not in csv.fieldnames:
         return
 
-    if not 'Sex' in csv.fieldnames:
+    if 'Sex' not in csv.fieldnames:
         csv.insert_column(csv.index('Division'), 'Sex')
 
-    if not 'Equipment' in csv.fieldnames:
+    if 'Equipment' not in csv.fieldnames:
         csv.insert_column(csv.index('Division'), 'Equipment')
 
-    if not 'Tested' in csv.fieldnames:
+    if 'Tested' not in csv.fieldnames:
         csv.append_column('Tested')
 
     dividx = csv.index('Division')
@@ -64,6 +64,7 @@ def main(filename):
 
     with open(filename, 'w') as fd:
         csv.write(fd)
+
 
 if __name__ == '__main__':
     main(sys.argv[1])

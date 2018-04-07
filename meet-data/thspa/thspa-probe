@@ -6,9 +6,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -44,12 +42,12 @@ def getmeetlist(html):
             continue
 
         # All the meet URLs have this parameter, luckily.
-        if not "passedMeetID=" in url:
+        if "passedMeetID=" not in url:
             continue
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url.replace('./', '/')
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -74,7 +72,7 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             print(color('[THSPA] ') + m)
     print(color('[THSPA] ') + "Continue working through archive.")
 

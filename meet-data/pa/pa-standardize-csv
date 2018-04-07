@@ -244,9 +244,9 @@ def isint(s):
 
 def consume_first_column(csv):
     csv.fieldnames[0] = 'Place'
-    assert not 'Equipment' in csv.fieldnames
-    assert not 'WeightClassKg' in csv.fieldnames
-    assert not 'Event' in csv.fieldnames
+    assert 'Equipment' not in csv.fieldnames
+    assert 'WeightClassKg' not in csv.fieldnames
+    assert 'Event' not in csv.fieldnames
     csv.append_columns(['Equipment', 'WeightClassKg', 'Event'])
 
     # Sex information is statefully present also, but there's usually a M/F
@@ -295,7 +295,8 @@ def consume_first_column(csv):
             elif row[0] == 'EBP' or row[0] == 'EQP BP':
                 event = 'B'
                 equipment = 'Single-ply'
-            elif row[0] == 'EQP' or row[0] == 'EQ' or row[0] == 'EQD' or row[0] == 'EQD MEN':
+            elif (row[0] == 'EQP' or row[0] == 'EQ' or row[0] == 'EQD' or
+                    row[0] == 'EQD MEN'):
                 event = 'SBD'
                 equipment = 'Single-ply'
             elif row[0].lower() == 'equipped':
@@ -319,8 +320,8 @@ def consume_old_format(csv):
     assert csv.fieldnames[0] == 'Name'
     assert 'WeightClassKg' in csv.fieldnames
     assert 'Sex' in csv.fieldnames
-    assert not 'Equipment' in csv.fieldnames
-    assert not 'Event' in csv.fieldnames
+    assert 'Equipment' not in csv.fieldnames
+    assert 'Event' not in csv.fieldnames
 
     csv.append_columns(['Equipment', 'Event'])
 
@@ -412,7 +413,7 @@ def calc_best_lift(csv, col, attemptlist):
 def try_label_division_column(csv):
     if 'Division' in csv.fieldnames:
         return
-    if not 'WeightClassKg' in csv.fieldnames:
+    if 'WeightClassKg' not in csv.fieldnames:
         return
 
     def hasdiv(csv, i):
@@ -432,7 +433,7 @@ def main(filename):
     with open(filename) as fd:
         # Ignore all the bogus lines until we reach the 'NAME' row.
         line = fd.readline()
-        while line and not 'NAME' in line:
+        while line and 'NAME' not in line:
             line = fd.readline()
         if not line:
             error("No column with 'NAME' found.")

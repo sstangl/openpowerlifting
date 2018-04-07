@@ -9,13 +9,13 @@
 
 # HOW TO USE:
 # 1. Run the script e.g. python nasa-standardize-csv results.csv > entries.csv
-# 2. If no error is producded, great! Open entries.csv and double check all the entries
-# marked as DQ are in indeed disqualified. This is a week point of the script.
-# 3 Run check check-entries
-# 4 If the script produced and error, most likely cause is that it didn't recognise a
-# a certain category. Determine what the event and equipment should be for that category and
-# add it to the function integrate_equipment_event_sex below. Then re-run
-# the script
+# 2. If no error is produced, great! Open entries.csv and double check all the entries
+#    marked as DQ are in indeed disqualified. This is a week point of the script.
+# 3. Run check check-entries
+# 4. If the script produced and error, most likely cause is that it didn't
+#    recognise a certain category. Determine what the event and equipment
+#    should be for that category and add it to the function
+#    integrate_equipment_event_sex below. Then re-run the script.
 
 from oplcsv import Csv
 import sys
@@ -293,8 +293,6 @@ def integrate_equipment_event_sex(csv):
     equipmentidx = csv.index('Equipment')
     nameidx = csv.index('Name')
     wtidx = csv.index('WeightClassLBS')
-    if 'State' in csv.fieldnames:
-        stateidx = csv.index('State')
     sexidx = csv.index('Sex')
 
     event = None
@@ -355,24 +353,24 @@ def integrate_equipment_event_sex(csv):
                 event = 'B'
                 equipment = 'Single-ply'
             elif 'uneq pp' in category \
-                 or 'unequipped push pull' in category \
-                 or 'unequipped push/pull' in category \
-                 or 'uneq push pull' in category \
-                 or 'unequipped pp' in category \
-                 or category == 'unequipped  pp' \
-                 or category == 'unequipped pp' \
-                 or category == 'push pull' \
-                 or category == 'push/pull' \
-                 or "un push pull" in category:
+                    or 'unequipped push pull' in category \
+                    or 'unequipped push/pull' in category \
+                    or 'uneq push pull' in category \
+                    or 'unequipped pp' in category \
+                    or category == 'unequipped  pp' \
+                    or category == 'unequipped pp' \
+                    or category == 'push pull' \
+                    or category == 'push/pull' \
+                    or "un push pull" in category:
                 event = 'BD'
                 equipment = 'Raw'
             elif 'eq pp' in category \
-                or category == 'equipped push pull' \
-                or 'equipped pp' in category\
-                or category == 'equip pp' \
-                or category == 'eq push pull' \
-                or category  == 'push pull equipped' \
-                or "equip push pull" in category \
+                    or category == 'equipped push pull' \
+                    or 'equipped pp' in category\
+                    or category == 'equip pp' \
+                    or category == 'eq push pull' \
+                    or category == 'push pull equipped' \
+                    or "equip push pull" in category \
                     or category == "eqipped push pull":
                 event = 'BD'
                 equipment = 'Single-ply'
@@ -408,8 +406,8 @@ def integrate_equipment_event_sex(csv):
         # elif row[nameidx] and (row[wtidx] or row[stateidx]) and
         # first_category_detected:
         elif row[nameidx] and row[wtidx] and first_category_detected:
-            assert event != None
-            assert equipment != None
+            assert event is not None
+            assert equipment is not None
             row[eventidx] = event
             row[equipmentidx] = equipment
             # this will override previous value for sex

@@ -11,7 +11,6 @@ from bs4 import BeautifulSoup
 import errno
 from oplcsv import Csv
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -105,12 +104,12 @@ def getdivisionurls(soup):
         except:
             continue
 
-        if not 'passedDivisionID=' in url:
+        if 'passedDivisionID=' not in url:
             continue
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url.replace('./', '/')
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -129,7 +128,7 @@ def enterdivision(csv, divurl):
     division = division.replace('  ', ' ')
 
     # Division contains sex information.
-    if 'boys' in division.lower() and not 'girls' in division.lower():
+    if 'boys' in division.lower() and 'girls' not in division.lower():
         sex = 'M'
     elif division == 'Junior Varsity' or division == 'Varsity':
         sex = 'M'
@@ -208,7 +207,8 @@ def enterdivision(csv, divurl):
         equipment = 'Single-ply'
         event = 'SBD'
 
-        csv.rows.append([division, weightclass, place, name, team, bw, squat, bench, deadlift, total,
+        csv.rows.append([division, weightclass, place, name, team,
+                         bw, squat, bench, deadlift, total,
                          equipment, event, sex])
 
 

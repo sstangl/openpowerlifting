@@ -14,7 +14,6 @@ from bs4 import BeautifulSoup
 import errno
 from oplcsv import Csv
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -228,7 +227,7 @@ def calc_best_lift(csv, col, attemptlist):
 
 
 def markevent(csv):
-    assert not 'Event' in csv.fieldnames
+    assert 'Event' not in csv.fieldnames
     csv.append_column('Event')
 
     evtidx = csv.index('Event')
@@ -290,7 +289,8 @@ def main(url):
     html = gethtml(url)
 
     # The HTML returned by the website is malformed, which breaks the parser.
-    # Part of the results table looks like: <tr>Totalt</th>, which is treated as </table>.
+    # Part of the results table looks like: <tr>Totalt</th>,
+    #  which is treated as </table>.
     # Work around this by getting rid of all <th>.
     html = html.replace('<th>', '<td>')
     html = html.replace('</th>', '</td>')
@@ -319,28 +319,33 @@ def main(url):
     # Best column.
     remove_empty_cols_ignore_fieldname(entriescsv)
     if 'Squat1Kg' in entriescsv.fieldnames:
-        if not 'Squat2Kg' in entriescsv.fieldnames and not 'Squat3Kg' in entriescsv.fieldnames:
+        if ('Squat2Kg' not in entriescsv.fieldnames and
+                'Squat3Kg' not in entriescsv.fieldnames):
             entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'BestSquatKg'
     if 'Bench1Kg' in entriescsv.fieldnames:
-        if not 'Bench2Kg' in entriescsv.fieldnames and not 'Bench3Kg' in entriescsv.fieldnames:
+        if ('Bench2Kg' not in entriescsv.fieldnames and
+                'Bench3Kg' not in entriescsv.fieldnames):
             entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'BestBenchKg'
     if 'Deadlift1Kg' in entriescsv.fieldnames:
-        if not 'Deadlift2Kg' in entriescsv.fieldnames and not 'Deadlift3Kg' in entriescsv.fieldnames:
-            entriescsv.fieldnames[entriescsv.index(
-                'Deadlift1Kg')] = 'BestDeadliftKg'
+        if ('Deadlift2Kg' not in entriescsv.fieldnames and
+                'Deadlift3Kg' not in entriescsv.fieldnames):
+            entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'BestDeadliftKg'
 
-    # Wilks will be automatically calculated later. Feds get it wrong all the
-    # time.
+    # Wilks will be automatically calculated later.
+    # Feds get it wrong all the time.
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
 
-    if 'Squat1Kg' in entriescsv.fieldnames and not 'BestSquatKg' in entriescsv.fieldnames:
+    if ('Squat1Kg' in entriescsv.fieldnames and
+            'BestSquatKg' not in entriescsv.fieldnames):
         calc_best_lift(entriescsv, 'BestSquatKg', [
                        'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
-    if 'Bench1Kg' in entriescsv.fieldnames and not 'BestBenchKg' in entriescsv.fieldnames:
+    if ('Bench1Kg' in entriescsv.fieldnames and
+            'BestBenchKg' not in entriescsv.fieldnames):
         calc_best_lift(entriescsv, 'BestBenchKg', [
                        'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
-    if 'Deadlift1Kg' in entriescsv.fieldnames and not 'BestDeadliftKg' in entriescsv.fieldnames:
+    if ('Deadlift1Kg' in entriescsv.fieldnames and
+            'BestDeadliftKg' not in entriescsv.fieldnames):
         calc_best_lift(entriescsv, 'BestDeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 

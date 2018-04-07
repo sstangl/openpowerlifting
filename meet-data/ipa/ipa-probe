@@ -4,15 +4,17 @@
 # IPA posts meets to a different page each year.
 #
 
-
 from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplprobe
 
 
 # URL needs updating every year.
