@@ -233,13 +233,13 @@ def markevent(csv):
     evtidx = csv.index('Event')
 
     def getevtindices(csv, fieldl):
-        l = []
+        indexlist = []
         for f in fieldl:
             try:
-                l.append(csv.index(f))
+                indexlist.append(csv.index(f))
             except ValueError:
                 pass
-        return l
+        return indexlist
 
     squatidxl = getevtindices(
         csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
