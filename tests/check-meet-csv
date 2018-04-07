@@ -68,12 +68,20 @@ def pwarning(s):
 
 KnownFederations = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "365Strong",  # 365 Strong Powerlifting Federation.
     "AAPF",  # Amateur APF (drug-tested).
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
     "AfricanPF",  # African Powerlifting Federation, IPF.
+=======
+    "365Strong", # 365 Strong Powerlifting Federation.
+    "AAPF", # Amateur APF (drug-tested).
+    "AAU", # Amateur Athletic Union.
+    "ADFPA", # American Drug-Free Powerlifting Association, precursor to USAPL.
+    "AfricanPF", #African Powerlifting Federation, IPF
+>>>>>>> 4f1308d99e5476d0d98bcb8e2c78291b386452ed
     "APA",
     "APC",  # American Powerlifting Committee.
     "APF",
