@@ -16,7 +16,7 @@
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
-    <option value="AfricannPF">AfricanPF - African Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="AfricanPF">AfricanPF - African Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="CommonwealthPF">CommonwealthPF - Commonwealth Powerlifting Federation [IPF]</option>
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
