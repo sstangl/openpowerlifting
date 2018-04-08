@@ -18,7 +18,7 @@ fi
 process_success=true
 for (( ii=1; ii<=${n};ii++))
 do
-	${SCRIPTDIR}/epf-standardize-csv "results"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
+	${SCRIPTDIR}/epf-standardize-csv2 "results"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
 	#Check if epf-standardize-csv was able to deal with this file
 	if cmp -s "results"${r_nums[$((ii-1))]}".csv" "entries"${r_nums[$((ii-1))]}".csv" ; then
 		echo "Error: epf-standardize-csv does not know how to handle this format. Leaving entries"${r_nums[$((ii-1))]}".csv unstandardized."
