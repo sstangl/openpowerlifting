@@ -890,6 +890,7 @@ if __name__ == '__main__':
             if 'entries.csv' in files:
                 entriespath = dirname + os.sep + 'entries.csv'
 
+                meetpath = None
                 if 'meet.csv' in files:
                     meetpath = dirname + os.sep + 'meet.csv'
 
