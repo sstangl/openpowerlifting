@@ -12,8 +12,8 @@ import sys
 try:
     import oplprobe
 except ModuleNotFoundError:
-    sys.path.append(os.path.join(os.path.dirname(
-        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
 
