@@ -12,7 +12,6 @@
 # CSV files into the build directory. Those temporary files can
 # then serve as the basis for the SQLite import.
 
-import sys
 from oplcsv import Csv
 
 
@@ -29,14 +28,16 @@ def handle_entries():
     sexidx = csv.index('Sex')
     eqpidx = csv.index('Equipment')
 
+    eqplist = ['Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Straps']
+
     for i, row in enumerate(csv.rows):
         row[0] = str(i)
 
         # Convert the Sex column to boolean: M => 0, F => 1.
-        row[sexidx] = str(['M','F'].index(row[sexidx]))
+        row[sexidx] = str(['M', 'F'].index(row[sexidx]))
 
         # Convert the Equipment column to integer.
-        row[eqpidx] = str(['Raw','Wraps','Single-ply','Multi-ply','Straps'].index(row[eqpidx]))
+        row[eqpidx] = str(eqplist.index(row[eqpidx]))
 
     # The Web version keeps the Name column and deletes LifterID.
     # The Server version keeps the LifterID column and deletes Name.

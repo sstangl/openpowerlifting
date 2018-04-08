@@ -56,6 +56,7 @@ def collect_maxes(name, csv):
 
     return (best_squat, best_bench, best_deadlift, best_total)
 
+
 def main(input_filename, oplcsv_filename):
     with open(input_filename) as fd:
         lifters = [x.strip() for x in fd]
@@ -68,11 +69,13 @@ def main(input_filename, oplcsv_filename):
         maxes = collect_maxes(lifter, csv)
         maxes = list(map(str, maxes))
 
-        print("%s\t%s\t%s\t%s\t%s" % (lifter.ljust(20), maxes[0], maxes[1], maxes[2], maxes[3]))
+        print("%s\t%s\t%s\t%s\t%s" %
+              (lifter.ljust(20), maxes[0], maxes[1], maxes[2], maxes[3]))
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s input openpowerlifting.csv" % sys.argv[0], file=sys.stderr)
+        print("Usage: %s input openpowerlifting.csv" %
+              sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2])

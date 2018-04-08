@@ -4,15 +4,17 @@
 # IPA posts meets to a different page each year.
 #
 
-
 from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 # URL needs updating every year.
@@ -31,7 +33,7 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    alist = soup.find_all("a");
+    alist = soup.find_all("a")
 
     urls = []
     for a in alist:

@@ -9,7 +9,8 @@
 
 import oplcsv
 import sys
-from wilks import wilks,mcculloch,ageCoeff
+from wilks import wilks, mcculloch, ageCoeff
+
 
 def to_string(f):
     try:
@@ -18,6 +19,7 @@ def to_string(f):
         print("Field not a float: %f" % f, file=sys.stderr)
         sys.exit(1)
 
+
 def is_int(s):
     try:
         int(s)
@@ -25,22 +27,23 @@ def is_int(s):
     except ValueError:
         return False
 
+
 def main(filename):
     csv = oplcsv.Csv(filename)
 
     # Certain columns have to exist for Wilks to be calculable.
     # Age is for the McCulloch/Foster total, but we'll include it.
     for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
-        if not col in csv.fieldnames:
+        if col not in csv.fieldnames:
             print(' Missing necessary column: %s' % col, file=sys.stderr)
             return 1
 
     # If a Wilks column doesn't exist currently, we can just create it.
-    if not 'Wilks' in csv.fieldnames:
+    if 'Wilks' not in csv.fieldnames:
         csv.append_column('Wilks')
 
     # If a McCulloch column doesn't exist currently, we can just create it.
-    if not 'McCulloch' in csv.fieldnames:
+    if 'McCulloch' not in csv.fieldnames:
         csv.append_column('McCulloch')
 
     indexSex = csv.index('Sex')
@@ -55,16 +58,17 @@ def main(filename):
         if row[indexWilks]:
             # Calculate McCulloch points even if the Wilks is provided.
             # TODO: Check that the Wilks is actually correct!
-            age = row[indexAge].replace('.5','') # Round down when unknown.
+            age = row[indexAge].replace('.5', '')  # Round down when unknown.
             if is_int(age):
-                row[indexMcCulloch] = to_string(float(row[indexWilks]) * ageCoeff(int(age)))
+                row[indexMcCulloch] = to_string(
+                    float(row[indexWilks]) * ageCoeff(int(age)))
             continue
 
         sex = row[indexSex]
         bodyweight = row[indexBodyweight]
         total = row[indexTotal]
 
-        if not sex in ['M', 'F']:
+        if sex not in ['M', 'F']:
             continue
 
         if not bodyweight:
@@ -82,7 +86,8 @@ def main(filename):
         # Calculate the age-adusted score.
         age = row[indexAge]
         if is_int(age):
-            row[indexMcCulloch] = to_string(mcculloch(sex is 'M', int(age), bodyweight, total))
+            row[indexMcCulloch] = to_string(
+                mcculloch(sex is 'M', int(age), bodyweight, total))
         else:
             # Better than just leaving it blank, when we have some data.
             row[indexMcCulloch] = row[indexWilks]

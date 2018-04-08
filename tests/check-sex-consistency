@@ -4,10 +4,15 @@
 # Simple script to run over a list of names and output any
 # that are listed as being both M and F.
 #
-import sys,os
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
+import sys
+import os
 
-import oplcsv
+try:
+    import oplcsv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
 
 
 # Hashtable for sex lookup.
@@ -19,22 +24,24 @@ NameToSexHash = {}
 errorCount = 0
 warningCount = 0
 
+
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else: 
-        return s
+    return s
+
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else: 
-        return s
+    return s
+
 
 def perror(s):
     global errorCount
     errorCount += 1
     print(' ' + redden(s), file=sys.stderr)
+
 
 def pwarning(s):
     global warningCount
@@ -43,17 +50,18 @@ def pwarning(s):
 
 ###############################################
 
+
 def process_file(path):
     global NameToSexHash
     global AlreadyPrintedList
 
     csv = oplcsv.Csv(path)
 
-    if not 'Name' in csv.fieldnames:
+    if 'Name' not in csv.fieldnames:
         perror("Missing Name column in %s" % path)
         return
 
-    if not 'Sex' in csv.fieldnames:
+    if 'Sex' not in csv.fieldnames:
         perror("Missing Sex column in %s" % path)
         return
 
@@ -69,16 +77,18 @@ def process_file(path):
             continue
 
         if sex == '':
-            pwarning("Missing sex information for \"%s\" in %s." % (name,path))
+            pwarning("Missing sex information for \"%s\" in %s." %
+                     (name, path))
             continue
 
-        # If only the first initial is given, then it could be a false positive.
+        # If only the first initial is given, then it could be a false
+        # positive.
         first = name.split()[0]
         if len(first) == 1 or (len(first) == 2 and first[-1] == '.'):
             continue
 
-        if not name in NameToSexHash:
-            NameToSexHash[name] = [0,0]
+        if name not in NameToSexHash:
+            NameToSexHash[name] = [0, 0]
 
         if sex == 'M':
             NameToSexHash[name][0] = NameToSexHash[name][0] + 1
@@ -92,9 +102,10 @@ def main():
             entriespath = dirname + os.sep + 'entries.csv'
             process_file(entriespath)
 
-    for name,counts in NameToSexHash.items():
+    for name, counts in NameToSexHash.items():
         if counts[0] and counts[1]:
-            pwarning("Sex conflict for %s: %uM, %uF." % (name, counts[0], counts[1]))
+            pwarning("Sex conflict for %s: %uM, %uF." %
+                     (name, counts[0], counts[1]))
 
     if errorCount > 0 or warningCount > 0:
         print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
@@ -106,4 +117,3 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
-

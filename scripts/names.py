@@ -7,37 +7,37 @@
 
 def standardize_upper_ascii(s):
     s = s.upper()
-    s = s.replace('Ň','N')
-    s = s.replace('Ö','O')
-    s = s.replace('Ã','A')
-    s = s.replace('Ä','A')
-    s = s.replace('Ü','U')
-    s = s.replace('Ø','O')
-    s = s.replace('É','E')
-    s = s.replace('Å','A')
-    s = s.replace('Á','A')
-    s = s.replace('Ó','O')
-    s = s.replace('Ñ','N')
-    s = s.replace('Í','I')
-    s = s.replace('Ú','U')
-    s = s.replace('Ć','C')
-    s = s.replace('Č','C')
-    s = s.replace('Ý','Y')
-    s = s.replace('Ž','Z')
-    s = s.replace('Š','S')
-    s = s.replace('Ł','W')
-    s = s.replace('Ů','U')
-    s = s.replace('Æ','AE')
-    s = s.replace('È','E')
-    s = s.replace('Ê','E')
-    s = s.replace('Î','I')
-    s = s.replace('Ë','E')
-    s = s.replace('Đ','D')
-    s = s.replace('Ð','D') # Not a duplicate.
-    s = s.replace('Ě','E')
-    s = s.replace('Ç','C')
-    s = s.replace('Ô','O')
-    s = s.replace('Ï','I')
+    s = s.replace('Ň', 'N')
+    s = s.replace('Ö', 'O')
+    s = s.replace('Ã', 'A')
+    s = s.replace('Ä', 'A')
+    s = s.replace('Ü', 'U')
+    s = s.replace('Ø', 'O')
+    s = s.replace('É', 'E')
+    s = s.replace('Å', 'A')
+    s = s.replace('Á', 'A')
+    s = s.replace('Ó', 'O')
+    s = s.replace('Ñ', 'N')
+    s = s.replace('Í', 'I')
+    s = s.replace('Ú', 'U')
+    s = s.replace('Ć', 'C')
+    s = s.replace('Č', 'C')
+    s = s.replace('Ý', 'Y')
+    s = s.replace('Ž', 'Z')
+    s = s.replace('Š', 'S')
+    s = s.replace('Ł', 'W')
+    s = s.replace('Ů', 'U')
+    s = s.replace('Æ', 'AE')
+    s = s.replace('È', 'E')
+    s = s.replace('Ê', 'E')
+    s = s.replace('Î', 'I')
+    s = s.replace('Ë', 'E')
+    s = s.replace('Đ', 'D')
+    s = s.replace('Ð', 'D')  # Not a duplicate.
+    s = s.replace('Ě', 'E')
+    s = s.replace('Ç', 'C')
+    s = s.replace('Ô', 'O')
+    s = s.replace('Ï', 'I')
     return s
 
 
@@ -48,20 +48,21 @@ def levenshtein(s1, s2):
         return levenshtein(s2, s1)
 
     # len(s1) >= len(s2)
-    if len(s2) == 0: 
+    if len(s2) == 0:
         return len(s1)
 
     previous_row = range(len(s2) + 1)
     for i, c1 in enumerate(s1):
         current_row = [i + 1]
         for j, c2 in enumerate(s2):
-            # j+1 instead of j since previous_row and current_row are one character longer than s2.
+            # j+1 instead of j since previous_row and current_row are one
+            # character longer than s2.
             insertions = previous_row[j + 1] + 1
             deletions = current_row[j] + 1
             substitutions = previous_row[j] + (c1 != c2)
             current_row.append(min(insertions, deletions, substitutions))
         previous_row = current_row
-    
+
     return previous_row[-1]
 
 
@@ -71,11 +72,11 @@ def levenshtein(s1, s2):
 # Algorithm described in Section 9.3:
 # https://web.archive.org/web/20090107221831/http://www.cs.utah.edu/contest/2005/NameMatching.pdf
 def phonex(s):
-    s = s.replace('-','')
+    s = s.replace('-', '')
     s = standardize_upper_ascii(s)
 
     assert s.isalpha()
-    assert len(s) > 1 # No abbreviations.
+    assert len(s) > 1  # No abbreviations.
 
     # 1. Remove all trailing 'S' characters at the end of the name.
     s = s.rstrip('S')
@@ -109,7 +110,7 @@ def phonex(s):
     #    of A,E,H,I,O,U,W,Y in other positions.
     k = s[0]
     for c in s[1:]:
-        if not c in 'AEHIOUWY':
+        if c not in 'AEHIOUWY':
             k += c
     s = k
 
@@ -119,12 +120,13 @@ def phonex(s):
     #    L -> 4 (only if not followed by a vowel or end of name)
     #    M,N -> 5 (ignore next letter if either D or G)
     #    R -> 6 (only if not followed by vowel or end of name)
-    #    Ignore the current letter if it would repeat the most recently-added digit.
+    # Ignore the current letter if it would repeat the most recently-added
+    # digit.
     i = 1
     k = ''
     while i < len(s):
         c = s[i]
-        c_next = s[i+1] if i+1 < len(s) else ''
+        c_next = s[i + 1] if i + 1 < len(s) else ''
         n = ''
 
         if c in 'BFPV':
@@ -135,14 +137,14 @@ def phonex(s):
             if c_next != 'C':
                 n = '3'
         elif c == 'L':
-            if not c_next in 'AEIOUY': # The empty string is in all strings.
+            if c_next not in 'AEIOUY':  # The empty string is in all strings.
                 n = '4'
         elif c in 'MN':
             n = '5'
             if c_next in 'DG':
                 i += 1
         elif c == 'R':
-            if not c_next in 'AEIOUY':
+            if c_next not in 'AEIOUY':
                 n = '6'
         else:
             raise ValueError("Unhandled character: %s" % c)
@@ -184,20 +186,20 @@ if __name__ == '__main__':
 
         first = phonex(comps[0])
         second = phonex(comps[1])
-        
-        key = '%s-%s' % (first,second)
 
-        if not key in h:
+        key = '%s-%s' % (first, second)
+
+        if key not in h:
             h[key] = [name]
-        elif not name in h[key]:
+        elif name not in h[key]:
             h[key].append(name)
 
-        if not name in counts:
+        if name not in counts:
             counts[name] = 1
         else:
             counts[name] += 1
 
-    for k,v in h.items():
+    for k, v in h.items():
         if len(v) == 1:
             continue
 
@@ -209,7 +211,6 @@ if __name__ == '__main__':
         for i in range(1, len(v)):
             # For the moment, since there are so many name conflicts,
             # just consider the ones that have a minimal edit distance.
-            if levenshtein(v[0],v[i]) == 1:
-                print([(n,counts[n]) for n in v])
+            if levenshtein(v[0], v[i]) == 1:
+                print([(n, counts[n]) for n in v])
                 break
-

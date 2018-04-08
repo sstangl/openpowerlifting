@@ -8,7 +8,7 @@ filename = sys.argv[1]
 
 csv = oplcsv.Csv(filename)
 
-if not 'WeightClassKg' in csv.fieldnames:
+if 'WeightClassKg' not in csv.fieldnames:
     sys.exit(0)
 
 idx = csv.index('WeightClassKg')

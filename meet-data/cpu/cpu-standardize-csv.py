@@ -35,7 +35,7 @@ def standardize_date(csv):
         olddate = row[dateidx]
 
         # Fix errors like "2--Jun-12".
-        olddate = olddate.replace('--','-')
+        olddate = olddate.replace('--', '-')
 
         # Round unknown dates like "1986 ?" to "1986-01-01".
         if ' ?' in olddate:
@@ -49,7 +49,7 @@ def standardize_date(csv):
             row[dateidx] = '1981-07-25'
             continue
 
-        d,m,y = olddate.split('-')
+        d, m, y = olddate.split('-')
         if len(d) == 1:
             d = '0' + d
         if len(m) == 1:
@@ -63,7 +63,7 @@ def standardize_date(csv):
 
         # Sometimes dates are entered as '06-19-2016', so swap month and day.
         if not m[0].isalpha():
-            d,m = m,d
+            d, m = m, d
             newdate = "%s-%s-%s" % (row[yearidx], m, d)
             assert len(newdate) == 10
             row[dateidx] = newdate
@@ -166,7 +166,7 @@ def standardize_weightclass(csv):
 
         # Make sure that the new column is an actual number.
         if row[newidx]:
-            assert float(row[newidx].replace('+',''))
+            assert float(row[newidx].replace('+', ''))
 
         # Make sure that the bodyweight is sane-ish.
         if row[bodyweightidx]:
@@ -177,8 +177,9 @@ def standardize_weightclass(csv):
 
             # Some meets have accidentally swapped weight class and bodyweight,
             # but we can leave those alone for the time being.
-            # Those can be corrected manually, since they'll trip the error checks.
-            assert float(row[bodyweightidx].replace('+',''))
+            # Those can be corrected manually, since they'll trip the error
+            # checks.
+            assert float(row[bodyweightidx].replace('+', ''))
 
     csv.remove_column_by_index(oldidx)
 
@@ -210,19 +211,19 @@ def standardize_name(csv):
         if '(' in name:
             assert name.count('(') == 1
             assert name.count(')') == 1
-            name = name[0:name.index('(')] + name[name.index(')')+1:-1]
-            name = name.replace('  ',' ')
+            name = name[0:name.index('(')] + name[name.index(')') + 1:-1]
+            name = name.replace('  ', ' ')
 
-        name = name.replace('Jr.','Jr')
-        name = name.replace('Sr.','Sr')
+        name = name.replace('Jr.', 'Jr')
+        name = name.replace('Sr.', 'Sr')
         row[nameidx] = name.strip()
 
 
 def standardize_location(csv):
     assert 'Location' in csv.fieldnames
     locationidx = csv.index('Location')
-    csv.insert_column(locationidx+1, 'MeetTown')
-    csv.insert_column(locationidx+1, 'MeetState')
+    csv.insert_column(locationidx + 1, 'MeetTown')
+    csv.insert_column(locationidx + 1, 'MeetState')
     locationidx = csv.index('Location')
     townidx = csv.index('MeetTown')
     stateidx = csv.index('MeetState')
@@ -271,7 +272,7 @@ def standardize_location(csv):
 
             # If there are more than two ';', it looks like:
             # "Killeen; Texas; USA". So just grab the first 2.
-            town,state = loc.split(';')[0:2]
+            town, state = loc.split(';')[0:2]
 
             # Sometimes 'QU' is harde-coded.
             if state.strip() == 'QU':
@@ -285,7 +286,7 @@ def standardize_location(csv):
 
 def remove_international_meets(csv):
     assert 'MeetName' in csv.fieldnames
-    assert 'State' in csv.fieldnames # Lifter state. "CAN" if foreign.
+    assert 'State' in csv.fieldnames  # Lifter state. "CAN" if foreign.
     meetnameidx = csv.index('MeetName')
     stateidx = csv.index('State')
 
@@ -339,9 +340,9 @@ def standardize(csv):
         e = r[divisionidx]
         f = r[weightclassidx]
         g = r[nameidx]
-        return (a,b,c,d,e,f,g)
+        return (a, b, c, d, e, f, g)
 
-    csv.rows = sorted(csv.rows, key = lambda r: sorter(r), reverse=True)
+    csv.rows = sorted(csv.rows, key=lambda r: sorter(r), reverse=True)
 
 
 def main(filename):

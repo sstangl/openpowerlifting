@@ -4,12 +4,15 @@
 # A better CSV manipulation library for the OpenPowerlifting format.
 #
 
+
 class Csv:
+
     def __init__(self, filename=None):
         if filename:
-            with open(filename, 'r',encoding='utf-8') as fd:
+            with open(filename, 'r', encoding='utf-8') as fd:
                 self.fieldnames = fd.readline().rstrip().split(',')
-                self.rows = [x.rstrip("\r\n").split(',') for x in fd.readlines()]
+                self.rows = [x.rstrip("\r\n").split(',')
+                             for x in fd.readlines()]
         else:
             self.fieldnames = []
             self.rows = []
@@ -50,10 +53,11 @@ class Csv:
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
-            if not header in self.fieldnames:
+            if header not in self.fieldnames:
                 self.append_column(header)
 
-        # An array mapping index in other.fieldnames to index in self.fieldnames.
+        # An array mapping index in other.fieldnames to index in
+        # self.fieldnames.
         mapping = [self.index(header) for header in other.fieldnames]
 
         for row in other.rows:

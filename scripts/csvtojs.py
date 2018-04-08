@@ -4,6 +4,7 @@
 from oplcsv import Csv
 import sys
 
+
 def isnumber(s):
     try:
         float(s)
@@ -11,7 +12,10 @@ def isnumber(s):
     except ValueError:
         return False
 
-# Given a float in string form like "320.500", return "320.5", to save some space.
+# Given a float in string form like "320.500", return "320.5", to save
+# some space.
+
+
 def trimzeros(s):
     if '.' not in s:
         return s
@@ -21,9 +25,10 @@ def trimzeros(s):
         return s[:-1]
     return s
 
+
 def arrayify(s):
     if len(s) == 0:
-        return '' # JS will treat as undefined.
+        return ''  # JS will treat as undefined.
     if isnumber(s):
         return trimzeros(s)
     return '"%s"' % s
@@ -44,7 +49,6 @@ def convert(csv, jsvarname, fd):
 
     for row in csv.rows:
         fd.write('[' + ','.join([arrayify(x) for x in row]) + '],')
-
 
     fd.write("];")
 
