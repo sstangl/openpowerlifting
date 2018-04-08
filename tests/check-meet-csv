@@ -72,6 +72,7 @@ KnownFederations = {
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
+    "AfricanPF",  # African Powerlifting Federation, IPF.
     "APA",
     "APC",  # American Powerlifting Committee.
     "APF",
@@ -147,6 +148,7 @@ KnownFederations = {
 }
 
 KnownCountries = {
+    "Algeria",
     "Argentina",
     "Australia",
     "Austria",
@@ -185,6 +187,7 @@ KnownCountries = {
     "Luxembourg",
     "Malaysia",
     "Mexico",
+    "Morocco",
     "Netherlands",
     "New Caledonia",
     "New Zealand",
