@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PZKFiTS,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AfricanPF,AsianPF,BP,CommonwealthPF,CPU,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,NAPF,NASA,NIPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,ScottishPL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -16,6 +16,7 @@
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
+    <option value="AfricannPF">AfricanPF - African Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="AsianPF">AsianPF - Asian Powerlifting Federation [IPF] (Incomplete)</option>
     <option value="CommonwealthPF">CommonwealthPF - Commonwealth Powerlifting Federation [IPF]</option>
     <option value="EPF">EPF - European Powerlifting Federation [IPF] (Incomplete)</option>
@@ -108,6 +109,9 @@
   </optgroup>
   <optgroup label="Singapore">
     <option value="SPA">SPA - Singapore Powerlifting Alliance [GPA] (Incomplete)</option>
+  </optgroup>
+  <optgroup label="Slovenia">
+    <option value="PLZS">PLZS - Powerlifting zveza Slovenije [IPF]</option>
   </optgroup>
   <optgroup label="Ukraine">
     <option value="WPAU">WPAU - World Powerlifting Alliance Ukraine [WPA] (Incomplete)</option>

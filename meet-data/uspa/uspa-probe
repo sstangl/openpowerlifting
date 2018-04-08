@@ -6,13 +6,13 @@
 
 from bs4 import BeautifulSoup
 import os
-import shutil
-import sys
 import urllib.request
 
 
-CUTOFF = 200 # Ignore earlier meets, since they have invalid URLs anyway.
-RESULTSURL = 'https://docs.google.com/spreadsheets/d/1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/pubhtml/sheet?hl=en_US&headers=false&gid=0'
+CUTOFF = 200  # Ignore earlier meets, since they have invalid URLs anyway.
+RESULTSURL = 'https://docs.google.com/spreadsheets/d/' \
+             '1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/' \
+             'pubhtml/sheet?hl=en_US&headers=false&gid=0'
 USPADIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -22,6 +22,7 @@ def color(s):
 
 # Just a way to name a tuple.
 class Meet:
+
     def __init__(self, url, num, date, name, location):
         self.url = url
         self.num = ("0" * (4 - len(num))) + num
@@ -44,11 +45,11 @@ def gethtml():
 def getmeetinfo(tr):
     # The first column would have the URL.
     urltd = tr.find('td')
-    if urltd == None:
+    if urltd is None:
         return None
 
     a = urltd.find('a')
-    if a == None:
+    if a is None:
         return None
     url = a.get('href')
 

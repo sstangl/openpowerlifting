@@ -5,9 +5,8 @@
 # Given that list, determine which meets haven't been entered yet.
 
 
-import os
-import shutil
 import sys
+import os
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -34,7 +33,7 @@ def getenteredurls():
             with open(dirname + os.sep + 'URL', 'r') as fd:
                 for k in fd.readlines():
                     k = k.strip()
-                    if not k in urls:
+                    if k not in urls:
                         urls.append(k)
     return urls
 
@@ -49,7 +48,7 @@ def main():
 
     count = 0
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             count += 1
             if not summarize:
                 print(color('[USAPL Archive] ') + m)

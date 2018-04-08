@@ -8,11 +8,17 @@ from bs4 import BeautifulSoup
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
-RESULTS_URL = "http://www.britishpowerliftingunion.co.uk/wpcbpu-uk-international-open-2013/"
+
+RESULTS_URL = "http://www.britishpowerliftingunion.co.uk/" \
+              "wpcbpu-uk-international-open-2013/"
+
 BASE_URL = "http://www.britishpowerliftingunion.co.uk/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -33,7 +39,7 @@ def getmeetlist(html):
         for link in links:
             url = link['href'].strip()
 
-            if not '://' in url:
+            if '://' not in url:
                 url = BASE_URL + url
 
             urls.append(url)

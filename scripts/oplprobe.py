@@ -5,7 +5,6 @@
 #
 
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -38,15 +37,15 @@ def getunenteredurls(meetlist, enteredmeets):
     variants = set()
     for k in enteredmeets:
         if "%20" in k:
-            variants.add(k.replace("%20"," "))
+            variants.add(k.replace("%20", " "))
         if " " in k:
-            variants.add(k.replace(" ","%20"))
+            variants.add(k.replace(" ", "%20"))
 
     enteredmeets = enteredmeets.union(variants)
 
     unentered = []
     for m in meetlist:
-        if not m in enteredmeets:
+        if m not in enteredmeets:
             unentered.append(m)
     return unentered
 
@@ -61,7 +60,7 @@ def print_meets(fedstr, meetlist):
 
     try:
         for url in meetlist:
-            print("%s %s" % (fedstr, url.replace(' ','%20')))
+            print("%s %s" % (fedstr, url.replace(' ', '%20')))
 
         if count > 3:
             print("%s %d meets remaining." % (fedstr, count))

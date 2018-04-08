@@ -32,6 +32,8 @@ pub enum Language {
     fr,
     /// Italian.
     it,
+    /// Slovenian.
+    sl,
     /// Russian.
     ru,
 }
@@ -58,6 +60,7 @@ impl FromStr for Language {
             "fi" => Ok(Language::fi),
             "fr" => Ok(Language::fr),
             "it" => Ok(Language::it),
+            "sl" => Ok(Language::sl),
             "ru" => Ok(Language::ru),
             _ => Err(()),
         }
@@ -137,6 +140,7 @@ pub struct LangInfo {
     fi: Option<Translations>,
     fr: Option<Translations>,
     it: Option<Translations>,
+    sl: Option<Translations>,
     ru: Option<Translations>,
 }
 
@@ -150,6 +154,7 @@ impl LangInfo {
             fi: None,
             fr: None,
             it: None,
+            sl: None,
             ru: None,
         }
     }
@@ -174,6 +179,7 @@ impl LangInfo {
             Language::fi => self.fi = trans,
             Language::fr => self.fr = trans,
             Language::it => self.it = trans,
+            Language::sl => self.sl = trans,
             Language::ru => self.ru = trans,
         };
 
@@ -189,6 +195,7 @@ impl LangInfo {
             Language::fi => self.fi.as_ref().unwrap(),
             Language::fr => self.fr.as_ref().unwrap(),
             Language::it => self.it.as_ref().unwrap(),
+            Language::sl => self.sl.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
         }
     }
@@ -235,6 +242,7 @@ impl Language {
             Language::fi => NumberFormat::ArabicComma,
             Language::fr => NumberFormat::ArabicComma,
             Language::it => NumberFormat::ArabicComma,
+            Language::sl => NumberFormat::ArabicComma,
             Language::ru => NumberFormat::ArabicComma,
         }
     }

@@ -6,12 +6,9 @@
 # future results.
 
 from bs4 import BeautifulSoup
-import errno
-from oplcsv import Csv
-import os
-import shutil
 import sys
 import urllib.request
+from oplcsv import Csv
 
 
 def gethtml(url):
@@ -40,7 +37,8 @@ columnmap = {
 
 
 def gettable(soup):
-    # The page isn't really standardized, but make sure that we understand all the headers.
+    # The page isn't really standardized, but make sure that we understand all
+    # the headers.
     tables = soup.find_all("table", {"class": "tablesorter"})
     if len(tables) == 0:
         error("Table not found.")
@@ -64,21 +62,21 @@ def gettable(soup):
         tds = row.find_all('td')
         r = []
         for td in tds:
-            r.append(td.text.strip().replace('  ',' '))
+            r.append(td.text.strip().replace('  ', ' '))
         csv.rows.append(r)
-        
+
     return csv
 
 
 def fixcolumnnames(csv):
-    for i,x in enumerate(csv.fieldnames):
+    for i, x in enumerate(csv.fieldnames):
         csv.fieldnames[i] = columnmap[x]
 
 
 # SPF doesn't have a column for Sex, but puts "Women" in the Division.
 def sexfromdivision(csv):
     assert "Division" in csv.fieldnames
-    assert not "Sex" in csv.fieldnames
+    assert "Sex" not in csv.fieldnames
 
     csv.append_column("Sex")
     sexidx = csv.index("Sex")
@@ -92,7 +90,7 @@ def sexfromdivision(csv):
             row[sexidx] = 'M'
 
         # Also remove sex information from the Division column.
-        row[dividx] = row[dividx].replace("Womens","").strip()
+        row[dividx] = row[dividx].replace("Womens", "").strip()
 
 
 def fixevent(csv):
@@ -127,10 +125,10 @@ def fixequipment(csv):
         if eq == "Raw – No Wraps":
             row[eqidx] = 'Raw'
         elif eq == "Raw":
-            if not 'S' in row[evtidx]:
-                row[eqidx] = 'Raw'
-            else:
+            if 'S' in row[evtidx]:
                 row[eqidx] = 'Wraps'
+            else:
+                row[eqidx] = 'Raw'
         elif eq == "Multi-Ply":
             row[eqidx] = "Multi-ply"
         elif eq == "Single-Ply":
@@ -138,7 +136,7 @@ def fixequipment(csv):
         elif eq == "Slingshot":
             row[eqidx] = "Slingshot"
         elif eq == '':
-            pass # This means copy from the row above, usually.
+            pass  # This means copy from the row above, usually.
         else:
             error("Unknown equipment: %s" % row[eqidx])
 

@@ -18,13 +18,13 @@ if len(sys.argv) < 2:
 csv = Csv(sys.argv[1])
 
 # If a Wilks column doesn't exist currently, don't insert one arbitrarily.
-if not 'Wilks' in csv.fieldnames:
+if 'Wilks' not in csv.fieldnames:
     sys.exit(0)
 
 # Certain columns have to exist for Wilks to be calculable.
 # Age is for the McCulloch/Foster total, but we'll include it.
 for col in ['Sex', 'BodyweightKg', 'TotalKg']:
-    if not col in csv.fieldnames:
+    if col not in csv.fieldnames:
         print(' Missing necessary column: %s' % col, file=sys.stderr)
         sys.exit(1)
 
@@ -33,12 +33,14 @@ indexBodyweight = csv.index('BodyweightKg')
 indexTotal = csv.index('TotalKg')
 indexWilks = csv.index('Wilks')
 
+
 def to_string(f):
     try:
         return "{:.2f}".format(f)
     except ValueError:
         print("Field not a float: %f" % f, file=sys.stderr)
         sys.exit(1)
+
 
 def is_int(s):
     try:
@@ -47,12 +49,13 @@ def is_int(s):
     except ValueError:
         return False
 
+
 for row in csv.rows:
     sex = row[indexSex]
     bodyweight = row[indexBodyweight]
     total = row[indexTotal]
 
-    if not sex in ['M', 'F']:
+    if sex not in ['M', 'F']:
         continue
 
     if not bodyweight:

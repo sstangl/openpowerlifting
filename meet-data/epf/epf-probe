@@ -6,9 +6,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -44,9 +42,9 @@ def getmeetlist(html):
     urls = []
     for a in content[0].find_all('a'):
         url = a['href']
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -71,7 +69,7 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             print(color('[EPF] ') + m)
     print(color('[EPF] ') + "Continue working through archive.")
 

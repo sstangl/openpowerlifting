@@ -7,14 +7,15 @@
 # being careful to over-estimate the bounds of the tables.
 #
 
-#HOW TO USE:
-#1. Run the script e.g. python nasa-standardize-csv results.csv > entries.csv
-#2. If no error is producded, great! Open entries.csv and double check all the entries
-#marked as DQ are in indeed disqualified. This is a week point of the script.
-#3 Run check check-entries 
-#4 If the script produced and error, most likely cause is that it didn't recognise a 
-# a certain category. Determine what the event and equipment should be for that category and
-# add it to the function integrate_equipment_event_sex below. Then re-run the script
+# HOW TO USE:
+# 1. Run the script e.g. python nasa-standardize-csv results.csv > entries.csv
+# 2. If no error is produced, great! Open entries.csv and double check all the entries
+#    marked as DQ are in indeed disqualified. This is a week point of the script.
+# 3. Run check check-entries
+# 4. If the script produced and error, most likely cause is that it didn't
+#    recognise a certain category. Determine what the event and equipment
+#    should be for that category and add it to the function
+#    integrate_equipment_event_sex below. Then re-run the script.
 
 from oplcsv import Csv
 import sys
@@ -23,6 +24,7 @@ import sys
 def error(msg):
     print(msg, file=sys.stderr)
     sys.exit(1)
+
 
 def fix_weightclasses(csv):
     idx = csv.index('WeightClassKg')
@@ -180,13 +182,13 @@ def fix_weightclasses(csv):
         row[idx] = x
 
 
-
 # Aggregate a bunch of columns that just report division information.
 def aggregate_divisions(csv):
     csv.append_column("Division")
     dividx = csv.index('Division')
 
-    cols = ['Meet','Bench','Power','Uequip','PP U','PP','P Press', 'P Pr', 'PS', 'Retro']
+    cols = ['Meet', 'Bench', 'Power', 'Uequip',
+            'PP U', 'PP', 'P Press', 'P Pr', 'PS', 'Retro']
 
     for col in cols:
         if col in csv.fieldnames:
@@ -209,7 +211,7 @@ def capitalize(csv, field):
 
 
 def rename_fields(csv):
-    for i,field in enumerate(csv.fieldnames):
+    for i, field in enumerate(csv.fieldnames):
         if field == 'Pl.':
             csv.fieldnames[i] = 'Place'
         elif field == 'Wt.Cl.':
@@ -247,7 +249,7 @@ def rename_fields(csv):
 # The column names appear again and again.
 def remove_restated_column_rows(csv):
     def find_such_a_row(csv):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if ',Name,' in ','.join(row):
                 return i
         return -1
@@ -262,7 +264,7 @@ def remove_restated_column_rows(csv):
 def remove_empty_rows(csv):
     def find_such_a_row(csv):
         nameidx = csv.index('Name')
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if not ''.join(row):
                 return i
             if ''.join(row) == '""':
@@ -280,9 +282,9 @@ def remove_empty_rows(csv):
 
 # The equipment and event show up in control rows, such as "Uneq BP".
 # These are in the Name column.
-#By this stage has already been filled in from either the an existing sex column
-#or from the division. There is a last over male to female override here if
-#category explicitly says its women
+# By this stage has already been filled in from either the an existing sex column
+# or from the division. There is a last over male to female override here if
+# category explicitly says its women
 def integrate_equipment_event_sex(csv):
     csv.append_column('Event')
     csv.append_column('Equipment')
@@ -291,8 +293,6 @@ def integrate_equipment_event_sex(csv):
     equipmentidx = csv.index('Equipment')
     nameidx = csv.index('Name')
     wtidx = csv.index('WeightClassLBS')
-    if 'State' in csv.fieldnames: 
-        stateidx = csv.index('State')
     sexidx = csv.index('Sex')
 
     event = None
@@ -301,7 +301,7 @@ def integrate_equipment_event_sex(csv):
     first_category_detected = False
     for row in csv.rows:
         # Detect category rows.
-        if row[nameidx] and not row[wtidx]: #and not row[stateidx]:
+        if row[nameidx] and not row[wtidx]:  # and not row[stateidx]:
             category = ''.join(row[nameidx]).replace('  ', ' ').lower()
             if '(w)' in category or 'women' in category or 'girls' in category:
                 sex = 'F'
@@ -309,10 +309,10 @@ def integrate_equipment_event_sex(csv):
                 sex = None
 
             if 'uneq pl' in category or category == 'uneq hs pl' \
-                 or category == 'uneq powerlifting' or category == 'unequipped pl' \
+                or category == 'uneq powerlifting' or category == 'unequipped pl' \
                 or category == 'uneq youth' \
-               or category =='uneq women pl'\
-               or category =='women pl':
+               or category == 'uneq women pl'\
+               or category == 'women pl':
                 event = 'SBD'
                 equipment = 'Wraps'
             elif 'equipped pl' in category or 'eq powerlifting' in category \
@@ -324,64 +324,64 @@ def integrate_equipment_event_sex(csv):
                 event = 'SBD'
                 equipment = 'Single-ply'
 
-                #Powersports
+                # Powersports
             elif 'power' in category and 'ports' in category \
-                or category == 'womens ps' \
-                or category == 'women ps' \
-                or category == 'girls ps' \
-                or category == 'men ps': # Curl-Bench-Deadlift. Will
-            #recalculate total later. Leave place untouched
+                    or category == 'womens ps' \
+                    or category == 'women ps' \
+                    or category == 'girls ps' \
+                    or category == 'men ps':  # Curl-Bench-Deadlift. Will
+                # recalculate total later. Leave place untouched
                 event = 'BD'
                 equipment = 'Raw'
-            elif 'ps' in category and 'ind' in category: #individual lifts:
+            elif 'ps' in category and 'ind' in category:  # individual lifts:
                 event = 'I'
                 equipment = 'I'
             elif 'uneq b' in category or 'unequipped bp' in category \
-                  or 'unequipped bench' in category \
-                  or category =='retro bp'\
-                  or category =='ps bench only'\
-                  or category =='ps bench press'\
-                or category =='girls bp':
+                or 'unequipped bench' in category \
+                or category == 'retro bp'\
+                or category == 'ps bench only'\
+                or category == 'ps bench press'\
+                    or category == 'girls bp':
                 event = 'B'
                 equipment = 'Raw'
             elif 'equipped bp' in category or 'eq bp' in category \
-                    or category =='bp equipped':
+                    or category == 'bp equipped':
                 event = 'B'
                 equipment = 'Single-ply'
             elif category == 'equip bp' or category == 'equipped benchpress'\
-                    or category =='equip bp women' or category =='equip bp men':
+                    or category == 'equip bp women' or category == 'equip bp men':
                 event = 'B'
                 equipment = 'Single-ply'
             elif 'uneq pp' in category \
-                 or 'unequipped push pull' in category \
-                 or 'unequipped push/pull' in category \
-                 or 'uneq push pull' in category \
-                 or 'unequipped pp' in category \
-                 or category == 'unequipped  pp' \
-                 or category == 'unequipped pp' \
-                 or category =='push pull' \
-                 or category =='push/pull' \
-                 or "un push pull" in category:
+                    or 'unequipped push pull' in category \
+                    or 'unequipped push/pull' in category \
+                    or 'uneq push pull' in category \
+                    or 'unequipped pp' in category \
+                    or category == 'unequipped  pp' \
+                    or category == 'unequipped pp' \
+                    or category == 'push pull' \
+                    or category == 'push/pull' \
+                    or "un push pull" in category:
                 event = 'BD'
                 equipment = 'Raw'
             elif 'eq pp' in category \
-                 or category == 'equipped push pull' \
-                 or 'equipped pp' in category\
-                 or category == 'equip pp' \
-                 or category =='eq push pull' \
-                 or category  == 'push pull equipped' \
-                 or "equip push pull" in category \
-                or category == "eqipped push pull":
+                    or category == 'equipped push pull' \
+                    or 'equipped pp' in category\
+                    or category == 'equip pp' \
+                    or category == 'eq push pull' \
+                    or category == 'push pull equipped' \
+                    or "equip push pull" in category \
+                    or category == "eqipped push pull":
                 event = 'BD'
                 equipment = 'Single-ply'
-            elif 'power press' in category: # PowerClean-Bench
+            elif 'power press' in category:  # PowerClean-Bench
                 event = 'B'
                 equipment = 'Raw'
             elif category == 'power clean/press':
                 event = 'B'
                 equipment = 'Raw'
             elif 'retro' in category and 'pl' in category \
-                    or category =='retro powerlifting':
+                    or category == 'retro powerlifting':
                 event = 'SBD'
                 equipment = 'Raw'
             elif 'curl only' in category:
@@ -394,7 +394,7 @@ def integrate_equipment_event_sex(csv):
                 event = 'D'
                 equipment = 'Raw'
             elif category == 'equipped dl' \
-                 or category == 'equip dl women':
+                    or category == 'equip dl women':
                 event = 'D'
                 equipment = 'Single-ply'
             elif category == 'men':
@@ -403,24 +403,26 @@ def integrate_equipment_event_sex(csv):
                 error("Unknown category: \"%s\"" % (category))
             first_category_detected = True
 
-        #elif row[nameidx] and (row[wtidx] or row[stateidx]) and first_category_detected:
+        # elif row[nameidx] and (row[wtidx] or row[stateidx]) and
+        # first_category_detected:
         elif row[nameidx] and row[wtidx] and first_category_detected:
-            assert event != None
-            assert equipment != None
+            assert event is not None
+            assert equipment is not None
             row[eventidx] = event
             row[equipmentidx] = equipment
             # this will override previous value for sex
             # only if the category name explivitly states
-            #it is for females
+            # it is for females
             if sex:
                 row[sexidx] = sex
+
 
 def remove_category_rows(csv):
     nameidx = csv.index('Name')
     wtidx = csv.index('WeightClassLBS')
 
     def find_such_a_row(csv):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if row[nameidx] and not row[wtidx]:
                 return i
         return -1
@@ -432,11 +434,13 @@ def remove_category_rows(csv):
         del csv.rows[i]
 
 # Round to two decimal places.
+
+
 def internal_to_string(f):
     try:
         f = float(f)
         r = "{:.2f}".format(f)
-        r = r.replace('.00','')
+        r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
         return r
@@ -473,7 +477,8 @@ def recalculate_totals(csv):
     deadliftidx = csv.index('BestDeadliftKg')
 
     for row in csv.rows:
-        total = float2(row[squatidx]) + float2(row[benchidx]) + float2(row[deadliftidx])
+        total = float2(row[squatidx]) + float2(row[benchidx]
+                                               ) + float2(row[deadliftidx])
         row[totalidx] = internal_to_string(total)
 
 
@@ -508,13 +513,17 @@ def hunt_dqs(csv):
             row[totalidx] = ''
             row[placeidx] = 'DQ'
 
-#removes 'w' from division names
+# removes 'w' from division names
+
+
 def remove_w(csv):
     divisionidx = csv.index("Division")
     for row in csv.rows:
         if row[divisionidx][0] == 'w':
             row[divisionidx] = row[divisionidx][1:]
-#Adds Sex column by checking if division begins with "w"
+# Adds Sex column by checking if division begins with "w"
+
+
 def add_sex(csv):
     csv.append_column("Sex")
     divisionidx = csv.index("Division")
@@ -526,6 +535,7 @@ def add_sex(csv):
             else:
                 row[sexidx] = 'M'
 
+
 def convert_LBS_to_Kg(csv):
     LBS_cols = []
     for i, f in enumerate(csv.fieldnames):
@@ -534,16 +544,19 @@ def convert_LBS_to_Kg(csv):
     for i in LBS_cols:
         csv.fieldnames[i] = csv.fieldnames[i][:-3] + 'Kg'
         for row in csv.rows:
-            #leave the shw alone here. We will fixe it in the fix_weightclasses method
+            # leave the shw alone here. We will fixe it in the
+            # fix_weightclasses method
             if '+' in row[i]:
                 row[i] = 'shw'
             elif row[i] != 'shw':
-                row[i]= internal_to_string(float2(row[i])*0.453592)
+                row[i] = internal_to_string(float2(row[i]) * 0.453592)
+
 
 def remove_non_pl_rows(csv):
     eventidx = csv.index('Event')
+
     def find_such_a_row(csv):
-        for i,row in enumerate(csv.rows):
+        for i, row in enumerate(csv.rows):
             if row[eventidx] == 'delete':
                 return i
         return -1
@@ -553,6 +566,7 @@ def remove_non_pl_rows(csv):
         if i == -1:
             return
         del csv.rows[i]
+
 
 def fix_individual_lifts(csv):
     eventidx = csv.index('Event')
@@ -571,17 +585,20 @@ def fix_individual_lifts(csv):
             elif float2(row[deadidx]) > 0:
                 row[eventidx] = 'D'
                 row[equipidx] = 'Raw'
-            #could be curl only I think. So we mark it for later deletetion
+            # could be curl only I think. So we mark it for later deletetion
             else:
                 row[eventidx] = 'delete'
                 row[equipidx] = 'delete'
 
-#if there is no division set, the default is Open
+# if there is no division set, the default is Open
+
+
 def add_open_division(csv):
     dividx = csv.index("Division")
     for row in csv.rows:
         if not row[dividx]:
             row[dividx] = 'Open'
+
 
 def hunt_raw(csv):
     dividx = csv.index("Division")
@@ -589,7 +606,8 @@ def hunt_raw(csv):
     for row in csv.rows:
         if 'retro' in row[dividx]:
             row[eqidx] = 'Raw'
-            row[dividx]= row[dividx][row[dividx].index('retro')+5:]
+            row[dividx] = row[dividx][row[dividx].index('retro') + 5:]
+
 
 def update_event(csv):
     eventidx = csv.index("Event")
@@ -602,18 +620,21 @@ def update_event(csv):
             row[dividx] = row[dividx][2:]
             row[eventidx] = 'B'
 
+
 def hunt_curl_only(csv):
     dividx = csv.index("Division")
     eventidx = csv.index("Event")
     for row in csv.rows:
-        if len(row[dividx]) >0:
+        if len(row[dividx]) > 0:
             if 'c' == row[dividx][0]:
                 row[eventidx] = 'delete'
+
 
 def main(filename):
     csv = Csv(filename)
 
-    # The first row was actually a data row, so the fieldnames are not set correctly.
+    # The first row was actually a data row, so the fieldnames are not set
+    # correctly.
     def findfieldnames(rows):
         for row in rows:
             if 'Name' in row and 'B.W.T' in row:
@@ -633,9 +654,9 @@ def main(filename):
     csv.remove_column_by_name("Tl. Lbs.")
     csv.remove_column_by_name("Coef")
     csv.remove_column_by_name("TL Coef")
-    csv.remove_column_by_name("Best PC") # Power Clean.
-    csv.remove_column_by_name("Best-C") # Curl.
-    csv.remove_column_by_name("C-4ar") # Curl 4th attempt.
+    csv.remove_column_by_name("Best PC")  # Power Clean.
+    csv.remove_column_by_name("Best-C")  # Curl.
+    csv.remove_column_by_name("C-4ar")  # Curl 4th attempt.
     csv.remove_column_by_name("Date")
 
     aggregate_divisions(csv)

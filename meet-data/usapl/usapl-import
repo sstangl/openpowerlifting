@@ -12,7 +12,6 @@ from bs4 import BeautifulSoup
 import errno
 from oplcsv import Csv
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -51,7 +50,7 @@ states = {
     'Kentucky': 'KY',
     'Louisiana': 'LA',
     'Massachusetts': 'MA',
-    'Massachussetts': 'MA', # Work around spelling errors.
+    'Massachussetts': 'MA',  # Work around spelling errors.
     'Maryland': 'MD',
     'Maine': 'ME',
     'Michigan': 'MI',
@@ -89,8 +88,8 @@ states = {
     'West Virginia': 'WV',
     'Wyoming': 'WY',
 
-    'Nationals': '', # No information provided.
-    'Regionals': '', # No information provided.
+    'Nationals': '',  # No information provided.
+    'Regionals': '',  # No information provided.
 }
 
 
@@ -105,9 +104,9 @@ def parsedivision(div):
     # Sometimes the divisions are just "M1", when they really mean
     # "both M1a and M1b", and it's impossible to distinguish the two.
     s = div
-    s = s.replace('Raw ', 'R-') # As in "Raw Master 1a"
-    s = s.replace('Master', 'M') # As in "Master 1a"
-    s = s.replace('Teen', 'T') # As in "Teen 1"
+    s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
+    s = s.replace('Master', 'M')  # As in "Master 1a"
+    s = s.replace('Teen', 'T')  # As in "Teen 1"
     s = s.replace('High School', 'HS')
     s = s.replace('Collegiate', 'C')
     s = s.replace('Special Olympian', 'SO')
@@ -117,12 +116,12 @@ def parsedivision(div):
     s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
-    s = s.replace('Female-','')
-    s = s.replace('Male-','')
-    s = s.replace('GuestLifter','G')
-    s = s.replace('Varsity','V')
+    s = s.replace('Female-', '')
+    s = s.replace('Male-', '')
+    s = s.replace('GuestLifter', 'G')
+    s = s.replace('Varsity', 'V')
     if len(s) > 6:
-        error("Not sure how to parse division: '%s'. Got '%s'." % (div,s))
+        error("Not sure how to parse division: '%s'. Got '%s'." % (div, s))
 
     return (s, eq)
 
@@ -190,14 +189,15 @@ def makeentriescsv(soup):
 
         elif k == 19:
             # This is a results row.
-            assert state_event != None
-            assert state_division != None
-            assert state_equipment != None
+            assert state_event is not None
+            assert state_division is not None
+            assert state_equipment is not None
 
             cells = row.find_all('td')
             weightclasskg = cells[0].text.replace('-', '').strip()
-            place = cells[1].text.replace('.','').strip()
-            name = cells[2].text.replace('Jr.','Jr').replace('Sr.','Sr').replace('  ',' ').strip()
+            place = cells[1].text.replace('.', '').strip()
+            name = cells[2].text.replace('Jr.', 'Jr').replace(
+                'Sr.', 'Sr').replace('  ', ' ').strip()
             birthyear = cells[3].text.strip()
             team = cells[4].text.strip()
             state = cells[5].text.strip()
@@ -213,8 +213,8 @@ def makeentriescsv(soup):
             deadlift2kg = cells[14].text.strip()
             deadlift3kg = cells[15].text.strip()
             totalkg = cells[16].text.strip()
-            #wilks = cells[17].text.strip() # Not used. Always recalculated.
-            #drugtested = cells[18].text.strip() # Not used.
+            # wilks = cells[17].text.strip() # Not used. Always recalculated.
+            # drugtested = cells[18].text.strip() # Not used.
 
             row = ['' for x in csv.fieldnames]
             row[csv.index('WeightClassKg')] = weightclasskg
@@ -239,14 +239,14 @@ def makeentriescsv(soup):
             row[csv.index('Equipment')] = state_equipment
             row[csv.index('Event')] = state_event
 
-            for i,c in enumerate(row):
+            for i, c in enumerate(row):
                 row[i] = c.replace(',', ' ')
             csv.rows.append(row)
 
         else:
             cells = row.find_all('td')
-            for i,cell in enumerate(cells):
-                print("%d: %s" % (i,cell))
+            for i, cell in enumerate(cells):
+                print("%d: %s" % (i, cell))
             error("Unexpected row length: %s, debug information above" % str(k))
 
     return csv
@@ -280,27 +280,29 @@ def makebestcolumns(csv):
 
     def tonumber(s):
         if not s:
-             return 0
+            return 0
         return float(s)
 
     def makebestcolumn(csv, lift):
         numcols = len(list(filter(lambda x: lift in x, csv.fieldnames)))
         if numcols == 3:
-            csv.insert_column(csv.index(lift+'3Kg')+1, 'Best'+lift+'Kg')
-            
-            idxbest = csv.index('Best'+lift+'Kg')
-            idx1 = csv.index(lift+'1Kg')
-            idx2 = csv.index(lift+'2Kg')
-            idx3 = csv.index(lift+'3Kg')
+            csv.insert_column(csv.index(lift + '3Kg') +
+                              1, 'Best' + lift + 'Kg')
+
+            idxbest = csv.index('Best' + lift + 'Kg')
+            idx1 = csv.index(lift + '1Kg')
+            idx2 = csv.index(lift + '2Kg')
+            idx3 = csv.index(lift + '3Kg')
 
             for row in csv.rows:
-                best = max(tonumber(row[idx1]), tonumber(row[idx2]), tonumber(row[idx3]))
+                best = max(tonumber(row[idx1]), tonumber(
+                    row[idx2]), tonumber(row[idx3]))
                 if best > 0:
                     row[idxbest] = str(best)
         elif numcols == 1:
             # If only one column is filled in, that's the best result column.
-            idx1 = csv.index(lift+'1Kg')
-            csv.fieldnames[idx1] = 'Best'+lift+'Kg'
+            idx1 = csv.index(lift + '1Kg')
+            csv.fieldnames[idx1] = 'Best' + lift + 'Kg'
 
     makebestcolumn(csv, 'Squat')
     makebestcolumn(csv, 'Bench')
@@ -308,7 +310,8 @@ def makebestcolumns(csv):
 
 
 # The website incorrectly marks disqualified lifters as placing.
-# Normally it just doesn't include disqualified lifters... but sometimes it does.
+# Normally it just doesn't include disqualified lifters... but sometimes
+# it does.
 def markdqs(csv):
     totalidx = csv.index('TotalKg')
     placeidx = csv.index('Place')
@@ -322,19 +325,20 @@ def markdqs(csv):
 def infersex(csv):
     # Some meets unfortunately don't use weight classes,
     # and instead arrange lifters by sex manually.
-    if not 'WeightClassKg' in csv.fieldnames:
+    if 'WeightClassKg' not in csv.fieldnames:
         return
 
     sexidx = csv.index('Sex')
     wcidx = csv.index('WeightClassKg')
 
     # Note that ipf_men doesn't intersect ipf_women! Perfect matching!
-    ipf_men   = ['53','59','66','74','83','93','105','120','120+']
-    ipf_women = ['43','47','52','57','63','72','84','84+']
+    ipf_men = ['53', '59', '66', '74', '83', '93', '105', '120', '120+']
+    ipf_women = ['43', '47', '52', '57', '63', '72', '84', '84+']
 
     # These unfortunately do intersect.
-    old_men   = ['56','60','67.5','75','82.5','90','100','110','125','125+']
-    old_women = ['48','52','56','60','67.5','75','82.5','90','90+']
+    old_men = ['56', '60', '67.5', '75', '82.5',
+               '90', '100', '110', '125', '125+']
+    old_women = ['48', '52', '56', '60', '67.5', '75', '82.5', '90', '90+']
 
     for row in csv.rows:
         if row[sexidx]:
@@ -348,9 +352,9 @@ def infersex(csv):
             row[sexidx] = 'M'
         elif wc in ipf_women:
             row[sexidx] = 'F'
-        elif wc in old_men and not wc in old_women:
+        elif wc in old_men and wc not in old_women:
             row[sexidx] = 'M'
-        elif wc in old_women and not wc in old_men:
+        elif wc in old_women and wc not in old_men:
             row[sexidx] = 'F'
 
 
@@ -373,7 +377,7 @@ def markdrugtest(csv):
     for row in csv.rows:
         if row[eventidx] == 'DRUGTEST':
             row[placeidx] = 'DD'
-            row[eventidx] = 'SBD' # Good enough, who cares?
+            row[eventidx] = 'SBD'  # Good enough, who cares?
 
 
 def makemeetcsv(soup):
@@ -382,8 +386,8 @@ def makemeetcsv(soup):
     meetname = content.find('h3').text
 
     # Remove federation information from the meet name.
-    meetname = meetname.replace('USAPL','')
-    meetname = meetname.replace('USA Powerlifting','')
+    meetname = meetname.replace('USAPL', '')
+    meetname = meetname.replace('USA Powerlifting', '')
     meetname = meetname.strip()
 
     table = content.find('table')
@@ -400,7 +404,7 @@ def makemeetcsv(soup):
     trs = table.find_all('tr')
     if len(trs) >= 3:
         state = table.find_all('tr')[2].find('td').text.strip()
-        if not state in states:
+        if state not in states:
             error("State not in the abbreviation lookup table: %s" % state)
         state = states[state]
 
@@ -463,7 +467,7 @@ def main(url):
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
-        fd.write(url+"\n")
+        fd.write(url + "\n")
 
     print("Imported into %s." % dirname)
 
