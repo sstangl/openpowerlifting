@@ -16,7 +16,6 @@ except ModuleNotFoundError:
     import oplprobe
 
 MEETSURL = "http://aaustrengthsports.org/page.php?page_id=101061"
-#MEETSURL = "http://www.aaupowerlifting.org/Results/ResultsArchives.aspx"
 ROOTURL = "http://www.aaupowerlifting.org"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
