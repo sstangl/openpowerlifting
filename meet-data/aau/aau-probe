@@ -15,8 +15,8 @@ except ModuleNotFoundError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
-
-MEETSURL = "http://www.aaupowerlifting.org/Results/ResultsArchives.aspx"
+MEETSURL = "http://aaustrengthsports.org/page.php?page_id=101061"
+#MEETSURL = "http://www.aaupowerlifting.org/Results/ResultsArchives.aspx"
 ROOTURL = "http://www.aaupowerlifting.org"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -28,7 +28,7 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    meetul = soup.find("div", {"id": "resource-content"})
+    meetul = soup.find("div", {"id": "main-content"})
 
     urls = []
     for a in meetul.find_all('a'):
