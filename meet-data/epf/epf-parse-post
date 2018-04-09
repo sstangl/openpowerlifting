@@ -46,6 +46,7 @@ ${SCRIPTDIR}/create-meet-csv ${results[@]} > meet.csv
 #Check if create-meet-csv was able to deal with this file
 if cmp -s meet.csv ${SCRIPTDIR}/../meet.template ; then
    echo "Error: create-meet-csv does not know how to handle this format. Leaving meet.csv unfilled."
+   echo EPF, >> meet.csv
 fi
 
 #Checking this after create-meet-csv so we still have a meet file even with errors

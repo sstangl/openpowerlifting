@@ -69,10 +69,10 @@ def assign_division(csv):
 
     for row in csv.rows:
         # So we can correctly strip rows in Bench Only meets
-        if (any(title in row[0].lower() for title in
-                ['best lifters', 'list of', 'champion of'])):
-            curdiv = 'NON-LIFTER-ROW'
-        elif (row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or
+       # if (any(title in row[0].lower() for title in
+       #         ['best lifters', 'list of', 'champion of'])):
+       #     curdiv = 'NON-LIFTER-ROW'
+        if (row[0] == 'Open' or 'Sub' in row[0] or 'Juniors' in row[0] or
                 'Masters' in row[0]):
             curdiv = row[0].replace('Women', '').replace('Men', '').strip()
         elif curdiv and row[totalidx]:

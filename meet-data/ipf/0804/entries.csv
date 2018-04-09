@@ -3,7 +3,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,BodyweightKg,Country,Bench1Kg,Be
 2,48,F,Open,Justyna Kozdryk,1980,44.9,POL,110,117.5,125,125,125,B,Single-ply
 3,48,F,Open,Eva Svjanteková,1973,47.9,SVK,92.5,97.5,100,100,100,B,Single-ply
 4,48,F,Open,Ilka Schwengl-Forsthuber,1965,47.2,AUT,92.5,-97.5,-97.5,92.5,92.5,B,Single-ply
-5,48,F,Open,Eva Makrai,1990,46.5,HUN,80,85,-92.5,85,85,B,Single-ply
+5,48,F,Open,Éva Makrai,1990,46.5,HUN,80,85,-92.5,85,85,B,Single-ply
 6,48,F,Open,Victoria Fadgyas,1991,47.1,HUN,70,75,80,80,80,B,Single-ply
 1,52,F,Open,Kaori Nagaya-Shirakawa,1963,51.6,JPN,115,122.5,125,125,125,B,Single-ply
 2,52,F,Open,Alesia Shynkevich,1984,50.5,BLR,102.5,105,107.5,107.5,107.5,B,Single-ply
@@ -58,7 +58,7 @@ DQ,75,F,Open,Beth Brown,1982,74.5,GBR,-95,-95,-95,,,B,Single-ply
 5,82.5,F,Open,Katarzyna Owsianka,1974,81,POL,85,90,95,95,95,B,Single-ply
 DQ,82.5,F,Open,Devan Doan,1987,79.5,USA,-140,-145,-145,,,B,Single-ply
 1,90,F,Open,Ielja Strik,1973,89.3,NED,165,172.5,-183.5,172.5,172.5,B,Single-ply
-2,90,F,Open,Agnes Szabo,1988,89.5,HUN,130,-145,145,145,145,B,Single-ply
+2,90,F,Open,Ágnes Szabó,1988,89.5,HUN,130,-145,145,145,145,B,Single-ply
 3,90,F,Open,Merja Mynttinen,1958,88.4,FIN,130,-135,-135,130,130,B,Single-ply
 4,90,F,Open,Katariina Nokua,1973,89.3,FIN,-125,125,-135,125,125,B,Single-ply
 5,90,F,Open,Eva Speth,1954,89.6,GER,120,125,-127.5,125,125,B,Single-ply
@@ -133,7 +133,7 @@ DQ,90,M,Open,Denis Bondik,1974,85.3,KAZ,-230,-230,-230,,,B,Single-ply
 4,100,M,Open,Nikolaj Esipov,1980,99.5,GER,-255,-255,255,255,255,B,Single-ply
 5,100,M,Open,Toni Koskinen,1981,99.1,FIN,247.5,-257.5,-265,247.5,247.5,B,Single-ply
 6,100,M,Open,Martin Green,1974,99.5,GBR,-245,245,-250,245,245,B,Single-ply
-7,100,M,Open,Kornel Schauer,1977,97.2,HUN,-240,240,-255,240,240,B,Single-ply
+7,100,M,Open,Kornél Schauer,1977,97.2,HUN,-240,240,-255,240,240,B,Single-ply
 8,100,M,Open,Vincent Encinas,1964,98.4,FRA,-235,235,-242.5,235,235,B,Single-ply
 9,100,M,Open,Bjorn Schneider,1979,99.5,GER,230,-240,-240,230,230,B,Single-ply
 10,100,M,Open,Vladislav Havrlik,1980,97.6,CZE,225,-235,-235,225,225,B,Single-ply
@@ -177,7 +177,7 @@ DQ,110,M,Open,Kato Marøy,1985,108.2,NOR,-235,-247.5,-255,,,B,Single-ply
 5,125,M,Open,Kenneth Sandvik,1975,123.9,FIN,282.5,287.5,-307.5,287.5,287.5,B,Single-ply
 7,125,M,Open,Kjell Furesund,1966,123.9,NOR,272.5,280,-290,280,280,B,Single-ply
 8,125,M,Open,Kaido Leesmann,1969,115.3,EST,250,260,265,265,265,B,Single-ply
-9,125,M,Open,Janos Cserna,1968,119.9,HUN,242.5,247.5,255,255,255,B,Single-ply
+9,125,M,Open,János Cserna,1968,119.9,HUN,242.5,247.5,255,255,255,B,Single-ply
 10,125,M,Open,Sven Lange,1980,123,GER,255,-270,-295,255,255,B,Single-ply
 11,125,M,Open,Jacob Stegelmann,1980,123.9,DEN,245,-252.5,-257.5,245,245,B,Single-ply
 DQ,125,M,Open,Fredrik Svensson,1979,123.5,SWE,-260,-260,-260,,,B,Single-ply
@@ -187,7 +187,7 @@ DQ,125,M,Open,Marcel Jahnke,1981,119.3,GER,-270,-270,-270,,,B,Single-ply
 3,125+,M,Open,Daisuke Midote,1972,133.1,JPN,-322.5,322.5,-327.5,322.5,322.5,B,Single-ply
 4,125+,M,Open,Fredrik Smulter,1983,136.2,FIN,305,-320,-320,305,305,B,Single-ply
 5,125+,M,Open,Andreas Ehliger,1978,141.3,GER,302.5,-307.5,-320,302.5,302.5,B,Single-ply
-6,125+,M,Open,Jiri Havrda,1974,132.6,CZE,280,295,-310,295,295,B,Single-ply
+6,125+,M,Open,Jiři Havrda,1974,132.6,CZE,280,295,-310,295,295,B,Single-ply
 7,125+,M,Open,Ewald Enzinger,1966,132.2,AUT,-270,270,282.5,282.5,282.5,B,Single-ply
 8,125+,M,Open,Alastair McColl,1981,131.5,NOR,270,280,-290,280,280,B,Single-ply
 9,125+,M,Open,Trond Fjøren,1966,144.4,NOR,277.5,-287.5,-287.5,277.5,277.5,B,Single-ply
