@@ -271,6 +271,8 @@ def check_column_weightclass(s, row, csv):
     ipl = ['48', '52', '56', '60', '67.5', '75', '82.5',
            '90', '90+', '100', '110', '125', '125+']
     rum_extra = ['44', '140', '140+']
+    parapl_men = ['49', '54', '59', '65', '72', '80', '88', '97', '107', '107+']
+    parapl_women = ['41', '45', '50', '55', '61', '67', '73', '79', '86', '86+']
 
     apa_extra = ['39']  # Youth.
     proraw_extra = ['70', '70+', '75+', '80', '95', '110+']
@@ -288,7 +290,7 @@ def check_column_weightclass(s, row, csv):
     classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
         rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
         old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
-        idfpf_extra + parapl_extra + wpau_extra
+        idfpf_extra + parapl_extra + wpau_extra + parapl_men + parapl_women
 
     if s not in classes:
         pwarning("Unknown weight class: %s" % s)
@@ -773,23 +775,35 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                                 "sex" not in wc_rule):
                             weight_classes = wc_rule["classes"]
 
-        if meet_id in configtoml["exclusions"]:
-            if "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]:
-                check_row_weightclass_sex(row, csv, weight_classes)
-            if "check_row_division" not in configtoml["exclusions"][meet_id]:
-                check_row_division(row, csv, configtoml[
-                                   "divisions"], meet_year)
-            if ("check_row_weightclass_consistency" not in
-                    configtoml["exclusions"][meet_id]):
-                check_row_weightclass_consistency(row, csv, weight_classes)
-        else:
+        if (meet_id not in configtoml["exclusions"] or
+                "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]):
             check_row_weightclass_sex(row, csv, weight_classes)
+        if (meet_id not in configtoml["exclusions"] or
+                "check_row_division" not in configtoml["exclusions"][meet_id]):
             check_row_division(row, csv, configtoml["divisions"], meet_year)
+        if (meet_id not in configtoml["exclusions"]
+                or "check_row_weightclass_consistency"
+                not in configtoml["exclusions"][meet_id]):
             check_row_weightclass_consistency(row, csv, weight_classes)
+        if (meet_id not in configtoml["exclusions"] or
+                "check_row_lift_order" not in configtoml["exclusions"][meet_id]):
+            check_row_lift_order(
+                row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
+            check_row_lift_order(
+                row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
+            check_row_lift_order(
+                row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)
         check_row_weightclass_consistency(row, csv, None)
+
+        check_row_lift_order(
+            row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
+        check_row_lift_order(
+            row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
+        check_row_lift_order(
+            row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
     check_row_total_consistency(row, csv)
 
@@ -799,13 +813,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                                'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
     check_row_lift_consistency(row, csv, 'BestDeadliftKg',
                                ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
-
-    check_row_lift_order(
-        row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
-    check_row_lift_order(
-        row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
-    check_row_lift_order(
-        row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
     check_row_success_consistency(
         row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
