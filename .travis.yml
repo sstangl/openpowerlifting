@@ -1,9 +1,9 @@
 language: python
 python:
-  - "3.5"
+  - "3.6"
 
 install:
-  - pip install toml
+  - pip3 install toml flake8
 
 script: make check
 notifications:

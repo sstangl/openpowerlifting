@@ -22,7 +22,7 @@ bidx = csv.index('BodyweightKg')
 
 for row in csv.rows:
     if not row[bidx]:
-        if row[widx] and not '+' in row[widx]:
+        if row[widx] and '+' not in row[widx]:
             row[bidx] = row[widx]
 
 with open(sys.argv[1], 'w') as fd:

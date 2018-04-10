@@ -11,9 +11,13 @@ from bs4 import BeautifulSoup
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
+
 
 RESULTS_URL = "http://www.gpcaustralia.com/index.php/results?limitstart=0"
 BASE_URL = "http://www.gpcaustralia.com"
@@ -43,13 +47,13 @@ def getmeetlist(html):
             url = link['href'].strip()
 
             # All results are in a documents/ subdir.
-            if not 'results' in url:
+            if 'results' not in url:
                 continue
 
-            if not '://' in url:
+            if '://' not in url:
                 url = BASE_URL + url
 
-            if not url in urls:
+            if url not in urls:
                 urls.append(url)
 
     return urls
@@ -62,7 +66,7 @@ def main():
     with open(FEDDIR + '/todo/URLLIST') as fd:
         for url in fd:
             url = url.strip()
-            if not url in meets_list:
+            if url not in meets_list:
                 meets_list.append(url)
 
     entered = oplprobe.getenteredurls(FEDDIR)

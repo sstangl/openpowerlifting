@@ -40,6 +40,8 @@ check:
 	tests/check-meet-csv
 	tests/check-sex-consistency
 	tests/check-lifter-data
+	tests/check-duplicates
+	tests/check-python-style
 
 # List of probes for federations that should be fully up-to-date,
 # or at least are quick to read and not filled with noise.
@@ -68,6 +70,7 @@ probe-quick:
 	${DATADIR}/nzpf/nzpf-probe --quick || true
 	${DATADIR}/oceaniapf/oceaniapf-probe --quick || true
 	${DATADIR}/pa/pa-probe --quick || true
+	${DATADIR}/plzs/plzs-probe --quick || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true
 	${DATADIR}/scottishpl/scottishpl-probe --quick || true
@@ -109,6 +112,7 @@ probe:
 	${DATADIR}/nzpf/nzpf-probe || true
 	${DATADIR}/oceaniapf/oceaniapf-probe || true
 	${DATADIR}/pa/pa-probe || true
+	${DATADIR}/plzs/plzs-probe || true
 	${DATADIR}/raw/raw-probe || true
 	${DATADIR}/rps/rps-probe || true
 	${DATADIR}/rupc/rupc-probe || true

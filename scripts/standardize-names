@@ -19,7 +19,7 @@ def load_names(datafilepath):
     h = {}
     with open(datafilepath, 'r') as fd:
         for line in fd.readlines():
-            names = line.split(',')  
+            names = line.split(',')
             assert len(names) >= 2
 
             correct_name = names[0].strip()
@@ -28,7 +28,7 @@ def load_names(datafilepath):
             for incorrect_name in names[1:]:
                 incorrect_name = incorrect_name.strip()
                 assert incorrect_name
-                assert not incorrect_name in h
+                assert incorrect_name not in h
                 h[incorrect_name] = correct_name
 
     return h
@@ -66,4 +66,3 @@ def main(args):
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
-

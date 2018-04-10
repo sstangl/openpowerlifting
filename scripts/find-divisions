@@ -12,7 +12,8 @@ KNOWN_DIVISIONS = {
     # IPF
     "Sub-Juniors", "Juniors", "Master 1", "Master 2", "Master 3", "Master 4",
     # USAPL
-    "Y1", "Y2", "Y3", "T1", "T2", "T3", "JR", "O", "M1a", "M1b", "M2a", "M3a", "M3b", "M4a", "M4b"
+    "Y1", "Y2", "Y3", "T1", "T2", "T3", "JR", "O",
+    "M1a", "M1b", "M2a", "M3a", "M3b", "M4a", "M4b"
 }
 
 
@@ -21,7 +22,7 @@ def find_divisions(unknown, entriespath):
 
     csv = oplcsv.Csv(entriespath)
 
-    if not 'Division' in csv.fieldnames:
+    if 'Division' not in csv.fieldnames:
         return
     dividx = csv.index('Division')
 
@@ -33,7 +34,7 @@ def find_divisions(unknown, entriespath):
             else:
                 unknown[row[dividx]] = 1
 
-    
+
 def main(args):
     # Frequency dictionary for unknown divisions.
     unknown = {}
@@ -50,8 +51,8 @@ def main(args):
     unknown_list = list(unknown.items())
 
     # Print unknown divisions sorted by frequency.
-    for division in sorted(unknown_list, reverse = True, key = lambda x: x[1]):
-        print(division[0],":",division[1])
+    for division in sorted(unknown_list, reverse=True, key=lambda x: x[1]):
+        print(division[0], ":", division[1])
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 .PHONY: builddir binary data oldstatics config client clientstatics release clean
 
 BUILDDIR := build
-BUILDFILE := server.tar.bz2
+BUILDFILE := build.tar.bz2
 
 all: release
 

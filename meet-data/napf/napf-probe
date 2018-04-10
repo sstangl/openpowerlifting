@@ -8,9 +8,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -48,7 +46,7 @@ def getmeetlist(html):
         # Some URLs are bogus and just JS targets.
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         # Simple false-positive detector.
@@ -61,10 +59,10 @@ def getmeetlist(html):
         if '/gallery/' in url:
             continue
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
-            url = url.replace('.com//','/')
-        if not url in urls:
+            url = url.replace('.com//', '/')
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -89,7 +87,7 @@ def main():
     known = getenteredurls()
 
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             print(color('[NAPF] ') + m)
 
 

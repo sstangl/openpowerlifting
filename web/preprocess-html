@@ -25,14 +25,16 @@ def do_exec(program, arglist):
     try:
         p = subprocess.Popen([program] + arglist, stdout=subprocess.PIPE)
     except FileNotFoundError:
-        p = subprocess.Popen(['./'+program] + arglist, stdout=subprocess.PIPE)
+        p = subprocess.Popen(['./' + program] + arglist,
+                             stdout=subprocess.PIPE)
 
     print(p.stdout.read().decode('utf8').rstrip())
 
-    p.communicate()[0] # Forces p.returncode to be set.
+    p.communicate()[0]  # Forces p.returncode to be set.
     rc = p.returncode
     if rc != 0:
-        print("#exec directive for %s returned code %d." % (program, rc), file=sys.stderr)
+        print("#exec directive for %s returned code %d." %
+              (program, rc), file=sys.stderr)
         sys.exit(rc)
 
 
@@ -47,13 +49,15 @@ def main(filename):
 
         if words[0] == "#include":
             if len(words) != 2:
-                print("Error: #include directive takes one argument.", file=sys.stderr)
+                print("Error: #include directive takes one argument.",
+                      file=sys.stderr)
                 sys.exit(1)
             include(words[1].strip('"'))
 
         elif words[0] == "#exec":
             if len(words) < 2:
-                print("Error: #exec directive takes at least one argument.", file=sys.stderr)
+                print("Error: #exec directive takes at least one argument.",
+                      file=sys.stderr)
                 sys.exit(1)
             do_exec(words[1], words[2:])
 

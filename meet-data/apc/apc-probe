@@ -7,14 +7,16 @@
 #
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
-sys.path.append('scripts')
-sys.path.append('../../scripts')
-import oplprobe
-import urllib.request
+
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
+
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -32,26 +34,28 @@ BASEURL = "http://www.americanpowerliftingcommittee-usa.com/"
 def color(s):
     return "\033[1;36m" + s + "\033[0;m"
 
+
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
     for a in soup.find_all('a'):
         # All the results have the text "Results" somewhere in the link.
-        if not 'results' in a.text.lower():
+        if 'results' not in a.text.lower():
             continue
 
         url = a['href']
-        if not 'http://' in url:
+        if 'http://' not in url:
             url = BASEURL + url
 
         if url == 'http://' or url == IRONDAWGURL:
             continue
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
+
 
 def get_irondawg_meetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
@@ -59,16 +63,17 @@ def get_irondawg_meetlist(html):
     urls = []
     for a in soup.find_all('a'):
         url = a['href']
-        if not 'http://' in url:
+        if 'http://' not in url:
             url = 'http://irondawg.com/' + url
 
         if url == 'http://irondawg.com/index.htm':
             continue
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
+
 
 def main():
     meetlist = get_irondawg_meetlist(oplprobe.gethtml(IRONDAWGURL))
@@ -80,6 +85,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[APC]'), unentered)
+
 
 if __name__ == '__main__':
     main()
