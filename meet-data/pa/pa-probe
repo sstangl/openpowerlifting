@@ -4,14 +4,16 @@
 # Probes for new meets from Powerlifting Australia.
 # What a nice federation! Results are already in tables!
 
-
 from bs4 import BeautifulSoup
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 URLS = ["https://powerliftingaustralia.com/results/"]
@@ -28,23 +30,24 @@ def getmeetlist(html):
 
     # Just look at all links from the entire page.
     # There seems to be a parsing error when looking just at the 'post-content'
-    # div, where some <a> tags at the end get overlooked for some unknown reason.
+    # div, where some <a> tags at the end get overlooked for some unknown
+    # reason.
 
     urls = []
     for a in soup.find_all('a'):
         # Apparently some <a> tags don't have an href.
         try:
             url = a['href']
-        except:
+        except KeyError:
             continue
 
         # All PA results are in /wp-content/uploads/results/.
-        if not '/wp-content/uploads/results/' in url:
+        if '/wp-content/uploads/results/' not in url:
             continue
 
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + url
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls

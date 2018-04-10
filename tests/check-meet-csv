@@ -8,34 +8,43 @@
 #
 # 1) All the column data is in the pre-set format.
 #
-import datetime
-import sys,os
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) ,"scripts"))
 
-import oplcsv
+import datetime
+import sys
+import os
+
+try:
+    import oplcsv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
+
 
 def redden(s):
     if os.name != 'nt':
         return "\033[1;31m" + s + "\033[0;m"
-    else: 
-        return s
+    return s
+
 
 def enyellow(s):
     if os.name != 'nt':
         return "\033[1;33m" + s + "\033[0;m"
-    else: 
-        return s
+    return s
+
 
 globalFilename = ''
 havePrintedFilename = False
 hitError = False  # Determines return value at end.
 currentYear = int(datetime.datetime.now().strftime("%Y"))
 
+
 def reset_filename_state(filename):
     global globalFilename
     global havePrintedFilename
     globalFilename = filename
     havePrintedFilename = False
+
 
 def print_filename_once():
     # This completely breaks the main() abstraction, but whatever.
@@ -44,11 +53,13 @@ def print_filename_once():
         print(globalFilename, file=sys.stderr)
         havePrintedFilename = True
 
+
 def perror(s):
     global hitError
     hitError = True
     print_filename_once()
     print(' ' + redden(s), file=sys.stderr)
+
 
 def pwarning(s):
     print_filename_once()
@@ -56,91 +67,96 @@ def pwarning(s):
 
 
 KnownFederations = {
-    "365Strong", # 365 Strong Powerlifting Federation.
-    "AAPF", # Amateur APF (drug-tested).
-    "AAU", # Amateur Athletic Union.
-    "ADFPA", # American Drug-Free Powerlifting Association, precursor to USAPL.
+    "365Strong",  # 365 Strong Powerlifting Federation.
+    "AAPF",  # Amateur APF (drug-tested).
+    "AAU",  # Amateur Athletic Union.
+    # American Drug-Free Powerlifting Association, precursor to USAPL.
+    "ADFPA",
+    "AfricanPF",  # African Powerlifting Federation, IPF.
     "APA",
-    "APC", # American Powerlifting Committee.
+    "APC",  # American Powerlifting Committee.
     "APF",
-    "AsianPF", # Asian Powerlifting Federation, IPF.
-    "BB", # Bogatyr Brotherhood, a stand-alone and short-lived Russian federation.
-    "BPU", # British Powerlifting Union.
-    "BP", # British Powerlifting, IPF. Used to be GBPF.
-    "CAPO", # Australian affiliate of the WPC/GPA.
-    "CommonwealthPF", # Commonwealth Powerlifting Federation.
-    "CPF", # Canadian Powerlifting Federation (USPA/IPL).
-    "CPL", # Canadian Powerlifting League.
-    "CPU", # Canadian Powerlifting Union.
-    "EPA", # English Powerlifting Association, IPF.
+    "AsianPF",  # Asian Powerlifting Federation, IPF.
+    # Bogatyr Brotherhood, a stand-alone and short-lived Russian federation.
+    "BB",
+    "BPU",  # British Powerlifting Union.
+    "BP",  # British Powerlifting, IPF. Used to be GBPF.
+    "CAPO",  # Australian affiliate of the WPC/GPA.
+    "CommonwealthPF",  # Commonwealth Powerlifting Federation.
+    "CPF",  # Canadian Powerlifting Federation (USPA/IPL).
+    "CPL",  # Canadian Powerlifting League.
+    "CPU",  # Canadian Powerlifting Union.
+    "EPA",  # English Powerlifting Association, IPF.
     "EPF",
-    "FEMEPO", # Federación Mexicana de Powerlifting A.C.
-    "FESUPO", # Federacion Sudamericana de Powerlifting
-    "FFForce", # Federation Francaise de Force, IPF.
-    "FPO", # Finland Powerlifting Organization (IPA).
-    "FPR", # Powerlifting Federation of Russia, IPF.
+    "FEMEPO",  # Federación Mexicana de Powerlifting A.C.
+    "FESUPO",  # Federacion Sudamericana de Powerlifting
+    "FFForce",  # Federation Francaise de Force, IPF.
+    "FPO",  # Finland Powerlifting Organization (IPA).
+    "FPR",  # Powerlifting Federation of Russia, IPF.
     "GPA",
-    "GPC", # Global Powerlifting Committee.
-    "GPC-GB", # British branch of the GPC.
-    "GPC-AUS", # Australian branch of the GPC.
-    "GPC-NZ", # New Zealand branch of the GPC.
-    "HERC", # Hercules Gym in Syracuse, NY. Run by Rheta West.
-    "IDFPF", # Irish Drug-Free Powerlifting Federation.
+    "GPC",  # Global Powerlifting Committee.
+    "GPC-GB",  # British branch of the GPC.
+    "GPC-AUS",  # Australian branch of the GPC.
+    "GPC-NZ",  # New Zealand branch of the GPC.
+    "HERC",  # Hercules Gym in Syracuse, NY. Run by Rheta West.
+    "IDFPF",  # Irish Drug-Free Powerlifting Federation.
     "IPA",
     "IPF",
     "IPL",
-    "IrishPF", # Irish Powerlifting Federation (IPF affiliate).
-    "IrishPO", # Irish Powerlifting Organization (WPU/IPL affiliate).
-    "MHP", # Maximum Human Performance (a vitamin company).
-    "MM", # Metal Militia (a small, independent federation).
-    "NAPF", # North American Powerlifting Federation.
+    "IrishPF",  # Irish Powerlifting Federation (IPF affiliate).
+    "IrishPO",  # Irish Powerlifting Organization (WPU/IPL affiliate).
+    "MHP",  # Maximum Human Performance (a vitamin company).
+    "MM",  # Metal Militia (a small, independent federation).
+    "NAPF",  # North American Powerlifting Federation.
     "NASA",
-    "NIPF", # Northern Ireland Powerlifting Federation.
-    "NPA", # National Powerlifting Association of Israel.
-    "NSF", # Norwegian branch of the IPF.
-    "NZPF", # New Zealand Powerlifting Federation, IPF.
-    "OceaniaPF", # Oceania Powerlifting Federation, IPF.
-    "ParaPL", # Para Powerlifting.
+    "NIPF",  # Northern Ireland Powerlifting Federation.
+    "NPA",  # National Powerlifting Association of Israel.
+    "NSF",  # Norwegian branch of the IPF.
+    "NZPF",  # New Zealand Powerlifting Federation, IPF.
+    "OceaniaPF",  # Oceania Powerlifting Federation, IPF.
+    "ParaPL",  # Para Powerlifting.
     "PA",
-    "PLZS", # Powerlifting zveza Slovenije, IPF.
+    "PLZS",  # Powerlifting zveza Slovenije, IPF.
     "ProRaw",
-    "PZKFiTS", # Polish IPF affiliate.
-    "RAW", # 100% RAW Federation (drug-tested).
-    "RAWU", # Raw United Federation
+    "PZKFiTS",  # Polish IPF affiliate.
+    "RAW",  # 100% RAW Federation (drug-tested).
+    "RAWU",  # Raw United Federation
     "RPS",
-    "RUPC", # Raw Unity.
-    "ScottishPL", # Scottish Powerlifting, IPF.
-    "SCT", # Super-Cup of Titans.
-    "SPA", #Singapore Powerlifting Alliance
+    "RUPC",  # Raw Unity.
+    "ScottishPL",  # Scottish Powerlifting, IPF.
+    "SCT",  # Super-Cup of Titans.
+    "SPA",  # Singapore Powerlifting Alliance
     "SPF",
-    "THSPA", # Texas High School, single-ply only, drug-tested.
+    "THSPA",  # Texas High School, single-ply only, drug-tested.
     "UPA",
     "USAPL",
     "USPF",
     "USPA",
-    "WABDL", # World Association of Bench Pressers and Deadlifters.
-    "WDFPF", # World Drug Free Powerlifting Association
-    "WelshPA", # Welsh Powerlifting Association, IPF.
-    "WPA", # World Powerlifting Alliance.
-    "WPAU", #World Powerlifting Alliance Ukraine.
+    "WABDL",  # World Association of Bench Pressers and Deadlifters.
+    "WDFPF",  # World Drug Free Powerlifting Association
+    "WelshPA",  # Welsh Powerlifting Association, IPF.
+    "WPA",  # World Powerlifting Alliance.
+    "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
-    "WPC-RUS", 
-    "WNPF", # World Natural Powerlifting Federation.
+    "WPC-RUS",
+    "WNPF",  # World Natural Powerlifting Federation.
     "WRPF",
     "WRPF-AUS",
     "WRPF-CAN",
-    "WUAP", # World United Amateur Powerlifting.
+    "WUAP",  # World United Amateur Powerlifting.
     "XPC",
 }
 
 KnownCountries = {
+    "Algeria",
     "Argentina",
     "Australia",
     "Austria",
     "Belarus",
     "Belgium",
     "Brazil",
-    "Britain", # TODO: This is a placeholder until we have more data, probably.
+    # TODO: This is a placeholder until we have more data, probably.
+    "Britain",
     "Bulgaria",
     "Canada",
     "Cayman Islands",
@@ -158,6 +174,7 @@ KnownCountries = {
     "France",
     "Germany",
     "Greece",
+    "Hong Kong",
     "Hungary",
     "Iceland",
     "India",
@@ -165,19 +182,24 @@ KnownCountries = {
     "Ireland",
     "Israel",
     "Italy",
+    "Iran",
     "Japan",
     "Kazakhstan",
     "Lithuania",
     "Luxembourg",
     "Malaysia",
     "Mexico",
+    "Mongolia",
+    "Morocco",
     "Netherlands",
     "New Caledonia",
     "New Zealand",
     "Norway",
     "N.Ireland",
+    "Oman",
     "Papua New Guinea",
     "Peru",
+    "Philippines",
     "Poland",
     "Puerto Rico",
     "Russia",
@@ -186,19 +208,20 @@ KnownCountries = {
     "Serbia",
     "Singapore",
     "Slovakia",
-    "Slovak Republic",
     "Slovenia",
     "South Africa",
+    "South Korea",
     "Spain",
     "Sweden",
     "Tahiti",
     "Taiwan",
     "Turkey",
-    "UK", # Meaning "Somewhere in the UK, but we don't know where."
+    "UK",  # Meaning "Somewhere in the UK, but we don't know where."
     "Ukraine",
     "Uruguay",
     "USA",
     "US Virgin Islands",
+    "Uzbekistan",
     "Venezuala",
     "Wales",
 }
@@ -262,7 +285,8 @@ def check(scriptname, filename):
         return
 
     # Require fields to be present and in a set order.
-    fields = ['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
+    fields = ['Federation', 'Date', 'MeetCountry',
+              'MeetState', 'MeetTown', 'MeetName']
     if len(fields) != len(csv.fieldnames):
         perror("Incorrect number of fields.")
 
@@ -273,7 +297,7 @@ def check(scriptname, filename):
     row = csv.rows[0]
     if len(row) != len(fields):
         perror("Meet file has incorrect number of columns.")
-        return # Exit early -- this error is bad enough.
+        return  # Exit early -- this error is bad enough.
 
     fedidx = csv.index('Federation')
     dateidx = csv.index('Date')
@@ -291,7 +315,8 @@ def check(scriptname, filename):
 
     # Check the Federation column.
     if not row[fedidx] in KnownFederations:
-        perror("Unknown federation (add to check-meet-csv?): \"%s\"" % row[fedidx])
+        perror("Unknown federation (add to check-meet-csv?): \"%s\"" %
+               row[fedidx])
 
     # Check the Date column.
     date = row[dateidx]
@@ -299,7 +324,7 @@ def check(scriptname, filename):
         perror("Date in wrong format: \"%s\". Must be \"YYYY-MM-DD\"." % date)
     else:
         # The split is valid. Check the individual Date components.
-        year,month,day = date.split('-')
+        year, month, day = date.split('-')
 
         # Make sure the parts are all digits and of the right length.
         if not year.isdigit() or len(year) != 4:
@@ -329,21 +354,24 @@ def check(scriptname, filename):
         )
         if meet_date >= future_date:
             perror("Implausible date: %s is a future date" % date)
-        
+
     # Check the MeetCountry column.
     if not row[countryidx] in KnownCountries:
-        perror("Unknown country (add to check-meet-csv?): \"%s\"" % row[countryidx])
+        perror("Unknown country (add to check-meet-csv?): \"%s\"" %
+               row[countryidx])
 
     # Check the optional MeetState column.
     if row[stateidx]:
-        if not row[countryidx] in KnownStates or not row[stateidx] in KnownStates[row[countryidx]]:
-            perror("Unknown state (add to check-meet-csv?): \"%s\"" % row[stateidx])
+        if (row[countryidx] not in KnownStates or row[stateidx] not in
+                KnownStates[row[countryidx]]):
+            perror("Unknown state (add to check-meet-csv?): \"%s\"" %
+                   row[stateidx])
 
     # Check the optional MeetTown column.
     if row[townidx]:
         found_illegal_char = False
         for c in row[townidx]:
-            if not c.isalpha() and not c in ' -.\'':
+            if not c.isalpha() and c not in ' -.\'':
                 found_illegal_char = True
                 break
 
@@ -356,7 +384,7 @@ def check(scriptname, filename):
     else:
         found_illegal_char = False
         for c in row[nameidx]:
-            if not c.isalnum() and not c in ' -.\'/&':
+            if not c.isalnum() and c not in ' -.\'/&':
                 found_illegal_char = True
                 break
 
@@ -365,13 +393,17 @@ def check(scriptname, filename):
 
         # Check for some hints for commonly-confused state abbreviations.
         if 'Maine' in row[nameidx] and row[stateidx] != 'ME':
-            perror("The abbreviation for Maine is 'ME', not '%s'." % row[stateidx])
+            perror("The abbreviation for Maine is 'ME', not '%s'." %
+                   row[stateidx])
         if 'Missouri' in row[nameidx] and row[stateidx] != 'MO':
-            perror("The abbreviation for Missouri is 'MO', not '%s'." % row[stateidx])
+            perror("The abbreviation for Missouri is 'MO', not '%s'." %
+                   row[stateidx])
         if 'Montana' in row[nameidx] and row[stateidx] != 'MT':
-            perror("The abbreviation for Montana is 'MT', not '%s'." % row[stateidx])
+            perror("The abbreviation for Montana is 'MT', not '%s'." %
+                   row[stateidx])
         if 'Texas' in row[nameidx] and row[stateidx] != 'TX':
-            perror("The abbreviation for Texas is 'TX', not '%s'." % row[stateidx])
+            perror("The abbreviation for Texas is 'TX', not '%s'." %
+                   row[stateidx])
 
         # Check if MeetName column contains the year or the fed name
         if year in row[nameidx]:
@@ -394,9 +426,8 @@ if __name__ == '__main__':
                 meetpath = dirname + os.sep + 'meet.csv'
                 check(sys.argv[0], meetpath)
 
-                if not 'entries.csv' in files:
+                if 'entries.csv' not in files:
                     perror('Missing entries.csv')
-
 
     if hitError:
         sys.exit(1)

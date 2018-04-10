@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
-#
-
 
 
 from bs4 import BeautifulSoup
 import os
 import sys
 
-sys.path.append('../../scripts')
-sys.path.append('scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.wpc-wpo.ru/protocols.html"]
@@ -25,13 +26,13 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    alist = soup.find_all("a");
+    alist = soup.find_all("a")
 
     urls = []
     for a in alist:
         link = a['href']
         if 'files' not in link:
-        	continue
+            continue
         # A bunch of links are just '/files/foo.xls'
         if link.startswith('/'):
             link = BASEURL + link
@@ -42,10 +43,10 @@ def getmeetlist(html):
 
 def main():
 
-    meetlist=[]
+    meetlist = []
     for url in URLS:
         html = oplprobe.gethtml(url)
-        meetlist = meetlist+getmeetlist(html)
+        meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

@@ -23,13 +23,13 @@ def meethash(csv, row):
     namehash = format(zlib.crc32(bytes(meetname, 'utf-8')), '08x')
     assert len(namehash) == 8
 
-    return "%s-%s" % (date,namehash)
+    return "%s-%s" % (date, namehash)
 
 
 # Add a row to the meets hash object.
 def add_row(meets, csv, row):
     h = meethash(csv, row)
-    if not h in meets:
+    if h not in meets:
         c = Csv()
         c.fieldnames = csv.fieldnames[:]
         c.rows.append(row)
@@ -39,9 +39,10 @@ def add_row(meets, csv, row):
 
 
 def makecsvs(path, csv):
-    # Generate the meet.csv. 
+    # Generate the meet.csv.
     meetcsv = Csv()
-    meetcsv.fieldnames = ['Federation','Date','MeetCountry','MeetState','MeetTown','MeetName']
+    meetcsv.fieldnames = ['Federation', 'Date',
+                          'MeetCountry', 'MeetState', 'MeetTown', 'MeetName']
 
     fed = 'CPU'
     date = csv.rows[0][csv.index('Date')]
@@ -81,7 +82,7 @@ def main(filename):
     # Group all the meets by meet hash.
     meets = {}
     for row in csv.rows:
-        add_row(meets,csv,row)
+        add_row(meets, csv, row)
 
     # Some meethashes are ignored for being erroneous.
     with open(IGNOREFILE, 'r') as fd:

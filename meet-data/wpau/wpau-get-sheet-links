@@ -20,14 +20,16 @@ def main(filename):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    #Get the path to the sheets
+    # Get the path to the sheets
     sheet_links = soup.find_all("link", {"id": "shLink"})
-    sheet_links =[lnk['href'] for lnk in sheet_links if lnk.has_attr('href')]
+    sheet_links = [lnk['href'] for lnk in sheet_links if lnk.has_attr('href')]
 
-    #Now get the name of the sheets
-    jscript = soup.find("script", {"language":"JavaScript"})
-    sheet_names = [line for line in jscript.get_text().split("\n") if " c_rgszSh[" in line]
-    sheet_names = [name[name.find('"')+1:name.rfind('"')].replace('\xa0',' ') for name in sheet_names]
+    # Now get the name of the sheets
+    jscript = soup.find("script", {"language": "JavaScript"})
+    sheet_names = [line for line in jscript.get_text().split("\n")
+                   if " c_rgszSh[" in line]
+    sheet_names = [name[name.find(
+        '"') + 1:name.rfind('"')].replace('\xa0', ' ') for name in sheet_names]
 
     for ii in range(len(sheet_links)):
         print(sheet_names[ii])

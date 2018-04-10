@@ -52,10 +52,10 @@
           <td>{{this.equipment}}</td>
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
-          <td>{{this.squat}}{% if this.squat_is_pr %}*{% endif %}</td>
-          <td>{{this.bench}}{% if this.bench_is_pr %}*{% endif %}</td>
-          <td>{{this.deadlift}}{% if this.deadlift_is_pr %}*{% endif %}</td>
-          <td>{{this.total}}{% if this.total_is_pr %}*{% endif %}</td>
+          <td>{{this.squat}}</td>
+          <td>{{this.bench}}</td>
+          <td>{{this.deadlift}}</td>
+          <td>{{this.total}}</td>
           <td>{{this.wilks}}</td>
         </tr>
       {% endfor %}

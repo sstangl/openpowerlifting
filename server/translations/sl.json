@@ -1,0 +1,47 @@
+{
+	"units": {
+		"lbs": "lbs",
+		"kg": "kg"
+	},
+	"equipment": {
+		"raw": "Raw",
+		"wraps": "Wraps",
+		"single": "Single",
+		"multi": "Multi",
+		"straps": "Straps"
+	},
+	"sex": {
+		"m": "M",
+		"f": "Ž"
+	},
+	"header": {
+		"rankings": "Rankings",
+		"meets": "Meets",
+		"data": "Data",
+		"status": "Project Status",
+		"faq": "FAQ",
+		"contact": "Contact",
+		"supportus": "Support Us"
+	},
+	"columns": {
+		"place": "Mesto",
+		"formulaplace": "Formula Place",
+		"liftername": "Tekmovalec",
+		"federation": "Fed",
+		"date": "Datum",
+		"location": "Location",
+		"meetname": "Meet Name",
+		"division": "Division",
+		"sex": "Spol",
+		"age": "Starost",
+		"equipment": "Equip",
+		"weightclass": "Class",
+		"bodyweight": "Teža",
+		"squat": "Počep",
+		"bench": "Tezno Leže",
+		"deadlift": "Mrtvi Dvig",
+		"total": "Skupaj",
+		"wilks": "Wilks"
+	},
+	"search": "Search"
+}

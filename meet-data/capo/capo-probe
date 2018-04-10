@@ -6,9 +6,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -68,13 +66,14 @@ def main():
 
     count = 0
     for m in meetlist:
-        if not m in known:
+        if m not in known:
             count += 1
             if not quick or count <= 6:
                 print(color('[CAPO] ') + m)
 
     if count > 0:
         print(color('[CAPO] ') + '%d meets remaining.' % count)
+
 
 if __name__ == '__main__':
     main()

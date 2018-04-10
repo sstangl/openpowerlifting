@@ -8,12 +8,14 @@ from bs4 import BeautifulSoup
 import os
 import sys
 
-sys.path.append('scripts')
-sys.path.append('../../scripts')
-import oplprobe
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
-
-MEETSURL = "http://www.aaupowerlifting.org/Results/ResultsArchives.aspx"
+MEETSURL = "http://aaustrengthsports.org/page.php?page_id=101061"
 ROOTURL = "http://www.aaupowerlifting.org"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -25,19 +27,19 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    meetul = soup.find("div", {"id": "resource-content"})
+    meetul = soup.find("div", {"id": "main-content"})
 
     urls = []
     for a in meetul.find_all('a'):
         href = a['href']
 
         # AAU keeps generating invalid URLs, solved by this replace.
-        href = href.replace('ing//results','ing/results')
+        href = href.replace('ing//results', 'ing/results')
 
         if href.startswith('/'):
             href = ROOTURL + href
 
-        if not href in urls:
+        if href not in urls:
             urls.append(href)
 
     return urls

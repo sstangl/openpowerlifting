@@ -7,9 +7,7 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
-import shutil
 import sys
 import urllib.request
 
@@ -44,10 +42,10 @@ def getmeetlist(html):
     for a in menu.find_all('a'):
         url = a['href']
         # They use relative URLs a lot. Expand to the full path.
-        if not 'http' in url:
+        if 'http' not in url:
             url = BASEURL + '/' + url
 
-        if not url in urls:
+        if url not in urls:
             urls.append(url)
 
     return urls
@@ -64,15 +62,15 @@ def getenteredurls():
 
 
 def main():
-    meetlist = []
     html = gethtml(SCTURL)
     meets = getmeetlist(html)
 
     known = getenteredurls()
 
     for m in meets:
-        if not m in known:
+        if m not in known:
             print(color('[SCT] ') + m)
+
 
 if __name__ == '__main__':
     main()

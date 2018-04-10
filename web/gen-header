@@ -7,8 +7,14 @@
 import datetime
 import locale
 import sys
-sys.path.append('../scripts')
-import oplcsv
+import os
+
+try:
+    import oplcsv
+except ModuleNotFoundError:
+    sys.path.append(os.path.abspath(os.path.join(
+        os.path.dirname(__file__), '..', 'scripts')))
+    import oplcsv
 
 
 def showdbstats():
@@ -18,7 +24,7 @@ def showdbstats():
         # If we're on Mac OS X, the locale is named `en_US.UTF-8` so let's give
         # it a try. Otherwise, we're missing the locale altogether.
         locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
-     
+
     csv = oplcsv.Csv('../build/openpowerlifting.csv')
     meets = oplcsv.Csv('../build/meets.csv')
 
@@ -26,35 +32,51 @@ def showdbstats():
     num_meets = locale.format('%d', len(meets.rows), grouping=True)
     compiledate = datetime.datetime.now().strftime("%Y-%m-%d")
 
-    print('%s Entries &mdash; %s Meets &mdash; Updated %s' % (num_entries, num_meets, compiledate))
+    print('%s Entries &mdash; %s Meets &mdash; Updated %s' %
+          (num_entries, num_meets, compiledate))
 
-def addnav(activetab, tab, title, filename = None):
-    filename = tab if filename == None else filename
+
+def addnav(activetab, tab, title, filename=None):
+    filename = tab if filename is None else filename
     active = 'nav__link--active' if activetab == tab else ''
-    print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(filename, active, title))
+    print('<a href="{0}.html" class="nav__link {1}">{2}</a>'.format(
+           filename, active, title))
+
 
 def main(activetab):
-    assert activetab in ['rankings', 'lifters', 'meet', 'meetlist', 'faq', 'data', 'contact']
+    assert activetab in ['rankings', 'lifters',
+                         'meet', 'meetlist', 'faq', 'data', 'contact']
     print('<div id="header">')
-    print('<img class="header-logo" src="static/images/logo-compressed.svg" alt="OpenPowerlifting"/>')
+    print('<img class="header-logo" src="static/images/logo-compressed.svg"'
+          ' alt="OpenPowerlifting"/>')
+
     addnav(activetab, 'rankings', 'Rankings', 'index')
     addnav(activetab, 'meetlist', 'Meets')
     addnav(activetab, 'data', 'Data')
     addnav(activetab, 'faq', 'FAQ')
     addnav(activetab, 'contact', 'Contact')
 
-    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">Support Us&nbsp;<img style="height: 15px; width: 15px" src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')
-    print('<a href="https://instagram.com/openpowerlifting" class="nav__link"><i class="fa fa-instagram"></i></a>')
-    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link"><i class="fa fa-facebook"></i></a>')
+    print('<a href="https://www.patreon.com/openpowerlifting" class="nav__link">'
+          'Support Us&nbsp;<img style="height: 15px; width: 15px"'
+          'src="static/images/patreon_navigation_logo_mini_orange.png"/></a>')
+
+    print('<a href="https://instagram.com/openpowerlifting" class="nav__link">'
+          '<i class="fa fa-instagram"></i></a>')
+
+    print('<a href="https://facebook.com/openpowerlifting" class=" nav__link">'
+          '<i class="fa fa-facebook"></i></a>')
 
     # Hamburger menu for smaller screens, hidden by default by CSS.
-    print('<a class="nav__link header-hamburger" href="javascript:void(0)" onClick="document.getElementById(\'header\').classList.toggle(\'responsive\')">&#9776;</a>')
+    print('<a class="nav__link header-hamburger" href="javascript:void(0)"'
+          ' onClick="document.getElementById(\'header\').classList'
+          '.toggle(\'responsive\')">&#9776;</a>')
 
     print('<span class="siteinfo">')
     showdbstats()
     print('</span>')
 
     print('</div>')
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

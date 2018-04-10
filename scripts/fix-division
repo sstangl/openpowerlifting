@@ -24,12 +24,14 @@ if divindex == -1:
     print("Missing division")
     sys.exit(1)
 
+
 def is_int(x):
     try:
         int(x)
         return True
     except ValueError:
         return False
+
 
 for row in csv[1:]:
     div = row[divindex]
@@ -40,33 +42,33 @@ for row in csv[1:]:
         div = "Open Women"
 
     # Uh, yeah. USPA sure is standardized.
-    div = div.replace("Classic",'')
-    div = div.replace("Single-ply",'')
-    div = div.replace("Single-Ply",'')
-    div = div.replace("Single Ply",'')
-    div = div.replace("Singleply",'')
-    div = div.replace("SinglePly",'')
-    div = div.replace("single Ply",'')
-    div = div.replace("Single ply",'')
-    div = div.replace("Multi-ply",'')
-    div = div.replace("Multi-Ply",'')
-    div = div.replace("Multi Ply",'')
-    div = div.replace("Multiply",'')
-    div = div.replace("MultiPly",'')
-    div = div.replace("Multi",'')
-    div = div.replace("MULTI Ply",'')
-    div = div.replace("Raw",'')
-    div = div.replace("RAW",'')
-    div = div.replace("raw",'')
+    div = div.replace("Classic", '')
+    div = div.replace("Single-ply", '')
+    div = div.replace("Single-Ply", '')
+    div = div.replace("Single Ply", '')
+    div = div.replace("Singleply", '')
+    div = div.replace("SinglePly", '')
+    div = div.replace("single Ply", '')
+    div = div.replace("Single ply", '')
+    div = div.replace("Multi-ply", '')
+    div = div.replace("Multi-Ply", '')
+    div = div.replace("Multi Ply", '')
+    div = div.replace("Multiply", '')
+    div = div.replace("MultiPly", '')
+    div = div.replace("Multi", '')
+    div = div.replace("MULTI Ply", '')
+    div = div.replace("Raw", '')
+    div = div.replace("RAW", '')
+    div = div.replace("raw", '')
 
     if row[divindex] != div and equipindex == -1:
         if row[equipindex] == '':
             print("Need equipment information")
             sys.exit(1)
 
-    div = div.replace('SHW','')
-    div = div.replace('308+','')
-    div = div.replace('198+','')
+    div = div.replace('SHW', '')
+    div = div.replace('308+', '')
+    div = div.replace('198+', '')
 
     if is_int(div.split()[0]) or 'kg' in div.split()[0]:
         div = ' '.join(div.split()[1:])

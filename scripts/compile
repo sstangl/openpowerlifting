@@ -11,6 +11,8 @@ import sys
 
 
 MEETID = 0
+
+
 def nextmeetid():
     global MEETID
     x = MEETID
@@ -18,7 +20,9 @@ def nextmeetid():
     return x
 
 
-LIFTERID = 1 # Due to default seed of LIFTERIDMAP below.
+LIFTERID = 1  # Due to default seed of LIFTERIDMAP below.
+
+
 def nextlifterid():
     global LIFTERID
     x = LIFTERID
@@ -28,8 +32,10 @@ def nextlifterid():
 
 # Global map of (Name => LifterID) mappings.
 LIFTERIDMAP = {
-  'Sean Stangl': 0
+    'Sean Stangl': 0
 }
+
+
 def get_lifterid(name):
     global LIFTERIDMAP
     try:
@@ -44,15 +50,15 @@ def get_lifterid(name):
 # Inexact ages derived in this way are noted as '.5', for example '23.5',
 # designating "either 23 or 24".
 def age_from_birthyear(csv, date):
-    if not 'BirthYear' in csv.fieldnames:
+    if 'BirthYear' not in csv.fieldnames:
         return
 
-    if not 'Age' in csv.fieldnames:
+    if 'Age' not in csv.fieldnames:
         csv.append_column('Age')
 
     birthyearidx = csv.index('BirthYear')
     ageidx = csv.index('Age')
-    [year,month,day] = date.split('-')
+    [year, month, day] = date.split('-')
 
     for row in csv.rows:
         if row[birthyearidx] and not row[ageidx]:
@@ -82,8 +88,8 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
     assert "MeetID" in meetscsv.fieldnames
-    assert not "MeetID" in newentries.fieldnames
-    assert not "MeetID" in newmeet.fieldnames
+    assert "MeetID" not in newentries.fieldnames
+    assert "MeetID" not in newmeet.fieldnames
 
     meetid = str(nextmeetid())
 
@@ -99,15 +105,15 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
 
     # Derive the path (e.g., "uspa/0039").
     # Input looks like "meet-path/uspa/0039/meet.csv".
-    assert not "MeetPath" in newmeet.fieldnames
-    path = meetpath[meetpath.index(os.sep)+1 : meetpath.rindex(os.sep)].replace(os.sep,'/')
-    assert not ',' in path
+    assert "MeetPath" not in newmeet.fieldnames
+    path = meetpath[meetpath.index(
+        os.sep) + 1: meetpath.rindex(os.sep)].replace(os.sep, '/')
+    assert ',' not in path
 
     newmeet.append_column("MeetPath")
     idx = newmeet.index("MeetPath")
     for row in newmeet.rows:
         row[idx] = path
-
 
     # Add the LifterIDs.
     newentries.append_column('LifterID')
@@ -129,7 +135,7 @@ def build_lifterscsv(lifterdir, builddir):
     assert len(LIFTERIDMAP)
 
     # Order by LifterID.
-    ordered = sorted(LIFTERIDMAP.items(), key=lambda x:x[1])
+    ordered = sorted(LIFTERIDMAP.items(), key=lambda x: x[1])
 
     # Make a map of (Name => Instagram).
     socialcsv = Csv(lifterdir + os.sep + 'social-instagram.csv')
@@ -210,8 +216,8 @@ def main(builddir, meetdir, lifterdir):
     initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
     for dirname, subdirs, files in os.walk(meetdir):
-        # Modifying `subdirs` in-place will cause the next iteration of the os.walk()
-        # generator to operate over the sorted list.
+        # Modifying `subdirs` in-place will cause the next iteration
+        # of the os.walk() generator to operate over the sorted list.
         subdirs.sort()
 
         if 'entries.csv' in files:
@@ -241,6 +247,7 @@ def main(builddir, meetdir, lifterdir):
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print(' Usage: %s builddir meetdir lifterdir' % sys.argv[0], file=sys.stderr)
+        print(' Usage: %s builddir meetdir lifterdir' %
+              sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2], sys.argv[3])

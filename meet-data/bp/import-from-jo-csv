@@ -22,7 +22,7 @@ def process_row(csv, dirs, row):
         subfed = row[csv.index('Sub-Fed')]
 
     if len(meetcsv.rows) == 0:
-        (month,day,year) = row[csv.index('Date')].split('/')
+        (month, day, year) = row[csv.index('Date')].split('/')
         meetcsv.rows = [[
             "BP",
             "%s-%s-%s" % (year, month.zfill(2), day.zfill(2)),
@@ -30,30 +30,30 @@ def process_row(csv, dirs, row):
             "",
             "",
             row[csv.index('Competition')]
-            ]]
+        ]]
 
     newrow = [
-            row[csv.index('Name')],
-            row[csv.index('Sex')],
-            row[csv.index('Event')],
-            row[csv.index('Equipment')],
-            row[csv.index('Division')],
-            row[csv.index('BodyweightKg')],
-            row[csv.index('WeightClassKg')],
-            row[csv.index('Squat1Kg')],
-            row[csv.index('Squat2Kg')],
-            row[csv.index('Squat3Kg')],
-            row[csv.index('BestSquatKg')],
-            row[csv.index('Bench1Kg')],
-            row[csv.index('Bench2Kg')],
-            row[csv.index('Bench3Kg')],
-            row[csv.index('BestBenchKg')],
-            row[csv.index('Deadlift1Kg')],
-            row[csv.index('Deadlift2Kg')],
-            row[csv.index('Deadlift3Kg')],
-            row[csv.index('BestDeadliftKg')],
-            row[csv.index('TotalKg')]
-        ]
+        row[csv.index('Name')],
+        row[csv.index('Sex')],
+        row[csv.index('Event')],
+        row[csv.index('Equipment')],
+        row[csv.index('Division')],
+        row[csv.index('BodyweightKg')],
+        row[csv.index('WeightClassKg')],
+        row[csv.index('Squat1Kg')],
+        row[csv.index('Squat2Kg')],
+        row[csv.index('Squat3Kg')],
+        row[csv.index('BestSquatKg')],
+        row[csv.index('Bench1Kg')],
+        row[csv.index('Bench2Kg')],
+        row[csv.index('Bench3Kg')],
+        row[csv.index('BestBenchKg')],
+        row[csv.index('Deadlift1Kg')],
+        row[csv.index('Deadlift2Kg')],
+        row[csv.index('Deadlift3Kg')],
+        row[csv.index('BestDeadliftKg')],
+        row[csv.index('TotalKg')]
+    ]
 
     # Remove some common markings for "nothing in this column".
     for i in range(len(newrow)):
@@ -74,20 +74,24 @@ def main(filename):
     dirs = dict()
     for meetname in meetnames:
         meetcsv = Csv()
-        meetcsv.fieldnames = ["Federation","Date","MeetCountry","MeetState","MeetTown","MeetName"]
+        meetcsv.fieldnames = ["Federation", "Date",
+                              "MeetCountry", "MeetState", "MeetTown", "MeetName"]
 
         entriescsv = Csv()
-        entriescsv.fieldnames = ["Name","Sex","Event","Equipment","Division","BodyweightKg","WeightClassKg","Squat1Kg","Squat2Kg","Squat3Kg","BestSquatKg","Bench1Kg","Bench2Kg","Bench3Kg","BestBenchKg","Deadlift1Kg","Deadlift2Kg","Deadlift3Kg","BestDeadliftKg","TotalKg"]
+        entriescsv.fieldnames = ["Name", "Sex", "Event", "Equipment", "Division",
+                                 "BodyweightKg", "WeightClassKg", "Squat1Kg",
+                                 "Squat2Kg", "Squat3Kg", "BestSquatKg", "Bench1Kg",
+                                 "Bench2Kg", "Bench3Kg", "BestBenchKg", "Deadlift1Kg",
+                                 "Deadlift2Kg", "Deadlift3Kg", "BestDeadliftKg",
+                                 "TotalKg"]
 
         url = None
         subfed = None
 
-        dirs[meetname] = (meetcsv,entriescsv,url,subfed)
-
+        dirs[meetname] = (meetcsv, entriescsv, url, subfed)
 
     for row in csv.rows:
         process_row(csv, dirs, row)
-
 
     num = 0
     for meetname in sorted(list(meetnames)):
@@ -98,7 +102,7 @@ def main(filename):
 
         # These aren't great names, but at least they'll be unique.
         if subfed:
-            dirname = "%s-%s" % (subfed,dirname)
+            dirname = "%s-%s" % (subfed, dirname)
 
         os.mkdir(dirname)
 
