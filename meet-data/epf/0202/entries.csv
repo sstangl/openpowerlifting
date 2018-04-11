@@ -1,13 +1,13 @@
 WeightClassKg,Place,Name,Sex,BirthYear,BodyweightKg,Country,BestSquatKg,BestBenchKg,Bench4Kg,BestDeadliftKg,TotalKg,Event,Equipment
 52,1,Andrzej Stanaszek,M,1971,51.3,pol,290.0,170.0,,140.0,600.0,SBD,Single-ply
 52,2,Ravil Kazakov,M,1982,51.7,rus,235.0,145.0,,180.0,560.0,SBD,Single-ply
-52,3,Dariusz Wszola,M,1978,51.7,pol,195.0,122.5,,185.0,502.5,SBD,Single-ply
+52,3,Dariusz Wszoła,M,1978,51.7,pol,195.0,122.5,,185.0,502.5,SBD,Single-ply
 56,1,Konstantin Pavlov,M,1973,55.0,rus,240.0,167.5,,205.0,612.5,SBD,Single-ply
-56,2,Slavomir Sledz,M,1976,55.9,pol,220.0,140.0,,210.0,570.0,SBD,Single-ply
+56,2,Sławomir Śledź,M,1976,55.9,pol,220.0,140.0,,210.0,570.0,SBD,Single-ply
 56,3,Sergiy Vatyuk,M,1962,55.99,ukr,200.0,147.5,,215.0,562.5,SBD,Single-ply
 56,4,Alistair Fleming,M,1969,55.9,gbr,202.5,107.5,,215.0,525.0,SBD,Single-ply
 56,DQ,Jürgen Nemeth,M,1972,55.9,aut,210.0,120.0,,,,SBD,Single-ply
-60,1,Mikail Andryukhin,M,1970,60.0,rus,270.0,150.0,,260.0,680.0,SBD,Single-ply
+60,1,Mikhail Andryukhin,M,1970,60.0,rus,270.0,150.0,,260.0,680.0,SBD,Single-ply
 60,2,Vitaliy Teteutsa,M,1977,59.8,ukr,235.0,157.5,,225.0,617.5,SBD,Single-ply
 60,3,Mariusz Olech,M,1976,59.9,pol,235.0,130.0,,240.0,605.0,SBD,Single-ply
 60,4,Roy Brandtzæg,M,1973,58.4,nor,230.0,132.5,,232.5,595.0,SBD,Single-ply
@@ -21,7 +21,7 @@ WeightClassKg,Place,Name,Sex,BirthYear,BodyweightKg,Country,BestSquatKg,BestBenc
 67.5,6,Philip Richards,M,1971,67.1,gbr,270.0,160.0,,230.0,660.0,SBD,Single-ply
 67.5,7,Richard Lettner,M,1974,67.5,aut,237.5,152.5,,230.0,620.0,SBD,Single-ply
 67.5,8,Karel Ruso,M,1965,67.2,cze,252.5,125.0,,215.0,592.5,SBD,Single-ply
-75,1,Victor Furashkin,M,1969,74.9,rus,320.0,215.0,,312.5,847.5,SBD,Single-ply
+75,1,Viktor Furazhkin,M,1969,74.9,rus,320.0,215.0,,312.5,847.5,SBD,Single-ply
 75,2,Oleksandr Kutcher,M,1980,74.5,ukr,295.0,187.5,,300.0,782.5,SBD,Single-ply
 75,3,Jaroslaw Spychala,M,1978,74.9,pol,285.0,172.5,,290.0,747.5,SBD,Single-ply
 75,4,Hans Andersson,M,1977,75.0,swe,255.0,185.0,,270.0,710.0,SBD,Single-ply
@@ -35,9 +35,9 @@ WeightClassKg,Place,Name,Sex,BirthYear,BodyweightKg,Country,BestSquatKg,BestBenc
 82.5,4,Frédéric Gandner,M,1969,82.5,fra,295.0,190.0,,310.0,795.0,SBD,Single-ply
 82.5,5,Yannick Clement,M,1973,81.8,fra,295.0,180.0,,312.5,787.5,SBD,Single-ply
 82.5,6,Hannu Malinen,M,1955,82.3,fin,290.0,185.0,,310.0,785.0,SBD,Single-ply
-82.5,7,Jaswinder Singh,M,1976,82.4,gbr,270.0,195.0,,282.5,747.5,SBD,Single-ply
+82.5,7,Jaswinder Singh Cheema,M,1976,82.4,gbr,270.0,195.0,,282.5,747.5,SBD,Single-ply
 82.5,8,Tor-Egil Skogly,M,1964,79.9,nor,280.0,170.0,,295.0,745.0,SBD,Single-ply
-82.5,9,Pjot Van-den-Hoek,M,1972,82.4,ned,265.0,165.0,,282.5,712.5,SBD,Single-ply
+82.5,9,Pjotr van den Hoek,M,1972,82.4,ned,265.0,165.0,,282.5,712.5,SBD,Single-ply
 82.5,10,Gerhard Grossbeck,M,1976,78.5,aut,240.0,175.0,,255.0,670.0,SBD,Single-ply
 90,1,Andrey Tarasenko,M,1975,90.0,rus,365.0,247.5,,345.0,957.5,SBD,Single-ply
 90,2,Ivan Freydun,M,1981,89.6,ukr,345.0,250.0,,330.0,925.0,SBD,Single-ply
@@ -50,7 +50,7 @@ WeightClassKg,Place,Name,Sex,BirthYear,BodyweightKg,Country,BestSquatKg,BestBenc
 90,9,Marius Arnesen,M,1971,89.8,nor,280.0,195.0,,290.0,765.0,SBD,Single-ply
 90,10,Frank Hausburg,M,1971,89.7,ger,280.0,175.0,,305.0,760.0,SBD,Single-ply
 100,1,Yuriy Fedorenko,M,1974,99.5,rus,370.0,220.0,,362.5,952.5,SBD,Single-ply
-100,2,Oleksiy Rokochyy,M,1981,99.5,ukr,365.0,225.0,,330.0,920.0,SBD,Single-ply
+100,2,Oleksiy Rokochyy Jr,M,1981,99.5,ukr,365.0,225.0,,330.0,920.0,SBD,Single-ply
 100,3,Olek Vyschnytskyy,M,1981,98.1,ukr,367.5,200.0,,350.0,917.5,SBD,Single-ply
 100,4,Jarmo Sohlman,M,1969,98.3,fin,310.0,210.0,,320.0,840.0,SBD,Single-ply
 100,5,Niklas Gustafsson,M,1975,99.6,swe,330.0,200.0,,302.5,832.5,SBD,Single-ply

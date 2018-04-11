@@ -1,7 +1,7 @@
 Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
 1,Raija Koskinen,,FIN,43.95,155,162.5,-167.5,162.5,75,80,-82.5,80,150,157.5,-162.5,157.5,400,44,Open,SBD,F,Single-ply
 2,Oxana Ryzhenko,,RUS,43.6,132.5,140,-145,140,82.5,-87.5,87.5,87.5,130,-137.5,-137.5,130,357.5,44,Open,SBD,F,Single-ply
-3,Laurenc Hernandez,,FRA,43.5,120,-125,-125,120,65,70,-72.5,70,125,130,-135,130,320,44,Open,SBD,F,Single-ply
+3,Laurence Hernandez,,FRA,43.5,120,-125,-125,120,65,70,-72.5,70,125,130,-135,130,320,44,Open,SBD,F,Single-ply
 4,Marion Friedrich,,GER,43.6,-112.5,117.5,122.5,122.5,77.5,80,-87.5,80,100,107.5,115,115,317.5,44,Open,SBD,F,Single-ply
 5,Monika Korpak,,POL,43.8,112.5,-120,-120,112.5,57.5,62.5,-67.5,62.5,105,110,115,115,290,44,Open,SBD,F,Single-ply
 6,Dorota Nowak,,POL,44,-105,-105,105,105,60,-65,65,65,100,110,-122.5,110,280,44,Open,SBD,F,Single-ply
@@ -16,7 +16,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg
 9,Ines Tronke,,GER,47.9,105,-115,115,115,65,70,75,75,112.5,120,125,125,315,48,Open,SBD,F,Single-ply
 1,Olena Dmytruk,,UKR,51.75,175,182.5,187.5,187.5,100,110,120,120,160,170,177.5,177.5,485,52,Open,SBD,F,Single-ply
 2,Olesya Lafina,,RUS,51.75,197.5,207.5,212.5,212.5,105,115,122.5,122.5,130,140,147.5,147.5,482.5,52,Open,SBD,F,Single-ply
-3,Mervi Rantamäki,,FIN,51.85,-165,167.5,-175,167.5,85,90,92.5,92.5,162.5,172.5,180,180,440,52,Open,SBD,F,Single-ply
+3,Mervi Anita Rantamäki,,FIN,51.85,-165,167.5,-175,167.5,85,90,92.5,92.5,162.5,172.5,180,180,440,52,Open,SBD,F,Single-ply
 4,Stephani Cornette,,FRA,51.2,165,-180,180,180,85,90,-92.5,90,150,160,167.5,167.5,437.5,52,Open,SBD,F,Single-ply
 5,Karin Hollaus,,AUT,51.1,-120,125,130,130,65,70,-72.5,70,132.5,140,-145,140,340,52,Open,SBD,F,Single-ply
 6,Agnieszka Marciniak,,POL,51.2,125,-135,-135,125,70,72.5,-77.5,72.5,125,135,137.5,137.5,335,52,Open,SBD,F,Single-ply
@@ -34,7 +34,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg
 DQ,Maria Eriksson,,SWE,54.6,127.5,-137.5,-137.5,127.5,65,70,75,75,-145,-150,-150,,,56,Open,SBD,F,Single-ply
 1,Larysa Vitsyevska,,UKR,59.7,195,205,212.5,212.5,130,137.5,142.5,142.5,210,220,227.5,227.5,582.5,60,Open,SBD,F,Single-ply
 3,Päivi Haapoja,,FIN,59.75,185,-195,-200,185,75,80,,80,172.5,182.5,-190,182.5,447.5,60,Open,SBD,F,Single-ply
-4,Nagy Szekelyne,,HUN,59.3,145,152.5,157.5,157.5,110,-117.5,-117.5,110,155,165,170,170,437.5,60,Open,SBD,F,Single-ply
+4,Rita Nagy,,HUN,59.3,145,152.5,157.5,157.5,110,-117.5,-117.5,110,155,165,170,170,437.5,60,Open,SBD,F,Single-ply
 5,Linda Kåda Høiland,,NOR,59.25,155,165,-170,165,75,80,82.5,82.5,160,175,-180,175,422.5,60,Open,SBD,F,Single-ply
 6,Eszter Nagy,,HUN,58.95,135,145,155,155,75,82.5,-85,82.5,140,150,-157.5,150,387.5,60,Open,SBD,F,Single-ply
 7,Daniela Falck,,GER,60,132.5,-140,-140,132.5,72.5,-75,-75,72.5,165,-170,-170,165,370,60,Open,SBD,F,Single-ply
@@ -75,7 +75,7 @@ DD,Dana Matejov,,SVK,59.6,195,205,212.5,212.5,120,127.5,132.5,132.5,170,180,-187
 5,Anita Rasekn Standinger,,HUN,83.6,130,140,-147.5,140,90,-97.5,97.5,97.5,120,130,-140,130,367.5,90,Open,SBD,F,Single-ply
 1,Galina Karpova,,RUS,121.75,260,275,290.5,290.5,160,170,180.5,180.5,220,230,240,240,711,90+,Open,SBD,F,Single-ply
 2,Joanne Schaefer,,NED,104.4,215,225,-235,225,145,150,152.5,152.5,190,202.5,210,210,587.5,90+,Open,SBD,F,Single-ply
-3,Brenda Meulen V.D.,,NED,103.35,200,210,215,215,140,147.5,150,150,170,180,185,185,550,90+,Open,SBD,F,Single-ply
+3,Brenda van der Meulen,,NED,103.35,200,210,215,215,140,147.5,150,150,170,180,185,185,550,90+,Open,SBD,F,Single-ply
 4,Ulrike Herchenhein,,GER,91.4,182.5,195,200,200,120,-127.5,-127.5,120,210,222.5,-225,222.5,542.5,90+,Open,SBD,F,Single-ply
 5,Suzanne Last,,GBR,117.45,-185,-185,185,185,110,117.5,-122.5,117.5,165,-172.5,-172.5,165,467.5,90+,Open,SBD,F,Single-ply
 6,Malin Vikberg,,SWE,92.55,135,155,162.5,162.5,102.5,110,117.5,117.5,150,165,-177.5,165,445,90+,Open,SBD,F,Single-ply
