@@ -19,8 +19,8 @@ except ModuleNotFoundError:
 
 # URL needs updating every year.
 # This is the URL for 2017.
-MEETSURL = "http://www.ipapower.com/?page_id=2924"
-if datetime.datetime.now().strftime("%Y") != "2017":
+MEETSURL = "http://www.ipapower.com/?page_id=4468"
+if datetime.datetime.now().strftime("%Y") != "2018":
     print("Warning: IPA fetch URL needs updating for new year.", file=sys.stderr)
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
