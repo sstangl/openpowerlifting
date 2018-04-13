@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Probes for new meets from the NSF.
+
+
+from bs4 import BeautifulSoup
+import os
+import sys
+import urllib.request
+import urllib.parse
+
+
+URLS = ["http://www.styrke.dk/?dbid=staevner"]
+BASEURL = "http://www.styrke.dk/"
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def color(s):
+    return "\033[1;34m" + s + "\033[0;m"
+
+def gethtml(url):
+    with urllib.request.urlopen(url) as r:
+        return r.read()
+
+
+def getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    urls = []
+    div = soup.find("div", {"align": "left"})
+
+    for td in soup.find_all('td'):
+        a = td.a
+        if a:
+	        url = a['href']
+	        print(bytes(url,'utf-8'))
+
+	        name = a.contents[0]
+
+	        if '?dbid=' not in url:
+	            continue
+
+            # Filter out non Danish meets
+	        if any(text in name for text in ['EM','NM','EU','WEC' ,'VM','Arnold','St. Petersburg','Caribbean','Salo','Baltic']):
+	        	continue
+
+
+	        if 'http' not in url:
+	            url = BASEURL + url
+
+	        if url not in urls:
+	            urls.append(url)
+
+    return urls
+
+def getenteredurls():
+    urls = []
+    for dirname, subdirs, files in os.walk(FEDDIR):
+        if 'URL' in files:
+            with open(dirname + os.sep + 'URL', 'r') as fd:
+                for k in fd.readlines():
+                    urls.append(k.strip())
+    return urls
+
+
+def main():
+    meetlist = []
+    for url in URLS:
+        html = gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
+
+    known = getenteredurls()
+
+    for m in meetlist:
+        if m.split()[0] not in known:
+            print(color('[DSF] ') + m)
+
+
+
+
+if __name__ == '__main__':
+    main()
