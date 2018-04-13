@@ -19,7 +19,13 @@ except ModuleNotFoundError:
     import oplprobe
 
 
-RESULTS_URL = "http://www.gpcaustralia.com/index.php/results?limitstart=0"
+# Go back a few pages. Hopefully that's enough.
+RESULTS_URLS = [
+    "http://www.gpcaustralia.com/index.php/results?limitstart=0",
+    "http://www.gpcaustralia.com/index.php/results?start=5",
+    "http://www.gpcaustralia.com/index.php/results?start=10",
+    "http://www.gpcaustralia.com/index.php/results?start=15",
+]
 BASE_URL = "http://www.gpcaustralia.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -60,8 +66,10 @@ def getmeetlist(html):
 
 
 def main():
-    html_content = oplprobe.gethtml(RESULTS_URL)
-    meets_list = getmeetlist(html_content)
+    meets_list = []
+    for url in RESULTS_URLS:
+        html_content = oplprobe.gethtml(url)
+        meets_list += getmeetlist(html_content)
 
     with open(FEDDIR + '/todo/URLLIST') as fd:
         for url in fd:
