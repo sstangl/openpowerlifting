@@ -57,8 +57,13 @@ def main(filename):
         if not sex or not wilks or not wtcls or not totalkg:
             continue
 
-        row[bwidx] = str(round(calc_bw(sex == 'M', float(
-            wtcls), float(totalkg), float(wilks)),2))
+        bw =round(calc_bw(sex == 'M', float(
+            wtcls), float(totalkg), float(wilks)),2)
+
+        if bw > float(wtcls) and '+' not in row[wtclsidx]:
+            bw = float(wtcls)
+
+        row[bwidx] = str(bw)
 
     with open(filename, 'w') as fd:
         csv.write(fd)

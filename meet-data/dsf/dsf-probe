@@ -7,8 +7,16 @@
 from bs4 import BeautifulSoup
 import os
 import sys
-import urllib.request
 import urllib.parse
+import subprocess
+
+
+try:
+    import oplprobe
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.styrke.dk/?dbid=staevner"]
@@ -24,10 +32,6 @@ def error(msg):
 def color(s):
     return "\033[1;34m" + s + "\033[0;m"
 
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
-
 
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
@@ -39,48 +43,42 @@ def getmeetlist(html):
         a = td.a
         if a:
 	        url = a['href']
-	        print(bytes(url,'utf-8'))
-
 	        name = a.contents[0]
 
 	        if '?dbid=' not in url:
 	            continue
 
             # Filter out non Danish meets
-	        if any(text in name for text in ['EM','NM','EU','WEC' ,'VM','Arnold','St. Petersburg','Caribbean','Salo','Baltic']):
+	        if any(text in name for text in ['EM','NM','EU','WEC' ,'VM','Arnold','St. Petersburg','Caribbean','Salo','Baltic','Copenhagen']):
 	        	continue
 
 
 	        if 'http' not in url:
 	            url = BASEURL + url
 
+            # HTML is getting unquoted somewhere but I haven't figured out where
+	        url =urllib.parse.quote(url, safe='/&=?:',encoding='windows-1252') 
+
 	        if url not in urls:
 	            urls.append(url)
 
-    return urls
-
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
     return urls
 
 
 def main():
     meetlist = []
     for url in URLS:
-        html = gethtml(url)
+        html = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist(html)
 
-    known = getenteredurls()
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if m.split()[0] not in known:
-            print(color('[DSF] ') + m)
+    for url in unentered:
+        subprocess.run(['./dsf-import',url])
 
+
+    oplprobe.print_meets(color('[DSF]'), unentered)
 
 
 

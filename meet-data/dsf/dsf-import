@@ -37,15 +37,17 @@ def getdirname(url):
     else: #Older meets aren't numbered
         year= re.search('(?<=aar=)(.*?)(?=\&)',url).group(0)
         place = urllib.parse.unquote(re.search('(?<=sted=).*',url).group(0),encoding = 'windows-1252')
-        name= urllib.parse.unquote(re.search('(?<=staevne=)(.*?)(?=\&)',url).group(0),encoding = 'windows-1252')
+        name = urllib.parse.unquote(re.search('(?<=staevne=)(.*?)(?=\&)',url).group(0),encoding = 'windows-1252')
+        event = urllib.parse.unquote(re.search('(?<=deciplin=)(.*?)(?=\&)',url).group(0),encoding = 'windows-1252')
 
         place = place.replace(' ','')
         name = name.replace(' ','').replace('-','')
-       
-        if place != '':
-           return year+ '-' + place +'-'+ name
-        else:
-           return year+ '-' + name
+        event = event.replace(' ','').replace('-','')
+
+        if place == '':
+            place = '_'
+     
+        return year+ '-' + place +'-'+ name + '-' + event
 
 
 
@@ -78,7 +80,8 @@ def getmeetinfo(soup):
     day = date_str[0].split('-')[0]
     if len(day) ==1:
         day = '0'+day
-    month = month_dict[date_str[1]]
+
+    month = month_dict[date_str[1].split('-')[0]]
     year = date_str[2]
 
     date = year + '-' + month + '-' + day
@@ -201,6 +204,10 @@ def getresults(soup):
                         divstate = text.replace('master', 'Master')
                     elif 'ungdom' in text:
                         divstate = text.replace('ungdom', 'Sub-Juniors')
+                    elif 'handicap' in text:
+                        divstate = text.replace('handicap','Paralympics')
+                    elif text == '':
+                        divstate = 'Open'
                     else:
                         error("Unknown state: \"%s\"" % row[0])
 
@@ -220,9 +227,8 @@ def getresults(soup):
                     c = td.get('class')
                     if c and 'tdliveneg' in c:  # Failed lift.
                         text = '-' + text
-                    if c and 'ikke_loftet' in c:  # Skipped lift.
-                        text = ''
-                    row.append(text.strip().replace('  ', ' ').replace(',', ' '))
+ 
+                    row.append(text.strip().replace('  ', ' ').replace('  ', ' ').replace(',', ' '))
 
                 row = row + [divstate, sexstate,wcstate]
                 if append_eqp:
@@ -340,13 +346,31 @@ def fixtotals(csv):
                 if sq % 2.5 != 0 or bp % 2.5 != 0 or dl % 2.5 != 0:
                     row[totalidx] = str(sq + bp + dl)
 
-    else: # Bench only meets don't have totals
-        bpidx = csv.index('BestBenchKg')
+    else: # Single-lift meets don't have totals
+        sqidx = -1
+        bpidx = -1
+        dlidx = -1
 
-        csv.fieldnames += ['TotalKg']
-        for row in csv.rows:
-            row.append(row[bpidx])
+        if 'BestSquatKg'in csv.fieldnames:
+            sqidx = csv.index('BestSquatKg')
 
+        if 'BestBenchKg' in csv.fieldnames:
+            bpidx = csv.index('BestBenchKg')
+
+
+        if 'BestDeadliftKg' in csv.fieldnames:
+            dlidx = csv.index('BestDeadliftKg')
+
+        if len([idx for idx in [sqidx,bpidx,dlidx] if idx != -1]) == 1:
+            csv.fieldnames += ['TotalKg']
+
+            for row in csv.rows:
+                if sqidx !=-1:
+                    row.append(row[sqidx])
+                elif bpidx !=-1:
+                    row.append(row[bpidx])
+                elif dlidx !=-1:
+                    row.append(row[dlidx])
 
 
 # Attempts are given, but not the BestSquatKg columns, etc.
@@ -476,6 +500,7 @@ def main(url):
     # Then remove the wilks column
     subprocess.run(['..'+os.sep+'..'+os.sep+'scripts'+os.sep+'csv-rmcol',dirname + os.sep + 'entries.csv','Wilks'])
 
+    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep+'check-entries-csv',dirname + os.sep + 'entries.csv'])
 
 
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
