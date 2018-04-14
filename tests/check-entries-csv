@@ -758,7 +758,8 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                         if (("sex" in wc_rule and
                                 row[csv.index('Sex')] == wc_rule["sex"]) or
                                 "sex" not in wc_rule):
-                            if "divisions" in wc_rule and row[csv.index('Division')]:
+                            if ("divisions" in wc_rule and row[csv.index('Division')]
+                                    in wc_rule["divisions"]):
                                 weight_classes = wc_rule["classes"]
                             # This is a default, rule use it only if we haven't
                             # found other rules
