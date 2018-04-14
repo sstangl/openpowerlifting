@@ -18,7 +18,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,BodyweightKg,Country,Bench1Kg,Be
 1,67.5,F,Masters 1,Evelyne Herbin,1956,67.4,France,90,97.5,100,100,100,B,Single-ply
 2,67.5,F,Masters 1,Ursula Häuser,1960,66.3,Germany,90,95,-97.5,95,95,B,Single-ply
 1,75,F,Masters 1,Eva Hohmann,1957,68.5,Germany,105,110,115,115,115,B,Single-ply
-2,75,F,Masters 1,Asa Halvarsson,1962,74.5,Sweden,95,102.5,-112.5,102.5,102.5,B,Single-ply
+2,75,F,Masters 1,Åsa Halvarsson,1962,74.5,Sweden,95,102.5,-112.5,102.5,102.5,B,Single-ply
 3,75,F,Masters 1,Pamela Zangl,1961,73,US.America,82.5,85,-95,85,85,B,Single-ply
 4,75,F,Masters 1,Sirpa Kokkonen,1958,73.8,Finland,67.5,-72.5,-72.5,67.5,67.5,B,Single-ply
 1,82.5,F,Masters 1,Andrea Sortwell,1961,80.9,US.America,112.5,115,-121,115,115,B,Single-ply
@@ -111,7 +111,7 @@ DQ,82.5,M,Masters 1,Jan Gracyk,1959,81.8,Poland,-190,-195,-197.5,,,B,Single-ply
 5,100,M,Masters 1,Gerhard Schranz,1955,98.4,Austria,180,187.5,190,190,190,B,Single-ply
 6,100,M,Masters 1,John Brooks,1955,95.7,Great Britain,187.5,-197.5,-200,187.5,187.5,B,Single-ply
 7,100,M,Masters 1,Valeriy Sklyarov,1959,93.3,Russia,170,180,-190,180,180,B,Single-ply
-8,100,M,Masters 1,Sören Bertelsen,1961,97.7,Denmark,-175,-175,175,175,175,B,Single-ply
+8,100,M,Masters 1,Søren Bertelsen,1961,97.7,Denmark,-175,-175,175,175,175,B,Single-ply
 1,110,M,Masters 1,Alexander Koblov,1956,109.9,Russia,230,232.5,237.5,237.5,237.5,B,Single-ply
 2,110,M,Masters 1,Tommy Lindberg,1962,107.8,Sweden,220,227.5,-235,227.5,227.5,B,Single-ply
 3,110,M,Masters 1,Mario Pagel,1960,109,Germany,207.5,217.5,225,225,225,B,Single-ply
@@ -119,7 +119,7 @@ DQ,82.5,M,Masters 1,Jan Gracyk,1959,81.8,Poland,-190,-195,-197.5,,,B,Single-ply
 5,110,M,Masters 1,Thoma Stiemerling,1960,107,Germany,205,215,-220,215,215,B,Single-ply
 6,110,M,Masters 1,Kari Vilppola,1955,109.5,Finland,-212.5,212.5,-227.5,212.5,212.5,B,Single-ply
 7,110,M,Masters 1,Didier Auclair,1957,105.5,France,-205,205,-215,205,205,B,Single-ply
-8,110,M,Masters 1,Zoltan Kanat,1962,109.4,Czechia,200,-210,-222.5,200,200,B,Single-ply
+8,110,M,Masters 1,Zoltán Kanát,1962,109.4,Czechia,200,-210,-222.5,200,200,B,Single-ply
 9,110,M,Masters 1,Jaroslaw Wozniak,1955,106.7,Czechia,-185,185,-190,185,185,B,Single-ply
 10,110,M,Masters 1,Julian Massey,1956,110,Great Britain,165,175,182.5,182.5,182.5,B,Single-ply
 11,110,M,Masters 1,Anthony Rodney,1960,109.8,South Africa,180,-195,-195,180,180,B,Single-ply
@@ -187,7 +187,7 @@ DQ,100,M,Masters 2,Steve Caldwell,1947,97.6,US.America,-175,-175,-175,,,B,Single
 2,110,M,Masters 2,Lubos Marsik,1952,102.5,Czechia,-215,215,220,220,220,B,Single-ply
 3,110,M,Masters 2,György Lovasz,1947,109.5,Hungary,215,220,-227.5,220,220,B,Single-ply
 4,110,M,Masters 2,Lutz Mendelsson,1952,102.9,Germany,200,-207.5,-215,200,200,B,Single-ply
-5,110,M,Masters 2,Kurt Nygard,1946,108,Finland,185,192.5,-202.5,192.5,192.5,B,Single-ply
+5,110,M,Masters 2,Kurt Nygård,1946,108,Finland,185,192.5,-202.5,192.5,192.5,B,Single-ply
 6,110,M,Masters 2,Allan Fuglsang,1950,107.7,Denmark,-175,-175,175,175,175,B,Single-ply
 7,110,M,Masters 2,Václav Primus,1948,101.2,Czechia,135,142.5,-147.5,142.5,142.5,B,Single-ply
 DQ,110,M,Masters 2,Greg Chrun,1951,107.6,US.America,-210,-210,-225,,,B,Single-ply
@@ -202,7 +202,7 @@ DQ,110,M,Masters 2,David Brooks,1952,109.5,Great Britain,,,-200,,,B,Single-ply
 1,125+,M,Masters 2,Bohumil Vána,1951,127.9,Czechia,225,-232.5,232.5,232.5,232.5,B,Single-ply
 2,125+,M,Masters 2,Antonin Sota,1952,126.2,Czechia,215,222.5,227.5,227.5,227.5,B,Single-ply
 3,125+,M,Masters 2,Fred Dini,1950,127.5,US.America,-220,220,225,225,225,B,Single-ply
-4,125+,M,Masters 2,Raimo Sipiläinen,1949,130.6,Finland,215,-225,-230,215,215,B,Single-ply
+4,125+,M,Masters 2,Raimo Aulis Sipiläinen,1949,130.6,Finland,215,-225,-230,215,215,B,Single-ply
 5,125+,M,Masters 2,Gip Duggan,1944,136.1,US.America,-207.5,207.5,-225,207.5,207.5,B,Single-ply
 6,125+,M,Masters 2,Lev Schprints,1952,142.5,Russia,182.5,192.5,-202.5,192.5,192.5,B,Single-ply
 7,125+,M,Masters 2,Karl-Heinz Voscul,1949,141.2,Germany,175,-182.5,,175,175,B,Single-ply
@@ -251,6 +251,6 @@ DQ,110,M,Masters 3,Klaus Weber,1936,106.6,Germany,-160,-165,-165,,,B,Single-ply
 1,125,M,Masters 3,Egil Engebretsen,1939,111.4,Norway,185,190,-195,190,190,B,Single-ply
 2,125,M,Masters 3,Murray Marsh,1940,113.4,US.America,180,-185,185,185,185,B,Single-ply
 3,125,M,Masters 3,Ralph Sofferdine,1937,121.8,US.America,167.5,175,-182.5,175,175,B,Single-ply
-4,125,M,Masters 3,Laszlo Kasza,1941,110.2,Hungary,160,-170,-175,160,160,B,Single-ply
+4,125,M,Masters 3,László Kasza,1941,110.2,Hungary,160,-170,-175,160,160,B,Single-ply
 1,125+,M,Masters 3,John Blackmon,1942,135.1,US.America,-195,-195,195,195,195,B,Single-ply
 2,125+,M,Masters 3,Raimo Sandelin,1940,126,Finland,150,162.5,-170,162.5,162.5,B,Single-ply

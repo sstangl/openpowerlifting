@@ -1,8 +1,8 @@
 Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
 1,Albert Habibulin,1988,RUS,58.5,180,-185,187.5,187.5,187.5,59,Open,B,M,Single-ply
-2,Dariusz Wszola,1978,POL,58.55,170,175,-187.5,175,175,59,Open,B,M,Single-ply
+2,Dariusz Wszoła,1978,POL,58.55,170,175,-187.5,175,175,59,Open,B,M,Single-ply
 3,Igor Garashchenko,1988,UKR,58.75,172.5,-182.5,-187.5,172.5,172.5,59,Open,B,M,Single-ply
-4,Peter Botta,1984,HUN,57.8,140,147.5,-152.5,147.5,147.5,59,Open,B,M,Single-ply
+4,Péter Botta,1984,HUN,57.8,140,147.5,-152.5,147.5,147.5,59,Open,B,M,Single-ply
 5,Christophe Bello,1982,FRA,58.65,147.5,-152.5,-152.5,147.5,147.5,59,Open,B,M,Single-ply
 1,Ivan Chuprinko,1986,UKR,65.45,220,227.5,-233.5,227.5,227.5,66,Open,B,M,Single-ply
 2,Adam Balawejder,1981,POL,65.65,215,222.5,-230,222.5,222.5,66,Open,B,M,Single-ply
@@ -59,7 +59,7 @@ DQ,Mikael Lundin,1983,SWE,103.5,-295,-297.5,-302.5,,,105,Open,B,M,Single-ply
 3,Marius Hole Per,1990,NOR,118.35,275,285,295,295,295,120,Open,B,M,Single-ply
 4,Jukka Seppanen,1977,FIN,118.65,-295,-295,295,295,295,120,Open,B,M,Single-ply
 5,Zbyněk Krejča,1974,CZE,118.8,285,-295,295,295,295,120,Open,B,M,Single-ply
-6,Kornel Schauer,1977,HUN,112.6,-287.5,-287.5,287.5,287.5,287.5,120,Open,B,M,Single-ply
+6,Kornél Schauer,1977,HUN,112.6,-287.5,-287.5,287.5,287.5,287.5,120,Open,B,M,Single-ply
 7,Fridrich Matejík,1983,SVK,118.7,-280,280,287.5,287.5,287.5,120,Open,B,M,Single-ply
 8,Pavol Demčák,1977,CZE,118.8,-262.5,262.5,265,265,265,120,Open,B,M,Single-ply
 9,Sorin Cazacu,1973,ROU,119.1,250,260,265,265,265,120,Open,B,M,Single-ply
@@ -74,7 +74,7 @@ DQ,Robert Dziudzik,1980,POL,119.6,-295,-295,-297.5,,,120,Open,B,M,Single-ply
 5,Martin Borgland Rønning,1984,NOR,151.5,320,327.5,-340,327.5,327.5,120+,Open,B,M,Single-ply
 6,Laszlo Santa,1986,HUN,149,325,-332.5,-340,325,325,120+,Open,B,M,Single-ply
 7,Wulf Kronemann,1967,GER,141.6,-305,305,315,315,315,120+,Open,B,M,Single-ply
-8,Sigfus Fossdal,1983,ISL,170.75,310,-320,-327.5,310,310,120+,Open,B,M,Single-ply
+8,Sigfús Þorgeir Fossdal,1983,ISL,170.75,310,-320,-327.5,310,310,120+,Open,B,M,Single-ply
 9,Jacob Stegelmann,1980,DEN,136.5,295,305,-310,305,305,120+,Open,B,M,Single-ply
 10,Jaroslav Šoukal,1972,CZE,149,277.5,287.5,-300,287.5,287.5,120+,Open,B,M,Single-ply
 11,Petr Toman,1990,CZE,125,260,-270,-270,260,260,120+,Open,B,M,Single-ply
@@ -90,7 +90,7 @@ DQ,Viktor Havai,1981,HUN,151,-317.5,-322.5,-322.5,,,120+,Open,B,M,Single-ply
 DQ,Yelyzaveta Ban,1990,UKR,46.2,-95,-95,-95,,,47,Open,B,F,Single-ply
 1,Marcela Sandvik,1974,FIN,51.45,112.5,117.5,-125,117.5,117.5,52,Open,B,F,Single-ply
 2,Olga Golubeva,1970,RUS,51.25,97.5,102.5,107.5,107.5,107.5,52,Open,B,F,Single-ply
-3,Monika Gavorníkova,1974,SVK,51.8,-95,95,97.5,97.5,97.5,52,Open,B,F,Single-ply
+3,Monika Gavorníková,1974,SVK,51.8,-95,95,97.5,97.5,97.5,52,Open,B,F,Single-ply
 4,Monika Nyers,1978,HUN,49.55,87.5,-95,95,95,95,52,Open,B,F,Single-ply
 5,Sanna Apuli,1981,FIN,49.5,85,-90,-95,85,85,52,Open,B,F,Single-ply
 6,Klaudia Csatlos,1990,HUN,51.15,65,-70,-70,65,65,52,Open,B,F,Single-ply
@@ -117,6 +117,6 @@ DQ,Bianca Wienroither,1984,AUT,70.35,-132.5,-132.5,-132.5,,,72,Open,B,F,Single-p
 4,Alena Krcmarova,1975,CZE,77.7,82.5,-90,90,90,90,84,Open,B,F,Single-ply
 1,Sandra Lönn,1974,SWE,105.2,195,205,216.5,216.5,216.5,84+,Open,B,F,Single-ply
 2,Melinda Lombosi,1978,HUN,118.55,172.5,177.5,185,185,185,84+,Open,B,F,Single-ply
-3,Agnes Szabo,1988,HUN,106.5,155,162.5,167.5,167.5,167.5,84+,Open,B,F,Single-ply
+3,Ágnes Szabó,1988,HUN,106.5,155,162.5,167.5,167.5,167.5,84+,Open,B,F,Single-ply
 4,Maria Zyryanova,1983,RUS,123.95,140,152.5,165,165,165,84+,Open,B,F,Single-ply
 5,Leila Duhem,1963,FRA,91.9,140,-150,-167.5,140,140,84+,Open,B,F,Single-ply

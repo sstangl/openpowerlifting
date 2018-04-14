@@ -45,7 +45,7 @@ do
 
 	# Use LibreOffice to automatically convert the <table> to a csv file.
 	# This creates results.csv.
-	libreoffice --headless --convert-to csv "results"${r_nums[$((ii-2))]}".xls"
+	libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 "results"${r_nums[$((ii-2))]}".xls"
 
 	rm "results"${r_nums[$((ii-2))]}".html" "results"${r_nums[$((ii-2))]}".xls"
 

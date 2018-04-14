@@ -1,6 +1,6 @@
 Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
 1,Naoya Ikeda,1970,JPN,58.2,-177.5,177.5,-192.5,177.5,177.5,59,Open,B,M,Single-ply
-2,Dariusz Wszola,1978,POL,58.2,165,170,175,175,175,59,Open,B,M,Single-ply
+2,Dariusz Wszoła,1978,POL,58.2,165,170,175,175,175,59,Open,B,M,Single-ply
 3,Slawomir Sledz,1976,POL,58.5,160,170,175,175,175,59,Open,B,M,Single-ply
 4,Sergey Krilov,1984,RUS,58.2,165,172.5,-180,172.5,172.5,59,Open,B,M,Single-ply
 5,Aaron Gideon,1980,GBR,58.1,150,160,-172.5,160,160,59,Open,B,M,Single-ply
@@ -61,7 +61,7 @@ DQ,Dennis Cieri,1968,USA,92.3,-282.5,-292.5,-299,,,93,Open,B,M,Single-ply
 4,Petri Kuosma,1979,FIN,101.8,-280,280,-292.5,280,280,105,Open,B,M,Single-ply
 5,Aleksey Pavlovskiy,1974,RUS,102.8,-275,280,-292.5,280,280,105,Open,B,M,Single-ply
 6,Tamas Sebestyen,1980,HUN,100.9,260,275,-280,275,275,105,Open,B,M,Single-ply
-7,Kornel Schauer,1977,HUN,101.8,262.5,-275,-277.5,262.5,262.5,105,Open,B,M,Single-ply
+7,Kornél Schauer,1977,HUN,101.8,262.5,-275,-277.5,262.5,262.5,105,Open,B,M,Single-ply
 8,Bjorn Schneider,1979,GER,103.7,250,262.5,-272.5,262.5,262.5,105,Open,B,M,Single-ply
 9,Thomas Sorensen,1981,DEN,104.3,-262.5,262.5,-282.5,262.5,262.5,105,Open,B,M,Single-ply
 10,Philippe Szezepanski,1964,FRA,99.2,-235,-235,235,235,235,105,Open,B,M,Single-ply
@@ -80,7 +80,7 @@ DQ,John Giffen Jr,1972,CAN,104.4,-270,-270,-282.5,,,105,Open,B,M,Single-ply
 2,Marcus Hirvonen,1976,SWE,119,-310,312.5,-322.5,312.5,312.5,120,Open,B,M,Single-ply
 3,Tonni Jensen,1981,DEN,119.4,307.5,-317.5,-322.5,307.5,307.5,120,Open,B,M,Single-ply
 4,Ove Lehto,1972,FIN,119,280,290,297.5,297.5,297.5,120,Open,B,M,Single-ply
-5,Herman Omland Tor,1977,NOR,117,295,-302.5,-307.5,295,295,120,Open,B,M,Single-ply
+5,Tor-Herman Omland,1977,NOR,117,295,-302.5,-307.5,295,295,120,Open,B,M,Single-ply
 6,Zbyněk Krejča,1974,CZE,117.9,-270,270,285,285,285,120,Open,B,M,Single-ply
 7,Markus Karner,1970,AUT,117.3,270,280,-290,280,280,120,Open,B,M,Single-ply
 8,Francky Nogues,1980,FRA,113.1,275,-300,-300,275,275,120,Open,B,M,Single-ply
@@ -102,7 +102,7 @@ DQ,Shinji Ueda,1972,JPN,119.6,-310,-310,-325.5,,,120,Open,B,M,Single-ply
 5,Jonathan Leo,1977,USA,145.9,297.5,-307.5,-310,297.5,297.5,120+,Open,B,M,Single-ply
 6,Wulf Kronemann,1967,GER,135.4,-290,290,-300,290,290,120+,Open,B,M,Single-ply
 7,Marco Regensberger,1979,AUT,128.8,275,282.5,-287.5,282.5,282.5,120+,Open,B,M,Single-ply
-8,Yves Minelle Jean,1966,FRA,150,-275,275,-282.5,275,275,120+,Open,B,M,Single-ply
+8,Jean-Yves Minelle,1966,FRA,150,-275,275,-282.5,275,275,120+,Open,B,M,Single-ply
 9,Bela Szekely,1977,HUN,124.6,270,-280,-280,270,270,120+,Open,B,M,Single-ply
 10,Jaroslav Šoukal,1972,CZE,138.4,255,-265,265,265,265,120+,Open,B,M,Single-ply
 11,Lukas Doubek,1979,CZE,133.2,220,235,-242.5,235,235,120+,Open,B,M,Single-ply
@@ -214,7 +214,7 @@ DQ,Allan Grenier,1990,FRA,91,-225,-230,-230,,,93,Juniors,B,M,Single-ply
 7,Mark Baliban,1992,HUN,138.4,200,215,220,220,220,120+,Juniors,B,M,Single-ply
 8,Jaroslav Hnetynka,1989,CZE,124.9,160,-170,-170,160,160,120+,Juniors,B,M,Single-ply
 1,Justyna Kozdryk,1980,POL,44.8,115,122.5,127.5,127.5,127.5,47,Open,B,F,Single-ply
-2,Ilka Schwengl,1965,AUT,46.5,102.5,105,107.5,107.5,107.5,47,Open,B,F,Single-ply
+2,Ilka Schwengl-Forsthuber,1965,AUT,46.5,102.5,105,107.5,107.5,107.5,47,Open,B,F,Single-ply
 3,Anastasya Strufa,1986,RUS,46.4,95,100,-105,100,100,47,Open,B,F,Single-ply
 1,Kaori Nagaya-Shirakawa,1963,JPN,51.8,120,125,130,130,130,52,Open,B,F,Single-ply
 2,Krisztina Nagypal,1985,HUN,51.5,122.5,127.5,-132.5,127.5,127.5,52,Open,B,F,Single-ply
@@ -313,6 +313,6 @@ DQ,Anni Vuohijoki,1988,FIN,62.8,-115,-120,-122.5,,,63,Juniors,B,F,Single-ply
 1,Sahra Zihms,1989,GER,81.7,125,130,-135,130,130,84,Juniors,B,F,Single-ply
 2,Narine Arushanova,1991,RUS,72.2,110,122.5,-135,122.5,122.5,84,Juniors,B,F,Single-ply
 3,Alexandra Tichy,1990,AUT,81.6,110,-120,-125,110,110,84,Juniors,B,F,Single-ply
-1,Agnes Szabo,1988,HUN,97.3,150,-162.5,162.5,162.5,162.5,84+,Juniors,B,F,Single-ply
+1,Ágnes Szabó,1988,HUN,97.3,150,-162.5,162.5,162.5,162.5,84+,Juniors,B,F,Single-ply
 2,Tiphanie Felgueiras,1990,FRA,140.4,140,150,155,155,155,84+,Juniors,B,F,Single-ply
 3,Maria Koteles,1988,HUN,125.1,100,130,-152.5,130,130,84+,Juniors,B,F,Single-ply
