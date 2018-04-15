@@ -37,30 +37,32 @@ def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
-    div = soup.find("div", {"align": "left"})
 
     for td in soup.find_all('td'):
         a = td.a
         if a:
-	        url = a['href']
-	        name = a.contents[0]
+            url = a['href']
+            name = a.contents[0]
 
-	        if '?dbid=' not in url:
-	            continue
+            if '?dbid=' not in url:
+                continue
 
-            # Filter out non Danish meets
-	        if any(text in name for text in ['EM','NM','EU','WEC' ,'VM','Arnold','St. Petersburg','Caribbean','Salo','Baltic','Copenhagen']):
-	        	continue
+        # Filter out non Danish meets
+            if any(text in name for text in
+                    ['EM', 'NM', 'EU', 'WEC', 'VM',
+                        'Arnold', 'St. Petersburg', 'Caribbean', 'Salo',
+                        'Baltic', 'Copenhagen', 'World']):
+                continue
 
+            if 'http' not in url:
+                url = BASEURL + url
 
-	        if 'http' not in url:
-	            url = BASEURL + url
+        # HTML is getting unquoted somewhere but I haven't figured out where
+            url = urllib.parse.quote(
+                url, safe='/&=?:', encoding='windows-1252')
 
-            # HTML is getting unquoted somewhere but I haven't figured out where
-	        url =urllib.parse.quote(url, safe='/&=?:',encoding='windows-1252') 
-
-	        if url not in urls:
-	            urls.append(url)
+            if url not in urls:
+                urls.append(url)
 
     return urls
 
@@ -75,11 +77,9 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     for url in unentered:
-        subprocess.run(['./dsf-import',url])
-
+        subprocess.run(['./'+'dsf-import', url])
 
     oplprobe.print_meets(color('[DSF]'), unentered)
-
 
 
 if __name__ == '__main__':

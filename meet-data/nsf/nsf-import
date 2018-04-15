@@ -118,11 +118,10 @@ def getresults(soup):
             error("Unknown column name: \"%s\"" % h)
 
     # These columns are added from the category rows.
-    csv.fieldnames += ['Division', 'Sex','WeightClassKg']
+    csv.fieldnames += ['Division', 'Sex']
 
     divstate = None
     sexstate = None
-    wcstate = None
 
     for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
@@ -142,11 +141,11 @@ def getresults(soup):
             if 'ungdom' in text:
                 divstate = text.replace('ungdom', 'Teen')
             elif 'junior' in text:
-                divstate = text.replace('junior', 'Juniors')
-            elif 'senior' in text:
+                divstate = text.replace('junior', 'Junior')
+            elif 'åpen' in text:
                 divstate = 'Open'
-            elif 'masters' in text:
-                divstate = text.replace('master', 'Master')
+            elif 'veteran' in text:
+                divstate = text.replace('veteran', 'Master')
             else:
                 error("Unknown state: \"%s\"" % row[0])
 

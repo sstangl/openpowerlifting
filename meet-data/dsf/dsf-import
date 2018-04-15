@@ -10,8 +10,8 @@ import os
 import sys
 import urllib.request
 import re
-import subprocess
 import urllib.parse
+import subprocess
 
 try:
     from oplcsv import Csv
@@ -19,6 +19,7 @@ except ModuleNotFoundError:
     sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     from oplcsv import Csv
+
 
 def gethtml(url):
     with urllib.request.urlopen(url) as r:
@@ -29,32 +30,98 @@ def error(msg):
     print(msg, file=sys.stderr)
     sys.exit(1)
 
+# Open the points page and get the bodyweights of each lifter
+
+
+def add_bodyweights(csv, url):
+    soup = BeautifulSoup(gethtml(url), 'html.parser')
+
+    points_ext = ''
+    for a in soup.find_all('a'):
+        if a.contents and 'Points' in a.contents[0]:
+            points_ext = a['href'][-4:]
+            break
+
+    if not points_ext:
+        return csv
+
+    points_url = url + points_ext
+    points_soup = BeautifulSoup(gethtml(points_url), 'html.parser')
+
+    points_dbcontent = points_soup.find_all('div', id='dbcontent')
+
+    table = points_dbcontent[0].find_next('table')
+
+    trs = table.find_all('tr')
+
+    headers = [x.text for x in trs[0].find_all('td')]
+
+    bwidx = -1
+    for ii in range(0, len(headers)):
+        if headers[ii] == 'Vægt':
+            bwidx = ii
+            break
+
+    if bwidx == -1:
+        return csv
+
+    csv.append_column('BodyweightKg')
+
+    lc_idx = csv.index('lifter_code')
+    name_idx = csv.index('Name')
+    for tr in trs[1:]:
+        row = [x.text for x in tr.find_all('td')]
+
+        if len(row) > 1:  # Skip non-lifter rows:
+
+            # Get the code for this lifter
+            lifter_code = tr.find_all('td')[csv.index('Name')].a
+
+            if lifter_code:
+                lifter_code = lifter_code['href']
+                lifter_code = lifter_code.replace('?dbid=profil&licnum=', '')
+
+            # Find the corresponding code in the data we already have
+            # Need to loop through all the data to find lifters in multiple divisions
+            for row2 in csv.rows:
+                if lifter_code:
+                    if row2[lc_idx] == lifter_code:
+                        row2[-1] = row[bwidx]
+                else:  # No lifter code, match by name
+                    if row2[name_idx] == row[name_idx]:
+                        row2[-1] = row[bwidx]
+
+    return csv
+
 
 # URL will be like "/?dbid=result&id=403".
 def getdirname(url):
     if '&id=' in url:
         return url.split('&id=')[1]
-    else: #Older meets aren't numbered
-        year= re.search('(?<=aar=)(.*?)(?=\&)',url).group(0)
-        place = urllib.parse.unquote(re.search('(?<=sted=).*',url).group(0),encoding = 'windows-1252')
-        name = urllib.parse.unquote(re.search('(?<=staevne=)(.*?)(?=\&)',url).group(0),encoding = 'windows-1252')
-        event = urllib.parse.unquote(re.search('(?<=deciplin=)(.*?)(?=\&)',url).group(0),encoding = 'windows-1252')
+    else:  # Older meets aren't numbered
+        year = re.search('(?<=aar=)(.*?)(?=\&)', url).group(0)
+        place = urllib.parse.unquote(
+            re.search('(?<=sted=).*', url).group(0), encoding='windows-1252')
+        name = urllib.parse.unquote(
+            re.search('(?<=staevne=)(.*?)(?=\&)', url).group(0), encoding='windows-1252')
+        event = urllib.parse.unquote(
+            re.search('(?<=deciplin=)(.*?)(?=\&)',
+                        url).group(0), encoding='windows-1252')
 
-        place = place.replace(' ','')
-        name = name.replace(' ','').replace('-','')
-        event = event.replace(' ','').replace('-','')
+        place = place.replace(' ', '')
+        name = name.replace(' ', '').replace('-', '')
+        event = event.replace(' ', '').replace('-', '').replace('.', '')
 
         if place == '':
             place = '_'
-     
-        return year+ '-' + place +'-'+ name + '-' + event
 
+        return year + '-' + place + '-' + name + '-' + event
 
 
 def getmeetinfo(soup):
-    month_dict = {'Jan':'01','Feb':'02','Mar':'03','Apr':'04','Maj':'05',
-        'Jun':'06','Jul':'07','Aug':'08','Sep':'09','Okt':'10','Nov':'11','Dec':'12'}
-
+    month_dict = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'Maj': '05',
+                  'Jun': '06', 'Jul': '07', 'Aug': '08', 'Sep': '09', 'Okt': '10',
+                  'Nov': '11', 'Dec': '12'}
 
     csv = Csv()
     csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
@@ -68,25 +135,25 @@ def getmeetinfo(soup):
     # Get the date.
     name = dbcontent[0].h2.contents[0]
 
-    #Strip any years from the name
-    name = re.sub('\d{4}','',name)
-
+    # Strip any years from the name
+    name = re.sub('\d{4}', '', name)
 
     place_date = dbcontent[0].h3.contents[0].split(', d. ')
     town = place_date[0]
+    town = town.split('/')[0]
+    town = town.split('&')[0]
+    town = re.sub('\(.*\)', '', town).strip()
     date_str = place_date[1].split(' ')
 
-    #Need to deal with meets split over months
+    # Need to deal with meets split over months
     day = date_str[0].split('-')[0]
-    if len(day) ==1:
+    if len(day) == 1:
         day = '0'+day
 
     month = month_dict[date_str[1].split('-')[0]]
     year = date_str[2]
 
     date = year + '-' + month + '-' + day
-
-
 
     fed = 'DSF'
     country = 'Denmark'
@@ -123,7 +190,7 @@ def getresults(soup):
             csv.fieldnames += ['BodyweightKg']
         elif h == 'Navn':
             csv.fieldnames += ['Name']
-        elif h == 'Født' or h =='Årgang':
+        elif h == 'Født' or h == 'Årgang':
             csv.fieldnames += ['BirthYear']
         elif h == 'Klub':
             csv.fieldnames += ['Team']
@@ -133,7 +200,7 @@ def getresults(soup):
             csv.fieldnames += ['Squat2Kg']
         elif h == 'SQ3':
             csv.fieldnames += ['Squat3Kg']
-        elif h == 'SQ' or h =='Squat':
+        elif h == 'SQ' or h == 'Squat':
             csv.fieldnames += ['BestSquatKg']
         elif h == 'BP1':
             csv.fieldnames += ['Bench1Kg']
@@ -141,7 +208,7 @@ def getresults(soup):
             csv.fieldnames += ['Bench2Kg']
         elif h == 'BP3':
             csv.fieldnames += ['Bench3Kg']
-        elif h == 'BP' or h =='Bænk':
+        elif h == 'BP' or h == 'Bænk':
             csv.fieldnames += ['BestBenchKg']
         elif h == 'DL1':
             csv.fieldnames += ['Deadlift1Kg']
@@ -149,7 +216,7 @@ def getresults(soup):
             csv.fieldnames += ['Deadlift2Kg']
         elif h == 'DL3':
             csv.fieldnames += ['Deadlift3Kg']
-        elif h == 'DL' or h =='Dødløft':
+        elif h == 'DL' or h == 'Dødløft':
             csv.fieldnames += ['BestDeadliftKg']
         elif h == 'Total':
             csv.fieldnames += ['TotalKg']
@@ -163,7 +230,7 @@ def getresults(soup):
             error("Unknown column name: \"%s\"" % h)
 
     # These columns are added from the category rows.
-    csv.fieldnames += ['Division', 'Sex','WeightClassKg']
+    csv.fieldnames += ['Division', 'Sex', 'WeightClassKg', 'lifter_code']
 
     append_eqp = False
     # Classic meets and pre 2011 meets won't mark equipment, work it out contextually
@@ -173,20 +240,22 @@ def getresults(soup):
 
     divstate = None
     sexstate = None
-    wcstate  = None
+    wcstate = None
 
     for tr in trs[1:]:
+
         row = [x.text for x in tr.find_all('td')]
-        if ''.join(row[0]) != '': #Skip blink rows:
-            
+        if ''.join(row[0]) != '':  # Skip blank rows:
+
             # Rows of length >1 are actual results, of length 1 are categories.
             if len(row) == 1:
+
                 # Extract sex information.
-                text = row[0].lower().replace('\n','')
+                text = row[0].lower().replace('\n', '')
 
                 # Contextual rows are either weight classes or divisions
                 if 'kg' in text:
-                    wcstate = text.replace('kg','').strip()
+                    wcstate = text.replace('kg', '').strip()
                 else:
                     if 'damer' in text:
                         sexstate = 'F'
@@ -196,28 +265,36 @@ def getresults(soup):
                         text = text.replace('herrer', '').strip()
 
                     # Extract division information.
-                    if 'junior' in text:
-                        divstate = text.replace('junior', 'Junior')
+                    if 'sub-junior' in text:
+                        divstate = text.replace('sub-junior', 'Sub-Juniors')
+                    elif 'junior' in text:
+                        divstate = text.replace('junior', 'Juniors')
                     elif 'senior' in text:
                         divstate = 'Open'
                     elif 'master' in text:
                         divstate = text.replace('master', 'Master')
                     elif 'ungdom' in text:
-                        divstate = text.replace('ungdom', 'Sub-Juniors')
+                        divstate = text.replace('ungdom', 'Teen')
                     elif 'handicap' in text:
-                        divstate = text.replace('handicap','Paralympics')
+                        divstate = text.replace('handicap', 'Handicapped')
                     elif text == '':
                         divstate = 'Open'
                     else:
                         error("Unknown state: \"%s\"" % row[0])
 
-
-                
-
             else:
                 assert divstate
                 assert sexstate
                 assert wcstate
+
+                lifter_code = tr.find_all('td')[csv.index('Name')].a
+                if lifter_code:
+                    lifter_code = tr.find_all(
+                        'td')[csv.index('Name')].a['href']
+                    lifter_code = lifter_code.replace(
+                        '?dbid=profil&licnum=', '')
+                else:  # Occasionally lifters don't have a code,if so identify by name
+                    lifter_code = ''
 
                 # Accumulate the row, but we need to look at the class of each td
                 # to figure out whether lifts were good or bad.
@@ -227,10 +304,11 @@ def getresults(soup):
                     c = td.get('class')
                     if c and 'tdliveneg' in c:  # Failed lift.
                         text = '-' + text
- 
-                    row.append(text.strip().replace('  ', ' ').replace('  ', ' ').replace(',', ' '))
 
-                row = row + [divstate, sexstate,wcstate]
+                    row.append(text.strip().replace('  ', ' ').replace(
+                        '  ', ' ').replace(',', ' '))
+
+                row = row + [divstate, sexstate, wcstate, lifter_code]
                 if append_eqp:
                     row = row + ['']
 
@@ -258,19 +336,17 @@ def fixclass(csv):
     for row in csv.rows:
         row[clsidx] = row[clsidx].replace('-', '')
         if '+' in row[clsidx]:
-            row[clsidx] = row[clsidx].replace('+','')+'+'
+            row[clsidx] = row[clsidx].replace('+', '')+'+'
 
 
 # The equipment is marked as "x" for Raw, or nothing for Single-ply.
-def fixequipment(csv,meetcsv):
+def fixequipment(csv, meetcsv):
     meet_name = meetcsv.rows[0][5]
-    meet_year = meetcsv.rows[0][1].split('-')[0]
 
-    raw_meet=False
+    raw_meet = False
 
     if 'klassisk' in meet_name.lower():
         raw_meet = True
-
 
     eqidx = csv.index('Equipment')
     for row in csv.rows:
@@ -285,13 +361,17 @@ def fixequipment(csv,meetcsv):
                 error("Unknown equipment: \"%s\"" % row[eqidx])
 
 # The birthyear column sometimes also contains age division, remove this.
+
+
 def fixbirthyear(csv):
     if 'BirthYear' in csv.fieldnames:
         byidx = csv.index('BirthYear')
         for row in csv.rows:
-            row[byidx] = re.sub('\(.*\)','',row[byidx]).strip()
+            row[byidx] = re.sub('\(.*\)', '', row[byidx]).strip()
 
 # Lifters without a recorded bodyweight have a dash, remove this.
+
+
 def fixbodyweight(csv):
     if 'BodyweightKg' in csv.fieldnames:
         bwidx = csv.index('BodyweightKg')
@@ -300,13 +380,14 @@ def fixbodyweight(csv):
                 row[bwidx] = ''
 
 # The reported total doesn't take into account chips.
+
+
 def fixtotals(csv):
     def weight(str):
-            try:
-                return float(str)
-            except ValueError:
-                return 0.0
-
+        try:
+            return float(str)
+        except ValueError:
+            return 0.0
 
     if 'TotalKg' in csv.fieldnames:
         totalidx = csv.index('TotalKg')
@@ -321,11 +402,8 @@ def fixtotals(csv):
         if 'BestBenchKg' in csv.fieldnames:
             bpidx = csv.index('BestBenchKg')
 
-
         if 'BestDeadliftKg' in csv.fieldnames:
             dlidx = csv.index('BestDeadliftKg')
-
-       
 
         for row in csv.rows:
             if row[totalidx] != '':
@@ -342,11 +420,12 @@ def fixtotals(csv):
                 if dlidx != -1:
                     dl = weight(row[dlidx])
 
-                # Do this instead of summing attempts for everyone to pickup inconsistencies in reported total
+                # Do this instead of summing attempts for everyone
+                # to pick up inconsistencies in reported total
                 if sq % 2.5 != 0 or bp % 2.5 != 0 or dl % 2.5 != 0:
                     row[totalidx] = str(sq + bp + dl)
 
-    else: # Single-lift meets don't have totals
+    else:  # Single-lift meets don't have totals
         sqidx = -1
         bpidx = -1
         dlidx = -1
@@ -357,19 +436,18 @@ def fixtotals(csv):
         if 'BestBenchKg' in csv.fieldnames:
             bpidx = csv.index('BestBenchKg')
 
-
         if 'BestDeadliftKg' in csv.fieldnames:
             dlidx = csv.index('BestDeadliftKg')
 
-        if len([idx for idx in [sqidx,bpidx,dlidx] if idx != -1]) == 1:
+        if len([idx for idx in [sqidx, bpidx, dlidx] if idx != -1]) == 1:
             csv.fieldnames += ['TotalKg']
 
             for row in csv.rows:
-                if sqidx !=-1:
+                if sqidx != -1:
                     row.append(row[sqidx])
-                elif bpidx !=-1:
+                elif bpidx != -1:
                     row.append(row[bpidx])
-                elif dlidx !=-1:
+                elif dlidx != -1:
                     row.append(row[dlidx])
 
 
@@ -458,26 +536,37 @@ def remove_empty_cols_ignore_fieldname(csv):
 def main(url):
     html = gethtml(url)
 
-
     soup = BeautifulSoup(html, 'html.parser')
 
     meetcsv = getmeetinfo(soup)
     dirname = getdirname(url)
     entriescsv = getresults(soup)
+
     if len(entriescsv.rows) == 0:
         error("No rows found!")
+
+    # New meets have bodyweights on a different page
+    if 'BodyweightKg' not in entriescsv.fieldnames:
+        entriescsv = add_bodyweights(entriescsv, url)
+
+    # Only need this column for processing
+    entriescsv.remove_column_by_name('lifter_code')
 
     # Don't care about this column
     if 'Records' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Records')
 
+    # Wilks will be automatically calculated later.
+    # Feds get it wrong all the time.
+    if 'Wilks' in entriescsv.fieldnames:
+        entriescsv.remove_column_by_name('Wilks')
+
     fixtotals(entriescsv)
     fixplace(entriescsv)
     fixclass(entriescsv)
-    fixequipment(entriescsv,meetcsv)
+    fixequipment(entriescsv, meetcsv)
     fixbirthyear(entriescsv)
     fixbodyweight(entriescsv)
-
 
     # Figure out event information.
     markevent(entriescsv)
@@ -493,21 +582,13 @@ def main(url):
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
 
-    if 'BodyweightKg' not in entriescsv.fieldnames:
-        # Add bodyweights for newer meets
-        subprocess.run(['..'+os.sep+'..'+os.sep+'scripts'+os.sep+'csv-bodyweight-from-wilks',dirname + os.sep + 'entries.csv'])
-
-    # Then remove the wilks column
-    subprocess.run(['..'+os.sep+'..'+os.sep+'scripts'+os.sep+'csv-rmcol',dirname + os.sep + 'entries.csv','Wilks'])
-
-    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep+'check-entries-csv',dirname + os.sep + 'entries.csv'])
-
+    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep +
+                    'check-entries-csv', dirname + os.sep + 'entries.csv'])
 
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
-
 
     print("Imported into %s." % dirname)
 
