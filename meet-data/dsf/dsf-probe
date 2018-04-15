@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.parse
-import subprocess
 
 
 try:
@@ -75,9 +74,6 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
-
-    for url in unentered:
-        subprocess.run(['./'+'dsf-import', url])
 
     oplprobe.print_meets(color('[DSF]'), unentered)
 
