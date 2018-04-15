@@ -106,7 +106,7 @@ def getdirname(url):
             re.search('(?<=staevne=)(.*?)(?=\&)', url).group(0), encoding='windows-1252')
         event = urllib.parse.unquote(
             re.search('(?<=deciplin=)(.*?)(?=\&)',
-                         url).group(0), encoding='windows-1252')
+                      url).group(0), encoding='windows-1252')
 
         place = place.replace(' ', '')
         name = name.replace(' ', '').replace('-', '')
