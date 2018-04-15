@@ -8,10 +8,10 @@ extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 
-use rocket::{Outcome, State};
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect};
+use rocket::{Outcome, State};
 use rocket_contrib::Template;
 
 use std::env;
@@ -62,7 +62,9 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
             if valid_languages.len() == 0 {
                 default
             } else {
-                valid_languages[0].parse::<Language>().unwrap_or(default)
+                valid_languages[0]
+                    .parse::<Language>()
+                    .unwrap_or(default)
             }
         }
         None => default,
@@ -89,6 +91,20 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUn
 fn statics(file: PathBuf) -> Option<NamedFile> {
     let staticdir = env::var("STATICDIR").unwrap();
     NamedFile::open(Path::new(&staticdir).join(file)).ok()
+}
+
+#[get("/rankings")]
+fn rankings(
+    opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+
+    let context = pages::rankings::Context::new(&opldb, lang, &langinfo, units);
+    Some(Template::render("rankings", &context))
 }
 
 #[get("/u/<username>")]
@@ -186,7 +202,7 @@ fn contact(
 
 #[get("/")]
 fn index() -> Redirect {
-    Redirect::to("/u/kristyhawkins")
+    Redirect::to("/rankings")
 }
 
 fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
@@ -196,7 +212,7 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .mount(
             "/",
-            routes![index, lifter, meet, statics, status, data, faq, contact],
+            routes![index, rankings, lifter, meet, statics, status, data, faq, contact],
         )
         .attach(Template::fairing())
 }
@@ -244,7 +260,10 @@ fn main() {
         }
     };
 
-    println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
+    println!(
+        "OplDb loaded in {}MB.",
+        opldb.size_bytes() / 1024 / 1024
+    );
 
     // Load translations.
     let mut langinfo = langpack::LangInfo::new();

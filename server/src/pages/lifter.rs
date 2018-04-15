@@ -1,8 +1,8 @@
 //! Logic for each lifter's personal page.
 
+use langpack::{self, Language};
 use opldb;
 use opldb::fields;
-use langpack::{self, Language};
 
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]
@@ -67,8 +67,14 @@ impl<'a> MeetResultsRow<'a> {
             },
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
-            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
+            weightclass: entry
+                .weightclasskg
+                .as_type(units)
+                .in_format(number_format),
+            bodyweight: entry
+                .bodyweightkg
+                .as_type(units)
+                .in_format(number_format),
 
             squat: entry
                 .highest_squatkg()
@@ -88,7 +94,6 @@ impl<'a> MeetResultsRow<'a> {
     }
 }
 
-
 impl<'a> Context<'a> {
     pub fn new(
         opldb: &'a opldb::OplDb,
@@ -107,13 +112,10 @@ impl<'a> Context<'a> {
 
         let lifter_sex = strings.translate_sex(entries[0].sex);
 
-
         // Display the meet results, most recent first.
         let meet_results = entries
             .into_iter()
-            .map(|e| {
-                MeetResultsRow::from(opldb, strings, number_format, units, e)
-            })
+            .map(|e| MeetResultsRow::from(opldb, strings, number_format, units, e))
             .rev()
             .collect();
 

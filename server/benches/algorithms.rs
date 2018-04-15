@@ -10,9 +10,15 @@ static mut OPLDB_GLOBAL: Option<OplDb> = None;
 static OPLDB_INIT: Once = ONCE_INIT;
 
 fn db() -> &'static OplDb {
-    const LIFTERS_CSV: &str = "../build/bench-data/lifters.csv";
-    const MEETS_CSV: &str = "../build/bench-data/meets.csv";
-    const ENTRIES_CSV: &str = "../build/bench-data/openpowerlifting.csv";
+    // TODO: Put the real data back.
+    //
+    // const LIFTERS_CSV: &str = "../build/bench-data/lifters.csv";
+    // const MEETS_CSV: &str = "../build/bench-data/meets.csv";
+    // const ENTRIES_CSV: &str = "../build/bench-data/openpowerlifting.csv";
+    //
+    const LIFTERS_CSV: &str = "../build/lifters.csv";
+    const MEETS_CSV: &str = "../build/meets.csv";
+    const ENTRIES_CSV: &str = "../build/openpowerlifting.csv";
 
     unsafe {
         OPLDB_INIT.call_once(|| {
@@ -65,6 +71,30 @@ mod benches {
 
         b.iter(|| {
             filter_2016.union(filter_2017);
+        });
+    }
+
+    #[bench]
+    fn bench_sort_and_unique_by(b: &mut Bencher) {
+        let opldb = db();
+        let filter = opldb.get_filter(CachedFilter::EquipmentRaw);
+
+        b.iter(|| {
+            filter.sort_and_unique_by(&opldb, |x, y| {
+                let x_w = opldb.get_entry(x).wilks;
+                let y_w = opldb.get_entry(y).wilks;
+                x_w.cmp(&y_w)
+            });
+        });
+    }
+
+    #[bench]
+    fn bench_sort_and_unique_by_wilks(b: &mut Bencher) {
+        let opldb = db();
+        let filter = opldb.get_filter(CachedFilter::EquipmentRaw);
+
+        b.iter(|| {
+            filter.sort_and_unique_by_wilks(&opldb);
         });
     }
 }

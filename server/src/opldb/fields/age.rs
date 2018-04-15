@@ -4,8 +4,8 @@ use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
-use std::num;
 use std::fmt;
+use std::num;
 use std::str::FromStr;
 
 /// The reported age of the lifter at a given meet.

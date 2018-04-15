@@ -1,8 +1,8 @@
 //! Logic for the project status page.
 
+use langpack::{self, Language};
 use opldb;
 use opldb::fields::Federation;
-use langpack::{self, Language};
 
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]

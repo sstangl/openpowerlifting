@@ -3,8 +3,8 @@
 use serde;
 use serde::de::{self, Deserialize, Visitor};
 
-use std::num;
 use std::fmt;
+use std::num;
 use std::str::FromStr;
 
 /// The definition of the "Place" column.

@@ -1,7 +1,7 @@
 //! This file defines the filter cache.
 
-use opldb::filter::Filter;
 use opldb::fields::*;
+use opldb::filter::Filter;
 use opldb::{Entry, Meet};
 
 use std::mem;

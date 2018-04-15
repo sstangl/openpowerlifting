@@ -1,0 +1,54 @@
+{% extends "desktop-base" %}
+
+{% block includes %}
+  <script type="text/javascript">
+    const initial_data = {{data | safe}};
+
+    const translation_column_formulaplace = "{{strings.columns.formulaplace}}";
+    const translation_column_liftername = "{{strings.columns.liftername}}";
+    const translation_column_federation = "{{strings.columns.federation}}";
+    const translation_column_date = "{{strings.columns.date}}";
+    const translation_column_location = "{{strings.columns.location}}";
+    const translation_column_division = "{{strings.columns.division}}";
+    const translation_column_sex = "{{strings.columns.sex}}";
+    const translation_column_age = "{{strings.columns.age}}";
+    const translation_column_equipment = "{{strings.columns.equipment}}";
+    const translation_column_weightclass = "{{strings.columns.weightclass}}";
+    const translation_column_bodyweight = "{{strings.columns.bodyweight}}";
+    const translation_column_squat = "{{strings.columns.squat}}";
+    const translation_column_bench = "{{strings.columns.bench}}";
+    const translation_column_deadlift = "{{strings.columns.deadlift}}";
+    const translation_column_total = "{{strings.columns.total}}";
+    const translation_column_wilks = "{{strings.columns.wilks}}";
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="static/slickgrid.css"/>
+  <script src="static/slickgrid.min.js"></script>
+  <script src="static/rankings.js"></script>
+{% endblock includes %}
+
+{% block flexbox_hack %}
+  <div class="flexbox">
+{% endblock flexbox_hack %}
+
+{% block flexbox_hack_end %}
+  </div>
+{% endblock flexbox_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-right">
+      {% include "weightunits" %}
+      {% include "langselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div id="theGrid"></div>
+{% endblock body %}
+
+{% block custom_javascript %}
+  {% include "langselect-script" %}
+  {% include "weightunits-script" %}
+{% endblock custom_javascript %}

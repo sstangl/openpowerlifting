@@ -1,8 +1,11 @@
 //! The backend logic for each HTML page.
 
-pub mod lifter;
-pub mod meet;
-pub mod status;
+pub mod jsdata;
+
+pub mod contact;
 pub mod data;
 pub mod faq;
-pub mod contact;
+pub mod lifter;
+pub mod meet;
+pub mod rankings;
+pub mod status;

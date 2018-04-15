@@ -1,8 +1,8 @@
 //! Logic for each meet's individual results page.
 
+use langpack::{self, Language};
 use opldb;
 use opldb::fields;
-use langpack::{self, Language};
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
@@ -88,8 +88,14 @@ impl<'a> ResultsRow<'a> {
             sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
-            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
+            weightclass: entry
+                .weightclasskg
+                .as_type(units)
+                .in_format(number_format),
+            bodyweight: entry
+                .bodyweightkg
+                .as_type(units)
+                .in_format(number_format),
 
             squat: entry
                 .highest_squatkg()
@@ -131,7 +137,12 @@ impl<'a> Context<'a> {
             .collect();
 
         Context {
-            page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
+            page_title: format!(
+                "{} {} {}",
+                meet.date.year(),
+                meet.federation,
+                meet.name
+            ),
             language: language,
             strings: strings,
             units: units,

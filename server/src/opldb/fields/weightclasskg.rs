@@ -4,13 +4,13 @@ use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
-use std::num;
 use std::fmt;
+use std::num;
 use std::str::FromStr;
 
+use langpack::{self, LocalizedWeightClassAny};
 use opldb::fields::{WeightAny, WeightKg};
 use opldb::WeightUnits;
-use langpack::{self, LocalizedWeightClassAny};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, PartialEq)]

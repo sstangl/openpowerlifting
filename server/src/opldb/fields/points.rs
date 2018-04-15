@@ -6,8 +6,8 @@ use serde::ser::Serialize;
 
 use std::f32;
 use std::fmt;
-use std::str::FromStr;
 use std::num;
+use std::str::FromStr;
 
 use langpack::{self, LocalizedPoints};
 
@@ -17,7 +17,7 @@ use langpack::{self, LocalizedPoints};
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Clone, Copy, Debug, PartialEq, PartialOrd)]
+#[derive(Clone, Copy, Debug, Eq, Ord, PartialOrd, PartialEq)]
 pub struct Points(pub i32);
 
 impl Points {
@@ -138,10 +138,14 @@ mod tests {
         let w = "NaN".parse::<Points>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::INFINITY).parse::<Points>().unwrap();
+        let w = format!("{}", f32::INFINITY)
+            .parse::<Points>()
+            .unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::NEG_INFINITY).parse::<Points>().unwrap();
+        let w = format!("{}", f32::NEG_INFINITY)
+            .parse::<Points>()
+            .unwrap();
         assert!(w.0 == 0);
     }
 
@@ -188,5 +192,6 @@ mod tests {
         let w1 = "100".parse::<Points>().unwrap();
         let w2 = "200".parse::<Points>().unwrap();
         assert!(w1 < w2);
+        assert!(w1.lt(&w2));
     }
 }

@@ -17,8 +17,8 @@ mod filter;
 pub use self::filter::Filter;
 
 mod filter_cache;
-use self::filter_cache::FilterCache;
 pub use self::filter_cache::CachedFilter;
+use self::filter_cache::FilterCache;
 
 #[derive(Copy, Clone, Debug, Serialize)]
 pub enum WeightUnits {

@@ -1,5 +1,8 @@
 //! Definition and testing of filters for `OplDb` data.
 
+use itertools::Itertools;
+use opldb::OplDb;
+use std::cmp::Ordering;
 use std::mem;
 
 /// A list of indices to vector items that all have the same property.
@@ -103,6 +106,75 @@ impl Filter {
         }
 
         Filter { list: acc }
+    }
+
+    /// Sorts and uniques the data with reference to a comparator.
+    pub fn sort_and_unique_by<F>(&self, opldb: &OplDb, compare: F) -> Filter
+    where
+        F: Fn(u32, u32) -> Ordering,
+    {
+        debug_assert!(self.maintains_invariants());
+
+        // First, group contiguous entries by lifter_id, so only the best
+        // entry for each lifter is counted.
+        // The group_by() operation is lazy and does not perform any action yet.
+        let groups = self.list
+            .iter()
+            .group_by(|idx| opldb.get_entry(**idx).lifter_id);
+
+        // Perform the grouping operation, generating a new vector.
+        let mut list: Vec<u32> = groups
+            .into_iter()
+            .map(|(_key, group)| *group.max_by(|&x, &y| compare(*x, *y)).unwrap())
+            .collect();
+
+        // Sort max-first.
+        // Stable sorting is used since it benchmarks faster than unstable.
+        list.sort_by(|&x, &y| compare(x, y).reverse());
+
+        Filter { list }
+    }
+
+    // TODO -- using this method takes 32ms instead of 46ms, quite a savings!
+    // Apparently the indirection overhead is pretty high, and it's much faster
+    // to just make a sort method directly for each of the sort options.
+    // Alas, JS perf is actually better here due to JITs.
+    pub fn sort_and_unique_by_wilks(&self, opldb: &OplDb) -> Filter {
+        debug_assert!(self.maintains_invariants());
+
+        // First, group contiguous entries by lifter_id, so only the best
+        // entry for each lifter is counted.
+        // The group_by() operation is lazy and does not perform any action yet.
+        let groups = self.list
+            .iter()
+            .group_by(|idx| opldb.get_entry(**idx).lifter_id);
+
+        // Perform the grouping operation, generating a new vector.
+        let mut list: Vec<u32> = groups
+            .into_iter()
+            .map(|(_key, group)| {
+                *group
+                    .max_by(|&x, &y| {
+                        opldb
+                            .get_entry(*x)
+                            .wilks
+                            .cmp(&opldb.get_entry(*y).wilks)
+                    })
+                    .unwrap()
+            })
+            .collect();
+
+        // Sort max-first.
+        // Stable sorting is used since it benchmarks faster than unstable.
+        list.sort_by(|&x, &y| {
+            opldb
+                .get_entry(x)
+                .wilks
+                .cmp(&opldb.get_entry(y).wilks)
+                .reverse()
+        });
+
+        Filter { list }
     }
 
     /// Tests that the list is monotonically increasing.
