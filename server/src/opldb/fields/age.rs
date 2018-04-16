@@ -10,7 +10,7 @@ use std::str::FromStr;
 
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum Age {
     /// The exact age of the lifter.
     Exact(u8),

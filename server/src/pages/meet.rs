@@ -14,6 +14,8 @@ pub struct Context<'a> {
     pub strings: &'a langpack::Translations,
     pub units: opldb::WeightUnits,
 
+    /// True iff the meet reported any age data.
+    pub has_age_data: bool,
     pub rows: Vec<ResultsRow<'a>>,
 }
 
@@ -144,6 +146,16 @@ impl<'a> Context<'a> {
             .map(|(_key, group)| group.max_by_key(|x| x.wilks).unwrap())
             .collect();
 
+        // Does this meet contain age data?
+        // If not, that column will be hidden.
+        let mut has_age_data = false;
+        for entry in &entries {
+            if entry.age != fields::Age::None {
+                has_age_data = true;
+                break;
+            }
+        }
+
         // Get a list of the entries for this meet, highest Wilks first.
         entries.sort_unstable_by(|x, y| {
             x.wilks
@@ -169,6 +181,7 @@ impl<'a> Context<'a> {
             strings: strings,
             units: units,
             meet: MeetInfo::from(&meet),
+            has_age_data: has_age_data,
             rows: rows,
         }
     }

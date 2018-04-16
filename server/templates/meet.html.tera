@@ -31,7 +31,9 @@
         <th>{{strings.columns.formulaplace}}</th>
         <th>{{strings.columns.liftername}}</th>
         <th>{{strings.columns.sex}}</th>
-        <th>{{strings.columns.age}}</th>
+        {% if has_age_data %}
+          <th>{{strings.columns.age}}</th>
+        {% endif %}
         <th>{{strings.columns.equipment}}</th>
         <th>{{strings.columns.weightclass}}</th>
         <th>{{strings.columns.bodyweight}}</th>
@@ -48,7 +50,9 @@
             <a href="/u/{{this.username}}">{{this.name}}</a>{% if this.instagram %}<a href="https://www.instagram.com/{{this.instagram}}" class="instagram"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}
           </td>
           <td>{{this.sex}}</td>
-          <td>{{this.age}}</td>
+          {% if has_age_data %}
+            <td>{{this.age}}</td>
+          {% endif %}
           <td>{{this.equipment}}</td>
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
