@@ -14,7 +14,7 @@ pub struct JsEntryRow<'db> {
 
     pub federation: &'db fields::Federation,
     pub date: String,
-    pub country: &'db String,
+    pub country: &'db str,
     pub state: &'db Option<String>,
     pub path: &'db String,
 
@@ -52,7 +52,7 @@ impl<'db> JsEntryRow<'db> {
 
             federation: &meet.federation,
             date: format!("{}", meet.date),
-            country: &meet.country,
+            country: strings.translate_country(meet.country),
             state: &meet.state,
             path: &meet.path,
 

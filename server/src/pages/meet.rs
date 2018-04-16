@@ -31,12 +31,12 @@ pub struct MeetInfo<'a> {
 }
 
 impl<'a> MeetInfo<'a> {
-    pub fn from(meet: &'a opldb::Meet) -> MeetInfo<'a> {
+    pub fn from(meet: &'a opldb::Meet, strings: &'a langpack::Translations) -> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
             federation: &meet.federation,
             date: format!("{}", &meet.date),
-            country: &meet.country,
+            country: strings.translate_country(meet.country),
             state: match meet.state {
                 None => None,
                 Some(ref s) => Some(&s),
@@ -180,7 +180,7 @@ impl<'a> Context<'a> {
             language: language,
             strings: strings,
             units: units,
-            meet: MeetInfo::from(&meet),
+            meet: MeetInfo::from(&meet, strings),
             has_age_data: has_age_data,
             rows: rows,
         }

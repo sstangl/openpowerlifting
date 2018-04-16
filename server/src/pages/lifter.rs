@@ -54,7 +54,7 @@ impl<'a> MeetResultsRow<'a> {
             place: format!("{}", &entry.place),
             federation: &meet.federation,
             date: format!("{}", meet.date),
-            country: &meet.country,
+            country: strings.translate_country(meet.country),
             state: match meet.state {
                 None => None,
                 Some(ref s) => Some(&s),

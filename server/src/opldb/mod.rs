@@ -59,7 +59,7 @@ pub struct Meet {
     #[serde(rename(deserialize = "Date"))]
     pub date: Date,
     #[serde(rename(deserialize = "MeetCountry"))]
-    pub country: String,
+    pub country: Country,
     #[serde(rename(deserialize = "MeetState"))]
     pub state: Option<String>,
     #[serde(rename(deserialize = "MeetTown"))]
@@ -259,7 +259,6 @@ impl OplDb {
         }
         for meet in &self.meets {
             owned_strings += mem::size_of::<String>() + meet.path.len();
-            owned_strings += mem::size_of::<String>() + meet.country.len();
             if let Some(ref state) = meet.state {
                 owned_strings += mem::size_of::<String>() + state.len();
             }

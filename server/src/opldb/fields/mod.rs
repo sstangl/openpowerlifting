@@ -6,6 +6,8 @@
 
 mod age;
 pub use self::age::*;
+mod country;
+pub use self::country::*;
 mod date;
 pub use self::date::*;
 mod event;
