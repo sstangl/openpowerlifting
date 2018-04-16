@@ -1,5 +1,6 @@
 //! Logic for each meet's individual results page.
 
+use itertools::Itertools;
 use langpack::{self, Language};
 use opldb;
 use opldb::fields;
@@ -50,7 +51,10 @@ impl<'a> MeetInfo<'a> {
 /// A row in the results table.
 #[derive(Serialize)]
 pub struct ResultsRow<'a> {
+    /// The Place given by the federation.
     pub place: String,
+    /// The rank in the ranking-by-points view (by Wilks).
+    pub rank: u32,
     pub name: &'a str,
     pub username: &'a str,
     pub instagram: Option<&'a str>,
@@ -74,11 +78,13 @@ impl<'a> ResultsRow<'a> {
         number_format: langpack::NumberFormat,
         units: opldb::WeightUnits,
         entry: &'a opldb::Entry,
+        rank: u32,
     ) -> ResultsRow<'a> {
         let lifter: &'a opldb::Lifter = opldb.get_lifter(entry.lifter_id);
 
         ResultsRow {
             place: format!("{}", &entry.place),
+            rank: rank,
             name: &lifter.name,
             username: &lifter.username,
             instagram: match lifter.instagram {
@@ -127,13 +133,29 @@ impl<'a> Context<'a> {
         let strings = langinfo.get_translations(language);
         let number_format = language.number_format();
 
+        // Display at most one entry for each lifter.
+        let groups = opldb
+            .get_entries_for_meet(meet_id)
+            .into_iter()
+            .group_by(|e| e.lifter_id);
+
+        let mut entries: Vec<&opldb::Entry> = groups
+            .into_iter()
+            .map(|(_key, group)| group.max_by_key(|x| x.wilks).unwrap())
+            .collect();
+
         // Get a list of the entries for this meet, highest Wilks first.
-        let mut entries = opldb.get_entries_for_meet(meet_id);
-        entries.sort_unstable_by_key(|e| -1 * e.wilks.0);
+        entries.sort_unstable_by(|x, y| {
+            x.wilks
+                .cmp(&y.wilks)
+                .then(x.totalkg.cmp(&y.totalkg))
+                .reverse()
+        });
 
         let rows = entries
             .into_iter()
-            .map(|e| ResultsRow::from(opldb, strings, number_format, units, e))
+            .zip(1..)
+            .map(|(e, i)| ResultsRow::from(opldb, strings, number_format, units, e, i))
             .collect();
 
         Context {
