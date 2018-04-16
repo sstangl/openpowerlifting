@@ -152,7 +152,7 @@ def standardize_fieldnames(csv):
             x = 'Division'
         elif s == 'wt' or s == 'wt class':
             x = 'WeightClassLBS'
-        elif s == 'name' or s == 'powerlifter' or s == 'lifter name':
+        elif s == 'name' or s == 'powerlifter' or s == 'lifter name' or s == 'lifter':
             x = 'Name'
         elif s == 'actual bwt.' or s == 'acutal b/w' or s == 'bwt' or s == 'actual bwt':
             x = 'BodyweightLBS'

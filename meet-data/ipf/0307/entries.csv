@@ -3,7 +3,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,BestSquatKg
 2,52,M,Open,Andrzej Stanaszek,1971,POL,50,300.5,182.5,145,627.5,SBD,Single-ply
 3,52,M,Open,Chun-Hsiung Hu,1974,TPE,51.9,227.5,115,237.5,580,SBD,Single-ply
 4,52,M,Open,Puraxil Suresh,1975,IND,51.6,225,127.5,200,552.5,SBD,Single-ply
-5,52,M,Open,Dariusz Wszola,1978,POL,51.55,215,140,190,545,SBD,Single-ply
+5,52,M,Open,Dariusz Wszoła,1978,POL,51.55,215,140,190,545,SBD,Single-ply
 6,52,M,Open,Patrick Constantine,1969,GBR,50.85,180,102.5,217.5,500,SBD,Single-ply
 7,52,M,Open,Morten Strange,1981,DEN,51.9,145,80,140,365,SBD,Single-ply
 DQ,52,M,Open,Ervin Gainer Sr,1966,USA,51.65,202.5,,,,SBD,Single-ply
@@ -25,7 +25,7 @@ DQ,52,M,Open,Ervin Gainer Sr,1966,USA,51.65,202.5,,,,SBD,Single-ply
 10,60,M,Open,Morten Rasmussen,1978,DEN,59.8,180,115,185,480,SBD,Single-ply
 DQ,60,M,Open,Darimin Sutrisno,1975,INA,59.6,280,,,,SBD,Single-ply
 DQ,60,M,Open,Hennis Washington,1970,USA,59.85,247.5,142.5,230,,SBD,Single-ply
-1,67.5,M,Open,Jaroslaw Olech,1974,POL,66.5,332.5,175,312.5,820,SBD,Single-ply
+1,67.5,M,Open,Jarosław Olech,1974,POL,66.5,332.5,175,312.5,820,SBD,Single-ply
 2,67.5,M,Open,Lung-Hsin Huang,1981,TPE,67.2,252.5,182.5,290,725,SBD,Single-ply
 3,67.5,M,Open,Amit Sehlberg,1976,SWE,67.15,275,175,250,700,SBD,Single-ply
 4,67.5,M,Open,Philip Richard,1971,GBR,67.1,280,175,242.5,697.5,SBD,Single-ply
@@ -60,7 +60,7 @@ DQ,67.5,M,Open,Richard Lettner,1974,AUT,67.5,240,,,,SBD,Single-ply
 1,82.5,M,Open,Jan Wegiera,1965,POL,81.9,310,252.5,290,852.5,SBD,Single-ply
 2,82.5,M,Open,Sergiy Naleykin,1981,UKR,81.5,340,210,295,845,SBD,Single-ply
 3,82.5,M,Open,Patrik Turesson,1974,SWE,82.35,310,185,312.5,807.5,SBD,Single-ply
-4,82.5,M,Open,Frederic Gandner,1969,FRA,82.2,305,190,305,800,SBD,Single-ply
+4,82.5,M,Open,Frédéric Gandner,1969,FRA,82.2,305,190,305,800,SBD,Single-ply
 5,82.5,M,Open,Milen Christov,1973,BUL,82.45,300,175,320,795,SBD,Single-ply
 6,82.5,M,Open,Peter Rick,1979,HUN,82.05,270,185,330,785,SBD,Single-ply
 7,82.5,M,Open,Marcel Lindholm,1982,FIN,81.55,310,177.5,290,777.5,SBD,Single-ply
@@ -69,21 +69,21 @@ DQ,67.5,M,Open,Richard Lettner,1974,AUT,67.5,240,,,,SBD,Single-ply
 10,82.5,M,Open,Alexander Kirketeig,1979,NOR,82.45,297.5,180,280,757.5,SBD,Single-ply
 11,82.5,M,Open,Farshid Soltaniamidabadi,1969,IRN,81.65,290,180,282.5,752.5,SBD,Single-ply
 12,82.5,M,Open,Gerhard Grossbeck,1976,AUT,82.1,290,200,260,750,SBD,Single-ply
-13,82.5,M,Open,Pjotr van de Hoek,1972,NED,82.35,272.5,180,297.5,750,SBD,Single-ply
+13,82.5,M,Open,Pjotr van den Hoek,1972,NED,82.35,272.5,180,297.5,750,SBD,Single-ply
 14,82.5,M,Open,Jeff Becker,1963,CAN,82.3,285,170,287.5,742.5,SBD,Single-ply
 15,82.5,M,Open,Dan Christensen,1969,DEN,81.95,250,180,285,715,SBD,Single-ply
 16,82.5,M,Open,Kai Nowak,1978,GER,78.15,275,180,255,710,SBD,Single-ply
 DQ,82.5,M,Open,Dmytro Solovyov,1970,UKR,81.4,325,232.5,310,,SBD,Single-ply
 DQ,82.5,M,Open,Andrey Belyaev,1983,RUS,81.65,340,225,335,,SBD,Single-ply
 DQ,82.5,M,Open,Yannick Clement,1973,FRA,81.85,285,190,,,SBD,Single-ply
-DQ,82.5,M,Open,Jaswinder Singh,1964,GBR,82.45,295,,,,SBD,Single-ply
+DQ,82.5,M,Open,Jaswinder Singh Cheema,1964,GBR,82.45,295,,,,SBD,Single-ply
 1,90,M,Open,Ivan Freydun,1981,UKR,89.95,352.5,257.5,347.5,957.5,SBD,Single-ply
 2,90,M,Open,Andrey Tarasenko,1975,RUS,89.85,355,260,340,955,SBD,Single-ply
 3,90,M,Open,Daniele Ghirardi,1969,ITA,89.7,305,212.5,352.5,870,SBD,Single-ply
 4,90,M,Open,Petr Theuser,1961,CZE,89.55,340,222.5,305,867.5,SBD,Single-ply
 5,90,M,Open,Sergiy Romanenko,1972,UKR,89.9,340,210,315,865,SBD,Single-ply
 6,90,M,Open,Ray Benemerito,1967,USA,89.85,320,212.5,312.5,845,SBD,Single-ply
-7,90,M,Open,Anibal Coimbra,1972,LUX,89.1,315,210,317.5,842.5,SBD,Single-ply
+7,90,M,Open,Anibal Manuel Coimbra Marques,1972,LUX,89.1,315,210,317.5,842.5,SBD,Single-ply
 8,90,M,Open,Yoji Odagawa,1965,JPN,88.25,310,180,290,780,SBD,Single-ply
 9,90,M,Open,Takayuki Arakawa,1978,JPN,87.3,267.5,202.5,265,735,SBD,Single-ply
 10,90,M,Open,Timo Beier,1970,GER,86.65,300,160,255,715,SBD,Single-ply
@@ -95,7 +95,7 @@ DQ,90,M,Open,Konrad Burghardt,1974,GER,88.9,290,,,,SBD,Single-ply
 DQ,90,M,Open,Michal Wilk,1981,POL,89.6,350,,,,SBD,Single-ply
 1,100,M,Open,Oleksiy Vyshnytskyy,1981,UKR,99.1,387.5,222.5,370,980,SBD,Single-ply
 2,100,M,Open,Maxim Barkhatov,1981,RUS,99.85,355,260,352.5,967.5,SBD,Single-ply
-3,100,M,Open,Oleksiy Rokochyy,1981,UKR,99.95,375,250,340,965,SBD,Single-ply
+3,100,M,Open,Oleksiy Rokochyy Jr,1981,UKR,99.95,375,250,340,965,SBD,Single-ply
 4,100,M,Open,Nick Tylutki,1978,USA,99.3,350,207.5,335,892.5,SBD,Single-ply
 5,100,M,Open,André Peeters,1970,FRA,99,345,210,332.5,887.5,SBD,Single-ply
 6,100,M,Open,Char Gahagen,1976,USA,99.5,315,210,352.5,877.5,SBD,Single-ply
@@ -110,7 +110,7 @@ DQ,90,M,Open,Michal Wilk,1981,POL,89.6,350,,,,SBD,Single-ply
 15,100,M,Open,Gabor Schulteisz,1976,HUN,98.8,245,190,295,730,SBD,Single-ply
 DQ,100,M,Open,Keld Ingerslev,1966,DEN,98.25,,,,,SBD,Single-ply
 DQ,100,M,Open,Simon Weaver,1975,NZL,99,315,,,,SBD,Single-ply
-DQ,100,M,Open,Kim D Hansen,1971,DEN,99.85,,,,,SBD,Single-ply
+DQ,100,M,Open,Kim Dahl Hansen,1971,DEN,99.85,,,,,SBD,Single-ply
 DQ,100,M,Open,Ivailo Christov,1979,BUL,99.8,375,257.5,332.5,,SBD,Single-ply
 1,110,M,Open,Yuriy Fedorenko,1974,RUS,101.4,372.5,240,372.5,985,SBD,Single-ply
 2,110,M,Open,Derek Pomana,1966,NZL,109.45,360,225,362.5,947.5,SBD,Single-ply
@@ -119,14 +119,14 @@ DQ,100,M,Open,Ivailo Christov,1979,BUL,99.8,375,257.5,332.5,,SBD,Single-ply
 5,110,M,Open,Ignat Belausov,1976,BLR,108.4,340,225,337.5,902.5,SBD,Single-ply
 6,110,M,Open,Hannu Kopola,1978,FIN,109.75,342.5,217.5,340,900,SBD,Single-ply
 7,110,M,Open,Kristoffer Willebrandt,1975,SWE,106.4,352.5,210,327.5,890,SBD,Single-ply
-8,110,M,Open,Herman Omland Tor,1977,NOR,109.15,350,230,310,890,SBD,Single-ply
+8,110,M,Open,Tor-Herman Omland,1977,NOR,109.15,350,230,310,890,SBD,Single-ply
 9,110,M,Open,Tollef Taksdal,1975,NOR,109.8,332.5,247.5,300,880,SBD,Single-ply
 10,110,M,Open,Daniel Flaminio,1978,GER,109.05,345,232.5,300,877.5,SBD,Single-ply
-11,110,M,Open,Tomas Šarik,1975,CZE,109.7,320,235,305,860,SBD,Single-ply
+11,110,M,Open,Tomáš Šárik,1975,CZE,109.7,320,235,305,860,SBD,Single-ply
 12,110,M,Open,Stephan Vorup,1973,DEN,109.8,355,195,300,850,SBD,Single-ply
 13,110,M,Open,Stefan Hulden,1966,SWE,109.55,315,210,322.5,847.5,SBD,Single-ply
 14,110,M,Open,Zbyněk Krejča,1974,CZE,109.55,300,230,287.5,817.5,SBD,Single-ply
-15,110,M,Open,Lars Sörige,1968,DEN,106.4,302.5,217.5,295,815,SBD,Single-ply
+15,110,M,Open,Lars Sørige,1968,DEN,106.4,302.5,217.5,295,815,SBD,Single-ply
 16,110,M,Open,Plamen Krumov,1972,BUL,103.85,280,245,275,800,SBD,Single-ply
 17,110,M,Open,Alexander Kwaschny,1964,GER,105.05,280,212.5,307.5,800,SBD,Single-ply
 18,110,M,Open,Steve Lousich,1965,NZL,109.75,300,222.5,260,782.5,SBD,Single-ply
@@ -163,7 +163,7 @@ DQ,125,M,Open,Morten Sørig,1969,DEN,125,335,,,,SBD,Single-ply
 6,125+,M,Open,Johnny Wahlqvist,1973,SWE,160.8,390,260,312.5,962.5,SBD,Single-ply
 7,125+,M,Open,Andrew Thompson,1976,GBR,157.25,360,270,325,955,SBD,Single-ply
 8,125+,M,Open,Jørn Høyset,1979,NOR,127.4,360,230,350,940,SBD,Single-ply
-9,125+,M,Open,Niels Staerkjaer,1966,DEN,166.85,355,292.5,272.5,920,SBD,Single-ply
+9,125+,M,Open,Niels Stærkjær,1966,DEN,166.85,355,292.5,272.5,920,SBD,Single-ply
 10,125+,M,Open,Benedikt Magnússon,1983,ISL,149.65,340,215,360,915,SBD,Single-ply
 11,125+,M,Open,Fredrik Svensson,1979,SWE,141,322.5,277.5,305,905,SBD,Single-ply
 12,125+,M,Open,Freddy Nicolas,1971,FRA,139.35,360,215,300,875,SBD,Single-ply

@@ -36,6 +36,11 @@ def getunenteredurls(meetlist, enteredmeets):
     # Calculate some variants of the entered meets.
     variants = set()
     for k in enteredmeets:
+        if 'https://' in k:
+            variants.add(k.replace("https://", "http://"))
+        if 'http://' in k:
+            variants.add(k.replace("http://", "https://"))
+
         if "%20" in k:
             variants.add(k.replace("%20", " "))
         if " " in k:
