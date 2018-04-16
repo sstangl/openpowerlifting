@@ -22,8 +22,6 @@ pub enum Country {
     CoteDIvoire,
     // FIXME: Standardize on one of these.
     Czechia,
-    #[serde(rename = "Czech Republic")]
-    CzechRepublic,
     Denmark,
     Ecuador,
     Egypt,
