@@ -17,7 +17,7 @@ function makeDataProvider() {
             if (entry.instagram) {
                 name += ' <a href="https://www.instagram.com/' + entry.instagram +
                         '" class="instagram">' +
-                        '<i class="fa fa-instagram fa-resize"></i></a>"';
+                        '<i class="fa fa-instagram fa-resize"></i></a>';
             }
 
             return {
