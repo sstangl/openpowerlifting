@@ -17,12 +17,11 @@ let sortAsc = false; // Initial column sorting information.
 let searchInfo = {laststr: ''};
 
 const selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
-const boxMen = document.getElementById("men") as HTMLInputElement;
-const boxWomen = document.getElementById("women") as HTMLInputElement;
 const selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
 const selClass = document.getElementById("weightclass") as HTMLSelectElement;
 const selFed = document.getElementById("fedselect") as HTMLSelectElement;
 const selYear = document.getElementById("yearselect") as HTMLSelectElement;
+const selSex = document.getElementById("sexselect") as HTMLSelectElement;
 const searchfield = document.getElementById("searchfield") as HTMLInputElement;
 const searchbutton = document.getElementById("searchbutton") as HTMLButtonElement;
 
@@ -31,8 +30,7 @@ const searchbutton = document.getElementById("searchbutton") as HTMLButtonElemen
 function getIndices(): number[] {
     // Determine the filter to be used.
     let equipment = selEquipment.value;
-    let men = boxMen.checked;
-    let women = boxWomen.checked;
+    let sex = selSex.value;
 
     let selectonfed = (selFed.value !== "all");
     let feds = selFed.value.split(',');
@@ -46,11 +44,9 @@ function getIndices(): number[] {
     let year = selYear.value;
 
     function filter(row): boolean {
-        if (!men && !women)
+        if (sex === "M" && row[OplDBColumn.Sex] !== 0)
             return false;
-        if (!men && row[OplDBColumn.Sex] === 0)
-            return false;
-        if (!women && row[OplDBColumn.Sex] === 1)
+        if (sex === "F" && row[OplDBColumn.Sex] !== 1)
             return false;
 
         if (selectonclass) {
@@ -250,14 +246,12 @@ function addSelectorListeners(selector: HTMLSelectElement) {
 }
 
 function addEventListeners() {
-    boxMen.addEventListener("click", redraw);
-    boxWomen.addEventListener("click", redraw);
-
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightType);
     addSelectorListeners(selClass);
     addSelectorListeners(selFed);
     addSelectorListeners(selYear);
+    addSelectorListeners(selSex);
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
