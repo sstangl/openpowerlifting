@@ -27,7 +27,7 @@ def getdirname(url):
     return url.split('/')[-1]
 
 
-def getmeetinfo(soup):
+def getmeetinfo(soup,meet_type):
     csv = Csv()
     csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
                       'MeetState', 'MeetTown', 'MeetName']
@@ -52,7 +52,10 @@ def getmeetinfo(soup):
         place_date = trs[3].text.strip()
        
 
-    [place,dotdate] = place_date.split(',')
+    if meet_type == 'National':
+        [place,dotdate] = place_date.split(',')
+    elif meet_type == 'Local':
+        [dotdate,place] = place_date.split(' ')
 
     place=place.strip()
 
@@ -378,11 +381,20 @@ def main(url):
     results_url = url.replace('tulokset/kansalliset-kilpailut/','')
     results_url = results_url.replace('tulokset/arvokilpailut/','')
     results_url = results_url.replace('tulokset/sm-kilpailut/','')
+
+    meet_type = ''
+    if 'kansalliset-kilpailut' in url:
+        meet_type = 'Local'
+    elif 'arvokilpailut' in url:
+        meet_type = 'National'
+    elif 'sm-kilpailut' in url:
+        meet_type = 'International'
+
     html = gethtml(results_url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    meetcsv = getmeetinfo(soup)
+    meetcsv = getmeetinfo(soup,meet_type)
     dirname = getdirname(url)
     entriescsv = getresults(soup)
     if len(entriescsv.rows) == 0:
