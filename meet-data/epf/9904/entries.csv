@@ -16,7 +16,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,BestSquatKg,BestBenchKg,
 3,Anita Thimm,1950,60,59.5,GER,135,77.5,155,367.5,Masters 1,F,SBD,Single-ply
 4,Marleen Houg,1959,60,56.7,NTH,110,67.5,130,307.5,Masters 1,F,SBD,Single-ply
 1,Mariet Spronk,1955,67.5,67.4,NTH,145,97.5,175,417.5,Masters 1,F,SBD,Single-ply
-2,Hana Takacova,1954,67.5,65.6,CZE,160,90,157.5,407.5,Masters 1,F,SBD,Single-ply
+2,Hana Takáčová,1954,67.5,65.6,CZE,160,90,157.5,407.5,Masters 1,F,SBD,Single-ply
 3,Marianne Lankau,1953,67.5,63.8,GER,102.5,57.5,110,270,Masters 1,F,SBD,Single-ply
 1,Joke van der Meulen,1951,75,69.8,NTH,160,85,175,420,Masters 1,F,SBD,Single-ply
 2,E. Schijndel,1958,75,72.2,NTH,95,80,135,310,Masters 1,F,SBD,Single-ply
@@ -76,7 +76,7 @@ DQ,Pietro Andreatta,1950,82.5,82.2,ITA,,,,,Masters 1,M,SBD,Single-ply
 7,Miche Tartinville,1956,90,85,FRA,230,155,265,650,Masters 1,M,SBD,Single-ply
 8,Leo Pyykkoenen,1956,90,88.2,FIN,240,145,250,635,Masters 1,M,SBD,Single-ply
 9,Andy Kuttner,1956,90,88.9,GBR,225,142.5,235,602.5,Masters 1,M,SBD,Single-ply
-10,Carlo Decarli,1957,90,86.2,ITA,190,137.5,245,572.5,Masters 1,M,SBD,Single-ply
+10,Carlo DeCarli,1957,90,86.2,ITA,190,137.5,245,572.5,Masters 1,M,SBD,Single-ply
 11,Norbert Tibbe,1955,90,83.1,BEL,185,125,250,560,Masters 1,M,SBD,Single-ply
 1,Jarmo Ranta,1957,100,99.9,FIN,322.5,197.5,327.5,847.5,Masters 1,M,SBD,Single-ply
 2,Vladimir Korolev,1949,100,98.2,RUS,320,140,310,770,Masters 1,M,SBD,Single-ply
@@ -97,7 +97,7 @@ DQ,Ola Wermelin,1955,100,99.1,SWE,270,,,,Masters 1,M,SBD,Single-ply
 6,Josef Micka,1949,110,102.5,CZE,270,190,270,730,Masters 1,M,SBD,Single-ply
 7,Helmut Platzer,1951,110,105.5,GER,265,165,270,700,Masters 1,M,SBD,Single-ply
 8,Robert Oeren,1950,110,109.4,NOR,250,185,260,695,Masters 1,M,SBD,Single-ply
-9,Jan Leif Lande,1953,110,102.9,NOR,270,160,250,680,Masters 1,M,SBD,Single-ply
+9,Jan-Leif Lande,1953,110,102.9,NOR,270,160,250,680,Masters 1,M,SBD,Single-ply
 10,Ronald Braak,1956,110,102.5,NTH,240,145,220,605,Masters 1,M,SBD,Single-ply
 DQ,Enrico Bianchi,1957,110,109.6,ITA,,,,,Masters 1,M,SBD,Single-ply
 1,Valeriy Melnik,1958,125,112.8,UKR,310,215,300,825,Masters 1,M,SBD,Single-ply
@@ -140,7 +140,7 @@ DQ,Ernst Guentert,1948,75,74,GER,,,,,Masters 2,M,SBD,Single-ply
 9,Freddy Veranneman,1949,82.5,82,BEL,155,102.5,245,502.5,Masters 2,M,SBD,Single-ply
 DQ,Adam Borzecki,1945,82.5,81.7,POL,180,115,,,Masters 2,M,SBD,Single-ply
 DD,Harry van der Brandt,1945,82.5,81,NTH,250,167.5,255,,Masters 2,M,SBD,Single-ply
-1,Stefan Sochanski,1948,90,89.1,POL,242.5,152.5,257.5,652.5,Masters 2,M,SBD,Single-ply
+1,Stefan Sochański,1948,90,89.1,POL,242.5,152.5,257.5,652.5,Masters 2,M,SBD,Single-ply
 2,Terje Brovold,1945,90,87.9,NOR,240,175,235,650,Masters 2,M,SBD,Single-ply
 3,Yaroslav Chala,1948,90,87.7,UKR,220,175,230,625,Masters 2,M,SBD,Single-ply
 4,Kari Mattila,1945,90,88.8,SWE,210,140,252.5,602.5,Masters 2,M,SBD,Single-ply
@@ -152,12 +152,12 @@ DD,Harry van der Brandt,1945,82.5,81,NTH,250,167.5,255,,Masters 2,M,SBD,Single-p
 1,Ferry van der Meulen,1947,100,99,NTH,280,185,282.5,747.5,Masters 2,M,SBD,Single-ply
 2,Henk Keizer,1946,100,99.4,NTH,280,175,272.5,727.5,Masters 2,M,SBD,Single-ply
 3,Roberto Cialdini,1944,100,96.2,ITA,215,142.5,275,632.5,Masters 2,M,SBD,Single-ply
-4,Yvan Dewitte,1946,100,93.5,BEL,200,140,227.5,567.5,Masters 2,M,SBD,Single-ply
+4,Yvan DeWitte,1946,100,93.5,BEL,200,140,227.5,567.5,Masters 2,M,SBD,Single-ply
 5,Viachesl Tsyganok,1938,100,97,UKR,210,145,210,565,Masters 2,M,SBD,Single-ply
 6,Leif Waldeck,1939,100,99.2,SWE,160,145,225,530,Masters 2,M,SBD,Single-ply
 1,Gyoergy Lovasz,1947,110,106.3,HUN,300,207.5,320,827.5,Masters 2,M,SBD,Single-ply
 2,Karl-Heinz Grabosch,1937,110,104.7,GER,270,160,270,700,Masters 2,M,SBD,Single-ply
-3,Truls Kristensen,1939,110,107.9,NOR,265,175,252.5,695,Masters 2,M,SBD,Single-ply
+3,Truls Kristensen,1939,110,107.9,NOR,265,175,252.5,692.5,Masters 2,M,SBD,Single-ply
 4,Valenti Sidorenko,1949,110,103.1,RUS,245,205,240,690,Masters 2,M,SBD,Single-ply
 5,Jiri Zeman,1944,110,103.5,CZE,240,167.5,250,657.5,Masters 2,M,SBD,Single-ply
 1,Daniel Smague,1947,125,124.6,FRA,295,170,272.5,737.5,Masters 2,M,SBD,Single-ply
