@@ -16,10 +16,7 @@ let sortCol = {id: 'wilks'}; // Initial column sorting information.
 let sortAsc = false; // Initial column sorting information.
 let searchInfo = {laststr: ''};
 
-const boxRaw = document.getElementById("raw") as HTMLInputElement;
-const boxWraps = document.getElementById("wraps") as HTMLInputElement;
-const boxSingle = document.getElementById("single") as HTMLInputElement;
-const boxMulti = document.getElementById("multi") as HTMLInputElement;
+const selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
 const boxMen = document.getElementById("men") as HTMLInputElement;
 const boxWomen = document.getElementById("women") as HTMLInputElement;
 const selWeightType = document.getElementById("weighttype") as HTMLSelectElement;
@@ -33,10 +30,7 @@ const searchbutton = document.getElementById("searchbutton") as HTMLButtonElemen
 // Return the ordered list of rows to display, by index into opldb.data.
 function getIndices(): number[] {
     // Determine the filter to be used.
-    let raw = boxRaw.checked;
-    let wraps = boxWraps.checked;
-    let single = boxSingle.checked;
-    let multi = boxMulti.checked;
+    let equipment = selEquipment.value;
     let men = boxMen.checked;
     let women = boxWomen.checked;
 
@@ -97,10 +91,19 @@ function getIndices(): number[] {
             return false;
 
         let e = row[OplDBColumn.Equipment];
-        return (raw && e === 0) ||
-               (wraps && e === 1) ||
-               (single && e === 2) ||
-               (multi && e === 3);
+        if (equipment === "raw") {
+            return e === 0;
+        } else if (equipment === "wraps") {
+            return e == 1;
+        } else if (equipment === "raw_wraps") {
+            return e <= 1;
+        } else if (equipment === "single") {
+            return e === 2;
+        } else if (equipment === "multi") {
+            return e === 3;
+        }
+
+        return false;
     }
 
     let indices = database.db_make_indices_list();
@@ -247,13 +250,10 @@ function addSelectorListeners(selector: HTMLSelectElement) {
 }
 
 function addEventListeners() {
-    boxRaw.addEventListener("click", redraw);
-    boxWraps.addEventListener("click", redraw);
-    boxSingle.addEventListener("click", redraw);
-    boxMulti.addEventListener("click", redraw);
     boxMen.addEventListener("click", redraw);
     boxWomen.addEventListener("click", redraw);
 
+    addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightType);
     addSelectorListeners(selClass);
     addSelectorListeners(selFed);

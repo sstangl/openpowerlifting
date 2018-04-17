@@ -18,17 +18,13 @@
     #exec python3 gen-header rankings
     <div id="controls">
       <div id="controls-left">
-        <input type="checkbox" id="raw" checked="true" />
-        <label for="raw"><span></span>Raw</label>
-
-        <input type="checkbox" id="wraps" checked="true" />
-        <label for="wraps"><span></span>Wraps</label>
-
-        <input type="checkbox" id="single" />
-        <label for="single"><span></span>Single</label>
-
-        <input type="checkbox" id="multi" />
-        <label for="multi"><span></span>Multi</label>
+        <select id="equipmentselect">
+          <option value="raw">Raw</option>
+          <option value="wraps">Wraps</option>
+          <option value="raw_wraps" selected>Raw+Wraps</option>
+          <option value="single">Single-ply</option>
+          <option value="multi">Multi-ply</option>
+        </select>
 
         #include templates/weightclass.frag
         #include templates/fedselect.frag
