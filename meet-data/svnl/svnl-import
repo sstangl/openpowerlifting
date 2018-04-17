@@ -96,8 +96,23 @@ def getresults(soup):
     
     divstate = 'Open'
     sexstate = None
-    for tr in trs[5:]:
-        text = [x.text for x in tr.find_all('td')]
+
+
+    # Find where the preamble ends
+    start_data = 1
+    for tr in trs[1:]:
+        if tr.text.count('.') > 1:
+            break
+        start_data +=1
+
+    start_data +=1
+
+    append_eqp = False
+    append_sex = False
+
+
+    for tr in trs[start_data:]:
+        text = [x.text for x in tr.find_all('td') if x.text.strip() !='']
 
         # Skip blank rows
         if ''.join(text).strip() == '':
@@ -107,22 +122,21 @@ def getresults(soup):
         if text[0] == 'Ennätykset':
             break
 
-
-
-        if text[0] == 'Sij.' and csv.fieldnames ==[]: #Header
-
+        if any(name_str in ''.join(text).strip() for name_str in ['Name','Nimi']) and csv.fieldnames ==[]: #Header
             # Get column information.
             csv.fieldnames = []
             for h in text:
                 if h == 'Sij.':
                     csv.fieldnames += ['Place']
-                elif h == 'Sarja':
+                elif h == 'M/W':
+                    csv.fieldnames += ['Sex']
+                elif h == 'Sarja' or h == 'Cls':
                     csv.fieldnames += ['WeightClassKg']
                 elif h == 'Paino':
                     csv.fieldnames += ['BodyweightKg']
-                elif h == 'Nimi':
+                elif h == 'Nimi' or h == 'Name':
                     csv.fieldnames += ['Name']
-                elif h == 'SV':
+                elif h == 'SV' or h =='YOB':
                     csv.fieldnames += ['BirthYear']
                 elif h == 'Seura':
                     csv.fieldnames += ['Team']
@@ -152,17 +166,23 @@ def getresults(soup):
                     csv.fieldnames += ['BestDeadliftKg']        
                 elif h == 'YT' or h == 'Tulos':
                     csv.fieldnames += ['TotalKg']
-                elif h == 'Wilks' or h =='Wpist.':
+                elif h == 'Wilks' or h =='Wpist.' or h =='Pist.':
                     csv.fieldnames += ['Wilks']
                 elif h == 'J.pist.' or h == 'Jpist.':
                     csv.fieldnames += ['Points'] 
+                elif h == 'Nat':
+                    csv.fieldnames += ['Country'] 
                 else:
                     error("Unknown column name: \"%s\"" % h)
 
-            # These columns are added from the category rows.
-            csv.fieldnames += ['Division', 'Sex']
 
-            append_eqp = False
+            # These columns are added from the category rows.
+            csv.fieldnames += ['Division']
+            
+            if 'Sex' not in csv.fieldnames:
+                csv.fieldnames += ['Sex']
+                append_sex = True
+
             # Classic meets and pre 2011 meets won't mark equipment, work it out contextually
             if 'Equipment' not in csv.fieldnames:
                 csv.fieldnames += ['Equipment']
@@ -203,9 +223,9 @@ def getresults(soup):
             elif 'avoin' in div_text:
                 divstate = 'Open'
             elif len(div_text) !=0:
-                error("Unknown state: \"%s\"" % row[0])
+                error("Unknown state: \"%s\"" % div_text)
         elif text[0] != 'Sij.': # Lifter data
-            assert sexstate
+            assert (sexstate or 'Sex' in csv.fieldnames)
         
 
             # Accumulate the row, but we need to look at the class of each td
@@ -222,7 +242,10 @@ def getresults(soup):
                     col_text = ''
                 lifter_data.append(col_text.strip().replace('  ', ' ').replace(',', ' '))
 
-            lifter_data = lifter_data + [divstate, sexstate]
+            lifter_data = lifter_data + [divstate]
+
+            if append_sex:
+                lifter_data = lifter_data + [sexstate]
 
             if append_eqp:
                 lifter_data = lifter_data +['']
@@ -233,15 +256,16 @@ def getresults(soup):
 
 # The place is reported as "1.", just remove the period.
 def fixplace(csv):
-    placeidx = csv.index('Place')
-    totalidx = csv.index('TotalKg')
-    for row in csv.rows:
-        row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx] == '-':
-            row[placeidx] = 'DQ'
-            row[totalidx] = ''  # Instead of a zero.
-        elif row[placeidx].lower() == 'gj':  # Guest lifter, I think.
-            row[placeidx] = 'G'
+    if 'Place' in csv.fieldnames:
+        placeidx = csv.index('Place')
+        totalidx = csv.index('TotalKg')
+        for row in csv.rows:
+            row[placeidx] = row[placeidx].replace('.', '')
+            if row[placeidx] == '-':
+                row[placeidx] = 'DQ'
+                row[totalidx] = ''  # Instead of a zero.
+            elif row[placeidx].lower() == 'gj':  # Guest lifter, I think.
+                row[placeidx] = 'G'
 
 # The equipment is marked as "*" for Raw, or nothing for Single-ply.
 def fixequipment(csv, meetcsv):
@@ -249,7 +273,7 @@ def fixequipment(csv, meetcsv):
 
     raw_meet = False
 
-    if 'klassisen' in meet_name.lower():
+    if any(text in meet_name.lower() for text in ['klassisen','classic']):
         raw_meet = True
 
     eqidx = csv.index('Equipment')
