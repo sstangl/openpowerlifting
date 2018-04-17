@@ -14,9 +14,6 @@ pub enum Country {
     Canada,
     #[serde(rename = "Cayman Islands")]
     CaymanIslands,
-    // FIXME: Probably standardize on "Taiwan".
-    #[serde(rename = "Chinese Taipei")]
-    ChineseTaipei,
     Colombia,
     #[serde(rename = "Côte d’Ivoire")]
     CoteDIvoire,

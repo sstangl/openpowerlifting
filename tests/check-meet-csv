@@ -160,7 +160,6 @@ KnownCountries = {
     "Bulgaria",
     "Canada",
     "Cayman Islands",
-    "Chinese Taipei",
     "Colombia",
     "Côte d’Ivoire",
     "Czechia",
@@ -358,14 +357,19 @@ def check(scriptname, filename):
 
     # Check the MeetCountry column.
     if not row[countryidx] in KnownCountries:
-        perror("Unknown country (add to check-meet-csv?): \"%s\"" %
-               row[countryidx])
+        if "Czech" in row[countryidx]:
+            perror('Use "Czechia" instead of "%s".' % row[countryidx])
+        elif row[countryidx] in ["Republic of China", "Chinese Taipei"]:
+            perror('Use "Taiwan" instead of "%s".' % row[countryidx])
+        else:
+            perror('Unknown country (add to check-meet-csv?): "%s"' %
+                   row[countryidx])
 
     # Check the optional MeetState column.
     if row[stateidx]:
         if (row[countryidx] not in KnownStates or row[stateidx] not in
                 KnownStates[row[countryidx]]):
-            perror("Unknown state (add to check-meet-csv?): \"%s\"" %
+            perror('Unknown state (add to check-meet-csv?): "%s"' %
                    row[stateidx])
 
     # Check the optional MeetTown column.
