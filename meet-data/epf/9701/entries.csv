@@ -1,4 +1,4 @@
-Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Lg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Sex,Division,Event,Equipment
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Sex,Division,Event,Equipment
 1,Andrzej Stanaszek,1971,52,51.2,POL,260,272.5,275.5,275.5,160,172.5,-178,172.5,140,-147.5,-147.5,140,587.5,M,Open,SBD,Single-ply
 2,Sergei Zhuravliev,1960,52,51.5,RUS,210,-225,-225,210,-110,110,115,115,200,-210,-210,200,525,M,Open,SBD,Single-ply
 3,John Clay,1964,52,51.4,GBR,190,200,-205,200,105,110,112.5,112.5,200,205,-212.5,205,517.5,M,Open,SBD,Single-ply
@@ -15,12 +15,12 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3
 4,Gary Simes,1963,60,59.6,GBR,225,-235,-235,225,132.5,140,-145,140,215,225,-240,225,590,M,Open,SBD,Single-ply
 5,Phillip Richard,1971,60,59.6,GBR,225,-235,-235,225,137.5,-142.5,-142.5,137.5,200,215,-227.5,215,577.5,M,Open,SBD,Single-ply
 6,Ronny Celis,1965,60,59,BEL,185,-202.5,-202.5,185,127.5,132.5,-137.5,132.5,210,220,225,225,542.5,M,Open,SBD,Single-ply
-DQ,Anton Mihok,1957,60,59.9,SVK,-200,-200,-200,-200,,,,,,,,,,M,Open,SBD,Single-ply
+DQ,Anton Mihok,1957,60,59.9,SVK,-200,-200,-200,,,,,,,,,,,M,Open,SBD,Single-ply
 1,Victor Baranov,1967,67.5,67,RUS,260,-270,270,270,150,155,160,160,265,277.5,282.5,282.5,712.5,M,Open,SBD,Single-ply
-2,Jan Wilczynski,1955,67.5,67.4,POL,255,270,275,275,145,-150,-150,145,275,287.5,-295,287.5,707.5,M,Open,SBD,Single-ply
+2,Jan Wilczyński,1955,67.5,67.4,POL,255,270,275,275,145,-150,-150,145,275,287.5,-295,287.5,707.5,M,Open,SBD,Single-ply
 3,Rodney Hypolite,1969,67.5,67.4,GBR,230,260,267.5,267.5,-165,165,-172.5,165,250,-275,-275,250,682.5,M,Open,SBD,Single-ply
 4,Richard Batchelor,1974,67.5,67,GBR,235,-245,-245,235,125,135,-137.5,135,245,260,-270,260,630,M,Open,SBD,Single-ply
-DQ,Jaroslaw Olech,1974,67.5,67.1,POL,-260,-260,-260,-260,,,,,,,,,,M,Open,SBD,Single-ply
+DQ,Jarosław Olech,1974,67.5,67.1,POL,-260,-260,-260,,,,,,,,,,,M,Open,SBD,Single-ply
 1,Dimitriy Soloviev,1970,75,74.6,UKR,287.5,-297.5,297.5,297.5,192.5,200,205,205,270,280,-282.5,280,782.5,M,Open,SBD,Single-ply
 2,Sirajoutdi Bazaev,1968,75,73.3,UKR,-300,300,-302.5,300,175,-180,180,180,280,-292.5,292.5,292.5,772.5,M,Open,SBD,Single-ply
 3,Alexei Nemtsev,1975,75,74.8,RUS,285,-295,300,300,170,180,182.5,182.5,260,270,280,280,762.5,M,Open,SBD,Single-ply
@@ -37,11 +37,11 @@ DQ,Jaroslaw Olech,1974,67.5,67.1,POL,-260,-260,-260,-260,,,,,,,,,,M,Open,SBD,Sin
 7,Sergei Nochnoi,1965,82.5,79.6,RUS,280,287.5,-295,287.5,192.5,200,205,205,270,-280,-282.5,270,762.5,M,Open,SBD,Single-ply
 8,Sigve Valentinsen,1960,82.5,82.3,NOR,285,-295,295,295,175,182.5,187.5,187.5,280,-290,-292.5,280,762.5,M,Open,SBD,Single-ply
 9,Gerrit Hanswijck,1964,82.5,81.9,BEL,270,280,-302.5,280,170,175,177.5,177.5,260,267.5,-272.5,267.5,725,M,Open,SBD,Single-ply
-10,Pavol Sliz,1973,82.5,81.1,SVK,240,260,270,270,135,142.5,-147.5,142.5,-260,-260,260,260,672.5,M,Open,SBD,Single-ply
+10,Pavol Slíž,1973,82.5,81.1,SVK,240,260,270,270,135,142.5,-147.5,142.5,-260,-260,260,260,672.5,M,Open,SBD,Single-ply
 11,Herbert Haas,1949,82.5,81.1,AUT,210,225,-235,225,125,135,-140,135,205,-215,,205,565,M,Open,SBD,Single-ply
 1,Erik Stiklestad,1970,90,89.5,NOR,320,335,340,340,182.5,187.5,192.5,192.5,310,320,325,325,857.5,M,Open,SBD,Single-ply
 2,Alexande Dykhanov,1964,90,89.6,RUS,310,325,-330,325,190,197.5,-202.5,197.5,-312.5,312.5,-337.5,312.5,835,M,Open,SBD,Single-ply
-3,Frode Gundersen,1967,90,89.6,NOR,285,300,307.5,307.5,185,195,-200,195,290,300,-312.5,300,802.5,M,Open,SBD,Single-ply
+3,Fröde Gundersen,1967,90,89.6,NOR,285,300,307.5,307.5,185,195,-200,195,290,300,-312.5,300,802.5,M,Open,SBD,Single-ply
 4,Frank Hausburg,1971,90,89.7,GER,270,290,300,300,165,175,180,180,-290,290,315,315,795,M,Open,SBD,Single-ply
 5,Erwin Krokkee,1966,90,89.6,NTH,290,310,-317.5,310,200,-205,205,205,200,240,-280,240,755,M,Open,SBD,Single-ply
 6,Dan Kristensen,1969,90,88.5,DEN,250,260,270,270,172.5,180,185,185,255,270,-285,270,725,M,Open,SBD,Single-ply
@@ -52,12 +52,12 @@ DQ,Jaroslaw Olech,1974,67.5,67.1,POL,-260,-260,-260,-260,,,,,,,,,,M,Open,SBD,Sin
 3,Alexey Soloviov,1975,100,99.3,UKR,350,-360,-360,350,230,240,-245,240,295,305,-312.5,305,895,M,Open,SBD,Single-ply
 4,Samuel Watt,1970,100,99.8,GBR,335,352.5,357.5,357.5,190,-200,202.5,202.5,300,320,-330,320,880,M,Open,SBD,Single-ply
 5,Patric Osterbauer,1975,100,99.4,AUT,270,282.5,290,290,170,-182.5,-182.5,170,250,262.5,-272.5,262.5,722.5,M,Open,SBD,Single-ply
-DQ,Volodimir Ukhach,1960,100,98.8,UKR,-325,-325,-325,-325,,,,,,,,,,M,Open,SBD,Single-ply
+DQ,Volodimir Ukhach,1960,100,98.8,UKR,-325,-325,-325,,,,,,,,,,,M,Open,SBD,Single-ply
 1,Volodimi Ivanenko,1955,110,109.5,UKR,-360,360,375,375,210,217.5,222.5,222.5,320,335,340,340,937.5,M,Open,SBD,Single-ply
 2,Clive Henry,1966,110,109.5,GBR,355,375,-380.5,375,205,-210,-210,205,-310,315,322.5,322.5,902.5,M,Open,SBD,Single-ply
 3,Jörgen Ljungberg,1967,110,103.1,SWE,330,-345,345,345,210,-215,-215,210,315,-340,-347.5,315,870,M,Open,SBD,Single-ply
 4,Jörg Schmid,1967,110,109.5,GER,295,315,322.5,322.5,182.5,190,195,195,310,332.5,-340,332.5,850,M,Open,SBD,Single-ply
-5,Hugo DeGrauwe,1954,110,108.3,BEL,320,342.5,352.5,352.5,190,200,-207.5,200,290,-320,-320,290,842.5,M,Open,SBD,Single-ply
+5,Hugo De Grauwe,1954,110,108.3,BEL,320,342.5,352.5,352.5,190,200,-207.5,200,290,-320,-320,290,842.5,M,Open,SBD,Single-ply
 6,Andrew Rodney,1965,110,109.5,GBR,335,-355,-355,335,165,172.5,-177.5,172.5,280,305,-332.5,305,812.5,M,Open,SBD,Single-ply
 7,Johnny Simonsen,1961,110,109.3,DEN,265,-275,-275,265,170,-177.5,177.5,177.5,250,,,250,692.5,M,Open,SBD,Single-ply
 1,Sturla Davidsen,1964,125,124.9,NOR,380,-392.5,-392.5,380,225,232.5,-237.5,232.5,335,347.5,357.5,357.5,970,M,Open,SBD,Single-ply
@@ -66,7 +66,7 @@ DQ,Volodimir Ukhach,1960,100,98.8,UKR,-325,-325,-325,-325,,,,,,,,,,M,Open,SBD,Si
 4,Josef Mayrhofer,1968,125,118.3,AUT,340,-355,,340,185,190,-195,190,310,320,327.5,327.5,857.5,M,Open,SBD,Single-ply
 5,Dean Bowring,1974,125,120.7,GBR,300,320,-330,320,215,230,-240,230,292.5,307.5,-325,307.5,857.5,M,Open,SBD,Single-ply
 6,Wim Wamsteeker,1969,125,122.5,NTH,290,310,-317.5,310,185,195,197.5,197.5,270,285,-292.5,285,792.5,M,Open,SBD,Single-ply
-7,Morten Sörig,1969,125,124.3,DEN,305,315,-325,315,200,207.5,-210,207.5,270,-280,,270,792.5,M,Open,SBD,Single-ply
+7,Morten Sørig,1969,125,124.3,DEN,305,315,-325,315,200,207.5,-210,207.5,270,-280,,270,792.5,M,Open,SBD,Single-ply
 DD,Victor Naleikin,1953,125+,129.5,UKR,380,395,-400,395,215,225,230,230,352.5,362.5,367.5,367.5,,M,Open,SBD,Single-ply
 1,Yuriy Spinov,1962,125+,144.4,UKR,400,-420,425,425,197.5,-202.5,-202.5,197.5,355,-367.5,-367.5,355,977.5,M,Open,SBD,Single-ply
 2,Jansenvan Jorksvel,1960,125+,141.1,NTH,355,372.5,-377.5,372.5,240,247.5,-252.5,247.5,340,347.5,-357.5,347.5,967.5,M,Open,SBD,Single-ply
