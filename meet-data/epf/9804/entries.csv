@@ -1,4 +1,4 @@
-52,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Sex,Event,Equipment
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Sex,Event,Equipment
 1,Dagmar Wang,1948,52,51.8,AUT,,,,130,,,,82.5,,,,145,357.5,Masters 1,F,SBD,Single-ply
 2,Daniela Casiraghi,1953,52,50.8,ITA,,,,117.5,,,,67.5,,,,142.5,327.5,Masters 1,F,SBD,Single-ply
 3,Monika Bruder,1954,52,47.5,GER,,,,120,,,,50,,,,130,300,Masters 1,F,SBD,Single-ply
@@ -7,9 +7,9 @@
 1,Toni Hollis,1950,67.5,59.1,GBR,,,,157.5,,,,92.5,,,,152.5,402.5,Masters 1,F,SBD,Single-ply
 2,Lucienne Daumas,1955,67.5,54.9,FRA,,,,135,,,,75,,,,157.5,367.5,Masters 1,F,SBD,Single-ply
 3,Rita Bass,1945,67.5,57.6,GBR,,,,140,,,,72.5,,,,162.5,375,Masters 1,F,SBD,Single-ply
-4,Adina Hykova,1943,67.5,55.4,CZE,,,,125,,,,80,,,,157.5,362.5,Masters 1,F,SBD,Single-ply
+4,Adina Hyková,1943,67.5,55.4,CZE,,,,125,,,,80,,,,157.5,362.5,Masters 1,F,SBD,Single-ply
 5,Klothilde Bruder,1959,67.5,55.6,GER,,,,135,,,,80,,,,130,345,Masters 1,F,SBD,Single-ply
-6,Hana Takacova,1954,67.5,63.6,CZE,,,,150,,,,77.5,,,,155,382.5,Masters 1,F,SBD,Single-ply
+6,Hana Takáčová,1954,67.5,63.6,CZE,,,,150,,,,77.5,,,,155,382.5,Masters 1,F,SBD,Single-ply
 7,Anita Thimm,1950,67.5,59,GER,,,,120,,,,75,,,,145,340,Masters 1,F,SBD,Single-ply
 8,Lise Madsen,1953,67.5,59.2,DEN,,,,110,,,,65,,,,142.5,317.5,Masters 1,F,SBD,Single-ply
 9,Dagmar McSwain,1944,67.5,60.6,AUT,,,,120,,,,65,,,,135,320,Masters 1,F,SBD,Single-ply
@@ -26,7 +26,7 @@ DQ,Anita Kick,1953,67.5+,95.5,GER,,,,,,,,,,,,,,Masters 1,F,SBD,Single-ply
 2,Ants Torri,1957,56,55.2,NOR,120,130,140,140,70,75,-80,75,145,160,-170,160,375,Masters 1,M,SBD,Single-ply
 1,Gennadi Sayapin,1952,60,59.8,RUS,205,215,220,220,-120,120,127.5,127.5,212.5,222.5,227.5,227.5,575,Masters 1,M,SBD,Single-ply
 2,Bernard Vincent,1957,60,59.7,FRA,200,212.5,-220,212.5,125,130,132.5,132.5,212.5,225,-240,225,570,Masters 1,M,SBD,Single-ply
-3,Anton Mihok,1957,60,59.9,SVK,185,200,-207.5,200,-120,120,127.5,127.5,210,217.5,222.5,217.5,545,Masters 1,M,SBD,Single-ply
+3,Anton Mihok,1957,60,59.9,SVK,185,200,-207.5,200,-120,120,127.5,127.5,210,217.5,-222.5,217.5,545,Masters 1,M,SBD,Single-ply
 4,Sergey Minchenko,1957,60,59.7,UKR,165,180,190,190,110,117.5,-120,117.5,180,202.5,-210,202.5,510,Masters 1,M,SBD,Single-ply
 1,Ron Kerr,1955,67.5,67.3,GBR,-210,-210,210,210,125,130,-135,130,230,242.5,250,250,590,Masters 1,M,SBD,Single-ply
 2,Alain Cuvelier,1953,67.5,66.8,FRA,200,-210,210,210,-130,130,-140,130,212.5,-220,-220,212.5,552.5,Masters 1,M,SBD,Single-ply
@@ -39,9 +39,9 @@ DQ,Anita Kick,1953,67.5+,95.5,GER,,,,,,,,,,,,,,Masters 1,F,SBD,Single-ply
 4,Bram Thorn,1955,75,73.8,NTH,230,245,247.5,247.5,110,115,-117.5,115,230,245,-252.5,245,607.5,Masters 1,M,SBD,Single-ply
 5,Ilkka Kekkonen,1957,75,74.5,FIN,-220,-220,220,220,160,-167.5,-167.5,160,-225,225,-237.5,225,605,Masters 1,M,SBD,Single-ply
 6,Co Hoppenbrouwers,1950,75,72.3,NTH,200,-217.5,-217.5,200,140,-150,-150,140,240,250,-255,250,590,Masters 1,M,SBD,Single-ply
-7,Thalo Rusbjerg,1957,75,71.6,DEN,-200,-200,200,200,120,127.5,132.5,127.5,200,225,-232.5,225,552.5,Masters 1,M,SBD,Single-ply
-8,Pavel Schauer,1951,75,73.7,CZE,187.5,195,200,195,-100,105,-107.5,105,-187.5,187.5,195,195,495,Masters 1,M,SBD,Single-ply
-9,Viktor Tsivilov,1951,75,72.4,NOR,160,170,180,180,90,100,-117.5,100,180,200,210,200,480,Masters 1,M,SBD,Single-ply
+7,Thalo Rusbjerg,1957,75,71.6,DEN,-200,-200,200,200,120,127.5,-132.5,127.5,200,225,-232.5,225,552.5,Masters 1,M,SBD,Single-ply
+8,Pavel Schauer,1951,75,73.7,CZE,187.5,195,-200,195,-100,105,-107.5,105,-187.5,187.5,195,195,495,Masters 1,M,SBD,Single-ply
+9,Viktor Tsivilov,1951,75,72.4,NOR,160,170,180,180,90,100,-117.5,100,180,200,-210,200,480,Masters 1,M,SBD,Single-ply
 1,Serg Klimashewski,1956,82.5,82,RUS,260,-272.5,275,275,165,175,-177.5,175,240,247.5,-252.5,247.5,697.5,Masters 1,M,SBD,Single-ply
 2,Pietro Andreatta,1952,82.5,82.2,ITA,270,280,-297.5,280,130,137.5,140,140,272.5,-280,-280,272.5,692.5,Masters 1,M,SBD,Single-ply
 3,Will Lincoln,1950,82.5,82.1,GBR,242.5,255,262.5,262.5,160,167.5,170,170,230,240,250,250,682.5,Masters 1,M,SBD,Single-ply
@@ -63,13 +63,13 @@ DQ,Anita Kick,1953,67.5+,95.5,GER,,,,,,,,,,,,,,Masters 1,F,SBD,Single-ply
 10,Dieter König,1953,90,87.9,GER,-240,252.5,-257.5,252.5,150,-162.5,162.5,162.5,230,-242.5,-242.5,230,645,Masters 1,M,SBD,Single-ply
 11,Adam Csupori,1957,90,89.9,SVK,225,-235,-245,225,130,137.5,142.5,142.5,235,250,260,260,627.5,Masters 1,M,SBD,Single-ply
 12,Jan Komarek,1955,90,88.7,CZE,190,205,215,215,-120,120,-127.5,120,210,230,240,240,575,Masters 1,M,SBD,Single-ply
-13,Carlo Decarli,1957,90,83.9,ITA,190,-200,202.5,202.5,-120,120,-130,120,235,-240,-240,235,557.5,Masters 1,M,SBD,Single-ply
+13,Carlo DeCarli,1957,90,83.9,ITA,190,-200,202.5,202.5,-120,120,-130,120,235,-240,-240,235,557.5,Masters 1,M,SBD,Single-ply
 DQ,Rüdiger Hopp,1955,90,89.9,SWE,-275,-275,-275,,,,,,,,,,,Masters 1,M,SBD,Single-ply
 1,Vladimir Korolev,1949,100,96.4,RUS,-315,315,-330,315,160,170,175,175,300,315,,315,805,Masters 1,M,SBD,Single-ply
 2,Josef Micka,1949,100,99.7,CZE,270,280,-285,280,180,-187.5,-187.5,180,270,280,-287.5,280,740,Masters 1,M,SBD,Single-ply
 3,Siegmund Schiebe,1953,100,97.4,GER,255,-270,275,275,150,157.5,-162.5,157.5,260,285,-292.5,285,717.5,Masters 1,M,SBD,Single-ply
 4,Reinhard Melzig,1955,100,98.1,GER,-275,280,-295,280,145,-155,-160,145,270,290,-300,290,715,Masters 1,M,SBD,Single-ply
-5,Anatoliy Boliukh,1954,100,92.4,UKR,240,240,-250,250,160,-170,-170,160,240,-250,260,260,670,Masters 1,M,SBD,Single-ply
+5,Anatoliy Boliukh,1954,100,92.4,UKR,-240,240,250,250,160,-170,-170,160,240,-250,260,260,670,Masters 1,M,SBD,Single-ply
 6,Andy Kuttner,1956,100,91.6,GBR,-210,225,230,230,140,-150,150,150,240,255,-262.5,255,635,Masters 1,M,SBD,Single-ply
 7,Jozef Teslar,1949,100,99.5,SVK,190,210,230,230,170,-175,-175,170,200,220,-237.5,220,620,Masters 1,M,SBD,Single-ply
 1,Nicolay Sharliev,1949,110,107.7,UKR,-330,330,-355,330,-220,220,-225,220,290,310,-317.5,310,860,Masters 1,M,SBD,Single-ply
@@ -91,29 +91,29 @@ DQ,John Blackburn,1955,125,121.8,GBR,-290,-290,-290,,,,,,,,,,,Masters 1,M,SBD,Si
 1,Eberhard Schwanke,1953,125+,130.6,GER,280,310,330,330,220,240,245,245,270,290,-317.5,290,865,Masters 1,M,SBD,Single-ply
 2,Yuriy Zabolotny,1958,125+,154,UKR,310,330,340,340,190,-200,-200,190,280,300,-337.5,300,830,Masters 1,M,SBD,Single-ply
 3,Wiebe Nyenhuis,1955,125+,127,NTH,-270,270,285,285,-165,165,175,175,285,295,320,320,780,Masters 1,M,SBD,Single-ply
-4,Kurt Hübner,1956,125+,133,GER,245,255,275,275,180,185,190,185,245,260,270,270,730,Masters 1,M,SBD,Single-ply
+4,Kurt Hübner,1956,125+,133,GER,245,255,275,275,180,185,-190,185,245,260,270,270,730,Masters 1,M,SBD,Single-ply
 5,Bosse Bergqvist,1956,125+,129.4,SWE,-255,255,275,275,170,180,185,185,225,-235,,225,685,Masters 1,M,SBD,Single-ply
 6,Vale Golovtchenko,1958,125+,142.8,UKR,230,245,-250,245,160,-165,-165,160,270,280,,280,685,Masters 1,M,SBD,Single-ply
-DQ,Raimo Avila,1955,125+,130.6,FIN,280,290,-300,290,180,190,-195,190,-270,-270,-270,270,,Masters 1,M,SBD,Single-ply
+DQ,Raimo Avila,1955,125+,130.6,FIN,280,290,-300,290,180,190,-195,190,-270,-270,-270,,,Masters 1,M,SBD,Single-ply
 1,Serge Minquoy,1943,52,50.9,FRA,125,-132.5,132.5,132.5,82.5,87.5,-90,87.5,142.5,147.5,-150,147.5,367.5,Masters 2,M,SBD,Single-ply
 2,Valentin Ivanov,1941,52,51.4,RUS,100,112.5,117.5,117.5,70,75,-80,75,120,135,140,140,332.5,Masters 2,M,SBD,Single-ply
 1,Vladim Sadovnikov,1937,56,55.7,RUS,140,150,160,160,75,82.5,-90,82.5,165,175,185,185,427.5,Masters 2,M,SBD,Single-ply
-2,Heikki Mähonen,1924,56,54.6,FIN,50,55,-57.5,55,45,-57.5,,45,90,-107.5,,90,190,Masters 2,M,SBD,Single-ply
-1,Nikolai Bederin,1935,60,59,RUS,180,190,-195,195.5,-102.5,102.5,110,110,210,215,-220,215,520,Masters 2,M,SBD,Single-ply
+2,Heikki Mähönen,1924,56,54.6,FIN,50,55,-57.5,55,45,-57.5,,45,90,-107.5,,90,190,Masters 2,M,SBD,Single-ply
+1,Nikolai Bederin,1935,60,59,RUS,180,190,195.5,195.5,-102.5,102.5,110,110,210,215,-220,215,520,Masters 2,M,SBD,Single-ply
 2,Tapani Pulkkinen,1940,60,59.8,FIN,160,165,-170,165,85,90,,90,180,190,-200,190,445,Masters 2,M,SBD,Single-ply
 3,Rainer Geese,1943,60,59.9,GER,130,140,-150,140,-100,100,-107.5,100,150,160,170,170,410,Masters 2,M,SBD,Single-ply
 4,Bent Hansen,1941,60,59.9,DEN,-120,-120,120,120,77.5,82.5,-85,82.5,150,160,-165,160,362.5,Masters 2,M,SBD,Single-ply
-1,Yuri Povetkin,1939,67.5,66.9,RUS,170,180,-185,185,130,-137.5,140,140,180,195,-210,195,520,Masters 2,M,SBD,Single-ply
-2,Torsaten Ruotsala,1943,67.5,67.2,FIN,180,-190,-190,180,95,-95,95,95,195,210,220,220,495,Masters 2,M,SBD,Single-ply
+1,Yuri Povetkin,1939,67.5,66.9,RUS,170,180,185,185,130,-137.5,140,140,180,195,-210,195,520,Masters 2,M,SBD,Single-ply
+2,Torsaten Ruotsala,1943,67.5,67.2,FIN,180,-190,-190,180,-95,-95,95,95,195,210,220,220,495,Masters 2,M,SBD,Single-ply
 3,Ladislaw Rolny,1948,67.5,66.9,CZE,160,170,180,180,100,115,117.5,117.5,170,-185,-187.5,170,467.5,Masters 2,M,SBD,Single-ply
 1,John Russel,1946,75,74.6,GBR,225,237.5,-245,237.5,125,132.5,135,135,225,237.5,-245,237.5,610,Masters 2,M,SBD,Single-ply
 2,Aleksand Semeneev,1943,75,74.5,RUS,210,225,-235,225,130,140,-145,140,217.5,-222.5,-222.5,217.5,582.5,Masters 2,M,SBD,Single-ply
 3,Janis Pauluks,1946,75,74.1,LAT,195,205,-210,205,125,130,132.5,132.5,225,235,242.5,242.5,580,Masters 2,M,SBD,Single-ply
-4,Ali Bouchakour,1945,75,73.7,FRA,190,-200,-200,160,137.5,142.5,147.5,147.5,225,240,-250,240,547.5,Masters 2,M,SBD,Single-ply
+4,Ali Rabah Bouchakour,1945,75,73.7,FRA,190,-200,-200,190,137.5,142.5,147.5,147.5,225,240,-250,240,577.5,Masters 2,M,SBD,Single-ply
 5,Georges Llosa,1942,75,72.4,FRA,192.5,-202.5,-202.5,192.5,125,127.5,130,130,205,215,220,220,542.5,Masters 2,M,SBD,Single-ply
 6,Robert Mild,1932,75,73.6,AUT,-150,150,160,160,110,120,-122.5,120,200,210,215,215,495,Masters 2,M,SBD,Single-ply
-7,Aleksande Loginov,1938,75,74.2,UKR,160,170,175,180,75,-85,-85,102.5,180,190,200,200,482.5,Masters 2,M,SBD,Single-ply
-8,Wilfried Häusler,1942,75,73.6,GER,160,170,180,175,-95,-102.5,102.5,75,190,200,-205,200,450,Masters 2,M,SBD,Single-ply
+DD,Aleksande Loginov,1938,75,74.2,UKR,160,170,180,180,-95,-102.5,102.5,102.5,190,200,-205,200,,Masters 2,M,SBD,Single-ply
+8,Wilfried Häusler,1942,75,73.6,GER,160,170,175,175,75,-85,-85,75,180,190,200,200,450,Masters 2,M,SBD,Single-ply
 1,Harry vd Brandt,1946,82.5,81.1,NTH,235,-252.5,252.5,252.5,157.5,162.5,167.5,167.5,250,260,265,265,685,Masters 2,M,SBD,Single-ply
 2,Mick Hunnam,1944,82.5,81.9,GBR,225,237.5,-245,237.5,155,162.5,167.5,167.5,235,245,-252.5,245,650,Masters 2,M,SBD,Single-ply
 3,Roland Bonner,1943,82.5,80.8,GBR,210,220,227.5,227.5,110,120,125,125,235,245,250,250,602.5,Masters 2,M,SBD,Single-ply
@@ -126,14 +126,14 @@ DQ,Raimo Avila,1955,125+,130.6,FIN,280,290,-300,290,180,190,-195,190,-270,-270,-
 DQ,Adam Borzecki,1945,82.5,81.2,POL,-180,180,-190,180,-115,-115,-115,,,,,,,Masters 2,M,SBD,Single-ply
 1,Yaroslav Chala,1948,90,87.6,UKR,230,245,,245,175,183,-187.5,183,232.5,242.5,-247.5,242.5,670,Masters 2,M,SBD,Single-ply
 2,Kari Mattila,1945,90,89.5,SWE,-215,215,225,225,130,137.5,142.5,142.5,237.5,245,-250,245,612.5,Masters 2,M,SBD,Single-ply
-3,Charles Crawford,1944,90,88.5,GBR,-220,220,-230,230,115,120,122.5,122.5,220,235,-242.5,235,587.5,Masters 2,M,SBD,Single-ply
+3,Charles Crawford,1944,90,88.5,GBR,-220,220,230,230,115,120,122.5,122.5,220,235,-242.5,235,587.5,Masters 2,M,SBD,Single-ply
 4,Wolfga Zimmermann,1941,90,89.3,CZE,190,210,,210,-130,130,-132.5,130,220,-240,,220,560,Masters 2,M,SBD,Single-ply
 5,Erwin Breitenbach,1944,90,88.1,GER,205,-212.5,-212.5,205,102.5,-107.5,107.5,107.5,232.5,242.5,-247.5,242.5,555,Masters 2,M,SBD,Single-ply
-6,Ken Parry,1937,90,84,GBR,-150,-165,165,165,125,-132.5,-132.5,125,210,-225,-225,225,515,Masters 2,M,SBD,Single-ply
+6,Ken Parry,1937,90,84,GBR,-150,-165,165,165,125,-132.5,-132.5,125,210,-225,225,225,515,Masters 2,M,SBD,Single-ply
 1,Vsevold Babenko,1937,100,99.4,UKR,245,255,265,265,-175,175,-180,175,270,275,292.5,292.5,732.5,Masters 2,M,SBD,Single-ply
-2,Ferry vdMeulen,1947,100,99.8,NTH,265,-280,-280,265,170,180,185,185,-265,265,282.5,282.5,732.5,Masters 2,M,SBD,Single-ply
+2,Ferry van der Meulen,1947,100,99.8,NTH,265,-280,-280,265,170,180,185,185,-265,265,282.5,282.5,732.5,Masters 2,M,SBD,Single-ply
 3,Karl-Hei Grabosch,1937,100,99.2,GER,-245,245,260,260,-152.5,152.5,160,160,255,265,-270,265,685,Masters 2,M,SBD,Single-ply
-4,Steen Wissing,1945,100,98.8,DEN,-245,245,-260,260,-145,145,-152.5,145,250,-260,,250,655,Masters 2,M,SBD,Single-ply
+4,Steen Wissing,1945,100,98.8,DEN,-245,245,260,260,-145,145,-152.5,145,250,-260,,250,655,Masters 2,M,SBD,Single-ply
 5,Rod Fielding,1944,100,98.4,GBR,-220,-220,220,220,130,140,-145,140,250,270,-290,270,630,Masters 2,M,SBD,Single-ply
 1,György Lovasz,1947,110,106.8,HUN,300,317.5,,317.5,195,200,205,205,300,337.5,,337.5,860,Masters 2,M,SBD,Single-ply
 2,Hans Frece,1940,110,108.8,GER,240,255,265,265,160,167.5,170,170,230,-245,245,245,680,Masters 2,M,SBD,Single-ply
@@ -146,7 +146,7 @@ DQ,Adam Borzecki,1945,82.5,81.2,POL,-180,180,-190,180,-115,-115,-115,,,,,,,Maste
 3,John Halfacre,1945,125,113.3,GBR,230,242.5,-250,242.5,140,150,-155,150,235,250,-260,250,642.5,Masters 2,M,SBD,Single-ply
 4,Will Tesch,1948,125,114.8,GER,212.5,222.5,-230,222.5,195,-200,-200,195,225,-235,-235,225,642.5,Masters 2,M,SBD,Single-ply
 DQ,Zdenek Srstka,1935,125,111.7,CZE,-210,-210,-210,,,,,,,,,,,Masters 2,M,SBD,Single-ply
-1,Knut Asvang,1944,125+,134.7,NOR,260,280,285,285,170,180,-200,180,250,260,,260,725,Masters 2,M,SBD,Single-ply
+1,Knut Åsvang,1944,125+,134.7,NOR,260,280,285,285,170,180,-200,180,250,260,,260,725,Masters 2,M,SBD,Single-ply
 2,Petr Kochetov,1940,125+,131,RUS,240,-262.5,-270,240,-160,180,-185,180,250,260,-270,260,680,Masters 2,M,SBD,Single-ply
 3,Georg Boström,1947,125+,125.2,SWE,190,205,,205,140,150,,150,190,210,,210,565,Masters 2,M,SBD,Single-ply
 4,Viktor Kamanin,1945,125+,133.8,RUS,,,,125,,,,112.5,,,,140,377.5,Masters 2,M,SBD,Single-ply

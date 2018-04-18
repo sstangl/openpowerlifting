@@ -43,3 +43,5 @@
 
 [exclusions]
     9908 = ["check_row_weightclass_sex"]
+    9807 = ["check_row_weightclass_sex"]
+    9804 = ["check_row_weightclass_consistency","check_row_weightclass_sex"]
