@@ -328,16 +328,6 @@ def fixname(csv):
         # I'm not sure what this means, but it shows up in names.
         s = s.replace("NSB", "")
 
-        # if s.upper() == s:
-        #    error("Name looks all uppercase, needs manual fixing: '%s'" % s )
-
-        for x in s.split():
-            if x.lower() == x or x.upper() == x:
-                # Except in names like "Louie de Leon" or for initials.
-                if (len(x.replace('.', '')) > 2 and x != 'III' and
-                        x != 'van' and x != '4th'):
-                    error("Name needs proper casing: '%s'" % s)
-
         row[idx] = s.strip()
 
 
@@ -369,7 +359,9 @@ def fixclass(csv):
             x = 'Crossfit'
         elif s == 'police/fire am' or s == 'am police / fire' or s == 'police / fire am':
             x = 'Police-Fire Amateur'
-        elif s == 'pro police/fire':
+        elif s == 'police /fire am':
+            x = 'Police-Fire Amateur'
+        elif s == 'pro police/fire' or s == 'police /fire pro':
             x = 'Police-Fire Pro'
         elif s == 'fire':
             x = 'Fire Amateur'
