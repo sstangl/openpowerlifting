@@ -7,6 +7,7 @@
 from bs4 import BeautifulSoup
 import os
 import sys
+import subprocess
 
 try:
     import oplprobe
@@ -17,6 +18,9 @@ except ModuleNotFoundError:
 
 # Local results, national results, international results
 URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=1",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=2",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=3",
             "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut/tulosarkisto/2018",
             "https://suomenvoimanostoliitto.fi/tulokset/arvokilpailut"]
 BASEURL = "https://suomenvoimanostoliitto.fi"
@@ -58,6 +62,10 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    for url in unentered:
+        print(url)
+        subprocess.run(['./svnl-import',url])
 
     oplprobe.print_meets(color('[SVNL]'), unentered)
     print(color('[SVNL] ') + "Continue working through archive.")
