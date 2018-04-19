@@ -86,8 +86,10 @@ AGE_COEFFICIENTS = [
     1.000,  # 40
 
     # McCulloch coefficients:
-    # http://www.usapl-sd.com/Formulas/Mcculloch.htm
-    # Ranges from age 41 to 80
+    #  http://www.usapl-sd.com/Formulas/Mcculloch.htm (contains some errors).
+    # Errors were corrected using the Masters coefficients from:
+    #  http://worldpowerliftingcongress.com/wp-content/uploads/2015/02/Glossbrenner.htm
+    # Ranges from age 41 to 80.
     1.010,  # 41
     1.020,  # 42
     1.031,  # 43
@@ -104,8 +106,8 @@ AGE_COEFFICIENTS = [
     1.204,  # 54
     1.225,  # 55
     1.246,  # 56
-    1.258,  # 57
-    1.292,  # 58
+    1.268,  # 57
+    1.291,  # 58
     1.315,  # 59
     1.340,  # 60
     1.366,  # 61
@@ -115,7 +117,7 @@ AGE_COEFFICIENTS = [
     1.480,  # 65
     1.511,  # 66
     1.543,  # 67
-    1.578,  # 68
+    1.576,  # 68
     1.610,  # 69
     1.645,  # 70
     1.681,  # 71
