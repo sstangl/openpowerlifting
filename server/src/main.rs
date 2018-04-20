@@ -103,7 +103,30 @@ fn rankings(
     let lang = select_display_language(languages, &cookies);
     let units = select_weight_units(lang, &cookies);
 
-    let context = pages::rankings::Context::new(&opldb, lang, &langinfo, units);
+    let selection = pages::rankings::Selection::new_default();
+    let context =
+        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
+    Some(Template::render("rankings", &context))
+}
+
+#[get("/rankings/<selections..>")]
+fn rankings_specific(
+    selections: PathBuf,
+    opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+
+    let selection = match pages::rankings::Selection::from_path(&selections) {
+        Ok(s) => s,
+        Err(_) => return None,
+    };
+
+    let context =
+        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
     Some(Template::render("rankings", &context))
 }
 
@@ -212,7 +235,18 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .mount(
             "/",
-            routes![index, rankings, lifter, meet, statics, status, data, faq, contact],
+            routes![
+                index,
+                rankings,
+                rankings_specific,
+                lifter,
+                meet,
+                statics,
+                status,
+                data,
+                faq,
+                contact
+            ],
         )
         .attach(Template::fairing())
 }

@@ -2,6 +2,11 @@ let global_grid;
 let global_data;
 
 
+let selEquipment;
+let selWeightClass;
+let selSex;
+
+
 function makeDataProvider() {
     return {
         getLength: function() { return window.global_data.length; },
@@ -45,7 +50,35 @@ function onResize(evt) {
     global_grid.resizeCanvas();
 }
 
+// When selectors are changed, the URL in the address bar should
+// change to match.
+function reload() {
+    let url = "/rankings";
+    if (selEquipment.value !== "raw_wraps") {
+        url += "/" + selEquipment.value;
+    }
+    if (selWeightClass.value !== "all") {
+        url += "/" + selWeightClass.value;
+    }
+    if (selSex.value !== "all") {
+        url += "/" + selSex.value;
+    }
+    window.location = url;
+}
+
+function addSelectorListeners(selector) {
+    selector.addEventListener("change", reload);
+}
+
 function addEventListeners() {
+    selEquipment = document.getElementById("equipmentselect");
+    selWeightClass = document.getElementById("weightclassselect");
+    selSex = document.getElementById("sexselect");
+
+    addSelectorListeners(selEquipment);
+    addSelectorListeners(selWeightClass);
+    addSelectorListeners(selSex);
+
     window.addEventListener("resize", onResize, false);
 }
 

@@ -120,5 +120,25 @@
 	    "venezuela": "Венесуэла",
 	    "wales": "Wales"
 	},
-	"search": "Поиск"
+	"search": "Поиск",
+	"selectors": {
+		"equipment": {
+			"raw": "Без",
+			"wraps": "Бинты",
+			"raw_wraps": "Без+Бинты",
+			"single": "Однослой",
+			"multi": "Многослой"
+		},
+		"weightclass": {
+			"all": "All Classes",
+			"traditional": "Traditional",
+			"ipfmen": "IPF Men",
+			"ipfwomen": "IPF Women"
+		},
+		"sex": {
+			"all": "All Sexes",
+			"m": "Мужчины",
+			"f": "Женщины"
+		}
+	}
 }

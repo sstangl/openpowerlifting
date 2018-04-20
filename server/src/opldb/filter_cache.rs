@@ -13,6 +13,7 @@ use std::mem;
 pub enum CachedFilter {
     EquipmentRaw,
     EquipmentWraps,
+    EquipmentRawAndWraps,
     EquipmentSingle,
     EquipmentMulti,
 
@@ -31,6 +32,7 @@ pub struct FilterCache {
     // Equipment filters.
     equipment_raw: Filter,
     equipment_wraps: Filter,
+    equipment_rawandwraps: Filter,
     equipment_single: Filter,
     equipment_multi: Filter,
 
@@ -53,6 +55,10 @@ impl FilterCache {
 
             equipment_wraps: filter_on_entries(entries, |e| {
                 e.equipment == Equipment::Wraps
+            }),
+
+            equipment_rawandwraps: filter_on_entries(entries, |e| {
+                e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps
             }),
 
             equipment_single: filter_on_entries(entries, |e| {
@@ -93,6 +99,7 @@ impl FilterCache {
         match c {
             CachedFilter::EquipmentRaw => &self.equipment_raw,
             CachedFilter::EquipmentWraps => &self.equipment_wraps,
+            CachedFilter::EquipmentRawAndWraps => &self.equipment_rawandwraps,
             CachedFilter::EquipmentSingle => &self.equipment_single,
             CachedFilter::EquipmentMulti => &self.equipment_multi,
 
@@ -110,6 +117,7 @@ impl FilterCache {
     pub fn size_bytes(&self) -> usize {
         mem::size_of::<FilterCache>() + self.equipment_raw.size_bytes()
             + self.equipment_wraps.size_bytes()
+            + self.equipment_rawandwraps.size_bytes()
             + self.equipment_single.size_bytes()
             + self.equipment_multi.size_bytes() + self.sex_male.size_bytes()
             + self.sex_female.size_bytes() + self.year_2018.size_bytes()

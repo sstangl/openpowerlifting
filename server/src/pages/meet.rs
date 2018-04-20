@@ -31,7 +31,10 @@ pub struct MeetInfo<'a> {
 }
 
 impl<'a> MeetInfo<'a> {
-    pub fn from(meet: &'a opldb::Meet, strings: &'a langpack::Translations) -> MeetInfo<'a> {
+    pub fn from(
+        meet: &'a opldb::Meet,
+        strings: &'a langpack::Translations,
+    ) -> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
             federation: &meet.federation,
