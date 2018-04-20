@@ -28,9 +28,9 @@ def error(msg):
     sys.exit(1)
 
 
-# URL will be like "tulokset/sm-kilpailut/16-18032018-klassinen-voimanosto-sm-ylojarvi-ylor".
+# URL will be like "/?page=protokoll_vis&id=3508".
 def getdirname(url):
-    return url.split('/')[-1]
+    return url.split('id=')[1]
 
 
 def getmeetinfo(soup):
@@ -70,7 +70,7 @@ def getmeetinfo(soup):
     country = 'Norway'
     state = ''
 
-    row = [fed, date, country, state, place, name]
+    row = [fed, date, country, state, town, name]
     for i, r in enumerate(row):
         row[i] = r.replace(',', ' ').replace('  ', ' ').strip()
     csv.rows = [row]
@@ -81,167 +81,150 @@ def getresults(soup):
     csv = Csv()
 
     # Get the results table.
-    tbody = soup.find('tbody')
-    if len(tbody) == 0:
+    resultater = soup.find_all('h4', text='Resultater')
+    if len(resultater) != 1:
         error("Couldn't find the results table.")
 
+    table = resultater[0].find_next('table')
 
-    trs = tbody.find_all('tr')
+    trs = table.find_all('tr')
 
     # Get column information.
-    headers = [x.text for x in trs[5].find_all('td')]
+    headers = [x.text for x in trs[0].find_all('td')]
 
     csv.fieldnames = []
     for h in headers:
-        if h == 'Sij.':
+        if h == '#':
             csv.fieldnames += ['Place']
-        elif h == 'Sarja':
+        elif h == 'Kat.':
             csv.fieldnames += ['WeightClassKg']
-        elif h == 'Paino':
-            csv.fieldnames += ['BodyweightKg']
-        elif h == 'Nimi':
-            csv.fieldnames += ['Name']
-        elif h == 'SV':
-            csv.fieldnames += ['BirthYear']
-        elif h == 'Seura':
+        elif h == 'Navn':
+            csv.fieldnames += ['Name', 'Equipment']
+        elif h == 'Klubb':
             csv.fieldnames += ['Team']
-        elif h == 'JK1':
-            csv.fieldnames += ['Squat1Kg']
-        elif h == 'JK2':
-            csv.fieldnames += ['Squat2Kg']
-        elif h == 'JK3':
-            csv.fieldnames += ['Squat3Kg']
-        elif h == 'JK tul':
-            csv.fieldnames += ['BestSquatKg']
-        elif h == 'PP1':
-            csv.fieldnames += ['Bench1Kg']
-        elif h == 'PP2':
-            csv.fieldnames += ['Bench2Kg']
-        elif h == 'PP3':
-            csv.fieldnames += ['Bench3Kg']
-        elif h == 'PP tul':
-            csv.fieldnames += ['BestBenchKg']
-        elif h == 'MN1':
-            csv.fieldnames += ['Deadlift1Kg']
-        elif h == 'MN2':
-            csv.fieldnames += ['Deadlift2Kg']
-        elif h == 'MN3':
-            csv.fieldnames += ['Deadlift3Kg']
-        elif h == 'MN tul':
-            csv.fieldnames += ['BestDeadliftKg']        
-        elif h == 'YT':
+        elif h == 'Kr.vekt':
+            csv.fieldnames += ['BodyweightKg']
+        elif h == 'Knebøy':
+            csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
+        elif h == 'Benkpress':
+            csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
+        elif h == 'Markløft':
+            csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
+        elif h == 'Totalt':
             csv.fieldnames += ['TotalKg']
-        elif h == 'Wilks':
+        elif h == 'Poeng':
             csv.fieldnames += ['Wilks']
-        elif h == 'J.pist.':
-            csv.fieldnames += ['Points']
         else:
             error("Unknown column name: \"%s\"" % h)
 
     # These columns are added from the category rows.
     csv.fieldnames += ['Division', 'Sex']
 
-    append_eqp = False
-    # Classic meets and pre 2011 meets won't mark equipment, work it out contextually
-    if 'Equipment' not in csv.fieldnames:
-        csv.fieldnames += ['Equipment']
-        append_eqp = True
+    divstate = None
+    sexstate = None
 
-
-    divstate = 'Open'
-    sexstate = 'F'
-
-    for tr in trs[6:]:
+    for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
 
-        if ''.join(row[0]).strip() != '' and row[0] != 'Sij.': # Skip blank rows and additional headers
+        # Rows of length >1 are actual results, of length 1 are categories.
+        if len(row) == 1:
+            # Extract sex information.
+            text = row[0].lower()
+            if 'damer' in text:
+                sexstate = 'F'
+                text = text.replace('damer', '').strip()
+            elif 'herrer' in text:
+                sexstate = 'M'
+                text = text.replace('herrer', '').strip()
 
-            # Records are after data
-            if row[0] == 'Ennätykset':
-                break
-
-            # Rows of length >1 are actual results, of length 1 are categories.
-            if len(row) == 1:
-                # Extract sex information.
-                text = row[0].lower()
-                if 'naiset' in text:
-                    sexstate = 'F'
-                    text = text.replace('naiset', '').strip()
-                elif 'miehet' in text:
-                    sexstate = 'M'
-                    text = text.replace('miehet', '').strip()
-                elif text[0] == 'n':
-                    sexstate = 'F'
-                    text = text[1:]                    
-                elif text[0] == 'm':
-                    sexstate = 'M'
-                    text = text[1:]
-                # Extract division information.
-                if '14' in text:
-                    divstate = text.replace('14', 'Youth')
-                elif '18' in text:
-                    divstate = text.replace('18', 'Sub-Juniors')
-                elif '23' in text:
-                    divstate = text.replace('23', 'Juniors')
-                elif '40' in text:
-                    divstate = text.replace('40', 'Masters 1')
-                elif '50' in text:
-                    divstate = text.replace('50', 'Masters 2')
-                elif '60' in text:
-                    divstate = text.replace('60', 'Masters 3')
-                elif '70' in text:
-                    divstate = text.replace('70', 'Masters 4')
-                elif 'avoin' in text:
-                    divstate = text.replace('avoin', 'Open')
-                elif len(text) !=0:
-                    error("Unknown state: \"%s\"" % row[0])
-
+            # Extract division information.
+            if 'ungdom' in text:
+                divstate = text.replace('ungdom', 'Teen')
+            elif 'junior' in text:
+                divstate = text.replace('junior', 'Junior')
+            elif 'åpen' in text:
+                divstate = 'Open'
+            elif 'veteran' in text:
+                divstate = text.replace('veteran', 'Master')
             else:
+                error("Unknown state: \"%s\"" % row[0])
 
-                # Accumulate the row, but we need to look at the class of each td
-                # to figure out whether lifts were good or bad.
-                row = []
-                for td in tr.find_all('td'):
-                    text = td.text
-                    # Switch to dots for decimals
-                    text=text.replace(',','.')
-                    s = td.s
-                    if s:  # Failed lift.
-                        text = '-' + text
-                    if text == '-----':  # Skipped lift.
-                        text = ''
-                    row.append(text.strip().replace('  ', ' ').replace(',', ' '))
+        else:
+            assert divstate
+            assert sexstate
 
-                row = row + [divstate, sexstate]
+            # Accumulate the row, but we need to look at the class of each td
+            # to figure out whether lifts were good or bad.
+            row = []
+            for td in tr.find_all('td'):
+                text = td.text
+                c = td.get('class')
+                if c and 'underkjent' in c:  # Failed lift.
+                    text = '-' + text
+                if c and 'ikke_loftet' in c:  # Skipped lift.
+                    text = ''
+                row.append(text.strip().replace('  ', ' ').replace(',', ' '))
 
-                if append_eqp:
-                    row = row +['']
-                csv.rows += [row]
+            row = row + [divstate, sexstate]
+            csv.rows += [row]
 
     return csv
 
 
+# The place is reported as "1.", just remove the period.
+def fixplace(csv):
+    placeidx = csv.index('Place')
+    totalidx = csv.index('TotalKg')
+    for row in csv.rows:
+        row[placeidx] = row[placeidx].replace('.', '')
+        if row[placeidx] == '-':
+            row[placeidx] = 'DQ'
+            row[totalidx] = ''  # Instead of a zero.
+        elif row[placeidx].lower() == 'gj':  # Guest lifter, I think.
+            row[placeidx] = 'G'
+
+
+# The weight class is reported as "-72" or "84+", just remove the dash.
+def fixclass(csv):
+    clsidx = csv.index('WeightClassKg')
+    for row in csv.rows:
+        row[clsidx] = row[clsidx].replace('-', '')
+
+
 # The equipment is marked as "*" for Raw, or nothing for Single-ply.
-def fixequipment(csv, meetcsv):
-    meet_name = meetcsv.rows[0][5]
-
-    raw_meet = False
-
-    if 'klassisen' in meet_name.lower():
-        raw_meet = True
-
+def fixequipment(csv):
     eqidx = csv.index('Equipment')
+    for row in csv.rows:
+        if '*' in row[eqidx]:
+            row[eqidx] = 'Raw'
+        elif row[eqidx] == '':
+            row[eqidx] = 'Single-ply'
+        else:
+            error("Unknown equipment: \"%s\"" % row[eqidx])
+
+
+# Attempts are given, but not the BestSquatKg columns, etc.
+def calc_best_lift(csv, col, attemptlist):
+    if col in csv.fieldnames:
+        return
+
+    for k in attemptlist:
+        assert k in csv.fieldnames
+
+    csv.insert_column(csv.index(attemptlist[-1]) + 1, col)
 
     for row in csv.rows:
-        if raw_meet:
-            row[eqidx] = 'Raw'
-        else:
-            if 'x' in row[eqidx]:
-                row[eqidx] = 'Raw'
-            elif row[eqidx] == '':
-                row[eqidx] = 'Single-ply'
-            else:
-                error("Unknown equipment: \"%s\"" % row[eqidx])
+        best = 0
+        for k in attemptlist:
+            try:
+                attempt = float(row[csv.index(k)])
+            except ValueError:
+                attempt = 0
+            if attempt > best:
+                best = attempt
+        if best > 0:
+            row[csv.index(col)] = str(best)
+
 
 def markevent(csv):
     assert 'Event' not in csv.fieldnames
@@ -327,18 +310,44 @@ def main(url):
     if len(entriescsv.rows) == 0:
         error("No rows found!")
 
-    fixequipment(entriescsv,meetcsv)
+    fixplace(entriescsv)
+    fixclass(entriescsv)
+    fixequipment(entriescsv)
 
- 
+    # For old meets, the 1-2-3 results are blank, and only one of them is filled in.
+    # If after removing empty columns, only one lift is left, then that's a
+    # Best column.
     remove_empty_cols_ignore_fieldname(entriescsv)
+    if 'Squat1Kg' in entriescsv.fieldnames:
+        if ('Squat2Kg' not in entriescsv.fieldnames and
+                'Squat3Kg' not in entriescsv.fieldnames):
+            entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'BestSquatKg'
+    if 'Bench1Kg' in entriescsv.fieldnames:
+        if ('Bench2Kg' not in entriescsv.fieldnames and
+                'Bench3Kg' not in entriescsv.fieldnames):
+            entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'BestBenchKg'
+    if 'Deadlift1Kg' in entriescsv.fieldnames:
+        if ('Deadlift2Kg' not in entriescsv.fieldnames and
+                'Deadlift3Kg' not in entriescsv.fieldnames):
+            entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'BestDeadliftKg'
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
 
-    if 'Points' in entriescsv.fieldnames:
-        entriescsv.remove_column_by_name('Points')
+    if ('Squat1Kg' in entriescsv.fieldnames and
+            'BestSquatKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'BestSquatKg', [
+                       'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
+    if ('Bench1Kg' in entriescsv.fieldnames and
+            'BestBenchKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'BestBenchKg', [
+                       'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
+    if ('Deadlift1Kg' in entriescsv.fieldnames and
+            'BestDeadliftKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'BestDeadliftKg', [
+                       'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     # Figure out event information.
     markevent(entriescsv)
