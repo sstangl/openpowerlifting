@@ -33,7 +33,15 @@ URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
             "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=13",
             "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=14",
             "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=15",
-            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut/tulosarkisto/2018"]
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2018",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2017",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2016",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2015",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2014",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2013",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2012",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2011",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2010"]
 BASEURL = "https://suomenvoimanostoliitto.fi"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
