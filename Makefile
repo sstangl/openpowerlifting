@@ -48,6 +48,7 @@ check:
 # Data showing up here should be immediately actionable.
 probe-quick:
 	${DATADIR}/aau/aau-probe --quick || true
+	${DATADIR}/aep/aep-probe --quick || true
 	${DATADIR}/apa/apa-probe || true
 	${DATADIR}/apc/apc-probe --quick || true
 	${DATADIR}/apf/apf-probe --quick || true
@@ -85,6 +86,7 @@ probe-quick:
 # List of all probes.
 probe:
 	${DATADIR}/aau/aau-probe || true
+	${DATADIR}/aep/aep-probe || true
 	${DATADIR}/apa/apa-probe || true
 	${DATADIR}/apc/apc-probe || true
 	${DATADIR}/apf/apf-probe || true
