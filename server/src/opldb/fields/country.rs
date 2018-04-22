@@ -77,6 +77,7 @@ pub enum Country {
     SouthKorea,
     Spain,
     Sweden,
+    Switzerland,
     Tahiti,
     Taiwan,
     Turkey,
