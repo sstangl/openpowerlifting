@@ -13,7 +13,7 @@ use std::mem;
 /// with easy caching.
 ///
 /// The list of indices must be monotonically increasing.
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct Filter {
     /// A list of monotonically increasing indices.
     pub list: Vec<u32>,

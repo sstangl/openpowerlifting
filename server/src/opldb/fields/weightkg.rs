@@ -15,7 +15,7 @@ use opldb::WeightUnits;
 /// Represents numbers describing absolute weights.
 ///
 /// The database only tracks weights to two decimal places.
-/// Instead of storing as `f32`, we can store as `u32 * 100`,
+/// Instead of storing as `f32`, we can store as `i32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
@@ -40,6 +40,14 @@ impl Serialize for WeightAny {
 }
 
 impl WeightKg {
+    pub fn from_f32(f: f32) -> WeightKg {
+        if f.is_finite() {
+            WeightKg((f * 100.0).round() as i32)
+        } else {
+            WeightKg(0)
+        }
+    }
+
     pub fn as_kg(&self) -> WeightAny {
         WeightAny(self.0)
     }
@@ -131,13 +139,7 @@ impl FromStr for WeightKg {
         if s.is_empty() {
             Ok(WeightKg(0))
         } else {
-            let f = s.parse::<f32>()?;
-
-            if f.is_finite() {
-                Ok(WeightKg((f * 100.0).round() as i32))
-            } else {
-                Ok(WeightKg(0))
-            }
+            Ok(WeightKg::from_f32(s.parse::<f32>()?))
         }
     }
 }

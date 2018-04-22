@@ -121,7 +121,8 @@ def makeinstagram(liftername):
     for row in SocialMediaCSV.rows:
         if row[nameidx] == liftername and row[igidx]:
             return ('<a href="https://www.instagram.com/%s"'
-                    ' class="instagram"><i class="fa fa-instagram fa-resize"></i></a>'
+                    ' class="instagram" target="_blank">'
+                    '<i class="fa fa-instagram fa-resize"></i></a>'
                     % (row[igidx]))
 
     return ''

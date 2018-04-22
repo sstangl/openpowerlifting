@@ -120,5 +120,25 @@
 	    "venezuela": "Venezuela",
 	    "wales": "Wales"
 	},
-	"search": "Search"
+	"search": "Search",
+	"selectors": {
+		"equipment": {
+			"raw": "Raw",
+			"wraps": "Wraps",
+			"raw_wraps": "Raw+Wraps",
+			"single": "Single-ply",
+			"multi": "Multi-ply"
+		},
+		"weightclass": {
+			"all": "All Classes",
+			"traditional": "Traditional",
+			"ipfmen": "IPF Men",
+			"ipfwomen": "IPF Women"
+		},
+		"sex": {
+			"all": "All Sexes",
+			"m": "Men",
+			"f": "Women"
+		}
+	}
 }

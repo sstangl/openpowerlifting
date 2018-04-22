@@ -201,14 +201,46 @@ pub struct ColumnTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct SelectorTranslations {
+    pub equipment: EquipmentSelectorTranslations,
+    pub weightclass: WeightClassSelectorTranslations,
+    pub sex: SexSelectorTranslations,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct EquipmentSelectorTranslations {
+    pub raw: String,
+    pub wraps: String,
+    pub raw_wraps: String,
+    pub single: String,
+    pub multi: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct WeightClassSelectorTranslations {
+    pub all: String,
+    pub traditional: String,
+    pub ipfmen: String,
+    pub ipfwomen: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct SexSelectorTranslations {
+    pub all: String,
+    pub m: String,
+    pub f: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct Translations {
     pub units: UnitsTranslations,
     pub equipment: EquipmentTranslations,
     pub sex: SexTranslations,
     pub header: HeaderTranslations,
     pub columns: ColumnTranslations,
-    pub search: String,
     pub country: CountryTranslations,
+    pub search: String,
+    pub selectors: SelectorTranslations,
 }
 
 /// Owner struct of all translation state.

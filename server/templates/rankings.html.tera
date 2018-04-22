@@ -22,9 +22,9 @@
     const translation_column_wilks = "{{strings.columns.wilks}}";
   </script>
 
-  <link rel="stylesheet" type="text/css" href="static/slickgrid.css"/>
-  <script src="static/slickgrid.min.js"></script>
-  <script src="static/rankings.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/slickgrid.css"/>
+  <script src="/static/slickgrid.min.js"></script>
+  <script src="/static/rankings.js"></script>
 {% endblock includes %}
 
 {% block flexbox_hack %}
@@ -37,6 +37,21 @@
 
 {% block controls %}
   <div id="controls">
+    <div id="controls-left">
+      <select id="equipmentselect">
+        <option value="raw"{% if selection.equipment == "Raw" %} selected{% endif %}>{{strings.selectors.equipment.raw}}</option>
+        <option value="wraps"{% if selection.equipment == "Wraps" %} selected{% endif %}>{{strings.selectors.equipment.wraps}}</option>
+        <option value="raw_wraps"{% if selection.equipment == "RawAndWraps" %} selected{% endif %}>{{strings.selectors.equipment.raw_wraps}}</option>
+        <option value="single"{% if selection.equipment == "Single" %} selected{% endif %}>{{strings.selectors.equipment.single}}</option>
+        <option value="multi"{% if selection.equipment == "Multi" %} selected{% endif %}>{{strings.selectors.equipment.multi}}</option>
+      </select>
+      {% include "weightclass" %}
+      <select id="sexselect">
+        <option value="all"{% if selection.sex == "AllSexes" %} selected{% endif %}>{{strings.selectors.sex.all}}</option>
+        <option value="men"{% if selection.sex == "Men" %} selected{% endif %}>{{strings.selectors.sex.m}}</option>
+        <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
+      </select>
+    </div>
     <div id="controls-right">
       {% include "weightunits" %}
       {% include "langselect" %}

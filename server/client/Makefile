@@ -1,4 +1,4 @@
-.PHONY: npminit builddir css js oldimages slickgrid
+.PHONY: npminit builddir css js oldimages slickgrid clean
 
 BUILDDIR := build
 OLDWEB := "../../web"
@@ -37,3 +37,6 @@ slickgrid: builddir
             ../../web/scripts/SlickGrid-2.2.6/slick.core.js \
             ../../web/scripts/SlickGrid-2.2.6/slick.grid.js \
             | ../../web/try-uglify ${BUILDDIR}/slickgrid.min.js
+
+clean:
+	rm -rf build node_modules

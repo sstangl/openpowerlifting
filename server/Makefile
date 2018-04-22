@@ -39,5 +39,6 @@ release: binary data config oldstatics clientstatics
 	echo "Good luck!"
 
 clean:
+	$(MAKE) -C client clean
 	rm -rf ${BUILDDIR}
 	rm -rf target
