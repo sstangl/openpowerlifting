@@ -18,32 +18,32 @@ except ModuleNotFoundError:
 
 # Local results, national results, international results
 URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=1",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=2",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=3",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=4",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=5",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=6",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=7",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=8",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=9",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=10",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=11",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=12",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=13",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=14",
-            # "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=15",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2018",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2017",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2016",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2015",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2014",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2013",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2012",
-            # "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2011",
-            #"https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2010",
-            #"https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2009",
-            #"https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2008"
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=1",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=2",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=3",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=4",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=5",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=6",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=7",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=8",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=9",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=10",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=11",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=12",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=13",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=14",
+            "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=15",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2018",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2017",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2016",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2015",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2014",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2013",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2012",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2011",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2010",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2009",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2008"
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2007",
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2006",
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2005",
@@ -61,7 +61,27 @@ URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1993",
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1992",
             "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1991",
-            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1990"]
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1990"
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1989",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1988",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1987",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1986",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1985",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1984",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1983",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1982",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1981",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1980"
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1979",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1978",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1977",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1976",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1975",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1974",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1973",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1972",
+            "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/1971"
+            ]
 BASEURL = "https://suomenvoimanostoliitto.fi"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -81,7 +101,6 @@ def getmeetlist(html):
     urls = []
     for div in soup.find_all('div',{'class':'views-field views-field-title'}):
         url = div.a['href']
-
 
         if 'http' not in url:
             url = BASEURL + url
