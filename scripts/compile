@@ -74,7 +74,6 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     newmeet = Csv(meetpath)
 
     # Remove some columns that are allowed as data but are ignored.
-    newentries.remove_column_by_name("BirthYear")
     newentries.remove_column_by_name("Country")
     newentries.remove_column_by_name("School")
     newentries.remove_column_by_name("Team")
@@ -123,6 +122,7 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
         row[idx] = str(get_lifterid(row[nameidx]))
 
     age_from_birthyear(newentries, newmeet.rows[0][newmeet.index('Date')])
+    newentries.remove_column_by_name("BirthYear")
 
     entriescsv.cat(newentries)
     meetscsv.cat(newmeet)
