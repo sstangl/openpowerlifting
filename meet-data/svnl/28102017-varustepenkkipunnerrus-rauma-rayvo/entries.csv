@@ -1,11 +1,11 @@
-Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Equipment,BirthYear,Event
-1,F,63,62.30,Mirva Impiö,RAYVO,90.0,-95.0,-95.0,90.0,90.0,Open,Single-ply,1989,B
-1,M,59,54.90,Juha-Matti Englund,RAYVO,125.0,130.0,-132.5,130.0,130.0,Open,Single-ply,1981,B
-1,M,74,70.65,Heimo Törmä,RAYVO,105.0,110.0,115.0,115.0,115.0,Over 60,Single-ply,1950,B
-1,M,83,82.55,Tapio Pärssinen,RAYVO,177.5,182.5,187.5,187.5,187.5,Open,Single-ply,1977,B
-2,M,83,78.35,Iiro Virtanen,RAYVO,-170.0,177.5,180.0,180.0,180.0,Open,Single-ply,1986,B
-1,M,93,89.85,Petteri Laurikainen,E-IT,50.0,,,50.0,50.0,Over 40,Single-ply,1969,B
-1,M,105,103.35,Kaj Wasenius,OpLi,140.0,150.0,-160.0,150.0,150.0,Over 40,Single-ply,1972,B
-DQ,M,105,95.65,Toni Ratilainen,PV-81,-200.0,-200.0,-200.0,,,Over 40,Single-ply,1974,B
-1,M,120,109.25,Timo Rukkila,E-IT,205.0,212.5,-217.5,212.5,212.5,Over 40,Single-ply,1972,B
-1,M,120+,132.40,Jari Nurminen,RAYVO,175.0,-185.0,-185.0,175.0,175.0,Over 40,Single-ply,1971,B
+Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Equipment,Event
+1,F,63,62.30,Mirva Impiö,RAYVO,90,-95,-95,90.0,90,Open,Single-ply,B
+1,M,59,54.90,Juha-Matti Englund,RAYVO,125,130,-132.5,130.0,130,Open,Single-ply,B
+1,M,74,70.65,Heimo Törmä,RAYVO,105,110,115,115.0,115,Over 60,Single-ply,B
+1,M,83,82.55,Tapio Pärssinen,RAYVO,177.5,182.5,187.5,187.5,187.5,Open,Single-ply,B
+2,M,83,78.35,Iiro Virtanen,RAYVO,-170,177.5,180,180.0,180,Open,Single-ply,B
+1,M,93,89.85,Petteri Laurikainen,E-IT,50,,,50.0,50,Over 40,Single-ply,B
+1,M,105,103.35,Kaj Wasenius,OpLi,140,150,-160,150.0,150,Over 40,Single-ply,B
+DQ,M,105,95.65,Toni Ratilainen,PV-81,-200,-200,-200,,,Over 40,Single-ply,B
+1,M,120,109.25,Timo Rukkila,E-IT,205,212.5,-217.5,212.5,212.5,Over 40,Single-ply,B
+1,M,120+,132.40,Jari Nurminen,RAYVO,175,-185,-185,175.0,175,Over 40,Single-ply,B

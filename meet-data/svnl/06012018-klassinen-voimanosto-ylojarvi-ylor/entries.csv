@@ -1,11 +1,11 @@
-Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Equipment,BirthYear,Event
-1,F,57,55.93,Sanna Hillberg,YlöR,25.0,,,25.0,40.0,52.5,57.5,57.5,45.0,60.0,75.0,75.0,157.5,Over 40,Raw,1974,SBD
-1,M,53,49.31,Anton Kauranen,YlöR,60.0,65.0,70.0,70.0,75.0,-80.0,-80.0,75.0,90.0,100.0,105.0,105.0,250.0,Under 18,Raw,2003,SBD
-1,M,59,54.71,Olli Peräinen,TVN,70.0,75.0,80.0,80.0,45.0,50.0,-55.0,50.0,60.0,70.0,80.0,80.0,210.0,Under 18,Raw,2003,SBD
-1,M,74,73.51,Antero Kauranen,YlöR,65.0,,,65.0,125.0,130.0,,130.0,90.0,,,90.0,285.0,Over 70,Raw,1948,SBD
-1,M,93,84.60,Juha Ristolainen,YlöR,100.0,120.0,140.0,140.0,100.0,120.0,-130.0,120.0,130.0,190.0,200.0,200.0,460.0,Over 40,Raw,1969,SBD
-1,M,105,101.95,Jukka-Pekka Rinkinen,TurSa,210.0,220.0,230.0,230.0,170.0,180.0,-185.0,180.0,250.0,270.0,-285.0,270.0,680.0,Open,Raw,1979,SBD
-1,M,105,96.94,Hannu Mikkola,YlöR,57.5,77.5,100.0,100.0,100.0,115.0,130.0,130.0,77.5,107.5,137.5,137.5,367.5,Over 40,Raw,1970,SBD
-1,M,105,102.59,Matti Heinänen,PetPet,-170.0,170.0,190.0,190.0,130.0,140.0,-145.0,140.0,180.0,200.0,210.0,210.0,540.0,Over 60,Raw,1957,SBD
-1,M,120,119.99,Juha Vuorikoski,YlöR,207.5,215.0,222.5,222.5,135.0,147.5,150.0,150.0,242.5,255.0,,255.0,627.5,Open,Raw,1988,SBD
-1,M,120+,134.63,Vesa Korhonen,YlöR,75.0,,,75.0,150.0,182.5,200.0,200.0,75.0,,,75.0,350.0,Over 40,Raw,1974,SBD
+Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Equipment,Event
+1,F,57,55.93,Sanna Hillberg,YlöR,25,,,25,40,52.5,57.5,57.5,45,60,75,75,157.5,Over 40,Raw,SBD
+1,M,53,49.31,Anton Kauranen,YlöR,60,65,70,70,75,-80,-80,75,90,100,105,105,250,Under 18,Raw,SBD
+1,M,59,54.71,Olli Peräinen,TVN,70,75,80,80,45,50,-55,50,60,70,80,80,210,Under 18,Raw,SBD
+1,M,74,73.51,Antero Kauranen,YlöR,65,,,65,125,130,,130,90,,,90,285,Over 70,Raw,SBD
+1,M,93,84.60,Juha Ristolainen,YlöR,100,120,140,140,100,120,-130,120,130,190,200,200,460,Over 40,Raw,SBD
+1,M,105,101.95,Jukka-Pekka Rinkinen,TurSa,210,220,230,230,170,180,-185,180,250,270,-285,270,680,Open,Raw,SBD
+1,M,105,96.94,Hannu Mikkola,YlöR,57.5,77.5,100,100,100,115,130,130,77.5,107.5,137.5,137.5,367.5,Over 40,Raw,SBD
+1,M,105,102.59,Matti Heinänen,PetPet,-170,170,190,190,130,140,-145,140,180,200,210,210,540,Over 60,Raw,SBD
+1,M,120,119.99,Juha Vuorikoski,YlöR,207.5,215,222.5,222.5,135,147.5,150,150,242.5,255,,255,627.5,Open,Raw,SBD
+1,M,120+,134.63,Vesa Korhonen,YlöR,75,,,75,150,182.5,200,200,75,,,75,350,Over 40,Raw,SBD

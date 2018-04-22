@@ -1,9 +1,9 @@
-Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Equipment,BirthYear,Event
-1,M,74,72.40,Timo Heiskanen,M-Club,-185.0,190.0,-200.0,190.0,105.0,112.5,120.0,120.0,250.0,262.5,-270.0,262.5,572.5,Open,Single-ply,1970,SBD
-2,M,74,73.90,Niclas Strand,ÅKK,-170.0,170.0,-192.5,170.0,110.0,115.0,117.5,117.5,213.0,220.5,235.0,235.0,522.5,Open,Single-ply,1989,SBD
-1,M,83,82.70,Sebastian Eriksson,ÅKK,190.0,200.5,202.5,202.5,160.0,170.5,175.0,175.0,210.0,222.5,230.0,230.0,607.5,Open,Single-ply,1991,SBD
-DQ,M,83,75.90,Henry Hermans,ÅKK,-110.0,120.0,-130.0,120.0,-90.0,-92.5,-92.5,,-130.0,,,,,Open,Single-ply,1961,SBD
-1,M,93,91.95,Björn Berg,ÅKK,205.0,-215.0,225.0,225.0,137.5,142.5,147.5,147.5,220.0,232.5,242.5,242.5,615.0,Open,Single-ply,1982,SBD
-2,M,93,89.85,Anders Johansson,ÅKK,75.0,,,75.0,125.0,130.0,135.0,135.0,200.0,215.0,,215.0,425.0,Open,Single-ply,1968,SBD
-1,M,120,109.50,John Eriksson,ÅKK,210.0,222.5,230.0,230.0,145.0,150.0,155.0,155.0,245.0,260.0,-270.0,260.0,645.0,Open,Single-ply,1987,SBD
-1,M,120+,162.40,Ove Lehto,ÅKK,225.0,255.0,275.0,275.0,225.0,250.0,265.0,265.0,275.0,300.0,320.0,320.0,860.0,Open,Single-ply,1972,SBD
+Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Division,Equipment,Event
+1,M,74,72.40,Timo Heiskanen,M-Club,-185,190,-200,190,105,112.5,120,120,250,262.5,-270,262.5,572.5,Open,Raw,SBD
+2,M,74,73.90,Niclas Strand,ÅKK,-170,170,-192.5,170,110,115,117.5,117.5,213,220.5,235,235,522.5,Open,Raw,SBD
+1,M,83,82.70,Sebastian Eriksson,ÅKK,190,200.5,202.5,202.5,160,170.5,175,175,210,222.5,230,230,607.5,Open,Raw,SBD
+DQ,M,83,75.90,Henry Hermans,ÅKK,-110,120,-130,120,-90,-92.5,-92.5,,-130,,,,,Open,Raw,SBD
+1,M,93,91.95,Björn Berg,ÅKK,205,-215,225,225,137.5,142.5,147.5,147.5,220,232.5,242.5,242.5,615,Open,Raw,SBD
+2,M,93,89.85,Anders Johansson,ÅKK,75,,,75,125,130,135,135,200,215,,215,425,Open,Raw,SBD
+1,M,120,109.50,John Eriksson,ÅKK,210,222.5,230,230,145,150,155,155,245,260,-270,260,645,Open,Raw,SBD
+1,M,120+,162.40,Ove Lehto,ÅKK,225,255,275,275,225,250,265,265,275,300,320,320,860,Open,Raw,SBD

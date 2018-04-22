@@ -1,14 +1,14 @@
-Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Equipment,BirthYear,Event
-1,F,57,56.15,Johanna Enkvist,PV,55.0,62.5,-65.0,62.5,62.5,Under 23,Raw,1995,B
-1,F,63,62.15,Merja Ojala,RaPa,52.5,55.0,57.5,57.5,57.5,Over 50,Raw,1963,B
-1,F,84+,88.85,Joanna Linna,KoJy,75.0,77.5,80.0,80.0,80.0,Over 40,Raw,1974,B
-1,M,66,64.65,Nicklas Björkgren,KoJy,70.0,77.5,82.5,82.5,82.5,Under 18,Raw,2000,B
-1,M,74,71.45,Tony Björkgren,KoJy,110.0,115.0,120.0,120.0,120.0,Over 40,Raw,1975,B
-1,M,83,81.30,Tobias Selin,JP 2000,135.0,140.0,,140.0,140.0,Open,Raw,1992,B
-1,M,83,82.10,Juha Kivinen,KoJy,130.0,-137.5,142.5,142.5,142.5,Over 60,Raw,1958,B
-1,M,93,92.00,Joel Rissanen,KP,110.0,115.0,120.0,120.0,120.0,Under 18,Raw,2000,B
-2,M,93,91.35,Jonatan Stranden,NyKK,115.0,122.5,-127.5,122.5,122.5,Open,Raw,1985,B
-1,M,105,104.95,Jussi Kangasvieri,NPower,160.0,167.5,175.0,175.0,175.0,Open,Raw,1987,B
-1,M,105,103.85,Pekka Penttilä,KoJy,177.5,182.5,-190.0,182.5,182.5,Over 40,Raw,1975,B
-1,M,105,95.70,Juha Pohjonen,KoJy,140.0,150.0,160.0,160.0,160.0,Over 50,Raw,1966,B
-1,M,120+,122.55,Marko Palokoski,PTVAK,155.0,-160.0,-160.0,155.0,155.0,Over 40,Raw,1969,B
+Place,Sex,WeightClassKg,BodyweightKg,Name,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Equipment,Event
+1,F,57,56.15,Johanna Enkvist,PV,55,62.5,-65,62.5,62.5,Under 23,Raw,B
+1,F,63,62.15,Merja Ojala,RaPa,52.5,55,57.5,57.5,57.5,Over 50,Raw,B
+1,F,84+,88.85,Joanna Linna,KoJy,75,77.5,80,80.0,80,Over 40,Raw,B
+1,M,66,64.65,Nicklas Björkgren,KoJy,70,77.5,82.5,82.5,82.5,Under 18,Raw,B
+1,M,74,71.45,Tony Björkgren,KoJy,110,115,120,120.0,120,Over 40,Raw,B
+1,M,83,81.30,Tobias Selin,JP 2000,135,140,,140.0,140,Open,Raw,B
+1,M,83,82.10,Juha Kivinen,KoJy,130,-137.5,142.5,142.5,142.5,Over 60,Raw,B
+1,M,93,92,Joel Rissanen,KP,110,115,120,120.0,120,Under 18,Raw,B
+2,M,93,91.35,Jonatan Stranden,NyKK,115,122.5,-127.5,122.5,122.5,Open,Raw,B
+1,M,105,104.95,Jussi Kangasvieri,NPower,160,167.5,175,175.0,175,Open,Raw,B
+1,M,105,103.85,Pekka Penttilä,KoJy,177.5,182.5,-190,182.5,182.5,Over 40,Raw,B
+1,M,105,95.70,Juha Pohjonen,KoJy,140,150,160,160.0,160,Over 50,Raw,B
+1,M,120+,122.55,Marko Palokoski,PTVAK,155,-160,-160,155.0,155,Over 40,Raw,B
