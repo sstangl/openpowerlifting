@@ -71,6 +71,14 @@ def main():
             meetlist.append(line)
 
     entered = oplprobe.getenteredurls(FEDDIR)
+    variants = set()
+    for url in entered:
+        if '/Resultados/' in url:
+            variants.add(url.replace('/Resultados/', '/resultados/'))
+        elif '/resultados/' in url:
+            variants.add(url.replace('/resultados/', '/Resultados/'))
+    entered = entered.union(variants)
+
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[AEP]'), unentered)
