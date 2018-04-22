@@ -21,7 +21,7 @@ function makeDataProvider() {
             let name = '<a href="/u/' + entry.username + '">' + entry.name + '</a>';
             if (entry.instagram) {
                 name += '<a href="https://www.instagram.com/' + entry.instagram +
-                        '" class="instagram">' +
+                        '" class="instagram" target="_blank">' +
                         '<i class="fa fa-instagram fa-resize"></i></a>';
             }
 
