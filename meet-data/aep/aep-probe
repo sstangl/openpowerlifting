@@ -33,8 +33,8 @@ def color(s):
 
 
 def getmeetlist(html, url):
-    baseurl = url.replace('Resultados.html','')
-    baseurl = baseurl.replace('resultados.html','')
+    baseurl = url.replace('Resultados.html', '')
+    baseurl = baseurl.replace('resultados.html', '')
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -42,7 +42,7 @@ def getmeetlist(html, url):
     for a in soup.find_all('a'):
         url = a['href']
 
-        if not 'http:' in url:
+        if 'http:' not in url:
             url = baseurl + url
 
         if url not in urls:  # Sometimes the entries show up twice.
