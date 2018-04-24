@@ -261,46 +261,46 @@ def check_column_birthyear(s, row, csv):
             pwarning("BirthYear looks implausible: '%s'" % s)
 
 
-def check_column_weightclass(s, row, csv):
-    if s[-1] is '+':
-        check_positive_number_column(s[:-1], row, csv)
+def check_row_weightclass(row, csv,weightclasses):
+    if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] !="":
+        wc = row[csv.index('WeightClassKg')]
+        if wc[-1] is '+':
+            check_positive_number_column(wc[:-1], row, csv)
 
-    ipf_men = ['53', '59', '66', '74', '83', '93', '105', '120', '120+']
-    ipf_women = ['43', '47', '52', '57', '63', '72', '84', '84+']
-    ipf_women_extra = ['30', '35', '40']
-    ipl = ['48', '52', '56', '60', '67.5', '75', '82.5',
-           '90', '90+', '100', '110', '125', '125+']
-    rum_extra = ['44', '140', '140+']
-    parapl_men = ['49', '54', '59', '65', '72', '80', '88', '97', '107', '107+']
-    parapl_women = ['41', '45', '50', '55', '61', '67', '73', '79', '86', '86+']
+        ipf_men = ['53', '59', '66', '74', '83', '93', '105', '120', '120+']
+        ipf_women = ['43', '47', '52', '57', '63', '72', '84', '84+']
+        ipf_women_extra = ['30', '35', '40']
+        ipl = ['48', '52', '56', '60', '67.5', '75', '82.5',
+               '90', '90+', '100', '110', '125', '125+']
+        rum_extra = ['44', '140', '140+']
 
-    apa_extra = ['39']  # Youth.
-    proraw_extra = ['70', '70+', '75+', '80', '95', '110+']
-    rps_extra = ['155']
-    spf_extra = ['117.5', '100+', '67.5+']
-    idfpf_extra = ['47.5', '50.5', '55.5', '58.5']
-    ipf_extra = ['60+']
-    old_usapl = ['145', '145+']
-    wnpf_extra = ['34']
-    wpau_extra = ['155', '155+']
+        apa_extra = ['39']  # Youth.
+        proraw_extra = ['70', '70+', '75+', '80', '95', '110+']
+        rps_extra = ['155']
+        spf_extra = ['117.5', '100+', '67.5+']
+        idfpf_extra = ['47.5', '50.5', '55.5', '58.5']
+        ipf_extra = ['60+']
+        old_usapl = ['145', '145+']
+        wnpf_extra = ['34']
+        wpau_extra = ['155', '155+']
 
-    ffforce_extra = ['83+']  # Cadet division, for youth.
-    parapl_extra = ['82.5+']
+        ffforce_extra = ['83+']  # Cadet division, for youth.
+        parapl_extra = ['82.5+']
 
-    classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
-        rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
-        old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
-        idfpf_extra + parapl_extra + wpau_extra + parapl_men + parapl_women
+        classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
+            rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
+            old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
+            idfpf_extra + wpau_extra
 
-    if s not in classes:
-        pwarning("Unknown weight class: %s" % s)
+        if (not weightclasses and wc not in classes) or (weightclasses and wc not in weightclasses):
+            pwarning("Unknown weight class: %s" % wc)
 
-    try:
-        f = float(s)
-        if f < 30:  # Nobody should weigh this little.
-            pwarning("Suspiciously low weight class: %s" % s)
-    except ValueError:
-        pass
+        try:
+            f = float(wc)
+            if f < 30:  # Nobody should weigh this little.
+                pwarning("Suspiciously low weight class: %s" % wc)
+        except ValueError:
+            pass
 
 
 def check_column_bodyweightkg(s, row, csv):
@@ -355,7 +355,7 @@ HeaderHandlers = {
     'BirthYear': check_column_birthyear,
 
     # Stat columns. Only Kg is valid.
-    'WeightClassKg': check_column_weightclass,
+    'WeightClassKg': ignore_column,
     'BodyweightKg': check_column_bodyweightkg,
 
     # Lift columns. Only Kg is valid.
@@ -779,6 +779,8 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         if (meet_id not in configtoml["exclusions"] or
                 "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]):
             check_row_weightclass_sex(row, csv, weight_classes)
+            check_row_weightclass(row,csv,weight_classes)
+
         if (meet_id not in configtoml["exclusions"] or
                 "check_row_division" not in configtoml["exclusions"][meet_id]):
             check_row_division(row, csv, configtoml["divisions"], meet_year)
@@ -795,6 +797,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
             check_row_lift_order(
                 row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
+
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)
         check_row_weightclass_consistency(row, csv, None)
@@ -805,6 +808,9 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
             row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
         check_row_lift_order(
             row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
+
+        check_row_weightclass(row,csv,None)
+
 
     check_row_total_consistency(row, csv)
 
