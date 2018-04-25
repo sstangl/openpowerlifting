@@ -1,51 +1,129 @@
-WeightClassKg,Place,Name,BirthYear,Team,BodyweightKg,TotalKg,Division,Sex,Equipment,Event
-44,1,Riikka Auvinen,1983,PCV-94,43.65,52.5,Open,F,Single-ply,
-44,2,Raija Koskinen,1963,Valtti,47.50,85,Open,F,Single-ply,
-44,3,Sanna Apuli,1981,Py-Pa,46.85,67.5,Open,F,Single-ply,
-52,1,Iina Laine,1966,LaVo,51.40,97.5,Open,F,Single-ply,
-52,2,Mervi Sirkiä,1972,TNT,51.65,97.5,Open,F,Single-ply,
-52,3,Virva-Tuulia Arpala,1969,PV,50.65,95,Open,F,Single-ply,
-52,4,Aira Knutars,1954,KajKu,51.65,82.5,Open,F,Single-ply,
-56,1,Tarja Vähäkuopus,1982,OPT,54.95,82.5,Open,F,Single-ply,
-56,2,Sanna Hillberg,1974,YlöR,53.25,65,Open,F,Single-ply,
-56,3,Mari Uitto,1979,SalVo,54.40,65,Open,F,Single-ply,
-56,4,Päivi Bodbacka,1961,PV,55.45,65,Open,F,Single-ply,
-60,1,Eeva Rantanen,1967,HLT,58.05,115,Open,F,Single-ply,
-60,2,Eini Virkki,1981,I-HV,58.05,95,Open,F,Single-ply,
-60,3,Päivi Paananen,1974,Gym-23,59.35,85,Open,F,Single-ply,
-67.5,1,Maria Koskinen,1977,IFL,66.90,110,Open,F,Single-ply,
-67.5,2,Heini Laitinen,1967,JVK,65.95,102.5,Open,F,Single-ply,
-67.5,3,Annica Helsing,1977,PV,63.65,70,Open,F,Single-ply,
-67.5,DQ,Marika Lönnvik,1985,PV,66.20,,Open,F,Single-ply,
-75,1,Joanna Liimatainen,1974,PV,71.05,102.5,Open,F,Single-ply,
-75,2,Jessika Koski,1982,PV,74.85,87.5,Open,F,Single-ply,
-75,DQ,Kirsi Ståhl,1977,LaVo,74.55,,Open,F,Single-ply,
-75,2,Linda Rosbäck,1978,ÅKK,82.10,85,Open,F,Single-ply,
-75,3,Sirpa Kokkonen,1958,HPV,75.25,65,Open,F,Single-ply,
-90,1,Katariina Nokua,1973,PTVAK,90,102.5,Open,F,Single-ply,
-90,2,Tarja Perälä,1966,HU,86.20,100,Open,F,Single-ply,
-44,1,Riikka Auvinen,1983,PCV-94,43.65,52.5,Open,F,Single-ply,
-44,2,Raija Koskinen,1963,Valtti,47.50,85,Open,F,Single-ply,
-44,3,Sanna Apuli,1981,Py-Pa,46.85,67.5,Open,F,Single-ply,
-52,1,Iina Laine,1966,LaVo,51.40,97.5,Open,F,Single-ply,
-52,2,Mervi Sirkiä,1972,TNT,51.65,97.5,Open,F,Single-ply,
-52,3,Virva-Tuulia Arpala,1969,PV,50.65,95,Open,F,Single-ply,
-52,4,Aira Knutars,1954,KajKu,51.65,82.5,Open,F,Single-ply,
-56,1,Tarja Vähäkuopus,1982,OPT,54.95,82.5,Open,F,Single-ply,
-56,2,Sanna Hillberg,1974,YlöR,53.25,65,Open,F,Single-ply,
-56,3,Mari Uitto,1979,SalVo,54.40,65,Open,F,Single-ply,
-56,4,Päivi Bodbacka,1961,PV,55.45,65,Open,F,Single-ply,
-60,1,Eeva Rantanen,1967,HLT,58.05,115,Open,F,Single-ply,
-60,2,Eini Virkki,1981,I-HV,58.05,95,Open,F,Single-ply,
-60,3,Päivi Paananen,1974,Gym-23,59.35,85,Open,F,Single-ply,
-67.5,1,Maria Koskinen,1977,IFL,66.90,110,Open,F,Single-ply,
-67.5,2,Heini Laitinen,1967,JVK,65.95,102.5,Open,F,Single-ply,
-67.5,3,Annica Helsing,1977,PV,63.65,70,Open,F,Single-ply,
-67.5,DQ,Marika Lönnvik,1985,PV,66.20,,Open,F,Single-ply,
-75,1,Joanna Liimatainen,1974,PV,71.05,102.5,Open,F,Single-ply,
-75,2,Jessika Koski,1982,PV,74.85,87.5,Open,F,Single-ply,
-75,DQ,Kirsi Ståhl,1977,LaVo,74.55,,Open,F,Single-ply,
-75,2,Linda Rosbäck,1978,ÅKK,82.10,85,Open,F,Single-ply,
-75,3,Sirpa Kokkonen,1958,HPV,75.25,65,Open,F,Single-ply,
-90,1,Katariina Nokua,1973,PTVAK,90,102.5,Open,F,Single-ply,
-90,2,Tarja Perälä,1966,HU,86.20,100,Open,F,Single-ply,
+WeightClassKg,Place,Name,BirthYear,Team,BodyweightKg,BestBenchKg,TotalKg,Bench4Kg,Division,Sex,Equipment,Event
+44,1,Riikka Auvinen,1983,PCV-94,43.65,52.5,52.5,,Open,F,Single-ply,B
+48,1,Hanna Rantala,1982,LaVo,47.9,95,95,,Open,F,Single-ply,B
+48,2,Raija Koskinen,1963,Valtti,47.5,85,85,,Open,F,Single-ply,B
+48,3,Sanna Apuli,1981,Py-Pa,46.85,67.5,67.5,,Open,F,Single-ply,B
+52,1,Iina Laine,1966,LaVo,51.4,97.5,97.5,,Open,F,Single-ply,B
+52,2,Mervi Sirkiä,1972,TNT,51.65,97.5,97.5,,Open,F,Single-ply,B
+52,3,Virva-Tuulia Arpala,1969,PV,50.65,95,95,,Open,F,Single-ply,B
+52,4,Aira Knutars,1954,KajKu,51.65,82.5,82.5,,Over 50,F,Single-ply,B
+56,1,Tarja Vähäkuopus,1982,OPT,54.95,82.5,82.5,,Open,F,Single-ply,B
+56,2,Sanna Hillberg,1974,YlöR,53.25,65,65,,Open,F,Single-ply,B
+56,3,Mari Uitto,1979,SalVo,54.4,65,65,,Open,F,Single-ply,B
+56,4,Päivi Bodbacka,1961,PV,55.45,65,65,,Open,F,Single-ply,B
+60,1,Eeva Rantanen,1967,HLT,58.05,115,115,,Open,F,Single-ply,B
+60,2,Eini Virkki,1981,I-HV,58.05,95,95,,Open,F,Single-ply,B
+60,3,Päivi Paananen,1974,Gym-23,59.35,85,85,,Open,F,Single-ply,B
+67.5,1,Maria Koskinen,1977,IFL,66.9,110,110,,Open,F,Single-ply,B
+67.5,2,Heini Laitinen,1967,JVK,65.95,102.5,102.5,,Open,F,Single-ply,B
+67.5,3,Annica Helsing,1977,PV,63.65,70,70,,Open,F,Single-ply,B
+67.5,DQ,Marika Lönnvik,1985,PV,66.2,,,,Open,F,Single-ply,B
+75,1,Joanna Liimatainen,1974,PV,71.05,102.5,102.5,,Open,F,Single-ply,B
+75,2,Jessika Koski,1982,PV,74.85,87.5,87.5,,Open,F,Single-ply,B
+75,DQ,Kirsi Ståhl,1977,LaVo,74.55,,,,Open,F,Single-ply,B
+82.5,1,Tarja Koski-Sipilä,1980,JVK,82.1,118,118,122.5,Open,F,Single-ply,B
+82.5,2,Linda Rosbäck,1978,ÅKK,82.1,85,85,,Open,F,Single-ply,B
+82.5,3,Sirpa Kokkonen,1958,HPV,75.25,65,65,,Open,F,Single-ply,B
+90,1,Katariina Nokua,1973,PTVAK,90,102.5,102.5,,Open,F,Single-ply,B
+90,2,Tarja Perälä,1966,HU,86.2,100,100,,Open,F,Single-ply,B
+56,1,Dmitrij Jakovlev,1982,TVN,55.45,132.5,132.5,,Under 23,M,Single-ply,B
+56,2,Pentti Rimpi,1967,MY-Power,55.7,115,115,,Open,M,Single-ply,B
+60,1,Ari Kurjenkallio,1981,Tap.Erä,59.8,155,155,161,Open,M,Single-ply,B
+60,2,Raimo Savaloja,1977,Ols-Ta,59.2,135,135,,Open,M,Single-ply,B
+60,3,Tony Björkgren,1975,KoJy,59.6,135,135,,Open,M,Single-ply,B
+60,4,Sami Lipponen,1973,Hektor,59.85,132.5,132.5,,Open,M,Single-ply,B
+60,5,Sven-Erik Elfberg,1981,ÅKK,59.35,130,130,,Open,M,Single-ply,B
+60,DQ,Mikko Ylhäinen,1983,Vilke,59.6,,,,Open,M,Single-ply,B
+67.5,1,Janne Pöykiö,1978,PCV-94,67.15,178.5,178.5,,Open,M,Single-ply,B
+67.5,2,Tuomas Nikkilä,1978,TamRy,66.2,160,160,,Open,M,Single-ply,B
+67.5,3,Kalle Rantala,1977,PTVAK,67.15,160,160,,Open,M,Single-ply,B
+75,1,Antti Liimatainen,1976,KesU,74.5,195,195,,Open,M,Single-ply,B
+75,2,Jari Tähtinen,1955,Valtti,74.75,172.5,172.5,,Open,M,Single-ply,B
+75,3,Vesa Mattila,1980,VilpVe,73.35,170,170,,Open,M,Single-ply,B
+75,4,Antti Partanen,1980,JoPuPo,74.5,170,170,,Open,M,Single-ply,B
+75,5,Kim Päivöke,1972,KK-V,74.35,150,150,,Open,M,Single-ply,B
+75,DQ,Jukka Paananen,1975,K-UV,73.1,,,,Open,M,Single-ply,B
+75,DQ,Ville Rytkölä,1977,Gym-23,74.45,,,,Open,M,Single-ply,B
+82.5,1,Ville-Petteri Erola,1974,OrVo,82.5,230,230,,Open,M,Single-ply,B
+82.5,2,Timo Parviainen,1966,HVV,81.05,210,210,,Open,M,Single-ply,B
+82.5,3,Kari Veid,1961,JVK,82.3,207.5,207.5,,Open,M,Single-ply,B
+82.5,4,Mika P Parviainen,1974,JoPuPo,81.9,192.5,192.5,,Open,M,Single-ply,B
+82.5,5,Ilkka Launonen,1954,LepU,82.2,187.5,187.5,,Over 50,M,Single-ply,B
+82.5,6,Tomi Raatikainen,1976,PorHT,82.25,187.5,187.5,,Open,M,Single-ply,B
+82.5,7,Jani Närhi,1973,JVK,81.65,185,185,,Open,M,Single-ply,B
+82.5,8,Taisto Paananen,1949,Gym-23,81.85,185,185,,Open,M,Single-ply,B
+82.5,9,Tomi Vikla,1970,JoPuPo,81.9,185,185,,Open,M,Single-ply,B
+82.5,10,Juha Anttila,1980,Valtti,80.05,180,180,,Open,M,Single-ply,B
+82.5,11,Olli Rantanen,1956,I-HV,80.65,180,180,,Open,M,Single-ply,B
+82.5,12,Olli Suominen,1982,SVO 2000,82.25,180,180,,Open,M,Single-ply,B
+82.5,13,Mikko Lehtimäki,1978,TamRy,80.1,177.5,177.5,,Open,M,Single-ply,B
+82.5,14,Petri Toivanen,1973,SaJy,81,170,170,,Open,M,Single-ply,B
+82.5,15,Thomas Mickelsson,1980,ÅKK,82.05,170,170,,Open,M,Single-ply,B
+82.5,16,Kari Kunnari,1983,K-UV,82.5,160,160,,Open,M,Single-ply,B
+90,1,Petri Hietamäki,1977,SiSi,89,235,235,238,Open,M,Single-ply,B
+90,2,Juha Tuononen,1968,Tap.Erä,88.7,230,230,,Open,M,Single-ply,B
+90,3,Stefan Westerholm,1980,HIK,89.45,230,230,,Open,M,Single-ply,B
+90,4,Keijo Kiiskinen,1961,TiKa,88.75,220,220,,Open,M,Single-ply,B
+90,5,Matti Vuontisvaara,1967,Valtti,89.7,207.5,207.5,,Open,M,Single-ply,B
+90,6,Ahti Kokkonen,1959,HPV,89.85,197.5,197.5,,Open,M,Single-ply,B
+90,7,Rami Kivistö,1975,KeBo,88.55,195,195,,Open,M,Single-ply,B
+90,8,Juha Suomalainen,1972,JoBoNos,89.75,195,195,,Open,M,Single-ply,B
+90,9,Tarmo Vanhamäki,1960,YlöR,89,192.5,192.5,,Open,M,Single-ply,B
+90,10,Esa Turunen,1981,MKK PT,87.65,190,190,,Open,M,Single-ply,B
+90,11,Jarkko Pitkänen,1974,HPV,89.65,177.5,177.5,,Open,M,Single-ply,B
+90,12,Seppo Norpila,1963,K-UV,89.7,170,170,,Open,M,Single-ply,B
+90,DQ,Pasi Miettinen,1972,MKK PT,87.2,,,,Open,M,Single-ply,B
+90,DQ,Ville Himanen,1972,MKK PT,87.3,,,,Open,M,Single-ply,B
+90,DQ,Mika Paasonen,1978,MY-Power,89.45,,,,Open,M,Single-ply,B
+100,1,Jukka Keinänen,1971,MKK PT,96.3,245,245,,Open,M,Single-ply,B
+100,2,Jarmo Sohlman,1969,TNT,97.35,235,235,,Open,M,Single-ply,B
+100,3,Karri Penttilä,1975,HaSi,99.9,225,225,,Open,M,Single-ply,B
+100,4,Lasse Leinonen,1973,PuVo,99.95,220,220,,Open,M,Single-ply,B
+100,5,Juha Lehto,1964,Tap.Erä,99.05,217.5,217.5,,Open,M,Single-ply,B
+100,6,Mikko Tiensuu,1978,SalVo,99.7,215,215,,Open,M,Single-ply,B
+100,7,Sami Hakkarainen,1976,KP,98.45,205,205,,Open,M,Single-ply,B
+100,8,Niko Järvinen,1969,K-UV,99.9,205,205,,Open,M,Single-ply,B
+100,9,Jim Borgman,1966,HVV,93.5,202.5,202.5,,Open,M,Single-ply,B
+100,10,Petri Laurila,1962,RiKi,98.55,200,200,,Open,M,Single-ply,B
+100,11,Juha Pohjonen,1966,KoJy,98.9,200,200,,Open,M,Single-ply,B
+100,12,Roland Wahlsten,1980,PTVAK,98.65,195,195,,Open,M,Single-ply,B
+100,13,Petteri Lupala,1979,SalVo,97.1,192.5,192.5,,Open,M,Single-ply,B
+100,14,Åke Koponen,1956,HeTarmo,98.15,190,190,,Open,M,Single-ply,B
+100,15,Mika Huhtamäki,1966,K-UV,94.95,180,180,,Open,M,Single-ply,B
+100,16,Martti Naakka,1966,I-HV,98.8,180,180,,Open,M,Single-ply,B
+100,DQ,Arttu Soininen,1980,AskU,97.85,,,,Open,M,Single-ply,B
+100,DQ,Marko Salovaara,1976,PorHT,98.8,,,,Open,M,Single-ply,B
+100,DQ,Jari Kaiho,1963,JVK,99.5,,,,Open,M,Single-ply,B
+100,DD,Timo Turkkinen,1969,NoVo,99.9,,,,Open,M,Single-ply,B
+110,1,Kari Vilppola,1955,PySy,109.6,242.5,242.5,,Over 40,M,Single-ply,B
+110,2,Mika Haavisto,1976,MKK PT,103.7,240,240,,Open,M,Single-ply,B
+110,3,Petri Kinnunen,1981,SuoVo,108.4,230,230,,Open,M,Single-ply,B
+110,4,Roger Eriksson,1976,MKK PT,101.65,227.5,227.5,,Open,M,Single-ply,B
+110,5,Teemu Sinisalo,1977,HyKe,108.9,225,225,,Open,M,Single-ply,B
+110,6,Elis Högnäs,1981,ÅKK,109.65,212.5,212.5,,Open,M,Single-ply,B
+110,7,Kai Palmros,1965,SVO 2000,103.9,210,210,,Open,M,Single-ply,B
+110,8,Marko Etelälahti,1971,JVK,108,210,210,,Open,M,Single-ply,B
+110,9,Petri Koskela,1967,Gym-23,105.4,207.5,207.5,,Open,M,Single-ply,B
+110,10,Jukka Sahlström,1966,KiuJä,107.2,190,190,,Open,M,Single-ply,B
+110,DQ,Jukka Lankinen,1968,LaVoNo,105.6,,,,Open,M,Single-ply,B
+110,DQ,Juha Keskinen,1973,PTVAK,109.6,,,,Open,M,Single-ply,B
+125,1,Janne Kuuseva,1968,HyKe,120.7,290,290,,Open,M,Single-ply,B
+125,2,Ove Lehto,1972,ÅKK,124.3,280,280,,Open,M,Single-ply,B
+125,3,Fredrik Smulter,1983,VIS,121.7,247.5,247.5,,Under 23,M,Single-ply,B
+125,4,Esa Jantunen,1961,Tap.Erä,122.6,242.5,242.5,,Open,M,Single-ply,B
+125,5,Vesa Ikkala,1969,I-HV,115.15,230,230,,Open,M,Single-ply,B
+125,6,Karl-Johan Sommarström,1974,ÅKK,124.5,222.5,222.5,,Open,M,Single-ply,B
+125,7,Jaakko Viemerö,1971,PTVAK,118.4,220,220,,Open,M,Single-ply,B
+125,8,Jyrki Tokko,1966,Lo-Vo,119.2,220,220,,Open,M,Single-ply,B
+125,9,Kaj Mattila,1970,PorHT,122.65,220,220,,Open,M,Single-ply,B
+125,10,Vesa Korhonen,1974,YlöR,113.35,210,210,,Open,M,Single-ply,B
+125,11,Jan Remes,1972,JuPu,116.35,205,205,,Open,M,Single-ply,B
+125,12,Olli-Pekka Hyvärinen,1968,TVN,118.6,190,190,,Open,M,Single-ply,B
+125,DQ,Arto Hannolin,1956,HPV,122.15,,,,Open,M,Single-ply,B
+125+,1,Kenneth Sandvik,1975,ÅKK,147.1,307.5,307.5,,Open,M,Single-ply,B
+125+,2,Pekka Heikkala,1970,KiimU,132.85,260,260,,Open,M,Single-ply,B
+125+,3,Raimo Lumijärvi,1962,IiY,134.25,252.5,252.5,,Over 40,M,Single-ply,B
+125+,4,Jari Martikainen,1975,TuuRa,138.2,250,250,,Open,M,Single-ply,B
+125+,5,Jonas Pensar,1979,ÅKK,126.7,210,210,,Open,M,Single-ply,B
+125+,6,Juha Ali-Tolppa,1956,NoVo,127.45,205,205,,Open,M,Single-ply,B
+125+,DQ,Karl-Johan Renlund,1966,PV,149.6,,,,Open,M,Single-ply,B
