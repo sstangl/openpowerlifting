@@ -121,12 +121,7 @@ def main():
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for url in unentered:
-        print(url)
-        subprocess.run(['./svnl-import',url])
-
     oplprobe.print_meets(color('[SVNL]'), unentered)
-    print(color('[SVNL] ') + "Continue working through archive.")
 
 
 if __name__ == '__main__':

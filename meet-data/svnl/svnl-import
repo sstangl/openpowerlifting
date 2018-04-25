@@ -68,120 +68,125 @@ def getresultsurl(url):
 
 
 def getmeetinfo(soup):
-    csv = Csv()
-    csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
-                      'MeetState', 'MeetTown', 'MeetName']
+    try:
+        csv = Csv()
+        csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
+                          'MeetState', 'MeetTown', 'MeetName']
 
-    # Get the facts table.
-    tbody = soup.find('tbody')
-    if len(tbody) == 0:
-        error("Couldn't find the results table.")
+        # Get the facts table.
+        tbody = soup.find('tbody')
+        if len(tbody) == 0:
+            error("Couldn't find the results table.")
 
-    trs = tbody.find_all('tr')
+        trs = tbody.find_all('tr')
 
-    name = ''
-    place = ''
-    dotdate = ''
+        name = ''
+        place = ''
+        dotdate = ''
 
-    curr_line=0
-    # If the first row is blank or just a date start from the second
-    if trs[0].find('td').text.strip() =='' or trs[0].find('td').text.count('.')==2:
-        curr_line=1
-
-
-    #Name is sometimes split across two lines, with first line club name
-    # this is a somewhat hacky way of finding the date-line
-    if ((trs[curr_line+1].find('td').text.count('.') > 0 or  trs[curr_line+1].find('td').text.count('/') > 0) 
-        and len([True for c in trs[curr_line+1].text if c.isdigit()])>2):
-        name = trs[curr_line].find('td').text
-        # Get the place & date.
-        place_date = trs[curr_line+1].find('td').text.strip()
-        curr_line +=2
-    else:
-        name =  trs[curr_line+1].find('td').text
-        place_date = trs[curr_line+2].find('td').text.strip()
-        curr_line +=3
+        curr_line=0
+        # If the first row is blank or just a date start from the second
+        if trs[0].find('td').text.strip() =='' or trs[0].find('td').text.count('.')==2:
+            curr_line=1
 
 
-    # Strip out time if it's given
-    place_date = re.sub('(klo)( |\. )(\d{2}|\d)(:|\.)(\d{2}|\d)','',place_date)
-    place_date = re.sub('(klo)( |\. )(\d{2}|\d)','',place_date)
-
-    place_date = place_date.replace('La ','')
-    place_date=place_date.replace('. ','.')
-    place_date = place_date.replace(' i ',' ')
-
-    # Date is sometimes formatted DD/MM YYYY
-    if '/' in place_date and place_date.count('.') < 2:
-        place_date = re.sub('(?<=\/\d|\d{2}) ','.',place_date,count=1)
-        place_date = place_date.replace('/','.')
-    
-    split_text = re.split("[, ]",place_date[::-1],maxsplit=1)
-    split_text = [text[::-1] for text in split_text if text.strip() !=''  and not text.isupper()]
-
-    if split_text[0].count('.') >0:    
-        dotdate = split_text[0]
-        place = ' '.join(split_text[1:])
-    else:
-        dotdate = split_text[-1]
-        place = ' '.join(split_text[0:-1])
-
-
-    # Sometimes year isn't given, try and find it in the title
-    if dotdate.count('.') == 1 and not re.search('\d{4}',dotdate):
-        title= soup.find('title').text
-        year = re.search('\d{4}',title)
-        dotdate = dotdate + '.' + year.group(0)
-
-
-    # Old meets have the place below the date
-    if place == '':
-        [div,_]=get_division(trs[curr_line].find('td').text)
-        if div == '': #Then this is probably a place
-            place = trs[curr_line].find('td').text
-            trs[curr_line].string = '' # Set it blank so the script doesn't get confused later
-
-
-    # The date is formatted as dd.-dd.mm.yyyy.
-    assert '.' in dotdate
- 
-    # If multiple days are given, remove the second
-    # Dates spanning multiple months(sorry about how confusing this is)
-    # Python doesn't support variable length look behind, hence the 4 lines
-    dotdate = re.sub('(?<=\d{2}\.\d{2})\.-.*?\..*?(?=\.)','',dotdate)
-    dotdate = re.sub('(?<=\d{1}\.\d{2})\.-.*?\..*?(?=\.)','',dotdate)
-    dotdate = re.sub('(?<=\d{1}\.\d{1})\.-.*?\..*?(?=\.)','',dotdate)
-    dotdate = re.sub('(?<=\d{2}\.\d{1})\.-.*?\..*?(?=\.)','',dotdate)
-    dotdate = re.sub('\.-.*?(?=\.)','',dotdate) # Dates spanning one month
-
-    # Clean up the name
-    name = re.sub('\d{4}','',name)
-    name = name.replace(',','')
-    name = name.replace('\xa0',' ')
-    name = name.replace('  ',' ')
-    name = name.replace('  ',' ')
-    name= name.strip()
-
-    # Clean up the place
-    place = place.replace(',','')
-    place = place.strip()
-
-
-
-
-    # Construct the date string
-    [day, month, year] = dotdate.split('.')
-    if len(day) ==1:
-        day = '0'+day
-    if len(month)==1:
-        month = '0'+month
-    if len(year)==2:
-        if int(year) < 80:
-            year = '19'+year
+        #Name is sometimes split across two lines, with first line club name
+        # this is a somewhat hacky way of finding the date-line
+        if ((trs[curr_line+1].find('td').text.count('.') > 0 or  trs[curr_line+1].find('td').text.count('/') > 0) 
+            and len([True for c in trs[curr_line+1].text if c.isdigit()])>2):
+            name = trs[curr_line].find('td').text
+            # Get the place & date.
+            place_date = trs[curr_line+1].find('td').text.strip()
+            curr_line +=2
         else:
-            year = '20'+year
-    date = '%s-%s-%s' % (year.strip(), month.strip(), day.strip())
-    date=date.replace(',','')
+            name =  trs[curr_line+1].find('td').text
+            place_date = trs[curr_line+2].find('td').text.strip()
+            curr_line +=3
+
+
+        # Strip out time if it's given
+        place_date = re.sub('(klo)( |\. )(\d{2}|\d)(:|\.)(\d{2}|\d)','',place_date)
+        place_date = re.sub('(klo)( |\. )(\d{2}|\d)','',place_date)
+
+        place_date = place_date.replace('La ','')
+        place_date=place_date.replace('. ','.')
+        place_date = place_date.replace(' i ',' ')
+
+        # Date is sometimes formatted DD/MM YYYY
+        if '/' in place_date and place_date.count('.') < 2:
+            place_date = re.sub('(?<=\/\d|\d{2}) ','.',place_date,count=1)
+            place_date = place_date.replace('/','.')
+        
+        split_text = re.split("[, ]",place_date[::-1],maxsplit=1)
+        split_text = [text[::-1] for text in split_text if text.strip() !=''  and not text.isupper()]
+
+        if split_text[0].count('.') >0:    
+            dotdate = split_text[0]
+            place = ' '.join(split_text[1:])
+        else:
+            dotdate = split_text[-1]
+            place = ' '.join(split_text[0:-1])
+
+
+        # Sometimes year isn't given, try and find it in the title
+        if dotdate.count('.') == 1 and not re.search('\d{4}',dotdate):
+            title= soup.find('title').text
+            year = re.search('\d{4}',title)
+            dotdate = dotdate + '.' + year.group(0)
+
+        # Old meets have the place below the date
+        if place == '':
+            [div,_]=get_division(trs[curr_line].find('td').text)
+            if div == '': #Then this is probably a place
+                place = trs[curr_line].find('td').text
+                trs[curr_line].string = '' # Set it blank so the script doesn't get confused later
+
+
+        # The date is formatted as dd.-dd.mm.yyyy.
+        assert '.' in dotdate
+     
+        # If multiple days are given, remove the second
+        # Dates spanning multiple months(sorry about how confusing this is)
+        # Python doesn't support variable length look behind, hence the 4 lines
+        dotdate = re.sub('(?<=\d{2}\.\d{2})\.-.*?\..*?(?=\.)','',dotdate)
+        dotdate = re.sub('(?<=\d{1}\.\d{2})\.-.*?\..*?(?=\.)','',dotdate)
+        dotdate = re.sub('(?<=\d{1}\.\d{1})\.-.*?\..*?(?=\.)','',dotdate)
+        dotdate = re.sub('(?<=\d{2}\.\d{1})\.-.*?\..*?(?=\.)','',dotdate)
+        dotdate = re.sub('\.-.*?(?=\.)','',dotdate) # Dates spanning one month
+
+        # Clean up the name
+        name = re.sub('\d{4}','',name)
+        name = name.replace(',','')
+        name = name.replace('\xa0',' ')
+        name = name.replace('  ',' ')
+        name = name.replace('  ',' ')
+        name= name.strip()
+
+        # Clean up the place
+        place = place.replace(',','')
+        place = place.strip()
+
+
+        # Construct the date string
+        try:
+            [day, month, year] = dotdate.split('.')
+        except:
+            [day, month, year] = ['00','00','00']
+        if len(day) ==1:
+            day = '0'+day
+        if len(month)==1:
+            month = '0'+month
+        if len(year)==2:
+            if int(year) < 80:
+                year = '19'+year
+            else:
+                year = '20'+year
+        date = '%s-%s-%s' % (year.strip(), month.strip(), day.strip())
+        date=date.replace(',','')
+    except:
+        date = ''
+        place = ''
+        name = ''
 
 
     fed = 'SVNL'
@@ -205,7 +210,6 @@ def expand_colspans(tr,enclosing_soup):
 
 # Header is often split across multiple lines, fix this
 def combine_header(trs):
-
     # Get the original soup object
     enclosing_soup = trs[0]
     while type(enclosing_soup) != BeautifulSoup:
@@ -247,288 +251,279 @@ def combine_header(trs):
 def getresults(soup,meet_name,url):
     csv = Csv()
     # Get the results table.
-    tbody = soup.find('tbody')
-    if len(tbody) == 0:
+    tables = soup.find_all('tbody')
+    if len(tables) == 0:
         error("Couldn't find the results table.")
-
-
-    trs = tbody.find_all('tr')
-    
-    divstate = 'Open'
-    sexstate = None
-
-    # Find where the preamble ends
-    start_data = 0
-    for tr in trs:
-        if tr.find('td') and (tr.find('td').text.count('.') > 0 or  tr.find('td').text.count('/') > 0) and len([True for c in tr.find('td').text if c.isdigit()])>2:
-            break
-        start_data +=1
-
-    start_data +=1
 
     append_eqp = False
     append_sex = False
 
-    meet_data = combine_header(trs[start_data:])
-
-    if 'miehet' in meet_name.lower() or 'miesten' in meet_name.lower():
-        sexstate = 'M'
-    elif 'naiset' in meet_name.lower() or 'naisten' in meet_name.lower():
-        sexstate = 'F'
-
-    # Division sometimes is only given in page title, meet title or URL. Search all of these places
-    title= soup.find('title').text.lower()
-    div_text = re.search('m\d{2}',title)
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'M'
-
-    div_text = re.search('n\d{2}',title)
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'F'   
-
-    div_text = re.search('m\d{2}',meet_name.lower())
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'M'
-
-    div_text = re.search('n\d{2}',meet_name.lower())
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'F'  
-
-    div_text = re.search('m\d{2}',url.lower())
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'M'
-
-    div_text = re.search('n\d{2}',url.lower())
-    if div_text != None:
-        [divstate,div_text] = get_division(div_text.group(0))
-        sexstate = 'F'  
-
-    if divstate == '':
-        divstate = 'Open'
-
-   
-    for tr in meet_data:
-        text = [x.text.strip() for x in tr.find_all('td') if x.text.strip() !='']
-        # Skip blank and uninteresting rows
-        if (len(text) == 0 or (len(text) == 1 and text[0].replace(',','').isdigit())):
-            continue
-
-        # Sometimes there are some non-useful sentences about the meet written at the top
-        if len(text) == 1 and len(text[0])> 20:
-            continue
-
-        # Sometimes clubs/ cities are between rows, probably need a better way of doing this
-        if any(club_str in text[0].lower() for club_str in ['tukholma','tallinn','sotkamon visa',
-                'kajaanin kuohu','stockholm','tnt','kp','tap.erä','salvo','kavo','rayvo','tvn','uurame','äänekoski',
-                'tammisaari','punkalaidun','ulkopuoliset','helsinki']):
-            continue
+    divstate = 'Open'
+    sexstate = ''
 
 
-        # Exhibition lifters maybe?
-        if text[0] == 'Näytöt': 
-            continue
+    for table in tables:
+
+        trs = table.find_all('tr')
         
 
-        # Records are after data
-        if any(break_str in text[0] for break_str in ['ätykset','Records','Joukkuekilpailu','Norbergs Kraftsportförening','Rekord:','Domare:','Tuomarit:']):
-            break
 
+        # Find where the preamble ends
+        start_data = 0
+        for tr in trs:
+            if tr.find('td') and (tr.find('td').text.count('.') > 0 or  tr.find('td').text.count('/') > 0) and len([True for c in tr.find('td').text if c.isdigit()])>2:
+                break
+            start_data +=1
 
+        start_data +=1
 
-        # Skip record lines, this loses a small amount of division information but it is not consistent whether it refers to the line above or below
-        if any(col in ['ME','SE','PE','SE/PE'] for col in text) and trs.find_all('td')[0].text.strip() != '':
-            continue
+        try:
+            meet_data = combine_header(trs[start_data:])
+        except:
+            meet_data =trs
 
+        if 'miehet' in meet_name.lower() or 'miesten' in meet_name.lower():
+            sexstate = 'M'
+        elif 'naiset' in meet_name.lower() or 'naisten' in meet_name.lower():
+            sexstate = 'F'
 
-        if any(name_str in ''.join(text).strip() for name_str in ['Name','Nimi']): #Header
-            if csv.fieldnames != []:
+        # Division sometimes is only given in page title, meet title or URL. Search all of these places
+        [divstate,div_text] = get_division(meet_name)
+
+        div_text = re.search('n\d{2}',meet_name.lower())
+        if div_text != None:
+            [divstate,div_text] = get_division(div_text.group(0))
+            sexstate = 'F'  
+
+        div_text = re.search('m\d{2}',url.lower())
+        if div_text != None:
+            [divstate,div_text] = get_division(div_text.group(0))
+            sexstate = 'M'
+
+        div_text = re.search('n\d{2}',url.lower())
+        if div_text != None:
+            [divstate,div_text] = get_division(div_text.group(0))
+            sexstate = 'F'  
+
+        if divstate == '':
+            divstate = 'Open'
+
+       
+        for tr in meet_data:
+            text = [x.text.strip() for x in tr.find_all('td') if x.text.strip() !='']
+            # Skip blank and uninteresting rows
+            if (len(text) == 0 or (len(text) == 1 and text[0].replace(',','').isdigit())):
                 continue
-            iterable = iter(range(len(text)))
 
-            # Get column information.
-            for ii in iterable:
-                h =text[ii].lower().replace('.','')
-                if h=='sij' or h == 'pl' or h == 'place':
-                    csv.fieldnames += ['Place']
-                elif h == 'm/w' or h == 'm/n' or h =='nro':
-                    csv.fieldnames += ['Sex']
-                elif h == 'sarja' or h == 'cls' or h == 'class':
-                    csv.fieldnames += ['WeightClassKg']
-                elif h == 'paino' or h == 'bwt':
-                    csv.fieldnames += ['BodyweightKg']
-                elif 'nimi' in h or 'name' in h:
-                    csv.fieldnames += ['Name']
-                elif h == 'sv' or h =='yob':
-                    csv.fieldnames += ['BirthYear']
-                elif h == 'seura' or h == 'club' or h =='joukkue':
-                    csv.fieldnames += ['Team']
-                elif h == 'jk1' or h == 'jk 1':
-                    csv.fieldnames += ['Squat1Kg']
-                elif h == 'jk2' or h == 'jk 2':
-                    csv.fieldnames += ['Squat2Kg']
-                elif h == 'jk3' or h == 'jk 3':
-                    csv.fieldnames += ['Squat3Kg']
-                elif h == 'jk tul' or h == 'jk tulos' or h == 'sq result' or h == 'jk':
-                    csv.fieldnames += ['BestSquatKg']
-                elif h == 'pp1' or h == 'pp 1':
-                    csv.fieldnames += ['Bench1Kg']
-                elif h == 'pp2' or h == 'pp 2':
-                    csv.fieldnames += ['Bench2Kg']
-                elif h == 'pp3' or h == 'pp 3':
-                    csv.fieldnames += ['Bench3Kg']
-                elif h == 'pp tul' or h == 'pp tulos' or h == 'bp result' or h == 'pp':
-                    csv.fieldnames += ['BestBenchKg']
-                elif h == 'mn1' or h == 'mn 1':
-                    csv.fieldnames += ['Deadlift1Kg']
-                elif h == 'mn2' or h == 'mn 2':
-                    csv.fieldnames += ['Deadlift2Kg']
-                elif h == 'mn3' or h == 'mn 3':
-                    csv.fieldnames += ['Deadlift3Kg']
-                elif h == 'mn tul' or h == 'mn tulos' or h == 'dl result' or h == 'mn':
-                    csv.fieldnames += ['BestDeadliftKg']        
-                elif h in ['yt','tulos','yht','total','result','yht tulos','yhteis- tulos','yt / kg']:
-                    csv.fieldnames += ['TotalKg']
-                elif h == 'wilks' or h =='wpist' or h =='pist' or h == 'wpts' or h =='wilks pist' or h == 'wilks pts':
-                    csv.fieldnames += ['Wilks']
-                elif h == 'jpist' or h == 'j pist':
-                    csv.fieldnames += ['Points'] 
-                elif h == 'nat':
-                    csv.fieldnames += ['Country'] 
-                elif  h=='squat 1' or h == 'jalkakyykky 1':
-                    csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
-                    [next(iterable) for x in range(2)]
-                elif h =='bench press 1' or h == 'penkkipunn 1' or h == 'penkkipunnerrus 1':
-                    csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
-                    [next(iterable) for x in range(2)]
-                elif h == 'deadlift 1' or h == 'maastanosto 1':
-                    csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
-                    [next(iterable) for x in range(2)]
+            # Sometimes there are some non-useful sentences about the meet written at the top
+            if len(text) == 1 and len(text[0])> 20:
+                continue
 
-                elif h == '1' and 'penkkip' in meet_name.lower():
-                    csv.fieldnames += ['Bench1Kg']
-                elif h == '2' and 'penkkip' in meet_name.lower():
-                    csv.fieldnames += ['Bench2Kg']
-                elif h == '3' and 'penkkip' in meet_name.lower():
-                    csv.fieldnames += ['Bench3Kg']
-                elif h == '4' and 'penkkip' in meet_name.lower():
-                    csv.fieldnames += ['Bench4Kg']
+            # Sometimes clubs/ cities are between rows, probably need a better way of doing this
+            if any(club_str in text[0].lower() for club_str in ['tukholma','tallinn','sotkamon visa',
+                    'kajaanin kuohu','stockholm','tnt','kp','tap.erä','salvo','kavo','rayvo','tvn','uurame','äänekoski',
+                    'tammisaari','punkalaidun','ulkopuoliset','helsinki']):
+                continue
 
 
-                elif h == 'joukk tulos':
-                    csv.fieldnames.append('IGNORE')
-                elif h == 'joukk sij':
-                    csv.fieldnames.append('IGNORE')
-                elif h == 'ylip väh':
-                    csv.fieldnames.append('IGNORE')
-
-                else:
-                    error("Unknown column name: \"%s\"" % h)
-
-
-            csv.fieldnames += ['Division']
-
+            # Exhibition lifters maybe?
+            if text[0] == 'Näytöt': 
+                continue
             
-            if 'Sex' not in csv.fieldnames:
-                append_sex = True
 
-            # Classic meets and pre 2011 meets won't mark equipment, work it out contextually
-            if 'Equipment' not in csv.fieldnames:
-                append_eqp = True
+            # Records are after data
+            if any(break_str in text[0] for break_str in ['ätykset','Records','Joukkuekilpailu','Norbergs Kraftsportförening','Rekord:','Domare:','Tuomarit:']):
+                break
 
-        elif len(text)==1: # Division
-            # Extract sex information.
-            div_text = text[0].replace('-','').lower()
-            div_text = div_text.replace('kilpasarja','') # Powerlifting
-            div_text = div_text.strip()
+            # Skip record lines, this loses a small amount of division information but it is not consistent whether it refers to the line above or below
+            if any(col in ['ME','SE','PE','SE/PE'] for col in text) and tr.find_all('td')[0].text.strip() != '':
+                continue
+
+            if any(name_str in ''.join(text).strip() for name_str in ['Name','Nimi']): #Header
+                if csv.fieldnames != []:
+                    continue
+                iterable = iter(range(len(text)))
+
+                # Get column information.
+                for ii in iterable:
+                    h =text[ii].lower().replace('.','')
+                    if h=='sij' or h == 'pl' or h == 'place':
+                        csv.fieldnames += ['Place']
+                    elif h == 'm/w' or h == 'm/n' or h =='nro':
+                        csv.fieldnames += ['Sex']
+                    elif h == 'sarja' or h == 'cls' or h == 'class':
+                        csv.fieldnames += ['WeightClassKg']
+                    elif h == 'paino' or h == 'bwt':
+                        csv.fieldnames += ['BodyweightKg']
+                    elif 'nimi' in h or 'name' in h:
+                        csv.fieldnames += ['Name']
+                    elif h == 'sv' or h =='yob':
+                        csv.fieldnames += ['BirthYear']
+                    elif h == 'seura' or h == 'club' or h =='joukkue':
+                        csv.fieldnames += ['Team']
+                    elif h == 'jk1' or h == 'jk 1':
+                        csv.fieldnames += ['Squat1Kg']
+                    elif h == 'jk2' or h == 'jk 2':
+                        csv.fieldnames += ['Squat2Kg']
+                    elif h == 'jk3' or h == 'jk 3':
+                        csv.fieldnames += ['Squat3Kg']
+                    elif h == 'jk tul' or h == 'jk tulos' or h == 'sq result' or h == 'jk':
+                        csv.fieldnames += ['BestSquatKg']
+                    elif h == 'pp1' or h == 'pp 1':
+                        csv.fieldnames += ['Bench1Kg']
+                    elif h == 'pp2' or h == 'pp 2':
+                        csv.fieldnames += ['Bench2Kg']
+                    elif h == 'pp3' or h == 'pp 3':
+                        csv.fieldnames += ['Bench3Kg']
+                    elif h == 'pp tul' or h == 'pp tulos' or h == 'bp result' or h == 'pp':
+                        csv.fieldnames += ['BestBenchKg']
+                    elif h == 'mn1' or h == 'mn 1':
+                        csv.fieldnames += ['Deadlift1Kg']
+                    elif h == 'mn2' or h == 'mn 2':
+                        csv.fieldnames += ['Deadlift2Kg']
+                    elif h == 'mn3' or h == 'mn 3':
+                        csv.fieldnames += ['Deadlift3Kg']
+                    elif h == 'mn tul' or h == 'mn tulos' or h == 'dl result' or h == 'mn':
+                        csv.fieldnames += ['BestDeadliftKg']        
+                    elif h in ['yt','tulos','yht','total','result','yht tulos','yhteis- tulos','yt / kg']:
+                        csv.fieldnames += ['TotalKg']
+                    elif h == 'wilks' or h =='wpist' or h =='pist' or h == 'wpts' or h =='wilks pist' or h == 'wilks pts':
+                        csv.fieldnames += ['Wilks']
+                    elif h == 'jpist' or h == 'j pist':
+                        csv.fieldnames += ['Points'] 
+                    elif h == 'nat':
+                        csv.fieldnames += ['Country'] 
+                    elif  h=='squat 1' or h == 'jalkakyykky 1':
+                        csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
+                        [next(iterable) for x in range(2)]
+                    elif h =='bench press 1' or h == 'penkkipunn 1' or h == 'penkkipunnerrus 1':
+                        csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
+                        [next(iterable) for x in range(2)]
+                    elif h == 'deadlift 1' or h == 'maastanosto 1':
+                        csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
+                        [next(iterable) for x in range(2)]
+
+                    elif h == '1' and 'penkkip' in meet_name.lower():
+                        csv.fieldnames += ['Bench1Kg']
+                    elif h == '2' and 'penkkip' in meet_name.lower():
+                        csv.fieldnames += ['Bench2Kg']
+                    elif h == '3' and 'penkkip' in meet_name.lower():
+                        csv.fieldnames += ['Bench3Kg']
+                    elif h == '4' and 'penkkip' in meet_name.lower():
+                        csv.fieldnames += ['Bench4Kg']
 
 
-            if div_text != '':
-                if 'naiset' in div_text or 'women' in div_text:
-                    sexstate = 'F'
-                    div_text = div_text.replace('naiset', '').replace('women','').strip()
-                    divstate = 'Open'
-                elif 'miehet' in div_text or 'men' in div_text:
-                    sexstate = 'M'
-                    div_text = div_text.replace('miehet', '').replace('men','').strip()
-                    divstate = 'Open'
-                elif div_text[0] == 'n':
-                    sexstate = 'F'
-                    div_text = div_text[1:]                    
-                elif div_text[0] == 'm':
-                    sexstate = 'M'
-                    div_text = div_text[1:]
+                    elif h == 'joukk tulos':
+                        csv.fieldnames.append('IGNORE')
+                    elif h == 'joukk sij':
+                        csv.fieldnames.append('IGNORE')
+                    elif h == 'ylip väh':
+                        csv.fieldnames.append('IGNORE')
+
+                    else:
+                        error("Unknown column name: \"%s\"" % h)
 
 
-                if div_text.strip() != '':
-                    # Extract division information.
-                    [divstate,div_text] = get_division(div_text)                   
+                csv.fieldnames += ['Division']
 
-                    if len(div_text) !=0 and divstate == '':
-                        error("Unknown state: \"%s\"" % div_text)
-
-        elif len(text) > 3 and 'Joukkueen tulos' not in text and 'Joukk. tulos' not in text: # Lifter data
-            assert (sexstate or 'Sex' in csv.fieldnames)
-        
-            # Accumulate the row, but we need to look at the class of each td
-            # to figure out whether lifts were good or bad.
-            lifter_data = []
-
-            expand_colspans(tr,soup)
-
-            for td in tr.find_all('td'):
-                col_text = td.text
-                # Switch to dots for decimals
-                col_text=col_text.replace(',','.')
-
-                # Remove Unicode spaces
-                col_text=col_text.replace('\xa0', ' ')
-                col_text=col_text.replace('\u200b',' ')
-
-                col_text=col_text.replace('\n','')
-                col_text=col_text.replace('\t','')
-
-                col_text=col_text.replace('*','')
-
-                # Failed lift.
-                if (td.s or td.strike or (td.has_attr('style') and 'background-color: red' in td['style'])) and col_text.strip() != '':  
-                    col_text = '-' + col_text.strip()
-                    col_text = col_text.replace('--','-')
-
-                if len(col_text.strip()) > 1 and col_text.replace(' ','').count('-') ==len(col_text.replace(' ','')):  # Skipped lift.
-                    col_text = ''
-
-                if col_text.strip() == '…..': # Skipped lift.
-                    col_text = ''
-
-
-
-                if is_float(col_text) and float(col_text) == 0.0:
-                    col_text = ''
                 
-                # Removing trailing zeros
-                if is_int(col_text.strip()):
-                    col_text =col_text.replace('.00','').replace('.0','')
+                if 'Sex' not in csv.fieldnames:
+                    append_sex = True
 
-                lifter_data.append(col_text.strip().replace('  ', ' ').replace(',', ' '))
-                if len(lifter_data) > len(csv.fieldnames)-1:
-                    csv.fieldnames.insert(len(lifter_data) -1,'Extra')
+                # Classic meets and pre 2011 meets won't mark equipment, work it out contextually
+                if 'Equipment' not in csv.fieldnames:
+                    append_eqp = True
 
-            lifter_data = lifter_data + [divstate]
+            elif len(text)==1: # Division
+                # Extract sex information.
+                div_text = text[0].replace('-','').lower()
+                div_text = div_text.replace('kilpasarja','') # Powerlifting
+                div_text = div_text.strip()
 
-            if append_sex:
-                lifter_data = lifter_data + [sexstate]
 
-            if append_eqp:
-                lifter_data = lifter_data +['']
-            csv.rows += [lifter_data]
+                if div_text != '':
+                    if 'naiset' in div_text or 'women' in div_text:
+                        sexstate = 'F'
+                        div_text = div_text.replace('naiset', '').replace('women','').strip()
+                        divstate = 'Open'
+                    elif 'miehet' in div_text or 'men' in div_text:
+                        sexstate = 'M'
+                        div_text = div_text.replace('miehet', '').replace('men','').strip()
+                        divstate = 'Open'
+                    elif div_text[0] == 'n':
+                        sexstate = 'F'
+                        div_text = div_text[1:]                    
+                    elif div_text[0] == 'm':
+                        sexstate = 'M'
+                        div_text = div_text[1:]
+
+
+                    if div_text.strip() != '':
+                        # Extract division information.
+                        [divtemp,div_text] = get_division(div_text) 
+
+                        if divtemp != '':
+                            divstate = divtemp
+
+                       # if len(div_text) !=0 and divstate == '':
+                       #     error("Unknown state: \"%s\"" % div_text)
+
+            elif len(text) > 3 and 'Joukkueen tulos' not in text and 'Joukk. tulos' not in text: # Lifter data
+                #assert (sexstate or 'Sex' in csv.fieldnames)
+            
+                # Accumulate the row, but we need to look at the class of each td
+                # to figure out whether lifts were good or bad.
+                lifter_data = []
+
+                expand_colspans(tr,soup)
+
+                for td in tr.find_all('td'):
+                    col_text = td.text
+                    # Switch to dots for decimals
+                    col_text=col_text.replace(',','.')
+
+                    # Remove Unicode spaces
+                    col_text=col_text.replace('\xa0', ' ')
+                    col_text=col_text.replace('\u200b',' ')
+
+                    col_text=col_text.replace('\n','')
+                    col_text=col_text.replace('\t','')
+
+                    col_text=col_text.replace('*','')
+
+                    # Failed lift.
+                    if (td.s or td.strike or (td.has_attr('style') and 'background-color: red' in td['style'])) and col_text.strip() != '':  
+                        col_text = '-' + col_text.strip()
+                        col_text = col_text.replace('--','-')
+
+                    if len(col_text.strip()) > 1 and col_text.replace(' ','').count('-') ==len(col_text.replace(' ','')):  # Skipped lift.
+                        col_text = ''
+
+                    if col_text.strip() == '…..': # Skipped lift.
+                        col_text = ''
+
+
+
+                    if is_float(col_text) and float(col_text) == 0.0:
+                        col_text = ''
+                    
+                    # Removing trailing zeros
+                    if is_int(col_text.strip()):
+                        col_text =col_text.replace('.00','').replace('.0','')
+
+                    lifter_data.append(col_text.strip().replace('  ', ' ').replace(',', ' '))
+                    if len(lifter_data) > len(csv.fieldnames)-1:
+                        csv.fieldnames.insert(len(lifter_data) -1,'Extra')
+
+                lifter_data = lifter_data + [divstate]
+
+                if append_sex:
+                    lifter_data = lifter_data + [sexstate]
+
+                if append_eqp:
+                    lifter_data = lifter_data +['']
+                csv.rows += [lifter_data]
     
-
-
 
     if append_sex:
         csv.fieldnames += ['Sex']
@@ -558,32 +553,38 @@ def fixplace(csv):
 
 # All Finnish meets are one equipment type
 def fixequipment(csv, meetcsv):
-    meet_name = meetcsv.rows[0][5]
+    try:
+        meet_name = meetcsv.rows[0][5]
 
-    raw_meet = False
+        raw_meet = False
 
-    if any(text in meet_name.lower() for text in ['klass','classic']):
-        raw_meet = True
+        if any(text in meet_name.lower() for text in ['klass','classic']):
+            raw_meet = True
 
-    eqidx = csv.index('Equipment')
+        eqidx = csv.index('Equipment')
 
-    for row in csv.rows:
-        if raw_meet:
-            row[eqidx] = 'Raw'
-        else:
-            if 'x' in row[eqidx]:
+        for row in csv.rows:
+            if raw_meet:
                 row[eqidx] = 'Raw'
-            elif row[eqidx] == '':
-                row[eqidx] = 'Single-ply'
             else:
-                error("Unknown equipment: \"%s\"" % row[eqidx])
+                if 'x' in row[eqidx]:
+                    row[eqidx] = 'Raw'
+                elif row[eqidx] == '':
+                    row[eqidx] = 'Single-ply'
+                else:
+                    error("Unknown equipment: \"%s\"" % row[eqidx])
+    except:
+        pass
 
 # Change M/N  and M/W to M/F
 def fixsex(csv):
-    sexidx = csv.index('Sex')
-    for row in csv.rows:
-        if row[sexidx] == 'N' or row[sexidx] == 'W':
-            row[sexidx] ='F'
+    try:
+        sexidx = csv.index('Sex')
+        for row in csv.rows:
+            if row[sexidx] == 'N' or row[sexidx] == 'W':
+                row[sexidx] ='F'
+    except:
+        pass
 
 def add_birthyear(csv):
     append_by = False
@@ -707,15 +708,21 @@ def get_division(div_text):
     elif 'veteraanien' in div_text:
         division = 'Over 40'    
         div_text = div_text.replace('veteraanien','')   
-
+    elif 'nuorten 20' in div_text:
+        division = 'Under 20'    
+        div_text = div_text.replace('nuorten 20','')  
+    elif 'nuorten 23' in div_text:
+        division = 'Under 23'    
+        div_text = div_text.replace('nuorten 23','')  
     return [division,div_text.strip()]
 
 # This should be removed once old data is added.
 def add_class(csv):
-    wcidx = csv.index('WeightClassKg')
-    for ii in range(1,len(csv.rows)):
-        if csv.rows[ii][wcidx] == '' and csv.rows[ii-1][wcidx] != '':
-            csv.rows[ii][wcidx] =csv.rows[ii-1][wcidx]
+    if 'WeightClassKg' in csv.fieldnames:
+        wcidx = csv.index('WeightClassKg')
+        for ii in range(1,len(csv.rows)):
+            if csv.rows[ii][wcidx] == '' and csv.rows[ii-1][wcidx] != '':
+                csv.rows[ii][wcidx] =csv.rows[ii-1][wcidx]
 
 
 
@@ -768,126 +775,138 @@ def add_division(csv):
 
 
 def fixtotals(csv):
-    if 'TotalKg' not in csv.fieldnames:
-        csv.insert_column(len(csv.fieldnames),'TotalKg')
-        eventidx = csv.index('Event')
-        for row in csv.rows:
-            total=0
-            if 'S' in row[eventidx] and 'BestSquatKg' in csv.fieldnames:
-                if row[csv.index('BestSquatKg')] in ['','out']: # then lifter bombed
-                    row[csv.index('BestSquatKg')] = ''
-                total += float(row[csv.index('BestSquatKg')])
-            elif 'B' in row[eventidx] and 'BestBenchKg' in csv.fieldnames:
-                if row[csv.index('BestBenchKg')] in ['','out']: 
-                    row[csv.index('BestBenchKg')] = ''
-                    continue
-                total += float(row[csv.index('BestBenchKg')])
-            elif 'D' in row[eventidx] and 'BestDeadliftKg' in csv.fieldnames:
-                if row[csv.index('BestDeadliftKg')] in ['','out']:
-                    row[csv.index('BestDeadliftKg')] = ''
-                total += float(row[csv.index('BestDeadliftKg')])
+    try:
+        if 'TotalKg' not in csv.fieldnames:
+            csv.insert_column(len(csv.fieldnames),'TotalKg')
+            eventidx = csv.index('Event')
+            for row in csv.rows:
+                total=0
+                if 'S' in row[eventidx] and 'BestSquatKg' in csv.fieldnames:
+                    if row[csv.index('BestSquatKg')] in ['','out']: # then lifter bombed
+                        row[csv.index('BestSquatKg')] = ''
+                    total += float(row[csv.index('BestSquatKg')])
+                elif 'B' in row[eventidx] and 'BestBenchKg' in csv.fieldnames:
+                    if row[csv.index('BestBenchKg')] in ['','out']: 
+                        row[csv.index('BestBenchKg')] = ''
+                        continue
+                    total += float(row[csv.index('BestBenchKg')])
+                elif 'D' in row[eventidx] and 'BestDeadliftKg' in csv.fieldnames:
+                    if row[csv.index('BestDeadliftKg')] in ['','out']:
+                        row[csv.index('BestDeadliftKg')] = ''
+                    total += float(row[csv.index('BestDeadliftKg')])
 
-            row[-1]=str(total)
-    elif 'Place' in csv.fieldnames:
-        totalidx = csv.index('TotalKg')
-        placeidx = csv.index('Place')
-        for row in csv.rows:
-            row[totalidx]=row[totalidx].lower()
-            if row[totalidx] == 'out' or row[totalidx] == 'disq':
-                row[totalidx] = ''
-                row[placeidx] = 'DQ'
-            elif row[totalidx] in ['out / d','dd'] or 'disq/d' in row[totalidx] or 'disq / doping' in row[totalidx] :
-                row[totalidx] = ''
-                row[placeidx] = 'DD'
+                row[-1]=str(total)
+        elif 'Place' in csv.fieldnames:
+            totalidx = csv.index('TotalKg')
+            placeidx = csv.index('Place')
+            for row in csv.rows:
+                row[totalidx]=row[totalidx].lower()
+                if row[totalidx] == 'out' or row[totalidx] == 'disq':
+                    row[totalidx] = ''
+                    row[placeidx] = 'DQ'
+                elif row[totalidx] in ['out / d','dd'] or 'disq/d' in row[totalidx] or 'disq / doping' in row[totalidx] :
+                    row[totalidx] = ''
+                    row[placeidx] = 'DD'
+    except:
+        pass
 
 
 
 # Attempts are sometimes given, but not the BestSquatKg columns, etc.
 def calc_best_lift(csv, col, attemptlist):
-    if col in csv.fieldnames:
-        return
+    try:
+        if col in csv.fieldnames:
+            return
 
-    for k in attemptlist:
-        assert k in csv.fieldnames
-
-    csv.insert_column(csv.index(attemptlist[-1]) + 1, col)
-
-    for row in csv.rows:
-        best = 0
         for k in attemptlist:
-            try:
-                attempt = float(row[csv.index(k)])
-            except ValueError:
-                attempt = 0
-            if attempt > best:
-                best = attempt
-        if best > 0:
-            row[csv.index(col)] = str(best)
+            assert k in csv.fieldnames
+
+        csv.insert_column(csv.index(attemptlist[-1]) + 1, col)
+
+        for row in csv.rows:
+            best = 0
+            for k in attemptlist:
+                try:
+                    attempt = float(row[csv.index(k)])
+                except ValueError:
+                    attempt = 0
+                if attempt > best:
+                    best = attempt
+            if best > 0:
+                row[csv.index(col)] = str(best)
+    except:
+        pass
 
 
 def markevent(csv):
-    assert 'Event' not in csv.fieldnames
-    csv.append_column('Event')
+    try:
+        assert 'Event' not in csv.fieldnames
+        csv.append_column('Event')
 
-    evtidx = csv.index('Event')
+        evtidx = csv.index('Event')
 
-    def getevtindices(csv, fieldl):
-        indexlist = []
-        for f in fieldl:
-            try:
-                indexlist.append(csv.index(f))
-            except ValueError:
-                pass
-        return indexlist
+        def getevtindices(csv, fieldl):
+            indexlist = []
+            for f in fieldl:
+                try:
+                    indexlist.append(csv.index(f))
+                except ValueError:
+                    pass
+            return indexlist
 
-    squatidxl = getevtindices(
-        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
-    benchidxl = getevtindices(
-        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
-    deadliftidxl = getevtindices(
-        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
+        squatidxl = getevtindices(
+            csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
+        benchidxl = getevtindices(
+            csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
+        deadliftidxl = getevtindices(
+            csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
 
-    for row in csv.rows:
-        evt = ''
-        for i in squatidxl:
-            if row[i] != '':
-                evt = evt + 'S'
-                break
-        for i in benchidxl:
-            if row[i] != '':
-                evt = evt + 'B'
-                break
-        for i in deadliftidxl:
-            if row[i] != '':
-                evt = evt + 'D'
-                break
-        row[evtidx] = evt
+        for row in csv.rows:
+            evt = ''
+            for i in squatidxl:
+                if row[i] != '':
+                    evt = evt + 'S'
+                    break
+            for i in benchidxl:
+                if row[i] != '':
+                    evt = evt + 'B'
+                    break
+            for i in deadliftidxl:
+                if row[i] != '':
+                    evt = evt + 'D'
+                    break
+            row[evtidx] = evt
+    except:
+        pass
 
 
 def remove_empty_and_ignore_cols(csv):
-    def iscolempty(csv, i):
-        for row in csv.rows:
-            if row[i]:
-                return False
-        return True
+    try:
+        def iscolempty(csv, i):
+            for row in csv.rows:
+                if row[i]:
+                    return False
+            return True
 
-    def getemptyidx(csv):
-        for i, col in enumerate(csv.fieldnames):
-            if iscolempty(csv, i):
-                return i
-        return -1
-
-
-    # Remove all the columns named 'IGNORE'
-    while 'IGNORE' in csv.fieldnames:
-        csv.remove_column_by_name('IGNORE')
+        def getemptyidx(csv):
+            for i, col in enumerate(csv.fieldnames):
+                if iscolempty(csv, i):
+                    return i
+            return -1
 
 
-    while True:
-        idx = getemptyidx(csv)
-        if idx == -1:
-            return
-        csv.remove_column_by_index(idx)
+        # Remove all the columns named 'IGNORE'
+        while 'IGNORE' in csv.fieldnames:
+            csv.remove_column_by_name('IGNORE')
+
+
+        while True:
+            idx = getemptyidx(csv)
+            if idx == -1:
+                return
+            csv.remove_column_by_index(idx)
+    except:
+        pass
 
 
 
