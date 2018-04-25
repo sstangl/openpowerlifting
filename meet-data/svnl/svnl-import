@@ -451,9 +451,11 @@ def getresults(soup,meet_name,url):
                 if 'naiset' in div_text or 'women' in div_text:
                     sexstate = 'F'
                     div_text = div_text.replace('naiset', '').replace('women','').strip()
+                    divstate = 'Open'
                 elif 'miehet' in div_text or 'men' in div_text:
                     sexstate = 'M'
                     div_text = div_text.replace('miehet', '').replace('men','').strip()
+                    divstate = 'Open'
                 elif div_text[0] == 'n':
                     sexstate = 'F'
                     div_text = div_text[1:]                    
