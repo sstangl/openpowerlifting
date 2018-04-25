@@ -93,24 +93,9 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new(&staticdir).join(file)).ok()
 }
 
-#[get("/rankings")]
-fn rankings(
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
-    languages: AcceptLanguage,
-    cookies: Cookies,
-) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-
-    let selection = pages::rankings::Selection::new_default();
-    let context =
-        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
-    Some(Template::render("rankings", &context))
-}
 
 #[get("/rankings/<selections..>")]
-fn rankings_specific(
+fn rankings(
     selections: PathBuf,
     opldb: State<opldb::OplDb>,
     langinfo: State<langpack::LangInfo>,
@@ -224,8 +209,19 @@ fn contact(
 }
 
 #[get("/")]
-fn index() -> Redirect {
-    Redirect::to("/rankings")
+fn index(
+    opldb: State<opldb::OplDb>,
+    langinfo: State<langpack::LangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+
+    let selection = pages::rankings::Selection::new_default();
+    let context =
+        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
+    Some(Template::render("rankings", &context))
 }
 
 fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
@@ -238,7 +234,6 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
             routes![
                 index,
                 rankings,
-                rankings_specific,
                 lifter,
                 meet,
                 statics,

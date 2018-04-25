@@ -54,16 +54,26 @@ function onResize(evt) {
 // change to match.
 function reload() {
     let url = "/rankings";
+    let specific = false;
+
     if (selEquipment.value !== "raw_wraps") {
         url += "/" + selEquipment.value;
+        specific = true;
     }
     if (selWeightClass.value !== "all") {
         url += "/" + selWeightClass.value;
+        specific = true;
     }
     if (selSex.value !== "all") {
         url += "/" + selSex.value;
+        specific = true;
     }
-    window.location = url;
+
+    if (specific === true) {
+        window.location = url;
+    } else {
+        window.location = "/";
+    }
 }
 
 function addSelectorListeners(selector) {
