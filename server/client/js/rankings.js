@@ -4,6 +4,7 @@ let global_data;
 
 let selEquipment;
 let selWeightClass;
+let selYear;
 let selSex;
 
 
@@ -68,6 +69,10 @@ function reload() {
         url += "/" + selSex.value;
         specific = true;
     }
+    if (selYear.value !== "all") {
+        url += "/" + selYear.value;
+        specific = true;
+    }
 
     if (specific === true) {
         window.location = url;
@@ -83,10 +88,12 @@ function addSelectorListeners(selector) {
 function addEventListeners() {
     selEquipment = document.getElementById("equipmentselect");
     selWeightClass = document.getElementById("weightclassselect");
+    selYear = document.getElementById("yearselect");
     selSex = document.getElementById("sexselect");
 
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
+    addSelectorListeners(selYear);
     addSelectorListeners(selSex);
 
     window.addEventListener("resize", onResize, false);

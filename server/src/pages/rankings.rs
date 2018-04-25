@@ -21,6 +21,7 @@ pub struct Selection {
     pub federations: Option<FederationSelection>,
     pub weightclasses: WeightClassSelection,
     pub sex: SexSelection,
+    pub year: YearSelection,
 }
 
 impl Selection {
@@ -30,6 +31,7 @@ impl Selection {
             federations: None,
             weightclasses: WeightClassSelection::AllClasses,
             sex: SexSelection::AllSexes,
+            year: YearSelection::AllYears,
         }
     }
 
@@ -51,6 +53,7 @@ impl Selection {
         let mut parsed_federations: bool = false;
         let mut parsed_weightclasses: bool = false;
         let mut parsed_sex: bool = false;
+        let mut parsed_year: bool = false;
 
         // Iterate over each component of the path, attempting to
         // determine what kind of data it is.
@@ -85,6 +88,13 @@ impl Selection {
                 }
                 ret.sex = s;
                 parsed_sex = true;
+            // Check whether this is year information.
+            } else if let Ok(s) = segment.parse::<YearSelection>() {
+                if parsed_year {
+                    return Err(());
+                }
+                ret.year = s;
+                parsed_year = true;
             // Unknown string, therefore malformed URL.
             } else {
                 return Err(());
@@ -346,6 +356,46 @@ impl FromStr for SexSelection {
     }
 }
 
+/// The year selector widget.
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+pub enum YearSelection {
+    AllYears,
+    Year2018,
+    Year2017,
+    Year2016,
+    Year2015,
+    Year2014,
+}
+
+impl YearSelection {
+    pub fn to_cached_filter(self) -> Option<CachedFilter> {
+        match self {
+            YearSelection::AllYears => None,
+            YearSelection::Year2018 => Some(CachedFilter::Year2018),
+            YearSelection::Year2017 => Some(CachedFilter::Year2017),
+            YearSelection::Year2016 => Some(CachedFilter::Year2016),
+            YearSelection::Year2015 => Some(CachedFilter::Year2015),
+            YearSelection::Year2014 => Some(CachedFilter::Year2014),
+        }
+    }
+}
+
+impl FromStr for YearSelection {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            // No entry for AllYears, since it's default.
+            "2018" => Ok(YearSelection::Year2018),
+            "2017" => Ok(YearSelection::Year2017),
+            "2016" => Ok(YearSelection::Year2016),
+            "2015" => Ok(YearSelection::Year2015),
+            "2014" => Ok(YearSelection::Year2014),
+            _ => Err(()),
+        }
+    }
+}
+
 /// The context object passed to `templates/rankings.html.tera`.
 #[derive(Serialize)]
 pub struct Context<'db, 'a> {
@@ -376,6 +426,10 @@ impl<'db, 'a> Context<'db, 'a> {
             .sex
             .to_cached_filter()
             .and_then(|c| Some(opldb.get_filter(c)));
+        let filter_year: Option<&Filter> = selection
+            .year
+            .to_cached_filter()
+            .and_then(|c| Some(opldb.get_filter(c)));
 
         // If there is intersection to be done, perform it here.
         let rankings = if *selection != Selection::new_default() {
@@ -387,6 +441,10 @@ impl<'db, 'a> Context<'db, 'a> {
                 // have to unnecessarily allocate memory here.
                 filter_equipment.clone()
             };
+
+            if filter_year.is_some() {
+                filter = filter.intersect(filter_year.unwrap());
+            }
 
             // Filter by federation manually.
             if selection.federations.is_some() {
