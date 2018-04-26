@@ -75,6 +75,7 @@
   </optgroup>
   <optgroup label="Finland">
     <option value="FPO">FPO - Finland Powerlifting Organization [IPA] (Incomplete)</option>
+    <option value="SVNL">SVNL - Suomen Voimanostoliitto [IPF]</option>
   </optgroup>
   <optgroup label="France">
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>

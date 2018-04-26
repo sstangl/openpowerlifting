@@ -261,8 +261,8 @@ def check_column_birthyear(s, row, csv):
             pwarning("BirthYear looks implausible: '%s'" % s)
 
 
-def check_row_weightclass(row, csv,weightclasses):
-    if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] !="":
+def check_row_weightclass(row, csv, weightclasses):
+    if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] != "":
         wc = row[csv.index('WeightClassKg')]
         if wc[-1] is '+':
             check_positive_number_column(wc[:-1], row, csv)
@@ -285,14 +285,14 @@ def check_row_weightclass(row, csv,weightclasses):
         wpau_extra = ['155', '155+']
 
         ffforce_extra = ['83+']  # Cadet division, for youth.
-        parapl_extra = ['82.5+']
 
         classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
             rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
             old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
             idfpf_extra + wpau_extra
 
-        if (not weightclasses and wc not in classes) or (weightclasses and wc not in weightclasses):
+        if ((not weightclasses and wc not in classes) or
+                (weightclasses and wc not in weightclasses)):
             pwarning("Unknown weight class: %s" % wc)
 
         try:
@@ -779,7 +779,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         if (meet_id not in configtoml["exclusions"] or
                 "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]):
             check_row_weightclass_sex(row, csv, weight_classes)
-            check_row_weightclass(row,csv,weight_classes)
+            check_row_weightclass(row, csv, weight_classes)
 
         if (meet_id not in configtoml["exclusions"] or
                 "check_row_division" not in configtoml["exclusions"][meet_id]):
@@ -797,7 +797,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
             check_row_lift_order(
                 row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
-
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)
         check_row_weightclass_consistency(row, csv, None)
@@ -809,8 +808,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         check_row_lift_order(
             row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
-        check_row_weightclass(row,csv,None)
-
+        check_row_weightclass(row, csv, None)
 
     check_row_total_consistency(row, csv)
 
