@@ -53,6 +53,10 @@ def getmeetinfo(soup):
     else:
         town = ''
 
+    # Multiday meets list the full date seperately, which is nice of them
+    if ' - ' in dashdate:
+        dashdate = dashdate.split(' - ')[0]
+
 
     assert '-' in dashdate
     [day, month, year] = dashdate.split('-')
@@ -69,8 +73,23 @@ def getmeetinfo(soup):
     return csv
 
 
+def expand_colspans(tr, enclosing_soup):
+    ths = tr.find_all('th')
+    for ii in range(len(ths)-1, -1, -1):
+        if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
+            for jj in range(0, (int(ths[ii]['colspan'])-1)):
+                blank_th = enclosing_soup.new_tag('th')
+                ths[ii].insert_after(blank_th)
+    del ths[ii]['colspan']
+
+
+
 def getresults(soup):
     csv = Csv()
+    divstate = None
+    sexstate = None
+    wcstate  = None
+
 
     # Get the results table.
     results = soup.find_all('table', id='resultTable')
@@ -80,49 +99,76 @@ def getresults(soup):
 
     table = results[0]
 
+
+
+
+
     trs = table.find_all('tr')
-    print(trs)
+
+    # Get the first division
+    startdiv = trs[0].h4.text.strip()
+    if 'Women' in startdiv:
+        sexstate = 'F'
+
+    if 'Open' in startdiv:
+        divstate = 'Open'
+
+
     # Get column information.
-    headers = [x.text for x in trs[2].find_all('td')]
+    expand_colspans(trs[1],soup)
+    header1 = trs[1].find_all('th')
+    header2 = trs[2].find_all('th')
+    headers = [header1[ii].text.strip()+header2[ii].text.strip() for ii in range(len(header1))]
+    
+    iterable = iter(range(len(headers)))
 
     csv.fieldnames = []
-    for h in headers:
+    for ii in iterable:
+        h = headers[ii]
         if h == '#':
             csv.fieldnames += ['Place']
-        elif h == 'Kat.':
-            csv.fieldnames += ['WeightClassKg']
-        elif h == 'Navn':
-            csv.fieldnames += ['Name', 'Equipment']
-        elif h == 'Klubb':
+        elif h == 'Name':
+            csv.fieldnames += ['Name']
+        elif h == 'Born':
+            csv.fieldnames += ['BirthYear']
+        elif h == 'Team':
             csv.fieldnames += ['Team']
-        elif h == 'Kr.vekt':
+        elif h == 'Weight':
             csv.fieldnames += ['BodyweightKg']
-        elif h == 'Knebøy':
+        elif h == 'Squat1':
             csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
-        elif h == 'Benkpress':
+        elif h == 'Benchpress1':
             csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
-        elif h == 'Markløft':
+            [next(iterable) for x in range(2)]
+        elif h == 'Deadlift1':
             csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
-        elif h == 'Totalt':
+            [next(iterable) for x in range(2)]
+        elif h == 'Total':
             csv.fieldnames += ['TotalKg']
-        elif h == 'Poeng':
+        elif h == 'Wilks':
             csv.fieldnames += ['Wilks']
+        elif h == '':
+            csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
 
     # These columns are added from the category rows.
-    csv.fieldnames += ['Division', 'Sex']
+    csv.fieldnames += ['Division', 'Sex','WeightClassKg']
 
-    divstate = None
-    sexstate = None
+
 
     for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
 
         # Rows of length >1 are actual results, of length 1 are categories.
         if len(row) == 1:
-            # Extract sex information.
             text = row[0].lower()
+            if ' kg' in text:
+                wcstate = text.replace('kg','').strip()
+                continue
+
+
+
             if 'damer' in text:
                 sexstate = 'F'
                 text = text.replace('damer', '').strip()
@@ -142,23 +188,28 @@ def getresults(soup):
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
-        else:
+        elif row:
             assert divstate
             assert sexstate
+            assert wcstate
 
             # Accumulate the row, but we need to look at the class of each td
             # to figure out whether lifts were good or bad.
             row = []
             for td in tr.find_all('td'):
-                text = td.text
-                c = td.get('class')
-                if c and 'underkjent' in c:  # Failed lift.
-                    text = '-' + text
-                if c and 'ikke_loftet' in c:  # Skipped lift.
+                text = td.text.strip()
+                text=text.replace(',','.')
+                
+                if td.span:
+                    c = td.span.get('style')
+                    if c and 'color:red' in c:  # Failed lift.
+                        text = '-' + text
+                elif text == '-':
                     text = ''
-                row.append(text.strip().replace('  ', ' ').replace(',', ' '))
+ 
+                row.append(text.replace('  ', ' '))
 
-            row = row + [divstate, sexstate]
+            row = row + [divstate, sexstate, wcstate]
             csv.rows += [row]
 
     return csv
@@ -183,9 +234,24 @@ def fixclass(csv):
     for row in csv.rows:
         row[clsidx] = row[clsidx].replace('-', '')
 
+def fixbirthyear(csv):
+    if 'BirthYear' in csv.fieldnames:
+        byidx = csv.index('BirthYear')
+        for row in csv.rows:
+            if row[byidx] != '':
+                row[byidx] = row[byidx].split(' ')[0].strip()
 
-# The equipment is marked as "*" for Raw, or nothing for Single-ply.
-def fixequipment(csv):
+
+# Equipment is marked in the sheet name
+def addequipment(csv,meetcsv):
+    meet_name = meetcsv.rows[0][5]
+
+    raw_meet = False
+
+    if any(classic in meet_name.lower() for classic in ['klassískum','klassískri']):
+        raw_meet = True
+
+    csv.append_column('Equipment')
     eqidx = csv.index('Equipment')
     for row in csv.rows:
         if '*' in row[eqidx]:
@@ -281,19 +347,7 @@ def remove_empty_cols_ignore_fieldname(csv):
 def main(url):
     html = gethtml(url)
 
-    # The HTML returned by the website is malformed, which breaks the parser.
-    # Part of the results table looks like: <tr>Totalt</th>,
-    #  which is treated as </table>.
-    # Work around this by getting rid of all <th>.
-    html = html.replace('<th>', '<td>')
-    html = html.replace('</th>', '</td>')
-    # An inline script is accidentally closed with too many quotation marks.
-    html = html.replace(';"" ', ';" ')
-    # The following text occurs for bench-only meets:
-    #   <td align="center" colspan="3">Benkpress</strong>
-    # Which again trips up the parser.
-    html = html.replace('<strong>', '')
-    html = html.replace('</strong>', '')
+
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -305,7 +359,8 @@ def main(url):
 
     fixplace(entriescsv)
     fixclass(entriescsv)
-    fixequipment(entriescsv)
+    fixbirthyear(entriescsv)
+    addequipment(entriescsv,meetcsv)
 
     # For old meets, the 1-2-3 results are blank, and only one of them is filled in.
     # If after removing empty columns, only one lift is left, then that's a
