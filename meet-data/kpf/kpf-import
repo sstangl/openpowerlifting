@@ -7,10 +7,16 @@
 
 from bs4 import BeautifulSoup
 import errno
-from oplcsv import Csv
 import os
 import sys
 import urllib.request
+
+try:
+    from oplcsv import Csv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
 
 
 def gethtml(url):
@@ -62,7 +68,7 @@ def getmeetinfo(soup):
     [day, month, year] = dashdate.split('-')
     date = '%s-%s-%s' % (year, month, day)
 
-    fed = 'Kraft'
+    fed = 'KPF'
     country = 'Iceland'
     state = ''
 
@@ -83,6 +89,26 @@ def expand_colspans(tr, enclosing_soup):
     del ths[ii]['colspan']
 
 
+def get_division(div_text):
+    div_text = div_text.lower()
+
+    if 'open' in div_text:
+        return 'Open'
+    elif 'subjunior' in div_text:
+    	return 'Sub-Juniors'
+    elif 'junior' in div_text:
+    	return 'Juniors'
+    elif 'masters 1' in div_text:
+    	return 'Masters 1'
+    elif 'masters 2' in div_text:
+    	return 'Masters 2'
+    elif 'masters 3' in div_text:
+    	return 'Masters 3'
+    return ''
+
+
+
+
 
 def getresults(soup):
     csv = Csv()
@@ -94,31 +120,30 @@ def getresults(soup):
     # Get the results table.
     results = soup.find_all('table', id='resultTable')
     if len(results) == 0:
-        print(len(results))
         error("Couldn't find the results table.")
 
     table = results[0]
 
 
 
-
-
-    trs = table.find_all('tr')
+    trs = table.find_all(['tr'])
 
     # Get the first division
     startdiv = trs[0].h4.text.strip()
     if 'Women' in startdiv:
-        sexstate = 'F'
+    	sexstate = 'F'
+    elif 'Men' in startdiv:
+    	sexstate = 'M'
 
-    if 'Open' in startdiv:
-        divstate = 'Open'
+    divstate = get_division(startdiv)
+
 
 
     # Get column information.
     expand_colspans(trs[1],soup)
     header1 = trs[1].find_all('th')
     header2 = trs[2].find_all('th')
-    headers = [header1[ii].text.strip()+header2[ii].text.strip() for ii in range(len(header1))]
+    headers = [header1[ii].text.strip()+header2[ii].text.strip() for ii in range(min(len(header1),len(header2)))]
     
     iterable = iter(range(len(headers)))
 
@@ -137,6 +162,7 @@ def getresults(soup):
             csv.fieldnames += ['BodyweightKg']
         elif h == 'Squat1':
             csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
+            [next(iterable) for x in range(2)]
         elif h == 'Benchpress1':
             csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
             [next(iterable) for x in range(2)]
@@ -157,38 +183,30 @@ def getresults(soup):
 
 
 
-    for tr in trs[1:]:
-        row = [x.text for x in tr.find_all('td')]
-
+    for tr in trs[3:]:
+        row = [x.text for x in tr.find_all(["td","th"])]
         # Rows of length >1 are actual results, of length 1 are categories.
-        if len(row) == 1:
+        if len(row) == 1 and row[0].strip() != '':
             text = row[0].lower()
             if ' kg' in text:
                 wcstate = text.replace('kg','').strip()
                 continue
 
+            if 'women' in text:
+    	        sexstate = 'F'
+            elif 'men' in text:
+    	        sexstate = 'M'
 
+            div = get_division(text)
 
-            if 'damer' in text:
-                sexstate = 'F'
-                text = text.replace('damer', '').strip()
-            elif 'herrer' in text:
-                sexstate = 'M'
-                text = text.replace('herrer', '').strip()
 
             # Extract division information.
-            if 'ungdom' in text:
-                divstate = text.replace('ungdom', 'Teen')
-            elif 'junior' in text:
-                divstate = text.replace('junior', 'Junior')
-            elif 'åpen' in text:
-                divstate = 'Open'
-            elif 'veteran' in text:
-                divstate = text.replace('veteran', 'Master')
+            if div:
+            	divstate = div
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
-        elif row:
+        elif row != [] and row[0].strip() not in ['#','']:
             assert divstate
             assert sexstate
             assert wcstate
@@ -196,7 +214,7 @@ def getresults(soup):
             # Accumulate the row, but we need to look at the class of each td
             # to figure out whether lifts were good or bad.
             row = []
-            for td in tr.find_all('td'):
+            for td in tr.find_all(['td','th']):
                 text = td.text.strip()
                 text=text.replace(',','.')
                 
@@ -247,19 +265,18 @@ def addequipment(csv,meetcsv):
     meet_name = meetcsv.rows[0][5]
 
     raw_meet = False
-
     if any(classic in meet_name.lower() for classic in ['klassískum','klassískri']):
         raw_meet = True
-
-    csv.append_column('Equipment')
-    eqidx = csv.index('Equipment')
+    
+    if 'Equipment' not in csv.fieldnames:
+        csv.append_column('Equipment')
+    eqpidx = csv.index('Equipment')
     for row in csv.rows:
-        if '*' in row[eqidx]:
-            row[eqidx] = 'Raw'
-        elif row[eqidx] == '':
-            row[eqidx] = 'Single-ply'
-        else:
-            error("Unknown equipment: \"%s\"" % row[eqidx])
+        if row[eqpidx] == '':
+        	if raw_meet:
+        		row[eqpidx] = 'Raw'
+        	else:
+        		row[eqpidx] = 'Single-ply'
 
 
 # Attempts are given, but not the BestSquatKg columns, etc.
