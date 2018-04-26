@@ -15,7 +15,7 @@ except ModuleNotFoundError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
-# Local results, national results, international results
+# Local & national results
 URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
         "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=1",
         "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=2",

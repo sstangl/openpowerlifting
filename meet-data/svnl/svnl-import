@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Import script for SVNL, their data is nicely formatted
-# however the header labels and meet info is all over the place
+# Import script for SVNL
 
 from bs4 import BeautifulSoup
 import errno
-from oplcsv import Csv
 import os
 import sys
 import urllib.request
 import urllib.parse
 import re
-import subprocess
+
+try:
+    from oplcsv import Csv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
 
 
 def is_float(check_str):
@@ -938,11 +942,6 @@ def main(url):
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
-
-    print(meetcsv.rows[0][meetcsv.index('MeetName')])
-    subprocess.run(['../../tests/check-entries-csv',
-                    dirname+os.sep+'entries.csv'])
-    subprocess.run(['../../tests/check-meet-csv', dirname+os.sep+'meet.csv'])
 
     print("Imported into %s." % dirname)
 
