@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple script to run over a list of names and output any
+# that are listed as being both M and F.
+#
+import sys
+import os
+
+
+try:
+    from oplcsv import Csv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
+
+
+
+
+
+
+def main():
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'meet.csv' in files:
+            meetpath = dirname + os.sep + 'meet.csv'
+            meetcsv = Csv(meetpath)
+            meetyear = meetcsv.rows[0][1].split('-')[0]
+            basename = os.path.dirname(dirname) + os.sep + meetyear[2:] 
+            ii = 1
+            newname = basename+'01'
+            while os.path.exists(newname):
+            	ii +=1
+            	if ii < 10:
+            		newname = basename +'0'+str(ii)
+            	else:
+            		newname = basename + str(ii)
+            os.rename(dirname,newname)
+ 
+if __name__ == '__main__':
+    sys.exit(main())
