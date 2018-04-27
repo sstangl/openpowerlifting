@@ -30,7 +30,7 @@ except ModuleNotFoundError:
     import csvtojs
 
 
-ENTRIESCSV = 'build/static/data/openpowerlifting.csv'
+ENTRIESCSV = '../build/openpowerlifting.csv'
 
 
 # Returns the greater of two strings, as interpreted as floats.
@@ -89,6 +89,22 @@ def main():
     csv.remove_column_by_name('Bench4Kg')
     csv.remove_column_by_name('BestDeadliftKg')
     csv.remove_column_by_name('Deadlift4Kg')
+
+    csv.remove_column_by_name('Squat1Kg')
+    csv.remove_column_by_name('Squat2Kg')
+    csv.remove_column_by_name('Squat3Kg')
+    csv.remove_column_by_name('Bench1Kg')
+    csv.remove_column_by_name('Bench2Kg')
+    csv.remove_column_by_name('Bench3Kg')
+    csv.remove_column_by_name('Deadlift1Kg')
+    csv.remove_column_by_name('Deadlift2Kg')
+    csv.remove_column_by_name('Deadlift3Kg')
+    csv.remove_column_by_name('McCulloch')
+    csv.remove_column_by_name('Event')
+    csv.remove_column_by_name('LifterID')
+
+    # Convert to a big JS array.
+    csvtojs.convert(csv, "opldb", sys.stdout)
 
     # Convert to a big JS array.
     csvtojs.convert(csv, "opldb", sys.stdout)

@@ -20,14 +20,12 @@ builddir:
 	mkdir -p '${BUILDDIR}/static'
 	mkdir -p '${BUILDDIR}/static/scripts'
 	mkdir -p '${BUILDDIR}/static/images'
-	mkdir -p '${BUILDDIR}/static/data'
 
 # Copies the OPL database, and formats it for the Web.
 # A number of columns are omitted to save data.
 data: builddir
-	cp ${PLFILE} ${BUILDDIR}/static/data
-	${SCRIPTDIR}/csv-rmcol "${BUILDDIR}/static/data/openpowerlifting.csv" Squat1Kg Squat2Kg Squat3Kg Bench1Kg Bench2Kg Bench3Kg Deadlift1Kg Deadlift2Kg Deadlift3Kg McCulloch Event LifterID
-	cp ${MEETFILE} ${BUILDDIR}/static/data
+	rm -f "${BUILDDIR}/static/openpowerlifting.zip"
+	zip --junk-paths "${BUILDDIR}/static/openpowerlifting" "${PLFILE}" "${MEETFILE}"
 
 database: data
 	./make-openpowerlifting-js > ${BUILDDIR}/static/scripts/${PLFILEJS}
