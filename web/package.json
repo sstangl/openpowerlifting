@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/sstangl/openpowerlifting#readme",
   "devDependencies": {
-    "awesome-typescript-loader": "^3.5.0",
-    "babel-core": "^6.26.2",
-    "babel-loader": "^7.1.4",
+    "awesome-typescript-loader": "^3.4.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-minify-constant-folding": "^0.2.0",
     "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.7.2",
     "typescript": "2.5.2",
-    "webpack": "^3.11.0"
+    "webpack": "^3.10.0"
   }
 }
