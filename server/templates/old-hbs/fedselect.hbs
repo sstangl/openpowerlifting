@@ -78,7 +78,7 @@
       All Finnish Feds
     </option>
     <option value="FPO">FPO - Finland Powerlifting Organization [IPA] (Incomplete)</option>
-    <option value="SVNL">SVNL - Suomen Voimanostoliitto ry[IPF]</option>
+    <option value="SVNL">SVNL - Suomen Voimanostoliitto ry [IPF]</option>
   </optgroup>
   <optgroup label="France">
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
