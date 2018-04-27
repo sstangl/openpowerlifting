@@ -64,7 +64,7 @@ def getmeetinfo(soup):
     [day, month, year] = dashdate.split('-')
     date = '%s-%s-%s' % (year, month, day)
 
-    fed = 'KPF'
+    fed = 'KRAFT'
     country = 'Iceland'
     state = ''
 
