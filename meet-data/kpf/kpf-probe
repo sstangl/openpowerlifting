@@ -89,19 +89,20 @@ def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
-     
-    table = soup.find('table',id='meetCalendarTable')
+
+    table = soup.find('table', id='meetCalendarTable')
 
     for a in table.find_all('a'):
         url = a['href']
 
-        if any(int_str in a.text for int_str in['IPF ','NPF ','EPF ','DM ','GBPF '
-                                                'Nordic','International','Arnold','World','European']):
-        	continue
+        if any(int_str in a.text for int_str in['IPF ', 'NPF ', 'EPF ', 'DM ', 'GBPF ',
+                                                'Nordic', 'International', 'Arnold',
+                                                'World', 'European']):
+            continue
 
         if 'gallery' in url:
             continue
-       
+
         if 'http' not in url:
             url = BASEURL + url
             url = url.replace('../', '')
@@ -131,9 +132,10 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     for url in unentered:
-        subprocess.run(['./kpf-import',url])
+        subprocess.run(['./kpf-import', url])
 
     oplprobe.print_meets(color('[Kraft]'), unentered)
+
 
 if __name__ == '__main__':
     main()

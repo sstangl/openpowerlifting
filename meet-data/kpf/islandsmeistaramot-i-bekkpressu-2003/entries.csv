@@ -1,10 +1,10 @@
 Place,Name,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
 1,María Guðsteinsdóttir,1970,60.00,67.5,73.0,75.0,75.0,75.0,Open,F,60,Single-ply,B
 1,Freyja Kjartansdóttir,1977,90.00,60.0,-70.0,-70.0,60.0,60.0,Open,F,90,Single-ply,B
-1,Þorsteinn Magnús Sölvason,1971,67.50,-110.0,110.0,-115.0,110.0,110.0,Open,M,67,5,Single-ply,B
+1,Þorsteinn Magnús Sölvason,1971,67.50,-110.0,110.0,-115.0,110.0,110.0,Open,M,67.5,Single-ply,B
 1,Hörður Viðar Arnarson,1972,75.00,-75.0,75.0,-90.0,75.0,75.0,Open,M,75,Single-ply,B
-1,Domenico Alex Gala,1965,82.50,170.0,-180.0,180.0,180.0,180.0,Open,M,82,5,Single-ply,B
-2,Gísli Þrastarson,1979,82.50,-120.0,120.0,-135.0,120.0,120.0,Open,M,82,5,Single-ply,B
+1,Domenico Alex Gala,1965,82.50,170.0,-180.0,180.0,180.0,180.0,Open,M,82.5,Single-ply,B
+2,Gísli Þrastarson,1979,82.50,-120.0,120.0,-135.0,120.0,120.0,Open,M,82.5,Single-ply,B
 1,Hermann Hermannsson,1966,90.00,190.0,200.0,206.0,206.0,206.0,Open,M,90,Single-ply,B
 2,Axel Heiðar Guðmundsson,1969,90.00,185.0,-195.0,202.5,202.5,202.5,Open,M,90,Single-ply,B
 3,Jimmy R. Routhley,1967,90.00,160.0,175.0,-182.5,175.0,175.0,Open,M,90,Single-ply,B
@@ -12,16 +12,16 @@ Place,Name,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg
 5,Sigurður Kristinsson,1981,90.00,145.0,157.5,-170.0,157.5,157.5,Open,M,90,Single-ply,B
 6,Jón Trausti Gylfason,1967,90.00,145.0,147.5,-150.0,147.5,147.5,Open,M,90,Single-ply,B
 7,Pétur Smárason,1976,90.00,125.0,135.0,-140.0,135.0,135.0,Open,M,90,Single-ply,B
-,Rich Delgado,,90.00,-182.5,-182.5,-182.5,,,Open,M,90,Single-ply,B
+DQ,Rich Delgado,,90.00,-182.5,-182.5,-182.5,,,Open,M,90,Single-ply,B
 1,Hermann Haraldsson,1959,100.00,-190.0,190.0,-200.0,190.0,190.0,Open,M,100,Single-ply,B
 2,Alfreð Björnsson,1957,100.00,170.0,180.0,-190.0,180.0,180.0,Open,M,100,Single-ply,B
 3,Skorri Rafn Rafnsson,1985,100.00,150.0,-160.0,-170.0,150.0,150.0,Open,M,100,Single-ply,B
-,Haukur Magnússon,,100.00,-135.0,-140.0,-140.0,,,Open,M,100,Single-ply,B
+DQ,Haukur Magnússon,,100.00,-135.0,-140.0,-140.0,,,Open,M,100,Single-ply,B
 1,Ingvar Jóel Ingvarsson,1963,110.00,220.0,240.5,-245.0,240.5,240.5,Open,M,110,Single-ply,B
 2,Terry Walsh,,110.00,165.0,175.0,-185.0,175.0,175.0,Open,M,110,Single-ply,B
 3,Haraldur Jóhann Þórðarson,1978,110.00,140.0,150.0,-157.5,150.0,150.0,Open,M,110,Single-ply,B
-,Bjarki Elí Ólafsson,1973,110.00,-155.0,-155.0,,,,Open,M,110,Single-ply,B
-,Jóhann Friðrik Gíslason,1960,110.00,-170.0,-170.0,,,,Open,M,110,Single-ply,B
+DQ,Bjarki Elí Ólafsson,1973,110.00,-155.0,-155.0,,,,Open,M,110,Single-ply,B
+DQ,Jóhann Friðrik Gíslason,1960,110.00,-170.0,-170.0,,,,Open,M,110,Single-ply,B
 1,Jón Björn Björnsson,1960,125.00,210.0,220.0,-230.0,220.0,220.0,Open,M,125,Single-ply,B
 2,Bjarki Þór Sigurðsson,1973,125.00,180.0,190.0,-200.0,190.0,190.0,Open,M,125,Single-ply,B
 3,Sigfús Þorgeir Fossdal,1983,125.00,150.0,160.0,165.0,165.0,165.0,Open,M,125,Single-ply,B
