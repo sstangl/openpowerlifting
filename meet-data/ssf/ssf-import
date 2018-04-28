@@ -155,6 +155,8 @@ def getresults(soup):
                 wcstate = text.replace('kg', '').replace('viktklass','').replace(',', '.').strip()
                 wcstate = wcstate.replace('.00','')
                 wcstate = wcstate.replace('.50','.5')
+                if wcstate[0] == '+':
+                    wcstate=wcstate[1:]+'+'
                 continue
 
             if 'dam' in text:
@@ -182,7 +184,7 @@ def getresults(soup):
                 text = td.text.strip()
                 text = text.replace(',', '.')
                 
-                if text == '0.00' or text == '0':
+                if text == '0.00' or text == '0' or text == '-':
                     text = ''
 
                 row.append(text.replace('  ', ' '))
@@ -223,7 +225,14 @@ def addequipment(csv, meetcsv):
             else:
                 row[eqpidx] = 'Single-ply'
 
-
+def capitalise_names(csv):
+    nameidx = csv.index('Name')
+    for row in csv.rows:
+        split_name = [name for name in row[nameidx].split(' ') if name != '']
+        for ii in range(0,len(split_name)):
+            if len(split_name[ii]) >3:
+                split_name[ii] = split_name[ii].title()
+        row[nameidx] = ' '.join(split_name)
 
 def markevent(csv):
     assert 'Event' not in csv.fieldnames
@@ -322,6 +331,7 @@ def main(url):
 
     fixplace(entriescsv)
     addequipment(entriescsv, meetcsv)
+    capitalise_names(entriescsv)
 
     remove_empty_cols_ignore_fieldname(entriescsv)
 
