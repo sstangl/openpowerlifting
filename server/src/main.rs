@@ -19,7 +19,7 @@ use std::path::{Path, PathBuf};
 use std::process;
 
 extern crate server;
-use server::langpack::{self, Language};
+use server::langpack::{self, Language, Locale};
 use server::opldb;
 use server::pages;
 
@@ -103,14 +103,14 @@ fn rankings(
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
     let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
     let selection = match pages::rankings::Selection::from_path(&selections) {
         Ok(s) => s,
         Err(_) => return None,
     };
 
-    let context =
-        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
+    let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
 }
 
@@ -190,8 +190,10 @@ fn faq(
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
-    let context = pages::faq::Context::new(lang, &langinfo);
+    let context = pages::faq::Context::new(&locale);
     Some(Template::render("faq", &context))
 }
 
@@ -202,8 +204,10 @@ fn contact(
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
-    let context = pages::contact::Context::new(lang, &langinfo);
+    let context = pages::contact::Context::new(&locale);
     Some(Template::render("contact", &context))
 }
 
@@ -216,10 +220,11 @@ fn index(
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
     let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
     let selection = pages::rankings::Selection::new_default();
-    let context =
-        pages::rankings::Context::new(&opldb, lang, &langinfo, units, &selection);
+
+    let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
 }
 

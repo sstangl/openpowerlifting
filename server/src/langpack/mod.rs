@@ -67,6 +67,31 @@ impl FromStr for Language {
     }
 }
 
+/// Helper struct to pass around language information.
+pub struct Locale<'a> {
+    pub langinfo: &'a LangInfo,
+    pub language: Language,
+    pub strings: &'a Translations,
+    pub number_format: NumberFormat,
+    pub units: opldb::WeightUnits,
+}
+
+impl<'a> Locale<'a> {
+    pub fn new(
+        langinfo: &'a LangInfo,
+        language: Language,
+        units: opldb::WeightUnits,
+    ) -> Locale<'a> {
+        Locale {
+            langinfo: langinfo,
+            language: language,
+            strings: langinfo.get_translations(language),
+            number_format: language.number_format(),
+            units: units,
+        }
+    }
+}
+
 #[derive(Serialize, Deserialize)]
 pub struct UnitsTranslations {
     pub lbs: String,

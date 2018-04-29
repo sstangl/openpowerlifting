@@ -1,8 +1,8 @@
 //! Types for raw data interchange from Rust to JS.
 
-use langpack;
+use langpack::{self, Locale};
 use opldb::fields;
-use opldb::{self, Entry, OplDb};
+use opldb::{Entry, OplDb};
 
 #[derive(Serialize)]
 pub struct JsEntryRow<'db> {
@@ -34,14 +34,16 @@ pub struct JsEntryRow<'db> {
 impl<'db> JsEntryRow<'db> {
     pub fn from(
         opldb: &'db OplDb,
-        strings: &'db langpack::Translations,
-        number_format: langpack::NumberFormat,
-        units: opldb::WeightUnits,
+        locale: &'db Locale,
         entry: &'db Entry,
         sorted_index: u32,
     ) -> JsEntryRow<'db> {
         let meet = opldb.get_meet(entry.meet_id);
         let lifter = opldb.get_lifter(entry.lifter_id);
+
+        let strings = locale.strings;
+        let number_format = locale.number_format;
+        let units = locale.units;
 
         JsEntryRow {
             sorted_index,

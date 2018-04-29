@@ -2,7 +2,7 @@
 
 use serde_json;
 
-use langpack::{self, Language};
+use langpack::{self, Language, Locale};
 use opldb;
 use opldb::fields::{Federation, WeightKg};
 use opldb::CachedFilter;
@@ -499,14 +499,9 @@ fn selection_to_filter<'db>(
 impl<'db, 'a> Context<'db, 'a> {
     pub fn new(
         opldb: &'db opldb::OplDb,
-        language: Language,
-        langinfo: &'db langpack::LangInfo,
-        units: opldb::WeightUnits,
+        locale: &'db Locale,
         selection: &'a Selection,
     ) -> Context<'db, 'a> {
-        let strings = langinfo.get_translations(language);
-        let number_format = language.number_format();
-
         let filter = selection_to_filter(&opldb, &selection);
         let rankings = filter.sort_and_unique_by_wilks(&opldb);
 
@@ -514,23 +509,14 @@ impl<'db, 'a> Context<'db, 'a> {
         let top_100: Vec<JsEntryRow> = rankings.list[0..rankings.list.len().min(100)]
             .into_iter()
             .zip(0..)
-            .map(|(&n, i)| {
-                JsEntryRow::from(
-                    opldb,
-                    strings,
-                    number_format,
-                    units,
-                    opldb.get_entry(n),
-                    i,
-                )
-            })
+            .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.get_entry(n), i))
             .collect();
 
         Context {
             page_title: "Rankings".to_string(),
-            language: language,
-            strings: strings,
-            units: units,
+            language: locale.language,
+            strings: locale.strings,
+            units: locale.units,
 
             selection: selection,
             /// FIXME: Handle failure.
