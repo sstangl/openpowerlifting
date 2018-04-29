@@ -1,6 +1,6 @@
 //! Logic for the project status page.
 
-use langpack::{self, Language};
+use langpack::{self, Language, Locale};
 use opldb;
 use opldb::fields::Federation;
 
@@ -33,13 +33,7 @@ impl<'a> FederationStatus<'a> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(
-        opldb: &'a opldb::OplDb,
-        language: Language,
-        langinfo: &'a langpack::LangInfo,
-    ) -> Context<'a> {
-        let strings = langinfo.get_translations(language);
-        let page_title = &strings.header.status;
+    pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale) -> Context<'a> {
         let mut fed_statuses: Vec<FederationStatus> = vec![];
 
         for federation in Federation::iter_variants() {
@@ -56,9 +50,9 @@ impl<'a> Context<'a> {
         }
 
         Context {
-            page_title: page_title,
-            strings: strings,
-            language: language,
+            page_title: &locale.strings.header.status,
+            strings: locale.strings,
+            language: locale.language,
             fed_statuses: fed_statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,

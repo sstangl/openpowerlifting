@@ -124,13 +124,14 @@ fn lifter(
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
     let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
         Some(id) => id,
     };
 
-    let context = pages::lifter::Context::new(&opldb, lang, &langinfo, units, lifter_id);
+    let context = pages::lifter::Context::new(&opldb, &locale, lifter_id);
     Some(Template::render("lifter", &context))
 }
 
@@ -144,6 +145,7 @@ fn meet(
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
     let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
     let meetpath_str: &str = match meetpath.to_str() {
         None => return None,
@@ -154,7 +156,7 @@ fn meet(
         Some(id) => id,
     };
 
-    let context = pages::meet::Context::new(&opldb, lang, &langinfo, units, meet_id);
+    let context = pages::meet::Context::new(&opldb, &locale, meet_id);
     Some(Template::render("meet", &context))
 }
 
@@ -166,8 +168,10 @@ fn status(
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
-    let context = pages::status::Context::new(&opldb, lang, &langinfo);
+    let context = pages::status::Context::new(&opldb, &locale);
     Some(Template::render("status", &context))
 }
 
@@ -178,8 +182,10 @@ fn data(
     cookies: Cookies,
 ) -> Option<Template> {
     let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+    let locale = Locale::new(&langinfo, lang, units);
 
-    let context = pages::data::Context::new(lang, &langinfo);
+    let context = pages::data::Context::new(&locale);
     Some(Template::render("data", &context))
 }
 

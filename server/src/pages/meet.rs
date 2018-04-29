@@ -1,7 +1,7 @@
 //! Logic for each meet's individual results page.
 
 use itertools::Itertools;
-use langpack::{self, Language};
+use langpack::{self, Language, Locale};
 use opldb;
 use opldb::fields;
 
@@ -79,13 +79,15 @@ pub struct ResultsRow<'a> {
 impl<'a> ResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
-        strings: &'a langpack::Translations,
-        number_format: langpack::NumberFormat,
-        units: opldb::WeightUnits,
+        locale: &'a Locale,
         entry: &'a opldb::Entry,
         rank: u32,
     ) -> ResultsRow<'a> {
         let lifter: &'a opldb::Lifter = opldb.get_lifter(entry.lifter_id);
+
+        let strings = locale.strings;
+        let number_format = locale.number_format;
+        let units = locale.units;
 
         ResultsRow {
             place: format!("{}", &entry.place),
@@ -127,16 +129,8 @@ impl<'a> ResultsRow<'a> {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(
-        opldb: &'a opldb::OplDb,
-        language: Language,
-        langinfo: &'a langpack::LangInfo,
-        units: opldb::WeightUnits,
-        meet_id: u32,
-    ) -> Context<'a> {
+    pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale, meet_id: u32) -> Context<'a> {
         let meet = opldb.get_meet(meet_id);
-        let strings = langinfo.get_translations(language);
-        let number_format = language.number_format();
 
         // Display at most one entry for each lifter.
         let groups = opldb
@@ -170,7 +164,7 @@ impl<'a> Context<'a> {
         let rows = entries
             .into_iter()
             .zip(1..)
-            .map(|(e, i)| ResultsRow::from(opldb, strings, number_format, units, e, i))
+            .map(|(e, i)| ResultsRow::from(opldb, locale, e, i))
             .collect();
 
         Context {
@@ -180,10 +174,10 @@ impl<'a> Context<'a> {
                 meet.federation,
                 meet.name
             ),
-            language: language,
-            strings: strings,
-            units: units,
-            meet: MeetInfo::from(&meet, strings),
+            language: locale.language,
+            strings: locale.strings,
+            units: locale.units,
+            meet: MeetInfo::from(&meet, locale.strings),
             has_age_data: has_age_data,
             rows: rows,
         }

@@ -1,6 +1,6 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{self, Language};
+use langpack::{self, Language, Locale};
 use opldb;
 use opldb::fields;
 
@@ -43,12 +43,14 @@ pub struct MeetResultsRow<'a> {
 impl<'a> MeetResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
-        strings: &'a langpack::Translations,
-        number_format: langpack::NumberFormat,
-        units: opldb::WeightUnits,
+        locale: &'a Locale,
         entry: &'a opldb::Entry,
     ) -> MeetResultsRow<'a> {
         let meet: &'a opldb::Meet = opldb.get_meet(entry.meet_id);
+
+        let strings = locale.strings;
+        let number_format = locale.number_format;
+        let units = locale.units;
 
         MeetResultsRow {
             place: format!("{}", &entry.place),
@@ -97,33 +99,29 @@ impl<'a> MeetResultsRow<'a> {
 impl<'a> Context<'a> {
     pub fn new(
         opldb: &'a opldb::OplDb,
-        language: Language,
-        langinfo: &'a langpack::LangInfo,
-        units: opldb::WeightUnits,
+        locale: &'a Locale,
         lifter_id: u32,
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
-        let strings = langinfo.get_translations(language);
-        let number_format = language.number_format();
 
         // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
-        let lifter_sex = strings.translate_sex(entries[0].sex);
+        let lifter_sex = locale.strings.translate_sex(entries[0].sex);
 
         // Display the meet results, most recent first.
         let meet_results = entries
             .into_iter()
-            .map(|e| MeetResultsRow::from(opldb, strings, number_format, units, e))
+            .map(|e| MeetResultsRow::from(opldb, locale, e))
             .rev()
             .collect();
 
         Context {
             page_title: format!("{}", lifter.name),
-            language: language,
-            strings: strings,
-            units: units,
+            language: locale.language,
+            strings: locale.strings,
+            units: locale.units,
             lifter: lifter,
             lifter_sex: lifter_sex,
             meet_results: meet_results,
