@@ -130,6 +130,7 @@ KnownFederations = {
     "SCT",  # Super-Cup of Titans.
     "SPA",  # Singapore Powerlifting Alliance
     "SPF",
+    "SSF",  # Swedish IPF Affiliate.
     "SVNL",  # Finnish IPF Affiliate.
     "THSPA",  # Texas High School, single-ply only, drug-tested.
     "UPA",
@@ -434,7 +435,7 @@ def check(scriptname, filename):
         # Check if MeetName column contains the year or the fed name
         if year in row[nameidx]:
             perror("MeetName should not have the year.")
-        if row[fedidx] in row[nameidx]:
+        if row[fedidx] in row[nameidx].split():
             perror("MeetName should not have the federation.")
 
 

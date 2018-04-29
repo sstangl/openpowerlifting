@@ -34,7 +34,8 @@ def error(msg):
 def color(s):
     return "\033[1;34m" + s + "\033[0;m"
 
-def getpages(url,pagerange):
+
+def getpages(url, pagerange):
     LOGGER.setLevel(logging.WARNING)
     options = Options()
     options.set_headless(headless=True)
@@ -45,7 +46,9 @@ def getpages(url,pagerange):
 
     for page in pagerange:
         if page != 1:
-            driver.execute_script("javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView','Page$%i')" % page)
+            driver.execute_script(
+                "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
+                'Page$%i')" % page)
             time.sleep(1)
 
         pages.append(driver.page_source)
@@ -70,12 +73,11 @@ def getmeetlist(html):
 
         # Filter out non Swedish meets
             if any(text in name for text in
-                    ['EM', 'European','NM','Barents','Arnold']):
+                    ['VM', 'EM', 'European', 'NM', 'Barents', 'Arnold']):
                 continue
 
             if 'http' not in url:
                 url = BASEURL + url
-
 
             if url not in urls:
                 urls.append(url)
@@ -85,7 +87,7 @@ def getmeetlist(html):
 
 def main():
     meetlist = []
-    pages = getpages(URL,range(1,PAGES+1))
+    pages = getpages(URL, range(1, PAGES+1))
 
     for page in pages:
         meetlist = meetlist + getmeetlist(page)
@@ -94,7 +96,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     for url in unentered:
-        subprocess.run(['./ssf-import',url])
+        subprocess.run(['./ssf-import', url])
 
     oplprobe.print_meets(color('[SSF]'), unentered)
 

@@ -40,10 +40,8 @@ def getmeetinfo(soup):
     csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
                       'MeetState', 'MeetTown', 'MeetName']
 
+    name = soup.find('span', id='ctl00_ContentPlaceHolder2_Header').text
 
-    name = soup.find('span',id='ctl00_ContentPlaceHolder2_Header').text
-    
-    
     fed = 'SSF'
     country = 'Sweden'
     state = ''
@@ -97,7 +95,8 @@ def getresults(soup):
     wcstate = None
 
     # Get the results table.
-    results = soup.find_all('table', id='ctl00_ContentPlaceHolder2_contestTable')
+    results = soup.find_all(
+        'table', id='ctl00_ContentPlaceHolder2_contestTable')
     if len(results) == 0:
         error("Couldn't find the results table.")
 
@@ -105,14 +104,12 @@ def getresults(soup):
 
     trs = table.find_all(['tr'])
 
-
-
     for tr in trs:
         row = [x.text.strip() for x in tr.find_all(['td'])]
-        if 'Plac' in row: #Header
+        if 'Plac' in row:  # Header
             if csv.fieldnames != []:
                 continue
-            
+
             iterable = iter(range(len(row)))
 
             for ii in iterable:
@@ -147,16 +144,16 @@ def getresults(soup):
             # These columns are added from the category rows.
             csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
 
-
         # Rows of length >1 are actual results, of length 1 are categories.
         elif len(row) == 1 and row[0].strip() != '':
             text = row[0].lower()
             if 'viktklass ' in text:
-                wcstate = text.replace('kg', '').replace('viktklass','').replace(',', '.').strip()
-                wcstate = wcstate.replace('.00','')
-                wcstate = wcstate.replace('.50','.5')
+                wcstate = text.replace('kg', '').replace(
+                    'viktklass', '').replace(',', '.').strip()
+                wcstate = wcstate.replace('.00', '')
+                wcstate = wcstate.replace('.50', '.5')
                 if wcstate[0] == '+':
-                    wcstate=wcstate[1:]+'+'
+                    wcstate = wcstate[1:]+'+'
                 continue
 
             if 'dam' in text:
@@ -183,14 +180,14 @@ def getresults(soup):
             for td in tr.find_all('td'):
                 text = td.text.strip()
                 text = text.replace(',', '.')
-                
+
                 if text == '0.00' or text == '0' or text == '-':
                     text = ''
 
                 row.append(text.replace('  ', ' '))
 
             row = row + [divstate, sexstate, wcstate]
-            
+
             csv.rows += [row]
     return csv
 
@@ -198,7 +195,6 @@ def getresults(soup):
 def fixplace(csv):
     placeidx = csv.index('Place')
     totalidx = csv.index('TotalKg')
-    dividx = csv.index('Division')
     for row in csv.rows:
         if row[placeidx] == '':
             row[placeidx] = 'DQ'
@@ -212,7 +208,7 @@ def addequipment(csv, meetcsv):
     meet_name = meetcsv.rows[0][5]
 
     raw_meet = False
-    if any(classic in meet_name.lower() for classic in ['klassisk']):
+    if any(classic in meet_name.lower() for classic in ['klassisk', 'klbp', 'klsl']):
         raw_meet = True
 
     if 'Equipment' not in csv.fieldnames:
@@ -225,14 +221,16 @@ def addequipment(csv, meetcsv):
             else:
                 row[eqpidx] = 'Single-ply'
 
+
 def capitalise_names(csv):
     nameidx = csv.index('Name')
     for row in csv.rows:
         split_name = [name for name in row[nameidx].split(' ') if name != '']
-        for ii in range(0,len(split_name)):
-            if len(split_name[ii]) >3:
+        for ii in range(0, len(split_name)):
+            if len(split_name[ii]) > 3:
                 split_name[ii] = split_name[ii].title()
         row[nameidx] = ' '.join(split_name)
+
 
 def markevent(csv):
     assert 'Event' not in csv.fieldnames
@@ -295,6 +293,7 @@ def remove_empty_cols_ignore_fieldname(csv):
             return
         csv.remove_column_by_index(idx)
 
+
 def addtotals(csv):
 
     if 'TotalKg' not in csv.fieldnames:
@@ -303,16 +302,18 @@ def addtotals(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             total = 0
-            if row[placeidx] not in ['DQ','DD']:
-                if 'BestSquatKg' in csv.fieldnames and row[csv.index('BestSquatKg')] != '':
-                   total += float(row[csv.index('BestSquatKg')]) 
-                if 'BestBenchKg' in csv.fieldnames and row[csv.index('BestBenchKg')] != '':
-                   total += float(row[csv.index('BestBenchKg')])
-                if 'BestDeadliftKg' in csv.fieldnames and row[csv.index('BestDeadliftKg')] != '':
-                   total += float(row[csv.index('BestDeadliftKg')])
+            if row[placeidx] not in ['DQ', 'DD']:
+                if ('BestSquatKg' in csv.fieldnames and
+                        row[csv.index('BestSquatKg')] != ''):
+                    total += float(row[csv.index('BestSquatKg')])
+                if ('BestBenchKg' in csv.fieldnames and
+                        row[csv.index('BestBenchKg')] != ''):
+                    total += float(row[csv.index('BestBenchKg')])
+                if ('BestDeadliftKg' in csv.fieldnames and
+                        row[csv.index('BestDeadliftKg')] != ''):
+                    total += float(row[csv.index('BestDeadliftKg')])
                 if total != 0.0:
                     row[totalidx] = str(total)
-
 
 
 def main(url):
@@ -328,7 +329,6 @@ def main(url):
 
     addtotals(entriescsv)
 
-
     fixplace(entriescsv)
     addequipment(entriescsv, meetcsv)
     capitalise_names(entriescsv)
@@ -339,8 +339,6 @@ def main(url):
     # Feds get it wrong all the time.
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
-
-
 
     # Figure out event information.
     markevent(entriescsv)
