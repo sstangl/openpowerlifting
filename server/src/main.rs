@@ -93,7 +93,6 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new(&staticdir).join(file)).ok()
 }
 
-
 #[get("/rankings/<selections..>")]
 fn rankings(
     selections: PathBuf,
@@ -224,6 +223,11 @@ fn index(
     Some(Template::render("rankings", &context))
 }
 
+#[error(404)]
+fn not_found() -> &'static str {
+    "404"
+}
+
 fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
@@ -231,18 +235,9 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .mount(
             "/",
-            routes![
-                index,
-                rankings,
-                lifter,
-                meet,
-                statics,
-                status,
-                data,
-                faq,
-                contact
-            ],
+            routes![index, rankings, lifter, meet, statics, status, data, faq, contact],
         )
+        .catch(errors![not_found])
         .attach(Template::fairing())
 }
 
