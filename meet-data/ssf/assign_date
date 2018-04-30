@@ -5,6 +5,8 @@
 # Try and find the information for a meet and write it to the meet file
 # Call this with the folder number
 # Depending on your internet speed you may need to adjust DELAY
+# Note that to use this script you will need Selenium installed
+# and geckodriver on your path.
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
