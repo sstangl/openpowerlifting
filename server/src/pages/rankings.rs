@@ -156,7 +156,7 @@ impl FromStr for FederationSelection {
         // Check if the first part parses as a federation.
         // If it doesn't, there's no need to heap-allocate a vector.
         if let Some(s) = iter.next() {
-            let fed = match Federation::from_url_str(s) {
+            let fed = match s.parse::<Federation>() {
                 Ok(f) => f,
                 Err(_) => return Err(()),
             };
@@ -165,7 +165,7 @@ impl FromStr for FederationSelection {
             acc.push(fed);
 
             for part in iter {
-                let fed = match Federation::from_url_str(part) {
+                let fed = match part.parse::<Federation>() {
                     Ok(f) => f,
                     Err(_) => return Err(()),
                 };

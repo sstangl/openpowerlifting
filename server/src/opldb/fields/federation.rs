@@ -1,269 +1,202 @@
 //! Defines the `Federation` field for the `meets` table.
 
-use std::fmt;
-
-#[derive(Copy, Clone, Deserialize, PartialEq, Serialize, EnumIterator)]
+/// Enum of federations.
+///
+/// `Display` derivation provided by strum.
+/// `EnumString` (`FromStr`) derivation provided by strum.
+///
+/// Note that the deserialization source string (as in the CSV data)
+/// may differ from the FromStr source string, which comes from a URL
+/// and is generally lowercase.
+///
+/// The strum `to_string` value defines the default .to_string() result,
+/// while *all* of to_string and serialize are parseable.
+/// So Federation::APF can be parsed from the strings "APF" and "apf".
+#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter,
+         EnumString)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
+    #[strum(to_string = "365Strong", serialize = "365strong")]
     _365Strong,
+    #[strum(to_string = "AAPF", serialize = "aapf")]
     AAPF,
+    #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
+    #[strum(to_string = "ADFPA", serialize = "adfpa")]
     ADFPA,
+    #[strum(to_string = "AEP", serialize = "aep")]
     AEP,
+    #[strum(to_string = "AfricanPF", serialize = "africanpf")]
     AfricanPF,
+    #[strum(to_string = "APA", serialize = "apa")]
     APA,
+    #[strum(to_string = "APC", serialize = "apc")]
     APC,
+    #[strum(to_string = "APF", serialize = "apf")]
     APF,
+    #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
+    #[strum(to_string = "BB", serialize = "bb")]
     BB,
+    #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
+    #[strum(to_string = "BP", serialize = "bp")]
     BP,
+    #[strum(to_string = "CAPO", serialize = "capo")]
     CAPO,
+    #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
     CommonwealthPF,
+    #[strum(to_string = "CPF", serialize = "cpf")]
     CPF,
+    #[strum(to_string = "CPL", serialize = "cpl")]
     CPL,
+    #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
+    #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
+    #[strum(to_string = "EPA", serialize = "epa")]
     EPA,
+    #[strum(to_string = "EPF", serialize = "epf")]
     EPF,
+    #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
+    #[strum(to_string = "FESUPO", serialize = "fesupo")]
     FESUPO,
+    #[strum(to_string = "FFForce", serialize = "ffforce")]
     FFForce,
+    #[strum(to_string = "FPO", serialize = "fpo")]
     FPO,
+    #[strum(to_string = "FPR", serialize = "fpr")]
     FPR,
+    #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
+    #[strum(to_string = "GPC", serialize = "gpc")]
     GPC,
     #[serde(rename = "GPC-AUS")]
+    #[strum(to_string = "GPC-AUS", serialize = "gpc-aus")]
     GPCAUS,
     #[serde(rename = "GPC-GB")]
+    #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
     GPCGB,
     #[serde(rename = "GPC-NZ")]
+    #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
+    #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
+    #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
+    #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
+    #[strum(to_string = "IPF", serialize = "ipf")]
     IPF,
+    #[strum(to_string = "IPL", serialize = "ipl")]
     IPL,
+    #[strum(to_string = "IrishPF", serialize = "irishpf")]
     IrishPF,
+    #[strum(to_string = "IrishPO", serialize = "irishpo")]
     IrishPO,
+    #[strum(to_string = "KRAFT", serialize = "kraft")]
     KRAFT,
+    #[strum(to_string = "MHP", serialize = "mhp")]
     MHP,
+    #[strum(to_string = "MM", serialize = "mm")]
     MM,
+    #[strum(to_string = "NAPF", serialize = "napf")]
     NAPF,
+    #[strum(to_string = "NASA", serialize = "nasa")]
     NASA,
+    #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
+    #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
+    #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
+    #[strum(to_string = "NZPF", serialize = "nzpf")]
     NZPF,
+    #[strum(to_string = "OceaniaPF", serialize = "oceaniapf")]
     OceaniaPF,
+    #[strum(to_string = "ParaPL", serialize = "parapl")]
     ParaPL,
+    #[strum(to_string = "PA", serialize = "pa")]
     PA,
+    #[strum(to_string = "PLZS", serialize = "plzs")]
     PLZS,
+    #[strum(to_string = "ProRaw", serialize = "proraw")]
     ProRaw,
+    #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
+    #[strum(to_string = "RAW", serialize = "raw")]
     RAW,
+    #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
+    #[strum(to_string = "RPS", serialize = "rps")]
     RPS,
+    #[strum(to_string = "RUPC", serialize = "rupc")]
     RUPC,
+    #[strum(to_string = "ScottishPL", serialize = "scottishpl")]
     ScottishPL,
+    #[strum(to_string = "SCT", serialize = "sct")]
     SCT,
+    #[strum(to_string = "SPA", serialize = "spa")]
     SPA,
+    #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
+    #[strum(to_string = "SVNL", serialize = "svnl")]
     SVNL,
+    #[strum(to_string = "THSPA", serialize = "thspa")]
     THSPA,
+    #[strum(to_string = "UPA", serialize = "upa")]
     UPA,
+    #[strum(to_string = "USAPL", serialize = "usapl")]
     USAPL,
+    #[strum(to_string = "USPF", serialize = "uspf")]
     USPF,
+    #[strum(to_string = "USPA", serialize = "uspa")]
     USPA,
+    #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
+    #[strum(to_string = "WDFPF", serialize = "wdfpf")]
     WDFPF,
+    #[strum(to_string = "WelshPA", serialize = "welshpa")]
     WelshPA,
+    #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
+    #[strum(to_string = "WPAU", serialize = "wpau")]
     WPAU,
+    #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
     #[serde(rename = "WPC-RUS")]
+    #[strum(to_string = "WPC-RUS", serialize = "wpc-rus")]
     WPCRUS,
+    #[strum(to_string = "WNPF", serialize = "wnpf")]
     WNPF,
+    #[strum(to_string = "WRPF", serialize = "wrpf")]
     WRPF,
     #[serde(rename = "WRPF-AUS")]
+    #[strum(to_string = "WRPF-AUS", serialize = "wrpf-aus")]
     WRPFAUS,
     #[serde(rename = "WRPF-CAN")]
+    #[strum(to_string = "WRPF-CAN", serialize = "wrpf-can")]
     WRPFCAN,
+    #[strum(to_string = "WUAP", serialize = "wuap")]
     WUAP,
+    #[strum(to_string = "XPC", serialize = "xpc")]
     XPC,
 }
 
-impl fmt::Display for Federation {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match *self {
-            Federation::_365Strong => write!(f, "365Strong"),
-            Federation::AAPF => write!(f, "AAPF"),
-            Federation::AAU => write!(f, "AAU"),
-            Federation::ADFPA => write!(f, "ADFPA"),
-            Federation::AEP => write!(f, "AEP"),
-            Federation::AfricanPF => write!(f, "AfricanPF"),
-            Federation::APA => write!(f, "APA"),
-            Federation::APC => write!(f, "APC"),
-            Federation::APF => write!(f, "APF"),
-            Federation::AsianPF => write!(f, "AsianPF"),
-            Federation::BB => write!(f, "BB"),
-            Federation::BPU => write!(f, "BPU"),
-            Federation::BP => write!(f, "BP"),
-            Federation::CAPO => write!(f, "CAPO"),
-            Federation::CommonwealthPF => write!(f, "CommonwealthPF"),
-            Federation::CPF => write!(f, "CPF"),
-            Federation::CPL => write!(f, "CPL"),
-            Federation::CPU => write!(f, "CPU"),
-            Federation::DSF => write!(f, "DSF"),
-            Federation::EPA => write!(f, "EPA"),
-            Federation::EPF => write!(f, "EPF"),
-            Federation::FEMEPO => write!(f, "FEMEPO"),
-            Federation::FESUPO => write!(f, "FESUPO"),
-            Federation::FFForce => write!(f, "FFForce"),
-            Federation::FPO => write!(f, "FPO"),
-            Federation::FPR => write!(f, "FPR"),
-            Federation::GPA => write!(f, "GPA"),
-            Federation::GPC => write!(f, "GPC"),
-            Federation::GPCGB => write!(f, "GPC-GB"),
-            Federation::GPCAUS => write!(f, "GPC-AUS"),
-            Federation::GPCNZ => write!(f, "GPC-NZ"),
-            Federation::HERC => write!(f, "HERC"),
-            Federation::IDFPF => write!(f, "IDFPF"),
-            Federation::IPA => write!(f, "IPA"),
-            Federation::IPF => write!(f, "IPF"),
-            Federation::IPL => write!(f, "IPL"),
-            Federation::IrishPF => write!(f, "IrishPF"),
-            Federation::IrishPO => write!(f, "IrishPO"),
-            Federation::KRAFT => write!(f, "KRAFT"),
-            Federation::MHP => write!(f, "MHP"),
-            Federation::MM => write!(f, "MM"),
-            Federation::NAPF => write!(f, "NAPF"),
-            Federation::NASA => write!(f, "NASA"),
-            Federation::NIPF => write!(f, "NIPF"),
-            Federation::NPA => write!(f, "NPA"),
-            Federation::NSF => write!(f, "NSF"),
-            Federation::NZPF => write!(f, "NZPF"),
-            Federation::OceaniaPF => write!(f, "OceaniaPF"),
-            Federation::ParaPL => write!(f, "ParaPL"),
-            Federation::PA => write!(f, "PA"),
-            Federation::PLZS => write!(f, "PLZS"),
-            Federation::ProRaw => write!(f, "ProRaw"),
-            Federation::PZKFiTS => write!(f, "PZKFiTS"),
-            Federation::RAW => write!(f, "RAW"),
-            Federation::RAWU => write!(f, "RAWU"),
-            Federation::RPS => write!(f, "RPS"),
-            Federation::RUPC => write!(f, "RUPC"),
-            Federation::ScottishPL => write!(f, "ScottishPL"),
-            Federation::SCT => write!(f, "SCT"),
-            Federation::SPA => write!(f, "SPA"),
-            Federation::SPF => write!(f, "SPF"),
-            Federation::SVNL => write!(f, "SVNL"),
-            Federation::THSPA => write!(f, "THSPA"),
-            Federation::UPA => write!(f, "UPA"),
-            Federation::USAPL => write!(f, "USAPL"),
-            Federation::USPF => write!(f, "USPF"),
-            Federation::USPA => write!(f, "USPA"),
-            Federation::WABDL => write!(f, "WABDL"),
-            Federation::WDFPF => write!(f, "WDFPF"),
-            Federation::WelshPA => write!(f, "WelshPA"),
-            Federation::WPA => write!(f, "WPA"),
-            Federation::WPAU => write!(f, "WPAU"),
-            Federation::WPC => write!(f, "WPC"),
-            Federation::WPCRUS => write!(f, "WPC-RUS"),
-            Federation::WNPF => write!(f, "WNPF"),
-            Federation::WRPF => write!(f, "WRPF"),
-            Federation::WRPFAUS => write!(f, "WRPF-AUS"),
-            Federation::WRPFCAN => write!(f, "WRPF-CAN"),
-            Federation::WUAP => write!(f, "WUAP"),
-            Federation::XPC => write!(f, "XPC"),
-        }
-    }
-}
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-impl Federation {
-    pub fn from_url_str(s: &str) -> Result<Self, ()> {
-        match s {
-            "365strong" => Ok(Federation::_365Strong),
-            "aapf" => Ok(Federation::AAPF),
-            "aau" => Ok(Federation::AAU),
-            "adfpa" => Ok(Federation::ADFPA),
-            "aep" => Ok(Federation::AEP),
-            "africanpf" => Ok(Federation::AfricanPF),
-            "apa" => Ok(Federation::APA),
-            "apc" => Ok(Federation::APC),
-            "apf" => Ok(Federation::APF),
-            "asianpf" => Ok(Federation::AsianPF),
-            "bb" => Ok(Federation::BB),
-            "bpu" => Ok(Federation::BPU),
-            "bp" => Ok(Federation::BP),
-            "capo" => Ok(Federation::CAPO),
-            "commonwealthpf" => Ok(Federation::CommonwealthPF),
-            "cpf" => Ok(Federation::CPF),
-            "cpl" => Ok(Federation::CPL),
-            "cpu" => Ok(Federation::CPU),
-            "dsf" => Ok(Federation::DSF),
-            "epa" => Ok(Federation::EPA),
-            "epf" => Ok(Federation::EPF),
-            "femepo" => Ok(Federation::FEMEPO),
-            "fesupo" => Ok(Federation::FESUPO),
-            "ffforce" => Ok(Federation::FFForce),
-            "fpo" => Ok(Federation::FPO),
-            "fpr" => Ok(Federation::FPR),
-            "gpa" => Ok(Federation::GPA),
-            "gpc" => Ok(Federation::GPC),
-            "gpcgb" => Ok(Federation::GPCGB),
-            "gpcaus" => Ok(Federation::GPCAUS),
-            "gpcnz" => Ok(Federation::GPCNZ),
-            "herc" => Ok(Federation::HERC),
-            "idfpf" => Ok(Federation::IDFPF),
-            "ipa" => Ok(Federation::IPA),
-            "ipf" => Ok(Federation::IPF),
-            "ipl" => Ok(Federation::IPL),
-            "irishpf" => Ok(Federation::IrishPF),
-            "irishpo" => Ok(Federation::IrishPO),
-            "kraft" => Ok(Federation::KRAFT),
-            "mhp" => Ok(Federation::MHP),
-            "mm" => Ok(Federation::MM),
-            "napf" => Ok(Federation::NAPF),
-            "nasa" => Ok(Federation::NASA),
-            "nipf" => Ok(Federation::NIPF),
-            "npa" => Ok(Federation::NPA),
-            "nsf" => Ok(Federation::NSF),
-            "nzpf" => Ok(Federation::NZPF),
-            "oceaniapf" => Ok(Federation::OceaniaPF),
-            "parapl" => Ok(Federation::ParaPL),
-            "pa" => Ok(Federation::PA),
-            "plzs" => Ok(Federation::PLZS),
-            "proraw" => Ok(Federation::ProRaw),
-            "pzkfits" => Ok(Federation::PZKFiTS),
-            "100raw" => Ok(Federation::RAW),
-            "rawu" => Ok(Federation::RAWU),
-            "rps" => Ok(Federation::RPS),
-            "rupc" => Ok(Federation::RUPC),
-            "scottishpl" => Ok(Federation::ScottishPL),
-            "sct" => Ok(Federation::SCT),
-            "spa" => Ok(Federation::SPA),
-            "spf" => Ok(Federation::SPF),
-            "svnl" => Ok(Federation::SVNL),
-            "thspa" => Ok(Federation::THSPA),
-            "upa" => Ok(Federation::UPA),
-            "usapl" => Ok(Federation::USAPL),
-            "uspf" => Ok(Federation::USPF),
-            "uspa" => Ok(Federation::USPA),
-            "wabdl" => Ok(Federation::WABDL),
-            "wdfpf" => Ok(Federation::WDFPF),
-            "welshpa" => Ok(Federation::WelshPA),
-            "wpa" => Ok(Federation::WPA),
-            "wpau" => Ok(Federation::WPAU),
-            "wpc" => Ok(Federation::WPC),
-            "wpcrus" => Ok(Federation::WPCRUS),
-            "wnpf" => Ok(Federation::WNPF),
-            "wrpf" => Ok(Federation::WRPF),
-            "wrpfaus" => Ok(Federation::WRPFAUS),
-            "wrpfcan" => Ok(Federation::WRPFCAN),
-            "wuap" => Ok(Federation::WUAP),
-            "xpc" => Ok(Federation::XPC),
-            _ => Err(()),
-        }
+    #[test]
+    fn test_url_strings() {
+        // The lowercase form should parse.
+        assert_eq!(
+            "wrpf".parse::<Federation>().unwrap(),
+            Federation::WRPF
+        );
+
+        // The default to_string() should be the upper-case form.
+        assert_eq!(Federation::WRPF.to_string(), "WRPF");
     }
 }

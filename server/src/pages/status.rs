@@ -4,6 +4,8 @@ use langpack::{self, Language, Locale};
 use opldb;
 use opldb::fields::Federation;
 
+use strum::IntoEnumIterator;
+
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
@@ -36,7 +38,7 @@ impl<'a> Context<'a> {
     pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale) -> Context<'a> {
         let mut fed_statuses: Vec<FederationStatus> = vec![];
 
-        for federation in Federation::iter_variants() {
+        for federation in Federation::iter() {
             let fed_status = "Incomplete";
             // TODO: Make this more efficient
             let fed_meet_count = opldb

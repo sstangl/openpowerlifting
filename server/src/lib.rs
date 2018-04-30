@@ -5,12 +5,13 @@
 // External dependencies.
 extern crate csv;
 extern crate itertools;
-#[macro_use]
-extern crate enum_iterator_derive;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
 extern crate serde_json;
+extern crate strum;
+#[macro_use]
+extern crate strum_macros;
 
 // Exported modules.
 pub mod langpack;
