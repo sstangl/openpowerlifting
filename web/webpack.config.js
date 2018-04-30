@@ -41,7 +41,10 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader',
             options: {
-              allowJs: true
+              // Setting to "true" causes the loader to consult the build/
+              // directory, where it tries to load the openpowerlifting.js
+              // and OOMs.
+              allowJs: false
             }
           }
         ],
