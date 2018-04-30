@@ -19,7 +19,7 @@ use std::path::{Path, PathBuf};
 use std::process;
 
 extern crate server;
-use server::langpack::{self, Language, Locale};
+use server::langpack::{self, LangInfo, Language, Locale};
 use server::opldb;
 use server::pages;
 
@@ -87,6 +87,16 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUn
     language.default_units()
 }
 
+fn make_locale<'db>(
+    langinfo: &'db LangInfo,
+    languages: AcceptLanguage,
+    cookies: &Cookies,
+) -> Locale<'db> {
+    let lang = select_display_language(languages, &cookies);
+    let units = select_weight_units(lang, &cookies);
+    Locale::new(&langinfo, lang, units)
+}
+
 #[get("/static/<file..>")]
 fn statics(file: PathBuf) -> Option<NamedFile> {
     let staticdir = env::var("STATICDIR").unwrap();
@@ -101,9 +111,7 @@ fn rankings(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
+    let locale = make_locale(&langinfo, languages, &cookies);
 
     let selection = match pages::rankings::Selection::from_path(&selections) {
         Ok(s) => s,
@@ -122,9 +130,7 @@ fn lifter(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
+    let locale = make_locale(&langinfo, languages, &cookies);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => return None,
@@ -143,9 +149,7 @@ fn meet(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
+    let locale = make_locale(&langinfo, languages, &cookies);
 
     let meetpath_str: &str = match meetpath.to_str() {
         None => return None,
@@ -167,10 +171,7 @@ fn status(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
-
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::status::Context::new(&opldb, &locale);
     Some(Template::render("status", &context))
 }
@@ -181,10 +182,7 @@ fn data(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
-
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::data::Context::new(&locale);
     Some(Template::render("data", &context))
 }
@@ -195,10 +193,7 @@ fn faq(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
-
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::faq::Context::new(&locale);
     Some(Template::render("faq", &context))
 }
@@ -209,10 +204,7 @@ fn contact(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
-
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::contact::Context::new(&locale);
     Some(Template::render("contact", &context))
 }
@@ -224,12 +216,8 @@ fn index(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    let locale = Locale::new(&langinfo, lang, units);
-
+    let locale = make_locale(&langinfo, languages, &cookies);
     let selection = pages::rankings::Selection::new_default();
-
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
 }
