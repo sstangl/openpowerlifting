@@ -7,12 +7,15 @@ extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
+extern crate strum;
 
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect};
 use rocket::{Outcome, State};
 use rocket_contrib::Template;
+
+use strum::IntoEnumIterator;
 
 use std::env;
 use std::path::{Path, PathBuf};
@@ -296,15 +299,10 @@ fn main() {
 
     // Load translations.
     let mut langinfo = langpack::LangInfo::new();
-    load_translations_or_exit(&mut langinfo, Language::de, "translations/de.json");
-    load_translations_or_exit(&mut langinfo, Language::en, "translations/en.json");
-    load_translations_or_exit(&mut langinfo, Language::eo, "translations/eo.json");
-    load_translations_or_exit(&mut langinfo, Language::es, "translations/es.json");
-    load_translations_or_exit(&mut langinfo, Language::fi, "translations/fi.json");
-    load_translations_or_exit(&mut langinfo, Language::fr, "translations/fr.json");
-    load_translations_or_exit(&mut langinfo, Language::it, "translations/it.json");
-    load_translations_or_exit(&mut langinfo, Language::sl, "translations/sl.json");
-    load_translations_or_exit(&mut langinfo, Language::ru, "translations/ru.json");
+    for language in Language::iter() {
+        let path = format!("translations/{}.json", language);
+        load_translations_or_exit(&mut langinfo, language, &path);
+    }
 
     // Run the server loop.
     rocket(opldb, langinfo).launch();
