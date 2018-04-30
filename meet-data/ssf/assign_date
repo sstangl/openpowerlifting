@@ -3,6 +3,8 @@
 #
 # SSF meets have the date on the linking page, not the meet page
 # Try and find the information for a meet and write it to the meet file
+# Call this with the folder number
+# Depending on your internet speed you may need to adjust DELAY
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -10,7 +12,6 @@ from selenium.webdriver.firefox.options import Options
 import os
 import sys
 import time
-import subprocess
 import logging
 from selenium.webdriver.remote.remote_connection import LOGGER
 
@@ -21,7 +22,8 @@ except ModuleNotFoundError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     from oplcsv import Csv
 
-PAGES = 31
+PAGES = 4
+DELAY = 2
 URL = "http://online.styrkelyft.se/web/oldContest.aspx"
 BASEURL = "http://online.styrkelyft.se/web/"
 
@@ -38,7 +40,7 @@ def color(s):
 def getpages(url, pagerange):
     LOGGER.setLevel(logging.WARNING)
     options = Options()
-    # options.set_headless(headless=True)
+    options.set_headless(headless=True)
     driver = webdriver.Firefox(firefox_options=options)
     driver.get(url)
 
@@ -49,7 +51,7 @@ def getpages(url, pagerange):
             driver.execute_script(
                 "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
                 'Page$%i')" % page)
-        time.sleep(5)
+        time.sleep(2)
 
         pages.append(driver.page_source)
     return pages

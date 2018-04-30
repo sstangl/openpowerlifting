@@ -9,7 +9,6 @@ from selenium.webdriver.firefox.options import Options
 import os
 import sys
 import time
-import subprocess
 import logging
 from selenium.webdriver.remote.remote_connection import LOGGER
 
@@ -20,7 +19,7 @@ except ModuleNotFoundError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
-PAGES = 31
+PAGES = 4
 URL = "http://online.styrkelyft.se/web/oldContest.aspx"
 BASEURL = "http://online.styrkelyft.se/web/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -94,9 +93,6 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
-
-    for url in unentered:
-        subprocess.run(['./ssf-import', url])
 
     oplprobe.print_meets(color('[SSF]'), unentered)
 

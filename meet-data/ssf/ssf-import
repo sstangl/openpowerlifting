@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Import data from the Kraft.is website.
-# Their data format is actually standardised!
+# Import data from the SSF website
+# After running this run ./assign_date (Folder number)
 
 
 from bs4 import BeautifulSoup
@@ -359,6 +359,7 @@ def main(url):
         fd.write(url + "\n")
 
     print("Imported into %s." % dirname)
+    print("Don't forget to run assign_date!")
 
 
 if __name__ == '__main__':

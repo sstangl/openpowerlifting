@@ -2,6 +2,12 @@
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=23}
     subjuniors = {name = "Sub-Juniors",min=0,max=18}
+    1820 = {name = "18-20",min=18,max=20}
+    1417 = {name = "14-17",min=14,max=17}
+    4044 = {name = "40-44",min=40,max=44}
+    5054 = {name = "50-54",min=50,max=54}
+    5059 = {name = "55-59",min=55,max=59}
+    65plus = {name = "65+",min=65,max=999}
     masters1 = {name = "Masters 1",min=39,max=999}
     masters2 = {name = "Masters 2",min=49,max=999}
     masters3 = {name = "Masters 3",min=59,max=999}
@@ -35,9 +41,8 @@
     sex = "M"
 
 [weightclasses.old_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","82.5+"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","82.5+","90","90+"]
     date_range = ["0000-00-00","2010-12-31"]
     sex = "F"
 
 [exclusions]
-    228 = ["check_row_weightclass_sex"]

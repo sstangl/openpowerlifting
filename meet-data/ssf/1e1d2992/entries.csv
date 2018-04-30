@@ -1,30 +1,30 @@
-Place,Name,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Pekka Kihlström,Sundsvall AK,167.5,152.5,180.0,500.0,Open,67.5,Single-ply,SBD
-2,Kjell Berg,Lidingö AK,160.0,97.5,200.0,457.5,Open,67.5,Single-ply,SBD
-1,Stefan Englund,Jönköping SK,215.0,150.0,210.0,575.0,Open,75,Single-ply,SBD
-2,Per-Åke Johnsson,Åmotfors AK,195.0,165.0,195.0,555.0,Open,75,Single-ply,SBD
-3,Gerry Dahlgren,KK Eleiko,175.0,112.5,192.5,480.0,Open,75,Single-ply,SBD
-1,Tomas Ring,Täby AK,245.0,170.0,235.0,650.0,Open,82.5,Single-ply,SBD
-2,Kjell-Arne Nielsen,Laxå KK,210.0,147.5,240.0,597.5,Open,82.5,Single-ply,SBD
-3,Mats Bergstedt,Lidingö AK,205.0,110.0,235.0,550.0,Open,82.5,Single-ply,SBD
-4,Lars-Göran Emanuelson,Södra TK,140.0,95.0,160.0,395.0,Open,82.5,Single-ply,SBD
-1,Rüdiger Hopp,Täby AK,280.0,145.0,240.0,665.0,Open,90,Single-ply,SBD
-2,Göran Lundberg,Lerum AK,240.0,150.0,260.0,650.0,Open,90,Single-ply,SBD
-3,Alf Nilsson,Nässjö AMK,170.0,120.0,240.0,530.0,Open,90,Single-ply,SBD
-1,Jan Larsson,Täby AK,295.0,180.0,305.0,780.0,Open,100,Single-ply,SBD
-2,Per-Erik Rasmusson,Skurup KF,250.0,205.0,265.0,720.0,Open,100,Single-ply,SBD
-3,Ola Fernqvist,Lidingö AK,230.0,150.0,230.0,610.0,Open,100,Single-ply,SBD
-4,Michael Vuorisalo,Borlänge AK,210.0,190.0,200.0,600.0,Open,100,Single-ply,SBD
-5,Jörgen Kalmendal,Södra TK,190.0,145.0,225.0,560.0,Open,100,Single-ply,SBD
-1,Anders Björkbrant,Jönköping SK,300.0,200.0,282.5,782.5,Open,110,Single-ply,SBD
-2,Hans Hellsten,Mammut AK,300.0,192.5,270.0,762.5,Open,110,Single-ply,SBD
-3,Jan Ljunggren,Sundbyberg TK,270.0,170.0,235.0,675.0,Open,110,Single-ply,SBD
-4,Anders Magnusson,Skurup KF,250.0,167.5,250.0,667.5,Open,110,Single-ply,SBD
-5,Björn Hygrell,Täby AK,230.0,180.0,237.5,647.5,Open,110,Single-ply,SBD
-6,Per Andersson,Göteborg SK,245.0,150.0,240.0,635.0,Open,110,Single-ply,SBD
-1,Göran Johansson,TK Trossö,270.0,160.0,300.0,730.0,Open,125,Single-ply,SBD
-2,Lennart Nilsson,Östersund AK,260.0,177.5,282.5,720.0,Open,125,Single-ply,SBD
-3,Urban Boväng,Allmänna SK,280.0,160.0,240.0,680.0,Open,125,Single-ply,SBD
-4,Conny Olsson,Skurup KF,250.0,135.0,275.0,660.0,Open,125,Single-ply,SBD
-5,Anders Georgson,Borlänge AK,220.0,175.0,220.0,615.0,Open,125,Single-ply,SBD
-1,Bengt Fridell,Åmotfors AK,302.5,197.5,300.0,800.0,Open,125+,Single-ply,SBD
+Place,Name,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Pekka Kihlström,Sundsvall AK,167.5,152.5,180,500,Masters 1,67.5,Single-ply,SBD,M
+2,Kjell Berg,Lidingö AK,160,97.5,200,457.5,Masters 1,67.5,Single-ply,SBD,M
+1,Stefan Englund,Jönköping SK,215,150,210,575,Masters 1,75,Single-ply,SBD,M
+2,Per-Åke Johnsson,Åmotfors AK,195,165,195,555,Masters 1,75,Single-ply,SBD,M
+3,Gerry Dahlgren,KK Eleiko,175,112.5,192.5,480,Masters 1,75,Single-ply,SBD,M
+1,Tomas Ring,Täby AK,245,170,235,650,Masters 1,82.5,Single-ply,SBD,M
+2,Kjell-Arne Nielsen,Laxå KK,210,147.5,240,597.5,Masters 1,82.5,Single-ply,SBD,M
+3,Mats Bergstedt,Lidingö AK,205,110,235,550,Masters 1,82.5,Single-ply,SBD,M
+4,Lars-Göran Emanuelson,Södra TK,140,95,160,395,Masters 1,82.5,Single-ply,SBD,M
+1,Rüdiger Hopp,Täby AK,280,145,240,665,Masters 1,90,Single-ply,SBD,M
+2,Göran Lundberg,Lerum AK,240,150,260,650,Masters 1,90,Single-ply,SBD,M
+3,Alf Nilsson,Nässjö AMK,170,120,240,530,Masters 1,90,Single-ply,SBD,M
+1,Jan Larsson,Täby AK,295,180,305,780,Masters 1,100,Single-ply,SBD,M
+2,Per-Erik Rasmusson,Skurup KF,250,205,265,720,Masters 1,100,Single-ply,SBD,M
+3,Ola Fernqvist,Lidingö AK,230,150,230,610,Masters 1,100,Single-ply,SBD,M
+4,Michael Vuorisalo,Borlänge AK,210,190,200,600,Masters 1,100,Single-ply,SBD,M
+5,Jörgen Kalmendal,Södra TK,190,145,225,560,Masters 1,100,Single-ply,SBD,M
+1,Anders Björkbrant,Jönköping SK,300,200,282.5,782.5,Masters 1,110,Single-ply,SBD,M
+2,Hans Hellsten,Mammut AK,300,192.5,270,762.5,Masters 1,110,Single-ply,SBD,M
+3,Jan Ljunggren,Sundbyberg TK,270,170,235,675,Masters 1,110,Single-ply,SBD,M
+4,Anders Magnusson,Skurup KF,250,167.5,250,667.5,Masters 1,110,Single-ply,SBD,M
+5,Björn Hygrell,Täby AK,230,180,237.5,647.5,Masters 1,110,Single-ply,SBD,M
+6,Per Andersson,Göteborg SK,245,150,240,635,Masters 1,110,Single-ply,SBD,M
+1,Göran Johansson,TK Trossö,270,160,300,730,Masters 1,125,Single-ply,SBD,M
+2,Lennart Nilsson,Östersund AK,260,177.5,282.5,720,Masters 1,125,Single-ply,SBD,M
+3,Urban Boväng,Allmänna SK,280,160,240,680,Masters 1,125,Single-ply,SBD,M
+4,Conny Olsson,Skurup KF,250,135,275,660,Masters 1,125,Single-ply,SBD,M
+5,Anders Georgson,Borlänge AK,220,175,220,615,Masters 1,125,Single-ply,SBD,M
+1,Bengt Fridell,Åmotfors AK,302.5,197.5,300,800,Masters 1,125+,Single-ply,SBD,M
