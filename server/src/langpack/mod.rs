@@ -5,18 +5,19 @@ use serde::ser::Serialize;
 use serde_json;
 
 use std::error::Error;
-use std::str::FromStr;
 
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
+
+use strum::IntoEnumIterator;
 
 use opldb;
 use opldb::fields;
 
 /// List of languages accepted by the project.
 #[allow(non_camel_case_types)]
-#[derive(Clone, Copy, Debug, Serialize)]
+#[derive(Clone, Copy, Debug, Display, EnumIter, EnumString, Serialize)]
 pub enum Language {
     /// German, without regional variance.
     de,
@@ -46,24 +47,12 @@ impl Language {
             _ => opldb::WeightUnits::Kg,
         }
     }
-}
 
-impl FromStr for Language {
-    type Err = ();
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "de" => Ok(Language::de),
-            "en" => Ok(Language::en),
-            "eo" => Ok(Language::eo),
-            "es" => Ok(Language::es),
-            "fi" => Ok(Language::fi),
-            "fr" => Ok(Language::fr),
-            "it" => Ok(Language::it),
-            "sl" => Ok(Language::sl),
-            "ru" => Ok(Language::ru),
-            _ => Err(()),
-        }
+    /// Returns a list of available languages as strings.
+    pub fn string_list() -> Vec<String> {
+        Language::iter()
+            .map(|lang| lang.to_string())
+            .collect()
     }
 }
 

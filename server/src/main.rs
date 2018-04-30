@@ -54,10 +54,11 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
     // header is consulted, defaulting to English.
     match languages.0 {
         Some(s) => {
-            // TODO: This vector should be static and in langpack.
-            let known_languages =
-                vec!["de", "en", "eo", "es", "fi", "fr", "it", "sl", "ru"];
-            let valid_languages = accept_language::intersection(&s, known_languages);
+            // TODO: It would be better if this vector was static.
+            let known_languages: Vec<String> = Language::string_list();
+            let borrowed: Vec<&str> =
+                known_languages.iter().map(|s| s.as_ref()).collect();
+            let valid_languages = accept_language::intersection(&s, borrowed);
 
             if valid_languages.len() == 0 {
                 default
