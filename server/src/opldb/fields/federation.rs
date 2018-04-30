@@ -142,6 +142,8 @@ pub enum Federation {
     #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
     #[strum(to_string = "SVNL", serialize = "svnl")]
+    SSF,
+    #[strum(to_string = "SSF", serialize = "ssf")]    
     SVNL,
     #[strum(to_string = "THSPA", serialize = "thspa")]
     THSPA,
