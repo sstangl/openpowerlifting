@@ -228,6 +228,11 @@ fn not_found() -> &'static str {
     "404"
 }
 
+#[error(500)]
+fn internal_error() -> &'static str {
+    "500"
+}
+
 fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
@@ -237,7 +242,7 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
             "/",
             routes![index, rankings, lifter, meet, statics, status, data, faq, contact],
         )
-        .catch(errors![not_found])
+        .catch(errors![not_found, internal_error])
         .attach(Template::fairing())
 }
 
