@@ -435,7 +435,7 @@ def check(scriptname, filename):
         # Check if MeetName column contains the year or the fed name
         if year in row[nameidx]:
             perror("MeetName should not have the year.")
-        if row[fedidx] in row[nameidx].split():
+        if row[fedidx] in row[nameidx].replace('/', ' ').replace('-', ' ').split():
             perror("MeetName should not have the federation.")
 
 
