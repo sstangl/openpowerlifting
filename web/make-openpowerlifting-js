@@ -106,9 +106,6 @@ def main():
     # Convert to a big JS array.
     csvtojs.convert(csv, "opldb", sys.stdout)
 
-    # Convert to a big JS array.
-    csvtojs.convert(csv, "opldb", sys.stdout)
-
 
 if __name__ == '__main__':
     main()
