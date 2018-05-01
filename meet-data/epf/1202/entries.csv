@@ -1,7 +1,7 @@
 Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
 1,Thomas Wulffeld,1969,SWE,58.74,130,140,-150,140,80,85,87.5,87.5,220,240,-245.5,240,467.5,59,Masters 1,SBD,M,Single-ply
 1,Henrik Rilke,1970,GER,65.43,225,232.5,237.5,237.5,135,142.5,145,145,215,222.5,227.5,227.5,610,66,Masters 1,SBD,M,Single-ply
-2,Jonas Telegin,1965,SWE,65.67,205,-215,-215,205,137.5,142.5,145,145,215,230,-235,230,580,66,Masters 1,SBD,M,Single-ply
+2,Jonas Telégin,1965,SWE,65.67,205,-215,-215,205,137.5,142.5,145,145,215,230,-235,230,580,66,Masters 1,SBD,M,Single-ply
 3,Karel Ruso,1965,CZE,65.7,240,257.5,-266,257.5,95,102.5,107.5,107.5,215,-235,-247.5,215,580,66,Masters 1,SBD,M,Single-ply
 1,Sami Siltala,1972,FIN,73.42,-235,235,245,245,145,155,160,160,240,250,-257.5,250,655,74,Masters 1,SBD,M,Single-ply
 2,Vincent Halbot,1969,FRA,73.46,225,-235,-237.5,225,-175,185,187.5,187.5,220,230,-245,230,642.5,74,Masters 1,SBD,M,Single-ply
@@ -22,7 +22,7 @@ DQ,Martin Turek,1972,CZE,82.93,-250,-250,-250,,180,-185,-185,180,210,-230,,210,,
 4,François Kalic,1965,FRA,92.23,-280,280,-290,280,180,187.5,192.5,192.5,250,265,282.5,282.5,755,93,Masters 1,SBD,M,Single-ply
 5,Alessandro Silvas,1972,ITA,89.43,255,262.5,270,270,180,185,-190,185,270,280,290,290,745,93,Masters 1,SBD,M,Single-ply
 6,Milan Gregus,1968,CZE,92.51,-275,-275,275,275,197.5,202.5,207.5,207.5,250,260,-265,260,742.5,93,Masters 1,SBD,M,Single-ply
-7,Christer Hogstrom,1967,SWE,92.35,280,-287.5,-287.5,280,177.5,182.5,-185,182.5,250,260,265,265,727.5,93,Masters 1,SBD,M,Single-ply
+7,Christer Högström,1967,SWE,92.35,280,-287.5,-287.5,280,177.5,182.5,-185,182.5,250,260,265,265,727.5,93,Masters 1,SBD,M,Single-ply
 8,Petteri Hakkarainen,1967,FIN,92.49,245,255,,255,182.5,192.5,-200,192.5,245,260,-275,260,707.5,93,Masters 1,SBD,M,Single-ply
 DQ,Seppo Norpila,1963,FIN,93,-215,-225,-240,,-190,-192.5,-195,,,,,,,93,Masters 1,SBD,M,Single-ply
 1,Håkan Persson,1967,SWE,104.8,-305,305,312.5,312.5,197.5,-202.5,202.5,202.5,280,300,302.5,302.5,817.5,105,Masters 1,SBD,M,Single-ply
@@ -36,7 +36,7 @@ DQ,Seppo Norpila,1963,FIN,93,-215,-225,-240,,-190,-192.5,-195,,,,,,,93,Masters 1
 9,Michel Aguilera,1966,FRA,96.53,210,220,230,230,175,180,185,185,245,255,-262.5,255,670,105,Masters 1,SBD,M,Single-ply
 10,Michael Oszwald,1965,AUT,104.64,240,-252.5,255,255,135,137.5,140,140,245,257.5,267.5,267.5,662.5,105,Masters 1,SBD,M,Single-ply
 11,Fabiano Fulvi,1969,ITA,93.06,-220,220,230,230,170,-180,-180,170,240,-260,-260,240,640,105,Masters 1,SBD,M,Single-ply
-12,Lars Hoglander,1964,SWE,96.85,275,-290,-290,275,-175,175,180,180,170,,,170,625,105,Masters 1,SBD,M,Single-ply
+12,Lars Höglander,1964,SWE,96.85,275,-290,-290,275,-175,175,180,180,170,,,170,625,105,Masters 1,SBD,M,Single-ply
 DQ,Claudio D'Ovidio,1969,ITA,104.72,-320,-320,320,320,232.5,240,245,245,-230,-230,-230,,,105,Masters 1,SBD,M,Single-ply
 1,Fannar Gauti Dagbjartsson,1967,ISL,114.46,302.5,310,,310,247.5,-252.5,,247.5,280,295,-310,295,852.5,120,Masters 1,SBD,M,Single-ply
 2,Sergey Burmistrov,1969,RUS,119.58,320,330,,330,220,235,-245,235,270,285,-292.5,285,850,120,Masters 1,SBD,M,Single-ply
@@ -94,7 +94,7 @@ DQ,Wolfgang Weidemeier,1953,GER,95.54,222.5,232.5,237.5,237.5,125,132.5,140,140,
 1,Jean-Luc Collart,1959,BEL,116.44,320,335,-340,335,200,215,222.5,222.5,280,295,-302.5,295,852.5,120,Masters 2,SBD,M,Single-ply
 2,Zoltán Kanát,1962,CZE,116.7,300,320,330,330,220,-250,-255.5,220,280,300,-305,300,850,120,Masters 2,SBD,M,Single-ply
 3,Anatoly Evgrafov,1960,RUS,114.69,250,265,-270,265,160,-170,-175,160,220,-230,230,230,655,120,Masters 2,SBD,M,Single-ply
-4,Goran Andersson,1953,SWE,118.29,230,-250,-250,230,180,-190,-190,180,230,-237.5,-247.5,230,640,120,Masters 2,SBD,M,Single-ply
+4,Göran Andersson,1953,SWE,118.29,230,-250,-250,230,180,-190,-190,180,230,-237.5,-247.5,230,640,120,Masters 2,SBD,M,Single-ply
 1,Reijo Hänninen,1958,FIN,131.59,-280,-280,280,280,100,140,150,150,200,-230,,200,630,120+,Masters 2,SBD,M,Single-ply
 1,Janis Kenis,1947,CZE,55.48,100,112.5,-117.5,112.5,60,72.5,80,80,100,115,120,120,312.5,59,Masters 3,SBD,M,Single-ply
 DQ,Franco Giummarra,1950,ITA,57.01,-185,-185,-185,,,,,,,,,,,59,Masters 3,SBD,M,Single-ply
