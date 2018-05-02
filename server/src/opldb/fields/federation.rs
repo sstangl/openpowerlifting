@@ -107,6 +107,8 @@ pub enum Federation {
     NASA,
     #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
+    #[strum(to_string = "NordicPF", serialize = "nordicpf")]
+    NordicPF,
     #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
     #[strum(to_string = "NSF", serialize = "nsf")]
