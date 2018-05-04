@@ -9,10 +9,14 @@ Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpa
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 1524959403314	Marionette	INFO	Listening on port 64389
 1524959404058	Marionette	WARN	TLS certificate errors will be ignored for this session
-1524959461251	geckodriver	INFO	geckodriver 0.20.1
-1524959461289	geckodriver	INFO	Listening on 127.0.0.1:64460
-1524959464309	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile.DNOlV4u2hiKv"
-*** You are running in headless mode.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+nning in headless mode.
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 1524959466270	Marionette	INFO	Enabled via --marionette
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
@@ -20,9 +24,11 @@ Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpa
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 1524959471890	Marionette	INFO	Listening on port 64469
 1524959472586	Marionette	WARN	TLS certificate errors will be ignored for this session
-1524959563820	geckodriver	INFO	geckodriver 0.20.1
-1524959563877	geckodriver	INFO	Listening on 127.0.0.1:64571
-1524959566874	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile.Ajtt2EGioRiG"
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2C0104,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile.Ajtt2EGioRiG"
 *** You are running in headless mode.
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 1524959569520	Marionette	INFO	Enabled via --marionette
@@ -31,10 +37,14 @@ Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpa
 1524959576048	Marionette	INFO	Listening on port 64579
 1524959577120	Marionette	WARN	TLS certificate errors will be ignored for this session
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
-1524960015161	geckodriver	INFO	geckodriver 0.20.1
-1524960015193	geckodriver	INFO	Listening on 127.0.0.1:64652
-1524960018248	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile.O1rX7qhFUk6i"
-*** You are running in headless mode.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+nning in headless mode.
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 1524960021688	Marionette	INFO	Enabled via --marionette
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
@@ -42,11 +52,16 @@ Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpa
 1524960028708	Marionette	INFO	Listening on port 64662
 1524960029428	Marionette	WARN	TLS certificate errors will be ignored for this session
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
-1524960070575	geckodriver	INFO	geckodriver 0.20.1
-1524960070609	geckodriver	INFO	Listening on 127.0.0.1:64729
-1524960073594	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile.kon63SfAvmAr"
-*** You are running in headless mode.
-Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1000B,name=PAPZ::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 1524960077792	Marionette	INFO	Enabled via --marionette
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\Matt\AppData\Local\openvr\openvrpaths.vrpath
