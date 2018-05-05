@@ -24,9 +24,13 @@ BASEURL = "http://www.usapowerlifting.com/IPF-NorthAmerica/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
 def color(s):
     return "\033[1;32m" + s + "\033[0;m"
-
 
 
 def getmeetlist(html):
