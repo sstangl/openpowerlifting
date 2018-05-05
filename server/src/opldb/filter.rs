@@ -118,7 +118,8 @@ impl Filter {
         // First, group contiguous entries by lifter_id, so only the best
         // entry for each lifter is counted.
         // The group_by() operation is lazy and does not perform any action yet.
-        let groups = self.list
+        let groups = self
+            .list
             .iter()
             .group_by(|idx| opldb.get_entry(**idx).lifter_id);
 
@@ -145,7 +146,8 @@ impl Filter {
         // First, group contiguous entries by lifter_id, so only the best
         // entry for each lifter is counted.
         // The group_by() operation is lazy and does not perform any action yet.
-        let groups = self.list
+        let groups = self
+            .list
             .iter()
             .group_by(|idx| opldb.get_entry(**idx).lifter_id);
 

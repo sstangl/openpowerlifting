@@ -20,6 +20,9 @@ mod filter_cache;
 pub use self::filter_cache::CachedFilter;
 use self::filter_cache::FilterCache;
 
+mod static_cache;
+pub use self::static_cache::*;
+
 #[derive(Copy, Clone, Debug, Serialize)]
 pub enum WeightUnits {
     Kg,
@@ -173,6 +176,10 @@ pub struct OplDb {
 
     /// The cache of filters on the vectors.
     filter_cache: FilterCache,
+
+    /// Precalculated caches.
+    // TODO: This should replace the FilterCache.
+    static_cache: StaticCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -235,12 +242,14 @@ impl OplDb {
         let entries = import_entries_csv(entries_csv)?;
 
         let filter_cache = FilterCache::new(&meets, &entries);
+        let static_cache = StaticCache::new(&meets, &entries);
 
         Ok(OplDb {
             lifters,
             meets,
             entries,
             filter_cache,
+            static_cache,
         })
     }
 
@@ -277,7 +286,9 @@ impl OplDb {
             }
         }
 
-        mem::size_of::<OplDb>() + owned_vectors + owned_strings
+        mem::size_of::<OplDb>()
+            + owned_vectors
+            + owned_strings
             + self.filter_cache.size_bytes()
     }
 
@@ -314,6 +325,11 @@ impl OplDb {
     /// Borrows a cached filter.
     pub fn get_filter(&self, c: CachedFilter) -> &Filter {
         &self.filter_cache.from_enum(c)
+    }
+
+    /// Borrows the static cache. It's static!
+    pub fn get_static_cache(&self) -> &StaticCache {
+        &self.static_cache
     }
 
     /// Look up the lifter_id by username.
@@ -357,7 +373,8 @@ impl OplDb {
     /// Panics if the lifter_id is not found.
     pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
         // Perform a binary search on lifter_id.
-        let found_index = self.get_entries()
+        let found_index = self
+            .get_entries()
             .binary_search_by_key(&lifter_id, |e| e.lifter_id)
             .unwrap();
 

@@ -117,7 +117,7 @@ fn rankings(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let selection = pages::rankings::Selection::from_path(&selections).ok()?;
+    let selection = pages::selection::Selection::from_path(&selections).ok()?;
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
@@ -218,7 +218,7 @@ fn index(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let selection = pages::rankings::Selection::new_default();
+    let selection = pages::selection::Selection::new_default();
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
