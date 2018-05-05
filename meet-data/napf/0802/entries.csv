@@ -1,7 +1,6 @@
 Name,BirthYear,Sex,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Country,Place,Event,Equipment
 Paula Smith,1966,F,Masters 1,132,90+,127.5,137.5,150,150,-70,70,72.5,72.5,132.5,150,160,160,382.5,USVI,1,SBD,Single-ply
 Kristen Yukness,1976,F,Open,55.6,56,112.5,120,125,125,65,70,75,75,125,130,-132.5,130,330,USA,1,SBD,Single-ply
-Paula Smith,1966,F,Open,132,90+,127.5,137.5,150,150,-70,70,72.5,72.5,132.5,150,160,160,382.5,USVI,2,SBD,Single-ply
 Kyle Williams,1991,M,Juniors,53.8,56,97.5,100,102.5,102.5,60,65,67.5,67.5,115,127.5,-137.5,127.5,297.5,USVI,2,SBD,Single-ply
 Victelio Ortiz,1985,M,Juniors,80.4,82.5,142.5,162.5,172.5,172.5,137.5,-155,-155,137.5,195,207.5,-227.5,207.5,517.5,PUR,1,SBD,Single-ply
 Jonathan Joseph,1963,M,Masters 1,65.8,67.5,90,102.5,110,110,-90,90,92.5,92.5,115,150,160,160,362.5,USVI,3,SBD,Single-ply
@@ -10,21 +9,14 @@ Ramon Miranda,1967,M,Masters 1,101.4,110,237.5,262.5,-272.5,262.5,180,185,-190,1
 Jose Ocasio,1954,M,Masters 2,98.4,100,195,225,235,235,-117.5,122.5,-147.5,122.5,225,240,-252.5,240,597.5,PUR,1,SBD,Single-ply
 Michael Womelsdorf,1957,M,Masters 2,94.8,100,155,165,-177.5,165,115,-125,125,125,145,160,170,170,460,USA,2,SBD,Single-ply
 Iván Cancel,1983,M,Open,55.2,56,187.5,200,211,211,117.5,125,-130,125,172.5,187.5,197.5,197.5,533.5,PUR,1,SBD,Single-ply
-Kyle Williams,1991,M,Open,53.8,56,97.5,100,102.5,102.5,60,65,67.5,67.5,115,127.5,-137.5,127.5,297.5,USVI,2,SBD,Single-ply
-Jonathan Joseph,1963,M,Open,65.8,67.5,90,102.5,110,110,-90,90,92.5,92.5,115,150,160,160,362.5,USVI,1,SBD,Single-ply
 Vasant Saith,1982,M,Open,72.8,75,177.5,185,195,195,112.5,127.5,-137.5,127.5,205,215,-217.5,215,537.5,TT,1,SBD,Single-ply
 Hector Garcia,1977,M,Open,74,75,-140,140,145,145,115,122.5,130,130,-200,200,-220,200,475,PUR,2,SBD,Single-ply
 Luis Tapia,1970,M,Open,81.6,82.5,280,290,-300,290,162.5,172.5,-182.5,172.5,235,250,-255,250,712.5,PUR,1,SBD,Single-ply
-Victelio Ortiz,1985,M,Open,80.4,82.5,142.5,162.5,172.5,172.5,137.5,-155,-155,137.5,195,207.5,-227.5,207.5,517.5,PUR,2,SBD,Single-ply
 Dean Adam,1982,M,Open,78.2,82.5,115,125,137.5,137.5,67.5,72.5,82.5,82.5,142.5,-160,-160,142.5,362.5,USVI,3,SBD,Single-ply
 Lawrence Johnson,1972,M,Open,88.2,90,-265,265,272.5,272.5,-165,165,170,170,285,295,-322.5,295,737.5,Cayman Islands,1,SBD,Single-ply
-Erik Rassmussen,1962,M,Open,84,90,260,-280,-280,260,-170,175,182.5,182.5,225,235,-240,235,677.5,Denmark,2,SBD,Single-ply
 Tony McInerney,1972,M,Open,86.6,90,-210,-210,210,210,117.5,120,125,125,227.5,235,245,245,580,Ireland,3,SBD,Single-ply
 Mark Johnson,1975,M,Open,94.8,100,265,275,277.5,277.5,192.5,200,,200,-265,265,-270,265,742.5,TT,1,SBD,Single-ply
-Jose Ocasio,1954,M,Open,98.4,100,195,225,235,235,-117.5,122.5,-147.5,122.5,225,240,-252.5,240,597.5,PUR,2,SBD,Single-ply
-Michael Womelsdorf,1957,M,Open,94.8,100,155,165,-177.5,165,115,-125,125,125,145,160,170,170,460,USA,3,SBD,Single-ply
 Harold Millan,1973,M,Open,109,110,307.5,-325,325,325,175,185,192.5,192.5,275,295,-320,295,812.5,PUR,1,SBD,Single-ply
-Ramon Miranda,1967,M,Open,101.4,110,237.5,262.5,-272.5,262.5,180,185,-190,185,225,242.5,-265,242.5,690,PUR,2,SBD,Single-ply
 Enius Pickering,1969,M,Open,101.4,110,217.5,227.5,-245,227.5,160,170,175,175,265,272.5,-280,272.5,675,British VI,3,SBD,Single-ply
 Bryce Kujat,1980,M,Open,100.8,110,-180,180,200,200,135,-145,-147.5,135,200,227.5,237.5,237.5,572.5,USVI,4,SBD,Single-ply
 Raymond Victorine,1969,M,Open,110.4,125,260,272.5,275,275,165,170,-175,170,265,272.5,-280,272.5,717.5,USVI,1,SBD,Single-ply
@@ -32,5 +24,4 @@ William Schouten,1975,M,Open,135.8,125+,-297.5,297.5,305,305,170,177.5,190,190,-
 Mette Jensen,1985,F,Open,54.2,56,,,,,72.5,-77.5,77.5,77.5,,,,,77.5,Denmark,1,B,Single-ply
 Dennis Cieri,1968,M,Masters 1,89.8,90,,,,,-291,-291,-307.5,,,,,,,USA,DQ,B,Single-ply
 Jim Klostegard,1948,M,Masters 3,82.2,82.5,,,,,175,-182.5,-182.5,175,,,,,175,USA,1,B,Single-ply
-Dennis Cieri,1968,M,Open,89.8,90,,,,,-291,-291,-307.5,,,,,,,USA,DQ,B,Single-ply
 Chris Calvano,1969,M,Open,108,110,,,,,-255,-255,-255,,,,,,,USA,DQ,B,Single-ply
