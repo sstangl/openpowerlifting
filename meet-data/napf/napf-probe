@@ -59,7 +59,7 @@ def getmeetlist(html):
         if '/gallery/' in url:
             continue
         if '/newsletter/' in url:
-        	continue
+            continue
 
         if 'http' not in url:
             url = BASEURL + url
