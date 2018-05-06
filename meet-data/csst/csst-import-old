@@ -35,7 +35,8 @@ def error(msg):
 
 
 def getdirname(url):
-    return url.split('/')[-1].replace('.htm','')
+    name = url.split('/')[-1].replace('.htm','')+'_'+ url.split('/')[-2]
+    return name
 
 
 def getmeetinfo(soup):
@@ -52,7 +53,11 @@ def getmeetinfo(soup):
 
     place_date = results.find('h3').text
 
-    split_str = place_date.split(',')
+    if ',' in place_date:
+        split_str = place_date.split(',')
+    else:
+        split_str = place_date.split(' ')
+
 
     dotdate = split_str[-1]
     town = split_str[-2].split(' ')[-1]
@@ -62,7 +67,13 @@ def getmeetinfo(soup):
     
 
     assert '.' in dotdate
-    [day, month, year] = dotdate.split('.')
+
+    if '.-' in dotdate:
+        [day, month, year] = dotdate.split('.-')[-1].split('.')
+        day = dotdate.split('.-')[0]
+    else:
+        [day, month, year] = dotdate.split('.')
+
     date = '%s-%s-%s' % (year, month, day)
 
 
@@ -78,19 +89,11 @@ def getmeetinfo(soup):
     return csv
 
 
-def getdivision(text):
-    divstate = ''
-    text = text.lower()
-    if 'juniorky' in text or 'junioři' in text:
-        divstate = 'Juniors'
-    elif 'dorostenky' in text or 'dorostenci' in text:
-        divstate = 'Sub-Juniors'
-    elif 'm1' in text:
-        divstate = 'Masters 1'
 
-    return divstate
-
-def getsexwc(text):
+def getsexwcdiv(text):
+    sexstate = None
+    wcstate = None
+    divstate = None
      # Extract sex information.
     text = text.lower()
     if 'ženy' in text:
@@ -101,13 +104,33 @@ def getsexwc(text):
         text = text.replace('muži', '').strip()
 
     if 'kg' in text:
-        wcstate = text.split(' ')[-1]
-        wcstate = wcstate.replace('kg','')
+        text = text.replace('kg','').strip()
+        wcstate = re.search('\+\d{3}|\d{3}|\+\d{2}|\d{2}',text).group(0)
         if 'nad ' in text:
             wcstate = wcstate +'+'
 
-def getresults(soup):
+    if 'juniorky' in text or 'junioři' in text:
+        divstate = 'Juniors'
+    elif 'dorostenky' in text or 'dorostenci' in text:
+        divstate = 'Sub-Juniors'
+    elif 'm1' in text:
+        divstate = 'Masters 1'
+    elif 'm2' in text:
+        divstate = 'Masters 2'
+    elif 'm3' in text:
+        divstate = 'Masters 3'
+    elif 'm4' in text:
+        divstate = 'Masters 4'
+
+
+    return [sexstate,wcstate,divstate]
+
+
+
+def getresults(soup,meetcsv):
     csv = Csv()
+    meetname = meetcsv.rows[0][meetcsv.index('MeetName')].lower()
+
     # Get the results table.
     results = soup.find('div', {'id':'solo'})
     if len(results) == 0:
@@ -120,8 +143,8 @@ def getresults(soup):
 
     for tableblock in tableblocks:
         divstate = 'Open'
-        sexstate = None
-        wcstate  = None
+        sexstate = ''
+        wcstate  = ''
 
         if tableblock.h3:
             tabletitle = tableblock.h3.text
@@ -133,56 +156,59 @@ def getresults(soup):
 
         # this is a team comp, sex,wc, division are not given
         if re.match('\d\.|\d{2}\.',tabletitle):
-            sexstate = ''
             divstate = 'Open'
-            wcstate = ''
             append_team = True
         # this is a regular competition, titles are div,sex,wc    
         elif tabletitle != '': 
-            [temp_sex,temp_wc] = getsexwc(tabletitle)
+            [temp_sex,temp_wc,temp_div] = getsexwcdiv(tabletitle)
 
-            if temp_sex == '':
-                error("No sex in: \"%s\"" % tabletitle)
-            elif temp_wc == '':
-                error("No weight class in: \"%s\"" % tabletitle)
-            else: 
+            if temp_sex :
                 sexstate = temp_sex
+            if temp_wc:
                 wcstate = temp_wc
+            if temp_div:
+                divstate = temp_div
            
             
-            if getdivision(text) != '':
-                divstate = getdivision(text)
+            #if getdivision(text) != '':
+            #    divstate = getdivision(text)
 
 
-        table = tableblock.tbody
-        print(tableblock.tbody)
-        trs = table.find_all('tr')
+        trs = tableblock.find_all('tr')
 
         # Get column information.
-        headers = [x.text for x in trs[0].find_all('th')]
-
+        headers = [x.text.lower() for x in trs[0].find_all('th')]
         csv.fieldnames = []
-        for h in headers:
-            if h == 'Poř.':
+        iterable = iter(range(len(headers)))
+        for ii in iterable:
+            h=headers[ii]
+            if h == 'poř.':
                 csv.fieldnames += ['Place']
-            elif h == 'Soutěžící / RN / TH / Lot':
+            elif h == 'soutěžící / rn / th / lot':
                 csv.fieldnames += ['Name','BirthYear','BodyweightKg','Lot']
-            elif h == 'Oddíl, klub':
+            elif h == 'jméno/ nar' or h == 'jméno/ nar.':
+                csv.fieldnames += ['Name','BirthYear']
+            elif h == 't.h.' or h == 'těl.hm.' or h == 'těl. hm.':
+                csv.fieldnames += ['BodyweightKg']
+            elif h == 'oddíl, klub' or h == 'oddíl':
                 csv.fieldnames += ['Team']
-            elif h == 'DŘ':
+            elif h == 'družstvo':
+                csv.fieldnames.remove('Place')                
+            elif h in ['1. pokus','1'] and ('benčpresu' in meetname or 'benčpressu' in meetname):
+                csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
+                [next(iterable) for x in range(2)]
+            elif h == 'dř' or h == 'dřep':
                 csv.fieldnames += ['BestSquatKg']
-            elif h == 'BP':
+            elif h == 'bp' or h == 'benč' or (h == 'max.' and ('benčpresu' in meetname or 'benčpressu' in meetname)):
                 csv.fieldnames += ['BestBenchKg']
-            elif h == 'MT':
+            elif h == 'mt' or h == 'tah' or h == 'm.tah':
                 csv.fieldnames += ['BestDeadliftKg']
-            elif h == 'Trojboj':
+            elif h == 'trojboj' or h == 'výkon':
                 csv.fieldnames += ['TotalKg']
-            elif h == 'Wilks':
+            elif h == 'wilks':
                 csv.fieldnames += ['Wilks']
-            elif h == 'VT':
+            elif h == 'vt' or h == '':
                 csv.fieldnames += ['Ranking']
-            elif h == 'Poeng':
-                csv.fieldnames += ['Wilks']
             else:
                 error("Unknown column name: \"%s\"" % h)
 
@@ -194,36 +220,57 @@ def getresults(soup):
 
 
         for tr in trs[1:]:
-            row = [x.text for x in tr.find_all('td')]
+            row = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
 
             if row[0] == 'Celkem za družstvo':
                 break
 
-            assert divstate
-            assert sexstate != None
+            if len(row) == 1: #Older spreadsheets give divisions between rows
+                [temp_sex,temp_wc,temp_div] = getsexwcdiv(row[0])
+                if temp_sex:
+                    sexstate = temp_sex
+                if temp_wc:
+                    wcstate = temp_wc  
+                if temp_div:
+                    divstate = temp_div
+            elif len([x.text for x in tr.find_all('td') if x .text.strip() != '']) > len(csv.fieldnames) -7:
 
-            # Accumulate the row, but we need to look at the class of each td
-            # to figure out whether lifts were good or bad.
-            row = []
-            for td in tr.find_all('td'):
-                split_td = [x.strip() for x in td.text.split('/')]
-                for text in  split_td:
-                    temp_divstate = divstate
-                    if td.find('div',{'class','record'}) and getdivision(td.div['title']) != '':
-                        temp_divstate = getdivision(td.div['title'])
+                # Accumulate the row, but we need to look at the class of each td
+                # to figure out whether lifts were good or bad.
+                row = []
+                teamidx = -1
+                nameidx = csv.index('Name')
 
-                    if text[:2] == 'NR':
-                        text = text[2:]
 
-                    if text == '0,0':
-                        text = ''
-                    row.append(text.strip().replace('  ', ' ').replace(',', '.'))
+                for td in tr.find_all('td'):
+                    if len(row) == nameidx:
+                        split_td = [x.strip() for x in re.split('[/,]',td.text)]
+                    else:
+                        split_td = [td.text.strip()]
+                    for text in  split_td:
+                        temp_divstate = divstate
+                        if td.find('div',{'class','record'}) and getsexwcdiv(td.div['title'])[2] != '':
+                            temp_divstate = getsexwcdiv(td.div['title'])[2]
 
-            row = row + [temp_divstate, sexstate,wcstate]
+                        if text[:2] == 'NR':
+                            text = text[2:]
 
-            if append_team:
-                row = row + [re.sub('\d\.|\d{2}\.','',tabletitle).strip()]
-            csv.rows += [row]
+                        if text in ['0,0','disq','#','---','?','0']:
+                            text = ''
+
+                        text = text.replace(u'\xa0','') 
+                        text = text.replace('. ','.')
+
+                        if len(row) == teamidx and text == '' and csv.rows != []:
+                            text = csv.rows[-1][teamidx]
+                        row.append(text.strip().replace('  ', ' ').replace(',', '.'))
+
+                    
+                row = row + [temp_divstate, sexstate,wcstate]
+
+                if append_team:
+                    row = row + [re.sub('\d\.|\d{2}\.','',tabletitle).strip()]
+                csv.rows += [row]
 
 
     # Look at the placing table to see if we can derive more division information
@@ -251,7 +298,7 @@ def getresults(soup):
 
                 for row in csv.rows:
                     if row[csv.index('Name')] == name:
-                        division = getdivision(divstate.text)
+                        division = getsexwcdiv(divstate.text)[2]
                         if division != '':
                             row[csv.index('Division')] = division
                         break
@@ -268,32 +315,27 @@ def fixplace(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             row[placeidx] = row[placeidx].replace('.', '')
-            if row[placeidx] == '-':
+            if row[placeidx] in ['-','DSQ'] or (row[placeidx] == '' and row[totalidx] == ''):
                 row[placeidx] = 'DQ'
                 row[totalidx] = ''  # Instead of a zero.
-            elif row[placeidx].lower() == 'gj':  # Guest lifter, I think.
-                row[placeidx] = 'G'
+            elif 'disq.- doping' in row:
+                row[totalidx] = ''
+                row[placeidx] = 'DD'
+                row[row.index('disq.- doping')] = ''
+
 
 
 # The weight class is reported as "-72" or "+84", just remove the dash.
 def fixclass(csv):
     clsidx = csv.index('WeightClassKg')
     for row in csv.rows:
+        #print(row)
+        #print(csv.fieldnames)
         row[clsidx] = row[clsidx].replace('-', '')
         if row[clsidx] != '' and row[clsidx][0] =='+':
             row[clsidx]=row[clsidx][1:]+'+'
 
 
-# The equipment is marked as "*" for Raw, or nothing for Single-ply.
-def fixequipment(csv):
-    eqidx = csv.index('Equipment')
-    for row in csv.rows:
-        if '*' in row[eqidx]:
-            row[eqidx] = 'Raw'
-        elif row[eqidx] == '':
-            row[eqidx] = 'Single-ply'
-        else:
-            error("Unknown equipment: \"%s\"" % row[eqidx])
 
 
 # Attempts are given, but not the BestSquatKg columns, etc.
@@ -403,12 +445,60 @@ def reverse_names(csv):
                 split_name[ii] = split_name[ii].title()
             else: # First name
                 if ii == 0:
-                    error('No last name')
-                row[nameidx] = ' '.join(split_name[ii:])+ ' '+' '.join(split_name[0:ii])
+                    row[nameidx] = split_name[-1]+ ' '+' '.join(split_name[0:-1])
+                else:
+                    row[nameidx] = ' '.join(split_name[ii:])+ ' '+' '.join(split_name[0:ii])
                 break
         if row[nameidx] == '':
             error('No first name')
 
+# Add the century to birthyear
+def fixbirthyear(csv):
+    if 'BirthYear' in csv.fieldnames:
+        byidx = csv.index('BirthYear')
+        for row in csv.rows:
+            if len(row[byidx]) == 2:  # Then we need to add the century
+
+                if row[byidx] != '':
+                    birthyear = row[byidx].strip()
+
+                if birthyear.isdigit():
+                    # Will need to be periodicaly updated
+                    if int(birthyear) < 10 and len(birthyear) == 2:
+                        birthyear = '20' + birthyear
+                    else:
+                        birthyear = '19' + birthyear
+
+                row[byidx] = birthyear
+
+def addtotals(csv):
+
+    if 'TotalKg' not in csv.fieldnames:
+        csv.append_column('TotalKg')
+        placeidx = csv.index('Place')
+        totalidx = csv.index('TotalKg')
+        for row in csv.rows:
+            total = 0
+            if row[placeidx] not in ['DQ', 'DD']:
+                if ('BestSquatKg' in csv.fieldnames and
+                        row[csv.index('BestSquatKg')] != ''):
+                    total += float(row[csv.index('BestSquatKg')])
+                if ('BestBenchKg' in csv.fieldnames and
+                        row[csv.index('BestBenchKg')] != ''):
+                    total += float(row[csv.index('BestBenchKg')])
+                if ('BestDeadliftKg' in csv.fieldnames and
+                        row[csv.index('BestDeadliftKg')] != ''):
+                    total += float(row[csv.index('BestDeadliftKg')])
+                if total != 0.0:
+                    row[totalidx] = str(total)
+def capitalise_names(csv):
+    nameidx = csv.index('Name')
+    for row in csv.rows:
+        split_name = [name for name in row[nameidx].split(' ') if name != '']
+        for ii in range(0, len(split_name)):
+            if len(split_name[ii]) > 3:
+                split_name[ii] = split_name[ii].title()
+        row[nameidx] = ' '.join(split_name)
 
 
 def main(url):
@@ -419,14 +509,19 @@ def main(url):
     meetcsv = getmeetinfo(soup)
     dirname = getdirname(url)
 
-    entriescsv = getresults(soup)
+    entriescsv = getresults(soup,meetcsv)
     if len(entriescsv.rows) == 0:
         error("No rows found!")
+
+    addtotals(entriescsv)
+
 
     fixplace(entriescsv)
     fixclass(entriescsv)
     addequipment(entriescsv, meetcsv)
     reverse_names(entriescsv)
+    capitalise_names(entriescsv)
+    fixbirthyear(entriescsv)
 
     # For old meets, the 1-2-3 results are blank, and only one of them is filled in.
     # If after removing empty columns, only one lift is left, then that's a

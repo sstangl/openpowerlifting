@@ -7,6 +7,7 @@
 from bs4 import BeautifulSoup
 import os
 import sys
+import subprocess
 
 try:
     import oplprobe
@@ -56,6 +57,10 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    for meet in unentered:
+        print(meet)
+        subprocess.run(['./csst-import-old',meet])
 
     oplprobe.print_meets(color('[CSST]'), unentered)
 
