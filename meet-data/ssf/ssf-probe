@@ -53,6 +53,8 @@ def getpages(url, pagerange):
             time.sleep(1)
 
         pages.append(driver.page_source)
+    driver.quit()
+
     return pages
 
 
