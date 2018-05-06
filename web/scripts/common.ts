@@ -119,7 +119,7 @@ export function makeRowObj(row, index?: number): RowObject {
     if (fullname === "Ben Gianacakos") {
         // Pink.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
-    } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan") {
+    } else if (fullname === "Kristy Hawkins" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan") {
         // Green.
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
     } else if (fullname === "Boris Lerner" || fullname === "Esther Lee" || fullname === "Patrick Jeffries" || fullname === "Susan Salazar") {
@@ -129,7 +129,11 @@ export function makeRowObj(row, index?: number): RowObject {
         // Red.
         name = '<a style="text-decoration-color: #FB3640;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FB3640;">' + fullname + '</span></a>';
     } else if (fullname === "David Sloan") {
+        // Orange.
         name = '<a style="text-decoration-color: #FFA200;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FFA200;">' + fullname + '</span></a>';
+    } else if (fullname === "Joseph Park" || fullname === "Trystan Oakley") {
+        // Rainbow.
+        name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span class="rainbow">' + fullname + '</span></a>';
     }
 
     // Attempt to read in social media data, if present.
