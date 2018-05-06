@@ -119,6 +119,9 @@ export function makeRowObj(row, index?: number): RowObject {
     if (fullname === "Ben Gianacakos") {
         // Pink.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
+    } else if (fullname === "Jo Whiteley") {
+        // Purple.
+        name = '<a style="text-decoration-color: #AE76FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #AE76FF;">' + fullname + '</span></a>';
     } else if (fullname === "Kristy Hawkins" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan" || fullname === "Sarah Wellberg") {
         // Green.
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
