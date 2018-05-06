@@ -43,6 +43,7 @@
         <th>{{strings.columns.total}}</th>
         <th>{{strings.columns.wilks}}</th>
       </thead>
+      <tbody>
       {% for this in rows %}
         <tr>
           <td>{{this.rank}}</td>
@@ -63,6 +64,7 @@
           <td>{{this.wilks}}</td>
         </tr>
       {% endfor %}
+      </tbody>
     </table>
   </div>
 {% endblock body %}
