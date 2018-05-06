@@ -47,6 +47,8 @@ pub struct Lifter {
     pub username: String,
     #[serde(rename(deserialize = "Instagram"))]
     pub instagram: Option<String>,
+    #[serde(rename(deserialize = "Color"))]
+    pub color: Option<String>,
 }
 
 /// The definition of a Meet in the database.

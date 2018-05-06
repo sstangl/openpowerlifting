@@ -11,6 +11,7 @@ pub struct JsEntryRow<'db> {
     pub name: &'db String,
     pub username: &'db String,
     pub instagram: &'db Option<String>,
+    pub color: &'db Option<String>,
 
     pub federation: &'db fields::Federation,
     pub date: String,
@@ -51,6 +52,7 @@ impl<'db> JsEntryRow<'db> {
             name: &lifter.name,
             username: &lifter.username,
             instagram: &lifter.instagram,
+            color: &lifter.color,
 
             federation: &meet.federation,
             date: format!("{}", meet.date),

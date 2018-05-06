@@ -146,20 +146,34 @@ def build_lifterscsv(lifterdir, builddir):
         socialmap[row[nameidx]] = row[igidx]
     socialcsv = None
 
+    # Make a map of (Name => Color).
+    colorcsv = Csv(lifterdir + os.sep + 'supporter-colors.csv')
+    nameidx = colorcsv.index('Name')
+    coloridx = colorcsv.index('Color')
+    colormap = dict()
+    for row in colorcsv.rows:
+        colormap[row[nameidx]] = row[coloridx]
+    colorcsv = None
+
     lifterscsv = Csv()
     lifterscsv.append_column('LifterID')
     lifterscsv.append_column('Name')
     lifterscsv.append_column('Username')
     lifterscsv.append_column('Instagram')
+    lifterscsv.append_column('Color')
 
     for (name, lifterid) in ordered:
         instagram = ''
         if name in socialmap:
             instagram = socialmap[name]
 
+        color = ''
+        if name in colormap:
+            color = colormap[name]
+
         username = get_username(name)
 
-        row = [str(lifterid), name, username, instagram]
+        row = [str(lifterid), name, username, instagram, color]
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'
