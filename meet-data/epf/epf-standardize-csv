@@ -399,7 +399,7 @@ def standardize_bench_only(csv):
 
 def main(filename):
     csv = Csv()
-    with open(filename, 'r',encoding='utf-8') as fd:
+    with open(filename, 'r') as fd:
         csv.rows = [x.strip().split(',') for x in fd.readlines()]
 
     # Fieldnames given for the detailed spreadsheet.
