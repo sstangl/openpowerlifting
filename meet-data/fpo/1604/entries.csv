@@ -1,9 +1,9 @@
-Place,Name,Country,WeightClassKg,BodyweightKg,Division,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,BestDeadliftKg,TotalKg,Event
+Place,Name,Country,WeightClassKg,BodyweightKg,Division,Sex,Equipment,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,BestDeadliftKg,TotalKg,Event
 1,Marko Loponen,FIN,90,89.9,Open,M,Multi-ply,-302.5,305,-315,,305,235,-245,-245,,235,265,280,-290,,280,820,SBD
 2,Joni Nikkari,FIN,125,124.3,Open,M,Multi-ply,-310,315,335,,335,160,170,-180,,170,270,300,-310,,300,805,SBD
 3,Janne Nissilä,FIN,90,87.4,Open,M,Multi-ply,220,-250,265,,265,190,-200,-202.5,,190,230,-247.5,-247.5,,230,685,SBD
-DQ,Jarkko Holviala,FIN,100,99.9,Masters 2,M,Multi-ply,-260,-275,-285,,-260,-165,,,,,-200,,,,,,SBD
-DQ,Matti Lehto,FIN,140,139.6,Open,M,Multi-ply,-435,-435,-460,,-435,-200,,,,,-320,,,,,,SBD
+DQ,Jarkko Holviala,FIN,100,99.9,Masters 2,M,Multi-ply,-260,-275,-285,,,-165,,,,,-200,,,,,,SBD
+DQ,Matti Lehto,FIN,140,139.6,Open,M,Multi-ply,-435,-435,-460,,,-200,,,,,-320,,,,,,SBD
 1,Jani-Pekka Eirala,FIN,110,109.8,Open,M,Wraps,375,-390,-390,,375,220,230,235,,235,350,360,-370,,360,970,SBD
 2,Eduard Khanyan,FIN,110,108.3,Open,M,Wraps,360,-380,380,-410,380,200,210,-215,,210,320,-340,,,320,910,SBD
 3,Teemu Tulonen,FIN,125,119.9,Open,M,Wraps,295,320,335,,335,190,200,-205,,200,330,352.5,-360,,352.5,887.5,SBD
@@ -29,11 +29,11 @@ DQ,Veli-Matti Salmi,FIN,110,107.3,Open,M,Multi-ply,,,,,,-280,-290,-290,,,,,,,,,B
 2,Sten Haugas,SWE,140,136.4,Open,M,Raw,,,,,,220,-230,-235,,220,,,,,,220,B
 3,Jaakko Vänttinen,FIN,100,99.1,Open,M,Raw,,,,,,200,-220,,,200,,,,,,200,B
 4,Roope Kaura,FIN,90,89.8,Open,M,Raw,,,,,,175,185,-200,,185,,,,,,185,B
-5,Jari-Pekka Suominen,FIN,M2 100,99.1,Masters 2,M,Raw,,,,,,185,195,-200,,195,,,,,,195,B
+5,Jari-Pekka Suominen,FIN,100,99.1,Masters 2,M,Raw,,,,,,185,195,-200,,195,,,,,,195,B
 6,Ardo Lilleorg,EST,110,108.2,Open,M,Raw,,,,,,190,195,-200,,195,,,,,,195,B
 7,Jarkko Niemelä,FIN,125,119.3,Open,M,Raw,,,,,,180,190,200,,200,,,,,,200,B
 8,Esa Pellikka,FIN,110,109.9,Open,M,Raw,,,,,,190,-200,-207.5,,190,,,,,,190,B
-9,Miiko Kyöttinen,FIN,J 90,89.9,Juniors,M,Raw,,,,,,155,165,-175,,165,,,,,,165,B
+9,Miiko Kyöttinen,FIN,90,89.9,Juniors,M,Raw,,,,,,155,165,-175,,165,,,,,,165,B
 10,Otto Laine,FIN,82.5,80.4,Open,M,Raw,,,,,,140,150,-160,,150,,,,,,150,B
 11,Janne Loippo,FIN,90,89.9,Open,M,Raw,,,,,,155,160,-165,,160,,,,,,160,B
 12,Mats Erikson,SWE,100,90.6,Open,M,Raw,,,,,,140,150,160,,160,,,,,,160,B
@@ -63,4 +63,4 @@ DQ,Tero Ylivinkka,FIN,125,124.2,Open,M,Raw,,,,,,-205,,,,,,,,,,,B
 10,Miiko Kyöttinen,FIN,90,89.9,Juniors,M,Raw,,,,,,,,,,,200,,,,200,200,D
 11,Risto Vekara,FIN,125,118.7,Open,M,Raw,,,,,,,,,,,200,205,210,,210,210,D
 1,Krisse Tuominen,FIN,90,89.8,Open,F,Multi-ply,,,,,,,,,,,150.5,155,160,170,160,160,D
-1,Natalia Gadolin,FIN,J 90,89.9,Juniors,F,Raw,,,,,,,,,,,140,-170,-170,,140,140,D
+1,Natalia Gadolin,FIN,90,89.9,Juniors,F,Raw,,,,,,,,,,,140,-170,-170,,140,140,D
