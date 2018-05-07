@@ -49,9 +49,17 @@ def getmeetinfo(soup):
         error("Couldn't find the meet results.")
 
     name = results.h2.text
+    name = re.sub('\d\. ročník','',name)
     name = re.sub('\d\.','',name)
 
-    place_date = results.find('h3').text
+    try:
+        place_date = results.find('h3').text
+    except:
+        try:
+            place_date = results.find('h4').text
+        except:
+            place_date = results.find('strong').text
+
 
     if ',' in place_date:
         split_str = place_date.split(',')
@@ -65,16 +73,18 @@ def getmeetinfo(soup):
     dotdate = dotdate.strip()
     town = town.strip()
     
+    try:
+        assert '.' in dotdate
 
-    assert '.' in dotdate
+        if '.-' in dotdate:
+            [day, month, year] = dotdate.split('.-')[-1].split('.')
+            day = dotdate.split('.-')[0]
+        else:
+            [day, month, year] = dotdate.split('.')
 
-    if '.-' in dotdate:
-        [day, month, year] = dotdate.split('.-')[-1].split('.')
-        day = dotdate.split('.-')[0]
-    else:
-        [day, month, year] = dotdate.split('.')
-
-    date = '%s-%s-%s' % (year, month, day)
+        date = '%s-%s-%s' % (year, month, day)
+    except:
+        date = ''
 
 
 
@@ -105,7 +115,9 @@ def getsexwcdiv(text):
 
     if 'kg' in text:
         text = text.replace('kg','').strip()
-        wcstate = re.search('\+\d{3}|\d{3}|\+\d{2}|\d{2}',text).group(0)
+        wcstate = re.search('\d{2},\d|\+\d{3}|\d{3}|\+\d{2}|\d{2}',text).group(0)
+        wcstate = wcstate.replace(',','.')
+        wcstate = wcstate.replace('.0','')
         if 'nad ' in text:
             wcstate = wcstate +'+'
 
@@ -177,38 +189,48 @@ def getresults(soup,meetcsv):
         trs = tableblock.find_all('tr')
 
         # Get column information.
-        headers = [x.text.lower() for x in trs[0].find_all('th')]
+        headers = [x.text.lower().strip() for x in trs[0].find_all('th')]
         csv.fieldnames = []
         iterable = iter(range(len(headers)))
         for ii in iterable:
             h=headers[ii]
-            if h == 'poř.':
+            if h in ['poř.','p.','př.','p.ř.','př','pořadí']:
                 csv.fieldnames += ['Place']
             elif h == 'soutěžící / rn / th / lot':
                 csv.fieldnames += ['Name','BirthYear','BodyweightKg','Lot']
-            elif h == 'jméno/ nar' or h == 'jméno/ nar.':
+            elif h in ['jméno/ nar','jméno/ nar.','jméno/nar','jméno a příjmení','jméno/ročník','jmeno/ nar.','jméno a rok narození','jméno','jméno a rok nar.','jméno, rok narození','příjmení,jméno,nar.','příjmení, jméno,nar.','příjmení, jméno, nar.','jméno/nar.','j m é n o','jméno, rok nar.']:
                 csv.fieldnames += ['Name','BirthYear']
-            elif h == 't.h.' or h == 'těl.hm.' or h == 'těl. hm.':
+            elif h in ['příjmení, jméno']:
+                csv.fieldnames += ['Name']
+            elif h in ['rok nar.']:
+                csv.fieldnames += ['BirthYear']
+            elif h in ['t.h.','těl.hm.','těl. hm.','th','váha','hmotnost','těl.hmot.']:
                 csv.fieldnames += ['BodyweightKg']
-            elif h == 'oddíl, klub' or h == 'oddíl':
+            elif h in ['oddíl, klub','oddíl','tj, oddíl, klub','družstvo / oddíl','tj,oddíl.klub','tj, klub, oddíl','o d d í l']:
                 csv.fieldnames += ['Team']
             elif h == 'družstvo':
                 csv.fieldnames.remove('Place')                
-            elif h in ['1. pokus','1'] and ('benčpresu' in meetname or 'benčpressu' in meetname):
+            elif h in ['1. pokus','1','1.'] and ('benčpresu' in meetname or 'benčpressu' in meetname):
                 csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
                 [next(iterable) for x in range(2)]
             elif h == 'dř' or h == 'dřep':
                 csv.fieldnames += ['BestSquatKg']
-            elif h == 'bp' or h == 'benč' or (h == 'max.' and ('benčpresu' in meetname or 'benčpressu' in meetname)):
+            elif h in ['bp','benč','tlak','benč.','benčpres'] or (h == 'max.' and ('benčpresu' in meetname or 'benčpressu' in meetname)):
                 csv.fieldnames += ['BestBenchKg']
-            elif h == 'mt' or h == 'tah' or h == 'm.tah':
+            elif h in ['mt','tah','m.tah','tah','pozved']:
                 csv.fieldnames += ['BestDeadliftKg']
-            elif h == 'trojboj' or h == 'výkon':
+            elif h in ['trojboj','výkon']:
                 csv.fieldnames += ['TotalKg']
-            elif h == 'wilks':
+            elif h in ['wilks','w.body','wilks b.','wilks  b.','wilk','body','w. body','willks','přepočet','wilks body','wiks body','přepočt.výkon','přepočt. výkon','přepočet.výkon']:
                 csv.fieldnames += ['Wilks']
-            elif h == 'vt' or h == '':
+            elif h in ['koef.','w.koef.']:
+                csv.fieldnames += ['WilksFactor']
+            elif h in ['vt','','tř.','v.t.','v. t.','pozn.']:
                 csv.fieldnames += ['Ranking']
+            elif h == 'národnost':
+                csv.fieldnames += ['Country']
+            elif h in ['kat.','k.']:
+                csv.fieldnames += ['Division']
             else:
                 error("Unknown column name: \"%s\"" % h)
 
@@ -222,7 +244,9 @@ def getresults(soup,meetcsv):
         for tr in trs[1:]:
             row = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
 
-            if row[0] == 'Celkem za družstvo':
+            if len(row) == 0:
+                continue
+            if row[0] in ['Celkem za družstvo','rozhodčí:']:
                 break
 
             if len(row) == 1: #Older spreadsheets give divisions between rows
@@ -238,7 +262,7 @@ def getresults(soup,meetcsv):
                 # Accumulate the row, but we need to look at the class of each td
                 # to figure out whether lifts were good or bad.
                 row = []
-                teamidx = -1
+
                 nameidx = csv.index('Name')
 
 
@@ -255,14 +279,17 @@ def getresults(soup,meetcsv):
                         if text[:2] == 'NR':
                             text = text[2:]
 
-                        if text in ['0,0','disq','#','---','?','0']:
+                        if re.match('n\d',text):
+                            text = '-'+text[1:]
+
+                        if text in ['0,0','disq','#','---','?','0','disq.','—','-','Out','----']:
                             text = ''
 
                         text = text.replace(u'\xa0','') 
                         text = text.replace('. ','.')
+                        text = text.replace('*','')
+                        text = text.replace('- ','-')
 
-                        if len(row) == teamidx and text == '' and csv.rows != []:
-                            text = csv.rows[-1][teamidx]
                         row.append(text.strip().replace('  ', ' ').replace(',', '.'))
 
                     
@@ -315,13 +342,13 @@ def fixplace(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             row[placeidx] = row[placeidx].replace('.', '')
-            if row[placeidx] in ['-','DSQ'] or (row[placeidx] == '' and row[totalidx] == ''):
-                row[placeidx] = 'DQ'
-                row[totalidx] = ''  # Instead of a zero.
-            elif 'disq.- doping' in row:
+            if 'disq.- doping' in row:
+                row[row.index('disq.- doping')] = ''
                 row[totalidx] = ''
                 row[placeidx] = 'DD'
-                row[row.index('disq.- doping')] = ''
+            elif row[placeidx] in ['-','DSQ','_','--'] or (row[placeidx] == '' and row[totalidx] == ''):
+                row[placeidx] = 'DQ'
+                row[totalidx] = ''  # Instead of a zero.
 
 
 
@@ -329,11 +356,14 @@ def fixplace(csv):
 def fixclass(csv):
     clsidx = csv.index('WeightClassKg')
     for row in csv.rows:
-        #print(row)
+       # print(row)
         #print(csv.fieldnames)
-        row[clsidx] = row[clsidx].replace('-', '')
-        if row[clsidx] != '' and row[clsidx][0] =='+':
-            row[clsidx]=row[clsidx][1:]+'+'
+        try:
+            row[clsidx] = row[clsidx].replace('-', '')
+            if row[clsidx] != '' and row[clsidx][0] =='+':
+                row[clsidx]=row[clsidx][1:]+'+'
+        except:
+            pass
 
 
 
@@ -372,11 +402,14 @@ def addequipment(csv, meetcsv):
         csv.append_column('Equipment')
     eqpidx = csv.index('Equipment')
     for row in csv.rows:
-        if row[eqpidx] == '':
-            if raw_meet:
-                row[eqpidx] = 'Raw'
-            else:
-                row[eqpidx] = 'Single-ply'
+        try:
+            if row[eqpidx] == '':
+                if raw_meet:
+                    row[eqpidx] = 'Raw'
+                else:
+                    row[eqpidx] = 'Single-ply'
+        except:
+            pass
 
 def markevent(csv):
     assert 'Event' not in csv.fieldnames
@@ -401,40 +434,46 @@ def markevent(csv):
         csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
 
     for row in csv.rows:
-        evt = ''
-        for i in squatidxl:
-            if row[i] != '':
-                evt = evt + 'S'
-                break
-        for i in benchidxl:
-            if row[i] != '':
-                evt = evt + 'B'
-                break
-        for i in deadliftidxl:
-            if row[i] != '':
-                evt = evt + 'D'
-                break
-        row[evtidx] = evt
+        try:
+            evt = ''
+            for i in squatidxl:
+                if row[i] != '':
+                    evt = evt + 'S'
+                    break
+            for i in benchidxl:
+                if row[i] != '':
+                    evt = evt + 'B'
+                    break
+            for i in deadliftidxl:
+                if row[i] != '':
+                    evt = evt + 'D'
+                    break
+            row[evtidx] = evt
+        except:
+            pass
 
 
 def remove_empty_cols_ignore_fieldname(csv):
-    def iscolempty(csv, i):
-        for row in csv.rows:
-            if row[i]:
-                return False
-        return True
+    try:
+        def iscolempty(csv, i):
+            for row in csv.rows:
+                if row[i]:
+                    return False
+            return True
 
-    def getemptyidx(csv):
-        for i, col in enumerate(csv.fieldnames):
-            if iscolempty(csv, i):
-                return i
-        return -1
+        def getemptyidx(csv):
+            for i, col in enumerate(csv.fieldnames):
+                if iscolempty(csv, i):
+                    return i
+            return -1
 
-    while True:
-        idx = getemptyidx(csv)
-        if idx == -1:
-            return
-        csv.remove_column_by_index(idx)
+        while True:
+            idx = getemptyidx(csv)
+            if idx == -1:
+                return
+            csv.remove_column_by_index(idx)
+    except:
+        pass
 
 def reverse_names(csv):
     nameidx = csv.index('Name')
@@ -449,8 +488,7 @@ def reverse_names(csv):
                 else:
                     row[nameidx] = ' '.join(split_name[ii:])+ ' '+' '.join(split_name[0:ii])
                 break
-        if row[nameidx] == '':
-            error('No first name')
+
 
 # Add the century to birthyear
 def fixbirthyear(csv):
@@ -479,18 +517,21 @@ def addtotals(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             total = 0
-            if row[placeidx] not in ['DQ', 'DD']:
-                if ('BestSquatKg' in csv.fieldnames and
-                        row[csv.index('BestSquatKg')] != ''):
-                    total += float(row[csv.index('BestSquatKg')])
-                if ('BestBenchKg' in csv.fieldnames and
-                        row[csv.index('BestBenchKg')] != ''):
-                    total += float(row[csv.index('BestBenchKg')])
-                if ('BestDeadliftKg' in csv.fieldnames and
-                        row[csv.index('BestDeadliftKg')] != ''):
-                    total += float(row[csv.index('BestDeadliftKg')])
-                if total != 0.0:
-                    row[totalidx] = str(total)
+            try:
+                if row[placeidx] not in ['DQ', 'DD']:
+                    if ('BestSquatKg' in csv.fieldnames and
+                            row[csv.index('BestSquatKg')] != ''):
+                        total += float(row[csv.index('BestSquatKg')])
+                    if ('BestBenchKg' in csv.fieldnames and
+                            row[csv.index('BestBenchKg')] != ''):
+                        total += float(row[csv.index('BestBenchKg')])
+                    if ('BestDeadliftKg' in csv.fieldnames and
+                            row[csv.index('BestDeadliftKg')] != ''):
+                        total += float(row[csv.index('BestDeadliftKg')])
+                    if total != 0.0:
+                        row[totalidx] = str(total)
+            except:
+                pass
 def capitalise_names(csv):
     nameidx = csv.index('Name')
     for row in csv.rows:
@@ -550,6 +591,9 @@ def main(url):
 
     if 'Ranking' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Ranking')
+
+    if 'WilksFactor' in entriescsv.fieldnames:
+        entriescsv.remove_column_by_name('WilksFactor')
 
     if ('Squat1Kg' in entriescsv.fieldnames and
             'BestSquatKg' not in entriescsv.fieldnames):
