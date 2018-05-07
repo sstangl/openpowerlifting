@@ -66,13 +66,15 @@ def getmeetinfo(soup):
     else:
         split_str = place_date.split(' ')
 
+    try:
+        dotdate = split_str[-1]
+        town = split_str[-2].split(' ')[-1]
 
-    dotdate = split_str[-1]
-    town = split_str[-2].split(' ')[-1]
-
-    dotdate = dotdate.strip()
-    town = town.strip()
-    
+        dotdate = dotdate.strip()
+        town = town.strip()
+    except:
+        town = ''
+        dotdate = ''
     try:
         assert '.' in dotdate
 
@@ -198,7 +200,7 @@ def getresults(soup,meetcsv):
                 csv.fieldnames += ['Place']
             elif h == 'soutěžící / rn / th / lot':
                 csv.fieldnames += ['Name','BirthYear','BodyweightKg','Lot']
-            elif h in ['jméno/ nar','jméno/ nar.','jméno/nar','jméno a příjmení','jméno/ročník','jmeno/ nar.','jméno a rok narození','jméno','jméno a rok nar.','jméno, rok narození','příjmení,jméno,nar.','příjmení, jméno,nar.','příjmení, jméno, nar.','jméno/nar.','j m é n o','jméno, rok nar.']:
+            elif h in ['jméno/ nar','jméno/ nar.','jméno/nar','jméno a příjmení','jméno/ročník','jmeno/ nar.','jméno a rok narození','jméno','jméno a rok nar.','jméno, rok narození','příjmení,jméno,nar.','příjmení, jméno,nar.','příjmení, jméno, nar.','jméno/nar.','j m é n o','jméno, rok nar.','přijmení, jméno,nar.']:
                 csv.fieldnames += ['Name','BirthYear']
             elif h in ['příjmení, jméno']:
                 csv.fieldnames += ['Name']
@@ -282,6 +284,8 @@ def getresults(soup,meetcsv):
                         if re.match('n\d',text):
                             text = '-'+text[1:]
 
+
+
                         if text in ['0,0','disq','#','---','?','0','disq.','—','-','Out','----']:
                             text = ''
 
@@ -289,6 +293,7 @@ def getresults(soup,meetcsv):
                         text = text.replace('. ','.')
                         text = text.replace('*','')
                         text = text.replace('- ','-')
+                        text = text.replace(' 000','000')
 
                         row.append(text.strip().replace('  ', ' ').replace(',', '.'))
 

@@ -4,7 +4,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 3,Gabriela Reifová,1986,69.3,TJ Spartak Chodov,100,65,125,290,Open,F,72,Single-ply,SBD
 1,Petr Kovářík,1995,57.5,TJ Spartak Chodov,110,80,130,320,Open,M,59,Single-ply,SBD
 1,Jan Lorenc,1990,65.4,Powerlifting Klatovy,150,115,205,470,Open,M,66,Single-ply,SBD
-2,Vojtěch Vyskočil,1993,60.4,TJ Spartak Chodov,-,75,135,210,Open,M,66,Single-ply,SBD
+2,Vojtěch Vyskočil,1993,60.4,TJ Spartak Chodov,,75,135,210,Open,M,66,Single-ply,SBD
 1,Martin Dolejš,1970,71.7,TJ Sokol Vejprnice,127.5,152.5,182.5,462.5,Open,M,74,Single-ply,SBD
 2,Jan Spilka,1993,71.8,SK Zlobr Sedlčany,130,80,170,380,Open,M,74,Single-ply,SBD
 3,Marek Pačan,1993,73.6,TJ Baník Sokolov,120,70,160,350,Open,M,74,Single-ply,SBD
@@ -32,8 +32,8 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 2,Karel Pinkava,1983,99.4,Sokol Klatovy,230,150,285,665,Open,M,105,Single-ply,SBD
 3,Marek Brázda,1974,103.1,KST Dobříš,190,160,265,615,Open,M,105,Single-ply,SBD
 4,Jan Štika,1990,101.9,TJ Sokol Bořislav,160,140,215,515,Open,M,105,Single-ply,SBD
-5,David Sůsa,1992,103.5,SK Zlobr Sedlčany,170,-,175,345,Open,M,105,Single-ply,SBD
-6,David Kabyl,1990,101.2,SK Zlobr Sedlčany,-,-,-,-,Open,M,105,Single-ply,SBD
+5,David Sůsa,1992,103.5,SK Zlobr Sedlčany,170,,175,345,Open,M,105,Single-ply,SBD
+DQ,David Kabyl,1990,101.2,SK Zlobr Sedlčany,,,,,Open,M,105,Single-ply,SBD
 1,Rostislav Kvarda,1986,113,TJ Sokol Domažlice,290,210,265,765,Open,M,120,Single-ply,SBD
 2,Martin Šafář,1981,118.8,TJ Sokol Vršovice,270,200,275,745,Open,M,120,Single-ply,SBD
 3,Vladimír Kadlec,1973,118,TJ Sokol Vršovice,230,195,260,685,Open,M,120,Single-ply,SBD
