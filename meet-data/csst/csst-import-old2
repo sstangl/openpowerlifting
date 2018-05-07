@@ -203,6 +203,7 @@ def getresults(soup,meetcsv):
         headers = [x.text.lower().strip() for x in trs[2].find_all('td')]
         csv.fieldnames = []
         iterable = iter(range(len(headers)))
+        #csv.fieldnames = ['Place','Team','Name','BirthYear','BodyweightKg','WilksFactor','BestSquatKg','BestBenchKg','BestDeadliftKg','TotalKg','Ranking','Wilks','Division']
         for ii in iterable:
             h=headers[ii]
             if h in ['poř.','p.','př.','p.ř.','př','pořadí','um.']:
@@ -256,7 +257,7 @@ def getresults(soup,meetcsv):
             row = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
             if len(row) == 0:
                 continue
-            if row[0] in ['Celkem za družstvo','rozhodčí:']:
+            if row[0].strip() in ['Celkem za družstvo','rozhodčí:','soutěže se zúčaastnilo 8 dorostenců']:
                 break
 
             if len(row) < 3: #Older spreadsheets give divisions between rows
@@ -282,6 +283,8 @@ def getresults(soup,meetcsv):
                     else:
                         split_td = [td.text.strip()]
                     for text in  split_td:
+                        text=text.strip()
+                        text = text.replace('*','')
 
                         if text[:2] == 'NR':
                             text = text[2:]
@@ -291,6 +294,12 @@ def getresults(soup,meetcsv):
                         if re.match('n \d',text) and text[2:] != '0,0':
                             text = '-'+text[2:]
 
+                        if text != '' and text[-1] == ',':
+                            text = text[:-1]
+
+                        if text != '' and text[-1] == '-':
+                            text = '-'+text[:-1]
+
                         text = re.sub('\[.\]','',text)
 
 
@@ -299,7 +308,6 @@ def getresults(soup,meetcsv):
 
                         text = text.replace(u'\xa0','') 
                         text = text.replace('. ','.')
-                        text = text.replace('*','')
                         text = text.replace('- ','-')
                         text = text.replace(' 000','000')
                         text = text.replace('\r\n','')
@@ -360,7 +368,7 @@ def fixplace(csv):
                 row[row.index('disq.- doping')] = ''
                 row[totalidx] = ''
                 row[placeidx] = 'DD'
-            elif row[placeidx] in ['-','DSQ','_','--','_:'] or (row[placeidx] == '' and row[totalidx] == ''):
+            elif row[placeidx] in ['-','DSQ','_','--','_:','_.'] or (row[placeidx] == '' and row[totalidx] == ''):
                 row[placeidx] = 'DQ'
                 row[totalidx] = ''  # Instead of a zero.
 
@@ -598,17 +606,17 @@ def main(url):
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
-    if 'Wilks' in entriescsv.fieldnames:
-        entriescsv.remove_column_by_name('Wilks')
+    # if 'Wilks' in entriescsv.fieldnames:
+    #     entriescsv.remove_column_by_name('Wilks')
 
-    if 'Lot' in entriescsv.fieldnames:
-        entriescsv.remove_column_by_name('Lot')
+    # if 'Lot' in entriescsv.fieldnames:
+    #     entriescsv.remove_column_by_name('Lot')
 
-    if 'Ranking' in entriescsv.fieldnames:
-        entriescsv.remove_column_by_name('Ranking')
+    # if 'Ranking' in entriescsv.fieldnames:
+    #     entriescsv.remove_column_by_name('Ranking')
 
-    if 'WilksFactor' in entriescsv.fieldnames:
-        entriescsv.remove_column_by_name('WilksFactor')
+    # if 'WilksFactor' in entriescsv.fieldnames:
+    #     entriescsv.remove_column_by_name('WilksFactor')
 
     if ('Squat1Kg' in entriescsv.fieldnames and
             'BestSquatKg' not in entriescsv.fieldnames):
