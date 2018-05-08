@@ -14,6 +14,7 @@ import urllib.request
 import re
 import subprocess
 
+
 try:
     from oplcsv import Csv
 except ModuleNotFoundError:
@@ -48,7 +49,7 @@ def getmeetinfo(soup):
     if not results:
         error("Couldn't find the meet results.")
 
-    meet_info = results.find_all('tr')[1].text
+    meet_info = results.find_all('tr')[0].text
     meet_info = re.sub('\d{2}\.|\d\.','',meet_info,count=1)
 
     try:
@@ -198,53 +199,61 @@ def getresults(soup,meetcsv):
 
 
         trs = tableblock.find_all('tr')
-
+        start = 1
         # Get column information.
-        headers = [x.text.lower().strip() for x in trs[2].find_all('td')]
+        headers = [x.text.lower().strip() for x in trs[start].find_all('td')]
         csv.fieldnames = []
         iterable = iter(range(len(headers)))
-        #csv.fieldnames = ['Place','Team','Name','BirthYear','BodyweightKg','WilksFactor','BestSquatKg','BestBenchKg','BestDeadliftKg','TotalKg','Ranking','Wilks','Division']
-        for ii in iterable:
-            h=headers[ii]
-            if h in ['poř.','p.','př.','p.ř.','př','pořadí','um.']:
-                csv.fieldnames += ['Place']
-            elif h == 'soutěžící / rn / th / lot':
-                csv.fieldnames += ['Name','BirthYear','BodyweightKg','Lot']
-            elif h in ['jméno/ nar','jméno/ nar.','jméno/nar','jméno a příjmení','jméno/ročník','jmeno/ nar.','jméno a rok narození','jméno','jméno a rok nar.','jméno, rok narození','příjmení,jméno,nar.','příjmení, jméno,nar.','příjmení, jméno, nar.','jméno/nar.','j m é n o','jméno, rok nar.','přijmení, jméno,nar.']:
-                csv.fieldnames += ['Name','BirthYear']
-            elif h in ['příjmení, jméno']:
-                csv.fieldnames += ['Name']
-            elif h in ['rok nar.']:
-                csv.fieldnames += ['BirthYear']
-            elif h in ['t.h.','těl.hm.','těl. hm.','th','váha','hmotnost','těl.hmot.']:
-                csv.fieldnames += ['BodyweightKg']
-            elif h in ['oddíl, klub','oddíl','tj, oddíl, klub','družstvo / oddíl','tj,oddíl.klub','tj, klub, oddíl','o d d í l','tj,oddíl,klub']:
-                csv.fieldnames += ['Team']
-            elif h == 'družstvo':
-                csv.fieldnames.remove('Place')                
-            elif h in ['1. pokus','1','1.'] :#and ('benčpresu' in meetname or 'benčpressu' in meetname or 'benčpres' in meetname):
-                csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
-                [next(iterable) for x in range(2)]
-            elif h == 'dř' or h == 'dřep':
-                csv.fieldnames += ['BestSquatKg']
-            elif h in ['bp','benč','tlak','benč.','benčpres'] or (h == 'max.' and ('benčpresu' in meetname or 'benčpressu' in meetname)):
-                csv.fieldnames += ['BestBenchKg']
-            elif h in ['mt','tah','m.tah','tah','pozved']:
-                csv.fieldnames += ['BestDeadliftKg']
-            elif h in ['trojboj','výkon']:
-                csv.fieldnames += ['TotalKg']
-            elif h in ['wilks','w.body','wilks b.','wilks  b.','wilk','body','w. body','willks','přepočet','wilks body','wiks body','přepočt.výkon','přepočt. výkon','přepočet.výkon']:
-                csv.fieldnames += ['Wilks']
-            elif h in ['koef.','w.koef.','koef. w']:
-                csv.fieldnames += ['WilksFactor']
-            elif h in ['vt','','tř.','v.t.','v. t.','pozn.','soutěž']:
-                csv.fieldnames += ['Ranking']
-            elif h == 'národnost':
-                csv.fieldnames += ['Country']
-            elif h in ['kat.','k.']:
-                csv.fieldnames += ['Division']
-            else:
-                error("Unknown column name: \"%s\"" % h)
+        find_headers = False
+        if find_headers:
+            for ii in iterable:
+                h=headers[ii]
+                if h in ['poř.','p.','př.','p.ř.','př','pořadí','um.']:
+                    csv.fieldnames += ['Place']
+                elif h == 'soutěžící / rn / th / lot':
+                    csv.fieldnames += ['Name','BirthYear','BodyweightKg','Lot']
+                elif h in ['jméno/ nar','jméno/ nar.','jméno/nar','jméno a příjmení','jméno/ročník','jmeno/ nar.','jméno a rok narození','jméno','jméno a rok nar.','jméno, rok narození','příjmení,jméno,nar.','příjmení, jméno,nar.','příjmení, jméno, nar.','jméno/nar.','j m é n o','jméno, rok nar.','přijmení, jméno,nar.']:
+                    csv.fieldnames += ['Name','BirthYear']
+                elif h in ['příjmení, jméno']:
+                    csv.fieldnames += ['Name']
+                elif h in['př.příjmení,jméno/nar.','příjmení, jméno, naroz.','příjmení,jméno,naroz.','pl.name/firstna']:
+                    csv.fieldnames += ['Place','Name','BirthYear']
+                elif h in ['pl.name/firstna      b.we']:
+                    csv.fieldnames += ['Place','Name']
+                elif h in ['rok nar.']:
+                    csv.fieldnames += ['BirthYear']
+                elif h in ['t.h.','těl.hm.','těl. hm.','th','váha','hmotnost','těl.hmot.','b.weight','ight']:
+                    csv.fieldnames += ['BodyweightKg']
+                elif h in ['oddíl, klub','oddíl','tj, oddíl, klub','družstvo / oddíl','tj,oddíl.klub','tj, klub, oddíl','o d d í l','tj,oddíl,klub','club/federation']:
+                    csv.fieldnames += ['Team']
+                elif h == 'družstvo':
+                    csv.fieldnames.remove('Place')                
+                elif h in ['1. pokus','1','1.'] :#and ('benčpresu' in meetname or 'benčpressu' in meetname or 'benčpres' in meetname):
+                    csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
+                    [next(iterable) for x in range(2)]
+                elif h in ['dř','dřep','d ř e p','squats']:
+                    csv.fieldnames += ['BestSquatKg']
+                elif h in ['bp','benč','tlak','benč.','benčpres','b e n č','benchpr.'] or (h == 'max.' and ('benčpresu' in meetname or 'benčpressu' in meetname)):
+                    csv.fieldnames += ['BestBenchKg']
+                elif h in ['mt','tah','m.tah','tah','pozved','deadlift']:
+                    csv.fieldnames += ['BestDeadliftKg']
+                elif h in ['trojboj','výkon','total']:
+                    csv.fieldnames += ['TotalKg']
+                elif h in ['wilks','w.body','wilks b.','wilks  b.','wilk','body','w. body','willks','přepočet','wilks body','wiks body','přepočt.výkon','přepočt. výkon','přepočet.výkon','malone','schwartz','points']:
+                    csv.fieldnames += ['Wilks']
+                elif h in ['koef.','w.koef.','koef. w']:
+                    csv.fieldnames += ['WilksFactor']
+                elif h in ['vt','','tř.','v.t.','v. t.','pozn.','soutěž']:
+                    csv.fieldnames += ['Ranking']
+                elif h == 'národnost':
+                    csv.fieldnames += ['Country']
+                elif h in ['kat.','k.']:
+                    csv.fieldnames += ['Division']
+                else:
+                    error("Unknown column name: \"%s\"" % h)
+        else:
+            csv.fieldnames = ['Place','Name','BirthYear','BodyweightKg','Team','BestSquatKg','BestBenchKg','BestDeadliftKg','TotalKg','Ranking','Wilks']
+
 
         # These columns are added from the category rows.
         csv.fieldnames += [ 'Sex','WeightClassKg']
@@ -253,35 +262,43 @@ def getresults(soup,meetcsv):
             csv.fieldnames += ['Team']
 
 
-        for tr in trs[3:]:
-            row = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
-            if len(row) == 0:
+        for tr in trs[start+1:]:
+            #tds = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
+            tds = [x.strip() for x in tr.find('td').text.replace('\xa0',',').replace('--.','DQ,').replace('. ',',').split(',') if x.strip() != '']
+            print(tds)
+            print(len(tds))
+            print(len(csv.fieldnames))
+
+            if len(tds) == 0:
                 continue
-            if row[0].strip() in ['Celkem za družstvo','rozhodčí:','soutěže se zúčaastnilo 8 dorostenců']:
+            if tds[0].strip() in ['Celkem za družstvo','rozhodčí:','soutěže se zúčaastnilo 8 dorostenců']:
                 break
 
-            if len(row) < 3: #Older spreadsheets give divisions between rows
-                [temp_sex,temp_wc,temp_div] = getsexwcdiv(row[0])
+            if len(tds) < 3: #Older spreadsheets give divisions between rows
+                [temp_sex,temp_wc,temp_div] = getsexwcdiv(tds[0])
                 if temp_sex:
                     sexstate = temp_sex
                 if temp_wc:
                     wcstate = temp_wc  
                 if temp_div:
                     divstate = temp_div
-            elif len([x.text for x in tr.find_all('td') if x .text.strip() != '']) > len(csv.fieldnames) -7:
+            elif len(tds) > len(csv.fieldnames) -7:
 
                 # Accumulate the row, but we need to look at the class of each td
                 # to figure out whether lifts were good or bad.
                 row = []
 
                 nameidx = csv.index('Name')
+                
 
+                for td in tds:
+                    td = re.sub('(?=[A-z]) (?<=\d)',',',td)
+                    td = re.sub('(?<=\d) (?=[A-z])',',',td)
 
-                for td in tr.find_all('td'):
                     if len(row) == nameidx:
-                        split_td = [x.strip() for x in re.split('[/,]',td.text)]
+                        split_td = [x.strip() for x in re.split('[/,]',td)]
                     else:
-                        split_td = [td.text.strip()]
+                        split_td = [td.strip()]
                     for text in  split_td:
                         text=text.strip()
                         text = text.replace('*','')
@@ -300,6 +317,7 @@ def getresults(soup,meetcsv):
                         if text != '' and text[-1] == '-':
                             text = '-'+text[:-1]
 
+
                         text = re.sub('\[.\]','',text)
 
 
@@ -311,6 +329,15 @@ def getresults(soup,meetcsv):
                         text = text.replace('- ','-')
                         text = text.replace(' 000','000')
                         text = text.replace('\r\n','')
+                        text = text.replace('?','')
+                        #text = text.replace(',,','.')
+                        text = text.replace('...','')
+                        text = text.replace(' NRM','')
+
+                        text = text.replace(' NR','')
+                        text = text.replace('-DQ','')
+                        text = text.replace('Disq ','')
+
 
                         row.append(text.strip().replace('  ', ' ').replace(',', '.'))
 
