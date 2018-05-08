@@ -1,38 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Union Psk,Ackermann Va./73,90.9,0.6352,285.0,200.0,300.0,785.0,498.63,,,,
-Bauer David/76,89,,0.6421,205.0,102.5,220.0,527.5,338.71,,,,
-SPJ Praha,Petr Kroslak,1967,81.1,0.6769,260.0,162.5,270.0,692.5,468.75,,,,
-Strache Lad/74,84,4,0.661,235.0,165.0,240.0,640.0,423.04,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-2,Gym Gate,Jirousek Karel/79,73.8,0.7207,260.0,150.0,272.5,682.5,491.88,,,,
-Blazek Boh/76,75,,0.7126,232.5,165.0,225.0,622.5,443.59,,,,
-MBoleslav,Rudolf Barak,1978,105.7,0.5962,270.0,140.0,260.0,670.0,399.45,,,,
-Krcmar Martin/75,100,3,0.6079,232.5,175.0,230.0,637.5,387.54,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-3,Tatran Tj,Jansa Marcel/69,108.0,0.5919,285.0,190.0,280.0,755.0,446.88,,,,
-OSTaK,Tomas Urban,1985,87.3,0.6487,255.0,155.0,250.0,660.0,428.14,,,,
-Hostinne,Michal Dymak,1971,96.7,0.6172,230.0,160.0,265.0,655.0,404.27,,,,
-Kaspar Petr/79,98,1,0.6134,207.5,160.0,220.0,587.5,360.37,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-4,Rotas Tj,Hruby Rene/75,81.6,0.6744,247.5,142.5,242.5,632.5,426.56,,,,
-Sedlbauer Jan/71,105,4,0.5968,245.0,195.0,240.0,680.0,405.82,,,,
-Rotava A,Jan Peterka,1955,153.0,0.5518,240.0,165.0,300.0,705.0,389.02,,,,
-Strunc Vlastimil/72,100,8,0.6067,220.0,145.0,260.0,625.0,379.19,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-5,Dobrany Tj,Krakora Petr/73,90.0,0.6384,215.0,130.0,230.0,575.0,367.08,,,,
-Bily Oldrich/77,97,6,0.6147,200.0,130.0,230.0,560.0,344.23,,,,
-Pilar Milan/75,98,4,0.6126,180.0,110.0,190.0,480.0,294.05,,,,
-Svab Michal/76,92,3,0.6305,160.0,100.0,180.0,440.0,277.42,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-6,Skoda Auto,Weiss Jan/72,66.8,0.7776,212.5,125.0,220.0,557.5,433.51,,,,
-Hlavac Jan/75,91,,0.6349,225.0,155.0,240.0,620.0,393.64,,,,
-MBoleslav,Petr Mazal,1978,84.0,0.6628,157.5,112.5,170.0,440.0,291.63,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-7,Rotas Tj,Sturma Lad./67,84.5,0.6606,180.0,170.0,210.0,560.0,369.94,,,,
-Rau Norbert/71,101,,0.6062,200.0,130.0,240.0,570.0,345.53,,,,
-Rotava B,David Seidel,1984,87.3,0.6487,170.0,120.0,195.0,485.0,314.62,,,,
-Př,TJ,klub,oddíl,Příjmení.jméno/mar.,Těl.hm.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočet,,Single-ply,SBD,
-8,SK Isst,Huncovsky Jan/62,75.9,0.7067,195.0,130.0,200.0,525.0,371.02,,,,
-Hirko Josef/86,66,,0.7852,100.0,95.0,150.0,345.0,270.89,,,,
-Melnik,Tomas Lipavsky,1986,78.9,0.6888,80.0,55.0,127.5,262.5,180.81,,,,
-Soudsky David/86,75,,0.7126,50.0,70.0,120.0,240.0,171.02,,,,
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Union Psk,Va. Ackermann,1973,90.9,285,200,300,785,Single-ply,SBD
+1,,David Bauer,1976,89,205,102.5,220,527.5,Single-ply,SBD
+1,SPJ Praha,Petr Kroslak,1967,81.1,260,162.5,270,692.5,Single-ply,SBD
+1,,Lad Strache,1974,84.4,235,165,240,640,Single-ply,SBD
+2,Gym Gate,Karel Jirousek,1979,73.8,260,150,272.5,682.5,Single-ply,SBD
+2,,Boh Blazek,1976,75,232.5,165,225,622.5,Single-ply,SBD
+2,MBoleslav,Rudolf Barak,1978,105.7,270,140,260,670,Single-ply,SBD
+2,,Martin Krcmar,1975,100.3,232.5,175,230,637.5,Single-ply,SBD
+3,Tatran Tj,Marcel Jansa,1969,108,285,190,280,755,Single-ply,SBD
+3,OSTaK,Tomas Urban,1985,87.3,255,155,250,660,Single-ply,SBD
+3,Hostinne,Michal Dymak,1971,96.7,230,160,265,655,Single-ply,SBD
+3,,Petr Kaspar,1979,98.1,207.5,160,220,587.5,Single-ply,SBD
+4,Rotas Tj,Rene Hruby,1975,81.6,247.5,142.5,242.5,632.5,Single-ply,SBD
+4,,Jan Sedlbauer,1971,105.4,245,195,240,680,Single-ply,SBD
+4,Rotava A,Jan Peterka,1955,153,240,165,300,705,Single-ply,SBD
+4,,Vlastimil Strunc,1972,100.8,220,145,260,625,Single-ply,SBD
+5,Dobrany Tj,Petr Krakora,1973,90,215,130,230,575,Single-ply,SBD
+5,,Oldrich Bily,1977,97.6,200,130,230,560,Single-ply,SBD
+5,,Milan Pilar,1975,98.4,180,110,190,480,Single-ply,SBD
+5,,Michal Svab,1976,92.3,160,100,180,440,Single-ply,SBD
+6,Skoda Auto,Jan Weiss,1972,66.8,212.5,125,220,557.5,Single-ply,SBD
+6,,Jan Hlavac,1975,91,225,155,240,620,Single-ply,SBD
+6,MBoleslav,Petr Mazal,1978,84,157.5,112.5,170,440,Single-ply,SBD
+7,Rotas Tj,Lad. Sturma,1967,84.5,180,170,210,560,Single-ply,SBD
+7,,Norbert Rau,1971,101,200,130,240,570,Single-ply,SBD
+7,Rotava B,David Seidel,1984,87.3,170,120,195,485,Single-ply,SBD
+8,SK Isst,Jan Huncovsky,1962,75.9,195,130,200,525,Single-ply,SBD
+8,,Josef Hirko,1986,66,100,95,150,345,Single-ply,SBD
+8,Melnik,Tomas Lipavsky,1986,78.9,80,55,127.5,262.5,Single-ply,SBD
+8,,David Soudsky,1986,75,50,70,120,240,Single-ply,SBD

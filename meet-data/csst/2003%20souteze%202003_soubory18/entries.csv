@@ -1,65 +1,53 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,WeightClassKg,Equipment,Event
-1,Jindřich Nesrsta,1975,86.4,0.6524,180.0,120.0,240.0,540.0,352.30,,
-Krejčí Petr 79,Zekon,108.5,0.5910,250.0,180.0,290.0,720.0,425.52,,
-Horáček Jan 74,p Bystřice,H,104.6,0.5984,245.0,127.5,260.0,632.5,378.49,,
-Čech Martin 74,67,1,0.7747,180.0,100.0,220.0,500.0,387.35,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-2,Radek Melichar,1975,82.5,0.6699,215.0,135.0,240.0,590.0,395.24,,
-Brázda Ivo 71,Sokol,78.2,0.6927,195.0,117.5,230.0,542.5,375.79,,
-Černý Jiří 68,"A" Rosice,82.5,0.6699,210.0,127.5,232.5,570.0,381.84,,
-Patočka Václav 77,82,5,0.6699,202.5,130.0,240.0,572.5,383.52,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-3,Jiří Chvála,1979,104.5,0.5986,210.0,167.5,227.5,605.0,362.15,,
-Hejtmánek Marek 73,TJ,79.8,0.6838,170.0,130.0,200.0,500.0,341.90,,
-Kyncl David 77,"A" Svitavy,73.5,0.7228,160.0,110.0,185.0,455.0,328.87,,
-Blažek David 79,102,5,0.6028,220.0,150.0,255.0,625.0,376.75,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-4,Jiří Šléfr,1985,101.3,0.6055,170.0,107.5,200.0,477.5,289.13,,
-Bártík Petr 85,Viktorie,76.2,0.7048,180.0,120.0,192.5,492.5,347.11,,
-Dobřanský Tomáš 84,Bohumín,66.7,0.7785,130.0,82.5,145.0,357.5,278.31,,
-Turek Martin 72,81,9,0.6729,217.5,155.0,222.5,595.0,400.38,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-5,Filip Dostál,1984,81.3,0.6759,195.0,110.0,200.0,505.0,341.33,,
-Prachař Rudolf 71,Sokol,87.4,0.6483,140.0,110.0,195.0,445.0,288.49,,
-Slaný Miroslav 77,Žďárná,85.0,0.6583,160.0,115.0,215.0,490.0,322.57,,
-Švec Milan 80,77,5,0.6969,185.0,105.0,195.0,485.0,338.00,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-6,Petr Veselý,1976,70.7,0.7437,115.0,100.0,190.0,405.0,301.20,,
-Horgošová Ivana 60,SK FC,51.9,1.2485,95.0,45.0,135.0,275.0,343.34,,
-Haška Jiří 74,Ivančice,95.4,0.6209,155.0,110.0,205.0,470.0,291.82,,
-Šlapanský Milan 47,102,6,0.6026,200.0,105.0,245.0,550.0,331.43,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-7,Martin Skoupý,1983,88.7,0.6432,170.0,100.0,220.0,490.0,315.17,,
-Hadraba Michal 84,SK,69.0,0.7578,137.5,80.0,175.0,392.5,297.44,,
-Kapounek Lukáš 83,Kuřim,61.6,0.8329,135.0,95.0,175.0,405.0,337.32,,
-Zemánek David 84,93,4,0.6269,180.0,107.5,210.0,497.5,311.88,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-8,Jaroslav Směšný,1979,59.6,0.8581,95.0,70.0,140.0,305.0,261.72,,
-Heinrich Michal 77,Loko,109.2,0.5898,180.0,125.0,210.0,515.0,303.75,,
-Šindelář Josef 84,Krnov,73.7,0.7214,165.0,105.0,180.0,450.0,324.63,,
-Houdek Aleš 52,85,2,0.6575,180.0,110.0,230.0,520.0,341.90,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-9,David Lacko,1987,64.1,0.8046,135.0,80.0,135.0,350.0,281.61,,
-Voznička Petr 82,TJ,70.4,0.7461,167.5,107.5,180.0,455.0,339.48,,
-Gruber Milan 81,"B" Svitavy,111.2,0.5866,180.0,172.5,215.0,567.5,332.90,,
-Horák Martin 80,99,,0.6111,120.0,140.0,165.0,425.0,259.72,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-10,Jaroslav Votánek,1974,84.6,0.6601,175.0,135.0,200.0,510.0,336.65,,
-Novotný Roman 72,Sokol,70.3,0.7469,145.0,90.0,180.0,415.0,309.96,,
-Kvasnička Luboš 52,Zlín,76.9,0.7005,130.0,100.0,145.0,375.0,262.69,,
-Weniger Robert 81,85,,0.6583,150.0,80.0,180.0,410.0,269.90,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-11,Tomáš Trávník,1985,74.0,0.7193,157.5,95.0,160.0,412.5,296.71,,
-Biedermann Petr 86,Sokol,94.5,0.6235,165.0,100.0,200.0,465.0,289.93,,
-Uhlíř Vladimír 82,Vranovice,87.5,0.6479,145.0,110.0,150.0,405.0,262.40,,
-Horák Petr 86,65,2,0.7932,132.5,80.0,135.0,347.5,275.64,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-12,Martin Sumbera,1980,92.4,0.6301,190.0,142.5,240.0,572.5,360.73,,
-Minář Martin 76,Sokol,117.4,0.5780,,,,,0.00,,
-Sedláček Michal 80,"B" Rosice,95.5,0.6206,135.0,100.0,180.0,415.0,257.55,,
-Jadrný Jan 83,90,4,0.6370,165.0,90.0,170.0,425.0,270.73,,
-Jméno rok nar,Oddíl,Váha,Koef.,Dřep,Tlak,Mrtvý tah,Celkem,Přepočet,,
-13,Radek Lukš,1970,83.1,0.6670,160.0,115.0,,275.0,183.43,,
-Lukš Pavel 78,Sokol,82.2,0.6714,160.0,125.0,,285.0,191.35,,
-Krejčí Radek 75,Jemnice,87.4,0.6483,150.0,135.0,,285.0,184.77,,
-Valenta Jiří 78,105,1,0.5974,227.5,,,227.5,135.91,,
+Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Jindřich Nesrsta,1975,Zekon p Bystřice H ,86.4,180,120,240,540,Single-ply,SBD
+1,Petr Krejčí,1979,Zekon p Bystřice H ,108.5,250,180,290,720,Single-ply,SBD
+1,Jan Horáček,1974,Zekon p Bystřice H ,104.6,245,127.5,260,632.5,Single-ply,SBD
+1,Martin Čech,1974,Zekon p Bystřice H ,67.1,180,100,220,500,Single-ply,SBD
+2,Radek Melichar,1975,Sokol A Rosice,82.5,215,135,240,590,Single-ply,SBD
+2,Ivo Brázda,1971,Sokol A Rosice,78.2,195,117.5,230,542.5,Single-ply,SBD
+2,Jiří Černý,1968,Sokol A Rosice,82.5,210,127.5,232.5,570,Single-ply,SBD
+2,Václav Patočka,1977,Sokol A Rosice,82.5,202.5,130,240,572.5,Single-ply,SBD
+3,Jiří Chvála,1979,TJ A Svitavy,104.5,210,167.5,227.5,605,Single-ply,SBD
+3,Marek Hejtmánek,1973,TJ A Svitavy,79.8,170,130,200,500,Single-ply,SBD
+3,David Kyncl,1977,TJ A Svitavy,73.5,160,110,185,455,Single-ply,SBD
+3,David Blažek,1979,TJ A Svitavy,102.5,220,150,255,625,Single-ply,SBD
+4,Jiří Šléfr,1985,Viktorie Bohumín,101.3,170,107.5,200,477.5,Single-ply,SBD
+4,Petr Bártík,1985,Viktorie Bohumín,76.2,180,120,192.5,492.5,Single-ply,SBD
+4,Tomáš Dobřanský,1984,Viktorie Bohumín,66.7,130,82.5,145,357.5,Single-ply,SBD
+4,Martin Turek,1972,Viktorie Bohumín,81.9,217.5,155,222.5,595,Single-ply,SBD
+5,Filip Dostál,1984,Sokol Žďárná,81.3,195,110,200,505,Single-ply,SBD
+5,Rudolf Prachař,1971,Sokol Žďárná,87.4,140,110,195,445,Single-ply,SBD
+5,Miroslav Slaný,1977,Sokol Žďárná,85,160,115,215,490,Single-ply,SBD
+5,Milan Švec,1980,Sokol Žďárná,77.5,185,105,195,485,Single-ply,SBD
+6,Petr Veselý,1976,SK FC Ivančice,70.7,115,100,190,405,Single-ply,SBD
+6,Ivana Horgošová,1960,SK FC Ivančice,51.9,95,45,135,275,Single-ply,SBD
+6,Jiří Haška,1974,SK FC Ivančice,95.4,155,110,205,470,Single-ply,SBD
+6,Milan Šlapanský,1947,SK FC Ivančice,102.6,200,105,245,550,Single-ply,SBD
+7,Martin Skoupý,1983,SK Kuřim,88.7,170,100,220,490,Single-ply,SBD
+7,Michal Hadraba,1984,SK Kuřim,69,137.5,80,175,392.5,Single-ply,SBD
+7,Lukáš Kapounek,1983,SK Kuřim,61.6,135,95,175,405,Single-ply,SBD
+7,David Zemánek,1984,SK Kuřim,93.4,180,107.5,210,497.5,Single-ply,SBD
+8,Jaroslav Směšný,1979,Loko Krnov,59.6,95,70,140,305,Single-ply,SBD
+8,Michal Heinrich,1977,Loko Krnov,109.2,180,125,210,515,Single-ply,SBD
+8,Josef Šindelář,1984,Loko Krnov,73.7,165,105,180,450,Single-ply,SBD
+8,Aleš Houdek,1952,Loko Krnov,85.2,180,110,230,520,Single-ply,SBD
+9,David Lacko,1987,TJ B Svitavy,64.1,135,80,135,350,Single-ply,SBD
+9,Petr Voznička,1982,TJ B Svitavy,70.4,167.5,107.5,180,455,Single-ply,SBD
+9,Milan Gruber,1981,TJ B Svitavy,111.2,180,172.5,215,567.5,Single-ply,SBD
+9,Martin Horák,1980,TJ B Svitavy,99,120,140,165,425,Single-ply,SBD
+10,Jaroslav Votánek,1974,Sokol Zlín,84.6,175,135,200,510,Single-ply,SBD
+10,Roman Novotný,1972,Sokol Zlín,70.3,145,90,180,415,Single-ply,SBD
+10,Luboš Kvasnička,1952,Sokol Zlín,76.9,130,100,145,375,Single-ply,SBD
+10,Robert Weniger,1981,Sokol Zlín,85,150,80,180,410,Single-ply,SBD
+11,Tomáš Trávník,1985,Sokol Vranovice,74,157.5,95,160,412.5,Single-ply,SBD
+11,Petr Biedermann,1986,Sokol Vranovice,94.5,165,100,200,465,Single-ply,SBD
+11,Vladimír Uhlíř,1982,Sokol Vranovice,87.5,145,110,150,405,Single-ply,SBD
+11,Petr Horák,1986,Sokol Vranovice,65.2,132.5,80,135,347.5,Single-ply,SBD
+12,Martin Sumbera,1980,Sokol B Rosice,92.4,190,142.5,240,572.5,Single-ply,SBD
+DQ,Martin Minář,1976,Sokol B Rosice,117.4,,,,,Single-ply,SBD
+12,Michal Sedláček,1980,Sokol B Rosice,95.5,135,100,180,415,Single-ply,SBD
+12,Jan Jadrný,1983,Sokol B Rosice,90.4,165,90,170,425,Single-ply,SBD
+13,Radek Lukš,1970,Sokol Jemnice,,0.667,160,115,275,Single-ply,SBD
+13,Pavel Lukš,1978,Sokol Jemnice,82.2,160,125,285,191.35,Single-ply,SBD
+13,Radek Krejčí,1975,Sokol Jemnice,87.4,150,135,285,184.77,Single-ply,SBD
+13,Jiří Valenta,1978,Sokol Jemnice,105.1,227.5,,227.5,135.91,Single-ply,SBD

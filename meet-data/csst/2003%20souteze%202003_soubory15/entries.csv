@@ -1,30 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,WeightClassKg,Equipment,Event
-1,TJ Svitavy,LACKO TOMÁŠ/82,73.3,0.7242,237.5,155.0,230.0,622.5,450.82,,,
-NOVÁK LIBOR/66,80,,0.6905,200.0,150.0,225.0,575.0,397.04,,,
-THEUSER PETR/61,94,3,0.6241,302.5,215.0,310.0,827.5,516.44,,,
-HORNÍK JIŘÍ/78,89,2,0.6413,300.0,202.5,300.0,802.5,514.64,,,
-TJ klub oddíl,Příjmení,jméno,nar.,Těl.hmot.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočt.,,Single-ply,SBD
-2,Sokol Nymburk,KOŠNAR PAVEL/81,89.8,0.6391,280.0,165.0,255.0,700.0,447.37,,,
-BALOGOVÁ MARCELA/74,48,6,1.3123,130.0,85.0,147.5,362.5,475.71,,,
-KREJČA ZBYNĚK/74,109,6,0.5892,300.0,230.0,280.0,810.0,477.25,,,
-PINC JAN/73,105,,0.5976,270.0,197.5,285.0,752.5,449.69,,,
-TJ klub oddíl,Příjmení,jméno,nar.,Těl.hmot.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočt.,,Single-ply,SBD
-3,TJ Olympia,ŠÁRIK TOMÁŠ/75,112.6,0.5844,300.0,235.0,290.0,825.0,482.13,,,
-MOŘINGL MARTIN/77,98,5,0.6123,262.5,147.5,270.0,680.0,416.36,,,
-GRYGA JIŘÍ/68,105,,0.5976,270.0,182.5,310.0,762.5,455.67,,,
-VEČEŘA KAMIL/78,74,,0.7193,207.5,180.0,237.5,625.0,449.56,,,
-TJ klub oddíl,Příjmení,jméno,nar.,Těl.hmot.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočt.,,Single-ply,SBD
-4,Sokol Těškovice,HOZA STANISLAV/56,83.6,0.6647,270.0,150.0,240.0,660.0,438.70,,,
-JAREMCZUK VÁCLAV/63,93,5,0.6266,260.0,165.0,275.0,700.0,438.62,,,
-SCHAUMANN PAVEL/72,84,4,0.6610,200.0,130.0,220.0,550.0,363.55,,,
-HOZA ŠTĚPÁN/74,70,2,0.7478,205.0,135.0,200.0,540.0,403.81,,,
-TJ klub oddíl,Příjmení,jméno,nar.,Těl.hmot.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočt.,,Single-ply,SBD
-5,Lovochemie Lovosice,EFENBERGER JIŘÍ/75,107.0,0.5937,285.0,150.0,280.0,715.0,424.50,,,
-ŠVARCBACH DUŠAN/75,75,1,0.7119,215.0,145.0,240.0,600.0,427.14,,,
-BARTŮNĚK JAN/81,81,5,0.6749,200.0,105.0,220.0,525.0,354.32,,,
-URBAN MARTIN/68,102,7,0.6024,235.0,170.0,290.0,695.0,418.67,,,
-TJ klub oddíl,Příjmení,jméno,nar.,Těl.hmot.,Wilks,Dřep,Benč,Tah,Trojboj,Přepočt.,,Single-ply,SBD
-6,Lokomotiva Krnov,GRACIAS PETR/71,84.7,0.6597,200.0,155.0,200.0,555.0,366.13,,,
-OLEJKO JIŘÍ/77,92,1,0.6311,267.5,170.0,255.0,692.5,437.04,,,
-GREGUŠ MILAN/68,94,3,0.6241,265.0,172.5,247.5,685.0,427.51,,,
-ILLÍK PETR/69,90,3,0.6373,225.0,,,,0.00,,,
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,TJ Svitavy,Tomáš Lacko,1982,73.3,237.5,155,230,622.5,Single-ply,SBD
+1,TJ Svitavy,Libor Novák,1966,80,200,150,225,575,Single-ply,SBD
+1,TJ Svitavy,Petr Theuser,1961,94.3,302.5,215,310,827.5,Single-ply,SBD
+1,TJ Svitavy,Jiří Horník,1978,89.2,300,202.5,300,802.5,Single-ply,SBD
+2,Sokol Nymburk,Pavel Košnar,1981,89.8,280,165,255,700,Single-ply,SBD
+2,Sokol Nymburk,Marcela Balogová,1974,48.6,130,85,147.5,362.5,Single-ply,SBD
+2,Sokol Nymburk,Zbyněk Krejča,1974,109.6,300,230,280,810,Single-ply,SBD
+2,Sokol Nymburk,Jan Pinc,1973,105,270,197.5,285,752.5,Single-ply,SBD
+3,TJ Olympia,Tomáš Šárik,1975,112.6,300,235,290,825,Single-ply,SBD
+3,TJ Olympia,Martin Mořingl,1977,98.5,262.5,147.5,270,680,Single-ply,SBD
+3,TJ Olympia,Jiří Gryga,1968,105,270,182.5,310,762.5,Single-ply,SBD
+3,TJ Olympia,Kamil Večeřa,1978,74,207.5,180,237.5,625,Single-ply,SBD
+4,Sokol Těškovice,Stanislav Hoza,1956,83.6,270,150,240,660,Single-ply,SBD
+4,Sokol Těškovice,Václav Jaremczuk,1963,93.5,260,165,275,700,Single-ply,SBD
+4,Sokol Těškovice,Pavel Schaumann,1972,84.4,200,130,220,550,Single-ply,SBD
+4,Sokol Těškovice,Štěpán Hoza,1974,70.2,205,135,200,540,Single-ply,SBD
+5,Lovochemie Lovosice,Jiří Efenberger,1975,107,285,150,280,715,Single-ply,SBD
+5,Lovochemie Lovosice,Dušan Švarcbach,1975,75.1,215,145,240,600,Single-ply,SBD
+5,Lovochemie Lovosice,Jan Bartůněk,1981,81.5,200,105,220,525,Single-ply,SBD
+5,Lovochemie Lovosice,Martin Urban,1968,102.7,235,170,290,695,Single-ply,SBD
+6,Lokomotiva Krnov,Petr Gracias,1971,84.7,200,155,200,555,Single-ply,SBD
+6,Lokomotiva Krnov,Jiří Olejko,1977,92.1,267.5,170,255,692.5,Single-ply,SBD
+6,Lokomotiva Krnov,Milan Greguš,1968,94.3,265,172.5,247.5,685,Single-ply,SBD
+DQ,Lokomotiva Krnov,Petr Illík,1969,90.3,225,,,,Single-ply,SBD

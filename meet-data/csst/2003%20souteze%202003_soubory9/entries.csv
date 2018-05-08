@@ -1,35 +1,35 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1Peske Iveta/74,55.5,SSK Vítkovice,110.0,55.0,135.0,300.0,...,355.47,,56,,
-2Stepanova Lucie/79,55.0,Viktorie Bohumín,85.0,45.0,117.5,247.5,...,295.34,,56,,
-1Krečmer Martim/79,67.1,Viktorie Bohumín,125.0,80.0,170.0,375.0,...,290.51,,67,,
--- Riedel Radek/85,65.5,SSK Vítkovice,000.0,000.0,000.0,----.,Disq 0.0,,67,,
-1Pospíšil Jaroslav/80,73.2,TJ Loko Krnov,185.0,130.0,170.0,485.0,...,351.57,,75,,
-2Šindelář Josef/85,72.1,TJ Loko Krnov,170.0,107.5,180.0,457.5,...,335.34,,75,,
-3Akritidis Grigori/85,72.5,TJ Loko Krnov,155.0,102.5,180.0,437.5,...,319.37,,75,,
-4Bartík Petr/85,70.0,Viktorie Bohumín,160.0,97.5,167.5,425.0,...,318.49,,75,,
-5Hudec Petr/80,69.3,Zekon Bystřice p.H.105.0,70.0,152.5,327.5,...,247.32,,75,,
-1Krayzel Remy/55,81.7,TJ Loko Krnov,230.0,160.0,222.5,612.5,...,412.76,,82,,
-2Turek Martin/72,82.0,Viktorie Bohumín,215.0,150.0,235.0,600.0,...,403.44,,82,,
-3Děcký Rajmund/73,79.8,SK ST Frýdek-Místek 210.0,135.0,210.0,555.0,...,379.50,,82,,
-4Gracias Petr/71,80.7,TJ Loko Krnov,200.0,140.0,200.0,540.0,...,366.66,,82,,
-5Babica Jaroslav/61,80.9,TJ Jeseník,190.0,117.5,200.0,507.5,...,344.03,,82,,
-6Kirchner Františe/48,79.6,TJ PD Ostrava,175.0,132.5,180.0,487.5,...,333.88,,82,,
-7Melios Thomas/83,77.0,TJ Loko Krnov,170.0,120.0,180.0,470.0,...,328.95,,82,,
-8Michalczyk Franti/54,78.5,TJ PD Ostrava,170.0,122.5,175.0,467.5,...,323.04,,82,,
-9Navrátil Petr/84,79.7,SSK Vítkovice,140.0,85.0,175.0,400.0,...,273.72,,82,,
-1Olejko Jiří/77,89.4,TJ Loko Krnov,225.0,147.5,227.5,600.0,...,384.36,,90,,
-2Šimon Josef/65,89.5,Urtica Kopřivnice,215.0,130.0,252.5,597.5,...,382.51,,90,,
-3Fojta Jiří/80,86.5,SSK Vítkovice,215.0,120.0,240.0,575.0,...,374.84,,90,,
-4Krček Michal/78,90.0,N.O.Čech Zlín,195.0,157.5,215.0,567.5,...,362.29,,90,,
-5Foukal Martin/72,85.9,Zekon Bystřice p,172.5,112.5,190.0,475.0,...,310.88,,90,,
-6Šléfr Jiří/85,90.0,Viktorie Bohumín,155.0,85.0,172.5,412.5,...,263.34,,90,,
-1Illík Petr/69,94.7,TJ Loko Krnov,250.0,160.0,260.0,670.0,...,417.34,,100,,
-2Matuszczyk David/80,93.7,SSK Vítkovice,210.0,145.0,220.0,575.0,...,359.95,,100,,
-3Brabec Jiří/66,96.5,Urtica Kopřivnice,200.0,140.0,235.0,575.0,...,355.17,,100,,
-4Pospíšil Jan/84,99.0,SSK Vítkovice,200.0,102.5,215.0,517.5,...,316.24,,100,,
-1Sobéslav Jan/74,Vítkovice 107.7 SSK,270.0,210.0,295.0,775.0,...,459.11,,110,,
-2Beneš Jan/59,240.0 101.7 SK ST Frýdek-Místek,180.0,300.0,720.0,...,435.31,,110,,
-3Žvak Jan/78,250.0 104.5 SK ST Frýdek-Místek,165.0,290.0,705.0,...,422.01,,110,,
-4Šedenka Tomáš/76,Kopřivnice 109.0 Urtica,280.0,140.0,240.0,660.0,...,389.53,,110,,
-1Chýlek Bronislav/79,Kopřivnice 116.5 Urtica,240.0,110.0,240.0,590.0,...,341.66,,125,,
-1Hansel Robert/69,Vítkovice 127.5 SSK,240.0,180.0,275.0,695.0,...,394.48,,125,,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
+1,Iveta Peske,1974,55.5,SSK Vítkovice,110,55,135,300,F,56,Single-ply,SBD
+2,Lucie Stepanova,1979,55,Viktorie Bohumín,85,45,117.5,247.5,F,56,Single-ply,SBD
+1,Martim Krečmer,1979,67.1,Viktorie Bohumín,125,80,170,375,M,67.5,Single-ply,SBD
+DQ,Radek Riedel,1985,65.5,SSK Vítkovice,,,,,M,67.5,Single-ply,SBD
+1,Jaroslav Pospíšil,1980,73.2,TJ Loko Krnov,185,130,170,485,M,75,Single-ply,SBD
+2,Josef Šindelář,1985,72.1,TJ Loko Krnov,170,107.5,180,457.5,M,75,Single-ply,SBD
+3,Grigori Akritidis,1985,72.5,TJ Loko Krnov,155,102.5,180,437.5,M,75,Single-ply,SBD
+4,Petr Bartík,1985,70,Viktorie Bohumín,160,97.5,167.5,425,M,75,Single-ply,SBD
+5,Petr Hudec,1980,69.3,Zekon Bystřice p.H,105,70,152.5,327.5,M,75,Single-ply,SBD
+1,Remy Krayzel,1955,81.7,TJ Loko Krnov,230,160,222.5,612.5,M,82.5,Single-ply,SBD
+2,Martin Turek,1972,82,Viktorie Bohumín,215,150,235,600,M,82.5,Single-ply,SBD
+3,Rajmund Děcký,1973,79.8,SK ST Frýdek-Místek,210,135,210,555,M,82.5,Single-ply,SBD
+4,Petr Gracias,1971,80.7,TJ Loko Krnov,200,140,200,540,M,82.5,Single-ply,SBD
+5,Jaroslav Babica,1961,80.9,TJ Jeseník,190,117.5,200,507.5,M,82.5,Single-ply,SBD
+6,Františe Kirchner,1948,79.6,TJ PD Ostrava,175,132.5,180,487.5,M,82.5,Single-ply,SBD
+7,Thomas Melios,1983,77,TJ Loko Krnov,170,120,180,470,M,82.5,Single-ply,SBD
+8,Franti Michalczyk,1954,78.5,TJ PD Ostrava,170,122.5,175,467.5,M,82.5,Single-ply,SBD
+9,Petr Navrátil,1984,79.7,SSK Vítkovice,140,85,175,400,M,82.5,Single-ply,SBD
+1,Jiří Olejko,1977,89.4,TJ Loko Krnov,225,147.5,227.5,600,M,90,Single-ply,SBD
+2,Josef Šimon,1965,89.5,Urtica Kopřivnice,215,130,252.5,597.5,M,90,Single-ply,SBD
+3,Jiří Fojta,1980,86.5,SSK Vítkovice,215,120,240,575,M,90,Single-ply,SBD
+4,Michal Krček,1978,90,N.O.Čech Zlín,195,157.5,215,567.5,M,90,Single-ply,SBD
+5,Martin Foukal,1972,85.9,Zekon Bystřice p,172.5,112.5,190,475,M,90,Single-ply,SBD
+6,Jiří Šléfr,1985,90,Viktorie Bohumín,155,85,172.5,412.5,M,90,Single-ply,SBD
+1,Petr Illík,1969,94.7,TJ Loko Krnov,250,160,260,670,M,100,Single-ply,SBD
+2,David Matuszczyk,1980,93.7,SSK Vítkovice,210,145,220,575,M,100,Single-ply,SBD
+3,Jiří Brabec,1966,96.5,Urtica Kopřivnice,200,140,235,575,M,100,Single-ply,SBD
+4,Jan Pospíšil,1984,99,SSK Vítkovice,200,102.5,215,517.5,M,100,Single-ply,SBD
+1,Jan Sobéslav,1974,107.7,SSK Vítkovice,270,210,295,775,M,110,Single-ply,SBD
+2,Jan Beneš,1959,101.7,SK ST Frýdek-Místek,240,180,300,720,M,110,Single-ply,SBD
+3,Jan Žvak,1978,104.5,SK ST Frýdek-Místek,250,165,290,705,M,110,Single-ply,SBD
+4,Tomáš Šedenka,1976,109,Urtica Kopřivnice,280,140,240,660,M,110,Single-ply,SBD
+1,Bronislav Chýlek,1979,116.5,Urtica Kopřivnice,240,110,240,590,M,125,Single-ply,SBD
+1,Robert Hansel,1969,127.5,SSK Vítkovice,240,180,275,695,M,125,Single-ply,SBD

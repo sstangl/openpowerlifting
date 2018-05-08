@@ -120,16 +120,16 @@ def getsexwcdiv(text):
     divstate = None
      # Extract sex information.
     text = text.lower()
-    if 'ženy' in text:
+    if 'ženy' in text or 'ž e n y' in text:
         sexstate = 'F'
         text = text.replace('ženy', '').strip()
-    elif 'muži' in text:
+    elif 'muži' in text or 'm u ž i' in text:
         sexstate = 'M'
         text = text.replace('muži', '').strip()
 
     if 'kg' in text:
         text = text.replace('kg','').strip()
-        wcstate = re.search('\d{2},\d|\+\d{3}|\d{3}|\+\d{2}|\d{2}',text).group(0)
+        wcstate = re.search('\d{3}\.\d\+|\d{2}\.\d|\d{2},\d|\+\d{3}|\d{3}|\+\d{2}|\d{2}',text).group(0)
         wcstate = wcstate.replace(',','.')
         wcstate = wcstate.replace('.0','')
         if 'nad' in text:
@@ -263,11 +263,14 @@ def getresults(soup,meetcsv):
 
 
         for tr in trs[start+1:]:
-            #tds = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
-            tds = [x.strip() for x in tr.find('td').text.replace('\xa0',',').replace('--.','DQ,').replace('. ',',').split(',') if x.strip() != '']
+            tds = [x.text.strip() for x in tr.find_all('td') if x.text.strip() != '']
+            tr_text = tr.find('td').text.replace('\xa0',',').replace('--.','DQ,').replace('. ',',').replace(',,',',').replace(',,',',').replace(',,',',').replace(',,',',')
+            tr_text = re.sub('(?<=[A-z]) (?=\d)',',',tr_text)
+            tr_text = re.sub('(?<=\d) (?=[A-z])',',',tr_text)
+            tr_text = re.sub('(?<=\d)\.(?=[A-z])',',',tr_text)
+
+            #tds = [x.strip() for x in tr_text.split(',') if x.strip() != '']
             print(tds)
-            print(len(tds))
-            print(len(csv.fieldnames))
 
             if len(tds) == 0:
                 continue
@@ -282,7 +285,7 @@ def getresults(soup,meetcsv):
                     wcstate = temp_wc  
                 if temp_div:
                     divstate = temp_div
-            elif len(tds) > len(csv.fieldnames) -7:
+            elif len(tds) > len(csv.fieldnames) -5:
 
                 # Accumulate the row, but we need to look at the class of each td
                 # to figure out whether lifts were good or bad.
@@ -292,8 +295,6 @@ def getresults(soup,meetcsv):
                 
 
                 for td in tds:
-                    td = re.sub('(?=[A-z]) (?<=\d)',',',td)
-                    td = re.sub('(?<=\d) (?=[A-z])',',',td)
 
                     if len(row) == nameidx:
                         split_td = [x.strip() for x in re.split('[/,]',td)]
@@ -303,7 +304,7 @@ def getresults(soup,meetcsv):
                         text=text.strip()
                         text = text.replace('*','')
 
-                        if text[:2] == 'NR':
+                        if len(text) > 2 and text[:2] == 'NR':
                             text = text[2:]
 
                         if re.match('n\d',text)and text[1:] != '0,0':
@@ -321,7 +322,7 @@ def getresults(soup,meetcsv):
                         text = re.sub('\[.\]','',text)
 
 
-                        if text in ['0,0','disq','#','---','?','0','disq.','—','-','Out','----','-----','Disq','n0,0']:
+                        if text in ['0,0','disq','#','---','?','0','disq.','—','-','Out','----','-----','n0,0']:
                             text = ''
 
                         text = text.replace(u'\xa0','') 
@@ -333,10 +334,13 @@ def getresults(soup,meetcsv):
                         #text = text.replace(',,','.')
                         text = text.replace('...','')
                         text = text.replace(' NRM','')
+                        text = text.replace('000.0','')
 
-                        text = text.replace(' NR','')
                         text = text.replace('-DQ','')
-                        text = text.replace('Disq ','')
+                        if text == 'NR':
+                            continue
+                        if text == 'Disq':
+                            continue
 
 
                         row.append(text.strip().replace('  ', ' ').replace(',', '.'))
