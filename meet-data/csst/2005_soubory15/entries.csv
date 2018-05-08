@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,Division,Equipment,Event
-1,Marek Žák,1981,80.5,TJ Olympia Zlín,270.0,180.0,230.0,680.0,462.40,,Single-ply,SBD
-,Jiří Gryga,1968,104.8,TJ Olympia Zlín,280.0,170.0,310.0,760.0,454.48,,Single-ply,SBD
-,Martin Mořingl,1977,98.2,TJ Olympia Zlín,267.5,177.5,295.0,740.0,453.69,,Single-ply,SBD
-,Kamil Večeřa,1978,77.9,TJ Olympia Zlín,220.0,165.0,250.0,635.0,441.01,,Single-ply,SBD
-2,Jan Beneš,1959,108.2,TJ Sokol Těškovice,250.0,190.0,340.0,780.0,461.45,M1,Single-ply,SBD
-,Václav Jaremczuk,1963,92.7,TJ Sokol Těškovice,265.0,175.0,280.0,720.0,453.02,M1,Single-ply,SBD
-,Stanislav Hoza,1956,83.1,TJ Sokol Těškovice,265.0,170.0,240.0,675.0,450.23,M1,Single-ply,SBD
-,Štěpán Hoza,1974,70.6,TJ Sokol Těškovice,215.0,130.0,235.0,580.0,431.81,,Single-ply,SBD
-3,Petr Theuser,1961,98.5,TJ Svitavy,320.0,225.0,300.0,845.0,517.39,M1,Single-ply,SBD
-,Tomáš Lacko,1982,68.1,TJ Svitavy,227.5,152.5,235.0,615.0,470.84,J,Single-ply,SBD
-,Libor Novák,1966,81.6,TJ Svitavy,190.0,160.0,230.0,580.0,391.15,,Single-ply,SBD
-,Petr Voznička,1982,72.0,TJ Svitavy,180.0,110.0,190.0,480.0,352.18,J,Single-ply,SBD
-4,Jiří Olejko,1977,96.5,TJ Lokomotiva Krnov,255.0,167.5,252.5,675.0,416.95,,Single-ply,SBD
-,Petr Gracias,1971,84.0,TJ Lokomotiva Krnov,220.0,150.0,200.0,570.0,377.80,,Single-ply,SBD
-,Jaroslav Planka,1968,63.3,TJ Lokomotiva Krnov,150.0,110.0,160.0,420.0,341.59,,Single-ply,SBD
-,Jan Kmínek,1987,84.1,TJ Lokomotiva Krnov,195.0,95.0,200.0,490.0,324.58,D,Single-ply,SBD
-5,Milan Špingl,1980,133.0,Sokol Nymburk,320.0,230.0,295.0,845.0,476.07,,Single-ply,SBD
-,Martin Košnar,1978,111.9,Sokol Nymburk,310.0,220.0,270.0,800.0,468.40,,Single-ply,SBD
-,Jan Pinc,1973,112.3,Sokol Nymburk,275.0,195.0,280.0,750.0,438.68,,Single-ply,SBD
-DQ,Zbyněk Krejča,1974,110.9,Sokol Nymburk,280.0,,,,,,Single-ply,S
-6,Jiří Effenberger,1975,115.0,TJ Lovochemie Lovosice,300.0,190.0,300.0,790.0,459.07,,Single-ply,SBD
-,Dušan Švarcbach,1975,80.4,TJ Lovochemie Lovosice,210.0,155.0,265.0,630.0,428.78,,Single-ply,SBD
-,Jiří Stejskal,1977,99.9,TJ Lovochemie Lovosice,260.0,157.5,260.0,677.5,412.46,,Single-ply,SBD
-DQ,Jaroslav Mikulanda,1984,108.8,TJ Lovochemie Lovosice,280.0,210.0,,,,J,Single-ply,SB
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event
+1,Marek Žák,1981,80.5,TJ Olympia Zlín,270,180,230,680,Open,Single-ply,SBD
+,Jiří Gryga,1968,104.8,TJ Olympia Zlín,280,170,310,760,Open,Single-ply,SBD
+,Martin Mořingl,1977,98.2,TJ Olympia Zlín,267.5,177.5,295,740,Open,Single-ply,SBD
+,Kamil Večeřa,1978,77.9,TJ Olympia Zlín,220,165,250,635,Open,Single-ply,SBD
+2,Jan Beneš,1959,108.2,TJ Sokol Těškovice,250,190,340,780,Masters 1,Single-ply,SBD
+,Václav Jaremczuk,1963,92.7,TJ Sokol Těškovice,265,175,280,720,M1,Single-ply,SBD
+,Stanislav Hoza,1956,83.1,TJ Sokol Těškovice,265,170,240,675,M1,Single-ply,SBD
+,Štěpán Hoza,1974,70.6,TJ Sokol Těškovice,215,130,235,580,Open,Single-ply,SBD
+3,Petr Theuser,1961,98.5,TJ Svitavy,320,225,300,845,M1,Single-ply,SBD
+,Tomáš Lacko,1982,68.1,TJ Svitavy,227.5,152.5,235,615,Juniors,Single-ply,SBD
+,Libor Novák,1966,81.6,TJ Svitavy,190,160,230,580,Open,Single-ply,SBD
+,Petr Voznička,1982,72,TJ Svitavy,180,110,190,480,Juniors,Single-ply,SBD
+4,Jiří Olejko,1977,96.5,TJ Lokomotiva Krnov,255,167.5,252.5,675,Open,Single-ply,SBD
+,Petr Gracias,1971,84,TJ Lokomotiva Krnov,220,150,200,570,Open,Single-ply,SBD
+,Jaroslav Planka,1968,63.3,TJ Lokomotiva Krnov,150,110,160,420,Open,Single-ply,SBD
+,Jan Kmínek,1987,84.1,TJ Lokomotiva Krnov,195,95,200,490,Sub-Juniors,Single-ply,SBD
+5,Milan Špingl,1980,133,Sokol Nymburk,320,230,295,845,Open,Single-ply,SBD
+,Martin Košnar,1978,111.9,Sokol Nymburk,310,220,270,800,Open,Single-ply,SBD
+,Jan Pinc,1973,112.3,Sokol Nymburk,275,195,280,750,Open,Single-ply,SBD
+DQ,Zbyněk Krejča,1974,110.9,Sokol Nymburk,280,,,,Open,Single-ply,SBD
+6,Jiří Effenberger,1975,115,TJ Lovochemie Lovosice,300,190,300,790,Open,Single-ply,SBD
+,Dušan Švarcbach,1975,80.4,TJ Lovochemie Lovosice,210,155,265,630,Open,Single-ply,SBD
+,Jiří Stejskal,1977,99.9,TJ Lovochemie Lovosice,260,157.5,260,677.5,Open,Single-ply,SBD
+DQ,Jaroslav Mikulanda,1984,108.8,TJ Lovochemie Lovosice,280,210,,,Juniors,Single-ply,SBD
