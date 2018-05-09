@@ -69,14 +69,8 @@ impl<'a> MeetResultsRow<'a> {
             },
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),
-            weightclass: entry
-                .weightclasskg
-                .as_type(units)
-                .in_format(number_format),
-            bodyweight: entry
-                .bodyweightkg
-                .as_type(units)
-                .in_format(number_format),
+            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
+            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
 
             squat: entry
                 .highest_squatkg()

@@ -197,10 +197,7 @@ mod tests {
     #[test]
     fn test_url_strings() {
         // The lowercase form should parse.
-        assert_eq!(
-            "wrpf".parse::<Federation>().unwrap(),
-            Federation::WRPF
-        );
+        assert_eq!("wrpf".parse::<Federation>().unwrap(), Federation::WRPF);
 
         // The default to_string() should be the upper-case form.
         assert_eq!(Federation::WRPF.to_string(), "WRPF");

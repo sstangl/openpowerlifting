@@ -67,12 +67,9 @@ impl FromStr for Date {
             return Err(ParseDateError::FormatError);
         }
 
-        let year: u32 = v[0].parse::<u32>()
-            .map_err(ParseDateError::ParseIntError)?;
-        let month: u32 = v[1].parse::<u32>()
-            .map_err(ParseDateError::ParseIntError)?;
-        let day: u32 = v[2].parse::<u32>()
-            .map_err(ParseDateError::ParseIntError)?;
+        let year: u32 = v[0].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
+        let month: u32 = v[1].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
+        let day: u32 = v[2].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
 
         if year < 1000 {
             return Err(ParseDateError::FormatError);

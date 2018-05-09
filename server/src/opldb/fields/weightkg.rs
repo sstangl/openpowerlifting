@@ -198,9 +198,7 @@ mod tests {
         let w = "NaN".parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::INFINITY)
-            .parse::<WeightKg>()
-            .unwrap();
+        let w = format!("{}", f32::INFINITY).parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
 
         let w = format!("{}", f32::NEG_INFINITY)

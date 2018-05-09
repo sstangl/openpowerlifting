@@ -50,9 +50,7 @@ impl Language {
 
     /// Returns a list of available languages as strings.
     pub fn string_list() -> Vec<String> {
-        Language::iter()
-            .map(|lang| lang.to_string())
-            .collect()
+        Language::iter().map(|lang| lang.to_string()).collect()
     }
 }
 

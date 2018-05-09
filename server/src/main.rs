@@ -66,9 +66,7 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
             if valid_languages.len() == 0 {
                 default
             } else {
-                valid_languages[0]
-                    .parse::<Language>()
-                    .unwrap_or(default)
+                valid_languages[0].parse::<Language>().unwrap_or(default)
             }
         }
         None => default,
@@ -308,10 +306,7 @@ fn main() {
         }
     };
 
-    println!(
-        "OplDb loaded in {}MB.",
-        opldb.size_bytes() / 1024 / 1024
-    );
+    println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
     // Load translations.
     let mut langinfo = langpack::LangInfo::new();

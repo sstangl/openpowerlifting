@@ -155,10 +155,7 @@ impl Filter {
             .map(|(_key, group)| {
                 *group
                     .max_by(|&x, &y| {
-                        opldb
-                            .get_entry(*x)
-                            .wilks
-                            .cmp(&opldb.get_entry(*y).wilks)
+                        opldb.get_entry(*x).wilks.cmp(&opldb.get_entry(*y).wilks)
                     })
                     .unwrap()
             })

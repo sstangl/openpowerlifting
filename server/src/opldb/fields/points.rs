@@ -138,14 +138,10 @@ mod tests {
         let w = "NaN".parse::<Points>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::INFINITY)
-            .parse::<Points>()
-            .unwrap();
+        let w = format!("{}", f32::INFINITY).parse::<Points>().unwrap();
         assert!(w.0 == 0);
 
-        let w = format!("{}", f32::NEG_INFINITY)
-            .parse::<Points>()
-            .unwrap();
+        let w = format!("{}", f32::NEG_INFINITY).parse::<Points>().unwrap();
         assert!(w.0 == 0);
     }
 

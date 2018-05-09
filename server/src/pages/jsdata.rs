@@ -64,14 +64,8 @@ impl<'db> JsEntryRow<'db> {
             equipment: strings.translate_equipment(entry.equipment),
             age: entry.age,
             division: &entry.division,
-            bodyweight: entry
-                .bodyweightkg
-                .as_type(units)
-                .in_format(number_format),
-            weightclass: entry
-                .weightclasskg
-                .as_type(units)
-                .in_format(number_format),
+            bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
+            weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
             squat: entry
                 .highest_squatkg()
                 .as_type(units)
