@@ -1,26 +1,39 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,Division,WeightClassKg,Equipment,Event
-1,KST Jihlava,Pavel Vítek,1979,98.8,260.0,195.0,265.0,720.0,440.35,Open,,Single-ply,SBD
-Trnka Tomáš/89,74.6,,7152,222.5,215.0,577.5,413.03,J,Open,,
-Cejnek Rostislav/62,90.2,,6377,200.0,200.0,585.0,373.05,M1,Open,,
-2,Sokol Rosice,Martin Šumbera,1980,113.7,280.0,190.0,260.0,730.0,425.44,Open,,Single-ply,SBD
-Černý Jiří/68,84.0,,6628,230.0,232.5,585.0,387.74,M1,Open,,
-3,TJ Sokol Pohořelice,Zdeněk Kučera,1973,90.9,260.0,177.5,240.0,677.5,430.35,Open,,Single-ply,SBD
-Strouhal Jan/89,78.5,,6910,205.0,205.0,517.5,357.59,J,Open,,
-4,Sokol Vranovice A,Pavel Pláteník,1974,82.9,220.0,140.0,237.5,597.5,399.13,Open,,Single-ply,SBD
-Trávník Tomáš/85,81.6,,6744,202.5,210.0,550.0,370.92,J,Open,,
-Biedermann Petr 86,94.6,,6232,200.0,225.0,525.0,327.18,J,Open,,
-5,OST Zbýšov,David Coufal,1980,111.4,240.0,185.0,250.0,675.0,395.75,Open,,Single-ply,SBD
-Isaev Tobor/68,116.9,,5786,240.0,250.0,640.0,370.30,M1,Open,,
-Hájek Tomáš/89,80.8,,6785,165.0,185.0,440.0,298.54,J,Open,,
-6,TJ Sokol Pohořelice B,Libor Vizent,1984,81.5,205.0,125.0,215.0,545.0,367.82,Open,,Single-ply,SBD
-Hofbauer Milan/66,99.5,,6098,200.0,245.0,595.0,362.83,M1,Open,,
-7,Colbert Club Vítkovice,Antonín Pavlovec,1981,98.4,260.0,180.0,235.0,675.0,413.51,Open,,Single-ply,SBD
-Dej Petr/89,82.6,,6694,220.0,205.0,550.0,368.17,J,Open,,
-8,TJ Lokomotiva Krnov,Petr Gracias,1971,84.6,225.0,160.0,215.0,600.0,396.06,Open,,Single-ply,SBD
-Buchtík Petr/91,70.6,,7445,160.0,150.0,390.0,290.36,D,Open,,
-Vávra Petr/90,68.0,,7665,110.0,140.0,310.0,237.62,D,Open,,
-9,Sokol Vranovice B,Oldřich Halfar,1973,92.0,165.0,107.5,200.0,472.5,298.38,Open,,Single-ply,SBD
-Coufal Michal/92,60.1,,8516,112.5,125.0,312.5,266.13,D,Open,,
-Malý Radek/93,78.2,,6927,100.0,135.0,295.0,204.35,D,Open,,
-10,KK a ST TJ Třebíč,Lukáš Krejčí,1990,62.9,155.0,110.0,185.0,450.0,368.01,Open,,Single-ply,SBD
-Dočekal Martin/89,92.4,,6301,140.0,190.0,440.0,277.24,J,Open,,
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Event,Equipment
+1,KST Jihlava,Pavel Vítek,1979,98.8,260,195,265,720,Open,SBD,Single-ply
+1,KST Jihlava,Tomáš Trnka,1989,74.6,222.5,140,215,577.5,Juniors,SBD,Single-ply
+1,KST Jihlava,Patrik Chlupáček,1973,92,215,155,230,600,Open,SBD,Single-ply
+1,KST Jihlava,Rostislav Cejnek,1962,90.2,200,185,200,585,Masters 1,SBD,Single-ply
+2,Sokol Rosice,Martin Šumbera,1980,113.7,280,190,260,730,Open,SBD,Single-ply
+2,Sokol Rosice,Václav Patočka,1977,83,230,145,225,600,Open,SBD,Single-ply
+2,Sokol Rosice,Jiří Černý,1968,84,230,122.5,232.5,585,Masters 1,SBD,Single-ply
+2,Sokol Rosice,Ivo Brázda,1971,79.9,205,117.5,232.5,555,Open,SBD,Single-ply
+3,TJ Sokol Pohořelice,Zdeněk Kučera,1973,90.9,260,177.5,240,677.5,Open,SBD,Single-ply
+3,TJ Sokol Pohořelice,Marek Kukula,1974,97.2,240,140,235,615,Open,SBD,Single-ply
+3,TJ Sokol Pohořelice,Bronislav Tvrdoň,1971,61.7,170,110,170,450,Open,SBD,Single-ply
+3,TJ Sokol Pohořelice,Jan Strouhal,1989,78.5,205,107.5,205,517.5,Juniors,SBD,Single-ply
+4,Sokol Vranovice A,Pavel Pláteník,1974,82.9,220,140,237.5,597.5,Open,SBD,Single-ply
+4,Sokol Vranovice A,Tomáš Trávník,1985,81.6,202.5,137.5,210,550,Juniors,SBD,Single-ply
+4,Sokol Vranovice A,Jiří Furch,1975,79.2,170,145,195,510,Open,SBD,Single-ply
+4,Sokol Vranovice A,Petr Biedermann,1986,94.6,200,100,225,525,Juniors,SBD,Single-ply
+5,OST Zbýšov,David Coufal,1980,111.4,240,185,250,675,Open,SBD,Single-ply
+5,OST Zbýšov,Tobor Isaev,1968,116.9,240,150,250,640,Masters 1,SBD,Single-ply
+5,OST Zbýšov,Marek Pokorný,1975,96.5,210,150,225,585,Open,SBD,Single-ply
+5,OST Zbýšov,Tomáš Hájek,1989,80.8,165,90,185,440,Juniors,SBD,Single-ply
+6,TJ Sokol Pohořelice B,Libor Vizent,1984,81.5,205,125,215,545,Open,SBD,Single-ply
+6,TJ Sokol Pohořelice B,Milan Hofbauer,1966,99.5,200,150,245,595,Masters 1,SBD,Single-ply
+6,TJ Sokol Pohořelice B,Václav Kohůt,1981,108.6,205,145,235,585,Open,SBD,Single-ply
+6,TJ Sokol Pohořelice B,Pavel Konopka,1978,109.6,210,115,250,575,Open,SBD,Single-ply
+7,Colbert Club Vítkovice,Antonín Pavlovec,1981,98.4,260,180,235,675,Open,SBD,Single-ply
+7,Colbert Club Vítkovice,Petr Dej,1989,82.6,220,125,205,550,Juniors,SBD,Single-ply
+7,Colbert Club Vítkovice,Martin Pavlán,1978,99.4,155,135,210,500,Open,SBD,Single-ply
+7,Colbert Club Vítkovice,Pavel Vaněk,1970,96,135,150,150,435,Open,SBD,Single-ply
+8,TJ Lokomotiva Krnov,Petr Gracias,1971,84.6,225,160,215,600,Open,SBD,Single-ply
+8,TJ Lokomotiva Krnov,Josef Šindelář,1984,70.4,150,105,185,440,Open,SBD,Single-ply
+8,TJ Lokomotiva Krnov,Petr Buchtík,1991,70.6,160,80,150,390,Sub-Juniors,SBD,Single-ply
+8,TJ Lokomotiva Krnov,Petr Vávra,1990,68,110,60,140,310,Sub-Juniors,SBD,Single-ply
+9,Sokol Vranovice B,Oldřich Halfar,1973,92,165,107.5,200,472.5,Open,SBD,Single-ply
+9,Sokol Vranovice B,Pavel Gregr,1974,65.4,120,90,145,355,Open,SBD,Single-ply
+9,Sokol Vranovice B,Michal Coufal,1992,60.1,112.5,75,125,312.5,Sub-Juniors,SBD,Single-ply
+9,Sokol Vranovice B,Radek Malý,1993,78.2,100,60,135,295,Sub-Juniors,SBD,Single-ply
+10,KK a ST TJ Třebíč,Lukáš Krejčí,1990,62.9,155,110,185,450,Sub-Juniors,SBD,Single-ply
+10,KK a ST TJ Třebíč,Martin Dočekal,1989,92.4,140,110,190,440,Juniors,SBD,Single-ply
