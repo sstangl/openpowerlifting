@@ -1,9 +1,21 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,Division,WeightClassKg,Equipment,Event
-1,TJ Slovan Frýdlant v Č.,Tomáš Šárik,1975,111.1,340.0,240.0,310.0,890.0,522.25,Open,,Single-ply,SBD
-2,TJ Olympia Zlín,Jiří Gryga,1968,107.9,307.5,200.0,320.0,827.5,489.96,Open,,Single-ply,SBD
-3,Sokol Nymburk A,Milan Špingl,1980,135.0,380.0,250.0,310.0,940.0,528.28,Open,,Single-ply,SBD
-Ruso Karel/65,69.0,,7578,257.5,240.0,607.5,460.36,M1,Open,,
-4,TJ Svitavy,Petr Theuser,1961,100.6,300.0,215.0,300.0,815.0,494.79,Open,,Single-ply,SBD
-Novák Libor/66,82.5,,6699,210.0,230.0,595.0,398.59,M1,Open,,
-5,Sokol Nymburk B,Jaromír Sršeň,1974,93.6,272.5,190.0,265.0,727.5,455.63,Open,,Single-ply,SBD
-Urban Martin/68,116.0,,5796,290.0,300.0,780.0,452.09,M1,Open,,
+Place,Team,Event,Equipment,Name,BirthYear,BodyweightKg,Sex,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division
+1,TJ Slovan Frýdlant v Č.,SBD,Single-ply,Tomáš Šárik,1975,111.1,M,340,240,310,890,Open
+1,TJ Slovan Frýdlant v Č.,SBD,Single-ply,Stanislav Balvín,1986,107.4,M,290,195,300,785,Open
+1,TJ Slovan Frýdlant v Č.,SBD,Single-ply,Jaroslav Jirout,1980,118.9,M,300,210,270,780,Open
+1,TJ Slovan Frýdlant v Č.,SBD,Single-ply,Jiří Filo,1974,96.8,M,265,190,260,715,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Jiří Gryga,1968,107.9,M,307.5,200,320,827.5,Masters 1
+2,TJ Olympia Zlín,SBD,Single-ply,Marek Žák,1981,89.1,M,275,185,262.5,722.5,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Miroslav Hejda,1978,100.8,M,260,170,300,730,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Kamil Večeřa,1978,79.8,M,230,185,230,645,Open
+3,Sokol Nymburk A,SBD,Single-ply,Milan Špingl,1980,135,M,380,250,310,940,Open
+3,Sokol Nymburk A,SBD,Single-ply,Zbyněk Krejča,1974,109.4,M,305,267.5,290,862.5,Open
+3,Sokol Nymburk A,SBD,Single-ply,Karel Ruso,1965,69,M,257.5,110,240,607.5,Masters 1
+DQ,Sokol Nymburk A,SBD,Single-ply,Jan Pinc,1973,112,M,,215,280,,Open
+4,TJ Svitavy,SBD,Single-ply,Petr Theuser,1961,100.6,M,300,215,300,815,Masters 1
+4,TJ Svitavy,SBD,Single-ply,Lukáš Theuser,1981,89,M,280,190,300,770,Open
+4,TJ Svitavy,SBD,Single-ply,Libor Novák,1966,82.5,M,210,155,230,595,Masters 1
+4,TJ Svitavy,SBD,Single-ply,Marek Hejtmánek,1973,83.3,M,195,140,222.5,557.5,Open
+5,Sokol Nymburk B,SBD,Single-ply,Jaromír Sršeň,1974,93.6,M,272.5,190,265,727.5,Open
+5,Sokol Nymburk B,SBD,Single-ply,Martin Urban,1968,116,M,290,190,300,780,Masters 1
+5,Sokol Nymburk B,SBD,Single-ply,Petr Slanička,1969,118.5,M,270,225,240,735,Open
+5,Sokol Nymburk B,SBD,Single-ply,Miroslav Slovák,1970,105.9,M,250,207.5,250,707.5,Open

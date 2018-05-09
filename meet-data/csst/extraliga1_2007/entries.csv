@@ -1,33 +1,33 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,Division,WeightClassKg,Equipment,Event
-1,Sokol Nymburk A,Milan Špingl,1980,143.5,370,260,315,945,526.176,Open,,Single-ply,SBD
-Krejča Zbyněk/74,110.5,,5877,310,300,885,520.1145,Open,,,
-Pinc Jan/73,118.8,,5763,300,275,790,455.277,Open,,,
-Kaliba Miloslav/74,103.2,,6013,260,240,720,432.936,Open,,,
-2,TJ Olympia Zlín,Tomáš Šárik,1975,115.8,345,245,320,910,527.8,Open,,Single-ply,SBD
-Gryga Jiří/68,108,,5919,285,320,820,485.358,Open,,,
-Večeřa Kamil/78,77.9,,6945,220,250,655,454.8975,Open,,,
-Mořingl Martin/77,93.5,,6266,265,270,695,435.487,Open,,,
-3,SKP Union SPJ Praha,Ladislav Strache,1974,88,260,180,250,690,445.671,Open,,Single-ply,SBD
-Krošlák Petr/67,81.6,,6744,260,275,702.5,473.766,Open,,,
-Bauer David/76,94.5,,6235,220,230,580,361.63,Open,,,
-Jiroušek Karel/79,76.4,,7036,270,290,715,503.074,Open,,,
-4,TJ Viktoria Bohumín,Rafal Sabat,1973,158.8,340,210,320,870,477.456,Open,,Single-ply,SBD
-Chrupka David/77,101.2,,6057,300,260,740,448.218,Open,,,
-Seidl Ondřej/73,93.2,,6276,240,220,630,395.388,Open,,,
-Sala Marek/89,87.8,,6467,220,230,592.5,383.1698,Open,,,
-5,Sokol Nymburk B,Karel Ruso,1965,68.7,250,102.5,230,582.5,442.8748,Open,,Single-ply,SBD
-Urban Martin/68,114.2,,5821,250,275,717.5,417.6568,Open,,,
-Slovák Miloslav/70,104.5,,5986,240,240,690,413.034,Open,,,
-Stříska František/71,100.5,,6074,255,245,662.5,402.4025,Open,,,
-6,TJ Svitavy,Petr Theuser,1961,101.5,345,235,300,880,532.4,Open,,Single-ply,SBD
-Novák Libor/66,81.2,,6764,212.5,220,587.5,397.385,Open,,,
-Hejtmánek Marek/73,83.8,,6637,195,220,565,374.9905,Open,,,
-Voznička Petr/82,74.2,,7179,185,190,485,348.1815,Open,,,
-7,TJ Lokomotiva Krnov,Jiří Olejko,1977,100.5,260,185,245,690,419.106,Open,,Single-ply,SBD
-Gracias Petr/71,84.8,,6592,222.5,207.5,590,388.928,Open,,,
-Krnáč Marek/87,87,,6499,205,225,585,380.1915,Open,,,
-Fiala Jan/87,100.5,,6074,230,200,595,361.403,Open,,,
-8,TJ Sokol Těškovice,Václav Jaremczuk,1963,93.5,255,180,260,695,435.487,Open,,Single-ply,SBD
-Beneš Jan/59,104.5,,5986,250,300,,0.00,Open,,,
-Hoza Štěpán/74,71,,7414,210,210,550,407.77,Open,,,
-Frysčok Tomáš/83,75,,7126,145,180,440,313.544,Open,,,
+Place,Team,Event,Equipment,Name,BirthYear,BodyweightKg,Sex,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division
+1,Sokol Nymburk A,SBD,Single-ply,Milan Špingl,1980,143.5,M,370,260,315,945,Open
+1,Sokol Nymburk A,SBD,Single-ply,Zbyněk Krejča,1974,110.5,M,310,275,300,885,Open
+1,Sokol Nymburk A,SBD,Single-ply,Jan Pinc,1973,118.8,M,300,215,275,790,Open
+1,Sokol Nymburk A,SBD,Single-ply,Miloslav Kaliba,1974,103.2,M,260,220,240,720,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Tomáš Šárik,1975,115.8,M,345,245,320,910,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Jiří Gryga,1968,108,M,285,215,320,820,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Kamil Večeřa,1978,77.9,M,220,185,250,655,Open
+2,TJ Olympia Zlín,SBD,Single-ply,Martin Mořingl,1977,93.5,M,265,160,270,695,Open
+3,SKP Union SPJ Praha,SBD,Single-ply,Ladislav Strache,1974,88,M,260,180,250,690,Open
+3,SKP Union SPJ Praha,SBD,Single-ply,Petr Krošlák,1967,81.6,M,260,167.5,275,702.5,Open
+3,SKP Union SPJ Praha,SBD,Single-ply,David Bauer,1976,94.5,M,220,130,230,580,Open
+3,SKP Union SPJ Praha,SBD,Single-ply,Karel Jiroušek,1979,76.4,M,270,155,290,715,Open
+4,TJ Viktoria Bohumín,SBD,Single-ply,Rafal Sabat,1973,158.8,M,340,210,320,870,Open
+4,TJ Viktoria Bohumín,SBD,Single-ply,David Chrupka,1977,101.2,M,300,180,260,740,Open
+4,TJ Viktoria Bohumín,SBD,Single-ply,Ondřej Seidl,1973,93.2,M,240,170,220,630,Open
+4,TJ Viktoria Bohumín,SBD,Single-ply,Marek Sala,1989,87.8,M,220,142.5,230,592.5,Open
+5,Sokol Nymburk B,SBD,Single-ply,Karel Ruso,1965,68.7,M,250,102.5,230,582.5,Open
+5,Sokol Nymburk B,SBD,Single-ply,Martin Urban,1968,114.2,M,250,192.5,275,717.5,Open
+5,Sokol Nymburk B,SBD,Single-ply,Miloslav Slovák,1970,104.5,M,240,210,240,690,Open
+5,Sokol Nymburk B,SBD,Single-ply,František Stříska,1971,100.5,M,255,162.5,245,662.5,Open
+6,TJ Svitavy,SBD,Single-ply,Petr Theuser,1961,101.5,M,345,235,300,880,Open
+6,TJ Svitavy,SBD,Single-ply,Libor Novák,1966,81.2,M,212.5,155,220,587.5,Open
+6,TJ Svitavy,SBD,Single-ply,Marek Hejtmánek,1973,83.8,M,195,150,220,565,Open
+6,TJ Svitavy,SBD,Single-ply,Petr Voznička,1982,74.2,M,185,110,190,485,Open
+7,TJ Lokomotiva Krnov,SBD,Single-ply,Jiří Olejko,1977,100.5,M,260,185,245,690,Open
+7,TJ Lokomotiva Krnov,SBD,Single-ply,Petr Gracias,1971,84.8,M,222.5,160,207.5,590,Open
+7,TJ Lokomotiva Krnov,SBD,Single-ply,Marek Krnáč,1987,87,M,205,155,225,585,Open
+7,TJ Lokomotiva Krnov,SBD,Single-ply,Jan Fiala,1987,100.5,M,230,165,200,595,Open
+8,TJ Sokol Těškovice,SBD,Single-ply,Václav Jaremczuk,1963,93.5,M,255,180,260,695,Open
+DQ,TJ Sokol Těškovice,SBD,Single-ply,Jan Beneš,1959,104.5,M,250,170,300,,Open
+8,TJ Sokol Těškovice,SBD,Single-ply,Štěpán Hoza,1974,71,M,210,130,210,550,Open
+8,TJ Sokol Těškovice,SBD,Single-ply,Tomáš Frysčok,1983,75,M,145,115,180,440,Open

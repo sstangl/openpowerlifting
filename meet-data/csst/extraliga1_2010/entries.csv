@@ -1,33 +1,32 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Sokol  Nymburk "A",Jan Pinc,116.4,300,225,275,800,463.3600,,,
-Demčák Pavol,117.3,305,252.5,280,837.5,484.1588,Open,,
-Krejča Zbyněk,111.8,330,270,300,900,527.0400,Open,,
-Špingl Milan,140.5,420,285,320,1025,572.4625,Open,,
-2,Vitalmax Dědřichov,Tomáš Šárik,119.4,382.5,250,355,987.5,568.4050,,,
-Balvín  Stanislav,112.0,360,210,300,870,509.2110,Open,,
-Rösler Marcel,76.9,245,182.5,240,667.5,467.5838,Open,,
-Jirout  Jaroslav,120.4,320,215,275,810,465.3450,Open,,
-3,TJ Olympia Zlín "A",Jiří Gryga,107.3,290,180,340,810,480.4920,,,
-Kanát Zoltán,112.8,305,222.5,262.5,790,461.4390,Open,,
-Žák Marek,87.7,295,195,280,770,498.2670,Open,,
-Hejda Miroslav,117.1,310,215,315,840,485.7720,Open,,
-4,SK Power  Fitness Mladá Boleskav,Vladimír Medek,81.8,267.5,180,252.5,700,471.3800,,,
-Jiroušek  Karel,82.5,290,157.5,260,707.5,473.9543,Open,,
-Blažek  Bohumil,96.5,285,192.5,255,732.5,452.4653,Open,,
-Hlavsa Rudolf,123.5,310,235,285,830,474.1790,Open,,
-5,TJ SVITAVY,Marek Hejtmánek,84.7,215,155,230,600,395.8200,,,
-Novák Libor,82.9,215,162.5,230,607.5,405.8100,Open,,
-Theuser Lukáš,92.8,275,190,290,755,474.7440,Open,,
-Lacko Tomáš,76.0,240,172.5,242.5,655,462.4955,Open,,
-6,Sokol Nymburk "B",Karel Ruso,69.8,250,107.5,232.5,590,443.0900,,,
-Stříska  František,100.0,255,160,247.5,662.5,403.1975,Open,,
-Břinčil Tomáš,109.4,280,195,275,750,442.1250,Open,,
-Houžvička  Ondřej,97.5,240,160,250,650,399.7500,Open,,
-7,TJ Blaník Dobřany,Rostislav Kvarda,111.1,295,205,255,755,443.0340,,,
-IngKrákora  Petr,92.4,245,135,270,650,409.5650,Open,,
-Grznár Filip,90.0,220,145,245,610,389.4240,Open,,
-Szmigielová  Jana,67.5,140,92.5,135,367.5,375.0705,Open,,
-8,TJ Olympia  Zlín "B",Petr Zámečník,74.6,200,135,230,565,404.0880,,,
-Schmidt Jan,107.1,250,160,300,710,421.3850,Open,,
-Odler Marian,119.3,250,145,250,645,371.3265,Open,,
-Krček Michal,97.1,230,147.5,240,617.5,380.3800,Open,,
+Place,Tean,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Sex,Division
+1,"Sokol Nymburk ""A""",Jan Pinc,116.4,300,225,275,800,SBD,Single-ply,M,Open
+1,"Sokol Nymburk ""A""",Pavol Demčák,117.3,305,252.5,280,837.5,SBD,Single-ply,M,Open
+1,"Sokol Nymburk ""A""",Zbyněk Krejča,111.8,330,270,300,900,SBD,Single-ply,M,Open
+2,Vitalmax Dědřichov,Tomáš Šárik,119.4,382.5,250,355,987.5,SBD,Single-ply,M,Open
+2,Vitalmax Dědřichov,Stanislav Balvín,112,360,210,300,870,SBD,Single-ply,M,Open
+2,Vitalmax Dědřichov,Marcel Rösler,76.9,245,182.5,240,667.5,SBD,Single-ply,M,Open
+2,Vitalmax Dědřichov,Jaroslav Jirout,120.4,320,215,275,810,SBD,Single-ply,M,Open
+3,"TJ Olympia Zlín ""A""",Jiří Gryga,107.3,290,180,340,810,SBD,Single-ply,M,Open
+3,"TJ Olympia Zlín ""A""",Zoltán Kanát,112.8,305,222.5,262.5,790,SBD,Single-ply,M,Open
+3,"TJ Olympia Zlín ""A""",Marek Žák,87.7,295,195,280,770,SBD,Single-ply,M,Open
+3,"TJ Olympia Zlín ""A""",Miroslav Hejda,117.1,310,215,315,840,SBD,Single-ply,M,Open
+4,SK Power Fitness Mladá Boleskav,Vladimír Medek,81.8,267.5,180,252.5,700,SBD,Single-ply,M,Open
+4,SK Power Fitness Mladá Boleskav,Karel Jiroušek,82.5,290,157.5,260,707.5,SBD,Single-ply,M,Open
+4,SK Power Fitness Mladá Boleskav,Bohumil Blažek,96.5,285,192.5,255,732.5,SBD,Single-ply,M,Open
+4,SK Power Fitness Mladá Boleskav,Rudolf Hlavsa,123.5,310,235,285,830,SBD,Single-ply,M,Open
+5,TJ SVITAVY,Marek Hejtmánek,84.7,215,155,230,600,SBD,Single-ply,M,Open
+5,TJ SVITAVY,Libor Novák,82.9,215,162.5,230,607.5,SBD,Single-ply,M,Open
+5,TJ SVITAVY,Lukáš Theuser,92.8,275,190,290,755,SBD,Single-ply,M,Open
+5,TJ SVITAVY,Tomáš Lacko,76,240,172.5,242.5,655,SBD,Single-ply,M,Open
+6,"Sokol Nymburk ""B""",Karel Ruso,69.8,250,107.5,232.5,590,SBD,Single-ply,M,Open
+6,"Sokol Nymburk ""B""",František Stříska,100,255,160,247.5,662.5,SBD,Single-ply,M,Open
+6,"Sokol Nymburk ""B""",Tomáš Břinčil,109.4,280,195,275,750,SBD,Single-ply,M,Open
+6,"Sokol Nymburk ""B""",Ondřej Houžvička,97.5,240,160,250,650,SBD,Single-ply,M,Open
+7,TJ Blaník Dobřany,Rostislav Kvarda,111.1,295,205,255,755,SBD,Single-ply,M,Open
+7,TJ Blaník Dobřany,Petr Ing.Krákora,92.4,245,135,270,650,SBD,Single-ply,M,Open
+7,TJ Blaník Dobřany,Filip Grznár,90,220,145,245,610,SBD,Single-ply,M,Open
+7,TJ Blaník Dobřany,Jana Szmigielová,67.5,140,92.5,135,367.5,SBD,Single-ply,F,Open
+8,"TJ Olympia Zlín ""B""",Petr Zámečník,74.6,200,135,230,565,SBD,Single-ply,M,Open
+8,"TJ Olympia Zlín ""B""",Jan Schmidt,107.1,250,160,300,710,SBD,Single-ply,M,Open
+8,"TJ Olympia Zlín ""B""",Marian Odler,119.3,250,145,250,645,SBD,Single-ply,M,Open
+8,"TJ Olympia Zlín ""B""",Michal Krček,97.1,230,147.5,240,617.5,SBD,Single-ply,M,Open
