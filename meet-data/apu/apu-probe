@@ -34,7 +34,7 @@ def getmeetlist(html):
 
     urls = []
     for a in soup.find_all('a'):
-        if a.text.lower() != "click here":
+        if a.text.lower().strip().replace('  ', ' ') != "click here":
             continue
 
         # Apparently some <a> tags don't have an href.
