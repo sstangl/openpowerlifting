@@ -1,25 +1,25 @@
-Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event
-1,Lokomotiva Krnov Tj,Greguš Milan/68,96.4,0.6180,197.5,242.5,725.0,448.05,,
-Vlach Petr/81,95,9,0.6194,240.0,262.5,665.0,411.90,Open,
-Krayzel Rémy/55,80,9,0.6779,230.0,200.0,600.0,406.74,Open,
-Fiala Jan/87,100,4,0.61,265.0,215.0,640.0,388.86,Open,
-2,Kuřim Sk,Župka Pavel/84,97.5,0.6150,185.0,285.0,740.0,455.10,,
-Děmčichin Sergev/88,67,4,0.7719,190.0,210.0,560.0,432.26,Open,
-Pop Vladimír/75,107,9,0.5921,245.0,270.0,685.0,405.59,Open,
-Opluštil Jiří/80,95,8,0.6197,185.0,220.0,540.0,334.64,Open,
-3,Sokol Těškovice Tj,Jaremczuk Václav/63,97.9,0.6139,175.0,270.0,705.0,432.80,,
-Hoza Štěpán/74,72,1,0.7330,217.5,220.0,572.5,419.64,Open,
-Hořínek Radim/75,105,,0.5976,220.0,245.0,610.0,364.54,Open,
-Hoza René/93,73,1,0.7256,205.0,180.0,500.0,362.80,Open,
-4,Viktorie Bohumín Tj,Turek Martin/72,88.8,0.6428,192.5,225.0,642.5,413.00,,
-Malina Pavel/60,59,5,0.8594,157.5,157.5,415.0,356.65,Open,
-Spiewok Aleš/67,89,5,0.6402,190.0,180.0,532.5,340.91,Open,
-Turek Tomáš/94,88,,0.6459,202.5,190.0,505.0,326.18,Open,
-5,Colbert Clubvítkovice Ssk,Zahraj Jiří/68,102.0,0.6039,230.0,200.0,620.0,374.42,,
-Žák Pavel/85,110,5,0.5877,227.5,210.0,630.0,370.25,Open,
-Kiessewetter David/84,74,,0.7193,157.5,195.0,457.5,329.08,Open,
-Pavlovec Antonín/81,89,8,0.6391,,210.0,375.0,239.66,Open,
-6,Sokol Pohořelice Tj,Tvrdoň Bronislav/71,59.5,0.8594,128.0,160.0,453.0,389.31,,
-Fučík Pavel/78,114,4,0.5800,200.0,220.0,560.0,325.86,Open,
-Važan Pavel/91,65,9,0.7862,140.0,150.0,395.0,310.55,Open,
-Ryšavý Milan/78,89,3,0.6410,210.0,215.0,425.0,272.43,Open,
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
+1,TJ Lokomotiva Krnov,Milan Greguš,1968,96.4,285,197.5,242.5,725,SBD,Single-ply,Open
+1,TJ Lokomotiva Krnov,Petr Vlach,1981,95.9,240,162.5,262.5,665,SBD,Single-ply,Open
+1,TJ Lokomotiva Krnov,Rémy Krayzel,1955,80.9,230,170,200,600,SBD,Single-ply,Open
+1,TJ Lokomotiva Krnov,Jan Fiala,1987,100.4,265,160,215,640,SBD,Single-ply,Open
+2,SK Kuřim,Pavel Župka,1984,97.5,270,185,285,740,SBD,Single-ply,Open
+2,SK Kuřim,Sergev Děmčichin,1988,67.4,190,160,210,560,SBD,Single-ply,Open
+2,SK Kuřim,Vladimír Pop,1975,107.9,245,170,270,685,SBD,Single-ply,Open
+2,SK Kuřim,Jiří Opluštil,1980,95.8,185,135,220,540,SBD,Single-ply,Open
+3,TJ Sokol Těškovice,Václav Jaremczuk,1963,97.9,260,175,270,705,SBD,Single-ply,Open
+3,TJ Sokol Těškovice,Štěpán Hoza,1974,72.1,217.5,135,220,572.5,SBD,Single-ply,Open
+3,TJ Sokol Těškovice,Radim Hořínek,1975,105,220,145,245,610,SBD,Single-ply,Open
+3,TJ Sokol Těškovice,René Hoza,1993,73.1,205,115,180,500,SBD,Single-ply,Open
+4,TJ Viktorie Bohumín,Martin Turek,1972,88.8,225,192.5,225,642.5,SBD,Single-ply,Open
+4,TJ Viktorie Bohumín,Pavel Malina,1960,59.5,157.5,100,157.5,415,SBD,Single-ply,Open
+4,TJ Viktorie Bohumín,Aleš Spiewok,1967,89.5,190,162.5,180,532.5,SBD,Single-ply,Open
+4,TJ Viktorie Bohumín,Tomáš Turek,1994,88,202.5,112.5,190,505,SBD,Single-ply,Open
+5,SSK Colbert clubVítkovice,Jiří Zahraj,1968,102,190,230,200,620,SBD,Single-ply,Open
+5,SSK Colbert clubVítkovice,Pavel Žák,1985,110.5,227.5,192.5,210,630,SBD,Single-ply,Open
+5,SSK Colbert clubVítkovice,David Kiessewetter,1984,74,157.5,105,195,457.5,SBD,Single-ply,Open
+5,SSK Colbert clubVítkovice,Antonín Pavlovec,1981,89.8,0,165,210,375,SBD,Single-ply,Open
+6,TJ Sokol Pohořelice,Bronislav Tvrdoň,1971,59.5,165,128,160,453,SBD,Single-ply,Open
+6,TJ Sokol Pohořelice,Pavel Fučík,1978,114.4,200,140,220,560,SBD,Single-ply,Open
+6,TJ Sokol Pohořelice,Pavel Važan,1991,65.9,140,105,150,395,SBD,Single-ply,Open
+6,TJ Sokol Pohořelice,Milan Ryšavý,1978,89.3,210,0,215,425,SBD,Single-ply,Open
