@@ -31,6 +31,7 @@
         <th>Status</th>
         <th>Meets In Database</th>
       </thead>
+      <tbody>
       {% for this in fed_statuses %}
         <tr>
           <td>{{this.fed}}</td>
@@ -38,6 +39,7 @@
           <td>{{this.meet_count}}</td>
         </tr>
       {% endfor %}
+      </tbody>
     </table>
   </div>
 </center>

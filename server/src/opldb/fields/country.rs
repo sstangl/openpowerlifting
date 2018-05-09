@@ -4,17 +4,22 @@
 pub enum Country {
     Algeria,
     Argentina,
+    Aruba,
     Australia,
     Austria,
     Belarus,
     Belgium,
     Brazil,
     Britain,
+    #[serde(rename = "British Virgin Islands")]
+    BritishVirginIslands,
     Bulgaria,
     Canada,
     #[serde(rename = "Cayman Islands")]
     CaymanIslands,
     Colombia,
+    #[serde(rename = "Costa Rica")]
+    CostaRica,
     #[serde(rename = "Côte d’Ivoire")]
     CoteDIvoire,
     // FIXME: Standardize on one of these.
@@ -22,6 +27,8 @@ pub enum Country {
     Denmark,
     Ecuador,
     Egypt,
+    #[serde(rename = "El Salvador")]
+    ElSalvador,
     England,
     Estonia,
     Fiji,
@@ -29,6 +36,8 @@ pub enum Country {
     France,
     Germany,
     Greece,
+    Guatemala,
+    Guyana,
     #[serde(rename = "Hong Kong")]
     HongKong,
     Hungary,
@@ -53,6 +62,7 @@ pub enum Country {
     NewCaledonia,
     #[serde(rename = "New Zealand")]
     NewZealand,
+    Nicaragua,
     Norway,
     #[serde(rename = "N.Ireland")]
     NorthernIreland,

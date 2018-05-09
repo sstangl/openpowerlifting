@@ -63,6 +63,7 @@ pub struct ResultsRow<'a> {
     pub name: &'a str,
     pub username: &'a str,
     pub instagram: Option<&'a str>,
+    pub color: Option<&'a str>,
     pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,
@@ -95,6 +96,10 @@ impl<'a> ResultsRow<'a> {
             name: &lifter.name,
             username: &lifter.username,
             instagram: match lifter.instagram {
+                None => None,
+                Some(ref s) => Some(&s),
+            },
+            color: match lifter.color {
                 None => None,
                 Some(ref s) => Some(&s),
             },

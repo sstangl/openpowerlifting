@@ -19,12 +19,15 @@ function makeDataProvider() {
                 loc = loc + "-" + entry.state;
             }
 
-            let name = '<a href="/u/' + entry.username + '">' + entry.name + '</a>';
+            let name = '<a class="' + entry.color +
+                       '" href="/u/' + entry.username + '">' + entry.name + '</a>';
+
             if (entry.instagram) {
                 name += '<a href="https://www.instagram.com/' + entry.instagram +
                         '" class="instagram" target="_blank">' +
                         '<i class="fa fa-instagram fa-resize"></i></a>';
             }
+
 
             return {
                 rank: entry.sorted_index + 1,

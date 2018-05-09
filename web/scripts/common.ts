@@ -119,18 +119,27 @@ export function makeRowObj(row, index?: number): RowObject {
     if (fullname === "Ben Gianacakos") {
         // Pink.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FF80AB;">' + fullname + '</span></a>';
-    } else if (fullname === "Kristy Hawkins" || fullname === "Trystan Oakley" || fullname === "Amanda Kohatsu") {
+    } else if (fullname === "Jo Whiteley") {
+        // Purple.
+        name = '<a style="text-decoration-color: #AE76FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #AE76FF;">' + fullname + '</span></a>';
+    } else if (fullname === "Kristy Hawkins" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan" || fullname === "Sarah Wellberg") {
         // Green.
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
-    } else if (fullname === "Boris Lerner" || fullname === "Esther Lee") {
+    } else if (fullname === "Boris Lerner" || fullname === "Esther Lee" || fullname === "Patrick Jeffries" || fullname === "Susan Salazar") {
         // Light Blue.
         name = '<a style="text-decoration-color: #43D1FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #43D1FF;">' + fullname + '</span></a>';
+    } else if (fullname === "Zachary Langdon") {
+        // Royal Blue.
+        name = '<a style="text-decoration-color: #507CFF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #507CFF;">' + fullname + '</span></a>';
     } else if (fullname === "Thomas Schwarz" || fullname === "Zachary Lockhart") {
         // Red.
         name = '<a style="text-decoration-color: #FB3640;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FB3640;">' + fullname + '</span></a>';
-    } else if (fullname === "Patrick Jeffries") {
-        // Dodger Blue.
-        name = '<a style="text-decoration-color: #1E90FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #43D1FF;">' + fullname + '</span></a>';
+    } else if (fullname === "David Sloan") {
+        // Orange.
+        name = '<a style="text-decoration-color: #FFA200;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FFA200;">' + fullname + '</span></a>';
+    } else if (fullname === "Joseph Park" || fullname === "Trystan Oakley") {
+        // Rainbow.
+        name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span class="rainbow">' + fullname + '</span></a>';
     }
 
     // Attempt to read in social media data, if present.

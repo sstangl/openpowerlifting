@@ -1,0 +1,48 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// Style definitions for name effects.
+
+.pink {
+  color: #FF80AB;
+  text-decoration-color: #FF80AB;
+}
+
+.purple {
+  color: #AE76FF;
+  text-decoration-color: #AE76FF;
+}
+
+.green {
+  color: #51DA27;
+  text-decoration-color: #51DA27;
+}
+
+.lightblue {
+  color: #43D1FF;
+  text-decoration-color: #43D1FF;
+}
+
+.royalblue {
+  color: #507CFF;
+  text-decoration-color: #507CFF;
+}
+
+.red {
+  color: #FB3640;
+  text-decoration-color: #FB3640;
+}
+
+.orange {
+  color: #FFA200;
+  text-decoration-color: #FFA200;
+}
+
+.rainbow {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+
+  text-decoration-color: #FF80AB;
+}

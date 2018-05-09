@@ -126,6 +126,11 @@ fn rankings(
     Some(Template::render("rankings", &context))
 }
 
+#[get("/rankings")]
+fn rankings_redirect() -> Redirect {
+    Redirect::to("/")
+}
+
 #[get("/u/<username>")]
 fn lifter(
     username: String,
@@ -243,7 +248,18 @@ fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .mount(
             "/",
-            routes![index, rankings, lifter, meet, statics, status, data, faq, contact],
+            routes![
+                index,
+                rankings,
+                rankings_redirect,
+                lifter,
+                meet,
+                statics,
+                status,
+                data,
+                faq,
+                contact
+            ],
         )
         .catch(errors![not_found, internal_error])
         .attach(Template::fairing())

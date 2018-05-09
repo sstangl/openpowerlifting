@@ -7,12 +7,12 @@ authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 accept-language = "1.1"
 csv = "1.0.0-beta.5"
 dotenv = "0.10"
-itertools = "0.7.8"
+itertools = "0.7"
 serde = "1.0"
 serde_derive = "1.0"
 serde_json = "1.0"
 strum = "0.9"
 strum_macros = "0.9"
-rocket = "0.3.9"
-rocket_codegen = "0.3.9"
-rocket_contrib = { version = "0.3.9", features = ["tera_templates"] }
+rocket = "0.3"
+rocket_codegen = "0.3"
+rocket_contrib = { version = "0.3", features = ["tera_templates"] }
