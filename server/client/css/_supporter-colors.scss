@@ -1,39 +1,37 @@
 // vim: set ts=8 sts=2 et sw=2 tw=99:
 // Style definitions for name effects.
 
+@mixin name-color($color) {
+  color: $color;
+  text-decoration-color: $color;
+}
+
 .pink {
-  color: #FF80AB;
-  text-decoration-color: #FF80AB;
+  @include name-color(#FF80AB);
 }
 
 .purple {
-  color: #AE76FF;
-  text-decoration-color: #AE76FF;
+  @include name-color(#AE76FF);
 }
 
 .green {
-  color: #51DA27;
-  text-decoration-color: #51DA27;
+  @include name-color(#51DA27);
 }
 
 .lightblue {
-  color: #43D1FF;
-  text-decoration-color: #43D1FF;
+  @include name-color(#43D1FF);
 }
 
 .royalblue {
-  color: #507CFF;
-  text-decoration-color: #507CFF;
+  @include name-color(#507CFF);
 }
 
 .red {
-  color: #FB3640;
-  text-decoration-color: #FB3640;
+  @include name-color(#FB3640);
 }
 
 .orange {
-  color: #FFA200;
-  text-decoration-color: #FFA200;
+  @include name-color(#FFA200);
 }
 
 .rainbow {
