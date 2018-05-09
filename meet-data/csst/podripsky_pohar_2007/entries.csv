@@ -1,43 +1,43 @@
-Place,Name,BirthYear,BodyweightKg,Team,TotalKg,Division,Sex,Equipment,Event
-1,Michaela Davidová,59.5,Sokol Nymburk,95.0,Open,F,60,
-2,Adina Hyková,59.0,TJ Spartak Chodov,87.5,Open,F,60,
-3,Monika Rovná,58.3,SK PF Mladá Boleslav,75.0,Open,F,60,
-4,Petra Steinerová,58.9,KST Factory Gym.Litvínov,70.0,Open,F,60,
-1,Jitka Mühlfeldová,61.4,KST Factory Gym.Litvínov,47.5,Open,F,67.5,
-2,Alena Krčmářová,63.9,SK PF Mladá Boleslav,45.0,Open,F,67.5,
-1,Jana Hakeová,74.3,Letohrad,47.5,Open,F,75,
-1,Hana Takáčová,82.0,Sokol Nymburk,145.0,Open,F,82.5,
-1,Vladimír Nebola,74.7,TJ Spartak Letohrad,182.5,Open,M,75,
-2,Jakub Sedláček,74.7,SP Rokytnice,180.0,Open,M,75,
-3,Martin Dolejš,73.5,Sokol Vejprnice,160.0,Open,M,75,
-4,Gašpar Csonta,68.1,SKV Havířov,125.0,Open,M,75,
-1,Tomáš Ježek,82.5,KST FC Příbram,210.0,Open,M,82.5,
-2,Aleš Košťál,80.8,Lovochemie Lovosice,185.0,Open,M,82.5,
-3,Karel Olič,77.8,TJ Kaučuk Kralupy,130.0,Open,M,82.5,
-4,Jiří Poutník,81.0,KST Factory Gym.Litvínov,130.0,Open,M,82.5,
-5,Roman Gubíš,81.5,Strojplast Tachov,122.5,Open,M,82.5,
-6,Jaroslav Hodík,81.8,TJ Spartak Chodov,110.0,Open,M,82.5,
-DQ,Roman Paukert,76.6,FC Příbram,,,M,82.5,
-1,Miroslav Paukert,88.6,FC Příbram,200.0,Open,M,90,
-2,Radim Kopal,84.1,Factory Gym.Litvínov,155.0,Open,M,90,
-3,Jan Skala,82.8,Sokol Kamenný Újezd,135.0,Open,M,90,
-4,Zdeněk Ciprián,89.0,FC Bílina,,Open,M,90,
-1,František Oračko,99.4,Sokol Mělník,227.5,Open,M,100,
-2,Tomáš Hejduk,98.7,KST Příbram,217.5,Open,M,100,
-3,Vladislav Havrlík,99.4,KST Příbram,217.5,Open,M,100,
-4,Michal Marcin,99.5,A-fitness Roudnice nad Labem,210.0,Open,M,100,
-5,Tomáš Sedláček,95.2,SP Rokytnice,200.0,Open,M,100,
-6,Jakub Hosinger,93.5,Factory Gym.Litvínov,155.0,Open,M,100,
-7,Jaroslav Gubiš,96.1,Strojplast Tachov,145.0,Open,M,100,
-8,Aleš Prajza,94.5,Factory Gym.Litvínov,135.0,Open,M,100,
-1,Zbyněk Krejča,109.3,Sokol Nymburk,270.0,Open,M,110,
-2,František Janák,107.5,FC Bílina,210.0,Open,M,110,
-3,Jiří Brtek,107.9,KST Factory Gym.Litvínov,205.0,Open,M,110,
-4,Pavel Šefl,109.7,Sokol Kamenný Újezd,202.5,Open,M,110,
-1,Jiří Krčmář,117.5,SK PF Mladá Boleslav,217.5,Open,M,125,
-2,Antonín Coufal,116.2,TJ Spartak Chodov,215.0,Open,M,125,
-3,František Ambroz,122.5,Colbert Vítkovice,215.0,Open,M,125,
-4,Martin Šafář,112.8,Sokol Vršovice,212.5,Open,M,125,
-1,Milan Špingl,143.3,Sokol Nymburk,275.0,Open,M,125,
-2,Jaroslav Šoukal,132.9,TJ Sokol Vejprnice,250.0,Open,M,125,
-3,Lukáš Doubek,126.2,Sokol Nymburk,212.5,Open,M,125,
+Place,Name,BodyweightKg,Team,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
+1,Michaela Davidová,59.5,Sokol Nymburk,95,95,Open,F,60,Single-ply,B
+2,Adina Hyková,59,TJ Spartak Chodov,87.5,87.5,Open,F,60,Single-ply,B
+3,Monika Rovná,58.3,SK PF Mladá Boleslav,75,75,Open,F,60,Single-ply,B
+4,Petra Steinerová,58.9,KST Factory Gym.Litvínov,70,70,Open,F,60,Single-ply,B
+1,Jitka Mühlfeldová,61.4,KST Factory Gym.Litvínov,47.5,47.5,Open,F,67.5,Single-ply,B
+2,Alena Krčmářová,63.9,SK PF Mladá Boleslav,45,45,Open,F,67.5,Single-ply,B
+1,Jana Hakeová,74.3,Letohrad,47.5,47.5,Open,F,75,Single-ply,B
+1,Hana Takáčová,82,Sokol Nymburk,145,145,Open,F,82.5,Single-ply,B
+1,Vladimír Nebola,74.7,TJ Spartak Letohrad,182.5,182.5,Open,M,75,Single-ply,B
+2,Jakub Sedláček,74.7,SP Rokytnice,180,180,Open,M,75,Single-ply,B
+3,Martin Dolejš,73.5,Sokol Vejprnice,160,160,Open,M,75,Single-ply,B
+4,Gašpar Csonta,68.1,SKV Havířov,125,125,Open,M,75,Single-ply,B
+1,Tomáš Ježek,82.5,KST FC Příbram,210,210,Open,M,82.5,Single-ply,B
+2,Aleš Košťál,80.8,Lovochemie Lovosice,185,185,Open,M,82.5,Single-ply,B
+3,Karel Olič,77.8,TJ Kaučuk Kralupy,130,130,Open,M,82.5,Single-ply,B
+4,Jiří Poutník,81,KST Factory Gym.Litvínov,130,130,Open,M,82.5,Single-ply,B
+5,Roman Gubíš,81.5,Strojplast Tachov,122.5,122.5,Open,M,82.5,Single-ply,B
+6,Jaroslav Hodík,81.8,TJ Spartak Chodov,110,110,Open,M,82.5,Single-ply,B
+DQ,Roman Paukert,76.6,FC Příbram,,,,M,82.5,Single-ply,B
+1,Miroslav Paukert,88.6,FC Příbram,200,200,Open,M,90,Single-ply,B
+2,Radim Kopal,84.1,Factory Gym.Litvínov,155,155,Open,M,90,Single-ply,B
+3,Jan Skala,82.8,Sokol Kamenný Újezd,135,135,Open,M,90,Single-ply,B
+4,Zdeněk Ciprián,89,FC Bílina,,,Open,M,90,Single-ply,B
+1,František Oračko,99.4,Sokol Mělník,227.5,227.5,Open,M,100,Single-ply,B
+2,Tomáš Hejduk,98.7,KST Příbram,217.5,217.5,Open,M,100,Single-ply,B
+3,Vladislav Havrlík,99.4,KST Příbram,217.5,217.5,Open,M,100,Single-ply,B
+4,Michal Marcin,99.5,A-fitness Roudnice nad Labem,210,210,Open,M,100,Single-ply,B
+5,Tomáš Sedláček,95.2,SP Rokytnice,200,200,Open,M,100,Single-ply,B
+6,Jakub Hosinger,93.5,Factory Gym.Litvínov,155,155,Open,M,100,Single-ply,B
+7,Jaroslav Gubiš,96.1,Strojplast Tachov,145,145,Open,M,100,Single-ply,B
+8,Aleš Prajza,94.5,Factory Gym.Litvínov,135,135,Open,M,100,Single-ply,B
+1,Zbyněk Krejča,109.3,Sokol Nymburk,270,270,Open,M,110,Single-ply,B
+2,František Janák,107.5,FC Bílina,210,210,Open,M,110,Single-ply,B
+3,Jiří Brtek,107.9,KST Factory Gym.Litvínov,205,205,Open,M,110,Single-ply,B
+4,Pavel Šefl,109.7,Sokol Kamenný Újezd,202.5,202.5,Open,M,110,Single-ply,B
+1,Jiří Krčmář,117.5,SK PF Mladá Boleslav,217.5,217.5,Open,M,125,Single-ply,B
+2,Antonín Coufal,116.2,TJ Spartak Chodov,215,215,Open,M,125,Single-ply,B
+3,František Ambroz,122.5,Colbert Vítkovice,215,215,Open,M,125,Single-ply,B
+4,Martin Šafář,112.8,Sokol Vršovice,212.5,212.5,Open,M,125,Single-ply,B
+1,Milan Špingl,143.3,Sokol Nymburk,275,275,Open,M,125,Single-ply,B
+2,Jaroslav Šoukal,132.9,TJ Sokol Vejprnice,250,250,Open,M,125,Single-ply,B
+3,Lukáš Doubek,126.2,Sokol Nymburk,212.5,212.5,Open,M,125,Single-ply,B

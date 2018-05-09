@@ -1,21 +1,20 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Equipment,Event
-1,Antonin Babinsky,1970,90.0,TJ Olympia Zlin B,0.6384,240.0,137.5,260.0,637.5,406.98,Single-ply,SBD
-2,Martin Horingl,1977,96.5,TJ Olympia Zlin B,0.6177,200.0,135.0,260.0,595.0,367.53,Single-ply,SBD
-3,Petr Zamecnik,1966,74.2,TJ Olympia Zlin B,0.7179,190.0,125.0,230.0,545.0,391.26,Single-ply,SBD
-4,Marek Zak,1981,80.5,TJ Olympia Zlin B,0.6800,235.0,137.5,230.0,602.5,409.70,Single-ply,SBD
-5,Jiri Gajdosik,1962,67.5,TJ Olympia Zlin B,0.7710,175.0,112.5,185.0,472.5,364.30,Single-ply,SBD
-1,Pavel Platenik,1974,77.5,So Vranovice,0.6969,235.0,142.5,230.0,607.5,423.37,Single-ply,SBD
-2,Roman Platenik,1970,89.0,So Vranovice,0.6421,220.0,127.5,240.0,587.5,377.23,Single-ply,SBD
-3,Josef Wachter,1968,89.5,So Vranovice,0.6402,162.5,125.0,210.0,497.5,318.50,Single-ply,SBD
-4,Oldrich Halfar,1973,82.5,So Vranovice,0.6699,142.5,97.5,207.5,447.5,299.78,Single-ply,SBD
-5,Jiri Furch,1975,65.5,So Vranovice,0.7901,150.0,117.5,182.5,450.0,355.54,Single-ply,SBD
-1,Jaromir Janecka,1972,88.5,Colbert Bystrice,0.6440,190.0,125.0,220.0,535.0,344.54,Single-ply,SBD
-2,Michal Novak,1977,98.0,Colbert Bystrice,0.6136,225.0,150.0,255.0,630.0,386.57,Single-ply,SBD
-3,Martin Foukal,1972,82.0,Colbert Bystrice,0.6724,155.0,105.0,190.0,450.0,302.58,Single-ply,SBD
-4,Martin Cech,1974,67.0,Colbert Bystrice,0.7756,165.0,95.0,215.0,475.0,368.41,Single-ply,SBD
-5,Lifter no,-00.0,Colbert Bystrice,..,,,,,..,0.0,Single-ply,
-1,Milan Lutter,1956,75.5,Sokol Zlin,0.7093,170.0,80.0,190.0,440.0,312.09,Single-ply,SBD
-2,Roman Uher,1967,72.5,Sokol Zlin,0.7300,175.0,100.0,182.5,457.5,333.98,Single-ply,SBD
-3,Milan Soldan,1963,114.0,Sokol Zlin,0.5824,210.0,137.5,230.0,577.5,336.34,Single-ply,SBD
-4,Otakar Latal,1960,89.5,Sokol Zlin,0.6402,200.0,107.5,210.0,517.5,331.30,Single-ply,SBD
-5,Zdenek Klusak,1959,115.5,Sokol Zlin,0.5804,225.0,140.0,235.0,600.0,348.24,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Antonin Babinsky,1970,90,TJ Olympia Zlin B,240,137.5,260,637.5,Single-ply,SBD
+1,Martin Horingl,1977,96.5,TJ Olympia Zlin B,200,135,260,595,Single-ply,SBD
+1,Petr Zamecnik,1966,74.2,TJ Olympia Zlin B,190,125,230,545,Single-ply,SBD
+1,Marek Zak,1981,80.5,TJ Olympia Zlin B,235,137.5,230,602.5,Single-ply,SBD
+1,Jiri Gajdosik,1962,67.5,TJ Olympia Zlin B,175,112.5,185,472.5,Single-ply,SBD
+2,Pavel Platenik,1974,77.5,So Vranovice,235,142.5,230,607.5,Single-ply,SBD
+2,Roman Platenik,1970,89,So Vranovice,220,127.5,240,587.5,Single-ply,SBD
+2,Josef Wachter,1968,89.5,So Vranovice,162.5,125,210,497.5,Single-ply,SBD
+2,Oldrich Halfar,1973,82.5,So Vranovice,142.5,97.5,207.5,447.5,Single-ply,SBD
+2,Jiri Furch,1975,65.5,So Vranovice,150,117.5,182.5,450,Single-ply,SBD
+3,Jaromir Janecka,1972,88.5,Colbert Bystrice,190,125,220,535,Single-ply,SBD
+3,Michal Novak,1977,98,Colbert Bystrice,225,150,255,630,Single-ply,SBD
+3,Martin Foukal,1972,82,Colbert Bystrice,155,105,190,450,Single-ply,SBD
+3,Martin Cech,1974,67,Colbert Bystrice,165,95,215,475,Single-ply,SBD
+4,Milan Lutter,1956,75.5,Sokol Zlin,170,80,190,440,Single-ply,SBD
+4,Roman Uher,1967,72.5,Sokol Zlin,175,100,182.5,457.5,Single-ply,SBD
+4,Milan Soldan,1963,114,Sokol Zlin,210,137.5,230,577.5,Single-ply,SBD
+4,Otakar Latal,1960,89.5,Sokol Zlin,200,107.5,210,517.5,Single-ply,SBD
+4,Zdenek Klusak,1959,115.5,Sokol Zlin,225,140,235,600,Single-ply,SBD

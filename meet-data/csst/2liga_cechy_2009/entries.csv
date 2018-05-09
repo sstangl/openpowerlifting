@@ -1,16 +1,28 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,TJ AŠ.M.Boleslav,Martin Hažva,1977,89.0,255.0,155.0,275.0,685.0,Open,,Single-ply,SBD
-Šudoma Zdeněk/61,97.2,,6158,250.0,260.0,665.0,409.50,M1,,
-2,Sporting Apis Praha-A,Martin Brabec,1975,100.2,270.0,172.5,280.0,722.5,Open,,Single-ply,SBD
-Hesoun Jakub/87,96.7,,6172,260.0,250.0,672.5,415.04,J,,
-3,TJ Sokol Praha-Vršovice,Petr Schmidt,1984,102.2,262.5,190.0,255.0,707.5,Open,,Single-ply,SBD
-Pavlíček Miroslav/87,105.5,,5966,220.0,230.0,580.0,346.01,J,,
-4,Sokol Nymburk,Karel Ruso,1965,68.8,250.0,102.5,242.5,595.0,Open,,Single-ply,SBD
-Houžvička Ondřej/90,98.0,,6136,225.0,245.0,617.5,378.93,J,,
-Skořepa Tomáš/87,64.4,,8014,155.0,152.5,410.0,328.59,J,,
-5,SKST Litvínov,David Videman,1978,98.2,215.0,150.0,230.0,595.0,Open,,Single-ply,SBD
-Kundrt Stanislav/87,83.3,,6661,200.0,200.0,535.0,356.35,J,,
-Murárik Marcel/92,77.8,,6951,162.5,165.0,435.0,302.36,D,,
-6,TJ Baník Sokolov,Petr Hrubý,52 st.,82.3,210.0,135.0,210.0,555.0,Open,,Single-ply,SBD
-7,Sporting Apis Praha-B,Jindřich Jokel,1991,86.4,165.0,100.0,222.5,487.5,Open,,Single-ply,SBD
-8,TJ Spartak Chodov,Jaroslav Hodík,1958,79.4,155.0,110.0,200.0,465.0,Open,,Single-ply,SBD
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event
+1,TJ AŠ. M.Boleslav,Martin Hažva,1977,89,255,155,275,685,Open,Single-ply,SBD
+1,TJ AŠ. M.Boleslav,Zdeněk Čuban,1984,82,225,145,250,620,Open,Single-ply,SBD
+1,TJ AŠ. M.Boleslav,Zdeněk Šudoma,1961,97.2,250,155,260,665,Masters 1,Single-ply,SBD
+1,TJ AŠ. M.Boleslav,Roman Richter,1976,89.1,200,147.5,215,562.5,Open,Single-ply,SBD
+2,Sporting Apis Praha-A,Martin Brabec,1975,100.2,270,172.5,280,722.5,Open,Single-ply,SBD
+2,Sporting Apis Praha-A,Jakub Hesoun,1987,96.7,260,162.5,250,672.5,Juniors,Single-ply,SBD
+2,Sporting Apis Praha-A,Roman Tůma,1971,88.3,240,110,260,610,Open,Single-ply,SBD
+2,Sporting Apis Praha-A,Martin Janota,1974,87.9,220,110,230,560,Open,Single-ply,SBD
+3,TJ Sokol Praha-Vršovice,Petr Schmidt,1984,102.2,262.5,190,255,707.5,Open,Single-ply,SBD
+3,TJ Sokol Praha-Vršovice,Jan Švagr,1984,93,230,170,215,615,Open,Single-ply,SBD
+3,TJ Sokol Praha-Vršovice,Miroslav Pavlíček,1987,105.5,220,130,230,580,Juniors,Single-ply,SBD
+3,TJ Sokol Praha-Vršovice,Petr Konupčík,1977,98.9,185,140,235,560,Open,Single-ply,SBD
+4,Sokol Nymburk,Karel Ruso,1965,68.8,250,102.5,242.5,595,Masters 1,Single-ply,SBD
+4,Sokol Nymburk,Ondřej Houžvička,1990,98,225,147.5,245,617.5,Juniors,Single-ply,SBD
+4,Sokol Nymburk,Dušan Šiška,1983,73.9,150,165,150,465,Open,Single-ply,SBD
+4,Sokol Nymburk,Tomáš Skořepa,1987,64.4,155,102.5,152.5,410,Juniors,Single-ply,SBD
+5,SKST Litvínov,David Videman,1978,98.2,215,150,230,595,Open,Single-ply,SBD
+5,SKST Litvínov,Stanislav Kundrt,1987,83.3,200,135,200,535,Juniors,Single-ply,SBD
+5,SKST Litvínov,Ludvík Kozák,1974,91.2,185,147.5,215,547.5,Open,Single-ply,SBD
+5,SKST Litvínov,Marcel Murárik,1992,77.8,162.5,107.5,165,435,Sub-Juniors,Single-ply,SBD
+6,TJ Baník Sokolov,Petr Hrubý,1952,82.3,210,135,210,555,Masters 2,Single-ply,SBD
+6,TJ Baník Sokolov,Petr Hrubý,1977,79.2,200,40,190,430,Open,Single-ply,SBD
+6,TJ Baník Sokolov,vendula Hrubá,1983,59.1,85,50,100,235,Open,Single-ply,SBD
+7,Sporting Apis Praha-B,Jindřich Jokel,1991,86.4,165,100,222.5,487.5,Sub-Juniors,Single-ply,SBD
+7,Sporting Apis Praha-B,Markéta Faltová,1981,107.9,125,80,125,330,Open,Single-ply,SBD
+8,TJ Spartak Chodov,Jaroslav Hodík,1958,79.4,155,110,200,465,Masters 2,Single-ply,SBD
+8,TJ Spartak Chodov,Rudolf Korbel,1977,80.6,130,100,165,395,Open,Single-ply,SBD

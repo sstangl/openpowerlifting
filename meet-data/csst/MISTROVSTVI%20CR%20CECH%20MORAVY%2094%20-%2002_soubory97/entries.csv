@@ -1,26 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Sex,WeightClassKg,Equipment,Event
-1,Ludek Michal,1969,110.7,Sokol Nymburk A,0.5874 270.0,190.0,260.0,720.0 422.93,,,
-2,Miroslav Vacek,1967,126.0,Sokol Nymburk A,0.5689 290.0,180.0,290.0,760.0 432.36,,,
-3,Zbynek Krejca,1974,110.0,Sokol Nymburk A,0.5885 290.0,210.0,282.5,782.5 460.50,,,
-4,Josef Zamecnik,1966,100.0,Sokol Nymburk A,0.6086 280.0,180.0,260.0,720.0 438.19,,,
-1,Ondrej Seidel,1975,87.3,Olympia Zlin,0.6487 270.0,160.0,237.5,667.5 433.01,,,
-2,Marek Zak,1981,81.5,Olympia Zlin,0.6749 245.0,152.5,242.5,640.0  431.94,,,
-3,Tomas Sarik,1975,106.0,Olympia Zlin,0.5956 280.0,217.5,302.5,800.0 476.48,,,
-4,Martin Moringl,1977,104.5,Olympia Zlin,0.5986 252.5,152.5,272.5,677.5  405.55,,,
-1,Libor Novak,1966,82.1,TJ Svitavy,0.6719 200.0,145.0,215.0,560.0  376.26,,,
-2,Antonin Sota,1955,110.4,TJ Svitavy,0.5878 260.0,202.5,260.0,722.5  424.69,,,
-3,Tomas Lacko,1982,67.5,TJ Svitavy,0.7710 200.0,115.0,210.0,525.0  404.78,,,
-4,Petr Theuser,1961,93.9,TJ Svitavy,0.6254 320.0,220.0,280.0,820.0 512.83,,,
-1,Stanislav Hoza,1956,82.8,So Teskovice,0.6685 275.0,170.0,240.0,685.0 457.92,,,
-2,Vaclav Jaremczuk,1963,88.5,So Teskovice,0.6440 255.0,165.0,280.0,700.0 450.80,,,
-3,Tomas Horinek,1974,94.0,So Teskovice,0.6250 185.0,122.5,215.0,522.5 326.56,,,
-4,Pavel Schaumann,1972,91.0,So Teskovice,0.6349 220.0,137.5,235.5,592.5 376.18,,,
-1,Martin Urban,1968,101.5,Sokol Nymburk B,0.6050 230.0,150.0,280.0,660.0 399.30,,,
-2,Karel Ruso,1965,69.0,Sokol Nymburk B,0.7578 235.0,127.5,210.0,572.5  433.84,,,
-3,Jiri Janecek,1961,75.5,Sokol Nymburk B,0.7093 205.0,145.0,210.0,560.0 397.21,,,
-4,Bohumil Cmugr,1956,94.5,Sokol Nymburk B,0.6235 180.0,165.0,235.0,580.0 361.63,,,
-1,Jaroslav Kelner,1956,90.5,Loko Krnov,0.6366 265.0,160.0,275.0,700.0 445.62,,,
-2,Jaroslav Planka,1968,60.8,Loko Krnov,0.8427 155.0,115.0,205.0,475.0 400.28,,,
-3,Jaroslav Stasek,1973,123.5,Loko Krnov,0.5713 275.0,150.0,275.0,700.0  399.91,,,
-4,Remy Krayzel,1979,79.5,Loko Krnov,0.6854 245.0,165.0,220.0,DOPI,..0,,,
-the teamscore of,4,best lifters from Loko Krnov,=,1245.81,Pointssmallest scoring,=,0.00,,,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Ludek Michal,1969,110.7,Sokol Nymburk A,270,190,260,720,Single-ply,SBD
+1,Miroslav Vacek,1967,126,Sokol Nymburk A,290,180,290,760,Single-ply,SBD
+1,Zbynek Krejca,1974,110,Sokol Nymburk A,290,210,282.5,782.5,Single-ply,SBD
+1,Josef Zamecnik,1966,100,Sokol Nymburk A,280,180,260,720,Single-ply,SBD
+2,Ondrej Seidel,1975,87.3,Olympia Zlin,270,160,237.5,667.5,Single-ply,SBD
+2,Marek Zak,1981,81.5,Olympia Zlin,245,152.5,242.5,640,Single-ply,SBD
+2,Tomas Sarik,1975,106,Olympia Zlin,280,217.5,302.5,800,Single-ply,SBD
+2,Martin Moringl,1977,104.5,Olympia Zlin,252.5,152.5,272.5,677.5,Single-ply,SBD
+3,Libor Novak,1966,82.1,TJ Svitavy,200,145,215,560,Single-ply,SBD
+3,Antonin Sota,1955,110.4,TJ Svitavy,260,202.5,260,722.5,Single-ply,SBD
+3,Tomas Lacko,1982,67.5,TJ Svitavy,200,115,210,525,Single-ply,SBD
+3,Petr Theuser,1961,93.9,TJ Svitavy,320,220,280,820,Single-ply,SBD
+4,Stanislav Hoza,1956,82.8,So Teskovice,275,170,240,685,Single-ply,SBD
+4,Vaclav Jaremczuk,1963,88.5,So Teskovice,255,165,280,700,Single-ply,SBD
+4,Tomas Horinek,1974,94,So Teskovice,185,122.5,215,522.5,Single-ply,SBD
+4,Pavel Schaumann,1972,91,So Teskovice,220,137.5,235.5,592.5,Single-ply,SBD
+5,Martin Urban,1968,101.5,Sokol Nymburk B,230,150,280,660,Single-ply,SBD
+5,Karel Ruso,1965,69,Sokol Nymburk B,235,127.5,210,572.5,Single-ply,SBD
+5,Jiri Janecek,1961,75.5,Sokol Nymburk B,205,145,210,560,Single-ply,SBD
+5,Bohumil Cmugr,1956,94.5,Sokol Nymburk B,180,165,235,580,Single-ply,SBD
+6,Jaroslav Kelner,1956,90.5,Loko Krnov,265,160,275,700,Single-ply,SBD
+6,Jaroslav Planka,1968,60.8,Loko Krnov,155,115,205,475,Single-ply,SBD
+6,Jaroslav Stasek,1973,123.5,Loko Krnov,275,150,275,700,Single-ply,SBD
+DD,Remy Krayzel,1979,79.5,Loko Krnov,245,165,220,,Single-ply,SBD

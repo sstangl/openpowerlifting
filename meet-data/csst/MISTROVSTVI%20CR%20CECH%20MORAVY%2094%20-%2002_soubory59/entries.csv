@@ -1,33 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Jindřich Fogl,1979,52.7,TJ Ateso Jablonec,102.5,62.5,125.0,290.0,271.67,M,,,
-1,Milan Kyncl,1979,57.0,TJ Ateso Jablonec,105.0,55.0,152.5,312.5,..,268.12,M,,Single-ply,SBD
-1,David Kenis,1977,62.9,TJ Loko Krnov,175.0,107.5,190.0,472.5,..,366.32,M,,Single-ply,SBD
-2,Petr Gajdůšek,1979,66.2,TJ SK RaN Ol.Zlín,155.0,92.5,165.0,412.5,..,304.71,M,,Single-ply,SBD
-3,Pavel Paldus,1980,67.2,TJ Ateso Jablonec,157.5,75.0,165.0,397.5,..,289.65,M,,Single-ply,SBD
-1,Jan Binko,1978,72.9,TJ Svitavy,195.0,130.0,215.0,540.0,..,367.03,M,,Single-ply,SBD
-2,Marcel Zavadil,1977,73.5,TJ Slavoj Pacov,160.0,130.0,172.5,462.5,..,312.28,M,,Single-ply,SBD
-3,Jiri Hájek,1978,74.9,TJ Ateso Jablonec,170.0,102.5,175.0,447.5,..,297.67,M,,Single-ply,SBD
-4,Bronislav Palásek,1978,74.0,TJ SK Rostek Vyškov,145.0,107.5,172.5,425.0,..,285.43,M,,Single-ply,SBD
-5,Petr Julina,1979,71.4,SK Zlín,150.0,90.0,170.0,410.0,..,283.47,M,,Single-ply,SBD
-6,Stanislav Furch,1977,71.0,Sokol Vranovice,157.5,85.0,165.0,407.5,..,283.09,M,,Single-ply,SBD
-7,Vladimír Krotký,1977,73.5,TJ Třebíč,110.0,70.0,180.0,360.0,..,243.07,M,,Single-ply,SBD
-1,Aleš Brázda,1977,81.6,TJ SK RaN Ol.Zlín,187.5,112.5,225.0,525.0,..,327.65,M,,Single-ply,SBD
-2,Daniel Hušek,1979,82.2,Sokol Nymburk,190.0,117.5,210.0,517.5,..,321.31,M,,Single-ply,SBD
-3,Filip Košťák,1977,82.4,TJ Ateso Jablonec,165.0,115.0,195.0,475.0,..,294.40,M,,Single-ply,SBD
-4,Jiří Strejc,1977,81.3,SK Dětřichov,167.5,105.0,175.0,447.5,..,280.00,M,,Single-ply,SBD
-5,Karel Pleha,1979,81.8,TJ Třebíč,145.0,105.0,185.0,435.0,..,271.00,M,,Single-ply,SBD
-6Černovský Robert/78,80.9,TJ El.Temelín,155.0,92.5,182.5,430.0,..,269.99,M,,,
-1,Vratislav Moudr,1977,89.0,TJ Sp Pelhřimov,232.5,D,160.0,237.5,630.0,D,371.25,M,Single-ply,SBD,
-2,Jaromi Kratochvíl,1978,90.0,TJ Vlčice,190.0,122.5,205.0,517.5,..,302.89,M,,Single-ply,SBD
-3Žlábek Martin/77,84.7,TJ El.Temelín,170.0,115.0,205.0,490.0,..,298.06,M,,,
-1,Jiří Kovařík,1977,96.7,Sokol Lanžhot,215.0,147.5,232.5,595.0,..,334.80,M,,Single-ply,SBD
-2,Lukáš Bušek,1977,90.4,Vrchlabí,210.0,127.5,227.5,565.0,..,329.84,M,,Single-ply,SBD
-3,David Kyncl,1977,90.2,TJ Svitavy,180.0,115.0,195.0,490.0,..,286.45,M,,Single-ply,SBD
-1,Miloslav Dvořák,1977,108.0,TJ SK Rostek Vyškov,240.0,D,145.0,D,230.0,D,615.0,D,331.54,SBD,,,
-2,Michal Figera,1979,101.3,TJ Vlčice,200.0,115.0,217.5,532.5,..,293.40,M,,Single-ply,SBD
-3,Martin Hájek,1977,100.8,TJ KC Zlínstav Zlín,207.5,105.0,215.0,527.5,..,291.28,M,,Single-ply,SBD
-4,Jan Hoť,1977,100.4,SK Dětřichov,192.5,115.0,212.5,520.0,..,287.61,M,,Single-ply,SBD
-1,Ateso Jablonec Tj,1948,b.,13,Vrchlabí,9,b.,Moudr Vratislav,negativní,M,,,
-2,RaN Ol.Zlín Tj Sk,1921,b.,14,Sokol Nymburk,9,b.,Dvořák Miloslav,negativní,M,,,
-3,Svitavy Tj,1920,b.,15,TJ KC Zlínstav Zlíin,8,b.,Kovařík Jiří,negativní,M,,,
-5,Vlčice Tj,1918,b.,17,Sokol Vranovice,5,b.,Všechny testy byly negativní.,M,,,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Jindřich Fogl,1979,52.7,TJ Ateso Jablonec,102.5,62.5,125,290,M,Single-ply,SBD,Sub-Juniors
+1,Milan Kyncl,1979,57,TJ Ateso Jablonec,105,55,152.5,312.5,M,Single-ply,SBD,Sub-Juniors
+1,David Kenis,1977,62.9,TJ Loko Krnov,175,107.5,190,472.5,M,Single-ply,SBD,Sub-Juniors
+2,Petr Gajdůšek,1979,66.2,TJ SK RaN Ol.Zlín,155,92.5,165,412.5,M,Single-ply,SBD,Sub-Juniors
+3,Pavel Paldus,1980,67.2,TJ Ateso Jablonec,157.5,75,165,397.5,M,Single-ply,SBD,Sub-Juniors
+1,Jan Binko,1978,72.9,TJ Svitavy,195,130,215,540,M,Single-ply,SBD,Sub-Juniors
+2,Marcel Zavadil,1977,73.5,TJ Slavoj Pacov,160,130,172.5,462.5,M,Single-ply,SBD,Sub-Juniors
+3,Jiri Hájek,1978,74.9,TJ Ateso Jablonec,170,102.5,175,447.5,M,Single-ply,SBD,Sub-Juniors
+4,Bronislav Palásek,1978,74,TJ SK Rostek Vyškov,145,107.5,172.5,425,M,Single-ply,SBD,Sub-Juniors
+5,Petr Julina,1979,71.4,SK Zlín,150,90,170,410,M,Single-ply,SBD,Sub-Juniors
+6,Stanislav Furch,1977,71,Sokol Vranovice,157.5,85,165,407.5,M,Single-ply,SBD,Sub-Juniors
+7,Vladimír Krotký,1977,73.5,TJ Třebíč,110,70,180,360,M,Single-ply,SBD,Sub-Juniors
+1,Aleš Brázda,1977,81.6,TJ SK RaN Ol.Zlín,187.5,112.5,225,525,M,Single-ply,SBD,Sub-Juniors
+2,Daniel Hušek,1979,82.2,Sokol Nymburk,190,117.5,210,517.5,M,Single-ply,SBD,Sub-Juniors
+3,Filip Košťák,1977,82.4,TJ Ateso Jablonec,165,115,195,475,M,Single-ply,SBD,Sub-Juniors
+4,Jiří Strejc,1977,81.3,SK Dětřichov,167.5,105,175,447.5,M,Single-ply,SBD,Sub-Juniors
+5,Karel Pleha,1979,81.8,TJ Třebíč,145,105,185,435,M,Single-ply,SBD,Sub-Juniors
+6,Robert Černovský,1978,80.9,TJ El.Temelín,155,92.5,182.5,430,M,Single-ply,SBD,Sub-Juniors
+1,Vratislav Moudr,1977,89,TJ Sp Pelhřimov,232.5,160,237.5,630,M,Single-ply,SBD,Sub-Juniors
+2,Jaromi Kratochvíl,1978,90,TJ Vlčice,190,122.5,205,517.5,M,Single-ply,SBD,Sub-Juniors
+3,Martin Žlábek,1977,84.7,TJ El.Temelín,170,115,205,490,M,Single-ply,SBD,Sub-Juniors
+1,Jiří Kovařík,1977,96.7,Sokol Lanžhot,215,147.5,232.5,595,M,Single-ply,SBD,Sub-Juniors
+2,Lukáš Bušek,1977,90.4,Vrchlabí,210,127.5,227.5,565,M,Single-ply,SBD,Sub-Juniors
+3,David Kyncl,1977,90.2,TJ Svitavy,180,115,195,490,M,Single-ply,SBD,Sub-Juniors
+1,Miloslav Dvořák,1977,108,TJ SK Rostek Vyškov,240,145,230,615,M,Single-ply,SBD,Sub-Juniors
+2,Michal Figera,1979,101.3,TJ Vlčice,200,115,217.5,532.5,M,Single-ply,SBD,Sub-Juniors
+3,Martin Hájek,1977,100.8,TJ KC Zlínstav Zlín,207.5,105,215,527.5,M,Single-ply,SBD,Sub-Juniors
+4,Jan Hoť,1977,100.4,SK Dětřichov,192.5,115,212.5,520,M,Single-ply,SBD,Sub-Juniors

@@ -1,17 +1,17 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,Equipment,Event
-1,Jaroslav Hlousek,1976,55.2,FC LS Vrchlabi,130.0,77.5,180.5,387.5,..,344.41,M,Single-ply,SBD
-2,Milan Kyncl,1979,54.5,TJ Ateso Jablonec,85.0,50.0,115.0,250.0,..,225.4,M,Single-ply,SBD
-1,Jan Cerny,1978,59.0,TJ Ateso Jablonec,90.0,50.0,100.0,240.0,..,198.50,M,Single-ply,SBD
-2,Petr Sobolik,1978,59.5,TJ Loko Trutnov,60.0,60.0,80.0,200.0,..,163.98,M,Single-ply,SBD
-1,Jan Binko,1978,70.9,TJ Svitavy,177.5,120.0,195.0,492.5,..,342.53,M,Single-ply,SBD
-2,Martin Huk,1977,73.7,TJ Ateso Jablonec,177.5,117.5,185.0,480.0,..,323.37,M,Single-ply,SBD
-3,Jiri Pavlik,1976,73.0,Sokol Nymburk,180.0,102.5,185.0,467.5,..,317.38,M,Single-ply,SBD
-4,Radek Andrle,1977,74.4,TJ Loko Trutnov,150.0,95.0,180.0,425.0,..,284.19,M,Single-ply,SBD
-5,Jaromi Kratochvil,1978,72.7,TJ Loko Trutnov,135.0,95.0,170.0,400.0,..,272.48,M,Single-ply,SBD
-6,Jiri Hajek,1978,72.8,TJ Ateso Jablonec,115.0,100.0,140.0,355.0,..,241.57,M,Single-ply,SBD
-1,Vratislav Moudr,1977,81.8,TJ Sp Pelhrimov,180.0,135.0,205.0,520.0,..,323.96,M,Single-ply,SBD
-2,Petr Svasta,1976,82.1,TJ Ateso Jablonec,135.0,82.5,150.0,367.5,..,228.36,M,Single-ply,SBD
-1,Lukas Busek,1977,84.8,Vrchlabi,165.0,100.0,215.0,480.0,..,291.74,M,Single-ply,SBD
-2,Filip Vostak,1977,84.4,TJ Ateso Jablonec,170.0,115.0,187.5,472.5,..,288.13,M,Single-ply,SBD
-3,Michal Figera,1979,83.3,TJ Loko Trutnov,122.5,90.0,182.5,395.0,..,243.00,M,Single-ply,SBD
-1,Ludek Jech,1976,96.5,Sokol Nymburk,210.0,145.0,260.0,615.0,..,346.42,M,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Jaroslav Hlousek,1976,55.2,FC LS Vrchlabi,130,77.5,180.5,387.5,M,Single-ply,SBD,Sub-Juniors
+2,Milan Kyncl,1979,54.5,TJ Ateso Jablonec,85,50,115,250,M,Single-ply,SBD,Sub-Juniors
+1,Jan Cerny,1978,59,TJ Ateso Jablonec,90,50,100,240,M,Single-ply,SBD,Sub-Juniors
+2,Petr Sobolik,1978,59.5,TJ Loko Trutnov,60,60,80,200,M,Single-ply,SBD,Sub-Juniors
+1,Jan Binko,1978,70.9,TJ Svitavy,177.5,120,195,492.5,M,Single-ply,SBD,Sub-Juniors
+2,Martin Huk,1977,73.7,TJ Ateso Jablonec,177.5,117.5,185,480,M,Single-ply,SBD,Sub-Juniors
+3,Jiri Pavlik,1976,73,Sokol Nymburk,180,102.5,185,467.5,M,Single-ply,SBD,Sub-Juniors
+4,Radek Andrle,1977,74.4,TJ Loko Trutnov,150,95,180,425,M,Single-ply,SBD,Sub-Juniors
+5,Jaromi Kratochvil,1978,72.7,TJ Loko Trutnov,135,95,170,400,M,Single-ply,SBD,Sub-Juniors
+6,Jiri Hajek,1978,72.8,TJ Ateso Jablonec,115,100,140,355,M,Single-ply,SBD,Sub-Juniors
+1,Vratislav Moudr,1977,81.8,TJ Sp Pelhrimov,180,135,205,520,M,Single-ply,SBD,Sub-Juniors
+2,Petr Svasta,1976,82.1,TJ Ateso Jablonec,135,82.5,150,367.5,M,Single-ply,SBD,Sub-Juniors
+1,Lukas Busek,1977,84.8,Vrchlabi,165,100,215,480,M,Single-ply,SBD,Sub-Juniors
+2,Filip Vostak,1977,84.4,TJ Ateso Jablonec,170,115,187.5,472.5,M,Single-ply,SBD,Sub-Juniors
+3,Michal Figera,1979,83.3,TJ Loko Trutnov,122.5,90,182.5,395,M,Single-ply,SBD,Sub-Juniors
+1,Ludek Jech,1976,96.5,Sokol Nymburk,210,145,260,615,M,Single-ply,SBD,Sub-Juniors

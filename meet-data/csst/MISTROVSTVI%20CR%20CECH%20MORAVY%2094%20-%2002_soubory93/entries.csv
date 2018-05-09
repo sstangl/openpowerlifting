@@ -1,29 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Equipment,Event
-1,Martin Urban,1968,100.5,Sokol Nymburk,0.6074,240.0,162.5,280.0,682.5,414.55,Single-ply,SBD
-2,Karel Ruso,1965,69.0,Sokol Nymburk,0.7578,245.0,120.0,230.0,595.0,450.89,Single-ply,SBD
-3,Jan Pinc,1973,103.5,Sokol Nymburk,0.6006,262.5,180.0,255.0,697.5,418.92,Single-ply,SBD
-4,Jiri Hornik,1978,90.5,Sokol Nymburk,0.6366,290.0,202.5,300.0,792.5,504.51,Single-ply,SBD
-1,Libor Novak,1966,80.0,TJ Svitavy,0.6827,190.0,150.0,220.0,560.0,382.31,Single-ply,SBD
-2,Marek Hejtmanek,1973,81.5,TJ Svitavy,0.6749,222.5,150.0,240.0,612.5,413.38,Single-ply,SBD
-3,Tomas Lacko,1982,73.5,TJ Svitavy,0.7228,230.0,142.5,222.5,595.0,430.07,Single-ply,SBD
-4,Petr Theuser,1961,93.0,TJ Svitavy,0.6282,330.0,222.5,315.0,867.5,544.96,Single-ply,SBD
-1,Petr Kroslak,1967,82.0,Tatran Hostinne,0.6724,265.0,160.0,280.0,705.0,474.04,Single-ply,SBD
-2,Roman Bursa,1971,87.5,Tatran Hostinne,0.6479,255.0,160.0,235.0,650.0,421.13,Single-ply,SBD
-3,Vlastimil Kalas,1979,102.0,Tatran Hostinne,0.6039,240.0,175.0,295.0,710.0,428.77,Single-ply,SBD
-4,Marcel Jansa,1969,105.0,Tatran Hostinne,0.5976,265.0,187.5,285.0,737.5,440.73,Single-ply,SBD
-1,Petr Zamecnik,1966,73.5,TJ Olympia Zlin,0.7228,200.0,130.0,235.0,565.0,408.38,Single-ply,SBD
-2,Ales Brazda,1977,79.0,TJ Olympia Zlin,0.6882,197.5,137.5,220.0,555.0,381.95,Single-ply,SBD
-3,Tomas Sarik,1975,109.0,TJ Olympia Zlin,0.5902,320.0,230.0,320.0,870.0,513.47,Single-ply,SBD
-4,Jiri Gryga,1968,102.5,TJ Olympia Zlin,0.6028,270.0,175.0,310.0,755.0,455.11,Single-ply,SBD
-1,Stepan Hoza,1974,67.5,Sokol Teskovice,0.7710,200.0,132.5,215.0,547.5,422.12,Single-ply,SBD
-2,Pavel Schaumann,1972,83.0,Sokol Teskovice,0.6675,210.0,127.5,240.0,577.5,385.48,Single-ply,SBD
-3,Stanislav Hoza,1956,84.5,Sokol Teskovice,0.6606,280.0,172.5,250.0,702.5,464.07,Single-ply,SBD
-4,Vaclav Jaremczuk,1963,92.0,Sokol Teskovice,0.6315,262.5,160.0,277.5,700.0,442.05,Single-ply,SBD
-1,Milan Gregus,1967,95.0,Lokomotiva Krnov A,0.6220,275.0,182.5,250.0,707.5,440.06,Single-ply,SBD
-2,Petr Illik,1969,90.0,Lokomotiva Krnov A,0.6384,240.0,155.0,255.0,650.0,414.96,Single-ply,SBD
-3,Jiri Olejko,1977,89.0,Lokomotiva Krnov A,0.6421,230.0,150.0,235.0,615.0,394.89,Single-ply,SBD
-4,David Kenis,1977,73.0,Lokomotiva Krnov A,0.7264,230.0,152.5,242.5,625.0,454.00,Single-ply,SBD
-1,Josef Sindelar,1984,70.5,Lokomotiva Krnov B,0.7453,160.0,100.0,175.0,435.0,324.21,Single-ply,SBD
-2,Petr Gracias,1971,83.0,Lokomotiva Krnov B,0.6675,195.0,160.0,200.0,555.0,370.46,Single-ply,SBD
-3,Thomas Melios,1983,79.0,Lokomotiva Krnov B,0.6882,160.0,120.0,170.0,450.0,309.69,Single-ply,SBD
-4,Vlachopu Paskalis,1978,105.0,Lokomotiva Krnov B,0.5976,245.0,160.0,245.0,650.0,388.44,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Martin Urban,1968,100.5,Sokol Nymburk,240,162.5,280,682.5,Single-ply,SBD
+1,Karel Ruso,1965,69,Sokol Nymburk,245,120,230,595,Single-ply,SBD
+1,Jan Pinc,1973,103.5,Sokol Nymburk,262.5,180,255,697.5,Single-ply,SBD
+1,Jiri Hornik,1978,90.5,Sokol Nymburk,290,202.5,300,792.5,Single-ply,SBD
+2,Libor Novak,1966,80,TJ Svitavy,190,150,220,560,Single-ply,SBD
+2,Marek Hejtmanek,1973,81.5,TJ Svitavy,222.5,150,240,612.5,Single-ply,SBD
+2,Tomas Lacko,1982,73.5,TJ Svitavy,230,142.5,222.5,595,Single-ply,SBD
+2,Petr Theuser,1961,93,TJ Svitavy,330,222.5,315,867.5,Single-ply,SBD
+3,Petr Kroslak,1967,82,Tatran Hostinne,265,160,280,705,Single-ply,SBD
+3,Roman Bursa,1971,87.5,Tatran Hostinne,255,160,235,650,Single-ply,SBD
+3,Vlastimil Kalas,1979,102,Tatran Hostinne,240,175,295,710,Single-ply,SBD
+3,Marcel Jansa,1969,105,Tatran Hostinne,265,187.5,285,737.5,Single-ply,SBD
+4,Petr Zamecnik,1966,73.5,TJ Olympia Zlin,200,130,235,565,Single-ply,SBD
+4,Ales Brazda,1977,79,TJ Olympia Zlin,197.5,137.5,220,555,Single-ply,SBD
+4,Tomas Sarik,1975,109,TJ Olympia Zlin,320,230,320,870,Single-ply,SBD
+4,Jiri Gryga,1968,102.5,TJ Olympia Zlin,270,175,310,755,Single-ply,SBD
+5,Stepan Hoza,1974,67.5,Sokol Teskovice,200,132.5,215,547.5,Single-ply,SBD
+5,Pavel Schaumann,1972,83,Sokol Teskovice,210,127.5,240,577.5,Single-ply,SBD
+5,Stanislav Hoza,1956,84.5,Sokol Teskovice,280,172.5,250,702.5,Single-ply,SBD
+5,Vaclav Jaremczuk,1963,92,Sokol Teskovice,262.5,160,277.5,700,Single-ply,SBD
+6,Milan Gregus,1967,95,Lokomotiva Krnov A,275,182.5,250,707.5,Single-ply,SBD
+6,Petr Illik,1969,90,Lokomotiva Krnov A,240,155,255,650,Single-ply,SBD
+6,Jiri Olejko,1977,89,Lokomotiva Krnov A,230,150,235,615,Single-ply,SBD
+6,David Kenis,1977,73,Lokomotiva Krnov A,230,152.5,242.5,625,Single-ply,SBD
+7,Josef Sindelar,1984,70.5,Lokomotiva Krnov B,160,100,175,435,Single-ply,SBD
+7,Petr Gracias,1971,83,Lokomotiva Krnov B,195,160,200,555,Single-ply,SBD
+7,Thomas Melios,1983,79,Lokomotiva Krnov B,160,120,170,450,Single-ply,SBD
+7,Vlachopu Paskalis,1978,105,Lokomotiva Krnov B,245,160,245,650,Single-ply,SBD

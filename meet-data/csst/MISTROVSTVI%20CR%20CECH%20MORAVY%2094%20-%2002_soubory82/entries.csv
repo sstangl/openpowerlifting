@@ -1,34 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,Wilks,Sex,WeightClassKg,TotalKg,Equipment,Event
-1,Hana Divisova,1967,65.9,V&V Studio Cheb,,40.0,,40.0,..,31.792,,,,,
-1,Rudolf Bohm,1952,67.0,TJ Sokol Vejprnice,,145.0,,145.0,..,105.95,,,,,
-2,Vladimir Nebola,1970,67.1,Sokol Jablonne n.O.,,137.5,,137.5,..,100.33,,,,,
-3,Michal Krivan,1977,66.5,Sokol Jablonne n.O.,,110.0,,110.0,..,80.927,,,,,
-1,Josef Svarovsky,1974,74.6,TJ Ateso Jablonec,,150.0,,150.0,..,100.09,,,,,
-2,Jaroslav Kraft,1970,73.4,TJ ZBC Hradek,,120.0,,120.0,..,81.12,,,,,
-1,Milan Peleska,1963,82.2,TJ Skoda C.Budejovi,,140.0,,140.0,..,86.925,,,,,
-DQ,Jiri Bechny,1967,80.3,V&V Studio Cheb,,,,,,Dis,,M,,,,
-DQ,Jiri Dvorak,1961,80.6,TJ Skoda C.Budejovi,,,,,,Dis,,M,,,,
-DQ,Jan Bechny,1963,82.0,V&V Studio Cheb,,,,,,Dis,,M,,,,
-1,Vasil Vatolin,1959,86.8,TJ DKT Klara Praha,,172.5,,172.5,..,103.25,,,,,
-2,Jaroslav Nemecek,1971,86.8,Sokol Plzen-Karl,,145.0,,145.0,..,86.797,,,,,
-3,Premysl Pavlas,1953,89.8,TJ Banik Most,,137.5,,137.5,..,80.588,,,,,
-1,Jaroslav Wozniak,1955,98.6,FS TOTZI Klasterec,,180.0,,180.0,..,100.35,,,,,
-2,Petr Totzauer,1947,94.3,FS TOTZI Klasterec,,167.5,,167.5,..,95.491,,,,,
-3,Pavel Petracek,1964,96.6,TJ Ateso Jablonec,,165.0,,165.0,..,92.895,,,,,
-4,Josef Matejka,1971,99.3,TJ Loko Trutnov,,162.5,,162.5,..,90.317,,,,,
-5,Roman Vantura,1966,99.0,TJ Ateso Jablonec,,157.5,,157.5,..,87.648,,,,,
-6,Konrad Smiro,1960,96.1,TJ Skoda C.Budejovi,,145.0,,145.0,..,81.852,,,,,
-7,Antonin Hlavacek,1953,97.8,TJ ZBC Hradek,,145.0,,145.0,..,81.156,,,,,
-1,Vladimir Skala,1961,104.,3,TJ Sokol Vejprnice,,177.5,,177.5,..,B,M,,,,
-2,Josef Vazny,1952,107.,2,V&V Studio Cheb,,175.0,,175.0,..,B,M,,,,
-3,Vojtech Varady,1952,102.,2,TJ Ateso Jablonec,,170.0,,170.0,..,B,M,,,,
-4,Jiri Krejci,1951,105.,5,TJ Banik Most,,170.0,,170.0,..,B,M,,,,
-1,Miroslav Nemec,1968,110.,4,TJ Loko Trutnov,,180.0,,180.0,..,B,M,,,,
-2,Jaroslav Soukal,1972,110.,2,TJ Sokol Vejprnice,,170.0,,170.0,..,B,M,,,,
-1,Jiri Ondracek,1955,129.,5,TJ Loko Trutnov,,175.0,,175.0,..,B,M,125+,,,
-in the Competition were,Parti,cipating,27,M e n .,M,125+,,,
-1,Ateso Jablonec Tj,1934,pts,4,lifters,4,--8-6,M,125+,Single-ply,B,
-2,Sokol Vejprnice Tj,1933,pts,3,lifters,11,-2-9,M,125+,Single-ply,B,
-3,Loko Trutnov Tj,1931,pts,3,lifters,11,-2-7,M,125+,Single-ply,B,
-4,Klasterec Fs Totzi,1921,pts,2,lifters,3,,M,125+,Single-ply,B,
-5,Studio Cheb V&V,1921,pts,2,lifters,3,,M,125+,Single-ply,B,
+Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,Sex,TotalKg,Event,Equipment,Division
+1,Hana Divisova,1967,65.9,V&V Studio Cheb,40,F,40,B,Single-ply,Open
+1,Rudolf Bohm,1952,67,TJ Sokol Vejprnice,145,M,145,B,Single-ply,Open
+2,Vladimir Nebola,1970,67.1,Sokol Jablonne n.O.,137.5,M,137.5,B,Single-ply,Open
+3,Michal Krivan,1977,66.5,Sokol Jablonne n.O.,110,M,110,B,Single-ply,Open
+1,Josef Svarovsky,1974,74.6,TJ Ateso Jablonec,150,M,150,B,Single-ply,Open
+2,Jaroslav Kraft,1970,73.4,TJ ZBC Hradek,120,M,120,B,Single-ply,Open
+1,Milan Peleska,1963,82.2,TJ Skoda C.Budejovi,140,M,140,B,Single-ply,Open
+DQ,Jiri Bechny,1967,80.3,V&V Studio Cheb,,M,,B,Single-ply,Open
+DQ,Jiri Dvorak,1961,80.6,TJ Skoda C.Budejovi,,M,,B,Single-ply,Open
+DQ,Jan Bechny,1963,82,V&V Studio Cheb,,M,,B,Single-ply,Open
+1,Vasil Vatolin,1959,86.8,TJ DKT Klara Praha,172.5,M,172.5,B,Single-ply,Open
+2,Jaroslav Nemecek,1971,86.8,Sokol Plzen-Karl,145,M,145,B,Single-ply,Open
+3,Premysl Pavlas,1953,89.8,TJ Banik Most,137.5,M,137.5,B,Single-ply,Open
+1,Jaroslav Wozniak,1955,98.6,FS TOTZI Klasterec,180,M,180,B,Single-ply,Open
+2,Petr Totzauer,1947,94.3,FS TOTZI Klasterec,167.5,M,167.5,B,Single-ply,Open
+3,Pavel Petracek,1964,96.6,TJ Ateso Jablonec,165,M,165,B,Single-ply,Open
+4,Josef Matejka,1971,99.3,TJ Loko Trutnov,162.5,M,162.5,B,Single-ply,Open
+5,Roman Vantura,1966,99,TJ Ateso Jablonec,157.5,M,157.5,B,Single-ply,Open
+6,Konrad Smiro,1960,96.1,TJ Skoda C.Budejovi,145,M,145,B,Single-ply,Open
+7,Antonin Hlavacek,1953,97.8,TJ ZBC Hradek,145,M,145,B,Single-ply,Open
+1,Vladimir Skala,1961,104.3,TJ Sokol Vejprnice,177.5,M,177.5,B,Single-ply,Open
+2,Josef Vazny,1952,107.2,V&V Studio Cheb,175,M,175,B,Single-ply,Open
+3,Vojtech Varady,1952,102.2,TJ Ateso Jablonec,170,M,170,B,Single-ply,Open
+4,Jiri Krejci,1951,105.5,TJ Banik Most,170,M,170,B,Single-ply,Open
+1,Miroslav Nemec,1968,110.4,TJ Loko Trutnov,180,M,180,B,Single-ply,Open
+2,Jaroslav Soukal,1972,110.2,TJ Sokol Vejprnice,170,M,170,B,Single-ply,Open
+1,Jiri Ondracek,1955,129.5,TJ Loko Trutnov,175,M,175,B,Single-ply,Open

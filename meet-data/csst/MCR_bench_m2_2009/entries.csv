@@ -1,21 +1,21 @@
-Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
-1.,Böhm Rudolf. 52,67.2,TJ Sokol Vejprnice,150.0,160.0,-165.0,160.0,160.0,Open,M,67.5,Single-ply,B
-1.,Valenta Pavel. 53,68.2,TJ Svitavy,130.0,140.0,-147.5,140.0,140.0,Open,M,75,Single-ply,B
-2.,Moštěk Josef. 55,74.3,TJ Spartak Uherský Brod,110.0,117.5,-120.0,117.5,117.5,Open,M,75,Single-ply,B
-3.,Michalczyk František. 54,75.0,Colbert Club Vítkovice,105.0,112.5,117.5,117.5,117.5,Open,M,75,Single-ply,B
-1.,Schoř Karel. 55,81.6,TJ Sokol Pohořelice,135.0,140.0,145.0,145.0,145.0,Open,M,82.5,Single-ply,B
-2.,Urbánek Luboš. 54,81.2,TJ Sokol Jemnice,105.0,112.5,117.5,117.5,117.5,Open,M,82.5,Single-ply,B
-1.,Ptáček Josef. 53,88.6,TJ Spartak Pelhřimov,160.0,167.5,-172.5,167.5,167.5,Open,M,90,Single-ply,B
-1.,Čmugr Bohumil. 56,98.1,TJ Sokol Nymburk,180.0,-190.0,-190.0,180.0,180.0,Open,M,100,Single-ply,B
-2.,Anděl Marcel. Ing.. 58,95.8,TJ Sokol Jemnice,160.0,165.0,167.5,167.5,167.5,Open,M,100,Single-ply,B
-3.,Fafejta Jaroslav. 54,98.2,KST FC Příbram,162.5,167.5,-170.0,167.5,167.5,Open,M,100,Single-ply,B
-4.,Svoboda Vladimír. 52,98.6,Gita Podivín,142.5,147.5,150.0,150.0,150.0,Open,M,100,Single-ply,B
-1.,Máška Josef. 55,100.1,SK Trojboj Pelhřimov,195.0,-200.0,-200.0,195.0,195.0,Open,M,110,Single-ply,B
-2.,Urbánek Roman. 56,110.0,TJ Viktoria Bohumín,170.0,180.0,,180.0,180.0,Open,M,110,Single-ply,B
-3.,Bukvaj Jan. 53,102.8,Sokol Klatovy,-145.0,145.0,-152.5,145.0,145.0,Open,M,110,Single-ply,B
-4.,Ďuriš Milan. 51,101.2,Sokol Modřice,130.0,140.0,-150.0,140.0,140.0,Open,M,110,Single-ply,B
-5.,Krištofík Jiří. 51,106.0,Colbert Club Vítkovice,110.0,117.5,-122.5,117.5,117.5,Open,M,110,Single-ply,B
-1.,Šota Antonín. 52,123.2,Sokol Klatovy,225.0,235.0,-248.0,235.0,235.0,Open,M,125,Single-ply,B
-2.,Klepáč Pavel. 55,118.1,SK Kuřim,135.0,140.0,,140.0,140.0,Open,M,125,Single-ply,B
-1.,Mrázek Milan. 58,135.0,TJ Sokol Lanžhot,185.0,-195.0,202.5,202.5,202.5,Open,M,125+,Single-ply,B
-2.,Mojžíšek Emil. 56,136.0,Colbert Club Vítkovice,162.5,167.5,170.0,170.0,170.0,Open,M,125+,Single-ply,B
+Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
+1,Böhm Rudolf,1952,67.2,TJ Sokol Vejprnice,150,160,-165,160,160,Masters 2,M,67.5,Single-ply,B
+1,Valenta Pavel,1953,68.2,TJ Svitavy,130,140,-147.5,140,140,Masters 2,M,75,Single-ply,B
+2,Moštěk Josef,1955,74.3,TJ Spartak Uherský Brod,110,117.5,-120,117.5,117.5,Masters 2,M,75,Single-ply,B
+3,Michalczyk František,1954,75,Colbert Club Vítkovice,105,112.5,117.5,117.5,117.5,Masters 2,M,75,Single-ply,B
+1,Schoř Karel,1955,81.6,TJ Sokol Pohořelice,135,140,145,145,145,Masters 2,M,82.5,Single-ply,B
+2,Urbánek Luboš,1954,81.2,TJ Sokol Jemnice,105,112.5,117.5,117.5,117.5,Masters 2,M,82.5,Single-ply,B
+1,Ptáček Josef,1953,88.6,TJ Spartak Pelhřimov,160,167.5,-172.5,167.5,167.5,Masters 2,M,90,Single-ply,B
+1,Čmugr Bohumil,1956,98.1,TJ Sokol Nymburk,180,-190,-190,180,180,Masters 2,M,100,Single-ply,B
+2,Anděl Marcel,1958,95.8,TJ Sokol Jemnice,160,165,167.5,167.5,167.5,Masters 2,M,100,Single-ply,B
+3,Fafejta Jaroslav,1954,98.2,KST FC Příbram,162.5,167.5,-170,167.5,167.5,Masters 2,M,100,Single-ply,B
+4,Svoboda Vladimír,1952,98.6,Gita Podivín,142.5,147.5,150,150,150,Masters 2,M,100,Single-ply,B
+1,Máška Josef,1955,100.1,SK Trojboj Pelhřimov,195,-200,-200,195,195,Masters 2,M,110,Single-ply,B
+2,Urbánek Roman,1956,110,TJ Viktoria Bohumín,170,180,,180,180,Masters 2,M,110,Single-ply,B
+3,Bukvaj Jan,1953,102.8,Sokol Klatovy,-145,145,-152.5,145,145,Masters 2,M,110,Single-ply,B
+4,Ďuriš Milan,1951,101.2,Sokol Modřice,130,140,-150,140,140,Masters 2,M,110,Single-ply,B
+5,Krištofík Jiří,1951,106,Colbert Club Vítkovice,110,117.5,-122.5,117.5,117.5,Masters 2,M,110,Single-ply,B
+1,Šota Antonín,1952,123.2,Sokol Klatovy,225,235,-248,235,235,Masters 2,M,125,Single-ply,B
+2,Klepáč Pavel,1955,118.1,SK Kuřim,135,140,,140,140,Masters 2,M,125,Single-ply,B
+1,Mrázek Milan,1958,135,TJ Sokol Lanžhot,185,-195,202.5,202.5,202.5,Masters 2,M,125+,Single-ply,B
+2,Mojžíšek Emil,1956,136,Colbert Club Vítkovice,162.5,167.5,170,170,170,Masters 2,M,125+,Single-ply,B

@@ -1,30 +1,27 @@
-Place,Team,Name,BirthYear,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event
-4,Sokol Nymburk A,Zbyněk Krejča,1975,111.0,305.0,265.0,292.5,862.5,506.20,,
-Košnar Martin,1978,106,6,,,,doping,0.00,Open,
-Pinc Jan,1973,115,1,292.5,230.0,290.0,812.5,471.98,Open,
-Špingl Milan,1980,123,3,310.0,220.0,280.0,810.0,462.92,Open,
-2,TJ Olympia Zlín,Tomáš Šárik,1975,111.5,320.0,237.5,310.0,867.5,508.44175,,
-Mořingl
-   Martin,1977,93,3,275.0,170.0,285.0,730.0,457.856,Open,
-Gryga Jiří,1968,105,9,290.0,200.0,310.0,800.0,476.64,Open,
-Večeřa Kamil,1978,76,9,237.5,177.5,250.0,665.0,465.8325,Open,
-5,TJ Svitavy,Tomáš Lacko,1982,74.3,240.0,145.0,240.0,625.0,448.31,,
-Novák Libor,1966,82,3,205.0,162.5,232.5,600.0,399.66,Open,
-Urban Tomáš,1980,91,9,,,,doping,0.00,Open,
-Theuser Petr,1961,99,1,320.0,225.0,310.0,855.0,522.23,Open,
-4,TJ Sokol Těškovice,Stanislav Hoza,1956,86.1,285.0,175.0,230.0,690.0,450.984,,
-Hoza Štěpán,1974,70,7,200.0,135.0,220.0,555.0,412.7535,Open,
-Jaremczuk
-   Václav,1963,92,5,255.0,172.5,277.5,705.0,444.009,Open,
-Beneš Jan,1959,107,7,250.0,195.0,320.0,765.0,453.186,Open,
-5,Sokol Nymburk B,Martin Urban,1968,117.9,250.0,190.0,300.0,740.0,427.276,,
-Slanička Petr,1969,112,,270.0,210.0,245.0,725.0,424.3425,Open,
-Kaliba
-   Miroslav,1974,108,1,290.0,220.0,255.0,765.0,452.6505,Open,
-Ruso Karel,1965,69,1,225.0,105.0,220.0,550.0,416.295,Open,
-6,TJ Lokomotiva Krnov,Milan Greguš,1968,93.5,265.0,200.0,257.5,722.5,452.7185,,
-Olejko Jiří,1977,97,8,280.0,190.0,255.0,725.0,445.2225,Open,
-Fiala Jan,1987,96,2,220.0,135.0,210.0,565.0,349.509,Open,
-7,TJ Sokol Na Mělnice,Štefan Zvada,1953,100.9,230.0,150.0,265.0,645.0,391.128,,
-Pavlíček
-   Miroslav,1963,126,3,232.5,162.5,220.0,615.0,349.7505,Open,
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Event,Equipment
+4,Sokol Nymburk A,Zbyněk Krejča,1975,111,305,265,292.5,862.5,Open,SBD,Single-ply
+DD,Sokol Nymburk A,Martin Košnar,1978,106.6,,,,,Open,SBD,Single-ply
+4,Sokol Nymburk A,Jan Pinc,1973,115.1,292.5,230,290,812.5,Open,SBD,Single-ply
+4,Sokol Nymburk A,Milan Špingl,1980,123.3,310,220,280,810,Open,SBD,Single-ply
+2,TJ Olympia Zlín,Tomáš Šárik,1975,111.5,320,237.5,310,867.5,Open,SBD,Single-ply
+2,TJ Olympia Zlín,Martin Mořingl,1977,93.3,275,170,285,730,Open,SBD,Single-ply
+2,TJ Olympia Zlín,Jiří Gryga,1968,105.9,290,200,310,800,Open,SBD,Single-ply
+2,TJ Olympia Zlín,Kamil Večeřa,1978,76.9,237.5,177.5,250,665,Open,SBD,Single-ply
+5,TJ Svitavy,Tomáš Lacko,1982,74.3,240,145,240,625,Open,SBD,Single-ply
+5,TJ Svitavy,Libor Novák,1966,82.3,205,162.5,232.5,600,Open,SBD,Single-ply
+DD,TJ Svitavy,Tomáš Urban,1980,91.9,,,,,Open,SBD,Single-ply
+5,TJ Svitavy,Petr Theuser,1961,99.1,320,225,310,855,Open,SBD,Single-ply
+4,TJ Sokol Těškovice,Stanislav Hoza,1956,86.1,285,175,230,690,Open,SBD,Single-ply
+4,TJ Sokol Těškovice,Štěpán Hoza,1974,70.7,200,135,220,555,Open,SBD,Single-ply
+4,TJ Sokol Těškovice,Václav Jaremczuk,1963,92.5,255,172.5,277.5,705,Open,SBD,Single-ply
+4,TJ Sokol Těškovice,Jan Beneš,1959,107.7,250,195,320,765,Open,SBD,Single-ply
+5,Sokol Nymburk B,Martin Urban,1968,117.9,250,190,300,740,Open,SBD,Single-ply
+5,Sokol Nymburk B,Petr Slanička,1969,112,270,210,245,725,Open,SBD,Single-ply
+5,Sokol Nymburk B,Miroslav Kaliba,1974,108.1,290,220,255,765,Open,SBD,Single-ply
+5,Sokol Nymburk B,Karel Ruso,1965,69.1,225,105,220,550,Open,SBD,Single-ply
+6,TJ Lokomotiva Krnov,Milan Greguš,1968,93.5,265,200,257.5,722.5,Open,SBD,Single-ply
+6,TJ Lokomotiva Krnov,Jiří Olejko,1977,97.8,280,190,255,725,Open,SBD,Single-ply
+6,TJ Lokomotiva Krnov,Jan Fiala,1987,96.2,220,135,210,565,Open,SBD,Single-ply
+7,TJ Sokol Na Mělnice,Štefan Zvada,1953,100.9,230,150,265,645,Open,SBD,Single-ply
+DQ,TJ Sokol Na Mělnice,Petr Žďánský,1977,"93,7",,,,,Open,SBD,Single-ply
+7,TJ Sokol Na Mělnice,Miroslav Pavlíček,1963,126.3,232.5,162.5,220,615,Open,SBD,Single-ply

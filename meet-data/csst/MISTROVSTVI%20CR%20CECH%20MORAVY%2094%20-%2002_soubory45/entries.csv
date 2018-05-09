@@ -1,28 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Hana Takáčová,1954,72.8,TJ Spartak Chodov,100.0,100.0,100.0,300.0,,290.67,F,75,Single-ply,SBD
-1,Lubomír Janek,1957,60.8,TJ Třebíc,140.0,90.0,170.0,400.0,,337.08,M,67.5,Single-ply,SBD
-1,Remy Krayzel,1955,74.0,TJ Loko Krnov,200.0,155.0,210.0,565.0,,406.40,M,75,Single-ply,SBD
-2,Petr Hrubý,1952,73.7,B.Sokolov,210.0,135.0,210.0,555.0,,400.37,M,75,Single-ply,SBD
-3,Frant Michalczyk,1954,74.8,TJ PD Ostrava,195.0,120.0,190.0,505.0,,360.51,M,75,Single-ply,SBD
-4,František Bobek,1956,72.9,So Kosmonosy,140.0,100.0,210.0,450.0,,327.19,M,75,Single-ply,SBD
-1,Pavel Plesar,1960,76.6,TJ Turnov,160.0,125.0,205.0,490.0,,344.12,M,82.5,Single-ply,SBD
-2,Josef Ptáček,1953,82.5,TJ Sp Pelhřimov,167.5,137.5,185.0,490.0,,328.25,M,82.5,Single-ply,SBD
-3,Jiři Klepáč,1961,80.8,SK Kuřim,140.0,110.0,180.0,430.0,,291.75,M,82.5,Single-ply,SBD
-1,Luboš Urbánek,1954,86.7,Sokol Jemnice,200.0,130.0,220.0,550.0,,358.10,M,90,Single-ply,SBD
-2,Aleš Vrzák,1957,90.0,TJ Sp Pelhřimov,190.0,127.5,222.5,540.0,,344.73,M,90,Single-ply,SBD
-1,Štefan Zvada,1953,99.7,TJ Turnov,225.0,142.5,270.0,637.5,,388.42,M,100,Single-ply,SBD
-2,Ladislav Pasecký,1959,94.8,TJ Turnov,250.0,125.0,245.0,620.0,,386.01,M,100,Single-ply,SBD
-3,Jiří Sýkora,1961,97.3,SK OST Frýdek-Místek210.0,160.0,230.0,600.0,,369.3,M,100,,
-4,Jiří Krištofík,1951,100.0,TJ PD Ostrava,165.0,120.0,180.0,465.0,,282.99,M,100,Single-ply,SBD
-1,Ludvík Blahuta,1957,101.5,TJ Loko Krnov,260.0,150.0,255.0,665.0,,402.32,M,110,Single-ply,SBD
-2,Antonin Růžička,1960,107.0,TJ Jeseník,220.0,145.0,250.0,615.0,,365.12,M,110,Single-ply,SBD
-1,Václav Vimmer,1959,111.2,Sokol Ústí n.L.,220.0,152.5,262.5,635.0,,372.49,M,125,Single-ply,SBD
-2,Pavel Klepáč,1955,118.0,SK Kuřim,230.0,160.0,245.0,635.0,,366.52,M,125,Single-ply,SBD
-1,Bohumil Váňa,1951,126.3,FC Wilson Tábor,250.0,240.0,240.0,730.0,,415.15,M,125+,Single-ply,SBD
-1,Pavel Schauer,1951,74.3,TJ Spartak Chodov,190.0,117.5,202.5,510.0,,365.82,M,75,Single-ply,SBD
-1,Wolfg. Zimmermann,1941,90.0,TJ Ateso Jablonec,212.5,135.0,245.0,592.5,,378.25,M,90,Single-ply,SBD
-1,Jiří Zeman,1944,99.2,TJ Loko Krnov,230.0,150.0,235.0,615.0,,375.51,M,100,Single-ply,SBD
-2,Václav Primus,1948,99.9,TJ Sp Pelhřimov,217.5,142.5,250.0,610.0,,371.36,M,100,Single-ply,SBD
-1,Stanislav Maroň,1951,109.8,TJ Slavoj Pacov,230.0,170.0,215.0,615.0,,362.11,M,110,Single-ply,SBD
-2,Ladislav Ambrož,1948,107.8,SK Kuřim,200.0,132.5,215.0,547.5,,324.28,M,110,Single-ply,SBD
-1,Jiří Skopal,1946,132.0,SK Kuřim,210.0,140.0,220.0,570.0,,321.53,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Hana Takáčová,1954,72.8,TJ Spartak Chodov,100,100,100,300,F,75,Single-ply,SBD,Masters 1
+1,Lubomír Janek,1957,60.8,TJ Třebíc,140,90,170,400,M,67.5,Single-ply,SBD,Masters 1
+1,Remy Krayzel,1955,74,TJ Loko Krnov,200,155,210,565,M,75,Single-ply,SBD,Masters 1
+2,Petr Hrubý,1952,73.7,B.Sokolov,210,135,210,555,M,75,Single-ply,SBD,Masters 1
+3,Frant Michalczyk,1954,74.8,TJ PD Ostrava,195,120,190,505,M,75,Single-ply,SBD,Masters 1
+4,František Bobek,1956,72.9,So Kosmonosy,140,100,210,450,M,75,Single-ply,SBD,Masters 1
+1,Pavel Plesar,1960,76.6,TJ Turnov,160,125,205,490,M,82.5,Single-ply,SBD,Masters 1
+2,Josef Ptáček,1953,82.5,TJ Sp Pelhřimov,167.5,137.5,185,490,M,82.5,Single-ply,SBD,Masters 1
+3,Jiři Klepáč,1961,80.8,SK Kuřim,140,110,180,430,M,82.5,Single-ply,SBD,Masters 1
+1,Luboš Urbánek,1954,86.7,Sokol Jemnice,200,130,220,550,M,90,Single-ply,SBD,Masters 1
+2,Aleš Vrzák,1957,90,TJ Sp Pelhřimov,190,127.5,222.5,540,M,90,Single-ply,SBD,Masters 1
+1,Štefan Zvada,1953,99.7,TJ Turnov,225,142.5,270,637.5,M,100,Single-ply,SBD,Masters 1
+2,Ladislav Pasecký,1959,94.8,TJ Turnov,250,125,245,620,M,100,Single-ply,SBD,Masters 1
+3,Jiří Sýkora,1961,97.3,SK OST Frýdek-Místek,210,160,230,600,M,100,Single-ply,SBD,Masters 1
+4,Jiří Krištofík,1951,100,TJ PD Ostrava,165,120,180,465,M,100,Single-ply,SBD,Masters 1
+1,Ludvík Blahuta,1957,101.5,TJ Loko Krnov,260,150,255,665,M,110,Single-ply,SBD,Masters 1
+2,Antonin Růžička,1960,107,TJ Jeseník,220,145,250,615,M,110,Single-ply,SBD,Masters 1
+1,Václav Vimmer,1959,111.2,Sokol Ústí n.L.,220,152.5,262.5,635,M,125,Single-ply,SBD,Masters 1
+2,Pavel Klepáč,1955,118,SK Kuřim,230,160,245,635,M,125,Single-ply,SBD,Masters 1
+1,Bohumil Váňa,1951,126.3,FC Wilson Tábor,250,240,240,730,M,125+,Single-ply,SBD,Masters 1
+1,Pavel Schauer,1951,74.3,TJ Spartak Chodov,190,117.5,202.5,510,M,75,Single-ply,SBD,Masters 2
+1,Wolfg. Zimmermann,1941,90,TJ Ateso Jablonec,212.5,135,245,592.5,M,90,Single-ply,SBD,Masters 2
+1,Jiří Zeman,1944,99.2,TJ Loko Krnov,230,150,235,615,M,100,Single-ply,SBD,Masters 2
+2,Václav Primus,1948,99.9,TJ Sp Pelhřimov,217.5,142.5,250,610,M,100,Single-ply,SBD,Masters 2
+1,Stanislav Maroň,1951,109.8,TJ Slavoj Pacov,230,170,215,615,M,110,Single-ply,SBD,Masters 2
+2,Ladislav Ambrož,1948,107.8,SK Kuřim,200,132.5,215,547.5,M,110,Single-ply,SBD,Masters 2
+1,Jiří Skopal,1946,132,SK Kuřim,210,140,220,570,M,125+,Single-ply,SBD,Masters 2

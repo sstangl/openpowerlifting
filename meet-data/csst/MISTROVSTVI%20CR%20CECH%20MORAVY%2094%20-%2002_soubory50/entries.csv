@@ -1,32 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Petr Hruby,1952,66.4,TJ Spartak Chodov,190.0,120.0,200.0,510.0,,375.71,M,,Single-ply,SBD
-2,Ladislav Rolny,1952,66.3,TJ Loko Krnov,165.0,100.0,185.0,450.0,,331.96,M,,Single-ply,SBD
-1,Karel Sourek,1944,73.4,TJ So Cejetice,185.0,110.0,217.5,512.5,,346.45,M,,Single-ply,SBD
-2,Jiri Prnka,1955,73.5,Sokol Lanzhot,185.0,100.0,210.0,495.0,,334.22,M,,Single-ply,SBD
-3,Frantise Kirchner,1954,74.4,TJ PD Ostrava,160.0,122.5,180.0,462.5,,309.27,M,,Single-ply,SBD
-4,Franti Michalczyk,1954,72.5,TJ PD Ostrava,167.5,110.0,180.0,457.5,,312.38,M,,Single-ply,SBD
-5,Pavel Schauer,1951,71.8,TJ Spartak Chodov,145.0,90.0,180.0,415.0,,285.60,M,,Single-ply,SBD
-6,Vladimir Kostkuba,1951,73.8,J+M Kadan,150.0,95.0,170.0,415.0,,279.29,M,,Single-ply,SBD
-1,Stanislav Hoza,1956,81.7,TJ Sokol Teskovice,272.5,155.0,245.0,672.5,,419.30,M,,Single-ply,SBD
-2,Remy Krayzel,1955,81.1,TJ Loko Krnov,220.0,160.0,230.0,610.0,,382.34,M,,Single-ply,SBD
-3,Karel Schor,1954,81.6,GO-GO Praha,200.0,132.5,220.0,552.5,,344.81,M,,Single-ply,SBD
-4,Karel Olic,1944,81.4,FC Kaloka Kralup,160.0,130.0,210.0,500.0,,312.55,M,,Single-ply,SBD
-5,Ziakas Eftimakos,1954,75.1,TJ Loko Krnov,160.0,95.0,190.0,445.0,,295.39,M,,Single-ply,SBD
-1,Zdenek Zvonic,1954,89.0,TJ Svitavy,245.0,152.5,290.0,687.5,,405.14,M,,Single-ply,SBD
-2,Lubos Urbanek,1954,86.9,TJ Sokol Jemnice,192.5,127.5,240.0,560.0,,334.99,M,,Single-ply,SBD
-3,Milan Duris,1951,89.9,TJ Sokol Modrice,170.0,120.0,210.0,500.0,,292.85,M,,Single-ply,SBD
-4,Milan Vorac,1947,84.2,TJ Sokol Modrice,160.0,105.0,200.0,465.0,,283.97,M,,Single-ply,SBD
-1,Josef Micka,1949,97.2,TJ Slavoj Pacov,265.0,165.0,270.0,700.0,392.9,1,M,,Single-ply,SBD
-2,Jiri Koubek,1955,98.5,TJ So Zizkov Praha,210.0,170.0,220.0,600.0,,334.68,M,,Single-ply,SBD
-3,Jaroslav Wozniak,1955,99.5,J+M Kadan,180.0,180.0,225.0,585.0,,324.85,M,,Single-ply,SBD
-1,Wolfga Zimmermann,1941,100.1,TJ Ateso Jablonec,225.0,145.0,252.5,622.5,,344.74,M,,Single-ply,SBD
-2,Jiri Krejci,1951,104.8,TJ Banik Most,200.0,150.0,220.0,570.0,,310.13,M,,Single-ply,SBD
-3,Jiri Kalal,1954,102.8,Dacice,187.5,120.0,220.0,527.5,,289.01,M,,Single-ply,SBD
-1,Jindrich Gamrot,1952,121.7,V&V Studio Cheb,260.0,155.0,240.0,655.0,,344.07,M,,Single-ply,SBD
-2,Bohumil Vana,1951,117.5,FC Wilson Tabor,210.0,175.0,215.0,600.0,317.5,2,M,,Single-ply,SBD
-3,Dusan Duris,1954,114.5,TJ Spartak Chodov,200.0,135.0,235.0,570.0,,303.12,M,,Single-ply,SBD
-1,Antonin Sota,1952,134.0,Sokol Klatovy,65.0,220.0,65.0,350.0,,178.57,M,125+,Single-ply,SBD
-1,Spartak Chodov Tj,1926,b.,11,V&V Studio Cheb,12,b.,Dopingové testy:,M,125+,,
-1,Adina Hykova,1943,53.8,TJ Spartak Chodov,135.0,67.5,145.5,347.5,,327.31,F,125+,Single-ply,SBD
-1,Marie Sourkova,1944,58.2,TJ So Cejetice,85.0,60.0,120.0,265.0,,233.86,F,125+,Single-ply,SBD
-1,Hana Takacova,1954,60.5,TJ Spartak Chodov,150.0,75.0,145.0,370.0,,316.12,F,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Petr Hruby,1952,66.4,TJ Spartak Chodov,190,120,200,510,M,,Single-ply,SBD,Masters 1
+2,Ladislav Rolny,1952,66.3,TJ Loko Krnov,165,100,185,450,M,,Single-ply,SBD,Masters 1
+1,Karel Sourek,1944,73.4,TJ So Cejetice,185,110,217.5,512.5,M,,Single-ply,SBD,Masters 1
+2,Jiri Prnka,1955,73.5,Sokol Lanzhot,185,100,210,495,M,,Single-ply,SBD,Masters 1
+3,Frantise Kirchner,1954,74.4,TJ PD Ostrava,160,122.5,180,462.5,M,,Single-ply,SBD,Masters 1
+4,Franti Michalczyk,1954,72.5,TJ PD Ostrava,167.5,110,180,457.5,M,,Single-ply,SBD,Masters 1
+5,Pavel Schauer,1951,71.8,TJ Spartak Chodov,145,90,180,415,M,,Single-ply,SBD,Masters 1
+6,Vladimir Kostkuba,1951,73.8,J+M Kadan,150,95,170,415,M,,Single-ply,SBD,Masters 1
+1,Stanislav Hoza,1956,81.7,TJ Sokol Teskovice,272.5,155,245,672.5,M,,Single-ply,SBD,Masters 1
+2,Remy Krayzel,1955,81.1,TJ Loko Krnov,220,160,230,610,M,,Single-ply,SBD,Masters 1
+3,Karel Schor,1954,81.6,GO-GO Praha,200,132.5,220,552.5,M,,Single-ply,SBD,Masters 1
+4,Karel Olic,1944,81.4,FC Kaloka Kralup,160,130,210,500,M,,Single-ply,SBD,Masters 1
+5,Ziakas Eftimakos,1954,75.1,TJ Loko Krnov,160,95,190,445,M,,Single-ply,SBD,Masters 1
+1,Zdenek Zvonic,1954,89,TJ Svitavy,245,152.5,290,687.5,M,,Single-ply,SBD,Masters 1
+2,Lubos Urbanek,1954,86.9,TJ Sokol Jemnice,192.5,127.5,240,560,M,,Single-ply,SBD,Masters 1
+3,Milan Duris,1951,89.9,TJ Sokol Modrice,170,120,210,500,M,,Single-ply,SBD,Masters 1
+4,Milan Vorac,1947,84.2,TJ Sokol Modrice,160,105,200,465,M,,Single-ply,SBD,Masters 1
+1,Josef Micka,1949,97.2,TJ Slavoj Pacov,265,165,270,700,M,,Single-ply,SBD,Masters 1
+2,Jiri Koubek,1955,98.5,TJ So Zizkov Praha,210,170,220,600,M,,Single-ply,SBD,Masters 1
+3,Jaroslav Wozniak,1955,99.5,J+M Kadan,180,180,225,585,M,,Single-ply,SBD,Masters 1
+1,Wolfga Zimmermann,1941,100.1,TJ Ateso Jablonec,225,145,252.5,622.5,M,,Single-ply,SBD,Masters 1
+2,Jiri Krejci,1951,104.8,TJ Banik Most,200,150,220,570,M,,Single-ply,SBD,Masters 1
+3,Jiri Kalal,1954,102.8,Dacice,187.5,120,220,527.5,M,,Single-ply,SBD,Masters 1
+1,Jindrich Gamrot,1952,121.7,V&V Studio Cheb,260,155,240,655,M,,Single-ply,SBD,Masters 1
+2,Bohumil Vana,1951,117.5,FC Wilson Tabor,210,175,215,600,M,,Single-ply,SBD,Masters 1
+3,Dusan Duris,1954,114.5,TJ Spartak Chodov,200,135,235,570,M,,Single-ply,SBD,Masters 1
+1,Antonin Sota,1952,134,Sokol Klatovy,65,220,65,350,M,125+,Single-ply,SBD,Masters 1
+1,Adina Hykova,1943,53.8,TJ Spartak Chodov,135,67.5,145.5,347.5,F,125+,Single-ply,SBD,Masters 1
+1,Marie Sourkova,1944,58.2,TJ So Cejetice,85,60,120,265,F,125+,Single-ply,SBD,Masters 1
+1,Hana Takacova,1954,60.5,TJ Spartak Chodov,150,75,145,370,F,125+,Single-ply,SBD,Masters 1

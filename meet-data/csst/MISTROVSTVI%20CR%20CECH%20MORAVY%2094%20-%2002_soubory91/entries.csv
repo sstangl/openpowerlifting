@@ -1,47 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,Wilks,Sex,WeightClassKg,TotalKg,Equipment,Event
-1,Jiri Furch,1975,58.6,Sokol Vranovice,,90.0,,90.0,..,74.97,,,,,
-1,Miroslav Fojtik,1976,66.8,Sokol Vranovice,,80.0,,80.0,..,58.616,,,,,
-DQ,Jaroslav Zak,1970,66.8,TJ Trebic,,,,,,Dis,,M,,,,
-1,Zdenek Lenoch,1951,74.9,Fitness Gym Neredin,,140.0,,140.0,..,93.128,,,,,
-2,Radim Jenik,1964,73.8,TJ Tatra Pribor,,125.0,,125.0,..,84.125,,,,,
-3,Pavel Nevedel,1973,73.0,Sokol Vranovice,,112.5,,112.5,..,76.376,,,,,
-4,Robert Cebe,1972,70.5,TJ Sokol Jemnice,,85.0,,85.0,..,59.406,,,,,
-5,Marcel Hajek,1969,69.5,not in,,,,,..,Single-ply,,,,,
-1,Cestmir Wolf,1959,82.0,TJ SD Frydek-Mistek,,165.0,,165.0,..,102.61,,,,,
-2,Frantis Vincourek,1966,77.8,TJ SK RaN Ol.Zlin,,160.0,,160.0,..,103.37,,,,,
-3,Jiri Kati,1965,81.7,TJ Slezan Opava,,145.0,,145.0,..,90.407,,,,,
-4,Desider Mihok,1975,82.3,TJ KC Zlinstav Zlin,,145.0,,145.0,..,89.943,,,,,
-5,Roman Pavlik,1975,79.8,TJ JE Dukovany,,132.5,,132.5,..,84.018,,,,,
-6,Lubomir Fanta,1963,77.0,TJ Sokol Jemnice,,105.0,,105.0,..,68.365,,,,,
-1,Bruno Walter,1967,89.3,Fitness Gym Neredin,,155.0,,155.0,..,91.155,,,,,
-DQ,Lubos Urbanek,1954,87.5,TJ Sokol Jemnice,,,,,,Dis,,M,,,,
-1,Libor Brisuda,1971,91.0,TJ SD Frydek-Mistek,,175.0,,175.0,..,101.76,,,,,
-2,Petr Kostelnik,1956,92.6,TJ Tatra Pribor,,167.5,,167.5,..,96.446,,,,,
-3,Ladislav Sas,1972,91.0,TJ Sternberk,,165.0,,165.0,..,95.947,,,,,
-4,Vladimir Kendura,1975,91.8,TJ Morava Kromeriz,,155.0,,155.0,..,89.683,,,,,
-5,Tomas Sarik,1975,93.8,TJ Spartak Jihlava,,150.0,,150.0,..,85.755,,,,,
-6,Marcel Stepanek,1971,90.7,TJ Svitavy,,140.0,,140.0,..,81.578,,,,,
-7,Igor Poliacik,1974,91.0,TJ Svitavy,,140.0,,140.0,..,81.41,,,,,
-8,Radim Krcek,1976,96.0,TJ SK RaN Ol.Zlin,,137.5,,137.5,..,77.66,,,,,
-1,Roman Bortel,1969,106.,9,TJ Tatra Pribor,,145.0,,145.0,..,B,M,,,,
-1,Venek Otevrel,1971,123.,7,TJ SK RaN Ol.Zlin,,205.0,,205.0,..,B,M,,,,
-2,Jindrich Petrik,1951,120.,5,TJ Ji Rymarov,,160.0,,160.0,..,B,M,,,,
-in the Competition were,Parti,cipating,27,M e n .,M,,,,
-1,Vranovice Sokol,1932,pts,3,lifters,-8,,M,,Single-ply,B,
-2,Tatra Pribor Tj,1930,pts,3,lifters,-=12-9-9,M,,,Single-ply,B
-3,Frydek-Mistek Tj Sd,1924,pts,2,lifters,-=12-12,M,,,Single-ply,B
-4,Neredin Fitness Gym,1924,pts,2,lifters,-=12-12,M,,,Single-ply,B
-5,RaN Ol.Zlin Tj Sk,1924,pts,3,lifters,-=12-9-3,M,,,Single-ply,B
-6,Ji Rymarov Tj,1921,pts,2,lifters,-=12-9,M,,,Single-ply,B
-7,Morava Kromeriz Tj,1919,pts,2,lifters,-=12-7,M,,,Single-ply,B
-8,Dukovany Tj Je,1918,pts,2,lifters,-=12-6,M,,,Single-ply,B
-9,Sokol Jemnice Tj,1912,pts,2,lifters,-=7-5,M,,,Single-ply,B
-10,Svitavy Tj,9,pts,2,lifters,-=5-4,M,,,Single-ply,B
-11,Slezan Opava Tj,8,pts,1,lifter,-=8,M,,,Single-ply,B
-12,Sternberk Tj,8,pts,1,lifter,-=8,M,,,Single-ply,B
-13,Zlinstav Zlin Tj Kc,7,pts,1,lifter,-=7,M,,,Single-ply,B
-14,Spartak Jihlava Tj,6,pts,1,lifter,-=6,M,,,Single-ply,B
-1,Eva Labutova,1965,49.5,TJ Morava Kromeriz,,52.5,,52.5,..,52.930,,,,,
-1,Renata Hamplova,1974,56.9,TJ Ji Rymarov,,65.0,,65.0,..,58.454,,,,,
-1,Marie Podolska,1973,62.8,TJ JE Dukovany,,45.0,,45.0,..,37.26,,,,,
-in the Competition were,Parti,cipating,3,Women .,F,,,,
+Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,Sex,TotalKg,Event,Equipment,Division
+1,Jiri Furch,1975,58.6,Sokol Vranovice,90,M,90,B,Single-ply,Open
+1,Miroslav Fojtik,1976,66.8,Sokol Vranovice,80,M,80,B,Single-ply,Open
+DQ,Jaroslav Zak,1970,66.8,TJ Trebic,,M,,B,Single-ply,Open
+1,Zdenek Lenoch,1951,74.9,Fitness Gym Neredin,140,M,140,B,Single-ply,Open
+2,Radim Jenik,1964,73.8,TJ Tatra Pribor,125,M,125,B,Single-ply,Open
+3,Pavel Nevedel,1973,73,Sokol Vranovice,112.5,M,112.5,B,Single-ply,Open
+4,Robert Cebe,1972,70.5,TJ Sokol Jemnice,85,M,85,B,Single-ply,Open
+5,Marcel Hajek,1969,69.5,not in,,M,,B,Single-ply,Open
+1,Cestmir Wolf,1959,82,TJ SD Frydek-Mistek,165,M,165,B,Single-ply,Open
+2,Frantis Vincourek,1966,77.8,TJ SK RaN Ol.Zlin,160,M,160,B,Single-ply,Open
+3,Jiri Kati,1965,81.7,TJ Slezan Opava,145,M,145,B,Single-ply,Open
+4,Desider Mihok,1975,82.3,TJ KC Zlinstav Zlin,145,M,145,B,Single-ply,Open
+5,Roman Pavlik,1975,79.8,TJ JE Dukovany,132.5,M,132.5,B,Single-ply,Open
+6,Lubomir Fanta,1963,77,TJ Sokol Jemnice,105,M,105,B,Single-ply,Open
+1,Bruno Walter,1967,89.3,Fitness Gym Neredin,155,M,155,B,Single-ply,Open
+DQ,Lubos Urbanek,1954,87.5,TJ Sokol Jemnice,,M,,B,Single-ply,Open
+1,Libor Brisuda,1971,91,TJ SD Frydek-Mistek,175,M,175,B,Single-ply,Open
+2,Petr Kostelnik,1956,92.6,TJ Tatra Pribor,167.5,M,167.5,B,Single-ply,Open
+3,Ladislav Sas,1972,91,TJ Sternberk,165,M,165,B,Single-ply,Open
+4,Vladimir Kendura,1975,91.8,TJ Morava Kromeriz,155,M,155,B,Single-ply,Open
+5,Tomas Sarik,1975,93.8,TJ Spartak Jihlava,150,M,150,B,Single-ply,Open
+6,Marcel Stepanek,1971,90.7,TJ Svitavy,140,M,140,B,Single-ply,Open
+7,Igor Poliacik,1974,91,TJ Svitavy,140,M,140,B,Single-ply,Open
+8,Radim Krcek,1976,96,TJ SK RaN Ol.Zlin,137.5,M,137.5,B,Single-ply,Open
+1,Roman Bortel,1969,106.9,TJ Tatra Pribor,145,M,145,B,Single-ply,Open
+1,Venek Otevrel,1971,123.7,TJ SK RaN Ol.Zlin,205,M,205,B,Single-ply,Open
+2,Jindrich Petrik,1951,120.5,TJ Ji Rymarov,160,M,160,B,Single-ply,Open
+1,Eva Labutova,1965,49.5,TJ Morava Kromeriz,52.5,F,52.5,B,Single-ply,Open
+1,Renata Hamplova,1974,56.9,TJ Ji Rymarov,65,F,65,B,Single-ply,Open
+1,Marie Podolska,1973,62.8,TJ JE Dukovany,45,F,45,B,Single-ply,Open

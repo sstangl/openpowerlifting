@@ -1,19 +1,19 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Tomas Lacko,1982,52.0,TJ Svitavy,155.0,D,82.5,D,165.0,D,402.5,D,394.97,SBD,,,
-2,Michal Sicha,1980,48.6,Lednice,110.0,67.5,117.5,295.0,..,164.02,M,,Single-ply,SBD
-1,Jiri Houdek,1982,55.1,Dynaco Bystrec,140.0,70.0,130.0,340.0,..,314.5,M,,Single-ply,SBD
-1,Martin Otava,1981,66.8,TJ Svitavy,170.0,95.0,195.0,460.0,..,357.65,M,,Single-ply,SBD
-2,Zbynek Zvonic,1981,67.0,TJ Svitavy,135.0,90.0,185.0,410.0,..,317.99,M,,Single-ply,SBD
-3,Patrik Sedlacik,1980,66.6,Sokol Zlin,115.0,75.0,160.0,350.0,..,272.79,M,,Single-ply,SBD
-4,Zdenek Cech,1981,66.3,Sokol Zlin,80.0,75.0,145.0,300.0,..,234.69,M,,Single-ply,SBD
-5,Karel Jircik,1983,65.3,Sokol Zlin,82.5,40.0,100.0,222.5,..,176.26,M,,Single-ply,SBD
-1,Petr Marek,1980,73.7,Dynaco Bystrec,200.0,130.0,220.0,550.0,..,396.77,M,,Single-ply,SBD
-2,Jaroslav Petr,1980,68.1,Sokol Zlin,112.5,72.5,130.0,315.0,..,241.16,M,,Single-ply,SBD
-3,Josef Mazal,1981,68.1,Sokol Zlin,97.5,47.5,117.5,262.5,..,200.97,M,,Single-ply,SBD
-4,Petr Julina,.,73.9,Sokol Zlin,90.0,47.5,115.0,252.5,..,181.8,M,,Single-ply,SBD
-1,Michal Bortel,1981,87.3,Colb.Bystrice p.H.,205.0,120.0,225.0,550.0,..,356.78,M,,Single-ply,SBD
-2,Roman Kvet,1980,89.1,TJ Slovan Frydlant,160.0,115.0,200.0,475.0,..,304.80,M,,Single-ply,SBD
-1,Martin Maliska,1980,92.3,TJ SK RaN Ol.Zlin,210.0,100.0,245.0,D,555.0,..,349.92,M,Single-ply,SBD,
-2,Josef Spath,1980,91.5,Sokol Zlin,90.0,50.0,125.0,265.0,..,167.77,M,,Single-ply,SBD
-1,Lukas Vanatko,1980,100.3,TJ Ateso Jablonec,160.0,90.0,175.0,425.0,..,258.35,M,,Single-ply,SBD
-2,Jaroslav Spath,1982,109.1,Sokol Zlin,142.5,75.0,155.0,372.5,..,219.77,M,,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Tomas Lacko,1982,52,TJ Svitavy,155,82.5,165,402.5,M,Single-ply,SBD,Sub-Juniors
+2,Michal Sicha,1980,48.6,Lednice,110,67.5,117.5,295,M,Single-ply,SBD,Sub-Juniors
+1,Jiri Houdek,1982,55.1,Dynaco Bystrec,140,70,130,340,M,Single-ply,SBD,Sub-Juniors
+1,Martin Otava,1981,66.8,TJ Svitavy,170,95,195,460,M,Single-ply,SBD,Sub-Juniors
+2,Zbynek Zvonic,1981,67,TJ Svitavy,135,90,185,410,M,Single-ply,SBD,Sub-Juniors
+3,Patrik Sedlacik,1980,66.6,Sokol Zlin,115,75,160,350,M,Single-ply,SBD,Sub-Juniors
+4,Zdenek Cech,1981,66.3,Sokol Zlin,80,75,145,300,M,Single-ply,SBD,Sub-Juniors
+5,Karel Jircik,1983,65.3,Sokol Zlin,82.5,40,100,222.5,M,Single-ply,SBD,Sub-Juniors
+1,Petr Marek,1980,73.7,Dynaco Bystrec,200,130,220,550,M,Single-ply,SBD,Sub-Juniors
+2,Jaroslav Petr,1980,68.1,Sokol Zlin,112.5,72.5,130,315,M,Single-ply,SBD,Sub-Juniors
+3,Josef Mazal,1981,68.1,Sokol Zlin,97.5,47.5,117.5,262.5,M,Single-ply,SBD,Sub-Juniors
+4,Petr Julina,,73.9,Sokol Zlin,90,47.5,115,252.5,M,Single-ply,SBD,Sub-Juniors
+1,Michal Bortel,1981,87.3,Colb.Bystrice p.H.,205,120,225,550,M,Single-ply,SBD,Sub-Juniors
+2,Roman Kvet,1980,89.1,TJ Slovan Frydlant,160,115,200,475,M,Single-ply,SBD,Sub-Juniors
+1,Martin Maliska,1980,92.3,TJ SK RaN Ol.Zlin,210,100,245,555,M,Single-ply,SBD,Sub-Juniors
+2,Josef Spath,1980,91.5,Sokol Zlin,90,50,125,265,M,Single-ply,SBD,Sub-Juniors
+1,Lukas Vanatko,1980,100.3,TJ Ateso Jablonec,160,90,175,425,M,Single-ply,SBD,Sub-Juniors
+2,Jaroslav Spath,1982,109.1,Sokol Zlin,142.5,75,155,372.5,M,Single-ply,SBD,Sub-Juniors

@@ -1,31 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,Pavlina Svobodova,1978,64.3,KST Jihlava,105.0,60.0,120.0,285.0,,301.41,F,,Single-ply,SBD
-1,Veron Stepanovska,1980,71.4,Ivancice,150.0,80.0,147.5,377.5,,370.51,F,,Single-ply,SBD
-1,Tomas Sestak,1973,67.0,Viktorie Bohumin,210.0,115.0,220.0,545.0,,422.70,M,,Single-ply,SBD
-2,Tomas Lacko,1982,66.3,TJ Svitavy,205.0,D,122.5,215.0,542.5,D,424.39,M,Single-ply,SBD,
-3,Stepan Hoza,1974,67.4,TJ Sokol Teskovice,185.0,120.0,200.0,505.0,,389.80,M,,Single-ply,SBD
-4,Jiri Furch,1974,66.4,Sokol Vranovice,167.5,127.5,195.0,490.0,,382.83,M,,Single-ply,SBD
-5,Jaroslav Planka,1968,60.7,TJ Loko Krnov,165.0,110.0,200.0,475.0,,400.85,M,,Single-ply,SBD
-1,Miroslav Kabrhel,1970,73.9,Bohemia Svetla n,210.0,145,o,215.0,570.0,,410.4,M,Single-ply,SBD,
-2,Petr Zamecnik,1966,73.5,TJ SK RaN Ol.Zlin,200.0,130.0,230.0,560.0,,404.76,M,,Single-ply,SBD
-3,Martin Turek,1972,73.5,Viktorie Bohumin,195.0,140.0,220.0,555.0,,401.15,M,,Single-ply,SBD
-4,Ales Brazda,1977,74.8,TJ Olympia Zlin,200.0,122.5,225.0,547.5,,390.86,M,,Single-ply,SBD
-1,Marek Hejtmanek,1973,81.4,TJ Svitavy,210.0,157.5,240.0,607.5,,410.30,M,,Single-ply,SBD
-2,Zdenek Soldan,1967,82.2,TJ Morava Kromeriz,210.0,140.0,220.0,570.0,,382.69,M,,Single-ply,SBD
-3,Libor Novak,1966,81.7,TJ Svitavy,200.0,147.5,220.0,567.5,,382.43,M,,Single-ply,SBD
-4,Bronislav Slaby,1969,82.4,Urtica Koprivnic,205.0,115.0,230.0,550.0,,368.72,M,,Single-ply,SBD
-5,Tadeusz Pryszcz,1944,82.5,Viktorie Bohumin,175.0,130.0,210.0,515.0,,344.99,M,,Single-ply,SBD
-1,Vaclav Jaremczuk,1963,88.2,TJ Sokol Teskovice,250.0,155.0,270.0,675.0,,435.44,M,,Single-ply,SBD
-2,Davis Chrupka,1977,88.7,Viktorie Bohumin,260.0,160.0,245.0,665.0,,427.72,M,,Single-ply,SBD
-3,Miroslav Pupik,1962,89.5,TJ SD Frydek-Mistek,210.0,160.0,280.0,650.0,,416.13,M,,Single-ply,SBD
-4,Milan Gregus,1968,89.3,TJ Loko Krnov,255.0,160.0,232.5,647.5,,415.04,M,,Single-ply,SBD
-5,Miroslav Peske,1972,88.4,Colbert Vitkovic,230.0,135.0,220.0,585.0,,376.97,M,,Single-ply,SBD
-1,Petr Ilik,1969,94.3,TJ Loko Krnov,240.0,157.5,255.0,652.5,,407.22,M,100,Single-ply,SBD
-2,Ladislav Danek,1975,98.7,FC SSK Vitkovice,230.0,170.0,250.0,650.0,,397.67,M,100,Single-ply,SBD
-3,Jiri Safarik,1967,98.9,SK Kurim,235.0,175.0,240.0,650.0,,397.34,M,100,Single-ply,SBD
-4,Hofbauer,1966,92.2,Sokol Vranovice,170.0,130.0,242.5,542.5,,342.20,M,100,Single-ply,SBD
-1,Ladislav Kerekes,1956,106.8,TJ SD Frydek-Mistek,260.0,167.5,312.5,740.0,,439.63,M,110,Single-ply,SBD
-2,Patrik Chlupacek,1973,106.7,KST Jihlava,260.0,202.5,275.0,737.5,,438.29,M,110,Single-ply,SBD
-3,Martin Moringl,1977,102.8,TJ Olympia Zlin,255.0,152.5,280.0,687.5,,413.94,M,110,Single-ply,SBD
-4,Jan Horacek,1974,104.2,Zekon Bystrice p.H,230.0,130.0,260.0,620.0,,371.50,M,110,Single-ply,SBD
-1,Milan Mrazek,1958,128.8,TJ Sokol Lanzhot,250.0,175.0,260.0,685.0,,388.05,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Pavlina Svobodova,1978,64.3,KST Jihlava,105,60,120,285,F,67.5,Single-ply,SBD,Open
+1,Veron Stepanovska,1980,71.4,Ivancice,150,80,147.5,377.5,F,75,Single-ply,SBD,Open
+1,Tomas Sestak,1973,67,Viktorie Bohumin,210,115,220,545,M,67.5,Single-ply,SBD,Open
+2,Tomas Lacko,1982,66.3,TJ Svitavy,205,122.5,215,542.5,M,67.5,Single-ply,SBD,Sub-Juniors
+3,Stepan Hoza,1974,67.4,TJ Sokol Teskovice,185,120,200,505,M,67.5,Single-ply,SBD,Open
+4,Jiri Furch,1974,66.4,Sokol Vranovice,167.5,127.5,195,490,M,67.5,Single-ply,SBD,Open
+5,Jaroslav Planka,1968,60.7,TJ Loko Krnov,165,110,200,475,M,67.5,Single-ply,SBD,Open
+1,Miroslav Kabrhel,1970,73.9,Bohemia Svetla n,210,145,215,570,M,75,Single-ply,SBD,Open
+2,Petr Zamecnik,1966,73.5,TJ SK RaN Ol.Zlin,200,130,230,560,M,75,Single-ply,SBD,Open
+3,Martin Turek,1972,73.5,Viktorie Bohumin,195,140,220,555,M,75,Single-ply,SBD,Open
+4,Ales Brazda,1977,74.8,TJ Olympia Zlin,200,122.5,225,547.5,M,75,Single-ply,SBD,Open
+1,Marek Hejtmanek,1973,81.4,TJ Svitavy,210,157.5,240,607.5,M,82.5,Single-ply,SBD,Open
+2,Zdenek Soldan,1967,82.2,TJ Morava Kromeriz,210,140,220,570,M,82.5,Single-ply,SBD,Open
+3,Libor Novak,1966,81.7,TJ Svitavy,200,147.5,220,567.5,M,82.5,Single-ply,SBD,Open
+4,Bronislav Slaby,1969,82.4,Urtica Koprivnic,205,115,230,550,M,82.5,Single-ply,SBD,Open
+5,Tadeusz Pryszcz,1944,82.5,Viktorie Bohumin,175,130,210,515,M,82.5,Single-ply,SBD,Open
+1,Vaclav Jaremczuk,1963,88.2,TJ Sokol Teskovice,250,155,270,675,M,90,Single-ply,SBD,Open
+2,Davis Chrupka,1977,88.7,Viktorie Bohumin,260,160,245,665,M,90,Single-ply,SBD,Open
+3,Miroslav Pupik,1962,89.5,TJ SD Frydek-Mistek,210,160,280,650,M,90,Single-ply,SBD,Open
+4,Milan Gregus,1968,89.3,TJ Loko Krnov,255,160,232.5,647.5,M,90,Single-ply,SBD,Open
+5,Miroslav Peske,1972,88.4,Colbert Vitkovic,230,135,220,585,M,90,Single-ply,SBD,Open
+1,Petr Ilik,1969,94.3,TJ Loko Krnov,240,157.5,255,652.5,M,100,Single-ply,SBD,Open
+2,Ladislav Danek,1975,98.7,FC SSK Vitkovice,230,170,250,650,M,100,Single-ply,SBD,Open
+3,Jiri Safarik,1967,98.9,SK Kurim,235,175,240,650,M,100,Single-ply,SBD,Open
+4,Hofbauer,1966,92.2,Sokol Vranovice,170,130,242.5,542.5,M,100,Single-ply,SBD,Open
+1,Ladislav Kerekes,1956,106.8,TJ SD Frydek-Mistek,260,167.5,312.5,740,M,110,Single-ply,SBD,Open
+2,Patrik Chlupacek,1973,106.7,KST Jihlava,260,202.5,275,737.5,M,110,Single-ply,SBD,Open
+3,Martin Moringl,1977,102.8,TJ Olympia Zlin,255,152.5,280,687.5,M,110,Single-ply,SBD,Open
+4,Jan Horacek,1974,104.2,Zekon Bystrice p.H,230,130,260,620,M,110,Single-ply,SBD,Open
+1,Milan Mrazek,1958,128.8,TJ Sokol Lanzhot,250,175,260,685,M,125+,Single-ply,SBD,Open

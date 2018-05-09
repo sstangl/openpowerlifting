@@ -1,33 +1,33 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event
-1 Theuser Petr/61,92.0,TJ Svitavy,0.6315,320.0RM,541.51,222.5CR,315.0,857.5RM,
-2 Hejtmánek Marek/73,82.0,TJ Svitavy,0.6724,225.0,157.5,240.0,622.5,418.57,
-3 Novák Libor/66,79.0,TJ Svitavy,0.6882,190.0,140.0,210.0,540.0,371.63,
-4 Beneš Ján/59,104.5,TJ Svitavy,0.5986,265.0,187.5,335.0RM,787.5RM,471.40,
-1 Urban Martin/68,103.0,Sokol Nymburk A,0.6017,250.0,152.5,292.5,695.0,418.18,
-2 Hubáček Miroslav/67,90.0,Sokol Nymburk A,0.6384,255.0,205.0,277.5,737.5,470.82,
-3 Krejča Zbyněk/74,112.0,Sokol Nymburk A,0.5853,305.0,215.0,285.0,805.0,471.17,
-4 Ruso Karel/65,69.5,Sokol Nymburk A,0.7535,235.0,125.0,220.0,580.0,437.03,
-1 Seidel Ondřej/75,88.0,Olympia Zlín A,0.6459,272.5,165.0,225.0,662.5,427.91,
-2 Žák Marek/81,79.0,Olympia Zlín A,0.6882,240.0,160.0,250.0,650.0,447.33,
-3 Gryga Jiří/68,100.0,Olympia Zlín A,0.6086,240.0,170.0,280.0,690.0,419.93,
-4 Sarik Jiří/75,111.0,Olympia Zlín A,0.5869,290.0,225.0CR,310.0,825.0,484.19,
-1 Blahuta Ludvík/19,102.0,Loko Krnov A,0.6039,255.0,160.0,260.0,675.0,407.63,
-2 Kenis David/77,73.0,Loko Krnov A,0.7264,240.0,157.5,235.0,632.5,459.45,
-3 Kelner Jaroslav/56,97.0,Loko Krnov A,0.6163,270.0,160.0,280.0,710.0,437.57,
-4 Greguš Milan/68,92.5,Loko Krnov A,0.6298,255.0,165.0,240.0,660.0,415.67,
-1 Hoza Štěpán/74,68.5,Sokol Těškovice,0.7621,197.5,127.5,212.5,537.5,409.63,
-2 Schaumann Pavel/72,85.0,Sokol Těškovice,0.6583,215.0,130.0,230.0,575.0,378.52,
-3 Hoza Stanislav/56,83.5,Sokol Těškovice,0.6651,275.0,160.0,250.0,685.0,455.59,
-4 Jaremczuk Václav/63,90.0,Sokol Těškovice,0.6384,255.0,152.5,277.5,685.0,437.30,
-1 Zámečník Petr/66,75.0,Olympia Zlín B,0.7126,195.0,137.5,242.5,575.0,409.74,
-2 Mořingl Martin/77,103.5,Olympia Zlín B,0.6006,245.0,140.0,270.0,655.0,393.39,
-3 Gajdošík Jiří/62,72.0,Olympia Zlín B,0.7337,162.5,112.5,182.5,457.5,335.67,
-4 Brázda Aleš/77,81.0,Olympia Zlín B,0.6774,210.0,125.0,230.0,565.0,382.73,
-1 Planka Jaroslav/68,64.0,Loko Krnov B,0.8057,160.0,120.0,205.0,485.0,390.76,
-2 Zeman Jiří/44,99.0,Loko Krnov B,0.6111,220.0,155.0,235.0,610.0,372.77,
-3 Stuchlík Václav/50,90.0,Loko Krnov B,0.6384,210.0,110.0,215.0,535.0,341.54,
-4 Illík Petr/69,95.0,Loko Krnov B,0.6220,240.0,160.0,255.0,655.0,407.41,
-1 Vacek Miroslav/67,125.0,Sokol Nymburk B,0.5698,280.0,177.5,270.0,727.5,414.53,
-2 Valoušek Vladisla/84,76.0,Sokol Nymburk B,0.7061,160.0,110.0,205.0,475.0,335.40,
-3 Stříska František/71,91.0,Sokol Nymburk B,0.6349,225.0,125.0,227.5,577.5,366.65,
-4 Vohralík Josef/71,119.0,Sokol Nymburk B,0.5761,240.0,155.0,255.0,650.0,374.46,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Petr Theuser,1961,92,TJ Svitavy,320,541.51,222.5,315,Single-ply,SBD
+2,Marek Hejtmánek,1973,82,TJ Svitavy,225,157.5,240,622.5,Single-ply,SBD
+3,Libor Novák,1966,79,TJ Svitavy,190,140,210,540,Single-ply,SBD
+4,Ján Beneš,1959,104.5,TJ Svitavy,265,187.5,335,787.5,Single-ply,SBD
+1,Martin Urban,1968,103,Sokol Nymburk A,250,152.5,292.5,695,Single-ply,SBD
+2,Miroslav Hubáček,1967,90,Sokol Nymburk A,255,205,277.5,737.5,Single-ply,SBD
+3,Zbyněk Krejča,1974,112,Sokol Nymburk A,305,215,285,805,Single-ply,SBD
+4,Karel Ruso,1965,69.5,Sokol Nymburk A,235,125,220,580,Single-ply,SBD
+1,Ondřej Seidel,1975,88,Olympia Zlín A,272.5,165,225,662.5,Single-ply,SBD
+2,Marek Žák,1981,79,Olympia Zlín A,240,160,250,650,Single-ply,SBD
+3,Jiří Gryga,1968,100,Olympia Zlín A,240,170,280,690,Single-ply,SBD
+4,Jiří Sarik,1975,111,Olympia Zlín A,290,225,310,825,Single-ply,SBD
+1,Ludvík Blahuta,1919,102,Loko Krnov A,255,160,260,675,Single-ply,SBD
+2,David Kenis,1977,73,Loko Krnov A,240,157.5,235,632.5,Single-ply,SBD
+3,Jaroslav Kelner,1956,97,Loko Krnov A,270,160,280,710,Single-ply,SBD
+4,Milan Greguš,1968,92.5,Loko Krnov A,255,165,240,660,Single-ply,SBD
+1,Štěpán Hoza,1974,68.5,Sokol Těškovice,197.5,127.5,212.5,537.5,Single-ply,SBD
+2,Pavel Schaumann,1972,85,Sokol Těškovice,215,130,230,575,Single-ply,SBD
+3,Stanislav Hoza,1956,83.5,Sokol Těškovice,275,160,250,685,Single-ply,SBD
+4,Václav Jaremczuk,1963,90,Sokol Těškovice,255,152.5,277.5,685,Single-ply,SBD
+1,Petr Zámečník,1966,75,Olympia Zlín B,195,137.5,242.5,575,Single-ply,SBD
+2,Martin Mořingl,1977,103.5,Olympia Zlín B,245,140,270,655,Single-ply,SBD
+3,Jiří Gajdošík,1962,72,Olympia Zlín B,162.5,112.5,182.5,457.5,Single-ply,SBD
+4,Aleš Brázda,1977,81,Olympia Zlín B,210,125,230,565,Single-ply,SBD
+1,Jaroslav Planka,1968,64,Loko Krnov B,160,120,205,485,Single-ply,SBD
+2,Jiří Zeman,1944,99,Loko Krnov B,220,155,235,610,Single-ply,SBD
+3,Václav Stuchlík,1950,90,Loko Krnov B,210,110,215,535,Single-ply,SBD
+4,Petr Illík,1969,95,Loko Krnov B,240,160,255,655,Single-ply,SBD
+1,Miroslav Vacek,1967,125,Sokol Nymburk B,280,177.5,270,727.5,Single-ply,SBD
+2,Vladisla Valoušek,1984,76,Sokol Nymburk B,160,110,205,475,Single-ply,SBD
+3,František Stříska,1971,91,Sokol Nymburk B,225,125,227.5,577.5,Single-ply,SBD
+4,Josef Vohralík,1971,119,Sokol Nymburk B,240,155,255,650,Single-ply,SBD

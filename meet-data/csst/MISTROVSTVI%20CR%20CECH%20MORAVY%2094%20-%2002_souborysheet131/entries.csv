@@ -1,33 +1,33 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event
-1,Michal Dymak,1971,96.4,Tatran Hostinne,0.6180 170.0,150.0,240.0,560.0 346.08,
-2,Marcel Jansa,1969,105.0,Tatran Hostinne,0.5976 255.0,175.0,280.0,710.0 424.30,
-3,Vlastimil Kalas,1979,110.2,Tatran Hostinne,0.5882 230.0,180.0,280.0,690.0  405.86,
-4,Petr Kroslak,1965,83.2,Tatran Hostinne,0.6665 215.0,160.0,235.0,610.0 406.56,
-1,Jiri Bohacek,1964,86.0,KST Dobris,0.6540 245.0,152.5,252.5,650.0 425.10,
-2,Tomas Kostelnicek,1971,98.8,KST Dobris,0.6116 205.0,130.0,240.0,575.0 351.67,
-3,Jiri Lastovka,1976,100.3,KST Dobris,0.6079 235.0,167.5,240.0,642.5 390.58,
-4,Ales Vacek,1976,109.4,KST Dobris,0.5895 245.0,145.0,275.0,665.0 392.02,
-1,Bohumil Blazek,1976,80.8,AS M.Boleslav A,0.6785 177.5,135.0,197.5,510.0 346.04,
-2,Jan Hlavac,1975,87.3,AS M.Boleslav A,0.6487 200.0,145.0,220.0,565.0 366.52,
-3,Martin Krcmar,1975,101.6,AS M.Boleslav A,0.6048 210.0,160.0,190.0,560.0 338.69,
-4,Jan Weiss,1972,67.2,AS M.Boleslav A,0.7738 200.0,135.0,205.0,540.0 417.85,
-1,Jan Huncovsky,1962,75.1,Sokol Melnik,0.7119 190.0,137.5,215.0,542.5 386.21,
-2,Michal Schiller,1981,77.2,Sokol Melnik,0.6987 185.0,120.0,195.0,500.0 349.35,
-3,Mirosla Travnicek,1966,111.2,Sokol Melnik,0.5866 200.0,180.0,250.0,630.0 369.56,
-4,Jiri Vild,1978,87.5,Sokol Melnik,0.6479 155.0,120.0,210.0,485.0  314.23,
-1,Zdenek Pecka,1971,84.3,Sokol Nymburk,0.6615 180.0,110.0,190.0,480.0 317.52,
-2,Dusan Siska,1983,61.3,Sokol Nymburk,0.8365 140.0,100.0,135.0,375.0  313.69,
-3,Vladisla Valousek,1984,76.2,Sokol Nymburk,0.7048 150.0,100.0,160.0,410.0 288.97,
-4,Josef Vohralik,1971,126.4,Sokol Nymburk,0.5686 235.0,165.0,260.0,660.0 375.28,
-1,Pavel Hrusa,1975,66.1,AS M.Boleslav B,0.7842 150.0,95.0,145.0,390.0 305.84,
-2,Rudolf Barak,1978,105.2,AS M.Boleslav B,0.5972 202.5,115.0,210.0,527.5 315.02,
-3,Petr Mazal,1978,76.1,AS M.Boleslav B,0.7055 165.0,110.0,180.0,455.0 321.00,
-4,Vratislac Brozek,1973,92.0,AS M.Boleslav B,0.6315 180.0,140.0,215.0,535.0 337.85,
-1,Jan Antos,1972,89.0,C.Cejetice,0.6421 175.0,140.0,190.0,505.0 324.26,
-2,Frantisek Bobek,1956,74.9,C.Cejetice,0.7132 150.0,100.0,210.0,460.0 328.07,
-3,Roman Farkas,1974,92.5,C.Cejetice,0.6298 180.0,125.0,170.0,475.0 299.15,
-4,Jiri Manasek,1975,83.1,C.Cejetice,0.6670 175.0,117.5,180.0,472.5 315.16,
-1,Jiri Bacik,1983,77.5,TJ Lovosice,0.6969 130.0,87.5,145.0,362.5  252.63,
-2,Jiri Effenberger,1975,111.3,TJ Lovosice,0.5864 260.0,145.0,285.0,690.0 404.62,
-3,Jiri Stejskal,1977,86.4,TJ Lovosice,0.6523 207.5,125.0,232.5,565.0 368.55,
-4,Jiri Vodochodsky,1983,70.0,TJ Lovosice,0.7494 115.0,72.5,130.0,317.5 237.93,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
+1,Michal Dymak,1971,96.4,Tatran Hostinne,170,150,240,560,Single-ply,SBD
+1,Marcel Jansa,1969,105,Tatran Hostinne,255,175,280,710,Single-ply,SBD
+1,Vlastimil Kalas,1979,110.2,Tatran Hostinne,230,180,280,690,Single-ply,SBD
+1,Petr Kroslak,1965,83.2,Tatran Hostinne,215,160,235,610,Single-ply,SBD
+2,Jiri Bohacek,1964,86,KST Dobris,245,152.5,252.5,650,Single-ply,SBD
+2,Tomas Kostelnicek,1971,98.8,KST Dobris,205,130,240,575,Single-ply,SBD
+2,Jiri Lastovka,1976,100.3,KST Dobris,235,167.5,240,642.5,Single-ply,SBD
+2,Ales Vacek,1976,109.4,KST Dobris,245,145,275,665,Single-ply,SBD
+3,Bohumil Blazek,1976,80.8,AS M.Boleslav A,177.5,135,197.5,510,Single-ply,SBD
+3,Jan Hlavac,1975,87.3,AS M.Boleslav A,200,145,220,565,Single-ply,SBD
+3,Martin Krcmar,1975,101.6,AS M.Boleslav A,210,160,190,560,Single-ply,SBD
+3,Jan Weiss,1972,67.2,AS M.Boleslav A,200,135,205,540,Single-ply,SBD
+4,Jan Huncovsky,1962,75.1,Sokol Melnik,190,137.5,215,542.5,Single-ply,SBD
+4,Michal Schiller,1981,77.2,Sokol Melnik,185,120,195,500,Single-ply,SBD
+4,Mirosla Travnicek,1966,111.2,Sokol Melnik,200,180,250,630,Single-ply,SBD
+4,Jiri Vild,1978,87.5,Sokol Melnik,155,120,210,485,Single-ply,SBD
+5,Zdenek Pecka,1971,84.3,Sokol Nymburk,180,110,190,480,Single-ply,SBD
+5,Dusan Siska,1983,61.3,Sokol Nymburk,140,100,135,375,Single-ply,SBD
+5,Vladisla Valousek,1984,76.2,Sokol Nymburk,150,100,160,410,Single-ply,SBD
+5,Josef Vohralik,1971,126.4,Sokol Nymburk,235,165,260,660,Single-ply,SBD
+6,Pavel Hrusa,1975,66.1,AS M.Boleslav B,150,95,145,390,Single-ply,SBD
+6,Rudolf Barak,1978,105.2,AS M.Boleslav B,202.5,115,210,527.5,Single-ply,SBD
+6,Petr Mazal,1978,76.1,AS M.Boleslav B,165,110,180,455,Single-ply,SBD
+6,Vratislac Brozek,1973,92,AS M.Boleslav B,180,140,215,535,Single-ply,SBD
+7,Jan Antos,1972,89,C.Cejetice,175,140,190,505,Single-ply,SBD
+7,Frantisek Bobek,1956,74.9,C.Cejetice,150,100,210,460,Single-ply,SBD
+7,Roman Farkas,1974,92.5,C.Cejetice,180,125,170,475,Single-ply,SBD
+7,Jiri Manasek,1975,83.1,C.Cejetice,175,117.5,180,472.5,Single-ply,SBD
+8,Jiri Bacik,1983,77.5,TJ Lovosice,130,87.5,145,362.5,Single-ply,SBD
+8,Jiri Effenberger,1975,111.3,TJ Lovosice,260,145,285,690,Single-ply,SBD
+8,Jiri Stejskal,1977,86.4,TJ Lovosice,207.5,125,232.5,565,Single-ply,SBD
+8,Jiri Vodochodsky,1983,70,TJ Lovosice,115,72.5,130,317.5,Single-ply,SBD

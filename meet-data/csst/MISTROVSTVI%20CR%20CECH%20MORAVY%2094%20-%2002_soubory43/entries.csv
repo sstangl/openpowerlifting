@@ -1,28 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Ranking,Wilks,Sex,WeightClassKg,Equipment,Event
-1,David Kenis,1977,59.6,TJ Loko Krnov,175.0,J,102.5,192.5,470.0,,384.69,,Single-ply,SBD,
-2,Jiri Furch,1975,58.6,Sokol Vranovice,125.0,90.0,167.5,382.5,,318.62,,,Single-ply,SBD
-1,Martin Cech,1974,67.5,TJ Tn Bystrice p.H,.175.0,110.0,237.5,J,522.5,,379.23,,Single-ply,SBD,
-2,Roman Fornusek,1974,65.8,TJ Sl Uh.Hradiste,165.0,117.5,202.5,485.0,,360.30,,,Single-ply,SBD
-1,Zdenek Sklenar,1974,72.1,Sokol Rosice,140.0,127.5,200.0,467.5,,320.65,,,Single-ply,SBD
-2,Jiri Jadviscok,1976,73.3,TJ SD Frydek-Miste,k,170.0,97.5,180.0,447.5,,302.82,,Single-ply,SBD,
-DQ,Pavel Platenik,1974,74.6,Sokol Vranovice,,,,,,.0.0,,,Single-ply,
-1,Ondrej Seidl,1975,82.5,TJ Viktorie Bohumi,n,215.0,125.0,250.0,590.0,,365.38,,Single-ply,SBD,
-2,Petr Straznicky,1973,81.2,TJ Loko Krnov,180.0,110.0,205.0,495.0,,309.96,,,Single-ply,SBD
-3,Ales Brazda,1977,80.2,TJ SK RaN Ol.Zlin,170.0,110.0,212.5,492.5,,311.16,,,Single-ply,SBD
-4,Martin Turek,1975,79.6,TJ Viktorie Bohumi,n,167.5,120.0,202.5,490.0,,311.24,,Single-ply,SBD,
-5,Miroslav Basta,1972,79.9,TJ SD Frydek-Miste,k,170.0,110.0,190.0,470.0,,297.74,,Single-ply,SBD,
-6,Martin Hajek,1977,80.5,TJ KC Zlinstav Zli,n,170.0,90.0,205.0,465.0,,292.99,,Single-ply,SBD,
-7,Jiri Kudelka,1974,80.8,Sokol Rosice,140.0,120.0,190.0,450.0,,282.78,,,Single-ply,SBD
-1,Dezider Mihok,1975,89.9,TJ KC Zlinstav Zli,n,225.0,145.0,265.0,J,635.0,J,371.91,Single-ply,SBD,,
-2,Radim Horinek,1975,89.8,TJ Sokol Teskovice,175.0,135.0,235.0,545.0,,319.42,,,Single-ply,SBD
-3,Jaromir Janecka,1972,88.4,TJ Tn Bystrice p.H,.185.0,120.0,220.0,525.0,,310.69,,,Single-ply,SBD
-4,Oldrich Halfar,1973,82.9,Sokol Vranovice,160.0,115.0,225.0,500.0,,308.6,,,Single-ply,SBD
-5,Lubomir Sos,1978,87.4,TJ Mo Hustopece,160.0,115.0,215.0,490.0,,292.04,,,Single-ply,SBD
-6,Jiri Bezvoda,1977,90.0,Sokol Vranovice,155.0,100.0,202.5,457.5,,267.77,,,Single-ply,SBD
-1,Vladimir Kendiura,1975,95.0,TJ Morava Kromeriz,220.0,170.0,J,220.0,610.0,,346.35,,Single-ply,SBD,
-2,Tomas Sarik,1975,95.4,TJ Spartak Jihlava,192.5,152.5,260.0,605.0,,342.79,,,Single-ply,SBD
-3,Frantisek Charvat,1973,94.6,TJ Tn Bystrice p.H,.195.0,127.5,220.0,542.5,,308.73,,,Single-ply,SBD
-1,Karel Machu,1975,102.,5,TJ SK RaN Ol.Zlin,210.0,120.0,230.0,560.0,,307.16,,Single-ply,SBD,
-2,Martin Dusek,1972,100.,4,TJ Spartak Jihlava,192.5,115.0,242.5,550.0,,304.20,,Single-ply,SBD,
-DQ,Jaroslav Stasek,1973,100.,5,TJ Loko Krnov,,,,,,.0.0,,Single-ply,S,
-1,Norbert Gurtler,1973,113.,,TJ Loko Krnov,220.0,140.0,240.0,600.0,,319.92,,Single-ply,SBD,
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,David Kenis,1977,59.6,TJ Loko Krnov,175,102.5,192.5,470,M,Single-ply,SBD,Juniors
+2,Jiri Furch,1975,58.6,Sokol Vranovice,125,90,167.5,382.5,M,Single-ply,SBD,Juniors
+1,Martin Cech,1974,67.5,TJ Tn Bystrice p.H,175,110,237.5,522.5,M,Single-ply,SBD,Juniors
+2,Roman Fornusek,1974,65.8,TJ Sl Uh.Hradiste,165,117.5,202.5,485,M,Single-ply,SBD,Juniors
+1,Zdenek Sklenar,1974,72.1,Sokol Rosice,140,127.5,200,467.5,M,Single-ply,SBD,Juniors
+2,Jiri Jadviscok,1976,73.3,TJ SD Frydek-Mistek,170,97.5,180,447.5,M,Single-ply,SBD,Juniors
+DQ,Pavel Platenik,1974,74.6,Sokol Vranovice,,,,,M,Single-ply,SBD,Juniors
+1,Ondrej Seidl,1975,82.5,TJ Viktorie Bohumin,215,125,250,590,M,Single-ply,SBD,Juniors
+2,Petr Straznicky,1973,81.2,TJ Loko Krnov,180,110,205,495,M,Single-ply,SBD,Juniors
+3,Ales Brazda,1977,80.2,TJ SK RaN Ol.Zlin,170,110,212.5,492.5,M,Single-ply,SBD,Juniors
+4,Martin Turek,1975,79.6,TJ Viktorie Bohumi,167.5,120,202.5,490,M,Single-ply,SBD,Juniors
+5,Miroslav Basta,1972,79.9,TJ SD Frydek-Mistek,170,110,190,470,M,Single-ply,SBD,Juniors
+6,Martin Hajek,1977,80.5,TJ KC Zlinstav Zlin,170,90,205,465,M,Single-ply,SBD,Juniors
+7,Jiri Kudelka,1974,80.8,Sokol Rosice,140,120,190,450,M,Single-ply,SBD,Juniors
+1,Dezider Mihok,1975,89.9,TJ KC Zlinstav Zlin,225,145,265,635,M,Single-ply,SBD,Juniors
+2,Radim Horinek,1975,89.8,TJ Sokol Teskovice,175,135,235,545,M,Single-ply,SBD,Juniors
+3,Jaromir Janecka,1972,88.4,TJ Tn Bystrice p.H,185,120,220,525,M,Single-ply,SBD,Juniors
+4,Oldrich Halfar,1973,82.9,Sokol Vranovice,160,115,225,500,M,Single-ply,SBD,Juniors
+5,Lubomir Sos,1978,87.4,TJ Mo Hustopece,160,115,215,490,M,Single-ply,SBD,Juniors
+6,Jiri Bezvoda,1977,90,Sokol Vranovice,155,100,202.5,457.5,M,Single-ply,SBD,Juniors
+1,Vladimir Kendiura,1975,95,TJ Morava Kromeriz,220,170,220,610,M,Single-ply,SBD,Juniors
+2,Tomas Sarik,1975,95.4,TJ Spartak Jihlava,192.5,152.5,260,605,M,Single-ply,SBD,Juniors
+3,Frantisek Charvat,1973,94.6,TJ Tn Bystrice p.H,195,127.5,220,542.5,M,Single-ply,SBD,Juniors
+1,Karel Machu,1975,102.5,TJ SK RaN Ol.Zlin,210,120,230,560,M,Single-ply,SBD,Juniors
+2,Martin Dusek,1972,100.4,TJ Spartak Jihlava,192.5,115,242.5,550,M,Single-ply,SBD,Juniors
+DQ,Jaroslav Stasek,1973,100.5,TJ Loko Krnov,,,,,M,Single-ply,SBD,Juniors
+1,Norbert Gurtler,1973,113,TJ Loko Krnov,220,140,240,600,M,Single-ply,SBD,Juniors

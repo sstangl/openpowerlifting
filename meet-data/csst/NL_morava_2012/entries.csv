@@ -1,41 +1,41 @@
-Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Sex,Equipment,Event
-1.,TJ Sokol Rosice,Brázda Ivo / 71,77.6,220.0,127.5,230.0,402.11,Open,Single-ply,SBD,
-Martin Šumbera,1980,120.6,260.0,240.0,260.0,760.0,Open,,Single-ply,SBD
-Petr Lahoda,1970,116.2,290.0,235.0,240.0,765.0,Open,,Single-ply,SBD
-Václav Patočka,1977,90.7,240.0,177.5,240.0,657.5,Open,,Single-ply,SBD
-2.,Colbert club SSK Vítkovice,Pavlovec Antonín / 81,92.9,295.0,200.0,250.0,468.23,Open,Single-ply,SBD,
-David Kiesewetter,1984,74.8,190.0,115.0,190.0,495.0,Open,,Single-ply,SBD
-Pavel Malina,1960,64.8,180.0,100.0,160.0,440.0,Open,,Single-ply,SBD
-Tomáš Poles,1980,96.9,280.0,200.0,300.0,780.0,Open,,Single-ply,SBD
-3.,TJ Viktoria Bohumín,Stano František / 84,77.6,200.0,160.0,200.0,389.93,Open,Single-ply,SBD,
-Marek Sala,1989,81.4,210.0,140.0,230.0,580.0,Open,,Single-ply,SBD
-Martin Turek,1972,82.5,240.0,200.0,225.0,665.0,Open,,Single-ply,SBD
-Roman Kubica,1984,79.4,200.0,110.0,200.0,510.0,Open,,Single-ply,SBD
-4.,TJ Lokomotiva Krnov - B,Olejko Jiří / 77,100.0,255.0,190.0,240.0,416.89,Open,Single-ply,SBD,
-Lukáš Tomčák,1991,76.1,212.5,137.5,207.5,557.5,Open,,Single-ply,SBD
-Roman Hodža,1976,105.6,200.0,155.0,215.0,570.0,Open,,Single-ply,SBD
-Václav Burda,1946,66.6,180.0,110.0,195.0,485.0,Open,,Single-ply,SBD
-5.,SK Zlobr Sedlčany,Kabyl David / 90,108.1,255.0,150.0,220.0,369.81,Open,Single-ply,SBD,
-Jiří Pech,1991,86.4,165.0,140.0,195.0,500.0,Open,,Single-ply,SBD
-Jiří Prášek,1989,89.1,250.0,205.0,235.0,690.0,Open,,Single-ply,SBD
-Ondřej Gyömber,1990,74.3,187.5,160.0,190.0,537.5,Open,,Single-ply,SBD
-6.,TJ Olympia Zlín - C,Schmidt Jan / 76,112.7,220.0,160.0,270.0,379.80,Open,Single-ply,SBD,
-Martin Mořingl,1977,102.6,230.0,175.0,235.0,640.0,Open,,Single-ply,SBD
-Martin Škorvánek,1976,118.4,255.0,180.0,245.0,680.0,Open,,Single-ply,SBD
-Robert Rajzl,1994,68.6,155.0,110.0,160.0,425.0,Open,,Single-ply,SBD
-7.,TJ Svitavy - A,Chvála Jiří / 79,118.6,270.0,185.0,255.0,409.32,Open,Single-ply,SBD,
-Petr Šír,1978,86.3,170.0,120.0,200.0,490.0,Open,,Single-ply,SBD
-Petr Voznička,1982,71.8,185.0,110.0,190.0,485.0,Open,,Single-ply,SBD
-Zdeněk Zvonič,1977,81.9,185.0,112.5,212.5,510.0,Open,,Single-ply,SBD
-8.,TJ Sokol Vranovice - A,Kurka Dominik / 94,80.7,142.5,117.5,190.0,305.55,Open,Single-ply,SBD,
-Jiří Furch,1975,81.6,175.0,142.5,192.5,510.0,Open,,Single-ply,SBD
-Oldřich Halfar,1973,95.3,187.5,130.0,195.0,512.5,Open,,Single-ply,SBD
-Pavel Pláteník,1974,85.6,270.0,150.0,250.0,670.0,Open,,Single-ply,SBD
-9.,TJ Svitavy - B,Jílek Ladislav / 90,81.4,142.5,85.0,152.5,256.65,Open,Single-ply,SBD,
-Libor Novák,1990,78.9,182.5,110.0,180.0,472.5,Open,,Single-ply,SBD
-Patrik Krušina,1994,84.0,140.0,95.0,200.0,435.0,Open,,Single-ply,SBD
-Pavel Krušina,1990,83.1,155.0,95.0,205.0,455.0,Open,,Single-ply,SBD
-10.,TJ Sokol Vranovice - B,Dubský David / 97,68.4,92.5,57.5,130.0,213.64,Open,Single-ply,SBD,
-Josef Wächter,1968,101.3,150.0,110.0,150.0,410.0,Open,,Single-ply,SBD
-Lukáš Soukup,1980,65.2,102.5,77.5,140.0,320.0,Open,,Single-ply,SBD
-Michael Čech,1994,105.1,120.0,105.0,175.0,400.0,Open,,Single-ply,SBD
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
+1,TJ Sokol Rosice,Ivo Brázda,1971,77.6,220,127.5,230,577.5,SBD,Single-ply,Open
+1,TJ Sokol Rosice,Martin Šumbera,1980,120.6,260,240,260,760,SBD,Single-ply,Open
+1,TJ Sokol Rosice,Petr Lahoda,1970,116.2,290,235,240,765,SBD,Single-ply,Open
+1,TJ Sokol Rosice,Václav Patočka,1977,90.7,240,177.5,240,657.5,SBD,Single-ply,Open
+2,Colbert club SSK Vítkovice,Antonín Pavlovec,1981,92.9,295,200,250,745,SBD,Single-ply,Open
+2,Colbert club SSK Vítkovice,David Kiesewetter,1984,74.8,190,115,190,495,SBD,Single-ply,Open
+2,Colbert club SSK Vítkovice,Pavel Malina,1960,64.8,180,100,160,440,SBD,Single-ply,Open
+2,Colbert club SSK Vítkovice,Tomáš Poles,1980,96.9,280,200,300,780,SBD,Single-ply,Open
+3,TJ Viktoria Bohumín,František Stano,1984,77.6,200,160,200,560,SBD,Single-ply,Open
+3,TJ Viktoria Bohumín,Marek Sala,1989,81.4,210,140,230,580,SBD,Single-ply,Open
+3,TJ Viktoria Bohumín,Martin Turek,1972,82.5,240,200,225,665,SBD,Single-ply,Open
+3,TJ Viktoria Bohumín,Roman Kubica,1984,79.4,200,110,200,510,SBD,Single-ply,Open
+4,TJ Lokomotiva Krnov - B,Jiří Olejko,1977,100,255,190,240,685,SBD,Single-ply,Open
+4,TJ Lokomotiva Krnov - B,Lukáš Tomčák,1991,76.1,212.5,137.5,207.5,557.5,SBD,Single-ply,Open
+4,TJ Lokomotiva Krnov - B,Roman Hodža,1976,105.6,200,155,215,570,SBD,Single-ply,Open
+4,TJ Lokomotiva Krnov - B,Václav Burda,1946,66.6,180,110,195,485,SBD,Single-ply,Open
+5,SK Zlobr Sedlčany,David Kabyl,1990,108.1,255,150,220,625,SBD,Single-ply,Open
+5,SK Zlobr Sedlčany,Jiří Pech,1991,86.4,165,140,195,500,SBD,Single-ply,Open
+5,SK Zlobr Sedlčany,Jiří Prášek,1989,89.1,250,205,235,690,SBD,Single-ply,Open
+5,SK Zlobr Sedlčany,Ondřej Gyömber,1990,74.3,187.5,160,190,537.5,SBD,Single-ply,Open
+6,TJ Olympia Zlín - C,Jan Schmidt,1976,112.7,220,160,270,650,SBD,Single-ply,Open
+6,TJ Olympia Zlín - C,Martin Mořingl,1977,102.6,230,175,235,640,SBD,Single-ply,Open
+6,TJ Olympia Zlín - C,Martin Škorvánek,1976,118.4,255,180,245,680,SBD,Single-ply,Open
+6,TJ Olympia Zlín - C,Robert Rajzl,1994,68.6,155,110,160,425,SBD,Single-ply,Open
+7,TJ Svitavy - A,Jiří Chvála,1979,118.6,270,185,255,710,SBD,Single-ply,Open
+7,TJ Svitavy - A,Petr Šír,1978,86.3,170,120,200,490,SBD,Single-ply,Open
+7,TJ Svitavy - A,Petr Voznička,1982,71.8,185,110,190,485,SBD,Single-ply,Open
+7,TJ Svitavy - A,Zdeněk Zvonič,1977,81.9,185,112.5,212.5,510,SBD,Single-ply,Open
+8,TJ Sokol Vranovice - A,Dominik Kurka,1994,80.7,142.5,117.5,190,450,SBD,Single-ply,Open
+8,TJ Sokol Vranovice - A,Jiří Furch,1975,81.6,175,142.5,192.5,510,SBD,Single-ply,Open
+8,TJ Sokol Vranovice - A,Oldřich Halfar,1973,95.3,187.5,130,195,512.5,SBD,Single-ply,Open
+8,TJ Sokol Vranovice - A,Pavel Pláteník,1974,85.6,270,150,250,670,SBD,Single-ply,Open
+9,TJ Svitavy - B,Ladislav Jílek,1990,81.4,142.5,85,152.5,380,SBD,Single-ply,Open
+9,TJ Svitavy - B,Libor Novák,1990,78.9,182.5,110,180,472.5,SBD,Single-ply,Open
+9,TJ Svitavy - B,Patrik Krušina,1994,84,140,95,200,435,SBD,Single-ply,Open
+9,TJ Svitavy - B,Pavel Krušina,1990,83.1,155,95,205,455,SBD,Single-ply,Open
+10,TJ Sokol Vranovice - B,David Dubský,1997,68.4,92.5,57.5,130,280,SBD,Single-ply,Open
+10,TJ Sokol Vranovice - B,Josef Wächter,1968,101.3,150,110,150,410,SBD,Single-ply,Open
+10,TJ Sokol Vranovice - B,Lukáš Soukup,1980,65.2,102.5,77.5,140,320,SBD,Single-ply,Open
+10,TJ Sokol Vranovice - B,Michael Čech,1994,105.1,120,105,175,400,SBD,Single-ply,Open
