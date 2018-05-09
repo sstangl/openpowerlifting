@@ -52,6 +52,7 @@ probe-quick:
 	${DATADIR}/apa/apa-probe || true
 	${DATADIR}/apc/apc-probe --quick || true
 	${DATADIR}/apf/apf-probe --quick || true
+	${DATADIR}/apu/apu-probe --quick || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/bp/bp-probe --quick || true
 	${DATADIR}/bp/bpu-probe --quick || true
@@ -90,6 +91,7 @@ probe:
 	${DATADIR}/apa/apa-probe || true
 	${DATADIR}/apc/apc-probe || true
 	${DATADIR}/apf/apf-probe || true
+	${DATADIR}/apu/apu-probe || true
 	${DATADIR}/bb/bb-probe || true
 	${DATADIR}/bp/bp-probe || true
 	${DATADIR}/bp/bpu-probe || true
