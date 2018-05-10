@@ -46,6 +46,20 @@ def get_lifterid(name):
         return lifterid
 
 
+# Reads in the map Name => Birthday (as date string).
+def make_birthdays_map(lifterdir):
+    csv = Csv(lifterdir + os.sep + 'birthdays.csv')
+
+    nameidx = csv.index('Name')
+    birthdayidx = csv.index('Birthday')
+
+    birthdays = dict()
+    for row in csv.rows:
+        birthdays[row[nameidx]] = row[birthdayidx]
+
+    return birthdays
+
+
 # Fills in the Age column from the BirthYear column if possible.
 # Inexact ages derived in this way are noted as '.5', for example '23.5',
 # designating "either 23 or 24".
@@ -68,8 +82,36 @@ def age_from_birthyear(csv, date):
             row[ageidx] = str(lower_age) + '.5'
 
 
+# Fills in the Age column from the Birthday.
+def age_from_birthday(csv, date, birthdays):
+    if 'Age' not in csv.fieldnames:
+        csv.append_column('Age')
+
+    nameidx = csv.index('Name')
+    ageidx = csv.index('Age')
+    [year, month, day] = date.split('-')
+
+    for row in csv.rows:
+        name = row[nameidx]
+
+        # Hardcoded ages take precedence.
+        if row[ageidx] or name not in birthdays:
+            continue
+
+        [birthyear, birthmonth, birthday] = birthdays[name].split('-')
+        assert birthyear < year
+
+        years = int(year) - int(birthyear)
+        if (int(month) < int(birthmonth) or
+                (int(month) == int(birthmonth) and
+                    int(day) <= int(birthday))):
+            years -= 1
+
+        row[ageidx] = str(years)
+
+
 # Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
-def addmeet(entriescsv, meetscsv, entriespath, meetpath):
+def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
@@ -121,7 +163,13 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath):
     for row in newentries.rows:
         row[idx] = str(get_lifterid(row[nameidx]))
 
-    age_from_birthyear(newentries, newmeet.rows[0][newmeet.index('Date')])
+    date = newmeet.rows[0][newmeet.index('Date')]
+
+    # Try deriving from Birthday first.
+    age_from_birthday(newentries, date, birthdays)
+
+    # Otherwise, try deriving from BirthYear.
+    age_from_birthyear(newentries, date)
     newentries.remove_column_by_name("BirthYear")
 
     entriescsv.cat(newentries)
@@ -229,6 +277,8 @@ def main(builddir, meetdir, lifterdir):
     meetscsv.append_column('MeetName')
     initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
+    birthdays = make_birthdays_map(lifterdir)
+
     for dirname, subdirs, files in os.walk(meetdir):
         # Modifying `subdirs` in-place will cause the next iteration
         # of the os.walk() generator to operate over the sorted list.
@@ -238,7 +288,7 @@ def main(builddir, meetdir, lifterdir):
             assert 'meet.csv' in files
             entriespath = dirname + os.sep + 'entries.csv'
             meetpath = dirname + os.sep + 'meet.csv'
-            addmeet(entriescsv, meetscsv, entriespath, meetpath)
+            addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays)
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
