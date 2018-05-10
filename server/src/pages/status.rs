@@ -15,6 +15,7 @@ pub struct Context<'a> {
     pub fed_statuses: Vec<FederationStatus<'a>>,
     pub num_entries: u32,
     pub num_meets: u32,
+    pub num_lifters: u32,
 }
 
 #[derive(Serialize)]
@@ -58,6 +59,7 @@ impl<'a> Context<'a> {
             fed_statuses: fed_statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,
+            num_lifters: opldb.get_lifters().len() as u32,
         }
     }
 }

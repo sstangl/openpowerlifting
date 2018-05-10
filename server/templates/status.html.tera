@@ -22,7 +22,7 @@
     <h1>{{page_title}}</h1>
         We are currently in beta. OpenPowerlifting is a work in progress.
     <h2>Meets</h2>
-        We have currently entered {{num_meets}} meets, and {{num_entries}} total entries.
+        Tracking {{num_entries}} entries for {{num_lifters}} lifters from {{num_meets}} meets.
 
     <h2>Federations</h2>
     <table>
