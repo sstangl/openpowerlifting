@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple script to run over a list of names and output any
+# that are listed as being both M and F.
+#
+import sys
+import os
+
+try:
+    import oplcsv
+except ModuleNotFoundError:
+    sys.path.append(os.path.join(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__))), "scripts"))
+    import oplcsv
+
+
+# Hashtable for sex lookup.
+# str -> [int, int] (left for male, right for female).
+NameToSexHash = {}
+
+###############################################
+
+errorCount = 0
+warningCount = 0
+
+
+def redden(s):
+    if os.name != 'nt':
+        return "\033[1;31m" + s + "\033[0;m"
+    return s
+
+
+def enyellow(s):
+    if os.name != 'nt':
+        return "\033[1;33m" + s + "\033[0;m"
+    return s
+
+
+def perror(s):
+    global errorCount
+    errorCount += 1
+    print(' ' + redden(s), file=sys.stderr)
+
+
+def pwarning(s):
+    global warningCount
+    warningCount += 1
+    print(' ' + enyellow(s), file=sys.stderr)
+
+###############################################
+
+
+def process_file(path):
+    global NameToSexHash
+    global AlreadyPrintedList
+
+    csv = oplcsv.Csv(path)
+
+    if 'Name' not in csv.fieldnames:
+        return
+
+    if 'Sex' not in csv.fieldnames:
+        return
+
+    nameidx = csv.index('Name')
+    sexidx = csv.index('Sex')
+
+    for row in csv.rows:
+        name = row[nameidx]
+        sex = row[sexidx]
+
+        if name == '':
+            continue
+
+        if sex == '':
+            continue
+
+        # If only the first initial is given, then it could be a false
+        # positive.
+        first = name.split()[0]
+        if len(first) == 1 or (len(first) == 2 and first[-1] == '.'):
+            continue
+
+        if name not in NameToSexHash:
+            NameToSexHash[name] = [0, 0]
+
+        if sex == 'M':
+            NameToSexHash[name][0] = NameToSexHash[name][0] + 1
+        else:
+            NameToSexHash[name][1] = NameToSexHash[name][1] + 1
+
+
+def assign_sex(filename):
+    csv = oplcsv.Csv(filename)
+
+    if 'Sex' not in csv.fieldnames:
+        csv.append_column('Sex')
+
+
+    nameidx = csv.index('Name')
+    sexidx = csv.index('Sex')
+    for row in csv.rows:
+        if row[sexidx] == '':
+            name = row[nameidx]
+            if name.split()[0] in ['Jiři','Ludvík','Ivan','Ronald','Sergev','Antonín','Sergey','Luboš','Aleš','Štěpán','Vlastimil','Ondrej','Rafael','Milan','Richard','Peter','Dominik','Adrian','Jíří','Jan','Michal','Denis','Jakub','Marek','Martin','Jaroslav','Ales','Erik','Jiří','Róbert','David','Petr','Zdenek','Bohumil','Tomas','Radek','Remy','Lukáš','Samuel','Roman','Alex','Josef','Ladislav','Alex','Tomáš','Zbynek','Lukas','Miroslav','Milan','Frantis','Stanislav','Pavel','Daniel','Robert','Sergei','Patrik','František','Viktor','Adam','Karel','Stefan','Jiri','Michail','Pianotis','Vlastimol','Mikuláš','Vladisla','Paska','Jiro','Václav','Zdeněk','Vítěslav','Jean','Libor','Adolf','Igor','Ondřej','Ján','Andrej','Frantisek','Filip','Dominik','Mirosla','Vratislac']:
+                row[sexidx] = 'M'
+
+            if name.split()[0] in ['Iveta','Jana','Barbora','Petra','Aneta','Kristýna','Kateřina','Angelína','Veronika','Hana','Lucie','Monika','Silva','Linda','Nikola','Anna','Alexandra','Martina','Lenka','Soňa','Dana','Vendula']:
+                row[sexidx] = 'F'
+            if name in NameToSexHash:
+                if NameToSexHash[name][1] == 0:
+                    row[sexidx] = 'M'
+                elif NameToSexHash[name][0] == 0:
+                    row[sexidx] = 'F'
+
+    with open(filename, 'w') as fd:
+        csv.write(fd)
+
+
+
+def main():
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            process_file(entriespath)
+
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            assign_sex(entriespath)
+
+    # if len(sys.argv) > 1:
+    #     assign_sex(sys.argv[1])
+
+
+
+if __name__ == '__main__':
+    sys.exit(main())
