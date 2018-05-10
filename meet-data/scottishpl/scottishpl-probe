@@ -17,8 +17,8 @@ except ModuleNotFoundError:
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://www.scottishpowerlifting.com/results/"
-BASEURL = "http://www.scottishpowerlifting.com/"
+URL = "https://www.scottishpowerlifting.com/results/"
+BASEURL = "https://www.scottishpowerlifting.com/"
 
 
 def color(s):
@@ -34,8 +34,6 @@ def getmeetlist(html):
     urls = []
     for a in articles[0].find_all('a'):
         url = a['href']
-        if 'http://' not in url:
-            url = BASEURL + url
 
         if url not in urls:
             urls.append(url)
