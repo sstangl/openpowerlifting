@@ -136,16 +136,23 @@ fn lifter(
     langinfo: State<langpack::LangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
-) -> Option<Template> {
+) -> Option<Result<Template, Redirect>> {
     let locale = make_locale(&langinfo, languages, &cookies);
 
     let lifter_id = match opldb.get_lifter_id(&username) {
-        None => return None,
+        None => {
+            // If the name just needs to be lowercased, redirect to that page.
+            let lowercase = username.to_ascii_lowercase();
+            match opldb.get_lifter_id(&lowercase) {
+                None => return None,
+                Some(_) => return Some(Err(Redirect::to(&format!("/u/{}", lowercase)))),
+            }
+        }
         Some(id) => id,
     };
 
     let context = pages::lifter::Context::new(&opldb, &locale, lifter_id);
-    Some(Template::render("lifter", &context))
+    Some(Ok(Template::render("lifter", &context)))
 }
 
 #[get("/m/<meetpath..>")]
