@@ -862,9 +862,13 @@ def check(scriptname, filename, configtoml, meetpath):
         meet = oplcsv.Csv(meetpath)
         # Make sure that we have a proper date
         if len(meet.rows) == 1 and "Date" in meet.fieldnames:
-            meet_date = meet.rows[0][meet.index("Date")]
-            if meet_date.count('-') != 2 or not meet_date.replace('-', '').isdigit():
-                meet_date = None
+            try:
+                meet_date = meet.rows[0][meet.index("Date")]
+                if (meet_date.count('-') != 2 or
+                        not meet_date.replace('-', '').isdigit()):
+                    meet_date = None
+            except IndexError:
+                pass
 
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
