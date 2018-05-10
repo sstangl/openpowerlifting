@@ -1,28 +1,28 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,SK Kuřim,Micha Šafařík,1967,107.5,300.0,205.0,270.0,775.0,Open,,Single-ply,SBD
-Zimula Jiří/84,93.8,,6257,245.0,265.0,672.5,420.78,Open,,
-Zemánek David/84,106.8,,5941,240.0,250.0,640.0,380.22,Open,,
-Kantořík Pavel/76,104.8,,5980,230.0,235.0,630.0,376.74,Open,,
-2,Sokol Rosice "A",Martin Šumbera,1980,110.9,255.0,180.0,262.5,697.5,Open,,Single-ply,SBD
-Patočka Václav/77,86.1,,6536,220.0,235.0,595.0,388.89,Open,,
-Brázda Ivo/71,78.2,,6927,210.0,225.0,550.0,380.99,Open,,
-Černý Jiří Mgr/,82.5,,6699,215.0,220.0,555.0,371.79,Open,,
-3,TJ Viktorie Bohumín,Martin Turek,1972,84.3,225.0,162.5,225.0,612.5,Open,,Single-ply,SBD
-Urbánek Roman/56,102.4,,6030,225.0,220.0,610.0,367.83,Open,,
-Kursa Milan/75,82.5,,6699,190.0,205.0,540.0,361.75,Open,,
-Spiewok Aleš/67,86.2,,6532,190.0,190.0,522.5,341.30,Open,,
-4,TJ Sokol Vranovice,Tomáš Trávník,1985,82.3,220.0,145.0,205.0,570.0,Open,,Single-ply,SBD
-Biedermann Petr/86,96.5,,6177,200.0,230.0,550.0,339.74,Open,,
-Furch Jiří/75,79.4,,6860,165.0,180.0,485.0,332.71,Open,,
-Šišovský Karel/90,91.3,,6338,170.0,207.5,492.5,312.15,Open,,
-5,OST Zbýšov,David Coufal,1980,108.3,230.0,155.0,235.0,620.0,Open,,Single-ply,SBD
-Isaev Todor/68,114.9,,5812,220.0,240.0,600.0,348.72,Open,,
-Pokorný Marek/75,93.1,,6279,210.0,205.0,535.0,335.93,Open,,
-Hájek Tomáš/89,83.1,,6670,140.0,170.0,395.0,263.47,Open,,
-6,KK a ST TJ Třebíč,Lukáš Krejčí,1990,60.9,150.0,100.0,170.0,420.0,Open,,Single-ply,SBD
-Fiala Martin/85,108.0,,5919,210.0,200.0,550.0,325.55,Open,,
-Janek Lubomír Ing/57,61.3,,8365,130.0,150.0,355.0,296.96,Open,,
-Seifer Milan/87,71.0,,7414,120.0,150.0,365.0,270.61,Open,,
-7,Sokol Rosice "B",Ladislav Zelinka,1984,96.4,215.0,122.5,210.0,547.5,Open,,Single-ply,SBD
-Pokorný Vojtěch/88,77.9,,6945,150.0,160.0,405.0,281.27,Open,,
-Pavel Vítězslav/84,104.2,,5992,,230.0,390.0,233.69,Open,,
+Place,Team,Name,BirthYear,BodyweightKg,Sex,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
+1,SK Kuřim,Micha Šafařík,1967,107.5,M,300,205,270,775,SBD,Single-ply,Open
+1,SK Kuřim,Jiří Zimula,1984,93.8,M,245,162.5,265,672.5,SBD,Single-ply,Open
+1,SK Kuřim,David Zemánek,1984,106.8,M,240,150,250,640,SBD,Single-ply,Open
+1,SK Kuřim,Pavel Kantořík,1976,104.8,M,230,165,235,630,SBD,Single-ply,Open
+2,"Sokol Rosice ""A""",Martin Šumbera,1980,110.9,M,255,180,262.5,697.5,SBD,Single-ply,Open
+2,"Sokol Rosice ""A""",Václav Patočka,1977,86.1,M,220,140,235,595,SBD,Single-ply,Open
+2,"Sokol Rosice ""A""",Ivo Brázda,1971,78.2,M,210,115,225,550,SBD,Single-ply,Open
+2,"Sokol Rosice ""A""",Jiří Černý,,82.5,M,215,120,220,555,SBD,Single-ply,Open
+3,TJ Viktorie Bohumín,Martin Turek,1972,84.3,M,225,162.5,225,612.5,SBD,Single-ply,Open
+3,TJ Viktorie Bohumín,Roman Urbánek,1956,102.4,M,225,165,220,610,SBD,Single-ply,Open
+3,TJ Viktorie Bohumín,Milan Kursa,1975,82.5,M,190,145,205,540,SBD,Single-ply,Open
+3,TJ Viktorie Bohumín,Aleš Spiewok,1967,86.2,M,190,142.5,190,522.5,SBD,Single-ply,Open
+4,TJ Sokol Vranovice,Tomáš Trávník,1985,82.3,M,220,145,205,570,SBD,Single-ply,Open
+4,TJ Sokol Vranovice,Petr Biedermann,1986,96.5,M,200,120,230,550,SBD,Single-ply,Open
+4,TJ Sokol Vranovice,Jiří Furch,1975,79.4,M,165,140,180,485,SBD,Single-ply,Open
+4,TJ Sokol Vranovice,Karel Šišovský,1990,91.3,M,170,115,207.5,492.5,SBD,Single-ply,Open
+5,OST Zbýšov,David Coufal,1980,108.3,M,230,155,235,620,SBD,Single-ply,Open
+5,OST Zbýšov,Todor Isaev,1968,114.9,M,220,140,240,600,SBD,Single-ply,Open
+5,OST Zbýšov,Marek Pokorný,1975,93.1,M,210,120,205,535,SBD,Single-ply,Open
+5,OST Zbýšov,Tomáš Hájek,1989,83.1,M,140,85,170,395,SBD,Single-ply,Open
+6,KK a ST TJ Třebíč,Lukáš Krejčí,1990,60.9,M,150,100,170,420,SBD,Single-ply,Open
+6,KK a ST TJ Třebíč,Martin Fiala,1985,108,M,210,140,200,550,SBD,Single-ply,Open
+6,KK a ST TJ Třebíč,Lubomír Janek,1957,61.3,M,130,75,150,355,SBD,Single-ply,Open
+6,KK a ST TJ Třebíč,Milan Seifer,1987,71,M,120,95,150,365,SBD,Single-ply,Open
+7,"Sokol Rosice ""B""",Ladislav Zelinka,1984,96.4,M,215,122.5,210,547.5,SBD,Single-ply,Open
+7,"Sokol Rosice ""B""",Vojtěch Pokorný,1988,77.9,M,150,95,160,405,SBD,Single-ply,Open
+DQ,"Sokol Rosice ""B""",Vítězslav Pavel,1984,104.2,M,,160,230,,SBD,Single-ply,Open

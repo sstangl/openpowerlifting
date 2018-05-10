@@ -1,27 +1,55 @@
-Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Division,Sex,WeightClassKg,Equipment,Event
-1,Jarmila Pešková,1960,65.8,Gita Podivín,42.5,47.5,-50.0,47.5,47.5,M1,Open,F,67.5,Single-ply,B
-1,Darja Janíčková,1962,69.2,SK Siko Znojmo,72.5,77.5,-82.5,77.5,77.5,M1,Open,F,75,Single-ply,B
-1,Petr Zámečník,1966,72.8,TJ Olympia Zlín,120.0,127.5,-130.0,127.5,127.5,M1,Open,F,75,Single-ply,B
-1,Čestmír Wolf,1959,82.2,Colbert club Vítkovice,177.5,185.0,-187.5,185.0,185.0,M1,Open,F,82.5,Single-ply,B
-2,Petr Lhotský,1965,82.1,TJ Spartak Pelhřimov,175.0,-182.5,-185.0,175.0,175.0,M1,Open,F,82.5,Single-ply,B
-3,Libor Novák,1966,79.8,TJ Svitavy,150.0,155.0,-160.0,155.0,155.0,M1,Open,F,82.5,Single-ply,B
-1,Jiří Kati,1965,89.0,AK Sprint Opava,200.0,217.5,-226.0,217.5,217.5,M1,Open,F,90,Single-ply,B
-2,Aleš Spiewowk,1967,86.7,TJ Viktoria Bohumín,145.0,-150.0,-150.0,145.0,145.0,M1,Open,F,90,Single-ply,B
-3,Raymond Kurinovský,1964,85.7,Factory Gym Litvínov,125.0,130.0,135.0,135.0,135.0,M1,Open,F,90,Single-ply,B
-4,Karel Kvasnička,1967,89.4,TJ Sokol Pohořelice,120.0,125.0,130.0,130.0,130.0,M1,Open,F,90,Single-ply,B
-5,Zdeněk Rohrsetzer,1963,87.7,Sokol Vejprnice,-120.0,125.0,-132.5,125.0,125.0,M1,Open,F,90,Single-ply,B
-1,Miroslav Paukert,1963,92.3,KST FC Příbram,195.0,200.0,202.5,202.5,202.5,M1,Open,F,100,Single-ply,B
-2,Tomáš Sedláček,1965,97.4,TJ Spartak Rokytnice n.J.,185.0,195.0,-202.5,195.0,195.0,M1,Open,F,100,Single-ply,B
-3,Marcel Anděl,1958,95.7,Sokol Jemnice,155.0,162.5,167.5,167.5,167.5,M1,Open,F,100,Single-ply,B
-4,Milan Hofbauer,1965,97.7,TJ Sokol Pohořelice,140.0,150.0,-155.0,150.0,150.0,M1,Open,F,100,Single-ply,B
-5,Jaroslav Chovan,1960,93.8,TJ Lokomotiva Krnov,135.0,140.0,142.5,142.5,142.5,M1,Open,F,100,Single-ply,B
-1,Michal Kondla,1966,109.9,SK Power fit.M.Boleslav,-200.0,200.0,212.5,212.5,212.5,M1,Open,F,110,Single-ply,B
-2,Josef Olša,1962,104.7,Sokol Plzeň-Karlov,190.0,195.0,200.0,200.0,200.0,M1,Open,F,110,Single-ply,B
-3,František Ambroz,1965,108.1,Colbert club Vítkovice,-195.0,195.0,-210.0,195.0,195.0,M1,Open,F,110,Single-ply,B
-4,Vilém Bém,1963,106.6,Colbert club Vítkovice,160.0,-180.0,180.0,180.0,180.0,M1,Open,F,110,Single-ply,B
-1,Michal Mihály,1966,122.8,SK Kuřim,232.5,240.0,-248.5,240.0,240.0,M1,Open,F,125,Single-ply,B
-2,Jiří Krčmář,1962,116.9,SK Power fit.M.Boleslav,-200.0,200.0,215.0,215.0,215.0,M1,Open,F,125,Single-ply,B
-3,Michal Šafařík,1967,110.1,SK Kuřim,-190.0,190.0,200.0,200.0,200.0,M1,Open,F,125,Single-ply,B
-1,Milan Mrázek,1958,134.0,TJ Sokol Lanžhot,170.0,192.5,-202.5,192.5,192.5,M1,Open,F,125+,Single-ply,B
-2,Vladimír Kliment,1960,136.0,SK Fit.Gym Olomouc,-192.5,192.5,-202.5,192.5,192.5,M1,Open,F,125+,Single-ply,B
-3,Vladimír Skala,1961,125.2,Sokol Vejprnice,-195.0,-195.0,-195.0,,,M1,Open,F,125+,Single-ply,B
+Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
+1,Jarmila Pešková,1960,65.8,Gita Podivín,42.5,47.5,-50,47.5,47.5,Masters 1,F,67.5,Single-ply,B
+1,Darja Janíčková,1962,69.2,SK Siko Znojmo,72.5,77.5,-82.5,77.5,77.5,Masters 1,F,75,Single-ply,B
+1,Petr Zámečník,1966,72.8,TJ Olympia Zlín,120,127.5,-130,127.5,127.5,Masters 1,M,75,Single-ply,B
+1,Čestmír Wolf,1959,82.2,Colbert club Vítkovice,177.5,185,-187.5,185,185,Masters 1,M,82.5,Single-ply,B
+2,Petr Lhotský,1965,82.1,TJ Spartak Pelhřimov,175,-182.5,-185,175,175,Masters 1,M,82.5,Single-ply,B
+3,Libor Novák,1966,79.8,TJ Svitavy,150,155,-160,155,155,Masters 1,M,82.5,Single-ply,B
+1,Jiří Kati,1965,89,AK Sprint Opava,200,217.5,-226,217.5,217.5,Masters 1,M,90,Single-ply,B
+2,Aleš Spiewowk,1967,86.7,TJ Viktoria Bohumín,145,-150,-150,145,145,Masters 1,M,90,Single-ply,B
+3,Raymond Kurinovský,1964,85.7,Factory Gym Litvínov,125,130,135,135,135,Masters 1,M,90,Single-ply,B
+4,Karel Kvasnička,1967,89.4,TJ Sokol Pohořelice,120,125,130,130,130,Masters 1,M,90,Single-ply,B
+5,Zdeněk Rohrsetzer,1963,87.7,Sokol Vejprnice,-120,125,-132.5,125,125,Masters 1,M,90,Single-ply,B
+1,Miroslav Paukert,1963,92.3,KST FC Příbram,195,200,202.5,202.5,202.5,Masters 1,M,100,Single-ply,B
+2,Tomáš Sedláček,1965,97.4,TJ Spartak Rokytnice n.J.,185,195,-202.5,195,195,Masters 1,M,100,Single-ply,B
+3,Marcel Anděl,1958,95.7,Sokol Jemnice,155,162.5,167.5,167.5,167.5,Masters 1,M,100,Single-ply,B
+4,Milan Hofbauer,1965,97.7,TJ Sokol Pohořelice,140,150,-155,150,150,Masters 1,M,100,Single-ply,B
+5,Jaroslav Chovan,1960,93.8,TJ Lokomotiva Krnov,135,140,142.5,142.5,142.5,Masters 1,M,100,Single-ply,B
+1,Michal Kondla,1966,109.9,SK Power fit.M.Boleslav,-200,200,212.5,212.5,212.5,Masters 1,M,110,Single-ply,B
+2,Josef Olša,1962,104.7,Sokol Plzeň-Karlov,190,195,200,200,200,Masters 1,M,110,Single-ply,B
+3,František Ambroz,1965,108.1,Colbert club Vítkovice,-195,195,-210,195,195,Masters 1,M,110,Single-ply,B
+4,Vilém Bém,1963,106.6,Colbert club Vítkovice,160,-180,180,180,180,Masters 1,M,110,Single-ply,B
+1,Michal Mihály,1966,122.8,SK Kuřim,232.5,240,-248.5,240,240,Masters 1,M,125,Single-ply,B
+2,Jiří Krčmář,1962,116.9,SK Power fit.M.Boleslav,-200,200,215,215,215,Masters 1,M,125,Single-ply,B
+3,Michal Šafařík,1967,110.1,SK Kuřim,-190,190,200,200,200,Masters 1,M,125,Single-ply,B
+1,Milan Mrázek,1958,134,TJ Sokol Lanžhot,170,192.5,-202.5,192.5,192.5,Masters 1,M,125+,Single-ply,B
+2,Vladimír Kliment,1960,136,SK Fit.Gym Olomouc,-192.5,192.5,-202.5,192.5,192.5,Masters 1,M,125+,Single-ply,B
+DQ,Vladimír Skala,1961,125.2,Sokol Vejprnice,-195,-195,-195,,,Masters 1,M,125+,Single-ply,B
+1,Hana Takáčová,1954,82.7,Sokol Nymburk,13,137.5,142.5,142.5,142.5,Masters 2,F,90,Single-ply,B
+1,Rudolf Böhm,1952,66.4,TJ Sokol Vejprnice,150,155,,155,155,Masters 2,M,67.5,Single-ply,B
+1,František Michalczyk,1954,73.4,Colbert club Vítkovice,110,117.5,120,120,120,Masters 2,M,75,Single-ply,B
+1,Jaroslav Fajkus,1949,80.9,Colbert club Vítkovice,135,140,145,145,145,Masters 2,M,82.5,Single-ply,B
+2,Luboš Urbánek,1954,81,Sokol Jemnice,105,112.5,115,115,115,Masters 2,M,82.5,Single-ply,B
+1,Josef Ptáček,1953,88.8,TJ Spartak Pelhřimov,157.5,-165,165,165,165,Masters 2,M,90,Single-ply,B
+2,Aleš Vrzák,1957,90,TJ Spartak Pelhřimov,135,142.5,-150,142.5,142.5,Masters 2,M,90,Single-ply,B
+1,Luboš Maršík,1952,98.8,Sokol Kramolná,200,-210,,200,200,Masters 2,M,100,Single-ply,B
+2,Jiří Horník,1948,99.3,SK Horník PWL Vejprnice,150,-160,-160,150,150,Masters 2,M,100,Single-ply,B
+3,Zdeněk Krutil,1948,92.5,TJ Zekon Bystřice p.H.,125,135,142.5,142.5,142.5,Masters 2,M,100,Single-ply,B
+4,Vladimír Svoboda,1952,94.9,Gita Podivín,130,140,142.5,142.5,142.5,Masters 2,M,100,Single-ply,B
+5,Milan Ďuriš,1951,98.7,Sokol Modřice,120,125,132.5,132.5,132.5,Masters 2,M,100,Single-ply,B
+1,Josef Máška,1955,101.3,TJ Spartak Pelhřimov,207.5,212.5,-221,212.5,212.5,Masters 2,M,110,Single-ply,B
+2,Jaroslav Wožniak,1955,109.3,SK J+M Kadaň,175,180,-185,180,180,Masters 2,M,110,Single-ply,B
+1,Stanislav Krček,1949,112.1,TJ Olympia Zlín,145,-152.5,-152.5,145,145,Masters 2,M,125,Single-ply,B
+1,Emil Mojžíšek,1956,128.3,Colbert club Vítkovice,130,135,137.5,137.5,137.5,Masters 2,M,125+,Single-ply,B
+1,Adina Hyková,1943,59.5,TJ Spartak Chodov,72.5,77.5,80,80,80,Masters 3,F,60,Single-ply,B
+1,Antonín Soušek,1946,74.3,SK Fit.Gym Olomouc,137.5,145,-152.5,145,145,Masters 3,M,75,Single-ply,B
+2,Bohuslav Pokorný,1940,74.4,TJ Sokol Praha-Žižkov,-87.5,87.5,-90,87.5,87.5,Masters 3,M,75,Single-ply,B
+1,Karel Olič,1947,78.8,TJ Kaučuk Kralupy,120,130,132.5,132.5,132.5,Masters 3,M,82.5,Single-ply,B
+2,Jiří Poutník,1946,79.9,Factory Gym Litvínov,125,-130,130,130,130,Masters 3,M,82.5,Single-ply,B
+3,Karel Achtner,1944,81.9,Sokol Praha -Vršovice,112.5,120,-125,120,120,Masters 3,M,82.5,Single-ply,B
+4,Břetislav Adámek,1942,77.9,TJ Zekon Bystřice p.H.,92.5,-100,107.5,107.5,107.5,Masters 3,M,82.5,Single-ply,B
+5,Herbert Petráš,1939,80.8,TJ Zekon Bystřice p.H.,97.5,100,-105,100,100,Masters 3,M,82.5,Single-ply,B
+1,František Esser,1946,93,Sokol Praha-Vršovice,110,-120,120,120,120,Masters 3,M,100,Single-ply,B
+2,Květoslav Štora,1940,93.4,TJ Sokol Praha-Žižkov,-110,112.5,-117.5,112.5,112.5,Masters 3,M,100,Single-ply,B
+1,Otakar Machytka,1944,108.3,KST F-C Semily,125,140,145,145,145,Masters 3,M,110,Single-ply,B
+2,Karel Vacek,1947,109.2,Sokol Praha -Vršovice,110,120,-127.5,120,120,Masters 3,M,110,Single-ply,B

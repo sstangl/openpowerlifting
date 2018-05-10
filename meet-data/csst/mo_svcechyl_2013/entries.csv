@@ -4,7 +4,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 2,Lucie Rybáčková,1991,64.2,TJ Spartak Chodov,105,60,110,275,Open,F,72,Single-ply,SBD
 1,Gabriela Reifová,1986,74.7,TJ Spartak Chodov,125,87.5,140,352.5,Open,F,84,Single-ply,SBD
 1,Jan More,1993,64.5,TJ Powerlifting Klatovy,175,135.5,235,545.5,Open,M,66,Single-ply,SBD
-DQ,Jakub Stehno,1990,65.5,TJ Spartak Chodov,145,0,175,,Open,M,66,Single-ply,SBD
+DQ,Jakub Stehno,1990,65.5,TJ Spartak Chodov,145,,175,,Open,M,66,Single-ply,SBD
 1,Michal Michalíček,1987,72.4,TJ Baník Sokolov,205,177.5,240,622.5,Open,M,74,Single-ply,SBD
 2,Lukáš Petruj,1994,72.2,TJ Baník Dobřany,200,132.5,230,562.5,Open,M,74,Single-ply,SBD
 3,Petr Kovařik,1995,69.8,TJ Spartak Chodov,190,100,180,470,Open,M,74,Single-ply,SBD
@@ -14,9 +14,9 @@ DQ,Jakub Stehno,1990,65.5,TJ Spartak Chodov,145,0,175,,Open,M,66,Single-ply,SBD
 2,Marcel Murárik,1992,82.8,SKST Litvínov,230,160,230,620,Open,M,83,Single-ply,SBD
 3,Josef Levák,1983,81.8,TJ Spartak Chodov,215,162.5,225,602.5,Open,M,83,Single-ply,SBD
 4,František Hejl,1990,79.6,SKST Litvínov,157.5,105,195,457.5,Open,M,83,Single-ply,SBD
-DQ,Stanislav Kudrt,1987,82.2,SKST Litvínov,0,160,250,,Open,M,83,Single-ply,SBD
-DQ,Jiří Štich,1997,77.3,TJ Baník Dobřany,140,0,140,,Open,M,83,Single-ply,SBD
-DQ,Jaroslav Hodík,1958,82.7,TJ Spartak Chodov,0,130,220,,Open,M,83,Single-ply,SBD
+DQ,Stanislav Kudrt,1987,82.2,SKST Litvínov,,160,250,,Open,M,83,Single-ply,SBD
+DQ,Jiří Štich,1997,77.3,TJ Baník Dobřany,140,,140,,Open,M,83,Single-ply,SBD
+DQ,Jaroslav Hodík,1958,82.7,TJ Spartak Chodov,,130,220,,Open,M,83,Single-ply,SBD
 1,Michal Majer,1990,91,TJ Baník Dobřany,240,170,250,660,Open,M,93,Single-ply,SBD
 2,Radim Kopal,1974,92.2,SKST Litvínov,225,185,220,630,Open,M,93,Single-ply,SBD
 3,Emil Balogh,1983,91.3,TJ Baník Sokolov,245,130,235,610,Open,M,93,Single-ply,SBD
@@ -27,7 +27,7 @@ DQ,Jaroslav Hodík,1958,82.7,TJ Spartak Chodov,0,130,220,,Open,M,83,Single-ply,S
 8,Karel Štrok,1993,90.9,TJ Baník Sokolov,175,130,220,525,Open,M,93,Single-ply,SBD
 9,Jaroslav Oulehle,1981,85.3,SKST Litvínov,167.5,132.5,192.5,492.5,Open,M,93,Single-ply,SBD
 10,Tomáš Štrebl,1997,86.4,SKST Litvínov,75,75,100,250,Open,M,93,Single-ply,SBD
-DQ,Zdeněk Ponočný,1974,92.4,STFC Bílina,0,190,230,,Open,M,93,Single-ply,SBD
+DQ,Zdeněk Ponočný,1974,92.4,STFC Bílina,,190,230,,Open,M,93,Single-ply,SBD
 1,Jan Vachulka,1978,100.8,TJ Baník Dobřany,272.5,192.5,280,745,Open,M,105,Single-ply,SBD
 2,Karel Rada,1973,103.9,Fitnes club Staňkov,270,165,275,710,Open,M,105,Single-ply,SBD
 3,Karel Pinkava,1983,96.5,TJ Sokol Klatovy,230,137.5,270,637.5,Open,M,105,Single-ply,SBD

@@ -1,4 +1,4 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,Ranking,Sex,WeightClassKg,Equipment,Event
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
 1,Pavel Malina,1960,59,TJ Viktorie Bohumin,165,105,170,440,M,60,Single-ply,SBD
 1,David Kenis,1977,66.5,TJ Loko Krnov,202.5,130,202.5,535,M,67.5,Single-ply,SBD
 2,Martin Cech,1974,67,Colb.Bystrice p.H.,190,110,225,525,M,67.5,Single-ply,SBD
@@ -33,7 +33,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,Ra
 2,Lenka Hernova,1975,53.2,TJ PD Ostrava,87.5,47.5,110,245,F,56,Single-ply,SBD
 3,Dominika Drlikova,1981,55,TJ Viktorie Bohumin,85,45,95,225,F,56,Single-ply,SBD
 4,Hana Kozakova,1974,51,TJ Morava Kromeriz,65,40,82.5,187.5,F,56,Single-ply,SBD
-1,Petra Juraskova,1976,57.7,TJ SD Frydek-Mistek,130,60,150,340,F,82,Single-ply,SBD
-2,Alena Zahumenska,1958,58,TJ OKD Ostrava,105,62.5,150,317.5,F,82,Single-ply,SBD
-3,Hana Petrikova,1971,82,TJ Ji Rymarov,150,70,170,390,F,82,Single-ply,SBD
-4,Bohdan Matouskova,1980,58.8,TJ SD Frydek-Mistek,85,40,90,215,F,82,Single-ply,SBD
+1,Petra Juraskova,1976,57.7,TJ SD Frydek-Mistek,130,60,150,340,F,82.5,Single-ply,SBD
+2,Alena Zahumenska,1958,58,TJ OKD Ostrava,105,62.5,150,317.5,F,82.5,Single-ply,SBD
+3,Hana Petrikova,1971,82,TJ Ji Rymarov,150,70,170,390,F,82.5,Single-ply,SBD
+4,Bohdan Matouskova,1980,58.8,TJ SD Frydek-Mistek,85,40,90,215,F,82.5,Single-ply,SBD

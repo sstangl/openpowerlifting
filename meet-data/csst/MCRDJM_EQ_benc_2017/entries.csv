@@ -1,7 +1,7 @@
 Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Division,Sex,WeightClassKg,TotalKg,Equipment,Event
 1,Karolína Adamová,2000,54,TJ Svitavy,70,75,-80.5,75,Sub-Juniors,F,57,75,Single-ply,B
 2,Eva Waňková,2000,69.3,TJ Autobrzdy Jablonec n.N.,50,55,-60,55,Sub-Juniors,F,72,55,Single-ply,B
-3,Jana Skácelová,1999,57.4,TJ Sokol Rosice,40,-42.5,,40,Sub-Juniors,M,63,40,Single-ply,B
+3,Jana Skácelová,1999,57.4,TJ Sokol Rosice,40,-42.5,,40,Sub-Juniors,F,63,40,Single-ply,B
 1,Daniel Křepelka,2001,65,TJ Svitavy,115,122.5,127.5,127.5,Sub-Juniors,M,66,127.5,Single-ply,B
 2,Matyáš Janda,1999,65.5,TJ Sokol Vejprnice,92.5,97.5,102.5,102.5,Sub-Juniors,M,66,102.5,Single-ply,B
 1,Jan Nový,1999,81.4,Colbert club SSK Vítkovice,132.5,-137.5,137.5,137.5,Sub-Juniors,M,83,137.5,Single-ply,B
@@ -17,13 +17,13 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Di
 2,Tomáš Novák,1999,104.4,SK ZLOBR Sedlčany,-160,160,-172.5,160,Sub-Juniors,M,105,160,Single-ply,B
 3,David Pimek,2000,97.4,TJ Olympia Zlín,125,130,-135,130,Sub-Juniors,M,105,130,Single-ply,B
 4,Denis Kurečka,1999,96.6,Colbert club SSK Vítkovice,125,-132.5,-132.5,125,Sub-Juniors,M,105,125,Single-ply,B
-1,Kristýna Obršlíková,1998,62.5,TJ Sokol Rosice,75,85,90,90,Juniors,F,,90,Single-ply,B
-2,Michaela Radová,1994,57,TJ Spartak Chodov,-82.5,-82.5,82.5,82.5,Juniors,F,,82.5,Single-ply,B
-3,Ekaterina Antošová,1995,51.3,SK ZLOBR Sedlčany,65,70,-72.5,70,Juniors,F,,70,Single-ply,B
-4,Kateřina Kunclová,1998,60.7,SK ZLOBR Sedlčany,45,50,-52.5,50,Juniors,F,,50,Single-ply,B
-1,Tomáš Lazok,1994,62.8,TJ Spartak Chodov,120,125,-130,125,Juniors,M,74,125,Single-ply,B
+1,Kristýna Obršlíková,1998,62.5,TJ Sokol Rosice,75,85,90,90,Juniors,F,63,90,Single-ply,B
+2,Michaela Radová,1994,57,TJ Spartak Chodov,-82.5,-82.5,82.5,82.5,Juniors,F,57,82.5,Single-ply,B
+3,Ekaterina Antošová,1995,51.3,SK ZLOBR Sedlčany,65,70,-72.5,70,Juniors,F,52,70,Single-ply,B
+4,Kateřina Kunclová,1998,60.7,SK ZLOBR Sedlčany,45,50,-52.5,50,Juniors,F,63,50,Single-ply,B
+1,Tomáš Lazok,1994,62.8,TJ Spartak Chodov,120,125,-130,125,Juniors,M,66,125,Single-ply,B
 2,Tomáš Němec,1996,73.7,Colbert club SSK Vítkovice,120,130,-135,130,Juniors,M,74,130,Single-ply,B
-3,Martin Nebola,1997,58.6,TJ Spartak Letohrad,95,100,-105,100,Juniors,M,74,100,Single-ply,B
+3,Martin Nebola,1997,58.6,TJ Spartak Letohrad,95,100,-105,100,Juniors,M,59,100,Single-ply,B
 1,Robert Rajzl,1994,83,TJ Olympia Zlín,180,200,-210,200,Juniors,M,83,200,Single-ply,B
 2,Patrik Janků,1998,82.9,TJ Svitavy,155,160,162.5,162.5,Juniors,M,83,162.5,Single-ply,B
 3,Jindřich Škubal,1995,75.8,TJ Sokol Vejprnice,-137.5,140,150,150,Juniors,M,83,150,Single-ply,B
@@ -74,8 +74,8 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Di
 2,Jaroslav Fafejta,1954,101.1,KST Příbram,165,-170,170,170,Masters 3,M,105,170,Single-ply,B
 3,Václav Primus,1948,102,TJ Spartak Pelhřimov,-110,-110,110,110,Masters 3,M,105,110,Single-ply,B
 DQ,Milan Ďuriš,1951,103.5,TJ Sokol Modřice,-130,-130,-130,,Masters 3,M,105,,Single-ply,B
-1,Jozef Duna,1950,111.6,TJ Sokol Vejprnice,165,175,-185,175,Masters 3,M,105+,175,Single-ply,B
-2,Pavel Von Klepáč,1955,123.5,TJ Sokol Rosice,132.5,140,145,145,Masters 3,M,105+,145,Single-ply,B
-1,Antonín Soušek,1946,80.2,SK Fitness Gym Olomouc,125,130,-132.5,130,Masters 4,M,,130,Single-ply,B
-2,Karel Olič,1947,84,TJ Kralupy,105,,115,115,Masters 4,M,,115,Single-ply,B
-3,Alexandr Kolář,1943,100.4,TJ Olympia Zlín,100,-110,-110,100,Masters 4,M,,100,Single-ply,B
+1,Jozef Duna,1950,111.6,TJ Sokol Vejprnice,165,175,-185,175,Masters 3,M,120,175,Single-ply,B
+2,Pavel Von Klepáč,1955,123.5,TJ Sokol Rosice,132.5,140,145,145,Masters 3,M,120+,145,Single-ply,B
+1,Antonín Soušek,1946,80.2,SK Fitness Gym Olomouc,125,130,-132.5,130,Masters 4,M,83,130,Single-ply,B
+2,Karel Olič,1947,84,TJ Kralupy,105,,115,115,Masters 4,M,93,115,Single-ply,B
+3,Alexandr Kolář,1943,100.4,TJ Olympia Zlín,100,-110,-110,100,Masters 4,M,105,100,Single-ply,B

@@ -1,5 +1,5 @@
 Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
-1,Veronika Vaclová,,65.4,SK Kuřim,72.5,77.5,80,77.5,80,Open,F,67.5,Single-ply,B
+1,Veronika Vaclová,,65.4,SK Kuřim,72.5,77.5,-80,77.5,77.5,Open,F,67.5,Single-ply,B
 1,Lukáš Kapounek,,64.6,SK Kuřim,-115,-115,115,115,115,Open,M,67.5,Single-ply,B
 1,Tomáš Lacko,1982,74.4,TJ Svitavy,142.5,155,160,160,160,Open,M,75,Single-ply,B
 2,Radek Giebel,1975,73.7,Colbert SSK Vítkovice,135,-140,140,140,140,Open,M,75,Single-ply,B
@@ -29,8 +29,8 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,To
 3,Pavel Žák,1985,109.5,Colbert SSK Vítkovice,182.5,-190,192.5,192.5,192.5,Open,M,110,Single-ply,B
 4,Jan Juřička,,109.4,SKST Lednice,170,-190,-190,170,170,Open,M,110,Single-ply,B
 5,Jiří Chvála,,108.8,TJ Svitavy,155,165,-172.5,165,165,Open,M,110,Single-ply,B
-6,Martin Pavlán,,105.5,Colbert SSK Vítkovice,-155,-155,-155,,,Open,M,110,Single-ply,B
-7,Pavel Kantořík,,108.4,SK Kuřim,-190,-195,-200,,,Open,M,110,Single-ply,B
+DQ,Martin Pavlán,,105.5,Colbert SSK Vítkovice,-155,-155,-155,,,Open,M,110,Single-ply,B
+DQ,Pavel Kantořík,,108.4,SK Kuřim,-190,-195,-200,,,Open,M,110,Single-ply,B
 1,Michal Mihály,1966,122.4,SK Kuřim,230,237.5,-245,237.5,237.5,Open,M,125,Single-ply,B
 2,Tomáš Šeděnka,,115.9,Urtica Kopřivnice,212.5,220,222.5,222.5,222.5,Open,M,125,Single-ply,B
 3,Duška Havlásek,,117.8,Colbert SSK Vítkovice,207.5,215,217.5,217.5,217.5,Open,M,125,Single-ply,B

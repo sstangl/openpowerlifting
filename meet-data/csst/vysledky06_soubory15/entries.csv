@@ -8,7 +8,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 2,Tomáš Kocourek,1988,64.8,Rozsochatec,125,95,157.5,377.5,Sub-Juniors,M,67.5,Single-ply,SBD
 3,Radek Buček,1990,65.4,Sokol Vranovice,132.5,77.5,160,370,Sub-Juniors,M,67.5,Single-ply,SBD
 4,Bronislav Jílek,1990,62.5,TJ Svitavy,125,67.5,147.5,340,Sub-Juniors,M,67.5,Single-ply,SBD
-5,Martin Koumal,1989,63.9,Sokol Rosice,,,,,Sub-Juniors,M,67.5,Single-ply,SBD
+DQ,Martin Koumal,1989,63.9,Sokol Rosice,,,,,Sub-Juniors,M,67.5,Single-ply,SBD
 1,Jiří Furch,1975,74.1,Sokol Vranovice,162.5,152.5,195,510,Open,M,75,Single-ply,SBD
 2,David Lacko,1987,73.7,TJ Svitavy,190,112.5,200,502.5,Open,M,75,Single-ply,SBD
 3,Petr Voznička,1982,72.6,TJ Svitavy,180,112.5,190,482.5,Open,M,75,Single-ply,SBD
@@ -34,7 +34,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 4,Josef Ptáček,1953,88.8,TJ Spartak Pelhřimov,190,165,192.5,547.5,Masters 2,M,90,Single-ply,SBD
 5,Petr Markvart,1983,87.8,TJ Slavoj Pacov,190,120,230,540,Juniors,M,90,Single-ply,SBD
 6,Michal Skoupý,1981,89.5,SK Kuřim,190,110,210,510,Open,M,90,Single-ply,SBD
-7,Jakub Caha,1988,86.8,TJ Olympia Zlín,165,112.5,215,492.5,OpenS,M,90,Single-ply,SBD
+7,Jakub Caha,1988,86.8,TJ Olympia Zlín,165,112.5,215,492.5,Sub-Juniors,M,90,Single-ply,SBD
 8,Martin Skoupý,1983,82.9,SK Kuřim,170,100,220,490,Juniors,M,90,Single-ply,SBD
 9,Jan Caha,1988,88.2,TJ Třebíč,155,95,200,450,Sub-Juniors,M,90,Single-ply,SBD
 10,Jiří Schoř,1986,84.6,TJ Sokol Pohořelice,125,110,170,405,Juniors,M,90,Single-ply,SBD
@@ -49,7 +49,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 9,Vlastimil Novák,1982,91.4,Sokol Jemnice,180,142.5,230,552.5,Open,M,100,Single-ply,SBD
 10,Martin Fiala,1985,97.6,TJ Třebíč,190,120,215,525,Juniors,M,100,Single-ply,SBD
 11,Adolf Dostál,1988,98.4,Sokol Rosice,160,115,185,460,Sub-Juniors,M,100,Single-ply,SBD
-12,Martin Šumbera,1980,96.6,Sokol Rosice,200,150,,,Open,M,100,Single-ply,SBD
+DQ,Martin Šumbera,1980,96.6,Sokol Rosice,200,150,,,Open,M,100,Single-ply,SBD
 1,Jiří Partl,1977,109.3,KST Jihlava,255,190,300,745,Open,M,110,Single-ply,SBD
 2,Jakub Smejkal,1988,110,TJ Spartak Pelhřimov,230,162.5,270,662.5,Sub-Juniors,M,110,Single-ply,SBD
 3,Jan Smolka,1974,104.9,Chropyně,220,140,250,610,Open,M,110,Single-ply,SBD
@@ -60,6 +60,6 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 8,Jakub Havelka,1989,109.4,SK Kuřim,160,100,205,465,Sub-Juniors,M,110,Single-ply,SBD
 1,Stanislav Schmid,1978,120,Sokol Jemnice,260,200,295,755,Open,M,125,Single-ply,SBD
 2,Jiří Burian,1985,117,KST Jihlava,245,160,250,655,Juniors,M,125,Single-ply,SBD
-3,Pavel Kantořík,1976,116.5,SK Kuřim,,,,,Open,M,125,Single-ply,SBD
+DQ,Pavel Kantořík,1976,116.5,SK Kuřim,,,,,Open,M,125,Single-ply,SBD
 1,Jiří Valenta,1978,125.3,Sokol Jemnice,280,220,250,750,Open,M,125+,Single-ply,SBD
 2,Milan Mrázek,1958,134.7,Sokol Lanžhot,260,190,260,710,Masters 1,M,125+,Single-ply,SBD

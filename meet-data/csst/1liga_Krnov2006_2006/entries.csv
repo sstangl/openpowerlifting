@@ -1,20 +1,21 @@
-Place,Team,Name,BirthYear,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks,WeightClassKg,Equipment,Event
-1,PSK SPJ Union Praha,Václav Ackerman,1973,89.6,0.6398,190.0,275.0,725.0,463.855,Open,,
-Krošlák Petr,1967,84,1,0.6624,250.0,265.0,675.0,447.120,Open,,
-Šrámek Erik,1975,94,3,0.6241,170.0,200.0,500.0,312.050,Open,,
-Strache Ladislav,1974,85,8,0.6549,245.0,255.0,672.5,440.420,Open,,
-2,Viktorie Bohumín,David Chrupka,1977,102.7,0.6024,177.5,250.0,677.5,408.126,Open,,
-Turek Martin,1972,82,5,0.6699,215.0,220.0,595.0,398.591,Open,,
-Seidl Ondřej,1975,89,4,0.6406,242.5,242.5,640.0,409.984,Open,,
-Drexler Roman,1983,94,1,0.6247,210.0,230.0,590.0,368.573,Open,,
-3,Sokol Rosice,Václav Patočka,1977,86.2,0.6532,132.5,227.5,572.5,373.957,Open,,
-Johaník Roman,1986,88,7,0.6432,225.0,235.0,620.0,398.784,Open,,
-Šumbera Martin,1980,98,9,0.6113,200.0,230.0,582.5,356.082,Open,,
-Sedláček Martin,1986,67,3,0.7729,130.0,190.0,390.0,301.431,Open,,
-4,SK Factory Gym Litvínov,Radim Kopal,1974,81.5,0.6749,150.0,180.0,510.0,344.199,Open,,
-Jícha Milan,1983,80,2,0.6816,147.5,190.0,447.5,305.016,Open,,
-Kundrt Stanislav,1987,79,6,0.6849,185.0,192.5,505.0,345.875,Open,,
-Kozák Ludvík,1974,85,4,0.6566,187.5,217.5,550.0,361.130,Open,,
-5,TJ AS Mladá Boleslav,Zdeněk Čuban,1984,78.3,0.6922,130.0,245.0,602.5,417.051,Open,,
-Šudoma Zdeněk,1961,97,5,0.6150,250.0,240.0,640.0,393.600,Open,,
-Hunčovský Jan,1962,76,,0.7061,190.0,190.0,510.0,360.111,Open,,
+Place,Team,Name,BirthYear,BodyweightKg,Sex,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
+1,PSK SPJ Union Praha,Václav Ackerman,1973,89.6,M,260,190,275,725,SBD,Single-ply,Open
+1,PSK SPJ Union Praha,Petr Krošlák,1967,84.1,M,250,160,265,675,SBD,Single-ply,Open
+1,PSK SPJ Union Praha,Erik Šrámek,1975,94.3,M,170,130,200,500,SBD,Single-ply,Open
+1,PSK SPJ Union Praha,Ladislav Strache,1974,85.8,M,245,172.5,255,672.5,SBD,Single-ply,Open
+2,Viktorie Bohumín,David Chrupka,1977,102.7,M,250,177.5,250,677.5,SBD,Single-ply,Open
+2,Viktorie Bohumín,Martin Turek,1972,82.5,M,215,160,220,595,SBD,Single-ply,Open
+2,Viktorie Bohumín,Ondřej Seidl,1975,89.4,M,242.5,155,242.5,640,SBD,Single-ply,Open
+2,Viktorie Bohumín,Roman Drexler,1983,94.1,M,210,150,230,590,SBD,Single-ply,Open
+3,Sokol Rosice,Václav Patočka,1977,86.2,M,212.5,132.5,227.5,572.5,SBD,Single-ply,Open
+3,Sokol Rosice,Roman Johaník,1986,88.7,M,225,160,235,620,SBD,Single-ply,Open
+3,Sokol Rosice,Martin Šumbera,1980,98.9,M,200,152.5,230,582.5,SBD,Single-ply,Open
+3,Sokol Rosice,Martin Sedláček,1986,67.3,M,130,70,190,390,SBD,Single-ply,Open
+4,SK Factory Gym Litvínov,Radim Kopal,1974,81.5,M,180,150,180,510,SBD,Single-ply,Open
+4,SK Factory Gym Litvínov,Milan Jícha,1983,80.2,M,147.5,110,190,447.5,SBD,Single-ply,Open
+4,SK Factory Gym Litvínov,Stanislav Kundrt,1987,79.6,M,185,127.5,192.5,505,SBD,Single-ply,Open
+4,SK Factory Gym Litvínov,Ludvík Kozák,1974,85.4,M,187.5,145,217.5,550,SBD,Single-ply,Open
+5,TJ AS Mladá Boleslav,Zdeněk Čuban,1984,78.3,M,227.5,130,245,602.5,SBD,Single-ply,Open
+5,TJ AS Mladá Boleslav,Zdeněk Šudoma,1961,97.5,M,250,150,240,640,SBD,Single-ply,Open
+DQ,TJ AS Mladá Boleslav,Jan Weiss,1972,69.5,M,,,,,SBD,Single-ply,Open
+5,TJ AS Mladá Boleslav,Jan Hunčovský,1962,76,M,190,130,190,510,SBD,Single-ply,Open

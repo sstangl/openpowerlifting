@@ -1,12 +1,12 @@
 Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
 1,Jaroslav Planka,1968,59.6,TJ Lokomotiva Krnov,165,117.5,200,482.5,M,60,Single-ply,SBD
-1,Karel Ruso,1965,67,Sokol Nymburk,232.5,117.5,220,570,M,60,Single-ply,SBD
-2,Tomas Sestak,1973,66.8,TJ Viktorie Bohumín,210,112.5,227.5,550,M,60,Single-ply,SBD
-3,Roman Fornusek,1974,67.3,TJ SK Olympia Zlín,192.5,132.5,225,550,M,60,Single-ply,SBD
-4,Jiri Janecek,1961,67.5,Sokol Nymburk,197.5,137.5,210,545,M,60,Single-ply,SBD
-5,Jan Weiss,1972,66.7,TJ A.Mlada Boleslav,180,125,195,500,M,60,Single-ply,SBD
-6,Ivo Brazda,1971,66.4,Sokol Rosice,187.5,97.5,200,485,M,60,Single-ply,SBD
-7,Jiri Gajdosik,1962,67.5,TJ SK Olympia Zlín,170,115,192.5,477.5,M,60,Single-ply,SBD
+1,Karel Ruso,1965,67,Sokol Nymburk,232.5,117.5,220,570,M,67.5,Single-ply,SBD
+2,Tomas Sestak,1973,66.8,TJ Viktorie Bohumín,210,112.5,227.5,550,M,67.5,Single-ply,SBD
+3,Roman Fornusek,1974,67.3,TJ SK Olympia Zlín,192.5,132.5,225,550,M,67.5,Single-ply,SBD
+4,Jiri Janecek,1961,67.5,Sokol Nymburk,197.5,137.5,210,545,M,67.5,Single-ply,SBD
+5,Jan Weiss,1972,66.7,TJ A.Mlada Boleslav,180,125,195,500,M,67.5,Single-ply,SBD
+6,Ivo Brazda,1971,66.4,Sokol Rosice,187.5,97.5,200,485,M,67.5,Single-ply,SBD
+7,Jiri Gajdosik,1962,67.5,TJ SK Olympia Zlín,170,115,192.5,477.5,M,67.5,Single-ply,SBD
 1,Dusan Svarcbach,1975,74.7,TJ Banik Most,230,127.5,247.5,605,M,75,Single-ply,SBD
 2,Radim Jenik,1964,75,TJ Tatra Pribor,215,157.5,220,592.5,M,75,Single-ply,SBD
 3,Panaiotis Melios,1960,74.9,TJ Lokomotiva Krnov,200,142.5,207.5,550,M,75,Single-ply,SBD
@@ -17,7 +17,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 3,Pavel Platenik,1974,79,Sokol Vranovice,260,150,250,660,M,82.5,Single-ply,SBD
 4,Marek Zak,1981,79.7,TJ SK Olympia Zlín,215,135,230,580,M,82.5,Single-ply,SBD
 5,Libor Novak,1966,82.4,TJ Svitavy,200,150,222.5,572.5,M,82.5,Single-ply,SBD
-6,Jaroslav Stepan,1962,82.2,TJ Spartak Rokytnice,,,,,M,82.5,Single-ply,SBD
+DQ,Jaroslav Stepan,1962,82.2,TJ Spartak Rokytnice,,,,,M,82.5,Single-ply,SBD
 1,Miroslav Hubacek,1967,89.4,Sokol Nymburk,280,217.5,290,787.5,M,90,Single-ply,SBD
 2,Jiri Hornik,1978,86.7,TJ Banik Sokolov,250,190,290,730,M,90,Single-ply,SBD
 3,Tomas Sedlacek,1965,89.9,TJ Spartak Rokytnice,267.5,175,270,712.5,M,90,Single-ply,SBD
@@ -33,8 +33,8 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 5,Martin Urban,1968,98.5,Sokol Nymburk,250,150,292.5,692.5,M,100,Single-ply,SBD
 6,Jan Pinc,1973,97.2,Tatran Lomnice,242.5,180,267.5,690,M,100,Single-ply,SBD
 7,Karel Dolezal,1972,96.6,Sokol Nymburk,240,150,235,625,M,100,Single-ply,SBD
-8,Karel Pavlu,1963,94.3,Ateso Jablonec,-270,,,,M,100,Single-ply,SBD
-9,Jiri Uher,1969,97.2,Bymaco Bystrec,-250,,,,M,100,Single-ply,SBD
+DQ,Karel Pavlu,1963,94.3,Ateso Jablonec,-270,,,,M,100,Single-ply,SBD
+DQ,Jiri Uher,1969,97.2,Bymaco Bystrec,-250,,,,M,100,Single-ply,SBD
 1,Tomas Sarik,1975,108.8,Spartak Jihlava,280,200,310,790,M,110,Single-ply,SBD
 2,Vratislav Cech,1965,105.5,SK Olympia Zlin,270,,327.5,772.5,M,110,Single-ply,SBD
 3,Zoltan Kanat,1962,101.8,Spartak Chodov,280,200,290,770,M,110,Single-ply,SBD
@@ -51,4 +51,4 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 1,Iveta Peske,1974,55.3,SKSD Frydek Mistek,100,55,130,285,F,56,Single-ply,SBD
 2,Lucie Sirochmanova,1977,54.9,TJ Spartak Chodov,105,62.5,115,282.5,F,56,Single-ply,SBD
 1,Adina Hykova,1943,57.8,SK VV Cheb,137.5,75,155,367.5,F,60,Single-ply,SBD
-1,Dana Kafkova,1976,67.2,SK VV Cheb,180,87.5,185,462.5,F,67.5,Single-ply,SBD
+1,Dana Kafkova,1976,67.2,SK VV Cheb,180,87.5,185,452.5,F,67.5,Single-ply,SBD

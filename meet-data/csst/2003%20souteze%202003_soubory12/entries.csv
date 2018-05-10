@@ -4,11 +4,11 @@ Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,TotalKg,Sex,WeightClassKg,Equ
 1,Jana Došlíková,1968,59.9,TJ Autobrzdy Jablon,87.5,87.5,F,60,Single-ply,B
 2,Adina Hyková,1943,58.8,TJ TZ Rakovník,67.5,67.5,F,60,Single-ply,B
 1,Jana Stejskalová,1970,71.6,SK SC Most,70,70,F,75,Single-ply,B
-1,Hana Takáčová,1954,78.1,TJ Spartak Chodov,122.5,122.5,F,82,Single-ply,B
-2,Martina Baráková,1971,82.1,FS TOTZI Klášterec,75,75,F,82,Single-ply,B
+1,Hana Takáčová,1954,78.1,TJ Spartak Chodov,122.5,122.5,F,82.5,Single-ply,B
+2,Martina Baráková,1971,82.1,FS TOTZI Klášterec,75,75,F,82.5,Single-ply,B
 1,Miroslav Hubka,1968,59.4,TJ TZ Rakovník,117.5,117.5,M,60,Single-ply,B
-2,Jan Weiss,1972,67.3,AS Ml.Boleslavslav,130,130,M,67,Single-ply,B
-DQ,Jarosla Zdobinsky,1960,63.6,Sokol Žižkov Praha,,,M,67,Single-ply,B
+2,Jan Weiss,1972,67.3,AS Ml.Boleslavslav,130,130,M,67.5,Single-ply,B
+DQ,Jarosla Zdobinsky,1960,63.6,Sokol Žižkov Praha,,,M,67.5,Single-ply,B
 1,Bohumil Blažek,1976,73.4,Gate Gym Ml.Boleslav,150,150,M,75,Single-ply,B
 2,Martin Dolejš,1970,73.4,TJ Sokol Vejprnice,150,150,M,75,Single-ply,B
 3,Petr Hrubý,1952,74.7,B.Sokolov,150,150,M,75,Single-ply,B
@@ -18,12 +18,12 @@ DQ,Jarosla Zdobinsky,1960,63.6,Sokol Žižkov Praha,,,M,67,Single-ply,B
 7,Pavel Plesar,1960,73.3,TJ Turnov,132.5,132.5,M,75,Single-ply,B
 8,Štěpán Vondráček,1973,73.9,FC Příbram,125,125,M,75,Single-ply,B
 DQ,Václav Tirala,1983,74.2,SK V&V Cheb,,,M,75,Single-ply,B
-1,Tomáš Ježek,1960,81,FC Příbram,187.5,187.5,M,82,Single-ply,B
-2,Vladimír Medek,1964,81.1,TJ Sp Rokytnice,172.5,172.5,M,82,Single-ply,B
-3,Miroslav Paukert,1963,81.7,Sušice,160,160,M,82,Single-ply,B
-4,René Hrubý,1975,80.9,TJ Rotava,150,150,M,82,Single-ply,B
-5,Jaroslav Štěpán,1962,80.3,TJ Sp Rokytnice,147.5,147.5,M,82,Single-ply,B
-6,Karel Olič,1947,80.9,TJ Kaucuk Kralupy,130,130,M,82,Single-ply,B
+1,Tomáš Ježek,1960,81,FC Příbram,187.5,187.5,M,82.5,Single-ply,B
+2,Vladimír Medek,1964,81.1,TJ Sp Rokytnice,172.5,172.5,M,82.5,Single-ply,B
+3,Miroslav Paukert,1963,81.7,Sušice,160,160,M,82.5,Single-ply,B
+4,René Hrubý,1975,80.9,TJ Rotava,150,150,M,82.5,Single-ply,B
+5,Jaroslav Štěpán,1962,80.3,TJ Sp Rokytnice,147.5,147.5,M,82.5,Single-ply,B
+6,Karel Olič,1947,80.9,TJ Kaucuk Kralupy,130,130,M,82.5,Single-ply,B
 1,František Oračko,1978,89.2,Sokol Mělník,180,180,M,90,Single-ply,B
 2,Zdeněk Ciprijan,1974,88.3,SK SC Most,177.5,177.5,M,90,Single-ply,B
 3,Vlastimil Havrlík,1980,89.5,FC Příbram,175,175,M,90,Single-ply,B
@@ -56,6 +56,6 @@ DQ,Daniel Bachan,1971,99.1,Sokol Vršovice,,,M,100,Single-ply,B
 5,Jiří Krčmář,1962,112.3,Gate Gym Ml.Boleslav,180,180,M,125,Single-ply,B
 6,Tomáš Turner,1972,120.9,Tachov,180,180,M,125,Single-ply,B
 7,Ivan Veselý,1949,122.6,TJ Kaucuk Kralupy,162.5,162.5,M,125,Single-ply,B
-1,Zdeněk Sedmík,1974,137.9,SK SC Most,270,270,M,125,Single-ply,B
-2,Josef Šoukal,1972,127.6,TJ Sokol Vejprnice,205,205,M,125,Single-ply,B
-3,Jan Peterka,1955,163.4,TJ Rotava,175,175,M,125,Single-ply,B
+1,Zdeněk Sedmík,1974,137.9,SK SC Most,270,270,M,125+,Single-ply,B
+2,Josef Šoukal,1972,127.6,TJ Sokol Vejprnice,205,205,M,125+,Single-ply,B
+3,Jan Peterka,1955,163.4,TJ Rotava,175,175,M,125+,Single-ply,B
