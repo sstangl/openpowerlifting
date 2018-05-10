@@ -9,6 +9,9 @@ extern crate rocket_contrib;
 extern crate serde;
 extern crate strum;
 
+#[cfg(test)]
+mod tests;
+
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect};
@@ -108,8 +111,8 @@ fn statics(file: PathBuf) -> Option<NamedFile> {
 #[get("/rankings/<selections..>")]
 fn rankings(
     selections: PathBuf,
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -132,8 +135,8 @@ fn rankings_redirect() -> Redirect {
 #[get("/u/<username>")]
 fn lifter(
     username: String,
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Result<Template, Redirect>> {
@@ -158,8 +161,8 @@ fn lifter(
 #[get("/m/<meetpath..>")]
 fn meet(
     meetpath: PathBuf,
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -180,8 +183,8 @@ fn meet(
 
 #[get("/status")]
 fn status(
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -192,7 +195,7 @@ fn status(
 
 #[get("/data")]
 fn data(
-    langinfo: State<langpack::LangInfo>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -203,7 +206,7 @@ fn data(
 
 #[get("/faq")]
 fn faq(
-    langinfo: State<langpack::LangInfo>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -214,7 +217,7 @@ fn faq(
 
 #[get("/contact")]
 fn contact(
-    langinfo: State<langpack::LangInfo>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -225,8 +228,8 @@ fn contact(
 
 #[get("/")]
 fn index(
-    opldb: State<opldb::OplDb>,
-    langinfo: State<langpack::LangInfo>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
@@ -246,7 +249,18 @@ fn internal_error() -> &'static str {
     "500"
 }
 
-fn rocket(opldb: opldb::OplDb, langinfo: langpack::LangInfo) -> rocket::Rocket {
+// Tests want to load the data only once.
+#[cfg(not(test))]
+type ManagedOplDb = opldb::OplDb;
+#[cfg(test)]
+type ManagedOplDb = &'static opldb::OplDb;
+
+#[cfg(not(test))]
+type ManagedLangInfo = langpack::LangInfo;
+#[cfg(test)]
+type ManagedLangInfo = &'static langpack::LangInfo;
+
+fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
@@ -284,6 +298,15 @@ fn load_translations_or_exit(
         .ok();
 }
 
+fn load_langinfo() -> LangInfo {
+    let mut langinfo = langpack::LangInfo::new();
+    for language in Language::iter() {
+        let path = format!("translations/{}.json", language);
+        load_translations_or_exit(&mut langinfo, language, &path);
+    }
+    langinfo
+}
+
 fn get_envvar_or_exit(key: &str) -> String {
     env::var(key)
         .map_err(|_| {
@@ -315,13 +338,9 @@ fn main() {
 
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
-    // Load translations.
-    let mut langinfo = langpack::LangInfo::new();
-    for language in Language::iter() {
-        let path = format!("translations/{}.json", language);
-        load_translations_or_exit(&mut langinfo, language, &path);
-    }
+    #[allow(unused_variables)]
+    let langinfo = load_langinfo();
 
-    // Run the server loop.
+    #[cfg(not(test))]
     rocket(opldb, langinfo).launch();
 }
