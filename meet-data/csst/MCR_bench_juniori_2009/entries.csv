@@ -1,28 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Veronika Vaclová,1986,66.3,SK Kuřim,70,-75,75,75,75,Juniors,67.5,Single-ply,B
-2,Martina Koutňáková,1990,64.2,TJ Sokol Jemnice,45,52.5,-60,52.5,52.5,Juniors,67.5,Single-ply,B
-1,Bronislav Šlichta,1987,58.6,SkST Lednice,90,102.5,105,105,105,Juniors,60,Single-ply,B
-2,Tomáš Skořepa,1989,59.5,TJ Sokol Nymburk,90,95,-100,95,95,Juniors,60,Single-ply,B
-1,Lukáš Krejčí,1990,63.6,KK a ST TJ Třebíč,110,120,-122.5,120,120,Juniors,67.5,Single-ply,B
-2,Michal Pelikán,1986,66.1,SK Kuřim,112.5,117.5,-137.5,117.5,117.5,Juniors,67.5,Single-ply,B
-3,Marek Jelínek,1990,62.6,TJ AS Mladá Boleslav,105,115,-120,115,115,Juniors,67.5,Single-ply,B
-1,Jakub Sedláček,1988,74.5,TJ Spartak Rokytnice n.J.,160,190,200,200,200,Juniors,75,Single-ply,B
-2,Ondřej Gyömber,1990,69.8,TJ Tatran Sedlčany,115,125,-135,125,125,Juniors,75,Single-ply,B
-3,Jiří Došlík,1989,73.5,TJ Autobrzdy Jablonec,110,120,-127.5,120,120,Juniors,75,Single-ply,B
-1,Zdeněk Hruška,1986,82,Sokol Klatovy,170,175,-185.5,175,175,Juniors,82.5,Single-ply,B
-2,Zdeněk Tuháček,1986,77,TJ Kaučuk Kralupy,155,165,172.5,172.5,172.5,Juniors,82.5,Single-ply,B
-3,Tomáš Trnka,1989,78.7,KST Jihlava,160,165,167.5,167.5,167.5,Juniors,82.5,Single-ply,B
-4,Ondřej Beran,1988,81.7,TJ Sokol Vršovice,167.5,-170,-170,167.5,167.5,Juniors,82.5,Single-ply,B
-5,Roman Paukert,1988,80.2,KST FC Příbram,-165,165,-170,165,165,Juniors,82.5,Single-ply,B
-6,Milan Vácha,1987,81.3,KST FC Příbram,140,150,-155,150,150,Juniors,82.5,Single-ply,B
-7,Ondřej Polák,1989,78,TJ Autobrzdy Jablonec,140,-145,-150,140,140,Juniors,82.5,Single-ply,B
-1,Miloš Hýbl,1986,88.9,SK Kuřim,200,207.5,,207.5,207.5,Juniors,90,Single-ply,B
-2,Roman Johaník,1986,85.3,TJ Sp.Uherský Brod,170,-185,-185,170,170,Juniors,90,Single-ply,B
-3,Jiří Tkadlčík,1989,89.2,TJ Sokol Jemnice,135,140,-145,140,140,Juniors,90,Single-ply,B
-1,Jiří Schoř,1986,92,TJ Sokol Pohořelice,165,-170,-170,165,165,Juniors,100,Single-ply,B
-2,Petr Holuša,1987,96.1,Colbert Club Vítkovice,162.5,165,-170,165,165,Juniors,100,Single-ply,B
-3,Lukáš Nejdl,1987,92.9,TJ AS Mladá Boleslav,140,145,147.5,147.5,147.5,Juniors,100,Single-ply,B
-4,Martin Kozák,1990,91.2,TJ Sokol Nymburk,135,-142.5,-142.5,135,135,Juniors,100,Single-ply,B
-5,Miroslav Prokůpek,1989,96.5,TJ Tatran Sedlčany,130,-140,-147.5,130,130,Juniors,100,Single-ply,B
-DQ,Tomáš Zechmeister,1986,93.7,SK Kuřím,-170,-180,-185,,,Juniors,100,Single-ply,B
-1,Jaroslav Hnětynka,1989,126,TJ Autobrzdy Jablonec,140,150,155,155,155,Juniors,125+,Single-ply,B
+Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Veronika Vaclová,1986,66.3,SK Kuřim,70,-75,75,75,75,Juniors,67.5,Single-ply,B,F
+2,Martina Koutňáková,1990,64.2,TJ Sokol Jemnice,45,52.5,-60,52.5,52.5,Juniors,67.5,Single-ply,B,F
+1,Bronislav Šlichta,1987,58.6,SkST Lednice,90,102.5,105,105,105,Juniors,60,Single-ply,B,M
+2,Tomáš Skořepa,1989,59.5,TJ Sokol Nymburk,90,95,-100,95,95,Juniors,60,Single-ply,B,M
+1,Lukáš Krejčí,1990,63.6,KK a ST TJ Třebíč,110,120,-122.5,120,120,Juniors,67.5,Single-ply,B,M
+2,Michal Pelikán,1986,66.1,SK Kuřim,112.5,117.5,-137.5,117.5,117.5,Juniors,67.5,Single-ply,B,M
+3,Marek Jelínek,1990,62.6,TJ AS Mladá Boleslav,105,115,-120,115,115,Juniors,67.5,Single-ply,B,M
+1,Jakub Sedláček,1988,74.5,TJ Spartak Rokytnice n.J.,160,190,200,200,200,Juniors,75,Single-ply,B,M
+2,Ondřej Gyömber,1990,69.8,TJ Tatran Sedlčany,115,125,-135,125,125,Juniors,75,Single-ply,B,M
+3,Jiří Došlík,1989,73.5,TJ Autobrzdy Jablonec,110,120,-127.5,120,120,Juniors,75,Single-ply,B,M
+1,Zdeněk Hruška,1986,82,Sokol Klatovy,170,175,-185.5,175,175,Juniors,82.5,Single-ply,B,M
+2,Zdeněk Tuháček,1986,77,TJ Kaučuk Kralupy,155,165,172.5,172.5,172.5,Juniors,82.5,Single-ply,B,M
+3,Tomáš Trnka,1989,78.7,KST Jihlava,160,165,167.5,167.5,167.5,Juniors,82.5,Single-ply,B,M
+4,Ondřej Beran,1988,81.7,TJ Sokol Vršovice,167.5,-170,-170,167.5,167.5,Juniors,82.5,Single-ply,B,M
+5,Roman Paukert,1988,80.2,KST FC Příbram,-165,165,-170,165,165,Juniors,82.5,Single-ply,B,M
+6,Milan Vácha,1987,81.3,KST FC Příbram,140,150,-155,150,150,Juniors,82.5,Single-ply,B,M
+7,Ondřej Polák,1989,78,TJ Autobrzdy Jablonec,140,-145,-150,140,140,Juniors,82.5,Single-ply,B,M
+1,Miloš Hýbl,1986,88.9,SK Kuřim,200,207.5,,207.5,207.5,Juniors,90,Single-ply,B,M
+2,Roman Johaník,1986,85.3,TJ Sp.Uherský Brod,170,-185,-185,170,170,Juniors,90,Single-ply,B,M
+3,Jiří Tkadlčík,1989,89.2,TJ Sokol Jemnice,135,140,-145,140,140,Juniors,90,Single-ply,B,M
+1,Jiří Schoř,1986,92,TJ Sokol Pohořelice,165,-170,-170,165,165,Juniors,100,Single-ply,B,M
+2,Petr Holuša,1987,96.1,Colbert Club Vítkovice,162.5,165,-170,165,165,Juniors,100,Single-ply,B,M
+3,Lukáš Nejdl,1987,92.9,TJ AS Mladá Boleslav,140,145,147.5,147.5,147.5,Juniors,100,Single-ply,B,M
+4,Martin Kozák,1990,91.2,TJ Sokol Nymburk,135,-142.5,-142.5,135,135,Juniors,100,Single-ply,B,M
+5,Miroslav Prokůpek,1989,96.5,TJ Tatran Sedlčany,130,-140,-147.5,130,130,Juniors,100,Single-ply,B,M
+DQ,Tomáš Zechmeister,1986,93.7,SK Kuřím,-170,-180,-185,,,Juniors,100,Single-ply,B,M
+1,Jaroslav Hnětynka,1989,126,TJ Autobrzdy Jablonec,140,150,155,155,155,Juniors,125+,Single-ply,B,M

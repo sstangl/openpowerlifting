@@ -1,30 +1,30 @@
-Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Bronislav Tvrdoň,1971,TJ Sokol Pohořelice,59.4,180.0,117.5,160.0,457.5,Open,60,Single-ply,SBD
-1,Tomáš Lacko,1982,TJ Svitavy,74.7,257.5,175.0,240.0,672.5,Open,75,Single-ply,SBD
-2,Michal Sicha,1980,SKST Lednice,74.2,205.0,152.5,217.5,575.0,Open,75,Single-ply,SBD
-3,Petr Zámečník,1966,TJ Olympia Zlín,75.0,207.5,130.0,237.5,575.0,Open,75,Single-ply,SBD
-4,Štěpán Hoza,1974,TJ Sokol Těškovice,71.2,205.0,125.0,210.0,540.0,Open,75,Single-ply,SBD
-5,Petr Voznička,1982,TJ Svitavy,72.3,200.0,115.0,195.0,510.0,Open,75,Single-ply,SBD
-1,Pavel Pláteník,1974,Sokol Vranovice,81.1,262.5,155.0,240.0,657.5,Open,82.5,Single-ply,SBD
-2,Libor Novák,1966,TJ Svitavy,82.1,220.0,165.0,237.5,622.5,Open,82.5,Single-ply,SBD
-3,Marek Hejtmánek,1973,TJ Svitavy,82.5,220.0,150.0,250.0,620.0,Open,82.5,Single-ply,SBD
-4,Tomáš Trávník,1985,Sokol Vranovice,82.4,215.0,120.0,205.0,540.0,Open,82.5,Single-ply,SBD
-5,Jiří Furch,1975,Sokol Vranovice,80.4,177.5,142.5,195.0,515.0,Open,82.5,Single-ply,SBD
-1,Zdeněk Kučera,1973,TJ Sokol Pohořelice,89.4,275.0,195.0,245.0,715.0,Open,90,Single-ply,SBD
-2,David Martinec,1983,TJ Sokol Pohořelice,88.6,195.0,150.0,210.0,555.0,Open,90,Single-ply,SBD
-1,Jiří Zimula,1983,SK Kuřím,98.8,275.0,170.0,280.0,725.0,Open,100,Single-ply,SBD
-2,Antonín Pavlovec,1981,Colbert Club SSK Vítkovice,99.5,270.0,180.0,250.0,700.0,Open,100,Single-ply,SBD
-3,Petr Vlach,1981,TJ Loko Krnov,95.5,240.0,160.0,255.0,655.0,Open,100,Single-ply,SBD
-4,Oldřich Halfar,1973,Sokol Vranovice,96.3,190.0,140.0,217.5,547.5,Open,100,Single-ply,SBD
-5,Marek Pokorný,1975,OST Zbýšov,99.9,225.0,,,225.0,Open,100,Single-ply,S
-1,Roman Svoboda,1973,TJ Spartak Pelhřimov,107.8,255.0,200.0,275.0,730.0,Open,110,Single-ply,SBD
-2,Jan Schmidt,1976,TJ Olympia Zlín,108.9,245.0,160.0,305.0,710.0,Open,110,Single-ply,SBD
-3,Vladimír Pop,1975,SK Kuřím,107.8,265.0,175.0,265.0,705.0,Open,110,Single-ply,SBD
-4,Pavel Fučík,1978,TJ Sokol Pohořelice,108.8,285.0,185.0,235.0,705.0,Open,110,Single-ply,SBD
-5,Petr Bolf,1987,SK Kuřím,108.6,210.0,225.0,240.0,675.0,Open,110,Single-ply,SBD
-6,Marek Kukula,1974,TJ Sokol Pohořelice,108.2,255.0,150.0,250.0,655.0,Open,110,Single-ply,SBD
-7,Pavel Kantořík,1976,SK Kuřím,109.3,,195.0,240.0,435.0,Open,110,Single-ply,BD
-1,Martin Šumbera,1980,Sokol Rosice,117.7,300.0,230.0,270.0,800.0,Open,125,Single-ply,SBD
-2,David Coufal,1980,OST Zbýšov,115.3,265.0,175.0,260.0,700.0,Open,125,Single-ply,SBD
-1,Pavel Kaňák,1985,TJ Olympia Zlín,136.5,250.0,180.0,280.0,710.0,Open,125+,Single-ply,SBD
-2,Milan Mrázek,1958,TJ Sokol Lanžhot,134.9,240.0,200.0,240.0,680.0,Open,125+,Single-ply,SBD
+Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Bronislav Tvrdoň,1971,TJ Sokol Pohořelice,59.4,180.0,117.5,160.0,457.5,Open,60,Single-ply,SBD,M
+1,Tomáš Lacko,1982,TJ Svitavy,74.7,257.5,175.0,240.0,672.5,Open,75,Single-ply,SBD,M
+2,Michal Sicha,1980,SKST Lednice,74.2,205.0,152.5,217.5,575.0,Open,75,Single-ply,SBD,M
+3,Petr Zámečník,1966,TJ Olympia Zlín,75.0,207.5,130.0,237.5,575.0,Open,75,Single-ply,SBD,M
+4,Štěpán Hoza,1974,TJ Sokol Těškovice,71.2,205.0,125.0,210.0,540.0,Open,75,Single-ply,SBD,M
+5,Petr Voznička,1982,TJ Svitavy,72.3,200.0,115.0,195.0,510.0,Open,75,Single-ply,SBD,M
+1,Pavel Pláteník,1974,Sokol Vranovice,81.1,262.5,155.0,240.0,657.5,Open,82.5,Single-ply,SBD,M
+2,Libor Novák,1966,TJ Svitavy,82.1,220.0,165.0,237.5,622.5,Open,82.5,Single-ply,SBD,M
+3,Marek Hejtmánek,1973,TJ Svitavy,82.5,220.0,150.0,250.0,620.0,Open,82.5,Single-ply,SBD,M
+4,Tomáš Trávník,1985,Sokol Vranovice,82.4,215.0,120.0,205.0,540.0,Open,82.5,Single-ply,SBD,M
+5,Jiří Furch,1975,Sokol Vranovice,80.4,177.5,142.5,195.0,515.0,Open,82.5,Single-ply,SBD,M
+1,Zdeněk Kučera,1973,TJ Sokol Pohořelice,89.4,275.0,195.0,245.0,715.0,Open,90,Single-ply,SBD,M
+2,David Martinec,1983,TJ Sokol Pohořelice,88.6,195.0,150.0,210.0,555.0,Open,90,Single-ply,SBD,M
+1,Jiří Zimula,1983,SK Kuřím,98.8,275.0,170.0,280.0,725.0,Open,100,Single-ply,SBD,M
+2,Antonín Pavlovec,1981,Colbert Club SSK Vítkovice,99.5,270.0,180.0,250.0,700.0,Open,100,Single-ply,SBD,M
+3,Petr Vlach,1981,TJ Loko Krnov,95.5,240.0,160.0,255.0,655.0,Open,100,Single-ply,SBD,M
+4,Oldřich Halfar,1973,Sokol Vranovice,96.3,190.0,140.0,217.5,547.5,Open,100,Single-ply,SBD,M
+5,Marek Pokorný,1975,OST Zbýšov,99.9,225.0,,,225.0,Open,100,Single-ply,S,M
+1,Roman Svoboda,1973,TJ Spartak Pelhřimov,107.8,255.0,200.0,275.0,730.0,Open,110,Single-ply,SBD,M
+2,Jan Schmidt,1976,TJ Olympia Zlín,108.9,245.0,160.0,305.0,710.0,Open,110,Single-ply,SBD,M
+3,Vladimír Pop,1975,SK Kuřím,107.8,265.0,175.0,265.0,705.0,Open,110,Single-ply,SBD,M
+4,Pavel Fučík,1978,TJ Sokol Pohořelice,108.8,285.0,185.0,235.0,705.0,Open,110,Single-ply,SBD,M
+5,Petr Bolf,1987,SK Kuřím,108.6,210.0,225.0,240.0,675.0,Open,110,Single-ply,SBD,M
+6,Marek Kukula,1974,TJ Sokol Pohořelice,108.2,255.0,150.0,250.0,655.0,Open,110,Single-ply,SBD,M
+7,Pavel Kantořík,1976,SK Kuřím,109.3,,195.0,240.0,435.0,Open,110,Single-ply,BD,M
+1,Martin Šumbera,1980,Sokol Rosice,117.7,300.0,230.0,270.0,800.0,Open,125,Single-ply,SBD,M
+2,David Coufal,1980,OST Zbýšov,115.3,265.0,175.0,260.0,700.0,Open,125,Single-ply,SBD,M
+1,Pavel Kaňák,1985,TJ Olympia Zlín,136.5,250.0,180.0,280.0,710.0,Open,125+,Single-ply,SBD,M
+2,Milan Mrázek,1958,TJ Sokol Lanžhot,134.9,240.0,200.0,240.0,680.0,Open,125+,Single-ply,SBD,M

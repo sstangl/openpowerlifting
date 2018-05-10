@@ -1,29 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Markéta Kovrzková,1993,59.3,SK Power.Fit Ml.Boleslav,115,65,120,300,Sub-Juniors,60,Single-ply,SBD
-1,René Hoza,1993,71.2,TJ Sokol Těškovice,195,107.5,185,487.5,Sub-Juniors,75,Single-ply,SBD
-2,Miroslav Dudáček,1992,71.9,SKST Litvínov,175,107.5,180,462.5,Sub-Juniors,75,Single-ply,SBD
-3,Jan Vrzal,1992,75,KST Jihlava,170,87.5,180,437.5,Sub-Juniors,75,Single-ply,SBD
-1,Marcel Murárik,1992,79.9,SKST Litvínov,190,117.5,180,487.5,Sub-Juniors,82.5,Single-ply,SBD
-2,Jan Grézl,1993,81.1,TJ Lokomotiva Krnov,135,120,180,435,Sub-Juniors,82.5,Single-ply,SBD
-1,Adam Smolík,1992,88.1,TJ Spartak Uh.Brod,217.5,150,232.5,600,Sub-Juniors,90,Single-ply,SBD
-1,Tomáš Turek,1994,91,TJ Viktoria Bohumín,185,110,185,480,Sub-Juniors,100,Single-ply,SBD
-1,Antonín Aulický,1992,118.2,Vitalmax Dětřichov,300,200,280,780,Sub-Juniors,125,Single-ply,SBD
-2,Pavel Bartošík,1992,110.1,GITA Podivín,220,150,260,630,Sub-Juniors,125,Single-ply,SBD
-1,Lenka Goliášová,1988,67.2,XX Treme Praha,75,67.5,132.5,275,Juniors,67.5,Single-ply,SBD
-1,Martina Koutňáková,1990,69.6,Sokol Jemnice,115,77.5,140,332.5,Juniors,75,Single-ply,SBD
-1,Libor Škrobáček,1991,67,TJ Sokol Lanžhot,130,110,187.5,427.5,Juniors,67.5,Single-ply,SBD
-2,Tomáš Skořepa,1989,65.6,TJ.Sokol Nymburk,160,105,160,425,Juniors,67.5,Single-ply,SBD
-1,David Lacko,1987,74.8,TJ Svitavy,200,122.5,202.5,525,Juniors,75,Single-ply,SBD
-2,Bruno Schinkmann,1991,74.6,SK Power Fit.Ml.Boleslav,200,97.5,202.5,500,Juniors,75,Single-ply,SBD
-3,Lukáš Tomčák,1991,72.7,TJ Lokomotiva Krnov,185,115,190,490,Juniors,75,Single-ply,SBD
-DQ,Michal Polák,1991,73.1,TJ Spartak Uh.Brod,160,,200,,Juniors,75,Single-ply,SBD
-1,Jakub Sedláček,1988,80.9,TJ Spartak Rokytnice,290,200,255,745,Juniors,82.5,Single-ply,SBD
-2,Lukáš Tkadlec,1989,80.9,TJ Zekon Bystřice p.H.,260,170,225,655,Juniors,82.5,Single-ply,SBD
-1,Ondřej Polák,1989,82.8,TJ Autobrzdy Jablonec,215,152.5,232.5,600,Juniors,90,Single-ply,SBD
-2,Stanislav Kundrt,1987,86.2,SKST Litvínov,215,150,215,580,Juniors,90,Single-ply,SBD
-1,Ondřej Houžvička,1990,97.7,Sokol Nymburk,245,165,260,670,Juniors,100,Single-ply,SBD
-2,Patrik Navara,1991,95.6,TJ Sokol Bořislav,225,170,240,635,Juniors,100,Single-ply,SBD
-1,David Lupač,1991,106,TJ Sokol Jemnice,310,225,280,815,Juniors,110,Single-ply,SBD
-2,Jan Fiala,1987,105.3,TJ Lokomotiva Krnov,270,150,220,640,Juniors,110,Single-ply,SBD
-1,Miroslav Pavlíček,1987,110.2,TJ Sokol Praha-Vršovice,230,140,240,610,Juniors,125,Single-ply,SBD
-2,Marián Odler,1988,120.2,TJ Olympia Zlín,220,135,222.5,577.5,Juniors,125,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Markéta Kovrzková,1993,59.3,SK Power.Fit Ml.Boleslav,115,65,120,300,Sub-Juniors,60,Single-ply,SBD,F
+1,René Hoza,1993,71.2,TJ Sokol Těškovice,195,107.5,185,487.5,Sub-Juniors,75,Single-ply,SBD,M
+2,Miroslav Dudáček,1992,71.9,SKST Litvínov,175,107.5,180,462.5,Sub-Juniors,75,Single-ply,SBD,M
+3,Jan Vrzal,1992,75,KST Jihlava,170,87.5,180,437.5,Sub-Juniors,75,Single-ply,SBD,M
+1,Marcel Murárik,1992,79.9,SKST Litvínov,190,117.5,180,487.5,Sub-Juniors,82.5,Single-ply,SBD,M
+2,Jan Grézl,1993,81.1,TJ Lokomotiva Krnov,135,120,180,435,Sub-Juniors,82.5,Single-ply,SBD,M
+1,Adam Smolík,1992,88.1,TJ Spartak Uh.Brod,217.5,150,232.5,600,Sub-Juniors,90,Single-ply,SBD,M
+1,Tomáš Turek,1994,91,TJ Viktoria Bohumín,185,110,185,480,Sub-Juniors,100,Single-ply,SBD,M
+1,Antonín Aulický,1992,118.2,Vitalmax Dětřichov,300,200,280,780,Sub-Juniors,125,Single-ply,SBD,M
+2,Pavel Bartošík,1992,110.1,GITA Podivín,220,150,260,630,Sub-Juniors,125,Single-ply,SBD,M
+1,Lenka Goliášová,1988,67.2,XX Treme Praha,75,67.5,132.5,275,Juniors,67.5,Single-ply,SBD,F
+1,Martina Koutňáková,1990,69.6,Sokol Jemnice,115,77.5,140,332.5,Juniors,75,Single-ply,SBD,F
+1,Libor Škrobáček,1991,67,TJ Sokol Lanžhot,130,110,187.5,427.5,Juniors,67.5,Single-ply,SBD,M
+2,Tomáš Skořepa,1989,65.6,TJ.Sokol Nymburk,160,105,160,425,Juniors,67.5,Single-ply,SBD,M
+1,David Lacko,1987,74.8,TJ Svitavy,200,122.5,202.5,525,Juniors,75,Single-ply,SBD,M
+2,Bruno Schinkmann,1991,74.6,SK Power Fit.Ml.Boleslav,200,97.5,202.5,500,Juniors,75,Single-ply,SBD,M
+3,Lukáš Tomčák,1991,72.7,TJ Lokomotiva Krnov,185,115,190,490,Juniors,75,Single-ply,SBD,M
+DQ,Michal Polák,1991,73.1,TJ Spartak Uh.Brod,160,,200,,Juniors,75,Single-ply,SBD,M
+1,Jakub Sedláček,1988,80.9,TJ Spartak Rokytnice,290,200,255,745,Juniors,82.5,Single-ply,SBD,M
+2,Lukáš Tkadlec,1989,80.9,TJ Zekon Bystřice p.H.,260,170,225,655,Juniors,82.5,Single-ply,SBD,M
+1,Ondřej Polák,1989,82.8,TJ Autobrzdy Jablonec,215,152.5,232.5,600,Juniors,90,Single-ply,SBD,M
+2,Stanislav Kundrt,1987,86.2,SKST Litvínov,215,150,215,580,Juniors,90,Single-ply,SBD,M
+1,Ondřej Houžvička,1990,97.7,Sokol Nymburk,245,165,260,670,Juniors,100,Single-ply,SBD,M
+2,Patrik Navara,1991,95.6,TJ Sokol Bořislav,225,170,240,635,Juniors,100,Single-ply,SBD,M
+1,David Lupač,1991,106,TJ Sokol Jemnice,310,225,280,815,Juniors,110,Single-ply,SBD,M
+2,Jan Fiala,1987,105.3,TJ Lokomotiva Krnov,270,150,220,640,Juniors,110,Single-ply,SBD,M
+1,Miroslav Pavlíček,1987,110.2,TJ Sokol Praha-Vršovice,230,140,240,610,Juniors,125,Single-ply,SBD,M
+2,Marián Odler,1988,120.2,TJ Olympia Zlín,220,135,222.5,577.5,Juniors,125,Single-ply,SBD,M

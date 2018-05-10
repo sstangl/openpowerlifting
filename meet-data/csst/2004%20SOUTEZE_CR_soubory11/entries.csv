@@ -1,21 +1,21 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event
-1,TJ Olympia Zlín A,Tomáš Šárik,1975,116.7,290,250,305,845,Open,Single-ply,SBD
-1,TJ Olympia Zlín A,Marek Žák,1981,81.7,265,165,255,685,Juniors,Single-ply,SBD
-1,TJ Olympia Zlín A,Kamil Večeřa,1978,75.4,222.5,180,245,647.5,Open,Single-ply,SBD
-1,TJ Olympia Zlín A,Jiří Gryga,1968,105.4,280,175,300,755,Open,Single-ply,SBD
-2,TJ Svitavy A,Petr Theuser,1961,98.4,335,215,280,830,Masters 1,Single-ply,SBD
-2,TJ Svitavy A,Lukáš Theuser,1981,77.8,277.5,152.5,262.5,692.5,Juniors,Single-ply,SBD
-2,TJ Svitavy A,Tomáš Lacko,1982,66.4,220,145,222.5,587.5,Juniors,Single-ply,SBD
-2,TJ Svitavy A,Libor Novák,1966,81.8,200,155,220,575,Open,Single-ply,SBD
-3,Sokol Nymburk A,Zbyněk Krejča,1974,109.1,290,245,280,815,Open,Single-ply,SBD
-3,Sokol Nymburk A,Marcela Balogová,1974,50.2,130,90,142.5,362.5,Open,Single-ply,SBD
-3,Sokol Nymburk A,Jan Pinc,1973,106,265,180,290,735,Open,Single-ply,SBD
-3,Sokol Nymburk A,Pavel Košnar,1981,94.1,270,165,265,700,Juniors,Single-ply,SBD
-4,TJ Sokol Těškovice,Petr Krejčí,1979,110.5,280,190,290,760,Open,Single-ply,SBD
-4,TJ Sokol Těškovice,Stanislav Hoza,1956,83.4,270,165,235,670,Masters 1,Single-ply,SBD
-4,TJ Sokol Těškovice,Václav Jaremczuk,1963,92.3,265,162.5,272.5,700,Masters 2,Single-ply,SBD
-4,TJ Sokol Těškovice,Štěpán Hoza,1974,70.6,215,137.5,230,582.5,Open,Single-ply,SBD
-DD,TJ Lokomotiva Krnov A,Milan Greguš,1968,96.2,300,192.5,270,,Open,Single-ply,SBD
-5,TJ Lokomotiva Krnov A,Jiří Olejko,1977,93.3,260,175,260,695,Open,Single-ply,SBD
-5,TJ Lokomotiva Krnov A,Petr Gracias,1971,83,220,160,200,580,Open,Single-ply,SBD
-5,TJ Lokomotiva Krnov A,Rémy Krayzel,1955,77.5,180,140,200,520,Masters 1,Single-ply,SBD
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event,Sex
+1,TJ Olympia Zlín A,Tomáš Šárik,1975,116.7,290,250,305,845,Open,Single-ply,SBD,M
+1,TJ Olympia Zlín A,Marek Žák,1981,81.7,265,165,255,685,Juniors,Single-ply,SBD,M
+1,TJ Olympia Zlín A,Kamil Večeřa,1978,75.4,222.5,180,245,647.5,Open,Single-ply,SBD,M
+1,TJ Olympia Zlín A,Jiří Gryga,1968,105.4,280,175,300,755,Open,Single-ply,SBD,M
+2,TJ Svitavy A,Petr Theuser,1961,98.4,335,215,280,830,Masters 1,Single-ply,SBD,M
+2,TJ Svitavy A,Lukáš Theuser,1981,77.8,277.5,152.5,262.5,692.5,Juniors,Single-ply,SBD,M
+2,TJ Svitavy A,Tomáš Lacko,1982,66.4,220,145,222.5,587.5,Juniors,Single-ply,SBD,M
+2,TJ Svitavy A,Libor Novák,1966,81.8,200,155,220,575,Open,Single-ply,SBD,M
+3,Sokol Nymburk A,Zbyněk Krejča,1974,109.1,290,245,280,815,Open,Single-ply,SBD,M
+3,Sokol Nymburk A,Marcela Balogová,1974,50.2,130,90,142.5,362.5,Open,Single-ply,SBD,F
+3,Sokol Nymburk A,Jan Pinc,1973,106,265,180,290,735,Open,Single-ply,SBD,M
+3,Sokol Nymburk A,Pavel Košnar,1981,94.1,270,165,265,700,Juniors,Single-ply,SBD,M
+4,TJ Sokol Těškovice,Petr Krejčí,1979,110.5,280,190,290,760,Open,Single-ply,SBD,M
+4,TJ Sokol Těškovice,Stanislav Hoza,1956,83.4,270,165,235,670,Masters 1,Single-ply,SBD,M
+4,TJ Sokol Těškovice,Václav Jaremczuk,1963,92.3,265,162.5,272.5,700,Masters 2,Single-ply,SBD,M
+4,TJ Sokol Těškovice,Štěpán Hoza,1974,70.6,215,137.5,230,582.5,Open,Single-ply,SBD,M
+DD,TJ Lokomotiva Krnov A,Milan Greguš,1968,96.2,300,192.5,270,,Open,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov A,Jiří Olejko,1977,93.3,260,175,260,695,Open,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov A,Petr Gracias,1971,83,220,160,200,580,Open,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov A,Rémy Krayzel,1955,77.5,180,140,200,520,Masters 1,Single-ply,SBD,M

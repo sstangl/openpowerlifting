@@ -1,29 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Martin Urban,1968,100.5,Sokol Nymburk,240,162.5,280,682.5,Single-ply,SBD
-1,Karel Ruso,1965,69,Sokol Nymburk,245,120,230,595,Single-ply,SBD
-1,Jan Pinc,1973,103.5,Sokol Nymburk,262.5,180,255,697.5,Single-ply,SBD
-1,Jiri Hornik,1978,90.5,Sokol Nymburk,290,202.5,300,792.5,Single-ply,SBD
-2,Libor Novak,1966,80,TJ Svitavy,190,150,220,560,Single-ply,SBD
-2,Marek Hejtmanek,1973,81.5,TJ Svitavy,222.5,150,240,612.5,Single-ply,SBD
-2,Tomas Lacko,1982,73.5,TJ Svitavy,230,142.5,222.5,595,Single-ply,SBD
-2,Petr Theuser,1961,93,TJ Svitavy,330,222.5,315,867.5,Single-ply,SBD
-3,Petr Kroslak,1967,82,Tatran Hostinne,265,160,280,705,Single-ply,SBD
-3,Roman Bursa,1971,87.5,Tatran Hostinne,255,160,235,650,Single-ply,SBD
-3,Vlastimil Kalas,1979,102,Tatran Hostinne,240,175,295,710,Single-ply,SBD
-3,Marcel Jansa,1969,105,Tatran Hostinne,265,187.5,285,737.5,Single-ply,SBD
-4,Petr Zamecnik,1966,73.5,TJ Olympia Zlin,200,130,235,565,Single-ply,SBD
-4,Ales Brazda,1977,79,TJ Olympia Zlin,197.5,137.5,220,555,Single-ply,SBD
-4,Tomas Sarik,1975,109,TJ Olympia Zlin,320,230,320,870,Single-ply,SBD
-4,Jiri Gryga,1968,102.5,TJ Olympia Zlin,270,175,310,755,Single-ply,SBD
-5,Stepan Hoza,1974,67.5,Sokol Teskovice,200,132.5,215,547.5,Single-ply,SBD
-5,Pavel Schaumann,1972,83,Sokol Teskovice,210,127.5,240,577.5,Single-ply,SBD
-5,Stanislav Hoza,1956,84.5,Sokol Teskovice,280,172.5,250,702.5,Single-ply,SBD
-5,Vaclav Jaremczuk,1963,92,Sokol Teskovice,262.5,160,277.5,700,Single-ply,SBD
-6,Milan Gregus,1967,95,Lokomotiva Krnov A,275,182.5,250,707.5,Single-ply,SBD
-6,Petr Illik,1969,90,Lokomotiva Krnov A,240,155,255,650,Single-ply,SBD
-6,Jiri Olejko,1977,89,Lokomotiva Krnov A,230,150,235,615,Single-ply,SBD
-6,David Kenis,1977,73,Lokomotiva Krnov A,230,152.5,242.5,625,Single-ply,SBD
-7,Josef Sindelar,1984,70.5,Lokomotiva Krnov B,160,100,175,435,Single-ply,SBD
-7,Petr Gracias,1971,83,Lokomotiva Krnov B,195,160,200,555,Single-ply,SBD
-7,Thomas Melios,1983,79,Lokomotiva Krnov B,160,120,170,450,Single-ply,SBD
-7,Vlachopu Paskalis,1978,105,Lokomotiva Krnov B,245,160,245,650,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Martin Urban,1968,100.5,Sokol Nymburk,240,162.5,280,682.5,Single-ply,SBD,M
+1,Karel Ruso,1965,69,Sokol Nymburk,245,120,230,595,Single-ply,SBD,M
+1,Jan Pinc,1973,103.5,Sokol Nymburk,262.5,180,255,697.5,Single-ply,SBD,M
+1,Jiri Hornik,1978,90.5,Sokol Nymburk,290,202.5,300,792.5,Single-ply,SBD,M
+2,Libor Novak,1966,80,TJ Svitavy,190,150,220,560,Single-ply,SBD,M
+2,Marek Hejtmanek,1973,81.5,TJ Svitavy,222.5,150,240,612.5,Single-ply,SBD,M
+2,Tomas Lacko,1982,73.5,TJ Svitavy,230,142.5,222.5,595,Single-ply,SBD,M
+2,Petr Theuser,1961,93,TJ Svitavy,330,222.5,315,867.5,Single-ply,SBD,M
+3,Petr Kroslak,1967,82,Tatran Hostinne,265,160,280,705,Single-ply,SBD,M
+3,Roman Bursa,1971,87.5,Tatran Hostinne,255,160,235,650,Single-ply,SBD,M
+3,Vlastimil Kalas,1979,102,Tatran Hostinne,240,175,295,710,Single-ply,SBD,M
+3,Marcel Jansa,1969,105,Tatran Hostinne,265,187.5,285,737.5,Single-ply,SBD,M
+4,Petr Zamecnik,1966,73.5,TJ Olympia Zlin,200,130,235,565,Single-ply,SBD,M
+4,Ales Brazda,1977,79,TJ Olympia Zlin,197.5,137.5,220,555,Single-ply,SBD,M
+4,Tomas Sarik,1975,109,TJ Olympia Zlin,320,230,320,870,Single-ply,SBD,M
+4,Jiri Gryga,1968,102.5,TJ Olympia Zlin,270,175,310,755,Single-ply,SBD,M
+5,Stepan Hoza,1974,67.5,Sokol Teskovice,200,132.5,215,547.5,Single-ply,SBD,M
+5,Pavel Schaumann,1972,83,Sokol Teskovice,210,127.5,240,577.5,Single-ply,SBD,M
+5,Stanislav Hoza,1956,84.5,Sokol Teskovice,280,172.5,250,702.5,Single-ply,SBD,M
+5,Vaclav Jaremczuk,1963,92,Sokol Teskovice,262.5,160,277.5,700,Single-ply,SBD,M
+6,Milan Gregus,1967,95,Lokomotiva Krnov A,275,182.5,250,707.5,Single-ply,SBD,M
+6,Petr Illik,1969,90,Lokomotiva Krnov A,240,155,255,650,Single-ply,SBD,M
+6,Jiri Olejko,1977,89,Lokomotiva Krnov A,230,150,235,615,Single-ply,SBD,M
+6,David Kenis,1977,73,Lokomotiva Krnov A,230,152.5,242.5,625,Single-ply,SBD,M
+7,Josef Sindelar,1984,70.5,Lokomotiva Krnov B,160,100,175,435,Single-ply,SBD,M
+7,Petr Gracias,1971,83,Lokomotiva Krnov B,195,160,200,555,Single-ply,SBD,M
+7,Thomas Melios,1983,79,Lokomotiva Krnov B,160,120,170,450,Single-ply,SBD,M
+7,Vlachopu Paskalis,1978,105,Lokomotiva Krnov B,245,160,245,650,Single-ply,SBD,M

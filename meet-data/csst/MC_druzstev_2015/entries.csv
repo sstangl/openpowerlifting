@@ -1,33 +1,33 @@
-Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event
-Jan Pinc,1973,127.8,340.0,282.5,285.0,907.5,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD
-Milan Daňo,1983,66.6,220.0,152.5,200.0,572.5,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD
-Milan Špingl,1980,135.0,270.0,250.0,255.0,775.0,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD
-Pavel Hulák,1974,111.7,250.0,230.0,250.0,730.0,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD
-Antonín Coufal,1973,137.0,297.5,205.0,262.5,765.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD
-Lenka Jandová,1988,62.4,132.5,72.5,150.0,355.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD
-Lukáš Kohout,1992,94.4,205.0,190.0,220.0,615.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD
-Václav Brousek,1982,105.8,177.5,175.0,215.0,567.5,Open,TJ Sokol Vejprnice - A,Single-ply,SBD
-Marcel Murárik,1992,87.7,270.0,180.0,235.0,685.0,Open,SKST Litvínov - B,Single-ply,SBD
-Stanislav Kundrt,1987,102.4,255.0,180.0,250.0,685.0,Open,SKST Litvínov - B,Single-ply,SBD
-Lukáš Rosenkranz,1989,86.5,190.0,115.0,225.0,530.0,Open,SKST Litvínov - B,Single-ply,SBD
-Julius Čmerda,1973,92.3,177.5,122.5,215.0,515.0,Open,SKST Litvínov - B,Single-ply,SBD
-Jan More,1993,72.9,220.0,145.0,235.0,600.0,Open,Fitness Club Staňkov,Single-ply,SBD
-Luboš Rada,1979,80.5,180.0,110.0,225.0,515.0,Open,Fitness Club Staňkov,Single-ply,SBD
-Václav Vostracký,1997,76.1,170.0,95.0,180.0,445.0,Open,Fitness Club Staňkov,Single-ply,SBD
-Karel Rada,2001,81.8,180.0,92.5,180.0,452.5,Open,Fitness Club Staňkov,Single-ply,SBD
-Gabriela Reifová,1986,71.5,165.0,105.0,152.5,422.5,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Michaela Radová,1994,58.4,130.0,80.0,130.0,340.0,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Iveta Motlová,1993,88.5,120.0,50.0,140.0,310.0,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Lenka Strolená,1984,61.7,,75.0,140.0,215.0,Open,TJ Spartak Chodov - A,Single-ply,BD
-Martin Sláma,1989,74.0,187.5,117.5,262.5,567.5,Open,Sporting Apis Praha - B,Single-ply,SBD
-Ladislav Popp,1989,74.0,175.0,105.0,215.0,495.0,Open,Sporting Apis Praha - B,Single-ply,SBD
-Václav Srp,1997,67.7,140.0,65.0,160.0,365.0,Open,Sporting Apis Praha - B,Single-ply,SBD
-Miloslav Srp,1993,93.9,,157.5,237.5,395.0,Open,Sporting Apis Praha - B,Single-ply,BD
-Michal Michalíček,1987,74.7,190.0,150.0,225.0,565.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-René Hrubý,1975,88.7,170.0,130.0,205.0,505.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Patrik Hrubý,1997,68.7,130.0,85.0,170.0,385.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Petr Blinov,1970,132.3,230.0,,,230.0,Open,TJ Spartak Chodov - B,Single-ply,S
-Erik Bona,1997,84.0,160.0,117.5,215.0,492.5,Open,TJ Sokol Vejprnice - B,Single-ply,SBD
-Josef Duna,1950,112.4,160.0,170.0,170.0,500.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD
-Petr Eliáš,1994,115.0,140.0,90.0,190.0,420.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD
-Martin Biháry,1973,85.0,80.0,155.0,120.0,355.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD
+Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event,Sex,WeightClassKg,Place
+Jan Pinc,1973,127.8,340.0,282.5,285.0,907.5,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD,M,120+,1
+Milan Daňo,1983,66.6,220.0,152.5,200.0,572.5,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD,M,74,2
+Milan Špingl,1980,135.0,270.0,250.0,255.0,775.0,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD,M,120+,2
+Pavel Hulák,1974,111.7,250.0,230.0,250.0,730.0,Open,TJ JM Chodov - Powerlifting Eagles,Single-ply,SBD,M,120,1
+Antonín Coufal,1973,137.0,297.5,205.0,262.5,765.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD,M,120+,3
+Lenka Jandová,1988,62.4,132.5,72.5,150.0,355.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD,F,63,1
+Lukáš Kohout,1992,94.4,205.0,190.0,220.0,615.0,Open,TJ Sokol Vejprnice - A,Single-ply,SBD,M,105,2
+Václav Brousek,1982,105.8,177.5,175.0,215.0,567.5,Open,TJ Sokol Vejprnice - A,Single-ply,SBD,M,120,2
+Marcel Murárik,1992,87.7,270.0,180.0,235.0,685.0,Open,SKST Litvínov - B,Single-ply,SBD,M,93,1
+Stanislav Kundrt,1987,102.4,255.0,180.0,250.0,685.0,Open,SKST Litvínov - B,Single-ply,SBD,M,105,1
+Lukáš Rosenkranz,1989,86.5,190.0,115.0,225.0,530.0,Open,SKST Litvínov - B,Single-ply,SBD,M,93,2
+Julius Čmerda,1973,92.3,177.5,122.5,215.0,515.0,Open,SKST Litvínov - B,Single-ply,SBD,M,93,3
+Jan More,1993,72.9,220.0,145.0,235.0,600.0,Open,Fitness Club Staňkov,Single-ply,SBD,M,74,1
+Luboš Rada,1979,80.5,180.0,110.0,225.0,515.0,Open,Fitness Club Staňkov,Single-ply,SBD,M,83,2
+Václav Vostracký,1997,76.1,170.0,95.0,180.0,445.0,Open,Fitness Club Staňkov,Single-ply,SBD,M,83,4
+Karel Rada,2001,81.8,180.0,92.5,180.0,452.5,Open,Fitness Club Staňkov,Single-ply,SBD,M,83,3
+Gabriela Reifová,1986,71.5,165.0,105.0,152.5,422.5,Open,TJ Spartak Chodov - A,Single-ply,SBD,F,72,1
+Michaela Radová,1994,58.4,130.0,80.0,130.0,340.0,Open,TJ Spartak Chodov - A,Single-ply,SBD,F,63,2
+Iveta Motlová,1993,88.5,120.0,50.0,140.0,310.0,Open,TJ Spartak Chodov - A,Single-ply,SBD,F,84+,1
+Lenka Strolená,1984,61.7,,75.0,140.0,215.0,Open,TJ Spartak Chodov - A,Single-ply,BD,F,63,1
+Martin Sláma,1989,74.0,187.5,117.5,262.5,567.5,Open,Sporting Apis Praha - B,Single-ply,SBD,M,74,3
+Ladislav Popp,1989,74.0,175.0,105.0,215.0,495.0,Open,Sporting Apis Praha - B,Single-ply,SBD,M,74,4
+Václav Srp,1997,67.7,140.0,65.0,160.0,365.0,Open,Sporting Apis Praha - B,Single-ply,SBD,M,74,6
+Miloslav Srp,1993,93.9,,157.5,237.5,395.0,Open,Sporting Apis Praha - B,Single-ply,BD,M,105,1
+Michal Michalíček,1987,74.7,190.0,150.0,225.0,565.0,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,83,1
+René Hrubý,1975,88.7,170.0,130.0,205.0,505.0,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,93,4
+Patrik Hrubý,1997,68.7,130.0,85.0,170.0,385.0,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,74,5
+Petr Blinov,1970,132.3,230.0,,,230.0,Open,TJ Spartak Chodov - B,Single-ply,S,M,120+,1
+Erik Bona,1997,84.0,160.0,117.5,215.0,492.5,Open,TJ Sokol Vejprnice - B,Single-ply,SBD,M,93,5
+Josef Duna,1950,112.4,160.0,170.0,170.0,500.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD,M,120,3
+Petr Eliáš,1994,115.0,140.0,90.0,190.0,420.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD,M,120,4
+Martin Biháry,1973,85.0,80.0,155.0,120.0,355.0,Open,TJ Sokol Vejprnice - B,Single-ply,SBD,M,93,6

@@ -1,25 +1,25 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event
-1,KST Jihlava,Patrik Chlupáček,1973,100.2,257.5,202.5,275,735,Open,Single-ply,SBD
-1,KST Jihlava,Marcel Zavadil,1977,94.9,235,185,230,650,Open,Single-ply,SBD
-1,KST Jihlava,Pavel Tříska,1979,86.3,210,155,210,575,Open,Single-ply,SBD
-1,KST Jihlava,Ondřej Krejča,1975,99.6,190,140,220,550,Open,Single-ply,SBD
-2,Sokol Jemnice,Jiří Valenta,1978,120,265,220,250,735,Open,Single-ply,SBD
-2,Sokol Jemnice,Karel Kuhtreiber,1977,92,210,180,225,615,Open,Single-ply,SBD
-2,Sokol Jemnice,Marcel Anděl,1958,93.2,195,155,255,605,Masters 1,Single-ply,SBD
-2,Sokol Jemnice,Radek Krejčí,1975,88.3,165,140,220,525,Open,Single-ply,SBD
-3,Sokol Vranovice A,Roman Pláteník,1970,98.8,240,137.5,250,627.5,Open,Single-ply,SBD
-3,Sokol Vranovice A,Pavel Pláteník,1974,78.9,217.5,137.5,220,575,Open,Single-ply,SBD
-3,Sokol Vranovice A,Kiří Furch,1975,72.3,172.5,155,187.5,515,Open,Single-ply,SBD
-3,Sokol Vranovice A,Tomáš Trávník,1985,79.1,200,120,205,525,Juniors,Single-ply,SBD
-4,TJ Viktorie Bohumín,David Chrupka,1977,93.9,240,155,240,635,Open,Single-ply,SBD
-4,TJ Viktorie Bohumín,Martin Turek,1972,80.1,215,150,210,575,Open,Single-ply,SBD
-4,TJ Viktorie Bohumín,Petr Bártík,1985,83.9,200,130,210,540,Juniors,Single-ply,SBD
-4,TJ Viktorie Bohumín,Roman Urbánek,1956,108.6,220,150,215,585,Masters 1,Single-ply,SBD
-5,TJ Lokomotiva Krnov B,Václav Burda,1946,64,150,110,190,450,Masters 2,Single-ply,SBD
-5,TJ Lokomotiva Krnov B,Grigoris Akritidis,1985,78.1,185,105,200,490,Juniors,Single-ply,SBD
-5,TJ Lokomotiva Krnov B,Josef Šindelář,1985,72.6,170,110,180,460,Juniors,Single-ply,SBD
-5,TJ Lokomotiva Krnov B,Petr Mikeska,1966,67.7,160,70,180,410,Open,Single-ply,SBD
-DQ,Gate Gym Mladá Boleslav,Martin Krčmář,1975,103,240,-190,,,Open,Single-ply,SBD
-DQ,Gate Gym Mladá Boleslav,Rudolf Barák,1978,101.9,245,130,,,Open,Single-ply,SBD
-DQ,Gate Gym Mladá Boleslav,Bohumil Blažek,1976,77.7,235,,,,Open,Single-ply,SBD
-DQ,Gate Gym Mladá Boleslav,Karel Jiroušek,1979,70,255,,,,Open,Single-ply,SBD
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event,Sex
+1,KST Jihlava,Patrik Chlupáček,1973,100.2,257.5,202.5,275,735,Open,Single-ply,SBD,M
+1,KST Jihlava,Marcel Zavadil,1977,94.9,235,185,230,650,Open,Single-ply,SBD,M
+1,KST Jihlava,Pavel Tříska,1979,86.3,210,155,210,575,Open,Single-ply,SBD,M
+1,KST Jihlava,Ondřej Krejča,1975,99.6,190,140,220,550,Open,Single-ply,SBD,M
+2,Sokol Jemnice,Jiří Valenta,1978,120,265,220,250,735,Open,Single-ply,SBD,M
+2,Sokol Jemnice,Karel Kuhtreiber,1977,92,210,180,225,615,Open,Single-ply,SBD,M
+2,Sokol Jemnice,Marcel Anděl,1958,93.2,195,155,255,605,Masters 1,Single-ply,SBD,M
+2,Sokol Jemnice,Radek Krejčí,1975,88.3,165,140,220,525,Open,Single-ply,SBD,M
+3,Sokol Vranovice A,Roman Pláteník,1970,98.8,240,137.5,250,627.5,Open,Single-ply,SBD,M
+3,Sokol Vranovice A,Pavel Pláteník,1974,78.9,217.5,137.5,220,575,Open,Single-ply,SBD,M
+3,Sokol Vranovice A,Kiří Furch,1975,72.3,172.5,155,187.5,515,Open,Single-ply,SBD,M
+3,Sokol Vranovice A,Tomáš Trávník,1985,79.1,200,120,205,525,Juniors,Single-ply,SBD,M
+4,TJ Viktorie Bohumín,David Chrupka,1977,93.9,240,155,240,635,Open,Single-ply,SBD,M
+4,TJ Viktorie Bohumín,Martin Turek,1972,80.1,215,150,210,575,Open,Single-ply,SBD,M
+4,TJ Viktorie Bohumín,Petr Bártík,1985,83.9,200,130,210,540,Juniors,Single-ply,SBD,M
+4,TJ Viktorie Bohumín,Roman Urbánek,1956,108.6,220,150,215,585,Masters 1,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov B,Václav Burda,1946,64,150,110,190,450,Masters 2,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov B,Grigoris Akritidis,1985,78.1,185,105,200,490,Juniors,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov B,Josef Šindelář,1985,72.6,170,110,180,460,Juniors,Single-ply,SBD,M
+5,TJ Lokomotiva Krnov B,Petr Mikeska,1966,67.7,160,70,180,410,Open,Single-ply,SBD,M
+DQ,Gate Gym Mladá Boleslav,Martin Krčmář,1975,103,240,-190,,,Open,Single-ply,SBD,M
+DQ,Gate Gym Mladá Boleslav,Rudolf Barák,1978,101.9,245,130,,,Open,Single-ply,SBD,M
+DQ,Gate Gym Mladá Boleslav,Bohumil Blažek,1976,77.7,235,,,,Open,Single-ply,SBD,M
+DQ,Gate Gym Mladá Boleslav,Karel Jiroušek,1979,70,255,,,,Open,Single-ply,SBD,M

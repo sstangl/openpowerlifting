@@ -1,17 +1,17 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,René Hoza,1993,58.7,TJ Sokol Těškovice,140.0,70.0,145.0,355.0,Sub-Juniors,60,Single-ply,SBD
-1,Libor Novák,1990,63.3,TJ Svitavy,130.0,85.0,150.0,365.0,Sub-Juniors,67.5,Single-ply,SBD
-DQ,Lukáš Krejčí,1990,60.8,TJ Třebíč,,95.0,,,Sub-Juniors,67.5,Single-ply,B
-1,Bruno Schinkmann,1991,72.5,Power Fitness M.Boleslav,180.0,87.5,190.0,457.5,Sub-Juniors,75,Single-ply,SBD
-2,Radek Buček,1990,72.8,Sokol Vranovice,162.5,95.0,190.0,447.5,Sub-Juniors,75,Single-ply,SBD
-3,Libor Škrobáček,1991,69.1,TJ Sokol Lanžhot,140.0,112.5,187.5,440.0,Sub-Juniors,75,Single-ply,SBD
-4,Michal Sýkora,1991,75.0,TJ Svitavy,160.0,90.0,185.0,435.0,Sub-Juniors,75,Single-ply,SBD
-5,Michal Kavánek,1991,74.7,TJ CST Atlantic Čáslav,160.0,85.0,170.0,415.0,Sub-Juniors,75,Single-ply,SBD
-1,Dominik Tichý,1991,77.8,TJ AŠ Mladá Boleslav,200.0,100.0,210.0,510.0,Sub-Juniors,82.5,Single-ply,SBD
-2,Marek Novák,1991,81.1,Sokol Nymburk,170.0,110.0,180.0,460.0,Sub-Juniors,82.5,Single-ply,SBD
-1,Ondřej Houžvička,1990,88.0,Sokol Nymburk,205.0,127.5,222.5,555.0,Sub-Juniors,90,Single-ply,SBD
-2,Martin Kozák,1990,85.3,Sokol Nymburk,200.0,127.5,200.0,527.5,Sub-Juniors,90,Single-ply,SBD
-3,Karel Šišovský,1990,88.9,Sokol Vranovice,182.5,120.0,220.0,522.5,Sub-Juniors,90,Single-ply,SBD
-1,David Lupač,1991,99.5,TJ Sokol Jemnice,230.0,130.0,235.0,595.0,Sub-Juniors,100,Single-ply,SBD
-2,Marcel Anděl,1990,91.2,TJ Sokol Jemnice,190.0,120.0,215.0,525.0,Sub-Juniors,100,Single-ply,SBD
-1,Pavel Bartošík,1992,101.4,Gita Podivín,160.0,110.0,240.0,510.0,Sub-Juniors,110,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,René Hoza,1993,58.7,TJ Sokol Těškovice,140.0,70.0,145.0,355.0,Sub-Juniors,60,Single-ply,SBD,M
+1,Libor Novák,1990,63.3,TJ Svitavy,130.0,85.0,150.0,365.0,Sub-Juniors,67.5,Single-ply,SBD,M
+DQ,Lukáš Krejčí,1990,60.8,TJ Třebíč,,95.0,,,Sub-Juniors,67.5,Single-ply,B,M
+1,Bruno Schinkmann,1991,72.5,Power Fitness M.Boleslav,180.0,87.5,190.0,457.5,Sub-Juniors,75,Single-ply,SBD,M
+2,Radek Buček,1990,72.8,Sokol Vranovice,162.5,95.0,190.0,447.5,Sub-Juniors,75,Single-ply,SBD,M
+3,Libor Škrobáček,1991,69.1,TJ Sokol Lanžhot,140.0,112.5,187.5,440.0,Sub-Juniors,75,Single-ply,SBD,M
+4,Michal Sýkora,1991,75.0,TJ Svitavy,160.0,90.0,185.0,435.0,Sub-Juniors,75,Single-ply,SBD,M
+5,Michal Kavánek,1991,74.7,TJ CST Atlantic Čáslav,160.0,85.0,170.0,415.0,Sub-Juniors,75,Single-ply,SBD,M
+1,Dominik Tichý,1991,77.8,TJ AŠ Mladá Boleslav,200.0,100.0,210.0,510.0,Sub-Juniors,82.5,Single-ply,SBD,M
+2,Marek Novák,1991,81.1,Sokol Nymburk,170.0,110.0,180.0,460.0,Sub-Juniors,82.5,Single-ply,SBD,M
+1,Ondřej Houžvička,1990,88.0,Sokol Nymburk,205.0,127.5,222.5,555.0,Sub-Juniors,90,Single-ply,SBD,M
+2,Martin Kozák,1990,85.3,Sokol Nymburk,200.0,127.5,200.0,527.5,Sub-Juniors,90,Single-ply,SBD,M
+3,Karel Šišovský,1990,88.9,Sokol Vranovice,182.5,120.0,220.0,522.5,Sub-Juniors,90,Single-ply,SBD,M
+1,David Lupač,1991,99.5,TJ Sokol Jemnice,230.0,130.0,235.0,595.0,Sub-Juniors,100,Single-ply,SBD,M
+2,Marcel Anděl,1990,91.2,TJ Sokol Jemnice,190.0,120.0,215.0,525.0,Sub-Juniors,100,Single-ply,SBD,M
+1,Pavel Bartošík,1992,101.4,Gita Podivín,160.0,110.0,240.0,510.0,Sub-Juniors,110,Single-ply,SBD,M

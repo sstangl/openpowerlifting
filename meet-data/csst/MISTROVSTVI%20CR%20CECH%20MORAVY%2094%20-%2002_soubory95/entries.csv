@@ -1,33 +1,33 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Petr Theuser,1961,92,TJ Svitavy,310,220,310,840,Single-ply,SBD
-1,Jan Benes,1959,103.6,TJ Svitavy,270,195,342.5,807.5,Single-ply,SBD
-1,Marek Hejtmanek,1973,82,TJ Svitavy,227.5,160,245,632.5,Single-ply,SBD
-1,Tomas Lacko,1982,72,TJ Svitavy,210,125,212.5,547.5,Single-ply,SBD
-2,Ondrej Seidel,1975,88,Olympia Zlin A,265,165,235,665,Single-ply,SBD
-2,Jiri Gryga,1968,101,Olympia Zlin A,260,177.5,290,727.5,Single-ply,SBD
-2,Marek Zak,1981,78,Olympia Zlin A,240,160,260,660,Single-ply,SBD
-2,Tomas Sarik,1975,110,Olympia Zlin A,300,225,315,840,Single-ply,SBD
-3,Miroslav Hubacek,1967,92,Sokol Nymburk A,260,205,275,740,Single-ply,SBD
-3,Martin Urban,1968,103.5,Sokol Nymburk A,240,160,297.5,697.5,Single-ply,SBD
-3,Zbynek Krejca,1974,111,Sokol Nymburk A,310,210,292.5,812.5,Single-ply,SBD
-3,Karel Ruso,1965,68.5,Sokol Nymburk A,240,117.5,230,587.5,Single-ply,SBD
-4,Ludvik Blahuta,1957,102,Loko Krnov A,270,155,265,690,Single-ply,SBD
-4,Jaroslav Kelner,1956,97,Loko Krnov A,280,170,280,730,Single-ply,SBD
-4,Milan Gregus,1968,93.5,Loko Krnov A,260,167.5,230,657.5,Single-ply,SBD
-4,David Kenis,1977,72,Loko Krnov A,240,157.5,237.5,635,Single-ply,SBD
-5,Stepan Hoza,1974,66.5,Sokol Teskovice,187.5,117.5,207.5,512.5,Single-ply,SBD
-5,Vaclav Jaremczuk,1963,90,Sokol Teskovice,250,160,285,695,Single-ply,SBD
-5,Stanislav Hoza,1956,82,Sokol Teskovice,270,162.5,240,672.5,Single-ply,SBD
-5,Pavel Schaumann,1972,81.5,Sokol Teskovice,220,125,235,580,Single-ply,SBD
-6,Remy Krayzel,1955,78.5,Loko Krnov B,230,170,210,610,Single-ply,SBD
-6,Petr Illik,1969,93,Loko Krnov B,220,150,250,620,Single-ply,SBD
-6,Jaroslav Planka,1968,64,Loko Krnov B,150,127.5,200,477.5,Single-ply,SBD
-6,Jiri Olejko,1977,89,Loko Krnov B,215,135,230,580,Single-ply,SBD
-7,Jiri Gajdosik,1962,72.5,Olympia Zlin B,170,115,185,470,Single-ply,SBD
-7,Ales Brazda,1977,78.5,Olympia Zlin B,212.5,127.5,220,560,Single-ply,SBD
-7,Petr Zamecnik,1966,74.5,Olympia Zlin B,192.5,135,242.5,570,Single-ply,SBD
-7,Martin Moringl,1977,102.5,Olympia Zlin B,250,150,280,680,Single-ply,SBD
-8,Jiri Janecek,1961,76.5,Sokol Nymburk B,215,145,215,575,Single-ply,SBD
-8,Petra Stehlikova,1966,68,Sokol Nymburk B,160,117.5,190,467.5,Single-ply,SBD
-8,Josef Vohralik,1971,117,Sokol Nymburk B,240,160,260,660,Single-ply,SBD
-8,Miroslav Vacek,1967,126,Sokol Nymburk B,290,185,285,760,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Petr Theuser,1961,92,TJ Svitavy,310,220,310,840,Single-ply,SBD,M
+1,Jan Benes,1959,103.6,TJ Svitavy,270,195,342.5,807.5,Single-ply,SBD,M
+1,Marek Hejtmanek,1973,82,TJ Svitavy,227.5,160,245,632.5,Single-ply,SBD,M
+1,Tomas Lacko,1982,72,TJ Svitavy,210,125,212.5,547.5,Single-ply,SBD,M
+2,Ondrej Seidel,1975,88,Olympia Zlin A,265,165,235,665,Single-ply,SBD,M
+2,Jiri Gryga,1968,101,Olympia Zlin A,260,177.5,290,727.5,Single-ply,SBD,M
+2,Marek Zak,1981,78,Olympia Zlin A,240,160,260,660,Single-ply,SBD,M
+2,Tomas Sarik,1975,110,Olympia Zlin A,300,225,315,840,Single-ply,SBD,M
+3,Miroslav Hubacek,1967,92,Sokol Nymburk A,260,205,275,740,Single-ply,SBD,M
+3,Martin Urban,1968,103.5,Sokol Nymburk A,240,160,297.5,697.5,Single-ply,SBD,M
+3,Zbynek Krejca,1974,111,Sokol Nymburk A,310,210,292.5,812.5,Single-ply,SBD,M
+3,Karel Ruso,1965,68.5,Sokol Nymburk A,240,117.5,230,587.5,Single-ply,SBD,M
+4,Ludvik Blahuta,1957,102,Loko Krnov A,270,155,265,690,Single-ply,SBD,M
+4,Jaroslav Kelner,1956,97,Loko Krnov A,280,170,280,730,Single-ply,SBD,M
+4,Milan Gregus,1968,93.5,Loko Krnov A,260,167.5,230,657.5,Single-ply,SBD,M
+4,David Kenis,1977,72,Loko Krnov A,240,157.5,237.5,635,Single-ply,SBD,M
+5,Stepan Hoza,1974,66.5,Sokol Teskovice,187.5,117.5,207.5,512.5,Single-ply,SBD,M
+5,Vaclav Jaremczuk,1963,90,Sokol Teskovice,250,160,285,695,Single-ply,SBD,M
+5,Stanislav Hoza,1956,82,Sokol Teskovice,270,162.5,240,672.5,Single-ply,SBD,M
+5,Pavel Schaumann,1972,81.5,Sokol Teskovice,220,125,235,580,Single-ply,SBD,M
+6,Remy Krayzel,1955,78.5,Loko Krnov B,230,170,210,610,Single-ply,SBD,M
+6,Petr Illik,1969,93,Loko Krnov B,220,150,250,620,Single-ply,SBD,M
+6,Jaroslav Planka,1968,64,Loko Krnov B,150,127.5,200,477.5,Single-ply,SBD,M
+6,Jiri Olejko,1977,89,Loko Krnov B,215,135,230,580,Single-ply,SBD,M
+7,Jiri Gajdosik,1962,72.5,Olympia Zlin B,170,115,185,470,Single-ply,SBD,M
+7,Ales Brazda,1977,78.5,Olympia Zlin B,212.5,127.5,220,560,Single-ply,SBD,M
+7,Petr Zamecnik,1966,74.5,Olympia Zlin B,192.5,135,242.5,570,Single-ply,SBD,M
+7,Martin Moringl,1977,102.5,Olympia Zlin B,250,150,280,680,Single-ply,SBD,M
+8,Jiri Janecek,1961,76.5,Sokol Nymburk B,215,145,215,575,Single-ply,SBD,M
+8,Petra Stehlikova,1966,68,Sokol Nymburk B,160,117.5,190,467.5,Single-ply,SBD,F
+8,Josef Vohralik,1971,117,Sokol Nymburk B,240,160,260,660,Single-ply,SBD,M
+8,Miroslav Vacek,1967,126,Sokol Nymburk B,290,185,285,760,Single-ply,SBD,M

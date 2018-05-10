@@ -1,29 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Jaroslav Planka,1968,61.9,TJ Loko Krnov B,150,97.5,190,437.5,Single-ply,SBD
-1,Ladislav Rolny,1948,66.1,TJ Loko Krnov B,160,105,185,450,Single-ply,SBD
-1,Josef Synek,1966,86,TJ Loko Krnov B,190,130,220,540,Single-ply,SBD
-1,Jindrich Cervenka,1974,85,TJ Loko Krnov B,170,125,220,515,Single-ply,SBD
-1,Petr Ilik,1969,90.2,TJ Loko Krnov B,190,140,235,565,Single-ply,SBD
-2,Jiri Dvorak,1969,79,TJ Slavoj Pacov,192.5,107.5,212.5,512.5,Single-ply,SBD
-2,Martin Micka,1974,76.3,TJ Slavoj Pacov,170,110,190,470,Single-ply,SBD
-2,Miroslav Buzek,1972,81,TJ Slavoj Pacov,160,112.5,220,492.5,Single-ply,SBD
-2,Josef Micka,1949,102,TJ Slavoj Pacov,260,175,270,705,Single-ply,SBD
-3,Martin Bakus,1975,70.5,Trans Mirotice,165,107.5,200,472.5,Single-ply,SBD
-3,Jiri Krahulec,1966,84.5,Trans Mirotice,190,112.5,212.5,515,Single-ply,SBD
-3,Vaclav Kouba,1971,97.3,Trans Mirotice,210,137.5,225,572.5,Single-ply,SBD
-3,Stanislav Pichlik,1974,61,Trans Mirotice,130,80,170,380,Single-ply,SBD
-3,Jiri Vohryzka,1963,101.9,Trans Mirotice,215,135,215,565,Single-ply,SBD
-4,Ivo Brazda,1971,70.2,Sokol Rosice,150,100,200,450,Single-ply,SBD
-4,Petr Lahoda,1970,94,Sokol Rosice,200,140,220,560,Single-ply,SBD
-4,Tomas Kostelnicek,1971,98.3,Sokol Rosice,175,130,232.5,537.5,Single-ply,SBD
-4,Zdenek Sklenar,1974,75.8,Sokol Rosice,155,125,210,490,Single-ply,SBD
-5,Lubomir Janek,1957,58.8,KaST Trebic,130,82.5,160,372.5,Single-ply,SBD
-5,Milan Babunek,1973,81.7,KaST Trebic,180,105,205,490,Single-ply,SBD
-5,Milos Vostal,1974,75,KaST Trebic,110,100,160,370,Single-ply,SBD
-5,Petr Axman,1978,59.4,KaST Trebic,100,65,135,300,Single-ply,SBD
-5,Libor Prusa,1977,88.4,KaST Trebic,190,130,230,550,Single-ply,SBD
-6,Michal Krcek,1978,81.3,TJ Olympia Zlin B,160,115,177.5,452.5,Single-ply,SBD
-6,Milan Kalbac,1976,89.1,TJ Olympia Zlin B,190,130,252.5,572.5,Single-ply,SBD
-6,Zdenek Balajka,1978,89,TJ Olympia Zlin B,160,90,190,440,Single-ply,SBD
-6,Tomas Drga,1980,63,TJ Olympia Zlin B,117.5,55,145,317.5,Single-ply,SBD
-6,Roman Vecera,1975,107,TJ Olympia Zlin B,150,107.5,245,502.5,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Jaroslav Planka,1968,61.9,TJ Loko Krnov B,150,97.5,190,437.5,Single-ply,SBD,M
+1,Ladislav Rolny,1948,66.1,TJ Loko Krnov B,160,105,185,450,Single-ply,SBD,M
+1,Josef Synek,1966,86,TJ Loko Krnov B,190,130,220,540,Single-ply,SBD,M
+1,Jindrich Cervenka,1974,85,TJ Loko Krnov B,170,125,220,515,Single-ply,SBD,M
+1,Petr Ilik,1969,90.2,TJ Loko Krnov B,190,140,235,565,Single-ply,SBD,M
+2,Jiri Dvorak,1969,79,TJ Slavoj Pacov,192.5,107.5,212.5,512.5,Single-ply,SBD,M
+2,Martin Micka,1974,76.3,TJ Slavoj Pacov,170,110,190,470,Single-ply,SBD,M
+2,Miroslav Buzek,1972,81,TJ Slavoj Pacov,160,112.5,220,492.5,Single-ply,SBD,M
+2,Josef Micka,1949,102,TJ Slavoj Pacov,260,175,270,705,Single-ply,SBD,M
+3,Martin Bakus,1975,70.5,Trans Mirotice,165,107.5,200,472.5,Single-ply,SBD,M
+3,Jiri Krahulec,1966,84.5,Trans Mirotice,190,112.5,212.5,515,Single-ply,SBD,M
+3,Vaclav Kouba,1971,97.3,Trans Mirotice,210,137.5,225,572.5,Single-ply,SBD,M
+3,Stanislav Pichlik,1974,61,Trans Mirotice,130,80,170,380,Single-ply,SBD,M
+3,Jiri Vohryzka,1963,101.9,Trans Mirotice,215,135,215,565,Single-ply,SBD,M
+4,Ivo Brazda,1971,70.2,Sokol Rosice,150,100,200,450,Single-ply,SBD,M
+4,Petr Lahoda,1970,94,Sokol Rosice,200,140,220,560,Single-ply,SBD,M
+4,Tomas Kostelnicek,1971,98.3,Sokol Rosice,175,130,232.5,537.5,Single-ply,SBD,M
+4,Zdenek Sklenar,1974,75.8,Sokol Rosice,155,125,210,490,Single-ply,SBD,M
+5,Lubomir Janek,1957,58.8,KaST Trebic,130,82.5,160,372.5,Single-ply,SBD,M
+5,Milan Babunek,1973,81.7,KaST Trebic,180,105,205,490,Single-ply,SBD,M
+5,Milos Vostal,1974,75,KaST Trebic,110,100,160,370,Single-ply,SBD,M
+5,Petr Axman,1978,59.4,KaST Trebic,100,65,135,300,Single-ply,SBD,M
+5,Libor Prusa,1977,88.4,KaST Trebic,190,130,230,550,Single-ply,SBD,M
+6,Michal Krcek,1978,81.3,TJ Olympia Zlin B,160,115,177.5,452.5,Single-ply,SBD,M
+6,Milan Kalbac,1976,89.1,TJ Olympia Zlin B,190,130,252.5,572.5,Single-ply,SBD,M
+6,Zdenek Balajka,1978,89,TJ Olympia Zlin B,160,90,190,440,Single-ply,SBD,M
+6,Tomas Drga,1980,63,TJ Olympia Zlin B,117.5,55,145,317.5,Single-ply,SBD,M
+6,Roman Vecera,1975,107,TJ Olympia Zlin B,150,107.5,245,502.5,Single-ply,SBD,M

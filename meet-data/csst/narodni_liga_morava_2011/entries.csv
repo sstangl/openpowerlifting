@@ -1,37 +1,37 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
-1,Olympia Zlín B,Marek Žák,1981,93.1,260,182.5,275,717.5,SBD,Single-ply,Open
-1,Olympia Zlín B,Michal Krček,1978,102,260,187.5,255,702.5,SBD,Single-ply,Open
-1,Olympia Zlín B,Pavel Kaňák,1985,144.2,250,190,300,740,SBD,Single-ply,Open
-1,Olympia Zlín B,Tomáš Pavliš,1993,81.7,205,115,230,550,SBD,Single-ply,Open
-2,KST Jihlava,Filip Sobotka,1993,95.1,285,185,250,720,SBD,Single-ply,Open
-2,KST Jihlava,Tadeáš Kronovetr,1993,80.8,247.5,135,240,622.5,SBD,Single-ply,Open
-2,KST Jihlava,Patrik Přibyl,1993,92,230,125,250,605,SBD,Single-ply,Open
-2,KST Jihlava,David Hora,1993,76.4,182.5,100,220,502.5,SBD,Single-ply,Open
-3,Viktorie Bohumín,Martin Turek,1972,82.3,250,185,225,660,SBD,Single-ply,Open
-3,Viktorie Bohumín,Tomáš Turek,1994,89.4,230,130,215,575,SBD,Single-ply,Open
-3,Viktorie Bohumín,Pavel Malina,1960,64,190,105,160,455,SBD,Single-ply,Open
-3,Viktorie Bohumín,Aleš Spiewok,1967,93.1,190,165,175,530,SBD,Single-ply,Open
-4,Colbert Vítkovice,Tomáš Poles,1980,97.8,280,170,285,735,SBD,Single-ply,Open
-4,Colbert Vítkovice,David Kieseweter,1984,74.6,170,115,190,475,SBD,Single-ply,Open
-4,Colbert Vítkovice,Denis Šindel,1991,110.3,190,127.5,235,552.5,SBD,Single-ply,Open
-4,Colbert Vítkovice,Josef Boháček,1972,102.5,175,150,205,530,SBD,Single-ply,Open
-5,TJ Sokol Rosice,Petr Lahoda,1970,107.3,255,220,230,705,SBD,Single-ply,Open
-5,TJ Sokol Rosice,Václav Patočka,1977,88,240,160,240,640,SBD,Single-ply,Open
-5,TJ Sokol Rosice,Ivo Brázda,1993,58.2,140,80,170,390,SBD,Single-ply,Open
-DQ,TJ Sokol Rosice,Ivo Brázda,1971,78.9,,130,235,,SBD,Single-ply,Open
-6,Loko Krnov C,Miroslav Čapka,1964,109.9,210,180,230,620,SBD,Single-ply,Open
-6,Loko Krnov C,Jiří Valášek,1976,89.2,200,120,240,560,SBD,Single-ply,Open
-6,Loko Krnov C,Josef Šindelář,1984,73.3,175,110,180,465,SBD,Single-ply,Open
-6,Loko Krnov C,Miloš Navrátil,1960,103.7,180,185,190,555,SBD,Single-ply,Open
-7,Loko Krnov B,Lukáš Tomčák,1991,72.8,195,130,202.5,527.5,SBD,Single-ply,Open
-7,Loko Krnov B,Petr Gracias,1971,88.6,227.5,147.5,217.5,592.5,SBD,Single-ply,Open
-7,Loko Krnov B,Petr Buchtík,1991,84.2,220,125,215,560,SBD,Single-ply,Open
-DQ,Loko Krnov B,Václav Burda,1946,64.7,,120,190,,SBD,Single-ply,Open
-8,Sokol Vranovice,Pavel Pláteník,1974,85.6,260,160,240,660,SBD,Single-ply,Open
-8,Sokol Vranovice,Jiří Furch,1975,79.6,170,132.5,182.5,485,SBD,Single-ply,Open
-8,Sokol Vranovice,Oldřich Halfar,1973,90.3,160,130,207.5,497.5,SBD,Single-ply,Open
-8,Sokol Vranovice,Jan Bohunický,1988,65.4,125,95,140,360,SBD,Single-ply,Open
-9,Loko Krnov D,Petr Šafarčík,1992,77,195,110,200,505,SBD,Single-ply,Open
-9,Loko Krnov D,Daniel Kurečka,1994,54,130,65,140,335,SBD,Single-ply,Open
-9,Loko Krnov D,Štěpán Kučera,1994,68.3,135,82.5,175,392.5,SBD,Single-ply,Open
-9,Loko Krnov D,Roman Hodža,1976,106.1,160,140,200,500,SBD,Single-ply,Open
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division,Sex
+1,Olympia Zlín B,Marek Žák,1981,93.1,260,182.5,275,717.5,SBD,Single-ply,Open,M
+1,Olympia Zlín B,Michal Krček,1978,102,260,187.5,255,702.5,SBD,Single-ply,Open,M
+1,Olympia Zlín B,Pavel Kaňák,1985,144.2,250,190,300,740,SBD,Single-ply,Open,M
+1,Olympia Zlín B,Tomáš Pavliš,1993,81.7,205,115,230,550,SBD,Single-ply,Open,M
+2,KST Jihlava,Filip Sobotka,1993,95.1,285,185,250,720,SBD,Single-ply,Open,M
+2,KST Jihlava,Tadeáš Kronovetr,1993,80.8,247.5,135,240,622.5,SBD,Single-ply,Open,M
+2,KST Jihlava,Patrik Přibyl,1993,92,230,125,250,605,SBD,Single-ply,Open,M
+2,KST Jihlava,David Hora,1993,76.4,182.5,100,220,502.5,SBD,Single-ply,Open,M
+3,Viktorie Bohumín,Martin Turek,1972,82.3,250,185,225,660,SBD,Single-ply,Open,M
+3,Viktorie Bohumín,Tomáš Turek,1994,89.4,230,130,215,575,SBD,Single-ply,Open,M
+3,Viktorie Bohumín,Pavel Malina,1960,64,190,105,160,455,SBD,Single-ply,Open,M
+3,Viktorie Bohumín,Aleš Spiewok,1967,93.1,190,165,175,530,SBD,Single-ply,Open,M
+4,Colbert Vítkovice,Tomáš Poles,1980,97.8,280,170,285,735,SBD,Single-ply,Open,M
+4,Colbert Vítkovice,David Kieseweter,1984,74.6,170,115,190,475,SBD,Single-ply,Open,M
+4,Colbert Vítkovice,Denis Šindel,1991,110.3,190,127.5,235,552.5,SBD,Single-ply,Open,M
+4,Colbert Vítkovice,Josef Boháček,1972,102.5,175,150,205,530,SBD,Single-ply,Open,M
+5,TJ Sokol Rosice,Petr Lahoda,1970,107.3,255,220,230,705,SBD,Single-ply,Open,M
+5,TJ Sokol Rosice,Václav Patočka,1977,88,240,160,240,640,SBD,Single-ply,Open,M
+5,TJ Sokol Rosice,Ivo Brázda,1993,58.2,140,80,170,390,SBD,Single-ply,Open,M
+DQ,TJ Sokol Rosice,Ivo Brázda,1971,78.9,,130,235,,SBD,Single-ply,Open,M
+6,Loko Krnov C,Miroslav Čapka,1964,109.9,210,180,230,620,SBD,Single-ply,Open,M
+6,Loko Krnov C,Jiří Valášek,1976,89.2,200,120,240,560,SBD,Single-ply,Open,M
+6,Loko Krnov C,Josef Šindelář,1984,73.3,175,110,180,465,SBD,Single-ply,Open,M
+6,Loko Krnov C,Miloš Navrátil,1960,103.7,180,185,190,555,SBD,Single-ply,Open,M
+7,Loko Krnov B,Lukáš Tomčák,1991,72.8,195,130,202.5,527.5,SBD,Single-ply,Open,M
+7,Loko Krnov B,Petr Gracias,1971,88.6,227.5,147.5,217.5,592.5,SBD,Single-ply,Open,M
+7,Loko Krnov B,Petr Buchtík,1991,84.2,220,125,215,560,SBD,Single-ply,Open,M
+DQ,Loko Krnov B,Václav Burda,1946,64.7,,120,190,,SBD,Single-ply,Open,M
+8,Sokol Vranovice,Pavel Pláteník,1974,85.6,260,160,240,660,SBD,Single-ply,Open,M
+8,Sokol Vranovice,Jiří Furch,1975,79.6,170,132.5,182.5,485,SBD,Single-ply,Open,M
+8,Sokol Vranovice,Oldřich Halfar,1973,90.3,160,130,207.5,497.5,SBD,Single-ply,Open,M
+8,Sokol Vranovice,Jan Bohunický,1988,65.4,125,95,140,360,SBD,Single-ply,Open,M
+9,Loko Krnov D,Petr Šafarčík,1992,77,195,110,200,505,SBD,Single-ply,Open,M
+9,Loko Krnov D,Daniel Kurečka,1994,54,130,65,140,335,SBD,Single-ply,Open,M
+9,Loko Krnov D,Štěpán Kučera,1994,68.3,135,82.5,175,392.5,SBD,Single-ply,Open,M
+9,Loko Krnov D,Roman Hodža,1976,106.1,160,140,200,500,SBD,Single-ply,Open,M

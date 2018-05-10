@@ -1,24 +1,24 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event
-1,Sokol Nymburk A,Zbyněk Krejča,1974,110.5,310,255,290,855,Open,Single-ply,SBD
-1,Sokol Nymburk A,Marcela Balogová,1974,49.5,132.5,90,142.5,365,Open,Single-ply,SBD
-1,Sokol Nymburk A,Jan Pinc,1973,106.3,280,200,300,780,Open,Single-ply,SBD
-1,Sokol Nymburk A,Pavel Košnar,1981,96.7,270,180,275,725,Juniors,Single-ply,SBD
-2,TJ Svitavy A,Petr Theuser,1961,97.6,340,230,310,880,Masters 1,Single-ply,SBD
-2,TJ Svitavy A,Tomáš Lacko,1982,67.5,225,150,230,605,Juniors,Single-ply,SBD
-2,TJ Svitavy A,Lukáš Theuser,1981,74.9,245,147.5,255,647.5,Juniors,Single-ply,SBD
-2,TJ Svitavy A,Libor Novák,1966,81.7,205,165,230,600,Open,Single-ply,SBD
-3,Sokol Těškovice,Petr Krejčí,1979,110.7,280,187.5,290,757.5,Open,Single-ply,SBD
-3,Sokol Těškovice,Stanislav Hoza,1956,84.4,280,155,230,665,Masters 1,Single-ply,SBD
-3,Sokol Těškovice,Václav Jaremczuk,1963,92.2,265,155,270,690,Masters 1,Single-ply,SBD
-3,Sokol Těškovice,Štěpán Hoza,1974,70.7,215,137.5,220,572.5,Open,Single-ply,SBD
-4,TJ Lovochemie Lovosice,Dušan Švarcbach,1975,78.8,220,152.5,240,612.5,Open,Single-ply,SBD
-4,TJ Lovochemie Lovosice,Milan Špingl,1980,130.5,290,200,250,740,Open,Single-ply,SBD
-4,TJ Lovochemie Lovosice,Jiří Stejskal,1977,99.4,250,160,260,670,Open,Single-ply,SBD
-4,TJ Lovochemie Lovosice,Jiří Effenberber,1975,110.9,265,150,280,695,Open,Single-ply,SBD
-5,TJ Olympia Zlín A,Jiří Grygas,1968,106.1,290,180,305,775,Open,Single-ply,SBD
-5,TJ Olympia Zlín A,Marek Žák,1981,82.1,280,150,255,685,Juniors,Single-ply,SBD
-5,TJ Olympia Zlín A,Kamil Večeřa,1978,75.9,225,182.5,242.5,650,Open,Single-ply,SBD
-DD,TJ Lokomotiva Krnov A,Milan Greguš,1968,95.8,290,200,265,,Open,Single-ply,SBD
-6,TJ Lokomotiva Krnov A,Jiří Olejko,1977,94.5,265,180,255,700,Open,Single-ply,SBD
-6,TJ Lokomotiva Krnov A,Rémy Krayzel,1955,78.6,230,145,205,580,Masters 1,Single-ply,SBD
-6,TJ Lokomotiva Krnov A,Petr Gracias,1971,83.4,212.5,160,210,582.5,Open,Single-ply,SBD
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Equipment,Event,Sex
+1,Sokol Nymburk A,Zbyněk Krejča,1974,110.5,310,255,290,855,Open,Single-ply,SBD,M
+1,Sokol Nymburk A,Marcela Balogová,1974,49.5,132.5,90,142.5,365,Open,Single-ply,SBD,F
+1,Sokol Nymburk A,Jan Pinc,1973,106.3,280,200,300,780,Open,Single-ply,SBD,M
+1,Sokol Nymburk A,Pavel Košnar,1981,96.7,270,180,275,725,Juniors,Single-ply,SBD,M
+2,TJ Svitavy A,Petr Theuser,1961,97.6,340,230,310,880,Masters 1,Single-ply,SBD,M
+2,TJ Svitavy A,Tomáš Lacko,1982,67.5,225,150,230,605,Juniors,Single-ply,SBD,M
+2,TJ Svitavy A,Lukáš Theuser,1981,74.9,245,147.5,255,647.5,Juniors,Single-ply,SBD,M
+2,TJ Svitavy A,Libor Novák,1966,81.7,205,165,230,600,Open,Single-ply,SBD,M
+3,Sokol Těškovice,Petr Krejčí,1979,110.7,280,187.5,290,757.5,Open,Single-ply,SBD,M
+3,Sokol Těškovice,Stanislav Hoza,1956,84.4,280,155,230,665,Masters 1,Single-ply,SBD,M
+3,Sokol Těškovice,Václav Jaremczuk,1963,92.2,265,155,270,690,Masters 1,Single-ply,SBD,M
+3,Sokol Těškovice,Štěpán Hoza,1974,70.7,215,137.5,220,572.5,Open,Single-ply,SBD,M
+4,TJ Lovochemie Lovosice,Dušan Švarcbach,1975,78.8,220,152.5,240,612.5,Open,Single-ply,SBD,M
+4,TJ Lovochemie Lovosice,Milan Špingl,1980,130.5,290,200,250,740,Open,Single-ply,SBD,M
+4,TJ Lovochemie Lovosice,Jiří Stejskal,1977,99.4,250,160,260,670,Open,Single-ply,SBD,M
+4,TJ Lovochemie Lovosice,Jiří Effenberber,1975,110.9,265,150,280,695,Open,Single-ply,SBD,M
+5,TJ Olympia Zlín A,Jiří Grygas,1968,106.1,290,180,305,775,Open,Single-ply,SBD,M
+5,TJ Olympia Zlín A,Marek Žák,1981,82.1,280,150,255,685,Juniors,Single-ply,SBD,M
+5,TJ Olympia Zlín A,Kamil Večeřa,1978,75.9,225,182.5,242.5,650,Open,Single-ply,SBD,M
+DD,TJ Lokomotiva Krnov A,Milan Greguš,1968,95.8,290,200,265,,Open,Single-ply,SBD,M
+6,TJ Lokomotiva Krnov A,Jiří Olejko,1977,94.5,265,180,255,700,Open,Single-ply,SBD,M
+6,TJ Lokomotiva Krnov A,Rémy Krayzel,1955,78.6,230,145,205,580,Masters 1,Single-ply,SBD,M
+6,TJ Lokomotiva Krnov A,Petr Gracias,1971,83.4,212.5,160,210,582.5,Open,Single-ply,SBD,M

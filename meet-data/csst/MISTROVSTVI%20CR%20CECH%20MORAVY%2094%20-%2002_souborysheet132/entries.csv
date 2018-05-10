@@ -1,37 +1,37 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Kamil Vecera,1978,66.6,Sokol Jemnice,175,155,205,535,Single-ply,SBD
-2,Pavel Andel,1963,85.8,Sokol Jemnice,180,135,230,545,Single-ply,SBD
-3,Karel Kuhtreiber,1977,76.1,Sokol Jemnice,185,160,220,565,Single-ply,SBD
-4,Marcel Andel,1958,87.9,Sokol Jemnice,185,125,235,545,Single-ply,SBD
-1,Zbynek Klusak,1959,119.8,Sokol Zlin B,235,150,245,630,Single-ply,SBD
-2,Martin Drbal,1975,103.8,Sokol Zlin B,215,125,240,580,Single-ply,SBD
-3,Michal Gergela,1962,84.9,Sokol Zlin B,180,140,230,550,Single-ply,SBD
-4,Zdenek Chobot,1960,99.9,Sokol Zlin B,215,135,250,600,Single-ply,SBD
-1,Petr Mikeska,1966,60.1,Loko Krnov C,120,57.5,160,337.5,Single-ply,SBD
-2,Jaroslav Pospisil,1980,73.6,Loko Krnov C,160,122.5,160,442.5,Single-ply,SBD
-3,Petr Adami,1978,85.3,Loko Krnov C,190,140,200,530,Single-ply,SBD
-4,Paska Vlachopulos,1978,99.9,Loko Krnov C,205,150,220,575,Single-ply,SBD
-1,Rostislav Janicek,1976,96.6,TJ Nove Mesto,160,145,210,515,Single-ply,SBD
-2,Radek Horky,1977,85.4,TJ Nove Mesto,140,110,215,465,Single-ply,SBD
-3,Martin Okurka,1977,86.4,TJ Nove Mesto,155,130,210,495,Single-ply,SBD
-4,Bohumil Alt,1976,91.4,TJ Nove Mesto,170,120,230,520,Single-ply,SBD
-1,Josef Sveda,1972,75.6,Sokol Zdarna,135,90,160,385,Single-ply,SBD
-2,Petr Slany,1968,76.6,Sokol Zdarna,145,110,165,420,Single-ply,SBD
-3,Rudolf Prachar,1971,79.9,Sokol Zdarna,145,120,205,470,Single-ply,SBD
-4,Martin Krejcir,1981,81.1,Sokol Zdarna,180,110,170,460,Single-ply,SBD
-1,Robin Svacina,1984,63.8,Podivin,130,90,170,390,Single-ply,SBD
-2,Jaroslav Buchta,1980,89.9,Podivin,140,85,190,415,Single-ply,SBD
-3,Petr Petras,1984,84.6,Podivin,175,100,190,465,Single-ply,SBD
-4,Zbynek Juratek,1982,86,Podivin,160,110,200,470,Single-ply,SBD
-1,Josef Mazal,1981,86,Sokol Zlin C,135,75,160,370,Single-ply,SBD
-2,Jan Kohutic,1947,71.3,Sokol Zlin C,130,85,170,385,Single-ply,SBD
-3,Roman Uher,1967,73.3,Sokol Zlin C,170,100,180,450,Single-ply,SBD
-4,Otakar Latal,1960,89.6,Sokol Zlin C,195,102.5,215,512.5,Single-ply,SBD
-1,Lukas Svoboda,1984,80.3,TJ Trebic,125,80,160,365,Single-ply,SBD
-2,Martin Fiala,1985,71.4,TJ Trebic,135,80,155,370,Single-ply,SBD
-3,Ales Janecek,1977,89,TJ Trebic,145,120,190,455,Single-ply,SBD
-4,Milan Babunek,1973,91.2,TJ Trebic,205,117.5,210,532.5,Single-ply,SBD
-1,Jan Prochazka,1985,77,So Vranovice,85,72.5,135,292.5,Single-ply,SBD
-2,Petr Biedermann,1986,67.3,So Vranovice,87.5,60,92.5,240,Single-ply,SBD
-3,Tomas Travnik,1985,67.3,So Vranovice,112.5,80,127.5,320,Single-ply,SBD
-4,Stanislav Furch,1977,67.4,So Vranovice,135,75,155,365,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Kamil Vecera,1978,66.6,Sokol Jemnice,175,155,205,535,Single-ply,SBD,M
+2,Pavel Andel,1963,85.8,Sokol Jemnice,180,135,230,545,Single-ply,SBD,M
+3,Karel Kuhtreiber,1977,76.1,Sokol Jemnice,185,160,220,565,Single-ply,SBD,M
+4,Marcel Andel,1958,87.9,Sokol Jemnice,185,125,235,545,Single-ply,SBD,M
+1,Zbynek Klusak,1959,119.8,Sokol Zlin B,235,150,245,630,Single-ply,SBD,M
+2,Martin Drbal,1975,103.8,Sokol Zlin B,215,125,240,580,Single-ply,SBD,M
+3,Michal Gergela,1962,84.9,Sokol Zlin B,180,140,230,550,Single-ply,SBD,M
+4,Zdenek Chobot,1960,99.9,Sokol Zlin B,215,135,250,600,Single-ply,SBD,M
+1,Petr Mikeska,1966,60.1,Loko Krnov C,120,57.5,160,337.5,Single-ply,SBD,M
+2,Jaroslav Pospisil,1980,73.6,Loko Krnov C,160,122.5,160,442.5,Single-ply,SBD,M
+3,Petr Adami,1978,85.3,Loko Krnov C,190,140,200,530,Single-ply,SBD,M
+4,Paska Vlachopulos,1978,99.9,Loko Krnov C,205,150,220,575,Single-ply,SBD,M
+1,Rostislav Janicek,1976,96.6,TJ Nove Mesto,160,145,210,515,Single-ply,SBD,M
+2,Radek Horky,1977,85.4,TJ Nove Mesto,140,110,215,465,Single-ply,SBD,M
+3,Martin Okurka,1977,86.4,TJ Nove Mesto,155,130,210,495,Single-ply,SBD,M
+4,Bohumil Alt,1976,91.4,TJ Nove Mesto,170,120,230,520,Single-ply,SBD,M
+1,Josef Sveda,1972,75.6,Sokol Zdarna,135,90,160,385,Single-ply,SBD,M
+2,Petr Slany,1968,76.6,Sokol Zdarna,145,110,165,420,Single-ply,SBD,M
+3,Rudolf Prachar,1971,79.9,Sokol Zdarna,145,120,205,470,Single-ply,SBD,M
+4,Martin Krejcir,1981,81.1,Sokol Zdarna,180,110,170,460,Single-ply,SBD,M
+1,Robin Svacina,1984,63.8,Podivin,130,90,170,390,Single-ply,SBD,M
+2,Jaroslav Buchta,1980,89.9,Podivin,140,85,190,415,Single-ply,SBD,M
+3,Petr Petras,1984,84.6,Podivin,175,100,190,465,Single-ply,SBD,M
+4,Zbynek Juratek,1982,86,Podivin,160,110,200,470,Single-ply,SBD,M
+1,Josef Mazal,1981,86,Sokol Zlin C,135,75,160,370,Single-ply,SBD,M
+2,Jan Kohutic,1947,71.3,Sokol Zlin C,130,85,170,385,Single-ply,SBD,M
+3,Roman Uher,1967,73.3,Sokol Zlin C,170,100,180,450,Single-ply,SBD,M
+4,Otakar Latal,1960,89.6,Sokol Zlin C,195,102.5,215,512.5,Single-ply,SBD,M
+1,Lukas Svoboda,1984,80.3,TJ Trebic,125,80,160,365,Single-ply,SBD,M
+2,Martin Fiala,1985,71.4,TJ Trebic,135,80,155,370,Single-ply,SBD,M
+3,Ales Janecek,1977,89,TJ Trebic,145,120,190,455,Single-ply,SBD,M
+4,Milan Babunek,1973,91.2,TJ Trebic,205,117.5,210,532.5,Single-ply,SBD,M
+1,Jan Prochazka,1985,77,So Vranovice,85,72.5,135,292.5,Single-ply,SBD,M
+2,Petr Biedermann,1986,67.3,So Vranovice,87.5,60,92.5,240,Single-ply,SBD,M
+3,Tomas Travnik,1985,67.3,So Vranovice,112.5,80,127.5,320,Single-ply,SBD,M
+4,Stanislav Furch,1977,67.4,So Vranovice,135,75,155,365,Single-ply,SBD,M

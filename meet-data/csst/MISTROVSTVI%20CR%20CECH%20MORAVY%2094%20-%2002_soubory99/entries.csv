@@ -1,32 +1,32 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Ondrej Seidel,1975,86.7,TJ Olympia Zlin,260,160,237.5,657.5,Single-ply,SBD
-1,Dezider Mihok,1975,104.5,TJ Olympia Zlin,295,192.5,310,797.5,Single-ply,SBD
-1,Michail Solomin,1971,82,TJ Olympia Zlin,240,195,265,700,Single-ply,SBD
-1,Vratislav Cech,1965,105,TJ Olympia Zlin,255,167.5,310,732.5,Single-ply,SBD
-1,Marek Zak,1981,81.5,TJ Olympia Zlin,240,147.5,240,627.5,Single-ply,SBD
-2,Miroslav Hubacek,1967,89.4,Sokol Nymburk A,275,200,275,750,Single-ply,SBD
-2,Michal Sekot,1961,93.1,Sokol Nymburk A,250,185,255,690,Single-ply,SBD
-2,Karel Ruso,1965,68.6,Sokol Nymburk A,225,122.5,220,567.5,Single-ply,SBD
-2,Zbynek Krejca,1974,109,Sokol Nymburk A,275,205,282.5,762.5,Single-ply,SBD
-3,Ludek Michal,1969,106.2,Sokol Nymburk B,270,195,250,715,Single-ply,SBD
-3,Martin Urban,1968,98,Sokol Nymburk B,242.5,140,290,672.5,Single-ply,SBD
-3,Miroslav Vacek,1967,126.5,Sokol Nymburk B,280,180,285,745,Single-ply,SBD
-3,Jiri Janecek,1961,75.08,Sokol Nymburk B,212.5,152.5,240,605,Single-ply,SBD
-3,Jiri Lacina,1969,121,Sokol Nymburk B,235,170,260,665,Single-ply,SBD
-4,Milan Gregus,1968,91,TJ Loko Krnov A,235,165,225,625,Single-ply,SBD
-4,Jaroslav Planka,1968,63.9,TJ Loko Krnov A,165,115,205,485,Single-ply,SBD
-4,Petr Ilik,1969,94.1,TJ Loko Krnov A,240,150,250,640,Single-ply,SBD
-4,Remy Krayzel,1955,80.2,TJ Loko Krnov A,250,172.5,230,652.5,Single-ply,SBD
-4,David Kenis,1977,68,TJ Loko Krnov A,225,135,220,580,Single-ply,SBD
-5,Tomas Sedlacek,1965,93,TJ Svitavy,245,175,262.5,682.5,Single-ply,SBD
-5,Martin Otava,1981,78.5,TJ Svitavy,200,132.5,225,557.5,Single-ply,SBD
-5,Tomas Lacko,1982,57.7,TJ Svitavy,175,100,187.5,462.5,Single-ply,SBD
-5,Libor Novak,1966,83.9,TJ Svitavy,200,155,225,580,Single-ply,SBD
-6,Stanislav Hoza,1956,85,TJ So Teskovice,260,155,220,635,Single-ply,SBD
-6,Radim Horinek,1975,99,TJ So Teskovice,205,147.5,257.5,610,Single-ply,SBD
-6,Stepan Hoza,1974,73,TJ So Teskovice,190,120,200,510,Single-ply,SBD
-6,Vaclav Jaremczuk,1963,90,TJ So Teskovice,240,152.5,265,657.5,Single-ply,SBD
-7,Norbert Gurtler,1973,122,TJ Loko Krnov B,240,145,240,625,Single-ply,SBD
-7,Jiri Zeman,1944,101.8,TJ Loko Krnov B,235,165,250,650,Single-ply,SBD
-7,Jaroslav Stasek,1973,121,TJ Loko Krnov B,255,150,280,685,Single-ply,SBD
-7,Pianotis Melios,1960,76.2,TJ Loko Krnov B,180,145,210,535,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Ondrej Seidel,1975,86.7,TJ Olympia Zlin,260,160,237.5,657.5,Single-ply,SBD,M
+1,Dezider Mihok,1975,104.5,TJ Olympia Zlin,295,192.5,310,797.5,Single-ply,SBD,M
+1,Michail Solomin,1971,82,TJ Olympia Zlin,240,195,265,700,Single-ply,SBD,M
+1,Vratislav Cech,1965,105,TJ Olympia Zlin,255,167.5,310,732.5,Single-ply,SBD,M
+1,Marek Zak,1981,81.5,TJ Olympia Zlin,240,147.5,240,627.5,Single-ply,SBD,M
+2,Miroslav Hubacek,1967,89.4,Sokol Nymburk A,275,200,275,750,Single-ply,SBD,M
+2,Michal Sekot,1961,93.1,Sokol Nymburk A,250,185,255,690,Single-ply,SBD,M
+2,Karel Ruso,1965,68.6,Sokol Nymburk A,225,122.5,220,567.5,Single-ply,SBD,M
+2,Zbynek Krejca,1974,109,Sokol Nymburk A,275,205,282.5,762.5,Single-ply,SBD,M
+3,Ludek Michal,1969,106.2,Sokol Nymburk B,270,195,250,715,Single-ply,SBD,M
+3,Martin Urban,1968,98,Sokol Nymburk B,242.5,140,290,672.5,Single-ply,SBD,M
+3,Miroslav Vacek,1967,126.5,Sokol Nymburk B,280,180,285,745,Single-ply,SBD,M
+3,Jiri Janecek,1961,75.08,Sokol Nymburk B,212.5,152.5,240,605,Single-ply,SBD,M
+3,Jiri Lacina,1969,121,Sokol Nymburk B,235,170,260,665,Single-ply,SBD,M
+4,Milan Gregus,1968,91,TJ Loko Krnov A,235,165,225,625,Single-ply,SBD,M
+4,Jaroslav Planka,1968,63.9,TJ Loko Krnov A,165,115,205,485,Single-ply,SBD,M
+4,Petr Ilik,1969,94.1,TJ Loko Krnov A,240,150,250,640,Single-ply,SBD,M
+4,Remy Krayzel,1955,80.2,TJ Loko Krnov A,250,172.5,230,652.5,Single-ply,SBD,M
+4,David Kenis,1977,68,TJ Loko Krnov A,225,135,220,580,Single-ply,SBD,M
+5,Tomas Sedlacek,1965,93,TJ Svitavy,245,175,262.5,682.5,Single-ply,SBD,M
+5,Martin Otava,1981,78.5,TJ Svitavy,200,132.5,225,557.5,Single-ply,SBD,M
+5,Tomas Lacko,1982,57.7,TJ Svitavy,175,100,187.5,462.5,Single-ply,SBD,M
+5,Libor Novak,1966,83.9,TJ Svitavy,200,155,225,580,Single-ply,SBD,M
+6,Stanislav Hoza,1956,85,TJ So Teskovice,260,155,220,635,Single-ply,SBD,M
+6,Radim Horinek,1975,99,TJ So Teskovice,205,147.5,257.5,610,Single-ply,SBD,M
+6,Stepan Hoza,1974,73,TJ So Teskovice,190,120,200,510,Single-ply,SBD,M
+6,Vaclav Jaremczuk,1963,90,TJ So Teskovice,240,152.5,265,657.5,Single-ply,SBD,M
+7,Norbert Gurtler,1973,122,TJ Loko Krnov B,240,145,240,625,Single-ply,SBD,M
+7,Jiri Zeman,1944,101.8,TJ Loko Krnov B,235,165,250,650,Single-ply,SBD,M
+7,Jaroslav Stasek,1973,121,TJ Loko Krnov B,255,150,280,685,Single-ply,SBD,M
+7,Pianotis Melios,1960,76.2,TJ Loko Krnov B,180,145,210,535,Single-ply,SBD,M

@@ -1,33 +1,33 @@
-Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event
-Jan More,1993,68.65,215.0,135.0,240.0,590.0,Open,Fitness Staňkov,Single-ply,SBD
-Karel Rada,1973,105.2,270.0,165.0,292.5,727.5,Open,Fitness Staňkov,Single-ply,SBD
-Karel Rada,2001,80.55,220.0,130.0,240.0,590.0,Open,Fitness Staňkov,Single-ply,SBD
-Luboš Rada,1979,82.55,190.0,140.0,232.5,562.5,Open,Fitness Staňkov,Single-ply,SBD
-Emil Balogh,1983,97.0,250.0,170.0,240.0,660.0,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Petr Blinov,1970,132.4,242.5,187.5,252.5,682.5,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Pavel Krejča,1995,93.6,240.0,120.0,200.0,560.0,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Jaroslav Hodík,1958,85.8,175.0,140.0,220.0,535.0,Open,TJ Spartak Chodov - A,Single-ply,SBD
-Tomáš Novák,1999,101.9,250.0,157.5,215.0,622.5,Open,SK ZLOBR Sedlčany,Single-ply,SBD
-Josef Klíma,1999,73.2,205.0,90.0,200.0,495.0,Open,SK ZLOBR Sedlčany,Single-ply,SBD
-Kateřina Kunclová,1998,62.65,135.0,75.0,115.0,325.0,Open,SK ZLOBR Sedlčany,Single-ply,SBD
-Ekaterina Antošová,1995,54.9,95.0,75.0,105.0,275.0,Open,SK ZLOBR Sedlčany,Single-ply,SBD
-Petr Štumfol,1994,84.15,202.5,140.0,215.0,557.5,Open,TJ Sokol Jemnice,Single-ply,SBD
-Richard Štork,1983,87.25,190.0,157.5,210.0,557.5,Open,TJ Sokol Jemnice,Single-ply,SBD
-Vít Králík,1995,70.35,145.0,112.5,200.0,457.5,Open,TJ Sokol Jemnice,Single-ply,SBD
-Luděk Dvořák,1996,92.5,160.0,170.0,210.0,540.0,Open,TJ Sokol Jemnice,Single-ply,SBD
-Martin Šafář,1981,114.8,270.0,190.0,282.5,742.5,Open,SK TER Praha,Single-ply,SBD
-Jan Pokrupa,1992,116.8,220.0,162.5,220.0,602.5,Open,SK TER Praha,Single-ply,SBD
-Radek Carda,1987,72.75,150.0,100.0,185.0,435.0,Open,SK TER Praha,Single-ply,SBD
-Filip Jankov,1999,72.7,152.5,85.0,190.0,427.5,Open,SK TER Praha,Single-ply,SBD
-Radim Kopal,1974,94.85,250.0,202.5,235.0,687.5,Open,SKST Litvínov,Single-ply,SBD
-Julius Čmerda,1973,91.95,175.0,127.5,230.0,532.5,Open,SKST Litvínov,Single-ply,SBD
-Petr Zamazal,1956,107.1,182.5,140.0,225.0,547.5,Open,SKST Litvínov,Single-ply,SBD
-František Hejl,1990,81.2,167.5,90.0,195.0,452.5,Open,SKST Litvínov,Single-ply,SBD
-Lenka Strolená,1984,64.0,130.0,97.5,165.0,392.5,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Daniel Šmrha,1994,75.3,170.0,110.0,210.0,490.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Martin Dřevikovský,1987,100.5,185.0,115.0,190.0,490.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Vojtěch Kraus,1997,78.1,140.0,100.0,175.0,415.0,Open,TJ Spartak Chodov - B,Single-ply,SBD
-Jan Verbič,1962,125.8,275.0,155.0,300.0,730.0,Open,TJ Sokol Vejprnice,Single-ply,SBD
-Yuriy Markovets,1999,73.7,140.0,92.5,172.5,405.0,Open,TJ Sokol Vejprnice,Single-ply,SBD
-Matyáš Janda,1999,62.3,100.0,75.0,135.0,310.0,Open,TJ Sokol Vejprnice,Single-ply,SBD
-Jaroslav Šoukal,1972,173.5,75.0,75.0,75.0,225.0,Open,TJ Sokol Vejprnice,Single-ply,SBD
+Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event,Sex,WeightClassKg,Place
+Jan More,1993,68.65,215,135,240,590,Open,Fitness Staňkov,Single-ply,SBD,M,74,1
+Karel Rada,1973,105.2,270,165,292.5,727.5,Open,Fitness Staňkov,Single-ply,SBD,M,120,2
+Karel Rada,2001,80.55,220,130,240,590,Open,Fitness Staňkov,Single-ply,SBD,M,83,1
+Luboš Rada,1979,82.55,190,140,232.5,562.5,Open,Fitness Staňkov,Single-ply,SBD,M,83,2
+Emil Balogh,1983,97,250,170,240,660,Open,TJ Spartak Chodov - A,Single-ply,SBD,M,105,2
+Petr Blinov,1970,132.4,242.5,187.5,252.5,682.5,Open,TJ Spartak Chodov - A,Single-ply,SBD,M,120+,2
+Pavel Krejča,1995,93.6,240,120,200,560,Open,TJ Spartak Chodov - A,Single-ply,SBD,M,105,4
+Jaroslav Hodík,1958,85.8,175,140,220,535,Open,TJ Spartak Chodov - A,Single-ply,SBD,M,93,4
+Tomáš Novák,1999,101.9,250,157.5,215,622.5,Open,SK ZLOBR Sedlčany,Single-ply,SBD,M,105,3
+Josef Klíma,1999,73.2,205,90,200,495,Open,SK ZLOBR Sedlčany,Single-ply,SBD,M,74,2
+Kateřina Kunclová,1998,62.65,135,75,115,325,Open,SK ZLOBR Sedlčany,Single-ply,SBD,F,63,1
+Ekaterina Antošová,1995,54.9,95,75,105,275,Open,SK ZLOBR Sedlčany,Single-ply,SBD,F,57,1
+Petr Štumfol,1994,84.15,202.5,140,215,557.5,Open,TJ Sokol Jemnice,Single-ply,SBD,M,93,1
+Richard Štork,1983,87.25,190,157.5,210,557.5,Open,TJ Sokol Jemnice,Single-ply,SBD,M,93,2
+Vít Králík,1995,70.35,145,112.5,200,457.5,Open,TJ Sokol Jemnice,Single-ply,SBD,M,74,3
+Luděk Dvořák,1996,92.5,160,170,210,540,Open,TJ Sokol Jemnice,Single-ply,SBD,M,93,3
+Martin Šafář,1981,114.8,270,190,282.5,742.5,Open,SK TER Praha,Single-ply,SBD,M,120,1
+Jan Pokrupa,1992,116.8,220,162.5,220,602.5,Open,SK TER Praha,Single-ply,SBD,M,120,3
+Radek Carda,1987,72.75,150,100,185,435,Open,SK TER Praha,Single-ply,SBD,M,74,4
+Filip Jankov,1999,72.7,152.5,85,190,427.5,Open,SK TER Praha,Single-ply,SBD,M,74,5
+Radim Kopal,1974,94.85,250,202.5,235,687.5,Open,SKST Litvínov,Single-ply,SBD,M,105,1
+Julius Čmerda,1973,91.95,175,127.5,230,532.5,Open,SKST Litvínov,Single-ply,SBD,M,93,5
+Petr Zamazal,1956,107.1,182.5,140,225,547.5,Open,SKST Litvínov,Single-ply,SBD,M,120,4
+František Hejl,1990,81.2,167.5,90,195,452.5,Open,SKST Litvínov,Single-ply,SBD,M,83,4
+Lenka Strolená,1984,64,130,97.5,165,392.5,Open,TJ Spartak Chodov - B,Single-ply,SBD,F,72,1
+Daniel Šmrha,1994,75.3,170,110,210,490,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,83,3
+Martin Dřevikovský,1987,100.5,185,115,190,490,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,105,5
+Vojtěch Kraus,1997,78.1,140,100,175,415,Open,TJ Spartak Chodov - B,Single-ply,SBD,M,83,5
+Jan Verbič,1962,125.8,275,155,300,730,Open,TJ Sokol Vejprnice,Single-ply,SBD,M,120+,1
+Yuriy Markovets,1999,73.7,140,92.5,172.5,405,Open,TJ Sokol Vejprnice,Single-ply,SBD,M,74,6
+Matyáš Janda,1999,62.3,100,75,135,310,Open,TJ Sokol Vejprnice,Single-ply,SBD,M,66,1
+Jaroslav Šoukal,1972,173.5,75,75,75,225,Open,TJ Sokol Vejprnice,Single-ply,SBD,M,120+,3

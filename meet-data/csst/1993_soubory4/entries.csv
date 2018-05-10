@@ -1,34 +1,34 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event
-1,Pavel Maixner,,60,TJ Autobrzdy Jablonec,175,102.5,205,482.5,60,Single-ply,SBD
-2,Antonín Urban,,59.4,TJ Spartak Chodov,150,87.5,200,437.5,60,Single-ply,SBD
-1,Jindřich Knot,,65.4,TJ Autobrzdy Jablonec,200,110,232.5,542.5,67.5,Single-ply,SBD
-2,Jiří Janeček,,67,Sokol Nymburk,185,125,230,540,67.5,Single-ply,SBD
-3,Radek Zvěřina,,67,Sokol Nymburk,180,125,200,505,67.5,Single-ply,SBD
-4,Karel Ruso,,67.1,Sokol Nymburk,180,100,200,480,67.5,Single-ply,SBD
-DQ,Werner Koudelka,,66.9,TJ Spartak Chodov,-170,,,,67.5,Single-ply,SBD
-1,Zdeněk Fanta,,74.5,TJ Spartak Ústí n.L,240,130,260,630,75,Single-ply,SBD
-2,Ludovít Griger,,74.2,TJ SCHZ Lovosice,205,135,260,600,75,Single-ply,SBD
-3,Vladimír Medek,,74.8,TJ Spartak Rokytnice,202.5,137.5,240,580,75,Single-ply,SBD
-4,Tomáš Ježek,,74.5,Fit klub Příbram,180,140,200,520,75,Single-ply,SBD
-5,Jiří Boháček,,75,individual,192.5,120,192.5,505,75,Single-ply,SBD
-1,Josef Hula,,80.1,TJ Jiskra Domažlice,222.5,145,260,627.5,82.5,Single-ply,SBD
-2,Michal Sekot,,82,LKM Plzeň,225,157.5,235,617.5,82.5,Single-ply,SBD
-3,Luboš Maixner,,75.4,TJ Autobrzdy Jablonec,212.5,132.5,230,575,82.5,Single-ply,SBD
-4,Leoš Malenovský,,81.1,TJ Sokol Rychnov,200,135,240,575,82.5,Single-ply,SBD
-5,Jaroslav Postl,,79.4,TJ Autobrzdy Jablonec,190,125,210,525,82.5,Single-ply,SBD
-1,Petr Theuser,1961,89.7,TJ Spartak Ústí n.L,310,185,305,800,90,Single-ply,SBD
-2,Manfred Röhm,1953,88.6,TJ Spartak Chodov,255,160,230,645,90,Single-ply,SBD
-3,Jiří Šálek,1960,89.8,TJ SCHZ Lovosice,250,140,250,640,90,Single-ply,SBD
-4,Vasil Vatolin,1959,85.7,Sportcentrum Klára,220,175,240,635,90,Single-ply,SBD
-5,Igor Charváth,1969,90,TJ Baník Most,230,125,270,625,90,Single-ply,SBD
-6,Pavel Matějka,1971,89.7,TJ Lokomotiva Trutnov,210,142.5,250,602.5,90,Single-ply,SBD
-1,Josef Mička,1949,95.5,TJ Slavoj Pacov,250,175,270,695,100,Single-ply,SBD
-1,Jiří Koubek,1955,99,TJ Tesla Praha Žižkov,235,180,250,665,100,Single-ply,SBD
-DQ,Roman Krejčík,1962,98,TJ Autobrzdy Jablonec,-230,,,,100,Single-ply,SBD
-1,Vratislav Čech,1965,101.2,TJ Autobrzdy Jablonec,265,165,320,750,110,Single-ply,SBD
-2,Václav Vimmer,1959,103.3,TJ Spartak Ústí n.L,230,165,292.5,687.5,110,Single-ply,SBD
-3,Vlastimil Říha,1959,101.5,SK Power Polička,260,160,265,685,110,Single-ply,SBD
-1,Miroslav Vacek,1967,121.3,Sokol Nymburk,270,162.5,275,707.5,125,Single-ply,SBD
-2,Bohumil Lexa,1960,114,Fit klub Č.Budějovivce,230,175,270,675,125,Single-ply,SBD
-3,Bedřich Řechka,1950,110.1,TJ Jiskra Domažlice,195,142.5,262.5,600,125,Single-ply,SBD
-1,Jiří Ondráček,1955,125.9,TJ Lokomotiva Trutnov,260,185,320,765,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,WeightClassKg,Equipment,Event,Sex
+1,Pavel Maixner,,60,TJ Autobrzdy Jablonec,175,102.5,205,482.5,60,Single-ply,SBD,M
+2,Antonín Urban,,59.4,TJ Spartak Chodov,150,87.5,200,437.5,60,Single-ply,SBD,M
+1,Jindřich Knot,,65.4,TJ Autobrzdy Jablonec,200,110,232.5,542.5,67.5,Single-ply,SBD,M
+2,Jiří Janeček,,67,Sokol Nymburk,185,125,230,540,67.5,Single-ply,SBD,M
+3,Radek Zvěřina,,67,Sokol Nymburk,180,125,200,505,67.5,Single-ply,SBD,M
+4,Karel Ruso,,67.1,Sokol Nymburk,180,100,200,480,67.5,Single-ply,SBD,M
+DQ,Werner Koudelka,,66.9,TJ Spartak Chodov,-170,,,,67.5,Single-ply,SBD,M
+1,Zdeněk Fanta,,74.5,TJ Spartak Ústí n.L,240,130,260,630,75,Single-ply,SBD,M
+2,Ludovít Griger,,74.2,TJ SCHZ Lovosice,205,135,260,600,75,Single-ply,SBD,M
+3,Vladimír Medek,,74.8,TJ Spartak Rokytnice,202.5,137.5,240,580,75,Single-ply,SBD,M
+4,Tomáš Ježek,,74.5,Fit klub Příbram,180,140,200,520,75,Single-ply,SBD,M
+5,Jiří Boháček,,75,individual,192.5,120,192.5,505,75,Single-ply,SBD,M
+1,Josef Hula,,80.1,TJ Jiskra Domažlice,222.5,145,260,627.5,82.5,Single-ply,SBD,M
+2,Michal Sekot,,82,LKM Plzeň,225,157.5,235,617.5,82.5,Single-ply,SBD,M
+3,Luboš Maixner,,75.4,TJ Autobrzdy Jablonec,212.5,132.5,230,575,82.5,Single-ply,SBD,M
+4,Leoš Malenovský,,81.1,TJ Sokol Rychnov,200,135,240,575,82.5,Single-ply,SBD,M
+5,Jaroslav Postl,,79.4,TJ Autobrzdy Jablonec,190,125,210,525,82.5,Single-ply,SBD,M
+1,Petr Theuser,1961,89.7,TJ Spartak Ústí n.L,310,185,305,800,90,Single-ply,SBD,M
+2,Manfred Röhm,1953,88.6,TJ Spartak Chodov,255,160,230,645,90,Single-ply,SBD,M
+3,Jiří Šálek,1960,89.8,TJ SCHZ Lovosice,250,140,250,640,90,Single-ply,SBD,M
+4,Vasil Vatolin,1959,85.7,Sportcentrum Klára,220,175,240,635,90,Single-ply,SBD,M
+5,Igor Charváth,1969,90,TJ Baník Most,230,125,270,625,90,Single-ply,SBD,M
+6,Pavel Matějka,1971,89.7,TJ Lokomotiva Trutnov,210,142.5,250,602.5,90,Single-ply,SBD,M
+1,Josef Mička,1949,95.5,TJ Slavoj Pacov,250,175,270,695,100,Single-ply,SBD,M
+1,Jiří Koubek,1955,99,TJ Tesla Praha Žižkov,235,180,250,665,100,Single-ply,SBD,M
+DQ,Roman Krejčík,1962,98,TJ Autobrzdy Jablonec,-230,,,,100,Single-ply,SBD,M
+1,Vratislav Čech,1965,101.2,TJ Autobrzdy Jablonec,265,165,320,750,110,Single-ply,SBD,M
+2,Václav Vimmer,1959,103.3,TJ Spartak Ústí n.L,230,165,292.5,687.5,110,Single-ply,SBD,M
+3,Vlastimil Říha,1959,101.5,SK Power Polička,260,160,265,685,110,Single-ply,SBD,M
+1,Miroslav Vacek,1967,121.3,Sokol Nymburk,270,162.5,275,707.5,125,Single-ply,SBD,M
+2,Bohumil Lexa,1960,114,Fit klub Č.Budějovivce,230,175,270,675,125,Single-ply,SBD,M
+3,Bedřich Řechka,1950,110.1,TJ Jiskra Domažlice,195,142.5,262.5,600,125,Single-ply,SBD,M
+1,Jiří Ondráček,1955,125.9,TJ Lokomotiva Trutnov,260,185,320,765,125+,Single-ply,SBD,M

@@ -1,17 +1,17 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Karel Ruso,1965,67.5,Sokol Nymburk,245.0,105.0,235.0,585.0,Masters 1,67.5,Single-ply,SBD
-2,Jaroslav Planka,1968,65.9,TJ Lokomotiva Krnov,170.0,100.0,190.0,460.0,Masters 1,67.5,Single-ply,SBD
-1,Petr Zámečník,1966,73.7,TJ Olympia Zlín,202.5,137.5,235.0,575.0,Masters 1,75,Single-ply,SBD
-2,Pavel Maixner,1962,75.0,TJ Kulturistika Ústí n.Orlicí,200.0,130.0,220.0,550.0,Masters 1,75,Single-ply,SBD
-3,Jean Schuttrumpf,1961,74.4,SK Fenstar Hodějice,135.0,80.0,160.0,375.0,Masters 1,75,Single-ply,SBD
-1,Libor Burýšek,1968,82.5,TJ Urtica Kopřivnice,230.0,165.0,250.0,645.0,Masters 1,82.5,Single-ply,SBD
-2,František Vincourek,1966,81.5,SK Fenstar Hodějice,210.0,170.0,235.0,615.0,Masters 1,82.5,Single-ply,SBD
-3,Jiří Černý,1968,82.3,Sokol Rosice,250.0,120.0,230.0,600.0,Masters 1,82.5,Single-ply,SBD
-DQ,Jan Hunčovský,1962,81.3,SK IŠST Mělník,,,,,Masters 1,82.5,Single-ply,
-1,Milan Greguš,1968,89.8,TJ Lokomotiva Krnov,277.5,197.5,245.0,720.0,Masters 1,90,Single-ply,SBD
-2,Libor Novák,1966,83.2,TJ Svitavy,217.5,162.5,232.5,612.5,Masters 1,90,Single-ply,SBD
-1,Václav Jaremczuk,1963,95.4,TJ Sokol Těškovice,275.0,185.0,290.0,750.0,Masters 1,100,Single-ply,SBD
-1,Jiří Gryga,1968,106.8,TJ Olympia Zlín,300.0,200.0,330.0,830.0,Masters 1,110,Single-ply,SBD
-1,Zoltán Kanát,1962,115.5,TJ Spartak Chodov,320.0,225.0,250.0,795.0,Masters 1,125,Single-ply,SBD
-2,Martin Urban,1968,112.4,Sokol Nymburk,260.0,170.0,265.0,695.0,Masters 1,125,Single-ply,SBD
-1,Miroslav Pavlíček,1963,131.4,Sokol Mělník,250.0,162.5,227.5,640.0,Masters 1,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Karel Ruso,1965,67.5,Sokol Nymburk,245.0,105.0,235.0,585.0,Masters 1,67.5,Single-ply,SBD,M
+2,Jaroslav Planka,1968,65.9,TJ Lokomotiva Krnov,170.0,100.0,190.0,460.0,Masters 1,67.5,Single-ply,SBD,M
+1,Petr Zámečník,1966,73.7,TJ Olympia Zlín,202.5,137.5,235.0,575.0,Masters 1,75,Single-ply,SBD,M
+2,Pavel Maixner,1962,75.0,TJ Kulturistika Ústí n.Orlicí,200.0,130.0,220.0,550.0,Masters 1,75,Single-ply,SBD,M
+3,Jean Schuttrumpf,1961,74.4,SK Fenstar Hodějice,135.0,80.0,160.0,375.0,Masters 1,75,Single-ply,SBD,M
+1,Libor Burýšek,1968,82.5,TJ Urtica Kopřivnice,230.0,165.0,250.0,645.0,Masters 1,82.5,Single-ply,SBD,M
+2,František Vincourek,1966,81.5,SK Fenstar Hodějice,210.0,170.0,235.0,615.0,Masters 1,82.5,Single-ply,SBD,M
+3,Jiří Černý,1968,82.3,Sokol Rosice,250.0,120.0,230.0,600.0,Masters 1,82.5,Single-ply,SBD,M
+DQ,Jan Hunčovský,1962,81.3,SK IŠST Mělník,,,,,Masters 1,82.5,Single-ply,,M
+1,Milan Greguš,1968,89.8,TJ Lokomotiva Krnov,277.5,197.5,245.0,720.0,Masters 1,90,Single-ply,SBD,M
+2,Libor Novák,1966,83.2,TJ Svitavy,217.5,162.5,232.5,612.5,Masters 1,90,Single-ply,SBD,M
+1,Václav Jaremczuk,1963,95.4,TJ Sokol Těškovice,275.0,185.0,290.0,750.0,Masters 1,100,Single-ply,SBD,M
+1,Jiří Gryga,1968,106.8,TJ Olympia Zlín,300.0,200.0,330.0,830.0,Masters 1,110,Single-ply,SBD,M
+1,Zoltán Kanát,1962,115.5,TJ Spartak Chodov,320.0,225.0,250.0,795.0,Masters 1,125,Single-ply,SBD,M
+2,Martin Urban,1968,112.4,Sokol Nymburk,260.0,170.0,265.0,695.0,Masters 1,125,Single-ply,SBD,M
+1,Miroslav Pavlíček,1963,131.4,Sokol Mělník,250.0,162.5,227.5,640.0,Masters 1,125+,Single-ply,SBD,M

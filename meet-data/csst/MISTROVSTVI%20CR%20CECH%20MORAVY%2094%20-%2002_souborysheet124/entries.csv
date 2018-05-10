@@ -1,33 +1,33 @@
-Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event
-1,Vratislav Cech,1965,99.1,TJ SK RaN Olymp.Zl,240,155,305,700,Single-ply,SBD
-1,Jindrich Knot,1960,66.1,TJ SK RaN Olymp.Zl,185,97.5,225,507.5,Single-ply,SBD
-1,Vlastimil Peterka,1975,66.6,TJ SK RaN Olymp.Zl,170,105,225,500,Single-ply,SBD
-1,Roman Urbanek,1956,100,TJ SK RaN Olymp.Zl,220,155,260,635,Single-ply,SBD
-2,Petr Zamecnik,1966,73.5,TJ KC Zlinstav Zlin,167.5,125,225,517.5,Single-ply,SBD
-2,Dezider Mihok,1975,85.4,TJ KC Zlinstav Zlin,210,145,215,570,Single-ply,SBD
-2,Jiri Gajdosik,1962,68.5,TJ KC Zlinstav Zlin,157.5,117.5,182.5,457.5,Single-ply,SBD
-2,Antonin Babinsky,1970,92.5,TJ KC Zlinstav Zlin,170,127.5,195,492.5,Single-ply,SBD
-3,Petr Ilik,1969,84.4,TJ Loko Krnov,180,120,225,525,Single-ply,SBD
-3,Petr Straznicky,1973,79,TJ Loko Krnov,180,110,205,495,Single-ply,SBD
-3,Kostas Ziakas,1966,71.5,TJ Loko Krnov,160,105,190,455,Single-ply,SBD
-3,Josef Synek,1966,82.4,TJ Loko Krnov,170,115,212.5,497.5,Single-ply,SBD
-4,Jaroslav Babica,1961,76,TJ SK RaN Ol.Zli,170,110,220,500,Single-ply,SBD
-4,Milan Kalbac,1972,84.8,TJ SK RaN Ol.Zli,160,105,205,470,Single-ply,SBD
-4,Karel Machu,1975,96.05,TJ SK RaN Ol.Zli,175,112.5,205,492.5,Single-ply,SBD
-4,Ales Brazda,1977,76.8,TJ SK RaN Ol.Zli,150,75,190,415,Single-ply,SBD
-5,Petr Manasek,1964,91.3,TJ Morava Kromeriz,185,130,210,525,Single-ply,SBD
-5,Radek Omamik,1975,83.8,TJ Morava Kromeriz,170,115,210,495,Single-ply,SBD
-5,Miroslav Sekanina,1972,77.4,TJ Morava Kromeriz,170,100,190,460,Single-ply,SBD
-5,Radek Symersky,1964,90.3,TJ Morava Kromeriz,150,115,165,430,Single-ply,SBD
-6,Ivo Brazda,1971,72.6,Sokol Rosice,150,100,180,430,Single-ply,SBD
-6,Ivo Jurman,1969,69.6,Sokol Rosice,130,80,170,380,Single-ply,SBD
-6,Michal Macek,1972,88.1,Sokol Rosice,140,115,180,435,Single-ply,SBD
-6,Tomas Kostelnicek,1971,88.7,Sokol Rosice,130,110,190,430,Single-ply,SBD
-7,Pavel Platenik,1974,75,Sokol Vranovice,205,120,217.5,542.5,Single-ply,SBD
-7,Roman Platenik,1970,75.65,Sokol Vranovice,195,110,230,535,Single-ply,SBD
-7,Jiri Furch,1975,56.6,Sokol Vranovice,125,80,155,360,Single-ply,SBD
-7,Oldrich Halfar,1973,79.3,Sokol Vranovice,155,107.5,210,472.5,Single-ply,SBD
-8,Lubomir Janek,1957,62,TJ Trebic,145,85,170,400,Single-ply,SBD
-8,Milan Babunek,1973,84.1,TJ Trebic,160,105,185,450,Single-ply,SBD
-8,Libor Prusa,1971,89.6,TJ Trebic,150,115,185,450,Single-ply,SBD
-8,Milan Dobrovolny,1973,85,TJ Trebic,140,110,185,435,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Equipment,Event,Sex
+1,Vratislav Cech,1965,99.1,TJ SK RaN Olymp.Zl,240,155,305,700,Single-ply,SBD,M
+1,Jindrich Knot,1960,66.1,TJ SK RaN Olymp.Zl,185,97.5,225,507.5,Single-ply,SBD,M
+1,Vlastimil Peterka,1975,66.6,TJ SK RaN Olymp.Zl,170,105,225,500,Single-ply,SBD,M
+1,Roman Urbanek,1956,100,TJ SK RaN Olymp.Zl,220,155,260,635,Single-ply,SBD,M
+2,Petr Zamecnik,1966,73.5,TJ KC Zlinstav Zlin,167.5,125,225,517.5,Single-ply,SBD,M
+2,Dezider Mihok,1975,85.4,TJ KC Zlinstav Zlin,210,145,215,570,Single-ply,SBD,M
+2,Jiri Gajdosik,1962,68.5,TJ KC Zlinstav Zlin,157.5,117.5,182.5,457.5,Single-ply,SBD,M
+2,Antonin Babinsky,1970,92.5,TJ KC Zlinstav Zlin,170,127.5,195,492.5,Single-ply,SBD,M
+3,Petr Ilik,1969,84.4,TJ Loko Krnov,180,120,225,525,Single-ply,SBD,M
+3,Petr Straznicky,1973,79,TJ Loko Krnov,180,110,205,495,Single-ply,SBD,M
+3,Kostas Ziakas,1966,71.5,TJ Loko Krnov,160,105,190,455,Single-ply,SBD,M
+3,Josef Synek,1966,82.4,TJ Loko Krnov,170,115,212.5,497.5,Single-ply,SBD,M
+4,Jaroslav Babica,1961,76,TJ SK RaN Ol.Zli,170,110,220,500,Single-ply,SBD,M
+4,Milan Kalbac,1972,84.8,TJ SK RaN Ol.Zli,160,105,205,470,Single-ply,SBD,M
+4,Karel Machu,1975,96.05,TJ SK RaN Ol.Zli,175,112.5,205,492.5,Single-ply,SBD,M
+4,Ales Brazda,1977,76.8,TJ SK RaN Ol.Zli,150,75,190,415,Single-ply,SBD,M
+5,Petr Manasek,1964,91.3,TJ Morava Kromeriz,185,130,210,525,Single-ply,SBD,M
+5,Radek Omamik,1975,83.8,TJ Morava Kromeriz,170,115,210,495,Single-ply,SBD,M
+5,Miroslav Sekanina,1972,77.4,TJ Morava Kromeriz,170,100,190,460,Single-ply,SBD,M
+5,Radek Symersky,1964,90.3,TJ Morava Kromeriz,150,115,165,430,Single-ply,SBD,M
+6,Ivo Brazda,1971,72.6,Sokol Rosice,150,100,180,430,Single-ply,SBD,M
+6,Ivo Jurman,1969,69.6,Sokol Rosice,130,80,170,380,Single-ply,SBD,M
+6,Michal Macek,1972,88.1,Sokol Rosice,140,115,180,435,Single-ply,SBD,M
+6,Tomas Kostelnicek,1971,88.7,Sokol Rosice,130,110,190,430,Single-ply,SBD,M
+7,Pavel Platenik,1974,75,Sokol Vranovice,205,120,217.5,542.5,Single-ply,SBD,M
+7,Roman Platenik,1970,75.65,Sokol Vranovice,195,110,230,535,Single-ply,SBD,M
+7,Jiri Furch,1975,56.6,Sokol Vranovice,125,80,155,360,Single-ply,SBD,M
+7,Oldrich Halfar,1973,79.3,Sokol Vranovice,155,107.5,210,472.5,Single-ply,SBD,M
+8,Lubomir Janek,1957,62,TJ Trebic,145,85,170,400,Single-ply,SBD,M
+8,Milan Babunek,1973,84.1,TJ Trebic,160,105,185,450,Single-ply,SBD,M
+8,Libor Prusa,1971,89.6,TJ Trebic,150,115,185,450,Single-ply,SBD,M
+8,Milan Dobrovolny,1973,85,TJ Trebic,140,110,185,435,Single-ply,SBD,M

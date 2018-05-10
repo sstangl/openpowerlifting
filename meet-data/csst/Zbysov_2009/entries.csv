@@ -1,19 +1,19 @@
-Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event
-1,Kateřina Hýblerová,1991,Sokol Nymburk,52.0,40.0,45.0,85.0,170.0,Sub-Juniors,52,Single-ply,SBD
-1,Iveta Jurčíková,1992,Slovensko,55.8,112.5,67.5,50.0,230.0,Sub-Juniors,56,Single-ply,SBD
-1,Michal Coufal,1992,Sokol Vranovice,63.7,125.0,85.0,165.0,375.0,Sub-Juniors,67.5,Single-ply,SBD
-2,František Mahovský,1994,Sokol Vranovice,62.5,97.5,70.0,130.0,297.5,Sub-Juniors,67.5,Single-ply,SBD
-3,Tomáš Buček,1995,Sokol Vranovice,65.6,95.0,62.5,135.0,292.5,Sub-Juniors,67.5,Single-ply,SBD
-1,Lukáš Tomčák,1991,Loko Krnov,70.8,165.0,107.5,180.0,452.5,Sub-Juniors,75,Single-ply,SBD
-2,Michal Polák,1991,Uh.Brod,72.5,145.0,85.0,187.5,417.5,Sub-Juniors,75,Single-ply,SBD
-3,Dominik Kurka,1994,Sokol Vranovice,69.2,87.5,80.0,135.0,302.5,Sub-Juniors,75,Single-ply,SBD
-4,František Hrubý,1994,Sokol Vranovice,71.4,95.0,70.0,132.5,297.5,Sub-Juniors,75,Single-ply,SBD
-1,Adam Havarik,1992,Slovensko,76.1,215.0,127.5,230.0,572.5,Sub-Juniors,82.5,Single-ply,SBD
-2,Petr Žíla,1991,Sokol Jemnice,79.5,165.0,145.0,205.0,515.0,Sub-Juniors,82.5,Single-ply,SBD
-3,Petr Buchtík,1991,Loko Krnov,78.7,185.0,120.0,180.0,485.0,Sub-Juniors,82.5,Single-ply,SBD
-4,Radek Malý,1993,Sokol Vranovice,82.4,90.0,75.0,135.0,300.0,Sub-Juniors,82.5,Single-ply,SBD
-1,Adam Smolík,1992,Uh.Brod,85.5,165.0,117.5,222.5,505.0,Sub-Juniors,90,Single-ply,SBD
-2,Jindřich Jokel,1991,APIS Praha,86.9,165.0,110.0,222.5,497.5,Sub-Juniors,90,Single-ply,SBD
-1,Patrik Navara,1991,Sokol Bořislav,94.2,205.0,150.0,235.0,590.0,Sub-Juniors,100,Single-ply,SBD
-1,David Lupač,1991,Sokol Jemnice,108.8,315.0,210.0,280.0,805.0,Sub-Juniors,110,Single-ply,SBD
-2,Robert Valach,1992,Slovensko,101.1,235.0,145.0,272.5,652.5,Sub-Juniors,110,Single-ply,SBD
+Place,Name,BirthYear,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
+1,Kateřina Hýblerová,1991,Sokol Nymburk,52.0,40.0,45.0,85.0,170.0,Sub-Juniors,52,Single-ply,SBD,F
+1,Iveta Jurčíková,1992,Slovensko,55.8,112.5,67.5,50.0,230.0,Sub-Juniors,56,Single-ply,SBD,F
+1,Michal Coufal,1992,Sokol Vranovice,63.7,125.0,85.0,165.0,375.0,Sub-Juniors,67.5,Single-ply,SBD,M
+2,František Mahovský,1994,Sokol Vranovice,62.5,97.5,70.0,130.0,297.5,Sub-Juniors,67.5,Single-ply,SBD,M
+3,Tomáš Buček,1995,Sokol Vranovice,65.6,95.0,62.5,135.0,292.5,Sub-Juniors,67.5,Single-ply,SBD,M
+1,Lukáš Tomčák,1991,Loko Krnov,70.8,165.0,107.5,180.0,452.5,Sub-Juniors,75,Single-ply,SBD,M
+2,Michal Polák,1991,Uh.Brod,72.5,145.0,85.0,187.5,417.5,Sub-Juniors,75,Single-ply,SBD,M
+3,Dominik Kurka,1994,Sokol Vranovice,69.2,87.5,80.0,135.0,302.5,Sub-Juniors,75,Single-ply,SBD,M
+4,František Hrubý,1994,Sokol Vranovice,71.4,95.0,70.0,132.5,297.5,Sub-Juniors,75,Single-ply,SBD,M
+1,Adam Havarik,1992,Slovensko,76.1,215.0,127.5,230.0,572.5,Sub-Juniors,82.5,Single-ply,SBD,M
+2,Petr Žíla,1991,Sokol Jemnice,79.5,165.0,145.0,205.0,515.0,Sub-Juniors,82.5,Single-ply,SBD,M
+3,Petr Buchtík,1991,Loko Krnov,78.7,185.0,120.0,180.0,485.0,Sub-Juniors,82.5,Single-ply,SBD,M
+4,Radek Malý,1993,Sokol Vranovice,82.4,90.0,75.0,135.0,300.0,Sub-Juniors,82.5,Single-ply,SBD,M
+1,Adam Smolík,1992,Uh.Brod,85.5,165.0,117.5,222.5,505.0,Sub-Juniors,90,Single-ply,SBD,M
+2,Jindřich Jokel,1991,APIS Praha,86.9,165.0,110.0,222.5,497.5,Sub-Juniors,90,Single-ply,SBD,M
+1,Patrik Navara,1991,Sokol Bořislav,94.2,205.0,150.0,235.0,590.0,Sub-Juniors,100,Single-ply,SBD,M
+1,David Lupač,1991,Sokol Jemnice,108.8,315.0,210.0,280.0,805.0,Sub-Juniors,110,Single-ply,SBD,M
+2,Robert Valach,1992,Slovensko,101.1,235.0,145.0,272.5,652.5,Sub-Juniors,110,Single-ply,SBD,M

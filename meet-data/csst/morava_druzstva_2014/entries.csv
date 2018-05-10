@@ -1,25 +1,25 @@
-Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event
-Martin Šumbera,1980,122.4,300.0,250.0,280.0,830.0,Open,TJ Sokol Rosice - A,Single-ply,SBD
-Nikola Štaiglová,1991,56.7,152.5,100.0,150.0,402.5,Open,TJ Sokol Rosice - A,Single-ply,SBD
-Václav Patočka,1977,92.4,255.0,180.0,260.0,695.0,Open,TJ Sokol Rosice - A,Single-ply,SBD
-Petr Forál,1982,102.4,270.0,170.0,250.0,690.0,Open,TJ Sokol Rosice - A,Single-ply,SBD
-Marek Hejtmánek,1973,81.4,220.0,150.0,245.0,615.0,Open,TJ Svitavy - A,Single-ply,SBD
-Jiří Chvála,1979,115.4,240.0,205.0,245.0,690.0,Open,TJ Svitavy - A,Single-ply,SBD
-David Lacko,1987,85.9,240.0,140.0,230.0,610.0,Open,TJ Svitavy - A,Single-ply,SBD
-Karel Horský,1989,92.1,240.0,155.0,235.0,630.0,Open,TJ Svitavy - A,Single-ply,SBD
-Josef Oulehla,1992,79.9,232.5,150.0,265.0,647.5,Open,SK Fitness Gym Olomouc,Single-ply,SBD
-Stanislav Macák,1977,113.5,260.0,227.5,250.0,737.5,Open,SK Fitness Gym Olomouc,Single-ply,SBD
-Martin Štoppl,1991,73.3,185.0,115.0,210.0,510.0,Open,SK Fitness Gym Olomouc,Single-ply,SBD
-Ladislav Murín,1994,80.1,185.0,115.0,215.0,515.0,Open,SK Fitness Gym Olomouc,Single-ply,SBD
-Ladislav Job,1987,94.8,240.0,170.0,260.0,670.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD
-Ondřej Havránek,1989,109.3,250.0,160.0,280.0,690.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD
-Tomáš Burda,1989,89.1,200.0,145.0,230.0,575.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD
-Lukáš Hamza,1992,88.9,160.0,100.0,220.0,480.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD
-Zdeněk Zvonič,1977,87.5,215.0,132.5,240.0,587.5,Open,TJ Svitavy - B,Single-ply,SBD
-Ladislav Jílek,1990,84.5,175.0,100.0,200.0,475.0,Open,TJ Svitavy - B,Single-ply,SBD
-Patrik Krušina,1994,91.5,160.0,90.0,240.0,490.0,Open,TJ Svitavy - B,Single-ply,SBD
-Petr Šír,1978,85.7,170.0,110.0,190.0,470.0,Open,TJ Svitavy - B,Single-ply,SBD
-Petr Brym,1979,91.4,230.0,135.0,230.0,595.0,Open,TJ Sokol Rosice - B,Single-ply,SBD
-Zdeněk Pavlík,1985,89.2,170.0,130.0,215.0,515.0,Open,TJ Sokol Rosice - B,Single-ply,SBD
-Radek Peńáz,1987,63.1,130.0,70.0,160.0,360.0,Open,TJ Sokol Rosice - B,Single-ply,SBD
-Čeněk Klein,1989,94.5,,110.0,215.0,325.0,Open,TJ Sokol Rosice - B,Single-ply,BD
+Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Team,Equipment,Event,Sex,WeightClassKg,Place
+Martin Šumbera,1980,122.4,300.0,250.0,280.0,830.0,Open,TJ Sokol Rosice - A,Single-ply,SBD,M,120+,1
+Nikola Štaiglová,1991,56.7,152.5,100.0,150.0,402.5,Open,TJ Sokol Rosice - A,Single-ply,SBD,F,57,1
+Václav Patočka,1977,92.4,255.0,180.0,260.0,695.0,Open,TJ Sokol Rosice - A,Single-ply,SBD,M,93,1
+Petr Forál,1982,102.4,270.0,170.0,250.0,690.0,Open,TJ Sokol Rosice - A,Single-ply,SBD,M,105,1
+Marek Hejtmánek,1973,81.4,220.0,150.0,245.0,615.0,Open,TJ Svitavy - A,Single-ply,SBD,M,83,2
+Jiří Chvála,1979,115.4,240.0,205.0,245.0,690.0,Open,TJ Svitavy - A,Single-ply,SBD,M,120,3
+David Lacko,1987,85.9,240.0,140.0,230.0,610.0,Open,TJ Svitavy - A,Single-ply,SBD,M,93,3
+Karel Horský,1989,92.1,240.0,155.0,235.0,630.0,Open,TJ Svitavy - A,Single-ply,SBD,M,93,2
+Josef Oulehla,1992,79.9,232.5,150.0,265.0,647.5,Open,SK Fitness Gym Olomouc,Single-ply,SBD,M,83,1
+Stanislav Macák,1977,113.5,260.0,227.5,250.0,737.5,Open,SK Fitness Gym Olomouc,Single-ply,SBD,M,120,1
+Martin Štoppl,1991,73.3,185.0,115.0,210.0,510.0,Open,SK Fitness Gym Olomouc,Single-ply,SBD,M,74,1
+Ladislav Murín,1994,80.1,185.0,115.0,215.0,515.0,Open,SK Fitness Gym Olomouc,Single-ply,SBD,M,83,3
+Ladislav Job,1987,94.8,240.0,170.0,260.0,670.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD,M,105,2
+Ondřej Havránek,1989,109.3,250.0,160.0,280.0,690.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD,M,120,2
+Tomáš Burda,1989,89.1,200.0,145.0,230.0,575.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD,M,93,6
+Lukáš Hamza,1992,88.9,160.0,100.0,220.0,480.0,Open,Colbert Club SSK Vítkovice,Single-ply,SBD,M,93,9
+Zdeněk Zvonič,1977,87.5,215.0,132.5,240.0,587.5,Open,TJ Svitavy - B,Single-ply,SBD,M,93,5
+Ladislav Jílek,1990,84.5,175.0,100.0,200.0,475.0,Open,TJ Svitavy - B,Single-ply,SBD,M,93,10
+Patrik Krušina,1994,91.5,160.0,90.0,240.0,490.0,Open,TJ Svitavy - B,Single-ply,SBD,M,93,8
+Petr Šír,1978,85.7,170.0,110.0,190.0,470.0,Open,TJ Svitavy - B,Single-ply,SBD,M,93,11
+Petr Brym,1979,91.4,230.0,135.0,230.0,595.0,Open,TJ Sokol Rosice - B,Single-ply,SBD,M,93,4
+Zdeněk Pavlík,1985,89.2,170.0,130.0,215.0,515.0,Open,TJ Sokol Rosice - B,Single-ply,SBD,M,93,7
+Radek Peńáz,1987,63.1,130.0,70.0,160.0,360.0,Open,TJ Sokol Rosice - B,Single-ply,SBD,M,66,1
+Čeněk Klein,1989,94.5,,110.0,215.0,325.0,Open,TJ Sokol Rosice - B,Single-ply,BD,M,105,1

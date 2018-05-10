@@ -1,29 +1,29 @@
-Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
-1,Sporting Apis Praha,Martin Brabec,1975,99.6,300,185,290,775,SBD,Single-ply,Open
-1,Sporting Apis Praha,Karel Válek,1980,90,267.5,200,265,732.5,SBD,Single-ply,Open
-1,Sporting Apis Praha,Jakub Hesoun,1987,99.3,270,162.5,255,687.5,SBD,Single-ply,Open
-1,Sporting Apis Praha,Roman Tůma,1971,90.7,257.5,130,260,647.5,SBD,Single-ply,Open
-2,TJ Sokol Vršovice,Jarosl Mikulanda,1984,96.1,280,200,270,750,SBD,Single-ply,Open
-2,TJ Sokol Vršovice,Petr Schmid,1984,104.3,275,205,260,740,SBD,Single-ply,Open
-2,TJ Sokol Vršovice,Jan Švagr,1984,92.5,245,165,225,635,SBD,Single-ply,Open
-2,TJ Sokol Vršovice,Radek Limon,1974,122.2,275,190,230,695,SBD,Single-ply,Open
-3,"T.J. Autoškoda ""A",Zdenìk Čuban,1984,85.7,235,155,255,645,SBD,Single-ply,Open
-3,"T.J. Autoškoda ""A",Petr Žďánský,1977,106.2,220,200,235,655,SBD,Single-ply,Open
-3,"T.J. Autoškoda ""A",Zdenìk Šudoma,1961,98.8,230,150,240,620,SBD,Single-ply,Open
-3,"T.J. Autoškoda ""A",Roman Richter,1976,94.4,185,165,195,545,SBD,Single-ply,Open
-4,TJ Sokol Bořislav,Pavel Čurda,1976,130.6,250,150,300,700,SBD,Single-ply,Open
-4,TJ Sokol Bořislav,Patrik Navara,1991,98.6,235,160,245,640,SBD,Single-ply,Open
-4,TJ Sokol Bořislav,Zdenìk Trnka,1963,132.8,210,140,260,610,SBD,Single-ply,Open
-4,TJ Sokol Bořislav,Jan Štika,1990,98.2,150,127.5,200,477.5,SBD,Single-ply,Open
-5,SKST Litvínov,Radim Kopal,1974,91.4,225,180,220,625,SBD,Single-ply,Open
-5,SKST Litvínov,David Videman,1978,105.9,250,172.5,240,662.5,SBD,Single-ply,Open
-5,SKST Litvínov,Marcel Murárik,1992,86,205,127.5,207.5,540,SBD,Single-ply,Open
-5,SKST Litvínov,Aleš Prajza,1979,96,135,135,155,425,SBD,Single-ply,Open
-6,TJ Dobřany,Antonín Coufal,1973,132.5,220,210,255,685,SBD,Single-ply,Open
-6,TJ Dobřany,Františ Šindelář,1973,76.8,182.5,85,220,487.5,SBD,Single-ply,Open
-6,TJ Dobřany,Jan Verbiř,1962,111.7,210,145,225,580,SBD,Single-ply,Open
-6,TJ Dobřany,Roman Urban,1978,96.3,200,135,210,545,SBD,Single-ply,Open
-7,Sporting Apis Praha,Martin Guňa,1973,131.8,250,200,240,690,SBD,Single-ply,Open
-7,Sporting Apis Praha,Martin Janota,1974,95.3,245,105,230,580,SBD,Single-ply,Open
-7,Sporting Apis Praha,Jindřich Jokel,1991,84.6,185,122.5,230,537.5,SBD,Single-ply,Open
-7,Sporting Apis Praha,Lenka Goliášová,1988,74.1,85,75,130,290,SBD,Single-ply,Open
+Place,Team,Name,BirthYear,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division,Sex
+1,Sporting Apis Praha,Martin Brabec,1975,99.6,300,185,290,775,SBD,Single-ply,Open,M
+1,Sporting Apis Praha,Karel Válek,1980,90,267.5,200,265,732.5,SBD,Single-ply,Open,M
+1,Sporting Apis Praha,Jakub Hesoun,1987,99.3,270,162.5,255,687.5,SBD,Single-ply,Open,M
+1,Sporting Apis Praha,Roman Tůma,1971,90.7,257.5,130,260,647.5,SBD,Single-ply,Open,M
+2,TJ Sokol Vršovice,Jarosl Mikulanda,1984,96.1,280,200,270,750,SBD,Single-ply,Open,M
+2,TJ Sokol Vršovice,Petr Schmid,1984,104.3,275,205,260,740,SBD,Single-ply,Open,M
+2,TJ Sokol Vršovice,Jan Švagr,1984,92.5,245,165,225,635,SBD,Single-ply,Open,M
+2,TJ Sokol Vršovice,Radek Limon,1974,122.2,275,190,230,695,SBD,Single-ply,Open,M
+3,T.J. Autoškoda A,Zdenìk Čuban,1984,85.7,235,155,255,645,SBD,Single-ply,Open,M
+3,T.J. Autoškoda A,Petr Žďánský,1977,106.2,220,200,235,655,SBD,Single-ply,Open,M
+3,T.J. Autoškoda A,Zdenìk Šudoma,1961,98.8,230,150,240,620,SBD,Single-ply,Open,M
+3,T.J. Autoškoda A,Roman Richter,1976,94.4,185,165,195,545,SBD,Single-ply,Open,M
+4,TJ Sokol Bořislav,Pavel Čurda,1976,130.6,250,150,300,700,SBD,Single-ply,Open,M
+4,TJ Sokol Bořislav,Patrik Navara,1991,98.6,235,160,245,640,SBD,Single-ply,Open,M
+4,TJ Sokol Bořislav,Zdenìk Trnka,1963,132.8,210,140,260,610,SBD,Single-ply,Open,M
+4,TJ Sokol Bořislav,Jan Štika,1990,98.2,150,127.5,200,477.5,SBD,Single-ply,Open,M
+5,SKST Litvínov,Radim Kopal,1974,91.4,225,180,220,625,SBD,Single-ply,Open,M
+5,SKST Litvínov,David Videman,1978,105.9,250,172.5,240,662.5,SBD,Single-ply,Open,M
+5,SKST Litvínov,Marcel Murárik,1992,86,205,127.5,207.5,540,SBD,Single-ply,Open,M
+5,SKST Litvínov,Aleš Prajza,1979,96,135,135,155,425,SBD,Single-ply,Open,M
+6,TJ Dobřany,Antonín Coufal,1973,132.5,220,210,255,685,SBD,Single-ply,Open,M
+6,TJ Dobřany,Františ Šindelář,1973,76.8,182.5,85,220,487.5,SBD,Single-ply,Open,M
+6,TJ Dobřany,Jan Verbiř,1962,111.7,210,145,225,580,SBD,Single-ply,Open,M
+6,TJ Dobřany,Roman Urban,1978,96.3,200,135,210,545,SBD,Single-ply,Open,M
+7,Sporting Apis Praha,Martin Guňa,1973,131.8,250,200,240,690,SBD,Single-ply,Open,M
+7,Sporting Apis Praha,Martin Janota,1974,95.3,245,105,230,580,SBD,Single-ply,Open,M
+7,Sporting Apis Praha,Jindřich Jokel,1991,84.6,185,122.5,230,537.5,SBD,Single-ply,Open,M
+7,Sporting Apis Praha,Lenka Goliášová,1988,74.1,85,75,130,290,SBD,Single-ply,Open,M
