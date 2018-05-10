@@ -5,6 +5,11 @@ BUILDFILE := build.tar.bz2
 
 all: release
 
+# Test using --release to get the CSV crate to parse more quickly.
+# That way, it's no problem to test over actual data.
+check:
+	cargo test --release
+
 builddir:
 	mkdir -p "${BUILDDIR}"
 
