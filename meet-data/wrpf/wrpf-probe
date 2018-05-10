@@ -18,7 +18,7 @@ except ModuleNotFoundError:
     import oplprobe
 
 
-MEETSURL = "http://wrpf.pro/protokoly/"
+MEETSURL = "http://wrpf.pro/protokol/"
 DOMAIN = "http://wrpf.pro"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 

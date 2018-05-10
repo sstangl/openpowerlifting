@@ -82,6 +82,7 @@ probe-quick:
 	${DATADIR}/usapl-archive/usapl-archive-probe --quick || true
 	${DATADIR}/uspa/uspa-probe || true
 	${DATADIR}/xpc/xpc-probe || true
+	${DATADIR}/wrpf/wrpf-probe --quick || true
 	${DATADIR}/wrpf-can/wrpf-can-probe --quick || true
 
 # List of all probes.
