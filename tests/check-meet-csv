@@ -354,6 +354,9 @@ def check(scriptname, filename):
     date = row[dateidx]
     if len(date) != 10 or date.count('-') != 2:
         perror("Date in wrong format: \"%s\". Must be \"YYYY-MM-DD\"." % date)
+        year = ''
+        month = ''
+        day = ''
     else:
         # The split is valid. Check the individual Date components.
         year, month, day = date.split('-')
@@ -443,7 +446,7 @@ def check(scriptname, filename):
                    row[stateidx])
 
         # Check if MeetName column contains the year or the fed name
-        if year in row[nameidx]:
+        if year != '' and year in row[nameidx]:
             perror("MeetName should not have the year.")
         if row[fedidx] in row[nameidx].replace('/', ' ').replace('-', ' ').split():
             perror("MeetName should not have the federation.")
