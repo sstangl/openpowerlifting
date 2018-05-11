@@ -76,10 +76,10 @@ fn test_username_redirects() {
     );
 }
 
+/// Test that URL patterns from the old web/ implementation are redirected
+/// to their proper server/ equivalents.
 #[test]
 fn test_old_redirects() {
-    // Test that URL patterns from the old web/ implementation are redirected
-    // to their server/ equivalents.
     let client = client();
 
     let response = client.get("/lifters.html?q=Sean Stangl").dispatch();
@@ -95,4 +95,46 @@ fn test_old_redirects() {
         response.headers().get_one("location").unwrap(),
         "/u/seanstangl"
     );
+
+    let response = client.get("/meet.html?m=rps/1617").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/m/rps/1617"
+    );
+
+    let response = client.get("/?fed=USPA").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/rankings/uspa"
+    );
+
+    let response = client.get("/?fed=365Strong").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/rankings/365strong"
+    );
+
+    let response = client.get("/index.html").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(response.headers().get_one("location").unwrap(), "/");
+
+    // TODO:
+    // let response = client.get("/meetlist.html").dispatch();
+    // assert_eq!(response.status(), Status::PermanentRedirect);
+    // assert_eq!(response.headers().get_one("location").unwrap(), "/m/");
+
+    let response = client.get("/data.html").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(response.headers().get_one("location").unwrap(), "/data");
+
+    let response = client.get("/faq.html").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(response.headers().get_one("location").unwrap(), "/faq");
+
+    let response = client.get("/contact.html").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(response.headers().get_one("location").unwrap(), "/contact");
 }

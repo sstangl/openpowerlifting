@@ -239,6 +239,21 @@ fn index(
 }
 
 #[derive(FromForm)]
+struct OldIndexQuery {
+    fed: String,
+}
+
+#[get("/?<query>")]
+fn old_index_query(query: OldIndexQuery) -> Option<Redirect> {
+    if query.fed.parse::<opldb::fields::Federation>().is_ok() {
+        let target = format!("/rankings/{}", query.fed.to_ascii_lowercase());
+        Some(Redirect::permanent(&target))
+    } else {
+        None
+    }
+}
+
+#[derive(FromForm)]
 struct OldLiftersQuery {
     q: String,
 }
@@ -253,6 +268,40 @@ fn old_lifters(opldb: State<ManagedOplDb>, query: OldLiftersQuery) -> Option<Red
             Some(Redirect::permanent(&format!("/u/{}", username)))
         }
     }
+}
+
+#[derive(FromForm)]
+struct OldMeetQuery {
+    m: String,
+}
+
+#[get("/meet.html?<query>")]
+fn old_meet(opldb: State<ManagedOplDb>, query: OldMeetQuery) -> Option<Redirect> {
+    let meetpath = &query.m;
+    match opldb.get_meet_id(meetpath) {
+        None => None,
+        Some(_) => Some(Redirect::permanent(&format!("/m/{}", meetpath))),
+    }
+}
+
+#[get("/index.html")]
+fn old_index() -> Redirect {
+    Redirect::permanent("/")
+}
+
+#[get("/data.html")]
+fn old_data() -> Redirect {
+    Redirect::permanent("/data")
+}
+
+#[get("/faq.html")]
+fn old_faq() -> Redirect {
+    Redirect::permanent("/faq")
+}
+
+#[get("/contact.html")]
+fn old_contact() -> Redirect {
+    Redirect::permanent("/contact")
 }
 
 #[error(404)]
@@ -296,7 +345,18 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 contact,
             ],
         )
-        .mount("/", routes![old_lifters])
+        .mount(
+            "/",
+            routes![
+                old_lifters,
+                old_meet,
+                old_index,
+                old_index_query,
+                old_data,
+                old_faq,
+                old_contact,
+            ],
+        )
         .catch(errors![not_found, internal_error])
         .attach(Template::fairing())
 }
