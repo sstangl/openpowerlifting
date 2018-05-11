@@ -116,11 +116,7 @@ fn rankings(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let selection = match pages::rankings::Selection::from_path(&selections) {
-        Ok(s) => s,
-        Err(_) => return None,
-    };
-
+    let selection = pages::rankings::Selection::from_path(&selections).ok()?;
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
@@ -143,12 +139,8 @@ fn lifter(
         None => {
             // If the name just needs to be lowercased, redirect to that page.
             let lowercase = username.to_ascii_lowercase();
-            match opldb.get_lifter_id(&lowercase) {
-                None => return None,
-                Some(_) => {
-                    return Some(Err(Redirect::permanent(&format!("/u/{}", lowercase))))
-                }
-            }
+            let _guard = opldb.get_lifter_id(&lowercase)?;
+            return Some(Err(Redirect::permanent(&format!("/u/{}", lowercase))));
         }
         Some(id) => id,
     };
@@ -166,15 +158,8 @@ fn meet(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let meetpath_str: &str = match meetpath.to_str() {
-        None => return None,
-        Some(s) => s,
-    };
-    let meet_id = match opldb.get_meet_id(meetpath_str) {
-        None => return None,
-        Some(id) => id,
-    };
-
+    let meetpath_str: &str = meetpath.to_str()?;
+    let meet_id = opldb.get_meet_id(meetpath_str)?;
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::meet::Context::new(&opldb, &locale, meet_id);
     Some(Template::render("meet", &context))
@@ -245,12 +230,9 @@ struct OldIndexQuery {
 
 #[get("/?<query>")]
 fn old_index_query(query: OldIndexQuery) -> Option<Redirect> {
-    if query.fed.parse::<opldb::fields::Federation>().is_ok() {
-        let target = format!("/rankings/{}", query.fed.to_ascii_lowercase());
-        Some(Redirect::permanent(&target))
-    } else {
-        None
-    }
+    let fed = query.fed.parse::<opldb::fields::Federation>().ok()?;
+    let target = format!("/rankings/{}", fed.to_string().to_ascii_lowercase());
+    Some(Redirect::permanent(&target))
 }
 
 #[derive(FromForm)]
@@ -261,13 +243,9 @@ struct OldLiftersQuery {
 #[get("/lifters.html?<query>")]
 fn old_lifters(opldb: State<ManagedOplDb>, query: OldLiftersQuery) -> Option<Redirect> {
     let name = &query.q;
-    match opldb.get_lifter_id_by_name(name) {
-        None => None,
-        Some(id) => {
-            let username = &opldb.get_lifter(id).username;
-            Some(Redirect::permanent(&format!("/u/{}", username)))
-        }
-    }
+    let id = opldb.get_lifter_id_by_name(name)?;
+    let username = &opldb.get_lifter(id).username;
+    Some(Redirect::permanent(&format!("/u/{}", username)))
 }
 
 #[derive(FromForm)]
@@ -278,10 +256,9 @@ struct OldMeetQuery {
 #[get("/meet.html?<query>")]
 fn old_meet(opldb: State<ManagedOplDb>, query: OldMeetQuery) -> Option<Redirect> {
     let meetpath = &query.m;
-    match opldb.get_meet_id(meetpath) {
-        None => None,
-        Some(_) => Some(Redirect::permanent(&format!("/m/{}", meetpath))),
-    }
+    let id = opldb.get_meet_id(meetpath)?;
+    let pathstr = &opldb.get_meet(id).path;
+    Some(Redirect::permanent(&format!("/m/{}", pathstr)))
 }
 
 #[get("/index.html")]
