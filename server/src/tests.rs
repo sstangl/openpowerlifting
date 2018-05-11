@@ -33,7 +33,7 @@ static LANGINFO_INIT: Once = ONCE_INIT;
 fn langinfo() -> &'static LangInfo {
     unsafe {
         LANGINFO_INIT.call_once(|| {
-            LANGINFO_GLOBAL = Some(super::load_langinfo());
+            LANGINFO_GLOBAL = Some(super::load_langinfo().unwrap());
         });
         LANGINFO_GLOBAL.as_ref().unwrap()
     }

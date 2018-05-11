@@ -21,8 +21,8 @@ use rocket_contrib::Template;
 use strum::IntoEnumIterator;
 
 use std::env;
+use std::error::Error;
 use std::path::{Path, PathBuf};
-use std::process;
 
 extern crate server;
 use server::langpack::{self, LangInfo, Language, Locale};
@@ -361,63 +361,33 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         .attach(Template::fairing())
 }
 
-fn load_translations_or_exit(
-    langinfo: &mut langpack::LangInfo,
-    language: Language,
-    file: &str,
-) {
-    langinfo
-        .load_translations(language, file)
-        .map_err(|e| {
-            eprintln!("Error loading translations: {}", e);
-            process::exit(1);
-        })
-        .ok();
-}
-
-fn load_langinfo() -> LangInfo {
+fn load_langinfo() -> Result<LangInfo, Box<Error>> {
     let mut langinfo = langpack::LangInfo::new();
     for language in Language::iter() {
         let path = format!("translations/{}.json", language);
-        load_translations_or_exit(&mut langinfo, language, &path);
+        langinfo.load_translations(language, &path)?;
     }
-    langinfo
+    Ok(langinfo)
 }
 
-fn get_envvar_or_exit(key: &str) -> String {
-    env::var(key)
-        .map_err(|_| {
-            eprintln!("Environment variable '{}' not set.", key);
-            process::exit(1);
-        })
-        .unwrap()
-}
-
-fn main() {
+fn main() -> Result<(), Box<Error>> {
     // Populate std::env with the contents of any .env file.
-    dotenv::from_filename("server.env").ok();
+    dotenv::from_filename("server.env")?;
 
     // Ensure that "STATICDIR" is set.
-    get_envvar_or_exit("STATICDIR");
+    env::var("STATICDIR")?;
 
     // Load the OplDb.
-    let lifters_csv = get_envvar_or_exit("LIFTERS_CSV");
-    let meets_csv = get_envvar_or_exit("MEETS_CSV");
-    let entries_csv = get_envvar_or_exit("ENTRIES_CSV");
-
-    let opldb = match opldb::OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv) {
-        Ok(db) => db,
-        Err(e) => {
-            eprintln!("Error loading OplDb: {}", e);
-            process::exit(1);
-        }
-    };
-
+    let lifters_csv = env::var("LIFTERS_CSV")?;
+    let meets_csv = env::var("MEETS_CSV")?;
+    let entries_csv = env::var("ENTRIES_CSV")?;
+    let opldb = opldb::OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv)?;
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 
     #[allow(unused_variables)]
-    let langinfo = load_langinfo();
+    let langinfo = load_langinfo()?;
 
     #[cfg(not(test))]
     rocket(opldb, langinfo).launch();
+    Ok(())
 }
