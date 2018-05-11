@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile benchdata check probe
+.PHONY: builddir csvfile benchdata check probe travis
 
 DATADIR := meet-data
 BUILDDIR := build

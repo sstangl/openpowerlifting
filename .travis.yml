@@ -1,11 +1,21 @@
-language: python
-python:
-  - "3.6"
+language: rust
+rust:
+  - nightly
+
+addons:
+  apt:
+    update: true
+    packages:
+      - python3-pip
 
 install:
-  - pip3 install toml flake8
+  - sudo pip3 install toml flake8
 
-script: make check
+script:
+  - make check
+  - make csvfile
+  - make -C server check
+
 notifications:
   email:
     on_success: never
