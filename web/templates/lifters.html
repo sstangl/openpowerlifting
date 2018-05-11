@@ -19,7 +19,7 @@
 #exec python3 gen-header lifters
       <div id="controls">
         <div id="controls-left">
-          <span id="lifter">No lifter specified.</span>
+          <span id="lifter"></span>
         </div>
         <div id="controls-right">
           <select id="weighttype">
@@ -28,7 +28,11 @@
           </select>
         </div>
       </div>
-      <div id="theGrid"></div>
+      <div id="theGrid">
+        Error loading database (or it's just taking a really long time).</br>
+        If it's taking too long, you can switch to our secret beta site by clicking this button: <button onclick="window.location=document.URL.replace('https://www.','http://beta.')">Switch to Beta!</button></br>
+        Not everything is implemented yet, still lots to do. Send feedback!
+      </div>
       <div class="info">
         Requests / Corrections / Feedback: <a href="mailto:updates@openpowerlifting.org">updates@openpowerlifting.org</a>.
       </div>
