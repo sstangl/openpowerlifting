@@ -1,7 +1,7 @@
 Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,WeightClassKg,Equipment,Event,Sex
 1,Veronika Opočenská,1999,54,SK Zlobr Sedlčany,85,55,110,250,Sub-Juniors,57,Raw,SBD,F
-2,Michaela Filová,1999,51.1,PWL Vision Nutrition,80,40,107.5,227.5,Sub-Juniors,57,Raw,SBD,F
-3,Denisa Turková,2003,48.6,TJ Viktorie Bohumín,70,35,80,185,Sub-Juniors,57,Raw,SBD,F
+2,Michaela Filová,1999,51.1,PWL Vision Nutrition,80,40,107.5,227.5,Sub-Juniors,52,Raw,SBD,F
+3,Denisa Turková,2003,48.6,TJ Viktorie Bohumín,70,35,80,185,Sub-Juniors,52,Raw,SBD,F
 1,Lucie Daňková,2000,61.9,TJ Olympia Zlín,92.5,57.5,117.5,267.5,Sub-Juniors,63,Raw,SBD,F
 2,Klára Hýblová,1999,59.7,PWL Vision Nutrition,80,45,115,240,Sub-Juniors,63,Raw,SBD,F
 3,Barbora Hodinská,2000,61.6,TJ Sokol Rosice,60,25,87.5,172.5,Sub-Juniors,63,Raw,SBD,F
@@ -10,7 +10,7 @@ Place,Name,BirthYear,BodyweightKg,Team,BestSquatKg,BestBenchKg,BestDeadliftKg,To
 3,Lucie Truhlářová,1999,64,PWL Vision Nutrition,90,52.5,100,242.5,Sub-Juniors,72,Raw,SBD,F
 1,Tomáš Vorel,2000,64.2,Powerlifting Brno,147.5,105,172.5,425,Sub-Juniors,66,Raw,SBD,M
 2,Daniel Křepelka,2001,64.8,TJ Svitavy,130,110,182.5,422.5,Sub-Juniors,66,Raw,SBD,M
-3,Jan Majerský,2001,57.4,TJ Sokol Bílina,130,80,165,375,Sub-Juniors,66,Raw,SBD,M
+3,Jan Majerský,2001,57.4,TJ Sokol Bílina,130,80,165,375,Sub-Juniors,59,Raw,SBD,M
 4,Daniel Steur,1999,62.5,TJ Lokomotiva Krnov,130,80,155,365,Sub-Juniors,66,Raw,SBD,M
 5,Matyáš Janda,1999,65.9,TJ Sokol Vejprnice,122.5,95,160,377.5,Sub-Juniors,66,Raw,SBD,M
 6,Pavel Kolář,2000,65.5,TJ Kralupy,125,82.5,132.5,340,Sub-Juniors,66,Raw,SBD,M
@@ -44,10 +44,10 @@ DQ,Dominik Trnka,2000,63.5,SK Zlobr Sedlčany,,,,,Sub-Juniors,66,Raw,SBD,M
 4,Jiří Kymla,1999,88,SK Zlobr Sedlčany,197.5,110,210,517.5,Sub-Juniors,93,Raw,SBD,M
 5,Jakub Veselý,1999,84.1,TJ Svitavy,155,110,210,475,Sub-Juniors,93,Raw,SBD,M
 6,Nicolas Tóth,2001,88.8,TJ Viktorie Bohumín,155,135,180,470,Sub-Juniors,93,Raw,SBD,M
-1,Adrian Kozler,1999,102.3,Colbert club SSK Vítkovice,175,120,262.5,557.5,Sub-Juniors,120,Raw,SBD,M
-2,Patrik Steinoch,2000,99.7,SK Zbýšov,170,150.5,220,540.5,Sub-Juniors,120,Raw,SBD,M
-3,Filip Porteš,2000,100.9,TJ Olympia Zlín,190,125,210,525,Sub-Juniors,120,Raw,SBD,M
-4,Denis Kurečka,1999,98.8,Colbert club SSK Vítkovice,140,120,210,470,Sub-Juniors,120,Raw,SBD,M
+1,Adrian Kozler,1999,102.3,Colbert club SSK Vítkovice,175,120,262.5,557.5,Sub-Juniors,105,Raw,SBD,M
+2,Patrik Steinoch,2000,99.7,SK Zbýšov,170,150.5,220,540.5,Sub-Juniors,105,Raw,SBD,M
+3,Filip Porteš,2000,100.9,TJ Olympia Zlín,190,125,210,525,Sub-Juniors,105,Raw,SBD,M
+4,Denis Kurečka,1999,98.8,Colbert club SSK Vítkovice,140,120,210,470,Sub-Juniors,105,Raw,SBD,M
 5,Adam Rutar,2002,111.9,SK Zbýšov,105,57.5,160,322.5,Sub-Juniors,120,Raw,SBD,M
 1,Eliška Petříčková,1994,51.4,TJ Viktorie Bohumín,90,42.5,125,257.5,Juniors,52,Raw,SBD,F
 2,Natálie Jirovská,1997,51.2,TJ Olympia Zlín,90,40,95,225,Juniors,52,Raw,SBD,F

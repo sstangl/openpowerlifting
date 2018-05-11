@@ -5,8 +5,8 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Di
 1,Daniel Křepelka,2001,65,TJ Svitavy,115,122.5,127.5,127.5,Sub-Juniors,M,66,127.5,Single-ply,B
 2,Matyáš Janda,1999,65.5,TJ Sokol Vejprnice,92.5,97.5,102.5,102.5,Sub-Juniors,M,66,102.5,Single-ply,B
 1,Jan Nový,1999,81.4,Colbert club SSK Vítkovice,132.5,-137.5,137.5,137.5,Sub-Juniors,M,83,137.5,Single-ply,B
-2,Denis Zsibrita,2000,71.9,Colbert club SSK Vítkovice,100,110,115,115,Sub-Juniors,M,83,115,Single-ply,B
-3,Lukáš Doležal,1999,69.9,TJ Svitavy,105,107.5,-110,107.5,Sub-Juniors,M,83,107.5,Single-ply,B
+2,Denis Zsibrita,2000,71.9,Colbert club SSK Vítkovice,100,110,115,115,Sub-Juniors,M,74,115,Single-ply,B
+3,Lukáš Doležal,1999,69.9,TJ Svitavy,105,107.5,-110,107.5,Sub-Juniors,M,74,107.5,Single-ply,B
 1,Aleš Krušina,1999,84.6,SK ZLOBR Sedlčany,150,-157.5,-160,150,Sub-Juniors,M,93,150,Single-ply,B
 2,Patrik Steinoch,2000,91.4,SK Zbýšov,135,137.5,140,140,Sub-Juniors,M,93,140,Single-ply,B
 3,Nikolas Tóth,2001,90.2,TJ Viktorie Bohumín,115,130,-160,130,Sub-Juniors,M,93,130,Single-ply,B
@@ -33,7 +33,7 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Di
 1,Vít Okrouhlý,1994,97.9,Sporting Apis Praha,165,175,-182.5,175,Juniors,M,105,175,Single-ply,B
 2,Martin Sedláček,1994,118.1,TJ Spartak Pelhřimov,175,180,-187.5,180,Juniors,M,120,180,Single-ply,B
 3,Matěj Roller,1995,114.3,Powerlifting TJJM Chodov,150,157.5,160,160,Juniors,M,120,160,Single-ply,B
-4,Jakub Telička,1998,100.3,Colbert club SSK Vítkovice,135,145,-150,145,Juniors,M,120,145,Single-ply,B
+4,Jakub Telička,1998,100.3,Colbert club SSK Vítkovice,135,145,-150,145,Juniors,M,105,145,Single-ply,B
 1,Eva Bánovská,1971,55.6,TJ Olympia Zlín,82.5,85,-87.5,85,Masters 1,F,57,85,Single-ply,B
 2,Alena Krčmářová,1975,78,TJ Sokol Nymburk,90,97.5,102.5,102.5,Masters 1,F,84,102.5,Single-ply,B
 3,Marta Gregorová,1977,60.8,TJ TZ Prosport Rakovník,75,80.5,-82.5,80.5,Masters 1,F,63,80.5,Single-ply,B
@@ -58,18 +58,18 @@ Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Di
 2,Libor Novák,1966,78.5,TJ Svitavy,140,147.5,152.5,152.5,Masters 2,M,83,152.5,Single-ply,B
 3,Jaroslav Hodík,1958,81.6,TJ Spartak Chodov,127.5,-135,-140,127.5,Masters 2,M,83,127.5,Single-ply,B
 4,Jaroslav Tomi,1958,82.1,TJ Sokol Vítkovice,-115,115,-120,115,Masters 2,M,83,115,Single-ply,B
-1,Rostislav Cejnek,1962,103.5,Powerlifting Jihlava,220,225,230,230,Masters 2,M,120,230,Single-ply,B
+1,Rostislav Cejnek,1962,103.5,Powerlifting Jihlava,220,225,230,230,Masters 2,M,105,230,Single-ply,B
 2,Jiří Krčmář,1962,110.9,TJ Sokol Nymburk,220,227.5,-237.5,227.5,Masters 2,M,120,227.5,Single-ply,B
 3,Jiří Psota,1962,107.2,Sporting Apis Praha,215,-220,-227.5,215,Masters 2,M,120,215,Single-ply,B
 1,Jiří Kadlec,1966,127.8,TJ Sokol Bílina,185,195,200,200,Masters 2,M,120+,200,Single-ply,B
 2,Jozef Lacika,1961,165.4,SK ZLOBR Sedlčany,-190,190,-197.5,190,Masters 2,M,120+,190,Single-ply,B
 3,Milan Mrázek,1958,133,TJ Sokol Lanžhot,165,-175,-175,165,Masters 2,M,120+,165,Single-ply,B
 1,Hana Takáčová,1954,80.7,TJ Sokol Nymburk,115,122.5,127.5,127.5,Masters 3,F,84,127.5,Single-ply,B
-1,Rémy Krayzel,1955,82.6,TJ Lokomotiva Krnov,170,172.5,192.5,192.5,Masters 3,M,93,192.5,Single-ply,B
+1,Rémy Krayzel,1955,82.6,TJ Lokomotiva Krnov,170,172.5,192.5,192.5,Masters 3,M,83,192.5,Single-ply,B
 2,Josef Ptáček,1953,91.9,TJ Spartak Pelhřimov,150,157.5,160,160,Masters 3,M,93,160,Single-ply,B
-3,Jaroslav Fajkus,1949,80.7,Colbert club SSK Vítkovice,-135,135,-142.5,135,Masters 3,M,93,135,Single-ply,B
-4,František Michalczyk,1954,79.5,Colbert club SSK Vítkovice,110,117.5,122.5,122.5,Masters 3,M,93,122.5,Single-ply,B
-5,Ladislav Thun,1956,80.8,Kulturistika a bikiny fitness,117.5,120,122.5,122.5,Masters 3,M,93,122.5,Single-ply,B
+3,Jaroslav Fajkus,1949,80.7,Colbert club SSK Vítkovice,-135,135,-142.5,135,Masters 3,M,83,135,Single-ply,B
+4,František Michalczyk,1954,79.5,Colbert club SSK Vítkovice,110,117.5,122.5,122.5,Masters 3,M,83,122.5,Single-ply,B
+5,Ladislav Thun,1956,80.8,Kulturistika a bikiny fitness,117.5,120,122.5,122.5,Masters 3,M,83,122.5,Single-ply,B
 1,Bohumil Čmugr,1956,104,TJ Sokol Nymburk,175,182.5,-195,182.5,Masters 3,M,105,182.5,Single-ply,B
 2,Jaroslav Fafejta,1954,101.1,KST Příbram,165,-170,170,170,Masters 3,M,105,170,Single-ply,B
 3,Václav Primus,1948,102,TJ Spartak Pelhřimov,-110,-110,110,110,Masters 3,M,105,110,Single-ply,B
