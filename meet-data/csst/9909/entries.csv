@@ -1,50 +1,44 @@
-Place,Name,BirthYear,BodyweightKg,Team,Squat1Kg,Squat2Kg,Squat3Kg,BestSquatKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,TotalKg,Sex,Equipment,Event
-1,Jaroslav Planka,1968,59.6,TJ Lokomotiva Krnov,150,165,-172.5,165,110,117.5,-122.5,117.5,190,200,,200,482.5,M,Single-ply,SBD
-1,Karel Ruso,1965,67,Sokol Nymburk,215,227.5,232.5,232.5,110,-117.5,117.5,117.5,205,215,220,220,570,M,Single-ply,SBD
-2,Tomáš Šesták,1973,66.8,TJ Viktorie Bohumín,180,200,210,210,105,110,112.5,112.5,212.5,222.5,227.5,227.5,550,M,Single-ply,SBD
-3,Roman Fornůsek,1974,67.3,TJ SK Olympia Zlín,180,192.5,-200,192.5,-120,125,132.5,132.5,210,220,225,225,550,M,Single-ply,SBD
-4,Jiří Janeček,1961,67.5,Sokol Nymburk,185,-195,197.5,197.5,130,137.5,-142.5,137.5,210,-225,,210,545,M,Single-ply,SBD
-5,Jan Weiss,1972,66.7,TJ A.Mlada Boleslav,180,-190,-190,180,115,120,125,125,185,195,-200,195,500,M,Single-ply,SBD
-6,Ivo Brázda,1971,66.4,Sokol Rosice,175,182.5,187.5,187.5,95,97.5,-100,97.5,190,200,-210,200,485,M,Single-ply,SBD
-7,Jiří Gajdošík,1962,67.5,TJ SK Olympia Zlín,162.5,170,-177.5,170,115,-117.5,-117.5,115,177.5,185,192.5,192.5,477.5,M,Single-ply,SBD
-1,Dušan Švarcbach,1975,74.7,TJ Banik Most,215,225,230,230,122.5,127.5,-130,127.5,240,247.5,-252.5,247.5,605,M,Single-ply,SBD
-2,Radim Jeník,1964,75,TJ Tatra Pribor,210,215,-220,215,150,157.5,-160,157.5,210,220,-230,220,592.5,M,Single-ply,SBD
-3,Panaiotis Melios,1960,74.9,TJ Lokomotiva Krnov,185,200,-212.5,200,135,142.5,-147.5,142.5,200,207.5,-212.5,207.5,550,M,Single-ply,SBD
-4,Jan Hunčovský,1962,74.9,Sokol Melnik,185,195,200,200,125,130,-135,130,200,215,-222.5,215,545,M,Single-ply,SBD
-5,Radek Pustaj,1971,69.2,TJ Turnov,150,165,170,170,120,127.5,130,130,190,202.5,-207.5,202.5,502.5,M,Single-ply,SBD
-1,Ladislav Strache,1974,82.3,Sokol Usti n.L.,250,-260,260,260,170,180,-185,180,250,260,,260,700,M,Single-ply,SBD
-2,Stanislav Hoza,1956,82.5,TJ Sokol Teskovice,240,255,270,270,155,165,-167.5,165,230,240,-245,240,675,M,Single-ply,SBD
-3,Pavel Pláteník,1974,79,Sokol Vranovice,250,260,-265,260,145,150,-155,150,240,250,-265,250,660,M,Single-ply,SBD
-4,Marek Žák,1981,79.7,TJ SK Olympia Zlín,205,215,-222.5,215,130,-135,135,135,210,220,230,230,580,M,Single-ply,SBD
-5,Libor Novák,1966,82.4,TJ Svitavy,180,195,200,200,140,145,150,150,200,210,222.5,222.5,572.5,M,Single-ply,SBD
-DQ,Jaroslav Štěpán,1962,82.2,TJ Spartak Rokytnice,,,,,,,,,,,,,,M,Single-ply,SBD
-1,Miroslav Hubáček,1967,89.4,Sokol Nymburk,260,270,280,280,200,210,217.5,217.5,270,280,290,290,787.5,M,Single-ply,SBD
-2,Jiří Horník,1978,86.7,TJ Banik Sokolo,240,250,-255,250,180,190,-192.5,190,280,290,-300,290,730,M,Single-ply,SBD
-3,Tomáš Sedláček,1965,89.9,TJ Spartak Rokytnice,-255,255,267.5,267.5,165,170,175,175,260,270,-275,270,712.5,M,Single-ply,SBD
-4,Jaroslav Kelner,1956,89.6,TJ Lokomotiva Krnov,270,280,,280,140,150,-155,150,260,275,-285,275,705,M,Single-ply,SBD
-5,Ondřej Seidl,1975,87.5,TJ SK Olympia Zlín,260,280,-290,280,-160,160,167.5,167.5,240,255,-262.5,255,702.5,M,Single-ply,SBD
-6,Michal Sekot,1961,89.5,Plzeň,250,-260,260,260,175,180,-185,180,250,-257.5,,250,690,M,Single-ply,SBD
-7,Michal Urbanek,1972,89.9,Sokol Klatovy,200,210,-215,210,155,160,165,165,255,262.5,-270,262.5,637.5,M,Single-ply,SBD
-8,Antonín Babinský,1970,89.4,TJ SK Olympia Zlín,220,225,230,230,135,-140,-140,135,240,255,,255,620,M,Single-ply,SBD
-1,Jiří Gryga,1968,99.6,Jednota Frydek-Místek,250,260,265,265,165,-170,-170,165,300,-310,310,310,740,M,Single-ply,SBD
-2,Zbyněk Krejča,1974,99,Sokol Nymburk,260,-277.5,-277.5,260,190,200,205,205,260,272.5,-277.5,272.5,737.5,M,Single-ply,SBD
-3,Ján Beneš,1959,99.3,Jednota Frydek-Místek,-240,240,-250,240,-170,-170,170,170,310,-330,-330,310,720,M,Single-ply,SBD
-4,Petr Lahoda,1970,98.1,Sokol Rosice,-270,270,-285,270,-170,-170,170,170,250,265,-280,265,705,M,Single-ply,SBD
-5,Martin Ürban,1968,98.5,Sokol Nymburk,230,250,-255,250,140,150,-155,150,270,290,292.5,292.5,692.5,M,Single-ply,SBD
-6,Jan Pinc,1973,97.2,Tatran Lomnice,-230,230,242.5,242.5,180,-190,-190,180,255,267.5,-277.5,267.5,690,M,Single-ply,SBD
-7,Karel Doležal,1972,96.6,Sokol Nymburk,220,-235,240,240,135,145,150,150,220,235,-240,235,625,M,Single-ply,SBD
-DQ,Karel Pavlů,1963,94.3,Ateso Jablonec,-260,-265,-270,,,,,,,,,,,M,Single-ply,SBD
-DQ,Jiří Uher,1969,97.2,Bymaco Bystrec,-250,-250,-250,,,,,,,,,,,M,Single-ply,SBD
-1,Tomáš Šárik,1975,108.8,Spartak Jihlava,260,270,280,280,200,-210,-212.5,200,300,310,-315,310,790,M,Single-ply,SBD
-2,Vratislav Čech,1965,105.5,SK Olympia Zlin,-260,270,-277.5,270,165,175,,175,300,317.5,327.5,327.5,772.5,M,Single-ply,SBD
-3,Zoltán Kanát,1962,101.8,Spartak Chodov,-280,-280,280,280,180,190,200,200,270,280,290,290,770,M,Single-ply,SBD
-4,Jindřich Červenka,1974,107.2,TJ Lokomotiva Krnov,-265,-265,265,265,175,-182.5,182.5,182.5,270,282.5,-290,282.5,730,M,Single-ply,SBD
-1,Jakub Sehnal,1973,112.6,Jednota Frydek-Místek,270,280,-290,280,190,200,210,210,280,290,-300,290,780,M,Single-ply,SBD
-2,Miroslav Vacek,1967,124.3,Sokol Nymburk,270,290,300,300,170,180,185,185,260,275,285,285,770,M,Single-ply,SBD
-3,Jiří Žaloudek,1975,110.9,CST Atlantic Caslav,260,-280,-280,260,-175,175,185,185,275,285,287.5,287.5,732.5,M,Single-ply,SBD
-4,Luděk Michal,1969,110.5,Sportcentrum Tábor,-260,260,-280,260,-175,180,190,190,250,270,-280,270,720,M,Single-ply,SBD
-5,Jiří Lacina,1969,118,Sokol Domazlice,220,230,240,240,170,-180,-180,170,240,252.5,265,265,675,M,Single-ply,SBD
-6,Milan Mrázek,1958,122.6,Sokol Lanzhot,220,240,245,245,160,165,170,170,250,257.5,260,260,675,M,Single-ply,SBD
-1,Zdeněk Sedmík,1974,128.1,SK Sportcentrum,320,330,340,340,220,-230,230,230,320,332.5,-342.5,332.5,902.5,M,Single-ply,SBD
-2,Martin Lesk,1974,138,Autobrzdy Jablonec,330,342.5,347.5,347.5,-230,-230,230,230,310,325,-335,325,902.5,M,Single-ply,SBD
-3,Jaroslav Stašek,1973,126.3,TJ Lokomotiva Krnov,260,275,-285,275,150,-160,-160,150,265,-280,,265,690,M,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,BestBenchKg,Sex,WeightClassKg,TotalKg,Equipment,Event,Division
+1,Jana Sulekova,1977,59.8,StansGym Kladno,60,F,60,60,Single-ply,B,Open
+1,Hana Takáčová,1954,65.4,TJ Spartak Chodov,90,F,67.5,90,Single-ply,B,Open
+1,Rudolf Böhm,1952,65.3,TJ Sokol Vejprnice,145,M,67.5,145,Single-ply,B,Open
+2,Karel Ruso,1965,66.4,Sokol Nymburk,127.5,M,67.5,127.5,Single-ply,B,Open
+3,Jan Weiss,1972,66.7,TJ A.Ml.Boleslav,127.5,M,67.5,127.5,Single-ply,B,Open
+4,Radek Pustaj,1971,66,TJ Loko Turnov,125,M,67.5,125,Single-ply,B,Open
+1,Vladimír Nebola,1970,74.9,TJ Sp Letohrad,160,M,75,160,Single-ply,B,Open
+2,Martin Dolejš,1970,71.6,TJ Atl.Caslav,150,M,75,150,Single-ply,B,Open
+3,Bohumil Koča,1971,73.8,TJ Sokol Vejprnice,147.5,M,75,147.5,Single-ply,B,Open
+4,Vladimír Medek,1954,75,TJ Sp Rokytnice,135,M,75,135,Single-ply,B,Open
+1,Vasil Vatolin,1959,80.5,Sokol Nymburk,157.5,M,82.5,157.5,Single-ply,B,Open
+2,Martin Huk,1977,81,TJ Ateso Jablonec,157.5,M,82.5,157.5,Single-ply,B,Open
+3,Dušan Švarcbach,1975,78.3,TJ Banik Most,145,M,82.5,145,Single-ply,B,Open
+DQ,Vladimir Erban,1973,81,TJ Sp Rokytnice,,M,82.5,,Single-ply,B,Open
+DQ,Zdenek Vlaciha,1963,82,TJ Sp Rokytnice,,M,82.5,,Single-ply,B,Open
+DQ,Jaroslav Štěpán,1962,82.5,TJ Sp Rokytnice,,M,82.5,,Single-ply,B,Open
+1,Miroslav Hubáček,1967,89.7,Sokol Nymburk,207.5,M,90,207.5,Single-ply,B,Open
+2,Václav Ackermann,1973,90,SK Power Vlcice,190,M,90,190,Single-ply,B,Open
+3,Pavel Horník,1976,89.6,TJ Sokol Vejprnice,145,M,90,145,Single-ply,B,Open
+1,Michal Sekot,1961,92.5,Sokol Nymburk,190,M,100,190,Single-ply,B,Open
+2,Ladislav Prikryl,1952,95,TJ Ateso Jablonec,190,M,100,190,Single-ply,B,Open
+3,Ladislav Marek,1978,97,Bymaco Bystrec,190,M,100,190,Single-ply,B,Open
+4,Jaromi Kratochvíl,1978,90.7,SK Power Vlcice,162.5,M,100,162.5,Single-ply,B,Open
+1,Luboš Maršík,1952,102,FCM Nachod,220,M,110,220,Single-ply,B,Open
+2,Zbyněk Krejča,1974,110,Sokol Nymburk,207.5,M,110,207.5,Single-ply,B,Open
+3,Josef Pořádek,1972,105.6,Rakogym Rakovnik,205,M,110,205,Single-ply,B,Open
+4,Martin Košnar,1978,110,TJ Ji Chribska,190,M,110,190,Single-ply,B,Open
+5,Vojtech Varady,1952,110,TJ Ateso Jablonec,190,M,110,190,Single-ply,B,Open
+6,Jaroslav Wožniak,1955,102.5,SK J+M Kadan,185,M,110,185,Single-ply,B,Open
+7,Luděk Michal,1969,106.3,SK SC Tabor,185,M,110,185,Single-ply,B,Open
+8,Adam Šťastný,1973,107.3,Sokol Nymburk,180,M,110,180,Single-ply,B,Open
+1,Bohumil Váňa,1951,123.8,FC Wilson,215,M,125,215,Single-ply,B,Open
+2,Kamil Grim,1969,112,FCM Nachod,207.5,M,125,207.5,Single-ply,B,Open
+3,Jiří Havrda,1974,118,FCM Nachod,205,M,125,205,Single-ply,B,Open
+4,Jiří Žaloudek,1975,112.7,TJ Atl.Caslav,190,M,125,190,Single-ply,B,Open
+5,Jiří Lacina,1969,120.8,Sokol Domazlice,185,M,125,185,Single-ply,B,Open
+6,Miroslav Vacek,1967,125,Sokol Nymburk,182.5,M,125,182.5,Single-ply,B,Open
+7,Vlastimil Kalaš,1979,113.3,SK Power Vlcice,175,M,125,175,Single-ply,B,Open
+8,Ivan Veselý,1949,122.6,SK Kralupy,165,M,125,165,Single-ply,B,Open
+1,Jaroslav Šoukal,1972,125.8,TJ Sokol Vejprnice,207.5,M,125+,207.5,Single-ply,B,Open
+2,Petr Macák,1950,161.1,Sedlcany,207.5,M,125+,207.5,Single-ply,B,Open
+3,Jiří Maryška,1956,125.5,FCM Nachod,195,M,125+,195,Single-ply,B,Open
+4,Roman Vantura,1966,125.7,TJ Ateso Jablonec,182.5,M,125+,182.5,Single-ply,B,Open
