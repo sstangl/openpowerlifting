@@ -238,6 +238,23 @@ fn index(
     Some(Template::render("rankings", &context))
 }
 
+#[derive(FromForm)]
+struct OldLiftersQuery {
+    q: String,
+}
+
+#[get("/lifters.html?<query>")]
+fn old_lifters(opldb: State<ManagedOplDb>, query: OldLiftersQuery) -> Option<Redirect> {
+    let name = &query.q;
+    match opldb.get_lifter_id_by_name(name) {
+        None => None,
+        Some(id) => {
+            let username = &opldb.get_lifter(id).username;
+            Some(Redirect::permanent(&format!("/u/{}", username)))
+        }
+    }
+}
+
 #[error(404)]
 fn not_found() -> &'static str {
     "404"
@@ -276,9 +293,10 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 status,
                 data,
                 faq,
-                contact
+                contact,
             ],
         )
+        .mount("/", routes![old_lifters])
         .catch(errors![not_found, internal_error])
         .attach(Template::fairing())
 }

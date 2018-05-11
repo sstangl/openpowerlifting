@@ -75,3 +75,24 @@ fn test_username_redirects() {
         "/u/trystanoakley"
     );
 }
+
+#[test]
+fn test_old_redirects() {
+    // Test that URL patterns from the old web/ implementation are redirected
+    // to their server/ equivalents.
+    let client = client();
+
+    let response = client.get("/lifters.html?q=Sean Stangl").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/u/seanstangl"
+    );
+
+    let response = client.get("/lifters.html?q=Sean%20Stangl").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/u/seanstangl"
+    );
+}
