@@ -63,3 +63,15 @@ fn test_pages_load() {
     assert_eq!(client.get("/faq").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/contact").dispatch().status(), Status::Ok);
 }
+
+#[test]
+fn test_username_redirects() {
+    let client = client();
+    let response = client.get("/u/TrystanOakley").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert!(response.headers().contains("location"));
+    assert_eq!(
+        response.headers().get_one("location").unwrap(),
+        "/u/trystanoakley"
+    );
+}

@@ -148,7 +148,9 @@ fn lifter(
             let lowercase = username.to_ascii_lowercase();
             match opldb.get_lifter_id(&lowercase) {
                 None => return None,
-                Some(_) => return Some(Err(Redirect::to(&format!("/u/{}", lowercase)))),
+                Some(_) => {
+                    return Some(Err(Redirect::permanent(&format!("/u/{}", lowercase))))
+                }
             }
         }
         Some(id) => id,
