@@ -11,7 +11,7 @@ import os
 
 try:
     import oplcsv
-except ModuleNotFoundError:
+except ImportError:
     sys.path.append(os.path.abspath(os.path.join(
         os.path.dirname(__file__), '..', 'scripts')))
     import oplcsv

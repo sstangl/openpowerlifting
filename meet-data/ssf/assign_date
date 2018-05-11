@@ -19,7 +19,7 @@ from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
     from oplcsv import Csv
-except ModuleNotFoundError:
+except ImportError:
     sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     from oplcsv import Csv

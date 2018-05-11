@@ -12,7 +12,7 @@ from os.path import join, realpath, dirname
 
 try:
     import oplprobe
-except ModuleNotFoundError:
+except ImportError:
     sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
     import oplprobe
 
