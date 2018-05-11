@@ -41,9 +41,11 @@
     sex = "F"
 
 [exclusions]
-    mistrovstvi61 = ["check_row_division"]
-    mistrovstvi62 = ["check_row_division"]
-    mistrovstvi59 = ["check_row_division"]
-    mistrovstvi60 = ["check_row_division"]
-    mistrovstvi63 = ["check_row_division"]
-    mistrovstvi64 = ["check_row_division"]
+    9623 = ["check_row_division"]
+    9622 = ["check_row_division"]
+    0612 = ["check_row_division"]
+    9617 = ["check_row_division"]
+    9515 = ["check_row_division"]
+    9615 = ["check_row_division"]
+    9521 = ["check_row_division"]
+    9508 = ["check_row_division"]
