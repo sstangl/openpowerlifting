@@ -28,7 +28,6 @@ def load_names(datafilepath):
             for incorrect_name in names[1:]:
                 incorrect_name = incorrect_name.strip()
                 assert incorrect_name
-                print(incorrect_name)
                 assert incorrect_name not in h
                 h[incorrect_name] = correct_name
 
