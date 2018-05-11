@@ -62,13 +62,15 @@ def cleanup(filename):
 
     if csv.rows[0][nameidx] != '' and( csv.rows[0][nameidx].isdigit() or csv.rows[0][nameidx] == ' '):
         csv.rows[0][nameidx] = csv.rows[0][nameidx][1:]
-    csv.rows[0][townidx] = csv.rows[0][townidx].title()
+    csv.rows[0][townidx] = csv.rows[0][townidx].replace('\t',' ').title().replace('  ',' ').strip()
 
     csv.rows[0][nameidx] = csv.rows[0][nameidx].title().replace('\xa0',' ')
     csv.rows[0][nameidx] = re.sub('\d{4}','',csv.rows[0][nameidx])
     csv.rows[0][nameidx] = csv.rows[0][nameidx].strip()
     csv.rows[0][nameidx] = csv.rows[0][nameidx].replace('()','')
-    csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('  ',' ')
+    csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('  ',' ').replace('  ',' ')
+    csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('Ii','II').replace('II.','II ').replace('Čr','ČR').replace(' V ',' v ')
+
     if csv.rows[0][dateidx] != '':
         [year,month,day]=csv.rows[0][dateidx].split('-')
         month = month.strip()
