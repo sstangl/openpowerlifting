@@ -69,7 +69,7 @@ def cleanup(filename):
     csv.rows[0][nameidx] = csv.rows[0][nameidx].strip()
     csv.rows[0][nameidx] = csv.rows[0][nameidx].replace('()','')
     csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('  ',' ').replace('  ',' ')
-    csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('Ii','II').replace('II.','II ').replace('Čr','ČR').replace(' V ',' v ')
+    csv.rows[0][nameidx]= csv.rows[0][nameidx].replace('Ii','II').replace('II.','II ').replace('Čr','ČR').replace(' V ',' v ').replace(' Cr ',' CR ')
 
     if csv.rows[0][dateidx] != '':
         [year,month,day]=csv.rows[0][dateidx].split('-')
