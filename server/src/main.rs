@@ -116,13 +116,12 @@ fn rankings(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
-
     let selection = match pages::rankings::Selection::from_path(&selections) {
         Ok(s) => s,
         Err(_) => return None,
     };
 
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
 }
@@ -140,8 +139,6 @@ fn lifter(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Result<Template, Redirect>> {
-    let locale = make_locale(&langinfo, languages, &cookies);
-
     let lifter_id = match opldb.get_lifter_id(&username) {
         None => {
             // If the name just needs to be lowercased, redirect to that page.
@@ -156,6 +153,7 @@ fn lifter(
         Some(id) => id,
     };
 
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::lifter::Context::new(&opldb, &locale, lifter_id);
     Some(Ok(Template::render("lifter", &context)))
 }
@@ -168,8 +166,6 @@ fn meet(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
-
     let meetpath_str: &str = match meetpath.to_str() {
         None => return None,
         Some(s) => s,
@@ -179,6 +175,7 @@ fn meet(
         Some(id) => id,
     };
 
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::meet::Context::new(&opldb, &locale, meet_id);
     Some(Template::render("meet", &context))
 }
@@ -235,8 +232,8 @@ fn index(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
     let selection = pages::rankings::Selection::new_default();
+    let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
 }
