@@ -60,10 +60,7 @@ pub struct ResultsRow<'a> {
     pub place: String,
     /// The rank in the ranking-by-points view (by Wilks).
     pub rank: u32,
-    pub name: &'a str,
-    pub username: &'a str,
-    pub instagram: Option<&'a str>,
-    pub color: Option<&'a str>,
+    pub lifter: &'a opldb::Lifter, 
     pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,
@@ -93,16 +90,7 @@ impl<'a> ResultsRow<'a> {
         ResultsRow {
             place: format!("{}", &entry.place),
             rank: rank,
-            name: &lifter.name,
-            username: &lifter.username,
-            instagram: match lifter.instagram {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
-            color: match lifter.color {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
+            lifter: lifter,
             sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),

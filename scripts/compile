@@ -186,13 +186,22 @@ def build_lifterscsv(lifterdir, builddir):
     ordered = sorted(LIFTERIDMAP.items(), key=lambda x: x[1])
 
     # Make a map of (Name => Instagram).
-    socialcsv = Csv(lifterdir + os.sep + 'social-instagram.csv')
-    nameidx = socialcsv.index('Name')
-    igidx = socialcsv.index('Instagram')
-    socialmap = dict()
-    for row in socialcsv.rows:
-        socialmap[row[nameidx]] = row[igidx]
-    socialcsv = None
+    instagramcsv = Csv(lifterdir + os.sep + 'social-instagram.csv')
+    nameidx = instagramcsv.index('Name')
+    igidx = instagramcsv.index('Instagram')
+    instagram_map = dict()
+    for row in instagramcsv.rows:
+        instagram_map[row[nameidx]] = row[igidx]
+    instagramcsv = None
+
+    # Make a map of (Name => VKontakte).
+    vkcsv = Csv(lifterdir + os.sep + 'social-vkontakte.csv')
+    nameidx = vkcsv.index('Name')
+    vkidx = vkcsv.index('Userpage')
+    vk_map = dict()
+    for row in vkcsv.rows:
+        vk_map[row[nameidx]] = row[vkidx]
+    vkcsv = None
 
     # Make a map of (Name => Color).
     colorcsv = Csv(lifterdir + os.sep + 'supporter-colors.csv')
@@ -208,12 +217,17 @@ def build_lifterscsv(lifterdir, builddir):
     lifterscsv.append_column('Name')
     lifterscsv.append_column('Username')
     lifterscsv.append_column('Instagram')
+    lifterscsv.append_column('VKontakte')
     lifterscsv.append_column('Color')
 
     for (name, lifterid) in ordered:
         instagram = ''
-        if name in socialmap:
-            instagram = socialmap[name]
+        if name in instagram_map:
+            instagram = instagram_map[name]
+
+        vk = ''
+        if name in vk_map:
+            vk = vk_map[name]
 
         color = ''
         if name in colormap:
@@ -221,7 +235,7 @@ def build_lifterscsv(lifterdir, builddir):
 
         username = get_username(name)
 
-        row = [str(lifterid), name, username, instagram, color]
+        row = [str(lifterid), name, username, instagram, vk, color]
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'

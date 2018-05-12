@@ -28,6 +28,12 @@ function makeDataProvider() {
                         '<i class="fa fa-instagram fa-resize"></i></a>';
             }
 
+            if (entry.vkontakte) {
+                name += '<a href="https://vk.com/' + entry.vkontakte +
+                        '" class="instagram" target="_blank">' +
+                        '<i class="fa fa-vk fa-resize"></i></a>';
+            }
+
 
             return {
                 rank: entry.sorted_index + 1,
