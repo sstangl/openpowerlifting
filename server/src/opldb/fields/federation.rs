@@ -54,6 +54,8 @@ pub enum Federation {
     CPL,
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
+    #[strum(to_string = "CSST", serialize = "csst")]
+    CSST,
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
     #[strum(to_string = "EPA", serialize = "epa")]

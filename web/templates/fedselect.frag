@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -71,6 +71,9 @@
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
     <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
+  </optgroup>
+  <optgroup label="Czechia">
+    <option value="CSST">CSST - Český Svaz Silového Trojboje [IPF]</option>
   </optgroup>
   <optgroup label="Denmark">
     <option value="DSF">DSF - Dansk Styrkeløft Forbund [IPF]</option>

@@ -9,7 +9,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,BodyweightKg,Country,Bench1Kg,Be
 2,56,F,Masters 1,Gabriela Hirner,1965,54.2,GER,90,-95,95,95,95,B,Single-ply
 3,56,F,Masters 1,Tarja Uppala,1965,55,FIN,85,-90,-92.5,85,85,B,Single-ply
 4,56,F,Masters 1,Leigh Haines,1960,55.5,USA,67.5,-72.5,-92.5,67.5,67.5,B,Single-ply
-5,56,F,Masters 1,Hana Štéchová,1961,55,CZE,60,-62.5,-65,60,60,B,Single-ply
+5,56,F,Masters 1,Hana Štěchová,1961,55,CZE,60,-62.5,-65,60,60,B,Single-ply
 1,60,F,Masters 1,Monika Schnoltzer,1961,59.6,GER,100,102.5,-105,102.5,102.5,B,Single-ply
 2,60,F,Masters 1,Ute Villwock,1967,59.6,GER,97.5,102.5,-105,102.5,102.5,B,Single-ply
 3,60,F,Masters 1,Nicoletta Perego,1966,59.3,ITA,75,-80,-80,75,75,B,Single-ply
@@ -23,7 +23,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,BodyweightKg,Country,Bench1Kg,Be
 1,82.5,F,Masters 1,Birgit Witt,1963,82.4,GER,125,130,135,135,135,B,Single-ply
 2,82.5,F,Masters 1,Åsa Halvarsson,1961,76.1,SWE,105,110,-112.5,110,110,B,Single-ply
 3,82.5,F,Masters 1,Barbara Bouvlana-Behm,1963,78.2,USA,-95,100,-112.5,100,100,B,Single-ply
-4,82.5,F,Masters 1,Petra Bricova,1967,80.9,CZE,-87.5,-87.5,87.5,87.5,87.5,B,Single-ply
+4,82.5,F,Masters 1,Petra Bričová,1967,80.9,CZE,-87.5,-87.5,87.5,87.5,87.5,B,Single-ply
 1,90,F,Masters 1,Barbara Meyer,1961,83.3,GER,60,-85,-87.5,60,60,B,Single-ply
 1,90+,F,Masters 1,Deborah Ferrell,1964,114.2,USA,-165,165,-197.5,165,165,B,Single-ply
 2,90+,F,Masters 1,Barbara Pawlik,1959,90.5,POL,117.5,-122.5,-125,117.5,117.5,B,Single-ply
@@ -119,11 +119,11 @@ DQ,110,M,Masters 1,Michal Kondla,1966,108.4,CZE,-215,-215,-217.5,,,B,Single-ply
 3,125,M,Masters 1,Kyle Stephens,1967,116.6,USA,-265,-265,265,265,265,B,Single-ply
 4,125,M,Masters 1,János Cserna,1968,117.9,HUN,-240,240,-247.5,240,240,B,Single-ply
 5,125,M,Masters 1,Naoki Tsujimi,1964,117.7,JPN,225,-235,235,235,235,B,Single-ply
-6,125,M,Masters 1,Michal Mihaly,1966,120.3,CZE,232.5,-260,-260,232.5,232.5,B,Single-ply
+6,125,M,Masters 1,Michal Mihály,1966,120.3,CZE,232.5,-260,-260,232.5,232.5,B,Single-ply
 7,125,M,Masters 1,Heikki Hirvonen,1961,119.1,FIN,-200,-205,205,205,205,B,Single-ply
 8,125,M,Masters 1,Christian Straka,1966,115.9,AUT,190,195,200,200,200,B,Single-ply
 DQ,125,M,Masters 1,William Gillespie,1959,123.9,USA,-282.5,-282.5,-282.5,,,B,Single-ply
-DQ,125,M,Masters 1,Jiři Krčmár,1962,117.3,CZE,-220,,,,,B,Single-ply
+DQ,125,M,Masters 1,Jiří Krčmář,1962,117.3,CZE,-220,,,,,B,Single-ply
 DQ,125,M,Masters 1,Peter Szabo,1964,115.3,SVK,-175,-175,-175,,,B,Single-ply
 1,125+,M,Masters 1,Daniel Gaudreau,1960,159.2,USA,-285,-285,285,285,285,B,Single-ply
 2,125+,M,Masters 1,Trond Fjøren,1966,142.1,NOR,270,-277.5,277.5,277.5,277.5,B,Single-ply
@@ -152,7 +152,7 @@ DQ,125,M,Masters 1,Peter Szabo,1964,115.3,SVK,-175,-175,-175,,,B,Single-ply
 6,75,M,Masters 2,Stephen Pickens,1957,74.1,NZL,125,135,-142.5,135,135,B,Single-ply
 1,82.5,M,Masters 2,Bjarne Synstad,1951,80.7,NOR,-210,210,217.5,217.5,217.5,B,Single-ply
 2,82.5,M,Masters 2,Salvatore Venuto,1957,82.1,ITA,170,180,-190,180,180,B,Single-ply
-3,82.5,M,Masters 2,Remy Krayzel,1955,77.5,CZE,-160,160,167.5,167.5,167.5,B,Single-ply
+3,82.5,M,Masters 2,Rémy Krayzel,1955,77.5,CZE,-160,160,167.5,167.5,167.5,B,Single-ply
 4,82.5,M,Masters 2,Luciano DiRocco,1951,81.6,ITA,155,165,-180,165,165,B,Single-ply
 5,82.5,M,Masters 2,Patrick Carroll,1957,81.4,USA,-157.5,-157.5,157.5,157.5,157.5,B,Single-ply
 6,82.5,M,Masters 2,Akio Fujimoto,1949,80.7,JPN,140,145,-147.5,145,145,B,Single-ply
@@ -174,7 +174,7 @@ DQ,90,M,Masters 2,Philippe Dupre,1956,86.9,FRA,-160,-167.5,-167.5,,,B,Single-ply
 4,100,M,Masters 2,Philippe Darbouze,1957,98.2,USA,-207.5,207.5,212.5,212.5,212.5,B,Single-ply
 5,100,M,Masters 2,Anders Carlsson,1952,97.6,SWE,205,210,-217.5,210,210,B,Single-ply
 6,100,M,Masters 2,Marius Vermeulen,1957,98.5,NED,202.5,210,-217.5,210,210,B,Single-ply
-7,100,M,Masters 2,Bohumil Cmugr,1956,98.4,CZE,185,195,200,200,200,B,Single-ply
+7,100,M,Masters 2,Bohumil Čmugr,1956,98.4,CZE,185,195,200,200,200,B,Single-ply
 8,100,M,Masters 2,Martin Flett,1956,99.2,GBR,-192.5,192.5,-202.5,192.5,192.5,B,Single-ply
 DQ,100,M,Masters 2,Manfred Georg,1955,98.8,GER,-210,-210,-217.5,,,B,Single-ply
 DQ,100,M,Masters 2,Adam Csupori,1957,98,SVK,-172.5,-180,-180,,,B,Single-ply
@@ -186,14 +186,14 @@ DQ,100,M,Masters 2,Adam Csupori,1957,98,SVK,-172.5,-180,-180,,,B,Single-ply
 6,110,M,Masters 2,David Brooks,1952,109.2,GBR,182.5,192.5,-200,192.5,192.5,B,Single-ply
 7,110,M,Masters 2,Floyd Givens,1951,103.8,USA,190,-207.5,-212.5,190,190,B,Single-ply
 8,110,M,Masters 2,Mieczyslaw Podmokly,1952,100.2,POL,170,175,-180,175,175,B,Single-ply
-9,110,M,Masters 2,Jaroslav Wozniak,1955,109.2,CZE,170,-175,-177.5,170,170,B,Single-ply
+9,110,M,Masters 2,Jaroslav Wožniak,1955,109.2,CZE,170,-175,-177.5,170,170,B,Single-ply
 10,110,M,Masters 2,Ivan Veselý,1949,107.2,CZE,-160,160,-172.5,160,160,B,Single-ply
 DQ,110,M,Masters 2,Susumu Yoshida,1950,103.9,JPN,-200,-200,-205,,,B,Single-ply
 DQ,110,M,Masters 2,Ronald Beuch,1950,108.8,USA,-200,-200,-200,,,B,Single-ply
 DQ,110,M,Masters 2,Stephen Demeis,1957,107,GBR,-190,-195,-200,,,B,Single-ply
 1,125,M,Masters 2,Bradley Klinger,1956,119.7,USA,262.5,-265,265,265,265,B,Single-ply
 2,125,M,Masters 2,Dainis Reinholds,1951,120.3,LAT,230,237.5,-242.5,237.5,237.5,B,Single-ply
-3,125,M,Masters 2,Antonin Sota,1952,122.8,CZE,225,-235,235,235,235,B,Single-ply
+3,125,M,Masters 2,Antonín Šota,1952,122.8,CZE,225,-235,235,235,235,B,Single-ply
 4,125,M,Masters 2,Allan Hulme,1956,112.4,GBR,215,-225,-225,215,215,B,Single-ply
 5,125,M,Masters 2,Motohisa Kojo,1958,123.8,JPN,200,210,-220,210,210,B,Single-ply
 6,125,M,Masters 2,Julian Massey,1956,114.2,GBR,175,-182.5,182.5,182.5,182.5,B,Single-ply
@@ -225,7 +225,7 @@ DQ,125+,M,Masters 2,Eberhard Schwanke,1953,135.5,GER,-250,-255,-262.5,,,B,Single
 10,75,M,Masters 2,Svend Stensgaard,1922,72.3,DEN,70,72.5,-75,72.5,72.5,B,Single-ply
 1,82.5,M,Masters 2,Hans Jørgen Jørgensen,1944,78.1,DEN,-150,-150,150,150,150,B,Single-ply
 2,82.5,M,Masters 2,Makoto Maehara,1944,80.8,JPN,145,-150,-150,145,145,B,Single-ply
-3,82.5,M,Masters 2,Karel Olic,1947,79.5,CZE,125,132.5,140,140,140,B,Single-ply
+3,82.5,M,Masters 2,Karel Olič,1947,79.5,CZE,125,132.5,140,140,140,B,Single-ply
 4,82.5,M,Masters 2,Rainer Schoetz,1943,79.8,GER,-140,140,-155,140,140,B,Single-ply
 5,82.5,M,Masters 2,Reynaldo Pascal-Casas,1944,75.4,FRA,-127.5,-127.5,127.5,127.5,127.5,B,Single-ply
 6,82.5,M,Masters 2,Daniel Reybrouck,1942,81.4,BEL,-112.5,112.5,120,120,120,B,Single-ply
@@ -234,7 +234,7 @@ DQ,82.5,M,Masters 2,Mike Edwards,1946,82.1,GBR,-120,-120,-120,,,B,Single-ply
 2,90,M,Masters 2,Yaroslav Chala,1948,89.1,UKR,165,170,-182.5,170,170,B,Single-ply
 3,90,M,Masters 2,Alf Bengtsson,1947,88.7,SWE,145,-150,-170,145,145,B,Single-ply
 4,90,M,Masters 2,Tapani Puhakka,1944,88.8,FIN,132.5,137.5,142.5,142.5,142.5,B,Single-ply
-5,90,M,Masters 2,Jiri Poutnik,1946,83.7,CZE,125,130,135,135,135,B,Single-ply
+5,90,M,Masters 2,Jiří Poutník,1946,83.7,CZE,125,130,135,135,135,B,Single-ply
 6,90,M,Masters 2,Adolf Rohrbacher,1938,87.8,AUT,125,-130,130,130,130,B,Single-ply
 7,90,M,Masters 2,Karel Achtner,1944,87.1,CZE,125,-130,-130,125,125,B,Single-ply
 DQ,90,M,Masters 2,William McFadyen,1934,84.2,GBR,-167.5,-167.5,-167.5,,,B,Single-ply
@@ -257,7 +257,7 @@ DQ,100,M,Masters 2,Aleksandrs Smelovs,1947,94.5,LAT,-170,-170,-175,,,B,Single-pl
 7,110,M,Masters 2,Václav Primus,1948,100.3,CZE,142.5,147.5,150,150,150,B,Single-ply
 8,110,M,Masters 2,Hermann Meier,1937,106.8,GER,140,-152.5,-152.5,140,140,B,Single-ply
 1,125,M,Masters 2,Ton Teelen,1943,113.4,NED,-170,170,175,175,175,B,Single-ply
-2,125,M,Masters 2,Jiri Skopal,1946,119.7,CZE,157.5,165,167.5,167.5,167.5,B,Single-ply
+2,125,M,Masters 2,Jiří Skopal,1946,119.7,CZE,157.5,165,167.5,167.5,167.5,B,Single-ply
 3,125,M,Masters 2,George Flikas,1942,115.9,GRE,165,-167.5,-175,165,165,B,Single-ply
 4,125,M,Masters 2,Rudolf Attelmann,1936,110.5,GER,-125,125,-130,125,125,B,Single-ply
 5,125,M,Masters 2,Georg Boström,1947,118.3,SWE,90,,,90,90,B,Single-ply
