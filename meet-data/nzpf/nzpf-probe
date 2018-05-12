@@ -22,7 +22,7 @@ BASEURL_SPORTY = "http://www.sporty.co.nz/asset/downloadasset?id="
 
 URL_WBOP = "http://www.sporty.co.nz/wbop/Results-1"
 URL_AKL = "http://www.sporty.co.nz/aucklandpowerlifting/Results"
-URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/NPLA-Records-Results"
+URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/Northland-Champs-3-lift-Bench-results/2018-2"
 URL_OTA = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
 
 URLS_NZPF = ["http://www.nzpowerlifting.co.nz/results/nz-events",
@@ -104,7 +104,7 @@ def main():
     meetlist_AKL = getmeetlist_sporty_partial(html_AKL, "357445")
 
     html_NTL = oplprobe.gethtml(URL_NTL)
-    meetlist_NTL = getmeetlist_sporty_partial(html_NTL, "417723")
+    meetlist_NTL = getmeetlist_sporty_partial(html_NTL, "644318")
 
     html_OTA = oplprobe.gethtml(URL_OTA)
     meetlist_OTA = getmeetlist_sporty(html_OTA)
