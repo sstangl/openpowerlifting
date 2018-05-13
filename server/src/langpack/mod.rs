@@ -224,6 +224,7 @@ pub struct ColumnTranslations {
 pub struct SelectorTranslations {
     pub equipment: EquipmentSelectorTranslations,
     pub weightclass: WeightClassSelectorTranslations,
+    pub sort: SortSelectorTranslations,
     pub year: YearSelectorTranslations,
     pub sex: SexSelectorTranslations,
 }
@@ -243,6 +244,20 @@ pub struct WeightClassSelectorTranslations {
     pub traditional: String,
     pub ipfmen: String,
     pub ipfwomen: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct SortSelectorTranslations {
+    pub by_squat: String,
+    pub by_bench: String,
+    pub by_deadlift: String,
+    pub by_total: String,
+    pub by_allometric: String,
+    pub by_glossbrenner: String,
+    pub by_mcculloch: String,
+    pub by_wilks: String,
+    pub weight: String,
+    pub points: String,
 }
 
 #[derive(Serialize, Deserialize)]

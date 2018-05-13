@@ -6,6 +6,7 @@ let selEquipment;
 let selWeightClass;
 let selYear;
 let selSex;
+let selSort;
 
 
 function makeDataProvider() {
@@ -82,6 +83,10 @@ function reload() {
         url += "/" + selYear.value;
         specific = true;
     }
+    if (selSort.value !== "by-wilks") {
+        url += "/" + selSort.value;
+        specific = true;
+    }
 
     if (specific === true) {
         window.location = url;
@@ -99,11 +104,13 @@ function addEventListeners() {
     selWeightClass = document.getElementById("weightclassselect");
     selYear = document.getElementById("yearselect");
     selSex = document.getElementById("sexselect");
+    selSort = document.getElementById("sortselect");
 
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
+    addSelectorListeners(selSort);
 
     window.addEventListener("resize", onResize, false);
 }

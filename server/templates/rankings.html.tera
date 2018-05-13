@@ -52,6 +52,7 @@
         <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
       {% include "widget-yearselect" %}
+      {% include "widget-sortselect" %}
     </div>
     <div id="controls-right">
       {% include "widget-weightunits" %}

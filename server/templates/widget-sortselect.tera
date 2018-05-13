@@ -1,0 +1,14 @@
+<select id="sortselect">
+  <optgroup label="{{strings.selectors.sort.weight}}">
+    <option value="by-squat" disabled {% if selection.sort == "BySquat" %}selected{% endif %}>{{strings.selectors.sort.by_squat}}</option>
+    <option value="by-bench" disabled {% if selection.sort == "ByBench" %}selected{% endif %}>{{strings.selectors.sort.by_bench}}</option>
+    <option value="by-deadlift" disabled {% if selection.sort == "ByDeadlift" %}selected{% endif %}>{{strings.selectors.sort.by_deadlift}}</option>
+    <option value="by-total" disabled {% if selection.sort == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
+  </optgroup>
+  <optgroup label="{{strings.selectors.sort.points}}">
+    <option value="by-allometric" disabled {% if selection.sort == "ByAllometric" %}selected{% endif %}>{{strings.selectors.sort.by_allometric}}</option>
+    <option value="by-glossbrenner" disabled {% if selection.sort == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
+    <option value="by-mcculloch" disabled {% if selection.sort == "ByMcCulloch" %}selected{% endif %}>{{strings.selectors.sort.by_mcculloch}}</option>
+    <option value="by-wilks" {% if selection.sort == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+  </optgroup>
+</select>

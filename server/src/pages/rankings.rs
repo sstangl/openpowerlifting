@@ -23,6 +23,7 @@ pub struct Selection {
     pub weightclasses: WeightClassSelection,
     pub sex: SexSelection,
     pub year: YearSelection,
+    pub sort: SortSelection,
 }
 
 impl Selection {
@@ -33,6 +34,7 @@ impl Selection {
             weightclasses: WeightClassSelection::AllClasses,
             sex: SexSelection::AllSexes,
             year: YearSelection::AllYears,
+            sort: SortSelection::ByWilks,
         }
     }
 
@@ -55,6 +57,7 @@ impl Selection {
         let mut parsed_weightclasses: bool = false;
         let mut parsed_sex: bool = false;
         let mut parsed_year: bool = false;
+        let mut parsed_sort: bool = false;
 
         // Iterate over each component of the path, attempting to
         // determine what kind of data it is.
@@ -96,6 +99,13 @@ impl Selection {
                 }
                 ret.year = s;
                 parsed_year = true;
+            // Check whether this is sort information.
+            } else if let Ok(s) = segment.parse::<SortSelection>() {
+                if parsed_sort {
+                    return Err(());
+                }
+                ret.sort = s;
+                parsed_sort = true;
             // Unknown string, therefore malformed URL.
             } else {
                 return Err(());
@@ -392,6 +402,36 @@ impl FromStr for YearSelection {
             "2016" => Ok(YearSelection::Year2016),
             "2015" => Ok(YearSelection::Year2015),
             "2014" => Ok(YearSelection::Year2014),
+            _ => Err(()),
+        }
+    }
+}
+
+/// The sort selector widget.
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+pub enum SortSelection {
+    BySquat,
+    ByBench,
+    ByDeadlift,
+    ByTotal,
+    ByAllometric,
+    ByGlossbrenner,
+    ByMcCulloch,
+    ByWilks,
+}
+
+impl FromStr for SortSelection {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "by-squat" => Ok(SortSelection::BySquat),
+            "by-bench" => Ok(SortSelection::ByBench),
+            "by-deadlift" => Ok(SortSelection::ByDeadlift),
+            "by-allometric" => Ok(SortSelection::ByAllometric),
+            "by-glossbrenner" => Ok(SortSelection::ByGlossbrenner),
+            "by-mcculloch" => Ok(SortSelection::ByMcCulloch),
+            "by-wilks" => Ok(SortSelection::ByWilks),
             _ => Err(()),
         }
     }
