@@ -10,7 +10,7 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-right">
-      {% include "langselect" %}
+      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -46,5 +46,5 @@
 {% endblock body %}
 
 {% block custom_javascript %}
-  {% include "langselect-script" %}
+  {% include "widget-langselect-script" %}
 {% endblock custom_javascript %}

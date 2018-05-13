@@ -10,7 +10,7 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-right">
-      {% include "langselect" %}
+      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -92,6 +92,6 @@ the changes back so the entire powerlifting community may benefit.</p>
 {% endblock body %}
 
 {% block custom_javascript %}
-  {% include "langselect-script" %}
+  {% include "widget-langselect-script" %}
 {% endblock custom_javascript %}
 

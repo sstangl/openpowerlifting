@@ -45,17 +45,17 @@
         <option value="single"{% if selection.equipment == "Single" %} selected{% endif %}>{{strings.selectors.equipment.single}}</option>
         <option value="multi"{% if selection.equipment == "Multi" %} selected{% endif %}>{{strings.selectors.equipment.multi}}</option>
       </select>
-      {% include "weightclass" %}
+      {% include "widget-weightclass" %}
       <select id="sexselect">
         <option value="all"{% if selection.sex == "AllSexes" %} selected{% endif %}>{{strings.selectors.sex.all}}</option>
         <option value="men"{% if selection.sex == "Men" %} selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "yearselect" %}
+      {% include "widget-yearselect" %}
     </div>
     <div id="controls-right">
-      {% include "weightunits" %}
-      {% include "langselect" %}
+      {% include "widget-weightunits" %}
+      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -65,6 +65,6 @@
 {% endblock body %}
 
 {% block custom_javascript %}
-  {% include "langselect-script" %}
-  {% include "weightunits-script" %}
+  {% include "widget-langselect-script" %}
+  {% include "widget-weightunits-script" %}
 {% endblock custom_javascript %}

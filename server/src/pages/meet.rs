@@ -60,7 +60,7 @@ pub struct ResultsRow<'a> {
     pub place: String,
     /// The rank in the ranking-by-points view (by Wilks).
     pub rank: u32,
-    pub lifter: &'a opldb::Lifter, 
+    pub lifter: &'a opldb::Lifter,
     pub sex: &'a str,
     pub age: fields::Age,
     pub equipment: &'a str,

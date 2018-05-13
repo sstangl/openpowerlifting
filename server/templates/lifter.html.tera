@@ -14,8 +14,8 @@
       <span id="lifter">Meet Results for <span class="{{lifter.color}}">{{lifter.name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</span>
     </div>
     <div id="controls-right">
-      {% include "weightunits" %}
-      {% include "langselect" %}
+      {% include "widget-weightunits" %}
+      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -66,6 +66,6 @@
 {% endblock body %}
 
 {% block custom_javascript %}
-  {% include "langselect-script" %}
-  {% include "weightunits-script" %}
+  {% include "widget-langselect-script" %}
+  {% include "widget-weightunits-script" %}
 {% endblock custom_javascript %}
