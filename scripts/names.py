@@ -13,7 +13,7 @@ def standardize_upper_ascii(s):
     s = s.upper()
 
     # Uppercase-only changes.
-    s = s.replace('İ','I')
+    s = s.replace('İ', 'I')
     return s
 
 
