@@ -4,40 +4,16 @@
 # Helper library for dealing with the Name column.
 #
 
+from usernames import SubstitutionMap, sub_from
+
 
 def standardize_upper_ascii(s):
+    s = s.lower()
+    s = ''.join(map(lambda c: sub_from(SubstitutionMap, c), s))
     s = s.upper()
-    s = s.replace('Ň', 'N')
-    s = s.replace('Ö', 'O')
-    s = s.replace('Ã', 'A')
-    s = s.replace('Ä', 'A')
-    s = s.replace('Ü', 'U')
-    s = s.replace('Ø', 'O')
-    s = s.replace('É', 'E')
-    s = s.replace('Å', 'A')
-    s = s.replace('Á', 'A')
-    s = s.replace('Ó', 'O')
-    s = s.replace('Ñ', 'N')
-    s = s.replace('Í', 'I')
-    s = s.replace('Ú', 'U')
-    s = s.replace('Ć', 'C')
-    s = s.replace('Č', 'C')
-    s = s.replace('Ý', 'Y')
-    s = s.replace('Ž', 'Z')
-    s = s.replace('Š', 'S')
-    s = s.replace('Ł', 'W')
-    s = s.replace('Ů', 'U')
-    s = s.replace('Æ', 'AE')
-    s = s.replace('È', 'E')
-    s = s.replace('Ê', 'E')
-    s = s.replace('Î', 'I')
-    s = s.replace('Ë', 'E')
-    s = s.replace('Đ', 'D')
-    s = s.replace('Ð', 'D')  # Not a duplicate.
-    s = s.replace('Ě', 'E')
-    s = s.replace('Ç', 'C')
-    s = s.replace('Ô', 'O')
-    s = s.replace('Ï', 'I')
+
+    # Uppercase-only changes.
+    s = s.replace('İ','I')
     return s
 
 

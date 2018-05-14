@@ -28,7 +28,7 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 3,Hrach Guloyan,SBD,Wraps,Amateur Open,Yes,M,Armenia,24,100,96.8,240,270,-282.5,270,,140,155,-165,155,,-270,-270,270,270,,695
 4,Karol Frąckowiak,SBD,Wraps,Amateur Open,Yes,M,Poland,25,100,98.1,230,260,-280,260,,140,150,-152.5,150,,260,275,-285,275,,685
 5,Nshan Malkhasyan,SBD,Wraps,Amateur Open,Yes,M,Armenia,26,100,96.2,220,-240,-240,220,,-140,160,-170,160,,280,-300,-300,280,,660
-6,Oleksandr Lisovskyy,SBD,Wraps,Amateur Open,Yes,M,Ukraine,27,100,94.5,220,237.5,-250,237.5,,145,152.5,157.5,157.5,,-260,260,-275,260,,655
+6,Oleksandr Lisovskiy,SBD,Wraps,Amateur Open,Yes,M,Ukraine,27,100,94.5,220,237.5,-250,237.5,,145,152.5,157.5,157.5,,-260,260,-275,260,,655
 7,Milosz Materek,SBD,Wraps,Amateur Open,Yes,M,Poland,26,100,95.6,205,215,-227.5,215,,110,122.5,-135,122.5,,200,-210,-215,200,,537.5
 8,Filip Znojek,SBD,Wraps,Amateur Open,Yes,M,Poland,27,100,96.1,150,160,170,170,,90,100,-110,100,,-180,190,215,215,,485
 1,Phillip Carr,SBD,Wraps,Amateur Open,Yes,M,USA,28,110,107.9,215,-227.5,-227.5,215,,167.5,175,-180,175,,235,242.5,250,250,,640
@@ -122,7 +122,7 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Igor Usachev,B,Raw,Amateur Masters 50-54,Yes,M,Russia,52,100,95,,,,,,135,145,-150,145,,,,,,,145
 1,Mariusz Rufkiewicz,B,Raw,Amateur Masters 50-54,Yes,M,Poland,50,110,100.5,,,,,,140,152.5,160,160,,,,,,,160
 2,Vitaliy Filonenko,B,Raw,Amateur Masters 50-54,Yes,M,Ukraine,53,110,101.5,,,,,,130,-137.5,-137.5,130,,,,,,,130
-1,Vladyslav Marchenko,B,Raw,Amateur Masters 50-54,Yes,M,Ukraine,50,125,120.5,,,,,,160,-165,165,165,,,,,,,165
+1,Vladislav Marchenko,B,Raw,Amateur Masters 50-54,Yes,M,Ukraine,50,125,120.5,,,,,,160,-165,165,165,,,,,,,165
 1,Gagik Saroyan,B,Raw,Amateur Masters 50-54,Yes,M,Armenia,50,140,125.1,,,,,,80,100,-125,100,,,,,,,100
 1,Zdisław Leśniewski,B,Raw,Amateur Masters 55-59,Yes,M,Poland,58,82.5,80.6,,,,,,85,90,92.5,92.5,,,,,,,92.5
 1,Dariusz Kołodziejczyk,B,Raw,Amateur Masters 60-64,Yes,M,Poland,62,82.5,80.3,,,,,,-100,100,-110,100,,,,,,,100
@@ -177,7 +177,7 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 4,Michał Michajłowski,D,Raw,Amateur Open,Yes,M,Poland,25,90,87.9,,,,,,,,,,,200,-205,-205,200,,200
 1,Nshan Malkhasyan,D,Raw,Amateur Open,Yes,M,Armenia,26,100,96.2,,,,,,,,,,,280,-300,-300,280,,280
 2,Karol Frąckowiak,D,Raw,Amateur Open,Yes,M,Poland,25,100,98.1,,,,,,,,,,,260,275,-282.5,275,,275
-3,Oleksandr Lisovskyy,D,Raw,Amateur Open,Yes,M,Ukraine,27,100,94.5,,,,,,,,,,,-260,260,-275,260,,260
+3,Oleksandr Lisovskiy,D,Raw,Amateur Open,Yes,M,Ukraine,27,100,94.5,,,,,,,,,,,-260,260,-275,260,,260
 4,Nazar Korzhak,D,Raw,Amateur Open,Yes,M,Ukraine,24,100,99.3,,,,,,,,,,,240,250,260,260,,260
 5,Mikko Mäntymäki,D,Raw,Amateur Open,Yes,M,Finland,46,100,99.6,,,,,,,,,,,245,255,-262.5,255,,255
 1,Phillip Carr,D,Raw,Amateur Open,Yes,M,USA,28,110,107.9,,,,,,,,,,,235,242.5,250,250,,250
@@ -191,7 +191,7 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Igor Usachev,D,Raw,Amateur Masters 50-54,Yes,M,Russia,52,100,95,,,,,,,,,,,200,212.5,,212.5,,212.5
 1,Mariusz Rufkiewicz,D,Raw,Amateur Masters 50-54,Yes,M,Poland,50,110,100.5,,,,,,,,,,,200,220,235,235,242.5,235
 2,Vitaliy Filonenko,D,Raw,Amateur Masters 50-54,Yes,M,Ukraine,53,110,101.5,,,,,,,,,,,160,170,180,180,,180
-1,Vladyslav Marchenko,D,Raw,Amateur Masters 50-54,Yes,M,Ukraine,50,125,120.5,,,,,,,,,,,200,-220,-240,200,,200
+1,Vladislav Marchenko,D,Raw,Amateur Masters 50-54,Yes,M,Ukraine,50,125,120.5,,,,,,,,,,,200,-220,-240,200,,200
 1,Andrzej Stasiak,D,Raw,Amateur Masters 55-59,Yes,M,Poland,52,82.5,80.8,,,,,,,,,,,185,195,-200,195,,195
 1,Piotr Redzik,D,Raw,Amateur Masters 60-64,Yes,M,Poland,60,140,126.2,,,,,,,,,,,200,215,230,230,,230
 1,Józef Bejgrowicz,D,Raw,Amateur Masters 65-69,Yes,M,Poland,65,82.5,82.5,,,,,,,,,,,210,225,230,230,,230
@@ -321,7 +321,7 @@ DQ,Igor Povazhniuk,SBD,Wraps,Pro Masters 40-44,No,M,Ukraine,42,82.5,79.9,-240,-2
 1,Marcin Biegun,B,Raw,Pro Open,No,M,Poland,35,56,55,,,,,,97.5,102.5,107.5,107.5,,,,,,,107.5
 2,Michał Zębrowski,B,Raw,Pro Open,No,M,Poland,26,56,55.7,,,,,,92.5,97.5,100,100,,,,,,,100
 3,Dawid Hartleb,B,Raw,Pro Open,No,M,Poland,29,56,55.3,,,,,,75,-82.5,-82.5,75,,,,,,,75
-1,Oleksandr Zharyi,B,Raw,Pro Open,No,M,Ukraine,45,60,59.9,,,,,,122.5,127.5,-130,127.5,,,,,,,127.5
+1,Oleksandr Zhariy,B,Raw,Pro Open,No,M,Ukraine,45,60,59.9,,,,,,122.5,127.5,-130,127.5,,,,,,,127.5
 1,Krzysztof Kuraciński,B,Raw,Pro Open,No,M,Poland,30,67.5,65.9,,,,,,135,142.5,145,145,,,,,,,145
 1,Jakub Chrzanowski,B,Raw,Pro Open,No,M,Poland,20,75,72.9,,,,,,175,185.5,-190,185.5,,,,,,,185.5
 2,Dmitrii Kukharenko,B,Raw,Pro Open,No,M,Spain,48,75,75,,,,,,160,165,170,170,-180,,,,,,170
@@ -376,7 +376,7 @@ DQ,Arkadiusz Herodowicz,B,Raw,Pro Submasters 33-39,No,M,Poland,35,125,116.4,,,,,
 2,Zbignew Drewniak,B,Raw,Pro Masters 40-44,No,M,Poland,44,125,125,,,,,,170,180,190,190,,,,,,,190
 1,Maciej Knap,B,Raw,Pro Masters 40-44,No,M,Poland,42,140,132,,,,,,205,-220,220,220,,,,,,,220
 DQ,Piotr Czapiewski,B,Raw,Pro Masters 40-44,No,M,Poland,42,140,130,,,,,,-225,-225,-225,,,,,,,,
-1,Oleksandr Zharyi,B,Raw,Pro Masters 45-49,No,M,Ukraine,45,60,59.9,,,,,,122.5,127.5,-130,127.5,,,,,,,127.5
+1,Oleksandr Zhariy,B,Raw,Pro Masters 45-49,No,M,Ukraine,45,60,59.9,,,,,,122.5,127.5,-130,127.5,,,,,,,127.5
 1,Dmitrii Kukharenko,B,Raw,Pro Masters 45-49,No,M,Spain,48,75,75,,,,,,160,165,170,170,-180,,,,,,170
 1,Marek Gruszecki,B,Raw,Pro Masters 45-49,No,M,Poland,49,82.5,81,,,,,,120,130,140,140,,,,,,,140
 1,Hovhannes Yazichyan,B,Raw,Pro Masters 45-49,No,M,Armenia,46,100,96.2,,,,,,210,215,220,220,-227.5,,,,,,220
