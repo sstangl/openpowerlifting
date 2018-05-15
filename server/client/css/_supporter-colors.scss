@@ -34,6 +34,10 @@
   @include name-color(#FFA200);
 }
 
+.yellow {
+  @include name-color(#FFFC00);
+}
+
 .rainbow {
   color: transparent;
   -webkit-background-clip: text;
