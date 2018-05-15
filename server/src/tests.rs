@@ -138,3 +138,12 @@ fn test_old_redirects() {
     assert_eq!(response.status(), Status::PermanentRedirect);
     assert_eq!(response.headers().get_one("location").unwrap(), "/contact");
 }
+
+#[test]
+fn test_no_server_header() {
+    // By default, the Rocket server serves a response header
+    // "Server: Rocket". But it's unnecessary and an information leak.
+    let client = client();
+    let response = client.get("/").dispatch();
+    assert!(!response.headers().contains("Server"));
+}

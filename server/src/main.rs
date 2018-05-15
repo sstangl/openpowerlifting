@@ -12,6 +12,7 @@ extern crate strum;
 #[cfg(test)]
 mod tests;
 
+use rocket::fairing::AdHoc;
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect};
@@ -336,6 +337,9 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         )
         .catch(errors![not_found, internal_error])
         .attach(Template::fairing())
+        .attach(AdHoc::on_response(|_request, response| {
+            response.remove_header("Server");
+        }))
 }
 
 fn load_langinfo() -> Result<LangInfo, Box<Error>> {
