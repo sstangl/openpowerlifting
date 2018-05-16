@@ -1,0 +1,87 @@
+Sex,WeightClassKg,Name,AgeClass,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Place,Event,Equipment,Division
+F,44,Sharn Rowlands,U18,EM,38.5,70,35,95,200,1,SBD,Raw,F-C-U18
+F,52,Louise Clark,Open,YNE,51,85,52.5,137.5,275,1,SBD,Raw,F-C-Open
+F,56,Jenny Hunter,M2,EM,54.3,85,72.5,142.5,300,1,SBD,Raw,F-C-M2
+F,56,Carole Taylor,M2,YNE,55.3,92.5,50,130,272.5,2,SBD,Raw,F-C-M2
+F,60,Rosimery Lima,Open,SW,60,112.5,65,147.5,325,1,SBD,Raw,F-C-Open
+F,60,Jessica Jones,M1,YNE,58.4,105,70,162.5,337.5,1,SBD,Raw,F-C-M1
+F,67.5,Hannah Stammas,U23,SW,62.3,80,50,117.5,247.5,1,SBD,Raw,F-C-U23
+F,67.5,Louise Howell,Open,YNE,64.9,100,55,130,285,1,SBD,Raw,F-C-Open
+F,75,Lisa Hicks,U20,SW,69.1,87.5,60,100,247.5,1,SBD,Raw,F-C-U23
+M,56,Jonathon Pardy,U20,EM,55,102.5,77.5,145,325,1,SBD,Raw,M-C-U23
+M,56,Louise Fox,Open,EM,53.7,95,70,155,325,1,SBD,Raw,M-C-Open
+M,56,David Brown,M3,EM,55.4,90,75,130,295,1,SBD,Raw,M-C-M3
+M,60,Christopher Fudge,Open,YNE,57.5,140,,,,DQ,SBD,Raw,M-C-Open
+M,60,Brenda Batson,M1,YNE,59.7,80,42.5,112.5,235,2,SBD,Raw,M-C-M1
+M,60,Terry Stansbie,M1,WM,58.9,135,97.5,195,427.5,1,SBD,Raw,M-C-M1
+M,60,Sean James Wynn,U16,NW,59.3,92.5,57.5,117.5,267.5,1,SBD,Raw,M-C-U16
+M,67.5,Shashi James Singh,U23,SE,65,145,80,187.5,412.5,2,SBD,Raw,M-C-U23
+M,67.5,Steven Tyers,U23,SW,62.1,145,97.5,220,462.5,1,SBD,Raw,M-C-U23
+M,67.5,Paul Bartlett,Open,YNE,64,157.5,102.5,182.5,442.5,3,SBD,Raw,M-C-Open
+M,67.5,Timothy Brown,Open,NW,66.5,140,95,190,425,4,SBD,Raw,M-C-Open
+M,67.5,Chris Payne,Open,SE,67,140,100,205.5,445,2,SBD,Raw,M-C-Open
+M,67.5,David Probert,Open,WM,64.6,145,80,185,410,5,SBD,Raw,M-C-Open
+M,67.5,Paul Richards,Open,SW,67.4,170,107.5,222.5,500,1,SBD,Raw,M-C-Open
+M,67.5,Peter John Barrett,M3,GL,64.1,105,72.5,140,317.5,1,SBD,Raw,M-C-M3
+M,75,Charlie Holt,U18,GL,73.6,130,87.5,152.5,370,2,SBD,Raw,M-C-U18
+M,75,Alex Vivian,U20,SW,70.3,170,115,210,495,1,SBD,Raw,M-C-U23
+M,75,Chris Bright,Open,WM,74.7,160,100,185,445,5,SBD,Raw,M-C-Open
+M,75,Stephen Campbell,Open,SE,75,140,153,230,523,4,SBD,Raw,M-C-Open
+M,75,Paul Cooper,Open,YNE,73.5,172.5,152.5,256,581,1,SBD,Raw,M-C-Open
+M,75,Diego Martinez-Rodney,Open,GL,73.1,180,115,235,530,3,SBD,Raw,M-C-Open
+M,75,Christopher Simmons,Open,SE,75,180,135,220,535,2,SBD,Raw,M-C-Open
+M,75,David Gray,M1,WM,69.7,165,132.5,220,517.5,1,SBD,Raw,M-C-M1
+M,75,John Vincent,M1,NM,73.6,155,100,200,455,2,SBD,Raw,M-C-M1
+M,75,Michael Cliffe,M2,NM,75,160,115,215,490,1,SBD,Raw,M-C-M2
+M,75,Steven William English,M2,YNE,74.2,140,95,185,420,2,SBD,Raw,M-C-M2
+M,75,Stan Macrow,M3,WM,74,135,100,180,415,1,SBD,Raw,M-C-M3
+M,75,Haniceff Shah,M3,SE,73.8,115,90,170,375,2,SBD,Raw,M-C-M3
+M,82.5,Richard Gray,U18,SW,82.1,162.5,102.5,170,435,2,SBD,Raw,M-C-U18
+M,82.5,Matthew Milstead,U18,SW,76.5,135,110,185,430,1,SBD,Raw,M-C-U18
+M,82.5,Robert Richardson,U23,YNE,77.5,157.5,102.5,221,481,1,SBD,Raw,M-C-U23
+M,82.5,Ben Croft,Open,YNE,80.8,202.5,120,240,562.5,1,SBD,Raw,M-C-Open
+M,82.5,Paul Kopec,Open,NW,80.4,175,142.5,220,537.5,1,SBD,Raw,M-C-Open
+M,82.5,Leslie Attewell,M1,NM,81.9,160,110,220,590,2,SBD,Raw,M-C-M1
+M,82.5,Alan Joseph,M1,GL,80.6,175,120,235,530,1,SBD,Raw,M-C-M1
+M,82.5,John O'Riordan,M2,SW,79.6,140,110,215,465,1,SBD,Raw,M-C-M2
+M,90,Nathan Clarke,U20,SE,86,160,130,190,480,1,SBD,Raw,M-C-U23
+M,90,Alex Lawson,U23,SE,86.8,175,130,220,525,1,SBD,Raw,M-C-U23
+M,90,Stephen Gates,Open,EM,88.4,220,130,270,620,2,SBD,Raw,M-C-Open
+M,90,Carlin Jones,Open,SW,87.9,215,160,265,640,1,SBD,Raw,M-C-Open
+M,90,Iain Kendrick,Open,SM,89.4,235,135,250,620,3,SBD,Raw,M-C-Open
+M,90,Edgaras Kreipavicius,Open,EM,89.6,210,142.5,260,612.5,2,SBD,Raw,M-C-Open
+M,90,Matt Lingard,Open,WM,88.4,232.5,150,245,627.5,1,SBD,Raw,M-C-Open
+M,90,Rik Partridge,Open,NW,88.2,200,140,215,555,4,SBD,Raw,M-C-Open
+M,90,Paul Coke,M1,SW,83.1,165,112.5,240,517.5,2,SBD,Raw,M-C-M1
+M,90,Christopher Cooper,M1,YNE,89.8,172.5,140,222.5,535,1,SBD,Raw,M-C-M1
+M,90,Roy Cole,M2,SE,89.4,180,155,205,540,2,SBD,Raw,M-C-M2
+M,90,Kevin Jane,M2,EM,90,212.5,125,255,592.5,1,SBD,Raw,M-C-M2
+M,90,Alan John Morris,M2,YNE,89.5,150,115,205,470,3,SBD,Raw,M-C-M2
+M,90,Anthony David Wightman,M2,EM,89.5,147.5,107.5,185,440,4,SBD,Raw,M-C-M2
+M,90,Ronald Vaughan,M3,WM,87.2,145,105,230,480,2,SBD,Raw,M-C-M3
+M,90,Vick Yellen,M3,YNE,88.6,190,110,190,490,1,SBD,Raw,M-C-M3
+M,90,William Hinton,U16,WM,87.4,130,80,190,400,2,SBD,Raw,M-C-U16
+M,100,Robert Best,U18,SW,97.4,157.5,90,215,462.5,1,SBD,Raw,M-C-U18
+M,100,Jamie-Lee Smith,U20,WM,97.5,202.5,120,215,537.5,1,SBD,Raw,M-C-U23
+M,100,Matthew Pillinger,U23,WM,91,100,75,190,365,1,SBD,Raw,M-C-U23
+M,100,Ola Oyefeso,Open,GL,100,225,135,305,665,1,SBD,Raw,M-C-Open
+M,100,Ian Thistlewood,Open,YNE,96.2,222.5,152.5,250,625,2,SBD,Raw,M-C-Open
+M,100,Kevin Kavanagh,M1,NW,97.2,200,130,210,540,1,SBD,Raw,M-C-M1
+M,100,John Mitchell,M2,WM,99.5,275,150,275,700,1,SBD,Raw,M-C-M2
+M,110,Thomas Celestin,Open,GL,105.3,250,130,305,685,1,SBD,Raw,M-C-Open
+M,110,Daniel Chesham,Open,WM,107.5,225,157.5,280,662.5,2,SBD,Raw,M-C-Open
+M,110,Luke Conboy,Open,YNE,108.5,245,145,265,655,1,SBD,Raw,M-C-Open
+M,110,Jim Dulling,M3,YNE,104.5,175,132.5,232.5,540,1,SBD,Raw,M-C-M3
+M,125,Daniel William Morris,U20,YNE,122.1,190,140,210,540,1,SBD,Raw,M-C-U23
+M,125,Matthew Thomas Pearce,U23,WAL,124.6,260,172.5,267.5,700,1,SBD,Raw,M-C-U23
+M,125,Russell Kirby,Open,SE,112.8,270,190,280,740,1,SBD,Raw,M-C-Open
+M,125,Ross Shahin-Ajerlo,Open,NW,121.1,220,180,290,690,2,SBD,Raw,M-C-Open
+M,125,Philip Frost,M1,YNE,118.2,210,140,250,600,1,SBD,Raw,M-C-M1
+M,125,Ian Finch,M2,EM,116.4,192.5,127.5,227.5,547.5,1,SBD,Raw,M-C-M2
+M,125,Christopher Gladding,M3,EM,111.2,155,125,195,475,1,SBD,Raw,M-C-M3
+M,125+,Jordon Gumbley,U23,WM,139.8,270,180,280,730,2,SBD,Raw,M-C-U23
+M,125+,Michael Jones,U23,WAL,141.8,280,190,280,750,1,SBD,Raw,M-C-U23
+M,125+,Michael Brown,Open,YNE,142.6,240,205,295,740,1,SBD,Raw,M-C-Open
+M,52,Imelda Flanagan,M1,EM,43.2,65,37.5,110,212.5,1,SBD,Raw,M-C-M1
+M,110,Ben Jones,U23,EM,107.6,190,140,235,565,G,SBD,Raw,M-C-U23
+M,110,Jack Greenhalf,U23,SE,102,220,160,300,690,G,SBD,Raw,M-C-U23
