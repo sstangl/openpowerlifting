@@ -133,6 +133,9 @@ pub enum Federation {
     PZKFiTS,
     #[strum(to_string = "RAW", serialize = "raw")]
     RAW,
+    #[serde(rename = "RAW-CAN")]
+    #[strum(to_string = "RAW-CAN", serialize = "raw-can")]
+    RAWCAN,
     #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
     #[strum(to_string = "RPS", serialize = "rps")]

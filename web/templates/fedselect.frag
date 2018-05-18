@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -64,12 +64,13 @@
     <option value="WRPF-AUS">WRPF-AUS - WRPF Australia [WRPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
-    <option value="CPF,CPL,CPU,WRPF-CAN">
+    <option value="CPF,CPL,CPU,RAW-CAN,WRPF-CAN">
       All Canadian Feds
     </option>
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
+    <option value="RAW-CAN">RAW-CAN - 100% RAW Powerlifting Federation Canada (Incomplete)</option>
     <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
   </optgroup>
   <optgroup label="Czechia">
