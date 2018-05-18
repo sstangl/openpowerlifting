@@ -142,7 +142,7 @@
       All United Kingdom Feds
     </option>
     <option value="BP,EPA,NIPF,ScottishPL,WelshPA">BP - British Powerlifting [IPF] (2017+)</option>
-    <option value="BPC">BPC - British Powerlifting Congress [WPC]</option>
+    <option value="BPC">BPC - British Powerlifting Congress [WPC] (Incomplete)</option>
     <option value="BPU">BPU - British Powerlifting Union [WPC] (Incomplete)</option>
     <option value="EPA">EPA - English Powerlifting Association [IPF] (Incomplete)</option>
     <option value="GPC-GB">GPC-GB - GPC Great Britain [GPC] (Help Needed!)</option>
