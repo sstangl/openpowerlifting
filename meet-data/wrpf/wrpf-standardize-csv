@@ -285,7 +285,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Name')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
-        elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион']):
+        elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион','age categoty']):
             fieldnames.append('Division-Age')
         # Catch all for birthyear if this isn't a division-age column
         elif 'дата' in text:
@@ -307,7 +307,7 @@ def parse_fieldnames(sheet):
         elif 'город' in text or 'регіон' in text:
             # We don't care about city-level information.
             fieldnames.append('IGNORE')
-        elif text == 'сountry/city/state' or text == 'страна/город/область':
+        elif text in ['сountry/city/state','страна/город/область','country/town']:
             fieldnames.append('Country/City/State')
         elif text == 'разряд/звание':  # Rank
             fieldnames.append('IGNORE')
@@ -319,7 +319,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'sq4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'sq4','4']:
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -332,7 +332,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4','4']:
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -345,19 +345,19 @@ def parse_fieldnames(sheet):
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4','4']:
                 fieldnames.append('Deadlift4Kg')
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
 
         elif text in ['сумма', 'total', 'result', 'сумма баллов', 'резульат',
-                      'результат bp', 'результат', 'итог']:
+                      'результат bp', 'результат', 'итог','рек']:
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
         elif text in ['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
-                      'вилкс', 'абс']:
+                      'вилкс', 'абс','pts']:
             fieldnames.append('IGNORE')
 
         elif text == 'тренер':
@@ -408,7 +408,7 @@ def parse_sheet(sheet):
         return csv
     elif 'excalibur' in title or 'эскалибур' in title:
         return csv
-    elif 'silver bullet' in title:
+    elif 'bullet' in title:
         return csv
     elif 'block' in title or 'блок' in title or 'кирпич' in title:
         return csv
@@ -618,7 +618,7 @@ def standardize_division_age(csv):
             division = 'Teen'
         elif 'мастера' in row[idx]or 'master' in row[idx]:
             division = 'Masters'
-        elif 'открытая' in row[idx] or 'open' in row[idx] or 'o' in row[idx]:
+        elif any(div in row[idx] for div in['открытая','open','открыая']):
             division = 'Open'
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = 'Juniors'
