@@ -19,7 +19,7 @@ def wilksCoeffMen(x):  # Where x is BodyweightKg.
     if x < 201.9:
         return wilksCoeff(a, b, c, d, e, f, x)
     else:
-        return wilksCoeff(a, b, c, d, e, f, 201.9)        
+        return wilksCoeff(a, b, c, d, e, f, 201.9)
 
 
 def wilksCoeffWomen(x):  # Where x is BodyweightKg.
