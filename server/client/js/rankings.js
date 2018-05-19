@@ -4,6 +4,7 @@ let global_data;
 
 let selEquipment;
 let selWeightClass;
+let selFed;
 let selYear;
 let selSex;
 let selSort;
@@ -75,6 +76,10 @@ function reload() {
         url += "/" + selWeightClass.value;
         specific = true;
     }
+    if (selFed.value !== "all") {
+        url += "/" + selFed.value;
+        specific = true;
+    }
     if (selSex.value !== "all") {
         url += "/" + selSex.value;
         specific = true;
@@ -102,12 +107,14 @@ function addSelectorListeners(selector) {
 function addEventListeners() {
     selEquipment = document.getElementById("equipmentselect");
     selWeightClass = document.getElementById("weightclassselect");
+    selFed = document.getElementById("fedselect");
     selYear = document.getElementById("yearselect");
     selSex = document.getElementById("sexselect");
     selSort = document.getElementById("sortselect");
 
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
+    addSelectorListeners(selFed);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
     addSelectorListeners(selSort);
