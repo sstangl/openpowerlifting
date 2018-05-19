@@ -16,10 +16,8 @@ def wilksCoeffMen(x):  # Where x is BodyweightKg.
     d = -0.00113732
     e = 7.01863E-06
     f = -1.291E-08
-    if x < 201.9:
-        return wilksCoeff(a, b, c, d, e, f, x)
-    else:
-        return wilksCoeff(a, b, c, d, e, f, 201.9)
+    x = min(x, 201.9)  # Cap to avoid asymptote.
+    return wilksCoeff(a, b, c, d, e, f, x)
 
 
 def wilksCoeffWomen(x):  # Where x is BodyweightKg.
@@ -29,10 +27,8 @@ def wilksCoeffWomen(x):  # Where x is BodyweightKg.
     d = -0.00930733913
     e = 0.00004731582
     f = -0.00000009054
-    if x < 154.53:
-        return wilksCoeff(a, b, c, d, e, f, x)
-    else:
-        return wilksCoeff(a, b, c, d, e, f, 154.53)
+    x = min(x, 154.53)  # Cap to avoid asymptote.
+    return wilksCoeff(a, b, c, d, e, f, x)
 
 
 # Array of age coefficients, such that AGE_COEFFICIENTS[age]
