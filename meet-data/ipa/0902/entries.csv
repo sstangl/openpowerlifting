@@ -3,7 +3,7 @@ WeightClassKg,Sex,Division,Equipment,Event,Name,BodyweightKg,BestSquatKg,Squat4K
 52,M,Am Teen 14-15,Multi-ply,SBD,Tom Hardardt,51.94,158.76,,68.04,151.95,,378.75,1
 67.5,M,Am Juniors,Wraps,SBD,Albert Eckrode,67.36,151.95,,113.4,179.17,,444.52,1
 75,M,Am Juniors,Wraps,SBD,John Palazzolo,74.03,195.04,204.12,140.61,204.12,,539.77,1
-75,M,Am Open,Wraps,SBD,Dan Antonucci,75,181.44,,111.13,247.21,254.01,539.77,1
+75,M,Raw Am,Wraps,SBD,Dan Antonucci,75.02,181.44,,111.13,247.21,254.01,539.77,1
 75,M,Pro Open,Multi-ply,SBD,Shay Larrisey,74.84,331.12,,208.65,276.69,,816.47,1
 75,M,Am Open,Multi-ply,SBD,Joshua Childs,71.03,145.15,,127.01,190.51,,462.66,1
 82.5,M,Am Teen 14-15,Multi-ply,SBD,Zach Rebollido,80.74,192.78,,92.99,158.76,,444.52,1
@@ -11,12 +11,12 @@ WeightClassKg,Sex,Division,Equipment,Event,Name,BodyweightKg,BestSquatKg,Squat4K
 82.5,M,Am Open,Multi-ply,SBD,Michael McGarvey,80.56,281.23,,170.1,208.65,,659.98,1
 90,M,Am Open,Wraps,SBD,Adam Banotai,89.72,179.17,,142.88,235.87,240.4,557.92,2
 90,M,Am Juniors,Multi-ply,SBD,George Lobb,88.9,283.5,,226.8,249.48,,759.77,1
-90,M,Am Juniors,Multi-ply,SBD,Ron Garvey,90,260.82,,61.23,283.5,,605.55,2
-100,M,Am Teen 16-17,Multi-ply,SBD,Anthony Pasquino,99.52,251.74,,102.06,158.76,,512.56,1
-100,M,Am Teen 14-15,Multi-ply,SBD,Tony Iudicello,94.98,217.72,,158.76,213.19,,589.67,1
-100,M,Am Juniors,Wraps,SBD,John Durner,96.71,219.99,,163.29,272.16,,655.44,1
-100,M,Am Open,Multi-ply,SBD,Jim Jones,96.52,306.17,,238.14,272.16,,816.47,1
-100,M,Am Masters 40-44,Wraps,SBD,Dave Richardson #3,100,226.8,,189.37,199.58,,615.75,1
+90,M,Am Juniors,Multi-ply,SBD,Ron Garvey,90.04,260.82,,61.23,283.5,,605.55,2
+90,M,Am Teen 16-17,Multi-ply,SBD,Anthony Pasquino,99.52,251.74,,102.06,158.76,,512.56,1
+90,M,Am Teen 14-15,Multi-ply,SBD,Tony Iudicello,94.98,217.72,,158.76,213.19,,589.67,1
+90,M,Am Juniors,Wraps,SBD,John Durner,96.71,219.99,,163.29,272.16,,655.44,1
+90,M,Am Open,Multi-ply,SBD,Jim Jones,96.52,306.17,,238.14,272.16,,816.47,1
+90,M,Am Masters 40-44,Wraps,SBD,Dave Richardson,100.02,226.8,,189.37,199.58,,615.75,1
 110,M,Am Teen 16-17,Wraps,SBD,Nick Sites,109.68,170.1,,113.4,185.97,,469.47,1
 110,M,Am Open,Wraps,SBD,Jason Fortino,109.32,229.06,,145.15,254.01,,628.23,1
 110,M,Am Submasters,Wraps,SBD,Jason Fortino,109.32,229.06,,145.15,254.01,,628.23,1
@@ -31,7 +31,7 @@ WeightClassKg,Sex,Division,Equipment,Event,Name,BodyweightKg,BestSquatKg,Squat4K
 125,M,Am Masters 49,Wraps,SBD,Larry Short,121.93,204.12,,199.58,215.46,,619.15,1
 125,M,Am Masters 40-44,Multi-ply,SBD,Mark Dimiduk,121.56,288.03,,92.99,229.06,,610.08,1
 140+,M,Am Open,Multi-ply,SBD,George Underwood,144.88,340.19,,233.6,260.82,,834.61,1
-60,M,Am Teen 14-15,Multi-ply,SBD,Josh Parrish,60,161.03,,77.11,,,,DQ
+60,M,Am Teen 14-15,Multi-ply,B,Josh Parrish,60.1,161.03,,77.11,,,,DQ
 67.5,M,Am Open,Raw,B,Sam Spoto,66.86,,,106.59,,,106.59,1
 75,M,Pro Open,Multi-ply,B,Joe Mazza,74.84,,,319.78,,,319.78,1
 75,M,Am Open,Raw,B,James McDaniel,74.66,,,120.2,,,120.2,1
@@ -40,15 +40,15 @@ WeightClassKg,Sex,Division,Equipment,Event,Name,BodyweightKg,BestSquatKg,Squat4K
 82.5,M,Pro Open,Multi-ply,B,Rudy Hillyard,37.42,,,183.7,,,183.7,1
 90,M,Am Juniors,Multi-ply,B,Jacob Walker,84.73,,,136.08,,,136.08,1
 90,M,Am Juniors,Raw,B,Ian Guido,88.36,,,165.56,,,165.56,1
-100,M,Pro Submasters,Raw,B,John Roberts,100,,,170.1,,,170.1,1
-100,M,Pro Masters 52,Multi-ply,B,Hal Wilson,94.71,,,247.21,,,247.21,1
+90,M,Pro Submasters,Raw,B,John Roberts,100.02,,,170.1,,,170.1,1
+90,M,Pro Masters 52,Multi-ply,B,Hal Wilson,94.71,,,247.21,,,247.21,1
 110,M,Pro Submasters,Raw,B,Gerrit Bult,107.23,,,199.58,,,199.58,1
 125,M,Pro Open,Raw,B,Ed Daubert,124.1,,,229.06,,,229.06,1
 125,M,Pro Open,Raw,B,Bobby Bowlin,114.67,,,215.46,,,215.46,2
 140,M,Pro Open,Multi-ply,B,Chuck Scherza,138.35,,,331.12,,,331.12,1
 140,M,Pro Submasters,Multi-ply,B,Chuck Scherza,138.35,,,331.12,,,331.12,1
 140+,M,Pro Masters 47,Raw,B,Tom McDonald,151.95,,,226.8,,,226.8,1
-140+,M,Pro Masters 62,Multi-ply,B,Bob O'Brien,140.61,,,204.12,,,204.12,1
+140+,M,Pro Masters 62,Multi-ply,B,Bob O'brien,140.61,,,204.12,,,204.12,1
 110,M,Am Masters 41,Multi-ply,B,Nick Tavares,107.86,,,,,,,DQ
 75,M,Am Masters 58,Multi-ply,B,Mike Barrett,74.71,,,,,,,DQ
 125,M,Am Juniors,Multi-ply,B,Rob Pizzuti,116.48,,,,,,,DQ
@@ -62,5 +62,5 @@ WeightClassKg,Sex,Division,Equipment,Event,Name,BodyweightKg,BestSquatKg,Squat4K
 75,M,Am Teen 14-15,Multi-ply,BD,Ryan Hydock,73.66,,,63.5,142.88,,206.38,1
 75,M,Am Juniors,Raw,BD,Joesph Schoenly Jr,71.67,,,136.08,170.1,,306.17,1
 90,M,Pro Masters 45,Raw,BD,David Siegfried Jr,87.18,,,197.31,242.67,,439.98,1
-100,M,Pro Masters 47,Raw,BD,Richard Scott,94.71,,,147.42,190.51,,337.93,1
+90,M,Pro Masters 47,Raw,BD,Richard Scott,94.71,,,147.42,190.51,,337.93,1
 140+,M,Pro Police,Raw,BD,Brian Bacher,168.19,,,208.65,299.37,,508.02,1
