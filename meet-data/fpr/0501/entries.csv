@@ -1,7 +1,7 @@
 Place,Name,InternationalName,BirthYear,WeightClassKg,Sex,Team,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment,Division
 1,Sergey Fedosienko,Сергей Федосиенко,1982,52,M,ВВС,51.9,270,160,257.5,687.5,SBD,Single-ply,Open
-2,Aleksey Romanov,Алексей Романов,1981,52,M,Рос,52,200,150,185,535,SBD,Single-ply,Open
-3,Aleksandr Kolbin,Александр Колбин,1987,52,M,РВСН,52,190,115,215,520,SBD,Single-ply,Open
+2,Alexey Romanov,Алексей Романов,1981,52,M,Рос,52,200,150,185,535,SBD,Single-ply,Open
+3,Alexander Kolbin,Александр Колбин,1987,52,M,РВСН,52,190,115,215,520,SBD,Single-ply,Open
 4,Mikhail Dostovalov,Михаил Достовалов,1985,52,M,ЮР,51.2,190,105,195,490,SBD,Single-ply,Open
 5,Denis Petin,Денис Петин,1982,52,M,Рос,51.7,200,122.5,167.5,490,SBD,Single-ply,Open
 6,Vladimir Talankin,Владимир Таланкин,1985,52,M,ВВС,51.1,195,100,187.5,482.5,SBD,Single-ply,Open
@@ -38,7 +38,7 @@ DQ,Mikhail Andryukhin,Михаил Андрюхин,1970,60,M,ВВС,60,280,,,,S
 DQ,Igor Muler,Игорь Мулер,1969,67.5,M,Рос,67.35,300,,,,SBD,Single-ply,Open
 DQ,Sergey Agafonov,Сергей Агафонов,1984,67.5,M,Рос,64.9,,,,,SBD,Single-ply,Open
 1,Viktor Furazhkin,Виктор Фуражкин,1969,75,M,ВС,75,335,222.5,305,862.5,SBD,Single-ply,Open
-2,Aleksey Merkulov,Алексей Меркулов,1983,75,M,Лок,74.35,335,230,262.5,827.5,SBD,Single-ply,Open
+2,Alexey Merkulov,Алексей Меркулов,1983,75,M,Лок,74.35,335,230,262.5,827.5,SBD,Single-ply,Open
 3,Viktor Baranov,Виктор Баранов,1967,75,M,РВСН,74.4,320,182.5,305,807.5,SBD,Single-ply,Open
 4,Artyom Korotygin,Артём Коротыгин,1980,75,M,,74.45,315,210,282.5,807.5,SBD,Single-ply,Open
 5,Aleksandr Sokolov,Александр Соколов,1978,75,M,,75,300,185,280,765,SBD,Single-ply,Open
@@ -83,7 +83,7 @@ DQ,Anatoliy Arkhangelskiy,Анатолий Архангельский,1979,90,M,
 DQ,Aleksey Zvarykin,Алексей Зварыкин,1979,90,M,Рос,89.95,377.5,,,,SBD,Single-ply,Open
 DQ,Aleksey Kuznetsov,Алексей Кузнецов,1982,90,M,ВС,88.7,310,185,,,SBD,Single-ply,Open
 DQ,Sergey Mor,Сергей Мор,1969,90,M,,90,,,,,SBD,Single-ply,Open
-1,Maksim Barkhatov,Максим Бархатов,1981,100,M,Лок/ВВС,99.95,385,265,365,1015,SBD,Single-ply,Open
+1,Maxim Barkhatov,Максим Бархатов,1981,100,M,Лок/ВВС,99.95,385,265,365,1015,SBD,Single-ply,Open
 2,Konstantin Otavin,Константин Отавин,1973,100,M,,99.7,365,270,335,970,SBD,Single-ply,Open
 3,Dmitriy Fedenko,Дмитрий Феденко,1975,100,M,РВСН,99.4,385,237.5,340,962.5,SBD,Single-ply,Open
 4,Dmitriy Likhanov,Дмитрий Лиханов,1979,100,M,ВВС,99.1,372.5,250,337.5,960,SBD,Single-ply,Open
@@ -101,7 +101,7 @@ DQ,Lev Shtaryov,Лев Штарёв,1975,100,M,Лок,97.3,387.5,,,,SBD,Single-p
 DQ,Aleksey Sharovatov,Алексей Шароватов,1979,100,M,РВСН,98.8,345,,,,SBD,Single-ply,Open
 DQ,Ilya Tsvetkov,Илья Цветков,1975,100,M,Рос,98.85,345,,,,SBD,Single-ply,Open
 DQ,Sergey Zalozhkov,Сергей Заложков,1974,100,M,ЮР,100,380,,,,SBD,Single-ply,Open
-1,Valentin Dedyulya,Валентин Дедюля,1977,110,M,ВС,109.15,420,250,367.5,1037.5,SBD,Single-ply,Open
+1,Valentin Dedyulia,Валентин Дедюля,1977,110,M,ВС,109.15,420,250,367.5,1037.5,SBD,Single-ply,Open
 2,Nikolay Suslov,Николай Суслов,1979,110,M,РВСН,109.1,402.5,270,362.5,1035,SBD,Single-ply,Open
 3,Yuriy Fedorenko,Юрий Федоренко,1974,110,M,ВВС,108.2,390,262.5,380,1032.5,SBD,Single-ply,Open
 4,Igor Medvedev,Игорь Медведев,1980,110,M,Лок,109.4,400,270,362.5,1032.5,SBD,Single-ply,Open
@@ -123,7 +123,7 @@ DQ,Sergey Zalozhkov,Сергей Заложков,1974,100,M,ЮР,100,380,,,,SBD
 DQ,Mikhail Frolov,Михаил Фролов,1979,110,M,,109.4,350,,,,SBD,Single-ply,Open
 1,Andrey Malanichev,Андрей Маланичев,1977,125,M,РВСН,124.4,400,255,385,1040,SBD,Single-ply,Open
 2,Vladimir Kotkov,Владимир Котков,1980,125,M,Лок,116.1,400,270,345,1015,SBD,Single-ply,Open
-3,Maksim Podtynnyy,Максим Подтынный,1972,125,M,,124.9,415,222.5,375,1012.5,SBD,Single-ply,Open
+3,Maxim Podtynnyy,Максим Подтынный,1972,125,M,,124.9,415,222.5,375,1012.5,SBD,Single-ply,Open
 4,Maksim Guryanov,Максим Гурьянов,1975,125,M,Лок,124.9,385,275,352.5,1012.5,SBD,Single-ply,Open
 5,Igor Gagin,Игорь Гагин,1969,125,M,ЦСКВВС,123.6,405,255,340,1000,SBD,Single-ply,Open
 6,Sergey Grinyaev,Сергей Гриняев,1977,125,M,Рос,119.65,360,272.5,332.5,965,SBD,Single-ply,Open
@@ -142,7 +142,7 @@ DQ,Mikhail Korostin,Михаил Коростин,1984,125,M,Рос,121.85,,,,,S
 DQ,Artur Stepanov,Артур Степанов,,,M,Рос,125,,,,,SBD,Single-ply,Open
 1,Vladimir Bondarenko,Владимир Бондаренко,1978,125+,M,Лок,151,432.5,275,392.5,1100,SBD,Single-ply,Open
 2,Vladimir Kalinichenko,Владимир Калиниченко,1972,125+,M,Дин,146.9,380,275,360,1015,SBD,Single-ply,Open
-3,Femis Lambrionidis,Фемис Ламбрионидис,1985,125+,M,Сп,131.5,400,260,340,1000,SBD,Single-ply,Open
+3,Femistoklis Lambrionidis,Фемис Ламбрионидис,1985,125+,M,Сп,131.5,400,260,340,1000,SBD,Single-ply,Open
 4,Vitaliy Mikheev,Виталий Михеев,1977,125+,M,Лок,143.8,382.5,277.5,320,980,SBD,Single-ply,Open
 5,Arkadiy Vasnetsov,Аркадий Васнецов,1976,125+,M,Рос,135.5,390,210,340,940,SBD,Single-ply,Open
 6,Dmitriy Chechurin,Дмитрий Чечурин,1977,125+,M,Рос,131.55,300,280,320,900,SBD,Single-ply,Open
@@ -214,7 +214,7 @@ DQ,Anastasiya Yakovleva,Анастасия Яковлева,1983,60,F,МО,59.6,
 12,Anna Vanyashina,Анна Ваняшина,1975,67.5,F,Рос,65.6,170,82.5,170,422.5,SBD,Single-ply,Open
 1,Marina Kudinova,Марина Кудинова,1977,75,F,МВО,73.6,275,172.5,232.5,680,SBD,Single-ply,Open
 2,Anna Terenteva,Анна Терентьева,1975,75,F,РВСН,74.7,240,170,225,635,SBD,Single-ply,Open
-3,Svetlana Tsvetkova,Светлана Цветкова,1980,75,F,РВСН,69.9,215,117.5,235,557.5,SBD,Single-ply,Open
+3,Svetlana Tsvetkova,Светлана Цветкова,1980,75,F,РВСН,69.9,215,117.5,235,567.5,SBD,Single-ply,Open
 4,Mariya Panfyorova,Мария Панфёрова,1977,75,F,РВСН,69.9,205,125,200,530,SBD,Single-ply,Open
 5,Svetlana Sharifullina,Светлана Шарифуллина,1979,75,F,,72.9,210,130,190,530,SBD,Single-ply,Open
 6,Anna Sheina,Анна Шеина,1978,75,F,Лок,74.25,195,110,177.5,482.5,SBD,Single-ply,Open
@@ -227,7 +227,7 @@ DQ,Anastasiya Yakovleva,Анастасия Яковлева,1983,60,F,МО,59.6,
 DQ,Svetlana Dedyulya,Светлана Дедюля,1975,75,F,ВС,74.65,265,190,,,SBD,Single-ply,Open
 1,Olesya Rychkova,Олеся Рычкова,1974,82.5,F,ВС,82.25,235,160,242.5,637.5,SBD,Single-ply,Open
 2,Evgeniya Mazaylova,Евгения Мазайлова,1982,82.5,F,МВО,79.35,255,160,220,635,SBD,Single-ply,Open
-3,Yuliya Kurina,Юлия Курина,1981,82.5,F,Лок,80.65,255,132.5,195,582.5,SBD,Single-ply,Open
+3,Yulia Kurina,Юлия Курина,1981,82.5,F,Лок,80.65,255,132.5,195,582.5,SBD,Single-ply,Open
 4,Natalya Magula,Наталья Магула,1966,82.5,F,ВС,75.3,200,115,207.5,522.5,SBD,Single-ply,Open
 5,Alla Tishina,Алла Тишина,1961,82.5,F,ЮР,75.45,205,115,200,520,SBD,Single-ply,Open
 6,Irina Yaroshenko,Ирина Ярошенко,1986,82.5,F,Рос,80,185,107.5,182.5,475,SBD,Single-ply,Open
@@ -235,4 +235,4 @@ DQ,Lyudmila Protchenko,Людмила Протченко,1986,82.5,F,ВС,82.5,2
 1,Alla Khotimchenko,Алла Хотимченко,1968,90,F,ВВС,89.4,235,157.5,267.5,660,SBD,Single-ply,Open
 2,Aleksandra Murashova,Александра Мурашова,1982,90,F,ВС,84.65,270,142.5,245,657.5,SBD,Single-ply,Open
 1,Galina Karpova,Галина Карпова,1968,90+,F,ВВС,120.8,305,180,245,730,SBD,Single-ply,Open
-2,Anastasiya Pavlova,Анастасия Павлова,1968,90+,F,Красноярск Лок/СВ,120.1,290,170,240,700,SBD,Single-ply,Open
+2,Anastasia Pavlova,Анастасия Павлова,1968,90+,F,Красноярск Лок/СВ,120.1,290,170,240,700,SBD,Single-ply,Open
