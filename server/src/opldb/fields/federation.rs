@@ -40,6 +40,8 @@ pub enum Federation {
     AsianPF,
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
+    #[strum(to_string = "BPC", serialize = "bpc")]
+    BPC,
     #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
     #[strum(to_string = "BP", serialize = "bp")]
@@ -133,6 +135,9 @@ pub enum Federation {
     PZKFiTS,
     #[strum(to_string = "RAW", serialize = "raw")]
     RAW,
+    #[serde(rename = "RAW-CAN")]
+    #[strum(to_string = "RAW-CAN", serialize = "raw-can")]
+    RAWCAN,
     #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
     #[strum(to_string = "RPS", serialize = "rps")]
