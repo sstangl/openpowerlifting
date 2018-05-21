@@ -83,6 +83,7 @@ KnownFederations = {
     "BB",
     "BPU",  # British Powerlifting Union.
     "BP",  # British Powerlifting, IPF. Used to be GBPF.
+    "BPC",  # Defunct British WPC affiliate.
     "CAPO",  # Australian affiliate of the WPC/GPA.
     "CommonwealthPF",  # Commonwealth Powerlifting Federation.
     "CPF",  # Canadian Powerlifting Federation (USPA/IPL).
@@ -126,6 +127,7 @@ KnownFederations = {
     "ProRaw",
     "PZKFiTS",  # Polish IPF affiliate.
     "RAW",  # 100% RAW Federation (drug-tested).
+    "RAW-CAN",  # 100% RAW Federation Canada (drug-tested).
     "RAWU",  # Raw United Federation
     "RPS",
     "RUPC",  # Raw Unity.

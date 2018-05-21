@@ -26,7 +26,7 @@ sed -i -e 's/,0\.0,/,,/g' entries.csv
 sed -i -e 's/,0\.0,/,,/g' entries.csv
 
 cp ${SCRIPTDIR}/../meet.template meet.csv
-
+echo "WRPF," >> meet.csv
 
 # Show any warnings.
 ${REPOTESTSDIR}/check-entries-csv entries.csv
