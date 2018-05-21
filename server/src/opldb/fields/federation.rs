@@ -40,6 +40,8 @@ pub enum Federation {
     AsianPF,
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
+    #[strum(to_string = "BPC", serialize = "bpc")]
+    BPC,
     #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
     #[strum(to_string = "BP", serialize = "bp")]
