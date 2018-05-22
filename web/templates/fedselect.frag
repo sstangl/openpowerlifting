@@ -56,7 +56,7 @@
     <option value="APU,CAPO,GPC-AUS,PA,ProRaw">
       All Australian Feds
     </option>
-    <option value="APU">APU - Australian Powerlifting Union Ltd</option>
+    <option value="APU">APU - Australian Powerlifting Union</option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
     <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
