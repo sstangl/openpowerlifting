@@ -1,18 +1,18 @@
-Name,Sex,Equipment,Event,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,BestBenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,BestDeadliftKg,TotalKg,Place,AgeClass
-Harriet Milligan ,F,Raw,BD,F-C-Open,59,63,50,-52.5,-52.5,,50,122.5,125,130,132.5,132.5,182.5,1,Senior
-Jennifer Gibbons ,F,Raw,BD,F-C-Open,61.5,63,45,-50,50,-52.5,50,115,120,125,130,130,180,2,U20
-Alana Pash,F,Raw,BD,F-C-Open,67.5,72,42.5,47.5,-50,-50,47.5,85,92.5,-100,-100,92.5,140,2,Senior
-Gloria Fitzpatrick,F,Raw,BD,F-C-Open,63.5,72,50,-55,55,-57.5,55,100,110,117.5,120,120,175,1,M2
-Sheri Miles,F,Raw,BD,F-C-Open,73,84,50,55,60,65,65,140,150,155,160,160,225,1,Senior
-Joe Strike ,M,Raw,BD,M-C-Open,66,66,87.5,92.5,-95,-95,92.5,102.5,112.5,-120,-120,112.5,205,1,U20
-Daniel Cullen ,M,Raw,BD,M-C-Open,73.5,83,85,92.5,-102.5,-102.5,92.5,150,167.5,-180,-180,167.5,260,2,U16
-Ira Hills,M,Raw,BD,M-C-Open,81,83,92.5,97.5,102.5,-105,102.5,185,200,205,212.5,212.5,315,1,U18
-Angus Castle,M,Raw,BD,M-C-Open,89,93,135,140,-147.5,147.5,147.5,180,190,200,210,210,357.5,2,U23
-Mike Perrin,M,Raw,BD,M-C-Open,90,93,150,157.5,165,-170,165,220,230,240,245,245,410,1,U23
-David Cole,M,Raw,BD,M-C-Open,85.5,93,100,107.5,112.5,117.5,117.5,160,170,185,190,190,307.5,4,Senior
-Ian Chapman ,M,Raw,BD,M-C-Open,89.5,93,110,117.5,122.5,127.5,127.5,170,180,190,-195,190,317.5,3,Senior
-Lee Potier ,M,Raw,BD,M-C-Open,99.5,105,90,100,110,120,120,180,190,200,-210,200,320,3,Senior
-Mike Goodwin,M,Raw,BD,M-C-Open,99.5,105,155,-165,165,170,170,250,260,270,,270,440,1,Senior
-Dave Downs ,M,Raw,BD,M-C-Open,102.5,105,135,140,145,,145,240,250,260,-265,260,405,2,Senior
-Ian Richards,M,Raw,BD,M-C-Open,91,93,130,140,145,147.5,147.5,190,200,210,215,215,362.5,1,M1
-Nick Grundy,M,Raw,BD,M-C-Open,115.5,120,130,135,140,-145,140,200,210,220,,220,360,1,M1
+Name,Sex,Equipment,Event,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,BestBenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,BestDeadliftKg,Deadlift4Kg,TotalKg,Place,AgeClass
+Harriet Milligan,F,Raw,BD,F-C-Open,59,63,50,-52.5,-52.5,50,,122.5,125,130,130,132.5,180,1,Senior
+Jennifer Gibbons,F,Raw,BD,F-C-Open,61.5,63,45,-50,50,50,-52.5,115,120,125,125,130,175,2,U20
+Alana Pash,F,Raw,BD,F-C-Open,67.5,72,42.5,47.5,-50,47.5,-50,85,92.5,-100,92.5,-100,140,2,Senior
+Gloria Fitzpatrick,F,Raw,BD,F-C-Open,63.5,72,50,-55,55,55,-57.5,100,110,117.5,117.5,120,172.5,1,M2
+Sheri Miles,F,Raw,BD,F-C-Open,73,84,50,55,60,60,65,140,150,155,155,160,215,1,Senior
+Joe Strike,M,Raw,BD,M-C-Open,66,66,87.5,92.5,-95,92.5,-95,102.5,112.5,-120,112.5,-120,205,1,U20
+Daniel Cullen,M,Raw,BD,M-C-Open,73.5,83,85,92.5,-102.5,92.5,-102.5,150,167.5,-180,167.5,-180,260,2,U16
+Ira Hills,M,Raw,BD,M-C-Open,81,83,92.5,97.5,102.5,102.5,-105,185,200,205,205,212.5,307.5,1,U18
+Angus Castle,M,Raw,BD,M-C-Open,89,93,135,140,-147.5,140,147.5,180,190,200,200,210,340,2,U23
+Mike Perrin,M,Raw,BD,M-C-Open,90,93,150,157.5,165,165,-170,220,230,240,240,245,405,1,U23
+David Cole,M,Raw,BD,M-C-Open,85.5,93,100,107.5,112.5,112.5,117.5,160,170,185,185,190,297.5,4,Senior
+Ian Chapman,M,Raw,BD,M-C-Open,89.5,93,110,117.5,122.5,122.5,127.5,170,180,190,190,-195,312.5,3,Senior
+Lee Potier,M,Raw,BD,M-C-Open,99.5,105,90,100,110,110,120,180,190,200,200,-210,310,3,Senior
+Mike Goodwin,M,Raw,BD,M-C-Open,99.5,105,155,-165,165,165,170,250,260,270,270,,435,1,Senior
+Dave Downs,M,Raw,BD,M-C-Open,102.5,105,135,140,145,145,,240,250,260,260,-265,405,2,Senior
+Ian Richards,M,Raw,BD,M-C-Open,91,93,130,140,145,145,147.5,190,200,210,210,215,355,1,M1
+Nick Grundy,M,Raw,BD,M-C-Open,115.5,120,130,135,140,140,-145,200,210,220,220,,360,1,M1
