@@ -152,7 +152,7 @@ def check_name_corrections(names):
         variants = line.rstrip('\n').split(',')
 
         # Check that the "correct" variant is actually in the database.
-        if not variants[0] in names:
+        if variants[0] not in names:
             pwarning("%s: Lifter '%s' not in database." %
                      (filename, variants[0]))
 
