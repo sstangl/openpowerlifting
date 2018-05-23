@@ -17,7 +17,7 @@ def wilksCoeffMen(x):  # Where x is BodyweightKg.
     e = 7.01863E-06
     f = -1.291E-08
     x = min(x, 201.9)  # Upper bound to avoid asymptote.
-    x = max(x, 40) # Lower bound to avoid children with huge wilks
+    x = max(x, 40)  # Lower bound to avoid children with huge wilks
     return wilksCoeff(a, b, c, d, e, f, x)
 
 
@@ -29,7 +29,7 @@ def wilksCoeffWomen(x):  # Where x is BodyweightKg.
     e = 0.00004731582
     f = -0.00000009054
     x = min(x, 154.53)  # Cap to avoid asymptote.
-    x = max(x, 40) # Lower bound to avoid children with huge wilks
+    x = max(x, 40)  # Lower bound to avoid children with huge wilks
     return wilksCoeff(a, b, c, d, e, f, x)
 
 
