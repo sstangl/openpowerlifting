@@ -10,6 +10,7 @@
 # 2) Each column's data are in expected formats for that column type.
 #
 
+import datetime
 import sys
 import os
 import toml
@@ -261,6 +262,48 @@ def check_column_birthyear(s, row, csv):
             pwarning("BirthYear looks implausible: '%s'" % s)
 
 
+# This is mostly duplicate code from check-meet-csv. Could be shared.
+def check_column_birthday(s, row, csv):
+    date = s
+    if len(date) != 10 or date.count('-') != 2:
+        perror("BirthDay in wrong format: \"%s\". Must be \"YYYY-MM-DD\"." % date)
+        year = ''
+        month = ''
+        day = ''
+    else:
+        # The split is valid. Check the individual Date components.
+        year, month, day = date.split('-')
+
+        # Make sure the parts are all digits and of the right length.
+        if not year.isdigit() or len(year) != 4:
+            perror("Year is not a number of length 4: \"%s\"." % year)
+        if not month.isdigit() or len(month) != 2:
+            perror("Month is not a number of length 2: \"%s\"." % month)
+        if not day.isdigit() or len(day) != 2:
+            perror("Day is not a number of length 2: \"%s\"." % day)
+
+        # Make sure that the numbers are in a plausible range.
+        year_int = int(year)
+        month_int = int(month)
+        day_int = int(day)
+
+        if year_int < 1860:
+            perror("Implausible year: \"%s\"." % year)
+        if month_int > 12:
+            perror("Implausible month: \"%s\"." % month)
+        if day_int > 31:
+            perror("Implausible day: \"%s\"." % day)
+
+        # Check that the meet date is not in the future
+        future_date = datetime.datetime.today() + datetime.timedelta(days=2)
+        meet_date = datetime.datetime.strptime(
+            date,
+            "%Y-%m-%d"
+        )
+        if meet_date >= future_date:
+            perror("Implausible date: %s is a future date" % date)
+
+
 def check_row_weightclass(row, csv, weightclasses):
     if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] != "":
         wc = row[csv.index('WeightClassKg')]
@@ -353,6 +396,7 @@ HeaderHandlers = {
 
     # Temporary column for IPF, to be calculated as Age during compilation.
     'BirthYear': check_column_birthyear,
+    'BirthDay': check_column_birthday,
 
     # Stat columns. Only Kg is valid.
     'WeightClassKg': ignore_column,
