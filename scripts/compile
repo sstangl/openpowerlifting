@@ -171,6 +171,7 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     # Otherwise, try deriving from BirthYear.
     age_from_birthyear(newentries, date)
     newentries.remove_column_by_name("BirthYear")
+    newentries.remove_column_by_name("BirthDay")
 
     entriescsv.cat(newentries)
     meetscsv.cat(newmeet)
