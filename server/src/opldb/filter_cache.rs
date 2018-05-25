@@ -115,14 +115,19 @@ impl FilterCache {
     }
 
     pub fn size_bytes(&self) -> usize {
-        mem::size_of::<FilterCache>() + self.equipment_raw.size_bytes()
+        mem::size_of::<FilterCache>()
+            + self.equipment_raw.size_bytes()
             + self.equipment_wraps.size_bytes()
             + self.equipment_rawandwraps.size_bytes()
             + self.equipment_single.size_bytes()
-            + self.equipment_multi.size_bytes() + self.sex_male.size_bytes()
-            + self.sex_female.size_bytes() + self.year_2018.size_bytes()
-            + self.year_2017.size_bytes() + self.year_2016.size_bytes()
-            + self.year_2015.size_bytes() + self.year_2014.size_bytes()
+            + self.equipment_multi.size_bytes()
+            + self.sex_male.size_bytes()
+            + self.sex_female.size_bytes()
+            + self.year_2018.size_bytes()
+            + self.year_2017.size_bytes()
+            + self.year_2016.size_bytes()
+            + self.year_2015.size_bytes()
+            + self.year_2014.size_bytes()
     }
 }
 

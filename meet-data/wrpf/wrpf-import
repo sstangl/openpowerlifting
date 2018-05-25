@@ -36,6 +36,8 @@ mv results.html tmp.xls
 #Remove red font colour in front of <s> tags
 sed -i -e 's/<s><font.*color="#FF0000">/-/g' tmp.xls
 sed -i -e 's/<font face=.*color="#FF0000">/-/g' tmp.xls
+sed -i -e 's/<s><font color="#C0504D">/-/g' tmp.xls
+sed -i -e 's/<font color="#C0504D">/-/g' tmp.xls
 sed -i -e 's/<\/font>//g' tmp.xls
 
 

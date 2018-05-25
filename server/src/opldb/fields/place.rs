@@ -24,6 +24,19 @@ pub enum Place {
     None, // TODO: Require every row to have a Place.
 }
 
+impl Place {
+    pub fn is_dq(&self) -> bool {
+        match *self {
+            Place::P(_) => false,
+            Place::G => false,
+            Place::DQ => true,
+            Place::DD => true,
+            Place::NS => true,
+            Place::None => false,
+        }
+    }
+}
+
 impl fmt::Display for Place {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {

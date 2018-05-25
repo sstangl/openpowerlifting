@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -56,7 +56,7 @@
     <option value="APU,CAPO,GPC-AUS,PA,ProRaw">
       All Australian Feds
     </option>
-    <option value="APU">APU - Australian Powerlifting Union Ltd</option>
+    <option value="APU">APU - Australian Powerlifting Union</option>
     <option value="CAPO">CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
     <option value="GPC-AUS">GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
     <option value="PA">PA - Powerlifting Australia (2008+)</option>
@@ -64,12 +64,13 @@
     <option value="WRPF-AUS">WRPF-AUS - WRPF Australia [WRPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
-    <option value="CPF,CPL,CPU,WRPF-CAN">
+    <option value="CPF,CPL,CPU,RAW-CAN,WRPF-CAN">
       All Canadian Feds
     </option>
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
     <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
+    <option value="RAW-CAN">RAW-CAN - 100% RAW Powerlifting Federation Canada (Incomplete)</option>
     <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
   </optgroup>
   <optgroup label="Czechia">
@@ -138,10 +139,11 @@
     <option value="WPAU">WPAU - World Powerlifting Alliance Ukraine [WPA] (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
-    <option value="BP,BPU,EPA,GPC-GB,NIPF,ScottishPL,WelshPA">
+    <option value="BP,BPC,BPU,EPA,GPC-GB,NIPF,ScottishPL,WelshPA">
       All United Kingdom Feds
     </option>
     <option value="BP,EPA,NIPF,ScottishPL,WelshPA">BP - British Powerlifting [IPF] (2017+)</option>
+    <option value="BPC">BPC - British Powerlifting Congress [WPC] (Incomplete)</option>
     <option value="BPU">BPU - British Powerlifting Union [WPC] (Incomplete)</option>
     <option value="EPA">EPA - English Powerlifting Association [IPF] (Incomplete)</option>
     <option value="GPC-GB">GPC-GB - GPC Great Britain [GPC] (Help Needed!)</option>
