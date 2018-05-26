@@ -161,11 +161,6 @@ fn test_static_cache_control() {
     let response = client.get("/static/style.css").dispatch();
     assert_eq!(response.status(), Status::Ok);
     assert!(response.headers().contains("Cache-Control"));
-    assert!(
-        response
-            .headers()
-            .get_one("Cache-Control")
-            .unwrap()
-            .contains("max-age=")
-    );
+    let cache_control = response.headers().get_one("Cache-Control").unwrap();
+    assert!(cache_control.contains("max-age="));
 }
