@@ -81,7 +81,8 @@ impl ConstantTimeCache {
     /// The comparator should return greatest-first, in sorted order
     /// by however it should show up in the final database.
     ///
-    /// TODO: Filter out zero entries (like lifters with no squat for by-squat, etc.)
+    /// TODO: Filter out zero entries (like lifters with no squat for by-squat,
+    /// etc.)
     fn sort_and_unique_by<F>(
         idxl: &NonSortedNonUnique,
         entries: &Vec<Entry>,

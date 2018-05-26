@@ -26,7 +26,6 @@ impl<'db, 'a> Context<'db, 'a> {
         locale: &'db Locale,
         selection: &'a Selection,
     ) -> Context<'db, 'a> {
-
         // TODO: This is gross, but eventually we'll move to StaticCache-only.
         // TODO: So maybe ignore how this looks for the moment.
         let top_100: Vec<JsEntryRow> =

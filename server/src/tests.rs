@@ -1,6 +1,8 @@
 //! Tests for the Rocket code in main.rs.
 
+use super::dotenv;
 use super::rocket;
+
 use server::langpack::LangInfo;
 use server::opldb::OplDb;
 
@@ -19,6 +21,9 @@ fn db() -> &'static OplDb {
 
     unsafe {
         OPLDB_INIT.call_once(|| {
+            // This isn't really the place for it, but preload the environment.
+            dotenv::from_filename("server.env").unwrap();
+
             OPLDB_GLOBAL =
                 Some(OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap());
         });
@@ -146,4 +151,21 @@ fn test_no_server_header() {
     let client = client();
     let response = client.get("/").dispatch();
     assert!(!response.headers().contains("Server"));
+}
+
+#[test]
+fn test_static_cache_control() {
+    // Files served from "/static" should be served with the "Cache-Control"
+    // header, to prevent them from being constantly reloaded.
+    let client = client();
+    let response = client.get("/static/style.css").dispatch();
+    assert_eq!(response.status(), Status::Ok);
+    assert!(response.headers().contains("Cache-Control"));
+    assert!(
+        response
+            .headers()
+            .get_one("Cache-Control")
+            .unwrap()
+            .contains("max-age=")
+    );
 }

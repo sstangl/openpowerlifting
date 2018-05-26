@@ -15,7 +15,7 @@ mod tests;
 use rocket::fairing::AdHoc;
 use rocket::http::{Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
-use rocket::response::{NamedFile, Redirect};
+use rocket::response::{NamedFile, Redirect, Responder, Response};
 use rocket::{Outcome, State};
 use rocket_contrib::Template;
 
@@ -103,10 +103,23 @@ fn make_locale<'db>(
     Locale::new(&langinfo, lang, units)
 }
 
+/// A file served from /static.
+struct StaticFile(NamedFile);
+
+impl Responder<'static> for StaticFile {
+    fn respond_to(self, req: &Request) -> Result<Response<'static>, Status> {
+        let mut response = self.0.respond_to(req)?;
+        // Set to 24 hours. Production should serve via Nginx anyway.
+        response.set_raw_header("Cache-Control", "max-age=86400");
+        Ok(response)
+    }
+}
+
 #[get("/static/<file..>")]
-fn statics(file: PathBuf) -> Option<NamedFile> {
-    let staticdir = env::var("STATICDIR").unwrap();
-    NamedFile::open(Path::new(&staticdir).join(file)).ok()
+fn statics(file: PathBuf) -> Option<StaticFile> {
+    let staticdir = env::var("STATICDIR").ok()?;
+    let namedfile = NamedFile::open(Path::new(&staticdir).join(file)).ok()?;
+    Some(StaticFile(namedfile))
 }
 
 #[get("/rankings/<selections..>")]
