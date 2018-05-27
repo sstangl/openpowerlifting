@@ -72,6 +72,8 @@ KnownFederations = {
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
+    "ADFPF",  # American Drug-Free Powerlifting Federation.
+    "ADAU",  # Amateur Drug Tested Athletic Union
     "AEP",  # Asociación Española de Powerlifting, IPF.
     "AfricanPF",  # African Powerlifting Federation, IPF.
     "APA",
@@ -93,6 +95,7 @@ KnownFederations = {
     "CSST",  # Český svaz silového trojboje, Czech IPF affiliate.
     "DSF",  # Danish IPF Affiliate.
     "EPA",  # English Powerlifting Association, IPF.
+    "EPC",  # European Powerlifting Congress.
     "EPF",
     "FEMEPO",  # Federación Mexicana de Powerlifting A.C.
     "FESUPO",  # Federacion Sudamericana de Powerlifting
@@ -101,9 +104,13 @@ KnownFederations = {
     "FPR",  # Powerlifting Federation of Russia, IPF.
     "GPA",
     "GPC",  # Global Powerlifting Committee.
-    "GPC-GB",  # British branch of the GPC.
     "GPC-AUS",  # Australian branch of the GPC.
+    "GPC-CAN", # Canadian Branch of the GPC.
+    "GPC-GB",  # British branch of the GPC.
+    "GPC-IRL",  # Irish branch of the GPC.
     "GPC-NZ",  # New Zealand branch of the GPC.
+    "GPU",  # German Powerlifting Union (WPU).
+    "Hardcore",  # Defunct standalone US federation
     "HERC",  # Hercules Gym in Syracuse, NY. Run by Rheta West.
     "IDFPF",  # Irish Drug-Free Powerlifting Federation.
     "IPA",
