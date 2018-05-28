@@ -22,9 +22,9 @@ Place,Name,InternationalName,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,TotalKg,Wei
 1,Tetyana Balashova,Тетяна Балашова,66.6,50,52.5,-55,52.5,67.5,Amateur Submasters 33-39,F,B,Raw,Yes,,,,,,,,52.5,,1975
 1,Svitlana Klochkova,Світлана Клочкова,55.3,35,37.5,-40,37.5,56,Amateur Masters 40-44,F,B,Raw,Yes,,,,,,,,37.5,,1968
 1,Nataliya Penkova,Наталія Пенькова,63.8,35,-40,,35,67.5,Amateur Masters 45-49,F,B,Raw,Yes,,,,,,,,35,,1965
-1,Maksim Kukovitskiy,Максим Куковицький,43.7,40,-45,-47.5,40,44,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,40,,1901
-2,Mikita Krotenko,Микита Кротенко,43.8,-32.5,-32.5,32.5,32.5,44,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,32.5,,1901
-1,Illya Telyukh,Ілля Телюх,44.7,40,45,-47.5,45,48,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,45,,1901
+1,Maksim Kukovitskiy,Максим Куковицький,43.7,40,-45,-47.5,40,44,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,40,,2001
+2,Mikita Krotenko,Микита Кротенко,43.8,-32.5,-32.5,32.5,32.5,44,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,32.5,,2001
+1,Illya Telyukh,Ілля Телюх,44.7,40,45,-47.5,45,48,Amateur Children 11-12,M,B,Raw,Yes,,,,,,,,45,,2001
 1,Maksim Shved,Максим Швед,48.6,-65,-65,65,65,52,Amateur Teen 13-15,M,B,Raw,Yes,,,,,,,,65,,1999
 2,Vasil Klimuk,Василь Клімук,50.5,-55,-60,60,60,52,Amateur Teen 13-15,M,B,Raw,Yes,,,,,,,,60,,2000
 1,Vladislav Romanskiy,Владислав Романський,56,67.5,-72.5,72.5,72.5,56,Amateur Teen 13-15,M,B,Raw,Yes,,,,,,,,72.5,,1997
@@ -86,7 +86,7 @@ DQ,Bogdan Stets,Богдан Стець,75.9,-87.5,-87.5,-87.5,,82.5,Amateur Tee
 1,Evgen Moiseev,Євген Моісєєв,100.4,155,162.5,-167.5,162.5,110,Amateur Juniors 20-23,M,B,Raw,Yes,,,,,,,,162.5,,1991
 2,Gleb Filin,Глеб Филин,102.1,130,140,-155,140,110,Amateur Juniors 20-23,M,B,Raw,Yes,,,,,,,,140,,1989
 1,Volodimir Lyashko,Володимир Ляшко,116.4,-145,145,-155,145,125,Amateur Juniors 20-23,M,B,Raw,Yes,,,,,,,,145,,1990
-1,Mikita Krotenko,Микита Кротенко,43.8,-32.5,-32.5,32.5,32.5,44,Amateur Open,M,B,Raw,Yes,,,,,,,,32.5,,1901
+1,Mikita Krotenko,Микита Кротенко,43.8,-32.5,-32.5,32.5,32.5,44,Amateur Open,M,B,Raw,Yes,,,,,,,,32.5,,2001
 1,Aleksandr Semerenko,Александр Семеренко,56,102.5,-107.5,,102.5,56,Amateur Open,M,B,Raw,Yes,,,,,,,,102.5,,1996
 1,Sergiy Bushchak,Сергій Бущак,59.1,90,97.5,-100,97.5,60,Amateur Open,M,B,Raw,Yes,,,,,,,,97.5,,1979
 1,Oleksandr Romanchuk,Олександр Романчук,67,115,125,-130,125,67.5,Amateur Open,M,B,Raw,Yes,,,,,,,,125,,1992
@@ -341,8 +341,8 @@ DQ,Marina Dumina,Марина Думіна,61,,,,,67.5,Amateur Open,F,SBD,Raw,Ye
 1,Olga Demakova,Ольга Демакова,72.7,50,55,60,275,75,Amateur Submasters 33-39,F,SBD,Raw,Yes,80,90,105,90,100,110,105,60,110,1978
 1,Lyudmila Ishchenko,Людмила Іщенко,73.7,50,60,-65,300,75,Amateur Masters 50-54,F,SBD,Raw,Yes,100,115,120,100,110,120,120,60,120,1961
 1,Nataliya Tsukanova,Наталія Цуканова,78,82.5,85,,380,82.5,Amateur Masters 55-59,F,SBD,Raw,Yes,130,145,-155,130,140,150,145,85,150,1956
-1,Dmitro Zaets,Дмитро Заєць,31.2,30,-35,,172,44,Amateur Children 10,M,SBD,Raw,Yes,57,-65,-67.5,77.5,85,-90,57,30,85,1902
-DQ,Andriy Yakovenko,Андрій Яковенко,44,,,,,44,Amateur Children 11-12,M,SBD,Raw,Yes,,,,,,,,,,1901
+1,Dmitro Zaets,Дмитро Заєць,31.2,30,-35,,172,44,Amateur Children 10,M,SBD,Raw,Yes,57,-65,-67.5,77.5,85,-90,57,30,85,2002
+DQ,Andriy Yakovenko,Андрій Яковенко,44,,,,,44,Amateur Children 11-12,M,SBD,Raw,Yes,,,,,,,,,,2001
 1,Bogdan Sushko,Богдан Сушко,63.7,55,60,-65,225,67.5,Amateur Children 11-12,M,SBD,Raw,Yes,60,65,75,70,80,90,75,60,90,2000
 1,Mikita Kravets,Микита Кравець,44,50,55,,275,44,Amateur Teen 13-15,M,SBD,Raw,Yes,100,107.5,112.5,95,105,107.5,112.5,55,107.5,2000
 1,Oleksandr Davidenko,Олександр Давиденко,59.2,60,65,-67.5,292.5,60,Amateur Teen 13-15,M,SBD,Raw,Yes,75,85,90,120,130,137.5,90,65,137.5,1997
