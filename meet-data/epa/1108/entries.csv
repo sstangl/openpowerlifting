@@ -1,30 +1,30 @@
-Name,Sex,Single-plyuipment,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Place,Event,AgeClass
-Aimee Margott,F,Raw,77.65,84,F-Raw-U16,105,47.5,100,252.5,1,SBD,U16
-Leigh Wetheridge,F,Raw,72.8,84,F-Raw-U18,85,65,140,290,1,SBD,U18
-Kate Nyers,F,Raw,70.55,72,F-Raw-Senior,80,55,115,250,1,SBD,Senior
-Sam Pile,M,Single-ply ,58.35,59,M-Single-ply -U16,145,70,160,375,1,SBD,U16
-Stan Moore,M,Raw ,64,66,M-Raw -U16,110,70,145,325,1,SBD,U16
-Cameron Keyes,M,Single-ply ,80.95,83,M-Single-ply -U16,182.5,100,212.5,495,1,SBD,U16
-Liam Wilson,M,Raw ,92.6,93,M-Raw -U16,125,100,165,390,2,SBD,U16
-Shane Pile,M,Single-ply ,89.25,93,M-Single-ply -U16,175,120,220,515,1,SBD,U16
-Daniel Fletcher,M,Raw ,102.3,105,M-Raw -U16,150,90,192.5,432.5,1,SBD,U16
-Diddy Cridland,M,Single-ply ,112.1,120,M-Single-ply -U18,180,125,205,510,1,SBD,U18
-Andrew Dixon,M,Single-ply ,67,74,M-Single-ply -U18,162.5,90,205,457.5,1,SBD,U18
-David Parnell,M,Raw ,82.9,83,M-Raw -U20,132.5,102,165,400,2,SBD,U20
-Jack Long,M,Raw ,80,83,M-Raw -U23,180,140,240,560,1,SBD,U23
-Ben Roberts,M,Raw ,94.15,105,M-Raw -U23,200,110,210,520,2,SBD,U23
-Aaron Cooper,M,Raw ,99,105,M-Raw -U23,230,160,240,630,1,SBD,U23
-Chris Simmons,M,Raw ,73.5,74,M-Raw -Senior,182.5,147.5,220,550,1,SBD,Senior
-Stephen Campbell,M,Raw ,72.4,74,M-Raw -Senior,140,,220,,DQ,SBD,Senior
-Craig Wilkins,M,Raw ,72.75,74,M-Raw -Senior,145,110,160,415,2,SBD,Senior
-Dan Farrugia,M,Raw ,87,93,M-Raw -Senior,160,112.5,215,487.5,1,SBD,Senior
-Simon Timpson,M,Raw ,126.2,120+,M-Raw -Senior,240,170,300,710,1,SBD,Senior
-Mark Macey,M,Raw ,90.6,93,M-Raw -M1,170,117.5,205,492.5,1,SBD,M1
-Simon Darton,M,Single-ply ,101.4,105,M-Single-ply -M1,,, ,,DQ,SBD,M1
-Brian Crowther,M,Single-ply ,114,120,M-Single-ply -M1,222.5,165,212.5,600,1,SBD,M1
-Ed Shorttle,M,Raw ,74.3,83,M-Raw -M2,95,75,175,345,1,SBD,M2
-Steve Blackwell,M,Raw ,100.5,105,M-Raw -M2,200,150,270,620,1,SBD,M2
-Steve Shah,M,Raw ,73.1,74,M-Raw -M3,100,85,165,350,1,SBD,M3
-Mick Ellender,M,Single-ply ,90,93,M-Single-ply -M3,192.5,135,245,572.5,1,SBD,M3
-Jeff Fearon,M,Single-ply ,81.7,83,M-Single-ply -M4,90,80,130,300,1,SBD,M4
-Ted Cooper,M,Single-ply ,89.6,93,M-Single-ply -M4,,,,,DQ,SBD,M4
+Name,Sex,Equipment,BodyweightKg,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Place,Event,AgeClass
+Aimee Margott,F,Raw,77.65,84,F-U16,105,47.5,100,252.5,1,SBD,U16
+Leigh Wetheridge,F,Raw,72.8,84,F-U18,85,65,140,290,1,SBD,U18
+Kate Nyers,F,Raw,70.55,72,F-Senior,80,55,115,250,1,SBD,Senior
+Sam Pile,M,Single-ply,58.35,59,M-U16,145,70,160,375,1,SBD,U16
+Stan Moore,M,Raw ,64,66,M-U16,110,70,145,325,1,SBD,U16
+Cameron Keyes,M,Single-ply,80.95,83,M-U16,182.5,100,212.5,495,1,SBD,U16
+Liam Wilson,M,Raw ,92.6,93,M-U16,125,100,165,390,2,SBD,U16
+Shane Pile,M,Single-ply,89.25,93,M-U16,175,120,220,515,1,SBD,U16
+Daniel Fletcher,M,Raw ,102.3,105,M-U16,150,90,192.5,432.5,1,SBD,U16
+Diddy Cridland,M,Single-ply,112.1,120,M-U18,180,125,205,510,1,SBD,U18
+Andrew Dixon,M,Single-ply,67,74,M-U18,162.5,90,205,457.5,1,SBD,U18
+David Parnell,M,Raw ,82.9,83,M-U20,132.5,102,165,400,2,SBD,U20
+Jack Long,M,Raw ,80,83,M-U23,180,140,240,560,1,SBD,U23
+Ben Roberts,M,Raw ,94.15,105,M-U23,200,110,210,520,2,SBD,U23
+Aaron Cooper,M,Raw ,99,105,M-U23,230,160,240,630,1,SBD,U23
+Chris Simmons,M,Raw ,73.5,74,M-Senior,182.5,147.5,220,550,1,SBD,Senior
+Stephen Campbell,M,Raw ,72.4,74,M-Senior,140,,220,,DQ,SBD,Senior
+Craig Wilkins,M,Raw ,72.75,74,M-Senior,145,110,160,415,2,SBD,Senior
+Dan Farrugia,M,Raw ,87,93,M-Senior,160,112.5,215,487.5,1,SBD,Senior
+Simon Timpson,M,Raw ,126.2,120+,M-Senior,240,170,300,710,1,SBD,Senior
+Mark Macey,M,Raw ,90.6,93,M-M1,170,117.5,205,492.5,1,SBD,M1
+Simon Darton,M,Single-ply,101.4,105,M-M1,,, ,,DQ,SBD,M1
+Brian Crowther,M,Single-ply,114,120,M-M1,222.5,165,212.5,600,1,SBD,M1
+Ed Shorttle,M,Raw ,74.3,83,M-M2,95,75,175,345,1,SBD,M2
+Steve Blackwell,M,Raw ,100.5,105,M-M2,200,150,270,620,1,SBD,M2
+Steve Shah,M,Raw ,73.1,74,M-M3,100,85,165,350,1,SBD,M3
+Mick Ellender,M,Single-ply,90,93,M-M3,192.5,135,245,572.5,1,SBD,M3
+Jeff Fearon,M,Single-ply,81.7,83,M-M4,90,80,130,300,1,SBD,M4
+Ted Cooper,M,Single-ply,89.6,93,M-M4,,,,,DQ,SBD,M4
