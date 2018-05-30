@@ -1,10 +1,10 @@
-.PHONY: npminit builddir css js oldimages slickgrid clean
+.PHONY: npminit builddir css js oldimages slickgrid gzip clean
 
 BUILDDIR := build
 OLDWEB := "../../web"
 PROJECTDATA := "../../project-data"
 
-all: css js oldimages
+all: css js oldimages gzip
 
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
@@ -37,6 +37,9 @@ slickgrid: builddir
             ../../web/scripts/SlickGrid-2.2.6/slick.core.js \
             ../../web/scripts/SlickGrid-2.2.6/slick.grid.js \
             | ../../web/try-uglify ${BUILDDIR}/slickgrid.min.js
+
+gzip:
+	./apply-gzip
 
 clean:
 	rm -rf build node_modules

@@ -23,12 +23,38 @@ use strum::IntoEnumIterator;
 
 use std::env;
 use std::error::Error;
+use std::fs::File;
 use std::path::{Path, PathBuf};
 
 extern crate server;
 use server::langpack::{self, LangInfo, Language, Locale};
 use server::opldb;
 use server::pages;
+
+/// Request guard for reading the "Accept-Encoding" HTTP header.
+struct AcceptEncoding(pub Option<String>);
+
+impl AcceptEncoding {
+    pub fn supports_gzip(&self) -> bool {
+        match &self.0 {
+            None => false,
+            Some(s) => s.contains("gzip"),
+        }
+    }
+}
+
+impl<'a, 'r> FromRequest<'a, 'r> for AcceptEncoding {
+    type Error = ();
+
+    fn from_request(request: &'a Request<'r>) -> request::Outcome<AcceptEncoding, ()> {
+        let keys: Vec<_> = request.headers().get("Accept-Encoding").collect();
+        match keys.len() {
+            0 => Outcome::Success(AcceptEncoding(None)),
+            1 => Outcome::Success(AcceptEncoding(Some(keys[0].to_string()))),
+            _ => return Outcome::Failure((Status::BadRequest, ())),
+        }
+    }
+}
 
 /// Request guard for reading the "Accept-Language" HTTP header.
 struct AcceptLanguage(pub Option<String>);
@@ -104,11 +130,21 @@ fn make_locale<'db>(
 }
 
 /// A file served from /static.
-struct StaticFile(NamedFile);
+enum StaticFile {
+    Gzipped(File),
+    Plain(NamedFile),
+}
 
 impl Responder<'static> for StaticFile {
     fn respond_to(self, req: &Request) -> Result<Response<'static>, Status> {
-        let mut response = self.0.respond_to(req)?;
+        let mut response = match self {
+            StaticFile::Gzipped(f) => {
+                let mut r = f.respond_to(req)?;
+                r.set_raw_header("Content-Encoding", "gzip");
+                r
+            },
+            StaticFile::Plain(f) => f.respond_to(req)?,
+        };
         // Set to 24 hours. Production should serve via Nginx anyway.
         response.set_raw_header("Cache-Control", "max-age=86400");
         Ok(response)
@@ -116,10 +152,21 @@ impl Responder<'static> for StaticFile {
 }
 
 #[get("/static/<file..>")]
-fn statics(file: PathBuf) -> Option<StaticFile> {
+fn statics(file: PathBuf, encoding: AcceptEncoding) -> Option<StaticFile> {
     let staticdir = env::var("STATICDIR").ok()?;
-    let namedfile = NamedFile::open(Path::new(&staticdir).join(file)).ok()?;
-    Some(StaticFile(namedfile))
+    let filepath = Path::new(&staticdir).join(&file);
+
+    // Prefer returning a compressed variant (same filename plus ".gz").
+    if encoding.supports_gzip() {
+        let gzfilename = format!("{}.gz", file.file_name()?.to_str()?);
+        let gzfilepath = filepath.with_file_name(gzfilename);
+        if let Ok(gzfile) = File::open(gzfilepath) {
+            return Some(StaticFile::Gzipped(gzfile));
+        }
+    }
+
+    let namedfile = NamedFile::open(filepath).ok()?;
+    Some(StaticFile::Plain(namedfile))
 }
 
 #[get("/rankings/<selections..>")]
