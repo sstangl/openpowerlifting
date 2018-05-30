@@ -166,6 +166,8 @@ pub enum Federation {
     USPF,
     #[strum(to_string = "USPA", serialize = "uspa")]
     USPA,
+    #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
+    VietnamPA,
     #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
     #[strum(to_string = "WDFPF", serialize = "wdfpf")]

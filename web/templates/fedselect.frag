@@ -151,4 +151,7 @@
     <option value="ScottishPL">ScottishPL - Scottish Powerlifting [IPF] (Incomplete)</option>
     <option value="WelshPA">WelshPA - Welsh Powerlifting Association [IPF] (Incomplete)</option>
   </optgroup>
+  <optgroup label="Vietnam">
+    <option value="VietnamPA">VietnamPA - Vietnam Powerlifting Alliance [GPA] (Incomplete)</option>
+  </optgroup>
 </select>

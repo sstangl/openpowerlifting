@@ -186,6 +186,7 @@ pub struct CountryTranslations {
     pub usvirginislands: String,
     pub uzbekistan: String,
     pub venezuela: String,
+    pub vietnam: String,
     pub wales: String,
 }
 
@@ -462,6 +463,7 @@ impl Translations {
             fields::Country::USVirginIslands => &self.country.usvirginislands,
             fields::Country::Uzbekistan => &self.country.uzbekistan,
             fields::Country::Venezuela => &self.country.venezuela,
+            fields::Country::Vietnam => &self.country.vietnam,
             fields::Country::Wales => &self.country.wales,
         }
     }

@@ -99,5 +99,6 @@ pub enum Country {
     USVirginIslands,
     Uzbekistan,
     Venezuela,
+    Vietnam,
     Wales,
 }
