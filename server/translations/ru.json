@@ -8,7 +8,7 @@
 		"wraps": "Бинты",
 		"single": "Одно",
 		"multi": "Много",
-		"straps": "Straps"
+		"straps": "Лямки"
 	},
 	"sex": {
 		"m": "М",
@@ -18,14 +18,14 @@
 		"rankings": "Рэнкинги",
 		"meets": "Протоколы",
 		"data": "Данные",
-		"status": "Project Status",
+		"status": "Статус Проекта",
 		"faq": "Вопросы-Ответы",
 		"contact": "Контакты",
 		"supportus": "Помогите Нам"
 	},
 	"columns": {
 		"place": "Место",
-		"formulaplace": "Rank",
+		"formulaplace": "Ранг",
 		"liftername": "Спортсмен",
 		"federation": "Фед",
 		"date": "Дата",
@@ -140,21 +140,21 @@
 		},
 		"weightclass": {
 			"all": "Все Категории",
-			"traditional": "Traditional",
-			"ipfmen": "IPF Men",
-			"ipfwomen": "IPF Women"
+			"traditional": "Традиционные",
+			"ipfmen": "IPF для Мужчин",
+			"ipfwomen": "IPF для Женщин"
 		},
 		"sort": {
-			"by_squat": "By Squat",
-			"by_bench": "By Bench",
-			"by_deadlift": "By Deadlift",
-			"by_total": "By Total",
+			"by_squat": "По Приседанию",
+			"by_bench": "По Жиму",
+			"by_deadlift": "По Тяге",
+			"by_total": "По Сумме",
 			"by_allometric": "By Allometric Scaling",
-			"by_glossbrenner": "By Glossbrenner",
-			"by_mcculloch": "By McCulloch",
-			"by_wilks": "By Wilks",
-			"weight": "Weight Sorts",
-			"points": "Point Sorts"
+			"by_glossbrenner": "По Глоссбреннеру",
+			"by_mcculloch": "По МкКуллоку",
+			"by_wilks": "По Вилксу",
+			"weight": "Сортировки по Весу",
+			"points": "Сортировки по Точкам"
 		},
 		"year": {
 			"all": "Все Годы"
