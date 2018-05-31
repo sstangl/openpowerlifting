@@ -1,115 +1,114 @@
-Name,Sex,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg
-B. Davis,M,52,Open,,,,
-M. Long,M,56,Open,,,,
-D. Moore,M,56,Open,,,,
-J. Schroeder,M,60,Open,,,,
-D. Allen,M,60,Open,,,,
-L. Gomes,M,60,Open,,,,
-R. Drainer,M,60,Open,,,,
-P. Clark,M,60,Open,,,,
-B. Zeimet,M,67.5,Open,,,,
-D. Abby,M,67.5,Open,,,,
-B. Jones,M,67.5,Open,,,,
-R. Bynaker,M,67.5,Open,,,,
-B. Brewka,M,67.5,Open,,,,
-B. Sample,M,67.5,Open,,,,
-G. Maloney,M,75,Open,,,,
-R. Ward,M,75,Open,,,,
-K. Le,M,75,Open,,,,
-R. Adams,M,75,Open,,,,
-C. Chinery,M,75,Open,,,,
-M. Betts,M,82.5,Open,,,,
-P. Goudreau,M,82.5,Open,,,,
-L. Sample #1,M,82.5,Open,,,,
-C. McClain,M,82.5,Open,,,,
-E. Madlock,M,82.5,Open,,,,
-M. Breault,M,82.5,Open,,,,
-M. Smith,M,82.5,Open,,,,
-D. Saltsgauer,M,82.5,Open,,,,
-D. Samuels,M,82.5,Open,,,,
-D. Barry,M,82.5,Open,,,,
-M. Miller,M,82.5,Open,,,,
-M. Nolan,M,82.5,Open,,,,
-J. Winkler,M,82.5,Open,,,,
-J. Trent,M,82.5,Open,,,,
-R. Benge,M,82.5,Open,,,,
-C. Weil,M,82.5,Open,,,,
-L. Sample #2,M,90,Open,,,,
-F. Evans,M,90,Open,,,,
-P. Bastida,M,90,Open,,,,
-D. Schwalm,M,90,Open,,,,
-R. Lamar,M,90,Open,,,,
-S. Danze,M,90,Open,,,,
-J. Manula,M,100,Open,,,,
-J. Paitz,M,100,Open,,,,
-R. Tucker,M,100,Open,,,,
-L. Dilts,M,100,Open,,,,
-H. Douglas,M,110,Open,,,,
-C. Delp,M,110,Open,,,,
-F. Williams,M,110,Open,,,,
-R. Samuels,M,110,Open,,,,
-S. Tremblay,M,110,Open,,,,
-D. Latch,M,110,Open,,,,
-K. Windholz,M,110,Open,,,,
-JB Hudson,M,110,Open,,,,
-M. Riordan,M,125,Open,,,,
-J. Strand,M,125,Open,,,,
-S. Watkins,M,125,Open,,,,
-S. Gronemeyer,M,125,Open,,,,
-G. Gutbrod,M,125+,Open,,,,
-B. Drybread,M,125+,Open,,,,
-D. Lang,M,125+,Open,,,,
-A. Boyer,F,52,Open,,,,
-B. Powers,F,56,Open,,,,
-D. Michels,F,56,Open,,,,
-J. Christiansen,F,60,Open,,,,
-K. McGowen,F,60,Open,,,,
-G. Welden,F,60,Open,,,,
-S. Wendland,F,67.5,Open,,,,
-A. Shelton,F,75,Open,,,,
-D. Allen,M,60,Open,,,,
-P. Foster,M,60,Open,,,,
-D. Scroggins,M,67.5,Open,,,,
-R. Ward,M,75,Open,,,,
-D. Heeren,M,75,Open,,,,
-K. Le,M,75,Open,,,,
-R. Adams,M,75,Open,,,,
-M. Heying,M,75,Open,,,,
-C. McClain,M,82.5,Open,,,,
-J. Winkler,M,82.5,Open,,,,
-B. Boyles,M,90,Open,,,,
-L. Sample #2,M,90,Open,,,,
-S. Snook,M,90,Open,,,,
-A. Springman,M,90,Open,,,,
-K. McArthur,M,100,Open,,,,
-P. Davis,M,100,Open,,,,
-B. Nace,M,100,Open,,,,
-S. Harding,M,100,Open,,,,
-S. Mageo,M,110,Open,,,,
-W. Sapp,M,110,Open,,,,
-R. Pierce,M,110,Open,,,,
-D. Latch,M,110,Open,,,,
-K. Windholz,M,110,Open,,,,
-K. Ufford,M,125,Open,,,,
-M. Yancey,M,125,Open,,,,
-S. Gronemeyer,M,125,Open,,,,
-M. Drybread,M,125+,Open,,,,
-B. Drybread,M,125+,Open,,,,
-D. Long,M,125+,Open,,,,
-B. Longfellow,M,60,Masters 1,,,,
-D. Whitney,M,67.5,Masters 1,,,,
-W. Bridges,M,67.5,Masters 1,,,,
-C. Weil,M,75,Masters 1,,,,
-W. Murphy,M,75,Masters 1,,,,
-R. Johns,M,82.5,Masters 1,,,,
-J. Duree,M,110,Masters 1,,,,
-J. Ayers,M,110,Masters 1,,,,
-S. Watkins,M,125,Masters 1,,,,
-E. Stacy,M,125,Masters 1,,,,
-S. Smith,M,125,Masters 1,,,,
-A. Boyer,M,52,Masters 2,,,,
-Roy Mason,M,75,Masters 2,,,,
-J. Woods,M,100,Masters 2,,,,
-B. Clark,M,110,Masters 2,,,,
-L. Marsh,M,125+,Masters 2,,,,
-B. Drybread,M,125+,Masters 2,,,,
+Name,Sex,WeightClassKg,Division,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Event,Equipment
+B. Davis,M,52,Open,60,60,60,180,SBD,Single-ply
+M. Long,M,56,Open,205,115,227.5,547.5,SBD,Single-ply
+D. Moore,M,56,Open,172.5,112.5,182.5,467.5,SBD,Single-ply
+J. Schroeder,M,60,Open,180,102.5,205,487.5,SBD,Single-ply
+D. Allen,M,60,Open,187.5,100,190,477.5,SBD,Single-ply
+L. Gomes,M,60,Open,137.5,97.5,200,435,SBD,Single-ply
+R. Drainer,M,60,Open,160,85,182.5,427.5,SBD,Single-ply
+P. Clark,M,60,Open,90,72.5,120,282.5,SBD,Single-ply
+B. Zeimet,M,67.5,Open,170,132.5,225,527.5,SBD,Single-ply
+D. Abby,M,67.5,Open,202.5,112.5,210,525,SBD,Single-ply
+B. Jones,M,67.5,Open,132.5,105,207.5,445,SBD,Single-ply
+R. Bynaker,M,67.5,Open,125,70,182.5,377.5,SBD,Single-ply
+B. Brewka,M,67.5,Open,107.5,85,165,357.5,SBD,Single-ply
+B. Sample,M,67.5,Open,137.5,70,150,357.5,SBD,Single-ply
+G. Maloney,M,75,Open,232.5,162.5,277.5,672.5,SBD,Single-ply
+R. Ward,M,75,Open,272.5,130,262.5,665,SBD,Single-ply
+K. Le,M,75,Open,232.5,142.5,250,625,SBD,Single-ply
+R. Adams,M,75,Open,215,145,240,600,SBD,Single-ply
+C. Chinery,M,75,Open,220,117.5,230,567.5,SBD,Single-ply
+M. Betts,M,82.5,Open,295,160,265,730,SBD,Single-ply
+P. Goudreau,M,82.5,Open,312.5,142.5,265,720,SBD,Single-ply
+L. Sample #1,M,82.5,Open,247.5,150,282.5,680,SBD,Single-ply
+C. McClain,M,82.5,Open,270,142.5,250,662.5,SBD,Single-ply
+E. Madlock,M,82.5,Open,210,155,272.5,637.5,SBD,Single-ply
+M. Breault,M,82.5,Open,240,140,247.5,627.5,SBD,Single-ply
+M. Smith,M,82.5,Open,237.5,142.5,227.5,607.5,SBD,Single-ply
+D. Saltsgauer,M,82.5,Open,227.5,130,240,597.5,SBD,Single-ply
+D. Samuels,M,82.5,Open,220,150,215,585,SBD,Single-ply
+D. Barry,M,82.5,Open,217.5,127.5,220,565,SBD,Single-ply
+M. Miller,M,82.5,Open,205,122.5,237.5,565,SBD,Single-ply
+M. Nolan,M,82.5,Open,190,125,240,555,SBD,Single-ply
+J. Winkler,M,82.5,Open,212.5,122.5,217.5,552.5,SBD,Single-ply
+J. Trent,M,82.5,Open,205,105,227.5,537.5,SBD,Single-ply
+R. Benge,M,82.5,Open,185,107.5,215,507.5,SBD,Single-ply
+C. Weil,M,82.5,Open,140,110,205,455,SBD,Single-ply
+L. Sample #2,M,90,Open,260,170,292.5,722.5,SBD,Single-ply
+F. Evans,M,90,Open,272.5,150,292.5,715,SBD,Single-ply
+P. Bastida,M,90,Open,252.5,132.5,255,690,SBD,Single-ply
+D. Schwalm,M,90,Open,240,170,225,635,SBD,Single-ply
+R. Lamar,M,90,Open,242.5,122.5,212.5,577.5,SBD,Single-ply
+S. Danze,M,90,Open,165,77.5,185,427.5,SBD,Single-ply
+J. Manula,M,100,Open,257.5,172.5,267.5,697.5,SBD,Single-ply
+J. Paitz,M,100,Open,242.5,137.5,245,625,SBD,Single-ply
+R. Tucker,M,100,Open,225,147.5,242.5,615,SBD,Single-ply
+L. Dilts,M,100,Open,212.5,132.5,245,590,SBD,Single-ply
+H. Douglas,M,110,Open,322.5,185,295,795,SBD,Single-ply
+C. Delp,M,110,Open,287.5,137.5,275,700,SBD,Single-ply
+F. Williams,M,110,Open,262.5,160,272.5,695,SBD,Single-ply
+R. Samuels,M,110,Open,230,165,245,640,SBD,Single-ply
+S. Tremblay,M,110,Open,240,137.5,255,632.5,SBD,Single-ply
+D. Latch,M,110,Open,225,135,255,615,SBD,Single-ply
+K. Windholz,M,110,Open,232.5,142.5,230,605,SBD,Single-ply
+JB Hudson,M,110,Open,150,155,195,500,SBD,Single-ply
+M. Riordan,M,125,Open,310,180,295,785,SBD,Single-ply
+J. Strand,M,125,Open,160,175,260,695,SBD,Single-ply
+S. Watkins,M,125,Open,227.5,180,237.5,645,SBD,Single-ply
+S. Gronemeyer,M,125,Open,207.5,132.5,205,545,SBD,Single-ply
+G. Gutbrod,M,125+,Open,267.5,170,247.5,685,SBD,Single-ply
+B. Drybread,M,125+,Open,185,132.5,227.5,545,SBD,Single-ply
+D. Lang,M,125+,Open,175,132.5,215,522.5,SBD,Single-ply
+A. Boyer,F,52,Masters 2,87.5,125,122.5,272.5,SBD,Single-ply
+B. Powers,F,56,Open,137.5,67.5,142.5,347.5,SBD,Single-ply
+D. Michels,F,56,Open,90,57.5,107.5,255,SBD,Single-ply
+J. Christiansen,F,60,Open,137.5,57.5,152.5,347.5,SBD,Single-ply
+K. McGowen,F,60,Open,100,60,125,285,SBD,Single-ply
+G. Welden,F,60,Open,85,45,120,250,SBD,Single-ply
+S. Wendland,F,67.5,Open,210,122.5,205,537.5,SBD,Single-ply
+A. Shelton,F,75,Open,112.5,60,117.5,290,SBD,Single-ply
+D. Allen,M,60,Open,187.5,100,190,477.5,SBD,Single-ply
+P. Foster,M,60,Open,155,85,177.5,417.5,SBD,Single-ply
+D. Scroggins,M,67.5,Open,210,122.5,205,537.5,SBD,Single-ply
+R. Ward,M,75,Open,272.5,130,262.5,665,SBD,Single-ply
+D. Heeren,M,75,Open,237.5,132.5,285,655,SBD,Single-ply
+K. Le,M,75,Open,232.5,142.5,250,625,SBD,Single-ply
+R. Adams,M,75,Open,215,145,240,600,SBD,Single-ply
+M. Heying,M,75,Open,200,137.5,207.5,545,SBD,Single-ply
+C. McClain,M,82.5,Open,270,142.5,250,662.5,SBD,Single-ply
+J. Winkler,M,82.5,Open,212.5,122.5,217.5,552.5,SBD,Single-ply
+B. Boyles,M,90,Open,292.5,177.5,267.5,737.5,SBD,Single-ply
+L. Sample #2,M,90,Open,260,170,292.5,722.5,SBD,Single-ply
+S. Snook,M,90,Open,275,157.5,272.5,705,SBD,Single-ply
+A. Springman,M,90,Open,225,142.5,235,602.5,SBD,Single-ply
+K. McArthur,M,100,Open,287.5,172.5,255,715,SBD,Single-ply
+P. Davis,M,100,Open,262.5,175,250,687.5,SBD,Single-ply
+B. Nace,M,100,Open,222.5,157.5,280,660,SBD,Single-ply
+S. Harding,M,100,Open,187.5,125,210,522.5,SBD,Single-ply
+S. Mageo,M,110,Open,307.5,195,265,767.5,SBD,Single-ply
+W. Sapp,M,110,Open,272.5,172.5,305,750,SBD,Single-ply
+R. Pierce,M,110,Open,250,150,272.5,672.5,SBD,Single-ply
+D. Latch,M,110,Open,225,135,255,615,SBD,Single-ply
+K. Windholz,M,110,Open,232.5,142.5,230,605,SBD,Single-ply
+K. Ufford,M,125,Open,305,200,340,845,SBD,Single-ply
+M. Yancey,M,125,Open,257.5,165,275,697.5,SBD,Single-ply
+S. Gronemeyer,M,125,Open,207.5,132.5,205,545,SBD,Single-ply
+M. Drybread,M,125+,Open,240,182.5,260,682.5,SBD,Single-ply
+B. Drybread,M,125+,Open,185,125,227.5,537.5,SBD,Single-ply
+D. Long,M,125+,Open,175,132.5,215,522.5,SBD,Single-ply
+B. Longfellow,M,60,Masters 1,137.5,95,182.5,415,SBD,Single-ply
+D. Whitney,M,67.5,Masters 1,187.5,110,227.5,525,SBD,Single-ply
+W. Bridges,M,67.5,Masters 1,187.5,107.5,227.5,522.5,SBD,Single-ply
+C. Weil,M,75,Masters 1,140,110,205,455,SBD,Single-ply
+W. Murphy,M,75,Masters 1,210,,,,SBD,Single-ply
+R. Johns,M,82.5,Masters 1,170,107.5,222.5,500,SBD,Single-ply
+J. Duree,M,110,Masters 1,272.5,130,262.5,665,SBD,Single-ply
+J. Ayers,M,110,Masters 1,232.5,167.5,250,650,SBD,Single-ply
+S. Watkins,M,125,Masters 1,227.5,180,237.5,645,SBD,Single-ply
+E. Stacy,M,125,Masters 1,200,137.5,205,542.5,SBD,Single-ply
+S. Smith,M,125,Masters 1,185,147.5,180,512.5,SBD,Single-ply
+Roy Mason,M,75,Masters 2,137.5,42.5,247.5,427.5,SBD,Single-ply
+J. Woods,M,100,Masters 2,70,110,150,330,SBD,Single-ply
+B. Clark,M,110,Masters 2,182.5,100,205,487.5,SBD,Single-ply
+L. Marsh,M,125+,Masters 2,245,167.5,185,597.5,SBD,Single-ply
+B. Drybread,M,125+,Masters 2,185,132.5,227.5,545,SBD,Single-ply

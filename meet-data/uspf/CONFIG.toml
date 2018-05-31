@@ -1,0 +1,19 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    juniors = {name = "Juniors",min=0,max=23}
+    masters40 = {name = "Masters 40+",min=39,max=999}
+    masters50 = {name = "Masters 50+",min=49,max=999}
+    masters60 = {name = "Masters 60+",min=59,max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "F"
+
+[exclusions]
+   
