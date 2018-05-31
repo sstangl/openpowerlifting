@@ -1,9 +1,23 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    juniors = {name = "Juniors",min=0,max=23}
-    masters40 = {name = "Masters 40+",min=39,max=999}
-    masters50 = {name = "Masters 50+",min=49,max=999}
-    masters60 = {name = "Masters 60+",min=59,max=999}
+    teen = {name ="Teen",min=0,max=19}
+    policefire = {name ="Police/Fire",min=0,max=9999}
+    juniors = {name = "Juniors 20-23",min=0,max=23}
+    submasters = {name = "Sub-Masters 35-39",min=35,max=39}
+    masters4044 = {name = "Masters 40-44",min=39,max=44}
+    masters4549 = {name = "Masters 45-49",min=45,max=49}
+    masters5054 = {name = "Masters 50-54",min=50,max=54}
+    masters5559 = {name = "Masters 55-59",min=55,max=59}
+    masters6064 = {name = "Masters 60-64",min=60,max=64}
+    masters6569 = {name = "Masters 65-69",min=65,max=69}
+    masters7074 = {name = "Masters 70-74",min=70,max=74}
+    masters7579 = {name = "Masters 75-79",min=75,max=79}
+
+    masters40p = {name = "Masters 40+",min=40,max=999}
+    masters50p = {name = "Masters 50+",min=50,max=999}
+    masters60p = {name = "Masters 60+",min=60,max=999}
+    masters70p = {name = "Masters 70+",min=70,max=999}
+    masters80p = {name = "Masters 80+",min=80,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
