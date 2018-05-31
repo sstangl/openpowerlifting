@@ -1,5 +1,6 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
+    juniors = {name = "Juniors",min=0,max=23}
 
 [weightclasses.default_M]
     classes = ["49","54","59","65","72","80","88","97","107","107+"]
@@ -22,4 +23,5 @@
     sex = "F"
 
 [exclusions]
+    1001 = ["check_row_lift_order"]
     1601 = ["check_row_lift_order"]
