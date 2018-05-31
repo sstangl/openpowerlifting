@@ -13,7 +13,7 @@ extern crate strum;
 mod tests;
 
 use rocket::fairing::AdHoc;
-use rocket::http::{Cookies, Status};
+use rocket::http::{Cookies, ContentType, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect, Responder, Response};
 use rocket::{Outcome, State};
@@ -131,16 +131,22 @@ fn make_locale<'db>(
 
 /// A file served from /static.
 enum StaticFile {
-    Gzipped(File),
+    /// PathBuf is the path to the non-gz version of the file.
+    Gzipped(PathBuf, File),
     Plain(NamedFile),
 }
 
 impl Responder<'static> for StaticFile {
     fn respond_to(self, req: &Request) -> Result<Response<'static>, Status> {
         let mut response = match self {
-            StaticFile::Gzipped(f) => {
+            StaticFile::Gzipped(p, f) => {
                 let mut r = f.respond_to(req)?;
                 r.set_raw_header("Content-Encoding", "gzip");
+                if let Some(ext) = p.extension() {
+                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy()) {
+                        r.set_header(ct);
+                    }
+                }
                 r
             },
             StaticFile::Plain(f) => f.respond_to(req)?,
@@ -161,7 +167,7 @@ fn statics(file: PathBuf, encoding: AcceptEncoding) -> Option<StaticFile> {
         let gzfilename = format!("{}.gz", file.file_name()?.to_str()?);
         let gzfilepath = filepath.with_file_name(gzfilename);
         if let Ok(gzfile) = File::open(gzfilepath) {
-            return Some(StaticFile::Gzipped(gzfile));
+            return Some(StaticFile::Gzipped(filepath, gzfile));
         }
     }
 
