@@ -348,6 +348,12 @@ fn old_contact() -> Redirect {
     Redirect::permanent("/contact")
 }
 
+#[get("/robots.txt")]
+fn robots_txt() -> &'static str {
+    // Allow robots full site access.
+    "User-agent: *\nDisallow:"
+}
+
 #[error(404)]
 fn not_found() -> &'static str {
     "404 -- Sorry, the Beta site is still being worked on. Check back soon! Send encouragement!"
@@ -387,6 +393,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 data,
                 faq,
                 contact,
+                robots_txt,
             ],
         )
         .mount(
