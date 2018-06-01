@@ -44,7 +44,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 100,B,M,Single-ply,Open,Ryan Duble,187.5,,187.5,OR,USA,,,14
 110,B,M,Single-ply,Open,James Hunter,300,,300,CA,USA,,,1
 110,B,M,Single-ply,Open,Joey Murphy,265,,265,GA,USA,,,2
-110,B,M,Single-ply,Open,Carlton James Jr.,242.5,,242.5,TX,USA,,,3
+110,B,M,Single-ply,Open,Carlton James Jr,242.5,,242.5,TX,USA,,,3
 110,B,M,Single-ply,Open,Tyson Eugene Baker,155,,155,OR,USA,,,4
 110,B,M,Single-ply,Open,Mark Fierro,,,,CO,USA,,,DQ
 117.5,B,M,Single-ply,Open,Adrian Larsen,322.5,,322.5,OR,USA,,,1
@@ -153,7 +153,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 82.5,B,M,Single-ply,Juniors 20-25,A. J. Mangum,110,,110,TX,USA,,,4
 90,B,M,Single-ply,Juniors 20-25,David Onan,192.5,,192.5,MN,USA,,,1
 90,B,M,Single-ply,Juniors 20-25,Brian Shekels,185,,185,WI,USA,,,2
-90,B,M,Single-ply,Juniors 20-25,Dustin Mc Farland,147.5,,147.5,OR,USA,,,3
+90,B,M,Single-ply,Juniors 20-25,Dustin McFarland,147.5,,147.5,OR,USA,,,3
 90,B,M,Single-ply,Juniors 20-25,Bill Sanders,,,,MA,USA,,,DQ
 100,B,M,Single-ply,Juniors 20-25,Waldo Villarreal,180,,180,TX,USA,,,1
 100,B,M,Single-ply,Juniors 20-25,Adam Contreras,160,,160,CA,USA,,,2
@@ -208,7 +208,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 110,B,M,Single-ply,Masters 40-46,Joey Murphy,265,,265,GA,USA,,,3
 110,B,M,Single-ply,Masters 40-46,Kent Doerfler,255,,255,OR,USA,,,4
 110,B,M,Single-ply,Masters 40-46,Aaron Carrion,227.5,,227.5,CA,USA,,,5
-110,B,M,Single-ply,Masters 40-46,Gary Mc Farland,197.5,,197.5,CA,USA,,,6
+110,B,M,Single-ply,Masters 40-46,Gary McFarland,197.5,,197.5,CA,USA,,,6
 117.5,B,M,Single-ply,Masters 40-46,Patrick Parnell,295,,295,TX,USA,,,1
 117.5,B,M,Single-ply,Masters 40-46,Mike Drake,227.5,,227.5,CA,USA,,,2
 125,B,M,Single-ply,Masters 40-46,Patrick Holloway,290,,290,AZ,USA,,,1
@@ -267,7 +267,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 110,B,M,Single-ply,Masters 54-60,Gary Stevens,175,,175,WY,USA,,,2
 110,B,M,Single-ply,Masters 54-60,Stephen Cohle,170,,170,MI,USA,,,3
 110,B,M,Single-ply,Masters 54-60,Thomas Wright,118,,118,KS,USA,,,4
-125,B,M,Single-ply,Masters 54-60,Willard Crossen Jr.,250,,250,WA,USA,,,1
+125,B,M,Single-ply,Masters 54-60,Willard Crossen Jr,250,,250,WA,USA,,,1
 125,B,M,Single-ply,Masters 54-60,Jeff Fahrenbruch,,,,AZ,USA,,,DQ
 140,B,M,Single-ply,Masters 54-60,Bruce Sabin,252.5,,252.5,CA,USA,,,1
 140,B,M,Single-ply,Masters 54-60,Forest Hofer,247.5,,247.5,WA,USA,,,2
@@ -335,12 +335,12 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 90,B,M,Single-ply,Law/Fire,Nick Berriman,205,,205,OR,USA,,,1
 100,B,M,Single-ply,Law/Fire,Greg Alves,205,,205,CA,USA,,,1
 125,B,M,Single-ply,Law/Fire,Jeffrey Begue,282.5,,282.5,OH,USA,,,1
-140,B,M,Single-ply,Law/Fire,Tommy Harrison Jr.,322.5,,322.5,IL,USA,,,1
+140,B,M,Single-ply,Law/Fire,Tommy Harrison Jr,322.5,,322.5,IL,USA,,,1
 140,B,M,Single-ply,Law/Fire,Tracy Lundin,240,,240,OR,USA,,,2
 140+,B,M,Single-ply,Law/Fire,Hiram Kaikaina,,,,HI,USA,,,DQ
 100,B,M,Single-ply,Sub-Masters 33-39,Kerry Barbetti,147.5,,147.5,MN,USA,,,3
 125,B,M,Single-ply,Sub-Masters 33-39,Jeffrey Begue,282.5,,282.5,OH,USA,,,2
-140,B,M,Single-ply,Sub-Masters 33-39,Tommy Harrison Jr.,322.5,,322.5,IL,USA,,,2
+140,B,M,Single-ply,Sub-Masters 33-39,Tommy Harrison Jr,322.5,,322.5,IL,USA,,,2
 140+,B,M,Single-ply,Sub-Masters 33-39,Keoni Reich,252.5,,252.5,HI,USA,,,3
 140+,B,M,Single-ply,Sub-Masters 33-39,Hiram Kaikaina,,,,HI,USA,,,DQ
 75,B,M,Single-ply,Law/Fire 40-47,Mike Bingham,205.5,,205.5,PA,USA,,,1
@@ -350,9 +350,9 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 100,B,M,Single-ply,Law/Fire 40-47,Dean Ideue,,,,HI,USA,,,DQ
 110,B,M,Single-ply,Law/Fire 40-47,Frank Wakakuwa,282.5,,282.5,HI,USA,,,1
 110,B,M,Single-ply,Law/Fire 40-47,Dennis Lowry,237.5,,237.5,CA,USA,,,2
-110,B,M,Single-ply,Law/Fire 40-47,Gary Mc Farland,195,,195,CA,USA,,,3
+110,B,M,Single-ply,Law/Fire 40-47,Gary McFarland,195,,195,CA,USA,,,3
 110,B,M,Single-ply,Law/Fire 40-47,David Fischer,,,,GA,USA,,,DQ
-117.5,B,M,Single-ply,Law/Fire 40-47,Robert Lincoln Jr.,295,,295,CA,USA,,,1
+117.5,B,M,Single-ply,Law/Fire 40-47,Robert Lincoln Jr,295,,295,CA,USA,,,1
 117.5,B,M,Single-ply,Law/Fire 40-47,Jerry Warren,177.5,,177.5,OK,USA,,,2
 117.5,B,M,Single-ply,Law/Fire 40-47,Stephen Burns,145,,145,NV,USA,,,3
 140,B,M,Single-ply,Law/Fire 40-47,Warren Orr,210,,210,,Canada,,,1
@@ -389,7 +389,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 90,D,M,Single-ply,Open,Ivan Gamboa,,167.5,167.5,,Mexico,,,10
 100,D,M,Single-ply,Open,Petri Hietamäki,,320,320,,Finland,,,1
 100,D,M,Single-ply,Open,Tatu Avola,,320,320,,Finland,,,2
-100,D,M,Single-ply,Open,Steve Lemari?,,312.5,312.5,LA,USA,,,3
+100,D,M,Single-ply,Open,Steve Lemari,,312.5,312.5,LA,USA,,,3
 100,D,M,Single-ply,Open,Mitch Edelstein,,302.5,302.5,MN,USA,,,4
 100,D,M,Single-ply,Open,Matt Vinopal,,297.5,297.5,WI,USA,,,5
 100,D,M,Single-ply,Open,Adan Rios,,285,285,AZ,USA,,,6
@@ -422,7 +422,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 100,D,M,Single-ply,Open,Dylan Wentz,,252.5,252.5,OR,USA,,,9
 100,D,M,Single-ply,Open,Kyle Herzik,,230,230,NV,USA,,,10
 100,D,M,Single-ply,Open,Dan Peterson,,207.5,207.5,CA,USA,,,11
-110,D,M,Single-ply,Open,Dennis Schmidt Jr.,,275.5,275.5,MN,USA,,,5
+110,D,M,Single-ply,Open,Dennis Schmidt Jr,,275.5,275.5,MN,USA,,,5
 110,D,M,Single-ply,Open,Harry Jackson,,267.5,267.5,VA,USA,,,7
 140,D,M,Single-ply,Open,Alan Aerts,,260,260,CA,USA,,,5
 140+,D,M,Single-ply,Open,Leo Contreras,,142.5,142.5,CA,USA,,,2
@@ -495,7 +495,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 82.5,D,M,Single-ply,Juniors 20-25,Marvin Fuentes,,187.5,187.5,TX,USA,,,4
 90,D,M,Single-ply,Juniors 20-25,Matthew Marsiglia,,305,305,MI,USA,,,1
 90,D,M,Single-ply,Juniors 20-25,Bill Sanders,,295,295,MA,USA,,,2
-90,D,M,Single-ply,Juniors 20-25,Dustin Mc Farland,,260,260,OR,USA,,,3
+90,D,M,Single-ply,Juniors 20-25,Dustin McFarland,,260,260,OR,USA,,,3
 90,D,M,Single-ply,Juniors 20-25,Christopher Calderon,,237.5,237.5,TX,USA,,,4
 100,D,M,Single-ply,Juniors 20-25,Jon Mokma,,260,260,MI,USA,,,1
 100,D,M,Single-ply,Juniors 20-25,Andy Munsey,,260,260,OR,USA,,,2
@@ -548,7 +548,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 90,D,M,Single-ply,Masters 47-53,Tom Eiseman,,325,325,NJ,USA,,,1
 90,D,M,Single-ply,Masters 47-53,Jody Woods,,275,275,CA,USA,,,2
 90,D,M,Single-ply,Masters 47-53,Dan Guches,,260,260,OR,USA,,,3
-100,D,M,Single-ply,Masters 47-53,Steve Lemari?,,312.5,312.5,LA,USA,,,1
+100,D,M,Single-ply,Masters 47-53,Steve Lemari,,312.5,312.5,LA,USA,,,1
 100,D,M,Single-ply,Masters 47-53,Mitch Edelstein,,302.5,302.5,MN,USA,,,2
 100,D,M,Single-ply,Masters 47-53,Robert Harris,,232.5,232.5,NV,USA,,,3
 100,D,M,Single-ply,Masters 47-53,Steve Gaytan,,227.5,227.5,CA,USA,,,4
@@ -578,7 +578,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 110,D,M,Single-ply,Masters 54-60,Thomas Wright,,182.5,182.5,KS,USA,,,5
 140+,D,M,Single-ply,Masters 54-60,Leo Contreras,,142.5,142.5,CA,USA,,,1
 75,D,M,Single-ply,Masters 61-67,James Christian,,207.5,207.5,TX,USA,,,1
-75,D,M,Single-ply,Masters 61-67,Ray Gandeza Sr.,,205,205,HI,USA,,,2
+75,D,M,Single-ply,Masters 61-67,Ray Gandeza Sr,,205,205,HI,USA,,,2
 75,D,M,Single-ply,Masters 61-67,Ron White,,127.5,127.5,WA,USA,,,3
 75,D,M,Single-ply,Masters 61-67,Martin Montgomery,,,,IN,USA,,,DQ
 82.5,D,M,Single-ply,Masters 61-67,Robert Krowech,,257.5,257.5,MN,USA,,,1
@@ -613,10 +613,10 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 82.5,D,M,Single-ply,Law/Fire,Dave Claroni,,220.5,220.5,ME,USA,,,1
 90,D,M,Single-ply,Law/Fire,Nick Berriman,,220,220,OR,USA,,,1
 100,D,M,Single-ply,Law/Fire,Greg Alves,,225,225,CA,USA,,,1
-140,D,M,Single-ply,Law/Fire,Tommy Harrison Jr.,,275,275,IL,USA,,,1
+140,D,M,Single-ply,Law/Fire,Tommy Harrison Jr,,275,275,IL,USA,,,1
 140,D,M,Single-ply,Law/Fire,Manny Burruel,,255,255,CA,USA,,,2
 100,D,M,Single-ply,Sub-Masters 33-39,Kerry Barbetti,,272.5,272.5,MN,USA,,,1
-140,D,M,Single-ply,Sub-Masters 33-39,Tommy Harrison Jr.,,275,275,IL,USA,,,1
+140,D,M,Single-ply,Sub-Masters 33-39,Tommy Harrison Jr,,275,275,IL,USA,,,1
 140+,D,M,Single-ply,Sub-Masters 33-39,Keoni Reich,,315,315,HI,USA,,,2
 117.5,D,M,Single-ply,Law/Fire 40-47,Lance Davis,,260,260,UT,USA,,,1
 140,D,M,Single-ply,Law/Fire 40-47,Warren Orr,,220,220,,Canada,,,1
@@ -657,7 +657,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,BestBenchKg,BestDeadliftKg,Total
 56,B,F,Single-ply,Teen 18-19,Ambyr Reyes,97.5,,97.5,UT,USA,102.5,,1
 82.5,B,F,Single-ply,Teen 18-19,Hannah Biddle,62.5,,62.5,IN,USA,,,1
 60,B,F,Single-ply,Juniors 20-25,Karina Phipps,70,,70,NV,USA,,,1
-60,B,F,Single-ply,Juniors 20-25,Maryann Sutton,45,,45,CA,USA,,,2
+60,B,F,Single-ply,Juniors 20-25,Mary-Ann Sutton,45,,45,CA,USA,,,2
 60,B,F,Single-ply,Juniors 20-25,Rocio Ruiz,35,,35,,Mexico,,,3
 67.5,B,F,Single-ply,Juniors 20-25,Linda Okoro,63,,63,TX,USA,,,1
 82.5,B,F,Single-ply,Juniors 20-25,Courtney Meeker,137.5,,137.5,TX,USA,,,1
