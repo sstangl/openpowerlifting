@@ -13,7 +13,7 @@ extern crate strum;
 mod tests;
 
 use rocket::fairing::AdHoc;
-use rocket::http::{Cookies, ContentType, Status};
+use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{NamedFile, Redirect, Responder, Response};
 use rocket::{Outcome, State};
@@ -143,12 +143,13 @@ impl Responder<'static> for StaticFile {
                 let mut r = f.respond_to(req)?;
                 r.set_raw_header("Content-Encoding", "gzip");
                 if let Some(ext) = p.extension() {
-                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy()) {
+                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy())
+                    {
                         r.set_header(ct);
                     }
                 }
                 r
-            },
+            }
             StaticFile::Plain(f) => f.respond_to(req)?,
         };
         // Set to 24 hours. Production should serve via Nginx anyway.

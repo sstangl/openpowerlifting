@@ -6,7 +6,7 @@ use super::rocket;
 use server::langpack::LangInfo;
 use server::opldb::OplDb;
 
-use rocket::http::Status;
+use rocket::http::{Cookie, Status};
 use rocket::local::Client;
 
 use std::sync::{Once, ONCE_INIT};
@@ -153,14 +153,36 @@ fn test_no_server_header() {
     assert!(!response.headers().contains("Server"));
 }
 
+/// Files served from "/static" should be served with the "Cache-Control"
+/// header, to prevent them from being constantly reloaded.
 #[test]
 fn test_static_cache_control() {
-    // Files served from "/static" should be served with the "Cache-Control"
-    // header, to prevent them from being constantly reloaded.
     let client = client();
     let response = client.get("/static/style.css").dispatch();
     assert_eq!(response.status(), Status::Ok);
     assert!(response.headers().contains("Cache-Control"));
     let cache_control = response.headers().get_one("Cache-Control").unwrap();
     assert!(cache_control.contains("max-age="));
+}
+
+/// Setting the "lang" cookie should change the text language,
+/// via the HTML5 html "lang" tag.
+#[test]
+fn test_language_cookie() {
+    let client = client();
+    let lang_cookie = Cookie::new("lang", "ru");
+    let mut res = client.get("/").cookie(lang_cookie).dispatch();
+    assert_eq!(res.status(), Status::Ok);
+    assert!(res.body_string().unwrap().contains("<html lang=\"ru\""));
+}
+
+/// A nonsense "lang" cookie value should still render OK (with the English
+/// default).
+#[test]
+fn test_language_cookie_nonsense() {
+    let client = client();
+    let lang_cookie = Cookie::new("lang", "fgsfds");
+    let mut res = client.get("/").cookie(lang_cookie).dispatch();
+    assert_eq!(res.status(), Status::Ok);
+    assert!(res.body_string().unwrap().contains("<html lang=\"en\""));
 }

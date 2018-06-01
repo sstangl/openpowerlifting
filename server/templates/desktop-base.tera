@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{language}}">
 <head>
   {# Dynamic header parts. #}
   <title>{{page_title}}</title>
