@@ -1,14 +1,14 @@
-Name,BodyweightKg,WeightClassKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Sex,Equipment,Event,Place
-Lisa Hogan,59.6,60,120,62.5,140,322.5,DT Open,F,Wraps,SBD,1
-Brooke Potter,73.12,75,105,45,125,275,DT T18/19,F,Wraps,SBD,1
-Josh Chestnut,65.41,67.5,142.5,97.5,200,440,DT T18/19,M,Wraps,SBD,1
-Christopher Avery,73.84,75,117.5,95,160,372.5,T13/15,M,Wraps,SBD,1
-John Whittle,72.03,75,127.5,72.5,170,370,DT T13/15,M,Wraps,SBD,1
-Skyler Yoshino,81.65,82.5,145,100,175,420,DT T16/17,M,Wraps,SBD,1
-Michael Caputo,81.65,82.5,197.5,150,200,547.5,DT Open,M,Wraps,SBD,1
-Greg Eyerly,87.82,90,120,105,157.5,382.5,M50/54,M,Wraps,SBD,1
-Alex Buck,89.81,90,182.5,140,215,537.5,DT Open,M,Wraps,SBD,1
-Michael Bailey,107.32,110,175,120,197.5,492.5,DT T16/17,M,Wraps,SBD,1
-Wayne Vreeland,109.5,110,187.5,132.5,225,545,DT Open,M,Wraps,SBD,1
-Phillip Exline,108.5,110,192.5,125,195,512.5,Open,M,Wraps,SBD,1
-Josh Lilly,107.59,110,,147.5,,147.5,Open,M,Raw,B,1
+Name,BodyweightKg,WeightClassKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Division,Tested,Sex,Equipment,Event,Place
+Lisa Hogan,59.6,60,120,62.5,140,322.5,Open,Yes,F,Wraps,SBD,1
+Brooke Potter,73.12,75,105,45,125,275,Teen 18-19,Yes,F,Wraps,SBD,1
+Josh Chestnut,65.41,67.5,142.5,97.5,200,440,Teen 18-19,Yes,M,Wraps,SBD,1
+Christopher Avery,73.84,75,117.5,95,160,372.5,Teen 13-15,No,M,Wraps,SBD,1
+John Whittle,72.03,75,127.5,72.5,170,370,Teen 13-15,Yes,M,Wraps,SBD,1
+Skyler Yoshino,81.65,82.5,145,100,175,420,Teen 16-17,Yes,M,Wraps,SBD,1
+Michael Caputo,81.65,82.5,197.5,150,200,547.5,Open,Yes,M,Wraps,SBD,1
+Greg Eyerly,87.82,90,120,105,157.5,382.5,Masters 50-54,No,M,Wraps,SBD,1
+Alex Buck,89.81,90,182.5,140,215,537.5,Open,Yes,M,Wraps,SBD,1
+Michael Bailey,107.32,110,175,120,197.5,492.5,Teen 16-17,Yes,M,Wraps,SBD,1
+Wayne Vreeland,109.5,110,187.5,132.5,225,545,Open,Yes,M,Wraps,SBD,1
+Phillip Exline,108.5,110,192.5,125,195,512.5,Open,No,M,Wraps,SBD,1
+Josh Lilly,107.59,110,,147.5,,147.5,Open,No,M,Raw,B,1

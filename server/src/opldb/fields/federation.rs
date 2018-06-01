@@ -22,8 +22,12 @@ pub enum Federation {
     AAPF,
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
+    #[strum(to_string = "ADAU", serialize = "adau")]
+    ADAU,
     #[strum(to_string = "ADFPA", serialize = "adfpa")]
     ADFPA,
+    #[strum(to_string = "ADFPF", serialize = "adfpf")]
+    ADFPF,
     #[strum(to_string = "AEP", serialize = "aep")]
     AEP,
     #[strum(to_string = "AfricanPF", serialize = "africanpf")]
@@ -54,6 +58,8 @@ pub enum Federation {
     CPF,
     #[strum(to_string = "CPL", serialize = "cpl")]
     CPL,
+    #[strum(to_string = "CPO", serialize = "cpo")]
+    CPO,
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
     #[strum(to_string = "CSST", serialize = "csst")]
@@ -81,12 +87,20 @@ pub enum Federation {
     #[serde(rename = "GPC-AUS")]
     #[strum(to_string = "GPC-AUS", serialize = "gpc-aus")]
     GPCAUS,
+    #[serde(rename = "GPC-CAN")]
+    #[strum(to_string = "GPC-CAN", serialize = "gpc-can")]
+    GPCCAN,
     #[serde(rename = "GPC-GB")]
     #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
     GPCGB,
+    #[serde(rename = "GPC-IRL")]
+    #[strum(to_string = "GPC-IRL", serialize = "gpc-irl")]
+    GPCIRL,
     #[serde(rename = "GPC-NZ")]
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
+    #[strum(to_string = "Hardcore", serialize = "hardcore")]
+    Hardcore,
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
@@ -103,6 +117,8 @@ pub enum Federation {
     IrishPO,
     #[strum(to_string = "KRAFT", serialize = "kraft")]
     KRAFT,
+    #[strum(to_string = "LPF", serialize = "lpf")]
+    LPF,
     #[strum(to_string = "MHP", serialize = "mhp")]
     MHP,
     #[strum(to_string = "MM", serialize = "mm")]
@@ -129,6 +145,8 @@ pub enum Federation {
     PA,
     #[strum(to_string = "PLZS", serialize = "plzs")]
     PLZS,
+    #[strum(to_string = "PRIDE", serialize = "pride")]
+    PRIDE,
     #[strum(to_string = "ProRaw", serialize = "proraw")]
     ProRaw,
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
@@ -183,6 +201,8 @@ pub enum Federation {
     #[serde(rename = "WPC-RUS")]
     #[strum(to_string = "WPC-RUS", serialize = "wpc-rus")]
     WPCRUS,
+    #[strum(to_string = "WPF", serialize = "wpf")]
+    WPF,
     #[strum(to_string = "WNPF", serialize = "wnpf")]
     WNPF,
     #[strum(to_string = "WRPF", serialize = "wrpf")]

@@ -73,7 +73,7 @@ KnownFederations = {
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
     "ADFPF",  # American Drug-Free Powerlifting Federation.
-    "ADAU",  # Amateur Drug Tested Athletic Union
+    "ADAU",  # Anti Drug Athletes United
     "AEP",  # Asociación Española de Powerlifting, IPF.
     "AfricanPF",  # African Powerlifting Federation, IPF.
     "APA",
@@ -90,12 +90,11 @@ KnownFederations = {
     "CommonwealthPF",  # Commonwealth Powerlifting Federation.
     "CPF",  # Canadian Powerlifting Federation (USPA/IPL).
     "CPL",  # Canadian Powerlifting League.
-    "CPO", # Canadian Powerlifting Organisation, defunct WPC affiliate.
+    "CPO",  # Canadian Powerlifting Organisation, defunct WPC affiliate.
     "CPU",  # Canadian Powerlifting Union.
     "CSST",  # Český svaz silového trojboje, Czech IPF affiliate.
     "DSF",  # Danish IPF Affiliate.
     "EPA",  # English Powerlifting Association, IPF.
-    "EPC",  # European Powerlifting Congress.
     "EPF",
     "FEMEPO",  # Federación Mexicana de Powerlifting A.C.
     "FESUPO",  # Federacion Sudamericana de Powerlifting
@@ -133,7 +132,7 @@ KnownFederations = {
     "ParaPL",  # Para Powerlifting.
     "PA",
     "PLZS",  # Powerlifting zveza Slovenije, IPF.
-    "PRIDE", # A defunct US federation.
+    "PRIDE", # A defunct standalone US federation.
     "ProRaw",
     "PZKFiTS",  # Polish IPF affiliate.
     "RAW",  # 100% RAW Federation (drug-tested).
@@ -160,6 +159,7 @@ KnownFederations = {
     "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
     "WPC-RUS",
+    "WPF",  # World Powerlifting federation (Not the Wilks one)
     "WNPF",  # World Natural Powerlifting Federation.
     "WRPF",
     "WRPF-AUS",

@@ -1,0 +1,51 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    military = {name ="Military",min=0,max=999}
+    veterans = {name ="Veterans",min=0,max=999}
+    handicapped = {name ="Handicapped",min=0,max=999}
+    policefire = {name ="Police/Fire",min=0,max=999}
+    specialolympics = {name ="Special Olympics",min=0,max=999}
+    youth = {name = "Youth",min=0,max=12}
+
+    #APA has two ways of numbering masters: 40,45,50,... or 40,50,60,...
+    masters40 = {name ="Masters 40+",min=40,max=999} #Masters 1
+    masters4044 = {name ="Masters 40-44",min=40,max=44} #Masters 1
+    masters4549 = {name ="Masters 45-49",min=45,max=49} #Masters 2
+    masters4049 = {name ="Masters 40-49",min=40,max=49}
+    masters50 = {name ="Masters 50+",min=50,max=999} #Masters 2
+    masters5054 = {name ="Masters 50-54",min=50,max=54} #Masters 3
+    masters5059 = {name ="Masters 50-59",min=50,max=59}
+    masters5459 = {name ="Masters 55-59",min=55,max=59} #Masters 4
+    masters60 = {name ="Masters 60+",min=60,max=999} #Masters 3
+    masters6064 = {name ="Masters 60-64",min=60,max=64} #Masters 5
+    masters6069 = {name ="Masters 60-69",min=60,max=69}
+    masters6569 = {name ="Masters 65-69",min=65,max=69} #Masters 6
+    masters70 = {name ="Masters 70+",min=70,max=999} #Masters 4
+    masters7074 = {name ="Masters 70-74",min=70,max=74} #Masters 7
+    masters7579 = {name ="Masters 75-79",min=75,max=79} #Masters 8
+    masters75 = {name ="Masters 75+",min=75,max=999}
+    masters80 = {name ="Masters 80+",min=80,max=999} #Masters 5/Masters 9
+    submasters3339 = {name ="Sub-Masters 33-39",min=33,max=39}
+    submasters3539 = {name ="Sub-Masters 35-39",min=35,max=39}
+    teen = {name ="Teen",min=0,max=19}
+    teen1315 = {name ="Teen 13-15",min=13,max=15} #Teen 1
+    teen1617 = {name ="Teen 16-17",min=16,max=17} #Teen 2
+    teen1619 = {name ="Teen 16-19",min=16,max=19}
+    teen1819 = {name ="Teen 18-19",min=18,max=19} #Teen 3
+    juniors2023 = {name ="Juniors 20-23",min=20,max=23}
+
+
+
+[weightclasses.default_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","125+","140","140+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "M"
+
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+","100","100+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "F"
+
+[exclusions]
+    9301 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]

@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADFPA,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADAU,ADFPA,ADFPF,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,LPF,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -13,6 +13,7 @@
     <option value="WDFPF">WDFPF - World Drug-Free Powerlifting Federation (Incomplete)</option>
     <option value="WPA">WPA - World Powerlifting Alliance (Incomplete)</option>
     <option value="WPC">WPC - World Powerlifting Congress (Incomplete)</option>
+    <option value="WPF">WPF - World Powerlifting Federation (Incomplete)</option>
     <option value="WUAP">WUAP - World United Amateur Powerlifting (Incomplete)</option>
   </optgroup>
   <optgroup label="Regional">
@@ -26,16 +27,20 @@
     <option value="OceaniaPF">OceaniaPF - Oceania Powerlifting Federation</option>
   </optgroup>
   <optgroup label="United States">
-    <option value="365Strong,ADFPA,AAU,APA,APC,APF,HERC,IPA,MHP,MM,NASA,RAW,RAWU,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
+    <option value="365Strong,AAU,ADAU,ADFPA,ADFPF,APA,APC,APF,Hardcore,HERC,IPA,PRIDE,MHP,MM,NASA,RAW,RAWU,RPS,RUPC,SPF,THSPA,UPA,USAPL,USPA,USPF,XPC,WNPF">
       All United States Feds
     </option>
     <option value="365Strong">365Strong - 365 Strong Powerlifting Federation</option>
     <option value="AAU">AAU - Amateur Athletic Union (Incomplete)</option>
+    <option value="ADAU">ADAU - Anti Drug Athletes United (Incomplete)</option>
+    <option value="ADFPF">ADFPF - American Drug Free Powerlifting Federation (Incomplete)</option>
     <option value="APA">APA - American Powerlifting Association [WPA] (Incomplete)</option>
     <option value="APC">APC - American Powerlifting Committee [GPA/IPO] (Incomplete)</option>
     <option value="APF">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
+    <option value="Hardcore">Hardcore - Hardcore Powerlifting</option>
     <option value="HERC">HERC - Hercules</option>
     <option value="IPA">IPA - International Powerlifting Association (2014+)</option>
+    <option value="PRIDE">PRIDE - Pride Powerlifting</option>
     <option value="MHP">MHP - Maximum Human Performance (Incomplete)</option>
     <option value="MM">MM - Metal Militia (Incomplete)</option>
     <option value="NASA">NASA - Natural Athlete Strength Association (2016+)</option>
@@ -64,12 +69,14 @@
     <option value="WRPF-AUS">WRPF-AUS - WRPF Australia [WRPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Canada">
-    <option value="CPF,CPL,CPU,RAW-CAN,WRPF-CAN">
+    <option value="CPF,CPL,CPU,GPC-CAN,RAW-CAN,WRPF-CAN">
       All Canadian Feds
     </option>
     <option value="CPF">CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
     <option value="CPL">CPL - Canadian Powerlifting League [IPL]</option>
-    <option value="CPU">CPU - Canadian Powerlifting Union [IPF]</option>
+    <option value="CPO">CPO - Canadian Powerlifting Organisation [WPC]</option>
+    <option value="GPC-CAN">GPC-CAN - GPC Canada [GPC] (Incomplete)</option>
+    <option value="CPU">CPU - Canadian Powerlifting Union [GPC]</option>
     <option value="RAW-CAN">RAW-CAN - 100% RAW Powerlifting Federation Canada (Incomplete)</option>
     <option value="WRPF-CAN">WRPF-CAN - WRPF Canada [WRPF]</option>
   </optgroup>
@@ -93,12 +100,16 @@
     <option value="KRAFT">KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
   </optgroup>
   <optgroup label="Ireland">
-    <option value="IDFPF,IrishPF,IrishPO">
+    <option value="GPC-IRL,IDFPF,IrishPF,IrishPO">
       All Irish Feds
     </option>
+    <option value="GPC-IRL">GPC-IRL - GPC Ireland [GPC] (Incomplete)</option>
     <option value="IDFPF">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
     <option value="IrishPF">IrishPF - Irish Powerlifting Federation [IPF]</option>
     <option value="IrishPO">IrishPO - Irish Powerlifting Organization [IPL] (Incomplete)</option>
+  </optgroup>
+  <optgroup label="Latvia">
+    <option value="LPF">LPF - Latvijas Pauerliftinga Federācija [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Mexico">
     <option value="FEMEPO">FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF] (Incomplete)</option>
