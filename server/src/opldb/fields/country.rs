@@ -91,6 +91,7 @@ pub enum Country {
     Tahiti,
     Taiwan,
     Turkey,
+    UAE,
     UK,
     Ukraine,
     Uruguay,
