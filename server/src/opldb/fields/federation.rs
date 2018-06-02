@@ -131,6 +131,8 @@ pub enum Federation {
     NIPF,
     #[strum(to_string = "NordicPF", serialize = "nordicpf")]
     NordicPF,
+    #[strum(to_string = "NOTLD", serialize = "notld")]
+    NOTLD,
     #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
     #[strum(to_string = "NSF", serialize = "nsf")]
