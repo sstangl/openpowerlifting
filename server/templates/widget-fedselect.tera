@@ -11,6 +11,7 @@
   <option value="wdfpf">WDFPF - World Drug-Free Powerlifting Federation</option>
   <option value="wpa">WPA - World Powerlifting Alliance</option>
   <option value="wpc">WPC - World Powerlifting Congress</option>
+  <option value="wpf">WPF - World Powerlifting Federation (Incomplete)</option>
   <option value="wuap">WUAP - World United Amateur Powerlifting</option>
 </optgroup>
 <optgroup label="Regional">
@@ -27,14 +28,19 @@
   <option value="all-usa">All United States Feds</option>
   <option value="365strong">365Strong - 365 Strong Powerlifting Federation</option>
   <option value="aau">AAU - Amateur Athletic Union</option>
+  <option value="adau">ADAU - Anti Drug Athletes United</option>
+  <option value="adfpf">ADFPF - American Drug Free Powerlifting Federation</option>
   <option value="apa">APA - American Powerlifting Association [WPA]</option>
   <option value="apc">APC - American Powerlifting Committee [GPA/IPO]</option>
   <option value="apf">APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
+  <option value="hardcore">Hardcore - Hardcore Powerlifting</option>
   <option value="herc">HERC - Hercules</option>
   <option value="ipa">IPA - International Powerlifting Association (2014+)</option>
   <option value="mhp">MHP - Maximum Human Performance</option>
   <option value="mm">MM - Metal Militia</option>
+  <option value="pride">PRIDE - Pride Powerlifting</option>
   <option value="nasa">NASA - Natural Athlete Strength Association (2016+)</option>
+  <option value="notld">NOTLD - Night of the Living Deadlift</option>
   <option value="raw">RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
   <option value="rawu">RAWU - Raw United Powerlifting Federation</option>
   <option value="rps">RPS - Revolution Powerlifting Syndicate</option>
@@ -61,7 +67,9 @@
   <option value="all-canada">All Canadian Feds</option>
   <option value="cpf">CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
   <option value="cpl">CPL - Canadian Powerlifting League [IPL]</option>
+  <option value="cpo">CPO - Canadian Powerlifting Organisation [WPC]</option>
   <option value="cpu">CPU - Canadian Powerlifting Union [IPF]</option>
+  <option value="gpc-can">GPC-CAN - GPC Canada [GPC]</option>
   <option value="raw-can">RAW-CAN - 100% RAW Powerlifting Federation Canada</option>
   <option value="wrpf-can">WRPF-CAN - WRPF Canada [WRPF]</option>
 </optgroup>
@@ -84,9 +92,13 @@
 </optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland">All Irish Feds</option>
+  <option value="gpc-irl">GPC-IRL - GPC Ireland [GPC] (Incomplete)</option>
   <option value="idfpf">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="irishpf">IrishPF - Irish Powerlifting Federation [IPF]</option>
   <option value="irishpo">IrishPO - Irish Powerlifting Organization [IPL]</option>
+</optgroup>
+<optgroup label="{{strings.country.latvia}}">
+    <option value="lpf">LPF - Latvijas Pauerliftinga Federācija [IPF] (Incomplete)</option>
 </optgroup>
 <optgroup label="{{strings.country.mexico}}">
   <option value="femepo">FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF]</option>
@@ -127,6 +139,7 @@
 <optgroup label="{{strings.country.uk}}">
   <option value="all-uk">All United Kingdom Feds</option>
   <option value="bp">BP - British Powerlifting [IPF] (2017+)</option>
+  <option value="bpc">BPC - British Powerlifting Congress [WPC]</option>
   <option value="bpu">BPU - British Powerlifting Union [WPC]</option>
   <option value="epa">EPA - English Powerlifting Association [IPF]</option>
   <option value="gpc-gb">GPC-GB - GPC Great Britain [GPC] (Help Needed!)</option>

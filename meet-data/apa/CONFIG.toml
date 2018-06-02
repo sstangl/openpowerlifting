@@ -25,8 +25,8 @@
     masters7579 = {name ="Masters 75-79",min=75,max=79} #Masters 8
     masters75 = {name ="Masters 75+",min=75,max=999}
     masters80 = {name ="Masters 80+",min=80,max=999} #Masters 5/Masters 9
-    submasters3339 = {name ="Sub-Masters 33-39",min=33,max=39}
-    submasters3539 = {name ="Sub-Masters 35-39",min=35,max=39}
+    submasters3339 = {name ="Submasters 33-39",min=33,max=39}
+    submasters3539 = {name ="Submasters 35-39",min=35,max=39}
     teen = {name ="Teen",min=0,max=19}
     teen1315 = {name ="Teen 13-15",min=13,max=15} #Teen 1
     teen1617 = {name ="Teen 16-17",min=16,max=17} #Teen 2
