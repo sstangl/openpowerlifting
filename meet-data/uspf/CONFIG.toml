@@ -1,0 +1,45 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    policefire = {name ="Police/Fire",min=0,max=999}
+    military = {name ="Military",min=0,max=999}
+    disabled = {name ="Disabled",min=0,max=999}
+    teen = {name ="Teen",min=0,max=19}
+    teen1415 = {name ="Teen 14-15",min=14,max=15}
+    teen1516 = {name ="Teen 15-16",min=15,max=16}
+    teen1617 = {name ="Teen 16-17",min=16,max=17}
+    teen1819 = {name ="Teen 18-19",min=18,max=19}
+    juniors1920 = {name = "Juniors 19-20",min=19,max=20}
+    juniors2023 = {name = "Juniors 20-23",min=20,max=23}
+    juniors2123 = {name = "Juniors 21-23",min=21,max=23}
+    submasters = {name = "Sub-Masters 35-39",min=35,max=39}
+    masters4044 = {name = "Masters 40-44",min=39,max=44}
+    masters4549 = {name = "Masters 45-49",min=45,max=49}
+    masters5054 = {name = "Masters 50-54",min=50,max=54}
+    masters5559 = {name = "Masters 55-59",min=55,max=59}
+    masters6064 = {name = "Masters 60-64",min=60,max=64}
+    masters6569 = {name = "Masters 65-69",min=65,max=69}
+    masters7074 = {name = "Masters 70-74",min=70,max=74}
+    masters7579 = {name = "Masters 75-79",min=75,max=79}
+    masters40 = {name = "Masters 40+",min=40,max=999}
+    masters50 = {name = "Masters 50+",min=50,max=999}
+    masters60 = {name = "Masters 60+",min=60,max=999}
+    masters70 = {name = "Masters 70+",min=70,max=999}
+    masters80 = {name = "Masters 80+",min=80,max=999}
+
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1998-01-01","9999-99-99"]
+    sex = "M"
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-00-00","1997-12-31"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "F"
+
+[exclusions]
