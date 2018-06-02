@@ -99,6 +99,8 @@ pub enum Federation {
     #[serde(rename = "GPC-NZ")]
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
+    #[strum(to_string = "GPU", serialize = "gpu")]
+    GPU,
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
     Hardcore,
     #[strum(to_string = "HERC", serialize = "herc")]

@@ -97,6 +97,9 @@
   <option value="irishpf">IrishPF - Irish Powerlifting Federation [IPF]</option>
   <option value="irishpo">IrishPO - Irish Powerlifting Organization [IPL]</option>
 </optgroup>
+<optgroup label="{{strings.country.germany}}">
+    <option value="gpu">GPU - German Powerlifting Union [WPU] (Incomplete)</option>
+</optgroup>
 <optgroup label="{{strings.country.latvia}}">
     <option value="lpf">LPF - Latvijas Pauerliftinga Federācija [IPF] (Incomplete)</option>
 </optgroup>
