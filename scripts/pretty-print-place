@@ -80,7 +80,7 @@ def main(filename):
 
     sortcategories(categories)
 
-    print('Place,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,' \
+    print('Place,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,'
           'Best3DeadliftKg,TotalKg,Wilks')
 
     for category in categories:

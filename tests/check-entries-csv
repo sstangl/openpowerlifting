@@ -660,9 +660,10 @@ def check_row_success_consistency(row, csv, attemptcols):
 
     return
 
-# Check that Best3FooKg is actually the best of (Foo1Kg, Foo2Kg, Foo3Kg),
-# if present.
+
 def check_row_lift_consistency(row, csv, bestcol, attemptcols):
+    ''' Checks that Best3FooKg is actually the best of
+        (Foo1Kg, Foo2Kg, Foo3Kg), if present.'''
     if bestcol not in csv.fieldnames:
         return
 
