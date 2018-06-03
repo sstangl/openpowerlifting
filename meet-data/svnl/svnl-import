@@ -356,7 +356,7 @@ def getresults(soup, meet_name, url):
                 elif h == 'jk3' or h == 'jk 3':
                     csv.fieldnames += ['Squat3Kg']
                 elif h == 'jk tul' or h == 'jk tulos' or h == 'sq result' or h == 'jk':
-                    csv.fieldnames += ['BestSquatKg']
+                    csv.fieldnames += ['Best3SquatKg']
                 elif h == 'pp1' or h == 'pp 1':
                     csv.fieldnames += ['Bench1Kg']
                 elif h == 'pp2' or h == 'pp 2':
@@ -364,7 +364,7 @@ def getresults(soup, meet_name, url):
                 elif h == 'pp3' or h == 'pp 3':
                     csv.fieldnames += ['Bench3Kg']
                 elif h == 'pp tul' or h == 'pp tulos' or h == 'bp result' or h == 'pp':
-                    csv.fieldnames += ['BestBenchKg']
+                    csv.fieldnames += ['Best3BenchKg']
                 elif h == 'mn1' or h == 'mn 1':
                     csv.fieldnames += ['Deadlift1Kg']
                 elif h == 'mn2' or h == 'mn 2':
@@ -372,7 +372,7 @@ def getresults(soup, meet_name, url):
                 elif h == 'mn3' or h == 'mn 3':
                     csv.fieldnames += ['Deadlift3Kg']
                 elif h == 'mn tul' or h == 'mn tulos' or h == 'dl result' or h == 'mn':
-                    csv.fieldnames += ['BestDeadliftKg']
+                    csv.fieldnames += ['Best3DeadliftKg']
                 elif h in ['yt', 'tulos', 'yht', 'total', 'result',
                            'yht tulos', 'yhteis- tulos', 'yt / kg']:
                     csv.fieldnames += ['TotalKg']
@@ -749,19 +749,19 @@ def fixtotals(csv):
         eventidx = csv.index('Event')
         for row in csv.rows:
             total = 0
-            if 'S' in row[eventidx] and 'BestSquatKg' in csv.fieldnames:
-                if row[csv.index('BestSquatKg')] in ['', 'out']:  # then lifter bombed
-                    row[csv.index('BestSquatKg')] = ''
-                total += float(row[csv.index('BestSquatKg')])
-            elif 'B' in row[eventidx] and 'BestBenchKg' in csv.fieldnames:
-                if row[csv.index('BestBenchKg')] in ['', 'out']:
-                    row[csv.index('BestBenchKg')] = ''
+            if 'S' in row[eventidx] and 'Best3SquatKg' in csv.fieldnames:
+                if row[csv.index('Best3SquatKg')] in ['', 'out']:  # then lifter bombed
+                    row[csv.index('Best3SquatKg')] = ''
+                total += float(row[csv.index('Best3SquatKg')])
+            elif 'B' in row[eventidx] and 'Best3BenchKg' in csv.fieldnames:
+                if row[csv.index('Best3BenchKg')] in ['', 'out']:
+                    row[csv.index('Best3BenchKg')] = ''
                     continue
-                total += float(row[csv.index('BestBenchKg')])
-            elif 'D' in row[eventidx] and 'BestDeadliftKg' in csv.fieldnames:
-                if row[csv.index('BestDeadliftKg')] in ['', 'out']:
-                    row[csv.index('BestDeadliftKg')] = ''
-                total += float(row[csv.index('BestDeadliftKg')])
+                total += float(row[csv.index('Best3BenchKg')])
+            elif 'D' in row[eventidx] and 'Best3DeadliftKg' in csv.fieldnames:
+                if row[csv.index('Best3DeadliftKg')] in ['', 'out']:
+                    row[csv.index('Best3DeadliftKg')] = ''
+                total += float(row[csv.index('Best3DeadliftKg')])
 
             row[-1] = str(total)
     elif 'Place' in csv.fieldnames:
@@ -778,7 +778,7 @@ def fixtotals(csv):
                 row[placeidx] = 'DD'
 
 
-# Attempts are sometimes given, but not the BestSquatKg columns, etc.
+# Attempts are sometimes given, but not the Best3SquatKg columns, etc.
 def calc_best_lift(csv, col, attemptlist):
     if col in csv.fieldnames:
         return
@@ -817,11 +817,11 @@ def markevent(csv):
         return indexlist
 
     squatidxl = getevtindices(
-        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Best3SquatKg'])
     benchidxl = getevtindices(
-        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Best3BenchKg'])
     deadliftidxl = getevtindices(
-        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Best3DeadliftKg'])
 
     for row in csv.rows:
         evt = ''
@@ -903,16 +903,16 @@ def main(url):
         entriescsv.remove_column_by_name('Extra')
 
     if ('Squat1Kg' in entriescsv.fieldnames and
-            'BestSquatKg' not in entriescsv.fieldnames):
-        calc_best_lift(entriescsv, 'BestSquatKg', [
+            'Best3SquatKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3SquatKg', [
                        'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
     if ('Bench1Kg' in entriescsv.fieldnames and
-            'BestBenchKg' not in entriescsv.fieldnames):
-        calc_best_lift(entriescsv, 'BestBenchKg', [
+            'Best3BenchKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3BenchKg', [
                        'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
     if ('Deadlift1Kg' in entriescsv.fieldnames and
-            'BestDeadliftKg' not in entriescsv.fieldnames):
-        calc_best_lift(entriescsv, 'BestDeadliftKg', [
+            'Best3DeadliftKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     # Figure out event information.

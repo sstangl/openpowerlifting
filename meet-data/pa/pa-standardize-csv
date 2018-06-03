@@ -385,7 +385,7 @@ def hunt_dq_info(csv):
             row[placeidx] = 'DQ'
 
 
-# Attempts are given, but not the BestSquatKg columns, etc.
+# Attempts are given, but not the Best3SquatKg columns, etc.
 def calc_best_lift(csv, col, attemptlist):
     if col in csv.fieldnames:
         return
@@ -480,19 +480,19 @@ def main(filename):
     while '' in csv.fieldnames:
         csv.remove_column_by_name('')
 
-    # Wilks will be automatically calculated later. Feds get it wrong all the
-    # time.
+    # Wilks will be automatically calculated later.
+    # Feds get it wrong all the time.
     if 'Wilks' in csv.fieldnames:
         csv.remove_column_by_name('Wilks')
 
     if 'Squat1Kg' in csv.fieldnames:
-        calc_best_lift(csv, 'BestSquatKg', [
+        calc_best_lift(csv, 'Best3SquatKg', [
                        'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
     if 'Bench1Kg' in csv.fieldnames:
-        calc_best_lift(csv, 'BestBenchKg', [
+        calc_best_lift(csv, 'Best3BenchKg', [
                        'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
     if 'Deadlift1Kg' in csv.fieldnames:
-        calc_best_lift(csv, 'BestDeadliftKg', [
+        calc_best_lift(csv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     csv.write(sys.stdout)

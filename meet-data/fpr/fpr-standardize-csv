@@ -127,15 +127,15 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Bench3Kg')
                 fieldnames.append('IGNORE')
                 fieldnames.append('IGNORE')
-                fieldnames.append('BestBenchKg')
+                fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
             elif 'рез-т присед' in text or text == 'прис':
-                fieldnames.append('BestSquatKg')
+                fieldnames.append('Best3SquatKg')
             elif 'рез-т жим' in text or text == 'жим':
-                fieldnames.append('BestBenchKg')
+                fieldnames.append('Best3BenchKg')
             elif 'рез-т тяга' in text or text == 'тяга':
-                fieldnames.append('BestDeadliftKg')
+                fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
                 fieldnames.append('TotalKg')
@@ -153,11 +153,11 @@ def parse_fieldnames(sheet):
         fieldnames.extend(['IGNORE'] * 26)
         fieldnames.append('BodyweightKg')
         fieldnames.extend(['IGNORE'] * 2)
-        fieldnames.append('BestSquatKg')
+        fieldnames.append('Best3SquatKg')
         fieldnames.extend(['IGNORE'] * 2)
-        fieldnames.append('BestBenchKg')
+        fieldnames.append('Best3BenchKg')
         fieldnames.extend(['IGNORE'] * 2)
-        fieldnames.append('BestDeadliftKg')
+        fieldnames.append('Best3DeadliftKg')
         fieldnames.extend(['IGNORE'] * 2)
         fieldnames.append('TotalKg')
 
@@ -238,11 +238,11 @@ def parse_sheet(sheet):
 
     if event is None:  # Might add code to search for events in titles later
         event = ''
-        if 'Squat1Kg' in csv.fieldnames or 'BestSquatKg' in csv.fieldnames:
+        if 'Squat1Kg' in csv.fieldnames or 'Best3SquatKg' in csv.fieldnames:
             event += 'S'
-        if 'Bench1Kg' in csv.fieldnames or 'BestBenchKg' in csv.fieldnames:
+        if 'Bench1Kg' in csv.fieldnames or 'Best3BenchKg' in csv.fieldnames:
             event += 'B'
-        if 'Deadlift1Kg' in csv.fieldnames or 'BestDeadliftKg' in csv.fieldnames:
+        if 'Deadlift1Kg' in csv.fieldnames or 'Best3DeadliftKg' in csv.fieldnames:
             event += 'D'
 
     for line in sheet[get_header_linenum(sheet) + 2:]:
@@ -451,21 +451,21 @@ def assign_total(csv):
     for row in csv.rows:
         if row[idx] == '':
             total = 0.0
-            if 'BestSquatKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestSquatKg')])
-            if 'BestBenchKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestBenchKg')])
-            if 'BestDeadliftKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestDeadliftKg')])
+            if 'Best3SquatKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3SquatKg')])
+            if 'Best3BenchKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3BenchKg')])
+            if 'Best3DeadliftKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3DeadliftKg')])
 
-            if (weight(row[csv.index('BestSquatKg')]) < 0 or
-                    row[csv.index('BestSquatKg')] == ''):
+            if (weight(row[csv.index('Best3SquatKg')]) < 0 or
+                    row[csv.index('Best3SquatKg')] == ''):
                 total = 0.0
-            elif (weight(row[csv.index('BestBenchKg')]) < 0 or
-                    row[csv.index('BestBenchKg')] == ''):
+            elif (weight(row[csv.index('Best3BenchKg')]) < 0 or
+                    row[csv.index('Best3BenchKg')] == ''):
                 total = 0.0
-            elif (weight(row[csv.index('BestDeadliftKg')]) < 0 or
-                    row[csv.index('BestDeadliftKg')] == ''):
+            elif (weight(row[csv.index('Best3DeadliftKg')]) < 0 or
+                    row[csv.index('Best3DeadliftKg')] == ''):
                 total = 0.0
 
             if total != 0.0:
@@ -488,10 +488,10 @@ def main(filename):
         sheetcsv = parse_sheet(sheet)
         csv.cat(sheetcsv)
 
-    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'BestSquatKg',
-              'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'BestBenchKg',
+    for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'Best3SquatKg',
+              'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'Best3BenchKg',
               'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg',
-              'BestDeadliftKg', 'TotalKg']:
+              'Best3DeadliftKg', 'TotalKg']:
         cleanup_lift(csv, x)
 
     assign_total(csv)

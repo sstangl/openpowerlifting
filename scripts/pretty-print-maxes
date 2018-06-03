@@ -19,11 +19,11 @@ import sys
 
 def collect_maxes(name, csv):
     nameidx = csv.index('Name')
-    squatidx = csv.index('BestSquatKg')
+    squatidx = csv.index('Best3SquatKg')
     squat4idx = csv.index('Squat4Kg')
-    benchidx = csv.index('BestBenchKg')
+    benchidx = csv.index('Best3BenchKg')
     bench4idx = csv.index('Bench4Kg')
-    deadliftidx = csv.index('BestDeadliftKg')
+    deadliftidx = csv.index('Best3DeadliftKg')
     deadlift4idx = csv.index('Deadlift4Kg')
     totalidx = csv.index('TotalKg')
 

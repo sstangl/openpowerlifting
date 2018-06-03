@@ -186,12 +186,12 @@ def check_column_event(s, row, csv):
         if s.count(c) >= 2:
             found_duplicate_event = True
 
-    if 'S' in s and 'BestSquatKg' not in csv.fieldnames:
-        perror("Squat event, but no BestSquatKg")
-    if 'B' in s and 'BestBenchKg' not in csv.fieldnames:
-        perror("Bench event, but no BestBenchKg")
-    if 'D' in s and 'BestDeadliftKg' not in csv.fieldnames:
-        perror("Deadlift event, but no BestDeadliftKg")
+    if 'S' in s and 'Best3SquatKg' not in csv.fieldnames:
+        perror("Squat event, but no Best3SquatKg")
+    if 'B' in s and 'Best3BenchKg' not in csv.fieldnames:
+        perror("Bench event, but no Best3BenchKg")
+    if 'D' in s and 'Best3DeadliftKg' not in csv.fieldnames:
+        perror("Deadlift event, but no Best3DeadliftKg")
 
     if found_illegal_char:
         perror("Unknown event type: %s" % s)
@@ -403,19 +403,19 @@ HeaderHandlers = {
     'BodyweightKg': check_column_bodyweightkg,
 
     # Lift columns. Only Kg is valid.
-    'BestSquatKg': check_lift_column,
+    'Best3SquatKg': check_lift_column,
     'Squat1Kg': check_lift_column,
     'Squat2Kg': check_lift_column,
     'Squat3Kg': check_lift_column,
     'Squat4Kg': check_lift_column,
 
-    'BestBenchKg': check_lift_column,
+    'Best3BenchKg': check_lift_column,
     'Bench1Kg': check_lift_column,
     'Bench2Kg': check_lift_column,
     'Bench3Kg': check_lift_column,
     'Bench4Kg': check_lift_column,
 
-    'BestDeadliftKg': check_lift_column,
+    'Best3DeadliftKg': check_lift_column,
     'Deadlift1Kg': check_lift_column,
     'Deadlift2Kg': check_lift_column,
     'Deadlift3Kg': check_lift_column,
@@ -472,12 +472,12 @@ def check_headers(csv):
             perror("Duplicate column header: %s" % header)
 
         # If lift data is present, we need a corresponding 'Best' column.
-        if 'Squat' in header and 'BestSquatKg' not in csv.fieldnames:
-            pwarning('Squat data present, but missing BestSquatKg')
-        if 'Bench' in header and 'BestBenchKg' not in csv.fieldnames:
-            pwarning('Bench data present, but missing BestBenchKg')
-        if 'Deadlift' in header and 'BestDeadliftKg' not in csv.fieldnames:
-            pwarning('Deadlift data present, but missing BestDeadliftKg')
+        if 'Squat' in header and 'Best3SquatKg' not in csv.fieldnames:
+            pwarning('Squat data present, but missing Best3SquatKg')
+        if 'Bench' in header and 'Best3BenchKg' not in csv.fieldnames:
+            pwarning('Bench data present, but missing Best3BenchKg')
+        if 'Deadlift' in header and 'Best3DeadliftKg' not in csv.fieldnames:
+            pwarning('Deadlift data present, but missing Best3DeadliftKg')
 
 
 def check_row_name_consistency(row, csv):
@@ -660,10 +660,8 @@ def check_row_success_consistency(row, csv, attemptcols):
 
     return
 
-# Check that BestFooKg is actually the best of (Foo1Kg, Foo2Kg, Foo3Kg),
+# Check that Best3FooKg is actually the best of (Foo1Kg, Foo2Kg, Foo3Kg),
 # if present.
-
-
 def check_row_lift_consistency(row, csv, bestcol, attemptcols):
     if bestcol not in csv.fieldnames:
         return
@@ -701,12 +699,12 @@ def check_row_total_consistency(row, csv):
         return
 
     total = float2(row[csv.index('TotalKg')])
-    squat = float2(row[csv.index('BestSquatKg')]
-                   ) if 'BestSquatKg' in csv.fieldnames else 0
-    bench = float2(row[csv.index('BestBenchKg')]
-                   ) if 'BestBenchKg' in csv.fieldnames else 0
-    deadl = float2(row[csv.index('BestDeadliftKg')]
-                   ) if 'BestDeadliftKg' in csv.fieldnames else 0
+    squat = float2(row[csv.index('Best3SquatKg')]
+                   ) if 'Best3SquatKg' in csv.fieldnames else 0
+    bench = float2(row[csv.index('Best3BenchKg')]
+                   ) if 'Best3BenchKg' in csv.fieldnames else 0
+    deadl = float2(row[csv.index('Best3DeadliftKg')]
+                   ) if 'Best3DeadliftKg' in csv.fieldnames else 0
 
     # Disqualified, didn't finish the meet, etc.
     if total <= 0:  # Should be zero.
@@ -856,11 +854,11 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
 
     check_row_total_consistency(row, csv)
 
-    check_row_lift_consistency(row, csv, 'BestSquatKg', [
+    check_row_lift_consistency(row, csv, 'Best3SquatKg', [
                                'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
-    check_row_lift_consistency(row, csv, 'BestBenchKg', [
+    check_row_lift_consistency(row, csv, 'Best3BenchKg', [
                                'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
-    check_row_lift_consistency(row, csv, 'BestDeadliftKg',
+    check_row_lift_consistency(row, csv, 'Best3DeadliftKg',
                                ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
     check_row_success_consistency(

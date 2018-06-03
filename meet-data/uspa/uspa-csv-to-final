@@ -92,29 +92,29 @@ def fixcolnames(columns):
         elif low == 'age':
             columns[i] = 'Age'
         elif low == 'squat':
-            columns[i] = 'BestSquatKg'
+            columns[i] = 'Best3SquatKg'
         elif low == 'squat, kg':
-            columns[i] = 'BestSquatKg'
+            columns[i] = 'Best3SquatKg'
         elif low == 'squat kg':
-            columns[i] = 'BestSquatKg'
+            columns[i] = 'Best3SquatKg'
         elif low == 'squat lbs':
-            columns[i] = 'BestSquatLBS'
+            columns[i] = 'Best3SquatLBS'
         elif low == 'bench':
-            columns[i] = 'BestBenchKg'
+            columns[i] = 'Best3BenchKg'
         elif low == 'bench, kg':
-            columns[i] = 'BestBenchKg'
+            columns[i] = 'Best3BenchKg'
         elif low == 'bench kg':
-            columns[i] = 'BestBenchKg'
+            columns[i] = 'Best3BenchKg'
         elif low == 'bench lbs':
-            columns[i] = 'BestBenchLBS'
+            columns[i] = 'Best3BenchLBS'
         elif low == 'deadlift':
-            columns[i] = 'BestDeadliftKg'
+            columns[i] = 'Best3DeadliftKg'
         elif low == 'deadlift, kg':
-            columns[i] = 'BestDeadliftKg'
+            columns[i] = 'Best3DeadliftKg'
         elif low == 'deadlift kg':
-            columns[i] = 'BestDeadliftKg'
+            columns[i] = 'Best3DeadliftKg'
         elif low == 'deadlift lbs':
-            columns[i] = 'BestDeadliftLBS'
+            columns[i] = 'Best3DeadliftLBS'
         elif low == 'total':
             columns[i] = 'TotalKg'
         elif low == 'total, kg':
@@ -142,11 +142,11 @@ def fixcolnames(columns):
         elif low == 'weight':
             columns[i] = 'BodyweightKg'
         elif low == 'sq':
-            columns[i] = 'BestSquatKg'
+            columns[i] = 'Best3SquatKg'
         elif low == 'bp':
-            columns[i] = 'BestBenchKg'
+            columns[i] = 'Best3BenchKg'
         elif low == 'dl':
-            columns[i] = 'BestDeadliftKg'
+            columns[i] = 'Best3DeadliftKg'
         elif low == 'mcc':
             columns[i] = 'McCulloch'
         elif low == 'lbs':
@@ -158,17 +158,17 @@ def fixcolnames(columns):
 
 
 def colnameto4thname(colname):
-    if colname == 'BestSquatKg':
+    if colname == 'Best3SquatKg':
         return 'Squat4Kg'
-    elif colname == 'BestSquatLBS':
+    elif colname == 'Best3SquatLBS':
         return 'Squat4LBS'
-    elif colname == 'BestBenchKg':
+    elif colname == 'Best3BenchKg':
         return 'Bench4Kg'
-    elif colname == 'BestBenchLBS':
+    elif colname == 'Best3BenchLBS':
         return 'Bench4LBS'
-    elif colname == 'BestDeadliftKg':
+    elif colname == 'Best3DeadliftKg':
         return 'Deadlift4Kg'
-    elif colname == 'BestDeadliftLBS':
+    elif colname == 'Best3DeadliftLBS':
         return 'Deadlift4LBS'
     elif colname == 'DELETEME':
         return 'DELETEME'

@@ -161,7 +161,7 @@ def assign_best(csv, liftname):
     idx1 = csv.index('%s1Kg' % liftname)
     idx2 = csv.index('%s2Kg' % liftname)
     idx3 = csv.index('%s3Kg' % liftname)
-    bestidx = csv.index('Best%sKg' % liftname)
+    bestidx = csv.index('Best3%sKg' % liftname)
 
     def weight(str):
         try:
@@ -312,9 +312,9 @@ def standardize_full_meet(csv):
     csv.remove_column_by_name('XXX_wilks')
     csv.remove_column_by_name('XXX_points')
 
-    csv.insert_column(csv.index('Squat3Kg') + 1, 'BestSquatKg')
-    csv.insert_column(csv.index('Bench3Kg') + 1, 'BestBenchKg')
-    csv.insert_column(csv.index('Deadlift3Kg') + 1, 'BestDeadliftKg')
+    csv.insert_column(csv.index('Squat3Kg') + 1, 'Best3SquatKg')
+    csv.insert_column(csv.index('Bench3Kg') + 1, 'Best3BenchKg')
+    csv.insert_column(csv.index('Deadlift3Kg') + 1, 'Best3DeadliftKg')
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
     csv.append_column('Event')
@@ -373,7 +373,7 @@ def standardize_bench_only(csv):
     csv.remove_column_by_name('XXX_wilks')
     csv.remove_column_by_name('XXX_points')
 
-    csv.insert_column(csv.index('Bench3Kg') + 1, 'BestBenchKg')
+    csv.insert_column(csv.index('Bench3Kg') + 1, 'Best3BenchKg')
     csv.append_column('WeightClassKg')
     csv.append_column('Division')
     csv.append_column('Event')

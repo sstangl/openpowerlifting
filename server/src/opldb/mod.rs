@@ -104,8 +104,8 @@ pub struct Entry {
     pub squat3kg: WeightKg,
     #[serde(rename(deserialize = "Squat4Kg"))]
     pub squat4kg: WeightKg,
-    #[serde(rename(deserialize = "BestSquatKg"))]
-    pub bestsquatkg: WeightKg,
+    #[serde(rename(deserialize = "Best3SquatKg"))]
+    pub best3squatkg: WeightKg,
     #[serde(rename(deserialize = "Bench1Kg"))]
     pub bench1kg: WeightKg,
     #[serde(rename(deserialize = "Bench2Kg"))]
@@ -114,8 +114,8 @@ pub struct Entry {
     pub bench3kg: WeightKg,
     #[serde(rename(deserialize = "Bench4Kg"))]
     pub bench4kg: WeightKg,
-    #[serde(rename(deserialize = "BestBenchKg"))]
-    pub bestbenchkg: WeightKg,
+    #[serde(rename(deserialize = "Best3BenchKg"))]
+    pub best3benchkg: WeightKg,
     #[serde(rename(deserialize = "Deadlift1Kg"))]
     pub deadlift1kg: WeightKg,
     #[serde(rename(deserialize = "Deadlift2Kg"))]
@@ -124,8 +124,8 @@ pub struct Entry {
     pub deadlift3kg: WeightKg,
     #[serde(rename(deserialize = "Deadlift4Kg"))]
     pub deadlift4kg: WeightKg,
-    #[serde(rename(deserialize = "BestDeadliftKg"))]
-    pub bestdeadliftkg: WeightKg,
+    #[serde(rename(deserialize = "Best3DeadliftKg"))]
+    pub best3deadliftkg: WeightKg,
     #[serde(rename(deserialize = "TotalKg"))]
     pub totalkg: WeightKg,
     #[serde(rename(deserialize = "Place"))]
@@ -137,19 +137,19 @@ pub struct Entry {
 }
 
 impl Entry {
-    /// Returns max(bestsquatkg, squat4kg).
+    /// Returns max(best3squatkg, squat4kg).
     pub fn highest_squatkg(&self) -> WeightKg {
-        self.bestsquatkg.max(self.squat4kg)
+        self.best3squatkg.max(self.squat4kg)
     }
 
-    /// Returns max(bestbenchkg, bench4kg).
+    /// Returns max(best3benchkg, bench4kg).
     pub fn highest_benchkg(&self) -> WeightKg {
-        self.bestbenchkg.max(self.bench4kg)
+        self.best3benchkg.max(self.bench4kg)
     }
 
-    /// Returns max(bestdeadliftkg, deadlift4kg).
+    /// Returns max(best3deadliftkg, deadlift4kg).
     pub fn highest_deadliftkg(&self) -> WeightKg {
-        self.bestdeadliftkg.max(self.deadlift4kg)
+        self.best3deadliftkg.max(self.deadlift4kg)
     }
 }
 

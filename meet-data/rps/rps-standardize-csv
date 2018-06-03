@@ -159,17 +159,17 @@ def standardize_fieldnames(csv):
         elif s == 'act. bwt' or s == 'act bwt' or s == 'btw' or s == 'act wt':
             x = 'BodyweightLBS'
         elif s == 'squat' or s == 'bestsquatlbs' or s == 'squart' or s == 'sq':
-            x = 'BestSquatLBS'
+            x = 'Best3SquatLBS'
         elif s == 'squat lbs' or s == 'squatlbs':
-            x = 'BestSquatLBS'
+            x = 'Best3SquatLBS'
         elif s == 'bench' or s == 'bestbenchlbs' or s == 'bp':
-            x = 'BestBenchLBS'
+            x = 'Best3BenchLBS'
         elif s == 'bench lbs' or s == 'benchlbs':
-            x = 'BestBenchLBS'
+            x = 'Best3BenchLBS'
         elif s == 'deadlift' or s == 'bestdeadliftlbs' or s == 'dl':
-            x = 'BestDeadliftLBS'
+            x = 'Best3DeadliftLBS'
         elif s == 'deadlift lbs' or s == 'deadliftlbs':
-            x = 'BestDeadliftLBS'
+            x = 'Best3DeadliftLBS'
         elif s == 'total' or s == 'totallbs':
             x = 'TotalLBS'
         elif s == 'place':
@@ -201,11 +201,11 @@ def standardize_fieldnames(csv):
         elif s == 'bodyweightkg':
             x = 'BodyweightKg'
         elif s == 'bestsquatkg':
-            x = 'BestSquatKg'
+            x = 'Best3SquatKg'
         elif s == 'bestbenchkg' or s == 'best bench':
-            x = 'BestBenchKg'
+            x = 'Best3BenchKg'
         elif s == 'bestdeadliftkg':
-            x = 'BestDeadliftKg'
+            x = 'Best3DeadliftKg'
         elif s == 'totalkg':
             x = 'TotalKg'
         elif s == 'squat4kg':
@@ -455,7 +455,7 @@ def fixlift(csv, liftfield):
             row[idx] = ''
 
 
-# Fixes things like bench-only lifters where TotalLBS != BestBenchLBS.
+# Fixes things like bench-only lifters where TotalLBS != Best3BenchLBS.
 def fixtotals(csv):
     if 'Event' not in csv.fieldnames:
         return
@@ -469,12 +469,12 @@ def fixtotals(csv):
 
         total = 0.0
         event = row[csv.index('Event')]
-        if 'S' in event and row[csv.index('BestSquatLBS')]:
-            total += float(row[csv.index('BestSquatLBS')])
-        if 'B' in event and row[csv.index('BestBenchLBS')]:
-            total += float(row[csv.index('BestBenchLBS')])
-        if 'D' in event and row[csv.index('BestDeadliftLBS')]:
-            total += float(row[csv.index('BestDeadliftLBS')])
+        if 'S' in event and row[csv.index('Best3SquatLBS')]:
+            total += float(row[csv.index('Best3SquatLBS')])
+        if 'B' in event and row[csv.index('Best3BenchLBS')]:
+            total += float(row[csv.index('Best3BenchLBS')])
+        if 'D' in event and row[csv.index('Best3DeadliftLBS')]:
+            total += float(row[csv.index('Best3DeadliftLBS')])
 
         if total != 0.0:
             row[csv.index('TotalLBS')] = "{:.2f}".format(total)
