@@ -1,3 +1,27 @@
+// vim: set ts=4 sts=4 sw=4 et:
+'use strict';
+
+// Appease the TypeScript compiler.
+declare var Slick;
+
+// Variables provided by the server.
+declare const initial_data;
+declare const translation_column_formulaplace: String;
+declare const translation_column_liftername: String;
+declare const translation_column_federation: String;
+declare const translation_column_date: String;
+declare const translation_column_location: String;
+declare const translation_column_sex: String;
+declare const translation_column_age: String;
+declare const translation_column_equipment: String;
+declare const translation_column_weightclass: String;
+declare const translation_column_bodyweight: String;
+declare const translation_column_squat: String;
+declare const translation_column_bench: String;
+declare const translation_column_deadlift: String;
+declare const translation_column_total: String;
+declare const translation_column_wilks: String;
+
 let global_grid;
 let global_data;
 
@@ -12,9 +36,9 @@ let selSort;
 
 function makeDataProvider() {
     return {
-        getLength: function() { return window.global_data.length; },
+        getLength: function() { return global_data.length; },
         getItem: function(idx) {
-            let entry = window.global_data[idx];
+            let entry = global_data[idx];
 
             let loc = entry.country;
             if (entry.country && entry.state) {
@@ -94,9 +118,9 @@ function reload() {
     }
 
     if (specific === true) {
-        window.location = url;
+        window.location.href = url;
     } else {
-        window.location = "/";
+        window.location.href = "/";
     }
 }
 
@@ -128,7 +152,7 @@ function onLoad() {
     // The server can pass initial data to the client.
     // Check templates/rankings.html.tera.
     if (initial_data) {
-        window.global_data = initial_data;
+        global_data = initial_data;
     } else {
         console.log("Failed to initialize data.");
     }

@@ -158,7 +158,7 @@ fn test_no_server_header() {
 #[test]
 fn test_static_cache_control() {
     let client = client();
-    let response = client.get("/static/style.css").dispatch();
+    let response = client.get("/static/css/style.css").dispatch();
     assert_eq!(response.status(), Status::Ok);
     assert!(response.headers().contains("Cache-Control"));
     let cache_control = response.headers().get_one("Cache-Control").unwrap();

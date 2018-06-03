@@ -34,7 +34,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(images/select_dropdown.png) 96% / 15% no-repeat $control-background-color;
+  background: url(/static/images/select_dropdown.png) 96% / 15% no-repeat $control-background-color;
 }
 /*target Internet Explorer 9 and Internet Explorer 10:*/
 @media screen and (min-width:0\0) {
@@ -83,9 +83,9 @@ input[type="checkbox"] + label span {
   height: 19px;
   margin: 0px 1px 3px 5px;
   vertical-align: middle;
-  background:url(images/check_radio_sheet.png) left top no-repeat;
+  background:url(/static/images/check_radio_sheet.png) left top no-repeat;
   cursor: pointer;
 }
 input[type="checkbox"]:checked + label span {
-  background:url(images/check_radio_sheet.png) -19px top no-repeat;
+  background:url(/static/images/check_radio_sheet.png) -19px top no-repeat;
 }

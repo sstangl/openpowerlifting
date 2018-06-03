@@ -4,7 +4,8 @@
   "description": "The OpenPowerlifting website frontend.",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --output-style compressed css/style.scss build/style.css"
+    "sass": "node-sass --output-style compressed css/style.scss build/css/style.css",
+    "webpack": "webpack --env.prod --display-error-details --optimize-minimize"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,16 @@
   },
   "homepage": "https://github.com/sstangl/openpowerlifting#readme",
   "dependencies": {
-    "node-sass": "^4.9.0"
+    "slickgrid": "^2.3.19"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-minify-constant-folding": "^0.2.0",
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.9.0",
+    "typescript": "2.8.3",
+    "webpack": "^3.11.0"
   }
 }
