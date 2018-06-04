@@ -850,12 +850,12 @@ def assign_total(csv):
     for row in csv.rows:
         if row[idx] == '':
             total = 0.0
-            if 'BestSquatKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestSquatKg')])
-            if 'BestBenchKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestBenchKg')])
-            if 'BestDeadliftKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestDeadliftKg')])
+            if 'Best3SquatKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3SquatKg')])
+            if 'Best3BenchKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3BenchKg')])
+            if 'Best3DeadliftKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3DeadliftKg')])
 
             if total != 0.0:
                 row[idx] = str(total)

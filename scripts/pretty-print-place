@@ -66,9 +66,9 @@ def main(filename):
     totalidx = csv.index('TotalKg')
     bwidx = csv.index('BodyweightKg')
     nameidx = csv.index('Name')
-    bestsquatidx = csv.index('BestSquatKg')
-    bestbenchidx = csv.index('BestBenchKg')
-    bestdeadliftidx = csv.index('BestDeadliftKg')
+    bestsquatidx = csv.index('Best3SquatKg')
+    bestbenchidx = csv.index('Best3BenchKg')
+    bestdeadliftidx = csv.index('Best3DeadliftKg')
     totalidx = csv.index('TotalKg')
     wilksidx = csv.index('Wilks')
 
@@ -80,7 +80,8 @@ def main(filename):
 
     sortcategories(categories)
 
-    print('Place,Name,BodyweightKg,BestSquatKg,BestBenchKg,BestDeadliftKg,TotalKg,Wilks')
+    print('Place,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,'
+          'Best3DeadliftKg,TotalKg,Wilks')
 
     for category in categories:
         lifters = []

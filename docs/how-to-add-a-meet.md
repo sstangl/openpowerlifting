@@ -47,15 +47,15 @@ This guide is intended to take you step-by-step into adding a meet into the data
   - The next column should be labeled `Squat1Kg` if reported.
   - The next column should be labeled `Squat2Kg` if reported.
   - The next column should be labeled `Squat3Kg`.
-  - The next column should be labeled `BestSquatKg`.
+  - The next column should be labeled `Best3SquatKg`.
   - The next column should be labeled `Bench1Kg` if reported.
   - The next column should be labeled `Bench2Kg` if reported.
   - The next column should be labeled `Bench3Kg` if reported.
-  - The next column should be labeled `BestBenchKg`.
+  - The next column should be labeled `Best3BenchKg`.
   - The next column should be labeled `Deadlift1Kg` if reported.
   - The next column should be labeled `Deadlift2Kg` if reported.
   - The next column should be labeled `Deadlift3Kg` if reported.
-  - The next column should be labeled `BestDeadliftKg`.
+  - The next column should be labeled `Best3DeadliftKg`.
   - The next column should be labeled `TotalKg`.
 - In subsequent rows:
   - The first column should contain the placing of the competitor in the meet (e.g. `1`).
@@ -71,15 +71,15 @@ This guide is intended to take you step-by-step into adding a meet into the data
   - The next column should contain the competitor's first attempt squat in kilograms `Squat1Kg` if reported.
   - The next column should contain the competitor's second attempt in kilograms `Squat2Kg` if reported.
   - The next column should contain the competitor's third attempt in kilograms `Squat3Kg` if reported.
-  - The next column should contain the competitor's best squat attempt in kilograms `BestSquatKg`.
+  - The next column should contain the competitor's best squat attempt in kilograms `Best3SquatKg`.
   - The next column should contain the competitor's first attempt in kilograms `Bench1Kg` if reported.
   - The next column should contain the competitor's second attempt in kilograms `Bench2Kg` if reported.
   - The next column should contain the competitor's third attempt in kilograms `Bench3Kg` if reported.
-  - The next column should contain the competitor's best bench press attempt in kilograms `BestBenchKg`.
+  - The next column should contain the competitor's best bench press attempt in kilograms `Best3BenchKg`.
   - The next column should contain the competitor's first attempt in kilograms `Deadlift1Kg` if reported.
   - The next column should contain the competitor's second attempt in kilograms `Deadlift2Kg` if reported.
   - The next column should contain the competitor's third attempt in kilograms `Deadlift3Kg` if reported.
-  - The next column should contain the competitor's best deadlift attempt in kilograms `BestDeadliftKg`.
+  - The next column should contain the competitor's best deadlift attempt in kilograms `Best3DeadliftKg`.
   - The next column should contain the competitor's total in kilograms `TotalKg`.
 2. Save the file as `entries.csv` in the same folder as meet.csv.
 

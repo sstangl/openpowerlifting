@@ -43,15 +43,15 @@ def process_row(csv, dirs, row):
         row[csv.index('Squat1Kg')],
         row[csv.index('Squat2Kg')],
         row[csv.index('Squat3Kg')],
-        row[csv.index('BestSquatKg')],
+        row[csv.index('Best3SquatKg')],
         row[csv.index('Bench1Kg')],
         row[csv.index('Bench2Kg')],
         row[csv.index('Bench3Kg')],
-        row[csv.index('BestBenchKg')],
+        row[csv.index('Best3BenchKg')],
         row[csv.index('Deadlift1Kg')],
         row[csv.index('Deadlift2Kg')],
         row[csv.index('Deadlift3Kg')],
-        row[csv.index('BestDeadliftKg')],
+        row[csv.index('Best3DeadliftKg')],
         row[csv.index('TotalKg')]
     ]
 
@@ -80,9 +80,9 @@ def main(filename):
         entriescsv = Csv()
         entriescsv.fieldnames = ["Name", "Sex", "Event", "Equipment", "Division",
                                  "BodyweightKg", "WeightClassKg", "Squat1Kg",
-                                 "Squat2Kg", "Squat3Kg", "BestSquatKg", "Bench1Kg",
-                                 "Bench2Kg", "Bench3Kg", "BestBenchKg", "Deadlift1Kg",
-                                 "Deadlift2Kg", "Deadlift3Kg", "BestDeadliftKg",
+                                 "Squat2Kg", "Squat3Kg", "Best3SquatKg", "Bench1Kg",
+                                 "Bench2Kg", "Bench3Kg", "Best3BenchKg", "Deadlift1Kg",
+                                 "Deadlift2Kg", "Deadlift3Kg", "Best3DeadliftKg",
                                  "TotalKg"]
 
         url = None

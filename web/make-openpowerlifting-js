@@ -8,7 +8,7 @@
 #
 # 1) Columns not used by the Rankings view are hidden.
 #
-# 2) Instead of having separate "BestSquatKg" and "Squat4Kg" columns, for example,
+# 2) Instead of having separate "Best3SquatKg" and "Squat4Kg" columns, for example,
 #    those fields are combined into a single column named "SquatKg".
 #
 # 3) Sex: "M" => 0, "F" => 1.
@@ -49,18 +49,18 @@ def main():
     # The Makefile has already removed many of the columns.
     csv = oplcsv.Csv(ENTRIESCSV)
 
-    csv.insert_column(csv.index('BestSquatKg'), 'SquatKg')
-    csv.insert_column(csv.index('BestBenchKg'), 'BenchKg')
-    csv.insert_column(csv.index('BestDeadliftKg'), 'DeadliftKg')
+    csv.insert_column(csv.index('Best3SquatKg'), 'SquatKg')
+    csv.insert_column(csv.index('Best3BenchKg'), 'BenchKg')
+    csv.insert_column(csv.index('Best3DeadliftKg'), 'DeadliftKg')
 
     for row in csv.rows:
         # Populate the "Squat", "Bench", and "Deadlift" columns.
         row[csv.index('SquatKg')] = \
-            strmax(row[csv.index('BestSquatKg')], row[csv.index('Squat4Kg')])
+            strmax(row[csv.index('Best3SquatKg')], row[csv.index('Squat4Kg')])
         row[csv.index('BenchKg')] = \
-            strmax(row[csv.index('BestBenchKg')], row[csv.index('Bench4Kg')])
+            strmax(row[csv.index('Best3BenchKg')], row[csv.index('Bench4Kg')])
         row[csv.index('DeadliftKg')] = \
-            strmax(row[csv.index('BestDeadliftKg')],
+            strmax(row[csv.index('Best3DeadliftKg')],
                    row[csv.index('Deadlift4Kg')])
 
         # Represent Equipment as an integer.
@@ -83,11 +83,11 @@ def main():
         elif sex == 'F':
             row[csv.index('Sex')] = "1"
 
-    csv.remove_column_by_name('BestSquatKg')
+    csv.remove_column_by_name('Best3SquatKg')
     csv.remove_column_by_name('Squat4Kg')
-    csv.remove_column_by_name('BestBenchKg')
+    csv.remove_column_by_name('Best3BenchKg')
     csv.remove_column_by_name('Bench4Kg')
-    csv.remove_column_by_name('BestDeadliftKg')
+    csv.remove_column_by_name('Best3DeadliftKg')
     csv.remove_column_by_name('Deadlift4Kg')
 
     csv.remove_column_by_name('Squat1Kg')

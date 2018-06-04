@@ -299,7 +299,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
             if header[i + 3] == 'Сумма':
-                fieldnames.append('BestSquatKg')
+                fieldnames.append('Best3SquatKg')
                 [next(iterable) for x in range(3)]
             elif header[i + 3].lower() in ['присед 4', 'sq 4', 'squat 4', 'присід 4']:
                 fieldnames.append('Squat4Kg')
@@ -315,7 +315,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
             if header[i + 3].lower() in ['сумма', 'рез', 'результат']:
-                fieldnames.append('BestBenchKg')
+                fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(3)]
             elif header[i + 3].lower() in ['жим 4', 'bp 4', 'benchpress 4', 'bp4']:
                 fieldnames.append('Bench4Kg')
@@ -329,7 +329,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
             if header[i + 3].lower() == 'сумма':
-                fieldnames.append('BestDeadliftKg')
+                fieldnames.append('Best3DeadliftKg')
                 [next(iterable) for x in range(3)]
             elif header[i + 3].lower() in ['тяга 4', 'dl 4', 'deadlift 4']:
                 fieldnames.append('Deadlift4Kg')
@@ -734,7 +734,7 @@ def assign_best(csv, liftname):
     idx1 = csv.index('%s1Kg' % liftname)
     idx2 = csv.index('%s2Kg' % liftname)
     idx3 = csv.index('%s3Kg' % liftname)
-    bestidx = csv.index('Best%sKg' % liftname)
+    bestidx = csv.index('Best3%sKg' % liftname)
 
     def weight(str):
         try:
@@ -764,12 +764,12 @@ def assign_total(csv):
     for row in csv.rows:
         if row[idx] == '':
             total = 0.0
-            if 'BestSquatKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestSquatKg')])
-            if 'BestBenchKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestBenchKg')])
-            if 'BestDeadliftKg' in csv.fieldnames:
-                total += weight(row[csv.index('BestDeadliftKg')])
+            if 'Best3SquatKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3SquatKg')])
+            if 'Best3BenchKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3BenchKg')])
+            if 'Best3DeadliftKg' in csv.fieldnames:
+                total += weight(row[csv.index('Best3DeadliftKg')])
 
             if total != 0.0:
                 row[idx] = str(total)
@@ -812,21 +812,21 @@ def main(filename):
               'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg', 'TotalKg']:
         cleanup_lift(csv, x)
 
-    if 'BestSquatKg' in csv.fieldnames:
-        cleanup_lift(csv, 'BestSquatKg')
-    if 'BestBenchKg' in csv.fieldnames:
-        cleanup_lift(csv, 'BestBenchKg')
-    if 'BestDeadliftKg' in csv.fieldnames:
-        cleanup_lift(csv, 'BestDeadliftKg')
+    if 'Best3SquatKg' in csv.fieldnames:
+        cleanup_lift(csv, 'Best3SquatKg')
+    if 'Best3BenchKg' in csv.fieldnames:
+        cleanup_lift(csv, 'Best3BenchKg')
+    if 'Best3DeadliftKg' in csv.fieldnames:
+        cleanup_lift(csv, 'Best3DeadliftKg')
 
-    if 'BestSquatKg' not in csv.fieldnames and 'Squat1Kg' in csv.fieldnames:
-        csv.append_column('BestSquatKg')
+    if 'Best3SquatKg' not in csv.fieldnames and 'Squat1Kg' in csv.fieldnames:
+        csv.append_column('Best3SquatKg')
         assign_best(csv, 'Squat')
-    if 'BestBenchKg' not in csv.fieldnames and 'Bench1Kg' in csv.fieldnames:
-        csv.append_column('BestBenchKg')
+    if 'Best3BenchKg' not in csv.fieldnames and 'Bench1Kg' in csv.fieldnames:
+        csv.append_column('Best3BenchKg')
         assign_best(csv, 'Bench')
-    if 'BestDeadliftKg' not in csv.fieldnames and 'Deadlift1Kg' in csv.fieldnames:
-        csv.append_column('BestDeadliftKg')
+    if 'Best3DeadliftKg' not in csv.fieldnames and 'Deadlift1Kg' in csv.fieldnames:
+        csv.append_column('Best3DeadliftKg')
         assign_best(csv, 'Deadlift')
 
     assign_total(csv)

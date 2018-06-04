@@ -29,9 +29,9 @@ columnmap = {
     "Class": "WeightClassLBS",
     "Bodyweight": "BodyweightLBS",
     "Event": "Event",
-    "Squat": "BestSquatLBS",
-    "Bench": "BestBenchLBS",
-    "Deadlift": "BestDeadliftLBS",
+    "Squat": "Best3SquatLBS",
+    "Bench": "Best3BenchLBS",
+    "Deadlift": "Best3DeadliftLBS",
     "Total": "TotalLBS"
 }
 

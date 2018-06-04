@@ -125,17 +125,17 @@ def getresults(soup):
                 elif h == 'Vikt':
                     csv.fieldnames += ['BodyweightKg']
                 elif h == 'Knäböj':
-                    csv.fieldnames += ['BestSquatKg']
+                    csv.fieldnames += ['Best3SquatKg']
                 elif h == 'Bänkpress':
-                    csv.fieldnames += ['BestBenchKg']
+                    csv.fieldnames += ['Best3BenchKg']
                 elif h == 'Marklyft':
-                    csv.fieldnames += ['BestDeadliftKg']
+                    csv.fieldnames += ['Best3DeadliftKg']
                 elif h == 'Total':
                     csv.fieldnames += ['TotalKg']
                 elif h == 'Poäng':
                     csv.fieldnames += ['Wilks']
                 elif h == 'Resultat':
-                    csv.fieldnames += ['BestBenchKg']
+                    csv.fieldnames += ['Best3BenchKg']
                 elif h == '':
                     csv.fieldnames += ['IGNORE']
                 else:
@@ -249,11 +249,11 @@ def markevent(csv):
         return indexlist
 
     squatidxl = getevtindices(
-        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Best3SquatKg'])
     benchidxl = getevtindices(
-        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Best3BenchKg'])
     deadliftidxl = getevtindices(
-        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Best3DeadliftKg'])
 
     for row in csv.rows:
         evt = ''
@@ -304,15 +304,15 @@ def addtotals(csv):
         for row in csv.rows:
             total = 0
             if row[placeidx] not in ['DQ', 'DD']:
-                if ('BestSquatKg' in csv.fieldnames and
-                        row[csv.index('BestSquatKg')] != ''):
-                    total += float(row[csv.index('BestSquatKg')])
-                if ('BestBenchKg' in csv.fieldnames and
-                        row[csv.index('BestBenchKg')] != ''):
-                    total += float(row[csv.index('BestBenchKg')])
-                if ('BestDeadliftKg' in csv.fieldnames and
-                        row[csv.index('BestDeadliftKg')] != ''):
-                    total += float(row[csv.index('BestDeadliftKg')])
+                if ('Best3SquatKg' in csv.fieldnames and
+                        row[csv.index('Best3SquatKg')] != ''):
+                    total += float(row[csv.index('Best3SquatKg')])
+                if ('Best3BenchKg' in csv.fieldnames and
+                        row[csv.index('Best3BenchKg')] != ''):
+                    total += float(row[csv.index('Best3BenchKg')])
+                if ('Best3DeadliftKg' in csv.fieldnames and
+                        row[csv.index('Best3DeadliftKg')] != ''):
+                    total += float(row[csv.index('Best3DeadliftKg')])
                 if total != 0.0:
                     row[totalidx] = str(total)
 

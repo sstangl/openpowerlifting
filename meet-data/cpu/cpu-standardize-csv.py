@@ -114,9 +114,9 @@ def standardize_event(csv):
     evtidx = csv.index('3Lift')
     csv.fieldnames[evtidx] = 'Event'
 
-    squatidx = csv.index('BestSquatKg')
-    benchidx = csv.index('BestBenchKg')
-    deadliftidx = csv.index('BestDeadliftKg')
+    squatidx = csv.index('Best3SquatKg')
+    benchidx = csv.index('Best3BenchKg')
+    deadliftidx = csv.index('Best3DeadliftKg')
 
     for row in csv.rows:
         event = row[evtidx]

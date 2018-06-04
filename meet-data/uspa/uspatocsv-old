@@ -155,12 +155,12 @@ def USPA_get_column_names_once(csv, lines, columnRanges):
             name = "WeightClassLBS"
         elif lname == "wilksscore":
             name = "Wilks"
-        elif lname == "BestBench":
-            name = "BestBenchLBS"
-        elif lname == "BestSquat":
-            name = "BestSquatLBS"
-        elif lname == "BestDeadlift":
-            name = "BestDeadliftLBS"
+        elif lname == "Best3Bench":
+            name = "Best3BenchLBS"
+        elif lname == "Best3Squat":
+            name = "Best3SquatLBS"
+        elif lname == "Best3Deadlift":
+            name = "Best3DeadliftLBS"
 
         columns.append(name)
 
@@ -397,11 +397,11 @@ def csv_integrate_4ths(csv):
 
         # Now figure out what the column header should be.
         # We can infer it from the previous column.
-        if csv[0][k] == "BestSquatLBS":
+        if csv[0][k] == "Best3SquatLBS":
             csv[0][k + 1] = "Squat4LBS"
-        elif csv[0][k] == "BestBenchLBS":
+        elif csv[0][k] == "Best3BenchLBS":
             csv[0][k + 1] = "Bench4LBS"
-        elif csv[0][k] == "BestDeadliftLBS":
+        elif csv[0][k] == "Best3DeadliftLBS":
             csv[0][k + 1] = "Deadlift4LBS"
         else:
             csv[0][k + 1] = csv[0][k] + '4'

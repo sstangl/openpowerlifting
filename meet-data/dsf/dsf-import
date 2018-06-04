@@ -201,7 +201,7 @@ def getresults(soup):
         elif h == 'SQ3':
             csv.fieldnames += ['Squat3Kg']
         elif h == 'SQ' or h == 'Squat':
-            csv.fieldnames += ['BestSquatKg']
+            csv.fieldnames += ['Best3SquatKg']
         elif h == 'BP1':
             csv.fieldnames += ['Bench1Kg']
         elif h == 'BP2':
@@ -209,7 +209,7 @@ def getresults(soup):
         elif h == 'BP3':
             csv.fieldnames += ['Bench3Kg']
         elif h == 'BP' or h == 'Bænk':
-            csv.fieldnames += ['BestBenchKg']
+            csv.fieldnames += ['Best3BenchKg']
         elif h == 'DL1':
             csv.fieldnames += ['Deadlift1Kg']
         elif h == 'DL2':
@@ -217,7 +217,7 @@ def getresults(soup):
         elif h == 'DL3':
             csv.fieldnames += ['Deadlift3Kg']
         elif h == 'DL' or h == 'Dødløft':
-            csv.fieldnames += ['BestDeadliftKg']
+            csv.fieldnames += ['Best3DeadliftKg']
         elif h == 'Total':
             csv.fieldnames += ['TotalKg']
         elif h == 'Points':
@@ -396,14 +396,14 @@ def fixtotals(csv):
         bpidx = -1
         dlidx = -1
 
-        if 'BestSquatKg'in csv.fieldnames:
-            sqidx = csv.index('BestSquatKg')
+        if 'Best3SquatKg'in csv.fieldnames:
+            sqidx = csv.index('Best3SquatKg')
 
-        if 'BestBenchKg' in csv.fieldnames:
-            bpidx = csv.index('BestBenchKg')
+        if 'Best3BenchKg' in csv.fieldnames:
+            bpidx = csv.index('Best3BenchKg')
 
-        if 'BestDeadliftKg' in csv.fieldnames:
-            dlidx = csv.index('BestDeadliftKg')
+        if 'Best3DeadliftKg' in csv.fieldnames:
+            dlidx = csv.index('Best3DeadliftKg')
 
         for row in csv.rows:
             if row[totalidx] != '':
@@ -430,14 +430,14 @@ def fixtotals(csv):
         bpidx = -1
         dlidx = -1
 
-        if 'BestSquatKg'in csv.fieldnames:
-            sqidx = csv.index('BestSquatKg')
+        if 'Best3SquatKg'in csv.fieldnames:
+            sqidx = csv.index('Best3SquatKg')
 
-        if 'BestBenchKg' in csv.fieldnames:
-            bpidx = csv.index('BestBenchKg')
+        if 'Best3BenchKg' in csv.fieldnames:
+            bpidx = csv.index('Best3BenchKg')
 
-        if 'BestDeadliftKg' in csv.fieldnames:
-            dlidx = csv.index('BestDeadliftKg')
+        if 'Best3DeadliftKg' in csv.fieldnames:
+            dlidx = csv.index('Best3DeadliftKg')
 
         if len([idx for idx in [sqidx, bpidx, dlidx] if idx != -1]) == 1:
             csv.fieldnames += ['TotalKg']
@@ -451,7 +451,7 @@ def fixtotals(csv):
                     row.append(row[dlidx])
 
 
-# Attempts are given, but not the BestSquatKg columns, etc.
+# Attempts are given, but not the Best3SquatKg columns, etc.
 def calc_best_lift(csv, col, attemptlist):
     if col in csv.fieldnames:
         return
@@ -490,11 +490,11 @@ def markevent(csv):
         return indexlist
 
     squatidxl = getevtindices(
-        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'BestSquatKg'])
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Best3SquatKg'])
     benchidxl = getevtindices(
-        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'BestBenchKg'])
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Best3BenchKg'])
     deadliftidxl = getevtindices(
-        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'BestDeadliftKg'])
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Best3DeadliftKg'])
 
     for row in csv.rows:
         evt = ''

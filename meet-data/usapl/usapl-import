@@ -287,9 +287,9 @@ def makebestcolumns(csv):
         numcols = len(list(filter(lambda x: lift in x, csv.fieldnames)))
         if numcols == 3:
             csv.insert_column(csv.index(lift + '3Kg') +
-                              1, 'Best' + lift + 'Kg')
+                              1, 'Best3' + lift + 'Kg')
 
-            idxbest = csv.index('Best' + lift + 'Kg')
+            idxbest = csv.index('Best3' + lift + 'Kg')
             idx1 = csv.index(lift + '1Kg')
             idx2 = csv.index(lift + '2Kg')
             idx3 = csv.index(lift + '3Kg')
@@ -302,7 +302,7 @@ def makebestcolumns(csv):
         elif numcols == 1:
             # If only one column is filled in, that's the best result column.
             idx1 = csv.index(lift + '1Kg')
-            csv.fieldnames[idx1] = 'Best' + lift + 'Kg'
+            csv.fieldnames[idx1] = 'Best3' + lift + 'Kg'
 
     makebestcolumn(csv, 'Squat')
     makebestcolumn(csv, 'Bench')

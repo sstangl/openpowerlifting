@@ -221,11 +221,11 @@ def rename_fields(csv):
         elif field == 'B.W.T':
             csv.fieldnames[i] = 'BodyweightLBS'
         elif field == 'Best SQ':
-            csv.fieldnames[i] = 'BestSquatKg'
+            csv.fieldnames[i] = 'Best3SquatKg'
         elif field == 'Best BP':
-            csv.fieldnames[i] = 'BestBenchKg'
+            csv.fieldnames[i] = 'Best3BenchKg'
         elif field == 'Best DL':
-            csv.fieldnames[i] = 'BestDeadliftKg'
+            csv.fieldnames[i] = 'Best3DeadliftKg'
         elif field == 'TL Kgs':
             csv.fieldnames[i] = 'TotalKg'
         elif field == 'TL LBS':
@@ -472,9 +472,9 @@ def recalculate_totals(csv):
         csv.append_column('TotalKg')
     totalidx = csv.index('TotalKg')
 
-    squatidx = csv.index('BestSquatKg')
-    benchidx = csv.index('BestBenchKg')
-    deadliftidx = csv.index('BestDeadliftKg')
+    squatidx = csv.index('Best3SquatKg')
+    benchidx = csv.index('Best3BenchKg')
+    deadliftidx = csv.index('Best3DeadliftKg')
 
     for row in csv.rows:
         total = float2(row[squatidx]) + float2(row[benchidx]
@@ -486,9 +486,9 @@ def recalculate_totals(csv):
 # but failed to complete all of the lifts, they're given the total of their successes.
 # This fixes that.
 def hunt_dqs(csv):
-    squatidx = csv.index('BestSquatKg')
-    benchidx = csv.index('BestBenchKg')
-    deadliftidx = csv.index('BestDeadliftKg')
+    squatidx = csv.index('Best3SquatKg')
+    benchidx = csv.index('Best3BenchKg')
+    deadliftidx = csv.index('Best3DeadliftKg')
     totalidx = csv.index('TotalKg')
     eventidx = csv.index('Event')
     placeidx = csv.index('Place')
@@ -571,9 +571,9 @@ def remove_non_pl_rows(csv):
 def fix_individual_lifts(csv):
     eventidx = csv.index('Event')
     equipidx = csv.index('Equipment')
-    squatidx = csv.index('BestSquatKg')
-    benchidx = csv.index('BestBenchKg')
-    deadidx = csv.index('BestDeadliftKg')
+    squatidx = csv.index('Best3SquatKg')
+    benchidx = csv.index('Best3BenchKg')
+    deadidx = csv.index('Best3DeadliftKg')
     for row in csv.rows:
         if row[eventidx] == 'I':
             if float2(row[squatidx]) > 0:
@@ -678,9 +678,9 @@ def main(filename):
     remove_w(csv)
     update_event(csv)
     recalculate_totals(csv)
-    trim_numbers(csv, 'BestSquatKg')
-    trim_numbers(csv, 'BestBenchKg')
-    trim_numbers(csv, 'BestDeadliftKg')
+    trim_numbers(csv, 'Best3SquatKg')
+    trim_numbers(csv, 'Best3BenchKg')
+    trim_numbers(csv, 'Best3DeadliftKg')
     trim_numbers(csv, 'BodyweightLBS')
     trim_numbers(csv, 'WeightClassLBS')
 

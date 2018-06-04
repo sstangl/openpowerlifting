@@ -12,7 +12,7 @@ def float2(s):
 
 def add_best_column(csv, lift):
     idx = csv.index(lift + '3Kg') + 1
-    csv.insert_column(idx, 'Best%sKg' % lift)
+    csv.insert_column(idx, 'Best3%sKg' % lift)
 
     idx1 = csv.index(lift + '1Kg')
     idx2 = csv.index(lift + '2Kg')
@@ -31,12 +31,12 @@ def add_best_column(csv, lift):
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    if 'Squat1Kg' in csv.fieldnames and 'BestSquatKg' not in csv.fieldnames:
+    if 'Squat1Kg' in csv.fieldnames and 'Best3SquatKg' not in csv.fieldnames:
         add_best_column(csv, 'Squat')
-    if 'Bench1Kg' in csv.fieldnames and 'BestBenchKg' not in csv.fieldnames:
+    if 'Bench1Kg' in csv.fieldnames and 'Best3BenchKg' not in csv.fieldnames:
         add_best_column(csv, 'Bench')
     if ('Deadlift1Kg' in csv.fieldnames
-            and 'BestDeadliftKg' not in csv.fieldnames):
+            and 'Best3DeadliftKg' not in csv.fieldnames):
         add_best_column(csv, 'Deadlift')
 
     with open(filename, 'w') as fd:
