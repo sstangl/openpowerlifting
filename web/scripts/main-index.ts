@@ -22,6 +22,7 @@ const selClass = document.getElementById("weightclass") as HTMLSelectElement;
 const selFed = document.getElementById("fedselect") as HTMLSelectElement;
 const selYear = document.getElementById("yearselect") as HTMLSelectElement;
 const selSex = document.getElementById("sexselect") as HTMLSelectElement;
+const selSort = document.getElementById("sortselect") as HTMLSelectElement;
 const searchfield = document.getElementById("searchfield") as HTMLInputElement;
 const searchbutton = document.getElementById("searchbutton") as HTMLButtonElement;
 
@@ -162,6 +163,12 @@ function redraw() {
     common.setWeightTypeState(selWeightType.value)
     generateWeightClasses();
 
+    if (selSort.value !== sortCol.id) {
+        sortCol.id = selSort.value;
+        sortAsc = false;
+        grid.setSortColumn(sortCol.id, sortAsc);
+    }
+
     let source = makeDataProvider();
     grid.setData(source);
     grid.invalidateAllRows();
@@ -252,6 +259,7 @@ function addEventListeners() {
     addSelectorListeners(selFed);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
+    addSelectorListeners(selSort);
 
     searchfield.addEventListener("keypress", searchOnEnter, false);
     searchbutton.addEventListener("click", search, false);
@@ -288,12 +296,10 @@ function onload() {
         {id: "date", name: "Date", field: "date", width: dateWidth, formatter: urlformatter},
         {id: "location", name: "Location", field: "location", width:dateWidth},
         {id: "sex", name: "Sex", field: "sex", width: shortWidth},
-        {id: "age", name: "Age", field: "age", width: shortWidth,
-                    sortable: true, defaultSortAsc: false},
+        {id: "age", name: "Age", field: "age", width: shortWidth},
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
         {id: "weightclass", name: "Class", field: "weightclass", width: numberWidth},
-        {id: "bw", name: "Weight", field: "bw", width: numberWidth,
-                   sortable: true, defaultSortAsc: false},
+        {id: "bw", name: "Weight", field: "bw", width: numberWidth},
         {id: "squat", name: "Squat", field: "squat", width: numberWidth,
                       sortable: true, defaultSortAsc: false},
         {id: "bench", name: "Bench", field: "bench", width: numberWidth,
