@@ -8,6 +8,7 @@ PLFILEJS := openpowerlifting.js
 MEETFILE := ../build/meets.csv
 MEETFILEJS := meets.js
 LOGO := ../project-data/logo-compressed.svg
+FAVICON := ../project-data/favicon-32x32.ico
 
 all: database scripts css html images
 
@@ -59,7 +60,8 @@ images: builddir
 	cp images/check_radio_sheet.png ${BUILDDIR}/static/images
 	cp images/select_dropdown.png ${BUILDDIR}/static/images
 	cp images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/static/images"
-	cp ${LOGO} ${BUILDDIR}/static/images
+	cp "${LOGO}" "${BUILDDIR}/static/images/"
+	cp "${FAVICON}" "${BUILDDIR}/favicon.ico"
 
 check:
 	echo "Nothing to check for the moment."

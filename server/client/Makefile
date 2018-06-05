@@ -24,6 +24,7 @@ oldimages: builddir
 	cp ${PROJECTDATA}/logo-compressed.svg "${BUILDDIR}/images/"
 	cp ${OLDWEB}/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images/"
 	cp ${OLDWEB}/images/select_dropdown.png "${BUILDDIR}/images/"
+	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
 
 scripts: builddir npminit slickgrid
 	npm run webpack

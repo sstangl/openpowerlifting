@@ -176,6 +176,13 @@ fn statics(file: PathBuf, encoding: AcceptEncoding) -> Option<StaticFile> {
     Some(StaticFile::Plain(namedfile))
 }
 
+/// Actually store the favicon in static/images/,
+/// but allow serving from the root.
+#[get("/favicon.ico")]
+fn root_favicon(encoding: AcceptEncoding) -> Option<StaticFile> {
+    statics(PathBuf::from("images/favicon.ico"), encoding)
+}
+
 #[get("/rankings/<selections..>")]
 fn rankings(
     selections: PathBuf,
@@ -390,6 +397,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 lifter,
                 meet,
                 statics,
+                root_favicon,
                 status,
                 data,
                 faq,
