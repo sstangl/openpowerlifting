@@ -300,16 +300,11 @@ function onload() {
         {id: "equip", name: "Equip", field: "equip", width: shortWidth},
         {id: "weightclass", name: "Class", field: "weightclass", width: numberWidth},
         {id: "bw", name: "Weight", field: "bw", width: numberWidth},
-        {id: "squat", name: "Squat", field: "squat", width: numberWidth,
-                      sortable: true, defaultSortAsc: false},
-        {id: "bench", name: "Bench", field: "bench", width: numberWidth,
-                      sortable: true, defaultSortAsc: false},
-        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth,
-                         sortable: true, defaultSortAsc: false},
-        {id: "total", name: "Total", field: "total", width: numberWidth,
-                      sortable: true, defaultSortAsc: false},
-        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth,
-                      sortable: true, defaultSortAsc: false}
+        {id: "squat", name: "Squat", field: "squat", width: numberWidth},
+        {id: "bench", name: "Bench", field: "bench", width: numberWidth},
+        {id: "deadlift", name: "Deadlift", field: "deadlift", width: numberWidth},
+        {id: "total", name: "Total", field: "total", width: numberWidth},
+        {id: "wilks", name: "Wilks", field: "wilks", width: numberWidth}
     ];
 
     let options = {
