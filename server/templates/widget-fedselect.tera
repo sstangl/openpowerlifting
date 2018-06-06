@@ -103,6 +103,9 @@
 <optgroup label="{{strings.country.latvia}}">
     <option value="lpf">LPF - Latvijas Pauerliftinga Federācija [IPF] (Incomplete)</option>
 </optgroup>
+<optgroup label="{{strings.country.malaysia}}">
+  <option value="mpa">MPA - Malaysian Powerlifting Alliance [GPA]</option>
+</optgroup>
 <optgroup label="{{strings.country.mexico}}">
   <option value="femepo">FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF]</option>
 </optgroup>
@@ -115,6 +118,9 @@
 </optgroup>
 <optgroup label="{{strings.country.poland}}">
   <option value="pzkfits">PZKFiTS - Polski Związek Kulturystyki Fitness [IPF]</option>
+</optgroup>
+<optgroup label="{{strings.country.portugal}}">
+  <option value="wpcportugal">WPC-Portugal - WPC Portugal [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.russia}}">
   <option value="all-russia">All Russian Feds</option>

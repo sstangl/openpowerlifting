@@ -121,6 +121,7 @@ KnownFederations = {
     "LPF",  # The Latvian IPF Affiliate.
     "MHP",  # Maximum Human Performance (a vitamin company).
     "MM",  # Metal Militia (a small, independent federation).
+    "MPA",  # Malaysian Powerlifting Alliance,
     "NAPF",  # North American Powerlifting Federation.
     "NASA",
     "NIPF",  # Northern Ireland Powerlifting Federation.
@@ -159,6 +160,7 @@ KnownFederations = {
     "WPA",  # World Powerlifting Alliance.
     "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
+    "WPC-PORTUGAL",
     "WPC-RUS",
     "WPF",  # World Powerlifting federation (Not the Wilks one)
     "WNPF",  # World Natural Powerlifting Federation.
@@ -230,6 +232,7 @@ KnownCountries = {
     "Peru",
     "Philippines",
     "Poland",
+    "Portugal",
     "Puerto Rico",
     "Russia",
     "Samoa",

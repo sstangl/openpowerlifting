@@ -125,6 +125,8 @@ pub enum Federation {
     MHP,
     #[strum(to_string = "MM", serialize = "mm")]
     MM,
+    #[strum(to_string = "MPA", serialize = "mpa")]
+    MPA,
     #[strum(to_string = "NAPF", serialize = "napf")]
     NAPF,
     #[strum(to_string = "NASA", serialize = "nasa")]
@@ -202,6 +204,9 @@ pub enum Federation {
     WPAU,
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
+    #[serde(rename = "WPC-Portugal")]
+    #[strum(to_string = "WPC-Portugal", serialize = "wpc-portugal")]
+    WPCPortugal,
     #[serde(rename = "WPC-RUS")]
     #[strum(to_string = "WPC-RUS", serialize = "wpc-rus")]
     WPCRUS,
