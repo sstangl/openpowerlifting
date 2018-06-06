@@ -425,7 +425,7 @@ function onload() {
     let meetdate = meetrow[MeetDBColumn.Date];
     let meetname = meetrow[MeetDBColumn.MeetName];
     let meetpath = meetrow[MeetDBColumn.MeetPath];
-    let editurl = "https://github.com/sstangl/openpowerlifting/tree/master/meet-data/" + meetpath;
+    let editurl = "https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/" + meetpath;
 
     meetString.innerHTML = meetfed
                            + " &nbsp;/ &nbsp;" + meetdate

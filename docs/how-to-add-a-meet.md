@@ -138,13 +138,13 @@ You are now ready to upload the `entries.csv`, `results.csv`, and `URL` files cr
 4. You need to add `results.txt` file so type `git add results.txt`
 5. Next, commit the above files by typing `git commit -m  "${DIRNAME}" ` (where `${DIRNAME}` is the directory you just added).
 6. Push the above files by typing `git remote add mine ${URL_TO_YOUR_FORK}`.
-7. You will be asked for your GitHub username and password.
+7. You will be asked for your GitLab username and password.
 
-### Step 5: Send pull request (On GitHub.com)
-1. Go to GitHub.com.
+### Step 5: Send merge request (On GitLab.com)
+1. Go to GitLab.com.
 2. Find your profile.
 3. Go to your repository.
-4. Create a new pull request
+4. Create a new merge request
 
 Now you have successfully uploaded a meet!
 

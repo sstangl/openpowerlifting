@@ -24,7 +24,7 @@
       
         <p>The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data. In support of this mission, all of the OpenPowerlifting data and code is available for download in useful formats. There is no need to scrape this website.</p>
 
-<p>All work on the OpenPowerlifting project is conducted in the open with a visible and permanent data modification history. If you would like to contribute to the project, the best way is through the <a href="https://github.com/sstangl/openpowerlifting">GitHub repository</a>.</p>
+<p>All work on the OpenPowerlifting project is conducted in the open with a visible and permanent data modification history. If you would like to contribute to the project, the best way is through the <a href="https://gitlab.com/openpowerlifting/opl-data">GitLab repository</a>.</p>
 
 
       <h1>Projects Using Our Data</h1>
@@ -53,7 +53,7 @@
 <p>Sample attribution text:</p>
 <pre>
     This page uses data from the OpenPowerlifting project, http://www.openpowerlifting.org.
-    You may download a copy of the data at https://github.com/sstangl/openpowerlifting.
+    You may download a copy of the data at https://gitlab.com/openpowerlifting/opl-data.
 </pre>
 
 <p>If you modify the data or add useful new data, please consider contributing
@@ -78,11 +78,11 @@ the changes back so the entire powerlifting community may benefit.</p>
 
       <div class="downloadbar">
         <div class="downloaditem">
-          <a href="https://github.com/sstangl/openpowerlifting">https://github.com/sstangl/openpowerlifting</a>
+          <a href="https://gitlab.com/openpowerlifting/opl-data">https://gitlab.com/openpowerlifting/opl-data</a>
         </div>
 
         <div class="downloaditem">
-          <a href="https://github.com/sstangl/openpowerlifting/archive/master.zip">master.zip</a> <!-- ~7M -->
+          <a href="https://gitlab.com/openpowerlifting/opl-data/-/archive/master/opl-data-master.zip">opl-data-master.zip</a>
         </div>
 
       </div>

@@ -19,7 +19,7 @@ Below are step-by-step instructions for setting up the project.
 
 4. Clone Repo
 
-   - In Ubuntu type: `git clone https://github.com/sstangl/openpowerlifting.git`
+   - In Ubuntu type: `git clone https://gitlab.com/openpowerlifting/opl-data.git`
 
 5. Change directory
 

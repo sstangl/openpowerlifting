@@ -4,7 +4,7 @@
 Ensure that you have git installed, and run
 
 ```
-git clone https://github.com/sstangl/openpowerlifting.git
+git clone https://gitlab.com/openpowerlifting/opl-data.git
 ```
 
 ## Running the Makefile

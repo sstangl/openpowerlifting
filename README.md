@@ -30,7 +30,7 @@ so that people may know about this project and help contribute data.
 Sample attribution text:
 
 > This page uses data from the OpenPowerlifting project, http://www.openpowerlifting.org.<br/>
-> You may download a copy of the data at https://github.com/sstangl/openpowerlifting.
+> You may download a copy of the data at https://gitlab.com/openpowerlifting/opl-data.
 
 If you modify the data or add useful new data, please consider contributing<br/>
 the changes back so the entire powerlifting community may benefit.

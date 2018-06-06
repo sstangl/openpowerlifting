@@ -10,7 +10,7 @@ During the build step, all of the different CSV files are combined together to f
 
 ## Where are the Meet Results stored?
 
-All meet data is stored in the folder [meet-data](https://github.com/sstangl/openpowerlifting/tree/master/meet-data).
+All meet data is stored in the folder [meet-data](https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data).
 
 ### Federation Directories
 

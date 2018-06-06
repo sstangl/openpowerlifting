@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sstangl/openpowerlifting.git"
+    "url": "git+https://gitlab.com/openpowerlifting/opl-data.git"
   },
   "author": "Sean Stangl <sean.stangl@gmail.com>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/sstangl/openpowerlifting/issues"
+    "url": "https://gitlab.com/openpowerlifting/opl-data/issues"
   },
-  "homepage": "https://github.com/sstangl/openpowerlifting#readme",
+  "homepage": "https://gitlab.com/openpowerlifting/opl-data/#readme",
   "dependencies": {
     "slickgrid": "^2.3.19"
   },

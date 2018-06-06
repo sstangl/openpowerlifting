@@ -17,7 +17,7 @@
       </select>
     </div>
     <div id="controls-right">
-      <a href="https://github.com/sstangl/openpowerlifting/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
+      <a href="https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
       {% include "widget-weightunits" %}
       {% include "widget-langselect" %}
     </div>

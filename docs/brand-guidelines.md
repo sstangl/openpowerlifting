@@ -29,7 +29,7 @@ In terms of not controlling access to the data:
   2. All of our data is released into the public domain, so anyone can use it for any purpose.
   3. All of our code is released under Free Software licenses.
   4. No one is ever required to pay for access.
-  5. The entire project is available on GitHub, and we actively solicit community contributions.
+  5. The entire project is available on GitLab, and we actively solicit community contributions.
 
 In addition, the project is *entirely funded by the powerlifting community*:
 
