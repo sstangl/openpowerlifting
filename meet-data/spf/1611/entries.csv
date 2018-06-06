@@ -1,27 +1,47 @@
-Name,Division,Equipment,WeightClassKg,Event,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Place
-Elena Avila,Juniors,Wraps,56,SBD,88.45,40.82,104.33,233.6,F,2
-Melissa Baumann,Masters 50-54,Wraps,82.5,SBD,86.18,43.09,111.13,240.4,F,1
-Liz Cartwright,Open,Wraps,82.5,SBD,145.15,92.99,161.03,399.16,F,1
-Li Cavanaugh,Juniors,Wraps,56,SBD,111.13,52.16,113.4,276.69,F,1
-Emma Kehoe,Juniors,Wraps,67.5,SBD,120.2,56.7,142.88,319.78,F,1
-Kali Nuckols,Juniors,Wraps,100,SBD,90.72,52.16,111.13,254.01,F,1
-Jennie Radovsky,Open,Wraps,75,SBD,83.91,52.16,124.74,260.82,F,1
-Jenna Sollner,Open,Wraps,60,SBD,111.13,63.5,122.47,297.1,F,1
-Danielle Thompson,Open,Wraps,90,SBD,124.74,65.77,151.95,342.46,F,1
-Kylie Waugh,Juniors,Wraps,52,SBD,88.45,49.9,124.74,263.08,F,1
-Jamal Anderson,Juniors,Wraps,75,SBD,174.63,77.11,188.24,439.98,M,3
-Ian Brown,Open,Wraps,82.5,SBD,215.46,147.42,251.74,614.62,M,1
-Daniel Clements,Teenage 18-19,Wraps,67.5,SBD,181.44,133.81,242.67,557.92,M,1
-Kyle Day,Open,Wraps,82.5,SBD,185.97,124.74,233.6,544.31,M,2
-Kevin Dickhut,Open,Wraps,100,SBD,301.64,190.51,317.51,809.66,M,1
-Frank Ferchland,Masters 45-49,Wraps,100,SBD,151.95,131.54,176.9,460.4,M,1
-Chad Fuller,Open,Wraps,100,SBD,208.65,133.81,247.21,589.67,M,2
-Tim Holden,Juniors,Wraps,75,SBD,165.56,99.79,190.51,455.86,M,2
-Adrian Joco,Teenage 18-19,Wraps,75,SBD,145.15,106.59,188.24,439.98,M,1
-Quince McCurley,Juniors,Wraps,82.5,SBD,242.67,124.74,274.42,641.83,M,1
-Chris Neff,Open,Wraps,90,SBD,231.33,122.47,240.4,594.21,M,1
-Rex Reguindin,Juniors,Wraps,90,SBD,204.12,136.08,238.14,578.33,M,1
-Joey Reid,Open,Wraps,82.5,SBD,185.97,124.74,215.46,526.17,M,3
-Robert Saunders,Juniors,Wraps,75,SBD,165.56,97.52,206.38,469.47,M,1
-Dan Shelton,Open,Wraps,100,SBD,147.42,113.4,183.7,444.52,M,3
-Craig White,Sub-Masters,Wraps,100,SBD,120.2,97.52,183.7,401.43,M,1
+State,WeightClassKg,Division,Sex,Equipment,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Event
+PA,52,Junior,F,Wraps,Kylie Waugh,88.45,49.9,124.74,263.08,1,SBD
+VA,56,Junior,F,Wraps,Elena Avila,88.45,40.82,104.33,233.6,1,SBD
+VA,56,Open,F,Wraps,Li Cavanaugh,111.13,52.16,113.4,276.69,1,SBD
+VA,60,Teenage,F,Wraps,Jordan Dunlap,83.91,52.16,115.67,251.74,1,SBD
+VA,60,Open,F,Wraps,Jenna Sollner,111.13,63.5,122.47,297.1,1,SBD
+VA,60,Open,F,Wraps,Jaclyn Cseh,88.45,,,,DQ,SBD
+VA,67.5,Junior,F,Wraps,Emmy Kehoe,120.2,56.7,142.88,319.78,1,SBD
+VA,67.5,Open,F,Wraps,Ansley Elias,,,,,DQ,SBD
+VA,75,Open,F,Wraps,Jennie Radovsky,83.91,52.16,124.74,260.82,1,SBD
+VA,82.5,Masters 50-54,F,Wraps,Melissa Baumann,86.18,43.09,111.13,240.4,1,SBD
+VA,82.5,Open,F,Wraps,Liz Cartwright,145.15,92.99,161.03,399.16,1,SBD
+VA,90,Open,F,Wraps,Danielle Thompson,124.74,65.77,151.95,342.46,1,SBD
+VA,100,Junior,F,Wraps,Kali Nuckols,90.72,52.16,111.13,254.01,1,SBD
+VA,67.5,Teen 18-19,M,Wraps,Daniel Clements,181.44,133.81,242.67,557.92,1,SBD
+VA,75,Teen 18-19,M,Wraps,Adrian Joco,145.15,106.59,188.24,439.98,1,SBD
+VA,75,Junior,M,Wraps,Tim Holden,165.56,99.79,190.51,455.86,2,SBD
+VA,75,Junior,M,Wraps,Jamal Anderson,174.63,77.11,188.24,439.98,3,SBD
+VA,75,Junior,M,Wraps,Robert Saunders,165.56,97.52,206.38,469.47,1,SBD
+VA,82.5,Junior,M,Wraps,Quince McCurley,242.67,124.74,274.42,641.83,1,SBD
+VA,82.5,Junior,M,Wraps,Joey Reid,215.46,133.81,235.87,585.13,2,SBD
+VA,82.5,Masters 40-44,M,Wraps,Ian Brown,215.46,147.42,251.74,614.62,1,SBD
+VA,82.5,Masters 45-49,M,Wraps,Jay Hutson,142.88,,,,DQ,SBD
+VA,82.5,Open,M,Wraps,Kyle Day,185.97,124.74,233.6,544.31,1,SBD
+VA,90,Open,M,Wraps,Chris Neff,231.33,122.47,240.4,594.21,1,SBD
+VA,90,Junior,M,Wraps,Rex Reguindin,204.12,136.08,238.14,578.33,1,SBD
+VA,100,Junior,M,Wraps,Ross Ellenberger,215.46,129.27,288.03,632.76,1,SBD
+VA,100,Open,M,Wraps,Dan Shelton,147.42,113.4,183.7,444.52,4,SBD
+VA,100,Open,M,Wraps,Kevin Dickhut,301.64,190.51,317.51,809.66,1,SBD
+VA,100,Open,M,Wraps,Zechariach Pociatek,,,,,DQ,SBD
+VA,100,Open,M,Wraps,Chad Fuller,208.65,133.81,247.21,589.67,2,SBD
+VA,100,Open,M,Wraps,Frank Ferchland,151.95,129.27,176.9,458.13,3,SBD
+VA,100,Masters 45-49,M,Wraps,Frank Ferchland,151.95,129.27,176.9,458.13,1,SBD
+VA,100,SubMasters 33-39,M,Wraps,Craig White,120.2,97.52,183.7,401.43,1,SBD
+VA,110,Masters 40-44,M,Wraps,Matt Ferguson,197.31,161.03,256.28,614.62,1,SBD
+VA,110,Open,M,Wraps,Matt Foti,249.48,174.63,249.48,673.58,1,SBD
+VA,110,Open,M,Wraps,Joseph Tugwell,210.92,156.49,247.21,614.62,3,SBD
+VA,110,Open,M,Wraps,Andrew Spellman,226.8,142.88,254.01,623.69,2,SBD
+VA,110,Open,M,Wraps,Patrick Retallack,224.53,142.88,215.46,582.87,4,SBD
+VA,117.5,Teen 18-19,M,Wraps,Bennett Bowers,201.85,115.67,231.33,548.85,1,SBD
+VA,117.5,Masters 50-55,M,Wraps,Rob Curran,170.1,156.49,206.38,532.97,1,SBD
+VA,117.5,Masters 40-44,M,Wraps,Matt Gawlik,192.78,120.2,258.55,571.53,1,SBD
+VA,125,Open,M,Wraps,Karl Kumm,226.8,174.63,249.48,650.91,1,SBD
+VA,52,Open,F,Raw,Tisha Paredes,,52.16,124.74,176.9,1,BD
+VA,100,Open,M,Raw,Jay Jones,,113.4,,113.4,1,B
+VA,110,SubMasters 33-39,M,Raw,Robby Barker,,210.92,,210.92,1,B
+VA,110,Open,M,Raw,Robby Barker,,210.92,,210.92,1,B
