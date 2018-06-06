@@ -92,7 +92,7 @@ def parse_fieldnames(sheet):
             elif 'место' in text:
                 fieldnames.append('Place')
             elif 'фамилия имя' in text:
-                fieldnames.append('InternationalName')
+                fieldnames.append('CyrillicName')
             elif 'год родж' in text or 'год рожд' in text:
                 fieldnames.append('BirthYear')
             elif 'разряд' in text or 'вып разр' in text:  # Rank
@@ -147,7 +147,7 @@ def parse_fieldnames(sheet):
             else:
                 die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     else:  # No header was given, use the default
-        fieldnames = ['Place', 'IGNORE', 'InternationalName']
+        fieldnames = ['Place', 'IGNORE', 'CyrillicName']
         fieldnames.extend(['IGNORE'] * 10)
         fieldnames.append('BirthYear')
         fieldnames.extend(['IGNORE'] * 26)
@@ -161,7 +161,7 @@ def parse_fieldnames(sheet):
         fieldnames.extend(['IGNORE'] * 2)
         fieldnames.append('TotalKg')
 
-        # fieldnames = ['Place','InternationalNameName','BirthYear',
+        # fieldnames = ['Place','CyrillicNameName','BirthYear',
         #               'IGNORE','IGNORE','IGNORE','BodyweightKg','Squat1Kg',
         #               'Squat2Kg','Squat3Kg']
 
@@ -280,7 +280,7 @@ def parse_sheet(sheet):
             continue
 
         # Skip lines without a name
-        if line[csv.index('InternationalName')].strip() == '':
+        if line[csv.index('CyrillicName')].strip() == '':
             continue
 
         if is_header(line):
@@ -360,8 +360,8 @@ def cleanup_place(csv):
 
 def unreverse_names(csv):
 
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
     for row in csv.rows:
@@ -380,8 +380,8 @@ def unreverse_names(csv):
 
 
 def cleanup_names(csv):
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
 

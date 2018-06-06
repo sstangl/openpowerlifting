@@ -80,7 +80,7 @@ def addmeet(permutation_name, entriescsv, meetscsv, entriespath, meetpath):
     newentries.remove_column_by_name("School")
     newentries.remove_column_by_name("Team")
     newentries.remove_column_by_name("State")
-    newentries.remove_column_by_name("InternationalName")
+    newentries.remove_column_by_name("CyrillicName")
     newentries.remove_column_by_name("Country-State")
     newentries.remove_column_by_name("College/University")
     newentries.remove_column_by_name("Tested")

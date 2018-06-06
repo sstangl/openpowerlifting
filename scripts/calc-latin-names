@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Given a column named "InternationalName" with a name in UTF-8,
+# Given a column named "CyrillicName" with a name in UTF-8,
 # probably Cyrillic, transliterates the names into the Latin character set.
 #
 
@@ -43,14 +43,14 @@ def latinize(s):
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    if 'InternationalName' not in csv.fieldnames:
-        print('No InternationalName column.')
+    if 'CyrillicName' not in csv.fieldnames:
+        print('No CyrillicName column.')
         return
 
     if 'Name' not in csv.fieldnames:
-        csv.insert_column(csv.index('InternationalName'), 'Name')
+        csv.insert_column(csv.index('CyrillicName'), 'Name')
 
-    intlidx = csv.index('InternationalName')
+    intlidx = csv.index('CyrillicName')
     nameidx = csv.index('Name')
 
     for row in csv.rows:

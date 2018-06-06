@@ -234,7 +234,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('Place')
         elif text in ['п і', 'имя', "прізвище та ім'я", 'nme', 'name surname',
                       'name', "прізвище/ім'я", 'фамилия и имя', 'full name', 'lifters']:
-            fieldnames.append('InternationalName')
+            fieldnames.append('CyrillicName')
         elif text in ['city', 'місто', 'місце', 'регіон']:  # City /region
             fieldnames.append('IGNORE')
         elif text in ['город', 'city / team', 'city \ club', 'city / club',
@@ -505,7 +505,7 @@ def parse_sheet(sheet):
 
         # If we've made it this far, the line should be for a lifter!
         # Make sure they have a name!
-        if not line[csv.index('InternationalName')]:
+        if not line[csv.index('CyrillicName')]:
             continue
         line.append(weightclass)
         if append_div:
@@ -710,8 +710,8 @@ def cleanup_lift(csv, fieldname):
 # Names sometimes have something in brackets after them - extra divisions
 # maybe?
 def cleanup_names(csv):
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
 
@@ -777,8 +777,8 @@ def assign_total(csv):
 
 def unreverse_names(csv):
 
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
     for row in csv.rows:

@@ -260,7 +260,7 @@ def parse_fieldnames(sheet):
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
         elif text == 'фио' or text == 'имя' or 'прізвище' in text:
-            fieldnames.append('InternationalName')
+            fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
         # There are a stupid number of ways to write this column so using this
@@ -460,8 +460,8 @@ def parse_sheet(sheet):
 
         # If we've made it this far, the line should be for a lifter!
         # Make sure they have a name!
-        if ('InternationalName' in csv.fieldnames and
-                not line[csv.index('InternationalName')]):
+        if ('CyrillicName' in csv.fieldnames and
+                not line[csv.index('CyrillicName')]):
             continue
         if 'Name' in csv.fieldnames and not line[csv.index('Name')]:
             continue
@@ -651,8 +651,8 @@ def cleanup_place(csv):
 
 def unreverse_names(csv):
 
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
     for row in csv.rows:
@@ -670,8 +670,8 @@ def unreverse_names(csv):
 
 
 def cleanup_names(csv):
-    if 'InternationalName' in csv.fieldnames:
-        nameidx = csv.index('InternationalName')
+    if 'CyrillicName' in csv.fieldnames:
+        nameidx = csv.index('CyrillicName')
     elif 'Name' in csv.fieldnames:
         nameidx = csv.index('Name')
 
