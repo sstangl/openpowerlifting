@@ -87,6 +87,9 @@
 <optgroup label="{{strings.country.france}}">
   <option value="ffforce">FFForce - Fédération Française de Force [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.germany}}">
+  <option value="bvdk">BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="kraft">KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
 </optgroup>

@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADAU,ADFPA,ADFPF,AEP,AfricanPF,APU,AsianPF,BP,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,LPF,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADAU,ADFPA,ADFPF,AEP,AfricanPF,APU,AsianPF,BP,BVDK,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,KRAFT,LPF,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -96,6 +96,9 @@
   </optgroup>
   <optgroup label="France">
     <option value="FFForce">FFForce - Fédération Française de Force [IPF] (Incomplete)</option>
+  </optgroup>
+  <optgroup label="Germany">
+    <option value="BVDK">BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF] (Incomplete)</option>
   </optgroup>
   <optgroup label="Iceland">
     <option value="KRAFT">KRAFT - Kraftlyftingasamband Íslands [IPF]</option>

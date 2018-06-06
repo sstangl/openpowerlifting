@@ -50,6 +50,8 @@ pub enum Federation {
     BPU,
     #[strum(to_string = "BP", serialize = "bp")]
     BP,
+    #[strum(to_string = "BVDK", serialize = "bvdk")]
+    BVDK,
     #[strum(to_string = "CAPO", serialize = "capo")]
     CAPO,
     #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
