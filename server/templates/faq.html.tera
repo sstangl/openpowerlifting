@@ -87,7 +87,7 @@
 
 <p>Hopefully in the future that will be possible, but right now that isn't possible, because the majority of federations are operating with extremely old and bad technology: PDF files instead of databases.</p>
 
-<p>In the very top-right corner of this page, you can see how many meets are in our database. Every one of these meets was downloaded and entered by hand. As you can imagine, this takes a tremendous amount of time and energy. On average, meets that are posted as PDFs take about 20 minutes to enter, and meets that are posted as spreadsheets take between 5 minutes to an hour to enter, usually depending on how Russian the source federation is. For some federations, we wrote programs that slightly simplify the process, but still require manual review.</p>
+<p>The <a href="/status">status page</a> shows how many meets are in our database. Every one of these meets was downloaded and entered by hand. As you can imagine, this takes a tremendous amount of time and energy. On average, meets that are posted as PDFs take about 20 minutes to enter, and meets that are posted as spreadsheets take between 5 minutes to an hour to enter, usually depending on how Russian the source federation is. For some federations, we wrote programs that slightly simplify the process, but still require manual review.</p>
 
 <p>We strongly encourage federations to stop using PDF. Although PDFs look like spreadsheets to humans, to a computer they are functionally equivalent to JPG files, and converting them back to spreadsheets is extremely error-prone. Instead, we suggest hosting meet results as HTML.</p>
 
