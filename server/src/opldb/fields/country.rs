@@ -72,6 +72,7 @@ pub enum Country {
     Peru,
     Philippines,
     Poland,
+    Portugal,
     #[serde(rename = "Puerto Rico")]
     PuertoRico,
     Russia,
