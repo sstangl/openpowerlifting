@@ -240,8 +240,7 @@ def build_lifterscsv(lifterdir, builddir):
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'
-    with open(lifterscsvpath, 'w') as fd:
-        lifterscsv.write(fd)
+    lifterscsv.write_filename(lifterscsvpath)
 
 
 def main(builddir, meetdir, lifterdir):
@@ -311,10 +310,8 @@ def main(builddir, meetdir, lifterdir):
     oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
-    with open(oplcsvpath, 'w') as fd:
-        entriescsv.write(fd)
-    with open(meetscsvpath, 'w') as fd:
-        meetscsv.write(fd)
+    entriescsv.write_filename(oplcsvpath)
+    meetscsv.write_filename(meetscsvpath)
 
     # If these asserts fail, then new columns have been added.
     # Check the written files: new columns are at the end.

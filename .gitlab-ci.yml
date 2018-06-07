@@ -1,0 +1,19 @@
+image: rustlang/rust:nightly
+
+meet-data:
+  before_script:
+    - apt-get update -qq && apt-get install -y python3-pip
+    - pip3 install toml flake8
+  script:
+    - make check
+
+server:
+  cache:
+    paths:
+      - server/target
+  before_script:
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get update -qq && apt-get install -y nodejs
+  script:
+    - make csvfile
+    - make -C server check

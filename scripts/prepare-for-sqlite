@@ -13,10 +13,11 @@
 # then serve as the basis for the SQLite import.
 
 from oplcsv import Csv
+import codecs
 
 
 def write_without_fieldnames(csv, path):
-    with open(path, 'w') as fd:
+    with codecs.open(path, 'w', encoding="utf-8") as fd:
         for row in csv.rows:
             fd.write(','.join(row) + "\n")
 

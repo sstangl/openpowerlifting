@@ -92,8 +92,7 @@ def main(filename):
             # Better than just leaving it blank, when we have some data.
             row[indexMcCulloch] = row[indexWilks]
 
-    with open(filename, 'w') as fd:
-        csv.write(fd)
+    csv.write_filename(filename)
     return 0
 
 

@@ -4,6 +4,8 @@
 # A better CSV manipulation library for the OpenPowerlifting format.
 #
 
+import codecs
+
 
 class Csv:
 
@@ -72,3 +74,8 @@ class Csv:
         fd.write(','.join(self.fieldnames) + "\n")
         for row in self.rows:
             fd.write(','.join(row) + "\n")
+
+    def write_filename(self, filename):
+        ''' Specifies UTF-8 codec. Necessary for Debian Python3. '''
+        with codecs.open(filename, 'w', encoding="utf-8") as fd:
+            self.write(fd)

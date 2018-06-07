@@ -25,5 +25,4 @@ for row in csv.rows:
         if row[widx] and '+' not in row[widx]:
             row[bidx] = row[widx]
 
-with open(sys.argv[1], 'w') as fd:
-    csv.write(fd)
+csv.write_filename(sys.argv[1])
