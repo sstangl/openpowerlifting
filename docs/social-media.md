@@ -25,4 +25,7 @@ To edit the file,
    3. Click the "Edit" button, located near the top-right corner of the displayed file.
    4. Manually type in a new line, in the format `Name,Instagram`, with no spacing before or after the comma. If you are entering in a single Instagram, please keep the file in alphabetical order by Name. If you are bulk-entering many Instagrams, just enter them in all at the bottom for convenience.
    5. Make sure that there is exactly one empty line at the very bottom of the file.
-   6. Scroll to the bottom of the page, write a description of your changes, and submit a Merge Request.
+   6. Scroll to the bottom of the page, write a description of your changes, and click "Commit Changes".
+   7. Copy and paste the title of the new merge request into the Description textbox.
+   8. Check all three checkboxes next to the phrases "Remove source branch when merge request is accepted," "Squash commits when merge request is accepted," and "Allow edits from maintainers."
+   9. Click the "Submit Merge Request" button.
