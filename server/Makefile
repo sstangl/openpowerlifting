@@ -17,6 +17,10 @@ binary: builddir
 	cargo build --release
 	cp target/release/server "${BUILDDIR}/server"
 
+# Documents everything, not just the public-facing APIs.
+devdocs:
+	cargo rustdoc --open -- --no-defaults --passes collapse-docs --passes unindent-comments --passes strip-priv-imports
+
 data: builddir
 	mkdir -p "${BUILDDIR}/templates"
 	cp -r templates/* "${BUILDDIR}/templates/"
