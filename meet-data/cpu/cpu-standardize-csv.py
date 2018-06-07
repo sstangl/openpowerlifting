@@ -267,6 +267,8 @@ def standardize_location(csv):
             # Work around typos.
             if loc == "Toronto. ON":
                 loc = "Toronto; ON"
+            if loc == "Summerside PE":
+                loc = "Summerside; PE"
 
             assert ';' in loc
 
