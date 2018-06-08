@@ -23,7 +23,7 @@ Below are step-by-step instructions for setting up the project.
 
 5. Change directory
 
-   - In Ubuntu type: `cd openpowerlifting`
+   - In Ubuntu type: `cd opl-data`
 
 6. Build the project
 
