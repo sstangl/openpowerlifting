@@ -143,6 +143,9 @@ export function makeRowObj(row, index?: number): RowObject {
     } else if (fullname === "Joseph Park" || fullname === "Reyhan Roybal" || fullname === "Kris Lewis") {
         // Rainbow.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span class="rainbow">' + fullname + '</span></a>';
+    } else if (fullname === "Christian Habihirwe") {
+        // Gold italic.
+        name = '<a style="text-decoration-color: #FFD700;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FFD700; font-style: italic">' + fullname + '</span></a>';
     }
 
     // Attempt to read in social media data, if present.

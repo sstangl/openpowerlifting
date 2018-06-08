@@ -48,3 +48,8 @@
 
   text-decoration-color: #FF80AB;
 }
+
+.gold-italic {
+  @include name-color(#FFD700);
+  font-style: italic;
+}
