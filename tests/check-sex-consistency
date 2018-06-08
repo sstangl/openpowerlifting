@@ -73,7 +73,12 @@ def process_file(path):
         sex = row[sexidx]
 
         if name == '':
-            pwarning("Missing name information in %s." % path)
+            if 'JapaneseName' in csv.fieldnames:
+                if row[csv.index('JapaneseName')] == '':
+                    pwarning("Missing name information in %s." % path)
+                name = row[csv.index('JapaneseName')]
+            else:
+                pwarning("Missing name information in %s." % path)
             continue
 
         if sex == '':

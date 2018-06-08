@@ -110,6 +110,15 @@ def age_from_birthday(csv, date, birthdays):
         row[ageidx] = str(years)
 
 
+def add_international_names(csv):
+    if 'JapaneseName' in csv.fieldnames:
+        intlidx = csv.index('JapaneseName')
+        nameidx = csv.index('Name')
+        for row in csv.rows:
+            if row[nameidx] == '':
+                row[nameidx] = row[intlidx]
+
+
 # Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
 def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     newentries = Csv(entriespath)
@@ -125,6 +134,10 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     newentries.remove_column_by_name("College/University")
     newentries.remove_column_by_name("Tested")
     newentries.remove_column_by_name("AgeClass")
+
+    # Make use of Japanese Names
+    add_international_names(newentries)
+    newentries.remove_column_by_name("JapaneseName")
 
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames

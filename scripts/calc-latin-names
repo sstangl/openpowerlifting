@@ -6,6 +6,7 @@
 
 import oplcsv
 import sys
+import romkan
 
 # абвгдеёжзийклмнопрстуфхцчшщъьэюя
 
@@ -32,7 +33,7 @@ def sub_from(m, c):
         return c
 
 
-def latinize(s):
+def cyrllic_to_latin(s):
     s = ''.join(list(map(lambda c: sub_from(CyrillicMap, c), s)))
 
     # Fix some common names.
@@ -43,19 +44,37 @@ def latinize(s):
 def main(filename):
     csv = oplcsv.Csv(filename)
 
-    if 'CyrillicName' not in csv.fieldnames:
-        print('No CyrillicName column.')
+    script = ''
+
+    if not any(foreign_name in csv.fieldnames for foreign_name in ['CyrillicName',
+                                                                   'JapaneseName']):
+        print('No ForeignName column.')
         return
 
-    if 'Name' not in csv.fieldnames:
-        csv.insert_column(csv.index('CyrillicName'), 'Name')
+    if 'CyrillicName' in csv.fieldnames:
+        intlidx = csv.index('CyrillicName')
+        script = 'Cyrillic'
+    elif 'JapaneseName' in csv.fieldnames:
+        intlidx = csv.index('JapaneseName')
+        script = 'Japanese'
 
-    intlidx = csv.index('CyrillicName')
+    if 'Name' not in csv.fieldnames:
+        csv.insert_column(intlidx, 'Name')
+
     nameidx = csv.index('Name')
 
     for row in csv.rows:
         if not row[nameidx]:
-            row[nameidx] = latinize(row[intlidx])
+            if script == 'Cyrillic':
+                row[nameidx] = cyrllic_to_latin(row[intlidx])
+            elif script == 'Japanese':
+                temp_name = romkan.to_hepburn(row[intlidx])
+                # Kanji can't be translated, so leave name blank if Kanji
+                if temp_name != row[intlidx]:
+                    if len(temp_name) > 1:  # unreverse translated names
+                        parts = temp_name.split()
+                        temp_name = ' '.join([parts[-1]] + parts[:-1])
+                    row[nameidx] = temp_name
 
     with open(filename, 'w') as fd:
         csv.write(fd)

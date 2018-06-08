@@ -88,23 +88,25 @@
   <option value="ffforce">FFForce - Fédération Française de Force [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.germany}}">
+  <option value="all-german">All German Feds</option>
   <option value="bvdk">BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>
+    <option value="gpu">GPU - German Powerlifting Union [WPU]</option>
 </optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="kraft">KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland">All Irish Feds</option>
-  <option value="gpc-irl">GPC-IRL - GPC Ireland [GPC] (Incomplete)</option>
+  <option value="gpc-irl">GPC-IRL - GPC Ireland [GPC]</option>
   <option value="idfpf">IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="irishpf">IrishPF - Irish Powerlifting Federation [IPF]</option>
   <option value="irishpo">IrishPO - Irish Powerlifting Organization [IPL]</option>
 </optgroup>
-<optgroup label="{{strings.country.germany}}">
-    <option value="gpu">GPU - German Powerlifting Union [WPU] (Incomplete)</option>
+<optgroup label="{{strings.country.japan}}">
+    <option value="jpa">JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.latvia}}">
-    <option value="lpf">LPF - Latvijas Pauerliftinga Federācija [IPF] (Incomplete)</option>
+    <option value="lpf">LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="mpa">MPA - Malaysian Powerlifting Alliance [GPA]</option>

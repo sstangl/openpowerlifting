@@ -60,7 +60,10 @@ def get_database_nameset():
         if 'Name' in csv.fieldnames:
             nameidx = csv.index('Name')
             for row in csv.rows:
-                names.add(row[nameidx])
+                if row[nameidx] == '' and 'JapaneseName' in csv.fieldnames:
+                    names.add(row[csv.index('JapaneseName')])
+                else:
+                    names.add(row[nameidx])
 
     return names
 

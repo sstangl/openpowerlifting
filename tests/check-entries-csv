@@ -386,6 +386,7 @@ def ignore_column(s, row, csv):
 HeaderHandlers = {
     'Name': check_column_name,
     'CyrillicName': ignore_column,
+    'JapaneseName': ignore_column,
     'Sex': check_column_sex,
     'Age': check_column_age,
     'Place': check_column_place,
@@ -483,7 +484,11 @@ def check_row_name_consistency(row, csv):
     if 'Name' in csv.fieldnames:
         name = row[csv.index('Name')]
         if name is '':
-            perror("Name field empty.")
+            if 'JapaneseName' in csv.fieldnames:
+                if row[csv.index('JapaneseName')] is '':
+                    perror("JapaneseName field empty.")
+            else:
+                perror("Name field empty.")
 
 
 # Assert that Event makes sense given the specified lifts.
@@ -884,9 +889,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
     # Equipment may not be missing.
     if 'Equipment' in csv.fieldnames and not row[csv.index('Equipment')]:
         perror("Missing equipment: %s" % ','.join(row))
-
-    if not row[csv.index('Name')]:
-        perror("Missing name: %s" % ','.join(row))
 
 
 def check(scriptname, filename, configtoml, meetpath):
