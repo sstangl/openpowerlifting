@@ -252,6 +252,8 @@ def writemeetcsv(meet):
             state = ''
         elif state == 'Maui':  # Correct a USPA error.
             state = 'HI'
+        elif state == 'CAlifornia':  # Correct another error.
+            state = 'CA'
         else:
             assert state in states
             state = states[state]
