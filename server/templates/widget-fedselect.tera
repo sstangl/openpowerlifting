@@ -1,6 +1,7 @@
 <select id="fedselect">
 <option value="all" {% if selection.federation == "All" %}selected{% endif %}>All Feds</option>
 <option value="all-tested" {% if selection.federation == "AllTested" %}selected{% endif %}>All Drug-Tested Feds</option>
+<option value="all-amateur" {% if selection.federation == "AllAmateur" %}selected{% endif %}>All Amateur and Optionally Drug-Tested Feds</option>
 <optgroup label="International">
   <option value="gpa" {% if selection.federation == "GPA" %}selected{% endif %}>GPA - Global Powerlifting Alliance</option>
   <option value="gpc" {% if selection.federation == "GPC" %}selected{% endif %}>GPC - Global Powerlifting Committee</option>
@@ -50,6 +51,7 @@
   <option value="upa" {% if selection.federation == "UPA" %}selected{% endif %}>UPA - United Powerlifting Association</option>
   <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting [IPF] (2014+)</option>
   <option value="uspa" {% if selection.federation == "USPA" %}selected{% endif %}>USPA - United States Powerlifting Association [IPL]</option>
+  <option value="uspa-tested" {% if selection.federation == "USPATested" %}selected{% endif %}>USPA Tested - United States Powerlifting Association Tested [IPL]</option>
   <option value="uspf" {% if selection.federation == "USPF" %}selected{% endif %}>USPF - United States Powerlifting Federation</option>
   <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
@@ -103,10 +105,10 @@
   <option value="irishpo" {% if selection.federation == "IrishPO" %}selected{% endif %}>IrishPO - Irish Powerlifting Organization [IPL]</option>
 </optgroup>
 <optgroup label="{{strings.country.japan}}">
-    <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
+  <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.latvia}}">
-    <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
+  <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MPA - Malaysian Powerlifting Alliance [GPA]</option>

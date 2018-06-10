@@ -244,6 +244,9 @@ pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
     #[strum(to_string = "all-tested")]
     AllTested,
+    /// All entries that have "Tested = Yes".
+    #[strum(to_string = "all-amateur")]
+    AllAmateur,
     #[strum(to_string = "all-australia")]
     AllAustralia,
     #[strum(to_string = "all-canada")]
@@ -260,6 +263,9 @@ pub enum MetaFederation {
     AllUK,
     #[strum(to_string = "all-usa")]
     AllUSA,
+
+    #[strum(to_string = "uspa-tested")]
+    USPATested,
 }
 
 impl MetaFederation {
@@ -320,6 +326,9 @@ impl MetaFederation {
                     || meet.federation == Federation::WDFPF
                     || meet.federation == Federation::WelshPA
                     || meet.federation == Federation::WNPF
+            }
+            MetaFederation::AllAmateur => {
+                entry.tested
             }
             MetaFederation::AllAustralia => {
                 meet.federation == Federation::APU
@@ -394,6 +403,9 @@ impl MetaFederation {
                     || meet.federation == Federation::USPF
                     || meet.federation == Federation::XPC
                     || meet.federation == Federation::WNPF
+            }
+            MetaFederation::USPATested => {
+                meet.federation == Federation::USPA && entry.tested
             }
         }
     }
