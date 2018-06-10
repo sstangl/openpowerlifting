@@ -134,7 +134,7 @@ export function makeRowObj(row, index?: number): RowObject {
     } else if (fullname === "Ivy Knight") {
         // Yellow.
         name = '<a style="text-decoration-color: #FFFC00;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FFFC00;">' + fullname + '</span></a>';
-    } else if (fullname === "Thomas Schwarz" || fullname === "Zachary Lockhart" || fullname === "Erika Stevens" || fullname === "Rebecca Bachman") {
+    } else if (fullname === "Thomas Schwarz" || fullname === "Zachary Lockhart" || fullname === "Erika Stevens" || fullname === "Rebecca Bachman" || fullname === "Jessica Pippen") {
         // Red.
         name = '<a style="text-decoration-color: #FB3640;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FB3640;">' + fullname + '</span></a>';
     } else if (fullname === "David Sloan") {
