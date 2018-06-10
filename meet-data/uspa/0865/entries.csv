@@ -1,47 +1,47 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Kaitlin Herzog,WV,56,55.6,22,62.5,,62.5,F,Junior 20-23,Raw,B
-1,Tara Highbaugh,NC,75,71.8,37,107.5,,107.5,F,Open,Raw,B
-2,Emily Lilly,WV,75,69.5,37,100,,100,F,Open,Raw,B
-1,Emily Lilly,WV,75,69.5,37,100,,100,F,Submaster 35-39,Raw,B
-1,Tania White,OH,90+,106.9,44,107.5,,107.5,F,Master 40-44,Raw,B
-1,Aaron Tucker,WV,56,54.8,15,82.5,,82.5,M,Junior 13-15,Raw,B
-1,Justin Jacobsen,KY,82.5,80.8,23,122.5,,122.5,M,Junior 20-23,Raw,B
-1,Charles White,VA,100,98,23,207.5,,207.5,M,Junior 20-23,Raw,B
-1,Douglas Maiorana,PA,67.5,67,27,147.5,,147.5,M,Open,Raw,B
-1,Corey Henry,PA,82.5,80,27,145,,145,M,Open,Raw,B
-1,Wesley Dorcas,WV,110,106.3,34,200,,200,M,Open,Raw,B
-2,Kyle Thigpen,OH,110,109.5,39,152.5,,152.5,M,Open,Raw,B
-1,Jahaan Ashfaq,MO,140+,193.9,28,187.5,,187.5,M,Open,Raw,B
-2,Jason Frawley,PA,140+,150,25,175,,175,M,Open,Raw,B
-1,Jackson Gillespie,WV,82.5,77,37,160,,160,M,Submaster 35-39,Raw,B
-DQ,Todd Steffens,VA,100,98.7,37,-172.5,,,M,Submaster 35-39,Raw,B
-1,Kyle Thigpen,OH,110,109.5,39,152.5,,152.5,M,Submaster 35-39,Raw,B
-1,Ernest Samples,WV,90,89,69,112.5,,112.5,M,Master 65-69,Raw,B
-1,Matthew Lipscomb,VA,110,109,44,182.5,,182.5,M,Master 40-44,Raw,B
-1,KP Musgrove,WV,140,135.5,42,207.5,,207.5,M,Master 40-44,Raw,B
-1,Larry Padgett,CO,140,131,52,167.5,,167.5,M,Master 50-54,Raw,B
-1,Ron Krantz,CO,90,90,33,210,,210,M,Open,Single-ply,B
-1,Ernest Samples,WV,90,89,69,145,,145,M,Master 65-69,Single-ply,B
-1,Kaitlin Herzog,WV,56,55.6,22,,147.5,147.5,F,Junior 20-23,Raw,D
-1,Tara Highbaugh,NC,75,71.8,37,,170,170,F,Open,Raw,D
-1,Kelly Lee,NC,82.5,79.5,36,,170,170,F,Open,Raw,D
-1,Kelly Lee,NC,82.5,79.5,36,,170,170,F,Submaster 35-39,Raw,D
-1,Brenda Engle,OH,56,55.8,52,,105,105,F,Master 50-54,Raw,D
-1,Tania White,OH,90+,106.9,44,,142.5,142.5,F,Master 40-44,Raw,D
-1,Jill Ebbing,OH,90+,96.4,45,,142.5,142.5,F,Master 45-49,Raw,D
-DQ,Andrew McDonald,TN,100,99.4,18,,-297.5,,M,Junior 18-19,Raw,D
-1,Corey Hoffman,PA,67.5,66.4,24,,245,245,M,Open,Raw,D
-2,Douglas Maiorana,PA,67.5,67,27,,207.5,207.5,M,Open,Raw,D
-1,Chris Mason,PA,75,74.1,28,,252.5,252.5,M,Open,Raw,D
-1,Corey Henry,PA,82.5,80,27,,222.5,222.5,M,Open,Raw,D
-DQ,Andrew McDonald,TN,100,99.4,18,,-297.5,,M,Open,Raw,D
-1,Kyle Thigpen,OH,110,109.5,39,,250,250,M,Open,Raw,D
-1,Jahaan Ashfaq,MO,140+,193.9,28,,230,230,M,Open,Raw,D
-DQ,Jason Frawley,PA,140+,150,25,,-287.5,,M,Open,Raw,D
-1,Jackson Gillespie,WV,82.5,77,37,,215,215,M,Submaster 35-39,Raw,D
-1,Todd Steffens,VA,100,98.7,37,,257.5,257.5,M,Submaster 35-39,Raw,D
-1,Kyle Thigpen,OH,110,109.5,39,,250,250,M,Submaster 35-39,Raw,D
-1,Robert Gregory,PA,75,72,45,,218,218,M,Master 45-49,Raw,D
-1,Ernest Samples,WV,90,89,69,,77.5,77.5,M,Master 65-69,Raw,D
-1,Matthew Lipscomb,VA,110,109,44,,267.5,267.5,M,Master 40-44,Raw,D
-1,Ernest Samples,WV,90,89,69,,90.5,90.5,M,Master 65-69,Single-ply,D
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event,Tested
+1,Kaitlin Herzog,WV,56,55.6,22,62.5,,62.5,F,Junior 20-23,Raw,B,Yes
+1,Tara Highbaugh,NC,75,71.8,37,107.5,,107.5,F,Open,Raw,B,Yes
+2,Emily Lilly,WV,75,69.5,37,100,,100,F,Open,Raw,B,Yes
+1,Emily Lilly,WV,75,69.5,37,100,,100,F,Submaster 35-39,Raw,B,Yes
+1,Tania White,OH,90+,106.9,44,107.5,,107.5,F,Master 40-44,Raw,B,Yes
+1,Aaron Tucker,WV,56,54.8,15,82.5,,82.5,M,Junior 13-15,Raw,B,Yes
+1,Justin Jacobsen,KY,82.5,80.8,23,122.5,,122.5,M,Junior 20-23,Raw,B,Yes
+1,Charles White,VA,100,98,23,207.5,,207.5,M,Junior 20-23,Raw,B,Yes
+1,Douglas Maiorana,PA,67.5,67,27,147.5,,147.5,M,Open,Raw,B,Yes
+1,Corey Henry,PA,82.5,80,27,145,,145,M,Open,Raw,B,Yes
+1,Wesley Dorcas,WV,110,106.3,34,200,,200,M,Open,Raw,B,Yes
+2,Kyle Thigpen,OH,110,109.5,39,152.5,,152.5,M,Open,Raw,B,Yes
+1,Jahaan Ashfaq,MO,140+,193.9,28,187.5,,187.5,M,Open,Raw,B,Yes
+2,Jason Frawley,PA,140+,150,25,175,,175,M,Open,Raw,B,Yes
+1,Jackson Gillespie,WV,82.5,77,37,160,,160,M,Submaster 35-39,Raw,B,Yes
+DQ,Todd Steffens,VA,100,98.7,37,-172.5,,,M,Submaster 35-39,Raw,B,Yes
+1,Kyle Thigpen,OH,110,109.5,39,152.5,,152.5,M,Submaster 35-39,Raw,B,Yes
+1,Ernest Samples,WV,90,89,69,112.5,,112.5,M,Master 65-69,Raw,B,Yes
+1,Matthew Lipscomb,VA,110,109,44,182.5,,182.5,M,Master 40-44,Raw,B,Yes
+1,KP Musgrove,WV,140,135.5,42,207.5,,207.5,M,Master 40-44,Raw,B,Yes
+1,Larry Padgett,CO,140,131,52,167.5,,167.5,M,Master 50-54,Raw,B,Yes
+1,Ron Krantz,CO,90,90,33,210,,210,M,Open,Single-ply,B,Yes
+1,Ernest Samples,WV,90,89,69,145,,145,M,Master 65-69,Single-ply,B,Yes
+1,Kaitlin Herzog,WV,56,55.6,22,,147.5,147.5,F,Junior 20-23,Raw,D,Yes
+1,Tara Highbaugh,NC,75,71.8,37,,170,170,F,Open,Raw,D,Yes
+1,Kelly Lee,NC,82.5,79.5,36,,170,170,F,Open,Raw,D,Yes
+1,Kelly Lee,NC,82.5,79.5,36,,170,170,F,Submaster 35-39,Raw,D,Yes
+1,Brenda Engle,OH,56,55.8,52,,105,105,F,Master 50-54,Raw,D,Yes
+1,Tania White,OH,90+,106.9,44,,142.5,142.5,F,Master 40-44,Raw,D,Yes
+1,Jill Ebbing,OH,90+,96.4,45,,142.5,142.5,F,Master 45-49,Raw,D,Yes
+DQ,Andrew McDonald,TN,100,99.4,18,,-297.5,,M,Junior 18-19,Raw,D,Yes
+1,Corey Hoffman,PA,67.5,66.4,24,,245,245,M,Open,Raw,D,Yes
+2,Douglas Maiorana,PA,67.5,67,27,,207.5,207.5,M,Open,Raw,D,Yes
+1,Chris Mason,PA,75,74.1,28,,252.5,252.5,M,Open,Raw,D,Yes
+1,Corey Henry,PA,82.5,80,27,,222.5,222.5,M,Open,Raw,D,Yes
+DQ,Andrew McDonald,TN,100,99.4,18,,-297.5,,M,Open,Raw,D,Yes
+1,Kyle Thigpen,OH,110,109.5,39,,250,250,M,Open,Raw,D,Yes
+1,Jahaan Ashfaq,MO,140+,193.9,28,,230,230,M,Open,Raw,D,Yes
+DQ,Jason Frawley,PA,140+,150,25,,-287.5,,M,Open,Raw,D,Yes
+1,Jackson Gillespie,WV,82.5,77,37,,215,215,M,Submaster 35-39,Raw,D,Yes
+1,Todd Steffens,VA,100,98.7,37,,257.5,257.5,M,Submaster 35-39,Raw,D,Yes
+1,Kyle Thigpen,OH,110,109.5,39,,250,250,M,Submaster 35-39,Raw,D,Yes
+1,Robert Gregory,PA,75,72,45,,218,218,M,Master 45-49,Raw,D,Yes
+1,Ernest Samples,WV,90,89,69,,77.5,77.5,M,Master 65-69,Raw,D,Yes
+1,Matthew Lipscomb,VA,110,109,44,,267.5,267.5,M,Master 40-44,Raw,D,Yes
+1,Ernest Samples,WV,90,89,69,,90.5,90.5,M,Master 65-69,Single-ply,D,Yes
