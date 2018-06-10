@@ -1,7 +1,9 @@
 //! Logic for efficiently selecting a subset of the database.
 
+use serde::{self, Serialize};
+
 use opldb;
-use opldb::fields::{Federation, WeightKg};
+use opldb::fields::{Federation, MetaFederation, WeightKg};
 use opldb::CachedFilter;
 use opldb::Filter;
 use opldb::{SortedUnique, StaticCache};
@@ -15,7 +17,7 @@ use std::str::FromStr;
 #[derive(PartialEq, Serialize)]
 pub struct Selection {
     pub equipment: EquipmentSelection,
-    pub federations: Option<FederationSelection>,
+    pub federation: FederationSelection,
     pub weightclasses: WeightClassSelection,
     pub sex: SexSelection,
     pub year: YearSelection,
@@ -26,7 +28,7 @@ impl Selection {
     pub fn new_default() -> Self {
         Selection {
             equipment: EquipmentSelection::RawAndWraps,
-            federations: None,
+            federation: FederationSelection::AllFederations,
             weightclasses: WeightClassSelection::AllClasses,
             sex: SexSelection::AllSexes,
             year: YearSelection::AllYears,
@@ -49,7 +51,7 @@ impl Selection {
 
         // Prevent fields from being overwritten or redundant.
         let mut parsed_equipment: bool = false;
-        let mut parsed_federations: bool = false;
+        let mut parsed_federation: bool = false;
         let mut parsed_weightclasses: bool = false;
         let mut parsed_sex: bool = false;
         let mut parsed_year: bool = false;
@@ -70,11 +72,11 @@ impl Selection {
                 parsed_equipment = true;
             // Check whether this is federation information.
             } else if let Ok(f) = segment.parse::<FederationSelection>() {
-                if parsed_federations {
+                if parsed_federation {
                     return Err(());
                 }
-                ret.federations = Some(f);
-                parsed_federations = true;
+                ret.federation = f;
+                parsed_federation = true;
             // Check whether this is weight class information.
             } else if let Ok(w) = segment.parse::<WeightClassSelection>() {
                 if parsed_weightclasses {
@@ -151,43 +153,40 @@ impl FromStr for EquipmentSelection {
     }
 }
 
-#[derive(PartialEq, Serialize)]
-pub struct FederationSelection(Vec<Federation>);
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub enum FederationSelection {
+    AllFederations,
+    One(Federation),
+    Meta(MetaFederation),
+}
 
 impl FromStr for FederationSelection {
     type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut iter = s.split("+");
+        if let Ok(fed) = s.parse::<Federation>() {
+            return Ok(FederationSelection::One(fed));
+        }
 
-        // Check if the first part parses as a federation.
-        // If it doesn't, there's no need to heap-allocate a vector.
-        if let Some(s) = iter.next() {
-            let fed = match s.parse::<Federation>() {
-                Ok(f) => f,
-                Err(_) => return Err(()),
-            };
+        if let Ok(meta) = s.parse::<MetaFederation>() {
+            return Ok(FederationSelection::Meta(meta));
+        }
 
-            let mut acc = Vec::<Federation>::new();
-            acc.push(fed);
+        Err(())
+    }
+}
 
-            for part in iter {
-                let fed = match part.parse::<Federation>() {
-                    Ok(f) => f,
-                    Err(_) => return Err(()),
-                };
-
-                // Federations should occur at most once.
-                if acc.contains(&fed) {
-                    return Err(());
-                }
-
-                acc.push(fed);
-            }
-
-            Ok(FederationSelection(acc))
-        } else {
-            Err(())
+impl Serialize for FederationSelection {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        // Care must be taken that the same string isn't used by both
+        // Federation and MetaFederation.
+        match self {
+            FederationSelection::AllFederations => serializer.serialize_str("All"),
+            FederationSelection::One(fed) => fed.serialize(serializer),
+            FederationSelection::Meta(meta) => meta.serialize(serializer),
         }
     }
 }
@@ -464,7 +463,7 @@ impl Selection {
         cache: &'db StaticCache,
     ) -> Option<&'db SortedUnique> {
         // First, try to use the constant-time cache.
-        if self.federations.is_none()
+        if self.federation == FederationSelection::AllFederations
             && self.weightclasses == WeightClassSelection::AllClasses
             && self.sex == SexSelection::AllSexes
             && self.year == YearSelection::AllYears
@@ -513,25 +512,30 @@ impl Selection {
         }
 
         // Filter by federation manually.
-        if self.federations.is_some() {
-            let fedlist: &Vec<Federation> = &self.federations.as_ref().unwrap().0;
-
-            let filter = Filter {
-                list: cur
-                    .list
-                    .iter()
-                    .filter_map(|&i| {
-                        match fedlist.contains(
-                            &opldb.get_meet(opldb.get_entry(i).meet_id).federation,
-                        ) {
+        if self.federation != FederationSelection::AllFederations {
+            if let FederationSelection::One(fed) = self.federation {
+                let filter = Filter {
+                    list: cur.list.iter().filter_map(|&i| {
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed {
                             true => Some(i),
                             false => None,
                         }
                     })
-                    .collect(),
-            };
-
-            cur = PossiblyOwnedFilter::Owned(filter);
+                    .collect()
+                };
+                cur = PossiblyOwnedFilter::Owned(filter);
+            } else if let FederationSelection::Meta(metafed) = self.federation {
+                let filter = Filter {
+                    list: cur.list.iter().filter_map(|&i| {
+                        match metafed.contains(opldb.get_entry(i), &opldb) {
+                            true => Some(i),
+                            false => None,
+                        }
+                    })
+                    .collect()
+                };
+                cur = PossiblyOwnedFilter::Owned(filter);
+            }
         }
 
         // Filter by weight class manually.
@@ -576,15 +580,7 @@ mod tests {
         assert_eq!(s.sex, SexSelection::Women);
 
         let s = Selection::from_path(Path::new("/uspa/raw")).unwrap();
-        assert!(s.federations.unwrap().0.contains(&Federation::USPA));
-        assert_eq!(s.equipment, EquipmentSelection::Raw);
-
-        let s = Selection::from_path(Path::new("/uspa+usapl+spf/raw")).unwrap();
-        let fedlist = s.federations.unwrap().0;
-        assert!(fedlist.contains(&Federation::USPA));
-        assert!(fedlist.contains(&Federation::USAPL));
-        assert!(fedlist.contains(&Federation::SPF));
-        assert!(!fedlist.contains(&Federation::RPS));
+        assert_eq!(s.federation, FederationSelection::One(Federation::USPA));
         assert_eq!(s.equipment, EquipmentSelection::Raw);
     }
 
@@ -600,9 +596,6 @@ mod tests {
         assert!(Selection::from_path(Path::new("/raw///////")).is_err());
         assert!(Selection::from_path(Path::new("////raw////")).is_err());
         assert!(Selection::from_path(Path::new("////////raw")).is_err());
-
-        // Disallow redundant federations.
-        assert!(Selection::from_path(Path::new("/nipf+spf+nipf/")).is_err());
 
         // Disallow nonsense.
         assert!(Selection::from_path(Path::new("912h3h123h12ch39")).is_err());
