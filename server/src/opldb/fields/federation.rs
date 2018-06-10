@@ -404,6 +404,7 @@ impl MetaFederation {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use strum::IntoEnumIterator;
 
     #[test]
     fn test_url_strings() {
@@ -412,5 +413,16 @@ mod tests {
 
         // The default to_string() should be the upper-case form.
         assert_eq!(Federation::WRPF.to_string(), "WRPF");
+    }
+
+    /// The Federation and MetaFederation enums must serialize
+    /// to unique strings.
+    #[test]
+    fn test_fed_metafed_conflicts() {
+        let v1: Vec<String> = Federation::iter().map(|f| f.to_string()).collect();
+        let v2: Vec<String> = MetaFederation::iter().map(|f| f.to_string()).collect();
+        for v in v1 {
+            assert!(!v2.contains(&v));
+        }
     }
 }
