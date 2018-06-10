@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# vim: set ts=8 sts=4 et sw=4 tw=99:
+# vim: set ts=4 sts=4 et sw=4 tw=99:
 #
 # Compiles all entries.csv and meet.csv files into the final files.
 #
@@ -44,6 +44,58 @@ def get_lifterid(name):
         lifterid = nextlifterid()
         LIFTERIDMAP[name] = lifterid
         return lifterid
+
+
+TESTED_FEDERATIONS = [
+    "AAU",
+    "ADAU",
+    "ADFPA",
+    "ADFPF",
+    "AEP",
+    "AfricanPF",
+    "APU",
+    "AsianPF",
+    "BP",
+    "BVDK",
+    "CommonwealthPF",
+    "CPU",
+    "CSST",
+    "DSF",
+    "EPA",
+    "EPF",
+    "FEMEPO",
+    "FESUPO",
+    "FFForce",
+    "FPR",
+    "IDFPF",
+    "IPF",
+    "IrishPF",
+    "JPA",
+    "KRAFT",
+    "LPF",
+    "NAPF",
+    "NASA",
+    "NIPF",
+    "NordicPF",
+    "NSF",
+    "NZPF",
+    "OceaniaPF",
+    "ParaPL",
+    "PA",
+    "PLZS",
+    "PZKFiTS",
+    "RAW",
+    "RAW-CAN",
+    "ScottishPL",
+    "SSF",
+    "SVNL",
+    "THSPA",
+    "USAPL",
+    "WABDL",
+    "WDFPF",
+    "WelshPA",
+    "WNPF"
+]
 
 
 # Reads in the map Name => Birthday (as date string).
@@ -132,12 +184,23 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     newentries.remove_column_by_name("CyrillicName")
     newentries.remove_column_by_name("Country-State")
     newentries.remove_column_by_name("College/University")
-    newentries.remove_column_by_name("Tested")
     newentries.remove_column_by_name("AgeClass")
 
     # Make use of Japanese Names
     add_international_names(newentries)
     newentries.remove_column_by_name("JapaneseName")
+
+    # Assign default Tested values.
+    if 'Tested' not in newentries.fieldnames:
+        newentries.append_column('Tested')
+    testedidx = newentries.index('Tested')
+    fedidx = newmeet.index('Federation')
+    for row in newentries.rows:
+        if not row[testedidx]:
+            if newmeet.rows[0][fedidx] in TESTED_FEDERATIONS:
+                row[testedidx] = "Yes"
+            else:
+                row[testedidx] = "No"
 
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
@@ -292,6 +355,7 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.append_column('Place')
     entriescsv.append_column('Wilks')
     entriescsv.append_column('McCulloch')
+    entriescsv.append_column('Tested')
     initial_entriescsv_num_columns = len(entriescsv.fieldnames)
 
     meetscsv.append_column('MeetID')

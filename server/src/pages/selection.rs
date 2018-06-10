@@ -515,24 +515,32 @@ impl Selection {
         if self.federation != FederationSelection::AllFederations {
             if let FederationSelection::One(fed) = self.federation {
                 let filter = Filter {
-                    list: cur.list.iter().filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed {
-                            true => Some(i),
-                            false => None,
-                        }
-                    })
-                    .collect()
+                    list: cur
+                        .list
+                        .iter()
+                        .filter_map(|&i| {
+                            match opldb.get_meet(opldb.get_entry(i).meet_id).federation
+                                == fed
+                            {
+                                true => Some(i),
+                                false => None,
+                            }
+                        })
+                        .collect(),
                 };
                 cur = PossiblyOwnedFilter::Owned(filter);
             } else if let FederationSelection::Meta(metafed) = self.federation {
                 let filter = Filter {
-                    list: cur.list.iter().filter_map(|&i| {
-                        match metafed.contains(opldb.get_entry(i), &opldb) {
-                            true => Some(i),
-                            false => None,
-                        }
-                    })
-                    .collect()
+                    list: cur
+                        .list
+                        .iter()
+                        .filter_map(|&i| {
+                            match metafed.contains(opldb.get_entry(i), &opldb) {
+                                true => Some(i),
+                                false => None,
+                            }
+                        })
+                        .collect(),
                 };
                 cur = PossiblyOwnedFilter::Owned(filter);
             }

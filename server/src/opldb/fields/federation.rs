@@ -273,129 +273,127 @@ impl MetaFederation {
         match self {
             MetaFederation::AllTested => {
                 meet.federation == Federation::AAU
-                || meet.federation == Federation::ADAU
-                || meet.federation == Federation::ADFPA
-                || meet.federation == Federation::ADFPF
-                || meet.federation == Federation::AEP
-                || meet.federation == Federation::AfricanPF
-                || meet.federation == Federation::APU
-                || meet.federation == Federation::AsianPF
-                || meet.federation == Federation::BP
-                || meet.federation == Federation::BVDK
-                || meet.federation == Federation::CommonwealthPF
-                || meet.federation == Federation::CPU
-                || meet.federation == Federation::CSST
-                || meet.federation == Federation::DSF
-                || meet.federation == Federation::EPA
-                || meet.federation == Federation::EPF
-                || meet.federation == Federation::FEMEPO
-                || meet.federation == Federation::FESUPO
-                || meet.federation == Federation::FFForce
-                || meet.federation == Federation::FPR
-                || meet.federation == Federation::IDFPF
-                || meet.federation == Federation::IPF
-                || meet.federation == Federation::IrishPF
-                || meet.federation == Federation::JPA
-                || meet.federation == Federation::KRAFT
-                || meet.federation == Federation::LPF
-                || meet.federation == Federation::NAPF
-                || meet.federation == Federation::NASA
-                || meet.federation == Federation::NIPF
-                || meet.federation == Federation::NordicPF
-                || meet.federation == Federation::NSF
-                || meet.federation == Federation::NZPF
-                || meet.federation == Federation::OceaniaPF
-                || meet.federation == Federation::ParaPL
-                || meet.federation == Federation::PA
-                || meet.federation == Federation::PLZS
-                || meet.federation == Federation::PZKFiTS
-                || meet.federation == Federation::RAW
-                || meet.federation == Federation::RAWCAN
-                || meet.federation == Federation::ScottishPL
-                || meet.federation == Federation::SSF
-                || meet.federation == Federation::SVNL
-                || meet.federation == Federation::THSPA
-                || meet.federation == Federation::USAPL
-                || meet.federation == Federation::WABDL
-                || meet.federation == Federation::WDFPF
-                || meet.federation == Federation::WelshPA
-                || meet.federation == Federation::WNPF
+                    || meet.federation == Federation::ADAU
+                    || meet.federation == Federation::ADFPA
+                    || meet.federation == Federation::ADFPF
+                    || meet.federation == Federation::AEP
+                    || meet.federation == Federation::AfricanPF
+                    || meet.federation == Federation::APU
+                    || meet.federation == Federation::AsianPF
+                    || meet.federation == Federation::BP
+                    || meet.federation == Federation::BVDK
+                    || meet.federation == Federation::CommonwealthPF
+                    || meet.federation == Federation::CPU
+                    || meet.federation == Federation::CSST
+                    || meet.federation == Federation::DSF
+                    || meet.federation == Federation::EPA
+                    || meet.federation == Federation::EPF
+                    || meet.federation == Federation::FEMEPO
+                    || meet.federation == Federation::FESUPO
+                    || meet.federation == Federation::FFForce
+                    || meet.federation == Federation::FPR
+                    || meet.federation == Federation::IDFPF
+                    || meet.federation == Federation::IPF
+                    || meet.federation == Federation::IrishPF
+                    || meet.federation == Federation::JPA
+                    || meet.federation == Federation::KRAFT
+                    || meet.federation == Federation::LPF
+                    || meet.federation == Federation::NAPF
+                    || meet.federation == Federation::NASA
+                    || meet.federation == Federation::NIPF
+                    || meet.federation == Federation::NordicPF
+                    || meet.federation == Federation::NSF
+                    || meet.federation == Federation::NZPF
+                    || meet.federation == Federation::OceaniaPF
+                    || meet.federation == Federation::ParaPL
+                    || meet.federation == Federation::PA
+                    || meet.federation == Federation::PLZS
+                    || meet.federation == Federation::PZKFiTS
+                    || meet.federation == Federation::RAW
+                    || meet.federation == Federation::RAWCAN
+                    || meet.federation == Federation::ScottishPL
+                    || meet.federation == Federation::SSF
+                    || meet.federation == Federation::SVNL
+                    || meet.federation == Federation::THSPA
+                    || meet.federation == Federation::USAPL
+                    || meet.federation == Federation::WABDL
+                    || meet.federation == Federation::WDFPF
+                    || meet.federation == Federation::WelshPA
+                    || meet.federation == Federation::WNPF
             }
             MetaFederation::AllAustralia => {
                 meet.federation == Federation::APU
-                || meet.federation == Federation::CAPO
-                || meet.federation == Federation::GPCAUS
-                || meet.federation == Federation::PA
-                || meet.federation == Federation::ProRaw
+                    || meet.federation == Federation::CAPO
+                    || meet.federation == Federation::GPCAUS
+                    || meet.federation == Federation::PA
+                    || meet.federation == Federation::ProRaw
             }
             MetaFederation::AllCanada => {
                 meet.federation == Federation::CPF
-                || meet.federation == Federation::CPL
-                || meet.federation == Federation::CPU
-                || meet.federation == Federation::GPCCAN
-                || meet.federation == Federation::RAWCAN
-                || meet.federation == Federation::WRPFCAN
+                    || meet.federation == Federation::CPL
+                    || meet.federation == Federation::CPU
+                    || meet.federation == Federation::GPCCAN
+                    || meet.federation == Federation::RAWCAN
+                    || meet.federation == Federation::WRPFCAN
             }
             MetaFederation::AllFinland => {
-                meet.federation == Federation::FPO
-                || meet.federation == Federation::SVNL
+                meet.federation == Federation::FPO || meet.federation == Federation::SVNL
             }
             MetaFederation::AllGermany => {
-                meet.federation == Federation::BVDK
-                || meet.federation == Federation::GPU
+                meet.federation == Federation::BVDK || meet.federation == Federation::GPU
             }
             MetaFederation::AllIreland => {
                 meet.federation == Federation::GPCIRL
-                || meet.federation == Federation::IDFPF
-                || meet.federation == Federation::IrishPF
-                || meet.federation == Federation::IrishPO
+                    || meet.federation == Federation::IDFPF
+                    || meet.federation == Federation::IrishPF
+                    || meet.federation == Federation::IrishPO
             }
             MetaFederation::AllRussia => {
                 meet.federation == Federation::BB
-                || meet.federation == Federation::FPR
-                || meet.federation == Federation::SCT
-                || meet.federation == Federation::WPCRUS
-                || meet.federation == Federation::WRPF
+                    || meet.federation == Federation::FPR
+                    || meet.federation == Federation::SCT
+                    || meet.federation == Federation::WPCRUS
+                    || meet.federation == Federation::WRPF
             }
             MetaFederation::AllUK => {
                 meet.federation == Federation::BP
-                || meet.federation == Federation::BPC
-                || meet.federation == Federation::BPU
-                || meet.federation == Federation::EPA
-                || meet.federation == Federation::GPCGB
-                || meet.federation == Federation::NIPF
-                || meet.federation == Federation::ScottishPL
-                || meet.federation == Federation::WelshPA
+                    || meet.federation == Federation::BPC
+                    || meet.federation == Federation::BPU
+                    || meet.federation == Federation::EPA
+                    || meet.federation == Federation::GPCGB
+                    || meet.federation == Federation::NIPF
+                    || meet.federation == Federation::ScottishPL
+                    || meet.federation == Federation::WelshPA
             }
             MetaFederation::AllUSA => {
                 meet.federation == Federation::_365Strong
-                || meet.federation == Federation::AAU
-                || meet.federation == Federation::ADAU
-                || meet.federation == Federation::ADFPA
-                || meet.federation == Federation::ADFPF
-                || meet.federation == Federation::APA
-                || meet.federation == Federation::APC
-                || meet.federation == Federation::APF
-                || meet.federation == Federation::Hardcore
-                || meet.federation == Federation::HERC
-                || meet.federation == Federation::IPA
-                || meet.federation == Federation::PRIDE
-                || meet.federation == Federation::MHP
-                || meet.federation == Federation::MM
-                || meet.federation == Federation::NASA
-                || meet.federation == Federation::NOTLD
-                || meet.federation == Federation::RAW
-                || meet.federation == Federation::RAWU
-                || meet.federation == Federation::RPS
-                || meet.federation == Federation::RUPC
-                || meet.federation == Federation::SPF
-                || meet.federation == Federation::THSPA
-                || meet.federation == Federation::UPA
-                || meet.federation == Federation::USAPL
-                || meet.federation == Federation::USPA
-                || meet.federation == Federation::USPF
-                || meet.federation == Federation::XPC
-                || meet.federation == Federation::WNPF
+                    || meet.federation == Federation::AAU
+                    || meet.federation == Federation::ADAU
+                    || meet.federation == Federation::ADFPA
+                    || meet.federation == Federation::ADFPF
+                    || meet.federation == Federation::APA
+                    || meet.federation == Federation::APC
+                    || meet.federation == Federation::APF
+                    || meet.federation == Federation::Hardcore
+                    || meet.federation == Federation::HERC
+                    || meet.federation == Federation::IPA
+                    || meet.federation == Federation::PRIDE
+                    || meet.federation == Federation::MHP
+                    || meet.federation == Federation::MM
+                    || meet.federation == Federation::NASA
+                    || meet.federation == Federation::NOTLD
+                    || meet.federation == Federation::RAW
+                    || meet.federation == Federation::RAWU
+                    || meet.federation == Federation::RPS
+                    || meet.federation == Federation::RUPC
+                    || meet.federation == Federation::SPF
+                    || meet.federation == Federation::THSPA
+                    || meet.federation == Federation::UPA
+                    || meet.federation == Federation::USAPL
+                    || meet.federation == Federation::USPA
+                    || meet.federation == Federation::USPF
+                    || meet.federation == Federation::XPC
+                    || meet.federation == Federation::WNPF
             }
         }
     }
