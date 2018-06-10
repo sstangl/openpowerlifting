@@ -1,5 +1,4 @@
 <select id="fedselect">
-<option value="foo">{{selection.federation}}</option>
 <option value="all" {% if selection.federation == "All" %}selected{% endif %}>All Feds</option>
 <option value="all-tested" {% if selection.federation == "AllTested" %}selected{% endif %}>All Drug-Tested Feds</option>
 <optgroup label="International">
