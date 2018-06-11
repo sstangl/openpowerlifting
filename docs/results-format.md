@@ -65,7 +65,7 @@ The file entries.csv contains varying columns based on the information provided 
 
 Here is an example rendering, with illustrative data:
 
-| Place | Name              | Sex | BodyweightKg | WeightClassKg | Division   | Equipment  | BestSquatKg | BestBenchKg | BestDeadliftKg | TotalKg | Event |
+| Place | Name              | Sex | BodyweightKg | WeightClassKg | Division   | Equipment  | Best3SquatKg | Best3BenchKg | Best3DeadliftKg | TotalKg | Event |
 |-------|-------------------|-----|--------------|---------------|------------|------------|-------------|-------------|----------------|---------|-------|
 | 1     | Adam Blank        | M   | 98.8         | 100           | Open       | Raw        | 192.5       | 140         | 222.5          | 555     | SBD   |
 | 1     | Nicole Wallace    | F   | 73.2         | 75            | Masters 1  | Wraps      | 150         | 82.5        | 175            | 407.5   | SBD   |
