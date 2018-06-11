@@ -172,6 +172,9 @@ def add_international_names(csv):
 
 
 def tested_from_division(division, federation):
+    if federation == 'SPF':  # SPF Amateur doesn't test.
+        return "No"
+
     if 'Amateur' in division:
         return "Yes"
     if '_AAPF' in division:
