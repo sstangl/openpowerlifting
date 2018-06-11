@@ -171,6 +171,16 @@ def add_international_names(csv):
                 row[nameidx] = row[intlidx]
 
 
+def tested_from_division(division):
+    if 'Amateur' in division:
+        return "Yes"
+    if '_AAPF' in division:
+        return "Yes"
+    if '_AWPC' in division:
+        return "Yes"
+    return "No"
+
+
 # Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
 def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
     newentries = Csv(entriespath)
@@ -199,6 +209,9 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays):
         if not row[testedidx]:
             if newmeet.rows[0][fedidx] in TESTED_FEDERATIONS:
                 row[testedidx] = "Yes"
+            elif "Division" in newentries.fieldnames:
+                row[testedidx] = \
+                    tested_from_division(row[newentries.index("Division")])
             else:
                 row[testedidx] = "No"
 
