@@ -68,7 +68,6 @@ def pwarning(s):
 
 KnownFederations = {
     "365Strong",  # 365 Strong Powerlifting Federation.
-    "AAPF",  # Amateur APF (drug-tested).
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",

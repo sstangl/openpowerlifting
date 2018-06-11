@@ -20,8 +20,6 @@ pub enum Federation {
     #[serde(rename = "365Strong")]
     #[strum(to_string = "365Strong", serialize = "365strong")]
     _365Strong,
-    #[strum(to_string = "AAPF", serialize = "aapf")]
-    AAPF,
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
     #[strum(to_string = "ADAU", serialize = "adau")]
