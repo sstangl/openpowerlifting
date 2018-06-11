@@ -262,6 +262,8 @@ pub enum MetaFederation {
     #[strum(to_string = "all-usa")]
     AllUSA,
 
+    #[strum(to_string = "aapf")]
+    AAPF,
     #[strum(to_string = "uspa-tested")]
     USPATested,
 }
@@ -401,6 +403,9 @@ impl MetaFederation {
                     || meet.federation == Federation::USPF
                     || meet.federation == Federation::XPC
                     || meet.federation == Federation::WNPF
+            }
+            MetaFederation::AAPF => {
+                meet.federation == Federation::APF && entry.tested
             }
             MetaFederation::USPATested => {
                 meet.federation == Federation::USPA && entry.tested

@@ -28,6 +28,7 @@
 <optgroup label="{{strings.country.usa}}">
   <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>All United States Feds</option>
   <option value="365strong" {% if selection.federation == "365Strong" %}selected{% endif %}>365Strong - 365 Strong Powerlifting Federation</option>
+  <option value="aapf" {% if selection.federation == "AAPF" %}selected{% endif %}>AAPF - Amateur American Powerlifting Federation [WPC]</option>
   <option value="aau" {% if selection.federation == "AAU" %}selected{% endif %}>AAU - Amateur Athletic Union</option>
   <option value="adau" {% if selection.federation == "ADAU" %}selected{% endif %}>ADAU - Anti Drug Athletes United</option>
   <option value="adfpf" {% if selection.federation == "ADFPF" %}selected{% endif %}>ADFPF - American Drug Free Powerlifting Federation</option>
