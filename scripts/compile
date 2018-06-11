@@ -176,6 +176,8 @@ def tested_from_division(division):
         return "Yes"
     if '_AAPF' in division:
         return "Yes"
+    if '_ABPU' in division:
+        return "Yes"
     if '_AWPC' in division:
         return "Yes"
     return "No"
