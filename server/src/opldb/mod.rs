@@ -140,16 +140,19 @@ pub struct Entry {
 
 impl Entry {
     /// Returns max(best3squatkg, squat4kg).
+    #[inline]
     pub fn highest_squatkg(&self) -> WeightKg {
         self.best3squatkg.max(self.squat4kg)
     }
 
     /// Returns max(best3benchkg, bench4kg).
+    #[inline]
     pub fn highest_benchkg(&self) -> WeightKg {
         self.best3benchkg.max(self.bench4kg)
     }
 
     /// Returns max(best3deadliftkg, deadlift4kg).
+    #[inline]
     pub fn highest_deadliftkg(&self) -> WeightKg {
         self.best3deadliftkg.max(self.deadlift4kg)
     }
@@ -295,41 +298,49 @@ impl OplDb {
     }
 
     /// Borrows the lifters vector.
+    #[inline]
     pub fn get_lifters(&self) -> &Vec<Lifter> {
         &self.lifters
     }
 
     /// Borrows the meets vector.
+    #[inline]
     pub fn get_meets(&self) -> &Vec<Meet> {
         &self.meets
     }
 
     /// Borrows the entries vector.
+    #[inline]
     pub fn get_entries(&self) -> &Vec<Entry> {
         &self.entries
     }
 
     /// Borrows a `Lifter` by index.
+    #[inline]
     pub fn get_lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
     /// Borrows a `Meet` by index.
+    #[inline]
     pub fn get_meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
     /// Borrows an `Entry` by index.
+    #[inline]
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }
 
     /// Borrows a cached filter.
+    #[inline]
     pub fn get_filter(&self, c: CachedFilter) -> &Filter {
         &self.filter_cache.from_enum(c)
     }
 
     /// Borrows the static cache. It's static!
+    #[inline]
     pub fn get_static_cache(&self) -> &StaticCache {
         &self.static_cache
     }
