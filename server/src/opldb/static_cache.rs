@@ -279,7 +279,6 @@ impl StaticCache {
         // First, try to use the constant-time cache.
         if selection.federation == FederationSelection::AllFederations
             && selection.weightclasses == WeightClassSelection::AllClasses
-            && selection.sex == SexSelection::AllSexes
             && selection.year == YearSelection::AllYears
         {
             let by_sort = match selection.sort {
@@ -297,6 +296,26 @@ impl StaticCache {
                 EquipmentSelection::Single => &by_sort.single,
                 EquipmentSelection::Multi => &by_sort.multi,
             };
+
+            // Since each lifter is only one sex, sex selections
+            // can just be an O(n) filter.
+            if selection.sex != SexSelection::AllSexes {
+                return PossiblyOwnedSortedUnique::Owned(SortedUnique(
+                    sorted_uniqued
+                        .0
+                        .iter()
+                        .filter_map(|&n| {
+                            let sex = opldb.get_entry(n).sex;
+                            match (selection.sex == SexSelection::Men && sex == Sex::M)
+                                || (selection.sex == SexSelection::Women && sex == Sex::F)
+                            {
+                                true => Some(n),
+                                false => None,
+                            }
+                        })
+                        .collect(),
+                ));
+            }
 
             return PossiblyOwnedSortedUnique::Borrowed(sorted_uniqued);
         }
