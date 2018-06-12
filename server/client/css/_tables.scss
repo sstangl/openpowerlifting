@@ -6,11 +6,9 @@
 }
 
 .slick-cell {
-  padding-top: 3px;
-  padding-left: 4px;
   color: $default-color;
   font-size: 9pt;
-  border: 0px;
+  border: 1px;
 }
 
 .searchflashing {
@@ -23,8 +21,7 @@
 }
 
 .slick-header-column.ui-state-default {
-  border-right: 0px;
-  border-bottom: 1px $primary-color;
+  border-color: $background-color;
 }
 
 .slick-header-column-sorted {

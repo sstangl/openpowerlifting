@@ -15,6 +15,10 @@ $topbar-height: 82px;
 // Definitions for media queries.
 $mobile-cutoff: 600px;
 
+// External things that are hopefully pretty small.
+@import "../node_modules/slickgrid/slick.grid";
+
+// Internal things.
 @import "header";
 @import "tables";
 @import "controls";

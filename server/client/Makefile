@@ -29,16 +29,14 @@ oldimages: builddir
 scripts: builddir npminit slickgrid
 	npm run webpack
 
-# FIXME -- this is a temporary thing while I'm on a plane.
-# FIXME -- the real thing should pull slickgrid from NPM or something.
+SLICKGRID := "node_modules/slickgrid"
 slickgrid: builddir
-	cp ../../web/scripts/SlickGrid-2.2.6/slick.grid.css ${BUILDDIR}/css/slickgrid.css
-	cat ../../web/scripts/SlickGrid-2.2.6/lib/jquery-1.11.2.min.js \
-            ../../web/scripts/SlickGrid-2.2.6/lib/jquery.event.drag-2.2.js \
-            ../../web/scripts/SlickGrid-2.2.6/lib/jquery.event.drop-2.2.js \
-            ../../web/scripts/SlickGrid-2.2.6/slick.core.js \
-            ../../web/scripts/SlickGrid-2.2.6/slick.grid.js \
-            | ../../web/try-uglify "${BUILDDIR}/scripts/slickgrid.min.js"
+	cat "${SLICKGRID}/lib/jquery-1.11.2.min.js" \
+	    "${SLICKGRID}/lib/jquery.event.drag-2.3.0.js" \
+	    "${SLICKGRID}/lib/jquery.event.drop-2.3.0.js" \
+	    "${SLICKGRID}/slick.core.js" \
+	    "${SLICKGRID}/slick.grid.js" \
+	    | "${OLDWEB}/try-uglify" "${BUILDDIR}/scripts/slickgrid.min.js"
 
 gzip:
 	./apply-gzip
