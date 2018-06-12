@@ -19,10 +19,13 @@ fn tested_federations_are_marked_tested() {
 
     for entry in db.get_entries() {
         if metafed.contains(&entry, &db) {
-            assert_eq!(true, entry.tested,
-                       "The Federation {} is part of MetaFederation::AllTested, \
-                        but isn't part of TESTED_FEDERATIONS in `scripts/compile`",
-                       db.get_meet(entry.meet_id).federation);
+            assert_eq!(
+                true,
+                entry.tested,
+                "The Federation {} is part of MetaFederation::AllTested, \
+                 but isn't part of TESTED_FEDERATIONS in `scripts/compile`",
+                db.get_meet(entry.meet_id).federation
+            );
         }
     }
 }

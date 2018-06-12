@@ -329,9 +329,7 @@ impl MetaFederation {
                     || meet.federation == Federation::WelshPA
                     || meet.federation == Federation::WNPF
             }
-            MetaFederation::AllAmateur => {
-                entry.tested
-            }
+            MetaFederation::AllAmateur => entry.tested,
             MetaFederation::AllAustralia => {
                 meet.federation == Federation::APU
                     || meet.federation == Federation::CAPO
@@ -406,12 +404,8 @@ impl MetaFederation {
                     || meet.federation == Federation::XPC
                     || meet.federation == Federation::WNPF
             }
-            MetaFederation::AAPF => {
-                meet.federation == Federation::APF && entry.tested
-            }
-            MetaFederation::ABPU => {
-                meet.federation == Federation::BPU && entry.tested
-            }
+            MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
+            MetaFederation::ABPU => meet.federation == Federation::BPU && entry.tested,
             MetaFederation::USPATested => {
                 meet.federation == Federation::USPA && entry.tested
             }

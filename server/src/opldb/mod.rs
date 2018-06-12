@@ -13,13 +13,6 @@ use std::str::FromStr;
 pub mod fields;
 use self::fields::*;
 
-mod filter;
-pub use self::filter::Filter;
-
-mod filter_cache;
-pub use self::filter_cache::CachedFilter;
-use self::filter_cache::FilterCache;
-
 mod static_cache;
 pub use self::static_cache::*;
 
@@ -179,11 +172,7 @@ pub struct OplDb {
     /// Within the entries of a single lifter_id, the order is arbitrary.
     entries: Vec<Entry>,
 
-    /// The cache of filters on the vectors.
-    filter_cache: FilterCache,
-
     /// Precalculated caches.
-    // TODO: This should replace the FilterCache.
     static_cache: StaticCache,
 }
 
@@ -246,14 +235,12 @@ impl OplDb {
         let meets = import_meets_csv(meets_csv)?;
         let entries = import_entries_csv(entries_csv)?;
 
-        let filter_cache = FilterCache::new(&meets, &entries);
         let static_cache = StaticCache::new(&meets, &entries);
 
         Ok(OplDb {
             lifters,
             meets,
             entries,
-            filter_cache,
             static_cache,
         })
     }
@@ -291,10 +278,7 @@ impl OplDb {
             }
         }
 
-        mem::size_of::<OplDb>()
-            + owned_vectors
-            + owned_strings
-            + self.filter_cache.size_bytes()
+        mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }
 
     /// Borrows the lifters vector.
@@ -331,12 +315,6 @@ impl OplDb {
     #[inline]
     pub fn get_entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
-    }
-
-    /// Borrows a cached filter.
-    #[inline]
-    pub fn get_filter(&self, c: CachedFilter) -> &Filter {
-        &self.filter_cache.from_enum(c)
     }
 
     /// Borrows the static cache. It's static!
