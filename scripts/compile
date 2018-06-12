@@ -177,6 +177,8 @@ def tested_from_division(division, federation):
 
     if 'Amateur' in division:
         return "Yes"
+    if 'AD' in division:  # "Amateur Division".
+        return "Yes"
     if '_AAPF' in division:
         return "Yes"
     if '_ABPU' in division:
