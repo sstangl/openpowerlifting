@@ -196,7 +196,18 @@ function onLoad() {
     }
 
     global_grid = new Slick.Grid("#theGrid", makeDataProvider(), columns, options);
-    global_grid.setSortColumn("wilks", false); // Sort descending.
+
+    let sortcol = "wilks";
+    if (selSort.value === "by-squat") {
+        sortcol = "squat";
+    } else if (selSort.value === "by-bench") {
+        sortcol = "bench";
+    } else if (selSort.value === "by-deadlift") {
+        sortcol = "deadlift";
+    } else if (selSort.value === "by-total") {
+        sortcol = "total";
+    }
+    global_grid.setSortColumn(sortcol, false); // Sort descending.
     global_grid.resizeCanvas();
 }
 

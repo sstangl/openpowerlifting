@@ -384,6 +384,7 @@ impl FromStr for SortSelection {
             "by-squat" => Ok(SortSelection::BySquat),
             "by-bench" => Ok(SortSelection::ByBench),
             "by-deadlift" => Ok(SortSelection::ByDeadlift),
+            "by-total" => Ok(SortSelection::ByTotal),
             // "by-allometric" => Ok(SortSelection::ByAllometric),
             // "by-glossbrenner" => Ok(SortSelection::ByGlossbrenner),
             // "by-mcculloch" => Ok(SortSelection::ByMcCulloch),

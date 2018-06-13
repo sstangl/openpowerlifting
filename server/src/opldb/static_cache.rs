@@ -187,7 +187,7 @@ impl NonSortedNonUnique {
 
         // Sort max-first.
         // Stable sorting is used since it benchmarks faster than unstable.
-        list.sort_by(|&x, &y| compare(x, y).reverse());
+        list.sort_by(|&x, &y| compare(x, y));
 
         SortedUnique(list)
     }
@@ -416,8 +416,113 @@ impl StaticCache {
             cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
         }
 
-        // TODO: Other sorts.
-        PossiblyOwnedSortedUnique::Owned(cur.sort_and_unique_by_wilks(&opldb))
+        // If sorting by a single lift, only show entries with that lift.
+        let cur = match selection.sort {
+            SortSelection::BySquat => PossiblyOwnedNonSortedNonUnique::Owned(
+                NonSortedNonUnique(
+                    cur.0.iter().filter_map(|&i| {
+                        if opldb.get_entry(i).highest_squatkg() > WeightKg(0) {
+                            Some(i)
+                        } else {
+                            None
+                        }
+                    }).collect()
+                )
+            ),
+            SortSelection::ByBench => PossiblyOwnedNonSortedNonUnique::Owned(
+                NonSortedNonUnique(
+                    cur.0.iter().filter_map(|&i| {
+                        if opldb.get_entry(i).highest_benchkg() > WeightKg(0) {
+                            Some(i)
+                        } else {
+                            None
+                        }
+                    }).collect()
+                )
+            ),
+            SortSelection::ByDeadlift => PossiblyOwnedNonSortedNonUnique::Owned(
+                NonSortedNonUnique(
+                    cur.0.iter().filter_map(|&i| {
+                        if opldb.get_entry(i).highest_deadliftkg() > WeightKg(0) {
+                            Some(i)
+                        } else {
+                            None
+                        }
+                    }).collect()
+                )
+            ),
+            _ => cur,
+        };
+
+        let entries = opldb.get_entries();
+        let meets = opldb.get_meets();
+
+        // TODO: Common out sort code with ConstantTimeCache::new()
+        PossiblyOwnedSortedUnique::Owned(match selection.sort {
+            SortSelection::BySquat => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
+                let x = x as usize;
+                let y = y as usize;
+
+                entries[x]
+                    .highest_squatkg()
+                    .cmp(&entries[y].highest_squatkg())
+                    .reverse()
+                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
+                    .then(
+                        meets[entries[x].meet_id as usize]
+                            .date
+                            .cmp(&meets[entries[y].meet_id as usize].date),
+                    )
+            }),
+            SortSelection::ByBench => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
+                let x = x as usize;
+                let y = y as usize;
+
+                entries[x]
+                    .highest_benchkg()
+                    .cmp(&entries[y].highest_benchkg())
+                    .reverse()
+                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
+                    .then(
+                        meets[entries[x].meet_id as usize]
+                            .date
+                            .cmp(&meets[entries[y].meet_id as usize].date),
+                    )
+            }),
+            SortSelection::ByDeadlift => {
+                cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
+                    let x = x as usize;
+                    let y = y as usize;
+
+                    entries[x]
+                        .highest_deadliftkg()
+                        .cmp(&entries[y].highest_deadliftkg())
+                        .reverse()
+                        .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
+                        .then(
+                            meets[entries[x].meet_id as usize]
+                                .date
+                                .cmp(&meets[entries[y].meet_id as usize].date),
+                        )
+                })
+            }
+            SortSelection::ByTotal => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
+                let x = x as usize;
+                let y = y as usize;
+
+                entries[x]
+                    .totalkg
+                    .cmp(&entries[y].totalkg)
+                    .reverse()
+                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
+                    .then(
+                        meets[entries[x].meet_id as usize]
+                            .date
+                            .cmp(&meets[entries[y].meet_id as usize].date),
+                    )
+            }),
+            SortSelection::ByWilks => cur.sort_and_unique_by_wilks(&opldb),
+        })
     }
 }
 
