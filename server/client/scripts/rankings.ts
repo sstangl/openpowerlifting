@@ -50,13 +50,13 @@ function makeDataProvider() {
 
             if (entry.instagram) {
                 name += '<a href="https://www.instagram.com/' + entry.instagram +
-                        '" class="instagram" target="_blank">' +
+                        '" class="instagram" rel="noopener" target="_blank">' +
                         '<i class="fa fa-instagram fa-resize"></i></a>';
             }
 
             if (entry.vkontakte) {
                 name += '<a href="https://vk.com/' + entry.vkontakte +
-                        '" class="instagram" target="_blank">' +
+                        '" class="instagram" rel="noopener" target="_blank">' +
                         '<i class="fa fa-vk fa-resize"></i></a>';
             }
 

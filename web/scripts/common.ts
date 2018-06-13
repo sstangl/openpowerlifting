@@ -153,7 +153,7 @@ export function makeRowObj(row, index?: number): RowObject {
         let social = socialmedia[fullname];
         if (social !== undefined) {
             name += '<a href="https://www.instagram.com/' + social[0]
-                    + '" class="instagram" target="_blank">'
+                    + '" class="instagram" rel="noopener" target="_blank">'
                     + '<i class="fa fa-instagram fa-resize"></i></a>';
         }
     }
