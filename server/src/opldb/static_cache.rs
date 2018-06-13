@@ -182,7 +182,7 @@ impl NonSortedNonUnique {
         // Perform the grouping operation, generating a new vector.
         let mut list: Vec<u32> = groups
             .into_iter()
-            .map(|(_key, group)| *group.max_by(|&x, &y| compare(*x, *y)).unwrap())
+            .map(|(_key, group)| *group.min_by(|&x, &y| compare(*x, *y)).unwrap())
             .collect();
 
         // Sort max-first.
