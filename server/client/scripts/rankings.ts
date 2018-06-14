@@ -1,5 +1,10 @@
 // vim: set ts=4 sts=4 sw=4 et:
+//
+// Implementation of main logic for the Rankings page.
+
 'use strict';
+
+import { RemoteCache } from './remotecache'
 
 // Appease the TypeScript compiler.
 declare var Slick;
@@ -26,19 +31,22 @@ let global_grid;
 let global_data;
 
 
-let selEquipment;
-let selWeightClass;
-let selFed;
-let selYear;
-let selSex;
-let selSort;
+let selEquipment: HTMLSelectElement;
+let selWeightClass: HTMLSelectElement;
+let selFed: HTMLSelectElement;
+let selYear: HTMLSelectElement;
+let selSex: HTMLSelectElement;
+let selSort: HTMLSelectElement;
 
 
-function makeDataProvider() {
+function makeDataProvider(cache) {
     return {
-        getLength: function() { return global_data.length; },
+        getLength: function() { return cache.length; },
         getItem: function(idx) {
-            let entry = global_data[idx];
+            let entry = cache.rows[idx];
+            if (entry === undefined) {
+                return;
+            }
 
             let loc = entry.country;
             if (entry.country && entry.state) {
@@ -86,41 +94,40 @@ function onResize(evt) {
     global_grid.resizeCanvas();
 }
 
-// When selectors are changed, the URL in the address bar should
-// change to match.
-function reload() {
-    let url = "/rankings";
-    let specific = false;
-
+// Returns a string like "/raw/uspa", or the empty string
+// for the default selection.
+function selection_to_path(): string {
+    let url = "";
     if (selEquipment.value !== "raw_wraps") {
         url += "/" + selEquipment.value;
-        specific = true;
     }
     if (selWeightClass.value !== "all") {
         url += "/" + selWeightClass.value;
-        specific = true;
     }
     if (selFed.value !== "all") {
         url += "/" + selFed.value;
-        specific = true;
     }
     if (selSex.value !== "all") {
         url += "/" + selSex.value;
-        specific = true;
     }
     if (selYear.value !== "all") {
         url += "/" + selYear.value;
-        specific = true;
     }
     if (selSort.value !== "by-wilks") {
         url += "/" + selSort.value;
-        specific = true;
     }
+    return url;
+}
 
-    if (specific === true) {
-        window.location.href = url;
-    } else {
+// When selectors are changed, the URL in the address bar should
+// change to match.
+function reload() {
+    let path = selection_to_path();
+
+    if (path === "") {
         window.location.href = "/";
+    } else {
+        window.location.href = "/rankings" + path;
     }
 }
 
@@ -129,12 +136,12 @@ function addSelectorListeners(selector) {
 }
 
 function addEventListeners() {
-    selEquipment = document.getElementById("equipmentselect");
-    selWeightClass = document.getElementById("weightclassselect");
-    selFed = document.getElementById("fedselect");
-    selYear = document.getElementById("yearselect");
-    selSex = document.getElementById("sexselect");
-    selSort = document.getElementById("sortselect");
+    selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
+    selWeightClass = document.getElementById("weightclassselect") as HTMLSelectElement;
+    selFed = document.getElementById("fedselect") as HTMLSelectElement;
+    selYear = document.getElementById("yearselect") as HTMLSelectElement;
+    selSex = document.getElementById("sexselect") as HTMLSelectElement;
+    selSort = document.getElementById("sortselect") as HTMLSelectElement;
 
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
@@ -195,7 +202,27 @@ function onLoad() {
         cellFlashingCssClass: "searchflashing"
     }
 
-    global_grid = new Slick.Grid("#theGrid", makeDataProvider(), columns, options);
+    const langSelect = document.getElementById("langselect") as HTMLSelectElement;
+    const unitSelect = document.getElementById("weightunits") as HTMLSelectElement;
+
+    const language = langSelect.value;
+    const units = unitSelect.value;
+
+    let cache = RemoteCache("TESTING", initial_data, selection_to_path(), language, units);
+    global_grid = new Slick.Grid("#theGrid", makeDataProvider(cache), columns, options);
+
+    // Hook up the cache.
+    global_grid.onViewportChanged.subscribe(function (e, args) {
+        var vp = global_grid.getViewport();
+        cache.ensureData(vp.top, vp.bottom);
+    });
+    cache.onDataLoaded.subscribe(function (e, args) {
+        for (var i = args.startRow; i <= args.endRow; ++i) {
+            global_grid.invalidateRow(i);
+        }
+        global_grid.updateRowCount();
+        global_grid.render();
+    });
 
     let sortcol = "wilks";
     if (selSort.value === "by-squat") {
@@ -209,6 +236,7 @@ function onLoad() {
     }
     global_grid.setSortColumn(sortcol, false); // Sort descending.
     global_grid.resizeCanvas();
+    global_grid.onViewportChanged.notify();
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);

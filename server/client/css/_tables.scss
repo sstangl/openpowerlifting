@@ -87,3 +87,25 @@ td a {
 .table-divider {
   color: $primary-color;
 }
+
+// Loading indicator for waiting on an AJAX load.
+.loading-indicator {
+  display: inline-block;
+  padding: 12px;
+  background: white;
+  -opacity: 0.5;
+  color: black;
+  font-weight: bold;
+  z-index: 9999;
+  border: 1px solid red;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-box-shadow: 0 0 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  -text-shadow: 1px 1px 1px white;
+}
+
+.loading-indicator label {
+  padding-left: 20px;
+  // background: url('../images/ajax-loader-small.gif') no-repeat center left;
+}

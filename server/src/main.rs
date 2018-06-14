@@ -7,6 +7,7 @@ extern crate dotenv;
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
+extern crate serde_json;
 extern crate strum;
 
 #[cfg(test)]
@@ -15,7 +16,7 @@ mod tests;
 use rocket::fairing::AdHoc;
 use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{self, FromRequest, Request};
-use rocket::response::{NamedFile, Redirect, Responder, Response};
+use rocket::response::{self, content, NamedFile, Redirect, Responder, Response};
 use rocket::{Outcome, State};
 use rocket_contrib::Template;
 
@@ -193,7 +194,7 @@ fn rankings(
 ) -> Option<Template> {
     let selection = pages::selection::Selection::from_path(&selections).ok()?;
     let locale = make_locale(&langinfo, languages, &cookies);
-    let context = pages::rankings::Context::new(&opldb, &locale, &selection);
+    let context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
     Some(Template::render("rankings", &context))
 }
 
@@ -296,6 +297,64 @@ fn index(
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
+}
+
+/// Return type for pre-rendered Json strings.
+#[derive(Debug)]
+struct JsonString(pub String);
+
+impl Responder<'static> for JsonString {
+    fn respond_to(self, req: &Request) -> response::Result<'static> {
+        content::Json(self.0).respond_to(req)
+    }
+}
+
+// TODO: Version / magicValue / etc.
+#[derive(FromForm)]
+struct RankingsApiQuery {
+    start: usize,
+    end: usize,
+    lang: String,
+    units: String,
+}
+
+/// API endpoint for fetching a slice of rankings data as JSON.
+#[get("/api/rankings/<selections..>?<query>")]
+fn rankings_api<'db>(
+    selections: Option<PathBuf>,
+    query: RankingsApiQuery,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+) -> Option<JsonString> {
+    let selection = match selections {
+        None => pages::selection::Selection::new_default(),
+        Some(path) => pages::selection::Selection::from_path(&path).ok()?,
+    };
+
+    let language = query.lang.parse::<Language>().ok()?;
+    let units = query.units.parse::<opldb::WeightUnits>().ok()?;
+    let locale = Locale::new(&langinfo, language, units);
+
+    let slice = pages::api_rankings::get_slice(
+        &opldb,
+        &locale,
+        &selection,
+        query.start,
+        query.end,
+    )?;
+
+    // TODO: Maybe we can use rocket_contrib::Json, but the lifetimes
+    // of the values in `slice` outlive this function, which doesn't work.
+    Some(JsonString(serde_json::to_string(&slice).ok()?))
+}
+
+#[get("/api/rankings?<query>")]
+fn default_rankings_api<'db>(
+    query: RankingsApiQuery,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+) -> Option<JsonString> {
+    rankings_api(None, query, opldb, langinfo)
 }
 
 #[derive(FromForm)]
@@ -405,6 +464,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 robots_txt,
             ],
         )
+        .mount("/", routes![rankings_api, default_rankings_api])
         .mount(
             "/",
             routes![

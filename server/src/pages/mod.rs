@@ -12,3 +12,6 @@ pub mod lifter;
 pub mod meet;
 pub mod rankings;
 pub mod status;
+
+// API providers.
+pub mod api_rankings;

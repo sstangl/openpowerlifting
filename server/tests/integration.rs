@@ -52,7 +52,10 @@ fn single_lift_sorts_only_include_valid_entries() {
             entry.highest_squatkg() > WeightKg(0),
             "single-lift rankings shouldn't include entries with missing or failed lifts"
         );
-        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+        assert!(
+            !entry.place.is_dq(),
+            "rankings shouldn't include DQ'd entries."
+        );
     }
 
     selection.sort = SortSelection::ByBench;
@@ -63,7 +66,10 @@ fn single_lift_sorts_only_include_valid_entries() {
             entry.highest_benchkg() > WeightKg(0),
             "single-lift rankings shouldn't include entries with missing or failed lifts"
         );
-        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+        assert!(
+            !entry.place.is_dq(),
+            "rankings shouldn't include DQ'd entries."
+        );
     }
 
     selection.sort = SortSelection::ByDeadlift;
@@ -74,7 +80,10 @@ fn single_lift_sorts_only_include_valid_entries() {
             entry.highest_deadliftkg() > WeightKg(0),
             "single-lift rankings shouldn't include entries with missing or failed lifts"
         );
-        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+        assert!(
+            !entry.place.is_dq(),
+            "rankings shouldn't include DQ'd entries."
+        );
     }
 
     selection.sort = SortSelection::ByTotal;
@@ -85,6 +94,9 @@ fn single_lift_sorts_only_include_valid_entries() {
             entry.totalkg > WeightKg(0),
             "total rankings shouldn't include entries with missing or failed lifts"
         );
-        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+        assert!(
+            !entry.place.is_dq(),
+            "rankings shouldn't include DQ'd entries."
+        );
     }
 }

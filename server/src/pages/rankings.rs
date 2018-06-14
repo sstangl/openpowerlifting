@@ -5,7 +5,7 @@ use serde_json;
 use langpack::{self, Language, Locale};
 use opldb;
 
-use pages::jsdata::JsEntryRow;
+use pages::api_rankings::get_slice;
 use pages::selection::Selection;
 
 /// The context object passed to `templates/rankings.html.tera`.
@@ -25,28 +25,18 @@ impl<'db, 'a> Context<'db, 'a> {
         opldb: &'db opldb::OplDb,
         locale: &'db Locale,
         selection: &'a Selection,
-    ) -> Context<'db, 'a> {
-        // TODO: Don't generate the full list, just generate the top 100.
-        let list = opldb
-            .get_static_cache()
-            .get_full_sorted_uniqued(selection, opldb);
+    ) -> Option<Context<'db, 'a>> {
+        // Inline the top 100 to avoid another round-trip.
+        let slice = get_slice(&opldb, &locale, &selection, 0, 99)?;
 
-        let top_100: Vec<JsEntryRow> = list.0[0..list.0.len().min(100)]
-            .iter()
-            .zip(0..)
-            .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.get_entry(n), i))
-            .collect();
-
-        // Send over the top 100 by default.
-        Context {
+        Some(Context {
             page_title: "Rankings".to_string(),
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
 
             selection: selection,
-            /// FIXME: Handle failure.
-            data: serde_json::to_string(&top_100).unwrap(),
-        }
+            data: serde_json::to_string(&slice).ok()?,
+        })
     }
 }
