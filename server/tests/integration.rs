@@ -5,6 +5,9 @@
 
 extern crate server;
 
+use server::opldb::fields::*;
+use server::pages::selection::*;
+
 mod common;
 
 /// Checks that all federations known to be fully-tested are
@@ -27,5 +30,61 @@ fn tested_federations_are_marked_tested() {
                 db.get_meet(entry.meet_id).federation
             );
         }
+    }
+}
+
+/// Checks that the "by-squat" sorting algorithm doesn't include any lifters
+/// who haven't squatted (WeightKg.0 == 0) or failed a squat (WeightKg.0 < 0).
+#[test]
+fn single_lift_sorts_only_include_valid_entries() {
+    let db = common::db();
+    let cache = db.get_static_cache();
+
+    // Use a sort that isn't fully pre-cached.
+    let mut selection = Selection::new_default();
+    selection.federation = FederationSelection::One(Federation::RPS);
+
+    selection.sort = SortSelection::BySquat;
+    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    for idx in rankings.0.iter() {
+        let entry = db.get_entry(*idx);
+        assert!(
+            entry.highest_squatkg() > WeightKg(0),
+            "single-lift rankings shouldn't include entries with missing or failed lifts"
+        );
+        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+    }
+
+    selection.sort = SortSelection::ByBench;
+    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    for idx in rankings.0.iter() {
+        let entry = db.get_entry(*idx);
+        assert!(
+            entry.highest_benchkg() > WeightKg(0),
+            "single-lift rankings shouldn't include entries with missing or failed lifts"
+        );
+        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+    }
+
+    selection.sort = SortSelection::ByDeadlift;
+    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    for idx in rankings.0.iter() {
+        let entry = db.get_entry(*idx);
+        assert!(
+            entry.highest_deadliftkg() > WeightKg(0),
+            "single-lift rankings shouldn't include entries with missing or failed lifts"
+        );
+        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
+    }
+
+    selection.sort = SortSelection::ByTotal;
+    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    for idx in rankings.0.iter() {
+        let entry = db.get_entry(*idx);
+        assert!(
+            entry.totalkg > WeightKg(0),
+            "total rankings shouldn't include entries with missing or failed lifts"
+        );
+        assert!(!entry.place.is_dq(), "rankings shouldn't include DQ'd entries.");
     }
 }

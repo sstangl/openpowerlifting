@@ -418,39 +418,48 @@ impl StaticCache {
 
         // If sorting by a single lift, only show entries with that lift.
         let cur = match selection.sort {
-            SortSelection::BySquat => PossiblyOwnedNonSortedNonUnique::Owned(
-                NonSortedNonUnique(
-                    cur.0.iter().filter_map(|&i| {
-                        if opldb.get_entry(i).highest_squatkg() > WeightKg(0) {
-                            Some(i)
-                        } else {
-                            None
-                        }
-                    }).collect()
-                )
-            ),
-            SortSelection::ByBench => PossiblyOwnedNonSortedNonUnique::Owned(
-                NonSortedNonUnique(
-                    cur.0.iter().filter_map(|&i| {
-                        if opldb.get_entry(i).highest_benchkg() > WeightKg(0) {
-                            Some(i)
-                        } else {
-                            None
-                        }
-                    }).collect()
-                )
-            ),
-            SortSelection::ByDeadlift => PossiblyOwnedNonSortedNonUnique::Owned(
-                NonSortedNonUnique(
-                    cur.0.iter().filter_map(|&i| {
-                        if opldb.get_entry(i).highest_deadliftkg() > WeightKg(0) {
-                            Some(i)
-                        } else {
-                            None
-                        }
-                    }).collect()
-                )
-            ),
+            SortSelection::BySquat => {
+                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
+                    cur.0
+                        .iter()
+                        .filter_map(|&i| {
+                            if opldb.get_entry(i).highest_squatkg() > WeightKg(0) {
+                                Some(i)
+                            } else {
+                                None
+                            }
+                        })
+                        .collect(),
+                ))
+            }
+            SortSelection::ByBench => {
+                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
+                    cur.0
+                        .iter()
+                        .filter_map(|&i| {
+                            if opldb.get_entry(i).highest_benchkg() > WeightKg(0) {
+                                Some(i)
+                            } else {
+                                None
+                            }
+                        })
+                        .collect(),
+                ))
+            }
+            SortSelection::ByDeadlift => {
+                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
+                    cur.0
+                        .iter()
+                        .filter_map(|&i| {
+                            if opldb.get_entry(i).highest_deadliftkg() > WeightKg(0) {
+                                Some(i)
+                            } else {
+                                None
+                            }
+                        })
+                        .collect(),
+                ))
+            }
             _ => cur,
         };
 
