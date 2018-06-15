@@ -580,13 +580,15 @@ impl ConstantTimeCache {
     ///
     /// TODO: Filter out zero entries (like lifters with no squat for by-squat,
     /// etc.)
-    fn sort_and_unique_by<F>(
+    fn sort_and_unique_by<F, G>(
         idxl: &NonSortedNonUnique,
         entries: &Vec<Entry>,
         compare: F,
+        belongs: G,
     ) -> SortedUnique
     where
         F: Fn(u32, u32) -> Ordering,
+        G: Fn(u32) -> bool,
     {
         // First, group contiguous entries by lifter_id, so only the best
         // entry for each lifter is counted.
@@ -601,6 +603,7 @@ impl ConstantTimeCache {
             .into_iter()
             // `min_by()` takes the best entry due to comparator ordering.
             .map(|(_key, group)| *group.min_by(|&x, &y| compare(*x, *y)).unwrap())
+            .filter(|x| belongs(*x))
             .collect();
 
         vec.sort_by(|&x, &y| compare(x, y));
@@ -626,13 +629,34 @@ impl ConstantTimeCache {
                 .then(meets[entries[x].meet_id as usize].date.cmp(
                         &meets[entries[y].meet_id as usize].date))
         };
+        let belongs_squat = |x: u32| entries[x as usize].highest_squatkg() > WeightKg(0);
 
         let squat = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_squat),
-            wraps: Self::sort_and_unique_by(&loglin.wraps, entries, by_squat),
-            raw_wraps: Self::sort_and_unique_by(&loglin.raw_wraps, entries, by_squat),
-            single: Self::sort_and_unique_by(&loglin.single, entries, by_squat),
-            multi: Self::sort_and_unique_by(&loglin.multi, entries, by_squat),
+            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_squat, belongs_squat),
+            wraps: Self::sort_and_unique_by(
+                &loglin.wraps,
+                entries,
+                by_squat,
+                belongs_squat,
+            ),
+            raw_wraps: Self::sort_and_unique_by(
+                &loglin.raw_wraps,
+                entries,
+                by_squat,
+                belongs_squat,
+            ),
+            single: Self::sort_and_unique_by(
+                &loglin.single,
+                entries,
+                by_squat,
+                belongs_squat,
+            ),
+            multi: Self::sort_and_unique_by(
+                &loglin.multi,
+                entries,
+                by_squat,
+                belongs_squat,
+            ),
         };
 
         let by_bench = |x: u32, y: u32| {
@@ -648,13 +672,34 @@ impl ConstantTimeCache {
                 .then(meets[entries[x].meet_id as usize].date.cmp(
                         &meets[entries[y].meet_id as usize].date))
         };
+        let belongs_bench = |x: u32| entries[x as usize].highest_benchkg() > WeightKg(0);
 
         let bench = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_bench),
-            wraps: Self::sort_and_unique_by(&loglin.wraps, entries, by_bench),
-            raw_wraps: Self::sort_and_unique_by(&loglin.raw_wraps, entries, by_bench),
-            single: Self::sort_and_unique_by(&loglin.single, entries, by_bench),
-            multi: Self::sort_and_unique_by(&loglin.multi, entries, by_bench),
+            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_bench, belongs_bench),
+            wraps: Self::sort_and_unique_by(
+                &loglin.wraps,
+                entries,
+                by_bench,
+                belongs_bench,
+            ),
+            raw_wraps: Self::sort_and_unique_by(
+                &loglin.raw_wraps,
+                entries,
+                by_bench,
+                belongs_bench,
+            ),
+            single: Self::sort_and_unique_by(
+                &loglin.single,
+                entries,
+                by_bench,
+                belongs_bench,
+            ),
+            multi: Self::sort_and_unique_by(
+                &loglin.multi,
+                entries,
+                by_bench,
+                belongs_bench,
+            ),
         };
 
         let by_deadlift = |x: u32, y: u32| {
@@ -671,13 +716,40 @@ impl ConstantTimeCache {
                 .then(meets[entries[x].meet_id as usize].date.cmp(
                         &meets[entries[y].meet_id as usize].date))
         };
+        let belongs_deadlift =
+            |x: u32| entries[x as usize].highest_deadliftkg() > WeightKg(0);
 
         let deadlift = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_deadlift),
-            wraps: Self::sort_and_unique_by(&loglin.wraps, entries, by_deadlift),
-            raw_wraps: Self::sort_and_unique_by(&loglin.raw_wraps, entries, by_deadlift),
-            single: Self::sort_and_unique_by(&loglin.single, entries, by_deadlift),
-            multi: Self::sort_and_unique_by(&loglin.multi, entries, by_deadlift),
+            raw: Self::sort_and_unique_by(
+                &loglin.raw,
+                entries,
+                by_deadlift,
+                belongs_deadlift,
+            ),
+            wraps: Self::sort_and_unique_by(
+                &loglin.wraps,
+                entries,
+                by_deadlift,
+                belongs_deadlift,
+            ),
+            raw_wraps: Self::sort_and_unique_by(
+                &loglin.raw_wraps,
+                entries,
+                by_deadlift,
+                belongs_deadlift,
+            ),
+            single: Self::sort_and_unique_by(
+                &loglin.single,
+                entries,
+                by_deadlift,
+                belongs_deadlift,
+            ),
+            multi: Self::sort_and_unique_by(
+                &loglin.multi,
+                entries,
+                by_deadlift,
+                belongs_deadlift,
+            ),
         };
 
         let by_total = |x: u32, y: u32| {
@@ -693,13 +765,34 @@ impl ConstantTimeCache {
                 .then(meets[entries[x].meet_id as usize].date.cmp(
                         &meets[entries[y].meet_id as usize].date))
         };
+        let belongs_total = |x: u32| entries[x as usize].totalkg > WeightKg(0);
 
         let total = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_total),
-            wraps: Self::sort_and_unique_by(&loglin.wraps, entries, by_total),
-            raw_wraps: Self::sort_and_unique_by(&loglin.raw_wraps, entries, by_total),
-            single: Self::sort_and_unique_by(&loglin.single, entries, by_total),
-            multi: Self::sort_and_unique_by(&loglin.multi, entries, by_total),
+            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_total, belongs_total),
+            wraps: Self::sort_and_unique_by(
+                &loglin.wraps,
+                entries,
+                by_total,
+                belongs_total,
+            ),
+            raw_wraps: Self::sort_and_unique_by(
+                &loglin.raw_wraps,
+                entries,
+                by_total,
+                belongs_total,
+            ),
+            single: Self::sort_and_unique_by(
+                &loglin.single,
+                entries,
+                by_total,
+                belongs_total,
+            ),
+            multi: Self::sort_and_unique_by(
+                &loglin.multi,
+                entries,
+                by_total,
+                belongs_total,
+            ),
         };
 
         let by_wilks = |x: u32, y: u32| {
@@ -714,13 +807,34 @@ impl ConstantTimeCache {
                 // If that's equal too, sort by Total, highest first.
                 .then(entries[x].totalkg.cmp(&entries[y].totalkg))
         };
+        let belongs_wilks = |x: u32| entries[x as usize].wilks > Points(0);
 
         let wilks = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_wilks),
-            wraps: Self::sort_and_unique_by(&loglin.wraps, entries, by_wilks),
-            raw_wraps: Self::sort_and_unique_by(&loglin.raw_wraps, entries, by_wilks),
-            single: Self::sort_and_unique_by(&loglin.single, entries, by_wilks),
-            multi: Self::sort_and_unique_by(&loglin.multi, entries, by_wilks),
+            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_wilks, belongs_wilks),
+            wraps: Self::sort_and_unique_by(
+                &loglin.wraps,
+                entries,
+                by_wilks,
+                belongs_wilks,
+            ),
+            raw_wraps: Self::sort_and_unique_by(
+                &loglin.raw_wraps,
+                entries,
+                by_wilks,
+                belongs_wilks,
+            ),
+            single: Self::sort_and_unique_by(
+                &loglin.single,
+                entries,
+                by_wilks,
+                belongs_wilks,
+            ),
+            multi: Self::sort_and_unique_by(
+                &loglin.multi,
+                entries,
+                by_wilks,
+                belongs_wilks,
+            ),
         };
 
         ConstantTimeCache {
