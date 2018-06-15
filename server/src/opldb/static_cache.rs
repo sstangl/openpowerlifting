@@ -416,7 +416,7 @@ impl StaticCache {
             cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
         }
 
-        // If sorting by a single lift, only show entries with that lift.
+        // Only show entries with non-empty values in the sort category.
         let cur = match selection.sort {
             SortSelection::BySquat => {
                 PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
@@ -460,7 +460,23 @@ impl StaticCache {
                         .collect(),
                 ))
             }
-            _ => cur,
+            // Nothing needed for total: all entries without totals are DQ'd
+            // and already filtered-out.
+            SortSelection::ByTotal => cur,
+            SortSelection::ByWilks => {
+                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
+                    cur.0
+                        .iter()
+                        .filter_map(|&i| {
+                            if opldb.get_entry(i).wilks > Points(0) {
+                                Some(i)
+                            } else {
+                                None
+                            }
+                        })
+                        .collect(),
+                ))
+            }
         };
 
         let entries = opldb.get_entries();

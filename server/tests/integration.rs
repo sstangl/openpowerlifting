@@ -33,10 +33,10 @@ fn tested_federations_are_marked_tested() {
     }
 }
 
-/// Checks that the "by-squat" sorting algorithm doesn't include any lifters
-/// who haven't squatted (WeightKg.0 == 0) or failed a squat (WeightKg.0 < 0).
+/// Checks that the sorting algorithm doesn't include any entries with
+/// disqualified or empty values in the category being sorted.
 #[test]
-fn single_lift_sorts_only_include_valid_entries() {
+fn sorts_only_include_valid_entries() {
     let db = common::db();
     let cache = db.get_static_cache();
 
@@ -93,6 +93,20 @@ fn single_lift_sorts_only_include_valid_entries() {
         assert!(
             entry.totalkg > WeightKg(0),
             "total rankings shouldn't include entries with missing or failed lifts"
+        );
+        assert!(
+            !entry.place.is_dq(),
+            "rankings shouldn't include DQ'd entries."
+        );
+    }
+
+    selection.sort = SortSelection::ByWilks;
+    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    for idx in rankings.0.iter() {
+        let entry = db.get_entry(*idx);
+        assert!(
+            entry.wilks > Points(0),
+            "wilks rankings shouldn't include entries with no points"
         );
         assert!(
             !entry.place.is_dq(),
