@@ -10,6 +10,8 @@ use std::error::Error;
 use std::mem;
 use std::str::FromStr;
 
+pub mod algorithms;
+
 pub mod fields;
 use self::fields::*;
 

@@ -4,6 +4,7 @@ use itertools::Itertools;
 use std::cmp::Ordering;
 use std::ops::Deref;
 
+use opldb::algorithms::*;
 use opldb::fields::*;
 use opldb::{Entry, Meet, OplDb};
 use pages::selection::*;
@@ -165,71 +166,36 @@ impl NonSortedNonUnique {
     }
 
     /// Sorts and uniques the data with reference to a comparator.
-    pub fn sort_and_unique_by<F>(&self, opldb: &OplDb, compare: F) -> SortedUnique
+    pub fn sort_and_unique_by<F, G>(
+        &self,
+        entries: &Vec<Entry>,
+        meets: &Vec<Meet>,
+        compare: F,
+        belongs: G,
+    ) -> SortedUnique
     where
-        F: Fn(u32, u32) -> Ordering,
+        F: Fn(&Vec<Meet>, &Entry, &Entry) -> Ordering,
+        G: Fn(&Entry) -> bool,
     {
-        debug_assert!(self.maintains_invariants());
-
         // First, group contiguous entries by lifter_id, so only the best
         // entry for each lifter is counted.
         // The group_by() operation is lazy and does not perform any action yet.
         let groups = self
             .0
             .iter()
-            .group_by(|idx| opldb.get_entry(**idx).lifter_id);
+            .group_by(|idx| entries[**idx as usize].lifter_id);
 
         // Perform the grouping operation, generating a new vector.
-        let mut list: Vec<u32> = groups
+        let mut vec: Vec<u32> = groups
             .into_iter()
-            .map(|(_key, group)| *group.min_by(|&x, &y| compare(*x, *y)).unwrap())
+            // `min_by()` takes the best entry due to comparator ordering.
+            .map(|(_key, group)| *group.min_by(|&a, &b| compare(meets, &entries[*a as usize], &entries[*b as usize])).unwrap())
+            .filter(|x| belongs(&entries[*x as usize]))
             .collect();
 
-        // Sort max-first.
-        // Stable sorting is used since it benchmarks faster than unstable.
-        list.sort_by(|&x, &y| compare(x, y));
-
-        SortedUnique(list)
-    }
-
-    // TODO -- using this method takes 32ms instead of 46ms, quite a savings!
-    // Apparently the indirection overhead is pretty high, and it's much faster
-    // to just make a sort method directly for each of the sort options.
-    // Alas, JS perf is actually better here due to JITs.
-    pub fn sort_and_unique_by_wilks(&self, opldb: &OplDb) -> SortedUnique {
-        debug_assert!(self.maintains_invariants());
-
-        // First, group contiguous entries by lifter_id, so only the best
-        // entry for each lifter is counted.
-        // The group_by() operation is lazy and does not perform any action yet.
-        let groups = self
-            .0
-            .iter()
-            .group_by(|idx| opldb.get_entry(**idx).lifter_id);
-
-        // Perform the grouping operation, generating a new vector.
-        let mut list: Vec<u32> = groups
-            .into_iter()
-            .map(|(_key, group)| {
-                *group
-                    .max_by(|&x, &y| {
-                        opldb.get_entry(*x).wilks.cmp(&opldb.get_entry(*y).wilks)
-                    })
-                    .unwrap()
-            })
-            .collect();
-
-        // Sort max-first.
-        // Stable sorting is used since it benchmarks faster than unstable.
-        list.sort_by(|&x, &y| {
-            opldb
-                .get_entry(x)
-                .wilks
-                .cmp(&opldb.get_entry(y).wilks)
-                .reverse()
-        });
-
-        SortedUnique(list)
+        vec.sort_by(|&a, &b| compare(meets, &entries[a as usize], &entries[b as usize]));
+        vec.shrink_to_fit();
+        SortedUnique(vec)
     }
 
     /// Tests that the list is monotonically increasing.
@@ -416,137 +382,26 @@ impl StaticCache {
             cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
         }
 
-        // Only show entries with non-empty values in the sort category.
-        let cur = match selection.sort {
-            SortSelection::BySquat => {
-                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
-                    cur.0
-                        .iter()
-                        .filter_map(|&i| {
-                            if opldb.get_entry(i).highest_squatkg() > WeightKg(0) {
-                                Some(i)
-                            } else {
-                                None
-                            }
-                        })
-                        .collect(),
-                ))
-            }
-            SortSelection::ByBench => {
-                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
-                    cur.0
-                        .iter()
-                        .filter_map(|&i| {
-                            if opldb.get_entry(i).highest_benchkg() > WeightKg(0) {
-                                Some(i)
-                            } else {
-                                None
-                            }
-                        })
-                        .collect(),
-                ))
-            }
-            SortSelection::ByDeadlift => {
-                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
-                    cur.0
-                        .iter()
-                        .filter_map(|&i| {
-                            if opldb.get_entry(i).highest_deadliftkg() > WeightKg(0) {
-                                Some(i)
-                            } else {
-                                None
-                            }
-                        })
-                        .collect(),
-                ))
-            }
-            // Nothing needed for total: all entries without totals are DQ'd
-            // and already filtered-out.
-            SortSelection::ByTotal => cur,
-            SortSelection::ByWilks => {
-                PossiblyOwnedNonSortedNonUnique::Owned(NonSortedNonUnique(
-                    cur.0
-                        .iter()
-                        .filter_map(|&i| {
-                            if opldb.get_entry(i).wilks > Points(0) {
-                                Some(i)
-                            } else {
-                                None
-                            }
-                        })
-                        .collect(),
-                ))
-            }
-        };
-
         let entries = opldb.get_entries();
         let meets = opldb.get_meets();
 
         // TODO: Common out sort code with ConstantTimeCache::new()
         PossiblyOwnedSortedUnique::Owned(match selection.sort {
-            SortSelection::BySquat => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
-                let x = x as usize;
-                let y = y as usize;
-
-                entries[x]
-                    .highest_squatkg()
-                    .cmp(&entries[y].highest_squatkg())
-                    .reverse()
-                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                    .then(
-                        meets[entries[x].meet_id as usize]
-                            .date
-                            .cmp(&meets[entries[y].meet_id as usize].date),
-                    )
-            }),
-            SortSelection::ByBench => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
-                let x = x as usize;
-                let y = y as usize;
-
-                entries[x]
-                    .highest_benchkg()
-                    .cmp(&entries[y].highest_benchkg())
-                    .reverse()
-                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                    .then(
-                        meets[entries[x].meet_id as usize]
-                            .date
-                            .cmp(&meets[entries[y].meet_id as usize].date),
-                    )
-            }),
-            SortSelection::ByDeadlift => {
-                cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
-                    let x = x as usize;
-                    let y = y as usize;
-
-                    entries[x]
-                        .highest_deadliftkg()
-                        .cmp(&entries[y].highest_deadliftkg())
-                        .reverse()
-                        .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                        .then(
-                            meets[entries[x].meet_id as usize]
-                                .date
-                                .cmp(&meets[entries[y].meet_id as usize].date),
-                        )
-                })
+            SortSelection::BySquat => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat)
             }
-            SortSelection::ByTotal => cur.sort_and_unique_by(&opldb, |x: u32, y: u32| {
-                let x = x as usize;
-                let y = y as usize;
-
-                entries[x]
-                    .totalkg
-                    .cmp(&entries[y].totalkg)
-                    .reverse()
-                    .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                    .then(
-                        meets[entries[x].meet_id as usize]
-                            .date
-                            .cmp(&meets[entries[y].meet_id as usize].date),
-                    )
-            }),
-            SortSelection::ByWilks => cur.sort_and_unique_by_wilks(&opldb),
+            SortSelection::ByBench => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench)
+            }
+            SortSelection::ByDeadlift => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_deadlift, filter_deadlift)
+            }
+            SortSelection::ByTotal => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total)
+            }
+            SortSelection::ByWilks => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks)
+            }
         })
     }
 }
@@ -558,6 +413,30 @@ pub struct ConstantTimeBy {
     pub raw_wraps: SortedUnique,
     pub single: SortedUnique,
     pub multi: SortedUnique,
+}
+
+impl ConstantTimeBy {
+    pub fn new<F, G>(
+        loglin: &LogLinearTimeCache,
+        mv: &Vec<Meet>,
+        ev: &Vec<Entry>,
+        compare: &F,
+        belongs: &G,
+    ) -> ConstantTimeBy
+    where
+        F: Fn(&Vec<Meet>, &Entry, &Entry) -> Ordering,
+        G: Fn(&Entry) -> bool,
+    {
+        ConstantTimeBy {
+            raw: loglin.raw.sort_and_unique_by(ev, mv, compare, belongs),
+            wraps: loglin.wraps.sort_and_unique_by(ev, mv, compare, belongs),
+            raw_wraps: loglin
+                .raw_wraps
+                .sort_and_unique_by(ev, mv, compare, belongs),
+            single: loglin.single.sort_and_unique_by(ev, mv, compare, belongs),
+            multi: loglin.multi.sort_and_unique_by(ev, mv, compare, belongs),
+        }
+    }
 }
 
 /// Owning structure of all `O(1)` lookup data.
@@ -573,276 +452,23 @@ pub struct ConstantTimeCache {
 }
 
 impl ConstantTimeCache {
-    /// Sorts and uniques the data with reference to a comparator.
-    ///
-    /// The comparator should return greatest-first, in sorted order
-    /// by however it should show up in the final database.
-    ///
-    /// TODO: Filter out zero entries (like lifters with no squat for by-squat,
-    /// etc.)
-    fn sort_and_unique_by<F, G>(
-        idxl: &NonSortedNonUnique,
-        entries: &Vec<Entry>,
-        compare: F,
-        belongs: G,
-    ) -> SortedUnique
-    where
-        F: Fn(u32, u32) -> Ordering,
-        G: Fn(u32) -> bool,
-    {
-        // First, group contiguous entries by lifter_id, so only the best
-        // entry for each lifter is counted.
-        // The group_by() operation is lazy and does not perform any action yet.
-        let groups = idxl
-            .0
-            .iter()
-            .group_by(|idx| entries[**idx as usize].lifter_id);
-
-        // Perform the grouping operation, generating a new vector.
-        let mut vec: Vec<u32> = groups
-            .into_iter()
-            // `min_by()` takes the best entry due to comparator ordering.
-            .map(|(_key, group)| *group.min_by(|&x, &y| compare(*x, *y)).unwrap())
-            .filter(|x| belongs(*x))
-            .collect();
-
-        vec.sort_by(|&x, &y| compare(x, y));
-        vec.shrink_to_fit();
-        SortedUnique(vec)
-    }
-
     pub fn new(
         loglin: &LogLinearTimeCache,
-        meets: &Vec<Meet>,
-        entries: &Vec<Entry>,
+        mv: &Vec<Meet>,
+        ev: &Vec<Entry>,
     ) -> ConstantTimeCache {
-        let by_squat = |x: u32, y: u32| {
-            let x = x as usize;
-            let y = y as usize;
-
-            // First sort by SquatKg, highest first.
-            entries[x].highest_squatkg().cmp(&entries[y].highest_squatkg()).reverse()
-                // If equal, sort by Bodyweight, since this is for rankings.
-                // (Records would sort by Date before Bodyweight.)
-                .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                // If that's equal too, sort by Date, earliest first.
-                .then(meets[entries[x].meet_id as usize].date.cmp(
-                        &meets[entries[y].meet_id as usize].date))
-        };
-        let belongs_squat = |x: u32| entries[x as usize].highest_squatkg() > WeightKg(0);
-
-        let squat = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_squat, belongs_squat),
-            wraps: Self::sort_and_unique_by(
-                &loglin.wraps,
-                entries,
-                by_squat,
-                belongs_squat,
-            ),
-            raw_wraps: Self::sort_and_unique_by(
-                &loglin.raw_wraps,
-                entries,
-                by_squat,
-                belongs_squat,
-            ),
-            single: Self::sort_and_unique_by(
-                &loglin.single,
-                entries,
-                by_squat,
-                belongs_squat,
-            ),
-            multi: Self::sort_and_unique_by(
-                &loglin.multi,
-                entries,
-                by_squat,
-                belongs_squat,
-            ),
-        };
-
-        let by_bench = |x: u32, y: u32| {
-            let x = x as usize;
-            let y = y as usize;
-
-            // First sort by SquatKg, highest first.
-            entries[x].highest_benchkg().cmp(&entries[y].highest_benchkg()).reverse()
-                // If equal, sort by Bodyweight, since this is for rankings.
-                // (Records would sort by Date before Bodyweight.)
-                .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                // If that's equal too, sort by Date, earliest first.
-                .then(meets[entries[x].meet_id as usize].date.cmp(
-                        &meets[entries[y].meet_id as usize].date))
-        };
-        let belongs_bench = |x: u32| entries[x as usize].highest_benchkg() > WeightKg(0);
-
-        let bench = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_bench, belongs_bench),
-            wraps: Self::sort_and_unique_by(
-                &loglin.wraps,
-                entries,
-                by_bench,
-                belongs_bench,
-            ),
-            raw_wraps: Self::sort_and_unique_by(
-                &loglin.raw_wraps,
-                entries,
-                by_bench,
-                belongs_bench,
-            ),
-            single: Self::sort_and_unique_by(
-                &loglin.single,
-                entries,
-                by_bench,
-                belongs_bench,
-            ),
-            multi: Self::sort_and_unique_by(
-                &loglin.multi,
-                entries,
-                by_bench,
-                belongs_bench,
-            ),
-        };
-
-        let by_deadlift = |x: u32, y: u32| {
-            let x = x as usize;
-            let y = y as usize;
-
-            // First sort by SquatKg, highest first.
-            entries[x].highest_deadliftkg().cmp(
-                    &entries[y].highest_deadliftkg()).reverse()
-                // If equal, sort by Bodyweight, since this is for rankings.
-                // (Records would sort by Date before Bodyweight.)
-                .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                // If that's equal too, sort by Date, earliest first.
-                .then(meets[entries[x].meet_id as usize].date.cmp(
-                        &meets[entries[y].meet_id as usize].date))
-        };
-        let belongs_deadlift =
-            |x: u32| entries[x as usize].highest_deadliftkg() > WeightKg(0);
-
-        let deadlift = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(
-                &loglin.raw,
-                entries,
-                by_deadlift,
-                belongs_deadlift,
-            ),
-            wraps: Self::sort_and_unique_by(
-                &loglin.wraps,
-                entries,
-                by_deadlift,
-                belongs_deadlift,
-            ),
-            raw_wraps: Self::sort_and_unique_by(
-                &loglin.raw_wraps,
-                entries,
-                by_deadlift,
-                belongs_deadlift,
-            ),
-            single: Self::sort_and_unique_by(
-                &loglin.single,
-                entries,
-                by_deadlift,
-                belongs_deadlift,
-            ),
-            multi: Self::sort_and_unique_by(
-                &loglin.multi,
-                entries,
-                by_deadlift,
-                belongs_deadlift,
-            ),
-        };
-
-        let by_total = |x: u32, y: u32| {
-            let x = x as usize;
-            let y = y as usize;
-
-            // First sort by SquatKg, highest first.
-            entries[x].totalkg.cmp(&entries[y].totalkg).reverse()
-                // If equal, sort by Bodyweight, since this is for rankings.
-                // (Records would sort by Date before Bodyweight.)
-                .then(entries[x].bodyweightkg.cmp(&entries[y].bodyweightkg))
-                // If that's equal too, sort by Date, earliest first.
-                .then(meets[entries[x].meet_id as usize].date.cmp(
-                        &meets[entries[y].meet_id as usize].date))
-        };
-        let belongs_total = |x: u32| entries[x as usize].totalkg > WeightKg(0);
-
-        let total = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_total, belongs_total),
-            wraps: Self::sort_and_unique_by(
-                &loglin.wraps,
-                entries,
-                by_total,
-                belongs_total,
-            ),
-            raw_wraps: Self::sort_and_unique_by(
-                &loglin.raw_wraps,
-                entries,
-                by_total,
-                belongs_total,
-            ),
-            single: Self::sort_and_unique_by(
-                &loglin.single,
-                entries,
-                by_total,
-                belongs_total,
-            ),
-            multi: Self::sort_and_unique_by(
-                &loglin.multi,
-                entries,
-                by_total,
-                belongs_total,
-            ),
-        };
-
-        let by_wilks = |x: u32, y: u32| {
-            let x = x as usize;
-            let y = y as usize;
-
-            // First sort by Wilks, highest first.
-            entries[x].wilks.cmp(&entries[y].wilks).reverse()
-                // If equal, sort by Date, earliest first.
-                .then(meets[entries[x].meet_id as usize].date.cmp(
-                        &meets[entries[y].meet_id as usize].date))
-                // If that's equal too, sort by Total, highest first.
-                .then(entries[x].totalkg.cmp(&entries[y].totalkg))
-        };
-        let belongs_wilks = |x: u32| entries[x as usize].wilks > Points(0);
-
-        let wilks = ConstantTimeBy {
-            raw: Self::sort_and_unique_by(&loglin.raw, entries, by_wilks, belongs_wilks),
-            wraps: Self::sort_and_unique_by(
-                &loglin.wraps,
-                entries,
-                by_wilks,
-                belongs_wilks,
-            ),
-            raw_wraps: Self::sort_and_unique_by(
-                &loglin.raw_wraps,
-                entries,
-                by_wilks,
-                belongs_wilks,
-            ),
-            single: Self::sort_and_unique_by(
-                &loglin.single,
-                entries,
-                by_wilks,
-                belongs_wilks,
-            ),
-            multi: Self::sort_and_unique_by(
-                &loglin.multi,
-                entries,
-                by_wilks,
-                belongs_wilks,
-            ),
-        };
-
         ConstantTimeCache {
-            squat,
-            bench,
-            deadlift,
-            total,
-            wilks,
+            squat: ConstantTimeBy::new(loglin, mv, ev, &cmp_squat, &filter_squat),
+            bench: ConstantTimeBy::new(loglin, mv, ev, &cmp_bench, &filter_bench),
+            deadlift: ConstantTimeBy::new(
+                loglin,
+                mv,
+                ev,
+                &cmp_deadlift,
+                &filter_deadlift,
+            ),
+            total: ConstantTimeBy::new(loglin, mv, ev, &cmp_total, &filter_total),
+            wilks: ConstantTimeBy::new(loglin, mv, ev, &cmp_wilks, &filter_wilks),
         }
     }
 }
@@ -898,42 +524,31 @@ impl LogLinearTimeCache {
 
     pub fn new(meets: &Vec<Meet>, entries: &Vec<Entry>) -> LogLinearTimeCache {
         LogLinearTimeCache {
-            raw: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && e.equipment == Equipment::Raw
-            }),
-            wraps: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && e.equipment == Equipment::Wraps
-            }),
+            raw: Self::filter_entries(entries, |e| e.equipment == Equipment::Raw),
+            wraps: Self::filter_entries(entries, |e| e.equipment == Equipment::Wraps),
             raw_wraps: Self::filter_entries(entries, |e| {
-                !e.place.is_dq()
-                    && (e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps)
+                e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps
             }),
-            single: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && e.equipment == Equipment::Single
-            }),
-            multi: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && e.equipment == Equipment::Multi
-            }),
+            single: Self::filter_entries(entries, |e| e.equipment == Equipment::Single),
+            multi: Self::filter_entries(entries, |e| e.equipment == Equipment::Multi),
 
-            male: Self::filter_entries(entries, |e| !e.place.is_dq() && e.sex == Sex::M),
-            female: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && e.sex == Sex::F
-            }),
+            male: Self::filter_entries(entries, |e| e.sex == Sex::M),
+            female: Self::filter_entries(entries, |e| e.sex == Sex::F),
 
             year2018: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && meets[e.meet_id as usize].date.year() == 2018
+                meets[e.meet_id as usize].date.year() == 2018
             }),
             year2017: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && meets[e.meet_id as usize].date.year() == 2017
+                meets[e.meet_id as usize].date.year() == 2017
             }),
             year2016: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && meets[e.meet_id as usize].date.year() == 2016
+                meets[e.meet_id as usize].date.year() == 2016
             }),
             year2015: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && meets[e.meet_id as usize].date.year() == 2015
+                meets[e.meet_id as usize].date.year() == 2015
             }),
             year2014: Self::filter_entries(entries, |e| {
-                !e.place.is_dq() && meets[e.meet_id as usize].date.year() == 2014
+                meets[e.meet_id as usize].date.year() == 2014
             }),
         }
     }
