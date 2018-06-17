@@ -417,8 +417,8 @@ fn old_contact() -> Redirect {
 
 #[get("/robots.txt")]
 fn robots_txt() -> &'static str {
-    // Allow robots full site access.
-    "User-agent: *\nDisallow:"
+    // Allow robots full site access except for JSON endpoints.
+    "User-agent: *\nDisallow: /api/"
 }
 
 #[error(404)]
