@@ -1,27 +1,27 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,M,Ryan Doyle,SBD,R-T1,52,Raw,45.2,47.5,32.5,55,135
-1,M,Lucas Utter,SBD,R-T1,60,Raw,58.6,85,55,110,250
-1,M,Ryan Schmitt,SBD,R-T1,75,Raw,72.6,85,57.5,115,257.5
-1,M,Maxwell Hubley,SBD,R-T1,82.5,Raw,75.8,90,72.5,120,282.5
-1,M,Nate Lee,SBD,R-T1,90,Raw,86,157.5,107.5,195,460
-1,M,Kyle Long,SBD,R-T2,56,Raw,55.6,92.5,62.5,107.5,262.5
-1,M,Thatcher Van Atten,SBD,R-T2,60,Raw,58.4,97.5,80,130,307.5
-2,M,Will Alexander,SBD,R-T2,60,Raw,58,80,50,110,240
-1,M,Jacob Morgan,SBD,R-T2,67.5,Raw,66,130,92.5,147.5,370
-2,M,Garrett Mitchel,SBD,R-T2,67.5,Raw,66,87.5,62.5,142.5,292.5
-3,M,Justin Myers,SBD,R-T2,67.5,Raw,63.6,92.5,82.5,115,290
-4,M,Bradley Sylvester,SBD,R-T2,67.5,Raw,66,135,,127.5,262.5
-1,M,Andrew Richard,SBD,R-T2,75,Raw,72.8,132.5,77.5,155,365
-2,M,Nick Blondin,SBD,R-T2,75,Raw,74.8,125,90,150,365
-3,M,Dan Centauro,SBD,R-T2,75,Raw,70.2,127.5,77.5,130,335
-1,M,Tigh Hemingway,SBD,R-T2,82.5,Raw,78,125,92.5,135,352.5
-2,M,Angelo Manolatos,SBD,R-T2,82.5,Raw,81.4,112.5,85,147.5,345
-1,M,Chris Bechara,SBD,R-T2,100,Raw,92.8,157.5,120,227.5,505
-1,M,Mathew Wandrey,SBD,R-T2,125+,Raw,126,172.5,125,197.5,495
-1,M,Kyle Coogan,SBD,R-T3,75,Raw,69.8,140,105,195,440
-2,M,Sean Rowell,SBD,R-T3,75,Raw,70.2,137.5,80,152.5,370
-3,M,Aidan Moran,SBD,R-T3,75,Raw,74,107.5,80,97.5,285
-4,M,Aaron Divel,SBD,R-T3,75,Raw,74.8,,52.5,90,142.5
-1,M,Robert Outley,SBD,R-T3,82.5,Raw,82.2,132.5,97.5,190,420
-1,M,Jack Anastasi,SBD,R-T3,100,Raw,96.6,227.5,147.5,195,570
-1,M,Ethan Charielle,BD,R-T2,125+,Raw,142.8,,50,137.5,187.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Ryan Doyle,SBD,R-T1,52,Raw,45.2,47.5,32.5,55,135,1998
+1,M,Lucas Utter,SBD,R-T1,60,Raw,58.6,85,55,110,250,1998
+1,M,Ryan Schmitt,SBD,R-T1,75,Raw,72.6,85,57.5,115,257.5,1986
+1,M,Maxwell Hubley,SBD,R-T1,82.5,Raw,75.8,90,72.5,120,282.5,1999
+1,M,Nate Lee,SBD,R-T1,90,Raw,86,157.5,107.5,195,460,
+1,M,Kyle Long,SBD,R-T2,56,Raw,55.6,92.5,62.5,107.5,262.5,1997
+1,M,Thatcher Van Atten,SBD,R-T2,60,Raw,58.4,97.5,80,130,307.5,
+2,M,Will Alexander,SBD,R-T2,60,Raw,58,80,50,110,240,
+1,M,Jacob Morgan,SBD,R-T2,67.5,Raw,66,130,92.5,147.5,370,1998
+2,M,Garrett Mitchel,SBD,R-T2,67.5,Raw,66,87.5,62.5,142.5,292.5,
+3,M,Justin Myers,SBD,R-T2,67.5,Raw,63.6,92.5,82.5,115,290,1997
+4,M,Bradley Sylvester,SBD,R-T2,67.5,Raw,66,135,,127.5,262.5,1996
+1,M,Andrew Richard,SBD,R-T2,75,Raw,72.8,132.5,77.5,155,365,1996
+2,M,Nick Blondin,SBD,R-T2,75,Raw,74.8,125,90,150,365,
+3,M,Dan Centauro,SBD,R-T2,75,Raw,70.2,127.5,77.5,130,335,
+1,M,Tigh Hemingway,SBD,R-T2,82.5,Raw,78,125,92.5,135,352.5,
+2,M,Angelo Manolatos,SBD,R-T2,82.5,Raw,81.4,112.5,85,147.5,345,
+1,M,Chris Bechara,SBD,R-T2,100,Raw,92.8,157.5,120,227.5,505,1997
+1,M,Mathew Wandrey,SBD,R-T2,125+,Raw,126,172.5,125,197.5,495,
+1,M,Kyle Coogan,SBD,R-T3,75,Raw,69.8,140,105,195,440,1994
+2,M,Sean Rowell,SBD,R-T3,75,Raw,70.2,137.5,80,152.5,370,1995
+3,M,Aidan Moran,SBD,R-T3,75,Raw,74,107.5,80,97.5,285,1995
+4,M,Aaron Divel,SBD,R-T3,75,Raw,74.8,,52.5,90,142.5,
+1,M,Robert Outley,SBD,R-T3,82.5,Raw,82.2,132.5,97.5,190,420,
+1,M,Jack Anastasi,SBD,R-T3,100,Raw,96.6,227.5,147.5,195,570,
+1,M,Ethan Charielle,BD,R-T2,125+,Raw,142.8,,50,137.5,187.5,

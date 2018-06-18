@@ -1,38 +1,38 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-DQ,M,Matthew Millard,SBD,R-JR,125+,Raw,128.2,,,,
-1,M,Basem El Karnkouti,B,O,100,Single-ply,94,,200,,200
-1,M,Bryan Clauson,B,R-O,75,Raw,72.8,,135,,135
-1,M,José Graham,B,R-O,90,Raw,89.6,,182.5,,182.5
-2,M,Matthew Smith,B,R-O,90,Raw,86.6,,175,,175
-1,M,Ray Linduski,B,R-M1b,110,Raw,104.6,,150,,150
-1,M,Kevin Johnson,B,M2b,125,Single-ply,123.6,,227.5,,227.5
-1,F,Robin Reis Goldstein,B,R-M1b,90+,Raw,93.8,,57.5,,57.5
-1,F,Olga Ceresnak,B,R-M2a,60,Raw,59.8,,65,,65
-DD,M,Nick Angelini,SBD,R-O,110,Raw,103.4,,210,,
-1,M,Gage Bates,SBD,R-T2,90,Raw,89.4,125,105,150,380
-1,M,Thomas Maclean,SBD,R-T3,90,Raw,85.2,157.5,115,202.5,475
-1,M,Matthew Bellantoni,SBD,R-T3,110,Raw,103,192.5,132.5,230,555
-1,M,Ryan L'Ecuyer,SBD,JR,100,Single-ply,97.8,235,150,255,640
-1,M,Kyle Brubaker,SBD,R-JR,67.5,Raw,67,170,97.5,200,467.5
-1,M,Zack Feeney,SBD,R-JR,75,Raw,74.6,152.5,100,205,457.5
-1,M,Mario Guerrelo,SBD,R-JR,82.5,Raw,81.4,132.5,95,192.5,420
-1,M,Dennis Bitetti,SBD,R-JR,90,Raw,88.8,210,135,245,590
-1,M,Richard Frank,SBD,R-JR,100,Raw,98.8,202.5,137.5,240,580
-1,M,Joseph Loyacuno,SBD,R-JR,110,Raw,105.4,240,167.5,305,712.5
-1,M,Basem El Karnkouti,SBD,O,100,Single-ply,94,270,200,290,760
-1,M,James Basil,SBD,O,125+,Single-ply,129.8,210,155,250,615
-1,M,Chase Bender,SBD,R-O,75,Raw,74.4,132.5,125,187.5,445
-1,M,Robert Duhoski,SBD,R-O,82.5,Raw,81,185,135,265,585
-2,M,Tyler English,SBD,R-O,82.5,Raw,81.2,185,137.5,230,552.5
-1,M,Sean Gott,SBD,R-O,90,Raw,88.8,155,100,210,465
-2,M,Steven Warren,SBD,R-O,90,Raw,88,147.5,105,190,442.5
-1,M,Fred Rumler,SBD,R-O,100,Raw,96.6,232.5,182.5,235,650
-2,M,Richard Tejada,SBD,R-O,100,Raw,96.6,172.5,140,217.5,530
-1,M,Jason Rupaka,SBD,R-M1a,100,Raw,91.8,150,122.5,192.5,465
-1,M,Keith Nautel,SBD,M1b,82.5,Single-ply,81,,180,255,435
-1,M,Troy Gibson,SBD,R-M1b,90,Raw,90,100,100,100,300
-1,M,Sean Culnan,SBD,R-M1b,125,Raw,123.4,255,182.5,272.5,710
-1,F,Stephanie Saddiemire,SBD,R-T2,56,Raw,56,,42.5,92.5,135
-1,F,Jasmine Nautel,SBD,Y1,44,Single-ply,34.4,42.5,20,60,122.5
-1,F,Katia Porretta,SBD,R-O,52,Raw,51,87.5,65,112.5,265
-1,F,Kristen Dunsmore,SBD,R-O,67.5,Raw,66.2,127.5,75,132.5,335
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+DQ,M,Matthew Millard,SBD,R-JR,125+,Raw,128.2,,,,,1992
+1,M,Basem El Karnkouti,B,O,100,Single-ply,94,,200,,200,1986
+1,M,Bryan Clauson,B,R-O,75,Raw,72.8,,135,,135,1988
+1,M,José Graham,B,R-O,90,Raw,89.6,,182.5,,182.5,
+2,M,Matthew Smith,B,R-O,90,Raw,86.6,,175,,175,1985
+1,M,Ray Linduski,B,R-M1b,110,Raw,104.6,,150,,150,1964
+1,M,Kevin Johnson,B,M2b,125,Single-ply,123.6,,227.5,,227.5,1954
+1,F,Robin Reis Goldstein,B,R-M1b,90+,Raw,93.8,,57.5,,57.5,
+1,F,Olga Ceresnak,B,R-M2a,60,Raw,59.8,,65,,65,1963
+DD,M,Nick Angelini,SBD,R-O,110,Raw,103.4,,210,,,
+1,M,Gage Bates,SBD,R-T2,90,Raw,89.4,125,105,150,380,1997
+1,M,Thomas Maclean,SBD,R-T3,90,Raw,85.2,157.5,115,202.5,475,1994
+1,M,Matthew Bellantoni,SBD,R-T3,110,Raw,103,192.5,132.5,230,555,1994
+1,M,Ryan L'Ecuyer,SBD,JR,100,Single-ply,97.8,235,150,255,640,1991
+1,M,Kyle Brubaker,SBD,R-JR,67.5,Raw,67,170,97.5,200,467.5,1992
+1,M,Zack Feeney,SBD,R-JR,75,Raw,74.6,152.5,100,205,457.5,1991
+1,M,Mario Guerrelo,SBD,R-JR,82.5,Raw,81.4,132.5,95,192.5,420,
+1,M,Dennis Bitetti,SBD,R-JR,90,Raw,88.8,210,135,245,590,1992
+1,M,Richard Frank,SBD,R-JR,100,Raw,98.8,202.5,137.5,240,580,1992
+1,M,Joseph Loyacuno,SBD,R-JR,110,Raw,105.4,240,167.5,305,712.5,
+1,M,Basem El Karnkouti,SBD,O,100,Single-ply,94,270,200,290,760,1986
+1,M,James Basil,SBD,O,125+,Single-ply,129.8,210,155,250,615,
+1,M,Chase Bender,SBD,R-O,75,Raw,74.4,132.5,125,187.5,445,1984
+1,M,Robert Duhoski,SBD,R-O,82.5,Raw,81,185,135,265,585,1987
+2,M,Tyler English,SBD,R-O,82.5,Raw,81.2,185,137.5,230,552.5,1982
+1,M,Sean Gott,SBD,R-O,90,Raw,88.8,155,100,210,465,
+2,M,Steven Warren,SBD,R-O,90,Raw,88,147.5,105,190,442.5,1987
+1,M,Fred Rumler,SBD,R-O,100,Raw,96.6,232.5,182.5,235,650,
+2,M,Richard Tejada,SBD,R-O,100,Raw,96.6,172.5,140,217.5,530,1986
+1,M,Jason Rupaka,SBD,R-M1a,100,Raw,91.8,150,122.5,192.5,465,1973
+1,M,Keith Nautel,SBD,M1b,82.5,Single-ply,81,,180,255,435,1965
+1,M,Troy Gibson,SBD,R-M1b,90,Raw,90,100,100,100,300,1965
+1,M,Sean Culnan,SBD,R-M1b,125,Raw,123.4,255,182.5,272.5,710,1967
+1,F,Stephanie Saddiemire,SBD,R-T2,56,Raw,56,,42.5,92.5,135,
+1,F,Jasmine Nautel,SBD,Y1,44,Single-ply,34.4,42.5,20,60,122.5,2002
+1,F,Katia Porretta,SBD,R-O,52,Raw,51,87.5,65,112.5,265,1974
+1,F,Kristen Dunsmore,SBD,R-O,67.5,Raw,66.2,127.5,75,132.5,335,1989

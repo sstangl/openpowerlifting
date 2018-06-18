@@ -1,38 +1,38 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
-1,M,Tyler Hartman,B,HS,74,Single-ply,71.4,45,52.5,55,55,,,,,55
-1,M,Daniel Fujito,B,R-HS,83,Raw,80.6,122.5,132.5,137.5,137.5,,,,,137.5
-1,M,Michael Gourley,B,O,105,Single-ply,103,175,182.5,-187.5,182.5,,,,,182.5
-1,M,Ed Cywinski,B,R-O,105,Raw,102.6,182.5,-190,-190,182.5,,,,,182.5
-1,M,William Nordling,B,R-M1a,120,Raw,114.4,145,155,-165,155,,,,,155
-1,M,Grant Carone,B,R-M1a,120+,Raw,123.3,182.5,192.5,-205,192.5,,,,,192.5
-DQ,M,Randy Elbert,B,R-M1b,93,Raw,87.7,-155,-155,-155,,,,,,
-1,M,Joe Zwick,B,M2b,120,Single-ply,115.7,107.5,112.5,117.5,117.5,,,,,117.5
-1,M,Jack Rubio,B,R-M2a,83,Raw,80,140,145,-147.5,145,,,,,145
-1,F,Allison Souchuck,B,R-O,72,Raw,67.6,57.5,60,62.6,62.6,,,,,62.6
-1,M,Jeffrey Gorman,D,HS,74,Single-ply,69.5,,,,,155,165,180,180,180
-1,M,Nicholas Porembo,D,HS,83,Single-ply,76.1,,,,,157.5,170,182.5,182.5,182.5
-2,M,Dennis Hawk,D,HS,83,Single-ply,79.9,,,,,165,182.5,-192.5,182.5,182.5
-1,M,Brian White,D,R-HS,105,Raw,104,,,,,175,182.5,-187.5,182.5,182.5
-1,M,Cameron Horst,D,R-T1,66,Raw,64.7,,,,,-147.5,160,165,165,165
-1,M,Ariel James Barros,D,R-JR,66,Raw,65.5,,,,,192.5,-205,-205,192.5,192.5
-1,M,Blake Yurchak,D,O,83,Single-ply,74.9,,,,,205,220,-230,220,220
-1,M,William Nieves,D,O,120,Single-ply,110.3,,,,,157.5,170,182.5,182.5,182.5
-1,M,Joe Nguyen,D,R-O,66,Raw,64.9,,,,,187.5,200,-207.5,200,200
-1,M,Zackary Guiser,D,R-O,120+,Raw,134.1,,,,,240,252.5,-262.5,252.5,252.5
-1,M,Jonathan Horst,D,R-Y3,48,Raw,44.3,,,,,92.5,97.5,105,105,105
-1,F,Molly Kate Campbell,D,HS,84,Single-ply,75.2,,,,,97.5,107.5,112.5,112.5,112.5
-2,F,Cassandra Bitsko,D,HS,84,Single-ply,74.1,,,,,85,92.5,-102.5,92.5,92.5
-1,F,Trinity Murphy,D,HS,84+,Single-ply,96,,,,,100,112.5,125,125,125
-1,M,James Donahue,BD,HS,66,Single-ply,65.2,67.5,77.5,82.5,82.5,105,115,135,135,217.5
-1,M,Brian Fasolino,BD,HS,83,Single-ply,78,85,95,-105,95,135,150,-162.5,150,245
-1,M,Nick Rosenberger,BD,HS,93,Single-ply,88.5,92.5,102.5,105,105,142.5,155,165,165,270
-1,M,Nicholas Chludzinski,BD,R-T2,83,Raw,75.8,112.5,122.5,-127.5,122.5,200,215,-217.5,215,337.5
-1,M,Mason Grohoski,BD,R-T2,105,Raw,101.5,115,120,-127.5,120,160,175,185,185,305
-1,M,James Orr,BD,R-T3,93,Raw,92.9,-137.5,137.5,-145,137.5,227.5,250,-265,250,387.5
-1,M,Nicholas Testa,BD,R-JR,83,Raw,78,120,130,-135,130,187.5,205,-225,205,335
-DQ,M,David Reichard,BD,R-M1a,120+,Raw,128.1,-150,-150,-150,,180,185,190,190,
-1,M,Bodie Lacoe,BD,R-Y3,40,Raw,39.1,42.5,50,52.5,52.5,85,97.5,105,105,157.5
-1,F,Cora Orehek,BD,R-JR,63,Raw,60.7,47.5,55,60,60,90,105,115,115,175
-1,F,Elizabeth Kuhar,BD,R-O,84+,Raw,99.3,55,60,70,70,130,145,155,155,225
-1,F,Wendy Yankelitis,BD,R-M1a,72,Raw,69.2,52.5,60,62.5,62.5,115,122.5,-140,122.5,185
-1,F,Amy Shwed,BD,R-M1a,84,Raw,73.4,52.5,-60,-62.5,52.5,100,112.5,120,120,172.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Tyler Hartman,B,HS,74,Single-ply,71.4,45,52.5,55,55,,,,,55,2002
+1,M,Daniel Fujito,B,R-HS,83,Raw,80.6,122.5,132.5,137.5,137.5,,,,,137.5,1998
+1,M,Michael Gourley,B,O,105,Single-ply,103,175,182.5,-187.5,182.5,,,,,182.5,1987
+1,M,Ed Cywinski,B,R-O,105,Raw,102.6,182.5,-190,-190,182.5,,,,,182.5,1984
+1,M,William Nordling,B,R-M1a,120,Raw,114.4,145,155,-165,155,,,,,155,1971
+1,M,Grant Carone,B,R-M1a,120+,Raw,123.3,182.5,192.5,-205,192.5,,,,,192.5,1972
+DQ,M,Randy Elbert,B,R-M1b,93,Raw,87.7,-155,-155,-155,,,,,,,1970
+1,M,Joe Zwick,B,M2b,120,Single-ply,115.7,107.5,112.5,117.5,117.5,,,,,117.5,1957
+1,M,Jack Rubio,B,R-M2a,83,Raw,80,140,145,-147.5,145,,,,,145,1964
+1,F,Allison Souchuck,B,R-O,72,Raw,67.6,57.5,60,62.6,62.6,,,,,62.6,1990
+1,M,Jeffrey Gorman,D,HS,74,Single-ply,69.5,,,,,155,165,180,180,180,1999
+1,M,Nicholas Porembo,D,HS,83,Single-ply,76.1,,,,,157.5,170,182.5,182.5,182.5,1998
+2,M,Dennis Hawk,D,HS,83,Single-ply,79.9,,,,,165,182.5,-192.5,182.5,182.5,1999
+1,M,Brian White,D,R-HS,105,Raw,104,,,,,175,182.5,-187.5,182.5,182.5,2000
+1,M,Cameron Horst,D,R-T1,66,Raw,64.7,,,,,-147.5,160,165,165,165,2000
+1,M,Ariel James Barros,D,R-JR,66,Raw,65.5,,,,,192.5,-205,-205,192.5,192.5,1992
+1,M,Blake Yurchak,D,O,83,Single-ply,74.9,,,,,205,220,-230,220,220,1989
+1,M,William Nieves,D,O,120,Single-ply,110.3,,,,,157.5,170,182.5,182.5,182.5,1998
+1,M,Joe Nguyen,D,R-O,66,Raw,64.9,,,,,187.5,200,-207.5,200,200,1988
+1,M,Zackary Guiser,D,R-O,120+,Raw,134.1,,,,,240,252.5,-262.5,252.5,252.5,1989
+1,M,Jonathan Horst,D,R-Y3,48,Raw,44.3,,,,,92.5,97.5,105,105,105,2002
+1,F,Molly Kate Campbell,D,HS,84,Single-ply,75.2,,,,,97.5,107.5,112.5,112.5,112.5,1997
+2,F,Cassandra Bitsko,D,HS,84,Single-ply,74.1,,,,,85,92.5,-102.5,92.5,92.5,2000
+1,F,Trinity Murphy,D,HS,84+,Single-ply,96,,,,,100,112.5,125,125,125,2002
+1,M,James Donahue,BD,HS,66,Single-ply,65.2,67.5,77.5,82.5,82.5,105,115,135,135,217.5,1997
+1,M,Brian Fasolino,BD,HS,83,Single-ply,78,85,95,-105,95,135,150,-162.5,150,245,1997
+1,M,Nick Rosenberger,BD,HS,93,Single-ply,88.5,92.5,102.5,105,105,142.5,155,165,165,270,1997
+1,M,Nicholas Chludzinski,BD,R-T2,83,Raw,75.8,112.5,122.5,-127.5,122.5,200,215,-217.5,215,337.5,1998
+1,M,Mason Grohoski,BD,R-T2,105,Raw,101.5,115,120,-127.5,120,160,175,185,185,305,1999
+1,M,James Orr,BD,R-T3,93,Raw,92.9,-137.5,137.5,-145,137.5,227.5,250,-265,250,387.5,1996
+1,M,Nicholas Testa,BD,R-JR,83,Raw,78,120,130,-135,130,187.5,205,-225,205,335,1993
+DQ,M,David Reichard,BD,R-M1a,120+,Raw,128.1,-150,-150,-150,,180,185,190,190,,1970
+1,M,Bodie Lacoe,BD,R-Y3,40,Raw,39.1,42.5,50,52.5,52.5,85,97.5,105,105,157.5,2003
+1,F,Cora Orehek,BD,R-JR,63,Raw,60.7,47.5,55,60,60,90,105,115,115,175,1994
+1,F,Elizabeth Kuhar,BD,R-O,84+,Raw,99.3,55,60,70,70,130,145,155,155,225,1987
+1,F,Wendy Yankelitis,BD,R-M1a,72,Raw,69.2,52.5,60,62.5,62.5,115,122.5,-140,122.5,185,1966
+1,F,Amy Shwed,BD,R-M1a,84,Raw,73.4,52.5,-60,-62.5,52.5,100,112.5,120,120,172.5,1966

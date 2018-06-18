@@ -1,44 +1,44 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,State,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg
-1,M,Christopher Stephens,B,R-M1a,93,Raw,MD,91,100,105,110,110,110
-1,M,Randy Elbert,B,R-M1b,93,Raw,MD,88.5,145,150,155,155,155
-1,M,Steven Quan,B,R-M2a,66,Raw,VA,65.6,125,132.5,135,135,135
-1,M,Carlton Stephenson Jr,B,R-M2a,120,Raw,MD,118.8,142.5,165,177.5,177.5,177.5
-1,M,Chris Felix,B,R-M2a,120+,Raw,MD,121.3,-165,165,-170,165,165
-1,M,James Bardsley Jr,B,R-M2b,93,Raw,MD,83.6,115,125,132.5,132.5,132.5
-1,M,David Capozzoli,B,R-M2b,120+,Raw,MD,121.9,172.5,185,-190,185,185
-1,M,Donald Frost,B,R-M3b,120,Raw,MD,112.8,142.5,147.5,-150,147.5,147.5
-1,M,Dale Keith,B,R-O,59,Raw,MD,51.7,85,-97.5,-97.5,85,85
-1,M,Steven Quan,B,R-O,66,Raw,VA,65.6,125,132.5,135,135,135
-2,M,Jerard Lecato,B,R-O,66,Raw,MD,65.9,112.5,-122.5,-122.5,112.5,112.5
-1,M,Jeff Cohen,B,R-O,74,Raw,MD,68.4,152.5,157.5,160,160,160
-2,M,Jordan Ellis,B,R-O,74,Raw,MD,70.9,112.5,120,125,125,125
-1,M,Andrew Bank,B,R-O,83,Raw,MD,82.8,140,147.5,-152.5,147.5,147.5
-2,M,Curtis O'Donell III,B,R-O,83,Raw,MD,81.8,142.5,145,-150,145,145
-3,M,Mark Litfin,B,R-O,83,Raw,MD,83,137.5,145,-152.5,145,145
-4,M,Gary Calabrese,B,R-O,83,Raw,MD,82.8,112.5,117.5,-122.5,117.5,117.5
-5,M,Nairanjan Singh,B,R-O,83,Raw,MD,82.3,110,-115,-115,110,110
-1,M,Randy Elbert,B,R-O,93,Raw,MD,88.5,145,150,155,155,155
-2,M,Mark Claypoole,B,R-O,93,Raw,MD,89.3,147.5,-155,155,155,155
-3,M,James Bardsley Jr,B,R-O,93,Raw,MD,83.6,115,125,132.5,132.5,132.5
-4,M,James Warrick,B,R-O,93,Raw,MD,92.4,125,130,-132.5,130,130
-5,M,Christopher Stephens,B,R-O,93,Raw,MD,91,100,105,110,110,110
-1,M,Timothy Clavelli,B,R-O,105,Raw,MD,103.6,-160,170,175,175,175
-2,M,Erten Musa,B,R-O,105,Raw,MD,104.5,165,172.5,-175,172.5,172.5
-3,M,Chris Kelley,B,R-O,105,Raw,MD,96.6,-135,142.5,152.5,152.5,152.5
-4,M,James Poledna,B,R-O,105,Raw,MD,103,142.5,150,-155,150,150
-5,M,David Chamberlain,B,R-O,105,Raw,MD,102.9,-122.5,-122.5,122.5,122.5,122.5
-1,M,Carlton Stephenson Jr,B,R-O,120,Raw,MD,118.8,142.5,165,177.5,177.5,177.5
-2,M,Donald Frost,B,R-O,120,Raw,MD,112.8,142.5,147.5,-150,147.5,147.5
-1,M,Carlos Hernandez,B,R-O,120+,Raw,MD,123,197.5,207.5,-215,207.5,207.5
-2,M,Ahmed Mohamed,B,R-O,120+,Raw,MD,135.4,195,205,-212.5,205,205
-3,M,Timothy Sewell,B,R-O,120+,Raw,MD,134.7,-182.5,182.5,202.5,202.5,202.5
-4,M,David Capozzoli,B,R-O,120+,Raw,MD,121.9,172.5,185,-190,185,185
-5,M,Chris Felix,B,R-O,120+,Raw,MD,121.3,-165,165,-170,165,165
-6,M,Gary Mitchell,B,R-O,120+,Raw,MD,136.9,-155,155,-160,155,155
-1,F,Heather Rockhill,B,R-M1a,57,Raw,MD,55.8,50,55,-60,55,55
-1,F,Jacqueline Barone,B,R-M2a,63,Raw,VA,59.1,40,-45,45,45,45
-1,F,Heather Rockhill,B,R-O,57,Raw,MD,55.8,50,55,-60,55,55
-1,F,Alexis Kajencki,B,R-O,63,Raw,MD,62.1,77.5,82.5,85,85,85
-2,F,Jacqueline Barone,B,R-O,63,Raw,VA,59.1,40,-45,45,45,45
-1,F,Tierra Tucker,B,R-O,72,Raw,MD,63.3,80,82.5,-85,82.5,82.5
-1,F,Boord Patricia,B,R-O,84+,Raw,VA,89.9,50,-52.5,52.5,52.5,52.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,State,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,BirthYear
+1,M,Christopher Stephens,B,R-M1a,93,Raw,MD,91,100,105,110,110,110,1972
+1,M,Randy Elbert,B,R-M1b,93,Raw,MD,88.5,145,150,155,155,155,1970
+1,M,Steven Quan,B,R-M2a,66,Raw,VA,65.6,125,132.5,135,135,135,1964
+1,M,Carlton Stephenson Jr,B,R-M2a,120,Raw,MD,118.8,142.5,165,177.5,177.5,177.5,1961
+1,M,Chris Felix,B,R-M2a,120+,Raw,MD,121.3,-165,165,-170,165,165,1964
+1,M,James Bardsley Jr,B,R-M2b,93,Raw,MD,83.6,115,125,132.5,132.5,132.5,1959
+1,M,David Capozzoli,B,R-M2b,120+,Raw,MD,121.9,172.5,185,-190,185,185,1957
+1,M,Donald Frost,B,R-M3b,120,Raw,MD,112.8,142.5,147.5,-150,147.5,147.5,1948
+1,M,Dale Keith,B,R-O,59,Raw,MD,51.7,85,-97.5,-97.5,85,85,1992
+1,M,Steven Quan,B,R-O,66,Raw,VA,65.6,125,132.5,135,135,135,1964
+2,M,Jerard Lecato,B,R-O,66,Raw,MD,65.9,112.5,-122.5,-122.5,112.5,112.5,1986
+1,M,Jeff Cohen,B,R-O,74,Raw,MD,68.4,152.5,157.5,160,160,160,1984
+2,M,Jordan Ellis,B,R-O,74,Raw,MD,70.9,112.5,120,125,125,125,1988
+1,M,Andrew Bank,B,R-O,83,Raw,MD,82.8,140,147.5,-152.5,147.5,147.5,1988
+2,M,Curtis O'Donell III,B,R-O,83,Raw,MD,81.8,142.5,145,-150,145,145,1987
+3,M,Mark Litfin,B,R-O,83,Raw,MD,83,137.5,145,-152.5,145,145,1988
+4,M,Gary Calabrese,B,R-O,83,Raw,MD,82.8,112.5,117.5,-122.5,117.5,117.5,1954
+5,M,Nairanjan Singh,B,R-O,83,Raw,MD,82.3,110,-115,-115,110,110,1945
+1,M,Randy Elbert,B,R-O,93,Raw,MD,88.5,145,150,155,155,155,1970
+2,M,Mark Claypoole,B,R-O,93,Raw,MD,89.3,147.5,-155,155,155,155,1965
+3,M,James Bardsley Jr,B,R-O,93,Raw,MD,83.6,115,125,132.5,132.5,132.5,1959
+4,M,James Warrick,B,R-O,93,Raw,MD,92.4,125,130,-132.5,130,130,1988
+5,M,Christopher Stephens,B,R-O,93,Raw,MD,91,100,105,110,110,110,1972
+1,M,Timothy Clavelli,B,R-O,105,Raw,MD,103.6,-160,170,175,175,175,1992
+2,M,Erten Musa,B,R-O,105,Raw,MD,104.5,165,172.5,-175,172.5,172.5,1973
+3,M,Chris Kelley,B,R-O,105,Raw,MD,96.6,-135,142.5,152.5,152.5,152.5,1986
+4,M,James Poledna,B,R-O,105,Raw,MD,103,142.5,150,-155,150,150,1985
+5,M,David Chamberlain,B,R-O,105,Raw,MD,102.9,-122.5,-122.5,122.5,122.5,122.5,1989
+1,M,Carlton Stephenson Jr,B,R-O,120,Raw,MD,118.8,142.5,165,177.5,177.5,177.5,1961
+2,M,Donald Frost,B,R-O,120,Raw,MD,112.8,142.5,147.5,-150,147.5,147.5,1948
+1,M,Carlos Hernandez,B,R-O,120+,Raw,MD,123,197.5,207.5,-215,207.5,207.5,1990
+2,M,Ahmed Mohamed,B,R-O,120+,Raw,MD,135.4,195,205,-212.5,205,205,1996
+3,M,Timothy Sewell,B,R-O,120+,Raw,MD,134.7,-182.5,182.5,202.5,202.5,202.5,1985
+4,M,David Capozzoli,B,R-O,120+,Raw,MD,121.9,172.5,185,-190,185,185,1957
+5,M,Chris Felix,B,R-O,120+,Raw,MD,121.3,-165,165,-170,165,165,1964
+6,M,Gary Mitchell,B,R-O,120+,Raw,MD,136.9,-155,155,-160,155,155,1985
+1,F,Heather Rockhill,B,R-M1a,57,Raw,MD,55.8,50,55,-60,55,55,1973
+1,F,Jacqueline Barone,B,R-M2a,63,Raw,VA,59.1,40,-45,45,45,45,1964
+1,F,Heather Rockhill,B,R-O,57,Raw,MD,55.8,50,55,-60,55,55,1973
+1,F,Alexis Kajencki,B,R-O,63,Raw,MD,62.1,77.5,82.5,85,85,85,1983
+2,F,Jacqueline Barone,B,R-O,63,Raw,VA,59.1,40,-45,45,45,45,1964
+1,F,Tierra Tucker,B,R-O,72,Raw,MD,63.3,80,82.5,-85,82.5,82.5,1989
+1,F,Patricia Boord,B,R-O,84+,Raw,VA,89.9,50,-52.5,52.5,52.5,52.5,1955

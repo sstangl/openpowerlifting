@@ -1,37 +1,37 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,M,Tom Connelly,SBD,R-T1,100,Raw,90.8,102.5,,120,222.5
-1,M,Robert Falagrady,SBD,O,90,Single-ply,86.4,215,,,215
-1,F,Katherine Lord,SBD,R-O,75,Raw,68.3,,45,85,130
-1,M,Derek Nettingham,B,R-O,82.5,Raw,80,,165,,165
-2,M,David Chiow,B,R-O,82.5,Raw,78.5,,132.5,,132.5
-1,M,Daniel Kubitz,B,R-M1b,75,Raw,74.1,,112.5,,112.5
-1,M,Edward Yue,B,R-M1b,82.5,Raw,81.8,,117.5,,117.5
-1,M,John Alaniz,B,R-M2b,125,Raw,119.6,,172.5,,172.5
-1,F,Stefani Franklin,B,R-M1b,90+,Raw,114.2,,107.5,,107.5
-1,M,Beau Brandon,SBD,R-T1,100,Raw,98.3,167.5,115,227.5,510
-1,M,Howie Hill,SBD,R-T3,100,Raw,92.3,155,100,230,485
-1,M,Austin Thompson,SBD,R-JR,82.5,Raw,76.2,145,107.5,195,447.5
-1,M,Nolan Wilcock,SBD,R-JR,90,Raw,84.2,212.5,110,225,547.5
-1,M,Caine Kleckner,SBD,R-JR,110,Raw,108.7,182.5,115,212.5,510
-1,M,Juan D. Williams,SBD,O,82.5,Single-ply,78.6,145,127.5,212.5,485
-1,M,Antonio J. Sanchez,SBD,R-O,67.5,Raw,64.7,102.5,102.5,155,360
-1,M,Jesse Heiner,SBD,R-O,82.5,Raw,80.7,192.5,130,237.5,560
-1,M,Gregory Sambula,SBD,R-O,90,Raw,87.7,202.5,140,242.5,585
-2,M,Cole Gorton,SBD,R-O,90,Raw,90,152.5,137.5,182.5,472.5
-1,M,George Whyte,SBD,R-O,110,Raw,105.7,160,127.5,262.5,550
-1,M,Travis Yoes,SBD,R-M1a,100,Raw,98.1,175,112.5,195,482.5
-1,M,Bryan Dobson,SBD,R-M1a,110,Raw,100.8,202.5,120,222.5,545
-1,M,David Brekke,SBD,M2a,82.5,Single-ply,81,150,110,205,465
-1,M,David Walker,SBD,R-M1b,125,Raw,125,170,115,227.5,512.5
-1,M,Delvan Worley,SBD,M3b,90,Single-ply,89.6,225,80,215,520
-1,M,Barry Charles,SBD,R-M2a,90,Raw,88.9,150,120,195,465
-1,M,James Cushing-Murray,SBD,R-M4a,82.5,Raw,81.2,75,57.5,100,232.5
-1,F,Valerie Wilkins,SBD,JR,67.5,Single-ply,64.7,110,60,117.5,287.5
-1,F,Sabrina Ruiz,SBD,R-JR,56,Raw,54.8,90,52.5,107.5,250
-1,F,Shawn Mynar,SBD,R-O,56,Raw,55.2,110,55,142.5,307.5
-2,F,Annwyn Curtiss,SBD,R-O,56,Raw,52.7,107.5,57.5,125,290
-3,F,Laura Campbell,SBD,R-O,56,Raw,55.4,75,35,90,200
-1,F,Jenny Kavanagh,SBD,R-O,67.5,Raw,66.2,72.5,50,117.5,240
-1,F,Elizabeth Krasnow,SBD,R-O,82.5,Raw,80.1,110,57.5,132.5,300
-1,F,Cecille Weisbrod,SBD,R-O,90,Raw,89.6,85,50,112.5,247.5
-1,F,Sherrice Fox,SBD,R-O,90+,Raw,118.7,130,77.5,152.5,360
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Tom Connelly,SBD,R-T1,100,Raw,90.8,102.5,,120,222.5,1999
+1,M,Robert Falagrady,SBD,O,90,Single-ply,86.4,215,,,215,1979
+1,F,Katherine Lord,SBD,R-O,75,Raw,68.3,,45,85,130,
+1,M,Derek Nettingham,B,R-O,82.5,Raw,80,,165,,165,1989
+2,M,David Chiow,B,R-O,82.5,Raw,78.5,,132.5,,132.5,1963
+1,M,Daniel Kubitz,B,R-M1b,75,Raw,74.1,,112.5,,112.5,
+1,M,Edward Yue,B,R-M1b,82.5,Raw,81.8,,117.5,,117.5,1964
+1,M,John Alaniz,B,R-M2b,125,Raw,119.6,,172.5,,172.5,1958
+1,F,Stefani Franklin,B,R-M1b,90+,Raw,114.2,,107.5,,107.5,
+1,M,Beau Brandon,SBD,R-T1,100,Raw,98.3,167.5,115,227.5,510,1998
+1,M,Howie Hill,SBD,R-T3,100,Raw,92.3,155,100,230,485,1995
+1,M,Austin Thompson,SBD,R-JR,82.5,Raw,76.2,145,107.5,195,447.5,1992
+1,M,Nolan Wilcock,SBD,R-JR,90,Raw,84.2,212.5,110,225,547.5,
+1,M,Caine Kleckner,SBD,R-JR,110,Raw,108.7,182.5,115,212.5,510,
+1,M,Juan D. Williams,SBD,O,82.5,Single-ply,78.6,145,127.5,212.5,485,
+1,M,Antonio J. Sanchez,SBD,R-O,67.5,Raw,64.7,102.5,102.5,155,360,
+1,M,Jesse Heiner,SBD,R-O,82.5,Raw,80.7,192.5,130,237.5,560,
+1,M,Gregory Sambula,SBD,R-O,90,Raw,87.7,202.5,140,242.5,585,1986
+2,M,Cole Gorton,SBD,R-O,90,Raw,90,152.5,137.5,182.5,472.5,1983
+1,M,George Whyte,SBD,R-O,110,Raw,105.7,160,127.5,262.5,550,1990
+1,M,Travis Yoes,SBD,R-M1a,100,Raw,98.1,175,112.5,195,482.5,
+1,M,Bryan Dobson,SBD,R-M1a,110,Raw,100.8,202.5,120,222.5,545,1971
+1,M,David Brekke,SBD,M2a,82.5,Single-ply,81,150,110,205,465,1959
+1,M,David Walker,SBD,R-M1b,125,Raw,125,170,115,227.5,512.5,1966
+1,M,Delvan Worley,SBD,M3b,90,Single-ply,89.6,225,80,215,520,1949
+1,M,Barry Charles,SBD,R-M2a,90,Raw,88.9,150,120,195,465,1962
+1,M,James Cushing-Murray,SBD,R-M4a,82.5,Raw,81.2,75,57.5,100,232.5,1941
+1,F,Valerie Wilkins,SBD,JR,67.5,Single-ply,64.7,110,60,117.5,287.5,1993
+1,F,Sabrina Ruiz,SBD,R-JR,56,Raw,54.8,90,52.5,107.5,250,
+1,F,Shawn Mynar,SBD,R-O,56,Raw,55.2,110,55,142.5,307.5,
+2,F,Annwyn Curtiss,SBD,R-O,56,Raw,52.7,107.5,57.5,125,290,
+3,F,Laura Campbell,SBD,R-O,56,Raw,55.4,75,35,90,200,
+1,F,Jenny Kavanagh,SBD,R-O,67.5,Raw,66.2,72.5,50,117.5,240,1981
+1,F,Elizabeth Krasnow,SBD,R-O,82.5,Raw,80.1,110,57.5,132.5,300,1984
+1,F,Cecille Weisbrod,SBD,R-O,90,Raw,89.6,85,50,112.5,247.5,1985
+1,F,Sherrice Fox,SBD,R-O,90+,Raw,118.7,130,77.5,152.5,360,1986

@@ -1,44 +1,44 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,M,Mark Rogillio,SBD,R-JR,110,Raw,108.1,185,,,185
-1,M,Zack Barnwell,SBD,R-T1,75,Raw,74.2,150,117.5,220,487.5
-1,M,Jay Wade,SBD,R-T3,100,Raw,99.1,272.5,177.5,277.5,727.5
-1,M,Bill Nunley,SBD,R-T3,125,Raw,122.8,220,125,242.5,587.5
-1,M,Harrison St. John,SBD,R-Y,75,Raw,69.2,85,72.5,115,272.5
-1,M,Cade Ross,SBD,T1,75,Single-ply,73.2,235,107.5,250,592.5
-1,M,Hudson Garner,SBD,T1,82.5,Single-ply,80.6,130,80,130,340
-1,M,Wyatt Delancy,SBD,T1,100,Single-ply,90.3,257.5,132.5,227.5,617.5
-1,M,Shamaree Burse,SBD,T2,67.5,Single-ply,66.8,227.5,150,217.5,595
-1,M,David Valencia,SBD,T2,67.5,Single-ply,65.7,185,85,190,460
-1,M,Shamar Burse,SBD,T2,75,Single-ply,74.5,232.5,152.5,240,625
-1,M,Tre Evans,SBD,T3,75,Single-ply,72.2,170,102.5,205,477.5
-1,M,Brio Kelley Jr,SBD,T3,125,Single-ply,110.8,252.5,127.5,277.5,657.5
-1,M,Chantz Carter,SBD,JR,75,Single-ply,73.4,227.5,137.5,265,630
-1,M,Christopher Alexander,SBD,R-JR,67.5,Raw,63.3,132.5,75,192.5,400
-1,M,Phillip Spencer,SBD,R-JR,90,Raw,89.9,255,142.5,280,677.5
-1,M,Alvin Roswell,SBD,R-JR,125+,Raw,137.8,145,212.5,227.5,585
-1,M,Peter Massey,SBD,O,75,Single-ply,73.4,160,92.5,200,452.5
-2,M,Parker Lee Catt,SBD,O,75,Single-ply,73.8,155,110,185,450
-1,M,Joe Morrow,SBD,R-O,67.5,Raw,61.7,215,135,267.5,617.5
-1,M,Kenneth Robinson,SBD,R-O,82.5,Raw,81,165,137.5,197.5,500
-1,M,Justin Martin,SBD,R-O,90,Raw,87.8,237.5,150,280,667.5
-1,M,Nate Davis,SBD,R-O,100,Raw,97.1,277.5,155,275,707.5
-2,M,Dustin Ivie,SBD,R-O,100,Raw,94.1,175,145,200,520
-1,M,Matthew Henderson,SBD,R-O,110,Raw,109.2,192.5,147.5,252.5,592.5
-1,M,William Burrell,SBD,R-O,125+,Raw,129.3,322.5,207.5,332.5,862.5
-1,M,Jason Porter,SBD,R-M1a,75,Raw,71.8,135,92.5,170,397.5
-1,M,Dink Lumley,SBD,M2a,100,Single-ply,99.6,205,155,205,565
-1,M,Robert Smith,SBD,M2a,125+,Single-ply,134.4,247.5,165,230,642.5
-1,M,Joey Serio,SBD,R-M2a,125,Raw,125,205,147.5,245,597.5
-1,F,Madison Danna,SBD,R-T2,82.5,Raw,82.1,77.5,50,120,247.5
-1,F,Shanavia Black,SBD,T2,44,Single-ply,42,95,35,110,240
-1,F,Zyra Warfield,SBD,T2,48,Single-ply,48,95,35,95,225
-1,F,Tiara Jenkins,SBD,T2,67.5,Single-ply,63.3,105,60,150,315
-1,F,Brynna Shepard,SBD,T2,75,Single-ply,72.4,105,60,142.5,307.5
-1,F,Kim Franklin,SBD,T3,52,Single-ply,50.3,112.5,52.5,117.5,282.5
-1,F,Leaja Batimon,SBD,T3,75,Single-ply,70.5,140,70,167.5,377.5
-1,F,Jerica Nichols,SBD,T3,90+,Single-ply,106.1,125,45,120,290
-1,F,Mischa Tice,SBD,R-JR,67.5,Raw,60.2,110,57.5,147.5,315
-1,F,Trish Southerland,SBD,O,60,Single-ply,59.7,137.5,92.5,152.5,382.5
-1,F,Natalie Cantrell,SBD,O,67.5,Single-ply,63.5,110,55,135,300
-1,F,Pauline MacAulay,SBD,R-O,82.5,Raw,77,50,30,92.5,172.5
-1,F,Erin Hopkins,SBD,R-O,90+,Raw,95.5,100,55,130,285
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Mark Rogillio,SBD,R-JR,110,Raw,108.1,185,,,185,
+1,M,Zack Barnwell,SBD,R-T1,75,Raw,74.2,150,117.5,220,487.5,1998
+1,M,Jay Wade,SBD,R-T3,100,Raw,99.1,272.5,177.5,277.5,727.5,1994
+1,M,Bill Nunley,SBD,R-T3,125,Raw,122.8,220,125,242.5,587.5,
+1,M,Harrison St. John,SBD,R-Y,75,Raw,69.2,85,72.5,115,272.5,
+1,M,Cade Ross,SBD,T1,75,Single-ply,73.2,235,107.5,250,592.5,1998
+1,M,Hudson Garner,SBD,T1,82.5,Single-ply,80.6,130,80,130,340,2000
+1,M,Wyatt Delancy,SBD,T1,100,Single-ply,90.3,257.5,132.5,227.5,617.5,
+1,M,Shamaree Burse,SBD,T2,67.5,Single-ply,66.8,227.5,150,217.5,595,1996
+1,M,David Valencia,SBD,T2,67.5,Single-ply,65.7,185,85,190,460,1997
+1,M,Shamar Burse,SBD,T2,75,Single-ply,74.5,232.5,152.5,240,625,1996
+1,M,Tre Evans,SBD,T3,75,Single-ply,72.2,170,102.5,205,477.5,1994
+1,M,Brio Kelley Jr,SBD,T3,125,Single-ply,110.8,252.5,127.5,277.5,657.5,
+1,M,Chantz Carter,SBD,JR,75,Single-ply,73.4,227.5,137.5,265,630,1993
+1,M,Christopher Alexander,SBD,R-JR,67.5,Raw,63.3,132.5,75,192.5,400,1993
+1,M,Phillip Spencer,SBD,R-JR,90,Raw,89.9,255,142.5,280,677.5,1990
+1,M,Alvin Roswell,SBD,R-JR,125+,Raw,137.8,145,212.5,227.5,585,1990
+1,M,Peter Massey,SBD,O,75,Single-ply,73.4,160,92.5,200,452.5,
+2,M,Parker Lee Catt,SBD,O,75,Single-ply,73.8,155,110,185,450,
+1,M,Joe Morrow,SBD,R-O,67.5,Raw,61.7,215,135,267.5,617.5,1982
+1,M,Kenneth Robinson,SBD,R-O,82.5,Raw,81,165,137.5,197.5,500,1983
+1,M,Justin Martin,SBD,R-O,90,Raw,87.8,237.5,150,280,667.5,1986
+1,M,Nate Davis,SBD,R-O,100,Raw,97.1,277.5,155,275,707.5,1990
+2,M,Dustin Ivie,SBD,R-O,100,Raw,94.1,175,145,200,520,1993
+1,M,Matthew Henderson,SBD,R-O,110,Raw,109.2,192.5,147.5,252.5,592.5,1986
+1,M,William Burrell,SBD,R-O,125+,Raw,129.3,322.5,207.5,332.5,862.5,1986
+1,M,Jason Porter,SBD,R-M1a,75,Raw,71.8,135,92.5,170,397.5,1972
+1,M,Dink Lumley,SBD,M2a,100,Single-ply,99.6,205,155,205,565,1961
+1,M,Robert Smith,SBD,M2a,125+,Single-ply,134.4,247.5,165,230,642.5,1957
+1,M,Joey Serio,SBD,R-M2a,125,Raw,125,205,147.5,245,597.5,1962
+1,F,Madison Danna,SBD,R-T2,82.5,Raw,82.1,77.5,50,120,247.5,1996
+1,F,Shanavia Black,SBD,T2,44,Single-ply,42,95,35,110,240,1997
+1,F,Zyra Warfield,SBD,T2,48,Single-ply,48,95,35,95,225,1997
+1,F,Tiara Jenkins,SBD,T2,67.5,Single-ply,63.3,105,60,150,315,1997
+1,F,Brynna Shepard,SBD,T2,75,Single-ply,72.4,105,60,142.5,307.5,1997
+1,F,Kim Franklin,SBD,T3,52,Single-ply,50.3,112.5,52.5,117.5,282.5,1994
+1,F,Leaja Batimon,SBD,T3,75,Single-ply,70.5,140,70,167.5,377.5,1995
+1,F,Jerica Nichols,SBD,T3,90+,Single-ply,106.1,125,45,120,290,
+1,F,Mischa Tice,SBD,R-JR,67.5,Raw,60.2,110,57.5,147.5,315,1992
+1,F,Trish Southerland,SBD,O,60,Single-ply,59.7,137.5,92.5,152.5,382.5,1988
+1,F,Natalie Cantrell,SBD,O,67.5,Single-ply,63.5,110,55,135,300,1990
+1,F,Pauline MacAulay,SBD,R-O,82.5,Raw,77,50,30,92.5,172.5,2001
+1,F,Erin Hopkins,SBD,R-O,90+,Raw,95.5,100,55,130,285,1990

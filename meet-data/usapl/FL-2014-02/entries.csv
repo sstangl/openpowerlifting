@@ -1,38 +1,38 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,M,Roman Fronzaglia,SBD,R-T3,56,Raw,55.6,105,85,155,345
-1,M,Frank Mennella,SBD,R-T3,82.5,Raw,82.1,195,107.5,235,537.5
-1,M,Matthew Wilson,SBD,R-JR,75,Raw,72.1,167.5,135,170,472.5
-1,M,Jonathan Eidam,SBD,R-JR,82.5,Raw,78.3,180,122.5,192.5,495
-2,M,Jesse Price,SBD,R-JR,82.5,Raw,80.3,165,107.5,182.5,455
-1,M,Abe Nassar,SBD,R-JR,90,Raw,88.8,230,155,245,630
-2,M,David Holland,SBD,R-JR,90,Raw,88.8,160,102.5,217.5,480
-3,M,Alex Frapart,SBD,R-JR,90,Raw,87.3,140,112.5,157.5,410
-1,M,Michael Taylor,SBD,R-JR,100,Raw,98.6,222.5,155,240,617.5
-2,M,Justin Larivee,SBD,R-JR,100,Raw,91.8,200,145,245,590
-1,M,Scott Patrick Thompson,SBD,R-JR,110,Raw,104.6,227.5,162.5,272.5,662.5
-1,M,Nicholas Sautter,SBD,R-JR,125,Raw,119,212.5,182.5,220,615
-1,M,Michael Marzigliano,SBD,R-O,75,Raw,74.5,182.5,120,210,512.5
-2,M,James Woollard,SBD,R-O,75,Raw,74.4,147.5,122.5,182.5,452.5
-1,M,Johua Nackenson,SBD,R-O,82.5,Raw,81.2,187.5,122.5,252.5,562.5
-2,M,Eric Bodhorn,SBD,R-O,82.5,Raw,82.3,200,127.5,217.5,545
-3,M,Christopher Rosario,SBD,R-O,82.5,Raw,77.2,167.5,127.5,235,530
-4,M,Matt Shaner,SBD,R-O,82.5,Raw,79.8,165,97.5,232.5,495
-5,M,Lee Winer,SBD,R-O,82.5,Raw,80.9,152.5,85,167.5,405
-1,M,Anthony AJ Loreto,SBD,R-O,90,Raw,89.2,245,145,292.5,682.5
-2,M,Justin Haswell,SBD,R-O,90,Raw,89.4,192.5,125,230,547.5
-3,M,Tony Krahwinkel,SBD,R-O,90,Raw,84,170,167.5,200,537.5
-1,M,Alex Wilhelm,SBD,R-O,100,Raw,95.6,147.5,110,192.5,450
-1,M,Ryan Solberger,SBD,R-O,110,Raw,105,160,130,210,500
-1,M,Matthew Flack,SBD,R-O,125,Raw,122.9,272.5,182.5,272.5,727.5
-1,M,Ramon Suarez,SBD,R-O,125+,Raw,139.3,187.5,137.5,227.5,552.5
-1,M,Robert Arzonetti,SBD,R-M1b,110,Raw,102.6,185,137.5,207.5,530
-1,F,Desiree Colozzo,SBD,R-O,56,Raw,55.1,102.5,50,125,277.5
-2,F,Edilia Delgado,SBD,R-O,56,Raw,55,97.5,45,115,257.5
-1,F,Ashley Koenreich,SBD,R-O,60,Raw,59.1,107.5,57.5,127.5,292.5
-2,F,Brenda Vickery,SBD,R-O,60,Raw,59,87.5,40,110,237.5
-1,F,Sarah Flanagen,SBD,R-O,67.5,Raw,61.4,107.5,55,155,317.5
-2,F,Crystal Wilhelm,SBD,R-O,67.5,Raw,64.9,100,50,142.5,292.5
-3,F,Jennifer Winer,SBD,R-O,67.5,Raw,62.3,,37.5,105,142.5
-1,F,Lindsey Ryiz,SBD,R-O,75,Raw,75,130,65,172.5,367.5
-2,F,Ana Marie Casey,SBD,R-O,75,Raw,70.4,82.5,40,100,222.5
-1,F,Stepheny Wilken,SBD,R-M2a,82.5,Raw,82.5,65,50,117.5,232.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Roman Fronzaglia,SBD,R-T3,56,Raw,55.6,105,85,155,345,1995
+1,M,Frank Mennella,SBD,R-T3,82.5,Raw,82.1,195,107.5,235,537.5,1994
+1,M,Matthew Wilson,SBD,R-JR,75,Raw,72.1,167.5,135,170,472.5,1987
+1,M,Jonathan Eidam,SBD,R-JR,82.5,Raw,78.3,180,122.5,192.5,495,1990
+2,M,Jesse Price,SBD,R-JR,82.5,Raw,80.3,165,107.5,182.5,455,1993
+1,M,Abe Nassar,SBD,R-JR,90,Raw,88.8,230,155,245,630,
+2,M,David Holland,SBD,R-JR,90,Raw,88.8,160,102.5,217.5,480,1990
+3,M,Alex Frapart,SBD,R-JR,90,Raw,87.3,140,112.5,157.5,410,1991
+1,M,Michael Taylor,SBD,R-JR,100,Raw,98.6,222.5,155,240,617.5,1988
+2,M,Justin Larivee,SBD,R-JR,100,Raw,91.8,200,145,245,590,1991
+1,M,Scott Patrick Thompson,SBD,R-JR,110,Raw,104.6,227.5,162.5,272.5,662.5,
+1,M,Nicholas Sautter,SBD,R-JR,125,Raw,119,212.5,182.5,220,615,1993
+1,M,Michael Marzigliano,SBD,R-O,75,Raw,74.5,182.5,120,210,512.5,1989
+2,M,James Woollard,SBD,R-O,75,Raw,74.4,147.5,122.5,182.5,452.5,1990
+1,M,Johua Nackenson,SBD,R-O,82.5,Raw,81.2,187.5,122.5,252.5,562.5,
+2,M,Eric Bodhorn,SBD,R-O,82.5,Raw,82.3,200,127.5,217.5,545,1986
+3,M,Christopher Rosario,SBD,R-O,82.5,Raw,77.2,167.5,127.5,235,530,1989
+4,M,Matt Shaner,SBD,R-O,82.5,Raw,79.8,165,97.5,232.5,495,
+5,M,Lee Winer,SBD,R-O,82.5,Raw,80.9,152.5,85,167.5,405,1981
+1,M,Anthony AJ Loreto,SBD,R-O,90,Raw,89.2,245,145,292.5,682.5,
+2,M,Justin Haswell,SBD,R-O,90,Raw,89.4,192.5,125,230,547.5,1988
+3,M,Tony Krahwinkel,SBD,R-O,90,Raw,84,170,167.5,200,537.5,
+1,M,Alex Wilhelm,SBD,R-O,100,Raw,95.6,147.5,110,192.5,450,
+1,M,Ryan Solberger,SBD,R-O,110,Raw,105,160,130,210,500,1981
+1,M,Matthew Flack,SBD,R-O,125,Raw,122.9,272.5,182.5,272.5,727.5,1980
+1,M,Ramon Suarez,SBD,R-O,125+,Raw,139.3,187.5,137.5,227.5,552.5,
+1,M,Robert Arzonetti,SBD,R-M1b,110,Raw,102.6,185,137.5,207.5,530,1968
+1,F,Desiree Colozzo,SBD,R-O,56,Raw,55.1,102.5,50,125,277.5,1988
+2,F,Edilia Delgado,SBD,R-O,56,Raw,55,97.5,45,115,257.5,1984
+1,F,Ashley Koenreich,SBD,R-O,60,Raw,59.1,107.5,57.5,127.5,292.5,1985
+2,F,Brenda Vickery,SBD,R-O,60,Raw,59,87.5,40,110,237.5,1977
+1,F,Sarah Flanagen,SBD,R-O,67.5,Raw,61.4,107.5,55,155,317.5,
+2,F,Crystal Wilhelm,SBD,R-O,67.5,Raw,64.9,100,50,142.5,292.5,1988
+3,F,Jennifer Winer,SBD,R-O,67.5,Raw,62.3,,37.5,105,142.5,1981
+1,F,Lindsey Ryiz,SBD,R-O,75,Raw,75,130,65,172.5,367.5,1985
+2,F,Ana Marie Casey,SBD,R-O,75,Raw,70.4,82.5,40,100,222.5,
+1,F,Stepheny Wilken,SBD,R-M2a,82.5,Raw,82.5,65,50,117.5,232.5,

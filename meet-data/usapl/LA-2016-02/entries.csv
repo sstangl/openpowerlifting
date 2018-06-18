@@ -1,44 +1,44 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
-1,F,Madison Ritchie,B,R-O,47,Raw,Abbeville,36.2,,,,,27.5,-32.5,32.5,32.5,,,,,32.5
-1,M,Raj Patel,SBD,O,59,Single-ply,Abbeville,53.2,60,-67.5,67.5,67.5,30,-35,35,35.0,77.5,85,-92.5,85.0,187.5
-1,M,Dontae Dunaway,SBD,O,66,Single-ply,Abbeville,64.7,100,107.5,112.5,112.5,45,52.5,-60,52.5,112.5,125,137.5,137.5,302.5
-1,M,Ronnier Cormier,SBD,O,74,Single-ply,Abbeville,73.9,182.5,197.5,202.5,202.5,-110,110,120,120.0,232.5,242.5,-250,242.5,565
-1,M,Montel Cormier,SBD,O,105,Single-ply,Abbeville,99.2,210,-227.5,227.5,227.5,162.5,167.5,-172.5,167.5,227.5,250,-257.5,250.0,645
-2,M,Jon Rushing,SBD,O,105,Single-ply,Madisonville,96.8,-227.5,250,,250.0,-102.5,102.5,,102.5,227.5,232.5,,232.5,585
-3,M,Steven Barousse,SBD,O,105,Single-ply,Abbeville,101.3,112.5,122.5,137.5,137.5,67.5,75,80,80.0,142.5,160,170,170.0,387.5
-4,M,Justin Clements,SBD,O,105,Single-ply,Abbeville,99.8,112.5,125,140,140.0,80,87.5,-92.5,87.5,115,132.5,140,140.0,367.5
-5,M,Matt Binion,SBD,O,105,Single-ply,Abbeville,97.1,92.5,107.5,117.5,117.5,62.5,70,-75,70.0,117.5,137.5,147.5,147.5,335
-1,M,Donald Baldwin,SBD,O,120+,Single-ply,Abbeville,172.4,117.5,127.5,137.5,137.5,75,82.5,92.5,92.5,130,142.5,155,155.0,385
-1,M,Minh Do,SBD,R-O,66,Raw,Westwego,63.1,102.5,107.5,117.5,117.5,82.5,87.5,-92.5,87.5,152.5,167.5,182.5,182.5,387.5
-2,M,Devin Hollier,SBD,R-O,66,Raw,Abbeville,65.5,97.5,110,117.5,117.5,80,87.5,-92.5,87.5,150,-167.5,-167.5,150.0,355
-1,M,Steven Do,SBD,R-O,74,Raw,Westwego,73.2,117.5,122.5,130,130.0,-82.5,-82.5,85,85.0,145,157.5,175,175.0,390
-1,M,Ronald Williams,SBD,R-O,83,Raw,Gonzales,79.7,177.5,185,190,190.0,102.5,110,115,115.0,207.5,220,232.5,232.5,537.5
-DQ,M,Erik Smith,SBD,R-O,83,Raw,Picayune,82.4,187.5,200,-215,200.0,-110,-110,,,-232.5,,,,
-1,M,Brent Toups,SBD,R-O,93,Raw,Houma,92.6,192.5,-210,-210,192.5,135,-147.5,-147.5,135.0,182.5,190,205,205.0,532.5
-2,M,Jason Leger,SBD,R-O,93,Raw,Lafayette,92,160,-172.5,172.5,172.5,115,125,-140,125.0,205,220,230,230.0,527.5
-3,M,Bryan Gamble,SBD,R-O,93,Raw,Keithville,92.1,137.5,147.5,162.5,162.5,110,117.5,120,120.0,205,217.5,232.5,232.5,515
-4,M,Darrell Gaspard,SBD,R-O,93,Raw,Abbeville,92.5,-160,160,182.5,182.5,120,-125,-125,120.0,170,-185,-185,170.0,472.5
-1,M,Bottesy Bailey,SBD,R-O,105,Raw,Baton Rouge,93.7,242.5,260,270,270.0,152.5,160,162.5,162.5,320,335,-345,335.0,767.5
-2,M,Patrick Robichaux,SBD,R-O,105,Raw,Baton Rouge,101.6,202.5,215,225,225.0,142.5,152.5,160,160.0,277.5,-287.5,,277.5,662.5
-3,M,DaMikal Crow,SBD,R-O,105,Raw,Baton Rouge,102,227.5,-242.5,-242.5,227.5,137.5,147.5,-152.5,147.5,247.5,265,287.5,287.5,662.5
-4,M,Zac Soileau,SBD,R-O,105,Raw,Eunice,96.5,195,205,215,215.0,135,142.5,-147.5,142.5,217.5,230,235,235.0,592.5
-5,M,Brad Armentor,SBD,R-O,105,Raw,Gueydan,97.8,185,202.5,207.5,207.5,110,120,-127.5,120.0,182.5,197.5,205,205.0,532.5
-6,M,Andrew Broussard,SBD,R-O,105,Raw,Abbeville,97.6,147.5,157.5,162.5,162.5,92.5,102.5,105,105.0,190,200,-212.5,200.0,467.5
-1,M,Andre Sigure,SBD,R-O,120,Raw,Lafayette,109.6,267.5,287.5,,287.5,175,-192.5,192.5,192.5,315,337.5,-350,337.5,817.5
-2,M,Angelo Hall,SBD,R-O,120,Raw,New Iberia,109.3,182.5,227.5,,227.5,155,,,155.0,205,227.5,250,250.0,632.5
-3,M,Bob Brankline,SBD,R-O,120,Raw,Prairieville,114.3,145,150,170,170.0,115,137.5,145,145.0,150,182.5,197.5,197.5,512.5
-1,M,Todd Holyfield,SBD,R-O,120+,Raw,Monroe,126.4,205,215,227.5,227.5,155,175,182.5,182.5,215,227.5,240,240.0,650
-1,F,Braiana Tomino,SBD,O,47,Single-ply,Abbeville,45.8,65,72.5,77.5,77.5,40,45,-47.5,45.0,85,92.5,-97.5,92.5,215
-2,F,Brianna Ritchie,SBD,O,47,Single-ply,Abbeville,44.1,37.5,-45,45,45.0,20,25,,25.0,65,70,-75,70.0,140
-1,F,Erin McCormick,SBD,O,57,Single-ply,Bourg,53.1,70,77.5,-80,77.5,30,35,-40,35.0,70,75,80,80.0,192.5
-1,F,Jade Baudoin,SBD,O,63,Single-ply,Abbeville,58,82.5,90,97.5,97.5,42.5,47.5,-52.5,47.5,90,102.5,110,110.0,255
-1,F,Jasmine Campbell,SBD,O,72,Single-ply,Abbeville,63.3,77.5,85,90,90.0,37.5,42.5,45,45.0,92.5,100,107.5,107.5,242.5
-1,F,DeShante Turner,SBD,O,84,Single-ply,Abbeville,84,95,-105,105,105.0,57.5,62.5,67.5,67.5,85,95,-102.5,95.0,267.5
-1,F,Carolyn Luquette,SBD,O,84+,Single-ply,Abbeville,100.2,95,107.5,115,115.0,70,80,85,85.0,107.5,120,130,130.0,330
-2,F,Lainey Trahan,SBD,O,84+,Single-ply,Abbeville,102,-75,75,87.5,87.5,50,55,-60,55.0,110,125,132.5,132.5,275
-3,F,Alyssa Trahan,SBD,O,84+,Single-ply,Abbeville,90.5,82.5,90,-97.5,90.0,57.5,62.5,67.5,67.5,90,100,-107.5,100.0,257.5
-4,F,Alexis Harrison,SBD,O,84+,Single-ply,Abbeville,94.5,85,95,102.5,102.5,40,47.5,-52.5,47.5,90,100,105,105.0,255
-1,F,Claire Werner,SBD,R-O,47,Raw,Erath,30.4,30,35,37.5,37.5,20,22.5,,22.5,37.5,42.5,47.5,47.5,107.5
-1,F,Kelsey Eckelberger,SBD,R-O,72,Raw,Youngsville,68.1,62.5,70,77.5,77.5,50,55,-60,55.0,90,100,115,115.0,247.5
-1,F,Katie Frank,SBD,R-O,84,Raw,New Iberia,74.6,70,75,80,80.0,42.5,47.5,52.5,52.5,77.5,85,92.5,92.5,225
-1,F,Charlene Popik,SBD,R-O,84+,Raw,Slidell,99.6,-25,-25,25,25.0,25,27.5,30,30.0,52.5,57.5,62.5,62.5,117.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,BirthYear
+1,F,Madison Ritchie,B,R-O,47,Raw,Abbeville,36.2,,,,,27.5,-32.5,32.5,32.5,,,,,32.5,2002
+1,M,Raj Patel,SBD,O,59,Single-ply,Abbeville,53.2,60,-67.5,67.5,67.5,30,-35,35,35.0,77.5,85,-92.5,85.0,187.5,2001
+1,M,Dontae Dunaway,SBD,O,66,Single-ply,Abbeville,64.7,100,107.5,112.5,112.5,45,52.5,-60,52.5,112.5,125,137.5,137.5,302.5,2000
+1,M,Ronnier Cormier,SBD,O,74,Single-ply,Abbeville,73.9,182.5,197.5,202.5,202.5,-110,110,120,120.0,232.5,242.5,-250,242.5,565,1997
+1,M,Montel Cormier,SBD,O,105,Single-ply,Abbeville,99.2,210,-227.5,227.5,227.5,162.5,167.5,-172.5,167.5,227.5,250,-257.5,250.0,645,1999
+2,M,Jon Rushing,SBD,O,105,Single-ply,Madisonville,96.8,-227.5,250,,250.0,-102.5,102.5,,102.5,227.5,232.5,,232.5,585,1998
+3,M,Steven Barousse,SBD,O,105,Single-ply,Abbeville,101.3,112.5,122.5,137.5,137.5,67.5,75,80,80.0,142.5,160,170,170.0,387.5,1999
+4,M,Justin Clements,SBD,O,105,Single-ply,Abbeville,99.8,112.5,125,140,140.0,80,87.5,-92.5,87.5,115,132.5,140,140.0,367.5,2000
+5,M,Matt Binion,SBD,O,105,Single-ply,Abbeville,97.1,92.5,107.5,117.5,117.5,62.5,70,-75,70.0,117.5,137.5,147.5,147.5,335,2001
+1,M,Donald Baldwin,SBD,O,120+,Single-ply,Abbeville,172.4,117.5,127.5,137.5,137.5,75,82.5,92.5,92.5,130,142.5,155,155.0,385,1997
+1,M,Minh Do,SBD,R-O,66,Raw,Westwego,63.1,102.5,107.5,117.5,117.5,82.5,87.5,-92.5,87.5,152.5,167.5,182.5,182.5,387.5,1997
+2,M,Devin Hollier,SBD,R-O,66,Raw,Abbeville,65.5,97.5,110,117.5,117.5,80,87.5,-92.5,87.5,150,-167.5,-167.5,150.0,355,1997
+1,M,Steven Do,SBD,R-O,74,Raw,Westwego,73.2,117.5,122.5,130,130.0,-82.5,-82.5,85,85.0,145,157.5,175,175.0,390,1996
+1,M,Ronald Williams,SBD,R-O,83,Raw,Gonzales,79.7,177.5,185,190,190.0,102.5,110,115,115.0,207.5,220,232.5,232.5,537.5,1992
+DQ,M,Erik Smith,SBD,R-O,83,Raw,Picayune,82.4,187.5,200,-215,200.0,-110,-110,,,-232.5,,,,,1994
+1,M,Brent Toups,SBD,R-O,93,Raw,Houma,92.6,192.5,-210,-210,192.5,135,-147.5,-147.5,135.0,182.5,190,205,205.0,532.5,1994
+2,M,Jason Leger,SBD,R-O,93,Raw,Lafayette,92,160,-172.5,172.5,172.5,115,125,-140,125.0,205,220,230,230.0,527.5,1982
+3,M,Bryan Gamble,SBD,R-O,93,Raw,Keithville,92.1,137.5,147.5,162.5,162.5,110,117.5,120,120.0,205,217.5,232.5,232.5,515,1978
+4,M,Darrell Gaspard,SBD,R-O,93,Raw,Abbeville,92.5,-160,160,182.5,182.5,120,-125,-125,120.0,170,-185,-185,170.0,472.5,1965
+1,M,Bottesy Bailey,SBD,R-O,105,Raw,Baton Rouge,93.7,242.5,260,270,270.0,152.5,160,162.5,162.5,320,335,-345,335.0,767.5,1992
+2,M,Patrick Robichaux,SBD,R-O,105,Raw,Baton Rouge,101.6,202.5,215,225,225.0,142.5,152.5,160,160.0,277.5,-287.5,,277.5,662.5,1993
+3,M,DaMikal Crow,SBD,R-O,105,Raw,Baton Rouge,102,227.5,-242.5,-242.5,227.5,137.5,147.5,-152.5,147.5,247.5,265,287.5,287.5,662.5,1994
+4,M,Zac Soileau,SBD,R-O,105,Raw,Eunice,96.5,195,205,215,215.0,135,142.5,-147.5,142.5,217.5,230,235,235.0,592.5,1988
+5,M,Brad Armentor,SBD,R-O,105,Raw,Gueydan,97.8,185,202.5,207.5,207.5,110,120,-127.5,120.0,182.5,197.5,205,205.0,532.5,1991
+6,M,Andrew Broussard,SBD,R-O,105,Raw,Abbeville,97.6,147.5,157.5,162.5,162.5,92.5,102.5,105,105.0,190,200,-212.5,200.0,467.5,1985
+1,M,Andre Sigure,SBD,R-O,120,Raw,Lafayette,109.6,267.5,287.5,,287.5,175,-192.5,192.5,192.5,315,337.5,-350,337.5,817.5,1992
+2,M,Angelo Hall,SBD,R-O,120,Raw,New Iberia,109.3,182.5,227.5,,227.5,155,,,155.0,205,227.5,250,250.0,632.5,1963
+3,M,Bob Brankline,SBD,R-O,120,Raw,Prairieville,114.3,145,150,170,170.0,115,137.5,145,145.0,150,182.5,197.5,197.5,512.5,1957
+1,M,Todd Holyfield,SBD,R-O,120+,Raw,Monroe,126.4,205,215,227.5,227.5,155,175,182.5,182.5,215,227.5,240,240.0,650,1967
+1,F,Braiana Tomino,SBD,O,47,Single-ply,Abbeville,45.8,65,72.5,77.5,77.5,40,45,-47.5,45.0,85,92.5,-97.5,92.5,215,2001
+2,F,Brianna Ritchie,SBD,O,47,Single-ply,Abbeville,44.1,37.5,-45,45,45.0,20,25,,25.0,65,70,-75,70.0,140,2002
+1,F,Erin McCormick,SBD,O,57,Single-ply,Bourg,53.1,70,77.5,-80,77.5,30,35,-40,35.0,70,75,80,80.0,192.5,2000
+1,F,Jade Baudoin,SBD,O,63,Single-ply,Abbeville,58,82.5,90,97.5,97.5,42.5,47.5,-52.5,47.5,90,102.5,110,110.0,255,2001
+1,F,Jasmine Campbell,SBD,O,72,Single-ply,Abbeville,63.3,77.5,85,90,90.0,37.5,42.5,45,45.0,92.5,100,107.5,107.5,242.5,1997
+1,F,DeShante Turner,SBD,O,84,Single-ply,Abbeville,84,95,-105,105,105.0,57.5,62.5,67.5,67.5,85,95,-102.5,95.0,267.5,1998
+1,F,Carolyn Luquette,SBD,O,84+,Single-ply,Abbeville,100.2,95,107.5,115,115.0,70,80,85,85.0,107.5,120,130,130.0,330,1998
+2,F,Lainey Trahan,SBD,O,84+,Single-ply,Abbeville,102,-75,75,87.5,87.5,50,55,-60,55.0,110,125,132.5,132.5,275,2001
+3,F,Alyssa Trahan,SBD,O,84+,Single-ply,Abbeville,90.5,82.5,90,-97.5,90.0,57.5,62.5,67.5,67.5,90,100,-107.5,100.0,257.5,1998
+4,F,Alexis Harrison,SBD,O,84+,Single-ply,Abbeville,94.5,85,95,102.5,102.5,40,47.5,-52.5,47.5,90,100,105,105.0,255,1998
+1,F,Claire Werner,SBD,R-O,47,Raw,Erath,30.4,30,35,37.5,37.5,20,22.5,,22.5,37.5,42.5,47.5,47.5,107.5,2006
+1,F,Kelsey Eckelberger,SBD,R-O,72,Raw,Youngsville,68.1,62.5,70,77.5,77.5,50,55,-60,55.0,90,100,115,115.0,247.5,1989
+1,F,Katie Frank,SBD,R-O,84,Raw,New Iberia,74.6,70,75,80,80.0,42.5,47.5,52.5,52.5,77.5,85,92.5,92.5,225,1986
+1,F,Charlene Popik,SBD,R-O,84+,Raw,Slidell,99.6,-25,-25,25,25.0,25,27.5,30,30.0,52.5,57.5,62.5,62.5,117.5,1953

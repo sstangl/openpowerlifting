@@ -1,31 +1,31 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,M,Jim Campell,B,R-M1b,125,Raw,124.4,,175,,175
-1,M,Scott Danberg,B,R-M2a,60,Raw,59.3,,120,,120
-1,M,Sonny Russell,B,R-M2b,82.5,Raw,79.5,,135,,135
-1,M,Logan Morrison,SBD,R-T1,82.5,Raw,80.7,120,77.5,130,327.5
-1,M,Nick Loiacano,SBD,R-T3,125+,Raw,133,190,75,215,480
-1,M,Jonathan Romanes,SBD,R-JR,67.5,Raw,65.6,150,125,200,475
-2,M,Justin Romanes,SBD,R-JR,67.5,Raw,65.4,152.5,127.5,192.5,472.5
-1,M,Eric Martinez,SBD,R-JR,75,Raw,70.9,25,102.5,175,302.5
-1,M,Jason Yontef,SBD,R-JR,82.5,Raw,82.4,177.5,97.5,187.5,462.5
-1,M,Greg Phelps,SBD,R-JR,90,Raw,85.8,227.5,150,280,657.5
-2,M,Elliott Flignor,SBD,R-JR,90,Raw,86.7,,107.5,165,272.5
-1,M,Justin Stine,SBD,R-JR,125+,Raw,153.4,270,197.5,295,762.5
-1,M,Benjamin Giddens,SBD,R-O,75,Raw,70.6,150,112.5,180,442.5
-1,M,Tom Gormely,SBD,R-O,90,Raw,88.3,217.5,145,242.5,605
-2,M,Lee Cessna,SBD,R-O,90,Raw,87.1,165,125,205,495
-1,M,Robbie Dixon,SBD,R-O,110,Raw,109.2,147.5,77.5,155,380
-1,M,Ken Morris,SBD,R-O,125+,Raw,131.2,272.5,205,300,777.5
-1,M,Brian Morrison,SBD,R-M1a,82.5,Raw,77.9,172.5,130,197.5,500
-2,M,Jason Logan,SBD,R-M1a,82.5,Raw,78.1,172.5,,202.5,375
-1,M,Marvin Wheeler,SBD,R-M2a,82.5,Raw,80.4,140,80,115,335
-1,M,Gary Levenson,SBD,R-M2a,90,Raw,84.8,172.5,120,205,497.5
-1,M,Michael Bitting,SBD,R-M2b,110,Raw,108.3,180,140,200,520
-1,F,Maria Yannie,SBD,R-O,52,Raw,49.8,87.5,47.5,120,255
-1,F,Ashley Porter,SBD,R-O,56,Raw,54.4,100,50,137.5,287.5
-1,F,Sara Flanagan,SBD,R-O,67.5,Raw,64.5,120,57.5,157.5,335
-2,F,Nicole Hastings,SBD,R-O,67.5,Raw,62.1,110,62.5,117.5,290
-1,F,Ann Marie Casey,SBD,R-O,75,Raw,71.1,90,45,110,245
-1,F,Marrietta B. Roberts,SBD,R-M4a,75,Raw,68.8,47.5,40,85,172.5
-1,M,Jordan Hagopian,BD,R-O,125,Raw,119.7,,112.5,227.5,340
-1,F,Helen Hankerson,BD,M3a,82.5,Single-ply,80.4,,105,157.5,262.5
+Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
+1,M,Jim Campell,B,R-M1b,125,Raw,124.4,,175,,175,
+1,M,Scott Danberg,B,R-M2a,60,Raw,59.3,,120,,120,1962
+1,M,Sonny Russell,B,R-M2b,82.5,Raw,79.5,,135,,135,1955
+1,M,Logan Morrison,SBD,R-T1,82.5,Raw,80.7,120,77.5,130,327.5,1999
+1,M,Nick Loiacano,SBD,R-T3,125+,Raw,133,190,75,215,480,1996
+1,M,Jonathan Romanes,SBD,R-JR,67.5,Raw,65.6,150,125,200,475,1991
+2,M,Justin Romanes,SBD,R-JR,67.5,Raw,65.4,152.5,127.5,192.5,472.5,1991
+1,M,Eric Martinez,SBD,R-JR,75,Raw,70.9,25,102.5,175,302.5,1990
+1,M,Jason Yontef,SBD,R-JR,82.5,Raw,82.4,177.5,97.5,187.5,462.5,1994
+1,M,Greg Phelps,SBD,R-JR,90,Raw,85.8,227.5,150,280,657.5,
+2,M,Elliott Flignor,SBD,R-JR,90,Raw,86.7,,107.5,165,272.5,1992
+1,M,Justin Stine,SBD,R-JR,125+,Raw,153.4,270,197.5,295,762.5,1992
+1,M,Benjamin Giddens,SBD,R-O,75,Raw,70.6,150,112.5,180,442.5,1989
+1,M,Tom Gormely,SBD,R-O,90,Raw,88.3,217.5,145,242.5,605,
+2,M,Lee Cessna,SBD,R-O,90,Raw,87.1,165,125,205,495,1987
+1,M,Robbie Dixon,SBD,R-O,110,Raw,109.2,147.5,77.5,155,380,1988
+1,M,Ken Morris,SBD,R-O,125+,Raw,131.2,272.5,205,300,777.5,1985
+1,M,Brian Morrison,SBD,R-M1a,82.5,Raw,77.9,172.5,130,197.5,500,1973
+2,M,Jason Logan,SBD,R-M1a,82.5,Raw,78.1,172.5,,202.5,375,1972
+1,M,Marvin Wheeler,SBD,R-M2a,82.5,Raw,80.4,140,80,115,335,1963
+1,M,Gary Levenson,SBD,R-M2a,90,Raw,84.8,172.5,120,205,497.5,1964
+1,M,Michael Bitting,SBD,R-M2b,110,Raw,108.3,180,140,200,520,1956
+1,F,Maria Yannie,SBD,R-O,52,Raw,49.8,87.5,47.5,120,255,1981
+1,F,Ashley Porter,SBD,R-O,56,Raw,54.4,100,50,137.5,287.5,1987
+1,F,Sara Flanagan,SBD,R-O,67.5,Raw,64.5,120,57.5,157.5,335,1988
+2,F,Nicole Hastings,SBD,R-O,67.5,Raw,62.1,110,62.5,117.5,290,1986
+1,F,Ann Marie Casey,SBD,R-O,75,Raw,71.1,90,45,110,245,
+1,F,Marrietta B. Roberts,SBD,R-M4a,75,Raw,68.8,47.5,40,85,172.5,
+1,M,Jordan Hagopian,BD,R-O,125,Raw,119.7,,112.5,227.5,340,1989
+1,F,Helen Hankerson,BD,M3a,82.5,Single-ply,80.4,,105,157.5,262.5,1953
