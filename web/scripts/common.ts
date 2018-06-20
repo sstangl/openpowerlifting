@@ -122,7 +122,7 @@ export function makeRowObj(row, index?: number): RowObject {
     } else if (fullname === "Jo Whiteley" || fullname === "Garrett Fear") {
         // Purple.
         name = '<a style="text-decoration-color: #AE76FF;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #AE76FF;">' + fullname + '</span></a>';
-    } else if (fullname === "Kristy Hawkins" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan" || fullname === "Sarah Wellberg" || fullname === "Trystan Oakley" || fullname === "Dan Green") {
+    } else if (fullname === "Kristy Hawkins" || fullname === "Amanda Kohatsu" || fullname === "Joe Sullivan" || fullname === "Sarah Wellberg" || fullname === "Trystan Oakley" || fullname === "Dan Green" || fullname === "Jamila Owens") {
         // Green.
         name = '<a style="text-decoration-color: #51DA27;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #51DA27;">' + fullname + '</span></a>';
     } else if (fullname === "Boris Lerner" || fullname === "Esther Lee" || fullname === "Patrick Jeffries" || fullname === "Susan Salazar") {
