@@ -53,6 +53,9 @@ def get_database_nameset():
     names = set()
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
+        if "meet-data" in subdirs:
+            subdirs[:] = ['meet-data']
+
         if 'entries.csv' not in files:
             continue
 

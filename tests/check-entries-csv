@@ -936,6 +936,9 @@ if __name__ == '__main__':
         configtoml = None
         configfile = None
         for dirname, subdirs, files in os.walk(os.getcwd()):
+            if "meet-data" in subdirs:
+                subdirs[:] = ['meet-data']
+
             if configpath and os.path.dirname(configpath) not in dirname:
                 configpath = ''
                 configfile.close()

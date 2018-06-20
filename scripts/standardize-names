@@ -59,6 +59,8 @@ def main(args):
     namehash = load_names(args[1])
 
     for dirname, subdirs, files in os.walk(os.getcwd()):
+        if "meet-data" in subdirs:
+            subdirs[:] = ['meet-data']
         if 'entries.csv' in files:
             entriespath = dirname + os.sep + 'entries.csv'
             correct_names(namehash, entriespath)

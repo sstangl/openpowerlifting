@@ -486,6 +486,8 @@ if __name__ == '__main__':
     # which is much faster than using `find -exec`.
     else:
         for dirname, subdirs, files in os.walk(os.getcwd()):
+            if "meet-data" in subdirs:
+                subdirs[:] = ['meet-data']
             if 'meet.csv' in files:
                 filepath = dirname + os.sep + 'meet.csv'
                 check(sys.argv[0], filepath)
