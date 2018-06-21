@@ -140,7 +140,7 @@ export function makeRowObj(row, index?: number): RowObject {
     } else if (fullname === "David Sloan") {
         // Orange.
         name = '<a style="text-decoration-color: #FFA200;" href="' + this.makeLiftersUrl(fullname) + '"><span style="color: #FFA200;">' + fullname + '</span></a>';
-    } else if (fullname === "Joseph Park" || fullname === "Reyhan Roybal" || fullname === "Kris Lewis") {
+    } else if (fullname === "Joseph Park" || fullname === "Reyhan Roybal" || fullname === "Kris Lewis" || fullname === "Marina Cornwall") {
         // Rainbow.
         name = '<a style="text-decoration-color: #FF80AB;" href="' + this.makeLiftersUrl(fullname) + '"><span class="rainbow">' + fullname + '</span></a>';
     } else if (fullname === "Christian Habihirwe") {
