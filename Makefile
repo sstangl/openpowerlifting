@@ -43,94 +43,13 @@ check:
 	tests/check-duplicates
 	tests/check-python-style
 
-# List of probes for federations that should be fully up-to-date,
-# or at least are quick to read and not filled with noise.
-# Data showing up here should be immediately actionable.
+# Run all probes in a quick mode that only shows a few pending meets.
 probe-quick:
-	${DATADIR}/aau/aau-probe --quick || true
-	${DATADIR}/aep/aep-probe --quick || true
-	${DATADIR}/apa/apa-probe || true
-	${DATADIR}/apc/apc-probe --quick || true
-	${DATADIR}/apf/apf-probe --quick || true
-	${DATADIR}/apu/apu-probe --quick || true
-	${DATADIR}/bb/bb-probe || true
-	${DATADIR}/bp/bp-probe --quick || true
-	${DATADIR}/bp/bpu-probe --quick || true
-	${DATADIR}/capo/capo-probe --quick || true
-	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
-	${DATADIR}/cpf/cpf-probe --quick || true
-	${DATADIR}/cpl/cpl-probe --quick || true
-	${DATADIR}/femepo/femepo-probe --quick || true
-	${DATADIR}/fesupo/fesupo-probe --quick || true
-	${DATADIR}/gpc-aus/gpc-aus-probe --quick || true
-	${DATADIR}/herc/herc-probe || true
-	${DATADIR}/ipa/ipa-probe --quick || true
-	${DATADIR}/irishpf/irishpf-probe || true
-	${DATADIR}/irishpo/irishpo-probe --quick || true
-	${DATADIR}/nasa/nasa-probe --quick || true
-	${DATADIR}/nipf/nipf-probe || true
-	${DATADIR}/nzpf/nzpf-probe --quick || true
-	${DATADIR}/oceaniapf/oceaniapf-probe --quick || true
-	${DATADIR}/pa/pa-probe --quick || true
-	${DATADIR}/plzs/plzs-probe --quick || true
-	${DATADIR}/rps/rps-probe || true
-	${DATADIR}/rupc/rupc-probe || true
-	${DATADIR}/scottishpl/scottishpl-probe --quick || true
-	${DATADIR}/spf/spf-probe || true
-	${DATADIR}/upa/upa-probe --quick || true
-	${DATADIR}/usapl/usapl-probe || true
-	${DATADIR}/usapl-archive/usapl-archive-probe --quick || true
-	${DATADIR}/uspa/uspa-probe || true
-	${DATADIR}/xpc/xpc-probe || true
-	${DATADIR}/wrpf/wrpf-probe --quick || true
-	${DATADIR}/wrpf-can/wrpf-can-probe --quick || true
+	find "${DATADIR}" -name "*-probe" | sort | parallel --keep-order --will-cite "{} --quick"
 
-# List of all probes.
+# Run all probes.
 probe:
-	${DATADIR}/aau/aau-probe || true
-	${DATADIR}/aep/aep-probe || true
-	${DATADIR}/apa/apa-probe || true
-	${DATADIR}/apc/apc-probe || true
-	${DATADIR}/apf/apf-probe || true
-	${DATADIR}/apu/apu-probe || true
-	${DATADIR}/bb/bb-probe || true
-	${DATADIR}/bp/bp-probe || true
-	${DATADIR}/bp/bpu-probe || true
-	${DATADIR}/capo/capo-probe || true
-	${DATADIR}/commonwealthpf/commonwealthpf-probe || true
-	${DATADIR}/cpf/cpf-probe || true
-	${DATADIR}/cpl/cpl-probe || true
-	${DATADIR}/epf/epf-probe || true
-	${DATADIR}/femepo/femepo-probe || true
-	${DATADIR}/fesupo/fesupo-probe || true
-	${DATADIR}/fpo/fpo-probe || true
-	${DATADIR}/gpc-aus/gpc-aus-probe || true
-	${DATADIR}/herc/herc-probe || true
-	${DATADIR}/ipa/ipa-probe || true
-	${DATADIR}/ipf/ipf-probe || true
-	${DATADIR}/irishpf/irishpf-probe || true
-	${DATADIR}/irishpo/irishpo-probe || true
-	${DATADIR}/napf/napf-probe || true
-	${DATADIR}/nasa/nasa-probe || true
-	${DATADIR}/nipf/nipf-probe || true
-	${DATADIR}/nsf/nsf-probe || true
-	${DATADIR}/nzpf/nzpf-probe || true
-	${DATADIR}/oceaniapf/oceaniapf-probe || true
-	${DATADIR}/pa/pa-probe || true
-	${DATADIR}/plzs/plzs-probe || true
-	${DATADIR}/raw/raw-probe || true
-	${DATADIR}/rps/rps-probe || true
-	${DATADIR}/rupc/rupc-probe || true
-	${DATADIR}/scottishpl/scottishpl-probe || true
-	${DATADIR}/spf/spf-probe || true
-	${DATADIR}/thspa/thspa-probe || true
-	${DATADIR}/upa/upa-probe || true
-	${DATADIR}/usapl/usapl-probe || true
-	${DATADIR}/usapl-archive/usapl-archive-probe || true
-	${DATADIR}/uspa/uspa-probe || true
-	${DATADIR}/wrpf/wrpf-probe || true
-	${DATADIR}/wrpf-can/wrpf-can-probe || true
-	${DATADIR}/xpc/xpc-probe || true
+	find "${DATADIR}" -name "*-probe" | sort | parallel --keep-order --will-cite
 
 clean:
 	rm -rf '${BUILDDIR}'
