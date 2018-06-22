@@ -43,6 +43,7 @@ def getmeetinfo(soup):
     mainbody = soup.find('div', {'class': 'grid_12 mainbody'})
 
     name = mainbody.find('h1').text
+    name = name.replace("KRAFT", "").strip()
 
     # Get the date.
     dateplace = mainbody.find('p').text
