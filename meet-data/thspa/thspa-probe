@@ -8,7 +8,13 @@
 from bs4 import BeautifulSoup
 import os
 import sys
-import urllib.request
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 URLS = ["http://www.thspa.us/results_all.aspx"]
@@ -23,11 +29,6 @@ def error(msg):
 
 def color(s):
     return "\033[1;33m" + s + "\033[0;m"
-
-
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -53,27 +54,16 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
     meetlist = []
     for url in URLS:
-        html = gethtml(url)
+        html = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist(html)
 
-    known = getenteredurls()
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if m not in known:
-            print(color('[THSPA] ') + m)
+    oplprobe.print_meets(color('[THSPA]'), unentered)
     print(color('[THSPA] ') + "Continue working through archive.")
 
 
