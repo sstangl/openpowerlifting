@@ -108,24 +108,29 @@ def getresults(soup, meetcsv):
         data = curr_table.find('tbody')
 
         if csv.fieldnames == []:
-
             # Get column information.
-            headers = [x.text for x in curr_table.find('tr').find_all('th')]
+            headers = [x.text.strip()
+                       for x in curr_table.find('tr').find_all('th')]
 
             iterable = iter(range(len(headers)))
             for ii in iterable:
                 h = headers[ii]
                 if h in ['p.', 'Poř.']:
                     csv.fieldnames += ['Place']
-                elif h == 'jméno':
+                elif h.lower() == 'jméno':
                     csv.fieldnames += ['Name']
                 elif h in ['oddíl', 'Oddíl, klub', 'Oddíl']:
                     csv.fieldnames += ['Team']
                 elif h == 'nar.':
                     csv.fieldnames += ['BirthYear']
-                elif h in ['Soutěžící / RN / TH / Lot', 'Soutěžící / RN / TH / Lot']:
+                elif h == 'Soutěžící':
+                    csv.fieldnames += ['Name']
+                elif h in ['Soutěžící / RN / TH / Lot', 'Soutěžící / RN / TH / Lot',
+                           'Soutěžící / RN / TH / LOT']:
                     csv.fieldnames += ['Name',
                                        'BirthYear', 'BodyweightKg', 'Lot']
+                elif h == 'RN / TH / LOT':
+                    csv.fieldnames += ['BirthYear', 'BodyweightKg', 'Lot']
                 elif h == 'váha':
                     csv.fieldnames += ['BodyweightKg']
                 elif h == '1' and 'benčpresu' in meetname.lower():
@@ -153,80 +158,88 @@ def getresults(soup, meetcsv):
         divstate = None
         sexstate = None
 
-        # Parse the division
-
         # Extract sex information.
         text = curr_descriptor.text.lower()
-        if 'ženy' in text:
-            sexstate = 'F'
-            text = text.replace('ženy', '').strip()
-        elif 'muži ' in text:
-            sexstate = 'M'
-            text = text.replace('muži', '').strip()
+        # Parse the division
+        # Otherwise this is a team meet, Sex & WC are not given
+        if not re.match('\d\.', text):
+            if 'ženy' in text:
+                sexstate = 'F'
+                text = text.replace('ženy', '').strip()
+            elif 'muži ' in text:
+                sexstate = 'M'
+                text = text.replace('muži', '').strip()
 
-        # Extract division information.
-        if 'dorostenky' in text:
-            divstate = 'Sub-Juniors'
-            sexstate = 'F'
-        elif 'dorostenci' in text:
-            divstate = 'Sub-Juniors'
-            sexstate = 'M'
-        elif 'juniorky' in text:
-            divstate = 'Juniors'
-            sexstate = 'F'
-        elif 'junioři' in text:
-            divstate = 'Juniors'
-            sexstate = 'M'
-        elif 'm1' in text:
-            divstate = 'Masters 1'
-        elif 'm2' in text:
-            divstate = 'Masters 2'
-        elif 'm3' in text:
-            divstate = 'Masters 3'
-        elif 'm4' in text:
-            divstate = 'Masters 4'
-        else:
-            divstate = 'Open'
+            # Extract division information.
+            if 'dorostenky' in text:
+                divstate = 'Sub-Juniors'
+                sexstate = 'F'
+            elif 'dorostenci' in text:
+                divstate = 'Sub-Juniors'
+                sexstate = 'M'
+            elif 'juniorky' in text:
+                divstate = 'Juniors'
+                sexstate = 'F'
+            elif 'junioři' in text:
+                divstate = 'Juniors'
+                sexstate = 'M'
+            elif 'm1' in text:
+                divstate = 'Masters 1'
+            elif 'm2' in text:
+                divstate = 'Masters 2'
+            elif 'm3' in text:
+                divstate = 'Masters 3'
+            elif 'm4' in text:
+                divstate = 'Masters 4'
+            else:
+                divstate = 'Open'
 
-        # Extract weight class information.
-        if 'kg' in text:
-            wcstate = re.search('\d{3}|\d{2}', text).group(0)
-            if 'nad ' in text or '+' in text:  # SHW
-                wcstate = wcstate + '+'
-            if not wcstate:
+            # Extract weight class information.
+            if 'kg' in text:
+                wcstate = re.search('\d{3}|\d{2}', text).group(0)
+                if 'nad ' in text or '+' in text:  # SHW
+                    wcstate = wcstate + '+'
+                if not wcstate:
+                    error("No weightclass in descriptor: \"%s\"" % text)
+            else:
                 error("No weightclass in descriptor: \"%s\"" % text)
         else:
-            error("No weightclass in descriptor: \"%s\"" % text)
+            wcstate = ''
+            divstate = 'Open'
+            sexstate = ''
 
         for tr in data.find_all('tr'):
             row = [x.text for x in tr.find_all('td')]
-            assert divstate
-            assert sexstate
 
-            # Accumulate the row, but we need to look at the class of each td
-            # to figure out whether lifts were good or bad.
-            row = []
-            for td in tr.find_all('td'):
-                if len(row) == csv.index('Name'):
-                    split_td = [x.strip() for x in td.text.split('/')]
-                else:
-                    split_td = [td.text.strip()]
+            # Team points
+            if not any(x in row for x in ['Celkem družstvo', 'Celkem  družstvo']):
+                assert divstate
+                assert sexstate is not None
 
-                for text in split_td:
-                    if text in ['-', '#', '0']:
-                        text = ''
+                # Accumulate the row, but we need to look at the class of each td
+                # to figure out whether lifts were good or bad.
+                row = []
+                for td in tr.find_all('td'):
+                    if len(row) in [csv.index('Name'), csv.index('BirthYear')]:
+                        split_td = [x.strip() for x in td.text.split('/')]
+                    else:
+                        split_td = [td.text.strip()]
 
-                    # They mark when a person has a degree...
-                    text = text.replace(', Ing.', '')
-                    text = text.replace(', Mgr.', '')
-                    text = text.replace('\xa0', ' ')
-                    text = text.replace('*', '')
-                    text = text.replace('  ', ' ').replace(',', '.')
+                    for text in split_td:
+                        if text in ['-', '#', '0']:
+                            text = ''
 
-                    row.append(text.strip())
+                        # They mark when a person has a degree...
+                        text = text.replace(', Ing.', '')
+                        text = text.replace(', Mgr.', '')
+                        text = text.replace('\xa0', ' ')
+                        text = text.replace('*', '')
+                        text = text.replace('  ', ' ').replace(',', '.')
 
-            row = row + [divstate, sexstate, wcstate]
-            csv.rows += [row]
+                        row.append(text.strip())
+
+                row = row + [divstate, sexstate, wcstate]
+                csv.rows += [row]
 
     return csv
 
@@ -266,7 +279,7 @@ def calc_best_lift(csv, col, attemptlist):
         if best > 0:
             row[csv.index(col)] = str(best)
 
-# Equipment is marked in the sheet name
+# Equipment is marked in the meet name
 
 
 def addequipment(csv, meetcsv):
@@ -368,7 +381,8 @@ def main(dirname, url):
 
     addtotals(entriescsv)
 
-    fixplace(entriescsv)
+    if 'Place' in entriescsv.fieldnames:
+        fixplace(entriescsv)
     addequipment(entriescsv, meetcsv)
     reverse_names(entriescsv)
 
