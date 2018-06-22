@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.parse
-import subprocess
 
 
 try:
@@ -21,52 +20,54 @@ except ImportError:
 
 URLS = ["http://results.kraft.is/meets",
         "http://results.kraft.is/meets/2017",
-        "http://results.kraft.is/meets/2016",
-        "http://results.kraft.is/meets/2015",
-        "http://results.kraft.is/meets/2014",
-        "http://results.kraft.is/meets/2013",
-        "http://results.kraft.is/meets/2012",
-        "http://results.kraft.is/meets/2011",
-        "http://results.kraft.is/meets/2010",
-        "http://results.kraft.is/meets/2009",
-        "http://results.kraft.is/meets/2008",
-        "http://results.kraft.is/meets/2007",
-        "http://results.kraft.is/meets/2006",
-        "http://results.kraft.is/meets/2005",
-        "http://results.kraft.is/meets/2004",
-        "http://results.kraft.is/meets/2003",
-        "http://results.kraft.is/meets/2002",
-        "http://results.kraft.is/meets/2001",
-        "http://results.kraft.is/meets/2000",
-        "http://results.kraft.is/meets/1999",
-        "http://results.kraft.is/meets/1998",
-        "http://results.kraft.is/meets/1997",
-        "http://results.kraft.is/meets/1996",
-        "http://results.kraft.is/meets/1995",
-        "http://results.kraft.is/meets/1994",
-        "http://results.kraft.is/meets/1993",
-        "http://results.kraft.is/meets/1992",
-        "http://results.kraft.is/meets/1991",
-        "http://results.kraft.is/meets/1990",
-        "http://results.kraft.is/meets/1989",
-        "http://results.kraft.is/meets/1988",
-        "http://results.kraft.is/meets/1987",
-        "http://results.kraft.is/meets/1986",
-        "http://results.kraft.is/meets/1985",
-        "http://results.kraft.is/meets/1984",
-        "http://results.kraft.is/meets/1983",
-        "http://results.kraft.is/meets/1982",
-        "http://results.kraft.is/meets/1981",
-        "http://results.kraft.is/meets/1980",
-        "http://results.kraft.is/meets/1979",
-        "http://results.kraft.is/meets/1978",
-        "http://results.kraft.is/meets/1977",
-        "http://results.kraft.is/meets/1976",
-        "http://results.kraft.is/meets/1975",
-        "http://results.kraft.is/meets/1974",
-        "http://results.kraft.is/meets/1973",
-        "http://results.kraft.is/meets/1972",
-        "http://results.kraft.is/meets/1971"]
+        # The URLs below were already fully-added.
+        # "http://results.kraft.is/meets/2016",
+        # "http://results.kraft.is/meets/2015",
+        # "http://results.kraft.is/meets/2014",
+        # "http://results.kraft.is/meets/2013",
+        # "http://results.kraft.is/meets/2012",
+        # "http://results.kraft.is/meets/2011",
+        # "http://results.kraft.is/meets/2010",
+        # "http://results.kraft.is/meets/2009",
+        # "http://results.kraft.is/meets/2008",
+        # "http://results.kraft.is/meets/2007",
+        # "http://results.kraft.is/meets/2006",
+        # "http://results.kraft.is/meets/2005",
+        # "http://results.kraft.is/meets/2004",
+        # "http://results.kraft.is/meets/2003",
+        # "http://results.kraft.is/meets/2002",
+        # "http://results.kraft.is/meets/2001",
+        # "http://results.kraft.is/meets/2000",
+        # "http://results.kraft.is/meets/1999",
+        # "http://results.kraft.is/meets/1998",
+        # "http://results.kraft.is/meets/1997",
+        # "http://results.kraft.is/meets/1996",
+        # "http://results.kraft.is/meets/1995",
+        # "http://results.kraft.is/meets/1994",
+        # "http://results.kraft.is/meets/1993",
+        # "http://results.kraft.is/meets/1992",
+        # "http://results.kraft.is/meets/1991",
+        # "http://results.kraft.is/meets/1990",
+        # "http://results.kraft.is/meets/1989",
+        # "http://results.kraft.is/meets/1988",
+        # "http://results.kraft.is/meets/1987",
+        # "http://results.kraft.is/meets/1986",
+        # "http://results.kraft.is/meets/1985",
+        # "http://results.kraft.is/meets/1984",
+        # "http://results.kraft.is/meets/1983",
+        # "http://results.kraft.is/meets/1982",
+        # "http://results.kraft.is/meets/1981",
+        # "http://results.kraft.is/meets/1980",
+        # "http://results.kraft.is/meets/1979",
+        # "http://results.kraft.is/meets/1978",
+        # "http://results.kraft.is/meets/1977",
+        # "http://results.kraft.is/meets/1976",
+        # "http://results.kraft.is/meets/1975",
+        # "http://results.kraft.is/meets/1974",
+        # "http://results.kraft.is/meets/1973",
+        # "http://results.kraft.is/meets/1972",
+        # "http://results.kraft.is/meets/1971",
+        ]
 BASEURL = "http://results.kraft.is"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -130,9 +131,6 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
-
-    for url in unentered:
-        subprocess.run(['./kpf-import', url])
 
     oplprobe.print_meets(color('[Kraft]'), unentered)
 
