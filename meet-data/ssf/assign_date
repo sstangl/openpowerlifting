@@ -116,6 +116,6 @@ def main(folders):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: %s url" % sys.argv[0])
+        print("Usage: %s meet_folder" % sys.argv[0])
     else:
         main(sys.argv[1:])
