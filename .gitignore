@@ -17,6 +17,7 @@ target/
 /meet-data/**/*.xml
 
 # Temporary files.
+*.lnk
 *.swp
 *.swo
 *.~*
