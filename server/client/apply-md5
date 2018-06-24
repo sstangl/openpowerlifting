@@ -1,0 +1,36 @@
+#!/bin/sh
+# Rewrites all the static assets in build/ to include the MD5 hash
+# as part of the filename.
+#
+# For example, `foo.js` may become `foo.96c7f8c4ee02af6035b52baf4f47889d.js`.
+
+TERA_MAP_FILE='build/static-asset-map.tera'
+
+# Given the input filename, produce the output filename with a hash.
+function hash {
+	# Get the hash, ignoring the filename printout after a space.
+	HASH=`md5sum "${1}" | cut -f 1 -d ' '`
+
+	# Place the hash after the leftmost period in the filename.
+	# Note that this logic breaks if the path contains a period.
+	echo "${1}" | sed "s/\./.${HASH}./"
+}
+
+# Rewrite all the assets.
+#
+# Ignore the favicon -- that's served by the server directly;
+# the templating system knows nothing about it.
+#
+# Also ignore the stuff hardcoded in the CSS.
+find build/ -type f | grep -v favicon | grep -v select_dropdown | while read path; do
+	hashedpath=$(hash "${path}")
+	mv "${path}" "${hashedpath}"
+
+	filename=$(basename "${path}")
+	hashedfilename=$(basename "${hashedpath}")
+
+	# Write the mapping to a file that can be included
+	# by the templating system.
+	ASVAR=`echo "${filename}" | sed "s/[\.-]/_/g"`
+	echo "{% set ${ASVAR} = \"${hashedfilename}\" %}" >> ${TERA_MAP_FILE}
+done

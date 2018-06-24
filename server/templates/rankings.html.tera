@@ -22,8 +22,8 @@
     const translation_column_wilks = "{{strings.columns.wilks}}";
   </script>
 
-  <script src="/static/scripts/slickgrid.min.js"></script>
-  <script src="/static/scripts/rankings.js"></script>
+  <script src="/static/scripts/{{slickgrid_min_js}}"></script>
+  <script src="/static/scripts/{{rankings_js}}"></script>
 {% endblock includes %}
 
 {% block flexbox_hack %}

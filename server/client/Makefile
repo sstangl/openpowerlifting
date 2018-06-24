@@ -1,10 +1,10 @@
-.PHONY: npminit builddir css scripts oldimages slickgrid gzip clean
+.PHONY: npminit builddir css scripts oldimages slickgrid package-for-server rebuild-clean clean
 
 BUILDDIR := build
 OLDWEB := "../../web"
 PROJECTDATA := "../../project-data"
 
-all: css scripts oldimages gzip
+all: rebuild-clean css scripts oldimages package-for-server
 
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
@@ -20,7 +20,6 @@ css: builddir npminit
 	npm run sass
 
 oldimages: builddir
-	cp ${OLDWEB}/images/check_radio_sheet.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/logo-compressed.svg "${BUILDDIR}/images/"
 	cp ${OLDWEB}/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images/"
 	cp ${OLDWEB}/images/select_dropdown.png "${BUILDDIR}/images/"
@@ -38,8 +37,18 @@ slickgrid: builddir
 	    "${SLICKGRID}/slick.grid.js" \
 	    | "${OLDWEB}/try-uglify" "${BUILDDIR}/scripts/slickgrid.min.js"
 
-gzip:
+package-for-server:
+	# Rewrite all the filenames to contain their hash.
+	./apply-md5
+	# Gzip the contents. The hashed filename is not the hash of the gzip,
+	# but the hash of the gzip's contents when decompressed.
 	./apply-gzip
 
+
+# Cleans files that may cause `make` to be non-idempotent.
+rebuild-clean:
+	rm -rf build
+
+# Fully cleans the working directory.
 clean:
 	rm -rf build node_modules

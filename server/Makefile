@@ -1,4 +1,4 @@
-.PHONY: builddir binary data oldstatics config client clientstatics release clean
+.PHONY: builddir binary data oldstatics config client clientstatics release rebuild-clean clean
 
 BUILDDIR := build
 BUILDFILE := build.tar.bz2
@@ -42,11 +42,18 @@ client:
 clientstatics: client
 	mkdir -p "${BUILDDIR}/static"
 	cp -r client/build/* "${BUILDDIR}/static"
+	rm "${BUILDDIR}/templates/static-asset-map.tera"
+	cp client/build/static-asset-map.tera "${BUILDDIR}/templates/"
 
-release: binary data config oldstatics clientstatics
+release: rebuild-clean binary data config oldstatics clientstatics
 	touch "${BUILDDIR}/${BUILDFILE}"
 	tar cvjf "${BUILDDIR}/${BUILDFILE}" --exclude="${BUILDFILE}" "${BUILDDIR}"
 	echo "Good luck!"
+
+# Cleans files that may cause `make` to be non-idempotent.
+rebuild-clean:
+	$(MAKE) -C client rebuild-clean
+	rm -rf ${BUILDDIR}
 
 clean:
 	$(MAKE) -C client clean

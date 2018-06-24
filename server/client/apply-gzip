@@ -1,7 +1,7 @@
 #!/bin/sh
 # Gzips all the static assets in build/.
 
-find build/ -type f | grep -v "\.gz" | grep -v "\.png" | while read f; do
+find build/ -type f | grep -v "\.gz" | grep -v "\.png" | grep -v "\.tera" | while read f; do
         echo " Compressing \"$f\""
         gzip --force --keep --best "$f"
 done

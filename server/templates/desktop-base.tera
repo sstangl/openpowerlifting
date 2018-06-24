@@ -1,3 +1,5 @@
+{% include "static-asset-map" %}
+
 <!DOCTYPE html>
 <html lang="{{language}}">
 <head>
@@ -11,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   {# Internal sources. #}
-  <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/static/css/{{style_css}}"/>
 
   {% block includes %}
   {% endblock includes %}
