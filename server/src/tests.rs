@@ -69,6 +69,16 @@ fn test_pages_load() {
     assert_eq!(client.get("/contact").dispatch().status(), Status::Ok);
 }
 
+/// Some rankings pages that contain only a few entries have
+/// historically produced crashes, when the context-generating
+/// code assumes a minimum entry count.
+#[test]
+fn test_small_rankings_pages() {
+    let client = client();
+    // The BB federation is small and defunct, therefore good for testing.
+    assert_eq!(client.get("/rankings/44/bb").dispatch().status(), Status::Ok);
+}
+
 #[test]
 fn test_username_redirects() {
     let client = client();
