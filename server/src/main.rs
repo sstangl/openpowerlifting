@@ -153,8 +153,8 @@ impl Responder<'static> for StaticFile {
             }
             StaticFile::Plain(f) => f.respond_to(req)?,
         };
-        // Set to 24 hours. Production should serve via Nginx anyway.
-        response.set_raw_header("Cache-Control", "public, max-age=86400");
+        // Set to 1 year -- effectively forever.
+        response.set_raw_header("Cache-Control", "public, max-age=31556926");
         Ok(response)
     }
 }
