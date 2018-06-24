@@ -274,6 +274,10 @@ pub enum MetaFederation {
     AAPF,
     #[strum(to_string = "abpu")]
     ABPU,
+    /// The BP federation is made up of smaller divisional federations,
+    /// but people expect to see them all lumped together.
+    #[strum(to_string = "all-bp")]
+    AllBP,
     #[strum(to_string = "uspa-tested")]
     USPATested,
 }
@@ -420,6 +424,13 @@ impl MetaFederation {
             }
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => meet.federation == Federation::BPU && entry.tested,
+            MetaFederation::AllBP => {
+                meet.federation == Federation::BP
+                    || meet.federation == Federation::EPA
+                    || meet.federation == Federation::NIPF
+                    || meet.federation == Federation::ScottishPL
+                    || meet.federation == Federation::WelshPA
+            }
             MetaFederation::USPATested => {
                 meet.federation == Federation::USPA && entry.tested
             }

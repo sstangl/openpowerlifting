@@ -162,7 +162,7 @@
 <optgroup label="{{strings.country.uk}}">
   <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>All United Kingdom Feds</option>
   <option value="abpu" {% if selection.federation == "ABPU" %}selected{% endif %}>ABPU - Amateur British Powerlifting Union [WPC]</option>
-  <option value="bp" {% if selection.federation == "BP" %}selected{% endif %}>BP - British Powerlifting [IPF] (2017+)</option>
+  <option value="all-bp" {% if selection.federation == "AllBP" %}selected{% endif %}>BP - British Powerlifting [IPF]</option>
   <option value="bpc" {% if selection.federation == "BPC" %}selected{% endif %}>BPC - British Powerlifting Congress [WPC]</option>
   <option value="bpu" {% if selection.federation == "BPU" %}selected{% endif %}>BPU - British Powerlifting Union [WPC]</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA - English Powerlifting Association [IPF]</option>
