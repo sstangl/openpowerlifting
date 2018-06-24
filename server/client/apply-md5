@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Rewrites all the static assets in build/ to include the MD5 hash
 # as part of the filename.
 #
