@@ -20,6 +20,8 @@ pub enum Federation {
     #[serde(rename = "365Strong")]
     #[strum(to_string = "365Strong", serialize = "365strong")]
     _365Strong,
+    #[strum(to_string = "AAP", serialize = "aap")]
+    AAP,
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
     #[strum(to_string = "ADAU", serialize = "adau")]
@@ -72,8 +74,12 @@ pub enum Federation {
     EPA,
     #[strum(to_string = "EPF", serialize = "epf")]
     EPF,
+    #[strum(to_string = "FALPO", serialize = "falpo")]
+    FALPO,
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
+    #[strum(to_string = "FEPOA", serialize = "fepoa")]
+    FEPOA,
     #[strum(to_string = "FESUPO", serialize = "fesupo")]
     FESUPO,
     #[strum(to_string = "FFForce", serialize = "ffforce")]
@@ -245,6 +251,8 @@ pub enum MetaFederation {
     /// All entries that have "Tested = Yes".
     #[strum(to_string = "all-amateur")]
     AllAmateur,
+    #[strum(to_string = "all-argentina")]
+    AllArgentina,
     #[strum(to_string = "all-australia")]
     AllAustralia,
     #[strum(to_string = "all-canada")]
@@ -296,6 +304,7 @@ impl MetaFederation {
                     || meet.federation == Federation::DSF
                     || meet.federation == Federation::EPA
                     || meet.federation == Federation::EPF
+                    || meet.federation == Federation::FALPO
                     || meet.federation == Federation::FEMEPO
                     || meet.federation == Federation::FESUPO
                     || meet.federation == Federation::FFForce
@@ -330,6 +339,11 @@ impl MetaFederation {
                     || meet.federation == Federation::WNPF
             }
             MetaFederation::AllAmateur => entry.tested,
+            MetaFederation::AllArgentina => {
+                meet.federation == Federation::AAP
+                    || meet.federation == Federation::FALPO
+                    || meet.federation == Federation::FEPOA
+            }
             MetaFederation::AllAustralia => {
                 meet.federation == Federation::APU
                     || meet.federation == Federation::CAPO

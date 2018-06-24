@@ -1,6 +1,6 @@
 <select id="fedselect">
   <option value="all" selected>All Feds</option>
-  <option value="AAU,ADAU,ADFPA,ADFPF,AEP,AfricanPF,APU,AsianPF,BP,BVDK,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,JPA,KRAFT,LPF,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
+  <option value="AAU,ADAU,ADFPA,ADFPF,AEP,AfricanPF,APU,AsianPF,BP,BVDK,CommonwealthPF,CPU,CSST,DSF,EPA,EPF,FALPO,FEMEPO,FESUPO,FFForce,FPR,IDFPF,IPF,IrishPF,JPA,KRAFT,LPF,NAPF,NASA,NIPF,NordicPF,NSF,NZPF,OceaniaPF,ParaPL,PA,PLZS,PZKFiTS,RAW,RAW-CAN,ScottishPL,SSF,SVNL,THSPA,USAPL,WABDL,WDFPF,WelshPA,WNPF">
     All Drug-Tested Feds
   </option>
   <optgroup label="International">
@@ -57,6 +57,14 @@
     <option value="USPF">USPF - United States Powerlifting Federation (Incomplete)</option>
     <option value="XPC">XPC - Xtreme Powerlifting Coalition</option>
     <option value="WNPF">WNPF - World Natural Powerlifting Federation</option>
+  </optgroup>
+  <optgroup label="Argentina">
+    <option value="AAP,FALPO,FEPOA">
+      All Argentinian Feds
+    </option>
+    <option value="AAP">AAP - Alianza Argentina Powerlifting [GPA/IPO]</option>
+    <option value="FALPO">FALPO - Federación Argentina de Levantamiento de Potencia [IPF]</option>
+    <option value="FEPOA">FEPOA - Federación de Powerlifting Argentino [GPC]</option>
   </optgroup>
   <optgroup label="Australia">
     <option value="APU,CAPO,GPC-AUS,PA,ProRaw">

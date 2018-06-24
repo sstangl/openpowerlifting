@@ -68,6 +68,7 @@ def pwarning(s):
 
 KnownFederations = {
     "365Strong",  # 365 Strong Powerlifting Federation.
+    "AAP",  # Alianza Argentina Powerlifting, GPA/IPO.
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
@@ -96,7 +97,9 @@ KnownFederations = {
     "DSF",  # Danish IPF Affiliate.
     "EPA",  # English Powerlifting Association, IPF.
     "EPF",
+    "FALPO",  # Federación Argentina de Levantamiento de Potencia, IPF.
     "FEMEPO",  # Federación Mexicana de Powerlifting A.C.
+    "FEPOA",  # Federación de Powerlifting Argentino, GPC.
     "FESUPO",  # Federacion Sudamericana de Powerlifting
     "FFForce",  # Federation Francaise de Force, IPF.
     "FPO",  # Finland Powerlifting Organization (IPA).
