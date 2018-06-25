@@ -372,7 +372,7 @@ pub enum SortSelection {
     ByTotal,
     // ByAllometric,
     // ByGlossbrenner,
-    // ByMcCulloch,
+    ByMcCulloch,
     ByWilks,
 }
 
@@ -387,7 +387,7 @@ impl FromStr for SortSelection {
             "by-total" => Ok(SortSelection::ByTotal),
             // "by-allometric" => Ok(SortSelection::ByAllometric),
             // "by-glossbrenner" => Ok(SortSelection::ByGlossbrenner),
-            // "by-mcculloch" => Ok(SortSelection::ByMcCulloch),
+            "by-mcculloch" => Ok(SortSelection::ByMcCulloch),
             "by-wilks" => Ok(SortSelection::ByWilks),
             _ => Err(()),
         }

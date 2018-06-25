@@ -30,6 +30,13 @@ pub fn filter_total(entry: &Entry) -> bool {
     entry.totalkg > WeightKg(0)
 }
 
+/// Whether an `Entry` should be part of `ByMcCulloch` rankings and records.
+#[inline]
+pub fn filter_mcculloch(entry: &Entry) -> bool {
+    // McCulloch points are defined to be zero if DQ.
+    entry.mcculloch > Points(0)
+}
+
 /// Whether an `Entry` should be part of `ByWilks` rankings and records.
 #[inline]
 pub fn filter_wilks(entry: &Entry) -> bool {
@@ -79,6 +86,17 @@ pub fn cmp_total(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
         // If that's equal too, sort by Date, earlier first.
         .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+}
+
+/// Defines an `Ordering` of Entries by McCulloch points.
+#[inline]
+pub fn cmp_mcculloch(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+    // First sort by McCulloch, higher first.
+    a.mcculloch.cmp(&b.mcculloch).reverse()
+        // If equal, sort by Date, earlier first.
+        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
 
 /// Defines an `Ordering` of Entries by Wilks.

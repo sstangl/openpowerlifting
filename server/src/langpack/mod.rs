@@ -225,6 +225,7 @@ pub struct ColumnTranslations {
     pub deadlift: String,
     pub total: String,
     pub wilks: String,
+    pub mcculloch: String,
 }
 
 #[derive(Serialize, Deserialize)]

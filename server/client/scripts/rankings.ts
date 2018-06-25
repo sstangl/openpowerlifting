@@ -25,7 +25,7 @@ declare const translation_column_squat: String;
 declare const translation_column_bench: String;
 declare const translation_column_deadlift: String;
 declare const translation_column_total: String;
-declare const translation_column_wilks: String;
+declare const translation_column_points: String;
 
 let global_grid;
 let global_data;
@@ -87,7 +87,7 @@ function makeDataProvider(cache) {
                 bench: entry[Column.Bench],
                 deadlift: entry[Column.Deadlift],
                 total: entry[Column.Total],
-                wilks: entry[Column.Wilks],
+                points: entry[Column.Points],
             };
         }
     }
@@ -193,7 +193,7 @@ function onLoad() {
         {id: "bench", name: translation_column_bench, field: "bench", width: numberWidth},
         {id: "deadlift", name: translation_column_deadlift, field: "deadlift", width: numberWidth},
         {id: "total", name: translation_column_total, field: "total", width: numberWidth},
-        {id: "wilks", name: translation_column_wilks, field: "wilks", width: numberWidth}
+        {id: "points", name: translation_column_points, field: "points", width: numberWidth}
     ];
 
     let options = {
@@ -227,7 +227,7 @@ function onLoad() {
         global_grid.render();
     });
 
-    let sortcol = "wilks";
+    let sortcol = "points";
     if (selSort.value === "by-squat") {
         sortcol = "squat";
     } else if (selSort.value === "by-bench") {

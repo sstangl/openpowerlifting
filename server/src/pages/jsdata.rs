@@ -5,6 +5,7 @@ use serde::ser::{Serialize, SerializeSeq, Serializer};
 use langpack::{self, Locale};
 use opldb::fields;
 use opldb::{Entry, OplDb};
+use pages::selection::SortSelection;
 
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,
@@ -31,7 +32,10 @@ pub struct JsEntryRow<'db> {
     pub bench: langpack::LocalizedWeightAny,
     pub deadlift: langpack::LocalizedWeightAny,
     pub total: langpack::LocalizedWeightAny,
-    pub wilks: langpack::LocalizedPoints,
+
+    /// Any kind of points: Wilks, McCulloch, etc.
+    /// Only one points system is used at a time.
+    pub points: langpack::LocalizedPoints,
 }
 
 /// Serialize to a compact but definitely less-helpful format
@@ -67,7 +71,7 @@ impl<'db> Serialize for JsEntryRow<'db> {
         seq.serialize_element(&self.bench)?;
         seq.serialize_element(&self.deadlift)?;
         seq.serialize_element(&self.total)?;
-        seq.serialize_element(&self.wilks)?;
+        seq.serialize_element(&self.points)?;
 
         seq.end()
     }
@@ -79,6 +83,7 @@ impl<'db> JsEntryRow<'db> {
         locale: &'db Locale,
         entry: &'db Entry,
         sorted_index: u32,
+        sort: SortSelection,
     ) -> JsEntryRow<'db> {
         let meet = opldb.get_meet(entry.meet_id);
         let lifter = opldb.get_lifter(entry.lifter_id);
@@ -121,7 +126,16 @@ impl<'db> JsEntryRow<'db> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
-            wilks: entry.wilks.in_format(number_format),
+
+            // This should mirror the logic in pages::rankings::Context::new().
+            points: match sort {
+                SortSelection::BySquat
+                | SortSelection::ByBench
+                | SortSelection::ByDeadlift
+                | SortSelection::ByTotal
+                | SortSelection::ByWilks => entry.wilks.in_format(number_format),
+                SortSelection::ByMcCulloch => entry.mcculloch.in_format(number_format),
+            },
         }
     }
 }

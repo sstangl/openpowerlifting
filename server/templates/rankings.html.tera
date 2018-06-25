@@ -19,7 +19,7 @@
     const translation_column_bench = "{{strings.columns.bench}}";
     const translation_column_deadlift = "{{strings.columns.deadlift}}";
     const translation_column_total = "{{strings.columns.total}}";
-    const translation_column_wilks = "{{strings.columns.wilks}}";
+    const translation_column_points = "{{points_column_title}}";
   </script>
 
   <script src="/static/scripts/{{slickgrid_min_js}}"></script>

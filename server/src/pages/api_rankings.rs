@@ -52,7 +52,9 @@ pub fn get_slice<'db>(
     let rows: Vec<JsEntryRow> = list.0[start_row..(end_row + 1)]
         .iter()
         .zip(start_row..)
-        .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32))
+        .map(|(&n, i)| {
+            JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32, selection.sort)
+        })
         .collect();
 
     RankingsSlice { total_length, rows }

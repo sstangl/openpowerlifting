@@ -252,6 +252,7 @@ impl StaticCache {
                 SortSelection::ByBench => &self.constant_time.bench,
                 SortSelection::ByDeadlift => &self.constant_time.deadlift,
                 SortSelection::ByTotal => &self.constant_time.total,
+                SortSelection::ByMcCulloch => &self.constant_time.mcculloch,
                 SortSelection::ByWilks => &self.constant_time.wilks,
             };
 
@@ -399,6 +400,9 @@ impl StaticCache {
             SortSelection::ByTotal => {
                 cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total)
             }
+            SortSelection::ByMcCulloch => {
+                cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
+            }
             SortSelection::ByWilks => {
                 cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks)
             }
@@ -449,6 +453,7 @@ pub struct ConstantTimeCache {
 
     // Points comparisons.
     pub wilks: ConstantTimeBy,
+    pub mcculloch: ConstantTimeBy,
 }
 
 impl ConstantTimeCache {
@@ -469,6 +474,13 @@ impl ConstantTimeCache {
             ),
             total: ConstantTimeBy::new(loglin, mv, ev, &cmp_total, &filter_total),
             wilks: ConstantTimeBy::new(loglin, mv, ev, &cmp_wilks, &filter_wilks),
+            mcculloch: ConstantTimeBy::new(
+                loglin,
+                mv,
+                ev,
+                &cmp_mcculloch,
+                &filter_mcculloch,
+            ),
         }
     }
 }

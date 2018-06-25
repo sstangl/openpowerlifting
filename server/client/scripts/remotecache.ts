@@ -38,7 +38,7 @@ export const enum Column {
     Bench,
     Deadlift,
     Total,
-    Wilks,
+    Points,
 }
 
 // Parameters for a possible remote request.
