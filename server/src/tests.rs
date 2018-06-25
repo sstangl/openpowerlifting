@@ -76,7 +76,10 @@ fn test_pages_load() {
 fn test_small_rankings_pages() {
     let client = client();
     // The BB federation is small and defunct, therefore good for testing.
-    assert_eq!(client.get("/rankings/44/bb").dispatch().status(), Status::Ok);
+    assert_eq!(
+        client.get("/rankings/44/bb").dispatch().status(),
+        Status::Ok
+    );
 }
 
 #[test]

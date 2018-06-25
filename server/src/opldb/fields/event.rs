@@ -16,6 +16,7 @@ impl Event {
     const BITFLAG_SQUAT: u8 = 0b100;
     const BITFLAG_BENCH: u8 = 0b010;
     const BITFLAG_DEADLIFT: u8 = 0b001;
+    const BITFLAG_FULLPOWER: u8 = 0b111;
 
     /// True iff the Event contains a Squat.
     #[inline]
@@ -33,6 +34,12 @@ impl Event {
     #[inline]
     pub fn has_deadlift(&self) -> bool {
         self.0 & Self::BITFLAG_DEADLIFT != 0x0
+    }
+
+    /// True iff the Event is SBD.
+    #[inline]
+    pub fn is_full_power(&self) -> bool {
+        self.0 & Self::BITFLAG_FULLPOWER == Self::BITFLAG_FULLPOWER
     }
 }
 
@@ -108,26 +115,31 @@ mod tests {
         assert!(event.has_squat());
         assert!(event.has_bench());
         assert!(event.has_deadlift());
+        assert!(event.is_full_power());
 
         let event = "BD".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(event.has_deadlift());
+        assert!(!event.is_full_power());
 
         let event = "S".parse::<Event>().unwrap();
         assert!(event.has_squat());
         assert!(!event.has_bench());
         assert!(!event.has_deadlift());
+        assert!(!event.is_full_power());
 
         let event = "B".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(!event.has_deadlift());
+        assert!(!event.is_full_power());
 
         let event = "D".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(!event.has_bench());
         assert!(event.has_deadlift());
+        assert!(!event.is_full_power());
     }
 
     #[test]

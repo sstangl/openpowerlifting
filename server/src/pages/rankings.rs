@@ -27,7 +27,7 @@ impl<'db, 'a> Context<'db, 'a> {
         selection: &'a Selection,
     ) -> Option<Context<'db, 'a>> {
         // Inline the top 100 to avoid another round-trip.
-        let slice = get_slice(&opldb, &locale, &selection, 0, 99)?;
+        let slice = get_slice(&opldb, &locale, &selection, 0, 99);
 
         Some(Context {
             page_title: "Rankings".to_string(),

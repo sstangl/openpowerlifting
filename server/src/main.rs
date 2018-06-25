@@ -341,7 +341,7 @@ fn rankings_api<'db>(
         &selection,
         query.start,
         query.end,
-    )?;
+    );
 
     // TODO: Maybe we can use rocket_contrib::Json, but the lifetimes
     // of the values in `slice` outlive this function, which doesn't work.

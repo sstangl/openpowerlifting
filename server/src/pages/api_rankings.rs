@@ -21,7 +21,7 @@ pub fn get_slice<'db>(
     selection: &Selection,
     start_row: usize, // Inclusive.
     end_row: usize,   // Inclusive. Can be out-of-bounds.
-) -> Option<RankingsSlice<'db>> {
+) -> RankingsSlice<'db> {
     const ROW_LIMIT: usize = 100;
     let mut end_row = end_row;
 
@@ -37,7 +37,10 @@ pub fn get_slice<'db>(
         end_row = total_length - 1;
     }
     if (start_row > end_row) || (start_row >= total_length) {
-        return None;
+        return RankingsSlice {
+            total_length,
+            rows: vec![],
+        };
     }
 
     // Limit the request size to something sane.
@@ -52,5 +55,5 @@ pub fn get_slice<'db>(
         .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32))
         .collect();
 
-    Some(RankingsSlice { total_length, rows })
+    RankingsSlice { total_length, rows }
 }
