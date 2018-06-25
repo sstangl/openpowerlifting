@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { RemoteCache } from './remotecache'
+import { RemoteCache, WorkItem } from './remotecache'
 
 // Appease the TypeScript compiler.
 declare var Slick;
@@ -214,9 +214,9 @@ function onLoad() {
     // Hook up the cache.
     global_grid.onViewportChanged.subscribe(function (e, args) {
         var vp = global_grid.getViewport();
-        cache.ensureData(vp.top, vp.bottom);
+        cache.ensureData({ startRow: vp.top, endRow: vp.bottom });
     });
-    cache.onDataLoaded.subscribe(function (e, args) {
+    cache.onDataLoaded.subscribe(function (e, args: WorkItem) {
         for (var i = args.startRow; i <= args.endRow; ++i) {
             global_grid.invalidateRow(i);
         }

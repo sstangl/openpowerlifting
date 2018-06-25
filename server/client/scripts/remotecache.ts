@@ -13,67 +13,155 @@ declare var Slick;
 let langselect;
 let weightunits;
 
+// Parameters for a possible remote request.
+export interface WorkItem {
+    startRow: number;  // Inclusive.
+    endRow: number;  // Inclusive.
+}
+
+// Data that should be remembered about an AJAX request.
+interface AjaxRequest {
+    handle: XMLHttpRequest;
+    item: WorkItem;
+}
+
 // Creates a data provider for the SlickGrid that understands how to
 // make AJAX requests to a JSON endpoint to gather missing data.
-//
-// magicVersion is a magic string provided by the server on first load.
-// If the server is restarted with new data, our existing data may be invalid,
-// so we need to detect if that happened.
-// That's done by comparing magicVersion strings.
-// This also has the nice benefit of working around AJAX cache issues.
-//
-// length is provided by the server on first load: we need to know how long
-// to make the scrollbar.
-export function RemoteCache(magicVersion: string, initial_json, selection: string, language: string, units: string) {
-    // Try to make requests of this many rows.
-    const REQUEST_LENGTH = 100;
-    // How many milliseconds to wait before trying to make an AJAX call.
-    const AJAXTIMEOUT = 50;
+export function RemoteCache(
+    magicVersion: string,  // Unique checksum of database, for versioning.
+    initialJson,  // Initial data, in the HTML to avoid a round-trip.
+    selection: string,  // Selection string, for forming AJAX URLs.
+    language: string,  // Language code, for including in AJAX requests.
+    units: string  // Units, for including in AJAX requests.
+) {
+    const REQUEST_LENGTH = 100;  // Batch this many rows in one request.
+    const AJAX_TIMEOUT = 50;  // Milliseconds before making AJAX request.
 
-    // The actual cache.
-    let rows = [];
-    for (var i = 0; i < initial_json.rows.length; ++i) {
-        let source = initial_json.rows[i];
-        rows[parseInt(source.sorted_index)] = source;
-    }
-    const length: number = initial_json.total_length;
+    let rows: object[] = [];  // Array of cached row data.
+    const length: number = initialJson.total_length;
 
-    // Private variables for internal state.
-    let activeTimeout = null;
-    let activeAjaxRequest = null;
+    let activeTimeout: number = null;  // Timeout before making AJAX request.
+    let activeAjaxRequest: AjaxRequest = null;
 
-    // Events.
-    const onDataLoading = new Slick.Event();
-    const onDataLoaded = new Slick.Event();
+    // The viewport can update while the AJAX request is still ongoing.
+    // The request is still allowed to finish, but it might have to
+    // make another request with the pendingItem upon completion.
+    let pendingItem: WorkItem = null;
+
+    const onDataLoading = new Slick.Event();  // Data is currently loading.
+    const onDataLoaded = new Slick.Event();  // Data has finished loading.
 
     // Single definition point for defining the URL endpoint.
-    function makeApiUrl(startRow: number, endRow: number): string {
-        startRow = Math.max(startRow, 0);
-        endRow = Math.min(endRow, length - 1);
+    function makeApiUrl(item: WorkItem): string {
+        const startRow = Math.max(item.startRow, 0);
+        const endRow = Math.min(item.endRow, length - 1);
         return `/api/rankings${selection}?start=${startRow}&end=${endRow}&lang=${language}&units=${units}`;
     }
 
-    function clearActiveRequests() {
+    // Given more JSON data, add it to the rows array.
+    function addRows(json): void {
+        for (let i = 0; i < json.rows.length; ++i) {
+            let source = json.rows[i];
+            rows[parseInt(source.sorted_index, 10)] = source;
+        }
+    }
+
+    // Cancels any pending AJAX calls, but does not cancel ongoing ones.
+    function cancelPendingRequests() {
+        /*
         if (activeAjaxRequest !== null) {
-            activeAjaxRequest.abort();
+            activeAjaxRequest.handle.abort();
             activeAjaxRequest = null;
         }
+        */
         if (activeTimeout !== null) {
             clearTimeout(activeTimeout);
             activeTimeout = null;
         }
+        pendingItem = null;
+    }
+
+    // Ask for more data than is actually needed to cut down on the
+    // number of requests.
+    function maximizeItem(item: WorkItem): WorkItem {
+        let startRow = item.startRow;
+        let endRow = item.endRow;
+
+        while (endRow - startRow + 1 < REQUEST_LENGTH
+               && endRow < length - 1
+               && rows[endRow] === undefined)
+        {
+            ++endRow;
+        }
+
+        // Now try the other direction: this handles the scrolling-up case.
+        while (endRow - startRow + 1 < REQUEST_LENGTH
+               && startRow > 0
+               && rows[startRow] === undefined)
+        {
+            --startRow;
+        }
+
+        return { startRow: startRow, endRow: endRow };
+    }
+
+    // Function called by the timeout handler.
+    function makeAjaxRequest(): void {
+        // This function was called by the timeout handler.
+        activeTimeout = null;
+
+        // Sanity checking: if there's already an active AJAX request,
+        // it should just be allowed to finish. When it finishes,
+        // it will automatically queue the next request.
+        if (activeAjaxRequest !== null) {
+            return;
+        }
+
+        // Sanity checking: we have to arrive here with some work to do.
+        if (pendingItem === null) {
+            return;
+        }
+
+        // Pop the pendingItem.
+        // Ask for as much data in the single request as possible.
+        const item = maximizeItem(pendingItem);
+        pendingItem = null;
+
+        let handle = new XMLHttpRequest();
+        handle.open("GET", makeApiUrl(item));
+        handle.responseType = "json";
+        handle.addEventListener("load", function(e) {
+            addRows(activeAjaxRequest.handle.response);
+            activeAjaxRequest = null;
+            onDataLoaded.notify(item);
+
+            // Ensure any pendingItem is resolved if necessary.
+            if (pendingItem !== null && activeTimeout === null) {
+                const item = pendingItem;
+                pendingItem = null;
+                ensureData(item);
+            }
+        });
+        handle.addEventListener("error", function(e) {
+            console.log(e);
+            activeAjaxRequest = null;
+            onDataLoaded.notify(item);
+        });
+
+        activeAjaxRequest = { handle: handle, item: item };
+        activeAjaxRequest.handle.send();
+
+        // Notify that we've started loading some data.
+        onDataLoading.notify(item);
     }
 
     // Check that the data in the given inclusive range is loaded.
     // If not, arrange an AJAX request to load it.
     // This is the main function that does work.
-    function ensureData(startRow: number, endRow: number): void {
-        // The viewport has moved, so clear out any active requests.
-        clearActiveRequests();
-
+    function ensureData(item: WorkItem): void {
         // Ensure sane bounds.
-        startRow = Math.max(startRow, 0);
-        endRow = Math.min(endRow, length - 1);
+        let startRow = Math.max(item.startRow, 0);
+        let endRow = Math.min(item.endRow, length - 1);
 
         // Find the closest row that hasn't been filled in.
         while (startRow < endRow && rows[startRow] !== undefined) {
@@ -91,45 +179,15 @@ export function RemoteCache(magicVersion: string, initial_json, selection: strin
             return;
         }
 
-        // Otherwise, we're making a request.
-        // Ask for more data than is actually needed to cut down on the
-        // number of requests.
-        while (endRow - startRow + 1 < REQUEST_LENGTH
-               && endRow < length - 1
-               && rows[endRow] === undefined)
-        {
-            ++endRow;
+        // Ensure that an AJAX request will be made.
+        pendingItem = { startRow: startRow, endRow: endRow };
+        if (activeTimeout === null) {
+            activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
         }
-
-        // Now try the other direction: this handles the scrolling-up case.
-        while (endRow - startRow + 1 < REQUEST_LENGTH
-               && startRow > 0
-               && rows[startRow] === undefined)
-        {
-            --startRow;
-        }
-
-        // Set a timeout to make an AJAX request.
-        activeTimeout = setTimeout(function() {
-            // Notify that we've started loading some data.
-            onDataLoading.notify({startRow: startRow, endRow: endRow});
-
-            activeAjaxRequest = new XMLHttpRequest();
-            activeAjaxRequest.open("GET", makeApiUrl(startRow, endRow));
-            activeAjaxRequest.responseType = "json";
-            activeAjaxRequest.onload = function(e) {
-                let json = activeAjaxRequest.response;
-                for (var i = 0; i < json.rows.length; ++i) {
-                    let source = json.rows[i];
-                    rows[parseInt(source.sorted_index)] = source;
-                }
-                activeAjaxRequest = null;
-                // Notify that the data loaded successfully.
-                onDataLoaded.notify({startRow: startRow, endRow: endRow});
-            };
-            activeAjaxRequest.send();
-        }, AJAXTIMEOUT);
     }
+
+    // Initialization.
+    addRows(initialJson);
 
     return {
         // Properties.
