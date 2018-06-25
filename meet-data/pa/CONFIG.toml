@@ -12,8 +12,12 @@
     masters3 = {name = "Masters 3",min=59,max=999}
     masters4 = {name = "Masters 4",min=69,max=999}
     masters5 = {name = "Masters 5",min=79,max=999}
-    under17 = {name = "Under 17",min=0,max=17}
-    under16 = {name = "Under 16",min=0,max=17}
+    17plus = {name = "17+",min=17,max=19}
+    under17 = {name = "Under 17",min=0,max=16}
+    under16 = {name = "Under 16",min=0,max=15}
+    under15 = {name = "Under 15",min=0,max=14}
+    under14 = {name = "Under 14",min=0,max=13}
+    under13 = {name = "Under 13",min=0,max=12}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -66,3 +70,4 @@
     1505 = ["check_row_weightclass_sex"]
     1006 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     1018 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
+    0408 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
