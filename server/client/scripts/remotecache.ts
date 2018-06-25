@@ -13,6 +13,34 @@ declare var Slick;
 let langselect;
 let weightunits;
 
+// Column mapping for the server rankings JSON.
+// This should match with the serialization of the JsEntryRow
+// in the Rust server source.
+export const enum Column {
+    SortedIndex,
+    Name,
+    Username,
+    Instagram,
+    Vkontakte,
+    Color,
+    Federation,
+    Date,
+    Country,
+    State,
+    Path,
+    Sex,
+    Equipment,
+    Age,
+    Division,
+    Bodyweight,
+    WeightClass,
+    Squat,
+    Bench,
+    Deadlift,
+    Total,
+    Wilks,
+}
+
 // Parameters for a possible remote request.
 export interface WorkItem {
     startRow: number;  // Inclusive.
@@ -37,7 +65,7 @@ export function RemoteCache(
     const REQUEST_LENGTH = 100;  // Batch this many rows in one request.
     const AJAX_TIMEOUT = 50;  // Milliseconds before making AJAX request.
 
-    let rows: object[] = [];  // Array of cached row data.
+    let rows: ((string | number)[])[] = [];  // Array of cached row data.
     const length: number = initialJson.total_length;
 
     let activeTimeout: number = null;  // Timeout before making AJAX request.
@@ -61,19 +89,14 @@ export function RemoteCache(
     // Given more JSON data, add it to the rows array.
     function addRows(json): void {
         for (let i = 0; i < json.rows.length; ++i) {
-            let source = json.rows[i];
-            rows[parseInt(source.sorted_index, 10)] = source;
+            const source: (string | number)[] = json.rows[i];
+            const index = source[Column.SortedIndex] as number;
+            rows[index] = source;
         }
     }
 
     // Cancels any pending AJAX calls, but does not cancel ongoing ones.
     function cancelPendingRequests() {
-        /*
-        if (activeAjaxRequest !== null) {
-            activeAjaxRequest.handle.abort();
-            activeAjaxRequest = null;
-        }
-        */
         if (activeTimeout !== null) {
             clearTimeout(activeTimeout);
             activeTimeout = null;

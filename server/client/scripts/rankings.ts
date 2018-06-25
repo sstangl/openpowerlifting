@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { RemoteCache, WorkItem } from './remotecache'
+import { RemoteCache, WorkItem, Column } from './remotecache'
 
 // Appease the TypeScript compiler.
 declare var Slick;
@@ -43,48 +43,51 @@ function makeDataProvider(cache) {
     return {
         getLength: function() { return cache.length; },
         getItem: function(idx) {
-            let entry = cache.rows[idx];
+            let entry: (string | number)[] = cache.rows[idx];
             if (entry === undefined) {
                 return;
             }
 
-            let loc = entry.country;
-            if (entry.country && entry.state) {
-                loc = loc + "-" + entry.state;
+            let loc = entry[Column.Country];
+            if (entry[Column.Country] && entry[Column.State]) {
+                loc = loc + "-" + entry[Column.State];
             }
 
-            let name = '<a class="' + entry.color +
-                       '" href="/u/' + entry.username + '">' + entry.name + '</a>';
+            let name = '<a class="' + entry[Column.Color] +
+                '" href="/u/' + entry[Column.Username] + '">' +
+                entry[Column.Name] + '</a>';
 
-            if (entry.instagram) {
-                name += '<a href="https://www.instagram.com/' + entry.instagram +
+            if (entry[Column.Instagram]) {
+                name += '<a href="https://www.instagram.com/' + entry[Column.Instagram] +
                         '" class="instagram" rel="noopener" target="_blank">' +
                         '<i class="fa fa-instagram fa-resize"></i></a>';
             }
 
-            if (entry.vkontakte) {
-                name += '<a href="https://vk.com/' + entry.vkontakte +
+            if (entry[Column.Vkontakte]) {
+                name += '<a href="https://vk.com/' + entry[Column.Vkontakte] +
                         '" class="instagram" rel="noopener" target="_blank">' +
                         '<i class="fa fa-vk fa-resize"></i></a>';
             }
 
+            const date = '<a href="/m/' + entry[Column.Path] + '">' +
+                entry[Column.Date] + '</a>';
 
             return {
-                rank: entry.sorted_index + 1,
+                rank: (entry[Column.SortedIndex] as number) + 1,
                 name: name,
-                fed: entry.federation,
-                date: '<a href="/m/' + entry.path + '">' + entry.date + '</a>',
+                fed: entry[Column.Federation],
+                date: date,
                 loc: loc,
-                sex: entry.sex,
-                age: entry.age,
-                equipment: entry.equipment,
-                weightclass: entry.weightclass,
-                bodyweight: entry.bodyweight,
-                squat: entry.squat,
-                bench: entry.bench,
-                deadlift: entry.deadlift,
-                total: entry.total,
-                wilks: entry.wilks,
+                sex: entry[Column.Sex],
+                age: entry[Column.Age],
+                equipment: entry[Column.Equipment],
+                weightclass: entry[Column.WeightClass],
+                bodyweight: entry[Column.Bodyweight],
+                squat: entry[Column.Squat],
+                bench: entry[Column.Bench],
+                deadlift: entry[Column.Deadlift],
+                total: entry[Column.Total],
+                wilks: entry[Column.Wilks],
             };
         }
     }

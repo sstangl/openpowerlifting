@@ -1,10 +1,11 @@
 //! Types for raw data interchange from Rust to JS.
 
+use serde::ser::{Serialize, SerializeSeq, Serializer};
+
 use langpack::{self, Locale};
 use opldb::fields;
 use opldb::{Entry, OplDb};
 
-#[derive(Serialize)]
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,
 
@@ -31,6 +32,45 @@ pub struct JsEntryRow<'db> {
     pub deadlift: langpack::LocalizedWeightAny,
     pub total: langpack::LocalizedWeightAny,
     pub wilks: langpack::LocalizedPoints,
+}
+
+/// Serialize to a compact but definitely less-helpful format
+/// for JS interchange.
+impl<'db> Serialize for JsEntryRow<'db> {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        let mut seq = serializer.serialize_seq(None)?;
+
+        seq.serialize_element(&self.sorted_index)?;
+
+        seq.serialize_element(&self.name)?;
+        seq.serialize_element(&self.username)?;
+        seq.serialize_element(&self.instagram)?;
+        seq.serialize_element(&self.vkontakte)?;
+        seq.serialize_element(&self.color)?;
+
+        seq.serialize_element(&self.federation)?;
+        seq.serialize_element(&self.date)?;
+        seq.serialize_element(&self.country)?;
+        seq.serialize_element(&self.state)?;
+        seq.serialize_element(&self.path)?;
+
+        seq.serialize_element(&self.sex)?;
+        seq.serialize_element(&self.equipment)?;
+        seq.serialize_element(&self.age)?;
+        seq.serialize_element(&self.division)?;
+        seq.serialize_element(&self.bodyweight)?;
+        seq.serialize_element(&self.weightclass)?;
+        seq.serialize_element(&self.squat)?;
+        seq.serialize_element(&self.bench)?;
+        seq.serialize_element(&self.deadlift)?;
+        seq.serialize_element(&self.total)?;
+        seq.serialize_element(&self.wilks)?;
+
+        seq.end()
+    }
 }
 
 impl<'db> JsEntryRow<'db> {
