@@ -9,7 +9,7 @@
 
 import oplcsv
 import sys
-from wilks import wilks, mcculloch, ageCoeff
+from wilks import wilks, mcculloch
 
 
 def to_string(f):
@@ -54,16 +54,6 @@ def main(filename):
     indexMcCulloch = csv.index('McCulloch')
 
     for row in csv.rows:
-        # Skip any rows that already contain data from the federation.
-        if row[indexWilks]:
-            # Calculate McCulloch points even if the Wilks is provided.
-            # TODO: Check that the Wilks is actually correct!
-            age = row[indexAge].replace('.5', '')  # Round down when unknown.
-            if is_int(age):
-                row[indexMcCulloch] = to_string(
-                    float(row[indexWilks]) * ageCoeff(int(age)))
-            continue
-
         sex = row[indexSex]
         bodyweight = row[indexBodyweight]
         total = row[indexTotal]
@@ -80,14 +70,14 @@ def main(filename):
         total = float(total)
 
         # Add the Wilks score to the row.
-        score = wilks(sex is 'M', bodyweight, total)
+        score = wilks(sex == 'M', bodyweight, total)
         row[indexWilks] = to_string(score)
 
         # Calculate the age-adusted score.
-        age = row[indexAge]
+        age = row[indexAge].replace('.5', '')  # Round down when unknown.
         if is_int(age):
             row[indexMcCulloch] = to_string(
-                mcculloch(sex is 'M', int(age), bodyweight, total))
+                mcculloch(sex == 'M', int(age), bodyweight, total))
         else:
             # Better than just leaving it blank, when we have some data.
             row[indexMcCulloch] = row[indexWilks]
