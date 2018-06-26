@@ -11,10 +11,10 @@
     <option value="82.5"{% if selection.weightclasses == "T82_5" %} selected{% endif %}>{% if units == "Kg" %}-82.5{% else %}-181{% endif %}</option>
     <option value="90"{% if selection.weightclasses == "T90" %} selected{% endif %}>{% if units == "Kg" %}-90{% else %}-198{% endif %}</option>
     <option value="over90"{% if selection.weightclasses == "TOver90" %} selected{% endif %}>{% if units == "Kg" %}90+{% else %}198+{% endif %}</option>
-    <option value="100"{% if selection.weightclasses == "T100" %} selected{% endif %}>{% if units == "Kg" %}100{% else %}-220{% endif %}</option>
-    <option value="110"{% if selection.weightclasses == "T110" %} selected{% endif %}>{% if units == "Kg" %}110{% else %}-242{% endif %}</option>
-    <option value="125"{% if selection.weightclasses == "T125" %} selected{% endif %}>{% if units == "Kg" %}125{% else %}-275{% endif %}</option>
-    <option value="140"{% if selection.weightclasses == "T140" %} selected{% endif %}>{% if units == "Kg" %}140{% else %}-308{% endif %}</option>
+    <option value="100"{% if selection.weightclasses == "T100" %} selected{% endif %}>{% if units == "Kg" %}-100{% else %}-220{% endif %}</option>
+    <option value="110"{% if selection.weightclasses == "T110" %} selected{% endif %}>{% if units == "Kg" %}-110{% else %}-242{% endif %}</option>
+    <option value="125"{% if selection.weightclasses == "T125" %} selected{% endif %}>{% if units == "Kg" %}-125{% else %}-275{% endif %}</option>
+    <option value="140"{% if selection.weightclasses == "T140" %} selected{% endif %}>{% if units == "Kg" %}-140{% else %}-308{% endif %}</option>
     <option value="over140"{% if selection.weightclasses == "TOver140" %} selected{% endif %}>{% if units == "Kg" %}140+{% else %}308+{% endif %}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.weightclass.ipfmen}}">
