@@ -54,7 +54,18 @@ impl WeightKg {
 
     pub fn as_lbs(&self) -> WeightAny {
         let f = (self.0 as f32) * 2.20462262;
-        WeightAny(f.round() as i32)
+
+        // Round down to the hundredth place.
+        let mut rounded = f.round() as i32;
+
+        // If the fractional part is very close to a whole number,
+        // it is likely a rounding error on a meet originally
+        // reported in LBS. Add a correction factor.
+        if (rounded % 100) == 99 {
+            rounded += 1;
+        }
+
+        WeightAny(rounded)
     }
 
     /// Report as the "common name" of the weight class.
@@ -215,6 +226,24 @@ mod tests {
         let w = "-123.456".parse::<WeightKg>().unwrap();
         assert!(w.0 == -12346);
     }
+
+    /// Some results that are initially reported in LBS wind
+    /// up giving slightly-under Kg values.
+    #[test]
+    fn test_weightkg_as_lbs_rounding() {
+        // 1709.99 lbs (reported by federation as 1710).
+        let w = "775.64".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, 1710_00);
+
+        // 1710.02 lbs should be unchanged.
+        let w = "775.65".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, 1710_02);
+
+        // 434.99 lbs (reported by federation as 435).
+        let w = "197.31".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, 435_00);
+    }
+
 
     #[test]
     fn test_weightkg_errors() {
