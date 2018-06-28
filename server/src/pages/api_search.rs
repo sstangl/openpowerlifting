@@ -45,7 +45,7 @@ pub fn search_rankings<'db>(
 
         if lifter.username.contains(&normalized) {
             return SearchRankingsResult {
-                next_index: Some(start_row + i)
+                next_index: Some(i)
             };
         }
     }
