@@ -55,8 +55,6 @@
       {% include "widget-sortselect" %}
     </div>
     <div id="controls-right">
-      {% include "widget-weightunits" %}
-      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -64,8 +62,3 @@
 {% block body %}
   <div id="theGrid"></div>
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-  {% include "widget-weightunits-script" %}
-{% endblock custom_javascript %}

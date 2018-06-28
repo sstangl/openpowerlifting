@@ -7,19 +7,11 @@
   </div>
 {% endblock topbar_hack_end %}
 
-{% block controls %}
-  <div id="controls">
-    <div id="controls-right">
-      {% include "widget-langselect" %}
-    </div>
-  </div>
-{% endblock controls %}
-
 {% block body %}
 <center>
-    <div class="text-content">
+  <div class="text-content">
 
-      <h1>Contact Information</h1>
+    <h1>Contact Information</h1>
 
 <h2>Reporting an Issue</h2>
 
@@ -46,17 +38,6 @@
   <span>&nbsp;&nbsp;&nbsp;</span>
   <a href="https://facebook.com/openpowerlifting"><i class="fa fa-facebook fa-2x"></i></a>
 </p>
-
-
-
-    </div>
+  </div>
 </center>
-
-
-
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-{% endblock custom_javascript %}
-

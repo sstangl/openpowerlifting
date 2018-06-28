@@ -7,16 +7,7 @@
   </div>
 {% endblock topbar_hack_end %}
 
-{% block controls %}
-  <div id="controls">
-    <div id="controls-right">
-      {% include "widget-langselect" %}
-    </div>
-  </div>
-{% endblock controls %}
-
 {% block body %}
-
 <center>
   <div class="text-content">
     <h1>{{page_title}}</h1>
@@ -44,7 +35,3 @@
   </div>
 </center>
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-{% endblock custom_javascript %}

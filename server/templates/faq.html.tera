@@ -7,17 +7,9 @@
   </div>
 {% endblock topbar_hack_end %}
 
-{% block controls %}
-  <div id="controls">
-    <div id="controls-right">
-      {% include "widget-langselect" %}
-    </div>
-  </div>
-{% endblock controls %}
-
 {% block body %}
 <center>
-    <div class="text-content">
+  <div class="text-content">
 
 <h1>Frequently Asked Questions</h1>
 
@@ -115,14 +107,6 @@
 
 <p>You will notice that there are no advertisements on this site: entities have asked to place banner ads, but we have stubbornly refused. This is because advertisements would cause us to optimize for metrics that harm you as a user: time-on-site, cost-per-click, etc. Sites with ads are incentivized to become time-sucking black holes. We'd rather just be inclined to treat you well.</p>
 
-    </div>
+  </div>
 </center>
-
-
-
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-{% endblock custom_javascript %}
-

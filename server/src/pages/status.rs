@@ -12,6 +12,7 @@ pub struct Context<'a> {
     pub page_title: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
+    pub units: opldb::WeightUnits,
     pub fed_statuses: Vec<FederationStatus<'a>>,
     pub num_entries: u32,
     pub num_meets: u32,
@@ -54,8 +55,9 @@ impl<'a> Context<'a> {
 
         Context {
             page_title: &locale.strings.header.status,
-            strings: locale.strings,
             language: locale.language,
+            strings: locale.strings,
+            units: locale.units,
             fed_statuses: fed_statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,

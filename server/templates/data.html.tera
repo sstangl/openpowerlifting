@@ -7,19 +7,9 @@
   </div>
 {% endblock topbar_hack_end %}
 
-{% block controls %}
-  <div id="controls">
-    <div id="controls-right">
-      {% include "widget-langselect" %}
-    </div>
-  </div>
-{% endblock controls %}
-
 {% block body %}
 <center>
-<div class="text-content">
-
-
+  <div class="text-content">
       <h1>OpenPowerlifting Data</h1>
       
         <p>The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data. In support of this mission, all of the OpenPowerlifting data and code is available for download in useful formats. There is no need to scrape this website.</p>
@@ -86,14 +76,6 @@ the changes back so the entire powerlifting community may benefit.</p>
         </div>
 
       </div>
+  </div>
 </center>
-</div>
-
-
-
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-{% endblock custom_javascript %}
-

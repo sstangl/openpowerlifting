@@ -18,8 +18,6 @@
     </div>
     <div id="controls-right">
       <a href="https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
-      {% include "widget-weightunits" %}
-      {% include "widget-langselect" %}
     </div>
   </div>
 {% endblock controls %}
@@ -68,8 +66,3 @@
     </table>
   </div>
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-  {% include "widget-weightunits-script" %}
-{% endblock custom_javascript %}

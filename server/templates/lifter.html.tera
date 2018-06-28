@@ -13,10 +13,6 @@
     <div id="controls-left">
       <span id="lifter">Meet Results for <span class="{{lifter.color}}">{{lifter.name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</span>
     </div>
-    <div id="controls-right">
-      {% include "widget-weightunits" %}
-      {% include "widget-langselect" %}
-    </div>
   </div>
 {% endblock controls %}
 
@@ -64,8 +60,3 @@
     </table>
   </div>
 {% endblock body %}
-
-{% block custom_javascript %}
-  {% include "widget-langselect-script" %}
-  {% include "widget-weightunits-script" %}
-{% endblock custom_javascript %}

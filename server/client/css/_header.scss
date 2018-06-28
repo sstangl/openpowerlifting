@@ -41,15 +41,13 @@ $header-height: 44px;
   color: $primary-color;
 }
 
-.siteinfo {
+#header-right {
   float: right;
   margin-left: auto;
-
-  color: $primary-color;
-  font-size: 9pt;
+  height: $header-height;
 
   /* Push it away from the top-right corner just a little. */
-  padding: 5px 5px 0px 0px;
+  padding: 10px 10px 0px 0px;
 }
 
 .header-logo {
