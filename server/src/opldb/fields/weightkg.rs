@@ -244,7 +244,6 @@ mod tests {
         assert_eq!(w.as_lbs().0, 435_00);
     }
 
-
     #[test]
     fn test_weightkg_errors() {
         assert!("..".parse::<WeightKg>().is_err());

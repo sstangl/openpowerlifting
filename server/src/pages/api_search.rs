@@ -1,7 +1,7 @@
 //! Implements the /api/search endpoints.
 
-use pages::selection::Selection;
 use opldb::OplDb;
+use pages::selection::Selection;
 
 /// JSON return from the /api/search/rankings/ endpoint.
 #[derive(Serialize)]
@@ -45,7 +45,7 @@ pub fn search_rankings<'db>(
 
         if lifter.username.contains(&normalized) {
             return SearchRankingsResult {
-                next_index: Some(i)
+                next_index: Some(i),
             };
         }
     }

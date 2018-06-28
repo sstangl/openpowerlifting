@@ -376,9 +376,8 @@ fn search_rankings_api<'db>(
         Some(path) => pages::selection::Selection::from_path(&path).ok()?,
     };
 
-    let result = pages::api_search::search_rankings(
-        &opldb, &selection, query.start, &query.q
-    );
+    let result =
+        pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
 
     Some(JsonString(serde_json::to_string(&result).ok()?))
 }
@@ -498,7 +497,15 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 robots_txt,
             ],
         )
-        .mount("/", routes![rankings_api, default_rankings_api, search_rankings_api, default_search_rankings_api])
+        .mount(
+            "/",
+            routes![
+                rankings_api,
+                default_rankings_api,
+                search_rankings_api,
+                default_search_rankings_api
+            ],
+        )
         .mount(
             "/",
             routes![
