@@ -55,6 +55,8 @@
       {% include "widget-sortselect" %}
     </div>
     <div id="controls-right">
+      <input type="text" id="searchfield" autofocus disabled style="color: #888888" value="Search coming soon!"/>
+      <button id="searchbutton" style="color: #888888" disabled>{{strings.search}}</button>
     </div>
   </div>
 {% endblock controls %}
