@@ -103,6 +103,7 @@ def main():
     csv.remove_column_by_name('Event')
     csv.remove_column_by_name('LifterID')
     csv.remove_column_by_name('Tested')
+    csv.remove_column_by_name('AgeClass')
 
     # Convert to a big JS array.
     csvtojs.convert(csv, "opldb", sys.stdout)

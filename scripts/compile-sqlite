@@ -55,6 +55,7 @@ CREATE TABLE entries (
   Event CHAR(3),
   Equipment INTEGER NOT NULL,
   Age FLOAT,
+  AgeClass TEXT,
   Division TEXT,
   BodyweightKg FLOAT,
   WeightClassKg FLOAT,
