@@ -4,7 +4,8 @@
 
 'use strict';
 
-import { RemoteCache, WorkItem, Column } from './remotecache'
+import { RemoteCache, WorkItem, Column } from './remotecache';
+import { SearchRankingsResult, SearchWorkItem, RankingsSearcher } from './search';
 
 // Appease the TypeScript compiler.
 declare var Slick;
@@ -30,6 +31,8 @@ declare const translation_column_points: String;
 let global_grid;
 let global_data;
 
+let searcher;
+let searchInfo = {laststr: ''};
 
 let selEquipment: HTMLSelectElement;
 let selWeightClass: HTMLSelectElement;
@@ -37,6 +40,9 @@ let selFed: HTMLSelectElement;
 let selYear: HTMLSelectElement;
 let selSex: HTMLSelectElement;
 let selSort: HTMLSelectElement;
+
+let searchField: HTMLInputElement;
+let searchButton: HTMLButtonElement;
 
 
 function makeDataProvider(cache) {
@@ -97,6 +103,30 @@ function onResize(evt) {
     global_grid.resizeCanvas();
 }
 
+function searchOnEnter(keyevent) {
+    // keyCode is deprecated, but non-Firefox-desktop doesn't support key.
+    if (keyevent.keyCode === 13 || keyevent.key === "Enter") {
+        search();
+    }
+}
+
+function search() {
+    const query = searchField.value;
+    if (!query) {
+        return;
+    }
+
+    let startRow = 0;
+    // If the search string hasn't changed, do a "next"-style search.
+    if (query === searchInfo.laststr) {
+        startRow = global_grid.getViewport().top + 1;
+    }
+
+    // Queue up an AJAX request.
+    searcher.search({query: query, startRow: startRow});
+    searchInfo.laststr = query;
+}
+
 // Returns a string like "/raw/uspa", or the empty string
 // for the default selection.
 function selection_to_path(): string {
@@ -145,6 +175,8 @@ function addEventListeners() {
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
     selSort = document.getElementById("sortselect") as HTMLSelectElement;
+    searchField = document.getElementById("searchfield") as HTMLInputElement;
+    searchButton = document.getElementById("searchbutton") as HTMLButtonElement;
 
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
@@ -152,6 +184,9 @@ function addEventListeners() {
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
     addSelectorListeners(selSort);
+
+    searchField.addEventListener("keypress", searchOnEnter, false);
+    searchButton.addEventListener("click", search, false);
 
     window.addEventListener("resize", onResize, false);
 }
@@ -240,6 +275,16 @@ function onLoad() {
     global_grid.setSortColumn(sortcol, false); // Sort descending.
     global_grid.resizeCanvas();
     global_grid.onViewportChanged.notify();
+
+    // Hook up the searcher.
+    searcher = RankingsSearcher(selection_to_path());
+    searcher.onSearchFound.subscribe(function (e, next_index: number) {
+        const numColumns = global_grid.getColumns().length;
+        global_grid.scrollRowToTop(next_index);
+        for (let i = 0; i < numColumns; ++i) {
+            global_grid.flashCell(next_index, i, 100);
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);

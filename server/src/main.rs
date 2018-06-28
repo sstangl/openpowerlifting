@@ -357,6 +357,40 @@ fn default_rankings_api<'db>(
     rankings_api(None, query, opldb, langinfo)
 }
 
+// TODO: Version / magicValue / etc.
+#[derive(FromForm)]
+struct SearchRankingsApiQuery {
+    q: String,
+    start: usize,
+}
+
+/// API endpoint for rankings search.
+#[get("/api/search/rankings/<selections..>?<query>")]
+fn search_rankings_api<'db>(
+    selections: Option<PathBuf>,
+    query: SearchRankingsApiQuery,
+    opldb: State<ManagedOplDb>,
+) -> Option<JsonString> {
+    let selection = match selections {
+        None => pages::selection::Selection::new_default(),
+        Some(path) => pages::selection::Selection::from_path(&path).ok()?,
+    };
+
+    let result = pages::api_search::search_rankings(
+        &opldb, &selection, query.start, &query.q
+    );
+
+    Some(JsonString(serde_json::to_string(&result).ok()?))
+}
+
+#[get("/api/search/rankings?<query>")]
+fn default_search_rankings_api<'db>(
+    query: SearchRankingsApiQuery,
+    opldb: State<ManagedOplDb>,
+) -> Option<JsonString> {
+    search_rankings_api(None, query, opldb)
+}
+
 #[derive(FromForm)]
 struct OldIndexQuery {
     fed: String,
@@ -464,7 +498,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 robots_txt,
             ],
         )
-        .mount("/", routes![rankings_api, default_rankings_api])
+        .mount("/", routes![rankings_api, default_rankings_api, search_rankings_api, default_search_rankings_api])
         .mount(
             "/",
             routes![
