@@ -3,10 +3,10 @@
 use super::dotenv;
 use super::rocket;
 
-use server::langpack::LangInfo;
+use server::langpack::{LangInfo, Language};
 use server::opldb::OplDb;
 
-use rocket::http::{Cookie, Status};
+use rocket::http::{Cookie, Header, Status};
 use rocket::local::Client;
 
 use std::sync::{Once, ONCE_INIT};
@@ -176,6 +176,32 @@ fn test_static_cache_control() {
     assert!(response.headers().contains("Cache-Control"));
     let cache_control = response.headers().get_one("Cache-Control").unwrap();
     assert!(cache_control.contains("max-age="));
+}
+
+/// Tests that the Accept-Language HTTP header can determine the language.
+#[test]
+fn test_accept_language_header() {
+    // Iterate through all languages and ensure they are handled.
+    for language in Language::string_list() {
+        let content = format!("<html lang=\"{}\"", &language);
+        let client = client();
+        let mut res = client
+            .get("/")
+            .header(Header::new("Accept-Language", language))
+            .dispatch();
+        assert_eq!(res.status(), Status::Ok);
+        assert!(res.body_string().unwrap().contains(&content));
+    }
+
+    // The "lang" cookie should override Accept-Language.
+    let client = client();
+    let mut res = client
+        .get("/")
+        .header(Header::new("Accept-Language", "ru"))
+        .cookie(Cookie::new("lang", "eo"))
+        .dispatch();
+    assert_eq!(res.status(), Status::Ok);
+    assert!(res.body_string().unwrap().contains("<html lang=\"eo\""));
 }
 
 /// Setting the "lang" cookie should change the text language,
