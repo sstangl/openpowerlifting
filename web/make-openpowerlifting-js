@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Conversion script from the openpowerlifting.csv to openpowerlifting.js.
+# Conversion script from the entries.csv to openpowerlifting.js.
 #
 # Does some data transformations along the way to reduce filesize and make
 # the JS logic easier:
@@ -30,7 +30,7 @@ except ImportError:
     import csvtojs
 
 
-ENTRIESCSV = '../build/openpowerlifting.csv'
+ENTRIESCSV = '../build/entries.csv'
 
 
 # Returns the greater of two strings, as interpreted as floats.

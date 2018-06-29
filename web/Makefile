@@ -3,7 +3,7 @@
 BUILDDIR := build
 SCRIPTDIR := ../scripts
 
-PLFILE := ../build/openpowerlifting.csv
+PLFILE := ../build/entries.csv
 PLFILEJS := openpowerlifting.js
 MEETFILE := ../build/meets.csv
 MEETFILEJS := meets.js

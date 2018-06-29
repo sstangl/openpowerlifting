@@ -10,7 +10,7 @@ static OPLDB_INIT: Once = ONCE_INIT;
 pub fn db() -> &'static OplDb {
     const LIFTERS_CSV: &str = "../build/lifters.csv";
     const MEETS_CSV: &str = "../build/meets.csv";
-    const ENTRIES_CSV: &str = "../build/openpowerlifting.csv";
+    const ENTRIES_CSV: &str = "../build/entries.csv";
 
     unsafe {
         OPLDB_INIT.call_once(|| {

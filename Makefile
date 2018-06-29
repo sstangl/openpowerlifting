@@ -3,7 +3,7 @@
 DATADIR := meet-data
 BUILDDIR := build
 
-PLFILE := openpowerlifting.csv
+PLFILE := entries.csv
 PLFILEJS := openpowerlifting.js
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
@@ -18,13 +18,6 @@ csvfile: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
-
-# Generate a large amount of test data: entries.csv with > 10million entries.
-benchdata: builddir
-	mkdir -p "${BUILDDIR}/bench-data"
-	scripts/compile-for-benchmarking "${BUILDDIR}/bench-data" "${DATADIR}" "lifter-data"
-	scripts/csv-bodyweight "${BUILDDIR}/bench-data/${PLFILE}"
-	scripts/csv-wilks "${BUILDDIR}/bench-data/${PLFILE}"
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csvfile

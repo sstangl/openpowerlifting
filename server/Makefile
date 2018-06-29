@@ -29,8 +29,8 @@ data: builddir
 	mkdir -p "${BUILDDIR}/opldb"
 	cp ../build/lifters.csv "${BUILDDIR}/opldb/lifters.csv"
 	cp ../build/meets.csv "${BUILDDIR}/opldb/meets.csv"
-	cp ../build/openpowerlifting.csv "${BUILDDIR}/opldb/openpowerlifting.csv"
-	../scripts/csv-rmcol "${BUILDDIR}/opldb/openpowerlifting.csv" Name
+	cp ../build/entries.csv "${BUILDDIR}/opldb/entries.csv"
+	../scripts/csv-rmcol "${BUILDDIR}/opldb/entries.csv" Name
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"

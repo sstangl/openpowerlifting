@@ -16,7 +16,7 @@ except ImportError:
         os.path.dirname(__file__), '..', 'scripts')))
     import oplcsv
 
-ENTRIESCSV = '../build/openpowerlifting.csv'
+ENTRIESCSV = '../build/entries.csv'
 MEETCSV = '../build/meets.csv'
 SOCIALFILE = '../lifter-data/social-instagram.csv'
 

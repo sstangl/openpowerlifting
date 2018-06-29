@@ -10,15 +10,9 @@ static mut OPLDB_GLOBAL: Option<OplDb> = None;
 static OPLDB_INIT: Once = ONCE_INIT;
 
 fn db() -> &'static OplDb {
-    // TODO: Put the real data back.
-    //
-    // const LIFTERS_CSV: &str = "../build/bench-data/lifters.csv";
-    // const MEETS_CSV: &str = "../build/bench-data/meets.csv";
-    // const ENTRIES_CSV: &str = "../build/bench-data/openpowerlifting.csv";
-    //
     const LIFTERS_CSV: &str = "../build/lifters.csv";
     const MEETS_CSV: &str = "../build/meets.csv";
-    const ENTRIES_CSV: &str = "../build/openpowerlifting.csv";
+    const ENTRIES_CSV: &str = "../build/entries.csv";
 
     unsafe {
         OPLDB_INIT.call_once(|| {

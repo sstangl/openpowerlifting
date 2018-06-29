@@ -476,10 +476,10 @@ def main(builddir, meetdir, lifterdir):
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
 
-    oplcsvpath = builddir + os.sep + 'openpowerlifting.csv'
+    entriescsvpath = builddir + os.sep + 'entries.csv'
     meetscsvpath = builddir + os.sep + 'meets.csv'
 
-    entriescsv.write_filename(oplcsvpath)
+    entriescsv.write_filename(entriescsvpath)
     meetscsv.write_filename(meetscsvpath)
 
     # If these asserts fail, then new columns have been added.

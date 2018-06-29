@@ -25,7 +25,7 @@ def showdbstats():
         # it a try. Otherwise, we're missing the locale altogether.
         locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-    csv = oplcsv.Csv('../build/openpowerlifting.csv')
+    csv = oplcsv.Csv('../build/entries.csv')
     meets = oplcsv.Csv('../build/meets.csv')
 
     num_entries = locale.format('%d', len(csv.rows), grouping=True)

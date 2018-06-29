@@ -23,7 +23,7 @@ def write_without_fieldnames(csv, path):
 
 
 def handle_entries():
-    csv = Csv('build/openpowerlifting.csv')
+    csv = Csv('build/entries.csv')
 
     csv.insert_column(0, 'rowid')
     sexidx = csv.index('Sex')
