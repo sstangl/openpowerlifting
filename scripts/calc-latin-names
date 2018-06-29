@@ -33,7 +33,7 @@ def sub_from(m, c):
         return c
 
 
-def cyrllic_to_latin(s):
+def cyrillic_to_latin(s):
     s = ''.join(list(map(lambda c: sub_from(CyrillicMap, c), s)))
 
     # Fix some common names.
@@ -60,13 +60,14 @@ def main(filename):
 
     if 'Name' not in csv.fieldnames:
         csv.insert_column(intlidx, 'Name')
+        intlidx += 1
 
     nameidx = csv.index('Name')
 
     for row in csv.rows:
         if not row[nameidx]:
             if script == 'Cyrillic':
-                row[nameidx] = cyrllic_to_latin(row[intlidx])
+                row[nameidx] = cyrillic_to_latin(row[intlidx])
             elif script == 'Japanese':
                 temp_name = romkan.to_hepburn(row[intlidx])
                 # Kanji can't be translated, so leave name blank if Kanji

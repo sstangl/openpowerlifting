@@ -155,6 +155,7 @@
     </option>
     <option value="BB">BB - Bogatyr Brotherhood [GPA]</option>
     <option value="FPR">FPR - Russian Powerlifting Federation [IPF] (Incomplete)</option>
+    <option value="NAP">NAP - National Association of Powerlifting [IPA]</option>
     <option value="SCT">SCT - Super-Cup of Titans (Single-ply)</option>
     <option value="WPC-RUS">WPC-RUS - WPC Russia (Incomplete)</option>
     <option value="WRPF">WRPF - World Raw Powerlifting Federation (Incomplete)</option>

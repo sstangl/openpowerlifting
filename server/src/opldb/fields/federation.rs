@@ -137,6 +137,8 @@ pub enum Federation {
     MM,
     #[strum(to_string = "MPA", serialize = "mpa")]
     MPA,
+    #[strum(to_string = "NAP", serialize = "nap")]
+    NAP,
     #[strum(to_string = "NAPF", serialize = "napf")]
     NAPF,
     #[strum(to_string = "NASA", serialize = "nasa")]
@@ -378,6 +380,7 @@ impl MetaFederation {
             MetaFederation::AllRussia => {
                 meet.federation == Federation::BB
                     || meet.federation == Federation::FPR
+                    || meet.federation == Federation::NAP
                     || meet.federation == Federation::SCT
                     || meet.federation == Federation::WPCRUS
                     || meet.federation == Federation::WRPF
