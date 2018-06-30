@@ -1,4 +1,4 @@
-.PHONY: builddir binary data oldstatics config client clientstatics release rebuild-clean clean
+.PHONY: builddir binary data oldstatics config forceclientnpm client clientstatics release rebuild-clean clean
 
 BUILDDIR := build
 BUILDFILE := build.tar.bz2
@@ -7,7 +7,7 @@ all: release
 
 # Test using --release to get the CSV crate to parse more quickly.
 # That way, it's no problem to test over actual data.
-check: client
+check: forceclientnpm client
 	cargo test --release
 
 builddir:
@@ -35,6 +35,9 @@ data: builddir
 config: builddir
 	cp server-production.env "${BUILDDIR}/server.env"
 	cp Rocket.toml "${BUILDDIR}/Rocket.toml"
+
+forceclientnpm:
+	$(MAKE) -C client forcenpm
 
 client:
 	$(MAKE) -C client

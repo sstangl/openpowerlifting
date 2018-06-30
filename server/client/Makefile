@@ -1,4 +1,4 @@
-.PHONY: npminit builddir css scripts oldimages slickgrid package-for-server rebuild-clean clean
+.PHONY: npminit forcenpm builddir css scripts oldimages slickgrid package-for-server rebuild-clean clean
 
 BUILDDIR := build
 OLDWEB := "../../web"
@@ -9,6 +9,9 @@ all: rebuild-clean css scripts oldimages package-for-server
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
 	if [ ! -d "node_modules" ]; then npm install; fi
+
+forcenpm:
+	npm install
 
 builddir:
 	mkdir -p '${BUILDDIR}'
