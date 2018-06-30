@@ -1,6 +1,6 @@
 //! Defines the `Federation` field for the `meets` table.
 
-use opldb::{Entry, Meet, OplDb};
+use opldb::{Entry, Meet};
 
 /// Enum of federations.
 ///
@@ -14,8 +14,8 @@ use opldb::{Entry, Meet, OplDb};
 /// The strum `to_string` value defines the default .to_string() result,
 /// while *all* of to_string and serialize are parseable.
 /// So Federation::APF can be parsed from the strings "APF" and "apf".
-#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter,
-         EnumString)]
+#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, PartialOrd, Ord, Eq,
+         Serialize, EnumIter, EnumString)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     #[strum(to_string = "365Strong", serialize = "365strong")]
@@ -289,8 +289,8 @@ impl MetaFederation {
     ///
     /// Matching is done on Entries instead of on Meets since a MetaFederation
     /// can include Entry-specific information such as Tested status.
-    pub fn contains(self, entry: &Entry, opldb: &OplDb) -> bool {
-        let meet: &Meet = opldb.get_meet(entry.meet_id);
+    pub fn contains(self, entry: &Entry, meets: &Vec<Meet>) -> bool {
+        let meet: &Meet = &meets[entry.meet_id as usize];
 
         match self {
             MetaFederation::AllTested => {

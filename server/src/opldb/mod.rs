@@ -18,6 +18,9 @@ use self::fields::*;
 mod static_cache;
 pub use self::static_cache::*;
 
+mod meet_metadata;
+pub use self::meet_metadata::*;
+
 #[derive(Copy, Clone, Debug, Serialize)]
 pub enum WeightUnits {
     Kg,
@@ -178,6 +181,7 @@ pub struct OplDb {
 
     /// Precalculated caches.
     static_cache: StaticCache,
+    metafed_cache: MetaFederationCache,
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
@@ -209,7 +213,10 @@ fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<Error>> {
 }
 
 /// Reads the `entries.csv` file into a Vec<Entry>.
-fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
+fn import_entries_csv(
+    file: &str,
+    meets: &Vec<Meet>,
+) -> Result<(Vec<Entry>, MetaFederationCache), Box<Error>> {
     let mut vec = Vec::with_capacity(700_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
@@ -218,13 +225,17 @@ fn import_entries_csv(file: &str) -> Result<Vec<Entry>, Box<Error>> {
         vec.push(entry);
     }
 
-    // The entries database is sorted by lifter_id.
+    // Initially, the entries CSV is sorted by meet_id.
+    // This ordering can be used to efficiently calculate meet metadata.
+    let metafed_cache = MetaFederationCache::make(&meets, &vec);
+
+    // Sort the entries database by lifter_id.
     // This invariant allows for extremely efficient lifter-uniqueness
     // filtering without constructing additional data structures.
     vec.sort_unstable_by_key(|e| e.lifter_id);
 
     vec.shrink_to_fit();
-    Ok(vec)
+    Ok((vec, metafed_cache))
 }
 
 impl OplDb {
@@ -237,7 +248,7 @@ impl OplDb {
     ) -> Result<OplDb, Box<Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let meets = import_meets_csv(meets_csv)?;
-        let entries = import_entries_csv(entries_csv)?;
+        let (entries, metafed_cache) = import_entries_csv(entries_csv, &meets)?;
 
         let static_cache = StaticCache::new(&meets, &entries);
 
@@ -246,6 +257,7 @@ impl OplDb {
             meets,
             entries,
             static_cache,
+            metafed_cache,
         })
     }
 
@@ -325,6 +337,12 @@ impl OplDb {
     #[inline]
     pub fn get_static_cache(&self) -> &StaticCache {
         &self.static_cache
+    }
+
+    /// Borrows the MetaFederationCache.
+    #[inline]
+    pub fn get_metafed_cache(&self) -> &MetaFederationCache {
+        &self.metafed_cache
     }
 
     /// Look up the lifter_id by username.

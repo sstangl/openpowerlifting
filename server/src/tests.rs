@@ -62,6 +62,7 @@ fn test_pages_load() {
     assert_eq!(client.get("/").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/rankings/uspa").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/u/seanstangl").dispatch().status(), Status::Ok);
+    assert_eq!(client.get("/mlist").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/m/uspa/0485").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/status").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/data").dispatch().status(), Status::Ok);
@@ -139,10 +140,9 @@ fn test_old_redirects() {
     assert_eq!(response.status(), Status::PermanentRedirect);
     assert_eq!(response.headers().get_one("location").unwrap(), "/");
 
-    // TODO:
-    // let response = client.get("/meetlist.html").dispatch();
-    // assert_eq!(response.status(), Status::PermanentRedirect);
-    // assert_eq!(response.headers().get_one("location").unwrap(), "/m/");
+    let response = client.get("/meetlist.html").dispatch();
+    assert_eq!(response.status(), Status::PermanentRedirect);
+    assert_eq!(response.headers().get_one("location").unwrap(), "/mlist");
 
     let response = client.get("/data.html").dispatch();
     assert_eq!(response.status(), Status::PermanentRedirect);

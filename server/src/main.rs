@@ -226,6 +226,33 @@ fn lifter(
     Some(Ok(Template::render("lifter", &context)))
 }
 
+#[get("/mlist/<mselections..>")]
+fn meetlist(
+    mselections: Option<PathBuf>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let mselection = match mselections {
+        None => pages::meetlist::MeetListSelection::new_default(),
+        Some(p) => pages::meetlist::MeetListSelection::from_path(&p).ok()?,
+    };
+    let locale = make_locale(&langinfo, languages, &cookies);
+    let context = pages::meetlist::Context::new(&opldb, &locale, &mselection);
+    Some(Template::render("meetlist", &context))
+}
+
+#[get("/mlist")]
+fn meetlist_default(
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    meetlist(None, opldb, langinfo, languages, cookies)
+}
+
 #[get("/m/<meetpath..>")]
 fn meet(
     meetpath: PathBuf,
@@ -420,6 +447,11 @@ struct OldMeetQuery {
     m: String,
 }
 
+#[get("/meetlist.html")]
+fn old_meetlist() -> Redirect {
+    Redirect::permanent("/mlist")
+}
+
 #[get("/meet.html?<query>")]
 fn old_meet(opldb: State<ManagedOplDb>, query: OldMeetQuery) -> Option<Redirect> {
     let meetpath = &query.m;
@@ -487,6 +519,8 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 rankings,
                 rankings_redirect,
                 lifter,
+                meetlist,
+                meetlist_default,
                 meet,
                 statics,
                 root_favicon,
@@ -510,6 +544,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
             "/",
             routes![
                 old_lifters,
+                old_meetlist,
                 old_meet,
                 old_index,
                 old_index_query,

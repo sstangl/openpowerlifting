@@ -40,7 +40,7 @@ impl Selection {
                 return Err(());
             }
         } else {
-            // Failed parsing UTF-8;
+            // Failed parsing UTF-8.
             return Err(());
         }
 
@@ -52,8 +52,8 @@ impl Selection {
         let mut parsed_year: bool = false;
         let mut parsed_sort: bool = false;
 
-        // Iterate over each component of the path, attempting to
-        // determine what kind of data it is.
+        // Iterate over each path component, attempting to determine
+        // what kind of data it is.
         for segment in p
             .ancestors()
             .filter_map(|a| a.file_name().and_then(OsStr::to_str))
@@ -87,11 +87,11 @@ impl Selection {
                 ret.sex = s;
                 parsed_sex = true;
             // Check whether this is year information.
-            } else if let Ok(s) = segment.parse::<YearSelection>() {
+            } else if let Ok(y) = segment.parse::<YearSelection>() {
                 if parsed_year {
                     return Err(());
                 }
-                ret.year = s;
+                ret.year = y;
                 parsed_year = true;
             // Check whether this is sort information.
             } else if let Ok(s) = segment.parse::<SortSelection>() {
@@ -359,6 +359,20 @@ impl FromStr for YearSelection {
             "2015" => Ok(YearSelection::Year2015),
             "2014" => Ok(YearSelection::Year2014),
             _ => Err(()),
+        }
+    }
+}
+
+impl YearSelection {
+    #[inline]
+    pub fn as_u32(&self) -> Option<u32> {
+        match self {
+            YearSelection::AllYears => None,
+            YearSelection::Year2018 => Some(2018),
+            YearSelection::Year2017 => Some(2017),
+            YearSelection::Year2016 => Some(2016),
+            YearSelection::Year2015 => Some(2015),
+            YearSelection::Year2014 => Some(2014),
         }
     }
 }

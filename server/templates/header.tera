@@ -1,7 +1,7 @@
 <div id="header">
   <img class="header-logo" src="/static/images/{{logo_compressed_svg}}" alt="OpenPowerlifting"/>
   <a href="/" class="nav__link">{{strings.header.rankings}}</a>
-  <a href="/meetlist.html" class="nav__link">{{strings.header.meets}}</a>
+  <a href="/mlist" class="nav__link">{{strings.header.meets}}</a>
   <a href="/data" class="nav__link">{{strings.header.data}}</a>
   <a href="/status" class="nav__link">{{strings.header.status}}</a>
   <a href="/faq" class="nav__link">{{strings.header.faq}}</a>

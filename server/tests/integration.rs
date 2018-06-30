@@ -18,10 +18,11 @@ mod common;
 #[test]
 fn tested_federations_are_marked_tested() {
     let db = common::db();
+    let meets = db.get_meets();
     let metafed = server::opldb::fields::MetaFederation::AllTested;
 
     for entry in db.get_entries() {
-        if metafed.contains(&entry, &db) {
+        if metafed.contains(&entry, &meets) {
             assert_eq!(
                 true,
                 entry.tested,

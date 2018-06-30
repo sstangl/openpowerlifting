@@ -10,6 +10,7 @@ pub mod data;
 pub mod faq;
 pub mod lifter;
 pub mod meet;
+pub mod meetlist;
 pub mod rankings;
 pub mod status;
 

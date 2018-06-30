@@ -347,11 +347,12 @@ impl StaticCache {
                 );
                 cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
             } else if let FederationSelection::Meta(metafed) = selection.federation {
+                let meets = opldb.get_meets();
                 let filter = NonSortedNonUnique(
                     cur.0
                         .iter()
                         .filter_map(|&i| {
-                            match metafed.contains(opldb.get_entry(i), &opldb) {
+                            match metafed.contains(opldb.get_entry(i), meets) {
                                 true => Some(i),
                                 false => None,
                             }

@@ -1,0 +1,46 @@
+{% extends "desktop-base" %}
+
+{% block includes %}
+  <script src="/static/scripts/{{meetlist_js}}"></script>
+{% endblock includes %}
+
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    {% include "widget-fedselect" %}
+    {% include "widget-yearselect" %}
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="content">
+    <table>
+      <thead>
+        <th>{{strings.columns.federation}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.location}}</th>
+        <th>{{strings.columns.meetname}}</th>
+      </thead>
+      <tbody>
+      {% for meet in meets %}
+        <tr>
+          <td>{{meet.federation}}</td>
+          <td>{{meet.date}}</td>
+          <td>{{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}</td>
+          <td><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% if theres_more %}
+      <p>Some more meets not shown (yet, beta!).</p>
+    {% endif %}
+  </div>
+{% endblock body %}
