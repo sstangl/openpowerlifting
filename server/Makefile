@@ -12,6 +12,7 @@ check: forceclientnpm client
 
 builddir:
 	mkdir -p "${BUILDDIR}"
+	mkdir -p "${BUILDDIR}/data"
 
 binary: builddir
 	cargo build --release
@@ -22,19 +23,19 @@ devdocs:
 	cargo rustdoc --open -- --no-defaults --passes collapse-docs --passes unindent-comments --passes strip-priv-imports
 
 data: builddir
-	mkdir -p "${BUILDDIR}/templates"
-	cp -r templates/* "${BUILDDIR}/templates/"
-	mkdir -p "${BUILDDIR}/translations"
-	cp -r translations/* "${BUILDDIR}/translations/"
-	mkdir -p "${BUILDDIR}/opldb"
-	cp ../build/lifters.csv "${BUILDDIR}/opldb/lifters.csv"
-	cp ../build/meets.csv "${BUILDDIR}/opldb/meets.csv"
-	cp ../build/entries.csv "${BUILDDIR}/opldb/entries.csv"
-	../scripts/csv-rmcol "${BUILDDIR}/opldb/entries.csv" Name
+	mkdir -p "${BUILDDIR}/data/templates"
+	cp -r templates/* "${BUILDDIR}/data/templates/"
+	mkdir -p "${BUILDDIR}/data/translations"
+	cp -r translations/* "${BUILDDIR}/data/translations/"
+	mkdir -p "${BUILDDIR}/data/opldb"
+	cp ../build/lifters.csv "${BUILDDIR}/data/opldb/lifters.csv"
+	cp ../build/meets.csv "${BUILDDIR}/data/opldb/meets.csv"
+	cp ../build/entries.csv "${BUILDDIR}/data/opldb/entries.csv"
+	../scripts/csv-rmcol "${BUILDDIR}/data/opldb/entries.csv" Name
 
 config: builddir
-	cp server-production.env "${BUILDDIR}/server.env"
-	cp Rocket.toml "${BUILDDIR}/Rocket.toml"
+	cp server-production.env "${BUILDDIR}/data/server.env"
+	cp Rocket.toml "${BUILDDIR}/data/Rocket.toml"
 
 forceclientnpm:
 	$(MAKE) -C client forcenpm
@@ -43,10 +44,10 @@ client:
 	$(MAKE) -C client
 
 clientstatics: client
-	mkdir -p "${BUILDDIR}/static"
-	cp -r client/build/* "${BUILDDIR}/static"
-	rm "${BUILDDIR}/templates/static-asset-map.tera"
-	cp client/build/static-asset-map.tera "${BUILDDIR}/templates/"
+	mkdir -p "${BUILDDIR}/data/static"
+	cp -r client/build/* "${BUILDDIR}/data/static"
+	rm "${BUILDDIR}/data/templates/static-asset-map.tera"
+	cp client/build/static-asset-map.tera "${BUILDDIR}/data/templates/"
 
 release: rebuild-clean binary data config oldstatics clientstatics
 	touch "${BUILDDIR}/${BUILDFILE}"

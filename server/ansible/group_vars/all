@@ -1,0 +1,3 @@
+---
+# Python3 is already installed on Fedora hosts.
+ansible_python_interpreter: /usr/bin/python3

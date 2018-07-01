@@ -1,0 +1,36 @@
+---
+- name: make sure openpl-app service is installed
+  template:
+    src: openpl-app.service
+    dest: /etc/systemd/system/openpl-app.service
+  notify: reload systemd
+
+- name: make sure server binary is latest
+  copy:
+    src: build/server
+    dest: "{{ openpl_app_binary_path }}"
+  notify: restart openpl-app
+
+- name: make sure server data is latest
+  synchronize:
+    src: build/data/
+    dest: "{{ openpl_app_data_path }}/"
+    archive: no
+    recursive: yes
+    checksum: yes
+  notify: restart openpl-app
+
+- name: make sure Rocket.toml is latest
+  template:
+    src: Rocket.toml
+    dest: "{{ openpl_app_data_path }}/Rocket.toml"
+  notify: restart openpl-app
+
+- name: make sure selinux permissions are set for httpd_t
+  raw: "chcon --recursive --type=httpd_sys_content_t '{{ openpl_app_data_path }}/'"
+
+- name: make sure app server is running
+  service:
+    name: openpl-app
+    state: started
+    enabled: yes

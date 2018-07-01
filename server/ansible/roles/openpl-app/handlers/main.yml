@@ -1,0 +1,6 @@
+---
+- name: restart openpl-app
+  service:
+    name: openpl-app
+    state: restarted
+    enabled: yes

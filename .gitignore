@@ -25,3 +25,4 @@ target/
 __pycache__
 npm-debug.log
 geckodriver.log
+*.retry

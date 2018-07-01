@@ -570,16 +570,27 @@ fn load_langinfo() -> Result<LangInfo, Box<Error>> {
 }
 
 fn main() -> Result<(), Box<Error>> {
+    // Accept an optional "--set-cwd" argument to manually specify the
+    // current working directory. This allows the binary and the data
+    // to be separated on a production server.
+    let args: Vec<String> = env::args().collect();
+    if args.len() == 3 {
+        if args[1] == "--set-cwd" {
+            let fileroot = Path::new(&args[2]);
+            env::set_current_dir(&fileroot).expect("Invalid --set-cwd argument");
+        }
+    }
+
     // Populate std::env with the contents of any .env file.
-    dotenv::from_filename("server.env")?;
+    dotenv::from_filename("server.env").expect("Couldn't find server.env");
 
     // Ensure that "STATICDIR" is set.
-    env::var("STATICDIR")?;
+    env::var("STATICDIR").expect("STATICDIR envvar not set");
 
     // Load the OplDb.
-    let lifters_csv = env::var("LIFTERS_CSV")?;
-    let meets_csv = env::var("MEETS_CSV")?;
-    let entries_csv = env::var("ENTRIES_CSV")?;
+    let lifters_csv = env::var("LIFTERS_CSV").expect("LIFTERS_CSV not set");
+    let meets_csv = env::var("MEETS_CSV").expect("MEETS_CSV not set");
+    let entries_csv = env::var("ENTRIES_CSV").expect("ENTRIES_CSV not set");
     let opldb = opldb::OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv)?;
     println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
 

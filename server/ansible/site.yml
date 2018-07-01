@@ -1,0 +1,6 @@
+---
+- name: ensure webservers updated and running
+  hosts: webservers
+  roles:
+    - openpl-app
+    - nginx
