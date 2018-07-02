@@ -13,7 +13,7 @@
       <span id="meet">{{meet.federation}} &nbsp;/&nbsp; {{meet.date}} &nbsp;/&nbsp; {{meet.name}}</span>
       <select id="displaytype">
         <option value="wilks">By Wilks</option>
-	<option value="division">By Division</option>
+	<option value="division" disabled>By Division</option>
       </select>
     </div>
     <div id="controls-right">
