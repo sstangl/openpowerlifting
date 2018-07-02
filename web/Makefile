@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile check
+.PHONY: builddir check
 
 BUILDDIR := build
 SCRIPTDIR := ../scripts

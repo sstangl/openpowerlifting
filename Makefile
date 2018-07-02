@@ -1,4 +1,4 @@
-.PHONY: builddir csvfile benchdata check probe travis
+.PHONY: builddir csv benchdata check probe travis
 
 DATADIR := meet-data
 BUILDDIR := build
@@ -8,24 +8,24 @@ PLFILEJS := openpowerlifting.js
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
-all: csvfile web
+all: csv server
 
 builddir:
 	mkdir -p '${BUILDDIR}'
 
 # Cram all the data into a single, huge CSV file.
-csvfile: builddir
+csv: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 
 # Optionally build an SQLite3 version of the database.
-sqlite: csvfile
+sqlite: csv
 	scripts/prepare-for-sqlite
 	scripts/compile-sqlite
 
-web: csvfile
-	$(MAKE) -C web
+server: csv
+	$(MAKE) -C server
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
