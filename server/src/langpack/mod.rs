@@ -39,6 +39,8 @@ pub enum Language {
     sl,
     /// Russian.
     ru,
+    /// Turkish.
+    tr,
     /// Vietnamese.
     vi,
 }
@@ -304,6 +306,7 @@ pub struct LangInfo {
     pl: Option<Translations>,
     sl: Option<Translations>,
     ru: Option<Translations>,
+    tr: Option<Translations>,
     vi: Option<Translations>,
 }
 
@@ -320,6 +323,7 @@ impl LangInfo {
             pl: None,
             sl: None,
             ru: None,
+            tr: None,
             vi: None,
         }
     }
@@ -347,6 +351,7 @@ impl LangInfo {
             Language::pl => self.pl = trans,
             Language::sl => self.sl = trans,
             Language::ru => self.ru = trans,
+            Language::tr => self.tr = trans,
             Language::vi => self.vi = trans,
         };
 
@@ -365,6 +370,7 @@ impl LangInfo {
             Language::pl => self.pl.as_ref().unwrap(),
             Language::sl => self.sl.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
+            Language::tr => self.tr.as_ref().unwrap(),
             Language::vi => self.vi.as_ref().unwrap(),
         }
     }
@@ -505,6 +511,7 @@ impl Language {
             Language::pl => NumberFormat::ArabicComma,
             Language::sl => NumberFormat::ArabicComma,
             Language::ru => NumberFormat::ArabicComma,
+            Language::tr => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
         }
     }

@@ -10,4 +10,5 @@
   <option value="sl" {% if language == "sl" %}selected{% endif %}>Slovenščina</option>
   <option value="fi" {% if language == "fi" %}selected{% endif %}>Suomi</option>
   <option value="vi" {% if language == "vi" %}selected{% endif %}>Tiếng Việt</option>
+  <option value="tr" {% if language == "tr" %}selected{% endif %}>Türkçe</option>
 </select>
