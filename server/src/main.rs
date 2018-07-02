@@ -184,6 +184,11 @@ fn root_favicon(encoding: AcceptEncoding) -> Option<StaticFile> {
     statics(PathBuf::from("images/favicon.ico"), encoding)
 }
 
+#[get("/apple-touch-icon.png")]
+fn root_apple_touch_icon(encoding: AcceptEncoding) -> Option<StaticFile> {
+    statics(PathBuf::from("images/apple-touch-icon.png"), encoding)
+}
+
 #[get("/rankings/<selections..>")]
 fn rankings(
     selections: PathBuf,
@@ -524,6 +529,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 meet,
                 statics,
                 root_favicon,
+                root_apple_touch_icon,
                 status,
                 data,
                 faq,
