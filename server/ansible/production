@@ -1,5 +1,2 @@
 [webservers]
-sfo_deploy_test ansible_host=165.227.26.189 ansible_user=root
-
-[webservers:vars]
-ansible_python_interpreter=/usr/bin/python3
+digitalocean_app_fedora_s_1vcpu_1gb_nyc1_01 ansible_host=206.81.8.222 ansible_user=root

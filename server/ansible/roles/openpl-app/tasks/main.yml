@@ -9,6 +9,8 @@
   copy:
     src: build/server
     dest: "{{ openpl_app_binary_path }}"
+    mode: 0755
+    owner: root
   notify: restart openpl-app
 
 - name: make sure server data is latest

@@ -1,0 +1,9 @@
+---
+- name: ensure the server data directory exists
+  file:
+    path: "{{ openpl_app_data_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+    recurse: yes

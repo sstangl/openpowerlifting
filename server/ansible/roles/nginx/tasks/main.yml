@@ -11,6 +11,12 @@
     dest: /etc/nginx/nginx.conf
   notify: restart nginx
 
+- name: make sure selinux will let nginx proxy_pass
+  seboolean:
+    name: httpd_can_network_connect
+    state: yes
+    persistent: yes
+
 - name: make sure nginx is running
   service:
     name: nginx
