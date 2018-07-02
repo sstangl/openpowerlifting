@@ -35,7 +35,6 @@ data: builddir
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/data/server.env"
-	cp Rocket.toml "${BUILDDIR}/data/Rocket.toml"
 
 forceclientnpm:
 	$(MAKE) -C client forcenpm

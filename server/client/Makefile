@@ -27,6 +27,7 @@ oldimages: builddir
 	cp ${OLDWEB}/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images/"
 	cp ${OLDWEB}/images/select_dropdown.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
+	cp ${PROJECTDATA}/apple-touch-icon.png "${BUILDDIR}/images/"
 
 scripts: builddir npminit slickgrid
 	npm run webpack

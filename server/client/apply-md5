@@ -22,7 +22,7 @@ function hash {
 # the templating system knows nothing about it.
 #
 # Also ignore the stuff hardcoded in the CSS.
-find build/ -type f | grep -v favicon | grep -v select_dropdown | while read path; do
+find build/ -type f | grep -v favicon | grep -v apple-touch-icon | grep -v select_dropdown | while read path; do
 	hashedpath=$(hash "${path}")
 	mv "${path}" "${hashedpath}"
 
