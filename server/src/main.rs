@@ -488,7 +488,7 @@ fn robots_txt() -> &'static str {
 
 #[error(404)]
 fn not_found() -> &'static str {
-    "404 -- Sorry, the Beta site is still being worked on. Check back soon! Send encouragement!"
+    "404"
 }
 
 #[error(500)]
