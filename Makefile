@@ -1,4 +1,4 @@
-.PHONY: builddir csv benchdata check probe travis
+.PHONY: builddir csv sqlite check probe-quick probe deploy clean
 
 DATADIR := meet-data
 BUILDDIR := build
@@ -43,6 +43,10 @@ probe-quick:
 # Run all probes.
 probe:
 	find "${DATADIR}" -name "*-probe" | sort | parallel --keep-order --will-cite
+
+# Push the current version to the webservers.
+deploy:
+	$(MAKE) -C server/ansible
 
 clean:
 	rm -rf '${BUILDDIR}'
