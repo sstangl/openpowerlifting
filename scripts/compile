@@ -47,6 +47,18 @@ def get_lifterid(name):
         return lifterid
 
 
+# Global map of (Name => CyrillicName) mappings.
+CYRILLICNAMEMAP = {
+    'Sean Stangl': 'Шон Стангл'
+}
+
+
+def add_cyrillic_name(latin, cyrillic):
+    global CYRILLICNAMEMAP
+    if cyrillic != "":
+        CYRILLICNAMEMAP[latin] = cyrillic
+
+
 TESTED_FEDERATIONS = [
     "AAU",
     "ADAU",
@@ -249,9 +261,16 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
     newentries.remove_column_by_name("School")
     newentries.remove_column_by_name("Team")
     newentries.remove_column_by_name("State")
-    newentries.remove_column_by_name("CyrillicName")
     newentries.remove_column_by_name("Country-State")
     newentries.remove_column_by_name("College/University")
+
+    # Make use of Cyrillic names.
+    if "CyrillicName" in newentries.fieldnames:
+        nameidx = newentries.index('Name')
+        cyridx = newentries.index('CyrillicName')
+        for row in newentries.rows:
+            add_cyrillic_name(row[nameidx], row[cyridx])
+    newentries.remove_column_by_name("CyrillicName")
 
     # Make use of Japanese Names
     add_international_names(newentries)
@@ -333,6 +352,10 @@ def build_lifterscsv(lifterdir, builddir):
     global LIFTERIDMAP
     assert len(LIFTERIDMAP)
 
+    # The map of Name => CyrillicName has already been populated.
+    global CYRILLICNAMEMAP
+    assert len(CYRILLICNAMEMAP)
+
     # Order by LifterID.
     ordered = sorted(LIFTERIDMAP.items(), key=lambda x: x[1])
 
@@ -366,6 +389,7 @@ def build_lifterscsv(lifterdir, builddir):
     lifterscsv = Csv()
     lifterscsv.append_column('LifterID')
     lifterscsv.append_column('Name')
+    lifterscsv.append_column('CyrillicName')
     lifterscsv.append_column('Username')
     lifterscsv.append_column('Instagram')
     lifterscsv.append_column('VKontakte')
@@ -375,6 +399,10 @@ def build_lifterscsv(lifterdir, builddir):
         instagram = ''
         if name in instagram_map:
             instagram = instagram_map[name]
+
+        cyrname = ''
+        if name in CYRILLICNAMEMAP:
+            cyrname = CYRILLICNAMEMAP[name]
 
         vk = ''
         if name in vk_map:
@@ -386,7 +414,7 @@ def build_lifterscsv(lifterdir, builddir):
 
         username = get_username(name)
 
-        row = [str(lifterid), name, username, instagram, vk, color]
+        row = [str(lifterid), name, cyrname, username, instagram, vk, color]
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'

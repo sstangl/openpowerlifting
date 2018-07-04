@@ -611,3 +611,31 @@ impl Serialize for LocalizedWeightClassAny {
         serializer.serialize_str(&s)
     }
 }
+
+/// Gets the appropriat
+pub fn get_localized_name<'db>(
+    lifter: &'db opldb::Lifter,
+    language: Language,
+) -> &'db str {
+    match language {
+        Language::de => &lifter.name,
+        Language::en => &lifter.name,
+        Language::eo => &lifter.name,
+        Language::es => &lifter.name,
+        Language::fi => &lifter.name,
+        Language::fr => &lifter.name,
+        Language::it => &lifter.name,
+        Language::pl => &lifter.name,
+        Language::pt => &lifter.name,
+        Language::sl => &lifter.name,
+        Language::ru => {
+            if let Some(ref cyr) = lifter.cyrillic_name {
+                cyr
+            } else {
+                &lifter.name
+            }
+        }
+        Language::tr => &lifter.name,
+        Language::vi => &lifter.name,
+    }
+}

@@ -52,6 +52,11 @@ def is_ascii(s):
 def get_database_nameset():
     names = set()
 
+    # For testing -- ensures that each Name only corresponds to at most
+    # one CyrillicName. Conflicts must be resolved manually in the entries.csv.
+    # Map of Name -> CyrillicName.
+    cyrillic_names = {}
+
     for dirname, subdirs, files in os.walk(os.getcwd()):
         if "meet-data" in subdirs:
             subdirs[:] = ['meet-data']
@@ -62,11 +67,22 @@ def get_database_nameset():
         csv = oplcsv.Csv(dirname + os.sep + 'entries.csv')
         if 'Name' in csv.fieldnames:
             nameidx = csv.index('Name')
+
             for row in csv.rows:
-                if row[nameidx] == '' and 'JapaneseName' in csv.fieldnames:
+                name = row[nameidx]
+
+                if 'CyrillicName' in csv.fieldnames:
+                    cyr = row[csv.index('CyrillicName')]
+                    if cyr:
+                        if name in cyrillic_names and cyrillic_names[name] != cyr:
+                            perror("Conflicting CyrillicName for '%s': '%s', '%s'"
+                                   % (name, cyr, cyrillic_names[name]))
+                        cyrillic_names[row[nameidx]] = cyr
+
+                if name == '' and 'JapaneseName' in csv.fieldnames:
                     names.add(row[csv.index('JapaneseName')])
                 else:
-                    names.add(row[nameidx])
+                    names.add(name)
 
     return names
 

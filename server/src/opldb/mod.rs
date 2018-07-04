@@ -44,6 +44,8 @@ impl FromStr for WeightUnits {
 pub struct Lifter {
     #[serde(rename(deserialize = "Name"))]
     pub name: String,
+    #[serde(rename(deserialize = "CyrillicName"))]
+    pub cyrillic_name: Option<String>,
     #[serde(rename(deserialize = "Username"))]
     pub username: String,
     #[serde(rename(deserialize = "Instagram"))]

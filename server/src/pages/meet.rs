@@ -1,7 +1,7 @@
 //! Logic for each meet's individual results page.
 
 use itertools::Itertools;
-use langpack::{self, Language, Locale};
+use langpack::{self, get_localized_name, Language, Locale};
 use opldb;
 use opldb::fields;
 
@@ -60,6 +60,7 @@ pub struct ResultsRow<'a> {
     pub place: String,
     /// The rank in the ranking-by-points view (by Wilks).
     pub rank: u32,
+    pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub sex: &'a str,
     pub age: fields::Age,
@@ -90,6 +91,7 @@ impl<'a> ResultsRow<'a> {
         ResultsRow {
             place: format!("{}", &entry.place),
             rank: rank,
+            localized_name: get_localized_name(&lifter, locale.language),
             lifter: lifter,
             sex: strings.translate_sex(entry.sex),
             age: entry.age,

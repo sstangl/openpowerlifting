@@ -1,6 +1,6 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{self, Language, Locale};
+use langpack::{self, get_localized_name, Language, Locale};
 use opldb;
 use opldb::fields;
 
@@ -8,6 +8,7 @@ use opldb::fields;
 #[derive(Serialize)]
 pub struct Context<'a> {
     pub page_title: String,
+    pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub lifter_sex: &'a str,
     pub language: Language,
@@ -116,6 +117,7 @@ impl<'a> Context<'a> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
+            localized_name: get_localized_name(&lifter, locale.language),
             lifter: lifter,
             lifter_sex: lifter_sex,
             meet_results: meet_results,

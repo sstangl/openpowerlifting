@@ -2,7 +2,7 @@
 
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use langpack::{self, Locale};
+use langpack::{self, get_localized_name, Locale};
 use opldb::fields;
 use opldb::{Entry, OplDb};
 use pages::selection::SortSelection;
@@ -10,8 +10,8 @@ use pages::selection::SortSelection;
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,
 
-    pub name: &'db String,
-    pub username: &'db String,
+    pub name: &'db str,
+    pub username: &'db str,
     pub instagram: &'db Option<String>,
     pub vkontakte: &'db Option<String>,
     pub color: &'db Option<String>,
@@ -20,7 +20,7 @@ pub struct JsEntryRow<'db> {
     pub date: String,
     pub country: &'db str,
     pub state: &'db Option<String>,
-    pub path: &'db String,
+    pub path: &'db str,
 
     pub sex: &'db str,
     pub equipment: &'db str,
@@ -95,7 +95,7 @@ impl<'db> JsEntryRow<'db> {
         JsEntryRow {
             sorted_index,
 
-            name: &lifter.name,
+            name: get_localized_name(lifter, locale.language),
             username: &lifter.username,
             instagram: &lifter.instagram,
             vkontakte: &lifter.vkontakte,

@@ -1,12 +1,12 @@
 Place,Name,CyrillicName,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Division,Age
-1,Yulia Shenkarenko,Юлия Шенкаренко,F,63.3,130,140,150,150,-160,90,100,102.5,102.5,105,170,180,190,190,-200,442.5,67.5,SBD,Wraps,No,Pro Open,28
-2,Heidi Stewart,Heidi Stewart,F,67.5,155,160,-165,160,-165,92.5,-97.5,-97.5,92.5,-97.5,170,190,-202.5,190,,442.5,67.5,SBD,Wraps,No,Pro Open,32
+1,Yulia Shenkarenko,Юлія Шенкаренко,F,63.3,130,140,150,150,-160,90,100,102.5,102.5,105,170,180,190,190,-200,442.5,67.5,SBD,Wraps,No,Pro Open,28
+2,Heidi Stewart,,F,67.5,155,160,-165,160,-165,92.5,-97.5,-97.5,92.5,-97.5,170,190,-202.5,190,,442.5,67.5,SBD,Wraps,No,Pro Open,32
 3,Olga Nasonova,Ольга Насонова,F,64.5,-165,165,175,175,180,80,-82.5,,80,,150,160,-170,160,,415,67.5,SBD,Wraps,No,Pro Open,19
-1,Anna Khudayarov,Anna Khudayarov,F,85.3,215,232.5,-240,232.5,245,115,-127.5,127.5,127.5,-132.5,210,230,237.5,237.5,-240,597.5,90,SBD,Wraps,No,Pro Open,27
+1,Anna Khudayarov,,F,85.3,215,232.5,-240,232.5,245,115,-127.5,127.5,127.5,-132.5,210,230,237.5,237.5,-240,597.5,90,SBD,Wraps,No,Pro Open,27
 1,David Amazyan,Давид Амазян,M,79.7,260,-275,-275,260,-275,145,152.5,157.5,157.5,,260,-282.5,-282.5,260,,677.5,82.5,SBD,Wraps,No,Pro Open,26
 1,Artem Kobanov,Артем Кобанов,M,108.2,-320,320,332.5,332.5,-340,212.5,222.5,227.5,227.5,-230,312.5,322.5,-327.5,322.5,327.5,882.5,110,SBD,Wraps,No,Pro Open,23
 1,Stanislav Shvetsov,Станислав Швецов,M,121.2,370,-385,,370,,230,240,247.5,247.5,,320,335,-345,335,,952.5,125,SBD,Wraps,No,Pro Open,27
-2,Wayne Howlett,Wayne Howlett,M,124.6,320,340,-360,340,,200,220,225,225,,285,300,,300,,865,125,SBD,Wraps,No,Pro Open,35
+2,Wayne Howlett,,M,124.6,320,340,-360,340,,200,220,225,225,,285,300,,300,,865,125,SBD,Wraps,No,Pro Open,35
 3,Vasiliy Omelchenko,Василий Омельченко,M,124,335,-345,,335,,220,227.5,232.5,232.5,-237.5,220,240,260,260,-335,827.5,125,SBD,Wraps,No,Pro Open,41
 1,Yuriy Vartabedyan,Юрий Вартабедьян,M,126,330,340,,340,-345,220,225,232.5,232.5,235,300,-305,,300,,872.5,140,SBD,Wraps,No,Pro Open,23
 1,Andrey Malanichev,Андрей Маланичев,M,149.7,400,420,440,440,,220,240,250,250,,360,380,,380,,1070,140+,SBD,Wraps,No,Pro Open,38
@@ -25,7 +25,7 @@ DQ,Yulia Medvedeva,Юлия Медведева,F,74.5,,,,,,-150,-150,-150,,-150,
 3,Roman Oreshkov,Роман Орешков,M,130,,,,,,250,260,267.5,267.5,-270,,,,,,267.5,140,B,Raw,No,Pro Open,30
 4,Pavel Klimov,Павел Климов,M,134.9,,,,,,230,250,265,265,-270,,,,,,265,140,B,Raw,No,Pro Open,24
 5,Dmitriy Rezaykin,Дмитрий Резайкин,M,130.2,,,,,,250,260,-265,260,,,,,,,260,140,B,Raw,No,Pro Open,31
-1,Murnieks Andrejs,Murnieks Andrejs,M,140.9,,,,,,280,-290,-290,280,-290,,,,,,280,140+,B,Raw,No,Pro Open,34
+1,Murnieks Andrejs,,M,140.9,,,,,,280,-290,-290,280,-290,,,,,,280,140+,B,Raw,No,Pro Open,34
 2,Vladislav Solovev,Владислав Соловьев,M,141.5,,,,,,260,270,-275,270,275,,,,,,270,140+,B,Raw,No,Pro Open,28
 3,Aslanbek Kushkhov,Асланбек Кушхов,M,141,,,,,,260,-285,-285,260,-285,,,,,,260,140+,B,Raw,No,Pro Open,30
 1,Dmitry Nasonov,Дмитрий Насонов,M,73.4,,,,,,,,,,,305,317.5,-326,317.5,326,317.5,75,D,Raw,No,Pro Open,23
@@ -34,7 +34,7 @@ DQ,Yulia Medvedeva,Юлия Медведева,F,74.5,,,,,,-150,-150,-150,,-150,
 1,Stoyan Andreev,Стоян Андреев,M,113.4,,,,,,,,,,,370,385,392.5,392.5,400,392.5,125,D,Raw,No,Pro Open,36
 2,Sergey Daragan,Сергей Дараган,M,120.7,,,,,,,,,,,370,-390,390,390,,390,125,D,Raw,No,Pro Open,36
 3,Aleksey Moskvichyov,Алексей Москвичёв,M,110.8,,,,,,,,,,,345,365,-375,365,-375,365,125,D,Raw,No,Pro Open,33
-4,Vitaliy Alekseev,Виталий Алексеев,M,115,,,,,,,,,,,330,345,360,360,-370,360,125,D,Raw,No,Pro Open,27
+4,Vitaliy Alekseev,Віталій Алєксєєв,M,115,,,,,,,,,,,330,345,360,360,-370,360,125,D,Raw,No,Pro Open,27
 1,Konstantīn Konstantīnovs,Константин Константинов,M,138.6,,,,,,,,,,,350,380,392.5,392.5,,392.5,140,D,Raw,No,Pro Open,36
 2,Oleg Livshits,Олег Лившиц,M,135.4,,,,,,,,,,,360,-380,-380,360,,360,140,D,Raw,No,Pro Open,41
 3,Viktor Krylov,Виктор Крылов,M,127,,,,,,,,,,,300,310,315,315,-320,315,140,D,Raw,No,Pro Open,29

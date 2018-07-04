@@ -146,6 +146,31 @@ def check_column_name(s, row, csv):
         pwarning("Fix name casing: \"%s\"" % s)
 
 
+KnownRussianCharacters = \
+    "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" \
+    "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+
+
+KnownUkrainianCharacters = \
+    "АаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя"
+
+
+# List of UTF-8 characters permitted in the CyrillicName column.
+KnownCyrillicCharacters = \
+    KnownRussianCharacters + KnownUkrainianCharacters \
+    + " -'"
+
+
+def check_column_cyrillicname(s, row, csv):
+    if '  ' in s:
+        perror("CyrillicName has too much spacing: \"%s\"" % s)
+
+    for c in s:
+        if c not in KnownCyrillicCharacters:
+            perror("CyrillicName '%s' doesn't look Cyrillic -- char '%s'" % (s, c))
+            break  # Printing more than one looks annoying.
+
+
 def check_column_sex(s, row, csv):
     if s != "M" and s != "F":
         perror("Unknown sex: %s" % s)
@@ -385,7 +410,7 @@ def ignore_column(s, row, csv):
 
 HeaderHandlers = {
     'Name': check_column_name,
-    'CyrillicName': ignore_column,
+    'CyrillicName': check_column_cyrillicname,
     'JapaneseName': ignore_column,
     'Sex': check_column_sex,
     'Age': check_column_age,
