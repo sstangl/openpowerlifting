@@ -56,7 +56,7 @@
     </div>
     <div id="controls-right">
       <input type="text" id="searchfield" autofocus/>
-      <button id="searchbutton">{{strings.search}}</button>
+      <button id="searchbutton">{{strings.buttons.search}}</button>
     </div>
   </div>
 {% endblock controls %}
