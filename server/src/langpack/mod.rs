@@ -206,6 +206,7 @@ pub struct HeaderTranslations {
     pub status: String,
     pub faq: String,
     pub contact: String,
+    pub shop: String,
     pub supportus: String,
 }
 
