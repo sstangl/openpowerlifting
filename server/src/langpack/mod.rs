@@ -244,6 +244,7 @@ pub struct SelectorTranslations {
     pub sort: SortSelectorTranslations,
     pub year: YearSelectorTranslations,
     pub sex: SexSelectorTranslations,
+    pub fed: FedSelectorTranslations,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -287,6 +288,24 @@ pub struct SexSelectorTranslations {
     pub all: String,
     pub m: String,
     pub f: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct FedSelectorTranslations {
+    pub all: String,
+    pub all_tested: String,
+    pub all_amateur: String,
+    pub international: String,
+    pub regional: String,
+    pub all_usa: String,
+    pub all_argentina: String,
+    pub all_australia: String,
+    pub all_canada: String,
+    pub all_finland: String,
+    pub all_germany: String,
+    pub all_ireland: String,
+    pub all_russia: String,
+    pub all_uk: String,
 }
 
 #[derive(Serialize, Deserialize)]

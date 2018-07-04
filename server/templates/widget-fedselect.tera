@@ -1,8 +1,8 @@
 <select id="fedselect">
-<option value="all" {% if selection.federation == "All" %}selected{% endif %}>All Feds</option>
-<option value="all-tested" {% if selection.federation == "AllTested" %}selected{% endif %}>All Drug-Tested Feds</option>
-<option value="all-amateur" {% if selection.federation == "AllAmateur" %}selected{% endif %}>All Amateur and Optionally Drug-Tested Feds</option>
-<optgroup label="International">
+<option value="all" {% if selection.federation == "All" %}selected{% endif %}>{{strings.selectors.fed.all}}</option>
+<option value="all-tested" {% if selection.federation == "AllTested" %}selected{% endif %}>{{strings.selectors.fed.all_tested}}</option>
+<option value="all-amateur" {% if selection.federation == "AllAmateur" %}selected{% endif %}>{{strings.selectors.fed.all_amateur}}</option>
+<optgroup label="{{strings.selectors.fed.international}}">
   <option value="gpa" {% if selection.federation == "GPA" %}selected{% endif %}>GPA - Global Powerlifting Alliance</option>
   <option value="gpc" {% if selection.federation == "GPC" %}selected{% endif %}>GPC - Global Powerlifting Committee</option>
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF - International Powerlifting Federation</option>
@@ -15,7 +15,7 @@
   <option value="wpf" {% if selection.federation == "WPF" %}selected{% endif %}>WPF - World Powerlifting Federation (Incomplete)</option>
   <option value="wuap" {% if selection.federation == "WUAP" %}selected{% endif %}>WUAP - World United Amateur Powerlifting</option>
 </optgroup>
-<optgroup label="Regional">
+<optgroup label="{{strings.selectors.fed.regional}}">
   <option value="africanpf" {% if selection.federation == "AfricanPF" %}selected{% endif %}>AfricanPF - African Powerlifting Federation [IPF]</option>
   <option value="asianpf" {% if selection.federation == "AsianPF" %}selected{% endif %}>AsianPF - Asian Powerlifting Federation [IPF]</option>
   <option value="commonwealthpf" {% if selection.federation == "CommonwealthPF" %}selected{% endif %}>CommonwealthPF - Commonwealth Powerlifting Federation [IPF]</option>
@@ -26,7 +26,7 @@
   <option value="oceaniapf" {% if selection.federation == "OceaniaPF" %}selected{% endif %}>OceaniaPF - Oceania Powerlifting Federation</option>
 </optgroup>
 <optgroup label="{{strings.country.usa}}">
-  <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>All United States Feds</option>
+  <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>{{strings.selectors.fed.all_usa}}</option>
   <option value="365strong" {% if selection.federation == "365Strong" %}selected{% endif %}>365Strong - 365 Strong Powerlifting Federation</option>
   <option value="aapf" {% if selection.federation == "AAPF" %}selected{% endif %}>AAPF - Amateur American Powerlifting Federation [WPC]</option>
   <option value="aau" {% if selection.federation == "AAU" %}selected{% endif %}>AAU - Amateur Athletic Union</option>
@@ -58,13 +58,13 @@
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
 </optgroup>
 <optgroup label="{{strings.country.argentina}}">
-  <option value="all-argentina" {% if selection.federation == "AllArgentina" %}selected{% endif %}>All Argentinian Feds</option>
+  <option value="all-argentina" {% if selection.federation == "AllArgentina" %}selected{% endif %}>{{strings.selectors.fed.all_argentina}}</option>
   <option value="aap" {% if selection.federation == "AAP" %}selected{% endif %}>AAP - Alianza Argentina Powerlifting [GPA/IPO]</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO - Federación Argentina de Levantamiento de Potencia [IPF]</option>
   <option value="fepoa" {% if selection.federation == "FEPOA" %}selected{% endif %}>FEPOA - Federación de Powerlifting Argentino [GPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.australia}}">
-  <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>All Australian Feds</option>
+  <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>{{strings.selectors.fed.all_australia}}</option>
   <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union</option>
   <option value="capo" {% if selection.federation == "CAPO" %}selected{% endif %}>CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
   <option value="gpc-aus" {% if selection.federation == "GPC-AUS" %}selected{% endif %}>GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
@@ -73,7 +73,7 @@
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.canada}}">
-  <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>All Canadian Feds</option>
+  <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpf" {% if selection.federation == "CPF" %}selected{% endif %}>CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
   <option value="cpl" {% if selection.federation == "CPL" %}selected{% endif %}>CPL - Canadian Powerlifting League [IPL]</option>
   <option value="cpo" {% if selection.federation == "CPO" %}selected{% endif %}>CPO - Canadian Powerlifting Organisation [WPC]</option>
@@ -89,7 +89,7 @@
   <option value="dsf" {% if selection.federation == "DSF" %}selected{% endif %}>DSF - Dansk Styrkeløft Forbund [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.finland}}">
-  <option value="all-finland" {% if selection.federation == "AllFinland" %}selected{% endif %}>All Finnish Feds</option>
+  <option value="all-finland" {% if selection.federation == "AllFinland" %}selected{% endif %}>{{strings.selectors.fed.all_finland}}</option>
   <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA]</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL - Suomen Voimanostoliitto ry [IPF]</option>
 </optgroup>
@@ -97,7 +97,7 @@
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.germany}}">
-  <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>All German Feds</option>
+  <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>{{strings.selectors.fed.all_germany}}</option>
   <option value="bvdk" {% if selection.federation == "BVDK" %}selected{% endif %}>BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>
   <option value="gpu" {% if selection.federation == "GPU" %}selected{% endif %}>GPU - German Powerlifting Union [WPU]</option>
 </optgroup>
@@ -105,7 +105,7 @@
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.ireland}}">
-  <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>All Irish Feds</option>
+  <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>{{strings.selectors.fed.all_ireland}}</option>
   <option value="gpc-irl" {% if selection.federation == "GPC-IRL" %}selected{% endif %}>GPC-IRL - GPC Ireland [GPC]</option>
   <option value="idfpf" {% if selection.federation == "IDFPF" %}selected{% endif %}>IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="irishpf" {% if selection.federation == "IrishPF" %}selected{% endif %}>IrishPF - Irish Powerlifting Federation [IPF]</option>
@@ -137,7 +137,7 @@
   <option value="wpcportugal" {% if selection.federation == "WPC-Portugal" %}selected{% endif %}>WPC-Portugal - WPC Portugal [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.russia}}">
-  <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>All Russian Feds</option>
+  <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>{{strings.selectors.fed.all_russia}}</option>
   <option value="bb" {% if selection.federation == "BB" %}selected{% endif %}>BB - Bogatyr Brotherhood [GPA]</option>
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR - Russian Powerlifting Federation [IPF]</option>
   <option value="nap" {% if selection.federation == "NAP" %}selected{% endif %}>NAP - National Association of Powerlifting [IPA]</option>
@@ -161,7 +161,7 @@
   <option value="wpau" {% if selection.federation == "WPAU" %}selected{% endif %}>WPAU - World Powerlifting Alliance Ukraine [WPA]</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">
-  <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>All United Kingdom Feds</option>
+  <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>{{strings.selectors.fed.all_uk}}</option>
   <option value="abpu" {% if selection.federation == "ABPU" %}selected{% endif %}>ABPU - Amateur British Powerlifting Union [WPC]</option>
   <option value="all-bp" {% if selection.federation == "AllBP" %}selected{% endif %}>BP - British Powerlifting [IPF]</option>
   <option value="bpc" {% if selection.federation == "BPC" %}selected{% endif %}>BPC - British Powerlifting Congress [WPC]</option>
