@@ -112,7 +112,7 @@ impl<'db> MeetInfo<'db> {
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
 pub struct Context<'db> {
-    pub page_title: &'static str,
+    pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: opldb::WeightUnits,
@@ -183,7 +183,7 @@ impl<'db> Context<'db> {
         let total_meets = meets.len();
 
         Context {
-            page_title: "Meet List",
+            page_title: &locale.strings.header.meets,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
