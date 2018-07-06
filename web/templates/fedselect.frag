@@ -173,7 +173,11 @@
     <option value="SSF">SSF - Svenska Styrkelyft Förbundet [IPF]</option>
   </optgroup>
   <optgroup label="Ukraine">
+    <option value="WPA,WPUF">
+      All Ukrainian Feds
+    </option>
     <option value="WPAU">WPAU - World Powerlifting Alliance Ukraine [WPA] (Incomplete)</option>
+    <option value="WPUF">WPUF - World Powerlifting Union of Federations [WPUF] (Incomplete)</option>
   </optgroup>
   <optgroup label="United Kingdom">
     <option value="BP,BPC,BPU,EPA,GPC-GB,NIPF,ScottishPL,WelshPA">

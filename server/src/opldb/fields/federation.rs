@@ -224,6 +224,8 @@ pub enum Federation {
     WPCRUS,
     #[strum(to_string = "WPF", serialize = "wpf")]
     WPF,
+    #[strum(to_string = "WPUF", serialize = "wpuf")]
+    WPUF,
     #[strum(to_string = "WNPF", serialize = "wnpf")]
     WNPF,
     #[strum(to_string = "WRPF", serialize = "wrpf")]
@@ -269,6 +271,8 @@ pub enum MetaFederation {
     AllRussia,
     #[strum(to_string = "all-uk")]
     AllUK,
+    #[strum(to_string = "all-ukraine")]
+    AllUkraine,
     #[strum(to_string = "all-usa")]
     AllUSA,
 
@@ -394,6 +398,9 @@ impl MetaFederation {
                     || meet.federation == Federation::NIPF
                     || meet.federation == Federation::ScottishPL
                     || meet.federation == Federation::WelshPA
+            }
+            MetaFederation::AllUkraine => {
+                meet.federation == Federation::WPAU || meet.federation == Federation::WPUF
             }
             MetaFederation::AllUSA => {
                 meet.federation == Federation::_365Strong

@@ -158,7 +158,9 @@
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF - Svenska Styrkelyft Förbundet [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.ukraine}}">
+  <option value="all-ukraine" {% if selection.federation == "AllUkraine" %}selected{% endif %}>{{strings.selectors.fed.all_ukraine}}</option>
   <option value="wpau" {% if selection.federation == "WPAU" %}selected{% endif %}>WPAU - World Powerlifting Alliance Ukraine [WPA]</option>
+  <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">
   <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>{{strings.selectors.fed.all_uk}}</option>

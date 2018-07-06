@@ -307,6 +307,7 @@ pub struct FedSelectorTranslations {
     pub all_ireland: String,
     pub all_russia: String,
     pub all_uk: String,
+    pub all_ukraine: String,
 }
 
 #[derive(Serialize, Deserialize)]
