@@ -18,7 +18,7 @@ csv: builddir
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
 	scripts/make-data-distribution
-	bzip2 build/openpowerlifting.csv
+	bzip2 -f build/openpowerlifting.csv
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csv
