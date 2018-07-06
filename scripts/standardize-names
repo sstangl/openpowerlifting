@@ -47,7 +47,7 @@ def correct_names(namehash, cyrhash, entriespath):
         if row[nameidx] in namehash:
             changed = True
             row[nameidx] = namehash[row[nameidx]]
-        if cyridx != None and row[cyridx] in cyrhash:
+        if cyridx is not None and row[cyridx] in cyrhash:
             changed = True
             row[cyridx] = cyrhash[row[cyridx]]
 
