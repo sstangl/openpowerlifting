@@ -5,13 +5,14 @@
 # to run over the Name column of all entries.csv files under the cwd,
 # correcting names as it goes.
 #
-# The data file is formatted with one lifter per line, with spellings
+# Each data file is formatted with one lifter per line, with spellings
 # separated by commas, the first spelling being the 'correct' one.
+#
+# NEW! Now handles CyrillicName.
 #
 
 import oplcsv
 import os
-import sys
 
 
 # Creates a hashmap keyed on misspellings.
@@ -34,37 +35,43 @@ def load_names(datafilepath):
     return h
 
 
-def correct_names(namehash, entriespath):
+def correct_names(namehash, cyrhash, entriespath):
     csv = oplcsv.Csv(entriespath)
     assert 'Name' in csv.fieldnames
 
     nameidx = csv.index('Name')
+    cyridx = csv.index('CyrillicName') if 'CyrillicName' in csv.fieldnames else None
 
     changed = False
     for row in csv.rows:
         if row[nameidx] in namehash:
             changed = True
             row[nameidx] = namehash[row[nameidx]]
+        if cyridx != None and row[cyridx] in cyrhash:
+            changed = True
+            row[cyridx] = cyrhash[row[cyridx]]
 
     if changed:
         with open(entriespath, 'w') as fd:
             csv.write(fd)
 
 
-def main(args):
-    if len(args) != 2:
-        print(" Usage: %s datafile" % args[0])
-        return 1
+def main():
+    scriptsdir = os.path.dirname(os.path.realpath(__file__))
+    projectdir = os.path.dirname(scriptsdir)
+    liftersdir = projectdir + os.sep + "lifter-data"
+    meetsdir = projectdir + os.sep + "meet-data"
 
-    namehash = load_names(args[1])
+    namehash = load_names(liftersdir + os.sep + "name-corrections.dat")
+    cyrhash = load_names(liftersdir + os.sep + "cyrillic-name-corrections.dat")
 
-    for dirname, subdirs, files in os.walk(os.getcwd()):
+    for dirname, subdirs, files in os.walk(meetsdir):
         if "meet-data" in subdirs:
             subdirs[:] = ['meet-data']
         if 'entries.csv' in files:
             entriespath = dirname + os.sep + 'entries.csv'
-            correct_names(namehash, entriespath)
+            correct_names(namehash, cyrhash, entriespath)
 
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv))
+    main()
