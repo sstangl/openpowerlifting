@@ -177,33 +177,6 @@ def age_from_birthday(csv, date, birthdays):
         row[ageidx] = str(years)
 
 
-def ageclass_from_agerange(minage, maxage):
-    if maxage <= 18:
-        return '0-18'
-    elif maxage <= 23:
-        return '19-23'
-    elif minage >= 39 and maxage <= 44:
-        return '39-44'
-    elif minage > 44 and maxage <= 49:
-        return '45-49'
-    elif minage > 49 and maxage <= 54:
-        return '50-54'
-    elif minage > 54 and maxage <= 59:
-        return '55-59'
-    elif minage > 59 and maxage <= 64:
-        return '60-64'
-    elif minage > 64 and maxage <= 69:
-        return '65-69'
-    elif minage > 69 and maxage <= 74:
-        return '70-74'
-    elif minage > 74 and maxage <= 79:
-        return '75-79'
-    elif minage > 79:
-        return '80-999'
-    else:
-        return ''
-
-
 def agerange_from_division(csv, configtoml):
     if 'Division' in csv.fieldnames and configtoml:
         dividx = csv.index('Division')
@@ -218,8 +191,8 @@ def agerange_from_division(csv, configtoml):
                 for div_key in divisions:
                     div = divisions[div_key]
                     if row[dividx] == div["name"]:
-                        row[ageclassidx] = ageclass_from_agerange(
-                            div["min"], div["max"])
+                        row[ageclassidx] = str(
+                            div["min"]) + "-" + str(div["max"])
                         break
 
 
@@ -336,8 +309,6 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
 
     # Otherwise, try deriving from BirthYear.
     age_from_birthyear(newentries, date)
-    newentries.remove_column_by_name("BirthYear")
-    newentries.remove_column_by_name("BirthDay")
 
     newentries.append_column('AgeClass')
     agerange_from_division(newentries, configtoml)
@@ -459,7 +430,11 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.append_column('McCulloch')
     entriescsv.append_column('Tested')
     entriescsv.append_column('AgeClass')
-    initial_entriescsv_num_columns = len(entriescsv.fieldnames)
+
+    # We remove these columns later, interpolate_ages needs to use them temporarily
+    entriescsv.append_column('BirthDay')
+    entriescsv.append_column('BirthYear')
+    initial_entriescsv_num_columns = len(entriescsv.fieldnames) - 2
 
     meetscsv.append_column('MeetID')
     meetscsv.append_column('MeetPath')
@@ -500,6 +475,9 @@ def main(builddir, meetdir, lifterdir):
                     meetpath, birthdays, configtoml)
 
     entriescsv = interpolate(entriescsv, meetscsv)
+
+    entriescsv.remove_column_by_name('BirthYear')
+    entriescsv.remove_column_by_name('BirthDay')
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)

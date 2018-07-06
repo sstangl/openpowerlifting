@@ -4,14 +4,14 @@
     special_olympics = {name ="Special Olympics",min=0,max=999}
     paralympics = {name ="Paralympics",min=0,max=999}
     blind = {name ="Blind",min=0,max=999}
-    blind_masters1 = {name ="Blind (Masters 1)",min=39,max=999}
-    juniors = {name = "Juniors",min=0,max=23}
-    subjuniors = {name = "Sub-Juniors",min=0,max=18}
-    masters1 = {name = "Masters 1",min=39,max=999}
-    masters2 = {name = "Masters 2",min=49,max=999}
-    masters3 = {name = "Masters 3",min=59,max=999}
-    masters4 = {name = "Masters 4",min=69,max=999}
-    masters5 = {name = "Masters 5",min=79,max=999}
+    blind_masters1 = {name ="Blind (Masters 1)",min=39.5,max=999}
+    juniors = {name = "Juniors",min=0,max=22.5}
+    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
+    masters1 = {name = "Masters 1",min=39.5,max=999}
+    masters2 = {name = "Masters 2",min=49.5,max=999}
+    masters3 = {name = "Masters 3",min=59.5,max=999}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
+    masters5 = {name = "Masters 5",min=79.5,max=999}
     17plus = {name = "17+",min=17,max=19}
     under17 = {name = "Under 17",min=0,max=16}
     under16 = {name = "Under 16",min=0,max=15}

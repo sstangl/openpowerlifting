@@ -1,13 +1,13 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    juniors = {name = "Juniors",min=0,max=23}
-    subjuniors = {name = "Sub-Juniors",min=0,max=18}
+    juniors = {name = "Juniors",min=0,max=22.5}
+    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
     youthA= {name = "Youth A",min =17,max=18}
     youthB= {name = "Youth B",min =14,max=16}
-    masters1 = {name = "Masters 1",min=39,max=999}
-    masters2 = {name = "Masters 2",min=49,max=999}
-    masters3 = {name = "Masters 3",min=59,max=999}
-    masters4 = {name = "Masters 4",min=69,max=999}
+    masters1 = {name = "Masters 1",min=39.5,max=999}
+    masters2 = {name = "Masters 2",min=49.5,max=999}
+    masters3 = {name = "Masters 3",min=59.5,max=999}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
 
 
 [weightclasses.default_M]

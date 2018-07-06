@@ -27,6 +27,8 @@ mod weightkg;
 pub use self::weightkg::*;
 mod weightclasskg;
 pub use self::weightclasskg::*;
+mod ageclass;
+pub use self::ageclass::*;
 
 #[derive(Clone, Copy, Debug, Deserialize, PartialEq, Serialize)]
 pub enum Sex {

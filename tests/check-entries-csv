@@ -776,24 +776,24 @@ def check_row_division(row, csv, divisions, meetyear):
         if row[csv.index('Division')] == div["name"]:
             if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')].isdigit():
                 approxage = meetyear - int(row[csv.index('BirthYear')])
-                if approxage > int(div["max"]):
+                if approxage > float(div["max"]) + 0.5:
                     pwarning("Lifter \"%s\" is too old(~%s) for division: %s" %
                              (row[csv.index('Name')],
                                  approxage,
                                  row[csv.index('Division')]))
-                elif approxage < int(div["min"]):
+                elif approxage < int(div["min"]) - 0.5:
                     pwarning("Lifter \"%s\" is too young(~%s) for division: %s" %
                              (row[csv.index('Name')],
                                  approxage,
                                  row[csv.index('Division')]))
 
             elif 'Age' in csv.fieldnames and row[csv.index('Age')].isdigit():
-                if int(row[csv.index('Age')]) > div["max"]:
+                if int(row[csv.index('Age')]) > round(div["max"] + 0.5):
                     pwarning("Lifter \"%s\" is too old(%s) for division: %s" %
                              (row[csv.index('Name')],
                                  row[csv.index('Age')],
                                  row[csv.index('Division')]))
-                elif int(row[csv.index('Age')]) < div["min"]:
+                elif int(row[csv.index('Age')]) < round(div["min"] - 0.5):
                     pwarning("Lifter \"%s\" is too young(%s) for division: %s" %
                              (row[csv.index('Name')],
                                  row[csv.index('Age')],
@@ -803,6 +803,23 @@ def check_row_division(row, csv, divisions, meetyear):
 
     pwarning("Lifter \"%s\" has an unknown division: %s" %
              (row[csv.index('Name')], row[csv.index('Division')]))
+
+
+def check_row_ageclass(row, csv):
+    if 'AgeClass' in csv.fieldnames:
+        ageclassidx = csv.index('AgeClass')
+        ageclass = row[ageclassidx]
+
+        if ageclass != '':
+            if '-' not in ageclass:
+                pwarning("Lifter %s has an unrecognised ageclass: %s" %
+                         (row[csv.index('Name')], ageclass))
+            else:
+                [lower, upper] = ageclass.split('-')
+                if (not (lower.replace('.', '').isdigit() and
+                         upper.replace('.', '').isdigit())):
+                    pwarning("Lifter %s has an unrecognised ageclass: %s" %
+                             (row[csv.index('Name')], ageclass))
 
 
 def check_row(row, csv, configtoml, meet_date, meet_id):
@@ -897,6 +914,8 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
     check_row_success_consistency(
         row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
+
+    check_row_ageclass(row, csv)
 
     # Check individual cell values in isolation.
     for i, text in enumerate(row):

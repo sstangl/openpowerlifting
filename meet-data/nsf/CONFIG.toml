@@ -1,11 +1,11 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    juniors = {name = "Junior 19-23",min=19,max=23}
-    subjuniors = {name = "Teen 14-18",min=14,max=18}
-    master = {name = "Master",min=39,max=999}
-    master4049 = {name = "Master 40-49",min=39,max=49}
-    master5059 = {name = "Master 50-59",min=49,max=59}
-    master6069 = {name = "Master 60-69",min=59,max=69}
+    juniors = {name = "Junior 19-23",min=18.5,max=22.5}
+    subjuniors = {name = "Teen 14-18",min=14,max=17.5}
+    master = {name = "Master",min=39.5,max=999}
+    master4049 = {name = "Master 40-49",min=39.5,max=49.5}
+    master5059 = {name = "Master 50-59",min=49.5,max=59.5}
+    master6069 = {name = "Master 60-69",min=59.5,max=69.5}
     master70 = {name = "Master +70",min=70,max=999}
 
 [weightclasses.default_M]

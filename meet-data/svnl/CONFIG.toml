@@ -1,15 +1,15 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
     under14 = {name = "Under 14",min=0,max=14}
-    under15 = {name = "Under 15",min=0,max=15}    
-    under17 = {name = "Under 17",min=0,max=17}    
-    under18 = {name = "Under 18",min=0,max=18}    
-    under20 = {name = "Under 20",min=0,max=20}
-    under23 = {name = "Under 23",min=0,max=23}
-    over40 = {name = "Over 40",min=39,max=999}
-    over50 = {name = "Over 50",min=49,max=999}
-    over60 = {name = "Over 60",min=59,max=999}
-    over70 = {name = "Over 70",min=69,max=999}
+    under15 = {name = "Under 15",min=0,max=15}
+    under17 = {name = "Under 17",min=0,max=17}
+    under18 = {name = "Under 18",min=0,max=17.5}
+    under20 = {name = "Under 20",min=0,max=19.5}
+    under23 = {name = "Under 23",min=0,max=22.5}
+    over40 = {name = "Over 40",min=39.5,max=999}
+    over50 = {name = "Over 50",min=49.5,max=999}
+    over60 = {name = "Over 60",min=59.5,max=999}
+    over70 = {name = "Over 70",min=69.5,max=999}
     paralympics = {name = "Paralympics",min=0,max=999}
 
 [weightclasses.default_M]
@@ -64,8 +64,8 @@
 [exclusions]
     15008 = ["check_row_division"]
     16063 = ["check_row_division"]
-    16064 = ["check_row_division"] 
-    16016 = ["check_row_division"] 
+    16064 = ["check_row_division"]
+    16016 = ["check_row_division"]
     83004 = ["check_row_weightclass_sex"]
     80005 = ["check_row_weightclass_sex"]
     11002 = ["check_row_weightclass_sex"]

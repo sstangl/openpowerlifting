@@ -137,7 +137,7 @@ pub struct Entry {
     #[serde(rename(deserialize = "Tested"), deserialize_with = "deserialize_yes_no")]
     pub tested: bool,
     #[serde(rename(deserialize = "AgeClass"))]
-    pub ageclass: Option<String>,
+    pub ageclass: AgeClass,
 }
 
 impl Entry {
