@@ -313,6 +313,10 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
     newentries.append_column('AgeClass')
     agerange_from_division(newentries, configtoml)
 
+    # The Name column is used above to create the LifterID,
+    # but it should not be written into the entries.csv.
+    newentries.remove_column_by_name("Name")
+
     entriescsv.cat(newentries)
     meetscsv.cat(newmeet)
 
@@ -401,7 +405,6 @@ def main(builddir, meetdir, lifterdir):
     # If this list is modified, also modify scripts/compile-sqlite.
     entriescsv.append_column('MeetID')
     entriescsv.append_column('LifterID')
-    entriescsv.append_column('Name')
     entriescsv.append_column('Sex')
     entriescsv.append_column('Event')
     entriescsv.append_column('Equipment')
