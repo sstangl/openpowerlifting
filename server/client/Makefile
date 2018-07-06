@@ -1,10 +1,9 @@
-.PHONY: npminit forcenpm builddir css scripts oldimages slickgrid package-for-server rebuild-clean clean
+.PHONY: npminit forcenpm builddir css scripts images slickgrid package-for-server rebuild-clean clean
 
 BUILDDIR := build
-OLDWEB := "../../web"
 PROJECTDATA := "../../project-data"
 
-all: rebuild-clean css scripts oldimages package-for-server
+all: rebuild-clean css scripts images package-for-server
 
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
@@ -22,10 +21,10 @@ builddir:
 css: builddir npminit
 	npm run sass
 
-oldimages: builddir
+images: builddir
 	cp ${PROJECTDATA}/logo-compressed.svg "${BUILDDIR}/images/"
-	cp ${OLDWEB}/images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images/"
-	cp ${OLDWEB}/images/select_dropdown.png "${BUILDDIR}/images/"
+	cp images/patreon_navigation_logo_mini_orange.png "${BUILDDIR}/images/"
+	cp images/select_dropdown.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
 	cp ${PROJECTDATA}/apple-touch-icon.png "${BUILDDIR}/images/"
 
@@ -39,7 +38,7 @@ slickgrid: builddir
 	    "${SLICKGRID}/lib/jquery.event.drop-2.3.0.js" \
 	    "${SLICKGRID}/slick.core.js" \
 	    "${SLICKGRID}/slick.grid.js" \
-	    | "${OLDWEB}/try-uglify" "${BUILDDIR}/scripts/slickgrid.min.js"
+	    | ./try-uglify "${BUILDDIR}/scripts/slickgrid.min.js"
 
 package-for-server:
 	# Rewrite all the filenames to contain their hash.
