@@ -20,8 +20,14 @@ pub fn search_rankings<'db>(
     // This tries to make it look like a username, since we're
     // just doing comparisons on the username.
     // TODO: Handle non-ASCII UTF-8 characters.
-    let mut normalized: String = query.to_ascii_lowercase();
-    normalized = normalized.replace(" ", "");
+    let lowercase: String = query.to_ascii_lowercase();
+
+    let normalized: String = lowercase.replace(" ", "");
+    let backwards: String = lowercase
+        .split_whitespace()
+        .rev()
+        .collect::<Vec<&str>>()
+        .join("");
 
     // Disallow bogus searches.
     if normalized.len() == 0 {
@@ -43,7 +49,7 @@ pub fn search_rankings<'db>(
         let entry = opldb.get_entry(list.0[i]);
         let lifter = opldb.get_lifter(entry.lifter_id);
 
-        if lifter.username.contains(&normalized) {
+        if lifter.username.contains(&normalized) || lifter.username.contains(&backwards) {
             return SearchRankingsResult {
                 next_index: Some(i),
             };
