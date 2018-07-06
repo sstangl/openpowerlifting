@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# vim: set ts=4 sts=4 et sw=4 tw=99:
+#
+# This script bundles the {entries.csv, meets.csv, lifters.csv} files
+# into a single, huge openpowerlifting.csv for distribution on the Data page.
+#
+# People were having difficulty cross-referencing the various files, because
+# that required some coding. This makes it easier on them at the cost of
+# making the file much larger.
+#
+
+import oplcsv
+import os
+
+
+def build_lifterid_to_name_map(lifterspath):
+    csv = oplcsv.Csv(lifterspath)
+    ididx = csv.index('LifterID')
+    nameidx = csv.index('Name')
+
+    h = {}
+    for row in csv.rows:
+        h[row[ididx]] = row[nameidx]
+    return h
+
+
+def main():
+    scriptsdir = os.path.dirname(os.path.realpath(__file__))
+    projectdir = os.path.dirname(scriptsdir)
+    builddir = projectdir + os.sep + "build"
+
+    entriespath = builddir + os.sep + "entries.csv"
+    meetspath = builddir + os.sep + "meets.csv"
+    lifterspath = builddir + os.sep + "lifters.csv"
+    targetpath = builddir + os.sep + "openpowerlifting.csv"
+
+    lifterid_map = build_lifterid_to_name_map(lifterspath)
+
+    meetscsv = oplcsv.Csv(meetspath)
+    csv = oplcsv.Csv(entriespath)
+
+    csv.insert_column(csv.index('LifterID'), "Name")
+    csv.append_columns(['Federation', 'Date', 'MeetCountry', 'MeetState', 'MeetName'])
+
+    meetididx = csv.index('MeetID')
+    ididx = csv.index('LifterID')
+    nameidx = csv.index('Name')
+    fedidx = csv.index('Federation')
+    dateidx = csv.index('Date')
+    countryidx = csv.index('MeetCountry')
+    stateidx = csv.index('MeetState')
+    meetnameidx = csv.index('MeetName')
+
+    for row in csv.rows:
+        meetrow = meetscsv.rows[int(row[meetididx])]
+        assert meetrow[meetscsv.index('MeetID')] == row[meetididx]
+
+        row[nameidx] = lifterid_map[row[ididx]]
+        row[fedidx] = meetrow[meetscsv.index('Federation')]
+        row[dateidx] = meetrow[meetscsv.index('Date')]
+        row[countryidx] = meetrow[meetscsv.index('MeetCountry')]
+        row[stateidx] = meetrow[meetscsv.index('MeetState')]
+        row[meetnameidx] = meetrow[meetscsv.index('MeetName')]
+
+    csv.remove_column_by_name('MeetID')
+    csv.remove_column_by_name('LifterID')
+
+    csv.write_filename(targetpath)
+
+
+if __name__ == '__main__':
+    main()

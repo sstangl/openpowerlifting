@@ -4,7 +4,6 @@ DATADIR := meet-data
 BUILDDIR := build
 
 PLFILE := entries.csv
-PLFILEJS := openpowerlifting.js
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
@@ -18,6 +17,8 @@ csv: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
 	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
+	scripts/make-data-distribution
+	bzip2 build/openpowerlifting.csv
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csv
