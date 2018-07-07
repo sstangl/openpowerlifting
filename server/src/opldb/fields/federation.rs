@@ -107,6 +107,9 @@ pub enum Federation {
     #[serde(rename = "GPC-NZ")]
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
+    #[serde(rename = "GPC-RUS")]
+    #[strum(to_string = "GPC-RUS", serialize = "gpc-rus")]
+    GPCRUS,
     #[strum(to_string = "GPU", serialize = "gpu")]
     GPU,
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
@@ -117,6 +120,8 @@ pub enum Federation {
     IDFPF,
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
+    #[strum(to_string = "IPC", serialize = "ipc")]
+    IPC,
     #[strum(to_string = "IPF", serialize = "ipf")]
     IPF,
     #[strum(to_string = "IPL", serialize = "ipl")]
@@ -267,6 +272,8 @@ pub enum MetaFederation {
     AllGermany,
     #[strum(to_string = "all-ireland")]
     AllIreland,
+    #[strum(to_string = "all-israel")]
+    AllIsrael,
     #[strum(to_string = "all-russia")]
     AllRussia,
     #[strum(to_string = "all-uk")]
@@ -381,9 +388,13 @@ impl MetaFederation {
                     || meet.federation == Federation::IrishPF
                     || meet.federation == Federation::IrishPO
             }
+            MetaFederation::AllIsrael => {
+                meet.federation == Federation::IPC || meet.federation == Federation::NPA
+            }
             MetaFederation::AllRussia => {
                 meet.federation == Federation::BB
                     || meet.federation == Federation::FPR
+                    || meet.federation == Federation::GPCRUS
                     || meet.federation == Federation::NAP
                     || meet.federation == Federation::SCT
                     || meet.federation == Federation::WPCRUS

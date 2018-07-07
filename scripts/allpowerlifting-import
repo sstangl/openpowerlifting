@@ -53,7 +53,11 @@ def getmeetinfo(soup):
     # Get the location.
     venuerow = fedrow.find_next_sibling()
     venue = venuerow.find_all('td')[1].text
-    [country, town] = venue.split(', ')
+    if ', ' in venue:
+        [country, town] = venue.split(', ')
+    else:
+        country = venue
+        town = ''
 
     # Get the date.
     daterow = venuerow.find_next_sibling()
@@ -101,19 +105,28 @@ def getresults(soup, url):
     subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
     csv = getpagedata(subpage_soup)
 
-    russian_names = get_cyrillic_names(url)
+    # For some reason BirthYear sometimes vanishes when we show all attempts,
+    # so grab it with the Russian names
+    url = url.replace('?all_attempts=1', '')
+
+    [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
     csv.append_column('CyrillicName')
     cyrnameidx = csv.index('CyrillicName')
     nameidx = csv.index('Name')
+
+    if 'BirthYear' not in csv.fieldnames:
+        csv.append_column('BirthYear')
+    byidx = csv.index('BirthYear')
+
     for ii in range(len(csv.rows)):
         if csv.rows[ii][nameidx] != russian_names[ii]:
             csv.rows[ii][cyrnameidx] = russian_names[ii]
 
+        csv.rows[ii][byidx] = birthyears[ii]
+
     csv.append_column('SheetName')
     for row in csv.rows:
         row[-1] = div_name
-
-    url = url.replace('?all_attempts=1', '')
 
     if len(links) > 1:
         for link in links:
@@ -126,14 +139,22 @@ def getresults(soup, url):
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
 
-            russian_names = get_cyrillic_names(subpage_url)
+            [russian_names, birthyears] = get_cyrillic_names_and_birthyears(
+                subpage_url.replace('?all_attempts=1', ''))
             subpage_csv.append_column('CyrillicName')
 
             cyrnameidx = subpage_csv.index('CyrillicName')
             nameidx = subpage_csv.index('Name')
+
+            if 'BirthYear' not in csv.fieldnames:
+                csv.append_column('BirthYear')
+            byidx = csv.index('BirthYear')
+
             for ii in range(len(subpage_csv.rows)):
                 if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
                     subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
+
+                csv.rows[ii][byidx] = birthyears[ii]
 
             subpage_csv.append_column('SheetName')
             for row in subpage_csv.rows:
@@ -144,14 +165,15 @@ def getresults(soup, url):
     return csv
 
 
-# Returns just the Russian names for lifters
-def get_cyrillic_names(url):
+# Returns just the Russian names and BirthYears for lifters
+def get_cyrillic_names_and_birthyears(url):
     # Get the html for the Russian site
     html = gethtml(url.replace('http://en.', 'http://'))
 
     soup = BeautifulSoup(html, 'html.parser')
 
     names = []
+    birthyears = []
 
 
 # Get the results table.
@@ -164,9 +186,14 @@ def get_cyrillic_names(url):
     # Get column information.
     headers = [x.text for x in trs[0].find_all('th')]
     nameidx = None
+    byidx = None
     for ii in range(len(headers)):
         if headers[ii] == 'Спортсмен':
             nameidx = ii
+        elif headers[ii] == 'ГР':
+            byidx = ii
+
+        if nameidx and byidx:
             break
 
     assert nameidx is not None
@@ -177,11 +204,17 @@ def get_cyrillic_names(url):
         if len(row) > 1:
             tds = tr.find_all('td')
             name = tds[nameidx].text
-            name = name.replace('e', 'е').replace('x', 'х')
 
             names.append(name)
 
-    return names
+            if byidx:
+                by = tds[byidx].text
+            else:
+                by = ''
+
+            birthyears.append(by)
+
+    return [names, birthyears]
 
 
 def getpagedata(soup):
@@ -238,7 +271,11 @@ def getpagedata(soup):
             csv.fieldnames += ['Best3DeadliftKg']
         elif h == 'Total':
             csv.fieldnames += ['TotalKg']
+        elif h == 'Nat':
+            csv.fieldnames += ['Country']
         elif h == 'G':
+            csv.fieldnames += ['IGNORE']
+        elif h == 'R':
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
@@ -272,6 +309,11 @@ def getpagedata(soup):
             row = []
             for td in tr.find_all('td'):
                 text = td.text
+
+                # Get the country data
+                if text == '' and td.has_attr('id') and 'LocationID' in td['id']:
+                    text = td.a['title']
+
                 spans = td.find_all('span')
 
                 if len(spans) == 2 and spans[1]['class'] == ['result-value-fail']:
@@ -346,12 +388,14 @@ def unreverse_names(csv):
             '\(.*?\)', '', row[cyrillicnameidx]).strip()
 
         parts = row[nameidx].split()
-        fixed = [parts[-1]] + parts[:-1]
-        row[nameidx] = ' '.join(fixed)
+        if len(parts) > 1:
+            fixed = [parts[-1]] + parts[:-1]
+            row[nameidx] = ' '.join(fixed)
 
         parts = row[cyrillicnameidx].split()
-        fixed = [parts[-1]] + parts[:-1]
-        row[cyrillicnameidx] = ' '.join(fixed)
+        if len(parts) > 1:
+            fixed = [parts[-1]] + parts[:-1]
+            row[cyrillicnameidx] = ' '.join(fixed)
 
 
 def markevent(csv):
@@ -392,6 +436,15 @@ def markevent(csv):
                 break
         row[evtidx] = evt
 
+# Replace random english characters that AllPowerlifting uses with unicode alternatives
+
+
+def fix_cyrillic_names(csv):
+    if 'CyrillicName' in csv.fieldnames:
+        cyridx = csv.index('CyrillicName')
+        for row in csv.rows:
+            row[cyridx] = row[cyridx].replace('e', 'э').replace('x', 'х')
+
 
 def remove_empty_cols_ignore_fieldname(csv):
     def iscolempty(csv, i):
@@ -431,6 +484,10 @@ def main(url):
     if 'Best3DeadliftKg' in entriescsv.fieldnames:
         expand_fourths(entriescsv, 'Best3DeadliftKg', 'Deadlift4Kg')
 
+    unreverse_names(entriescsv)
+
+    fix_cyrillic_names(entriescsv)
+
     remove_empty_cols_ignore_fieldname(entriescsv)
 
     # Wilks will be automatically calculated later.
@@ -443,8 +500,6 @@ def main(url):
 
     fixtotals(entriescsv)
     fixplace(entriescsv)
-
-    unreverse_names(entriescsv)
 
     # Remove all the columns named 'IGNORE'
     while 'IGNORE' in entriescsv.fieldnames:

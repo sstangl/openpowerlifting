@@ -591,21 +591,30 @@ def standardize_division_age(csv):
     assert 'Amateur' in csv.fieldnames
     assert 'Age' not in csv.fieldnames
 
+    ageidx = None
+    bdidx = None
+
     if 'Division-Age' in csv.fieldnames:
-        csv.append_columns(['Division', 'Age'])
+        csv.append_columns(['Division', 'BirthDay', 'Age'])
 
         idx = csv.index('Division-Age')
+        dividx = csv.index('Division')
+        ageidx = csv.index('Age')
+        bdidx = csv.index('BirthDay')
     else:
         idx = csv.index('Division')
+        dividx = idx
 
-    dividx = csv.index('Division')
-    ageidx = csv.index('Age')
     amateuridx = csv.index('Amateur')
 
     for row in csv.rows:
         # Fill in the Age.
         if '/' in row[idx]:
             row[ageidx] = row[idx].split('/')[1].strip()
+        if '(' in row[idx] and bdidx:
+            bd = row[idx][row[idx].find('(')+1:row[idx].find(')')]
+            [day, month, year] = bd.split('.')
+            row[bdidx] = '%s-%s-%s' % (year, month, day)
 
         row[idx] = row[idx].replace(' - ', '-')
         row[idx] = row[idx].lower().strip()
@@ -800,7 +809,8 @@ def cleanup_lift(csv, fieldname):
         for row in csv.rows:
             amount = row[idx]
 
-            amount = ''.join(c for c in amount if c.isdigit() or c in ['.', '-'])
+            amount = ''.join(c for c in amount if c.isdigit()
+                             or c in ['.', '-'])
             amount = amount.replace('.00', '').replace('.0', '')
 
             if (amount == 'X' or amount.replace('-', '') == '0' or
@@ -810,7 +820,8 @@ def cleanup_lift(csv, fieldname):
             # Sometimes numbers have more than 2 commas, if so remove the
             # second one
             if len([ii for ii, a in enumerate(amount) if a == '.']) > 1:
-                amount = amount[:amount.rfind('.')] + amount[amount.rfind('.') + 1:]
+                amount = amount[:amount.rfind(
+                    '.')] + amount[amount.rfind('.') + 1:]
 
             row[idx] = amount
 

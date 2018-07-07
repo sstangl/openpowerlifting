@@ -111,6 +111,11 @@
   <option value="irishpf" {% if selection.federation == "IrishPF" %}selected{% endif %}>IrishPF - Irish Powerlifting Federation [IPF]</option>
   <option value="irishpo" {% if selection.federation == "IrishPO" %}selected{% endif %}>IrishPO - Irish Powerlifting Organization [IPL]</option>
 </optgroup>
+<optgroup label="{{strings.country.israel}}">
+  <option value="all-israel" {% if selection.federation == "AllIsrael" %}selected{% endif %}>{{strings.selectors.fed.all_israel}}</option>
+  <option value="ipc" {% if selection.federation == "IPC" %}selected{% endif %}>IPC - Israel Powerlifting Community [IPO]</option>
+  <option value="npa" {% if selection.federation == "NPA" %}selected{% endif %}>NPA - National Powerlifting Association of Israel</option>
+</optgroup>
 <optgroup label="{{strings.country.japan}}">
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
@@ -140,6 +145,7 @@
   <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>{{strings.selectors.fed.all_russia}}</option>
   <option value="bb" {% if selection.federation == "BB" %}selected{% endif %}>BB - Bogatyr Brotherhood [GPA]</option>
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR - Russian Powerlifting Federation [IPF]</option>
+  <option value="gpc-rus" {% if selection.federation == "GPC-RUS" %}selected{% endif %}>GPC-RUS - GPC Russia [GPC]</option>
   <option value="nap" {% if selection.federation == "NAP" %}selected{% endif %}>NAP - National Association of Powerlifting [IPA]</option>
   <option value="sct" {% if selection.federation == "SCT" %}selected{% endif %}>SCT - Super-Cup of Titans (Single-ply)</option>
   <option value="wpc-rus" {% if selection.federation == "WPC-RUS" %}selected{% endif %}>WPC-RUS - WPC Russia</option>
