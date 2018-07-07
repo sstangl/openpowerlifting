@@ -5,6 +5,46 @@ use strum::IntoEnumIterator;
 
 use opldb::{Entry, Meet, MetaFederation};
 
+/// Counts how many unique LifterIDs competed in a given meet.
+///
+/// Assumes that the entries vector is sorted by meet_id --
+/// so this is only callable from within `import_entries_csv()`.
+pub fn precompute_num_unique_lifters(entries: &Vec<Entry>, meet_id: u32) -> u32 {
+    let found_index = entries
+        .binary_search_by_key(&meet_id, |e| e.meet_id)
+        .unwrap();
+
+    // All entries for a meet are contiguous, so scan linearly to find the first.
+    let mut first_index = found_index;
+    for index in (0..found_index).rev() {
+        if entries[index].meet_id == meet_id {
+            first_index = index;
+        } else {
+            break;
+        }
+    }
+
+    // Scan to find the last.
+    let mut last_index = found_index;
+    for index in found_index..entries.len() {
+        if entries[index].meet_id == meet_id {
+            last_index = index;
+        } else {
+            break;
+        }
+    }
+    assert!(first_index <= last_index);
+
+    // Gather all the lifter_ids.
+    let mut lifter_ids: Vec<u32> =
+        (first_index..last_index + 1)
+            .map(|i| entries[i].lifter_id)
+            .collect();
+
+    lifter_ids.sort_unstable();
+    *(&lifter_ids.into_iter().group_by(|x| *x).into_iter().count()) as u32
+}
+
 /// Pre-computed list of meets in a MetaFederation.
 ///
 /// A meet is part of the MetaFederation if it contains

@@ -73,6 +73,11 @@ pub struct Meet {
     pub town: Option<String>,
     #[serde(rename(deserialize = "MeetName"))]
     pub name: String,
+
+    /// Number of unique competitors, by LifterID.
+    /// Calculated at load-time.
+    #[serde(default)]
+    pub num_unique_lifters: u32,
 }
 
 /// The definition of an Entry in the database.
@@ -215,9 +220,11 @@ fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<Error>> {
 }
 
 /// Reads the `entries.csv` file into a Vec<Entry>.
+///
+/// Also fills in metadata about each Meet.
 fn import_entries_csv(
     file: &str,
-    meets: &Vec<Meet>,
+    meets: &mut Vec<Meet>,
 ) -> Result<(Vec<Entry>, MetaFederationCache), Box<Error>> {
     let mut vec = Vec::with_capacity(700_000);
 
@@ -230,6 +237,12 @@ fn import_entries_csv(
     // Initially, the entries CSV is sorted by meet_id.
     // This ordering can be used to efficiently calculate meet metadata.
     let metafed_cache = MetaFederationCache::make(&meets, &vec);
+
+    // Calculate num_unique_lifters.
+    for meet_id in 0..meets.len() {
+        meets[meet_id].num_unique_lifters =
+            meet_metadata::precompute_num_unique_lifters(&vec, meet_id as u32);
+    }
 
     // Sort the entries database by lifter_id.
     // This invariant allows for extremely efficient lifter-uniqueness
@@ -249,8 +262,8 @@ impl OplDb {
         entries_csv: &str,
     ) -> Result<OplDb, Box<Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
-        let meets = import_meets_csv(meets_csv)?;
-        let (entries, metafed_cache) = import_entries_csv(entries_csv, &meets)?;
+        let mut meets = import_meets_csv(meets_csv)?;
+        let (entries, metafed_cache) = import_entries_csv(entries_csv, &mut meets)?;
 
         let static_cache = StaticCache::new(&meets, &entries);
 

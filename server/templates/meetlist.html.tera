@@ -27,6 +27,7 @@
         <th>{{strings.columns.date}}</th>
         <th>{{strings.columns.location}}</th>
         <th>{{strings.columns.meetname}}</th>
+        <th>{{strings.columns.num_lifters}}</th>
       </thead>
       <tbody>
       {% for meet in meets %}
@@ -35,6 +36,7 @@
           <td>{{meet.date}}</td>
           <td>{{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}</td>
           <td><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
+          <td>{{meet.num_lifters}}</td>
         </tr>
       {% endfor %}
       </tbody>

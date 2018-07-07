@@ -84,6 +84,7 @@ pub struct MeetInfo<'db> {
     pub state: Option<&'db str>,
     pub town: Option<&'db str>,
     pub name: &'db str,
+    pub num_lifters: u32,
 }
 
 impl<'db> MeetInfo<'db> {
@@ -105,6 +106,7 @@ impl<'db> MeetInfo<'db> {
                 Some(ref s) => Some(&s),
             },
             name: &meet.name,
+            num_lifters: meet.num_unique_lifters,
         }
     }
 }

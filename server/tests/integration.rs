@@ -111,3 +111,18 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 }
+
+/// Tests that meet.num_unique_lifters looks correct.
+#[test]
+fn num_unique_lifters_is_valid() {
+    let db = common::db();
+
+    // Test a meet where each lifter only competed in one division.
+    let meet_id = db.get_meet_id("bb/1001").unwrap();
+    assert_eq!(db.get_meet(meet_id).num_unique_lifters, 28);
+
+    // Test a meet where some lifters competed more than once.
+    // Each lifter should only be counted once.
+    let meet_id = db.get_meet_id("spf/1744").unwrap();
+    assert_eq!(db.get_meet(meet_id).num_unique_lifters, 59);
+}
