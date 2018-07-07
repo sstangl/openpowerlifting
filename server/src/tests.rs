@@ -183,11 +183,6 @@ fn test_static_cache_control() {
 fn test_accept_language_header() {
     // Iterate through all languages and ensure they are handled.
     for language in Language::string_list() {
-        // FIXME: See Issue 1438.
-        if language.to_string() == "zh-Hant" {
-            continue;
-        }
-
         let content = format!("<html lang=\"{}\"", &language);
         let client = client();
         let mut res = client
