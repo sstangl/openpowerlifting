@@ -20,12 +20,12 @@ except ImportError:
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
 # the string "results", since they won't get picked up by the script below.
-if datetime.datetime.now().strftime("%Y") != "2017":
+if datetime.datetime.now().strftime("%Y") != "2018":
     print("Warning: RAW fetch URL needs updating for new year.", file=sys.stderr)
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://rawpowerlifting.com/2017_results/"
-BASEURL = "http://rawpowerlifting.com/2017_results/"
+URL = "https://rawpowerlifting.com/2018-results/"
+BASEURL = "https://rawpowerlifting.com/2018-results/"
 
 
 def color(s):
@@ -47,7 +47,7 @@ def getmeetlist(html):
             continue
 
         url = a['href']
-        if 'http://' not in url:
+        if 'http://' not in url and 'https://' not in url:
             url = BASEURL + url
 
         if url not in urls:

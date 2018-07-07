@@ -116,6 +116,8 @@ pub enum Federation {
     Hardcore,
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
+    #[strum(to_string = "IDFPA", serialize = "idfpa")]
+    IDFPA,
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
     #[strum(to_string = "IPA", serialize = "ipa")]
@@ -326,6 +328,7 @@ impl MetaFederation {
                     || meet.federation == Federation::FESUPO
                     || meet.federation == Federation::FFForce
                     || meet.federation == Federation::FPR
+                    || meet.federation == Federation::IDFPA
                     || meet.federation == Federation::IDFPF
                     || meet.federation == Federation::IPF
                     || meet.federation == Federation::IrishPF
@@ -384,6 +387,7 @@ impl MetaFederation {
             }
             MetaFederation::AllIreland => {
                 meet.federation == Federation::GPCIRL
+                    || meet.federation == Federation::IDFPA
                     || meet.federation == Federation::IDFPF
                     || meet.federation == Federation::IrishPF
                     || meet.federation == Federation::IrishPO
