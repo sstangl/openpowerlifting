@@ -6,6 +6,7 @@ use serde_json;
 
 use std::error::Error;
 
+use std::fmt;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
@@ -17,7 +18,7 @@ use opldb::fields;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
-#[derive(Clone, Copy, Debug, Display, EnumIter, EnumString, Serialize)]
+#[derive(Clone, Copy, Debug, EnumIter, EnumString, Serialize)]
 pub enum Language {
     /// German, without regional variance.
     de,
@@ -45,6 +46,31 @@ pub enum Language {
     tr,
     /// Vietnamese.
     vi,
+    /// Chinese, written in Traditional Chinese script.
+    #[serde(rename = "zh-Hant")]
+    #[strum(to_string = "zh-Hant")]
+    zh_hant,
+}
+
+impl fmt::Display for Language {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", match self {
+            Language::de => "de",
+            Language::en => "en",
+            Language::eo => "eo",
+            Language::es => "es",
+            Language::fi => "fi",
+            Language::fr => "fr",
+            Language::it => "it",
+            Language::pl => "pl",
+            Language::pt => "pt",
+            Language::sl => "sl",
+            Language::ru => "ru",
+            Language::tr => "tr",
+            Language::vi => "vi",
+            Language::zh_hant => "zh-Hant",
+        })
+    }
 }
 
 impl Language {
@@ -339,6 +365,7 @@ pub struct LangInfo {
     ru: Option<Translations>,
     tr: Option<Translations>,
     vi: Option<Translations>,
+    zh_hant: Option<Translations>,
 }
 
 impl LangInfo {
@@ -357,6 +384,7 @@ impl LangInfo {
             ru: None,
             tr: None,
             vi: None,
+            zh_hant: None,
         }
     }
 
@@ -386,6 +414,7 @@ impl LangInfo {
             Language::ru => self.ru = trans,
             Language::tr => self.tr = trans,
             Language::vi => self.vi = trans,
+            Language::zh_hant => self.zh_hant = trans,
         };
 
         Ok(())
@@ -406,6 +435,7 @@ impl LangInfo {
             Language::ru => self.ru.as_ref().unwrap(),
             Language::tr => self.tr.as_ref().unwrap(),
             Language::vi => self.vi.as_ref().unwrap(),
+            Language::zh_hant => self.zh_hant.as_ref().unwrap(),
         }
     }
 }
@@ -548,6 +578,7 @@ impl Language {
             Language::ru => NumberFormat::ArabicComma,
             Language::tr => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
+            Language::zh_hant => NumberFormat::ArabicComma,
         }
     }
 }
@@ -640,5 +671,6 @@ pub fn get_localized_name<'db>(
         }
         Language::tr => &lifter.name,
         Language::vi => &lifter.name,
+        Language::zh_hant => &lifter.name,
     }
 }
