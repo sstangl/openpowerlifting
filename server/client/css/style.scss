@@ -60,7 +60,8 @@ div.content {
 // Gross workaround to make things look semi-OK on text-based pages
 // until we figure out a real CSS template.
 div.mixed-content {
-  padding: 30px 20px 20px 20px;
+  padding: 35px 20px 20px 20px;
+  font-size: 10pt;
 }
 
 div.text-content {
