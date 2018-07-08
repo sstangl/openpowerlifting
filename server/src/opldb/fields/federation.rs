@@ -388,9 +388,9 @@ impl MetaFederation {
                     || meet.federation == Federation::WRPFCAN
             }
             MetaFederation::AllCzechia => {
-                meet.federation == Federation::CAST 
+                meet.federation == Federation::CAST
                     || meet.federation == Federation::CSST
-                    || meet.federation == Federation::OlomouckySilak                    
+                    || meet.federation == Federation::OlomouckySilak
             }
             MetaFederation::AllFinland => {
                 meet.federation == Federation::FPO || meet.federation == Federation::SVNL

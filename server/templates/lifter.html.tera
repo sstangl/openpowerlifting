@@ -13,6 +13,33 @@
 
     <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</h1>
 
+    <h2>Personal Bests</h2>
+
+    <table>
+      <thead>
+        <th style="width: 80px;">{{strings.columns.equipment}}</th>
+        <th style="width: 80px;">{{strings.columns.squat}}</th>
+        <th style="width: 80px;">{{strings.columns.bench}}</th>
+        <th style="width: 80px;">{{strings.columns.deadlift}}</th>
+        <th style="width: 80px;">{{strings.columns.total}}</th>
+        <th style="width: 80px;">{{strings.columns.wilks}}</th>
+        <th></th>{# Intentionally-blank filler column. #}
+      </thead>
+      <tbody>
+        {% for this in bests %}
+          <tr>
+            <td>{{this.equipment}}</td>
+            <td>{% if this.squat %}{{this.squat}}{% endif %}</td>
+            <td>{% if this.bench %}{{this.bench}}{% endif %}</td>
+            <td>{% if this.deadlift %}{{this.deadlift}}{% endif %}</td>
+            <td>{% if this.total %}{{this.total}}{% endif %}</td>
+            <td>{% if this.wilks %}{{this.wilks}}{% endif %}</td>
+            <td></td>{# Intentionally-blank filler column. #}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
     <h2>Competition Results</h2>
 
     <table>

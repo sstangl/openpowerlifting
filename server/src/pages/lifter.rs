@@ -1,8 +1,8 @@
 //! Logic for each lifter's personal page.
 
 use langpack::{self, get_localized_name, Language, Locale};
-use opldb;
-use opldb::fields;
+use opldb::fields::{self, Equipment, Points, WeightKg};
+use opldb::{self, Entry};
 
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]
@@ -15,7 +15,43 @@ pub struct Context<'a> {
     pub strings: &'a langpack::Translations,
     pub units: opldb::WeightUnits,
 
+    pub bests: Vec<PersonalBestsRow<'a>>,
     pub meet_results: Vec<MeetResultsRow<'a>>,
+}
+
+/// A row in the Best Lifts table.
+#[derive(Serialize)]
+pub struct PersonalBestsRow<'db> {
+    pub equipment: &'db str,
+    pub squat: Option<langpack::LocalizedWeightAny>,
+    pub bench: Option<langpack::LocalizedWeightAny>,
+    pub deadlift: Option<langpack::LocalizedWeightAny>,
+    pub total: Option<langpack::LocalizedWeightAny>,
+    pub wilks: Option<langpack::LocalizedPoints>,
+}
+
+impl<'db> PersonalBestsRow<'db> {
+    fn new(
+        locale: &'db Locale,
+        equipment: &'db str,
+        squat: Option<WeightKg>,
+        bench: Option<WeightKg>,
+        deadlift: Option<WeightKg>,
+        total: Option<WeightKg>,
+        wilks: Option<Points>,
+    ) -> PersonalBestsRow<'db> {
+        let units = locale.units;
+        let format = locale.number_format;
+
+        PersonalBestsRow {
+            equipment: equipment,
+            squat: squat.map(|kg| kg.as_type(units).in_format(format)),
+            bench: bench.map(|kg| kg.as_type(units).in_format(format)),
+            deadlift: deadlift.map(|kg| kg.as_type(units).in_format(format)),
+            total: total.map(|kg| kg.as_type(units).in_format(format)),
+            wilks: wilks.map(|pt| pt.in_format(format)),
+        }
+    }
 }
 
 /// A row in the meet results table.
@@ -91,6 +127,188 @@ impl<'a> MeetResultsRow<'a> {
     }
 }
 
+/// Helper function to isolate all the best-calculation logic.
+fn calculate_bests<'db>(
+    locale: &'db Locale,
+    entries: &Vec<&Entry>,
+) -> Vec<PersonalBestsRow<'db>> {
+    // Best lifts must ignore disqualified entries.
+    let non_dq: Vec<&&Entry> = entries.iter().filter(|e| !e.place.is_dq()).collect();
+
+    // Calculate best lifts.
+    let raw_squat: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Raw)
+        .map(|e| e.highest_squatkg())
+        .max();
+
+    let raw_bench: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps)
+        .map(|e| e.highest_benchkg())
+        .max();
+
+    let raw_deadlift: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps)
+        .map(|e| e.highest_deadliftkg())
+        .max();
+
+    let raw_total: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Raw)
+        .map(|e| e.totalkg)
+        .max();
+
+    let raw_wilks: Option<Points> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Raw)
+        .map(|e| e.wilks)
+        .max();
+
+    let wraps_squat: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Wraps)
+        .map(|e| e.highest_squatkg())
+        .max();
+
+    let wraps_total: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Wraps)
+        .map(|e| e.totalkg)
+        .max();
+
+    let wraps_wilks: Option<Points> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Wraps)
+        .map(|e| e.wilks)
+        .max();
+
+    let single_squat: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Single)
+        .map(|e| e.highest_squatkg())
+        .max();
+
+    let single_bench: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Single)
+        .map(|e| e.highest_benchkg())
+        .max();
+
+    let single_deadlift: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Single)
+        .map(|e| e.highest_deadliftkg())
+        .max();
+
+    let single_total: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Single)
+        .map(|e| e.totalkg)
+        .max();
+
+    let single_wilks: Option<Points> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Single)
+        .map(|e| e.wilks)
+        .max();
+
+    let multi_squat: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Multi)
+        .map(|e| e.highest_squatkg())
+        .max();
+
+    let multi_bench: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Multi)
+        .map(|e| e.highest_benchkg())
+        .max();
+
+    let multi_deadlift: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Multi)
+        .map(|e| e.highest_deadliftkg())
+        .max();
+
+    let multi_total: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Multi)
+        .map(|e| e.totalkg)
+        .max();
+
+    let multi_wilks: Option<Points> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Multi)
+        .map(|e| e.wilks)
+        .max();
+
+    let mut rows = Vec::with_capacity(4);
+
+    if raw_squat.is_some()
+        || raw_bench.is_some()
+        || raw_deadlift.is_some()
+        || raw_total.is_some()
+    {
+        rows.push(PersonalBestsRow::new(
+            &locale,
+            &locale.strings.equipment.raw,
+            raw_squat,
+            raw_bench,
+            raw_deadlift,
+            raw_total,
+            raw_wilks,
+        ));
+    }
+
+    if wraps_squat.is_some() || wraps_total.is_some() {
+        rows.push(PersonalBestsRow::new(
+            &locale,
+            &locale.strings.equipment.wraps,
+            wraps_squat,
+            None,
+            None,
+            wraps_total,
+            wraps_wilks,
+        ));
+    }
+
+    if single_squat.is_some()
+        || single_bench.is_some()
+        || single_deadlift.is_some()
+        || single_total.is_some()
+    {
+        rows.push(PersonalBestsRow::new(
+            &locale,
+            &locale.strings.equipment.single,
+            single_squat,
+            single_bench,
+            single_deadlift,
+            single_total,
+            single_wilks,
+        ));
+    }
+
+    if multi_squat.is_some()
+        || multi_bench.is_some()
+        || multi_deadlift.is_some()
+        || multi_total.is_some()
+    {
+        rows.push(PersonalBestsRow::new(
+            &locale,
+            &locale.strings.equipment.multi,
+            multi_squat,
+            multi_bench,
+            multi_deadlift,
+            multi_total,
+            multi_wilks,
+        ));
+    }
+
+    rows
+}
+
 impl<'a> Context<'a> {
     pub fn new(
         opldb: &'a opldb::OplDb,
@@ -102,6 +320,8 @@ impl<'a> Context<'a> {
         // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+
+        let bests = calculate_bests(&locale, &entries);
 
         let lifter_sex = locale.strings.translate_sex(entries[0].sex);
 
@@ -120,6 +340,7 @@ impl<'a> Context<'a> {
             localized_name: get_localized_name(&lifter, locale.language),
             lifter: lifter,
             lifter_sex: lifter_sex,
+            bests: bests,
             meet_results: meet_results,
         }
     }

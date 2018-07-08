@@ -54,22 +54,26 @@ pub enum Language {
 
 impl fmt::Display for Language {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}", match self {
-            Language::de => "de",
-            Language::en => "en",
-            Language::eo => "eo",
-            Language::es => "es",
-            Language::fi => "fi",
-            Language::fr => "fr",
-            Language::it => "it",
-            Language::pl => "pl",
-            Language::pt => "pt",
-            Language::sl => "sl",
-            Language::ru => "ru",
-            Language::tr => "tr",
-            Language::vi => "vi",
-            Language::zh_hant => "zh-Hant",
-        })
+        write!(
+            f,
+            "{}",
+            match self {
+                Language::de => "de",
+                Language::en => "en",
+                Language::eo => "eo",
+                Language::es => "es",
+                Language::fi => "fi",
+                Language::fr => "fr",
+                Language::it => "it",
+                Language::pl => "pl",
+                Language::pt => "pt",
+                Language::sl => "sl",
+                Language::ru => "ru",
+                Language::tr => "tr",
+                Language::vi => "vi",
+                Language::zh_hant => "zh-Hant",
+            }
+        )
     }
 }
 

@@ -36,10 +36,9 @@ pub fn precompute_num_unique_lifters(entries: &Vec<Entry>, meet_id: u32) -> u32 
     assert!(first_index <= last_index);
 
     // Gather all the lifter_ids.
-    let mut lifter_ids: Vec<u32> =
-        (first_index..last_index + 1)
-            .map(|i| entries[i].lifter_id)
-            .collect();
+    let mut lifter_ids: Vec<u32> = (first_index..last_index + 1)
+        .map(|i| entries[i].lifter_id)
+        .collect();
 
     lifter_ids.sort_unstable();
     *(&lifter_ids.into_iter().group_by(|x| *x).into_iter().count()) as u32
