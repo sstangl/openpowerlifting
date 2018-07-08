@@ -7,7 +7,7 @@ use opldb::{self, Entry};
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
-    pub page_title: String,
+    pub page_title: &'a str,
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub lifter_sex: &'a str,
@@ -333,7 +333,7 @@ impl<'a> Context<'a> {
             .collect();
 
         Context {
-            page_title: format!("{}", lifter.name),
+            page_title: get_localized_name(&lifter, locale.language),
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
