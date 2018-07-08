@@ -313,11 +313,14 @@ def getpagedata(soup):
             # to figure out whether lifts were good or bad.
             row = []
             for td in tr.find_all('td'):
-                text = td.text
+                text = td.find(text=True)
 
                 # Get the country data
-                if text == '' and td.has_attr('id') and 'LocationID' in td['id']:
+                if text == None and td.has_attr('id') and 'LocationID' in td['id']:
                     text = td.a['title']
+
+                if text == None:
+                    text = ''
 
                 spans = td.find_all('span')
 
@@ -448,7 +451,7 @@ def fix_cyrillic_names(csv):
     if 'CyrillicName' in csv.fieldnames:
         cyridx = csv.index('CyrillicName')
         for row in csv.rows:
-            row[cyridx] = row[cyridx].replace('e', 'э').replace('x', 'х')
+            row[cyridx] = row[cyridx].replace('e', 'е').replace('x', 'х')
 
 
 def remove_empty_cols_ignore_fieldname(csv):

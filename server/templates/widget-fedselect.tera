@@ -83,7 +83,10 @@
   <option value="wrpf-can" {% if selection.federation == "WRPF-CAN" %}selected{% endif %}>WRPF-CAN - WRPF Canada [WRPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.czechia}}">
+  <option value="all-czechia" {% if selection.federation == "AllCzechia" %}selected{% endif %}>{{strings.selectors.fed.all_czechia}}</option>
+  <option value="cast" {% if selection.federation == "CAST" %}selected{% endif %}>CAST - Česká Asociace Silového Trojboje [GPC/WPC]</option>
   <option value="csst" {% if selection.federation == "CSST" %}selected{% endif %}>CSST - Český Svaz Silového Trojboje [IPF]</option>
+  <option value="olomouckysilak" {% if selection.federation == "OlomouckySilak" %}selected{% endif %}>OlomouckySilak - Olomoucký Silák </option>
 </optgroup>
 <optgroup label="{{strings.country.denmark}}">
   <option value="dsf" {% if selection.federation == "DSF" %}selected{% endif %}>DSF - Dansk Styrkeløft Forbund [IPF]</option>
