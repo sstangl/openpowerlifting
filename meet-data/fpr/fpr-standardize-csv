@@ -84,10 +84,10 @@ def parse_fieldnames(sheet):
         iterable = iter(range(len(header)))
 
         for i in iterable:
-            text = header[i].lower().replace('.', '')
+            text = header[i].lower().replace('.', '').replace('-', '')
             text = text.lower()
 
-            if text == '№' or 'номер' in text:
+            if '№' in text or 'номер' in text:
                 fieldnames.append('IGNORE')
             elif 'место' in text:
                 fieldnames.append('Place')
@@ -97,22 +97,24 @@ def parse_fieldnames(sheet):
                 fieldnames.append('BirthYear')
             elif 'разряд' in text or 'вып разр' in text:  # Rank
                 fieldnames.append('IGNORE')
-            elif 'команда / регион' in text:  # Region
+            elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
             elif 'город' in text or 'субьект рф' in text:  # City
                 fieldnames.append('IGNORE')
-            elif 'собств вес' in text or 'соб вес' in text:
+            elif 'вес' in text:
                 fieldnames.append('BodyweightKg')
             elif 'ком очки' in text:
                 fieldnames.append('IGNORE')
-            elif 'очки по вилксу' in text:  # Wilks
+            elif 'очки по вилксу' in text or 'коэф виллс' in text:  # Wilks
                 fieldnames.append('IGNORE')
-            elif 'тренеры' in text:
+            elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
-            elif 'жре бий' in text or 'оч- ки' in text:  # Individual points
+            elif 'жре бий' in text or 'оч ки' in text:  # Individual points
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
+            elif text == 'возраст кат':
+                fieldnames.append('Division')
 
             elif text in ['жим 1']:
                 assert header[i + 3].lower() in ['жим 2']
@@ -397,7 +399,8 @@ def cleanup_lift(csv, fieldname):
         for row in csv.rows:
             amount = row[idx]
 
-            amount = ''.join(c for c in amount if c.isdigit() or c in ['.', '-'])
+            amount = ''.join(c for c in amount if c.isdigit()
+                             or c in ['.', '-'])
             amount = amount.replace('.00', '').replace('.0', '')
 
             if (amount == 'X' or amount.replace('-', '') == '0' or

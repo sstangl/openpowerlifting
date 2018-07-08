@@ -126,7 +126,7 @@ def parse_sheetname(s):
         # Booleans.
         elif word == 'люб.' or word == 'любители':
             amateur = 'Amateur'
-        elif word == 'pro' or word == 'pro-':
+        elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
             assert amateur == 'Pro'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Tested'
@@ -346,9 +346,13 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == '':
             fieldnames.append('IGNORE')
+        elif text == 'командный зачет':  # Team points
+            fieldnames.append('IGNORE')
+        elif text == 'баллы':  # Points
+            fieldnames.append('IGNORE')
 
         else:
-            print(header)
+            print(sheet)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
     return fieldnames
@@ -395,6 +399,9 @@ def parse_sheet(sheet):
     elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
                                   'армейский', 'тяговое', 'военный', 'двоеборье',
                                   '1_2 веса']):  # Bench reps
+        return csv
+    # Bench and then bench for reps
+    elif 'жд профессионалы' in title or 'жд сфо' in title:
         return csv
     elif 'богатырский' in title:  # Heroic Press ?? Some kind of overhead press maybe
         return csv

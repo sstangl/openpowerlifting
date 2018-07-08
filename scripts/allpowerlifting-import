@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Import data from the AllPowerlifting website. This script should only be used
@@ -53,8 +53,13 @@ def getmeetinfo(soup):
     # Get the location.
     venuerow = fedrow.find_next_sibling()
     venue = venuerow.find_all('td')[1].text
-    if ', ' in venue:
-        [country, town] = venue.split(', ')
+    if venue[-2:] == ', ':
+        venue = venue[:-2]
+
+    split = venue.split(', ')
+    if len(split) > 1:
+        country = split[0]
+        town = split[-1]
     else:
         country = venue
         town = ''
@@ -146,15 +151,15 @@ def getresults(soup, url):
             cyrnameidx = subpage_csv.index('CyrillicName')
             nameidx = subpage_csv.index('Name')
 
-            if 'BirthYear' not in csv.fieldnames:
-                csv.append_column('BirthYear')
-            byidx = csv.index('BirthYear')
+            if 'BirthYear' not in subpage_csv.fieldnames:
+                subpage_csv.append_column('BirthYear')
+            byidx = subpage_csv.index('BirthYear')
 
             for ii in range(len(subpage_csv.rows)):
                 if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
                     subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
-
-                csv.rows[ii][byidx] = birthyears[ii]
+  
+                subpage_csv.rows[ii][byidx] = birthyears[ii]
 
             subpage_csv.append_column('SheetName')
             for row in subpage_csv.rows:
@@ -275,7 +280,7 @@ def getpagedata(soup):
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
-        elif h == 'R':
+        elif h in ['R','W']: # Resh, Wilks
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
