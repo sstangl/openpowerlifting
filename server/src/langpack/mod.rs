@@ -344,6 +344,12 @@ pub struct FedSelectorTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct LifterPageTranslations {
+    pub personal_bests: String,
+    pub competition_results: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct Translations {
     pub units: UnitsTranslations,
     pub equipment: EquipmentTranslations,
@@ -353,6 +359,7 @@ pub struct Translations {
     pub country: CountryTranslations,
     pub buttons: ButtonTranslations,
     pub selectors: SelectorTranslations,
+    pub lifter_page: LifterPageTranslations,
 }
 
 /// Owner struct of all translation state.

@@ -13,7 +13,7 @@
 
     <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</h1>
 
-    <h2>Personal Bests</h2>
+    <h2>{{strings.lifter_page.personal_bests}}</h2>
 
     <table>
       <thead>
@@ -40,7 +40,7 @@
       </tbody>
     </table>
 
-    <h2>Competition Results</h2>
+    <h2>{{strings.lifter_page.competition_results}}</h2>
 
     <table>
       <thead>
