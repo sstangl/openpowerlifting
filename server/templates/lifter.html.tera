@@ -1,7 +1,7 @@
 {% extends "desktop-base" %}
 
 {% block topbar_hack %}
-  <div class="topbar">
+  <div class="topbar-without-controls">
 {% endblock topbar_hack %}
 
 {% block topbar_hack_end %}
