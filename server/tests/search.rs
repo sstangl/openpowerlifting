@@ -40,3 +40,20 @@ fn backwards_name_search() {
     let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
+
+/// Checks that searching by Instagram works.
+#[test]
+fn instagram_search() {
+    let db = common::db();
+    let cache = db.get_static_cache();
+    let selection = Selection::new_default();
+
+    // Perform the search.
+    let res = search_rankings(&db, &selection, 0, "Ferruix");
+    let row = res.next_index.unwrap();
+
+    // Check that the result is for the specified lifter.
+    let list = cache.get_full_sorted_uniqued(&selection, &db);
+    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    assert_eq!(lifter.name, "Sean Stangl");
+}
