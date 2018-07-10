@@ -1,4 +1,9 @@
 ---
+- name: ensure system is up-to-date
+  dnf:
+    name: '*'
+    state: latest
+
 - name: ensure the server data directory exists
   file:
     path: "{{ openpl_app_data_path }}"
