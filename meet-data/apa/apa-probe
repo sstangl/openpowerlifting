@@ -1,24 +1,34 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Probes for meet results from the 100%RAW Federation (RAW).
-# RAW posts meets to a page separated by year.
+# Probes for meet results from the APA.
+# APA posts meets to a page separated by year.
 
 
 from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
-import urllib.request
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
+
 
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
 # the string "results", since they won't get picked up by the script below.
-if datetime.datetime.now().strftime("%Y") != "2017":
+if datetime.datetime.now().strftime("%Y") != "2018":
     print("Warning: APA fetch URL needs updating for new year.", file=sys.stderr)
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://www.apa-wpa.com/APA/?page_id=1763"
+URLS = [
+    "http://www.apa-wpa.com/APA/us-meet-results/2018-2/",
+    "http://www.apa-wpa.com/APA/us-meet-results/2017-2/"
+]
 BASEURL = "http://www.apa-wpa.com/"
 
 
@@ -31,11 +41,6 @@ def color(s):
     return "\033[1;32m" + s + "\033[0;m"
 
 
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
-
-
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
     entry_content = soup.find("div", {"class": "entry-content"})
@@ -44,7 +49,10 @@ def getmeetlist(html):
     for a in entry_content.find_all('a'):
         url = a['href']
         if 'http://' not in url:
-            url = BASEURL + url
+            if url.startswith('/'):
+                url = BASEURL + url[1:]
+            else:
+                url = BASEURL + url
 
         if url not in urls:
             urls.append(url)
@@ -52,25 +60,16 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
-    html = gethtml(URL)
-    meetlist = getmeetlist(html)
+    meetlist = []
+    for url in URLS:
+        html = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
 
-    known = getenteredurls()
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if m not in known:
-            print(color('[APA] ') + m)
+    oplprobe.print_meets(color('[APA]'), unentered)
     print(color('[APA] ') + "Continue working through archive.")
 
 
