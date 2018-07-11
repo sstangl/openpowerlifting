@@ -485,9 +485,8 @@ def check_headers(csv):
     if 'Place' not in csv.fieldnames:
         perror("There must be a Place column.")
 
-    # Not requiring the Event header yet, although it's probably a good idea.
-    # if not 'Event' in csv.fieldnames:
-    #    perror('There must be an Event column.')
+    if 'Event' not in csv.fieldnames:
+        pwarning("There must be an Event column.")
 
     for header in csv.fieldnames:
         if header not in KnownHeaders:
@@ -933,6 +932,11 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
     # Equipment may not be missing.
     if 'Equipment' in csv.fieldnames and not row[csv.index('Equipment')]:
         perror("Missing equipment: %s" % ','.join(row))
+
+    # Event may not be missing.
+    if 'Event' in csv.fieldnames and not row[csv.index('Equipment')]:
+        pwarning("Missing event: %s" % ','.join(row))
+
 
 
 def check(scriptname, filename, configtoml, meetpath):
