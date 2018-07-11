@@ -1,6 +1,7 @@
 //! Defines the `Federation` field for the `meets` table.
 
 use opldb::{Entry, Meet};
+use opldb::fields::Country;
 
 /// Enum of federations.
 ///
@@ -301,6 +302,9 @@ pub enum MetaFederation {
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
+    /// IPA, but only counting meets held in Canada.
+    #[strum(to_string = "ipa-can")]
+    IPACAN,
     #[strum(to_string = "uspa-tested")]
     USPATested,
 }
@@ -384,6 +388,7 @@ impl MetaFederation {
                     || meet.federation == Federation::CPL
                     || meet.federation == Federation::CPU
                     || meet.federation == Federation::GPCCAN
+                    || MetaFederation::IPACAN.contains(entry, meets)
                     || meet.federation == Federation::RAWCAN
                     || meet.federation == Federation::WRPFCAN
             }
@@ -469,6 +474,9 @@ impl MetaFederation {
                     || meet.federation == Federation::NIPF
                     || meet.federation == Federation::ScottishPL
                     || meet.federation == Federation::WelshPA
+            }
+            MetaFederation::IPACAN => {
+                meet.federation == Federation::IPA && meet.country == Country::Canada
             }
             MetaFederation::USPATested => {
                 meet.federation == Federation::USPA && entry.tested
