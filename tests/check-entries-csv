@@ -938,7 +938,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         pwarning("Missing event: %s" % ','.join(row))
 
 
-
 def check(scriptname, filename, configtoml, meetpath):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
