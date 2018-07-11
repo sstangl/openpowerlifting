@@ -1,6 +1,6 @@
-# !/usr/bin/env python3
-# vim: set ts=8 sts=4 et sw=4 tw=99:
-#
+#!/usr/bin/env python3
+
+
 # Import data from the AllPowerlifting website. This script should only be used
 # for meets where AllPowerlifting is the primary source.
 
@@ -23,7 +23,6 @@ def error(msg):
     sys.exit(1)
 
 
-# URL will be like "/?page=protokoll_vis&id=3508".
 def getdirname(url):
     dirname = url.split('results/')[1][:-1]
     dirname = dirname.replace('/', '-')
@@ -97,13 +96,8 @@ def getmeetinfo(soup):
 def getresults(soup, url):
     csv = Csv()
 
-    subpages = soup.find('ul', id='pldb-table-subs')
-    links = subpages.find_all('a')
-
     if '?all_attempts=1' not in url:
         url = url + '?all_attempts=1'
-
-    div_name = re.sub('\(.*?\)', '', subpages.find('li').text).strip()
 
     subpage_html = gethtml(url)
 
@@ -129,11 +123,16 @@ def getresults(soup, url):
 
         csv.rows[ii][byidx] = birthyears[ii]
 
-    csv.append_column('SheetName')
-    for row in csv.rows:
-        row[-1] = div_name
+    subpages = soup.find('ul', id='pldb-table-subs')
 
-    if len(links) > 1:
+    if subpages:
+        div_name = re.sub('\(.*?\)', '', subpages.find('li').text).strip()
+        csv.append_column('SheetName')
+        for row in csv.rows:
+            row[-1] = div_name
+
+        links = subpages.find_all('a')
+
         for link in links:
             div_name = re.sub('\(.*?\)', '', link.text).strip()
             subpage_ext = link['href'].split('/')[:-1][-1]
@@ -158,7 +157,7 @@ def getresults(soup, url):
             for ii in range(len(subpage_csv.rows)):
                 if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
                     subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
-  
+
                 subpage_csv.rows[ii][byidx] = birthyears[ii]
 
             subpage_csv.append_column('SheetName')
@@ -213,7 +212,7 @@ def get_cyrillic_names_and_birthyears(url):
             names.append(name)
 
             if byidx:
-                by = tds[byidx].text
+                by = tds[byidx].text.replace('—', '')
             else:
                 by = ''
 
@@ -236,7 +235,7 @@ def getpagedata(soup):
     headers = [x.text for x in trs[0].find_all('th')]
     csv.fieldnames = []
     for h in headers:
-        if h == ' ':
+        if h in [' ', '\xa0']:
             csv.fieldnames += ['IGNORE']
         elif h == 'Pl':
             csv.fieldnames += ['Place']
@@ -280,7 +279,7 @@ def getpagedata(soup):
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
-        elif h in ['R','W']: # Resh, Wilks
+        elif h in ['R', 'W']:  # Resh, Wilks
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
@@ -289,7 +288,9 @@ def getpagedata(soup):
     csv.fieldnames += ['WeightClassKg', 'Sex']
 
     wcstate = None
-    sexstate = None
+
+    # If unspecified assume male and fix later
+    sexstate = 'M'
 
     for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
@@ -307,7 +308,6 @@ def getpagedata(soup):
 
         else:
             assert wcstate
-            assert sexstate
 
             # Accumulate the row, but we need to look at the class of each td
             # to figure out whether lifts were good or bad.
@@ -316,10 +316,11 @@ def getpagedata(soup):
                 text = td.find(text=True)
 
                 # Get the country data
-                if text == None and td.has_attr('id') and 'LocationID' in td['id']:
+                if (text is None and td.has_attr('id') and
+                        'LocationID' in td['id'] and td.a):
                     text = td.a['title']
 
-                if text == None:
+                if text is None:
                     text = ''
 
                 spans = td.find_all('span')

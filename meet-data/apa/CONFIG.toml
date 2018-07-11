@@ -3,6 +3,7 @@
     military = {name ="Military",min=0,max=999}
     veterans = {name ="Veterans",min=0,max=999}
     handicapped = {name ="Handicapped",min=0,max=999}
+    paralympics = {name ="Paralympics",min=0,max=999}
     policefire = {name ="Police/Fire",min=0,max=999}
     specialolympics = {name ="Special Olympics",min=0,max=999}
     youth = {name = "Youth",min=0,max=12}
