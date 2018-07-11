@@ -22,13 +22,13 @@
 {% block body %}
   <div class="content">
     <table>
-      <thead>
+      <thead><tr>
         <th>{{strings.columns.federation}}</th>
         <th>{{strings.columns.date}}</th>
         <th>{{strings.columns.location}}</th>
         <th>{{strings.columns.meetname}}</th>
         <th>{{strings.columns.num_lifters}}</th>
-      </thead>
+      </tr></thead>
       <tbody>
       {% for meet in meets %}
         <tr>

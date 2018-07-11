@@ -16,7 +16,7 @@
     <h2>{{strings.lifter_page.personal_bests}}</h2>
 
     <table>
-      <thead>
+      <thead><tr>
         <th style="width: 80px;">{{strings.columns.equipment}}</th>
         <th style="width: 80px;">{{strings.columns.squat}}</th>
         <th style="width: 80px;">{{strings.columns.bench}}</th>
@@ -24,7 +24,7 @@
         <th style="width: 80px;">{{strings.columns.total}}</th>
         <th style="width: 80px;">{{strings.columns.wilks}}</th>
         <th></th>{# Intentionally-blank filler column. #}
-      </thead>
+      </tr></thead>
       <tbody>
         {% for this in bests %}
           <tr>
@@ -43,7 +43,7 @@
     <h2>{{strings.lifter_page.competition_results}}</h2>
 
     <table>
-      <thead>
+      <thead><tr>
         <th>{{strings.columns.place}}</th>
         <th>{{strings.columns.federation}}</th>
         <th>{{strings.columns.date}}</th>
@@ -59,7 +59,7 @@
         <th>{{strings.columns.deadlift}}</th>
         <th>{{strings.columns.total}}</th>
         <th>{{strings.columns.wilks}}</th>
-      </thead>
+      </tr></thead>
       <tbody>
       {% for this in meet_results %}
         <tr>

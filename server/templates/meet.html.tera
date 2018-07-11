@@ -25,7 +25,7 @@
 {% block body %}
   <div class="content">
     <table>
-      <thead>
+      <thead><tr>
         <th>{{strings.columns.formulaplace}}</th>
         <th>{{strings.columns.liftername}}</th>
         <th>{{strings.columns.sex}}</th>
@@ -40,7 +40,7 @@
         <th>{{strings.columns.deadlift}}</th>
         <th>{{strings.columns.total}}</th>
         <th>{{strings.columns.wilks}}</th>
-      </thead>
+      </tr></thead>
       <tbody>
       {% for this in rows %}
         <tr>
