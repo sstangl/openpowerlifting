@@ -13,10 +13,10 @@ Place,WeightClassKg,BodyweightKg,Name,BirthYear,Team,Squat1Kg,Squat2Kg,Squat3Kg,
 1,63,59.42,Sirkka Hohenthal,1948,Lo-Vo,65,75,-80,75,30,35,40,40,80,90,-100,90,205,Over 70,F,Single-ply,SBD
 1,47,46.56,Andreea Vasilescu,1991,MLC,110,-117.5,-117.5,110,55,-60,-60,55,110,122.5,-132.5,122.5,287.5,Open,F,Single-ply,SBD
 1,52,51.72,Marcela Sandvik,1974,ÅKK,137.5,145,150,150,117.5,122.5,-125,122.5,142.5,-155,,142.5,415,Open,F,Single-ply,SBD
-DQ,52,51.42,Olivia Kyösti,1999,KaVo,-112.5,112.5,-117.5,112.5,-70,-70,-70,,,,,,,Open,F,Single-ply,SB
+DQ,52,51.42,Olivia Kyösti,1999,KaVo,-112.5,112.5,-117.5,112.5,-70,-70,-70,,,,,,,Open,F,Single-ply,SBD
 1,57,52.89,Heini Lipponen,2000,KaVo,102.5,107.5,112.5,112.5,65,67.5,70,70,105,112.5,117.5,117.5,300,Open,F,Single-ply,SBD
 1,63,62.51,Anna-Eveliina Partanen,1988,JuPu,160,170,-175,170,-115,115,-120,115,135,145,-150,145,430,Open,F,Single-ply,SBD
-DQ,63,62.47,Riina Lahti,1980,KoJy,182.5,-190,190,190,-100,-100,-100,,,,,,,Open,F,Single-ply,SB
+DQ,63,62.47,Riina Lahti,1980,KoJy,182.5,-190,190,190,-100,-100,-100,,,,,,,Open,F,Single-ply,SBD
 1,72,64.52,Anette Tunkkari,1983,KoJy,120,-125,-125,120,130,-135,-140,130,155,162.5,170,170,420,Open,F,Single-ply,SBD
 2,72,69.83,Marjaana Vähäsantanen,1976,KaVo,142.5,150,152.5,152.5,90,95,100,100,-150,150,155,155,407.5,Open,F,Single-ply,SBD
 3,72,67.87,Paulina Lindblad,1989,ÅKK,145,152.5,160,160,77.5,-82.5,-82.5,77.5,155,160,-170,160,397.5,Open,F,Single-ply,SBD
@@ -26,7 +26,7 @@ DQ,63,62.47,Riina Lahti,1980,KoJy,182.5,-190,190,190,-100,-100,-100,,,,,,,Open,F
 3,83,80.40,Jani Myyryläinen,1971,MLC,-155,-155,155,155,130,135,-137.5,135,150,-165,165,165,455,Over 40,M,Single-ply,SBD
 1,93,92.05,Petri Ronkainen,1972,MLC,240,-250,250,250,177.5,-182.5,-190,177.5,210,-230,-230,210,637.5,Over 40,M,Single-ply,SBD
 2,93,91,Jani Niemelä,1977,VilpVe,-180,180,200,200,140,-160,160,160,220,235,245,245,605,Over 40,M,Single-ply,SBD
-DQ,93,91.91,Marko Salovaara,1976,PorHT,260,270,-272.5,270,-190,-190,-190,,,,,,,Over 40,M,Single-ply,SB
+DQ,93,91.91,Marko Salovaara,1976,PorHT,260,270,-272.5,270,-190,-190,-190,,,,,,,Over 40,M,Single-ply,SBD
 1,105,103.15,Jani Hyytiäinen,1974,HPV,240,252.5,255,255,-200,200,-210,200,210,235,245,245,700,Over 40,M,Single-ply,SBD
 2,105,101.09,Hannu Hakala,1973,HartVo,240,250,-257.5,250,140,170,180,180,235,-260,-270,235,665,Over 40,M,Single-ply,SBD
 3,105,103.23,Kaj Wasenius,1972,Team365,185,205,210,210,140,152.5,160,160,220,240,-250,240,610,Over 40,M,Single-ply,SBD
@@ -35,7 +35,7 @@ DQ,93,91.91,Marko Salovaara,1976,PorHT,260,270,-272.5,270,-190,-190,-190,,,,,,,O
 3,120,111.29,Timo Lillbacka,1975,MLC,100,-102.5,-102.5,100,100,-102.5,-102.5,100,125,-127.5,-127.5,125,325,Over 40,M,Single-ply,SBD
 1,74,73.67,Timo Leminen,1968,K-UV,200,210,-215,210,-155,155,-160,155,210,220,-225,220,585,Over 50,M,Single-ply,SBD
 2,74,72.79,Ismo Hietanen,1963,HeTarmo,160,175,185,185,-135,135,137.5,137.5,190,210,222.5,222.5,545,Over 50,M,Single-ply,SBD
-DQ,74,73.03,Kari Räihä,1965,OPT,-210,-210,-210,,,,,,,,,,,Over 50,M,Single-ply,S
+DQ,74,73.03,Kari Räihä,1965,OPT,-210,-210,-210,,,,,,,,,,,Over 50,M,Single-ply,SBD
 1,83,82.68,Mikko Rusanen,1967,So-Vi,-205,-205,205,205,135,140,-145,140,205,215,227.5,227.5,572.5,Over 50,M,Single-ply,SBD
 2,83,82.31,Ari Oksanen,1964,LaVo,170,180,-190,180,150,157.5,160,160,190,210,-227.5,210,550,Over 50,M,Single-ply,SBD
 1,93,91.87,Harri Hagfors,1961,MY-Power,225,240,250,250,-150,150,160,160,235,255,267.5,267.5,677.5,Over 50,M,Single-ply,SBD

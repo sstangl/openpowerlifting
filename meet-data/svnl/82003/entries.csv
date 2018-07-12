@@ -10,7 +10,7 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 60,3,Keijo Hakulinen,SuoKu,200,117.5,210,527.5,Open,M,Single-ply,SBD
 60,4,Vesa Korpunen,IFL,190,105,217.5,512.5,Open,M,Single-ply,SBD
 60,5,Sulo Luiro,RaPe,165,102.5,217.5,485,Open,M,Single-ply,SBD
-60,DQ,Keijo Kuisma,OutVe,170,110,,,Open,M,Single-ply,SB
+60,DQ,Keijo Kuisma,OutVe,170,110,,,Open,M,Single-ply,SBD
 67.5,1,Viljo Karvinen,HeJy,247.5,152.5,275,675,Open,M,Single-ply,SBD
 67.5,2,Pekka Huhtala,HeJy,250,165,257.5,672.5,Open,M,Single-ply,SBD
 67.5,3,Bo Ahlroos,TVV,222.5,137.5,277.5,637.5,Open,M,Single-ply,SBD
@@ -22,8 +22,8 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 67.5,9,Sven Öling,VaKi,225,130,220,575,Open,M,Single-ply,SBD
 67.5,10,Vesa Partanen,Herkules,240,120,210,570,Open,M,Single-ply,SBD
 67.5,11,Harri Lempiäinen,HumppYri,180,150,220,550,Open,M,Single-ply,SBD
-67.5,DQ,Jukka Vartiainen,TVV,212.5,,,,Open,M,Single-ply,S
-67.5,DQ,Martti Härkönen,ILU,195,,,,Open,M,Single-ply,S
+67.5,DQ,Jukka Vartiainen,TVV,212.5,,,,Open,M,Single-ply,SBD
+67.5,DQ,Martti Härkönen,ILU,195,,,,Open,M,Single-ply,SBD
 75,1,Jouko Nyyssönen,BBC,300,177.5,265,742.5,Open,M,Single-ply,SBD
 75,2,Markku Pesonen,OulTa,275,140,290,705,Open,M,Single-ply,SBD
 75,3,Klaus Pudas,SeSi,250,145,290,685,Open,M,Single-ply,SBD
@@ -38,8 +38,8 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 75,12,Raimo Karjalainen,OuKa,220,142.5,250,612.5,Open,M,Single-ply,SBD
 75,13,Martti Karttunen,SiiPo,212.5,125,265,602.5,Open,M,Single-ply,SBD
 75,14,Raimo Välineva,IFL,100,100,305,505,Open,M,Single-ply,SBD
-75,DQ,Leo Tuominen,Herkules,250,,,,Open,M,Single-ply,S
-75,DQ,Risto Lahtinen,TVV,,,,,Open,M,Single-ply,
+75,DQ,Leo Tuominen,Herkules,250,,,,Open,M,Single-ply,SBD
+75,DQ,Risto Lahtinen,TVV,,,,,Open,M,Single-ply,SBD
 82.5,1,Jorma Hietamäki,VaKi,312.5,167.5,300,780,Open,M,Single-ply,SBD
 82.5,2,Jari Tähtinen,TVV,282.5,187.5,292.5,762.5,Open,M,Single-ply,SBD
 82.5,3,Kalevi Hedemäki,OuKa,265,150,335,750,Open,M,Single-ply,SBD
@@ -52,7 +52,7 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 82.5,9,Juhani Y. Äijö,HUT,260,162.5,282.5,705,Open,M,Single-ply,SBD
 82.5,11,Seppo Peuhkuri,LauTe,265,150,290,705,Open,M,Single-ply,SBD
 82.5,12,Kalevi Hyvärinen,HeJy,240,155,290,685,Open,M,Single-ply,SBD
-82.5,DQ,Veli Kumpuniemi,RaPe,,,,,Open,M,Single-ply,
+82.5,DQ,Veli Kumpuniemi,RaPe,,,,,Open,M,Single-ply,SBD
 90,1,Sulo Kierivaara,OuKa,312.5,202.5,300,815,Open,M,Single-ply,SBD
 90,2,Leo Palmroos,PV,295,172.5,327.5,795,Open,M,Single-ply,SBD
 90,3,Unto Honkonen,IFL,300,200,280,780,Open,M,Single-ply,SBD
@@ -65,7 +65,7 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 90,10,Teuvo Immonen,VarTa,275,165,275,715,Open,M,Single-ply,SBD
 90,11,Seppo Koli,HIK,257.5,180,275,712.5,Open,M,Single-ply,SBD
 90,12,Jouko Vuorinen,Kimmo´s Gym,255,192.5,250,697.5,Open,M,Single-ply,SBD
-90,DQ,Rauno Falkman,Hektor,285,,,,Open,M,Single-ply,S
+90,DQ,Rauno Falkman,Hektor,285,,,,Open,M,Single-ply,SBD
 100,1,Rauno Rinne,BBC,340,230,340,910,Open,M,Single-ply,SBD
 100,2,Seppo Lukkarinen,OP,320,180,320,820,Open,M,Single-ply,SBD
 100,3,Jarmo Virtanen,HVV,280,192.5,330,802.5,Open,M,Single-ply,SBD
@@ -87,14 +87,14 @@ WeightClassKg,Place,Name,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,
 110,9,Henri Lehmusoja,Kimmo´s Gym,307.5,180,260,747.5,Open,M,Single-ply,SBD
 110,10,Jouko Leskinen,Kimmo´s Gym,280,190,270,740,Open,M,Single-ply,SBD
 110,11,Kari Vertanen,VaKi,290,165,280,735,Open,M,Single-ply,SBD
-110,DQ,Pentti Nikkanen,HumppYri,270,180,,,Open,M,Single-ply,SB
+110,DQ,Pentti Nikkanen,HumppYri,270,180,,,Open,M,Single-ply,SBD
 125,1,Aatos Nevanpää,SeSi,375,232.5,340,947.5,Open,M,Single-ply,SBD
 125,2,Pauli Mellberg,HumppYri,370,217.5,315,902.5,Open,M,Single-ply,SBD
 125,3,Jussi Kantola,M-Club,340,237.5,322.5,900,Open,M,Single-ply,SBD
 125,4,Markku Lenets,Kimmo´s Gym,330,192.5,310,832.5,Open,M,Single-ply,SBD
 125,5,Matti Tanskanen,HartVo,310,170,300,780,Open,M,Single-ply,SBD
 125,6,Ismo Åman,OuTa,300,155,305,760,Open,M,Single-ply,SBD
-125,DQ,Antero Niemelä,KV,285,,,,Open,M,Single-ply,S
+125,DQ,Antero Niemelä,KV,285,,,,Open,M,Single-ply,SBD
 125+,1,Ilkka Nummisto,Kimmo´s Gym,342.5,242.5,330,915,Open,M,Single-ply,SBD
 125+,2,Antti Närvänen,TIK,390,200,310,900,Open,M,Single-ply,SBD
 125+,3,Pentti Laine,HumppYri,340,202.5,320,862.5,Open,M,Single-ply,SBD

@@ -1,58 +1,58 @@
-WeightClassKg,Place,Name,Team,TotalKg,Division,Sex,Equipment,Event
-52,1,Aira Knutars,KajKu,50,Over 40,F,Single-ply,
-60,1,Inkeri Malassu,KiuJä,65,Over 40,F,Single-ply,
-60,1,Eila Kumpuniemi,RaPe,57.5,Over 50,F,Single-ply,
-56,1,Hannu Viirimaa,JorJy,90,Over 40,M,Single-ply,
-56,2,Arto Hautamäki,PTVAK,60,Over 40,M,Single-ply,
-60,1,Pekka Tenhunen,HaHa,100,Over 40,M,Single-ply,
-67.5,1,Raimo Kyheröinen,PV,150,Over 40,M,Single-ply,
-67.5,2,Timo Rautiainen,KelVi,135,Over 40,M,Single-ply,
-67.5,3,Antero Lähdesmäki,SeSi,120,Over 40,M,Single-ply,
-75,1,Ilkka Kanerva,HerSy,152.5,Over 40,M,Single-ply,
-75,2,Hannu Lavonius,EuKi,142.5,Over 40,M,Single-ply,
-75,3,Pasi Torikka,IiY,135,Over 40,M,Single-ply,
-82.5,1,Peter Sundman,KeBo,195,Over 40,M,Single-ply,
-82.5,2,Taisto Paananen,OrTo,167.5,Over 40,M,Single-ply,
-82.5,3,Teuvo Laihola,KuuVo,160,Over 40,M,Single-ply,
-90,1,Jan Lindén,MKK PT,200,Over 40,M,Single-ply,
-90,2,Pasi Drushinin,KarKa,190,Over 40,M,Single-ply,
-90,3,Pertti Kortesalmi,RaPe,187.5,Over 40,M,Single-ply,
-100,1,Hannu Miettinen,VarTa,195,Over 40,M,Single-ply,
-100,2,Sulevi Eriksson,PTVAK,190,Over 40,M,Single-ply,
-100,3,Raimo Koljonen,Huima,180,Over 40,M,Single-ply,
-110,1,Esa Leskinen,KoJy,205,Over 40,M,Single-ply,
-110,2,Kauko Savonen,NoVo,197.5,Over 40,M,Single-ply,
-110,3,Reijo Holopainen,PorHT,182.5,Over 40,M,Single-ply,
-125,1,Kari Vilppola,PySy,210,Over 40,M,Single-ply,
-125,2,Toivo Kyllönen,KajKu,200,Over 40,M,Single-ply,
-125,3,Arto Hannolin,HPV,197.5,Over 40,M,Single-ply,
-125+,1,Pekka Mäkelä,AlVo,230,Over 40,M,Single-ply,
-125+,2,Martti Nuutinen,GYM 1,210,Over 40,M,Single-ply,
-125+,3,Raimo Avila,Valtti,180,Over 40,M,Single-ply,
-67.5,1,Esko Järvenpää,KeBo,115,Over 50,M,Single-ply,
-75,1,Risto Salonen,HVV,137.5,Over 50,M,Single-ply,
-75,2,Juha Inkinen,RKC,135,Over 50,M,Single-ply,
-75,3,Juhani Huttunen,KiuJä,125,Over 50,M,Single-ply,
-82.5,1,Niilo Tarvainen,HyPo,150,Over 50,M,Single-ply,
-90,1,Reino Wahlroos,SalVo,165,Over 50,M,Single-ply,
-90,2,Reijo Jaakkola,OrGn,140,Over 50,M,Single-ply,
-90,3,Olavi Kanerva,HyPo,130,Over 50,M,Single-ply,
-100,1,Juhani Y. Äijö,HyPo,210,Over 50,M,Single-ply,
-100,2,Antti Heinonen,KeikY,170,Over 50,M,Single-ply,
-100,3,Heikki Malkavaara,RKC,135,Over 50,M,Single-ply,
-125,1,Raimo Sandelin,PTVAK,130,Over 50,M,Single-ply,
-125,2,Heikki Hytönen,LepU,115,Over 50,M,Single-ply,
-125+,1,Erkki Tuomikoski,BBC,185,Over 50,M,Single-ply,
-56,1,Heikki Mähönen,OP,45,Over 60,M,Single-ply,
-75,1,Olavi Kallio,HVV,125,Over 60,M,Single-ply,
-75,2,Olli Vento,Valtti,107.5,Over 60,M,Single-ply,
-75,3,Matti Ristolainen,YlöR,90,Over 60,M,Single-ply,
-82.5,1,Arvo Tölli,RoSa,157.5,Over 60,M,Single-ply,
-82.5,2,Tauno Laitinen,LepU,75,Over 60,M,Single-ply,
-90,1,Arvo Reponen,GYM 1,167.5,Over 60,M,Single-ply,
-90,2,Veli Kumpuniemi,RaPe,110,Over 60,M,Single-ply,
-100,1,Muisto Marjamäki,MY-Power,135,Over 60,M,Single-ply,
-100,2,Erkki Hirvonen,SalVo,97.5,Over 60,M,Single-ply,
-100,3,Anssi Autio,PorHT,95,Over 60,M,Single-ply,
-125,1,Olavi Erola,GYM 1,165,Over 60,M,Single-ply,
-125+,1,Päiviö Säätelä,KoJy,185,Over 60,M,Single-ply,
+WeightClassKg,Place,Name,Team,Best3BenchKg,TotalKg,Division,Sex,Equipment,Event
+52,1,Aira Knutars,KajKu,50,50,Over 40,F,Single-ply,B
+60,1,Inkeri Malassu,KiuJä,65,65,Over 40,F,Single-ply,B
+60,1,Eila Kumpuniemi,RaPe,57.5,57.5,Over 50,F,Single-ply,B
+56,1,Hannu Viirimaa,JorJy,90,90,Over 40,M,Single-ply,B
+56,2,Arto Hautamäki,PTVAK,60,60,Over 40,M,Single-ply,B
+60,1,Pekka Tenhunen,HaHa,100,100,Over 40,M,Single-ply,B
+67.5,1,Raimo Kyheröinen,PV,150,150,Over 40,M,Single-ply,B
+67.5,2,Timo Rautiainen,KelVi,135,135,Over 40,M,Single-ply,B
+67.5,3,Antero Lähdesmäki,SeSi,120,120,Over 40,M,Single-ply,B
+75,1,Ilkka Kanerva,HerSy,152.5,152.5,Over 40,M,Single-ply,B
+75,2,Hannu Lavonius,EuKi,142.5,142.5,Over 40,M,Single-ply,B
+75,3,Pasi Torikka,IiY,135,135,Over 40,M,Single-ply,B
+82.5,1,Peter Sundman,KeBo,195,195,Over 40,M,Single-ply,B
+82.5,2,Taisto Paananen,OrTo,167.5,167.5,Over 40,M,Single-ply,B
+82.5,3,Teuvo Laihola,KuuVo,160,160,Over 40,M,Single-ply,B
+90,1,Jan Lindén,MKK PT,200,200,Over 40,M,Single-ply,B
+90,2,Pasi Drushinin,KarKa,190,190,Over 40,M,Single-ply,B
+90,3,Pertti Kortesalmi,RaPe,187.5,187.5,Over 40,M,Single-ply,B
+100,1,Hannu Miettinen,VarTa,195,195,Over 40,M,Single-ply,B
+100,2,Sulevi Eriksson,PTVAK,190,190,Over 40,M,Single-ply,B
+100,3,Raimo Koljonen,Huima,180,180,Over 40,M,Single-ply,B
+110,1,Esa Leskinen,KoJy,205,205,Over 40,M,Single-ply,B
+110,2,Kauko Savonen,NoVo,197.5,197.5,Over 40,M,Single-ply,B
+110,3,Reijo Holopainen,PorHT,182.5,182.5,Over 40,M,Single-ply,B
+125,1,Kari Vilppola,PySy,210,210,Over 40,M,Single-ply,B
+125,2,Toivo Kyllönen,KajKu,200,200,Over 40,M,Single-ply,B
+125,3,Arto Hannolin,HPV,197.5,197.5,Over 40,M,Single-ply,B
+125+,1,Pekka Mäkelä,AlVo,230,230,Over 40,M,Single-ply,B
+125+,2,Martti Nuutinen,GYM 1,210,210,Over 40,M,Single-ply,B
+125+,3,Raimo Avila,Valtti,180,180,Over 40,M,Single-ply,B
+67.5,1,Esko Järvenpää,KeBo,115,115,Over 50,M,Single-ply,B
+75,1,Risto Salonen,HVV,137.5,137.5,Over 50,M,Single-ply,B
+75,2,Juha Inkinen,RKC,135,135,Over 50,M,Single-ply,B
+75,3,Juhani Huttunen,KiuJä,125,125,Over 50,M,Single-ply,B
+82.5,1,Niilo Tarvainen,HyPo,150,150,Over 50,M,Single-ply,B
+90,1,Reino Wahlroos,SalVo,165,165,Over 50,M,Single-ply,B
+90,2,Reijo Jaakkola,OrGn,140,140,Over 50,M,Single-ply,B
+90,3,Olavi Kanerva,HyPo,130,130,Over 50,M,Single-ply,B
+100,1,Juhani Y. Äijö,HyPo,210,210,Over 50,M,Single-ply,B
+100,2,Antti Heinonen,KeikY,170,170,Over 50,M,Single-ply,B
+100,3,Heikki Malkavaara,RKC,135,135,Over 50,M,Single-ply,B
+125,1,Raimo Sandelin,PTVAK,130,130,Over 50,M,Single-ply,B
+125,2,Heikki Hytönen,LepU,115,115,Over 50,M,Single-ply,B
+125+,1,Erkki Tuomikoski,BBC,185,185,Over 50,M,Single-ply,B
+56,1,Heikki Mähönen,OP,45,45,Over 60,M,Single-ply,B
+75,1,Olavi Kallio,HVV,125,125,Over 60,M,Single-ply,B
+75,2,Olli Vento,Valtti,107.5,107.5,Over 60,M,Single-ply,B
+75,3,Matti Ristolainen,YlöR,90,90,Over 60,M,Single-ply,B
+82.5,1,Arvo Tölli,RoSa,157.5,157.5,Over 60,M,Single-ply,B
+82.5,2,Tauno Laitinen,LepU,75,75,Over 60,M,Single-ply,B
+90,1,Arvo Reponen,GYM 1,167.5,167.5,Over 60,M,Single-ply,B
+90,2,Veli Kumpuniemi,RaPe,110,110,Over 60,M,Single-ply,B
+100,1,Muisto Marjamäki,MY-Power,135,135,Over 60,M,Single-ply,B
+100,2,Erkki Hirvonen,SalVo,97.5,97.5,Over 60,M,Single-ply,B
+100,3,Anssi Autio,PorHT,95,95,Over 60,M,Single-ply,B
+125,1,Olavi Erola,GYM 1,165,165,Over 60,M,Single-ply,B
+125+,1,Päiviö Säätelä,KoJy,185,185,Over 60,M,Single-ply,B

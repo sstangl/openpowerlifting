@@ -4,7 +4,7 @@ Place,WeightClassKg,BodyweightKg,Name,Team,Squat1Kg,Squat2Kg,Squat3Kg,Best3Squat
 2,72,71.88,Virve Ilves,JoPuPo,145,-155,-155,145,75,-80,-80,75,130,145,155,155,375,Over 40,F,Single-ply,1970,SBD
 3,72,69.96,Raili Kukkola,IiY,-120,120,125,125,67.5,70,75,75,120,130,135,135,335,Over 40,F,Single-ply,1972,SBD
 1,84,80.84,Joanna Linna,JP 2000,130,140,-150,140,105,112.5,-118,112.5,135,150,-165,150,402.5,Over 40,F,Single-ply,1974,SBD
-DQ,84,79.26,Minna Kettula,JP 2000,-100,-100,-110,,,,,,,,,,,Over 40,F,Single-ply,1973,S
+DQ,84,79.26,Minna Kettula,JP 2000,-100,-100,-110,,,,,,,,,,,Over 40,F,Single-ply,1973,SBD
 1,84+,105.72,Katariina Nokua,HSU,70,100,,100,-150,155.5,160,160,120,150,167.5,167.5,427.5,Over 40,F,Single-ply,1973,SBD
 1,57,55.74,Laila Viitanen,IiY,110,-117.5,-122.5,110,-52.5,52.5,57.5,57.5,130,140,147.5,147.5,315,Over 50,F,Single-ply,1960,SBD
 1,84,72.04,Heli Valtonen,RAYVO,80,90,100,100,82.5,87.5,-90,87.5,100,110,120,120,307.5,Over 50,F,Single-ply,1961,SBD
@@ -43,7 +43,7 @@ DQ,83,80.32,Kari Räihä,OPT,-210,210,-230,210,125,-132.5,-132.5,125,-240,-240,-
 1,120,105.30,Veijo Räsänen,I-HV,-230,230,240,240,190,200,-210,200,250,270,275,275,715,Over 50,M,Single-ply,1957,SBD
 2,120,108.46,Juha Makkonen,KiurU,235,250,260,260,210,-220,220,220,235,-250,-250,235,715,Over 50,M,Single-ply,1962,SBD
 3,120,117.84,Ari Heikkinen,KajKu,220,230,240,240,150,160,170,170,260,270,-275,270,680,Over 50,M,Single-ply,1964,SBD
-DQ,120,108.94,Kari Vähämäki,VilpVe,210,220,227.5,227.5,-175,-175,-175,,,,,,,Over 50,M,Single-ply,1962,SB
+DQ,120,108.94,Kari Vähämäki,VilpVe,210,220,227.5,227.5,-175,-175,-175,,,,,,,Over 50,M,Single-ply,1962,SBD
 1,120+,138.68,Kyösti Salonen,TNT,240,260,280,280,-180,-180,180,180,230,260,-290.5,260,720,Over 50,M,Single-ply,1964,SBD
 2,120+,141.78,Pertti Lähteenmäki,OrGn,-220,220,-240,220,165,-180,180,180,230,-232.5,-250,230,630,Over 50,M,Single-ply,1959,SBD
 1,59,58.98,Seppo Flink,HartVo,80,-85,,80,-100,-100,100,100,80,90,100,100,280,Over 60,M,Single-ply,1951,SBD
@@ -54,10 +54,10 @@ DQ,120,108.94,Kari Vähämäki,VilpVe,210,220,227.5,227.5,-175,-175,-175,,,,,,,O
 1,83,82.34,Christer Gustafsson,ÅKK,200,215,222.5,222.5,140,-147.5,147.5,147.5,190,202.5,207.5,207.5,577.5,Over 60,M,Single-ply,1949,SBD
 2,83,82.58,Antero Juntunen,KajKu,195,210,215,215,-100,100,105,105,230,242.5,250.5,250.5,570.5,Over 60,M,Single-ply,1954,SBD
 3,83,81.90,Matti Kangasmäki,PV,150,,,150,-60,60,,60,220,-240,,220,430,Over 60,M,Single-ply,1949,SBD
-DQ,93,92.72,Veli Nevala,Py-Pa,-230,-230,-230,,,,,,,,,,,Over 60,M,Single-ply,1953,S
+DQ,93,92.72,Veli Nevala,Py-Pa,-230,-230,-230,,,,,,,,,,,Over 60,M,Single-ply,1953,SBD
 1,105,94.72,Tapio Kähäri,Huima,180,187.5,192.5,192.5,115,120,-125,120,180,190,200,200,512.5,Over 60,M,Single-ply,1946,SBD
 2,105,96.20,Magnus Häggblom,VIS,-170,170,-185,170,90,95,,95,180,200,,200,465,Over 60,M,Single-ply,1951,SBD
-DQ,105,95.78,Pekka Ahonen,VilpVe,130,140,145,145,-100,-100,-100,,,,,,,Over 60,M,Single-ply,1946,SB
+DQ,105,95.78,Pekka Ahonen,VilpVe,130,140,145,145,-100,-100,-100,,,,,,,Over 60,M,Single-ply,1946,SBD
 1,120,119.34,Toivo Kyllönen,KajKu,205,225,235,235,105,115,-120,115,205,220,225,225,575,Over 60,M,Single-ply,1952,SBD
 2,120,114.18,Tapani Orha,TNT,60,,,60,60,,,60,-60,60,,60,180,Over 60,M,Single-ply,1953,SBD
 1,59,57.78,Seppo Helander,I-HV,75,80,-85,80,72.5,-75,-75,72.5,120,130,142.5,142.5,295,Over 70,M,Single-ply,1939,SBD
@@ -67,5 +67,5 @@ DQ,105,95.78,Pekka Ahonen,VilpVe,130,140,145,145,-100,-100,-100,,,,,,,Over 60,M,
 1,93,89,Mikko Isoniemi,SalVo,130,140,150,150,90,100,-105,100,190,200,207.5,207.5,457.5,Over 70,M,Single-ply,1941,SBD
 2,93,90.84,Tapani Puhakka,KP,-105,-105,105,105,-115,-115,115,115,175,192.5,205.5,205.5,425.5,Over 70,M,Single-ply,1944,SBD
 1,105,97.76,Klas Helén,ÅKK,130,140,-155,140,-115,115,-127.5,115,130,140,,140,395,Over 70,M,Single-ply,1942,SBD
-DQ,105,103.62,Muisto Marjamäki,MY-Power,-120,-120,-130,,,,,,,,,,,Over 70,M,Single-ply,1938,S
+DQ,105,103.62,Muisto Marjamäki,MY-Power,-120,-120,-130,,,,,,,,,,,Over 70,M,Single-ply,1938,SBD
 1,120+,120.54,Raimo Sandelin,PTVAK,85,100,,100,95,,,95,130,,,130,325,Over 70,M,Single-ply,1940,SBD

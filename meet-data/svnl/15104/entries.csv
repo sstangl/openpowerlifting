@@ -27,7 +27,7 @@ Place,WeightClassKg,BodyweightKg,Name,BirthYear,Team,Squat1Kg,Squat2Kg,Squat3Kg,
 1,84+,105.49,Katariina Nokua,1973,HSU,200,-220,,200,145,-155,,145,170,-190,202.5,202.5,547.5,Open,F,Single-ply,SBD
 1,53,44.80,Vili Mäkinen,1998,JP 2000,60,-72.5,-72.5,60,50,-57.5,-57.5,50,70,82.5,90,90,200,Under 17,M,Single-ply,SBD
 1,74,73.50,Miika Linna,1998,JP 2000,80,100,-110,100,65,80,90,90,100,110,130,130,320,Under 17,M,Single-ply,SBD
-DQ,83,78.50,Teemu Hällfors,1995,YlöR,-200,200,-210,200,-200,-200,-200,,,,,,,Under 20,M,Single-ply,SB
+DQ,83,78.50,Teemu Hällfors,1995,YlöR,-200,200,-210,200,-200,-200,-200,,,,,,,Under 20,M,Single-ply,SBD
 1,93,90.90,Janne Marttila,1995,KaVo,210,220,230,230,140,147.5,-152.5,147.5,252.5,262.5,-272.5,262.5,640,Under 20,M,Single-ply,SBD
 1,93,90.40,Hannes Immonen,1993,ÅKK,210,227.5,235,235,165,175,-180,175,220,240,250,250,660,Under 23,M,Single-ply,SBD
 1,105,95.90,Mikko Kortelainen,1992,KiurU,205,220,230,230,130,140,145,145,200,225,235,235,610,Under 23,M,Single-ply,SBD
@@ -56,7 +56,7 @@ DQ,83,78.50,Teemu Hällfors,1995,YlöR,-200,200,-210,200,-200,-200,-200,,,,,,,Un
 4,93,91.73,Vilho Määttä,1952,OPT,155,170,180,180,120,130,135,135,190,-200,200,200,515,Over 60,M,Single-ply,SBD
 5,93,90.70,Tapio Kähäri,1946,Huima,175,185,190,190,115,120,122.5,122.5,-180,180,185,185,497.5,Over 60,M,Single-ply,SBD
 1,105,95.93,Magnus Häggblom,1951,VIS,170,-190,190,190,80,90,,90,180,210,230,230,510,Over 60,M,Single-ply,SBD
-DQ,105,95.77,Pekka Ahonen,1946,VilpVe,-130,-130,-130,,,,,,,,,,,Over 60,M,Single-ply,S
+DQ,105,95.77,Pekka Ahonen,1946,VilpVe,-130,-130,-130,,,,,,,,,,,Over 60,M,Single-ply,SBD
 1,120,116.09,Tapani Orha,1953,TNT,80,-100,100,100,-90,105,115,115,180,200,210,210,425,Over 60,M,Single-ply,SBD
 2,120,112.50,Tapio Ruohonen,1950,SalVo,105,125,135,135,105,115,122.5,122.5,140,150,-162.5,150,407.5,Over 60,M,Single-ply,SBD
 1,120+,122.89,Toivo Kyllönen,1952,KajKu,225,-240,245,245,120,132.5,137.5,137.5,200,217.5,-227.5,217.5,600,Over 60,M,Single-ply,SBD
@@ -86,7 +86,7 @@ DQ,105,95.77,Pekka Ahonen,1946,VilpVe,-130,-130,-130,,,,,,,,,,,Over 60,M,Single-
 1,93,92.88,Petri Heikkinen,1973,JoPuPo,270,282.5,287.5,287.5,185,192.5,-197.5,192.5,270,275,285.5,285.5,765.5,Over 40,M,Single-ply,SBD
 2,93,92.65,Keijo Huttunen,1975,I-HV,270,282.5,-290,282.5,180,-187.5,187.5,187.5,260,275,-280,275,745,Over 40,M,Single-ply,SBD
 3,93,83.90,Jani Närhi,1973,JVK,220,-230,-230,220,150,160,165,165,240,260,-270,260,645,Over 40,M,Single-ply,SBD
-DQ,93,92.70,Matti Piirainen,1967,TVN,-237.5,-245,-245,,,,,,,,,,,Over 40,M,Single-ply,S
+DQ,93,92.70,Matti Piirainen,1967,TVN,-237.5,-245,-245,,,,,,,,,,,Over 40,M,Single-ply,SBD
 1,105,104.83,Jarno Ruohonen,1975,SalVo,275,300,-315,300,235,250,-260,250,275,-290,-290,275,825,Over 40,M,Single-ply,SBD
 2,105,101.94,Mika Paasonen,1972,MY-Power,260,270,-277.5,270,155,200,210,210,-260,260,275,275,755,Over 40,M,Single-ply,SBD
 3,105,104.48,Matti Rajaniemi,1975,TVN,227.5,-235,,227.5,167.5,-170,-170,167.5,215,-225,232.5,232.5,627.5,Over 40,M,Single-ply,SBD
@@ -100,14 +100,14 @@ DQ,93,92.70,Matti Piirainen,1967,TVN,-237.5,-245,-245,,,,,,,,,,,Over 40,M,Single
 1,83,81.70,Tapio Pärssinen,1977,RAYVO,245,255,260,260,170,175,-180,175,260,275,-292.5,275,710,Open,M,Single-ply,SBD
 2,83,82.50,Miika Viiperi,1988,KoJy,-255,-255,265,265,175,-180,-180,175,237.5,257.5,-272.5,257.5,697.5,Open,M,Single-ply,SBD
 3,83,82.50,Antti Karesola,1982,PorHT,212.5,225,-235,225,205,-215,-215,205,-225,225,250,250,680,Open,M,Single-ply,SBD
-DQ,83,82.80,Tomi Vikla,1970,JoPuPo,-235,-235,-235,,,,,,,,,,,Open,M,Single-ply,S
+DQ,83,82.80,Tomi Vikla,1970,JoPuPo,-235,-235,-235,,,,,,,,,,,Open,M,Single-ply,SBD
 1,93,88.20,Vesa Mattila,1980,VilpVe,260,275,285,285,200,215,225,225,260,280,,280,790,Open,M,Single-ply,SBD
 2,93,91.30,Marko Salovaara,1976,PorHT,250,-265,265,265,-190,190,-200,190,260,275,-285,275,730,Open,M,Single-ply,SBD
 3,93,92.70,Petteri Hakkarainen,1967,HPV,235,-245,245,245,180,-190,-190,180,240,260,-277.5,260,685,Open,M,Single-ply,SBD
-DQ,93,92.50,Jarkko Perttula,1993,Py-Pa,-320,-320,-320,,,,,,,,,,,Open,M,Single-ply,S
+DQ,93,92.50,Jarkko Perttula,1993,Py-Pa,-320,-320,-320,,,,,,,,,,,Open,M,Single-ply,SBD
 1,105,104.40,Tomi Määttä,1982,NPower,327.5,340,350,350,-225,225,232.5,232.5,-280,280,295,295,877.5,Open,M,Single-ply,SBD
 2,105,104.50,Jussi Kangasvieri,1987,KoJy,-320,320,-335,320,200,215,220,220,295,310,-340,310,850,Open,M,Single-ply,SBD
-DQ,120,117.70,Kaj Mattila,1970,Taimi,-280,-280,-280,,,,,,,,,,,Open,M,Single-ply,S
+DQ,120,117.70,Kaj Mattila,1970,Taimi,-280,-280,-280,,,,,,,,,,,Open,M,Single-ply,SBD
 1,120+,142.78,Ove Lehto,1972,ÅKK,-360,365,380,380,325,345,355,355,310,325,-335,325,1060,Open,M,Single-ply,SBD
 2,120+,139.30,Jari Martikainen,1975,JuPu,360,370,380,380,240,-250,-250,240,335,350,-367.5,350,970,Open,M,Single-ply,SBD
-DQ,120+,142.12,Kenneth Sandvik,1975,ÅKK,-400,-400,-400,,,,,,,,,,,Open,M,Single-ply,S
+DQ,120+,142.12,Kenneth Sandvik,1975,ÅKK,-400,-400,-400,,,,,,,,,,,Open,M,Single-ply,SBD
