@@ -109,7 +109,7 @@ def is_by_consistent(lifter_data):
 
 def calc_age(birthday, date):
     birthyear = get_year(birthday)
-    curr_year = get_year(birthday)
+    curr_year = get_year(date)
 
     # They haven't had their birthday
     if get_monthday(birthday) < get_monthday(date):
@@ -573,8 +573,8 @@ def get_ageclass(minage, maxage, yearage=None):
 # Checks that the gaps between meets are reasonable, if not
 # we don't write this data to the csv
 def check_age_spacing(lifterdata):
-    # If there is more than a 10 year gap between age data, it's probably two lifters
-    max_gap = 9
+    # If there is more than a 5 year gap between age data, it's probably two lifters
+    max_gap = 5
 
     ages = [float(x[0]) for x in lifterdata if x[0] != '']
     if len(ages) > 1:
@@ -616,6 +616,8 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
                     if age_data[BY_IDX] != '':
                         yearage = int(MeetDateHash[age_data[DATE_IDX]].split(
                             '-')[0]) - int(age_data[BY_IDX])
+
+                    assert age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) > 3.5
 
                     row[ageidx] = str(age_data[AGE_IDX])
                     if row[ageclassidx] != '':
