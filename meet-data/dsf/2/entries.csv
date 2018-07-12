@@ -1,37 +1,37 @@
 Place,BodyweightKg,Name,BirthYear,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
-1,46.00,Mia Tovgaard,1979,Sportshøjskolen,127.5,65.0,135.0,327.5,Open,F,47,Single-ply,SBD
-1,56.90,Eva Buxbom,1969,Horsens SK,160.0,82.5,165.0,407.5,Open,F,57,Single-ply,SBD
-2,56.55,Mette G Jensen,1985,ER Powerlifting,120.0,77.5,117.5,315.0,Open,F,57,Single-ply,SBD
-3,55.10,Sarah J Klitgaard,1978,Tårnby SK,80.0,50.0,92.5,222.5,Open,F,57,Single-ply,SBD
-1,59.30,Susse Hougaard,1984,Aarhus AK,165.0,130.0,170.0,465.0,Open,F,63,Single-ply,SBD
-2,62.25,Kathrine H Bak,1981,Tårnby SK,142.5,82.5,165.0,390.0,Open,F,63,Single-ply,SBD
-DQ,62.20,Maj B Rames,1989,Sportshøjskolen,160.0,,,,Open,F,63,Single-ply,S
-1,71.75,Annette Pedersen,1968,Sportshøjskolen,202.5,125.0,195.0,522.5,Open,F,72,Single-ply,SBD
-2,71.15,Lise Frederiksen,1982,Hjørring SS,197.5,102.5,175.0,475.0,Open,F,72,Single-ply,SBD
-1,82.60,Kathrine Kristensen,1987,Sportshøjskolen,152.5,75.0,135.0,362.5,Open,F,84,Single-ply,SBD
-1,63.45,Mike Andersen,1984,Aalborg SK,195.0,115.0,182.5,492.5,Open,M,66,Single-ply,SBD
-1,73.40,Morten Rasmussen,1978,Tårnby SK,260.0,185.0,215.0,660.0,Open,M,74,Single-ply,SBD
-2,72.90,Danny Pedersen,1984,SK Atlas,222.5,142.5,242.5,607.5,Open,M,74,Single-ply,SBD
-DQ,73.00,Louis Preuthun,1980,Hvidovre SF,,,,,Open,M,74,Single-ply,
-1,82.85,Kasper Egebo,1986,Sportshøjskolen,260.0,180.0,267.5,707.5,Open,M,83,Single-ply,SBD
-2,82.65,Danni Iversen,1987,Horsens SK,265.0,170.0,270.0,705.0,Open,M,83,Single-ply,SBD
-3,82.80,Erik Rasmussen,1962,ER Powerlifting,272.5,175.0,245.0,692.5,Open,M,83,Single-ply,SBD
-4,79.05,Jan Sahlgren,1960,Tårnby SK,235.0,155.0,200.0,590.0,Open,M,83,Single-ply,SBD
-5,82.85,Lars AB Rasmussen,1981,Aalborg SK,215.0,145.0,210.0,570.0,Open,M,83,Single-ply,SBD
-1,91.65,Nicolai Dahlin,1985,Hvidovre SF,315.0,140.0,120.0,575.0,Open,M,93,Single-ply,SBD
-2,92.75,Kim Petersen Hjordt,1984,Sportshøjskolen,75.0,75.0,75.0,225.0,Open,M,93,Single-ply,SBD
-1,104.85,Mathias Kristiansen,1985,Sportshøjskolen,320.0,220.0,310.0,850.0,Open,M,105,Single-ply,SBD
-2,98.15,Michael Jensen,1980,Aalborg SK,320.0,200.0,320.0,840.0,Open,M,105,Single-ply,SBD
-3,103.75,Kim Dahl Hansen,1971,Tårnby SK,315.0,210.0,295.0,820.0,Open,M,105,Single-ply,SBD
-4,104.10,Thomas J Sørensen,1981,Thisted VF,280.0,260.0,280.0,820.0,Open,M,105,Single-ply,SBD
-5,99.95,Rasmus Jensen,1973,Roskilde AK,272.5,217.5,215.0,705.0,Open,M,105,Single-ply,SBD
-6,101.85,Bjørn Frederiksen,1979,Hjørring SS,265.0,155.0,280.0,700.0,Open,M,105,Single-ply,SBD
-1,119.55,Stephan Vorup,1973,Thisted VF,355.0,227.5,320.0,902.5,Open,M,120,Single-ply,SBD
-2,111.90,Sune Bak,1974,Hvidovre SF,335.0,255.0,310.0,900.0,Open,M,120,Single-ply,SBD
-3,113.90,Jesper Smidt,1973,AK Nordland,300.0,215.0,240.0,755.0,Open,M,120,Single-ply,SBD
-4,111.80,Morten S Jensen,1989,ER Powerlifting,275.0,165.0,225.0,665.0,Open,M,120,Single-ply,SBD
-5,112.50,Jesper B Mikkelsen,1989,Sportshøjskolen,125.0,100.0,300.0,525.0,Open,M,120,Single-ply,SBD
-1,142.50,Morten Sørig,1969,Horsens SK,350.0,225.0,272.5,847.5,Open,M,120+,Single-ply,SBD
-DQ,134.75,Sune Bang,1977,Aarhus AK,,,,,Open,M,120+,Single-ply,
-DQ,129.50,Carsten Jørgensen,1976,Sportshøjskolen,,,,,Open,M,120+,Single-ply,
-DQ,120.35,Jens Jepsen,1970,Tårnby SK,,,,,Open,M,120+,Single-ply,
+1,46,Mia Tovgaard,1979,Sportshøjskolen,127.5,65,135,327.5,Open,F,47,Single-ply,SBD
+1,56.9,Eva Buxbom,1969,Horsens SK,160,82.5,165,407.5,Open,F,57,Single-ply,SBD
+2,56.55,Mette G Jensen,1985,ER Powerlifting,120,77.5,117.5,315,Open,F,57,Single-ply,SBD
+3,55.1,Sarah J Klitgaard,1978,Tårnby SK,80,50,92.5,222.5,Open,F,57,Single-ply,SBD
+1,59.3,Susse Hougaard,1984,Aarhus AK,165,130,170,465,Open,F,63,Single-ply,SBD
+2,62.25,Kathrine H Bak,1981,Tårnby SK,142.5,82.5,165,390,Open,F,63,Single-ply,SBD
+DQ,62.2,Maj B Rames,1989,Sportshøjskolen,160,,,,Open,F,63,Single-ply,S
+1,71.75,Annette Pedersen,1968,Sportshøjskolen,202.5,125,195,522.5,Open,F,72,Single-ply,SBD
+2,71.15,Lise Frederiksen,1982,Hjørring SS,197.5,102.5,175,475,Open,F,72,Single-ply,SBD
+1,82.6,Kathrine Kristensen,1987,Sportshøjskolen,152.5,75,135,362.5,Open,F,84,Single-ply,SBD
+1,63.45,Mike Andersen,1984,Aalborg SK,195,115,182.5,492.5,Open,M,66,Single-ply,SBD
+1,73.4,Morten Rasmussen,1978,Tårnby SK,260,185,215,660,Open,M,74,Single-ply,SBD
+2,72.9,Danny Pedersen,1984,SK Atlas,222.5,142.5,242.5,607.5,Open,M,74,Single-ply,SBD
+DQ,73,Louis Preuthun,1980,Hvidovre SF,,,,,Open,M,74,Single-ply,SBD
+1,82.85,Kasper Egebo,1986,Sportshøjskolen,260,180,267.5,707.5,Open,M,83,Single-ply,SBD
+2,82.65,Danni Iversen,1987,Horsens SK,265,170,270,705,Open,M,83,Single-ply,SBD
+3,82.8,Erik Rasmussen,1962,ER Powerlifting,272.5,175,245,692.5,Open,M,83,Single-ply,SBD
+4,79.05,Jan Sahlgren,1960,Tårnby SK,235,155,200,590,Open,M,83,Single-ply,SBD
+5,82.85,Lars AB Rasmussen,1981,Aalborg SK,215,145,210,570,Open,M,83,Single-ply,SBD
+1,91.65,Nicolai Dahlin,1985,Hvidovre SF,315,140,120,575,Open,M,93,Single-ply,SBD
+2,92.75,Kim Petersen Hjordt,1984,Sportshøjskolen,75,75,75,225,Open,M,93,Single-ply,SBD
+1,104.85,Mathias Kristiansen,1985,Sportshøjskolen,320,220,310,850,Open,M,105,Single-ply,SBD
+2,98.15,Michael Jensen,1980,Aalborg SK,320,200,320,840,Open,M,105,Single-ply,SBD
+3,103.75,Kim Dahl Hansen,1971,Tårnby SK,315,210,295,820,Open,M,105,Single-ply,SBD
+4,104.1,Thomas J Sørensen,1981,Thisted VF,280,260,280,820,Open,M,105,Single-ply,SBD
+5,99.95,Rasmus Jensen,1973,Roskilde AK,272.5,217.5,215,705,Open,M,105,Single-ply,SBD
+6,101.85,Bjørn Frederiksen,1979,Hjørring SS,265,155,280,700,Open,M,105,Single-ply,SBD
+1,119.55,Stephan Vorup,1973,Thisted VF,355,227.5,320,902.5,Open,M,120,Single-ply,SBD
+2,111.9,Sune Bak,1974,Hvidovre SF,335,255,310,900,Open,M,120,Single-ply,SBD
+3,113.9,Jesper Smidt,1973,AK Nordland,300,215,240,755,Open,M,120,Single-ply,SBD
+4,111.8,Morten S Jensen,1989,ER Powerlifting,275,165,225,665,Open,M,120,Single-ply,SBD
+5,112.5,Jesper B Mikkelsen,1989,Sportshøjskolen,125,100,300,525,Open,M,120,Single-ply,SBD
+1,142.5,Morten Sørig,1969,Horsens SK,350,225,272.5,847.5,Open,M,120+,Single-ply,SBD
+DQ,134.75,Sune Bang,1977,Aarhus AK,,,,,Open,M,120+,Single-ply,SBD
+DQ,129.5,Carsten Jørgensen,1976,Sportshøjskolen,,,,,Open,M,120+,Single-ply,SBD
+DQ,120.35,Jens Jepsen,1970,Tårnby SK,,,,,Open,M,120+,Single-ply,SBD

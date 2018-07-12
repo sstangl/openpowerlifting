@@ -14,9 +14,9 @@ Place,BodyweightKg,Name,BirthYear,Team,Best3BenchKg,Division,Sex,WeightClassKg,E
 1,67.10,Jan C Christensen,1965,Albertslund SF,62.5,Open,M,67.5,Single-ply,62.5,B
 1,74.50,Kasper Fardan,1974,Københavns SK,160.0,Open,M,75,Single-ply,160.0,B
 2,72.50,Rene H Vester,1971,SK Atlas,135.0,Open,M,75,Single-ply,135.0,B
-DQ,73.70,Marc Møgelbjerg,1975,Gudenådalens SK,,Open,M,75,Single-ply,,
+DQ,73.70,Marc Møgelbjerg,1975,Gudenådalens SK,,Open,M,75,Single-ply,,B
 1,77.40,Kenneth Hansen,1965,Ares,132.5,Open,M,82.5,Single-ply,132.5,B
-DQ,82.10,Frank Brunhøj,1970,AK Frem,,Open,M,82.5,Single-ply,,
+DQ,82.10,Frank Brunhøj,1970,AK Frem,,Open,M,82.5,Single-ply,,B
 1,89.80,Kim Salby,1961,AK Odin,192.5,Open,M,90,Single-ply,192.5,B
 2,83.70,Allan Riis,1971,Aarhus AK,185.0,Open,M,90,Single-ply,185.0,B
 3,89.70,Kim Østergaard,1980,Odense BBC,180.0,Open,M,90,Single-ply,180.0,B
@@ -25,13 +25,13 @@ DQ,82.10,Frank Brunhøj,1970,AK Frem,,Open,M,82.5,Single-ply,,
 6,88.00,Bo Minkwitz,1972,Roskilde AK,150.0,Open,M,90,Single-ply,150.0,B
 7,89.80,Frank Madsen,1965,AK Frem,145.0,Open,M,90,Single-ply,145.0,B
 8,88.50,Allan Madsen,1966,Tårnby SK,105.0,Open,M,90,Single-ply,105.0,B
-DQ,84.20,Søren Wahlgren,1978,Aarhus AK,,Open,M,90,Single-ply,,
+DQ,84.20,Søren Wahlgren,1978,Aarhus AK,,Open,M,90,Single-ply,,B
 1,99.30,Henrik Sørensen,1973,Gudenådalens SK,205.0,Open,M,100,Single-ply,205.0,B
 2,98.40,Kim Dahl Hansen,1971,Tårnby SK,187.5,Open,M,100,Single-ply,187.5,B
 3,99.50,Johnny Kosela,1972,Aarhus AK,187.5,Open,M,100,Single-ply,187.5,B
 4,99.50,Keld B Ingerslev,1966,Aarhus AK,180.0,Open,M,100,Single-ply,180.0,B
 5,93.20,Jacob T Pilgaard,1978,Odense BBC,140.0,Open,M,100,Single-ply,140.0,B
-DQ,97.40,Troels Rubech,1979,Odense BBC,,Open,M,100,Single-ply,,
+DQ,97.40,Troels Rubech,1979,Odense BBC,,Open,M,100,Single-ply,,B
 1,101.60,Klaus WJ Bak,1979,AK Frem,187.5,Open,M,110,Single-ply,187.5,B
 2,109.30,Jacob Stegelmann,1980,Aarhus AK,187.5,Open,M,110,Single-ply,187.5,B
 3,106.40,Claus Jørgensen,1964,Tårnby SK,175.0,Open,M,110,Single-ply,175.0,B
@@ -45,7 +45,7 @@ DQ,97.40,Troels Rubech,1979,Odense BBC,,Open,M,100,Single-ply,,
 1,60.00,Michael Nielsen,1981,AK Frem,140.5,Juniors,M,60,Single-ply,140.5,B
 1,73.10,Heino Oesten,1983,Ares,115.0,Juniors,M,75,Single-ply,115.0,B
 1,79.10,Alen Babovic,1983,Teutonia,175.0,Juniors,M,82.5,Single-ply,175.0,B
-DQ,82.00,Martin Faber,1982,AK Frem,,Juniors,M,82.5,Single-ply,,
+DQ,82.00,Martin Faber,1982,AK Frem,,Juniors,M,82.5,Single-ply,,B
 1,82.90,Kristian Immersen,1983,Thisted VF,117.5,Juniors,M,90,Single-ply,117.5,B
 2,82.70,Chris E Bertelsen,1984,Grenå SK,115.0,Juniors,M,90,Single-ply,115.0,B
 1,96.60,Mads Hermansen,1981,Rødby M,180.5,Juniors,M,100,Single-ply,180.5,B
@@ -58,13 +58,13 @@ DQ,82.00,Martin Faber,1982,AK Frem,,Juniors,M,82.5,Single-ply,,
 1,96.90,John Lukassen,1961,Gudenådalens SK,180.0,Masters 1,M,100,Single-ply,180.0,B
 2,99.60,Jan Bertelsen,1955,?,180.0,Masters 1,M,100,Single-ply,180.0,B
 3,98.40,Bent Krohn,1964,Aarhus AK,155.0,Masters 1,M,100,Single-ply,155.0,B
-DQ,99.60,Lars Guldberg,1963,AK Nordland,,Masters 1,M,100,Single-ply,,
+DQ,99.60,Lars Guldberg,1963,AK Nordland,,Masters 1,M,100,Single-ply,,B
 1,107.80,Bjørn Nielsen,1959,Roskilde AK,145.0,Masters 1,M,110,Single-ply,145.0,B
 1,118.80,Søren Eggebrecht,1959,Aarhus AK,225.0,Masters 1,M,125,Single-ply,225.0,B
 1,125.20,Frank Jørgensen,1960,Københavns SK,190.5,Masters 1,M,125+,Single-ply,190.5,B
 1,82.30,Finn Jensen,1948,Frederikshavn HC,135.0,Masters 2,M,82.5,Single-ply,135.0,B
 1,89.30,Jens Klüver,1948,SK Atlas,183.0,Masters 2,M,90,Single-ply,183.0,B
-DQ,98.30,Jan B Traulsen,1948,Teutonia,,Masters 2,M,100,Single-ply,,
+DQ,98.30,Jan B Traulsen,1948,Teutonia,,Masters 2,M,100,Single-ply,,B
 1,111.00,Allan Fuglsang,1950,SK Atlas,175.0,Masters 2,M,125,Single-ply,175.0,B
 1,60.00,Bent Hansen,1941,Roskilde AK,80.0,Masters 3,M,60,Single-ply,80.0,B
 1,66.00,Horst Diter,1943,Ares,92.5,Masters 3,M,67.5,Single-ply,92.5,B
@@ -84,5 +84,5 @@ DQ,98.30,Jan B Traulsen,1948,Teutonia,,Masters 2,M,100,Single-ply,,
 1,75.30,Lars Oddershede,1986,Thisted VF,117.5,Teen,M,82.5,Single-ply,117.5,B
 2,75.80,Martin Bertelsen,1986,Grenå SK,92.5,Teen,M,82.5,Single-ply,92.5,B
 3,76.90,Kenneth L Hansen,1985,Ares,92.5,Teen,M,82.5,Single-ply,92.5,B
-DQ,85.80,Lasse Olsen,1986,Albertslund SF,,Teen,M,90,Single-ply,,
+DQ,85.80,Lasse Olsen,1986,Albertslund SF,,Teen,M,90,Single-ply,,B
 1,98.50,Stefan M Andersen,1987,Odense BBC,110.0,Teen,M,100,Single-ply,110.0,B
