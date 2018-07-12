@@ -202,6 +202,8 @@ pub enum Federation {
     SPA,
     #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
+    #[strum(to_string = "SPSS", serialize = "spss")]
+    SPSS,
     #[strum(to_string = "SSF", serialize = "ssf")]
     SSF,
     #[strum(to_string = "SVNL", serialize = "svnl")]
@@ -418,8 +420,9 @@ impl MetaFederation {
                     || meet.federation == Federation::FPR
                     || meet.federation == Federation::GPCRUS
                     || meet.federation == Federation::NAP
-                    || meet.federation == Federation::SCT
                     || meet.federation == Federation::RPU
+                    || meet.federation == Federation::SCT
+                    || meet.federation == Federation::SPSS
                     || meet.federation == Federation::WPCRUS
                     || meet.federation == Federation::WRPF
             }
