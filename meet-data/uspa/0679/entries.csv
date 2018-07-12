@@ -1,43 +1,43 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Lisa Francavilla,GA,75,75,48,132.5,67.5,160,360,F,Open,Raw
-2,Krysta Martinez,SC,75,71.2,30,127.5,65,142.5,335,F,Open,Raw
-1,Anna Murrill,GA,90+,98.7,36,112.5,87.5,160,360,F,Open,Raw
-1,Anna Murrill,GA,90+,98.7,36,112.5,87.5,160,360,F,Submaster,Raw
-1,Lisa Francavilla,GA,75,75,48,132.5,67.5,160,360,F,Master 45-49,Raw
-1,Robert Axselle,SC,75,74.5,22,247.5,167.5,262.5,677.5,M,Junior 20-23,Raw
-1,Tyler Baggett,GA,110,108,20,250,147.5,275,672.5,M,Junior 20-23,Raw
-1,Landon White,GA,67.5,66,17,135,97.5,170,402.5,M,Open,Raw
-2,Hunter Mueller,GA,67.5,65.7,17,127.5,87.5,145,360,M,Open,Raw
-1,Robert Axselle,SC,75,74.5,22,247.5,167.5,262.5,677.5,M,Open,Raw
-2,Alex Morales,SC,75,74.4,36,152.5,110,242.5,505,M,Open,Raw
-3,Erek Scoville,GA,75,75,32,155,120,205,480,M,Open,Raw
-1,Jerad Johnson,GA,82.5,79.3,33,197.5,145,247.5,590,M,Open,Raw
-2,Drake Parker,TN,82.5,79.3,21,197.5,135,240,572.5,M,Open,Raw
-3,Nelson Carroll,SC,82.5,81.7,28,185,137.5,187.5,510,M,Open,Raw
-1,Myreon Dunn,GA,90,87.4,34,182.5,145,247.5,575,M,Open,Raw
-DQ,William Wheelis,GA,90,89.8,28,240,-162.5,,,M,Open,Raw
-1,Kyle Mask,TN,100,97.5,34,272.5,190,320,782.5,M,Open,Raw
-2,Jonathan Shipp,SC,100,93.1,28,215,150,237.5,602.5,M,Open,Raw
-3,Oakley Walraven,GA,100,99.7,31,75,225,75,375,M,Open,Raw
-1,Julian Bevans,GA,110,102.3,29,242.5,230,295,767.5,M,Open,Raw
-2,Sean Getek,GA,110,107.5,24,237.5,195,280,712.5,M,Open,Raw
-3,Tyler Baggett,GA,110,108,20,250,147.5,275,672.5,M,Open,Raw
-4,Kyle Pearson,GA,110,108.4,31,185,105,210,500,M,Open,Raw
-1,James McFarlane,GA,125,112.4,34,207.5,157.5,215,580,M,Open,Raw
-1,Alex Morales,SC,75,74.4,36,152.5,110,242.5,505,M,Submaster 35-39,Raw
-1,Jamie Brown,TN,56,54.6,26,132.5,57.5,127.5,317.5,F,Open,Wraps
-1,Corey Crook,GA,67.5,64.4,23,200,107.5,215,522.5,M,Junior 20-23,Wraps
-1,Corey Crook,GA,67.5,64.4,23,200,107.5,215,522.5,M,Open,Wraps
-1,Brandon Pemberton,GA,75,74.3,24,232.5,160,250,642.5,M,Open,Wraps
-2,Steven Smejkal,AL,75,69.7,24,145,90,165,400,M,Open,Wraps
-1,Justin Bethune,GA,100,99.9,28,307.5,195,292.5,795,M,Open,Wraps
-2,James Pinet,GA,100,99.1,28,260,177.5,275,712.5,M,Open,Wraps
-3,Tony Shuler,GA,100,97.5,31,265,162.5,265,692.5,M,Open,Wraps
-4,Shelby Grosch,GA,100,96.6,22,210,132.5,250,592.5,M,Open,Wraps
-5,Brandon Loggins,GA,100,96.2,28,185,142.5,200,527.5,M,Open,Wraps
-1,Dan Brooks,AR,110,106.6,43,272.5,172.5,280,725,M,Open,Wraps
-1,Brian Albrecht,SC,125,121,27,255,190,277.5,722.5,M,Open,Wraps
-1,Dan Brooks,AR,110,106.6,43,272.5,172.5,280,725,M,Master 40-44,Wraps
-1,Oakley Walraven,GA,100,99.7,31,,225,,225,M,Open,Raw
-1,Sean Getek,GA,110,107.5,24,,195,,195,M,Open,Raw
-1,Howard Griffin,GA,82.5,81.6,43,,,187.5,187.5,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Lisa Francavilla,GA,75,75,48,132.5,67.5,160,360,F,Open,Raw,SBD
+2,Krysta Martinez,SC,75,71.2,30,127.5,65,142.5,335,F,Open,Raw,SBD
+1,Anna Murrill,GA,90+,98.7,36,112.5,87.5,160,360,F,Open,Raw,SBD
+1,Anna Murrill,GA,90+,98.7,36,112.5,87.5,160,360,F,Submaster,Raw,SBD
+1,Lisa Francavilla,GA,75,75,48,132.5,67.5,160,360,F,Master 45-49,Raw,SBD
+1,Robert Axselle,SC,75,74.5,22,247.5,167.5,262.5,677.5,M,Junior 20-23,Raw,SBD
+1,Tyler Baggett,GA,110,108,20,250,147.5,275,672.5,M,Junior 20-23,Raw,SBD
+1,Landon White,GA,67.5,66,17,135,97.5,170,402.5,M,Open,Raw,SBD
+2,Hunter Mueller,GA,67.5,65.7,17,127.5,87.5,145,360,M,Open,Raw,SBD
+1,Robert Axselle,SC,75,74.5,22,247.5,167.5,262.5,677.5,M,Open,Raw,SBD
+2,Alex Morales,SC,75,74.4,36,152.5,110,242.5,505,M,Open,Raw,SBD
+3,Erek Scoville,GA,75,75,32,155,120,205,480,M,Open,Raw,SBD
+1,Jerad Johnson,GA,82.5,79.3,33,197.5,145,247.5,590,M,Open,Raw,SBD
+2,Drake Parker,TN,82.5,79.3,21,197.5,135,240,572.5,M,Open,Raw,SBD
+3,Nelson Carroll,SC,82.5,81.7,28,185,137.5,187.5,510,M,Open,Raw,SBD
+1,Myreon Dunn,GA,90,87.4,34,182.5,145,247.5,575,M,Open,Raw,SBD
+DQ,William Wheelis,GA,90,89.8,28,240,-162.5,,,M,Open,Raw,SBD
+1,Kyle Mask,TN,100,97.5,34,272.5,190,320,782.5,M,Open,Raw,SBD
+2,Jonathan Shipp,SC,100,93.1,28,215,150,237.5,602.5,M,Open,Raw,SBD
+3,Oakley Walraven,GA,100,99.7,31,75,225,75,375,M,Open,Raw,SBD
+1,Julian Bevans,GA,110,102.3,29,242.5,230,295,767.5,M,Open,Raw,SBD
+2,Sean Getek,GA,110,107.5,24,237.5,195,280,712.5,M,Open,Raw,SBD
+3,Tyler Baggett,GA,110,108,20,250,147.5,275,672.5,M,Open,Raw,SBD
+4,Kyle Pearson,GA,110,108.4,31,185,105,210,500,M,Open,Raw,SBD
+1,James McFarlane,GA,125,112.4,34,207.5,157.5,215,580,M,Open,Raw,SBD
+1,Alex Morales,SC,75,74.4,36,152.5,110,242.5,505,M,Submaster 35-39,Raw,SBD
+1,Jamie Brown,TN,56,54.6,26,132.5,57.5,127.5,317.5,F,Open,Wraps,SBD
+1,Corey Crook,GA,67.5,64.4,23,200,107.5,215,522.5,M,Junior 20-23,Wraps,SBD
+1,Corey Crook,GA,67.5,64.4,23,200,107.5,215,522.5,M,Open,Wraps,SBD
+1,Brandon Pemberton,GA,75,74.3,24,232.5,160,250,642.5,M,Open,Wraps,SBD
+2,Steven Smejkal,AL,75,69.7,24,145,90,165,400,M,Open,Wraps,SBD
+1,Justin Bethune,GA,100,99.9,28,307.5,195,292.5,795,M,Open,Wraps,SBD
+2,James Pinet,GA,100,99.1,28,260,177.5,275,712.5,M,Open,Wraps,SBD
+3,Tony Shuler,GA,100,97.5,31,265,162.5,265,692.5,M,Open,Wraps,SBD
+4,Shelby Grosch,GA,100,96.6,22,210,132.5,250,592.5,M,Open,Wraps,SBD
+5,Brandon Loggins,GA,100,96.2,28,185,142.5,200,527.5,M,Open,Wraps,SBD
+1,Dan Brooks,AR,110,106.6,43,272.5,172.5,280,725,M,Open,Wraps,SBD
+1,Brian Albrecht,SC,125,121,27,255,190,277.5,722.5,M,Open,Wraps,SBD
+1,Dan Brooks,AR,110,106.6,43,272.5,172.5,280,725,M,Master 40-44,Wraps,SBD
+1,Oakley Walraven,GA,100,99.7,31,,225,,225,M,Open,Raw,B
+1,Sean Getek,GA,110,107.5,24,,195,,195,M,Open,Raw,B
+1,Howard Griffin,GA,82.5,81.6,43,,,187.5,187.5,M,Open,Raw,D

@@ -1,39 +1,39 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,Deadlift4Kg,TotalKg
-Luke Rafter,1,Junior Men 20-23,M,Raw,OR,82.5,78.15,20,165.00,,90.00,190.00,,445.00
-Sky Pounds,1,Junior Men 20-23,M,Raw,WA,110,107.27,23,227.50,,165.00,272.50,,665.00
-Zachary Marquez,1,Open Men,M,Raw,WA,90,88.31,24,227.50,,157.50,227.50,,612.50
-Brandon Sheubert,2,Open Men,M,Raw,WA,90,88.68,31,170.00,,137.50,200.00,,507.50
-Greg Johnson,1,Open Men,M,Raw,MT,100,97.61,25,197.50,,160.00,220.00,,577.50
-Dallas Reilly,1,Open Men,M,Raw,WA,110,104.55,27,292.50,,185.00,317.50,,795.00
-John Danielson,1,Open Men,M,Raw,MT,125,123.97,28,227.50,,172.50,260.00,,660.00
-Rob Cross,1,Master Men 45-49,M,Raw,ID,100,98.43,47,170.00,,132.50,182.50,,485.00
-Mark Salansky,1,Master Men 55-59,M,Raw,MT,100,97.30,55,200.00,,165.00,235.00,,600.00
-Randy Holman,1,Master Men 65-69,M,Raw,OR,110,104.10,65,125.00,,165.00,185.00,,475.00
-Amy Clark,DQ,Open Women,F,Wraps,WA,75,74.84,33,155.00,,-85.00,165.00,,
-Mckenzie Burgess,1,Open Women,F,Wraps,WA,90+,96.62,28,160.00,,77.50,150.00,,387.50
-Lisa Kromer,1,Submaster Women 35-39,F,Wraps,WA,67.5,65.77,38,122.50,,75.00,140.00,145,337.50
-Michelle Fahrendorf,1,Master Women 40-44,F,Wraps,WA,67.5,63.73,42,92.50,,55.00,107.50,,255.00
-Kyle Schuetze,1,Junior Men 20-23,M,Wraps,WA,82.5,82.10,22,182.50,,115.00,227.50,,525.00
-Zach Brunner,1,Junior Men 18-19,M,Wraps,WA,125,120.20,19,235.00,237.5,162.50,250.00,,647.50
-James Fuller,1,Open Men,M,Wraps,WA,75,74.84,27,220.00,,147.50,187.50,,555.00
-Lee Dougherty,1,Open Men,M,Wraps,WA,100,98.43,34,235.00,,182.50,272.50,,690.00
-Jesse Drach,1,Open Men,M,Wraps,WA,110,109.77,26,242.50,,217.50,305.00,,765.00
-Jacob Zappey,2,Open Men,M,Wraps,WA,110,106.82,30,207.50,,147.50,215.00,,570.00
-Evan Beyer,DQ,Open Men,M,Wraps,Can,125,122.47,25,-300.00,,,,,
-Mike Kromer,1,Open Men,M,Wraps,WA,140+,150.59,40,325.00,,220.00,272.50,,817.50
-Jeff Conley,1,Master Men 50-54,M,Wraps,WA,125,118.16,54,227.50,,200.00,227.50,,655.00
-Mike Kromer,1,Master Men 40-44,M,Wraps,WA,140+,150.59,40,325.00,,220.00,272.50,,817.50
-Greg Grogan,DQ,Open Men,M,Single-ply,OR,82.5,77.88,30,162.50,,-147.50,237.50,,
-James Sleiman,1,Open Men,M,Single-ply,WA,90,88.68,25,215.00,,145.00,220.00,,580.00
-David Williams,1,Submaster Men 35-39,M,Single-ply,MT,90,88.90,39,182.50,,132.50,230.00,,545.00
-Suzanne Rieseberg,1,Open Women,F,Raw,WA,82.5,79.83,29,,,47.50,,,47.50
-Emily Santos,1,Master Women 40-44,F,Raw,WA,56,55.79,42,,,77.50,,,77.50
-Jared Weaver,1,Junior Men 20-23,M,Raw,WA,110,103.42,21,,,155.00,,,155.00
-Sean Urbina,1,Open Men,M,Raw,WA,90,88.22,27,,,157.50,,,157.50
-Howie Chaves,1,Master Men 60-64,M,Raw,WA,100,97.30,62,,,160.00,,,160.00
-Isabel Santini,1,Junior Women 16-17,F,Raw,WA,75,68.95,16,,,,115.00,,115.00
-Suzanne Rieseberg,1,Open Women,F,Raw,WA,82.5,79.83,29,,,,122.50,,122.50
-Sean Urbina,1,Open Men,M,Raw,WA,90,88.22,27,,,,217.50,,217.50
-Jack Sandberg,1,Submaster Men 35-39,M,Raw,WA,110,105.69,39,,,,282.50,,282.50
-Troy Willis,1,Open Men,M,Single-ply,WA,100,99.79,44,,,,277.50,,277.50
-Troy Willis,1,Master Men 40-44,M,Single-ply,WA,100,99.79,44,,,,277.50,,277.50
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+Luke Rafter,1,Junior Men 20-23,M,Raw,OR,82.5,78.15,20,165.00,,90.00,190.00,,445.00,SBD
+Sky Pounds,1,Junior Men 20-23,M,Raw,WA,110,107.27,23,227.50,,165.00,272.50,,665.00,SBD
+Zachary Marquez,1,Open Men,M,Raw,WA,90,88.31,24,227.50,,157.50,227.50,,612.50,SBD
+Brandon Sheubert,2,Open Men,M,Raw,WA,90,88.68,31,170.00,,137.50,200.00,,507.50,SBD
+Greg Johnson,1,Open Men,M,Raw,MT,100,97.61,25,197.50,,160.00,220.00,,577.50,SBD
+Dallas Reilly,1,Open Men,M,Raw,WA,110,104.55,27,292.50,,185.00,317.50,,795.00,SBD
+John Danielson,1,Open Men,M,Raw,MT,125,123.97,28,227.50,,172.50,260.00,,660.00,SBD
+Rob Cross,1,Master Men 45-49,M,Raw,ID,100,98.43,47,170.00,,132.50,182.50,,485.00,SBD
+Mark Salansky,1,Master Men 55-59,M,Raw,MT,100,97.30,55,200.00,,165.00,235.00,,600.00,SBD
+Randy Holman,1,Master Men 65-69,M,Raw,OR,110,104.10,65,125.00,,165.00,185.00,,475.00,SBD
+Amy Clark,DQ,Open Women,F,Wraps,WA,75,74.84,33,155.00,,-85.00,165.00,,,SBD
+Mckenzie Burgess,1,Open Women,F,Wraps,WA,90+,96.62,28,160.00,,77.50,150.00,,387.50,SBD
+Lisa Kromer,1,Submaster Women 35-39,F,Wraps,WA,67.5,65.77,38,122.50,,75.00,140.00,145,337.50,SBD
+Michelle Fahrendorf,1,Master Women 40-44,F,Wraps,WA,67.5,63.73,42,92.50,,55.00,107.50,,255.00,SBD
+Kyle Schuetze,1,Junior Men 20-23,M,Wraps,WA,82.5,82.10,22,182.50,,115.00,227.50,,525.00,SBD
+Zach Brunner,1,Junior Men 18-19,M,Wraps,WA,125,120.20,19,235.00,237.5,162.50,250.00,,647.50,SBD
+James Fuller,1,Open Men,M,Wraps,WA,75,74.84,27,220.00,,147.50,187.50,,555.00,SBD
+Lee Dougherty,1,Open Men,M,Wraps,WA,100,98.43,34,235.00,,182.50,272.50,,690.00,SBD
+Jesse Drach,1,Open Men,M,Wraps,WA,110,109.77,26,242.50,,217.50,305.00,,765.00,SBD
+Jacob Zappey,2,Open Men,M,Wraps,WA,110,106.82,30,207.50,,147.50,215.00,,570.00,SBD
+Evan Beyer,DQ,Open Men,M,Wraps,Can,125,122.47,25,-300.00,,,,,,SBD
+Mike Kromer,1,Open Men,M,Wraps,WA,140+,150.59,40,325.00,,220.00,272.50,,817.50,SBD
+Jeff Conley,1,Master Men 50-54,M,Wraps,WA,125,118.16,54,227.50,,200.00,227.50,,655.00,SBD
+Mike Kromer,1,Master Men 40-44,M,Wraps,WA,140+,150.59,40,325.00,,220.00,272.50,,817.50,SBD
+Greg Grogan,DQ,Open Men,M,Single-ply,OR,82.5,77.88,30,162.50,,-147.50,237.50,,,SBD
+James Sleiman,1,Open Men,M,Single-ply,WA,90,88.68,25,215.00,,145.00,220.00,,580.00,SBD
+David Williams,1,Submaster Men 35-39,M,Single-ply,MT,90,88.90,39,182.50,,132.50,230.00,,545.00,SBD
+Suzanne Rieseberg,1,Open Women,F,Raw,WA,82.5,79.83,29,,,47.50,,,47.50,B
+Emily Santos,1,Master Women 40-44,F,Raw,WA,56,55.79,42,,,77.50,,,77.50,B
+Jared Weaver,1,Junior Men 20-23,M,Raw,WA,110,103.42,21,,,155.00,,,155.00,B
+Sean Urbina,1,Open Men,M,Raw,WA,90,88.22,27,,,157.50,,,157.50,B
+Howie Chaves,1,Master Men 60-64,M,Raw,WA,100,97.30,62,,,160.00,,,160.00,B
+Isabel Santini,1,Junior Women 16-17,F,Raw,WA,75,68.95,16,,,,115.00,,115.00,D
+Suzanne Rieseberg,1,Open Women,F,Raw,WA,82.5,79.83,29,,,,122.50,,122.50,D
+Sean Urbina,1,Open Men,M,Raw,WA,90,88.22,27,,,,217.50,,217.50,D
+Jack Sandberg,1,Submaster Men 35-39,M,Raw,WA,110,105.69,39,,,,282.50,,282.50,D
+Troy Willis,1,Open Men,M,Single-ply,WA,100,99.79,44,,,,277.50,,277.50,D
+Troy Willis,1,Master Men 40-44,M,Single-ply,WA,100,99.79,44,,,,277.50,,277.50,D

@@ -1,42 +1,42 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg
-1,Samantha Coldiron,AZ,48,47.5,20,82.5,42.5,92.5,217.5,F,Junior 20-23,Raw,,
-1,Esther Yen,AZ,56,55.5,17,117.5,65,145,327.5,F,Junior 16-17,Raw,122.5,147.5
-1,Jacci Leach,AZ,56,54.6,21,92.5,65,102.5,260,F,Junior 20-23,Raw,,
-1,Ceyanna Trechern,AZ,67.5,66.9,19,115,55,125,295,F,Junior 18-19,Raw,,
-1,Kelbee Prowell,AZ,75,69.8,22,100,60,132.5,292.5,F,Junior 20-23,Raw,,
-1,Sharianna Cazares,AZ,82.5,77.4,20,107.5,67.5,127.5,302.5,F,Junior 20-23,Raw,,
-1,Jacci Leach,AZ,56,54.6,21,92.5,65,102.5,260,F,Open,Raw,,
-1,Bobbie Schmeltzer,AZ,60,59.4,30,107.5,70,142.5,320,F,Open,Raw,,
-2,Lynn Gerald,AZ,60,57.4,44,62.5,47.5,95,205,F,Open,Raw,,
-3,Stephanie Staub,NV,60,57.5,38,75,32.5,92.5,200,F,Open,Raw,,
-1,Nicole Perez,AZ,67.5,64,29,120,75,165,360,F,Open,Raw,,
-2,Jean-Ann Burgland,AZ,67.5,63.8,52,125,82.5,140,347.5,F,Open,Raw,,
-3,Haley Mestey,AZ,67.5,64.6,27,122.5,65,160,347.5,F,Open,Raw,,
-4,Gladys Cazares,AZ,67.5,67.5,23,115,55,142.5,312.5,F,Open,Raw,,
-5,Ceyanna Trechern,AZ,67.5,66.9,19,115,55,125,295,F,Open,Raw,,
-6,Dacia Hesiak,AZ,67.5,61.3,44,87.5,60,110,257.5,F,Open,Raw,,
-7,Martha Cazares,AZ,67.5,64.6,28,85,50,117.5,252.5,F,Open,Raw,,
-1,Genevieve Betro,AZ,75,71.6,30,120,70,145,335,F,Open,Raw,,
-2,Kate Danno,AZ,75,69.3,44,115,57.5,127.5,300,F,Open,Raw,,
-3,Kelbee Prowell,AZ,75,69.8,22,100,60,132.5,292.5,F,Open,Raw,,
-4,Carrie Vandebrake,AZ,75,69.6,34,72.5,47.5,97.5,217.5,F,Open,Raw,,
-1,Chelsea Fricker,AZ,90,80,26,97.5,45,107.5,250,F,Open,Raw,,
-1,Whitney Lewis,AZ,90+,95.1,28,110,60,170,340,F,Open,Raw,,
-2,Ashley Neal,AZ,90+,105.8,31,100,67.5,120,287.5,F,Open,Raw,,
-1,Stephanie Staub,NV,60,57.5,38,75,32.5,92.5,200,F,Submaster 35-39,Raw,,
-1,Mindy Polk,NV,67.5,67.5,36,105,52.5,135,292.5,F,Submaster 35-39,Raw,,
-1,Lynn Gerald,AZ,60,57.4,44,62.5,47.5,95,205,F,Master 40-44,Raw,,
-1,Dacia Hesiak,AZ,67.5,61.3,44,87.5,60,110,257.5,F,Master 40-44,Raw,,
-1,Jean-Ann Burgland,AZ,67.5,63.8,52,125,82.5,140,347.5,F,Master 50-54,Raw,,147.5
-1,Kate Danno,AZ,75,69.3,44,115,57.5,127.5,300,F,Master 40-44,Raw,,
-2,LeAnne Shumaker,AZ,75,74.1,44,85,62.5,137.5,285,F,Master 40-44,Raw,,
-1,Kimberly Price,AZ,60,60,21,117.5,67.5,155,340,F,Junior 20-23,Wraps,,
-1,Tricia Downing,AZ,60,59.5,40,120,65,125,310,F,Open,Wraps,,
-1,Yessenia Garza,AZ,67.5,66.6,28,112.5,62.5,145,320,F,Open,Wraps,,
-1,Sophia Hussary,AZ,82.5,82.1,38,142.5,85,190,417.5,F,Open,Wraps,,
-1,Carmen Bell,AZ,90,88.7,32,160,77.5,162.5,400,F,Open,Wraps,,
-DQ,Andrea Esquibel,AZ,90,87.5,30,130,-110,152.5,,F,Open,Wraps,,
-1,Sophia Hussary,AZ,82.5,82.1,38,142.5,85,190,417.5,F,Submaster 35-39,Wraps,,
-1,Tricia Downing,AZ,60,59.5,40,120,65,125,310,F,Master 40-44,Wraps,,
-1,Sherri Taylor,AZ,52,50.6,42,,45,,45,F,Open,Raw,,
-1,Sherri Taylor,AZ,52,50.6,42,,,112.5,112.5,F,Open,Raw,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg,Event
+1,Samantha Coldiron,AZ,48,47.5,20,82.5,42.5,92.5,217.5,F,Junior 20-23,Raw,,,SBD
+1,Esther Yen,AZ,56,55.5,17,117.5,65,145,327.5,F,Junior 16-17,Raw,122.5,147.5,SBD
+1,Jacci Leach,AZ,56,54.6,21,92.5,65,102.5,260,F,Junior 20-23,Raw,,,SBD
+1,Ceyanna Trechern,AZ,67.5,66.9,19,115,55,125,295,F,Junior 18-19,Raw,,,SBD
+1,Kelbee Prowell,AZ,75,69.8,22,100,60,132.5,292.5,F,Junior 20-23,Raw,,,SBD
+1,Sharianna Cazares,AZ,82.5,77.4,20,107.5,67.5,127.5,302.5,F,Junior 20-23,Raw,,,SBD
+1,Jacci Leach,AZ,56,54.6,21,92.5,65,102.5,260,F,Open,Raw,,,SBD
+1,Bobbie Schmeltzer,AZ,60,59.4,30,107.5,70,142.5,320,F,Open,Raw,,,SBD
+2,Lynn Gerald,AZ,60,57.4,44,62.5,47.5,95,205,F,Open,Raw,,,SBD
+3,Stephanie Staub,NV,60,57.5,38,75,32.5,92.5,200,F,Open,Raw,,,SBD
+1,Nicole Perez,AZ,67.5,64,29,120,75,165,360,F,Open,Raw,,,SBD
+2,Jean-Ann Burgland,AZ,67.5,63.8,52,125,82.5,140,347.5,F,Open,Raw,,,SBD
+3,Haley Mestey,AZ,67.5,64.6,27,122.5,65,160,347.5,F,Open,Raw,,,SBD
+4,Gladys Cazares,AZ,67.5,67.5,23,115,55,142.5,312.5,F,Open,Raw,,,SBD
+5,Ceyanna Trechern,AZ,67.5,66.9,19,115,55,125,295,F,Open,Raw,,,SBD
+6,Dacia Hesiak,AZ,67.5,61.3,44,87.5,60,110,257.5,F,Open,Raw,,,SBD
+7,Martha Cazares,AZ,67.5,64.6,28,85,50,117.5,252.5,F,Open,Raw,,,SBD
+1,Genevieve Betro,AZ,75,71.6,30,120,70,145,335,F,Open,Raw,,,SBD
+2,Kate Danno,AZ,75,69.3,44,115,57.5,127.5,300,F,Open,Raw,,,SBD
+3,Kelbee Prowell,AZ,75,69.8,22,100,60,132.5,292.5,F,Open,Raw,,,SBD
+4,Carrie Vandebrake,AZ,75,69.6,34,72.5,47.5,97.5,217.5,F,Open,Raw,,,SBD
+1,Chelsea Fricker,AZ,90,80,26,97.5,45,107.5,250,F,Open,Raw,,,SBD
+1,Whitney Lewis,AZ,90+,95.1,28,110,60,170,340,F,Open,Raw,,,SBD
+2,Ashley Neal,AZ,90+,105.8,31,100,67.5,120,287.5,F,Open,Raw,,,SBD
+1,Stephanie Staub,NV,60,57.5,38,75,32.5,92.5,200,F,Submaster 35-39,Raw,,,SBD
+1,Mindy Polk,NV,67.5,67.5,36,105,52.5,135,292.5,F,Submaster 35-39,Raw,,,SBD
+1,Lynn Gerald,AZ,60,57.4,44,62.5,47.5,95,205,F,Master 40-44,Raw,,,SBD
+1,Dacia Hesiak,AZ,67.5,61.3,44,87.5,60,110,257.5,F,Master 40-44,Raw,,,SBD
+1,Jean-Ann Burgland,AZ,67.5,63.8,52,125,82.5,140,347.5,F,Master 50-54,Raw,,147.5,SBD
+1,Kate Danno,AZ,75,69.3,44,115,57.5,127.5,300,F,Master 40-44,Raw,,,SBD
+2,LeAnne Shumaker,AZ,75,74.1,44,85,62.5,137.5,285,F,Master 40-44,Raw,,,SBD
+1,Kimberly Price,AZ,60,60,21,117.5,67.5,155,340,F,Junior 20-23,Wraps,,,SBD
+1,Tricia Downing,AZ,60,59.5,40,120,65,125,310,F,Open,Wraps,,,SBD
+1,Yessenia Garza,AZ,67.5,66.6,28,112.5,62.5,145,320,F,Open,Wraps,,,SBD
+1,Sophia Hussary,AZ,82.5,82.1,38,142.5,85,190,417.5,F,Open,Wraps,,,SBD
+1,Carmen Bell,AZ,90,88.7,32,160,77.5,162.5,400,F,Open,Wraps,,,SBD
+DQ,Andrea Esquibel,AZ,90,87.5,30,130,-110,152.5,,F,Open,Wraps,,,SBD
+1,Sophia Hussary,AZ,82.5,82.1,38,142.5,85,190,417.5,F,Submaster 35-39,Wraps,,,SBD
+1,Tricia Downing,AZ,60,59.5,40,120,65,125,310,F,Master 40-44,Wraps,,,SBD
+1,Sherri Taylor,AZ,52,50.6,42,,45,,45,F,Open,Raw,,,B
+1,Sherri Taylor,AZ,52,50.6,42,,,112.5,112.5,F,Open,Raw,,,D

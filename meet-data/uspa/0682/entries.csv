@@ -1,31 +1,31 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Kaitlin Baker,OH,56,54.90,21,85.00,42.50,107.50,235.00,F,Junior 20-23,Raw
-1,Stacey Cumming,OH,67.5,65.40,42,92.50,57.50,107.50,257.50,F,Open,Raw
-1,Stacey Cumming,OH,67.5,65.40,42,92.50,57.50,107.50,257.50,F,Master 40-44,Raw
-1,Ina Foster,OH,75,71.00,28,112.50,60.00,137.50,310.00,F,Open,Raw
-1,Jacqueline Skunda,OH,82.5,81.40,32,117.50,57.50,135.00,310.00,F,Open,Raw
-1,Kristin Harris,OH,90+,133.60,28,142.50,72.50,162.50,377.50,F,Open,Raw
-1,Jean Olasov,OH,90+,96.00,45,77.50,62.50,107.50,247.50,F,Master 45-49,Raw
-1,Justin Holm,OH,67.5,67.20,24,170.00,125.00,190.00,485.00,M,Open,Raw
-1,Nick Glavin,OH,75,74.80,28,162.50,110.00,200.00,472.50,M,Open,Raw
-2,Nick Caldwell,OH,75,74.00,32,182.50,102.50,215.00,500.00,M,Open,Raw
-3,Cody Rice,OH,75,73.90,22,222.50,137.50,250.00,610.00,M,Open,Raw
-4,Mike Wallman,OH,75,72.50,25,160.00,107.50,205.00,472.50,M,Open,Raw
-1,Dustin Edwards,OH,82.5,81.70,33,172.50,120.00,205.00,497.50,M,Open,Raw
-1,James Adkins,OH,82.5,81.20,18,160.00,97.50,185.00,442.50,M,Junior 18-19,Raw
-1,Geoff Schultz,OH,90,87.60,24,190.00,132.50,205.00,527.50,M,Open,Raw
-2,Robert Hartborger,OH,90,87.50,30,215.00,175.00,185.00,575.00,M,Open,Raw
-3,Justin Ng,OH,90,89.50,22,232.50,172.50,280.00,685.00,M,Open,Raw
-1,Mike Cleary,OH,100,94.90,31,140.00,112.50,185.00,437.50,M,Open,Raw
-1,Jon Ruffier,OH,110,100.90,28,165.00,115.00,170.00,450.00,M,Open,Raw
-2,Jeff Vasenda,OH,110,106.50,30,212.50,162.50,275.00,650.00,M,Open,Raw
-1,Samuel Touroonijan,OH,125,114.71,23,215.00,152.50,250.00,617.50,M,Junior 20-23,Raw
-1,Chris Opp,OH,125,116.50,24,185.00,155.00,220.00,560.00,M,Open,Raw
-1,Sara Howard,WV,67.5,67.10,35,100.00,60.00,115.00,275.00,F,Submaster 35-39,Wraps
-1,Sam Bowles,OH,75,74.60,23,182.50,132.50,210.00,525.00,M,Open,Wraps
-1,Jacob Horn,IL,90,86.70,32,227.50,167.50,275.00,670.00,M,Open,Wraps
-1,Aaron Harper,OH,100,97.50,28,210.00,127.50,220.00,557.50,M,Open,Wraps
-1,Arthur Wooten,OH,140+,162.40,60,200.00,182.50,185.00,567.50,M,Master 60-65,Single-ply
-1,Zach Hoffman,OH,82.5,81.20,21,,120.00,212.50,332.50,M,Junior 20-23,Raw
-1,Evan Stoll,OH,90,89.00,21,,157.50,227.50,385.00,M,Junior 20-23,Raw
-1,Aaron Dunlap,OH,90,89.80,28,,180.00,,180.00,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Kaitlin Baker,OH,56,54.9,21,85,42.5,107.5,235,F,Junior 20-23,Raw,SBD
+1,Stacey Cumming,OH,67.5,65.4,42,92.5,57.5,107.5,257.5,F,Open,Raw,SBD
+1,Stacey Cumming,OH,67.5,65.4,42,92.5,57.5,107.5,257.5,F,Master 40-44,Raw,SBD
+1,Ina Foster,OH,75,71,28,112.5,60,137.5,310,F,Open,Raw,SBD
+1,Jacqueline Skunda,OH,82.5,81.4,32,117.5,57.5,135,310,F,Open,Raw,SBD
+1,Kristin Harris,OH,90+,133.6,28,142.5,72.5,162.5,377.5,F,Open,Raw,SBD
+1,Jean Olasov,OH,90+,96,45,77.5,62.5,107.5,247.5,F,Master 45-49,Raw,SBD
+1,Justin Holm,OH,67.5,67.2,24,170,125,190,485,M,Open,Raw,SBD
+1,Nick Glavin,OH,75,74.8,28,162.5,110,200,472.5,M,Open,Raw,SBD
+2,Nick Caldwell,OH,75,74,32,182.5,102.5,215,500,M,Open,Raw,SBD
+3,Cody Rice,OH,75,73.9,22,222.5,137.5,250,610,M,Open,Raw,SBD
+4,Mike Wallman,OH,75,72.5,25,160,107.5,205,472.5,M,Open,Raw,SBD
+1,Dustin Edwards,OH,82.5,81.7,33,172.5,120,205,497.5,M,Open,Raw,SBD
+1,James Adkins,OH,82.5,81.2,18,160,97.5,185,442.5,M,Junior 18-19,Raw,SBD
+1,Geoff Schultz,OH,90,87.6,24,190,132.5,205,527.5,M,Open,Raw,SBD
+2,Robert Hartborger,OH,90,87.5,30,215,175,185,575,M,Open,Raw,SBD
+3,Justin Ng,OH,90,89.5,22,232.5,172.5,280,685,M,Open,Raw,SBD
+1,Mike Cleary,OH,100,94.9,31,140,112.5,185,437.5,M,Open,Raw,SBD
+1,Jon Ruffier,OH,110,100.9,28,165,115,170,450,M,Open,Raw,SBD
+2,Jeff Vasenda,OH,110,106.5,30,212.5,162.5,275,650,M,Open,Raw,SBD
+1,Samuel Touroonijan,OH,125,114.71,23,215,152.5,250,617.5,M,Junior 20-23,Raw,SBD
+1,Chris Opp,OH,125,116.5,24,185,155,220,560,M,Open,Raw,SBD
+1,Sara Howard,WV,67.5,67.1,35,100,60,115,275,F,Submaster 35-39,Wraps,SBD
+1,Sam Bowles,OH,75,74.6,23,182.5,132.5,210,525,M,Open,Wraps,SBD
+1,Jacob Horn,IL,90,86.7,32,227.5,167.5,275,670,M,Open,Wraps,SBD
+1,Aaron Harper,OH,100,97.5,28,210,127.5,220,557.5,M,Open,Wraps,SBD
+1,Arthur Wooten,OH,140+,162.4,60,200,182.5,185,567.5,M,Master 60-65,Single-ply,SBD
+1,Zach Hoffman,OH,82.5,81.2,21,,120,212.5,332.5,M,Junior 20-23,Raw,BD
+1,Evan Stoll,OH,90,89,21,,157.5,227.5,385,M,Junior 20-23,Raw,BD
+1,Aaron Dunlap,OH,90,89.8,28,,180,,180,M,Open,Raw,B

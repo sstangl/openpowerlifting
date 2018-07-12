@@ -1,39 +1,39 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Kimberly Mills,1,Masters 50-54,F,Raw,KS,67.5,64.86,51,62.5,50,97.5,210
-Jennifer Kaschke,1,Open,F,Wraps,MO,75,73.39,27,125,65,145,335
-Jessica Remigio,1,Open,F,Wraps,KS,82.5,81.65,34,130,80,152.5,362.5
-Devin Richter,1,Teen 18-19,M,Wraps,MO,56,55.97,18,138.5,82.5,160,381
-Devin Richter,1,Open,M,Wraps,MO,56,55.79,18,138.5,82.5,160,381
-Mike McGivern,1,Open,M,Wraps,KS,75,73.3,28,245,150,250,645
-Zak Reneau,1,Open,M,Raw,KS,82.5,79.83,25,167.5,97.5,207.5,472.5
-Clint Samuels,DQ,Open,M,Raw,,82.5,78.47,28,212.5,-145,232.5,
-Jon Gerhold,1,Open,M,Wraps,MO,82.5,81.01,27,242.5,187.5,260,690
-Hogan Brecount,1,Teen 18-19,M,Wraps,MO,82.5,79.65,18,196,122.5,215,533.5
-John Arndt,1,Open,M,Raw,,90,89.27,29,197.5,145,227.5,570
-Jesse Smith,2,Open,M,Raw,MO,90,89.81,32,137.5,102.5,205,445
-Brad Wilson,1,Submaster 35-39,M,Raw,MO,90,85.09,37,165,105,192.5,462.5
-Damian Camacho,DQ,Submaster 35-39,M,Raw,MO,90,88.18,35,195,-127.5,240,
-Kevin Gustafson,1,Master 50-54,M,Raw,KS,90,83.91,50,175,122.5,185,482.5
-Nathan Boone,1,Open,M,Wraps,MO,90,89.9,27,227.5,125,232.5,585
-Chris Kessler,2,Open,M,Wraps,,90,89.45,31,192.5,110,232.5,535
-Keith Hoelting,1,Master 40-44,M,Wraps,MO,90,89.9,44,227.5,157.5,227.5,612.5
-Michael Butler,1,Junior,M,Raw,MO,100,99.34,22,202.5,140,232.5,575
-Matt Lane,1,Open,M,Raw,MO,100,95.8,31,207.5,132.5,212.5,552.5
-Mark Duckworth,1,Master 40-44,M,Raw,MO,100,97.89,41,205,155,205,565
-David LaMartina,1,Open,M,Wraps,KS,100,98.97,24,300,155,317.5,772.5
-Doug Myers,1,Open,M,Raw,MO,110,109.68,31,245,177.5,260,682.5
-William Harris,2,Open,M,Raw,MO,110,100.24,31,175,115,185,475
-Jim Jarvis,1,Master 40-44,M,Raw,MO,110,108.41,41,227.5,177.5,255,660
-Jason Shepherd,1,Master 40-44,M,Wraps,MO,110,108.86,40,145,100,190,435
-Joe Collins,1,Open,M,Wraps,MO,125,119.29,25,272.5,175,270,717.5
-Craig Christopher,1,Master 40-44,M,Wraps,KS,125,114.67,44,227.5,165,250,642.5
-David Cook,DQ,Master 45-49,M,Wraps,MO,125,120.29,49,227.5,155,-242.5,
-Pat Cody,1,Master 60-64,F,Raw,KS,90+,105.05,61,,65,,65
-Ryan Liu,1,Junior 20-23,M,Raw,MO,67.5,65.95,20,,132.5,,132.5
-Joshua Hall,1,Junior 20-23,M,Raw,MO,90,88.99,23,,185,,185
-Cory Peck,1,Open,M,Raw,MO,110,107.5,28,,150,,150
-Chip Cody,1,Master 60-64,M,Raw,,110,106.68,60,,150,,150
-Brandi Purchas,1,Open,F,Raw,MO,82.5,78.11,29,,,102.5,102.5
-Conner Arney,1,Junior 20-23,M,Raw,,75,70.49,23,,,207.5,207.5
-Nate Canha,1,Junior 20-23,M,Raw,MO,82.5,81.37,22,,,286,286
-Alex Kensy,2,Junior 20-23,M,Raw,MO,82.5,80.65,20,,,182.5,182.5
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Kimberly Mills,1,Masters 50-54,F,Raw,KS,67.5,64.86,51,62.5,50,97.5,210,SBD
+Jennifer Kaschke,1,Open,F,Wraps,MO,75,73.39,27,125,65,145,335,SBD
+Jessica Remigio,1,Open,F,Wraps,KS,82.5,81.65,34,130,80,152.5,362.5,SBD
+Devin Richter,1,Teen 18-19,M,Wraps,MO,56,55.97,18,138.5,82.5,160,381,SBD
+Devin Richter,1,Open,M,Wraps,MO,56,55.79,18,138.5,82.5,160,381,SBD
+Mike McGivern,1,Open,M,Wraps,KS,75,73.3,28,245,150,250,645,SBD
+Zak Reneau,1,Open,M,Raw,KS,82.5,79.83,25,167.5,97.5,207.5,472.5,SBD
+Clint Samuels,DQ,Open,M,Raw,,82.5,78.47,28,212.5,-145,232.5,,SBD
+Jon Gerhold,1,Open,M,Wraps,MO,82.5,81.01,27,242.5,187.5,260,690,SBD
+Hogan Brecount,1,Teen 18-19,M,Wraps,MO,82.5,79.65,18,196,122.5,215,533.5,SBD
+John Arndt,1,Open,M,Raw,,90,89.27,29,197.5,145,227.5,570,SBD
+Jesse Smith,2,Open,M,Raw,MO,90,89.81,32,137.5,102.5,205,445,SBD
+Brad Wilson,1,Submaster 35-39,M,Raw,MO,90,85.09,37,165,105,192.5,462.5,SBD
+Damian Camacho,DQ,Submaster 35-39,M,Raw,MO,90,88.18,35,195,-127.5,240,,SBD
+Kevin Gustafson,1,Master 50-54,M,Raw,KS,90,83.91,50,175,122.5,185,482.5,SBD
+Nathan Boone,1,Open,M,Wraps,MO,90,89.9,27,227.5,125,232.5,585,SBD
+Chris Kessler,2,Open,M,Wraps,,90,89.45,31,192.5,110,232.5,535,SBD
+Keith Hoelting,1,Master 40-44,M,Wraps,MO,90,89.9,44,227.5,157.5,227.5,612.5,SBD
+Michael Butler,1,Junior,M,Raw,MO,100,99.34,22,202.5,140,232.5,575,SBD
+Matt Lane,1,Open,M,Raw,MO,100,95.8,31,207.5,132.5,212.5,552.5,SBD
+Mark Duckworth,1,Master 40-44,M,Raw,MO,100,97.89,41,205,155,205,565,SBD
+David LaMartina,1,Open,M,Wraps,KS,100,98.97,24,300,155,317.5,772.5,SBD
+Doug Myers,1,Open,M,Raw,MO,110,109.68,31,245,177.5,260,682.5,SBD
+William Harris,2,Open,M,Raw,MO,110,100.24,31,175,115,185,475,SBD
+Jim Jarvis,1,Master 40-44,M,Raw,MO,110,108.41,41,227.5,177.5,255,660,SBD
+Jason Shepherd,1,Master 40-44,M,Wraps,MO,110,108.86,40,145,100,190,435,SBD
+Joe Collins,1,Open,M,Wraps,MO,125,119.29,25,272.5,175,270,717.5,SBD
+Craig Christopher,1,Master 40-44,M,Wraps,KS,125,114.67,44,227.5,165,250,642.5,SBD
+David Cook,DQ,Master 45-49,M,Wraps,MO,125,120.29,49,227.5,155,-242.5,,SBD
+Pat Cody,1,Master 60-64,F,Raw,KS,90+,105.05,61,,65,,65,B
+Ryan Liu,1,Junior 20-23,M,Raw,MO,67.5,65.95,20,,132.5,,132.5,B
+Joshua Hall,1,Junior 20-23,M,Raw,MO,90,88.99,23,,185,,185,B
+Cory Peck,1,Open,M,Raw,MO,110,107.5,28,,150,,150,B
+Chip Cody,1,Master 60-64,M,Raw,,110,106.68,60,,150,,150,B
+Brandi Purchas,1,Open,F,Raw,MO,82.5,78.11,29,,,102.5,102.5,D
+Conner Arney,1,Junior 20-23,M,Raw,,75,70.49,23,,,207.5,207.5,D
+Nate Canha,1,Junior 20-23,M,Raw,MO,82.5,81.37,22,,,286,286,D
+Alex Kensy,2,Junior 20-23,M,Raw,MO,82.5,80.65,20,,,182.5,182.5,D

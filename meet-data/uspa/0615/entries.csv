@@ -1,41 +1,41 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg
-1,Ann Thornton,TN,67.5,63.3,27,90,60,130,280,F,Open,Raw,
-2,Janelle Jones,NC,67.5,62.1,33,100,55,112.5,267.5,F,Open,Raw,
-1,Jamie Jockheck,NC,75,74,25,107.5,60,137.5,305,F,Open,Raw,
-1,Logan Frye,VA,60,58.7,14,127.5,60,125,312.5,M,Junior 13-15,Raw,
-1,Jason Johns Jr,TN,67.5,66.6,16,152.5,95,182.5,430,M,Junior 16-17,Raw,
-1,Gordon Frye,VA,82.5,78.6,17,165,110,192.5,467.5,M,Junior 16-17,Raw,
-2,Ryan Huffman,NC,82.5,77.6,16,162.5,105,187.5,455,M,Junior 16-17,Raw,
-1,Wendell Sowers,IN,82.5,82,23,215,137.5,260,612.5,M,Junior 20-23,Raw,
-1,Weston Phillips,TN,90,89.1,21,180,125,200,505,M,Junior 20-23,Raw,
-2,Omar Ferrer,TN,90,85.1,20,147.5,75,145,367.5,M,Junior 20-23,Raw,
-1,Brandon Arthur,NC,100,99.2,21,272.5,205,262.5,740,M,Junior 20-23,Raw,
-2,Isaac Smith,NC,100,93.3,22,187.5,127.5,260,575,M,Junior 20-23,Raw,
-1,David Aclis,TN,67.5,63,28,142.5,132.5,175,450,M,Open,Raw,
-1,Donnie Vestal,NC,75,74.3,32,182.5,120,218,520.5,M,Open,Raw,
-1,James Range,TN,82.5,81,25,210,130,265,605,M,Open,Raw,
-2,Casey Rogers,NC,82.5,82.1,24,175,135,242.5,552.5,M,Open,Raw,
-1,Brandon Arthur,NC,100,99.2,21,272.5,205,262.5,740,M,Open,Raw,
-2,Vinnie Santini,VA,100,97,34,237.5,165,280,682.5,M,Open,Raw,
-1,Pete Rubish,TN,110,108.6,24,327.5,197.5,360,885,M,Open,Raw,380
-2,Jordan Wong,FL,110,109.9,25,360,205,320,885,M,Open,Raw,
-3,Garret Cultrera,NC,110,108,18,272.5,160,290,722.5,M,Open,Raw,
-4,Garrett Waterman,VA,110,106,26,182.5,125,215,522.5,M,Open,Raw,
-DQ,Ben Gadd,TN,110,109.9,31,-240,,,,M,Open,Raw,
-1,Aria Attia,PA,125,124.8,32,310,227.5,385,922.5,M,Open,Raw,
-2,Brandon Baird,NC,125,111,24,175,115,215,505,M,Open,Raw,
-1,Emmett Walsh,TN,100,99.6,47,195,145,250,590,M,Master 45-49,Raw,
-1,Richard Mayes,SC,140,125.5,51,227.5,182.5,262.5,672.5,M,Master 50-54,Raw,
-1,Alex Tindal,TN,67.5,65.2,18,197.5,117.5,197.5,512.5,M,Junior 18-19,Wraps,
-1,Zeb Jones,NC,82.5,80.6,22,227.5,180,252.5,660,M,Junior 20-23,Wraps,
-2,Tylor Fischer,TN,82.5,79.9,22,170,127.5,212.5,510,M,Junior 20-23,Wraps,
-1,Dillon Sutherland,TN,125,122.7,20,215,142.5,227.5,585,M,Junior 20-23,Wraps,
-1,Zeb Jones,NC,82.5,80.6,22,227.5,180,252.5,660,M,Open,Wraps,
-DQ,Chris Cottrell,NC,90,85.3,27,205,-117.5,,,M,Open,Wraps,
-1,David Crater Jr,NC,110,108.3,43,285,197.5,250,732.5,M,Open,Wraps,
-1,Matt Spach,NC,125,114.2,26,302.5,185,272.5,760,M,Open,Wraps,
-1,David Crater Jr,NC,110,108.3,43,285,197.5,250,732.5,M,Master 40-44,Wraps,
-1,Glenn Baggett,GA,125,122.5,43,297.5,190,285,772.5,M,Master 40-44,Wraps,
-1,Danny F Akers,VA,90,85.3,49,185,135,217.5,537.5,M,Master 45-49,Multi-ply,
-1,David Birdsong,AL,100,98.1,26,,205,,205,M,Open,Raw,
-1,Andrew McDonald,TN,100,91.9,17,,,285,285,M,Junior 16-17,Raw,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Event
+1,Ann Thornton,TN,67.5,63.3,27,90,60,130,280,F,Open,Raw,,SBD
+2,Janelle Jones,NC,67.5,62.1,33,100,55,112.5,267.5,F,Open,Raw,,SBD
+1,Jamie Jockheck,NC,75,74,25,107.5,60,137.5,305,F,Open,Raw,,SBD
+1,Logan Frye,VA,60,58.7,14,127.5,60,125,312.5,M,Junior 13-15,Raw,,SBD
+1,Jason Johns Jr,TN,67.5,66.6,16,152.5,95,182.5,430,M,Junior 16-17,Raw,,SBD
+1,Gordon Frye,VA,82.5,78.6,17,165,110,192.5,467.5,M,Junior 16-17,Raw,,SBD
+2,Ryan Huffman,NC,82.5,77.6,16,162.5,105,187.5,455,M,Junior 16-17,Raw,,SBD
+1,Wendell Sowers,IN,82.5,82,23,215,137.5,260,612.5,M,Junior 20-23,Raw,,SBD
+1,Weston Phillips,TN,90,89.1,21,180,125,200,505,M,Junior 20-23,Raw,,SBD
+2,Omar Ferrer,TN,90,85.1,20,147.5,75,145,367.5,M,Junior 20-23,Raw,,SBD
+1,Brandon Arthur,NC,100,99.2,21,272.5,205,262.5,740,M,Junior 20-23,Raw,,SBD
+2,Isaac Smith,NC,100,93.3,22,187.5,127.5,260,575,M,Junior 20-23,Raw,,SBD
+1,David Aclis,TN,67.5,63,28,142.5,132.5,175,450,M,Open,Raw,,SBD
+1,Donnie Vestal,NC,75,74.3,32,182.5,120,218,520.5,M,Open,Raw,,SBD
+1,James Range,TN,82.5,81,25,210,130,265,605,M,Open,Raw,,SBD
+2,Casey Rogers,NC,82.5,82.1,24,175,135,242.5,552.5,M,Open,Raw,,SBD
+1,Brandon Arthur,NC,100,99.2,21,272.5,205,262.5,740,M,Open,Raw,,SBD
+2,Vinnie Santini,VA,100,97,34,237.5,165,280,682.5,M,Open,Raw,,SBD
+1,Pete Rubish,TN,110,108.6,24,327.5,197.5,360,885,M,Open,Raw,380,SBD
+2,Jordan Wong,FL,110,109.9,25,360,205,320,885,M,Open,Raw,,SBD
+3,Garret Cultrera,NC,110,108,18,272.5,160,290,722.5,M,Open,Raw,,SBD
+4,Garrett Waterman,VA,110,106,26,182.5,125,215,522.5,M,Open,Raw,,SBD
+DQ,Ben Gadd,TN,110,109.9,31,-240,,,,M,Open,Raw,,SBD
+1,Aria Attia,PA,125,124.8,32,310,227.5,385,922.5,M,Open,Raw,,SBD
+2,Brandon Baird,NC,125,111,24,175,115,215,505,M,Open,Raw,,SBD
+1,Emmett Walsh,TN,100,99.6,47,195,145,250,590,M,Master 45-49,Raw,,SBD
+1,Richard Mayes,SC,140,125.5,51,227.5,182.5,262.5,672.5,M,Master 50-54,Raw,,SBD
+1,Alex Tindal,TN,67.5,65.2,18,197.5,117.5,197.5,512.5,M,Junior 18-19,Wraps,,SBD
+1,Zeb Jones,NC,82.5,80.6,22,227.5,180,252.5,660,M,Junior 20-23,Wraps,,SBD
+2,Tylor Fischer,TN,82.5,79.9,22,170,127.5,212.5,510,M,Junior 20-23,Wraps,,SBD
+1,Dillon Sutherland,TN,125,122.7,20,215,142.5,227.5,585,M,Junior 20-23,Wraps,,SBD
+1,Zeb Jones,NC,82.5,80.6,22,227.5,180,252.5,660,M,Open,Wraps,,SBD
+DQ,Chris Cottrell,NC,90,85.3,27,205,-117.5,,,M,Open,Wraps,,SBD
+1,David Crater Jr,NC,110,108.3,43,285,197.5,250,732.5,M,Open,Wraps,,SBD
+1,Matt Spach,NC,125,114.2,26,302.5,185,272.5,760,M,Open,Wraps,,SBD
+1,David Crater Jr,NC,110,108.3,43,285,197.5,250,732.5,M,Master 40-44,Wraps,,SBD
+1,Glenn Baggett,GA,125,122.5,43,297.5,190,285,772.5,M,Master 40-44,Wraps,,SBD
+1,Danny F Akers,VA,90,85.3,49,185,135,217.5,537.5,M,Master 45-49,Multi-ply,,SBD
+1,David Birdsong,AL,100,98.1,26,,205,,205,M,Open,Raw,,B
+1,Andrew McDonald,TN,100,91.9,17,,,285,285,M,Junior 16-17,Raw,,D

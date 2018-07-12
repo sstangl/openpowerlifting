@@ -1,35 +1,35 @@
-Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
-Tori Aletheia,1,Open Women,F,Raw,67.5,63.59,26,77.50,60.00,,115.00,,252.50
-Nicolas Demarest,DQ,Junior Men 16-17,M,Raw,90,89.63,17,-115.00,,,,,
-Steve Melero,DQ,Open Men,M,Raw,82.5,81.19,30,200.00,140.00,,-260.00,,
-Xavier Bradford,1,Open Men,M,Raw,140+,153.13,31,272.50,200.00,,272.50,,745.00
-Dave Sonsini,1,Open Men,M,Wraps,90,89.22,31,195.00,130.00,,227.50,,552.50
-Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,75.00,60.00,,110.00,,245.00
-Justin Gaudette,1,Open Men,M,Single-ply,100,97.70,24,237.50,172.50,,245.00,,655.00
-Pete Andrich,DQ,Master Men,M,Single-ply,125,121.11,41,310.00,205.00,,-65.00,,
-Stephen Schaap,1,Junior Men 13-15,M,Raw,82.5,80.56,15,,120.00,,,,120.00
-Charles Martin,1,Open Men,M,Raw,82.5,81.65,57,,140.00,,,,140.00
-Charles Martin,1,Master Men 55-59,M,Raw,82.5,81.65,57,,140.00,,,,140.00
-Rick May,1,Open Men,M,Raw,90,87.54,47,,147.50,,,,147.50
-Rick May,1,Master Men 45-49,M,Raw,90,87.54,47,,147.50,,,,147.50
-Tony Lewelling,1,Master Men 50-54,M,Raw,100,97.79,53,,188.00,,,,188.00
-Frank Emilio,1,Master Men 45-49,M,Raw,110,109.32,47,,140.00,,,,140.00
-Gary Witcher,1,Master Men 40-44,M,Raw,140,126.46,42,,202.50,,,,202.50
-Rudy Schaap Jr,1,Master Men 50-54,M,Raw,140,131.36,51,,190.00,,,,190.00
-Ed Stanley,1,Master Men 70-74,M,Raw,140,132.81,70,,75.00,80,,,75.00
-Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,60.00,,,,60.00
-David Aldrich,1,Submaster Men 35-39,M,Single-ply,100,93.89,36,,232.50,,,,232.50
-Joe Bernazzani,1,Master Men 60-64,M,Single-ply,100,99.34,61,,182.50,,,,182.50
-Ka'lene Herbias,1,Junior Women 13-15,F,Raw,56,52.44,13,,,,47.50,,47.50
-Juan Gonzalez,1,Junior Men 16-17,M,Raw,75,70.03,16,,,,157.50,160,157.50
-Antonio Arana,1,Open Men,M,Raw,90,89.27,24,,,,155.00,,155.00
-Ed Stanley,1,Master Men 70-74,M,Raw,140,132.81,70,,,,87.50,97.5,87.50
-Kiana Elliott,1,Junior Women 13-15,F,Single-ply,52,51.26,13,,,,47.50,,47.50
-Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,,,110.00,,110.00
-Alaina Young,1,Junior Women 13-15,F,Raw,75,73.39,15,,-42.50,,85.00,,42.50
-Nicolas Demarest,1,Junior Men 16-17,M,Raw,90,89.63,17,,95.00,,160.00,,255.00
-Joseph Garrett,1,Junior Men 20-23,M,Raw,110,107.86,22,,85.00,,182.50,,267.50
-Gary Witcher,1,Master Men 40-44,M,Raw,140,126.46,42,,202.50,,227.50,,430.00
-Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,60.00,,110.00,,170.00
-Mary DeGeare,1,Master Women 50-54,F,Single-ply,75,70.22,50,,52.50,,75.00,,127.50
-Tyler Ward,1,Junior Men 20-23,M,Single-ply,140,127.91,23,,182.50,,280.00,,462.50
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+Tori Aletheia,1,Open Women,F,Raw,67.5,63.59,26,77.50,60.00,,115.00,,252.50,SBD
+Nicolas Demarest,DQ,Junior Men 16-17,M,Raw,90,89.63,17,-115.00,,,,,,SBD
+Steve Melero,DQ,Open Men,M,Raw,82.5,81.19,30,200.00,140.00,,-260.00,,,SBD
+Xavier Bradford,1,Open Men,M,Raw,140+,153.13,31,272.50,200.00,,272.50,,745.00,SBD
+Dave Sonsini,1,Open Men,M,Wraps,90,89.22,31,195.00,130.00,,227.50,,552.50,SBD
+Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,75.00,60.00,,110.00,,245.00,SBD
+Justin Gaudette,1,Open Men,M,Single-ply,100,97.70,24,237.50,172.50,,245.00,,655.00,SBD
+Pete Andrich,DQ,Master Men,M,Single-ply,125,121.11,41,310.00,205.00,,-65.00,,,SBD
+Stephen Schaap,1,Junior Men 13-15,M,Raw,82.5,80.56,15,,120.00,,,,120.00,B
+Charles Martin,1,Open Men,M,Raw,82.5,81.65,57,,140.00,,,,140.00,B
+Charles Martin,1,Master Men 55-59,M,Raw,82.5,81.65,57,,140.00,,,,140.00,B
+Rick May,1,Open Men,M,Raw,90,87.54,47,,147.50,,,,147.50,B
+Rick May,1,Master Men 45-49,M,Raw,90,87.54,47,,147.50,,,,147.50,B
+Tony Lewelling,1,Master Men 50-54,M,Raw,100,97.79,53,,188.00,,,,188.00,B
+Frank Emilio,1,Master Men 45-49,M,Raw,110,109.32,47,,140.00,,,,140.00,B
+Gary Witcher,1,Master Men 40-44,M,Raw,140,126.46,42,,202.50,,,,202.50,B
+Rudy Schaap Jr,1,Master Men 50-54,M,Raw,140,131.36,51,,190.00,,,,190.00,B
+Ed Stanley,1,Master Men 70-74,M,Raw,140,132.81,70,,75.00,80,,,75.00,B
+Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,60.00,,,,60.00,B
+David Aldrich,1,Submaster Men 35-39,M,Single-ply,100,93.89,36,,232.50,,,,232.50,B
+Joe Bernazzani,1,Master Men 60-64,M,Single-ply,100,99.34,61,,182.50,,,,182.50,B
+Ka'lene Herbias,1,Junior Women 13-15,F,Raw,56,52.44,13,,,,47.50,,47.50,D
+Juan Gonzalez,1,Junior Men 16-17,M,Raw,75,70.03,16,,,,157.50,160,157.50,D
+Antonio Arana,1,Open Men,M,Raw,90,89.27,24,,,,155.00,,155.00,D
+Ed Stanley,1,Master Men 70-74,M,Raw,140,132.81,70,,,,87.50,97.5,87.50,D
+Kiana Elliott,1,Junior Women 13-15,F,Single-ply,52,51.26,13,,,,47.50,,47.50,D
+Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,,,110.00,,110.00,D
+Alaina Young,1,Junior Women 13-15,F,Raw,75,73.39,15,,-42.50,,85.00,,42.50,BD
+Nicolas Demarest,1,Junior Men 16-17,M,Raw,90,89.63,17,,95.00,,160.00,,255.00,BD
+Joseph Garrett,1,Junior Men 20-23,M,Raw,110,107.86,22,,85.00,,182.50,,267.50,BD
+Gary Witcher,1,Master Men 40-44,M,Raw,140,126.46,42,,202.50,,227.50,,430.00,BD
+Silke Elliott,1,Submaster Women 35-39,F,Single-ply,60,58.79,36,,60.00,,110.00,,170.00,BD
+Mary DeGeare,1,Master Women 50-54,F,Single-ply,75,70.22,50,,52.50,,75.00,,127.50,BD
+Tyler Ward,1,Junior Men 20-23,M,Single-ply,140,127.91,23,,182.50,,280.00,,462.50,BD

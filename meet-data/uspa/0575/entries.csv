@@ -1,20 +1,20 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Sarah Gasse,MA,82.5,80.00,23,112.50,50.00,125.00,287.50,F,Junior 20-23,Raw
-1,Elizabeth Wahlman,MA,90,85.00,26,135.00,62.50,157.50,355.00,F,Open,Raw
-1,Joe Cassaro,MA,67.5,67.00,24,160.00,100.00,175.00,435.00,M,Open,Raw
-1,Chris Contois,RI,75,73.20,33,200.00,135.00,215.00,550.00,M,Open,Raw
-1,Krys Mizoczkowski,MA,82.5,81.00,35,182.50,112.50,195.00,490.00,M,Open,Raw
-1,Phil Najemy,MA,90,89.40,35,215.00,132.50,272.50,620.00,M,Open,Raw
-1,Shawn Murray,CT,110,110.00,38,215.00,162.50,237.50,615.00,M,Submaster 35-39,Raw
-1,Michael Galante,MA,125,117.00,41,260.00,155.00,265.00,680.00,M,Master 40-44,Raw
-DQ,Sabrina De Costa,MA,56,56.00,33,-125.00,62.50,-135.00,,F,Open,Wraps
-1,Amie Ruhl,CT,75,73.00,28,122.50,77.50,142.50,342.50,F,Open,Wraps
-1,Nicole Petro Kurant,CT,48,45.00,35,110.00,57.50,120.00,287.50,F,Submaster 35-39,Wraps
-1,John Fayer,CT,100,98.80,30,260.00,160.00,300.00,720.00,M,Open,Wraps
-1,Jacob Kurant,CT,125,117.80,27,237.50,205.00,255.00,697.50,M,Open,Wraps
-1,Travis Holbert,MA,100,95.00,43,220.00,135.00,262.50,617.50,M,Master 40-44,Wraps
-1,Jefferson Lett,MA,110,107.60,54,280.00,165.00,265.00,710.00,M,Master 50-54,Wraps
-1,Gaby Hajnasr,MA,140+,152.00,22,275.00,225.00,250.00,750.00,M,Open,Single-ply
-1,Joe Breault,MA,67.5,65.60,46,182.50,130.00,182.50,495.00,M,Master 45-49,Single-ply
-1,Sabrina De Costa,MA,56,56.00,33,,62.50,,62.50,F,Open,Raw
-1,Jeff Croll,MA,56,54.00,60,,,102.50,102.50,M,Master 60-64,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Sarah Gasse,MA,82.5,80.00,23,112.50,50.00,125.00,287.50,F,Junior 20-23,Raw,SBD
+1,Elizabeth Wahlman,MA,90,85.00,26,135.00,62.50,157.50,355.00,F,Open,Raw,SBD
+1,Joe Cassaro,MA,67.5,67.00,24,160.00,100.00,175.00,435.00,M,Open,Raw,SBD
+1,Chris Contois,RI,75,73.20,33,200.00,135.00,215.00,550.00,M,Open,Raw,SBD
+1,Krys Mizoczkowski,MA,82.5,81.00,35,182.50,112.50,195.00,490.00,M,Open,Raw,SBD
+1,Phil Najemy,MA,90,89.40,35,215.00,132.50,272.50,620.00,M,Open,Raw,SBD
+1,Shawn Murray,CT,110,110.00,38,215.00,162.50,237.50,615.00,M,Submaster 35-39,Raw,SBD
+1,Michael Galante,MA,125,117.00,41,260.00,155.00,265.00,680.00,M,Master 40-44,Raw,SBD
+DQ,Sabrina De Costa,MA,56,56.00,33,-125.00,62.50,-135.00,,F,Open,Wraps,SBD
+1,Amie Ruhl,CT,75,73.00,28,122.50,77.50,142.50,342.50,F,Open,Wraps,SBD
+1,Nicole Petro Kurant,CT,48,45.00,35,110.00,57.50,120.00,287.50,F,Submaster 35-39,Wraps,SBD
+1,John Fayer,CT,100,98.80,30,260.00,160.00,300.00,720.00,M,Open,Wraps,SBD
+1,Jacob Kurant,CT,125,117.80,27,237.50,205.00,255.00,697.50,M,Open,Wraps,SBD
+1,Travis Holbert,MA,100,95.00,43,220.00,135.00,262.50,617.50,M,Master 40-44,Wraps,SBD
+1,Jefferson Lett,MA,110,107.60,54,280.00,165.00,265.00,710.00,M,Master 50-54,Wraps,SBD
+1,Gaby Hajnasr,MA,140+,152.00,22,275.00,225.00,250.00,750.00,M,Open,Single-ply,SBD
+1,Joe Breault,MA,67.5,65.60,46,182.50,130.00,182.50,495.00,M,Master 45-49,Single-ply,SBD
+1,Sabrina De Costa,MA,56,56.00,33,,62.50,,62.50,F,Open,Raw,B
+1,Jeff Croll,MA,56,54.00,60,,,102.50,102.50,M,Master 60-64,Raw,D

@@ -1,36 +1,36 @@
-Name,Place,Division,Sex,Equipment,College/University,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,Deadlift4Kg,TotalKg
-Jessica Okimura,1,Open Women,F,Raw,Univ of Hawaii,HI,48,47.30,22,75,,52.5,120,,247.5
-Cynthia Leu,1,Open Women,F,Raw,UC Davis,CA,60,59.47,21,115,117.5,50,142.5,143,307.5
-Cassandra Hawthorne,2,Open Women,F,Raw,San Jose State,CA,60,58.92,22,90,,47.5,107.5,,245
-Nicole Herbig,1,Open Women,F,Raw,San Jose State,CA,67.5,66.95,24,125,,57.5,140,,322.5
-Sandra Sosa,2,Open Women,F,Raw,San Jose State,CA,67.5,65.09,24,97.5,,65,137.5,,300
-Sariah Hafen,1,Open Women,F,Raw,Southern Utah Univ,UT,82.5,80.20,28,122.5,,65,132.5,,320
-Seyonn Chin,1,Open Men,M,Raw,San Joaquin Delta College,CA,56,55.02,20,132.5,,107.5,155,,395
-Craig Sano,2,Open Men,M,Raw,UC Merced,CA,56,55.97,20,95,,82.5,137.5,,315
-James McCabe,1,Open Men,M,Raw,San Jose State,CA,60,59.96,23,197.5,,127.5,220,,545
-Joe Seiden,1,Open Men,M,Raw,UC Davis,CA,67.5,66.86,22,175,,125,192.5,,492.5
-Andy Tran,2,Open Men,M,Raw,San Jose State,CA,67.5,66.41,21,160,,110,197.5,,467.5
-Nabil Amiri,3,Open Men,M,Raw,San Jose State,CA,67.5,67.36,27,125,,102.5,195,,422.5
-Atilio Avalos,4,Open Men,M,Raw,San Jose State,CA,67.5,60.19,23,137.5,,110,160,,407.5
-Bryce Constantino,1,Open Men,M,Raw,San Jose State,CA,75,72.53,24,152.5,,110,202.5,,465
-Tenny Tran,2,Open Men,M,Raw,San Jose State,CA,75,70.49,19,145,,92.5,157.5,,395
-Tim Pham,1,Open Men,M,Raw,San Jose State,CA,82.5,80.74,19,170,,112.5,215,,497.5
-Kevin Tanita,2,Open Men,M,Raw,UC Santa Cruz,CA,82.5,79.79,22,172.5,,122.5,195,,490
-Thomas Truong,3,Open Men,M,Raw,Cal State Long Beach,CA,82.5,79.29,22,145,,110,227.5,,482.5
-Carlos Verzosa,4,Open Men,M,Raw,Gavilan College,CA,82.5,78.38,20,150,,105,217.5,,472.5
-Marvin Valdez,5,Open Men,M,Raw,San Jose State,CA,82.5,78.79,22,150,,95,185,,430
-Michael Eagle,6,Open Men,M,Raw,San Jose State,CA,82.5,80.56,22,130,,115,185,,430
-Paul Sonnier,7,Open Men,M,Raw,Monterey Institue,CA,82.5,77.25,25,117.5,,87.5,162.5,,367.5
-Chris Cobo-Kroenke,DQ,Open Men,M,Raw,San Jose State,CA,82.5,81.78,21,142.5,,87.5,-150,,
-Harry Momand,1,Open Men,M,Raw,UCDavis,CA,90,83.46,23,187.5,,130,277.5,,595
-Matthew Wallace,2,Open Men,M,Raw,Cal State Monterey,CA,90,86.73,24,217.5,,120,237.5,,575
-Raphael Nguyen,3,Open Men,M,Raw,UC Irvine,CA,90,83.19,21,150,,110,210,,470
-Arlo Trinidad,4,Open Men,M,Raw,San Jose State,CA,90,88.86,23,152.5,,95,190,,437.5
-Wayne Chen,DQ,Open Men,M,Raw,San Jose State,CA,90,86.36,22,152.5,,102.5,-200,,
-Daniel Arguello,DQ,Open Men,M,Raw,San Jose State,CA,90,85.64,21,-137.5,,,,,
-Zachary Trahan,1,Open Men,M,Raw,San Jose State,CA,100,90.54,25,240,,132.5,272.5,,645
-Logan Campbell,2,Open Men,M,Raw,Ventura College,CA,100,97.43,23,230,,127.5,252.5,,610
-Kolin Daniels,3,Open Men,M,Raw,San Jose State,CA,100,97.84,20,167.5,,132.5,260,,560
-Yevgeniy Sirovskiy,4,Open Men,M,Raw,San Jose State,CA,100,95.93,23,157.5,,145,237.5,,540
-Bryan Reyna,DQ,Open Men,M,Raw,Butte College,CA,100,99.29,20,-197.5,,-147.5,197.5,,
-Christian Rebottaro,1,Junior Men 13-15,M,Raw,Unattached,CA,125,118.84,15,180,187.5,127.5,200,,507.5
+Name,Place,Division,Sex,Equipment,College/University,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+Jessica Okimura,1,Open Women,F,Raw,Univ of Hawaii,HI,48,47.30,22,75,,52.5,120,,247.5,SBD
+Cynthia Leu,1,Open Women,F,Raw,UC Davis,CA,60,59.47,21,115,117.5,50,142.5,143,307.5,SBD
+Cassandra Hawthorne,2,Open Women,F,Raw,San Jose State,CA,60,58.92,22,90,,47.5,107.5,,245,SBD
+Nicole Herbig,1,Open Women,F,Raw,San Jose State,CA,67.5,66.95,24,125,,57.5,140,,322.5,SBD
+Sandra Sosa,2,Open Women,F,Raw,San Jose State,CA,67.5,65.09,24,97.5,,65,137.5,,300,SBD
+Sariah Hafen,1,Open Women,F,Raw,Southern Utah Univ,UT,82.5,80.20,28,122.5,,65,132.5,,320,SBD
+Seyonn Chin,1,Open Men,M,Raw,San Joaquin Delta College,CA,56,55.02,20,132.5,,107.5,155,,395,SBD
+Craig Sano,2,Open Men,M,Raw,UC Merced,CA,56,55.97,20,95,,82.5,137.5,,315,SBD
+James McCabe,1,Open Men,M,Raw,San Jose State,CA,60,59.96,23,197.5,,127.5,220,,545,SBD
+Joe Seiden,1,Open Men,M,Raw,UC Davis,CA,67.5,66.86,22,175,,125,192.5,,492.5,SBD
+Andy Tran,2,Open Men,M,Raw,San Jose State,CA,67.5,66.41,21,160,,110,197.5,,467.5,SBD
+Nabil Amiri,3,Open Men,M,Raw,San Jose State,CA,67.5,67.36,27,125,,102.5,195,,422.5,SBD
+Atilio Avalos,4,Open Men,M,Raw,San Jose State,CA,67.5,60.19,23,137.5,,110,160,,407.5,SBD
+Bryce Constantino,1,Open Men,M,Raw,San Jose State,CA,75,72.53,24,152.5,,110,202.5,,465,SBD
+Tenny Tran,2,Open Men,M,Raw,San Jose State,CA,75,70.49,19,145,,92.5,157.5,,395,SBD
+Tim Pham,1,Open Men,M,Raw,San Jose State,CA,82.5,80.74,19,170,,112.5,215,,497.5,SBD
+Kevin Tanita,2,Open Men,M,Raw,UC Santa Cruz,CA,82.5,79.79,22,172.5,,122.5,195,,490,SBD
+Thomas Truong,3,Open Men,M,Raw,Cal State Long Beach,CA,82.5,79.29,22,145,,110,227.5,,482.5,SBD
+Carlos Verzosa,4,Open Men,M,Raw,Gavilan College,CA,82.5,78.38,20,150,,105,217.5,,472.5,SBD
+Marvin Valdez,5,Open Men,M,Raw,San Jose State,CA,82.5,78.79,22,150,,95,185,,430,SBD
+Michael Eagle,6,Open Men,M,Raw,San Jose State,CA,82.5,80.56,22,130,,115,185,,430,SBD
+Paul Sonnier,7,Open Men,M,Raw,Monterey Institue,CA,82.5,77.25,25,117.5,,87.5,162.5,,367.5,SBD
+Chris Cobo-Kroenke,DQ,Open Men,M,Raw,San Jose State,CA,82.5,81.78,21,142.5,,87.5,-150,,,SBD
+Harry Momand,1,Open Men,M,Raw,UCDavis,CA,90,83.46,23,187.5,,130,277.5,,595,SBD
+Matthew Wallace,2,Open Men,M,Raw,Cal State Monterey,CA,90,86.73,24,217.5,,120,237.5,,575,SBD
+Raphael Nguyen,3,Open Men,M,Raw,UC Irvine,CA,90,83.19,21,150,,110,210,,470,SBD
+Arlo Trinidad,4,Open Men,M,Raw,San Jose State,CA,90,88.86,23,152.5,,95,190,,437.5,SBD
+Wayne Chen,DQ,Open Men,M,Raw,San Jose State,CA,90,86.36,22,152.5,,102.5,-200,,,SBD
+Daniel Arguello,DQ,Open Men,M,Raw,San Jose State,CA,90,85.64,21,-137.5,,,,,,SBD
+Zachary Trahan,1,Open Men,M,Raw,San Jose State,CA,100,90.54,25,240,,132.5,272.5,,645,SBD
+Logan Campbell,2,Open Men,M,Raw,Ventura College,CA,100,97.43,23,230,,127.5,252.5,,610,SBD
+Kolin Daniels,3,Open Men,M,Raw,San Jose State,CA,100,97.84,20,167.5,,132.5,260,,560,SBD
+Yevgeniy Sirovskiy,4,Open Men,M,Raw,San Jose State,CA,100,95.93,23,157.5,,145,237.5,,540,SBD
+Bryan Reyna,DQ,Open Men,M,Raw,Butte College,CA,100,99.29,20,-197.5,,-147.5,197.5,,,SBD
+Christian Rebottaro,1,Junior Men 13-15,M,Raw,Unattached,CA,125,118.84,15,180,187.5,127.5,200,,507.5,SBD

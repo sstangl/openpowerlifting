@@ -1,36 +1,36 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Bench4Kg,Deadlift4Kg
-1,Krystle Thai,IA,48,46.6,23,70,47.5,112.5,230,F,Junior 20-23,Raw,,,
-1,Monique de Villa,CA,56,54.1,22,77.5,50,127.5,255,F,Junior 20-23,Raw,,,
-1,Elisabeth Dang,CA,60,59.7,25,130,70,152.5,352.5,F,Open,Raw,,,
-1,Jessie Olson,CA,67.5,66.4,33,132.5,87.5,140,360,F,Open,Raw,,,
-2,Kassandra Kappelin,CA,67.5,61.7,29,135,67.5,155,357.5,F,Open,Raw,,,
-1,Emily Geries,CA,75,73.45,31,85,57.5,110,252.5,F,Open,Raw,,,
-DQ,Emily Kovar,CA,75,73.8,19,115,-65,132.5,,F,Open,Raw,,,
-1,Tenaya Tuteur,CA,90,86.85,26,132.5,75,150,357.5,F,Open,Raw,,,
-1,Delfina Franco,CA,60,60,39,92.5,52.5,120,265,F,Submaster 35-39,Raw,,,
-1,Jessica Bay,CA,82.5,78.5,38,45,45,97.5,187.5,F,Submaster 35-49,Raw,,,
-1,Chandra Jenkins,CA,60,58.3,43,97.5,57.5,117.5,272.5,F,Master 40-44,Raw,,,
-1,Easton Vidales,CA,82.5,80,18,185,120,237.5,542.5,M,Junior 18-19,Raw,,,
-1,Robert Smith,CA,67.5,66,28,132.5,75,172.5,380,M,Open,Raw,,,
-1,Josiah Harris,CA,75,74.1,26,220,165,235,620,M,Open,Raw,,,
-2,Spencer Ross,CA,75,73.3,24,177.5,122.5,215,515,M,Open,Raw,,,
-1,Gary Alexander,CA,82.5,81.1,40,142.5,117.5,227.5,487.5,M,Open,Raw,,,
-2,Jeremy Heath,CA,82.5,80.55,27,137.5,105,157.5,400,M,Open,Raw,,,
-1,Tim Hartley,CA,100,98.9,26,207.5,142.5,260,610,M,Open,Raw,,,
-1,Jonathan Corona,CA,125,115,28,235,165,250,650,M,Open,Raw,,,
-1,Rich Cohen,CA,100,99,37,182.5,132.5,205,520,M,Submaster 35-39,Raw,,,
-1,Doug Loud,CA,125,115.4,40,222.5,137.5,227.5,587.5,M,Master 40-44,Raw,,,
-2,Michael Monroe,CA,125,119.3,44,170,127.5,197.5,495,M,Master 40-44,Raw,,,
-1,Alex Garcia,CA,82.5,75.5,30,115,47.5,142.5,305,F,Open,Wraps,,,
-1,Meshach Charan,CA,140,129.1,19,242.5,160,250,652.5,M,Junior 18-19,Wraps,,,
-1,William Lawson,CA,90,85.2,31,235,147.5,235,617.5,M,Open,Wraps,,,
-1,Shane Stewart,CA,100,96.7,36,272.5,205,282.5,760,M,Open,Wraps,,,
-2,Kell VanDall,CA,100,99.2,38,222.5,135,222.5,580,M,Open,Wraps,,,
-1,Amadeo Novella,CA,140,136.2,33,227.5,137.5,282.5,647.5,M,Open,Wraps,,,
-1,Shane Stewart,CA,100,96.7,36,272.5,205,282.5,760,M,Submaster 35-39,Wraps,,,
-1,Daniel Melgoza,CA,90,88.4,40,217.5,157.5,220,595,M,Master 40-44,Wraps,,,
-1,Cassy Krause,CA,67.5,66.1,60,115,62.5,115,292.5,F,Open,Single-ply,117.5,65,117.5
-1,Stacy Dedrick,CA,100,99.8,50,,200,,200,M,Master 50-54,Raw,,,
-1,Stacy Dedrick,CA,100,99.8,50,,227.5,,227.5,M,Master 50-54,Single-ply,,,
-1,Joe Bernazzani,CA,100,98.5,65,,172.5,,172.5,M,Master 65-69,Single-ply,,,
-1,Annelie Lauwerijssen,CA,90+,104.8,,,,100,100,F,Master 60-64,Raw,,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Bench4Kg,Deadlift4Kg,Event
+1,Krystle Thai,IA,48,46.6,23,70,47.5,112.5,230,F,Junior 20-23,Raw,,,,SBD
+1,Monique de Villa,CA,56,54.1,22,77.5,50,127.5,255,F,Junior 20-23,Raw,,,,SBD
+1,Elisabeth Dang,CA,60,59.7,25,130,70,152.5,352.5,F,Open,Raw,,,,SBD
+1,Jessie Olson,CA,67.5,66.4,33,132.5,87.5,140,360,F,Open,Raw,,,,SBD
+2,Kassandra Kappelin,CA,67.5,61.7,29,135,67.5,155,357.5,F,Open,Raw,,,,SBD
+1,Emily Geries,CA,75,73.45,31,85,57.5,110,252.5,F,Open,Raw,,,,SBD
+DQ,Emily Kovar,CA,75,73.8,19,115,-65,132.5,,F,Open,Raw,,,,SBD
+1,Tenaya Tuteur,CA,90,86.85,26,132.5,75,150,357.5,F,Open,Raw,,,,SBD
+1,Delfina Franco,CA,60,60,39,92.5,52.5,120,265,F,Submaster 35-39,Raw,,,,SBD
+1,Jessica Bay,CA,82.5,78.5,38,45,45,97.5,187.5,F,Submaster 35-49,Raw,,,,SBD
+1,Chandra Jenkins,CA,60,58.3,43,97.5,57.5,117.5,272.5,F,Master 40-44,Raw,,,,SBD
+1,Easton Vidales,CA,82.5,80,18,185,120,237.5,542.5,M,Junior 18-19,Raw,,,,SBD
+1,Robert Smith,CA,67.5,66,28,132.5,75,172.5,380,M,Open,Raw,,,,SBD
+1,Josiah Harris,CA,75,74.1,26,220,165,235,620,M,Open,Raw,,,,SBD
+2,Spencer Ross,CA,75,73.3,24,177.5,122.5,215,515,M,Open,Raw,,,,SBD
+1,Gary Alexander,CA,82.5,81.1,40,142.5,117.5,227.5,487.5,M,Open,Raw,,,,SBD
+2,Jeremy Heath,CA,82.5,80.55,27,137.5,105,157.5,400,M,Open,Raw,,,,SBD
+1,Tim Hartley,CA,100,98.9,26,207.5,142.5,260,610,M,Open,Raw,,,,SBD
+1,Jonathan Corona,CA,125,115,28,235,165,250,650,M,Open,Raw,,,,SBD
+1,Rich Cohen,CA,100,99,37,182.5,132.5,205,520,M,Submaster 35-39,Raw,,,,SBD
+1,Doug Loud,CA,125,115.4,40,222.5,137.5,227.5,587.5,M,Master 40-44,Raw,,,,SBD
+2,Michael Monroe,CA,125,119.3,44,170,127.5,197.5,495,M,Master 40-44,Raw,,,,SBD
+1,Alex Garcia,CA,82.5,75.5,30,115,47.5,142.5,305,F,Open,Wraps,,,,SBD
+1,Meshach Charan,CA,140,129.1,19,242.5,160,250,652.5,M,Junior 18-19,Wraps,,,,SBD
+1,William Lawson,CA,90,85.2,31,235,147.5,235,617.5,M,Open,Wraps,,,,SBD
+1,Shane Stewart,CA,100,96.7,36,272.5,205,282.5,760,M,Open,Wraps,,,,SBD
+2,Kell VanDall,CA,100,99.2,38,222.5,135,222.5,580,M,Open,Wraps,,,,SBD
+1,Amadeo Novella,CA,140,136.2,33,227.5,137.5,282.5,647.5,M,Open,Wraps,,,,SBD
+1,Shane Stewart,CA,100,96.7,36,272.5,205,282.5,760,M,Submaster 35-39,Wraps,,,,SBD
+1,Daniel Melgoza,CA,90,88.4,40,217.5,157.5,220,595,M,Master 40-44,Wraps,,,,SBD
+1,Cassy Krause,CA,67.5,66.1,60,115,62.5,115,292.5,F,Open,Single-ply,117.5,65,117.5,SBD
+1,Stacy Dedrick,CA,100,99.8,50,,200,,200,M,Master 50-54,Raw,,,,B
+1,Stacy Dedrick,CA,100,99.8,50,,227.5,,227.5,M,Master 50-54,Single-ply,,,,B
+1,Joe Bernazzani,CA,100,98.5,65,,172.5,,172.5,M,Master 65-69,Single-ply,,,,B
+1,Annelie Lauwerijssen,CA,90+,104.8,,,,100,100,F,Master 60-64,Raw,,,,D

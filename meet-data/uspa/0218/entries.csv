@@ -1,43 +1,43 @@
-Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Tara Noble,1,Open Women,F,Wraps,60,59.50,,75.00,42.50,102.50,220.00
-Mary Case,1,Open Women,F,Wraps,75,71.60,58,110.00,77.50,115.00,302.50
-Mary Case,1,Master Women 55-59,F,Wraps,75,71.60,58,110.00,77.50,115.00,302.50
-Juanita Lee,1,Open Women,F,Wraps,90+,115.19,34,112.50,70.00,137.50,320.00
-Rex Jones,DQ,Open Men,M,Wraps,60,59.96,30,-157.50,115.00,175.00,
-Gerald Lebrilla,1,Junior Men 18-19,M,Wraps,67.5,66.00,19,150.00,110.00,197.50,457.50
-Jesse Aguirre,1,Junior Men 20-23,M,Wraps,75,70.00,20,150.00,105.00,227.50,482.50
-Joe Martin,1,Master Men 50-54,M,Wraps,90,88.99,52,182.50,145.00,215.00,542.50
-Justin Harris,1,Open Men,M,Wraps,100,99.00,41,185.00,127.50,220.00,532.50
-Justin Harris,1,Master Men 40-44,M,Wraps,100,99.00,41,185.00,127.50,220.00,532.50
-Cameron Willis,1,Junior Men 16-17,M,Wraps,110,101.50,17,210.00,142.50,215.00,567.50
-Salvador Betancourt,1,Junior Men 20-23,M,Wraps,110,105.00,20,207.50,145.00,222.50,575.00
-Frederick Martinez,1,Open Men,M,Wraps,125,120.00,47,227.50,175.00,295.00,697.50
-Frederick Martinez,1,Master Men 45-49,M,Wraps,125,120.00,47,227.50,175.00,295.00,697.50
-Tony Rodenburg,1,Master Men 55-59,M,Wraps,125,123.50,56,107.50,112.50,200.00,420.00
-Mike Guidry,1,Open Men,M,Wraps,140,139.98,,245.00,185.00,230.00,660.00
-Vangie Keresey,1,Master Women 70-74,F,Multi-ply,67.5,64.40,72,95.00,60.00,137.50,292.50
-Lisa Gaad,DQ,Open Women,F,Multi-ply,82.5,81.19,29,65.00,-50.00,102.50,
-Eddie Buehner,1,Open Men,M,Multi-ply,90,83.00,46,205.00,115.00,217.50,537.50
-Matthew Olivares,1,Submaster Men 35-39,M,Multi-ply,90,88.75,37,185.00,110.00,182.50,477.50
-Eddie Buehner,1,Master Men 45-49,M,Multi-ply,90,83.00,46,205.00,115.00,217.50,537.50
-Lawrence McElhaney,1,Junior Men 18-19,M,Multi-ply,100,99.00,18,172.50,107.50,170.00,450.00
-Lawrence McElhaney,1,Open Men,M,Multi-ply,100,99.00,18,172.50,107.50,170.00,450.00
-Tyson Orwoll,1,Open Men,M,Multi-ply,110,109.00,31,260.00,175.00,257.50,692.50
-Gregory Santa Cruz,2,Open Men,M,Multi-ply,110,104.00,24,220.00,182.50,260.00,662.50
-Kregg Rackley,1,Junior Men 20-23,M,Multi-ply,125,116.10,20,217.50,165.00,207.50,590.00
-Bryant Ayers,1,Open Men,M,Multi-ply,125,117.00,39,265.00,197.50,250.00,712.50
-Bill McEwen,2,Open Men,M,Multi-ply,125,116.00,58,195.00,132.50,190.00,517.50
-Bill McEwen,1,Master Men 55-59,M,Multi-ply,125,116.00,58,195.00,132.50,190.00,517.50
-Mark Folweiler,DQ,Junior Men 20-23,M,Multi-ply,140+,172.50,22,-327.50,,,
-Steven Lee,1,Open Men,M,Multi-ply,140+,149.49,33,275.00,65.00,205.00,545.00
-Kent Russell,1,Open Men,M,Raw,100,99.79,38,,187.50,,187.50
-Matt Bickel,2,Open Men,M,Raw,100,99.79,,,170.00,,170.00
-Kent Russell,1,Submaster Men 35-39,M,Raw,100,99.79,38,,187.50,,187.50
-Tom Kosanouvong,1,Open Men,M,Raw,110,103.50,33,,205.00,,205.00
-Brian Thompson,2,Open Men,M,Raw,110,107.70,53,,170.00,,170.00
-James Smith,1,Master Men 45-49,M,Raw,110,109.50,46,,200.00,,200.00
-Brian Thompson,1,Master Men 50-54,M,Raw,110,107.70,53,,170.00,,170.00
-Gregory Cotterell,2,Master Men 50-54,M,Raw,110,109.75,52,,155.00,,155.00
-Tyson Orwoll,1,Open Men,M,Multi-ply,110,109.00,31,,175.00,,175.00
-Todd Kezerian,1,Master Men 55-59,M,Multi-ply,110,109.50,57,,175.00,,175.00
-Joe Mass,DQ,Junior Men 20-23,M,Multi-ply,140+,167.50,20,,-305.00,,
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Tara Noble,1,Open Women,F,Wraps,60,59.5,,75,42.5,102.5,220,SBD
+Mary Case,1,Open Women,F,Wraps,75,71.6,58,110,77.5,115,302.5,SBD
+Mary Case,1,Master Women 55-59,F,Wraps,75,71.6,58,110,77.5,115,302.5,SBD
+Juanita Lee,1,Open Women,F,Wraps,90+,115.19,34,112.5,70,137.5,320,SBD
+Rex Jones,DQ,Open Men,M,Wraps,60,59.96,30,-157.5,115,175,,SBD
+Gerald Lebrilla,1,Junior Men 18-19,M,Wraps,67.5,66,19,150,110,197.5,457.5,SBD
+Jesse Aguirre,1,Junior Men 20-23,M,Wraps,75,70,20,150,105,227.5,482.5,SBD
+Joe Martin,1,Master Men 50-54,M,Wraps,90,88.99,52,182.5,145,215,542.5,SBD
+Justin Harris,1,Open Men,M,Wraps,100,99,41,185,127.5,220,532.5,SBD
+Justin Harris,1,Master Men 40-44,M,Wraps,100,99,41,185,127.5,220,532.5,SBD
+Cameron Willis,1,Junior Men 16-17,M,Wraps,110,101.5,17,210,142.5,215,567.5,SBD
+Salvador Betancourt,1,Junior Men 20-23,M,Wraps,110,105,20,207.5,145,222.5,575,SBD
+Frederick Martinez,1,Open Men,M,Wraps,125,120,47,227.5,175,295,697.5,SBD
+Frederick Martinez,1,Master Men 45-49,M,Wraps,125,120,47,227.5,175,295,697.5,SBD
+Tony Rodenburg,1,Master Men 55-59,M,Wraps,125,123.5,56,107.5,112.5,200,420,SBD
+Mike Guidry,1,Open Men,M,Wraps,140,139.98,,245,185,230,660,SBD
+Vangie Keresey,1,Master Women 70-74,F,Multi-ply,67.5,64.4,72,95,60,137.5,292.5,SBD
+Lisa Gaad,DQ,Open Women,F,Multi-ply,82.5,81.19,29,65,-50,102.5,,SBD
+Eddie Buehner,1,Open Men,M,Multi-ply,90,83,46,205,115,217.5,537.5,SBD
+Matthew Olivares,1,Submaster Men 35-39,M,Multi-ply,90,88.75,37,185,110,182.5,477.5,SBD
+Eddie Buehner,1,Master Men 45-49,M,Multi-ply,90,83,46,205,115,217.5,537.5,SBD
+Lawrence McElhaney,1,Junior Men 18-19,M,Multi-ply,100,99,18,172.5,107.5,170,450,SBD
+Lawrence McElhaney,1,Open Men,M,Multi-ply,100,99,18,172.5,107.5,170,450,SBD
+Tyson Orwoll,1,Open Men,M,Multi-ply,110,109,31,260,175,257.5,692.5,SBD
+Gregory Santa Cruz,2,Open Men,M,Multi-ply,110,104,24,220,182.5,260,662.5,SBD
+Kregg Rackley,1,Junior Men 20-23,M,Multi-ply,125,116.1,20,217.5,165,207.5,590,SBD
+Bryant Ayers,1,Open Men,M,Multi-ply,125,117,39,265,197.5,250,712.5,SBD
+Bill McEwen,2,Open Men,M,Multi-ply,125,116,58,195,132.5,190,517.5,SBD
+Bill McEwen,1,Master Men 55-59,M,Multi-ply,125,116,58,195,132.5,190,517.5,SBD
+Mark Folweiler,DQ,Junior Men 20-23,M,Multi-ply,140+,172.5,22,-327.5,,,,SBD
+Steven Lee,1,Open Men,M,Multi-ply,140+,149.49,33,275,65,205,545,SBD
+Kent Russell,1,Open Men,M,Raw,100,99.79,38,,187.5,,187.5,B
+Matt Bickel,2,Open Men,M,Raw,100,99.79,,,170,,170,B
+Kent Russell,1,Submaster Men 35-39,M,Raw,100,99.79,38,,187.5,,187.5,B
+Tom Kosanouvong,1,Open Men,M,Raw,110,103.5,33,,205,,205,B
+Brian Thompson,2,Open Men,M,Raw,110,107.7,53,,170,,170,B
+James Smith,1,Master Men 45-49,M,Raw,110,109.5,46,,200,,200,B
+Brian Thompson,1,Master Men 50-54,M,Raw,110,107.7,53,,170,,170,B
+Gregory Cotterell,2,Master Men 50-54,M,Raw,110,109.75,52,,155,,155,B
+Tyson Orwoll,1,Open Men,M,Multi-ply,110,109,31,,175,,175,B
+Todd Kezerian,1,Master Men 55-59,M,Multi-ply,110,109.5,57,,175,,175,B
+Joe Mass,DQ,Junior Men 20-23,M,Multi-ply,140+,167.5,20,,-305,,,B

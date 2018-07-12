@@ -1,36 +1,36 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Megan Garcia,CA,52,51.8,16,95,95,F,Junior 16-17,Raw
-1,Cassidy Thongsy,CA,67.5,60.8,14,92.5,92.5,F,Junior 13-15,Raw
-1,Bryana Washington,CA,75,70.6,14,117.5,117.5,F,Junior 13-15,Raw
-1,Michelle Smiley,CA,56,55.8,26,105,105,F,Open,Raw
-1,Desiree Morgan,CA,60,59.9,27,160,160,F,Open,Raw
-1,Adriana Rosales,CA,67.5,63.8,29,115,115,F,Open,Raw
-1,Tonia Joy Gonzalez,CA,75,70.5,27,147.5,147.5,F,Open,Raw
-1,Lisa Atherton,CA,90+,110.7,29,150,150,F,Open,Raw
-1,Harriet Schaad,CA,82.5,80,68,77.5,77.5,F,Master 65-69,Raw
-1,Andrew Thao,CA,60,59.3,16,150,150,M,Junior 16-17,Raw
-1,Joshua Vang,CA,67.5,62.2,16,157.5,157.5,M,Junior 16-17,Raw
-1,Jaden Sanchez,CA,82.5,75.7,14,130,130,M,Junior 13-15,Raw
-G,Jimmy Villanueva,CA,82.5,81.1,20,265,265,M,Junior 20-23,Raw
-1,Manvir Dhanoa,CA,100,96.7,19,215,215,M,Junior 18-19,Raw
-1,Ben Duran,CA,100,93.8,21,227.5,227.5,M,Junior 20-23,Raw
-1,Francisco Pacheco,CA,110,105.2,16,210,210,M,Junior 16-17,Raw
-1,José Castro,CA,140,137.4,23,257.5,257.5,M,Junior 20-23,Raw
-1,Ryan King #2,CA,90,89.6,30,302.5,302.5,M,Open,Raw
-2,Liam Elliott,CA,90,84.3,38,210,210,M,Open,Raw
-1,Eric Romo,CA,125,124.4,25,225,225,M,Open,Raw
-2,Riccardo Magni,CA,125,123.3,41,205,205,M,Open,Raw
-1,Liam Elliott,CA,90,84.3,38,210,210,M,Submaster 35-39,Raw
-1,Reginald Washington,CA,140+,162.9,38,230,230,M,Submaster 35-39,Raw
-1,Alton Lee Ticer,CA,82.5,81.1,68,172.5,172.5,M,Master 65-69,Raw
-1,Brian Rowland,CA,90,88.1,51,187.5,187.5,M,Master 50-54,Raw
-1,Eduardo Martinez,CA,140+,141,44,300,300,M,Master 40-44,Raw
-1,David Gifford,CA,140+,152.8,48,210,210,M,Master 45-49,Raw
-1,Alexandrea Garzaro,CA,60,58.5,29,107.5,107.5,F,Open,Single-ply
-1,Amanda Duket,CA,67.5,65.4,24,120,120,F,Open,Single-ply
-1,Charles LaMantia,CA,100,99.1,19,195,195,M,Junior 18-19,Single-ply
-1,Steven Lee,CA,140+,155.3,36,260,260,M,Open,Single-ply
-1,Steven Lee,CA,140+,155.3,36,260,260,M,Submaster 35-39,Single-ply
-1,John Heldt,NV,140+,152.1,45,250,250,M,Master 45-49,Single-ply
-1,Ka'lene Herbias,CA,67.5,66.6,16,102.5,102.5,F,Junior,Multi-ply
-1,Martha Quinoz,CA,60,56.3,26,102.5,102.5,F,Open,Multi-ply
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Megan Garcia,CA,52,51.8,16,95,95,F,Junior 16-17,Raw,D
+1,Cassidy Thongsy,CA,67.5,60.8,14,92.5,92.5,F,Junior 13-15,Raw,D
+1,Bryana Washington,CA,75,70.6,14,117.5,117.5,F,Junior 13-15,Raw,D
+1,Michelle Smiley,CA,56,55.8,26,105,105,F,Open,Raw,D
+1,Desiree Morgan,CA,60,59.9,27,160,160,F,Open,Raw,D
+1,Adriana Rosales,CA,67.5,63.8,29,115,115,F,Open,Raw,D
+1,Tonia Joy Gonzalez,CA,75,70.5,27,147.5,147.5,F,Open,Raw,D
+1,Lisa Atherton,CA,90+,110.7,29,150,150,F,Open,Raw,D
+1,Harriet Schaad,CA,82.5,80,68,77.5,77.5,F,Master 65-69,Raw,D
+1,Andrew Thao,CA,60,59.3,16,150,150,M,Junior 16-17,Raw,D
+1,Joshua Vang,CA,67.5,62.2,16,157.5,157.5,M,Junior 16-17,Raw,D
+1,Jaden Sanchez,CA,82.5,75.7,14,130,130,M,Junior 13-15,Raw,D
+G,Jimmy Villanueva,CA,82.5,81.1,20,265,265,M,Junior 20-23,Raw,D
+1,Manvir Dhanoa,CA,100,96.7,19,215,215,M,Junior 18-19,Raw,D
+1,Ben Duran,CA,100,93.8,21,227.5,227.5,M,Junior 20-23,Raw,D
+1,Francisco Pacheco,CA,110,105.2,16,210,210,M,Junior 16-17,Raw,D
+1,José Castro,CA,140,137.4,23,257.5,257.5,M,Junior 20-23,Raw,D
+1,Ryan King #2,CA,90,89.6,30,302.5,302.5,M,Open,Raw,D
+2,Liam Elliott,CA,90,84.3,38,210,210,M,Open,Raw,D
+1,Eric Romo,CA,125,124.4,25,225,225,M,Open,Raw,D
+2,Riccardo Magni,CA,125,123.3,41,205,205,M,Open,Raw,D
+1,Liam Elliott,CA,90,84.3,38,210,210,M,Submaster 35-39,Raw,D
+1,Reginald Washington,CA,140+,162.9,38,230,230,M,Submaster 35-39,Raw,D
+1,Alton Lee Ticer,CA,82.5,81.1,68,172.5,172.5,M,Master 65-69,Raw,D
+1,Brian Rowland,CA,90,88.1,51,187.5,187.5,M,Master 50-54,Raw,D
+1,Eduardo Martinez,CA,140+,141,44,300,300,M,Master 40-44,Raw,D
+1,David Gifford,CA,140+,152.8,48,210,210,M,Master 45-49,Raw,D
+1,Alexandrea Garzaro,CA,60,58.5,29,107.5,107.5,F,Open,Single-ply,D
+1,Amanda Duket,CA,67.5,65.4,24,120,120,F,Open,Single-ply,D
+1,Charles LaMantia,CA,100,99.1,19,195,195,M,Junior 18-19,Single-ply,D
+1,Steven Lee,CA,140+,155.3,36,260,260,M,Open,Single-ply,D
+1,Steven Lee,CA,140+,155.3,36,260,260,M,Submaster 35-39,Single-ply,D
+1,John Heldt,NV,140+,152.1,45,250,250,M,Master 45-49,Single-ply,D
+1,Ka'lene Herbias,CA,67.5,66.6,16,102.5,102.5,F,Junior,Multi-ply,D
+1,Martha Quinoz,CA,60,56.3,26,102.5,102.5,F,Open,Multi-ply,D

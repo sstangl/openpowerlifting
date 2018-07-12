@@ -1,45 +1,45 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Sasha Blakely,WV,67.5,62.40,30,85.00,52.50,87.50,225.00,F,Open,Raw
-1,Candice Tackett,KY,75,73.40,33,120.00,62.50,127.50,310.00,F,Open,Raw
-2,Hannah Cossett,KY,75,74.00,25,80.00,50.00,97.50,227.50,F,Open,Raw
-1,Kourtni Young,KY,90,86.00,24,177.50,75.00,167.50,420.00,F,Open,Raw
-1,Camisha Noble,KY,60,56.80,43,102.50,62.50,92.50,257.50,F,Master 40-44,Raw
-1,Tanner Davis,KY,56,53.10,17,52.50,45.00,85.00,182.50,M,Junior 16-17,Raw
-1,Jacob Cox,KY,60,56.90,15,90.00,52.50,112.50,255.00,M,Junior 13-15,Raw
-1,Drew Fannin,KY,82.5,76.50,15,137.50,70.00,155.00,362.50,M,Junior 13-15,Raw
-1,Tom Bell,WV,82.5,81.60,22,205.00,120.00,257.50,582.50,M,Junior 20-23,Raw
-1,Corey Berlant,KY,90,84.90,21,172.50,127.50,210.00,510.00,M,Junior 20-23,Raw
-2,Justin Bahawi,KY,90,84.60,23,157.50,95.00,210.00,462.50,M,Junior 20-23,Raw
-1,Daniel Kimbell,KY,100,91.90,15,160.00,135.00,212.50,507.50,M,Junior 13-15,Raw
-2,Evan Dickeson,KY,100,96.20,15,140.00,90.00,177.50,407.50,M,Junior 13-15,Raw
-1,Blake Charles,KY,100,97.60,17,250.00,142.50,277.50,670.00,M,Junior 16-17,Raw
-1,Thomas Biddle,KY,100,97.80,23,265.00,150.00,302.50,717.50,M,Junior 20-23,Raw
-1,Gunner Edmonds,KY,110,107.50,17,230.00,152.50,230.00,612.50,M,Junior 16-17,Raw
-1,Gregory Eakins,IN,82.5,79.00,31,165.00,142.50,195.00,502.50,M,Open,Raw
-1,Jace Branch,WV,90,89.20,24,217.50,137.50,272.50,627.50,M,Open,Raw
-1,John Young,KY,100,99.90,26,227.50,172.50,282.50,682.50,M,Open,Raw
-2,Aaron Perry,WV,100,94.30,26,235.00,125.00,240.00,600.00,M,Open,Raw
-1,Joshua McCarty,KY,110,108.10,24,227.50,170.00,285.00,682.50,M,Open,Raw
-2,Jacob Taulbee,KY,110,107.80,24,200.00,142.50,205.00,547.50,M,Open,Raw
-1,Jason McCown,KY,125,122.90,36,282.50,232.50,295.00,810.00,M,Open,Raw
-2,Michael Scrivner,KY,125,119.60,30,272.50,170.00,307.50,750.00,M,Open,Raw
-1,Elias Abner,KY,140+,162.30,26,270.00,152.50,282.50,705.00,M,Open,Raw
-1,Matthew Bowers,KY,125,115.60,35,160.00,152.50,182.50,495.00,M,Submaster 35-39,Raw
-1,Emily Nantz,KY,90,89.90,22,160.00,72.50,142.50,375.00,F,Junior 20-23,Wraps
-1,Austin Elpers,IN,75,70.30,20,182.50,110.00,205.00,497.50,M,Junior 20-23,Wraps
-1,Wendell Sowers,IN,82.5,81.80,23,227.50,137.50,272.50,637.50,M,Junior 20-23,Wraps
-1,Josh Lytle,IN,110,107.70,21,235.00,142.50,250.00,627.50,M,Junior 20-23,Wraps
-1,William Porter,KY,140,135.20,19,237.50,167.50,277.50,682.50,M,Junior 18-19,Wraps
-1,Jonathan Muniz,IN,75,74.90,29,207.50,132.50,207.50,547.50,M,Open,Wraps
-1,Michael Scrivner,KY,125,119.60,30,297.50,170.00,307.50,775.00,M,Open,Wraps
-1,Elias Abner,KY,140+,162.30,26,295.00,152.50,282.50,730.00,M,Open,Wraps
-1,Ethan Weaver,KY,52,49.90,14,,37.50,,37.50,M,Junior 13-15,Raw
-1,Christopher Bean,WV,110,107.00,23,,107.50,,107.50,M,Junior 20-23,Raw
-1,Mitchell Rabeneck,KY,125,124.90,23,,125.00,,125.00,M,Junior 20-23,Raw
-1,Chris Thomas,KY,82.5,81.90,26,,145.00,,145.00,M,Open,Raw
-1,Ethan Weaver,KY,52,49.90,14,,,72.50,72.50,M,Junior 13-15,Raw
-1,Ethan Lenn,IN,82.5,79.30,20,,,205.00,205.00,M,Junior 20-23,Raw
-1,Christopher Bean,WV,110,107.00,23,,,225.00,225.00,M,Junior 20-23,Raw
-1,Mitchell Rabeneck,KY,125,124.90,23,,,227.50,227.50,M,Junior 20-23,Raw
-1,Chris Thomas,KY,82.5,81.90,26,,,207.50,207.50,M,Open,Raw
-1,Joshua Dodson-Collins,TN,125,121.90,27,,,320.00,320.00,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Sasha Blakely,WV,67.5,62.40,30,85.00,52.50,87.50,225.00,F,Open,Raw,SBD
+1,Candice Tackett,KY,75,73.40,33,120.00,62.50,127.50,310.00,F,Open,Raw,SBD
+2,Hannah Cossett,KY,75,74.00,25,80.00,50.00,97.50,227.50,F,Open,Raw,SBD
+1,Kourtni Young,KY,90,86.00,24,177.50,75.00,167.50,420.00,F,Open,Raw,SBD
+1,Camisha Noble,KY,60,56.80,43,102.50,62.50,92.50,257.50,F,Master 40-44,Raw,SBD
+1,Tanner Davis,KY,56,53.10,17,52.50,45.00,85.00,182.50,M,Junior 16-17,Raw,SBD
+1,Jacob Cox,KY,60,56.90,15,90.00,52.50,112.50,255.00,M,Junior 13-15,Raw,SBD
+1,Drew Fannin,KY,82.5,76.50,15,137.50,70.00,155.00,362.50,M,Junior 13-15,Raw,SBD
+1,Tom Bell,WV,82.5,81.60,22,205.00,120.00,257.50,582.50,M,Junior 20-23,Raw,SBD
+1,Corey Berlant,KY,90,84.90,21,172.50,127.50,210.00,510.00,M,Junior 20-23,Raw,SBD
+2,Justin Bahawi,KY,90,84.60,23,157.50,95.00,210.00,462.50,M,Junior 20-23,Raw,SBD
+1,Daniel Kimbell,KY,100,91.90,15,160.00,135.00,212.50,507.50,M,Junior 13-15,Raw,SBD
+2,Evan Dickeson,KY,100,96.20,15,140.00,90.00,177.50,407.50,M,Junior 13-15,Raw,SBD
+1,Blake Charles,KY,100,97.60,17,250.00,142.50,277.50,670.00,M,Junior 16-17,Raw,SBD
+1,Thomas Biddle,KY,100,97.80,23,265.00,150.00,302.50,717.50,M,Junior 20-23,Raw,SBD
+1,Gunner Edmonds,KY,110,107.50,17,230.00,152.50,230.00,612.50,M,Junior 16-17,Raw,SBD
+1,Gregory Eakins,IN,82.5,79.00,31,165.00,142.50,195.00,502.50,M,Open,Raw,SBD
+1,Jace Branch,WV,90,89.20,24,217.50,137.50,272.50,627.50,M,Open,Raw,SBD
+1,John Young,KY,100,99.90,26,227.50,172.50,282.50,682.50,M,Open,Raw,SBD
+2,Aaron Perry,WV,100,94.30,26,235.00,125.00,240.00,600.00,M,Open,Raw,SBD
+1,Joshua McCarty,KY,110,108.10,24,227.50,170.00,285.00,682.50,M,Open,Raw,SBD
+2,Jacob Taulbee,KY,110,107.80,24,200.00,142.50,205.00,547.50,M,Open,Raw,SBD
+1,Jason McCown,KY,125,122.90,36,282.50,232.50,295.00,810.00,M,Open,Raw,SBD
+2,Michael Scrivner,KY,125,119.60,30,272.50,170.00,307.50,750.00,M,Open,Raw,SBD
+1,Elias Abner,KY,140+,162.30,26,270.00,152.50,282.50,705.00,M,Open,Raw,SBD
+1,Matthew Bowers,KY,125,115.60,35,160.00,152.50,182.50,495.00,M,Submaster 35-39,Raw,SBD
+1,Emily Nantz,KY,90,89.90,22,160.00,72.50,142.50,375.00,F,Junior 20-23,Wraps,SBD
+1,Austin Elpers,IN,75,70.30,20,182.50,110.00,205.00,497.50,M,Junior 20-23,Wraps,SBD
+1,Wendell Sowers,IN,82.5,81.80,23,227.50,137.50,272.50,637.50,M,Junior 20-23,Wraps,SBD
+1,Josh Lytle,IN,110,107.70,21,235.00,142.50,250.00,627.50,M,Junior 20-23,Wraps,SBD
+1,William Porter,KY,140,135.20,19,237.50,167.50,277.50,682.50,M,Junior 18-19,Wraps,SBD
+1,Jonathan Muniz,IN,75,74.90,29,207.50,132.50,207.50,547.50,M,Open,Wraps,SBD
+1,Michael Scrivner,KY,125,119.60,30,297.50,170.00,307.50,775.00,M,Open,Wraps,SBD
+1,Elias Abner,KY,140+,162.30,26,295.00,152.50,282.50,730.00,M,Open,Wraps,SBD
+1,Ethan Weaver,KY,52,49.90,14,,37.50,,37.50,M,Junior 13-15,Raw,B
+1,Christopher Bean,WV,110,107.00,23,,107.50,,107.50,M,Junior 20-23,Raw,B
+1,Mitchell Rabeneck,KY,125,124.90,23,,125.00,,125.00,M,Junior 20-23,Raw,B
+1,Chris Thomas,KY,82.5,81.90,26,,145.00,,145.00,M,Open,Raw,B
+1,Ethan Weaver,KY,52,49.90,14,,,72.50,72.50,M,Junior 13-15,Raw,D
+1,Ethan Lenn,IN,82.5,79.30,20,,,205.00,205.00,M,Junior 20-23,Raw,D
+1,Christopher Bean,WV,110,107.00,23,,,225.00,225.00,M,Junior 20-23,Raw,D
+1,Mitchell Rabeneck,KY,125,124.90,23,,,227.50,227.50,M,Junior 20-23,Raw,D
+1,Chris Thomas,KY,82.5,81.90,26,,,207.50,207.50,M,Open,Raw,D
+1,Joshua Dodson-Collins,TN,125,121.90,27,,,320.00,320.00,M,Open,Raw,D

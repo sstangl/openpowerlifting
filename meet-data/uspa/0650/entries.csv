@@ -1,44 +1,44 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Aubrey Beazley,IA,67.5,65.8,13,40.00,32.50,87.50,160.00,F,Junior 13-15,Raw
-1,Jaime Holmberg,IA,67.5,67.1,18,100.00,55.00,132.50,287.50,F,Junior 18-19,Raw
-DQ,Emily Lewis,IA,75,68.7,16,107.50,-55.00,122.50,,F,Junior 16-17,Raw
-1,Morgan Irons,IA,82.5,77,19,122.50,75.00,172.50,370.00,F,Junior 18-19,Raw
-1,Kiersten Scurlock,IA,82.5,82.5,23,175.00,82.50,185.00,442.50,F,Junior 20-23,Raw
-1,Kristi Southerland,IN,75,72.70,29,137.50,72.50,142.50,352.50,F,Open,Raw
-1,Amy Matlick,IL,60,59.00,35,80.00,55.00,105.00,240.00,F,Submaster 35-39,Raw
-1,Kenten Weyeneth,IA,75,70.60,16,137.50,82.50,162.50,382.50,M,Junior 16-17,Raw
-1,Bryce Leipzig,WI,75,73.00,19,152.50,125.00,195.00,472.50,M,Junior 18-19,Raw
-2,Stephen King,IL,75,75.00,19,112.50,77.50,165.00,355.00,M,Junior 18-19,Raw
-1,Sam Martin,IL,82.5,75.40,21,182.50,127.50,220.00,530.00,M,Junior 20-23,Raw
-1,Matt Dennis,IA,82.5,79.30,19,155.00,115.00,222.50,492.50,M,Junior 18-19,Raw
-1,Nehemiah Briggs,IA,90,89.00,21,192.50,125.00,227.50,545.00,M,Junior 20-23,Raw
-DQ,Matthew Blaser,IA,90,89.70,21,160.00,-115.00,162.50,,M,Junior 20-23,Raw
-1,Stephen Schaecher,IL,100,98.80,23,220.00,117.50,255.00,592.50,M,Junior 20-23,Raw
-1,Jeremy Lewis,IA,110,106.9,18,217.50,122.50,237.50,577.50,M,Junior 18-19,Raw
-1,Alexander Matheney,MN,125,113.1,16,165.00,127.50,190.00,482.50,M,Junior 16-17,Raw
-1,Donavan Wilson,IA,140,134.4,16,160.00,125.00,192.50,477.50,M,Junior 16-17,Raw
-1,Curt Winters,NE,67.5,64.80,30,115.00,102.50,177.50,395.00,M,Open,Raw
-1,Zac Builta,IA,75,73.00,24,185.00,120.00,187.50,492.50,M,Open,Raw
-1,Sean Orton,IA,90,88.40,24,232.50,130.00,257.50,620.00,M,Open,Raw
-2,David Frazier,IA,90,88.80,35,220.00,142.50,227.50,590.00,M,Open,Raw
-3,Eric Stephens,IA,90,89.10,33,185.00,117.50,210.00,512.50,M,Open,Raw
-1,Tom Helms,IA,100,98.70,30,237.50,145.00,260.00,642.50,M,Open,Raw
-2,Sam Hatten,IL,100,95.70,24,230.00,140.00,255.00,625.00,M,Open,Raw
-3,Willie Beeler,IA,100,97.30,25,217.50,140.00,250.00,607.50,M,Open,Raw
-4,Tim Housby,IL,100,96.7,32,140.00,102.50,167.50,410.00,M,Open,Raw
-1,Nicholas Harper,IA,110,108.1,27,157.50,145.00,237.50,540.00,M,Open,Raw
-DQ,Donald Franks,IL,110,109.00,27,137.50,-155.00,200.00,,M,Open,Raw
-1,Herb Farver,IL,125,124.70,27,237.50,120.00,247.50,605.00,M,Open,Raw
-1,Cody Brant,IL,140+,154.70,25,320.00,210.00,300.00,830.00,M,Open,Raw
-2,Jon Ryle,IL,140+,158.00,28,237.50,182.50,292.50,712.50,M,Open,Raw
-1,Eddie Cupp,IL,75,74.50,34,145.00,97.50,145.00,387.50,M,Submaster 35-39,Raw
-1,Chris Krieg,IA,82.5,79.6,38,175,107.5,222.5,505,M,Submaster 35-39,Raw
-1,David Frazier,IA,90,88.80,35,220.00,142.50,227.50,590.00,M,Submaster 35-39,Raw
-2,Brian Overbaugh,IA,90,84.90,38,182.50,127.50,215.00,525.00,M,Submaster 35-39,Raw
-1,Lee Zumdome,IA,100,97.30,36,192.50,155.00,220.00,567.50,M,Submaster 35-39,Raw
-1,Aaron Overstreet,IA,110,105.5,36,225.00,120.00,220.00,565.00,M,Submaster 35-39,Raw
-1,Shane Schroeder,IA,82.5,80.60,47,142.50,112.50,150.00,405.00,M,Master 45-49,Raw
-1,Mike Knickrehm,IA,140,130.20,61,92.50,80.00,152.50,325.00,M,Master 60-64,Raw
-1,Michael Langston,OK,110,108.8,23,192.50,125.00,250.00,567.50,M,Junior 20-23,Wraps
-1,Anthony Nielsen,IL,75,74.10,25,167.50,112.50,185.00,465.00,M,Open,Wraps
-1,Michael Langston,OK,110,108.80,23,192.50,125.00,250.00,567.50,M,Open,Wraps
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Aubrey Beazley,IA,67.5,65.8,13,40.00,32.50,87.50,160.00,F,Junior 13-15,Raw,SBD
+1,Jaime Holmberg,IA,67.5,67.1,18,100.00,55.00,132.50,287.50,F,Junior 18-19,Raw,SBD
+DQ,Emily Lewis,IA,75,68.7,16,107.50,-55.00,122.50,,F,Junior 16-17,Raw,SBD
+1,Morgan Irons,IA,82.5,77,19,122.50,75.00,172.50,370.00,F,Junior 18-19,Raw,SBD
+1,Kiersten Scurlock,IA,82.5,82.5,23,175.00,82.50,185.00,442.50,F,Junior 20-23,Raw,SBD
+1,Kristi Southerland,IN,75,72.70,29,137.50,72.50,142.50,352.50,F,Open,Raw,SBD
+1,Amy Matlick,IL,60,59.00,35,80.00,55.00,105.00,240.00,F,Submaster 35-39,Raw,SBD
+1,Kenten Weyeneth,IA,75,70.60,16,137.50,82.50,162.50,382.50,M,Junior 16-17,Raw,SBD
+1,Bryce Leipzig,WI,75,73.00,19,152.50,125.00,195.00,472.50,M,Junior 18-19,Raw,SBD
+2,Stephen King,IL,75,75.00,19,112.50,77.50,165.00,355.00,M,Junior 18-19,Raw,SBD
+1,Sam Martin,IL,82.5,75.40,21,182.50,127.50,220.00,530.00,M,Junior 20-23,Raw,SBD
+1,Matt Dennis,IA,82.5,79.30,19,155.00,115.00,222.50,492.50,M,Junior 18-19,Raw,SBD
+1,Nehemiah Briggs,IA,90,89.00,21,192.50,125.00,227.50,545.00,M,Junior 20-23,Raw,SBD
+DQ,Matthew Blaser,IA,90,89.70,21,160.00,-115.00,162.50,,M,Junior 20-23,Raw,SBD
+1,Stephen Schaecher,IL,100,98.80,23,220.00,117.50,255.00,592.50,M,Junior 20-23,Raw,SBD
+1,Jeremy Lewis,IA,110,106.9,18,217.50,122.50,237.50,577.50,M,Junior 18-19,Raw,SBD
+1,Alexander Matheney,MN,125,113.1,16,165.00,127.50,190.00,482.50,M,Junior 16-17,Raw,SBD
+1,Donavan Wilson,IA,140,134.4,16,160.00,125.00,192.50,477.50,M,Junior 16-17,Raw,SBD
+1,Curt Winters,NE,67.5,64.80,30,115.00,102.50,177.50,395.00,M,Open,Raw,SBD
+1,Zac Builta,IA,75,73.00,24,185.00,120.00,187.50,492.50,M,Open,Raw,SBD
+1,Sean Orton,IA,90,88.40,24,232.50,130.00,257.50,620.00,M,Open,Raw,SBD
+2,David Frazier,IA,90,88.80,35,220.00,142.50,227.50,590.00,M,Open,Raw,SBD
+3,Eric Stephens,IA,90,89.10,33,185.00,117.50,210.00,512.50,M,Open,Raw,SBD
+1,Tom Helms,IA,100,98.70,30,237.50,145.00,260.00,642.50,M,Open,Raw,SBD
+2,Sam Hatten,IL,100,95.70,24,230.00,140.00,255.00,625.00,M,Open,Raw,SBD
+3,Willie Beeler,IA,100,97.30,25,217.50,140.00,250.00,607.50,M,Open,Raw,SBD
+4,Tim Housby,IL,100,96.7,32,140.00,102.50,167.50,410.00,M,Open,Raw,SBD
+1,Nicholas Harper,IA,110,108.1,27,157.50,145.00,237.50,540.00,M,Open,Raw,SBD
+DQ,Donald Franks,IL,110,109.00,27,137.50,-155.00,200.00,,M,Open,Raw,SBD
+1,Herb Farver,IL,125,124.70,27,237.50,120.00,247.50,605.00,M,Open,Raw,SBD
+1,Cody Brant,IL,140+,154.70,25,320.00,210.00,300.00,830.00,M,Open,Raw,SBD
+2,Jon Ryle,IL,140+,158.00,28,237.50,182.50,292.50,712.50,M,Open,Raw,SBD
+1,Eddie Cupp,IL,75,74.50,34,145.00,97.50,145.00,387.50,M,Submaster 35-39,Raw,SBD
+1,Chris Krieg,IA,82.5,79.6,38,175,107.5,222.5,505,M,Submaster 35-39,Raw,SBD
+1,David Frazier,IA,90,88.80,35,220.00,142.50,227.50,590.00,M,Submaster 35-39,Raw,SBD
+2,Brian Overbaugh,IA,90,84.90,38,182.50,127.50,215.00,525.00,M,Submaster 35-39,Raw,SBD
+1,Lee Zumdome,IA,100,97.30,36,192.50,155.00,220.00,567.50,M,Submaster 35-39,Raw,SBD
+1,Aaron Overstreet,IA,110,105.5,36,225.00,120.00,220.00,565.00,M,Submaster 35-39,Raw,SBD
+1,Shane Schroeder,IA,82.5,80.60,47,142.50,112.50,150.00,405.00,M,Master 45-49,Raw,SBD
+1,Mike Knickrehm,IA,140,130.20,61,92.50,80.00,152.50,325.00,M,Master 60-64,Raw,SBD
+1,Michael Langston,OK,110,108.8,23,192.50,125.00,250.00,567.50,M,Junior 20-23,Wraps,SBD
+1,Anthony Nielsen,IL,75,74.10,25,167.50,112.50,185.00,465.00,M,Open,Wraps,SBD
+1,Michael Langston,OK,110,108.80,23,192.50,125.00,250.00,567.50,M,Open,Wraps,SBD

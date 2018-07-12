@@ -1,38 +1,38 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Lauren Szekely,CA,67.5,65.90,24,100.00,60.00,110.00,270.00,F,Open,Raw
-DQ,Netty Monge,CA,67.5,67.10,38,122.50,-72.50,152.50,,F,Open,Raw
-DQ,Netty Monge,CA,67.5,67.10,38,122.50,-72.50,152.50,,F,Submaster 35-39,Raw
-1,Sherri Sikkenga,CA,90,88.60,48,52.50,42.50,95.00,190.00,F,Master 45-49,Raw
-1,Jeff Si,CA,75,69.20,23,170.00,120.00,200.00,490.00,M,Junior 20-23,Raw
-1,Jose Ruiz,CA,82.5,78.30,20,145.00,102.50,185.00,432.50,M,Junior 20-23,Raw
-1,Heath Walker,CA,90,86.40,22,242.50,160.00,242.50,645.00,M,Junior 20-23,Raw
-1,Luke Van Ginkel,CA,100,93.00,20,245.00,182.50,265.00,692.50,M,Junior 20-23,Raw
-2,Samuel Salgado,CA,100,97.20,23,220.00,155.00,235.00,610.00,M,Junior 20-23,Raw
-3,Jonathan Oropeza,CA,100,95.70,21,210.00,127.50,227.50,565.00,M,Junior 20-23,Raw
-1,Richard Kang,CA,75,73.60,26,197.50,132.50,227.50,557.50,M,Open,Raw
-1,Jesse Palomares,CA,82.5,80.30,28,200.00,165.00,220.00,585.00,M,Open,Raw
-2,Martin Andrade,CA,82.5,80.40,26,187.50,140.00,227.50,555.00,M,Open,Raw
-3,Matt Yetsko,CA,82.5,79.00,27,182.50,152.50,200.00,535.00,M,Open,Raw
-4,Kevin Nguyen,CA,82.5,79.90,20,195.00,95.00,175.00,465.00,M,Open,Raw
-5,Nico Philips,CA,82.5,76.10,26,127.50,125.00,185.00,437.50,M,Open,Raw
-6,James Salcido,CA,82.5,79.30,31,155.00,92.50,177.50,425.00,M,Open,Raw
-1,Nicholas Williams,CA,90,83.80,32,197.50,125.00,217.50,540.00,M,Open,Raw
-1,Arturo Iribe,CA,110,107.80,36,205.00,137.50,227.50,570.00,M,Open,Raw
-1,Adolph Angulo,CA,125,123.00,26,195.00,150.00,272.50,617.50,M,Open,Raw
-2,Raymond Luna,CA,125,118.20,34,205.00,160.00,217.50,582.50,M,Open,Raw
-1,Adam Thomas,CA,140+,143.80,36,140.00,97.50,180.00,417.50,M,Open,Raw
-DQ,Mundo Diaz-Rios,CA,140+,149.70,28,230.00,172.50,-225.00,,M,Open,Raw
-1,Tom Lujan,CA,82.5,80.40,53,130.00,97.50,145.00,372.50,M,Master 50-54,Raw
-1,Michael Gonzales,CA,100,92.30,30,217.50,137.50,285.00,640.00,M,Open,Wraps
-1,Michael Womelsdorf,CA,100,98.50,58,115.00,115.00,147.50,377.50,M,Master 55-59,Wraps
-1,Jonathan Janbakhsh,CA,67.5,63.90,27,,122.50,,122.50,M,Open,Raw
-1,Jesse Palomares,CA,82.5,80.30,27,,165.00,,165.00,M,Open,Raw
-2,Matt Yetsko,CA,82.5,79.00,27,,152.50,,152.50,M,Open,Raw
-1,Mike Portillo,CA,100,99.30,41,,207.50,,207.50,M,Open,Raw
-DQ,German Sanchez,CA,110,100.50,28,,-170.00,,,M,Open,Raw
-1,LeRoy Walker,CA,140+,159.70,39,,272.50,,272.50,M,Open,Raw
-1,Rick Gutman,CA,75,74.20,62,,112.50,,112.50,M,Master 60-64,Raw
-1,Raymond Soto,CA,82.5,81.40,57,,135.00,,135.00,M,Master 55-59,Raw
-1,Placido Gomez,CA,82.5,81.10,65,,117.50,,117.50,M,Master 65-69,Raw
-1,Mike Portillo,CA,100,99.30,41,,207.50,,207.50,M,Master 40-44,Raw
-1,Raymond Soto,CA,82.5,81.40,57,,,185.00,185.00,M,Master 55-59,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Lauren Szekely,CA,67.5,65.90,24,100.00,60.00,110.00,270.00,F,Open,Raw,SBD
+DQ,Netty Monge,CA,67.5,67.10,38,122.50,-72.50,152.50,,F,Open,Raw,SBD
+DQ,Netty Monge,CA,67.5,67.10,38,122.50,-72.50,152.50,,F,Submaster 35-39,Raw,SBD
+1,Sherri Sikkenga,CA,90,88.60,48,52.50,42.50,95.00,190.00,F,Master 45-49,Raw,SBD
+1,Jeff Si,CA,75,69.20,23,170.00,120.00,200.00,490.00,M,Junior 20-23,Raw,SBD
+1,Jose Ruiz,CA,82.5,78.30,20,145.00,102.50,185.00,432.50,M,Junior 20-23,Raw,SBD
+1,Heath Walker,CA,90,86.40,22,242.50,160.00,242.50,645.00,M,Junior 20-23,Raw,SBD
+1,Luke Van Ginkel,CA,100,93.00,20,245.00,182.50,265.00,692.50,M,Junior 20-23,Raw,SBD
+2,Samuel Salgado,CA,100,97.20,23,220.00,155.00,235.00,610.00,M,Junior 20-23,Raw,SBD
+3,Jonathan Oropeza,CA,100,95.70,21,210.00,127.50,227.50,565.00,M,Junior 20-23,Raw,SBD
+1,Richard Kang,CA,75,73.60,26,197.50,132.50,227.50,557.50,M,Open,Raw,SBD
+1,Jesse Palomares,CA,82.5,80.30,28,200.00,165.00,220.00,585.00,M,Open,Raw,SBD
+2,Martin Andrade,CA,82.5,80.40,26,187.50,140.00,227.50,555.00,M,Open,Raw,SBD
+3,Matt Yetsko,CA,82.5,79.00,27,182.50,152.50,200.00,535.00,M,Open,Raw,SBD
+4,Kevin Nguyen,CA,82.5,79.90,20,195.00,95.00,175.00,465.00,M,Open,Raw,SBD
+5,Nico Philips,CA,82.5,76.10,26,127.50,125.00,185.00,437.50,M,Open,Raw,SBD
+6,James Salcido,CA,82.5,79.30,31,155.00,92.50,177.50,425.00,M,Open,Raw,SBD
+1,Nicholas Williams,CA,90,83.80,32,197.50,125.00,217.50,540.00,M,Open,Raw,SBD
+1,Arturo Iribe,CA,110,107.80,36,205.00,137.50,227.50,570.00,M,Open,Raw,SBD
+1,Adolph Angulo,CA,125,123.00,26,195.00,150.00,272.50,617.50,M,Open,Raw,SBD
+2,Raymond Luna,CA,125,118.20,34,205.00,160.00,217.50,582.50,M,Open,Raw,SBD
+1,Adam Thomas,CA,140+,143.80,36,140.00,97.50,180.00,417.50,M,Open,Raw,SBD
+DQ,Mundo Diaz-Rios,CA,140+,149.70,28,230.00,172.50,-225.00,,M,Open,Raw,SBD
+1,Tom Lujan,CA,82.5,80.40,53,130.00,97.50,145.00,372.50,M,Master 50-54,Raw,SBD
+1,Michael Gonzales,CA,100,92.30,30,217.50,137.50,285.00,640.00,M,Open,Wraps,SBD
+1,Michael Womelsdorf,CA,100,98.50,58,115.00,115.00,147.50,377.50,M,Master 55-59,Wraps,SBD
+1,Jonathan Janbakhsh,CA,67.5,63.90,27,,122.50,,122.50,M,Open,Raw,B
+1,Jesse Palomares,CA,82.5,80.30,27,,165.00,,165.00,M,Open,Raw,B
+2,Matt Yetsko,CA,82.5,79.00,27,,152.50,,152.50,M,Open,Raw,B
+1,Mike Portillo,CA,100,99.30,41,,207.50,,207.50,M,Open,Raw,B
+DQ,German Sanchez,CA,110,100.50,28,,-170.00,,,M,Open,Raw,B
+1,LeRoy Walker,CA,140+,159.70,39,,272.50,,272.50,M,Open,Raw,B
+1,Rick Gutman,CA,75,74.20,62,,112.50,,112.50,M,Master 60-64,Raw,B
+1,Raymond Soto,CA,82.5,81.40,57,,135.00,,135.00,M,Master 55-59,Raw,B
+1,Placido Gomez,CA,82.5,81.10,65,,117.50,,117.50,M,Master 65-69,Raw,B
+1,Mike Portillo,CA,100,99.30,41,,207.50,,207.50,M,Master 40-44,Raw,B
+1,Raymond Soto,CA,82.5,81.40,57,,,185.00,185.00,M,Master 55-59,Raw,D

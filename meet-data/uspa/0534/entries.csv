@@ -1,42 +1,42 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Deadlift4Kg
-1,Leda Emmons,TX,48,48,28,45,,45,F,Open,Raw,,
-1,Erin Young,TX,56,55,30,47.5,,47.5,F,Open,Raw,,
-1,Kris Landato,TX,67.5,66.9,47,70,,70,F,Open,Raw,,
-1,Jessica Rinehart,TX,75,68.2,26,75,,75,F,Open,Raw,,
-1,Jessica Belt,TX,82.5,80.7,31,107.5,,107.5,F,Open,Raw,,
-1,Katerine Voss,TX,75,71.2,39,75,,75,F,Submaster 35-39,Raw,,
-1,Walt Peterson,TX,100,99.8,23,162.5,,162.5,M,Junior 20-23,Raw,167.5,
-1,Jeroy Stephens,TX,82.5,81.8,35,165,,165,M,Open,Raw,,
-2,Brandon Janecka,TX,82.5,82.4,28,140,,140,M,Open,Raw,,
-1,Dustin DeGraw,TX,90,89,28,182.5,,182.5,M,Open,Raw,185,
-1,Micheal Rogel,TX,100,100,24,175,,175,M,Open,Raw,,
-2,Cory O'Connor,TX,100,98.4,25,155,,155,M,Open,Raw,,
-1,James Strickland,TX,125,122.2,35,255,,255,M,Open,Raw,,
-2,Corey Hodnett,TX,125,124.2,33,205,,205,M,Open,Raw,,
-3,Alex Keleher,TX,125,118.8,28,112.5,,112.5,M,Open,Raw,,
-1,Corey Young,TX,110,107.2,36,170,,170,M,Submaster 35-39,Raw,,
-1,Tim Metcalf,TX,75,74.4,54,102.5,,102.5,M,Master 50-54,Raw,,
-1,Allen Dunn,TX,110,104.8,46,220.5,,220.5,M,Master 45-49,Raw,,
-1,Trevor Morris,TX,140+,185,43,215,,215,M,Master 40-44,Raw,,
-1,Mike Mancias,TX,125,117.2,46,207.5,,207.5,M,Master 45-49,Single-ply,,
-1,Leda Emmons,TX,48,48,28,,112.5,112.5,F,Open,Raw,,
-1,Erin Young,TX,56,55,30,,115,115,F,Open,Raw,,
-1,Kris Landato,TX,67.5,66.9,47,,143,143,F,Open,Raw,,
-2,Ashley Garcia,TX,67.5,67.5,34,,142.5,142.5,F,Open,Raw,,
-1,Jessica Rinehart,TX,75,68.2,26,,160,160,F,Open,Raw,,
-1,Jessica Belt,TX,82.5,80.7,31,,205,205,F,Open,Raw,,
-1,Shary Barbee,TX,90,88.1,60,,100.5,100.5,F,Master 60-64,Raw,,
-1,Walt Peterson,TX,100,99.8,23,,270,270,M,Junior 20-23,Raw,,
-1,Elias Sanchez,TX,75,74.4,26,,230,230,M,Open,Raw,,
-1,Brandon Janecka,TX,82.5,82.4,28,,220,220,M,Open,Raw,,
-DQ,Jeroy Stephens,TX,82.5,81.8,35,,-242.5,,M,Open,Raw,,
-1,Micheal Rogel,TX,100,100,24,,210,210,M,Open,Raw,,
-2,Cory O'Connor,TX,100,98.4,25,,207.5,207.5,M,Open,Raw,,
-1,Alex Keleher,TX,125,118.8,28,,205,205,M,Open,Raw,,
-1,Rob Hall,TX,140,132,26,,332.5,332.5,M,Open,Raw,,
-1,Steve Calamars Jr,TX,82.5,76.6,35,,205,205,M,Submaster 35-39,Raw,,
-1,Tim Metcalf,TX,75,74.4,54,,150,150,M,Master 50-54,Raw,,155
-1,Harvey Pendleton,TX,90,85.6,69,,185,185,M,Master 65-69,Raw,,
-1,Allen Dunn,TX,110,104.8,47,,292.5,292.5,M,Master 45-49,Raw,,
-1,Robert Kamman,TX,125,116.8,48,,292.5,292.5,M,Master 45-49,Raw,,
-1,Trevor Morris,TX,140+,185,43,,255,255,M,Master 40-44,Raw,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Deadlift4Kg,Event
+1,Leda Emmons,TX,48,48,28,45,,45,F,Open,Raw,,,B
+1,Erin Young,TX,56,55,30,47.5,,47.5,F,Open,Raw,,,B
+1,Kris Landato,TX,67.5,66.9,47,70,,70,F,Open,Raw,,,B
+1,Jessica Rinehart,TX,75,68.2,26,75,,75,F,Open,Raw,,,B
+1,Jessica Belt,TX,82.5,80.7,31,107.5,,107.5,F,Open,Raw,,,B
+1,Katerine Voss,TX,75,71.2,39,75,,75,F,Submaster 35-39,Raw,,,B
+1,Walt Peterson,TX,100,99.8,23,162.5,,162.5,M,Junior 20-23,Raw,167.5,,B
+1,Jeroy Stephens,TX,82.5,81.8,35,165,,165,M,Open,Raw,,,B
+2,Brandon Janecka,TX,82.5,82.4,28,140,,140,M,Open,Raw,,,B
+1,Dustin DeGraw,TX,90,89,28,182.5,,182.5,M,Open,Raw,185,,B
+1,Micheal Rogel,TX,100,100,24,175,,175,M,Open,Raw,,,B
+2,Cory O'Connor,TX,100,98.4,25,155,,155,M,Open,Raw,,,B
+1,James Strickland,TX,125,122.2,35,255,,255,M,Open,Raw,,,B
+2,Corey Hodnett,TX,125,124.2,33,205,,205,M,Open,Raw,,,B
+3,Alex Keleher,TX,125,118.8,28,112.5,,112.5,M,Open,Raw,,,B
+1,Corey Young,TX,110,107.2,36,170,,170,M,Submaster 35-39,Raw,,,B
+1,Tim Metcalf,TX,75,74.4,54,102.5,,102.5,M,Master 50-54,Raw,,,B
+1,Allen Dunn,TX,110,104.8,46,220.5,,220.5,M,Master 45-49,Raw,,,B
+1,Trevor Morris,TX,140+,185,43,215,,215,M,Master 40-44,Raw,,,B
+1,Mike Mancias,TX,125,117.2,46,207.5,,207.5,M,Master 45-49,Single-ply,,,B
+1,Leda Emmons,TX,48,48,28,,112.5,112.5,F,Open,Raw,,,D
+1,Erin Young,TX,56,55,30,,115,115,F,Open,Raw,,,D
+1,Kris Landato,TX,67.5,66.9,47,,143,143,F,Open,Raw,,,D
+2,Ashley Garcia,TX,67.5,67.5,34,,142.5,142.5,F,Open,Raw,,,D
+1,Jessica Rinehart,TX,75,68.2,26,,160,160,F,Open,Raw,,,D
+1,Jessica Belt,TX,82.5,80.7,31,,205,205,F,Open,Raw,,,D
+1,Shary Barbee,TX,90,88.1,60,,100.5,100.5,F,Master 60-64,Raw,,,D
+1,Walt Peterson,TX,100,99.8,23,,270,270,M,Junior 20-23,Raw,,,D
+1,Elias Sanchez,TX,75,74.4,26,,230,230,M,Open,Raw,,,D
+1,Brandon Janecka,TX,82.5,82.4,28,,220,220,M,Open,Raw,,,D
+DQ,Jeroy Stephens,TX,82.5,81.8,35,,-242.5,,M,Open,Raw,,,D
+1,Micheal Rogel,TX,100,100,24,,210,210,M,Open,Raw,,,D
+2,Cory O'Connor,TX,100,98.4,25,,207.5,207.5,M,Open,Raw,,,D
+1,Alex Keleher,TX,125,118.8,28,,205,205,M,Open,Raw,,,D
+1,Rob Hall,TX,140,132,26,,332.5,332.5,M,Open,Raw,,,D
+1,Steve Calamars Jr,TX,82.5,76.6,35,,205,205,M,Submaster 35-39,Raw,,,D
+1,Tim Metcalf,TX,75,74.4,54,,150,150,M,Master 50-54,Raw,,155,D
+1,Harvey Pendleton,TX,90,85.6,69,,185,185,M,Master 65-69,Raw,,,D
+1,Allen Dunn,TX,110,104.8,47,,292.5,292.5,M,Master 45-49,Raw,,,D
+1,Robert Kamman,TX,125,116.8,48,,292.5,292.5,M,Master 45-49,Raw,,,D
+1,Trevor Morris,TX,140+,185,43,,255,255,M,Master 40-44,Raw,,,D

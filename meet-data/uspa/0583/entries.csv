@@ -1,43 +1,43 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg
-1,Kristie Schiefer,NY,60,59.2,23,110,62.5,135,307.5,F,Junior 20-23,Raw,
-1,Dené Dainotto,NY,56,55.6,26,117.5,75,135,327.5,F,Open,Raw,142.5
-2,Antoinette Bashir,NY,56,54.7,30,102.5,62.5,135,300,F,Open,Raw,
-1,Leanne Lin,NY,60,57.6,26,90,65,110,265,F,Open,Raw,
-1,Maria Loffredo,NY,67.5,64.8,27,72.5,45,110,227.5,F,Open,Raw,
-1,Riki Napiorkowski,NY,90,86.6,28,140,90,177.5,407.5,F,Open,Raw,
-1,Jeannine Alsous,NY,90+,91.7,24,100,52.5,137.5,290,F,Open,Raw,
-DQ,Vanessa Blackwell,NY,90+,91,49,-117.5,,,,F,Master 40-44,Raw,
-1,Travis Barke,NY,75,74.9,23,145,142.5,187.5,475,M,Junior 20-23,Raw,
-1,Brandon Vedella,NY,82.5,81.6,14,160,110,150,420,M,Junior 13-15,Raw,
-1,Chandler Gilewski,NY,82.5,79.6,17,130,100,152.5,382.5,M,Junior 16-17,Raw,
-1,Jorian Holka,NY,82.5,81.2,19,185,130,235,550,M,Junior 18-19,Raw,
-1,Rob Schiffhauer,NY,82.5,82.1,23,187.5,147.5,265,600,M,Junior 20-23,Raw,
-1,Donovan Cornelius,NY,90,89.3,14,122.5,92.5,155,370,M,Junior 13-15,Raw,
-1,Vlad Kasyanov,NY,90,89,20,205,117.5,220,542.5,M,Junior 20-23,Raw,
-DQ,Benjamin Carella,NY,90,88.4,21,-187.5,,,,M,Junior 20-23,Raw,
-1,Brian Leising,NY,100,93,17,145,120,195,460,M,Junior 16-17,Raw,
-1,Tom Pettitt,NY,100,91.5,20,160,145,195,500,M,Junior 20-23,Raw,
-1,Brandon Young,NY,110,109.1,23,190,132.5,210,532.5,M,Junior 20-23,Raw,
-1,Nick Yarussi,NY,125,122.2,21,172.5,132.5,217.5,522.5,M,Junior 20-23,Raw,
-1,Anthony Pirie,NY,75,74.4,24,197.5,142.5,242.5,582.5,M,Open,Raw,
-1,Nick Murphy,NY,82.5,81.7,24,230,177.5,257.5,665,M,Open,Raw,
-2,Erik Julius,NY,82.5,76.8,22,140,90,167.5,397.5,M,Open,Raw,
-1,Alex Delle Bovi,NY,90,88.5,27,250,172.5,287.5,710,M,Open,Raw,
-1,James Samarco,NY,100,97.3,24,205,130,227.5,562.5,M,Open,Raw,
-2,Shawn Spafford,NY,100,97.3,24,135,110,222.5,467.5,M,Open,Raw,
-1,Kurtis Colwell,NY,110,105.9,36,232.5,187.5,265,685,M,Submaster 35-39,Raw,
-1,Elgie Kightlinger,NY,140,140,35,170,152.5,242.5,565,M,Submaster 35-39,Raw,
-1,Timothy Myers,NY,100,91.9,55,182.5,120,255,557.5,M,Master 55-59,Raw,
-1,Robert Ballentine,NY,125,112,59,135,122.5,165,422.5,M,Master 55-59,Raw,
-1,Noah Wrazin,NY,67.5,66.5,16,127.5,105,175,407.5,M,Junior 16-17,Wraps,
-1,Robert Cooper,NY,75,74.1,21,187.5,112.5,275,575,M,Junior 20-23,Wraps,
-DQ,Johnny Consol,NY,75,74.8,27,-230,,,,M,Open,Wraps,
-1,Donald Helmer,NY,82.5,80.4,24,252.5,172.5,257.5,682.5,M,Open,Wraps,
-1,Joseph Biggie,NY,90,88.1,36,197.5,150,265,612.5,M,Open,Wraps,
-1,Bruce Colwell,NY,110,108,39,250,175,257.5,682.5,M,Submaster 35-39,Wraps,
-1,David Estrada,NY,140,132.2,49,272.5,182.5,305,760,M,Master 45-49,Single-ply,
-1,Jesse Ciffa,NY,82.5,81.8,21,,178,,178,M,Junior 20-23,Raw,
-1,Arthur Downie,NY,125,122.3,53,,182.5,,182.5,M,Master 50-54,Raw,
-1,Jason Mueller,NY,100,98.6,42,,,282.5,282.5,M,Open,Raw,
-1,Jason Mueller,NY,100,98.6,42,,,282.5,282.5,M,Master 40-44,Raw,
-1,David Estrada,NY,140,132.2,49,,,305,305,M,Master 45-49,Single-ply,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Event
+1,Kristie Schiefer,NY,60,59.2,23,110,62.5,135,307.5,F,Junior 20-23,Raw,,SBD
+1,Dené Dainotto,NY,56,55.6,26,117.5,75,135,327.5,F,Open,Raw,142.5,SBD
+2,Antoinette Bashir,NY,56,54.7,30,102.5,62.5,135,300,F,Open,Raw,,SBD
+1,Leanne Lin,NY,60,57.6,26,90,65,110,265,F,Open,Raw,,SBD
+1,Maria Loffredo,NY,67.5,64.8,27,72.5,45,110,227.5,F,Open,Raw,,SBD
+1,Riki Napiorkowski,NY,90,86.6,28,140,90,177.5,407.5,F,Open,Raw,,SBD
+1,Jeannine Alsous,NY,90+,91.7,24,100,52.5,137.5,290,F,Open,Raw,,SBD
+DQ,Vanessa Blackwell,NY,90+,91,49,-117.5,,,,F,Master 40-44,Raw,,SBD
+1,Travis Barke,NY,75,74.9,23,145,142.5,187.5,475,M,Junior 20-23,Raw,,SBD
+1,Brandon Vedella,NY,82.5,81.6,14,160,110,150,420,M,Junior 13-15,Raw,,SBD
+1,Chandler Gilewski,NY,82.5,79.6,17,130,100,152.5,382.5,M,Junior 16-17,Raw,,SBD
+1,Jorian Holka,NY,82.5,81.2,19,185,130,235,550,M,Junior 18-19,Raw,,SBD
+1,Rob Schiffhauer,NY,82.5,82.1,23,187.5,147.5,265,600,M,Junior 20-23,Raw,,SBD
+1,Donovan Cornelius,NY,90,89.3,14,122.5,92.5,155,370,M,Junior 13-15,Raw,,SBD
+1,Vlad Kasyanov,NY,90,89,20,205,117.5,220,542.5,M,Junior 20-23,Raw,,SBD
+DQ,Benjamin Carella,NY,90,88.4,21,-187.5,,,,M,Junior 20-23,Raw,,SBD
+1,Brian Leising,NY,100,93,17,145,120,195,460,M,Junior 16-17,Raw,,SBD
+1,Tom Pettitt,NY,100,91.5,20,160,145,195,500,M,Junior 20-23,Raw,,SBD
+1,Brandon Young,NY,110,109.1,23,190,132.5,210,532.5,M,Junior 20-23,Raw,,SBD
+1,Nick Yarussi,NY,125,122.2,21,172.5,132.5,217.5,522.5,M,Junior 20-23,Raw,,SBD
+1,Anthony Pirie,NY,75,74.4,24,197.5,142.5,242.5,582.5,M,Open,Raw,,SBD
+1,Nick Murphy,NY,82.5,81.7,24,230,177.5,257.5,665,M,Open,Raw,,SBD
+2,Erik Julius,NY,82.5,76.8,22,140,90,167.5,397.5,M,Open,Raw,,SBD
+1,Alex Delle Bovi,NY,90,88.5,27,250,172.5,287.5,710,M,Open,Raw,,SBD
+1,James Samarco,NY,100,97.3,24,205,130,227.5,562.5,M,Open,Raw,,SBD
+2,Shawn Spafford,NY,100,97.3,24,135,110,222.5,467.5,M,Open,Raw,,SBD
+1,Kurtis Colwell,NY,110,105.9,36,232.5,187.5,265,685,M,Submaster 35-39,Raw,,SBD
+1,Elgie Kightlinger,NY,140,140,35,170,152.5,242.5,565,M,Submaster 35-39,Raw,,SBD
+1,Timothy Myers,NY,100,91.9,55,182.5,120,255,557.5,M,Master 55-59,Raw,,SBD
+1,Robert Ballentine,NY,125,112,59,135,122.5,165,422.5,M,Master 55-59,Raw,,SBD
+1,Noah Wrazin,NY,67.5,66.5,16,127.5,105,175,407.5,M,Junior 16-17,Wraps,,SBD
+1,Robert Cooper,NY,75,74.1,21,187.5,112.5,275,575,M,Junior 20-23,Wraps,,SBD
+DQ,Johnny Consol,NY,75,74.8,27,-230,,,,M,Open,Wraps,,SBD
+1,Donald Helmer,NY,82.5,80.4,24,252.5,172.5,257.5,682.5,M,Open,Wraps,,SBD
+1,Joseph Biggie,NY,90,88.1,36,197.5,150,265,612.5,M,Open,Wraps,,SBD
+1,Bruce Colwell,NY,110,108,39,250,175,257.5,682.5,M,Submaster 35-39,Wraps,,SBD
+1,David Estrada,NY,140,132.2,49,272.5,182.5,305,760,M,Master 45-49,Single-ply,,SBD
+1,Jesse Ciffa,NY,82.5,81.8,21,,178,,178,M,Junior 20-23,Raw,,B
+1,Arthur Downie,NY,125,122.3,53,,182.5,,182.5,M,Master 50-54,Raw,,B
+1,Jason Mueller,NY,100,98.6,42,,,282.5,282.5,M,Open,Raw,,D
+1,Jason Mueller,NY,100,98.6,42,,,282.5,282.5,M,Master 40-44,Raw,,D
+1,David Estrada,NY,140,132.2,49,,,305,305,M,Master 45-49,Single-ply,,D

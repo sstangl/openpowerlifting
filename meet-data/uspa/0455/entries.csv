@@ -1,37 +1,37 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Tamika Fagan,GA,60,58.00,35,92.50,50.00,130.00,272.50,F,Open,Raw
-1,Victoria Betolatti,GA,67.5,65.00,24,112.50,70.00,132.50,315.00,F,Open,Raw
-2,Alicia Neblett,GA,67.5,67.10,34,90.00,62.50,140.00,292.50,F,Open,Raw
-1,Angela Levens,GA,90+,104.90,36,127.50,70.00,175.00,372.50,F,Open,Raw
-1,Jeffery Lawrence Jr,AL,90,88.80,21,197.50,147.50,292.50,637.50,M,Junior 20-23,Raw
-1,Alex Rennie,GA,100,94.30,23,177.50,157.50,215.00,550.00,M,Junior 20-23,Raw
-1,Maliek Derstine,PA,82.5,82.40,27,305.00,230.00,300.00,835.00,M,Open,Raw
-2,Joe Greene,GA,82.5,81.40,24,227.50,150.00,272.50,650.00,M,Open,Raw
-1,Da'Mon Mayers,GA,90,90.00,33,277.50,177.50,305.00,760.00,M,Open,Raw
-2,Chris Dunn,GA,90,88.90,31,262.50,200.00,295.00,757.50,M,Open,Raw
-1,Justin Simerly,GA,100,94.60,30,170.00,120.00,210.00,500.00,M,Open,Raw
-DQ,Nicholas Donte McCoy,GA,110,108.20,31,-247.50,182.50,275.00,,M,Open,Raw
-1,Jason Noblit,GA,125,115.10,26,207.50,115.00,220.00,542.50,M,Open,Raw
-DQ,Josh Laster,AL,140+,155.10,32,-192.50,125.00,237.50,,M,Open,Raw
-1,Jon Walker,GA,110,106.30,58,182.50,161.00,205.00,548.50,M,Master 55-59,Raw
-1,Greg Simpson,GA,125,120.20,45,177.50,147.50,227.50,552.50,M,Master 45-49,Raw
-1,Jamal Mitchell,GA,82.5,82.30,20,192.50,132.50,242.50,567.50,M,Junior 20-23,Wraps
-1,Andrew Hill,SC,110,107.20,28,310.00,200.00,297.50,807.50,M,Open,Wraps
-2,Matthew Horejsi,GA,110,102.70,31,207.50,135.00,250.00,592.50,M,Open,Wraps
-1,Eric Hansen,AL,110,107.60,53,182.50,147.50,190.00,520.00,M,Master 50-54,Wraps
-1,Anthony Calhoun,GA,140,129.40,56,190.00,137.50,182.50,510.00,M,Master 55-59,Single-ply
-1,Charlie Paige,GA,75,72.20,33,,185.00,,185.00,M,Open,Raw
-1,Myreon Dunn,GA,82.5,80.00,32,,122.50,,122.50,M,Open,Raw
-1,Matthew Glasper,GA,100,99.70,37,,172.50,,172.50,M,Submaster 35-39,Raw
-1,James Booker,GA,140+,148.40,51,,182.50,,182.50,M,Master 50-54,Raw
-1,Tony Carlino,GA,100,99.20,27,,310.00,,310.00,M,Open,Single-ply
-1,Brant Bishop,AL,110,109.40,45,,245.00,,245.00,M,Master 45-49,Multi-ply
-1,Shelby Crawford,GA,82.5,81.70,23,,,187.50,187.50,F,Junior 20-23,Raw
-1,Shelby Crawford,GA,82.5,81.70,23,,,187.50,187.50,F,Open,Raw
-1,Myreon Dunn,GA,82.5,80.00,32,,,235.00,235.00,M,Open,Raw
-DQ,Johnny Battles,AL,125,118.40,24,,,-267.50,,M,Open,Raw
-1,Gary Johnson,AL,67.5,67.00,63,,,132.50,132.50,M,Master 60-64,Raw
-1,Robert Gorham,GA,100,97.50,51,,,282.50,282.50,M,Master 50-54,Raw
-1,Matt Maini,AL,110,107.60,46,,,250.00,250.00,M,Master 45-49,Raw
-1,Richard Hagedorn,AL,82.5,81.80,61,,,207.50,207.50,M,Master 60-64,Single-ply
-1,Brant Bishop,AL,110,109.40,45,,,260.00,260.00,M,Master 45-49,Multi-ply
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Tamika Fagan,GA,60,58.00,35,92.50,50.00,130.00,272.50,F,Open,Raw,SBD
+1,Victoria Betolatti,GA,67.5,65.00,24,112.50,70.00,132.50,315.00,F,Open,Raw,SBD
+2,Alicia Neblett,GA,67.5,67.10,34,90.00,62.50,140.00,292.50,F,Open,Raw,SBD
+1,Angela Levens,GA,90+,104.90,36,127.50,70.00,175.00,372.50,F,Open,Raw,SBD
+1,Jeffery Lawrence Jr,AL,90,88.80,21,197.50,147.50,292.50,637.50,M,Junior 20-23,Raw,SBD
+1,Alex Rennie,GA,100,94.30,23,177.50,157.50,215.00,550.00,M,Junior 20-23,Raw,SBD
+1,Maliek Derstine,PA,82.5,82.40,27,305.00,230.00,300.00,835.00,M,Open,Raw,SBD
+2,Joe Greene,GA,82.5,81.40,24,227.50,150.00,272.50,650.00,M,Open,Raw,SBD
+1,Da'Mon Mayers,GA,90,90.00,33,277.50,177.50,305.00,760.00,M,Open,Raw,SBD
+2,Chris Dunn,GA,90,88.90,31,262.50,200.00,295.00,757.50,M,Open,Raw,SBD
+1,Justin Simerly,GA,100,94.60,30,170.00,120.00,210.00,500.00,M,Open,Raw,SBD
+DQ,Nicholas Donte McCoy,GA,110,108.20,31,-247.50,182.50,275.00,,M,Open,Raw,SBD
+1,Jason Noblit,GA,125,115.10,26,207.50,115.00,220.00,542.50,M,Open,Raw,SBD
+DQ,Josh Laster,AL,140+,155.10,32,-192.50,125.00,237.50,,M,Open,Raw,SBD
+1,Jon Walker,GA,110,106.30,58,182.50,161.00,205.00,548.50,M,Master 55-59,Raw,SBD
+1,Greg Simpson,GA,125,120.20,45,177.50,147.50,227.50,552.50,M,Master 45-49,Raw,SBD
+1,Jamal Mitchell,GA,82.5,82.30,20,192.50,132.50,242.50,567.50,M,Junior 20-23,Wraps,SBD
+1,Andrew Hill,SC,110,107.20,28,310.00,200.00,297.50,807.50,M,Open,Wraps,SBD
+2,Matthew Horejsi,GA,110,102.70,31,207.50,135.00,250.00,592.50,M,Open,Wraps,SBD
+1,Eric Hansen,AL,110,107.60,53,182.50,147.50,190.00,520.00,M,Master 50-54,Wraps,SBD
+1,Anthony Calhoun,GA,140,129.40,56,190.00,137.50,182.50,510.00,M,Master 55-59,Single-ply,SBD
+1,Charlie Paige,GA,75,72.20,33,,185.00,,185.00,M,Open,Raw,B
+1,Myreon Dunn,GA,82.5,80.00,32,,122.50,,122.50,M,Open,Raw,B
+1,Matthew Glasper,GA,100,99.70,37,,172.50,,172.50,M,Submaster 35-39,Raw,B
+1,James Booker,GA,140+,148.40,51,,182.50,,182.50,M,Master 50-54,Raw,B
+1,Tony Carlino,GA,100,99.20,27,,310.00,,310.00,M,Open,Single-ply,B
+1,Brant Bishop,AL,110,109.40,45,,245.00,,245.00,M,Master 45-49,Multi-ply,B
+1,Shelby Crawford,GA,82.5,81.70,23,,,187.50,187.50,F,Junior 20-23,Raw,D
+1,Shelby Crawford,GA,82.5,81.70,23,,,187.50,187.50,F,Open,Raw,D
+1,Myreon Dunn,GA,82.5,80.00,32,,,235.00,235.00,M,Open,Raw,D
+DQ,Johnny Battles,AL,125,118.40,24,,,-267.50,,M,Open,Raw,D
+1,Gary Johnson,AL,67.5,67.00,63,,,132.50,132.50,M,Master 60-64,Raw,D
+1,Robert Gorham,GA,100,97.50,51,,,282.50,282.50,M,Master 50-54,Raw,D
+1,Matt Maini,AL,110,107.60,46,,,250.00,250.00,M,Master 45-49,Raw,D
+1,Richard Hagedorn,AL,82.5,81.80,61,,,207.50,207.50,M,Master 60-64,Single-ply,D
+1,Brant Bishop,AL,110,109.40,45,,,260.00,260.00,M,Master 45-49,Multi-ply,D

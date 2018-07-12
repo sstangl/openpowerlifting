@@ -1,38 +1,38 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Brittany Walling,OH,67.5,66.4,22,80,42.5,82.5,205,F,Junior 20-23,Raw
-1,Rebecca Rains,OH,82.5,81.3,22,110,67.5,150,327.5,F,Junior 20-23,Raw
-1,Evan Mathis,OH,67.5,62.5,31,80,50,122.5,252.5,F,Open,Raw
-1,Amanda Hayslip,OH,75,72.7,28,137.5,70,130,337.5,F,Open,Raw
-2,Amanda Conklin,OH,75,69.7,31,125,62.5,127.5,315,F,Open,Raw
-3,Erica Strope,OH,75,74.1,22,110,65,112.5,287.5,F,Open,Raw
-1,Amber Mathews,OH,82.5,81.4,27,152.5,80,172.5,405,F,Open,Raw
-2,Rebecca Rains,OH,82.5,81.3,22,110,67.5,150,327.5,F,Open,Raw
-1,Ryan Foubert,OH,82.5,75.2,13,102.5,72.5,137.5,312.5,M,Junior 13-15,Raw
-1,Dillan Parran,OH,82.5,82.2,23,162.5,130,195,487.5,M,Junior 20-23,Raw
-1,Sung Kim,OH,60,59.4,26,125,112.5,182.5,420,M,Open,Raw
-1,Dan Antonucci,PA,67.5,67.5,34,192.5,120,255,567.5,M,Open,Raw
-1,Justin Holm,OH,75,73.3,24,157.5,137.5,200,495,M,Open,Raw
-2,Shawn Vogelgesang,OH,75,73.1,38,30,70,77.5,177.5,M,Open,Raw
-1,Shane Darrow,OH,90,88.8,25,232.5,137.5,285,655,M,Open,Raw
-1,Mac Sankoe,OH,100,99.9,20,227.5,157.5,255,640,M,Open,Raw
-1,David Westenkirchner,OH,110,108.9,32,187.5,127.5,227.5,542.5,M,Open,Raw
-1,Vincent Luci,OH,125,114.2,26,182.5,122.5,220,525,M,Open,Raw
-1,Jason Merrill,OH,140,131,42,210,192.5,242.5,645,M,Master 40-44,Raw
-1,Melissa Gustaffson,IN,90+,106.5,32,160,87.5,160,407.5,F,Open,Wraps
-1,John Sanders,IN,100,97.2,27,250,160,290,700,M,Junior 20-23,Wraps
-1,Nicholas Sapp,OH,67.5,65.8,25,155,105,162.5,422.5,M,Open,Wraps
-1,Cody Robbins,IN,90,88.7,26,285,195,280,760,M,Open,Wraps
-1,Courtney Hart,IN,110,106.1,41,285,200,287.5,772.5,M,Open,Wraps
-2,Jeff Goodrich,OH,110,108,31,285,195,290,770,M,Open,Wraps
-3,Cliff Hoenie,OH,110,108,32,210,125,250,585,M,Open,Wraps
-1,Chris Hawthorne,OH,140,126.6,29,310,185,320,815,M,Open,Wraps
-1,Courtney Hart,IN,110,106.1,41,285,200,287.5,772.5,M,Master 40-44,Wraps
-1,Brian Ross,OH,90,86.6,32,255,177.5,235,667.5,M,Open,Single-ply
-1,Timothy Hamilton,OH,125,112.6,27,257.5,152.5,240,650,M,Open,Single-ply
-1,Michael Coe,IN,100,98.9,46,330,212.5,312.5,855,M,Master 45-49,Multi-ply
-1,Kelsey Saurber,OH,67.5,66.5,23,,67.5,,67.5,F,Junior 20-23,Raw
-1,Raquel Kozlowski,OH,60,56.6,26,,52.5,,52.5,F,Open,Raw
-1,Reggie Dukes,IN,75,74.8,40,,165,,165,M,Open,Raw
-1,Kelsey Saurber,OH,67.5,66.5,23,,,122.5,122.5,F,Junior 20-23,Raw
-1,Raquel Kozlowski,OH,60,56.6,26,,,90,90,F,Open,Raw
-1,Reggie Dukes,IN,75,74.8,40,,,272.5,272.5,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Brittany Walling,OH,67.5,66.4,22,80,42.5,82.5,205,F,Junior 20-23,Raw,SBD
+1,Rebecca Rains,OH,82.5,81.3,22,110,67.5,150,327.5,F,Junior 20-23,Raw,SBD
+1,Evan Mathis,OH,67.5,62.5,31,80,50,122.5,252.5,F,Open,Raw,SBD
+1,Amanda Hayslip,OH,75,72.7,28,137.5,70,130,337.5,F,Open,Raw,SBD
+2,Amanda Conklin,OH,75,69.7,31,125,62.5,127.5,315,F,Open,Raw,SBD
+3,Erica Strope,OH,75,74.1,22,110,65,112.5,287.5,F,Open,Raw,SBD
+1,Amber Mathews,OH,82.5,81.4,27,152.5,80,172.5,405,F,Open,Raw,SBD
+2,Rebecca Rains,OH,82.5,81.3,22,110,67.5,150,327.5,F,Open,Raw,SBD
+1,Ryan Foubert,OH,82.5,75.2,13,102.5,72.5,137.5,312.5,M,Junior 13-15,Raw,SBD
+1,Dillan Parran,OH,82.5,82.2,23,162.5,130,195,487.5,M,Junior 20-23,Raw,SBD
+1,Sung Kim,OH,60,59.4,26,125,112.5,182.5,420,M,Open,Raw,SBD
+1,Dan Antonucci,PA,67.5,67.5,34,192.5,120,255,567.5,M,Open,Raw,SBD
+1,Justin Holm,OH,75,73.3,24,157.5,137.5,200,495,M,Open,Raw,SBD
+2,Shawn Vogelgesang,OH,75,73.1,38,30,70,77.5,177.5,M,Open,Raw,SBD
+1,Shane Darrow,OH,90,88.8,25,232.5,137.5,285,655,M,Open,Raw,SBD
+1,Mac Sankoe,OH,100,99.9,20,227.5,157.5,255,640,M,Open,Raw,SBD
+1,David Westenkirchner,OH,110,108.9,32,187.5,127.5,227.5,542.5,M,Open,Raw,SBD
+1,Vincent Luci,OH,125,114.2,26,182.5,122.5,220,525,M,Open,Raw,SBD
+1,Jason Merrill,OH,140,131,42,210,192.5,242.5,645,M,Master 40-44,Raw,SBD
+1,Melissa Gustaffson,IN,90+,106.5,32,160,87.5,160,407.5,F,Open,Wraps,SBD
+1,John Sanders,IN,100,97.2,27,250,160,290,700,M,Junior 20-23,Wraps,SBD
+1,Nicholas Sapp,OH,67.5,65.8,25,155,105,162.5,422.5,M,Open,Wraps,SBD
+1,Cody Robbins,IN,90,88.7,26,285,195,280,760,M,Open,Wraps,SBD
+1,Courtney Hart,IN,110,106.1,41,285,200,287.5,772.5,M,Open,Wraps,SBD
+2,Jeff Goodrich,OH,110,108,31,285,195,290,770,M,Open,Wraps,SBD
+3,Cliff Hoenie,OH,110,108,32,210,125,250,585,M,Open,Wraps,SBD
+1,Chris Hawthorne,OH,140,126.6,29,310,185,320,815,M,Open,Wraps,SBD
+1,Courtney Hart,IN,110,106.1,41,285,200,287.5,772.5,M,Master 40-44,Wraps,SBD
+1,Brian Ross,OH,90,86.6,32,255,177.5,235,667.5,M,Open,Single-ply,SBD
+1,Timothy Hamilton,OH,125,112.6,27,257.5,152.5,240,650,M,Open,Single-ply,SBD
+1,Michael Coe,IN,100,98.9,46,330,212.5,312.5,855,M,Master 45-49,Multi-ply,SBD
+1,Kelsey Saurber,OH,67.5,66.5,23,,67.5,,67.5,F,Junior 20-23,Raw,B
+1,Raquel Kozlowski,OH,60,56.6,26,,52.5,,52.5,F,Open,Raw,B
+1,Reggie Dukes,IN,75,74.8,40,,165,,165,M,Open,Raw,B
+1,Kelsey Saurber,OH,67.5,66.5,23,,,122.5,122.5,F,Junior 20-23,Raw,D
+1,Raquel Kozlowski,OH,60,56.6,26,,,90,90,F,Open,Raw,D
+1,Reggie Dukes,IN,75,74.8,40,,,272.5,272.5,M,Open,Raw,D

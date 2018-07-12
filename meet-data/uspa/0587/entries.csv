@@ -1,21 +1,21 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Erika Stevens,OH,67.5,66.36,25,120.00,70.00,145.00,335.00,F,Open,Raw
-1,Erica Strope,OH,75,74.70,21,110.00,65.00,112.50,287.50,F,Open,Raw
-1,Amber Mathews,OH,82.5,82.09,27,127.50,77.50,170.00,375.00,F,Open,Raw
-2,Courtney Harman,OH,82.5,82.09,35,100.00,65.00,142.50,307.50,F,Open,Raw
-1,Edward Mussi,MI,67.5,65.60,22,172.50,105.00,200.00,477.50,M,Junior 20-23,Raw
-1,Dakota Smith,OH,75,74.60,16,122.50,85.00,140.00,347.50,M,Junior 16-17,Raw
-1,Anotinio Thomas,OH,90,87.70,20,205.00,132.50,245.00,582.50,M,Junior 20-23,Raw
-DQ,Weidong Han,OH,90,88.80,23,175.00,-137.50,182.50,,M,Junior 20-23,Raw
-1,Matt Pagliaro,PA,100,95.50,19,197.50,152.50,255.00,605.00,M,Junior 18-19,Raw
-1,Aymen Attig,IN,100,95.90,22,210.00,160.00,255.00,625.00,M,Junior 20-23,Raw
-1,Edward Mussi,MI,67.5,65.60,22,172.50,105.00,200.00,477.50,M,Open,Raw
-1,Cody Rice,OH,75,74.00,21,220.00,138.00,232.50,590.50,M,Open,Raw
-2,Justin Holm,OH,75,72.80,24,157.50,130.00,192.50,480.00,M,Open,Raw
-3,Michael Wallman,OH,75,71.80,24,142.50,97.50,190.00,430.00,M,Open,Raw
-1,Frank Douglas,OH,90,89.90,61,152.50,92.50,215.00,460.00,M,Master 60-64,Raw
-1,Kevin Pugh,OH,75,72.10,27,150.00,90.00,172.50,412.50,M,Open,Wraps
-1,Vincent Luci,OH,110,109.20,26,172.50,120.00,200.00,492.50,M,Open,Wraps
-1,Chris Hawthorne,OH,140,128.50,29,305.00,192.50,320.00,817.50,M,Open,Wraps
-1,Alfred Castillo,OH,75,74.70,44,227.50,145.00,205.00,577.50,M,Open,Single-ply
-1,Jason Swavel,OH,82.5,80.80,39,,207.50,,207.50,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Erika Stevens,OH,67.5,66.36,25,120.00,70.00,145.00,335.00,F,Open,Raw,SBD
+1,Erica Strope,OH,75,74.70,21,110.00,65.00,112.50,287.50,F,Open,Raw,SBD
+1,Amber Mathews,OH,82.5,82.09,27,127.50,77.50,170.00,375.00,F,Open,Raw,SBD
+2,Courtney Harman,OH,82.5,82.09,35,100.00,65.00,142.50,307.50,F,Open,Raw,SBD
+1,Edward Mussi,MI,67.5,65.60,22,172.50,105.00,200.00,477.50,M,Junior 20-23,Raw,SBD
+1,Dakota Smith,OH,75,74.60,16,122.50,85.00,140.00,347.50,M,Junior 16-17,Raw,SBD
+1,Anotinio Thomas,OH,90,87.70,20,205.00,132.50,245.00,582.50,M,Junior 20-23,Raw,SBD
+DQ,Weidong Han,OH,90,88.80,23,175.00,-137.50,182.50,,M,Junior 20-23,Raw,SBD
+1,Matt Pagliaro,PA,100,95.50,19,197.50,152.50,255.00,605.00,M,Junior 18-19,Raw,SBD
+1,Aymen Attig,IN,100,95.90,22,210.00,160.00,255.00,625.00,M,Junior 20-23,Raw,SBD
+1,Edward Mussi,MI,67.5,65.60,22,172.50,105.00,200.00,477.50,M,Open,Raw,SBD
+1,Cody Rice,OH,75,74.00,21,220.00,138.00,232.50,590.50,M,Open,Raw,SBD
+2,Justin Holm,OH,75,72.80,24,157.50,130.00,192.50,480.00,M,Open,Raw,SBD
+3,Michael Wallman,OH,75,71.80,24,142.50,97.50,190.00,430.00,M,Open,Raw,SBD
+1,Frank Douglas,OH,90,89.90,61,152.50,92.50,215.00,460.00,M,Master 60-64,Raw,SBD
+1,Kevin Pugh,OH,75,72.10,27,150.00,90.00,172.50,412.50,M,Open,Wraps,SBD
+1,Vincent Luci,OH,110,109.20,26,172.50,120.00,200.00,492.50,M,Open,Wraps,SBD
+1,Chris Hawthorne,OH,140,128.50,29,305.00,192.50,320.00,817.50,M,Open,Wraps,SBD
+1,Alfred Castillo,OH,75,74.70,44,227.50,145.00,205.00,577.50,M,Open,Single-ply,SBD
+1,Jason Swavel,OH,82.5,80.80,39,,207.50,,207.50,M,Open,Raw,B

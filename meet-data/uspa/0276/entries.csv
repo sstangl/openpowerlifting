@@ -1,39 +1,39 @@
-Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
-Nellie Rego Santee,1,Open Women,F,Raw,52,50.17,26,82.5,,45,,97.5,,225
-Vanessa Alvares,1,Open Women,F,Raw,56,54.48,35,100,110,45,,132.5,,277.5
-Mirian Fernandes,1,Open Women,F,Raw,82.5,78.06,45,160,,80,,150,160,390
-Cristiane Soldera,2,Open Women,F,Raw,82.5,80.88,41,115,120,60,,130,145,305
-Lualis Rosa,3,Open Women,F,Raw,82.5,81.28,29,70,,50,,120,,240
-Debora Diegas Lopes,1,Open Women,F,Raw,90,83.69,36,155,,95,,170,185,420
-Vanessa Alvares,1,Submaster Women 35-39,F,Raw,56,54.48,35,100,110,45,,132.5,,277.5
-Debora Diegas Lopes,1,Submaster Women 35-39,F,Raw,90,83.69,36,155,,95,,170,185,420
-Cristiane Soldera,1,Master Women 40-44,F,Raw,82.5,80.88,41,115,120,60,,130,145,305
-Mirian Fernandes,1,Master Women 45-49,F,Raw,82.5,78.06,45,160,,80,,150,160,390
-Fernando Villela Botelho,1,Open Men,M,Raw,67.5,66.09,39,150,,110,,200,210,460
-Lucas Macri,2,Open Men,M,Raw,67.5,66.09,25,130,,115,,195,,440
-Denis Lopardo de Campos,1,Open Men,M,Raw,82.5,79.9,37,155,172.5,117.5,,200,,472.5
-Vinicius Goncalves Barbosa,2,Open Men,M,Raw,82.5,80.56,28,170,175,105,,195,200,470
-Joao Cunha Braga Neto,3,Open Men,M,Raw,82.5,75.8,24,160,175,110,,180,,450
-Pedro Holanda Junqueira,4,Open Men,M,Raw,82.5,82.1,30,142.5,,87.5,,180,,410
-Joao Paulo Santos Silva,5,Open Men,M,Raw,82.5,77.88,33,80,,110,,190,,380
-Hugo Rodrigo Garcia Quinteiro,1,Open Men,M,Raw,100,99.7,30,170,,140,150,250,,560
-Eliseu QuintilianoTeixeira,2,Open Men,M,Raw,100,91.08,24,192.5,197.5,100,,240,,532.5
-Felipe Ferrari de Mello,3,Open Men,M,Raw,100,96.16,25,170,,120,,220,,510
-Claudio Gomes Pereira,4,Open Men,M,Raw,100,91.17,55,160,,120,,170,,450
-Eduardo Batista dos Santos Saigh,DQ,Open Men,M,Raw,100,98.57,30,-140,,120,,-180,,
-Fabricio Coletti Venturini,1,Open Men,M,Raw,125,117.8,25,220,240,170,180,250,,640
-Fernando Villela Botelho,1,Submaster Men 35-39,M,Raw,67.5,66.09,39,150,,110,,200,,460
-Alexander de Oliveira Moura,1,Submaster Men 35-39,M,Raw,100,99.97,36,170,,115,,215,,500
-Andre Giongo Marangoni,1,Submaster Men 35-39,M,Raw,110,107.68,37,190,,155,,245,,590
-Claudio Gomes Pereira,1,Master Men 55-59,M,Raw,100,91.17,55,160,,120,,170,,450
-Serafim Rocha,1,Master Men 65-69,M,Raw,125,116.8,65,70,,135,,70,,275
-Regis Francisco Teles Martins,1,Master Men 40-44,M,Raw,140+,158.39,44,180,185,122.5,125,220,,522.5
-Natalia Mercaldo,1,Open Women,F,Wraps,82.5,77.47,28,170,,105,,170,,445
-Rafael Costa dos Santos,1,Junior Men 20-23,M,Wraps,75,68.17,20,140,,90,,185,,415
-Sandro Ueno,1,Open Men,M,Wraps,82.5,78.79,46,240,,135,,230,,605
-Eduardo Loureiro,2,Open Men,M,Wraps,82.5,82.42,24,185,,110,,190,,485
-Marcos Francisco Ferrari,1,Open Men,M,Wraps,125,113.9,35,300,,180,,300,,780
-Leonardo Fellipe Mariani,2,Open Men,M,Wraps,125,121.2,24,280,,130,,240,,650
-Thiago Andrade Macedo,1,Open Men,M,Wraps,140+,147.1,26,210,220,145,,180,,535
-Marcos Francisco Ferrari,1,Submaster Men 35-39,M,Wraps,125,113.9,35,300,,180,,300,,780
-Sandro Ueno,1,Master Men 45-49,M,Wraps,82.5,78.79,46,240,,135,,230,,605
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+Nellie Rego Santee,1,Open Women,F,Raw,52,50.17,26,82.5,,45,,97.5,,225,SBD
+Vanessa Alvares,1,Open Women,F,Raw,56,54.48,35,100,110,45,,132.5,,277.5,SBD
+Mirian Fernandes,1,Open Women,F,Raw,82.5,78.06,45,160,,80,,150,160,390,SBD
+Cristiane Soldera,2,Open Women,F,Raw,82.5,80.88,41,115,120,60,,130,145,305,SBD
+Lualis Rosa,3,Open Women,F,Raw,82.5,81.28,29,70,,50,,120,,240,SBD
+Debora Diegas Lopes,1,Open Women,F,Raw,90,83.69,36,155,,95,,170,185,420,SBD
+Vanessa Alvares,1,Submaster Women 35-39,F,Raw,56,54.48,35,100,110,45,,132.5,,277.5,SBD
+Debora Diegas Lopes,1,Submaster Women 35-39,F,Raw,90,83.69,36,155,,95,,170,185,420,SBD
+Cristiane Soldera,1,Master Women 40-44,F,Raw,82.5,80.88,41,115,120,60,,130,145,305,SBD
+Mirian Fernandes,1,Master Women 45-49,F,Raw,82.5,78.06,45,160,,80,,150,160,390,SBD
+Fernando Villela Botelho,1,Open Men,M,Raw,67.5,66.09,39,150,,110,,200,210,460,SBD
+Lucas Macri,2,Open Men,M,Raw,67.5,66.09,25,130,,115,,195,,440,SBD
+Denis Lopardo de Campos,1,Open Men,M,Raw,82.5,79.9,37,155,172.5,117.5,,200,,472.5,SBD
+Vinicius Goncalves Barbosa,2,Open Men,M,Raw,82.5,80.56,28,170,175,105,,195,200,470,SBD
+Joao Cunha Braga Neto,3,Open Men,M,Raw,82.5,75.8,24,160,175,110,,180,,450,SBD
+Pedro Holanda Junqueira,4,Open Men,M,Raw,82.5,82.1,30,142.5,,87.5,,180,,410,SBD
+Joao Paulo Santos Silva,5,Open Men,M,Raw,82.5,77.88,33,80,,110,,190,,380,SBD
+Hugo Rodrigo Garcia Quinteiro,1,Open Men,M,Raw,100,99.7,30,170,,140,150,250,,560,SBD
+Eliseu QuintilianoTeixeira,2,Open Men,M,Raw,100,91.08,24,192.5,197.5,100,,240,,532.5,SBD
+Felipe Ferrari de Mello,3,Open Men,M,Raw,100,96.16,25,170,,120,,220,,510,SBD
+Claudio Gomes Pereira,4,Open Men,M,Raw,100,91.17,55,160,,120,,170,,450,SBD
+Eduardo Batista dos Santos Saigh,DQ,Open Men,M,Raw,100,98.57,30,-140,,120,,-180,,,SBD
+Fabricio Coletti Venturini,1,Open Men,M,Raw,125,117.8,25,220,240,170,180,250,,640,SBD
+Fernando Villela Botelho,1,Submaster Men 35-39,M,Raw,67.5,66.09,39,150,,110,,200,,460,SBD
+Alexander de Oliveira Moura,1,Submaster Men 35-39,M,Raw,100,99.97,36,170,,115,,215,,500,SBD
+Andre Giongo Marangoni,1,Submaster Men 35-39,M,Raw,110,107.68,37,190,,155,,245,,590,SBD
+Claudio Gomes Pereira,1,Master Men 55-59,M,Raw,100,91.17,55,160,,120,,170,,450,SBD
+Serafim Rocha,1,Master Men 65-69,M,Raw,125,116.8,65,70,,135,,70,,275,SBD
+Regis Francisco Teles Martins,1,Master Men 40-44,M,Raw,140+,158.39,44,180,185,122.5,125,220,,522.5,SBD
+Natalia Mercaldo,1,Open Women,F,Wraps,82.5,77.47,28,170,,105,,170,,445,SBD
+Rafael Costa dos Santos,1,Junior Men 20-23,M,Wraps,75,68.17,20,140,,90,,185,,415,SBD
+Sandro Ueno,1,Open Men,M,Wraps,82.5,78.79,46,240,,135,,230,,605,SBD
+Eduardo Loureiro,2,Open Men,M,Wraps,82.5,82.42,24,185,,110,,190,,485,SBD
+Marcos Francisco Ferrari,1,Open Men,M,Wraps,125,113.9,35,300,,180,,300,,780,SBD
+Leonardo Fellipe Mariani,2,Open Men,M,Wraps,125,121.2,24,280,,130,,240,,650,SBD
+Thiago Andrade Macedo,1,Open Men,M,Wraps,140+,147.1,26,210,220,145,,180,,535,SBD
+Marcos Francisco Ferrari,1,Submaster Men 35-39,M,Wraps,125,113.9,35,300,,180,,300,,780,SBD
+Sandro Ueno,1,Master Men 45-49,M,Wraps,82.5,78.79,46,240,,135,,230,,605,SBD

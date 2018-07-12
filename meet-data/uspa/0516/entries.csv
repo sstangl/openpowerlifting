@@ -1,41 +1,41 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Lindsay Maguire,VA,60,58.40,22,102.50,60.00,137.50,300.00,F,Junior 20-23,Raw
-1,Emily Lilly,WV,67.5,65.70,36,115.00,87.50,155.00,357.50,F,Open,Raw
-2,Meghan Eastman,VA,67.5,65.30,28,125.00,65.00,165.00,355.00,F,Open,Raw
-1,Bettie Davis,VA,82.5,79.50,30,102.50,37.50,117.50,257.50,F,Open,Raw
-1,Emily Lilly,WV,67.5,65.70,36,115.00,87.50,155.00,357.50,F,Submaster 35-39,Raw
-1,Dominic Lazzara,NC,67.5,61.30,20,137.50,100.00,190.00,427.50,M,Junior 20-23,Raw
-1,Jay Etherton,VA,75,73.10,19,177.50,112.50,212.50,502.50,M,Junior 18-19,Raw
-1,Tyler Church,VA,75,72.70,20,192.50,130.50,227.50,550.50,M,Junior 20-23,Raw
-1,Jon Davis,VA,82.5,80.30,21,207.50,115.00,235.00,557.50,M,Junior 20-23,Raw
-1,Austin Skeens,VA,90,82.60,19,182.50,130.00,205.00,517.50,M,Junior 18-19,Raw
-1,Akie Williams,VA,90,89.20,22,197.50,145.00,267.50,610.00,M,Junior 20-23,Raw
-2,Myron Kindley,VA,90,86.60,22,185.00,145.00,245.00,575.00,M,Junior 20-23,Raw
-3,Radu Razuan,VA,90,82.60,20,190.00,147.50,217.50,555.00,M,Junior 20-23,Raw
-1,Zachary Humphries,VA,100,99.10,21,235.00,132.50,245.00,612.50,M,Junior 20-23,Raw
-1,Robert Henritze,VA,125,115.50,22,257.50,182.50,257.50,697.50,M,Junior 20-23,Raw
-1,Alexander Bianco,VA,75,73.30,24,150.00,110.00,150.00,410.00,M,Open,Raw
-2,Jacob Puckett,NC,75,74.40,34,145.00,92.50,160.00,397.50,M,Open,Raw
-1,Josh Bromfield,VA,82.5,79.20,31,185.00,122.50,220.00,527.50,M,Open,Raw
-1,Myron Kindley,VA,90,86.60,22,185.00,145.00,245.00,575.00,M,Open,Raw
-1,Lucas Hampton,VA,110,107.10,26,187.50,107.50,215.00,510.00,M,Open,Raw
-DQ,Cornelius Burroughs,VA,125,111.80,34,152.50,-165.00,,,M,Open,Raw
-1,CJ Jones,VA,140+,152.20,29,220.00,137.50,272.50,630.00,M,Open,Raw
-1,Anna Olihnenco,VA,75,75.00,24,192.50,107.50,212.50,512.50,F,Open,Wraps
-1,Jake Sears,VA,90,89.00,19,212.50,122.50,252.50,587.50,M,Junior 18-19,Wraps
-1,Scott Beitzell,VA,110,107.80,27,300.00,205.00,290.00,795.00,M,Open,Wraps
-2,Tyler Eastman,VA,110,109.50,28,227.50,165.00,237.50,630.00,M,Open,Wraps
-1,Nick Cook,VA,140+,186.00,25,320.00,250.00,375.00,945.00,M,Open,Wraps
-2,Ryan Brent,VA,140+,192.80,26,342.50,242.50,305.00,890.00,M,Open,Wraps
-1,David Whitaker,VA,100,98.00,40,172.50,137.50,190.00,500.00,M,Master 40-44,Wraps
-1,Sean Pierce,VA,82.5,82.20,41,227.50,147.50,237.50,612.50,M,Open,Single-ply
-1,Sean Pierce,VA,82.5,82.20,41,227.50,147.50,237.50,612.50,M,Master 40-44,Single-ply
-1,Leftery Tsouroutis,VA,125,111.20,46,292.50,165.00,272.50,730.00,M,Master 45-49,Single-ply
-1,Armando Mineiro,VA,140,136.90,37,245.00,227.50,232.50,705.00,M,Submaster 35-39,Multi-ply
-1,Kristina Marie Coleman,VA,75,69.10,17,,75.00,142.50,217.50,F,Junior 16-17,Raw
-1,Kristina Marie Coleman,VA,75,69.10,17,,75.00,142.50,217.50,F,Open,Raw
-1,Christine Cook,VA,82.5,80.40,46,,97.50,150.00,247.50,F,Master 45-49,Raw
-1,Walter Cook,VA,125,125.00,53,,160.00,237.50,397.50,M,Master 50-54,Raw
-1,Sharraye Long,VA,75,74.20,24,,182.50,,182.50,M,Open,Raw
-1,Stephan Westbury,VA,90,88.40,24,,125.00,,125.00,M,Open,Raw
-1,Chad Lescalleet,VA,140+,165.40,40,,210.00,,210.00,M,Master 40-44,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Lindsay Maguire,VA,60,58.4,22,102.5,60,137.5,300,F,Junior 20-23,Raw,SBD
+1,Emily Lilly,WV,67.5,65.7,36,115,87.5,155,357.5,F,Open,Raw,SBD
+2,Meghan Eastman,VA,67.5,65.3,28,125,65,165,355,F,Open,Raw,SBD
+1,Bettie Davis,VA,82.5,79.5,30,102.5,37.5,117.5,257.5,F,Open,Raw,SBD
+1,Emily Lilly,WV,67.5,65.7,36,115,87.5,155,357.5,F,Submaster 35-39,Raw,SBD
+1,Dominic Lazzara,NC,67.5,61.3,20,137.5,100,190,427.5,M,Junior 20-23,Raw,SBD
+1,Jay Etherton,VA,75,73.1,19,177.5,112.5,212.5,502.5,M,Junior 18-19,Raw,SBD
+1,Tyler Church,VA,75,72.7,20,192.5,130.5,227.5,550.5,M,Junior 20-23,Raw,SBD
+1,Jon Davis,VA,82.5,80.3,21,207.5,115,235,557.5,M,Junior 20-23,Raw,SBD
+1,Austin Skeens,VA,90,82.6,19,182.5,130,205,517.5,M,Junior 18-19,Raw,SBD
+1,Akie Williams,VA,90,89.2,22,197.5,145,267.5,610,M,Junior 20-23,Raw,SBD
+2,Myron Kindley,VA,90,86.6,22,185,145,245,575,M,Junior 20-23,Raw,SBD
+3,Radu Razuan,VA,90,82.6,20,190,147.5,217.5,555,M,Junior 20-23,Raw,SBD
+1,Zachary Humphries,VA,100,99.1,21,235,132.5,245,612.5,M,Junior 20-23,Raw,SBD
+1,Robert Henritze,VA,125,115.5,22,257.5,182.5,257.5,697.5,M,Junior 20-23,Raw,SBD
+1,Alexander Bianco,VA,75,73.3,24,150,110,150,410,M,Open,Raw,SBD
+2,Jacob Puckett,NC,75,74.4,34,145,92.5,160,397.5,M,Open,Raw,SBD
+1,Josh Bromfield,VA,82.5,79.2,31,185,122.5,220,527.5,M,Open,Raw,SBD
+1,Myron Kindley,VA,90,86.6,22,185,145,245,575,M,Open,Raw,SBD
+1,Lucas Hampton,VA,110,107.1,26,187.5,107.5,215,510,M,Open,Raw,SBD
+DQ,Cornelius Burroughs,VA,125,111.8,34,152.5,-165,,,M,Open,Raw,SBD
+1,CJ Jones,VA,140+,152.2,29,220,137.5,272.5,630,M,Open,Raw,SBD
+1,Anna Olihnenco,VA,75,75,24,192.5,107.5,212.5,512.5,F,Open,Wraps,SBD
+1,Jake Sears,VA,90,89,19,212.5,122.5,252.5,587.5,M,Junior 18-19,Wraps,SBD
+1,Scott Beitzell,VA,110,107.8,27,300,205,290,795,M,Open,Wraps,SBD
+2,Tyler Eastman,VA,110,109.5,28,227.5,165,237.5,630,M,Open,Wraps,SBD
+1,Nick Cook,VA,140+,186,25,320,250,375,945,M,Open,Wraps,SBD
+2,Ryan Brent,VA,140+,192.8,26,342.5,242.5,305,890,M,Open,Wraps,SBD
+1,David Whitaker,VA,100,98,40,172.5,137.5,190,500,M,Master 40-44,Wraps,SBD
+1,Sean Pierce,VA,82.5,82.2,41,227.5,147.5,237.5,612.5,M,Open,Single-ply,SBD
+1,Sean Pierce,VA,82.5,82.2,41,227.5,147.5,237.5,612.5,M,Master 40-44,Single-ply,SBD
+1,Leftery Tsouroutis,VA,125,111.2,46,292.5,165,272.5,730,M,Master 45-49,Single-ply,SBD
+1,Armando Mineiro,VA,140,136.9,37,245,227.5,232.5,705,M,Submaster 35-39,Multi-ply,SBD
+1,Kristina Marie Coleman,VA,75,69.1,17,,75,142.5,217.5,F,Junior 16-17,Raw,BD
+1,Kristina Marie Coleman,VA,75,69.1,17,,75,142.5,217.5,F,Open,Raw,BD
+1,Christine Cook,VA,82.5,80.4,46,,97.5,150,247.5,F,Master 45-49,Raw,BD
+1,Walter Cook,VA,125,125,53,,160,237.5,397.5,M,Master 50-54,Raw,BD
+1,Sharraye Long,VA,75,74.2,24,,182.5,,182.5,M,Open,Raw,B
+1,Stephan Westbury,VA,90,88.4,24,,125,,125,M,Open,Raw,B
+1,Chad Lescalleet,VA,140+,165.4,40,,210,,210,M,Master 40-44,Raw,B

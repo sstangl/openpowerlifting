@@ -1,33 +1,33 @@
-Place,Name,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg
-1,Blanca Rios,60,58.11,41,92.50,45.00,125.00,262.50,F,Open,Raw,127.5
-1,Blanca Rios,60,58.11,41,92.50,45.00,125.00,262.50,F,Master 40-44,Raw,127.5
-1,Sergro Lara,82.5,79.38,22,127.50,80.00,175.00,382.50,M,Junior 20-23,Raw,
-1,Rodolfo Rios,90,85.28,44,177.50,117.50,210.00,505.00,M,Open,Raw,212.5
-1,Rodolfo Rios,90,85.28,44,177.50,117.50,210.00,505.00,M,Master 40-44,Raw,212.5
-1,Talia Ramriez,75,72.85,19,145.00,55.00,145.00,345.00,F,Junior 18-19,Wraps,
-1,Claudia Molina,75,68.95,44,127.50,60.00,137.50,325.00,F,Master 40-44,Wraps,142.5
-1,Cesar Trinidad,67.5,60.87,21,142.50,87.50,160.00,390.00,M,Junior 20-23,Wraps,
-1,Abram Guerra,90,89.90,19,265.00,165.00,272.50,702.50,M,Junior 18-19,Wraps,
-1,Natalie Barrera,75,72.67,15,182.50,102.50,165.00,450.00,F,Junior,Single-ply,
-1,Alexzandria Garcia,90,84.55,15,142.50,57.50,137.50,337.50,F,Junior,Single-ply,
-1,April Hernandez,67.5,66.95,24,107.50,60.00,122.50,290.00,F,Open,Single-ply,
-1,Haroldo Ramirez,75,72.67,14,110.00,75.00,140.00,325.00,M,Junior 13-15,Single-ply,
-1,Gustavo Maldonado,75,73.03,20,215.00,120.00,205.00,540.00,M,Junior 20-23,Single-ply,
-1,Luis Molina,90,89.54,15,147.50,60.00,167.50,375.00,M,Junior 13-15,Single-ply,
-1,Mario Mezquez,67.5,67.04,29,247.50,180.00,260.00,687.50,M,Open,Single-ply,
-1,Juan Montez,90,89.27,39,237.50,185.00,230.00,652.50,M,Submaster 35-39,Single-ply,
-DQ,Enrique Molina,125,116.75,53,-242.50,,,,M,Master 50-54,Single-ply,
-1,Cynthia Guerra,90+,97.16,32,,67.50,,67.50,F,Open,Raw,
-1,Barbara Mahan,56,54.88,63,,57.50,,57.50,F,Master 60-64,Raw,
-1,Noe Barraza,140+,140.16,30,,192.50,,192.50,M,Open,Raw,
-1,Greg Huerta,82.5,81.19,42,,122.50,,122.50,M,Open,Single-ply,
-1,Greg Huerta,82.5,81.19,42,,122.50,,122.50,M,Master 40-44,Single-ply,
-1,Mauro Flores,100,97.79,60,,175.00,,175.00,M,Master 60-64,Single-ply,
-DQ,Joe Guerra,110,104.33,41,,-257.50,,,M,Master 40-44,Single-ply,
-1,Robert Jackson,140,127.91,58,,182.50,,182.50,M,Master 55-59,Single-ply,
-1,Cynthia Guerra,90+,97.16,32,,,132.50,132.50,F,Open,Raw,
-1,Barbara Mahan,56,54.88,63,,,92.50,92.50,F,Master 60-64,Raw,
-1,Armando Barraza,82.5,76.66,19,,,200.00,200.00,M,Junior 18-19,Raw,
-1,Carlos Medina,90,89.81,22,,,190.00,190.00,M,Junior 20-23,Raw,
-1,Ron Esparza,125,117.93,47,,,277.50,277.50,M,Master 45-49,Raw,
-1,Rolando Espinoza,90,86.18,50,,,230.00,230.00,M,Master 50-54,Single-ply,
+Place,Name,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Event
+1,Blanca Rios,60,58.11,41,92.50,45.00,125.00,262.50,F,Open,Raw,127.5,SBD
+1,Blanca Rios,60,58.11,41,92.50,45.00,125.00,262.50,F,Master 40-44,Raw,127.5,SBD
+1,Sergro Lara,82.5,79.38,22,127.50,80.00,175.00,382.50,M,Junior 20-23,Raw,,SBD
+1,Rodolfo Rios,90,85.28,44,177.50,117.50,210.00,505.00,M,Open,Raw,212.5,SBD
+1,Rodolfo Rios,90,85.28,44,177.50,117.50,210.00,505.00,M,Master 40-44,Raw,212.5,SBD
+1,Talia Ramriez,75,72.85,19,145.00,55.00,145.00,345.00,F,Junior 18-19,Wraps,,SBD
+1,Claudia Molina,75,68.95,44,127.50,60.00,137.50,325.00,F,Master 40-44,Wraps,142.5,SBD
+1,Cesar Trinidad,67.5,60.87,21,142.50,87.50,160.00,390.00,M,Junior 20-23,Wraps,,SBD
+1,Abram Guerra,90,89.90,19,265.00,165.00,272.50,702.50,M,Junior 18-19,Wraps,,SBD
+1,Natalie Barrera,75,72.67,15,182.50,102.50,165.00,450.00,F,Junior,Single-ply,,SBD
+1,Alexzandria Garcia,90,84.55,15,142.50,57.50,137.50,337.50,F,Junior,Single-ply,,SBD
+1,April Hernandez,67.5,66.95,24,107.50,60.00,122.50,290.00,F,Open,Single-ply,,SBD
+1,Haroldo Ramirez,75,72.67,14,110.00,75.00,140.00,325.00,M,Junior 13-15,Single-ply,,SBD
+1,Gustavo Maldonado,75,73.03,20,215.00,120.00,205.00,540.00,M,Junior 20-23,Single-ply,,SBD
+1,Luis Molina,90,89.54,15,147.50,60.00,167.50,375.00,M,Junior 13-15,Single-ply,,SBD
+1,Mario Mezquez,67.5,67.04,29,247.50,180.00,260.00,687.50,M,Open,Single-ply,,SBD
+1,Juan Montez,90,89.27,39,237.50,185.00,230.00,652.50,M,Submaster 35-39,Single-ply,,SBD
+DQ,Enrique Molina,125,116.75,53,-242.50,,,,M,Master 50-54,Single-ply,,SBD
+1,Cynthia Guerra,90+,97.16,32,,67.50,,67.50,F,Open,Raw,,B
+1,Barbara Mahan,56,54.88,63,,57.50,,57.50,F,Master 60-64,Raw,,B
+1,Noe Barraza,140+,140.16,30,,192.50,,192.50,M,Open,Raw,,B
+1,Greg Huerta,82.5,81.19,42,,122.50,,122.50,M,Open,Single-ply,,B
+1,Greg Huerta,82.5,81.19,42,,122.50,,122.50,M,Master 40-44,Single-ply,,B
+1,Mauro Flores,100,97.79,60,,175.00,,175.00,M,Master 60-64,Single-ply,,B
+DQ,Joe Guerra,110,104.33,41,,-257.50,,,M,Master 40-44,Single-ply,,B
+1,Robert Jackson,140,127.91,58,,182.50,,182.50,M,Master 55-59,Single-ply,,B
+1,Cynthia Guerra,90+,97.16,32,,,132.50,132.50,F,Open,Raw,,D
+1,Barbara Mahan,56,54.88,63,,,92.50,92.50,F,Master 60-64,Raw,,D
+1,Armando Barraza,82.5,76.66,19,,,200.00,200.00,M,Junior 18-19,Raw,,D
+1,Carlos Medina,90,89.81,22,,,190.00,190.00,M,Junior 20-23,Raw,,D
+1,Ron Esparza,125,117.93,47,,,277.50,277.50,M,Master 45-49,Raw,,D
+1,Rolando Espinoza,90,86.18,50,,,230.00,230.00,M,Master 50-54,Single-ply,,D

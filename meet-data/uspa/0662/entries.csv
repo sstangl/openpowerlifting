@@ -1,51 +1,51 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Hannah Wolf,OK,52,50,20,87.5,42.5,95,225,F,Junior 20-23,Raw
-1,Bailey Harmon,OK,56,55.8,23,115,65,132.5,312.5,F,Junior 20-23,Raw
-1,Melanie Johnson,OK,60,59.8,19,100,60,115,275,F,Junior 18-19,Raw
-1,Theresa Bodman,OK,60,59.2,20,125,55,120,300,F,Junior 20-23,Raw
-1,Bre Harris,OK,67.5,60.4,23,105,47.5,97.5,250,F,Junior 20-23,Raw
-DQ,Emilia Preskitt,OK,67.5,67.2,22,105,-85,137.5,,F,Junior 20-23,Raw
-1,Bailey Harmon,OK,56,55.8,23,115,65,132.5,312.5,F,Open,Raw
-1,Valerie Sabestyen,OK,67.5,66.4,25,87.5,45,107.5,240,F,Open,Raw
-1,Kendall Luker,OK,75,74.8,32,142.5,75,155,372.5,F,Open,Raw
-2,Victoria Powell,OK,75,68.2,29,92.5,47.5,137.5,277.5,F,Open,Raw
-DQ,Jeremiah Parnell,OK,67.5,67.2,22,147.5,-97.5,185,,M,Junior 20-23,Raw
-1,Jacob Cameron,OK,82.5,81.4,17,190,130,197.5,517.5,M,Junior 16-17,Raw
-1,Garrett Duckworth,OK,125,124.4,21,205,130,247.5,582.5,M,Junior 20-23,Raw
-1,Noor Seeker Samara,OK,140+,140.2,15,205,160,160,525,M,Junior 13-15,Raw
-DQ,Jeremiah Parnell,OK,67.5,67.2,22,147.5,-97.5,185,,M,Open,Raw
-1,Richard Perrin,OK,75,75,30,192.5,142.5,252.5,587.5,M,Open,Raw
-2,Chelan Carr,OK,75,72.8,22,180,100,220,500,M,Open,Raw
-1,Matt Webb,OK,82.5,81.2,28,207.5,150,240,597.5,M,Open,Raw
-2,Jacob Cameron,OK,82.5,81.4,17,190,130,197.5,517.5,M,Open,Raw
-3,Patrick Cusaac,OK,82.5,79.4,29,175,115,215,505,M,Open,Raw
-1,Robert Despain,OK,90,89.6,28,210,152.5,257.5,620,M,Open,Raw
-2,Lucas Holcomb,OK,90,89,24,195,167.5,210,572.5,M,Open,Raw
-3,Zachary Weeks,OK,100,93.8,26,160,115,217.5,492.5,M,Open,Raw
-1,Jacob Douglas,OK,100,97.4,26,205,142.5,242.5,590,M,Open,Raw
-1,Justin Dunbar,OK,110,107.4,26,260,202.5,277.5,740,M,Open,Raw
-1,Dennis Cornelius,OK,125,125,36,382.5,255,355,992.5,M,Open,Raw
-2,Ryan Sullivan,OK,125,122.6,33,242.5,155,300,697.5,M,Open,Raw
-1,Barrett Prudue,OK,140,137,32,327.5,245,320,892.5,M,Open,Raw
-1,Kyle Johnston,TX,140+,159.6,29,242.5,185,275,702.5,M,Open,Raw
-2,Kenneth Monk,TX,140+,146.8,26,212.5,117.5,237.5,567.5,M,Open,Raw
-1,Mylene Crouthamel,TX,56,55.8,40,110,60,130,300,F,Open,Wraps
-DQ,Ariel Lopez,TX,56,56,25,-90,45,107.5,,F,Open,Wraps
-1,Mylene Crouthamel,TX,56,55.8,40,110,60,130,300,F,Master 40-44,Wraps
-1,Aaron Purdy,OK,67.5,67,21,200,135,220,555,M,Junior 20-23,Wraps
-1,Hunter Heath,OK,90,89.8,21,207.5,137.5,250,595,M,Junior 20-23,Wraps
-1,Randall Taylor,TX,75,75,33,205,125,197.5,527.5,M,Open,Wraps
-1,Hunter Heath,OK,90,89.8,21,207.5,137.5,250,595,M,Open,Wraps
-DQ,Brad Block,TX,90,89,27,-175,-130,142.5,,M,Open,Wraps
-DQ,Tristan Solo,OK,90,89.8,36,242.5,-122.5,,,M,Open,Wraps
-1,Nathan Burford,AR,100,99.4,27,297.5,182.5,282.5,762.5,M,Open,Wraps
-DQ,Darrell Cooley,OK,140,136.2,34,235,150,-232.5,,M,Open,Wraps
-1,Ariel Lopez,TX,56,56,25,,45,,45,F,Open,Raw
-DQ,Aramiq Amirchian,AZ,82.5,81.4,31,,-192.5,,,M,Open,Raw
-1,Justin McGregor,TX,125,124.4,30,,190,,190,M,Open,Raw
-1,Chad Ake,OK,67.5,67.5,43,,110,,110,M,Master 40-44,Raw
-1,Val Reneau,OK,125,119.4,50,,205,,205,M,Master 50-54,Raw
-1,Ariel Lopez,TX,56,56,25,,,107.5,107.5,F,Open,Raw
-1,Victoria Powell,OK,75,68.2,29,,,137.5,137.5,F,Open,Raw
-1,Justin McGregor,TX,125,124.4,30,,,272.5,272.5,M,Open,Raw
-1,Jake Burghardt,OK,140,132,28,,,290,290,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Hannah Wolf,OK,52,50,20,87.5,42.5,95,225,F,Junior 20-23,Raw,SBD
+1,Bailey Harmon,OK,56,55.8,23,115,65,132.5,312.5,F,Junior 20-23,Raw,SBD
+1,Melanie Johnson,OK,60,59.8,19,100,60,115,275,F,Junior 18-19,Raw,SBD
+1,Theresa Bodman,OK,60,59.2,20,125,55,120,300,F,Junior 20-23,Raw,SBD
+1,Bre Harris,OK,67.5,60.4,23,105,47.5,97.5,250,F,Junior 20-23,Raw,SBD
+DQ,Emilia Preskitt,OK,67.5,67.2,22,105,-85,137.5,,F,Junior 20-23,Raw,SBD
+1,Bailey Harmon,OK,56,55.8,23,115,65,132.5,312.5,F,Open,Raw,SBD
+1,Valerie Sabestyen,OK,67.5,66.4,25,87.5,45,107.5,240,F,Open,Raw,SBD
+1,Kendall Luker,OK,75,74.8,32,142.5,75,155,372.5,F,Open,Raw,SBD
+2,Victoria Powell,OK,75,68.2,29,92.5,47.5,137.5,277.5,F,Open,Raw,SBD
+DQ,Jeremiah Parnell,OK,67.5,67.2,22,147.5,-97.5,185,,M,Junior 20-23,Raw,SBD
+1,Jacob Cameron,OK,82.5,81.4,17,190,130,197.5,517.5,M,Junior 16-17,Raw,SBD
+1,Garrett Duckworth,OK,125,124.4,21,205,130,247.5,582.5,M,Junior 20-23,Raw,SBD
+1,Noor Seeker Samara,OK,140+,140.2,15,205,160,160,525,M,Junior 13-15,Raw,SBD
+DQ,Jeremiah Parnell,OK,67.5,67.2,22,147.5,-97.5,185,,M,Open,Raw,SBD
+1,Richard Perrin,OK,75,75,30,192.5,142.5,252.5,587.5,M,Open,Raw,SBD
+2,Chelan Carr,OK,75,72.8,22,180,100,220,500,M,Open,Raw,SBD
+1,Matt Webb,OK,82.5,81.2,28,207.5,150,240,597.5,M,Open,Raw,SBD
+2,Jacob Cameron,OK,82.5,81.4,17,190,130,197.5,517.5,M,Open,Raw,SBD
+3,Patrick Cusaac,OK,82.5,79.4,29,175,115,215,505,M,Open,Raw,SBD
+1,Robert Despain,OK,90,89.6,28,210,152.5,257.5,620,M,Open,Raw,SBD
+2,Lucas Holcomb,OK,90,89,24,195,167.5,210,572.5,M,Open,Raw,SBD
+3,Zachary Weeks,OK,100,93.8,26,160,115,217.5,492.5,M,Open,Raw,SBD
+1,Jacob Douglas,OK,100,97.4,26,205,142.5,242.5,590,M,Open,Raw,SBD
+1,Justin Dunbar,OK,110,107.4,26,260,202.5,277.5,740,M,Open,Raw,SBD
+1,Dennis Cornelius,OK,125,125,36,382.5,255,355,992.5,M,Open,Raw,SBD
+2,Ryan Sullivan,OK,125,122.6,33,242.5,155,300,697.5,M,Open,Raw,SBD
+1,Barrett Prudue,OK,140,137,32,327.5,245,320,892.5,M,Open,Raw,SBD
+1,Kyle Johnston,TX,140+,159.6,29,242.5,185,275,702.5,M,Open,Raw,SBD
+2,Kenneth Monk,TX,140+,146.8,26,212.5,117.5,237.5,567.5,M,Open,Raw,SBD
+1,Mylene Crouthamel,TX,56,55.8,40,110,60,130,300,F,Open,Wraps,SBD
+DQ,Ariel Lopez,TX,56,56,25,-90,45,107.5,,F,Open,Wraps,SBD
+1,Mylene Crouthamel,TX,56,55.8,40,110,60,130,300,F,Master 40-44,Wraps,SBD
+1,Aaron Purdy,OK,67.5,67,21,200,135,220,555,M,Junior 20-23,Wraps,SBD
+1,Hunter Heath,OK,90,89.8,21,207.5,137.5,250,595,M,Junior 20-23,Wraps,SBD
+1,Randall Taylor,TX,75,75,33,205,125,197.5,527.5,M,Open,Wraps,SBD
+1,Hunter Heath,OK,90,89.8,21,207.5,137.5,250,595,M,Open,Wraps,SBD
+DQ,Brad Block,TX,90,89,27,-175,-130,142.5,,M,Open,Wraps,SBD
+DQ,Tristan Solo,OK,90,89.8,36,242.5,-122.5,,,M,Open,Wraps,SBD
+1,Nathan Burford,AR,100,99.4,27,297.5,182.5,282.5,762.5,M,Open,Wraps,SBD
+DQ,Darrell Cooley,OK,140,136.2,34,235,150,-232.5,,M,Open,Wraps,SBD
+1,Ariel Lopez,TX,56,56,25,,45,,45,F,Open,Raw,B
+DQ,Aramiq Amirchian,AZ,82.5,81.4,31,,-192.5,,,M,Open,Raw,B
+1,Justin McGregor,TX,125,124.4,30,,190,,190,M,Open,Raw,B
+1,Chad Ake,OK,67.5,67.5,43,,110,,110,M,Master 40-44,Raw,B
+1,Val Reneau,OK,125,119.4,50,,205,,205,M,Master 50-54,Raw,B
+1,Ariel Lopez,TX,56,56,25,,,107.5,107.5,F,Open,Raw,D
+1,Victoria Powell,OK,75,68.2,29,,,137.5,137.5,F,Open,Raw,D
+1,Justin McGregor,TX,125,124.4,30,,,272.5,272.5,M,Open,Raw,D
+1,Jake Burghardt,OK,140,132,28,,,290,290,M,Open,Raw,D

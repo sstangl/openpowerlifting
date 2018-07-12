@@ -1,29 +1,29 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Courtney Deer,1,Open Women,F,Raw,MS,75,69.58,25,110.00,57.50,137.50,305.00
-Caile Brandon,1,Junior Men 20-23,M,Raw,MS,82.5,80.38,20,170.00,107.50,230.00,507.50
-Yarnell Marks,1,Open Men,M,Raw,MS,90,86.36,36,230.00,157.50,245.00,632.50
-Ciara Harmon,1,Junior Women 13-15,F,Wraps,MS,52,51.80,13,95.00,50.00,95.00,240.00
-Tyler Paterson,1,Junior Men 13-15,M,Wraps,MS,75,73.03,14,115.00,65.00,150.00,330.00
-Josh Daffron,1,Junior Men 18-19,M,Wraps,MS,82.5,81.56,19,222.50,120.00,230.00,572.50
-Dylan Sewell,1,Junior Men 18-19,M,Wraps,MS,100,98.61,19,252.50,145.00,215.00,612.50
-Will Burgess,1,Junior Men 18-19,M,Wraps,MS,140+,145.10,18,227.50,152.50,260.00,640.00
-Joe Keith,1,Open Men,M,Wraps,MS,75,74.75,31,212.50,152.50,220.00,585.00
-Wheeler Breland,1,Open Men,M,Wraps,MS,82.5,81.28,27,192.50,155.00,227.50,575.00
-Jason Smith,1,Open Men,M,Wraps,LA,90,89.54,28,240.00,150.00,272.50,662.50
-Andrew Lorino,2,Open Men,M,Wraps,LA,90,89.54,25,215.00,170.00,227.50,612.50
-Tee Cummins,1,Open Men,M,Wraps,MS,100,99.79,21,327.50,187.50,312.50,827.50
-Jeff Griffin,2,Open Men,M,Wraps,MS,100,97.30,35,160.00,137.50,235.00,532.50
-Phillip Mardis,1,Open Men,M,Wraps,LA,110,107.86,26,297.50,210.00,317.50,825.00
-Brandon Bruce,2,Open Men,M,Wraps,MS,110,109.77,27,302.50,197.50,300.00,800.00
-Eric Adams,1,Open Men,M,Wraps,MS,140,138.03,25,232.50,185.00,250.00,667.50
-Seth Coker,DQ,Open Men,M,Wraps,MS,140,137.76,27,-292.50,,,
-Frank Russo,1,Submaster Men 35-39,M,Wraps,LA,90,89.90,37,200.00,127.50,265.00,592.50
-David Childers,1,Submaster Men 35-39,M,Wraps,TN,110,109.77,37,255.00,195.00,305.00,755.00
-Qualeah Eszell,1,Junior Women 16-17,F,Single-ply,MS,67.5,64.59,16,132.50,52.50,125.00,310.00
-Justin Richardson,1,Open Men,M,Single-ply,MS,100,99.16,24,295.00,215.00,315.00,825.00
-Dave Hagemann,1,Open Men,M,Raw,MS,90,87.72,32,,150.00,,150.00
-Billy Hanna,1,Open Men,M,Raw,MS,125,112.76,38,,192.50,,192.50
-Richard Davis,1,Open Men,M,Raw,MS,140+,146.06,40,,195.00,,195.00
-Richard Davis,1,Masters Men 40-44,M,Raw,MS,140+,146.06,40,,195.00,,195.00
-Chris Neal,1,Open Men,M,Single-ply,MS,90,86.45,40,,225.00,,225.00
-Brian Pund,1,Master Men 50-54,M,Raw,MS,90,88.63,50,,,215.00,215.00
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Courtney Deer,1,Open Women,F,Raw,MS,75,69.58,25,110.00,57.50,137.50,305.00,SBD
+Caile Brandon,1,Junior Men 20-23,M,Raw,MS,82.5,80.38,20,170.00,107.50,230.00,507.50,SBD
+Yarnell Marks,1,Open Men,M,Raw,MS,90,86.36,36,230.00,157.50,245.00,632.50,SBD
+Ciara Harmon,1,Junior Women 13-15,F,Wraps,MS,52,51.80,13,95.00,50.00,95.00,240.00,SBD
+Tyler Paterson,1,Junior Men 13-15,M,Wraps,MS,75,73.03,14,115.00,65.00,150.00,330.00,SBD
+Josh Daffron,1,Junior Men 18-19,M,Wraps,MS,82.5,81.56,19,222.50,120.00,230.00,572.50,SBD
+Dylan Sewell,1,Junior Men 18-19,M,Wraps,MS,100,98.61,19,252.50,145.00,215.00,612.50,SBD
+Will Burgess,1,Junior Men 18-19,M,Wraps,MS,140+,145.10,18,227.50,152.50,260.00,640.00,SBD
+Joe Keith,1,Open Men,M,Wraps,MS,75,74.75,31,212.50,152.50,220.00,585.00,SBD
+Wheeler Breland,1,Open Men,M,Wraps,MS,82.5,81.28,27,192.50,155.00,227.50,575.00,SBD
+Jason Smith,1,Open Men,M,Wraps,LA,90,89.54,28,240.00,150.00,272.50,662.50,SBD
+Andrew Lorino,2,Open Men,M,Wraps,LA,90,89.54,25,215.00,170.00,227.50,612.50,SBD
+Tee Cummins,1,Open Men,M,Wraps,MS,100,99.79,21,327.50,187.50,312.50,827.50,SBD
+Jeff Griffin,2,Open Men,M,Wraps,MS,100,97.30,35,160.00,137.50,235.00,532.50,SBD
+Phillip Mardis,1,Open Men,M,Wraps,LA,110,107.86,26,297.50,210.00,317.50,825.00,SBD
+Brandon Bruce,2,Open Men,M,Wraps,MS,110,109.77,27,302.50,197.50,300.00,800.00,SBD
+Eric Adams,1,Open Men,M,Wraps,MS,140,138.03,25,232.50,185.00,250.00,667.50,SBD
+Seth Coker,DQ,Open Men,M,Wraps,MS,140,137.76,27,-292.50,,,,SBD
+Frank Russo,1,Submaster Men 35-39,M,Wraps,LA,90,89.90,37,200.00,127.50,265.00,592.50,SBD
+David Childers,1,Submaster Men 35-39,M,Wraps,TN,110,109.77,37,255.00,195.00,305.00,755.00,SBD
+Qualeah Eszell,1,Junior Women 16-17,F,Single-ply,MS,67.5,64.59,16,132.50,52.50,125.00,310.00,SBD
+Justin Richardson,1,Open Men,M,Single-ply,MS,100,99.16,24,295.00,215.00,315.00,825.00,SBD
+Dave Hagemann,1,Open Men,M,Raw,MS,90,87.72,32,,150.00,,150.00,B
+Billy Hanna,1,Open Men,M,Raw,MS,125,112.76,38,,192.50,,192.50,B
+Richard Davis,1,Open Men,M,Raw,MS,140+,146.06,40,,195.00,,195.00,B
+Richard Davis,1,Masters Men 40-44,M,Raw,MS,140+,146.06,40,,195.00,,195.00,B
+Chris Neal,1,Open Men,M,Single-ply,MS,90,86.45,40,,225.00,,225.00,B
+Brian Pund,1,Master Men 50-54,M,Raw,MS,90,88.63,50,,,215.00,215.00,D

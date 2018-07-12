@@ -1,26 +1,26 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Loraine Efron,TX,67.5,62.80,52,72.50,45.00,95.00,212.50,F,Master 50-54,Raw
-1,Ryan Tood,TX,90,87.80,22,215.00,147.50,247.50,610.00,M,Junior 20-23,Raw
-DQ,Kevin Anderson,TX,90,85.80,23,215.00,-142.50,,,M,Junior 20-23,Raw
-1,Ken Jimenez,TX,75,75.00,34,170.00,120.00,215.00,505.00,M,Open,Raw
-DQ,Bobby Morgan,TX,75,75.00,43,145.00,-178.50,,,M,Open,Raw
-DQ,Kevin Anderson,TX,90,85.80,23,215.00,-142.50,,,M,Open,Raw
-1,Irving Acosta,TX,100,94.80,28,165.00,125.00,205.00,495.00,M,Open,Raw
-1,Melton Morehead,TX,67.5,66.60,38,190.00,107.50,232.50,530.00,M,Submaster 35-39,Raw
-1,Tim Searles,TX,110,108.00,46,182.50,150.00,237.50,570.00,M,Master 45-49,Raw
-1,Kari Premsiri,TX,52,51.20,29,87.50,45.00,110.00,242.50,F,Open,Wraps
-1,Allen Olvera,TX,82.5,79.60,21,200.00,107.50,205.00,512.50,M,Junior 20-23,Wraps
-1,Allen Olvera,TX,82.5,79.60,21,200.00,107.50,205.00,512.50,M,Open,Wraps
-DQ,Amanda Lopez,TX,48,47.80,19,132.50,-70.00,,,F,Junior 18-19,Single-ply
-1,Calie Chesler,TX,60,59.00,18,162.50,70.00,155.00,387.50,F,Junior 18-19,Single-ply
-1,Abbigail Garza,TX,67.5,65.60,18,142.50,80.00,145.00,367.50,F,Junior 18-19,Single-ply
-1,Michael Elizondo,TX,75,74.20,22,202.50,162.50,255.00,620.00,M,Junior 20-23,Single-ply
-1,Gary Hunter,TX,60,60.00,28,205.00,125.00,218.50,548.50,M,Open,Single-ply
-1,Mario Marquez,TX,67.5,67.00,30,280.00,182.50,262.50,725.00,M,Open,Single-ply
-1,John Hunsucker,TX,125,116.50,34,,207.50,,207.50,M,Open,Raw
-1,Steve Calamars Jr,TX,82.5,78.60,36,,115.00,,115.00,M,Submaster 35-39,Raw
-1,Martin Keller,TX,140,138.20,38,,172.50,,172.50,M,Submaster 35-39,Raw
-1,William Lee,TX,125,123.40,34,,255.00,,255.00,M,Open,Single-ply
-1,Jay K. Simmons,TX,125,123.40,56,,185.00,,185.00,M,Master 55-59,Single-ply
-1,John Hunsucker,TX,125,116.50,34,,,302.50,302.50,M,Open,Raw
-1,Gary Hunter,TX,60,60.00,28,,,218.50,218.50,M,Open,Single-ply
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Loraine Efron,TX,67.5,62.80,52,72.50,45.00,95.00,212.50,F,Master 50-54,Raw,SBD
+1,Ryan Tood,TX,90,87.80,22,215.00,147.50,247.50,610.00,M,Junior 20-23,Raw,SBD
+DQ,Kevin Anderson,TX,90,85.80,23,215.00,-142.50,,,M,Junior 20-23,Raw,SBD
+1,Ken Jimenez,TX,75,75.00,34,170.00,120.00,215.00,505.00,M,Open,Raw,SBD
+DQ,Bobby Morgan,TX,75,75.00,43,145.00,-178.50,,,M,Open,Raw,SBD
+DQ,Kevin Anderson,TX,90,85.80,23,215.00,-142.50,,,M,Open,Raw,SBD
+1,Irving Acosta,TX,100,94.80,28,165.00,125.00,205.00,495.00,M,Open,Raw,SBD
+1,Melton Morehead,TX,67.5,66.60,38,190.00,107.50,232.50,530.00,M,Submaster 35-39,Raw,SBD
+1,Tim Searles,TX,110,108.00,46,182.50,150.00,237.50,570.00,M,Master 45-49,Raw,SBD
+1,Kari Premsiri,TX,52,51.20,29,87.50,45.00,110.00,242.50,F,Open,Wraps,SBD
+1,Allen Olvera,TX,82.5,79.60,21,200.00,107.50,205.00,512.50,M,Junior 20-23,Wraps,SBD
+1,Allen Olvera,TX,82.5,79.60,21,200.00,107.50,205.00,512.50,M,Open,Wraps,SBD
+DQ,Amanda Lopez,TX,48,47.80,19,132.50,-70.00,,,F,Junior 18-19,Single-ply,SBD
+1,Calie Chesler,TX,60,59.00,18,162.50,70.00,155.00,387.50,F,Junior 18-19,Single-ply,SBD
+1,Abbigail Garza,TX,67.5,65.60,18,142.50,80.00,145.00,367.50,F,Junior 18-19,Single-ply,SBD
+1,Michael Elizondo,TX,75,74.20,22,202.50,162.50,255.00,620.00,M,Junior 20-23,Single-ply,SBD
+1,Gary Hunter,TX,60,60.00,28,205.00,125.00,218.50,548.50,M,Open,Single-ply,SBD
+1,Mario Marquez,TX,67.5,67.00,30,280.00,182.50,262.50,725.00,M,Open,Single-ply,SBD
+1,John Hunsucker,TX,125,116.50,34,,207.50,,207.50,M,Open,Raw,B
+1,Steve Calamars Jr,TX,82.5,78.60,36,,115.00,,115.00,M,Submaster 35-39,Raw,B
+1,Martin Keller,TX,140,138.20,38,,172.50,,172.50,M,Submaster 35-39,Raw,B
+1,William Lee,TX,125,123.40,34,,255.00,,255.00,M,Open,Single-ply,B
+1,Jay K. Simmons,TX,125,123.40,56,,185.00,,185.00,M,Master 55-59,Single-ply,B
+1,John Hunsucker,TX,125,116.50,34,,,302.50,302.50,M,Open,Raw,D
+1,Gary Hunter,TX,60,60.00,28,,,218.50,218.50,M,Open,Single-ply,D

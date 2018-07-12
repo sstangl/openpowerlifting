@@ -1,25 +1,25 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Sarah Yovetich,MT,75,67.6,22,107.5,70,147.5,325,F,Junior 20-23,Raw
-1,Brook Egbert,MT,90+,104.4,35,77.5,60,110,247.5,F,Open,Raw
-1,Tammy Smith,MT,82.5,78.8,49,57.5,52.5,67.5,177.5,F,Master 45-49,Raw
-DQ,Koltan Hansen,MT,75,74.6,23,175,-110,220,,M,Junior 20-23,Raw
-1,Sharid Dunlop,MT,100,97.25,23,200,145,200,545,M,Junior 20-23,Raw
-DQ,Koltan Hansen,MT,75,74.6,23,175,-110,-220,,M,Open,Raw
-1,Sergio Gallegos,MT,82.5,81.4,31,160,120,192.5,472.5,M,Open,Raw
-1,Dallas Crandell,MT,90,89.8,24,235,132.5,300,667.5,M,Open,Raw
-2,Cody Bone,MT,90,84.7,25,185,147.5,227.5,560,M,Open,Raw
-1,Chris Bohenek,MT,100,98.3,40,185,157.5,202.5,545,M,Open,Raw
-2,Nick Blossom,MT,100,92.6,26,187.5,162.5,192.5,542.5,M,Open,Raw
-1,Donnie Tudhal,MT,110,108.3,26,282.5,205,300,787.5,M,Open,Raw
-2,Tyler Weaver,MT,110,101.1,22,207.5,155,217.5,580,M,Open,Raw
-1,Lonnie Miller,MT,125,115.8,36,167.5,115,230,512.5,M,Open,Raw
-1,Rock Henderson,MT,140,138.4,44,217.5,147.5,235,600,M,Open,Raw
-1,Chris Bohenek,MT,100,98.3,40,185,157.5,202.5,545,M,Master 40-44,Raw
-1,Stan Martin,MT,140,138,44,197.5,185,230,612.5,M,Open,Wraps
-1,Stan Martin,MT,140,138,44,197.5,185,230,612.5,M,Master 40-44,Wraps
-1,Doug White,MT,75,72.1,53,130,90,125,345,M,Master 50-54,Single-ply
-1,Missy Gentry,MT,82.5,80,35,,97.5,,97.5,F,Open,Raw
-1,Missy Gentry,MT,82.5,80,35,,97.5,,97.5,F,Submaster 35-39,Raw
-1,Chris Bohenek,MT,100,98.3,40,,157.5,,157.5,M,Master 40-44,Raw
-1,Kyle Nordstrom,MT,110,107.45,32,,,305,305,M,Open,Raw
-1,Chris Bohenek,MT,100,98.3,40,,,202.5,202.5,M,Master 40-44,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Sarah Yovetich,MT,75,67.6,22,107.5,70,147.5,325,F,Junior 20-23,Raw,SBD
+1,Brook Egbert,MT,90+,104.4,35,77.5,60,110,247.5,F,Open,Raw,SBD
+1,Tammy Smith,MT,82.5,78.8,49,57.5,52.5,67.5,177.5,F,Master 45-49,Raw,SBD
+DQ,Koltan Hansen,MT,75,74.6,23,175,-110,220,,M,Junior 20-23,Raw,SBD
+1,Sharid Dunlop,MT,100,97.25,23,200,145,200,545,M,Junior 20-23,Raw,SBD
+DQ,Koltan Hansen,MT,75,74.6,23,175,-110,-220,,M,Open,Raw,SBD
+1,Sergio Gallegos,MT,82.5,81.4,31,160,120,192.5,472.5,M,Open,Raw,SBD
+1,Dallas Crandell,MT,90,89.8,24,235,132.5,300,667.5,M,Open,Raw,SBD
+2,Cody Bone,MT,90,84.7,25,185,147.5,227.5,560,M,Open,Raw,SBD
+1,Chris Bohenek,MT,100,98.3,40,185,157.5,202.5,545,M,Open,Raw,SBD
+2,Nick Blossom,MT,100,92.6,26,187.5,162.5,192.5,542.5,M,Open,Raw,SBD
+1,Donnie Tudhal,MT,110,108.3,26,282.5,205,300,787.5,M,Open,Raw,SBD
+2,Tyler Weaver,MT,110,101.1,22,207.5,155,217.5,580,M,Open,Raw,SBD
+1,Lonnie Miller,MT,125,115.8,36,167.5,115,230,512.5,M,Open,Raw,SBD
+1,Rock Henderson,MT,140,138.4,44,217.5,147.5,235,600,M,Open,Raw,SBD
+1,Chris Bohenek,MT,100,98.3,40,185,157.5,202.5,545,M,Master 40-44,Raw,SBD
+1,Stan Martin,MT,140,138,44,197.5,185,230,612.5,M,Open,Wraps,SBD
+1,Stan Martin,MT,140,138,44,197.5,185,230,612.5,M,Master 40-44,Wraps,SBD
+1,Doug White,MT,75,72.1,53,130,90,125,345,M,Master 50-54,Single-ply,SBD
+1,Missy Gentry,MT,82.5,80,35,,97.5,,97.5,F,Open,Raw,B
+1,Missy Gentry,MT,82.5,80,35,,97.5,,97.5,F,Submaster 35-39,Raw,B
+1,Chris Bohenek,MT,100,98.3,40,,157.5,,157.5,M,Master 40-44,Raw,B
+1,Kyle Nordstrom,MT,110,107.45,32,,,305,305,M,Open,Raw,D
+1,Chris Bohenek,MT,100,98.3,40,,,202.5,202.5,M,Master 40-44,Raw,D

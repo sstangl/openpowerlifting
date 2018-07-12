@@ -1,37 +1,37 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-DQ,Cassandra Verwys,MO,67.5,62.3,30,-85,45,125,,F,Open,Raw
-1,Ruthie Duncan,MO,67.5,67.5,14,97.5,42.5,110,250,F,Open,Raw
-1,Tonya Hodges,MO,67.5,66.9,42,85,57.5,115,257.5,F,Master 40-44,Raw
-1,Sheena Hodges,MO,75,75,32,147.5,80,170,397.5,F,Open,Raw
-2,Rachel Zaborowski,IL,75,74.9,28,110,65,147.5,322.5,F,Open,Raw
-1,Barbara Jackson,IL,90,84,23,97.5,52.5,120,270,F,Open,Raw
-1,Anna Haney,MO,82.5,80.6,67,102.5,62.5,112.5,277.5,F,Master 65-69,Raw
-1,Jannell Abbott,MO,90,85.7,32,100,60,97.5,257.5,F,Open,Raw
-1,Anthonie Esparza,MO,60,55.9,15,107.5,70,135,312.5,M,Junior 13-15,Raw
-1,Drew Powell,VA,67.5,65.2,15,127.5,80,137.5,345,M,Junior 13-15,Raw
-1,Chris Lukefahr,MO,90,89.6,29,232.5,175,260,667.5,M,Open,Raw
-2,Chris Pittman,MO,90,88.3,28,252.5,142.5,250,645,M,Open,Raw
-1,Alex Whelan,MO,100,97.7,21,252.5,177.5,287.5,717.5,M,Open,Raw
-2,Josh Luttrell,MO,100,95.6,24,195,160,207.5,562.5,M,Open,Raw
-3,Kaleb Kordes,MO,100,97.8,25,195,137.5,215,547.5,M,Open,Raw
-1,Alex Whelan,MO,100,97.7,21,252.5,177.5,287.5,717.5,M,Junior 20-23,Raw
-1,Jace Hale,MO,125,123.1,20,237.5,137.5,250,625,M,Junior 23-24,Raw
-DQ,Daniel Duncan,MO,125,123,23,227.5,-165,237.5,,M,Junior 23-24,Raw
-1,James Cornett,MO,125,114,37,137.5,145,182.5,465,M,Submaster,Raw
-1,Noah Duncan,MO,140,135.3,18,192.5,115,210,517.5,M,Submaster,Raw
-1,William Duncan,MO,140+,175.8,57,240,127.5,212.5,580,M,Open,Raw
-1,William Duncan,MO,140+,175.8,57,240,127.5,212.5,580,M,Master 55-59,Raw
-1,Carrie Grissinger,MO,67.5,67.1,37,183.5,97.5,210,491,F,Open,Wraps
-2,Imilie McCutchen,MO,67.5,66.1,27,92.5,70,127.5,290,F,Open,Wraps
-3,Tara Stone,MO,67.5,65.8,29,85,40,87.5,212.5,F,Open,Wraps
-1,Leanna Taylor,MO,67.5,63,23,110,45,117.5,272.5,F,Open,Wraps
-1,Frankie Murrieta,MO,67.5,66.9,35,172.5,125,200,497.5,M,Submaster,Wraps
-1,Evan Forrest,MO,90,87,21,182.5,112.5,215,510,M,Junior 20-23,Wraps
-1,Charles Zimmerman,MO,90,86.1,54,140,102.5,150,392.5,M,Master 50-54,Wraps
-DQ,William Mathley,MO,100,97.1,30,267.5,-175,252.5,,M,Open,Wraps
-1,Chase Willis,MO,110,101.8,20,282.5,160,262.5,705,M,Junior 20-23,Wraps
-1,Jackson Geisler,MO,110,109.8,19,217.5,145,230,592.5,M,Junior 18-19,Wraps
-1,Frank Marshall,MO,125,111.8,24,222.5,122.5,252.5,597.5,M,Open,Wraps
-1,Melissa Squires,KS,90+,136.8,32,212.5,105,182.5,500,F,Open,Single-ply
-1,Andrew Thullesen,MO,110,109.2,17,,137.5,,137.5,M,Junior 16-17,Raw
-1,Andrew Thullesen,MO,110,109.2,17,,,227.5,227.5,M,Junior 16-17,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+DQ,Cassandra Verwys,MO,67.5,62.3,30,-85,45,125,,F,Open,Raw,SBD
+1,Ruthie Duncan,MO,67.5,67.5,14,97.5,42.5,110,250,F,Open,Raw,SBD
+1,Tonya Hodges,MO,67.5,66.9,42,85,57.5,115,257.5,F,Master 40-44,Raw,SBD
+1,Sheena Hodges,MO,75,75,32,147.5,80,170,397.5,F,Open,Raw,SBD
+2,Rachel Zaborowski,IL,75,74.9,28,110,65,147.5,322.5,F,Open,Raw,SBD
+1,Barbara Jackson,IL,90,84,23,97.5,52.5,120,270,F,Open,Raw,SBD
+1,Anna Haney,MO,82.5,80.6,67,102.5,62.5,112.5,277.5,F,Master 65-69,Raw,SBD
+1,Jannell Abbott,MO,90,85.7,32,100,60,97.5,257.5,F,Open,Raw,SBD
+1,Anthonie Esparza,MO,60,55.9,15,107.5,70,135,312.5,M,Junior 13-15,Raw,SBD
+1,Drew Powell,VA,67.5,65.2,15,127.5,80,137.5,345,M,Junior 13-15,Raw,SBD
+1,Chris Lukefahr,MO,90,89.6,29,232.5,175,260,667.5,M,Open,Raw,SBD
+2,Chris Pittman,MO,90,88.3,28,252.5,142.5,250,645,M,Open,Raw,SBD
+1,Alex Whelan,MO,100,97.7,21,252.5,177.5,287.5,717.5,M,Open,Raw,SBD
+2,Josh Luttrell,MO,100,95.6,24,195,160,207.5,562.5,M,Open,Raw,SBD
+3,Kaleb Kordes,MO,100,97.8,25,195,137.5,215,547.5,M,Open,Raw,SBD
+1,Alex Whelan,MO,100,97.7,21,252.5,177.5,287.5,717.5,M,Junior 20-23,Raw,SBD
+1,Jace Hale,MO,125,123.1,20,237.5,137.5,250,625,M,Junior 23-24,Raw,SBD
+DQ,Daniel Duncan,MO,125,123,23,227.5,-165,237.5,,M,Junior 23-24,Raw,SBD
+1,James Cornett,MO,125,114,37,137.5,145,182.5,465,M,Submaster,Raw,SBD
+1,Noah Duncan,MO,140,135.3,18,192.5,115,210,517.5,M,Submaster,Raw,SBD
+1,William Duncan,MO,140+,175.8,57,240,127.5,212.5,580,M,Open,Raw,SBD
+1,William Duncan,MO,140+,175.8,57,240,127.5,212.5,580,M,Master 55-59,Raw,SBD
+1,Carrie Grissinger,MO,67.5,67.1,37,183.5,97.5,210,491,F,Open,Wraps,SBD
+2,Imilie McCutchen,MO,67.5,66.1,27,92.5,70,127.5,290,F,Open,Wraps,SBD
+3,Tara Stone,MO,67.5,65.8,29,85,40,87.5,212.5,F,Open,Wraps,SBD
+1,Leanna Taylor,MO,67.5,63,23,110,45,117.5,272.5,F,Open,Wraps,SBD
+1,Frankie Murrieta,MO,67.5,66.9,35,172.5,125,200,497.5,M,Submaster,Wraps,SBD
+1,Evan Forrest,MO,90,87,21,182.5,112.5,215,510,M,Junior 20-23,Wraps,SBD
+1,Charles Zimmerman,MO,90,86.1,54,140,102.5,150,392.5,M,Master 50-54,Wraps,SBD
+DQ,William Mathley,MO,100,97.1,30,267.5,-175,252.5,,M,Open,Wraps,SBD
+1,Chase Willis,MO,110,101.8,20,282.5,160,262.5,705,M,Junior 20-23,Wraps,SBD
+1,Jackson Geisler,MO,110,109.8,19,217.5,145,230,592.5,M,Junior 18-19,Wraps,SBD
+1,Frank Marshall,MO,125,111.8,24,222.5,122.5,252.5,597.5,M,Open,Wraps,SBD
+1,Melissa Squires,KS,90+,136.8,32,212.5,105,182.5,500,F,Open,Single-ply,SBD
+1,Andrew Thullesen,MO,110,109.2,17,,137.5,,137.5,M,Junior 16-17,Raw,B
+1,Andrew Thullesen,MO,110,109.2,17,,,227.5,227.5,M,Junior 16-17,Raw,D

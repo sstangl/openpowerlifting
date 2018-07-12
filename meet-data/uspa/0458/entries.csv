@@ -1,41 +1,41 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Calie Cheler,TX,60,58.88,17,117.5,52.5,141,311,F,Junior 16-17,Raw
-1,Calie Cheler,TX,60,58.88,17,117.5,52.5,141,311,F,Open,Raw
-1,Tammy Lauer,MN,67.5,63.82,50,87.5,67.5,105,260,F,Open,Raw
-2,Jenna Kroning,MN,67.5,66.63,26,77.5,47.5,107.5,232.5,F,Open,Raw
-3,Cayla Penn,MN,67.5,63.28,23,62.5,40,92.5,195,F,Open,Raw
-1,Briana Linnerooth,MN,75,74.57,17,82.5,42.5,142.5,267.5,F,Open,Raw
-1,Tammy Lauer,MN,67.5,63.82,50,87.5,67.5,105,260,F,Master 50-54,Raw
-1,Jacob Kari,MI,67.5,64.41,20,132.5,82.5,182.5,397.5,M,Junior 20-23,Raw
-1,Alex Fuentes,MN,82.5,80.69,23,145,112.5,197.5,455,M,Junior 20-23,Raw
-1,Isaac Muhovich,MN,67.5,67.13,25,142.5,85,182.5,410,M,Open,Raw
-2,Jacob Kari,MI,67.5,64.41,20,132.5,82.5,182.5,397.5,M,Open,Raw
-1,Jerad Parish,MN,75,73.62,34,130,120,172.5,422.5,M,Open,Raw
-1,Tyler Trent,MN,82.5,79.51,20,162.5,125,192.5,480,M,Open,Raw
-2,Alex Fuentes,MN,82.5,80.69,23,145,112.5,197.5,455,M,Open,Raw
-1,Matt Hanson,IL,90,87.32,25,192.5,145,245,582.5,M,Open,Raw
-2,Blake Schwieters,MN,90,88.95,24,175,110,217.5,502.5,M,Open,Raw
-3,Michael Larson,WI,90,88.59,29,170,102.5,197.5,470,M,Open,Raw
-1,Thomas Wamstad,MN,100,98.52,26,190,165,227.5,582.5,M,Open,Raw
-1,Harrison Lerner,MN,110,106.32,22,140,97.5,190,427.5,M,Open,Raw
-1,Carolyn Wilson,MN,60,58.88,45,117.5,72.5,125,315,F,Open,Wraps
-1,Carolyn Wilson,MN,60,58.88,45,117.5,72.5,125,315,F,Master 45-49,Wraps
-1,Steven Morris,MN,90,86.14,25,185,120,230,535,M,Open,Wraps
-1,Pat Driscoll,MN,140+,146.06,24,177.5,120,230,527.5,M,Open,Wraps
-1,Brad Kretch,MN,125,122.79,58,257.5,117.5,292.5,667.5,M,Master 55-59,Wraps
-DQ,Richard Hanson,MN,100,99.97,26,-252.5,150,227.5,,M,Open,Multi-ply
-1,Tom Fahy,MN,110,107.46,50,287.5,210,297.5,795,M,Open,Multi-ply
-1,Tom Fahy,MN,110,107.46,50,287.5,210,297.5,795,M,Master 50-54,Multi-ply
-1,Tammy Lauer,MN,67.5,63.82,50,,67.5,,67.5,F,Master 50-55,Raw
-1,Cory Pederson,MN,75,72.94,33,,140,,140,M,Open,Raw
-1,Mike Ross,MN,100,98.97,33,,195,,195,M,Open,Raw
-1,Dan McDonald,MN,125,112.04,32,,182.5,,182.5,M,Open,Raw
-2,John Yurkovich,MN,125,112.17,71,,135,,135,M,Open,Raw
-1,John Yurkovich,MN,125,112.17,71,,135,,135,M,Master 70-74,Raw
-G,Samantha LeClair 'Guest Lifter',MN,48,44.81,12,,,80,80,F,Junior,Raw
-1,Haley Anderson,MN,60,57.15,16,,,107.5,107.5,F,Junior 16-17,Raw
-1,Antonio Okamoto,MN,75,74.07,16,,,185,185,M,Junior 16-17,Raw
-1,Kristian Helgeson,MN,100,97.16,22,,,182.5,182.5,M,Junior 20-23,Raw
-1,Antonio Okamoto,MN,75,74.07,16,,,185,185,M,Open,Raw
-1,Kristian Helgeson,MN,100,97.16,22,,,182.5,182.5,M,Open,Raw
-1,Jason Buccek,MN,140+,151.95,37,,,282.5,282.5,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Calie Cheler,TX,60,58.88,17,117.5,52.5,141,311,F,Junior 16-17,Raw,SBD
+1,Calie Cheler,TX,60,58.88,17,117.5,52.5,141,311,F,Open,Raw,SBD
+1,Tammy Lauer,MN,67.5,63.82,50,87.5,67.5,105,260,F,Open,Raw,SBD
+2,Jenna Kroning,MN,67.5,66.63,26,77.5,47.5,107.5,232.5,F,Open,Raw,SBD
+3,Cayla Penn,MN,67.5,63.28,23,62.5,40,92.5,195,F,Open,Raw,SBD
+1,Briana Linnerooth,MN,75,74.57,17,82.5,42.5,142.5,267.5,F,Open,Raw,SBD
+1,Tammy Lauer,MN,67.5,63.82,50,87.5,67.5,105,260,F,Master 50-54,Raw,SBD
+1,Jacob Kari,MI,67.5,64.41,20,132.5,82.5,182.5,397.5,M,Junior 20-23,Raw,SBD
+1,Alex Fuentes,MN,82.5,80.69,23,145,112.5,197.5,455,M,Junior 20-23,Raw,SBD
+1,Isaac Muhovich,MN,67.5,67.13,25,142.5,85,182.5,410,M,Open,Raw,SBD
+2,Jacob Kari,MI,67.5,64.41,20,132.5,82.5,182.5,397.5,M,Open,Raw,SBD
+1,Jerad Parish,MN,75,73.62,34,130,120,172.5,422.5,M,Open,Raw,SBD
+1,Tyler Trent,MN,82.5,79.51,20,162.5,125,192.5,480,M,Open,Raw,SBD
+2,Alex Fuentes,MN,82.5,80.69,23,145,112.5,197.5,455,M,Open,Raw,SBD
+1,Matt Hanson,IL,90,87.32,25,192.5,145,245,582.5,M,Open,Raw,SBD
+2,Blake Schwieters,MN,90,88.95,24,175,110,217.5,502.5,M,Open,Raw,SBD
+3,Michael Larson,WI,90,88.59,29,170,102.5,197.5,470,M,Open,Raw,SBD
+1,Thomas Wamstad,MN,100,98.52,26,190,165,227.5,582.5,M,Open,Raw,SBD
+1,Harrison Lerner,MN,110,106.32,22,140,97.5,190,427.5,M,Open,Raw,SBD
+1,Carolyn Wilson,MN,60,58.88,45,117.5,72.5,125,315,F,Open,Wraps,SBD
+1,Carolyn Wilson,MN,60,58.88,45,117.5,72.5,125,315,F,Master 45-49,Wraps,SBD
+1,Steven Morris,MN,90,86.14,25,185,120,230,535,M,Open,Wraps,SBD
+1,Pat Driscoll,MN,140+,146.06,24,177.5,120,230,527.5,M,Open,Wraps,SBD
+1,Brad Kretch,MN,125,122.79,58,257.5,117.5,292.5,667.5,M,Master 55-59,Wraps,SBD
+DQ,Richard Hanson,MN,100,99.97,26,-252.5,150,227.5,,M,Open,Multi-ply,SBD
+1,Tom Fahy,MN,110,107.46,50,287.5,210,297.5,795,M,Open,Multi-ply,SBD
+1,Tom Fahy,MN,110,107.46,50,287.5,210,297.5,795,M,Master 50-54,Multi-ply,SBD
+1,Tammy Lauer,MN,67.5,63.82,50,,67.5,,67.5,F,Master 50-55,Raw,B
+1,Cory Pederson,MN,75,72.94,33,,140,,140,M,Open,Raw,B
+1,Mike Ross,MN,100,98.97,33,,195,,195,M,Open,Raw,B
+1,Dan McDonald,MN,125,112.04,32,,182.5,,182.5,M,Open,Raw,B
+2,John Yurkovich,MN,125,112.17,71,,135,,135,M,Open,Raw,B
+1,John Yurkovich,MN,125,112.17,71,,135,,135,M,Master 70-74,Raw,B
+G,Samantha LeClair 'Guest Lifter',MN,48,44.81,12,,,80,80,F,Junior,Raw,D
+1,Haley Anderson,MN,60,57.15,16,,,107.5,107.5,F,Junior 16-17,Raw,D
+1,Antonio Okamoto,MN,75,74.07,16,,,185,185,M,Junior 16-17,Raw,D
+1,Kristian Helgeson,MN,100,97.16,22,,,182.5,182.5,M,Junior 20-23,Raw,D
+1,Antonio Okamoto,MN,75,74.07,16,,,185,185,M,Open,Raw,D
+1,Kristian Helgeson,MN,100,97.16,22,,,182.5,182.5,M,Open,Raw,D
+1,Jason Buccek,MN,140+,151.95,37,,,282.5,282.5,M,Open,Raw,D

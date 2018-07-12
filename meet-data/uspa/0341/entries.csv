@@ -1,29 +1,29 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Mary Hammett,1,Open Women,F,Raw,WV,52,51.17,28,75,35,92.5,202.5
-Ashley Funk,1,Open Women,F,Raw,WV,56,54.25,28,90,42.5,130,262.5
-Cary Cochran,2,Open Women,F,Raw,WV,56,55.07,30,85,55,102.5,242.5
-Carla Compton,1,Open Women,F,Raw,WV,82.5,80.10,30,117.5,70,137.5,325
-Jessica Tincher,1,Open Women,F,Raw,WV,90,84.64,33,117.5,72.5,162.5,352.5
-Candice Crouse,1,Submaster Women 35-39,F,Raw,WV,52,51.44,35,72.5,40,102.5,215
-Sidney Scott,1,Submaster Women 35-39,F,Raw,WV,75,69.49,36,82.5,47.5,137.5,267.5
-Sidney Scott,1,Submaster Women 35-39,F,Raw,WV,82.5,81.92,35,85,47.5,115,247.5
-Michelle Turk,1,Master Women 40-44,F,Raw,WV,52,50.89,44,82.5,52.5,97.5,232.5
-Lisa Gunther,1,Master Women 50-54,F,Raw,WV,67.5,62.78,50,82.5,45,105,232.5
-Tyler Wither,1,Junior Men 20-23,M,Raw,WV,75,73.84,21,165,115,200,480
-Matthew Hess,1,Junior Men 20-23,M,Raw,WV,100,94.80,23,185,167.5,240,592.5
-Quentin Resendiz,1,Junior Men 18-19,M,Raw,WV,140+,167.83,18,237.5,152.5,225,615
-Damien Pezzuti,1,Open Men,M,Raw,WV,82.5,82.44,27,280,172.5,257.5,710
-Danny Walls,1,Open Men,M,Raw,WV,90,89.81,26,242.5,162.5,292.5,697.5
-Nicholas Rookstool,2,Open Men,M,Raw,WV,90,89.27,20,182.5,170,227.5,580
-Jeremy Neff,3,Open Men,M,Raw,WV,90,89.81,32,192.5,137.5,250,580
-Benjamin Borsman,4,Open Men,M,Raw,WV,90,89.72,26,182.5,142.5,227.5,552.5
-Austin Steffey,1,Open Men,M,Raw,WV,125,117.12,24,227.5,175,272.5,675
-Derrick Martin,1,Open Men,M,Raw,WV,140,127.37,30,250,210,310,770
-Simeon Kees,DQ,Open Men,M,Raw,WV,140,132.27,18,215,-160,230,
-Heath Forren,1,Submaster Men 35-39,M,Raw,WV,75,73.98,36,155,130,172.5,457.5
-Ryan Scott,1,Submaster Men 35-39,M,Raw,WV,82.5,80.78,36,157.5,100,182.5,440
-Makie McCormick,DQ,Submaster Men 35-39,M,Raw,WV,140+,175.09,36,217.5,,,
-Clayton Workman,DQ,Submaster Men 35-39,M,Raw,WV,140,127.73,38,,,237.5,
-Jamie Greene,1,Master Men 40-44,M,Raw,WV,100,97.70,42,142.5,97.5,172.5,412.5
-Thomas Murray,1,Open Men,M,Raw,WV,140+,164.20,25,,250,,250
-Mike Myers,1,Open Men,M,Raw,WV,125,121.29,34,,152.5,242.5,395
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Mary Hammett,1,Open Women,F,Raw,WV,52,51.17,28,75,35,92.5,202.5,SBD
+Ashley Funk,1,Open Women,F,Raw,WV,56,54.25,28,90,42.5,130,262.5,SBD
+Cary Cochran,2,Open Women,F,Raw,WV,56,55.07,30,85,55,102.5,242.5,SBD
+Carla Compton,1,Open Women,F,Raw,WV,82.5,80.1,30,117.5,70,137.5,325,SBD
+Jessica Tincher,1,Open Women,F,Raw,WV,90,84.64,33,117.5,72.5,162.5,352.5,SBD
+Candice Crouse,1,Submaster Women 35-39,F,Raw,WV,52,51.44,35,72.5,40,102.5,215,SBD
+Sidney Scott,1,Submaster Women 35-39,F,Raw,WV,75,69.49,36,82.5,47.5,137.5,267.5,SBD
+Sidney Scott,1,Submaster Women 35-39,F,Raw,WV,82.5,81.92,35,85,47.5,115,247.5,SBD
+Michelle Turk,1,Master Women 40-44,F,Raw,WV,52,50.89,44,82.5,52.5,97.5,232.5,SBD
+Lisa Gunther,1,Master Women 50-54,F,Raw,WV,67.5,62.78,50,82.5,45,105,232.5,SBD
+Tyler Wither,1,Junior Men 20-23,M,Raw,WV,75,73.84,21,165,115,200,480,SBD
+Matthew Hess,1,Junior Men 20-23,M,Raw,WV,100,94.8,23,185,167.5,240,592.5,SBD
+Quentin Resendiz,1,Junior Men 18-19,M,Raw,WV,140+,167.83,18,237.5,152.5,225,615,SBD
+Damien Pezzuti,1,Open Men,M,Raw,WV,82.5,82.44,27,280,172.5,257.5,710,SBD
+Danny Walls,1,Open Men,M,Raw,WV,90,89.81,26,242.5,162.5,292.5,697.5,SBD
+Nicholas Rookstool,2,Open Men,M,Raw,WV,90,89.27,20,182.5,170,227.5,580,SBD
+Jeremy Neff,3,Open Men,M,Raw,WV,90,89.81,32,192.5,137.5,250,580,SBD
+Benjamin Borsman,4,Open Men,M,Raw,WV,90,89.72,26,182.5,142.5,227.5,552.5,SBD
+Austin Steffey,1,Open Men,M,Raw,WV,125,117.12,24,227.5,175,272.5,675,SBD
+Derrick Martin,1,Open Men,M,Raw,WV,140,127.37,30,250,210,310,770,SBD
+Simeon Kees,DQ,Open Men,M,Raw,WV,140,132.27,18,215,-160,230,,SBD
+Heath Forren,1,Submaster Men 35-39,M,Raw,WV,75,73.98,36,155,130,172.5,457.5,SBD
+Ryan Scott,1,Submaster Men 35-39,M,Raw,WV,82.5,80.78,36,157.5,100,182.5,440,SBD
+Makie McCormick,DQ,Submaster Men 35-39,M,Raw,WV,140+,175.09,36,217.5,,,,SBD
+Clayton Workman,DQ,Submaster Men 35-39,M,Raw,WV,140,127.73,38,,,237.5,,SBD
+Jamie Greene,1,Master Men 40-44,M,Raw,WV,100,97.7,42,142.5,97.5,172.5,412.5,SBD
+Thomas Murray,1,Open Men,M,Raw,WV,140+,164.2,25,,250,,250,B
+Mike Myers,1,Open Men,M,Raw,WV,125,121.29,34,,152.5,242.5,395,BD

@@ -1,46 +1,46 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg
-1,Tayler Claflin,WY,67.5,66.2,16,67.5,,67.5,F,Junior 16-17,Raw,
-1,Emilee White,UT,75,68.2,20,52.5,,52.5,F,Junior 20-23,Raw,
-1,Paola Johnson,UT,52,51.5,27,52.5,,52.5,F,Open,Raw,55
-1,Vonda Searle,UT,75,70.4,28,62.5,,62.5,F,Open,Raw,
-1,Christy James,ID,90,87.2,39,50,,50,F,Open,Raw,
-1,Kimberly Nielson,UT,90+,118.2,34,70,,70,F,Open,Raw,
-1,Kelli Hoopes,WY,52,50.8,37,52.5,,52.5,F,Submaster 35-39,Raw,
-1,Trevor Patton,UT,90,89.6,18,150,,150,M,Junior 18-19,Raw,
-1,Parker Hansen,UT,100,94.4,22,142.5,,142.5,M,Junior,Raw,
-1,Andrew Peterson,UT,100,91.8,36,195,,195,M,Open,Raw,
-1,Josh Bybee,UT,110,108,31,165,,165,M,Open,Raw,
-1,Nickolas Damron,UT,125,122.2,27,150,,150,M,Open,Raw,
-1,Matt Doxey,UT,140,132,27,192.5,,192.5,M,Open,Raw,
-1,CJ Jenkins,UT,140+,142,35,207.5,,207.5,M,Open,Raw,
-1,Andrew Peterson,UT,100,91.8,36,195,,195,M,Submaster 35-39,Raw,
-1,Haili K. Kupuka'a,UT,110,106.5,35,147.5,,147.5,M,Submaster 35-39,Raw,
-1,Karl Pfanzelter,UT,100,96.4,44,217.5,,217.5,M,Master 40-44,Raw,
-1,Issac Warnock,UT,125,119.2,44,142.5,,142.5,M,Master 40-44,Raw,
-1,Zach Hallford,UT,100,95.2,19,195,,195,M,Junior 18-19,Single-ply,
-1,Scott Mecham,UT,110,109.2,36,367.5,,367.5,M,Open,Single-ply,
-2,Mike Saunders,UT,110,106.6,36,300,,300,M,Open,Single-ply,
-1,Melissa Nations,UT,75,72,36,75,,75,F,Submaster 35-39,Multi-ply,
-1,Dana Walker,UT,90,84.2,38,265,,265,M,Open,Multi-ply,
-1,Dino Simonetti,UT,110,102.8,57,125,,125,M,Master 55-59,Multi-ply,
-1,Tayler Claflin,WY,67.5,66.2,16,,102.5,102.5,F,Junior 16-17,Raw,
-1,Cady Lancaster,UT,60,58,25,,102.5,102.5,F,Open,Raw,
-1,Vonda Searle,UT,75,70.4,28,,172.5,172.5,F,Open,Raw,
-1,Christy James,UT,90,87.2,39,,150,150,F,Open,Raw,
-1,Kimberly Nielson,UT,90+,118.2,34,,95,95,F,Open,Raw,
-1,Kelli Hoopes,WY,52,50.8,37,,130,130,F,Submaster,Raw,
-1,Parker Hansen,UT,100,94.4,22,,240,240,M,Junior,Raw,
-1,Obinna Owah,UT,125,117.8,23,,320,320,M,Junior,Raw,
-1,Andrew Peterson,UT,100,91.8,36,,240,240,M,Open,Raw,
-1,Josh Bybee,UT,110,108,31,,262.5,262.5,M,Open,Raw,
-1,Matt Doxey,UT,140,132,27,,272.5,272.5,M,Open,Raw,
-1,CJ Jenkins,UT,140+,142,35,,297.5,297.5,M,Open,Raw,
-1,Andrew Peterson,UT,100,91.8,36,,240,240,M,Submaster 35-39,Raw,
-1,Haili K. Kupuka'a,UT,110,106.5,35,,227.5,227.5,M,Submaster 35-39,Raw,
-1,George Wallis,UT,75,74.2,61,,155,155,M,Master 60-64,Raw,
-1,Issac Warnock,UT,125,119.2,41,,220,220,M,Master 40-44,Raw,
-1,Zach Hallford,UT,100,95.2,19,,227.5,227.5,M,Junior 18-19,Single-ply,
-1,Mike Saunders,UT,110,106.6,36,,300,300,M,Open,Single-ply,
-1,Melissa Nations,UT,75,72,36,,115,115,F,Submaster 35-39,Multi-ply,
-1,Dana Walker,UT,90,84.2,38,,272.5,272.5,M,Open,Multi-ply,
-1,Dino Simonetti,UT,110,102.8,57,,215,215,M,Master 55-59,Multi-ply,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Event
+1,Tayler Claflin,WY,67.5,66.2,16,67.5,,67.5,F,Junior 16-17,Raw,,B
+1,Emilee White,UT,75,68.2,20,52.5,,52.5,F,Junior 20-23,Raw,,B
+1,Paola Johnson,UT,52,51.5,27,52.5,,52.5,F,Open,Raw,55,B
+1,Vonda Searle,UT,75,70.4,28,62.5,,62.5,F,Open,Raw,,B
+1,Christy James,ID,90,87.2,39,50,,50,F,Open,Raw,,B
+1,Kimberly Nielson,UT,90+,118.2,34,70,,70,F,Open,Raw,,B
+1,Kelli Hoopes,WY,52,50.8,37,52.5,,52.5,F,Submaster 35-39,Raw,,B
+1,Trevor Patton,UT,90,89.6,18,150,,150,M,Junior 18-19,Raw,,B
+1,Parker Hansen,UT,100,94.4,22,142.5,,142.5,M,Junior,Raw,,B
+1,Andrew Peterson,UT,100,91.8,36,195,,195,M,Open,Raw,,B
+1,Josh Bybee,UT,110,108,31,165,,165,M,Open,Raw,,B
+1,Nickolas Damron,UT,125,122.2,27,150,,150,M,Open,Raw,,B
+1,Matt Doxey,UT,140,132,27,192.5,,192.5,M,Open,Raw,,B
+1,CJ Jenkins,UT,140+,142,35,207.5,,207.5,M,Open,Raw,,B
+1,Andrew Peterson,UT,100,91.8,36,195,,195,M,Submaster 35-39,Raw,,B
+1,Haili K. Kupuka'a,UT,110,106.5,35,147.5,,147.5,M,Submaster 35-39,Raw,,B
+1,Karl Pfanzelter,UT,100,96.4,44,217.5,,217.5,M,Master 40-44,Raw,,B
+1,Issac Warnock,UT,125,119.2,44,142.5,,142.5,M,Master 40-44,Raw,,B
+1,Zach Hallford,UT,100,95.2,19,195,,195,M,Junior 18-19,Single-ply,,B
+1,Scott Mecham,UT,110,109.2,36,367.5,,367.5,M,Open,Single-ply,,B
+2,Mike Saunders,UT,110,106.6,36,300,,300,M,Open,Single-ply,,B
+1,Melissa Nations,UT,75,72,36,75,,75,F,Submaster 35-39,Multi-ply,,B
+1,Dana Walker,UT,90,84.2,38,265,,265,M,Open,Multi-ply,,B
+1,Dino Simonetti,UT,110,102.8,57,125,,125,M,Master 55-59,Multi-ply,,B
+1,Tayler Claflin,WY,67.5,66.2,16,,102.5,102.5,F,Junior 16-17,Raw,,D
+1,Cady Lancaster,UT,60,58,25,,102.5,102.5,F,Open,Raw,,D
+1,Vonda Searle,UT,75,70.4,28,,172.5,172.5,F,Open,Raw,,D
+1,Christy James,UT,90,87.2,39,,150,150,F,Open,Raw,,D
+1,Kimberly Nielson,UT,90+,118.2,34,,95,95,F,Open,Raw,,D
+1,Kelli Hoopes,WY,52,50.8,37,,130,130,F,Submaster,Raw,,D
+1,Parker Hansen,UT,100,94.4,22,,240,240,M,Junior,Raw,,D
+1,Obinna Owah,UT,125,117.8,23,,320,320,M,Junior,Raw,,D
+1,Andrew Peterson,UT,100,91.8,36,,240,240,M,Open,Raw,,D
+1,Josh Bybee,UT,110,108,31,,262.5,262.5,M,Open,Raw,,D
+1,Matt Doxey,UT,140,132,27,,272.5,272.5,M,Open,Raw,,D
+1,CJ Jenkins,UT,140+,142,35,,297.5,297.5,M,Open,Raw,,D
+1,Andrew Peterson,UT,100,91.8,36,,240,240,M,Submaster 35-39,Raw,,D
+1,Haili K. Kupuka'a,UT,110,106.5,35,,227.5,227.5,M,Submaster 35-39,Raw,,D
+1,George Wallis,UT,75,74.2,61,,155,155,M,Master 60-64,Raw,,D
+1,Issac Warnock,UT,125,119.2,41,,220,220,M,Master 40-44,Raw,,D
+1,Zach Hallford,UT,100,95.2,19,,227.5,227.5,M,Junior 18-19,Single-ply,,D
+1,Mike Saunders,UT,110,106.6,36,,300,300,M,Open,Single-ply,,D
+1,Melissa Nations,UT,75,72,36,,115,115,F,Submaster 35-39,Multi-ply,,D
+1,Dana Walker,UT,90,84.2,38,,272.5,272.5,M,Open,Multi-ply,,D
+1,Dino Simonetti,UT,110,102.8,57,,215,215,M,Master 55-59,Multi-ply,,D

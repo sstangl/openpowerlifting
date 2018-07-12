@@ -1,27 +1,27 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Cari Crabtree,VA,60,58.90,22,140.00,82.50,150.00,372.50,F,Junior 20-23,Raw
-1,April Blais,VA,67.5,63.20,32,120.00,65.00,117.50,302.50,F,Open,Raw
-2,Jennifer Boozer,NC,67.5,64.70,26,95.00,47.50,115.00,257.50,F,Open,Raw
-1,Danielle Mouring,VA,75,74.40,29,95.00,55.00,132.50,282.50,F,Open,Raw
-2,Taylor Wright,VA,75,74.90,20,85.00,52.50,105.00,242.50,F,Open,Raw
-1,Liz Strain,VA,67.5,64.70,35,117.50,77.50,137.50,332.50,F,Submaster 35-39,Raw
-2,Amy White,VA,67.5,66.70,36,107.50,62.50,137.50,307.50,F,Submaster 35-39,Raw
-3,Sarah Walls,VA,67.5,67.40,35,80.00,65.00,112.50,257.50,F,Submaster 35-39,Raw
-1,Brigitte Williams,VA,67.5,62.20,50,80.00,60.00,100.00,240.00,F,Master 50-54,Raw
-1,Nathan Smith,VA,82.5,78.40,22,185.00,120.00,235.00,540.00,M,Junior 20-23,Raw
-1,Jake Sears,VA,90,90.00,20,197.50,120.00,235.00,552.50,M,Junior 20-23,Raw
-1,Tucker Crawford,VA,100,97.30,23,235.00,157.50,285.00,677.50,M,Junior 20-23,Raw
-2,Joseph Link,VA,100,99.40,23,215.00,152.50,227.50,595.00,M,Junior 20-23,Raw
-1,Christopher Mandoudis,VA,82.5,82.40,29,160.00,120.00,232.50,512.50,M,Open,Raw
-1,Paul Panasci,VA,90,88.40,26,187.50,132.50,260.00,580.00,M,Open,Raw
-1,Steven Dickson,VA,100,91.30,28,207.50,152.50,260.00,620.00,M,Open,Raw
-1,Joshua Roy,VA,110,107.30,27,212.50,135.00,222.50,570.00,M,Open,Raw
-1,Matthew Lee,VA,140,138.20,30,230.00,155.00,247.50,632.50,M,Open,Raw
-1,Nicholas Killen,VA,125,120.20,37,250.00,197.50,300.00,747.50,M,Submaster 35-39,Raw
-1,Amber Hardman,VA,75,70.50,32,102.50,50.00,115.00,267.50,F,Open,Wraps
-1,Sourav Panth,VA,82.5,80.30,19,172.50,117.50,212.50,502.50,M,Junior 18-19,Wraps
-1,Angie Hopper,VA,75,69.80,26,,40.00,,40.00,F,Open,Raw
-1,Brigitte Williams,VA,67.5,62.20,50,,60.00,,60.00,F,Master 50-54,Raw
-1,Paul Panasci,VA,90,88.40,26,,132.50,,132.50,M,Open,Raw
-1,Angie Hopper,VA,75,69.80,26,,,112.50,112.50,F,Open,Raw
-1,Paul Panasci,VA,90,88.40,26,,,260.00,260.00,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Cari Crabtree,VA,60,58.90,22,140.00,82.50,150.00,372.50,F,Junior 20-23,Raw,SBD
+1,April Blais,VA,67.5,63.20,32,120.00,65.00,117.50,302.50,F,Open,Raw,SBD
+2,Jennifer Boozer,NC,67.5,64.70,26,95.00,47.50,115.00,257.50,F,Open,Raw,SBD
+1,Danielle Mouring,VA,75,74.40,29,95.00,55.00,132.50,282.50,F,Open,Raw,SBD
+2,Taylor Wright,VA,75,74.90,20,85.00,52.50,105.00,242.50,F,Open,Raw,SBD
+1,Liz Strain,VA,67.5,64.70,35,117.50,77.50,137.50,332.50,F,Submaster 35-39,Raw,SBD
+2,Amy White,VA,67.5,66.70,36,107.50,62.50,137.50,307.50,F,Submaster 35-39,Raw,SBD
+3,Sarah Walls,VA,67.5,67.40,35,80.00,65.00,112.50,257.50,F,Submaster 35-39,Raw,SBD
+1,Brigitte Williams,VA,67.5,62.20,50,80.00,60.00,100.00,240.00,F,Master 50-54,Raw,SBD
+1,Nathan Smith,VA,82.5,78.40,22,185.00,120.00,235.00,540.00,M,Junior 20-23,Raw,SBD
+1,Jake Sears,VA,90,90.00,20,197.50,120.00,235.00,552.50,M,Junior 20-23,Raw,SBD
+1,Tucker Crawford,VA,100,97.30,23,235.00,157.50,285.00,677.50,M,Junior 20-23,Raw,SBD
+2,Joseph Link,VA,100,99.40,23,215.00,152.50,227.50,595.00,M,Junior 20-23,Raw,SBD
+1,Christopher Mandoudis,VA,82.5,82.40,29,160.00,120.00,232.50,512.50,M,Open,Raw,SBD
+1,Paul Panasci,VA,90,88.40,26,187.50,132.50,260.00,580.00,M,Open,Raw,SBD
+1,Steven Dickson,VA,100,91.30,28,207.50,152.50,260.00,620.00,M,Open,Raw,SBD
+1,Joshua Roy,VA,110,107.30,27,212.50,135.00,222.50,570.00,M,Open,Raw,SBD
+1,Matthew Lee,VA,140,138.20,30,230.00,155.00,247.50,632.50,M,Open,Raw,SBD
+1,Nicholas Killen,VA,125,120.20,37,250.00,197.50,300.00,747.50,M,Submaster 35-39,Raw,SBD
+1,Amber Hardman,VA,75,70.50,32,102.50,50.00,115.00,267.50,F,Open,Wraps,SBD
+1,Sourav Panth,VA,82.5,80.30,19,172.50,117.50,212.50,502.50,M,Junior 18-19,Wraps,SBD
+1,Angie Hopper,VA,75,69.80,26,,40.00,,40.00,F,Open,Raw,B
+1,Brigitte Williams,VA,67.5,62.20,50,,60.00,,60.00,F,Master 50-54,Raw,B
+1,Paul Panasci,VA,90,88.40,26,,132.50,,132.50,M,Open,Raw,B
+1,Angie Hopper,VA,75,69.80,26,,,112.50,112.50,F,Open,Raw,D
+1,Paul Panasci,VA,90,88.40,26,,,260.00,260.00,M,Open,Raw,D

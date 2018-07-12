@@ -1,37 +1,37 @@
-Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Samantha Perkins,DQ,Open Women,F,Raw,60,59.92,29,60,-42.5,90,
-Sheri Styles,1,Open Women,F,Raw,75,71.40,25,125,70,182.5,377.5
-Amy Simmer,1,Open Women,F,Raw,82.5,82.05,42,167.5,100,182.5,450
-Amy Simmer,1,Master Women 40-44,F,Raw,82.5,82.05,42,167.5,100,182.5,450
-Ian Vaughan,1,Junior Men 16-17,M,Raw,75,69.49,17,130,87.5,167.5,385
-Garrett Kelm,1,Junior Men 18-19,M,Raw,75,74.34,18,165,125,222.5,512.5
-Ian Young,1,Open Men,M,Raw,75,74.39,25,145,97.5,187.5,430
-Jerad Parish,2,Open Men,M,Raw,75,73.94,32,112.5,117.5,155,385
-Ethan Martin,1,Junior Men 13-15,M,Raw,82.5,80.47,14,115,60,122.5,297.5
-Anthony Kapsner,1,Open Men,M,Raw,82.5,81.28,29,232.5,122.5,260,615
-Shawn Ford,2,Open Men,M,Raw,82.5,80.60,30,185,102.5,195,482.5
-Cooper Brooks,1,Junior Men 13-15,M,Raw,90,88.36,15,192.5,117.5,202.5,512.5
-Auston Miller,1,Open Men,M,Raw,90,88.86,21,225,142.5,242.5,610
-Christian Fite,2,Open Men,M,Raw,90,84.28,29,190,110,252.5,552.5
-Josh Ericksen,1,Open Men,M,Raw,100,97.16,30,157.5,100,200,457.5
-Kyle Klein,DQ,Open Men,M,Raw,100,98.47,24,165,-112.5,215,
-Justin Perez,1,Junior Men 20-23,M,Raw,110,102.33,21,235,160,245,640
-Jonathan Hansen,1,Submaster Men 35-39,M,Raw,110,107.41,37,162.5,147.5,230,540
-Tom Fahy,1,Master Men 45-49,M,Raw,110,107.50,48,207.5,137.5,240,585
-Alex Luhring,1,Open Men,M,Raw,125,115.67,24,210,142.5,230,582.5
-Jeff Campbell,1,Master Men 45-49,M,Raw,125,121.97,46,232.5,177.5,215,625
-Jordan Lubich,1,Junior Men 20-23,M,Raw,140+,146.28,22,227.5,145,182.5,555
-Robert Galvan,1,Master Men 40-44,M,Raw,140+,160.98,41,242.5,167.5,237.5,647.5
-Eddie Lone Eagle,1,Open Men,M,Single-ply,75,74.80,30,240,145,242.5,627.5
-Jon Davis,1,Submaster Men 35-39,M,Single-ply,100,99.34,36,227.5,160,227.5,615
-Mike Musselman,1,Submaster Men 35-39,M,Single-ply,140,128.14,37,227.5,157.2,192.5,577.2
-Gloria Derfus,1,Master Women 55-59,F,Raw,90+,152.32,57,,60,,60
-Steven Thomes,1,Master Men 65-69,M,Raw,82.5,80.33,69,,112.5,,112.5
-James Beck,1,Submaster Men 35-39,M,Raw,100,96.89,36,,170,,170
-Ron Monroe,1,Master Men 45-49,M,Raw,110,109.00,46,,182.5,,182.5
-David Evenson,1,Master Men 50-54,M,Raw,140,129.46,50,,145,,145
-Adam Ward,1,Open Men,M,Raw,140+,151.95,24,,200,,200
-Eric Knudsen,1,Master Men 50-54,M,Single-ply,125,123.01,53,,205,,205
-Robert Vick,DQ,Open Men,M,Single-ply,140+,178.72,39,,-382.5,,
-Samantha Perkins,1,Open Women,F,Raw,60,59.92,29,,,90,90
-Kyle Kline,1,Open Men,M,Raw,100,97.98,24,,,215,215
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Samantha Perkins,DQ,Open Women,F,Raw,60,59.92,29,60,-42.5,90,,SBD
+Sheri Styles,1,Open Women,F,Raw,75,71.4,25,125,70,182.5,377.5,SBD
+Amy Simmer,1,Open Women,F,Raw,82.5,82.05,42,167.5,100,182.5,450,SBD
+Amy Simmer,1,Master Women 40-44,F,Raw,82.5,82.05,42,167.5,100,182.5,450,SBD
+Ian Vaughan,1,Junior Men 16-17,M,Raw,75,69.49,17,130,87.5,167.5,385,SBD
+Garrett Kelm,1,Junior Men 18-19,M,Raw,75,74.34,18,165,125,222.5,512.5,SBD
+Ian Young,1,Open Men,M,Raw,75,74.39,25,145,97.5,187.5,430,SBD
+Jerad Parish,2,Open Men,M,Raw,75,73.94,32,112.5,117.5,155,385,SBD
+Ethan Martin,1,Junior Men 13-15,M,Raw,82.5,80.47,14,115,60,122.5,297.5,SBD
+Anthony Kapsner,1,Open Men,M,Raw,82.5,81.28,29,232.5,122.5,260,615,SBD
+Shawn Ford,2,Open Men,M,Raw,82.5,80.6,30,185,102.5,195,482.5,SBD
+Cooper Brooks,1,Junior Men 13-15,M,Raw,90,88.36,15,192.5,117.5,202.5,512.5,SBD
+Auston Miller,1,Open Men,M,Raw,90,88.86,21,225,142.5,242.5,610,SBD
+Christian Fite,2,Open Men,M,Raw,90,84.28,29,190,110,252.5,552.5,SBD
+Josh Ericksen,1,Open Men,M,Raw,100,97.16,30,157.5,100,200,457.5,SBD
+Kyle Klein,DQ,Open Men,M,Raw,100,98.47,24,165,-112.5,215,,SBD
+Justin Perez,1,Junior Men 20-23,M,Raw,110,102.33,21,235,160,245,640,SBD
+Jonathan Hansen,1,Submaster Men 35-39,M,Raw,110,107.41,37,162.5,147.5,230,540,SBD
+Tom Fahy,1,Master Men 45-49,M,Raw,110,107.5,48,207.5,137.5,240,585,SBD
+Alex Luhring,1,Open Men,M,Raw,125,115.67,24,210,142.5,230,582.5,SBD
+Jeff Campbell,1,Master Men 45-49,M,Raw,125,121.97,46,232.5,177.5,215,625,SBD
+Jordan Lubich,1,Junior Men 20-23,M,Raw,140+,146.28,22,227.5,145,182.5,555,SBD
+Robert Galvan,1,Master Men 40-44,M,Raw,140+,160.98,41,242.5,167.5,237.5,647.5,SBD
+Eddie Lone Eagle,1,Open Men,M,Single-ply,75,74.8,30,240,145,242.5,627.5,SBD
+Jon Davis,1,Submaster Men 35-39,M,Single-ply,100,99.34,36,227.5,160,227.5,615,SBD
+Mike Musselman,1,Submaster Men 35-39,M,Single-ply,140,128.14,37,227.5,157.2,192.5,577.2,SBD
+Gloria Derfus,1,Master Women 55-59,F,Raw,90+,152.32,57,,60,,60,B
+Steven Thomes,1,Master Men 65-69,M,Raw,82.5,80.33,69,,112.5,,112.5,B
+James Beck,1,Submaster Men 35-39,M,Raw,100,96.89,36,,170,,170,B
+Ron Monroe,1,Master Men 45-49,M,Raw,110,109,46,,182.5,,182.5,B
+David Evenson,1,Master Men 50-54,M,Raw,140,129.46,50,,145,,145,B
+Adam Ward,1,Open Men,M,Raw,140+,151.95,24,,200,,200,B
+Eric Knudsen,1,Master Men 50-54,M,Single-ply,125,123.01,53,,205,,205,B
+Robert Vick,DQ,Open Men,M,Single-ply,140+,178.72,39,,-382.5,,,B
+Samantha Perkins,1,Open Women,F,Raw,60,59.92,29,,,90,90,D
+Kyle Kline,1,Open Men,M,Raw,100,97.98,24,,,215,215,D

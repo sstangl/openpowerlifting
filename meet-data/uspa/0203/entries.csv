@@ -1,33 +1,33 @@
-Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Tim Deese,1,Junior Men 13-15,M,Raw,67.5,62.41,14,115,70,137.5,322.5
-Matt Deese,1,Junior Men 20-23,M,Raw,82.5,82.28,22,227.5,175,240,642.5
-Tyler Nobles,2,Junior Men 20-23,M,Raw,82.5,81.01,20,195,140,272.5,607.5
-Matt Deese,1,Open Men,M,Raw,82.5,82.28,22,227.5,175,240,642.5
-Bryan Prince,1,Submaster Men 35-39,M,Raw,90,82.92,39,125,150,180,455
-Alexander Santillan,1,Junior Men 20-23,M,Raw,100,97.79,23,137.5,122.5,202.5,462.5
-Dustin Taps,1,Open Men,M,Raw,100,93.26,37,200,150,265,615
-Ray White,2,Open Men,M,Raw,100,90.63,26,182.5,157.5,207.5,547.5
-Dustin Taps,1,Submaster Men 35-39,M,Raw,100,93.26,37,200,150,265,615
-Da'Mon Mayers,1,Open Men,M,Wraps,90,89.18,32,255,147.5,312.5,715
-John Hyer,2,Open Men,M,Wraps,90,89.36,29,237.5,152.5,247.5,637.5
-Frederico Rowe,3,Open Men,M,Wraps,90,89.45,35,145,135,185,465
-Frederico Rowe,1,Submaster Men 35-39,M,Wraps,90,89.45,35,145,135,185,465
-Anthony Waller,DQ,Junior Men 20-23,M,Wraps,100,97.25,21,227.5,-155,,
-Anthony Gonzalez,1,Open Men,M,Wraps,110,108.77,31,182.5,167.5,267.5,617.5
-Brant Bishop,1,Master Men 40-44,M,Wraps,110,106.32,42,230,165,250,645
-Eric Hansen,1,Master Men 50-54,M,Wraps,110,107.14,50,175,142.5,182.5,500
-Anthony Calhoun,1,Open Men,M,Wraps,140,127.01,53,162.5,117.5,160,440
-Anthony Calhoun,1,Master Men 50-54,M,Wraps,140,127.01,53,162.5,117.5,160,440
-Zak Freiwald,DQ,Open Men,M,Single-ply,140,126.01,37,-275,,,
-Hasani X,1,Open Men,M,Multi-ply,82.5,82.19,34,200,60,227.5,487.5
-Rey Guevara,1,Master Men 40-44,M,Multi-ply,82.5,80.10,44,227.5,150,182.5,560
-Felipe Gusmao,1,Open Men,M,Multi-ply,90,89.63,26,255,192.5,262.5,710
-Ronnie Paras,DQ,Open Men,M,Multi-ply,100,98.52,50,-365,,,
-Joe Burroughs,1,Open Men,M,Multi-ply,125,119.20,31,205,110,170,485
-Tim Bower,DQ,Open Men,M,Multi-ply,125,124.56,31,-312.5,227.5,277.5,
-Chris Murdock,1,Master Men 50-54,M,Multi-ply,125,119.84,51,200,165,187.5,552.5
-Drew Sheffield,1,Open Men,M,Raw,110,108.41,26,,157.5,,157.5
-William Thacker,1,Submaster Men 35-39,M,Raw,110,106.96,39,,182.5,,182.5
-Ronnie Hodge,DQ,Master Men 40-44,M,Multi-ply,140+,162.11,44,,-305,,
-Jason Domingo,1,Open Men,M,Raw,110,100.33,31,,,297.5,297.5
-Clint Smith,1,Open Men,M,Multi-ply,125,112.13,32,,362.5,327.5,690
+Name,Place,Division,Sex,Equipment,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Tim Deese,1,Junior Men 13-15,M,Raw,67.5,62.41,14,115,70,137.5,322.5,SBD
+Matt Deese,1,Junior Men 20-23,M,Raw,82.5,82.28,22,227.5,175,240,642.5,SBD
+Tyler Nobles,2,Junior Men 20-23,M,Raw,82.5,81.01,20,195,140,272.5,607.5,SBD
+Matt Deese,1,Open Men,M,Raw,82.5,82.28,22,227.5,175,240,642.5,SBD
+Bryan Prince,1,Submaster Men 35-39,M,Raw,90,82.92,39,125,150,180,455,SBD
+Alexander Santillan,1,Junior Men 20-23,M,Raw,100,97.79,23,137.5,122.5,202.5,462.5,SBD
+Dustin Taps,1,Open Men,M,Raw,100,93.26,37,200,150,265,615,SBD
+Ray White,2,Open Men,M,Raw,100,90.63,26,182.5,157.5,207.5,547.5,SBD
+Dustin Taps,1,Submaster Men 35-39,M,Raw,100,93.26,37,200,150,265,615,SBD
+Da'Mon Mayers,1,Open Men,M,Wraps,90,89.18,32,255,147.5,312.5,715,SBD
+John Hyer,2,Open Men,M,Wraps,90,89.36,29,237.5,152.5,247.5,637.5,SBD
+Frederico Rowe,3,Open Men,M,Wraps,90,89.45,35,145,135,185,465,SBD
+Frederico Rowe,1,Submaster Men 35-39,M,Wraps,90,89.45,35,145,135,185,465,SBD
+Anthony Waller,DQ,Junior Men 20-23,M,Wraps,100,97.25,21,227.5,-155,,,SBD
+Anthony Gonzalez,1,Open Men,M,Wraps,110,108.77,31,182.5,167.5,267.5,617.5,SBD
+Brant Bishop,1,Master Men 40-44,M,Wraps,110,106.32,42,230,165,250,645,SBD
+Eric Hansen,1,Master Men 50-54,M,Wraps,110,107.14,50,175,142.5,182.5,500,SBD
+Anthony Calhoun,1,Open Men,M,Wraps,140,127.01,53,162.5,117.5,160,440,SBD
+Anthony Calhoun,1,Master Men 50-54,M,Wraps,140,127.01,53,162.5,117.5,160,440,SBD
+Zak Freiwald,DQ,Open Men,M,Single-ply,140,126.01,37,-275,,,,SBD
+Hasani X,1,Open Men,M,Multi-ply,82.5,82.19,34,200,60,227.5,487.5,SBD
+Rey Guevara,1,Master Men 40-44,M,Multi-ply,82.5,80.1,44,227.5,150,182.5,560,SBD
+Felipe Gusmao,1,Open Men,M,Multi-ply,90,89.63,26,255,192.5,262.5,710,SBD
+Ronnie Paras,DQ,Open Men,M,Multi-ply,100,98.52,50,-365,,,,SBD
+Joe Burroughs,1,Open Men,M,Multi-ply,125,119.2,31,205,110,170,485,SBD
+Tim Bower,DQ,Open Men,M,Multi-ply,125,124.56,31,-312.5,227.5,277.5,,SBD
+Chris Murdock,1,Master Men 50-54,M,Multi-ply,125,119.84,51,200,165,187.5,552.5,SBD
+Drew Sheffield,1,Open Men,M,Raw,110,108.41,26,,157.5,,157.5,B
+William Thacker,1,Submaster Men 35-39,M,Raw,110,106.96,39,,182.5,,182.5,B
+Ronnie Hodge,DQ,Master Men 40-44,M,Multi-ply,140+,162.11,44,,-305,,,B
+Jason Domingo,1,Open Men,M,Raw,110,100.33,31,,,297.5,297.5,D
+Clint Smith,1,Open Men,M,Multi-ply,125,112.13,32,,362.5,327.5,690,BD

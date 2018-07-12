@@ -1,31 +1,31 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Darion Gomez,TX,52,52,22,57.5,,57.5,F,Junior 20-23,Raw
-1,Kristin Hoefner,TX,82.5,81.8,24,62.5,,62.5,F,Open,Raw
-1,John Lozano,TX,100,99.8,22,112.5,,112.5,M,Junior 20-23,Raw
-1,Christopher Napier,TX,82.5,80.5,30,130,,130,M,Open,Raw
-1,Alex Rascon,TX,100,96,28,180,,180,M,Open,Raw
-1,Ismael Hernandez,TX,110,104.3,37,200,,200,M,Open,Raw
-1,Miguel Pena,TX,140,132,26,205,,205,M,Open,Raw
-2,Jaime Marquez,TX,140,137.6,36,145,,145,M,Open,Raw
-1,Eduardo Vasquez,TX,140+,146.8,26,180,,180,M,Open,Raw
-1,Rick Bustillos,TX,125,122.5,35,210,,210,M,Submaster 35-39,Raw
-1,Jaime Marquez,TX,140,137.6,36,145,,145,M,Submaster 35-39,Raw
-1,Ernest Baston,TX,140+,142.1,45,155,,155,M,Master 45-49,Raw
-1,Darion Gomez,TX,52,52,22,,140,140,F,Junior 20-23,Raw
-2,Kopani Hernandez,TX,52,51.7,21,,117.5,117.5,F,Junior 20-23,Raw
-1,Darion Gomez,TX,52,52,22,,140,140,F,Open,Raw
-2,Kopani Hernandez,TX,52,51.7,21,,117.5,117.5,F,Open,Raw
-3,Bernice Pimentel,TX,52,50.5,30,,107.5,107.5,F,Open,Raw
-1,Dantiza Pedregon,TX,56,55.6,25,,130,130,F,Open,Raw
-1,Kristin Hoefner,TX,82.5,81.8,24,,147.5,147.5,F,Open,Raw
-1,John Lozano,TX,100,99.8,22,,207.5,207.5,M,Junior 20-23,Raw
-1,Christopher Napier,TX,82.5,80.5,30,,220,220,M,Open,Raw
-DQ,AJ Rodriguez,TX,82.5,78.9,29,,-215,,M,Open,Raw
-1,Michael Armendariz,TX,100,99.7,24,,320,320,M,Open,Raw
-2,Alex Rascon,TX,100,96,28,,287.5,287.5,M,Open,Raw
-1,Miguel Pena,TX,140,132,26,,277.5,277.5,M,Open,Raw
-2,Jamie Marquez,TX,140,137.6,36,,240,240,M,Open,Raw
-1,Eduardo Vasquez,TX,140+,146.8,26,,292.5,292.5,M,Open,Raw
-1,Edgar Pimentel,TX,82.5,81.2,36,,217.5,217.5,M,Submaster 35-39,Raw
-1,Jamie Marquez,TX,140,137.6,36,,240,240,M,Submaster 35-39,Raw
-1,Ernest Baston,TX,140+,142.1,45,,237.5,237.5,M,Master 45-49,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Darion Gomez,TX,52,52,22,57.5,,57.5,F,Junior 20-23,Raw,B
+1,Kristin Hoefner,TX,82.5,81.8,24,62.5,,62.5,F,Open,Raw,B
+1,John Lozano,TX,100,99.8,22,112.5,,112.5,M,Junior 20-23,Raw,B
+1,Christopher Napier,TX,82.5,80.5,30,130,,130,M,Open,Raw,B
+1,Alex Rascon,TX,100,96,28,180,,180,M,Open,Raw,B
+1,Ismael Hernandez,TX,110,104.3,37,200,,200,M,Open,Raw,B
+1,Miguel Pena,TX,140,132,26,205,,205,M,Open,Raw,B
+2,Jaime Marquez,TX,140,137.6,36,145,,145,M,Open,Raw,B
+1,Eduardo Vasquez,TX,140+,146.8,26,180,,180,M,Open,Raw,B
+1,Rick Bustillos,TX,125,122.5,35,210,,210,M,Submaster 35-39,Raw,B
+1,Jaime Marquez,TX,140,137.6,36,145,,145,M,Submaster 35-39,Raw,B
+1,Ernest Baston,TX,140+,142.1,45,155,,155,M,Master 45-49,Raw,B
+1,Darion Gomez,TX,52,52,22,,140,140,F,Junior 20-23,Raw,D
+2,Kopani Hernandez,TX,52,51.7,21,,117.5,117.5,F,Junior 20-23,Raw,D
+1,Darion Gomez,TX,52,52,22,,140,140,F,Open,Raw,D
+2,Kopani Hernandez,TX,52,51.7,21,,117.5,117.5,F,Open,Raw,D
+3,Bernice Pimentel,TX,52,50.5,30,,107.5,107.5,F,Open,Raw,D
+1,Dantiza Pedregon,TX,56,55.6,25,,130,130,F,Open,Raw,D
+1,Kristin Hoefner,TX,82.5,81.8,24,,147.5,147.5,F,Open,Raw,D
+1,John Lozano,TX,100,99.8,22,,207.5,207.5,M,Junior 20-23,Raw,D
+1,Christopher Napier,TX,82.5,80.5,30,,220,220,M,Open,Raw,D
+DQ,AJ Rodriguez,TX,82.5,78.9,29,,-215,,M,Open,Raw,D
+1,Michael Armendariz,TX,100,99.7,24,,320,320,M,Open,Raw,D
+2,Alex Rascon,TX,100,96,28,,287.5,287.5,M,Open,Raw,D
+1,Miguel Pena,TX,140,132,26,,277.5,277.5,M,Open,Raw,D
+2,Jamie Marquez,TX,140,137.6,36,,240,240,M,Open,Raw,D
+1,Eduardo Vasquez,TX,140+,146.8,26,,292.5,292.5,M,Open,Raw,D
+1,Edgar Pimentel,TX,82.5,81.2,36,,217.5,217.5,M,Submaster 35-39,Raw,D
+1,Jamie Marquez,TX,140,137.6,36,,240,240,M,Submaster 35-39,Raw,D
+1,Ernest Baston,TX,140+,142.1,45,,237.5,237.5,M,Master 45-49,Raw,D

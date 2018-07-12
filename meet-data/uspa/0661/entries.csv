@@ -1,47 +1,47 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Alyssa Maiello,CA,75,68,18,112.5,65,150,327.5,F,Junior 18-19,Raw
-2,Megan Nordin,CA,75,73.8,19,120,52.5,145,317.5,F,Junior 18-19,Raw
-1,Alma Aceves,CA,75,75,22,120,55,127.5,302.5,F,Junior 20-23,Raw
-2,Laura Pratz,CA,75,73.2,20,102.5,37.5,132.5,272.5,F,Junior 20-23,Raw
-1,Karithe Nasser,CA,60,59.1,38,152.5,80,160,392.5,F,Open,Raw
-1,Megan Nordin,CA,75,73.8,19,120,52.5,145,317.5,F,Open,Raw
-1,Kira Clark,CA,82.5,79.05,31,115,62.5,150,327.5,F,Open,Raw
-1,Tenaya Tutuer,CA,90,88.3,27,150,85,175,410,F,Open,Raw
-1,Melanie Turner,CA,67.5,61.4,38,97.5,72.5,125,295,F,Submaster,Raw
-1,Zuzana Russell,CA,75,74.5,37,82.5,47.5,127.5,257.5,F,Submaster,Raw
-1,Jacqueline Wollman,CA,56,53.7,48,72.5,50,85,207.5,F,Master 45-49,Raw
-1,Jackie Welter,CA,60,58.65,46,92.5,50,125,267.5,F,Master 45-49,Raw
-1,Patricia Cayton,CA,82.5,75.5,42,107.5,60,137.5,305,F,Master 40-44,Raw
-1,Karen Jones-Tanner,CA,82.5,80.5,55,92.5,82.5,130,305,F,Master 55-59,Raw
-1,Ryan Fekrat,CA,67.5,64.5,14,95,60,147.5,302.5,M,Junior 13-15,Raw
-1,Christian Aguilera,CA,67.5,65.95,19,157.5,92.5,210.5,460.5,M,Junior 18-19,Raw
-DQ,Bryce Benn,CA,82.5,81.05,20,-192.5,,,,M,Junior 20-23,Raw
-1,Michael Carlin,CA,90,87.15,25,185,122.5,210,517.5,M,Open,Raw
-2,Christopher Henry,CA,90,88.9,26,157.2,107.5,227.5,492.2,M,Open,Raw
-3,Travis Rougier,CA,90,83.15,33,155,100,155,410,M,Open,Raw
-1,John Stevens,CA,100,98.5,25,232.5,152.5,252.5,637.5,M,Open,Raw
-2,David Muñoz,CA,100,98.45,30,215,150,260,625,M,Open,Raw
-3,Ian Walsh,CA,100,93.8,26,227.5,135,260,622.5,M,Open,Raw
-1,Nicholas Smith,CA,110,107.35,33,185,142.5,230,557.5,M,Open,Raw
-DQ,John Archuleta,CA,110,108.75,33,-240,200,250,,M,Open,Raw
-1,Darrell Valdez,CA,125,123.65,32,240,195,245,680,M,Open,Raw
-DQ,John Archuleta,CA,110,108.75,37,-240,200,250,,M,Submaster,Raw
-1,Craig Welter,OR,75,73.45,48,130,97.5,147.5,375,M,Master 45-49,Raw
-1,Greg Slavin,CA,100,92.1,42,140,130,182.5,452.5,M,Master 40-44,Raw
-1,Sidney Loomis,CA,90,86,21,135,60,162.5,357.5,F,Open,Wraps
-DQ,Blake Gardner,NV,75,73.15,18,-187.5,105,192.5,,M,Junior 18-19,Wraps
-1,Wyatt Alexander,CA,100,96.85,20,217.5,132.5,227.5,577.5,M,Junior 20-23,Wraps
-1,Jeremy Cunningham,NV,90,87.75,22,195,142.5,227.5,565,M,Junior 20-23,Wraps
-1,Jack Barbour,CA,140,126.9,17,152.5,105,190,447.5,M,Junior 16-17,Wraps
-1,Ryan Reppond,CA,82.5,81.3,24,192.5,120,215,527.5,M,Open,Wraps
-1,Forrest Bush,CA,90,89.95,24,307.5,162.5,315,785,M,Open,Wraps
-1,Dylen Atkinson,CA,100,99.95,27,232.5,135,240,607.5,M,Open,Wraps
-1,Manny Burruel,CA,110,107.8,62,210,115,255,580,M,Master 60-64,Single-ply
-1,Jacqueline Wickens,CA,90,83.1,22,,90,,90,F,Open,Raw
-1,Beata Domjan Jarvis,CA,60,58.15,47,,65,,65,F,Master 45-49,Raw
-1,Karen Jones-Tanner,CA,82.5,80.5,55,,82.5,,82.5,F,Master 55-59,Raw
-1,Jacqueline Wickens,CA,90,83.1,22,,,145,145,F,Open,Raw
-1,Karen Jones-Tanner,CA,82.5,80.5,55,,,130,130,F,Master 55-59,Raw
-1,Ryan Fekrat,CA,67.5,64.5,14,,,147.5,147.5,M,Junior 13-15,Raw
-1,Christian Aguilera,CA,67.5,65.95,19,,,210.5,210.5,M,Junior 18-19,Raw
-1,Manny Burruel,CA,110,107.8,62,,,255,255,M,Master 60-64,Single-ply
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Alyssa Maiello,CA,75,68,18,112.5,65,150,327.5,F,Junior 18-19,Raw,SBD
+2,Megan Nordin,CA,75,73.8,19,120,52.5,145,317.5,F,Junior 18-19,Raw,SBD
+1,Alma Aceves,CA,75,75,22,120,55,127.5,302.5,F,Junior 20-23,Raw,SBD
+2,Laura Pratz,CA,75,73.2,20,102.5,37.5,132.5,272.5,F,Junior 20-23,Raw,SBD
+1,Karithe Nasser,CA,60,59.1,38,152.5,80,160,392.5,F,Open,Raw,SBD
+1,Megan Nordin,CA,75,73.8,19,120,52.5,145,317.5,F,Open,Raw,SBD
+1,Kira Clark,CA,82.5,79.05,31,115,62.5,150,327.5,F,Open,Raw,SBD
+1,Tenaya Tutuer,CA,90,88.3,27,150,85,175,410,F,Open,Raw,SBD
+1,Melanie Turner,CA,67.5,61.4,38,97.5,72.5,125,295,F,Submaster,Raw,SBD
+1,Zuzana Russell,CA,75,74.5,37,82.5,47.5,127.5,257.5,F,Submaster,Raw,SBD
+1,Jacqueline Wollman,CA,56,53.7,48,72.5,50,85,207.5,F,Master 45-49,Raw,SBD
+1,Jackie Welter,CA,60,58.65,46,92.5,50,125,267.5,F,Master 45-49,Raw,SBD
+1,Patricia Cayton,CA,82.5,75.5,42,107.5,60,137.5,305,F,Master 40-44,Raw,SBD
+1,Karen Jones-Tanner,CA,82.5,80.5,55,92.5,82.5,130,305,F,Master 55-59,Raw,SBD
+1,Ryan Fekrat,CA,67.5,64.5,14,95,60,147.5,302.5,M,Junior 13-15,Raw,SBD
+1,Christian Aguilera,CA,67.5,65.95,19,157.5,92.5,210.5,460.5,M,Junior 18-19,Raw,SBD
+DQ,Bryce Benn,CA,82.5,81.05,20,-192.5,,,,M,Junior 20-23,Raw,SBD
+1,Michael Carlin,CA,90,87.15,25,185,122.5,210,517.5,M,Open,Raw,SBD
+2,Christopher Henry,CA,90,88.9,26,157.2,107.5,227.5,492.2,M,Open,Raw,SBD
+3,Travis Rougier,CA,90,83.15,33,155,100,155,410,M,Open,Raw,SBD
+1,John Stevens,CA,100,98.5,25,232.5,152.5,252.5,637.5,M,Open,Raw,SBD
+2,David Muñoz,CA,100,98.45,30,215,150,260,625,M,Open,Raw,SBD
+3,Ian Walsh,CA,100,93.8,26,227.5,135,260,622.5,M,Open,Raw,SBD
+1,Nicholas Smith,CA,110,107.35,33,185,142.5,230,557.5,M,Open,Raw,SBD
+DQ,John Archuleta,CA,110,108.75,33,-240,200,250,,M,Open,Raw,SBD
+1,Darrell Valdez,CA,125,123.65,32,240,195,245,680,M,Open,Raw,SBD
+DQ,John Archuleta,CA,110,108.75,37,-240,200,250,,M,Submaster,Raw,SBD
+1,Craig Welter,OR,75,73.45,48,130,97.5,147.5,375,M,Master 45-49,Raw,SBD
+1,Greg Slavin,CA,100,92.1,42,140,130,182.5,452.5,M,Master 40-44,Raw,SBD
+1,Sidney Loomis,CA,90,86,21,135,60,162.5,357.5,F,Open,Wraps,SBD
+DQ,Blake Gardner,NV,75,73.15,18,-187.5,105,192.5,,M,Junior 18-19,Wraps,SBD
+1,Wyatt Alexander,CA,100,96.85,20,217.5,132.5,227.5,577.5,M,Junior 20-23,Wraps,SBD
+1,Jeremy Cunningham,NV,90,87.75,22,195,142.5,227.5,565,M,Junior 20-23,Wraps,SBD
+1,Jack Barbour,CA,140,126.9,17,152.5,105,190,447.5,M,Junior 16-17,Wraps,SBD
+1,Ryan Reppond,CA,82.5,81.3,24,192.5,120,215,527.5,M,Open,Wraps,SBD
+1,Forrest Bush,CA,90,89.95,24,307.5,162.5,315,785,M,Open,Wraps,SBD
+1,Dylen Atkinson,CA,100,99.95,27,232.5,135,240,607.5,M,Open,Wraps,SBD
+1,Manny Burruel,CA,110,107.8,62,210,115,255,580,M,Master 60-64,Single-ply,SBD
+1,Jacqueline Wickens,CA,90,83.1,22,,90,,90,F,Open,Raw,B
+1,Beata Domjan Jarvis,CA,60,58.15,47,,65,,65,F,Master 45-49,Raw,B
+1,Karen Jones-Tanner,CA,82.5,80.5,55,,82.5,,82.5,F,Master 55-59,Raw,B
+1,Jacqueline Wickens,CA,90,83.1,22,,,145,145,F,Open,Raw,D
+1,Karen Jones-Tanner,CA,82.5,80.5,55,,,130,130,F,Master 55-59,Raw,D
+1,Ryan Fekrat,CA,67.5,64.5,14,,,147.5,147.5,M,Junior 13-15,Raw,D
+1,Christian Aguilera,CA,67.5,65.95,19,,,210.5,210.5,M,Junior 18-19,Raw,D
+1,Manny Burruel,CA,110,107.8,62,,,255,255,M,Master 60-64,Single-ply,D

@@ -1,21 +1,21 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Tequila Rogers,WV,75,72.90,20,97.50,57.50,142.50,297.50,F,Junior 20-23,Raw
-1,Erika Scott,WV,67.5,66.40,39,145.00,80.00,152.50,377.50,F,Open,Raw
-1,Erika Scott,WV,67.5,66.40,39,145.00,80.00,152.50,377.50,F,Submaster 35-39,Raw
-1,Tonya Miller,WV,52,51.40,43,90.00,45.00,115.00,250.00,F,Master 40-44,Raw
-1,Karen Merritt,WV,90+,95.80,42,80.00,47.50,102.50,230.00,F,Master 40-44,Raw
-1,Thomas Royer,VA,90,86.70,21,185.00,90.00,202.50,477.50,M,Junior 20-23,Raw
-1,Tyler Castle,WV,110,107.50,19,150.00,132.50,220.00,502.50,M,Junior 18-19,Raw
-1,Mark Roe,OH,75,73.60,28,157.50,95.00,215.00,467.50,M,Open,Raw
-1,Jon Booth,WV,82.5,79.90,32,197.50,67.50,220.00,485.00,M,Open,Raw
-1,Danny Walls,WV,90,89.50,27,247.50,172.50,307.50,727.50,M,Open,Raw
-1,Matthew Hess,WV,100,98.50,24,230.00,187.50,272.50,690.00,M,Open,Raw
-2,Nolan Philogene,WV,100,99.00,24,227.50,182.50,250.00,660.00,M,Open,Raw
-3,Michael Lesnett,WV,100,92.50,28,212.50,172.50,205.00,590.00,M,Open,Raw
-4,James Roberts,WV,100,99.80,31,135.00,147.50,227.50,510.00,M,Open,Raw
-1,Joshua Kelly,WV,110,108.00,26,237.50,172.50,262.50,672.50,M,Open,Raw
-1,Derrick Martin,WV,125,122.30,31,300.00,222.50,327.50,850.00,M,Open,Raw
-1,Mike Williams,VA,125,122.80,37,197.50,150.00,207.50,555.00,M,Submaster 35-39,Raw
-1,Chad Snodgrass,WV,125,122.40,26,280.00,175.00,267.50,722.50,M,Open,Wraps
-1,Pitt Connelley,KY,140,128.60,30,292.50,177.50,310.00,780.00,M,Open,Wraps
-1,Jay Pike,WV,140+,141.90,37,,200.00,,200.00,M,Submaster 35-39,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Tequila Rogers,WV,75,72.90,20,97.50,57.50,142.50,297.50,F,Junior 20-23,Raw,SBD
+1,Erika Scott,WV,67.5,66.40,39,145.00,80.00,152.50,377.50,F,Open,Raw,SBD
+1,Erika Scott,WV,67.5,66.40,39,145.00,80.00,152.50,377.50,F,Submaster 35-39,Raw,SBD
+1,Tonya Miller,WV,52,51.40,43,90.00,45.00,115.00,250.00,F,Master 40-44,Raw,SBD
+1,Karen Merritt,WV,90+,95.80,42,80.00,47.50,102.50,230.00,F,Master 40-44,Raw,SBD
+1,Thomas Royer,VA,90,86.70,21,185.00,90.00,202.50,477.50,M,Junior 20-23,Raw,SBD
+1,Tyler Castle,WV,110,107.50,19,150.00,132.50,220.00,502.50,M,Junior 18-19,Raw,SBD
+1,Mark Roe,OH,75,73.60,28,157.50,95.00,215.00,467.50,M,Open,Raw,SBD
+1,Jon Booth,WV,82.5,79.90,32,197.50,67.50,220.00,485.00,M,Open,Raw,SBD
+1,Danny Walls,WV,90,89.50,27,247.50,172.50,307.50,727.50,M,Open,Raw,SBD
+1,Matthew Hess,WV,100,98.50,24,230.00,187.50,272.50,690.00,M,Open,Raw,SBD
+2,Nolan Philogene,WV,100,99.00,24,227.50,182.50,250.00,660.00,M,Open,Raw,SBD
+3,Michael Lesnett,WV,100,92.50,28,212.50,172.50,205.00,590.00,M,Open,Raw,SBD
+4,James Roberts,WV,100,99.80,31,135.00,147.50,227.50,510.00,M,Open,Raw,SBD
+1,Joshua Kelly,WV,110,108.00,26,237.50,172.50,262.50,672.50,M,Open,Raw,SBD
+1,Derrick Martin,WV,125,122.30,31,300.00,222.50,327.50,850.00,M,Open,Raw,SBD
+1,Mike Williams,VA,125,122.80,37,197.50,150.00,207.50,555.00,M,Submaster 35-39,Raw,SBD
+1,Chad Snodgrass,WV,125,122.40,26,280.00,175.00,267.50,722.50,M,Open,Wraps,SBD
+1,Pitt Connelley,KY,140,128.60,30,292.50,177.50,310.00,780.00,M,Open,Wraps,SBD
+1,Jay Pike,WV,140+,141.90,37,,200.00,,200.00,M,Submaster 35-39,Raw,B

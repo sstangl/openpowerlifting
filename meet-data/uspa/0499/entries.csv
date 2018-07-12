@@ -1,30 +1,30 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg
-1,Elizabeth Quezada,CA,56,55.30,23,105.00,65.00,145.00,315.00,F,Junior 20-23,Raw,,
-1,Elizabeth Quezada,CA,56,55.30,23,105.00,65.00,145.00,315.00,F,Open,Raw,,
-1,Emily Chanthasinh,CA,82.5,75.80,26,140.00,62.50,142.50,345.00,F,Open,Raw,,
-1,Lori Quandt,CA,60,58.40,49,77.50,52.50,110.00,240.00,F,Master 45-49,Raw,,
-1,Trisha Decaillet,CA,90,87.20,41,87.50,60.00,135.00,282.50,F,Master 40-44,Raw,,
-1,Javier Lopez,CA,75,74.30,22,207.50,142.50,225.00,575.00,M,Junior 20-23,Raw,,
-2,Nicholas Carter,CA,75,71.60,20,142.50,112.50,205.00,460.00,M,Junior 20-23,Raw,,
-3,Carlos Mendez,CA,75,74.10,21,160.00,100.00,200.00,460.00,M,Junior 20-23,Raw,,
-1,Robert Frame,CA,82.5,77.20,20,125.00,102.50,182.50,410.00,M,Junior 20-23,Raw,,
-1,Connor O'Neal,CA,100,92.60,22,175.00,102.50,182.50,460.00,M,Junior 20-23,Raw,,
-1,Tyrone Haban,CA,82.5,81.90,28,177.50,127.50,210.00,515.00,M,Open,Raw,,
-2,Ryan Taylor,CA,82.5,82.40,25,180.00,125.00,185.00,490.00,M,Open,Raw,,
-1,William Pace,CA,90,87.70,27,237.50,180.00,230.00,647.50,M,Open,Raw,,
-2,Christopher Velasco,CA,90,87.90,26,205.00,147.50,247.50,600.00,M,Open,Raw,,
-3,Tyler Alexander,CA,90,87.10,29,187.50,142.50,227.50,557.50,M,Open,Raw,,
-4,J Cook,CA,90,89.70,21,192.50,125.00,210.00,527.50,M,Open,Raw,,
-1,Ryan King #2,CA,100,90.50,30,205.00,182.50,300.00,687.50,M,Open,Raw,,
-1,Callan Duffy,CA,110,107.70,26,240.00,140.00,225.00,605.00,M,Open,Raw,,
-2,Logan Slichter,CA,110,101.60,19,142.50,102.50,175.00,420.00,M,Open,Raw,,
-1,Michael White,CA,125,122.00,27,237.50,137.50,272.50,647.50,M,Open,Raw,,
-1,Gregory Cotterell,CA,110,101.60,55,192.50,150.00,247.50,590.00,M,Master 55-59,Raw,,
-1,Fred Martinez,CA,125,124.10,49,215.00,200.00,295.00,710.00,M,Master 45-49,Raw,,
-1,Tony Rodenburg,CA,140,128.30,58,65.00,120.00,200.00,385.00,M,Master 55-59,Raw,,
-1,Jessica Huerta,CA,90+,96.10,33,127.50,77.50,137.50,342.50,F,Open,Wraps,,
-1,Eugene Park,CA,90,88.30,28,192.50,140.00,232.50,565.00,M,Open,Wraps,,
-1,Nathan Arsenault,CA,100,99.10,31,272.50,205.00,305.00,782.50,M,Open,Wraps,,
-DQ,Chris Ramos,CA,100,100.00,29,290.00,-160.00,,,M,Open,Wraps,,
-1,Janine Jadallah,CA,67.5,65.70,49,145.00,85.00,165.00,395.00,F,Master 45-49,Single-ply,147.5,167.5
-1,Jesse Rickets,CA,140+,151.50,40,,182.50,227.50,410.00,M,Master 40-44,Raw,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg,Event
+1,Elizabeth Quezada,CA,56,55.30,23,105.00,65.00,145.00,315.00,F,Junior 20-23,Raw,,,SBD
+1,Elizabeth Quezada,CA,56,55.30,23,105.00,65.00,145.00,315.00,F,Open,Raw,,,SBD
+1,Emily Chanthasinh,CA,82.5,75.80,26,140.00,62.50,142.50,345.00,F,Open,Raw,,,SBD
+1,Lori Quandt,CA,60,58.40,49,77.50,52.50,110.00,240.00,F,Master 45-49,Raw,,,SBD
+1,Trisha Decaillet,CA,90,87.20,41,87.50,60.00,135.00,282.50,F,Master 40-44,Raw,,,SBD
+1,Javier Lopez,CA,75,74.30,22,207.50,142.50,225.00,575.00,M,Junior 20-23,Raw,,,SBD
+2,Nicholas Carter,CA,75,71.60,20,142.50,112.50,205.00,460.00,M,Junior 20-23,Raw,,,SBD
+3,Carlos Mendez,CA,75,74.10,21,160.00,100.00,200.00,460.00,M,Junior 20-23,Raw,,,SBD
+1,Robert Frame,CA,82.5,77.20,20,125.00,102.50,182.50,410.00,M,Junior 20-23,Raw,,,SBD
+1,Connor O'Neal,CA,100,92.60,22,175.00,102.50,182.50,460.00,M,Junior 20-23,Raw,,,SBD
+1,Tyrone Haban,CA,82.5,81.90,28,177.50,127.50,210.00,515.00,M,Open,Raw,,,SBD
+2,Ryan Taylor,CA,82.5,82.40,25,180.00,125.00,185.00,490.00,M,Open,Raw,,,SBD
+1,William Pace,CA,90,87.70,27,237.50,180.00,230.00,647.50,M,Open,Raw,,,SBD
+2,Christopher Velasco,CA,90,87.90,26,205.00,147.50,247.50,600.00,M,Open,Raw,,,SBD
+3,Tyler Alexander,CA,90,87.10,29,187.50,142.50,227.50,557.50,M,Open,Raw,,,SBD
+4,J Cook,CA,90,89.70,21,192.50,125.00,210.00,527.50,M,Open,Raw,,,SBD
+1,Ryan King #2,CA,100,90.50,30,205.00,182.50,300.00,687.50,M,Open,Raw,,,SBD
+1,Callan Duffy,CA,110,107.70,26,240.00,140.00,225.00,605.00,M,Open,Raw,,,SBD
+2,Logan Slichter,CA,110,101.60,19,142.50,102.50,175.00,420.00,M,Open,Raw,,,SBD
+1,Michael White,CA,125,122.00,27,237.50,137.50,272.50,647.50,M,Open,Raw,,,SBD
+1,Gregory Cotterell,CA,110,101.60,55,192.50,150.00,247.50,590.00,M,Master 55-59,Raw,,,SBD
+1,Fred Martinez,CA,125,124.10,49,215.00,200.00,295.00,710.00,M,Master 45-49,Raw,,,SBD
+1,Tony Rodenburg,CA,140,128.30,58,65.00,120.00,200.00,385.00,M,Master 55-59,Raw,,,SBD
+1,Jessica Huerta,CA,90+,96.10,33,127.50,77.50,137.50,342.50,F,Open,Wraps,,,SBD
+1,Eugene Park,CA,90,88.30,28,192.50,140.00,232.50,565.00,M,Open,Wraps,,,SBD
+1,Nathan Arsenault,CA,100,99.10,31,272.50,205.00,305.00,782.50,M,Open,Wraps,,,SBD
+DQ,Chris Ramos,CA,100,100.00,29,290.00,-160.00,,,M,Open,Wraps,,,SBD
+1,Janine Jadallah,CA,67.5,65.70,49,145.00,85.00,165.00,395.00,F,Master 45-49,Single-ply,147.5,167.5,SBD
+1,Jesse Rickets,CA,140+,151.50,40,,182.50,227.50,410.00,M,Master 40-44,Raw,,,BD

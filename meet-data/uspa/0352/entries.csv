@@ -1,27 +1,27 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Salina Ciotti,1,Open Women,F,Raw,CO,67.5,66.13,34,117.50,70.00,137.50,325.00
-Holly Zajic,1,Open Women,F,Raw,WY,75,70.58,36,87.50,47.50,97.50,232.50
-Samantha Firman,1,Submaster Women 35-39,F,Raw,CO,75,69.76,39,87.50,60.00,122.50,270.00
-Debbie Vizina,1,Master Women 45-49,F,Raw,WY,56,55.52,47,80.00,50.00,110.00,240.00
-Israel Spottedhorse,1,Junior Men 20-23,M,Raw,WY,82.5,81.47,23,147.50,132.50,210.00,490.00
-Klausmeine Banda,1,Open Men,M,Raw,WY,67.5,66.59,23,127.50,97.50,170.00,395.00
-Jeremiah Meek,1,Open Men,M,Raw,WY,82.5,80.83,39,125.00,80.00,150.00,355.00
-Adam Clinton,1,Open Men,M,Raw,WY,90,89.18,30,205.00,152.50,265.00,622.50
-Adrian Martinez,2,Open Men,M,Raw,CO,90,89.09,29,235.00,122.50,245.00,602.50
-Zach Streva,1,Open Men,M,Raw,CO,100,96.07,29,240.00,207.50,302.50,750.00
-Jeremiah Meek,1,Submaster Men 35-39,M,Raw,WY,82.5,80.83,39,125.00,80.00,150.00,355.00
-Brian Miller,1,Open Men,M,Raw,CO,100,99.34,26,255.00,167.50,260.00,682.50
-Matthew Hagen,1,Junior Men 20-23,M,Single-ply,CO,140,133.54,22,242.50,157.50,240.00,640.00
-Cory Campbell,1,Open Men,M,Single-ply,WY,75,73.03,25,237.50,177.50,237.50,652.50
-Mark Cucinella,DQ,Master Men 60-64,M,Single-ply,CO,75,71.12,64,-202.50,137.50,205.00,
-DJ Lindenthal,1,Junior Men 20-23,M,Raw,CO,90,89.54,23,,137.50,,137.50
-Jared Burton,1,Open Men,M,Raw,CO,100,99.06,43,,230.00,,230.00
-Billy Fanska,1,Open Men,M,Raw,KS,110,107.32,58,,172.50,,172.50
-Carlos Rojas,1,Open Men,M,Raw,NE,125,119.57,42,,237.50,,237.50
-Marvin Rodenbeck,2,Open Men,M,Raw,MT,125,120.29,51,,187.50,,187.50
-Jared Burton,1,Master Men 40-44,M,Raw,CO,100,99.06,43,,230.00,,230.00
-Darren Veal,1,Master Men 45-49,M,Raw,CO,100,99.70,45,,142.50,,142.50
-Billy Fanska,1,Master Men 55-59,M,Raw,KS,110,107.32,58,,172.50,,172.50
-Carlos Rojas,1,Master Men 40-44,M,Raw,NE,125,119.57,42,,237.50,,237.50
-Marvin Rodenbeck,1,Master Men 50-54,M,Raw,MT,125,120.29,51,,187.50,,187.50
-Marty Killion,1,Master Men 40-44,M,Raw,WY,140,127.55,44,,227.50,,227.50
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Salina Ciotti,1,Open Women,F,Raw,CO,67.5,66.13,34,117.50,70.00,137.50,325.00,SBD
+Holly Zajic,1,Open Women,F,Raw,WY,75,70.58,36,87.50,47.50,97.50,232.50,SBD
+Samantha Firman,1,Submaster Women 35-39,F,Raw,CO,75,69.76,39,87.50,60.00,122.50,270.00,SBD
+Debbie Vizina,1,Master Women 45-49,F,Raw,WY,56,55.52,47,80.00,50.00,110.00,240.00,SBD
+Israel Spottedhorse,1,Junior Men 20-23,M,Raw,WY,82.5,81.47,23,147.50,132.50,210.00,490.00,SBD
+Klausmeine Banda,1,Open Men,M,Raw,WY,67.5,66.59,23,127.50,97.50,170.00,395.00,SBD
+Jeremiah Meek,1,Open Men,M,Raw,WY,82.5,80.83,39,125.00,80.00,150.00,355.00,SBD
+Adam Clinton,1,Open Men,M,Raw,WY,90,89.18,30,205.00,152.50,265.00,622.50,SBD
+Adrian Martinez,2,Open Men,M,Raw,CO,90,89.09,29,235.00,122.50,245.00,602.50,SBD
+Zach Streva,1,Open Men,M,Raw,CO,100,96.07,29,240.00,207.50,302.50,750.00,SBD
+Jeremiah Meek,1,Submaster Men 35-39,M,Raw,WY,82.5,80.83,39,125.00,80.00,150.00,355.00,SBD
+Brian Miller,1,Open Men,M,Raw,CO,100,99.34,26,255.00,167.50,260.00,682.50,SBD
+Matthew Hagen,1,Junior Men 20-23,M,Single-ply,CO,140,133.54,22,242.50,157.50,240.00,640.00,SBD
+Cory Campbell,1,Open Men,M,Single-ply,WY,75,73.03,25,237.50,177.50,237.50,652.50,SBD
+Mark Cucinella,DQ,Master Men 60-64,M,Single-ply,CO,75,71.12,64,-202.50,137.50,205.00,,SBD
+DJ Lindenthal,1,Junior Men 20-23,M,Raw,CO,90,89.54,23,,137.50,,137.50,B
+Jared Burton,1,Open Men,M,Raw,CO,100,99.06,43,,230.00,,230.00,B
+Billy Fanska,1,Open Men,M,Raw,KS,110,107.32,58,,172.50,,172.50,B
+Carlos Rojas,1,Open Men,M,Raw,NE,125,119.57,42,,237.50,,237.50,B
+Marvin Rodenbeck,2,Open Men,M,Raw,MT,125,120.29,51,,187.50,,187.50,B
+Jared Burton,1,Master Men 40-44,M,Raw,CO,100,99.06,43,,230.00,,230.00,B
+Darren Veal,1,Master Men 45-49,M,Raw,CO,100,99.70,45,,142.50,,142.50,B
+Billy Fanska,1,Master Men 55-59,M,Raw,KS,110,107.32,58,,172.50,,172.50,B
+Carlos Rojas,1,Master Men 40-44,M,Raw,NE,125,119.57,42,,237.50,,237.50,B
+Marvin Rodenbeck,1,Master Men 50-54,M,Raw,MT,125,120.29,51,,187.50,,187.50,B
+Marty Killion,1,Master Men 40-44,M,Raw,WY,140,127.55,44,,227.50,,227.50,B

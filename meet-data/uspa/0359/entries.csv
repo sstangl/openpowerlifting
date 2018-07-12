@@ -1,34 +1,34 @@
-Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,TotalKg
-Caitlin Martinez,1,Junior Women 18-19,F,Raw,CA,60,59.96,19,110.00,,70.00,150.00,330.00
-Danielle Rosenthal,DQ,Open Women,F,Raw,CA,67.5,67.31,22,100.00,,-62.50,140.00,
-Danielle Drew,1,Open Women,F,Raw,CA,82.5,82.10,31,117.50,,55.00,157.50,330.00
-Tyler Boden,1,Junior Men 20-23,M,Raw,CA,75,73.84,20,167.50,,117.50,215.00,500.00
-Garrick Dzoan,1,Junior Men 18-19,M,Raw,CA,82.5,81.01,19,192.50,202.5,122.50,252.50,567.50
-Ray Ouyang,2,Junior Men 18-19,M,Raw,CA,82.5,81.10,19,170.00,,107.50,195.00,472.50
-John Dang,1,Junior Men 18-19,M,Raw,CA,90,88.77,19,175.00,,120.00,247.50,542.50
-Joseph Olmeda,1,Junior Men 20-23,M,Raw,CA,90,85.87,23,182.50,,130.00,232.50,545.00
-Shorty Sadang,1,Open Men,M,Raw,CA,56,55.29,25,160.00,,110.00,202.50,472.50
-Peter Ngo,1,Open Men,M,Raw,CA,67.5,67.04,31,157.50,,110.00,197.50,465.00
-Brian Goldstein,1,Open Men,M,Raw,CA,82.5,80.38,26,205.00,,127.50,227.50,560.00
-Michael Topor,2,Open Men,M,Raw,CA,82.5,79.97,27,125.00,,102.50,200.00,427.50
-Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,207.50,,150.00,277.50,635.00
-James Knoles,2,Open Men,M,Raw,CA,90,89.54,24,215.00,,132.50,260.00,607.50
-Bradley Heinss,1,Open Men,M,Raw,CA,100,98.79,33,245.00,,160.00,265.00,670.00
-David Hill,1,Open Men,M,Raw,CA,125,123.74,31,240.00,,182.50,287.50,710.00
-Levi Lehman,2,Open Men,M,Raw,CA,125,112.40,26,142.50,,145.00,220.00,507.50
-Adam Moody,1,Open Men,M,Raw,CA,140,132.95,30,202.50,,145.00,205.00,552.50
-Julian Gutierrez,1,Open Men,M,Wraps,CA,100,96.07,27,197.50,,120.00,205.00,522.50
-Bruce MacKenzie,DQ,Master Men 65-69,M,Wraps,CA,100,92.90,67,-140.00,,90.00,182.50,
-Mark Laurel,DQ,Master Men 50-54,M,Single-ply,CA,75,74.03,53,65.00,,137.50,-100.00,
-Jose Hernandez,1,Master Men 45-49,M,Single-ply,CA,82.5,79.83,46,205.00,,130.00,205.00,540.00
-Anthony Torres,1,Junior Men 18-19,M,Raw,CA,67.5,61.69,19,,,77.50,,77.50
-Victor Dominguez,1,Junior Men 20-23,M,Raw,CA,125,115.35,22,,,172.50,,172.50
-Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,,,150.00,,150.00
-Jamar Randolph,1,Open Men,M,Raw,CA,140+,150.14,34,,,227.50,,227.50
-Rick Gutman,1,Master Men 60-64,M,Raw,CA,75,73.48,60,,,120.00,,120.00
-Gerard Torres,1,Master Men 55-59,M,Raw,CA,125,123.10,57,,,142.50,,142.50
-Mark Laurel,1,Master Men 50-54,M,Single-ply,CA,75,74.03,53,,,137.50,,137.50
-Anthony Torres,1,Junior Men 18-19,M,Raw,CA,67.5,61.69,19,,,,155.00,155.00
-Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,,,,277.50,277.50
-Lothar Vallot,1,Master Men 60-64,M,Raw,CA,100,93.85,62,,,,135.00,135.00
-Gerard Torres,1,Master Men 55-59,M,Raw,CA,125,123.10,57,,,,160.00,160.00
+Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
+Caitlin Martinez,1,Junior Women 18-19,F,Raw,CA,60,59.96,19,110.00,,70.00,150.00,330.00,SBD
+Danielle Rosenthal,DQ,Open Women,F,Raw,CA,67.5,67.31,22,100.00,,-62.50,140.00,,SBD
+Danielle Drew,1,Open Women,F,Raw,CA,82.5,82.10,31,117.50,,55.00,157.50,330.00,SBD
+Tyler Boden,1,Junior Men 20-23,M,Raw,CA,75,73.84,20,167.50,,117.50,215.00,500.00,SBD
+Garrick Dzoan,1,Junior Men 18-19,M,Raw,CA,82.5,81.01,19,192.50,202.5,122.50,252.50,567.50,SBD
+Ray Ouyang,2,Junior Men 18-19,M,Raw,CA,82.5,81.10,19,170.00,,107.50,195.00,472.50,SBD
+John Dang,1,Junior Men 18-19,M,Raw,CA,90,88.77,19,175.00,,120.00,247.50,542.50,SBD
+Joseph Olmeda,1,Junior Men 20-23,M,Raw,CA,90,85.87,23,182.50,,130.00,232.50,545.00,SBD
+Shorty Sadang,1,Open Men,M,Raw,CA,56,55.29,25,160.00,,110.00,202.50,472.50,SBD
+Peter Ngo,1,Open Men,M,Raw,CA,67.5,67.04,31,157.50,,110.00,197.50,465.00,SBD
+Brian Goldstein,1,Open Men,M,Raw,CA,82.5,80.38,26,205.00,,127.50,227.50,560.00,SBD
+Michael Topor,2,Open Men,M,Raw,CA,82.5,79.97,27,125.00,,102.50,200.00,427.50,SBD
+Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,207.50,,150.00,277.50,635.00,SBD
+James Knoles,2,Open Men,M,Raw,CA,90,89.54,24,215.00,,132.50,260.00,607.50,SBD
+Bradley Heinss,1,Open Men,M,Raw,CA,100,98.79,33,245.00,,160.00,265.00,670.00,SBD
+David Hill,1,Open Men,M,Raw,CA,125,123.74,31,240.00,,182.50,287.50,710.00,SBD
+Levi Lehman,2,Open Men,M,Raw,CA,125,112.40,26,142.50,,145.00,220.00,507.50,SBD
+Adam Moody,1,Open Men,M,Raw,CA,140,132.95,30,202.50,,145.00,205.00,552.50,SBD
+Julian Gutierrez,1,Open Men,M,Wraps,CA,100,96.07,27,197.50,,120.00,205.00,522.50,SBD
+Bruce MacKenzie,DQ,Master Men 65-69,M,Wraps,CA,100,92.90,67,-140.00,,90.00,182.50,,SBD
+Mark Laurel,DQ,Master Men 50-54,M,Single-ply,CA,75,74.03,53,65.00,,137.50,-100.00,,SBD
+Jose Hernandez,1,Master Men 45-49,M,Single-ply,CA,82.5,79.83,46,205.00,,130.00,205.00,540.00,SBD
+Anthony Torres,1,Junior Men 18-19,M,Raw,CA,67.5,61.69,19,,,77.50,,77.50,B
+Victor Dominguez,1,Junior Men 20-23,M,Raw,CA,125,115.35,22,,,172.50,,172.50,B
+Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,,,150.00,,150.00,B
+Jamar Randolph,1,Open Men,M,Raw,CA,140+,150.14,34,,,227.50,,227.50,B
+Rick Gutman,1,Master Men 60-64,M,Raw,CA,75,73.48,60,,,120.00,,120.00,B
+Gerard Torres,1,Master Men 55-59,M,Raw,CA,125,123.10,57,,,142.50,,142.50,B
+Mark Laurel,1,Master Men 50-54,M,Single-ply,CA,75,74.03,53,,,137.50,,137.50,B
+Anthony Torres,1,Junior Men 18-19,M,Raw,CA,67.5,61.69,19,,,,155.00,155.00,D
+Gerardo Rivera,1,Open Men,M,Raw,CA,90,88.13,25,,,,277.50,277.50,D
+Lothar Vallot,1,Master Men 60-64,M,Raw,CA,100,93.85,62,,,,135.00,135.00,D
+Gerard Torres,1,Master Men 55-59,M,Raw,CA,125,123.10,57,,,,160.00,160.00,D

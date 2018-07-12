@@ -1,34 +1,34 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Squat4Kg
-1,Cierra Laxton,TX,82.5,81.5,21,107.5,82.5,192.5,382.5,F,Junior 20-23,Raw,,
-1,Amanda Brady,NM,60,60,28,117.5,80,155,352.5,F,Open,Raw,,
-1,Kimberly Latham,CO,75,70,31,125,65,125,315,F,Open,Raw,,
-1,Cierra Laxton,TX,82.5,81.5,21,107.5,82.5,192.5,382.5,F,Open,Raw,,
-1,Stephanie Cinocco,NM,56,55.7,45,82.5,52.5,102.5,237.5,F,Master 45-49,Raw,,
-1,Noah Lopez,NM,82.5,81.3,15,180.5,117.5,177.5,475.5,M,Junior 13-15,Raw,187.5,
-1,Carlos Avalos,TX,67.5,66.8,24,205,132.5,260,597.5,M,Open,Raw,,
-1,Dustin Jackson,NM,100,99.4,24,230,160,288,678,M,Open,Raw,,
-2,Ruben Romero,NM,100,99,25,207.5,165,227.5,600,M,Open,Raw,,
-1,Brandon Smith,NM,140,137.9,27,162.5,142.5,215,520,M,Open,Raw,,
-1,Cody Hanson,NM,140,139.4,40,190,135,197.5,522.5,M,Master 40-44,Raw,,
-1,Perla Apodaca,TX,67.5,63.2,19,140,70,170,380,F,Junior 18-19,Wraps,,
-1,Fenslage Franziska,TX,82.5,80.4,22,97.5,57.5,125,280,F,Junior 20-23,Wraps,,
-1,Zina Silva,TX,52,51.6,53,90,62.5,110,262.5,F,Open,Wraps,,
-1,Qiana Jurado,TX,56,55.2,16,92.5,45,92.5,230,F,Open,Wraps,,
-1,Perla Apodaca,TX,67.5,63.2,19,140,70,170,380,F,Open,Wraps,,
-1,Zina Silva,TX,52,51.6,53,90,62.5,110,262.5,F,Master 50-54,Wraps,,
-1,Tyler Trainum,NM,90,89.9,18,220,137.5,240,597.5,M,Junior 18-19,Wraps,,225
-1,Alexander Lopez,TX,100,93.2,19,225,127.5,250,602.5,M,Junior 18-19,Wraps,,
-1,Zachary Stetler,TX,82.5,79.5,22,182.5,150,227.5,560,M,Junior 20-23,Wraps,,
-1,Shane Anslinger,TX,75,74.6,24,220,127.5,217.5,565,M,Open,Wraps,,
-1,Adam Avenetti,NM,90,86,26,230,160,255,645,M,Open,Wraps,,
-1,Ismael Hernandez,TX,100,91.8,36,250,182.5,275,707.5,M,Open,Wraps,,
-2,Justin Sandoval,TX,100,95.1,24,227.5,137.5,250,615,M,Open,Wraps,,
-1,Ray Davis,TX,125,115.6,27,250,160,265,675,M,Open,Wraps,,
-1,Ismael Hernandez,TX,100,91.8,36,250,182.5,275,707.5,M,Submaster 35-39,Wraps,,
-1,Nick Rubie,NM,110,106.4,43,180,137.5,207.5,525,M,Master 40-44,Wraps,,
-1,Kenny Croxdale,NM,90,88.9,67,182.5,125,222.5,530,M,Master 65-69,Single-ply,,
-1,Cierra Laxton,TX,82.5,81.5,21,,,192.5,192.5,F,Junior 20-23,Raw,,
-1,Rachael Sewards,NM,75,73.2,33,,,132.5,132.5,F,Open,Raw,,
-1,Cierra Laxton,TX,82.5,81.5,21,,,192.5,192.5,F,Open,Raw,,
-1,James Murphy,NM,82.5,81.7,38,,127.5,200,327.5,M,Submaster 35-39,Raw,,
-1,Adam Avenetti,NM,90,86,26,,160,255,415,M,Open,Wraps,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Squat4Kg,Event
+1,Cierra Laxton,TX,82.5,81.5,21,107.5,82.5,192.5,382.5,F,Junior 20-23,Raw,,,SBD
+1,Amanda Brady,NM,60,60,28,117.5,80,155,352.5,F,Open,Raw,,,SBD
+1,Kimberly Latham,CO,75,70,31,125,65,125,315,F,Open,Raw,,,SBD
+1,Cierra Laxton,TX,82.5,81.5,21,107.5,82.5,192.5,382.5,F,Open,Raw,,,SBD
+1,Stephanie Cinocco,NM,56,55.7,45,82.5,52.5,102.5,237.5,F,Master 45-49,Raw,,,SBD
+1,Noah Lopez,NM,82.5,81.3,15,180.5,117.5,177.5,475.5,M,Junior 13-15,Raw,187.5,,SBD
+1,Carlos Avalos,TX,67.5,66.8,24,205,132.5,260,597.5,M,Open,Raw,,,SBD
+1,Dustin Jackson,NM,100,99.4,24,230,160,288,678,M,Open,Raw,,,SBD
+2,Ruben Romero,NM,100,99,25,207.5,165,227.5,600,M,Open,Raw,,,SBD
+1,Brandon Smith,NM,140,137.9,27,162.5,142.5,215,520,M,Open,Raw,,,SBD
+1,Cody Hanson,NM,140,139.4,40,190,135,197.5,522.5,M,Master 40-44,Raw,,,SBD
+1,Perla Apodaca,TX,67.5,63.2,19,140,70,170,380,F,Junior 18-19,Wraps,,,SBD
+1,Fenslage Franziska,TX,82.5,80.4,22,97.5,57.5,125,280,F,Junior 20-23,Wraps,,,SBD
+1,Zina Silva,TX,52,51.6,53,90,62.5,110,262.5,F,Open,Wraps,,,SBD
+1,Qiana Jurado,TX,56,55.2,16,92.5,45,92.5,230,F,Open,Wraps,,,SBD
+1,Perla Apodaca,TX,67.5,63.2,19,140,70,170,380,F,Open,Wraps,,,SBD
+1,Zina Silva,TX,52,51.6,53,90,62.5,110,262.5,F,Master 50-54,Wraps,,,SBD
+1,Tyler Trainum,NM,90,89.9,18,220,137.5,240,597.5,M,Junior 18-19,Wraps,,225,SBD
+1,Alexander Lopez,TX,100,93.2,19,225,127.5,250,602.5,M,Junior 18-19,Wraps,,,SBD
+1,Zachary Stetler,TX,82.5,79.5,22,182.5,150,227.5,560,M,Junior 20-23,Wraps,,,SBD
+1,Shane Anslinger,TX,75,74.6,24,220,127.5,217.5,565,M,Open,Wraps,,,SBD
+1,Adam Avenetti,NM,90,86,26,230,160,255,645,M,Open,Wraps,,,SBD
+1,Ismael Hernandez,TX,100,91.8,36,250,182.5,275,707.5,M,Open,Wraps,,,SBD
+2,Justin Sandoval,TX,100,95.1,24,227.5,137.5,250,615,M,Open,Wraps,,,SBD
+1,Ray Davis,TX,125,115.6,27,250,160,265,675,M,Open,Wraps,,,SBD
+1,Ismael Hernandez,TX,100,91.8,36,250,182.5,275,707.5,M,Submaster 35-39,Wraps,,,SBD
+1,Nick Rubie,NM,110,106.4,43,180,137.5,207.5,525,M,Master 40-44,Wraps,,,SBD
+1,Kenny Croxdale,NM,90,88.9,67,182.5,125,222.5,530,M,Master 65-69,Single-ply,,,SBD
+1,Cierra Laxton,TX,82.5,81.5,21,,,192.5,192.5,F,Junior 20-23,Raw,,,D
+1,Rachael Sewards,NM,75,73.2,33,,,132.5,132.5,F,Open,Raw,,,D
+1,Cierra Laxton,TX,82.5,81.5,21,,,192.5,192.5,F,Open,Raw,,,D
+1,James Murphy,NM,82.5,81.7,38,,127.5,200,327.5,M,Submaster 35-39,Raw,,,BD
+1,Adam Avenetti,NM,90,86,26,,160,255,415,M,Open,Raw,,,BD

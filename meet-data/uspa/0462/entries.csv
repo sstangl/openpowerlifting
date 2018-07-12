@@ -1,25 +1,25 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg
-1,Kenya Kelly,OK,67.5,67.20,21,97.50,50.00,127.50,275.00,F,Junior 20-23,Raw,
-2,Elise Francel,OK,67.5,67.50,22,90.00,42.50,102.50,235.00,F,Junior 20-23,Raw,
-1,Brianna Harris,OK,75,73.50,23,150.00,85.00,170.00,405.00,F,Junior 20-23,Raw,88.0
-1,Josh Nooner,OK,82.5,81.70,23,207.50,165.00,227.50,600.00,M,Junior 20-23,Raw,
-2,Christian Davis,KS,82.5,80.50,21,167.50,135.00,210.00,512.50,M,Junior 20-23,Raw,
-1,Austin Jones,UT,110,109.90,23,155.00,110.00,192.50,457.50,M,Junior 20-23,Raw,
-1,Josh Nooner,OK,82.5,81.70,23,207.50,165.00,227.50,600.00,M,Open,Raw,
-DQ,Evan Kemph,KS,82.5,79.90,24,125.00,-97.50,147.50,,M,Open,Raw,
-1,Chad Carter,KS,90,89.80,28,197.50,135.00,212.50,545.00,M,Open,Raw,
-1,Rommi Loredo,KS,110,104.00,24,152.50,140.00,200.00,492.50,M,Open,Raw,
-1,Jake Burghardt,OK,125,124.80,27,240.00,157.50,272.50,670.00,M,Open,Raw,
-1,Morgan Colling,KS,56,55.70,22,122.50,72.50,142.50,337.50,F,Junior 20-23,Wraps,
-1,Lucas Dudgeon,KS,90,87.30,23,218.00,117.50,192.50,528.00,M,Junior 20-23,Wraps,
-1,Max Peterson,KS,100,98.80,20,212.50,112.50,227.50,552.50,M,Junior 20-23,Wraps,
-1,Cruz Holguin,OK,110,107.70,23,207.50,147.50,237.50,592.50,M,Junior 20-23,Wraps,
-1,Lexington Plummer,KS,125,124.10,19,320.00,185.00,325.00,830.00,M,Junior 18-19,Wraps,
-1,Ryan Baylark,KS,82.5,82.20,27,277.50,180.00,282.50,740.00,M,Open,Wraps,
-1,Morgan Colling,KS,56,55.70,22,,72.50,,72.50,F,Junior 20-23,Raw,
-1,Alec Grunder,KS,82.5,76.90,16,,125.00,,125.00,M,Junior 16-17,Raw,
-1,Chris Peterson,KS,90,89.00,36,,147.50,,147.50,M,Master 35-39,Raw,
-1,Paul Francel,OK,110,103.50,54,,95.00,,95.00,M,Master 50-54,Raw,
-1,David McCoskey,MO,110,109.60,54,,125.00,,125.00,M,Master 50-54,Single-ply,
-1,Luke McCoskey,MO,125,123.40,24,,182.50,,182.50,M,Open,Single-ply,
-1,David McCoskey,MO,110,109.60,54,,125.00,,125.00,M,Open,Single-ply,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Event
+1,Kenya Kelly,OK,67.5,67.20,21,97.50,50.00,127.50,275.00,F,Junior 20-23,Raw,,SBD
+2,Elise Francel,OK,67.5,67.50,22,90.00,42.50,102.50,235.00,F,Junior 20-23,Raw,,SBD
+1,Brianna Harris,OK,75,73.50,23,150.00,85.00,170.00,405.00,F,Junior 20-23,Raw,88.0,SBD
+1,Josh Nooner,OK,82.5,81.70,23,207.50,165.00,227.50,600.00,M,Junior 20-23,Raw,,SBD
+2,Christian Davis,KS,82.5,80.50,21,167.50,135.00,210.00,512.50,M,Junior 20-23,Raw,,SBD
+1,Austin Jones,UT,110,109.90,23,155.00,110.00,192.50,457.50,M,Junior 20-23,Raw,,SBD
+1,Josh Nooner,OK,82.5,81.70,23,207.50,165.00,227.50,600.00,M,Open,Raw,,SBD
+DQ,Evan Kemph,KS,82.5,79.90,24,125.00,-97.50,147.50,,M,Open,Raw,,SBD
+1,Chad Carter,KS,90,89.80,28,197.50,135.00,212.50,545.00,M,Open,Raw,,SBD
+1,Rommi Loredo,KS,110,104.00,24,152.50,140.00,200.00,492.50,M,Open,Raw,,SBD
+1,Jake Burghardt,OK,125,124.80,27,240.00,157.50,272.50,670.00,M,Open,Raw,,SBD
+1,Morgan Colling,KS,56,55.70,22,122.50,72.50,142.50,337.50,F,Junior 20-23,Wraps,,SBD
+1,Lucas Dudgeon,KS,90,87.30,23,218.00,117.50,192.50,528.00,M,Junior 20-23,Wraps,,SBD
+1,Max Peterson,KS,100,98.80,20,212.50,112.50,227.50,552.50,M,Junior 20-23,Wraps,,SBD
+1,Cruz Holguin,OK,110,107.70,23,207.50,147.50,237.50,592.50,M,Junior 20-23,Wraps,,SBD
+1,Lexington Plummer,KS,125,124.10,19,320.00,185.00,325.00,830.00,M,Junior 18-19,Wraps,,SBD
+1,Ryan Baylark,KS,82.5,82.20,27,277.50,180.00,282.50,740.00,M,Open,Wraps,,SBD
+1,Morgan Colling,KS,56,55.70,22,,72.50,,72.50,F,Junior 20-23,Raw,,B
+1,Alec Grunder,KS,82.5,76.90,16,,125.00,,125.00,M,Junior 16-17,Raw,,B
+1,Chris Peterson,KS,90,89.00,36,,147.50,,147.50,M,Master 35-39,Raw,,B
+1,Paul Francel,OK,110,103.50,54,,95.00,,95.00,M,Master 50-54,Raw,,B
+1,David McCoskey,MO,110,109.60,54,,125.00,,125.00,M,Master 50-54,Single-ply,,B
+1,Luke McCoskey,MO,125,123.40,24,,182.50,,182.50,M,Open,Single-ply,,B
+1,David McCoskey,MO,110,109.60,54,,125.00,,125.00,M,Open,Single-ply,,B

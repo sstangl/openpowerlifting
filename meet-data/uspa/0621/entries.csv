@@ -1,20 +1,20 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Deadlift4Kg
-1,Monica Martin,VA,82.5,78.00,40,75.00,,75.00,F,Open,Raw,,
-1,Monica Martin,VA,82.5,78.00,40,75.00,,75.00,F,Master 40-44,Raw,,
-1,Nick Cook,WV,100,98.60,19,190.00,,190.00,M,Junior 18-19,Raw,195,
-1,Michael Lesnett,WV,90,89.10,29,165.00,,165.00,M,Open,Raw,,
-1,Nick Cook,WV,100,98.60,19,190.00,,190.00,M,Open,Raw,195,
-1,Samuel Garner,WV,125,117.20,34,212.50,,212.50,M,Open,Raw,,
-1,Jeremiah Hampton,VA,125,120.00,35,172.50,,172.50,M,Submaster 35-39,Raw,,
-1,Chris Jividen,WV,100,98.00,28,240.00,,240.00,M,Open,Single-ply,,
-1,David Moore,WV,100,97.40,53,195.00,,195.00,M,Master 50-54,Single-ply,,
-1,Monica Martin,VA,82.5,78.00,40,,110.00,110.00,F,Open,Raw,,115
-1,Monica Martin,VA,82.5,78.00,40,,110.00,110.00,F,Master 40-44,Raw,,115
-1,Nick Cook,WV,100,98.60,19,,272.50,272.50,M,Junior 18-19,Raw,,
-1,Nick Cook,WV,100,98.60,19,,272.50,272.50,M,Open,Raw,,
-1,Chris Walter,VA,110,105.30,68,,107.50,107.50,M,Master 65-69,Raw,,
-1,Chris Jividen,WV,100,98.00,28,,290.00,290.00,M,Open,Single-ply,,
-1,David Moore,WV,100,97.40,53,,182.50,182.50,M,Master 50-54,Single-ply,,
-1,Dustin Russell,OH,100,97.40,34,,237.50,237.50,M,Open,Multi-ply,,
-2,Paul Sutphin,WV,100,97.20,61,,227.50,227.50,M,Open,Multi-ply,,
-1,Paul Sutphin,WV,100,97.20,61,,227.50,227.50,M,Master 60-64,Multi-ply,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Bench4Kg,Deadlift4Kg,Event
+1,Monica Martin,VA,82.5,78.00,40,75.00,,75.00,F,Open,Raw,,,B
+1,Monica Martin,VA,82.5,78.00,40,75.00,,75.00,F,Master 40-44,Raw,,,B
+1,Nick Cook,WV,100,98.60,19,190.00,,190.00,M,Junior 18-19,Raw,195,,B
+1,Michael Lesnett,WV,90,89.10,29,165.00,,165.00,M,Open,Raw,,,B
+1,Nick Cook,WV,100,98.60,19,190.00,,190.00,M,Open,Raw,195,,B
+1,Samuel Garner,WV,125,117.20,34,212.50,,212.50,M,Open,Raw,,,B
+1,Jeremiah Hampton,VA,125,120.00,35,172.50,,172.50,M,Submaster 35-39,Raw,,,B
+1,Chris Jividen,WV,100,98.00,28,240.00,,240.00,M,Open,Single-ply,,,B
+1,David Moore,WV,100,97.40,53,195.00,,195.00,M,Master 50-54,Single-ply,,,B
+1,Monica Martin,VA,82.5,78.00,40,,110.00,110.00,F,Open,Raw,,115,D
+1,Monica Martin,VA,82.5,78.00,40,,110.00,110.00,F,Master 40-44,Raw,,115,D
+1,Nick Cook,WV,100,98.60,19,,272.50,272.50,M,Junior 18-19,Raw,,,D
+1,Nick Cook,WV,100,98.60,19,,272.50,272.50,M,Open,Raw,,,D
+1,Chris Walter,VA,110,105.30,68,,107.50,107.50,M,Master 65-69,Raw,,,D
+1,Chris Jividen,WV,100,98.00,28,,290.00,290.00,M,Open,Single-ply,,,D
+1,David Moore,WV,100,97.40,53,,182.50,182.50,M,Master 50-54,Single-ply,,,D
+1,Dustin Russell,OH,100,97.40,34,,237.50,237.50,M,Open,Multi-ply,,,D
+2,Paul Sutphin,WV,100,97.20,61,,227.50,227.50,M,Open,Multi-ply,,,D
+1,Paul Sutphin,WV,100,97.20,61,,227.50,227.50,M,Master 60-64,Multi-ply,,,D

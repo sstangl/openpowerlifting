@@ -1,36 +1,36 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Bench4Kg
-1,Bailey Jensen,TX,67.5,65.40,17,87.50,45.00,125.00,257.50,F,Junior,Raw,,
-1,Monica Ocejo,TX,60,60.00,32,92.50,57.50,105.00,255.00,F,Open,Raw,,
-1,Sarah Herald,TX,67.5,64.50,26,95.00,52.50,135.00,282.50,F,Open,Raw,,
-2,Bailey Jensen,TX,67.5,65.40,17,87.50,45.00,125.00,257.50,F,Open,Raw,,
-3,Stephany Gonzalez,TX,67.5,67.50,33,90.00,42.50,125.00,257.50,F,Open,Raw,,
-1,Andres Ramos,TX,60,59.10,17,195.00,100.00,205.00,500.00,M,Junior 16-17,Raw,,
-1,Austin French,TX,90,88.10,22,227.50,127.50,232.50,587.50,M,Junior 20-23,Raw,,
-1,Andres Ramos,TX,60,59.10,17,195.00,100.00,205.00,500.00,M,Open,Raw,,
-1,Robert Engleman,NC,75,74.40,43,150.00,125.00,187.50,462.50,M,Open,Raw,190,
-1,David Troutt,TX,110,106.50,31,300.00,182.50,365.00,847.50,M,Open,Raw,,
-2,Tom Winkler,TX,110,103.70,45,157.50,137.50,190.00,485.00,M,Open,Raw,,
-DQ,Lorenzo Aguilera,TX,110,108.50,29,247.50,172.50,-242.50,,M,Open,Raw,,
-1,Austen Horton,TX,125,115.00,39,192.50,112.50,227.50,532.50,M,Open,Raw,,
-1,Benigno Cepeda,TX,90,89.90,38,185.00,140.00,205.00,530.00,M,Submaster 35-39,Raw,,
-1,Austen Horton,TX,125,115.00,39,192.50,112.50,227.50,532.50,M,Submaster 35-39,Raw,,
-1,Robert Engleman,NC,75,74.40,43,150.00,125.00,187.50,462.50,M,Master 40-44,Raw,190,
-1,Tom Winkler,TX,110,103.70,45,157.50,137.50,190.00,485.00,M,Master 45-49,Raw,,
-1,Connor Murphy,TX,140+,144.00,17,200.00,125.00,200.00,525.00,M,Junior 16-17,Wraps,,
-1,Trenton Wade,TX,90,89.10,35,255.00,192.50,297.50,745.00,M,Submaster 35-39,Wraps,,197.5
-1,Victor Reza,TX,82.5,82.00,41,177.50,142.50,217.50,537.50,M,Master 40-44,Wraps,,
-1,Gin Ivey,TX,67.5,64.90,17,197.50,125.00,217.50,540.00,M,Open,Single-ply,,
-1,Stephany Gonzalez,TX,67.5,67.50,33,,42.50,,42.50,F,Open,Raw,,
-1,Penny Pruitt,TX,90+,97.50,50,,47.50,,47.50,F,Master 50-54,Raw,,
-1,Francisco Martinez,TX,90,87.80,20,,153.00,,153.00,M,Junior 20-23,Raw,,
-1,Lorenzo Aguilera,TX,110,108.50,29,,172.50,,172.50,M,Open,Raw,,
-1,Steve Calamars Jr,TX,82.5,79.60,36,,115.00,,115.00,M,Submaster 35-39,Raw,,
-1,Steve Calamars Sr,TX,100,97.80,61,,157.50,,157.50,M,Master 60-64,Raw,,
-1,Kristina Ortiz,TX,60,58.50,24,,,127.50,127.50,F,Open,Raw,,
-1,Stephany Gonzalez,TX,67.5,67.50,33,,,125.00,125.00,F,Open,Raw,,
-1,Penny Pruitt,TX,90+,97.50,50,,,105.00,105.00,F,Master 50-54,Raw,,
-1,Aaron Sanchez,TX,67.5,64.10,17,,,150.00,150.00,M,Junior 16-17,Raw,,
-1,Francisco Martinez,TX,90,87.80,20,,,212.50,212.50,M,Junior 20-23,Raw,,
-1,Steve Calamars Jr,TX,82.5,79.60,36,,,205.00,205.00,M,Submaster 35-39,Raw,,
-1,Kash Morrow,TX,100,97.30,49,,,190.00,190.00,M,Master 45-49,Raw,,
-1,Steve Calamars Sr,TX,100,97.80,61,,,227.50,227.50,M,Master 60-64,Raw,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Bench4Kg,Event
+1,Bailey Jensen,TX,67.5,65.40,17,87.50,45.00,125.00,257.50,F,Junior,Raw,,,SBD
+1,Monica Ocejo,TX,60,60.00,32,92.50,57.50,105.00,255.00,F,Open,Raw,,,SBD
+1,Sarah Herald,TX,67.5,64.50,26,95.00,52.50,135.00,282.50,F,Open,Raw,,,SBD
+2,Bailey Jensen,TX,67.5,65.40,17,87.50,45.00,125.00,257.50,F,Open,Raw,,,SBD
+3,Stephany Gonzalez,TX,67.5,67.50,33,90.00,42.50,125.00,257.50,F,Open,Raw,,,SBD
+1,Andres Ramos,TX,60,59.10,17,195.00,100.00,205.00,500.00,M,Junior 16-17,Raw,,,SBD
+1,Austin French,TX,90,88.10,22,227.50,127.50,232.50,587.50,M,Junior 20-23,Raw,,,SBD
+1,Andres Ramos,TX,60,59.10,17,195.00,100.00,205.00,500.00,M,Open,Raw,,,SBD
+1,Robert Engleman,NC,75,74.40,43,150.00,125.00,187.50,462.50,M,Open,Raw,190,,SBD
+1,David Troutt,TX,110,106.50,31,300.00,182.50,365.00,847.50,M,Open,Raw,,,SBD
+2,Tom Winkler,TX,110,103.70,45,157.50,137.50,190.00,485.00,M,Open,Raw,,,SBD
+DQ,Lorenzo Aguilera,TX,110,108.50,29,247.50,172.50,-242.50,,M,Open,Raw,,,SBD
+1,Austen Horton,TX,125,115.00,39,192.50,112.50,227.50,532.50,M,Open,Raw,,,SBD
+1,Benigno Cepeda,TX,90,89.90,38,185.00,140.00,205.00,530.00,M,Submaster 35-39,Raw,,,SBD
+1,Austen Horton,TX,125,115.00,39,192.50,112.50,227.50,532.50,M,Submaster 35-39,Raw,,,SBD
+1,Robert Engleman,NC,75,74.40,43,150.00,125.00,187.50,462.50,M,Master 40-44,Raw,190,,SBD
+1,Tom Winkler,TX,110,103.70,45,157.50,137.50,190.00,485.00,M,Master 45-49,Raw,,,SBD
+1,Connor Murphy,TX,140+,144.00,17,200.00,125.00,200.00,525.00,M,Junior 16-17,Wraps,,,SBD
+1,Trenton Wade,TX,90,89.10,35,255.00,192.50,297.50,745.00,M,Submaster 35-39,Wraps,,197.5,SBD
+1,Victor Reza,TX,82.5,82.00,41,177.50,142.50,217.50,537.50,M,Master 40-44,Wraps,,,SBD
+1,Gin Ivey,TX,67.5,64.90,17,197.50,125.00,217.50,540.00,M,Open,Single-ply,,,SBD
+1,Stephany Gonzalez,TX,67.5,67.50,33,,42.50,,42.50,F,Open,Raw,,,B
+1,Penny Pruitt,TX,90+,97.50,50,,47.50,,47.50,F,Master 50-54,Raw,,,B
+1,Francisco Martinez,TX,90,87.80,20,,153.00,,153.00,M,Junior 20-23,Raw,,,B
+1,Lorenzo Aguilera,TX,110,108.50,29,,172.50,,172.50,M,Open,Raw,,,B
+1,Steve Calamars Jr,TX,82.5,79.60,36,,115.00,,115.00,M,Submaster 35-39,Raw,,,B
+1,Steve Calamars Sr,TX,100,97.80,61,,157.50,,157.50,M,Master 60-64,Raw,,,B
+1,Kristina Ortiz,TX,60,58.50,24,,,127.50,127.50,F,Open,Raw,,,D
+1,Stephany Gonzalez,TX,67.5,67.50,33,,,125.00,125.00,F,Open,Raw,,,D
+1,Penny Pruitt,TX,90+,97.50,50,,,105.00,105.00,F,Master 50-54,Raw,,,D
+1,Aaron Sanchez,TX,67.5,64.10,17,,,150.00,150.00,M,Junior 16-17,Raw,,,D
+1,Francisco Martinez,TX,90,87.80,20,,,212.50,212.50,M,Junior 20-23,Raw,,,D
+1,Steve Calamars Jr,TX,82.5,79.60,36,,,205.00,205.00,M,Submaster 35-39,Raw,,,D
+1,Kash Morrow,TX,100,97.30,49,,,190.00,190.00,M,Master 45-49,Raw,,,D
+1,Steve Calamars Sr,TX,100,97.80,61,,,227.50,227.50,M,Master 60-64,Raw,,,D

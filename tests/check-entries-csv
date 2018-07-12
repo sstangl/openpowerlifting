@@ -934,7 +934,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         perror("Missing equipment: %s" % ','.join(row))
 
     # Event may not be missing.
-    if 'Event' in csv.fieldnames and not row[csv.index('Equipment')]:
+    if 'Event' in csv.fieldnames and not row[csv.index('Event')]:
         pwarning("Missing event: %s" % ','.join(row))
 
 

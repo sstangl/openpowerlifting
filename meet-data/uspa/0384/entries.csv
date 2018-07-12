@@ -1,30 +1,30 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Meghan Hogan,NJ,67.5,66.68,23,107.50,60.00,137.50,305.00,F,Junior 20-23,Raw
-1,Tarnissha Sass,PA,67.5,65.54,39,122.50,65.00,137.50,325.00,F,Open,Raw
-2,Meghan Hogan,NJ,67.5,66.68,23,107.50,60.00,137.50,305.00,F,Open,Raw
-1,Marcus Bell,MD,75,71.99,19,197.50,127.50,215.00,540.00,M,Junior 18-19,Raw
-2,Louis Liu,NY,75,73.03,18,190.00,112.50,222.50,525.00,M,Junior 18-19,Raw
-3,Stanialav Artemenko,NY,75,73.57,19,182.50,115.00,210.00,507.50,M,Junior 18-19,Raw
-1,Noah Gonzalez,PA,82.5,77.25,18,152.50,92.50,185.00,430.00,M,Junior 18-19,Raw
-1,Trevor Eisnman,PA,82.5,79.02,21,155.00,132.50,175.00,462.50,M,Junior 20-23,Raw
-1,Arlind Rumusevic,NY,90,85.50,19,205.00,135.00,225.00,565.00,M,Junior 18-19,Raw
-1,Johnathan Rodrigues,NJ,90,87.77,20,255.00,137.50,277.50,670.00,M,Junior 20-23,Raw
-1,Mario Lozano,PA,100,94.44,21,162.50,105.00,235.00,502.50,M,Junior 20-23,Raw
-1,Manuel Prieto,NY,60,58.79,21,160.00,110.00,185.00,455.00,M,Open,Raw
-1,Mike Gerardi,NY,90,88.99,35,272.50,197.50,272.50,742.50,M,Open,Raw
-2,Michael Baker,NJ,90,85.77,25,217.50,152.50,267.50,637.50,M,Open,Raw
-3,Anthony Carlisi,NJ,90,87.95,24,210.00,152.50,265.00,627.50,M,Open,Raw
-1,Jason Lombari,PA,100,96.39,34,227.50,162.50,272.50,662.50,M,Open,Raw
-2,Ryan Dagnall,PA,100,97.98,26,210.00,150.00,255.00,615.00,M,Open,Raw
-1,Mike Gerardi,NY,90,88.99,35,272.50,197.50,272.50,742.50,M,Master,Raw
-1,John Schlegel,PA,75,73.57,41,135.00,100.00,162.50,397.50,M,Master 40-44,Raw
-1,Brad Baker,PA,110,106.41,57,182.50,110.00,160.00,452.50,M,Master 55-59,Raw
-1,Kevin Lobb,PA,100,96.07,25,227.50,170.00,240.00,637.50,M,Open,Wraps
-1,Casey Drader,NY,125,116.71,28,232.50,142.50,250.00,625.00,M,Open,Wraps
-1,Luca Martino,PA,90,86.45,35,157.50,125.00,175.00,457.50,M,Submaster 35-39,Raw
-1,David Siegfried,PA,90,87.86,50,200.00,195.00,250.00,645.00,M,Master 50-54,Wraps
-1,Fred Glass,PA,67.5,67.00,77,117.50,42.50,155.00,315.00,M,Master 75-79,Multi-ply
-1,Jason Manenkoff,NJ,75,73.57,32,,190.00,,190.00,M,Open,Raw
-1,Brick Davis,PA,125,124.78,35,,230.00,,230.00,M,Submaster 35-39,Raw
-1,David Siegfried,PA,90,87.86,50,,195.00,,195.00,M,Master 50-54,Raw
-1,Brick Davis,PA,125,124.78,35,,,307.50,307.50,M,Submaster 35-39,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Meghan Hogan,NJ,67.5,66.68,23,107.50,60.00,137.50,305.00,F,Junior 20-23,Raw,SBD
+1,Tarnissha Sass,PA,67.5,65.54,39,122.50,65.00,137.50,325.00,F,Open,Raw,SBD
+2,Meghan Hogan,NJ,67.5,66.68,23,107.50,60.00,137.50,305.00,F,Open,Raw,SBD
+1,Marcus Bell,MD,75,71.99,19,197.50,127.50,215.00,540.00,M,Junior 18-19,Raw,SBD
+2,Louis Liu,NY,75,73.03,18,190.00,112.50,222.50,525.00,M,Junior 18-19,Raw,SBD
+3,Stanialav Artemenko,NY,75,73.57,19,182.50,115.00,210.00,507.50,M,Junior 18-19,Raw,SBD
+1,Noah Gonzalez,PA,82.5,77.25,18,152.50,92.50,185.00,430.00,M,Junior 18-19,Raw,SBD
+1,Trevor Eisnman,PA,82.5,79.02,21,155.00,132.50,175.00,462.50,M,Junior 20-23,Raw,SBD
+1,Arlind Rumusevic,NY,90,85.50,19,205.00,135.00,225.00,565.00,M,Junior 18-19,Raw,SBD
+1,Johnathan Rodrigues,NJ,90,87.77,20,255.00,137.50,277.50,670.00,M,Junior 20-23,Raw,SBD
+1,Mario Lozano,PA,100,94.44,21,162.50,105.00,235.00,502.50,M,Junior 20-23,Raw,SBD
+1,Manuel Prieto,NY,60,58.79,21,160.00,110.00,185.00,455.00,M,Open,Raw,SBD
+1,Mike Gerardi,NY,90,88.99,35,272.50,197.50,272.50,742.50,M,Open,Raw,SBD
+2,Michael Baker,NJ,90,85.77,25,217.50,152.50,267.50,637.50,M,Open,Raw,SBD
+3,Anthony Carlisi,NJ,90,87.95,24,210.00,152.50,265.00,627.50,M,Open,Raw,SBD
+1,Jason Lombari,PA,100,96.39,34,227.50,162.50,272.50,662.50,M,Open,Raw,SBD
+2,Ryan Dagnall,PA,100,97.98,26,210.00,150.00,255.00,615.00,M,Open,Raw,SBD
+1,Mike Gerardi,NY,90,88.99,35,272.50,197.50,272.50,742.50,M,Master,Raw,SBD
+1,John Schlegel,PA,75,73.57,41,135.00,100.00,162.50,397.50,M,Master 40-44,Raw,SBD
+1,Brad Baker,PA,110,106.41,57,182.50,110.00,160.00,452.50,M,Master 55-59,Raw,SBD
+1,Kevin Lobb,PA,100,96.07,25,227.50,170.00,240.00,637.50,M,Open,Wraps,SBD
+1,Casey Drader,NY,125,116.71,28,232.50,142.50,250.00,625.00,M,Open,Wraps,SBD
+1,Luca Martino,PA,90,86.45,35,157.50,125.00,175.00,457.50,M,Submaster 35-39,Raw,SBD
+1,David Siegfried,PA,90,87.86,50,200.00,195.00,250.00,645.00,M,Master 50-54,Wraps,SBD
+1,Fred Glass,PA,67.5,67.00,77,117.50,42.50,155.00,315.00,M,Master 75-79,Multi-ply,SBD
+1,Jason Manenkoff,NJ,75,73.57,32,,190.00,,190.00,M,Open,Raw,B
+1,Brick Davis,PA,125,124.78,35,,230.00,,230.00,M,Submaster 35-39,Raw,B
+1,David Siegfried,PA,90,87.86,50,,195.00,,195.00,M,Master 50-54,Raw,B
+1,Brick Davis,PA,125,124.78,35,,,307.50,307.50,M,Submaster 35-39,Raw,D

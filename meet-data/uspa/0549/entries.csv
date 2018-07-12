@@ -1,24 +1,24 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Nicole Daoang,HI,60,59.20,21,115.00,77.50,155.00,347.50,F,Junior 20-23,Raw
-1,Keishila Lee Lopez,HI,67.5,65.80,23,67.50,45.00,95.00,207.50,F,Junior 20-23,Raw
-1,Alexis Calvillo,HI,75,74.60,20,107.50,57.50,127.50,292.50,F,Junior 20-23,Raw
-2,Chelsea Wheelehan,HI,75,74.20,23,77.50,47.50,95.00,220.00,F,Junior 20-23,Raw
-1,Stacey Montoya,HI,67.5,67.20,29,102.50,60.00,127.50,290.00,F,Open,Raw
-2,Amber Cornelius,HI,67.5,65.40,29,77.50,50.00,107.50,235.00,F,Open,Raw
-1,Tyron Robinson,HI,75,74.60,19,132.50,85.00,145.00,362.50,M,Junior 18-19,Raw
-1,Kendell Ingram,HI,75,72.80,21,170.00,107.50,215.00,492.50,M,Junior 20-23,Raw
-1,Denzel Bridges,HI,82.5,78.00,21,205.00,152.50,250.00,607.50,M,Junior 20-23,Raw
-DQ,Aantoine Turner,HI,82.5,79.60,22,182.50,-132.50,220.00,,M,Junior 20-23,Raw
-DQ,Jeffrey Spencer,HI,82.5,78.00,20,147.50,-100.00,190.00,,M,Junior 20-23,Raw
-1,Harley Christoper,HI,90,89.40,23,120.00,102.50,175.00,397.50,M,Junior 20-23,Raw
-1,John Watkins,HI,67.5,67.40,29,172.50,137.50,230.00,540.00,M,Open,Raw
-1,Jonathan Cornelius,HI,75,69.40,27,72.50,77.50,147.50,297.50,M,Open,Raw
-1,Michael Mars,HI,82.5,79.40,24,215.00,127.50,242.50,585.00,M,Open,Raw
-2,Neal Hector,HI,82.5,75.80,21,142.50,110.00,190.00,442.50,M,Open,Raw
-1,William Hall,HI,90,87.60,25,110.00,107.50,200.00,417.50,M,Open,Raw
-1,Reid McMullin,HI,100,93.40,24,142.50,120.00,175.00,437.50,M,Open,Raw
-2,Cory Cyrus Champion,HI,100,94.80,23,122.50,70.00,182.50,375.00,M,Open,Raw
-1,Yohance Boulden,HI,110,103.60,33,225.00,160.00,245.00,630.00,M,Open,Raw
-1,Andrew Herron,HI,125,118.60,28,180.00,130.00,250.00,560.00,M,Open,Raw
-1,Daryl McNeil,HI,82.5,80.80,38,130.00,95.00,155.00,380.00,M,Submaster,Raw
-1,Traylor Brian,HI,110,103.60,41,130.00,85.00,187.50,402.50,M,Master 40-44,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Nicole Daoang,HI,60,59.20,21,115.00,77.50,155.00,347.50,F,Junior 20-23,Raw,SBD
+1,Keishila Lee Lopez,HI,67.5,65.80,23,67.50,45.00,95.00,207.50,F,Junior 20-23,Raw,SBD
+1,Alexis Calvillo,HI,75,74.60,20,107.50,57.50,127.50,292.50,F,Junior 20-23,Raw,SBD
+2,Chelsea Wheelehan,HI,75,74.20,23,77.50,47.50,95.00,220.00,F,Junior 20-23,Raw,SBD
+1,Stacey Montoya,HI,67.5,67.20,29,102.50,60.00,127.50,290.00,F,Open,Raw,SBD
+2,Amber Cornelius,HI,67.5,65.40,29,77.50,50.00,107.50,235.00,F,Open,Raw,SBD
+1,Tyron Robinson,HI,75,74.60,19,132.50,85.00,145.00,362.50,M,Junior 18-19,Raw,SBD
+1,Kendell Ingram,HI,75,72.80,21,170.00,107.50,215.00,492.50,M,Junior 20-23,Raw,SBD
+1,Denzel Bridges,HI,82.5,78.00,21,205.00,152.50,250.00,607.50,M,Junior 20-23,Raw,SBD
+DQ,Aantoine Turner,HI,82.5,79.60,22,182.50,-132.50,220.00,,M,Junior 20-23,Raw,SBD
+DQ,Jeffrey Spencer,HI,82.5,78.00,20,147.50,-100.00,190.00,,M,Junior 20-23,Raw,SBD
+1,Harley Christoper,HI,90,89.40,23,120.00,102.50,175.00,397.50,M,Junior 20-23,Raw,SBD
+1,John Watkins,HI,67.5,67.40,29,172.50,137.50,230.00,540.00,M,Open,Raw,SBD
+1,Jonathan Cornelius,HI,75,69.40,27,72.50,77.50,147.50,297.50,M,Open,Raw,SBD
+1,Michael Mars,HI,82.5,79.40,24,215.00,127.50,242.50,585.00,M,Open,Raw,SBD
+2,Neal Hector,HI,82.5,75.80,21,142.50,110.00,190.00,442.50,M,Open,Raw,SBD
+1,William Hall,HI,90,87.60,25,110.00,107.50,200.00,417.50,M,Open,Raw,SBD
+1,Reid McMullin,HI,100,93.40,24,142.50,120.00,175.00,437.50,M,Open,Raw,SBD
+2,Cory Cyrus Champion,HI,100,94.80,23,122.50,70.00,182.50,375.00,M,Open,Raw,SBD
+1,Yohance Boulden,HI,110,103.60,33,225.00,160.00,245.00,630.00,M,Open,Raw,SBD
+1,Andrew Herron,HI,125,118.60,28,180.00,130.00,250.00,560.00,M,Open,Raw,SBD
+1,Daryl McNeil,HI,82.5,80.80,38,130.00,95.00,155.00,380.00,M,Submaster,Raw,SBD
+1,Traylor Brian,HI,110,103.60,41,130.00,85.00,187.50,402.50,M,Master 40-44,Raw,SBD

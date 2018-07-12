@@ -1,29 +1,29 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg
-1,Tayler Claflin,WY,67.5,66.2,17,82.5,,82.5,F,Junior 16-17,Raw,
-1,Kasey Smith,UT,56,54.6,25,65,,65,F,Open,Raw,
-1,Cody Clawson,UT,82.5,78.2,17,102.5,,102.5,M,Junior 16-17,Raw,
-1,Ethan Ho,UT,90,87.2,20,150,,150,M,Junior 20-23,Raw,
-1,Derek Reasch,UT,125,115,22,175,,175,M,Junior 20-23,Raw,
-1,Paul Andrus,UT,90,85.6,38,192.5,,192.5,M,Open,Raw,
-1,Remick Underwood,UT,100,97,30,130,,130,M,Open,Raw,
-1,Terry Vogel,UT,100,97.2,43,137.5,,137.5,M,Master 40-44,Raw,
-1,C David Hester,UT,140,130,45,210,,210,M,Master 45-49,Raw,
-1,Zac Marchant,UT,56,55.8,15,50,,50,M,Junior 13-15,Single-ply,
-DQ,Karl Pfanzelter,UT,100,95.6,45,-255,,,M,Master 45-49,Single-ply,
-1,Jon Cunningham,UT,75,73.2,51,145,,145,M,Open,Multi-ply,
-1,Jon Cunningham,UT,75,73.2,51,145,,145,M,Master 50-54,Multi-ply,
-1,Tayler Claflin,WY,67.5,66.2,17,,130,130,F,Junior 16-17,Raw,
-1,Cody Clawson,UT,82.5,78.2,17,,182.5,182.5,M,Junior 16-17,Raw,
-1,Charles Hedges,UT,90,87,21,,220,220,M,Junior 20-23,Raw,
-2,Ethan Ho,UT,90,87.5,20,,197.5,197.5,M,Junior 20-23,Raw,
-1,Brennon Peterson,UT,100,96.8,23,,287.5,287.5,M,Junior 20-23,Raw,295
-1,Putheara Hang,UT,82.5,79.2,29,,245,245,M,Open,Raw,
-1,Brennon Peterson,UT,100,96.8,23,,287.5,287.5,M,Open,Raw,295
-2,Remick Underwood,UT,100,97,30,,205,205,M,Open,Raw,
-1,John Mazza,UT,125,117,34,,277.5,277.5,M,Open,Raw,
-1,Terry Vogel,UT,100,97.2,43,,195,195,M,Master 40-44,Raw,
-1,Zac Marchant,UT,56,55.8,15,,112.5,112.5,M,Junior 13-15,Single-ply,
-DQ,Sean Olsen,UT,100,98.4,42,,-337.5,,M,Open,Single-ply,
-DQ,Sean Olsen,UT,100,98.4,42,,-337.5,,M,Master 40-44,Single-ply,
-1,Katherine Hristou,UT,75,71.8,54,60,112.5,172.5,F,Master 50-54,Raw,
-1,Sean Roberts,UT,67.5,67.4,22,112.5,190,302.5,M,Open,Raw,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Event
+1,Tayler Claflin,WY,67.5,66.2,17,82.5,,82.5,F,Junior 16-17,Raw,,B
+1,Kasey Smith,UT,56,54.6,25,65,,65,F,Open,Raw,,B
+1,Cody Clawson,UT,82.5,78.2,17,102.5,,102.5,M,Junior 16-17,Raw,,B
+1,Ethan Ho,UT,90,87.2,20,150,,150,M,Junior 20-23,Raw,,B
+1,Derek Reasch,UT,125,115,22,175,,175,M,Junior 20-23,Raw,,B
+1,Paul Andrus,UT,90,85.6,38,192.5,,192.5,M,Open,Raw,,B
+1,Remick Underwood,UT,100,97,30,130,,130,M,Open,Raw,,B
+1,Terry Vogel,UT,100,97.2,43,137.5,,137.5,M,Master 40-44,Raw,,B
+1,C David Hester,UT,140,130,45,210,,210,M,Master 45-49,Raw,,B
+1,Zac Marchant,UT,56,55.8,15,50,,50,M,Junior 13-15,Single-ply,,B
+DQ,Karl Pfanzelter,UT,100,95.6,45,-255,,,M,Master 45-49,Single-ply,,B
+1,Jon Cunningham,UT,75,73.2,51,145,,145,M,Open,Multi-ply,,B
+1,Jon Cunningham,UT,75,73.2,51,145,,145,M,Master 50-54,Multi-ply,,B
+1,Tayler Claflin,WY,67.5,66.2,17,,130,130,F,Junior 16-17,Raw,,D
+1,Cody Clawson,UT,82.5,78.2,17,,182.5,182.5,M,Junior 16-17,Raw,,D
+1,Charles Hedges,UT,90,87,21,,220,220,M,Junior 20-23,Raw,,D
+2,Ethan Ho,UT,90,87.5,20,,197.5,197.5,M,Junior 20-23,Raw,,D
+1,Brennon Peterson,UT,100,96.8,23,,287.5,287.5,M,Junior 20-23,Raw,295,D
+1,Putheara Hang,UT,82.5,79.2,29,,245,245,M,Open,Raw,,D
+1,Brennon Peterson,UT,100,96.8,23,,287.5,287.5,M,Open,Raw,295,D
+2,Remick Underwood,UT,100,97,30,,205,205,M,Open,Raw,,D
+1,John Mazza,UT,125,117,34,,277.5,277.5,M,Open,Raw,,D
+1,Terry Vogel,UT,100,97.2,43,,195,195,M,Master 40-44,Raw,,D
+1,Zac Marchant,UT,56,55.8,15,,112.5,112.5,M,Junior 13-15,Single-ply,,D
+DQ,Sean Olsen,UT,100,98.4,42,,-337.5,,M,Open,Single-ply,,D
+DQ,Sean Olsen,UT,100,98.4,42,,-337.5,,M,Master 40-44,Single-ply,,D
+1,Katherine Hristou,UT,75,71.8,54,60,112.5,172.5,F,Master 50-54,Raw,,BD
+1,Sean Roberts,UT,67.5,67.4,22,112.5,190,302.5,M,Open,Raw,,BD

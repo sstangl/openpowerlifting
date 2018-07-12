@@ -1,32 +1,32 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg
-1,Madellynn Hollenbeck,OR,75,74.2,16,75,42.5,102.5,220,F,Junior 16-17,Raw,80,
-1,Kelli Ennis,OH,48,47.6,25,87.5,45,120,252.5,F,Open,Raw,,
-1,Karen Standley,OR,60,59.2,36,102.5,60,137.5,300,F,Open,Raw,,
-1,Karen Standley,OR,60,59.2,36,102.5,60,137.5,300,F,Submaster 35-39,Raw,,
-1,Dani Shamblin,OR,82.5,76.4,38,95,50,137.5,282.5,F,Submaster 35-39,Raw,,
-1,Jose Villa,OR,67.5,65.2,20,142.5,92.5,195,430,M,Junior 20-23,Raw,,
-1,Steven Sprenger,CA,82.5,79.2,27,180,92.5,192.5,465,M,Open,Raw,,
-1,Ryan Jennings,OR,90,89.2,29,245,175,247.5,667.5,M,Open,Raw,,
-2,Guy Mamac,OR,90,89.9,34,237.5,152.5,247.5,637.5,M,Open,Raw,,
-DQ,Andrew Wood,NV,90,88.9,31,-212.5,-137.5,-240,,M,Open,Raw,,
-1,Timothy Mercer,OR,100,99.2,36,240,162.5,250,652.5,M,Open,Raw,,
-DQ,Joseph Siringari,OR,125,121.4,30,220,160,-245,,M,Open,Raw,,
-1,Ricardo Dailey,OR,90,86.6,60,137.5,67.5,155,360,M,Master 60-64,Raw,,
-1,Matthew Stephens,OR,100,99.2,46,145,110,182.5,437.5,M,Master 45-49,Raw,,
-1,Larry Shamblin,OR,100,98.8,53,102.5,72.5,150,325,M,Master 50-54,Raw,,
-1,Dan Lindquist,OR,110,100.8,54,155,146,215,516,M,Master 50-54,Raw,160,
-1,Mark Armstrong,OR,140+,181.8,45,145,125,165,435,M,Master 45-49,Raw,,
-1,Ethan Steffey,OR,82.5,80.6,15,112.5,102.5,147.5,362.5,M,Junior 13-15,Wraps,,
-1,Jesse Marvin,OR,90,89.7,23,275,170,292.5,737.5,M,Junior 20-23,Wraps,,
-1,Victor Filipe,OR,140,134.3,32,247.5,165,275,687.5,M,Open,Wraps,,285
-1,Zach Miller,WA,90,89.6,28,,175,,175,M,Open,Raw,,
-1,Joseph Siringari,OR,125,121.4,30,,160,,160,M,Open,Raw,,
-1,Sam Pecktol,OR,140+,149,61,,190,,190,M,Master 60-64,Raw,,
-1,Peyton Bell,OR,60,60,16,,107.5,,107.5,M,Junior 16-17,Single-ply,,
-1,Joe Beteta,OR,100,92.4,70,,182.5,,182.5,M,Master 70-74,Multi-ply,,
-1,Gina Pecktol,OR,60,59.2,66,,,95,95,F,Master 60-64,Raw,,
-1,Mitch Grigsby,OR,100,94.7,18,,,297.5,297.5,M,Junior 18-19,Raw,,
-DQ,Joseph Siringari,OR,125,121.4,30,,,-245,,M,Open,Raw,,
-1,Patricio Ramirez,OR,110,109.8,38,,,265,265,M,Submaster 35-39,Raw,,
-1,Matthew Stephens,OR,100,99.2,46,,,182.5,182.5,M,Master 45-49,Raw,,
-1,Sam Pecktol,OR,140+,149,61,,,287.5,287.5,M,Master 60-64,Raw,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg,Event
+1,Madellynn Hollenbeck,OR,75,74.2,16,75,42.5,102.5,220,F,Junior 16-17,Raw,80,,SBD
+1,Kelli Ennis,OH,48,47.6,25,87.5,45,120,252.5,F,Open,Raw,,,SBD
+1,Karen Standley,OR,60,59.2,36,102.5,60,137.5,300,F,Open,Raw,,,SBD
+1,Karen Standley,OR,60,59.2,36,102.5,60,137.5,300,F,Submaster 35-39,Raw,,,SBD
+1,Dani Shamblin,OR,82.5,76.4,38,95,50,137.5,282.5,F,Submaster 35-39,Raw,,,SBD
+1,Jose Villa,OR,67.5,65.2,20,142.5,92.5,195,430,M,Junior 20-23,Raw,,,SBD
+1,Steven Sprenger,CA,82.5,79.2,27,180,92.5,192.5,465,M,Open,Raw,,,SBD
+1,Ryan Jennings,OR,90,89.2,29,245,175,247.5,667.5,M,Open,Raw,,,SBD
+2,Guy Mamac,OR,90,89.9,34,237.5,152.5,247.5,637.5,M,Open,Raw,,,SBD
+DQ,Andrew Wood,NV,90,88.9,31,-212.5,-137.5,-240,,M,Open,Raw,,,SBD
+1,Timothy Mercer,OR,100,99.2,36,240,162.5,250,652.5,M,Open,Raw,,,SBD
+DQ,Joseph Siringari,OR,125,121.4,30,220,160,-245,,M,Open,Raw,,,SBD
+1,Ricardo Dailey,OR,90,86.6,60,137.5,67.5,155,360,M,Master 60-64,Raw,,,SBD
+1,Matthew Stephens,OR,100,99.2,46,145,110,182.5,437.5,M,Master 45-49,Raw,,,SBD
+1,Larry Shamblin,OR,100,98.8,53,102.5,72.5,150,325,M,Master 50-54,Raw,,,SBD
+1,Dan Lindquist,OR,110,100.8,54,155,146,215,516,M,Master 50-54,Raw,160,,SBD
+1,Mark Armstrong,OR,140+,181.8,45,145,125,165,435,M,Master 45-49,Raw,,,SBD
+1,Ethan Steffey,OR,82.5,80.6,15,112.5,102.5,147.5,362.5,M,Junior 13-15,Wraps,,,SBD
+1,Jesse Marvin,OR,90,89.7,23,275,170,292.5,737.5,M,Junior 20-23,Wraps,,,SBD
+1,Victor Filipe,OR,140,134.3,32,247.5,165,275,687.5,M,Open,Wraps,,285,SBD
+1,Zach Miller,WA,90,89.6,28,,175,,175,M,Open,Raw,,,B
+1,Joseph Siringari,OR,125,121.4,30,,160,,160,M,Open,Raw,,,B
+1,Sam Pecktol,OR,140+,149,61,,190,,190,M,Master 60-64,Raw,,,B
+1,Peyton Bell,OR,60,60,16,,107.5,,107.5,M,Junior 16-17,Single-ply,,,B
+1,Joe Beteta,OR,100,92.4,70,,182.5,,182.5,M,Master 70-74,Multi-ply,,,B
+1,Gina Pecktol,OR,60,59.2,66,,,95,95,F,Master 60-64,Raw,,,D
+1,Mitch Grigsby,OR,100,94.7,18,,,297.5,297.5,M,Junior 18-19,Raw,,,D
+DQ,Joseph Siringari,OR,125,121.4,30,,,-245,,M,Open,Raw,,,D
+1,Patricio Ramirez,OR,110,109.8,38,,,265,265,M,Submaster 35-39,Raw,,,D
+1,Matthew Stephens,OR,100,99.2,46,,,182.5,182.5,M,Master 45-49,Raw,,,D
+1,Sam Pecktol,OR,140+,149,61,,,287.5,287.5,M,Master 60-64,Raw,,,D

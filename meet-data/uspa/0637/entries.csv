@@ -1,24 +1,24 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment
-1,Anna Apolonio,NV,67.5,66.7,32,115,52.5,145,312.5,F,Open,Raw
-1,Adrienne Hill,NV,90,90,26,135,75,180,390,F,Open,Raw
-1,Max Campana,NV,82.5,80.3,22,200,132.5,220,552.5,M,Junior 20-23,Raw
-1,Floyd Lerdahl,NV,100,98.6,29,220,135,275,630,M,Open,Raw
-1,Christopher Morgan,NV,82.5,81.8,24,160,110,185,455,M,Open,Raw
-1,Paul Olson,NV,140+,185.6,44,250,192.5,262.5,705,M,Master 40-44,Raw
-1,Camille Koppelman,NV,67.5,65.4,25,115,57.5,150,322.5,F,Open,Wraps
-1,Tracey Gutschell,NV,75,75,51,115,65,130,310,F,Master 50-54,Wraps
-1,Blake Gardner,NV,75,73,18,197.5,105,182.5,485,M,Junior 18-19,Wraps
-1,Scott Jividen,NV,90,89.7,23,212.5,142.5,240,595,M,Junior 20-23,Wraps
-1,Raymond Mullins,NV,100,97.2,22,227.5,132.5,255,615,M,Junior 20-23,Wraps
-1,Chris Maestas,NV,90,89.6,29,245,155,250,650,M,Open,Wraps
-1,Jason Torche,NV,100,100,30,237.5,182.5,272.5,692.5,M,Open,Wraps
-2,Jayson Lum,NV,100,97.7,24,245,157.5,255,657.5,M,Open,Wraps
-3,Brandon Heaney,NV,100,98.2,26,225,157.5,257.5,640,M,Open,Wraps
-4,Christopher Adgett,NV,100,95.3,31,222.5,147.5,265,635,M,Open,Wraps
-5,Raymond Mullins,NV,100,97.2,22,227.5,132.5,255,615,M,Open,Wraps
-1,Christian Mantle,NV,110,105.3,43,200,130,262.5,592.5,M,Open,Wraps
-1,Dustin Speed,NV,140,139.9,32,377.5,235,342.5,955,M,Open,Wraps
-1,Gabe Kennedy,NV,110,106.8,27,,,235,235,M,Open,Raw
-1,Scott Jividen,NV,90,89.7,23,,,240,240,M,Junior 20-23,Wraps
-1,Alyson Saunders,NV,75,71.5,23,,70,,70,F,Junior 20-23,Raw
-1,Gabe Kennedy,NV,110,106.8,27,,145,,145,M,Open,Raw
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
+1,Anna Apolonio,NV,67.5,66.7,32,115,52.5,145,312.5,F,Open,Raw,SBD
+1,Adrienne Hill,NV,90,90,26,135,75,180,390,F,Open,Raw,SBD
+1,Max Campana,NV,82.5,80.3,22,200,132.5,220,552.5,M,Junior 20-23,Raw,SBD
+1,Floyd Lerdahl,NV,100,98.6,29,220,135,275,630,M,Open,Raw,SBD
+1,Christopher Morgan,NV,82.5,81.8,24,160,110,185,455,M,Open,Raw,SBD
+1,Paul Olson,NV,140+,185.6,44,250,192.5,262.5,705,M,Master 40-44,Raw,SBD
+1,Camille Koppelman,NV,67.5,65.4,25,115,57.5,150,322.5,F,Open,Wraps,SBD
+1,Tracey Gutschell,NV,75,75,51,115,65,130,310,F,Master 50-54,Wraps,SBD
+1,Blake Gardner,NV,75,73,18,197.5,105,182.5,485,M,Junior 18-19,Wraps,SBD
+1,Scott Jividen,NV,90,89.7,23,212.5,142.5,240,595,M,Junior 20-23,Wraps,SBD
+1,Raymond Mullins,NV,100,97.2,22,227.5,132.5,255,615,M,Junior 20-23,Wraps,SBD
+1,Chris Maestas,NV,90,89.6,29,245,155,250,650,M,Open,Wraps,SBD
+1,Jason Torche,NV,100,100,30,237.5,182.5,272.5,692.5,M,Open,Wraps,SBD
+2,Jayson Lum,NV,100,97.7,24,245,157.5,255,657.5,M,Open,Wraps,SBD
+3,Brandon Heaney,NV,100,98.2,26,225,157.5,257.5,640,M,Open,Wraps,SBD
+4,Christopher Adgett,NV,100,95.3,31,222.5,147.5,265,635,M,Open,Wraps,SBD
+5,Raymond Mullins,NV,100,97.2,22,227.5,132.5,255,615,M,Open,Wraps,SBD
+1,Christian Mantle,NV,110,105.3,43,200,130,262.5,592.5,M,Open,Wraps,SBD
+1,Dustin Speed,NV,140,139.9,32,377.5,235,342.5,955,M,Open,Wraps,SBD
+1,Gabe Kennedy,NV,110,106.8,27,,,235,235,M,Open,Raw,D
+1,Scott Jividen,NV,90,89.7,23,,,240,240,M,Junior 20-23,Raw,D
+1,Alyson Saunders,NV,75,71.5,23,,70,,70,F,Junior 20-23,Raw,B
+1,Gabe Kennedy,NV,110,106.8,27,,145,,145,M,Open,Raw,B

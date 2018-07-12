@@ -1,40 +1,40 @@
-Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Squat4Kg,Bench4Kg
-1,Calie Chesler,TX,67.5,62.40,18,122.50,52.50,145.00,320.00,F,Junior 18-19,Raw,147.5,,
-2,Emily Jebing,TX,67.5,61.00,18,112.50,47.50,145.00,305.00,F,Junior 18-19,Raw,,,
-1,Kenya Kelly,OK,67.5,66.40,21,95.00,52.50,142.50,290.00,F,Junior 20-23,Raw,,,
-2,Elise Francel,OK,67.5,67.00,22,92.50,50.00,110.00,252.50,F,Junior 20-23,Raw,,,
-1,Emily Self,TX,82.5,80.60,34,140.00,75.00,160.00,375.00,F,Open,Raw,,,
-1,Fatima Patterson,TX,90,88.00,41,90.00,67.50,112.50,270.00,F,Master 40-44,Raw,,,
-1,Jace Fraser,TX,52,49.80,14,85.00,47.50,105.00,237.50,M,Junior 13-15,Raw,,,
-1,Kevin Huynh,TX,67.5,67.00,21,175.00,117.50,227.50,520.00,M,Junior 20-23,Raw,,,
-1,Michael Jin,TX,75,74.20,19,200.00,145.00,215.00,560.00,M,Junior 18-19,Raw,,,
-1,David Shelton,TX,75,73.20,22,215.00,160.00,220.00,595.00,M,Junior 20-23,Raw,,,
-DQ,Joe Parks,TX,75,68.60,22,-167.50,,,,M,Junior 20-23,Raw,,,
-1,Miguel Morales,TX,82.5,82.50,21,192.50,125.00,227.50,545.00,M,Junior 20-23,Raw,,,
-1,Brandon Moreno,TX,100,96.60,19,182.50,110.00,195.00,487.50,M,Junior 18-19,Raw,,,
-1,Austin Coon,TX,100,95.80,23,185.00,137.50,225.00,547.50,M,Junior 20-23,Raw,,,
-1,Ali Malik,TX,67.5,67.00,25,172.50,125.50,245.50,543.50,M,Open,Raw,,,
-2,Kevin Huynh,TX,67.5,67.00,21,175.00,117.50,227.50,520.00,M,Open,Raw,,,
-1,David Shelton,TX,75,73.20,22,215.00,160.00,220.00,595.00,M,Open,Raw,,,
-2,Jerimiah Snelgrove,OK,75,74.80,24,137.50,95.00,217.50,450.00,M,Open,Raw,,,
-1,Anthony Carlisi,NJ,90,90.00,25,232.50,155.00,265.00,652.50,M,Open,Raw,,,
-2,Carson Ratliff,TX,90,88.80,25,197.50,142.50,205.00,545.00,M,Open,Raw,,,
-3,Jonathan'Tino' Izuora,TX,90,89.20,29,195.00,130.00,205.00,530.00,M,Open,Raw,,,
-1,Jay Kearney,TX,110,108.00,28,235.00,175.00,280.00,690.00,M,Open,Raw,,,
-1,Jeremy Thibodeaux,LA,125,119.00,35,295.00,192.50,290.00,777.50,M,Open,Raw,,,
-2,Adam Nunnallee,TX,125,117.20,35,240.00,165.00,287.50,692.50,M,Open,Raw,,,
-1,Daniel Hawkins,TX,140,134.20,29,320.00,192.50,295.00,807.50,M,Open,Raw,,,
-2,Sal Catto III,TX,140,136.40,27,272.50,170.00,295.00,737.50,M,Open,Raw,,,
-1,Jon Murray,TX,90,88.80,53,102.50,102.50,105.00,310.00,M,Master 50-54,Raw,,,
-1,Robert Harris,TX,90,89.00,56,172.50,115.00,200.00,487.50,M,Master 55-59,Raw,,,
-1,Richard Dowdy,TX,140,130.40,46,220.00,147.50,287.50,655.00,M,Master 45-49,Raw,,,
-1,Robert Livingston,TX,100,98.60,32,205.00,130.00,235.00,570.00,M,Open,Wraps,,,
-1,Cruz Holguin,OK,110,110.00,24,217.50,182.50,252.50,652.50,M,Open,Wraps,,,
-1,Zack Antoine,TX,100,94.60,43,197.50,155.00,202.50,555.00,M,Master 40-44,Wraps,,,
-1,Scott Brockelman,TX,110,108.40,56,227.50,112.50,232.50,572.50,M,Master 55-59,Wraps,,,
-1,Kate Kiser,TX,60,57.00,17,125.00,60.00,120.00,305.00,F,Junior 16-17,Single-ply,,,
-1,Kirbee Taylor,TX,90,88.60,18,137.50,80.00,110.00,327.50,F,Junior 18-19,Single-ply,,145,90.5
-1,Henry Thomason,TX,125,124.60,36,435.50,310.50,310.00,1056.00,M,Open,Single-ply,,,
-1,Justin Williams,TX,140,135.00,36,,150.00,,150.00,M,Open,Raw,,,
-1,Chris Brent,TX,125,119.30,25,,230.00,,230.00,M,Open,Single-ply,,,
-1,Justin Williams,TX,140,135.00,36,,,230.00,230.00,M,Open,Raw,,,
+Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Deadlift4Kg,Squat4Kg,Bench4Kg,Event
+1,Calie Chesler,TX,67.5,62.40,18,122.50,52.50,145.00,320.00,F,Junior 18-19,Raw,147.5,,,SBD
+2,Emily Jebing,TX,67.5,61.00,18,112.50,47.50,145.00,305.00,F,Junior 18-19,Raw,,,,SBD
+1,Kenya Kelly,OK,67.5,66.40,21,95.00,52.50,142.50,290.00,F,Junior 20-23,Raw,,,,SBD
+2,Elise Francel,OK,67.5,67.00,22,92.50,50.00,110.00,252.50,F,Junior 20-23,Raw,,,,SBD
+1,Emily Self,TX,82.5,80.60,34,140.00,75.00,160.00,375.00,F,Open,Raw,,,,SBD
+1,Fatima Patterson,TX,90,88.00,41,90.00,67.50,112.50,270.00,F,Master 40-44,Raw,,,,SBD
+1,Jace Fraser,TX,52,49.80,14,85.00,47.50,105.00,237.50,M,Junior 13-15,Raw,,,,SBD
+1,Kevin Huynh,TX,67.5,67.00,21,175.00,117.50,227.50,520.00,M,Junior 20-23,Raw,,,,SBD
+1,Michael Jin,TX,75,74.20,19,200.00,145.00,215.00,560.00,M,Junior 18-19,Raw,,,,SBD
+1,David Shelton,TX,75,73.20,22,215.00,160.00,220.00,595.00,M,Junior 20-23,Raw,,,,SBD
+DQ,Joe Parks,TX,75,68.60,22,-167.50,,,,M,Junior 20-23,Raw,,,,SBD
+1,Miguel Morales,TX,82.5,82.50,21,192.50,125.00,227.50,545.00,M,Junior 20-23,Raw,,,,SBD
+1,Brandon Moreno,TX,100,96.60,19,182.50,110.00,195.00,487.50,M,Junior 18-19,Raw,,,,SBD
+1,Austin Coon,TX,100,95.80,23,185.00,137.50,225.00,547.50,M,Junior 20-23,Raw,,,,SBD
+1,Ali Malik,TX,67.5,67.00,25,172.50,125.50,245.50,543.50,M,Open,Raw,,,,SBD
+2,Kevin Huynh,TX,67.5,67.00,21,175.00,117.50,227.50,520.00,M,Open,Raw,,,,SBD
+1,David Shelton,TX,75,73.20,22,215.00,160.00,220.00,595.00,M,Open,Raw,,,,SBD
+2,Jerimiah Snelgrove,OK,75,74.80,24,137.50,95.00,217.50,450.00,M,Open,Raw,,,,SBD
+1,Anthony Carlisi,NJ,90,90.00,25,232.50,155.00,265.00,652.50,M,Open,Raw,,,,SBD
+2,Carson Ratliff,TX,90,88.80,25,197.50,142.50,205.00,545.00,M,Open,Raw,,,,SBD
+3,Jonathan'Tino' Izuora,TX,90,89.20,29,195.00,130.00,205.00,530.00,M,Open,Raw,,,,SBD
+1,Jay Kearney,TX,110,108.00,28,235.00,175.00,280.00,690.00,M,Open,Raw,,,,SBD
+1,Jeremy Thibodeaux,LA,125,119.00,35,295.00,192.50,290.00,777.50,M,Open,Raw,,,,SBD
+2,Adam Nunnallee,TX,125,117.20,35,240.00,165.00,287.50,692.50,M,Open,Raw,,,,SBD
+1,Daniel Hawkins,TX,140,134.20,29,320.00,192.50,295.00,807.50,M,Open,Raw,,,,SBD
+2,Sal Catto III,TX,140,136.40,27,272.50,170.00,295.00,737.50,M,Open,Raw,,,,SBD
+1,Jon Murray,TX,90,88.80,53,102.50,102.50,105.00,310.00,M,Master 50-54,Raw,,,,SBD
+1,Robert Harris,TX,90,89.00,56,172.50,115.00,200.00,487.50,M,Master 55-59,Raw,,,,SBD
+1,Richard Dowdy,TX,140,130.40,46,220.00,147.50,287.50,655.00,M,Master 45-49,Raw,,,,SBD
+1,Robert Livingston,TX,100,98.60,32,205.00,130.00,235.00,570.00,M,Open,Wraps,,,,SBD
+1,Cruz Holguin,OK,110,110.00,24,217.50,182.50,252.50,652.50,M,Open,Wraps,,,,SBD
+1,Zack Antoine,TX,100,94.60,43,197.50,155.00,202.50,555.00,M,Master 40-44,Wraps,,,,SBD
+1,Scott Brockelman,TX,110,108.40,56,227.50,112.50,232.50,572.50,M,Master 55-59,Wraps,,,,SBD
+1,Kate Kiser,TX,60,57.00,17,125.00,60.00,120.00,305.00,F,Junior 16-17,Single-ply,,,,SBD
+1,Kirbee Taylor,TX,90,88.60,18,137.50,80.00,110.00,327.50,F,Junior 18-19,Single-ply,,145,90.5,SBD
+1,Henry Thomason,TX,125,124.60,36,435.50,310.50,310.00,1056.00,M,Open,Single-ply,,,,SBD
+1,Justin Williams,TX,140,135.00,36,,150.00,,150.00,M,Open,Raw,,,,B
+1,Chris Brent,TX,125,119.30,25,,230.00,,230.00,M,Open,Single-ply,,,,B
+1,Justin Williams,TX,140,135.00,36,,,230.00,230.00,M,Open,Raw,,,,D
