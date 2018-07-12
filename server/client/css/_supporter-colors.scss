@@ -7,7 +7,7 @@
 }
 
 .pink {
-  @include name-color(#FF80AB);
+  @include name-color(#FF69B4);
 }
 
 .purple {
@@ -38,6 +38,10 @@
   @include name-color(#FFFC00);
 }
 
+.gold {
+  @include name-color(#FFD700);
+}
+
 .rainbow {
   color: transparent;
   -webkit-background-clip: text;
@@ -49,8 +53,13 @@
   text-decoration-color: #FF80AB;
 }
 
-.gold-italic {
-  @include name-color(#FFD700);
+.teal-shadow {
+  // Sharp offset shadow in teal.
+  // 1px blur is more readable than 0px blur at small sizes.
+  text-shadow: 1px 1px 1px #01ECE3;
+}
+
+.italic {
   font-style: italic;
 }
 
