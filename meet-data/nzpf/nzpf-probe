@@ -23,7 +23,9 @@ BASEURL_SPORTY = "http://www.sporty.co.nz/asset/downloadasset?id="
 URL_WBOP = "http://www.sporty.co.nz/wbop/Results-1"
 URL_AKL = "http://www.sporty.co.nz/aucklandpowerlifting/Results"
 URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/" \
-          "Northland-Champs-3-lift-Bench-results/2018-2"
+          "Northland-Champs-3-lift-Bench-results-Nominat/2018-2"
+URL_NTL_NOV = "http://www.sporty.co.nz/northlandpowerlifting/" \
+    "Novice-Competition-results/2018-1"
 URL_OTA = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
 
 URLS_NZPF = ["http://www.nzpowerlifting.co.nz/results/nz-events",
@@ -68,16 +70,22 @@ def getmeetlist_sporty(html):
 def getmeetlist_sporty_partial(html, code):
     soup = BeautifulSoup(html, 'html.parser')
 
-    div = soup.find("div", {"class": "splitter-column-sortable"})
+    divs = soup.find_all("div", {"class": "splitter-column-sortable"})
 
-    # Links are passed to widget as an html string so need to expand it again
-    splitter_settings = BeautifulSoup(
-        div['data-widgetsettings'], 'html.parser')
+    for div in divs:
+        if div.has_attr('data-widgetsettings'):
+            # Links are passed to widget as an html string so need to expand it again
+            splitter_settings = BeautifulSoup(
+                div['data-widgetsettings'], 'html.parser')
+            if (splitter_settings.find(
+                    "input", {"id": "hdnDocuments_" + code}) is not None):
+                list_str = splitter_settings.find(
+                    "input", {"id": "hdnDocuments_" + code})['value']
+                break
+
     urls = []
 
     # Now need to extract the links from the list of parameters
-    list_str = splitter_settings.find(
-        "input", {"id": "hdnDocuments_" + code})['value']
 
     list_str = list_str[1:-1]  # Remove the square brackets
 
@@ -104,6 +112,9 @@ def main():
     html_AKL = oplprobe.gethtml(URL_AKL)
     meetlist_AKL = getmeetlist_sporty_partial(html_AKL, "357445")
 
+    html_NTL_NOV = oplprobe.gethtml(URL_NTL_NOV)
+    meetlist_NTL_NOV = getmeetlist_sporty_partial(html_NTL_NOV, "644298")
+
     html_NTL = oplprobe.gethtml(URL_NTL)
     meetlist_NTL = getmeetlist_sporty_partial(html_NTL, "644318")
 
@@ -116,7 +127,7 @@ def main():
         meetlist_NZPF = meetlist_NZPF + getmeetlist_sporty(html_NZPF)
 
     meetlist = meetlist_WBOP + meetlist_AKL + \
-        meetlist_NTL + meetlist_OTA + meetlist_NZPF
+        meetlist_NTL + meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
