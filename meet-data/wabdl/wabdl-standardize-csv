@@ -73,6 +73,12 @@ def standardize_column_equipment(csv):
             error("Unknown Equipment '%s'" % row[csv.index('Equipment')])
 
 
+def standardize_column_name(csv):
+    ni = csv.index('Name')
+    for row in csv.rows:
+        row[ni] = row[ni].replace('.', '')
+
+
 def remove_zeros(csv, idx):
     for row in csv.rows:
         if row[idx] == '0':
@@ -185,6 +191,7 @@ def main():
     standardize_column_weightclass(csv)
     standardize_column_division(csv)
     standardize_column_equipment(csv)
+    standardize_column_name(csv)
     remove_zeros(csv, csv.index('LIFT'))
     remove_zeros(csv, csv.index('4TH'))
 
