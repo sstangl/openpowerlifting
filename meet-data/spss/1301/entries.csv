@@ -1,15 +1,15 @@
-Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Sex,CyrillicName,Equipment,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Event,TotalKg
-1,László Mészáros,1968,Hungary,131.4,285,295,302.5,305.5,302.5,M,,Raw,,,,,B,302.5
-2,Kirill Sarychev,1989,Russia,173.3,300,310,317.5,,317.5,M,Кирилл Сарычев,Raw,,,,,B,317.5
-3,Sergey Grishko,1980,Russia,82.1,231,235,240,,240,M,Сергей Гришко,Raw,,,,,B,240
-4,Vadim Kakhuta,1981,Russia,98.7,250,260,263.5,,263.5,M,Вадим Кахута,Raw,,,,,B,263.5
-7,Murad Alibegov,1977,Russia,125.7,245,260,-273,,260,M,Мурад Алибегов,Raw,,,,,B,260
-5,Roman Eremashvili,1981,Belarus,69.6,202.5,212.5,-215,,212.5,M,,Raw,,,,,B,212.5
-6,Pavel Myasoedko,1977,Belarus,107.4,250,-262.5,-262.5,262.5,250,M,,Raw,,,,,B,250
-1,Andrey Belyaev,1983,Russia,89.9,,,,,,M,Андрей Беляев,Raw,360,381,391,391,D,391
-2,Konstantin Pozdeev,1984,Russia,104.3,,,,,,M,Константин Поздеев,Raw,-370,395,404,404,D,404
-3,Sergey Daragan,1978,Russia,124.6,,,,,,M,Сергей Дараган,Raw,370,385,400,400,D,400
-4,Aleksandr Obukhovich,1987,Russia,103.8,,,,,,M,Александр Обухович,Raw,360,380,-392.5,380,D,380
-6,Andrey Malanichev,1977,Russia,130.7,,,,,,M,Андрей Маланичев,Raw,360,390,-418.5,390,D,390
-7,Oleksiy Omelchenko,1979,USA,98.3,,,,,,M,Олексій Омельченко,Raw,330,-400,-400,330,D,330
-5,Dainis Zageris,1982,Latvia,132.4,,,,,,M,,Raw,370,400,-410,400,D,400
+Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Sex,CyrillicName,Equipment,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,Event,TotalKg
+1,László Mészáros,1968,Hungary,131.4,285,295,302.5,305.5,302.5,M,,Raw,,,,,,B,302.5
+2,Kirill Sarychev,1989,Russia,173.3,300,310,317.5,-324.5,317.5,M,Кирилл Сарычев,Raw,,,,,,B,317.5
+3,Sergey Grishko,1980,Russia,82.1,231,235,240,-242.5,240,M,Сергей Гришко,Raw,,,,,,B,240
+4,Vadim Kakhuta,1981,Russia,98.7,250,260,263.5,-266,263.5,M,Вадим Кахута,Raw,,,,,,B,263.5
+7,Murad Alibegov,1977,Russia,125.7,245,260,-273,-273,260,M,Мурад Алибегов,Raw,,,,,,B,260
+5,Roman Eremashvili,1981,Belarus,69.6,202.5,212.5,-215,,212.5,M,,Raw,,,,,,B,212.5
+6,Pavel Myasoedko,1977,Belarus,107.4,250,-262.5,-262.5,262.5,250,M,,Raw,,,,,,B,250
+1,Andrey Belyaev,1983,Russia,89.9,,,,,,M,Андрей Беляев,Raw,360,381,391,-400,391,D,391
+2,Konstantin Pozdeev,1984,Russia,104.3,,,,,,M,Константин Поздеев,Raw,-370,395,404,-418.5,404,D,404
+3,Sergey Daragan,1978,Russia,124.6,,,,,,M,Сергей Дараган,Raw,370,385,400,-403.5,400,D,400
+4,Aleksandr Obukhovich,1987,Russia,103.8,,,,,,M,Александр Обухович,Raw,360,380,-392.5,-392.5,380,D,380
+6,Andrey Malanichev,1977,Russia,130.7,,,,,,M,Андрей Маланичев,Raw,360,390,-418.5,,390,D,390
+7,Oleksiy Omelchenko,1979,USA,98.3,,,,,,M,Олексій Омельченко,Raw,330,-400,-400,,330,D,330
+5,Dainis Zageris,1982,Latvia,132.4,,,,,,M,,Raw,370,400,-410,,400,D,400

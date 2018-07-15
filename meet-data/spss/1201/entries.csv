@@ -1,22 +1,22 @@
-Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Sex,CyrillicName,Equipment,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,Event,TotalKg
-1,Kirill Sarychev,1989,Russia,168.8,280,300,307.5,315,307.5,M,Кирилл Сарычев,Raw,,,,,,,,,,B,307.5
-2,László Mészáros,1968,Hungary,131.2,275,285,292.5,301,292.5,M,,Raw,,,,,,,,,,B,292.5
-3,Oleg Bazilevich,1982,Ukraine,88.8,240,247.5,-253,,247.5,M,Олег Базилевич,Raw,,,,,,,,,,B,247.5
-4,Vadim Kakhuta,1981,Russia,99,250,260,-266,,260,M,Вадим Кахута,Raw,,,,,,,,,,B,260
-5,Igor Kushin,1966,Russia,109.3,240,250,261,,261,M,Игорь Кушин,Raw,,,,,,,,,,B,261
-6,Sergey Grishko,1980,Russia,79,215,221.5,-223.5,,221.5,M,Сергей Гришко,Raw,,,,,,,,,,B,221.5
-7,Denis Tsyplenkov,1982,Russia,137,260,-270,,,260,M,Денис Цыпленков,Raw,,,,,,,,,,B,260
-8,Murad Alibegov,1977,Russia,122,242.5,252.5,-260,,252.5,M,Мурад Алибегов,Raw,,,,,,,,,,B,252.5
-9,Andrey Belyaev,1983,Russia,89.1,215,225,-233,,225,M,Андрей Беляев,Raw,,,,,,,,,,B,225
-10,Oleg Kushnarev,1973,Russia,113.4,230,-240,-240,,230,M,Олег Кушнарев,Raw,,,,,,,,,,B,230
-1,Yevgen Yarymbash,1983,Ukraine,129.7,,,,,,M,Євген Яримбаш,Single-ply,420,437.5,-457.5,437.5,,,,,,S,437.5
-2,Andrey Malanichev,1977,Russia,137.9,,,,,,M,Андрей Маланичев,Single-ply,430,-460,-465,430,,,,,,S,430
-G,Yulia Zaugolova,1981,Russia,67.2,,,,,,F,Юлия Зауголова,Raw,,,,,220,-235,235,240,235,D,235
-1,Andrey Belyaev,1983,Russia,89.1,,,,,,M,Андрей Беляев,Raw,,,,,350,371,380,,380,D,380
-2,Konstantin Pozdeev,1984,Russia,100.9,,,,,,M,Константин Поздеев,Raw,,,,,340,371,380,,380,D,380
-3,Mark Cass Brandon,1974,USA,98.3,,,,,,M,,Raw,,,,,340,372.5,,,372.5,D,372.5
-4,Mikhail Koklyaev,1978,Russia,157.2,,,,,,M,Михаил Кокляев,Raw,,,,,390,405,-416,,405,D,405
-5,Rufat Agaev,1975,Azerbaijan,125,,,,,,M,,Raw,,,,,360,380,-387.5,,380,D,380
-6,Alexey Bakhirev,1981,Russia,75,,,,,,M,Алексей Бахирев,Raw,,,,,270,298.5,-304,,298.5,D,298.5
-7,Alexander Klyushev,1983,Russia,144.5,,,,,,M,Александр Клюшев,Raw,,,,,360,375,-385,,375,D,375
-8,Vladimir Kalinichenko,1972,Russia,160.2,,,,,,M,Владимир Калиниченко,Raw,,,,,350,-365,-365,365,350,D,350
+Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Sex,CyrillicName,Equipment,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,Event,TotalKg
+1,Kirill Sarychev,1989,Russia,168.8,280,300,307.5,315,307.5,M,Кирилл Сарычев,Raw,,,,,,,,,,,B,307.5
+2,László Mészáros,1968,Hungary,131.2,275,285,292.5,301,292.5,M,,Raw,,,,,,,,,,,B,292.5
+3,Oleg Bazilevich,1982,Ukraine,88.8,240,247.5,-253,-257,247.5,M,Олег Базилевич,Raw,,,,,,,,,,,B,247.5
+4,Vadim Kakhuta,1981,Russia,99,250,260,-266,-266,260,M,Вадим Кахута,Raw,,,,,,,,,,,B,260
+5,Igor Kushin,1966,Russia,109.3,240,250,261,,261,M,Игорь Кушин,Raw,,,,,,,,,,,B,261
+6,Sergey Grishko,1980,Russia,79,215,221.5,-223.5,-223.5,221.5,M,Сергей Гришко,Raw,,,,,,,,,,,B,221.5
+7,Denis Tsyplenkov,1982,Russia,137,260,-270,,,260,M,Денис Цыпленков,Raw,,,,,,,,,,,B,260
+8,Murad Alibegov,1977,Russia,122,242.5,252.5,-260,-260,252.5,M,Мурад Алибегов,Raw,,,,,,,,,,,B,252.5
+9,Andrey Belyaev,1983,Russia,89.1,215,225,-233,,225,M,Андрей Беляев,Raw,,,,,,,,,,,B,225
+10,Oleg Kushnarev,1973,Russia,113.4,230,-240,-240,-250,230,M,Олег Кушнарев,Raw,,,,,,,,,,,B,230
+1,Yevgen Yarymbash,1983,Ukraine,129.7,,,,,,M,Євген Яримбаш,Single-ply,420,437.5,-457.5,-462.5,437.5,,,,,,S,437.5
+2,Andrey Malanichev,1977,Russia,137.9,,,,,,M,Андрей Маланичев,Single-ply,430,-460,-465,-470,430,,,,,,S,430
+G,Yulia Zaugolova,1981,Russia,67.2,,,,,,F,Юлия Зауголова,Raw,,,,,,220,-235,235,240,235,D,235
+1,Andrey Belyaev,1983,Russia,89.1,,,,,,M,Андрей Беляев,Raw,,,,,,350,371,380,-392.5,380,D,380
+2,Konstantin Pozdeev,1984,Russia,100.9,,,,,,M,Константин Поздеев,Raw,,,,,,340,371,380,-390,380,D,380
+3,Mark Cass Brandon,1974,USA,98.3,,,,,,M,,Raw,,,,,,340,372.5,,-400,372.5,D,372.5
+4,Mikhail Koklyaev,1978,Russia,157.2,,,,,,M,Михаил Кокляев,Raw,,,,,,390,405,-416,-416,405,D,405
+5,Rufat Agaev,1975,Azerbaijan,125,,,,,,M,,Raw,,,,,,360,380,-387.5,,380,D,380
+6,Alexey Bakhirev,1981,Russia,75,,,,,,M,Алексей Бахирев,Raw,,,,,,270,298.5,-304,-304,298.5,D,298.5
+7,Alexander Klyushev,1983,Russia,144.5,,,,,,M,Александр Клюшев,Raw,,,,,,360,375,-385,-385,375,D,375
+8,Vladimir Kalinichenko,1972,Russia,160.2,,,,,,M,Владимир Калиниченко,Raw,,,,,,350,-365,-365,365,350,D,350
