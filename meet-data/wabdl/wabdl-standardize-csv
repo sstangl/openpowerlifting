@@ -120,7 +120,9 @@ def integrate_lifts(csv):
             equipment = row[csv.index('Equipment')]
 
             row[bench] = find_lift_for(csv, bench, name, equipment)
+            row[bench4] = find_lift_for(csv, bench4, name, equipment)
             row[dl] = find_lift_for(csv, dl, name, equipment)
+            row[dl4] = find_lift_for(csv, dl4, name, equipment)
 
 
 def remove_column_if_empty(csv, idx):
