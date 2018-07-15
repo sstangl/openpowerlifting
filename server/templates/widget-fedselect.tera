@@ -151,7 +151,7 @@
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR - Russian Powerlifting Federation [IPF]</option>
   <option value="gpc-rus" {% if selection.federation == "GPC-RUS" %}selected{% endif %}>GPC-RUS - GPC Russia [GPC]</option>
   <option value="nap" {% if selection.federation == "NAP" %}selected{% endif %}>NAP - National Association of Powerlifting [IPA]</option>
-  <option value="rpu" {% if selection.federation == "RPU" %}selected{% endif %}>RPU - Russian Powerlifting Union/option>
+  <option value="rpu" {% if selection.federation == "RPU" %}selected{% endif %}>RPU - Russian Powerlifting Union</option>
   <option value="sct" {% if selection.federation == "SCT" %}selected{% endif %}>SCT - Super-Cup of Titans (Single-ply)</option>
   <option value="spss" {% if selection.federation == "SPSS" %}selected{% endif %}>SPSS - Societatem Potentis Species Sports</option>
   <option value="wpc-rus" {% if selection.federation == "WPC-RUS" %}selected{% endif %}>WPC-RUS - WPC Russia</option>
