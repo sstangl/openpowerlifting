@@ -33,6 +33,9 @@ def standardize_column_event(csv):
 
 def standardize_column_sex(csv):
     for row in csv.rows:
+        if row[csv.index('Sex')] in ['M', 'F']:
+            continue
+
         if row[csv.index('Sex')].lower() == "men":
             row[csv.index('Sex')] = "M"
         elif row[csv.index('Sex')].lower() == "women":
@@ -137,11 +140,13 @@ def main():
 
     # Isolate table lines.
     # The UTF-8 is malformed, so also replace errors.
+    found_fieldnames = False
     for line in open("results.csv", errors="backslashreplace"):
         lower = line.lower()
 
         # Detect the fieldnames line.
-        if 'sex,' in lower:
+        if not found_fieldnames and 'type,' in lower:
+            found_fieldnames = True
             csv.fieldnames = line.strip().split(',')
 
         # Data lines contain sex information.
@@ -153,10 +158,21 @@ def main():
     csv.remove_column_by_name("NR")  # "National Record"
     csv.remove_column_by_name("WR")  # "World Record"
 
+    # "World" meets don't have sex columns,
+    # but that can be derived from the Division.
+    if not 'SEX' in csv.fieldnames:
+        csv.append_column('Sex')
+        for row in csv.rows:
+            if 'women' in row[csv.index('DIV')].lower():
+                row[csv.index('Sex')] = 'F'
+            else:
+                row[csv.index('Sex')] = 'M'
+    else:
+        csv.fieldnames[csv.index('SEX')] = "Sex"
+
     # Rename columns.
     # The current columns are: "TYPE,SEX,DIV,CLS,PLY,LIFT,4TH,NAME,STATE".
     csv.fieldnames[csv.index('TYPE')] = "Event"
-    csv.fieldnames[csv.index('SEX')] = "Sex"
     csv.fieldnames[csv.index('DIV')] = "Division"
     csv.fieldnames[csv.index('CLS')] = "WeightClassLBS"
     csv.fieldnames[csv.index('PLY')] = "Equipment"
@@ -164,8 +180,8 @@ def main():
     csv.fieldnames[csv.index('STATE')] = "State"
 
     # Standardize columns.
-    standardize_column_event(csv)
     standardize_column_sex(csv)
+    standardize_column_event(csv)
     standardize_column_weightclass(csv)
     standardize_column_division(csv)
     standardize_column_equipment(csv)
