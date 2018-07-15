@@ -47,7 +47,7 @@ def standardize_column_sex(csv):
 def standardize_column_weightclass(csv):
     ci = csv.index('WeightClassLBS')
     for row in csv.rows:
-        if row[ci] == 'Super':
+        if row[ci].lower() == 'super':
             row[ci] = 'SHW'
 
 
@@ -160,7 +160,7 @@ def main():
 
     # "World" meets don't have sex columns,
     # but that can be derived from the Division.
-    if not 'SEX' in csv.fieldnames:
+    if 'SEX' not in csv.fieldnames:
         csv.append_column('Sex')
         for row in csv.rows:
             if 'women' in row[csv.index('DIV')].lower():
