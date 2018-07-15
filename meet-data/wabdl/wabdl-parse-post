@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTDIR="${SCRIPTDIR}/../../tests"
+
+# Parse results.csv into entries.csv.
+${SCRIPTDIR}/wabdl-standardize-csv results.csv > entries.csv
+
+# Convert to Kg, assuming that the meet was conducted in Kg,
+# but was reported in LBS because America.
+${REPOSCRIPTDIR}/csv-tokg entries.csv
+${REPOSCRIPTDIR}/fix-weightclasses entries.csv
+${REPOSCRIPTDIR}/csv-round-kg entries.csv
+${REPOSCRIPTDIR}/calc-place entries.csv
+
+# Show any warnings.
+${REPOTESTDIR}/check-entries-csv entries.csv
+
+echo "Done! Don't forget about meet.csv!"
+echo "Also carefully check that the meet was really originally in Kg."
+echo "(If it wasn't, re-run wabdl-parse-post without the csv-round-kg call.)"

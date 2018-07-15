@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage :$0 http://url/to/results/page"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Download the website to results.html
+wget --output-document=results.html "$1"
+echo "$1" > URL
+
+# Sometimes the documents are encoded in ISO-8859-1.
+file results.html | grep ISO-8859 && iconv -f ISO-8859-1 -t UTF-8 results.html > results2.html
+if [ -f results2.html ]; then
+        mv results2.html results.html
+fi
+
+# The HTML is grotesquely malformed, and BeautifulSoup can't parse it.
+# But LibreOffice's parser is very forgiving, so we just use that.
+# Creates results.csv.
+dos2unix results.html
+mv results.html results.xls
+libreoffice --headless --convert-to csv results.xls
+
+# If CSV conversion completed successfully, remove the intermediary
+# files early to benefit terminal autocompletion.
+if [ -f results.csv ]; then
+	rm results.xls
+fi
+
+cp "${SCRIPTDIR}/../meet.template" "meet.csv"
+
+# Commands after this point were extracted into a separate file
+# since they had to be re-run by hand in case of error.
+${SCRIPTDIR}/wabdl-parse-post
