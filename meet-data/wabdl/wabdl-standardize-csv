@@ -28,17 +28,17 @@ def standardize_column_event(csv):
         elif row[csv.index('Event')] == "PP":
             row[csv.index('Event')] = "BD"
         else:
-            error("Unknown Event '%s'", row[csv.index('Event')])
+            error("Unknown Event '%s'" % row[csv.index('Event')])
 
 
 def standardize_column_sex(csv):
     for row in csv.rows:
-        if row[csv.index('Sex')] == "Men":
+        if row[csv.index('Sex')].lower() == "men":
             row[csv.index('Sex')] = "M"
-        elif row[csv.index('Sex')] == "Women":
+        elif row[csv.index('Sex')].lower() == "women":
             row[csv.index('Sex')] = "F"
         else:
-            error("Unknown Sex '%s'", row[csv.index('Sex')])
+            error("Unknown Sex '%s'" % row[csv.index('Sex')])
 
 
 def standardize_column_weightclass(csv):
@@ -60,14 +60,14 @@ def standardize_column_equipment(csv):
     ei = csv.index('Equipment')
 
     for row in csv.rows:
-        if row[ei] == 'RAW':
+        if row[ei].lower() == 'raw':
             row[ei] = 'Raw'
-        elif row[ei] == 'SINGLE':
+        elif row[ei].lower() == 'single':
             row[ei] = 'Single-ply'
-        elif row[ei] == 'DOUBLE':
+        elif row[ei].lower() == 'double':
             row[ei] = 'Multi-ply'
         else:
-            error("Unknown Equipment '%s'", row[csv.index('Equipment')])
+            error("Unknown Equipment '%s'" % row[csv.index('Equipment')])
 
 
 def remove_zeros(csv, idx):
@@ -109,7 +109,7 @@ def integrate_lifts(csv):
         elif event == 'BD':
             row[total] = row[lift]
         else:
-            error("Unknown Event (in integrate_lifts) '%s'", row[csv.index('Event')])
+            error("Unknown Event (in integrate_lifts) '%s'" % row[csv.index('Event')])
 
     # Push-Pull lifters don't have their Best3BenchLBS and Best3DeadliftLBS.
     # See if we can derive those from the other entries -- usually, yes.
