@@ -7,6 +7,7 @@
     policefire = {name ="Police/Fire",min=0,max=999}
     specialolympics = {name ="Special Olympics",min=0,max=999}
     youth = {name = "Youth",min=0,max=12}
+    youth810 = {name = "Youth 8-10",min=8,max=10}
     youth1011 = {name = "Youth 10-11",min=10,max=11}
 
     #APA has two ways of numbering masters: 40,45,50,... or 40,50,60,...
