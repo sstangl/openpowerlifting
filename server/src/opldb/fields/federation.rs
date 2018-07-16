@@ -1,7 +1,7 @@
 //! Defines the `Federation` field for the `meets` table.
 
-use opldb::{Entry, Meet};
 use opldb::fields::Country;
+use opldb::{Entry, Meet};
 
 /// Enum of federations.
 ///
