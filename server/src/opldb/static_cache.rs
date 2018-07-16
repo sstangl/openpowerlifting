@@ -127,7 +127,7 @@ impl NonSortedNonUnique {
         // March and matching elements to the list.
         let mut acc = Vec::<u32>::new();
 
-        if self.0.len() == 0 || other.0.len() == 0 {
+        if self.0.is_empty() || other.0.is_empty() {
             return NonSortedNonUnique(acc);
         }
 
@@ -200,7 +200,7 @@ impl NonSortedNonUnique {
 
     /// Tests that the list is monotonically increasing.
     pub fn maintains_invariants(&self) -> bool {
-        if self.0.len() == 0 {
+        if self.0.is_empty() {
             return true;
         }
 
@@ -211,7 +211,7 @@ impl NonSortedNonUnique {
             }
             prev = i;
         }
-        return true;
+        true
     }
 }
 
@@ -521,13 +521,13 @@ pub struct LogLinearTimeCache {
 }
 
 impl LogLinearTimeCache {
-    fn filter_entries<F>(entries: &Vec<Entry>, select: F) -> NonSortedNonUnique
+    fn filter_entries<F>(entries: &[Entry], select: F) -> NonSortedNonUnique
     where
         F: Fn(&Entry) -> bool,
     {
         let mut vec = Vec::new();
-        for i in 0..entries.len() {
-            if select(&entries[i]) {
+        for (i, entry) in entries.iter().enumerate() {
+            if select(entry) {
                 vec.push(i as u32);
             }
         }

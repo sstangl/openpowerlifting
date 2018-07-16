@@ -26,9 +26,9 @@ pub fn precompute_num_unique_lifters(entries: &Vec<Entry>, meet_id: u32) -> u32 
 
     // Scan to find the last.
     let mut last_index = found_index;
-    for index in found_index..entries.len() {
-        if entries[index].meet_id == meet_id {
-            last_index = index;
+    for (i, entry) in entries.iter().enumerate().skip(found_index) {
+        if entry.meet_id == meet_id {
+            last_index = i;
         } else {
             break;
         }
@@ -41,7 +41,7 @@ pub fn precompute_num_unique_lifters(entries: &Vec<Entry>, meet_id: u32) -> u32 
         .collect();
 
     lifter_ids.sort_unstable();
-    *(&lifter_ids.into_iter().group_by(|x| *x).into_iter().count()) as u32
+    lifter_ids.into_iter().group_by(|x| *x).into_iter().count() as u32
 }
 
 /// Pre-computed list of meets in a MetaFederation.

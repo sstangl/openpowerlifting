@@ -28,11 +28,7 @@ pub struct FederationStatus<'a> {
 
 impl<'a> FederationStatus<'a> {
     fn from(fed: Federation, status: &'a str, meet_count: usize) -> FederationStatus<'a> {
-        FederationStatus {
-            fed: fed,
-            status: status,
-            meet_count: meet_count,
-        }
+        FederationStatus { fed, status, meet_count }
     }
 }
 

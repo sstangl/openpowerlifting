@@ -46,16 +46,16 @@ impl Serialize for WeightClassAny {
 }
 
 impl WeightClassKg {
-    pub fn as_kg(&self) -> WeightClassAny {
-        match *self {
+    pub fn as_kg(self) -> WeightClassAny {
+        match self {
             WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_kg()),
             WeightClassKg::Over(x) => WeightClassAny::Over(x.as_kg()),
             WeightClassKg::None => WeightClassAny::None,
         }
     }
 
-    pub fn as_lbs(&self) -> WeightClassAny {
-        match *self {
+    pub fn as_lbs(self) -> WeightClassAny {
+        match self {
             WeightClassKg::UnderOrEqual(x) => {
                 WeightClassAny::UnderOrEqual(x.as_lbs_class())
             }
@@ -64,7 +64,7 @@ impl WeightClassKg {
         }
     }
 
-    pub fn as_type(&self, unit: WeightUnits) -> WeightClassAny {
+    pub fn as_type(self, unit: WeightUnits) -> WeightClassAny {
         match unit {
             WeightUnits::Kg => self.as_kg(),
             WeightUnits::Lbs => self.as_lbs(),
@@ -94,7 +94,7 @@ impl WeightClassAny {
 
     pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightClassAny {
         LocalizedWeightClassAny {
-            format: format,
+            format,
             class: self,
         }
     }
@@ -102,13 +102,13 @@ impl WeightClassAny {
 
 impl fmt::Display for WeightClassAny {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            &WeightClassAny::UnderOrEqual(ref x) => x.fmt(f),
-            &WeightClassAny::Over(ref x) => {
+        match *self {
+            WeightClassAny::UnderOrEqual(ref x) => x.fmt(f),
+            WeightClassAny::Over(ref x) => {
                 x.fmt(f)?;
                 write!(f, "+")
             }
-            &WeightClassAny::None => Ok(()),
+            WeightClassAny::None => Ok(()),
         }
     }
 }

@@ -20,25 +20,25 @@ impl Event {
 
     /// True iff the Event contains a Squat.
     #[inline]
-    pub fn has_squat(&self) -> bool {
+    pub fn has_squat(self) -> bool {
         self.0 & Self::BITFLAG_SQUAT != 0x0
     }
 
     /// True iff the Event contains a Bench.
     #[inline]
-    pub fn has_bench(&self) -> bool {
+    pub fn has_bench(self) -> bool {
         self.0 & Self::BITFLAG_BENCH != 0x0
     }
 
     /// True iff the Event contains a Deadlift.
     #[inline]
-    pub fn has_deadlift(&self) -> bool {
+    pub fn has_deadlift(self) -> bool {
         self.0 & Self::BITFLAG_DEADLIFT != 0x0
     }
 
     /// True iff the Event is SBD.
     #[inline]
-    pub fn is_full_power(&self) -> bool {
+    pub fn is_full_power(self) -> bool {
         self.0 & Self::BITFLAG_FULLPOWER == Self::BITFLAG_FULLPOWER
     }
 }

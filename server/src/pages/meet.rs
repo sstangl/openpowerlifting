@@ -90,9 +90,9 @@ impl<'a> ResultsRow<'a> {
 
         ResultsRow {
             place: format!("{}", &entry.place),
-            rank: rank,
+            rank,
             localized_name: get_localized_name(&lifter, locale.language),
-            lifter: lifter,
+            lifter,
             sex: strings.translate_sex(entry.sex),
             age: entry.age,
             equipment: strings.translate_equipment(entry.equipment),

@@ -36,7 +36,7 @@ impl Points {
 
     pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedPoints {
         LocalizedPoints {
-            format: format,
+            format,
             points: self,
         }
     }

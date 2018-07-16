@@ -239,8 +239,8 @@ fn import_entries_csv(
     let metafed_cache = MetaFederationCache::make(&meets, &vec);
 
     // Calculate num_unique_lifters.
-    for meet_id in 0..meets.len() {
-        meets[meet_id].num_unique_lifters =
+    for (meet_id, meet) in meets.iter_mut().enumerate() {
+        meet.num_unique_lifters =
             meet_metadata::precompute_num_unique_lifters(&vec, meet_id as u32);
     }
 

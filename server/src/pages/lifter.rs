@@ -44,7 +44,7 @@ impl<'db> PersonalBestsRow<'db> {
         let format = locale.number_format;
 
         PersonalBestsRow {
-            equipment: equipment,
+            equipment,
             squat: squat.map(|kg| kg.as_type(units).in_format(format)),
             bench: bench.map(|kg| kg.as_type(units).in_format(format)),
             deadlift: deadlift.map(|kg| kg.as_type(units).in_format(format)),
@@ -130,7 +130,7 @@ impl<'a> MeetResultsRow<'a> {
 /// Helper function to isolate all the best-calculation logic.
 fn calculate_bests<'db>(
     locale: &'db Locale,
-    entries: &Vec<&Entry>,
+    entries: &[&Entry],
 ) -> Vec<PersonalBestsRow<'db>> {
     // Best lifts must ignore disqualified entries.
     let non_dq: Vec<&&Entry> = entries.iter().filter(|e| !e.place.is_dq()).collect();
@@ -338,10 +338,10 @@ impl<'a> Context<'a> {
             strings: locale.strings,
             units: locale.units,
             localized_name: get_localized_name(&lifter, locale.language),
-            lifter: lifter,
-            lifter_sex: lifter_sex,
-            bests: bests,
-            meet_results: meet_results,
+            lifter,
+            lifter_sex,
+            bests,
+            meet_results,
         }
     }
 }

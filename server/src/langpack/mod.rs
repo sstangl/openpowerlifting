@@ -108,11 +108,11 @@ impl<'a> Locale<'a> {
         units: opldb::WeightUnits,
     ) -> Locale<'a> {
         Locale {
-            langinfo: langinfo,
-            language: language,
+            langinfo,
+            language,
             strings: langinfo.get_translations(language),
             number_format: language.number_format(),
-            units: units,
+            units,
         }
     }
 }
@@ -432,7 +432,7 @@ impl LangInfo {
         Ok(())
     }
 
-    pub fn get_translations<'a>(&'a self, language: Language) -> &'a Translations {
+    pub fn get_translations(&self, language: Language) -> &Translations {
         match language {
             Language::de => self.de.as_ref().unwrap(),
             Language::en => self.en.as_ref().unwrap(),
@@ -453,7 +453,7 @@ impl LangInfo {
 }
 
 impl Translations {
-    pub fn translate_equipment<'a>(&'a self, equip: fields::Equipment) -> &'a str {
+    pub fn translate_equipment(&self, equip: fields::Equipment) -> &str {
         match equip {
             fields::Equipment::Raw => &self.equipment.raw,
             fields::Equipment::Wraps => &self.equipment.wraps,
@@ -463,14 +463,14 @@ impl Translations {
         }
     }
 
-    pub fn translate_sex<'a>(&'a self, sex: fields::Sex) -> &'a str {
+    pub fn translate_sex(&self, sex: fields::Sex) -> &str {
         match sex {
             fields::Sex::M => &self.sex.m,
             fields::Sex::F => &self.sex.f,
         }
     }
 
-    pub fn translate_country<'a>(&'a self, country: fields::Country) -> &'a str {
+    pub fn translate_country(&self, country: fields::Country) -> &str {
         match country {
             fields::Country::Algeria => &self.country.algeria,
             fields::Country::Argentina => &self.country.argentina,
@@ -659,10 +659,10 @@ impl Serialize for LocalizedWeightClassAny {
 }
 
 /// Gets the appropriat
-pub fn get_localized_name<'db>(
-    lifter: &'db opldb::Lifter,
+pub fn get_localized_name(
+    lifter: &opldb::Lifter,
     language: Language,
-) -> &'db str {
+) -> &str {
     match language {
         Language::de => &lifter.name,
         Language::en => &lifter.name,

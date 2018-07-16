@@ -48,11 +48,11 @@ impl WeightKg {
         }
     }
 
-    pub fn as_kg(&self) -> WeightAny {
+    pub fn as_kg(self) -> WeightAny {
         WeightAny(self.0)
     }
 
-    pub fn as_lbs(&self) -> WeightAny {
+    pub fn as_lbs(self) -> WeightAny {
         let f = (self.0 as f32) * 2.20462262;
 
         // Round down to the hundredth place.
@@ -69,7 +69,7 @@ impl WeightKg {
     }
 
     /// Report as the "common name" of the weight class.
-    pub fn as_lbs_class(&self) -> WeightAny {
+    pub fn as_lbs_class(self) -> WeightAny {
         let lbs = self.as_lbs();
         let truncated: i32 = (lbs.0 / 100) * 100;
 
@@ -79,7 +79,7 @@ impl WeightKg {
         }
     }
 
-    pub fn as_type(&self, unit: WeightUnits) -> WeightAny {
+    pub fn as_type(self, unit: WeightUnits) -> WeightAny {
         match unit {
             WeightUnits::Kg => self.as_kg(),
             WeightUnits::Lbs => self.as_lbs(),
@@ -95,7 +95,7 @@ impl fmt::Display for WeightKg {
 
 impl WeightAny {
     // FIXME -- remove code duplication with fmt() somehow.
-    pub fn format_comma(&self) -> String {
+    pub fn format_comma(self) -> String {
         // Don't display empty weights.
         if self.0 == 0 {
             String::new()
@@ -116,7 +116,7 @@ impl WeightAny {
 
     pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightAny {
         LocalizedWeightAny {
-            format: format,
+            format,
             weight: self,
         }
     }

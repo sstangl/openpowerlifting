@@ -365,7 +365,7 @@ impl FromStr for YearSelection {
 
 impl YearSelection {
     #[inline]
-    pub fn as_u32(&self) -> Option<u32> {
+    pub fn as_u32(self) -> Option<u32> {
         match self {
             YearSelection::AllYears => None,
             YearSelection::Year2018 => Some(2018),

@@ -52,7 +52,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptEncoding {
         match keys.len() {
             0 => Outcome::Success(AcceptEncoding(None)),
             1 => Outcome::Success(AcceptEncoding(Some(keys[0].to_string()))),
-            _ => return Outcome::Failure((Status::BadRequest, ())),
+            _ => Outcome::Failure((Status::BadRequest, ())),
         }
     }
 }
@@ -68,7 +68,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
         match keys.len() {
             0 => Outcome::Success(AcceptLanguage(None)),
             1 => Outcome::Success(AcceptLanguage(Some(keys[0].to_string()))),
-            _ => return Outcome::Failure((Status::BadRequest, ())),
+            _ => Outcome::Failure((Status::BadRequest, ())),
         }
     }
 }
@@ -94,7 +94,7 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
                 known_languages.iter().map(|s| s.as_ref()).collect();
             let valid_languages = accept_language::intersection(&s, borrowed);
 
-            if valid_languages.len() == 0 {
+            if valid_languages.is_empty() {
                 default
             } else {
                 valid_languages[0].parse::<Language>().unwrap_or(default)
@@ -352,7 +352,7 @@ struct RankingsApiQuery {
 
 /// API endpoint for fetching a slice of rankings data as JSON.
 #[get("/api/rankings/<selections..>?<query>")]
-fn rankings_api<'db>(
+fn rankings_api(
     selections: Option<PathBuf>,
     query: RankingsApiQuery,
     opldb: State<ManagedOplDb>,
@@ -491,12 +491,12 @@ fn robots_txt() -> &'static str {
     "User-agent: *\nDisallow: /api/"
 }
 
-#[error(404)]
+#[catch(404)]
 fn not_found() -> &'static str {
     "404"
 }
 
-#[error(500)]
+#[catch(500)]
 fn internal_error() -> &'static str {
     "500"
 }
@@ -559,7 +559,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 old_contact,
             ],
         )
-        .catch(errors![not_found, internal_error])
+        .catch(catchers![not_found, internal_error])
         .attach(Template::fairing())
         .attach(AdHoc::on_response(|_request, response| {
             response.remove_header("Server");
@@ -580,11 +580,9 @@ fn main() -> Result<(), Box<Error>> {
     // current working directory. This allows the binary and the data
     // to be separated on a production server.
     let args: Vec<String> = env::args().collect();
-    if args.len() == 3 {
-        if args[1] == "--set-cwd" {
-            let fileroot = Path::new(&args[2]);
-            env::set_current_dir(&fileroot).expect("Invalid --set-cwd argument");
-        }
+    if args.len() == 3 && args[1] == "--set-cwd" {
+        let fileroot = Path::new(&args[2]);
+        env::set_current_dir(&fileroot).expect("Invalid --set-cwd argument");
     }
 
     // Populate std::env with the contents of any .env file.

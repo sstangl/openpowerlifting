@@ -30,7 +30,7 @@ pub fn search_rankings<'db>(
         .join("");
 
     // Disallow bogus searches.
-    if normalized.len() == 0 {
+    if normalized.is_empty() {
         return SearchRankingsResult { next_index: None };
     }
 
@@ -61,5 +61,5 @@ pub fn search_rankings<'db>(
         }
     }
 
-    return SearchRankingsResult { next_index: None };
+    SearchRankingsResult { next_index: None }
 }

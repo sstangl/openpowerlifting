@@ -316,7 +316,7 @@ impl MetaFederation {
     ///
     /// Matching is done on Entries instead of on Meets since a MetaFederation
     /// can include Entry-specific information such as Tested status.
-    pub fn contains(self, entry: &Entry, meets: &Vec<Meet>) -> bool {
+    pub fn contains(self, entry: &Entry, meets: &[Meet]) -> bool {
         let meet: &Meet = &meets[entry.meet_id as usize];
 
         match self {
