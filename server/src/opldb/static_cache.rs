@@ -371,12 +371,24 @@ impl StaticCache {
                 cur.0
                     .iter()
                     .filter_map(|&i| {
-                        match opldb.get_entry(i).bodyweightkg > lower
-                            && opldb.get_entry(i).bodyweightkg <= upper
-                        {
-                            true => Some(i),
-                            false => None,
+                        let e = opldb.get_entry(i);
+
+                        // Handle cases with explicit bodyweight.
+                        if e.bodyweightkg > lower && e.bodyweightkg <= upper {
+                            return Some(i);
                         }
+
+                        // Handle SHW classes with unspecified bodyweight.
+                        // TODO: Implement some WeightKg::max_value().
+                        if upper == WeightKg(999_00) {
+                            if let WeightClassKg::Over(over) = e.weightclasskg {
+                                if over >= lower {
+                                    return Some(i);
+                                }
+                            }
+                        }
+
+                        None
                     })
                     .collect(),
             );
