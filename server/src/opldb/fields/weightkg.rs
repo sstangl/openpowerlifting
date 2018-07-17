@@ -40,6 +40,11 @@ impl Serialize for WeightAny {
 }
 
 impl WeightKg {
+    #[inline]
+    pub fn max_value() -> WeightKg {
+        WeightKg(<i32>::max_value())
+    }
+
     pub fn from_f32(f: f32) -> WeightKg {
         if f.is_finite() {
             WeightKg((f * 100.0).round() as i32)

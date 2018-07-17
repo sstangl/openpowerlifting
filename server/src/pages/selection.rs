@@ -225,6 +225,11 @@ fn make_bounds(lower: f32, upper: f32) -> (WeightKg, WeightKg) {
     (WeightKg::from_f32(lower), WeightKg::from_f32(upper))
 }
 
+/// Helper function for SHW classes.
+fn make_bound_over(lower: f32) -> (WeightKg, WeightKg) {
+    (WeightKg::from_f32(lower), WeightKg::max_value())
+}
+
 impl WeightClassSelection {
     /// Returns the bounds of the selected weight class.
     ///
@@ -232,7 +237,7 @@ impl WeightClassSelection {
     /// The upper bound is always inclusive.
     pub fn to_bounds(self) -> (WeightKg, WeightKg) {
         match self {
-            WeightClassSelection::AllClasses => make_bounds(0.0, 999.0),
+            WeightClassSelection::AllClasses => make_bound_over(0.0),
 
             WeightClassSelection::T44 => make_bounds(0.0, 44.0),
             WeightClassSelection::T48 => make_bounds(44.0, 48.0),
@@ -243,12 +248,12 @@ impl WeightClassSelection {
             WeightClassSelection::T75 => make_bounds(67.5, 75.0),
             WeightClassSelection::T82_5 => make_bounds(75.0, 82.5),
             WeightClassSelection::T90 => make_bounds(82.5, 90.0),
-            WeightClassSelection::TOver90 => make_bounds(90.0, 999.0),
+            WeightClassSelection::TOver90 => make_bound_over(90.0),
             WeightClassSelection::T100 => make_bounds(90.0, 100.0),
             WeightClassSelection::T110 => make_bounds(100.0, 110.0),
             WeightClassSelection::T125 => make_bounds(110.0, 125.0),
             WeightClassSelection::T140 => make_bounds(125.0, 140.0),
-            WeightClassSelection::TOver140 => make_bounds(140.0, 999.0),
+            WeightClassSelection::TOver140 => make_bound_over(140.0),
 
             WeightClassSelection::M53 => make_bounds(0.0, 53.0),
             WeightClassSelection::M59 => make_bounds(53.0, 59.0),
@@ -258,7 +263,7 @@ impl WeightClassSelection {
             WeightClassSelection::M93 => make_bounds(83.0, 93.0),
             WeightClassSelection::M105 => make_bounds(93.0, 105.0),
             WeightClassSelection::M120 => make_bounds(105.0, 120.0),
-            WeightClassSelection::MOver120 => make_bounds(120.0, 999.0),
+            WeightClassSelection::MOver120 => make_bound_over(120.0),
 
             WeightClassSelection::F43 => make_bounds(0.0, 43.0),
             WeightClassSelection::F47 => make_bounds(43.0, 47.0),
@@ -267,7 +272,7 @@ impl WeightClassSelection {
             WeightClassSelection::F63 => make_bounds(57.0, 63.0),
             WeightClassSelection::F72 => make_bounds(63.0, 72.0),
             WeightClassSelection::F84 => make_bounds(72.0, 84.0),
-            WeightClassSelection::FOver84 => make_bounds(84.0, 999.0),
+            WeightClassSelection::FOver84 => make_bound_over(84.0),
         }
     }
 }

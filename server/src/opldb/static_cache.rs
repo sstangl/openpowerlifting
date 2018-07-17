@@ -379,8 +379,7 @@ impl StaticCache {
                         }
 
                         // Handle SHW classes with unspecified bodyweight.
-                        // TODO: Implement some WeightKg::max_value().
-                        if upper == WeightKg(999_00) {
+                        if upper == WeightKg::max_value() {
                             if let WeightClassKg::Over(over) = e.weightclasskg {
                                 if over >= lower {
                                     return Some(i);
