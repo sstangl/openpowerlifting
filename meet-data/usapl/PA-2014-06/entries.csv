@@ -1,53 +1,53 @@
-Place,Sex,Name,Division,WeightClassKg,Equipment,BodyweightKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
-1,M,Matt Devine,R-T2,52,Raw,52,70.3,147.4,217.7,1997
-1,M,Nick Vinciguerra,R-T3,75,Raw,75,133.8,,133.8,1996
-1,M,Bodie Lacoe,R-Y,52,Raw,44,36.3,77.1,113.4,2003
-1,M,Nick Batzel,R-JR,75,Raw,75,149.7,,149.7,
-1,M,Jake Hegler,O,110,Single-ply,110,235.9,,235.9,1979
-1,M,Hong Chen Lee,R-O,56,Raw,56,102.1,,102.1,
-1,M,Tim Ford,R-O,82.5,Raw,82.5,147.4,,147.4,
-1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,
-1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,
-1,M,Fred Lokuta,R-M2a,75,Raw,75,140.6,,140.6,1960
-1,M,Jack Rubio,R-M2a,82.5,Raw,82.5,149.7,,149.7,1964
-1,M,David Ellis,R-M2b,82.5,Raw,82.5,68,142.9,210.9,1955
-1,M,Gerald Burke,R-M3b,110,Raw,110,138.3,158.8,297.1,1944
-1,F,Anna Ellis,R-T2,52,Raw,52,34,102.1,136.1,1996
-1,F,Faith Voornees,R-T2,56,Raw,56,45.4,81.6,127,
-1,F,Samantha LaCoe,R-JR,60,Raw,60,56.7,117.9,174.6,1991
-1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993
-1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,
-1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966
-2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966
-1,F,Jo Ann Lane,R-M2a,67.5,Raw,67.5,54.4,122.5,176.9,1963
-2,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,
-1,M,Joshua Ruth,R-O,110,Raw,110,149.7,244.9,394.6,1981
-1,M,Matt Devine,R-T2,52,Raw,52,70.3,147.4,217.7,1997
-1,M,Bodie Lacoe,R-Y,52,Raw,44,36.3,77.1,113.4,2003
-2,M,Anton Vilensky,R-Y,52,Raw,52,,61.2,61.2,2001
-1,M,Michael McDade,R-O,90,Raw,90,,240.4,240.4,1990
-1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,
-2,M,Meade Beebe,R-O,100,Raw,100,,215.5,215.5,1980
-1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,
-1,M,Vadim Vilensky,R-M1b,82.5,Raw,82.5,,181.4,181.4,1968
-1,M,David Ellis,R-M2b,82.5,Raw,82.5,68,142.9,210.9,1955
-1,M,Gerald Burke,R-M3b,110,Raw,110,138.3,158.8,297.1,1944
-1,F,Anna Ellis,R-T2,52,Raw,52,34,102.1,136.1,1996
-1,F,Faith Voornees,R-T2,56,Raw,56,45.4,81.6,127,
-1,F,Samantha LaCoe,R-JR,60,Raw,60,56.7,117.9,174.6,1991
-1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993
-1,F,Jennifer Turel,R-O,90+,Raw,91,,108.9,108.9,1979
-1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,
-1,F,Nadine Homentosky,R-M1a,67.5,Raw,67.5,,115.7,115.7,1970
-1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966
-2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966
-1,F,Jo Ann Lane,R-M2a,67.5,Raw,67.5,54.4,122.5,176.9,1963
-2,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,
-1,M,Joshua Ruth,R-O,110,Raw,110,149.7,244.9,394.6,1981
-1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,
-1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,
-1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993
-1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,
-1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966
-2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966
-1,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,
+Place,Sex,Name,Division,WeightClassKg,Equipment,BodyweightKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear,Event
+1,M,Matt Devine,R-T2,52,Raw,52,70.3,147.4,217.7,1997,BD
+1,M,Nick Vinciguerra,R-T3,75,Raw,75,133.8,,133.8,1996,B
+1,M,Bodie Lacoe,R-Y,52,Raw,44,36.3,77.1,113.4,2003,BD
+1,M,Nick Batzel,R-JR,75,Raw,75,149.7,,149.7,,B
+1,M,Jake Hegler,O,110,Single-ply,110,235.9,,235.9,1979,BD
+1,M,Hong Chen Lee,R-O,56,Raw,56,102.1,,102.1,,B
+1,M,Tim Ford,R-O,82.5,Raw,82.5,147.4,,147.4,,B
+1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,,BD
+1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,,BD
+1,M,Fred Lokuta,R-M2a,75,Raw,75,140.6,,140.6,1960,B
+1,M,Jack Rubio,R-M2a,82.5,Raw,82.5,149.7,,149.7,1964,B
+1,M,David Ellis,R-M2b,82.5,Raw,82.5,68,142.9,210.9,1955,BD
+1,M,Gerald Burke,R-M3b,110,Raw,110,138.3,158.8,297.1,1944,BD
+1,F,Anna Ellis,R-T2,52,Raw,52,34,102.1,136.1,1996,BD
+1,F,Faith Voornees,R-T2,56,Raw,56,45.4,81.6,127,,BD
+1,F,Samantha LaCoe,R-JR,60,Raw,60,56.7,117.9,174.6,1991,BD
+1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993,BD
+1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,,BD
+1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966,BD
+2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966,BD
+1,F,Jo Ann Lane,R-M2a,67.5,Raw,67.5,54.4,122.5,176.9,1963,BD
+2,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,,BD
+1,M,Joshua Ruth,R-O,110,Raw,110,149.7,244.9,394.6,1981,BD
+1,M,Matt Devine,R-T2,52,Raw,52,70.3,147.4,217.7,1997,BD
+1,M,Bodie Lacoe,R-Y,52,Raw,44,36.3,77.1,113.4,2003,BD
+2,M,Anton Vilensky,R-Y,52,Raw,52,,61.2,61.2,2001,D
+1,M,Michael McDade,R-O,90,Raw,90,,240.4,240.4,1990,D
+1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,,BD
+2,M,Meade Beebe,R-O,100,Raw,100,,215.5,215.5,1980,D
+1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,,BD
+1,M,Vadim Vilensky,R-M1b,82.5,Raw,82.5,,181.4,181.4,1968,D
+1,M,David Ellis,R-M2b,82.5,Raw,82.5,68,142.9,210.9,1955,BD
+1,M,Gerald Burke,R-M3b,110,Raw,110,138.3,158.8,297.1,1944,BD
+1,F,Anna Ellis,R-T2,52,Raw,52,34,102.1,136.1,1996,BD
+1,F,Faith Voornees,R-T2,56,Raw,56,45.4,81.6,127,,BD
+1,F,Samantha LaCoe,R-JR,60,Raw,60,56.7,117.9,174.6,1991,BD
+1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993,BD
+1,F,Jennifer Turel,R-O,90+,Raw,91,,108.9,108.9,1979,D
+1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,,BD
+1,F,Nadine Homentosky,R-M1a,67.5,Raw,67.5,,115.7,115.7,1970,D
+1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966,BD
+2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966,BD
+1,F,Jo Ann Lane,R-M2a,67.5,Raw,67.5,54.4,122.5,176.9,1963,BD
+2,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,,BD
+1,M,Joshua Ruth,R-O,110,Raw,110,149.7,244.9,394.6,1981,BD
+1,M,Fred Rumler,R-O,100,Raw,100,167.8,247.2,415,,BD
+1,M,Tom Favata,M1a,100,Single-ply,100,240.4,303.9,544.3,,BD
+1,F,Alisha Marchegiani,R-JR,75,Raw,75,61.2,129.3,190.5,1993,BD
+1,F,Lyn Krisick,R-M1a,56,Raw,56,47.6,93,140.6,,BD
+1,F,Wendy Yankelitis,R-M1b,67.5,Raw,67.5,56.7,122.5,179.2,1966,BD
+2,F,Amy Shwed,R-M1b,67.5,Raw,67.5,56.7,102.1,158.8,1966,BD
+1,F,Jean Marie Alu,R-M2a,67.5,Raw,67.5,43.1,77.1,120.2,,BD
