@@ -168,13 +168,13 @@ impl NonSortedNonUnique {
     /// Sorts and uniques the data with reference to a comparator.
     pub fn sort_and_unique_by<F, G>(
         &self,
-        entries: &Vec<Entry>,
-        meets: &Vec<Meet>,
+        entries: &[Entry],
+        meets: &[Meet],
         compare: F,
         belongs: G,
     ) -> SortedUnique
     where
-        F: Fn(&Vec<Meet>, &Entry, &Entry) -> Ordering,
+        F: Fn(&[Meet], &Entry, &Entry) -> Ordering,
         G: Fn(&Entry) -> bool,
     {
         // First, group contiguous entries by lifter_id, so only the best
@@ -223,7 +223,7 @@ pub struct StaticCache {
 }
 
 impl StaticCache {
-    pub fn new(meets: &Vec<Meet>, entries: &Vec<Entry>) -> StaticCache {
+    pub fn new(meets: &[Meet], entries: &[Entry]) -> StaticCache {
         let loglin = LogLinearTimeCache::new(meets, entries);
 
         StaticCache {
@@ -423,13 +423,13 @@ pub struct ConstantTimeBy {
 impl ConstantTimeBy {
     pub fn new<F, G>(
         loglin: &LogLinearTimeCache,
-        mv: &Vec<Meet>,
-        ev: &Vec<Entry>,
+        mv: &[Meet],
+        ev: &[Entry],
         compare: &F,
         belongs: &G,
     ) -> ConstantTimeBy
     where
-        F: Fn(&Vec<Meet>, &Entry, &Entry) -> Ordering,
+        F: Fn(&[Meet], &Entry, &Entry) -> Ordering,
         G: Fn(&Entry) -> bool,
     {
         ConstantTimeBy {
@@ -460,8 +460,8 @@ pub struct ConstantTimeCache {
 impl ConstantTimeCache {
     pub fn new(
         loglin: &LogLinearTimeCache,
-        mv: &Vec<Meet>,
-        ev: &Vec<Entry>,
+        mv: &[Meet],
+        ev: &[Entry],
     ) -> ConstantTimeCache {
         ConstantTimeCache {
             squat: ConstantTimeBy::new(loglin, mv, ev, &cmp_squat, &filter_squat),
@@ -535,7 +535,7 @@ impl LogLinearTimeCache {
         NonSortedNonUnique(vec)
     }
 
-    pub fn new(meets: &Vec<Meet>, entries: &Vec<Entry>) -> LogLinearTimeCache {
+    pub fn new(meets: &[Meet], entries: &[Entry]) -> LogLinearTimeCache {
         LogLinearTimeCache {
             raw: Self::filter_entries(entries, |e| e.equipment == Equipment::Raw),
             wraps: Self::filter_entries(entries, |e| e.equipment == Equipment::Wraps),

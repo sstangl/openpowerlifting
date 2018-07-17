@@ -48,7 +48,7 @@ impl<'db, 'a> Context<'db, 'a> {
                 SortSelection::ByMcCulloch => &locale.strings.columns.mcculloch,
             },
 
-            selection: selection,
+            selection,
             data: serde_json::to_string(&slice).ok()?,
         })
     }

@@ -9,7 +9,7 @@ use opldb::{Entry, Meet, MetaFederation};
 ///
 /// Assumes that the entries vector is sorted by meet_id --
 /// so this is only callable from within `import_entries_csv()`.
-pub fn precompute_num_unique_lifters(entries: &Vec<Entry>, meet_id: u32) -> u32 {
+pub fn precompute_num_unique_lifters(entries: &[Entry], meet_id: u32) -> u32 {
     let found_index = entries
         .binary_search_by_key(&meet_id, |e| e.meet_id)
         .unwrap();
@@ -63,7 +63,7 @@ impl MetaFederationCache {
     ///
     /// The `entries` vector should be sorted by `entry.meet_id`,
     /// not by `entry.lifter_id` as it is post-importation.
-    pub fn make(meets: &Vec<Meet>, entries: &Vec<Entry>) -> MetaFederationCache {
+    pub fn make(meets: &[Meet], entries: &[Entry]) -> MetaFederationCache {
         let num_metafeds: usize = MetaFederation::iter().count();
 
         // Vector of list of meets for each MetaFederation.

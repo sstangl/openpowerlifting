@@ -314,20 +314,20 @@ impl OplDb {
 
     /// Borrows the lifters vector.
     #[inline]
-    pub fn get_lifters(&self) -> &Vec<Lifter> {
-        &self.lifters
+    pub fn get_lifters(&self) -> &[Lifter] {
+        &self.lifters.as_slice()
     }
 
     /// Borrows the meets vector.
     #[inline]
-    pub fn get_meets(&self) -> &Vec<Meet> {
-        &self.meets
+    pub fn get_meets(&self) -> &[Meet] {
+        &self.meets.as_slice()
     }
 
     /// Borrows the entries vector.
     #[inline]
-    pub fn get_entries(&self) -> &Vec<Entry> {
-        &self.entries
+    pub fn get_entries(&self) -> &[Entry] {
+        &self.entries.as_slice()
     }
 
     /// Borrows a `Lifter` by index.

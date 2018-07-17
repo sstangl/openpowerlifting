@@ -54,7 +54,7 @@ impl<'a> Context<'a> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            fed_statuses: fed_statuses,
+            fed_statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,
             num_lifters: opldb.get_lifters().len() as u32,

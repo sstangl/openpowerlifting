@@ -162,8 +162,8 @@ impl<'a> Context<'a> {
             strings: locale.strings,
             units: locale.units,
             meet: MeetInfo::from(&meet, locale.strings),
-            has_age_data: has_age_data,
-            rows: rows,
+            has_age_data,
+            rows,
         }
     }
 }

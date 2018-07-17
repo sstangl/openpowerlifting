@@ -415,7 +415,7 @@ fn search_rankings_api<'db>(
 }
 
 #[get("/api/search/rankings?<query>")]
-fn default_search_rankings_api<'db>(
+fn default_search_rankings_api(
     query: SearchRankingsApiQuery,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {

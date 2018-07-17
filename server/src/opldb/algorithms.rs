@@ -46,7 +46,7 @@ pub fn filter_wilks(entry: &Entry) -> bool {
 
 /// Defines an `Ordering` of Entries by Squat.
 #[inline]
-pub fn cmp_squat(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_squat(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by SquatKg, higher first.
     a.highest_squatkg().cmp(&b.highest_squatkg()).reverse()
         // If equal, sort by Bodyweight, lower first.
@@ -59,7 +59,7 @@ pub fn cmp_squat(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines an `Ordering` of Entries by Bench.
 #[inline]
-pub fn cmp_bench(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_bench(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by BenchKg, higher first.
     a.highest_benchkg().cmp(&b.highest_benchkg()).reverse()
         // If equal, sort by Bodyweight, lower first.
@@ -72,7 +72,7 @@ pub fn cmp_bench(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines an `Ordering` of Entries by Deadlift.
 #[inline]
-pub fn cmp_deadlift(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_deadlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by DeadliftKg, higher first.
     a.highest_deadliftkg().cmp(&b.highest_deadliftkg()).reverse()
         // If equal, sort by Bodyweight, lower first.
@@ -85,7 +85,7 @@ pub fn cmp_deadlift(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines an `Ordering` of Entries by Total.
 #[inline]
-pub fn cmp_total(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by TotalKg, higher first.
     a.totalkg.cmp(&b.totalkg).reverse()
         // If equal, sort by Bodyweight, lower first.
@@ -96,7 +96,7 @@ pub fn cmp_total(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines an `Ordering` of Entries by McCulloch points.
 #[inline]
-pub fn cmp_mcculloch(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by McCulloch, higher first.
     a.mcculloch.cmp(&b.mcculloch).reverse()
         // If equal, sort by Date, earlier first.
@@ -107,7 +107,7 @@ pub fn cmp_mcculloch(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines an `Ordering` of Entries by Wilks.
 #[inline]
-pub fn cmp_wilks(meets: &Vec<Meet>, a: &Entry, b: &Entry) -> cmp::Ordering {
+pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by Wilks, higher first.
     a.wilks.cmp(&b.wilks).reverse()
         // If equal, sort by Date, earlier first.
