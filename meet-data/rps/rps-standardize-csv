@@ -128,7 +128,7 @@ def standardize_fieldnames(csv):
     # If the first field is "Full Power", we can guess at some
     # of the other fieldnames, which are usually left blank.
     s = csv.fieldnames[0].lower()
-    if 'full power' in s or 'saturday am' in s or 'ironman' in s or 'push' in s:
+    if 'full power' in s or 'saturday' in s or 'ironman' in s or 'push' in s:
         # The next 6 fieldnames must be empty.
         if ''.join(csv.fieldnames[1:6]) != '':
             error("Field names expected to be blank, but aren't!")
