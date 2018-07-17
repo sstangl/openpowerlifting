@@ -42,7 +42,7 @@ fn sorts_only_include_valid_entries() {
     let cache = db.get_static_cache();
 
     // Use a sort that isn't fully pre-cached.
-    let mut selection = Selection::new_default();
+    let mut selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::BySquat;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
@@ -52,7 +52,7 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByBench;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
@@ -62,7 +62,7 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByDeadlift;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
@@ -72,7 +72,7 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByTotal;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
@@ -82,7 +82,7 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByWilks;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
@@ -93,7 +93,7 @@ fn sorts_only_include_valid_entries() {
     }
 
     // Also test the fully-statically-cached variants.
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.sort = SortSelection::ByWilks;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
@@ -102,7 +102,7 @@ fn sorts_only_include_valid_entries() {
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::new_default();
+    selection = Selection::default();
     selection.sort = SortSelection::BySquat;
     let rankings = cache.get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {

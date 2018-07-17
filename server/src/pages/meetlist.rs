@@ -19,16 +19,18 @@ pub struct MeetListSelection {
     pub year: YearSelection,
 }
 
-impl MeetListSelection {
-    pub fn new_default() -> Self {
+impl Default for MeetListSelection {
+    fn default() -> MeetListSelection {
         MeetListSelection {
             federation: FederationSelection::AllFederations,
             year: YearSelection::AllYears,
         }
     }
+}
 
+impl MeetListSelection {
     pub fn from_path(p: &path::Path) -> Result<Self, ()> {
-        let mut ret = MeetListSelection::new_default();
+        let mut ret = MeetListSelection::default();
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

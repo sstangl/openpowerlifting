@@ -12,7 +12,7 @@ mod common;
 fn basic_rankings_search() {
     let db = common::db();
     let cache = db.get_static_cache();
-    let selection = Selection::new_default();
+    let selection = Selection::default();
 
     // Perform the search.
     let res = search_rankings(&db, &selection, 0, "Sean Stangl");
@@ -29,7 +29,7 @@ fn basic_rankings_search() {
 fn backwards_name_search() {
     let db = common::db();
     let cache = db.get_static_cache();
-    let selection = Selection::new_default();
+    let selection = Selection::default();
 
     // Perform the search.
     let res = search_rankings(&db, &selection, 0, "stangl sean");
@@ -46,7 +46,7 @@ fn backwards_name_search() {
 fn instagram_search() {
     let db = common::db();
     let cache = db.get_static_cache();
-    let selection = Selection::new_default();
+    let selection = Selection::default();
 
     // Perform the search.
     let res = search_rankings(&db, &selection, 0, "Ferruix");

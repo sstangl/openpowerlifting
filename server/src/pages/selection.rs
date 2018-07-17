@@ -19,8 +19,8 @@ pub struct Selection {
     pub sort: SortSelection,
 }
 
-impl Selection {
-    pub fn new_default() -> Self {
+impl Default for Selection {
+    fn default() -> Selection {
         Selection {
             equipment: EquipmentSelection::RawAndWraps,
             federation: FederationSelection::AllFederations,
@@ -30,9 +30,11 @@ impl Selection {
             sort: SortSelection::ByWilks,
         }
     }
+}
 
+impl Selection {
     pub fn from_path(p: &path::Path) -> Result<Self, ()> {
-        let mut ret = Selection::new_default();
+        let mut ret = Selection::default();
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

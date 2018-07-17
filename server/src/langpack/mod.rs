@@ -363,6 +363,7 @@ pub struct Translations {
 }
 
 /// Owner struct of all translation state.
+#[derive(Default)]
 pub struct LangInfo {
     de: Option<Translations>,
     en: Option<Translations>,
@@ -381,25 +382,6 @@ pub struct LangInfo {
 }
 
 impl LangInfo {
-    pub fn new() -> LangInfo {
-        LangInfo {
-            de: None,
-            en: None,
-            eo: None,
-            es: None,
-            fi: None,
-            fr: None,
-            it: None,
-            pl: None,
-            pt: None,
-            sl: None,
-            ru: None,
-            tr: None,
-            vi: None,
-            zh_hant: None,
-        }
-    }
-
     pub fn load_translations(
         &mut self,
         language: Language,

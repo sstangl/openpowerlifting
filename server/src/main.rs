@@ -240,7 +240,7 @@ fn meetlist(
     cookies: Cookies,
 ) -> Option<Template> {
     let mselection = match mselections {
-        None => pages::meetlist::MeetListSelection::new_default(),
+        None => pages::meetlist::MeetListSelection::default(),
         Some(p) => pages::meetlist::MeetListSelection::from_path(&p).ok()?,
     };
     let locale = make_locale(&langinfo, languages, &cookies);
@@ -325,7 +325,7 @@ fn index(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let selection = pages::selection::Selection::new_default();
+    let selection = pages::selection::Selection::default();
     let locale = make_locale(&langinfo, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(Template::render("rankings", &context))
@@ -359,7 +359,7 @@ fn rankings_api(
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
     let selection = match selections {
-        None => pages::selection::Selection::new_default(),
+        None => pages::selection::Selection::default(),
         Some(path) => pages::selection::Selection::from_path(&path).ok()?,
     };
 
@@ -404,7 +404,7 @@ fn search_rankings_api<'db>(
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
     let selection = match selections {
-        None => pages::selection::Selection::new_default(),
+        None => pages::selection::Selection::default(),
         Some(path) => pages::selection::Selection::from_path(&path).ok()?,
     };
 
@@ -567,7 +567,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
 }
 
 fn load_langinfo() -> Result<LangInfo, Box<Error>> {
-    let mut langinfo = langpack::LangInfo::new();
+    let mut langinfo = langpack::LangInfo::default();
     for language in Language::iter() {
         let path = format!("translations/{}.json", language);
         langinfo.load_translations(language, &path)?;
