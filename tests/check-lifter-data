@@ -133,7 +133,7 @@ def check_social_media(names):
             lifters.add(row[nameidx])
 
         # Prevent duplicate instagrams.
-        if row[instagramidx] in instagrams:
+        if row[instagramidx] in instagrams and row[instagramidx] != "mr_mrs_alaniz":
             perror("%s: Instagram used by two different lifters: '%s'."
                    % (filename, row[instagramidx]))
         else:
