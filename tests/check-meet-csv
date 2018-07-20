@@ -105,6 +105,7 @@ KnownFederations = {
     "FFForce",  # Federation Francaise de Force, IPF.
     "FPO",  # Finland Powerlifting Organization (IPA).
     "FPR",  # Powerlifting Federation of Russia, IPF.
+    "GoldenDouble",  # Russian Stand-alone competition.
     "GPA",
     "GPC",  # Global Powerlifting Committee.
     "GPC-AUS",  # Australian branch of the GPC.
@@ -170,6 +171,7 @@ KnownFederations = {
     "WDFPF",  # World Drug Free Powerlifting Association
     "WelshPA",  # Welsh Powerlifting Association, IPF.
     "WPA",  # World Powerlifting Alliance.
+    "WPA-RUS",  # World Powerlifting Alliance Russia
     "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
     "WPC-Portugal",
@@ -190,6 +192,7 @@ KnownCountries = {
     "Aruba",
     "Australia",
     "Austria",
+    "Azerbaijan",
     "Belarus",
     "Belgium",
     "Brazil",

@@ -6,6 +6,7 @@ pub enum Country {
     Argentina,
     Aruba,
     Australia,
+    Azerbaijan,
     Austria,
     Belarus,
     Belgium,

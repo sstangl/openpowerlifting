@@ -149,11 +149,13 @@
   <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>{{strings.selectors.fed.all_russia}}</option>
   <option value="bb" {% if selection.federation == "BB" %}selected{% endif %}>BB - Bogatyr Brotherhood [GPA]</option>
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR - Russian Powerlifting Federation [IPF]</option>
+  <option value="goldendouble" {% if selection.federation == "GoldenDouble" %}selected{% endif %}>GoldenDouble - Golden Double Competition</option>
   <option value="gpc-rus" {% if selection.federation == "GPC-RUS" %}selected{% endif %}>GPC-RUS - GPC Russia [GPC]</option>
   <option value="nap" {% if selection.federation == "NAP" %}selected{% endif %}>NAP - National Association of Powerlifting [IPA]</option>
   <option value="rpu" {% if selection.federation == "RPU" %}selected{% endif %}>RPU - Russian Powerlifting Union</option>
   <option value="sct" {% if selection.federation == "SCT" %}selected{% endif %}>SCT - Super-Cup of Titans (Single-ply)</option>
   <option value="spss" {% if selection.federation == "SPSS" %}selected{% endif %}>SPSS - Societatem Potentis Species Sports</option>
+  <option value="wpa-rus" {% if selection.federation == "WPA-RUS" %}selected{% endif %}>WPA-RUS - WPA Russia</option>
   <option value="wpc-rus" {% if selection.federation == "WPC-RUS" %}selected{% endif %}>WPC-RUS - WPC Russia</option>
   <option value="wrpf" {% if selection.federation == "WRPF" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
 </optgroup>

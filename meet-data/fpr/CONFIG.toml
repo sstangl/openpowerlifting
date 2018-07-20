@@ -8,6 +8,7 @@
     masters2 = {name = "Masters 2",min=49.5,max=999}
     masters3 = {name = "Masters 3",min=59.5,max=999}
     masters4 = {name = "Masters 4",min=69.5,max=999}
+    paralympics = {name = "Paralympics",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -43,10 +44,34 @@
     date_range = ["0000-00-00","2010-12-31"]
     sex = "M"
 
+[weightclasses.old_subjunior_M]
+    classes = ["48","52","56","60","67.5","75","82.5","90","100","110","110+"]
+    date_range = ["0000-00-00","2010-12-31"]
+    sex = "M"
+    divisions = ["Sub-Juniors"]
+
 [weightclasses.old_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
     date_range = ["0000-00-00","2010-12-31"]
     sex = "F"
+
+[weightclasses.old_subjunior_F]
+    classes = ["40","44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-00-00","2010-12-31"]
+    sex = "F"
+    divisions = ["Sub-Juniors"]
+
+[weightclasses.para_F]
+    classes = ["40","44","48","52","56","60","67.5","75","82.5","82.5+"]
+    date_range = ["0000-00-00","2010-12-31"]
+    sex = "F"
+    divisions = ["Paralympics"]
+
+[weightclasses.para_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","100+"]
+    date_range = ["0000-00-00","2010-12-31"]
+    sex = "M"
+    divisions = ["Paralympics"]
 
 [exclusions]
     0808 = ["check_row_weightclass_consistency"]

@@ -474,10 +474,8 @@ def interpolate_ages(LifterAgeHash, MeetDateHash):
                                + age_data[DATE_IDX+1:] + [age_data[DATE_IDX]])
 
         lifter_data.sort(key=lambda x: x[DATE_IDX])
-
         if is_by_consistent(lifter_data) and is_bd_consistent(lifter_data):
             lifter_data = interpolate_lifter(lifter_data)
-
         # Sort by meet ID
         lifter_data.sort(key=lambda x: x[-1])
 
