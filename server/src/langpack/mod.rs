@@ -40,6 +40,8 @@ pub enum Language {
     pt,
     /// Slovenian.
     sl,
+    /// Swedish.
+    sv,
     /// Russian.
     ru,
     /// Turkish.
@@ -68,6 +70,7 @@ impl fmt::Display for Language {
                 Language::pl => "pl",
                 Language::pt => "pt",
                 Language::sl => "sl",
+                Language::sv => "sv",
                 Language::ru => "ru",
                 Language::tr => "tr",
                 Language::vi => "vi",
@@ -376,6 +379,7 @@ pub struct LangInfo {
     pl: Option<Translations>,
     pt: Option<Translations>,
     sl: Option<Translations>,
+    sv: Option<Translations>,
     ru: Option<Translations>,
     tr: Option<Translations>,
     vi: Option<Translations>,
@@ -406,6 +410,7 @@ impl LangInfo {
             Language::pl => self.pl = trans,
             Language::pt => self.pt = trans,
             Language::sl => self.sl = trans,
+            Language::sv => self.sv = trans,
             Language::ru => self.ru = trans,
             Language::tr => self.tr = trans,
             Language::vi => self.vi = trans,
@@ -427,6 +432,7 @@ impl LangInfo {
             Language::pl => self.pl.as_ref().unwrap(),
             Language::pt => self.pt.as_ref().unwrap(),
             Language::sl => self.sl.as_ref().unwrap(),
+            Language::sv => self.sv.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
             Language::tr => self.tr.as_ref().unwrap(),
             Language::vi => self.vi.as_ref().unwrap(),
@@ -571,6 +577,7 @@ impl Language {
             Language::pl => NumberFormat::ArabicComma,
             Language::pt => NumberFormat::ArabicComma,
             Language::sl => NumberFormat::ArabicComma,
+            Language::sv => NumberFormat::ArabicComma,
             Language::ru => NumberFormat::ArabicComma,
             Language::tr => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
@@ -658,6 +665,7 @@ pub fn get_localized_name(
         Language::pl => &lifter.name,
         Language::pt => &lifter.name,
         Language::sl => &lifter.name,
+        Language::sv => &lifter.name,
         Language::ru => {
             if let Some(ref cyr) = lifter.cyrillic_name {
                 cyr
