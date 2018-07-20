@@ -25,8 +25,8 @@
 		"supportus": "サポート"
 	},
 	"columns": {
-		"place": "場所",
-		"formulaplace": "順位",
+		"place": "順位",
+		"formulaplace": "ランク",
 		"liftername": "名前",
 		"federation": "組織",
 		"date": "日付",
@@ -44,7 +44,7 @@
 		"total": "トータル",
 		"wilks": "ウィルクス",
 		"mcculloch": "マカロック",
-		"num_lifters": "リフター"
+		"num_lifters": "選手"
 	},
 	"country": {
 	    "algeria": "アルジェリア",
@@ -142,7 +142,7 @@
 		"equipment": {
 			"raw": "ノーギア",
 			"wraps": "ニーラップ",
-			"raw_wraps": "ノーギア+ラップ",
+			"raw_wraps": "ノーギア+ニーラップ",
 			"single": "シングルプライ",
 			"multi": "マルチプライ"
 		},
@@ -188,12 +188,12 @@
 			"all_ireland": "アイルランド全組織",
 			"all_israel": "イスラエル全組織",
 			"all_russia": "ロシア全組織",
-			"all_uk": "連合王国全組織",
+			"all_uk": "イギリス全組織",
 			"all_ukraine": "ウクライナ全組織"
 		}
 	},
 	"lifter_page": {
-		"personal_bests": "自己記録",
+		"personal_bests": "自己ベスト",
 		"competition_results": "大会結果"
 	}
 }
