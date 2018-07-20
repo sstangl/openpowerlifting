@@ -34,6 +34,8 @@ pub enum Language {
     fr,
     /// Italian.
     it,
+    /// Japanese.
+    ja,
     /// Polish.
     pl,
     /// Portuguese.
@@ -67,6 +69,7 @@ impl fmt::Display for Language {
                 Language::fi => "fi",
                 Language::fr => "fr",
                 Language::it => "it",
+                Language::ja => "ja",
                 Language::pl => "pl",
                 Language::pt => "pt",
                 Language::sl => "sl",
@@ -376,6 +379,7 @@ pub struct LangInfo {
     fi: Option<Translations>,
     fr: Option<Translations>,
     it: Option<Translations>,
+    ja: Option<Translations>,
     pl: Option<Translations>,
     pt: Option<Translations>,
     sl: Option<Translations>,
@@ -407,6 +411,7 @@ impl LangInfo {
             Language::fi => self.fi = trans,
             Language::fr => self.fr = trans,
             Language::it => self.it = trans,
+            Language::ja => self.ja = trans,
             Language::pl => self.pl = trans,
             Language::pt => self.pt = trans,
             Language::sl => self.sl = trans,
@@ -429,6 +434,7 @@ impl LangInfo {
             Language::fi => self.fi.as_ref().unwrap(),
             Language::fr => self.fr.as_ref().unwrap(),
             Language::it => self.it.as_ref().unwrap(),
+            Language::ja => self.ja.as_ref().unwrap(),
             Language::pl => self.pl.as_ref().unwrap(),
             Language::pt => self.pt.as_ref().unwrap(),
             Language::sl => self.sl.as_ref().unwrap(),
@@ -574,6 +580,7 @@ impl Language {
             Language::fi => NumberFormat::ArabicComma,
             Language::fr => NumberFormat::ArabicComma,
             Language::it => NumberFormat::ArabicComma,
+            Language::ja => NumberFormat::ArabicPeriod,
             Language::pl => NumberFormat::ArabicComma,
             Language::pt => NumberFormat::ArabicComma,
             Language::sl => NumberFormat::ArabicComma,
@@ -581,7 +588,7 @@ impl Language {
             Language::ru => NumberFormat::ArabicComma,
             Language::tr => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
-            Language::zh_hant => NumberFormat::ArabicComma,
+            Language::zh_hant => NumberFormat::ArabicPeriod,
         }
     }
 }
@@ -662,6 +669,7 @@ pub fn get_localized_name(
         Language::fi => &lifter.name,
         Language::fr => &lifter.name,
         Language::it => &lifter.name,
+        Language::ja => &lifter.name,
         Language::pl => &lifter.name,
         Language::pt => &lifter.name,
         Language::sl => &lifter.name,
