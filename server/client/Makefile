@@ -23,7 +23,7 @@ css: builddir npminit
 
 images: builddir
 	cp ${PROJECTDATA}/logo-on-white.svg "${BUILDDIR}/images/logo-compressed.svg"
-	cp images/select_dropdown.png "${BUILDDIR}/images/"
+	cp images/select_dropdown_red.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
 	cp ${PROJECTDATA}/apple-touch-icon.png "${BUILDDIR}/images/"
 
