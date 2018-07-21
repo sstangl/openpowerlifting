@@ -1,16 +1,29 @@
 // vim: set ts=8 sts=2 et sw=2 tw=99:
 
-$background-color: #040404;
-$hover-color: #444444;
-$alt-color: #111111;
+$background-color: #272727;
+$header-background-color: #F3F3F3;
 
 $default-color: #EDF2F4;
 $primary-color: #FB3640;
 
-$control-border-color: #333333;
-$control-background-color: #3E4042;
+// A slightly mellowed-out red compared to the red for fonts.
+$table-header-background-color: #BF262B;
+$row-alt-background-color: #333333; // Every even-numbered row.
+$row-hover-background-color: #484848;
 
-$topbar-height: 82px;
+$control-bar-background-color: #C2C2C2;
+$control-text-color: #4A4A50;
+$control-border-color: #A9A9A9;
+$control-background-color: #F4F4F4;
+$control-hover-color: #FFFFFF;
+$control-active-color: #353535;
+
+// Height definitions.
+$control-bar-height: 36px;
+$header-height: 36px;
+$topbar-height: $control-bar-height + $header-height;
+
+$table-row-height: 18px;
 
 // Definitions for media queries.
 $mobile-cutoff: 600px;
@@ -95,11 +108,11 @@ li {
 }
 
 .fa-resize {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .instagram {
-  margin-left: 8px;
+  margin-left: 6px;
   vertical-align: middle;
 }
 

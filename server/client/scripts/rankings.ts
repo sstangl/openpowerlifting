@@ -204,8 +204,8 @@ function onLoad() {
 
     const nameWidth = 200;
     const shortWidth = 40;
-    const dateWidth = 80;
-    const numberWidth = 56;
+    const dateWidth = 70;
+    const numberWidth = 55;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
@@ -214,7 +214,7 @@ function onLoad() {
     let columns = [
         {id: "filler", width: 20, minWidth: 20, focusable: false,
             selectable: false, resizable: false},
-        {id: "rank", name: translation_column_formulaplace, field: "rank", width: numberWidth},
+        {id: "rank", name: translation_column_formulaplace, field: "rank", width: 40},
         {id: "name", name: translation_column_liftername, field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: translation_column_federation, field: "fed", width: numberWidth},
         {id: "date", name: translation_column_date, field: "date", width: dateWidth, formatter: urlformatter},

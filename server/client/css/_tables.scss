@@ -6,22 +6,45 @@
 }
 
 .slick-cell {
+  display: inline-block;
   color: $default-color;
   font-size: 9pt;
   border: 1px;
+  line-height: $table-row-height;
+  padding-top: 3px; // Hacky.
 }
 
 .searchflashing {
-  background-color: $hover-color;
+  background-color: $row-hover-background-color;
 }
 
-.slick-header-column {
-  font-size: 9pt;
-  color: $primary-color;
+// Using .slick-header-columns instead of .slick-header-column
+// also affects the area directly above the scrollbar.
+.slick-header-columns {
+  font-size: 8pt;
+  font-weight: bold;
+  color: $default-color;
+  background-color: $table-header-background-color;
 }
 
+// Override SlickGrid default CSS.
 .slick-header-column.ui-state-default {
-  border-color: $background-color;
+  border-color: $table-header-background-color;
+
+  // SlickGrid forces a 1px silver border on the right.
+  border-right: 0px;
+
+  // SlickGrid draws text disconnected from the background row graphics,
+  // so they can get out of sync if not carefully coordinated.
+  height: $table-row-height;
+  line-height: $table-row-height;
+
+  // By default, SlickGrid indents the column headers a bit. This undoes that.
+  // The padding has to add up to +8 left-right, otherwise the header row
+  // will not extend to the full width of the grid.
+  // The vertical padding seems to be necessary no matter what height
+  // and line-height are set to.
+  padding: 4px 8px 2px 0px;
 }
 
 .slick-header-column-sorted {
@@ -30,11 +53,11 @@
 }
 
 .slick-row.even {
-  background-color: $alt-color;
+  background-color: $row-alt-background-color;
 }
 
 .slick-row:hover {
-  background-color: $hover-color;
+  background-color: $row-hover-background-color;
 }
 
 table {
@@ -57,11 +80,11 @@ thead td {
 }
 
 tr:nth-child(even) {
-  background-color: $alt-color;
+  background-color: $row-alt-background-color;
 }
 
 tbody tr:hover {
-  background-color: $hover-color;
+  background-color: $row-hover-background-color;
 }
 
 td {

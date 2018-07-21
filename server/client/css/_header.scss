@@ -1,16 +1,13 @@
 // vim: set ts=8 sts=2 et sw=2 tw=99:
 // Style definitions for the navigation header.
 
-/* Height of the top navigation element. */
-$header-height: 44px;
-
 #header {
   /* Resize all items to $header-height, preventing overflow. */
   display: flex;
   align-items: stretch;
 
-  background-color: $background-color;
-  color: $default-color;
+  background-color: $header-background-color;
+  color: $control-text-color;
 
   height: $header-height;
   width: 100%;
@@ -22,8 +19,9 @@ $header-height: 44px;
   display: flex;
   align-items: center;
 
-  color: $default_color;
-  font-size: 14px;
+  color: $control-text-color;
+  font-size: 9pt;
+  font-weight: bold;
   text-decoration: none;
   padding: 10px;
 
@@ -42,16 +40,21 @@ $header-height: 44px;
 }
 
 #header-right {
-  float: right;
+  display: flex;
+  align-items: center;
   margin-left: auto;
   height: $header-height;
 
   /* Push it away from the top-right corner just a little. */
-  padding: 10px 10px 0px 0px;
+  padding-right: 8px;
 }
 
 .header-logo {
-  height: $header-height;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 2px;
+  height: $header-height - 8px;
 }
 
 // Hide the hamburger menu by default.
