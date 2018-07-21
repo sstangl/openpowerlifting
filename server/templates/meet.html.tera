@@ -10,20 +10,21 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      <span id="meet">{{meet.federation}} &nbsp;/&nbsp; {{meet.date}} &nbsp;/&nbsp; {{meet.name}}</span>
       <select id="displaytype">
         <option value="wilks">By Wilks</option>
 	<option value="division" disabled>By Division</option>
       </select>
     </div>
     <div id="controls-right">
-      <a href="https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}">Edit Meet</a>
+      <button onclick="location.href='https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}'" type="button">Edit Meet</button>
     </div>
   </div>
 {% endblock controls %}
 
 {% block body %}
-  <div class="content">
+  <div class="mixed-content-with-controls">
+    <h1 id="meet">{{meet.federation}} {{meet.name}}</h1>
+    <p>{{meet.date}} {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}</p>
     <table>
       <thead><tr>
         <th>{{strings.columns.formulaplace}}</th>

@@ -69,7 +69,7 @@ div.topbar {
 div.topbar-without-controls {
   position: fixed;
   width: 100%;
-  height: 36px;
+  height: $header-height;
 }
 
 div.content {
@@ -79,7 +79,11 @@ div.content {
 // Gross workaround to make things look semi-OK on text-based pages
 // until we figure out a real CSS template.
 div.mixed-content {
-  padding: 35px 20px 20px 20px;
+  padding: $header-height 20px 20px 20px;
+  font-size: 10pt;
+}
+div.mixed-content-with-controls {
+  padding: $topbar-height 20px 20px 20px;
   font-size: 10pt;
 }
 
