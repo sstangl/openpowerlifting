@@ -49,6 +49,10 @@ def getmeetinfo(soup):
     fed = fedrow.find_all('td')[1].text
     fed = fed[fed.find("(")+1:fed.find(")")]
 
+    # Correct fed names to the form that we use
+    if fed in ['RPF', 'SPPF', 'MPF']:
+        fed = 'FPR'
+
     # Get the location.
     venuerow = fedrow.find_next_sibling()
     venue = venuerow.find_all('td')[1].text
@@ -476,6 +480,28 @@ def remove_empty_cols_ignore_fieldname(csv):
             return
         csv.remove_column_by_index(idx)
 
+# Make use of some of the data from the sheet-name
+
+
+def parse_sheetname(csv):
+    if 'SheetName' in csv.fieldnames:
+        sn_idx = csv.index('SheetName')
+        sex_idx = csv.index('Sex')
+        event_idx = csv.index('Event')
+        for row in csv.rows:
+            if 'Men' in row[sn_idx]:
+                row[sex_idx] = 'M'
+                row[sn_idx] = row[sn_idx].replace('Men', '')
+            elif 'Women' in row[sn_idx]:
+                row[sex_idx] = 'F'
+                row[sn_idx] = row[sn_idx].replace('Women', '')
+
+            if 'PL' in row[sn_idx]:
+                row[event_idx] = 'SBD'
+                row[sn_idx] = row[sn_idx].replace('PL', '')
+
+            row[sn_idx] = row[sn_idx].strip()
+
 
 def main(url):
     html = gethtml(url)
@@ -499,15 +525,17 @@ def main(url):
 
     fix_cyrillic_names(entriescsv)
 
+    # Figure out event information.
+    markevent(entriescsv)
+
+    parse_sheetname(entriescsv)
+
     remove_empty_cols_ignore_fieldname(entriescsv)
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
-
-    # Figure out event information.
-    markevent(entriescsv)
 
     fixtotals(entriescsv)
     fixplace(entriescsv)
