@@ -1,21 +1,21 @@
 {
 	"units": {
-		"lbs": "lbs",
+		"lbs": "фунти",
 		"kg": "кг"
 	},
 	"equipment": {
-		"raw": "Raw",
-		"wraps": "Wraps",
-		"single": "Single",
-		"multi": "Multi",
-		"straps": "Straps"
+		"raw": "Без",
+		"wraps": "Бинти",
+		"single": "Одно",
+		"multi": "Багато",
+		"straps": "Лямки"
 	},
 	"sex": {
 		"m": "Ч",
 		"f": "Ж"
 	},
 	"header": {
-		"rankings": "Ранжування",
+		"rankings": "Ренкінг",
 		"meets": "Змагання",
 		"data": "Дані",
 		"status": "Статус проекту",
@@ -28,14 +28,14 @@
 		"place": "Місце",
 		"formulaplace": "Ранг",
 		"liftername": "Ім'я",
-		"federation": "Фед",
+		"federation": "Федерація",
 		"date": "Дата",
-		"location": "Місто",
+		"location": "Розташування",
 		"meetname": "Назва змагання",
-		"division": "Division",
+		"division": "Дивізіон",
 		"sex": "Стать",
 		"age": "Вік",
-		"equipment": "Екіпірування",
+		"equipment": "Екіпір.",
 		"weightclass": "Вагова категорія",
 		"bodyweight": "Вага",
 		"squat": "Присідання",
@@ -43,9 +43,9 @@
 		"deadlift": "Тяга",
 		"total": "Сума",
 		"wilks": "Уілкс",
-		"mcculloch": "McCulloch",
+		"mcculloch": "МакКалох",
 		"glossbrenner": "Gloss",
-		"num_lifters": "Lifters"
+		"num_lifters": "Учасники"
 	},
 	"country": {
 	    "algeria": "Алжир",
@@ -126,75 +126,75 @@
 	    "taiwan": "Тайвань",
 	    "turkey": "Туреччина",
 	    "uae": "ОАЕ",
-	    "uk": "ВБ",
-	    "ukraine": "Українка",
+	    "uk": "Велика Британія",
+	    "ukraine": "Україна",
 	    "uruguay": "Уругвай",
 	    "usa": "США",
-	    "usvirginislands": "US Virgin Islands",
-	    "uzbekistan": "Uzbekistan",
-	    "venezuela": "Venezuela",
-	    "vietnam": "Vietnam",
-	    "wales": "Wales"
+	    "usvirginislands": "Американські Віргінські Острови",
+	    "uzbekistan": "Узбекистан",
+	    "venezuela": "Венесуела",
+	    "vietnam": "В'єтнам",
+	    "wales": "Уельс"
 	},
 	"buttons": {
-		"search": "Search"
+		"search": "Шукати"
 	},
 	"selectors": {
 		"equipment": {
-			"raw": "Raw",
-			"wraps": "Wraps",
-			"raw_wraps": "Raw+Wraps",
-			"single": "Single-ply",
-			"multi": "Multi-ply"
+			"raw": "Без",
+			"wraps": "Бинти",
+			"raw_wraps": "Без+Бинти",
+			"single": "Одношарове",
+			"multi": "Багатошарове"
 		},
 		"weightclass": {
-			"all": "All Classes",
-			"traditional": "Traditional",
-			"ipfmen": "IPF Men",
-			"ipfwomen": "IPF Women"
+			"all": "Всі категорії",
+			"traditional": "Традиційні",
+			"ipfmen": "IPF Чоловіки",
+			"ipfwomen": "IPF Жінки"
 		},
 		"sort": {
-			"by_squat": "By Squat",
-			"by_bench": "By Bench",
-			"by_deadlift": "By Deadlift",
-			"by_total": "By Total",
-			"by_allometric": "By Allometric Scaling",
-			"by_glossbrenner": "By Glossbrenner",
-			"by_mcculloch": "By McCulloch",
-			"by_wilks": "By Wilks",
-			"weight": "Weight Sorts",
-			"points": "Point Sorts"
+			"by_squat": "За присіданнями",
+			"by_bench": "За жимом",
+			"by_deadlift": "За тягою",
+			"by_total": "За сумою",
+			"by_allometric": "За аллометричним шкалюванням",
+			"by_glossbrenner": "За Глосбренером",
+			"by_mcculloch": "За МакКалохом",
+			"by_wilks": "За Уілксом",
+			"weight": "Сортування за вагою",
+			"points": "Сортування за очками"
 		},
 		"year": {
-			"all": "All Years"
+			"all": "Всі роки"
 		},
 		"sex": {
-			"all": "All Sexes",
-			"m": "Men",
-			"f": "Women"
+			"all": "Всі статі",
+			"m": "Чоловіки",
+			"f": "Жінки"
 		},
 		"fed": {
-			"all": "All Feds",
-			"all_tested": "All Drug-Tested Feds",
-			"all_amateur": "All Amateur and Optionally Drug-Tested Feds",
-			"international": "International",
-			"regional": "Regional",
-			"all_usa": "All United States Feds",
-			"all_argentina": "All Argentinian Feds",
-			"all_australia": "All Australian Feds",
-			"all_canada": "All Canadian Feds",
-			"all_czechia": "All Czech Feds",
-			"all_finland": "All Finnish Feds",
-			"all_germany": "All German Feds",
-			"all_ireland": "All Irish Feds",
-			"all_israel": "All Israeli Feds",
-			"all_russia": "All Russian Feds",
-			"all_uk": "All United Kingdom Feds",
-			"all_ukraine": "All Ukrainian Feds"
+			"all": "Всі федерації",
+			"all_tested": "Всі федерації з проходженням допінг контролю",
+			"all_amateur": "Всі аматорські та ті, що мають опційне проходження допінг контролю федерації",
+			"international": "Міжнародні",
+			"regional": "Регіональні",
+			"all_usa": "Всі американські федерації",
+			"all_argentina": "Всі аргентинські федерації",
+			"all_australia": "Всі австралійські федерації",
+			"all_canada": "Всі канадійські федерації",
+			"all_czechia": "Всі чеські федерації",
+			"all_finland": "Всі фінські федерації",
+			"all_germany": "Всі німецькі федерації",
+			"all_ireland": "Всі ірландські федерації",
+			"all_israel": "Всі ізраїльські федерації",
+			"all_russia": "Всі російські федерації",
+			"all_uk": "Всі британські федерації",
+			"all_ukraine": "Всі українські федерації"
 		}
 	},
 	"lifter_page": {
-		"personal_bests": "Personal Bests",
-		"competition_results": "Competition Results"
+		"personal_bests": "Особисті рекорди",
+		"competition_results": "Результати змагань"
 	}
 }
