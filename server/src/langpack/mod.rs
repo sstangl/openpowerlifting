@@ -271,6 +271,7 @@ pub struct ColumnTranslations {
     pub total: String,
     pub wilks: String,
     pub mcculloch: String,
+    pub glossbrenner: String,
     pub num_lifters: String,
 }
 

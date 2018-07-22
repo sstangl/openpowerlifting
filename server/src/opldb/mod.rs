@@ -139,6 +139,8 @@ pub struct Entry {
     pub wilks: Points,
     #[serde(rename(deserialize = "McCulloch"))]
     pub mcculloch: Points,
+    #[serde(rename(deserialize = "Glossbrenner"))]
+    pub glossbrenner: Points,
     #[serde(rename(deserialize = "Tested"), deserialize_with = "deserialize_yes_no")]
     pub tested: bool,
     #[serde(rename(deserialize = "AgeClass"))]

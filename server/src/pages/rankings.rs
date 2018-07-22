@@ -46,6 +46,7 @@ impl<'db, 'a> Context<'db, 'a> {
                 | SortSelection::ByTotal
                 | SortSelection::ByWilks => &locale.strings.columns.wilks,
                 SortSelection::ByMcCulloch => &locale.strings.columns.mcculloch,
+                SortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
             },
 
             selection,

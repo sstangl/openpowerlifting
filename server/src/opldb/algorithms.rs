@@ -44,6 +44,13 @@ pub fn filter_wilks(entry: &Entry) -> bool {
     entry.wilks > Points(0)
 }
 
+/// Whether an `Entry` should be part of `ByGlossbrenner` rankings and records.
+#[inline]
+pub fn filter_glossbrenner(entry: &Entry) -> bool {
+    // Glossbrenner is defined to be zero if DQ.
+    entry.glossbrenner > Points(0)
+}
+
 /// Defines an `Ordering` of Entries by Squat.
 #[inline]
 pub fn cmp_squat(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
@@ -110,6 +117,17 @@ pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by Wilks, higher first.
     a.wilks.cmp(&b.wilks).reverse()
+        // If equal, sort by Date, earlier first.
+        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
+/// Defines an `Ordering` of Entries by Glossbrenner.
+#[inline]
+pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    // First sort by Glossbrenner, higher first.
+    a.glossbrenner.cmp(&b.glossbrenner).reverse()
         // If equal, sort by Date, earlier first.
         .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
         // If that's equal too, sort by Total, highest first.
