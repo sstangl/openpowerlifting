@@ -9,7 +9,7 @@
 
 import oplcsv
 import sys
-from wilks import wilks, mcculloch
+from coefficient import wilks, mcculloch
 
 
 def to_string(f):

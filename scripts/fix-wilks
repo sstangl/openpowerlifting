@@ -9,7 +9,7 @@
 
 from oplcsv import Csv
 import sys
-from wilks import wilks
+from coefficient import wilks
 
 if len(sys.argv) < 2:
     print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
