@@ -16,7 +16,7 @@ builddir:
 
 binary: builddir
 	cargo build --release
-	cp target/release/server "${BUILDDIR}/server"
+	cp ../target/release/server "${BUILDDIR}/server"
 
 # Documents everything, not just the public-facing APIs.
 devdocs:
@@ -48,8 +48,6 @@ clientstatics: client
 	cp client/build/static-asset-map.tera "${BUILDDIR}/data/templates/"
 
 release: rebuild-clean binary data config oldstatics clientstatics
-	touch "${BUILDDIR}/${BUILDFILE}"
-	tar cvjf "${BUILDDIR}/${BUILDFILE}" --exclude="${BUILDFILE}" "${BUILDDIR}"
 	echo "Good luck!"
 
 # Cleans files that may cause `make` to be non-idempotent.
