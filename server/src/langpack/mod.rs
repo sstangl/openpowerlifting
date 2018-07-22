@@ -48,6 +48,8 @@ pub enum Language {
     ru,
     /// Turkish.
     tr,
+    /// Ukrainian.
+    uk,
     /// Vietnamese.
     vi,
     /// Chinese, written in Traditional Chinese script.
@@ -76,6 +78,7 @@ impl fmt::Display for Language {
                 Language::sv => "sv",
                 Language::ru => "ru",
                 Language::tr => "tr",
+                Language::uk => "uk",
                 Language::vi => "vi",
                 Language::zh_hant => "zh-Hant",
             }
@@ -386,6 +389,7 @@ pub struct LangInfo {
     sv: Option<Translations>,
     ru: Option<Translations>,
     tr: Option<Translations>,
+    uk: Option<Translations>,
     vi: Option<Translations>,
     zh_hant: Option<Translations>,
 }
@@ -418,6 +422,7 @@ impl LangInfo {
             Language::sv => self.sv = trans,
             Language::ru => self.ru = trans,
             Language::tr => self.tr = trans,
+            Language::uk => self.uk = trans,
             Language::vi => self.vi = trans,
             Language::zh_hant => self.zh_hant = trans,
         };
@@ -441,6 +446,7 @@ impl LangInfo {
             Language::sv => self.sv.as_ref().unwrap(),
             Language::ru => self.ru.as_ref().unwrap(),
             Language::tr => self.tr.as_ref().unwrap(),
+            Language::uk => self.uk.as_ref().unwrap(),
             Language::vi => self.vi.as_ref().unwrap(),
             Language::zh_hant => self.zh_hant.as_ref().unwrap(),
         }
@@ -587,6 +593,7 @@ impl Language {
             Language::sv => NumberFormat::ArabicComma,
             Language::ru => NumberFormat::ArabicComma,
             Language::tr => NumberFormat::ArabicComma,
+            Language::uk => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
             Language::zh_hant => NumberFormat::ArabicPeriod,
         }
@@ -656,33 +663,12 @@ impl Serialize for LocalizedWeightClassAny {
     }
 }
 
-/// Gets the appropriat
-pub fn get_localized_name(
-    lifter: &opldb::Lifter,
-    language: Language,
-) -> &str {
+/// Gets the lifter's name localized into the target language.
+pub fn get_localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
     match language {
-        Language::de => &lifter.name,
-        Language::en => &lifter.name,
-        Language::eo => &lifter.name,
-        Language::es => &lifter.name,
-        Language::fi => &lifter.name,
-        Language::fr => &lifter.name,
-        Language::it => &lifter.name,
-        Language::ja => &lifter.name,
-        Language::pl => &lifter.name,
-        Language::pt => &lifter.name,
-        Language::sl => &lifter.name,
-        Language::sv => &lifter.name,
-        Language::ru => {
-            if let Some(ref cyr) = lifter.cyrillic_name {
-                cyr
-            } else {
-                &lifter.name
-            }
+        Language::ru | Language::uk => {
+            lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name)
         }
-        Language::tr => &lifter.name,
-        Language::vi => &lifter.name,
-        Language::zh_hant => &lifter.name,
+        _ => &lifter.name,
     }
 }

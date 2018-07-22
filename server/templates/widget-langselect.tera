@@ -13,6 +13,7 @@
   <option value="sv" {% if language == "sv" %}selected{% endif %}>Svenska</option>
   <option value="vi" {% if language == "vi" %}selected{% endif %}>Tiếng Việt</option>
   <option value="tr" {% if language == "tr" %}selected{% endif %}>Türkçe</option>
+  <option value="uk" {% if language == "uk" %}selected{% endif %}>Українська</option>
   <option value="ja" {% if language == "ja" %}selected{% endif %}>日本語</option>
   <option value="zh-Hant" {% if language == "zh-Hant" %}selected{% endif %}>繁體中文</option>
 </select>
