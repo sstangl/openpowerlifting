@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Calculates the Wilks column of the provided CSV.
-# New! Also calculates age-adjusted Wilks!
-#
+# Calculates points columns for the provided CSV.
 # Overwrites the input file in-place.
 #
 
 import oplcsv
 import sys
-from coefficient import wilks, mcculloch
+from coefficient import glossbrenner, wilks, mcculloch
 
 
 def to_string(f):
@@ -38,13 +36,13 @@ def main(filename):
             print(' Missing necessary column: %s' % col, file=sys.stderr)
             return 1
 
-    # If a Wilks column doesn't exist currently, we can just create it.
+    # Ensure points columns exist.
     if 'Wilks' not in csv.fieldnames:
         csv.append_column('Wilks')
-
-    # If a McCulloch column doesn't exist currently, we can just create it.
     if 'McCulloch' not in csv.fieldnames:
         csv.append_column('McCulloch')
+    if 'Glossbrenner' not in csv.fieldnames:
+        csv.append_column('Glossbrenner')
 
     indexSex = csv.index('Sex')
     indexAge = csv.index('Age')
@@ -52,6 +50,7 @@ def main(filename):
     indexTotal = csv.index('TotalKg')
     indexWilks = csv.index('Wilks')
     indexMcCulloch = csv.index('McCulloch')
+    indexGlossbrenner = csv.index('Glossbrenner')
 
     for row in csv.rows:
         sex = row[indexSex]
@@ -81,6 +80,10 @@ def main(filename):
         else:
             # Better than just leaving it blank, when we have some data.
             row[indexMcCulloch] = row[indexWilks]
+
+        # Add the Glossbrenner score to the row.
+        gloss = glossbrenner(sex == 'M', bodyweight, total)
+        row[indexGlossbrenner] = to_string(gloss)
 
     csv.write_filename(filename)
     return 0

@@ -15,8 +15,7 @@ builddir:
 # Cram all the data into a single, huge CSV file.
 csv: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
-	scripts/csv-bodyweight "${BUILDDIR}/${PLFILE}"
-	scripts/csv-wilks "${BUILDDIR}/${PLFILE}"
+	scripts/csv-points "${BUILDDIR}/${PLFILE}"
 	scripts/make-data-distribution
 	bzip2 -f build/openpowerlifting.csv
 

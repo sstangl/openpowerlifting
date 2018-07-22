@@ -266,6 +266,18 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
             else:
                 row[testedidx] = "No"
 
+    # If the weight class column is provided but the bodyweight is not,
+    # set the bodyweight equal to the class maximum, except for SHW.
+    if 'WeightClassKg' not in newentries.fieldnames:
+        newentries.append_column('WeightClassKg')
+    if 'BodyweightKg' not in newentries.fieldnames:
+        newentries.append_column('BodyweightKg')
+    for row in newentries.rows:
+        if not row[newentries.index('BodyweightKg')]:
+            w = row[newentries.index('WeightClassKg')]
+            if w and '+' not in w:
+                row[newentries.index('BodyweightKg')] = w
+
     # Add the MeetID.
     assert "MeetID" in entriescsv.fieldnames
     assert "MeetID" in meetscsv.fieldnames
