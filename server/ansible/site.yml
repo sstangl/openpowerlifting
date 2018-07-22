@@ -2,6 +2,6 @@
 - name: ensure webservers updated and running
   hosts: webservers
   roles:
-    - common
     - nginx
     - openpl-app
+    - sysupdate

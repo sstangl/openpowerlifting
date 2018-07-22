@@ -1,0 +1,5 @@
+---
+- name: ensure system is up-to-date
+  dnf:
+    name: '*'
+    state: latest
