@@ -30,7 +30,7 @@
 /* From http://jsfiddle.net/danield770/YvCHW/4232/ */
 select {
   padding: 3px;
-  margin-left: 5px;
+  margin-left: 4px;
   border: 1px solid $control-border-color;
   border-radius: 4px;
   background-color: $control-background-color;
@@ -41,6 +41,10 @@ select {
   -moz-appearance: none;
   appearance: none;
   background: url(/static/images/select_dropdown_red.png) 96% / 15% no-repeat $control-background-color;
+
+  // Prevent text from overlapping the downward arrow.
+  text-overflow: ellipsis;
+  padding-right: 17px;
 }
 /*target Internet Explorer 9 and Internet Explorer 10:*/
 @media screen and (min-width:0\0) {
