@@ -45,6 +45,8 @@ pub enum Federation {
     APU,
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
+    #[strum(to_string = "BAWLA", serialize = "bawla")]
+    BAWLA,
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
     #[strum(to_string = "BPC", serialize = "bpc")]
@@ -334,6 +336,7 @@ impl MetaFederation {
                     || meet.federation == Federation::AfricanPF
                     || meet.federation == Federation::APU
                     || meet.federation == Federation::AsianPF
+                    || meet.federation == Federation::BAWLA
                     || meet.federation == Federation::BP
                     || meet.federation == Federation::BVDK
                     || meet.federation == Federation::CommonwealthPF
@@ -434,7 +437,8 @@ impl MetaFederation {
                     || meet.federation == Federation::WRPF
             }
             MetaFederation::AllUK => {
-                meet.federation == Federation::BP
+                meet.federation == Federation::BAWLA
+                    || meet.federation == Federation::BP
                     || meet.federation == Federation::BPC
                     || meet.federation == Federation::BPU
                     || meet.federation == Federation::EPA
@@ -479,7 +483,8 @@ impl MetaFederation {
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => meet.federation == Federation::BPU && entry.tested,
             MetaFederation::AllBP => {
-                meet.federation == Federation::BP
+                meet.federation == Federation::BAWLA
+                    || meet.federation == Federation::BP
                     || meet.federation == Federation::EPA
                     || meet.federation == Federation::NIPF
                     || meet.federation == Federation::ScottishPL

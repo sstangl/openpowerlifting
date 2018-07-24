@@ -180,6 +180,7 @@
   <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>{{strings.selectors.fed.all_uk}}</option>
   <option value="abpu" {% if selection.federation == "ABPU" %}selected{% endif %}>ABPU - Amateur British Powerlifting Union [WPC]</option>
   <option value="all-bp" {% if selection.federation == "AllBP" %}selected{% endif %}>BP - British Powerlifting [IPF]</option>
+  <option value="bawla" {% if selection.federation == "BAWLA" %}selected{% endif %}>BAWLA - British Amateur Weightlifting Association [IPF]</option>
   <option value="bpc" {% if selection.federation == "BPC" %}selected{% endif %}>BPC - British Powerlifting Congress [WPC]</option>
   <option value="bpu" {% if selection.federation == "BPU" %}selected{% endif %}>BPU - British Powerlifting Union [WPC]</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA - English Powerlifting Association [IPF]</option>
