@@ -1,33 +1,33 @@
-Name,Sex,Division,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Equipment
-Kale Thompson,M,Open,66,64.8,26,130,92.5,172.5,395,1,Raw
-Bradley Stringer,M,Juniors,74,73.4,20,167.5,120,195,482.5,1,Raw
-Andrew Smith,M,Juniors,83,77.1,19,150,100,165,415,4,Raw
-Ziggy Dukes,M,Juniors,83,83,22,185,92.5,215,492.5,3,Raw
-Jordy Allsopp,M,Juniors,83,80.7,21,165,132.5,207.5,505,2,Raw
-Wiliam Carruthers,M,Juniors,83,81.8,22,200,135,230,565,1,Raw
-Theo Ketty,M,Open,83,76,25,130,90,180,400,4,Raw
-William Kingipotiki,M,Open,83,77.6,27,160,115,185,460,3,Raw
-Adam Thompson,M,Open,83,80.1,31,167.5,110,225,502.5,2,Raw
-Chris Kennedy,M,Open,83,77.7,25,205,145,230,580,1,Raw
-Tom Hart,M,Juniors,93,91.6,23,240,120,252.5,612.5,1,Raw
-Jonny Roberts,M,Open,93,85.4,29,130,100,170,400,4,Raw
-Mike Goodman,M,Open,93,90,24,135,90,185,410,3,Raw
-Calreb Robinson,M,Open,93,90.6,27,165,105,232.5,502.5,2,Raw
-Alistair Blakeley,M,Open,93,89,27,180,112.5,230,522.5,1,Raw
-Teila Foster,M,Juniors,105,103.7,22,170,107.5,172.5,450,1,Raw
-James Hooper-Smith,M,Open,105,99.1,26,180,122.5,240,542.5,1,Raw
-Brett Cullen,M,Masters 2,105,100.5,51,180,155,235,570,1,Raw
-Eli Stafford-Rogers,M,Juniors,120,119,22,235,160,260,655,1,Raw
-Isaiah McLeian,M,Sub-Juniors,120+,138.9,17,150,145,190,485,1,Raw
-Cara Grimwade,F,Juniors,43,41.9,23,57.5,32.5,,,DQ,Raw
-Ahoud Al Siyahi,F,Juniors,52,48,20,70,50,112.5,232.5,1,Raw
-Ellie Thomas,F,Open,57,54.8,29,62.5,40,77.5,180,1,Raw
-Rachel Kennedy,F,Open,63,58.7,39,62.5,30,85,177.5,2,Raw
-Raych Bell,F,Open,63,61.8,30,80,45,87.5,212.5,1,Raw
-Georgia Gentle,F,Juniors,63,63,20,112.5,57.5,135,305,1,Raw
-Alex Offen,F,Open,72,63.2,26,77.5,30,80,187.5,2,Raw
-Claire Irving,F,Open,72,63.5,26,80,45,100,225,1,Raw
-Monique Hamilton,F,Juniors,84,77.5,21,115,45,117.5,277.5,2,Raw
-Eve Biss,F,Juniors,84,75.5,22,107.5,50,132.5,290,1,Raw
-Naomi Erskine,F,Open,84,72.8,32,115,57.5,130,302.5,2,Raw
-Mel Webster,F,Open,84,81.6,32,117.5,65,152.5,335,1,Raw
+Name,Sex,Division,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Equipment,Event
+Kale Thompson,M,Open,66,64.8,26,130,92.5,172.5,395,1,Raw,SBD
+Bradley Stringer,M,Juniors,74,73.4,20,167.5,120,195,482.5,1,Raw,SBD
+Andrew Smith,M,Juniors,83,77.1,19,150,100,165,415,4,Raw,SBD
+Ziggy Dukes,M,Juniors,83,83,22,185,92.5,215,492.5,3,Raw,SBD
+Jordy Allsopp,M,Juniors,83,80.7,21,165,132.5,207.5,505,2,Raw,SBD
+Wiliam Carruthers,M,Juniors,83,81.8,22,200,135,230,565,1,Raw,SBD
+Theo Ketty,M,Open,83,76,25,130,90,180,400,4,Raw,SBD
+William Kingipotiki,M,Open,83,77.6,27,160,115,185,460,3,Raw,SBD
+Adam Thompson,M,Open,83,80.1,31,167.5,110,225,502.5,2,Raw,SBD
+Chris Kennedy,M,Open,83,77.7,25,205,145,230,580,1,Raw,SBD
+Tom Hart,M,Juniors,93,91.6,23,240,120,252.5,612.5,1,Raw,SBD
+Jonny Roberts,M,Open,93,85.4,29,130,100,170,400,4,Raw,SBD
+Mike Goodman,M,Open,93,90,24,135,90,185,410,3,Raw,SBD
+Calreb Robinson,M,Open,93,90.6,27,165,105,232.5,502.5,2,Raw,SBD
+Alistair Blakeley,M,Open,93,89,27,180,112.5,230,522.5,1,Raw,SBD
+Teila Foster,M,Juniors,105,103.7,22,170,107.5,172.5,450,1,Raw,SBD
+James Hooper-Smith,M,Open,105,99.1,26,180,122.5,240,542.5,1,Raw,SBD
+Brett Cullen,M,Masters 2,105,100.5,51,180,155,235,570,1,Raw,SBD
+Eli Stafford-Rogers,M,Juniors,120,119,22,235,160,260,655,1,Raw,SBD
+Isaiah McLeian,M,Sub-Juniors,120+,138.9,17,150,145,190,485,1,Raw,SBD
+Cara Grimwade,F,Juniors,43,41.9,23,57.5,32.5,,,DQ,Raw,SBD
+Ahoud Al Siyahi,F,Juniors,52,48,20,70,50,112.5,232.5,1,Raw,SBD
+Ellie Thomas,F,Open,57,54.8,29,62.5,40,77.5,180,1,Raw,SBD
+Rachel Kennedy,F,Open,63,58.7,39,62.5,30,85,177.5,2,Raw,SBD
+Raych Bell,F,Open,63,61.8,30,80,45,87.5,212.5,1,Raw,SBD
+Georgia Gentle,F,Juniors,63,63,20,112.5,57.5,135,305,1,Raw,SBD
+Alex Offen,F,Open,72,63.2,26,77.5,30,80,187.5,2,Raw,SBD
+Claire Irving,F,Open,72,63.5,26,80,45,100,225,1,Raw,SBD
+Monique Hamilton,F,Juniors,84,77.5,21,115,45,117.5,277.5,2,Raw,SBD
+Eve Biss,F,Juniors,84,75.5,22,107.5,50,132.5,290,1,Raw,SBD
+Naomi Erskine,F,Open,84,72.8,32,115,57.5,130,302.5,2,Raw,SBD
+Mel Webster,F,Open,84,81.6,32,117.5,65,152.5,335,1,Raw,SBD

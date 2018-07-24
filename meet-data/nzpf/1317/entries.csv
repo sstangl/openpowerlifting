@@ -1,26 +1,26 @@
-Name,Sex,Division,BodyweightKg,WeightClassKg,Age,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Equipment
-Delwyn Evans,F,Masters 1,69.05,72,,80,-85,85,85,55,60,-65,60,110,115,120,120,265,1,Single-ply
-Suzy Maddox,F,Masters 1,82.1,84,45,130,140,150,150,85,90,95,95,130,140,150,150,395,1,Single-ply
-Suzee Premji,F,Open,52.45,57,29,70,80,85,85,40,45,47.5,47.5,100,112.5,-120,112.5,245,1,Single-ply
-Carolina Dillen,F,Open,62.8,63,30,80,85,90,90,52.5,-55,-55,52.5,115,120,125,125,267.5,1,Single-ply
-Douglas Mienie,M,Masters 4,91.05,93,73,130,-140,140,140,90,-100,-100,90,160,175,185,185,415,2,Single-ply
-Hugh McKechnie,M,Masters 3,81.5,83,63,85,90,95,95,87.5,92.5,-95,92.5,135,145,-150,145,332.5,1,Single-ply
-Stephen King,M,Masters 2,82.45,83,51,182.5,202.5,212.5,212.5,100,107.5,-112.5,107.5,200,217.5,222.5,222.5,542.5,1,Single-ply
-Edward Ted Anderson,M,Masters 1,104,105,52,240,-255,255,255,150,-165,165,165,210,227.5,235,235,655,1,Single-ply
-Goodenough Metuanooraroa,M,Masters 1,94.2,105,44,185,200,217.5,217.5,150,-155,-165,150,185,-200,200,200,567.5,1,Single-ply
-Phil Middleton,M,Masters 1,111,120,41,250,270,282.5,282.5,180,-187.5,187.5,187.5,250,275,282.5,282.5,752.5,1,Single-ply
-Reuben Simanu,M,Masters 1,160.25,120+,42,220,240,255,255,215,225,232.5,232.5,240,270,290,290,777.5,1,Single-ply
-Darren Neves,M,Open,101.9,105,33,240,260,275,275,177.5,185,190,190,230,250,-270,250,715,2,Single-ply
-Jason Blight,M,Open,88.15,93,36,220,225,230,230,155,160,165,165,220,225,-230,225,620,2,Single-ply
-Simon Weaver,M,Open,101.6,105,38,220,240,-260,240,160,165,170,170,230,250,-270,250,660,2,Single-ply
-Joseph Whittaker,M,Open,117.15,120,28,240,-255,265,265,145,155,-165,155,255,270,-285,270,690,2,Single-ply
-Daniel Stoner,M,Open,98.35,105,26,185,195,200,200,145,155,160,160,235,240,250,250,610,2,Single-ply
-Rajah Singh,M,Open,65.9,66,32,-130,140,150,150,100,-105,105,105,175,-185,185,185,440,2,Single-ply
-Aravind Rudrale,M,Open,82.8,83,33,170,180,185,185,92.5,95,-97.5,95,200,220,230,230,510,2,Single-ply
-Michael Robinson,M,Open,75.15,83,31,130,135,140,140,95,102.5,-105,102.5,160,180,190,190,432.5,2,Single-ply
-Yin Hamilton,M,Juniors,65.2,66,19,95,105,107.5,107.5,70,-72.5,,70,140,-155,-160,140,317.5,1,Single-ply
-Jordan Bennett,M,Juniors,73.5,74,20,125,135,-142.5,135,100,110,-115,110,170,180,190,190,435,1,Single-ply
-Nicholas Cornish,M,Juniors,96.95,105,22,215,225,232.5,232.5,120,135,-140,135,250,260,265,265,632.5,1,Single-ply
-Dean Price,M,Sub-Juniors,74,74,18,125,132.5,140,140,125,130,-135,130,145,155,165,165,435,1,Single-ply
-Lindsay Daysh,M,Sub-Juniors,67.65,74,18,130,135,-140,135,90,95,-97.5,95,170,180,-190,180,410,1,Single-ply
-Hugh Thomson,M,Sub-Juniors,86.8,93,17,142.5,152.5,162.5,162.5,95,100,105,105,200,210,220,220,487.5,1,Single-ply
+Name,Sex,Division,BodyweightKg,WeightClassKg,Age,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Equipment,Event
+Delwyn Evans,F,Masters 1,69.05,72,,80,-85,85,85,55,60,-65,60,110,115,120,120,265,1,Single-ply,SBD
+Suzy Maddox,F,Masters 1,82.1,84,45,130,140,150,150,85,90,95,95,130,140,150,150,395,1,Single-ply,SBD
+Suzee Premji,F,Open,52.45,57,29,70,80,85,85,40,45,47.5,47.5,100,112.5,-120,112.5,245,1,Single-ply,SBD
+Carolina Dillen,F,Open,62.8,63,30,80,85,90,90,52.5,-55,-55,52.5,115,120,125,125,267.5,1,Single-ply,SBD
+Douglas Mienie,M,Masters 4,91.05,93,73,130,-140,140,140,90,-100,-100,90,160,175,185,185,415,2,Single-ply,SBD
+Hugh McKechnie,M,Masters 3,81.5,83,63,85,90,95,95,87.5,92.5,-95,92.5,135,145,-150,145,332.5,1,Single-ply,SBD
+Stephen King,M,Masters 2,82.45,83,51,182.5,202.5,212.5,212.5,100,107.5,-112.5,107.5,200,217.5,222.5,222.5,542.5,1,Single-ply,SBD
+Edward Ted Anderson,M,Masters 1,104,105,52,240,-255,255,255,150,-165,165,165,210,227.5,235,235,655,1,Single-ply,SBD
+Goodenough Metuanooraroa,M,Masters 1,94.2,105,44,185,200,217.5,217.5,150,-155,-165,150,185,-200,200,200,567.5,1,Single-ply,SBD
+Phil Middleton,M,Masters 1,111,120,41,250,270,282.5,282.5,180,-187.5,187.5,187.5,250,275,282.5,282.5,752.5,1,Single-ply,SBD
+Reuben Simanu,M,Masters 1,160.25,120+,42,220,240,255,255,215,225,232.5,232.5,240,270,290,290,777.5,1,Single-ply,SBD
+Darren Neves,M,Open,101.9,105,33,240,260,275,275,177.5,185,190,190,230,250,-270,250,715,2,Single-ply,SBD
+Jason Blight,M,Open,88.15,93,36,220,225,230,230,155,160,165,165,220,225,-230,225,620,2,Single-ply,SBD
+Simon Weaver,M,Open,101.6,105,38,220,240,-260,240,160,165,170,170,230,250,-270,250,660,2,Single-ply,SBD
+Joseph Whittaker,M,Open,117.15,120,28,240,-255,265,265,145,155,-165,155,255,270,-285,270,690,2,Single-ply,SBD
+Daniel Stoner,M,Open,98.35,105,26,185,195,200,200,145,155,160,160,235,240,250,250,610,2,Single-ply,SBD
+Rajah Singh,M,Open,65.9,66,32,-130,140,150,150,100,-105,105,105,175,-185,185,185,440,2,Single-ply,SBD
+Aravind Rudrale,M,Open,82.8,83,33,170,180,185,185,92.5,95,-97.5,95,200,220,230,230,510,2,Single-ply,SBD
+Michael Robinson,M,Open,75.15,83,31,130,135,140,140,95,102.5,-105,102.5,160,180,190,190,432.5,2,Single-ply,SBD
+Yin Hamilton,M,Juniors,65.2,66,19,95,105,107.5,107.5,70,-72.5,,70,140,-155,-160,140,317.5,1,Single-ply,SBD
+Jordan Bennett,M,Juniors,73.5,74,20,125,135,-142.5,135,100,110,-115,110,170,180,190,190,435,1,Single-ply,SBD
+Nicholas Cornish,M,Juniors,96.95,105,22,215,225,232.5,232.5,120,135,-140,135,250,260,265,265,632.5,1,Single-ply,SBD
+Dean Price,M,Sub-Juniors,74,74,18,125,132.5,140,140,125,130,-135,130,145,155,165,165,435,1,Single-ply,SBD
+Lindsay Daysh,M,Sub-Juniors,67.65,74,18,130,135,-140,135,90,95,-97.5,95,170,180,-190,180,410,1,Single-ply,SBD
+Hugh Thomson,M,Sub-Juniors,86.8,93,17,142.5,152.5,162.5,162.5,95,100,105,105,200,210,220,220,487.5,1,Single-ply,SBD
