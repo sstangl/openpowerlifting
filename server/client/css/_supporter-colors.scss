@@ -48,13 +48,11 @@
 
 .rainbow {
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-
   text-decoration-color: #FF80AB;
+
+  // Rainbow with light colors, to be readable against a dark background.
+  background-image: linear-gradient(to right, #FB3640, #f2f, #43D1FF, #2ff, #2f2, #ff2, #FB3640);
 }
 
 .teal-shadow {
