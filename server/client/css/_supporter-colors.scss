@@ -48,6 +48,7 @@
 
 .rainbow {
   color: transparent;
+  -webkit-background-clip: text;  // iPhones actually need this.
   background-clip: text;
   text-decoration-color: #FF80AB;
 
@@ -57,6 +58,7 @@
 
 .america {
   color: transparent;
+  -webkit-background-clip: text;  // iPhones actually need this.
   background-clip: text;
   text-decoration-color: $default-color;
 
