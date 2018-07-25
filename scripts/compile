@@ -367,7 +367,7 @@ def build_lifterscsv(lifterdir, builddir):
     vkcsv = None
 
     # Make a map of (Name => Color).
-    colorcsv = Csv(lifterdir + os.sep + 'supporter-colors.csv')
+    colorcsv = Csv(lifterdir + os.sep + 'donator-colors.csv')
     nameidx = colorcsv.index('Name')
     coloridx = colorcsv.index('Color')
     colormap = dict()
