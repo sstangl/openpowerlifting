@@ -10,9 +10,10 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      <select id="displaytype">
-        <option value="wilks">By Wilks</option>
-	<option value="division" disabled>By Division</option>
+      <select id="sortselect">
+        <option value="by-division" disabled>{{strings.selectors.sort.by_division}}</option>
+        <option value="by-glossbrenner" disabled>{{strings.selectors.sort.by_glossbrenner}}</option>
+        <option value="by-wilks" selected>{{strings.selectors.sort.by_wilks}}</option>
       </select>
     </div>
     <div id="controls-right">

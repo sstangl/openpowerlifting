@@ -317,6 +317,7 @@ pub struct SortSelectorTranslations {
     pub by_glossbrenner: String,
     pub by_mcculloch: String,
     pub by_wilks: String,
+    pub by_division: String,
     pub weight: String,
     pub points: String,
 }
