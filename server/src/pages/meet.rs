@@ -105,13 +105,14 @@ pub struct ResultsRow<'a> {
     pub bench: langpack::LocalizedWeightAny,
     pub deadlift: langpack::LocalizedWeightAny,
     pub total: langpack::LocalizedWeightAny,
-    pub wilks: langpack::LocalizedPoints,
+    pub points: langpack::LocalizedPoints,
 }
 
 impl<'a> ResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
+        sort: MeetSortSelection,
         entry: &'a opldb::Entry,
         rank: u32,
     ) -> ResultsRow<'a> {
@@ -145,7 +146,13 @@ impl<'a> ResultsRow<'a> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
-            wilks: entry.wilks.in_format(number_format),
+            points: match sort {
+                MeetSortSelection::ByDivision
+                | MeetSortSelection::ByWilks => entry.wilks.in_format(number_format),
+                MeetSortSelection::ByGlossbrenner => {
+                    entry.glossbrenner.in_format(number_format)
+                }
+            },
         }
     }
 }
@@ -211,7 +218,7 @@ impl<'a> Context<'a> {
         let rows = entries
             .into_iter()
             .zip(1..)
-            .map(|(e, i)| ResultsRow::from(opldb, locale, e, i))
+            .map(|(e, i)| ResultsRow::from(opldb, locale, sort, e, i))
             .collect();
 
         Some(Context {

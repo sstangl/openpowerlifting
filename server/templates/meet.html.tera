@@ -70,7 +70,7 @@
           <td>{{this.bench}}</td>
           <td>{{this.deadlift}}</td>
           <td>{{this.total}}</td>
-          <td>{{this.wilks}}</td>
+          <td>{{this.points}}</td>
         </tr>
       {% endfor %}
       </tbody>
