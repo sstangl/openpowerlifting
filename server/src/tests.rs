@@ -83,6 +83,14 @@ fn test_small_rankings_pages() {
     );
 }
 
+/// Test that meet pages load with different sorts.
+#[test]
+fn test_meet_pages_with_explicit_sorts() {
+    let client = client();
+    assert_eq!(client.get("/m/wrpf/bob4").dispatch().status(), Status::Ok);
+    assert_eq!(client.get("/m/wrpf/bob4/by-glossbrenner").dispatch().status(), Status::Ok);
+}
+
 #[test]
 fn test_username_redirects() {
     let client = client();

@@ -266,10 +266,20 @@ fn meet(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let meetpath_str: &str = meetpath.to_str()?;
+    let mut meetpath_str: &str = meetpath.to_str()?;
+    let mut sort = pages::meet::MeetSortSelection::ByWilks;
+
+    // The meetpath may contain an optional sorting directive.
+    // If present, detect and remove that component from the path.
+    let component = meetpath.as_path().file_name()?.to_str()?;
+    if let Ok(sortselection) = component.parse::<pages::meet::MeetSortSelection>() {
+        sort = sortselection;
+        meetpath_str = meetpath.as_path().parent()?.to_str()?;
+    }
+
     let meet_id = opldb.get_meet_id(meetpath_str)?;
     let locale = make_locale(&langinfo, languages, &cookies);
-    let context = pages::meet::Context::new(&opldb, &locale, meet_id);
+    let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort)?;
     Some(Template::render("meet", &context))
 }
 

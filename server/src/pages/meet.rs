@@ -1,22 +1,55 @@
 //! Logic for each meet's individual results page.
 
 use itertools::Itertools;
+
 use langpack::{self, get_localized_name, Language, Locale};
 use opldb;
 use opldb::fields;
+use opldb::algorithms;
+
+use std::str::FromStr;
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
-pub struct Context<'a> {
+pub struct Context<'db> {
     pub page_title: String,
-    pub meet: MeetInfo<'a>,
+    pub meet: MeetInfo<'db>,
     pub language: Language,
-    pub strings: &'a langpack::Translations,
+    pub strings: &'db langpack::Translations,
     pub units: opldb::WeightUnits,
+    pub points_column_title: &'db str,
+
+    // Instead of having the JS try to figure out how to access
+    // other sorts, just tell it what the paths are.
+    pub path_if_by_wilks: String,
+    pub path_if_by_glossbrenner: String,
+    pub path_if_by_division: String,
 
     /// True iff the meet reported any age data.
     pub has_age_data: bool,
-    pub rows: Vec<ResultsRow<'a>>,
+    pub sortselection: MeetSortSelection,
+    pub rows: Vec<ResultsRow<'db>>,
+}
+
+/// A sort selection widget just for the meet page.
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+pub enum MeetSortSelection {
+    ByDivision,
+    ByGlossbrenner,
+    ByWilks,
+}
+
+impl FromStr for MeetSortSelection {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "by-division" => Ok(MeetSortSelection::ByDivision),
+            "by-glossbrenner" => Ok(MeetSortSelection::ByGlossbrenner),
+            "by-wilks" => Ok(MeetSortSelection::ByWilks),
+            _ => Err(()),
+        }
+    }
 }
 
 #[derive(Serialize)]
@@ -117,8 +150,21 @@ impl<'a> ResultsRow<'a> {
     }
 }
 
+/// A table of results. There can be multiple tables on one page.
+#[derive(Serialize)]
+pub struct ResultsTable<'db> {
+    pub rows: Vec<ResultsRow<'db>>,
+    pub title: String,
+}
+
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale, meet_id: u32) -> Context<'a> {
+    pub fn new(
+        opldb: &'a opldb::OplDb,
+        locale: &'a Locale,
+        meet_id: u32,
+        sort: MeetSortSelection,
+    ) -> Option<Context<'a>> {
+        let meets = opldb.get_meets();
         let meet = opldb.get_meet(meet_id);
 
         // Display at most one entry for each lifter.
@@ -142,13 +188,25 @@ impl<'a> Context<'a> {
             }
         }
 
-        // Get a list of the entries for this meet, highest Wilks first.
-        entries.sort_unstable_by(|x, y| {
-            x.wilks
-                .cmp(&y.wilks)
-                .then(x.totalkg.cmp(&y.totalkg))
-                .reverse()
-        });
+        match sort {
+            MeetSortSelection::ByDivision => return None,
+            MeetSortSelection::ByGlossbrenner => {
+                entries.sort_unstable_by(|a, b| {
+                    algorithms::cmp_glossbrenner(&meets, a, b)
+                });
+            }
+            MeetSortSelection::ByWilks => {
+                entries.sort_unstable_by(|a, b| {
+                    algorithms::cmp_wilks(&meets, a, b)
+                });
+            }
+        };
+
+        let points_column_title = match sort {
+            MeetSortSelection::ByDivision
+            | MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
+            MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
+        };
 
         let rows = entries
             .into_iter()
@@ -156,14 +214,19 @@ impl<'a> Context<'a> {
             .map(|(e, i)| ResultsRow::from(opldb, locale, e, i))
             .collect();
 
-        Context {
+        Some(Context {
             page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
+            points_column_title,
+            sortselection: sort,
             meet: MeetInfo::from(&meet, locale.strings),
             has_age_data,
             rows,
-        }
+            path_if_by_wilks: format!("/m/{}", meet.path.to_string()),
+            path_if_by_glossbrenner: format!("/m/{}/by-glossbrenner", meet.path),
+            path_if_by_division: format!("/m/{}/by-division", meet.path),
+        })
     }
 }
