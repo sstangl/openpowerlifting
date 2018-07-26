@@ -33,7 +33,7 @@ def main(filename):
     csv = oplcsv.Csv(filename)
 
     for field in csv.fieldnames:
-        if 'Kg' in field and field != "WeightClassKg":
+        if 'Kg' in field and field not in ["WeightClassKg", "BodyweightKg"]:
             round_column(csv, csv.index(field))
 
     csv.write_filename(filename)
