@@ -5,6 +5,7 @@
 <optgroup label="{{strings.selectors.fed.international}}">
   <option value="gpa" {% if selection.federation == "GPA" %}selected{% endif %}>GPA - Global Powerlifting Alliance</option>
   <option value="gpc" {% if selection.federation == "GPC" %}selected{% endif %}>GPC - Global Powerlifting Committee</option>
+  <option value="ibsa" {% if selection.federation == "IBSA" %}selected{% endif %}>IBSA - International Blind Sports Association</option>
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF - International Powerlifting Federation</option>
   <option value="ipl" {% if selection.federation == "IPL" %}selected{% endif %}>IPL - International Powerlifting League</option>
   <option value="parapl" {% if selection.federation == "ParaPL" %}selected{% endif %}>ParaPL - Para Powerlifting</option>

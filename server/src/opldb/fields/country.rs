@@ -18,6 +18,7 @@ pub enum Country {
     Canada,
     #[serde(rename = "Cayman Islands")]
     CaymanIslands,
+    China,
     Colombia,
     #[serde(rename = "Costa Rica")]
     CostaRica,

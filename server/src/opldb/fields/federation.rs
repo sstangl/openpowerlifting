@@ -123,6 +123,8 @@ pub enum Federation {
     Hardcore,
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
+    #[strum(to_string = "IBSA", serialize = "ibsa")]
+    IBSA,
     #[strum(to_string = "IDFPA", serialize = "idfpa")]
     IDFPA,
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
@@ -350,6 +352,7 @@ impl MetaFederation {
                     || meet.federation == Federation::FESUPO
                     || meet.federation == Federation::FFForce
                     || meet.federation == Federation::FPR
+                    || meet.federation == Federation::IBSA
                     || meet.federation == Federation::IDFPA
                     || meet.federation == Federation::IDFPF
                     || meet.federation == Federation::IPF
