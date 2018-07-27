@@ -1,11 +1,11 @@
-Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
-DQ,52,Caroline Hanssen,Single-ply,Moss SIK,49.30,130,135,-140,135.0,-60,-65,-65,,,,,,,Junior 19-23,F,SB
-,72,Tone Beddari Blackstad,Single-ply,Oslo SK,70.80,137.5,147.5,152.5,152.5,-67.5,67.5,-72.5,67.5,135,145,150,150.0,370,Open,F,SBD
-DQ,72,Marini Jacobsen,Single-ply,IL Kraftsport,63.30,130,135,-140,135.0,-77.5,-77.5,-77.5,,127.5,132.5,135,135.0,,Open,F,SBD
-,84,Kristin Thorvaldsen,Single-ply,Oslo SK,74.50,127.5,135,140,140.0,-67.5,67.5,72.5,72.5,132.5,145,-152.5,145.0,357.5,Open,F,SBD
-,66,Simon Bråthe Johansen,Single-ply,Lenja AK,65.30,195,200,-205,200.0,90,95,-100,95.0,205,-215,-215,205.0,500,Teen 14-18,M,SBD
-,74,Sebastian Daudon Bakken,Single-ply,Oslo SK,72.40,182.5,192.5,-197.5,192.5,127.5,132.5,-137.5,132.5,175,185,195,195.0,520,Teen 14-18,M,SBD
-,93,Sindre Åseli,Single-ply,Oslo SK,87.60,220,230,240,240.0,-125,125,-132.5,125.0,205,220,230,230.0,595,Junior 19-23,M,SBD
-,120,Asbjørn Randen,Single-ply,Oslo SK,119.70,360,380,-390,380.0,150,-245,,150.0,300,320,,320.0,850,Open,M,SBD
-,83,Stig Frøhoel,Single-ply,Askim SK,82.10,,,,,195,-202.5,202.5,202.5,,,,,202.5,Master 40-49,M,B
-,120,Pål Guddal,Single-ply,Askim SK,113.10,,,,,252.5,260,-265,260.0,,,,,260,Master 40-49,M,B
+WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event,Place
+52,Caroline Hanssen,Single-ply,Moss SIK,49.3,130,135,-140,135,-60,-65,-65,,,,,,,Junior 19-23,F,SB,DQ
+72,Tone Beddari Blackstad,Single-ply,Oslo SK,70.8,137.5,147.5,152.5,152.5,-67.5,67.5,-72.5,67.5,135,145,150,150,370,Open,F,SBD,1
+72,Marini Jacobsen,Single-ply,IL Kraftsport,63.3,130,135,-140,135,-77.5,-77.5,-77.5,,127.5,132.5,135,135,,Open,F,SBD,DQ
+84,Kristin Thorvaldsen,Single-ply,Oslo SK,74.5,127.5,135,140,140,-67.5,67.5,72.5,72.5,132.5,145,-152.5,145,357.5,Open,F,SBD,1
+66,Simon Bråthe Johansen,Single-ply,Lenja AK,65.3,195,200,-205,200,90,95,-100,95,205,-215,-215,205,500,Teen 14-18,M,SBD,1
+74,Sebastian Daudon Bakken,Single-ply,Oslo SK,72.4,182.5,192.5,-197.5,192.5,127.5,132.5,-137.5,132.5,175,185,195,195,520,Teen 14-18,M,SBD,1
+93,Sindre Åseli,Single-ply,Oslo SK,87.6,220,230,240,240,-125,125,-132.5,125,205,220,230,230,595,Junior 19-23,M,SBD,1
+120,Asbjørn Randen,Single-ply,Oslo SK,119.7,360,380,-390,380,150,-245,,150,300,320,,320,850,Open,M,SBD,1
+83,Stig Frøhoel,Single-ply,Askim SK,82.1,,,,,195,-202.5,202.5,202.5,,,,,202.5,Master 40-49,M,B,1
+120,Pål Guddal,Single-ply,Askim SK,113.1,,,,,252.5,260,-265,260,,,,,260,Master 40-49,M,B,1

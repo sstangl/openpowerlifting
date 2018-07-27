@@ -31,7 +31,7 @@ Place,Sex,Name,Division,WeightClassKg,Event,Equipment,Country,BodyweightKg,Best3
 8,M,Fred McCarthy,Open,60,SBD,Single-ply,IRL,59.4,205,,92.5,,212.5,,510
 9,M,M. Kumar,Open,60,SBD,Single-ply,IND,59,185,,122.5,,195,,502.5
 10,M,P. Jayappa,Open,60,SBD,Single-ply,IND,59.8,187.5,,110,,205,,502.5
-,M,Joe Bradley,Open,60,SBD,Single-ply,USA,59.8,280,295,167.5,,255,,702.5
+G,M,Joe Bradley,Open,60,SBD,Single-ply,USA,59.8,280,295,167.5,,255,,702.5
 1,M,Rickey Dale Crain,Open,67.5,SBD,Single-ply,USA,67.4,285,,145,,300,,730
 2,M,James Moir,Open,67.5,SBD,Single-ply,CAN,67.4,275,,177.5,,275,,727.5
 3,M,Thomas Sjöström,Open,67.5,SBD,Single-ply,SWE,67.4,250,,150,,260,,660
@@ -55,7 +55,7 @@ DQ,M,M. Cruz,Open,67.5,SBD,Single-ply,PUR,66,,,,,,,
 6,M,M. Suzuki,Open,75,SBD,Single-ply,JPN,74,230,,170,,225,,625
 7,M,Arne Ruud,Open,75,SBD,Single-ply,NOR,74.4,230,,120,,275,,625
 8,M,Pol Wautermartens,Open,75,SBD,Single-ply,BEL,74.4,230,,122.5,,250,,602.5
-,M,James Rouse,Open,75,SBD,Single-ply,USA,75,282.5,,217.5,,285,,785
+G,M,James Rouse,Open,75,SBD,Single-ply,USA,75,282.5,,217.5,,285,,785
 1,M,Bill West,Open,82.5,SBD,Single-ply,GBR,82.4,310,,167.5,,300,,777.5
 2,M,Peter Fiore,Open,82.5,SBD,Single-ply,GBR,82,300,,195,,280,,775
 3,M,Jari Tähtinen,Open,82.5,SBD,Single-ply,FIN,82.4,285,,180,,305,,770
@@ -74,8 +74,8 @@ DQ,M,Knut Johansen,Open,82.5,SBD,Single-ply,NOR,79.6,285,,160,,,,
 DQ,M,V. Pierre,Open,82.5,SBD,Single-ply,SUI,81.9,,,,,,,
 DQ,M,J. Miranda,Open,82.5,SBD,Single-ply,PUR,78.6,,,,,,,
 DQ,M,R. De La Cruz,Open,82.5,SBD,Single-ply,ESP,80.6,,,,,,,
-,M,Michael Bridges,Open,82.5,SBD,Single-ply,USA,81.4,377.5,,227.5,,335,,940
-,M,Tony Carpino,Open,82.5,SBD,Single-ply,USA,82.4,315,,200,,310,,825
+G,M,Michael Bridges,Open,82.5,SBD,Single-ply,USA,81.4,377.5,,227.5,,335,,940
+G,M,Tony Carpino,Open,82.5,SBD,Single-ply,USA,82.4,315,,200,,310,,825
 1,M,Vince Anello,Open,90,SBD,Single-ply,USA,89.8,295,,205,,367.5,,867.5
 2,M,Conny Nilsson,Open,90,SBD,Single-ply,SWE,89.8,350,,190,,325,,865
 3,M,Jerry Jones,Open,90,SBD,Single-ply,USA,90,345,,182.5,,322.5,,850
@@ -88,8 +88,8 @@ DQ,M,R. De La Cruz,Open,82.5,SBD,Single-ply,ESP,80.6,,,,,,,
 10,M,William Monaghan,Open,90,SBD,Single-ply,IRL,83.8,245,,135,,237.5,,617.5
 DQ,M,John Coppola,Open,90,SBD,Single-ply,AUS,89.8,320,,180,,,,
 DQ,M,Kenneth Mattsson,Open,90,SBD,Single-ply,SWE,89,,,,,,,
-,M,Fred Hatfield,Open,90,SBD,Single-ply,USA,90,375,,195,,307.5,,877.5
-,M,Ernie Frantz,Open,90,SBD,Single-ply,USA,89.8,320,,205,,330,,855
+G,M,Fred Hatfield,Open,90,SBD,Single-ply,USA,90,375,,195,,307.5,,877.5
+G,M,Ernie Frantz,Open,90,SBD,Single-ply,USA,89.8,320,,205,,330,,855
 1,M,Mark Dimiduk,Open,100,SBD,Single-ply,USA,97.4,357.5,,217.5,,345,,920
 2,M,Tony Stevens,Open,100,SBD,Single-ply,GBR,98.4,340,,205,,340,,885
 3,M,Reijo Kiviranta,Open,100,SBD,Single-ply,FIN,99.6,320,,210,,350,,880
@@ -103,7 +103,7 @@ DQ,M,Kenneth Mattsson,Open,90,SBD,Single-ply,SWE,89,,,,,,,
 11,M,J. Gonzalez,Open,100,SBD,Single-ply,PUR,98.2,255,,165,,255,,675
 12,M,S. Yoshida,Open,100,SBD,Single-ply,JPN,94.6,240,,180,,240,,660
 13,M,Heinz Vierthaler,Open,100,SBD,Single-ply,FRG,99.6,225,,150,,270,,645
-,M,Chip McCain,Open,100,SBD,Single-ply,USA,99.6,367.5,,200,,357.5,,925
+G,M,Chip McCain,Open,100,SBD,Single-ply,USA,99.6,367.5,,200,,357.5,,925
 1,M,John Kuc,Open,110,SBD,Single-ply,USA,110,377.5,,227.5,,395,,1000
 2,M,Hannu Saarelainen,Open,110,SBD,Single-ply,FIN,109.8,357.5,,247.5,,325,,930
 3,M,Arthur White,Open,110,SBD,Single-ply,GBR,109,330,,195,,360,,885
@@ -117,11 +117,11 @@ DQ,M,Kenneth Mattsson,Open,90,SBD,Single-ply,SWE,89,,,,,,,
 11,M,Paramjit Singh,Open,110,SBD,Single-ply,IND,,245,,147.5,,252.5,,645
 12,M,L. Bolar,Open,110,SBD,Single-ply,IND,109.2,245,,155,,242.5,,642.5
 DQ,M,S. Nakamura,Open,110,SBD,Single-ply,JPN,110,,,,,,,
-,M,Steve Wilson,Open,110,SBD,Single-ply,USA,109,350,,252.5,,340,,942.5
+G,M,Steve Wilson,Open,110,SBD,Single-ply,USA,109,350,,252.5,,340,,942.5
 1,M,Doyle Kenady,Open,110+,SBD,Single-ply,USA,136.8,372.5,,245,,382.5,,1000
 2,M,Andrew Kerr,Open,110+,SBD,Single-ply,GBR,133.6,340,,232.5,,350,,922.5
 3,M,Juhani Heinonen,Open,110+,SBD,Single-ply,FIN,144.8,340,,210,,332.5,,882.5
 4,M,Thamer Chaim,Open,110+,SBD,Single-ply,BRA,126.4,302.5,,185,,320,,807.5
 5,M,Hans-Otto Whorle,Open,110+,SBD,Single-ply,FRG,110.6,285,,180,,280,,745
 DQ,M,Sverre Saxegaard,Open,110+,SBD,Single-ply,NOR,110.8,,,,,,,
-,M,Dave Waddington,Open,110+,SBD,Single-ply,USA,144.2,417.5,,262.5,,335,,1015
+G,M,Dave Waddington,Open,110+,SBD,Single-ply,USA,144.2,417.5,,262.5,,335,,1015
