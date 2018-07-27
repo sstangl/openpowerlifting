@@ -179,10 +179,14 @@ impl NonSortedNonUnique {
     {
         // First, group contiguous entries by lifter_id, so only the best
         // entry for each lifter is counted.
+        // Entries are filtered at this step, so that the grouping operation
+        // below does not include (and possibly output) an entry that does
+        // not belong.
         // The group_by() operation is lazy and does not perform any action yet.
         let groups = self
             .0
             .iter()
+            .filter(|x| belongs(&entries[**x as usize]))
             .group_by(|idx| entries[**idx as usize].lifter_id);
 
         // Perform the grouping operation, generating a new vector.
@@ -190,7 +194,6 @@ impl NonSortedNonUnique {
             .into_iter()
             // `min_by()` takes the best entry due to comparator ordering.
             .map(|(_key, group)| *group.min_by(|&a, &b| compare(meets, &entries[*a as usize], &entries[*b as usize])).unwrap())
-            .filter(|x| belongs(&entries[*x as usize]))
             .collect();
 
         vec.sort_by(|&a, &b| compare(meets, &entries[a as usize], &entries[b as usize]));
