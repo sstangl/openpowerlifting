@@ -1,12 +1,11 @@
-.PHONY: builddir binary data oldstatics config forceclientnpm client clientstatics release rebuild-clean clean
+.PHONY: builddir binary data oldstatics config forceclientnpm client clientstatics release rebuild-clean clean checkprerequisites
 
 BUILDDIR := build
 BUILDFILE := build.tar.bz2
 
 all: release
 
-check: forceclientnpm client
-	cargo test
+checkprerequisites: forceclientnpm client
 
 builddir:
 	mkdir -p "${BUILDDIR}"

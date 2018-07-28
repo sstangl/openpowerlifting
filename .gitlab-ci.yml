@@ -18,4 +18,5 @@ server:
     - pip3 install toml
   script:
     - make csv
-    - make -C server check
+    - make -C server checkprerequisites
+    - cargo test
