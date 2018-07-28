@@ -4,11 +4,14 @@
 
 extern crate accept_language;
 extern crate dotenv;
+extern crate opltypes;
+use opltypes::{Federation, WeightUnits};
 extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 extern crate serde_json;
 extern crate strum;
+
 
 #[cfg(test)]
 mod tests;
@@ -104,11 +107,11 @@ fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Lang
     }
 }
 
-fn select_weight_units(language: Language, cookies: &Cookies) -> opldb::WeightUnits {
+fn select_weight_units(language: Language, cookies: &Cookies) -> WeightUnits {
     // The user may explicitly override the weight unit choice by using
     // a cookie named "units".
     if let Some(cookie) = cookies.get("units") {
-        if let Ok(units) = cookie.value().parse::<opldb::WeightUnits>() {
+        if let Ok(units) = cookie.value().parse::<WeightUnits>() {
             return units;
         }
     }
@@ -374,7 +377,7 @@ fn rankings_api(
     };
 
     let language = query.lang.parse::<Language>().ok()?;
-    let units = query.units.parse::<opldb::WeightUnits>().ok()?;
+    let units = query.units.parse::<WeightUnits>().ok()?;
     let locale = Locale::new(&langinfo, language, units);
 
     let slice = pages::api_rankings::get_slice(
@@ -439,7 +442,7 @@ struct OldIndexQuery {
 
 #[get("/?<query>")]
 fn old_index_query(query: OldIndexQuery) -> Option<Redirect> {
-    let fed = query.fed.parse::<opldb::fields::Federation>().ok()?;
+    let fed = query.fed.parse::<Federation>().ok()?;
     let target = format!("/rankings/{}", fed.to_string().to_ascii_lowercase());
     Some(Redirect::permanent(&target))
 }

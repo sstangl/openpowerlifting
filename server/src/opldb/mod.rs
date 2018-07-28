@@ -5,39 +5,18 @@
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
 use csv;
+use itertools::Itertools;
+use opltypes::*;
 
 use std::error::Error;
 use std::mem;
-use std::str::FromStr;
 
+// Exports.
 pub mod algorithms;
-
-pub mod fields;
-use self::fields::*;
-
+mod metafederation;
+pub use self::metafederation::*;
 mod static_cache;
 pub use self::static_cache::*;
-
-mod meet_metadata;
-pub use self::meet_metadata::*;
-
-#[derive(Copy, Clone, Debug, Serialize)]
-pub enum WeightUnits {
-    Kg,
-    Lbs,
-}
-
-impl FromStr for WeightUnits {
-    type Err = ();
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "kg" => Ok(WeightUnits::Kg),
-            "lbs" => Ok(WeightUnits::Lbs),
-            _ => Err(()),
-        }
-    }
-}
 
 /// The definition of a Lifter in the database.
 #[derive(Serialize, Deserialize)]
@@ -242,8 +221,7 @@ fn import_entries_csv(
 
     // Calculate num_unique_lifters.
     for (meet_id, meet) in meets.iter_mut().enumerate() {
-        meet.num_unique_lifters =
-            meet_metadata::precompute_num_unique_lifters(&vec, meet_id as u32);
+        meet.num_unique_lifters = precompute_num_unique_lifters(&vec, meet_id as u32);
     }
 
     // Sort the entries database by lifter_id.
@@ -253,6 +231,45 @@ fn import_entries_csv(
 
     vec.shrink_to_fit();
     Ok((vec, metafed_cache))
+}
+
+/// Counts how many unique LifterIDs competed in a given meet.
+///
+/// Assumes that the entries vector is sorted by meet_id --
+/// so this is only callable from within `import_entries_csv()`.
+fn precompute_num_unique_lifters(entries: &[Entry], meet_id: u32) -> u32 {
+    let found_index = entries
+        .binary_search_by_key(&meet_id, |e| e.meet_id)
+        .unwrap();
+
+    // All entries for a meet are contiguous, so scan linearly to find the first.
+    let mut first_index = found_index;
+    for index in (0..found_index).rev() {
+        if entries[index].meet_id == meet_id {
+            first_index = index;
+        } else {
+            break;
+        }
+    }
+
+    // Scan to find the last.
+    let mut last_index = found_index;
+    for (i, entry) in entries.iter().enumerate().skip(found_index) {
+        if entry.meet_id == meet_id {
+            last_index = i;
+        } else {
+            break;
+        }
+    }
+    assert!(first_index <= last_index);
+
+    // Gather all the lifter_ids.
+    let mut lifter_ids: Vec<u32> = (first_index..last_index + 1)
+        .map(|i| entries[i].lifter_id)
+        .collect();
+
+    lifter_ids.sort_unstable();
+    lifter_ids.into_iter().group_by(|x| *x).into_iter().count() as u32
 }
 
 impl OplDb {

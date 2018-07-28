@@ -1,9 +1,9 @@
 //! Types for raw data interchange from Rust to JS.
 
+use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use langpack::{self, get_localized_name, Locale};
-use opldb::fields;
+use langpack::{self, LocalizeNumber, get_localized_name, Locale};
 use opldb::{Entry, OplDb};
 use pages::selection::SortSelection;
 
@@ -16,7 +16,7 @@ pub struct JsEntryRow<'db> {
     pub vkontakte: &'db Option<String>,
     pub color: &'db Option<String>,
 
-    pub federation: &'db fields::Federation,
+    pub federation: Federation,
     pub date: String,
     pub country: &'db str,
     pub state: &'db Option<String>,
@@ -24,7 +24,7 @@ pub struct JsEntryRow<'db> {
 
     pub sex: &'db str,
     pub equipment: &'db str,
-    pub age: fields::Age,
+    pub age: Age,
     pub division: &'db Option<String>,
     pub bodyweight: langpack::LocalizedWeightAny,
     pub weightclass: langpack::LocalizedWeightClassAny,
@@ -101,7 +101,7 @@ impl<'db> JsEntryRow<'db> {
             vkontakte: &lifter.vkontakte,
             color: &lifter.color,
 
-            federation: &meet.federation,
+            federation: meet.federation,
             date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),
             state: &meet.state,

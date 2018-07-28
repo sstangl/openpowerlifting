@@ -12,6 +12,7 @@ extern crate serde_json;
 extern crate strum;
 #[macro_use]
 extern crate strum_macros;
+extern crate opltypes;
 
 // Exported modules.
 pub mod langpack;

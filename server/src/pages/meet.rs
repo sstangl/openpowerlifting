@@ -1,13 +1,12 @@
 //! Logic for each meet's individual results page.
 
 use itertools::Itertools;
-
-use langpack::{self, get_localized_name, Language, Locale};
-use opldb;
-use opldb::fields;
-use opldb::algorithms;
+use opltypes::*;
 
 use std::str::FromStr;
+
+use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use opldb::{self, algorithms};
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
@@ -16,7 +15,7 @@ pub struct Context<'db> {
     pub meet: MeetInfo<'db>,
     pub language: Language,
     pub strings: &'db langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: WeightUnits,
     pub points_column_title: &'db str,
 
     // Instead of having the JS try to figure out how to access
@@ -55,7 +54,7 @@ impl FromStr for MeetSortSelection {
 #[derive(Serialize)]
 pub struct MeetInfo<'a> {
     pub path: &'a str,
-    pub federation: &'a fields::Federation,
+    pub federation: Federation,
     pub date: String,
     pub country: &'a str,
     pub state: Option<&'a str>,
@@ -70,7 +69,7 @@ impl<'a> MeetInfo<'a> {
     ) -> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
-            federation: &meet.federation,
+            federation: meet.federation,
             date: format!("{}", &meet.date),
             country: strings.translate_country(meet.country),
             state: match meet.state {
@@ -96,7 +95,7 @@ pub struct ResultsRow<'a> {
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub sex: &'a str,
-    pub age: fields::Age,
+    pub age: Age,
     pub equipment: &'a str,
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,
@@ -189,7 +188,7 @@ impl<'a> Context<'a> {
         // If not, that column will be hidden.
         let mut has_age_data = false;
         for entry in &entries {
-            if entry.age != fields::Age::None {
+            if entry.age != Age::None {
                 has_age_data = true;
                 break;
             }

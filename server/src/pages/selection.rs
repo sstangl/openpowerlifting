@@ -1,12 +1,13 @@
 //! Logic for efficiently selecting a subset of the database.
 
+use opltypes::*;
 use serde::{self, Serialize};
-
-use opldb::fields::{Federation, MetaFederation, WeightKg};
 
 use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
+
+use opldb::MetaFederation;
 
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(PartialEq, Serialize)]

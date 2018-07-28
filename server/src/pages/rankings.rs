@@ -1,6 +1,7 @@
 //! Logic for the display of the rankings page.
 
 use serde_json;
+use opltypes;
 
 use langpack::{self, Language, Locale};
 use opldb;
@@ -14,7 +15,7 @@ pub struct Context<'db, 'a> {
     pub page_title: String,
     pub language: Language,
     pub strings: &'db langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: opltypes::WeightUnits,
 
     /// The title of the points column, which changes based on SortSelection.
     pub points_column_title: &'db str,

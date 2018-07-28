@@ -9,8 +9,6 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use langpack::{self, LocalizedPoints};
-
 /// Represents numbers describing points, like Wilks and Glossbrenner.
 ///
 /// The database only tracks points to two decimal places.
@@ -31,13 +29,6 @@ impl Points {
             let integer = self.0 / 100;
             let decimal = self.0.abs() % 100;
             format!("{},{:02}", integer, decimal)
-        }
-    }
-
-    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedPoints {
-        LocalizedPoints {
-            format,
-            points: self,
         }
     }
 }

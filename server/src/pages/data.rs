@@ -1,7 +1,7 @@
 //! Logic for the data page.
 
+use opltypes;
 use langpack::{self, Language, Locale};
-use opldb;
 
 /// The context object passed to `templates/data.html.tera`
 #[derive(Serialize)]
@@ -9,7 +9,7 @@ pub struct Context<'a> {
     pub page_title: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: opltypes::WeightUnits,
 }
 
 impl<'a> Context<'a> {

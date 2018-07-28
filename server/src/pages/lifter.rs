@@ -1,7 +1,7 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{self, get_localized_name, Language, Locale};
-use opldb::fields::{self, Equipment, Points, WeightKg};
+use opltypes::*;
+use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, Entry};
 
 /// The context object passed to `templates/lifter.tera`
@@ -13,7 +13,7 @@ pub struct Context<'a> {
     pub lifter_sex: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: WeightUnits,
 
     pub bests: Vec<PersonalBestsRow<'a>>,
     pub meet_results: Vec<MeetResultsRow<'a>>,
@@ -58,14 +58,14 @@ impl<'db> PersonalBestsRow<'db> {
 #[derive(Serialize)]
 pub struct MeetResultsRow<'a> {
     pub place: String,
-    pub federation: &'a fields::Federation,
+    pub federation: &'a Federation,
     pub date: String,
     pub country: &'a str,
     pub state: Option<&'a str>,
     pub meet_name: &'a str,
     pub meet_path: &'a str,
     pub division: Option<&'a str>,
-    pub age: fields::Age,
+    pub age: Age,
     pub equipment: &'a str,
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,

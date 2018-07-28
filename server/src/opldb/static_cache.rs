@@ -1,11 +1,12 @@
 //! Precalculated cache of data, such as sorts.
 
 use itertools::Itertools;
+use opltypes::*;
+
 use std::cmp::Ordering;
 use std::ops::Deref;
 
 use opldb::algorithms::*;
-use opldb::fields::*;
 use opldb::{Entry, Meet, OplDb};
 use pages::selection::*;
 

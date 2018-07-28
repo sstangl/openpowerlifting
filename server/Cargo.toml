@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 
 [dependencies]
+opltypes = { version = "0.1", path = "../modules/opltypes/" }
 accept-language = "1.2"
 csv = "1.0"
 dotenv = "0.10"

@@ -339,6 +339,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "opltypes"
+version = "0.1.0"
+dependencies = [
+ "serde 1.0.70 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde_derive 1.0.70 (registry+https://github.com/rust-lang/crates.io-index)",
+ "strum 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "strum_macros 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "ordermap"
 version = "0.2.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -540,6 +550,7 @@ dependencies = [
  "csv 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "dotenv 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "itertools 0.7.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "opltypes 0.1.0",
  "rocket 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "rocket_codegen 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "rocket_contrib 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",

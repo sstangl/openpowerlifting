@@ -3,18 +3,16 @@
 use serde;
 use serde::ser::Serialize;
 use serde_json;
+use strum::IntoEnumIterator;
+use opltypes::*;
 
 use std::error::Error;
-
 use std::fmt;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
 
-use strum::IntoEnumIterator;
-
 use opldb;
-use opldb::fields;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
@@ -88,10 +86,10 @@ impl fmt::Display for Language {
 
 impl Language {
     /// Returns the units associated with the language.
-    pub fn default_units(self) -> opldb::WeightUnits {
+    pub fn default_units(self) -> WeightUnits {
         match self {
-            Language::en => opldb::WeightUnits::Lbs,
-            _ => opldb::WeightUnits::Kg,
+            Language::en => WeightUnits::Lbs,
+            _ => WeightUnits::Kg,
         }
     }
 
@@ -107,14 +105,14 @@ pub struct Locale<'a> {
     pub language: Language,
     pub strings: &'a Translations,
     pub number_format: NumberFormat,
-    pub units: opldb::WeightUnits,
+    pub units: WeightUnits,
 }
 
 impl<'a> Locale<'a> {
     pub fn new(
         langinfo: &'a LangInfo,
         language: Language,
-        units: opldb::WeightUnits,
+        units: WeightUnits,
     ) -> Locale<'a> {
         Locale {
             langinfo,
@@ -457,113 +455,113 @@ impl LangInfo {
 }
 
 impl Translations {
-    pub fn translate_equipment(&self, equip: fields::Equipment) -> &str {
+    pub fn translate_equipment(&self, equip: Equipment) -> &str {
         match equip {
-            fields::Equipment::Raw => &self.equipment.raw,
-            fields::Equipment::Wraps => &self.equipment.wraps,
-            fields::Equipment::Single => &self.equipment.single,
-            fields::Equipment::Multi => &self.equipment.multi,
-            fields::Equipment::Straps => &self.equipment.straps,
+            Equipment::Raw => &self.equipment.raw,
+            Equipment::Wraps => &self.equipment.wraps,
+            Equipment::Single => &self.equipment.single,
+            Equipment::Multi => &self.equipment.multi,
+            Equipment::Straps => &self.equipment.straps,
         }
     }
 
-    pub fn translate_sex(&self, sex: fields::Sex) -> &str {
+    pub fn translate_sex(&self, sex: Sex) -> &str {
         match sex {
-            fields::Sex::M => &self.sex.m,
-            fields::Sex::F => &self.sex.f,
+            Sex::M => &self.sex.m,
+            Sex::F => &self.sex.f,
         }
     }
 
-    pub fn translate_country(&self, country: fields::Country) -> &str {
+    pub fn translate_country(&self, country: Country) -> &str {
         match country {
-            fields::Country::Algeria => &self.country.algeria,
-            fields::Country::Argentina => &self.country.argentina,
-            fields::Country::Aruba => &self.country.aruba,
-            fields::Country::Austria => &self.country.austria,
-            fields::Country::Australia => &self.country.australia,
-            fields::Country::Azerbaijan => &self.country.azerbaijan,
-            fields::Country::Belarus => &self.country.belarus,
-            fields::Country::Belgium => &self.country.belgium,
-            fields::Country::Brazil => &self.country.brazil,
-            fields::Country::Britain => &self.country.britain,
-            fields::Country::BritishVirginIslands => &self.country.britishvirginislands,
-            fields::Country::Bulgaria => &self.country.bulgaria,
-            fields::Country::Canada => &self.country.canada,
-            fields::Country::CaymanIslands => &self.country.caymanislands,
-            fields::Country::China => &self.country.china,
-            fields::Country::Colombia => &self.country.colombia,
-            fields::Country::CostaRica => &self.country.costarica,
-            fields::Country::CoteDIvoire => &self.country.cotedivoire,
-            fields::Country::Czechia => &self.country.czechia,
-            fields::Country::Denmark => &self.country.denmark,
-            fields::Country::Ecuador => &self.country.ecuador,
-            fields::Country::Egypt => &self.country.egypt,
-            fields::Country::ElSalvador => &self.country.elsalvador,
-            fields::Country::England => &self.country.england,
-            fields::Country::Estonia => &self.country.estonia,
-            fields::Country::Fiji => &self.country.fiji,
-            fields::Country::Finland => &self.country.finland,
-            fields::Country::France => &self.country.france,
-            fields::Country::Germany => &self.country.germany,
-            fields::Country::Greece => &self.country.greece,
-            fields::Country::Guatemala => &self.country.guatemala,
-            fields::Country::Guyana => &self.country.guyana,
-            fields::Country::HongKong => &self.country.hongkong,
-            fields::Country::Hungary => &self.country.hungary,
-            fields::Country::Iceland => &self.country.iceland,
-            fields::Country::India => &self.country.india,
-            fields::Country::Indonesia => &self.country.indonesia,
-            fields::Country::Ireland => &self.country.ireland,
-            fields::Country::Israel => &self.country.israel,
-            fields::Country::Italy => &self.country.italy,
-            fields::Country::Iran => &self.country.iran,
-            fields::Country::Japan => &self.country.japan,
-            fields::Country::Kazakhstan => &self.country.kazakhstan,
-            fields::Country::Latvia => &self.country.latvia,
-            fields::Country::Lithuania => &self.country.lithuania,
-            fields::Country::Luxembourg => &self.country.luxembourg,
-            fields::Country::Malaysia => &self.country.malaysia,
-            fields::Country::Mexico => &self.country.mexico,
-            fields::Country::Mongolia => &self.country.mongolia,
-            fields::Country::Morocco => &self.country.morocco,
-            fields::Country::Netherlands => &self.country.netherlands,
-            fields::Country::NewCaledonia => &self.country.newcaledonia,
-            fields::Country::NewZealand => &self.country.newzealand,
-            fields::Country::Nicaragua => &self.country.nicaragua,
-            fields::Country::Norway => &self.country.norway,
-            fields::Country::NorthernIreland => &self.country.northernireland,
-            fields::Country::Oman => &self.country.oman,
-            fields::Country::PapuaNewGuinea => &self.country.papuanewguinea,
-            fields::Country::Peru => &self.country.peru,
-            fields::Country::Philippines => &self.country.philippines,
-            fields::Country::Poland => &self.country.poland,
-            fields::Country::Portugal => &self.country.portugal,
-            fields::Country::PuertoRico => &self.country.puertorico,
-            fields::Country::Russia => &self.country.russia,
-            fields::Country::Samoa => &self.country.samoa,
-            fields::Country::Scotland => &self.country.scotland,
-            fields::Country::Serbia => &self.country.serbia,
-            fields::Country::Singapore => &self.country.singapore,
-            fields::Country::Slovakia => &self.country.slovakia,
-            fields::Country::Slovenia => &self.country.slovenia,
-            fields::Country::SouthAfrica => &self.country.southafrica,
-            fields::Country::SouthKorea => &self.country.southkorea,
-            fields::Country::Spain => &self.country.spain,
-            fields::Country::Sweden => &self.country.sweden,
-            fields::Country::Switzerland => &self.country.switzerland,
-            fields::Country::Tahiti => &self.country.tahiti,
-            fields::Country::Taiwan => &self.country.taiwan,
-            fields::Country::Turkey => &self.country.turkey,
-            fields::Country::UAE => &self.country.uae,
-            fields::Country::UK => &self.country.uk,
-            fields::Country::Ukraine => &self.country.ukraine,
-            fields::Country::Uruguay => &self.country.uruguay,
-            fields::Country::USA => &self.country.usa,
-            fields::Country::USVirginIslands => &self.country.usvirginislands,
-            fields::Country::Uzbekistan => &self.country.uzbekistan,
-            fields::Country::Venezuela => &self.country.venezuela,
-            fields::Country::Vietnam => &self.country.vietnam,
-            fields::Country::Wales => &self.country.wales,
+            Country::Algeria => &self.country.algeria,
+            Country::Argentina => &self.country.argentina,
+            Country::Aruba => &self.country.aruba,
+            Country::Austria => &self.country.austria,
+            Country::Australia => &self.country.australia,
+            Country::Azerbaijan => &self.country.azerbaijan,
+            Country::Belarus => &self.country.belarus,
+            Country::Belgium => &self.country.belgium,
+            Country::Brazil => &self.country.brazil,
+            Country::Britain => &self.country.britain,
+            Country::BritishVirginIslands => &self.country.britishvirginislands,
+            Country::Bulgaria => &self.country.bulgaria,
+            Country::Canada => &self.country.canada,
+            Country::CaymanIslands => &self.country.caymanislands,
+            Country::China => &self.country.china,
+            Country::Colombia => &self.country.colombia,
+            Country::CostaRica => &self.country.costarica,
+            Country::CoteDIvoire => &self.country.cotedivoire,
+            Country::Czechia => &self.country.czechia,
+            Country::Denmark => &self.country.denmark,
+            Country::Ecuador => &self.country.ecuador,
+            Country::Egypt => &self.country.egypt,
+            Country::ElSalvador => &self.country.elsalvador,
+            Country::England => &self.country.england,
+            Country::Estonia => &self.country.estonia,
+            Country::Fiji => &self.country.fiji,
+            Country::Finland => &self.country.finland,
+            Country::France => &self.country.france,
+            Country::Germany => &self.country.germany,
+            Country::Greece => &self.country.greece,
+            Country::Guatemala => &self.country.guatemala,
+            Country::Guyana => &self.country.guyana,
+            Country::HongKong => &self.country.hongkong,
+            Country::Hungary => &self.country.hungary,
+            Country::Iceland => &self.country.iceland,
+            Country::India => &self.country.india,
+            Country::Indonesia => &self.country.indonesia,
+            Country::Ireland => &self.country.ireland,
+            Country::Israel => &self.country.israel,
+            Country::Italy => &self.country.italy,
+            Country::Iran => &self.country.iran,
+            Country::Japan => &self.country.japan,
+            Country::Kazakhstan => &self.country.kazakhstan,
+            Country::Latvia => &self.country.latvia,
+            Country::Lithuania => &self.country.lithuania,
+            Country::Luxembourg => &self.country.luxembourg,
+            Country::Malaysia => &self.country.malaysia,
+            Country::Mexico => &self.country.mexico,
+            Country::Mongolia => &self.country.mongolia,
+            Country::Morocco => &self.country.morocco,
+            Country::Netherlands => &self.country.netherlands,
+            Country::NewCaledonia => &self.country.newcaledonia,
+            Country::NewZealand => &self.country.newzealand,
+            Country::Nicaragua => &self.country.nicaragua,
+            Country::Norway => &self.country.norway,
+            Country::NorthernIreland => &self.country.northernireland,
+            Country::Oman => &self.country.oman,
+            Country::PapuaNewGuinea => &self.country.papuanewguinea,
+            Country::Peru => &self.country.peru,
+            Country::Philippines => &self.country.philippines,
+            Country::Poland => &self.country.poland,
+            Country::Portugal => &self.country.portugal,
+            Country::PuertoRico => &self.country.puertorico,
+            Country::Russia => &self.country.russia,
+            Country::Samoa => &self.country.samoa,
+            Country::Scotland => &self.country.scotland,
+            Country::Serbia => &self.country.serbia,
+            Country::Singapore => &self.country.singapore,
+            Country::Slovakia => &self.country.slovakia,
+            Country::Slovenia => &self.country.slovenia,
+            Country::SouthAfrica => &self.country.southafrica,
+            Country::SouthKorea => &self.country.southkorea,
+            Country::Spain => &self.country.spain,
+            Country::Sweden => &self.country.sweden,
+            Country::Switzerland => &self.country.switzerland,
+            Country::Tahiti => &self.country.tahiti,
+            Country::Taiwan => &self.country.taiwan,
+            Country::Turkey => &self.country.turkey,
+            Country::UAE => &self.country.uae,
+            Country::UK => &self.country.uk,
+            Country::Ukraine => &self.country.ukraine,
+            Country::Uruguay => &self.country.uruguay,
+            Country::USA => &self.country.usa,
+            Country::USVirginIslands => &self.country.usvirginislands,
+            Country::Uzbekistan => &self.country.uzbekistan,
+            Country::Venezuela => &self.country.venezuela,
+            Country::Vietnam => &self.country.vietnam,
+            Country::Wales => &self.country.wales,
         }
     }
 }
@@ -611,7 +609,7 @@ impl Language {
 #[derive(Copy, Clone)]
 pub struct LocalizedWeightAny {
     pub format: NumberFormat,
-    pub weight: fields::WeightAny,
+    pub weight: WeightAny,
 }
 
 impl Serialize for LocalizedWeightAny {
@@ -631,7 +629,7 @@ impl Serialize for LocalizedWeightAny {
 #[derive(Copy, Clone)]
 pub struct LocalizedPoints {
     pub format: NumberFormat,
-    pub points: fields::Points,
+    pub points: Points,
 }
 
 impl Serialize for LocalizedPoints {
@@ -651,7 +649,7 @@ impl Serialize for LocalizedPoints {
 #[derive(Copy, Clone)]
 pub struct LocalizedWeightClassAny {
     pub format: NumberFormat,
-    pub class: fields::WeightClassAny,
+    pub class: WeightClassAny,
 }
 
 impl Serialize for LocalizedWeightClassAny {
@@ -674,5 +672,36 @@ pub fn get_localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
             lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name)
         }
         _ => &lifter.name,
+    }
+}
+
+/// Localizes the separator between integer and fraction based on `NumberFormat`.
+pub trait LocalizeNumber {
+    type LocalizedType;
+
+    fn in_format(self, format: NumberFormat) -> Self::LocalizedType;
+}
+
+impl LocalizeNumber for WeightAny {
+    type LocalizedType = LocalizedWeightAny;
+
+    fn in_format(self, format: NumberFormat) -> LocalizedWeightAny {
+        LocalizedWeightAny { format, weight: self }
+    }
+}
+
+impl LocalizeNumber for WeightClassAny {
+    type LocalizedType = LocalizedWeightClassAny;
+
+    fn in_format(self, format: NumberFormat) -> LocalizedWeightClassAny {
+        LocalizedWeightClassAny { format, class: self }
+    }
+}
+
+impl LocalizeNumber for Points {
+    type LocalizedType = LocalizedPoints;
+
+    fn in_format(self, format: NumberFormat) -> LocalizedPoints {
+        LocalizedPoints { format, points: self }
     }
 }

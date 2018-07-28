@@ -8,9 +8,7 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use langpack::{self, LocalizedWeightClassAny};
-use opldb::fields::{WeightAny, WeightKg};
-use opldb::WeightUnits;
+use ::{WeightUnits, WeightKg, WeightAny};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, PartialEq)]
@@ -89,13 +87,6 @@ impl WeightClassAny {
                 s
             }
             WeightClassAny::None => String::new(),
-        }
-    }
-
-    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightClassAny {
-        LocalizedWeightClassAny {
-            format,
-            class: self,
         }
     }
 }

@@ -3,10 +3,12 @@
 //! Not sure how to break this up across files for the moment,
 //! so just keeping with a super-generic name.
 
+extern crate opltypes;
 extern crate server;
 
-use server::opldb::fields::*;
+use opltypes::*;
 use server::pages::selection::*;
+use server::opldb::MetaFederation;
 
 mod common;
 
@@ -19,7 +21,7 @@ mod common;
 fn tested_federations_are_marked_tested() {
     let db = common::db();
     let meets = db.get_meets();
-    let metafed = server::opldb::fields::MetaFederation::AllTested;
+    let metafed = MetaFederation::AllTested;
 
     for entry in db.get_entries() {
         if metafed.contains(&entry, &meets) {

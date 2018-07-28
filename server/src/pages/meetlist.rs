@@ -1,12 +1,13 @@
 //! Logic for the page that lists meets.
 
-use langpack::{self, Language, Locale};
-use opldb::{self, fields, Meet};
-
-use pages::selection::{FederationSelection, YearSelection};
+use opltypes::*;
 
 use std::ffi::OsStr;
 use std::path;
+
+use langpack::{self, Language, Locale};
+use opldb::{self, Meet};
+use pages::selection::{FederationSelection, YearSelection};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///
@@ -80,7 +81,7 @@ impl MeetListSelection {
 #[derive(Serialize)]
 pub struct MeetInfo<'db> {
     pub path: &'db str,
-    pub federation: &'db fields::Federation,
+    pub federation: Federation,
     pub date: String,
     pub country: &'db str,
     pub state: Option<&'db str>,
@@ -96,7 +97,7 @@ impl<'db> MeetInfo<'db> {
     ) -> MeetInfo<'db> {
         MeetInfo {
             path: &meet.path,
-            federation: &meet.federation,
+            federation: meet.federation,
             date: format!("{}", &meet.date),
             country: strings.translate_country(meet.country),
             state: match meet.state {
@@ -119,7 +120,7 @@ pub struct Context<'db> {
     pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: WeightUnits,
 
     pub selection: &'db MeetListSelection,
     pub meets: Vec<MeetInfo<'db>>,

@@ -83,7 +83,7 @@ impl<'de> Deserialize<'de> for Age {
     }
 }
 
-#[cfg(tests)]
+#[cfg(test)]
 mod tests {
     use super::*;
 

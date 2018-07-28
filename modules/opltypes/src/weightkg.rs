@@ -9,8 +9,7 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use langpack::{self, LocalizedWeightAny};
-use opldb::WeightUnits;
+use ::WeightUnits;
 
 /// Represents numbers describing absolute weights.
 ///
@@ -116,13 +115,6 @@ impl WeightAny {
             } else {
                 format!("{}", integer)
             }
-        }
-    }
-
-    pub fn in_format(self, format: langpack::NumberFormat) -> LocalizedWeightAny {
-        LocalizedWeightAny {
-            format,
-            weight: self,
         }
     }
 }

@@ -1,7 +1,7 @@
 //! Logic for the contact page.
 
+use opltypes;
 use langpack::{self, Locale};
-use opldb;
 
 /// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]
@@ -9,7 +9,7 @@ pub struct Context<'a> {
     pub page_title: &'a str,
     pub language: langpack::Language,
     pub strings: &'a langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: opltypes::WeightUnits,
 }
 
 impl<'a> Context<'a> {

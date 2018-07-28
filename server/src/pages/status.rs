@@ -1,10 +1,10 @@
 //! Logic for the project status page.
 
+use opltypes::*;
+use strum::IntoEnumIterator;
+
 use langpack::{self, Language, Locale};
 use opldb;
-use opldb::fields::Federation;
-
-use strum::IntoEnumIterator;
 
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]
@@ -12,7 +12,7 @@ pub struct Context<'a> {
     pub page_title: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
-    pub units: opldb::WeightUnits,
+    pub units: WeightUnits,
     pub fed_statuses: Vec<FederationStatus<'a>>,
     pub num_entries: u32,
     pub num_meets: u32,

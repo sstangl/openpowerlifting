@@ -1,8 +1,7 @@
 //! Shared algorithms that operate on StaticCache data.
 
+use opltypes::*;
 use std::cmp;
-
-use opldb::fields::*;
 use opldb::{Entry, Meet};
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
