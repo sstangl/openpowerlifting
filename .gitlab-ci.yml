@@ -10,7 +10,7 @@ meet-data:
 server:
   cache:
     paths:
-      - server/target
+      - target
       - server/client/node_modules
   before_script:
     - curl -sL https://deb.nodesource.com/setup_8.x | bash -
