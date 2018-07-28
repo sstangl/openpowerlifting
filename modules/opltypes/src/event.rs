@@ -62,15 +62,20 @@ impl FromStr for Event {
     type Err = &'static str;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s.is_empty() {
+            return Err("Unexpected empty Event");
+        }
+
         let mut bits: u8 = 0;
         for c in s.chars() {
             match c {
                 'S' => bits |= Event::BITFLAG_SQUAT,
                 'B' => bits |= Event::BITFLAG_BENCH,
                 'D' => bits |= Event::BITFLAG_DEADLIFT,
-                _ => return Err("Unexpected event character."),
+                _ => return Err("Unexpected Event character."),
             }
         }
+
         Ok(Event(bits))
     }
 }
@@ -88,10 +93,6 @@ impl<'de> Visitor<'de> for EventVisitor {
     where
         E: de::Error,
     {
-        // TODO: Make Event a required field.
-        // if value.is_empty() {
-        //    return Err(E::custom("unexpected empty Event"));
-        // }
         Event::from_str(value).map_err(E::custom)
     }
 }
@@ -143,11 +144,11 @@ mod tests {
     }
 
     #[test]
-    fn test_event_none() {
-        let event = "".parse::<Event>().unwrap();
-        assert!(!event.has_squat());
-        assert!(!event.has_bench());
-        assert!(!event.has_deadlift());
+    fn test_event_errors() {
+        assert!("".parse::<Event>().is_err());
+        assert!(" ".parse::<Event>().is_err());
+        assert!("ABC".parse::<Event>().is_err());
+        assert!("Jerry".parse::<Event>().is_err());
     }
 
     #[test]
@@ -170,8 +171,5 @@ mod tests {
 
         let event = "B".parse::<Event>().unwrap();
         assert_eq!(format!("{}", event), "B");
-
-        let event = "".parse::<Event>().unwrap();
-        assert_eq!(format!("{}", event), "");
     }
 }
