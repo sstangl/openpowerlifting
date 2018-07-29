@@ -6,6 +6,7 @@ description = "The OpenPowerlifting data format checker."
 
 [dependencies]
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
+chrono = "0.4"
 colored = "1.6"
 csv = "1.0"
 rayon = "1.0"

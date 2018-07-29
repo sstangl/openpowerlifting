@@ -1,6 +1,8 @@
 //! Checks for meet.csv files.
 
+use chrono::{self, Datelike};
 use csv;
+use opltypes::*;
 
 use std::error::Error;
 use std::io;
@@ -71,6 +73,42 @@ pub fn check_meetpath(report: &mut Report) {
     }
 }
 
+/// Checks the Federation column.
+pub fn check_federation(s: &str, report: &mut Report) {
+    if s.parse::<Federation>().is_err() {
+        report.error(format!("Unknown federation '{}'. \
+                              Add to modules/opltypes/src/federations.rs?", s));
+    }
+}
+
+/// Checks the Date column.
+pub fn check_date(s: &str, report: &mut Report) {
+    let date = s.parse::<Date>();
+    if date.is_err() {
+        report.error(format!("Invalid date '{}'. Must be YYYY-MM-DD", s));
+        return;
+    }
+    let date = date.unwrap();
+
+    // The date should not be implausibly long ago.
+    if date.year() < 1945 {
+        report.error(format!("Implausible year in '{}'", s));
+    }
+
+    // This is sufficiently fast to call that caching is of no practical benefit.
+    let now = chrono::Local::now();
+
+    // The date should not be in the future.
+    let (y, m, d) = (now.year() as u32, now.month() as u32, now.day() as u32);
+    if (date.year() > y) ||
+       (date.year() == y && date.month() > m) ||
+       (date.year() == y && date.month() == m && date.day() > d)
+    {
+        report.error(format!("Meet occurs in the future in '{}'", s));
+    }
+}
+
+
 /// Checks a single meet.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -86,6 +124,21 @@ where
     check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
         return Ok(report);
+    }
+
+    // Read a single row.
+    let mut record = csv::StringRecord::new();
+    if !rdr.read_record(&mut record)? {
+        report.error("The second row is missing");
+        return Ok(report);
+    }
+
+    check_federation(record.get(0).unwrap(), &mut report);
+    check_date(record.get(1).unwrap(), &mut report);
+
+    // Attempt to read another row -- but there shouldn't be one.
+    if rdr.read_record(&mut record)? {
+        report.error("Too many rows");
     }
 
     Ok(report)

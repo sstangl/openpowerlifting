@@ -15,7 +15,8 @@ fn check(csv: &str) -> usize {
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_reader(csv.as_bytes());
-    let (errors, _warnings) = do_check(&mut rdr, report).unwrap().count_messages();
+    let report = do_check(&mut rdr, report).unwrap();
+    let (errors, _warnings) = report.count_messages();
     errors
 }
 
@@ -37,9 +38,10 @@ fn test_empty_file() {
     assert!(check("") > 0);
 }
 
+/// Ensure that valid data passes tests.
 #[test]
-fn test_bob3() {
-    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n
+fn test_valid_bob3() {
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert_eq!(check(data), 0);
 }
@@ -47,32 +49,32 @@ fn test_bob3() {
 #[test]
 fn test_missing_headers() {
     // Missing Federation.
-    let data = "Date,MeetCountry,MeetState,MeetTown,MeetName\n
+    let data = "Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Missing Date.
-    let data = "Federation,MeetCountry,MeetState,MeetTown,MeetName\n
+    let data = "Federation,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Missing MeetCountry.
-    let data = "Federation,Date,MeetState,MeetTown,MeetName\n
+    let data = "Federation,Date,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Missing MeetState.
-    let data = "Federation,Date,MeetCountry,MeetTown,MeetName\n
+    let data = "Federation,Date,MeetCountry,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Missing MeetTown.
-    let data = "Federation,Date,MeetCountry,MeetState,MeetName\n
+    let data = "Federation,Date,MeetCountry,MeetState,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Missing MeetName.
-    let data = "Federation,Date,MeetCountry,MeetState,MeetTown\n
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown\n\
                 WRPF,2016-08-19,USA,CA,Mountain View";
     assert!(check(data) > 0);
 }
@@ -80,32 +82,32 @@ fn test_missing_headers() {
 #[test]
 fn test_header_typos() {
     // Typo Federation.
-    let data = "Fedaration,Date,MeetCountry,MeetState,MeetTown,MeetName\n
+    let data = "Fedaration,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Typo Date.
-    let data = "Federation,Dote,MeetCountry,MeetState,MeetTown,MeetName\n
+    let data = "Federation,Dote,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Typo MeetCountry.
-    let data = "Federation,Date,MeatCountry,MeetState,MeetTown,MeetName\n
+    let data = "Federation,Date,MeatCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Typo MeetState.
-    let data = "Federation,Date,MeetCountry,MeatState,MeetTown,MeetName\n
+    let data = "Federation,Date,MeetCountry,MeatState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Typo MeetTown.
-    let data = "Federation,Date,MeetCountry,MeetState,MeatTown,MeetName\n
+    let data = "Federation,Date,MeetCountry,MeetState,MeatTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 
     // Typo MeetName.
-    let data = "Federation,Date,MeetCountry,MeetState,MeatTown,MeatName\n
+    let data = "Federation,Date,MeetCountry,MeetState,MeatTown,MeatName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 }
@@ -115,7 +117,7 @@ fn test_header_typos() {
 /// Although entries.csv allows reordering, meet.csv does not.
 #[test]
 fn test_reordered_headers() {
-    let data = "Federation,Date,MeetState,MeetCountry,MeetTown,MeetName\n
+    let data = "Federation,Date,MeetState,MeetCountry,MeetTown,MeetName\n\
                 WRPF,2016-08-19,CA,USA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
 }
@@ -142,4 +144,58 @@ fn test_meetpath_failures() {
 
     // Non-ASCII UTF-8 is disallowed.
     assert_eq!(check_meetpath("/wrpf/белкинасила"), 1);
+}
+
+#[test]
+fn test_invalid_rowcounts() {
+    // Missing the data row.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName";
+    assert_eq!(check(data), 1);
+
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
+fn test_federation() {
+    // Federation must be nonempty.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                ,2014-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // Unknown federations shouldn't parse.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                NoNameFed,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // Check that spacing is correct.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF ,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
+fn test_date() {
+    // Check for malformed dates.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-90,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // Whitespace should be rejected.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF, 2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // Check for ridiculously early dates.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,1935-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // Dates in the future should be rejected.
+    // If this project is still around when this test fails -- hey :-)
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2999-08-19,USA,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
 }

@@ -1,3 +1,4 @@
+extern crate chrono;
 extern crate csv;
 extern crate opltypes;
 
@@ -10,12 +11,14 @@ use std::error::Error;
 use std::path::{Path, PathBuf};
 
 /// A data error or warning message that should be reported.
+#[derive(Debug)]
 pub enum Message {
     Error(String),
     Warning(String),
 }
 
 /// Accumulates messages that should be reported as a single batch.
+#[derive(Debug)]
 pub struct Report {
     pub path: PathBuf,
     pub messages: Vec<Message>,
