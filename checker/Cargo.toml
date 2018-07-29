@@ -1,0 +1,14 @@
+[package]
+name = "checker"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+description = "The OpenPowerlifting data format checker."
+
+[dependencies]
+opltypes = { version = "0.1", path = "../modules/opltypes/" }
+colored = "1.6"
+csv = "1.0"
+rayon = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+walkdir = "2"
