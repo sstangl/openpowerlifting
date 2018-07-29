@@ -127,6 +127,27 @@ pub fn check_meetcountry(s: &str, report: &mut Report) {
     }
 }
 
+/// Checks the optional MeetState column.
+pub fn check_meetstate(s: &str, report: &mut Report, countrystr: &str) {
+    if s.is_empty() {
+        return;
+    }
+
+    // The state depends on the country.
+    let country = countrystr.parse::<Country>();
+    if country.is_err() {
+        report.warning(
+            format!("Couldn't check MeetState '{}' due to invalid MeetCountry", s)
+        );
+        return;
+    }
+    let country = country.unwrap();
+
+    if State::from_str_and_country(s, country).is_err() {
+        report.error(format!("Unknown state '{}' for country '{}'", s, countrystr));
+    }
+}
+
 /// Checks the optional MeetTown column.
 pub fn check_meettown(s: &str, report: &mut Report) {
     // Check each character for validity.
@@ -205,6 +226,7 @@ where
     check_federation(record.get(0).unwrap(), &mut report);
     check_date(record.get(1).unwrap(), &mut report);
     check_meetcountry(record.get(2).unwrap(), &mut report);
+    check_meetstate(record.get(3).unwrap(), &mut report, record.get(2).unwrap());
     check_meettown(record.get(4).unwrap(), &mut report);
     check_meetname(
         record.get(5).unwrap(),

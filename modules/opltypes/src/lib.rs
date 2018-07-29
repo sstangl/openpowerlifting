@@ -27,6 +27,8 @@ mod points;
 pub use self::points::Points;
 mod sex;
 pub use self::sex::Sex;
+mod state;
+pub use self::state::*;
 mod weightkg;
 pub use self::weightkg::{WeightAny, WeightKg};
 mod weightclasskg;

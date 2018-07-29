@@ -227,6 +227,30 @@ fn test_meetcountry() {
 }
 
 #[test]
+fn test_meetstate() {
+    // MeetState is not mandatory.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,,,Boss of Bosses 3";
+    assert_eq!(check(data), 0);
+
+    // Test for whitespace errors.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA ,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA, CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // The state should match the MeetCountry.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,Australia,CA,,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CAT,,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
 fn test_meettown() {
     // MeetTown is not mandatory.
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
