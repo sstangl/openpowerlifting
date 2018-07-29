@@ -18,7 +18,10 @@ pub struct Report {
 impl Report {
     /// Creates a new Report.
     pub fn new(path: PathBuf) -> Self {
-        Report { path, messages: Vec::new() }
+        Report {
+            path,
+            messages: Vec::new(),
+        }
     }
 
     /// Reports an error, which causes checks to fail.
