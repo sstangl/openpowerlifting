@@ -108,7 +108,7 @@ pub fn check_date(s: &str, report: &mut Report) {
     }
 }
 
-/// Checks the Country column.
+/// Checks the MeetCountry column.
 pub fn check_country(s: &str, report: &mut Report) {
     if s.parse::<Country>().is_err() {
         report.error(format!("Unknown country '{}'. \
@@ -118,6 +118,23 @@ pub fn check_country(s: &str, report: &mut Report) {
         if s.contains("Chin") {
             report.warning(format!("Should '{}' be 'Taiwan'?", s));
         }
+    }
+}
+
+/// Checks the optional MeetTown column.
+pub fn check_town(s: &str, report: &mut Report) {
+    // Check each character for validity.
+    for c in s.chars() {
+        // Non-ASCII characters are allowed.
+        if !c.is_alphabetic() && !" -.'".contains(c) {
+            report.error(format!("Illegal character in MeetTown '{}'", s));
+            break;
+        }
+    }
+
+    // Check for excessive spacing.
+    if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
+        report.error(format!("Excessive whitespace in MeetTown '{}'", s));
     }
 }
 
@@ -149,6 +166,7 @@ where
     check_federation(record.get(0).unwrap(), &mut report);
     check_date(record.get(1).unwrap(), &mut report);
     check_country(record.get(2).unwrap(), &mut report);
+    check_town(record.get(4).unwrap(), &mut report);
 
     // Attempt to read another row -- but there shouldn't be one.
     if rdr.read_record(&mut record)? {

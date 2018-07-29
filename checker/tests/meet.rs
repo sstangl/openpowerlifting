@@ -202,6 +202,11 @@ fn test_date() {
 
 #[test]
 fn test_country() {
+    // MeetCountry is a mandatory column.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,,,,Boss of Bosses 3";
+    assert!(check(data) > 0);
+
     // Check for nonexistent countries.
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,Kanto,CA,Mountain View,Boss of Bosses 3";
@@ -218,5 +223,29 @@ fn test_country() {
     assert_eq!(check(data), 1);
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,Republic of China,,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
+fn test_town() {
+    // MeetTown is not mandatory.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,,Boss of Bosses 3";
+    assert_eq!(check(data), 0);
+
+    // Test for whitespace errors.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain  View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View ,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA, Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // UTF-8 is OK, but odd characters should be rejected.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,\"Mountain View\",Boss of Bosses 3";
     assert_eq!(check(data), 1);
 }
