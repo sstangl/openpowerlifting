@@ -8,7 +8,7 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use ::{WeightUnits, WeightKg, WeightAny};
+use {WeightAny, WeightKg, WeightUnits};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, PartialEq)]
@@ -54,9 +54,7 @@ impl WeightClassKg {
 
     pub fn as_lbs(self) -> WeightClassAny {
         match self {
-            WeightClassKg::UnderOrEqual(x) => {
-                WeightClassAny::UnderOrEqual(x.as_lbs_class())
-            }
+            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_lbs_class()),
             WeightClassKg::Over(x) => WeightClassAny::Over(x.as_lbs_class()),
             WeightClassKg::None => WeightClassAny::None,
         }

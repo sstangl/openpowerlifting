@@ -9,7 +9,7 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use ::WeightUnits;
+use WeightUnits;
 
 /// Represents numbers describing absolute weights.
 ///

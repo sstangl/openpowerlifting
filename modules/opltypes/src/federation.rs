@@ -12,8 +12,20 @@
 /// The strum `to_string` value defines the default .to_string() result,
 /// while *all* of to_string and serialize are parseable.
 /// So Federation::APF can be parsed from the strings "APF" and "apf".
-#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, PartialOrd, Ord, Eq,
-         Serialize, EnumIter, EnumString)]
+#[derive(
+    Copy,
+    Clone,
+    Debug,
+    Deserialize,
+    Display,
+    PartialEq,
+    PartialOrd,
+    Ord,
+    Eq,
+    Serialize,
+    EnumIter,
+    EnumString,
+)]
 pub enum Federation {
     #[serde(rename = "365Strong")]
     #[strum(to_string = "365Strong", serialize = "365strong")]

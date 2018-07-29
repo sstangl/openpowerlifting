@@ -1,7 +1,10 @@
 extern crate csv;
+extern crate opltypes;
 
 pub mod check_entries;
 use check_entries::check_entries;
+pub mod check_meet;
+use check_meet::check_meet;
 
 use std::error::Error;
 use std::path::{Path, PathBuf};
@@ -58,6 +61,11 @@ pub fn check(meetdir: &Path) -> Result<Vec<Report>, Box<Error>> {
     let mut acc = Vec::new();
 
     let report = check_entries(meetdir.join("entries.csv"))?;
+    if !report.messages.is_empty() {
+        acc.push(report);
+    }
+
+    let report = check_meet(meetdir.join("meet.csv"))?;
     if !report.messages.is_empty() {
         acc.push(report);
     }

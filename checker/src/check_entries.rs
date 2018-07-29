@@ -8,7 +8,7 @@ use std::path::PathBuf;
 
 use Report;
 
-/// Checks a single entries.csv file from an open CSV `Reader`.
+/// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
 /// for creating tests that do not have a backing CSV file.
@@ -16,7 +16,8 @@ pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
 ) -> Result<Report, Box<Error>>
-    where R: io::Read
+where
+    R: io::Read,
 {
     // Succeeds even on the empty file.
     let headers = rdr.headers()?;
@@ -42,5 +43,6 @@ pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_path(&report.path)?;
+
     Ok(do_check(&mut rdr, report)?)
 }
