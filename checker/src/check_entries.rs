@@ -39,6 +39,8 @@ pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
         return Ok(report);
     }
 
-    let mut rdr = csv::Reader::from_path(&report.path)?;
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .from_path(&report.path)?;
     Ok(do_check(&mut rdr, report)?)
 }

@@ -12,7 +12,9 @@ use std::path::PathBuf;
 /// returning the number of errors.
 fn check(csv: &str) -> usize {
     let report = Report::new(PathBuf::from("[inline]"));
-    let mut rdr = csv::Reader::from_reader(csv.as_bytes());
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .from_reader(csv.as_bytes());
     let (errors, _warnings) = do_check(&mut rdr, report).unwrap().count_messages();
     errors
 }
