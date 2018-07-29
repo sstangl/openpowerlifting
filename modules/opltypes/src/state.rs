@@ -15,7 +15,6 @@ pub enum State {
 }
 
 impl State {
-    /// Constr
     pub fn from_str_and_country(s: &str, country: Country) -> Result<State, ParseError> {
         match country {
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),

@@ -10,7 +10,7 @@ use std::path::PathBuf;
 
 use Report;
 
-/// Every meet.csv must have excatly these headers in the same order.
+/// Every meet.csv must have exactly these headers in the same order.
 const KNOWN_HEADERS: [&str; 6] = [
     "Federation",
     "Date",
