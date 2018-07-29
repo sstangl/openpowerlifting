@@ -2,9 +2,7 @@
 
 extern crate checker;
 extern crate colored;
-extern crate csv;
 extern crate rayon;
-extern crate serde;
 extern crate walkdir;
 
 use colored::*;
