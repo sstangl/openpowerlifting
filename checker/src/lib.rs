@@ -1,5 +1,8 @@
 extern crate csv;
 
+mod check_entries;
+use check_entries::check_entries;
+
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
@@ -48,24 +51,6 @@ impl Report {
 
         (errors, warnings)
     }
-}
-
-pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
-    // Allow the pending Report to own the PathBuf.
-    let mut report = Report::new(entries_csv);
-
-    // The entries.csv file must exist to continue on.
-    if !report.path.exists() {
-        report.error("File does not exist");
-        return Ok(report);
-    }
-
-    let mut rdr = csv::Reader::from_path(&report.path)?;
-    for result in rdr.records() {
-        result?;
-    }
-
-    Ok(report)
 }
 
 /// Checks a directory with meet data.
