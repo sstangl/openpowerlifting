@@ -18,8 +18,9 @@ pub fn do_check<R>(
 ) -> Result<Report, Box<Error>>
     where R: io::Read
 {
-    // The CSV file must contain headers.
-    if rdr.headers().is_err() {
+    // Succeeds even on the empty file.
+    let headers = rdr.headers()?;
+    if headers.is_empty() {
         report.error("No column headers");
         return Ok(report);
     }

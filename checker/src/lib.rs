@@ -1,6 +1,6 @@
 extern crate csv;
 
-mod check_entries;
+pub mod check_entries;
 use check_entries::check_entries;
 
 use std::error::Error;
