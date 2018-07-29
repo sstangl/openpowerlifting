@@ -15,6 +15,9 @@ use std::env;
 use std::io::{self, Write};
 use std::error::Error;
 use std::path::PathBuf;
+use std::process;
+use std::sync::Arc;
+use std::sync::atomic::{AtomicUsize, Ordering};
 
 // For purposes of testing, a meet directory is any directory containing
 // either of the files "entries.csv" or "meet.csv".
@@ -54,6 +57,26 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
     }
 }
 
+/// Outputs a final summary line.
+fn print_summary(error_count: usize, warning_count: usize) {
+    let error_str = format!("{} errors", error_count);
+    let warning_str = format!("{} warnings", warning_count);
+
+    let error_str = if error_count > 0 {
+        error_str.bold().red().to_string()
+    } else {
+        error_str.bold().green().to_string()
+    };
+
+    let warning_str = if warning_count > 0 {
+        warning_str.bold().yellow().to_string()
+    } else {
+        warning_str.bold().green().to_string()
+    };
+
+    println!("Summary: {}, {}", error_str, warning_str);
+}
+
 fn main() -> Result<(), Box<Error>> {
     // Get handles to various parts of the project.
     let project_root = get_project_root()?;
@@ -66,6 +89,9 @@ fn main() -> Result<(), Box<Error>> {
         .filter(|entry| is_meetdir(entry))
         .collect();
 
+    let error_count = Arc::new(AtomicUsize::new(0));
+    let warning_count = Arc::new(AtomicUsize::new(0));
+
     meetdirs
         .into_par_iter()
         .for_each(|dir| {
@@ -76,6 +102,15 @@ fn main() -> Result<(), Box<Error>> {
                     let mut handle = stdout.lock();
 
                     for report in reports {
+                        // Update the error and warning counts.
+                        let (errors, warnings) = report.count_messages();
+                        if errors > 0 {
+                            error_count.fetch_add(errors, Ordering::SeqCst);
+                        }
+                        if warnings > 0 {
+                            warning_count.fetch_add(warnings, Ordering::SeqCst);
+                        }
+
                         write_report(&mut handle, report);
                     }
                 }
@@ -83,5 +118,12 @@ fn main() -> Result<(), Box<Error>> {
             };
         });
 
+    let error_count = Arc::try_unwrap(error_count).unwrap().into_inner();
+    let warning_count = Arc::try_unwrap(warning_count).unwrap().into_inner();
+    print_summary(error_count, warning_count);
+
+    if error_count > 0 {
+        process::exit(1);
+    }
     Ok(())
 }

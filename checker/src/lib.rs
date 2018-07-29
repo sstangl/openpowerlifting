@@ -30,6 +30,21 @@ impl Report {
     pub fn warning(&mut self, message: impl ToString) {
         self.messages.push(Message::Warning(message.to_string()));
     }
+
+    /// Returns how many messages there are of (errors, warnings).
+    pub fn count_messages(&self) -> (usize, usize) {
+        let mut errors = 0;
+        let mut warnings = 0;
+
+        for message in &self.messages {
+            match message {
+                Message::Error(_) => errors += 1,
+                Message::Warning(_) => warnings += 1,
+            }
+        }
+
+        (errors, warnings)
+    }
 }
 
 pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
