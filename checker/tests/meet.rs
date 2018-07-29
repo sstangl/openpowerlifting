@@ -201,7 +201,7 @@ fn test_date() {
 }
 
 #[test]
-fn test_country() {
+fn test_meetcountry() {
     // MeetCountry is a mandatory column.
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,,,,Boss of Bosses 3";
@@ -227,7 +227,7 @@ fn test_country() {
 }
 
 #[test]
-fn test_town() {
+fn test_meettown() {
     // MeetTown is not mandatory.
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,,Boss of Bosses 3";
@@ -247,5 +247,44 @@ fn test_town() {
     // UTF-8 is OK, but odd characters should be rejected.
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,\"Mountain View\",Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
+fn test_meetname() {
+    // MeetName is mandatory.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,";
+    assert!(check(data) > 0);
+
+    // A name that's just whitespace should fail.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View, ";
+    assert_eq!(check(data), 1);
+
+    // Invalid characters should fail.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,\"Boss of Bosses 3\"";
+    assert_eq!(check(data), 1);
+
+    // Excessive whitespace should fail.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View, Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3 ";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses  3";
+    assert_eq!(check(data), 1);
+
+    // The federation string should not appear in the name.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,WRPF Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // The year should not appear in the name.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,USA,CA,Mountain View,2016 Boss of Bosses 3";
     assert_eq!(check(data), 1);
 }

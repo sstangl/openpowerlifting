@@ -8,6 +8,14 @@ use std::path::PathBuf;
 
 use Report;
 
+/// Checks that the headers are valid.
+fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
+    if headers.is_empty() {
+        report.error("No column headers found");
+        return;
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -19,12 +27,14 @@ pub fn do_check<R>(
 where
     R: io::Read,
 {
-    // Succeeds even on the empty file.
-    let headers = rdr.headers()?;
-    if headers.is_empty() {
-        report.error("No column headers");
+    check_headers(rdr.headers()?, &mut report);
+    if !report.messages.is_empty() {
         return Ok(report);
     }
+
+    // This allocation can be re-used for each row.
+    let mut record = csv::StringRecord::new();
+    while rdr.read_record(&mut record)? {}
 
     Ok(report)
 }

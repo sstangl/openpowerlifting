@@ -76,8 +76,11 @@ pub fn check_meetpath(report: &mut Report) {
 /// Checks the Federation column.
 pub fn check_federation(s: &str, report: &mut Report) {
     if s.parse::<Federation>().is_err() {
-        report.error(format!("Unknown federation '{}'. \
-                              Add to modules/opltypes/src/federation.rs?", s));
+        report.error(format!(
+            "Unknown federation '{}'. \
+             Add to modules/opltypes/src/federation.rs?",
+            s
+        ));
     }
 }
 
@@ -100,19 +103,22 @@ pub fn check_date(s: &str, report: &mut Report) {
 
     // The date should not be in the future.
     let (y, m, d) = (now.year() as u32, now.month() as u32, now.day() as u32);
-    if (date.year() > y) ||
-       (date.year() == y && date.month() > m) ||
-       (date.year() == y && date.month() == m && date.day() > d)
+    if (date.year() > y)
+        || (date.year() == y && date.month() > m)
+        || (date.year() == y && date.month() == m && date.day() > d)
     {
         report.error(format!("Meet occurs in the future in '{}'", s));
     }
 }
 
 /// Checks the MeetCountry column.
-pub fn check_country(s: &str, report: &mut Report) {
+pub fn check_meetcountry(s: &str, report: &mut Report) {
     if s.parse::<Country>().is_err() {
-        report.error(format!("Unknown country '{}'. \
-                              Add to modules/opltypes/src/country.rs?", s));
+        report.error(format!(
+            "Unknown country '{}'. \
+             Add to modules/opltypes/src/country.rs?",
+            s
+        ));
 
         // Emit some helpful warnings.
         if s.contains("Chin") {
@@ -122,7 +128,7 @@ pub fn check_country(s: &str, report: &mut Report) {
 }
 
 /// Checks the optional MeetTown column.
-pub fn check_town(s: &str, report: &mut Report) {
+pub fn check_meettown(s: &str, report: &mut Report) {
     // Check each character for validity.
     for c in s.chars() {
         // Non-ASCII characters are allowed.
@@ -138,6 +144,39 @@ pub fn check_town(s: &str, report: &mut Report) {
     }
 }
 
+/// Checks the mandatory MeetName column.
+pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str) {
+    if s.is_empty() {
+        report.error("MeetName cannot be empty");
+        return;
+    }
+
+    for c in s.chars() {
+        // Non-ASCII characters are allowed.
+        if !c.is_alphanumeric() && !" -&.'/".contains(c) {
+            report.error(format!("Illegal character in MeetName '{}'", s));
+            break;
+        }
+    }
+
+    // Check for excessive spacing.
+    if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
+        report.error(format!("Excessive whitespace in MeetTown '{}'", s));
+    }
+
+    // The federation shouldn't be part of the name.
+    if !fedstr.is_empty() && s.contains(fedstr) {
+        report.error(format!("MeetName '{}' must not contain the federation", s));
+    }
+
+    // The year shouldn't be part of the name.
+    if let Some(idx) = datestr.find('-') {
+        let year = &datestr[0..idx];
+        if s.contains(year) {
+            report.error(format!("MeetName '{}' must not contain the year", s));
+        }
+    }
+}
 
 /// Checks a single meet.csv file from an open `csv::Reader`.
 ///
@@ -165,8 +204,14 @@ where
 
     check_federation(record.get(0).unwrap(), &mut report);
     check_date(record.get(1).unwrap(), &mut report);
-    check_country(record.get(2).unwrap(), &mut report);
-    check_town(record.get(4).unwrap(), &mut report);
+    check_meetcountry(record.get(2).unwrap(), &mut report);
+    check_meettown(record.get(4).unwrap(), &mut report);
+    check_meetname(
+        record.get(5).unwrap(),
+        &mut report,
+        record.get(0).unwrap(),
+        record.get(1).unwrap(),
+    );
 
     // Attempt to read another row -- but there shouldn't be one.
     if rdr.read_record(&mut record)? {
