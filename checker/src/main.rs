@@ -92,6 +92,9 @@ fn main() -> Result<(), Box<Error>> {
     let error_count = Arc::new(AtomicUsize::new(0));
     let warning_count = Arc::new(AtomicUsize::new(0));
 
+    // Unexpected errors that occurred while reading files.
+    let internal_error_count = Arc::new(AtomicUsize::new(0));
+
     meetdirs
         .into_par_iter()
         .for_each(|dir| {
@@ -114,7 +117,18 @@ fn main() -> Result<(), Box<Error>> {
                         write_report(&mut handle, report);
                     }
                 }
-                Err(_e) => (),
+                Err(e) => {
+                    internal_error_count.fetch_add(1, Ordering::SeqCst);
+                    let stderr = io::stderr();
+                    let mut handle = stderr.lock();
+                    let _ = handle.write_fmt(
+                        format_args!("{}\n", dir.path().to_str().unwrap())
+                    );
+                    let _ = handle.write_fmt(
+                        format_args!(" Internal Error: {}\n",
+                                     e.to_string().bold().purple())
+                    );
+                }
             };
         });
 
@@ -122,7 +136,8 @@ fn main() -> Result<(), Box<Error>> {
     let warning_count = Arc::try_unwrap(warning_count).unwrap().into_inner();
     print_summary(error_count, warning_count);
 
-    if error_count > 0 {
+    let internal_error_count = Arc::try_unwrap(internal_error_count).unwrap().into_inner();
+    if error_count > 0 || internal_error_count > 0 {
         process::exit(1);
     }
     Ok(())
