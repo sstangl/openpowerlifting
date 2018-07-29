@@ -199,3 +199,24 @@ fn test_date() {
                 WRPF,2999-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert_eq!(check(data), 1);
 }
+
+#[test]
+fn test_country() {
+    // Check for nonexistent countries.
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,Kanto,CA,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // We use "Czechia".
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,Czech Republic,,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+
+    // We use "Taiwan".
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,Chinese Taipei,,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,2016-08-19,Republic of China,,Mountain View,Boss of Bosses 3";
+    assert_eq!(check(data), 1);
+}

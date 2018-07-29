@@ -77,7 +77,7 @@ pub fn check_meetpath(report: &mut Report) {
 pub fn check_federation(s: &str, report: &mut Report) {
     if s.parse::<Federation>().is_err() {
         report.error(format!("Unknown federation '{}'. \
-                              Add to modules/opltypes/src/federations.rs?", s));
+                              Add to modules/opltypes/src/federation.rs?", s));
     }
 }
 
@@ -108,6 +108,19 @@ pub fn check_date(s: &str, report: &mut Report) {
     }
 }
 
+/// Checks the Country column.
+pub fn check_country(s: &str, report: &mut Report) {
+    if s.parse::<Country>().is_err() {
+        report.error(format!("Unknown country '{}'. \
+                              Add to modules/opltypes/src/country.rs?", s));
+
+        // Emit some helpful warnings.
+        if s.contains("Chin") {
+            report.warning(format!("Should '{}' be 'Taiwan'?", s));
+        }
+    }
+}
+
 
 /// Checks a single meet.csv file from an open `csv::Reader`.
 ///
@@ -135,6 +148,7 @@ where
 
     check_federation(record.get(0).unwrap(), &mut report);
     check_date(record.get(1).unwrap(), &mut report);
+    check_country(record.get(2).unwrap(), &mut report);
 
     // Attempt to read another row -- but there shouldn't be one.
     if rdr.read_record(&mut record)? {

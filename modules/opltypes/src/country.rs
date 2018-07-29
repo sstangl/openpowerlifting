@@ -1,6 +1,6 @@
 //! Defines the `Country` field for the `meets` table.
 
-#[derive(Copy, Clone, Deserialize, Serialize, PartialEq)]
+#[derive(Copy, Clone, Deserialize, Serialize, PartialEq, EnumString)]
 pub enum Country {
     Algeria,
     Argentina,
@@ -13,23 +13,27 @@ pub enum Country {
     Brazil,
     Britain,
     #[serde(rename = "British Virgin Islands")]
+    #[strum(to_string = "British Virgin Islands")]
     BritishVirginIslands,
     Bulgaria,
     Canada,
     #[serde(rename = "Cayman Islands")]
+    #[strum(to_string = "Cayman Islands")]
     CaymanIslands,
     China,
     Colombia,
     #[serde(rename = "Costa Rica")]
+    #[strum(to_string = "Costa Rica")]
     CostaRica,
     #[serde(rename = "Côte d’Ivoire")]
+    #[strum(to_string = "Côte d’Ivoire")]
     CoteDIvoire,
-    // FIXME: Standardize on one of these.
     Czechia,
     Denmark,
     Ecuador,
     Egypt,
     #[serde(rename = "El Salvador")]
+    #[strum(to_string = "El Salvador")]
     ElSalvador,
     England,
     Estonia,
@@ -41,6 +45,7 @@ pub enum Country {
     Guatemala,
     Guyana,
     #[serde(rename = "Hong Kong")]
+    #[strum(to_string = "Hong Kong")]
     HongKong,
     Hungary,
     Iceland,
@@ -61,21 +66,26 @@ pub enum Country {
     Morocco,
     Netherlands,
     #[serde(rename = "New Caledonia")]
+    #[strum(to_string = "New Caledonia")]
     NewCaledonia,
     #[serde(rename = "New Zealand")]
+    #[strum(to_string = "New Zealand")]
     NewZealand,
     Nicaragua,
     Norway,
     #[serde(rename = "N.Ireland")]
+    #[strum(to_string = "N.Ireland")]
     NorthernIreland,
     Oman,
     #[serde(rename = "Papua New Guinea")]
+    #[strum(to_string = "Papua New Guinea")]
     PapuaNewGuinea,
     Peru,
     Philippines,
     Poland,
     Portugal,
     #[serde(rename = "Puerto Rico")]
+    #[strum(to_string = "Puerto Rico")]
     PuertoRico,
     Russia,
     Samoa,
@@ -85,8 +95,10 @@ pub enum Country {
     Slovakia,
     Slovenia,
     #[serde(rename = "South Africa")]
+    #[strum(to_string = "South Africa")]
     SouthAfrica,
     #[serde(rename = "South Korea")]
+    #[strum(to_string = "South Korea")]
     SouthKorea,
     Spain,
     Sweden,
@@ -100,6 +112,7 @@ pub enum Country {
     Uruguay,
     USA,
     #[serde(rename = "US Virgin Islands")]
+    #[strum(to_string = "US Virgin Islands")]
     USVirginIslands,
     Uzbekistan,
     Venezuela,
