@@ -332,6 +332,20 @@ impl StaticCache {
             YearSelection::Year2014 => PossiblyOwnedNonSortedNonUnique::Owned(
                 cur.intersect(&self.log_linear_time.year2014),
             ),
+            _ => {
+                let year = selection.year.as_u32().unwrap();  // Safe if not AllYears.
+                let filter = NonSortedNonUnique(
+                    cur.0.iter()
+                    .filter_map(|&i| {
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
+                            true => Some(i),
+                            false => None,
+                        }
+                    })
+                    .collect()
+                );
+                PossiblyOwnedNonSortedNonUnique::Owned(filter)
+            }
         };
 
         // Filter by federation manually.

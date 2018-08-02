@@ -5,4 +5,53 @@
   <option value="2016"{% if selection.year == "Year2016" %} selected{% endif %}>2016</option>
   <option value="2015"{% if selection.year == "Year2015" %} selected{% endif %}>2015</option>
   <option value="2014"{% if selection.year == "Year2014" %} selected{% endif %}>2014</option>
+  <option value="2013"{% if selection.year == "Year2013" %} selected{% endif %}>2013</option>
+  <option value="2012"{% if selection.year == "Year2012" %} selected{% endif %}>2012</option>
+  <option value="2011"{% if selection.year == "Year2011" %} selected{% endif %}>2011</option>
+  <option value="2010"{% if selection.year == "Year2010" %} selected{% endif %}>2010</option>
+  <option value="2009"{% if selection.year == "Year2009" %} selected{% endif %}>2009</option>
+  <option value="2008"{% if selection.year == "Year2008" %} selected{% endif %}>2008</option>
+  <option value="2007"{% if selection.year == "Year2007" %} selected{% endif %}>2007</option>
+  <option value="2006"{% if selection.year == "Year2006" %} selected{% endif %}>2006</option>
+  <option value="2005"{% if selection.year == "Year2005" %} selected{% endif %}>2005</option>
+  <option value="2004"{% if selection.year == "Year2004" %} selected{% endif %}>2004</option>
+  <option value="2003"{% if selection.year == "Year2003" %} selected{% endif %}>2003</option>
+  <option value="2002"{% if selection.year == "Year2002" %} selected{% endif %}>2002</option>
+  <option value="2001"{% if selection.year == "Year2001" %} selected{% endif %}>2001</option>
+  <option value="2000"{% if selection.year == "Year2000" %} selected{% endif %}>2000</option>
+  <option value="1999"{% if selection.year == "Year1999" %} selected{% endif %}>1999</option>
+  <option value="1998"{% if selection.year == "Year1998" %} selected{% endif %}>1998</option>
+  <option value="1997"{% if selection.year == "Year1997" %} selected{% endif %}>1997</option>
+  <option value="1996"{% if selection.year == "Year1996" %} selected{% endif %}>1996</option>
+  <option value="1995"{% if selection.year == "Year1995" %} selected{% endif %}>1995</option>
+  <option value="1994"{% if selection.year == "Year1994" %} selected{% endif %}>1994</option>
+  <option value="1993"{% if selection.year == "Year1993" %} selected{% endif %}>1993</option>
+  <option value="1992"{% if selection.year == "Year1992" %} selected{% endif %}>1992</option>
+  <option value="1991"{% if selection.year == "Year1991" %} selected{% endif %}>1991</option>
+  <option value="1990"{% if selection.year == "Year1990" %} selected{% endif %}>1990</option>
+  <option value="1989"{% if selection.year == "Year1989" %} selected{% endif %}>1989</option>
+  <option value="1988"{% if selection.year == "Year1988" %} selected{% endif %}>1988</option>
+  <option value="1987"{% if selection.year == "Year1987" %} selected{% endif %}>1987</option>
+  <option value="1986"{% if selection.year == "Year1986" %} selected{% endif %}>1986</option>
+  <option value="1985"{% if selection.year == "Year1985" %} selected{% endif %}>1985</option>
+  <option value="1984"{% if selection.year == "Year1984" %} selected{% endif %}>1984</option>
+  <option value="1983"{% if selection.year == "Year1983" %} selected{% endif %}>1983</option>
+  <option value="1982"{% if selection.year == "Year1982" %} selected{% endif %}>1982</option>
+  <option value="1981"{% if selection.year == "Year1981" %} selected{% endif %}>1981</option>
+  <option value="1980"{% if selection.year == "Year1980" %} selected{% endif %}>1980</option>
+  <option value="1979"{% if selection.year == "Year1979" %} selected{% endif %}>1979</option>
+  <option value="1978"{% if selection.year == "Year1978" %} selected{% endif %}>1978</option>
+  <option value="1977"{% if selection.year == "Year1977" %} selected{% endif %}>1977</option>
+  <option value="1976"{% if selection.year == "Year1976" %} selected{% endif %}>1976</option>
+  <option value="1975"{% if selection.year == "Year1975" %} selected{% endif %}>1975</option>
+  <option value="1974"{% if selection.year == "Year1974" %} selected{% endif %}>1974</option>
+  <option value="1973"{% if selection.year == "Year1973" %} selected{% endif %}>1973</option>
+  <option value="1972"{% if selection.year == "Year1972" %} selected{% endif %}>1972</option>
+  <option value="1971"{% if selection.year == "Year1971" %} selected{% endif %}>1971</option>
+  <option value="1970"{% if selection.year == "Year1970" %} selected{% endif %}>1970</option>
+  <option value="1969"{% if selection.year == "Year1969" %} selected{% endif %}>1969</option>
+  <option value="1968"{% if selection.year == "Year1968" %} selected{% endif %}>1968</option>
+  <option value="1967"{% if selection.year == "Year1967" %} selected{% endif %}>1967</option>
+  <option value="1966"{% if selection.year == "Year1966" %} selected{% endif %}>1966</option>
+  <option value="1965"{% if selection.year == "Year1965" %} selected{% endif %}>1965</option>
 </select>
