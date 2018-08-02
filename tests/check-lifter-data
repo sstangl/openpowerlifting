@@ -204,7 +204,7 @@ def check_name_disambiguation(names):
     seenset = {}
 
     if ','.join(csv.fieldnames) != "Name,Count":
-        perror("%s: CSV column names are wrong.", filename)
+        perror("%s: CSV column names are wrong." % filename)
         return
 
     # Names with variants in the disambiguation file should occur in meet
@@ -212,7 +212,7 @@ def check_name_disambiguation(names):
     for (name, count) in csv.rows:
         # Each name can only occur once.
         if name in seenset:
-            perror("%s: Name '%s' occurs more than once.", (filename, name))
+            perror("%s: Name '%s' occurs more than once." % (filename, name))
 
         # That name cannot have a '#' in it.
         if '#' in name:
@@ -221,12 +221,12 @@ def check_name_disambiguation(names):
 
         # Count must be a number.
         if not count.isdigit():
-            perror("%s: Count must be an integer.", filename)
+            perror("%s: Count must be an integer." % filename)
             continue
 
         # That number must be >= 2.
         if not int(count) >= 2:
-            perror("%s: Count must be >= 2.", filename)
+            perror("%s: Count must be >= 2." % filename)
             continue
 
         # The un-specified name should not occur without a number.
