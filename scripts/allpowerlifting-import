@@ -80,6 +80,9 @@ def getmeetinfo(soup):
             month = month_dict[month_key]
             break
 
+    if len(day) == 1:
+        day = '0' + day
+
     date = year + '-' + month + '-' + day
 
     # Get the competition name.
@@ -104,6 +107,8 @@ def getresults(soup, url):
         url = url + '?all_attempts=1'
 
     subpage_html = gethtml(url)
+    subpage_html = subpage_html.replace('<span class="result-value-fail">',
+                                        '<span class="result-value-fail">-')
 
     subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
     csv = getpagedata(subpage_soup)
@@ -143,6 +148,8 @@ def getresults(soup, url):
 
             subpage_url = url + subpage_ext + '/?all_attempts=1'
             subpage_html = gethtml(subpage_url)
+            subpage_html = subpage_html.replace(
+                '<span class="result-value-fail">', '<span class="result-value-fail">-')
 
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
@@ -315,24 +322,16 @@ def getpagedata(soup):
         else:
             assert wcstate
 
-            # Accumulate the row, but we need to look at the class of each td
-            # to figure out whether lifts were good or bad.
             row = []
             for td in tr.find_all('td'):
-                text = td.find(text=True)
+                text = td.text
 
                 # Get the country data
-                if (text is None and td.has_attr('id') and
-                        'LocationID' in td['id'] and td.a):
+                if (td.has_attr('id') and 'LocationID' in td['id'] and td.a):
                     text = td.a['title']
 
                 if text is None:
                     text = ''
-
-                spans = td.find_all('span')
-
-                if len(spans) == 2 and spans[1]['class'] == ['result-value-fail']:
-                    text = '-' + text
 
                 row.append(text.strip().replace(
                     '  ', ' ').replace(',', ' ').replace('—', ''))
@@ -505,7 +504,6 @@ def parse_sheetname(csv):
 
 def main(url):
     html = gethtml(url)
-
     soup = BeautifulSoup(html, 'html.parser')
 
     meetcsv = getmeetinfo(soup)
