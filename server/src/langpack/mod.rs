@@ -30,6 +30,8 @@ pub enum Language {
     fi,
     /// French.
     fr,
+    /// Croatian.
+    hr,
     /// Italian.
     it,
     /// Japanese.
@@ -68,6 +70,7 @@ impl fmt::Display for Language {
                 Language::es => "es",
                 Language::fi => "fi",
                 Language::fr => "fr",
+                Language::hr => "hr",
                 Language::it => "it",
                 Language::ja => "ja",
                 Language::pl => "pl",
@@ -382,6 +385,7 @@ pub struct LangInfo {
     es: Option<Translations>,
     fi: Option<Translations>,
     fr: Option<Translations>,
+    hr: Option<Translations>,
     it: Option<Translations>,
     ja: Option<Translations>,
     pl: Option<Translations>,
@@ -415,6 +419,7 @@ impl LangInfo {
             Language::es => self.es = trans,
             Language::fi => self.fi = trans,
             Language::fr => self.fr = trans,
+            Language::hr => self.hr = trans,
             Language::it => self.it = trans,
             Language::ja => self.ja = trans,
             Language::pl => self.pl = trans,
@@ -439,6 +444,7 @@ impl LangInfo {
             Language::es => self.es.as_ref().unwrap(),
             Language::fi => self.fi.as_ref().unwrap(),
             Language::fr => self.fr.as_ref().unwrap(),
+            Language::hr => self.hr.as_ref().unwrap(),
             Language::it => self.it.as_ref().unwrap(),
             Language::ja => self.ja.as_ref().unwrap(),
             Language::pl => self.pl.as_ref().unwrap(),
@@ -587,6 +593,7 @@ impl Language {
             Language::es => NumberFormat::ArabicPeriod, // TODO: Only Central America.
             Language::fi => NumberFormat::ArabicComma,
             Language::fr => NumberFormat::ArabicComma,
+            Language::hr => NumberFormat::ArabicComma,
             Language::it => NumberFormat::ArabicComma,
             Language::ja => NumberFormat::ArabicPeriod,
             Language::pl => NumberFormat::ArabicComma,
