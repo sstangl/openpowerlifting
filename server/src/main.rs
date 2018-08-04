@@ -282,7 +282,7 @@ fn meet(
 
     let meet_id = opldb.get_meet_id(meetpath_str)?;
     let locale = make_locale(&langinfo, languages, &cookies);
-    let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort)?;
+    let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
     Some(Template::render("meet", &context))
 }
 

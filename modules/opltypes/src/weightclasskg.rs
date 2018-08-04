@@ -4,6 +4,7 @@ use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
+use std::cmp::Ordering;
 use std::fmt;
 use std::num;
 use std::str::FromStr;
@@ -11,7 +12,7 @@ use std::str::FromStr;
 use {WeightAny, WeightKg, WeightUnits};
 
 /// The definition of the "WeightClassKg" column.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum WeightClassKg {
     /// A class defined as being under or equal to a maximum weight.
     UnderOrEqual(WeightKg),
@@ -71,6 +72,40 @@ impl WeightClassKg {
 impl fmt::Display for WeightClassKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.as_kg().fmt(f)
+    }
+}
+
+impl PartialOrd for WeightClassKg {
+    fn partial_cmp(&self, other: &WeightClassKg) -> Option<Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for WeightClassKg {
+    fn cmp(&self, other: &WeightClassKg) -> Ordering {
+        match self {
+            WeightClassKg::UnderOrEqual(kg) => {
+                match other {
+                    WeightClassKg::UnderOrEqual(other_kg) => kg.cmp(&other_kg),
+                    WeightClassKg::Over(_) => Ordering::Less,
+                    WeightClassKg::None => Ordering::Less,
+                }
+            }
+            WeightClassKg::Over(kg) => {
+                match other {
+                    WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
+                    WeightClassKg::Over(other_kg) => kg.cmp(&other_kg),
+                    WeightClassKg::None => Ordering::Less,
+                }
+            }
+            WeightClassKg::None => {
+                match other {
+                    WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
+                    WeightClassKg::Over(_) => Ordering::Greater,
+                    WeightClassKg::None => Ordering::Equal,
+                }
+            }
+        }
     }
 }
 

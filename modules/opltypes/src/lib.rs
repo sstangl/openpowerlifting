@@ -1,5 +1,7 @@
 //! A collection of datatypes used in the OpenPowerlifting database.
 
+#![feature(const_fn)]
+
 // External dependencies.
 extern crate serde;
 #[macro_use]

@@ -9,7 +9,7 @@ use std::str::FromStr;
 /// The definition of the "Event" column.
 /// An `Event` is represented as a bitfield, with
 /// one bit for each of S, B, and D.
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub struct Event(u8);
 
 impl Event {
@@ -17,6 +17,41 @@ impl Event {
     const BITFLAG_BENCH: u8 = 0b010;
     const BITFLAG_DEADLIFT: u8 = 0b001;
     const BITFLAG_FULLPOWER: u8 = 0b111;
+
+    #[inline(always)]
+    pub const fn sbd() -> Event {
+        Event(Self::BITFLAG_FULLPOWER)
+    }
+
+    #[inline(always)]
+    pub const fn bd() -> Event {
+        Event(Self::BITFLAG_BENCH | Self::BITFLAG_DEADLIFT)
+    }
+
+    #[inline(always)]
+    pub const fn sb() -> Event {
+        Event(Self::BITFLAG_SQUAT | Self::BITFLAG_BENCH)
+    }
+
+    #[inline(always)]
+    pub const fn sd() -> Event {
+        Event(Self::BITFLAG_SQUAT | Self::BITFLAG_DEADLIFT)
+    }
+
+    #[inline(always)]
+    pub const fn s() -> Event {
+        Event(Self::BITFLAG_SQUAT)
+    }
+
+    #[inline(always)]
+    pub const fn b() -> Event {
+        Event(Self::BITFLAG_BENCH)
+    }
+
+    #[inline(always)]
+    pub const fn d() -> Event {
+        Event(Self::BITFLAG_DEADLIFT)
+    }
 
     /// True iff the Event contains a Squat.
     #[inline]

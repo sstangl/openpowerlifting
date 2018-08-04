@@ -679,6 +679,15 @@ impl Serialize for LocalizedWeightClassAny {
     }
 }
 
+impl fmt::Display for LocalizedWeightClassAny {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self.format {
+            NumberFormat::ArabicPeriod => write!(f, "{}", self.class),
+            NumberFormat::ArabicComma => write!(f, "{}", self.class.format_comma()),
+        }
+    }
+}
+
 /// Gets the lifter's name localized into the target language.
 pub fn get_localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
     match language {

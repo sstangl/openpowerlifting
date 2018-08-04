@@ -89,6 +89,7 @@ fn test_meet_pages_with_explicit_sorts() {
     let client = client();
     assert_eq!(client.get("/m/wrpf/bob4").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/m/wrpf/bob4/by-glossbrenner").dispatch().status(), Status::Ok);
+    assert_eq!(client.get("/m/wrpf/bob4/by-division").dispatch().status(), Status::Ok);
 }
 
 #[test]

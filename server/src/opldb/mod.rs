@@ -144,6 +144,12 @@ impl Entry {
     pub fn highest_deadliftkg(&self) -> WeightKg {
         self.best3deadliftkg.max(self.deadlift4kg)
     }
+
+    /// Borrows the Division string.
+    #[inline]
+    pub fn get_division(&self) -> Option<&str> {
+        self.division.as_ref().map(|s| s.as_str())
+    }
 }
 
 /// The collection of data stores that constitute the complete dataset.
