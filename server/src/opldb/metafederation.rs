@@ -78,6 +78,7 @@ impl MetaFederation {
                     || meet.federation == Federation::APU
                     || meet.federation == Federation::AsianPF
                     || meet.federation == Federation::BAWLA
+                    || meet.federation == Federation::BDFPA
                     || meet.federation == Federation::BP
                     || meet.federation == Federation::BVDK
                     || meet.federation == Federation::CommonwealthPF
@@ -180,6 +181,7 @@ impl MetaFederation {
             }
             MetaFederation::AllUK => {
                 meet.federation == Federation::BAWLA
+                    || meet.federation == Federation::BDFPA
                     || meet.federation == Federation::BP
                     || meet.federation == Federation::BPC
                     || meet.federation == Federation::BPU

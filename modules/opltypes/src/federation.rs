@@ -58,6 +58,8 @@ pub enum Federation {
     BAWLA,
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
+    #[strum(to_string = "BDFPA", serialize = "bdfpa")]
+    BDFPA,
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
     #[strum(to_string = "BPU", serialize = "bpu")]
