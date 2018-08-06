@@ -69,7 +69,7 @@
   <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union</option>
   <option value="capo" {% if selection.federation == "CAPO" %}selected{% endif %}>CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
   <option value="gpc-aus" {% if selection.federation == "GPC-AUS" %}selected{% endif %}>GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
-  <option value="pa" {% if selection.federation == "PA" %}selected{% endif %}>PA - Powerlifting Australia (2008+)</option>
+  <option value="pa" {% if selection.federation == "PA" %}selected{% endif %}>PA - Powerlifting Australia</option>
   <option value="proraw" {% if selection.federation == "ProRaw" %}selected{% endif %}>ProRaw</option>
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>
 </optgroup>
