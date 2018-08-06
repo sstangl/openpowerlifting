@@ -246,14 +246,10 @@ fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
         return a_sex.cmp(&b_sex);
     }
 
-    // Next, sort by Division.
-    let order = cmp_by_division(a.get_division(), b.get_division());
-    if order != cmp::Ordering::Equal {
-        return order;
-    }
-
-    // Finally, sort by WeightClass.
+    // Next, sort by WeightClass.
     a.weightclasskg.cmp(&b.weightclasskg)
+        // Finally, sort by Division.
+        .then(cmp_by_division(a.get_division(), b.get_division()))
 }
 
 fn finish_table<'db>(
@@ -277,7 +273,7 @@ fn finish_table<'db>(
         None => "",
     };
 
-    let title = Some(format!("{} {} {} {}", sex, equip, div, class));
+    let title = Some(format!("{} {} {} {}", sex, equip, class, div));
 
     let rows: Vec<ResultsRow> = entries
         .iter()
