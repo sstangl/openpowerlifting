@@ -13,6 +13,7 @@
     masters4 = {name = "Masters 4",min=69.5,max=999}
     masters5 = {name = "Masters 5",min=79.5,max=999}
     17plus = {name = "17+",min=17,max=19}
+    16plus = {name = "16+",min=16,max=19}
     under18 = {name = "Under 18",min=0,max=17}
     under17 = {name = "Under 17",min=0,max=16}
     under16 = {name = "Under 16",min=0,max=15}
@@ -76,3 +77,4 @@
     1018 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     0408 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     0201 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
+    0101 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
