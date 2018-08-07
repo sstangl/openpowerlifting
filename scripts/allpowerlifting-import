@@ -498,7 +498,12 @@ def parse_sheetname(csv):
             if 'PL' in row[sn_idx]:
                 row[event_idx] = 'SBD'
                 row[sn_idx] = row[sn_idx].replace('PL', '')
-
+            elif 'BP' in row[sn_idx]:
+                row[event_idx] = 'B'
+                row[sn_idx] = row[sn_idx].replace('BP', '')
+            elif 'DL' in row[sn_idx]:
+                row[event_idx] = 'D'
+                row[sn_idx] = row[sn_idx].replace('DL', '')
             row[sn_idx] = row[sn_idx].strip()
 
 
