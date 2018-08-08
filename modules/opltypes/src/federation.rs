@@ -196,6 +196,8 @@ pub enum Federation {
     PRIDE,
     #[strum(to_string = "ProRaw", serialize = "proraw")]
     ProRaw,
+    #[strum(to_string = "PRPA", serialize = "prpa")]
+    PRPA,
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
     #[strum(to_string = "RAW", serialize = "raw")]

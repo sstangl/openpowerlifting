@@ -211,6 +211,7 @@ impl MetaFederation {
                     || meet.federation == Federation::MM
                     || meet.federation == Federation::NASA
                     || meet.federation == Federation::NOTLD
+                    || meet.federation == Federation::PRPA
                     || meet.federation == Federation::RAW
                     || meet.federation == Federation::RAWU
                     || meet.federation == Federation::RPS
