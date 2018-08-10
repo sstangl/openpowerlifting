@@ -101,6 +101,8 @@ def get_division(div_text):
         return 'Masters 2'
     elif 'masters 3' in div_text:
         return 'Masters 3'
+    elif 'masters 4' in div_text:
+        return 'Masters 4'
     elif 'other' in div_text:
         return 'Guest'
     return ''
