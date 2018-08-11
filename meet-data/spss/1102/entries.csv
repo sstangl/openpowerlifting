@@ -1,34 +1,34 @@
-Place,Name,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Sex,CyrillicName,BirthYear,Equipment,Event
-,Sergey Kolosov,Russia,103.4,,,,,185,190,-192.5,,190,270,285,-290,,285,475,M,Сергей Колосов,1971,Raw,BD
-,Andrey Fedoseev,Russia,111.6,,,,,175,185,-191,,185,260,270,-283,285,270,455,M,Андрей Федосеев,1974,Raw,BD
-,Alexander Karpenko,Russia,77.1,,,,,135,142.5,145,,145,230,-240,-240,,230,375,M,Александр Карпенко,1992,Raw,BD
-,Andrey Belyaev,Russia,90,,,,,210,220,228.5,,228.5,330,350,-370,370,350,578.5,M,Андрей Беляев,1983,Raw,BD
-,Kirill Sarychev,Russia,165.4,,,,,270,290,303,,303,310,330,350,,350,653,M,Кирилл Сарычев,1989,Raw,BD
-,Yuri Arkhipov,Russia,89.1,,,,,200,207.5,215,,215,330,-342.5,-345,-345,330,545,M,Юрий Архипов,1985,Raw,BD
-,Rufat Agaev,Azerbaijan,124.2,,,,,225,232.5,-235,,232.5,357.5,373,,-393,373,605.5,M,,1975,Raw,BD
-,Mikhail Algash,Russia,131.3,,,,,260,265,270,,270,320,-330,330,-340,330,600,M,Михаил Алгаш,1988,Raw,BD
-,Alexey Bakhirev,Russia,75,,,,,152.5,162.5,170,,170,270,291,297.5,-299,297.5,467.5,M,Алексей Бахирев,1981,Raw,BD
-1,Anton Solodov,Russia,153.3,425,445,460,460,285,302.5,315,,315,325,340,-355,355,340,1115,M,Антон Солодов,1985,Single-ply,SBD
-1,Eduard Melyaev,Russia,83.9,,,,,180,187.5,192.5,-197.5,192.5,,,,,,192.5,M,Эдуард Меляев,1970,Raw,B
-2,Mikhail Veber,Russia,89.5,,,,,177.5,182.5,185,-190,185,,,,,,185,M,Михаил Вебер,1971,Raw,B
-3,Sergey Kolosov,Russia,103.4,,,,,185,190,-192.5,,190,,,,,,190,M,Сергей Колосов,1971,Raw,B
-4,Andrey Fedoseev,Russia,111.6,,,,,175,185,-191,,185,,,,,,185,M,Андрей Федосеев,1974,Raw,B
-5,Alexander Karpenko,Russia,77.1,,,,,135,142.5,145,150,145,,,,,,145,M,Александр Карпенко,1992,Raw,B
-1,Kirill Sarychev,Russia,165.4,,,,,270,290,303,,303,,,,,,303,M,Кирилл Сарычев,1989,Raw,B
-2,Mikhail Algash,Russia,131.3,,,,,260,265,270,-275,270,,,,,,270,M,Михаил Алгаш,1988,Raw,B
-3,Andrey Belyaev,Russia,90,,,,,210,220,228.5,232.5,228.5,,,,,,228.5,M,Андрей Беляев,1983,Raw,B
-4,Igor Kushin,Russia,108.6,,,,,240,250,-253,,250,,,,,,250,M,Игорь Кушин,1966,Raw,B
-5,Yuri Arkhipov,Russia,89.1,,,,,-200,207.5,215,217.5,215,,,,,,215,M,Юрий Архипов,1985,Raw,B
-6,Alexey Bakhirev,Russia,75,,,,,152.5,162.5,170,-172.5,170,,,,,,170,M,Алексей Бахирев,1981,Raw,B
-DQ,Andrey Kisel,Ukraine,107.4,,,,,-255,-255,-255,,,,,,,,,M,Андрій Кисіль,1975,Raw,B
-1,Sergey Kolosov,Russia,103.4,,,,,,,,,,270,285,-290,,285,285,M,Сергей Колосов,1971,Raw,D
-2,Andrey Fedoseev,Russia,111.6,,,,,,,,,,260,270,-283,285,270,270,M,Андрей Федосеев,1974,Raw,D
-3,Alexander Karpenko,Russia,77.1,,,,,,,,,,230,-240,-240,,230,230,M,Александр Карпенко,1992,Raw,D
-1,Yulia Zaugolova,Russia,65.85,,,,,,,,,,-210.5,210.5,222.5,232.5,222.5,222.5,F,Юлия Зауголова,1981,Raw,D
-2,Andrey Belyaev,Russia,90,,,,,,,,,,330,350,-370,370,350,350,M,Андрей Беляев,1983,Raw,D
-3,Rufat Agaev,Azerbaijan,124.2,,,,,,,,,,357.5,373,,-393,373,373,M,,1975,Raw,D
-4,Alexey Bakhirev,Russia,75,,,,,,,,,,270,291,297.5,-299,297.5,297.5,M,Алексей Бахирев,1981,Raw,D
-5,Yuri Arkhipov,Russia,89.1,,,,,,,,,,330,-342.5,-345,-345,330,330,M,Юрий Архипов,1985,Raw,D
-6,Anton Solodov,Russia,153.3,,,,,,,,,,325,340,-355,355,340,340,M,Антон Солодов,1985,Raw,D
-7,Kirill Sarychev,Russia,165.4,,,,,,,,,,310,330,350,,350,350,M,Кирилл Сарычев,1989,Raw,D
-8,Mikhail Algash,Russia,131.3,,,,,,,,,,320,-330,330,-340,330,330,M,Михаил Алгаш,1988,Raw,D
+Place,Name,Division,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Sex,CyrillicName,BirthYear,Equipment,Event
+1,Sergey Kolosov,Open,Russia,103.4,,,,,185,190,-192.5,,190,270,285,-290,,285,475,M,Сергей Колосов,1971,Raw,BD
+2,Andrey Fedoseev,Open,Russia,111.6,,,,,175,185,-191,,185,260,270,-283,285,270,455,M,Андрей Федосеев,1974,Raw,BD
+1,Alexander Karpenko,Open,Russia,77.1,,,,,135,142.5,145,,145,230,-240,-240,,230,375,M,Александр Карпенко,1992,Raw,BD
+1,Andrey Belyaev,Open,Russia,90,,,,,210,220,228.5,,228.5,330,350,-370,370,350,578.5,M,Андрей Беляев,1983,Raw,BD
+1,Kirill Sarychev,Open,Russia,165.4,,,,,270,290,303,,303,310,330,350,,350,653,M,Кирилл Сарычев,1989,Raw,BD
+2,Yuri Arkhipov,Open,Russia,89.1,,,,,200,207.5,215,,215,330,-342.5,-345,-345,330,545,M,Юрий Архипов,1985,Raw,BD
+1,Rufat Agaev,Open,Azerbaijan,124.2,,,,,225,232.5,-235,,232.5,357.5,373,,-393,373,605.5,M,,1975,Raw,BD
+1,Mikhail Algash,Open,Russia,131.3,,,,,260,265,270,,270,320,-330,330,-340,330,600,M,Михаил Алгаш,1988,Raw,BD
+1,Alexey Bakhirev,Open,Russia,75,,,,,152.5,162.5,170,,170,270,291,297.5,-299,297.5,467.5,M,Алексей Бахирев,1981,Raw,BD
+1,Anton Solodov,Open,Russia,153.3,425,445,460,460,285,302.5,315,,315,325,340,-355,355,340,1115,M,Антон Солодов,1985,Single-ply,SBD
+1,Eduard Melyaev,Open,Russia,83.9,,,,,180,187.5,192.5,-197.5,192.5,,,,,,192.5,M,Эдуард Меляев,1970,Raw,B
+2,Mikhail Veber,Open,Russia,89.5,,,,,177.5,182.5,185,-190,185,,,,,,185,M,Михаил Вебер,1971,Raw,B
+3,Sergey Kolosov,Open,Russia,103.4,,,,,185,190,-192.5,,190,,,,,,190,M,Сергей Колосов,1971,Raw,B
+4,Andrey Fedoseev,Open,Russia,111.6,,,,,175,185,-191,,185,,,,,,185,M,Андрей Федосеев,1974,Raw,B
+5,Alexander Karpenko,Open,Russia,77.1,,,,,135,142.5,145,150,145,,,,,,145,M,Александр Карпенко,1992,Raw,B
+1,Kirill Sarychev,Open,Russia,165.4,,,,,270,290,303,,303,,,,,,303,M,Кирилл Сарычев,1989,Raw,B
+2,Mikhail Algash,Open,Russia,131.3,,,,,260,265,270,-275,270,,,,,,270,M,Михаил Алгаш,1988,Raw,B
+3,Andrey Belyaev,Open,Russia,90,,,,,210,220,228.5,232.5,228.5,,,,,,228.5,M,Андрей Беляев,1983,Raw,B
+4,Igor Kushin,Open,Russia,108.6,,,,,240,250,-253,,250,,,,,,250,M,Игорь Кушин,1966,Raw,B
+5,Yuri Arkhipov,Open,Russia,89.1,,,,,-200,207.5,215,217.5,215,,,,,,215,M,Юрий Архипов,1985,Raw,B
+6,Alexey Bakhirev,Open,Russia,75,,,,,152.5,162.5,170,-172.5,170,,,,,,170,M,Алексей Бахирев,1981,Raw,B
+DQ,Andrey Kisel,Open,Ukraine,107.4,,,,,-255,-255,-255,,,,,,,,,M,Андрій Кисіль,1975,Raw,B
+1,Sergey Kolosov,Open,Russia,103.4,,,,,,,,,,270,285,-290,,285,285,M,Сергей Колосов,1971,Raw,D
+2,Andrey Fedoseev,Open,Russia,111.6,,,,,,,,,,260,270,-283,285,270,270,M,Андрей Федосеев,1974,Raw,D
+3,Alexander Karpenko,Open,Russia,77.1,,,,,,,,,,230,-240,-240,,230,230,M,Александр Карпенко,1992,Raw,D
+1,Yulia Zaugolova,Open,Russia,65.85,,,,,,,,,,-210.5,210.5,222.5,232.5,222.5,222.5,F,Юлия Зауголова,1981,Raw,D
+2,Andrey Belyaev,Open,Russia,90,,,,,,,,,,330,350,-370,370,350,350,M,Андрей Беляев,1983,Raw,D
+3,Rufat Agaev,Open,Azerbaijan,124.2,,,,,,,,,,357.5,373,,-393,373,373,M,,1975,Raw,D
+4,Alexey Bakhirev,Open,Russia,75,,,,,,,,,,270,291,297.5,-299,297.5,297.5,M,Алексей Бахирев,1981,Raw,D
+5,Yuri Arkhipov,Open,Russia,89.1,,,,,,,,,,330,-342.5,-345,-345,330,330,M,Юрий Архипов,1985,Raw,D
+6,Anton Solodov,Open,Russia,153.3,,,,,,,,,,325,340,-355,355,340,340,M,Антон Солодов,1985,Raw,D
+7,Kirill Sarychev,Open,Russia,165.4,,,,,,,,,,310,330,350,,350,350,M,Кирилл Сарычев,1989,Raw,D
+8,Mikhail Algash,Open,Russia,131.3,,,,,,,,,,320,-330,330,-340,330,330,M,Михаил Алгаш,1988,Raw,D
