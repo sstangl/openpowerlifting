@@ -20,8 +20,6 @@ pub enum Place {
     DD,
     /// No-Show.
     NS,
-    /// No place specified.
-    None, // TODO: Require every row to have a Place.
 }
 
 impl Place {
@@ -32,7 +30,6 @@ impl Place {
             Place::DQ => true,
             Place::DD => true,
             Place::NS => true,
-            Place::None => false,
         }
     }
 }
@@ -45,7 +42,6 @@ impl fmt::Display for Place {
             Place::DQ => write!(f, "DQ"),
             Place::DD => write!(f, "DD"),
             Place::NS => write!(f, "NS"),
-            Place::None => Ok(()),
         }
     }
 }
@@ -55,7 +51,6 @@ impl FromStr for Place {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            "" => Ok(Place::None),
             "G" => Ok(Place::G),
             "DQ" => Ok(Place::DQ),
             "DD" => Ok(Place::DD),
@@ -109,7 +104,6 @@ mod tests {
         assert_eq!("DQ".parse::<Place>().unwrap(), Place::DQ);
         assert_eq!("DD".parse::<Place>().unwrap(), Place::DD);
         assert_eq!("NS".parse::<Place>().unwrap(), Place::NS);
-        assert_eq!("".parse::<Place>().unwrap(), Place::None);
     }
 
     #[test]

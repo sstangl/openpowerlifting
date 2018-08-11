@@ -969,7 +969,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
 
     # Place may not be missing.
     if 'Place' in csv.fieldnames and not row[csv.index('Place')]:
-        pwarning("Missing place: %s" % ','.join(row))
+        perror("Missing place: %s" % ','.join(row))
 
 
 def check(scriptname, filename, configtoml, meetpath):
