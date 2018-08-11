@@ -66,7 +66,9 @@
 </optgroup>
 <optgroup label="{{strings.country.australia}}">
   <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>{{strings.selectors.fed.all_australia}}</option>
+  <option value="aaplf" {% if selection.federation == "AAPLF" %}selected{% endif %}>AAPLF - Australian Amateur Powerlifting Federation</option>
   <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union</option>
+  <option value="ausdfpf" {% if selection.federation == "AusDFPF" %}selected{% endif %}>AusDFPF - Australian Drug Free Powerlifting Federation</option>
   <option value="capo" {% if selection.federation == "CAPO" %}selected{% endif %}>CAPO - CAPO Powerlifting [WPC/GPA/IPO] (2017+)</option>
   <option value="gpc-aus" {% if selection.federation == "GPC-AUS" %}selected{% endif %}>GPC-AUS - GPC Australia [GPC] (Help Needed!)</option>
   <option value="pa" {% if selection.federation == "PA" %}selected{% endif %}>PA - Powerlifting Australia</option>

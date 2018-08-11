@@ -60,6 +60,7 @@ def add_cyrillic_name(latin, cyrillic):
 
 
 TESTED_FEDERATIONS = [
+    "AAPLF",
     "AAU",
     "ADAU",
     "ADFPA",
@@ -68,6 +69,7 @@ TESTED_FEDERATIONS = [
     "AfricanPF",
     "APU",
     "AsianPF",
+    "AusDFPF",
     "BAWLA",
     "BDFPA",
     "BP",

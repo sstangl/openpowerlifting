@@ -32,6 +32,8 @@ pub enum Federation {
     _365Strong,
     #[strum(to_string = "AAP", serialize = "aap")]
     AAP,
+    #[strum(to_string = "AAPLF", serialize = "aaplf")]
+    AAPLF,
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
     #[strum(to_string = "ADAU", serialize = "adau")]
@@ -54,6 +56,8 @@ pub enum Federation {
     APU,
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
+    #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
+    AusDFPF,
     #[strum(to_string = "BAWLA", serialize = "bawla")]
     BAWLA,
     #[strum(to_string = "BB", serialize = "bb")]
