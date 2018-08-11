@@ -134,8 +134,5 @@ mod tests {
 
         let place = "NS".parse::<Place>().unwrap();
         assert_eq!(format!("{}", place), "NS");
-
-        let place = "".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "");
     }
 }
