@@ -1,6 +1,7 @@
 //! Checks for entries.csv files.
 
 use csv;
+use strum::IntoEnumIterator;
 
 use std::error::Error;
 use std::io;
@@ -8,60 +9,72 @@ use std::path::PathBuf;
 
 use Report;
 
-const KNOWN_HEADERS: [&str; 38] = [
-    "Name",
-    "CyrillicName",
-    "JapaneseName",
-    "Sex",
-    "Age",
-    "Place",
-    "Event",
-    "Division",
-    "Equipment",
-    "BirthYear",
-    "BirthDay",
-    "Tested",
+/// Maps KnownHeader to index.
+struct HeaderIndexMap(Vec<Option<usize>>);
 
-    "WeightClassKg",
-    "BodyweightKg",
-    "TotalKg",
+#[derive(Copy, Clone, Debug, EnumIter, Eq, PartialEq, EnumString)]
+enum KnownHeader {
+    Name,
+    CyrillicName,
+    JapaneseName,
+    Sex,
+    Age,
+    Place,
+    Event,
+    Division,
+    Equipment,
+    BirthYear,
+    BirthDay,
+    Tested,
+    AgeClass,
 
-    "Best3SquatKg",
-    "Squat1Kg",
-    "Squat2Kg",
-    "Squat3Kg",
-    "Squat4Kg",
+    WeightClassKg,
+    BodyweightKg,
+    TotalKg,
 
-    "Best3BenchKg",
-    "Bench1Kg",
-    "Bench2Kg",
-    "Bench3Kg",
-    "Bench4Kg",
+    Best3SquatKg,
+    Squat1Kg,
+    Squat2Kg,
+    Squat3Kg,
+    Squat4Kg,
 
-    "Best3DeadliftKg",
-    "Deadlift1Kg",
-    "Deadlift2Kg",
-    "Deadlift3Kg",
-    "Deadlift4Kg",
+    Best3BenchKg,
+    Bench1Kg,
+    Bench2Kg,
+    Bench3Kg,
+    Bench4Kg,
 
+    Best3DeadliftKg,
+    Deadlift1Kg,
+    Deadlift2Kg,
+    Deadlift3Kg,
+    Deadlift4Kg,
 
-    // Columns below this point are valid but ignored.
-    "AgeClass",
-    "Team",
-    "Country-State",
-    "Country",
-    "State",
-    "College/University",
-    "School",
-    "Category",
-];
+    // Columns below this point are ignored.
+    Team,
+    #[strum(serialize = "Country-State")]
+    CountryState,
+    Country,
+    State,
+    #[strum(serialize = "College/University")]
+    CollegeUniversity,
+    School,
+    Category,
+}
 
 /// Checks that the headers are valid.
-fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
+fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderIndexMap {
+    // Build a map of (KnownHeader -> index).
+    let known_header_count = KnownHeader::iter().count();
+    let mut header_index_map: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
+    for _ in 0..known_header_count {
+        header_index_map.push(None);
+    }
+
     // There must be headers.
     if headers.is_empty() {
         report.error("Missing column headers");
-        return;
+        return HeaderIndexMap(header_index_map);
     }
 
     let mut has_squat = false;
@@ -69,9 +82,10 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     let mut has_deadlift = false;
 
     for (i, header) in headers.iter().enumerate() {
-        // Every header must be from the KNOWN_HEADERS list.
-        if !KNOWN_HEADERS.iter().any(|&x| x == header) {
-            report.error(format!("Unknown header '{}'", header));
+        // Every header must be known. Build the header_index_map.
+        match header.parse::<KnownHeader>() {
+            Ok(known) => header_index_map[known as usize] = Some(i),
+            Err(_) => report.error(format!("Unknown header '{}'", header)),
         }
 
         // Test for duplicate headers.
@@ -117,6 +131,8 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     if !headers.iter().any(|x| x == "Event") {
         report.error("There must be an 'Event' column");
     }
+
+    HeaderIndexMap(header_index_map)
 }
 
 /// Checks a single entries.csv file from an open `csv::Reader`.
@@ -134,10 +150,12 @@ where
     if !report.messages.is_empty() {
         return Ok(report);
     }
-
+    
     // This allocation can be re-used for each row.
     let mut record = csv::StringRecord::new();
-    while rdr.read_record(&mut record)? {}
+    while rdr.read_record(&mut record)? {
+        let line = record.position().map_or(0, |p| p.line());
+    }
 
     Ok(report)
 }

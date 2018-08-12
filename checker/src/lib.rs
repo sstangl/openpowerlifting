@@ -1,6 +1,9 @@
 extern crate chrono;
 extern crate csv;
 extern crate opltypes;
+extern crate strum;
+#[macro_use]
+extern crate strum_macros;
 
 pub mod check_entries;
 use check_entries::check_entries;
