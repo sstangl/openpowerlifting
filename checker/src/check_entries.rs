@@ -19,6 +19,37 @@ impl HeaderIndexMap {
     }
 }
 
+/// Stores parsed data for a single row.
+///
+/// The intention is for each field to only be parsed once, after
+/// which further processing can use the standard datatype.
+#[derive(Default)]
+struct Entry {
+    pub sex: Option<Sex>,
+    pub age: Option<Age>,
+    pub place: Option<Place>,
+    pub event: Option<Event>,
+    pub equipment: Option<Equipment>,
+    pub weightclasskg: Option<WeightClassKg>,
+    pub bodyweightkg: Option<WeightKg>,
+    pub totalkg: Option<WeightKg>,
+    pub best3squatkg: Option<WeightKg>,
+    pub squat1kg: Option<WeightKg>,
+    pub squat2kg: Option<WeightKg>,
+    pub squat3kg: Option<WeightKg>,
+    pub squat4kg: Option<WeightKg>,
+    pub best3benchkg: Option<WeightKg>,
+    pub bench1kg: Option<WeightKg>,
+    pub bench2kg: Option<WeightKg>,
+    pub bench3kg: Option<WeightKg>,
+    pub bench4kg: Option<WeightKg>,
+    pub best3deadliftkg: Option<WeightKg>,
+    pub deadlift1kg: Option<WeightKg>,
+    pub deadlift2kg: Option<WeightKg>,
+    pub deadlift3kg: Option<WeightKg>,
+    pub deadlift4kg: Option<WeightKg>,
+}
+
 #[derive(Copy, Clone, Debug, Display, EnumIter, Eq, PartialEq, EnumString)]
 enum Header {
     Name,
@@ -68,17 +99,6 @@ enum Header {
     School,
     Category,
 }
-
-/// List of fields that contain a simple weight value and can be negative.
-const WEIGHT_FIELDS: [Header; 16] = [
-    Header::Squat1Kg, Header::Squat2Kg, Header::Squat3Kg,
-    Header::Squat4Kg, Header::Best3SquatKg,
-    Header::Bench1Kg, Header::Bench2Kg, Header::Bench3Kg,
-    Header::Bench4Kg, Header::Best3BenchKg,
-    Header::Deadlift1Kg, Header::Deadlift2Kg, Header::Deadlift3Kg,
-    Header::Deadlift4Kg, Header::Best3DeadliftKg,
-    Header::TotalKg,
-];
 
 /// Checks that the headers are valid.
 fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderIndexMap {
@@ -170,29 +190,37 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     }
 }
 
-fn check_column_sex(s: &str, line: u64, report: &mut Report) {
-    if s.is_empty() {
-        report.error_on(line, "Empty Sex column");
-    } else if s != "M" && s != "F" {
-        report.error_on(line, format!("Invalid Sex '{}'", s));
+fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Option<Sex> {
+    match s.parse::<Sex>() {
+        Ok(s) => Some(s),
+        Err(_) => {
+            report.error_on(line, format!("Invalid Sex '{}'", s));
+            None
+        }
     }
 }
 
-fn check_column_equipment(s: &str, line: u64, report: &mut Report) {
+fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Option<Equipment> {
     match s.parse::<Equipment>() {
-        Ok(_) => (),
-        Err(_) => report.error_on(line, format!("Invalid Equipment '{}'", s)),
-    };
+        Ok(eq) => Some(eq),
+        Err(_) => {
+            report.error_on(line, format!("Invalid Equipment '{}'", s));
+            None
+        }
+    }
 }
 
-fn check_column_place(s: &str, line: u64, report: &mut Report) {
+fn check_column_place(s: &str, line: u64, report: &mut Report) -> Option<Place> {
     match s.parse::<Place>() {
-        Ok(_) => (),
-        Err(_) => report.error_on(line, format!("Invalid Place '{}'", s)),
-    };
+        Ok(p) => Some(p),
+        Err(_) => {
+            report.error_on(line, format!("Invalid Place '{}'", s));
+            None
+        }
+    }
 }
 
-fn check_column_age(s: &str, line: u64, report: &mut Report) {
+fn check_column_age(s: &str, line: u64, report: &mut Report) -> Option<Age> {
     match s.parse::<Age>() {
         Ok(age) => {
             let num = match age {
@@ -206,12 +234,17 @@ fn check_column_age(s: &str, line: u64, report: &mut Report) {
             } else if num > 100 {
                 report.warning_on(line, format!("Age '{}' unexpectedly high", s));
             }
+
+            Some(age)
         }
-        Err(_) => report.error_on(line, format!("Invalid Age '{}'", s)),
-    };
+        Err(_) => {
+            report.error_on(line, format!("Invalid Age '{}'", s));
+            None
+        }
+    }
 }
 
-fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) {
+fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) -> Option<Event> {
     match s.parse::<Event>() {
         Ok(event) => {
             if event.has_squat() && headers.get(Header::Best3SquatKg).is_none() {
@@ -223,15 +256,17 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
             if event.has_deadlift() && headers.get(Header::Best3DeadliftKg).is_none() {
                 report.error_on(line, "Event has 'D', but no Best3DeadliftKg");
             }
+            Some(event)
         }
         Err(e) => {
             report.error_on(line, format!("Invalid Event '{}': {}", s, e.to_string()));
+            None
         }
     }
 }
 
 /// Tests a column describing the amount of weight lifted.
-fn check_generic_weight(s: &str, line: u64, header: Header, report: &mut Report) {
+fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Option<WeightKg> {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, format!("{} cannot be zero", header));
@@ -240,19 +275,22 @@ fn check_generic_weight(s: &str, line: u64, header: Header, report: &mut Report)
     }
 
     match s.parse::<WeightKg>() {
-        Ok(_) => (),
-        Err(_) => report.error_on(line, format!("Invalid {} '{}'", header, s)),
-    };
-}
-
-fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) {
-    if s.starts_with('-') {
-        report.error_on(line, format!("BodyweightKg '{}' cannot be negative", s))
+        Ok(w) => Some(w),
+        Err(_) => {
+            report.error_on(line, format!("Invalid {} '{}'", header, s));
+            None
+        }
     }
-    check_generic_weight(s, line, Header::BodyweightKg, report);
 }
 
-fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) {
+fn check_positive_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Option<WeightKg> {
+    if s.starts_with('-') {
+        report.error_on(line, format!("{} '{}' cannot be negative", header, s))
+    }
+    check_weight(s, line, header, report)
+}
+
+fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Option<WeightClassKg> {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, "WeightClassKg cannot be zero");
@@ -261,9 +299,12 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) {
     }
 
     match s.parse::<WeightClassKg>() {
-        Ok(_) => (),
-        Err(e) => report.error_on(line, format!("Invalid WeightClassKg '{}': {}", s, e)),
-    };
+        Ok(w) => Some(w),
+        Err(e) => {
+            report.error_on(line, format!("Invalid WeightClassKg '{}': {}", s, e));
+            None
+        }
+    }
 }
 
 fn check_column_tested(s: &str, line: u64, report: &mut Report) {
@@ -302,34 +343,105 @@ where
             }
         }
 
+        let mut entry = Entry::default();
+
         // Check mandatory fields.
         if let Some(idx) = headers.get(Header::Sex) {
-            check_column_sex(&record[idx], line, &mut report);
+            entry.sex = check_column_sex(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Equipment) {
-            check_column_equipment(&record[idx], line, &mut report);
+            entry.equipment = check_column_equipment(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Place) {
-            check_column_place(&record[idx], line, &mut report);
+            entry.place = check_column_place(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Age) {
-            check_column_age(&record[idx], line, &mut report);
+            entry.age = check_column_age(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Event) {
-            check_column_event(&record[idx], line, &headers, &mut report);
+            entry.event = check_column_event(&record[idx], line, &headers, &mut report);
         }
 
         // Check all the weight fields.
-        for &field in &WEIGHT_FIELDS {
-            if let Some(idx) = headers.get(field) {
-                check_generic_weight(&record[idx], line, field, &mut report);
-            }
+        // Squat.
+        if let Some(idx) = headers.get(Header::Squat1Kg) {
+            entry.squat1kg =
+                check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
         }
+        if let Some(idx) = headers.get(Header::Squat2Kg) {
+            entry.squat2kg =
+                check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Squat3Kg) {
+            entry.squat3kg =
+                check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Squat4Kg) {
+            entry.squat4kg =
+                check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3SquatKg) {
+            entry.best3squatkg =
+                check_weight(&record[idx], line, Header::Best3SquatKg, &mut report);
+        }
+
+        // Bench.
+        if let Some(idx) = headers.get(Header::Bench1Kg) {
+            entry.bench1kg =
+                check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench2Kg) {
+            entry.bench2kg =
+                check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench3Kg) {
+            entry.bench3kg =
+                check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench4Kg) {
+            entry.bench4kg =
+                check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3BenchKg) {
+            entry.best3benchkg =
+                check_weight(&record[idx], line, Header::Best3BenchKg, &mut report);
+        }
+
+        // Deadlift.
+        if let Some(idx) = headers.get(Header::Deadlift1Kg) {
+            entry.deadlift1kg =
+                check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift2Kg) {
+            entry.deadlift2kg =
+                check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift3Kg) {
+            entry.deadlift3kg =
+                check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift4Kg) {
+            entry.deadlift4kg =
+                check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3DeadliftKg) {
+            entry.best3deadliftkg =
+                check_weight(&record[idx], line, Header::Best3DeadliftKg, &mut report);
+        }
+
+        // Total.
+        if let Some(idx) = headers.get(Header::TotalKg) {
+            entry.totalkg =
+                check_positive_weight(&record[idx], line, Header::TotalKg, &mut report);
+        }
+
         if let Some(idx) = headers.get(Header::BodyweightKg) {
-            check_column_bodyweightkg(&record[idx], line, &mut report);
+            entry.bodyweightkg =
+                check_positive_weight(&record[idx], line, Header::BodyweightKg, &mut report);
         }
         if let Some(idx) = headers.get(Header::WeightClassKg) {
-            check_column_weightclasskg(&record[idx], line, &mut report);
+            entry.weightclasskg =
+                check_column_weightclasskg(&record[idx], line, &mut report);
         }
 
         // Check optional fields.
