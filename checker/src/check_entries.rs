@@ -153,6 +153,23 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
     HeaderIndexMap(header_index_map)
 }
 
+const CYRILLIC_CHARACTERS: &str =
+    "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
+     АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\
+     ҐґЄєЖжІіЇї\
+     -' ";
+
+fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
+    for c in s.chars() {
+        if !CYRILLIC_CHARACTERS.contains(c) {
+            let msg =
+                format!("CyrillicName '{}' contains non-Cyrillic character '{}'", s, c);
+            report.error_on(line, msg);
+            break;
+        }
+    }
+}
+
 fn check_column_sex(s: &str, line: u64, report: &mut Report) {
     if s.is_empty() {
         report.error_on(line, "Empty Sex column");
@@ -202,13 +219,6 @@ fn check_column_tested(s: &str, line: u64, report: &mut Report) {
         "" | "Yes" | "No" => (),
         _ => report.error_on(line, format!("Unknown Tested value '{}'", s)),
     }
-}
-
-fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
-    match s.parse::<AgeClass>() {
-        Ok(_) => (),
-        Err(_) => report.warning_on(line, format!("Invalid AgeClass '{}'", s)),
-    };
 }
 
 /// Checks a single entries.csv file from an open `csv::Reader`.
@@ -265,11 +275,9 @@ where
         if let Some(idx) = headers.get(KnownHeader::Tested) {
             check_column_tested(&record[idx], line, &mut report);
         }
-
-        // Leaving AgeClass disabled for the moment -- 9007 warnings currently.
-        //if let Some(idx) = headers.get(KnownHeader::AgeClass) {
-        //    check_column_ageclass(&record[idx], line, &mut report);
-        //}
+        if let Some(idx) = headers.get(KnownHeader::CyrillicName) {
+            check_column_cyrillicname(&record[idx], line, &mut report);
+        }
     }
 
     Ok(report)

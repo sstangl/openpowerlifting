@@ -93,7 +93,7 @@ fn test_invalid_headers() {
 }
 
 #[test]
-fn test_sex_column() {
+fn test_column_sex() {
     // The sex column cannot be empty.
     let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
                 Test User,90,,100,100,Raw,B,1";
@@ -102,5 +102,18 @@ fn test_sex_column() {
     // The sex column cannot be something invalid.
     let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
                 Test User,90,Z,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+}
+
+#[test]
+fn test_column_cyrillicname() {
+    // Cyrillic should pass.
+    let data = "Name,CyrillicName,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,Тест Юзр,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 0);
+
+    // Non-Cyrillic should fail.
+    let data = "Name,CyrillicName,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,Test User,90,M,100,100,Raw,B,1";
     assert_eq!(check(data), 1);
 }
