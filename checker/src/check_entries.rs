@@ -12,6 +12,12 @@ use Report;
 /// Maps KnownHeader to index.
 struct HeaderIndexMap(Vec<Option<usize>>);
 
+impl HeaderIndexMap {
+    pub fn get(&self, header: KnownHeader) -> Option<usize> {
+        self.0[header as usize]
+    }
+}
+
 #[derive(Copy, Clone, Debug, EnumIter, Eq, PartialEq, EnumString)]
 enum KnownHeader {
     Name,
@@ -135,6 +141,14 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
     HeaderIndexMap(header_index_map)
 }
 
+fn check_column_sex(s: &str, line: u64, report: &mut Report) {
+    if s.is_empty() {
+        report.error_on(line, "Empty Sex column");
+    } else if s != "M" && s != "F" {
+        report.error_on(line, format!("Invalid Sex '{}'", s));
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -146,15 +160,28 @@ pub fn do_check<R>(
 where
     R: io::Read,
 {
-    check_headers(rdr.headers()?, &mut report);
+    let headers: HeaderIndexMap = check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
         return Ok(report);
     }
-    
+
     // This allocation can be re-used for each row.
     let mut record = csv::StringRecord::new();
     while rdr.read_record(&mut record)? {
         let line = record.position().map_or(0, |p| p.line());
+
+        // Check each field for whitespace errors.
+        for field in &record {
+            if field.contains("  ") || field.starts_with(' ') || field.ends_with(' ') {
+                let msg = format!("Field '{}' contains extraneous spacing", field);
+                report.warning_on(line, msg);
+            }
+        }
+
+        // Check individual fields.
+        if let Some(idx) = headers.get(KnownHeader::Sex) {
+            check_column_sex(&record[idx], line, &mut report);
+        }
     }
 
     Ok(report)
