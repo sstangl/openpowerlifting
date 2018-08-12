@@ -15,7 +15,6 @@ use std::io::{self, Write};
 use std::path::PathBuf;
 use std::process;
 use std::sync::atomic::{AtomicUsize, Ordering};
-use std::sync::Arc;
 
 // For purposes of testing, a meet directory is any directory containing
 // either of the files "entries.csv" or "meet.csv".
@@ -87,11 +86,11 @@ fn main() -> Result<(), Box<Error>> {
         .filter(|entry| is_meetdir(entry))
         .collect();
 
-    let error_count = Arc::new(AtomicUsize::new(0));
-    let warning_count = Arc::new(AtomicUsize::new(0));
+    let error_count = AtomicUsize::new(0);
+    let warning_count = AtomicUsize::new(0);
 
     // Unexpected errors that occurred while reading files.
-    let internal_error_count = Arc::new(AtomicUsize::new(0));
+    let internal_error_count = AtomicUsize::new(0);
 
     // Iterate in parallel over each meet directory and apply checks.
     meetdirs.into_par_iter().for_each(|dir| {
@@ -128,12 +127,10 @@ fn main() -> Result<(), Box<Error>> {
         };
     });
 
-    let error_count = Arc::try_unwrap(error_count).unwrap().into_inner();
-    let warning_count = Arc::try_unwrap(warning_count).unwrap().into_inner();
+    let error_count = error_count.load(Ordering::SeqCst);
+    let warning_count = warning_count.load(Ordering::SeqCst);
+    let internal_error_count = internal_error_count.load(Ordering::SeqCst);
     print_summary(error_count, warning_count);
-
-    let internal_error_count =
-        Arc::try_unwrap(internal_error_count).unwrap().into_inner();
 
     if error_count > 0 || internal_error_count > 0 {
         process::exit(1);
