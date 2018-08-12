@@ -245,6 +245,27 @@ fn check_generic_weight(s: &str, line: u64, header: Header, report: &mut Report)
     };
 }
 
+fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) {
+    if s.starts_with('-') {
+        report.error_on(line, format!("BodyweightKg '{}' cannot be negative", s))
+    }
+    check_generic_weight(s, line, Header::BodyweightKg, report);
+}
+
+fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) {
+    // Disallow zeros.
+    if s == "0" {
+        report.error_on(line, "WeightClassKg cannot be zero");
+    } else if s.starts_with('0') {
+        report.error_on(line, format!("WeightClassKg cannot start with 0 in '{}'", s));
+    }
+
+    match s.parse::<WeightClassKg>() {
+        Ok(_) => (),
+        Err(e) => report.error_on(line, format!("Invalid WeightClassKg '{}': {}", s, e)),
+    };
+}
+
 fn check_column_tested(s: &str, line: u64, report: &mut Report) {
     match s {
         "" | "Yes" | "No" => (),
@@ -303,6 +324,12 @@ where
             if let Some(idx) = headers.get(field) {
                 check_generic_weight(&record[idx], line, field, &mut report);
             }
+        }
+        if let Some(idx) = headers.get(Header::BodyweightKg) {
+            check_column_bodyweightkg(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::WeightClassKg) {
+            check_column_weightclasskg(&record[idx], line, &mut report);
         }
 
         // Check optional fields.
