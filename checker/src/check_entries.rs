@@ -8,11 +8,114 @@ use std::path::PathBuf;
 
 use Report;
 
+const KNOWN_HEADERS: [&str; 38] = [
+    "Name",
+    "CyrillicName",
+    "JapaneseName",
+    "Sex",
+    "Age",
+    "Place",
+    "Event",
+    "Division",
+    "Equipment",
+    "BirthYear",
+    "BirthDay",
+    "Tested",
+
+    "WeightClassKg",
+    "BodyweightKg",
+    "TotalKg",
+
+    "Best3SquatKg",
+    "Squat1Kg",
+    "Squat2Kg",
+    "Squat3Kg",
+    "Squat4Kg",
+
+    "Best3BenchKg",
+    "Bench1Kg",
+    "Bench2Kg",
+    "Bench3Kg",
+    "Bench4Kg",
+
+    "Best3DeadliftKg",
+    "Deadlift1Kg",
+    "Deadlift2Kg",
+    "Deadlift3Kg",
+    "Deadlift4Kg",
+
+
+    // Columns below this point are valid but ignored.
+    "AgeClass",
+    "Team",
+    "Country-State",
+    "Country",
+    "State",
+    "College/University",
+    "School",
+    "Category",
+];
+
 /// Checks that the headers are valid.
 fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
+    // There must be headers.
     if headers.is_empty() {
-        report.error("No column headers found");
+        report.error("Missing column headers");
         return;
+    }
+
+    let mut has_squat = false;
+    let mut has_bench = false;
+    let mut has_deadlift = false;
+
+    for (i, header) in headers.iter().enumerate() {
+        // Every header must be from the KNOWN_HEADERS list.
+        if !KNOWN_HEADERS.iter().any(|&x| x == header) {
+            report.error(format!("Unknown header '{}'", header));
+        }
+
+        // Test for duplicate headers.
+        if headers.iter().skip(i+1).any(|x| x == header) {
+            report.error(format!("Duplicate header '{}'", header));
+        }
+
+        has_squat = has_squat || header.contains("Squat");
+        has_bench = has_bench || header.contains("Bench");
+        has_deadlift = has_deadlift || header.contains("Deadlift");
+    }
+
+    // If there is data for a particular lift, there must be a 'Best' column.
+    if has_squat && !headers.iter().any(|x| x == "Best3SquatKg") {
+        report.error("Squat data requires a 'Best3SquatKg' column");
+    }
+    if has_bench && !headers.iter().any(|x| x == "Best3BenchKg") {
+        report.error("Squat data requires a 'Best3BenchKg' column");
+    }
+    if has_deadlift && !headers.iter().any(|x| x == "Best3DeadliftKg") {
+        report.error("Squat data requires a 'Best3DeadliftKg' column");
+    }
+
+    // Test for mandatory columns.
+    if !headers.iter().any(|x| x == "Name") {
+        report.error("There must be a 'Name' column");
+    }
+    if !headers.iter().any(|x| { x == "BodyweightKg" || x == "WeightClassKg" }) {
+        report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
+    }
+    if !headers.iter().any(|x| x == "Sex") {
+        report.error("There must be a 'Sex' column");
+    }
+    if !headers.iter().any(|x| x == "Equipment") {
+        report.error("There must be an 'Equipment' column");
+    }
+    if !headers.iter().any(|x| x == "TotalKg") {
+        report.error("There must be a 'TotalKg' column");
+    }
+    if !headers.iter().any(|x| x == "Place") {
+        report.error("There must be a 'Place' column");
+    }
+    if !headers.iter().any(|x| x == "Event") {
+        report.error("There must be an 'Event' column");
     }
 }
 

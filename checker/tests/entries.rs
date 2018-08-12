@@ -15,11 +15,79 @@ fn check(csv: &str) -> usize {
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_reader(csv.as_bytes());
-    let (errors, _warnings) = do_check(&mut rdr, report).unwrap().count_messages();
+    let report = do_check(&mut rdr, report).unwrap();
+    let (errors, _warnings) = report.count_messages();
     errors
 }
 
 #[test]
 fn test_empty_file() {
     assert!(check("") > 0);
+}
+
+#[test]
+fn test_invalid_headers() {
+    // This should pass tests.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 0);
+
+    // Add an extra column "X".
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place,X\n\
+                Test User,90,M,100,100,Raw,B,1,X";
+    assert_eq!(check(data), 1);
+
+    // Duplicate the Sex column. The error message should only occur once.
+    let data = "Name,WeightClassKg,Sex,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+
+    // The Name column is mandatory.
+    let data = "WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+
+    // There must be either (or both) of WeightClassKg and BodyweightKg.
+    let data = "Name,BodyweightKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 0);
+    let data = "Name,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+
+    // The Sex column is mandatory.
+    let data = "Name,WeightClassKg,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+
+    // The Equipment column is mandatory.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Event,Place\n\
+                Test User,90,M,100,100,B,1";
+    assert_eq!(check(data), 1);
+
+    // The TotalKg column is mandatory.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,Equipment,Event,Place\n\
+                Test User,90,M,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+
+    // The Place column is mandatory.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event\n\
+                Test User,90,M,100,100,Raw,B";
+    assert_eq!(check(data), 1);
+
+    // The Event column is mandatory.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Place\n\
+                Test User,90,M,100,100,Raw,1";
+    assert_eq!(check(data), 1);
+
+    // If there's a data column for a lift, the Best column must exist.
+    let data = "Name,WeightClassKg,Sex,Squat1Kg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+    let data = "Name,WeightClassKg,Sex,Bench1Kg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
+    let data = "Name,WeightClassKg,Sex,Deadlift1Kg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert_eq!(check(data), 1);
 }
