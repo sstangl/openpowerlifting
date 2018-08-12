@@ -41,9 +41,21 @@ impl Report {
         self.messages.push(Message::Error(message.to_string()));
     }
 
+    /// Reports an error on a specific line.
+    pub fn error_on(&mut self, line: u64, message: impl ToString) {
+        let msg = format!(" Line {}: {}", line, message.to_string());
+        self.messages.push(Message::Error(msg));
+    }
+
     /// Reports a warning, which allows checks to pass with a note.
     pub fn warning(&mut self, message: impl ToString) {
         self.messages.push(Message::Warning(message.to_string()));
+    }
+
+    /// Reports a warning on a specific line.
+    pub fn warning_on(&mut self, line: u64, message: impl ToString) {
+        let msg = format!(" Line {}: {}", line, message.to_string());
+        self.messages.push(Message::Warning(msg));
     }
 
     /// Returns how many messages there are of (errors, warnings).
