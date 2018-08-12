@@ -10,17 +10,17 @@ use std::path::PathBuf;
 
 use Report;
 
-/// Maps KnownHeader to index.
+/// Maps Header to index.
 struct HeaderIndexMap(Vec<Option<usize>>);
 
 impl HeaderIndexMap {
-    pub fn get(&self, header: KnownHeader) -> Option<usize> {
+    pub fn get(&self, header: Header) -> Option<usize> {
         self.0[header as usize]
     }
 }
 
 #[derive(Copy, Clone, Debug, Display, EnumIter, Eq, PartialEq, EnumString)]
-enum KnownHeader {
+enum Header {
     Name,
     CyrillicName,
     JapaneseName,
@@ -70,20 +70,20 @@ enum KnownHeader {
 }
 
 /// List of fields that contain a simple weight value and can be negative.
-const WEIGHT_FIELDS: [KnownHeader; 16] = [
-    KnownHeader::Squat1Kg, KnownHeader::Squat2Kg, KnownHeader::Squat3Kg,
-    KnownHeader::Squat4Kg, KnownHeader::Best3SquatKg,
-    KnownHeader::Bench1Kg, KnownHeader::Bench2Kg, KnownHeader::Bench3Kg,
-    KnownHeader::Bench4Kg, KnownHeader::Best3BenchKg,
-    KnownHeader::Deadlift1Kg, KnownHeader::Deadlift2Kg, KnownHeader::Deadlift3Kg,
-    KnownHeader::Deadlift4Kg, KnownHeader::Best3DeadliftKg,
-    KnownHeader::TotalKg,
+const WEIGHT_FIELDS: [Header; 16] = [
+    Header::Squat1Kg, Header::Squat2Kg, Header::Squat3Kg,
+    Header::Squat4Kg, Header::Best3SquatKg,
+    Header::Bench1Kg, Header::Bench2Kg, Header::Bench3Kg,
+    Header::Bench4Kg, Header::Best3BenchKg,
+    Header::Deadlift1Kg, Header::Deadlift2Kg, Header::Deadlift3Kg,
+    Header::Deadlift4Kg, Header::Best3DeadliftKg,
+    Header::TotalKg,
 ];
 
 /// Checks that the headers are valid.
 fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderIndexMap {
-    // Build a map of (KnownHeader -> index).
-    let known_header_count = KnownHeader::iter().count();
+    // Build a map of (Header -> index).
+    let known_header_count = Header::iter().count();
     let mut header_index_map: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
     for _ in 0..known_header_count {
         header_index_map.push(None);
@@ -101,7 +101,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
 
     for (i, header) in headers.iter().enumerate() {
         // Every header must be known. Build the header_index_map.
-        match header.parse::<KnownHeader>() {
+        match header.parse::<Header>() {
             Ok(known) => header_index_map[known as usize] = Some(i),
             Err(_) => report.error(format!("Unknown header '{}'", header)),
         }
@@ -194,13 +194,44 @@ fn check_column_place(s: &str, line: u64, report: &mut Report) {
 
 fn check_column_age(s: &str, line: u64, report: &mut Report) {
     match s.parse::<Age>() {
-        Ok(_) => (),
+        Ok(age) => {
+            let num = match age {
+                Age::Exact(n) => n,
+                Age::Approximate(n) => n,
+                Age::None => 24,
+            };
+
+            if num < 5 {
+                report.warning_on(line, format!("Age '{}' unexpectedly low", s));
+            } else if num > 100 {
+                report.warning_on(line, format!("Age '{}' unexpectedly high", s));
+            }
+        }
         Err(_) => report.error_on(line, format!("Invalid Age '{}'", s)),
     };
 }
 
+fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) {
+    match s.parse::<Event>() {
+        Ok(event) => {
+            if event.has_squat() && headers.get(Header::Best3SquatKg).is_none() {
+                report.error_on(line, "Event has 'S', but no Best3SquatKg");
+            }
+            if event.has_bench() && headers.get(Header::Best3BenchKg).is_none() {
+                report.error_on(line, "Event has 'B', but no Best3BenchKg");
+            }
+            if event.has_deadlift() && headers.get(Header::Best3DeadliftKg).is_none() {
+                report.error_on(line, "Event has 'D', but no Best3DeadliftKg");
+            }
+        }
+        Err(e) => {
+            report.error_on(line, format!("Invalid Event '{}': {}", s, e.to_string()));
+        }
+    }
+}
+
 /// Tests a column describing the amount of weight lifted.
-fn check_generic_weight(s: &str, line: u64, header: KnownHeader, report: &mut Report) {
+fn check_generic_weight(s: &str, line: u64, header: Header, report: &mut Report) {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, format!("{} cannot be zero", header));
@@ -251,17 +282,20 @@ where
         }
 
         // Check mandatory fields.
-        if let Some(idx) = headers.get(KnownHeader::Sex) {
+        if let Some(idx) = headers.get(Header::Sex) {
             check_column_sex(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(KnownHeader::Equipment) {
+        if let Some(idx) = headers.get(Header::Equipment) {
             check_column_equipment(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(KnownHeader::Place) {
+        if let Some(idx) = headers.get(Header::Place) {
             check_column_place(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(KnownHeader::Age) {
+        if let Some(idx) = headers.get(Header::Age) {
             check_column_age(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Event) {
+            check_column_event(&record[idx], line, &headers, &mut report);
         }
 
         // Check all the weight fields.
@@ -272,10 +306,10 @@ where
         }
 
         // Check optional fields.
-        if let Some(idx) = headers.get(KnownHeader::Tested) {
+        if let Some(idx) = headers.get(Header::Tested) {
             check_column_tested(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(KnownHeader::CyrillicName) {
+        if let Some(idx) = headers.get(Header::CyrillicName) {
             check_column_cyrillicname(&record[idx], line, &mut report);
         }
     }

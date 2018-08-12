@@ -117,3 +117,21 @@ fn test_column_cyrillicname() {
                 Test User,Test User,90,M,100,100,Raw,B,1";
     assert_eq!(check(data), 1);
 }
+
+#[test]
+fn test_column_event() {
+    // Squat event, but no Best3SquatKg.
+    let data = "Name,WeightClassKg,Sex,Best3BenchKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,S,1";
+    assert!(check(data) > 0);
+
+    // Bench event, but no Best3BenchKg.
+    let data = "Name,WeightClassKg,Sex,Best3SquatKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,B,1";
+    assert!(check(data) > 0);
+
+    // Deadlift event, but no Best3DeadliftKg.
+    let data = "Name,WeightClassKg,Sex,Best3SquatKg,TotalKg,Equipment,Event,Place\n\
+                Test User,90,M,100,100,Raw,D,1";
+    assert!(check(data) > 0);
+}

@@ -104,9 +104,24 @@ impl FromStr for Event {
         let mut bits: u8 = 0;
         for c in s.chars() {
             match c {
-                'S' => bits |= Event::BITFLAG_SQUAT,
-                'B' => bits |= Event::BITFLAG_BENCH,
-                'D' => bits |= Event::BITFLAG_DEADLIFT,
+                'S' => {
+                    if bits & Event::BITFLAG_SQUAT != 0 {
+                        return Err("Duplicate S character");
+                    }
+                    bits |= Event::BITFLAG_SQUAT;
+                }
+                'B' => {
+                    if bits & Event::BITFLAG_BENCH != 0 {
+                        return Err("Duplicate B character");
+                    }
+                    bits |= Event::BITFLAG_BENCH;
+                }
+                'D' => {
+                    if bits & Event::BITFLAG_DEADLIFT != 0 {
+                        return Err("Duplicate D character");
+                    }
+                    bits |= Event::BITFLAG_DEADLIFT;
+                }
                 _ => return Err("Unexpected Event character."),
             }
         }
@@ -188,20 +203,14 @@ mod tests {
 
     #[test]
     fn test_event_repeats() {
-        let event = "BBBBBBBB".parse::<Event>().unwrap();
-        assert!(!event.has_squat());
-        assert!(event.has_bench());
-        assert!(!event.has_deadlift());
-
-        let event = "BSS".parse::<Event>().unwrap();
-        assert!(event.has_squat());
-        assert!(event.has_bench());
-        assert!(!event.has_deadlift());
+        assert!("BBBBBBBB".parse::<Event>().is_err());
+        assert!("BSS".parse::<Event>().is_err());
+        assert!("SSSBBBDDDDDD".parse::<Event>().is_err());
     }
 
     #[test]
     fn test_event_display() {
-        let event = "SSSBBBDDDDDD".parse::<Event>().unwrap();
+        let event = "SBD".parse::<Event>().unwrap();
         assert_eq!(format!("{}", event), "SBD");
 
         let event = "B".parse::<Event>().unwrap();
