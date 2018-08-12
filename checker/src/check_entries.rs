@@ -1,6 +1,7 @@
 //! Checks for entries.csv files.
 
 use csv;
+use opltypes::*;
 use strum::IntoEnumIterator;
 
 use std::error::Error;
@@ -18,7 +19,7 @@ impl HeaderIndexMap {
     }
 }
 
-#[derive(Copy, Clone, Debug, EnumIter, Eq, PartialEq, EnumString)]
+#[derive(Copy, Clone, Debug, Display, EnumIter, Eq, PartialEq, EnumString)]
 enum KnownHeader {
     Name,
     CyrillicName,
@@ -67,6 +68,17 @@ enum KnownHeader {
     School,
     Category,
 }
+
+/// List of fields that contain a simple weight value and can be negative.
+const WEIGHT_FIELDS: [KnownHeader; 16] = [
+    KnownHeader::Squat1Kg, KnownHeader::Squat2Kg, KnownHeader::Squat3Kg,
+    KnownHeader::Squat4Kg, KnownHeader::Best3SquatKg,
+    KnownHeader::Bench1Kg, KnownHeader::Bench2Kg, KnownHeader::Bench3Kg,
+    KnownHeader::Bench4Kg, KnownHeader::Best3BenchKg,
+    KnownHeader::Deadlift1Kg, KnownHeader::Deadlift2Kg, KnownHeader::Deadlift3Kg,
+    KnownHeader::Deadlift4Kg, KnownHeader::Best3DeadliftKg,
+    KnownHeader::TotalKg,
+];
 
 /// Checks that the headers are valid.
 fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderIndexMap {
@@ -149,6 +161,56 @@ fn check_column_sex(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_column_equipment(s: &str, line: u64, report: &mut Report) {
+    match s.parse::<Equipment>() {
+        Ok(_) => (),
+        Err(_) => report.error_on(line, format!("Invalid Equipment '{}'", s)),
+    };
+}
+
+fn check_column_place(s: &str, line: u64, report: &mut Report) {
+    match s.parse::<Place>() {
+        Ok(_) => (),
+        Err(_) => report.error_on(line, format!("Invalid Place '{}'", s)),
+    };
+}
+
+fn check_column_age(s: &str, line: u64, report: &mut Report) {
+    match s.parse::<Age>() {
+        Ok(_) => (),
+        Err(_) => report.error_on(line, format!("Invalid Age '{}'", s)),
+    };
+}
+
+/// Tests a column describing the amount of weight lifted.
+fn check_generic_weight(s: &str, line: u64, header: KnownHeader, report: &mut Report) {
+    // Disallow zeros.
+    if s == "0" {
+        report.error_on(line, format!("{} cannot be zero", header));
+    } else if s.starts_with('0') {
+        report.error_on(line, format!("{} cannot start with 0 in '{}'", header, s));
+    }
+
+    match s.parse::<WeightKg>() {
+        Ok(_) => (),
+        Err(_) => report.error_on(line, format!("Invalid {} '{}'", header, s)),
+    };
+}
+
+fn check_column_tested(s: &str, line: u64, report: &mut Report) {
+    match s {
+        "" | "Yes" | "No" => (),
+        _ => report.error_on(line, format!("Unknown Tested value '{}'", s)),
+    }
+}
+
+fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
+    match s.parse::<AgeClass>() {
+        Ok(_) => (),
+        Err(_) => report.warning_on(line, format!("Invalid AgeClass '{}'", s)),
+    };
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -178,10 +240,36 @@ where
             }
         }
 
-        // Check individual fields.
+        // Check mandatory fields.
         if let Some(idx) = headers.get(KnownHeader::Sex) {
             check_column_sex(&record[idx], line, &mut report);
         }
+        if let Some(idx) = headers.get(KnownHeader::Equipment) {
+            check_column_equipment(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(KnownHeader::Place) {
+            check_column_place(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(KnownHeader::Age) {
+            check_column_age(&record[idx], line, &mut report);
+        }
+
+        // Check all the weight fields.
+        for &field in &WEIGHT_FIELDS {
+            if let Some(idx) = headers.get(field) {
+                check_generic_weight(&record[idx], line, field, &mut report);
+            }
+        }
+
+        // Check optional fields.
+        if let Some(idx) = headers.get(KnownHeader::Tested) {
+            check_column_tested(&record[idx], line, &mut report);
+        }
+
+        // Leaving AgeClass disabled for the moment -- 9007 warnings currently.
+        //if let Some(idx) = headers.get(KnownHeader::AgeClass) {
+        //    check_column_ageclass(&record[idx], line, &mut report);
+        //}
     }
 
     Ok(report)
