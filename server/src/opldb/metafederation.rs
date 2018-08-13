@@ -196,7 +196,11 @@ impl MetaFederation {
                     || meet.federation == Federation::WelshPA
             }
             MetaFederation::AllUkraine => {
-                meet.federation == Federation::WPAU || meet.federation == Federation::WPUF
+                meet.federation == Federation::UkrainePA
+                    || meet.federation == Federation::UPC
+                    || meet.federation == Federation::WPAU 
+                    || meet.federation == Federation::WPCUKR
+                    || meet.federation == Federation::WPUF
             }
             MetaFederation::AllUSA => {
                 meet.federation == Federation::_365Strong

@@ -233,8 +233,12 @@ pub enum Federation {
     SVNL,
     #[strum(to_string = "THSPA", serialize = "thspa")]
     THSPA,
+    #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
+    UkrainePA,
     #[strum(to_string = "UPA", serialize = "upa")]
     UPA,
+    #[strum(to_string = "UPC", serialize = "upc")]
+    UPC,
     #[strum(to_string = "USAPL", serialize = "usapl")]
     USAPL,
     #[strum(to_string = "USPF", serialize = "uspf")]
@@ -264,6 +268,9 @@ pub enum Federation {
     #[serde(rename = "WPC-RUS")]
     #[strum(to_string = "WPC-RUS", serialize = "wpc-rus")]
     WPCRUS,
+    #[serde(rename = "WPC-UKR")]
+    #[strum(to_string = "WPC-UKR", serialize = "wpc-ukr")]
+    WPCUKR,
     #[strum(to_string = "WPF", serialize = "wpf")]
     WPF,
     #[strum(to_string = "WPUF", serialize = "wpuf")]

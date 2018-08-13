@@ -70,7 +70,8 @@ def getmeetinfo(soup):
     # Get the date.
     daterow = venuerow.find_next_sibling()
     longdate = daterow.find_all('td')[1].text
-    [daymonth, year] = longdate.split(', ')
+    [daymonth, year] = longdate.split(',')
+    year = year.strip()
 
     month = daymonth.split(' ')[0]
     day = daymonth.split(' ')[1]
@@ -89,7 +90,7 @@ def getmeetinfo(soup):
     h1 = soup.find('h1')
     if len(h1) != 1:
         error("Couldn't find the competition name.")
-    name = h1.text
+    name = h1.text.replace(';', '').replace(',', '')
 
     state = ''
 
@@ -107,6 +108,8 @@ def getresults(soup, url):
         url = url + '?all_attempts=1'
 
     subpage_html = gethtml(url)
+    subpage_html = re.sub('<sup.*?sup>', '', subpage_html)
+
     subpage_html = subpage_html.replace('<span class="result-value-fail">',
                                         '<span class="result-value-fail">-')
 
@@ -138,7 +141,7 @@ def getresults(soup, url):
         div_name = re.sub('\(.*?\)', '', subpages.find('li').text).strip()
         csv.append_column('SheetName')
         for row in csv.rows:
-            row[-1] = div_name
+            row[-1] = div_name.lower()
 
         links = subpages.find_all('a')
 
@@ -150,7 +153,8 @@ def getresults(soup, url):
             subpage_html = gethtml(subpage_url)
             subpage_html = subpage_html.replace(
                 '<span class="result-value-fail">', '<span class="result-value-fail">-')
-
+            # Remove record text
+            subpage_html = re.sub('<sup.*?sup>', '', subpage_html)
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
 
@@ -173,7 +177,7 @@ def getresults(soup, url):
 
             subpage_csv.append_column('SheetName')
             for row in subpage_csv.rows:
-                row[-1] = div_name
+                row[-1] = div_name.lower()
 
             csv.cat(subpage_csv)
 
@@ -294,6 +298,8 @@ def getpagedata(soup):
             csv.fieldnames += ['IGNORE']
         elif h == 'Team':
             csv.fieldnames += ['IGNORE']
+        elif h == 'Coach':
+            csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
 
@@ -318,7 +324,8 @@ def getpagedata(soup):
                 sexstate = 'M'
             elif 'category' in text:
                 wcstate = text.replace('category ', '').replace(' kg', '')
-
+                if '+' in wcstate:
+                    wcstate = wcstate.replace('+', '')+'+'
         else:
             assert wcstate
 
@@ -457,7 +464,8 @@ def fix_cyrillic_names(csv):
     if 'CyrillicName' in csv.fieldnames:
         cyridx = csv.index('CyrillicName')
         for row in csv.rows:
-            row[cyridx] = row[cyridx].replace('e', 'е').replace('x', 'х')
+            row[cyridx] = row[cyridx].replace('e', 'е').replace(
+                'x', 'х').replace('o', 'о').replace('T', 'Т')
 
 
 def remove_empty_cols_ignore_fieldname(csv):
@@ -495,16 +503,16 @@ def parse_sheetname(csv):
                 row[sex_idx] = 'F'
                 row[sn_idx] = row[sn_idx].replace('Women', '')
 
-            if 'PL' in row[sn_idx]:
+            if 'pl' in row[sn_idx]:
                 row[event_idx] = 'SBD'
-                row[sn_idx] = row[sn_idx].replace('PL', '')
-            elif 'BP' in row[sn_idx]:
+                row[sn_idx] = row[sn_idx].replace('pl', '')
+            elif 'bp' in row[sn_idx]:
                 row[event_idx] = 'B'
-                row[sn_idx] = row[sn_idx].replace('BP', '')
-            elif 'DL' in row[sn_idx]:
+                row[sn_idx] = row[sn_idx].replace('bp', '')
+            elif 'dl' in row[sn_idx]:
                 row[event_idx] = 'D'
-                row[sn_idx] = row[sn_idx].replace('DL', '')
-            row[sn_idx] = row[sn_idx].strip()
+                row[sn_idx] = row[sn_idx].replace('dl', '')
+            row[sn_idx] = row[sn_idx].strip().replace('  ', ' ')
 
 
 def main(url):
@@ -514,6 +522,7 @@ def main(url):
     meetcsv = getmeetinfo(soup)
     dirname = getdirname(url)
     entriescsv = getresults(soup, url)
+
     if len(entriescsv.rows) == 0:
         error("No rows found!")
 

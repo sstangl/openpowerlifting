@@ -176,7 +176,10 @@
 </optgroup>
 <optgroup label="{{strings.country.ukraine}}">
   <option value="all-ukraine" {% if selection.federation == "AllUkraine" %}selected{% endif %}>{{strings.selectors.fed.all_ukraine}}</option>
+  <option value="ukrpa" {% if selection.federation == "UkrainePA" %}selected{% endif %}>Ukraine Powerlifting Association</option>
+  <option value="upc" {% if selection.federation == "UPC" %}selected{% endif %}>Ukrainian Powerlifting Committee</option>
   <option value="wpau" {% if selection.federation == "WPAU" %}selected{% endif %}>WPAU - World Powerlifting Alliance Ukraine [WPA]</option>
+  <option value="wpcukr" {% if selection.federation == "WPC-UKR" %}selected{% endif %}>WPC-UKR - WPC Ukraine</option>
   <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">
