@@ -1,0 +1,23 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+
+
+#These weightclasses are just here as placeholders
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+","140","140+"]
+    date_range = ["1998-01-01","9999-99-99"]
+    sex = "M"
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-00-00","1997-12-31"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-00-00","9999-99-99"]
+    sex = "F"
+
+[exclusions]
+    1201 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
+
