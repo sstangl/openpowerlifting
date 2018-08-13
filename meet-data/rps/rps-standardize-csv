@@ -235,8 +235,12 @@ def fixequipment(csv):
 
     for i, row in enumerate(csv.rows):
         s = row[idx].lower().replace(weirdspace, ' ')
+        # Override -- sometimes RPS specifies sleeves for our benefit.
+        if 'sleeve' in s:
+            x = 'Raw'
+
         # "Classic" means belt and wrist wraps only to the RPS.
-        if (s == 'raw classic' or s == 'raw clas' or s == 'raw class' or
+        elif (s == 'raw classic' or s == 'raw clas' or s == 'raw class' or
                 s == 'raw c' or s == 'rc'):
             x = 'Raw'
         # This one below looks the same, but actually has some unicode BS going
