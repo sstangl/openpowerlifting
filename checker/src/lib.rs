@@ -78,13 +78,22 @@ impl Report {
 pub fn check(meetdir: &Path) -> Result<Vec<Report>, Box<Error>> {
     let mut acc = Vec::new();
 
+    // Check the meet.csv.
+    let report = check_meet(meetdir.join("meet.csv"))?;
+    if !report.messages.is_empty() {
+        acc.push(report);
+    }
+
+    // Check the entries.csv.
     let report = check_entries(meetdir.join("entries.csv"))?;
     if !report.messages.is_empty() {
         acc.push(report);
     }
 
-    let report = check_meet(meetdir.join("meet.csv"))?;
-    if !report.messages.is_empty() {
+    // Check for commonly-misnamed files.
+    if meetdir.join("URL.txt").exists() {
+        let mut report = Report::new(meetdir.join("URL.txt"));
+        report.error("Must be named 'URL' with no extension");
         acc.push(report);
     }
 

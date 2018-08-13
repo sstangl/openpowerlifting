@@ -519,6 +519,8 @@ if __name__ == '__main__':
 
                 if 'entries.csv' not in files:
                     perror('Missing entries.csv')
+                if 'URL.txt' in files:
+                    perror('Must be named "URL" with no extension')
 
     if hitError:
         sys.exit(1)
