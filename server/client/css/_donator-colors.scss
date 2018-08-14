@@ -6,6 +6,13 @@
   text-decoration-color: $color;
 }
 
+@mixin gradient-prereqs($underline-color) {
+  color: transparent;
+  -webkit-background-clip: text;  // iPhones actually need this.
+  background-clip: text;
+  text-decoration-color: $underline-color;
+}
+
 .pink {
   @include name-color(#FF69B4);
 }
@@ -46,34 +53,34 @@
   @include name-color(#FFD700);
 }
 
+// Rainbow with light colors, to be readable against a dark background.
 .rainbow {
-  color: transparent;
-  -webkit-background-clip: text;  // iPhones actually need this.
-  background-clip: text;
-  text-decoration-color: #FF80AB;
-
-  // Rainbow with light colors, to be readable against a dark background.
-  background-image: linear-gradient(to right, #FB3640, #f2f, #43D1FF, #2ff, #2f2, #ff2, #FB3640);
+  @include gradient-prereqs(#FF80AB);
+  background-image:
+    linear-gradient(to right, #FB3640, #f2f, #43D1FF, #2ff, #2f2, #ff2, #FB3640);
 }
 
+// Red, white, and blue.
 .america {
-  color: transparent;
-  -webkit-background-clip: text;  // iPhones actually need this.
-  background-clip: text;
-  text-decoration-color: $default-color;
-
-  // Red, white, and blue.
+  @include gradient-prereqs($default-color);
   background-image: linear-gradient(to right, #FB3640, #EDF2F4, #43D1FF);
 }
 
+// White, blue, and white.
 .finland {
-  color: transparent;
-  -webkit-background-clip: text;  // iPhones actually need this.
-  background-clip: text;
-  text-decoration-color: #507CFF;
-
-  // White, blue, and white.
+  @include gradient-prereqs(#507CFF);
   background-image: linear-gradient(to right, #507CFF, #EDF2F4);
+}
+
+// University of Miami colors: orange and green.
+.umiami {
+  $umiami-orange: #F47321; // Their exact orange.
+  $umiami-green: #009f5f; // A little lighter than their green, to be readable.
+  @include gradient-prereqs(#F47321);
+  background-image:
+    linear-gradient(to right,
+      $umiami-orange, $umiami-orange 55%, // Customized for "Stefanie Cohen".
+      $umiami-green 56%, $umiami-green);
 }
 
 .teal-shadow {
