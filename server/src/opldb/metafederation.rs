@@ -188,6 +188,7 @@ impl MetaFederation {
                     || meet.federation == Federation::BDFPA
                     || meet.federation == Federation::BP
                     || meet.federation == Federation::BPC
+                    || meet.federation == Federation::BPO
                     || meet.federation == Federation::BPU
                     || meet.federation == Federation::EPA
                     || meet.federation == Federation::GPCGB
