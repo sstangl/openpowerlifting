@@ -1,7 +1,5 @@
 //! Implementation of server functionality.
 
-#![feature(path_ancestors)]
-
 // External dependencies.
 extern crate csv;
 extern crate itertools;
