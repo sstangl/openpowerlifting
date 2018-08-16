@@ -6,6 +6,14 @@
 #
 
 import sys
+import os
+
+try:
+    import oplcsv
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplcsv
 
 
 def error(text):
@@ -340,6 +348,8 @@ def parse(csv):
                         agerange = ' ' + k[0].replace(',', '')
                     else:
                         agerange = ''
+                elif '80+' in info:
+                    agerange = '80+'
                 else:
                     agerange = ''
 
@@ -430,15 +440,29 @@ def main():
             row[i] = row[i].replace(')', '\'')
             row[i] = row[i].replace(',', '')
 
-    # Print, and also fix up some common errors.
-    for row in rval:
-        k = ','.join(row)
-        k = k.replace(',O,', ',0,')
-        k = k.replace(',#VALUE!,', ',,')
-        k = k.replace(',#REF!,', ',,')
-        # Doesn't affect the Place, which is in the first col.
-        k = k.replace(',DQ,', ',,')
-        print(k)
+            # Fix some common errors.
+            if row[i] in ['O', '0', '#VALUE!', '#REF!']:
+                row[i] = ''
+
+            # Place is the first column.
+            if i > 0 and row[i] == 'DQ':
+                row[i] = ''
+
+    # Load into a CSV file.
+    csv = oplcsv.Csv()
+    csv.fieldnames = rval[0]
+    csv.rows = rval[1:]
+
+    # Remove some unnecessary columns.
+    csv.remove_empty_columns()
+    while 'DELETEME' in csv.fieldnames:
+        csv.remove_column_by_name('DELETEME')
+    while 'Wilks' in csv.fieldnames:
+        csv.remove_column_by_name('Wilks')
+    while 'McCulloch' in csv.fieldnames:
+        csv.remove_column_by_name('McCulloch')
+
+    csv.write(sys.stdout)
 
 
 if __name__ == '__main__':

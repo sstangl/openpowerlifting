@@ -52,6 +52,18 @@ class Csv:
                 self.remove_column_by_index(i)
                 return
 
+    def remove_empty_columns(self):
+        for i in range(len(self.fieldnames)):
+            empty = True
+            for row in self.rows:
+                if row[i]:
+                    empty = False
+                    break
+            if empty:
+                self.remove_column_by_index(i)
+                self.remove_empty_columns()
+                return
+
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
