@@ -16,6 +16,7 @@ impl Event {
     const BITFLAG_SQUAT: u8 = 0b100;
     const BITFLAG_BENCH: u8 = 0b010;
     const BITFLAG_DEADLIFT: u8 = 0b001;
+    const BITFLAG_PUSHPULL: u8 = 0b011;
     const BITFLAG_FULLPOWER: u8 = 0b111;
 
     #[inline(always)]
@@ -74,7 +75,31 @@ impl Event {
     /// True iff the Event is SBD.
     #[inline]
     pub fn is_full_power(self) -> bool {
-        self.0 & Self::BITFLAG_FULLPOWER == Self::BITFLAG_FULLPOWER
+        self.0 == Self::BITFLAG_FULLPOWER
+    }
+
+    /// True iff the Event is BD.
+    #[inline]
+    pub fn is_push_pull(self) -> bool {
+        self.0 == Self::BITFLAG_PUSHPULL
+    }
+
+    /// True iff the Event is S.
+    #[inline]
+    pub fn is_squat_only(self) -> bool {
+        self.0 == Self::BITFLAG_SQUAT
+    }
+
+    /// True iff the Event is B.
+    #[inline]
+    pub fn is_bench_only(self) -> bool {
+        self.0 == Self::BITFLAG_BENCH
+    }
+
+    /// True iff the Event is D.
+    #[inline]
+    pub fn is_deadlift_only(self) -> bool {
+        self.0 == Self::BITFLAG_DEADLIFT
     }
 }
 
@@ -167,30 +192,49 @@ mod tests {
         assert!(event.has_bench());
         assert!(event.has_deadlift());
         assert!(event.is_full_power());
+        assert!(!event.is_push_pull());
+        assert!(!event.is_squat_only());
+        assert!(!event.is_bench_only());
+        assert!(!event.is_deadlift_only());
 
         let event = "BD".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(event.has_deadlift());
         assert!(!event.is_full_power());
+        assert!(event.is_push_pull());
+        assert!(!event.is_bench_only());
+        assert!(!event.is_deadlift_only());
 
         let event = "S".parse::<Event>().unwrap();
         assert!(event.has_squat());
         assert!(!event.has_bench());
         assert!(!event.has_deadlift());
         assert!(!event.is_full_power());
+        assert!(!event.is_push_pull());
+        assert!(event.is_squat_only());
+        assert!(!event.is_bench_only());
+        assert!(!event.is_deadlift_only());
 
         let event = "B".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(!event.has_deadlift());
         assert!(!event.is_full_power());
+        assert!(!event.is_push_pull());
+        assert!(!event.is_squat_only());
+        assert!(event.is_bench_only());
+        assert!(!event.is_deadlift_only());
 
         let event = "D".parse::<Event>().unwrap();
         assert!(!event.has_squat());
         assert!(!event.has_bench());
         assert!(event.has_deadlift());
         assert!(!event.is_full_power());
+        assert!(!event.is_push_pull());
+        assert!(!event.is_squat_only());
+        assert!(!event.is_bench_only());
+        assert!(event.is_deadlift_only());
     }
 
     #[test]

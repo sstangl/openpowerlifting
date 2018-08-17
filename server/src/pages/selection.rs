@@ -17,6 +17,7 @@ pub struct Selection {
     pub weightclasses: WeightClassSelection,
     pub sex: SexSelection,
     pub year: YearSelection,
+    pub event: EventSelection,
     pub sort: SortSelection,
 }
 
@@ -28,6 +29,7 @@ impl Default for Selection {
             weightclasses: WeightClassSelection::AllClasses,
             sex: SexSelection::AllSexes,
             year: YearSelection::AllYears,
+            event: EventSelection::AllEvents,
             sort: SortSelection::ByWilks,
         }
     }
@@ -528,6 +530,37 @@ impl YearSelection {
             YearSelection::Year1967 => Some(1967),
             YearSelection::Year1966 => Some(1966),
             YearSelection::Year1965 => Some(1965),
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+pub enum EventSelection {
+    /// Any event.
+    AllEvents,
+    /// Corresponds to SBD.
+    FullPower,
+    /// Corresponds to BD.
+    PushPull,
+    /// Corresponds to S.
+    SquatOnly,
+    /// Corresponds to B.
+    BenchOnly,
+    /// Corresponds to D.
+    DeadliftOnly,
+}
+
+impl FromStr for EventSelection {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "full-power" => Ok(EventSelection::FullPower),
+            "push-pull" => Ok(EventSelection::PushPull),
+            "squat-only" => Ok(EventSelection::SquatOnly),
+            "bench-only" => Ok(EventSelection::BenchOnly),
+            "deadlift-only" => Ok(EventSelection::DeadliftOnly),
+            _ => Err(()),
         }
     }
 }
