@@ -175,7 +175,7 @@ def parse_sheetname(s):
             equipment = 'Single-ply'
         elif word in ['экипировке', 'm ply', 'eq', 'многослой', 'экипировка', 'мн',
                       'эипировке', 'эк', '2ply', 'мнслой', 'эки', 'multiply',
-                      'multyply', 'multi', 'mylti', 'mply']:
+                      'multyply', 'multi', 'mylti', 'mply', 'mp']:
             if equipment != 'Single-ply':  # Avoid accidently marking single as multi
                 equipment = 'Multi-ply'
         elif word in ['slinghot', 'slingshot', 'СПР', 'облегченная', 'облегченной',
@@ -343,7 +343,7 @@ def parse_fieldnames(sheet):
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
         elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион',
-                                    'возр груп', 'age categoty']):
+                                    'возр груп', 'age categoty', 'год р']):
             fieldnames.append('Division-Age')
         elif 'div' in text:
             fieldnames.append('Division')
@@ -613,11 +613,15 @@ def standardize_division_age(csv):
             row[ageidx] = row[idx].split('/')[1].strip()
         if '(' in row[idx] and bdidx:
             bd = row[idx][row[idx].find('(')+1:row[idx].find(')')]
-            [day, month, year] = bd.split('.')
-            row[bdidx] = '%s-%s-%s' % (year, month, day)
+            if bd.count('.') == 2:
+                [day, month, year] = bd.split('.')
+                row[bdidx] = '%s-%s-%s' % (year, month, day)
+            else:
+                row[bdidx] = bd
 
         row[idx] = row[idx].replace(' - ', '-')
         row[idx] = row[idx].lower().strip()
+        row[idx] = row[idx].replace('(', '').replace(')', '')
 
         # Fill in the Division.
         # Handle the divisions with numbers first.
@@ -632,7 +636,8 @@ def standardize_division_age(csv):
             division = 'Girls 14-16'
         elif 'юноши 13-15' in row[idx] or 'teen 13-15' in row[idx]:
             division = 'Teen 13-15'
-        elif 'teen 13-19' in row[idx] or 'юноши 13-19' in row[idx]:
+        elif ('teen 13-19' in row[idx] or 'юноши 13-19' in row[idx] or
+              't 13-15' in row[idx]):
             division = 'Teen 13-19'
         elif ('юноши 15-19' in row[idx]or 'teenage 15-19' in row[idx] or
                 'teens 15-19' in row[idx]):
@@ -641,9 +646,11 @@ def standardize_division_age(csv):
             division = 'Teen 14-16'
         elif 'юноши 14-18' in row[idx]:
             division = 'Teen 14-18'
-        elif 'юноши 16-17' in row[idx] or 'teen 16-17' in row[idx]:
+        elif ('юноши 16-17' in row[idx] or 'teen 16-17' in row[idx] or
+              't 16-17' in row[idx]):
             division = 'Teen 16-17'
-        elif 'юноши 18-19' in row[idx] or 'teen 18-19' in row[idx]:
+        elif ('юноши 18-19' in row[idx] or 'teen 18-19' in row[idx] or
+              't 18-19' in row[idx]):
             division = 'Teen 18-19'
         elif 'юноши 17-19' in row[idx] or 'teen 17-19' in row[idx]:
             division = 'Teen 17-19'
@@ -668,24 +675,27 @@ def standardize_division_age(csv):
             division = 'Masters 45-49'
         elif 'masters 45-50' in row[idx]:
             division = 'Masters 45-50'
-        elif 'мастера 50-54' in row[idx] or 'masters 50-54' in row[idx]:
+        elif ('мастера 50-54' in row[idx] or 'masters 50-54' in row[idx] or
+              'm 50-54' in row[idx]):
             division = 'Masters 50-54'
         elif ('master 50-59' in row[idx] or 'masters 50-59' in row[idx] or
                 'мастера 50-59' in row[idx]):
             division = 'Masters 50-59'
-        elif 'мастера 55-59' in row[idx] or 'masters 55-59' in row[idx]:
+        elif ('мастера 55-59' in row[idx] or 'masters 55-59' in row[idx] or
+              'm 55-59' in row[idx]):
             division = 'Masters 55-59'
-        elif 'мастера 60-64' in row[idx] or 'masters 60-64' in row[idx]:
+        elif '60-64' in row[idx]:
             division = 'Masters 60-64'
         elif 'master 60-69' in row[idx] or 'мастера 60-69' in row[idx]:
             division = 'Masters 60-69'
-        elif 'masters 65-69' in row[idx] or 'мастера 65-69' in row[idx]:
+        elif ('masters 65-69' in row[idx] or 'мастера 65-69' in row[idx] or
+              'm 65-69' in row[idx]):
             division = 'Masters 65-69'
         elif 'masters 70-74' in row[idx]:
             division = 'Masters 70-74'
         elif 'мастера 70-79' in row[idx] or 'master 70-79' in row[idx]:
             division = 'Masters 70-79'
-        elif 'мастера 75-79' in row[idx]:
+        elif 'мастера 75-79' in row[idx] or 'm 75-79' in row[idx]:
             division = 'Masters 75-79'
         elif 'мастера 1' in row[idx] or 'm1' in row[idx]:
             division = 'Masters 1'
@@ -702,7 +712,7 @@ def standardize_division_age(csv):
         elif 'мастера' in row[idx]or 'master' in row[idx]:
             division = 'Masters'
         elif ('открытая' in row[idx] or 'open' in row[idx] or
-                row[idx] == 'o' or 'орен' in row[idx]):
+                row[idx] == 'o' or 'орен' in row[idx] or 'o ' in row[idx]):
             division = 'Open'
         elif 'юниор' in row[idx] or 'junior' in row[idx] or row[idx] == 'j':
             division = 'Juniors'

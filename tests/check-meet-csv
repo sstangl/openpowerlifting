@@ -69,7 +69,8 @@ def pwarning(s):
 KnownFederations = {
     "365Strong",  # 365 Strong Powerlifting Federation.
     "AAP",  # Alianza Argentina Powerlifting, GPA/IPO.
-    "AAPLF",  # Australian Amateur Powerlifting Federation, defunct IPF affiliate.
+    # Australian Amateur Powerlifting Federation, defunct IPF affiliate.
+    "AAPLF",
     "AAU",  # Amateur Athletic Union.
     # American Drug-Free Powerlifting Association, precursor to USAPL.
     "ADFPA",
@@ -77,6 +78,8 @@ KnownFederations = {
     "ADAU",  # Anti Drug Athletes United
     "AEP",  # Asociación Española de Powerlifting, IPF.
     "AfricanPF",  # African Powerlifting Federation, IPF.
+    # All Indonesia Weightlifting, Body Building and Powerlifting Association, IPF.
+    "AIWBPA",
     "APA",
     "APC",  # American Powerlifting Committee.
     "APF",
@@ -147,7 +150,8 @@ KnownFederations = {
     "NSF",  # Norwegian branch of the IPF.
     "NZPF",  # New Zealand Powerlifting Federation, IPF.
     "OceaniaPF",  # Oceania Powerlifting Federation, IPF.
-    "OlomouckySilak",  # Olomoucký Silák, a yearly bench competition in Czechia.
+    # Olomoucký Silák, a yearly bench competition in Czechia.
+    "OlomouckySilak",
     "ParaPL",  # Para Powerlifting.
     "PA",
     "PLZS",  # Powerlifting zveza Slovenije, IPF.
@@ -157,6 +161,7 @@ KnownFederations = {
     "PZKFiTS",  # Polish IPF affiliate.
     "RAW",  # 100% RAW Federation (drug-tested).
     "RAW-CAN",  # 100% RAW Federation Canada (drug-tested).
+    "RAW-UKR",  # 100% RAW Federation Ukraine.
     "RAWU",  # Raw United Federation
     "RPS",
     "RPU",  # Russian Powerlifting Union
@@ -165,7 +170,8 @@ KnownFederations = {
     "SCT",  # Super-Cup of Titans.
     "SPA",  # Singapore Powerlifting Alliance
     "SPF",
-    "SPSS",  # Societatem Potentis Species Sports, defunct Russian raw federation.
+    # Societatem Potentis Species Sports, defunct Russian raw federation.
+    "SPSS",
     "SSF",  # Swedish IPF Affiliate.
     "SVNL",  # Finnish IPF Affiliate.
     "THSPA",  # Texas High School, single-ply only, drug-tested.
@@ -176,6 +182,7 @@ KnownFederations = {
     "USPF",
     "USPA",
     "VietnamPA",  # Vietnam Powerlifting Alliance, GPA Affiliate.
+    "Vityaz",
     "WABDL",  # World Association of Bench Pressers and Deadlifters.
     "WDFPF",  # World Drug Free Powerlifting Association
     "WelshPA",  # Welsh Powerlifting Association, IPF.
@@ -187,6 +194,7 @@ KnownFederations = {
     "WPC-RUS",
     "WPC-UKR",
     "WPF",  # World Powerlifting federation (Not the Wilks one)
+    "WPU",  # World Powerlifting Union.
     "WPUF",  # World Powerlifting Union of Federations
     "WNPF",  # World Natural Powerlifting Federation.
     "WRPF",

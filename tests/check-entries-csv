@@ -121,13 +121,15 @@ def check_column_name(s, row, csv):
         perror("Name contains illegal character(s): \"%s\"" % s)
 
     part = s.split()
-    if s.upper() == s or s.lower() == s:
-        perror("Name must be in proper case: \"%s\"" % s)
-    elif not part[0][0].isupper():
-        perror("Name must be in proper case: \"%s\"" % s)
-    elif (not part[-1][0].isupper() and "d'" not in part[-1] and
-            not part[-1].startswith('de')):
-        perror("Name must be in proper case: \"%s\"" % s)
+    # Need this check for Indonesian names given as just initials
+    if any(len(x.replace('.', '')) > 1 for x in part):
+        if s.upper() == s or s.lower() == s:
+            perror("Name must be in proper case: \"%s\"" % s)
+        elif not part[0][0].isupper():
+            perror("Name must be in proper case: \"%s\"" % s)
+        elif (not part[-1][0].isupper() and "d'" not in part[-1] and
+                not part[-1].startswith('de')):
+            perror("Name must be in proper case: \"%s\"" % s)
 
     if part[-1] == 'JR' or part[-1] == 'jr' or part[-1] == 'SR' or part[-1] == 'sr':
         perror("Junior/Senior in names must be capitalized like 'Jr': \"%s\"" % s)

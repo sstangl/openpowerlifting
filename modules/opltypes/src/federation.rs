@@ -47,6 +47,8 @@ pub enum Federation {
     #[strum(to_string = "AfricanPF", serialize = "africanpf")]
     AfricanPF,
     #[strum(to_string = "APA", serialize = "apa")]
+    AIWBPA,
+    #[strum(to_string = "AIWBPA", serialize = "aiwbpa")]
     APA,
     #[strum(to_string = "APC", serialize = "apc")]
     APC,
@@ -211,6 +213,9 @@ pub enum Federation {
     #[serde(rename = "RAW-CAN")]
     #[strum(to_string = "RAW-CAN", serialize = "raw-can")]
     RAWCAN,
+    #[serde(rename = "RAW-UKR")]
+    #[strum(to_string = "RAW-UKR", serialize = "raw-ukr")]
+    RAWUKR,
     #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
     #[strum(to_string = "RPS", serialize = "rps")]
@@ -249,6 +254,8 @@ pub enum Federation {
     USPA,
     #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
     VietnamPA,
+    #[strum(to_string = "Vityaz", serialize = "vityaz")]
+    Vityaz,
     #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
     #[strum(to_string = "WDFPF", serialize = "wdfpf")]
@@ -275,6 +282,8 @@ pub enum Federation {
     WPCUKR,
     #[strum(to_string = "WPF", serialize = "wpf")]
     WPF,
+    #[strum(to_string = "WPU", serialize = "wpu")]
+    WPU,
     #[strum(to_string = "WPUF", serialize = "wpuf")]
     WPUF,
     #[strum(to_string = "WNPF", serialize = "wnpf")]

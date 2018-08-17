@@ -74,6 +74,7 @@ impl MetaFederation {
                     || meet.federation == Federation::ADAU
                     || meet.federation == Federation::ADFPA
                     || meet.federation == Federation::ADFPF
+                    || meet.federation == Federation::AIWBPA
                     || meet.federation == Federation::AEP
                     || meet.federation == Federation::AfricanPF
                     || meet.federation == Federation::APU
@@ -115,6 +116,7 @@ impl MetaFederation {
                     || meet.federation == Federation::PZKFiTS
                     || meet.federation == Federation::RAW
                     || meet.federation == Federation::RAWCAN
+                    || meet.federation == Federation::RAWUKR
                     || meet.federation == Federation::ScottishPL
                     || meet.federation == Federation::SSF
                     || meet.federation == Federation::SVNL
@@ -124,6 +126,7 @@ impl MetaFederation {
                     || meet.federation == Federation::WDFPF
                     || meet.federation == Federation::WelshPA
                     || meet.federation == Federation::WNPF
+                    || meet.federation == Federation::WPU
             }
             MetaFederation::AllAmateur => entry.tested,
             MetaFederation::AllArgentina => {
@@ -179,6 +182,7 @@ impl MetaFederation {
                     || meet.federation == Federation::RPU
                     || meet.federation == Federation::SCT
                     || meet.federation == Federation::SPSS
+                    || meet.federation == Federation::Vityaz
                     || meet.federation == Federation::WPARUS
                     || meet.federation == Federation::WPCRUS
                     || meet.federation == Federation::WRPF
@@ -197,7 +201,8 @@ impl MetaFederation {
                     || meet.federation == Federation::WelshPA
             }
             MetaFederation::AllUkraine => {
-                meet.federation == Federation::UkrainePA
+                meet.federation == Federation::RAWUKR
+                    || meet.federation == Federation::UkrainePA
                     || meet.federation == Federation::UPC
                     || meet.federation == Federation::WPAU 
                     || meet.federation == Federation::WPCUKR

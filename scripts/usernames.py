@@ -13,7 +13,7 @@ SubstitutionMap = {
     'ć': 'c', 'ç': 'c', 'č': 'c',
     'đ': 'd', 'ð': 'd', 'ď': 'd',
     'é': 'e', 'ê': 'e', 'ë': 'e', 'è': 'e', 'ě': 'e', 'ę': 'e', 'ē': 'e', 'ế': 'e',
-    'ễ': 'e', 'ể': 'e', 'ề': 'e', 'ệ': 'e', 'ė': 'e',
+    'ễ': 'e', 'ể': 'e', 'ề': 'e', 'ệ': 'e', 'ė': 'e', 'ə': 'e',
     'ğ': 'g', 'ģ': 'g',
     'î': 'i', 'í': 'i', 'ï': 'i', 'ì': 'i', 'ї': 'i', 'ī': 'i', 'ĩ': 'i', 'ị': 'i',
     'ı': 'i',
@@ -36,18 +36,24 @@ SubstitutionMap = {
 
 
 EastAsianRanges = [
-  {"from": ord(u"\u3300"), "to": ord(u"\u33ff")},          # compatibility ideographs
-  {"from": ord(u"\ufe30"), "to": ord(u"\ufe4f")},          # compatibility ideographs
-  {"from": ord(u"\uf900"), "to": ord(u"\ufaff")},          # compatibility ideographs
-  {"from": ord(u"\U0002F800"), "to": ord(u"\U0002fa1f")},  # compatibility ideographs
-  {"from": ord(u"\u30a0"), "to": ord(u"\u30ff")},          # Japanese Kana
-  {"from": ord(u"\u2e80"), "to": ord(u"\u2eff")},          # cjk radicals supplement
-  {"from": ord(u"\u4e00"), "to": ord(u"\u9fff")},
-  {"from": ord(u"\u3400"), "to": ord(u"\u4dbf")},
-  {"from": ord(u"\U00020000"), "to": ord(u"\U0002a6df")},
-  {"from": ord(u"\U0002a700"), "to": ord(u"\U0002b73f")},
-  {"from": ord(u"\U0002b740"), "to": ord(u"\U0002b81f")},
-  {"from": ord(u"\U0002b820"), "to": ord(u"\U0002ceaf")}   # included as of Unicode 8.0
+    # compatibility ideographs
+    {"from": ord(u"\u3300"), "to": ord(u"\u33ff")},
+    # compatibility ideographs
+    {"from": ord(u"\ufe30"), "to": ord(u"\ufe4f")},
+    # compatibility ideographs
+    {"from": ord(u"\uf900"), "to": ord(u"\ufaff")},
+    # compatibility ideographs
+    {"from": ord(u"\U0002F800"), "to": ord(u"\U0002fa1f")},
+    {"from": ord(u"\u30a0"), "to": ord(u"\u30ff")},          # Japanese Kana
+    # cjk radicals supplement
+    {"from": ord(u"\u2e80"), "to": ord(u"\u2eff")},
+    {"from": ord(u"\u4e00"), "to": ord(u"\u9fff")},
+    {"from": ord(u"\u3400"), "to": ord(u"\u4dbf")},
+    {"from": ord(u"\U00020000"), "to": ord(u"\U0002a6df")},
+    {"from": ord(u"\U0002a700"), "to": ord(u"\U0002b73f")},
+    {"from": ord(u"\U0002b740"), "to": ord(u"\U0002b81f")},
+    # included as of Unicode 8.0
+    {"from": ord(u"\U0002b820"), "to": ord(u"\U0002ceaf")}
 ]
 
 

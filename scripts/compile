@@ -67,6 +67,7 @@ TESTED_FEDERATIONS = [
     "ADFPF",
     "AEP",
     "AfricanPF",
+    "AIWBPA",
     "APU",
     "AsianPF",
     "AusDFPF",
@@ -106,6 +107,7 @@ TESTED_FEDERATIONS = [
     "PZKFiTS",
     "RAW",
     "RAW-CAN",
+    "RAW-UKR",
     "ScottishPL",
     "SSF",
     "SVNL",
@@ -114,7 +116,8 @@ TESTED_FEDERATIONS = [
     "WABDL",
     "WDFPF",
     "WelshPA",
-    "WNPF"
+    "WNPF",
+    "WPU"
 ]
 
 
