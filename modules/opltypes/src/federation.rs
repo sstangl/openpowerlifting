@@ -46,9 +46,9 @@ pub enum Federation {
     AEP,
     #[strum(to_string = "AfricanPF", serialize = "africanpf")]
     AfricanPF,
-    #[strum(to_string = "APA", serialize = "apa")]
-    AIWBPA,
     #[strum(to_string = "AIWBPA", serialize = "aiwbpa")]
+    AIWBPA,
+    #[strum(to_string = "APA", serialize = "apa")]
     APA,
     #[strum(to_string = "APC", serialize = "apc")]
     APC,
