@@ -39,7 +39,7 @@
     teen1617 = {name ="Teen 16-17",min=16,max=17} #Teen 2
     teen1619 = {name ="Teen 16-19",min=16,max=19}
     teen1819 = {name ="Teen 18-19",min=18,max=19} #Teen 3
-    juniors2023 = {name ="Juniors 20-23",min=20,max=23}
+    juniors2023 = {name ="Juniors 20-23",min=19.5,max=23}
     novice = {name ="Novice",min=0,max=999}
 
 
