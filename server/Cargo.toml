@@ -7,7 +7,7 @@ authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 accept-language = "1.2"
 csv = "1.0"
-dotenv = "0.10"
+dotenv = "0.13"
 itertools = "0.7"
 serde = "1.0"
 serde_derive = "1.0"
