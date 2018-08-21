@@ -11,7 +11,7 @@
 {% block body %}
   <div class="mixed-content">
 
-    <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</h1>
+    <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% if lifter.flair == "bbbc" %} <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo" style="padding-left: 6px;"/>{% endif %}</h1>
 
     <h2>{{strings.lifter_page.personal_bests}}</h2>
 

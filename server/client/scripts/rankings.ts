@@ -75,6 +75,10 @@ function makeDataProvider(cache) {
                         '<i class="fa fa-vk fa-resize"></i></a>';
             }
 
+            if (entry[Column.Flair] === "bbbc") {
+                name += ' <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo"/>';
+            }
+
             const date = '<a href="/m/' + entry[Column.Path] + '">' +
                 entry[Column.Date] + '</a>';
 

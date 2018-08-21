@@ -33,6 +33,8 @@ pub struct Lifter {
     pub vkontakte: Option<String>,
     #[serde(rename(deserialize = "Color"))]
     pub color: Option<String>,
+    #[serde(rename(deserialize = "Flair"))]
+    pub flair: Option<String>,
 }
 
 /// The definition of a Meet in the database.

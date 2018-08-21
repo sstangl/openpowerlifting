@@ -23,6 +23,7 @@ export const enum Column {
     Instagram,
     Vkontakte,
     Color,
+    Flair,
     Federation,
     Date,
     Country,

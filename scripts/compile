@@ -382,6 +382,15 @@ def build_lifterscsv(lifterdir, builddir):
         colormap[row[nameidx]] = row[coloridx]
     colorcsv = None
 
+    # Make a map of (Name => Flair).
+    flaircsv = Csv(lifterdir + os.sep + 'flair.csv')
+    nameidx = flaircsv.index('Name')
+    flairidx = flaircsv.index('Flair')
+    flairmap = dict()
+    for row in flaircsv.rows:
+        flairmap[row[nameidx]] = row[flairidx]
+    flaircsv = None
+
     lifterscsv = Csv()
     lifterscsv.append_column('LifterID')
     lifterscsv.append_column('Name')
@@ -390,6 +399,7 @@ def build_lifterscsv(lifterdir, builddir):
     lifterscsv.append_column('Instagram')
     lifterscsv.append_column('VKontakte')
     lifterscsv.append_column('Color')
+    lifterscsv.append_column('Flair')
 
     for (name, lifterid) in ordered:
         instagram = ''
@@ -408,9 +418,13 @@ def build_lifterscsv(lifterdir, builddir):
         if name in colormap:
             color = colormap[name]
 
+        flair = ''
+        if name in flairmap:
+            flair = flairmap[name]
+
         username = get_username(name)
 
-        row = [str(lifterid), name, cyrname, username, instagram, vk, color]
+        row = [str(lifterid), name, cyrname, username, instagram, vk, color, flair]
         lifterscsv.rows.append(row)
 
     lifterscsvpath = builddir + os.sep + 'lifters.csv'

@@ -15,6 +15,7 @@ pub struct JsEntryRow<'db> {
     pub instagram: &'db Option<String>,
     pub vkontakte: &'db Option<String>,
     pub color: &'db Option<String>,
+    pub flair: &'db Option<String>,
 
     pub federation: Federation,
     pub date: String,
@@ -54,6 +55,7 @@ impl<'db> Serialize for JsEntryRow<'db> {
         seq.serialize_element(&self.instagram)?;
         seq.serialize_element(&self.vkontakte)?;
         seq.serialize_element(&self.color)?;
+        seq.serialize_element(&self.flair)?;
 
         seq.serialize_element(&self.federation)?;
         seq.serialize_element(&self.date)?;
@@ -100,6 +102,7 @@ impl<'db> JsEntryRow<'db> {
             instagram: &lifter.instagram,
             vkontakte: &lifter.vkontakte,
             color: &lifter.color,
+            flair: &lifter.flair,
 
             federation: meet.federation,
             date: format!("{}", meet.date),
