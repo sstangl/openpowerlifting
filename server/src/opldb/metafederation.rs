@@ -161,7 +161,9 @@ impl MetaFederation {
                 meet.federation == Federation::FPO || meet.federation == Federation::SVNL
             }
             MetaFederation::AllGermany => {
-                meet.federation == Federation::BVDK || meet.federation == Federation::GPU
+                meet.federation == Federation::BVDK 
+                    || meet.federation == Federation::GPU
+                    || meet.federation == Federation::WPCGermany
             }
             MetaFederation::AllIreland => {
                 meet.federation == Federation::GPCIRL
@@ -204,6 +206,7 @@ impl MetaFederation {
                 meet.federation == Federation::RAWUKR
                     || meet.federation == Federation::UkrainePA
                     || meet.federation == Federation::UPC
+                    || meet.federation == Federation::UkrainePF
                     || meet.federation == Federation::WPAU 
                     || meet.federation == Federation::WPCUKR
                     || meet.federation == Federation::WPUF
@@ -217,6 +220,7 @@ impl MetaFederation {
                     || meet.federation == Federation::APA
                     || meet.federation == Federation::APC
                     || meet.federation == Federation::APF
+                    || meet.federation == Federation::BBDD
                     || meet.federation == Federation::Hardcore
                     || meet.federation == Federation::HERC
                     || meet.federation == Federation::IPA
@@ -230,6 +234,7 @@ impl MetaFederation {
                     || meet.federation == Federation::RAWU
                     || meet.federation == Federation::RPS
                     || meet.federation == Federation::RUPC
+                    || meet.federation == Federation::SCI
                     || meet.federation == Federation::SPF
                     || meet.federation == Federation::THSPA
                     || meet.federation == Federation::UPA

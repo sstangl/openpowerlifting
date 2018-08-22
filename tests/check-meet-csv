@@ -89,6 +89,8 @@ KnownFederations = {
     "BAWLA",  # British Amateur Weightlifting Association, precursor to BP
     # Bogatyr Brotherhood, a stand-alone and short-lived Russian federation.
     "BB",
+    # Baddest Bench, Deadliest Deadlift. Yearly meets that used to be run by John Inzer.
+    "BBDD",
     "BDFPA",  # British Drug-Free Powerlifting Association.
     "BPO",  # British Powerlifting Organisation, WPF.
     "BPU",  # British Powerlifting Union.
@@ -167,6 +169,7 @@ KnownFederations = {
     "RPU",  # Russian Powerlifting Union
     "RUPC",  # Raw Unity.
     "ScottishPL",  # Scottish Powerlifting, IPF.
+    "SCI",  # Old US based federation, no idea what this stands for.
     "SCT",  # Super-Cup of Titans.
     "SPA",  # Singapore Powerlifting Alliance
     "SPF",
@@ -178,6 +181,7 @@ KnownFederations = {
     "UkrainePA",  # Ukraine Powerlifting Association.
     "UPA",
     "UPC",  # Ukrainian Powerlifting Comittee
+    "UkrainePF",  # Ukrainian Powerlifting Federation, IPF.
     "USAPL",
     "USPF",
     "USPA",
@@ -190,6 +194,7 @@ KnownFederations = {
     "WPA-RUS",  # World Powerlifting Alliance Russia
     "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
+    "WPC-Germany",
     "WPC-Portugal",
     "WPC-RUS",
     "WPC-UKR",

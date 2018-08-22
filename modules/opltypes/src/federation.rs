@@ -64,6 +64,8 @@ pub enum Federation {
     BAWLA,
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
+    #[strum(to_string = "BBDD", serialize = "bbdd")]
+    BBDD,
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
     #[strum(to_string = "BPC", serialize = "bpc")]
@@ -226,6 +228,8 @@ pub enum Federation {
     RUPC,
     #[strum(to_string = "ScottishPL", serialize = "scottishpl")]
     ScottishPL,
+    #[strum(to_string = "SCI", serialize = "sci")]
+    SCI,
     #[strum(to_string = "SCT", serialize = "sct")]
     SCT,
     #[strum(to_string = "SPA", serialize = "spa")]
@@ -246,6 +250,8 @@ pub enum Federation {
     UPA,
     #[strum(to_string = "UPC", serialize = "upc")]
     UPC,
+    #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
+    UkrainePF,
     #[strum(to_string = "USAPL", serialize = "usapl")]
     USAPL,
     #[strum(to_string = "USPF", serialize = "uspf")]
@@ -271,6 +277,9 @@ pub enum Federation {
     WPAU,
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
+    #[serde(rename = "WPC-Germany")]
+    #[strum(to_string = "WPC-Germany", serialize = "wpc-germany")]
+    WPCGermany,
     #[serde(rename = "WPC-Portugal")]
     #[strum(to_string = "WPC-Portugal", serialize = "wpc-portugal")]
     WPCPortugal,
