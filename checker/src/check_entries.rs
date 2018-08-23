@@ -65,6 +65,7 @@ enum Header {
     BirthDay,
     Tested,
     AgeClass,
+    Country,
 
     WeightClassKg,
     BodyweightKg,
@@ -92,7 +93,6 @@ enum Header {
     Team,
     #[strum(serialize = "Country-State")]
     CountryState,
-    Country,
     State,
     #[strum(serialize = "College/University")]
     CollegeUniversity,
@@ -314,6 +314,12 @@ fn check_column_tested(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_column_country(s: &str, line: u64, report: &mut Report) {
+    if !s.is_empty() && s.parse::<Country>().is_err() {
+        report.warning_on(line, format!("Unknown Country '{}'", s));
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -445,6 +451,9 @@ where
         }
 
         // Check optional fields.
+        if let Some(idx) = headers.get(Header::Country) {
+            check_column_country(&record[idx], line, &mut report);
+        }
         if let Some(idx) = headers.get(Header::Tested) {
             check_column_tested(&record[idx], line, &mut report);
         }
