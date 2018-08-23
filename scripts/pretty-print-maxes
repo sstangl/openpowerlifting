@@ -2,7 +2,7 @@
 #
 # Given two input files:
 #  1) A file containing lifter names, one name per line;
-#  2) The fully-built entries.csv;
+#  2) The fully-built openpowerlifting.csv;
 #
 # This script outputs a list of each lifter's best (Squat, Bench, Deadlift, Total).
 #
@@ -57,25 +57,37 @@ def collect_maxes(name, csv):
     return (best_squat, best_bench, best_deadlift, best_total)
 
 
+def p(s):
+    return s.replace('.0', '')
+
+
+def lbs(f):
+    return "{:.1f}".format(f * 2.20462262)
+
+
 def main(input_filename, oplcsv_filename):
     with open(input_filename) as fd:
         lifters = [x.strip() for x in fd]
 
     csv = oplcsv.Csv(oplcsv_filename)
 
-    print("%s\tSquat\tBench\tDL\tTotal" % ("Name".ljust(20)))
+    print("%s\tSquat\tLBS\tBench\tLBS\tDL\tLBS\tTotal\tLBS" % ("Name".ljust(20)))
 
     for lifter in lifters:
         maxes = collect_maxes(lifter, csv)
+        in_lbs = [lbs(x) for x in maxes]
         maxes = list(map(str, maxes))
 
-        print("%s\t%s\t%s\t%s\t%s" %
-              (lifter.ljust(20), maxes[0], maxes[1], maxes[2], maxes[3]))
+        print("%s\t%s\t(%s)\t%s\t(%s)\t%s\t(%s)\t%s\t(%s)" %
+              (lifter.ljust(20), p(maxes[0]), p(in_lbs[0]),
+               p(maxes[1]), p(in_lbs[1]),
+               p(maxes[2]), p(in_lbs[2]),
+               p(maxes[3]), p(in_lbs[3])))
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s input entries.csv" %
+        print("Usage: %s input openpowerlifting.csv" %
               sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2])
