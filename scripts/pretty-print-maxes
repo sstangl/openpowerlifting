@@ -58,7 +58,9 @@ def collect_maxes(name, csv):
 
 
 def p(s):
-    return s.replace('.0', '')
+    if s.endswith('.0'):
+        return s.replace('.0', '')
+    return s
 
 
 def lbs(f):
