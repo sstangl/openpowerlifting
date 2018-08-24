@@ -4,6 +4,7 @@
 pub enum Country {
     Algeria,
     Argentina,
+    Armenia,
     Aruba,
     Australia,
     Azerbaijan,
@@ -28,6 +29,7 @@ pub enum Country {
     #[serde(rename = "Côte d’Ivoire")]
     #[strum(to_string = "Côte d’Ivoire")]
     CoteDIvoire,
+    Croatia,
     Czechia,
     Denmark,
     Ecuador,
@@ -40,6 +42,7 @@ pub enum Country {
     Fiji,
     Finland,
     France,
+    Georgia,
     Germany,
     Greece,
     Guatemala,
@@ -87,19 +90,31 @@ pub enum Country {
     #[serde(rename = "Puerto Rico")]
     #[strum(to_string = "Puerto Rico")]
     PuertoRico,
+    Romania,
     Russia,
     Samoa,
     Scotland,
     Serbia,
+    /// Existed from 1992-2006.
+    #[serde(rename = "Serbia and Montenegro")]
+    #[strum(to_string = "Serbia and Montenegro")]
+    SerbiaAndMontenegro,
     Singapore,
     Slovakia,
     Slovenia,
+    #[serde(rename = "Solomon Islands")]
+    #[strum(to_string = "Solomon Islands")]
+    SolomonIslands,
     #[serde(rename = "South Africa")]
     #[strum(to_string = "South Africa")]
     SouthAfrica,
     #[serde(rename = "South Korea")]
     #[strum(to_string = "South Korea")]
     SouthKorea,
+    /// Existed from 1922-1991.
+    #[serde(rename = "Soviet Union")]
+    #[strum(to_string = "Soviet Union")]
+    SovietUnion,
     Spain,
     Sweden,
     Switzerland,
@@ -118,4 +133,10 @@ pub enum Country {
     Venezuela,
     Vietnam,
     Wales,
+    /// Existed from 1949-1990.
+    #[serde(rename = "West Germany")]
+    #[strum(to_string = "West Germany")]
+    WestGermany,
+    /// Existed from 1945-1992.
+    Yugoslavia,
 }
