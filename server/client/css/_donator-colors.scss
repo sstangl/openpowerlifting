@@ -66,6 +66,12 @@
   background-image: linear-gradient(to right, #FB3640, #EDF2F4, #43D1FF);
 }
 
+// Red, white, and red.
+.canada {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #FB3640, #EDF2F4, #FB3640);
+}
+
 // White, blue, and white.
 .finland {
   @include gradient-prereqs(#507CFF);
