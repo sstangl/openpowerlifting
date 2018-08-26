@@ -200,7 +200,7 @@
   <option value="bpo" {% if selection.federation == "BPO" %}selected{% endif %}>BPO - British Powerlifting Organisation [WPF]</option>
   <option value="bpu" {% if selection.federation == "BPU" %}selected{% endif %}>BPU - British Powerlifting Union [WPC]</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA - English Powerlifting Association [IPF]</option>
-  <option value="gpc-gb" {% if selection.federation == "GPC-GB" %}selected{% endif %}>GPC-GB - GPC Great Britain [GPC] (Help Needed!)</option>
+  <option value="gpc-gb" {% if selection.federation == "GPC-GB" %}selected{% endif %}>GPC-GB - GPC Great Britain [GPC]</option>
   <option value="nipf" {% if selection.federation == "NIPF" %}selected{% endif %}>NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL - Scottish Powerlifting [IPF]</option>
   <option value="welshpa" {% if selection.federation == "WelshPA" %}selected{% endif %}>WelshPA - Welsh Powerlifting Association [IPF]</option>
