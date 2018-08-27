@@ -77,7 +77,21 @@ fn print_summary(error_count: usize, warning_count: usize) {
 fn main() -> Result<(), Box<Error>> {
     // Get handles to various parts of the project.
     let project_root = get_project_root()?;
-    let meet_data_root = project_root.join("meet-data");
+    let meet_data_root = match env::args().count() {
+        // No command-line argument: go over the entire project.
+        1 => project_root.join("meet-data"),
+        // Command-line argument: just use that directory.
+        2 => {
+            env::current_dir()?
+                .join(env::args().skip(1).next().unwrap_or(".".to_string()))
+                .canonicalize()?
+        }
+        _ => panic!("Too many arguments"),
+    };
+
+    if !meet_data_root.exists() {
+        panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
+    }
 
     // Build a list of every directory containing meet results.
     let meetdirs: Vec<DirEntry> = WalkDir::new(&meet_data_root)

@@ -273,7 +273,21 @@ fn finish_table<'db>(
         None => "",
     };
 
-    let title = Some(format!("{} {} {} {}", sex, equip, class, div));
+    // TODO: Internationalization.
+    // TODO: Cover all the cases. Try to use some match arms.
+    let event: &str = if entries[0].event.is_push_pull() {
+        " Push-Pull"
+    } else if entries[0].event.is_squat_only() {
+        " Squat Only"
+    } else if entries[0].event.is_bench_only() {
+        " Bench Only"
+    } else if entries[0].event.is_deadlift_only() {
+        " Deadlift Only"
+    } else {
+        ""
+    };
+
+    let title = Some(format!("{} {} {} {}{}", sex, equip, class, div, event));
 
     let rows: Vec<ResultsRow> = entries
         .iter()
