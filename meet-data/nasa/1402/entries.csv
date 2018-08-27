@@ -1,9 +1,9 @@
 Place,WeightClassKg,Name,State,Sex,BodyweightKg,Squat4Kg,Best3SquatKg,Bench4Kg,Best3BenchKg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Division,Event,Equipment
-1,110,Robert McKinzie,MO,M,109.95,,252.5,,215,272.50,260,727.5,m2,SBD,Single-ply
+1,110,Robert McKinzie,MO,M,109.95,,252.5,,215,272.5,260,727.5,m2,SBD,Single-ply
 1,125,Brad Rich,MO,M,119.66,,,,247.5,,,247.5,p+f,B,Single-ply
 1,82.5,Justin Guinn,MO,M,80.01,,,,137.5,,235,372.5,jr,BD,Raw
 1,82.5,Kyle Morgan,KS,M,75.75,,,,122.5,,220,342.5,int,BD,Raw
-1,100,Dillon Matinek,MO,M,96.03,,,155.00,150,237.50,232.5,382.5,jr,BD,Raw
+1,100,Dillon Matinek,MO,M,96.03,,,155,150,237.5,232.5,382.5,jr,BD,Raw
 1,140,Mark Mitchell,KS,M,136.8,,,,160,,245,405,m2,BD,Raw
 1,100,Dylan Johnson,MO,M,91.94,,,,120,,200,320,hs,BD,Raw
 1,90,James Clark,MO,M,88.95,,,,110,,207.5,317.5,m2,BD,Raw
@@ -13,10 +13,10 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Squat4Kg,Best3SquatKg,Bench4Kg,B
 2,100,Jordan Benton,MO,M,96.66,,,,115,,152.5,267.5,hs,BD,Raw
 1,110,Nick Frietas,MO,M,105.1,,,,107.5,,182.5,290,teen,BD,Raw
 1,67.5,Jake Freitas,MO,M,63.09,,,,55,,82.5,137.5,nov,BD,Raw
-1,100,Matthew Smith,KS,M,96.52,,,,,,187.5,187.5,nov,D,Raw
+1,100,Matthew Smith #6,KS,M,96.52,,,,,,187.5,187.5,nov,D,Raw
 1,67.5,Kenneth Goad,MO,M,64.95,,,,35,,72.5,107.5,m4,BD,Raw
 1,56,Kayson Roe,MO,M,48.31,,,,55,,,55,hs,B,Raw
-1,110,Robert McKinzie,MO,M,109.95,,,,215,272.50,260,475,m2,BD,Single-ply
+1,110,Robert McKinzie,MO,M,109.95,,,,215,272.5,260,475,m2,BD,Single-ply
 1,82.5,Kyle Morgan,KS,M,75.75,,,,122.5,,,122.5,int,B,Raw
 1,100,Paul Robinson,MO,M,93.67,,,,115,,,115,teen,B,Raw
 1,82.5,Ethan Freitas,MO,M,76.75,,,,92.5,,,92.5,teen,B,Raw
@@ -24,16 +24,16 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Squat4Kg,Best3SquatKg,Bench4Kg,B
 1,82.5,Justin Guinn,MO,M,80.01,,,,137.5,,235,372.5,jr,BD,Raw
 1,90,Matt Hopper,KS,M,84.05,,,,147.5,,227.5,375,int,BD,Raw
 1,125,Barney Pontious,KS,M,115.39,,,,185,,240,425,pure,BD,Raw
-1,100,Dillon Matinek,MO,M,96.03,,,155.00,150,237.50,232.5,382.5,jr,BD,Raw
+1,100,Dillon Matinek,MO,M,96.03,,,155,150,237.5,232.5,382.5,jr,BD,Raw
 1,125,Jeremy Henson,KS,M,119.25,,,,182.5,,222.5,405,sm1,BD,Raw
-1,100,Derek Durman,KS,M,91.53,,,-147.50,142.5,,185,327.5,nov,BD,Raw
+1,100,Derek Durman,KS,M,91.53,,,-147.5,142.5,,185,327.5,nov,BD,Raw
 1,90,James Clark,MO,M,88.95,,,,110,,195,305,m2,BD,Raw
 1,90,James Clark,MO,M,88.95,,,,110,,195,305,open,BD,Raw
 1,110,John Isemann,MO,M,107,,287.5,,200,,250,737.5,p+f,SBD,Wraps
 1,110,Jason Weite,IA,M,108.68,,247.5,,185,,255,687.5,pure,SBD,Wraps
 1,75,Kason Schwalm,MO,M,73.03,,175,,107.5,,227.5,510,teen,SBD,Wraps
-1,100,Derek Durman,KS,M,91.53,,207.5,-147.50,142.5,,197.5,547.5,nov,SBD,Wraps
-1,100,Derek Durman,KS,M,91.53,,207.5,-147.50,142.5,,197.5,547.5,sm2,SBD,Wraps
+1,100,Derek Durman,KS,M,91.53,,207.5,-147.5,142.5,,197.5,547.5,nov,SBD,Wraps
+1,100,Derek Durman,KS,M,91.53,,207.5,-147.5,142.5,,197.5,547.5,sm2,SBD,Wraps
 1,110,Daniel Forbs,KS,M,105.91,,212.5,,142.5,,230,585,int,SBD,Wraps
 1,100,Michael Buchanan,AR,M,98.93,,205,,127.5,,227.5,560,pure,SBD,Wraps
 1,75,James Dubois,MO,M,74.25,,172.5,,107.5,,200,480,hs,SBD,Wraps
@@ -43,11 +43,11 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Squat4Kg,Best3SquatKg,Bench4Kg,B
 1,90,James Clark,MO,M,88.95,,147.5,,110,,207.5,465,open,SBD,Wraps
 1,125,Kyle Groff,KS,M,121.06,,170,,102.5,,180,452.5,nov,SBD,Wraps
 1,82.5,Kobe Thomas,MO,M,81.47,,132.5,,82.5,,152.5,367.5,teen,SBD,Wraps
-1,67.5,Kelly Thomas,MO,F,66.5,127.50,120,,45,142.50,130,295,m1,SBD,Wraps
+1,67.5,Kelly Thomas,MO,F,66.5,127.5,120,,45,142.5,130,295,m1,SBD,Wraps
 1,75,Madison Parson,MO,F,71.44,,102.5,,50,,115,267.5,hs,SBD,Wraps
 1,90+,Karlee Collins,MO,F,106.68,,125,,57.5,,135,317.5,hs,SBD,Wraps
 2,90+,Emily Ford,MO,F,119.11,,115,,67.5,,130,312.5,hs,SBD,Wraps
-1,90+,Amy Ford,MO,F,104.28,,92.5,,35,112.50,105,232.5,nov,SBD,Wraps
+1,90+,Amy Ford,MO,F,104.28,,92.5,,35,112.5,105,232.5,nov,SBD,Wraps
 1,125,Daniel Cunningham,KS,M,119.39,,,,202.5,,,202.5,sm1,B,Raw
 1,125,Barney Pontious,KS,M,115.39,,,,185,,,185,pure,B,Raw
 1,90,Matt Hopper,KS,M,84.05,,,,147.5,,,147.5,int,B,Raw
