@@ -56,6 +56,7 @@ impl Selection {
         let mut parsed_sex: bool = false;
         let mut parsed_year: bool = false;
         let mut parsed_sort: bool = false;
+        let mut parsed_event: bool = false;
 
         // Iterate over each path component, attempting to determine
         // what kind of data it is.
@@ -105,6 +106,13 @@ impl Selection {
                 }
                 ret.sort = s;
                 parsed_sort = true;
+            // Check whether this is event information.
+            } else if let Ok(e) = segment.parse::<EventSelection>() {
+                if parsed_event {
+                    return Err(());
+                }
+                ret.event = e;
+                parsed_event = true;
             // Unknown string, therefore malformed URL.
             } else {
                 return Err(());

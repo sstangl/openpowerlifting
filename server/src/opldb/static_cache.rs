@@ -250,6 +250,7 @@ impl StaticCache {
         if selection.federation == FederationSelection::AllFederations
             && selection.weightclasses == WeightClassSelection::AllClasses
             && selection.year == YearSelection::AllYears
+            && selection.event == EventSelection::AllEvents
         {
             let by_sort = match selection.sort {
                 SortSelection::BySquat => &self.constant_time.squat,
