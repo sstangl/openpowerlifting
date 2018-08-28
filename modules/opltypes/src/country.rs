@@ -9,14 +9,17 @@ pub enum Country {
     Australia,
     Azerbaijan,
     Austria,
+    Bahamas,
     Belarus,
     Belgium,
+    Bolivia,
     Brazil,
     Britain,
     #[serde(rename = "British Virgin Islands")]
     #[strum(to_string = "British Virgin Islands")]
     BritishVirginIslands,
     Bulgaria,
+    Cameroon,
     Canada,
     #[serde(rename = "Cayman Islands")]
     #[strum(to_string = "Cayman Islands")]
@@ -30,8 +33,10 @@ pub enum Country {
     #[strum(to_string = "Côte d’Ivoire")]
     CoteDIvoire,
     Croatia,
+    Cyprus,
     Czechia,
     Denmark,
+    Djibouti,
     Ecuador,
     Egypt,
     #[serde(rename = "El Salvador")]
@@ -58,16 +63,28 @@ pub enum Country {
     Israel,
     Italy,
     Iran,
+    Iraq,
+    Jamaica,
     Japan,
     Kazakhstan,
+    Kenya,
+    Kiribati,
+    Kyrgyzstan,
     Latvia,
+    Lebanon,
+    Libya,
     Lithuania,
     Luxembourg,
     Malaysia,
     Mexico,
     Mongolia,
     Morocco,
+    Nauru,
     Netherlands,
+    /// Existed from 1954-2010.
+    #[serde(rename = "Netherlands Antilles")]
+    #[strum(to_string = "Netherlands Antilles")]
+    NetherlandsAntilles,
     #[serde(rename = "New Caledonia")]
     #[strum(to_string = "New Caledonia")]
     NewCaledonia,
@@ -75,11 +92,13 @@ pub enum Country {
     #[strum(to_string = "New Zealand")]
     NewZealand,
     Nicaragua,
+    Nigeria,
     Norway,
     #[serde(rename = "N.Ireland")]
     #[strum(to_string = "N.Ireland")]
     NorthernIreland,
     Oman,
+    Pakistan,
     #[serde(rename = "Papua New Guinea")]
     #[strum(to_string = "Papua New Guinea")]
     PapuaNewGuinea,
@@ -111,21 +130,29 @@ pub enum Country {
     #[serde(rename = "South Korea")]
     #[strum(to_string = "South Korea")]
     SouthKorea,
-    /// Existed from 1922-1991.
-    #[serde(rename = "Soviet Union")]
-    #[strum(to_string = "Soviet Union")]
-    SovietUnion,
     Spain,
+    #[serde(rename = "Sri Lanka")]
+    #[strum(to_string = "Sri Lanka")]
+    SriLanka,
     Sweden,
     Switzerland,
     Tahiti,
     Taiwan,
+    Tajikistan,
+    Togo,
+    Tonga,
+    #[serde(rename = "Trinidad and Tobago")]
+    #[strum(to_string = "Trinidad and Tobago")]
+    TrinidadAndTobago,
     Turkey,
+    Turkmenistan,
     UAE,
     UK,
     Ukraine,
     Uruguay,
     USA,
+    /// Existed from 1922-1991.
+    USSR,
     #[serde(rename = "US Virgin Islands")]
     #[strum(to_string = "US Virgin Islands")]
     USVirginIslands,
@@ -139,4 +166,6 @@ pub enum Country {
     WestGermany,
     /// Existed from 1945-1992.
     Yugoslavia,
+    Zambia,
+    Zimbabwe,
 }
