@@ -34,7 +34,11 @@ pub fn get_slice<'db>(
 
     // The request must be in-bounds.
     if end_row >= total_length {
-        end_row = total_length - 1;
+        if total_length > 0 {
+            end_row = total_length - 1;
+        } else {
+            end_row = 0;
+        }
     }
     if (start_row > end_row) || (start_row >= total_length) {
         return RankingsSlice {

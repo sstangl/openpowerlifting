@@ -39,6 +39,7 @@ let selWeightClass: HTMLSelectElement;
 let selFed: HTMLSelectElement;
 let selYear: HTMLSelectElement;
 let selSex: HTMLSelectElement;
+let selEvent: HTMLSelectElement;
 let selSort: HTMLSelectElement;
 
 let searchField: HTMLInputElement;
@@ -150,6 +151,9 @@ function selection_to_path(): string {
     if (selYear.value !== "all") {
         url += "/" + selYear.value;
     }
+    if (selEvent.value !== "all") {
+        url += "/" + selEvent.value;
+    }
     if (selSort.value !== "by-wilks") {
         url += "/" + selSort.value;
     }
@@ -178,6 +182,7 @@ function addEventListeners() {
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
+    selEvent = document.getElementById("eventselect") as HTMLSelectElement;
     selSort = document.getElementById("sortselect") as HTMLSelectElement;
     searchField = document.getElementById("searchfield") as HTMLInputElement;
     searchButton = document.getElementById("searchbutton") as HTMLButtonElement;
@@ -187,6 +192,7 @@ function addEventListeners() {
     addSelectorListeners(selFed);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
+    addSelectorListeners(selEvent);
     addSelectorListeners(selSort);
 
     searchField.addEventListener("keypress", searchOnEnter, false);

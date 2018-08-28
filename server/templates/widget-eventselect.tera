@@ -1,0 +1,8 @@
+<select id="eventselect">
+  <option value="all"{% if selection.event == "AllEvents" %} selected{% endif %}>{{strings.selectors.event.all}}</option>
+  <option value="full-power"{% if selection.event == "FullPower" %} selected{% endif %}>{{strings.selectors.event.full_power}}</option>
+  <option value="push-pull"{% if selection.event == "PushPull" %} selected{% endif %}>{{strings.selectors.event.push_pull}}</option>
+  <option value="squat-only"{% if selection.event == "SquatOnly" %} selected{% endif %}>{{strings.selectors.event.squat_only}}</option>
+  <option value="bench-only"{% if selection.event == "BenchOnly" %} selected{% endif %}>{{strings.selectors.event.bench_only}}</option>
+  <option value="deadlift-only"{% if selection.event == "DeadliftOnly" %} selected{% endif %}>{{strings.selectors.event.deadlift_only}}</option>
+</select>

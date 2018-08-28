@@ -208,6 +208,14 @@
 			"m": "Masculino",
 			"f": "Feminino"
 		},
+		"event": {
+			"all": "All Events",
+			"full_power": "Full Power",
+			"push_pull": "Push-Pull",
+			"squat_only": "Squat Only",
+			"bench_only": "Bench Only",
+			"deadlift_only": "Deadlift Only"
+		},
 		"fed": {
 			"all": "All Feds",
 			"all_tested": "All Drug-Tested Feds",

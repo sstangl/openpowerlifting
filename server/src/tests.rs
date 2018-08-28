@@ -234,3 +234,13 @@ fn test_language_cookie_nonsense() {
     assert_eq!(res.status(), Status::Ok);
     assert!(res.body_string().unwrap().contains("<html lang=\"en\""));
 }
+
+/// Test that some nonsensical rankings options don't crash the server.
+#[test]
+fn test_rankings_nonsense() {
+    let client = client();
+    assert_eq!(
+        client.get("/rankings/push-pull/by-squat").dispatch().status(),
+        Status::Ok
+    );
+}
