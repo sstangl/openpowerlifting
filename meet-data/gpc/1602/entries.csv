@@ -5,7 +5,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 56,Marta Seres,F,2003,52.5,Hungary,SJ1,30,32.5,35,,35,35,2,Raw,B
 56,Elizabet Tomilov,F,2003,52.6,Israel,SJ1,40,45,47.5,-50,47.5,47.5,1,Raw,B
 56,Daniela Silva,F,1969,53,Argentina,Masters2,45,50,55,,55,55,1,Raw,B
-56,Tereza Mlýnková,F,1993,53.1,Czech Republic,J,50,55,-62.5,-63,55,55,1,Raw,B
+56,Tereza Mlýnková,F,1993,53.1,Czechia,J,50,55,-62.5,-63,55,55,1,Raw,B
 56,Dragana Gojković,F,1970,53.3,Serbia,Masters2,37.5,40,-42.5,,40,40,2,Raw,B
 56,Ticia Babos,F,1997,53.4,Hungary,SJ3,45,52.5,-57.5,,52.5,52.5,1,Raw,B
 56,Ina Baneva,F,1988,54.9,Bulgaria,Seniors,70,75,77.5,,77.5,77.5,1,Raw,B
@@ -20,9 +20,9 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 67.5,Virag Horvath,F,1992,65.5,Hungary,J,45,-50,-50,,45,45,1,Raw,B
 67.5,Katalin Schindelrne Kis,F,1970,66.1,Hungary,Masters2,85,90,92.5,,92.5,92.5,1,Raw,B
 75,Jelena Marinkovic,F,1983,69,Serbia,Seniors,55,60,-65,,60,60,1,Raw,B
-75,Tereza Burkoňová,F,1978,70.8,Czech Republic,Seniors,55,60,-62.5,,60,60,2,Raw,B
+75,Tereza Burkoňová,F,1978,70.8,Czechia,Seniors,55,60,-62.5,,60,60,2,Raw,B
 75,Aida Agüero,F,1961,70.9,Argentina,Masters4,120,130,135,,135,135,1,Raw,B
-75,Veronika Rulíková,F,1997,74.2,Czech Republic,SJ3,70,-70.5,70.5,,70.5,70.5,1,Raw,B
+75,Veronika Rulíková,F,1997,74.2,Czechia,SJ3,70,-70.5,70.5,,70.5,70.5,1,Raw,B
 82.5,Gisela Witte,F,1958,78.2,Germany,Masters4,45,55,65,70,65,65,1,Raw,B
 82.5,Leticia Bertotto,F,1971,81.8,Argentina,Masters2,110,-120,120,,120,120,1,Raw,B
 90,Minna Pajulahti,F,1981,84.7,Finland,Seniors,95,102.5,-112.5,,102.5,102.5,2,Raw,B
@@ -54,7 +54,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 75,Dusan Arizanović,M,1991,74.7,Serbia,Seniors,120,-127.5,132.5,,132.5,132.5,3,Raw,B
 75,Sanel Čičić,M,1993,74.8,Serbia,J,120,-130,-130,,120,120,1,Raw,B
 82.5,Dmitrii Kukharenko,M,1969,75.5,Spain,Masters2,-175,-175,175,,175,175,1,Raw,B
-82.5,Patrik Tomáš,M,1996,77.2,Czech Republic,J,135,-140,-140,,135,135,2,Raw,B
+82.5,Patrik Tomáš,M,1996,77.2,Czechia,J,135,-140,-140,,135,135,2,Raw,B
 82.5,Aleksandr Tkachuk,M,1940,79,Russia,Masters8,-90,90,100,102.5,100,100,1,Raw,B
 82.5,Nagy Miklos,M,1997,80.6,Hungary,SJ3,145,152.5,160,,160,160,1,Raw,B
 82.5,Leonid Averbakh,M,1959,80.7,Israel,Masters4,110,115,-120,,115,115,1,Raw,B
@@ -65,18 +65,18 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 82.5,Nikola Reljić,M,1988,81.6,Serbia,Seniors,152.5,-162.5,-165,,152.5,152.5,3,Raw,B
 82.5,István Gyuricska Jr,M,1967,82,Hungary,Masters2,150,165,-177.5,,165,165,2,Raw,B
 82.5,Alexander Bark,M,1963,82.1,Israel,Masters3,107.5,112.5,115,,115,115,2,Raw,B
-82.5,Matěj Syrovátka,M,1998,82.1,Czech Republic,SJ2,150,162.5,-167.5,-171,162.5,162.5,1,Raw,B
-82.5,Robert Tomáš,M,1972,82.2,Czech Republic,Masters1,135,140,-145,,140,140,2,Raw,B
+82.5,Matěj Syrovátka,M,1998,82.1,Czechia,SJ2,150,162.5,-167.5,-171,162.5,162.5,1,Raw,B
+82.5,Robert Tomáš,M,1972,82.2,Czechia,Masters1,135,140,-145,,140,140,2,Raw,B
 82.5,Đorđe Nikolić,M,1992,82.3,Serbia,Seniors,150,160,168,-171,168,168,1,Raw,B
 82.5,Ben Kelly,M,1980,82.3,Ireland,Seniors,140,-147.5,,,140,140,4,Raw,B
 82.5,Jozef Slimák,M,1966,82.4,Slovakia,Masters3,120,130,-140,,130,130,1,Raw,B
 90,Alex Papir,M,1945,83.6,Israel,Masters7,107.5,112.5,-117.5,,112.5,112.5,1,Raw,B
 90,Djordje Pjanovic,M,1999,86.5,Serbia,SJ2,130,136,145,-150,145,145,1,Raw,B
-90,Ondrej Kohout,M,2000,87,Czech Republic,SJ2,115,125,,,125,125,2,Raw,B
+90,Ondrej Kohout,M,2000,87,Czechia,SJ2,115,125,,,125,125,2,Raw,B
 90,Attila Nyikos Kiss,M,1970,87.2,Hungary,Masters2,120,125,-132.5,,125,125,2,Raw,B
 90,Stefan Popovski,M,1988,87.6,Macedonia,Seniors,195,-200,-200,,195,195,2,Raw,B
 90,Denis Jean-Francois,M,1956,88,France,Masters5,165,170,175,,175,175,1,Raw,B
-90,Drazen Mladenović,M,1992,88,Bosnia And Herzegovina,Seniors,155,162.5,-170,,162.5,162.5,6,Raw,B
+90,Drazen Mladenović,M,1992,88,Bosnia and Herzegovina,Seniors,155,162.5,-170,,162.5,162.5,6,Raw,B
 90,Ivan Schoblocher,M,1989,88.2,Croatia,Seniors,170,177.5,-180,,177.5,177.5,5,Raw,B
 90,Mihaly Gonczol,M,1985,88.4,,Seniors,220,230,240,-245,240,240,1,Raw,B
 90,Benjamin Mezo Aron,M,1996,88.6,Hungary,SJ3,-130,-132.5,132.5,,132.5,132.5,2,Raw,B
@@ -85,7 +85,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 90,Mirko Keković,M,1995,89.3,Montenegro,J,160,,,,160,160,1,Raw,B
 90,Andrey Bogatkov,M,1975,89.5,Russia,Masters1,150,-160,-165,,150,150,1,Raw,B
 90,Patryk Kozieł,M,1987,89.7,Poland,Seniors,-190,190,-197.5,,190,190,4,Raw,B
-90,Lukáš Tomášov,M,1997,89.9,Czech Republic,SJ3,130,137.5,-145,,137.5,137.5,1,Raw,B
+90,Lukáš Tomášov,M,1997,89.9,Czechia,SJ3,130,137.5,-145,,137.5,137.5,1,Raw,B
 90,Rodrigo Sanchez,M,1970,89.9,Argentina,Masters2,140,150,160,,160,160,1,Raw,B
 90,Rami Leiviskä,M,1978,89.9,Finland,Seniors,-187.5,-187.5,-192.5,,,,DQ,Raw,B
 90,Dmitrii Petrov,M,1986,90,Russia,Seniors,-185,-187.5,-197.5,,,,DQ,Raw,B
@@ -98,16 +98,16 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 100,József Sztanke,M,1954,96.1,Hungary,Masters5,155,167.5,175,,175,175,1,Raw,B
 100,Valery Tomilov,M,1965,96.7,Israel,Masters3,160,-175,,,160,160,2,Raw,B
 100,Marijo Rukavina,M,1983,97.1,Croatia,Seniors,-205,-205,-205,,,,DQ,Raw,B
-100,David Kovalčík,M,1996,97.1,Czech Republic,SJ3,160,175,-182.5,-193.5,175,175,1,Raw,B
+100,David Kovalčík,M,1996,97.1,Czechia,SJ3,160,175,-182.5,-193.5,175,175,1,Raw,B
 100,Alex Bak,M,1994,97.2,Hungary,J,180,190,-197.5,,190,190,4,Raw,B
 100,Nikola Velickovic,M,2001,97.6,Serbia,SJ1,50,60,65,,65,65,1,Raw,B
 100,Tomislav Stefanovic,M,1970,98.1,Serbia,Masters2,140,152.5,160,,160,160,2,Raw,B
 100,Marc Assirelli,M,1948,98.1,France,Masters6,130,138.5,-140.5,-140.5,138.5,138.5,1,Raw,B
 100,Atte Poikonen,M,1982,98.2,Finland,Seniors,-230,-230,-230,,,,DQ,Raw,B
 100,Ákos Oláh,M,1989,98.5,Hungary,Seniors,207.5,217.5,-225,,217.5,217.5,2,Raw,B
-100,Šaban Saud,M,1976,98.9,Bosnia And Herzegovina,Masters1,-210,-210,,,,,DQ,Raw,B
-100,Patrik Till,M,1997,99.1,Czech Republic,SJ3,165,172.5,-177.5,,172.5,172.5,2,Raw,B
-100,Marko Trivković,M,1999,99.2,Bosnia And Herzegovina,SJ2,110,120,-130,,120,120,1,Raw,B
+100,Šaban Saud,M,1976,98.9,Bosnia and Herzegovina,Masters1,-210,-210,,,,,DQ,Raw,B
+100,Patrik Till,M,1997,99.1,Czechia,SJ3,165,172.5,-177.5,,172.5,172.5,2,Raw,B
+100,Marko Trivković,M,1999,99.2,Bosnia and Herzegovina,SJ2,110,120,-130,,120,120,1,Raw,B
 100,Vasiliy Fedyaev,M,1982,99.2,Russia,Seniors,240,247.5,-252.5,,247.5,247.5,1,Raw,B
 100,Joni Kivelä,M,1989,99.3,Finland,Seniors,185,187.5,-195,,187.5,187.5,4,Raw,B
 100,Tomáš Kríž,M,1992,99.5,Slovakia,J,190,200.5,205,-213.5,205,205,1,Raw,B
@@ -124,9 +124,9 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 110,Aleksandr Klimovich,M,1975,104.7,Russia,Masters1,-187.5,187.5,-192.5,,187.5,187.5,2,Raw,B
 110,Goran Tadic,M,1994,106.3,Croatia,J,170,182.5,,,182.5,182.5,2,Raw,B
 110,Stefan Manasic,M,1993,107.5,Serbia,J,200,210,217.5,,217.5,217.5,1,Raw,B
-110,Martin Chour,M,1984,107.6,Czech Republic,Seniors,-145,150,160,,160,160,3,Raw,B
+110,Martin Chour,M,1984,107.6,Czechia,Seniors,-145,150,160,,160,160,3,Raw,B
 110,Tsvetan Velin,M,1988,108.1,Bulgaria,Seniors,-187.5,187.5,192.5,,192.5,192.5,2,Raw,B
-110,Moro Mahir,M,1981,108.4,Bosnia And Herzegovina,Seniors,215,225,-230,,225,225,1,Raw,B
+110,Moro Mahir,M,1981,108.4,Bosnia and Herzegovina,Seniors,215,225,-230,,225,225,1,Raw,B
 110,István Hegedüs,M,1967,108.5,Hungary,Masters2,210,-222.5,222.5,,222.5,222.5,1,Raw,B
 110,Nikola Savic,M,1997,108.5,Serbia,SJ3,170,180,-190,,180,180,1,Raw,B
 110,Iván Kozári,M,1976,108.7,Hungary,Masters1,-187.5,192.5,200,,200,200,1,Raw,B
@@ -134,24 +134,24 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Bench1Kg,Bench2Kg
 110,Dominque Nussbaum,M,1971,109,France,Masters2,190,200,205,,205,205,2,Raw,B
 125,Sergei Rudikov,M,1973,111.1,Israel,Masters1,160,172.5,-185,,172.5,172.5,4,Raw,B
 125,Milan Pado,M,1972,111.6,Slovakia,Masters1,-175,175,182.5,,182.5,182.5,1,Raw,B
-125,Vlastimil Kužel,M,1977,112.7,Czech Republic,Seniors,245,250,255,,255,255,1,Raw,B
+125,Vlastimil Kužel,M,1977,112.7,Czechia,Seniors,245,250,255,,255,255,1,Raw,B
 125,Mariks Daugavets,M,1971,113,Latvia,Masters2,190,200,207.5,,207.5,207.5,2,Raw,B
 125,Alfredo Martin Rosas,M,1985,114.7,Argentina,Seniors,145,,,,145,145,5,Raw,B
 125,Zvonimir Gvoić,M,1972,115,Croatia,Masters1,155,165,167.5,,167.5,167.5,5,Raw,B
 125,Dejan Ristić,M,1991,116.2,Serbia,Seniors,180,190,-197.5,,190,190,3,Raw,B
 125,Miroslav Vlačinić,M,1975,116.6,Croatia,Masters1,160,172.5,177.5,,177.5,177.5,3,Raw,B
 125,Billy Haavisto,M,1965,117.2,Finland,Masters3,185,195,-200,,195,195,2,Raw,B
-125,Daglan Holland,M,1965,118.6,Great Britain,Masters3,-190,-195,-205,,,,DQ,Raw,B
-125,Samir Ademović,M,1985,120.7,Bosnia And Herzegovina,Seniors,190,-197.5,-197.5,,190,190,4,Raw,B
+125,Daglan Holland,M,1965,118.6,UK,Masters3,-190,-195,-205,,,,DQ,Raw,B
+125,Samir Ademović,M,1985,120.7,Bosnia and Herzegovina,Seniors,190,-197.5,-197.5,,190,190,4,Raw,B
 125,Krisztian Karosan,M,1994,121.7,Hungary,J,-230,240,-242.5,,240,240,1,Raw,B
 125,Petre Parchev,M,1972,122.4,Bulgaria,Masters1,180,-185,-187.5,,180,180,2,Raw,B
 125,Ivica Krstic,M,1961,123.6,Serbia,Masters3,60,70,-80,,70,70,3,Raw,B
 125,Aleksei Tarasenko,M,1971,123.8,Russia,Masters2,225,230,,,230,230,1,Raw,B
 125,Ján Oros,M,1964,123.9,Slovakia,Masters3,-200,-200,205,215,205,205,1,Raw,B
-125,Irfan Muhić,M,1978,124.4,Bosnia And Herzegovina,Seniors,235,242.5,-250,,242.5,242.5,2,Raw,B
+125,Irfan Muhić,M,1978,124.4,Bosnia and Herzegovina,Seniors,235,242.5,-250,,242.5,242.5,2,Raw,B
 140,Tamás Szabó,M,1971,126,Hungary,Masters2,180,190,-202.5,,190,190,1,Raw,B
 140,Aleksandar Ilić,M,1992,127.6,Serbia,Seniors,180,190,,,190,190,3,Raw,B
 140,Zsolt Viktór Szabó,M,1976,134.4,Hungary,Masters1,175,180,-185,,180,180,1,Raw,B
 140,Romuald Masse,M,1992,137.2,France,Seniors,220,230,240,,240,240,1,Raw,B
-140,Mirza Muratović,M,1981,139.8,Bosnia And Herzegovina,Seniors,200,-215,215,,215,215,2,Raw,B
+140,Mirza Muratović,M,1981,139.8,Bosnia and Herzegovina,Seniors,200,-215,215,,215,215,2,Raw,B
 140+,Tim Agnew,M,1987,145.8,Canada,Seniors,122.5,145,-155,,145,145,1,Raw,B

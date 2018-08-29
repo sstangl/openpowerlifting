@@ -23,6 +23,7 @@ pub enum Country {
     #[strum(to_string = "British Virgin Islands")]
     BritishVirginIslands,
     Bulgaria,
+    Cambodia,
     Cameroon,
     Canada,
     #[serde(rename = "Cayman Islands")]
@@ -38,6 +39,7 @@ pub enum Country {
     #[strum(to_string = "Côte d’Ivoire")]
     CoteDIvoire,
     Croatia,
+    Cuba,
     Cyprus,
     Czechia,
     Denmark,
@@ -80,8 +82,10 @@ pub enum Country {
     Libya,
     Lithuania,
     Luxembourg,
+    Macedonia,
     Malaysia,
     Mexico,
+    Moldova,
     Mongolia,
     Montenegro,
     Morocco,
@@ -108,6 +112,7 @@ pub enum Country {
     #[serde(rename = "Papua New Guinea")]
     #[strum(to_string = "Papua New Guinea")]
     PapuaNewGuinea,
+    Paraguay,
     Peru,
     Philippines,
     Poland,

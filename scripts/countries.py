@@ -258,6 +258,7 @@ COUNTRY_MAP = {
 
     # Common substitutions to match our format.
     'Belorussia': 'Belarus',
+    'Brasil': 'Brazil',
     'Can': 'Canada',
     'Chinese Taipei': 'Taiwan',
     'C.Taipei': 'Taiwan',
@@ -282,8 +283,10 @@ COUNTRY_MAP = {
     'New Zeeland': 'New Zealand',
     'Norge': 'Norway',
     'Norwegen': 'Norway',
+    'Perú': 'Peru',
     'R.S.Afrika': 'South Africa',
     'R.South Africa': 'South Africa',
+    'Slovak Republic': 'Slovakia',
     'South-Africa': 'South Africa',
     'South Afrika': 'South Africa',
     'Soviet Union': 'USSR',
