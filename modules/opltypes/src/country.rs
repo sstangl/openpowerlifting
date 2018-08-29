@@ -55,6 +55,7 @@ pub enum Country {
     Finland,
     France,
     Georgia,
+    Ghana,
     Germany,
     Greece,
     Guatemala,
@@ -102,6 +103,7 @@ pub enum Country {
     #[strum(to_string = "New Zealand")]
     NewZealand,
     Nicaragua,
+    Niger,
     Nigeria,
     Norway,
     #[serde(rename = "N.Ireland")]
