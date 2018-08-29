@@ -153,6 +153,7 @@ pub struct SexTranslations {
 
 #[derive(Serialize, Deserialize)]
 pub struct CountryTranslations {
+    pub albania: String,
     pub algeria: String,
     pub argentina: String,
     pub armenia: String,
@@ -164,6 +165,7 @@ pub struct CountryTranslations {
     pub belarus: String,
     pub belgium: String,
     pub bolivia: String,
+    pub bosniaandherzegovina: String,
     pub brazil: String,
     pub britain: String,
     pub britishvirginislands: String,
@@ -217,6 +219,7 @@ pub struct CountryTranslations {
     pub malaysia: String,
     pub mexico: String,
     pub mongolia: String,
+    pub montenegro: String,
     pub morocco: String,
     pub nauru: String,
     pub netherlands: String,
@@ -532,6 +535,7 @@ impl Translations {
 
     pub fn translate_country(&self, country: Country) -> &str {
         match country {
+            Country::Albania => &self.country.albania,
             Country::Algeria => &self.country.algeria,
             Country::Argentina => &self.country.argentina,
             Country::Aruba => &self.country.aruba,
@@ -543,6 +547,7 @@ impl Translations {
             Country::Belarus => &self.country.belarus,
             Country::Belgium => &self.country.belgium,
             Country::Bolivia => &self.country.bolivia,
+            Country::BosniaAndHerzegovina => &self.country.bosniaandherzegovina,
             Country::Brazil => &self.country.brazil,
             Country::Britain => &self.country.britain,
             Country::BritishVirginIslands => &self.country.britishvirginislands,
@@ -596,6 +601,7 @@ impl Translations {
             Country::Malaysia => &self.country.malaysia,
             Country::Mexico => &self.country.mexico,
             Country::Mongolia => &self.country.mongolia,
+            Country::Montenegro => &self.country.montenegro,
             Country::Morocco => &self.country.morocco,
             Country::Nauru => &self.country.nauru,
             Country::Netherlands => &self.country.netherlands,

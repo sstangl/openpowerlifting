@@ -2,6 +2,7 @@
 
 #[derive(Copy, Clone, Deserialize, Serialize, PartialEq, EnumString)]
 pub enum Country {
+    Albania,
     Algeria,
     Argentina,
     Armenia,
@@ -13,6 +14,9 @@ pub enum Country {
     Belarus,
     Belgium,
     Bolivia,
+    #[serde(rename = "Bosnia and Herzegovina")]
+    #[strum(to_string = "Bosnia and Herzegovina")]
+    BosniaAndHerzegovina,
     Brazil,
     Britain,
     #[serde(rename = "British Virgin Islands")]
@@ -78,6 +82,7 @@ pub enum Country {
     Malaysia,
     Mexico,
     Mongolia,
+    Montenegro,
     Morocco,
     Nauru,
     Netherlands,
