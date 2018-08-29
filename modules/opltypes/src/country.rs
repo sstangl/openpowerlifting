@@ -152,6 +152,7 @@ pub enum Country {
     Tahiti,
     Taiwan,
     Tajikistan,
+    Thailand,
     Togo,
     Tonga,
     #[serde(rename = "Trinidad and Tobago")]
@@ -159,6 +160,7 @@ pub enum Country {
     TrinidadAndTobago,
     Turkey,
     Turkmenistan,
+    Tuvalu,
     UAE,
     UK,
     Ukraine,
