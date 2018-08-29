@@ -138,6 +138,7 @@ COUNTRY_MAP = {
     'LAO': 'Laos',
     'LAT': 'Latvia',
     'LBA': 'Libya',
+    'LYB': 'Libya',
     'LBN': 'Lebanon',
     'LIB': 'Lebanon',
     'LBR': 'Liberia',

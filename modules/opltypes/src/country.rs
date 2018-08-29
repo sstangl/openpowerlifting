@@ -28,6 +28,7 @@ pub enum Country {
     #[serde(rename = "Cayman Islands")]
     #[strum(to_string = "Cayman Islands")]
     CaymanIslands,
+    Chile,
     China,
     Colombia,
     #[serde(rename = "Costa Rica")]
