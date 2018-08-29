@@ -18,24 +18,44 @@
     <option value="over140"{% if selection.weightclasses == "TOver140" %} selected{% endif %}>{% if units == "Kg" %}140+{% else %}308+{% endif %}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.weightclass.ipfmen}}">
-    <option value="ipf53"{% if selection.weightclasses == "M53" %} selected{% endif %}>{% if units == "Kg" %}-53{% else %}-116{% endif %}</option>
-    <option value="ipf59"{% if selection.weightclasses == "M59" %} selected{% endif %}>{% if units == "Kg" %}-59{% else %}-130{% endif %}</option>
-    <option value="ipf66"{% if selection.weightclasses == "M66" %} selected{% endif %}>{% if units == "Kg" %}-66{% else %}-145{% endif %}</option>
-    <option value="ipf74"{% if selection.weightclasses == "M74" %} selected{% endif %}>{% if units == "Kg" %}-74{% else %}-163{% endif %}</option>
-    <option value="ipf83"{% if selection.weightclasses == "M83" %} selected{% endif %}>{% if units == "Kg" %}-83{% else %}-183{% endif %}</option>
-    <option value="ipf93"{% if selection.weightclasses == "M93" %} selected{% endif %}>{% if units == "Kg" %}-93{% else %}-205{% endif %}</option>
-    <option value="ipf105"{% if selection.weightclasses == "M105" %} selected{% endif %}>{% if units == "Kg" %}-105{% else %}-231{% endif %}</option>
-    <option value="ipf120"{% if selection.weightclasses == "M120" %} selected{% endif %}>{% if units == "Kg" %}-120{% else %}-264{% endif %}</option>
-    <option value="ipfover120"{% if selection.weightclasses == "MOver120" %} selected{% endif %}>{% if units == "Kg" %}120+{% else %}264+{% endif %}</option>
+    <option value="ipf53"{% if selection.weightclasses == "IpfM53" %} selected{% endif %}>{% if units == "Kg" %}-53{% else %}-116{% endif %}</option>
+    <option value="ipf59"{% if selection.weightclasses == "IpfM59" %} selected{% endif %}>{% if units == "Kg" %}-59{% else %}-130{% endif %}</option>
+    <option value="ipf66"{% if selection.weightclasses == "IpfM66" %} selected{% endif %}>{% if units == "Kg" %}-66{% else %}-145{% endif %}</option>
+    <option value="ipf74"{% if selection.weightclasses == "IpfM74" %} selected{% endif %}>{% if units == "Kg" %}-74{% else %}-163{% endif %}</option>
+    <option value="ipf83"{% if selection.weightclasses == "IpfM83" %} selected{% endif %}>{% if units == "Kg" %}-83{% else %}-183{% endif %}</option>
+    <option value="ipf93"{% if selection.weightclasses == "IpfM93" %} selected{% endif %}>{% if units == "Kg" %}-93{% else %}-205{% endif %}</option>
+    <option value="ipf105"{% if selection.weightclasses == "IpfM105" %} selected{% endif %}>{% if units == "Kg" %}-105{% else %}-231{% endif %}</option>
+    <option value="ipf120"{% if selection.weightclasses == "IpfM120" %} selected{% endif %}>{% if units == "Kg" %}-120{% else %}-264{% endif %}</option>
+    <option value="ipfover120"{% if selection.weightclasses == "IpfMOver120" %} selected{% endif %}>{% if units == "Kg" %}120+{% else %}264+{% endif %}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.weightclass.ipfwomen}}">
-    <option value="ipf43"{% if selection.weightclasses == "F43" %} selected{% endif %}>{% if units == "Kg" %}-43{% else %}-94{% endif %}</option>
-    <option value="ipf47"{% if selection.weightclasses == "F47" %} selected{% endif %}>{% if units == "Kg" %}-47{% else %}-103{% endif %}</option>
-    <option value="ipf52"{% if selection.weightclasses == "F52" %} selected{% endif %}>{% if units == "Kg" %}-52{% else %}-114{% endif %}</option>
-    <option value="ipf57"{% if selection.weightclasses == "F57" %} selected{% endif %}>{% if units == "Kg" %}-57{% else %}-125{% endif %}</option>
-    <option value="ipf63"{% if selection.weightclasses == "F63" %} selected{% endif %}>{% if units == "Kg" %}-63{% else %}-138{% endif %}</option>
-    <option value="ipf72"{% if selection.weightclasses == "F72" %} selected{% endif %}>{% if units == "Kg" %}-72{% else %}-158{% endif %}</option>
-    <option value="ipf84"{% if selection.weightclasses == "F84" %} selected{% endif %}>{% if units == "Kg" %}-84{% else %}-185{% endif %}</option>
-    <option value="ipfover84"{% if selection.weightclasses == "FOver84" %} selected{% endif %}>{% if units == "Kg" %}84+{% else %}185+{% endif %}</option>
+    <option value="ipf43"{% if selection.weightclasses == "IpfF43" %} selected{% endif %}>{% if units == "Kg" %}-43{% else %}-94{% endif %}</option>
+    <option value="ipf47"{% if selection.weightclasses == "IpfF47" %} selected{% endif %}>{% if units == "Kg" %}-47{% else %}-103{% endif %}</option>
+    <option value="ipf52"{% if selection.weightclasses == "IpfF52" %} selected{% endif %}>{% if units == "Kg" %}-52{% else %}-114{% endif %}</option>
+    <option value="ipf57"{% if selection.weightclasses == "IpfF57" %} selected{% endif %}>{% if units == "Kg" %}-57{% else %}-125{% endif %}</option>
+    <option value="ipf63"{% if selection.weightclasses == "IpfF63" %} selected{% endif %}>{% if units == "Kg" %}-63{% else %}-138{% endif %}</option>
+    <option value="ipf72"{% if selection.weightclasses == "IpfF72" %} selected{% endif %}>{% if units == "Kg" %}-72{% else %}-158{% endif %}</option>
+    <option value="ipf84"{% if selection.weightclasses == "IpfF84" %} selected{% endif %}>{% if units == "Kg" %}-84{% else %}-185{% endif %}</option>
+    <option value="ipfover84"{% if selection.weightclasses == "IpfFOver84" %} selected{% endif %}>{% if units == "Kg" %}84+{% else %}185+{% endif %}</option>
+  </optgroup>
+  <optgroup label="{{strings.selectors.weightclass.wp_men}}">
+    <option value="wp62"{% if selection.weightclasses == "WpM62" %} selected{% endif %}>{% if units == "Kg" %}-62{% else %}-136{% endif %}</option>
+    <option value="wp69"{% if selection.weightclasses == "WpM69" %} selected{% endif %}>{% if units == "Kg" %}-69{% else %}-152{% endif %}</option>
+    <option value="wp77"{% if selection.weightclasses == "WpM77" %} selected{% endif %}>{% if units == "Kg" %}-77{% else %}-169{% endif %}</option>
+    <option value="wp85"{% if selection.weightclasses == "WpM85" %} selected{% endif %}>{% if units == "Kg" %}-85{% else %}-187{% endif %}</option>
+    <option value="wp94"{% if selection.weightclasses == "WpM94" %} selected{% endif %}>{% if units == "Kg" %}-94{% else %}-207{% endif %}</option>
+    <option value="wp105"{% if selection.weightclasses == "WpM105" %} selected{% endif %}>{% if units == "Kg" %}-105{% else %}-231{% endif %}</option>
+    <option value="wp120"{% if selection.weightclasses == "WpM120" %} selected{% endif %}>{% if units == "Kg" %}-120{% else %}-264{% endif %}</option>
+    <option value="wpover120"{% if selection.weightclasses == "WpMOver120" %} selected{% endif %}>{% if units == "Kg" %}120+{% else %}264+{% endif %}</option>
+  </optgroup>
+  <optgroup label="{{strings.selectors.weightclass.wp_women}}">
+    <option value="wp48"{% if selection.weightclasses == "WpF48" %} selected{% endif %}>{% if units == "Kg" %}-48{% else %}-105{% endif %}</option>
+    <option value="wp53"{% if selection.weightclasses == "WpF53" %} selected{% endif %}>{% if units == "Kg" %}-53{% else %}-116{% endif %}</option>
+    <option value="wp58"{% if selection.weightclasses == "WpF58" %} selected{% endif %}>{% if units == "Kg" %}-58{% else %}-127{% endif %}</option>
+    <option value="wp64"{% if selection.weightclasses == "WpF64" %} selected{% endif %}>{% if units == "Kg" %}-64{% else %}-141{% endif %}</option>
+    <option value="wp72"{% if selection.weightclasses == "WpF72" %} selected{% endif %}>{% if units == "Kg" %}-72{% else %}-158{% endif %}</option>
+    <option value="wp84"{% if selection.weightclasses == "WpF84" %} selected{% endif %}>{% if units == "Kg" %}-84{% else %}-185{% endif %}</option>
+    <option value="wp100"{% if selection.weightclasses == "WpF100" %} selected{% endif %}>{% if units == "Kg" %}-100{% else %}-220{% endif %}</option>
+    <option value="wpover100"{% if selection.weightclasses == "WpFOver100" %} selected{% endif %}>{% if units == "Kg" %}100+{% else %}220+{% endif %}</option>
   </optgroup>
 </select>

@@ -344,6 +344,8 @@ pub struct WeightClassSelectorTranslations {
     pub traditional: String,
     pub ipfmen: String,
     pub ipfwomen: String,
+    pub wp_men: String,
+    pub wp_women: String,
 }
 
 #[derive(Serialize, Deserialize)]

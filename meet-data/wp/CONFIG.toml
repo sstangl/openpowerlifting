@@ -1,0 +1,14 @@
+[divisions]
+    open = {name = "Open", min = 0, max = 999}
+
+[weightclasses.default_M]
+    classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
+    date_range = ["2018-08-01", "9999-99-99"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["48", "53", "58", "64", "72", "84", "100", "100+"]
+    date_range = ["2018-08-01", "9999-99-99"]
+    sex = "F"
+
+[exclusions]

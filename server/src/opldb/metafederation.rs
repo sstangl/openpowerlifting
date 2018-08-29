@@ -126,6 +126,7 @@ impl MetaFederation {
                     || meet.federation == Federation::WDFPF
                     || meet.federation == Federation::WelshPA
                     || meet.federation == Federation::WNPF
+                    || meet.federation == Federation::WP
                     || meet.federation == Federation::WPU
             }
             MetaFederation::AllAmateur => entry.tested,
