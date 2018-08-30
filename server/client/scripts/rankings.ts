@@ -37,6 +37,7 @@ let searchInfo = {laststr: ''};
 let selEquipment: HTMLSelectElement;
 let selWeightClass: HTMLSelectElement;
 let selFed: HTMLSelectElement;
+let selAgeClass: HTMLSelectElement;
 let selYear: HTMLSelectElement;
 let selSex: HTMLSelectElement;
 let selEvent: HTMLSelectElement;
@@ -148,6 +149,9 @@ function selection_to_path(): string {
     if (selSex.value !== "all") {
         url += "/" + selSex.value;
     }
+    if (selAgeClass.value !== "all") {
+        url += "/" + selAgeClass.value;
+    }
     if (selYear.value !== "all") {
         url += "/" + selYear.value;
     }
@@ -180,6 +184,7 @@ function addEventListeners() {
     selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
     selWeightClass = document.getElementById("weightclassselect") as HTMLSelectElement;
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
+    selAgeClass = document.getElementById("ageselect") as HTMLSelectElement;
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
     selEvent = document.getElementById("eventselect") as HTMLSelectElement;
@@ -190,6 +195,7 @@ function addEventListeners() {
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
     addSelectorListeners(selFed);
+    addSelectorListeners(selAgeClass);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
     addSelectorListeners(selEvent);

@@ -1,0 +1,27 @@
+<select id="ageselect">
+  <option value="all"{% if selection.ageclass == "AllAges" %} selected{% endif %}>All Ages</option>
+  <option value="5-12" {% if selection.ageclass == "Youth512" %}selected{% endif %}>Youth 5-12</option>
+  <option value="13-15" disabled {% if selection.ageclass == "Juniors1315" %}selected{% endif %}>Juniors 13-15</option>
+  <option value="16-17" disabled {% if selection.ageclass == "Juniors1617" %}selected{% endif %}>Juniors 16-17</option>
+  <option value="18-19" disabled {% if selection.ageclass == "Juniors1819" %}selected{% endif %}>Juniors 18-19</option>
+  <option value="20-23" disabled {% if selection.ageclass == "Juniors2023" %}selected{% endif %}>Juniors 20-23</option>
+  <option value="24-34" disabled {% if selection.ageclass == "Seniors2434" %}selected{% endif %}>Seniors 24-34</option>
+  <option value="35-39" disabled {% if selection.ageclass == "Submasters3539" %}selected{% endif %}>Submasters 35-39</option>
+  <optgroup label="Masters by 10s">
+    <option value="40-49" disabled {% if selection.ageclass == "Masters4049" %}selected{% endif %}>Masters 40-49</option>
+    <option value="50-59" disabled {% if selection.ageclass == "Masters5059" %}selected{% endif %}>Masters 50-59</option>
+    <option value="60-69" disabled {% if selection.ageclass == "Masters6069" %}selected{% endif %}>Masters 60-69</option>
+    <option value="70-79" disabled {% if selection.ageclass == "Masters7079" %}selected{% endif %}>Masters 70-79</option>
+  </optgroup>
+  <optgroup label="Masters by 5s">
+    <option value="40-44" disabled {% if selection.ageclass == "Masters4044" %}selected{% endif %}>Masters 40-44</option>
+    <option value="45-49" disabled {% if selection.ageclass == "Masters4549" %}selected{% endif %}>Masters 45-49</option>
+    <option value="50-54" disabled {% if selection.ageclass == "Masters5054" %}selected{% endif %}>Masters 50-54</option>
+    <option value="55-59" disabled {% if selection.ageclass == "Masters5559" %}selected{% endif %}>Masters 55-59</option>
+    <option value="60-64" disabled {% if selection.ageclass == "Masters6064" %}selected{% endif %}>Masters 60-64</option>
+    <option value="65-69" disabled {% if selection.ageclass == "Masters6569" %}selected{% endif %}>Masters 65-69</option>
+    <option value="70-74" disabled {% if selection.ageclass == "Masters7074" %}selected{% endif %}>Masters 70-74</option>
+    <option value="75-79" disabled {% if selection.ageclass == "Masters7579" %}selected{% endif %}>Masters 75-79</option>
+  </optgroup>
+  <option value="over80" disabled {% if selection.ageclass == "MastersOver80" %}selected{% endif %}>Masters 80+</option>
+</select>

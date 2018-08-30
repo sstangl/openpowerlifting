@@ -250,6 +250,7 @@ impl StaticCache {
         if selection.federation == FederationSelection::AllFederations
             && selection.weightclasses == WeightClassSelection::AllClasses
             && selection.year == YearSelection::AllYears
+            && selection.ageclass == AgeClassSelection::AllAges
             && selection.event == EventSelection::AllEvents
         {
             let by_sort = match selection.sort {
@@ -381,6 +382,92 @@ impl StaticCache {
                 );
                 cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
             }
+        }
+
+        // Filter by AgeClass manually.
+        if selection.ageclass != AgeClassSelection::AllAges {
+            let filter = NonSortedNonUnique(
+                cur.0
+                    .iter()
+                    .filter_map(|&i| {
+                        let class = opldb.get_entry(i).ageclass;
+                        let matches: bool = match selection.ageclass {
+                            AgeClassSelection::AllAges => true,
+                            AgeClassSelection::Youth512 => {
+                                class == AgeClass::Class5_12
+                            }
+                            AgeClassSelection::Juniors1315 => {
+                                class == AgeClass::Class13_15
+                            }
+                            AgeClassSelection::Juniors1617 => {
+                                class == AgeClass::Class16_17
+                            }
+                            AgeClassSelection::Juniors1819 => {
+                                class == AgeClass::Class18_19
+                            }
+                            AgeClassSelection::Juniors2023 => {
+                                class == AgeClass::Class20_23
+                            }
+                            AgeClassSelection::Seniors2434 => {
+                                class == AgeClass::Class24_34
+                            }
+                            AgeClassSelection::Submasters3539 => {
+                                class == AgeClass::Class35_39
+                            }
+                            AgeClassSelection::Masters4049 => {
+                                class == AgeClass::Class40_44
+                                    || class == AgeClass::Class45_49
+                            }
+                            AgeClassSelection::Masters5059 => {
+                                class == AgeClass::Class50_54
+                                    || class == AgeClass::Class55_59
+                            }
+                            AgeClassSelection::Masters6069 => {
+                                class == AgeClass::Class60_64
+                                    || class == AgeClass::Class65_69
+                            }
+                            AgeClassSelection::Masters7079 => {
+                                class == AgeClass::Class70_74
+                                    || class == AgeClass::Class75_79
+                            }
+                            AgeClassSelection::Masters4044 => {
+                                class == AgeClass::Class40_44
+                            }
+                            AgeClassSelection::Masters4549 => {
+                                class == AgeClass::Class45_49
+                            }
+                            AgeClassSelection::Masters5054 => {
+                                class == AgeClass::Class50_54
+                            }
+                            AgeClassSelection::Masters5559 => {
+                                class == AgeClass::Class55_59
+                            }
+                            AgeClassSelection::Masters6064 => {
+                                class == AgeClass::Class60_64
+                            }
+                            AgeClassSelection::Masters6569 => {
+                                class == AgeClass::Class65_69
+                            }
+                            AgeClassSelection::Masters7074 => {
+                                class == AgeClass::Class70_74
+                            }
+                            AgeClassSelection::Masters7579 => {
+                                class == AgeClass::Class75_79
+                            }
+                            AgeClassSelection::MastersOver80 => {
+                                class == AgeClass::Class80_999
+                            }
+                        };
+                        if matches {
+                            Some(i)
+                        } else {
+                            None
+                        }
+                    })
+                    .collect(),
+            );
+
+            cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
         }
 
         // Filter by event manually.

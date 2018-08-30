@@ -16,6 +16,7 @@ pub struct Selection {
     pub federation: FederationSelection,
     pub weightclasses: WeightClassSelection,
     pub sex: SexSelection,
+    pub ageclass: AgeClassSelection,
     pub year: YearSelection,
     pub event: EventSelection,
     pub sort: SortSelection,
@@ -28,6 +29,7 @@ impl Default for Selection {
             federation: FederationSelection::AllFederations,
             weightclasses: WeightClassSelection::AllClasses,
             sex: SexSelection::AllSexes,
+            ageclass: AgeClassSelection::AllAges,
             year: YearSelection::AllYears,
             event: EventSelection::AllEvents,
             sort: SortSelection::ByWilks,
@@ -54,6 +56,7 @@ impl Selection {
         let mut parsed_federation: bool = false;
         let mut parsed_weightclasses: bool = false;
         let mut parsed_sex: bool = false;
+        let mut parsed_ageclass: bool = false;
         let mut parsed_year: bool = false;
         let mut parsed_sort: bool = false;
         let mut parsed_event: bool = false;
@@ -92,6 +95,12 @@ impl Selection {
                 }
                 ret.sex = s;
                 parsed_sex = true;
+            } else if let Ok(s) = segment.parse::<AgeClassSelection>() {
+                if parsed_ageclass {
+                    return Err(());
+                }
+                ret.ageclass = s;
+                parsed_ageclass = true;
             // Check whether this is year information.
             } else if let Ok(y) = segment.parse::<YearSelection>() {
                 if parsed_year {
@@ -405,6 +414,68 @@ impl FromStr for SexSelection {
             // No entry for AllSexes, since it's default.
             "men" => Ok(SexSelection::Men),
             "women" => Ok(SexSelection::Women),
+            _ => Err(()),
+        }
+    }
+}
+
+/// The AgeClass selector widget.
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+pub enum AgeClassSelection {
+    AllAges,
+    Youth512,
+    Juniors1315,
+    Juniors1617,
+    Juniors1819,
+    Juniors2023,
+    Seniors2434,
+    Submasters3539,
+
+    // By 10s.
+    Masters4049,
+    Masters5059,
+    Masters6069,
+    Masters7079,
+
+    // By 5s.
+    Masters4044,
+    Masters4549,
+    Masters5054,
+    Masters5559,
+    Masters6064,
+    Masters6569,
+    Masters7074,
+    Masters7579,
+
+    MastersOver80,
+}
+
+impl FromStr for AgeClassSelection {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            // No entry for AllAges, since it's default.
+            "5-12" => Ok(AgeClassSelection::Youth512),
+            "13-15" => Ok(AgeClassSelection::Juniors1315),
+            "16-17" => Ok(AgeClassSelection::Juniors1617),
+            "18-19" => Ok(AgeClassSelection::Juniors1819),
+            "20-23" => Ok(AgeClassSelection::Juniors2023),
+            "24-34" => Ok(AgeClassSelection::Seniors2434),
+            "35-39" => Ok(AgeClassSelection::Submasters3539),
+            "40-49" => Ok(AgeClassSelection::Masters4049),
+            "50-59" => Ok(AgeClassSelection::Masters5059),
+            "60-69" => Ok(AgeClassSelection::Masters6069),
+            "70-79" => Ok(AgeClassSelection::Masters7079),
+            "over80" => Ok(AgeClassSelection::MastersOver80),
+            "40-44" => Ok(AgeClassSelection::Masters4044),
+            "45-49" => Ok(AgeClassSelection::Masters4549),
+            "50-54" => Ok(AgeClassSelection::Masters5054),
+            "55-59" => Ok(AgeClassSelection::Masters5559),
+            "60-64" => Ok(AgeClassSelection::Masters6064),
+            "65-69" => Ok(AgeClassSelection::Masters6569),
+            "70-74" => Ok(AgeClassSelection::Masters7074),
+            "75-79" => Ok(AgeClassSelection::Masters7579),
             _ => Err(()),
         }
     }

@@ -1,16 +1,28 @@
 //! Defines the `AgeClass` field for the `entries` table.
 
-#[derive(Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
+#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
 pub enum AgeClass {
-    #[serde(rename = "0-16")]
-    #[strum(serialize = "0-16")]
-    Class0_16,
-    #[serde(rename = "17-18")]
-    #[strum(serialize = "17-18")]
-    Class0_18,
-    #[serde(rename = "19-23")]
-    #[strum(serialize = "19-23")]
-    Class19_23,
+    #[serde(rename = "5-12")]
+    #[strum(serialize = "5-12")]
+    Class5_12,
+    #[serde(rename = "13-15")]
+    #[strum(serialize = "13-15")]
+    Class13_15,
+    #[serde(rename = "16-17")]
+    #[strum(serialize = "16-17")]
+    Class16_17,
+    #[serde(rename = "18-19")]
+    #[strum(serialize = "18-19")]
+    Class18_19,
+    #[serde(rename = "20-23")]
+    #[strum(serialize = "20-23")]
+    Class20_23,
+    #[serde(rename = "24-34")]
+    #[strum(serialize = "24-34")]
+    Class24_34,
+    #[serde(rename = "35-39")]
+    #[strum(serialize = "35-39")]
+    Class35_39,
     #[serde(rename = "40-44")]
     #[strum(serialize = "40-44")]
     Class40_44,
