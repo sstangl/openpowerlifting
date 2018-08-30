@@ -1,26 +1,26 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,F,Sana Syed,ON,64.8,72,Sub-Junior,117.5,47.5,120.0,285.0,Raw,1
-SBD,M,Tom Sayeau,ON,85.0,93,Open,157.5,82.5,210.0,450.0,Raw,2
-SBD,M,Sean Edge,ON,85.0,93,Open,177.5,95.0,195.0,467.5,Raw,1
-SBD,M,Mladen Vidovic,ON,82.6,83,Open,212.5,122.5,235.0,570.0,Raw,1
-SBD,M,Malcolm Morgan,ON,81.8,83,Open,182.5,120.0,205.0,507.5,Raw,3
-SBD,M,Jordan Bawks,ON,80.6,83,Open,145.0,115.0,180.0,440.0,Raw,4
-SBD,M,Andrei Manuel,ON,82.0,83,Open,190.0,130.0,200.0,520.0,Raw,2
-SBD,M,Tommy Vongprachanh,ON,72.8,74,Open,190.0,95.0,220.0,505.0,Raw,4
-SBD,M,Tim Almond,ON,74.0,74,Open,185.0,107.5,245.0,537.5,Raw,2
-SBD,M,Jimmy Latchman,ON,73.6,74,Open,207.5,112.5,235.0,555.0,Raw,1
-SBD,M,Duy Le,ON,69.6,74,Open,202.5,117.5,212.5,532.5,Raw,3
-SBD,F,Jessica O'Connell,ON,61.0,63,Open,112.5,55.0,130.0,297.5,Raw,1
-SBD,F,Emma Zilberman,ON,56.0,57,Open,105.0,55.0,147.5,307.5,Raw,1
-SBD,F,Tracy Gibbons,ON,50.8,52,Open,77.5,55.0,117.5,250.0,Raw,1
-SBD,M,John Faustino,ON,102.8,105,Open,225.0,140.0,245.0,610.0,Raw,1
-SBD,F,Judy Mansfield,ON,56.8,57,Master 3,70.0,50.0,115.0,235.0,Raw,1
-SBD,F,Tannis Waugh,ON,84.0,84,Master 1,102.5,60.0,137.5,300.0,Raw,1
-SBD,F,Taran Dhanju,ON,62.6,63,Master 1,97.5,62.5,135.0,295.0,Raw,1
-SBD,F,Lori Rossi,ON,56.0,57,Master 1,90.0,47.5,95.0,232.5,Raw,1
-SBD,M,Per Homer,ON,136.0,120+,Master 1,150.0,100.0,200.0,450.0,Raw,1
-SBD,M,Max Tian,ON,87.6,93,Junior,182.5,125.0,205.0,512.5,Raw,1
-SBD,M,Rohit Bhardwaj,ON,81.8,83,Junior,202.5,120.0,247.5,570.0,Raw,2
-SBD,M,Keaton Foster,ON,81.6,83,Junior,217.5,120.0,245.0,582.5,Raw,1
-SBD,M,Daniel Lee,ON,81.0,83,Junior,160.0,75.0,167.5,402.5,Raw,3
-SBD,F,Hannah Sy,ON,71.4,72,Junior,115.0,60.0,130.0,305.0,Raw,1
+Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place,Age
+SBD,F,Sana Syed,ON,64.8,72,Sub-Junior,117.5,47.5,120,285,Raw,1,
+SBD,M,Tom Sayeau,ON,85,93,Open,157.5,82.5,210,450,Raw,2,23
+SBD,M,Sean Edge,ON,85,93,Open,177.5,95,195,467.5,Raw,1,
+SBD,M,Mladen Vidovic,ON,82.6,83,Open,212.5,122.5,235,570,Raw,1,
+SBD,M,Malcolm Morgan,ON,81.8,83,Open,182.5,120,205,507.5,Raw,3,
+SBD,M,Jordan Bawks,ON,80.6,83,Open,145,115,180,440,Raw,4,
+SBD,M,Andrei Manuel,ON,82,83,Open,190,130,200,520,Raw,2,
+SBD,M,Tommy Vongprachanh,ON,72.8,74,Open,190,95,220,505,Raw,4,
+SBD,M,Tim Almond,ON,74,74,Open,185,107.5,245,537.5,Raw,2,
+SBD,M,Jimmy Latchman,ON,73.6,74,Open,207.5,112.5,235,555,Raw,1,
+SBD,M,Duy Le,ON,69.6,74,Open,202.5,117.5,212.5,532.5,Raw,3,
+SBD,F,Jessica O'Connell,ON,61,63,Open,112.5,55,130,297.5,Raw,1,
+SBD,F,Emma Zilberman,ON,56,57,Open,105,55,147.5,307.5,Raw,1,
+SBD,F,Tracy Gibbons,ON,50.8,52,Open,77.5,55,117.5,250,Raw,1,
+SBD,M,John Faustino,ON,102.8,105,Open,225,140,245,610,Raw,1,
+SBD,F,Judy Mansfield,ON,56.8,57,Master 3,70,50,115,235,Raw,1,
+SBD,F,Tannis Waugh,ON,84,84,Master 1,102.5,60,137.5,300,Raw,1,
+SBD,F,Taran Dhanju,ON,62.6,63,Master 1,97.5,62.5,135,295,Raw,1,
+SBD,F,Lori Rossi,ON,56,57,Master 1,90,47.5,95,232.5,Raw,1,
+SBD,M,Per Homer,ON,136,120+,Master 1,150,100,200,450,Raw,1,
+SBD,M,Max Tian,ON,87.6,93,Junior,182.5,125,205,512.5,Raw,1,
+SBD,M,Rohit Bhardwaj,ON,81.8,83,Junior,202.5,120,247.5,570,Raw,2,
+SBD,M,Keaton Foster,ON,81.6,83,Junior,217.5,120,245,582.5,Raw,1,
+SBD,M,Daniel Lee,ON,81,83,Junior,160,75,167.5,402.5,Raw,3,
+SBD,F,Hannah Sy,ON,71.4,72,Junior,115,60,130,305,Raw,1,
