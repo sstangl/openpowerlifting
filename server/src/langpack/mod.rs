@@ -153,6 +153,7 @@ pub struct SexTranslations {
 
 #[derive(Serialize, Deserialize)]
 pub struct CountryTranslations {
+    pub afghanistan: String,
     pub albania: String,
     pub algeria: String,
     pub argentina: String,
@@ -228,6 +229,7 @@ pub struct CountryTranslations {
     pub montenegro: String,
     pub morocco: String,
     pub nauru: String,
+    pub nepal: String,
     pub netherlands: String,
     pub netherlandsantilles: String,
     pub newcaledonia: String,
@@ -235,6 +237,7 @@ pub struct CountryTranslations {
     pub nicaragua: String,
     pub niger: String,
     pub nigeria: String,
+    pub niue: String,
     pub norway: String,
     pub northernireland: String,
     pub oman: String,
@@ -263,6 +266,7 @@ pub struct CountryTranslations {
     pub sudan: String,
     pub sweden: String,
     pub switzerland: String,
+    pub syria: String,
     pub tahiti: String,
     pub taiwan: String,
     pub tajikistan: String,
@@ -547,6 +551,7 @@ impl Translations {
 
     pub fn translate_country(&self, country: Country) -> &str {
         match country {
+            Country::Afghanistan => &self.country.afghanistan,
             Country::Albania => &self.country.albania,
             Country::Algeria => &self.country.algeria,
             Country::Argentina => &self.country.argentina,
@@ -622,6 +627,7 @@ impl Translations {
             Country::Montenegro => &self.country.montenegro,
             Country::Morocco => &self.country.morocco,
             Country::Nauru => &self.country.nauru,
+            Country::Nepal => &self.country.nepal,
             Country::Netherlands => &self.country.netherlands,
             Country::NetherlandsAntilles => &self.country.netherlandsantilles,
             Country::NewCaledonia => &self.country.newcaledonia,
@@ -629,6 +635,7 @@ impl Translations {
             Country::Nicaragua => &self.country.nicaragua,
             Country::Niger => &self.country.niger,
             Country::Nigeria => &self.country.nigeria,
+            Country::Niue => &self.country.niue,
             Country::Norway => &self.country.norway,
             Country::NorthernIreland => &self.country.northernireland,
             Country::Oman => &self.country.oman,
@@ -657,6 +664,7 @@ impl Translations {
             Country::Sudan => &self.country.sudan,
             Country::Sweden => &self.country.sweden,
             Country::Switzerland => &self.country.switzerland,
+            Country::Syria => &self.country.syria,
             Country::Tahiti => &self.country.tahiti,
             Country::Taiwan => &self.country.taiwan,
             Country::Tajikistan => &self.country.tajikistan,

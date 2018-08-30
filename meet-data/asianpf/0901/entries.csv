@@ -1,7 +1,7 @@
 WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment
 44,F,Juniors,Minu Gogi,India,1987,43.62,100,110,115,115,45,50,52.5,52.5,125,135,140,140,307.5,1,SBD,Single-ply
 48,F,Sub-Juniors,Zharkyn Abdullin,Kazakhstan,1994,47.72,105,110,120,120,55,-60,60,60,105,112.5,120,120,300,1,SBD,Single-ply
-48,F,Open,Yi-Ju Chou,C.Taipei,1980,47.98,135,145,150,150,60,67.5,72.5,72.5,160,167.5,172.5,172.5,395,1,SBD,Single-ply
+48,F,Open,Yi-Ju Chou,Taiwan,1980,47.98,135,145,150,150,60,67.5,72.5,72.5,160,167.5,172.5,172.5,395,1,SBD,Single-ply
 48,F,Open,Anastassiya Kolesnikova,Kazakhstan,1987,47.64,120,130,137.5,137.5,-55,60,62.5,62.5,135,-140,140,140,340,2,SBD,Single-ply
 48,F,Open,Sudha Kumari,India,1987,48,115,125,-135,125,65,72.5,-75,72.5,115,125,-132.5,125,322.5,3,SBD,Single-ply
 48,F,Open,Sahragul Movlamova,Turkmenistan,1978,47.8,-110,110,-115,110,67.5,-70,-70,67.5,110,-122.5,-122.5,110,287.5,4,SBD,Single-ply
@@ -17,39 +17,39 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 56,F,Juniors,Irina Panina,Kazakhstan,1990,55.36,125,-135,-135,125,60,-65,-65,60,125,-130,-130,125,310,2,SBD,Single-ply
 56,F,Masters 1,Merlina Medina,Philippines,1968,54.32,-130,130,-143.5,130,82.5,93.5,95,95,90,115,-125,115,340,1,SBD,Single-ply
 56,F,Masters 1,Yukiko Yanagisawa,Japan,1967,55.1,105,-115,115,115,52.5,-57.5,57.5,57.5,105,-110,110,110,282.5,2,SBD,Single-ply
-56,F,Open,Chia-Yu Lee,C.Taipei,1987,52.68,135,-145,-145,135,80,85,90,90,120,155,172.5,172.5,397.5,1,SBD,Single-ply
+56,F,Open,Chia-Yu Lee,Taiwan,1987,52.68,135,-145,-145,135,80,85,90,90,120,155,172.5,172.5,397.5,1,SBD,Single-ply
 60,F,Sub-Juniors,Djeren Tuylieva,Turkmenistan,1991,59.88,140,-155,155,155,55,-62.5,-62.5,55,120,130,,130,340,1,SBD,Single-ply
 60,F,Sub-Juniors,Rekha Vyas,India,1992,58.84,90,100,110,110,40,47.5,52.5,52.5,100,115,120,120,282.5,2,SBD,Single-ply
 60,F,Juniors,Anastassiya Gusseva,Kazakhstan,1989,59.5,150,165,172.5,172.5,100,-113.5,-113.5,100,130,160,-175,160,432.5,1,SBD,Single-ply
 60,F,Masters 1,Wing-Yuk Ip,Hong Kong,1961,59.54,105,-125,-125,105,62.5,-72.5,-72.5,62.5,125,137.5,-150,137.5,305,1,SBD,Single-ply
 60,F,Masters 1,Rekha Gogoi,India,1963,58.1,50,67.5,75,75,30,35,-40,35,80,90,-95,90,200,2,SBD,Single-ply
-60,F,Open,Chien-Yu Chou,C.Taipei,1982,58.62,170,180,190,190,90,100,105,105,180,190,200,200,495,1,SBD,Single-ply
+60,F,Open,Chien-Yu Chou,Taiwan,1982,58.62,170,180,190,190,90,100,105,105,180,190,200,200,495,1,SBD,Single-ply
 60,F,Open,Nadejda Malyugina,Uzbekistan,1979,59.68,160,180,190,190,100,110,-115,110,160,-187.5,190,190,490,2,SBD,Single-ply
 60,F,Open,Tejeswini Naidu B.,India,1979,59.32,140,150,-157.5,150,70,77.5,-82.5,77.5,140,155,162.5,162.5,390,3,SBD,Single-ply
 67.5,F,Sub-Juniors,Suria Prebha Ganpathy,India,1991,63.8,130,140,-150,140,65,70,-75,70,130,135,-145,135,345,1,SBD,Single-ply
 67.5,F,Juniors,Mahriban Djumaniyazova,Turkmenistan,1988,66.4,-140,-140,140,140,65,75,77.5,77.5,110,120,-130,120,337.5,1,SBD,Single-ply
 67.5,F,Masters 1,Devi Bhagwati,India,1969,67.48,110,120,-130,120,45,50,55,55,110,125,135,135,310,1,SBD,Single-ply
 67.5,F,Masters 2,Golap Beena,India,1958,66.4,60,70,80,80,30,40,-45,40,80,95,102.5,102.5,222.5,1,SBD,Single-ply
-67.5,F,Open,Hsiao-Li Hsu,C.Taipei,1981,66.02,170,180,185,185,100,110,-115,110,180,192.5,-202.5,192.5,487.5,1,SBD,Single-ply
+67.5,F,Open,Hsiao-Li Hsu,Taiwan,1981,66.02,170,180,185,185,100,110,-115,110,180,192.5,-202.5,192.5,487.5,1,SBD,Single-ply
 67.5,F,Open,Yekaterina Kryukova,Kazakhstan,1985,66.9,170,182.5,187.5,187.5,100,112.5,117.5,117.5,172.5,-180,,172.5,477.5,2,SBD,Single-ply
 75,F,Juniors,Dhanasri Mahodik,India,1988,72.94,130,145,152.5,152.5,50,-60,-60,50,130,145,-155,145,347.5,1,SBD,Single-ply
 75,F,Juniors,Deepika Yadav,India,1988,70.92,115,-125,125,125,50,55,-57.5,55,115,-122.5,-122.5,115,295,2,SBD,Single-ply
 75,F,Masters 1,K. Valsala,India,1967,68,50,60,-65,60,25,30,-35,30,70,-80,90,90,180,1,SBD,Single-ply
 75,F,Masters 2,Ratanmani Chaudhary,India,1955,72.16,100,110,120,120,50,57.5,65,65,100,110,120,120,305,1,SBD,Single-ply
-75,F,Open,Wei-Jung Tseng,C.Taipei,1985,71.86,170,185,195,195,80,92.5,97.5,97.5,175,190,202.5,202.5,495,1,SBD,Single-ply
+75,F,Open,Wei-Jung Tseng,Taiwan,1985,71.86,170,185,195,195,80,92.5,97.5,97.5,175,190,202.5,202.5,495,1,SBD,Single-ply
 75,F,Open,Singh Sangita,India,1988,74.98,-160,160,-170,160,70,77.5,82.5,82.5,120,135,-150,135,377.5,2,SBD,Single-ply
 82.5,F,Juniors,Mariya Yastrebova,Kazakhstan,1988,75.94,-160,165,175,175,100,-107.5,-107.5,100,150,160,-162.5,160,435,1,SBD,Single-ply
 82.5,F,Juniors,Amruitha Raj,India,1988,81.34,125,135,140,140,50,-55,,50,145,157.5,162.5,162.5,352.5,2,SBD,Single-ply
 82.5,F,Juniors,Priyanka Yadav,India,1988,77.88,-100,100,110,110,52.5,57.5,-60,57.5,115,125,-130,125,292.5,3,SBD,Single-ply
 82.5,F,Masters 2,Leela S. Kargaokar,India,1953,75.12,70,80,90,90,45,-50,50,50,70,80,85,85,225,1,SBD,Single-ply
-82.5,F,Open,Min-Chu Hung,C.Taipei,1983,82.1,170,182.5,195,195,125,150,-161,150,140,157.5,165,165,510,1,SBD,Single-ply
+82.5,F,Open,Min-Chu Hung,Taiwan,1983,82.1,170,182.5,195,195,125,150,-161,150,140,157.5,165,165,510,1,SBD,Single-ply
 82.5,F,Open,Anumol Thomas,India,1987,82.28,140,150,162.5,162.5,80,87.5,95,95,130,145,155,155,412.5,2,SBD,Single-ply
 90,F,Juniors,Prachi Vig,India,1990,82.86,105,120,130,130,40,45,47.5,47.5,100,110,122.5,122.5,300,1,SBD,Single-ply
 90,F,Masters 1,Erlina Pecante,Philippines,1964,82.56,170,200,-218.5,200,100,115,122.5,122.5,160,185,-203.5,185,507.5,1,SBD,Single-ply
-90,F,Open,Ya-Wen Chang,C.Taipei,1984,87.92,240,250,-252.5,250,115,125,-127.5,125,205,-225,226,226,601,1,SBD,Single-ply
+90,F,Open,Ya-Wen Chang,Taiwan,1984,87.92,240,250,-252.5,250,115,125,-127.5,125,205,-225,226,226,601,1,SBD,Single-ply
 90,F,Open,Manjeet Kaur,India,1988,89.66,150,-160,160,160,105,-115,-115,105,120,130,140,140,405,2,SBD,Single-ply
 90,F,Open,Deepali Kulkarni,India,1979,85.5,120,130,140,140,50,60,62.5,62.5,120,132.5,142.5,142.5,345,3,SBD,Single-ply
-90+,F,Sub-Juniors,Chuen-Yi Fu,C.Taipei,1991,120.12,-150,150,170,170,100,112.5,117.5,117.5,150,191,-195,191,478.5,1,SBD,Single-ply
+90+,F,Sub-Juniors,Chuen-Yi Fu,Taiwan,1991,120.12,-150,150,170,170,100,112.5,117.5,117.5,150,191,-195,191,478.5,1,SBD,Single-ply
 90+,F,Sub-Juniors,Ranjeeta Bhattacharya,India,1992,93.66,-97.5,107.5,-120,107.5,55,62.5,65,65,110,130,-140,130,302.5,2,SBD,Single-ply
 90+,F,Juniors,Athi Udhyam,India,1990,92.62,150,-160,-160,150,40,45,-50,45,120,130,-135,130,325,1,SBD,Single-ply
 90+,F,Juniors,Kakoli Pukon,India,1987,99.5,-175,-175,-175,,50,55,60,60,150,160,,160,,DQ,SBD,Single-ply
@@ -68,13 +68,13 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 60,M,Masters 1,Devender Nahar,India,1961,58,135,150,,150,90,,,90,150,165,,165,405,1,SBD,Single-ply
 60,M,Masters 2,Sona Pawar Gopinath,India,1959,60,120,130,137.5,137.5,75,85,92.5,92.5,120,140,150,150,380,1,SBD,Single-ply
 60,M,Masters 3,Katsuo Iwakami,Japan,1943,59.2,142.5,147.5,152.5,152.5,105,110,-112.5,110,-145,145,-150,145,407.5,1,SBD,Single-ply
-60,M,Open,Tsung-Ting Hsieh,C. Taipei,1982,59.88,245,257.5,-265,257.5,165,182.5,-185,182.5,245,265,267.5,267.5,707.5,1,SBD,Single-ply
+60,M,Open,Tsung-Ting Hsieh,Taiwan,1982,59.88,245,257.5,-265,257.5,165,182.5,-185,182.5,245,265,267.5,267.5,707.5,1,SBD,Single-ply
 60,M,Open,Shyam Singh Rana,India,1988,59.48,225,240,-257.5,240,105,110,112.5,112.5,245,260,-265,260,612.5,2,SBD,Single-ply
 60,M,Open,Siu Leung Yip,Hong Kong,1982,59.1,130,140,-145,140,-105,105,112.5,112.5,-165,165,182.5,182.5,435,3,SBD,Single-ply
 67.5,M,Sub-Juniors,Dmitriy Kolotvinov,Uzbekistan,1991,65.1,190,210,-220,210,110,120,130,130,170,200,,200,540,1,SBD,Single-ply
 67.5,M,Sub-Juniors,Ahmed Kurbanov,Turkmenistan,1992,63.7,-140,-140,140,140,75,90,-95,90,-170,-175,175,175,405,2,SBD,Single-ply
 67.5,M,Juniors,Pavel Marda,Kazakhstan,1990,66.2,230,240,245,245,145,152.5,-157.5,152.5,230,-240,240,240,637.5,1,SBD,Single-ply
-67.5,M,Juniors,Chin-Kuo Tsai,C. Taipei,1987,67,230,237.5,245,245,130,140,-142.5,140,250,-260,-260,250,635,2,SBD,Single-ply
+67.5,M,Juniors,Chin-Kuo Tsai,Taiwan,1987,67,230,237.5,245,245,130,140,-142.5,140,250,-260,-260,250,635,2,SBD,Single-ply
 67.5,M,Juniors,Kiran Devidas Sanas,India,1987,66.9,200,215,225,225,120,-127.5,,120,210,240,-245,240,585,3,SBD,Single-ply
 67.5,M,Masters 2,Yoshinori Hara,Japan,1958,66.7,160,170,180,180,85,90,95,95,220,-230,-230,220,495,1,SBD,Single-ply
 67.5,M,Masters 2,Vijay Sawant,India,1958,63.8,140,160,175,175,80,90,-92.5,90,150,170,-182.5,170,435,2,SBD,Single-ply
@@ -82,8 +82,8 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 67.5,M,Masters 1,Hironori Niwa,Japan,1961,67,-200,200,-210,200,-120,120,125,125,215,222.5,-235,222.5,547.5,1,SBD,Single-ply
 67.5,M,Masters 1,Hiroyuki Terakado,Japan,1960,67,190,205,-210,205,130,140,-142.5,140,190,-212.5,-215,190,535,2,SBD,Single-ply
 67.5,M,Masters 1,Ashok Viswakarma,India,1963,66.8,160,-175,175,175,110,120,-125,120,180,-195,-195,180,475,3,SBD,Single-ply
-67.5,M,Open,Ming-Hui Lin,C. Taipei,1983,67,240,250,255,255,180,-185,185,185,235,245,-250,245,685,1,SBD,Single-ply
-67.5,M,Open,Chih-Lun Su,C. Taipei,1984,67.1,215,227.5,235,235,175,177.5,-180,177.5,220,235,247.5,247.5,660,2,SBD,Single-ply
+67.5,M,Open,Ming-Hui Lin,Taiwan,1983,67,240,250,255,255,180,-185,185,185,235,245,-250,245,685,1,SBD,Single-ply
+67.5,M,Open,Chih-Lun Su,Taiwan,1984,67.1,215,227.5,235,235,175,177.5,-180,177.5,220,235,247.5,247.5,660,2,SBD,Single-ply
 67.5,M,Open,Srikumar V.R.,India,1968,67.5,240,247.5,-257.5,247.5,150,157.5,162.5,162.5,240,-252.5,-252.5,240,650,3,SBD,Single-ply
 67.5,M,Open,Dharmender Singh,India,1984,66.8,245,-252.5,-252.5,245,135,-140,-140,135,260,-280,-280,260,640,4,SBD,Single-ply
 67.5,M,Open,Nasser Al Tamimi Saleh,Oman,1985,66.5,190,200,-210,200,-115,115,120,120,200,-220,,200,520,5,SBD,Single-ply
@@ -91,14 +91,14 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 75,M,Sub-Juniors,Grigoriy Borodkin,Kazakhstan,1991,72.68,230,240,247.5,247.5,135,142.5,147.5,147.5,-240,-248.5,248.5,248.5,643.5,1,SBD,Single-ply
 75,M,Sub-Juniors,Homayoun Mahdi,Iran,1991,72.24,220,240,250,250,140,155,160,160,190,200,210,210,620,2,SBD,Single-ply
 75,M,Sub-Juniors,Ahmadian Ashkan,Iran,1991,72.58,180,215,225,225,110,125,-132.5,125,200,-210,215,215,565,3,SBD,Single-ply
-75,M,Sub-Juniors,Jian-Ping Lee,C. Taipei,1991,70.4,200,207.5,-215,207.5,105,107.5,110,110,220,232.5,240,240,557.5,4,SBD,Single-ply
+75,M,Sub-Juniors,Jian-Ping Lee,Taiwan,1991,70.4,200,207.5,-215,207.5,105,107.5,110,110,220,232.5,240,240,557.5,4,SBD,Single-ply
 75,M,Juniors,Andrey Prokopenko,Kazakhstan,1988,74.02,260,285,295,295,160,172.5,177.5,177.5,250,277.5,-292.5,277.5,750,1,SBD,Single-ply
 75,M,Juniors,Abdulah Awlad Thani Imad,Oman,1988,74.66,200,220,-235,220,120,130,-135,130,190,-210,-210,190,540,2,SBD,Single-ply
 75,M,Masters 2,K.Karanit Parkash,India,1955,74.68,180,190,200,200,105,107.5,,107.5,210,225,-236,225,532.5,G,SBD,Single-ply
 75,M,Masters 2,K. Vijaya Rangan,India,1958,73.54,205,215,-222.5,215,-105,105,112.5,112.5,170,175,,175,502.5,1,SBD,Single-ply
 75,M,Masters 2,Ka-Po Gable Wang,Hong Kong,1959,72.12,125,135,137.5,137.5,100,110,112.5,112.5,155,175,177.5,177.5,427.5,2,SBD,Single-ply
 75,M,Masters 2,Ramesh Kumar Dave,India,1952,71.48,120,135,-150,135,50,60,70,70,120,135,145,145,350,3,SBD,Single-ply
-75,M,Masters 2,His-Ching Chou,C. Taipei,1950,69.68,90,97.5,105,105,40,-55,-55,40,90,100,110,110,255,4,SBD,Single-ply
+75,M,Masters 2,His-Ching Chou,Taiwan,1950,69.68,90,97.5,105,105,40,-55,-55,40,90,100,110,110,255,4,SBD,Single-ply
 75,M,Masters 3,Mitsuru Osawa,Japan,1941,72.8,160,180,190,190,82.5,90,100,100,160,180,-190,180,470,1,SBD,Single-ply
 75,M,Masters 3,Anil Vijaykant Mhatre,India,1945,67.6,110,120,130,130,85,92.5,97.5,97.5,130,145,152.5,152.5,380,2,SBD,Single-ply
 75,M,Masters 3,R. Bala Chandran,India,1949,70.52,90,110,-120,110,50,55,60,60,100,115,120,120,290,3,SBD,Single-ply
@@ -107,11 +107,11 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 75,M,Masters 1,Jafari Reza,Iran,1960,75,210,220,230,230,135,140,-145,140,190,200,210,210,580,3,SBD,Single-ply
 75,M,Masters 1,Sanat Kumar Usrethe,India,1963,73.4,200,215,225,225,105,115,-120,115,200,220,-230,220,560,4,SBD,Single-ply
 75,M,Masters 1,Vakhiddin Najmidinov,Uzbekistan,1963,73.22,150,170,,170,100,-110,-115,100,150,-210,,150,420,5,SBD,Single-ply
-75,M,Open,Lung-Hsin Huang,C. Taipei,1981,74.1,260,270,275,275,-200,200,205,205,290,295,305,305,785,1,SBD,Single-ply
+75,M,Open,Lung-Hsin Huang,Taiwan,1981,74.1,260,270,275,275,-200,200,205,205,290,295,305,305,785,1,SBD,Single-ply
 75,M,Open,Denis Ivkov,Kazakhstan,1988,74.02,290,300,307.5,307.5,175,185,-190,185,260,272.5,285,285,777.5,2,SBD,Single-ply
 75,M,Open,Farshbaf Ebrahemi Hadi Hadi,Iran,1985,74.1,285,-295,300,300,-140,170,-175,170,255,265,-275,265,735,3,SBD,Single-ply
 75,M,Open,Praveen Kumar,India,1990,74.2,260,275,285,285,160,170,177.5,177.5,260,-280,-280,260,722.5,4,SBD,Single-ply
-75,M,Open,Yi-Hsin Kuan,C. Taipei,1982,73.9,255,265,270,270,155,160,165,165,-280,280,285,285,720,5,SBD,Single-ply
+75,M,Open,Yi-Hsin Kuan,Taiwan,1982,73.9,255,265,270,270,155,160,165,165,-280,280,285,285,720,5,SBD,Single-ply
 75,M,Open,S. Mativanan,India,1985,74.82,240,255,-262.5,255,-125,125,132.5,132.5,240,250,,250,637.5,6,SBD,Single-ply
 75,M,Open,Said Al Hasni Yousuf,Oman,1984,74.6,220,240,-245,240,-130,130,140,140,230,-240,240,240,620,7,SBD,Single-ply
 75,M,Open,Merdan Nursahedov,Turkmenistan,1976,71.38,200,,,200,180,190,-200,190,200,,,200,590,8,SBD,Single-ply
@@ -135,14 +135,14 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 82.5,M,Juniors,Melvin Vincent,India,1987,82.14,250,260,-270,260,120,127.5,,127.5,260,-280,280,280,667.5,4,SBD,Single-ply
 82.5,M,Juniors,Monish Khan,India,1990,80.34,250,260,-270,260,125,135,-145,135,240,255,-260,255,650,5,SBD,Single-ply
 82.5,M,Juniors,Mubarak Al Hasni Issa,Oman,1988,81.78,225,240,-245,240,152.5,157.5,-165,157.5,225,235,-242.5,235,632.5,6,SBD,Single-ply
-82.5,M,Juniors,Ming-You Jian,C. Taipei,1986,81.12,-170,170,185,185,100,-110,110,110,180,205,217.5,217.5,512.5,7,SBD,Single-ply
+82.5,M,Juniors,Ming-You Jian,Taiwan,1986,81.12,-170,170,185,185,100,-110,110,110,180,205,217.5,217.5,512.5,7,SBD,Single-ply
 82.5,M,Open,Kirill Pavlenko,Kazakhstan,1988,80.34,310,-325,325,325,-180,180,185,185,290,300,322.5,322.5,832.5,1,SBD,Single-ply
 82.5,M,Open,Hamed Karagar,Iran,1981,82.44,-270,290,305,305,165,175,180,180,280,300,-315,300,785,2,SBD,Single-ply
 82.5,M,Open,Sandeep Awari,India,1984,82,290,305,315,315,170,-177.5,177.5,177.5,-290,290,-305,290,782.5,3,SBD,Single-ply
 82.5,M,Open,Ramesh Kumar,India,1973,80.28,250,265,272.5,272.5,165,175,180,180,250,-270,,250,702.5,4,SBD,Single-ply
 82.5,M,Open,Wai Shun Woo,Hong Kong,1973,80.56,180,190,202.5,202.5,120,130,-135,130,190,205,212.5,212.5,545,5,SBD,Single-ply
 90,M,Sub-Juniors,Ranjbar Mostafa,Iran,1991,89.26,250,275,290,290,140,150,,150,240,255,270,270,710,1,SBD,Single-ply
-90,M,Sub-Juniors,Hao-Wei Wu,C. Taipei,1991,85.36,190,210,220,220,110,122.5,-130,122.5,200,240,-255,240,582.5,2,SBD,Single-ply
+90,M,Sub-Juniors,Hao-Wei Wu,Taiwan,1991,85.36,190,210,220,220,110,122.5,-130,122.5,200,240,-255,240,582.5,2,SBD,Single-ply
 90,M,Masters 1,Konstantin Khardin,Uzbekistan,1968,85.68,240,255,265,265,140,155,,155,240,260,,260,680,1,SBD,Single-ply
 90,M,Masters 1,Dominic Cabalza,Philippines,1967,89.15,202.5,222.5,227.5,227.5,152.5,162.5,172.5,172.5,210,227.5,237.5,237.5,637.5,2,SBD,Single-ply
 90,M,Masters 1,Reza Khosravi M.,Iran,1969,87.92,200,-220,225,225,160,170,180,180,220,230,-237.5,230,635,3,SBD,Single-ply
@@ -199,7 +199,7 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 110,M,Masters 1,James Thomas,India,1962,100.64,160,175,-182.5,175,120,-130,-130,120,170,180,190,190,485,4,SBD,Single-ply
 110,M,Open,Homayoon Ahmadreza,Iran,1974,108.92,-335,335,350,350,210,220,225,225,260,285,295,295,870,1,SBD,Single-ply
 110,M,Open,Talkhabi Majid,Iran,1979,105.4,310,-315,-320,310,190,-205,-205,190,160,262.5,297.5,297.5,797.5,2,SBD,Single-ply
-110,M,Open,Ching-Chung Chen,C. Taipei,1978,105.5,300,-320,-320,300,100,,,100,-75,75,,75,475,3,SBD,Single-ply
+110,M,Open,Ching-Chung Chen,Taiwan,1978,105.5,300,-320,-320,300,100,,,100,-75,75,,75,475,3,SBD,Single-ply
 125,M,Sub-Juniors,Stanislav Markov,Kazakhstan,1994,117.08,160,175,185,185,100,-110,110,110,160,-175,,160,455,1,SBD,Single-ply
 125,M,Juniors,Delir Majid,Iran,1987,111.06,250,320,340,340,180,225,-235,225,250,280,300,300,865,1,SBD,Single-ply
 125,M,Juniors,Said Al Saadi Asad,Oman,1986,119.72,275,-290,290,290,110,130,-140,130,210,-225,,210,630,2,SBD,Single-ply
@@ -219,7 +219,7 @@ WeightClassKg,Sex,Division,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg
 125+,M,Juniors,Khorshidi Keyhan,Iran,1990,135.54,180,255,280,280,150,-210,-220,150,-170,-170,170,170,600,1,SBD,Single-ply
 125+,M,Masters 1,Estakhr Mohsen,Iran,1969,130.38,250,285,325,325,140,180,-225,180,220,240,255,255,760,1,SBD,Single-ply
 125+,M,Open,Hamidi Savoji Saeid,Iran,1982,125.02,-340,340,-345,340,205,-220,-220,205,315,325,340,340,885,1,SBD,Single-ply
-125+,M,Open,Chien-Hsiung Chao,C. Taipei,1969,138.66,300,317.5,340,340,-220,220,-225,220,280,310,325,325,885,2,SBD,Single-ply
+125+,M,Open,Chien-Hsiung Chao,Taiwan,1969,138.66,300,317.5,340,340,-220,220,-225,220,280,310,325,325,885,2,SBD,Single-ply
 125+,M,Open,Aidh Ali Mahfoodh Al Mandhari,Oman,1985,133.3,290,305,317.5,317.5,160,170,-175,170,230,250,-270,250,737.5,3,SBD,Single-ply
 125+,M,Open,Ruslan Ataev,Turkmenistan,1979,144.46,180,,,180,225,240,255,255,200,250,272.5,272.5,707.5,4,SBD,Single-ply
 125+,M,Open,Behbood Mohammadreza,Iran,1971,125.78,150,,,150,160,210,-230,210,140,,,140,500,5,SBD,Single-ply

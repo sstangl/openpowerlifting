@@ -2,6 +2,7 @@
 
 #[derive(Copy, Clone, Deserialize, Serialize, PartialEq, EnumString)]
 pub enum Country {
+    Afghanistan,
     Albania,
     Algeria,
     Argentina,
@@ -91,6 +92,7 @@ pub enum Country {
     Montenegro,
     Morocco,
     Nauru,
+    Nepal,
     Netherlands,
     /// Existed from 1954-2010.
     #[serde(rename = "Netherlands Antilles")]
@@ -105,6 +107,7 @@ pub enum Country {
     Nicaragua,
     Niger,
     Nigeria,
+    Niue,
     Norway,
     #[serde(rename = "N.Ireland")]
     #[strum(to_string = "N.Ireland")]
@@ -149,6 +152,7 @@ pub enum Country {
     SriLanka,
     Sudan,
     Sweden,
+    Syria,
     Switzerland,
     Tahiti,
     Taiwan,
