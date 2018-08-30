@@ -95,6 +95,7 @@ impl MetaFederation {
                     || meet.federation == Federation::FESUPO
                     || meet.federation == Federation::FFForce
                     || meet.federation == Federation::FPR
+                    || meet.federation == Federation::HPLS
                     || meet.federation == Federation::IBSA
                     || meet.federation == Federation::IDFPA
                     || meet.federation == Federation::IDFPF

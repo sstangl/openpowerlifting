@@ -254,6 +254,10 @@ pub enum Federation {
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
 
+    /// Croatian IPF affiliate
+    #[strum(to_string = "HPLS", serialize = "hpls")]
+    HPLS,
+
     /// International Blind Sport Assocation.
     #[strum(to_string = "IBSA", serialize = "ibsa")]
     IBSA,
