@@ -147,6 +147,7 @@ pub enum Country {
     #[serde(rename = "Sri Lanka")]
     #[strum(to_string = "Sri Lanka")]
     SriLanka,
+    Sudan,
     Sweden,
     Switzerland,
     Tahiti,
@@ -162,6 +163,7 @@ pub enum Country {
     Turkmenistan,
     Tuvalu,
     UAE,
+    Uganda,
     UK,
     Ukraine,
     Uruguay,
