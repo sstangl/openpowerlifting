@@ -45,6 +45,9 @@ pub enum Country {
     Czechia,
     Denmark,
     Djibouti,
+    #[serde(rename = "Dominican Republic")]
+    #[strum(to_string = "Dominican Republic")]
+    DominicanRepublic,
     Ecuador,
     Egypt,
     #[serde(rename = "El Salvador")]
@@ -61,6 +64,7 @@ pub enum Country {
     Greece,
     Guatemala,
     Guyana,
+    Honduras,
     #[serde(rename = "Hong Kong")]
     #[strum(to_string = "Hong Kong")]
     HongKong,
@@ -114,6 +118,7 @@ pub enum Country {
     NorthernIreland,
     Oman,
     Pakistan,
+    Panama,
     #[serde(rename = "Papua New Guinea")]
     #[strum(to_string = "Papua New Guinea")]
     PapuaNewGuinea,

@@ -66,6 +66,7 @@ COUNTRY_MAP = {
     'COM': 'Comoros',
     'CPV': 'Cape Verde',
     'CRC': 'Costa Rica',
+    'CRI': 'Costa Rica',
     'CRO': 'Croatia',
     'CUB': 'Cuba',
     'CYP': 'Cyprus',
@@ -123,8 +124,10 @@ COUNTRY_MAP = {
     'ICL': 'Iceland',
     'ISR': 'Israel',
     'ISV': 'US Virgin Islands',
+    'USVI': 'US Virgin Islands',
     'ITA': 'Italy',
     'IVB': 'British Virgin Islands',
+    'BVI': 'British Virgin Islands',
     'JAM': 'Jamaica',
     'JOR': 'Jordan',
     'JPN': 'Japan',
@@ -238,6 +241,7 @@ COUNTRY_MAP = {
     'TPE': 'Taiwan',
     'TAI': 'Taiwan',
     'TTO': 'Trinidad and Tobago',
+    'TT': 'Trinidad and Tobago',
     'TRI': 'Trinidad and Tobago',
     'TUN': 'Tunisia',
     'TUR': 'Turkey',
@@ -270,6 +274,7 @@ COUNTRY_MAP = {
     'Dannmark': 'Denmark',
     'Eng': 'England',
     'Estoniya': 'Estonia',
+    'Equador': 'Ecuador',
     'Fra': 'France',
     'Great Britain': 'UK',
     'G. Brtain': 'UK',
@@ -294,6 +299,8 @@ COUNTRY_MAP = {
     'Soviet Union': 'USSR',
     'Sverige': 'Sweden',
     'Trinidad&Tobago': 'Trinidad and Tobago',
+    'Trinidad & Tobago': 'Trinidad and Tobago',
+    'Trinidad And Tobago': 'Trinidad and Tobago',
     'Ukraina': 'Ukraine',
     'United Arab Emirates': 'UAE',
     'Un.Emirates': 'UAE',
@@ -303,7 +310,10 @@ COUNTRY_MAP = {
     'US. America': 'USA',
     'US America': 'USA',
     'U.S.America': 'USA',
+    'United States of America': 'USA',
+    'United States': 'USA',
     'US': 'USA',
+    'Virgin Is.': 'US Virgin Islands',
     'Whiterussia': 'Belarus'
 }
 
@@ -322,6 +332,9 @@ def standardize_country_csv(csv):
         country = row[idx]
         if country in COUNTRY_MAP:
             row[idx] = COUNTRY_MAP[country]
+            changed = True
+        elif country.upper() in COUNTRY_MAP:
+            row[idx] = COUNTRY_MAP[country.upper()]
             changed = True
 
     return changed
