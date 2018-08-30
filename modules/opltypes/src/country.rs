@@ -5,6 +5,9 @@ pub enum Country {
     Afghanistan,
     Albania,
     Algeria,
+    #[serde(rename = "American Samoa")]
+    #[strum(to_string = "American Samoa")]
+    AmericanSamoa,
     Argentina,
     Armenia,
     Aruba,
@@ -90,6 +93,9 @@ pub enum Country {
     Luxembourg,
     Macedonia,
     Malaysia,
+    #[serde(rename = "Marshall Islands")]
+    #[strum(to_string = "Marshall Islands")]
+    MarshallIslands,
     Mexico,
     Moldova,
     Mongolia,
@@ -186,6 +192,9 @@ pub enum Country {
     Venezuela,
     Vietnam,
     Wales,
+    #[serde(rename = "Wallis and Futuna")]
+    #[strum(to_string = "Wallis and Futuna")]
+    WallisAndFutuna,
     /// Existed from 1949-1990.
     #[serde(rename = "West Germany")]
     #[strum(to_string = "West Germany")]
