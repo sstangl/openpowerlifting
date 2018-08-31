@@ -1,0 +1,53 @@
+[divisions]
+    mor = {name ="M-OR",min=0,max=999}
+    for = {name ="F-OR",min=0,max=999}
+    mgr = {name ="M-GR",min=0,max=999} #Guest
+    fgr = {name ="F-GR",min=0,max=999}
+    moe = {name ="M-OE",min=0,max=999}
+    foe = {name ="F-OE",min=0,max=999}
+    mtr = {name ="M-TR",min=13,max=19}
+    ftr = {name ="F-TR",min=13,max=19}
+    mjr = {name ="M-JR",min=20,max=23}
+    fjr = {name ="F-JR",min=20,max=23}
+    m1r = {name ="M1R",min=40,max=44}
+    f1r = {name ="F1R",min=40,max=44}
+    m2r = {name ="M2R",min=45,max=49}
+    f2r = {name ="F2R",min=45,max=49}
+    m3r = {name ="M3R",min=50,max=54}
+    f3r = {name ="F3R",min=50,max=54}
+    m4r = {name ="M4R",min=55,max=59}
+    f4r = {name ="F4R",min=55,max=59}
+    m5r = {name ="M5R",min=60,max=64}
+    f5r = {name ="F5R",min=60,max=64}
+    m6r = {name ="M6R",min=65,max=69}
+    f6r = {name ="F6R",min=65,max=69}
+    m7r = {name ="M7R",min=70,max=74}
+    f7r = {name ="F7R",min=70,max=74}
+    m8r = {name ="M8R",min=75,max=79}
+    f8r = {name ="F8R",min=75,max=79}
+    m9r = {name ="M9R",min=80,max=999}
+    f9r = {name ="F9R",min=80,max=999}
+
+[weightclasses.default_M]
+    classes = ["56","60","67.5","75","82.5","90","100","110","125","125+","140","140+"]
+    date_range = ["2016-01-01","9999-99-99"]
+    sex = "M"
+
+
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","110","110+"]
+    date_range = ["2016-01-01","9999-99-99"]
+    sex = "F"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-00-00","2015-12-31"]
+    sex = "F"
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+","140","140+"]
+    date_range = ["0000-00-00","2015-12-31"]
+    sex = "M"
+
+[exclusions]
