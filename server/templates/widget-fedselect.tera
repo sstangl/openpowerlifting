@@ -97,7 +97,7 @@
   <option value="cpl" {% if selection.federation == "CPL" %}selected{% endif %}>CPL - Canadian Powerlifting League [IPL]</option>
   <option value="cpo" {% if selection.federation == "CPO" %}selected{% endif %}>CPO - Canadian Powerlifting Organisation [WPC]</option>
   <option value="cpu" {% if selection.federation == "CPU" %}selected{% endif %}>CPU - Canadian Powerlifting Union [IPF]</option>
-  <option value="gpc-can" {% if selection.federation == "GPC-CAN" %}selected{% endif %}>GPC-CAN - GPC Canada [GPC]</option>
+  <option value="independentpa" {% if selection.federation == "IndependentPA" %}selected{% endif %}>IndependentPA - Independent Powerlifting Association [GPC]</option>
   <option value="ipa-can" {% if selection.federation == "IPACAN" %}selected{% endif %}>IPA-CAN - IPA Canada [IPA]</option>
   <option value="raw-can" {% if selection.federation == "RAW-CAN" %}selected{% endif %}>RAW-CAN - 100% RAW Powerlifting Federation Canada</option>
   <option value="wrpf-can" {% if selection.federation == "WRPF-CAN" %}selected{% endif %}>WRPF-CAN - WRPF Canada [WRPF]</option>

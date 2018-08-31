@@ -217,11 +217,6 @@ pub enum Federation {
     #[strum(to_string = "GPC-AUS", serialize = "gpc-aus")]
     GPCAUS,
 
-    /// Canadian branch of the GPC.
-    #[serde(rename = "GPC-CAN")]
-    #[strum(to_string = "GPC-CAN", serialize = "gpc-can")]
-    GPCCAN,
-
     /// British branch of the GPC.
     #[serde(rename = "GPC-GB")]
     #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
@@ -269,6 +264,9 @@ pub enum Federation {
     /// Irish Drug-Free Powerlifting Federation.
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
+
+    #[strum(to_string = "IndependentPA", serialize = "independentpa")]
+    IndependentPA,
 
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,

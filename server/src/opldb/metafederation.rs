@@ -149,7 +149,7 @@ impl MetaFederation {
                 meet.federation == Federation::CPF
                     || meet.federation == Federation::CPL
                     || meet.federation == Federation::CPU
-                    || meet.federation == Federation::GPCCAN
+                    || meet.federation == Federation::IndependentPA
                     || MetaFederation::IPACAN.contains(entry, meets)
                     || meet.federation == Federation::RAWCAN
                     || meet.federation == Federation::WRPFCAN
