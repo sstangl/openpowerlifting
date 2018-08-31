@@ -352,7 +352,6 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
 
         else:
-            print(sheet)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
     return fieldnames
