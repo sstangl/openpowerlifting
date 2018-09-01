@@ -3,6 +3,7 @@
 use serde;
 use serde::de::{self, Deserialize, Visitor};
 
+use std::error::Error;
 use std::fmt;
 use std::num;
 use std::str::FromStr;
@@ -11,7 +12,7 @@ use std::str::FromStr;
 #[derive(Debug, PartialEq, PartialOrd, Ord, Eq, Serialize)]
 pub enum Place {
     /// The placing assigned to the entry.
-    P(u8),
+    P(num::NonZeroU8),
     /// Guest Lifter.
     G,
     /// Disqualified.
@@ -47,7 +48,7 @@ impl fmt::Display for Place {
 }
 
 impl FromStr for Place {
-    type Err = num::ParseIntError;
+    type Err = Box<Error>;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
@@ -56,7 +57,8 @@ impl FromStr for Place {
             "DD" => Ok(Place::DD),
             "NS" => Ok(Place::NS),
             _ => {
-                let num = s.parse::<u8>()?;
+                let num = num::NonZeroU8::new(s.parse::<u8>()?)
+                    .ok_or_else(|| "Place cannot be '0'")?;
                 Ok(Place::P(num))
             }
         }
@@ -108,6 +110,7 @@ mod tests {
 
     #[test]
     fn test_place_errors() {
+        assert!("0".parse::<Place>().is_err());
         assert!("-1".parse::<Place>().is_err());
         assert!("-G".parse::<Place>().is_err());
         assert!("GG".parse::<Place>().is_err());

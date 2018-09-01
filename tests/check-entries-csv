@@ -199,7 +199,9 @@ def check_column_place(s, row, csv):
     # DD = disqualified by failing a drug test
     if s not in ['DQ', 'NS', 'G', 'DD']:
         try:
-            int(s)
+            i = int(s)
+            if i <= 0:
+                perror("Place must be positive integer or known exception: %s" % s)
         except ValueError:
             perror("Place is not an integer or known exception: %s" % s)
 
