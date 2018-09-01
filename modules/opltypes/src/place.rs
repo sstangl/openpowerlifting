@@ -95,12 +95,16 @@ impl<'de> Deserialize<'de> for Place {
 mod tests {
     use super::*;
 
+    fn num_place(n: u8) -> Place {
+        Place::P(num::NonZeroU8::new(n).unwrap())
+    }
+
     #[test]
     fn test_place_basic() {
-        assert_eq!("1".parse::<Place>().unwrap(), Place::P(1));
-        assert_eq!("2".parse::<Place>().unwrap(), Place::P(2));
-        assert_eq!("3".parse::<Place>().unwrap(), Place::P(3));
-        assert_eq!("27".parse::<Place>().unwrap(), Place::P(27));
+        assert_eq!("1".parse::<Place>().unwrap(), num_place(1));
+        assert_eq!("2".parse::<Place>().unwrap(), num_place(2));
+        assert_eq!("3".parse::<Place>().unwrap(), num_place(3));
+        assert_eq!("27".parse::<Place>().unwrap(), num_place(27));
 
         assert_eq!("G".parse::<Place>().unwrap(), Place::G);
         assert_eq!("DQ".parse::<Place>().unwrap(), Place::DQ);
