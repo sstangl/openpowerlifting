@@ -68,183 +68,51 @@ impl MetaFederation {
         let meet: &Meet = &meets[entry.meet_id as usize];
 
         match self {
-            MetaFederation::AllTested => {
-                meet.federation == Federation::AAPLF
-                    || meet.federation == Federation::AAU
-                    || meet.federation == Federation::ADAU
-                    || meet.federation == Federation::ADFPA
-                    || meet.federation == Federation::ADFPF
-                    || meet.federation == Federation::AIWBPA
-                    || meet.federation == Federation::AEP
-                    || meet.federation == Federation::AfricanPF
-                    || meet.federation == Federation::APU
-                    || meet.federation == Federation::AsianPF
-                    || meet.federation == Federation::AusDFPF
-                    || meet.federation == Federation::BAWLA
-                    || meet.federation == Federation::BDFPA
-                    || meet.federation == Federation::BP
-                    || meet.federation == Federation::BVDK
-                    || meet.federation == Federation::CommonwealthPF
-                    || meet.federation == Federation::CPU
-                    || meet.federation == Federation::CSST
-                    || meet.federation == Federation::DSF
-                    || meet.federation == Federation::EPA
-                    || meet.federation == Federation::EPF
-                    || meet.federation == Federation::FALPO
-                    || meet.federation == Federation::FEMEPO
-                    || meet.federation == Federation::FESUPO
-                    || meet.federation == Federation::FFForce
-                    || meet.federation == Federation::FPR
-                    || meet.federation == Federation::HPLS
-                    || meet.federation == Federation::IBSA
-                    || meet.federation == Federation::IDFPA
-                    || meet.federation == Federation::IDFPF
-                    || meet.federation == Federation::IPF
-                    || meet.federation == Federation::IrishPF
-                    || meet.federation == Federation::JPA
-                    || meet.federation == Federation::KRAFT
-                    || meet.federation == Federation::LPF
-                    || meet.federation == Federation::NAPF
-                    || meet.federation == Federation::NASA
-                    || meet.federation == Federation::NIPF
-                    || meet.federation == Federation::NordicPF
-                    || meet.federation == Federation::NSF
-                    || meet.federation == Federation::NZPF
-                    || meet.federation == Federation::OceaniaPF
-                    || meet.federation == Federation::ParaPL
-                    || meet.federation == Federation::PA
-                    || meet.federation == Federation::PLZS
-                    || meet.federation == Federation::PZKFiTS
-                    || meet.federation == Federation::RAW
-                    || meet.federation == Federation::RAWCAN
-                    || meet.federation == Federation::RAWUKR
-                    || meet.federation == Federation::ScottishPL
-                    || meet.federation == Federation::SSF
-                    || meet.federation == Federation::SVNL
-                    || meet.federation == Federation::THSPA
-                    || meet.federation == Federation::USAPL
-                    || meet.federation == Federation::WABDL
-                    || meet.federation == Federation::WDFPF
-                    || meet.federation == Federation::WelshPA
-                    || meet.federation == Federation::WNPF
-                    || meet.federation == Federation::WP
-                    || meet.federation == Federation::WPU
-            }
+            MetaFederation::AllTested => meet.federation.is_fully_tested(),
             MetaFederation::AllAmateur => entry.tested,
             MetaFederation::AllArgentina => {
-                meet.federation == Federation::AAP
-                    || meet.federation == Federation::FALPO
-                    || meet.federation == Federation::FEPOA
+                meet.federation.home_country() == Some(Country::Argentina)
             }
             MetaFederation::AllAustralia => {
-                meet.federation == Federation::AAPLF
-                    || meet.federation == Federation::APU
-                    || meet.federation == Federation::AusDFPF
-                    || meet.federation == Federation::CAPO
-                    || meet.federation == Federation::GPCAUS
-                    || meet.federation == Federation::PA
-                    || meet.federation == Federation::ProRaw
+                meet.federation.home_country() == Some(Country::Australia)
             }
             MetaFederation::AllCanada => {
-                meet.federation == Federation::CPF
-                    || meet.federation == Federation::CPL
-                    || meet.federation == Federation::CPU
-                    || meet.federation == Federation::IndependentPA
+                meet.federation.home_country() == Some(Country::Canada)
                     || MetaFederation::IPACAN.contains(entry, meets)
-                    || meet.federation == Federation::RAWCAN
-                    || meet.federation == Federation::WRPFCAN
             }
             MetaFederation::AllCzechia => {
-                meet.federation == Federation::CAST
-                    || meet.federation == Federation::CSST
-                    || meet.federation == Federation::OlomouckySilak
+                meet.federation.home_country() == Some(Country::Czechia)
             }
             MetaFederation::AllFinland => {
-                meet.federation == Federation::FPO || meet.federation == Federation::SVNL
+                meet.federation.home_country() == Some(Country::Finland)
             }
             MetaFederation::AllGermany => {
-                meet.federation == Federation::BVDK 
-                    || meet.federation == Federation::GPU
-                    || meet.federation == Federation::WPCGermany
+                meet.federation.home_country() == Some(Country::Germany)
             }
             MetaFederation::AllIreland => {
-                meet.federation == Federation::GPCIRL
-                    || meet.federation == Federation::IDFPA
-                    || meet.federation == Federation::IDFPF
-                    || meet.federation == Federation::IrishPF
-                    || meet.federation == Federation::IrishPO
+                meet.federation.home_country() == Some(Country::Ireland)
             }
             MetaFederation::AllIsrael => {
-                meet.federation == Federation::IPC || meet.federation == Federation::NPA
+                meet.federation.home_country() == Some(Country::Israel)
             }
             MetaFederation::AllRussia => {
-                meet.federation == Federation::BB
-                    || meet.federation == Federation::FPR
-                    || meet.federation == Federation::GoldenDouble
-                    || meet.federation == Federation::GPCRUS
-                    || meet.federation == Federation::NAP
-                    || meet.federation == Federation::RPU
-                    || meet.federation == Federation::SCT
-                    || meet.federation == Federation::SPSS
-                    || meet.federation == Federation::Vityaz
-                    || meet.federation == Federation::WPARUS
-                    || meet.federation == Federation::WPCRUS
-                    || meet.federation == Federation::WRPF
+                meet.federation.home_country() == Some(Country::Russia)
             }
             MetaFederation::AllUK => {
-                meet.federation == Federation::BAWLA
-                    || meet.federation == Federation::BDFPA
-                    || meet.federation == Federation::BP
-                    || meet.federation == Federation::BPC
-                    || meet.federation == Federation::BPO
-                    || meet.federation == Federation::BPU
-                    || meet.federation == Federation::EPA
-                    || meet.federation == Federation::GPCGB
-                    || meet.federation == Federation::NIPF
-                    || meet.federation == Federation::ScottishPL
-                    || meet.federation == Federation::WelshPA
+                match meet.federation.home_country() {
+                    Some(Country::England) => true,
+                    Some(Country::NorthernIreland) => true,
+                    Some(Country::UK) => true,
+                    Some(Country::Scotland) => true,
+                    Some(Country::Wales) => true,
+                    _ => false,
+                }
             }
             MetaFederation::AllUkraine => {
-                meet.federation == Federation::RAWUKR
-                    || meet.federation == Federation::UkrainePA
-                    || meet.federation == Federation::UPC
-                    || meet.federation == Federation::UkrainePF
-                    || meet.federation == Federation::WPAU 
-                    || meet.federation == Federation::WPCUKR
-                    || meet.federation == Federation::WPUF
+                meet.federation.home_country() == Some(Country::Ukraine)
             }
             MetaFederation::AllUSA => {
-                meet.federation == Federation::_365Strong
-                    || meet.federation == Federation::AAU
-                    || meet.federation == Federation::ADAU
-                    || meet.federation == Federation::ADFPA
-                    || meet.federation == Federation::ADFPF
-                    || meet.federation == Federation::APA
-                    || meet.federation == Federation::APC
-                    || meet.federation == Federation::APF
-                    || meet.federation == Federation::BBDD
-                    || meet.federation == Federation::Hardcore
-                    || meet.federation == Federation::HERC
-                    || meet.federation == Federation::IPA
-                    || meet.federation == Federation::PRIDE
-                    || meet.federation == Federation::MHP
-                    || meet.federation == Federation::MM
-                    || meet.federation == Federation::NASA
-                    || meet.federation == Federation::NOTLD
-                    || meet.federation == Federation::PRPA
-                    || meet.federation == Federation::RAW
-                    || meet.federation == Federation::RAWU
-                    || meet.federation == Federation::RPS
-                    || meet.federation == Federation::RUPC
-                    || meet.federation == Federation::SCI
-                    || meet.federation == Federation::SPF
-                    || meet.federation == Federation::THSPA
-                    || meet.federation == Federation::UPA
-                    || meet.federation == Federation::USAPL
-                    || meet.federation == Federation::USPA
-                    || meet.federation == Federation::USPF
-                    || meet.federation == Federation::XPC
-                    || meet.federation == Federation::WNPF
+                meet.federation.home_country() == Some(Country::USA)
             }
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => meet.federation == Federation::BPU && entry.tested,
