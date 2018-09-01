@@ -1,6 +1,6 @@
 Place,Name,BodyweightKg,WeightClassKg,Sex,Country,Best3BenchKg,TotalKg,Event,Equipment
-1,Anthony Peddle,,48,M,Great Britain,168,168,B,Raw
-2,Jung Yong Kwak,,48,M,Korea,162.5,162.5,B,Raw
+1,Anthony Peddle,,48,M,UK,168,168,B,Raw
+2,Jung Yong Kwak,,48,M,South Korea,162.5,162.5,B,Raw
 3,Thongsa Marasri,,48,M,Thailand,150,150,B,Raw
 4,Shanming Chen,,48,M,China,150,150,B,Raw
 5,Thongdaeng Weiktaisong,,48,M,Thailand,145,145,B,Raw
@@ -11,28 +11,28 @@ Place,Name,BodyweightKg,WeightClassKg,Sex,Country,Best3BenchKg,TotalKg,Event,Equ
 10,Gerardo Merino,,48,M,Ecuador,120,120,B,Raw
 11,Sadun Wasana Perera,,48,M,Sri Lanka,110,110,B,Raw
 12,Eay Simay,,48,M,Laos,110,110,B,Raw
-13,Mateus Lukas,,48,M,IPA,105,105,B,Raw
+13,Mateus Lukas,,48,M,,105,105,B,Raw
 DQ,Luis Diaz,,48,M,Venezuela,,,B,Raw
 DQ,Ruel Ishaku,,48,M,Nigeria,,,B,Raw
 DQ,Badr Eldin Salem,,48,M,Egypt,,,B,Raw
-1,Keum-Jong Jung,,52,M,Korea,190,190,B,Raw
+1,Keum-Jong Jung,,52,M,South Korea,190,190,B,Raw
 2,Osama El Serngawy,,52,M,Egypt,170,170,B,Raw
 3,Jian Wang,,52,M,China,170,170,B,Raw
 4,Saeid Mokhtarian,,52,M,Iran,167.5,167.5,B,Raw
 5,Mondi Abdel Azim,,52,M,Egypt,162.5,162.5,B,Raw
 6,Andrzej Gren,,52,M,Poland,147.5,147.5,B,Raw
 7,Youssef Cheikh Younes,,52,M,Syria,147.5,147.5,B,Raw
-8,Chia-Tung Chang,,52,M,Chinese Taipei,147.5,147.5,B,Raw
+8,Chia-Tung Chang,,52,M,Taiwan,147.5,147.5,B,Raw
 9,Iouri Petrov,,52,M,Russia,145,145,B,Raw
 10,Roman Omurbekov,,52,M,Kyrgyzstan,140,140,B,Raw
 11,Mana Boonrak,,52,M,Thailand,140,140,B,Raw
 12,Benjamin Martinez,,52,M,Venezuela,127.5,127.5,B,Raw
-DQ,Dae Heon Shin,,52,M,Korea,,,B,Raw
+DQ,Dae Heon Shin,,52,M,South Korea,,,B,Raw
 DQ,Cong Hung Truong,,52,M,Vietnam,,,B,Raw
 1,Gomma G Ahmed,,56,M,Egypt,192.5,192.5,B,Raw
 2,Fereidoun Karimipour,,56,M,Iran,190,190,B,Raw
 3,Stephen Davou,,56,M,Nigeria,177.5,177.5,B,Raw
-4,Sang Jin Yoon,,56,M,Korea,177.5,177.5,B,Raw
+4,Sang Jin Yoon,,56,M,South Korea,177.5,177.5,B,Raw
 5,Peixian Huang,,56,M,China,167.5,167.5,B,Raw
 6,Jonas Celin,,56,M,Sweden,165,165,B,Raw
 7,Mariusz Tomczyk,,56,M,Poland,160,160,B,Raw
@@ -51,12 +51,12 @@ DQ,Jaime Morales,,56,M,Venezuela,,,B,Raw
 1,Metwaly Mathana,,60,M,Egypt,197.5,197.5,B,Raw
 2,Richard Nicholson,58.1,60,M,Australia,175,175,B,Raw
 3,Taqy Parnian,,60,M,Netherlands,175,175,B,Raw
-4,Duk Hwan Bong,,60,M,Korea,175,175,B,Raw
+4,Duk Hwan Bong,,60,M,South Korea,175,175,B,Raw
 5,Krzysztof Owsiany,,60,M,Poland,167.5,167.5,B,Raw
 6,Djamel Meziani,,60,M,Algeria,165,165,B,Raw
-7,Yung Sung Wu,,60,M,Chinese Taipei,150,150,B,Raw
+7,Yung Sung Wu,,60,M,Taiwan,150,150,B,Raw
 8,Vadim Rakitin,,60,M,Russia,145,145,B,Raw
-9,Gholam Khorshid Rahiminia,,60,M,United Arab Emirates,137.5,137.5,B,Raw
+9,Gholam Khorshid Rahiminia,,60,M,UAE,137.5,137.5,B,Raw
 10,Timo Palonen,,60,M,Finland,132.5,132.5,B,Raw
 DQ,Babak Mohammadi,,60,M,Iran,,,B,Raw
 DQ,Zhaohuo Yang,,60,M,China,,,B,Raw
@@ -66,10 +66,10 @@ DQ,Zhaohuo Yang,,60,M,China,,,B,Raw
 4,Porfirio Francisco Arredondo Luna,,67.5,M,Mexico,192.5,192.5,B,Raw
 5,Abraham Obaretin,,67.5,M,Nigeria,180,180,B,Raw
 6,Bogdan Lis,,67.5,M,Poland,180,180,B,Raw
-7,Russell Willey,,67.5,M,Great Britain,172.5,172.5,B,Raw
+7,Russell Willey,,67.5,M,UK,172.5,172.5,B,Raw
 8,Mo Qian,,67.5,M,China,165,165,B,Raw
 9,Abdelkader Echatibi,,67.5,M,Morocco,160,160,B,Raw
-10,Douglas Farrell,,67.5,M,United States of America,160,160,B,Raw
+10,Douglas Farrell,,67.5,M,USA,160,160,B,Raw
 11,Ivan Aldokimov,,67.5,M,Ukraine,150,150,B,Raw
 12,Nasser A-Rahbi,,67.5,M,Oman,145,145,B,Raw
 13,Zaid Al-Mutairi,,67.5,M,Kuwait,140,140,B,Raw
@@ -87,7 +87,7 @@ DQ,Mariappan Perumal,,67.5,M,Malaysia,,,B,Raw
 8,Kenneth Doyle,,75,M,Canada,177.5,177.5,B,Raw
 9,Gregory Jacobs,,75,M,France,175,175,B,Raw
 10,Victor Valderrama,,75,M,Chile,172.5,172.5,B,Raw
-11,Chen-Lung Yang,,75,M,Chinese Taipei,162.5,162.5,B,Raw
+11,Chen-Lung Yang,,75,M,Taiwan,162.5,162.5,B,Raw
 12,Said Kalakh,,75,M,Morocco,160,160,B,Raw
 13,Said Touil,,75,M,Morocco,155,155,B,Raw
 14,Dimitrios Anatolitis,,75,M,Greece,155,155,B,Raw
@@ -95,11 +95,11 @@ DQ,Mariappan Perumal,,67.5,M,Malaysia,,,B,Raw
 16,Juan Chavez,,75,M,Peru,145,145,B,Raw
 17,Facourou Sissoko,,75,M,Mali,130,130,B,Raw
 DQ,Harsono Pal,,75,M,Indonesia,,,B,Raw
-DQ,Chuck Roedelbronn,,75,M,United States of America,,,B,Raw
-1,Jong-Chul Park,,82.5,M,Korea,243,243,B,Raw
+DQ,Chuck Roedelbronn,,75,M,USA,,,B,Raw
+1,Jong-Chul Park,,82.5,M,South Korea,243,243,B,Raw
 2,Saeid Bafandeh Sedaghati,,82.5,M,Iran,227.5,227.5,B,Raw
 3,Mostafa Hamed,,82.5,M,Egypt,217.5,217.5,B,Raw
-4,Mohammed Khamis Khalaf,,82.5,M,United Arab Emirates,205,205,B,Raw
+4,Mohammed Khamis Khalaf,,82.5,M,UAE,205,205,B,Raw
 5,Jiahua Zhou,,82.5,M,China,195,195,B,Raw
 6,Viktor Dournev,,82.5,M,Russia,192.5,192.5,B,Raw
 7,Siarhei Kryvulets,,82.5,M,Belarus,180,180,B,Raw
@@ -113,7 +113,7 @@ DQ,Chuck Roedelbronn,,75,M,United States of America,,,B,Raw
 15,Hisashi Takahashi,,82.5,M,Japan,155,155,B,Raw
 16,Vasileios Giannoukas,,82.5,M,Greece,145,145,B,Raw
 17,Salah Al Mulla,,82.5,M,Qatar,140,140,B,Raw
-DQ,Jason Greer,,82.5,M,United States of America,,,B,Raw
+DQ,Jason Greer,,82.5,M,USA,,,B,Raw
 DQ,Solomon Amarakuo,,82.5,M,Nigeria,,,B,Raw
 DQ,Richard Kabore Issaka,,82.5,M,Burkina Faso,,,B,Raw
 DQ,Jan Mihal,,82.5,M,Slovakia,,,B,Raw
@@ -125,7 +125,7 @@ DQ,John Van Ruitenbeek,,82.5,M,Netherlands,,,B,Raw
 5,Bernd Basse,,90,M,Germany,200,200,B,Raw
 6,Frank Gyland,,90,M,Norway,200,200,B,Raw
 7,Ryszard Rogala,,90,M,Poland,195,195,B,Raw
-8,Mitchell Strickland,,90,M,United States of America,192.5,192.5,B,Raw
+8,Mitchell Strickland,,90,M,USA,192.5,192.5,B,Raw
 9,Andriy Barybin,,90,M,Ukraine,190,190,B,Raw
 10,Sergey Istomin,,90,M,Russia,182.5,182.5,B,Raw
 11,Ahmad Zaki,,90,M,Jordan,180,180,B,Raw
@@ -137,7 +137,7 @@ DQ,Gioundouz Ismailov,,90,M,Azerbaijan,,,B,Raw
 DQ,Fadhel Bu Abbas,,90,M,Kuwait,,,B,Raw
 1,Amrollah Dehghani,,100,M,Iran,232.5,232.5,B,Raw
 2,Sherif Bakr,,100,M,Egypt,232.5,232.5,B,Raw
-3,Nicholas Slater,,100,M,Great Britain,232.5,232.5,B,Raw
+3,Nicholas Slater,,100,M,UK,232.5,232.5,B,Raw
 4,Zhiqiang Luo,,100,M,China,222.5,222.5,B,Raw
 5,Sergiy Lukyanov,,100,M,Ukraine,205,205,B,Raw
 6,Mekhman Ramazanov,,100,M,Azerbaijan,202.5,202.5,B,Raw
@@ -152,9 +152,9 @@ DQ,Fadhel Bu Abbas,,90,M,Kuwait,,,B,Raw
 15,Ali Mohsein,,100,M,Qatar,182.5,182.5,B,Raw
 16,Adrian Sandu,,100,M,Romania,167.5,167.5,B,Raw
 DQ,Patrick Akutaekwe,,100,M,Nigeria,,,B,Raw
-1,Pernell Cooper,,100+,M,United Arab Emirates,237.5,237.5,B,Raw
-2,Kim Brownfield,,100+,M,United Arab Emirates,235,235,B,Raw
-3,Abdelrahim Hamed,,100+,M,LBA,235,235,B,Raw
+1,Pernell Cooper,,100+,M,UAE,237.5,237.5,B,Raw
+2,Kim Brownfield,,100+,M,UAE,235,235,B,Raw
+3,Abdelrahim Hamed,,100+,M,Libya,235,235,B,Raw
 4,Leszek Hallmann,,100+,M,Poland,225,225,B,Raw
 5,George Taamaru,,100+,M,New Zealand,222.5,222.5,B,Raw
 6,Werner Friedl,,100+,M,Austria,220,220,B,Raw
@@ -164,26 +164,26 @@ DQ,Patrick Akutaekwe,,100,M,Nigeria,,,B,Raw
 2,Lidiya Solovyova,,40,F,Ukraine,85,85,B,Raw
 3,Laura Cerero Gabriel,,40,F,Mexico,82.5,82.5,B,Raw
 4,Pepsuzie Obi,,40,F,Nigeria,77.5,77.5,B,Raw
-5,Jill Kennedy,,40,F,United States of America,72.5,72.5,B,Raw
-6,Chen-Yen Huang,,40,F,Chinese Taipei,76.5,76.5,B,Raw
+5,Jill Kennedy,,40,F,USA,72.5,72.5,B,Raw
+6,Chen-Yen Huang,,40,F,Taiwan,76.5,76.5,B,Raw
 7,Marie-Paule Huleux,,40,F,France,60,60,B,Raw
 8,Tetyana Shuba,,40,F,Ukraine,52.5,52.5,B,Raw
 1,Fatma Omar,,44,F,Egypt,109,109,B,Raw
 2,Lucy Ogechukwu Ejike,,44,F,Nigeria,102.5,102.5,B,Raw
-3,Li-Hua Lu,,44,F,Chinese Taipei,87.5,87.5,B,Raw
+3,Li-Hua Lu,,44,F,Taiwan,87.5,87.5,B,Raw
 4,Tamara Kulynych,,44,F,Ukraine,75,75,B,Raw
 5,Valerie Jutand,,44,F,France,72.5,72.5,B,Raw
 6,Dalila Tabai,,44,F,Tunisia,67.5,67.5,B,Raw
-7,Lisa Tuckey,,44,F,Great Britain,65,65,B,Raw
+7,Lisa Tuckey,,44,F,UK,65,65,B,Raw
 8,Dalouni Xaythanith,,44,F,Laos,40,40,B,Raw
 DQ,Amnouy Wetwithan,,44,F,Thailand,,,B,Raw
 1,Iyabo Ismaila,,48,F,Nigeria,110,110,B,Raw
 2,Abir Ibrahim Aly Nail,,48,F,Egypt,102.5,102.5,B,Raw
 3,Xia Zhang,,48,F,China,95,95,B,Raw
-4,Lisa Pudner,,48,F,Great Britain,82.5,82.5,B,Raw
+4,Lisa Pudner,,48,F,UK,82.5,82.5,B,Raw
 5,Marina Leon,,48,F,Mexico,77.5,77.5,B,Raw
 6,Anna Oroszova,,48,F,Slovakia,75,75,B,Raw
-7,Yin Hui Chen,,48,F,Chinese Taipei,70,70,B,Raw
+7,Yin Hui Chen,,48,F,Taiwan,70,70,B,Raw
 8,Zuray Marcano,,48,F,Venezuela,62.5,62.5,B,Raw
 9,Suzanne Twelftree,,48,F,Australia,55,55,B,Raw
 DQ,Saleha Annab,,48,F,Algeria,,,B,Raw
@@ -193,13 +193,13 @@ DQ,Saleha Annab,,48,F,Algeria,,,B,Raw
 4,Sayeda Youssef,,52,F,Egypt,97.5,97.5,B,Raw
 5,Zhenling Huo,,52,F,China,95,95,B,Raw
 6,Martine Servajean,,52,F,France,82.5,82.5,B,Raw
-7,Sharon Heath,,52,F,Great Britain,75,75,B,Raw
+7,Sharon Heath,,52,F,UK,75,75,B,Raw
 DQ,Lee Chan Siow,,52,F,Malaysia,,,B,Raw
 1,Taoying Fu,,56,F,China,120,120,B,Raw
 2,Somkhoun Anon,,56,F,Thailand,95,95,B,Raw
 3,Mokie Grobbelaar,,56,F,South Africa,92.5,92.5,B,Raw
 4,Hoda Amir,,56,F,Egypt,90,90,B,Raw
-5,Natalie Blake,,56,F,Great Britain,80,80,B,Raw
+5,Natalie Blake,,56,F,UK,80,80,B,Raw
 6,Maria Bartosova,,56,F,Slovakia,72.5,72.5,B,Raw
 7,Khadija Acem,,56,F,Morocco,70,70,B,Raw
 8,Terezinha Mulato Santos,,56,F,Brazil,70,70,B,Raw
@@ -211,9 +211,9 @@ DQ,Tracey Wright,,56,F,New Zealand,,,B,Raw
 3,Lyudmyla Osmanova,,60,F,Ukraine,105,105,B,Raw
 4,Catalina Diaz Vilchis,,60,F,Mexico,105,105,B,Raw
 5,Gehan Hassan,,60,F,Egypt,97.5,97.5,B,Raw
-6,Connie Eisenbraun,,60,F,United States of America,87.5,87.5,B,Raw
+6,Connie Eisenbraun,,60,F,USA,87.5,87.5,B,Raw
 7,Sana'a Alaskari,,60,F,Kuwait,82.5,82.5,B,Raw
-8,Ya-Hsuan Lin,,60,F,Chinese Taipei,75,75,B,Raw
+8,Ya-Hsuan Lin,,60,F,Taiwan,75,75,B,Raw
 9,Carmen Rodriguez,,60,F,Mexico,75,75,B,Raw
 10,Jeannette Thibisay Heredia,,60,F,Venezuela,72.5,72.5,B,Raw
 11,Fatiha Atertor,,60,F,Morocco,67.5,67.5,B,Raw
@@ -222,25 +222,25 @@ DQ,Tracey Wright,,56,F,New Zealand,,,B,Raw
 3,Nadia Ali,,67.5,F,Egypt,110,110,B,Raw
 4,Rasha Sheikh,,67.5,F,Syria,97.5,97.5,B,Raw
 5,Zinaida Emlina,,67.5,F,Russia,87.5,87.5,B,Raw
-6,Susan Scofield,,67.5,F,United States of America,87.5,87.5,B,Raw
+6,Susan Scofield,,67.5,F,USA,87.5,87.5,B,Raw
 7,Svitlana Tryfonova,,67.5,F,Ukraine,85,85,B,Raw
 8,Melissa Trafela,,67.5,F,Australia,80,80,B,Raw
-9,Kathleen Rose Winter,,67.5,F,United States of America,72.5,72.5,B,Raw
+9,Kathleen Rose Winter,,67.5,F,USA,72.5,72.5,B,Raw
 DQ,Min Xi,,67.5,F,China,,,B,Raw
 1,Ruifang Li,,75,F,China,137.5,137.5,B,Raw
 2,Patricia Barcena,,75,F,Mexico,122.5,122.5,B,Raw
 3,Kike Adedeji Ogunbamowo,,75,F,Nigeria,120,120,B,Raw
-4,Tzu-Hui Lin,,75,F,Chinese Taipei,120,120,B,Raw
+4,Tzu-Hui Lin,,75,F,Taiwan,120,120,B,Raw
 5,King Kiew Law,,75,F,Malaysia,85,85,B,Raw
 6,Renee Boissonnet,,75,F,France,85,85,B,Raw
 7,Olga Serguienko,,75,F,Russia,75,75,B,Raw
 8,Kim Neuenkirchen,,75,F,Australia,72.5,72.5,B,Raw
 9,Chagit Brill,,75,F,Israel,62.5,62.5,B,Raw
-1,Emma Brown,,82.5,F,Great Britain,132.5,132.5,B,Raw
+1,Emma Brown,,82.5,F,UK,132.5,132.5,B,Raw
 2,Hend Abd Elaty,,82.5,F,Egypt,120,120,B,Raw
 3,Adeline Dumapong,,82.5,F,Philippines,110,110,B,Raw
 4,Grace Ebere Anozie,,82.5,F,Nigeria,110,110,B,Raw
-5,Mary Stack,,82.5,F,United States of America,97.5,97.5,B,Raw
+5,Mary Stack,,82.5,F,USA,97.5,97.5,B,Raw
 6,Jozsefine Puxler,,82.5,F,Hungary,85,85,B,Raw
 1,Ping Cao,,82.5+,F,China,125,125,B,Raw
 2,Carine Burgy,,82.5+,F,France,120,120,B,Raw
@@ -250,5 +250,5 @@ DQ,Min Xi,,67.5,F,China,,,B,Raw
 6,Faten Hegazy,,82.5+,F,Egypt,102.5,102.5,B,Raw
 7,Julie Russell,,82.5+,F,Australia,90,90,B,Raw
 8,Cristina Gonzalez,,82.5+,F,Mexico,85,85,B,Raw
-9,Ghazala M Ali,,82.5+,F,LBA,67.5,67.5,B,Raw
-DQ,Jennifer Adams,,82.5+,F,United States of America,,,B,Raw
+9,Ghazala M Ali,,82.5+,F,Libya,67.5,67.5,B,Raw
+DQ,Jennifer Adams,,82.5+,F,USA,,,B,Raw
