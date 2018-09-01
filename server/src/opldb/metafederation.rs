@@ -35,6 +35,8 @@ pub enum MetaFederation {
     AllIreland,
     #[strum(to_string = "all-israel")]
     AllIsrael,
+    #[strum(to_string = "all-newzealand")]
+    AllNewZealand,
     #[strum(to_string = "all-russia")]
     AllRussia,
     #[strum(to_string = "all-uk")]
@@ -94,6 +96,9 @@ impl MetaFederation {
             }
             MetaFederation::AllIsrael => {
                 meet.federation.home_country() == Some(Country::Israel)
+            }
+            MetaFederation::AllNewZealand => {
+                meet.federation.home_country() == Some(Country::NewZealand)
             }
             MetaFederation::AllRussia => {
                 meet.federation.home_country() == Some(Country::Russia)

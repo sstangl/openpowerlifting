@@ -85,6 +85,7 @@ KnownFederations = {
     "APF",
     "APU",  # Australian Powerlifting Union.
     "AsianPF",  # Asian Powerlifting Federation, IPF.
+    "Atlantis",  # Series of Raw meets hosted by the Atlantis company
     "AusDFPF",  # Australian Drug Free Powerlifting Federation, WDFPF.
     "BAWLA",  # British Amateur Weightlifting Association, precursor to BP
     # Bogatyr Brotherhood, a stand-alone and short-lived Russian federation.
@@ -96,6 +97,7 @@ KnownFederations = {
     "BPU",  # British Powerlifting Union.
     "BP",  # British Powerlifting, IPF. Used to be GBPF.
     "BPC",  # Defunct British WPC affiliate.
+    "BPF",  # British WPU affiliate
     "BVDK",  # Bundesverband Deutscher Kraftdreikämpf, IPF.
     "CAPO",  # Australian affiliate of the WPC/GPA.
     "CAST",  # Česká Asociace Silového Trojboje GPC/WPC
@@ -123,6 +125,7 @@ KnownFederations = {
     "GPC-IRL",  # Irish branch of the GPC.
     "GPC-NZ",  # New Zealand branch of the GPC.
     "GPC-RUS",  # Russian branch of the GPC.
+    "GPF",  # Global Powerlifting Federation.
     "GPU",  # German Powerlifting Union (WPU).
     "Hardcore",   # Defunct standalone US federation
     "HERC",  # Hercules Gym in Syracuse, NY. Run by Rheta West.
@@ -137,6 +140,7 @@ KnownFederations = {
     "IPL",
     "IrishPF",  # Irish Powerlifting Federation (IPF affiliate).
     "IrishPO",  # Irish Powerlifting Organization (WPU/IPL affiliate).
+    "IRP",  # International RAW Powerlifting
     "JPA",  # Japan Powerlifting Federation (IPF affiliate).
     "KRAFT",  # Icelandic IPF Affiliate.
     "LPF",  # The Latvian IPF Affiliate.
@@ -196,6 +200,7 @@ KnownFederations = {
     "WPA-RUS",  # World Powerlifting Alliance Russia
     "WPAU",  # World Powerlifting Alliance Ukraine.
     "WPC",
+    "WPC-Finland",
     "WPC-Germany",
     "WPC-Portugal",
     "WPC-RUS",

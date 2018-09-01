@@ -1,50 +1,50 @@
-Place,Name,Sex,Event,Country,Age,Division,WeightClassKg,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,Beth Grater,F,SBD,USA,,O,44,Single-ply,110,52.5,110,272.5
-1,Tina Michaud,F,SBD,USA,,O,47.5,Single-ply,107.5,52.5,120,280
-1,Sue Sullivan,F,SBD,USA,,O,50.5,Single-ply,110,65,125,300
-1,Jacquiline Davis,F,SBD,USA,,O,53,Single-ply,145,77.5,172.5,395
-1,Diedre Johnson-Cane,F,SBD,USA,,O,55.5,Single-ply,137.5,67.5,150,355
-1,Demesse,F,SBD,BEL,,O,63,Single-ply,140,70,160,370
-2,Hill,F,SBD,GBR,,O,63,Single-ply,120,60,130,310
-1,Carla Trosper,F,SBD,USA,,O,70,Single-ply,157.5,87.5,210,455
-2,Carole Lynch,F,SBD,GBR,,O,70,Single-ply,140,75,145,360
-1,Helen Williams,F,SBD,GBR,,O,80,Single-ply,200,90,205,495
-2,Linda-Jo Belsito,F,SBD,USA,,O,80,Single-ply,192.5,87.5,202.5,482.5
-1,Nikki Avey,F,SBD,USA,,O,90,Single-ply,197.5,75,182.5,455
-1,Cindy Regan,F,SBD,USA,46,M2,90+,Single-ply,185,115,190,490
-2,Laura Hodjamkulova,F,SBD,RUS,,O,90+,Single-ply,165,87.5,190,442.5
-1,William Jackson,M,SBD,USA,,O,52,Single-ply,142.5,80,197.5,420
-1,Dave Weiss,M,SBD,USA,,O,56,Single-ply,172.5,107.5,225,505
-2,Graham Price,M,SBD,GBR,,O,56,Single-ply,165,92.5,180,437.5
-1,Brad Olson,M,SBD,USA,,O,60,Single-ply,237.5,140,222.5,600
-2,Mohammed Khan,M,SBD,CYP,,O,60,Single-ply,170,75,205,450
-1,James Benemerito,M,SBD,USA,,O,67.5,Single-ply,242.5,145,267.5,655
-2,Swallow,M,SBD,GBR,20,JR,67.5,Single-ply,225,115,260,600
-3,George Troulis,M,SBD,CYP,35,O,67.5,Single-ply,200,117.5,260,577.5
-1,Tonge,M,SBD,GBR,,O,75,Single-ply,225,132.5,242.5,600
-2,Lykov,M,SBD,RUS,,O,75,Single-ply,215,110,250,575
-3,Ottolnagui,M,SBD,GBR,,O,75,Single-ply,225,112.5,220,557.5
-DQ,Parfitt,M,SBD,WAL,,O,75,Single-ply,,,,
-1,Ray Benemerito,M,SBD,USA,,O,82.5,Single-ply,300,162.5,337.5,800
-2,Cousins,M,SBD,GBR,,O,82.5,Single-ply,242.5,150,260,652.5
-3,Tsarev,M,SBD,RUS,,O,82.5,Single-ply,250,155,242.5,647.5
-4,Edward Van Niekerk,M,SBD,ENG,39,O,82.5,Single-ply,285,140,210,635
-5,Mark Lane,M,SBD,IRE,35,O,82.5,Single-ply,237.5,120,255,612.5
-1,Joseph McAuliffe,M,SBD,USA,,O,90,Single-ply,295,202.5,272.5,770
-2,Terry Jex,M,SBD,ENG,39,O,90,Single-ply,265,160,302.5,727.5
-3,Foulser,M,SBD,GBR,,O,90,Single-ply,260,150,310,720
-4,Hall,M,SBD,WAL,,O,90,Single-ply,215,130,220,565
-5,Watts,M,SBD,WAL,,O,90,Single-ply,172.5,102.5,192.5,467.5
-1,Jim Morton,M,SBD,USA,,O,100,Single-ply,327.5,192.5,357.5,877.5
-2,Les Pilling,M,SBD,ENG,40,M1,100,Single-ply,310,170,300,780
-3,Williams,M,SBD,WAL,,O,100,Single-ply,235,115,265,615
-1,Beechy,M,SBD,WAL,,O,110,Single-ply,280,185,275,740
-2,Waites,M,SBD,GBR,,O,110,Single-ply,255,142.5,270,667.5
-3,Popp,M,SBD,CAN,,O,110,Single-ply,252.5,160,250,662.5
-4,Dekok,M,SBD,,,O,110,Single-ply,255,170,235,660
-5,Tucker,M,SBD,,,O,110,Single-ply,200,170,245,615
-1,Tony Leiato,M,SBD,,,O,125,Single-ply,352.5,230,325,907.5
-2,Peter Sutton,M,SBD,,29,O,125,Single-ply,290,200,280,770
-1,Beau Moore,M,SBD,,,O,145,Single-ply,320,250,272.5,842.5
-1,Mark Henry,M,SBD,,,O,145+,Single-ply,432.5,235,392.5,1060
-2,Kelly,M,SBD,,,O,145+,Single-ply,215,162.5,215,592.5
+Place,Name,Sex,Event,Country,Age,Division,WeightClassKg,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BodyweightKg
+1,Beth Grater,F,SBD,USA,,O,44,Single-ply,110,52.5,110,272.5,
+1,Tina Michaud,F,SBD,USA,,O,47.5,Single-ply,107.5,52.5,120,280,
+1,Sue Sullivan,F,SBD,USA,,O,50.5,Single-ply,110,65,125,300,
+1,Jacquiline Davis,F,SBD,USA,,O,53,Single-ply,145,77.5,172.5,395,
+1,Diedre Johnson-Cane,F,SBD,USA,,O,55.5,Single-ply,137.5,67.5,150,355,
+1,Demesse,F,SBD,BEL,,O,63,Single-ply,140,70,160,370,
+2,Hill,F,SBD,GBR,,O,63,Single-ply,120,60,130,310,
+1,Carla Trosper,F,SBD,USA,,O,70,Single-ply,157.5,87.5,210,455,
+2,Carole Lynch,F,SBD,GBR,,O,70,Single-ply,140,75,145,360,
+1,Helen Williams,F,SBD,GBR,,O,80,Single-ply,200,90,205,495,
+2,Linda-Jo Belsito,F,SBD,USA,,O,80,Single-ply,192.5,87.5,202.5,482.5,
+1,Nikki Avey,F,SBD,USA,,O,90,Single-ply,197.5,75,182.5,455,
+1,Cindy Regan,F,SBD,USA,46,M2,90+,Single-ply,185,115,190,490,
+2,Laura Hodjamkulova,F,SBD,RUS,,O,90+,Single-ply,165,87.5,190,442.5,
+1,William Jackson,M,SBD,USA,,O,52,Single-ply,142.5,80,197.5,420,
+1,Dave Weiss,M,SBD,USA,,O,56,Single-ply,172.5,107.5,225,505,
+2,Graham Price,M,SBD,GBR,,O,56,Single-ply,165,92.5,180,437.5,
+1,Brad Olson,M,SBD,USA,,O,60,Single-ply,237.5,140,222.5,600,
+2,Mohammed Khan,M,SBD,CYP,,O,60,Single-ply,170,75,205,450,
+1,James Benemerito,M,SBD,USA,,O,67.5,Single-ply,242.5,145,267.5,655,
+2,Swallow,M,SBD,GBR,20,JR,67.5,Single-ply,225,115,260,600,
+3,George Troulis,M,SBD,CYP,35,O,67.5,Single-ply,200,117.5,260,577.5,
+1,Tonge,M,SBD,GBR,,O,75,Single-ply,225,132.5,242.5,600,
+2,Lykov,M,SBD,RUS,,O,75,Single-ply,215,110,250,575,
+3,Ottolnagui,M,SBD,GBR,,O,75,Single-ply,225,112.5,220,557.5,
+DQ,Parfitt,M,SBD,WAL,,O,75,Single-ply,,,,,
+1,Ray Benemerito,M,SBD,USA,,O,82.5,Single-ply,300,162.5,337.5,800,
+2,Cousins,M,SBD,GBR,,O,82.5,Single-ply,242.5,150,260,652.5,
+3,Tsarev,M,SBD,RUS,,O,82.5,Single-ply,250,155,242.5,647.5,
+4,Edward Van Niekerk,M,SBD,ENG,39,O,82.5,Single-ply,285,140,210,635,
+5,Mark Lane,M,SBD,IRE,35,O,82.5,Single-ply,237.5,120,255,612.5,
+1,Joseph McAuliffe,M,SBD,USA,,O,90,Single-ply,295,202.5,272.5,770,
+2,Terry Jex,M,SBD,ENG,39,O,90,Single-ply,265,160,302.5,727.5,
+3,Foulser,M,SBD,GBR,,O,90,Single-ply,260,150,310,720,
+4,Hall,M,SBD,WAL,,O,90,Single-ply,215,130,220,565,
+5,Watts,M,SBD,WAL,,O,90,Single-ply,172.5,102.5,192.5,467.5,
+1,Jim Morton,M,SBD,USA,,O,100,Single-ply,327.5,192.5,357.5,877.5,
+2,Les Pilling,M,SBD,ENG,40,M1,100,Single-ply,310,170,300,780,
+3,Williams,M,SBD,WAL,,O,100,Single-ply,235,115,265,615,
+1,Beechy,M,SBD,WAL,,O,110,Single-ply,280,185,275,740,
+2,Waites,M,SBD,GBR,,O,110,Single-ply,255,142.5,270,667.5,
+3,Popp,M,SBD,CAN,,O,110,Single-ply,252.5,160,250,662.5,
+4,Dekok,M,SBD,,,O,110,Single-ply,255,170,235,660,
+5,Tucker,M,SBD,,,O,110,Single-ply,200,170,245,615,
+1,Tony Leiato,M,SBD,,,O,125,Single-ply,352.5,230,325,907.5,
+2,Peter Sutton,M,SBD,,29,O,125,Single-ply,290,200,280,770,
+1,Beau Moore,M,SBD,,,O,145,Single-ply,320,250,272.5,842.5,
+1,Mark Henry,M,SBD,,,O,145+,Wraps,432.5,235,392.5,1060,183.71
+2,Kelly,M,SBD,,,O,145+,Single-ply,215,162.5,215,592.5,

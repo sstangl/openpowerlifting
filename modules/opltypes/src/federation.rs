@@ -91,6 +91,10 @@ pub enum Federation {
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
 
+    /// Series of Raw meets hosted by the Atlantis company.
+    #[strum(to_string = "Atlantis", serialize = "atlantis")]
+    Atlantis,
+
     /// Australian Drug-Free Powerlifting Federation, WDFPF.
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
@@ -114,6 +118,10 @@ pub enum Federation {
     /// Defunct British WPC affiliate.
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
+
+    /// British WPU affiliate.
+    #[strum(to_string = "BPF", serialize = "bpf")]
+    BPF,
 
     /// British Powerlifting Organization, WPF.
     #[strum(to_string = "BPO", serialize = "bpo")]
@@ -240,6 +248,10 @@ pub enum Federation {
     #[strum(to_string = "GPC-RUS", serialize = "gpc-rus")]
     GPCRUS,
 
+    /// Global Powerlifting Federation
+    #[strum(to_string = "GPF", serialize = "gpf")]
+    GPF,
+
     /// German Powerlifting Union, WPU.
     #[strum(to_string = "GPU", serialize = "gpu")]
     GPU,
@@ -268,6 +280,7 @@ pub enum Federation {
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
 
+    /// A Canadian federation.
     #[strum(to_string = "IndependentPA", serialize = "independentpa")]
     IndependentPA,
 
@@ -294,6 +307,9 @@ pub enum Federation {
     #[strum(to_string = "IrishPO", serialize = "irishpo")]
     IrishPO,
 
+    /// International RAW Powerlifting
+    #[strum(to_string = "IRP", serialize = "irp")]
+    IRP,
     /// Japan Powerlifting Federation, IPF.
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
@@ -523,6 +539,11 @@ pub enum Federation {
     /// World Powerlifting Committee.
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
+    
+    /// Finnish WPC affiliate.
+    #[serde(rename = "WPC-Finland")]
+    #[strum(to_string = "WPC-Finland", serialize = "wpc-finland")]
+    WPCFinland,
 
     /// German WPC affiliate.
     #[serde(rename = "WPC-Germany")]
@@ -602,12 +623,14 @@ impl Federation {
             Federation::APF => false,
             Federation::APU => true,
             Federation::AsianPF => true,
+            Federation::Atlantis => false,
             Federation::AusDFPF => true,
             Federation::BAWLA => true,
             Federation::BB => false,
             Federation::BBDD => false,
             Federation::BDFPA => true,
             Federation::BPC => false,
+            Federation::BPF => false,
             Federation::BPO => false,
             Federation::BPU => false,
             Federation::BP => true,
@@ -638,6 +661,7 @@ impl Federation {
             Federation::GPCIRL => false,
             Federation::GPCNZ => false,
             Federation::GPCRUS => false,
+            Federation::GPF => false,
             Federation::GPU => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
@@ -652,6 +676,7 @@ impl Federation {
             Federation::IPL => false,
             Federation::IrishPF => true,
             Federation::IrishPO => false,
+            Federation::IRP => false,
             Federation::JPA => true,
             Federation::KRAFT => true,
             Federation::LPF => true,
@@ -709,6 +734,7 @@ impl Federation {
             Federation::WPARUS => false,
             Federation::WPAU => false,
             Federation::WPC => false,
+            Federation::WPCFinland => false,
             Federation::WPCGermany => false,
             Federation::WPCPortugal => false,
             Federation::WPCRUS => false,
@@ -743,12 +769,14 @@ impl Federation {
             Federation::APF => Some(Country::USA),
             Federation::APU => Some(Country::Australia),
             Federation::AsianPF => None,
+            Federation::Atlantis => Some(Country::USA),
             Federation::AusDFPF => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
             Federation::BBDD => Some(Country::USA),
             Federation::BDFPA => Some(Country::UK),
             Federation::BPC => Some(Country::UK),
+            Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
             Federation::BPU => Some(Country::UK),
             Federation::BP => Some(Country::UK),
@@ -779,6 +807,7 @@ impl Federation {
             Federation::GPCIRL => Some(Country::Ireland),
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCRUS => Some(Country::Russia),
+            Federation::GPF => None,
             Federation::GPU => Some(Country::Germany),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
@@ -793,6 +822,7 @@ impl Federation {
             Federation::IPL => None,
             Federation::IrishPF => Some(Country::Ireland),
             Federation::IrishPO => Some(Country::Ireland),
+            Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
             Federation::KRAFT => Some(Country::Iceland),
             Federation::LPF => Some(Country::Latvia),
@@ -850,6 +880,7 @@ impl Federation {
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
+            Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCGermany => Some(Country::Germany),
             Federation::WPCPortugal => Some(Country::Portugal),
             Federation::WPCRUS => Some(Country::Russia),

@@ -4,6 +4,7 @@
     military = {name ="Military",min=0,max=999}
     disabled = {name ="Disabled",min=0,max=999}
     teen = {name ="Teen",min=0,max=19}
+    teen1315 = {name ="Teen 13-15",min=13,max=15}
     teen1415 = {name ="Teen 14-15",min=14,max=15}
     teen1516 = {name ="Teen 15-16",min=15,max=16}
     teen1617 = {name ="Teen 16-17",min=16,max=17}
