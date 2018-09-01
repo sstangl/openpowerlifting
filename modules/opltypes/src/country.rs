@@ -39,9 +39,6 @@ pub enum Country {
     #[serde(rename = "Costa Rica")]
     #[strum(to_string = "Costa Rica")]
     CostaRica,
-    #[serde(rename = "Côte d’Ivoire")]
-    #[strum(to_string = "Côte d’Ivoire")]
-    CoteDIvoire,
     Croatia,
     Cuba,
     Cyprus,
@@ -80,6 +77,9 @@ pub enum Country {
     Italy,
     Iran,
     Iraq,
+    #[serde(rename = "Ivory Coast")]
+    #[strum(to_string = "Ivory Coast")]
+    IvoryCoast,
     Jamaica,
     Japan,
     Kazakhstan,
