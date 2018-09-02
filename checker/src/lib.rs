@@ -72,6 +72,18 @@ impl Report {
 
         (errors, warnings)
     }
+
+    /// Returns how many errors there are.
+    pub fn count_errors(&self) -> usize {
+        let (errors, _) = self.count_messages();
+        errors
+    }
+
+    /// Returns how many warnings there are.
+    pub fn count_warnings(&self) -> usize {
+        let (_, warnings) = self.count_messages();
+        warnings
+    }
 }
 
 /// Checks a directory with meet data.
@@ -79,9 +91,9 @@ pub fn check(meetdir: &Path) -> Result<Vec<Report>, Box<Error>> {
     let mut acc = Vec::new();
 
     // Check the meet.csv.
-    let report = check_meet(meetdir.join("meet.csv"))?;
-    if !report.messages.is_empty() {
-        acc.push(report);
+    let meetresult = check_meet(meetdir.join("meet.csv"))?;
+    if !meetresult.report.messages.is_empty() {
+        acc.push(meetresult.report);
     }
 
     // Check the entries.csv.

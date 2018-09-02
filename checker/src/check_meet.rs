@@ -10,6 +10,21 @@ use std::path::PathBuf;
 
 use Report;
 
+/// Product of a successful parse.
+pub struct Meet {
+    pub federation: Federation,
+    pub date: Date,
+    pub country: Country,
+    pub state: Option<State>,
+    pub town: Option<String>,
+    pub name: String,
+}
+
+pub struct CheckResult {
+    pub report: Report,
+    pub meet: Option<Meet>,
+}
+
 /// Every meet.csv must have exactly these headers in the same order.
 const KNOWN_HEADERS: [&str; 6] = [
     "Federation",
@@ -74,22 +89,26 @@ pub fn check_meetpath(report: &mut Report) {
 }
 
 /// Checks the Federation column.
-pub fn check_federation(s: &str, report: &mut Report) {
-    if s.parse::<Federation>().is_err() {
-        report.error(format!(
-            "Unknown federation '{}'. \
-             Add to modules/opltypes/src/federation.rs?",
-            s
-        ));
+pub fn check_federation(s: &str, report: &mut Report) -> Option<Federation> {
+    match s.parse::<Federation>() {
+        Ok(f) => Some(f),
+        Err(_) => {
+            report.error(format!(
+                "Unknown federation '{}'. \
+                 Add to modules/opltypes/src/federation.rs?",
+                s
+            ));
+            None
+        }
     }
 }
 
 /// Checks the Date column.
-pub fn check_date(s: &str, report: &mut Report) {
+pub fn check_date(s: &str, report: &mut Report) -> Option<Date> {
     let date = s.parse::<Date>();
     if date.is_err() {
         report.error(format!("Invalid date '{}'. Must be YYYY-MM-DD", s));
-        return;
+        return None;
     }
     let date = date.unwrap();
 
@@ -109,47 +128,57 @@ pub fn check_date(s: &str, report: &mut Report) {
     {
         report.error(format!("Meet occurs in the future in '{}'", s));
     }
+
+    Some(date)
 }
 
 /// Checks the MeetCountry column.
-pub fn check_meetcountry(s: &str, report: &mut Report) {
-    if s.parse::<Country>().is_err() {
-        report.error(format!(
-            "Unknown country '{}'. \
-             Add to modules/opltypes/src/country.rs?",
-            s
-        ));
+pub fn check_meetcountry(s: &str, report: &mut Report) -> Option<Country> {
+    match s.parse::<Country>() {
+        Ok(c) => Some(c),
+        Err(_) => {
+            report.error(format!(
+                "Unknown country '{}'. \
+                 Add to modules/opltypes/src/country.rs?",
+                s
+            ));
 
-        // Emit some helpful warnings.
-        if s.contains("Chin") {
-            report.warning(format!("Should '{}' be 'Taiwan'?", s));
+            // Emit some helpful warnings.
+            if s.contains("Chin") {
+                report.warning(format!("Should '{}' be 'Taiwan'?", s));
+            }
+
+            None
         }
     }
 }
 
 /// Checks the optional MeetState column.
-pub fn check_meetstate(s: &str, report: &mut Report, countrystr: &str) {
+pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -> Option<State> {
     if s.is_empty() {
-        return;
+        return None;
     }
 
-    // The state depends on the country.
-    let country = countrystr.parse::<Country>();
-    if country.is_err() {
+    if country.is_none() {
         report.warning(
             format!("Couldn't check MeetState '{}' due to invalid MeetCountry", s)
         );
-        return;
+        return None;
     }
     let country = country.unwrap();
 
-    if State::from_str_and_country(s, country).is_err() {
-        report.error(format!("Unknown state '{}' for country '{}'", s, countrystr));
+    match State::from_str_and_country(s, country) {
+        Ok(s) => Some(s),
+        Err(_) => {
+            let cstr = country.to_string();
+            report.error(format!("Unknown state '{}' for country '{}'", s, cstr));
+            None
+        }
     }
 }
 
 /// Checks the optional MeetTown column.
-pub fn check_meettown(s: &str, report: &mut Report) {
+pub fn check_meettown(s: &str, report: &mut Report) -> Option<String> {
     // Check each character for validity.
     for c in s.chars() {
         // Non-ASCII characters are allowed.
@@ -163,13 +192,19 @@ pub fn check_meettown(s: &str, report: &mut Report) {
     if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
         report.error(format!("Excessive whitespace in MeetTown '{}'", s));
     }
+
+    if s.is_empty() {
+        None
+    } else {
+        Some(s.to_string())
+    }
 }
 
 /// Checks the mandatory MeetName column.
-pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str) {
+pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str) -> Option<String> {
     if s.is_empty() {
         report.error("MeetName cannot be empty");
-        return;
+        return None;
     }
 
     for c in s.chars() {
@@ -197,6 +232,8 @@ pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str)
             report.error(format!("MeetName '{}' must not contain the year", s));
         }
     }
+
+    Some(s.to_string())
 }
 
 /// Checks a single meet.csv file from an open `csv::Reader`.
@@ -206,29 +243,37 @@ pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str)
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
-) -> Result<Report, Box<Error>>
+) -> Result<CheckResult, Box<Error>>
 where
     R: io::Read,
 {
+    // Remember the number of errors at the start.
+    // If the number increased during checking, don't return a parsed Meet struct.
+    let initial_errors = report.count_errors();
+
     // Verify column headers. Only continue if they're valid.
     check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
-        return Ok(report);
+        return Ok(CheckResult {report, meet: None});
     }
 
     // Read a single row.
     let mut record = csv::StringRecord::new();
     if !rdr.read_record(&mut record)? {
         report.error("The second row is missing");
-        return Ok(report);
+        return Ok(CheckResult {report, meet: None});
     }
 
-    check_federation(record.get(0).unwrap(), &mut report);
-    check_date(record.get(1).unwrap(), &mut report);
-    check_meetcountry(record.get(2).unwrap(), &mut report);
-    check_meetstate(record.get(3).unwrap(), &mut report, record.get(2).unwrap());
-    check_meettown(record.get(4).unwrap(), &mut report);
-    check_meetname(
+    let federation = check_federation(record.get(0).unwrap(), &mut report);
+    let date = check_date(record.get(1).unwrap(), &mut report);
+    let country = check_meetcountry(record.get(2).unwrap(), &mut report);
+    let state = check_meetstate(
+        record.get(3).unwrap(),
+        &mut report,
+        country
+    );
+    let town = check_meettown(record.get(4).unwrap(), &mut report);
+    let name = check_meetname(
         record.get(5).unwrap(),
         &mut report,
         record.get(0).unwrap(),
@@ -240,18 +285,37 @@ where
         report.error("Too many rows");
     }
 
-    Ok(report)
+    // If all mandatory data is present, and there were no errors,
+    // forward a post-parsing Meet struct to the Entry-parsing phase.
+    if initial_errors == report.count_errors() &&
+        federation.is_some() &&
+        date.is_some() &&
+        country.is_some() &&
+        name.is_some()
+    {
+        let meet = Meet {
+            federation: federation.unwrap(),
+            date: date.unwrap(),
+            country: country.unwrap(),
+            state,
+            town,
+            name: name.unwrap(),
+        };
+        Ok(CheckResult {report, meet: Some(meet)})
+    } else {
+        Ok(CheckResult {report, meet: None})
+    }
 }
 
 /// Checks a single meet.csv file by path.
-pub fn check_meet(meet_csv: PathBuf) -> Result<Report, Box<Error>> {
+pub fn check_meet(meet_csv: PathBuf) -> Result<CheckResult, Box<Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(meet_csv);
 
     // The meet.csv file must exist.
     if !report.path.exists() {
         report.error("File does not exist");
-        return Ok(report);
+        return Ok(CheckResult {report, meet: None});
     }
 
     check_meetpath(&mut report);

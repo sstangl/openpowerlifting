@@ -16,8 +16,7 @@ fn check(csv: &str) -> usize {
         .quoting(false)
         .from_reader(csv.as_bytes());
     let report = do_check(&mut rdr, report).unwrap();
-    let (errors, _warnings) = report.count_messages();
-    errors
+    report.count_errors()
 }
 
 #[test]

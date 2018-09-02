@@ -1,6 +1,6 @@
 //! Defines the `Country` field for the `meets` table.
 
-#[derive(Copy, Clone, Deserialize, Serialize, PartialEq, EnumString)]
+#[derive(Copy, Clone, Deserialize, Serialize, PartialEq, EnumString, ToString)]
 pub enum Country {
     Afghanistan,
     Albania,

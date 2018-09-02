@@ -15,9 +15,8 @@ fn check(csv: &str) -> usize {
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_reader(csv.as_bytes());
-    let report = do_check(&mut rdr, report).unwrap();
-    let (errors, _warnings) = report.count_messages();
-    errors
+    let checkresult = do_check(&mut rdr, report).unwrap();
+    checkresult.report.count_errors()
 }
 
 /// Helper for calling check_meet::check_meetpath(). Returns number of errors.
@@ -29,8 +28,7 @@ fn check_meetpath(s: &str) -> usize {
 
     let mut report = Report::new(path);
     check_meet::check_meetpath(&mut report);
-    let (errors, _warnings) = report.count_messages();
-    errors
+    report.count_errors()
 }
 
 #[test]
@@ -44,6 +42,14 @@ fn test_valid_bob3() {
     let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
                 WRPF,2016-08-19,USA,CA,Mountain View,Boss of Bosses 3";
     assert_eq!(check(data), 0);
+}
+
+#[test]
+#[should_panic]
+fn test_missing_data() {
+    let data = "Federation,Date,MeetCountry,MeetState,MeetTown,MeetName\n\
+                WRPF,";
+    assert!(check(data) > 0);
 }
 
 #[test]
