@@ -291,6 +291,20 @@ fn check_positive_weight(s: &str, line: u64, header: Header, report: &mut Report
     check_weight(s, line, header, report)
 }
 
+fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> Option<WeightKg> {
+    if let Some(weight) = check_positive_weight(s, line, Header::BodyweightKg, report) {
+        if weight != WeightKg::from_i32(0) {
+            if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
+                let warning = format!("BodyweightKg looks implausible: '{}'", s);
+                report.warning_on(line, warning);
+            }
+        }
+        Some(weight)
+    } else {
+        None
+    }
+}
+
 fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Option<WeightClassKg> {
     // Disallow zeros.
     if s == "0" {
@@ -445,7 +459,7 @@ where
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
             entry.bodyweightkg =
-                check_positive_weight(&record[idx], line, Header::BodyweightKg, &mut report);
+                check_column_bodyweightkg(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::WeightClassKg) {
             entry.weightclasskg =

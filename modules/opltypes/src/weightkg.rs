@@ -44,6 +44,12 @@ impl WeightKg {
         WeightKg(<i32>::max_value())
     }
 
+    #[inline]
+    pub fn from_i32(i: i32) -> WeightKg {
+        WeightKg(i * 100)
+    }
+
+    #[inline]
     pub fn from_f32(f: f32) -> WeightKg {
         if f.is_finite() {
             WeightKg((f * 100.0).round() as i32)
