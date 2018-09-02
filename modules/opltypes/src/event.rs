@@ -54,6 +54,12 @@ impl Event {
         Event(Self::BITFLAG_DEADLIFT)
     }
 
+    /// True iff the Event contains a Bench and a Deadlift.
+    #[inline]
+    pub fn has_push_pull(self) -> bool {
+        self.0 & Self::BITFLAG_PUSHPULL == Self::BITFLAG_PUSHPULL
+    }
+
     /// True iff the Event contains a Squat.
     #[inline]
     pub fn has_squat(self) -> bool {
@@ -188,6 +194,7 @@ mod tests {
     #[test]
     fn test_event_basic() {
         let event = "SBD".parse::<Event>().unwrap();
+        assert!(event.has_push_pull());
         assert!(event.has_squat());
         assert!(event.has_bench());
         assert!(event.has_deadlift());
@@ -198,6 +205,7 @@ mod tests {
         assert!(!event.is_deadlift_only());
 
         let event = "BD".parse::<Event>().unwrap();
+        assert!(event.has_push_pull());
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(event.has_deadlift());
@@ -207,6 +215,7 @@ mod tests {
         assert!(!event.is_deadlift_only());
 
         let event = "S".parse::<Event>().unwrap();
+        assert!(!event.has_push_pull());
         assert!(event.has_squat());
         assert!(!event.has_bench());
         assert!(!event.has_deadlift());
@@ -217,6 +226,7 @@ mod tests {
         assert!(!event.is_deadlift_only());
 
         let event = "B".parse::<Event>().unwrap();
+        assert!(!event.has_push_pull());
         assert!(!event.has_squat());
         assert!(event.has_bench());
         assert!(!event.has_deadlift());
@@ -227,6 +237,7 @@ mod tests {
         assert!(!event.is_deadlift_only());
 
         let event = "D".parse::<Event>().unwrap();
+        assert!(!event.has_push_pull());
         assert!(!event.has_squat());
         assert!(!event.has_bench());
         assert!(event.has_deadlift());
