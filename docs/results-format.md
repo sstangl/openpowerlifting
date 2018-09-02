@@ -50,14 +50,12 @@ Here is an example rendering, from `meet-data/uspa/0880/meet.csv`:
 
 The fields are specified as follows:
 
-- `Federation` is the approved acronym for a powerlifting federation. It must be part of the `KnownFederations` list specified in the file `tests/check-meet-csv`.
+- `Federation` is the approved acronym for a powerlifting federation. Valid federations are specified in [modules/opltypes/src/federation.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/federation.rs).
 - `Date` is the start date of the meet in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), so YYYY-MM-DD.
-- `MeetCountry` is the name of the country in which the meet was held.
+- `MeetCountry` is the name of the country in which the meet was held. Valid countries are specified in [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/country.rs).
 - `MeetState` is the abbreviation of the state/province in which the meet was held. If this is not known, or the country does not have states, it may be left blank.
 - `MeetTown` is the name of the city/town in which the meet was held. If this is not known, it may be left blank.
 - `MeetName` is the name of the competition. To avoid repetition, remove year and federation information from the name. So "2016 SPF Iron Classic" would have the `MeetName` of "Iron Classic".
-
-The validity of meet.csv files is checked by the script `tests/check-meet-csv`.
 
 ## Structure of entries.csv
 

@@ -52,7 +52,7 @@ def makecsvs(path, csv):
     name = csv.rows[0][csv.index('MeetName')]
     meetcsv.rows = [[fed, date, country, state, town, name]]
 
-    # Standardize some abbreviations to match check-meet-csv.
+    # Standardize some abbreviations.
     if state == 'QU':
         state = 'QC'
     elif state == 'PEI':

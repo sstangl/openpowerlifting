@@ -5,7 +5,6 @@ meet-data:
     - apt-get update -qq && apt-get install -y python3-pip
     - pip3 install toml flake8
   script:
-    - cargo run --bin checker
     - make check
 
 server:

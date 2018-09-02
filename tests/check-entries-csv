@@ -291,7 +291,6 @@ def check_column_birthyear(s, row, csv):
             pwarning("BirthYear looks implausible: '%s'" % s)
 
 
-# This is mostly duplicate code from check-meet-csv. Could be shared.
 def check_column_birthday(s, row, csv):
     date = s
     if len(date) != 10 or date.count('-') != 2:

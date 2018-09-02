@@ -7,6 +7,14 @@ set -e
 
 TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+# Run the checker first.
+(
+	REPODIR="$( dirname "${TESTSDIR}" )"
+	CURDIR="$( pwd )"
+	cd ${REPODIR}
+	cargo run --bin checker "${CURDIR}"
+)
+
+# Run the Python checks.
 ${TESTSDIR}/check-entries-csv
-${TESTSDIR}/check-meet-csv
 ${TESTSDIR}/check-sex-consistency
