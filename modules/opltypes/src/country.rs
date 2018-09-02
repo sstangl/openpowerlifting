@@ -8,6 +8,7 @@ pub enum Country {
     #[serde(rename = "American Samoa")]
     #[strum(to_string = "American Samoa")]
     AmericanSamoa,
+    Angola,
     Argentina,
     Armenia,
     Aruba,
@@ -197,6 +198,8 @@ pub enum Country {
     Thailand,
     Togo,
     Tonga,
+    /// Unrecognized state. UN recognizes as part of Moldova.
+    Transnistria,
     #[serde(rename = "Trinidad and Tobago")]
     #[strum(to_string = "Trinidad and Tobago")]
     TrinidadAndTobago,
