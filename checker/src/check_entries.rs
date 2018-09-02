@@ -9,6 +9,7 @@ use std::io;
 use std::path::PathBuf;
 
 use Report;
+use check_meet::Meet;
 
 /// Maps Header to index.
 struct HeaderIndexMap(Vec<Option<usize>>);
@@ -327,6 +328,7 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) {
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
+    meet: Option<Meet>,
 ) -> Result<Report, Box<Error>>
 where
     R: io::Read,
@@ -466,7 +468,11 @@ where
 }
 
 /// Checks a single entries.csv file by path.
-pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
+pub fn check_entries(
+    entries_csv: PathBuf,
+    meet: Option<Meet>
+) -> Result<Report, Box<Error>>
+{
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
 
@@ -480,5 +486,5 @@ pub fn check_entries(entries_csv: PathBuf) -> Result<Report, Box<Error>> {
         .quoting(false)
         .from_path(&report.path)?;
 
-    Ok(do_check(&mut rdr, report)?)
+    Ok(do_check(&mut rdr, report, meet)?)
 }
