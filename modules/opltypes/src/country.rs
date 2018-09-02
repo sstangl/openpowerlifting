@@ -147,6 +147,7 @@ pub enum Country {
     NorthernIreland,
     Oman,
     Pakistan,
+    Palestine,
     Panama,
     #[serde(rename = "Papua New Guinea")]
     #[strum(to_string = "Papua New Guinea")]
@@ -189,6 +190,7 @@ pub enum Country {
     #[strum(to_string = "Sri Lanka")]
     SriLanka,
     Sudan,
+    Swaziland,
     Sweden,
     Syria,
     Switzerland,

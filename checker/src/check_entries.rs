@@ -316,7 +316,7 @@ fn check_column_tested(s: &str, line: u64, report: &mut Report) {
 
 fn check_column_country(s: &str, line: u64, report: &mut Report) {
     if !s.is_empty() && s.parse::<Country>().is_err() {
-        report.warning_on(line, format!("Unknown Country '{}'", s));
+        report.error_on(line, format!("Unknown Country '{}'", s));
     }
 }
 
