@@ -268,6 +268,10 @@ pub enum Federation {
     #[strum(to_string = "HPLS", serialize = "hpls")]
     HPLS,
 
+    /// Croatian Powerlifting Organization
+    #[strum(to_string = "HPO", serialize = "hpo")]
+    HPO,
+
     /// International Blind Sport Assocation.
     #[strum(to_string = "IBSA", serialize = "ibsa")]
     IBSA,
@@ -666,6 +670,7 @@ impl Federation {
             Federation::Hardcore => false,
             Federation::HERC => false,
             Federation::HPLS => true,
+            Federation::HPO => false,
             Federation::IBSA => true,
             Federation::IDFPA => true,
             Federation::IDFPF => true,
@@ -812,6 +817,7 @@ impl Federation {
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
             Federation::HPLS => Some(Country::Croatia),
+            Federation::HPO => Some(Country::Croatia),
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
