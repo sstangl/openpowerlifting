@@ -56,8 +56,10 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 
 /// Outputs a final summary line.
 fn print_summary(error_count: usize, warning_count: usize) {
-    let error_str = format!("{} errors", error_count);
-    let warning_str = format!("{} warnings", warning_count);
+    let error_str = format!("{} error{}", error_count,
+                            if error_count == 1 { "" } else { "s" });
+    let warning_str = format!("{} warning{}", warning_count,
+                             if warning_count == 1 { "" } else { "s" });
 
     let error_str = if error_count > 0 {
         error_str.bold().red().to_string()
