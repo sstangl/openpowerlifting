@@ -63,8 +63,11 @@ pub fn check_meetpath(report: &mut Report) {
     // The original Path is to the file, so get the parent directory.
     if let Some(parent) = report.path.parent() {
         if let Some(s) = parent.to_str() {
+            // The MeetPath is just the stuff after "meet-data/".
+            let pathstart: usize = s.rfind("meet-data").unwrap_or(0);
+
             // Each character may only be alphanumeric ASCII or "/".
-            for c in s.chars() {
+            for c in s.chars().skip(pathstart) {
                 if !c.is_ascii_alphanumeric() && c != '/' && c != '-' {
                     ascii_error = true;
                 }
