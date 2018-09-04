@@ -30,7 +30,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Best3BenchKg,TotalKg,Sex
 2,Joachim Lietzau,1950,60,59.3,Germany,110,110,M,Masters 1,B,Single-ply
 1,Pekka Kihlström,1959,67.5,66.8,Sweden,150,150,M,Masters 1,B,Single-ply
 2,Raimo Kyheröinen,1952,67.5,67.1,Finland,150,150,M,Masters 1,B,Single-ply
-3,Zia Mirza,1956,67.5,65.6,Britain,140,140,M,Masters 1,B,Single-ply
+3,Zia Mirza,1956,67.5,65.6,UK,140,140,M,Masters 1,B,Single-ply
 4,Magnar Midtbø,1959,67.5,66.8,Norway,132.5,132.5,M,Masters 1,B,Single-ply
 5,Jozsef Kapor,1951,67.5,66.8,Hungary,125,125,M,Masters 1,B,Single-ply
 6,Pauli Töllikkö,1957,67.5,61.9,Finland,100,100,M,Masters 1,B,Single-ply
@@ -48,7 +48,7 @@ DQ,Ilkka Kekkonen,1957,75,74.2,Finland,,,M,Masters 1,B,Single-ply
 3,Vladimir Volkov,1959,82.5,82.4,Russia,170,170,M,Masters 1,B,Single-ply
 4,Olli Rantanen,1956,82.5,81.6,Finland,167.5,167.5,M,Masters 1,B,Single-ply
 6,Herve Varotto,1960,82.5,79.4,France,160,160,M,Masters 1,B,Single-ply
-7,Max Rasmussen,1957,82.5,81.1,Britain,160,160,M,Masters 1,B,Single-ply
+7,Max Rasmussen,1957,82.5,81.1,UK,160,160,M,Masters 1,B,Single-ply
 8,Peter Wittboldt,1959,82.5,82,Sweden,155,155,M,Masters 1,B,Single-ply
 DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 1,Arthur Hirner,1957,90,88.8,Germany,210,210,M,Masters 1,B,Single-ply
@@ -61,7 +61,7 @@ DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 2,Fred Riede,1955,100,95.1,Germany,207.5,207.5,M,Masters 1,B,Single-ply
 3,Jean-Pierre Aymon,1954,100,97.7,Switzerland,207.5,207.5,M,Masters 1,B,Single-ply
 4,Hannu Eskola,1954,100,95.8,Finland,200,200,M,Masters 1,B,Single-ply
-5,John Brookes,1955,100,97.8,Britain,200,200,M,Masters 1,B,Single-ply
+5,John Brookes,1955,100,97.8,UK,200,200,M,Masters 1,B,Single-ply
 6,Viktor Tkatsenko,1959,100,97.8,Estonia,197.5,197.5,M,Masters 1,B,Single-ply
 7,Stanislas Couchy,1953,100,90.6,France,195,195,M,Masters 1,B,Single-ply
 8,Jerzy Chlechowicz,1955,100,90.9,Poland,195,195,M,Masters 1,B,Single-ply
@@ -71,8 +71,8 @@ DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 3,Jozef Kwiek,1958,110,100.5,Poland,205,205,M,Masters 1,B,Single-ply
 4,Loretto DeLuca,1958,110,104.9,Switzerland,205,205,M,Masters 1,B,Single-ply
 5,Kauko Savonen,1957,110,107.3,Finland,202.5,202.5,M,Masters 1,B,Single-ply
-6,David Brooks,1959,110,108.8,Britain,202.5,202.5,M,Masters 1,B,Single-ply
-7,Julian Massey,1956,110,105.7,Britain,150,150,M,Masters 1,B,Single-ply
+6,David Brooks,1959,110,108.8,UK,202.5,202.5,M,Masters 1,B,Single-ply
+7,Julian Massey,1956,110,105.7,UK,150,150,M,Masters 1,B,Single-ply
 1,Truls Nygaard,1956,125,124.5,Norway,210,210,M,Masters 1,B,Single-ply
 2,Alain Hammang,1950,125,117.1,Luxembourg,205,205,M,Masters 1,B,Single-ply
 3,Kari Vilppola,1955,125,111.8,Finland,200,200,M,Masters 1,B,Single-ply
@@ -80,7 +80,7 @@ DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 1,Tibor Bak,1957,125+,128.6,Hungary,235,235,M,Masters 1,B,Single-ply
 2,Piotr Pawlik,1955,125+,125.7,Poland,232.5,232.5,M,Masters 1,B,Single-ply
 3,Raimo Avila,1955,125+,125.3,Finland,190,190,M,Masters 1,B,Single-ply
-4,Roy Simon,1958,125+,177.8,Britain,190,190,M,Masters 1,B,Single-ply
+4,Roy Simon,1958,125+,177.8,UK,190,190,M,Masters 1,B,Single-ply
 1,Pierre Gallart,1944,56,55.1,France,122.5,122.5,M,Masters 2,B,Single-ply
 1,Burkhard Steffen,1950,60,59.8,Germany,112.5,112.5,M,Masters 2,B,Single-ply
 2,Rainer Geese,1943,60,59.1,Germany,107.5,107.5,M,Masters 2,B,Single-ply
@@ -91,7 +91,7 @@ DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 1,Allan Eriksson,1946,75,73.4,Sweden,152.5,152.5,M,Masters 2,B,Single-ply
 2,Friedric Kulhanek,1947,75,74.5,Austria,150,150,M,Masters 2,B,Single-ply
 3,Attila Jaloweczky,1947,75,74.9,Hungary,145,145,M,Masters 2,B,Single-ply
-4,Stan Maerow,1949,75,72,Britain,140,140,M,Masters 2,B,Single-ply
+4,Stan Maerow,1949,75,72,UK,140,140,M,Masters 2,B,Single-ply
 5,Franticak Skocek,1944,75,73.5,Czechia,140,140,M,Masters 2,B,Single-ply
 6,Janis Pavluks,1946,75,72.9,Latvia,137.5,137.5,M,Masters 2,B,Single-ply
 7,Risto Salonen,1948,75,73.9,Finland,135,135,M,Masters 2,B,Single-ply
@@ -110,7 +110,7 @@ DQ,Herbert Sattler,1954,82.5,81.1,Austria,,,M,Masters 1,B,Single-ply
 1,Roland Schubert,1940,100,96.2,Germany,195,195,M,Masters 2,B,Single-ply
 2,Joseph Dieghi,1949,100,97.6,France,190,190,M,Masters 2,B,Single-ply
 3,Rüdiger Schrör,1943,100,97.3,Germany,160,160,M,Masters 2,B,Single-ply
-4,Bernie Morris,1938,100,96.8,Britain,140,140,M,Masters 2,B,Single-ply
+4,Bernie Morris,1938,100,96.8,UK,140,140,M,Masters 2,B,Single-ply
 1,Seppo Mikkola,1947,110,105.9,Finland,195,195,M,Masters 2,B,Single-ply
 2,Joseph Teslar,1949,110,103.7,Slovakia,185,185,M,Masters 2,B,Single-ply
 3,Esa Leskinen,1950,110,107,Finland,60,60,M,Masters 2,B,Single-ply

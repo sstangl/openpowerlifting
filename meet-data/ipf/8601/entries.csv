@@ -1,7 +1,7 @@
 Place,WeightClassKg,Division,Name,Sex,Event,Equipment,Country,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
 1,52,Open,Hideaki Inaba,M,SBD,Single-ply,Japan,51.9,235,107.5,235,577.5
 2,52,Open,Kari Ojalehto,M,SBD,Single-ply,Finland,,190,110,190,490
-3,52,Open,John Maxwell,M,SBD,Single-ply,Britain,,170,90,205,465
+3,52,Open,John Maxwell,M,SBD,Single-ply,UK,,170,90,205,465
 4,52,Open,Ton Dassen,M,SBD,Single-ply,Netherlands,,165,95,195,455
 5,52,Open,Johann Mandl,M,SBD,Single-ply,Austria,,152.5,75,175,402.5
 6,52,Open,Joachim Mödl,M,SBD,Single-ply,West Germany,,130,80,155,365
@@ -25,7 +25,7 @@ DQ,52,Open,Flavio Ambrosini,M,SBD,Single-ply,Italy,,,,,
 DQ,60,Open,Talambanua Nanda,M,SBD,Single-ply,Indonesia,,,,,
 1,67.5,Open,Daniel Austin,M,SBD,Single-ply,USA,,260,157.5,295,712.5
 2,67.5,Open,Ausby Alexander,M,SBD,Single-ply,USA,,257.5,150,282.5,690
-3,67.5,Open,Eddy Pengelly,M,SBD,Single-ply,Britain,,235,155,267.5,657.5
+3,67.5,Open,Eddy Pengelly,M,SBD,Single-ply,UK,,235,155,267.5,657.5
 4,67.5,Open,Tuomo Kesälahti,M,SBD,Single-ply,Finland,,222.5,155,265,642.5
 5,67.5,Open,Kári Elíson,M,SBD,Single-ply,Iceland,,217.5,162.5,262.5,642.5
 6,67.5,Open,Francis Mezzanotte,M,SBD,Single-ply,France,,250,130,260,640
@@ -54,7 +54,7 @@ DQ,75,Open,Malachy McClellan,M,SBD,Single-ply,Ireland,,,,,
 DQ,75,Open,Kåre Lundgren,M,SBD,Single-ply,Sweden,,,,,
 1,82.5,Open,Jarmo Virtanen,M,SBD,Single-ply,Finland,82.1,317.5,195,337.5,850
 2,82.5,Open,Sylvester Anderson,M,SBD,Single-ply,USA,,310,185,300,795
-3,82.5,Open,Mike Duffy,M,SBD,Single-ply,Britain,,275,177.5,290,742.5
+3,82.5,Open,Mike Duffy,M,SBD,Single-ply,UK,,275,177.5,290,742.5
 4,82.5,Open,Sven-Erik Persson,M,SBD,Single-ply,Sweden,,285,150,295,730
 5,82.5,Open,Ove Hansen,M,SBD,Single-ply,Norway,,260,190,280,730
 6,82.5,Open,Janus Schneider,M,SBD,Single-ply,Netherlands,,255,195,275,725
@@ -64,11 +64,11 @@ DQ,75,Open,Kåre Lundgren,M,SBD,Single-ply,Sweden,,,,,
 10,82.5,Open,Albert Mombert,M,SBD,Single-ply,Belgium,,225,147.5,262.5,635
 DQ,82.5,Open,Claudio Ardini,M,SBD,Single-ply,Italy,,,,,
 1,90,Open,Jari Tähtinen,M,SBD,Single-ply,Finland,,295,220,307.5,822.5
-2,90,Open,Dave Caldwell,M,SBD,Single-ply,Britain,,327.5,200,292.5,820
+2,90,Open,Dave Caldwell,M,SBD,Single-ply,UK,,327.5,200,292.5,820
 3,90,Open,Floreano Domenici,M,SBD,Single-ply,Italy,,300,200,312.5,812.5
 4,90,Open,Tokiharu Maeda,M,SBD,Single-ply,Japan,,335,175,302.5,812.5
 5,90,Open,Mauruce Butler,M,SBD,Single-ply,Australia,,300,200,305,805
-6,90,Open,Bill West,M,SBD,Single-ply,Britain,,320,172.5,305,797.5
+6,90,Open,Bill West,M,SBD,Single-ply,UK,,320,172.5,305,797.5
 7,90,Open,Janos Nemeshazy,M,SBD,Single-ply,Switzerland,,305,200,285,790
 8,90,Open,Zlatko Radojkovic,M,SBD,Single-ply,Sweden,,300,195,290,785
 9,90,Open,Erkki Halonen,M,SBD,Single-ply,Finland,,285,187.5,300,772.5
@@ -79,7 +79,7 @@ DQ,82.5,Open,Claudio Ardini,M,SBD,Single-ply,Italy,,,,,
 14,90,Open,B. Dicerbo,M,SBD,Single-ply,Italy,,240,165,260,665
 15,90,Open,H. Saihvane,M,SBD,Single-ply,Peru,,200,140,200,540
 DQ,90,Open,Christian Buchs,M,SBD,Single-ply,France,,,,,
-1,100,Open,Tony Stevens,M,SBD,Single-ply,Britain,,340,212.5,330,882.5
+1,100,Open,Tony Stevens,M,SBD,Single-ply,UK,,340,212.5,330,882.5
 2,100,Open,Conny Nilsson,M,SBD,Single-ply,Sweden,,335,205,320,860
 3,100,Open,Hugo de Grauwe,M,SBD,Single-ply,Belgium,,330,190,322.5,842.5
 4,100,Open,Juha Hyttinen,M,SBD,Single-ply,Finland,,327.5,195,317.5,840
@@ -93,9 +93,9 @@ DQ,90,Open,Christian Buchs,M,SBD,Single-ply,France,,,,,
 12,100,Open,J. Andersen,M,SBD,Single-ply,Denmark,,230,130,260,620
 1,110,Open,Fred Hatfield,M,SBD,Single-ply,USA,,370,207.5,325,902.5
 2,110,Open,Samuli Kivi,M,SBD,Single-ply,Sweden,,332.5,215,330,877.5
-3,110,Open,John Neighbour,M,SBD,Single-ply,Britain,,330,215,320,865
+3,110,Open,John Neighbour,M,SBD,Single-ply,UK,,330,215,320,865
 4,110,Open,Conny De Blois,M,SBD,Single-ply,West Germany,,330,200,317.5,847.5
-5,110,Open,Mark Savage,M,SBD,Single-ply,Britain,,270,195,327.5,792.5
+5,110,Open,Mark Savage,M,SBD,Single-ply,UK,,270,195,327.5,792.5
 6,110,Open,Tor Eriksen,M,SBD,Single-ply,Norway,,285,192.5,312.5,790
 7,110,Open,M. Wiegman,M,SBD,Single-ply,Netherlands,,300,165,315,780
 8,110,Open,Rob v.d. Tak,M,SBD,Single-ply,Netherlands,,290,195,285,770
@@ -110,7 +110,7 @@ DQ,110,Open,Reinhard Mayerhofer,M,SBD,Single-ply,Austria,,,,,
 2,125,Open,Siem Wulfse,M,SBD,Single-ply,Netherlands,,330,220,340,890
 3,125,Open,Larry Kidney,M,SBD,Single-ply,USA,,340,220,330,890
 4,125,Open,E. Arnold,M,SBD,Single-ply,USA,,355,212.5,307.5,875
-5,125,Open,Sean Spillane,M,SBD,Single-ply,Britain,,340,212.5,322.5,875
+5,125,Open,Sean Spillane,M,SBD,Single-ply,UK,,340,212.5,322.5,875
 6,125,Open,Sören Oldenburg,M,SBD,Single-ply,Denmark,,325,215,325,865
 7,125,Open,Antonio Tacito,M,SBD,Single-ply,Italy,,300,200,310,810
 8,125,Open,Radha Krishna,M,SBD,Single-ply,India,,280,160,280,720
@@ -118,7 +118,7 @@ DQ,125,Open,Kyösti Vilmi,M,SBD,Single-ply,Finland,,350,225,,
 1,125+,Open,Mike Hall,M,SBD,Single-ply,USA,,397.5,255,327.5,980
 2,125+,Open,Thomas Stenlund,M,SBD,Single-ply,Sweden,,350,200,352.5,902.5
 3,125+,Open,Yngve Gustafsson,M,SBD,Single-ply,Sweden,,330,240,315,885
-4,125+,Open,Andrew Kerr,M,SBD,Single-ply,Britain,,317.5,232.5,335,885
+4,125+,Open,Andrew Kerr,M,SBD,Single-ply,UK,,317.5,232.5,335,885
 5,125+,Open,John Kleveland,M,SBD,Single-ply,Norway,,322.5,220,327.5,870
 6,125+,Open,Jean-Pierre Brulois,M,SBD,Single-ply,France,,320,200,315,835
 7,125+,Open,Ray Rigby,M,SBD,Single-ply,Australia,,320,180,320,820

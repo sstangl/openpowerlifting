@@ -5,7 +5,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 4,Dariusz Wszoła,1978,Poland,55.1,-240,-240,240,240,152.5,160,-165,160,192.5,205,210,210,610,56,Open,SBD,M,Single-ply
 5,Roy Brandtzæg,1971,Norway,55.9,222.5,227.5,232.5,232.5,-140,-140,140,140,220,230,-235,230,602.5,56,Open,SBD,M,Single-ply
 6,Ervin Gainer Sr,1966,USA,55.5,200,212.5,220,220,127.5,137.5,142.5,142.5,210,220,230,230,592.5,56,Open,SBD,M,Single-ply
-7,Patrick Constantine,1969,Britain,55.7,220,-230,230,230,120,125,-127.5,125,215,225,-232.5,225,580,56,Open,SBD,M,Single-ply
+7,Patrick Constantine,1969,UK,55.7,220,-230,230,230,120,125,-127.5,125,215,225,-232.5,225,580,56,Open,SBD,M,Single-ply
 8,Frédéric Tinebra,1978,France,55.4,210,-222.5,222.5,222.5,140,145,-150,145,190,205,-212.5,205,572.5,56,Open,SBD,M,Single-ply
 9,Jürgen Nemeth,1972,Austria,55.2,-200,200,-205,200,110,-115,,110,170,190,210,210,520,56,Open,SBD,M,Single-ply
 10,Omar Shebek,1975,Libya,55.6,170,190,-195,190,90,105,-110,105,180,210,-215,210,505,56,Open,SBD,M,Single-ply
@@ -27,7 +27,7 @@ DQ,Damarrio Holloway,1977,USA,59.7,235,250,257.5,257.5,-145,145,155,155,-255,-25
 2,Hassan El Belghiti,1975,France,67.4,255,267.5,-272.5,267.5,155,-160,-160,155,280,290,292.5,292.5,715,67.5,Open,SBD,M,Single-ply
 3,Masaharu Koiwai,1976,Japan,67.3,-230,230,245,245,-170,170,177.5,177.5,265,-282.5,290,290,712.5,67.5,Open,SBD,M,Single-ply
 4,Arkadiy Shalokha,1979,Ukraine,67.5,260,-275,-275,260,165,172.5,180,180,250,265,-272.5,265,705,67.5,Open,SBD,M,Single-ply
-5,Phillip Richard,1971,Britain,67.2,270,280,287.5,287.5,177.5,-187.5,-187.5,177.5,-230,230,-240,230,695,67.5,Open,SBD,M,Single-ply
+5,Phillip Richard,1971,UK,67.2,270,280,287.5,287.5,177.5,-187.5,-187.5,177.5,-230,230,-240,230,695,67.5,Open,SBD,M,Single-ply
 6,Timothy Hoerner,1977,USA,67.2,272.5,-292.5,-292.5,272.5,140,150,-155,150,-250,250,265,265,687.5,67.5,Open,SBD,M,Single-ply
 7,Antti Savolainen,1978,Finland,67.2,235,-245,245,245,185,-190,-190,185,245,255,-265,255,685,67.5,Open,SBD,M,Single-ply
 8,Hui Lin Ming,1983,Taiwan,66.8,255,-272.5,-272.5,255,-170,170,-187.5,170,210,230,-255,230,655,67.5,Open,SBD,M,Single-ply
@@ -60,7 +60,7 @@ DQ,Lung-Hsin Huang,1981,Taiwan,74.5,-280,-280,-280,,202.5,212.5,-222.5,212.5,275
 4,Robert Michailov,1977,Bulgaria,80.6,270,290,-305,290,192.5,-202.5,205,205,305,325,-330,325,820,82.5,Open,SBD,M,Single-ply
 5,Wataru Kobayakawa,1975,Japan,81.5,302.5,310,-317.5,310,195,202.5,-207.5,202.5,275,285,-290,285,797.5,82.5,Open,SBD,M,Single-ply
 6,Todor Vasilev,1978,Bulgaria,80.9,290,-305,305,305,170,180,-185,180,285,300,-315,300,785,82.5,Open,SBD,M,Single-ply
-7,Jaswinder Singh Cheema,1964,Britain,82.3,280,287.5,-292.5,287.5,-190,190,195,195,270,280,-287.5,280,762.5,82.5,Open,SBD,M,Single-ply
+7,Jaswinder Singh Cheema,1964,UK,82.3,280,287.5,-292.5,287.5,-190,190,195,195,270,280,-287.5,280,762.5,82.5,Open,SBD,M,Single-ply
 8,André Hentschel,1984,Germany,82,275,-290,-290,275,210,220,-227.5,220,250,265,-270,265,760,82.5,Open,SBD,M,Single-ply
 9,Arvo Kaljapulk,1982,Estonia,81.8,270,-275,-275,270,150,160,-180,160,310,315,-320,315,745,82.5,Open,SBD,M,Single-ply
 10,Richard Hozjan,1982,Australia,82.1,-260,260,-280,260,190,197.5,200,200,275,285,-300,285,745,82.5,Open,SBD,M,Single-ply
@@ -131,7 +131,7 @@ DQ,Zbyněk Krejča,1974,Czechia,108.3,290,305,315,315,250,270,-290,270,-285,-285
 DQ,Jamie Emberley,1980,Canada,108.9,-345,-345,-355,,-250,-255,-262.5,,,,,,,110,Open,SBD,M,Single-ply
 DD,Harald Kreuzer,1969,Austria,107.3,340,-355,355,355,220,235,-240,235,320,-335,-335,320,,110,Open,SBD,M,Single-ply
 1,Tony Cardella,1977,USA,124.3,357.5,375,390,390,255,265,-272.5,265,330,355,367.5,367.5,1022.5,125,Open,SBD,M,Single-ply
-2,Clive Henry,1966,Britain,122.9,410,425,-430,425,260,-267.5,-267.5,260,315,322.5,-327.5,322.5,1007.5,125,Open,SBD,M,Single-ply
+2,Clive Henry,1966,UK,122.9,410,425,-430,425,260,-267.5,-267.5,260,315,322.5,-327.5,322.5,1007.5,125,Open,SBD,M,Single-ply
 3,Oleksandr Shepel,1987,Ukraine,120.5,380,390,400,400,240,-250,-255,240,340,360,-382.5,360,1000,125,Open,SBD,M,Single-ply
 4,Asbjørn Randen,1973,Norway,124.2,-380,380,,380,280,-285,-285,280,-320,320,-342.5,320,980,125,Open,SBD,M,Single-ply
 5,Frode Rui,1969,Norway,123.4,-345,345,-360,345,245,252.5,-257.5,252.5,340,350,-362.5,350,947.5,125,Open,SBD,M,Single-ply
@@ -143,7 +143,7 @@ DD,Harald Kreuzer,1969,Austria,107.3,340,-355,355,355,220,235,-240,235,320,-335,
 11,Claudemiro Nascimento,1970,Brazil,112.3,290,310,320,320,150,160,170,170,280,300,305,305,795,125,Open,SBD,M,Single-ply
 12,Steve Halladay,,Canada,110.4,250,260,-265,260,197.5,205,-210,205,250,-257.5,-260,250,715,125,Open,SBD,M,Single-ply
 DQ,Morten Sørig,1969,Denmark,123.4,347.5,360,-367.5,360,-230,-230,-230,,290,307.5,,307.5,,125,Open,SBD,M,Single-ply
-DQ,Dean Bowring,1974,Britain,123.5,360,370,377.5,377.5,-292.5,-292.5,-292.5,,335,-347.5,-357.5,335,,125,Open,SBD,M,Single-ply
+DQ,Dean Bowring,1974,UK,123.5,360,370,377.5,377.5,-292.5,-292.5,-292.5,,335,-347.5,-357.5,335,,125,Open,SBD,M,Single-ply
 DD,Waeil El.Fallah,1979,Libya,121.8,300,330,360,360,-210,210,-230,210,300,-310,-310,300,,125,Open,SBD,M,Single-ply
 1,Vladimir Bondarenko,1978,Russia,158.3,400,420,435,435,260,270,280,280,350,365,377.5,377.5,1092.5,125+,Open,SBD,M,Single-ply
 2,Brad Gillingham,1966,USA,147.9,367.5,-382.5,385,385,272.5,277.5,-280,277.5,355,377.5,390,390,1052.5,125+,Open,SBD,M,Single-ply
@@ -155,7 +155,7 @@ DD,Waeil El.Fallah,1979,Libya,121.8,300,330,360,360,-210,210,-230,210,300,-310,-
 8,Fredrik Svensson,1979,Sweden,139.2,330,-342.5,-342.5,330,320,-330,330,330,300,312.5,-330,312.5,972.5,125+,Open,SBD,M,Single-ply
 9,Andy-Elvis Dörner,1976,Germany,130.5,380,400,410,410,220,235,245,245,295,305,310,310,965,125+,Open,SBD,M,Single-ply
 10,Olaf Dahl,1977,Norway,140.1,350,-360,,350,245,-255,255,255,345,357.5,-362.5,357.5,962.5,125+,Open,SBD,M,Single-ply
-11,James Blanchflower,1966,Britain,161.6,-357.5,357.5,370,370,260,270,-280,270,280,300,-317.5,300,940,125+,Open,SBD,M,Single-ply
+11,James Blanchflower,1966,UK,161.6,-357.5,357.5,370,370,260,270,-280,270,280,300,-317.5,300,940,125+,Open,SBD,M,Single-ply
 12,Alex Mardell,,Canada,131.5,330,340,-350,340,277.5,-285,285,285,282.5,-295,-295,282.5,907.5,125+,Open,SBD,M,Single-ply
 13,Eumenes Souza Jr,1972,Brazil,139.5,340,360,-392.5,360,215,230,-245,230,260,280,290,290,880,125+,Open,SBD,M,Single-ply
 14,Adnan Yousef,1981,Libya,131.6,320,350,-360,350,170,180,190,190,290,-310,-310,290,830,125+,Open,SBD,M,Single-ply
@@ -178,7 +178,7 @@ DQ,Ilka Schwengl-Forsthuber,1965,Austria,47,-125,-125,-125,,90,-95,95,95,120,125
 5,Suzanne Hartwig-Gary,1968,USA,51.4,152.5,162.5,-167.5,162.5,97.5,-102.5,-102.5,97.5,147.5,157.5,165,165,425,52,Open,SBD,F,Single-ply
 6,Mervi Sirkiä,1972,Finland,51.6,160,-165,-165,160,92.5,95,97.5,97.5,155,162.5,-167.5,162.5,420,52,Open,SBD,F,Single-ply
 7,Magdolna Petróczki,1968,Hungary,51.7,140,150,-162.5,150,70,77.5,-82.5,77.5,145,157.5,170,170,397.5,52,Open,SBD,F,Single-ply
-8,Teresa Sawyer,1963,Britain,51.3,-140,140,147.5,147.5,90,-95,95,95,140,147.5,150,150,392.5,52,Open,SBD,F,Single-ply
+8,Teresa Sawyer,1963,UK,51.3,-140,140,147.5,147.5,90,-95,95,95,140,147.5,150,150,392.5,52,Open,SBD,F,Single-ply
 9,Carola Lindström,1982,Sweden,50.5,155,-160,-160,155,75,-80,-80,75,155,-165,-165,155,385,52,Open,SBD,F,Single-ply
 10,Keiko Nakai,1976,Japan,51.7,-135,135,-140,135,85,90,-92.5,90,142.5,-150,-150,142.5,367.5,52,Open,SBD,F,Single-ply
 11,Patrycja Jurga,1982,Poland,51.4,125,135,145,145,65,67.5,-70,67.5,132.5,142.5,-155,142.5,355,52,Open,SBD,F,Single-ply
@@ -224,7 +224,7 @@ DQ,Eleonora Makhpirova,1986,Kazakhstan,59.6,210,220,-222.5,220,110,-115,-115,110
 4,Zhanna Ivanova,1984,Ukraine,66.3,215,220,-230,220,125,132.5,137.5,137.5,195,205,-207.5,205,562.5,67.5,Open,SBD,F,Single-ply
 5,Antonietta Orsini,1964,Italy,66.2,-200,-200,200,200,-140,140,147.5,147.5,200,207.5,-215,207.5,555,67.5,Open,SBD,F,Single-ply
 6,Mayumi Kitamura,1967,Japan,65.3,172.5,187.5,195,195,140,147.5,152.5,152.5,180,-192.5,192.5,192.5,540,67.5,Open,SBD,F,Single-ply
-7,Gillian Wright,1973,Britain,66.5,177.5,185,-190,185,107.5,112.5,-115,112.5,200,-207.5,-207.5,200,497.5,67.5,Open,SBD,F,Single-ply
+7,Gillian Wright,1973,UK,66.5,177.5,185,-190,185,107.5,112.5,-115,112.5,200,-207.5,-207.5,200,497.5,67.5,Open,SBD,F,Single-ply
 8,María Guðsteinsdóttir,1970,Iceland,65.7,165,175,180,180,95,100,102.5,102.5,172.5,180,187.5,187.5,470,67.5,Open,SBD,F,Single-ply
 9,Synnøve Lund,1972,Norway,64.2,167.5,177.5,182.5,182.5,100,105,107.5,107.5,155,160,165,165,455,67.5,Open,SBD,F,Single-ply
 10,Maria Virtanen,1977,Finland,67,-165,165,-175,165,102.5,107.5,110,110,155,165,-170,165,440,67.5,Open,SBD,F,Single-ply
@@ -241,7 +241,7 @@ DQ,Jennifer Porter,1967,Canada,66.9,160,167.5,-172.5,167.5,-85,-87.5,-90,,145,-1
 3,Elizaveta Ivanova,1988,Ukraine,69.7,215,222.5,230,230,112.5,120,-127.5,120,-195,195,205,205,555,75,Open,SBD,F,Single-ply
 4,Disa Hatfield,1974,USA,74.1,-187.5,-190,195,195,135,-142.5,142.5,142.5,175,185,190,190,527.5,75,Open,SBD,F,Single-ply
 5,Jung Lo Hsiu,1984,Taiwan,71.8,190,-205,-222.5,190,-110,-110,110,110,-175,-197.5,200,200,500,75,Open,SBD,F,Single-ply
-6,Marian Gibson,1964,Britain,68.1,160,170,175,175,127.5,-130,-130,127.5,170,180,182.5,182.5,485,75,Open,SBD,F,Single-ply
+6,Marian Gibson,1964,UK,68.1,160,170,175,175,127.5,-130,-130,127.5,170,180,182.5,182.5,485,75,Open,SBD,F,Single-ply
 7,Elisabeth Wahlander,1960,Sweden,68.5,-175,-185,185,185,85,92.5,-97.5,92.5,180,197.5,-205,197.5,475,75,Open,SBD,F,Single-ply
 8,Maria Pia Moscianese,1963,Italy,72.5,150,155,160,160,60,65,70,70,170,180,185,185,415,75,Open,SBD,F,Single-ply
 9,Eszter Szollos,1983,Hungary,73.6,-115,115,127.5,127.5,90,97.5,-100,97.5,135,145,150,150,375,75,Open,SBD,F,Single-ply
@@ -249,7 +249,7 @@ DQ,Anna Dittler,1946,Hungary,68.9,-150,-150,-150,,,,,,,,,,,75,Open,SBD,F,Single-
 1,Svetlana Dedyulya,1975,Russia,82.4,220,240,250,250,170,185,-200,185,200,220,-230,220,655,82.5,Open,SBD,F,Single-ply
 2,Wen Chang Ya,1984,Taiwan,82.3,220,230,240,240,115,-122.5,122.5,122.5,190,207.5,-225,207.5,570,82.5,Open,SBD,F,Single-ply
 3,Liane Blyn,1972,USA,77.3,207.5,220,-230,220,-127.5,130,-140,130,200,-212.5,212.5,212.5,562.5,82.5,Open,SBD,F,Single-ply
-4,Monica Porter,1967,Britain,81.4,205,212.5,-215,212.5,115,120,125,125,205,215,-227.5,215,552.5,82.5,Open,SBD,F,Single-ply
+4,Monica Porter,1967,UK,81.4,205,212.5,-215,212.5,115,120,125,125,205,215,-227.5,215,552.5,82.5,Open,SBD,F,Single-ply
 5,Riikka Ylitalo,1982,Finland,80.7,170,185,195,195,140,150,-155,150,190,-207.5,-207.5,190,535,82.5,Open,SBD,F,Single-ply
 6,Heidi Hille Arnesen,1970,Norway,75.2,195,-205,210,210,-117.5,-117.5,117.5,117.5,192.5,-200,200,200,527.5,82.5,Open,SBD,F,Single-ply
 7,Erlina Pecante,1964,Philippines,82.1,190,210,220,220,105,115,-122.5,115,190,-212.5,-212.5,190,525,82.5,Open,SBD,F,Single-ply
@@ -263,12 +263,12 @@ DQ,Anna Dittler,1946,Hungary,68.9,-150,-150,-150,,,,,,,,,,,75,Open,SBD,F,Single-
 3,Inna Orobets,1971,Ukraine,89.5,230,237.5,-245,237.5,-155,155,-160,155,200,210,212.5,212.5,605,90,Open,SBD,F,Single-ply
 4,Bonica Brown,1988,USA,89.2,185,205,220,220,105,120,137.5,137.5,185,205,225,225,582.5,90,Open,SBD,F,Single-ply
 5,Jackie Buckley-Gray,1967,New Zealand,85,-185,-185,185,185,135,140,-157.5,140,205,-222.5,-222.5,205,530,90,Open,SBD,F,Single-ply
-6,Jennifer Busby,1977,Britain,85,190,200,205,205,90,95,-100,95,170,180,185,185,485,90,Open,SBD,F,Single-ply
+6,Jennifer Busby,1977,UK,85,190,200,205,205,90,95,-100,95,170,180,185,185,485,90,Open,SBD,F,Single-ply
 DQ,Giselle Costas,1980,Puerto Rico,90,-227.5,-227.5,-227.5,,115,125,-140,125,205,212.5,-217.5,212.5,,90,Open,SBD,F,Single-ply
 1,Irina Lugovaya,1974,Russia,100.4,240,255,265,265,160,170,180,180,215,225,235,235,680,90+,Open,SBD,F,Single-ply
 2,Jessica O'Donnell,1980,USA,95.9,250,-265,-265,250,152.5,162.5,170,170,220,232.5,-260,232.5,652.5,90+,Open,SBD,F,Single-ply
 3,Joanne Schaefer,1967,Netherlands,97.7,210,220,230,230,-165,165,167.5,167.5,200,210,220,220,617.5,90+,Open,SBD,F,Single-ply
-4,Marie Thornton,1981,Britain,100.7,220,230,-235,230,110,115,120,120,190,200,205,205,555,90+,Open,SBD,F,Single-ply
+4,Marie Thornton,1981,UK,100.7,220,230,-235,230,110,115,120,120,190,200,205,205,555,90+,Open,SBD,F,Single-ply
 5,Sonia Manaena,1961,New Zealand,115,-190,190,-205,190,100,110,-120,110,205,220,-237.5,220,520,90+,Open,SBD,F,Single-ply
 6,Brenda van der Meulen,1978,Netherlands,94.9,180,192.5,-197.5,192.5,130,137.5,-140,137.5,170,-180,-180,170,500,90+,Open,SBD,F,Single-ply
 7,Rosemarie Beer,1945,Austria,90.3,160,170,175,175,125,-130,-130,125,160,170,180,180,480,90+,Open,SBD,F,Single-ply

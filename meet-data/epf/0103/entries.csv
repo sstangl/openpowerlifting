@@ -2,7 +2,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Best3SquatKg,Best3BenchK
 1,Natalia I,1978,44,43.3,Russia,137.5,75,,150,362.5,F,SBD,Single-ply,Juniors
 2,Bénédicte LePanse,1978,44,43.8,France,122.5,70,,122.5,315,F,SBD,Single-ply,Juniors
 3,Aneta Rutka,1982,44,44,Poland,130,55,,120,305,F,SBD,Single-ply,Juniors
-4,Marie Durk,1981,44,41.1,Britain,65,40,,90,195,F,SBD,Single-ply,Juniors
+4,Marie Durk,1981,44,41.1,UK,65,40,,90,195,F,SBD,Single-ply,Juniors
 1,Natalya Tokareva,1984,48,47.2,Russia,142.5,62.5,,135,340,F,SBD,Single-ply,Juniors
 2,Ines Tronke,1978,48,48,Germany,100,60,,80,240,F,SBD,Single-ply,Juniors
 1,Natalya Shapovalova,1983,52,48.2,Russia,155,80,,155,390,F,SBD,Single-ply,Juniors
@@ -11,8 +11,8 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Best3SquatKg,Best3BenchK
 1,Svetlana Nikolaenko,1981,56,52.1,Russia,180,107.5,110.5,170,457.5,F,SBD,Single-ply,Juniors
 2,Virpi Kehänen,1979,56,55.8,Finland,170,75,,155,400,F,SBD,Single-ply,Juniors
 3,Anne-Lis Chaumont,1979,56,55.7,France,107.5,57.5,,145,310,F,SBD,Single-ply,Juniors
-4,Zita Windle,1981,56,55.7,Britain,110,50,,120,280,F,SBD,Single-ply,Juniors
-DQ,Rebecca Shaw,1980,56,53.8,Britain,,,,,,F,SBD,Single-ply,Juniors
+4,Zita Windle,1981,56,55.7,UK,110,50,,120,280,F,SBD,Single-ply,Juniors
+DQ,Rebecca Shaw,1980,56,53.8,UK,,,,,,F,SBD,Single-ply,Juniors
 1,Katka Feckova,1979,60,56.1,Slovakia,130,72.5,,165,367.5,F,SBD,Single-ply,Juniors
 2,Romy Schreiber,1979,60,59.7,Germany,130,62.5,,155,347.5,F,SBD,Single-ply,Juniors
 DQ,Céline Raquet,1978,60,58.7,France,,,,,,F,SBD,Single-ply,Juniors
@@ -24,7 +24,7 @@ DQ,Kaisa Karvonen,1983,67.5,66,Finland,,,,,,F,SBD,Single-ply,Juniors
 1,Svetlana Ivannikova,1982,75,72.8,Russia,185,112.5,,170,467.5,F,SBD,Single-ply,Juniors
 2,A DziewiczKiewicz,1979,75,73.4,Poland,170,95,,175,440,F,SBD,Single-ply,Juniors
 3,Jana Sedláčková,1980,75,72.6,Slovakia,145,75,,182.5,402.5,F,SBD,Single-ply,Juniors
-4,Marie Thornton,1990,75,72.8,Britain,152.5,60,,157.5,370,F,SBD,Single-ply,Juniors
+4,Marie Thornton,1990,75,72.8,UK,152.5,60,,157.5,370,F,SBD,Single-ply,Juniors
 DQ,Kristii Blinnikka,1979,75,74.8,Finland,,,,,,F,SBD,Single-ply,Juniors
 1,Jana Petrenko,1981,82.5,75.2,Ukraine,192.5,105,,202.5,500,F,SBD,Single-ply,Juniors
 2,Evgeniya Mazaylova,1982,82.5,75.3,Russia,200,90,,170,460,F,SBD,Single-ply,Juniors
@@ -45,18 +45,18 @@ DQ,Antonina Krivenko,1981,90,84.2,Russia,,,,,,F,SBD,Single-ply,Juniors
 2,Frédéric Tinebra,1978,56,55.8,France,220,130,,200,550,M,SBD,Single-ply,Juniors
 3,Kepczynk Grzegorz,1981,56,55.6,Poland,165,97.5,,180,442.5,M,SBD,Single-ply,Juniors
 4,Davy Ains,1979,56,55.9,France,150,85,,195,430,M,SBD,Single-ply,Juniors
-5,Chad Mitchell,1982,56,54.6,Britain,167.5,87.5,,165,420,M,SBD,Single-ply,Juniors
+5,Chad Mitchell,1982,56,54.6,UK,167.5,87.5,,165,420,M,SBD,Single-ply,Juniors
 1,Aleksandr Gromov,1981,60,60,Russia,250.0,155,,205,610,M,SBD,Single-ply,Juniors
 2,Marcin Gluch,1978,60,59.5,Poland,210,77.5,,215,502.5,M,SBD,Single-ply,Juniors
 3,Jaroslaw Rzany,1978,60,60,Poland,185,110,,175,470,M,SBD,Single-ply,Juniors
-4,Richard Graham,1980,60,57.6,Britain,155,90,,215,460,M,SBD,Single-ply,Juniors
+4,Richard Graham,1980,60,57.6,UK,155,90,,215,460,M,SBD,Single-ply,Juniors
 1,Oleksand Kutscher,1980,67.5,67.5,Ukraine,257.5,162.5,,275,695,M,SBD,Single-ply,Juniors
 2,Alexey Osokin,1979,67.5,67.2,Russia,255,182.5,,250,687.5,M,SBD,Single-ply,Juniors
 3,Jacek Spychala,1978,67.5,67.1,Poland,255,145,,265,665,M,SBD,Single-ply,Juniors
 4,Niklas Jönsson,1979,67.5,66.1,Sweden,220,170,,205,595,M,SBD,Single-ply,Juniors
 5,Matthias Hopp,1980,67.5,67.5,Sweden,240,130,,220,590,M,SBD,Single-ply,Juniors
 6,Antti Partanen,1980,67.5,67.4,Finland,200,140,,210,550,M,SBD,Single-ply,Juniors
-7,Wayne McFarlane,1978,67.5,64.4,Britain,190,122.5,,210,522.5,M,SBD,Single-ply,Juniors
+7,Wayne McFarlane,1978,67.5,64.4,UK,190,122.5,,210,522.5,M,SBD,Single-ply,Juniors
 8,Osfaldo Caffio,1983,67.5,66.9,Netherlands,165,90,,167.5,422.5,M,SBD,Single-ply,Juniors
 DQ,Patrick Schiffner,1978,67.5,65.3,Germany,,,,,,M,SBD,Single-ply,Juniors
 1,Ruslan Vostrikov,1979,75,74.9,Russia,307.5,180,,305.5,792.5,M,SBD,Single-ply,Juniors
@@ -65,7 +65,7 @@ DQ,Patrick Schiffner,1978,67.5,65.3,Germany,,,,,,M,SBD,Single-ply,Juniors
 4,Antoine D'Arco,1980,75,75,France,260,160,,265,685,M,SBD,Single-ply,Juniors
 5,Joakim Bjerke,1979,75,74.9,Norway,260,180,,240,680,M,SBD,Single-ply,Juniors
 6,Antti Saastomoinen,1980,75,74.3,Finland,235,160,,265,660,M,SBD,Single-ply,Juniors
-7,Gary Bowman,1981,75,75,Britain,240,155,,260,655,M,SBD,Single-ply,Juniors
+7,Gary Bowman,1981,75,75,UK,240,155,,260,655,M,SBD,Single-ply,Juniors
 8,Daniel Henell,1979,75,74.7,Sweden,225,140,,252.5,617.5,M,SBD,Single-ply,Juniors
 DQ,Ivan Princic,1980,75,74.9,Slovenia,,,,,,M,SBD,Single-ply,Juniors
 DQ,Pasi Nyssönen,1978,75,75,Finland,257.5,,,,,M,SBD,Single-ply,Juniors
@@ -94,7 +94,7 @@ DD,Ivan Shlyakhta,1981,82.5,82.1,Ukraine,320,187.5,,345,,M,SBD,Single-ply,Junior
 5,Michael Spalek,1979,100,91.7,Germany,277.5,160,,307.5,745,M,SBD,Single-ply,Juniors
 6,Artur Klunduk,1978,100,97.1,Poland,290,175,,280,745,M,SBD,Single-ply,Juniors
 7,Eryk Pietrusinski,1978,100,95.5,Poland,267.5,190,,265,722.5,M,SBD,Single-ply,Juniors
-8,Narinder Singh,1978,100,97.2,Britain,230,165,,290,685,M,SBD,Single-ply,Juniors
+8,Narinder Singh,1978,100,97.2,UK,230,165,,290,685,M,SBD,Single-ply,Juniors
 DQ,Mikael Bäckman,1980,100,97.5,Sweden,,,,,,M,SBD,Single-ply,Juniors
 1,Nikolay Suslov,1979,110,103.7,Russia,380,235,,340,955,M,SBD,Single-ply,Juniors
 2,Viktor Karpik,1978,110,109.8,Ukraine,360,220,,320,900,M,SBD,Single-ply,Juniors
@@ -109,4 +109,4 @@ DQ,Mikael Bäckman,1980,100,97.5,Sweden,,,,,,M,SBD,Single-ply,Juniors
 6,Marcin Lenarciak,1978,125,112.5,Poland,270,210,,265,745,M,SBD,Single-ply,Juniors
 1,Vladim Bondarenko,1978,125+,139.2,Russia,400,245,,350,995,M,SBD,Single-ply,Juniors
 2,Kenneth Tallqvist,1979,125+,148.3,Finland,355,215,,300,870,M,SBD,Single-ply,Juniors
-3,Rodney Fullerton,1979,125+,139.3,Britain,307.5,187.5,,300,795,M,SBD,Single-ply,Juniors
+3,Rodney Fullerton,1979,125+,139.3,UK,307.5,187.5,,300,795,M,SBD,Single-ply,Juniors

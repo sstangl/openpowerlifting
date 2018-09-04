@@ -1,5 +1,5 @@
 Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Squat4Kg,Bench4Kg,Event,Equipment
-1,52,M,Juniors,Phillip Richard,1971,Britain,51.7,170,180,187.5,187.5,95,100,-102.5,100,172.5,-182.5,182.5,182.5,470,,,SBD,Single-ply
+1,52,M,Juniors,Phillip Richard,1971,UK,51.7,170,180,187.5,187.5,95,100,-102.5,100,172.5,-182.5,182.5,182.5,470,,,SBD,Single-ply
 2,52,M,Juniors,P.K. Srivastaya,1966,India,52,180,190,-195,190,92.5,97.5,100,100,172.5,-182.5,-182.5,172.5,462.5,,,SBD,Single-ply
 3,52,M,Juniors,Bernie Miller,1967,USA,51.9,-155,-155,155,155,-112.5,112.5,-117.5,112.5,157.5,167.5,-170,167.5,435,,,SBD,Single-ply
 4,52,M,Juniors,Chun-Chie Lee,1971,Taiwan,51.7,-170,-170,170,170,-80,80,85,85,165,172.5,-180,172.5,427.5,,,SBD,Single-ply
@@ -28,8 +28,8 @@ DD,60,M,Juniors,H. Dadapeer,1969,India,59.5,,,,,,,,,,,,,,,,SBD,Single-ply
 3,67.5,M,Juniors,Jarmo Laine,1966,Finland,67.4,215,225,230,230,140,-145,-145,140,-230,230,237.5,237.5,607.5,,,SBD,Single-ply
 4,67.5,M,Juniors,Krister Renman,1966,Sweden,67,220,232.5,-237.5,232.5,125,132.5,-137.5,132.5,-230,230,-235,230,595,,,SBD,Single-ply
 5,67.5,M,Juniors,G.P. Rajappa,1967,India,67.2,205,215,220,220,130,-137.5,137.5,137.5,225,-240,-242.5,225,582.5,,,SBD,Single-ply
-6,67.5,M,Juniors,Ken Jackson,1966,Britain,67.2,200,210,220,220,115,122.5,127.5,127.5,220,230,-235,230,577.5,,,SBD,Single-ply
-7,67.5,M,Juniors,Glyn Merrith,1970,Britain,66.5,200,215,-220,215,110,115,-120,115,215,225,235,235,565,,,SBD,Single-ply
+6,67.5,M,Juniors,Ken Jackson,1966,UK,67.2,200,210,220,220,115,122.5,127.5,127.5,220,230,-235,230,577.5,,,SBD,Single-ply
+7,67.5,M,Juniors,Glyn Merrith,1970,UK,66.5,200,215,-220,215,110,115,-120,115,215,225,235,235,565,,,SBD,Single-ply
 8,67.5,M,Juniors,Philippe Hoareau,1968,France,67.1,210,220,-225,220,110,-120,120,120,210,222.5,-230,222.5,562.5,,,SBD,Single-ply
 9,67.5,M,Juniors,Kuo-Feng Tsai,1970,Taiwan,66.8,195,210,-225,210,100,-110,-110,100,-210,215,237.5,237.5,547.5,,,SBD,Single-ply
 10,67.5,M,Juniors,Arne Brovold,1970,Norway,67.1,207.5,220,-225,220,112.5,-117.5,117.5,117.5,200,210,-215,210,547.5,,,SBD,Single-ply
@@ -45,7 +45,7 @@ DD,60,M,Juniors,H. Dadapeer,1969,India,59.5,,,,,,,,,,,,,,,,SBD,Single-ply
 7,75,M,Juniors,Shyam Sharma,1966,India,74.8,-240,-240,240,240,112.5,117.5,122.5,122.5,255,-265,,255,617.5,,,SBD,Single-ply
 8,75,M,Juniors,Mario Schnurr,1966,West Germany,74.3,215,230,-240,230,120,125,-127.5,125,225,242.5,250,250,605,,,SBD,Single-ply
 9,75,M,Juniors,Sabino Pisani,1967,Italy,73.3,-230,230,240,240,110,115,-117.5,115,230,240,-255,240,595,,,SBD,Single-ply
-10,75,M,Juniors,Lawrence Mentesh,1967,Britain,74.2,210,220,225,225,125,130,132.5,132.5,230,237.5,-247.5,237.5,595,,,SBD,Single-ply
+10,75,M,Juniors,Lawrence Mentesh,1967,UK,74.2,210,220,225,225,125,130,132.5,132.5,230,237.5,-247.5,237.5,595,,,SBD,Single-ply
 11,75,M,Juniors,Erwin Krokkee,1966,Netherlands,74.3,205,217.5,-222.5,217.5,140,145,-147.5,145,220,232.5,-237.5,232.5,595,,,SBD,Single-ply
 12,75,M,Juniors,Jeevan Singh,1968,India,70.9,-240,240,-245,240,110,117.5,120,120,220,230,-240,230,590,,,SBD,Single-ply
 13,75,M,Juniors,Vincent Grelet,1966,France,73.5,200,215,220,220,130,-137.5,137.5,137.5,220,230,-237.5,230,587.5,,,SBD,Single-ply
@@ -56,7 +56,7 @@ DQ,75,M,Juniors,Dirk v.d. Heyden,1968,Belgium,73.2,205,-215,215,215,117.5,-122.5
 2,82.5,M,Juniors,Pierre Fogelberg,1966,Sweden,80.4,260,280,-290,280,160,-167.5,167.5,167.5,270,282.5,-312.5,282.5,730,,,SBD,Single-ply
 3,82.5,M,Juniors,Brian Skibyak,1967,USA,81.7,230,240,250,250,152.5,160,165,165,272.5,282.5,-285,282.5,697.5,,,SBD,Single-ply
 4,82.5,M,Juniors,Tor-Kjeld Jevne,1966,Norway,82.5,250,-265,-265,250,155,160,-165,160,265,277.5,-290,277.5,687.5,,,SBD,Single-ply
-5,82.5,M,Juniors,Kevin Hammerton,1966,Britain,82.4,250,-265,-265,250,132.5,140,147.5,147.5,250,260,-265,260,657.5,,,SBD,Single-ply
+5,82.5,M,Juniors,Kevin Hammerton,1966,UK,82.4,250,-265,-265,250,132.5,140,147.5,147.5,250,260,-265,260,657.5,,,SBD,Single-ply
 6,82.5,M,Juniors,David Cretzan,1967,Ireland,80,-225,225,235,235,130,135,137.5,137.5,-235,235,-247.5,235,607.5,,,SBD,Single-ply
 DQ,82.5,M,Juniors,Jürgen Hoffart,1966,West Germany,80.7,-265,265,-272.5,265,160,-167.5,-167.5,160,-260,-260,-260,,,,,SBD,Single-ply
 DQ,82.5,M,Juniors,Tyler Malejko,1966,USA,81.9,247.5,255,265,265,145,155,-162.5,155,-290,-290,-290,,,,,SBD,Single-ply
@@ -69,12 +69,12 @@ DQ,82.5,M,Juniors,Cheng-Chiung Chen,1969,Taiwan,82.5,192.5,-202.5,-202.5,192.5,1
 6,90,M,Juniors,Carmen Perotta,1967,USA,89,270,-282.5,-282.5,270,157.5,162.5,-165,162.5,272.5,292.5,-317.5,292.5,725,,,SBD,Single-ply
 7,90,M,Juniors,Miguel Marie-Sainte,1968,France,88.2,245,255,262.5,262.5,175,185,-190,185,250,265,-272.5,265,712.5,,,SBD,Single-ply
 8,90,M,Juniors,Olaf Nimmerfroh,1971,West Germany,89,275,290,-300,290,150,157.5,-162.5,157.5,240,-252.5,-252.5,240,687.5,,,SBD,Single-ply
-9,90,M,Juniors,Clive Henry,1966,Britain,88.4,250,265,275,275,150,-160,-162.5,150,260,-270,-270,260,685,,,SBD,Single-ply
+9,90,M,Juniors,Clive Henry,1966,UK,88.4,250,265,275,275,150,-160,-162.5,150,260,-270,-270,260,685,,,SBD,Single-ply
 10,90,M,Juniors,Bjørn Hansen,1967,Norway,89.8,250,265,272.5,272.5,140,-147.5,150,150,240,247.5,-252.5,247.5,670,,,SBD,Single-ply
 11,90,M,Juniors,Peter Baumeister,1967,West Germany,89,-245,245,260,260,140,-145,-145,140,250,260,-265,260,660,,,SBD,Single-ply
 DQ,90,M,Juniors,Dondon Akkua,1969,Nauru,86.6,-225,-225,-230,,,,,,,,,,,,,SBD,Single-ply
 DQ,90,M,Juniors,Huai-Chin Liang,1967,Taiwan,88.7,-265,-275,-275,,,,,,,,,,,,,SBD,Single-ply
-1,100,M,Juniors,Ian Wadley,1966,Britain,99.9,250,265,280,280,165,175,182.5,182.5,290,-305,-305,290,752.5,,,SBD,Single-ply
+1,100,M,Juniors,Ian Wadley,1966,UK,99.9,250,265,280,280,165,175,182.5,182.5,290,-305,-305,290,752.5,,,SBD,Single-ply
 2,100,M,Juniors,Jan Seghers,1966,Belgium,91,255,265,-270,265,160,167.5,170,170,300,307.5,-317.5,307.5,742.5,,,SBD,Single-ply
 3,100,M,Juniors,Janne Toivanen,1966,Finland,99.8,275,285,290,290,160,-167.5,167.5,167.5,275,285,-292.5,285,742.5,,,SBD,Single-ply
 4,100,M,Juniors,Daniel Mahan,1966,USA,98.9,250,260,275,275,152.5,157.5,162.5,162.5,277.5,285,295,295,732.5,,,SBD,Single-ply
@@ -94,7 +94,7 @@ DD,100,M,Juniors,Anton Tucek,1966,Austria,97.3,,,,,,,,,,,,,,,,SBD,Single-ply
 7,110,M,Juniors,Russel Kun,1966,Nauru,108.1,280,-300,300,300,-170,170,-182.5,170,-220,220,-240,220,690,,,SBD,Single-ply
 8,110,M,Juniors,Che-Yi Liao,1968,Taiwan,101,-250,260,-275,260,135,-142.5,-145,135,-250,260,-272.5,260,655,,,SBD,Single-ply
 9,110,M,Juniors,L.P. Srinivas,1969,India,109.6,215,225,235,235,110,122.5,127.5,127.5,220,235,-250,235,597.5,,,SBD,Single-ply
-1,125,M,Juniors,Wayne Buck,1966,Britain,120.1,325,-342.5,342.5,342.5,220,230,235.5,235.5,320,335,,335,912.5,,,SBD,Single-ply
+1,125,M,Juniors,Wayne Buck,1966,UK,120.1,325,-342.5,342.5,342.5,220,230,235.5,235.5,320,335,,335,912.5,,,SBD,Single-ply
 2,125,M,Juniors,Mika Valve,1967,Finland,115.8,255,-270,270,270,180,190,195,195,310,330,345.5,345.5,810,,,SBD,Single-ply
 3,125,M,Juniors,Svend Karlsen,1967,Norway,115.2,290,305,310,310,-170,-170,170,170,230,-290,305,305,785,,,SBD,Single-ply
 4,125,M,Juniors,Wulf Kronemann,1967,West Germany,119.6,300,-315,315,315,190,-200,-200,190,265,275,280,280,785,,,SBD,Single-ply
@@ -104,7 +104,7 @@ DD,100,M,Juniors,Anton Tucek,1966,Austria,97.3,,,,,,,,,,,,,,,,SBD,Single-ply
 8,125,M,Juniors,Robert Feuk,1966,Sweden,118.1,250,-260,-260,250,150,155,157.5,157.5,250,-262.5,-262.5,250,657.5,,,SBD,Single-ply
 9,125,M,Juniors,Bert Hoeks,1969,Netherlands,122.2,235,250,257.5,257.5,155,-160,-160,155,235,-247.5,-247.5,235,647.5,,,SBD,Single-ply
 1,125+,M,Juniors,Karl Saliger,1969,Austria,125.1,315,330,-340,330,207.5,217.5,225,225,305,315,-325,315,870,,,SBD,Single-ply
-2,125+,M,Juniors,Brian Bell,1967,Britain,125.5,280,300,312.5,312.5,200,215,227.5,227.5,280,-300,-332.5,280,820,,,SBD,Single-ply
+2,125+,M,Juniors,Brian Bell,1967,UK,125.5,280,300,312.5,312.5,200,215,227.5,227.5,280,-300,-332.5,280,820,,,SBD,Single-ply
 3,125+,M,Juniors,Michael van Leeuwen,1966,Netherlands,127.4,265,275,280,280,175,185,190,190,300,312.5,317.5,317.5,787.5,,,SBD,Single-ply
 4,125+,M,Juniors,Bob Bierschback,1968,USA,159.1,280,287.5,295,295,160,165,-167.5,165,282.5,302.5,-305,302.5,762.5,,,SBD,Single-ply
 5,125+,M,Juniors,Dirk Pessemier,1966,Belgium,125.2,280,290,300,300,145,150,-155,150,300,310,-337.5,310,760,,,SBD,Single-ply

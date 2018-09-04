@@ -1,6 +1,6 @@
 Place,Sex,Division,Name,BirthYear,Country,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment
 1,F,Open,Anna-Liisa Prinkkala,1955,Finland,43.8,140,62.5,145,347.5,SBD,Single-ply
-2,F,Open,Helen Wolsey,1961,Britain,43.2,122.5,67.5,147.5,337.5,SBD,Single-ply
+2,F,Open,Helen Wolsey,1961,UK,43.2,122.5,67.5,147.5,337.5,SBD,Single-ply
 3,F,Open,Hisako Yoshida,1951,Japan,43.4,130,62.5,137.5,330,SBD,Single-ply
 4,F,Open,Ghislaine Verdoot,1948,Belgium,43.6,117.5,55,142.5,315,SBD,Single-ply
 5,F,Open,Carine Stallaert,1963,Belgium,43.1,115,52.5,140,307.5,SBD,Single-ply
@@ -9,7 +9,7 @@ Place,Sex,Division,Name,BirthYear,Country,BodyweightKg,Best3SquatKg,Best3BenchKg
 2,F,Open,Malou Thill,1956,Luxembourg,47.6,130,65,160,355,SBD,Single-ply
 3,F,Open,Vuokko Viitasaari,1954,Finland,46.9,127.5,70,152.5,350,SBD,Single-ply
 4,F,Open,Glynnis Ramirez-Bierria,1963,USA,47.8,115,82.5,145,342.5,SBD,Single-ply
-5,F,Open,Karen Cameron,1962,Britain,47.3,120,67.5,147.5,335,SBD,Single-ply
+5,F,Open,Karen Cameron,1962,UK,47.3,120,67.5,147.5,335,SBD,Single-ply
 6,F,Open,Gloria Doncel,1966,Spain,47.4,120,60,152.5,332.5,SBD,Single-ply
 7,F,Open,Ya-Ling Chen,1962,Taiwan,47.7,125,65,142.5,332.5,SBD,Single-ply
 8,F,Open,Helene Andersson,1964,Sweden,46.4,122.5,67.5,135,325,SBD,Single-ply
@@ -20,7 +20,7 @@ DQ,F,Open,Veronique Neerinckx,1967,Belgium,47.9,,,,,SBD,Single-ply
 2,F,Open,Aubhild Hansen,1957,Norway,51.7,145,67.5,162.5,375,SBD,Single-ply
 3,F,Open,Gisele Mathiau,1955,Canada,51.2,135,70,152.5,357.5,SBD,Single-ply
 4,F,Open,Dagmar Wang,1948,Austria,51.4,127.5,77.5,152.5,357.5,SBD,Single-ply
-5,F,Open,Lesley Manester,1955,Britain,51.2,120,75,142.5,337.5,SBD,Single-ply
+5,F,Open,Lesley Manester,1955,UK,51.2,120,75,142.5,337.5,SBD,Single-ply
 6,F,Open,Jorun Tangen,1970,Norway,51.6,130,60,145,335,SBD,Single-ply
 DQ,F,Open,Liisa Jurkko,1959,Finland,51.6,157.5,70,,,SBD,Single-ply
 1,F,Open,Mary Jeffrey,1956,USA,55.5,175,100,172.5,447.5,SBD,Single-ply
@@ -73,8 +73,8 @@ DQ,F,Open,Shu-Fan Huang,1971,Taiwan,66.9,,,,,SBD,Single-ply
 10,F,Open,Anne Metsola,1955,Finland,73.8,160,60,145,365,SBD,Single-ply
 11,F,Open,Francis Escandell,1961,Spain,68.6,120,70,160,350,SBD,Single-ply
 1,F,Open,Cathy Millen,1967,New Zealand,75.7,212.5,120,230,562.5,SBD,Single-ply
-2,F,Open,Judith Oakes,1958,Britain,79.7,210,107.5,200,517.5,SBD,Single-ply
-3,F,Open,Joanne Williams,1967,Britain,81.1,175,120,190,485,SBD,Single-ply
+2,F,Open,Judith Oakes,1958,UK,79.7,210,107.5,200,517.5,SBD,Single-ply
+3,F,Open,Joanne Williams,1967,UK,81.1,175,120,190,485,SBD,Single-ply
 4,F,Open,Shelby Corson,1967,USA,81.6,197.5,97.5,180,475,SBD,Single-ply
 5,F,Open,Monika Norberg,1961,Sweden,81,182.5,85,182.5,450,SBD,Single-ply
 6,F,Open,Jaana Paatelainen,1965,Finland,81.6,172.5,95,170,437.5,SBD,Single-ply
@@ -85,9 +85,9 @@ DQ,F,Open,Shu-Fan Huang,1971,Taiwan,66.9,,,,,SBD,Single-ply
 1,F,Open,Ulrike Herchenhein,1962,West Germany,88,210,112.5,210,532.5,SBD,Single-ply
 2,F,Open,Barbara Kramer,1957,Netherlands,83.5,140,102.5,145,387.5,SBD,Single-ply
 1,F,Open,Sylvie Iskin,1966,France,97.8,220,95,195,510,SBD,Single-ply
-2,F,Open,Beverley Martin,1963,Britain,91.2,202.5,82.5,217.5,502.5,SBD,Single-ply
+2,F,Open,Beverley Martin,1963,UK,91.2,202.5,82.5,217.5,502.5,SBD,Single-ply
 3,F,Open,Susanne Tjernell-Formgren,1963,Sweden,90.7,205,92.5,197.5,495,SBD,Single-ply
 4,F,Open,Barbara Crocker,1961,USA,91.5,177.5,107.5,210,495,SBD,Single-ply
 5,F,Open,Heidi Münch,1947,West Germany,96.1,185,92.5,210,487.5,SBD,Single-ply
-6,F,Open,Jacqueline Pepper,1960,Britain,94.7,182.5,92.5,185,460,SBD,Single-ply
+6,F,Open,Jacqueline Pepper,1960,UK,94.7,182.5,92.5,185,460,SBD,Single-ply
 7,F,Open,Hui-Ling Wu,1963,Taiwan,129.6,190,90,160,440,SBD,Single-ply

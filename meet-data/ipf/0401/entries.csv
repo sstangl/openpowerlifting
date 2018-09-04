@@ -29,7 +29,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 90,Masters 1,F,Ulrike Herchenhein,Germany,1962,89.25,122.5,130,135,135,1,,135,Single-ply,B
 90+,Masters 1,F,Merja Mynttinen,Finland,1958,104.5,135,143,145,145,1,,145,Single-ply,B
 90+,Masters 1,F,Paulette Calhoun,USA,1958,94.45,95,100,-105,100,2,,100,Single-ply,B
-90+,Masters 1,F,Jacqueline Pepper,Britain,1960,111.65,65,75,-87.5,75,3,,75,Single-ply,B
+90+,Masters 1,F,Jacqueline Pepper,UK,1960,111.65,65,75,-87.5,75,3,,75,Single-ply,B
 44,Masters 2,F,Claudine Lacombe,France,1951,42.2,57.5,-60,60,60,1,-61,60,Single-ply,B
 48,Masters 2,F,Vuokko Viitasaari,Finland,1954,47.55,70,72.5,-77.5,72.5,1,,72.5,Single-ply,B
 48,Masters 2,F,Riitta Vaulakorpi,Finland,1954,47.6,65,-70,-77.5,65,2,,65,Single-ply,B
@@ -96,7 +96,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 82.5,Masters 1,M,Greg Zangl,USA,1960,79,190,200,210,210,2,,210,Single-ply,B
 82.5,Masters 1,M,Frank Heinrich,Germany,1958,81.9,-200,-200,202.5,202.5,3,,202.5,Single-ply,B
 82.5,Masters 1,M,Veiko Friedrich,Germany,1964,80.5,195,200,-202.5,200,4,,200,Single-ply,B
-82.5,Masters 1,M,Dave Normand,Britain,1964,81.55,-170,-170,190,190,5,,190,Single-ply,B
+82.5,Masters 1,M,Dave Normand,UK,1964,81.55,-170,-170,190,190,5,,190,Single-ply,B
 82.5,Masters 1,M,Erik Rasmussen,Denmark,1962,81.05,185,-190,-190,185,6,,185,Single-ply,B
 82.5,Masters 1,M,Patrick LeBlevennec,France,1963,81.4,-185,185,-190,185,7,,185,Single-ply,B
 82.5,Masters 1,M,Čestmír Wolf,Czechia,1959,82.2,-185,185,-205,185,8,,185,Single-ply,B
@@ -108,7 +108,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 90,Masters 1,M,Pascal Pares,France,1958,88.25,192.5,-200,-205,192.5,4,,192.5,Single-ply,B
 90,Masters 1,M,Krzysztof Kozielski,Poland,1962,89.05,185,192.5,-197.5,192.5,5,,192.5,Single-ply,B
 90,Masters 1,M,Joel Roulot,France,1961,87.4,-190,-190,190,190,6,,190,Single-ply,B
-90,Masters 1,M,John Brookes,Britain,1955,88.3,180,190,-202.5,190,7,,190,Single-ply,B
+90,Masters 1,M,John Brookes,UK,1955,88.3,180,190,-202.5,190,7,,190,Single-ply,B
 90,Masters 1,M,Lars Jansson,Sweden,1956,88.9,150,-155,-200,150,8,,150,Single-ply,B
 90,Masters 1,M,Vladimír Plávka,Slovakia,1960,86.95,135,145,-150,145,9,,145,Single-ply,B
 90,Masters 1,M,Ashraf Riad OC Shabana,Egypt,1962,86.8,-185,190,-195,190,DQ,,,Single-ply,B
@@ -120,7 +120,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 100,Masters 1,M,Rick Wenner,USA,1963,99.3,200,212.5,215,215,3,,215,Single-ply,B
 100,Masters 1,M,Juha Lehto,Finland,1964,99.1,-210,210,-215,210,4,,210,Single-ply,B
 100,Masters 1,M,Francisco Perez,Spain,1963,97.9,205,-210,-215,205,5,,205,Single-ply,B
-100,Masters 1,M,Ian Kinghorn,Britain,1957,98.35,195,-205,205,205,6,,205,Single-ply,B
+100,Masters 1,M,Ian Kinghorn,UK,1957,98.35,195,-205,205,205,6,,205,Single-ply,B
 100,Masters 1,M,Josef Spirka,Slovakia,1959,97.9,170,190,-205,190,7,,190,Single-ply,B
 100,Masters 1,M,Peter Klimo,Slovakia,1961,97.9,-190,-190,190,190,8,,190,Single-ply,B
 100,Masters 1,M,Søren Bertelsen,Denmark,1961,99.05,-170,175,-185,175,9,,175,Single-ply,B
@@ -131,7 +131,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 110,Masters 1,M,Thomas Stiemerling,Germany,1960,108.25,205,215,217.5,217.5,5,,217.5,Single-ply,B
 110,Masters 1,M,Jozef Pesta,Slovakia,1955,104.75,190,200,210,210,6,,210,Single-ply,B
 110,Masters 1,M,Vilém Bém,Czechia,1963,108.35,200,-207.5,-207.5,200,7,,200,Single-ply,B
-110,Masters 1,M,Julian Massey,Britain,1956,109.85,180,-200,-200,180,8,,180,Single-ply,B
+110,Masters 1,M,Julian Massey,UK,1956,109.85,180,-200,-200,180,8,,180,Single-ply,B
 110,Masters 1,M,Pavlo Mogylnykov,Ukraine,1964,109.5,-245,-245,-245,,DQ,,,Single-ply,B
 110,Masters 1,M,Gerhard Schranz,Austria,1955,104.1,-207.5,-210,,,DQ,,,Single-ply,B
 110,Masters 1,M,Istvan Agoston,Hungary,1962,102.3,-225,225,227.5,227.5,DQ,,,Single-ply,B
@@ -156,7 +156,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 60,Masters 2,M,Kanaya Takashi,Japan,1948,58.4,120,127.5,-130,127.5,1,,127.5,Single-ply,B
 60,Masters 2,M,Jean-Pierre Grondin,France,1952,59.6,115,120,-130,120,2,,120,Single-ply,B
 67.5,Masters 2,M,Claude Sitruk,France,1950,62.5,-170,-170,170,170,1,,170,Single-ply,B
-67.5,Masters 2,M,Mick James,Britain,1949,66.3,-145,-147.5,147.5,147.5,2,,147.5,Single-ply,B
+67.5,Masters 2,M,Mick James,UK,1949,66.3,-145,-147.5,147.5,147.5,2,,147.5,Single-ply,B
 67.5,Masters 2,M,Jozsef Kapor,Hungary,1951,66.65,145,-150,-150,145,3,,145,Single-ply,B
 67.5,Masters 2,M,Adam Jasiński,Poland,1951,67.4,140,-145,145,145,4,,145,Single-ply,B
 67.5,Masters 2,M,Rudolf Böhm,Czechia,1952,65.9,142.5,-147.5,-147.5,142.5,5,,142.5,Single-ply,B
@@ -210,12 +210,12 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 110,Masters 2,M,Allan Fuglsang,Denmark,1950,107.8,170,-190,-195,170,8,,170,Single-ply,B
 110,Masters 2,M,Pavol Plávka,Slovakia,1953,107.1,-160,-160,160,160,9,,160,Single-ply,B
 110,Masters 2,M,Tapani Mielty,Finland,1946,101.9,135,140,150,150,10,,150,Single-ply,B
-110,Masters 2,M,Ken Crickmore,Britain,1948,107.8,-150,150,-162.5,150,11,,150,Single-ply,B
+110,Masters 2,M,Ken Crickmore,UK,1948,107.8,-150,150,-162.5,150,11,,150,Single-ply,B
 110,Masters 2,M,Wojciech Grabowski,Poland,1951,107.5,-210,-210,-210,,DQ,,,Single-ply,B
 110,Masters 2,M,Simon Reitzle,Germany,1949,108.1,-190,-195,-202.5,,DQ,,,Single-ply,B
 125,Masters 2,M,Kevin Johnson,USA,1954,123.7,235,-242.5,250,250,1,-260,250,Single-ply,B
 125,Masters 2,M,Niilo Maliniemi,Sweden,1946,115.8,220,-227.5,-235,220,2,,220,Single-ply,B
-125,Masters 2,M,Mick King,Britain,1950,120.3,-220,220,-235,220,3,,220,Single-ply,B
+125,Masters 2,M,Mick King,UK,1950,120.3,-220,220,-235,220,3,,220,Single-ply,B
 125,Masters 2,M,Walter Kurda,Germany,1953,112.4,-172.5,172.5,180,180,4,,180,Single-ply,B
 125,Masters 2,M,Ivan Veselý,Czechia,1952,119.5,155,-165,-165,155,5,,155,Single-ply,B
 125,Masters 2,M,Georg Boström,Sweden,1947,113.5,100,,,100,6,,100,Single-ply,B
@@ -245,7 +245,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 75,Masters 3,M,Louis Volnin,France,1936,71.9,130,-140,-140,130,6,,130,Single-ply,B
 75,Masters 3,M,Börje Eriksson,Sweden,1942,73.75,-140,-140,-145,,DQ,,,Single-ply,B
 75,Masters 3,M,Ludwig Pfaus,Germany,1942,71.5,-127.5,-127.5,-127.5,,DQ,,,Single-ply,B
-82.5,Masters 3,M,William McFadyen,Britain,1934,82.2,-155,155,-170.5,155,1,,155,Single-ply,B
+82.5,Masters 3,M,William McFadyen,UK,1934,82.2,-155,155,-170.5,155,1,,155,Single-ply,B
 82.5,Masters 3,M,Hans Jorgensen,Denmark,1944,80.25,-130,130,137.5,137.5,2,,137.5,Single-ply,B
 82.5,Masters 3,M,Rainer Schötz,Germany,1943,78.55,135,-140,-140,135,3,,135,Single-ply,B
 82.5,Masters 3,M,Pascal Chabeau,France,1936,81.6,-132.5,132.5,-137.5,132.5,4,,132.5,Single-ply,B
@@ -258,7 +258,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 90,Masters 3,M,Bela Bolgarfalyy,Hungary,1943,88.6,137.5,145,-150,145,3,,145,Single-ply,B
 90,Masters 3,M,Petr Uher,Czechia,1934,88.1,140,-145,-145,140,4,,140,Single-ply,B
 90,Masters 3,M,Gerd Fell,Germany,1940,87.6,130,137.5,-145,137.5,5,,137.5,Single-ply,B
-90,Masters 3,M,Norman Anderson,Britain,1937,85.2,-130,130,-150,130,6,,130,Single-ply,B
+90,Masters 3,M,Norman Anderson,UK,1937,85.2,-130,130,-150,130,6,,130,Single-ply,B
 90,Masters 3,M,Adolf Rohrbacher,Austria,1938,87.2,125,-130,-130,125,7,,125,Single-ply,B
 100,Masters 3,M,Juhani Äiiö,Finland,1941,98.15,185,203,210,210,1,,210,Single-ply,B
 100,Masters 3,M,Marc Lebolay,France,1938,98.5,175,180,-185,180,2,,180,Single-ply,B
@@ -266,7 +266,7 @@ WeightClassKg,Division,Sex,Name,Country,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg
 100,Masters 3,M,Josef Pohlkötter,Germany,1937,95.65,130,135,-140,135,4,,135,Single-ply,B
 100,Masters 3,M,Lou Demuth,Luxembourg,1943,95.7,122.5,127.5,132.5,132.5,5,,132.5,Single-ply,B
 100,Masters 3,M,Louis Sposato,USA,1939,92.6,-170,-170,-170,,DQ,,,Single-ply,B
-100,Masters 3,M,Barry Scott,Britain,1938,95.45,-125,-127.5,-127.5,,DQ,,,Single-ply,B
+100,Masters 3,M,Barry Scott,UK,1938,95.45,-125,-127.5,-127.5,,DQ,,,Single-ply,B
 110,Masters 3,M,Christer Nylund,Finland,1944,109.2,-185,-185,185,185,1,,185,Single-ply,B
 110,Masters 3,M,Julius Madsen,Denmark,1937,100.7,150,160,165,165,2,,165,Single-ply,B
 110,Masters 3,M,Wilhelm Thell,Austria,1939,104.6,150,160,-165,160,3,,160,Single-ply,B

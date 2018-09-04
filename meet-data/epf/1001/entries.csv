@@ -5,11 +5,11 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchK
 4,Ives Maddelein,1970,Belgium,58.4,80,-100,-107.5,80,80,60,Masters 1,B,M,Single-ply
 1,Olivier Waymel,1966,France,66.75,175,180,184,184,184,67.5,Masters 1,B,M,Single-ply
 2,Francisco Rodríguez Gutiérrez,1969,Spain,66.75,-160,160,-170,160,160,67.5,Masters 1,B,M,Single-ply
-3,Gary Prater,1963,Britain,67.45,125,-135,-135,125,125,67.5,Masters 1,B,M,Single-ply
+3,Gary Prater,1963,UK,67.45,125,-135,-135,125,125,67.5,Masters 1,B,M,Single-ply
 1,Alphonse Cucuzella,1966,France,74.05,212.5,217.5,-228,217.5,217.5,75,Masters 1,B,M,Single-ply
 2,Atsuo Kozuki,1961,Luxembourg,74.35,-210,210,-215,210,210,75,Masters 1,B,M,Single-ply
 3,Vesa Hartikainen,1969,Finland,74.6,185,190,-202.5,190,190,75,Masters 1,B,M,Single-ply
-4,Lee Meachen,1965,Britain,74.25,-175,175,-190,175,175,75,Masters 1,B,M,Single-ply
+4,Lee Meachen,1965,UK,74.25,-175,175,-190,175,175,75,Masters 1,B,M,Single-ply
 1,Tomi Vikla,1970,Finland,81.8,210,227.5,-240,227.5,227.5,82.5,Masters 1,B,M,Single-ply
 2,Johan Lejon,1967,Sweden,81.95,195,200,-205,200,200,82.5,Masters 1,B,M,Single-ply
 3,Fabrice Bertin,1967,France,78.1,192.5,195,-200,195,195,82.5,Masters 1,B,M,Single-ply
@@ -18,13 +18,13 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchK
 6,Stig Frohol,1968,Norway,81.5,192.5,-197.5,-197.5,192.5,192.5,82.5,Masters 1,B,M,Single-ply
 7,Yury Rubanov,1967,Russia,81.95,180,190,-197.5,190,190,82.5,Masters 1,B,M,Single-ply
 8,Christophe Gauthier,1964,France,82.05,190,-195,-195,190,190,82.5,Masters 1,B,M,Single-ply
-9,Andrew Howard,1969,Britain,81.1,180,-190,-190,180,180,82.5,Masters 1,B,M,Single-ply
+9,Andrew Howard,1969,UK,81.1,180,-190,-190,180,180,82.5,Masters 1,B,M,Single-ply
 DQ,Jukka Saunamäki,1961,Sweden,82,-185,-185,-185,,,82.5,Masters 1,B,M,Single-ply
 1,Jiří Kati,1965,Czechia,89.35,230,-240,-240,230,230,90,Masters 1,B,M,Single-ply
 2,Miroslav Paukert,1963,Czechia,89.75,215,222.5,-232.5,222.5,222.5,90,Masters 1,B,M,Single-ply
 3,Frans van der Putten,1962,Netherlands,89.1,220,-225,-230,220,220,90,Masters 1,B,M,Single-ply
 4,Tony Skalare,1966,Sweden,88.7,175,-180,180,180,180,90,Masters 1,B,M,Single-ply
-DQ,James Jeffries,1969,Britain,89.5,-240,-240,-260,,,90,Masters 1,B,M,Single-ply
+DQ,James Jeffries,1969,UK,89.5,-240,-240,-260,,,90,Masters 1,B,M,Single-ply
 1,Juha Lehto,1964,Finland,99.5,220,232.5,242.5,242.5,242.5,100,Masters 1,B,M,Single-ply
 2,Olav Farstad Svein,1965,Norway,96.8,-220,220,-245,220,220,100,Masters 1,B,M,Single-ply
 3,Thomas Muller,1962,Germany,99.55,210,215,-222.5,215,215,100,Masters 1,B,M,Single-ply
@@ -59,7 +59,7 @@ DQ,Rene Hamers,1968,Netherlands,155.8,-225,-225,-230,,,125+,Masters 1,B,M,Single
 1,Peter Muigg,1958,Austria,67,142.5,-147.5,147.5,147.5,147.5,67.5,Masters 2,B,M,Single-ply
 2,Karsten Gelhar,1957,Germany,67.3,-140,142.5,145,145,145,67.5,Masters 2,B,M,Single-ply
 3,Erkki Rautiainen,1956,Finland,66.85,105,115,125,125,125,67.5,Masters 2,B,M,Single-ply
-1,Clifford Haynes,1960,Britain,74.35,180,185.5,-190,185.5,185.5,75,Masters 2,B,M,Single-ply
+1,Clifford Haynes,1960,UK,74.35,180,185.5,-190,185.5,185.5,75,Masters 2,B,M,Single-ply
 2,Jean-Claude Lair,1958,France,74.7,165,-170,-170,165,165,75,Masters 2,B,M,Single-ply
 3,Pekka Turunen,1960,Finland,74.71,-165,-165,165,165,165,75,Masters 2,B,M,Single-ply
 4,Peter Leister,1958,Germany,73.5,152.5,-160,-165,152.5,152.5,75,Masters 2,B,M,Single-ply
@@ -78,13 +78,13 @@ DQ,Kari Nieminen,1951,Finland,82.1,-172.5,-172.5,-172.5,,,82.5,Masters 2,B,M,Sin
 4,Ilkka Launonen,1954,Finland,87.75,-187.5,-187.5,187.5,187.5,187.5,90,Masters 2,B,M,Single-ply
 5,Jean-Pierre Aymon,1954,Switzerland,89.9,185,-192.5,-192.5,185,185,90,Masters 2,B,M,Single-ply
 1,Tarmo Vanhamäki,1960,Finland,97.3,-205,205,-215,205,205,100,Masters 2,B,M,Single-ply
-2,Martin Flett,1956,Britain,99.8,180,-207.5,-207.5,180,180,100,Masters 2,B,M,Single-ply
+2,Martin Flett,1956,UK,99.8,180,-207.5,-207.5,180,180,100,Masters 2,B,M,Single-ply
 3,Roger Piron,1960,Luxembourg,100,157.5,162.5,165,165,165,100,Masters 2,B,M,Single-ply
-DQ,Ian Kinghorn,1959,Britain,98.3,-215,-215,-215,,,100,Masters 2,B,M,Single-ply
+DQ,Ian Kinghorn,1959,UK,98.3,-215,-215,-215,,,100,Masters 2,B,M,Single-ply
 1,Jorg Pollman,1959,Germany,108.9,215,220,-222.5,220,220,110,Masters 2,B,M,Single-ply
 2,Kari Vilppola,1955,Finland,109.8,-220,220,-227.5,220,220,110,Masters 2,B,M,Single-ply
 3,Philippe Delapille,1960,France,109.85,220,-225,-225,220,220,110,Masters 2,B,M,Single-ply
-4,Marco De Meis,1957,Britain,109,-205,210,-222.5,210,210,110,Masters 2,B,M,Single-ply
+4,Marco De Meis,1957,UK,109,-205,210,-222.5,210,210,110,Masters 2,B,M,Single-ply
 5,Hans-Peter Falk,1951,Germany,109,200,-210,-220,200,200,110,Masters 2,B,M,Single-ply
 1,Klaus Homrich,1955,Germany,122,227.5,-235,240,240,240,125,Masters 2,B,M,Single-ply
 2,Jorg Herzinger,1955,Germany,115.4,-205,-205,205,205,205,125,Masters 2,B,M,Single-ply
@@ -98,7 +98,7 @@ DQ,Kari Alakorpi,1959,Finland,131.3,-215,-215,-215,,,125+,Masters 2,B,M,Single-p
 1,Claude Sitruk,1950,France,66.4,155,-160,-171,155,155,67.5,Masters 3,B,M,Single-ply
 2,Dieter Schuck,1948,Germany,67.35,122.5,127.5,-130,127.5,127.5,67.5,Masters 3,B,M,Single-ply
 3,Heimo Törmä,1950,Finland,67,105,112.5,-117.5,112.5,112.5,67.5,Masters 3,B,M,Single-ply
-1,Alex Lee,1942,Britain,74.8,150,-155,155,155,155,75,Masters 3,B,M,Single-ply
+1,Alex Lee,1942,UK,74.8,150,-155,155,155,155,75,Masters 3,B,M,Single-ply
 2,Hans Joergen Joergensen,1944,Denmark,73.3,-150,150,-152.5,150,150,75,Masters 3,B,M,Single-ply
 3,Jacques Bette,1950,France,74.25,145,-152.5,-152.5,145,145,75,Masters 3,B,M,Single-ply
 4,Sergey Nikiforov,1947,Russia,74.55,-140,-140,140,140,140,75,Masters 3,B,M,Single-ply
@@ -109,19 +109,19 @@ DQ,Kari Alakorpi,1959,Finland,131.3,-215,-215,-215,,,125+,Masters 2,B,M,Single-p
 4,Gunter Ute,1948,Germany,81.35,157.5,160,-165,160,160,82.5,Masters 3,B,M,Single-ply
 5,Allan Eriksson,1946,Sweden,76.15,150,-155,-155,150,150,82.5,Masters 3,B,M,Single-ply
 6,Harald Will,1940,Germany,82.3,140,147.5,-150,147.5,147.5,82.5,Masters 3,B,M,Single-ply
-7,William McFadyen,1934,Britain,80.55,-145,-145,145,145,145,82.5,Masters 3,B,M,Single-ply
+7,William McFadyen,1934,UK,80.55,-145,-145,145,145,145,82.5,Masters 3,B,M,Single-ply
 1,Juhani Lindholm,1949,Finland,87.7,170,175,180,180,180,90,Masters 3,B,M,Single-ply
 2,Uladzimir Halavach,1950,Belarus,88.6,155,-160,162.5,162.5,162.5,90,Masters 3,B,M,Single-ply
 3,Fred Marienfeldt,1948,Germany,86.7,155,160,-165,160,160,90,Masters 3,B,M,Single-ply
 4,Gaetan Guarino,1949,France,84.35,137.5,142.5,-147.5,142.5,142.5,90,Masters 3,B,M,Single-ply
-5,Mike Edwards,1946,Britain,87.95,127.5,-132.5,-132.5,127.5,127.5,90,Masters 3,B,M,Single-ply
+5,Mike Edwards,1946,UK,87.95,127.5,-132.5,-132.5,127.5,127.5,90,Masters 3,B,M,Single-ply
 6,Jiří Poutník,1946,Czechia,82.6,120,125,-127.5,125,125,90,Masters 3,B,M,Single-ply
 7,Tapani Puhakka,1944,Finland,89.5,125,-135,-145,125,125,90,Masters 3,B,M,Single-ply
 DQ,Karel Achtner,1944,Czechia,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Single-ply
 1,Matti Silvander,1944,Finland,99.25,180,190,-200,190,190,100,Masters 3,B,M,Single-ply
 2,Günter Wittkowski,1940,Germany,90.9,155,165,167.5,167.5,167.5,100,Masters 3,B,M,Single-ply
 3,Jiří Horník,1948,Czechia,97.35,-160,-160,162.5,162.5,162.5,100,Masters 3,B,M,Single-ply
-4,Tom Collins,1946,Britain,98.1,162.5,-167.5,-167.5,162.5,162.5,100,Masters 3,B,M,Single-ply
+4,Tom Collins,1946,UK,98.1,162.5,-167.5,-167.5,162.5,162.5,100,Masters 3,B,M,Single-ply
 5,Peer Bjaaland,1942,Norway,90.4,-155,155,-162.5,155,155,100,Masters 3,B,M,Single-ply
 6,Rolf Roye,1948,Germany,98.15,152.5,-160,-160,152.5,152.5,100,Masters 3,B,M,Single-ply
 7,Michel Dairou,1949,France,98.4,-152.5,152.5,-157.5,152.5,152.5,100,Masters 3,B,M,Single-ply
@@ -133,7 +133,7 @@ DQ,Karel Achtner,1944,Czechia,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Singl
 3,Kurt Nygård,1946,Finland,106.85,155,165,-172.5,165,165,110,Masters 3,B,M,Single-ply
 4,Reijo Jaakkola,1948,Finland,103.6,150,157.5,-165,157.5,157.5,110,Masters 3,B,M,Single-ply
 5,Franz Mracek,1947,Austria,104,-150,-150,150,150,150,110,Masters 3,B,M,Single-ply
-6,Frederick Smith,1947,Britain,107.9,122.5,127.5,-130,127.5,127.5,110,Masters 3,B,M,Single-ply
+6,Frederick Smith,1947,UK,107.9,122.5,127.5,-130,127.5,127.5,110,Masters 3,B,M,Single-ply
 1,Allan Fuglsang,1950,Denmark,112.3,182.5,190,200,200,200,125,Masters 3,B,M,Single-ply
 2,Christer Nylund,1944,Finland,117.45,200,-212.5,-212.5,200,200,125,Masters 3,B,M,Single-ply
 3,Mujir El Alami,1946,Sweden,113.35,-160,160,165,165,165,125,Masters 3,B,M,Single-ply
@@ -159,7 +159,7 @@ DQ,Karel Achtner,1944,Czechia,87.9,-152.5,-152.5,-152.5,,,90,Masters 3,B,M,Singl
 2,Heli Valtonen,1965,Finland,73.4,-85,85,92.5,92.5,92.5,75,Masters 1,B,F,Single-ply
 1,Claudia Weinzierl,1970,Germany,82.5,120,125,130,130,130,82.5,Masters 1,B,F,Single-ply
 1,Susanne Rekittke,1965,Germany,89.75,122.5,-125,-130,122.5,122.5,90,Masters 1,B,F,Single-ply
-2,Jennifer Nicoll,1966,Britain,86.5,107.5,-120,-127.5,107.5,107.5,90,Masters 1,B,F,Single-ply
+2,Jennifer Nicoll,1966,UK,86.5,107.5,-120,-127.5,107.5,107.5,90,Masters 1,B,F,Single-ply
 3,Nathalie Gransard,1964,France,83.2,90,-95,,90,90,90,Masters 1,B,F,Single-ply
 1,Joanne Schaefer,1967,Netherlands,107.5,-170,170,,170,170,90+,Masters 1,B,F,Single-ply
 2,Leila Duhem,1963,France,93.15,135,-145,150,150,150,90+,Masters 1,B,F,Single-ply

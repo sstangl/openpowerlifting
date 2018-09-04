@@ -9,7 +9,7 @@ Place,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 1,Natalya Kashirina,1954,Russia,60,60,-150,152.5,-170,152.5,87.5,92.5,-95,92.5,165,180,188,188,432.5,F,Masters 1,SBD,Single-ply
 1,Donatella Beretta,1959,Italy,67.5,61.8,120,132.5,-140,132.5,70,-75,-75,70,155,170,-180,170,372.5,F,Masters 1,SBD,Single-ply
 1,Nataliya Tsukanova,1956,Ukraine,75,71.9,155,-160,-160,155,75,-77.5,-77.5,75,145,152.5,-157.5,152.5,382.5,F,Masters 1,SBD,Single-ply
-2,Catherine Wass,1957,Britain,75,72.55,120,-130,-140,120,55,62.5,-67.5,62.5,110,127.5,-130,127.5,310,F,Masters 1,SBD,Single-ply
+2,Catherine Wass,1957,UK,75,72.55,120,-130,-140,120,55,62.5,-67.5,62.5,110,127.5,-130,127.5,310,F,Masters 1,SBD,Single-ply
 1,Tatyana Ponomareva,1962,Russia,82.5,80.5,120,140,-165,140,-90,90,95,95,125,145,160,160,395,F,Masters 1,SBD,Single-ply
 1,Eva Speth,1954,Germany,90,82.8,110,-120,120,120,105,107.5,-110,107.5,140,150,-162.5,150,377.5,F,Masters 1,SBD,Single-ply
 2,Briska Cech,1957,Germany,90,88.65,-90,-95,95,95,42.5,47.5,-52.5,47.5,110,120,130,130,272.5,F,Masters 1,SBD,Single-ply
@@ -41,7 +41,7 @@ Place,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 1,Vladimir Tsukanov,1959,Russia,110,106.25,290,-320,320,320,180,192.5,200,200,250,265,272.5,272.5,792.5,M,Masters 1,SBD,Single-ply
 2,Yves Ponnau,1952,France,110,100.2,230,245,260,260,130,140,-147.5,140,250,270,-290,270,670,M,Masters 1,SBD,Single-ply
 1,Yuriy Bespalov,1956,Russia,125,124.5,280,300,320,320,180,190,-200,190,260,280,290,290,800,M,Masters 1,SBD,Single-ply
-2,Alan Moses,1961,Britain,125,118.4,230,-250,270,270,140,160,170,170,240,260,275,275,715,M,Masters 1,SBD,Single-ply
+2,Alan Moses,1961,UK,125,118.4,230,-250,270,270,140,160,170,170,240,260,275,275,715,M,Masters 1,SBD,Single-ply
 1,Viktor Naleykin,1953,Ukraine,125+,134.1,340,355,365,365,210,222.5,230,230,310,-330,,310,905,M,Masters 1,SBD,Single-ply
 2,Yuriy Zabolotnyy,1958,Ukraine,125+,151,330,350,365,365,190,-195,-195,190,280,300,315,315,870,M,Masters 1,SBD,Single-ply
 3,Igor Nastynov,1961,Russia,125+,151,305,-342.5,-342.5,305,200,-215,-215,200,260,290,-305,290,795,M,Masters 1,SBD,Single-ply
@@ -54,7 +54,7 @@ Place,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 4,Burkhard Steffen,1950,Germany,67.5,66.9,170,177.5,185,185,110,115,120,120,155,162.5,-165,162.5,467.5,M,Masters 2,SBD,Single-ply
 5,Ivan Paranko,1946,Ukraine,67.5,66.85,165,172.5,-180,172.5,100,105,107.5,107.5,170,-177.5,177.5,177.5,457.5,M,Masters 2,SBD,Single-ply
 1,Leonid Lokhov,1948,Russia,75,74.8,230,245,260,260,140,150,-160,150,250,270,-282.5,270,680,M,Masters 2,SBD,Single-ply
-2,Stanley Macrow,1949,Britain,75,71.6,180,190,200,200,135,140,-142.5,140,205,217.5,-222.5,217.5,557.5,M,Masters 2,SBD,Single-ply
+2,Stanley Macrow,1949,UK,75,71.6,180,190,200,200,135,140,-142.5,140,205,217.5,-222.5,217.5,557.5,M,Masters 2,SBD,Single-ply
 3,Jean-Louis Dumoulin,1943,France,75,72.95,-185,-185,185,185,135,-142.5,142.5,142.5,200,-217.5,217.5,217.5,545,M,Masters 2,SBD,Single-ply
 4,Mohammed Didanov,1950,Ukraine,75,73.55,185,,,185,120,-130,130,130,185,200,210,210,525,M,Masters 2,SBD,Single-ply
 1,Valeriy Glazunov,1948,Russia,82.5,81.75,-260,260,265,265,170,180,185,185,220,-225,-225,220,670,M,Masters 2,SBD,Single-ply
@@ -72,7 +72,7 @@ Place,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 3,Victor Surov,1950,Russia,100,90.45,230,250,-260,250,130,135,,135,230,255,265,265,650,M,Masters 2,SBD,Single-ply
 4,Emil Schmutzenhofer,1949,Austria,100,92.75,190,200,205,205,140,150,155,155,220,230,-240,230,590,M,Masters 2,SBD,Single-ply
 1,Alexander Maksimushkin,1950,Russia,110,107.45,280,300,310,310,190,200,-210,200,240,260,,260,770,M,Masters 2,SBD,Single-ply
-2,Arthur White,1951,Britain,110,107.45,230,250,260,260,130,140,-150,140,250,300,312.5,312.5,712.5,M,Masters 2,SBD,Single-ply
+2,Arthur White,1951,UK,110,107.45,230,250,260,260,130,140,-150,140,250,300,312.5,312.5,712.5,M,Masters 2,SBD,Single-ply
 3,Volodymyr Lebedev,1950,Ukraine,110,107,260,275,-290,275,160,170,-180,170,250,-265,265,265,710,M,Masters 2,SBD,Single-ply
 4,Helmuth Platzer,1951,Germany,110,105.1,235,250,260,260,145,152.5,157.5,157.5,250,270,-282.5,270,687.5,M,Masters 2,SBD,Single-ply
 1,Mykola Sharliev,1951,Ukraine,125,118.7,300,340,350,350,210,-230,-230,210,277.5,300,-310.5,300,860,M,Masters 2,SBD,Single-ply
@@ -95,13 +95,13 @@ Place,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 1,Alexander Kulikov,1941,Russia,82.5,80.85,-215,215,225,225,125,-135,135,135,220,235,255,255,615,M,Masters 3,SBD,Single-ply
 2,Pierre Gimbert,1939,France,82.5,81.7,210,225,235,235,125,130,-135,130,210,-220,-232.5,210,575,M,Masters 3,SBD,Single-ply
 3,Vyacheslav Terzov,1938,Russia,82.5,79.7,-200,200,220,220,100,110,-115,110,200,-210,210,210,540,M,Masters 3,SBD,Single-ply
-4,Norman Anderson,1939,Britain,82.5,80.95,160,165,170,170,120,125,127.5,127.5,185,200,202.5,202.5,500,M,Masters 3,SBD,Single-ply
+4,Norman Anderson,1939,UK,82.5,80.95,160,165,170,170,120,125,127.5,127.5,185,200,202.5,202.5,500,M,Masters 3,SBD,Single-ply
 5,Peter Sosna,1939,Germany,82.5,77.2,90,100,-110,100,75,-90,-90,75,100,-115,-125,100,275,M,Masters 3,SBD,Single-ply
 1,Gennady Saprygin,1940,Ukraine,90,83.1,-135,135,145,145,95,100,105,105,155,165,172.5,172.5,422.5,M,Masters 3,SBD,Single-ply
 2,Hans Behnke,1935,Germany,90,88.65,130,140,150,150,85,92.5,-100,92.5,160,175,-182.5,175,417.5,M,Masters 3,SBD,Single-ply
 3,Vasyl Nechetailo,1935,Ukraine,90,86.25,-135,135,145,145,90,100,107.5,107.5,150,162.5,-167.5,162.5,415,M,Masters 3,SBD,Single-ply
 1,Georgiy Govallo,1939,Ukraine,100,98.35,220,235,240,240,130,140,-150,140,220,240,-250,240,620,M,Masters 3,SBD,Single-ply
-2,Ted Cooper,1937,Britain,100,97.8,200,-215,-215,200,120,-130,130,130,210,220,225,225,555,M,Masters 3,SBD,Single-ply
+2,Ted Cooper,1937,UK,100,97.8,200,-215,-215,200,120,-130,130,130,210,220,225,225,555,M,Masters 3,SBD,Single-ply
 3,Wolfgang Kolditz,1940,Germany,100,90.25,125,135,140,140,95,100,105,105,135,145,155,155,400,M,Masters 3,SBD,Single-ply
 1,Vsevolod Babenko,1937,Ukraine,110,100.85,225,260,270,270,150,160,-170,160,260,270,280,280,710,M,Masters 3,SBD,Single-ply
 2,Vyacheslav Tsyganok,1938,Ukraine,110,100.25,170,200,-210,200,130,140,-150,140,180,200,220,220,560,M,Masters 3,SBD,Single-ply

@@ -4,7 +4,7 @@ Place,Name,Equipment,Sex,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 1,Lewis Noppers,Single-ply,M,1970,Canada,65.84,232.5,242.5,250,250,-150,150,155,155,245,260,270,270,675,66,Masters 1,SBD
 2,Jean-Sébastien Rhéaume,Single-ply,M,1974,Canada,65.7,230,-240,240,240,170,175,177.5,177.5,220,227.5,-232.5,227.5,645,66,Masters 1,SBD
 1,Nobuyuki Hamada,Single-ply,M,1969,Japan,73.64,275,-290,290,290,-210,210,-220,210,242.5,252.5,260,260,760,74,Masters 1,SBD
-2,Phillip Richard,Single-ply,M,1971,Britain,73.62,280,295,-305,295,-210,210,-215,210,235,245,-255,245,750,74,Masters 1,SBD
+2,Phillip Richard,Single-ply,M,1971,UK,73.62,280,295,-305,295,-210,210,-215,210,235,245,-255,245,750,74,Masters 1,SBD
 3,Enkhbat Sanduijav,Single-ply,M,1974,Mongolia,73.46,230,245,275,275,130,-145,152.5,152.5,230,245,-255,245,672.5,74,Masters 1,SBD
 4,Thierry Lauilhe,Single-ply,M,1969,France,73.24,-200,200,215,215,150,157.5,-162.5,157.5,200,215,-220,215,587.5,74,Masters 1,SBD
 5,Gérald Sertelet,Single-ply,M,1968,France,72.66,180,-190,190,190,145,152.5,157.5,157.5,180,200,-210,200,547.5,74,Masters 1,SBD
@@ -94,7 +94,7 @@ DQ,Koichi Nakatani,Single-ply,M,1960,Japan,103.9,210,220,-222.5,220,-220,-220,-2
 DQ,Mitsuru Osawa,Single-ply,M,1941,Japan,71.82,-160,-160,-160,,80,90,100,100,160,170,180,180,,74,Masters 4,SBD
 1,Alan Tepper,Single-ply,M,1945,USA,80.9,185,-197.5,197.5,197.5,-132.5,132.5,-137.5,132.5,210,222.5,230,230,560,83,Masters 4,SBD
 2,Tamio Yasui,Single-ply,M,1942,Japan,76.04,130,140,145,145,-105,105,117.5,117.5,135,145,150,150,412.5,83,Masters 4,SBD
-1,Michael Ellender,Single-ply,M,1945,Britain,89.86,145,160,-170,160,130,140,145,145,215,225,-237.5,225,530,93,Masters 4,SBD
+1,Michael Ellender,Single-ply,M,1945,UK,89.86,145,160,-170,160,130,140,145,145,215,225,-237.5,225,530,93,Masters 4,SBD
 2,William Rice,Single-ply,M,1944,USA,91.24,182.5,197.5,-202.5,197.5,92.5,100,-102.5,100,227.5,-242.5,-242.5,227.5,525,93,Masters 4,SBD
 3,Tapani Puhakka,Single-ply,M,1944,Finland,87.88,110,120,127.5,127.5,110,115,117.5,117.5,160,170,180,180,425,93,Masters 4,SBD
 4,Tom O'Keefe,Single-ply,M,1935,USA,87.2,130,142.5,150,150,92.5,97.5,100,100,150,157.5,-162.5,157.5,407.5,93,Masters 4,SBD
@@ -119,7 +119,7 @@ DQ,Sybille Hampel,Single-ply,F,1967,Germany,70.54,-150,155,162.5,162.5,-77.5,-77
 1,Liane Blyn,Single-ply,F,1972,USA,82.18,-227.5,232.5,242.5,242.5,170,177.5,185,185,207.5,215,225,225,652.5,84,Masters 1,SBD
 2,Ielja Strik,Single-ply,F,1973,Netherlands,83.7,-245,245,-252.5,245,180,187.5,-192.5,187.5,-207.5,207.5,-215,207.5,640,84,Masters 1,SBD
 3,Norma Nieves,Single-ply,F,1970,Puerto Rico,80.1,190,200,210,210,115,-127.5,-135,115,190,200,-207.5,200,525,84,Masters 1,SBD
-4,Michelle Brand,Single-ply,F,1973,Britain,83.76,147.5,157.5,-165,157.5,95,105,112.5,112.5,142.5,155,-165,155,425,84,Masters 1,SBD
+4,Michelle Brand,Single-ply,F,1973,UK,83.76,147.5,157.5,-165,157.5,95,105,112.5,112.5,142.5,155,-165,155,425,84,Masters 1,SBD
 5,Alena Krčmářová,Single-ply,F,1975,Czechia,77.68,140,150,-155,150,90,95,97.5,97.5,135,142.5,-150,142.5,390,84,Masters 1,SBD
 6,Ivana Turekova,Single-ply,F,1975,Slovakia,80.9,-140,140,-157.5,140,70,80,-87.5,80,120,130,-140,130,350,84,Masters 1,SBD
 1,Lakshmi Meadows,Single-ply,F,1975,USA,112.5,220,230,235,235,122.5,-127.5,127.5,127.5,192.5,-200,200,200,562.5,84+,Masters 1,SBD
@@ -142,9 +142,9 @@ DQ,Anja Keränen,Single-ply,F,1959,Sweden,62.16,-130,-135,-135,,-95,-95,-100,,14
 2,Serena Perry,Single-ply,F,1965,New Zealand,70.56,130,-135,135,135,87.5,-92.5,92.5,92.5,132.5,142.5,-150,142.5,370,72,Masters 2,SBD
 3,Lene Einarsen,Single-ply,F,1963,Norway,70.8,140,-142.5,-145,140,80,85,87.5,87.5,137.5,140,-145,140,367.5,72,Masters 2,SBD
 1,Laura Styrlund,Single-ply,F,1964,USA,82.72,-152.5,152.5,-165,152.5,110,120,-125,120,165,177.5,192.5,192.5,465,84,Masters 2,SBD
-2,Jean Maton,Single-ply,F,1963,Britain,83.64,-160,-160,160,160,100,107.5,-112.5,107.5,170,-180,-180,170,437.5,84,Masters 2,SBD
+2,Jean Maton,Single-ply,F,1963,UK,83.64,-160,-160,160,160,100,107.5,-112.5,107.5,170,-180,-180,170,437.5,84,Masters 2,SBD
 1,Jill Arnow,Single-ply,F,1959,USA,91.94,-172.5,172.5,-180,172.5,120,125,130,130,137.5,145,-162.5,145,447.5,84+,Masters 2,SBD
-2,Jackie Blasbery,Single-ply,F,1963,Britain,85.62,50,70,90,90,105,115,125,125,120,140,162.5,162.5,377.5,84+,Masters 2,SBD
+2,Jackie Blasbery,Single-ply,F,1963,UK,85.62,50,70,90,90,105,115,125,125,120,140,162.5,162.5,377.5,84+,Masters 2,SBD
 1,Trish Muldrock,Single-ply,F,1954,New Zealand,46.4,100,105,110,110,62.5,65,70,70,120,130,136,136,316,47,Masters 3,SBD
 1,Susan Elwyn,Single-ply,F,1947,USA,47.58,85,-100,-102.5,85,45,50,52.5,52.5,110,115,125,125,262.5,52,Masters 3,SBD
 2,Maryse Malicot,Single-ply,F,1946,France,51.3,-90,90,95,95,45,47.5,-50,47.5,90,97.5,102.5,102.5,245,52,Masters 3,SBD

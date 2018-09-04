@@ -15,7 +15,7 @@ Place,Name,Equipment,Sex,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3
 4,Shawn Warren,Single-ply,M,1999,USA,65.05,212.5,-222.5,-227.5,212.5,117.5,125,132.5,132.5,217.5,230,-242.5,230,575,66,Sub-Juniors,SBD
 5,Michael Voelkel,Single-ply,M,1998,USA,65.03,212.5,222.5,227.5,227.5,120,127.5,-137.5,127.5,210,-220,-220,210,565,66,Sub-Juniors,SBD
 6,Yuuki Nakayama,Single-ply,M,1997,Japan,65.54,200,210,-220,210,120,130,-132.5,130,170,180,185,185,525,66,Sub-Juniors,SBD
-7,Joe Sherwood,Single-ply,M,1998,Britain,61.3,130,137.5,142.5,142.5,77.5,85,87.5,87.5,140,147.5,157.5,157.5,387.5,66,Sub-Juniors,SBD
+7,Joe Sherwood,Single-ply,M,1998,UK,61.3,130,137.5,142.5,142.5,77.5,85,87.5,87.5,140,147.5,157.5,157.5,387.5,66,Sub-Juniors,SBD
 DQ,Ruslan Ruzimuradov,Single-ply,M,1998,Ukraine,65.34,-227.5,-227.5,-227.5,,165,170,175,175,210,220,-225,220,,66,Sub-Juniors,SBD
 DQ,Lukas Kudresovas,Single-ply,M,1997,Lithuania,65.73,202.5,212.5,220,220,-150,-150,-150,,210,-222.5,-222.5,210,,66,Sub-Juniors,SBD
 1,Vladislav Sheruntaev,Single-ply,M,1997,Russia,73.76,250,260,270,270,155,162.5,165,165,235,245,255,255,690,74,Sub-Juniors,SBD
@@ -25,7 +25,7 @@ DQ,Lukas Kudresovas,Single-ply,M,1997,Lithuania,65.73,202.5,212.5,220,220,-150,-
 5,Andriy Bilyk,Single-ply,M,1998,Ukraine,72.8,240,-250,-250,240,150,155,160,160,210,-225,225,225,625,74,Sub-Juniors,SBD
 6,Ryoma Yagi,Single-ply,M,1997,Japan,73.77,205,215,-220,215,152.5,160,-165,160,205,215,-225,215,590,74,Sub-Juniors,SBD
 7,Hiroshi Ishikawa,Single-ply,M,1997,Japan,73.68,200,210,-220,210,140,-145,145,145,190,200,-205,200,555,74,Sub-Juniors,SBD
-8,Daniel Sherman,Single-ply,M,1998,Britain,71.96,200,210,-215,210,115,122.5,127.5,127.5,210,-220,-220,210,547.5,74,Sub-Juniors,SBD
+8,Daniel Sherman,Single-ply,M,1998,UK,71.96,200,210,-215,210,115,122.5,127.5,127.5,210,-220,-220,210,547.5,74,Sub-Juniors,SBD
 9,Tautvydas Sutkus,Single-ply,M,1997,Lithuania,72.83,180,190,-210,190,-140,140,-150,140,200,-210,-210,200,530,74,Sub-Juniors,SBD
 10,Jan Pavlíček,Single-ply,M,1997,Czechia,73.16,150,160,-165,160,125,130,-137.5,130,160,175,-190,175,465,74,Sub-Juniors,SBD
 1,Kostiantyn Musiienko,Single-ply,M,1997,Ukraine,81.85,260,272.5,-282.5,272.5,210,225,235,235,235,250,262.5,262.5,770,83,Sub-Juniors,SBD
@@ -76,7 +76,7 @@ DQ,Viacheslav Asanov,Single-ply,M,1997,Russia,116.29,-330,-330,-330,,220,227.5,-
 2,Stephen Lehew,Single-ply,M,1995,USA,73.25,260,-275,-275,260,205,212.5,220,220,270,285,-297.5,285,765,74,Juniors,SBD
 3,Oleksandr Borodatyi,Single-ply,M,1994,Ukraine,73.24,285,295,300,300,-175,175,185,185,260,270,-275,270,755,74,Juniors,SBD
 4,Ilya Mishin,Single-ply,M,1995,Russia,73.46,275,285,-292.5,285,175,180,-185,180,270,282.5,-292.5,282.5,747.5,74,Juniors,SBD
-5,James Duff,Single-ply,M,1992,Britain,73.91,280,290,297.5,297.5,155,160,-165,160,255,262.5,-267.5,262.5,720,74,Juniors,SBD
+5,James Duff,Single-ply,M,1992,UK,73.91,280,290,297.5,297.5,155,160,-165,160,255,262.5,-267.5,262.5,720,74,Juniors,SBD
 6,Marius Milla,Single-ply,M,1993,Germany,73.69,250,260,-265,260,155,162.5,167.5,167.5,260,272.5,285,285,712.5,74,Juniors,SBD
 7,Yoshiki Suzuki,Single-ply,M,1993,Japan,73.53,-265,265,-280,265,170,180,-190,180,245,260,265,265,710,74,Juniors,SBD
 8,Takahiro Ono,Single-ply,M,1994,Japan,73.42,270,280,-287.5,280,-190,-195,195,195,200,-225,-225,200,675,74,Juniors,SBD
@@ -93,7 +93,7 @@ DQ,Bozhidar Georgiev,Single-ply,M,1992,Bulgaria,74,-265,-265,-265,,200,210,-217.
 5,Marcin Kapala,Single-ply,M,1992,Poland,82.93,270,280,-290,280,160,170,175,175,240,260,-272.5,260,715,83,Juniors,SBD
 6,Jun Furukawa,Single-ply,M,1996,Japan,80.49,260,280,-285,280,140,-160,-160,140,260,-280,-280,260,680,83,Juniors,SBD
 7,Mickel Dahl,Single-ply,M,1996,Denmark,82.77,-257.5,257.5,-265,257.5,-142.5,142.5,-150,142.5,-270,270,-285,270,670,83,Juniors,SBD
-8,Ryan Strang,Single-ply,M,1994,Britain,81.98,240,252.5,262.5,262.5,160,165,170,170,225,235,-242.5,235,667.5,83,Juniors,SBD
+8,Ryan Strang,Single-ply,M,1994,UK,81.98,240,252.5,262.5,262.5,160,165,170,170,225,235,-242.5,235,667.5,83,Juniors,SBD
 1,Nikita Vanshin,Single-ply,M,1992,Russia,92.29,320,-330,-330,320,250,260,270,270,287.5,297.5,310,310,900,93,Juniors,SBD
 2,Erik Gunhamn,Single-ply,M,1992,Sweden,92.89,-320,-325,325,325,-200,200,207.5,207.5,-330,357.5,-370,357.5,890,93,Juniors,SBD
 3,Oleksandr Rubets,Single-ply,M,1996,Ukraine,92.9,-360,360,-372.5,360,225,235,240,240,-287.5,287.5,-302.5,287.5,887.5,93,Juniors,SBD

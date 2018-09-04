@@ -13,11 +13,11 @@ Place,Sex,Division,WeightClassKg,Name,Country,BirthYear,BodyweightKg,Best3SquatK
 1,F,Masters 1,67.5,Paula Houston,USA,1961,66.85,157.5,100,175,432.5,SBD,Single-ply
 2,F,Masters 1,67.5,Lyudmila Kuleshova,Russia,1963,66.85,150,95,170,415,SBD,Single-ply
 3,F,Masters 1,67.5,Kirsten Broggaard,Denmark,1962,65.85,150,92.5,165,407.5,SBD,Single-ply
-4,F,Masters 1,67.5,Joanna Banks,Britain,1961,65.75,120,50,135,305,SBD,Single-ply
-1,F,Masters 1,75,Jackie Blasbery,Britain,1963,69.4,155,107.5,195,457.5,SBD,Single-ply
+4,F,Masters 1,67.5,Joanna Banks,UK,1961,65.75,120,50,135,305,SBD,Single-ply
+1,F,Masters 1,75,Jackie Blasbery,UK,1963,69.4,155,107.5,195,457.5,SBD,Single-ply
 2,F,Masters 1,75,Lizzy Kjeldsen,Denmark,1962,72.85,110,75,120,305,SBD,Single-ply
 3,F,Masters 1,75,Roy Choudary Ratan Moni,India,1955,68.25,100,45,110,255,SBD,Single-ply
-1,F,Masters 1,82.5,Jean Matton,Britain,1963,80.55,160,107.5,175,442.5,SBD,Single-ply
+1,F,Masters 1,82.5,Jean Matton,UK,1963,80.55,160,107.5,175,442.5,SBD,Single-ply
 2,F,Masters 1,82.5,Elina Aalto,Finland,1963,75.95,127.5,92.5,130,350,SBD,Single-ply
 1,F,Masters 2,44,Harumi Matsumoto,Japan,1953,43.7,110,73.5,125.5,309,SBD,Single-ply
 1,F,Masters 2,48,Seija Turunen,Finland,1947,47.45,80,52.5,105,237.5,SBD,Single-ply
@@ -30,16 +30,16 @@ Place,Sex,Division,WeightClassKg,Name,Country,BirthYear,BodyweightKg,Best3SquatK
 1,F,Masters 2,67.5,Tatyana Fomina,Russia,1946,66.35,180,70,180,430,SBD,Single-ply
 2,F,Masters 2,67.5,Marie Šourková,Czechia,1944,61.3,85,65,130,280,SBD,Single-ply
 3,F,Masters 2,67.5,Ritva Vainio,Finland,1949,60.85,77.5,42.5,105,225,SBD,Single-ply
-1,F,Masters 2,75,Doreen Dowsett,Britain,1951,68.05,115,50,140,305,SBD,Single-ply
-1,F,Masters 2,82.5,Sue Hollands,Britain,1951,80.15,181,80,155,416,SBD,Single-ply
+1,F,Masters 2,75,Doreen Dowsett,UK,1951,68.05,115,50,140,305,SBD,Single-ply
+1,F,Masters 2,82.5,Sue Hollands,UK,1951,80.15,181,80,155,416,SBD,Single-ply
 1,F,Masters 2,90,Eva Speth,Germany,1954,87,125,112.5,145,382.5,SBD,Single-ply
 1,M,Masters 1,52,Nelappan K,India,1964,51.55,140,80,180,400,SBD,Single-ply
-1,M,Masters 1,56,John Maxwell,Britain,1964,53.9,200,115,227.5,542.5,SBD,Single-ply
+1,M,Masters 1,56,John Maxwell,UK,1964,53.9,200,115,227.5,542.5,SBD,Single-ply
 2,M,Masters 1,56,Krishna R. Mohan,India,1961,54.6,182.5,77.5,190,450,SBD,Single-ply
 3,M,Masters 1,56,Karel Christians,South Africa,1963,55.95,150,90,190,430,SBD,Single-ply
 1,M,Masters 1,60,Anatoly Merzlyakov,Russia,1956,59.85,205,120,190,515,SBD,Single-ply
 2,M,Masters 1,60,Anwar Saeed Butt,Pakistan,1962,59.7,175,95,210,480,SBD,Single-ply
-3,M,Masters 1,60,Steve Brown,Britain,1962,60,170,90,210,470,SBD,Single-ply
+3,M,Masters 1,60,Steve Brown,UK,1962,60,170,90,210,470,SBD,Single-ply
 4,M,Masters 1,60,John Bissen,USA,1957,59.7,175,87.5,177.5,440,SBD,Single-ply
 DQ,M,Masters 1,60,Ial Mohan,India,1960,59.35,167.5,,185,,SBD,Single-ply
 1,M,Masters 1,67.5,Toshihiko Tada,Japan,1956,66.85,225,160,240,625,SBD,Single-ply
@@ -50,7 +50,7 @@ DQ,M,Masters 1,67.5,Ichiro Kawabe,Japan,1961,67.15,,,,,SBD,Single-ply
 1,M,Masters 1,75,David Bracken,USA,1964,73.5,275,172.5,240,687.5,SBD,Single-ply
 2,M,Masters 1,75,Erik Rasmussen,Denmark,1962,74.8,242.5,170,232.5,645,SBD,Single-ply
 3,M,Masters 1,75,John Myers,Australia,,74.85,220,142.5,260,622.5,SBD,Single-ply
-4,M,Masters 1,75,Singh Karnal,Britain,1957,72.25,220,147.5,230,597.5,SBD,Single-ply
+4,M,Masters 1,75,Singh Karnal,UK,1957,72.25,220,147.5,230,597.5,SBD,Single-ply
 5,M,Masters 1,75,Harnek Rai,Canada,1957,72.5,200,150,195,545,SBD,Single-ply
 DQ,M,Masters 1,75,Koichi Taniguchi,Japan,1960,73.25,,,,,SBD,Single-ply
 DD,M,Masters 1,75,Jan Wilcynski,Poland,1955,74.55,277.5,150,287.5,,SBD,Single-ply
@@ -65,7 +65,7 @@ DD,M,Masters 1,75,Jan Wilcynski,Poland,1955,74.55,277.5,150,287.5,,SBD,Single-pl
 9,M,Masters 1,82.5,Satya Agniektri,Australia,,79.15,242.5,155,240,637.5,SBD,Single-ply
 10,M,Masters 1,82.5,Donald Julius,South Africa,1963,81.25,212.5,150,230,592.5,SBD,Single-ply
 DQ,M,Masters 1,82.5,Jorma Ollikainen,Finland,1957,79.95,,,,,SBD,Single-ply
-DQ,M,Masters 1,82.5,Jaswinder Singh Cheema,Britain,1964,81.85,,,,,SBD,Single-ply
+DQ,M,Masters 1,82.5,Jaswinder Singh Cheema,UK,1964,81.85,,,,,SBD,Single-ply
 DQ,M,Masters 1,82.5,Pertti Taavitsainen,Finland,1959,81.9,,,,,SBD,Single-ply
 1,M,Masters 1,90,Leonid Nushtaev,Russia,1963,88.7,290,200,280,770,SBD,Single-ply
 2,M,Masters 1,90,Alejandro Méndez,Venezuela,1964,89.35,270,212.5,277.5,760,SBD,Single-ply
@@ -106,22 +106,22 @@ DQ,M,Masters 1,90,Vikas T.K.,India,1962,82.95,,,,,SBD,Single-ply
 1,M,Masters 2,60,S.V.S. Kamath,India,1953,59.5,200,100,212.5,512.5,SBD,Single-ply
 2,M,Masters 2,60,Vladimir Shishkin,Russia,1950,59.35,170,110,180,460,SBD,Single-ply
 1,M,Masters 2,67.5,Alain Cuvelier,France,1953,67.5,220,125,210,555,SBD,Single-ply
-2,M,Masters 2,67.5,Mick James,Britain,1949,66.85,200,150,200,550,SBD,Single-ply
+2,M,Masters 2,67.5,Mick James,UK,1949,66.85,200,150,200,550,SBD,Single-ply
 3,M,Masters 2,67.5,Alexander Ponedelin,Russia,1950,66.05,210,95,220,525,SBD,Single-ply
 4,M,Masters 2,67.5,Mehta Shyam Babu,India,1952,67.4,180,100,192.5,472.5,SBD,Single-ply
 5,M,Masters 2,67.5,Vyas Mukul,India,,64.55,165,115,160,440,SBD,Single-ply
 1,M,Masters 2,75,Claude Couturier,France,1952,73.3,215,135,230,580,SBD,Single-ply
-2,M,Masters 2,75,Stan Macrow,Britain,1949,71.65,195,145,220,560,SBD,Single-ply
+2,M,Masters 2,75,Stan Macrow,UK,1949,71.65,195,145,220,560,SBD,Single-ply
 3,M,Masters 2,75,Singh Inderjit,India,1954,74.55,185,155,200,540,SBD,Single-ply
 4,M,Masters 2,75,Wolfgang Hökendorf,Germany,1946,74,182.5,140,200,522.5,SBD,Single-ply
 5,M,Masters 2,75,Than Lokna,India,1950,74.75,180,100,180,460,SBD,Single-ply
-1,M,Masters 2,82.5,Will Lincoln,Britain,1950,82.5,242.5,175,250,667.5,SBD,Single-ply
+1,M,Masters 2,82.5,Will Lincoln,UK,1950,82.5,242.5,175,250,667.5,SBD,Single-ply
 2,M,Masters 2,82.5,Lutz Schuricht,Germany,1951,81.8,232.5,172.5,240,645,SBD,Single-ply
 3,M,Masters 2,82.5,Bill Clayton,USA,1953,80.55,207.5,142.5,212.5,562.5,SBD,Single-ply
 4,M,Masters 2,82.5,Akio Fujimoto,Japan,1949,78.2,180,142.5,220,542.5,SBD,Single-ply
 5,M,Masters 2,82.5,Kumar K. Harish,India,1952,82.5,210,105,200,515,SBD,Single-ply
 1,M,Masters 2,90,Stefan Sochański,Poland,1948,89.3,270,175,282.5,727.5,SBD,Single-ply
-2,M,Masters 2,90,Kevin Jane,Britain,1951,89.25,265,162.5,290,717.5,SBD,Single-ply
+2,M,Masters 2,90,Kevin Jane,UK,1951,89.25,265,162.5,290,717.5,SBD,Single-ply
 3,M,Masters 2,90,Tadashi Tachibana,Japan,1949,88,260,200,225,685,SBD,Single-ply
 4,M,Masters 2,90,Ron Delaney,Canada,1951,85.4,220,157.5,260,637.5,SBD,Single-ply
 5,M,Masters 2,90,Ryo Omori,Japan,1952,87.75,215,152.5,215,582.5,SBD,Single-ply

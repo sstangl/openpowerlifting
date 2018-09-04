@@ -3,7 +3,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Sq
 2,44,F,Open,Natalie Janot,1969,France,43.7,120,127.5,-132.5,127.5,72.5,77.5,-82.5,77.5,140,147.5,155,155,360,,,SBD,Single-ply
 3,44,F,Open,Raija Koskinen,1963,Finland,43.5,-142.5,-147.5,147.5,147.5,60,-65,-65,60,137.5,-142.5,-145,137.5,345,,,SBD,Single-ply
 4,44,F,Open,Sabine Guillaume,1963,France,43.3,107.5,115,-120,115,52.5,-57.5,-57.5,52.5,130,137.5,142.5,142.5,310,,,SBD,Single-ply
-5,44,F,Open,Nicola Gifford,1955,Britain,43.4,110,117.5,-122.5,117.5,-52.5,-52.5,52.5,52.5,110,122.5,130,130,300,,,SBD,Single-ply
+5,44,F,Open,Nicola Gifford,1955,UK,43.4,110,117.5,-122.5,117.5,-52.5,-52.5,52.5,52.5,110,122.5,130,130,300,,,SBD,Single-ply
 6,44,F,Open,Diane Nees,1956,New Zealand,42.2,82.5,87.5,90,90,47.5,50,-52.5,50,115,120,122.5,122.5,262.5,,,SBD,Single-ply
 1,48,F,Open,Vuokko Viitasaari,1954,Finland,47.7,130,137.5,140,140,70,72.5,-75,72.5,150,-152.5,157.5,157.5,370,,,SBD,Single-ply
 2,48,F,Open,Lai-Hsiu Chang,1957,Taiwan,47.2,130,142.5,,142.5,77.5,-85,-85,77.5,140,-147.5,147.5,147.5,367.5,,,SBD,Single-ply
@@ -16,7 +16,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Sq
 2,52,F,Open,Audhild Hansen,1957,Norway,51.7,142.5,147.5,-150,147.5,72.5,77.5,80,80,155,162.5,-167.5,162.5,390,,,SBD,Single-ply
 3,52,F,Open,Glynnis Bierria,1963,USA,51.95,125,,140,140,75,80,-85,80,137.5,-150,-150,137.5,357.5,,,SBD,Single-ply
 4,52,F,Open,Alena Záhumenská,1958,Czechia,50.7,110,117.5,-125,117.5,62.5,67.5,-70,67.5,145,157.5,167.5,167.5,352.5,,,SBD,Single-ply
-5,52,F,Open,Helen Whittington,1972,Britain,51.6,120,130,-132.5,130,67.5,-72.5,-72.5,67.5,145,152.5,-160,152.5,350,,,SBD,Single-ply
+5,52,F,Open,Helen Whittington,1972,UK,51.6,120,130,-132.5,130,67.5,-72.5,-72.5,67.5,145,152.5,-160,152.5,350,,,SBD,Single-ply
 6,52,F,Open,Yen-Ping Hsu,1974,Taiwan,48.2,127.5,135,137.5,137.5,-70,70,-75,70,130,137.5,-145,137.5,345,,,SBD,Single-ply
 7,52,F,Open,Louise Doig,1967,Australia,51.8,92.5,97.5,-102.5,97.5,52.5,57.5,-60,57.5,115,122.5,130,130,285,,,SBD,Single-ply
 1,56,F,Open,Nadezhda Mir,1970,Kazakhstan,52.5,145,155,-160,155,80,85,87.5,87.5,170,177.5,185,185,427.5,,,SBD,Single-ply
@@ -32,7 +32,7 @@ Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Sq
 3,60,F,Open,Eriko Himeno,1964,Japan,59.2,155,167.5,172.5,172.5,100,107.5,-110,107.5,180,-192.5,-192.5,180,460,,,SBD,Single-ply
 4,60,F,Open,Nataliya Ivanova,1964,Russia,60,155,170,-180,170,82.5,90,-95,90,172.5,-182.5,182.5,182.5,442.5,,,SBD,Single-ply
 5,60,F,Open,Carin Åkervall,1964,Sweden,59.3,157.5,167.5,-172.5,167.5,92.5,-97.5,-97.5,92.5,167.5,172.5,-182.5,172.5,432.5,,,SBD,Single-ply
-6,60,F,Open,Jessica Kattan,1961,Britain,59.3,145,-152.5,152.5,152.5,77.5,82.5,-85,82.5,170,180,182.5,182.5,417.5,,,SBD,Single-ply
+6,60,F,Open,Jessica Kattan,1961,UK,59.3,145,-152.5,152.5,152.5,77.5,82.5,-85,82.5,170,180,182.5,182.5,417.5,,,SBD,Single-ply
 7,60,F,Open,Svanhild Brekke,1967,Norway,59.4,150,157.5,-162.5,157.5,90,100,-105,100,145,152.5,157.5,157.5,415,,,SBD,Single-ply
 8,60,F,Open,Karina Walker,1966,New Zealand,59.2,140,150,160,160,5,80,-85,80,140,150,-157.5,150,390,,,SBD,Single-ply
 9,60,F,Open,Phoebe Woods,1962,Australia,58.9,-120,120,130,130,70,75,-80,75,155,162.5,170,170,375,,,SBD,Single-ply
@@ -46,7 +46,7 @@ DQ,60,F,Open,Lydie Jaeckel,1968,France,58.4,-140,,-140,,,,,,,,,,,,,SBD,Single-pl
 5,67.5,F,Open,Anne Aanensen,1969,Norway,67,177.5,-185,190,190,80,85,87.5,87.5,177.5,185,-187.5,185,462.5,,,SBD,Single-ply
 6,67.5,F,Open,Cécile Jamin,1966,France,64.8,165,172.5,-177.5,172.5,80,85,-87.5,85,175,185,192.5,192.5,450,,,SBD,Single-ply
 7,67.5,F,Open,Ayako Ikeya,1969,Japan,66.5,170,180,187.5,187.5,80,87.5,92.5,92.5,160,-175,-177.5,160,440,,,SBD,Single-ply
-8,67.5,F,Open,Jackie Blasbery,1963,Britain,60.6,145,152.5,-157.5,152.5,72.5,77.5,80,80,175,185,190,190,422.5,,,SBD,Single-ply
+8,67.5,F,Open,Jackie Blasbery,1963,UK,60.6,145,152.5,-157.5,152.5,72.5,77.5,80,80,175,185,190,190,422.5,,,SBD,Single-ply
 9,67.5,F,Open,Hsiu-Chiung Chen,1969,Taiwan,62.5,165,172.5,-182.5,172.5,90,-102.5,-102.5,90,150,160,-165,160,422.5,,,SBD,Single-ply
 10,67.5,F,Open,Anne Mort,1957,Australia,65.4,145,-152.5,152.5,152.5,82.5,-87.5,-87.5,82.5,155,167.5,-170,167.5,402.5,,,SBD,Single-ply
 11,67.5,F,Open,Li-Min Chou,1972,Taiwan,60.5,162.5,-172.5,-177.5,162.5,60,65,67.5,67.5,135,145,152.5,152.5,382.5,,,SBD,Single-ply

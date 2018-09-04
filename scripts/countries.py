@@ -96,7 +96,7 @@ COUNTRY_MAP = {
     'FSM': 'Federated States of Micronesia',
     'GAB': 'Gabon',
     'GAM': 'The Gambia',
-    'GBR': 'Britain',
+    'GBR': 'UK',
     'GBS': 'Guinea-Bissau',
     'GEO': 'Georgia',
     'ENG': 'England',
@@ -268,6 +268,7 @@ COUNTRY_MAP = {
     # Common substitutions to match our format.
     'Belorussia': 'Belarus',
     'Brasil': 'Brazil',
+    'Britain': 'UK',
     'Can': 'Canada',
     'Cape Verde': 'Cabo Verde',
     'Chinese Taipei': 'Taiwan',

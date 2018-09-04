@@ -3,7 +3,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3
 2,Vuokko Viitasaari,1954,44,43.6,Finland,-120,120,125,125,70,72.5,-75,,72.5,150,160.5,-165.5,160.5,357.5,F,Open,SBD,Single-ply
 1,Raja Koskinen,1963,48,47.5,Finland,155,-165,-165,155,77.5,-82.5,-82.5,,77.5,145,-162.5,-162.5,145,377.5,F,Open,SBD,Single-ply
 2,Sabine Guillaume,1963,48,45.3,France,107.5,115,122.5,122.5,55,60,-62.5,,60,132.5,140,147.5,147.5,330,F,Open,SBD,Single-ply
-3,Heather Hampson,1966,48,47.3,Britain,105,115,120,120,57.5,62.5,-65,,62.5,122.5,130,-142.5,130,312.5,F,Open,SBD,Single-ply
+3,Heather Hampson,1966,48,47.3,UK,105,115,120,120,57.5,62.5,-65,,62.5,122.5,130,-142.5,130,312.5,F,Open,SBD,Single-ply
 1,Oksana Belova,1975,52,51.9,Russia,162.5,172.5,182.5,182.5,90,97.5,102.5,,102.5,175,185,190.5,190.5,475,F,Open,SBD,Single-ply
 2,Claudine Cognacq,1955,52,51.2,Denmark,152.5,160,165,165,77.5,80,-82.5,,80,165,-175,182.5,182.5,427.5,F,Open,SBD,Single-ply
 3,Yveline Dujardin,1966,52,51.4,Belgium,135,-142.5,142.5,142.5,85,92.5,-97.5,,92.5,145,157.5,165,165,400,F,Open,SBD,Single-ply
@@ -37,14 +37,14 @@ DD,Stanislava Gal,1961,60,59.1,Poland,-120,120,130,130,65,-70,,,65,-150,150,,150
 5,Tone Edvardsen,1969,67.5,65,Norway,175,182.5,-187.5,182.5,102.5,-107.5,-107.5,,102.5,165,175,180,180,465,F,Open,SBD,Single-ply
 6,Ingunn Haakonsen,1976,67.5,66.8,Norway,175,185,-190,185,90,-92.5,-92.5,,90,175,182.5,-190,182.5,457.5,F,Open,SBD,Single-ply
 7,Anna Restrup,1967,67.5,67.4,Sweden,165,172.5,-180,172.5,85,-90,-90,,85,170,-180,-180,170,427.5,F,Open,SBD,Single-ply
-8,Marion Gibson,1964,67.5,64.1,Britain,-145,145,-152.5,145,82.5,-85,-85,,82.5,162.5,172.5,-175,172.5,400,F,Open,SBD,Single-ply
+8,Marion Gibson,1964,67.5,64.1,UK,-145,145,-152.5,145,82.5,-85,-85,,82.5,162.5,172.5,-175,172.5,400,F,Open,SBD,Single-ply
 1,Elena Zhukova,1972,75,73.3,Ukraine,210,-230,230,230,105,112.5,-117.5,,112.5,220,250,-263,250,592.5,F,Open,SBD,Single-ply
 2,Victoria Sherban,1980,75,68.8,Ukraine,-180,180,190,190,95,102.5,110,,110,180,200,215,215,515,F,Open,SBD,Single-ply
-3,Monica O'Brian,1967,75,71.5,Britain,165,177.5,-182.5,177.5,85,90,92.5,,92.5,190,205,-210,205,475,F,Open,SBD,Single-ply
+3,Monica O'Brian,1967,75,71.5,UK,165,177.5,-182.5,177.5,85,90,92.5,,92.5,190,205,-210,205,475,F,Open,SBD,Single-ply
 4,Chater Haraldsson,1964,75,74.1,Sweden,160,-167.5,-167.5,160,90,95,-97.5,,95,170,177.5,180,180,435,F,Open,SBD,Single-ply
 5,Mariet Spronk,1955,75,68.3,Netherlands,147.5,-152.5,-152.5,147.5,-95,95,-100,,95,170,177.5,185,185,427.5,F,Open,SBD,Single-ply
 6,Janne Antonsen,1974,75,70.2,Norway,150,155,157.5,157.5,-80,80,82.5,,82.5,145,150,155,155,395,F,Open,SBD,Single-ply
-7,Jean Maton,1963,75,70.5,Britain,135,142.5,-147.5,142.5,75,-80,80,,80,150,160,170,170,392.5,F,Open,SBD,Single-ply
+7,Jean Maton,1963,75,70.5,UK,135,142.5,-147.5,142.5,75,-80,80,,80,150,160,170,170,392.5,F,Open,SBD,Single-ply
 DQ,Anne Sigrid Stiklestad,1975,75,74,Norway,225,235,,235,-105,-105,-105,,,,,,,,F,Open,SBD,Single-ply
 1,Natalya Rumyantseva,1971,82.5,81.5,Russia,205,215,225,225,130,140,145,,145,210,220,230,230,600,F,Open,SBD,Single-ply
 2,Elena Ignatenkova,1971,82.5,76.1,Russia,200,215,-222.5,215,100,110,117.5,,117.5,190,-205,-205,190,522.5,F,Open,SBD,Single-ply
@@ -55,7 +55,7 @@ DQ,Anne Sigrid Stiklestad,1975,75,74,Norway,225,235,,235,-105,-105,-105,,,,,,,,F
 2,Ulla Herchenhein,1962,90,89,Germany,200,-210,,200,125,-130,-130,,125,220,230,-235,230,555,F,Open,SBD,Single-ply
 3,Svetlana Zvaritch,1980,90,87.3,Ukraine,200,220,-232.5,220,110,-120,-122.5,,110,200,215,-225,215,545,F,Open,SBD,Single-ply
 4,Victor Posmitnaya,1966,90,84,Ukraine,175,190,-200,190,92.5,100,-105,,100,170,185,190,190,480,F,Open,SBD,Single-ply
-5,Sandra Smith-Vockroj,1962,90,86.7,Britain,160,170,177.5,177.5,80,85,-90,,85,202.5,-207.5,-207.5,202.5,465,F,Open,SBD,Single-ply
+5,Sandra Smith-Vockroj,1962,90,86.7,UK,160,170,177.5,177.5,80,85,-90,,85,202.5,-207.5,-207.5,202.5,465,F,Open,SBD,Single-ply
 6,Ellen Aaserud,1971,90,82.7,Norway,150,157.5,165,165,67.5,72.5,-77.5,,72.5,167.5,175,-185,175,412.5,F,Open,SBD,Single-ply
 1,Anastasia Pavlova,1968,90+,101.1,Russia,-200,215,225,225,110,120,125,,125,200,210,220,220,570,F,Open,SBD,Single-ply
-2,Jaqueline Pepper,1960,90+,95.8,Britain,160,-165,-165,160,85,-90,90,,90,170,175,-180,175,425,F,Open,SBD,Single-ply
+2,Jaqueline Pepper,1960,90+,95.8,UK,160,-165,-165,160,85,-90,90,,90,170,175,-180,175,425,F,Open,SBD,Single-ply

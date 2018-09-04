@@ -10,7 +10,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 3,Michel Piron,1993,Luxembourg,75.51,145,155,160,160,-80,80,85,85,145,157.5,170,170,415,82.5,M,SBD,Open,Single-ply
 1,David Cuny,1978,France,89.18,285,295,-300,295,200,-207.5,-207.5,200,270,285,-290,285,780,90,M,SBD,Open,Single-ply
 2,Marc Larsson,1982,Denmark,89.72,-290,290,-302.5,290,170,-177.5,-177.5,170,275,287.5,-300,287.5,747.5,90,M,SBD,Open,Single-ply
-3,Joseph Bullock,1971,Britain,89.68,290,-297.5,-297.5,290,170,175,177.5,177.5,250,260,267.5,267.5,735,90,M,SBD,Open,Single-ply
+3,Joseph Bullock,1971,UK,89.68,290,-297.5,-297.5,290,170,175,177.5,177.5,250,260,267.5,267.5,735,90,M,SBD,Open,Single-ply
 4,Alain Laguesse,1974,Belgium,87.27,275,-290,290,290,160,-170,170,170,250,265,-275,265,725,90,M,SBD,Open,Single-ply
 5,Alessandro Silvas,1972,Italy,87.27,245,260,-270,260,-165,165,170,170,260,272.5,-280,272.5,702.5,90,M,SBD,Open,Single-ply
 6,Pieter van de Vijfeijken,1966,Netherlands,89.14,215,225,-230,225,160,167.5,-172.5,167.5,230,240,-242.5,240,632.5,90,M,SBD,Open,Single-ply
@@ -19,41 +19,41 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 2,Sofiane Belkesir,1984,France,99.54,305,320,-330,320,215,222.5,-230,222.5,290,310,-325,310,852.5,100,M,SBD,Open,Single-ply
 3,Michael Jensen,1980,Denmark,96.01,-310,310,-327.5,310,185,197.5,-202.5,197.5,297.5,320,-325,320,827.5,100,M,SBD,Open,Single-ply
 4,Floris Van Melis,1981,Netherlands,98.66,285,300,-307.5,300,-210,215,222.5,222.5,255,270,-277.5,270,792.5,100,M,SBD,Open,Single-ply
-5,Robert Pulling,1979,Britain,99.03,260,-270,270,270,190,192.5,-197.5,192.5,250,257.5,-260,257.5,720,100,M,SBD,Open,Single-ply
+5,Robert Pulling,1979,UK,99.03,260,-270,270,270,190,192.5,-197.5,192.5,250,257.5,-260,257.5,720,100,M,SBD,Open,Single-ply
 6,Sven Den Houting,1976,Netherlands,98.62,250,-270,-270,250,165,172.5,-177.5,172.5,230,-240,240,240,662.5,100,M,SBD,Open,Single-ply
 7,Roger Piron,1960,Luxembourg,98.82,240,250,257.5,257.5,157.5,162.5,-165,162.5,220,227.5,232.5,232.5,652.5,100,M,SBD,Open,Single-ply
 8,Gilles Muller,1989,,99.84,180,190,205,205,-110,110,115,115,170,185,200,200,520,100,M,SBD,Open,Single-ply
 1,Sune Bak,1974,Denmark,109.7,320,335,-345,335,245,255,-260,255,285,300,-310,300,890,110,M,SBD,Open,Single-ply
 2,David Berthet,1979,France,108.9,-320,320,335,335,200,205,210,210,280,295,-300,295,840,110,M,SBD,Open,Single-ply
-3,Ian Hawkins,1978,Britain,109.6,280,295,302.5,302.5,-230,230,235,235,255,267.5,275,275,812.5,110,M,SBD,Open,Single-ply
+3,Ian Hawkins,1978,UK,109.6,280,295,302.5,302.5,-230,230,235,235,255,267.5,275,275,812.5,110,M,SBD,Open,Single-ply
 4,Francesco Pelizza,1986,Italy,108.9,275,-285,285,285,190,200,210,210,270,285,300,300,795,110,M,SBD,Open,Single-ply
 DQ,Orhan Bilican,1978,Belgium,109.3,370,,,370,-290,-290,-290,,275,290,305,305,,110,M,SBD,Open,Single-ply
 1,Jørgen Andreas Hansen,1986,Norway,115.5,360,372.5,380,380,240,245,250,250,305,315,325,325,955,125,M,SBD,Open,Single-ply
 2,Sébastien Momier,1974,France,111.3,-310,310,325,325,-210,210,-220,210,290,305,310,310,845,125,M,SBD,Open,Single-ply
-3,Ranbir Singh Sahota,1983,Britain,120,-330,330,350,350,-190,195,205,205,290,-305,-305,290,845,125,M,SBD,Open,Single-ply
+3,Ranbir Singh Sahota,1983,UK,120,-330,330,350,350,-190,195,205,205,290,-305,-305,290,845,125,M,SBD,Open,Single-ply
 4,Nicolas Skaarup,1985,Denmark,123.4,-320,320,-335,320,240,250,-255,250,275,-290,-292.5,275,845,125,M,SBD,Open,Single-ply
 5,Steve Ringoot,1989,Belgium,113.3,270,300,-310,300,200,207.5,210,210,280,292.5,-300,292.5,802.5,125,M,SBD,Open,Single-ply
 1,Hans Magne Bårtvedt,1983,Norway,149.8,330,345,-355,345,260,270,275,275,315,330,337.5,337.5,957.5,125+,M,SBD,Open,Single-ply
-2,Adam Nash,1984,Britain,152.2,340,355,-365,355,245,-255,-255,245,280,-300,-300,280,880,125+,M,SBD,Open,Single-ply
+2,Adam Nash,1984,UK,152.2,340,355,-365,355,245,-255,-255,245,280,-300,-300,280,880,125+,M,SBD,Open,Single-ply
 DQ,Martin Rönning B.,1984,Norway,145.8,-330,330,-345,330,-305,-305,-305,,280,290,300,300,,125+,M,SBD,Open,Single-ply
 DQ,Lars Dalby Markussen,1974,,127.5,365,375,380,380,265,270,-275,270,320,-330,-330,320,,125+,M,SBD,Open,Single-ply
 1,Stéphanie Legard,1981,France,47.04,122.5,127.5,135,135,67.5,72.5,75,75,120,130,-135,130,340,48,F,SBD,Open,Single-ply
 2,Yvelise Martin,1982,France,47.44,127.5,135,-140,135,70,75,-80.5,75,117.5,127.5,-135,127.5,337.5,48,F,SBD,Open,Single-ply
 1,Sophie Guihomat,1975,France,50.39,-135,-137.5,137.5,137.5,72.5,77.5,-80,77.5,130,140,145,145,360,52,F,SBD,Open,Single-ply
-2,Louise Edwards,1978,Britain,51.18,100,105,110,110,45,50,52.5,52.5,130,140,-147.5,140,302.5,52,F,SBD,Open,Single-ply
+2,Louise Edwards,1978,UK,51.18,100,105,110,110,45,50,52.5,52.5,130,140,-147.5,140,302.5,52,F,SBD,Open,Single-ply
 DQ,Veronica Pazzaglia,1977,Italy,51.79,-110,-110,-110,,-60,60,-65,60,120,130,-135,130,,52,F,SBD,Open,Single-ply
 1,Susann Chicon,1987,Germany,55.94,132.5,145,-155,145,67.5,72.5,75,75,135,145,-152.5,145,365,56,F,SBD,Open,Single-ply
 2,Linda Van Riet,1974,Belgium,52.15,85,95,102.5,102.5,42.5,-45,45,45,115,122.5,,122.5,270,56,F,SBD,Open,Single-ply
-1,Marian Gibson,1964,Britain,58.71,-147.5,-147.5,147.5,147.5,-105,105,-110.5,105,160,170,177.5,177.5,430,60,F,SBD,Open,Single-ply
+1,Marian Gibson,1964,UK,58.71,-147.5,-147.5,147.5,147.5,-105,105,-110.5,105,160,170,177.5,177.5,430,60,F,SBD,Open,Single-ply
 2,Linda Kåda Høiland,1979,Norway,59.26,150,160,165,165,77.5,82.5,85,85,160,170,-175,170,420,60,F,SBD,Open,Single-ply
 3,Sandra Wildeman,1979,Netherlands,58.19,120,130,-135,130,75,-80,80,80,130,140,145,145,355,60,F,SBD,Open,Single-ply
-4,Michelle Constantine,1972,Britain,59.65,125,-135,135,135,62.5,-65,65,65,130,140,147.5,147.5,347.5,60,F,SBD,Open,Single-ply
+4,Michelle Constantine,1972,UK,59.65,125,-135,135,135,62.5,-65,65,65,130,140,147.5,147.5,347.5,60,F,SBD,Open,Single-ply
 1,Veronica Opdal,1985,Norway,67.17,-180,180,-185,180,85,90,95,95,167.5,175,182.5,182.5,457.5,67.5,F,SBD,Open,Single-ply
 2,Judith Meerding,1981,Netherlands,64.14,140,147.5,-152.5,147.5,-85,-90,90,90,140,152.5,162.5,162.5,400,67.5,F,SBD,Open,Single-ply
-3,Jordana Freemantle,1983,Britain,65.02,120,130,140,140,90,97.5,102.5,102.5,142.5,150,157.5,157.5,400,67.5,F,SBD,Open,Single-ply
+3,Jordana Freemantle,1983,UK,65.02,120,130,140,140,90,97.5,102.5,102.5,142.5,150,157.5,157.5,400,67.5,F,SBD,Open,Single-ply
 1,Annette Pedersen,1968,Denmark,73.84,185,195,205,205,-125,125,-135.5,125,190,205,-215.5,205,535,75,F,SBD,Open,Single-ply
 2,Lise Ejlertsen,1982,Denmark,71.88,70,-72.5,,70,70,80,90,90,75,-77.5,-77.5,75,235,75,F,SBD,Open,Single-ply
 1,Ankie Timmers,1986,Netherlands,75.48,170,180,-190,180,115,120,125,125,170,180,195,195,500,82.5,F,SBD,Open,Single-ply
-2,Charlie Shotton-Gale,1983,Britain,82.46,170,180,190,190,110,112.5,115,115,160,172.5,-177.5,172.5,477.5,82.5,F,SBD,Open,Single-ply
+2,Charlie Shotton-Gale,1983,UK,82.46,170,180,190,190,110,112.5,115,115,160,172.5,-177.5,172.5,477.5,82.5,F,SBD,Open,Single-ply
 3,Mieke Van Der Zwaag,1983,Netherlands,78.68,-150,150,-160,150,75,77.5,80,80,145,-155,-155,145,375,82.5,F,SBD,Open,Single-ply
 1,Ielja Strik,1973,Netherlands,88.88,240,252.5,260,260,167.5,175,-183,175,210,217.5,,217.5,652.5,90,F,SBD,Open,Single-ply

@@ -7,11 +7,11 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Best3SquatKg,Best3BenchK
 3,Jürgen Nemeth,1972,56,55.9,Austria,212.5,120,240,572.5,SBD,Single-ply,M,Open
 4,Frédéric Tinebra,1978,56,55.7,France,207.5,127.5,205,540,SBD,Single-ply,M,Open
 5,Slawomir Sledz,1976,56,55.9,Poland,205,135,200,540,SBD,Single-ply,M,Open
-6,Alistair Fleming,1969,56,55.8,Britain,195,115,220,530,SBD,Single-ply,M,Open
+6,Alistair Fleming,1969,56,55.8,UK,195,115,220,530,SBD,Single-ply,M,Open
 7,Patrick Legard,1959,56,55.7,France,190,112.5,210,512.5,SBD,Single-ply,M,Open
 8,Štefan Koľšovský,1961,56,56,Slovakia,192.5,137.5,155,485,SBD,Single-ply,M,Open
 1,Mikhail Andryukhin,1970,60,59.9,Russia,260,140,250,650,SBD,Single-ply,M,Open
-2,Phillip Richard,1971,60,59.7,Britain,237.5,150,220,607.5,SBD,Single-ply,M,Open
+2,Phillip Richard,1971,60,59.7,UK,237.5,150,220,607.5,SBD,Single-ply,M,Open
 3,Mariusz Olech,1976,60,59.9,Poland,220,130,230,580,SBD,Single-ply,M,Open
 4,Anton Mihok,1957,60,60,Slovakia,215,130,222.5,567.5,SBD,Single-ply,M,Open
 5,Maik Tronke,1976,60,59.7,Germany,220,140,160,520,SBD,Single-ply,M,Open
@@ -20,9 +20,9 @@ DD,Iveline Petrov,1969,60,59.8,Bulgaria,250,165,220,,SBD,Single-ply,M,Open
 2,Jan Wilczyński,1955,67.5,67.2,Poland,255,150,280,685,SBD,Single-ply,M,Open
 3,Hassan El Belghiti,1975,67.5,66.5,France,260,137.5,277.5,675,SBD,Single-ply,M,Open
 4,Roberto Sacco,1975,67.5,67.1,Italy,260,140,275,675,SBD,Single-ply,M,Open
-5,Richard Batchelor,1974,67.5,66.9,Britain,242.5,125,272.5,640,SBD,Single-ply,M,Open
+5,Richard Batchelor,1974,67.5,66.9,UK,242.5,125,272.5,640,SBD,Single-ply,M,Open
 6,Jari Airio,1974,67.5,67.1,Finland,230,170,240,640,SBD,Single-ply,M,Open
-7,David Gray,1964,67.5,65.9,Britain,235,147.5,255,637.5,SBD,Single-ply,M,Open
+7,David Gray,1964,67.5,65.9,UK,235,147.5,255,637.5,SBD,Single-ply,M,Open
 8,Karel Ruso,1965,67.5,67.3,Czechia,242.5,122.5,220,585,SBD,Single-ply,M,Open
 9,Pavel Maixner,1962,67.5,67.3,Czechia,200,120,210,530,SBD,Single-ply,M,Open
 DQ,Alexey Sidorov,1974,67.5,66.8,Russia,250,182.5,,,SBD,Single-ply,M,Open
@@ -44,7 +44,7 @@ DQ,Marco Baroni,1970,75,74.9,Italy,230,,,,SBD,Single-ply,M,Open
 5,Marek Radola,1975,82.5,82.5,Poland,305,182.5,295,782.5,SBD,Single-ply,M,Open
 6,Stefan Andersson,1968,82.5,82.4,Sweden,280,200,270,750,SBD,Single-ply,M,Open
 7,Christian Brauer,1978,82.5,81.7,Germany,285,165,295,745,SBD,Single-ply,M,Open
-8,Jaswinder Singh Cheema,1976,82.5,82.2,Britain,265,200,270,735,SBD,Single-ply,M,Open
+8,Jaswinder Singh Cheema,1976,82.5,82.2,UK,265,200,270,735,SBD,Single-ply,M,Open
 9,Sigve Valentinsen,1960,82.5,80.4,Norway,287.5,175,270,732.5,SBD,Single-ply,M,Open
 10,Benny Verbeke,1965,82.5,81.4,Belgium,270,140,300,710,SBD,Single-ply,M,Open
 11,Andreas Schulz,1974,82.5,82.4,Germany,250,195,262.5,707.5,SBD,Single-ply,M,Open
@@ -64,7 +64,7 @@ DD,Sergey Nochnoy,1965,82.5,82.1,Russia,320,225,290,,SBD,Single-ply,M,Open
 9,Andre Peters,1970,90,89.2,France,290,182.5,285,757.5,SBD,Single-ply,M,Open
 10,Kjeld Ingerslev,1966,90,89.2,Denmark,250,170,280,700,SBD,Single-ply,M,Open
 11,Martin Larsen,1966,90,89.7,Denmark,260,160,267.5,687.5,SBD,Single-ply,M,Open
-DQ,Anthony Thornton,1968,90,89,Britain,300,195,,,SBD,Single-ply,M,Open
+DQ,Anthony Thornton,1968,90,89,UK,300,195,,,SBD,Single-ply,M,Open
 DD,Andrius Gecas,1974,90,89.2,Lithuania,337.5,210,310,,SBD,Single-ply,M,Open
 1,Erik Stiklestad,1973,100,98,Norway,350,210,340,900,SBD,Single-ply,M,Open
 2,Ca Christoffersen,1968,100,99.9,Norway,357.5,230,310,897.5,SBD,Single-ply,M,Open
@@ -84,7 +84,7 @@ DD,Volodimyr Ukhach,1960,100,99.3,Ukraine,347.5,240,310,,SBD,Single-ply,M,Open
 5,Remi Pronier,1964,110,108.8,France,337.5,207.5,347.5,892.5,SBD,Single-ply,M,Open
 6,Alexey Molyarenko,1971,110,108.8,Russia,340,230,320,890,SBD,Single-ply,M,Open
 7,Dezidér Mihok,1975,110,109.4,Czechia,342.5,220,320,882.5,SBD,Single-ply,M,Open
-8,Clive Henry,1966,110,109.3,Britain,350,217.5,310,877.5,SBD,Single-ply,M,Open
+8,Clive Henry,1966,110,109.3,UK,350,217.5,310,877.5,SBD,Single-ply,M,Open
 9,Ol Pleskatchevich,1972,110,107.3,Belarus,330,222.5,320,872.5,SBD,Single-ply,M,Open
 10,Janne Salmela,1971,110,106,Sweden,330,200,310,840,SBD,Single-ply,M,Open
 11,Mathias Bache-Gabrielsen,1976,110,108.6,Norway,325,200,290,815,SBD,Single-ply,M,Open
@@ -94,7 +94,7 @@ DD,Volodimyr Ukhach,1960,100,99.3,Ukraine,347.5,240,310,,SBD,Single-ply,M,Open
 15,Wolfga Zimmermann,1968,110,109.5,Germany,300,200,287.5,787.5,SBD,Single-ply,M,Open
 DQ,Cyril Maree,1968,110,109.3,France,325,,,,SBD,Single-ply,M,Open
 1,Volodymyr Muravlyov,1975,125,119.5,Ukraine,375,235,350,960,SBD,Single-ply,M,Open
-2,Dean Bowring,1974,125,124.2,Britain,327.5,245,310,882.5,SBD,Single-ply,M,Open
+2,Dean Bowring,1974,125,124.2,UK,327.5,245,310,882.5,SBD,Single-ply,M,Open
 3,Leopold Krendl,1957,125,124.5,Austria,352.5,197.5,320,870,SBD,Single-ply,M,Open
 4,Wim Wamsteeker,1969,125,124.7,Netherlands,340,215,312.5,867.5,SBD,Single-ply,M,Open
 5,Tor-Ole Rydheim,1971,125,124.8,Norway,332.5,197.5,325,855,SBD,Single-ply,M,Open

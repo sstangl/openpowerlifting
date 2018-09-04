@@ -1,7 +1,7 @@
 Place,WeightClassKg,Sex,Division,Name,BirthYear,Country,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment
 1,52,M,Juniors,Gery Snyder,1963,USA,50.8,190,102.5,205,497.5,SBD,Single-ply
 2,52,M,Juniors,D. Santyamurty,1962,India,51.7,170,100,207.5,477.5,SBD,Single-ply
-3,52,M,Juniors,John Maxwell,1964,Britain,50,180,85,210,475,SBD,Single-ply
+3,52,M,Juniors,John Maxwell,1964,UK,50,180,85,210,475,SBD,Single-ply
 4,52,M,Juniors,M. Palaniswami,1963,India,51,175,90,207.5,472.5,SBD,Single-ply
 5,52,M,Juniors,Kari Ylijoki,1962,Finland,51.6,195,127.5,150,472.5,SBD,Single-ply
 6,52,M,Juniors,C. De Oliveira,1962,Brazil,51.5,160,90,195,445,SBD,Single-ply
@@ -27,7 +27,7 @@ DQ,60,M,Juniors,A.G. Raju,1963,India,58.3,,,,,SBD,Single-ply
 1,67.5,M,Juniors,Niklas Yngvesson,1963,Sweden,66.6,242.5,135,250,627.5,SBD,Single-ply
 2,67.5,M,Juniors,Francis Mezzanotte,1963,Belgium,67.4,245,115,252.5,612.5,SBD,Single-ply
 3,67.5,M,Juniors,Jarmo Ronkainen,1962,Finland,66.7,210,150,230,590,SBD,Single-ply
-4,67.5,M,Juniors,Ken Jackson,1962,Britain,66.3,220,130,235,585,SBD,Single-ply
+4,67.5,M,Juniors,Ken Jackson,1962,UK,66.3,220,130,235,585,SBD,Single-ply
 5,67.5,M,Juniors,Ari Kuosmanen,1962,Finland,67.2,210,137.5,220,567.5,SBD,Single-ply
 6,67.5,M,Juniors,Rene Fortier,1962,Canada,66,230,125,205,560,SBD,Single-ply
 7,67.5,M,Juniors,Gianni Zerbini,1962,Italy,67,210,105,240,555,SBD,Single-ply
@@ -39,7 +39,7 @@ DQ,60,M,Juniors,A.G. Raju,1963,India,58.3,,,,,SBD,Single-ply
 13,67.5,M,Juniors,M. Oskarsson,1962,Iceland,67,155,87.5,192.5,435,SBD,Single-ply
 DQ,67.5,M,Juniors,Jesse Kellum,1963,USA,67,245,,,,SBD,Single-ply
 DQ,67.5,M,Juniors,Jan Theys,1963,Belgium,67.3,,,,,SBD,Single-ply
-1,75,M,Juniors,Andrew Rose,1962,Britain,74.8,265,180,270,715,SBD,Single-ply
+1,75,M,Juniors,Andrew Rose,1962,UK,74.8,265,180,270,715,SBD,Single-ply
 2,75,M,Juniors,Henrik Söderman,1962,Finland,74.4,250,157.5,260,667.5,SBD,Single-ply
 3,75,M,Juniors,Markku Vierikko,1962,Finland,75,225,160,260,645,SBD,Single-ply
 4,75,M,Juniors,Reagen Black,1962,USA,74.1,237.5,145,252.5,635,SBD,Single-ply
@@ -79,13 +79,13 @@ DD,82.5,M,Juniors,Scott Boyd,1962,Australia,81.6,,,,,SBD,Single-ply
 7,90,M,Juniors,Morten Haugseng,1962,Norway,89,235,140,285,660,SBD,Single-ply
 8,90,M,Juniors,F. Charite,1962,Netherlands,89.5,245,150,250,645,SBD,Single-ply
 9,90,M,Juniors,Edmond Peterlana,1962,Italy,89.2,230,130,230,590,SBD,Single-ply
-DQ,90,M,Juniors,Neil Quinn,1962,Britain,89.2,300,177.5,,,SBD,Single-ply
+DQ,90,M,Juniors,Neil Quinn,1962,UK,89.2,300,177.5,,,SBD,Single-ply
 DQ,90,M,Juniors,Peter Platwell,1962,Australia,86.8,,,,,SBD,Single-ply
-DD,90,M,Juniors,Dave Walsh,1962,Britain,88.9,,,,,SBD,Single-ply
+DD,90,M,Juniors,Dave Walsh,1962,UK,88.9,,,,,SBD,Single-ply
 1,100,M,Juniors,Roger Enqvist,1962,Sweden,96.2,310,205,287.5,802.5,SBD,Single-ply
 2,100,M,Juniors,Juha Hyttinen,1963,Finland,99.1,305,187.5,295,787.5,SBD,Single-ply
 3,100,M,Juniors,Steve Lumpee,1962,USA,94.4,287.5,180,310,777.5,SBD,Single-ply
-4,100,M,Juniors,Trevor Hubble,1963,Britain,98.2,300,195,270,765,SBD,Single-ply
+4,100,M,Juniors,Trevor Hubble,1963,UK,98.2,300,195,270,765,SBD,Single-ply
 5,100,M,Juniors,Johann Kapsecker,1962,West Germany,98.2,270,195,275,740,SBD,Single-ply
 6,100,M,Juniors,Auro Lanfredi,1962,Italy,99,295,152.5,290,737.5,SBD,Single-ply
 7,100,M,Juniors,Terje Sandbo,1963,Norway,98.4,287.5,155,280,722.5,SBD,Single-ply
@@ -95,7 +95,7 @@ DD,90,M,Juniors,Dave Walsh,1962,Britain,88.9,,,,,SBD,Single-ply
 11,100,M,Juniors,Dan Bruce,1962,Canada,93.3,240,180,217.5,637.5,SBD,Single-ply
 12,100,M,Juniors,Steindorsson,1962,Iceland,98.6,245,132.5,260,637.5,SBD,Single-ply
 DQ,100,M,Juniors,D. Van Opinnen,1962,Australia,96.6,,,,,SBD,Single-ply
-1,110,M,Juniors,Neil Jones,1962,Britain,107.9,292.5,165,320,777.5,SBD,Single-ply
+1,110,M,Juniors,Neil Jones,1962,UK,107.9,292.5,165,320,777.5,SBD,Single-ply
 2,110,M,Juniors,Alfred Neugenauer,1962,Austria,104.1,280,200,280,760,SBD,Single-ply
 3,110,M,Juniors,Magnús Ver Magnússon,1962,Iceland,101.5,245,152.5,260,657.5,SBD,Single-ply
 4,110,M,Juniors,O. Dutta,1962,India,100.5,250,135,225,610,SBD,Single-ply
@@ -115,5 +115,5 @@ DD,125,M,Juniors,Ricardo Maluf,1963,Brazil,,,,,,SBD,Single-ply
 2,125+,M,Juniors,Kevin Faber,1963,USA,130.7,277.5,195,300,772.5,SBD,Single-ply
 3,125+,M,Juniors,Sulevi Eriksson,1962,Sweden,128.6,300,180,290,770,SBD,Single-ply
 4,125+,M,Juniors,Hjalti Arnasson,1962,Iceland,127.9,250,185,300,735,SBD,Single-ply
-5,125+,M,Juniors,Mike Higgins,1962,Britain,133.3,250,155,270,675,SBD,Single-ply
+5,125+,M,Juniors,Mike Higgins,1962,UK,133.3,250,155,270,675,SBD,Single-ply
 6,125+,M,Juniors,Francis Souza,1963,France,127.5,260,110,220,590,SBD,Single-ply

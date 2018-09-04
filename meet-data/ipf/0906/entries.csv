@@ -11,7 +11,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchK
 4,Berenger Addenet,1982,France,59.74,-167.5,167.5,-172.5,167.5,167.5,60,Open,B,M,Single-ply
 5,Miguel Jimenez Luis,1978,Spain,59.32,160,-167.5,-167.5,160,160,60,Open,B,M,Single-ply
 6,Štefan Koľšovský,1961,Slovakia,59.54,145,-155,-155,145,145,60,Open,B,M,Single-ply
-7,Aaron Gideon,1980,Britain,58.06,130,137.5,-145,137.5,137.5,60,Open,B,M,Single-ply
+7,Aaron Gideon,1980,UK,58.06,130,137.5,-145,137.5,137.5,60,Open,B,M,Single-ply
 8,Valery Arekhva,1990,Belarus,59.88,-132.5,132.5,-150,132.5,132.5,60,Open,B,M,Single-ply
 9,Dave Verpoot,1985,Belgium,58.45,100,107.5,-112.5,107.5,107.5,60,Open,B,M,Single-ply
 1,Ravil Kazakov,1982,Russia,67.45,205,-215,215,215,215,67.5,Open,B,M,Single-ply
@@ -50,7 +50,7 @@ DQ,Sverre Diesen,1970,Norway,81.98,-200,-200,-200,,,82.5,Open,B,M,Single-ply
 6,Jiří Horník,1978,Czechia,88.27,210,225,-242.5,225,225,90,Open,B,M,Single-ply
 7,Gemel Bougamddouz,1963,France,88.68,220,-222.5,-225,220,220,90,Open,B,M,Single-ply
 DQ,Jan Bast,1977,Germany,88.78,-260,-260,-260,,,90,Open,B,M,Single-ply
-DQ,James Jefferies,1969,Britain,89.44,-235,-235,-235,,,90,Open,B,M,Single-ply
+DQ,James Jefferies,1969,UK,89.44,-235,-235,-235,,,90,Open,B,M,Single-ply
 DQ,Fredrick Jader,1979,Sweden,89.53,-272.5,-272.5,-282.5,,,90,Open,B,M,Single-ply
 DQ,Yuji Watanabe,1980,Japan,87.8,275,280,287.5,287.5,,90,Open,B,M,Single-ply
 DQ,Yoichi Kishimoto,1977,Japan,89.62,260,272.5,-290,272.5,,90,Open,B,M,Single-ply
@@ -67,10 +67,10 @@ DQ,Yoichi Kishimoto,1977,Japan,89.62,260,272.5,-290,272.5,,90,Open,B,M,Single-pl
 11,Thomas Sørensen,1981,Denmark,99.68,220,-230,-237.5,220,220,100,Open,B,M,Single-ply
 12,Roger Piron,1960,Luxembourg,94.84,150,155,-160,155,155,100,Open,B,M,Single-ply
 DQ,Thomasz Kuc,1973,Poland,98.94,-265,-265,-275,,,100,Open,B,M,Single-ply
-DQ,Sangheet Dhillon,1971,Britain,99.28,-212.5,-212.5,-212.5,,,100,Open,B,M,Single-ply
+DQ,Sangheet Dhillon,1971,UK,99.28,-212.5,-212.5,-212.5,,,100,Open,B,M,Single-ply
 DQ,Nicollay Esipov,1980,Germany,99.51,-260,-270,-270,,,100,Open,B,M,Single-ply
 DQ,Jean-Pierre Aymon,1954,Switzerland,99.57,-225,-225,-225,,,100,Open,B,M,Single-ply
-DQ,Martin Green,1974,Britain,99.69,-245,-245,-245,,,100,Open,B,M,Single-ply
+DQ,Martin Green,1974,UK,99.69,-245,-245,-245,,,100,Open,B,M,Single-ply
 1,Karol Koltonski,1983,Poland,107.69,-285,-285,290,290,290,110,Open,B,M,Single-ply
 2,Rustam Yulchiev,1977,Kazakhstan,106.91,280,285,287.5,287.5,287.5,110,Open,B,M,Single-ply
 3,Sami Pullinen,1983,Finland,109.58,277.5,-282.5,287.5,287.5,287.5,110,Open,B,M,Single-ply
@@ -87,7 +87,7 @@ DQ,Martin Green,1974,Britain,99.69,-245,-245,-245,,,100,Open,B,M,Single-ply
 14,Nicolas Schuler,1979,France,104.9,220,230,232.5,232.5,232.5,110,Open,B,M,Single-ply
 15,Marc Quirin,1984,Luxembourg,101.44,180,187.5,-192.5,187.5,187.5,110,Open,B,M,Single-ply
 DQ,Kato Marøy,1985,Norway,108.73,-275,-275,-285,,,110,Open,B,M,Single-ply
-DQ,Pinda Singh,1980,Britain,109.2,-270,-270,-270,,,110,Open,B,M,Single-ply
+DQ,Pinda Singh,1980,UK,109.2,-270,-270,-270,,,110,Open,B,M,Single-ply
 DQ,Shinichi Kosone,1972,Japan,109.6,-270,-270,-270,,,110,Open,B,M,Single-ply
 DQ,Zbyněk Krejča,1974,Czechia,109.8,-260,-260,-275,,,110,Open,B,M,Single-ply
 1,Roy Holte,1970,Norway,122.35,-312.5,-312.5,312.5,312.5,312.5,125,Open,B,M,Single-ply
@@ -133,7 +133,7 @@ DQ,Johnny Wahlqvist,1973,Sweden,171.75,-330,-332.5,-340,,,125+,Open,B,M,Single-p
 5,Monika Gavorníková,1974,Slovakia,51.82,90,-100,-105,90,90,52,Open,B,F,Single-ply
 6,Mika Teramura,1962,Japan,51.51,82.5,-90,-92.5,82.5,82.5,52,Open,B,F,Single-ply
 7,Anita Pfeiffer,1983,Germany,51.68,55,62.5,-67.5,62.5,62.5,52,Open,B,F,Single-ply
-DQ,Natalie Blake,1982,Britain,50.92,-115,-115,-115,,,52,Open,B,F,Single-ply
+DQ,Natalie Blake,1982,UK,50.92,-115,-115,-115,,,52,Open,B,F,Single-ply
 1,Larisa Kotkova,1974,Russia,54.87,122.5,127.5,130,130,130,56,Open,B,F,Single-ply
 2,Natalia Prymachenka,1987,Belarus,55.13,120,125,130,130,130,56,Open,B,F,Single-ply
 3,Susse Hougaard,1984,Denmark,55.3,120,125,-132.5,125,125,56,Open,B,F,Single-ply

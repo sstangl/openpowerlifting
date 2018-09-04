@@ -8,13 +8,13 @@ Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchK
 2,Yan Urusov,1989,Russia,65.3,230,-237.5,237.5,237.5,237.5,66,Open,B,M,Single-ply
 3,Yeldos Yermakhanov,1990,Kazakhstan,65.9,225,230,-240,230,230,66,Open,B,M,Single-ply
 4,Yo Mizuno,1992,Japan,63.7,222.5,-227.5,-230,222.5,222.5,66,Open,B,M,Single-ply
-5,Aaron Gideon,1980,Britain,64.35,160,167.5,177.5,177.5,177.5,66,Open,B,M,Single-ply
+5,Aaron Gideon,1980,UK,64.35,160,167.5,177.5,177.5,177.5,66,Open,B,M,Single-ply
 1,Daiki Kodama,1979,Japan,73.15,260,267.5,270,270,270,74,Open,B,M,Single-ply
 2,Oleg Butenko,1983,Kazakhstan,72.2,252.5,257.5,267.5,267.5,267.5,74,Open,B,M,Single-ply
 3,Andriy Balenkov,1981,Ukraine,73.85,230,242.5,250,250,250,74,Open,B,M,Single-ply
 4,Arthur Mashinskiy,1987,Russia,73.4,-240,240,-247.5,240,240,74,Open,B,M,Single-ply
 5,Alexander Eriksson,1994,Sweden,73.55,222.5,230,-242.5,230,230,74,Open,B,M,Single-ply
-6,Emmanuel Franklin,1984,Britain,71.35,175,190,192.5,192.5,192.5,74,Open,B,M,Single-ply
+6,Emmanuel Franklin,1984,UK,71.35,175,190,192.5,192.5,192.5,74,Open,B,M,Single-ply
 7,Marcel Vorster,1994,South Africa,68.6,165,172.5,-177.5,172.5,172.5,74,Open,B,M,Single-ply
 8,Jonathan Kariv,1983,South Africa,73.7,165,172.5,-177.5,172.5,172.5,74,Open,B,M,Single-ply
 1,Askar Shokhanov,1983,Kazakhstan,81.45,300,307.5,311,311,311,83,Open,B,M,Single-ply
@@ -41,7 +41,7 @@ DQ,Adam Mamola,1977,USA,92.75,-307.5,-312.5,-331,,,93,Open,B,M,Single-ply
 5,Aliaksei Stasevich,1986,Belarus,103.7,300,320,-330,320,320,105,Open,B,M,Single-ply
 6,Allan Grenier,1990,France,105,300,320,-332.5,320,320,105,Open,B,M,Single-ply
 7,Yasuki Yamashita,1991,Japan,103.9,-300,300,-332.5,300,300,105,Open,B,M,Single-ply
-8,Michael Gibson,1987,Britain,100.65,205,212.5,222.5,222.5,222.5,105,Open,B,M,Single-ply
+8,Michael Gibson,1987,UK,100.65,205,212.5,222.5,222.5,222.5,105,Open,B,M,Single-ply
 9,Riaan Hayes,1982,South Africa,103.6,200,210,-222.5,210,210,105,Open,B,M,Single-ply
 10,Hendrik Janse Van Rensburg,1981,South Africa,103.75,195,-202.5,-202.5,195,195,105,Open,B,M,Single-ply
 DQ,Ralf Male,1994,Norway,104.5,-310,-310,-317.5,,,105,Open,B,M,Single-ply
@@ -53,7 +53,7 @@ DQ,Ralf Male,1994,Norway,104.5,-310,-310,-317.5,,,105,Open,B,M,Single-ply
 6,Erdenekhuu Tumurbaatar,1985,Mongolia,116.55,-290,290,-310,290,290,120,Open,B,M,Single-ply
 7,Jakob Thrane Mainz,1993,Denmark,119.85,270,290,-312.5,290,290,120,Open,B,M,Single-ply
 8,Heinrich Janse V Rensburg,1986,South Africa,105.45,190,200,205,205,205,120,Open,B,M,Single-ply
-9,Martin Marshall,1987,Britain,118,190,197.5,202.5,202.5,202.5,120,Open,B,M,Single-ply
+9,Martin Marshall,1987,UK,118,190,197.5,202.5,202.5,202.5,120,Open,B,M,Single-ply
 1,Jonathan Leo,1977,USA,156.6,-380,-380,380,380,380,120+,Open,B,M,Single-ply
 2,Altangerel Bujinlkham,1976,Mongolia,129.75,355,360,365,365,365,120+,Open,B,M,Single-ply
 3,Jeffrey Snyder,1971,USA,137.4,340,347.5,362.5,362.5,362.5,120+,Open,B,M,Single-ply
@@ -140,7 +140,7 @@ DQ,Khangal Purevdorj,1975,Mongolia,82.2,-180,-180,-192.5,,,83,Masters 1,B,M,Sing
 1,Uuganbayar Damdin,1976,Mongolia,103.9,255,260,-270,260,260,105,Masters 1,B,M,Single-ply
 2,Tarmo Parna,1978,Estonia,104.9,-255,-257.5,257.5,257.5,257.5,105,Masters 1,B,M,Single-ply
 3,Khaled Ghazal,1972,Czechia,104.95,-250,257.5,-270,257.5,257.5,105,Masters 1,B,M,Single-ply
-4,Martin Green,1974,Britain,104.75,-252.5,252.5,-255,252.5,252.5,105,Masters 1,B,M,Single-ply
+4,Martin Green,1974,UK,104.75,-252.5,252.5,-255,252.5,252.5,105,Masters 1,B,M,Single-ply
 5,Frederic Beyon,1975,France,102.9,-250,250,-257.5,250,250,105,Masters 1,B,M,Single-ply
 DQ,Sergey Kapyrin,1971,Belarus,103.15,-215,-220,-220,,,105,Masters 1,B,M,Single-ply
 DQ,Thomas Kraemer,1970,Germany,103.4,-225,-230,-235,,,105,Masters 1,B,M,Single-ply
@@ -154,7 +154,7 @@ DQ,Guenther Salbeck,1978,Germany,118.65,-235,-237.5,-245,,,120,Masters 1,B,M,Sin
 1,Robert Kretzschmar,1976,Germany,126.65,285,-292.5,307.5,307.5,307.5,120+,Masters 1,B,M,Single-ply
 2,Kaido Leesmann,1969,Estonia,124.35,290,297.5,305,305,305,120+,Masters 1,B,M,Single-ply
 3,Jan Pinc,1973,Czechia,127.25,275,292.5,-307.5,292.5,292.5,120+,Masters 1,B,M,Single-ply
-4,James Brincat-Smith,1975,Britain,196.8,185,192.5,215,215,215,120+,Masters 1,B,M,Single-ply
+4,James Brincat-Smith,1975,UK,196.8,185,192.5,215,215,215,120+,Masters 1,B,M,Single-ply
 5,Kumar Sharma Dharmendar,1976,India,123.05,155,170,180,180,180,120+,Masters 1,B,M,Single-ply
 1,Tomoyoshi Shiiki,1964,Japan,58,90,120,132.5,132.5,132.5,59,Masters 2,B,M,Single-ply
 1,Olivier Waymel,1966,France,65.3,190,-202.5,-202.5,190,190,66,Masters 2,B,M,Single-ply
@@ -230,7 +230,7 @@ DQ,Boleslaw Maka,1942,Poland,75.15,-145,-145,-145,,,83,Masters 4,B,M,Single-ply
 3,Fjeld Linn Helen Solbakken,1992,Norway,62.9,130,-135,-135,130,130,63,Open,B,F,Single-ply
 4,Aya Yamashita,1986,Japan,60.95,112.5,122.5,-130,122.5,122.5,63,Open,B,F,Single-ply
 5,Anna-Eveliina Partanen,1988,Finland,62.15,-112.5,-112.5,112.5,112.5,112.5,63,Open,B,F,Single-ply
-6,Alana Pash,1985,Britain,60.1,80,85,90,90,90,63,Open,B,F,Single-ply
+6,Alana Pash,1985,UK,60.1,80,85,90,90,90,63,Open,B,F,Single-ply
 7,Lisa Basson,1984,South Africa,60.55,80,90,-100,90,90,63,Open,B,F,Single-ply
 1,Tetyana Melnyk,1985,Ukraine,71.8,167.5,-175,-179.5,167.5,167.5,72,Open,B,F,Single-ply
 2,Sofie Josefsson,1992,Sweden,71.4,-157.5,157.5,-167.5,157.5,157.5,72,Open,B,F,Single-ply
@@ -248,7 +248,7 @@ DQ,Yulia Chistiakova,1989,Russia,69.1,-162.5,-162.5,-162.5,,,72,Open,B,F,Single-
 2,Annette Rehoff Christensen,1965,Denmark,122.35,190,200,-210,200,200,84+,Open,B,F,Single-ply
 3,Xeniya Okatenko,1994,Kazakhstan,107.15,175,180,185,185,185,84+,Open,B,F,Single-ply
 4,Tetiana Bilousova,1975,Ukraine,108.1,-170,170,-182.5,170,170,84+,Open,B,F,Single-ply
-5,Sarah Bouskill,1979,Britain,120.15,130,137.5,145,145,145,84+,Open,B,F,Single-ply
+5,Sarah Bouskill,1979,UK,120.15,130,137.5,145,145,145,84+,Open,B,F,Single-ply
 6,Nicola Green,1983,South Africa,92.05,110,-120,120,120,120,84+,Open,B,F,Single-ply
 7,Jacqui Rees,1980,South Africa,93.6,110,-117.5,-117.5,110,110,84+,Open,B,F,Single-ply
 1,Kristina Popova,2001,Kazakhstan,46.65,77.5,80,82.5,82.5,82.5,47,Sub-Juniors,B,F,Single-ply
@@ -286,16 +286,16 @@ DQ,Yulia Chistiakova,1989,Russia,69.1,-162.5,-162.5,-162.5,,,72,Open,B,F,Single-
 3,Oxana Semenukha,1995,Russia,84.85,120,-130,130,130,130,84+,Juniors,B,F,Single-ply
 1,Annelie Izindre,1972,Sweden,60.1,95,-102.5,-102.5,95,95,63,Masters 1,B,F,Single-ply
 1,Stephanie Bastien,1974,France,82.1,115,117.5,-132.5,117.5,117.5,84,Masters 1,B,F,Single-ply
-2,Rebecca Williams,1976,Britain,80.25,87.5,95,-117.5,95,95,84,Masters 1,B,F,Single-ply
-1,Jo Whiteley,1970,Britain,120.25,140,150,157.5,157.5,157.5,84+,Masters 1,B,F,Single-ply
-2,Jackie Gough,1977,Britain,151.35,142.5,152.5,-160,152.5,152.5,84+,Masters 1,B,F,Single-ply
+2,Rebecca Williams,1976,UK,80.25,87.5,95,-117.5,95,95,84,Masters 1,B,F,Single-ply
+1,Jo Whiteley,1970,UK,120.25,140,150,157.5,157.5,157.5,84+,Masters 1,B,F,Single-ply
+2,Jackie Gough,1977,UK,151.35,142.5,152.5,-160,152.5,152.5,84+,Masters 1,B,F,Single-ply
 3,Mami Komatsu,1969,Japan,108.2,105,110,-127.5,110,110,84+,Masters 1,B,F,Single-ply
 1,Nathalie Feraud,1967,France,46.85,77.5,-82.5,-90,77.5,77.5,47,Masters 2,B,F,Single-ply
 1,Mika Teramura,1962,Japan,51.65,85,90,-92.5,90,90,52,Masters 2,B,F,Single-ply
 2,Brigitte Landon,1961,France,49.35,70,-72.5,-72.5,70,70,52,Masters 2,B,F,Single-ply
 1,Gabriela Hirner,1965,Germany,54.45,105,107.5,112.5,112.5,112.5,57,Masters 2,B,F,Single-ply
 2,Tomoko Sakamaki,1965,Japan,54.65,95,107.5,-112.5,107.5,107.5,57,Masters 2,B,F,Single-ply
-3,Michelle Franklin,1966,Britain,55.95,70,77.5,-87.5,77.5,77.5,57,Masters 2,B,F,Single-ply
+3,Michelle Franklin,1966,UK,55.95,70,77.5,-87.5,77.5,77.5,57,Masters 2,B,F,Single-ply
 1,Chieko Kudo,1967,Japan,62.55,90,95,97.5,97.5,97.5,63,Masters 2,B,F,Single-ply
 2,Socorro Perez,1959,Mexico,61.65,-95,95,-97.5,95,95,63,Masters 2,B,F,Single-ply
 1,Annette Pedersen,1968,Denmark,70.2,107.5,112.5,115,115,115,72,Masters 2,B,F,Single-ply

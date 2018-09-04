@@ -1,7 +1,7 @@
 Place,Name,Sex,Event,Equipment,WeightClassKg,Division,BirthDay,Age,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg
 1,Yegor Pavlyuk,M,SBD,Multi-ply,52,T 13-15,1992-12-17,14,50.4,Russia,140,155,-165,,155,50,55,-60,,55,110,120,130,,130,340
 2,Aleksandr Petukhov,M,SBD,Multi-ply,52,T 13-15,1994-04-01,13,47,Russia,-125,-125,125,,125,65,-70,70,,70,130,137.5,-145,,137.5,332.5
-1,Steven Scoular,M,SBD,Multi-ply,52,J 20 - 23,1985-10-16,22,51.6,Britain,125,140,150,,150,60,70,77.5,,77.5,140,160,170,,170,397.5
+1,Steven Scoular,M,SBD,Multi-ply,52,J 20 - 23,1985-10-16,22,51.6,UK,125,140,150,,150,60,70,77.5,,77.5,140,160,170,,170,397.5
 1,Pavel Baranov,M,SBD,Multi-ply,56,T 13-15,1993-10-05,14,53.7,Russia,125,132.5,140,,140,67.5,72.5,77.5,80,77.5,141,150,-160,,150,367.5
 2,Aleksey Gornyy,M,SBD,Multi-ply,56,T 13-15,1992-09-03,15,53.25,Ukraine,120,132.5,-140,,132.5,62.5,-70,72.5,,72.5,120,130,135,,135,340
 1,Nikita Shelaykin,M,SBD,Multi-ply,60,T 16-17,1991-10-23,16,58.6,Russia,-170,170,180,,180,100,105,110,,110,180,190,-195,,190,480
@@ -106,7 +106,7 @@ DQ,Gilles Zozzoli,M,SBD,Multi-ply,100,O,1972-11-10,34,99.65,France,-300,-300,-30
 10,Aleksandr Ballod,M,SBD,Multi-ply,110,O,1979-08-17,28,110,Russia,-375,-375,375,,375,-215,220,227.5,,227.5,277.5,-287.5,-287.5,,277.5,880
 11,Māris Blumfelds,M,SBD,Multi-ply,110,O,1979-10-29,28,108.15,Latvia,-330,330,-350,,330,210,-230,-230,,210,300,320,330,,330,870
 12,Aleksandr Ryabets,M,SBD,Multi-ply,110,O,1983-09-08,24,106.3,Russia,300,-315,315,,315,180,190,200,,200,280,300,310,,310,825
-13,Lee Price,M,SBD,Multi-ply,110,O,1970-05-07,37,109.75,Britain,-290,290,310,,310,190,207.5,215,,215,-270,270,-290,,270,795
+13,Lee Price,M,SBD,Multi-ply,110,O,1970-05-07,37,109.75,UK,-290,290,310,,310,190,207.5,215,,215,-270,270,-290,,270,795
 DQ,Vladimir Poletayev,M,SBD,Multi-ply,110,O,1972-10-17,35,107.95,Russia,250,,,,250,-265,-265,-265,,,,,,,,
 DQ,Aleksandr Zaytsev,M,SBD,Multi-ply,110,O,1977-04-08,30,108.05,Russia,330,360,-370,,360,210,215,220,,220,-310,-310,-310,,,
 1,Mikhail Glazunov,M,SBD,Multi-ply,125,O,1974-02-09,33,118.2,Russia,-360,360,-380,,360,250,270,-275,,270,330,345,352.5,,352.5,982.5
@@ -190,7 +190,7 @@ DQ,Jane Stabile,F,SBD,Multi-ply,75,M 50 - 54,1952-12-08,54,73.1,USA,-155,-155,-1
 2,Valeriy Nechosa,M,SBD,Multi-ply,100,M 40 - 44,1965-10-14,42,99.95,Russia,260,280,300,,300,165,175,-180,,175,250,-272.5,-272.5,,250,725
 3,Sergey Bershadskiy,M,SBD,Multi-ply,100,M 40 - 44,1963-03-17,44,99.1,Ukraine,220,-240,-250,,220,160,170,,,170,220,240,255,,255,645
 4,Dmitriy Chertushkin,M,SBD,Multi-ply,100,M 40 - 44,1965-08-15,42,99.35,Russia,240,250,-265,,250,-180,180,185,,185,200,210,-220,,210,645
-DQ,Steve Hunter,M,SBD,Multi-ply,100,M 40 - 44,1967-02-03,40,96.55,Britain,230,250,-270,,250,-180,-180,-180,,,,,,,,
+DQ,Steve Hunter,M,SBD,Multi-ply,100,M 40 - 44,1967-02-03,40,96.55,UK,230,250,-270,,250,-180,-180,-180,,,,,,,,
 1,Oleg Kholodov,M,SBD,Multi-ply,100,M 45 - 49,1961-11-27,45,95.95,Russia,185,200,,,200,140,-165,170,,170,175,200,,,200,570
 2,Georgiy Didenkul,M,SBD,Multi-ply,100,M 45 - 49,1959-05-16,48,93.9,Russia,120,,,,120,120,-130,,,120,120,150,,,150,390
 1,Oleg Tokarev,M,SBD,Multi-ply,100,M 50 - 54,1954-02-28,53,99.75,Russia,-245,260,280,,280,175,190,200,,200,245,260,270,,270,750
