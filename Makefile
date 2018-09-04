@@ -65,3 +65,4 @@ clean:
 	rm -rf '${DATADIR}/usapl/__pycache__'
 	rm -rf '${DATADIR}/wrpf/__pycache__'
 	$(MAKE) -C server clean
+	rm -rf target
