@@ -242,7 +242,6 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
     newmeet = Csv(meetpath)
 
     # Remove some columns that are allowed as data but are ignored.
-    newentries.remove_column_by_name("Country")
     newentries.remove_column_by_name("School")
     newentries.remove_column_by_name("Team")
     newentries.remove_column_by_name("State")
@@ -471,6 +470,7 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.append_column('McCulloch')
     entriescsv.append_column('Tested')
     entriescsv.append_column('AgeClass')
+    entriescsv.append_column('Country')
 
     # We remove these columns later, interpolate_ages needs to use them temporarily
     entriescsv.append_column('BirthDay')
