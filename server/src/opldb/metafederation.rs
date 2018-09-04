@@ -87,7 +87,7 @@ impl MetaFederation {
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)
                     || (entry.lifter_country == None
-                        && (meet.federation.home_country() == Some(Country::Australia)
+                        && (meet.federation.home_country() == Some(Country::Canada)
                             || MetaFederation::IPACAN.contains(entry, meets)))
             }
             MetaFederation::AllCroatia => {
