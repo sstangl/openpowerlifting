@@ -113,8 +113,8 @@ def calc_age(birthday, date):
     curr_year = get_year(date)
 
     # They haven't had their birthday
-    if get_monthday(birthday) < get_monthday(date):
-        return curr_year - birthyear + 1
+    if get_monthday(birthday) > get_monthday(date):
+        return curr_year - birthyear - 1
     else:  # They've had their birthday
         return curr_year - birthyear
 
@@ -616,7 +616,8 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
                         yearage = int(MeetDateHash[age_data[DATE_IDX]].split(
                             '-')[0]) - int(age_data[BY_IDX])
 
-                    assert age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) > 3.5
+                    assert age_data[AGE_IDX] == '' or float(
+                        age_data[AGE_IDX]) > 3.5
 
                     row[ageidx] = str(age_data[AGE_IDX])
                     if row[ageclassidx] != '':
