@@ -49,7 +49,7 @@ def parse_sheetname(s):
     federation = ''
     event = None
     amateur = 'Pro'  # By default, unless otherwise specified.
-    tested = ''  # By default, unless otherwise specified.
+    tested = 'No'  # By default, unless otherwise specified.
     equipment = 'Wraps'  # By default, unless otherwise specified.
 
     # Parse word-by-word to make sure that every word is understood.
@@ -129,7 +129,7 @@ def parse_sheetname(s):
         elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
             assert amateur == 'Pro'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
-            tested = 'Tested'
+            tested = 'Yes'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -421,6 +421,8 @@ def parse_sheet(sheet):
         return csv
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
         return csv
+    elif 'строгий' in title:  # curl
+        return csv
 
     # Figure out event, equipment, etc., and store in obj.
     obj = parse_sheetname(sheet[0][0].split(':')[1])
@@ -510,7 +512,6 @@ def standardize_division_age(csv):
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
     amateuridx = csv.index('Amateur')
-    testedidx = csv.index('Tested')
 
     for row in csv.rows:
         # Fill in the Age.
@@ -616,13 +617,12 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = row[testedidx] + ' ' + row[amateuridx] + ' ' + division
+        division = row[amateuridx] + ' ' + division
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
     csv.remove_column_by_name('Division-Age')
     csv.remove_column_by_name('Amateur')
-    csv.remove_column_by_name('Tested')
 
 # Mark DQs properly and make sure that place is an integer.
 
