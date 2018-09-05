@@ -34,3 +34,8 @@ find build/ -type f | grep -v favicon | grep -v apple-touch-icon | grep -v selec
 	ASVAR=`echo "${filename}" | sed "s/[\.-]/_/g"`
 	echo "{% set ${ASVAR} = \"${hashedfilename}\" %}" >> ${TERA_MAP_FILE}
 done
+
+# At the end, though unrelated, also store the git hash.
+GITHEAD="`git rev-parse HEAD`"
+echo "{% set git_head = \"${GITHEAD}\" %}" >> ${TERA_MAP_FILE}
+echo "{% set git_head_short = \"${GITHEAD:0:8}\" %}" >> ${TERA_MAP_FILE}

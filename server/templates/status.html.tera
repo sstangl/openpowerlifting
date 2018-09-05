@@ -11,6 +11,8 @@
 <center>
   <div class="text-content">
     <h1>{{page_title}}</h1>
+    <h2>Server Version</h2>
+        <p>The server is currently on revision <a href="https://gitlab.com/openpowerlifting/opl-data/commit/{{git_head}}">{{git_head_short}}</a>. The next server update will include <a href="https://gitlab.com/openpowerlifting/opl-data/commits/master">the changes in this activity stream</a>.</p>
     <h2>Meets</h2>
         Tracking {{num_entries}} entries for {{num_lifters}} lifters from {{num_meets}} meets.
 
