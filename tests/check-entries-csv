@@ -621,7 +621,7 @@ def check_row_weightclass_consistency(row, csv, weightclasses):
     if 'BodyweightKg' in csv.fieldnames:
         bw = row[csv.index('BodyweightKg')]
         if bw:
-            if '+' in row[csv.index('WeightClassKg')]:
+            if row[csv.index('WeightClassKg')].endswith('+'):
                 if float(bw) <= float(wtcls):
                     perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
                            (row[csv.index('Name')], row[csv.index('BodyweightKg')],
