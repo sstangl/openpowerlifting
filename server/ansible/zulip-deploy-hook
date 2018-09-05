@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+# Sends a message to the team Zulip chat noting a recent server deployment.
+
+set -e
+
+# Require authentication variables.
+# These values can be found on the "Settings / Your Bots" page in Zulip.
+if [ -z "${ZULIP_DEPLOYBOT_EMAIL}" ]; then
+	echo " Error: ${0} requires ZULIP_DEPLOYBOT_EMAIL in ~/.bash_profile."
+	exit 0  # Sending this message is not so important.
+fi
+if [ -z "${ZULIP_DEPLOYBOT_API_KEY}" ]; then
+	echo " Error: ${0} requires ZULIP_DEPLOYBOT_API_KEY in ~/.bash_profile."
+	exit 0  # Sending this message is not so important.
+fi
+
+# Put a colon after the hash, and replace double-quotes.
+# This line is correct. It's vim highlighting that's broken.
+GITMESSAGE="`git log --oneline -n 1 | sed 's/\(\w*\)/\\0:/' | tr '\"' \"'\"`"
+
+# Also get rid of quotes.
+MESSAGE="Server updated to revision ${GITMESSAGE}"
+
+# Post the message.
+curl https://openpl.zulipchat.com/api/v1/messages \
+    -u "${ZULIP_DEPLOYBOT_EMAIL}:${ZULIP_DEPLOYBOT_API_KEY}" \
+    -d "type=stream" \
+    -d "to=general" \
+    -d "subject=Deployment" \
+    -d "content=${MESSAGE}"
