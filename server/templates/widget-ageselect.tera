@@ -1,6 +1,7 @@
 <select id="ageselect">
   <option value="all"{% if selection.ageclass == "AllAges" %} selected{% endif %}>All Ages</option>
   <option value="5-12" {% if selection.ageclass == "Youth512" %}selected{% endif %}>Youth 5-12</option>
+  <!--
   <option value="13-15" disabled {% if selection.ageclass == "Juniors1315" %}selected{% endif %}>Juniors 13-15</option>
   <option value="16-17" disabled {% if selection.ageclass == "Juniors1617" %}selected{% endif %}>Juniors 16-17</option>
   <option value="18-19" disabled {% if selection.ageclass == "Juniors1819" %}selected{% endif %}>Juniors 18-19</option>
@@ -24,4 +25,5 @@
     <option value="75-79" disabled {% if selection.ageclass == "Masters7579" %}selected{% endif %}>Masters 75-79</option>
   </optgroup>
   <option value="over80" disabled {% if selection.ageclass == "MastersOver80" %}selected{% endif %}>Masters 80+</option>
+  -->
 </select>
