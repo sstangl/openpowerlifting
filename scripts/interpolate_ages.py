@@ -129,21 +129,19 @@ def is_bd_consistent(lifter_data):
     meetdateidx = 1
 
     birthday = ''
+    bd_data = []
     for age_data in lifter_data:
         age = age_data[AGE_IDX]
         date = age_data[DATE_IDX]
         curr_birthday = age_data[BD_IDX]
-
-        bd_data = []
 
         if curr_birthday != '':
             if birthday != '' and curr_birthday != birthday:
                 return False
             else:
                 birthday = curr_birthday
-        # We don't want to check the consistency of age data with a birthday,
-        # as they may have had their birthday over the course of the meet
-        elif age != '':
+
+        if age != '':
             # this is an exact age
             if float(age) % 1 == 0:
                 bd_data.append([int(age), date])
