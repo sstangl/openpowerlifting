@@ -21,23 +21,46 @@
     under14 = {name = "Under 14",min=0,max=13}
     under13 = {name = "Under 13",min=0,max=12}
 
-[weightclasses.default_M]
-    classes = ["59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-99-99"]
+[weightclasses.WP_M]
+    classes = ["62","69","77","85","94","105","120","120+"]
+    date_range=["2018-08-25","9999-99-99"]
     sex = "M"
 
-[weightclasses.default_F]
-    classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-99-99"]
+[weightclasses.WP_F]
+    classes = ["48","53","58","64","72","84","100","100+"]
+    date_range=["2018-08-25","9999-99-99"]
     sex = "F"
 
-[weightclasses.junior_M]
+[weightclasses.WP_juniorM]
+    classes = ["56","62","69","77","85","94","105","105+"]
+    date_range=["2018-08-25","9999-99-99"]
+    sex = "M"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.WP_juniorF]
+    classes = ["44","48","53","58","64","72","84","84+"]
+    date_range=["2018-08-25","9999-99-99"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
+
+
+[weightclasses.IPF_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","2018-08-24"]
+    sex = "M"
+
+[weightclasses.IPF_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2018-08-24"]
+    sex = "F"
+
+[weightclasses.IPF_juniorM]
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-99-99"]
     sex = "M"
     divisions = ["Juniors","Sub-Juniors"]
 
-[weightclasses.junior_F]
+[weightclasses.IPF_juniorF]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-99-99"]
     sex = "F"

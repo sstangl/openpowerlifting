@@ -163,6 +163,9 @@
 <optgroup label="{{strings.country.mexico}}">
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.moldova}}">
+  <option value="wpc-moldova" {% if selection.federation == "WPC-Moldova" %}selected{% endif %}>WPC-Moldova - WPC Moldova</option>
+</optgroup>
 <optgroup label="{{strings.country.newzealand}}">
   <option value="all-newzealand" {% if selection.federation == "AllNewZealand" %}selected{% endif %}>{{strings.selectors.fed.all_newzealand}}</option>
   <option value="gpc-nz" {% if selection.federation == "GPC-NZ" %}selected{% endif %}>GPC-NZ - GPC New Zealand [GPC]</option>
