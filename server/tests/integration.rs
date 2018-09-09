@@ -9,6 +9,7 @@ extern crate server;
 use opltypes::*;
 use server::pages::selection::*;
 use server::opldb::MetaFederation;
+use server::opldb::algorithms;
 
 mod common;
 
@@ -41,13 +42,12 @@ fn tested_federations_are_marked_tested() {
 #[test]
 fn sorts_only_include_valid_entries() {
     let db = common::db();
-    let cache = db.get_static_cache();
 
     // Use a sort that isn't fully pre-cached.
     let mut selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::BySquat;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg(0));
@@ -57,7 +57,7 @@ fn sorts_only_include_valid_entries() {
     selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByBench;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_benchkg() > WeightKg(0));
@@ -67,7 +67,7 @@ fn sorts_only_include_valid_entries() {
     selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByDeadlift;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_deadliftkg() > WeightKg(0));
@@ -77,7 +77,7 @@ fn sorts_only_include_valid_entries() {
     selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByTotal;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.totalkg > WeightKg(0));
@@ -87,7 +87,7 @@ fn sorts_only_include_valid_entries() {
     selection = Selection::default();
     selection.federation = FederationSelection::One(Federation::RPS);
     selection.sort = SortSelection::ByWilks;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.wilks > Points(0));
@@ -97,7 +97,7 @@ fn sorts_only_include_valid_entries() {
     // Also test the fully-statically-cached variants.
     selection = Selection::default();
     selection.sort = SortSelection::ByWilks;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.wilks > Points(0));
@@ -106,7 +106,7 @@ fn sorts_only_include_valid_entries() {
 
     selection = Selection::default();
     selection.sort = SortSelection::BySquat;
-    let rankings = cache.get_full_sorted_uniqued(&selection, &db);
+    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg(0));

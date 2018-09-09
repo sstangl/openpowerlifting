@@ -4,6 +4,7 @@ extern crate server;
 
 use server::pages::api_search::*;
 use server::pages::selection::*;
+use server::opldb::algorithms;
 
 mod common;
 
@@ -11,7 +12,6 @@ mod common;
 #[test]
 fn basic_rankings_search() {
     let db = common::db();
-    let cache = db.get_static_cache();
     let selection = Selection::default();
 
     // Perform the search.
@@ -19,7 +19,7 @@ fn basic_rankings_search() {
     let row = res.next_index.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = cache.get_full_sorted_uniqued(&selection, &db);
+    let list = algorithms::get_full_sorted_uniqued(&selection, &db);
     let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
@@ -28,7 +28,6 @@ fn basic_rankings_search() {
 #[test]
 fn backwards_name_search() {
     let db = common::db();
-    let cache = db.get_static_cache();
     let selection = Selection::default();
 
     // Perform the search.
@@ -36,7 +35,7 @@ fn backwards_name_search() {
     let row = res.next_index.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = cache.get_full_sorted_uniqued(&selection, &db);
+    let list = algorithms::get_full_sorted_uniqued(&selection, &db);
     let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
@@ -45,7 +44,6 @@ fn backwards_name_search() {
 #[test]
 fn instagram_search() {
     let db = common::db();
-    let cache = db.get_static_cache();
     let selection = Selection::default();
 
     // Perform the search.
@@ -53,7 +51,7 @@ fn instagram_search() {
     let row = res.next_index.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = cache.get_full_sorted_uniqued(&selection, &db);
+    let list = algorithms::get_full_sorted_uniqued(&selection, &db);
     let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }

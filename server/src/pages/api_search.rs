@@ -1,6 +1,6 @@
 //! Implements the /api/search endpoints.
 
-use opldb::OplDb;
+use opldb::{algorithms, OplDb};
 use pages::selection::Selection;
 
 /// JSON return from the /api/search/rankings/ endpoint.
@@ -35,9 +35,7 @@ pub fn search_rankings<'db>(
     }
 
     // TODO: Use a better algorithm, don't generate everything.
-    let list = opldb
-        .get_static_cache()
-        .get_full_sorted_uniqued(selection, opldb);
+    let list = algorithms::get_full_sorted_uniqued(selection, opldb);
 
     // Handle out-of-bounds requests.
     if start_row >= list.0.len() {

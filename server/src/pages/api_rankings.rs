@@ -5,7 +5,7 @@ use pages::jsdata::JsEntryRow;
 use pages::selection::Selection;
 
 use langpack::Locale;
-use opldb::OplDb;
+use opldb::{algorithms, OplDb};
 
 #[derive(Serialize)]
 pub struct RankingsSlice<'db> {
@@ -26,10 +26,7 @@ pub fn get_slice<'db>(
     let mut end_row = end_row;
 
     // TODO: Use a better algorithm, don't generate everything.
-    let list = opldb
-        .get_static_cache()
-        .get_full_sorted_uniqued(selection, opldb);
-
+    let list = algorithms::get_full_sorted_uniqued(selection, opldb);
     let total_length = list.0.len();
 
     // The request must be in-bounds.
