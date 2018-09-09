@@ -333,6 +333,66 @@ impl WeightClassSelection {
             WeightClassSelection::WpFOver100 => make_bound_over(100.0),
         }
     }
+
+    /// Returns the exact WeightClassKg this refers to.
+    pub fn to_weightclasskg(self) -> WeightClassKg {
+        match self {
+            WeightClassSelection::AllClasses => WeightClassKg::Over(WeightKg(0_00)),
+
+            WeightClassSelection::T44 => WeightClassKg::UnderOrEqual(WeightKg(44_00)),
+            WeightClassSelection::T48 => WeightClassKg::UnderOrEqual(WeightKg(48_00)),
+            WeightClassSelection::T52 => WeightClassKg::UnderOrEqual(WeightKg(52_00)),
+            WeightClassSelection::T56 => WeightClassKg::UnderOrEqual(WeightKg(56_00)),
+            WeightClassSelection::T60 => WeightClassKg::UnderOrEqual(WeightKg(60_00)),
+            WeightClassSelection::T67_5 => WeightClassKg::UnderOrEqual(WeightKg(67_50)),
+            WeightClassSelection::T75 => WeightClassKg::UnderOrEqual(WeightKg(75_00)),
+            WeightClassSelection::T82_5 => WeightClassKg::UnderOrEqual(WeightKg(82_50)),
+            WeightClassSelection::T90 => WeightClassKg::UnderOrEqual(WeightKg(90_00)),
+            WeightClassSelection::TOver90 => WeightClassKg::Over(WeightKg(90_00)),
+            WeightClassSelection::T100 => WeightClassKg::UnderOrEqual(WeightKg(100_00)),
+            WeightClassSelection::T110 => WeightClassKg::UnderOrEqual(WeightKg(110_00)),
+            WeightClassSelection::T125 => WeightClassKg::UnderOrEqual(WeightKg(125_00)),
+            WeightClassSelection::T140 => WeightClassKg::UnderOrEqual(WeightKg(140_00)),
+            WeightClassSelection::TOver140 => WeightClassKg::Over(WeightKg(140_00)),
+
+            WeightClassSelection::IpfM53 => WeightClassKg::UnderOrEqual(WeightKg(53_00)),
+            WeightClassSelection::IpfM59 => WeightClassKg::UnderOrEqual(WeightKg(59_00)),
+            WeightClassSelection::IpfM66 => WeightClassKg::UnderOrEqual(WeightKg(66_00)),
+            WeightClassSelection::IpfM74 => WeightClassKg::UnderOrEqual(WeightKg(74_00)),
+            WeightClassSelection::IpfM83 => WeightClassKg::UnderOrEqual(WeightKg(83_00)),
+            WeightClassSelection::IpfM93 => WeightClassKg::UnderOrEqual(WeightKg(93_00)),
+            WeightClassSelection::IpfM105 => WeightClassKg::UnderOrEqual(WeightKg(105_00)),
+            WeightClassSelection::IpfM120 => WeightClassKg::UnderOrEqual(WeightKg(120_00)),
+            WeightClassSelection::IpfMOver120 => WeightClassKg::Over(WeightKg(120_00)),
+
+            WeightClassSelection::IpfF43 => WeightClassKg::UnderOrEqual(WeightKg(43_00)),
+            WeightClassSelection::IpfF47 => WeightClassKg::UnderOrEqual(WeightKg(47_00)),
+            WeightClassSelection::IpfF52 => WeightClassKg::UnderOrEqual(WeightKg(52_00)),
+            WeightClassSelection::IpfF57 => WeightClassKg::UnderOrEqual(WeightKg(57_00)),
+            WeightClassSelection::IpfF63 => WeightClassKg::UnderOrEqual(WeightKg(63_00)),
+            WeightClassSelection::IpfF72 => WeightClassKg::UnderOrEqual(WeightKg(72_00)),
+            WeightClassSelection::IpfF84 => WeightClassKg::UnderOrEqual(WeightKg(84_00)),
+            WeightClassSelection::IpfFOver84 => WeightClassKg::Over(WeightKg(84_00)),
+
+            WeightClassSelection::WpM62 => WeightClassKg::UnderOrEqual(WeightKg(62_00)),
+            WeightClassSelection::WpM69 => WeightClassKg::UnderOrEqual(WeightKg(69_00)),
+            WeightClassSelection::WpM77 => WeightClassKg::UnderOrEqual(WeightKg(77_00)),
+            WeightClassSelection::WpM85 => WeightClassKg::UnderOrEqual(WeightKg(85_00)),
+            WeightClassSelection::WpM94 => WeightClassKg::UnderOrEqual(WeightKg(94_00)),
+            WeightClassSelection::WpM105 => WeightClassKg::UnderOrEqual(WeightKg(105_00)),
+            WeightClassSelection::WpM120 => WeightClassKg::UnderOrEqual(WeightKg(120_00)),
+            WeightClassSelection::WpMOver120 => WeightClassKg::Over(WeightKg(120_00)),
+
+            WeightClassSelection::WpF48 => WeightClassKg::UnderOrEqual(WeightKg(48_00)),
+            WeightClassSelection::WpF53 => WeightClassKg::UnderOrEqual(WeightKg(53_00)),
+            WeightClassSelection::WpF58 => WeightClassKg::UnderOrEqual(WeightKg(58_00)),
+            WeightClassSelection::WpF64 => WeightClassKg::UnderOrEqual(WeightKg(64_00)),
+            WeightClassSelection::WpF72 => WeightClassKg::UnderOrEqual(WeightKg(72_00)),
+            WeightClassSelection::WpF84 => WeightClassKg::UnderOrEqual(WeightKg(84_00)),
+            WeightClassSelection::WpF100 => WeightClassKg::UnderOrEqual(WeightKg(100_00)),
+            WeightClassSelection::WpFOver100 => WeightClassKg::Over(WeightKg(100_00)),
+        }
+    }
 }
 
 impl FromStr for WeightClassSelection {

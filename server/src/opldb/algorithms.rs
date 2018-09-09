@@ -139,66 +139,14 @@ pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
 
-/// Gets a full sorted list for the given selection.
-///
-/// In almost every case it's not necessary to generate the full list,
-/// but doing so can be useful for debugging.
-pub fn get_full_sorted_uniqued<'db>(
+/// Gets a list of all entry indices matching the given selection.
+pub fn get_entry_indices_for<'db>(
     selection: &Selection,
     opldb: &'db OplDb,
-) -> PossiblyOwnedSortedUnique<'db> {
+) -> PossiblyOwnedNonSortedNonUnique<'db> {
     let cache = opldb.get_static_cache();
 
-    // First, try to use the constant-time cache.
-    if selection.federation == FederationSelection::AllFederations
-        && selection.weightclasses == WeightClassSelection::AllClasses
-        && selection.year == YearSelection::AllYears
-        && selection.ageclass == AgeClassSelection::AllAges
-        && selection.event == EventSelection::AllEvents
-    {
-        let by_sort = match selection.sort {
-            SortSelection::BySquat => &cache.constant_time.squat,
-            SortSelection::ByBench => &cache.constant_time.bench,
-            SortSelection::ByDeadlift => &cache.constant_time.deadlift,
-            SortSelection::ByTotal => &cache.constant_time.total,
-            SortSelection::ByGlossbrenner => &cache.constant_time.glossbrenner,
-            SortSelection::ByMcCulloch => &cache.constant_time.mcculloch,
-            SortSelection::ByWilks => &cache.constant_time.wilks,
-        };
-
-        let sorted_uniqued = match selection.equipment {
-            EquipmentSelection::Raw => &by_sort.raw,
-            EquipmentSelection::Wraps => &by_sort.wraps,
-            EquipmentSelection::RawAndWraps => &by_sort.raw_wraps,
-            EquipmentSelection::Single => &by_sort.single,
-            EquipmentSelection::Multi => &by_sort.multi,
-        };
-
-        // Since each lifter is only one sex, sex selections
-        // can just be an O(n) filter.
-        if selection.sex != SexSelection::AllSexes {
-            return PossiblyOwnedSortedUnique::Owned(SortedUnique(
-                sorted_uniqued
-                    .0
-                    .iter()
-                    .filter_map(|&n| {
-                        let sex = opldb.get_entry(n).sex;
-                        match (selection.sex == SexSelection::Men && sex == Sex::M)
-                            || (selection.sex == SexSelection::Women && sex == Sex::F)
-                        {
-                            true => Some(n),
-                            false => None,
-                        }
-                    })
-                    .collect(),
-            ));
-        }
-
-        return PossiblyOwnedSortedUnique::Borrowed(sorted_uniqued);
-    }
-
-    // If the constant-time cache fails, generate a new list
-    // using the NonSortedNonUnique data.
+    // Use the NonSortedNonUnique cached data.
     let equipment: &NonSortedNonUnique = match selection.equipment {
         EquipmentSelection::Raw => &cache.log_linear_time.raw,
         EquipmentSelection::Wraps => &cache.log_linear_time.wraps,
@@ -431,6 +379,71 @@ pub fn get_full_sorted_uniqued<'db>(
 
         cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
     }
+
+    cur
+}
+
+
+/// Gets a full sorted list for the given selection.
+///
+/// In almost every case it's not necessary to generate the full list,
+/// but doing so can be useful for debugging.
+pub fn get_full_sorted_uniqued<'db>(
+    selection: &Selection,
+    opldb: &'db OplDb,
+) -> PossiblyOwnedSortedUnique<'db> {
+    let cache = opldb.get_static_cache();
+
+    // First, try to use the constant-time cache.
+    if selection.federation == FederationSelection::AllFederations
+        && selection.weightclasses == WeightClassSelection::AllClasses
+        && selection.year == YearSelection::AllYears
+        && selection.ageclass == AgeClassSelection::AllAges
+        && selection.event == EventSelection::AllEvents
+    {
+        let by_sort = match selection.sort {
+            SortSelection::BySquat => &cache.constant_time.squat,
+            SortSelection::ByBench => &cache.constant_time.bench,
+            SortSelection::ByDeadlift => &cache.constant_time.deadlift,
+            SortSelection::ByTotal => &cache.constant_time.total,
+            SortSelection::ByGlossbrenner => &cache.constant_time.glossbrenner,
+            SortSelection::ByMcCulloch => &cache.constant_time.mcculloch,
+            SortSelection::ByWilks => &cache.constant_time.wilks,
+        };
+
+        let sorted_uniqued = match selection.equipment {
+            EquipmentSelection::Raw => &by_sort.raw,
+            EquipmentSelection::Wraps => &by_sort.wraps,
+            EquipmentSelection::RawAndWraps => &by_sort.raw_wraps,
+            EquipmentSelection::Single => &by_sort.single,
+            EquipmentSelection::Multi => &by_sort.multi,
+        };
+
+        // Since each lifter is only one sex, sex selections
+        // can just be an O(n) filter.
+        if selection.sex != SexSelection::AllSexes {
+            return PossiblyOwnedSortedUnique::Owned(SortedUnique(
+                sorted_uniqued
+                    .0
+                    .iter()
+                    .filter_map(|&n| {
+                        let sex = opldb.get_entry(n).sex;
+                        match (selection.sex == SexSelection::Men && sex == Sex::M)
+                            || (selection.sex == SexSelection::Women && sex == Sex::F)
+                        {
+                            true => Some(n),
+                            false => None,
+                        }
+                    })
+                    .collect(),
+            ));
+        }
+
+        return PossiblyOwnedSortedUnique::Borrowed(sorted_uniqued);
+    }
+
+    // If the ConstantTime cache fails, use the NonSortedNonUnique cache data.
+    let cur = get_entry_indices_for(selection, opldb);
 
     let entries = opldb.get_entries();
     let meets = opldb.get_meets();

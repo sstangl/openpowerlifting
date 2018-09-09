@@ -1,0 +1,61 @@
+{% extends "desktop-base" %}
+
+{% block includes %}
+  <script src="/static/scripts/{{records_js}}"></script>
+{% endblock includes %}
+
+{% block topbar_hack %}
+  <div class="topbar-without-controls">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-left">
+      {% include "widget-equipmentselect" %}
+      <select id="classkindselect">
+        <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
+        <option value="ipf-classes" {% if selection.classkind == "IPF" %}selected{% endif %}>IPF</option>
+        <option value="wp-classes" {% if selection.classkind == "WP" %}selected{% endif %}>WP</option>
+      </select>
+      <select id="sexselect">
+        <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>
+        <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
+      </select>
+      {% include "widget-fedselect" %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="mixed-content-with-controls">
+    {% for table in tables %}
+    <h2>{{table.title}}</h2>
+    <table>
+      <thead><tr>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.formulaplace}}</th>
+        <th>{{strings.columns.liftername}}</th>
+        <th>{{table.weight_column_label}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.federation}}</th>
+      </tr></thead>
+      <tbody>
+      {% for this in table.rows %}
+      <tr>
+        <td>{{this.weightclass}}</td>
+        <td>{{this.rank}}</td>
+        <td><a class="{{this.lifter.color}}" href="/u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% if this.lifter.flair == "bbbc" %} <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo" style="padding-left: 6px;"/>{% endif %}</td>
+        <td>{{this.weight_lifted}}</td>
+        <td><a href="/m/{{this.path | safe}}">{{this.date}}</a></td>
+        <td>{{this.federation}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+  </div>
+{% endblock body %}

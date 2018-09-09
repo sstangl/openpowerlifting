@@ -211,6 +211,34 @@ fn rankings_redirect() -> Redirect {
     Redirect::to("/")
 }
 
+#[get("/records/<selections..>")]
+fn records(
+    selections: Option<PathBuf>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let selection = if let Some(sel) = selections {
+        pages::records::RecordsSelection::from_path(&sel).ok()?
+    } else {
+        pages::records::RecordsSelection::default()
+    };
+    let locale = make_locale(&langinfo, languages, &cookies);
+    let context = pages::records::Context::new(&opldb, &locale, &selection);
+    Some(Template::render("records", &context))
+}
+
+#[get("/records")]
+fn records_default(
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    records(None, opldb, langinfo, languages, cookies)
+}
+
 #[get("/u/<username>")]
 fn lifter(
     username: String,
@@ -536,6 +564,8 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 index,
                 rankings,
                 rankings_redirect,
+                records,
+                records_default,
                 lifter,
                 meetlist,
                 meetlist_default,

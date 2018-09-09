@@ -7,6 +7,7 @@ const BabelMinifyConstantFolding = require('babel-plugin-minify-constant-folding
 module.exports = {
   entry: {
     rankings: "./scripts/rankings.ts",
+    records: "./scripts/records.ts",
     meet: "./scripts/meet.ts",
     meetlist: "./scripts/meetlist.ts"
   },

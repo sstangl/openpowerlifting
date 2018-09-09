@@ -61,6 +61,8 @@ fn test_pages_load() {
     let client = client();
     assert_eq!(client.get("/").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/rankings/uspa").dispatch().status(), Status::Ok);
+    assert_eq!(client.get("/records").dispatch().status(), Status::Ok);
+    assert_eq!(client.get("/records/uspa").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/u/seanstangl").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/mlist").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/m/uspa/0485").dispatch().status(), Status::Ok);

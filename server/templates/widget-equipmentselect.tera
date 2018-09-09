@@ -1,0 +1,7 @@
+<select id="equipmentselect">
+  <option value="raw"{% if selection.equipment == "Raw" %} selected{% endif %}>{{strings.selectors.equipment.raw}}</option>
+  <option value="wraps"{% if selection.equipment == "Wraps" %} selected{% endif %}>{{strings.selectors.equipment.wraps}}</option>
+  <option value="raw_wraps"{% if selection.equipment == "RawAndWraps" %} selected{% endif %}>{{strings.selectors.equipment.raw_wraps}}</option>
+  <option value="single"{% if selection.equipment == "Single" %} selected{% endif %}>{{strings.selectors.equipment.single}}</option>
+  <option value="multi"{% if selection.equipment == "Multi" %} selected{% endif %}>{{strings.selectors.equipment.multi}}</option>
+</select>
