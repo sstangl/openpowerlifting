@@ -205,18 +205,12 @@ impl<'db> SingleRecordCollector<'db> {
 
             // Always maintain sorted order.
             self.accumulator.sort_by(|a, b| {
-                if a.is_none() && b.is_none() {
-                    return Ordering::Equal;
+                match (a, b) {
+                    (None, None) => Ordering::Equal,
+                    (Some(_), None) => Ordering::Less,
+                    (None, Some(_)) => Ordering::Greater,
+                    (Some(x), Some(y)) => compare(meets, x, y),
                 }
-                if a.is_some() && b.is_none() {
-                    // Lower comes first.
-                    return Ordering::Less;
-                }
-                if a.is_none() && b.is_some() {
-                    // Greater comes last (so b goes first).
-                    return Ordering::Greater;
-                }
-                compare(meets, a.unwrap(), b.unwrap())
             });
         }
     }
