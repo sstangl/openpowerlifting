@@ -3,6 +3,7 @@
     disabled = {name ="Disabled",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=22.5}
     subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
+    youth= {name = "Youth",min =14,max=18}
     youthA= {name = "Youth A",min =17,max=18}
     youthB= {name = "Youth B",min =14,max=16}
     masters1 = {name = "Masters 1",min=39.5,max=999}

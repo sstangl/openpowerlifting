@@ -1,5 +1,6 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
+    disabled = {name ="Disabled",min=0,max=999}
     juniors = {name = "Junior",min=0,max=22.5}
     subjuniors = {name = "Subjunior",min=0,max=17.5}
     masters1 = {name = "Masters 1",min=39.5,max=999}
