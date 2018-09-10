@@ -258,8 +258,21 @@ impl<'db> RecordCollector<'db> {
     /// Whether the given Entry is in the weight class this RecordCollector covers.
     #[inline]
     pub fn entry_in_class(&self, entry: &Entry) -> bool {
-        entry.bodyweightkg > self.class_min_exclusive
-            && entry.bodyweightkg <= self.class_max_inclusive
+        // If bodyweight exists, just go by bodyweight.
+        if entry.bodyweightkg != WeightKg(0_00) {
+            return entry.bodyweightkg > self.class_min_exclusive &&
+                   entry.bodyweightkg <= self.class_max_inclusive;
+        }
+
+        // Otherwise, check for a SHW category with no recorded bodyweight.
+        if self.class_max_inclusive == WeightKg::max_value() {
+            // Does the minimum weight of the SHW category fit here?
+            if let WeightClassKg::Over(w) = entry.weightclasskg {
+                return w >= self.class_min_exclusive;
+            }
+        }
+
+        false
     }
 
     pub fn integrate(&mut self, meets: &'db [Meet], entry: &'db Entry) {
