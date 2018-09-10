@@ -184,7 +184,26 @@ impl<'db> SingleRecordCollector<'db> {
         if self.accumulator[last]
             .map_or(true, |e| compare(meets, entry, e) == Ordering::Less)
         {
-            self.accumulator[last] = Some(entry);
+            // This entry matched.
+            // Since each lifter is only to be counted once in each category,
+            // scan through the accumulator and look to replace an existing entry.
+            let same_lifter: Option<usize> = self.accumulator.iter().position(|opt| {
+                opt.map_or(false, |e| e.lifter_id == entry.lifter_id)
+            });
+            match same_lifter {
+                None => {
+                    self.accumulator[last] = Some(entry);
+                }
+                Some(pos) => {
+                    let orig = &self.accumulator[pos].unwrap();
+                    // Only replace the lifter's entry if this one is better.
+                    if compare(meets, entry, orig) == Ordering::Less {
+                        self.accumulator[pos] = Some(entry);
+                    }
+                }
+            };
+
+            // Always maintain sorted order.
             self.accumulator.sort_by(|a, b| {
                 if a.is_none() && b.is_none() {
                     return Ordering::Equal;
