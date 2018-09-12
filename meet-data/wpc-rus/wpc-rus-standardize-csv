@@ -171,11 +171,11 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 'однослойной', '1ой', '1ply',
                       'однослойная', 'однослойный', 'однолойной', '1сл', 'односл',
                       '1слой', 'односло', 'однослойно', 'sply', 'singleply', 'одн',
-                      'stdeq', 'standart', 'st', 'sp']:
+                      'stdeq', 'standart', 'st', 'sp', 'single']:
             equipment = 'Single-ply'
         elif word in ['экипировке', 'm ply', 'eq', 'многослой', 'экипировка', 'мн',
                       'эипировке', 'эк', '2ply', 'мнслой', 'эки', 'multiply',
-                      'multyply', 'multi', 'mylti', 'mply', 'mp']:
+                      'multyply', 'multi', 'mylti', 'mply', 'mp', 'multy']:
             if equipment != 'Single-ply':  # Avoid accidently marking single as multi
                 equipment = 'Multi-ply'
         elif word in ['slinghot', 'slingshot', 'СПР', 'облегченная', 'облегченной',
@@ -459,7 +459,8 @@ def parse_sheet(sheet):
     # Ignore some sheets that don't contain any powerlifting.
     if 'судейская кол' in title:
         return csv
-    elif 'нж' in title or 'народный' in title or 'нар' in title or 'm-rep' in title:
+    elif ('нж' in title or 'народный' in title or 'нар' in title
+          or 'm-rep' in title or 'folk' in title):
         # This is the "People's Bench", which I think is bench-for-reps.
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title:

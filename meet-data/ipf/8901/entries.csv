@@ -1,36 +1,36 @@
-Place,Sex,WeightClassKg,Division,Name,Country,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment
-1,F,52,Open,Arma Liisa Prinkkala,Finland,135,62.5,150,347.5,SBD,Single-ply
-2,F,52,Open,Hisako Yoshida,Japan,127.5,65,137.5,330,SBD,Single-ply
-3,F,52,Open,Rekha Mal,India,125,57.5,135,317.5,SBD,Single-ply
-4,F,52,Open,Delsey Palk,USA,107.5,60,135,302.5,SBD,Single-ply
-5,F,52,Open,Felic Mangagne,USA,105,50,122.5,277.5,SBD,Single-ply
-1,F,67.5,Open,Joy Burt,Canada,170,82.5,197.5,450,SBD,Single-ply
-2,F,67.5,Open,Silvana Bollmann,West Germany,190,110,202.5,502.5,SBD,Single-ply
-3,F,67.5,Open,Jenny Hunter,England,152.5,85,177.5,415,SBD,Single-ply
-4,F,67.5,Open,Umeyo Kunihiro,Japan,152.5,95,185,432.5,SBD,Single-ply
-5,F,67.5,Open,Andrea Sortwell,USA,140,80,175,395,SBD,Single-ply
-6,F,67.5,Open,Kazuko Ishikawa,Japan,135,80,150,365,SBD,Single-ply
-7,F,67.5,Open,Sheridan Oldhamm,USA,115,55,137.5,307.5,SBD,Single-ply
-1,F,67.5+,Open,Liz Odendaal,Netherlands,205,137.5,242.5,585,SBD,Single-ply
-2,F,67.5+,Open,Sunita Laha,India,225,102.5,200,527.5,SBD,Single-ply
-3,F,67.5+,Open,Judith Oakes,England,207.5,115,217.5,540,SBD,Single-ply
-4,F,67.5+,Open,Heidi Wittech,Austria,195,107.5,195,497.5,SBD,Single-ply
-5,F,67.5+,Open,Ulrike Herchenhein,West Germany,220,127.5,220,567.5,SBD,Single-ply
-1,M,67.5,Open,Ventje Male,Indonesia,215,137.5,242.5,595,SBD,Single-ply
-2,M,67.5,Open,Hiroyuki Isagawa,Japan,205,157.5,230,592.5,SBD,Single-ply
-3,M,67.5,Open,Talamobanua Nanda,Indonesia,245,115,250,610,SBD,Single-ply
-4,M,67.5,Open,Lucien DeFaria,France,180,125,280,585,SBD,Single-ply
-5,M,67.5,Open,Gerard Tromp,Netherlands,215,137.5,207.5,560,SBD,Single-ply
-6,M,67.5,Open,John D. Carr,USA,195,117.5,242.5,555,SBD,Single-ply
-7,M,67.5,Open,Vasco Simpson,Canada,210,127.5,237.5,575,SBD,Single-ply
-1,M,90,Open,Alexander Ausby,USA,300,157.5,315,772.5,SBD,Single-ply
-2,M,90,Open,Floriano Damenici,Italy,315,200,320,835,SBD,Single-ply
-3,M,90,Open,Michael Barber,USA,282.5,165,295,742.5,SBD,Single-ply
-4,M,90,Open,Walter Porsey,Canada,245,145,250,640,SBD,Single-ply
-DQ,M,90,Open,Donald Scott,USA,,,,,SBD,Single-ply
-1,M,90+,Open,Tony Stevens,England,337.5,205,330,872.5,SBD,Single-ply
-2,M,90+,Open,Johnny Melander,Sweden,325,205,290,820,SBD,Single-ply
-3,M,90+,Open,Jean-Pierre Brulois,France,350,230,322.5,902.5,SBD,Single-ply
-4,M,90+,Open,Rudolph Kuster,West Germany,342.5,177.5,340,860,SBD,Single-ply
-5,M,90+,Open,Romeu Ghattas,Brazil,280,205,280,765,SBD,Single-ply
-6,M,90+,Open,Ricardo Malo,Brazil,285,170,270,725,SBD,Single-ply
+Place,Sex,WeightClassKg,BodyweightKg,Age,Division,Name,Country,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,TotalKg,Event,Equipment
+1,F,52,43.99,,Open,Arma Liisa Prinkkala,Finland,135,62.5,,150,347.5,SBD,Single-ply
+2,F,52,,,Open,Hisako Yoshida,Japan,127.5,65,,137.5,330,SBD,Single-ply
+3,F,52,46.72,,Open,Rekha Mal,India,125,57.5,,135,317.5,SBD,Single-ply
+4,F,52,,,Open,Delsey Palk,USA,107.5,60,,135,302.5,SBD,Single-ply
+5,F,52,,,Open,Felic Mangagne,USA,105,50,,122.5,277.5,SBD,Single-ply
+1,F,67.5,55.79,,Open,Joy Burt,Canada,170,82.5,,197.5,450,SBD,Single-ply
+2,F,67.5,64.87,,Open,Silvana Bollmann,West Germany,190,110,,202.5,502.5,SBD,Single-ply
+3,F,67.5,,,Open,Jenny Hunter,England,152.5,85,,177.5,415,SBD,Single-ply
+4,F,67.5,,,Open,Umeyo Kunihiro,Japan,152.5,95,,185,432.5,SBD,Single-ply
+5,F,67.5,,,Open,Andrea Sortwell,USA,140,80,,175,395,SBD,Single-ply
+6,F,67.5,,,Open,Kazuko Ishikawa,Japan,135,80,,150,365,SBD,Single-ply
+7,F,67.5,,,Open,Sheridan Oldhamm,USA,115,55,,137.5,307.5,SBD,Single-ply
+1,F,67.5+,72.1,,Open,Liz Odendaal,Netherlands,205,137.5,142.5,242.5,585,SBD,Single-ply
+2,F,67.5+,,,Open,Sunita Laha,India,225,102.5,,200,527.5,SBD,Single-ply
+3,F,67.5+,,,Open,Judith Oakes,England,207.5,115,,217.5,540,SBD,Single-ply
+4,F,67.5+,,,Open,Heidi Wittech,Austria,195,107.5,,195,497.5,SBD,Single-ply
+5,F,67.5+,,,Open,Ulrike Herchenhein,West Germany,220,127.5,,220,567.5,SBD,Single-ply
+1,M,67.5,,,Open,Ventje Male,Indonesia,215,137.5,,242.5,595,SBD,Single-ply
+2,M,67.5,,,Open,Hiroyuki Isagawa,Japan,205,157.5,,230,592.5,SBD,Single-ply
+3,M,67.5,,,Open,Talamobanua Nanda,Indonesia,245,115,,250,610,SBD,Single-ply
+4,M,67.5,,47,Open,Lucien DeFaria,France,180,125,,280,585,SBD,Single-ply
+5,M,67.5,,,Open,Gerard Tromp,Netherlands,215,137.5,,207.5,560,SBD,Single-ply
+6,M,67.5,,,Open,John D. Carr,USA,195,117.5,,242.5,555,SBD,Single-ply
+7,M,67.5,,,Open,Vasco Simpson,Canada,210,127.5,,237.5,575,SBD,Single-ply
+1,M,90,,,Open,Alexander Ausby,USA,300,157.5,,315,772.5,SBD,Single-ply
+2,M,90,,,Open,Floriano Damenici,Italy,315,200,,320,835,SBD,Single-ply
+3,M,90,,,Open,Michael Barber,USA,282.5,165,,295,742.5,SBD,Single-ply
+4,M,90,,,Open,Walter Porsey,Canada,245,145,,250,640,SBD,Single-ply
+DQ,M,90,,,Open,Donald Scott,USA,,,,,,SBD,Single-ply
+1,M,90+,,,Open,Tony Stevens,England,337.5,205,,330,872.5,SBD,Single-ply
+2,M,90+,,,Open,Johnny Melander,Sweden,325,205,,290,820,SBD,Single-ply
+3,M,90+,,,Open,Jean-Pierre Brulois,France,350,230,,322.5,902.5,SBD,Single-ply
+4,M,90+,,,Open,Rudolph Kuster,West Germany,342.5,177.5,,340,860,SBD,Single-ply
+5,M,90+,,,Open,Romeu Ghattas,Brazil,280,205,,280,765,SBD,Single-ply
+6,M,90+,,,Open,Ricardo Malo,Brazil,285,170,,270,725,SBD,Single-ply
