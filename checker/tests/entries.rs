@@ -134,3 +134,15 @@ fn test_column_event() {
                 Test User,90,M,100,100,Raw,D,1";
     assert!(check(data) > 0);
 }
+
+#[test]
+fn test_event_consistency() {
+    // Bench-only lifter with valid data, but marked SBD.
+    let data = "Name,Division,BirthDay,WeightClassKg,BodyweightKg,Sex,Tested,\
+                Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,\
+                Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,\
+                Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Country\n\
+                Sergei Molchanov,O,1973-03-15,125,124.6,M,No,,,,,,-230,230,240,,240\
+                ,,,,,,240,5,SBD,Raw,Russia";
+    assert!(check(data) > 0);
+}

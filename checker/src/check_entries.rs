@@ -51,6 +51,46 @@ struct Entry {
     pub deadlift4kg: Option<WeightKg>,
 }
 
+#[inline]
+fn is_non_zero(weight: Option<WeightKg>) -> bool {
+    match weight {
+        None => false,
+        Some(w) => w != WeightKg(0_00),
+    }
+}
+
+impl Entry {
+    /// Whether the Entry contains any Squat data.
+    #[inline]
+    pub fn has_squat_data(&self) -> bool {
+        is_non_zero(self.best3squatkg)
+            || is_non_zero(self.squat1kg)
+            || is_non_zero(self.squat2kg)
+            || is_non_zero(self.squat3kg)
+            || is_non_zero(self.squat4kg)
+    }
+
+    /// Whether the Entry contains any Bench data.
+    #[inline]
+    pub fn has_bench_data(&self) -> bool {
+        is_non_zero(self.best3benchkg)
+            || is_non_zero(self.bench1kg)
+            || is_non_zero(self.bench2kg)
+            || is_non_zero(self.bench3kg)
+            || is_non_zero(self.bench4kg)
+    }
+
+    /// Whether the Entry contains any Deadlift data.
+    #[inline]
+    pub fn has_deadlift_data(&self) -> bool {
+        is_non_zero(self.best3deadliftkg)
+            || is_non_zero(self.deadlift1kg)
+            || is_non_zero(self.deadlift2kg)
+            || is_non_zero(self.deadlift3kg)
+            || is_non_zero(self.deadlift4kg)
+    }
+}
+
 #[derive(Copy, Clone, Debug, Display, EnumIter, Eq, PartialEq, EnumString)]
 enum Header {
     Name,
@@ -335,6 +375,60 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_event_consistency(entry: &Entry, line: u64, report: &mut Report) {
+    let event = match entry.event {
+        None => { return; }
+        Some(e) => e,
+    };
+
+    let has_squat_data: bool = entry.has_squat_data();
+    let has_bench_data: bool = entry.has_bench_data();
+    let has_deadlift_data: bool = entry.has_deadlift_data();
+
+    // Check that lift data isn't present outside of the specified Event.
+    if has_squat_data && !event.has_squat() {
+        report.error_on(line, format!("Event '{}' cannot have squat data", event));
+    }
+    if has_bench_data && !event.has_bench() {
+        report.error_on(line, format!("Event '{}' cannot have bench data", event));
+    }
+    if has_deadlift_data && !event.has_deadlift() {
+        report.error_on(line, format!("Event '{}' cannot have deadlift data", event));
+    }
+
+    // Check that the Equipment makes sense for the given Event.
+    if let Some(equipment) = entry.equipment {
+        if equipment == Equipment::Wraps && !event.has_squat() {
+            report.error_on(line, format!("Event '{}' doesn't use Wraps", event));
+        }
+        if equipment == Equipment::Straps && !event.has_deadlift() {
+            report.error_on(line, format!("Event '{}' doesn't use Straps", event));
+        }
+    }
+
+    // If the lifter wasn't DQ'd, they should have data from each lift.
+    // TODO: Fix all the warnings and make these all report errors.
+    if let Some(ref place) = entry.place {
+        if !place.is_dq() {
+            // Allow entries that only have a Total but no lift data.
+            if has_squat_data || has_bench_data || has_deadlift_data {
+                if !has_squat_data && event.has_squat() {
+                    let s = format!("Non-DQ Event '{}' requires squat data", event);
+                    report.warning_on(line, s);
+                }
+                if !has_bench_data && event.has_bench() {
+                    let s = format!("Non-DQ Event '{}' requires bench data", event);
+                    report.warning_on(line, s);
+                }
+                if !has_deadlift_data && event.has_deadlift() {
+                    let s = format!("Non-DQ Event '{}' requires deadlift data", event);
+                    report.warning_on(line, s);
+                }
+            }
+        }
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -476,6 +570,9 @@ where
         if let Some(idx) = headers.get(Header::CyrillicName) {
             check_column_cyrillicname(&record[idx], line, &mut report);
         }
+
+        // Check consistency across fields.
+        check_event_consistency(&entry, line, &mut report);
     }
 
     Ok(report)
