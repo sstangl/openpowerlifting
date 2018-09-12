@@ -26,6 +26,8 @@
         <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
       {% include "widget-fedselect" %}
+      {% include "widget-ageselect" %}
+      {% include "widget-yearselect" %}
     </div>
   </div>
 {% endblock controls %}

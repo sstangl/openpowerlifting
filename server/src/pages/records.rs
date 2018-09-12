@@ -18,6 +18,8 @@ pub struct RecordsSelection {
     pub federation: FederationSelection,
     pub sex: SexSelection,
     pub classkind: ClassKindSelection,
+    pub ageclass: AgeClassSelection,
+    pub year: YearSelection,
 }
 
 impl Default for RecordsSelection {
@@ -27,6 +29,8 @@ impl Default for RecordsSelection {
             federation: FederationSelection::AllFederations,
             sex: SexSelection::Men,
             classkind: ClassKindSelection::Traditional,
+            ageclass: AgeClassSelection::AllAges,
+            year: YearSelection::AllYears,
         }
     }
 }
@@ -38,6 +42,8 @@ impl RecordsSelection {
             equipment: self.equipment,
             federation: self.federation,
             sex: self.sex,
+            ageclass: self.ageclass,
+            year: self.year,
             .. Selection::default()
         }
     }
@@ -61,6 +67,8 @@ impl RecordsSelection {
         let mut parsed_sex: bool = false;
         let mut parsed_federation: bool = false;
         let mut parsed_classkind: bool = false;
+        let mut parsed_ageclass : bool = false;
+        let mut parsed_year: bool = false;
 
         // Iterate over each path component, attempting to determine
         // what kind of data it is.
@@ -96,6 +104,20 @@ impl RecordsSelection {
                 }
                 ret.classkind = k;
                 parsed_classkind = true;
+            // Check whether this is age class information.
+            } else if let Ok(c) = segment.parse::<AgeClassSelection>() {
+                if parsed_ageclass {
+                    return Err(());
+                }
+                ret.ageclass = c;
+                parsed_ageclass = true;
+            // Check whether this is year information.
+            } else if let Ok(y) = segment.parse::<YearSelection>() {
+                if parsed_year {
+                    return Err(());
+                }
+                ret.year = y;
+                parsed_year = true;
             // Unknown string, therefore malformed URL.
             } else {
                 return Err(());

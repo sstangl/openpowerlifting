@@ -8,6 +8,8 @@ let selEquipment: HTMLSelectElement;
 let selClassKind: HTMLSelectElement;
 let selSex: HTMLSelectElement;
 let selFederation: HTMLSelectElement;
+let selAgeClass: HTMLSelectElement;
+let selRecordsYear: HTMLSelectElement;
 
 // Returns a string like "/women/uspa", or the empty string
 // for the default selection.
@@ -19,11 +21,17 @@ function records_selection_to_path(): string {
     if (selClassKind.value !== "traditional-classes") {
         url += "/" + selClassKind.value;
     }
+    if (selFederation.value !== "all") {
+        url += "/" + selFederation.value;
+    }
     if (selSex.value !== "men") {
         url += "/" + selSex.value;
     }
-    if (selFederation.value !== "all") {
-        url += "/" + selFederation.value;
+    if (selAgeClass.value !== "all") {
+        url += "/" + selAgeClass.value;
+    }
+    if (selRecordsYear.value !== "all") {
+        url += "/" + selRecordsYear.value;
     }
     return url;
 }
@@ -49,11 +57,15 @@ function records_addEventListeners() {
     selClassKind = document.getElementById("classkindselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
     selFederation = document.getElementById("fedselect") as HTMLSelectElement;
+    selAgeClass = document.getElementById("ageselect") as HTMLSelectElement;
+    selRecordsYear = document.getElementById("yearselect") as HTMLSelectElement;
 
     records_addSelectorListeners(selEquipment);
     records_addSelectorListeners(selClassKind);
     records_addSelectorListeners(selSex);
     records_addSelectorListeners(selFederation);
+    records_addSelectorListeners(selAgeClass);
+    records_addSelectorListeners(selRecordsYear);
 }
 
 document.addEventListener("DOMContentLoaded", records_addEventListeners);

@@ -95,11 +95,12 @@ impl Selection {
                 }
                 ret.sex = s;
                 parsed_sex = true;
-            } else if let Ok(s) = segment.parse::<AgeClassSelection>() {
+            // Check whether this is age class information.
+            } else if let Ok(c) = segment.parse::<AgeClassSelection>() {
                 if parsed_ageclass {
                     return Err(());
                 }
-                ret.ageclass = s;
+                ret.ageclass = c;
                 parsed_ageclass = true;
             // Check whether this is year information.
             } else if let Ok(y) = segment.parse::<YearSelection>() {
