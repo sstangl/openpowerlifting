@@ -144,5 +144,6 @@ fn test_event_consistency() {
                 Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Country\n\
                 Sergei Molchanov,O,1973-03-15,125,124.6,M,No,,,,,,-230,230,240,,240\
                 ,,,,,,240,5,SBD,Raw,Russia";
-    assert!(check(data) > 0);
+    // FIXME: This should be > 0, but we made it a warning while fixing data.
+    assert!(check(data) == 0);
 }
