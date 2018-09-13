@@ -152,7 +152,7 @@ impl FromStr for ClassKindSelection {
 /// The context object passed to `templates/records.html.tera`.
 #[derive(Serialize)]
 pub struct Context<'db> {
-    pub page_title: String,
+    pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: WeightUnits,
@@ -543,19 +543,35 @@ fn prettify_records<'db>(
     opldb: &'db OplDb,
     locale: &'db Locale,
 ) -> Vec<Table<'db>> {
-    let squat_str = &locale.strings.columns.squat;
-    let bench_str = &locale.strings.columns.bench;
-    let deadlift_str = &locale.strings.columns.deadlift;
-    let total_str = &locale.strings.columns.total;
+    let strings = &locale.strings;
 
-    let mut fullpower_squat = Table::new("Squat (Full Power)".to_string(), squat_str);
-    let mut fullpower_bench = Table::new("Bench (Full Power)".to_string(), bench_str);
-    let mut fullpower_deadlift =
-        Table::new("Deadlift (Full Power)".to_string(), deadlift_str);
-    let mut fullpower_total = Table::new("Total".to_string(), total_str);
-    let mut any_squat = Table::new("Squat (All Events)".to_string(), squat_str);
-    let mut any_bench = Table::new("Bench (All Events)".to_string(), bench_str);
-    let mut any_deadlift = Table::new("Deadlift (All Events)".to_string(), deadlift_str);
+    let squat_str = &strings.columns.squat;
+    let bench_str = &strings.columns.bench;
+    let deadlift_str = &strings.columns.deadlift;
+    let total_str = &strings.columns.total;
+
+    let full_power = &strings.selectors.event.full_power;
+    let all = &strings.selectors.event.all;
+
+    let fullpower_squat_str = format!("{} ({})", strings.columns.squat, full_power);
+    let mut fullpower_squat = Table::new(fullpower_squat_str, squat_str);
+
+    let fullpower_bench_str = format!("{} ({})", strings.columns.bench, full_power);
+    let mut fullpower_bench = Table::new(fullpower_bench_str, bench_str);
+
+    let fullpower_deadlift_str = format!("{} ({})", strings.columns.deadlift, full_power);
+    let mut fullpower_deadlift = Table::new(fullpower_deadlift_str, deadlift_str);
+
+    let mut fullpower_total = Table::new(strings.columns.total.to_string(), total_str);
+
+    let any_squat_str = format!("{} ({})", strings.columns.squat, all);
+    let mut any_squat = Table::new(any_squat_str, squat_str);
+
+    let any_bench_str = format!("{} ({})", strings.columns.bench, all);
+    let mut any_bench = Table::new(any_bench_str, bench_str);
+
+    let any_deadlift_str = format!("{} ({})", strings.columns.deadlift, all);
+    let mut any_deadlift = Table::new(any_deadlift_str, deadlift_str);
 
     // Collectors are ordered by weight class, ascending.
     for collector in records {
@@ -612,7 +628,7 @@ impl<'db> Context<'db> {
         let tables = prettify_records(records, opldb, locale);
 
         Context {
-            page_title: "Records".to_string(),
+            page_title: &locale.strings.header.records,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
