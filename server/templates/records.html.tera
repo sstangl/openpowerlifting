@@ -35,6 +35,12 @@
 {% block body %}
   <div class="mixed-content-with-controls">
     {% for table in tables %}
+
+    {% if loop.index is odd %}
+      <div class="records-section records-group">
+    {% endif %}
+
+    <div class="records-col">
     <h2>{{table.title}}</h2>
     <table>
       <thead><tr>
@@ -58,6 +64,14 @@
       {% endfor %}
       </tbody>
     </table>
+    </div>
+
+    {% if loop.index is even %}
+      </div>
+    {% elif loop.last %}
+      </div>
+    {% endif %}
+
     {% endfor %}
   </div>
 {% endblock body %}

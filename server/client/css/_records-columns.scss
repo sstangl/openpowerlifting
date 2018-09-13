@@ -1,0 +1,44 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// Style definitions for the Records page columnar layout.
+
+// Created using http://www.responsivegridsystem.com/calculator/.
+// It would be nice to use CSS Grid, but it doesn't yet work on the
+// old phones that people are using.
+
+// This is CSS for splitting the page into two sides, not for the
+// columns in a specific records table.
+
+/*  SECTIONS  */
+.records-section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.records-col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0.5%;
+	width: 49.75%;
+}
+.records-col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.records-group:before,
+.records-group:after { content:""; display:table; }
+.records-group:after { clear:both;}
+.records-group { zoom:1; /* For IE 6/7 */ }
+
+// Switch to a single column if the screen is too small.
+$switch-to-single-column-at: 800px;
+
+@media only screen and (max-width: $switch-to-single-column-at) {
+	.records-col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: $switch-to-single-column-at) {
+	.records-col { width: 100%; }
+}
