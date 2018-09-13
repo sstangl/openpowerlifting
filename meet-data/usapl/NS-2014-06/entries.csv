@@ -25,9 +25,9 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 2,F,Molly Sorto,SBD,T2,72,Single-ply,66.5,135,57.5,150,342.5,1997
 4,F,Natalie Picou,SBD,T2,72,Single-ply,66.9,115,47.5,110,272.5,1997
 5,F,Jade Dardar,SBD,T2,72,Single-ply,66.2,87.5,47.5,130,265,1996
-3,F,Brynna Shepard,SBD,T2,72,Single-ply,70.3,,60,140,200,1997
-4,F,Shaina Hales,SBD,T2,72,Single-ply,68,,60,125,185,1996
-5,F,Jaycee Courteaux,SBD,T2,72,Single-ply,70.4,,40,90,130,1997
+3,F,Brynna Shepard,BD,T2,72,Single-ply,70.3,,60,140,200,1997
+4,F,Shaina Hales,BD,T2,72,Single-ply,68,,60,125,185,1996
+5,F,Jaycee Courteaux,BD,T2,72,Single-ply,70.4,,40,90,130,1997
 1,F,Delicia Garza,SBD,T2,84,Single-ply,77.6,177.5,90,187.5,455,1996
 2,F,Lacey Winters,SBD,T2,84,Single-ply,77.4,162.5,70,185,417.5,1997
 1,F,Taylor Thomas,SBD,T2,84,Single-ply,83.4,157.5,80,172.5,410,1993
@@ -48,7 +48,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Aree' DeZort,SBD,T3,57,Single-ply,56.9,157.5,115,155,427.5,
 2,F,Alyssa Galtan,SBD,T3,57,Single-ply,56.8,122.5,72.5,145,340,
 3,F,Anna Kathryn Colbert,SBD,T3,57,Single-ply,56.6,130,50,125,305,
-4,F,Giovanna Ortega,SBD,T3,57,Single-ply,56.9,,85,162.5,247.5,1994
+4,F,Giovanna Ortega,BD,T3,57,Single-ply,56.9,,85,162.5,247.5,1994
 1,F,Denisha Melancon,SBD,T3,63,Single-ply,62.5,165,77.5,185,427.5,1996
 1,F,Laquanda Moffett,SBD,T3,72,Single-ply,72,180,70,192.5,442.5,1994
 2,F,Leaja Batimon,SBD,T3,72,Single-ply,70.8,147.5,62.5,190,400,1995
@@ -59,14 +59,14 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Jaia Stewart,SBD,T3,84+,Single-ply,84.1,117.5,65,145,327.5,1995
 2,F,Jerica Nichols,SBD,T3,84+,Single-ply,106.5,115,52.5,125,292.5,1995
 2,F,Marlene Lapeyrouse,SBD,T3,84+,Single-ply,87.7,115,47.5,125,287.5,1995
-3,F,Allison Garcia,SBD,T3,84+,Single-ply,112.3,,,175,175,1995
+3,F,Allison Garcia,D,T3,84+,Single-ply,112.3,,,175,175,1995
 1,F,Kayli Alphonso,SBD,JR,52,Single-ply,51.6,157.5,100,152.5,410,1993
 1,F,Michelle Van Dusen,SBD,JR,57,Single-ply,54.5,180,82.5,177.5,440,1993
 1,F,Beverly Crawford,SBD,JR,63,Single-ply,62.7,185,95,185,465,1992
 2,F,Stephanie Hamilton,SBD,JR,63,Single-ply,61.6,125,90,130,345,1992
-3,F,Jodie Forsse,SBD,JR,63,Single-ply,60.2,125,,140,265,1990
+3,F,Jodie Forsse,SD,JR,63,Single-ply,60.2,125,,140,265,1990
 2,F,Cierra Bernard,SBD,JR,72,Single-ply,70.1,140,72.5,170,382.5,1994
-3,F,Stacie Pomrening,SBD,JR,72,Single-ply,70.8,,105,,105,1992
+3,F,Stacie Pomrening,B,JR,72,Single-ply,70.8,,105,,105,1992
 1,M,Alex Jackson,SBD,JR,74,Single-ply,72,202.5,130,190,522.5,1991
 1,F,Mariah Hamm,SBD,JR,84,Single-ply,82.8,227.5,137.5,192.5,557.5,1992
 1,F,Julia Shropshire,SBD,JR,84,Single-ply,81.6,165,75,160,400,1994
@@ -90,7 +90,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 5,F,Danielle Bennett,SBD,O,57,Single-ply,55.6,170,92.5,147.5,410,1986
 6,F,Melissa Hunt,SBD,O,57,Single-ply,55.7,115,75,140,330,
 1,F,Jessica Stewart,SBD,O,57,Single-ply,56.3,112.5,67.5,120,300,1985
-2,F,Giovanna Ortega,SBD,O,57,Single-ply,56.9,,85,162.5,247.5,1994
+2,F,Giovanna Ortega,BD,O,57,Single-ply,56.9,,85,162.5,247.5,1994
 2,F,Katie Van Dusen,SBD,O,63,Single-ply,62.3,202.5,125,175,502.5,1988
 3,F,Beverly Crawford,SBD,O,63,Single-ply,62.7,185,95,185,465,1992
 4,F,Jennifer Rey-Gaudreau,SBD,O,63,Single-ply,61.4,172.5,102.5,165,440,1971
@@ -100,7 +100,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Alyssa Hitchcock,SBD,O,72,Single-ply,67.4,215,120,235,570,1984
 2,F,Jill Joiner-Wong,SBD,O,72,Single-ply,67.9,160,90,170,420,1969
 3,F,Colleen Hansford,SBD,O,72,Single-ply,71,170,90,155,415,1968
-4,F,Stacie Pomrening,SBD,O,72,Single-ply,70.8,,105,,105,1992
+4,F,Stacie Pomrening,B,O,72,Single-ply,70.8,,105,,105,1992
 1,F,Liane Blyn,SBD,O,84,Single-ply,82.1,227.5,177.5,217.5,622.5,1972
 2,F,Laura Styrlund,SBD,O,84,Single-ply,82.3,175,120,185,480,1964
 1,F,Bonica Brown,SBD,O,84+,Single-ply,122.6,247.5,177.5,210,635,1988
@@ -109,8 +109,8 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 3,F,Alexis Wascom,SBD,O,84+,Single-ply,111.2,192.5,115,205,512.5,1994
 2,F,Jill Arnow,SBD,O,84+,Single-ply,88.6,172.5,120,177.5,470,1959
 4,F,Alyssa Babineaux,SBD,O,84+,Single-ply,110.2,150,87.5,135,372.5,1994
-5,F,Andrea Page,SBD,O,84+,Single-ply,120.2,,125,205,330,1977
-6,F,Allison Garcia,SBD,O,84+,Single-ply,112.3,,,175,175,1995
+5,F,Andrea Page,BD,O,84+,Single-ply,120.2,,125,205,330,1977
+6,F,Allison Garcia,D,O,84+,Single-ply,112.3,,,175,175,1995
 1,F,Jennifer Rey-Gaudreau,SBD,M1a,63,Single-ply,61.4,172.5,102.5,165,440,1971
 2,F,Janel Brown,SBD,M1a,63,Single-ply,60.5,142.5,65,142.5,350,1973
 1,F,Priscilla Ribic,SBD,M1a,72,Single-ply,71.9,227.5,145,235,607.5,1972
@@ -133,7 +133,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Donna Marts,SBD,M2a,72,Single-ply,70.8,160,107.5,170,437.5,1960
 2,F,Chandra Armstead,SBD,M2a,84,Single-ply,73.4,102.5,65,122.5,290,1961
 1,F,Jill Arnow,SBD,M2a,84+,Single-ply,88.6,172.5,120,177.5,470,1959
-1,F,Monica Sobotka,SBD,M2b,57,Single-ply,57,100,,,100,1958
+1,F,Monica Sobotka,S,M2b,57,Single-ply,57,100,,,100,1958
 1,F,Sue Hallen,SBD,M2b,84+,Single-ply,104,140,90,150,380,1957
 1,F,Annemarie Kemmerer,SBD,M3a,63,Single-ply,61.8,112.5,62.5,137.5,312.5,
 1,F,Alma Kimura,SBD,M3a,72,Single-ply,71.7,130,70,135,335,1954

@@ -45,7 +45,7 @@ DQ,M,Jake Heglar,B,O,120,Single-ply,115.6,,,,,1979
 2,M,Christopher Moody,SBD,R-JR,74,Raw,74,170,107.5,210,487.5,1991
 3,M,Caleb Johnson,SBD,R-JR,74,Raw,69.5,137.5,97.5,165,400,1993
 1,M,Bruce-Mensah,SBD,R-JR,83,Raw,79.4,215,145,262.5,622.5,
-2,M,Brennon Morton,SBD,R-JR,83,Raw,82.6,135,,185,320,1991
+2,M,Brennon Morton,SD,R-JR,83,Raw,82.6,135,,185,320,1991
 1,M,A'Dren Hye,SBD,R-JR,93,Raw,92,245,165,257.5,667.5,1993
 2,M,John Campbell,SBD,R-JR,93,Raw,87.4,190,120,202.5,512.5,1994
 3,M,Dan Mageau,SBD,R-JR,93,Raw,92.3,170,112.5,210,492.5,1991
@@ -71,7 +71,7 @@ DQ,M,Jake Heglar,B,O,120,Single-ply,115.6,,,,,1979
 1,M,Jeff Bigham,SBD,R-O,105,Raw,102.5,237.5,172.5,270,680,1976
 2,M,Justin Miles,SBD,R-O,105,Raw,100,195,132.5,242.5,570,1986
 3,M,Zack Brintle,SBD,R-O,105,Raw,104.8,175,125,192.5,492.5,1980
-4,M,Chris London,SBD,R-O,105,Raw,97.9,,192.5,,192.5,1978
+4,M,Chris London,B,R-O,105,Raw,97.9,,192.5,,192.5,1978
 1,M,David Billings,SBD,R-O,120,Raw,116.9,227.5,150,260,637.5,1986
 2,M,Nick Ciafardoni,SBD,R-O,120,Raw,115.5,207.5,117.5,182.5,507.5,1988
 1,M,Ian McKay,SBD,R-O,120+,Raw,136,267.5,217.5,272.5,757.5,
@@ -85,7 +85,7 @@ DQ,M,Jake Heglar,B,O,120,Single-ply,115.6,,,,,1979
 1,M,Jim Crosby,SBD,R-M1a,105,Raw,104.9,135,110,185,430,1971
 1,M,James Chantler,SBD,R-M1a,120+,Raw,154.6,125,75,75,275,1971
 1,M,Adam Yezer,SBD,R-M1b,83,Raw,81.5,127.5,140,177.5,445,1965
-1,M,Charlie Murphy,SBD,R-M1b,105,Raw,101.3,,127.5,192.5,320,1969
+1,M,Charlie Murphy,BD,R-M1b,105,Raw,101.3,,127.5,192.5,320,1969
 1,M,John Grisillo,SBD,R-M1b,120,Raw,114.4,202.5,157.5,240,600,1965
 1,M,Rick Wilcox,SBD,R-M1b,120+,Raw,121.2,125,75,75,275,
 1,M,William Tabor,SBD,R-M2a,83,Raw,81.4,162.5,115,192.5,470,1964
@@ -94,7 +94,7 @@ DQ,M,Jake Heglar,B,O,120,Single-ply,115.6,,,,,1979
 2,M,Richard Mayes,SBD,R-M2a,120,Raw,119.4,215,175,245,635,1965
 1,M,Gary Allen,SBD,R-M2a,120+,Raw,138.3,125,75,75,275,1964
 1,M,Casey Miller,SBD,R-M2b,105,Raw,103.6,170,125,210,505,1955
-1,M,Ahmed Haviland,SBD,R-Y2,74,Raw,72.9,162.5,,,162.5,1995
+1,M,Ahmed Haviland,S,R-Y2,74,Raw,72.9,162.5,,,162.5,1995
 1,M,Matthew Koe,SBD,R-Y2,93,Raw,92.4,228,155,262.5,645.5,1996
 1,M,Wes Evans,SBD,R-M3a,83,Raw,82.4,170,112.5,195,477.5,1954
 1,M,Al Reiss,SBD,R-M3a,105,Raw,100.6,165,107.5,167.5,440,
@@ -118,8 +118,8 @@ DQ,M,Jake Heglar,B,O,120,Single-ply,115.6,,,,,1979
 1,F,Heather Rice,SBD,R-O,63,Raw,60,117.5,75,142.5,335,1976
 2,F,Courtney Stallman,SBD,R-O,63,Raw,61.1,95,50,112.5,257.5,
 1,F,Chelsea Carr,SBD,R-O,72,Raw,72,100,60,127.5,287.5,1986
-2,F,Julia Livingston,SBD,R-O,72,Raw,65.9,105,,132.5,237.5,1985
-3,F,Kara Sheerin,SBD,R-O,72,Raw,63.3,,80,,80,1996
+2,F,Julia Livingston,SD,R-O,72,Raw,65.9,105,,132.5,237.5,1985
+3,F,Kara Sheerin,B,R-O,72,Raw,63.3,,80,,80,1996
 1,F,Brittany Lynn,SBD,R-O,84,Raw,80.3,107.5,57.5,125,290,1986
 1,F,Tracy Cook,SBD,R-M1a,72,Raw,71.1,92.5,57.5,130,280,1970
 2,F,Tracy Cook,SBD,R-M1a,72,Raw,71.1,92.5,57.5,130,280,1970

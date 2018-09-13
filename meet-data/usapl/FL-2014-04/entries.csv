@@ -25,7 +25,7 @@ DD,M,Scott Thompson,SBD,JR,100,Single-ply,97.5,250,167.5,,,
 5,M,Joseph Frye,SBD,R-JR,82.5,Raw,81.5,175,140,225,540,1991
 6,M,Andrew Adams,SBD,R-JR,82.5,Raw,77.4,167.5,130,232.5,530,1992
 7,M,Andrew Cao,SBD,R-JR,82.5,Raw,79.3,187.5,112.5,225,525,1994
-9,M,Nicholas Ross,SBD,R-JR,82.5,Raw,77.7,165,,187.5,352.5,1992
+9,M,Nicholas Ross,SD,R-JR,82.5,Raw,77.7,165,,187.5,352.5,1992
 1,M,Abe Nassar,SBD,R-JR,90,Raw,88.8,235,155,260,650,
 2,M,Jonathan Castro,SBD,R-JR,90,Raw,87.1,222.5,140,265,627.5,1997
 3,M,Hunter Laud,SBD,R-JR,90,Raw,84.3,177.5,115,227.5,520,1993
@@ -39,14 +39,14 @@ DD,M,Scott Thompson,SBD,JR,100,Single-ply,97.5,250,167.5,,,
 5,M,Joshua Ryland,SBD,R-JR,110,Raw,104.2,182.5,112.5,200,495,1992
 2,M,Nicholas Sautter,SBD,R-JR,125,Raw,121.5,235,182.5,242.5,660,1993
 1,M,Jordan Groff,SBD,R-JR,125+,Raw,138.3,240,182.5,265,687.5,1992
-3,M,Justin Stine,SBD,R-JR,125+,Raw,146.5,240,,,240,1992
+3,M,Justin Stine,S,R-JR,125+,Raw,146.5,240,,,240,1992
 1,M,Joseph Monduy,SBD,R-O,52,Raw,48.7,97.5,70,112.5,280,1990
 1,M,Che Achat,SBD,R-O,67.5,Raw,66.2,160,112.5,210,482.5,1986
 1,M,Zachary Nelson,SBD,R-O,67.5,Raw,65.8,155,112.5,192.5,460,1990
 3,M,Alain Gonzales,SBD,R-O,67.5,Raw,66.1,147.5,120,187.5,455,
 2,M,Benjamin Giddens,SBD,R-O,75,Raw,72.6,177.5,112.5,185,475,1989
 4,M,Bader Alajairi,SBD,R-O,75,Raw,72.7,145,130,175,450,
-5,M,Peter PJ Drolet,SBD,R-O,75,Raw,72.5,,102.5,,102.5,
+5,M,Peter PJ Drolet,B,R-O,75,Raw,72.5,,102.5,,102.5,
 1,M,Naguan Gavin,SBD,R-O,82.5,Raw,79.9,165,150,235,550,
 2,M,Michael Hauser,SBD,R-O,82.5,Raw,80.9,185,112.5,230,527.5,1988
 3,M,Vinnie Mahoney,SBD,R-O,82.5,Raw,80.5,172.5,115,205,492.5,
@@ -62,7 +62,7 @@ DD,M,Scott Thompson,SBD,JR,100,Single-ply,97.5,250,167.5,,,
 2,M,Peter Callovi,SBD,R-O,100,Raw,96.2,215,162.5,237.5,615,1985
 4,M,Justin Duncan,SBD,R-O,100,Raw,96.5,177.5,125,197.5,500,1982
 4,M,Cody Whisenant,SBD,R-O,100,Raw,92.9,142.5,125,227.5,495,1988
-6,M,Eric Wilson,SBD,R-O,100,Raw,92.2,,160,242.5,402.5,1984
+6,M,Eric Wilson,BD,R-O,100,Raw,92.2,,160,242.5,402.5,1984
 5,M,Joshua Shomburg,SBD,R-O,100,Raw,96.4,130,80,157.5,367.5,1984
 1,M,John Ogle,SBD,R-O,110,Raw,107.2,207.5,140,230,577.5,1987
 3,M,Mark Preciados,SBD,R-O,110,Raw,101,200,105,230,535,1984
@@ -102,12 +102,12 @@ DD,M,Scott Thompson,SBD,JR,100,Single-ply,97.5,250,167.5,,,
 3,F,Edilia Delgado,SBD,R-O,56,Raw,55.5,92.5,50,112.5,255,1984
 1,F,Ayse Jones,SBD,R-O,67.5,Raw,65.5,120,75,150,345,1983
 1,F,Brenda Vickory,SBD,R-O,67.5,Raw,62.5,92.5,47.5,117.5,257.5,
-2,F,Cassandra Winkle,SBD,R-O,67.5,Raw,63.6,120,,130,250,1990
+2,F,Cassandra Winkle,SD,R-O,67.5,Raw,63.6,120,,130,250,1990
 1,F,Alyssa Truax,SBD,R-O,75,Raw,72.6,145,60,142.5,347.5,1990
 1,F,Cassie Williams,SBD,R-O,90+,Raw,108.8,182.5,92.5,187.5,462.5,1984
-2,F,Nina Mitchell,SBD,R-O,90+,Raw,96.6,,67.5,137.5,205,1986
+2,F,Nina Mitchell,BD,R-O,90+,Raw,96.6,,67.5,137.5,205,1986
 1,F,Rebekah Landbeck,SBD,R-M1a,90+,Raw,102.7,120,50,142.5,312.5,1971
-1,F,Robbyn Ackner,SBD,R-M2a,67.5,Raw,67.5,,47.5,92.5,140,1961
+1,F,Robbyn Ackner,BD,R-M2a,67.5,Raw,67.5,,47.5,92.5,140,1961
 DQ,M,Michael Stevens,BD,R-O,100,Raw,98.2,,,,,1954
 1,M,Paul Revelia,BD,R-O,110,Raw,107.9,,180,235,415,
 1,M,Gary Nishizaki,BD,R-M2b,75,Raw,73.6,,95,127.5,222.5,1959

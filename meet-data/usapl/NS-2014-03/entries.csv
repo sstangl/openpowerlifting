@@ -15,22 +15,22 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 9,M,Zach Appelbaum,SBD,T3,66,Single-ply,61.7,155,112.5,205,472.5,
 10,M,Ben Winder,SBD,T3,66,Single-ply,65.1,152.5,115,200,467.5,1995
 11,M,Aleil Riley,SBD,T3,66,Single-ply,64.9,155,102.5,177.5,435,1994
-12,M,Austin Robert Martin,SBD,T3,66,Single-ply,64.3,200,,207.5,407.5,
-13,M,Jesse Rutledge,SBD,T3,66,Single-ply,64.6,217.5,125,,342.5,
+12,M,Austin Robert Martin,SD,T3,66,Single-ply,64.3,200,,207.5,407.5,
+13,M,Jesse Rutledge,SB,T3,66,Single-ply,64.6,217.5,125,,342.5,
 DQ,M,James Windham,SBD,T3,66,Single-ply,65.2,,,,,1994
 1,M,Aaron Pomerantz,SBD,T3,74,Single-ply,73.1,237.5,240,222.5,700,1995
 2,M,Ian McPherson,SBD,T3,74,Single-ply,73.1,250,147.5,230,627.5,
 3,M,Joseph Francisco,SBD,T3,74,Single-ply,72.2,200,115,205,520,1995
 4,M,Cody W. Damewood,SBD,T3,74,Single-ply,73.1,185,115,207.5,507.5,
 5,M,Greg LaBorde,SBD,T3,74,Single-ply,72.7,200,92.5,185,477.5,
-6,M,Josh Benoit,SBD,T3,74,Single-ply,71.9,152.5,,197.5,350,
-7,M,Blake Lehew,SBD,T3,74,Single-ply,73.1,252.5,,,252.5,1995
+6,M,Josh Benoit,SD,T3,74,Single-ply,71.9,152.5,,197.5,350,
+7,M,Blake Lehew,S,T3,74,Single-ply,73.1,252.5,,,252.5,1995
 1,M,Mauricio Valdez,SBD,T3,83,Single-ply,82.4,275,192.5,277.5,745,1994
 2,M,Abram Guerra,SBD,T3,83,Single-ply,82.8,275,192.5,262.5,730,1995
 2,M,Fisher Sutterfield,SBD,T3,83,Single-ply,81.1,250,160,237.5,647.5,1994
 3,M,James Haworth,SBD,T3,83,Single-ply,81.8,237.5,142.5,230,610,1995
 4,M,Jordan Michael Figlioli,SBD,T3,83,Single-ply,82.2,190,140,220,550,
-5,M,Austin M. Stephen,SBD,T3,83,Single-ply,81.4,272.5,155,,427.5,
+5,M,Austin M. Stephen,SB,T3,83,Single-ply,81.4,272.5,155,,427.5,
 1,M,James Rigsby,SBD,T3,93,Single-ply,89.4,302.5,200,275,777.5,1995
 1,M,Michael Davis,SBD,T3,93,Single-ply,91.8,287.5,165,285,737.5,1995
 2,M,Jacob Weiss,SBD,T3,93,Single-ply,92.6,260,170,247.5,677.5,1995
@@ -40,14 +40,14 @@ DQ,M,James Windham,SBD,T3,66,Single-ply,65.2,,,,,1994
 7,M,Jonathan Lwowski,SBD,T3,93,Single-ply,90.7,227.5,140,245,612.5,
 8,M,Matthew McGuire,SBD,T3,93,Single-ply,91.4,232.5,152.5,212.5,597.5,1994
 9,M,Eric Jacques,SBD,T3,93,Single-ply,91.1,195,132.5,247.5,575,1994
-10,M,Richard Pena,SBD,T3,93,Single-ply,91.2,307.5,,,307.5,
+10,M,Richard Pena,S,T3,93,Single-ply,91.2,307.5,,,307.5,
 DQ,M,Ray Smith,SBD,T3,93,Single-ply,92.5,,,,,
 1,M,Jonah Noeldner,SBD,T3,105,Single-ply,104.1,272.5,170,240,682.5,1995
 4,M,Clayton Hensley,SBD,T3,105,Single-ply,98.9,240,182.5,227.5,650,1995
 5,M,Brent Toups,SBD,T3,105,Single-ply,97.8,227.5,190,227.5,645,1994
 1,M,Oluwaseyi Alabi,SBD,T3,120,Single-ply,113.8,290,187.5,292.5,770,
-2,M,Jerry Nduji,SBD,T3,120,Single-ply,117.8,,182.5,220,402.5,1995
-1,M,Albert Willingham,SBD,T3,120+,Single-ply,140,330,,,330,1995
+2,M,Jerry Nduji,BD,T3,120,Single-ply,117.8,,182.5,220,402.5,1995
+1,M,Albert Willingham,S,T3,120+,Single-ply,140,330,,,330,1995
 1,M,Josue Leon,SBD,JR,53,Single-ply,52.5,185,112.5,205,502.5,1993
 1,M,Zachary Newman,SBD,JR,53,Single-ply,51.9,120,60,150,330,1992
 1,M,Sullivan Garth,SBD,JR,59,Single-ply,57,195,132.5,200,527.5,1992
@@ -91,8 +91,8 @@ DQ,M,Ray Smith,SBD,T3,93,Single-ply,92.5,,,,,
 26,M,Michael Lake,SBD,JR,74,Single-ply,72,185,135,170,490,1992
 27,M,Adam Drescher,SBD,JR,74,Single-ply,72.2,185,100,192.5,477.5,1994
 28,M,Daniel Dixon,SBD,JR,74,Single-ply,72.4,147.5,117.5,195,460,1988
-29,M,Andrew Sandoval,SBD,JR,74,Single-ply,72.1,222.5,180,,402.5,1992
-30,M,Anthony Rombold,SBD,JR,74,Single-ply,70.9,205,,,205,1991
+29,M,Andrew Sandoval,SB,JR,74,Single-ply,72.1,222.5,180,,402.5,1992
+30,M,Anthony Rombold,S,JR,74,Single-ply,70.9,205,,,205,1991
 1,M,Stephen Teeters,SBD,JR,83,Single-ply,82.2,282.5,170,297.5,750,1990
 2,M,Bryce Siecko,SBD,JR,83,Single-ply,81.6,302.5,172.5,270,745,1992
 3,M,Alex Smith,SBD,JR,83,Single-ply,80.5,277.5,210,255,742.5,1990
@@ -122,9 +122,9 @@ DQ,M,Ray Smith,SBD,T3,93,Single-ply,92.5,,,,,
 24,M,Christian Johnston,SBD,JR,83,Single-ply,77.2,202.5,132.5,212.5,547.5,1993
 25,M,James Clayton Gant,SBD,JR,83,Single-ply,79,200,127.5,215,542.5,
 26,M,Bradley Anuszkiewicz,SBD,JR,83,Single-ply,80,187.5,120,200,507.5,1993
-27,M,Conor Sullivan,SBD,JR,83,Single-ply,81.5,,187.5,272.5,460,1993
+27,M,Conor Sullivan,BD,JR,83,Single-ply,81.5,,187.5,272.5,460,1993
 28,M,Rabih Abifaraj,SBD,JR,83,Single-ply,80.8,215,95,115,425,1992
-29,M,Joseph Porzio,SBD,JR,83,Single-ply,81,,157.5,245,402.5,1991
+29,M,Joseph Porzio,BD,JR,83,Single-ply,81,,157.5,245,402.5,1991
 1,M,Ian Bell,SBD,JR,93,Single-ply,91.6,365,217.5,365,947.5,1992
 4,M,Westbrook Nathan,SBD,JR,93,Single-ply,92.8,295,200,285,780,1992
 5,M,Jordan Glenn,SBD,JR,93,Single-ply,90.2,282.5,165,315,762.5,1993
@@ -145,8 +145,8 @@ DQ,M,Ray Smith,SBD,T3,93,Single-ply,92.5,,,,,
 9,M,Blaise Badway,SBD,JR,93,Single-ply,86.3,202.5,132.5,240,575,1993
 20,M,Joshua Parker,SBD,JR,93,Single-ply,93,190,150,197.5,537.5,1996
 21,M,Anthony Fodel,SBD,JR,93,Single-ply,90.2,192.5,107.5,210,510,1993
-22,M,Ruben Sanchez,SBD,JR,93,Single-ply,92.8,230,,247.5,477.5,1994
-23,M,Leonard Bradley,SBD,JR,93,Single-ply,92.1,,165,230,395,1989
+22,M,Ruben Sanchez,SD,JR,93,Single-ply,92.8,230,,247.5,477.5,1994
+23,M,Leonard Bradley,BD,JR,93,Single-ply,92.1,,165,230,395,1989
 DQ,M,Kevin Maradiaga,SBD,JR,93,Single-ply,90.7,,,,,
 1,M,William LeBlanc,SBD,JR,105,Single-ply,103.9,355,197.5,342.5,895,1990
 2,M,Gregory Johnson,SBD,JR,105,Single-ply,99.6,307.5,187.5,360,855,1990
@@ -171,7 +171,7 @@ DQ,M,Kevin Maradiaga,SBD,JR,93,Single-ply,90.7,,,,,
 18,M,Michael Butler,SBD,JR,105,Single-ply,97.8,255,130,235,620,1990
 20,M,Troy Aalund,SBD,JR,105,Single-ply,104.3,225,157.5,230,612.5,1990
 19,M,Ethan Albrecht,SBD,JR,105,Single-ply,96.9,207.5,135,250,592.5,
-21,M,Jesse Burttschell,SBD,JR,105,Single-ply,104.8,,215,290,505,1993
+21,M,Jesse Burttschell,BD,JR,105,Single-ply,104.8,,215,290,505,1993
 1,M,Preston Turner,SBD,JR,120,Single-ply,119,385,330,320,1035,1992
 3,M,Andre Sigure,SBD,JR,120,Single-ply,107.1,320,207.5,317.5,845,1992
 3,M,Pooser Hunter,SBD,JR,120,Single-ply,118.3,330,205,310,845,1994
@@ -183,7 +183,7 @@ DQ,M,Kevin Maradiaga,SBD,JR,93,Single-ply,90.7,,,,,
 12,M,Jesse Burroughs,SBD,JR,120,Single-ply,107.2,282.5,185,275,742.5,1991
 6,M,Aaron Steed,SBD,JR,120,Single-ply,118.7,317.5,152.5,265,735,1993
 7,M,Adam Alfred,SBD,JR,120,Single-ply,117.9,192.5,152.5,245,590,1992
-22,M,Erik Golabek,SBD,JR,120,Single-ply,107.4,262.5,,,262.5,1993
+22,M,Erik Golabek,S,JR,120,Single-ply,107.4,262.5,,,262.5,1993
 DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 1,M,Stephen King,SBD,JR,120+,Single-ply,143.4,370,272.5,292.5,935,1992
 2,M,Scott Dobbins,SBD,JR,120+,Single-ply,123,350,252.5,305,907.5,1992
@@ -195,9 +195,9 @@ DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 7,M,Ross Carter,SBD,JR,120+,Single-ply,141.4,282.5,237.5,255,775,1994
 8,M,Jamar Jordan,SBD,JR,120+,Single-ply,135.6,275,170,240,685,1993
 9,M,Tyler Bergeron,SBD,JR,120+,Single-ply,145.2,242.5,195,217.5,655,1993
-10,M,Trevor Vasser,SBD,JR,120+,Single-ply,150.8,,265,285,550,1991
-11,M,Tyler Borelly,SBD,JR,120+,Single-ply,155.5,260,220,,480,1993
-12,M,Clayton Berry,SBD,JR,120+,Single-ply,182.9,,185,252.5,437.5,1990
+10,M,Trevor Vasser,BD,JR,120+,Single-ply,150.8,,265,285,550,1991
+11,M,Tyler Borelly,SB,JR,120+,Single-ply,155.5,260,220,,480,1993
+12,M,Clayton Berry,BD,JR,120+,Single-ply,182.9,,185,252.5,437.5,1990
 1,M,Cheng Yuan,SBD,O,59,Single-ply,58.8,157.5,100,185,442.5,
 1,M,Steve Ritucci,SBD,O,74,Single-ply,73.6,197.5,162.5,217.5,577.5,
 1,M,Rickie Williams,SBD,O,83,Single-ply,79.8,295,155,287.5,737.5,1989
@@ -208,7 +208,7 @@ DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 1,M,David Young,SBD,O,105,Single-ply,103.4,330,232.5,250,812.5,1989
 2,M,Alex Sokolov,SBD,O,105,Single-ply,104.6,287.5,175,210,672.5,
 3,M,Andrew Wing,SBD,O,105,Single-ply,101.8,227.5,170,247.5,645,1989
-4,M,Luis Munoz III,SBD,O,105,Single-ply,103.7,,200,227.5,427.5,1988
+4,M,Luis Munoz III,BD,O,105,Single-ply,103.7,,200,227.5,427.5,1988
 1,F,Ashley Guzman,SBD,T3,47,Single-ply,46.7,110,57.5,115,282.5,1995
 2,F,Brittany Basco,SBD,T3,47,Single-ply,47,97.5,40,120,257.5,1995
 3,F,Clarrissa Johnson,SBD,T3,47,Single-ply,45.3,92.5,40,92.5,225,1994
@@ -221,12 +221,12 @@ DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 2,F,Richelle George,SBD,T3,57,Single-ply,56.8,110,75,110,295,1994
 2,F,Jamie Nicole Roberie,SBD,T3,57,Single-ply,56,87.5,50,97.5,235,
 3,F,Megan Kupser,SBD,T3,57,Single-ply,55.2,85,42.5,95,222.5,1995
-4,F,Michelle Ryan,SBD,T3,57,Single-ply,54.9,,72.5,100,172.5,1994
+4,F,Michelle Ryan,BD,T3,57,Single-ply,54.9,,72.5,100,172.5,1994
 1,F,Jalynn Moll,SBD,T3,63,Single-ply,61.2,157.5,72.5,157.5,387.5,1994
 2,F,Skyler Briggs,SBD,T3,63,Single-ply,62.5,130,85,142.5,357.5,1995
 4,F,Lauren Brodie,SBD,T3,63,Single-ply,60.7,117.5,57.5,160,335,1994
 5,F,Kaydee Walter,SBD,T3,63,Single-ply,61.1,112.5,65,127.5,305,
-6,F,Delaney Smallwood,SBD,T3,63,Single-ply,62,,67.5,125,192.5,1994
+6,F,Delaney Smallwood,BD,T3,63,Single-ply,62,,67.5,125,192.5,1994
 1,F,Laquanda Moffett,SBD,T3,72,Single-ply,71.5,172.5,72.5,190,435,1994
 3,F,Dominique McGaha,SBD,T3,72,Single-ply,68.3,165,82.5,170,417.5,1994
 3,F,Ambler Flores,SBD,T3,72,Single-ply,67.5,150,65,142.5,357.5,
@@ -248,7 +248,7 @@ DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 2,F,Alexandra Trevino,SBD,JR,52,Single-ply,49.4,120,57.5,125,302.5,
 3,F,Lauren Bridgers,SBD,JR,52,Single-ply,51.6,120,60,110,290,1993
 4,F,Meredith Maggio,SBD,JR,52,Single-ply,51.7,77.5,45,92.5,215,1992
-5,F,Elena Astello,SBD,JR,52,Single-ply,51.4,112.5,,,112.5,
+5,F,Elena Astello,S,JR,52,Single-ply,51.4,112.5,,,112.5,
 1,F,Lauren Deniger,SBD,JR,57,Single-ply,54.4,145,95,132.5,372.5,1993
 2,F,Desiree Estrada,SBD,JR,57,Single-ply,52.4,142.5,67.5,150,360,1992
 3,F,Carly Marie Day,SBD,JR,57,Single-ply,54.9,140,77.5,132.5,350,
@@ -259,7 +259,7 @@ DQ,M,Brandon Graham,SBD,JR,120,Single-ply,119.7,,,,,1991
 5,F,Wendolyn Zamora,SBD,JR,57,Single-ply,54.3,117.5,65,140,322.5,1992
 5,F,Shelbee Hoffpauir,SBD,JR,57,Single-ply,56.4,117.5,75,127.5,320,1991
 7,F,Carol J. Champion,SBD,JR,57,Single-ply,56.1,105,52.5,120,277.5,
-9,F,Brooke LeBlanc,SBD,JR,57,Single-ply,56.6,,60,,60,1993
+9,F,Brooke LeBlanc,B,JR,57,Single-ply,56.6,,60,,60,1993
 DQ,F,Valerie Tucciarone,SBD,JR,57,Single-ply,56.1,,,,,1990
 1,F,Brittany Flores,SBD,JR,63,Single-ply,57.6,152.5,82.5,172.5,407.5,1993
 1,F,Hannah Gilbert,SBD,JR,63,Single-ply,61.1,152.5,90,147.5,390,1992
@@ -273,9 +273,9 @@ DQ,F,Valerie Tucciarone,SBD,JR,57,Single-ply,56.1,,,,,1990
 6,F,Alexis Todaro,SBD,JR,63,Single-ply,58.7,102.5,72.5,112.5,287.5,1992
 10,F,Tiffany Shetters,SBD,JR,63,Single-ply,61.4,105,60,117.5,282.5,1991
 11,F,Haley Nelson,SBD,JR,63,Single-ply,60.1,97.5,47.5,110,255,1994
-8,F,Krystin Krodle,SBD,JR,63,Single-ply,59.6,,92.5,127.5,220,1994
-12,F,Ashley Ackett,SBD,JR,63,Single-ply,63,,77.5,142.5,220,1993
-13,F,Alexandria Rosales,SBD,JR,63,Single-ply,61,,67.5,130,197.5,1990
+8,F,Krystin Krodle,BD,JR,63,Single-ply,59.6,,92.5,127.5,220,1994
+12,F,Ashley Ackett,BD,JR,63,Single-ply,63,,77.5,142.5,220,1993
+13,F,Alexandria Rosales,BD,JR,63,Single-ply,61,,67.5,130,197.5,1990
 2,F,Erika Myers,SBD,JR,72,Single-ply,70,180,105,172.5,457.5,1990
 3,F,Natalie Domingue,SBD,JR,72,Single-ply,70.3,172.5,90,170,432.5,1992
 5,F,Logan Himich,SBD,JR,72,Single-ply,71.2,160,65,165,390,1993
@@ -289,7 +289,7 @@ DQ,F,Valerie Tucciarone,SBD,JR,57,Single-ply,56.1,,,,,1990
 14,F,Helen Ramsay,SBD,JR,72,Single-ply,68.7,107.5,72.5,127.5,307.5,1993
 15,F,Sara Hynes,SBD,JR,72,Single-ply,71,112.5,60,112.5,285,1990
 16,F,Andrea Smith,SBD,JR,72,Single-ply,69,95,35,115,245,1993
-17,F,Jordan Robelot,SBD,JR,72,Single-ply,68.9,,90,145,235,1991
+17,F,Jordan Robelot,BD,JR,72,Single-ply,68.9,,90,145,235,1991
 DQ,F,Sarah Newby,SBD,JR,72,Single-ply,64.8,,,,,1991
 1,M,Alex Jackson,SBD,JR,74,Single-ply,72.1,195,117.5,182.5,495,1991
 1,F,Ashleigh Andrews,SBD,JR,84,Single-ply,83.3,212.5,145,182.5,540,1994
@@ -298,8 +298,8 @@ DQ,F,Sarah Newby,SBD,JR,72,Single-ply,64.8,,,,,1991
 6,F,Hannah Malcomb,SBD,JR,84,Single-ply,73.3,165,72.5,142.5,380,1992
 2,F,Christie Civetta,SBD,JR,84,Single-ply,79.7,135,80,140,355,1992
 13,F,Caitlyn Hester,SBD,JR,84,Single-ply,74.9,120,72.5,132.5,325,1992
-3,F,Jessi Robelot,SBD,JR,84,Single-ply,78.7,155,,147.5,302.5,1993
-4,F,Nareh Sahakian,SBD,JR,84,Single-ply,82.5,,,137.5,137.5,1993
+3,F,Jessi Robelot,SD,JR,84,Single-ply,78.7,155,,147.5,302.5,1993
+4,F,Nareh Sahakian,D,JR,84,Single-ply,82.5,,,137.5,137.5,1993
 1,F,Jennifer Moran,SBD,JR,84+,Single-ply,90.3,222.5,122.5,180,525,1993
 2,F,Monet Bland,SBD,JR,84+,Single-ply,84.4,207.5,87.5,187.5,482.5,1991
 2,F,Lindsey Blystone,SBD,JR,84+,Single-ply,100.1,205,100,145,450,1991
@@ -308,5 +308,5 @@ DQ,F,Sarah Newby,SBD,JR,72,Single-ply,64.8,,,,,1991
 2,F,Meghali Chopra,SBD,O,63,Single-ply,62.1,112.5,72.5,142.5,327.5,1989
 1,F,Mykeal Maes,SBD,O,72,Single-ply,71.2,190,120,162.5,472.5,1989
 3,F,Simone Cavalier,SBD,O,72,Single-ply,70.9,100,62.5,112.5,275,1989
-1,F,Marcia Darbouze,SBD,O,84,Single-ply,82.4,162.5,,210,372.5,1988
+1,F,Marcia Darbouze,SD,O,84,Single-ply,82.4,162.5,,210,372.5,1988
 2,F,Shelly White,SBD,O,84,Single-ply,72.3,142.5,82.5,137.5,362.5,

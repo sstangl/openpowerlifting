@@ -1,7 +1,7 @@
 Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
 1,M,Richard Salinas,B,R-T3,120+,Raw,147.5,,185,,185,
 1,F,Morgan McMachon,SB,T2,57,Single-ply,55,122.5,55,,177.5,
-1,M,Zhenyu Liu,SBD,R-T2,74,Raw,72.7,215,,,215,1998
+1,M,Zhenyu Liu,S,R-T2,74,Raw,72.7,215,,,215,1998
 1,M,Jerry Alaniz,SBD,R-T3,66,Raw,65.7,205,137.5,225,567.5,1995
 2,M,Eddie Martinez,SBD,R-T3,66,Raw,64.5,155,125,205,485,1995
 3,M,Garrett Shantz,SBD,R-T3,66,Raw,65,157.5,102.5,210,470,1996
@@ -24,7 +24,7 @@ DQ,M,Timmy Nguyen,SBD,R-T3,66,Raw,65.7,,,,,1996
 2,M,Jaaziel Buenrostro,SBD,T2,83,Single-ply,75,185,112.5,212.5,510,1997
 3,M,Anthony McGuill,SBD,T2,83,Single-ply,77.9,182.5,115,210,507.5,1998
 1,M,Mario Chavez,SBD,T2,120+,Single-ply,186.2,227.5,162.5,220,610,1997
-1,M,Mark Bocanegra,SBD,T3,105,Single-ply,105,,185,227.5,412.5,1996
+1,M,Mark Bocanegra,BD,T3,105,Single-ply,105,,185,227.5,412.5,1996
 1,M,Marcus Hernandez,SBD,JR,59,Single-ply,58.8,172.5,110,197.5,480,1995
 1,M,Oscar Ramos,SBD,JR,66,Single-ply,64.6,165,75,182.5,422.5,1994
 1,M,Hunter Work,SBD,JR,83,Single-ply,75.4,230,137.5,227.5,595,1994
@@ -32,7 +32,7 @@ DQ,M,Timmy Nguyen,SBD,R-T3,66,Raw,65.7,,,,,1996
 1,M,Jess Rutledge,SBD,R-JR,66,Raw,63.8,190,102.5,215,507.5,1994
 1,M,Andrew Sandoval,SBD,R-JR,74,Raw,71.9,192.5,140,242.5,575,1992
 2,M,Ryan Sanchez,SBD,R-JR,74,Raw,72.8,175,102.5,215,492.5,1996
-3,M,Jose Contreras,SBD,R-JR,74,Raw,70.5,140,102.5,,242.5,1994
+3,M,Jose Contreras,SB,R-JR,74,Raw,70.5,140,102.5,,242.5,1994
 1,M,Mauricio Valdez,SBD,R-JR,83,Raw,83,215,147.5,260.5,623,1994
 2,M,Alex Barbaretta,SBD,R-JR,83,Raw,80.6,185,130,212.5,527.5,
 3,M,Alex Barbaretta,SBD,R-JR,83,Raw,80.6,185,130,212.5,527.5,
@@ -53,7 +53,7 @@ DQ,M,Timmy Nguyen,SBD,R-T3,66,Raw,65.7,,,,,1996
 1,M,Jordan Bullard,SBD,O,105,Single-ply,102.2,150,150,215,515,1985
 1,M,Joseph Peña,SBD,O,120+,Single-ply,146.8,342.5,202.5,252.5,797.5,1998
 1,M,Jose Silva,SBD,R-O,74,Raw,71.7,205,125,205,535,1988
-2,M,Nicholas Gutierrez,SBD,R-O,83,Raw,83,225,,,225,1982
+2,M,Nicholas Gutierrez,S,R-O,83,Raw,83,225,,,225,1982
 1,M,Antwan Byrd,SBD,R-O,93,Raw,88.1,250,147.5,282.5,680,1985
 2,M,Keith Aussant,SBD,R-O,93,Raw,91.3,215,150,250,615,1984
 3,M,Leonard Bradley,SBD,R-O,93,Raw,92.2,180,160,230,570,1989

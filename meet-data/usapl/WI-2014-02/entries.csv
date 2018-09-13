@@ -58,7 +58,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 7,M,Humberto Hernandez,SBD,T2,67.5,Single-ply,66.5,170.1,86.2,188.2,444.5,1997
 8,M,John Poquette,SBD,T2,67.5,Single-ply,67,167.8,93,179.2,440,
 9,M,Kyle Petrick,SBD,T2,67.5,Single-ply,66.4,161,102.1,174.6,437.7,1997
-10,M,Daniel Poole,SBD,T2,67.5,Single-ply,64.3,,111.1,,111.1,1996
+10,M,Daniel Poole,B,T2,67.5,Single-ply,64.3,,111.1,,111.1,1996
 DQ,M,Nick Jones,SBD,T2,67.5,Single-ply,65.8,,,,,
 1,M,Levi Petroske,SBD,T2,75,Single-ply,74.4,199.6,152,210.9,562.5,1996
 2,M,Haubert Sawyer,SBD,T2,75,Single-ply,72.5,215.5,122.5,213.2,551.2,1997
@@ -101,7 +101,7 @@ DQ,M,Nick Jones,SBD,T2,67.5,Single-ply,65.8,,,,,
 1,M,Alex Stoll,SBD,T2,110,Single-ply,101.1,301.6,129.3,276.7,707.6,1997
 2,M,Mitch Cowman,SBD,T2,110,Single-ply,103.4,244.9,131.5,251.7,628.1,
 3,M,Eli Henscheid,SBD,T2,110,Single-ply,108.1,224.5,133.8,195,553.3,1997
-4,M,Jake Linderman,SBD,T2,110,Single-ply,109.5,238.1,,,238.1,1996
+4,M,Jake Linderman,S,T2,110,Single-ply,109.5,238.1,,,238.1,1996
 1,M,Caleb Alsteen,SBD,T2,125,Single-ply,114.1,288,167.8,258.6,714.4,1996
 2,M,Jacob McFarland,SBD,T2,125,Single-ply,117.8,272.2,111.1,242.7,626,1996
 3,M,Kyle Salzwedel,SBD,T2,125,Single-ply,119.6,272.2,136.1,217.7,626,1996
@@ -110,7 +110,7 @@ DQ,M,Nick Jones,SBD,T2,67.5,Single-ply,65.8,,,,,
 6,M,Mike Melser,SBD,T2,125,Single-ply,121.7,217.7,108.9,226.8,553.4,1998
 7,M,Tyler Krajewski,SBD,T2,125,Single-ply,111.9,229.1,102.1,215.5,546.7,1997
 8,M,Brady Chance,SBD,T2,125,Single-ply,121,204.1,120.2,192.8,517.1,1996
-9,M,Corey Cantu,SBD,T2,125,Single-ply,117.9,,115.7,201.9,317.6,1996
+9,M,Corey Cantu,BD,T2,125,Single-ply,117.9,,115.7,201.9,317.6,1996
 DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 1,M,Peterson Eli,SBD,T2,125+,Single-ply,145.2,240.4,111.1,240.4,591.9,1997
 2,M,Elijah Anderson,SBD,T2,125+,Single-ply,138.1,254,120.2,206.4,580.6,1997
@@ -138,12 +138,12 @@ DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 1,F,Jordan Barnes,SBD,T1,82.5,Single-ply,75.5,124.7,45.4,138.3,308.4,1998
 1,F,Cerrina Stokes,SBD,T1,90+,Single-ply,136.3,172.4,63.5,176.9,412.8,1998
 2,F,Hailey Skroch,SBD,T1,90+,Single-ply,93.7,156.5,56.7,124.7,337.9,1999
-3,F,Tara Haftield,SBD,T1,90+,Single-ply,137.6,,49.9,129.3,179.2,
+3,F,Tara Haftield,BD,T1,90+,Single-ply,137.6,,49.9,129.3,179.2,
 1,F,Stephanie Rattunde,SBD,T2,44,Single-ply,43.9,111.1,54.4,124.7,290.2,1997
 2,F,Marian Marrero,SBD,T2,44,Single-ply,43.1,113.4,43.1,115.7,272.2,1996
 3,F,Alena Trinidad,SBD,T2,44,Single-ply,43.5,102.1,40.8,111.1,254,1996
 4,F,Allyssa Weithum,SBD,T2,44,Single-ply,43.6,77.1,29.5,93,199.6,
-5,F,Anna Jorgensen,SBD,T2,44,Single-ply,43.8,,31.8,90.7,122.5,
+5,F,Anna Jorgensen,BD,T2,44,Single-ply,43.8,,31.8,90.7,122.5,
 1,F,Tristyn Hutchins,SBD,T2,48,Single-ply,47.5,122.5,54.4,129.3,306.2,1997
 2,F,Ashley Cross,SBD,T2,48,Single-ply,47.2,111.1,47.6,124.7,283.4,1996
 3,F,Amanda Heredia,SBD,T2,48,Single-ply,47.4,104.3,40.8,102.1,247.2,1997
@@ -151,7 +151,7 @@ DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 5,F,Vickie Holbrook,SBD,T2,48,Single-ply,47.9,86.2,36.3,117.9,240.4,1996
 6,F,Alexus Konkol,SBD,T2,48,Single-ply,46.2,88.5,38.6,93,220.1,
 7,F,Emily Smith,SBD,T2,48,Single-ply,47.8,65.8,29.5,88.5,183.8,1999
-8,F,Jena Cook,SBD,T2,48,Single-ply,47.9,,31.8,108.9,140.7,1996
+8,F,Jena Cook,BD,T2,48,Single-ply,47.9,,31.8,108.9,140.7,1996
 1,F,Breann Housworth,SBD,T2,52,Single-ply,51.9,138.3,49.9,136.1,324.3,
 2,F,Kirsten Olson,SBD,T2,52,Single-ply,50.6,108.9,47.6,127,283.5,1997
 3,F,Jocelyn Emerson,SBD,T2,52,Single-ply,51.2,115.7,45.4,115.7,276.8,1997
@@ -162,8 +162,8 @@ DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 8,F,Benedetta Jones,SBD,T2,52,Single-ply,51.3,99.8,45.4,95.3,240.5,1997
 9,F,Jennifer Merrell,SBD,T2,52,Single-ply,51.1,88.5,34,113.4,235.9,1997
 10,F,Abigayle Cox,SBD,T2,52,Single-ply,52,99.8,31.8,102.1,233.7,1997
-11,F,Kettlewell Krystie,SBD,T2,52,Single-ply,50.4,,54.4,136.1,190.5,1996
-12,F,Alycia Larson,SBD,T2,52,Single-ply,50.9,,49.9,106.6,156.5,1997
+11,F,Kettlewell Krystie,BD,T2,52,Single-ply,50.4,,54.4,136.1,190.5,1996
+12,F,Alycia Larson,BD,T2,52,Single-ply,50.9,,49.9,106.6,156.5,1997
 1,F,Lauren Lent,SBD,T2,56,Single-ply,53.6,183.7,59,165.6,408.3,1997
 2,F,Jordan Whipple,SBD,T2,56,Single-ply,54.5,149.7,54.4,136.1,340.2,1997
 3,F,Sam Kroll,SBD,T2,56,Single-ply,55.2,142.9,61.2,131.5,335.6,1997
@@ -176,7 +176,7 @@ DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 10,F,Kara Senkerik,SBD,T2,56,Single-ply,55,104.3,49.9,113.4,267.6,1997
 11,F,Lacy Harter,SBD,T2,56,Single-ply,56,99.8,52.2,104.3,256.3,1997
 12,F,Marissa Erickson,SBD,T2,56,Single-ply,55,90.7,43.1,113.4,247.2,1996
-13,F,Cecily Ripley,SBD,T2,56,Single-ply,55.2,,56.7,140.6,197.3,1996
+13,F,Cecily Ripley,BD,T2,56,Single-ply,55.2,,56.7,140.6,197.3,1996
 1,F,Amanda Zielinski,SBD,T2,60,Single-ply,59.8,140.6,61.2,142.9,344.7,1997
 2,F,Sarena Christoffersen,SBD,T2,60,Single-ply,58.3,133.8,59,133.8,326.6,1996
 3,F,Elizabeth Schreiber,SBD,T2,60,Single-ply,59.6,127,54.4,136.1,317.5,1997
@@ -201,7 +201,7 @@ DQ,M,Matt Mercer,SBD,T2,125,Single-ply,121,,,,,1996
 9,F,Elizabeth Berger,SBD,T2,67.5,Single-ply,67.5,124.7,52.2,115.7,292.6,1997
 1,F,Emily Kopecky,SBD,T2,75,Single-ply,71.5,161,56.7,174.6,392.3,1996
 2,F,Morgan Graham,SBD,T2,75,Single-ply,73.5,149.7,45.4,156.5,351.6,1996
-3,F,Sofia Terranova,SBD,T2,75,Single-ply,73.1,,70.3,152,222.3,
+3,F,Sofia Terranova,BD,T2,75,Single-ply,73.1,,70.3,152,222.3,
 1,F,Lacey Winters,SBD,T2,82.5,Single-ply,76.9,158.8,63.5,186,408.3,1997
 2,F,Karley Wyngaard,SBD,T2,82.5,Single-ply,81,158.8,65.8,158.8,383.4,1997
 3,F,Kaija Newman,SBD,T2,82.5,Single-ply,76.9,158.8,65.8,156.5,381.1,1998

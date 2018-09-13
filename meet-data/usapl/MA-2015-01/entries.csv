@@ -1,7 +1,7 @@
 Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
 1,M,Nicholas Rizk,SBD,R-T1,53,Raw,51.1,62.5,42.5,92.5,197.5,1999
 2,M,Kameron Kamel,SBD,R-T1,53,Raw,53,52.5,47.5,87.5,187.5,1999
-1,M,Max Gallaghur,SBD,R-T1,59,Raw,57.2,,70,95,165,
+1,M,Max Gallaghur,BD,R-T1,59,Raw,57.2,,70,95,165,
 1,M,Ryan Kelly,SBD,R-T1,66,Raw,65.2,135,87.5,142.5,365,2000
 2,M,Brian Murry,SBD,R-T1,66,Raw,64.2,112.5,75,105,292.5,
 3,M,Jack Gerrior,SBD,R-T1,66,Raw,65.8,25,72.5,42.5,140,2000
@@ -10,15 +10,15 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 3,M,John Hartt,SBD,R-T1,74,Raw,73.6,100,75,125,300,2000
 4,M,Eddie White,SBD,R-T1,74,Raw,69.2,77.5,65,140,282.5,1999
 5,M,Matthew Osborne,SBD,R-T1,74,Raw,69.2,72.5,47.5,102.5,222.5,2000
-6,M,Jack Daley,SBD,R-T1,74,Raw,69.8,67.5,,102.5,170,
+6,M,Jack Daley,SD,R-T1,74,Raw,69.8,67.5,,102.5,170,
 1,M,Maxwell Hubley,SBD,R-T1,83,Raw,79.3,122.5,97.5,150,370,1999
 2,M,Benjamin Burton,SBD,R-T1,83,Raw,81.1,115,82.5,152.5,350,1999
 3,M,Dylan Blacker,SBD,R-T1,83,Raw,75.6,110,77.5,137.5,325,2000
 4,M,Owen Brady,SBD,R-T1,83,Raw,75.2,92.5,67.5,125,285,1996
 1,M,Hayden Dillow,SBD,R-T1,93,Raw,92.1,125,75,170,370,2000
 2,M,Andrew Stanwicks,SBD,R-T1,93,Raw,89.7,120,77.5,152.5,350,1999
-3,M,Cristian Walke,SBD,R-T1,93,Raw,84.9,,70,142.5,212.5,
-4,M,Kearvons Theodore,SBD,R-T1,93,Raw,91.6,,87.5,120,207.5,
+3,M,Cristian Walke,BD,R-T1,93,Raw,84.9,,70,142.5,212.5,
+4,M,Kearvons Theodore,BD,R-T1,93,Raw,91.6,,87.5,120,207.5,
 1,M,Cullan Zampell,SBD,R-T1,105,Raw,101.4,140,82.5,207.5,430,
 1,M,Domenic PePaoli,SBD,R-T1,120,Raw,114.8,147.5,100,192.5,440,
 2,M,Jacob Piccuito,SBD,R-T1,120,Raw,108.4,105,70,145,320,1999
@@ -68,8 +68,8 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 9,M,Thomas Burke,SBD,R-T2,93,Raw,88.8,115,72.5,177.5,365,1997
 10,M,Nick MacGregor,SBD,R-T2,93,Raw,92.8,122.5,95,145,362.5,
 11,M,John Fenton,SBD,R-T2,93,Raw,92.1,105,75,140,320,1998
-12,M,Zach Rimsan,SBD,R-T2,93,Raw,90.9,142.5,,120,262.5,
-13,M,Jake Leitner,SBD,R-T2,93,Raw,87.7,,110,92.5,202.5,1998
+12,M,Zach Rimsan,SD,R-T2,93,Raw,90.9,142.5,,120,262.5,
+13,M,Jake Leitner,BD,R-T2,93,Raw,87.7,,110,92.5,202.5,1998
 1,M,Charles Ruffin,SBD,R-T2,105,Raw,104.9,252.5,165,282.5,700,1997
 2,M,Nathaniel Lee,SBD,R-T2,105,Raw,99.7,212.5,142.5,237.5,592.5,1998
 3,M,Daniel McKeeney,SBD,R-T2,105,Raw,100.9,150,82.5,207.5,440,1997
@@ -118,4 +118,4 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Essence Atencio-Calloway,SBD,R-T2,72,Raw,71.1,77.5,47.5,92.5,217.5,1998
 1,F,Andrea DePena,SBD,R-T2,84+,Raw,101.6,75,30,95,200,
 1,F,Halle Russell,SBD,T3,84,Single-ply,73.3,137.5,92.5,120,350,1996
-1,F,Ashley Will,SBD,R-JR,52,Raw,51.5,,47.5,115,162.5,1994
+1,F,Ashley Will,BD,R-JR,52,Raw,51.5,,47.5,115,162.5,1994

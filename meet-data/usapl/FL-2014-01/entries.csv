@@ -11,21 +11,21 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Fanny Galanis,D,R-M4a,75,Raw,73.8,,,67.5,67.5,1943
 1,M,Logan Morrison,SBD,R-T1,82.5,Raw,79.1,102.5,67.5,112.5,282.5,1999
 1,M,Nick Loiacano,SBD,R-T2,125,Raw,122.5,185,75,162.5,422.5,1996
-1,M,Robert A. Valentin Jr,SBD,R-T3,60,Raw,59.4,,97.5,,97.5,
+1,M,Robert A. Valentin Jr,B,R-T3,60,Raw,59.4,,97.5,,97.5,
 1,M,Ben Winder,SBD,R-T3,67.5,Raw,67,142.5,125,195,462.5,1995
-1,M,Gabriel Vega-Lara,SBD,R-T3,90,Raw,89.1,142.5,,155,297.5,
+1,M,Gabriel Vega-Lara,SD,R-T3,90,Raw,89.1,142.5,,155,297.5,
 1,M,John Chesney,SBD,R-T3,100,Raw,92.5,160,110,220,490,1995
 1,M,Dylan Hayes,SBD,T3,75,Single-ply,71.5,130,117.5,170,417.5,1995
-1,M,Andre Kruk,SBD,T3,82.5,Single-ply,82.1,185,115,,300,1994
+1,M,Andre Kruk,SB,T3,82.5,Single-ply,82.1,185,115,,300,1994
 1,M,Michael Lake,SBD,JR,75,Single-ply,72.3,175,125,187.5,487.5,1992
 1,M,Spencer Grubb,SBD,JR,82.5,Single-ply,80.7,200,147.5,210,557.5,1994
-1,M,Ryan Hayes,SBD,JR,110,Single-ply,106.8,197.5,,227.5,425,1993
+1,M,Ryan Hayes,SD,JR,110,Single-ply,106.8,197.5,,227.5,425,1993
 1,M,Diego Purnomo,SBD,R-JR,75,Raw,74.1,145,82.5,160,387.5,1991
 1,M,Huntington Hayes,SBD,R-JR,90,Raw,89.1,187.5,137.5,235,560,1992
 1,M,Matthew Karbowski,SBD,R-JR,100,Raw,96.5,212.5,157.5,240,610,1991
 2,M,Sam Grossman,SBD,R-JR,100,Raw,97.6,160,150,220,530,1998
 3,M,Hunter Laud,SBD,R-JR,100,Raw,90.6,150,115,207.5,472.5,1993
-1,M,John P. Utz,SBD,O,100,Single-ply,100,250,,272.5,522.5,
+1,M,John P. Utz,SD,O,100,Single-ply,100,250,,272.5,522.5,
 1,M,Jamie Guidry,SBD,R-O,82.5,Raw,78.8,150,117.5,187.5,455,1987
 1,M,William Smith,SBD,R-O,90,Raw,88.3,145,120,235,500,1990
 1,M,Matt Otero,SBD,R-O,100,Raw,98.9,227.5,160,262.5,650,
@@ -38,7 +38,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,M,Jorge Alvarez,SBD,R-O,125,Raw,118.7,222.5,145,270,637.5,1984
 1,M,Kenneth Morris,SBD,R-O,125+,Raw,129.7,280,202.5,300,782.5,1985
 1,M,Jon Kennedy,SBD,M1a,125+,Single-ply,131,185,187.5,227.5,600,1973
-2,M,Jon Kennedy,SBD,M1a,125+,Single-ply,131,,187.5,227.5,415,1973
+2,M,Jon Kennedy,BD,M1a,125+,Single-ply,131,,187.5,227.5,415,1973
 1,M,Brian Morrison,SBD,R-M1a,75,Raw,72.7,155,127.5,195,477.5,1973
 1,M,Michael Ricker,SBD,M1b,125+,Single-ply,140.9,100,200,230,530,1965
 1,M,Anthony Milillo,SBD,R-M1b,82.5,Raw,80.8,150,100,170,420,1965
@@ -56,7 +56,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 2,F,Julia Hanley,SBD,R-O,75,Raw,70.6,102.5,47.5,127.5,277.5,1981
 1,F,Chrissy Valcourt,SBD,R-O,82.5,Raw,81.6,97.5,57.5,145,300,1985
 1,F,Jennifer Cline,SBD,R-O,90+,Raw,111.3,85,70,137.5,292.5,1979
-1,F,Eastin Kimberly,SBD,M1a,90+,Single-ply,110.6,,122.5,177.5,300,1970
+1,F,Eastin Kimberly,BD,M1a,90+,Single-ply,110.6,,122.5,177.5,300,1970
 1,F,Michelle Sothen,SBD,R-M1a,67.5,Raw,62.9,102.5,67.5,130,300,1970
 1,F,Ivelese Santana,SBD,R-M1a,75,Raw,70.1,85,47.5,130,262.5,
 1,F,Dana Milillo,SBD,R-M1a,82.5,Raw,75.9,72.5,55,115,242.5,1971
@@ -66,7 +66,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,M,Anthony Toussaint,BD,R-T2,60,Raw,56.7,,62.5,120,182.5,1997
 1,M,Wens Laguerre,BD,R-T2,75,Raw,74.5,,62.5,120,182.5,1997
 1,M,Brandon Barnett,BD,R-T2,82.5,Raw,80.8,,105,170,275,1996
-1,M,Marlon Bhoorasingh,BD,O,125,Single-ply,122.5,,225,,225,1983
+1,M,Marlon Bhoorasingh,B,O,125,Single-ply,122.5,,225,,225,1983
 1,M,Scott Miliken,BD,R-O,75,Raw,74.6,,107.5,175,282.5,
 1,M,James Wilson,BD,R-O,125,Raw,117.1,,152.5,235,387.5,1988
 1,M,James Dundon,BD,R-M1b,110,Raw,108.8,,160,227.5,387.5,1965

@@ -18,7 +18,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Marsha Long,B,R-M2a,56,Raw,55.3,,87.5,,87.5,1960
 1,F,Bea Smith,B,R-M2a,90,Raw,82.6,,30,,30,1961
 1,F,Martha Smith,B,R-M2a,90+,Raw,113.9,,30,,30,1963
-1,M,Shon Paul Dukes,SBD,R-T1,60,Raw,59.8,,65,115,180,
+1,M,Shon Paul Dukes,BD,R-T1,60,Raw,59.8,,65,115,180,
 1,M,DeKendrick Graves,SBD,R-T1,67.5,Raw,61.3,37.5,42.5,87.5,167.5,
 1,M,Connor McDonald,SBD,R-T1,75,Raw,68,100,75,137.5,312.5,1999
 1,M,Seth Strickland,SBD,R-T1,82.5,Raw,77.8,190,130,205,525,1998
@@ -40,15 +40,15 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 2,M,Casey Hutchins,SBD,R-JR,100,Raw,95.5,77.5,70,155,302.5,1990
 1,M,Tervelle Lee,SBD,O,75,Single-ply,72.6,147.5,147.5,172.5,467.5,1981
 1,M,Travis Greer,SBD,O,100,Single-ply,99.1,237.5,172.5,205,615,1985
-1,M,Timothy Helton,SBD,O,110,Single-ply,107.6,250,,,250,1988
+1,M,Timothy Helton,S,O,110,Single-ply,107.6,250,,,250,1988
 1,M,Thomas Henriques,SBD,R-O,67.5,Raw,65.1,125,112.5,150,387.5,1987
 2,M,Josue Macias,SBD,R-O,67.5,Raw,65.4,122.5,87.5,170,380,1986
 3,M,James Harmon,SBD,R-O,67.5,Raw,62.4,92.5,72.5,145,310,
 1,M,Hoot Gibson,SBD,R-O,75,Raw,73.3,157.5,115,217.5,490,1978
 1,M,Dr. Huaiyu Tan,SBD,R-O,82.5,Raw,81.2,172.5,120,200,492.5,
 2,M,Ramiro Macias,SBD,R-O,82.5,Raw,81.3,155,105,195,455,1987
-3,M,Rocky Ryan,SBD,R-O,82.5,Raw,78.2,,67.5,155,222.5,1987
-4,M,Allen Hall,SBD,R-O,82.5,Raw,80.2,82.5,,,82.5,1979
+3,M,Rocky Ryan,BD,R-O,82.5,Raw,78.2,,67.5,155,222.5,1987
+4,M,Allen Hall,S,R-O,82.5,Raw,80.2,82.5,,,82.5,1979
 1,M,Jason Webber,SBD,R-O,90,Raw,89,240,137.5,250,627.5,1975
 2,M,Christopher Hambre,SBD,R-O,90,Raw,86.4,192.5,120,220,532.5,1987
 3,M,Ian Singletary,SBD,R-O,90,Raw,83.9,167.5,135,202.5,505,
@@ -77,10 +77,10 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,M,Neil Frazier,SBD,R-M1a,110,Raw,107.5,65,72.5,122.5,260,1971
 1,M,Jason Brooks,SBD,R-M1a,125+,Raw,141,167.5,127.5,235,530,1973
 2,M,Tony Medaris,SBD,R-M1a,125+,Raw,141.1,115,80,145,340,
-1,M,Tim Miller,SBD,M2a,110,Single-ply,106.6,195,,,195,1987
+1,M,Tim Miller,S,M2a,110,Single-ply,106.6,195,,,195,1987
 1,M,Terry Stewart,SBD,R-M1b,56,Raw,55.1,15,27.5,47.5,90,1967
 1,M,Willard Johnson,SBD,R-M2a,90,Raw,88.7,160,115,182.5,457.5,1964
-1,M,David Dunnam,SBD,R-M2a,100,Raw,93,182.5,120,,302.5,1964
+1,M,David Dunnam,SB,R-M2a,100,Raw,93,182.5,120,,302.5,1964
 1,M,Tim Womack,SBD,R-M2a,110,Raw,108.3,75,160,125,360,1961
 1,M,James Lemon,SBD,R-M2b,90,Raw,87.4,30,40,80,150,1956
 1,M,Curtis Wainwright,SBD,R-M3a,125,Raw,119.9,227.5,147.5,235,610,1954
@@ -89,7 +89,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,F,Ashley Zamudio,SBD,R-T2,56,Raw,53.3,80,40,75,195,1997
 1,F,Alex Jackson,SBD,R-T2,75,Raw,72.8,170,117.5,200,487.5,1991
 1,F,Brittney Sellers,SBD,R-O,67.5,Raw,64.9,75,57.5,130,262.5,1984
-1,M,Colin Lapp,BD,R-T1,82.5,Raw,75.1,,,142.5,142.5,1998
+1,M,Colin Lapp,D,R-T1,82.5,Raw,75.1,,,142.5,142.5,1998
 1,M,Colten Mapoles,BD,R-T3,100,Raw,97.6,,135,217.5,352.5,
 1,M,Wheeler Fisher,BD,R-Y,90,Raw,89.9,,27.5,85,112.5,2000
 1,M,Samuel Bennett,BD,R-O,60,Raw,56.9,,77.5,155,232.5,1989

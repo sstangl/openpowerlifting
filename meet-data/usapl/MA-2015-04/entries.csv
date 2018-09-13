@@ -1,12 +1,12 @@
 Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
-1,M,Gregory Roberge,SBD,R-T2,74,Raw,72.2,150,,192.5,342.5,
+1,M,Gregory Roberge,SD,R-T2,74,Raw,72.2,150,,192.5,342.5,
 1,M,Raymond Cheung,SBD,R-T3,66,Raw,60.6,145,92.5,202.5,440,1995
 1,M,Peter Eng,SBD,R-T3,74,Raw,70.4,172.5,110,232.5,515,1995
 2,M,David Schumacher,SBD,R-T3,74,Raw,73.8,157.5,92.5,197.5,447.5,1996
 3,M,Richard Lisi,SBD,R-T3,74,Raw,67.6,125,110,165,400,1996
 1,M,Joseph Babcock,SBD,R-T3,83,Raw,80.4,170,105,215,490,1995
 2,M,Colby Sousa,SBD,R-T3,83,Raw,79.2,175,115,182.5,472.5,
-3,M,Jarrod Lewis,SBD,R-T3,83,Raw,81.2,170,92.5,,262.5,1995
+3,M,Jarrod Lewis,SB,R-T3,83,Raw,81.2,170,92.5,,262.5,1995
 1,M,Darryl Brooks,SBD,R-T3,120+,Raw,135.6,187.5,137.5,215,540,1995
 1,M,John Goodyear,SBD,T3,83,Single-ply,80.8,200,157.5,212.5,570,1995
 2,M,Connor Pelkey,SBD,T3,83,Single-ply,77.4,215,117.5,217.5,550,1996
@@ -24,7 +24,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 3,M,Korn Barsauskas,SBD,JR,105,Single-ply,95.2,250,25,230,505,
 4,M,James Sykes,SBD,JR,105,Single-ply,100.8,190,85,210,485,1992
 1,M,Cody Giampa,SBD,JR,120,Single-ply,115.8,340,250,320,910,1991
-1,M,Zach Neuschaefer,SBD,JR,120+,Single-ply,126.8,250,,217.5,467.5,
+1,M,Zach Neuschaefer,SD,JR,120+,Single-ply,126.8,250,,217.5,467.5,
 1,M,Jared Defanti,SBD,R-JR,66,Raw,66,137.5,90,192.5,420,1994
 2,M,Neeraj Bosu,SBD,R-JR,66,Raw,64.8,97.5,92.5,145,335,
 1,M,Thomas Lombardo,SBD,R-JR,74,Raw,74,145,115,177.5,437.5,1993
@@ -58,7 +58,7 @@ Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,
 1,M,Rob Meulenberg,SBD,R-O,120+,Raw,133.2,300,192.5,285,777.5,1976
 2,M,Jamin Grantham,SBD,R-O,120+,Raw,175.2,175,165,260,600,1983
 1,M,Frank Juszynski,SBD,M1b,105,Single-ply,95.2,195,130,235,560,1970
-1,M,Glen Nugent,SBD,R-M1b,120,Raw,115.4,,167.5,,167.5,1969
+1,M,Glen Nugent,B,R-M1b,120,Raw,115.4,,167.5,,167.5,1969
 1,M,David Mansfield,SBD,M3b,93,Single-ply,89.5,210,90,225,525,
 1,M,Gene Whiting,SBD,R-M2a,93,Raw,86.6,130,95,182.5,407.5,1961
 1,F,Meg Reilly,SBD,T3,63,Single-ply,62.4,110,55,105,270,
