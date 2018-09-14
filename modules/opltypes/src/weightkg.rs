@@ -7,6 +7,7 @@ use serde::ser::Serialize;
 use std::f32;
 use std::fmt;
 use std::num;
+use std::ops;
 use std::str::FromStr;
 
 use WeightUnits;
@@ -100,6 +101,47 @@ impl WeightKg {
 impl fmt::Display for WeightKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         WeightAny(self.0).fmt(f)
+    }
+}
+
+// Operators for WeightKg.
+
+/// Addition between WeightKg objects.
+impl ops::Add<WeightKg> for WeightKg {
+    type Output = WeightKg;
+
+    fn add(self, _rhs: WeightKg) -> WeightKg {
+        WeightKg(self.0 + _rhs.0)
+    }
+}
+
+/// += operator for WeightKg.
+impl ops::AddAssign for WeightKg {
+    fn add_assign(&mut self, other: WeightKg) {
+        *self = *self + other
+    }
+}
+
+/// Subtraction between WeightKg objects.
+impl ops::Sub<WeightKg> for WeightKg {
+    type Output = WeightKg;
+
+    fn sub(self, _rhs: WeightKg) -> WeightKg {
+        WeightKg(self.0 - _rhs.0)
+    }
+}
+
+/// -= operator for WeightKg.
+impl ops::SubAssign for WeightKg {
+    fn sub_assign(&mut self, other: WeightKg) {
+        *self = *self - other
+    }
+}
+
+/// Absolute value.
+impl WeightKg {
+    pub fn abs(self) -> WeightKg {
+        WeightKg(self.0.abs())
     }
 }
 
