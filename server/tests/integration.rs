@@ -13,30 +13,6 @@ use server::opldb::algorithms;
 
 mod common;
 
-/// Checks that all federations known to be fully-tested are
-/// marked as "Tested=Yes" in the compiled database.
-///
-/// If this test fails, the places to check are `scripts/compile`
-/// and `src/opldb/fields/federation.rs`.
-#[test]
-fn tested_federations_are_marked_tested() {
-    let db = common::db();
-    let meets = db.get_meets();
-    let metafed = MetaFederation::AllTested;
-
-    for entry in db.get_entries() {
-        if metafed.contains(&entry, &meets) {
-            assert_eq!(
-                true,
-                entry.tested,
-                "The Federation {} is part of MetaFederation::AllTested, \
-                 but isn't part of TESTED_FEDERATIONS in `scripts/compile`",
-                db.get_meet(entry.meet_id).federation
-            );
-        }
-    }
-}
-
 /// Checks that the sorting algorithm doesn't include any entries with
 /// disqualified or empty values in the category being sorted.
 #[test]
