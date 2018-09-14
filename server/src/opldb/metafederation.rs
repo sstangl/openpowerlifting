@@ -72,7 +72,11 @@ impl MetaFederation {
         let meet: &Meet = &meets[entry.meet_id as usize];
 
         match self {
-            MetaFederation::AllTested => meet.federation.is_fully_tested(),
+            MetaFederation::AllTested => {
+                // Still check entry.tested: some fully-tested federations
+                // existed before drug-testing was available.
+                entry.tested && meet.federation.is_fully_tested()
+            },
             MetaFederation::AllAmateur => entry.tested,
             MetaFederation::AllArgentina => {
                 entry.lifter_country == Some(Country::Argentina)
