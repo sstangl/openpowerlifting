@@ -416,7 +416,7 @@ pub enum Federation {
     PZKFiTS,
 
     /// 100% RAW Federation, WP.
-    #[strum(to_string = "RAW", serialize = "raw")]
+    #[strum(to_string = "RAW", serialize = "100raw")]
     RAW,
 
     /// 100% RAW Federation Canada.

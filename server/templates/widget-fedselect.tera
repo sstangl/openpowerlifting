@@ -47,7 +47,7 @@
   <option value="pride" {% if selection.federation == "PRIDE" %}selected{% endif %}>PRIDE - Pride Powerlifting</option>
   <option value="nasa" {% if selection.federation == "NASA" %}selected{% endif %}>NASA - Natural Athlete Strength Association (2016+)</option>
   <option value="notld" {% if selection.federation == "NOTLD" %}selected{% endif %}>NOTLD - Night of the Living Deadlift</option>
-  <option value="raw" {% if selection.federation == "RAW" %}selected{% endif %}>RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
+  <option value="100raw" {% if selection.federation == "RAW" %}selected{% endif %}>RAW - 100% RAW Powerlifting Federation (Help Needed!)</option>
   <option value="rawu" {% if selection.federation == "RAWU" %}selected{% endif %}>RAWU - Raw United Powerlifting Federation</option>
   <option value="rps" {% if selection.federation == "RPS" %}selected{% endif %}>RPS - Revolution Powerlifting Syndicate</option>
   <option value="rupc" {% if selection.federation == "RUPC" %}selected{% endif %}>RUPC - Raw Unity Powerlifting Championships</option>
