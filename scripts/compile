@@ -268,7 +268,8 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
     for row in newentries.rows:
         if not row[testedidx]:
             if fed in TESTED_FEDERATIONS:
-                row[testedidx] = "Yes"
+                if row[testedidx] != "No":
+                    row[testedidx] = "Yes"
             elif "Division" in newentries.fieldnames:
                 row[testedidx] = \
                     tested_from_division(
