@@ -247,6 +247,9 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
     newentries.remove_column_by_name("State")
     newentries.remove_column_by_name("Country-State")
     newentries.remove_column_by_name("College/University")
+    newentries.remove_column_by_name("SquatEquipment")
+    newentries.remove_column_by_name("BenchEquipment")
+    newentries.remove_column_by_name("DeadliftEquipment")
 
     # Make use of Cyrillic names.
     if "CyrillicName" in newentries.fieldnames:

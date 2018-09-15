@@ -31,6 +31,9 @@ struct Entry {
     pub place: Option<Place>,
     pub event: Option<Event>,
     pub equipment: Option<Equipment>,
+    pub squat_equipment: Option<Equipment>,
+    pub bench_equipment: Option<Equipment>,
+    pub deadlift_equipment: Option<Equipment>,
     pub weightclasskg: Option<WeightClassKg>,
     pub bodyweightkg: Option<WeightKg>,
     pub totalkg: Option<WeightKg>,
@@ -102,6 +105,9 @@ enum Header {
     Event,
     Division,
     Equipment,
+    SquatEquipment,
+    BenchEquipment,
+    DeadliftEquipment,
     BirthYear,
     BirthDay,
     Tested,
@@ -246,6 +252,75 @@ fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Option<Equ
         Ok(eq) => Some(eq),
         Err(_) => {
             report.error_on(line, format!("Invalid Equipment '{}'", s));
+            None
+        }
+    }
+}
+
+fn check_column_squatequipment(
+    s: &str,
+    line: u64,
+    report: &mut Report,
+) -> Option<Equipment> {
+    if s.is_empty()  {
+        return None;
+    }
+    match s.parse::<Equipment>() {
+        Ok(eq) => {
+            if eq == Equipment::Straps {
+                report.error_on(line, "SquatEquipment can't be 'Straps'");
+            }
+            Some(eq)
+        }
+        Err(_) => {
+            report.error_on(line, format!("Invalid SquatEquipment '{}'", s));
+            None
+        }
+    }
+}
+
+fn check_column_benchequipment(
+    s: &str,
+    line: u64,
+    report: &mut Report,
+) -> Option<Equipment> {
+    if s.is_empty()  {
+        return None;
+    }
+    match s.parse::<Equipment>() {
+        Ok(eq) => {
+            if eq == Equipment::Wraps {
+                report.error_on(line, "BenchEquipment can't be 'Wraps'");
+            } else if eq == Equipment::Straps {
+                report.error_on(line, "BenchEquipment can't be 'Straps'");
+            }
+            Some(eq)
+        }
+        Err(_) => {
+            report.error_on(line, format!("Invalid BenchEquipment '{}'", s));
+            None
+        }
+    }
+}
+
+fn check_column_deadliftequipment(
+    s: &str,
+    line: u64,
+    report: &mut Report,
+) -> Option<Equipment> {
+    if s.is_empty()  {
+        return None;
+    }
+
+    match s.parse::<Equipment>() {
+        Ok(eq) => {
+            if eq == Equipment::Wraps {
+                report.error_on(line, "DeadliftEquipment can't be 'Wraps'");
+            }
+            Some(eq)
+        }
+        Err(_) => {
+            report.error_on(line, format!("Invalid DeadliftEquipment '{}'", s));
             None
         }
     }
@@ -404,9 +479,35 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         if equipment == Equipment::Straps && !event.has_deadlift() {
             report.error_on(line, format!("Event '{}' doesn't use Straps", event));
         }
+
+        // Check that the SquatEquipment makes sense.
+        if let Some(squat_eq) = entry.squat_equipment {
+            if squat_eq > equipment {
+                report.error_on(line,
+                    format!("SquatEquipment '{}' can't be more supportive \
+                            than the Equipment '{}'", squat_eq, equipment));
+            }
+        }
+
+        // Check that the BenchEquipment makes sense.
+        if let Some(bench_eq) = entry.bench_equipment {
+            if bench_eq > equipment {
+                report.error_on(line,
+                    format!("BenchEquipment '{}' can't be more supportive \
+                            than the Equipment '{}'", bench_eq, equipment));
+            }
+        }
+
+        // Check that the DeadliftEquipment makes sense.
+        if let Some(deadlift_eq) = entry.deadlift_equipment {
+            if deadlift_eq > equipment {
+                report.error_on(line,
+                    format!("DeadliftEquipment '{}' can't be more supportive \
+                            than the Equipment '{}'", deadlift_eq, equipment));
+            }
+        }
     }
 
-    
     // If the lifter wasn't DQ'd, they should have data from each lift.
     // TODO: Fix all the warnings and make these all report errors.
     if let Some(ref place) = entry.place {
@@ -492,7 +593,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
-    meet: Option<Meet>,
+    _meet: Option<Meet>,
 ) -> Result<Report, Box<Error>>
 where
     R: io::Read,
@@ -523,6 +624,18 @@ where
         }
         if let Some(idx) = headers.get(Header::Equipment) {
             entry.equipment = check_column_equipment(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::SquatEquipment) {
+            entry.squat_equipment =
+                check_column_squatequipment(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::BenchEquipment) {
+            entry.bench_equipment =
+                check_column_benchequipment(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::DeadliftEquipment) {
+            entry.deadlift_equipment =
+                check_column_deadliftequipment(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Place) {
             entry.place = check_column_place(&record[idx], line, &mut report);

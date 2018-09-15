@@ -259,6 +259,11 @@ def check_column_equipment(s, row, csv):
         perror("Unknown equipment value: \"%s\"" % s)
 
 
+def check_column_event_equipment(s, row, csv):
+    if s not in ['', 'Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Straps']:
+        perror("Unknown event equipment value: \"%s\"" % s)
+
+
 def check_lift_column(s, row, csv):
     try:
         f = float(s)
@@ -423,6 +428,10 @@ HeaderHandlers = {
     'Event': check_column_event,
     'Division': check_column_division,
     'Equipment': check_column_equipment,
+    'SquatEquipment': check_column_event_equipment,
+    'BenchEquipment': check_column_event_equipment,
+    'DeadliftEquipment': check_column_event_equipment,
+
 
     # Temporary column for IPF, to be calculated as Age during compilation.
     'BirthYear': check_column_birthyear,
