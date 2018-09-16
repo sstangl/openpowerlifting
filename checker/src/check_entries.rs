@@ -764,6 +764,7 @@ pub fn check_entries(
 
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
+        .terminator(csv::Terminator::Any(b'\n'))
         .from_path(&report.path)?;
 
     Ok(do_check(&mut rdr, report, meet)?)
