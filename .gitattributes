@@ -13,17 +13,16 @@
 #
 
 # Convert all text file line endings to UNIX "\n".
-*.csv   eol=lf
-*.env   eol=lf
-*.frag  eol=lf
-*.js    eol=lf
-*.json  eol=lf
-*.md    eol=lf
-*.py    eol=lf
-*.rs    eol=lf
-*.tera  eol=lf
-*.toml  eol=lf
-*.ts    eol=lf
-*.txt   eol=lf
-URL     eol=lf
-INFO    eol=lf
+*.csv text eol=lf
+*.env text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.rs text eol=lf
+*.tera text eol=lf
+*.toml text eol=lf
+*.ts text eol=lf
+*.txt text eol=lf
+URL text eol=lf
+INFO text eol=lf
