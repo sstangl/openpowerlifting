@@ -15,7 +15,8 @@ target/
 /meet-data/**/*.docx
 /meet-data/**/*.odt
 /meet-data/**/*.ods
-/meet-data/**/*.xml
+/meet-data/**/*.xm
+/meet-data/**/*.rtf
 
 # Temporary files.
 *.lnk
@@ -27,5 +28,4 @@ __pycache__
 npm-debug.log
 geckodriver.log
 *.retry
-.DS_Stor
-*.rtf
+.DS_Store
