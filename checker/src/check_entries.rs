@@ -599,8 +599,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
                 if has_totalkg {
                     if let Some(total_entry) = entry.totalkg {
                         if (total_data - total_entry).abs() > WeightKg(50) {
-                            let s = format!("Total '{}' does not match the sum of best \
-                            attempts '{}'", total_data, total_entry);
+                            let s = format!("Calculated TotalKg '{}', but meet has '{}'",
+                                total_data, total_entry);
                             report.warning_on(line, s)
                         }
                     }

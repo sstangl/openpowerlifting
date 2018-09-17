@@ -46,6 +46,10 @@ pub enum Federation {
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
 
+    /// Alianza Chilena Powerlifting, GPA/IPO.
+    #[strum(to_string = "ACHIPO", serialize = "achipo")]
+    ACHIPO,
+
     /// Anti-Drug Athletes United.
     #[strum(to_string = "ADAU", serialize = "adau")]
     ADAU,
@@ -630,6 +634,7 @@ impl Federation {
             Federation::AAP => false,
             Federation::AAPLF => true,
             Federation::AAU => true,
+            Federation::ACHIPO => false,
             Federation::ADAU => true,
             Federation::ADFPA => true,
             Federation::ADFPF => true,
@@ -780,6 +785,7 @@ impl Federation {
             Federation::AAP => Some(Country::Argentina),
             Federation::AAPLF => Some(Country::Australia),
             Federation::AAU => Some(Country::USA),
+            Federation::ACHIPO => Some(Country::Chile),
             Federation::ADAU => Some(Country::USA),
             Federation::ADFPA => Some(Country::USA),
             Federation::ADFPF => Some(Country::USA),

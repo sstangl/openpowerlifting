@@ -104,6 +104,9 @@
   <option value="raw-can" {% if selection.federation == "RAW-CAN" %}selected{% endif %}>RAW-CAN - 100% RAW Powerlifting Federation Canada</option>
   <option value="wrpf-can" {% if selection.federation == "WRPF-CAN" %}selected{% endif %}>WRPF-CAN - WRPF Canada [WRPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.chile}}">
+  <option value="achipo" {% if selection.federation == "ACHIPO" %}selected{% endif %}>ACHIPO - Alianza Chilena Powerlifting [GPA/IPO]</option>
+</optgroup>
 <optgroup label="{{strings.country.croatia}}">
   <option value="all-croatia" {% if selection.federation == "AllCroatia" %}selected{% endif %}>{{strings.selectors.fed.all_croatia}}</option>
   <option value="hpls" {% if selection.federation == "HPLS" %}selected{% endif %}>HPLS - Hrvatski Powerlifting Savez [IPF]</option>
