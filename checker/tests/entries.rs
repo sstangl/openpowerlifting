@@ -184,5 +184,4 @@ fn test_column_equipment() {
     let data = "Name,WeightClassKg,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,DeadliftEquipment,Event,Place\n\
                 Test User,90,M,100,100,100,300,Raw,Multi-ply,SBD,1";
     assert_eq!(check(data), 1);
-
 }

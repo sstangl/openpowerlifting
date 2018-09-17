@@ -97,7 +97,7 @@ pub fn check(meetdir: &Path) -> Result<Vec<Report>, Box<Error>> {
     }
 
     // Check the entries.csv.
-    let report = check_entries(meetdir.join("entries.csv"), meetresult.meet)?;
+    let report = check_entries(meetdir.join("entries.csv"), meetresult.meet.as_ref())?;
     if !report.messages.is_empty() {
         acc.push(report);
     }

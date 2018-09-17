@@ -237,6 +237,30 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut Report) {
+    if s.is_empty() {
+        return;
+    }
+    match s.parse::<Date>() {
+        Ok(birthday) => {
+            // Compare the BirthDay to the meet date for some basic sanity checks.
+            match meet {
+                Some(m) => {
+                    if birthday.year() >= m.date.year() - 4
+                        || m.date.year() - birthday.year() >= 95
+                    {
+                        report.error_on(line, format!("BirthDay '{}' looks invalid", s));
+                    }
+                }
+                None => {}
+            }
+        }
+        Err(e) => {
+            report.error_on(line, format!("Invalid BirthDay '{}': '{}'", s, e));
+        }
+    }
+}
+
 fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Option<Sex> {
     match s.parse::<Sex>() {
         Ok(s) => Some(s),
@@ -593,7 +617,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
-    _meet: Option<Meet>,
+    meet: Option<&Meet>,
 ) -> Result<Report, Box<Error>>
 where
     R: io::Read,
@@ -739,6 +763,9 @@ where
         if let Some(idx) = headers.get(Header::CyrillicName) {
             check_column_cyrillicname(&record[idx], line, &mut report);
         }
+        if let Some(idx) = headers.get(Header::BirthDay) {
+            check_column_birthday(&record[idx], meet, line, &mut report);
+        }
 
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
@@ -750,7 +777,7 @@ where
 /// Checks a single entries.csv file by path.
 pub fn check_entries(
     entries_csv: PathBuf,
-    meet: Option<Meet>
+    meet: Option<&Meet>
 ) -> Result<Report, Box<Error>>
 {
     // Allow the pending Report to own the PathBuf.
