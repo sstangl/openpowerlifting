@@ -20,8 +20,8 @@ Boys,60,3,Tyler Le,Palacios,58.88,163.29,92.99,183.7,439.98,Single-ply,SBD,M
 Boys,60,4,Arthur Sanchez,Victoria West,58.33,149.69,74.84,161.03,385.55,Single-ply,SBD,M
 Boys,60,5,John Bishop,Victoria West,58.88,147.42,72.57,129.27,349.27,Single-ply,SBD,M
 Boys,60,6,Drake Moya,Beeville Jones,58.24,104.33,65.77,124.74,294.84,Single-ply,SBD,M
-Boys,60,7,Trey Chavez,Palacios,58.69,115.67,,131.54,247.21,Single-ply,SBD,M
-Boys,60,8,Brityn Brown,Port Lavaca Calhoun,56.79,120.2,,124.74,244.94,Single-ply,SBD,M
+Boys,60,7,Trey Chavez,Palacios,58.69,115.67,,131.54,247.21,Single-ply,SD,M
+Boys,60,8,Brityn Brown,Port Lavaca Calhoun,56.79,120.2,,124.74,244.94,Single-ply,SD,M
 Boys,60,9,Zayne Melton,Corpus Christi Tuloso-Midway,59.42,79.38,49.9,90.72,219.99,Single-ply,SBD,M
 Boys,67.5,1,Jonathan Zelaya,Victoria East,64.77,226.8,127.01,215.46,569.26,Single-ply,SBD,M
 Boys,67.5,2,Jose Cumpean,Port Lavaca Calhoun,67.04,204.12,127.01,197.31,528.44,Single-ply,SBD,M
@@ -40,7 +40,7 @@ Boys,67.5,14,Kyle O'Keefe,Victoria East,60.42,115.67,56.7,129.27,301.64,Single-p
 Boys,67.5,15,Alex Benordan,Victoria St. Joseph,60.96,102.06,56.7,136.08,294.84,Single-ply,SBD,M
 Boys,67.5,16,Nathan Nguyen,Palacios,67.13,99.79,54.43,115.67,269.89,Single-ply,SBD,M
 Boys,67.5,17,Dominic Diaz,Victoria West,61.42,106.59,52.16,106.59,265.35,Single-ply,SBD,M
-Boys,67.5,18,Daniel Chen,Victoria St. Joseph,61.96,97.52,,92.99,190.51,Single-ply,SBD,M
+Boys,67.5,18,Daniel Chen,Victoria St. Joseph,61.96,97.52,,92.99,190.51,Single-ply,SD,M
 Boys,67.5,DQ,Jacob Cazares,Corpus Christi Tuloso-Midway,67.13,,,,,Single-ply,SBD,M
 Boys,67.5,DQ,Nicholas Padron,San Antonio East Central,67.13,,,,,Single-ply,SBD,M
 Boys,75,1,Daniel Leita,Port Lavaca Calhoun,74.39,226.8,142.88,272.16,641.83,Single-ply,SBD,M
@@ -55,7 +55,7 @@ Boys,75,9,Noah Rodriguez,Victoria West,72.57,172.37,97.52,183.7,453.59,Single-pl
 Boys,75,10,AJ Moreno,Alice,72.57,181.44,104.33,161.03,446.79,Single-ply,SBD,M
 Boys,75,11,Tre Evans,Edna,69.76,147.42,108.86,170.1,426.38,Single-ply,SBD,M
 Boys,75,12,Phillip Sullivan,Corpus Christi Tuloso-Midway,70.58,106.59,68.04,106.59,281.23,Single-ply,SBD,M
-Boys,75,13,Trenton Carter,Victoria West,70.03,,77.11,106.59,183.7,Single-ply,SBD,M
+Boys,75,13,Trenton Carter,Victoria West,70.03,,77.11,106.59,183.7,Single-ply,BD,M
 Boys,75,DQ,Jaun Sanchez,San Antonio East Central,74.84,,,,,Single-ply,SBD,M
 Boys,82.5,1,Ken'twaun Freeman,Victoria West,80.1,226.8,129.27,226.8,582.87,Single-ply,SBD,M
 Boys,82.5,2,Patrick Prieto,Beeville Jones,80.29,215.46,122.47,226.8,564.72,Single-ply,SBD,M
@@ -73,9 +73,9 @@ Boys,82.5,13,Sabastian Garcia,Corpus Christi Tuloso-Midway,80.1,174.63,102.06,16
 Boys,82.5,14,Michael Flores,Palacios,79.65,156.49,92.99,172.37,421.84,Single-ply,SBD,M
 Boys,82.5,15,Jc Maldonado,Corpus Christi Tuloso-Midway,75.21,154.22,83.91,161.03,399.16,Single-ply,SBD,M
 Boys,82.5,16,Bailey Rabb,Victoria East,79.47,145.15,95.25,154.22,394.63,Single-ply,SBD,M
-Boys,82.5,17,Chayce Grevey,Victoria West,75.39,229.06,158.76,,387.82,Single-ply,SBD,M
-Boys,82.5,18,Tyler Shelton,Victoria West,81.83,165.56,,188.24,353.8,Single-ply,SBD,M
-Boys,82.5,19,Xavier Rivera,Port Lavaca Calhoun,80.56,174.63,,,174.63,Single-ply,SBD,M
+Boys,82.5,17,Chayce Grevey,Victoria West,75.39,229.06,158.76,,387.82,Single-ply,SB,M
+Boys,82.5,18,Tyler Shelton,Victoria West,81.83,165.56,,188.24,353.8,Single-ply,SD,M
+Boys,82.5,19,Xavier Rivera,Port Lavaca Calhoun,80.56,174.63,,,174.63,Single-ply,S,M
 Boys,90,1,Chris Madrigal,Beeville Jones,86.82,272.16,174.63,256.28,703.07,Single-ply,SBD,M
 Boys,90,2,Dominic Garcia,Palacios,88.27,226.8,142.88,235.87,605.55,Single-ply,SBD,M
 Boys,90,3,Sylias Montgomery,Port Lavaca Calhoun,89.81,235.87,106.59,240.4,582.87,Single-ply,SBD,M
@@ -101,8 +101,8 @@ Boys,100,6,Jeremy Trevino,Gregory-Portland,98.97,206.38,99.79,181.44,487.61,Sing
 Boys,100,7,Abram Delao,Victoria East,97.98,183.7,102.06,183.7,469.47,Single-ply,SBD,M
 Boys,100,8,Richard Villarea,Yorktown,93.62,190.51,106.59,167.83,464.93,Single-ply,SBD,M
 Boys,100,9,Brig Nelson,Victoria St. Joseph,90.63,181.44,102.06,174.63,458.13,Single-ply,SBD,M
-Boys,100,10,Alfanso Montiel,Alice,95.71,104.33,72.57,,176.9,Single-ply,SBD,M
-Boys,100,11,Juan Inclan,Runge,93.44,140.61,,,140.61,Single-ply,SBD,M
+Boys,100,10,Alfanso Montiel,Alice,95.71,104.33,72.57,,176.9,Single-ply,SB,M
+Boys,100,11,Juan Inclan,Runge,93.44,140.61,,,140.61,Single-ply,S,M
 Boys,110,1,Leo Colom,Port Lavaca Calhoun,104.6,238.14,142.88,260.82,641.83,Single-ply,SBD,M
 Boys,110,2,Anthony Cantu,San Antonio East Central,107.41,263.08,124.74,219.99,607.81,Single-ply,SBD,M
 Boys,110,3,Celestino Alvarez,Victoria East,103.42,251.74,127.01,208.65,587.4,Single-ply,SBD,M
@@ -110,7 +110,7 @@ Boys,110,4,Bryce Long,San Antonio East Central,106.87,226.8,158.76,201.85,587.4,
 Boys,110,5,Sebastian Opal,Gregory-Portland,102.69,183.7,115.67,172.37,471.74,Single-ply,SBD,M
 Boys,110,6,Ethan Carr,Palacios,101.15,163.29,77.11,145.15,385.55,Single-ply,SBD,M
 Boys,110,7,Mario Cano,Beeville Jones,109.77,142.88,95.25,142.88,381.02,Single-ply,SBD,M
-Boys,110,8,Christian Gomez,Victoria East,108.86,158.76,,158.76,317.51,Single-ply,SBD,M
+Boys,110,8,Christian Gomez,Victoria East,108.86,158.76,,158.76,317.51,Single-ply,SD,M
 Boys,110,DQ,Aaron Bradasich,Victoria St. Joseph,109.77,,,,,Single-ply,SBD,M
 Boys,125,1,Jason Suniga,Victoria West,118.21,301.64,170.1,206.38,678.12,Single-ply,SBD,M
 Boys,125,2,Malakye Adams,Victoria East,122.74,260.82,154.22,210.92,625.96,Single-ply,SBD,M
@@ -120,7 +120,7 @@ Boys,125,5,Jorge Vazquez,Victoria East,117.93,192.78,115.67,192.78,501.22,Single
 Boys,125,6,Sergio Calvo,Victoria St. Joseph,114.12,190.51,92.99,192.78,476.27,Single-ply,SBD,M
 Boys,125,7,Morgan Neuman,Edna,122.83,174.63,86.18,154.22,415.04,Single-ply,SBD,M
 Boys,125,8,Trevor Benavides,Victoria West,120.11,156.49,106.59,142.88,405.97,Single-ply,SBD,M
-Boys,125,9,Osbalbo Gonzales,Alice,110.59,,115.67,,115.67,Single-ply,SBD,M
+Boys,125,9,Osbalbo Gonzales,Alice,110.59,,115.67,,115.67,Single-ply,B,M
 Boys,125,DQ,Justin Broil,Yorktown,124.74,,,,,Single-ply,SBD,M
 Boys,125+,1,Drew Hathaway,Victoria West,128,217.72,167.83,215.46,601.01,Single-ply,SBD,M
 Boys,125+,2,Ruben Avila,Victoria West,144.7,238.14,142.88,219.99,601.01,Single-ply,SBD,M

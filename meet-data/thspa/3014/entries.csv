@@ -35,8 +35,8 @@ Boys,75,11,Dai'shawn Fisher,Waco,73.94,165.56,86.18,167.83,419.57,Single-ply,SBD
 Boys,75,12,Miguel Pérez,Waco,73.84,156.49,79.38,158.76,394.63,Single-ply,SBD,M
 Boys,75,13,Jacob Essix,Waco,71.3,142.88,68.04,138.35,349.27,Single-ply,SBD,M
 Boys,75,14,Kyle Telg,Waco Midway,71.21,122.47,63.5,145.15,331.12,Single-ply,SBD,M
-Boys,75,15,Troy Johnson,Copperas Cove,68.49,172.37,,,172.37,Single-ply,SBD,M
-Boys,75,16,Isiah Hawkins,Copperas Cove,74.84,158.76,,,158.76,Single-ply,SBD,M
+Boys,75,15,Troy Johnson,Copperas Cove,68.49,172.37,,,172.37,Single-ply,S,M
+Boys,75,16,Isiah Hawkins,Copperas Cove,74.84,158.76,,,158.76,Single-ply,S,M
 Boys,82.5,1,Jacob Lewallen,Belton,80.65,238.14,117.93,244.94,601.01,Single-ply,SBD,M
 Boys,82.5,2,Malik Stoutamire,Temple,75.02,208.65,142.88,244.94,596.47,Single-ply,SBD,M
 Boys,82.5,3,Alexander Myles,Copperas Cove,82.1,204.12,131.54,235.87,571.53,Single-ply,SBD,M
@@ -46,7 +46,7 @@ Boys,82.5,6,Dj Hampton,Copperas Cove,81.74,165.56,99.79,188.24,453.59,Single-ply
 Boys,82.5,7,Adrian Alejos,Copperas Cove,76.84,156.49,97.52,185.97,439.98,Single-ply,SBD,M
 Boys,82.5,8,Fabian Garcia,Waco,82.01,158.76,88.45,192.78,439.98,Single-ply,SBD,M
 Boys,82.5,9,Patrick Tucker,Waco,79.65,127.01,83.91,149.69,360.61,Single-ply,SBD,M
-Boys,82.5,10,Daniel Ford,Waco Midway,80.92,147.42,,,147.42,Single-ply,SBD,M
+Boys,82.5,10,Daniel Ford,Waco Midway,80.92,147.42,,,147.42,Single-ply,S,M
 Boys,90,1,Dwain Richie,Waco,87.09,219.99,120.2,233.6,573.79,Single-ply,SBD,M
 Boys,90,2,Gelico Green,Waco,87.54,206.38,117.93,224.53,548.85,Single-ply,SBD,M
 Boys,90,3,Tim Edwards,Copperas Cove,88.45,199.58,117.93,210.92,528.44,Single-ply,SBD,M
@@ -60,7 +60,7 @@ Boys,90,10,Jakob Mitchell,Waco,86.18,170.1,108.86,179.17,458.13,Single-ply,SBD,M
 Boys,90,11,Codie Hidalgo,Copperas Cove,89.18,176.9,92.99,181.44,451.32,Single-ply,SBD,M
 Boys,90,12,Will Howard,Temple,85.28,156.49,88.45,190.51,435.45,Single-ply,SBD,M
 Boys,90,13,John Flores,Waco Midway,86.18,167.83,74.84,181.44,424.11,Single-ply,SBD,M
-Boys,90,14,Mitchell Dunahoo,Belton,83.01,179.17,104.33,,283.5,Single-ply,SBD,M
+Boys,90,14,Mitchell Dunahoo,Belton,83.01,179.17,104.33,,283.5,Single-ply,SB,M
 Boys,100,1,Jerry Leyba,Belton,97.61,249.48,156.49,249.48,655.44,Single-ply,SBD,M
 Boys,100,2,Jazerian Faulkner,Temple,97.52,204.12,127.01,217.72,548.85,Single-ply,SBD,M
 Boys,100,3,James Evans,Waco,94.8,195.04,104.33,231.33,530.7,Single-ply,SBD,M
@@ -68,9 +68,9 @@ Boys,100,4,Sammy Rodriguez,Temple,98.43,204.12,102.06,217.72,523.9,Single-ply,SB
 Boys,100,5,Justin Buuck,Belton,92.08,172.37,122.47,181.44,476.27,Single-ply,SBD,M
 Boys,100,6,Andrew Bullock,Waco Midway,90.26,154.22,97.52,181.44,433.18,Single-ply,SBD,M
 Boys,100,7,Z Johnson,Waco University,92.99,158.76,81.65,183.7,424.11,Single-ply,SBD,M
-Boys,100,8,Xavier White,Temple,98.88,181.44,113.4,,294.84,Single-ply,SBD,M
-Boys,100,9,L Alvarado,Waco University,97.98,145.15,72.57,,217.72,Single-ply,SBD,M
-Boys,100,10,Ashad Matthews,Temple,97.07,215.46,,,215.46,Single-ply,SBD,M
+Boys,100,8,Xavier White,Temple,98.88,181.44,113.4,,294.84,Single-ply,SB,M
+Boys,100,9,L Alvarado,Waco University,97.98,145.15,72.57,,217.72,Single-ply,SB,M
+Boys,100,10,Ashad Matthews,Temple,97.07,215.46,,,215.46,Single-ply,S,M
 Boys,100,DQ,Henry Lamm,Waco Midway,99.79,,,,,Single-ply,SBD,M
 Boys,110,1,Zach Moody,Copperas Cove,106.32,231.33,122.47,240.4,594.21,Single-ply,SBD,M
 Boys,110,2,Emilio Cortez,Belton,106.59,235.87,158.76,183.7,578.33,Single-ply,SBD,M
@@ -83,8 +83,8 @@ Boys,110,8,Jamar Wheless,Waco,104.33,174.63,111.13,190.51,476.27,Single-ply,SBD,
 Boys,110,9,Zakary Richards,Waco Midway,106.59,161.03,86.18,151.95,399.16,Single-ply,SBD,M
 Boys,110,10,Daniel Phillips,Waco Midway,106.14,136.08,97.52,165.56,399.16,Single-ply,SBD,M
 Boys,110,11,Quincy White,Waco,104.6,124.74,68.04,120.2,312.98,Single-ply,SBD,M
-Boys,110,12,Jordan Banda,Waco,108.86,183.7,104.33,,288.03,Single-ply,SBD,M
-Boys,110,13,John Montemayor,Waco Midway,109.77,,90.72,,90.72,Single-ply,SBD,M
+Boys,110,12,Jordan Banda,Waco,108.86,183.7,104.33,,288.03,Single-ply,SB,M
+Boys,110,13,John Montemayor,Waco Midway,109.77,,90.72,,90.72,Single-ply,B,M
 Boys,110,DQ,Jesse Flores,Temple,109.77,,,,,Single-ply,SBD,M
 Boys,110,DQ,Josh Childres,Temple,109.77,,,,,Single-ply,SBD,M
 Boys,125,1,Will Drake,Belton,123.29,256.28,117.93,229.06,603.28,Single-ply,SBD,M
