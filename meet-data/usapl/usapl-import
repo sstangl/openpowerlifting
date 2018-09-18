@@ -187,7 +187,7 @@ def makeentriescsv(soup):
                 elif 'Male' in s:
                     state_sex = 'M'
 
-        elif k == 19:
+        elif k == 20:
             # This is a results row.
             assert state_event is not None
             assert state_division is not None
@@ -215,6 +215,7 @@ def makeentriescsv(soup):
             totalkg = cells[16].text.strip()
             # wilks = cells[17].text.strip() # Not used. Always recalculated.
             # drugtested = cells[18].text.strip() # Not used.
+            # unknown = cells[19].text.strip() # Not used.
 
             row = ['' for x in csv.fieldnames]
             row[csv.index('WeightClassKg')] = weightclasskg
