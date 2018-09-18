@@ -52,6 +52,8 @@ def getmeetinfo(soup):
     # Correct fed names to the form that we use
     if fed in ['RPF', 'SPPF', 'MPF']:
         fed = 'FPR'
+    elif fed in ['UPF']:
+        fed = 'UkrainePF'
 
     # Get the location.
     venuerow = fedrow.find_next_sibling()
@@ -465,7 +467,7 @@ def fix_cyrillic_names(csv):
         cyridx = csv.index('CyrillicName')
         for row in csv.rows:
             row[cyridx] = row[cyridx].replace('e', 'е').replace(
-                'x', 'х').replace('o', 'о').replace('T', 'Т')
+                'x', 'х').replace('o', 'о').replace('T', 'Т').replace('i', 'і')
 
 
 def remove_empty_cols_ignore_fieldname(csv):

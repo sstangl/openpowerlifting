@@ -38,6 +38,7 @@
   <option value="apa" {% if selection.federation == "APA" %}selected{% endif %}>APA - American Powerlifting Association [WPA]</option>
   <option value="apc" {% if selection.federation == "APC" %}selected{% endif %}>APC - American Powerlifting Committee [GPA/IPO]</option>
   <option value="apf" {% if selection.federation == "APF" %}selected{% endif %}>APF - American Powerlifting Federation [WPC] (Help Needed!)</option>
+  <option value="afpf" {% if selection.federation == "AFPF" %}selected{% endif %}>AFPF - American Frantz Powerlifting Federation</option>
   <option value="bbdd" {% if selection.federation == "BBDD" %}selected{% endif %}>BBDD - Biggest Bench, Deadliest Deadlift</option>
   <option value="hardcore" {% if selection.federation == "Hardcore" %}selected{% endif %}>Hardcore - Hardcore Powerlifting</option>
   <option value="herc" {% if selection.federation == "HERC" %}selected{% endif %}>HERC - Hercules</option>
@@ -52,6 +53,7 @@
   <option value="rps" {% if selection.federation == "RPS" %}selected{% endif %}>RPS - Revolution Powerlifting Syndicate</option>
   <option value="rupc" {% if selection.federation == "RUPC" %}selected{% endif %}>RUPC - Raw Unity Powerlifting Championships</option>
   <option value="spf" {% if selection.federation == "SPF" %}selected{% endif %}>SPF - Southern Powerlifting Federation</option>
+  <option value="ssa" {% if selection.federation == "SSA" %}selected{% endif %}>SSA - Syndicated Strength Alliance</option>
   <option value="thspa" {% if selection.federation == "THSPA" %}selected{% endif %}>THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
   <option value="upa" {% if selection.federation == "UPA" %}selected{% endif %}>UPA - United Powerlifting Association</option>
   <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting [IPF] (2014+)</option>
@@ -95,6 +97,7 @@
 </optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
+  <option value="cpc" {% if selection.federation == "CPC" %}selected{% endif %}>CPC - Canadian Powerlifting Congress [WPC] (2016+)</option>
   <option value="cpf" {% if selection.federation == "CPF" %}selected{% endif %}>CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
   <option value="cpl" {% if selection.federation == "CPL" %}selected{% endif %}>CPL - Canadian Powerlifting League [IPL]</option>
   <option value="cpo" {% if selection.federation == "CPO" %}selected{% endif %}>CPO - Canadian Powerlifting Organisation [WPC]</option>
