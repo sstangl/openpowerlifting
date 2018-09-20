@@ -88,6 +88,19 @@
   background-image: linear-gradient(to right, #507CFF, #EDF2F4);
 }
 
+// Green, white, and orange.
+.ireland {
+  $ireland-green: #009A64;
+  $ireland-white: #EDF2F4;
+  $ireland-orange: #FF8647;
+  @include gradient-prereqs($ireland-white);
+  background-image:
+    linear-gradient(to right,
+      $ireland-green, $ireland-green 33%,
+      $ireland-white 34%, $ireland-white 66%,
+      $ireland-orange 67%, $ireland-orange);
+}
+
 // University of Miami colors: orange and green.
 .umiami {
   $umiami-orange: #F47321; // Their exact orange.
