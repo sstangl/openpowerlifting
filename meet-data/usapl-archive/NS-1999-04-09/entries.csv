@@ -41,7 +41,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 75,M. Genich,F,Jr/Sr,115,60,142.5,317.5,SBD,Single-ply,3
 75,S. Bockin,F,Jr/Sr,112.5,52.5,150,315,SBD,Single-ply,4
 75,K. Mc Pherson,F,Jr/Sr,62.5,52.5,92.5,207.5,SBD,Single-ply,5
-75,J. Wright,F,Jr/Sr,137.5,,,137.5,SBD,Single-ply,6
+75,J. Wright,F,Jr/Sr,137.5,,,,SBD,Single-ply,DQ
 75,M. Pourciau,F,Jr/Sr,,,,,SBD,Single-ply,DQ
 82.5,S. Hoitink,F,Jr/Sr,157.5,77.5,165,400,SBD,Single-ply,1
 82.5,K. Ford,F,Jr/Sr,142,90,160,392,SBD,Single-ply,2
@@ -96,7 +96,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 60,G. Alexander,M,Jr/Sr,165,102.5,185,452.5,SBD,Single-ply,6
 60,R. Cox,M,Jr/Sr,147.5,97.5,180,425,SBD,Single-ply,7
 60,B. Haney,M,Jr/Sr,127.5,67.5,160,355,SBD,Single-ply,8
-60,R. Nosek,M,Jr/Sr,145,,,145,SBD,Single-ply,9
+60,R. Nosek,M,Jr/Sr,145,,,,SBD,Single-ply,DQ
 67.5,T. Smith,M,Jr/Sr,215,105,227.5,547.5,SBD,Single-ply,1
 67.5,W. Tyler,M,Jr/Sr,215,117.5,212.5,545,SBD,Single-ply,2
 67.5,B. Smith,M,Jr/Sr,212.5,120,205,537.5,SBD,Single-ply,3
@@ -114,7 +114,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 67.5,C. Tridle,M,Jr/Sr,160,92.5,150,402.5,SBD,Single-ply,14
 67.5,S. Wooten,M,Jr/Sr,125,100,167.5,392.5,SBD,Single-ply,15
 67.5,C. Stellpflug,M,Jr/Sr,150,85,152.5,387.5,SBD,Single-ply,16
-67.5,H. Decato,M,Jr/Sr,152.5,,,152.5,SBD,Single-ply,18
+67.5,H. Decato,M,Jr/Sr,152.5,,,,SBD,Single-ply,DQ
 75,J. Suter,M,Jr/Sr,245,117.5,247.5,610,SBD,Single-ply,1
 75,T. Morgan,M,Jr/Sr,207.5,115,240,562.5,SBD,Single-ply,2
 75,B. Michael,M,Jr/Sr,222.5,122.5,205,550,SBD,Single-ply,3
@@ -158,8 +158,8 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 90,B. Deters,M,Jr/Sr,192.5,127.5,197.5,517.5,SBD,Single-ply,11
 90,C. Pusel,M,Jr/Sr,180,115,217.5,512.5,SBD,Single-ply,12
 90,J. Neumann,M,Jr/Sr,165,117.5,177.5,460,SBD,Single-ply,13
-90,A. Nowak,M,Jr/Sr,150,,,150,SBD,Single-ply,15
-90,B. Repaal,M,Jr/Sr,160,102.5,,262.5,SBD,Single-ply,14
+90,A. Nowak,M,Jr/Sr,150,,,,SBD,Single-ply,DQ
+90,B. Repaal,M,Jr/Sr,160,102.5,,,SBD,Single-ply,DQ
 90,A. Mahutga,M,Jr/Sr,,,,,SBD,Single-ply,DQ
 100,P. Crawford,M,Jr/Sr,265,165,275,705,SBD,Single-ply,1
 100,A. Bird,M,Jr/Sr,247.5,175,265,687.5,SBD,Single-ply,2
@@ -175,7 +175,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 100,B. Stouffer,M,Jr/Sr,160,117.5,205,482.5,SBD,Single-ply,12
 100,B. Todo,M,Jr/Sr,180,100,182.5,462.5,SBD,Single-ply,13
 100,J. Housworth,M,Jr/Sr,,,,,SBD,Single-ply,DQ
-100,N. Peterson,M,Jr/Sr,255,152.5,,407.5,SBD,Single-ply,14
+100,N. Peterson,M,Jr/Sr,255,152.5,,,SBD,Single-ply,DQ
 100,J. Swanson,M,Jr/Sr,,,,,SBD,Single-ply,DQ
 100,O. Rogers,M,Jr/Sr,,,,,SBD,Single-ply,DQ
 110,R. Robinson,M,Jr/Sr,245,172.5,272.5,690,SBD,Single-ply,1
@@ -192,15 +192,15 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 125,J. Jarred,M,Jr/Sr,235,145,232.5,612.5,SBD,Single-ply,4
 125,M. Shurum,M,Jr/Sr,175,115,205,495,SBD,Single-ply,5
 125,D. Nogle,M,Jr/Sr,170,112.5,192.5,475,SBD,Single-ply,6
-125,J. Bryant,M,Jr/Sr,247.5,,,247.5,SBD,Single-ply,7
-125,S. McTcaife,M,Jr/Sr,222.5,,,222.5,SBD,Single-ply,8
+125,J. Bryant,M,Jr/Sr,247.5,,,,SBD,Single-ply,DQ
+125,S. McTcaife,M,Jr/Sr,222.5,,,,SBD,Single-ply,DQ
 125,J. Johnson,M,Jr/Sr,,,,,SBD,Single-ply,DQ
 125+,J. Marien,M,Jr/Sr,295,177.5,282.5,755,SBD,Single-ply,1
 125+,A. Orusce,M,Jr/Sr,317.5,182.5,237.5,737.5,SBD,Single-ply,2
 125+,S. Sasa,M,Jr/Sr,260,142.5,222.5,625,SBD,Single-ply,3
 125+,H. Marin,M,Jr/Sr,245,142.5,205.5,593,SBD,Single-ply,4
 125+,N. Patrick,M,Jr/Sr,222.5,130,62.5,415,SBD,Single-ply,5
-125+,M. Howse,M,Jr/Sr,305,,,305,SBD,Single-ply,6
+125+,M. Howse,M,Jr/Sr,305,,,,SBD,Single-ply,DQ
 125+,J. Bryant,M,Jr/Sr,,,,,SBD,Single-ply,DQ
 52,L. Pham,M,Fr/Soph,130,85,167.5,382.5,SBD,Single-ply,1
 52,P. Castro,M,Fr/Soph,145,62.5,152.5,360,SBD,Single-ply,2
@@ -223,7 +223,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 60,J. Ouellette,M,Fr/Soph,117.5,75,150,342.5,SBD,Single-ply,5
 60,S. Koghl,M,Fr/Soph,112.5,70,147.5,330,SBD,Single-ply,6
 60,S. Dura,M,Fr/Soph,120,80,117.5,317.5,SBD,Single-ply,7
-60,A. Degroot,M,Fr/Soph,110,,,110,SBD,Single-ply,8
+60,A. Degroot,M,Fr/Soph,110,,,,SBD,Single-ply,DQ
 67.5,B. Nash,M,Fr/Soph,167.5,100,195,462.5,SBD,Single-ply,1
 67.5,J. Griffin,M,Fr/Soph,165,85,185.5,435.5,SBD,Single-ply,2
 67.5,J. Nunly,M,Fr/Soph,135,70,175,380,SBD,Single-ply,3
@@ -256,7 +256,7 @@ WeightClassKg,Name,Sex,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 110,G. Alexander,M,Fr/Soph,165,102.5,185,452.5,SBD,Single-ply,2
 110,R. Cox,M,Fr/Soph,147.5,97.5,180,425,SBD,Single-ply,4
 110,B. Haney,M,Fr/Soph,127.5,67.5,160,355,SBD,Single-ply,6
-110,R. Nosek,M,Fr/Soph,145,,,145,SBD,Single-ply,12
+110,R. Nosek,M,Fr/Soph,145,,,,SBD,Single-ply,DQ
 110,B. Hoosier,M,Fr/Soph,150,77.5,157.5,385,SBD,Single-ply,5
 110,P. Mendez,M,Fr/Soph,127.5,65,162.5,355,SBD,Single-ply,7
 110,C. Perdaris,M,Fr/Soph,107.5,82.5,160,350,SBD,Single-ply,8

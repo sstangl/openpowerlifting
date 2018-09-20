@@ -30,7 +30,7 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 84+,F,Single-ply,SBD,Masters 1b,Michelle Fayant,1964,88.9,165,125,175,465,1
 84+,F,Single-ply,SBD,Open,Andrea Page,1977,118.1,227.5,115,182.5,525,1
 52,F,Raw,SBD,Masters 2a,Samantha Derrington,,50.8,52.5,30,62.5,145,1
-84+,F,Raw,SBD,Masters 2a,Jill Arnow,1959,88.6,140,82.5,,222.5,2
+84+,F,Raw,SBD,Masters 2a,Jill Arnow,1959,88.6,140,82.5,,,DQ
 84+,F,Raw,SBD,Masters 2a,Jane Chateaubriand,,93.9,125,70,150,345,1
 84+,F,Raw,SBD,Masters 2b,Juanita Mangagaong,,124,120,75,157.5,352.5,1
 72,F,Raw,SBD,Masters 3a,Leslie Macko,1949,71.2,55,37.5,75,167.5,1
@@ -44,7 +44,7 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 74,M,Single-ply,SBD,Juniors,Tyler Shepard,1991,69.6,107.5,75,150,332.5,1
 105,M,Single-ply,SBD,Masters 2a,John Dietz,1959,98.4,172.5,137.5,185,495,1
 83,M,Single-ply,SBD,Masters 2b,Leamon Woodley,1957,82.2,285,137.5,287.5,710,1
-93,M,Single-ply,SBD,Masters 3b,Alan Tepper,1945,86.4,182.5,,217.5,400,1
+93,M,Single-ply,SBD,Masters 3b,Alan Tepper,1945,86.4,182.5,,217.5,,DQ
 83,M,Single-ply,SBD,Masters 3b,Jack Rankin,1947,81.9,200,97.5,197.5,495,1
 93,M,Single-ply,SBD,Open,Cameron Johnson,2001,89.5,200,122.5,200,522.5,1
 105,M,Single-ply,SBD,Open,Mark Sonnichsen,1975,99.2,275,160,275,710,2
@@ -59,20 +59,20 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 120,M,Raw,SBD,Juniors,David Osborn #1,1988,109.4,185,145,205,535,1
 83,M,Raw,SBD,Juniors,Sun Ly,1991,80.8,165,125,190,480,1
 120,M,Raw,SBD,Masters 1a,Eric Mott,1971,105.2,177.5,150,225,552.5,1
-120,M,Raw,SBD,Masters 1a,Bob Sloss,,106.9,142.5,,182.5,325,2
+120,M,Raw,SBD,Masters 1a,Bob Sloss,,106.9,142.5,,182.5,,DQ
 120,M,Raw,SBD,Masters 1b,Jeff Olsen,1965,107.7,217.5,157.5,245,620,1
 120,M,Raw,SBD,Masters 1b,Chris Williams #4,1967,106.4,192.5,162.5,247.5,602.5,2
 120,M,Raw,SBD,Masters 1b,Gary Sewell,1967,108.1,197.5,130,210,537.5,4
 120,M,Raw,SBD,Masters 1b,Brett Robbins,1963,115.9,210,125,227.5,562.5,3
 120,M,Raw,SBD,Masters 1b,Lance Robbins,1963,111.1,182.5,125,220,527.5,5
-74,M,Raw,SBD,Masters 2a,Rose Pristell,,71.3,,97.5,,97.5,1
+74,M,Raw,B,Masters 2a,Rose Pristell,,71.3,,97.5,,97.5,1
 93,M,Raw,SBD,Masters 2a,Larry Hill,1960,87.9,165,127.5,227.5,520,1
 120+,M,Raw,SBD,Masters 2a,Dennis Miner,1960,120.5,220,150,285,655,1
 83,M,Raw,SBD,Masters 3a,Mikhail Brusser,1952,74.7,142.5,117.5,205,465,1
 105,M,Raw,SBD,Masters 3a,Steve Slavens,,98.4,60,60,60,180,1
 66,M,Raw,SBD,Masters 3a,Dave Higgins,,65.5,127.5,87.5,180,395,1
 83,M,Raw,SBD,Masters 3b,Matthew Jones,1991,82.4,92.5,65,147.5,305,1
-83,M,Raw,SBD,Masters 4b,Len Baltzer,,81.1,70,,105,175,1
+83,M,Raw,SBD,Masters 4b,Len Baltzer,,81.1,70,,105,,DQ
 93,M,Raw,SBD,Open,Joseph Schlegel,1985,87.6,182.5,140,247.5,570,1
 105,M,Raw,SBD,Open,Jesse Cardenas,1982,98.4,200,170,227.5,597.5,1
 105,M,Raw,SBD,Open,Brent Nikolaus,1982,100,182.5,137.5,240,560,2
@@ -91,7 +91,7 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 120+,M,Raw,SBD,Teen 2,Monike Failauga,,133.7,222.5,125,247.5,595,1
 74,M,Raw,SBD,Teen 2,Maverick Reddaway,,67.3,150,105,162.5,417.5,1
 66,M,Raw,SBD,Teen 2,Damon Lurvey,1995,64.7,127.5,102.5,147.5,377.5,1
-83,M,Raw,SBD,Teen 2,Eryn Warick,,80.5,162.5,,207.5,370,1
+83,M,Raw,SBD,Teen 2,Eryn Warick,,80.5,162.5,,207.5,,DQ
 83,M,Raw,SBD,Teen 3,Josh Liebelt,,74.1,160,95,185,440,1
 74,M,Raw,SBD,Teen 3,Hayden Fagundes,1994,73.5,125,67.5,175,367.5,2
 120,M,Raw,SBD,Teen 3,Michael Davis,1956,108.8,170,117.5,190,477.5,1
