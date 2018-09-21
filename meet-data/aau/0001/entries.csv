@@ -12,7 +12,7 @@ SBD,F,Patty Eaton,48,OPEN,Single-ply,105,,50,,127.5,,282.5,1
 SBD,F,Karen Faliciano,48,OPEN,Single-ply,97.5,,40,,137.5,,275,2
 SBD,F,Carole Jordan,52,OPEN,Single-ply,105,,62.5,65,130,,297.5,2
 SBD,F,Joanne Shear,52,R OPEN,Raw,85,,55,,135,,275,1
-SBD,F,Samantha Alves,52,R YOUTH 12-13,Raw,20,22.5,,,55,,75,1
+SD,F,Samantha Alves,52,R YOUTH 12-13,Raw,20,22.5,,,55,,75,1
 SBD,F,Joanne Shear,52,RM 50-54,Raw,85,,55,,135,,275,1
 SBD,F,Carole Jordan,52,SUB,Single-ply,105,,62.5,65,130,,297.5,1
 SBD,F,Deborah Jackson,56,M 40-44,Single-ply,137.5,,75,,172.5,,385,1
@@ -23,11 +23,11 @@ SBD,F,Deborah Jackson,56,OPEN,Single-ply,137.5,,75,,172.5,,385,1
 SBD,F,Deborah Mc Nulty,56,OPEN,Single-ply,127.5,,67.5,,147.5,,342.5,2
 SBD,F,Margaret Whidden,56,OPEN,Single-ply,105,,65,,115,,285,3
 SBD,F,Diane Brill,56,R OPEN,Raw,70,,67.5,,120,130,257.5,1
-SBD,F,Diane Brill,56,RL 40-44,Raw,70,,67.5,,,,137.5,1
+SBD,F,Diane Brill,56,RL 40-44,Raw,70,,67.5,,120,130,257.5,1
 SBD,F,Melinda Rosenblum,60,LIFE,Single-ply,,,,,,,,DQ
 SBD,F,Melinda Rosenblum,60,M 45-49,Single-ply,,,,,,,,DQ
 SBD,F,Migdalia Fernandez,60,OPEN,Single-ply,155,,87.5,,175,,417.5,1
-SBD,F,Melinda Rosenblum,60,OPEN,Single-ply,,,,,137.5,,137.5,2
+D,F,Melinda Rosenblum,60,OPEN,Single-ply,,,,,137.5,,137.5,2
 SBD,F,Jenniffer Souza,60,R OPEN,Raw,95,,67.5,,117.5,,280,1
 SBD,F,Jeri Lynn Haynes,60,RT 14-15,Raw,77.5,,102.5,,112.5,,292.5,1
 SBD,F,Jenniffer Souza,60,RT 18-19,Raw,95,,67.5,,117.5,,280,1
@@ -52,7 +52,7 @@ SBD,F,Giselle Costas,82.5,OPEN,Single-ply,132.5,,75,,190,,397.5,1
 SBD,F,Carolee Engel,82.5,R OPEN,Raw,110,,80,,155,,345,1
 SBD,F,Carolee Engel,82.5,R SUB,Raw,110,,80,,155,,345,1
 SBD,F,Vicky Hembre,90+,R OPEN,Raw,192.5,,120,,207.5,,520,1
-SBD,F,Nancy Edelson,90+,R SUB,Raw,,,67.5,,190,,257.5,1
+BD,F,Nancy Edelson,90+,R SUB,Raw,,,67.5,,190,,257.5,1
 SBD,F,Carla Perez,,R YOUTH 10-11,Raw,55,,20,,70,80,145,1
 B,F,Briana Tinglof,30,YOUTH 9-10,Single-ply,,,22.5,,,,22.5,1
 B,F,Nicole Yokley,35,R YOUTH 10-11,Raw,,,30,30.5,,,30,1
@@ -170,9 +170,9 @@ SBD,M,JJ Talton,82.5,TEEN 16-17,Single-ply,230,,180,,227.5,,637.5,1
 SBD,M,Terry Edwards,90,LIFE,Single-ply,227.5,,155,,225,,607.5,2
 SBD,M,Jason Golec,90,LIFE,Single-ply,260,,172.5,,235,,667.5,1
 SBD,M,Martin Drake,90,LM 45,Single-ply,155,158,137.5,,202.5,,495,1
-SBD,M,Tim Fitzgibbon,90,LM 50-54,Single-ply,,,110,,185,,295,1
+BD,M,Tim Fitzgibbon,90,LM 50-54,Single-ply,,,110,,185,,295,1
 SBD,M,Martin Drake,90,M 45-49,Single-ply,155,158,137.5,,202.5,,495,1
-SBD,M,Tim Fitzgibbon,90,M 50-54,Single-ply,,,110,,185,,295,1
+BD,M,Tim Fitzgibbon,90,M 50-54,Single-ply,,,110,,185,,295,1
 SBD,M,Nestor Gregory,90,M 55-59,Single-ply,,,,,,,,DQ
 SBD,M,Ralph Fitzgerald,90,MIL/LAW,Single-ply,175,,137.5,,215,,527.5,1
 SBD,M,Terry Edwards,90,OPEN,Single-ply,227.5,,155,,225,,607.5,4
@@ -204,7 +204,7 @@ SBD,M,John Durso,100,M 40-44,Single-ply,297.5,297.5,182.5,,292.5,302.5,772.5,1
 SBD,M,Kevin Fisher,100,M 45-49,Single-ply,267.5,,167.5,,305,,740,1
 SBD,M,Bob Evans #1,100,M 50-54,Single-ply,220,,167.5,,227.5,,615,1
 SBD,M,Denny Taylor,100,M 60-64,Single-ply,242.5,,137.5,,205,,585,1
-SBD,M,Tony Falbo,100,OPEN,Single-ply,,,175,,,,175,2
+B,M,Tony Falbo,100,OPEN,Single-ply,,,175,,,,175,2
 SBD,M,Joe Jimenez,100,OPEN,Single-ply,,,,,,,,DQ
 SBD,M,Harold Millan,100,OPEN,Single-ply,287,,170,,290,,747,1
 SBD,M,Greg Panora,100,R JUNIOR,Raw,267.5,,192.5,,295,,755,1
@@ -241,7 +241,7 @@ SBD,M,Robert Speno,125,OPEN,Single-ply,280,,200,,275,,755,2
 SBD,M,Frank Gant,125,R LIFE,Raw,,,,,,,,DQ
 SBD,M,Greg Payne,125,R OPEN,Raw,290,,217.5,,332.5,,840,1
 SBD,M,Greg Payne,125,R SUB,Raw,290,,217.5,,332.5,,840,1
-SBD,M,Neil Ferone,125,RM 40-44,Raw,,,160,,,,160,1
+B,M,Neil Ferone,125,RM 40-44,Raw,,,160,,,,160,1
 SBD,M,Jim Wagner,125,RM 45-49,Raw,225,,147.5,,227.5,,600,1
 SBD,M,Tom Dorsey,125,RM 50-54,Raw,,,,,,,,DQ
 SBD,M,Lewis Thomason,125,RM 65-69,Raw,170,,147.5,,205,,522.5,1
