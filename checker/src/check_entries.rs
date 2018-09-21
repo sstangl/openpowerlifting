@@ -539,15 +539,15 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             if has_squat_data || has_bench_data || has_deadlift_data {
                 if !has_squat_data && event.has_squat() {
                     let s = format!("Non-DQ Event '{}' requires squat data", event);
-                    report.warning_on(line, s);
+                    report.error_on(line, s);
                 }
                 if !has_bench_data && event.has_bench() {
                     let s = format!("Non-DQ Event '{}' requires bench data", event);
-                    report.warning_on(line, s);
+                    report.error_on(line, s);
                 }
                 if !has_deadlift_data && event.has_deadlift() {
                     let s = format!("Non-DQ Event '{}' requires deadlift data", event);
-                    report.warning_on(line, s);
+                    report.error_on(line, s);
                 }
             }
         }
@@ -559,7 +559,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         if place.is_dq() && has_totalkg {
             report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
         } else if !place.is_dq() && !has_totalkg {
-            report.error_on(line, format!("non-DQ entries must have a TotalKg"));
+            report.error_on(line, format!("Non-DQ entries must have a TotalKg"));
         }
     }
 
@@ -593,7 +593,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
                         if (total_data - total_entry).abs() > WeightKg(50) {
                             let s = format!("Calculated TotalKg '{}', but meet has '{}'",
                                 total_data, total_entry);
-                            report.warning_on(line, s)
+                            report.error_on(line, s)
                         }
                     }
                 }
