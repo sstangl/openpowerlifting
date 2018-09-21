@@ -434,8 +434,7 @@ fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> Option<
     if let Some(weight) = check_positive_weight(s, line, Header::BodyweightKg, report) {
         if weight != WeightKg::from_i32(0) {
             if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
-                let warning = format!("BodyweightKg looks implausible: '{}'", s);
-                report.warning_on(line, warning);
+                report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
             }
         }
         Some(weight)
@@ -554,20 +553,13 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         }
     }
     
-    // Ensure non-DQ lifters have totals and DQ lifters don't.
+    // Check that TotalKg matches the Place.
     let has_totalkg: bool = is_non_zero(entry.totalkg);
-
     if let Some(ref place) = entry.place {
-        if !place.is_dq() {
-            if !has_totalkg {
-                let s = format!("Non-DQ Entry requires a total");
-                report.warning_on(line, s)
-            }
-        } else {
-            if has_totalkg {
-                let s = format!("DQ Entry must not have a total");
-                report.warning_on(line, s)
-            }
+        if place.is_dq() && has_totalkg {
+            report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
+        } else if !place.is_dq() && !has_totalkg {
+            report.error_on(line, format!("non-DQ entries must have a TotalKg"));
         }
     }
 
@@ -636,7 +628,7 @@ where
         for field in &record {
             if field.contains("  ") || field.starts_with(' ') || field.ends_with(' ') {
                 let msg = format!("Field '{}' contains extraneous spacing", field);
-                report.warning_on(line, msg);
+                report.error_on(line, msg);
             }
         }
 
