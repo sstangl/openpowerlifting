@@ -533,7 +533,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 
     // If the lifter wasn't DQ'd, they should have data from each lift.
     // TODO: Fix all the warnings and make these all report errors.
-    if let Some(ref place) = entry.place {
+    if let Some(place) = entry.place {
         if !place.is_dq() {
             // Allow entries that only have a Total but no lift data.
             if has_squat_data || has_bench_data || has_deadlift_data {
@@ -555,7 +555,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     
     // Check that TotalKg matches the Place.
     let has_totalkg: bool = is_non_zero(entry.totalkg);
-    if let Some(ref place) = entry.place {
+    if let Some(place) = entry.place {
         if place.is_dq() && has_totalkg {
             report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
         } else if !place.is_dq() && !has_totalkg {
@@ -569,33 +569,26 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     let has_best3benchkg: bool = is_non_zero(entry.best3benchkg);
     let has_best3deadliftkg: bool = is_non_zero(entry.best3deadliftkg);
 
-    if let Some(ref place) = entry.place {
-        if !place.is_dq() {
-            if has_best3squatkg || has_best3benchkg || has_best3deadliftkg {
-                let mut total_data = WeightKg(0);
-                if has_best3squatkg {
-                    if let Some(w) = entry.best3squatkg {
-                        total_data += w
-                    }
-                }
-                if has_best3benchkg {
-                    if let Some(w) = entry.best3benchkg {
-                        total_data += w
-                    }
-                }   
-                if has_best3deadliftkg {
-                    if let Some(w) = entry.best3deadliftkg {
-                        total_data += w
-                    }
-                }
-                if has_totalkg {
-                    if let Some(total_entry) = entry.totalkg {
-                        if (total_data - total_entry).abs() > WeightKg(50) {
-                            let s = format!("Calculated TotalKg '{}', but meet has '{}'",
-                                total_data, total_entry);
-                            report.error_on(line, s)
-                        }
-                    }
+    if let Some(place) = entry.place {
+        if !place.is_dq() && has_totalkg
+            && (has_best3squatkg || has_best3benchkg || has_best3deadliftkg)
+        {
+            let mut total_data = WeightKg(0);
+            if let Some(w) = entry.best3squatkg {
+                total_data += w
+            }
+            if let Some(w) = entry.best3benchkg {
+                total_data += w
+            }
+            if let Some(w) = entry.best3deadliftkg {
+                total_data += w
+            }
+
+            if let Some(total_entry) = entry.totalkg {
+                if (total_data - total_entry).abs() > WeightKg(50) {
+                    let s = format!("Calculated TotalKg '{}', but meet has '{}'",
+                        total_data, total_entry);
+                    report.error_on(line, s)
                 }
             }
         }
