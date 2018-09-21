@@ -276,6 +276,11 @@ pub enum Federation {
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
 
+    /// Croatia - Unaffiliated
+    #[serde(rename = "Croatia-UA")]
+    #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
+    CroatiaUA,
+
     /// Croatian IPF affiliate
     #[strum(to_string = "HPLS", serialize = "hpls")]
     HPLS,
@@ -701,6 +706,7 @@ impl Federation {
             Federation::GPU => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
+            Federation::CroatiaUA => false,
             Federation::HPLS => true,
             Federation::HPLSUA => false,
             Federation::HPO => false,
@@ -855,6 +861,7 @@ impl Federation {
             Federation::GPU => Some(Country::Germany),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
+            Federation::CroatiaUA => Some(Country::Croatia),
             Federation::HPLS => Some(Country::Croatia),
             Federation::HPLSUA => Some(Country::Croatia),
             Federation::HPO => Some(Country::Croatia),
