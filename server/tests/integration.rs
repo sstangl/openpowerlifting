@@ -8,7 +8,6 @@ extern crate server;
 
 use opltypes::*;
 use server::pages::selection::*;
-use server::opldb::MetaFederation;
 use server::opldb::algorithms;
 
 mod common;

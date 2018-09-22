@@ -31,8 +31,7 @@
     {% block body %}{% endblock body %}
   {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
 
-  {% include "widget-weightunits-script" %}
-  {% include "widget-langselect-script" %}
+  {% include "header-script" %}
   {% include "google-analytics" %}
 </body>
 </html>

@@ -1,0 +1,16 @@
+<script>
+function change_language() {
+ var time = new Date();
+ time.setFullYear(time.getFullYear()+3);
+ document.cookie="lang="+document.getElementById("langselect").value+"; expires="+time.toUTCString()+" path=/; ";
+ window.location.href = window.location.href;
+}
+function change_units() {
+ var time = new Date();
+ time.setFullYear(time.getFullYear()+3);
+ document.cookie="units="+document.getElementById("weightunits").value+"; expires="+time.toUTCString()+" path=/; ";
+ window.location.href = window.location.href;
+}
+document.getElementById("weightunits").addEventListener("change", change_units);
+document.getElementById("langselect").addEventListener("change", change_language);
+</script>

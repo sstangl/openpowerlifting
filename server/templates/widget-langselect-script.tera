@@ -1,7 +1,0 @@
-<script>
-function change_language() {
- document.cookie="lang="+document.getElementById("langselect").value+"; path=/";
- window.location.href = window.location.href;
-}
-document.getElementById("langselect").addEventListener("change", change_language);
-</script>

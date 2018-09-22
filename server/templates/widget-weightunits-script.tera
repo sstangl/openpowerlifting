@@ -1,7 +1,0 @@
-<script>
-function change_units() {
- document.cookie="units="+document.getElementById("weightunits").value+"; path=/";
- window.location.href = window.location.href;
-}
-document.getElementById("weightunits").addEventListener("change", change_units);
-</script>
