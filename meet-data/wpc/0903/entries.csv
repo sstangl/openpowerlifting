@@ -1,434 +1,311 @@
-Place,Name,CyrillicName,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Mikola Trimbach,Микола Тримбач,Ukraine,66.2,140,150,160,,90,-100,-100,,150,160,172.5,,422.5,67.5,Amateur Teen 16-17,M,SBD,Wraps,160,90,172.5,2000
-1,Bogdan Sidorenko,Богдан Сидоренко,Ukraine,77.4,120,125,130,,82.5,87.5,92.5,,155,165,-175,,387.5,82.5,Amateur Teen 16-17,M,SBD,Wraps,130,92.5,165,2000
-1,Vladislav Berdishev,Владислав Бердишев,Ukraine,72.1,180,-190,-190,,90,-100,-100,,160,170,185,,455,75,Amateur Teen 18-19,M,SBD,Wraps,180,90,185,1998
-1,Maksim Dikhtyar,Максим Діхтяр,Ukraine,79.6,150,165,180,,125,130,-132.5,,190,202.5,210,,520,82.5,Amateur Teen 18-19,M,SBD,Wraps,180,130,210,1999
-1,Dmitro Gumanenko,Дмитро Гуманенко,Ukraine,90,-180,-180,180,,105,110,112.5,,210,-220,-220,,502.5,90,Amateur Teen 18-19,M,SBD,Wraps,180,112.5,210,1999
-2,Bogdan Bushtryuk,Богдан Буштрюк,Ukraine,86.9,100,120,,,90,100,-105,,130,150,,,370,90,Amateur Teen 18-19,M,SBD,Wraps,120,100,150,1998
-1,Oleksandr Tkachenko,Олександр Ткаченко,Ukraine,102.3,-165,170,180,,115,120,127.5,,200,210,220,,527.5,110,Amateur Teen 18-19,M,SBD,Wraps,180,127.5,220,1998
-1,Illya Nosenok,Ілля Носенок,Ukraine,58.7,130,137.5,-142.5,,95,105,-112.5,,155,165,-170,,407.5,60,Amateur Juniors 20-23,M,SBD,Wraps,137.5,105,165,1997
-1,Dmitro Manzyuk,Дмитро Манзюк,Ukraine,75,170,180,190,,110,120,130,,180,190,195,,515,75,Amateur Juniors 20-23,M,SBD,Wraps,190,130,195,1994
-2,Vladislav Skvortsov,Владислав Скворцов,Ukraine,73.3,150,165,175,,90,100,105,,170,185,-195,,465,75,Amateur Juniors 20-23,M,SBD,Wraps,175,105,185,1996
-3,Dmitriy Dudnik,Дмитрий Дудник,Ukraine,74.3,142.5,-152.5,152.5,,97.5,102.5,-105,,145,160,-167.5,,415,75,Amateur Juniors 20-23,M,SBD,Wraps,152.5,102.5,160,1994
-4,Andriy Bikhun,Андрій Бихун,Ukraine,74.5,125,-130,130,,70,75,77.5,,155,165,175,,382.5,75,Amateur Juniors 20-23,M,SBD,Wraps,130,77.5,175,1996
-1,Oleksandr Nayden,Олександр Найден,Ukraine,83.8,175,-185,190,,95,105,110,,-190,200,210,,510,90,Amateur Juniors 20-23,M,SBD,Wraps,190,110,210,1997
-1,Illya Nosenok,Ілля Носенок,Ukraine,58.7,130,137.5,-142.5,,95,105,-112.5,,155,165,-170,,407.5,60,Amateur Open,M,SBD,Wraps,137.5,105,165,1997
-1,Ivan Kril,Іван Криль,Ukraine,66.1,-170,-180,180,,95,100,-105,,180,185,195,,475,67.5,Amateur Open,M,SBD,Wraps,180,100,195,1991
-1,Vitaliy Titarenko,Віталій Титаренко,Ukraine,72.2,180,-190,-190,,110,-120,-120,,190,205,-215,,495,75,Amateur Open,M,SBD,Wraps,180,110,205,1990
-2,Denis Popov,Денис Попов,Ukraine,71.1,-140,140,145,,85,90,95,,170,180,185,,425,75,Amateur Open,M,SBD,Wraps,145,95,185,1988
-3,Dmitriy Dudnik,Дмитрий Дудник,Ukraine,74.3,142.5,-152.5,152.5,,97.5,102.5,-105,,145,160,-167.5,,415,75,Amateur Open,M,SBD,Wraps,152.5,102.5,160,1994
-1,Evgen Kitaygorodskiy,Євген Китайгородський,Ukraine,80.5,180,190,195,,132.5,140,142.5,,215,225,232.5,,570,82.5,Amateur Open,M,SBD,Wraps,195,142.5,232.5,1989
-2,Sergiy Chaliy,Сергій Чалий,Ukraine,81.3,190,200,,,115,120,,,210,-222.5,,,530,82.5,Amateur Open,M,SBD,Wraps,200,120,210,1993
-3,Maksim Dikhtyar,Максим Діхтяр,Ukraine,79.6,150,165,180,,125,130,-132.5,,190,202.5,210,,520,82.5,Amateur Open,M,SBD,Wraps,180,130,210,1999
-4,Ivan Tsiganenko,Іван Циганенко,Ukraine,75.1,-140,140,150,,-115,115,125,,155,160,170,,445,82.5,Amateur Open,M,SBD,Wraps,150,125,170,1996
-DD,Ivan Kozir,Иван Козырь,Ukraine,82.5,-175,-182.5,-190,,-170,-175,-177.5,,-200,-210,-220,,,82.5,Amateur Open,M,SBD,Wraps,,,,1986
-1,Pavlo Solovyov,Павло Соловйов,Ukraine,88.2,190,210,215,,155,160,165,,230,235,245,,625,90,Amateur Open,M,SBD,Wraps,215,165,245,1992
-2,Dmitro Bogomaz,Дмитро Богомаз,Ukraine,90,195,205,210,,135,140,145,,225,235,-245,,590,90,Amateur Open,M,SBD,Wraps,210,145,235,1990
-3,Taras Ganzha,Тарас Ганжа,Ukraine,87.9,185,195,-205,,122.5,132.5,140,,195,210,225,,560,90,Amateur Open,M,SBD,Wraps,195,140,225,1987
-4,Mikhaylo Moshkovich,Михайло Мошкович,Ukraine,82.8,145,150,155,,85,-90,90,,190,205,-210,,450,90,Amateur Open,M,SBD,Wraps,155,90,205,1984
-5,Sergiy Shevchenko,Сергій Шевченко,Ukraine,89.9,160,167.5,-172.5,,105,-110,110,,-170,170,-180,,447.5,90,Amateur Open,M,SBD,Wraps,167.5,110,170,1973
-1,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,200,215,,,150,-160,-160,,210,-227.5,-227.5,,575,100,Amateur Open,M,SBD,Wraps,215,150,210,1969
-1,Sergiy Gaydrikh,Сергій Гайдрих,Ukraine,107.5,260,270,-282.5,,160,165,167.5,,260,270,282.5,,720,110,Amateur Open,M,SBD,Wraps,270,167.5,282.5,1993
-2,Sergiy Bessel,Сергій Бессель,Ukraine,107.8,230,240,247.5,,177.5,185,-190,,240,255,-265,,687.5,110,Amateur Open,M,SBD,Wraps,247.5,185,255,1984
-3,Mikhaylo Belichenko,Михайло Бєліченко,Ukraine,108.8,-165,-165,165,,-140,140,145,,210,220,230,,540,110,Amateur Open,M,SBD,Wraps,165,145,230,1982
-1,Pavlo Semkovich,Павло Семкович,Ukraine,112.4,235,245,250,,160,165,170,,230,240,245,,665,125,Amateur Open,M,SBD,Wraps,250,170,245,1980
-2,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,230,250,,,140,150,-155,,220,-235,-235,,620,125,Amateur Open,M,SBD,Wraps,250,150,220,1965
-3,Danilo Udovik,Данило Удовик,Ukraine,113.8,187.5,197.5,205,,125,132.5,-140,,202.5,212.5,220,,557.5,125,Amateur Open,M,SBD,Wraps,205,132.5,220,1992
-1,Evgen Gavrilin,Євген Гаврилін,Ukraine,151.2,220,235,250,,170,180,190,,240,250,260,,700,140+,Amateur Open,M,SBD,Wraps,250,190,260,1982
-2,Denis Perevolochanskiy,Денис Переволочанський,Ukraine,162.6,-200,200,215,,180,195,-205,,210,230,-260,,640,140+,Amateur Open,M,SBD,Wraps,215,195,230,1978
-3,Oleg Brazhnik,Олег Бражник,Ukraine,158,180,-200,200,,115,125,-130,,190,200,-210,,525,140+,Amateur Open,M,SBD,Wraps,200,125,200,1970
-1,Andriy Karneta,Андрій Карнета,Ukraine,98.7,-130,150,160,,100,110,115,,160,180,190,,465,100,Amateur Submasters 33-39,M,SBD,Wraps,160,115,190,1984
-1,Mikhaylo Belichenko,Михайло Бєліченко,Ukraine,108.8,-165,-165,165,,-140,140,145,,210,220,230,,540,110,Amateur Submasters 33-39,M,SBD,Wraps,165,145,230,1982
-1,Pavlo Semkovich,Павло Семкович,Ukraine,112.4,235,245,250,,160,165,170,,230,240,245,,665,125,Amateur Submasters 33-39,M,SBD,Wraps,250,170,245,1980
-1,Sergiy Shevchenko,Сергій Шевченко,Ukraine,89.9,160,167.5,-172.5,,105,-110,110,,-170,170,-180,,447.5,90,Amateur Masters 40-44,M,SBD,Wraps,167.5,110,170,1973
-1,Volodimir Andreev,Володимир Андрєєв,Ukraine,98.8,140,,,,115,-140,,,140,,,,395,100,Amateur Masters 40-44,M,SBD,Wraps,140,115,140,1973
-1,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,200,215,,,150,-160,-160,,210,-227.5,-227.5,,575,100,Amateur Masters 45-49,M,SBD,Wraps,215,150,210,1969
-1,Oleg Brazhnik,Олег Бражник,Ukraine,158,180,-200,200,,115,125,-130,,190,200,-210,,525,140+,Amateur Masters 45-49,M,SBD,Wraps,200,125,200,1970
-1,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,230,250,,,140,150,-155,,220,-235,-235,,620,125,Amateur Masters 50-54,M,SBD,Wraps,250,150,220,1965
-1,Volodimir Mushchinin,Володимир Мущинін,Ukraine,93.5,120,140,150,,70,80,82.5,,140,160,165,,397.5,100,Amateur Masters 55-59,M,SBD,Wraps,150,82.5,165,1961
-1,Kseniya Mukhachova,Ксенія Мухачова,Ukraine,59.3,-115,117.5,120,130,50,55,60,,105,115,122.5,,302.5,60,Amateur Teen 13-15,F,SBD,Wraps,120,60,122.5,2001
-1,Diana Mishchenko,Діана Міщенко,Ukraine,60,77.5,85,90,,40,42.5,-45,,80,90,97.5,,230,60,Amateur Teen 16-17,F,SBD,Wraps,90,42.5,97.5,2000
-1,Anna Sivokobilska,Анна Сивокобильська,Ukraine,56,110,125,-135,,45,50,-57.5,,100,112.5,115,,290,56,Amateur Teen 18-19,F,SBD,Wraps,125,50,115,1998
-1,Arina Oleynik,Аріна Олейник,Ukraine,71.4,85,95,-100,,50,55,-57.5,,110,122.5,130,,280,75,Amateur Teen 18-19,F,SBD,Wraps,95,55,130,1998
-1,Sevda Kondrashova,Севда Кондрашова,Ukraine,47.7,60,-70,70,,35,40,-42.5,,-70,75,82.5,,192.5,48,Amateur Juniors 20-23,F,SBD,Wraps,70,40,82.5,1995
-1,Nelya Boyko,Неля Бойко,Ukraine,52.5,60,65,,,32.5,37.5,,,85,90,95,,197.5,56,Amateur Juniors 20-23,F,SBD,Wraps,65,37.5,95,1995
-1,Irina Bozhko,Ірина Божко,Ukraine,59.5,110,117.5,125,,50,55,-60,,110,117.5,122.5,,302.5,60,Amateur Juniors 20-23,F,SBD,Wraps,125,55,122.5,1993
-2,Dariya Yurash,Дарія Юраш,Ukraine,58.2,95,105,117.5,,-45,-45,45,,80,90,-97.5,,252.5,60,Amateur Juniors 20-23,F,SBD,Wraps,117.5,45,90,1997
-1,Olga Zaderyaka,Ольга Задеряка,Ukraine,61.9,-90,90,95,,42.5,47.5,50,,90,100,-112.5,,245,67.5,Amateur Juniors 20-23,F,SBD,Wraps,95,50,100,1996
-2,Yana Mulishova,Яна Мулішова,Ukraine,65,-77.5,-85,85,,45,-50,50,,80,90,100,,235,67.5,Amateur Juniors 20-23,F,SBD,Wraps,85,50,100,1995
-1,Galina Danilenko,Галина Даниленко,Ukraine,43.8,70,75,80,,-30,30,35,,75,82.5,87.5,,202.5,44,Amateur Open,F,SBD,Wraps,80,35,87.5,1991
-2,Nadiya Osaenko,Надія Осаєнко,Ukraine,42.8,-60,60,65,,-32.5,32.5,35,,85,90,92.5,,192.5,44,Amateur Open,F,SBD,Wraps,65,35,92.5,1990
-1,Katerina Yarushina,Катерина Ярушина,Ukraine,51.2,80,85,90,,-40,42.5,-45,,90,100,110,,242.5,52,Amateur Open,F,SBD,Wraps,90,42.5,110,1990
-1,Darina Kovalova,Дарина Ковальова,Ukraine,55.3,-125,130,-140,,55,60,62.5,,155,165,-170,,357.5,56,Amateur Open,F,SBD,Wraps,130,62.5,165,1990
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,-130,-142.5,142.5,-145,70,-75,-75,,130,140,145,,357.5,60,Amateur Open,F,SBD,Wraps,142.5,70,145,1980
-2,Valeriya Sukonkina,Валерія Суконкіна,Ukraine,59,130,137.5,142.5,,47.5,52.5,55,,127.5,135,142.5,,340,60,Amateur Open,F,SBD,Wraps,142.5,55,142.5,1983
-3,Irina Bozhko,Ірина Божко,Ukraine,59.5,110,117.5,125,,50,55,-60,,110,117.5,122.5,,302.5,60,Amateur Open,F,SBD,Wraps,125,55,122.5,1993
-4,Yuliya Dovgal,Юлія Довгаль,Ukraine,57.6,-100,100,-110,,50,57.5,-62.5,,100,115,125,,282.5,60,Amateur Open,F,SBD,Wraps,100,57.5,125,1986
-5,Olga Drozdova,Ольга Дроздова,Ukraine,59.6,-80,80,90,,35,-45,-45,,115,125,132.5,,257.5,60,Amateur Open,F,SBD,Wraps,90,35,132.5,1988
-6,Dariya Yurash,Дарія Юраш,Ukraine,58.2,95,105,117.5,,-45,-45,45,,80,90,-97.5,,252.5,60,Amateur Open,F,SBD,Wraps,117.5,45,90,1997
-DD,Yuliya Malinovska,Юлія Маліновська,Ukraine,59.6,-125,-135,-140,,-65,-70,-72.5,,-140,-150,-157.5,,,60,Amateur Open,F,SBD,Wraps,,,,1984
-DQ,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,-100,-110,-110,,-40,,,,-90,,,,,60,Amateur Open,F,SBD,Wraps,,,,1984
-1,Tetyana Khomyak,Тетяна Хомяк,Ukraine,75,95,100,105,,60,65,-72.5,,105,115,120,,290,75,Amateur Open,F,SBD,Wraps,105,65,120,1979
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,-130,-142.5,142.5,-145,70,-75,-75,,130,140,145,,357.5,60,Amateur Submasters 33-39,F,SBD,Wraps,142.5,70,145,1980
-DQ,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,-100,-110,-110,,-40,,,,-90,,,,,60,Amateur Submasters 33-39,F,SBD,Wraps,,,,1984
-1,Tetyana Khomyak,Тетяна Хомяк,Ukraine,75,95,100,105,,60,65,-72.5,,105,115,120,,290,75,Amateur Submasters 33-39,F,SBD,Wraps,105,65,120,1979
-1,Olena Levada,Олена Левада,Ukraine,51.3,-105,-105,105,,55,60,65,,110,-122.5,-122.5,,280,52,Amateur Masters 40-44,F,SBD,Wraps,105,65,110,1975
-1,Tetyana Melnik,Тетяна Мельник,Ukraine,71,-85,85,90,,45,-47.5,-47.5,,90,95,100,,235,75,Amateur Masters 40-44,F,SBD,Wraps,90,45,100,1975
-1,Olga Kritikova,Ольга Крітікова,Ukraine,64.6,110,117.5,125,,62.5,70,75,,110,120,-130,,320,67.5,Amateur Masters 45-49,F,SBD,Wraps,125,75,120,1971
-1,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,-210,210,-215,,132.5,137.5,,,255,260,-262.5,,607.5,82.5,Pro Juniors 20-23,M,SBD,Wraps,210,137.5,260,1995
-DQ,Evgeniy Timokhin,Євгеній Тимохін,Ukraine,82.5,-200,-200,-200,,-112.5,,,,-210,,,,,82.5,Pro Juniors 20-23,M,SBD,Wraps,,,,1997
-DQ,Dmitro Grigorev,Дмитро Григорьєв,Ukraine,107.8,250,272.5,-300,,-160,-160,-160,,-245,,,,,110,Pro Juniors 20-23,M,SBD,Wraps,272.5,,,1997
-1,Dmitro Kondratenko,Дмитро Кондратенко,Ukraine,67.3,200,-210,-210,,120,-127.5,-127.5,,180,-190,-190,,500,67.5,Pro Open,M,SBD,Wraps,200,120,180,1986
-1,Ivan Kapelyukh,Іван Капелюх,Ukraine,73.7,185,195,200,,135,140,-145,,230,240,-245,,580,75,Pro Open,M,SBD,Wraps,200,140,240,1985
-2,Andriy Boyko,Андрій Бойко,Ukraine,75,210,220,-230,,105,112.5,-117.5,,205,215,-222.5,,547.5,75,Pro Open,M,SBD,Wraps,220,112.5,215,1993
-1,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,-210,210,-215,,132.5,137.5,,,255,260,-262.5,,607.5,82.5,Pro Open,M,SBD,Wraps,210,137.5,260,1995
-2,Mark Bezborodov,Марк Безбородов,Ukraine,82.2,220,-235,-245,,150,160,-167.5,,200,215,-230,,595,82.5,Pro Open,M,SBD,Wraps,220,160,215,1989
-3,Mikhaylo Kisliy,Михайло Кислий,Ukraine,81.9,180,195,210,,132.5,140,-145,,190,205,212.5,,562.5,82.5,Pro Open,M,SBD,Wraps,210,140,212.5,1991
-4,Oleksandr Golovatskiy,Олександр Головацький,Ukraine,79.3,195,205,215,,140,-147.5,-147.5,,200,-210,-210,,555,82.5,Pro Open,M,SBD,Wraps,215,140,200,1993
-1,Yaroslav Litvinenko,Ярослав Литвиненко,Ukraine,88.6,-240,250,-262.5,,140,152.5,-160,,260,-280,-280,,662.5,90,Pro Open,M,SBD,Wraps,250,152.5,260,1976
-2,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,200,220,-230,,150,160,-165,,240,-260,-260,,620,90,Pro Open,M,SBD,Wraps,220,160,240,1981
-DQ,Mikola Tishuk,Микола Тишук,Ukraine,89.4,-275,-275,-275,,-165,,,,-272.5,-280,,,,90,Pro Open,M,SBD,Wraps,,,,1992
-1,Oleg Khristoforov,Олег Христофоров,Ukraine,100,-330,330,352.5,,180,190,-195,,270,290,-300,,832.5,100,Pro Open,M,SBD,Wraps,352.5,190,290,1975
-2,Anton Grishchenkov,Антон Грищенков,Ukraine,100,265,280,287.5,,180,192.5,-200,,240,260,275,,755,100,Pro Open,M,SBD,Wraps,287.5,192.5,275,1987
-3,Igor Klyauz,Ігор Кляуз,Ukraine,99.1,240,-250,260,,160,170,180,,250,-270,-280,,690,100,Pro Open,M,SBD,Wraps,260,180,250,1987
-4,Viktor Telyatnik,Віктор Телятник,Ukraine,99,190,205,220,,140,145,-150,,230,245,252.5,,617.5,100,Pro Open,M,SBD,Wraps,220,145,252.5,1988
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,260,270,-280,,170,180,-185,,250,260,,,710,110,Pro Open,M,SBD,Wraps,270,180,260,1975
-DQ,Dmitro Grigorev,Дмитро Григорьєв,Ukraine,107.8,250,272.5,-300,,-160,-160,-160,,-245,,,,,110,Pro Open,M,SBD,Wraps,272.5,,,1997
-DQ,Dmitro Gotlashov,Дмитро Готлашов,Ukraine,108,-280,,,,-160,,,,-270,,,,,110,Pro Open,M,SBD,Wraps,,,,1985
-1,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,200,220,-230,,150,160,-165,,240,-260,-260,,620,90,Pro Submasters 33-39,M,SBD,Wraps,220,160,240,1981
-1,Oleg Cherchel,,Moldova,105.2,-220,220,240,,115,-125,125,,210,-225,-225,,575,110,Pro Submasters 33-39,M,SBD,Wraps,240,125,210,1978
-1,Yaroslav Litvinenko,Ярослав Литвиненко,Ukraine,88.6,-240,250,-262.5,,140,152.5,-160,,260,-280,-280,,662.5,90,Pro Masters 40-44,M,SBD,Wraps,250,152.5,260,1976
-2,Vitaliy Poryadkov,Віталій Порядков,Ukraine,88.9,140,150,160,,135,145,-152.5,,190,210,215,,520,90,Pro Masters 40-44,M,SBD,Wraps,160,145,215,1972
-1,Oleg Khristoforov,Олег Христофоров,Ukraine,100,-330,330,352.5,,180,190,-195,,270,290,-300,,832.5,100,Pro Masters 40-44,M,SBD,Wraps,352.5,190,290,1975
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,260,270,-280,,170,180,-185,,250,260,,,710,110,Pro Masters 40-44,M,SBD,Wraps,270,180,260,1975
-DQ,Oleksandr Desyatskiy,Олександр Десяцький,Ukraine,124,-220,,,,-200,,,,-250,,,,,125,Pro Masters 40-44,M,SBD,Wraps,,,,1976
-1,Dmitro Kondratenko,Дмитро Кондратенко,Ukraine,67.3,200,-210,-210,,120,-127.5,-127.5,,180,-190,-190,,500,67.5,Pro Military/Fire/Police,M,SBD,Wraps,200,120,180,1986
-1,Andriy Boyko,Андрій Бойко,Ukraine,75,210,220,-230,,105,112.5,-117.5,,205,215,-222.5,,547.5,75,Pro Military/Fire/Police,M,SBD,Wraps,220,112.5,215,1993
-DQ,Tetyana Brodetska,Тетяна Бродецька,Ukraine,73,-160,,,,-75,,,,-160,,,,,75,Pro Juniors 20-23,F,SBD,Wraps,,,,1996
-1,Mariya Kravchuk,Марія Кравчук,Ukraine,56,135,-142.5,145,,-75,75,80,-82.5,155,165,-170,,390,56,Pro Open,F,SBD,Wraps,145,80,165,1983
-2,Anastasiya Kalashnikova,Анастасія Калашнікова,Ukraine,52.7,-135,142.5,150,,70,75,-80,,132.5,142.5,150,,375,56,Pro Open,F,SBD,Wraps,150,75,150,1985
-3,Olena Bubnova,Олена Бубнова,Ukraine,54.4,-110,110,-115,,65,-70,-70,,130,,,,305,56,Pro Open,F,SBD,Wraps,110,65,130,1985
-1,Nataliya Mavdrik,Наталія Мавдрик,Ukraine,67.5,150,155,160,,90,95,-100,,155,-160,-160,,410,67.5,Pro Open,F,SBD,Wraps,160,95,155,1984
-1,Nataliya Mavdrik,Наталія Мавдрик,Ukraine,67.5,150,155,160,,90,95,-100,,155,-160,-160,,410,67.5,Pro Submasters 33-39,F,SBD,Wraps,160,95,155,1984
-1,Andriy Tupchiy,Андрій Тупчій,Ukraine,89.6,200,210,220,,150,160,170,,230,-250,-250,,620,90,Pro Open,M,SBD,Multi-ply,220,170,230,1987
-1,Nikita Gavrilenko,Нікіта Гавриленко,Ukraine,47.4,,,,,60,-67.5,67.5,,,,,,67.5,48,Amateur Teen 13-15,M,B,Raw,,67.5,,2002
-1,Oleksiy Parshin,Олексій Паршин,Ukraine,56,,,,,70,75,-80,,,,,,75,56,Amateur Teen 13-15,M,B,Raw,,75,,2003
-1,Mikola Linnik,Микола Линник,Ukraine,61.2,,,,,-52.5,52.5,60,,,,,,60,67.5,Amateur Teen 13-15,M,B,Raw,,60,,2003
-2,Volodimir Petrina,Володимир Петрина,Ukraine,66.4,,,,,50,55,-60,,,,,,55,67.5,Amateur Teen 13-15,M,B,Raw,,55,,2003
-1,Illya Sapezhko,Ілля Сапежко,Ukraine,73.8,,,,,60,65,70,,,,,,70,75,Amateur Teen 13-15,M,B,Raw,,70,,2002
-1,Arseniy Dmukhaylo,Арсеній Дмухайло,Ukraine,66.9,,,,,100,110,115,,,,,,115,67.5,Amateur Teen 16-17,M,B,Raw,,115,,2000
-1,Igor Starchenko,Ігор Старченко,Ukraine,82.5,,,,,100,107.5,115,-120,,,,,115,82.5,Amateur Teen 16-17,M,B,Raw,,115,,2001
-1,Pavlo Garkaviy,Павло Гарькавий,Ukraine,53.4,,,,,85,92.5,100,,,,,,100,56,Amateur Teen 18-19,M,B,Raw,,100,,1999
-1,Vasil Kovalchuk,Василь Ковальчук,Ukraine,73.4,,,,,125,132.5,-137.5,,,,,,132.5,75,Amateur Teen 18-19,M,B,Raw,,132.5,,1999
-1,Bogdan Bushtryuk,Богдан Буштрюк,Ukraine,86.9,,,,,90,100,-105,,,,,,100,90,Amateur Teen 18-19,M,B,Raw,,100,,1998
-1,Illya Nosenok,Ілля Носенок,Ukraine,58.7,,,,,95,105,-112.5,,,,,,105,60,Amateur Juniors 20-23,M,B,Raw,,105,,1997
-1,Artem Ivanov,Артем Іванов,Ukraine,67.3,,,,,95,-100,-100,,,,,,95,67.5,Amateur Juniors 20-23,M,B,Raw,,95,,1995
-1,Anatoliy Martsenyuk,Анатолій Марценюк,Ukraine,74.1,,,,,137.5,147.5,-157.5,,,,,,147.5,75,Amateur Juniors 20-23,M,B,Raw,,147.5,,1995
-2,Oleksiy Borisov,Олексій Борисов,Ukraine,74,,,,,127.5,132.5,-137.5,,,,,,132.5,75,Amateur Juniors 20-23,M,B,Raw,,132.5,,1995
-3,Dmitro Manzyuk,Дмитро Манзюк,Ukraine,75,,,,,110,120,130,,,,,,130,75,Amateur Juniors 20-23,M,B,Raw,,130,,1994
-DQ,Vadim Nigay,Вадим Нігай,Ukraine,72,,,,,-130,-130,-137.5,,,,,,,75,Amateur Juniors 20-23,M,B,Raw,,,,1995
-1,Mikola Yur'Ev,Микола Юр'Єв,Ukraine,80.5,,,,,135,140,-150,,,,,,140,82.5,Amateur Juniors 20-23,M,B,Raw,,140,,1995
-1,Oleksandr Nayden,Олександр Найден,Ukraine,83.8,,,,,95,105,110,,,,,,110,90,Amateur Juniors 20-23,M,B,Raw,,110,,1997
-1,Anatoliy Klimenko,Анатолій Клименко,Ukraine,108.4,,,,,130,135,140,,,,,,140,110,Amateur Juniors 20-23,M,B,Raw,,140,,1996
-1,Pavlo Garkaviy,Павло Гарькавий,Ukraine,53.4,,,,,85,92.5,100,,,,,,100,56,Amateur Open,M,B,Raw,,100,,1999
-1,Roman Golishev,Роман Голишев,Ukraine,65.3,,,,,120,125,127.5,,,,,,127.5,67.5,Amateur Open,M,B,Raw,,127.5,,1991
-1,Anatoliy Martsenyuk,Анатолій Марценюк,Ukraine,74.1,,,,,137.5,147.5,-157.5,,,,,,147.5,75,Amateur Open,M,B,Raw,,147.5,,1995
-2,Dmitro Kuryata,Дмитро Курята,Ukraine,74.4,,,,,-137.5,-137.5,137.5,,,,,,137.5,75,Amateur Open,M,B,Raw,,137.5,,1984
-3,Vasil Kovalchuk,Василь Ковальчук,Ukraine,73.4,,,,,125,132.5,-137.5,,,,,,132.5,75,Amateur Open,M,B,Raw,,132.5,,1999
-4,Oleksiy Borisov,Олексій Борисов,Ukraine,74,,,,,127.5,132.5,-137.5,,,,,,132.5,75,Amateur Open,M,B,Raw,,132.5,,1995
-5,Kostyantin Kovalenko,Костянтин Коваленко,Ukraine,71.3,,,,,110,-120,125,,,,,,125,75,Amateur Open,M,B,Raw,,125,,1990
-DQ,Mikola Sidiy,Микола Сідий,Ukraine,74.3,,,,,-127.5,-127.5,-127.5,,,,,,,75,Amateur Open,M,B,Raw,,,,1990
-1,Igor Kashinskiy,Ігор Кашинський,Ukraine,82.5,,,,,160,172.5,-177.5,,,,,,172.5,82.5,Amateur Open,M,B,Raw,,172.5,,1993
-2,Oleksandr Klimenko,Олександр Кліменко,Ukraine,80.1,,,,,140,147.5,150,,,,,,150,82.5,Amateur Open,M,B,Raw,,150,,1990
-3,Evgen Kitaygorodskiy,Євген Китайгородський,Ukraine,80.5,,,,,132.5,140,142.5,,,,,,142.5,82.5,Amateur Open,M,B,Raw,,142.5,,1989
-4,Mikola Krishun,Микола Крішун,Ukraine,81.7,,,,,-132.5,132.5,-140,,,,,,132.5,82.5,Amateur Open,M,B,Raw,,132.5,,1983
-5,Evgen Kunpan,Євген Кунпан,Ukraine,79.7,,,,,125,-132.5,-132.5,,,,,,125,82.5,Amateur Open,M,B,Raw,,125,,1989
-DD,Ivan Kozir,Иван Козырь,Ukraine,82.5,,,,,-170,-175,-177.5,,,,,,,82.5,Amateur Open,M,B,Raw,,,,1986
-DQ,Oleksiy Rallo,Олексій Ралло,Ukraine,82.3,,,,,-132.5,-132.5,-132.5,,,,,,,82.5,Amateur Open,M,B,Raw,,,,1988
-1,Dmitro Tkach,Дмитро Ткач,Ukraine,90,,,,,170,-180,180,,,,,,180,90,Amateur Open,M,B,Raw,,180,,1991
-2,Igor Licherep,Ігор Лічереп,Ukraine,87.6,,,,,140,-150,-150,,,,,,140,90,Amateur Open,M,B,Raw,,140,,1979
-3,Oleksandr Marinyak,Олександр Мариняк,Ukraine,86.1,,,,,-135,135,-142.5,-142.5,,,,,135,90,Amateur Open,M,B,Raw,,135,,1993
-1,Andriy Petruk,Андрій Петрук,Ukraine,98.5,,,,,180,187.5,192.5,,,,,,192.5,100,Amateur Open,M,B,Raw,,192.5,,1975
-2,Nazar Korzhak,Назар Коржак,Ukraine,100,,,,,170,-175,177.5,,,,,,177.5,100,Amateur Open,M,B,Raw,,177.5,,1993
-3,Igor Ilchenko,Ігор Ільченко,Ukraine,96.9,,,,,175,-185,-185,,,,,,175,100,Amateur Open,M,B,Raw,,175,,1981
-4,Dmitro Dvoytsov,Дмитро Двойцов,Ukraine,95.4,,,,,145,160,167.5,,,,,,167.5,100,Amateur Open,M,B,Raw,,167.5,,1993
-5,Evgen Filima,Євген Филима,Ukraine,98.7,,,,,155,162.5,-170,,,,,,162.5,100,Amateur Open,M,B,Raw,,162.5,,1990
-6,Ruslan Kuyan,Руслан Куян,Ukraine,95.6,,,,,-140,147.5,152.5,,,,,,152.5,100,Amateur Open,M,B,Raw,,152.5,,1987
-7,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,,,,,150,-160,-160,,,,,,150,100,Amateur Open,M,B,Raw,,150,,1969
-8,Volodimir Kravchenko,Володимир Кравченко,Ukraine,92.6,,,,,115,-120,-120,,,,,,115,100,Amateur Open,M,B,Raw,,115,,1990
-1,Kostyantin Karpov,Костянтин Карпов,Ukraine,108,,,,,-195,195,-202.5,,,,,,195,110,Amateur Open,M,B,Raw,,195,,1985
-2,V'Yacheslav Telyura,В'ячеслав Телюра,Ukraine,107,,,,,-190,190,-195,,,,,,190,110,Amateur Open,M,B,Raw,,190,,1967
-3,Dmitro Sviridenko,Дмитро Свириденко,Ukraine,103.5,,,,,-185,-185,185,,,,,,185,110,Amateur Open,M,B,Raw,,185,,1977
-4,Sergiy Bessel,Сергій Бессель,Ukraine,107.8,,,,,177.5,185,-190,,,,,,185,110,Amateur Open,M,B,Raw,,185,,1984
-5,Volodimir Kukhar,Володимир Кухар,Ukraine,110,,,,,165,-175,-177.5,,,,,,165,110,Amateur Open,M,B,Raw,,165,,1985
-1,Sergiy Shumskiy,Сергій Шумський,Ukraine,113.6,,,,,160,170,-175,,,,,,170,125,Amateur Open,M,B,Raw,,170,,1985
-2,Artur Maslovets,Артур Масловець,Ukraine,119.9,,,,,130,140,150,,,,,,150,125,Amateur Open,M,B,Raw,,150,,1988
-3,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,,,,,140,150,-155,,,,,,150,125,Amateur Open,M,B,Raw,,150,,1965
-4,Danilo Udovik,Данило Удовик,Ukraine,113.8,,,,,125,132.5,-140,,,,,,132.5,125,Amateur Open,M,B,Raw,,132.5,,1992
-1,Denis Perevolochanskiy,Денис Переволочанський,Ukraine,162.6,,,,,180,195,205,,,,,,205,140+,Amateur Open,M,B,Raw,,205,,1978
-2,Oleg Brazhnik,Олег Бражник,Ukraine,158,,,,,115,125,-130,,,,,,125,140+,Amateur Open,M,B,Raw,,125,,1970
-1,Dmitro Romanenko,Дмитро Романенко,Ukraine,73,,,,,105,-115,-115,,,,,,105,75,Amateur Submasters 33-39,M,B,Raw,,105,,1983
-1,Maksim Savchenko,Максим Савченко,Ukraine,81.3,,,,,125,132.5,-137.5,,,,,,132.5,82.5,Amateur Submasters 33-39,M,B,Raw,,132.5,,1984
-2,Mikola Krishun,Микола Крішун,Ukraine,81.7,,,,,-132.5,132.5,-140,,,,,,132.5,82.5,Amateur Submasters 33-39,M,B,Raw,,132.5,,1983
-1,Igor Licherep,Ігор Лічереп,Ukraine,87.6,,,,,140,-150,-150,,,,,,140,90,Amateur Submasters 33-39,M,B,Raw,,140,,1979
-1,Igor Ilchenko,Ігор Ільченко,Ukraine,96.9,,,,,175,-185,-185,,,,,,175,100,Amateur Submasters 33-39,M,B,Raw,,175,,1981
-1,Igor Tilichko,Ігор Тилічко,Ukraine,107,,,,,165,175,-180,,,,,,175,110,Amateur Submasters 33-39,M,B,Raw,,175,,1978
-2,Maksim Fedorovskiy,Максим Федоровський,Ukraine,108.6,,,,,135,-150,150,,,,,,150,110,Amateur Submasters 33-39,M,B,Raw,,150,,1982
-3,Mikhaylo Belichenko,Михайло Бєліченко,Ukraine,108.8,,,,,-140,140,145,,,,,,145,110,Amateur Submasters 33-39,M,B,Raw,,145,,1982
-1,Viktor Bozhukha,Віктор Божуха,Ukraine,110.8,,,,,160,170,-175,,,,,,170,125,Amateur Submasters 33-39,M,B,Raw,,170,,1978
-1,Artem Sukhovarov,Артем Суховаров,Ukraine,80.1,,,,,127.5,-135,-135,,,,,,127.5,82.5,Amateur Masters 40-44,M,B,Raw,,127.5,,1976
-1,V'yacheslav Bevzyuk,В'Ячеслав Бевзюк,Ukraine,86.6,,,,,135,140,-145,,,,,,140,90,Amateur Masters 40-44,M,B,Raw,,140,,1975
-2,Igor Radets,Ігор Радець,Ukraine,87.4,,,,,115,120,-125,,,,,,120,90,Amateur Masters 40-44,M,B,Raw,,120,,1974
-1,Andriy Petruk,Андрій Петрук,Ukraine,98.5,,,,,180,187.5,192.5,,,,,,192.5,100,Amateur Masters 40-44,M,B,Raw,,192.5,,1975
-2,Oleksandr Kashinskiy,Олександр Кашинський,Ukraine,90.9,,,,,-170,170,-180,,,,,,170,100,Amateur Masters 40-44,M,B,Raw,,170,,1972
-3,Andriy Sokolovskiy,Андрій Соколовський,Ukraine,98.9,,,,,130,-140,-140,,,,,,130,100,Amateur Masters 40-44,M,B,Raw,,130,,1974
-1,Dmitro Sviridenko,Дмитро Свириденко,Ukraine,103.5,,,,,-185,-185,185,,,,,,185,110,Amateur Masters 40-44,M,B,Raw,,185,,1977
-1,Oleksandr Shvab,Олександр Шваб,Ukraine,120,,,,,120,,,,,,,,120,125,Amateur Masters 40-44,M,B,Raw,,120,,1976
-1,Oleksandr Tolmachov,Олександр Толмачов,Ukraine,128,,,,,90,95,-100,,,,,,95,140,Amateur Masters 40-44,M,B,Raw,,95,,1974
-1,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,,,,,150,-160,-160,,,,,,150,100,Amateur Masters 45-49,M,B,Raw,,150,,1969
-1,Oleg Brazhnik,Олег Бражник,Ukraine,158,,,,,115,125,-130,,,,,,125,140+,Amateur Masters 45-49,M,B,Raw,,125,,1970
-1,Vyacheslav Bulgakov,Вячеслав Булгаков,Ukraine,80.8,,,,,130,140,-150,,,,,,140,82.5,Amateur Masters 50-54,M,B,Raw,,140,,1966
-1,V'Yacheslav Telyura,В'ячеслав Телюра,Ukraine,107,,,,,-190,190,-195,,,,,,190,110,Amateur Masters 50-54,M,B,Raw,,190,,1967
-1,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,,,,,140,150,-155,,,,,,150,125,Amateur Masters 50-54,M,B,Raw,,150,,1965
-1,Dmitro Romanenko,Дмитро Романенко,Ukraine,73,,,,,105,-115,-115,,,,,,105,75,Amateur Military/Fire/Police,M,B,Raw,,105,,1983
-1,Kostyantin Karpov,Костянтин Карпов,Ukraine,108,,,,,-195,195,-202.5,,,,,,195,110,Amateur Military/Fire/Police,M,B,Raw,,195,,1985
-2,Igor Tilichko,Ігор Тилічко,Ukraine,107,,,,,165,175,-180,,,,,,175,110,Amateur Military/Fire/Police,M,B,Raw,,175,,1978
-1,Arina Borovkova,Аріна Боровкова,Ukraine,54.5,,,,,52.5,57.5,-60,,,,,,57.5,56,Amateur Teen 13-15,F,B,Raw,,57.5,,2002
-1,Anastasiya Telyatnikova,Анастасія Телятнікова,Ukraine,52,,,,,-35,37.5,40,,,,,,40,52,Amateur Teen 16-17,F,B,Raw,,40,,2000
-1,Diana Mishchenko,Діана Міщенко,Ukraine,60,,,,,40,42.5,-45,,,,,,42.5,60,Amateur Teen 16-17,F,B,Raw,,42.5,,2000
-1,Anna Sivokobilska,Анна Сивокобильська,Ukraine,56,,,,,45,50,-57.5,,,,,,50,56,Amateur Teen 18-19,F,B,Raw,,50,,1998
-1,Vladislava Drobot,Владислава Дробот,Ukraine,59.3,,,,,-57.5,-65,65,,,,,,65,60,Amateur Teen 18-19,F,B,Raw,,65,,1998
-1,Tetyana Kovalchuk,Тетяна Ковальчук,Ukraine,51.7,,,,,42.5,45,-47.5,,,,,,45,52,Amateur Juniors 20-23,F,B,Raw,,45,,1994
-1,Yuliya Zaderyaka,Юлія Задеряка,Ukraine,55.7,,,,,30,35,-37.5,,,,,,35,56,Amateur Juniors 20-23,F,B,Raw,,35,,1994
-1,Irina Bozhko,Ірина Божко,Ukraine,59.5,,,,,50,55,-60,,,,,,55,60,Amateur Juniors 20-23,F,B,Raw,,55,,1993
-1,Olga Zaderyaka,Ольга Задеряка,Ukraine,61.9,,,,,42.5,47.5,50,,,,,,50,67.5,Amateur Juniors 20-23,F,B,Raw,,50,,1996
-2,Yana Mulishova,Яна Мулішова,Ukraine,65,,,,,45,-50,50,,,,,,50,67.5,Amateur Juniors 20-23,F,B,Raw,,50,,1995
-1,Nadiya Osaenko,Надія Осаєнко,Ukraine,42.8,,,,,-32.5,32.5,35,,,,,,35,44,Amateur Open,F,B,Raw,,35,,1990
-1,Viktoriya Demura,Вікторія Демура,Ukraine,48,,,,,40,45,-50,,,,,,45,48,Amateur Open,F,B,Raw,,45,,1985
-2,Oksana Motrunchik,Оксана Мотрунчик,Ukraine,45.7,,,,,37.5,42.5,-45,,,,,,42.5,48,Amateur Open,F,B,Raw,,42.5,,1992
-1,Tetyana Kovalchuk,Тетяна Ковальчук,Ukraine,51.7,,,,,42.5,45,-47.5,,,,,,45,52,Amateur Open,F,B,Raw,,45,,1994
-1,Lyubov Bestaeva,Любов Бестаєва,Ukraine,54.3,,,,,42.5,47.5,-52.5,,,,,,47.5,56,Amateur Open,F,B,Raw,,47.5,,1985
-2,Yuliya Levankova,Юлія Леванькова,Ukraine,56,,,,,40,45,-47.5,,,,,,45,56,Amateur Open,F,B,Raw,,45,,1988
-3,Viktoriya Karakay,Вікторія Каракай,Ukraine,54.5,,,,,35,37.5,-40,,,,,,37.5,56,Amateur Open,F,B,Raw,,37.5,,1989
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,,,,,70,-75,-75,,,,,,70,60,Amateur Open,F,B,Raw,,70,,1980
-2,Irina Bozhko,Ірина Божко,Ukraine,59.5,,,,,50,55,-60,,,,,,55,60,Amateur Open,F,B,Raw,,55,,1993
-3,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,,,,,40,47.5,-55,,,,,,47.5,60,Amateur Open,F,B,Raw,,47.5,,1984
-4,Kseniya Zolotukhina,Ксенія Золотухіна,Ukraine,57.7,,,,,40,45,-50,,,,,,45,60,Amateur Open,F,B,Raw,,45,,1988
-1,Nadiya Tishchenko,Надія Тищенко,Ukraine,66,,,,,95,97.5,100,,,,,,100,67.5,Amateur Open,F,B,Raw,,100,,1993
-2,Sofiya Smila,Софія Сміла,Ukraine,63.8,,,,,57.5,-62.5,62.5,,,,,,62.5,67.5,Amateur Open,F,B,Raw,,62.5,,1989
-1,Tetyana Khomyak,Тетяна Хомяк,Ukraine,75,,,,,60,65,-72.5,,,,,,65,75,Amateur Open,F,B,Raw,,65,,1979
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,,,,,70,-75,-75,,,,,,70,60,Amateur Submasters 33-39,F,B,Raw,,70,,1980
-2,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,,,,,40,47.5,-55,,,,,,47.5,60,Amateur Submasters 33-39,F,B,Raw,,47.5,,1984
-1,Tetyana Khomyak,Тетяна Хомяк,Ukraine,75,,,,,60,65,-72.5,,,,,,65,75,Amateur Submasters 33-39,F,B,Raw,,65,,1979
-1,Viktoriya Ryabkova,Вікторія Рябкова,Ukraine,56,,,,,50,-52.5,-52.5,,,,,,50,56,Amateur Masters 40-44,F,B,Raw,,50,,1975
-2,Olena Lyubimova,Олена Любімова,Ukraine,54.7,,,,,47.5,-52.5,-52.5,,,,,,47.5,56,Amateur Masters 40-44,F,B,Raw,,47.5,,1975
-1,Tetyana Melnik,Тетяна Мельник,Ukraine,71,,,,,45,-47.5,-47.5,,,,,,45,75,Amateur Masters 40-44,F,B,Raw,,45,,1975
-DQ,Larisa Piddubna,Лариса Піддубна,Ukraine,60,,,,,-50,-57.5,-57.5,,,,,,,60,Amateur Masters 45-49,F,B,Raw,,,,1970
-1,Olga Kritikova,Ольга Крітікова,Ukraine,64.6,,,,,62.5,70,75,,,,,,75,67.5,Amateur Masters 45-49,F,B,Raw,,75,,1971
-1,Mikhaylo Mayboroda,Михайло Майборода,Ukraine,59,,,,,45,50,52.5,,,,,,52.5,60,Pro Teen 13-15,M,B,Raw,,52.5,,2001
-1,Illya Poltavets,Ілля Полтавець,Ukraine,75,,,,,85,90,-95,,,,,,90,75,Pro Teen 13-15,M,B,Raw,,90,,2002
-DQ,Oleg Dyakiv,Олег Дяків,Ukraine,63,,,,,-50,,,,,,,,,67.5,Pro Teen 16-17,M,B,Raw,,,,2001
-1,Valeriy Galtsov,Валерій Гальцов,Ukraine,87.3,,,,,115,-122.5,-122.5,,,,,,115,90,Pro Teen 18-19,M,B,Raw,,115,,1999
-1,Mikita Mitryukhin,Микита Мітрюхін,Ukraine,116.5,,,,,140,-150,152.5,,,,,,152.5,125,Pro Teen 18-19,M,B,Raw,,152.5,,1997
-1,Andriy Plokhoy,Андрій Плохой,Ukraine,74.1,,,,,110,115,117.5,,,,,,117.5,75,Pro Juniors 20-23,M,B,Raw,,117.5,,1995
-1,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,,,,,132.5,137.5,,,,,,,137.5,82.5,Pro Juniors 20-23,M,B,Raw,,137.5,,1995
-1,Glib Orlovskiy,Гліб Орловський,Ukraine,55.8,,,,,70,75,80,,,,,,80,56,Pro Open,M,B,Raw,,80,,1987
-1,Oleksandr Chernets,Олександр Чернець,Ukraine,73.8,,,,,190,-200,-200,,,,,,190,75,Pro Open,M,B,Raw,,190,,1991
-2,Andriy Plokhoy,Андрій Плохой,Ukraine,74.1,,,,,110,115,117.5,,,,,,117.5,75,Pro Open,M,B,Raw,,117.5,,1995
-1,Yuriy Osadchenko,Юрій Осадченко,Ukraine,81.3,,,,,-160,160,-165,,,,,,160,82.5,Pro Open,M,B,Raw,,160,,1961
-2,Mark Bezborodov,Марк Безбородов,Ukraine,82.2,,,,,150,160,-167.5,,,,,,160,82.5,Pro Open,M,B,Raw,,160,,1989
-3,Oleksandr Romashchenko,Олександр Ромащенко,Ukraine,78.7,,,,,-135,140,150,,,,,,150,82.5,Pro Open,M,B,Raw,,150,,1989
-4,Oleksandr Golovatskiy,Олександр Головацький,Ukraine,79.3,,,,,140,-147.5,-147.5,,,,,,140,82.5,Pro Open,M,B,Raw,,140,,1993
-5,Mikhaylo Kisliy,Михайло Кислий,Ukraine,81.9,,,,,132.5,140,-145,,,,,,140,82.5,Pro Open,M,B,Raw,,140,,1991
-6,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,,,,,132.5,137.5,,,,,,,137.5,82.5,Pro Open,M,B,Raw,,137.5,,1995
-1,Aleksandr Scherbakov,,Moldova,89,,,,,200,-220,220,,,,,,220,90,Pro Open,M,B,Raw,,220,,1966
-2,Artem Kots,Артем Коц,Ukraine,89.1,,,,,177.5,185,-190,,,,,,185,90,Pro Open,M,B,Raw,,185,,1987
-3,Pavlo Vedmid,Павло Ведмідь,Ukraine,87.1,,,,,170,180,-185,,,,,,180,90,Pro Open,M,B,Raw,,180,,1990
-4,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,,,,,150,160,-165,,,,,,160,90,Pro Open,M,B,Raw,,160,,1981
-5,Anton Chirkov,Антон Чирков,Ukraine,88.9,,,,,147.5,-155,-155,,,,,,147.5,90,Pro Open,M,B,Raw,,147.5,,1993
-1,Oleg Volkov,Олег Волков,Ukraine,99.4,,,,,180,190,-200,,,,,,190,100,Pro Open,M,B,Raw,,190,,1973
-2,Maksim Medvid,Максим Медвідь,Ukraine,99.7,,,,,-180,185,190,,,,,,190,100,Pro Open,M,B,Raw,,190,,1988
-3,Dmitro Protsiv,Дмитро Проців,Ukraine,98.4,,,,,175,185,-190,,,,,,185,100,Pro Open,M,B,Raw,,185,,1981
-4,Artem Kvashnin,Артем Квашнін,Ukraine,100,,,,,170,177.5,-182.5,,,,,,177.5,100,Pro Open,M,B,Raw,,177.5,,1985
-5,Roman Sidenko,Роман Сиденко,Ukraine,98.2,,,,,-150,150,-155,,,,,,150,100,Pro Open,M,B,Raw,,150,,1988
-DQ,Oleksandr Onishchenko,Олександр Оніщенко,Ukraine,96,,,,,-200,-200,,,,,,,,100,Pro Open,M,B,Raw,,,,1980
-DQ,Andriy Maksimchuk,Андрій Максимчук,Ukraine,96.1,,,,,-155,-155,-155,,,,,,,100,Pro Open,M,B,Raw,,,,1992
-DQ,Dmitro Fatiy,Дмитро Фатій,Ukraine,96.4,,,,,-195,-205,-207.5,,,,,,,100,Pro Open,M,B,Raw,,,,1986
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,,,,,170,180,-185,,,,,,180,110,Pro Open,M,B,Raw,,180,,1975
-2,Artem Medvedev,Артем Медведєв,Ukraine,104.5,,,,,160,170,-180,,,,,,170,110,Pro Open,M,B,Raw,,170,,1990
-3,Anton Mazur,Антон Мазур,Ukraine,108.6,,,,,160,170,-180,,,,,,170,110,Pro Open,M,B,Raw,,170,,1987
-1,Mikola Prezhin,Микола Прежин,Ukraine,120,,,,,207.5,217.5,222.5,,,,,,222.5,125,Pro Open,M,B,Raw,,222.5,,1981
-2,Vadim Shalamov,Вадим Шаламов,Ukraine,121.9,,,,,180,190,-200,,,,,,190,125,Pro Open,M,B,Raw,,190,,1987
-1,Ivan Vanin,Іван Ванін,Ukraine,80.7,,,,,-130,130,-140,,,,,,130,82.5,Pro Submasters 33-39,M,B,Raw,,130,,1980
-1,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,,,,,150,160,-165,,,,,,160,90,Pro Submasters 33-39,M,B,Raw,,160,,1981
-1,Anton Fedichev,Антон Федічев,Ukraine,109.1,,,,,-150,155,-167.5,,,,,,155,110,Pro Submasters 33-39,M,B,Raw,,155,,1982
-1,Mikola Prezhin,Микола Прежин,Ukraine,120,,,,,207.5,217.5,222.5,,,,,,222.5,125,Pro Submasters 33-39,M,B,Raw,,222.5,,1981
-1,Evgen Sitnikov,Євген Ситніков,Ukraine,74.1,,,,,115,120,125,,,,,,125,75,Pro Masters 40-44,M,B,Raw,,125,,1973
-1,Oleg Volkov,Олег Волков,Ukraine,99.4,,,,,180,190,-200,,,,,,190,100,Pro Masters 40-44,M,B,Raw,,190,,1973
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,,,,,170,180,-185,,,,,,180,110,Pro Masters 40-44,M,B,Raw,,180,,1975
-1,Oleksandr Zhariy,Олександр Жарий,Ukraine,62.9,,,,,120,125,130,,,,,,130,67.5,Pro Masters 45-49,M,B,Raw,,130,,1972
-1,Sergiy Avramenko,Сергій Авраменко,Ukraine,110.1,,,,,110,115,,,,,,,115,125,Pro Masters 45-49,M,B,Raw,,115,,1971
-1,Dmitro Radovskiy,Дмитро Радовський,Ukraine,74.5,,,,,115,120.5,-122.5,,,,,,120.5,75,Pro Masters 50-54,M,B,Raw,,120.5,,1965
-1,Aleksandr Scherbakov,,Moldova,89,,,,,200,-220,220,,,,,,220,90,Pro Masters 50-54,M,B,Raw,,220,,1966
-1,Yuriy Osadchenko,Юрій Осадченко,Ukraine,81.3,,,,,-160,160,-165,,,,,,160,82.5,Pro Masters 55-59,M,B,Raw,,160,,1961
-1,Valerijs Petrovs,,Latvia,85,,,,,105,110,115,,,,,,115,90,Pro Masters 70-74,M,B,Raw,,115,,1946
-1,Diana Bagno,Діана Багно,Ukraine,59.9,,,,,65,70,75,80,,,,,75,60,Pro Teen 18-19,F,B,Raw,,75,,1999
-1,Zhasmin Nadzhafli,Жасмін Наджафлі,Ukraine,63.8,,,,,40,52.5,-55,,,,,,52.5,67.5,Pro Teen 18-19,F,B,Raw,,52.5,,1998
-1,Anastasiya Kalashnikova,Анастасія Калашнікова,Ukraine,52.7,,,,,70,75,-80,,,,,,75,56,Pro Open,F,B,Raw,,75,,1985
-2,Olena Bubnova,Олена Бубнова,Ukraine,54.4,,,,,65,-70,-70,,,,,,65,56,Pro Open,F,B,Raw,,65,,1985
-3,Olena Korpusenko,Олена Корпусенко,Ukraine,55.7,,,,,37.5,40,-45,,,,,,40,56,Pro Open,F,B,Raw,,40,,1990
-1,Diana Bagno,Діана Багно,Ukraine,59.9,,,,,65,70,75,80,,,,,75,60,Pro Open,F,B,Raw,,75,,1999
-2,Viktoriya Kurchin,Вікторія Курчин,Ukraine,58.5,,,,,-60,60,65,,,,,,65,60,Pro Open,F,B,Raw,,65,,1985
-3,Yuliya Kutsareva,Юлія Куцарева,Ukraine,59.8,,,,,50,55,57.5,,,,,,57.5,60,Pro Open,F,B,Raw,,57.5,,1991
-1,Nataliya Mavdrik,Наталія Мавдрик,Ukraine,67.5,,,,,90,95,-100,,,,,,95,67.5,Pro Open,F,B,Raw,,95,,1984
-1,Nataliya Mavdrik,Наталія Мавдрик,Ukraine,67.5,,,,,90,95,-100,,,,,,95,67.5,Pro Submasters 33-39,F,B,Raw,,95,,1984
-1,Oleksandr Kapustin,Олександр Капустін,Ukraine,82.5,,,,,165,177.5,-180,,,,,,177.5,82.5,Amateur Open,M,B,Multi-ply,,177.5,,1987
-1,Viktor Bozhukha,Віктор Божуха,Ukraine,110.8,,,,,200,210,-217.5,,,,,,210,125,Amateur Open,M,B,Multi-ply,,210,,1978
-1,Viktor Bozhukha,Віктор Божуха,Ukraine,110.8,,,,,200,210,-217.5,,,,,,210,125,Amateur Submasters 33-39,M,B,Multi-ply,,210,,1978
-1,Oleksandr Shvab,Олександр Шваб,Ukraine,120,,,,,180,,,,,,,,180,125,Amateur Masters 40-44,M,B,Multi-ply,,180,,1976
-1,Vitaliy Menchuk,Віталій Менчук,Ukraine,89.4,,,,,-225,225,-240,,,,,,225,90,Pro Teen 18-19,M,B,Multi-ply,,225,,1998
-DQ,Stanislav Chigirinskiy,Станіслав Чигиринський,Ukraine,78.1,,,,,-145,-145,,,,,,,,82.5,Pro Juniors 20-23,M,B,Multi-ply,,,,1994
-DQ,Stanislav Chigirinskiy,Станіслав Чигиринський,Ukraine,78.1,,,,,-145,-145,,,,,,,,82.5,Pro Open,M,B,Multi-ply,,,,1994
-1,Volodimir Chigirinskiy,Володимир Чигиринський,Ukraine,93.9,,,,,150,-177.5,-177.5,,,,,,150,100,Pro Open,M,B,Multi-ply,,150,,1962
-DQ,Dmitro Lomeyko,Дмитро Ломейко,Ukraine,91.6,,,,,-295,-295,-300,,,,,,,100,Pro Open,M,B,Multi-ply,,,,1983
-DQ,Dmitro Lomeyko,Дмитро Ломейко,Ukraine,91.6,,,,,-295,-295,-300,,,,,,,100,Pro Submasters 33-39,M,B,Multi-ply,,,,1983
-1,Volodimir Chigirinskiy,Володимир Чигиринський,Ukraine,93.9,,,,,150,-177.5,-177.5,,,,,,150,100,Pro Masters 50-54,M,B,Multi-ply,,150,,1962
-1,Maksim Sukhov,Максим Сухов,Ukraine,67.3,,,,,,,,,-190,190,-195,,190,67.5,Amateur Teen 16-17,M,D,Raw,,,190,2000
-2,Mikola Trimbach,Микола Тримбач,Ukraine,66.2,,,,,,,,,150,160,172.5,,172.5,67.5,Amateur Teen 16-17,M,D,Raw,,,172.5,2000
-DQ,Igor Svekolnikov,Ігор Свекольніков,Ukraine,73.7,,,,,,,,,-210,-210,-210,,,75,Amateur Teen 18-19,M,D,Raw,,,,1998
-1,Maksim Dikhtyar,Максим Діхтяр,Ukraine,79.6,,,,,,,,,180,202.5,210,,210,82.5,Amateur Teen 18-19,M,D,Raw,,,210,1999
-1,Dmitro Gumanenko,Дмитро Гуманенко,Ukraine,90,,,,,,,,,210,-220,-220,,210,90,Amateur Teen 18-19,M,D,Raw,,,210,1999
-2,Bogdan Bushtryuk,Богдан Буштрюк,Ukraine,86.9,,,,,,,,,130,150,,,150,90,Amateur Teen 18-19,M,D,Raw,,,150,1998
-1,Oleksandr Tkachenko,Олександр Ткаченко,Ukraine,102.3,,,,,,,,,200,210,220,,220,110,Amateur Teen 18-19,M,D,Raw,,,220,1998
-1,Illya Nosenok,Ілля Носенок,Ukraine,58.7,,,,,,,,,155,165,-170,,165,60,Amateur Juniors 20-23,M,D,Raw,,,165,1997
-1,Artem Ivanov,Артем Іванов,Ukraine,67.3,,,,,,,,,-115,120,125,,125,67.5,Amateur Juniors 20-23,M,D,Raw,,,125,1995
-1,Volodimir Semkovich,Володимир Семкович,Ukraine,70,,,,,,,,,200,210,217.5,,217.5,75,Amateur Juniors 20-23,M,D,Raw,,,217.5,1995
-2,Anatoliy Martsenyuk,Анатолій Марценюк,Ukraine,74.1,,,,,,,,,175,190,197.5,,197.5,75,Amateur Juniors 20-23,M,D,Raw,,,197.5,1995
-3,Dmitro Manzyuk,Дмитро Манзюк,Ukraine,75,,,,,,,,,180,190,195,,195,75,Amateur Juniors 20-23,M,D,Raw,,,195,1994
-4,Vladislav Skvortsov,Владислав Скворцов,Ukraine,73.3,,,,,,,,,170,185,-195,,185,75,Amateur Juniors 20-23,M,D,Raw,,,185,1996
-1,Andriy Kuzmuk,Андрій Кузьмук,Ukraine,81.3,,,,,,,,,-240,-247.5,247.5,,247.5,82.5,Amateur Juniors 20-23,M,D,Raw,,,247.5,1997
-1,Oleksandr Nayden,Олександр Найден,Ukraine,83.8,,,,,,,,,-190,200,210,,210,90,Amateur Juniors 20-23,M,D,Raw,,,210,1997
-1,Dmitro Shevchuk,Дмитро Шевчук,Ukraine,96.1,,,,,,,,,197.5,222.5,230,,230,100,Amateur Juniors 20-23,M,D,Raw,,,230,1994
-1,Anatoliy Klimenko,Анатолій Клименко,Ukraine,108.4,,,,,,,,,185,195,200,,200,110,Amateur Juniors 20-23,M,D,Raw,,,200,1996
-1,Illya Nosenok,Ілля Носенок,Ukraine,58.7,,,,,,,,,155,165,-170,,165,60,Amateur Open,M,D,Raw,,,165,1997
-1,Ivan Kril,Іван Криль,Ukraine,66.1,,,,,,,,,180,185,195,,195,67.5,Amateur Open,M,D,Raw,,,195,1991
-2,Vadim Bozhik,Вадим Божик,Ukraine,66.9,,,,,,,,,150,162.5,-175,,162.5,67.5,Amateur Open,M,D,Raw,,,162.5,1993
-3,Kirilo Pityulin,Кирило Пітюлін,Ukraine,66.3,,,,,,,,,130,150,-155,,150,67.5,Amateur Open,M,D,Raw,,,150,1985
-1,Volodimir Semkovich,Володимир Семкович,Ukraine,70,,,,,,,,,200,210,217.5,,217.5,75,Amateur Open,M,D,Raw,,,217.5,1995
-2,Anatoliy Martsenyuk,Анатолій Марценюк,Ukraine,74.1,,,,,,,,,175,190,197.5,,197.5,75,Amateur Open,M,D,Raw,,,197.5,1995
-3,Rostislav Petruk,Ростислав Петрук,Ukraine,75,,,,,,,,,170,180,-195,,180,75,Amateur Open,M,D,Raw,,,180,1990
-4,Vadim Kasperovich,Вадим Касперович,Ukraine,74.6,,,,,,,,,150,170,-177.5,,170,75,Amateur Open,M,D,Raw,,,170,1987
-5,Sergiy Kucher,Сергій Кучер,Ukraine,74.2,,,,,,,,,155,-167.5,-170,,155,75,Amateur Open,M,D,Raw,,,155,1986
-1,Andriy Kuzmuk,Андрій Кузьмук,Ukraine,81.3,,,,,,,,,-240,-247.5,247.5,,247.5,82.5,Amateur Open,M,D,Raw,,,247.5,1997
-2,Evgen Kitaygorodskiy,Євген Китайгородський,Ukraine,80.5,,,,,,,,,215,225,232.5,,232.5,82.5,Amateur Open,M,D,Raw,,,232.5,1989
-3,Maksim Dikhtyar,Максим Діхтяр,Ukraine,79.6,,,,,,,,,180,202.5,210,,210,82.5,Amateur Open,M,D,Raw,,,210,1999
-4,Sergiy Chaliy,Сергій Чалий,Ukraine,81.3,,,,,,,,,210,-222.5,,,210,82.5,Amateur Open,M,D,Raw,,,210,1993
-5,Pavlo Zayats,Павло Заяць,Ukraine,80.1,,,,,,,,,-177.5,177.5,187.5,,187.5,82.5,Amateur Open,M,D,Raw,,,187.5,1991
-6,Oleksiy Rallo,Олексій Ралло,Ukraine,82.3,,,,,,,,,177.5,,,,177.5,82.5,Amateur Open,M,D,Raw,,,177.5,1988
-1,Taras Ganzha,Тарас Ганжа,Ukraine,87.9,,,,,,,,,195,210,225,,225,90,Amateur Open,M,D,Raw,,,225,1987
-2,Sergiy Yurchuk,Сергій Юрчук,Ukraine,88.2,,,,,,,,,200,210,220,,220,90,Amateur Open,M,D,Raw,,,220,1986
-3,Pavlo Svintsitskiy,Павло Свінцицький,Ukraine,88.5,,,,,,,,,175,185,190,,190,90,Amateur Open,M,D,Raw,,,190,1991
-1,Mikhaylo Kravchenya,Михайло Кравченя,Ukraine,92.9,,,,,,,,,230,245,255,,255,100,Amateur Open,M,D,Raw,,,255,1992
-2,Nazar Korzhak,Назар Коржак,Ukraine,100,,,,,,,,,-235,-235,235,,235,100,Amateur Open,M,D,Raw,,,235,1993
-3,Oleksandr Yatsenko,Олександр Яценко,Ukraine,95.1,,,,,,,,,200,210,220,,220,100,Amateur Open,M,D,Raw,,,220,1988
-4,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,,,,,,,,,210,-227.5,-227.5,,210,100,Amateur Open,M,D,Raw,,,210,1969
-5,Sergiy Stolbtsov,Сергій Столбцов,Ukraine,98.1,,,,,,,,,180,192.5,197.5,,197.5,100,Amateur Open,M,D,Raw,,,197.5,1988
-1,Volodimir Ogloblin,Володимир Оглоблін,Ukraine,105.5,,,,,,,,,270,280,285,,285,110,Amateur Open,M,D,Raw,,,285,1965
-2,Denis Petrov,Денис Петров,Ukraine,108,,,,,,,,,250,-260,260,,260,110,Amateur Open,M,D,Raw,,,260,1984
-3,Sergiy Bessel,Сергій Бессель,Ukraine,107.8,,,,,,,,,240,255,-265,,255,110,Amateur Open,M,D,Raw,,,255,1984
-4,Mikhaylo Belichenko,Михайло Бєліченко,Ukraine,108.8,,,,,,,,,210,220,230,,230,110,Amateur Open,M,D,Raw,,,230,1982
-5,Oleksiy Boychuk,Олексій Бойчук,Ukraine,105.2,,,,,,,,,190,205,-222.5,,205,110,Amateur Open,M,D,Raw,,,205,1986
-1,Artur Maslovets,Артур Масловець,Ukraine,119.9,,,,,,,,,222.5,-235,235,,235,125,Amateur Open,M,D,Raw,,,235,1988
-2,Danilo Udovik,Данило Удовик,Ukraine,113.8,,,,,,,,,202.5,212.5,220,,220,125,Amateur Open,M,D,Raw,,,220,1992
-3,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,,,,,,,,,220,-235,-235,,220,125,Amateur Open,M,D,Raw,,,220,1965
-1,Denis Perevolochanskiy,Денис Переволочанський,Ukraine,162.6,,,,,,,,,210,230,-260,,230,140+,Amateur Open,M,D,Raw,,,230,1978
-2,Oleg Brazhnik,Олег Бражник,Ukraine,158,,,,,,,,,190,200,-210,,200,140+,Amateur Open,M,D,Raw,,,200,1970
-1,Dmitro Romanenko,Дмитро Романенко,Ukraine,73,,,,,,,,,150,170,-195,,170,75,Amateur Submasters 33-39,M,D,Raw,,,170,1983
-1,Denis Petrov,Денис Петров,Ukraine,108,,,,,,,,,250,-260,260,,260,110,Amateur Submasters 33-39,M,D,Raw,,,260,1984
-2,Mikhaylo Belichenko,Михайло Бєліченко,Ukraine,108.8,,,,,,,,,210,220,230,,230,110,Amateur Submasters 33-39,M,D,Raw,,,230,1982
-1,Pavlo Kipnyak,Павло Кіпняк,Ukraine,100,,,,,,,,,210,-227.5,-227.5,,210,100,Amateur Masters 45-49,M,D,Raw,,,210,1969
-1,Oleg Brazhnik,Олег Бражник,Ukraine,158,,,,,,,,,190,200,-210,,200,140+,Amateur Masters 45-49,M,D,Raw,,,200,1970
-1,Vyacheslav Bulgakov,Вячеслав Булгаков,Ukraine,80.8,,,,,,,,,160,177.5,,,177.5,82.5,Amateur Masters 50-54,M,D,Raw,,,177.5,1966
-1,Volodimir Ogloblin,Володимир Оглоблін,Ukraine,105.5,,,,,,,,,270,280,285,,285,110,Amateur Masters 50-54,M,D,Raw,,,285,1965
-1,Oleksandr Kalkutin,Олександр Калкутін,Ukraine,125,,,,,,,,,220,-235,-235,,220,125,Amateur Masters 50-54,M,D,Raw,,,220,1965
-1,Dmitro Romanenko,Дмитро Романенко,Ukraine,73,,,,,,,,,150,170,-195,,170,75,Amateur Military/Fire/Police,M,D,Raw,,,170,1983
-1,Oleksandr Chorniy,Олександр Чорний,Ukraine,82,,,,,,,,,215,232.5,-235,,232.5,82.5,Amateur Military/Fire/Police,M,D,Raw,,,232.5,1989
-1,Diana Mishchenko,Діана Міщенко,Ukraine,60,,,,,,,,,80,90,97.5,,97.5,60,Amateur Teen 16-17,F,D,Raw,,,97.5,2000
-1,Anna Sivokobilska,Анна Сивокобильська,Ukraine,56,,,,,,,,,100,112.5,115,,115,56,Amateur Teen 18-19,F,D,Raw,,,115,1998
-1,Arina Oleynik,Аріна Олейник,Ukraine,71.4,,,,,,,,,110,120,130,,130,75,Amateur Teen 18-19,F,D,Raw,,,130,1998
-1,Ganna Sivakova,Ганна Сівакова,Ukraine,51,,,,,,,,,100,115,-122.5,,115,52,Amateur Juniors 20-23,F,D,Raw,,,115,1997
-1,Tetyana Didovets,Тетяна Дідовець,Ukraine,54.7,,,,,,,,,75,80,85,,85,56,Amateur Juniors 20-23,F,D,Raw,,,85,1995
-1,Irina Bozhko,Ірина Божко,Ukraine,59.5,,,,,,,,,110,117.5,122.5,,122.5,60,Amateur Juniors 20-23,F,D,Raw,,,122.5,1993
-2,Dariya Yurash,Дарія Юраш,Ukraine,58.2,,,,,,,,,85,90,-97.5,,90,60,Amateur Juniors 20-23,F,D,Raw,,,90,1997
-1,Olga Zaderyaka,Ольга Задеряка,Ukraine,61.9,,,,,,,,,90,100,-112.5,,100,67.5,Amateur Juniors 20-23,F,D,Raw,,,100,1996
-2,Yana Mulishova,Яна Мулішова,Ukraine,65,,,,,,,,,80,90,100,,100,67.5,Amateur Juniors 20-23,F,D,Raw,,,100,1995
-1,Nadiya Osaenko,Надія Осаєнко,Ukraine,42.8,,,,,,,,,85,90,92.5,,92.5,44,Amateur Open,F,D,Raw,,,92.5,1990
-1,Viktoriya Demura,Вікторія Демура,Ukraine,48,,,,,,,,,-90,90,100,,100,48,Amateur Open,F,D,Raw,,,100,1985
-2,Oksana Motrunchik,Оксана Мотрунчик,Ukraine,45.7,,,,,,,,,72.5,80,85,,85,48,Amateur Open,F,D,Raw,,,85,1992
-1,Katerina Yarushina,Катерина Ярушина,Ukraine,51.2,,,,,,,,,90,100,110,,110,52,Amateur Open,F,D,Raw,,,110,1990
-1,Anna Soboleva,Анна Соболєва,Ukraine,55.3,,,,,,,,,97.5,117.5,122.5,,122.5,56,Amateur Open,F,D,Raw,,,122.5,1991
-2,Yuliya Levankova,Юлія Леванькова,Ukraine,56,,,,,,,,,90,100,105,,105,56,Amateur Open,F,D,Raw,,,105,1988
-3,Lyubov Bestaeva,Любов Бестаєва,Ukraine,54.3,,,,,,,,,85,90,95,,95,56,Amateur Open,F,D,Raw,,,95,1985
-4,Anastasiya Tishchenko,Анастасия Тищенко,Ukraine,55.3,,,,,,,,,82.5,-97.5,-97.5,,82.5,56,Amateur Open,F,D,Raw,,,82.5,1983
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,,,,,,,,,130,140,145,,145,60,Amateur Open,F,D,Raw,,,145,1980
-2,Olga Drozdova,Ольга Дроздова,Ukraine,59.6,,,,,,,,,115,125,132.5,,132.5,60,Amateur Open,F,D,Raw,,,132.5,1988
-3,Yuliya Dovgal,Юлія Довгаль,Ukraine,57.6,,,,,,,,,100,115,125,,125,60,Amateur Open,F,D,Raw,,,125,1986
-4,Irina Tumanova,Ірина Туманова,Ukraine,58,,,,,,,,,115,120,125,,125,60,Amateur Open,F,D,Raw,,,125,1986
-5,Irina Bozhko,Ірина Божко,Ukraine,59.5,,,,,,,,,110,117.5,122.5,,122.5,60,Amateur Open,F,D,Raw,,,122.5,1993
-6,Dariya Yurash,Дарія Юраш,Ukraine,58.2,,,,,,,,,85,90,-97.5,,90,60,Amateur Open,F,D,Raw,,,90,1997
-7,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,,,,,,,,,90,-105,-105,,90,60,Amateur Open,F,D,Raw,,,90,1984
-DD,Yuliya Malinovska,Юлія Маліновська,Ukraine,59.6,,,,,,,,,-140,-147.5,-157.5,,,60,Amateur Open,F,D,Raw,,,,1984
-1,Anastasiya Tishchenko,Анастасия Тищенко,Ukraine,55.3,,,,,,,,,82.5,-97.5,-97.5,,82.5,56,Amateur Submasters 33-39,F,D,Raw,,,82.5,1983
-1,Olga Skorokhodova,Ольга Скороходова,Ukraine,57.1,,,,,,,,,130,140,145,,145,60,Amateur Submasters 33-39,F,D,Raw,,,145,1980
-2,Yana Tkachenko,Яна Ткаченко,Ukraine,58.5,,,,,,,,,90,-105,-105,,90,60,Amateur Submasters 33-39,F,D,Raw,,,90,1984
-1,Liliya Konstantinova,Лілія Константінова,Ukraine,66.5,,,,,,,,,97.5,105,112.5,,112.5,67.5,Amateur Submasters 33-39,F,D,Raw,,,112.5,1982
-1,Tetyana Melnik,Тетяна Мельник,Ukraine,71,,,,,,,,,90,95,100,,100,75,Amateur Masters 40-44,F,D,Raw,,,100,1975
-1,Olga Kritikova,Ольга Крітікова,Ukraine,64.6,,,,,,,,,110,120,-130,,120,67.5,Amateur Masters 45-49,F,D,Raw,,,120,1971
-1,Yan Alpenizde,Ян Альпенізде,Ukraine,70.7,,,,,,,,,-195,-195,195,,195,75,Pro Teen 18-19,M,D,Raw,,,195,1997
-1,Maksim Samoylenko,Максим Самойленко,Ukraine,98.7,,,,,,,,,300,310,,,310,100,Pro Teen 18-19,M,D,Raw,,,310,1998
-1,Mikita Mitryukhin,Микита Мітрюхін,Ukraine,116.5,,,,,,,,,230,240,-250,,240,125,Pro Teen 18-19,M,D,Raw,,,240,1997
-1,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,,,,,,,,,255,260,-262.5,,260,82.5,Pro Juniors 20-23,M,D,Raw,,,260,1995
-2,Evgeniy Timokhin,Євгеній Тимохін,Ukraine,82.5,,,,,,,,,-210,210,-220,,210,82.5,Pro Juniors 20-23,M,D,Raw,,,210,1997
-1,Oleksandr Polutsiganov,Олександр Полуциганов,Ukraine,116.5,,,,,,,,,200,230,260,,260,125,Pro Juniors 20-23,M,D,Raw,,,260,1993
-1,Dmitro Kondratenko,Дмитро Кондратенко,Ukraine,67.3,,,,,,,,,180,-190,-190,,180,67.5,Pro Open,M,D,Raw,,,180,1986
-1,Ivan Kapelyukh,Іван Капелюх,Ukraine,73.7,,,,,,,,,230,240,-245,,240,75,Pro Open,M,D,Raw,,,240,1985
-2,Boris Novoselov,Борис Новоселов,Ukraine,69.2,,,,,,,,,205,215,-220,,215,75,Pro Open,M,D,Raw,,,215,1992
-1,Vladislav Kravchenko,Владислав Кравченко,Ukraine,80,,,,,,,,,255,260,-262.5,,260,82.5,Pro Open,M,D,Raw,,,260,1995
-2,Oleksandr Golovatskiy,Олександр Головацький,Ukraine,79.3,,,,,,,,,200,-210,,,200,82.5,Pro Open,M,D,Raw,,,200,1993
-DQ,Sergiy Zakharev,Сергій Захарьєв,Ukraine,82,,,,,,,,,-220,,,,,82.5,Pro Open,M,D,Raw,,,,1982
-1,Mikola Tishuk,Микола Тишук,Ukraine,89.4,,,,,,,,,272.5,-280,,,272.5,90,Pro Open,M,D,Raw,,,272.5,1992
-2,Yaroslav Litvinenko,Ярослав Литвиненко,Ukraine,88.6,,,,,,,,,260,-280,-280,,260,90,Pro Open,M,D,Raw,,,260,1976
-3,Oleksandr Maslov,Олександр Маслов,Ukraine,86.3,,,,,,,,,217.5,242.5,250,,250,90,Pro Open,M,D,Raw,,,250,1984
-4,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,,,,,,,,,250,-260,-260,,250,90,Pro Open,M,D,Raw,,,250,1981
-5,Anton Chirkov,Антон Чирков,Ukraine,88.9,,,,,,,,,210,-220,-220,,210,90,Pro Open,M,D,Raw,,,210,1993
-1,Maksim Samoylenko,Максим Самойленко,Ukraine,98.7,,,,,,,,,300,310,,,310,100,Pro Open,M,D,Raw,,,310,1998
-2,Oleg Khristoforov,Олег Христофоров,Ukraine,100,,,,,,,,,270,290,300,,300,100,Pro Open,M,D,Raw,,,300,1975
-3,Viktor Telyatnik,Віктор Телятник,Ukraine,99,,,,,,,,,230,245,252.5,,252.5,100,Pro Open,M,D,Raw,,,252.5,1988
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,,,,,,,,,250,260,,,260,110,Pro Open,M,D,Raw,,,260,1975
-2,Artem Medvedev,Артем Медведєв,Ukraine,104.5,,,,,,,,,245,-260,,,245,110,Pro Open,M,D,Raw,,,245,1990
-DQ,Sergiy Zakharev,Сергій Захарьєв,Ukraine,82,,,,,,,,,-220,,,,,82.5,Pro Submasters 33-39,M,D,Raw,,,,1982
-1,Oleksandr Maslov,Олександр Маслов,Ukraine,86.3,,,,,,,,,217.5,242.5,250,,250,90,Pro Submasters 33-39,M,D,Raw,,,250,1984
-2,Sergiy Mazur,Сергій Мазур,Ukraine,89.2,,,,,,,,,250,-260,-260,,250,90,Pro Submasters 33-39,M,D,Raw,,,250,1981
-1,Vitaliy Chunikhovskiy,Віталій Чуніховський,Ukraine,99.5,,,,,,,,,265,-282.5,-282.5,,265,100,Pro Submasters 33-39,M,D,Raw,,,265,1983
-1,Yaroslav Litvinenko,Ярослав Литвиненко,Ukraine,88.6,,,,,,,,,260,-280,-280,,260,90,Pro Masters 40-44,M,D,Raw,,,260,1976
-1,Oleg Khristoforov,Олег Христофоров,Ukraine,100,,,,,,,,,270,290,300,,300,100,Pro Masters 40-44,M,D,Raw,,,300,1975
-1,Viktor Rublov,Віктор Рубльов,Ukraine,100.9,,,,,,,,,250,260,,,260,110,Pro Masters 40-44,M,D,Raw,,,260,1975
-1,Volodimir Vasilenko,Володимир Василенко,Ukraine,73.3,,,,,,,,,130,140,145,,145,75,Pro Masters 70-74,M,D,Raw,,,145,1943
-1,Dmitro Kondratenko,Дмитро Кондратенко,Ukraine,67.3,,,,,,,,,180,-190,-190,,180,67.5,Pro Military/Fire/Police,M,D,Raw,,,180,1986
-1,Anastasiya Kirpichova,Анастасія Кирпичова,Ukraine,54.9,,,,,,,,,-92.5,92.5,-100,,92.5,56,Pro Teen 18-19,F,D,Raw,,,92.5,1999
-1,Katerina Ivanushchik,Катерина Іванущик,Ukraine,62.5,,,,,,,,,60,70,85,,85,67.5,Pro Teen 18-19,F,D,Raw,,,85,1998
-1,Margarita Kasparova,Маргарита Каспарова,Ukraine,65.2,,,,,,,,,102.5,107.5,112.5,,112.5,67.5,Pro Juniors 20-23,F,D,Raw,,,112.5,1995
-1,Mariya Bort,Марія Борт,Ukraine,73.2,,,,,,,,,-60,60,75,,75,75,Pro Juniors 20-23,F,D,Raw,,,75,1994
-1,Mariya Kravchuk,Марія Кравчук,Ukraine,56,,,,,,,,,155,165,-170,,165,56,Pro Open,F,D,Raw,,,165,1983
-2,Olena Bubnova,Олена Бубнова,Ukraine,54.4,,,,,,,,,130,,,,130,56,Pro Open,F,D,Raw,,,130,1985
-3,Olena Korpusenko,Олена Корпусенко,Ukraine,55.7,,,,,,,,,90,100,-110,,100,56,Pro Open,F,D,Raw,,,100,1990
-4,Anastasiya Kirpichova,Анастасія Кирпичова,Ukraine,54.9,,,,,,,,,-92.5,92.5,-100,,92.5,56,Pro Open,F,D,Raw,,,92.5,1999
-1,Mariya Bort,Марія Борт,Ukraine,73.2,,,,,,,,,-60,60,75,,75,75,Pro Open,F,D,Raw,,,75,1994
-1,Anna Dumina,Анна Думіна,Ukraine,66.4,,,,,,,,,60,70,80,,80,67.5,Pro Submasters 33-39,F,D,Raw,,,80,1981
-1,Yukhim Stepatskiy,Юхим Степацький,Ukraine,88.9,,,,,,,,,280,290,-302.5,,290,90,Pro Open,M,D,Multi-ply,,,290,1987
-2,Sergiy Kapustin,Сергій Капустін,Ukraine,85,,,,,,,,,-265,265,-290,,265,90,Pro Open,M,D,Multi-ply,,,265,1979
-3,Andriy Tupchiy,Андрій Тупчій,Ukraine,89.6,,,,,,,,,230,-250,-250,,230,90,Pro Open,M,D,Multi-ply,,,230,1987
-1,Sergiy Kapustin,Сергій Капустін,Ukraine,85,,,,,,,,,-265,265,-290,,265,90,Pro Submasters 33-39,M,D,Multi-ply,,,265,1979
-1,Oleg Kovbasa,Олег Ковбаса,Ukraine,95.4,,,,,,,,,200,220,-245,,220,100,Pro Masters 40-44,M,D,Multi-ply,,,220,1975
-1,Sergiy Kolesnik,Сергей Колесник,Ukraine,98.8,,,,,,,,,225,235,-245,,235,100,Pro Masters 50-54,M,D,Multi-ply,,,235,1963
-1,Yukhim Stepatskiy,Юхим Степацький,Ukraine,88.9,,,,,,,,,280,290,-302.5,,290,90,Pro Military/Fire/Police,M,D,Multi-ply,,,290,1987
+Place,Name,Division,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Sex,CyrillicName,BirthYear,Equipment,Event
+1,Leslie Watson,O,UK,43.7,75,85,-90,85,,57.5,62.5,-65,62.5,,100,-105,-105,100,,247.5,44,F,,1948,Multi-ply,SBD
+2,Denise Mellor,O,UK,43.7,37.5,42.5,50,50,,37.5,40,-42.5,40,,65,75,-85,75,,165,44,F,,,Multi-ply,SBD
+1,Gina Iaquaniellano,O,UK,51.5,70,105,125,125,,40,60,-70,60,,110,-130,130,130,,315,52,F,,1972,Multi-ply,SBD
+1,Mary Lemasters,T2,USA,55.7,117.5,130,-137.5,130,,52.5,57.5,-67.5,57.5,,115,-125,-125,115,,302.5,56,F,,1993,Multi-ply,SBD
+1,Emma Weston,O,UK,56,100,-115,-115,100,,55,60,-65,60,,110,120,-130,120,,280,56,F,,,Multi-ply,SBD
+1,Kristine Grigorjeva,O,UK,59.8,120,130,-142.5,130,,60,70,-75,70,,130,142.5,145,145,,345,60,F,,1980,Multi-ply,SBD
+1,Chantal Rostagnat,M1,France,65.1,110,120,127.5,127.5,,70,-75,-75,70,,125,135,142.5,142.5,,340,67.5,F,,1967,Multi-ply,SBD
+1,Deborah Schwartz-Damminga,M2,USA,67.5,175,185,192.5,192.5,,97.5,-102.5,-102.5,97.5,,160,170,-182.5,170,,460,67.5,F,,1961,Multi-ply,SBD
+1,Jane Stabile,M4,USA,66.5,152.5,-170,-182.5,152.5,,70,-82.5,-87.5,70,,137.5,-162.5,-162.5,137.5,,360,67.5,F,,1952,Multi-ply,SBD
+1,Shany Gilbert,T3,Canada,74.6,-200,200,-220,200,,-142.5,142.5,-155,142.5,,-175,-175,175,175,-207.5,517.5,75,F,,1990,Multi-ply,SBD
+1,Kamal Manhas,J,UK,74.9,100,125,-140,125,,50,-55,-55,50,,110,130,140.5,140.5,-145,315.5,75,F,,1987,Multi-ply,SBD
+1,Janine Murphy,O,UK,73.7,160,180,190,190,,105,110,-112.5,110,,155,170,-180,170,,470,75,F,,,Multi-ply,SBD
+2,Kelly Martin,O,USA,71.3,65,80,102.5,102.5,,157.5,-167.5,,157.5,,117.5,157.5,182.5,182.5,,442.5,75,F,,1970,Multi-ply,SBD
+DQ,Stephanie van de Weghe,O,USA,73.9,257.5,277.5,-300,277.5,,-165,-165,-165,,,,,,,,,75,F,,1961,Multi-ply,SBD
+DQ,Stephanie van de Weghe,M2,USA,73.9,257.5,277.5,-300,277.5,,-165,-165,-165,,,,,,,,,75,F,,1961,Multi-ply,SBD
+DQ,Maria Dowle,M3,USA,71.8,125,132.5,142.5,142.5,,-70,-70,-70,,,,,,,,,75,F,,1955,Multi-ply,SBD
+1,Krista Ford,O,USA,82.4,237.5,265,275,275,,105,115,120,120,,197.5,205,212.5,212.5,,607.5,82.5,F,,1966,Multi-ply,SBD
+2,Tara McKay,O,UK,79.6,100,110,-115,110,,55,65,70,70,,90,105,-115,105,,285,82.5,F,,1979,Multi-ply,SBD
+1,Hanne Bingle,O,UK,83.7,150,165,175,175,185,110,-120,120,120,-125,130,-145,145,145,,440,90,F,,1959,Multi-ply,SBD
+1,Hanne Bingle,M3,UK,83.7,150,165,175,175,185.5,110,-120,120,120,-125,130,-145,145,145,,440,90,F,,1959,Multi-ply,SBD
+1,Danielle Noughton,J,UK,114.8,-100,-100,100,100,,50,-60,60,60,-65,130,145,-155,145,,305,90+,F,,1989,Multi-ply,SBD
+1,Dorothy Shaw,M2,UK,108.7,260,275,290,290,,140,-150,,140,,200,220,240,240,,670,90+,F,,1963,Multi-ply,SBD
+1,Mohammed Youssef,J,Egypt,51.9,180,-205,-205,180,,120,-125,140,140,,190,200,-205,200,,520,52,M,,,Multi-ply,SBD
+1,George Gordon,T1,UK,53.4,110,130,-145,130,,40,47.5,-50,47.5,,100,115,125,125,,302.5,56,M,,1995,Multi-ply,SBD
+DQ,Mohammed Youssef,O,Egypt,56,190,-205,205,205,,125,-135,135,135,,-190,-190,-190,,,,56,M,,,Multi-ply,SBD
+1,Barrie Brown,M4,UK,59.2,120,130,142.5,142.5,-152.5,65,-80,80,80,,110,122.5,127.5,127.5,,350,60,M,,1951,Multi-ply,SBD
+1,Dávid Pankuch,T2,Slovakia,67.4,160,-170,175,175,,90,100,107.5,107.5,,170,180,-190,180,,462.5,67.5,M,,1992,Multi-ply,SBD
+1,Amro Elaziz,J,Egypt,65.8,-190,-190,190,190,,90,112.5,-115,112.5,,200,220,230,230,,532.5,67.5,M,,,Multi-ply,SBD
+2,Tim Gritt,J,UK,66.9,130,150,160,160,,70,-77.5,80,80,,150,-175,-175,150,,390,67.5,M,,,Multi-ply,SBD
+1,Gerard McNamara,O,Ireland,67.5,300,327.5,-335,327.5,,155,160,165,165,,230,240,-250,240,,732.5,67.5,M,,1963,Multi-ply,SBD
+2,Amro Elaziz,O,Egypt,64.5,190,-205,205,205,,90,100,-110,100,,200,220,230,230,,535,67.5,M,,,Multi-ply,SBD
+1,Budgie Mullan,M6,UK,65.3,125,135,142.5,142.5,,85,92.5,-97.5,92.5,,140,150,-160,150,,385,67.5,M,,1943,Multi-ply,SBD
+1,Yuri Kiselev,M7,Russia,63.4,100,125,-150,125,,70,75,80,80,,160,175,,175,,380,67.5,M,Юрий Киселев,1937,Multi-ply,SBD
+1,David Benkik,T2,Slovakia,73.8,190,215,230,230,,85,92.5,100,100,,200,-220,225,225,,555,75,M,,,Multi-ply,SBD
+1,Jordan Dunn,T3,USA,74.4,315,337.5,-352.5,337.5,,-217.5,217.5,-232.5,217.5,,232.5,252.5,262.5,262.5,-272.5,817.5,75,M,,1991,Multi-ply,SBD
+1,Callum Cook,J,UK,71.3,230,-250,-250,230,,150,-165,165,165,,230,-252.5,,230,,625,75,M,,,Multi-ply,SBD
+2,John Corcoran,J,UK,74.3,210,220,225,225,,115,-120,120,120,,180,195,-200,195,,540,75,M,,,Multi-ply,SBD
+3,Luke Corcoran,J,UK,73.7,-210,210,220,220,,90,-95,-95,90,,190,200,210,210,,520,75,M,,,Multi-ply,SBD
+1,Ilya Kokorev,O,Russia,74,310,325,335,335,,222.5,-230,230,230,,260,275,290,290,,855,75,M,Илья Кокорев,1973,Multi-ply,SBD
+2,Ibrahim Abukala,O,Egypt,73.8,300,340,345,345,,170,185,-190,185,,260,280,-290,280,,810,75,M,,1966,Multi-ply,SBD
+3,Vasiliy Tsvetkov,O,Russia,74.9,300,-315,320,320,,170,180,187.5,187.5,,240,260,270,270,,777.5,75,M,Василий Цветков,1981,Multi-ply,SBD
+4,Lee Gordon,O,UK,74.7,290,-300,-310,290,,175,182.5,190,190,,250,265,280,280,,760,75,M,,1970,Multi-ply,SBD
+5,Andy Csiszar,O,UK,74.8,270,290,300,300,,160,170,180,180,,260,270,,270,,750,75,M,,1975,Multi-ply,SBD
+6,Jonas Anderbring,O,Sweden,73.4,265,-282.5,-282.5,265,,147.5,155,-160,155,,225,232.5,-247.5,232.5,,652.5,75,M,,1979,Multi-ply,SBD
+1,Abou Kahla Ibarhim,M1,Egypt,74.4,300,-340,-350,300,,170,185,-190,185,,260,280,290,290,,775,75,M,,1966,Multi-ply,SBD
+2,Sergey Trukhnin,M1,Russia,75,230,250,-270,250,,150,160,-170,160,,200,220,,220,,630,75,M,Сергей Трухнин,1965,Multi-ply,SBD
+1,Steven Lumpe,M2,USA,73.4,-227.5,-227.5,227.5,227.5,,110,140,-150,140,,182.5,-200,-200,182.5,,550,75,M,,1960,Multi-ply,SBD
+DQ,David Mannering,M2,UK,74.2,-250,-250,-250,,,135,180,195,195,,,,,,,,75,M,,1960,Multi-ply,SBD
+DQ,Wayne Pullum,M3,USA,72.6,250,-265,-285,250,,-170,-170,-170,,,,,,,,,75,M,,1959,Multi-ply,SBD
+1,Richard Flores,M7,USA,72.6,-192.5,192.5,-207.5,192.5,,82.5,87.5,-92.5,87.5,,185,197.5,-218,197.5,,477.5,75,M,,1938,Multi-ply,SBD
+1,Bassem Yosry,J,Egypt,82.5,-280,280,-300,280,,170,205,-210,205,,300,-315,315,315,,800,82.5,M,,,Multi-ply,SBD
+2,George Noble,J,UK,81.7,-275,-275,275,275,,125,135,137.5,137.5,,200,222.5,227.5,227.5,,640,82.5,M,,,Multi-ply,SBD
+1,Lee Cutler,O,UK,82.5,320,-340,-340,320,,-200,210,-220,210,,290,302.5,-322.5,302.5,,832.5,82.5,M,,1977,Multi-ply,SBD
+2,Steve Loncke,O,Belgium,82.3,315,330,340,340,,220,230,-235,230,,-260,260,-285,260,,830,82.5,M,,1975,Multi-ply,SBD
+3,Bassem Elsayed,O,Egypt,82.4,-280,-280,280,280,,190,202.5,-205,202.5,,300,315,-332.5,315,,797.5,82.5,M,,,Multi-ply,SBD
+4,Ian Humphries,O,UK,82.4,305,325,-340,325,,190,205,-215,205,,230,245,-255,245,,775,82.5,M,,1972,Multi-ply,SBD
+5,Ashley Hearn,O,UK,81.9,290,310,312.5,312.5,,-200,200,,200,,220,230,,230,,742.5,82.5,M,,,Multi-ply,SBD
+DQ,Clifford Richards,O,UK,82.5,-350,-350,-350,,,215,-225,-225,215,,,,,,,,82.5,M,,1978,Multi-ply,SBD
+1,Neil Arnold,M1,UK,81.3,270,300,-312.5,300,,170,-177.5,-177.5,170,,170,,,170,,640,82.5,M,,1965,Multi-ply,SBD
+2,Neil Finnemore,M1,UK,81.4,220,-235,-250,220,,140,150,-160,150,,200,220,,220,,590,82.5,M,,1968,Multi-ply,SBD
+1,Mark Spurling,M2,UK,80.8,-280,280,300,300,,160,-170,170,170,,250,270,280,280,,750,82.5,M,,1960,Multi-ply,SBD
+2,Patrick Breton,M2,France,77.7,230,250,-255,250,,120,130,-140,130,,260,280,-290,280,,660,82.5,M,,1960,Multi-ply,SBD
+1,Jean-Pierre Chamburland,M4,France,81.1,255,-270,-270,255,,145,150,155,155,,195,205,210,210,,620,82.5,M,,1951,Multi-ply,SBD
+1,Ian Douglas,M5,UK,80.8,60,,,60,,60,,,60,,245,260,272.5,272.5,280,392.5,82.5,M,,1947,Multi-ply,SBD
+1,Yuriy Chepets,M6,Russia,78.2,225,242.5,250,250,,170,177.5,182.5,182.5,185,200,210,217.5,217.5,,650,82.5,M,Юрий Чепец,1943,Multi-ply,SBD
+2,Robyn Brown,M6,UK,79.8,-210,210,230,230,,135,140,-145,140,,230,250,-260,250,,620,82.5,M,,1943,Multi-ply,SBD
+DQ,Aimo Mursu,M6,Finland,79.5,210,-230,230,230,,-120,-120,-120,,,,,,,,,82.5,M,,1942,Multi-ply,SBD
+1,Georgiy Lazaridi,M8,Russia,81.5,180,190,-200,190,,90,95,100,100,,180,190,,190,,480,82.5,M,Георгий Лазариди,1933,Multi-ply,SBD
+DQ,Marcus Heuer,T2,Germany,83.7,-280,-280,-280,,,170,-185,-185,170,,,,,,,,90,M,,1992,Multi-ply,SBD
+1,Julien Lagarde,J,Germany,89.4,310,-335,-335,310,,150,165,170,170,,240,255,-265,255,,735,90,M,,,Multi-ply,SBD
+2,Andrius Seperis,J,Lithuania,88.3,220,240,,240,,150,160,167.5,167.5,,265,-280,-280,265,,672.5,90,M,,1987,Multi-ply,SBD
+1,Christopher Jenkins,O,UK,89.9,320,-360,370,370,,220,235,-245,235,,300,315,325,325,,930,90,M,,1980,Multi-ply,SBD
+2,Neil Deighton,O,UK,89.1,315,-330,-330,315,,290,-305,-305,290,,272.5,285,-295,285,,890,90,M,,1985,Multi-ply,SBD
+3,Štefan Sokoly,O,Slovakia,88.7,320,340,-355,340,,205,215,-225,215,,-300,-300,300,300,,855,90,M,,1976,Multi-ply,SBD
+4,Gary Underwood,O,UK,89.6,260,-280,-280,260,,180,200,-210,200,,220,240,-250,240,,700,90,M,,,Multi-ply,SBD
+5,Justin Hurley,O,UK,89.5,350,-420,-420,350,,210,230,-250,230,,100,,,100,,680,90,M,,1976,Multi-ply,SBD
+6,Elliot Newman,O,UK,89.6,250,255,-260,255,,155,-162.5,-162.5,155,,240,260,-272.5,260,,670,90,M,,1985,Multi-ply,SBD
+DQ,Khaled Abd Rabou,O,Egypt,89.8,-350,-350,-350,,,220,230,-245,230,,,,,,,,90,M,,1968,Multi-ply,SBD
+DQ,Gareth Davies,O,UK,89.5,330,-355,-355,330,,-242.5,-242.5,-247.5,,,,,,,,,90,M,,,Multi-ply,SBD
+DQ,Steven Plunkett,O,UK,88.6,-300,-300,-300,,,,,,,,,,,,,,90,M,,1973,Multi-ply,SBD
+DQ,Eric Athias,O,France,85.1,-310,-310,-310,,,,,,,,,,,,,,90,M,,1971,Multi-ply,SBD
+1,Khaled Abd Rabou,M1,Egypt,90,350,-370,-370,350,,220,230,-240,230,,230,250,-260,250,,830,90,M,,1968,Multi-ply,SBD
+1,Jim Dunford,M2,UK,88.1,200,-220,220,220,,110,120,-122.5,120,,190,200,215,215,,555,90,M,,1963,Multi-ply,SBD
+1,Alexander Ilbetkov,M3,Russia,87.6,170,190,-200,190,,-100,100,,100,,-170,170,190,190,,480,90,M,Александр Илбетков,,Multi-ply,SBD
+1,Evgeniy Khudoleev,M5,Russia,87.1,220,-250,-250,220,,160,170,-177.5,170,,200,215,225,225,,615,90,M,Евгений Худолеев,1946,Multi-ply,SBD
+1,Joey Manda,T1,USA,100,142.5,160,182.5,182.5,,62.5,77.5,-92.5,77.5,,150,-175,-175,150,,410,100,M,,1994,Multi-ply,SBD
+1,Jon Bamsey,T2,UK,97.3,200,-227.5,-227.5,200,,110,-130,-130,110,,-210,210,-227.5,210,,520,100,M,,1993,Multi-ply,SBD
+1,Sam Johnson,T3,UK,98.2,210,-230,230,230,,130,165,175,175,-185,215,-225,225,225,,630,100,M,,1991,Multi-ply,SBD
+2,Scott Camerson,T3,UK,93.3,130,-150,-160,130,,85,-95,-95,85,,180,-200,-210,180,,395,100,M,,1990,Multi-ply,SBD
+1,James Fernandez,J,UK,95.1,250,265,-272.5,265,,-180,180,-190,180,,230,250,-270,250,,695,100,M,,,Multi-ply,SBD
+2,Azer Aliyev,J,Azerbaijan,96.5,240,252.5,260,260,,152.5,-160,,152.5,,230,242.5,-247.5,242.5,,655,100,M,,1986,Multi-ply,SBD
+DQ,Josh Hill,J,UK,98,320,350,360,360,370,240,-250,-260,240,,-300,-300,-300,,,,100,M,,1987,Multi-ply,SBD
+1,Andrey Belyaev,O,Russia,96.8,420,-450,-450,420,,280,-290,290,290,,330,350,-375,350,,1060,100,M,Андрей Беляев,1983,Multi-ply,SBD
+2,Martin Brown,O,UK,100,-365,380,-400,380,,230,242.5,,242.5,,300,320,-327.5,320,,942.5,100,M,,1980,Multi-ply,SBD
+3,Jamie Burke,O,UK,98.7,-350,-350,350,350,,240,255,265,265,,280,307.5,-327.5,307.5,,922.5,100,M,,1975,Multi-ply,SBD
+4,Paul Newell,O,UK,99.4,-380,-380,380,380,,215,-225,-225,215,,290,305,-312.5,305,,900,100,M,,1977,Multi-ply,SBD
+5,Kyle Vauls,O,UK,99.6,-340,340,-360,340,,-255,255,-262.5,255,,280,300,-310,300,,895,100,M,,1974,Multi-ply,SBD
+6,Attila Elek,O,Hungary,91.3,320,340,-355,340,,190,200,207.5,207.5,,290,305,312.5,312.5,,860,100,M,,1985,Multi-ply,SBD
+7,Juha Miettinen,O,Finland,98.8,-325,-325,340,340,,-225,225,-235,225,,285,-295,-295,285,,850,100,M,,1978,Multi-ply,SBD
+8,Mika Nikkonen,O,Finland,99.2,300,-315,320,320,,190,205,215,215,,250,270,-277.5,270,,805,100,M,,1988,Multi-ply,SBD
+9,Mohamed Harmy,O,Egypt,92.4,-290,290,,290,,160,175,-180,175,,330,-350,,330,,795,100,M,,,Multi-ply,SBD
+10,Sivert Jörgensen,O,Sweden,98.8,260,275,-290,275,,180,-190,190,190,,260,280,290,290,,755,100,M,,1948,Multi-ply,SBD
+DQ,Mark Cullimore,O,UK,99.6,-340,340,-360,340,,-255,-265,-275,,,,,,,,,100,M,,1965,Multi-ply,SBD
+DQ,Niclas Friberg,O,Sweden,98.6,-325,-325,-325,,,,,,,,,,,,,,100,M,,1974,Multi-ply,SBD
+1,Patrick Griffin,M1,UK,93.3,300,315,320,320,,225,230,-237.5,230,,260,272.5,-280,272.5,,822.5,100,M,,1969,Multi-ply,SBD
+1,Thomas Griffin,M2,UK,97.1,315,330,345,345,,-242.5,242.5,251,251,,270,277.5,-285,277.5,,873.5,100,M,,1963,Multi-ply,SBD
+2,Konstantin Rogozhnikov,M2,Russia,99.7,330,355,-370,355,,205,215,-222.5,215,,-270,270,-305,270,,840,100,M,Константин Рогожников,1960,Multi-ply,SBD
+1,Tony Hale,M3,UK,94.5,270,300,310,310,,160,-195,,160,,200,245,-272.5,245,,715,100,M,,1957,Multi-ply,SBD
+DQ,Alan Luker,M4,UK,97.9,-320,-320,-320,,,,,,,,,,,,,,100,M,,1949,Multi-ply,SBD
+1,John Burgard,M5,USA,97.3,-245,245,255,255,,-135,145,-160,145,,227.5,245,-262.5,245,,645,100,M,,1948,Multi-ply,SBD
+1,Terry Lancaster,M6,USA,98.1,205,-227.5,-227.5,205,,-175,175,-185,175,,205,,,205,,585,100,M,,1942,Multi-ply,SBD
+1,Shane Harrison,T3,UK,108.9,325,-350,370,370,,130,200,-220,200,,230,265,282.5,282.5,,852.5,110,M,,1990,Multi-ply,SBD
+1,James Copping,J,UK,108.8,310,325,342.5,342.5,,185,195,200,200,,300,310,-317.5,310,,852.5,110,M,,1987,Multi-ply,SBD
+2,Oliver Williamson,J,UK,108.5,280,300,312.5,312.5,,205,220,227.5,227.5,-240,270,285,297.5,297.5,,837.5,110,M,,1985,Multi-ply,SBD
+3,Kai-Oskari Lehtinen,J,Finland,105,300,320,335,335,,220,235,-240,235,,240,255,265,265,,835,110,M,,1989,Multi-ply,SBD
+1,Craig Coombes,O,UK,109.2,-425,425,-455,425,,270,290,300,300,,310,-325,-325,310,,1035,110,M,,1975,Multi-ply,SBD
+2,Pauli Rantanen,O,Finland,109.3,350,-370,-370,350,,260,-270,-280,260,,300,315,-320,315,,925,110,M,,1966,Multi-ply,SBD
+3,Steven Middleton-Lowes,O,UK,109.8,-355,355,375,375,,-230,230,-240,230,,270,300,-322.5,300,,905,110,M,,1971,Multi-ply,SBD
+4,Shane Church,O,Canada,109.5,375,-420,-420,375,,232.5,-275,-275,232.5,,280,-317.5,-317.5,280,,887.5,110,M,,1984,Multi-ply,SBD
+5,Gavin Rowlands,O,UK,110,320,340,-350,340,,185,197.5,205,205,,240,-255,-255,240,,785,110,M,,,Multi-ply,SBD
+6,Morten Andreassen,O,Norway,109.9,-325,-325,325,325,,100,,,100,,-220,220,270,270,,695,110,M,,1982,Multi-ply,SBD
+DQ,Richard Zenzen,O,USA,108.4,-275,275,-335,275,,-192.5,-192.5,-207.5,,,,,,,,,110,M,,1952,Multi-ply,SBD
+DQ,Gilles Zozzoli,O,France,105.6,-290,290,-310,290,,-255,-255,-255,,,,,,,,,110,M,,1972,Multi-ply,SBD
+DQ,Zaxir Xudayarov,O,Azerbaijan,108.5,380,-405,-410,380,,260,275,285,285,,-370,-380,-380,,,,110,M,,1983,Multi-ply,SBD
+1,Michal Berezňák,M2,Slovakia,100.4,310,340,-370,340,,185,-200,,185,,260,290,-310,290,,815,110,M,,1963,Multi-ply,SBD
+2,Nathan Scott,M2,UK,105.4,180,220,,220,,160,180,-220,180,,200,-240,240,240,,640,110,M,,1962,Multi-ply,SBD
+1,Thomas Bowman,M3,USA,109.7,327.5,347.5,-360,347.5,,-190,-190,190,190,,295,-320,-320,295,,832.5,110,M,,1956,Multi-ply,SBD
+1,Richard Zenzen,M4,USA,108,280,310,330,330,,192.5,-200,-207.5,192.5,,-210,210,237.5,237.5,,760,110,M,,1952,Multi-ply,SBD
+DQ,Ross Saldan,M4,Canada,107.5,-272.5,-272.5,-272.5,,,207.5,-237.5,-237.5,207.5,,,,,,,,110,M,,1953,Multi-ply,SBD
+1,Jacob Sanders,T2,USA,120.3,265,-272.5,-272.5,265,,165,185,-195,185,,215,-230,230,230,,680,125,M,,1992,Multi-ply,SBD
+1,Viktor Malyugin,T3,Russia,123.5,380,-400,-415,380,,265,280,285,285,,270,305,,305,,970,125,M,Виктор Малюгин,1990,Multi-ply,SBD
+1,Jamie Williams,J,USA,118.3,350,400,-420,400,,205,-212.5,212.5,212.5,,320,-332.5,-332.5,320,,932.5,125,M,,1986,Multi-ply,SBD
+2,Miika Ruuskanen,J,Finland,125,320,-335,-335,320,,220,-235,235,235,,270,290,-310,290,,845,125,M,,1986,Multi-ply,SBD
+1,Vadim Bratanov,O,Russia,123.4,-410,-410,410,410,,260,280,-290,280,,320,335,345,345,,1035,125,M,Вадим Братанов,1979,Multi-ply,SBD
+2,Marcus Griffiths,O,UK,119.5,-400,-400,400,400,,230,242.5,247.5,247.5,,310,330,,330,,977.5,125,M,,1973,Multi-ply,SBD
+3,Samu Huupponen,O,Finland,124.1,-360,360,380,380,,-270,270,-285,270,,270,285,295,295,,945,125,M,,1980,Multi-ply,SBD
+4,Graham Mattison,O,UK,124.4,-360,360,-375,360,,250,-262.5,262.5,262.5,,290,-310,-310,290,,912.5,125,M,,1980,Multi-ply,SBD
+5,Alexander Lebedev,O,Russia,117,-340,340,-360,340,,260,-275,275,275,,270,-290,-290,270,,885,125,M,Александр Лебедев,1980,Multi-ply,SBD
+6,Lee Price,O,UK,121,325,-352.5,352.5,352.5,,-210,210,-222.5,210,,250,275,-302.5,275,,837.5,125,M,,1970,Multi-ply,SBD
+DQ,Ben Williams,O,UK,118.9,-400,-400,-400,,,260,272.5,-280,272.5,,,,,,,,125,M,,,Multi-ply,SBD
+DQ,Petteri Hosio Henrik,O,Finland,117.7,-330,-340,-360,,,285,-295,295,295,,,,,,,,125,M,,1979,Multi-ply,SBD
+DQ,Allan Meehan,O,Canada,124,-440,-440,-440,,,-292.5,302.5,-325,302.5,,,,,,,,125,M,,1972,Multi-ply,SBD
+DQ,Markus Rinse,O,Sweden,124.4,-365,-375,-375,,,,,,,,,,,,,,125,M,,1987,Multi-ply,SBD
+DQ,Mohamed Mohamed,O,Egypt,125,-350,-350,-350,,,-230,-230,,,,,,,,,,125,M,,1979,Multi-ply,SBD
+DQ,Martin Košnar,O,Czechia,123.6,-410,-410,-410,,,,,,,,,,,,,,125,M,,1978,Multi-ply,SBD
+1,Kjell Nyhagebråten,M1,Norway,110.5,-325,325,,325,,-225,225,-230,225,,300,310,332.5,332.5,,882.5,125,M,,1966,Multi-ply,SBD
+2,Michael Adams,M1,UK,123.1,300,332.5,-350,332.5,,225,-232.5,-232.5,225,,270,290,,290,,847.5,125,M,,1965,Multi-ply,SBD
+1,David Beattie,M2,UK,121.8,370,400,-430,400,,265,290,-307.5,290,,220,250,275,275,,965,125,M,,1961,Multi-ply,SBD
+2,Olli Ruohola,M2,Finland,124.3,310,325,340,340,,200,-210,-210,200,,260,280,-300,280,,820,125,M,,1960,Multi-ply,SBD
+DQ,Pekka Rantanen,M3,Finland,115.8,-265,-265,-285,,,175,-190,-200,175,,,,,,,,125,M,,1957,Multi-ply,SBD
+1,Evgeniy Dmitriev,M6,Russia,121.3,150,,,150,,-160,160,-175,160,,160,180,200,200,,510,125,M,Евгений Дмитриев,1940,Multi-ply,SBD
+DQ,Mike Guay,J,Canada,,,,,,,,,,,,,,,,,,140,M,,1988,Multi-ply,SBD
+1,James Nuttall,O,UK,139.7,-395,395,-410,395,,-325,325,340,340,,300,320,-350,320,,1055,140,M,,1983,Multi-ply,SBD
+2,Lloyd Strang,O,UK,134.4,360,390,405,405,,260,285,-300,285,,270,-310,310,310,,1000,140,M,,1975,Multi-ply,SBD
+3,Mike Guay,O,Canada,132.9,370,-420,-455,370,,260,-295,-295,260,,260,-300,300,300,,930,140,M,,1988,Multi-ply,SBD
+DQ,Greg Theriot,O,USA,134.5,-455,455,,455,,-320,-320,-320,,,,,,,,,140,M,,1984,Multi-ply,SBD
+DQ,Ano Turtiainen,O,Finland,134.5,-470,-470,-502.5,,,,,,,,,,,,,,140,M,,1967,Multi-ply,SBD
+1,Ian Mitchell,M1,UK,134,300,-320,320,320,,-215,215,-225,215,,245,270,-282.5,270,,805,140,M,,1967,Multi-ply,SBD
+2,Garry Bamsey,M1,UK,126.5,340,-360,-360,340,,140,150,-165,150,,270,-290,,270,,760,140,M,,1966,Multi-ply,SBD
+1,Gregg Damminga,M2,USA,131.5,350,-370,-370,350,,250,-270,-285,250,,285,310,-320,310,,910,140,M,,1962,Multi-ply,SBD
+1,Ahmed Hassanin,J,Egypt,179.9,430,-465,-465,430,,-290,290,-320,290,,280,300,-320,300,,1020,140+,M,,1985,Multi-ply,SBD
+2,Chris Gearing,J,UK,167.2,380,-400,-400,380,,260,275,-285,275,,-310,310,-335,310,,965,140+,M,,1987,Multi-ply,SBD
+3,Mina Ebeed,J,Egypt,,,,,250,,,,,220,,,,,260,,730,140+,M,,1988,Multi-ply,SBD
+1,Ahmed Hassanin,O,Egypt,180,420,440,,440,,-280,280,300,300,,250,280,300,300,,1040,140+,M,,1985,Multi-ply,SBD
+2,Philippe Crets,O,Belgium,144.6,-375,-395,395,395,,-265,270,-280,270,,310,340,-375,340,,1005,140+,M,,1976,Multi-ply,SBD
+3,Daivd Fizhenry,O,Ireland,157.2,-400,-400,400,400,,290,-310,-310,290,,280,-310,-317.5,280,,970,140+,M,,,Multi-ply,SBD
+4,Gunnar De Vadder,O,Belgium,143.6,330,-350,,330,,240,260,-272.5,260,,240,270,-280,270,,860,140+,M,,1983,Multi-ply,SBD
+DQ,Markku Kalliola Kari,O,Finland,167,-455,-455,-455,,,360,380,-400,380,,,,,,,,140+,M,,1963,Multi-ply,SBD
+DQ,Kieran Kidder,O,USA,165.8,-460,-460,-460,,,,,,,,,,,,,,140+,M,,1969,Multi-ply,SBD
+DQ,John Ewing,O,USA,147.8,-487.5,-487.5,-487.5,,,,,,,,,,,,,,140+,M,,1980,Multi-ply,SBD
+1,Tibor Mészáros,M1,Hungary,145,300,330,360,360,,150,160,,160,,320,-380,,320,,840,140+,M,,1967,Multi-ply,SBD
+1,Leslie Watson,O,UK,43.7,,,,,,57.5,62.5,-65,62.5,,,,,,,62.5,44,F,,1948,Multi-ply,B
+1,Gina Iaquaniellano,O,UK,51.5,,,,,,40,60,-70,60,,,,,,,60,52,F,,1972,Multi-ply,B
+1,Mari Asp,O,USA,55.3,,,,,,-130,130,-145,130,,,,,,,130,56,F,,1975,Multi-ply,B
+1,Anne Heikkilä,O,Finland,66.8,,,,,,135,145,155,155,,,,,,,155,67.5,F,,1978,Multi-ply,B
+1,Chantal Rostagnat,M1,France,65.1,,,,,,70,-75,-75,70,,,,,,,70,67.5,F,,1967,Multi-ply,B
+1,Deborah Schwartz-Damminga,M2,USA,67.5,,,,,,97.5,-102.5,-102.5,97.5,,,,,,,97.5,67.5,F,,1961,Multi-ply,B
+1,Nadezhda Shabanova,M4,Russia,67.5,,,,,,75,82.5,90,90,,,,,,,90,67.5,F,Надежда Шабанова,1954,Multi-ply,B
+1,Shany Gilbert,T3,Canada,74.6,,,,,,-142.5,142.5,-155,142.5,,,,,,,142.5,75,F,,1990,Multi-ply,B
+1,Joanne Mitchell,O,Australia,73,,,,,,120,132.5,-142.5,132.5,,,,,,,132.5,75,F,,1977,Multi-ply,B
+DQ,Stephanie van de Weghe,O,USA,73.9,,,,,,-165,-165,-165,,,,,,,,,75,F,,1961,Multi-ply,B
+DQ,Stephanie van de Weghe,M2,USA,73.9,,,,,,-165,-165,-165,,,,,,,,,75,F,,1961,Multi-ply,B
+1,Emma Ylitalo-James,O,UK,81.5,,,,,,-162.5,167.5,172.5,172.5,,,,,,,172.5,82.5,F,,1969,Multi-ply,B
+2,Natalya Bako,O,Russia,82.4,,,,,,110,130,145,145,,,,,,,145,82.5,F,Наталья Бако,1973,Multi-ply,B
+1,Viktoriya Sheludko,O,Russia,82.7,,,,,,180,192.5,200,200,-210,,,,,,200,90,F,Виктория Шелудько,1973,Multi-ply,B
+2,Hanne Bingle,O,UK,83.7,,,,,,110,-120,120,120,-125,,,,,,120,90,F,,1959,Multi-ply,B
+1,Eleonore Lucas,M2,Germany,87.1,,,,,,95,102.5,107.5,107.5,,,,,,,107.5,90,F,,1962,Multi-ply,B
+1,Hanne Bingle,M3,UK,83.7,,,,,,110,-120,120,120,-125,,,,,,120,90,F,,1959,Multi-ply,B
+1,Tarja Rantanen,M3,Finland,91,,,,,,130,142.5,-150,142.5,,,,,,,142.5,90+,F,,1957,Multi-ply,B
+1,Ingeborg Hagge,M4,Germany,99,,,,,,-95,-103,103,103,,,,,,,103,90+,F,,1951,Multi-ply,B
+1,Semen Paley,T1,Russia,36.3,,,,,,30,35,37.5,37.5,,,,,,,37.5,52,M,Семен Палей,1999,Multi-ply,B
+1,Mohammed Youssef,J,Egypt,51.9,,,,,,120,-125,140,140,,,,,,,140,52,M,,,Multi-ply,B
+1,Mohammed Youssef,O,Egypt,56,,,,,,125,-135,135,135,,,,,,,135,56,M,,,Multi-ply,B
+2,Alizhan Eschchanov,O,Russia,52.6,,,,,,65,70,75,75,,,,,,,75,56,M,Алижан Ещчанов,1974,Multi-ply,B
+1,Barrie Brown,M4,UK,59.2,,,,,,65,-80,80,80,,,,,,,80,60,M,,1951,Multi-ply,B
+1,Dávid Pankuch,T2,Slovakia,67.4,,,,,,90,100,107.5,107.5,,,,,,,107.5,67.5,M,,1992,Multi-ply,B
+1,Semen Filyakin,T3,Russia,66.6,,,,,,140,150,-160,150,,,,,,,150,67.5,M,Семён Филякин,1991,Multi-ply,B
+1,Amro Elaziz,J,Egypt,65.8,,,,,,90,112.5,-115,112.5,,,,,,,112.5,67.5,M,,,Multi-ply,B
+1,Amro Elaziz,O,Egypt,64.5,,,,,,90,100,-110,100,,,,,,,100,67.5,M,,,Multi-ply,B
+1,Charles Morse,M1,USA,66.9,,,,,,142.5,-157.5,-157.5,142.5,,,,,,,142.5,67.5,M,,1966,Multi-ply,B
+1,Budgie Mullan,M6,UK,65.3,,,,,,85,92.5,-97.5,92.5,,,,,,,92.5,67.5,M,,1943,Multi-ply,B
+1,Iosif Plagov,M7,USA,65.3,,,,,,80,85,87.5,87.5,,,,,,,87.5,67.5,M,,1935,Multi-ply,B
+2,Yuri Kiselev,M7,Russia,63.4,,,,,,70,75,80,80,,,,,,,80,67.5,M,Юрий Киселев,1937,Multi-ply,B
+1,David Benkik,T2,Slovakia,73.8,,,,,,85,92.5,100,100,,,,,,,100,75,M,,,Multi-ply,B
+1,Ilya Kokorev,O,Russia,74,,,,,,222.5,-230,230,230,,,,,,,230,75,M,Илья Кокорев,1973,Multi-ply,B
+2,Ibrahim Abukala,O,Egypt,73.8,,,,,,170,185,-190,185,,,,,,,185,75,M,,1966,Multi-ply,B
+DQ,Vincent Eldin,O,France,73.5,,,,,,-170,-180,-180,,,,,,,,,75,M,,1972,Multi-ply,B
+1,Abou Kahla Ibarhim,M1,Egypt,74.4,,,,,,170,185,-190,185,,,,,,,185,75,M,,1966,Multi-ply,B
+2,Sergey Trukhnin,M1,Russia,75,,,,,,150,160,-170,160,,,,,,,160,75,M,Сергей Трухнин,1965,Multi-ply,B
+1,David Mannering,M2,UK,74.2,,,,,,135,180,195,195,,,,,,,195,75,M,,1960,Multi-ply,B
+1,Michel Faugue,M3,France,73.7,,,,,,140,-150,-150,140,,,,,,,140,75,M,,1959,Multi-ply,B
+DQ,Peter Collins Allan,M4,UK,69.4,,,,,,-130,-130,-130,,,,,,,,,75,M,,1951,Multi-ply,B
+1,Christopher Glover,T2,UK,78.2,,,,,,135,-142.5,147.5,147.5,,,,,,,147.5,82.5,M,,1992,Multi-ply,B
+1,Bassem Yosry,J,Egypt,82.5,,,,,,170,205,-210,205,,,,,,,205,82.5,M,,,Multi-ply,B
+1,Evgeniy Rusakov,O,Russia,81.8,,,,,,210,230,235,235,,,,,,,235,82.5,M,Евгений Русаков,1980,Multi-ply,B
+2,Clifford Richards,O,UK,82.5,,,,,,215,-225,-225,215,,,,,,,215,82.5,M,,1978,Multi-ply,B
+3,Bassem Elsayed,O,Egypt,82.4,,,,,,190,202.5,-205,202.5,,,,,,,202.5,82.5,M,,,Multi-ply,B
+4,Didier Lebrun,O,France,81.2,,,,,,140,150,-167.5,150,,,,,,,150,82.5,M,,1972,Multi-ply,B
+1,Neil Finnemore,M1,UK,81.4,,,,,,140,150,-160,150,,,,,,,150,82.5,M,,1968,Multi-ply,B
+1,Sergey Lopatin,M2,Russia,78.7,,,,,,150,-160,-160,150,,,,,,,150,82.5,M,Сергей Лопатин,1960,Multi-ply,B
+1,Didier Theux,M3,France,82.5,,,,,,175,185,-200,185,,,,,,,185,82.5,M,,1958,Multi-ply,B
+1,Sergei Druzhkov,M4,Russia,82.5,,,,,,-175,175,-193,175,,,,,,,175,82.5,M,Сергей Дружков,1950,Multi-ply,B
+1,Scott Craig,M5,USA,80,,,,,,192.5,200,205,205,-210,,,,,,205,82.5,M,,1946,Multi-ply,B
+1,Yuriy Chepets,M6,Russia,78.2,,,,,,170,177.5,182.5,182.5,185,,,,,,182.5,82.5,M,Юрий Чепец,1943,Multi-ply,B
+1,Marcus Heuer,T2,Germany,83.7,,,,,,170,-185,-185,170,,,,,,,170,90,M,,1992,Multi-ply,B
+1,Máté Szilágyi,T3,Hungary,85,,,,,,190,-220,-220,190,,,,,,,190,90,M,,1991,Multi-ply,B
+1,Evgeniy Nechaev,O,Russia,89.9,,,,,,290,305,313,313,,,,,,,313,90,M,Евгений Нечаев,1978,Multi-ply,B
+2,Sahib Ahmadov Mustafa,O,Azerbaijan,89.5,,,,,,265,,-305,265,,,,,,,265,90,M,,1980,Multi-ply,B
+3,Khaled Abd Rabou,O,Egypt,89.8,,,,,,220,230,-245,230,,,,,,,230,90,M,,1968,Multi-ply,B
+4,Didier Theux,O,France,85,,,,,,175,-200,200,200,,,,,,,200,90,M,,1958,Multi-ply,B
+5,Riad Shabana Ashraf,O,Egypt,90,,,,,,-190,190,-210,190,,,,,,,190,90,M,,1962,Multi-ply,B
+6,Patrick Rollot,O,France,85.8,,,,,,-185,-185,185,185,,,,,,,185,90,M,,1965,Multi-ply,B
+DQ,Gareth Davies,O,UK,89.5,,,,,,-242.5,-242.5,-247.5,,,,,,,,,90,M,,,Multi-ply,B
+1,Khaled Abd Rabou,M1,Egypt,90,,,,,,220,230,-240,230,,,,,,,230,90,M,,1968,Multi-ply,B
+1,Riad Shabana Ashraf,M2,Egypt,89.4,,,,,,180,200,-210,200,,,,,,,200,90,M,,1962,Multi-ply,B
+2,Phil Beniston,M2,UK,89.9,,,,,,182.5,200,-207.5,200,,,,,,,200,90,M,,1963,Multi-ply,B
+1,Valeriy Akentyev,M3,Russia,89.6,,,,,,-190,-190,190,190,,,,,,,190,90,M,Валерий Акентьев,1958,Multi-ply,B
+2,Alain-Francis Mattei,M3,France,89.5,,,,,,160,-185,185,185,,,,,,,185,90,M,,1955,Multi-ply,B
+3,Tracy Frein,M3,USA,89.9,,,,,,180,-187.5,-200,180,,,,,,,180,90,M,,1958,Multi-ply,B
+1,Klaus Krüger,M4,Germany,89.6,,,,,,200,210,-215,210,,,,,,,210,90,M,,1952,Multi-ply,B
+1,Evgeniy Khudoleev,M5,Russia,87.1,,,,,,160,170,-177.5,170,,,,,,,170,90,M,Евгений Худолеев,1946,Multi-ply,B
+1,Phil Coenen,T3,Germany,96,,,,,,180,190,-200,190,,,,,,,190,100,M,,1991,Multi-ply,B
+1,Janutis Darius,J,Lithuania,96.6,,,,,,190,205,210,210,,,,,,,210,100,M,,1986,Multi-ply,B
+1,Andrey Paley,O,Russia,99.8,,,,,,290,-302.5,305,305,,,,,,,305,100,M,Андрей Палей,1961,Multi-ply,B
+2,Michał Wilk,O,Poland,99,,,,,,-290,290,302.5,302.5,,,,,,,302.5,100,M,,1981,Multi-ply,B
+3,Mohamed Harmy,O,Egypt,92.4,,,,,,160,175,-180,175,,,,,,,175,100,M,,,Multi-ply,B
+DQ,Mark Cullimore,O,UK,99.6,,,,,,-255,-265,-275,,,,,,,,,100,M,,1965,Multi-ply,B
+DQ,Zoltán Csepregi,O,Hungary,99.8,,,,,,-325,-325,-325,,,,,,,,,100,M,,1975,Multi-ply,B
+1,Joseph Martin,M2,USA,99.4,,,,,,-227.5,227.5,-237.5,227.5,,,,,,,227.5,100,M,,1963,Multi-ply,B
+1,James Pinckard,M3,USA,97.9,,,,,,235,242.5,-245,242.5,,,,,,,242.5,100,M,,1959,Multi-ply,B
+2,Alain-Francis Mattei,M3,France,92.4,,,,,,170,190,200,200,,,,,,,200,100,M,,1955,Multi-ply,B
+1,Kai-Oskari Lehtinen,J,Finland,105,,,,,,220,235,-240,235,,,,,,,235,110,M,,1989,Multi-ply,B
+2,Oliver Williamson,J,UK,108.5,,,,,,205,220,227.5,227.5,-240,,,,,,227.5,110,M,,1985,Multi-ply,B
+1,Aleksandr Tretyakov,O,Russia,108.5,,,,,,-317.5,317.5,327.5,327.5,,,,,,,327.5,110,M,Александр Третьяков,1967,Multi-ply,B
+2,Dmitry Gorbachev,O,Russia,108.9,,,,,,315,325,-330,325,,,,,,,325,110,M,Дмитрий Горбачев,1970,Multi-ply,B
+DQ,Eric Platel,O,France,101.9,,,,,,-232.5,-232.5,-232.5,,,,,,,,,110,M,,1971,Multi-ply,B
+DQ,Matt Minuth,O,USA,106.2,,,,,,-410,-410,-410,,,,,,,,,110,M,,1980,Multi-ply,B
+DQ,Didier Michelon,O,France,108.5,,,,,,-300,-305,,,,,,,,,,110,M,,1963,Multi-ply,B
+1,Aleksandr Tretyakov,M1,Russia,109.2,,,,,,-330,-330,330,330,-342.5,,,,,,330,110,M,Александр Третьяков,1967,Multi-ply,B
+1,Andrey Paley,M2,Russia,106,,,,,,310,320,-325,320,,,,,,,320,110,M,Андрей Палей,1961,Multi-ply,B
+2,Didier Michelon,M2,France,108.6,,,,,,-270,270,-300,270,,,,,,,270,110,M,,1963,Multi-ply,B
+3,Michal Berezňák,M2,Slovakia,100.4,,,,,,185,-200,,185,,,,,,,185,110,M,,1963,Multi-ply,B
+DQ,Raafat Seodi,M2,Egypt,110,,,,,,,,,,,,,,,,,110,M,,1961,Multi-ply,B
+1,Anthony Bartolomei,M3,USA,108.6,,,,,,250,260,-265,260,,,,,,,260,110,M,,1958,Multi-ply,B
+1,Ross Saldan,M4,Canada,107.5,,,,,,207.5,-237.5,-237.5,207.5,,,,,,,207.5,110,M,,1953,Multi-ply,B
+1,Igor Goldman,M8,Russia,105.2,,,,,,-140,140,162.5,162.5,,,,,,,162.5,110,M,Игорь Гольдман,1933,Multi-ply,B
+1,Viktor Malyugin,T3,Russia,123.5,,,,,,265,280,285,285,,,,,,,285,125,M,Виктор Малюгин,1990,Multi-ply,B
+1,Alexey Neklyudov,O,Russia,111.4,,,,,,-310,310,320,320,,,,,,,320,125,M,Алексей Неклюдов,1964,Multi-ply,B
+2,Dmitriy Permyakov,O,Russia,114.1,,,,,,-300,-300,302.5,302.5,,,,,,,302.5,125,M,Дмитрий Пермяков,1975,Multi-ply,B
+3,Allan Meehan,O,Canada,124,,,,,,-292.5,302.5,-325,302.5,,,,,,,302.5,125,M,,1972,Multi-ply,B
+4,Petteri Hosio Henrik,O,Finland,117.7,,,,,,285,-295,295,295,,,,,,,295,125,M,,1979,Multi-ply,B
+5,Eemeli Ylitalo-James Kalle,O,Finland,122.1,,,,,,-280,280,-302.5,280,,,,,,,280,125,M,,1983,Multi-ply,B
+6,Bratanov Vadim,O,Russia,123.4,,,,,,260,280,-290,280,,,,,,,280,125,M,Братанов Вадим,,Multi-ply,B
+7,Alexander Lebedev,O,Russia,117,,,,,,260,-275,275,275,,,,,,,275,125,M,Александр Лебедев,1980,Multi-ply,B
+8,Ben Williams,O,UK,118.9,,,,,,260,272.5,-280,272.5,,,,,,,272.5,125,M,,,Multi-ply,B
+9,Graham Mattison,O,UK,124.4,,,,,,250,-262.5,262.5,262.5,,,,,,,262.5,125,M,,1980,Multi-ply,B
+10,Jakub Vraspir,O,Czechia,118.2,,,,,,240,252.5,-262.5,252.5,,,,,,,252.5,125,M,,1978,Multi-ply,B
+11,John LaComb,O,USA,117.7,,,,,,220,230,-260,230,,,,,,,230,125,M,,1967,Multi-ply,B
+12,Matthias Joeks,O,Germany,120.7,,,,,,230,-250,-255,230,,,,,,,230,125,M,,1984,Multi-ply,B
+DQ,Petter Elvekrok,O,Norway,121.8,,,,,,-212.5,-227.5,-235,,,,,,,,,125,M,,1969,Multi-ply,B
+DQ,Daniel Dvořák,O,Czechia,120.3,,,,,,-300,-302.5,-312.5,,,,,,,,,125,M,,1976,Multi-ply,B
+DQ,N. Pyshmintsev,O,Russia,123.1,,,,,,-302.5,-310,-312.5,,,,,,,,,125,M,Николай Пышминцев,1981,Multi-ply,B
+DQ,Mohamed Mohamed,O,Egypt,125,,,,,,-230,-230,,,,,,,,,,125,M,,1979,Multi-ply,B
+1,Petter Elvekrok,M1,Norway,120.4,,,,,,210,220,-227.5,220,,,,,,,220,125,M,,1969,Multi-ply,B
+DQ,John LaComb,M1,USA,116.2,,,,,,-235,-235,-235,,,,,,,,,125,M,,1967,Multi-ply,B
+1,Alexey Neklyudov,M2,Russia,112,,,,,,315,-330,-330,315,,,,,,,315,125,M,Алексей Неклюдов,1964,Multi-ply,B
+2,David Beattie,M2,UK,121.8,,,,,,265,290,-307.5,290,,,,,,,290,125,M,,1961,Multi-ply,B
+1,Pekka Rantanen,M3,Finland,115.8,,,,,,175,-190,-200,175,,,,,,,175,125,M,,1957,Multi-ply,B
+1,Alexander Maksimushkin,M4,Russia,110.5,,,,,,200,220,,220,,,,,,,220,125,M,Александр Максимушкин,1950,Multi-ply,B
+1,Ilkka Lukkainen,J,Finland,136.4,,,,,,310,320,335,335,-350,,,,,,335,140,M,,1986,Multi-ply,B
+DQ,Mike Guay,J,Canada,133.3,,,,,,-415,-455,-455,,,,,,,,,140,M,,1988,Multi-ply,B
+1,Richard Ligier,O,France,140,,,,,,-400,-400,400,400,-420,,,,,,400,140,M,,1974,Multi-ply,B
+2,Vladimir Maksimov,O,Russia,127.7,,,,,,380,-395,-402.5,380,,,,,,,380,140,M,Владимир Максимов,1966,Multi-ply,B
+3,Ilkka Lukkarinen,O,Finland,136.7,,,,,,335.5,-350,-350,335.5,,,,,,,335.5,140,M,,1988,Multi-ply,B
+4,Irakliy Kondzhariya,O,Russia,127.3,,,,,,325,-332.5,-335,325,,,,,,,325,140,M,Ираклий Конджария,1977,Multi-ply,B
+5,Lloyd Strang,O,UK,134.4,,,,,,260,285,-300,285,,,,,,,285,140,M,,1975,Multi-ply,B
+DQ,Attila Bánhidi,O,Hungary,140,,,,,,-290,-290,-300,,,,,,,,,140,M,,1970,Multi-ply,B
+DQ,Scot Mendelson,O,USA,134,,,,,,-467.5,-472.5,-472.5,,,,,,,,,140,M,,1969,Multi-ply,B
+1,Vladimir Maksimov,M1,Russia,130,,,,,,380,-390,400,400,,,,,,,400,140,M,Владимир Максимов,1966,Multi-ply,B
+DQ,Tomas Vesely,M1,Czechia,133.9,,,,,,,,,,,,,,,,,140,M,,1967,Multi-ply,B
+DQ,Kairevichius Virginijus,M2,Lithuania,134.1,,,,,,220,235,250.5,250.5,,,,,,,,140,M,,1960,Multi-ply,B
+1,Wolfgang Budd,M4,Germany,127.5,,,,,,147.5,192.5,-202.5,192.5,,,,,,,192.5,140,M,,1954,Multi-ply,B
+1,Ahmed Hassanin,J,Egypt,179.9,,,,,,-290,290,-320,290,,,,,,,290,140+,M,,1985,Multi-ply,B
+2,Chris Gearing,J,UK,167.2,,,,,,260,275,-285,275,,,,,,,275,140+,M,,1987,Multi-ply,B
+3,Mina Ebeed,J,Egypt,199.1,,,,,,150,220,,220,,,,,,,220,140+,M,,1988,Multi-ply,B
+1,Markku Kalliola Kari,O,Finland,167,,,,,,360,380,-400,380,,,,,,,380,140+,M,,1963,Multi-ply,B
+2,Alexey Brazhkin,O,Russia,141.6,,,,,,-290,290,302.5,302.5,,,,,,,302.5,140+,M,Алексей Бражкин,1971,Multi-ply,B
+3,Ahmed Hassanin,O,Egypt,180,,,,,,-280,280,300,300,,,,,,,300,140+,M,,1985,Multi-ply,B
+1,Aleksandr Podshibyakin,M2,Russia,160,,,,,,-250,250,260,260,,,,,,,260,140+,M,Александр Подшибякин,1969,Multi-ply,B
+1,Péter Mihály,M3,Slovakia,149.2,,,,,,200,-225,-251,200,,,,,,,200,140+,M,,1958,Multi-ply,B

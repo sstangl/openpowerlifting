@@ -501,6 +501,10 @@ pub enum Federation {
     #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
     UkrainePA,
 
+    /// Ukraine Powerlifting Organisation.
+    #[strum(to_string = "UkrainePO", serialize = "ukrainepo")]
+    UkrainePO,
+
     /// United Powerlifting Association.
     #[strum(to_string = "UPA", serialize = "upa")]
     UPA,
@@ -568,11 +572,6 @@ pub enum Federation {
     /// World Powerlifting Committee.
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
-    
-    /// Finnish WPC affiliate.
-    #[serde(rename = "WPC-Finland")]
-    #[strum(to_string = "WPC-Finland", serialize = "wpc-finland")]
-    WPCFinland,
 
     /// German WPC affiliate.
     #[serde(rename = "WPC-Germany")]
@@ -758,6 +757,7 @@ impl Federation {
             Federation::SVNL => true,
             Federation::THSPA => true,
             Federation::UkrainePA => false,
+            Federation::UkrainePO => false,
             Federation::UPA => false,
             Federation::UPC => false,
             Federation::UkrainePF => true,
@@ -775,7 +775,6 @@ impl Federation {
             Federation::WPARUS => false,
             Federation::WPAU => false,
             Federation::WPC => false,
-            Federation::WPCFinland => false,
             Federation::WPCGermany => false,
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
@@ -912,6 +911,7 @@ impl Federation {
             Federation::SVNL => Some(Country::Finland),
             Federation::THSPA => Some(Country::USA),
             Federation::UkrainePA => Some(Country::Ukraine),
+            Federation::UkrainePO => Some(Country::Ukraine),
             Federation::UPA => Some(Country::USA),
             Federation::UPC => Some(Country::Ukraine),
             Federation::UkrainePF => Some(Country::Ukraine),
@@ -929,7 +929,6 @@ impl Federation {
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
-            Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCGermany => Some(Country::Germany),
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),

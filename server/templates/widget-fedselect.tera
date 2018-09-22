@@ -129,7 +129,6 @@
   <option value="all-finland" {% if selection.federation == "AllFinland" %}selected{% endif %}>{{strings.selectors.fed.all_finland}}</option>
   <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA]</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL - Suomen Voimanostoliitto ry [IPF]</option>
-  <option value="wpcfinland" {% if selection.federation == "WPC-FINLAND" %}selected{% endif %}>WPC-Finland - WPC Finland</option>
 </optgroup>
 <optgroup label="{{strings.country.france}}">
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
@@ -223,6 +222,7 @@
   <option value="ukrpa" {% if selection.federation == "UkrainePA" %}selected{% endif %}>Ukraine Powerlifting Association</option>
   <option value="upc" {% if selection.federation == "UPC" %}selected{% endif %}>Ukrainian Powerlifting Committee</option>
   <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>Ukrainian Powerlifting Federation</option>
+  <option value="ukrainepo" {% if selection.federation == "UkrainePO" %}selected{% endif %}>Ukrainian Powerlifting Organisation [WUAP]</option>
   <option value="wpau" {% if selection.federation == "WPAU" %}selected{% endif %}>WPAU - World Powerlifting Alliance Ukraine [WPA]</option>
   <option value="wpcukr" {% if selection.federation == "WPC-UKR" %}selected{% endif %}>WPC-UKR - WPC Ukraine</option>
   <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>

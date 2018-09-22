@@ -1,8 +1,8 @@
 Division,Event,Sex,WeightClassKg,Equipment,Name,Age,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Place
 Amateur Teen 16-17,SBD,F,56,Multi-ply,Victoria Breuer,,102.06,49.9,,108.86,,260.82,1
 Amateur Teen 16-17,SBD,F,67.5,Multi-ply,Kelly Klink,,90.72,49.9,,120.2,,260.82,1
-Amateur Open,SBD,F,48,Wraps,Sarah Hunt,,58.97,31.75,,79.38,,170.1,1
-Amateur Open,SBD,F,90,Wraps,Nicole Miller,,158.76,117.93,,165.56,179.17,442.25,1
+Amateur Open,SBD,F,48,Raw,Sarah Hunt,,58.97,31.75,,79.38,,170.1,1
+Amateur Open,SBD,F,90,Raw,Nicole Miller,,158.76,117.93,,165.56,179.17,442.25,1
 Amateur Youth,SBD,F,44,Raw,Gabby Reyes-Cooke,11,34.02,24.95,,52.16,,111.13,1
 Amateur Youth,SBD,F,48,Raw,Sarah Hunt,9,58.97,31.75,,79.38,,170.1,1
 Open,SBD,F,48,Multi-ply,Elaine Grimwood,,149.69,90.72,,149.69,156.49,390.09,1
@@ -17,21 +17,21 @@ Amateur Teen 16-17,SBD,M,82.5,Multi-ply,Anthony Mastrandren,,154.22,113.4,,167.8
 Amateur Teen 16-17,SBD,M,90,Multi-ply,R.J. Coletti,,129.27,124.74,,183.7,,437.72,1
 Amateur Teen 16-17,SBD,M,75,Multi-ply,Jordan Hall,,142.88,95.25,,170.1,,408.23,3
 Amateur Teen 16-17,SBD,M,140,Multi-ply,Jake McAlpine,,272.16,188.24,,249.48,,709.87,1
-Amateur Teen 14-15,SBD,M,67.5,Wraps,Tyler Newcomb,,113.4,77.11,,158.76,,349.27,1
-Amateur Teen 16-17,SBD,M,75,Wraps,Brandon Mose,,176.9,140.61,,226.8,,544.31,1
-Amateur Teen 16-17,SBD,M,75,Wraps,Collin Koser,,124.74,74.84,,189.37,,388.96,2
-Amateur Teen 16-17,SBD,M,75,Wraps,Elijah Ruth,,115.67,86.18,,163.29,,365.14,3
-Amateur Teen 16-17,SBD,M,125,Wraps,Robert Thompson,,206.38,176.9,,272.16,,655.44,1
+Amateur Teen 14-15,SBD,M,67.5,Raw,Tyler Newcomb,,113.4,77.11,,158.76,,349.27,1
+Amateur Teen 16-17,SBD,M,75,Raw,Brandon Mose,,176.9,140.61,,226.8,,544.31,1
+Amateur Teen 16-17,SBD,M,75,Raw,Collin Koser,,124.74,74.84,,189.37,,388.96,2
+Amateur Teen 16-17,SBD,M,75,Raw,Elijah Ruth,,115.67,86.18,,163.29,,365.14,3
+Amateur Teen 16-17,SBD,M,125,Raw,Robert Thompson,,206.38,176.9,,272.16,,655.44,1
 Amateur Open,SBD,M,75,Multi-ply,Michael Kemper Jr,,247.21,136.08,,244.94,,628.23,1
 Amateur Open,SBD,M,125,Multi-ply,Tim Davis,,294.84,206.38,,240.4,,741.62,3
 Amateur Open,SBD,M,140,Multi-ply,George Underwood,,351.53,238.14,,265.35,,855.02,1
 Amateur Masters 40-44,SBD,M,140,Multi-ply,Paul Hilliard,,324.32,263.08,,272.16,,859.56,1
 Amateur Masters 55-59,SBD,M,140+,Multi-ply,Lester Jordan,,249.48,127.01,,181.44,,557.92,1
-Amateur Juniors,SBD,M,100,Wraps,Casey Williams,,240.4,183.7,,274.42,,698.53,1
-Amateur Open,SBD,M,82.5,Wraps,Larry Dyles,,183.7,165.56,,183.7,,532.97,1
-Amateur Open,SBD,M,110,Wraps,Chris Della Fave,,249.48,192.78,,340.19,351.53,782.45,1
-Amateur Open,SBD,M,140,Wraps,Nate Henderson #1,,210.92,149.69,,226.8,,587.4,1
-Amateur Masters 55-59,SBD,M,75,Wraps,Douglas Kline,,149.69,120.2,,183.7,190.51,453.59,1
+Amateur Juniors,SBD,M,100,Raw,Casey Williams,,240.4,183.7,,274.42,,698.53,1
+Amateur Open,SBD,M,82.5,Raw,Larry Dyles,,183.7,165.56,,183.7,,532.97,1
+Amateur Open,SBD,M,110,Raw,Chris Della Fave,,249.48,192.78,,340.19,351.53,782.45,1
+Amateur Open,SBD,M,140,Raw,Nate Henderson #1,,210.92,149.69,,226.8,,587.4,1
+Amateur Masters 55-59,SBD,M,75,Raw,Douglas Kline,,149.69,120.2,,183.7,190.51,453.59,1
 Juniors,SBD,M,110,Multi-ply,Kevin Baughman,,328.85,290.3,,272.16,,891.31,1
 Open,SBD,M,100,Multi-ply,Pat Helber,,306.17,181.44,,272.16,,759.77,1
 Open,SBD,M,110,Multi-ply,Vincent Cooke,,351.53,340.19,,299.37,,991.1,1
@@ -44,11 +44,11 @@ Masters 55-59,SBD,M,125,Multi-ply,John Mattei,,319.78,254.01,,274.42,,848.22,1
 Masters 55-59,SBD,M,140+,Multi-ply,Lester Jordan,,249.48,127.01,,181.44,,557.92,2
 Masters 70-74,SBD,M,67.5,Multi-ply,Fred Glass,,147.42,43.09,,161.03,,351.53,1
 Police,SBD,M,125,Multi-ply,Benjamin Fields,,328.85,226.8,,292.57,,848.22,1
-Open,SBD,M,110,Wraps,Matt Foulk,,170.1,129.27,,215.46,,514.83,2
-Open,SBD,M,125,Wraps,Joe Drumm,,299.37,181.44,,294.84,,775.64,1
-Submasters,SBD,M,140,Wraps,Joshua Held,,215.46,170.1,,226.8,,612.35,1
-Masters 65-69,SBD,M,82.5,Wraps,Patrick Mullaney,,136.08,136.08,,181.44,,453.59,1
-Masters 40-44,SBD,M,110,Wraps,Jon Tenbroeck,,256.28,183.7,,256.28,272.16,696.26,1
+Open,SBD,M,110,Raw,Matt Foulk,,170.1,129.27,,215.46,,514.83,2
+Open,SBD,M,125,Raw,Joe Drumm,,299.37,181.44,,294.84,,775.64,1
+Submasters,SBD,M,140,Raw,Joshua Held,,215.46,170.1,,226.8,,612.35,1
+Masters 65-69,SBD,M,82.5,Raw,Patrick Mullaney,,136.08,136.08,,181.44,,453.59,1
+Masters 40-44,SBD,M,110,Raw,Jon Tenbroeck,,256.28,183.7,,256.28,272.16,696.26,1
 Amateur Open,BD,M,90,Multi-ply,David Thompson,,,129.27,,244.94,,374.21,1
 Amateur Open,BD,M,110,Multi-ply,Darren Hess,,,195.04,,281.23,,476.27,2
 Amateur Masters 60-64,BD,M,110,Multi-ply,Raymond Harper Sr,,,161.03,,285.76,,446.79,1
