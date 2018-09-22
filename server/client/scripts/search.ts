@@ -12,14 +12,13 @@ export interface SearchRankingsResult {
 
 // Parameters for a possible remote request.
 export interface SearchWorkItem {
-    query: string;
+    path: string;  // The URL path.
+    query: string;  // The search query.
     startRow: number;  // Inclusive.
 }
 
 // Creates a function that manages AJAX requests to the rankings search endpoint.
-export function RankingsSearcher(
-    selection: string,  // For forming URLs.
-) {
+export function RankingsSearcher() {
     const AJAX_TIMEOUT = 50;  // Milliseconds before making AJAX request.
 
     let activeTimeout: number = null;  // Timeout before making AJAX request.
@@ -35,11 +34,11 @@ export function RankingsSearcher(
         // Remove some characters that will cause malformed URLs.
         const query = item.query.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
         const startRow = Math.max(item.startRow, 0);
-        return `/api/search/rankings${selection}?q=${query}&start=${startRow}`;
+        return `/api/search/rankings${item.path}?q=${query}&start=${startRow}`;
     }
 
     // Cancels any pending or active AJAX calls.
-    function cancelAllRequests(): void {
+    function terminateAllRequests(): void {
         if (activeAjaxRequest !== null) {
             activeAjaxRequest.abort();
             activeAjaxRequest = null;
@@ -83,7 +82,7 @@ export function RankingsSearcher(
     }
 
     function search(item: SearchWorkItem): void {
-        cancelAllRequests();
+        terminateAllRequests();
         pendingItem = item;
         activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
     }
@@ -91,6 +90,7 @@ export function RankingsSearcher(
     return {
         // Methods.
         "search": search,
+        "terminateAllRequests": terminateAllRequests,
 
         // Events.
         "onSearchFound": onSearchFound,

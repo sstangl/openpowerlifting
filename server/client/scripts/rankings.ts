@@ -12,24 +12,38 @@ declare var Slick;
 
 // Variables provided by the server.
 declare const initial_data;
-declare const translation_column_formulaplace: String;
-declare const translation_column_liftername: String;
-declare const translation_column_federation: String;
-declare const translation_column_date: String;
-declare const translation_column_location: String;
-declare const translation_column_sex: String;
-declare const translation_column_age: String;
-declare const translation_column_equipment: String;
-declare const translation_column_weightclass: String;
-declare const translation_column_bodyweight: String;
-declare const translation_column_squat: String;
-declare const translation_column_bench: String;
-declare const translation_column_deadlift: String;
-declare const translation_column_total: String;
-declare const translation_column_points: String;
+declare const translation_column_formulaplace: string;
+declare const translation_column_liftername: string;
+declare const translation_column_federation: string;
+declare const translation_column_date: string;
+declare const translation_column_location: string;
+declare const translation_column_sex: string;
+declare const translation_column_age: string;
+declare const translation_column_equipment: string;
+declare const translation_column_weightclass: string;
+declare const translation_column_bodyweight: string;
+declare const translation_column_squat: string;
+declare const translation_column_bench: string;
+declare const translation_column_deadlift: string;
+declare const translation_column_total: string;
+declare const translation_column_wilks: string;
+declare const translation_column_mcculloch: string;
+declare const translation_column_glossbrenner: string;
 
-let global_grid;
-let global_data;
+let global_grid;  // The SlickGrid.
+let global_cache;  // The active RemoteCache rendered in the SlickGrid.
+
+// A RemoteCache in line to replace the global_cache, but which hasn't
+// had its initial data loaded yet, and is still waiting on an AJAX response.
+//
+// The pending_cache is swapped to overwrite the global_cache when its onFirstLoad
+// event fires, by the event handler. Swapping only when data is available avoids
+// flickering. The concept is similar to the double-sided OpenGL framebuffer.
+let pending_cache;
+
+// Tells an event handler to not create a new history state.
+// Used when navigating backwards/forwards, instead of by changing a selector.
+let global_suppress_history_changes: boolean = false;
 
 let searcher;
 let searchInfo = {laststr: ''};
@@ -47,11 +61,13 @@ let searchField: HTMLInputElement;
 let searchButton: HTMLButtonElement;
 
 
-function makeDataProvider(cache) {
+// Refers to the global_cache for replacing the underlying RemoteCache
+// when selectors change.
+function makeDataProvider() {
     return {
-        getLength: function() { return cache.length; },
+        getLength: function() { return global_cache.getLength(); },
         getItem: function(idx) {
-            let entry: (string | number)[] = cache.rows[idx];
+            let entry: (string | number)[] = global_cache.rows[idx];
             if (entry === undefined) {
                 return;
             }
@@ -129,8 +145,33 @@ function search() {
     }
 
     // Queue up an AJAX request.
-    searcher.search({query: query, startRow: startRow});
+    searcher.search({path: selection_to_path(), query: query, startRow: startRow});
     searchInfo.laststr = query;
+}
+
+function setSortColumn(): void {
+    let sortcol = "points";
+    if (selSort.value === "by-squat") {
+        sortcol = "squat";
+    } else if (selSort.value === "by-bench") {
+        sortcol = "bench";
+    } else if (selSort.value === "by-deadlift") {
+        sortcol = "deadlift";
+    } else if (selSort.value === "by-total") {
+        sortcol = "total";
+    }
+    global_grid.setSortColumn(sortcol, false); // Sort descending.
+}
+
+function selection_to_points_title(): string {
+    let sort = selSort.value;
+    if (sort === "by-mcculloch") {
+        return translation_column_mcculloch;
+    }
+    if (sort === "by-glossbrenner") {
+        return translation_column_glossbrenner;
+    }
+    return translation_column_wilks;
 }
 
 // Returns a string like "/raw/uspa", or the empty string
@@ -164,23 +205,100 @@ function selection_to_path(): string {
     return url;
 }
 
+// Save the current selection, for use with pushing history state.
+function saveSelectionState() {
+    return {
+        "equipment": selEquipment.value,
+        "weightclass": selWeightClass.value,
+        "federation": selFed.value,
+        "sex": selSex.value,
+        "ageclass": selAgeClass.value,
+        "year": selYear.value,
+        "event": selEvent.value,
+        "sort": selSort.value
+    };
+}
+
+// Load the current selection, for use with popping history state.
+function restoreSelectionState(state) {
+    // Although the selectors are being changed in this function,
+    // we don't want the changeSelection() event handler to have any effect.
+    removeAllSelectorListeners();
+
+    selEquipment.value = state["equipment"];
+    selWeightClass.value = state["weightclass"];
+    selFed.value = state["federation"];
+    selSex.value = state["sex"];
+    selAgeClass.value = state["ageclass"];
+    selYear.value = state["year"];
+    selEvent.value = state["event"];
+    selSort.value = state["sort"];
+
+    addAllSelectorListeners();
+}
+
 // When selectors are changed, the URL in the address bar should
 // change to match.
-function reload() {
+function changeSelection() {
     let path = selection_to_path();
+    let url = path ? ("/rankings" + path) : "/";
 
-    if (path === "") {
-        window.location.href = "/";
-    } else {
-        window.location.href = "/rankings" + path;
+    // Adding new history state is suppressed when this function is used
+    // to cause data updates on back/forward site navigation.
+    if (global_suppress_history_changes === false) {
+        history.pushState(saveSelectionState(), "", url);
     }
+
+    // Updates the global_cache -- but there's no underlying data yet.
+    let cache = makeRemoteCache(path, false);
+
+    // The AJAX request has to be forced because the length is unknown,
+    // so the normal bounds-checking logic doesn't apply here.
+    cache.forceData({ startRow: 0, endRow: 99 });
+
+    // If the selection changed while a previous RemoteCache request
+    // was pending, terminate that request so it doesn't race with this one.
+    searcher.terminateAllRequests();
+    if (pending_cache !== undefined) {
+        pending_cache.terminateActiveRequests();
+    }
+    pending_cache = cache;
+
 }
 
 function addSelectorListeners(selector) {
-    selector.addEventListener("change", reload);
+    selector.addEventListener("change", changeSelection);
 }
 
-function addEventListeners() {
+// Used when navigating through history: otherwise navigation
+// would add more history events.
+function removeSelectorListeners(selector) {
+    selector.removeEventListener("change", changeSelection);
+}
+
+function addAllSelectorListeners() {
+    addSelectorListeners(selEquipment);
+    addSelectorListeners(selWeightClass);
+    addSelectorListeners(selFed);
+    addSelectorListeners(selAgeClass);
+    addSelectorListeners(selYear);
+    addSelectorListeners(selSex);
+    addSelectorListeners(selEvent);
+    addSelectorListeners(selSort);
+}
+
+function removeAllSelectorListeners() {
+    removeSelectorListeners(selEquipment);
+    removeSelectorListeners(selWeightClass);
+    removeSelectorListeners(selFed);
+    removeSelectorListeners(selAgeClass);
+    removeSelectorListeners(selYear);
+    removeSelectorListeners(selSex);
+    removeSelectorListeners(selEvent);
+    removeSelectorListeners(selSort);
+}
+
+function initializeEventListeners() {
     selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
     selWeightClass = document.getElementById("weightclassselect") as HTMLSelectElement;
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
@@ -192,32 +310,92 @@ function addEventListeners() {
     searchField = document.getElementById("searchfield") as HTMLInputElement;
     searchButton = document.getElementById("searchbutton") as HTMLButtonElement;
 
-    addSelectorListeners(selEquipment);
-    addSelectorListeners(selWeightClass);
-    addSelectorListeners(selFed);
-    addSelectorListeners(selAgeClass);
-    addSelectorListeners(selYear);
-    addSelectorListeners(selSex);
-    addSelectorListeners(selEvent);
-    addSelectorListeners(selSort);
+    addAllSelectorListeners();
 
     searchField.addEventListener("keypress", searchOnEnter, false);
     searchButton.addEventListener("click", search, false);
 
     window.addEventListener("resize", onResize, false);
+    window.onpopstate = function(event) {
+        restoreSelectionState(event.state);
+        global_suppress_history_changes = true;
+        changeSelection();
+        global_suppress_history_changes = false;
+    }
+}
+
+// Creates a new RemoteCache, pointing at the given rankings endpoint URL.
+// Multiple RemoteCaches may exist simultaneously, but only one can be canonical
+// and have its events hooked up to the grid.
+function makeRemoteCache(path: string, use_initial_data: boolean) {
+    // Construct a new RemoteCache.
+    const langSelect = document.getElementById("langselect") as HTMLSelectElement;
+    const unitSelect = document.getElementById("weightunits") as HTMLSelectElement;
+
+    let data = use_initial_data ? initial_data : null;
+    let cache = RemoteCache("TESTING", data, path, langSelect.value, unitSelect.value);
+
+    // Hook up event handlers.
+
+    // The first data load should replace the RemoteCache and realign
+    // the grid to the first position.
+    cache.onFirstLoad.subscribe(function (e, args: WorkItem) {
+        // For sanity checking, make sure this cache is actually intended
+        // to replace the active global_cache.
+        if (pending_cache !== cache) {
+            return;
+        }
+        pending_cache = undefined;
+
+        // Terminate any ongoing AJAX requests from the existing RemoteCache.
+        if (global_cache !== undefined) {
+            global_cache.terminateActiveRequests();
+        }
+        searcher.terminateAllRequests();
+
+        // Make this the One True Cache.
+        global_cache = cache;
+
+        // Change the Points title to have the right string.
+        global_grid.updateColumnHeader("points", selection_to_points_title());
+        setSortColumn();
+
+        // Invalidate everything.
+        global_grid.updateRowCount();
+        global_grid.invalidateAllRows();
+
+        // Move the grid into position.
+        global_grid.scrollRowToTop(args.startRow);
+        global_grid.render();
+    });
+
+    // Data loads after the first should let the grid know that new
+    // data is available by invalidating the current empty rows.
+    cache.onDataLoaded.subscribe(function (e, args: WorkItem) {
+        for (var i = args.startRow; i <= args.endRow; ++i) {
+            global_grid.invalidateRow(i);
+        }
+        global_grid.updateRowCount();
+        global_grid.render();
+    });
+
+    return cache;
 }
 
 function onLoad() {
-    addEventListeners();
+    initializeEventListeners();
 
-    // The server can pass initial data to the client.
-    // Check templates/rankings.html.tera.
-    if (initial_data) {
-        global_data = initial_data;
+    // Make sure that selector state is provided for each entry in history.
+    if (history.state !== null) {
+        // The page was loaded by navigating backwards from an external page.
+        restoreSelectionState(history.state);
     } else {
-        console.log("Failed to initialize data.");
+        // This is the first load of this page, navigating forwards:
+        // stash the current selection state in the history.
+        history.replaceState(saveSelectionState(), "", undefined);
     }
 
+    // Check templates/rankings.html.tera.
     const nameWidth = 200;
     const shortWidth = 40;
     const dateWidth = 70;
@@ -244,7 +422,7 @@ function onLoad() {
         {id: "bench", name: translation_column_bench, field: "bench", width: numberWidth},
         {id: "deadlift", name: translation_column_deadlift, field: "deadlift", width: numberWidth},
         {id: "total", name: translation_column_total, field: "total", width: numberWidth},
-        {id: "points", name: translation_column_points, field: "points", width: numberWidth}
+        {id: "points", name: selection_to_points_title(), field: "points", width: numberWidth}
     ];
 
     let options = {
@@ -256,44 +434,21 @@ function onLoad() {
         cellFlashingCssClass: "searchflashing"
     }
 
-    const langSelect = document.getElementById("langselect") as HTMLSelectElement;
-    const unitSelect = document.getElementById("weightunits") as HTMLSelectElement;
-
-    const language = langSelect.value;
-    const units = unitSelect.value;
-
-    let cache = RemoteCache("TESTING", initial_data, selection_to_path(), language, units);
-    global_grid = new Slick.Grid("#theGrid", makeDataProvider(cache), columns, options);
+    global_cache = makeRemoteCache(selection_to_path(), true);
+    global_grid = new Slick.Grid("#theGrid", makeDataProvider(), columns, options);
 
     // Hook up the cache.
     global_grid.onViewportChanged.subscribe(function (e, args) {
         var vp = global_grid.getViewport();
-        cache.ensureData({ startRow: vp.top, endRow: vp.bottom });
-    });
-    cache.onDataLoaded.subscribe(function (e, args: WorkItem) {
-        for (var i = args.startRow; i <= args.endRow; ++i) {
-            global_grid.invalidateRow(i);
-        }
-        global_grid.updateRowCount();
-        global_grid.render();
+        global_cache.ensureData({ startRow: vp.top, endRow: vp.bottom });
     });
 
-    let sortcol = "points";
-    if (selSort.value === "by-squat") {
-        sortcol = "squat";
-    } else if (selSort.value === "by-bench") {
-        sortcol = "bench";
-    } else if (selSort.value === "by-deadlift") {
-        sortcol = "deadlift";
-    } else if (selSort.value === "by-total") {
-        sortcol = "total";
-    }
-    global_grid.setSortColumn(sortcol, false); // Sort descending.
+    setSortColumn();
     global_grid.resizeCanvas();
     global_grid.onViewportChanged.notify();
 
     // Hook up the searcher.
-    searcher = RankingsSearcher(selection_to_path());
+    searcher = RankingsSearcher();
     searcher.onSearchFound.subscribe(function (e, next_index: number) {
         const numColumns = global_grid.getColumns().length;
         global_grid.scrollRowToTop(next_index);

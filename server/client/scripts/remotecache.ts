@@ -67,7 +67,8 @@ export function RemoteCache(
     const AJAX_TIMEOUT = 50;  // Milliseconds before making AJAX request.
 
     let rows: ((string | number)[])[] = [];  // Array of cached row data.
-    const length: number = initialJson.total_length;
+    let length: number = 0;
+    let hadFirstLoad = false;
 
     let activeTimeout: number = null;  // Timeout before making AJAX request.
     let activeAjaxRequest: AjaxRequest = null;
@@ -79,16 +80,22 @@ export function RemoteCache(
 
     const onDataLoading = new Slick.Event();  // Data is currently loading.
     const onDataLoaded = new Slick.Event();  // Data has finished loading.
+    const onFirstLoad = new Slick.Event();  // An initial AJAX request finished.
+
+    function getLength(): number {
+        return length;
+    }
 
     // Single definition point for defining the URL endpoint.
     function makeApiUrl(item: WorkItem): string {
         const startRow = Math.max(item.startRow, 0);
-        const endRow = Math.min(item.endRow, length - 1);
+        const endRow = item.endRow;
         return `/api/rankings${selection}?start=${startRow}&end=${endRow}&lang=${language}&units=${units}`;
     }
 
     // Given more JSON data, add it to the rows array.
     function addRows(json): void {
+        length = json.total_length;
         for (let i = 0; i < json.rows.length; ++i) {
             const source: (string | number)[] = json.rows[i];
             const index = source[Column.SortedIndex] as number;
@@ -103,6 +110,15 @@ export function RemoteCache(
             activeTimeout = null;
         }
         pendingItem = null;
+    }
+
+    // Terminates any active AJAX calls and cancels any pending ones.
+    function terminateActiveRequests() {
+        if (activeAjaxRequest !== null) {
+            activeAjaxRequest.handle.abort();
+            activeAjaxRequest = null;
+        }
+        cancelPendingRequests();
     }
 
     // Ask for more data than is actually needed to cut down on the
@@ -157,7 +173,12 @@ export function RemoteCache(
         handle.addEventListener("load", function(e) {
             addRows(activeAjaxRequest.handle.response);
             activeAjaxRequest = null;
-            onDataLoaded.notify(item);
+            if (hadFirstLoad === true) {
+                onDataLoaded.notify(item);
+            } else {
+                onFirstLoad.notify(item);
+                hadFirstLoad = true;
+            }
 
             // Ensure any pendingItem is resolved if necessary.
             if (pendingItem !== null && activeTimeout === null) {
@@ -177,6 +198,16 @@ export function RemoteCache(
 
         // Notify that we've started loading some data.
         onDataLoading.notify(item);
+    }
+
+    // Forcibly load the data in the given inclusive range,
+    // without bounds checking.
+    function forceData(item: WorkItem): void {
+        // Ensure that an AJAX request will be made.
+        pendingItem = item;
+        if (activeTimeout === null) {
+            activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
+        }
     }
 
     // Check that the data in the given inclusive range is loaded.
@@ -203,26 +234,28 @@ export function RemoteCache(
             return;
         }
 
-        // Ensure that an AJAX request will be made.
-        pendingItem = { startRow: startRow, endRow: endRow };
-        if (activeTimeout === null) {
-            activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
-        }
+        forceData({ startRow: startRow, endRow: endRow });
     }
 
     // Initialization.
-    addRows(initialJson);
+    if (initialJson !== null) {
+        hadFirstLoad = true;
+        addRows(initialJson);
+    }
 
     return {
         // Properties.
         "rows": rows,
-        "length": length,
+        "getLength": getLength,
 
         // Methods.
         "ensureData": ensureData,
+        "forceData": forceData,
+        "terminateActiveRequests": terminateActiveRequests,
 
         // Events.
         "onDataLoading": onDataLoading,
-        "onDataLoaded": onDataLoaded
+        "onDataLoaded": onDataLoaded,
+        "onFirstLoad": onFirstLoad
     };
 }
