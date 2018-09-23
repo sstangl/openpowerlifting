@@ -59,6 +59,12 @@ impl WeightKg {
         }
     }
 
+    /// Whether the weight is negative, representing a failed lift.
+    #[inline]
+    pub fn is_failed(self) -> bool {
+        self < WeightKg::from_i32(0)
+    }
+
     pub fn as_kg(self) -> WeightAny {
         WeightAny(self.0)
     }

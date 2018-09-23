@@ -595,6 +595,112 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
 }
 
+// Compares an attempt versus the current ascending weight.
+// Returns the new value for maxweight.
+fn process_attempt_pair(
+    lift: &str,
+    attempt_num: u32,
+    maxweight: WeightKg,
+    attempt: WeightKg,
+    line: u64,
+    report: &mut Report,
+) -> WeightKg {
+    // Only check the attempt if it was actually attempted.
+    if attempt == WeightKg::from_i32(0) {
+        return maxweight;
+    }
+
+    // If nothing has been attempted thus far, this is the new highest attempt.
+    if maxweight == WeightKg::from_i32(0) {
+        return attempt;
+    }
+
+    // The bar weight shouldn't have lowered.
+    if attempt.abs() < maxweight.abs() {
+        report.warning_on(line, format!("{}{}Kg '{}' lowered weight from '{}'",
+                                      lift, attempt_num, attempt, maxweight));
+    }
+
+    // A successful attempt shouldn't have been repeated.
+    if !maxweight.is_failed() && attempt.abs() == maxweight {
+        report.error_on(line, format!("{}{}Kg '{}' repeated a successful attempt",
+                                      lift, attempt_num, attempt));
+    }
+
+    if attempt.abs() >= maxweight.abs() {
+        attempt
+    } else {
+        maxweight
+    }
+}
+
+fn check_attempt_consistency_helper(
+    lift: &str,
+    attempt1: WeightKg,
+    attempt2: WeightKg,
+    attempt3: WeightKg,
+    attempt4: WeightKg,
+    best3lift: WeightKg,
+    line: u64,
+    report: &mut Report,
+) {
+    // Check that the bar weight is ascending over attempts.
+    let mut maxweight = process_attempt_pair(lift, 2, attempt1, attempt2, line, report);
+    maxweight = process_attempt_pair(lift, 3, maxweight, attempt3, line, report);
+    process_attempt_pair(lift, 4, maxweight, attempt4, line, report);
+
+    // Check the Best3Lift validity.
+    let best = attempt1.max(attempt2.max(attempt3));
+
+    // If the best attempt was successful, it should be in the Best3Lift.
+    if best > WeightKg::from_i32(0) && best != best3lift {
+        report.warning_on(line, format!("Best3{}Kg '{}' does not match best attempt '{}'",
+                                      lift, best3lift, best));
+    }
+
+    // If the best attempt was a failure, the least failure can be in the Best3Lift.
+    if best < WeightKg::from_i32(0) && best3lift != WeightKg::from_i32(0) {
+        if best != best3lift {
+            let s = format!("Best3{}Kg '{}' does not match least failed attempt '{}'",
+                            lift, best3lift, best);
+            report.error_on(line, s);
+        }
+    }
+}
+
+fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
+    // Check squat attempts.
+    match (entry.squat1kg, entry.squat2kg, entry.squat3kg,
+           entry.squat4kg, entry.best3squatkg)
+    {
+        (Some(s1), Some(s2), Some(s3), Some(s4), Some(best)) => {
+            check_attempt_consistency_helper("Squat", s1, s2, s3, s4, best, line, report);
+        }
+        _ => ()
+    };
+
+    // Check bench attempts.
+    match (entry.bench1kg, entry.bench2kg, entry.bench3kg,
+           entry.bench4kg, entry.best3benchkg)
+    {
+        (Some(b1), Some(b2), Some(b3), Some(b4), Some(best)) => {
+            check_attempt_consistency_helper("Bench", b1, b2, b3, b4, best, line, report);
+        }
+        _ => ()
+    };
+
+    // Check deadlift attempts.
+    match (entry.deadlift1kg, entry.deadlift2kg, entry.deadlift3kg,
+           entry.deadlift4kg, entry.best3deadliftkg)
+    {
+        (Some(d1), Some(d2), Some(d3), Some(d4), Some(best)) => {
+            check_attempt_consistency_helper("Deadlift", d1, d2, d3, d4,
+                                             best, line, report);
+        }
+        _ => ()
+    };
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -661,72 +767,104 @@ where
         if let Some(idx) = headers.get(Header::Squat1Kg) {
             entry.squat1kg =
                 check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
+        } else {
+            entry.squat1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat2Kg) {
             entry.squat2kg =
                 check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
+        } else {
+            entry.squat2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat3Kg) {
             entry.squat3kg =
                 check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
+        } else {
+            entry.squat3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat4Kg) {
             entry.squat4kg =
                 check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
+        } else {
+            entry.squat4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3SquatKg) {
             entry.best3squatkg =
                 check_weight(&record[idx], line, Header::Best3SquatKg, &mut report);
+        } else {
+            entry.best3squatkg = Some(WeightKg::from_i32(0));
         }
 
         // Bench.
         if let Some(idx) = headers.get(Header::Bench1Kg) {
             entry.bench1kg =
                 check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
+        } else {
+            entry.bench1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench2Kg) {
             entry.bench2kg =
                 check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
+        } else {
+            entry.bench2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench3Kg) {
             entry.bench3kg =
                 check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
+        } else {
+            entry.bench3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench4Kg) {
             entry.bench4kg =
                 check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
+        } else {
+            entry.bench4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3BenchKg) {
             entry.best3benchkg =
                 check_weight(&record[idx], line, Header::Best3BenchKg, &mut report);
+        } else {
+            entry.best3benchkg = Some(WeightKg::from_i32(0));
         }
 
         // Deadlift.
         if let Some(idx) = headers.get(Header::Deadlift1Kg) {
             entry.deadlift1kg =
                 check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
+        } else {
+            entry.deadlift1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift2Kg) {
             entry.deadlift2kg =
                 check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
+        } else {
+            entry.deadlift2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift3Kg) {
             entry.deadlift3kg =
                 check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
+        } else {
+            entry.deadlift3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift4Kg) {
             entry.deadlift4kg =
                 check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
+        } else {
+            entry.deadlift4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3DeadliftKg) {
             entry.best3deadliftkg =
                 check_weight(&record[idx], line, Header::Best3DeadliftKg, &mut report);
+        } else {
+            entry.best3deadliftkg = Some(WeightKg::from_i32(0));
         }
 
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
             entry.totalkg =
                 check_positive_weight(&record[idx], line, Header::TotalKg, &mut report);
+        } else {
+            entry.totalkg = Some(WeightKg::from_i32(0));
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
@@ -754,6 +892,7 @@ where
 
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
+        check_attempt_consistency(&entry, line, &mut report);
     }
 
     Ok(report)
