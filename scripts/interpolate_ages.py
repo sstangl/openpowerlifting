@@ -148,7 +148,7 @@ def is_bd_consistent(lifter_data):
 
     if len(bd_data) != 0:
         # Sort the age data by day and month
-        bd_data.sort(key=get_monthday)
+        bd_data.sort(key = lambda age_date: get_monthday(age_date[1]))
 
         init_year = get_year(bd_data[0][meetdateidx])
 
