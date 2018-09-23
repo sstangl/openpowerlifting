@@ -654,7 +654,7 @@ fn check_attempt_consistency_helper(
 
     // If the best attempt was successful, it should be in the Best3Lift.
     if best > WeightKg::from_i32(0) && best != best3lift {
-        report.warning_on(line, format!("Best3{}Kg '{}' does not match best attempt '{}'",
+        report.error_on(line, format!("Best3{}Kg '{}' does not match best attempt '{}'",
                                       lift, best3lift, best));
     }
 
