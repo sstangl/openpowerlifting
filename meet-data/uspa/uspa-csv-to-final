@@ -161,6 +161,8 @@ def fixcolnames(columns):
             columns[i] = 'DELETEME'
         elif low == 'college':
             columns[i] = 'College'
+        elif low == 'country':
+            columns[i] = 'Country'
         else:
             error("Unknown column %s" % name)
 
