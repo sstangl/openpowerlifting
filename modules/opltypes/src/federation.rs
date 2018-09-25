@@ -231,6 +231,11 @@ pub enum Federation {
     #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
 
+    /// Croatian branch of the GPA.
+    #[serde(rename = "GPA-CRO")]
+    #[strum(to_string = "GPA-CRO", serialize = "gpa-cro")]
+    GPACRO,
+
     /// Global Powerlifting Committee.
     #[strum(to_string = "GPC", serialize = "gpc")]
     GPC,
@@ -696,6 +701,7 @@ impl Federation {
             Federation::FPR => true,
             Federation::GoldenDouble => false,
             Federation::GPA => false,
+            Federation::GPACRO => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCGB => false,
@@ -851,6 +857,7 @@ impl Federation {
             Federation::FPR => Some(Country::Russia),
             Federation::GoldenDouble => Some(Country::Russia),
             Federation::GPA => None,
+            Federation::GPACRO => Some(Country::Croatia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCGB => Some(Country::UK),
