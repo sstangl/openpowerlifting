@@ -18,7 +18,7 @@ import os
 # Creates a hashmap keyed on misspellings.
 def load_names(datafilepath):
     h = {}
-    with open(datafilepath, 'r') as fd:
+    with open(datafilepath, 'r', encoding='utf-8') as fd:
         for line in fd.readlines():
             names = line.split(',')
             assert len(names) >= 2
@@ -52,7 +52,7 @@ def correct_names(namehash, cyrhash, entriespath):
             row[cyridx] = cyrhash[row[cyridx]]
 
     if changed:
-        with open(entriespath, 'w') as fd:
+        with open(entriespath, 'w', encoding='utf-8') as fd:
             csv.write(fd)
 
 
