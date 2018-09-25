@@ -159,9 +159,8 @@ def age_from_birthyear(csv, date):
             assert lower_age > 3
             row[ageidx] = str(lower_age) + '.5'
 
+
 # Fills in the Age column from the Birthday.
-
-
 def age_from_birthday(csv, date, birthdays):
     if 'Age' not in csv.fieldnames:
         csv.append_column('Age')
