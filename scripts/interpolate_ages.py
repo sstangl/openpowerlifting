@@ -317,142 +317,141 @@ def interpolate_lifter(lifter_data):
     global DATE_IDX
     global BY_IDX
 
-    if len(lifter_data) > 1:
-        # This needs to be called first as we are
-        # replacing some of the .5 ages with exact ages below
-        add_birthyears(lifter_data)
+    # This needs to be called first as we are
+    # replacing some of the .5 ages with exact ages below
+    add_birthyears(lifter_data)
 
-        bd_range = estimate_birthdate(lifter_data)
+    bd_range = estimate_birthdate(lifter_data)
 
-        if bd_range != []:  # Then we have a birthday range and can be semi-accurate
-            for age_data in lifter_data:
-                if age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) % 1 == 0.5:
-                    curr_year = get_year(age_data[DATE_IDX])
-                    curr_monthday = get_monthday(age_data[DATE_IDX])
+    if bd_range != []:  # Then we have a birthday range and can be semi-accurate
+        for age_data in lifter_data:
+            if age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) % 1 == 0.5:
+                curr_year = get_year(age_data[DATE_IDX])
+                curr_monthday = get_monthday(age_data[DATE_IDX])
 
-                    # Then we know their exact age at this time
-                    if (calc_age(bd_range[0], age_data[DATE_IDX])
-                            == calc_age(bd_range[1], age_data[DATE_IDX])):
-                        age_data[AGE_IDX] = calc_age(
-                            bd_range[0], age_data[DATE_IDX])
-                        age_data[MINAGE_IDX] = age_data[AGE_IDX]
-                        age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                    else:  # We're not sure if they've had their birthday
-                        age_data[AGE_IDX] = curr_year - \
-                            get_year(bd_range[0])-0.5
-                        age_data[MINAGE_IDX] = int(age_data[AGE_IDX]-0.5)
-                        age_data[MAXAGE_IDX] = int(age_data[AGE_IDX]+0.5)
-        else:  # We have only birthyears, a single age or only divisions
+                # Then we know their exact age at this time
+                if (calc_age(bd_range[0], age_data[DATE_IDX])
+                        == calc_age(bd_range[1], age_data[DATE_IDX])):
+                    age_data[AGE_IDX] = calc_age(
+                        bd_range[0], age_data[DATE_IDX])
+                    age_data[MINAGE_IDX] = age_data[AGE_IDX]
+                    age_data[MAXAGE_IDX] = age_data[AGE_IDX]
+                else:  # We're not sure if they've had their birthday
+                    age_data[AGE_IDX] = curr_year - \
+                        get_year(bd_range[0])-0.5
+                    age_data[MINAGE_IDX] = int(age_data[AGE_IDX]-0.5)
+                    age_data[MAXAGE_IDX] = int(age_data[AGE_IDX]+0.5)
+    else:  # We have only birthyears, a single age or only divisions
 
-            by = 0
-            approx_by = 0
-            min_by = 0
-            max_by = 9999
-            known_range = []
-            # Extract all the birthyear information possible
+        by = 0
+        approx_by = 0
+        min_by = 0
+        max_by = 9999
+        known_range = []
+        # Extract all the birthyear information possible
 
+        for age_data in lifter_data:
+            curr_year = get_year(age_data[DATE_IDX])
+            # Then we have an age derived from birthyear
+            if age_data[AGE_IDX] != '':
+                if float(age_data[AGE_IDX]) % 1 == 0.5:
+                    by = curr_year - int((float(age_data[AGE_IDX])+0.5))
+                else:
+                    approx_by = curr_year-int(age_data[AGE_IDX])
+
+            # Find the tighest bounds given by divisions
+            if max_by != 9999 and curr_year - age_data[MINAGE_IDX] < max_by:
+                max_by = curr_year - int(age_data[MINAGE_IDX])
+
+            if min_by != 0 and curr_year - age_data[MAXAGE_IDX] > min_by:
+                min_by = curr_year - int(age_data[MAXAGE_IDX])
+
+        # Then the division information let's us have an exact birthyear
+        if min_by > approx_by:
+            by = min_by
+        elif max_by < approx_by:
+            by = max_by
+
+        # If we have at least one exact age,
+        # then we have a range in which we know they don't have a birthday
+        if approx_by != 0:
+            known_range = get_known_range(lifter_data)
+
+        # First deal with the case when we have a birthyear
+        if by != 0:
             for age_data in lifter_data:
                 curr_year = get_year(age_data[DATE_IDX])
-                # Then we have an age derived from birthyear
-                if age_data[AGE_IDX] != '':
-                    if float(age_data[AGE_IDX]) % 1 == 0.5:
-                        by = curr_year - int((float(age_data[AGE_IDX])+0.5))
+                curr_monthday = get_monthday(age_data[DATE_IDX])
+                if age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) % 1 == 0.5:
+                    if known_range == []:
+                        age_data[AGE_IDX] = curr_year-by-0.5
+                        age_data[MINAGE_IDX] = int(age_data[AGE_IDX]-0.5)
+                        age_data[MAXAGE_IDX] = int(age_data[AGE_IDX]+0.5)
                     else:
-                        approx_by = curr_year-int(age_data[AGE_IDX])
+                        # Check whether known_range is an upper
+                        # or lower bound on the birthday
+                        lower_bound = False
+                        if approx_by < by:
+                            lower_bound = True
 
-                # Find the tighest bounds given by divisions
-                if max_by != 9999 and curr_year - age_data[MINAGE_IDX] < max_by:
-                    max_by = curr_year - int(age_data[MINAGE_IDX])
-
-                if min_by != 0 and curr_year - age_data[MAXAGE_IDX] > min_by:
-                    min_by = curr_year - int(age_data[MAXAGE_IDX])
-
-            # Then the division information let's us have an exact birthyear
-            if min_by > approx_by:
-                by = min_by
-            elif max_by < approx_by:
-                by = max_by
-
-            # If we have at least one exact age,
-            # then we have a range in which we know they don't have a birthday
-            if approx_by != 0:
-                known_range = get_known_range(lifter_data)
-
-            # First deal with the case when we have a birthyear
-            if by != 0:
-                for age_data in lifter_data:
-                    curr_year = get_year(age_data[DATE_IDX])
-                    curr_monthday = get_monthday(age_data[DATE_IDX])
-                    if age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) % 1 == 0.5:
-                        if known_range == []:
+                        # Then the lifter hasn't had their birthday yet
+                        if lower_bound and curr_monthday <= known_range[1]:
+                            age_data[AGE_IDX] = curr_year - by - 1
+                            age_data[MINAGE_IDX] = age_data[AGE_IDX]
+                            age_data[MAXAGE_IDX] = age_data[AGE_IDX]
+                        # Then we're not sure if they've had their birthday
+                        elif lower_bound and curr_monthday > known_range[1]:
                             age_data[AGE_IDX] = curr_year-by-0.5
-                            age_data[MINAGE_IDX] = int(age_data[AGE_IDX]-0.5)
-                            age_data[MAXAGE_IDX] = int(age_data[AGE_IDX]+0.5)
+                            age_data[MINAGE_IDX] = int(
+                                age_data[AGE_IDX]-0.5)
+                            age_data[MAXAGE_IDX] = int(
+                                age_data[AGE_IDX]+0.5)
+                        # Then the lifter has had their birthday
+                        elif curr_monthday >= known_range[0]:
+                            age_data[AGE_IDX] = curr_year-by
+                            age_data[MINAGE_IDX] = age_data[AGE_IDX]
+                            age_data[MAXAGE_IDX] = age_data[AGE_IDX]
+                        # Then we're not sure if they've had their birthday
                         else:
-                            # Check whether known_range is an upper
-                            # or lower bound on the birthday
-                            lower_bound = False
-                            if approx_by < by:
-                                lower_bound = True
+                            age_data[AGE_IDX] = curr_year-by-0.5
+                            age_data[MINAGE_IDX] = int(
+                                age_data[AGE_IDX]-0.5)
+                            age_data[MAXAGE_IDX] = int(
+                                age_data[AGE_IDX]+0.5)
 
-                            # Then the lifter hasn't had their birthday yet
-                            if lower_bound and curr_monthday <= known_range[1]:
-                                age_data[AGE_IDX] = curr_year - by - 1
-                                age_data[MINAGE_IDX] = age_data[AGE_IDX]
-                                age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                            # Then we're not sure if they've had their birthday
-                            elif lower_bound and curr_monthday > known_range[1]:
-                                age_data[AGE_IDX] = curr_year-by-0.5
-                                age_data[MINAGE_IDX] = int(
-                                    age_data[AGE_IDX]-0.5)
-                                age_data[MAXAGE_IDX] = int(
-                                    age_data[AGE_IDX]+0.5)
-                            # Then the lifter has had their birthday
-                            elif curr_monthday >= known_range[0]:
-                                age_data[AGE_IDX] = curr_year-by
-                                age_data[MINAGE_IDX] = age_data[AGE_IDX]
-                                age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                            # Then we're not sure if they've had their birthday
-                            else:
-                                age_data[AGE_IDX] = curr_year-by-0.5
-                                age_data[MINAGE_IDX] = int(
-                                    age_data[AGE_IDX]-0.5)
-                                age_data[MAXAGE_IDX] = int(
-                                    age_data[AGE_IDX]+0.5)
+        # Then deal with the case where we have an age
+        # and the division information doesn't give the birthyear
+        elif approx_by != 0:
 
-            # Then deal with the case where we have an age
-            # and the division information doesn't give the birthyear
-            elif approx_by != 0:
+            # Assign upper and lower age bounds based on approximate birthyear
+            for age_data in lifter_data:
+                curr_year = get_year(age_data[DATE_IDX])
+                curr_monthday = get_monthday(age_data[DATE_IDX])
+                if age_data[AGE_IDX] == '':
+                    if curr_monthday < known_range[0]:
+                        age_data[AGE_IDX] = curr_year - approx_by - 0.5
+                        age_data[MINAGE_IDX] = curr_year - approx_by - 1
+                        age_data[MAXAGE_IDX] = curr_year - approx_by
+                    elif curr_monthday > known_range[1]:
+                        age_data[AGE_IDX] = curr_year - approx_by + 0.5
+                        age_data[MINAGE_IDX] = curr_year - approx_by
+                        age_data[MAXAGE_IDX] = curr_year - approx_by + 1
+                    # We know an exact age for this date
+                    elif (curr_monthday >= known_range[0]
+                          and curr_monthday <= known_range[1]):
+                        age_data[AGE_IDX] = curr_year - approx_by
+                        age_data[MINAGE_IDX] = curr_year - approx_by
+                        age_data[MAXAGE_IDX] = curr_year - approx_by
 
-                # Assign upper and lower age bounds based on approximate birthyear
-                for age_data in lifter_data:
-                    curr_year = get_year(age_data[DATE_IDX])
-                    curr_monthday = get_monthday(age_data[DATE_IDX])
-                    if age_data[AGE_IDX] == '':
-                        if curr_monthday < known_range[0]:
-                            age_data[AGE_IDX] = curr_year - approx_by - 0.5
-                            age_data[MINAGE_IDX] = curr_year - approx_by - 1
-                            age_data[MAXAGE_IDX] = curr_year - approx_by
-                        elif curr_monthday > known_range[1]:
-                            age_data[AGE_IDX] = curr_year - approx_by + 0.5
-                            age_data[MINAGE_IDX] = curr_year - approx_by
-                            age_data[MAXAGE_IDX] = curr_year - approx_by + 1
-                        # We know an exact age for this date
-                        elif (curr_monthday >= known_range[0]
-                              and curr_monthday <= known_range[1]):
-                            age_data[AGE_IDX] = curr_year - approx_by
-                            age_data[MINAGE_IDX] = curr_year - approx_by
-                            age_data[MAXAGE_IDX] = curr_year - approx_by
-
-            # Finally deal with the only division case
-            else:
-                # Set age bounds based on divisions
-                for age_data in lifter_data:
-                    curr_year = get_year(age_data[DATE_IDX])
-                    if min_by != 0:
-                        age_data[MINAGE_IDX] = curr_year - min_by - 1
-                    if max_by != 9999:
-                        age_data[MAXAGE_IDX] = curr_year - max_by
+        # Finally deal with the only division case
+        else:
+            # Set age bounds based on divisions
+            for age_data in lifter_data:
+                curr_year = get_year(age_data[DATE_IDX])
+                if min_by != 0:
+                    age_data[MINAGE_IDX] = curr_year - min_by - 1
+                if max_by != 9999:
+                    age_data[MAXAGE_IDX] = curr_year - max_by
 
     return lifter_data
 
