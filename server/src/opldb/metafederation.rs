@@ -158,6 +158,12 @@ impl MetaFederation {
                     || meet.federation == Federation::NIPF
                     || meet.federation == Federation::ScottishPL
                     || meet.federation == Federation::WelshPA
+
+                    // British lifters expect their international results included.
+                    || (entry.lifter_country.map_or(false, |c| c.is_in_uk()) &&
+                        (meet.federation == Federation::IPF
+                         || meet.federation == Federation::EPF
+                         || meet.federation == Federation::CommonwealthPF))
             }
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
