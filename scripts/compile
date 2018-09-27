@@ -9,7 +9,8 @@ from usernames import get_username
 import os
 import sys
 import toml
-from interpolate_ages import interpolate
+import interpolate_ages
+import interpolate_countries
 
 MEETID = 0
 
@@ -518,7 +519,8 @@ def main(builddir, meetdir, lifterdir):
             addmeet(entriescsv, meetscsv, entriespath,
                     meetpath, birthdays, configtoml)
 
-    entriescsv = interpolate(entriescsv, meetscsv)
+    entriescsv = interpolate_ages.interpolate(entriescsv, meetscsv)
+    entriescsv = interpolate_countries.interpolate(entriescsv)
 
     entriescsv.remove_column_by_name('BirthYear')
     entriescsv.remove_column_by_name('BirthDay')
