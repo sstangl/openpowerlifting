@@ -18,7 +18,7 @@ use WeightUnits;
 /// Instead of storing as `f32`, we can store as `i32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(pub i32);
 
 /// Represents numbers describing absolute weights in their final
@@ -63,6 +63,12 @@ impl WeightKg {
     #[inline]
     pub fn is_failed(self) -> bool {
         self < WeightKg::from_i32(0)
+    }
+
+    /// Whether the weight is zero, representing a lift not taken.
+    #[inline]
+    pub fn is_non_zero(self) -> bool {
+        self != WeightKg::from_i32(0)
     }
 
     pub fn as_kg(self) -> WeightAny {

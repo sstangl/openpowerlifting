@@ -34,63 +34,58 @@ struct Entry {
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
     pub deadlift_equipment: Option<Equipment>,
-    pub weightclasskg: Option<WeightClassKg>,
-    pub bodyweightkg: Option<WeightKg>,
-    pub totalkg: Option<WeightKg>,
-    pub best3squatkg: Option<WeightKg>,
-    pub squat1kg: Option<WeightKg>,
-    pub squat2kg: Option<WeightKg>,
-    pub squat3kg: Option<WeightKg>,
-    pub squat4kg: Option<WeightKg>,
-    pub best3benchkg: Option<WeightKg>,
-    pub bench1kg: Option<WeightKg>,
-    pub bench2kg: Option<WeightKg>,
-    pub bench3kg: Option<WeightKg>,
-    pub bench4kg: Option<WeightKg>,
-    pub best3deadliftkg: Option<WeightKg>,
-    pub deadlift1kg: Option<WeightKg>,
-    pub deadlift2kg: Option<WeightKg>,
-    pub deadlift3kg: Option<WeightKg>,
-    pub deadlift4kg: Option<WeightKg>,
-}
 
-#[inline]
-fn is_non_zero(weight: Option<WeightKg>) -> bool {
-    match weight {
-        None => false,
-        Some(w) => w != WeightKg(0_00),
-    }
+    pub weightclasskg: Option<WeightClassKg>,
+    pub bodyweightkg: WeightKg,
+
+    // Weights, defaulting to zero.
+    pub totalkg: WeightKg,
+    pub best3squatkg: WeightKg,
+    pub squat1kg: WeightKg,
+    pub squat2kg: WeightKg,
+    pub squat3kg: WeightKg,
+    pub squat4kg: WeightKg,
+    pub best3benchkg: WeightKg,
+    pub bench1kg: WeightKg,
+    pub bench2kg: WeightKg,
+    pub bench3kg: WeightKg,
+    pub bench4kg: WeightKg,
+    pub best3deadliftkg: WeightKg,
+    pub deadlift1kg: WeightKg,
+    pub deadlift2kg: WeightKg,
+    pub deadlift3kg: WeightKg,
+    pub deadlift4kg: WeightKg,
 }
 
 impl Entry {
     /// Whether the Entry contains any Squat data.
     #[inline]
     pub fn has_squat_data(&self) -> bool {
-        is_non_zero(self.best3squatkg)
-            || is_non_zero(self.squat1kg)
-            || is_non_zero(self.squat2kg)
-            || is_non_zero(self.squat3kg)
-            || is_non_zero(self.squat4kg)
+        self.best3squatkg.is_non_zero()
+            || self.squat1kg.is_non_zero()
+            || self.squat2kg.is_non_zero()
+            || self.squat3kg.is_non_zero()
+            || self.squat4kg.is_non_zero()
     }
 
     /// Whether the Entry contains any Bench data.
     #[inline]
     pub fn has_bench_data(&self) -> bool {
-        is_non_zero(self.best3benchkg)
-            || is_non_zero(self.bench1kg)
-            || is_non_zero(self.bench2kg)
-            || is_non_zero(self.bench3kg)
-            || is_non_zero(self.bench4kg)
+        self.best3benchkg.is_non_zero()
+            || self.bench1kg.is_non_zero()
+            || self.bench2kg.is_non_zero()
+            || self.bench3kg.is_non_zero()
+            || self.bench4kg.is_non_zero()
     }
 
     /// Whether the Entry contains any Deadlift data.
     #[inline]
     pub fn has_deadlift_data(&self) -> bool {
-        is_non_zero(self.best3deadliftkg)
-            || is_non_zero(self.deadlift1kg)
-            || is_non_zero(self.deadlift2kg)
-            || is_non_zero(self.deadlift3kg)
-            || is_non_zero(self.deadlift4kg)
+        self.best3deadliftkg.is_non_zero()
+            || self.deadlift1kg.is_non_zero()
+            || self.deadlift2kg.is_non_zero()
+            || self.deadlift3kg.is_non_zero()
+            || self.deadlift4kg.is_non_zero()
     }
 }
 
@@ -406,7 +401,7 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
 }
 
 /// Tests a column describing the amount of weight lifted.
-fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Option<WeightKg> {
+fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, format!("{} cannot be zero", header));
@@ -415,32 +410,29 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Opti
     }
 
     match s.parse::<WeightKg>() {
-        Ok(w) => Some(w),
+        Ok(w) => w,
         Err(_) => {
             report.error_on(line, format!("Invalid {} '{}'", header, s));
-            None
+            WeightKg::default()
         }
     }
 }
 
-fn check_positive_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Option<WeightKg> {
+fn check_positive_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     if s.starts_with('-') {
         report.error_on(line, format!("{} '{}' cannot be negative", header, s))
     }
     check_weight(s, line, header, report)
 }
 
-fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> Option<WeightKg> {
-    if let Some(weight) = check_positive_weight(s, line, Header::BodyweightKg, report) {
-        if weight != WeightKg::from_i32(0) {
-            if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
-                report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
-            }
+fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightKg {
+    let weight = check_positive_weight(s, line, Header::BodyweightKg, report);
+    if weight != WeightKg::from_i32(0) {
+        if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
+            report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
         }
-        Some(weight)
-    } else {
-        None
     }
+    weight
 }
 
 fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Option<WeightClassKg> {
@@ -554,7 +546,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
     
     // Check that TotalKg matches the Place.
-    let has_totalkg: bool = is_non_zero(entry.totalkg);
+    let has_totalkg: bool = entry.totalkg != WeightKg::from_i32(0);
     if let Some(place) = entry.place {
         if place.is_dq() && has_totalkg {
             report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
@@ -565,31 +557,19 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 
     // Check that a non-DQ lifter's total is the sum of their best attempts,
     // if their lifts have been recorded.
-    let has_best3squatkg: bool = is_non_zero(entry.best3squatkg);
-    let has_best3benchkg: bool = is_non_zero(entry.best3benchkg);
-    let has_best3deadliftkg: bool = is_non_zero(entry.best3deadliftkg);
-
     if let Some(place) = entry.place {
         if !place.is_dq() && has_totalkg
-            && (has_best3squatkg || has_best3benchkg || has_best3deadliftkg)
+            && (entry.best3squatkg.is_non_zero()
+                || entry.best3benchkg.is_non_zero()
+                || entry.best3deadliftkg.is_non_zero())
         {
-            let mut total_data = WeightKg(0);
-            if let Some(w) = entry.best3squatkg {
-                total_data += w
-            }
-            if let Some(w) = entry.best3benchkg {
-                total_data += w
-            }
-            if let Some(w) = entry.best3deadliftkg {
-                total_data += w
-            }
+            let calculated =
+                entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
 
-            if let Some(total_entry) = entry.totalkg {
-                if (total_data - total_entry).abs() > WeightKg(50) {
-                    let s = format!("Calculated TotalKg '{}', but meet has '{}'",
-                        total_data, total_entry);
-                    report.error_on(line, s)
-                }
+            if (calculated - entry.totalkg).abs() > WeightKg(50) {
+                let s = format!("Calculated TotalKg '{}', but meet recorded '{}'",
+                                calculated, entry.totalkg);
+                report.error_on(line, s)
             }
         }
     }
@@ -669,36 +649,20 @@ fn check_attempt_consistency_helper(
 }
 
 fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
-    // Check squat attempts.
-    match (entry.squat1kg, entry.squat2kg, entry.squat3kg,
-           entry.squat4kg, entry.best3squatkg)
-    {
-        (Some(s1), Some(s2), Some(s3), Some(s4), Some(best)) => {
-            check_attempt_consistency_helper("Squat", s1, s2, s3, s4, best, line, report);
-        }
-        _ => ()
-    };
+    // Squat attempts.
+    check_attempt_consistency_helper("Squat", entry.squat1kg, entry.squat2kg,
+                                     entry.squat3kg, entry.squat4kg,
+                                     entry.best3squatkg, line, report);
 
-    // Check bench attempts.
-    match (entry.bench1kg, entry.bench2kg, entry.bench3kg,
-           entry.bench4kg, entry.best3benchkg)
-    {
-        (Some(b1), Some(b2), Some(b3), Some(b4), Some(best)) => {
-            check_attempt_consistency_helper("Bench", b1, b2, b3, b4, best, line, report);
-        }
-        _ => ()
-    };
+    // Bench attempts.
+    check_attempt_consistency_helper("Bench", entry.bench1kg, entry.bench2kg,
+                                     entry.bench3kg, entry.bench4kg,
+                                     entry.best3benchkg, line, report);
 
-    // Check deadlift attempts.
-    match (entry.deadlift1kg, entry.deadlift2kg, entry.deadlift3kg,
-           entry.deadlift4kg, entry.best3deadliftkg)
-    {
-        (Some(d1), Some(d2), Some(d3), Some(d4), Some(best)) => {
-            check_attempt_consistency_helper("Deadlift", d1, d2, d3, d4,
-                                             best, line, report);
-        }
-        _ => ()
-    };
+    // Deadlift attempts.
+    check_attempt_consistency_helper("Deadlift", entry.deadlift1kg, entry.deadlift2kg,
+                                     entry.deadlift3kg, entry.deadlift4kg,
+                                     entry.best3deadliftkg, line, report);
 }
 
 /// Checks a single entries.csv file from an open `csv::Reader`.
@@ -767,104 +731,72 @@ where
         if let Some(idx) = headers.get(Header::Squat1Kg) {
             entry.squat1kg =
                 check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
-        } else {
-            entry.squat1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat2Kg) {
             entry.squat2kg =
                 check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
-        } else {
-            entry.squat2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat3Kg) {
             entry.squat3kg =
                 check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
-        } else {
-            entry.squat3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Squat4Kg) {
             entry.squat4kg =
                 check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
-        } else {
-            entry.squat4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3SquatKg) {
             entry.best3squatkg =
                 check_weight(&record[idx], line, Header::Best3SquatKg, &mut report);
-        } else {
-            entry.best3squatkg = Some(WeightKg::from_i32(0));
         }
 
         // Bench.
         if let Some(idx) = headers.get(Header::Bench1Kg) {
             entry.bench1kg =
                 check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
-        } else {
-            entry.bench1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench2Kg) {
             entry.bench2kg =
                 check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
-        } else {
-            entry.bench2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench3Kg) {
             entry.bench3kg =
                 check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
-        } else {
-            entry.bench3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Bench4Kg) {
             entry.bench4kg =
                 check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
-        } else {
-            entry.bench4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3BenchKg) {
             entry.best3benchkg =
                 check_weight(&record[idx], line, Header::Best3BenchKg, &mut report);
-        } else {
-            entry.best3benchkg = Some(WeightKg::from_i32(0));
         }
 
         // Deadlift.
         if let Some(idx) = headers.get(Header::Deadlift1Kg) {
             entry.deadlift1kg =
                 check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
-        } else {
-            entry.deadlift1kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift2Kg) {
             entry.deadlift2kg =
                 check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
-        } else {
-            entry.deadlift2kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift3Kg) {
             entry.deadlift3kg =
                 check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
-        } else {
-            entry.deadlift3kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Deadlift4Kg) {
             entry.deadlift4kg =
                 check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
-        } else {
-            entry.deadlift4kg = Some(WeightKg::from_i32(0));
         }
         if let Some(idx) = headers.get(Header::Best3DeadliftKg) {
             entry.best3deadliftkg =
                 check_weight(&record[idx], line, Header::Best3DeadliftKg, &mut report);
-        } else {
-            entry.best3deadliftkg = Some(WeightKg::from_i32(0));
         }
 
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
             entry.totalkg =
                 check_positive_weight(&record[idx], line, Header::TotalKg, &mut report);
-        } else {
-            entry.totalkg = Some(WeightKg::from_i32(0));
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
