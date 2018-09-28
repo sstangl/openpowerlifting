@@ -19,7 +19,7 @@ use WeightUnits;
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Copy, Clone, Debug, Default, PartialEq, PartialOrd, Ord, Eq)]
-pub struct WeightKg(pub i32);
+pub struct WeightKg(i32);
 
 /// Represents numbers describing absolute weights in their final
 /// format for printing (either Kg or Lbs).
@@ -27,7 +27,7 @@ pub struct WeightKg(pub i32);
 /// Because the type of the weight is forgotten, these weights
 /// are incomparable with each other.
 #[derive(Copy, Clone, Debug)]
-pub struct WeightAny(pub i32);
+pub struct WeightAny(i32);
 
 impl Serialize for WeightAny {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>

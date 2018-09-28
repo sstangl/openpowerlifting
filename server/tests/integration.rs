@@ -25,7 +25,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.highest_squatkg() > WeightKg(0));
+        assert!(entry.highest_squatkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -35,7 +35,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.highest_benchkg() > WeightKg(0));
+        assert!(entry.highest_benchkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -45,7 +45,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.highest_deadliftkg() > WeightKg(0));
+        assert!(entry.highest_deadliftkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -55,7 +55,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.totalkg > WeightKg(0));
+        assert!(entry.totalkg > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -65,7 +65,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.wilks > Points(0));
+        assert!(entry.wilks > Points::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -75,7 +75,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.wilks > Points(0));
+        assert!(entry.wilks > Points::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
@@ -84,7 +84,7 @@ fn sorts_only_include_valid_entries() {
     let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
-        assert!(entry.highest_squatkg() > WeightKg(0));
+        assert!(entry.highest_squatkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 }

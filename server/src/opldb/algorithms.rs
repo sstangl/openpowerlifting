@@ -13,47 +13,47 @@ use pages::selection::*;
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
 #[inline]
 pub fn filter_squat(entry: &Entry) -> bool {
-    entry.highest_squatkg() > WeightKg(0) && !entry.place.is_dq()
+    entry.highest_squatkg() > WeightKg::from_i32(0) && !entry.place.is_dq()
 }
 
 /// Whether an `Entry` should be part of `ByBench` rankings and records.
 #[inline]
 pub fn filter_bench(entry: &Entry) -> bool {
-    entry.highest_benchkg() > WeightKg(0) && !entry.place.is_dq()
+    entry.highest_benchkg() > WeightKg::from_i32(0) && !entry.place.is_dq()
 }
 
 /// Whether an `Entry` should be part of `ByDeadlift` rankings and records.
 #[inline]
 pub fn filter_deadlift(entry: &Entry) -> bool {
-    entry.highest_deadliftkg() > WeightKg(0) && !entry.place.is_dq()
+    entry.highest_deadliftkg() > WeightKg::from_i32(0) && !entry.place.is_dq()
 }
 
 /// Whether an `Entry` should be part of `ByTotal` rankings and records.
 #[inline]
 pub fn filter_total(entry: &Entry) -> bool {
     // TotalKg is defined to be zero if DQ.
-    entry.totalkg > WeightKg(0)
+    entry.totalkg > WeightKg::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByMcCulloch` rankings and records.
 #[inline]
 pub fn filter_mcculloch(entry: &Entry) -> bool {
     // McCulloch points are defined to be zero if DQ.
-    entry.mcculloch > Points(0)
+    entry.mcculloch > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByWilks` rankings and records.
 #[inline]
 pub fn filter_wilks(entry: &Entry) -> bool {
     // Wilks is defined to be zero if DQ.
-    entry.wilks > Points(0)
+    entry.wilks > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByGlossbrenner` rankings and records.
 #[inline]
 pub fn filter_glossbrenner(entry: &Entry) -> bool {
     // Glossbrenner is defined to be zero if DQ.
-    entry.glossbrenner > Points(0)
+    entry.glossbrenner > Points::from_i32(0)
 }
 
 /// Defines an `Ordering` of Entries by Squat.

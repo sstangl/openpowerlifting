@@ -281,7 +281,7 @@ impl<'db> RecordCollector<'db> {
     #[inline]
     pub fn entry_in_class(&self, entry: &Entry) -> bool {
         // If bodyweight exists, just go by bodyweight.
-        if entry.bodyweightkg != WeightKg(0_00) {
+        if entry.bodyweightkg.is_non_zero() {
             return entry.bodyweightkg > self.class_min_exclusive &&
                    entry.bodyweightkg <= self.class_max_inclusive;
         }

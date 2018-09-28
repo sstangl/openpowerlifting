@@ -16,9 +16,14 @@ use std::str::FromStr;
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
 #[derive(Clone, Copy, Debug, Eq, Ord, PartialOrd, PartialEq)]
-pub struct Points(pub i32);
+pub struct Points(i32);
 
 impl Points {
+    #[inline]
+    pub fn from_i32(i: i32) -> Points {
+        Points(i * 100)
+    }
+
     // TODO: Remove this duplicate code.
     pub fn format_comma(self) -> String {
         // Don't display empty points.

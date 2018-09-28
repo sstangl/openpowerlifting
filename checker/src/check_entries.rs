@@ -566,7 +566,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             let calculated =
                 entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
 
-            if (calculated - entry.totalkg).abs() > WeightKg(50) {
+            if (calculated - entry.totalkg).abs() > WeightKg::from_i32(50) {
                 let s = format!("Calculated TotalKg '{}', but meet recorded '{}'",
                                 calculated, entry.totalkg);
                 report.error_on(line, s)
