@@ -141,11 +141,19 @@ def phonex(s):
 # By default, try to establish names that collide, testing the algorithms.
 if __name__ == '__main__':
     import oplcsv
+    import os
     import sys
 
-    csv = oplcsv.Csv(sys.argv[1])
-    nameidx = csv.index('Name')
-    names = [r[nameidx] for r in csv.rows]
+    # Build an index of Names.
+    names = []
+    for dirname, subdirs, files in os.walk(os.getcwd()):
+        if 'meet-data' in subdirs:
+            subdirs[:] = ['meet-data']
+        if 'entries.csv' in files:
+            filepath = dirname + os.sep + 'entries.csv'
+            csv = oplcsv.Csv(filepath)
+            nameidx = csv.index('Name')
+            names += [r[nameidx] for r in csv.rows]
 
     h = {}
     counts = {}
