@@ -177,6 +177,7 @@
 <optgroup label="{{strings.country.newzealand}}">
   <option value="all-newzealand" {% if selection.federation == "AllNewZealand" %}selected{% endif %}>{{strings.selectors.fed.all_newzealand}}</option>
   <option value="gpc-nz" {% if selection.federation == "GPC-NZ" %}selected{% endif %}>GPC-NZ - GPC New Zealand [GPC]</option>
+  <option value="ipl-nz" {% if selection.federation == "IPL-NZ" %}selected{% endif %}>IPL-NZ - IPL New Zealand [IPL]</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF - New Zealand Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.norway}}">

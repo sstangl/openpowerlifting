@@ -330,6 +330,11 @@ pub enum Federation {
     #[strum(to_string = "IPL", serialize = "ipl")]
     IPL,
 
+    /// International Powerlifting League, New Zealand
+    #[serde(rename = "IPL-NZ")]
+    #[strum(to_string = "IPL-NZ", serialize = "ipl-nz")]
+    IPLNZ,
+
     /// Irish Powerlifting Federation, IPF.
     #[strum(to_string = "IrishPF", serialize = "irishpf")]
     IrishPF,
@@ -724,6 +729,7 @@ impl Federation {
             Federation::IPC => false,
             Federation::IPF => true,
             Federation::IPL => false,
+            Federation::IPLNZ => false,
             Federation::IrishPF => true,
             Federation::IrishPO => false,
             Federation::IRP => false,
@@ -880,6 +886,7 @@ impl Federation {
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
             Federation::IPL => None,
+            Federation::IPLNZ => Some(Country::NewZealand),
             Federation::IrishPF => Some(Country::Ireland),
             Federation::IrishPO => Some(Country::Ireland),
             Federation::IRP => None,
