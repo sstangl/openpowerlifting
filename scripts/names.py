@@ -142,7 +142,6 @@ def phonex(s):
 if __name__ == '__main__':
     import oplcsv
     import os
-    import sys
 
     # Build an index of Names.
     names = []
@@ -189,7 +188,7 @@ if __name__ == '__main__':
 
         # Also, just for the moment, only consider the ones that
         # have a bunch of samples.
-        if max([counts[n] for n in v]) < 10:
+        if max([counts[n] for n in v]) < 4:
             continue
 
         for i in range(1, len(v)):

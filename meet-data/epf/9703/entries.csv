@@ -2,7 +2,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3
 1,Natal Chernovtsan,1981,44,43.8,Ukraine,95,102.5,-107.5,102.5,52.5,60,62.5,62.5,105,115,-125,115,280,F,Juniors,SBD,Single-ply
 2,Monika Pisarczyk,1979,44,43.8,Poland,85,95,-105,95,32.5,35,-37.5,35,100,-115,,100,230,F,Juniors,SBD,Single-ply
 3,Tatiana Baitsym,1981,44,40,Belgium,60,,75,75,35,40,-45,40,60,70,-80,70,185,F,Juniors,SBD,Single-ply
-1,Tatiana Eltsova,1978,48,47.9,Russia,135,142.5,145,145,77.5,-82.5,-82.5,77.5,135,140,142.5,142.5,365,F,Juniors,SBD,Single-ply
+1,Tatyana Eltsova,1978,48,47.9,Russia,135,142.5,145,145,77.5,-82.5,-82.5,77.5,135,140,142.5,142.5,365,F,Juniors,SBD,Single-ply
 2,Natalia Shtyreva,1977,48,46.9,Ukraine,127.5,135,-140,135,75,-80,80,80,130,140,-150,140,355,F,Juniors,SBD,Single-ply
 3,Lidia Koziol,1980,48,47.8,Poland,105,115,120,120,52.5,-55,,52.5,105,115,-122.5,115,287.5,F,Juniors,SBD,Single-ply
 4,Judith Poko,1974,48,47.5,Hungary,75,-85,-85,75,-55,55,-62.5,55,85,-92.5,-92.5,85,215,F,Juniors,SBD,Single-ply
@@ -66,7 +66,7 @@ DQ,Vyatch Slisarenko,1982,52,51.3,Ukraine,155,162.5,167.5,167.5,85,90,-92.5,90,-
 4,Sergey Serabkov,1981,56,55.6,Belgium,145,-155,-155,145,-95,-95,95,95,130,145,160,160,400,M,Juniors,SBD,Single-ply
 DQ,Aleksandr Gromov,1975,56,55.9,Ukraine,-165,-165,-172.5,,,,,,,,,,,M,Juniors,SBD,Single-ply
 1,Alexey Sidorov,1974,60,58.6,Russia,200,217.5,232.5,232.5,145,152.5,-155,152.5,-210,215,-227.5,215,600,M,Juniors,SBD,Single-ply
-2,Amit Sehlberg,1976,60,58.8,Sweden,220,230,-235,230,145,-152.5,-152.5,145,190,200,,200,575,M,Juniors,SBD,Single-ply
+2,Amit Selberg,1976,60,58.8,Sweden,220,230,-235,230,145,-152.5,-152.5,145,190,200,,200,575,M,Juniors,SBD,Single-ply
 3,Jani Siltaho,1976,60,59.6,Finland,200,207.5,-212.5,207.5,-102.5,102.5,110,110,205,-217.5,-217.5,205,522.5,M,Juniors,SBD,Single-ply
 4,Janek Nurmeots,1974,60,59.5,Estonia,200,210,-215,210,100,107.5,110,110,200,,-212.5,200,520,M,Juniors,SBD,Single-ply
 5,Piotr Nemyjski,1977,60,59.9,Poland,180,-190,190,190,,117.5,-127.5,117.5,180,-190,-190,180,487.5,M,Juniors,SBD,Single-ply
@@ -84,7 +84,7 @@ DQ,Aleksandr Gromov,1975,56,55.9,Ukraine,-165,-165,-172.5,,,,,,,,,,,M,Juniors,SB
 11,Sergey Leanovic,1979,67.5,66.8,Belgium,205,215,-225,215,-105,105,110,110,195,-205,-205,195,520,M,Juniors,SBD,Single-ply
 12,Youri Maenhout,1978,67.5,66.8,Belgium,175,187.5,-195,187.5,87.5,-95,95,95,190,205,212.5,212.5,495,M,Juniors,SBD,Single-ply
 DQ,Richard Lettner,1974,67.5,67.2,Austria,-215,215,-220,215,-150,-150,-150,,,,,,,M,Juniors,SBD,Single-ply
-1,Patrik Thuresson,1974,75,74.5,Sweden,260,-272.5,-272.5,260,160,167.5,172.5,172.5,250,265,-282.5,265,697.5,M,Juniors,SBD,Single-ply
+1,Patrik Turesson,1974,75,74.5,Sweden,260,-272.5,-272.5,260,160,167.5,172.5,172.5,250,265,-282.5,265,697.5,M,Juniors,SBD,Single-ply
 2,Victor Khurudji,1975,75,74.7,Ukraine,250,262.5,-270,262.5,160,167.5,170,170,245,252.5,-267.5,252.5,685,M,Juniors,SBD,Single-ply
 3,Jacek Kopienka,1975,75,74.4,Poland,225,235,240,240,160,-165,167.5,167.5,245,257.5,-270,257.5,665,M,Juniors,SBD,Single-ply
 4,Mika Parviainen,1979,75,74.2,Finland,230,237.5,-242.5,237.5,152.5,160,165,165,250,257.5,260,260,662.5,M,Juniors,SBD,Single-ply
@@ -101,7 +101,7 @@ DQ,Richard Lettner,1974,67.5,67.2,Austria,-215,215,-220,215,-150,-150,-150,,,,,,
 15,Štefan Sokoly,1976,75,74.2,Slovakia,210,222.5,227.5,227.5,132.5,140,-145,140,-240,-240,240,240,607.5,M,Juniors,SBD,Single-ply
 16,Yury Chakur,1980,75,73.9,Belgium,190,215,230,230,110,125,137.5,137.5,230,-245,-245,230,597.5,M,Juniors,SBD,Single-ply
 17,József Horváth,1974,75,72.5,Hungary,-230,230,-242.5,230,130,-135,-135,130,225,,,225,585,M,Juniors,SBD,Single-ply
-1,Seppo Sohlmann,1975,82.5,81.6,Finland,245,255,-260,255,160,-167.5,-167.5,160,310,317.5,-322.5,317.5,732.5,M,Juniors,SBD,Single-ply
+1,Seppo Sohlman,1975,82.5,81.6,Finland,245,255,-260,255,160,-167.5,-167.5,160,310,317.5,-322.5,317.5,732.5,M,Juniors,SBD,Single-ply
 2,Marek Radola,1975,82.5,81.7,Poland,275,290,300,300,155,165,167.5,167.5,265,-275,-275,265,732.5,M,Juniors,SBD,Single-ply
 3,Dariusz Sowinski,1976,82.5,82.4,Poland,255,265,270,270,165,-170,172.5,172.5,265,-277.5,-280,265,707.5,M,Juniors,SBD,Single-ply
 4,Bencsik Kris,1974,82.5,81.3,Hungary,-255,255,-265,255,170,-180,-180,170,255,265,-272.5,265,690,M,Juniors,SBD,Single-ply
@@ -138,7 +138,7 @@ DQ,Tommi Paavilainen,1976,100,99.4,Finland,245,260,-270,260,-162.5,-167.5,-167.5
 2,Zsolt Makovics,1975,110,107.5,Hungary,315,330,-340,330,190,-200,-200,190,295,305,-325,305,825,M,Juniors,SBD,Single-ply
 3,Vladimir Batiuk,1974,110,105.4,Ukraine,290,-310,310,310,170,175,-180,175,300,-307.5,-307.5,300,785,M,Juniors,SBD,Single-ply
 4,Gerald Pilling,1974,110,108.5,UK,280,292.5,-300,292.5,162.5,170,-175,170,300,315,-325,315,777.5,M,Juniors,SBD,Single-ply
-5,Kristo Willebrand,1975,110,102.1,Sweden,280,295,302.5,302.5,170,177.5,180,180,280,290,-302.5,290,772.5,M,Juniors,SBD,Single-ply
+5,Kristoffer Willebrand,1975,110,102.1,Sweden,280,295,302.5,302.5,170,177.5,180,180,280,290,-302.5,290,772.5,M,Juniors,SBD,Single-ply
 6,Thorsten Hinz,1974,110,109.1,Germany,260,275,-282.5,275,190,202.5,-210,202.5,275,285,290,290,767.5,M,Juniors,SBD,Single-ply
 7,Jari Martikainen,1975,110,108.1,Finland,260,272.5,277.5,277.5,150,157.5,162.5,162.5,275,300,-310,300,740,M,Juniors,SBD,Single-ply
 8,Evgeny Partus,1980,110,108.5,Belgium,-245,245,-265,245,155,165,-172.5,165,265,280,-290,280,690,M,Juniors,SBD,Single-ply
