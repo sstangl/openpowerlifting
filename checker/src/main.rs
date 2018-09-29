@@ -12,7 +12,7 @@ use walkdir::{DirEntry, WalkDir};
 use std::env;
 use std::error::Error;
 use std::io::{self, Write};
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::process;
 use std::sync::atomic::{AtomicUsize, Ordering};
 
@@ -27,10 +27,13 @@ fn is_meetdir(entry: &DirEntry) -> bool {
 /// Determines the project root from the binary path.
 fn get_project_root() -> Result<PathBuf, Box<Error>> {
     const ERR: &str = "get_project_root() ran out of parent directories";
-    Ok(env::current_exe()?     // root/target/release/binary
-        .parent().ok_or(ERR)?  // root/target/release
-        .parent().ok_or(ERR)?  // root/target
-        .parent().ok_or(ERR)?  // root
+    Ok(env::current_exe()? // root/target/release/binary
+        .parent()
+        .ok_or(ERR)? // root/target/release
+        .parent()
+        .ok_or(ERR)? // root/target
+        .parent()
+        .ok_or(ERR)? // root
         .to_path_buf())
 }
 
@@ -56,10 +59,16 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 
 /// Outputs a final summary line.
 fn print_summary(error_count: usize, warning_count: usize) {
-    let error_str = format!("{} error{}", error_count,
-                            if error_count == 1 { "" } else { "s" });
-    let warning_str = format!("{} warning{}", warning_count,
-                             if warning_count == 1 { "" } else { "s" });
+    let error_str = format!(
+        "{} error{}",
+        error_count,
+        if error_count == 1 { "" } else { "s" }
+    );
+    let warning_str = format!(
+        "{} warning{}",
+        warning_count,
+        if warning_count == 1 { "" } else { "s" }
+    );
 
     let error_str = if error_count > 0 {
         error_str.bold().red().to_string()
@@ -76,27 +85,96 @@ fn print_summary(error_count: usize, warning_count: usize) {
     println!("Summary: {}, {}", error_str, warning_str);
 }
 
+fn get_configurations(meet_data_root: &Path) -> Option<()> {
+    // Build a list of every CONFIG.toml.
+    let configs = WalkDir::new(&meet_data_root)
+        .min_depth(1)
+        .max_depth(1) // Grab each federation's folder.
+        .into_iter()
+        .filter_map(|entry| {
+            entry.ok().and_then(|e| {
+                let mut path = e.into_path();
+                path.push("CONFIG.toml");
+                if path.exists() {
+                    Some(path)
+                } else {
+                    None
+                }
+            })
+        });
+
+    let stdout = io::stdout();
+    let mut handle = stdout.lock();
+
+    let mut error_count: usize = 0;
+    let mut warning_count: usize = 0;
+
+    // Parse each CONFIG.toml and file it in a hashmap.
+    for config in configs {
+        // Remember the filename for error reporting.
+        let sourcefile = config.clone();
+
+        match checker::check_config(config) {
+            Ok(result) => {
+                let (errors, warnings) = result.report.count_messages();
+                if errors > 0 || warnings > 0 {
+                    error_count += errors;
+                    warning_count += warnings;
+                    write_report(&mut handle, result.report);
+                }
+            }
+            Err(e) => {
+                println!("{}", sourcefile.as_path().to_str().unwrap());
+                println!(" Internal Error: {}", e.to_string().bold().purple());
+                return None;
+            }
+        }
+    }
+
+    // If there were errors, don't return anything.
+    // TODO: Warnings should get forwarded also.
+    // TODO: The summary printing should be controlled by main().
+    if error_count > 0 {
+        print_summary(error_count, warning_count);
+        None
+    } else {
+        Some(())
+    }
+}
+
 fn main() -> Result<(), Box<Error>> {
     // Get handles to various parts of the project.
     let project_root = get_project_root()?;
-    let meet_data_root = match env::args().count() {
-        // No command-line argument: go over the entire project.
-        1 => project_root.join("meet-data"),
-        // Command-line argument: just use that directory.
-        2 => {
-            env::current_dir()?
-                .join(env::args().skip(1).next().unwrap_or(".".to_string()))
-                .canonicalize()?
-        }
-        _ => panic!("Too many arguments"),
-    };
-
+    let meet_data_root = project_root.join("meet-data");
     if !meet_data_root.exists() {
         panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
     }
 
+    let search_root = match env::args().count() {
+        // No command-line argument: go over the entire project.
+        1 => meet_data_root.clone(),
+        // Command-line argument: just use that directory.
+        2 => {
+            let target = env::current_dir()?
+                .join(env::args().skip(1).next().unwrap_or(".".to_string()))
+                .canonicalize()?;
+            if !target.exists() {
+                panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
+            }
+            target
+        }
+        _ => panic!("Too many arguments"),
+    };
+
+    match get_configurations(&meet_data_root) {
+        Some(()) => {}
+        None => {
+            process::exit(1);
+        }
+    };
+
     // Build a list of every directory containing meet results.
-    let meetdirs: Vec<DirEntry> = WalkDir::new(&meet_data_root)
+    let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
         .into_iter()
         .filter_map(|entry| entry.ok())
         .filter(|entry| is_meetdir(entry))

@@ -903,29 +903,29 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                                 "sex" not in wc_rule):
                             weight_classes = wc_rule["classes"]
 
-        if (meet_id not in configtoml["exclusions"] or
-                "check_row_weightclass_sex" not in configtoml["exclusions"][meet_id]):
+        if (meet_id not in configtoml["exemptions"] or
+                "check_row_weightclass_sex" not in configtoml["exemptions"][meet_id]):
             check_row_weightclass_sex(row, csv, weight_classes)
             check_row_weightclass(row, csv, weight_classes)
 
-        if (meet_id not in configtoml["exclusions"] or
-                "check_row_division" not in configtoml["exclusions"][meet_id]):
+        if (meet_id not in configtoml["exemptions"] or
+                "check_row_division" not in configtoml["exemptions"][meet_id]):
             check_row_division(row, csv, configtoml["divisions"], meet_year)
-        if (meet_id not in configtoml["exclusions"]
+        if (meet_id not in configtoml["exemptions"]
                 or "check_row_weightclass_consistency"
-                not in configtoml["exclusions"][meet_id]):
+                not in configtoml["exemptions"][meet_id]):
             check_row_weightclass_consistency(row, csv, weight_classes)
-        if (meet_id not in configtoml["exclusions"] or
-                "check_row_lift_order" not in configtoml["exclusions"][meet_id]):
+        if (meet_id not in configtoml["exemptions"] or
+                "check_row_lift_order" not in configtoml["exemptions"][meet_id]):
             check_row_lift_order(
                 row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
             check_row_lift_order(
                 row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
             check_row_lift_order(
                 row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
-        if (meet_id not in configtoml["exclusions"]
+        if (meet_id not in configtoml["exemptions"]
                 or "check_row_equipment_year"
-                not in configtoml["exclusions"][meet_id]):
+                not in configtoml["exemptions"][meet_id]):
             check_row_equipment_year(row, csv, meet_year)
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)

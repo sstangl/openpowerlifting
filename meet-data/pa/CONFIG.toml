@@ -23,23 +23,23 @@
 
 [weightclasses.WP_M]
     classes = ["62","69","77","85","94","105","120","120+"]
-    date_range=["2018-08-25","9999-99-99"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "M"
 
 [weightclasses.WP_F]
     classes = ["48","53","58","64","72","84","100","100+"]
-    date_range=["2018-08-25","9999-99-99"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "F"
 
 [weightclasses.WP_juniorM]
     classes = ["56","62","69","77","85","94","105","105+"]
-    date_range=["2018-08-25","9999-99-99"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "M"
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.WP_juniorF]
     classes = ["44","48","53","58","64","72","84","84+"]
-    date_range=["2018-08-25","9999-99-99"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
@@ -56,24 +56,24 @@
 
 [weightclasses.IPF_juniorM]
     classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "M"
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.IPF_juniorF]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
 
 [weightclasses.old_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
 
 
@@ -81,17 +81,17 @@
 
 [weightclasses.blind_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","125+"]
-    date_range = ["0000-00-00","9999-99-99"]
+    date_range = ["0000-01-01","9999-01-01"]
     sex = "M"
     divisions = ["Blind","Blind (Masters 1)"]
 
 [weightclasses.blind_F]
     classes = ["48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-00-00","9999-99-99"]
+    date_range = ["0000-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Blind","Blind (Masters 1)"]
 
-[exclusions]
+[exemptions]
     1638 = ["check_row_weightclass_sex"]
     1436 = ["check_row_weightclass_sex"]
     1712 = ["check_row_weightclass_sex"]

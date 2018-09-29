@@ -20,6 +20,33 @@ pub enum Age {
     None,
 }
 
+impl Age {
+    /// Convert from an i64. Used by the TOML deserializer.
+    pub fn from_i64(n: i64) -> Result<Self, &'static str> {
+        // Some of the CONFIG.toml files hardcode 999 to mean "max Age".
+        if n == 999 {
+            return Ok(Age::Exact(u8::max_value()));
+        }
+
+        if n < 0 {
+            return Err("Age may not be negative");
+        }
+        if n > (u8::max_value() as i64) {
+            return Err("Age can be at most 256");
+        }
+
+        Ok(Age::Exact(n as u8))
+    }
+
+    /// Convert from an f64. Used by the TOML deserializer.
+    pub fn from_f64(f: f64) -> Result<Self, num::ParseIntError> {
+        // Just use the from_str() implementation.
+        // This function is not called often, so it's OK to be slow.
+        let s = format!("{}", f);
+        s.parse::<Age>()
+    }
+}
+
 impl fmt::Display for Age {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
@@ -64,6 +91,20 @@ impl<'de> Visitor<'de> for AgeVisitor {
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
         formatter.write_str("an age (23) or approximate age (23.5)")
+    }
+
+    fn visit_f64<E>(self, value: f64) -> Result<Age, E>
+    where
+        E: de::Error,
+    {
+        Age::from_f64(value).map_err(E::custom)
+    }
+
+    fn visit_i64<E>(self, value: i64) -> Result<Age, E>
+    where
+        E: de::Error,
+    {
+        Age::from_i64(value).map_err(E::custom)
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Age, E>

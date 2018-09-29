@@ -12,74 +12,74 @@
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.default_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
 
 [weightclasses.subjunior_M]
     classes = ["40","43","48","53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "M"
     divisions = ["Sub-Juniors","13-18"]
 
 
 [weightclasses.junior_M]
     classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "M"
     divisions = ["Juniors"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.subjunior_F]
     classes = ["40","43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-99-99"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
 
 [weightclasses.old_subjunior_M]
     classes = ["48","52","56","60","67.5","75","82.5","90","100","110","110+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
     divisions = ["Sub-Juniors"]
 
 [weightclasses.old_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
 
 [weightclasses.old_subjunior_F]
     classes = ["40","44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
     divisions = ["Sub-Juniors"]
 
 [weightclasses.para_F]
     classes = ["40","44","48","52","56","60","67.5","75","82.5","82.5+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
     divisions = ["Paralympics"]
 
 [weightclasses.para_M]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","100+"]
-    date_range = ["0000-00-00","2010-12-31"]
+    date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
     divisions = ["Paralympics"]
 
-[exclusions]
+[exemptions]
     0808 = ["check_row_weightclass_consistency"]
     1001 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     1403 = ["check_row_weightclass_consistency"]

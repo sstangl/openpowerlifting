@@ -46,6 +46,8 @@ impl fmt::Display for Date {
 #[derive(Debug)]
 pub enum ParseDateError {
     FormatError,
+    MonthError,
+    DayError,
     ParseIntError(num::ParseIntError),
 }
 
@@ -53,6 +55,8 @@ impl fmt::Display for ParseDateError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
             ParseDateError::FormatError => write!(f, "date not in the correct format"),
+            ParseDateError::MonthError => write!(f, "invalid month"),
+            ParseDateError::DayError => write!(f, "invalid day"),
             ParseDateError::ParseIntError(ref p) => p.fmt(f),
         }
     }
@@ -71,14 +75,11 @@ impl FromStr for Date {
         let month: u32 = v[1].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
         let day: u32 = v[2].parse::<u32>().map_err(ParseDateError::ParseIntError)?;
 
-        if year < 1000 {
-            return Err(ParseDateError::FormatError);
-        }
         if month == 0 || month > 12 {
-            return Err(ParseDateError::FormatError);
+            return Err(ParseDateError::MonthError);
         }
         if day == 0 || day > 31 {
-            return Err(ParseDateError::FormatError);
+            return Err(ParseDateError::DayError);
         }
 
         let value = (year * 10_000) + (month * 100) + day;
@@ -128,7 +129,6 @@ mod test {
     #[test]
     fn test_date_errors() {
         // Malformed dates.
-        assert!("0007-03-04".parse::<Date>().is_err());
         assert!("2017-03-04-05".parse::<Date>().is_err());
         assert!("2017-03-004".parse::<Date>().is_err());
         assert!("2017-003-04".parse::<Date>().is_err());
@@ -143,7 +143,6 @@ mod test {
         assert!("2017-03-32".parse::<Date>().is_err());
         assert!("2017-00-04".parse::<Date>().is_err());
         assert!("2017-03-00".parse::<Date>().is_err());
-        assert!("0000-03-04".parse::<Date>().is_err());
     }
 
     #[test]

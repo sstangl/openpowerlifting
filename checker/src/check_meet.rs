@@ -157,15 +157,20 @@ pub fn check_meetcountry(s: &str, report: &mut Report) -> Option<Country> {
 }
 
 /// Checks the optional MeetState column.
-pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -> Option<State> {
+pub fn check_meetstate(
+    s: &str,
+    report: &mut Report,
+    country: Option<Country>,
+) -> Option<State> {
     if s.is_empty() {
         return None;
     }
 
     if country.is_none() {
-        report.warning(
-            format!("Couldn't check MeetState '{}' due to invalid MeetCountry", s)
-        );
+        report.warning(format!(
+            "Couldn't check MeetState '{}' due to invalid MeetCountry",
+            s
+        ));
         return None;
     }
     let country = country.unwrap();
@@ -204,7 +209,12 @@ pub fn check_meettown(s: &str, report: &mut Report) -> Option<String> {
 }
 
 /// Checks the mandatory MeetName column.
-pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str) -> Option<String> {
+pub fn check_meetname(
+    s: &str,
+    report: &mut Report,
+    fedstr: &str,
+    datestr: &str,
+) -> Option<String> {
     if s.is_empty() {
         report.error("MeetName cannot be empty");
         return None;
@@ -257,24 +267,20 @@ where
     // Verify column headers. Only continue if they're valid.
     check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
-        return Ok(CheckResult {report, meet: None});
+        return Ok(CheckResult { report, meet: None });
     }
 
     // Read a single row.
     let mut record = csv::StringRecord::new();
     if !rdr.read_record(&mut record)? {
         report.error("The second row is missing");
-        return Ok(CheckResult {report, meet: None});
+        return Ok(CheckResult { report, meet: None });
     }
 
     let federation = check_federation(record.get(0).unwrap(), &mut report);
     let date = check_date(record.get(1).unwrap(), &mut report);
     let country = check_meetcountry(record.get(2).unwrap(), &mut report);
-    let state = check_meetstate(
-        record.get(3).unwrap(),
-        &mut report,
-        country
-    );
+    let state = check_meetstate(record.get(3).unwrap(), &mut report, country);
     let town = check_meettown(record.get(4).unwrap(), &mut report);
     let name = check_meetname(
         record.get(5).unwrap(),
@@ -290,11 +296,11 @@ where
 
     // If all mandatory data is present, and there were no errors,
     // forward a post-parsing Meet struct to the Entry-parsing phase.
-    if initial_errors == report.count_errors() &&
-        federation.is_some() &&
-        date.is_some() &&
-        country.is_some() &&
-        name.is_some()
+    if initial_errors == report.count_errors()
+        && federation.is_some()
+        && date.is_some()
+        && country.is_some()
+        && name.is_some()
     {
         let meet = Meet {
             federation: federation.unwrap(),
@@ -304,9 +310,12 @@ where
             town,
             name: name.unwrap(),
         };
-        Ok(CheckResult {report, meet: Some(meet)})
+        Ok(CheckResult {
+            report,
+            meet: Some(meet),
+        })
     } else {
-        Ok(CheckResult {report, meet: None})
+        Ok(CheckResult { report, meet: None })
     }
 }
 
@@ -318,7 +327,7 @@ pub fn check_meet(meet_csv: PathBuf) -> Result<CheckResult, Box<Error>> {
     // The meet.csv file must exist.
     if !report.path.exists() {
         report.error("File does not exist");
-        return Ok(CheckResult {report, meet: None});
+        return Ok(CheckResult { report, meet: None });
     }
 
     check_meetpath(&mut report);

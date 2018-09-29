@@ -4,7 +4,10 @@ extern crate opltypes;
 extern crate strum;
 #[macro_use]
 extern crate strum_macros;
+extern crate toml;
 
+pub mod check_config;
+pub use check_config::check_config;
 pub mod check_entries;
 use check_entries::check_entries;
 pub mod check_meet;

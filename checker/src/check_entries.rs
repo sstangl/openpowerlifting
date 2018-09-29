@@ -8,8 +8,8 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use Report;
 use check_meet::Meet;
+use Report;
 
 /// Maps Header to index.
 struct HeaderIndexMap(Vec<Option<usize>>);
@@ -169,7 +169,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
         }
 
         // Test for duplicate headers.
-        if headers.iter().skip(i+1).any(|x| x == header) {
+        if headers.iter().skip(i + 1).any(|x| x == header) {
             report.error(format!("Duplicate header '{}'", header));
         }
 
@@ -193,7 +193,10 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
     if !headers.iter().any(|x| x == "Name") {
         report.error("There must be a 'Name' column");
     }
-    if !headers.iter().any(|x| { x == "BodyweightKg" || x == "WeightClassKg" }) {
+    if !headers
+        .iter()
+        .any(|x| x == "BodyweightKg" || x == "WeightClassKg")
+    {
         report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
     }
     if !headers.iter().any(|x| x == "Sex") {
@@ -224,8 +227,10 @@ const CYRILLIC_CHARACTERS: &str =
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     for c in s.chars() {
         if !CYRILLIC_CHARACTERS.contains(c) {
-            let msg =
-                format!("CyrillicName '{}' contains non-Cyrillic character '{}'", s, c);
+            let msg = format!(
+                "CyrillicName '{}' contains non-Cyrillic character '{}'",
+                s, c
+            );
             report.error_on(line, msg);
             break;
         }
@@ -281,7 +286,7 @@ fn check_column_squatequipment(
     line: u64,
     report: &mut Report,
 ) -> Option<Equipment> {
-    if s.is_empty()  {
+    if s.is_empty() {
         return None;
     }
     match s.parse::<Equipment>() {
@@ -303,7 +308,7 @@ fn check_column_benchequipment(
     line: u64,
     report: &mut Report,
 ) -> Option<Equipment> {
-    if s.is_empty()  {
+    if s.is_empty() {
         return None;
     }
     match s.parse::<Equipment>() {
@@ -327,7 +332,7 @@ fn check_column_deadliftequipment(
     line: u64,
     report: &mut Report,
 ) -> Option<Equipment> {
-    if s.is_empty()  {
+    if s.is_empty() {
         return None;
     }
 
@@ -379,7 +384,12 @@ fn check_column_age(s: &str, line: u64, report: &mut Report) -> Option<Age> {
     }
 }
 
-fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) -> Option<Event> {
+fn check_column_event(
+    s: &str,
+    line: u64,
+    headers: &HeaderIndexMap,
+    report: &mut Report,
+) -> Option<Event> {
     match s.parse::<Event>() {
         Ok(event) => {
             if event.has_squat() && headers.get(Header::Best3SquatKg).is_none() {
@@ -418,7 +428,12 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 }
 
-fn check_positive_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
+fn check_positive_weight(
+    s: &str,
+    line: u64,
+    header: Header,
+    report: &mut Report,
+) -> WeightKg {
     if s.starts_with('-') {
         report.error_on(line, format!("{} '{}' cannot be negative", header, s))
     }
@@ -435,12 +450,19 @@ fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightK
     weight
 }
 
-fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Option<WeightClassKg> {
+fn check_column_weightclasskg(
+    s: &str,
+    line: u64,
+    report: &mut Report,
+) -> Option<WeightClassKg> {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, "WeightClassKg cannot be zero");
     } else if s.starts_with('0') {
-        report.error_on(line, format!("WeightClassKg cannot start with 0 in '{}'", s));
+        report.error_on(
+            line,
+            format!("WeightClassKg cannot start with 0 in '{}'", s),
+        );
     }
 
     match s.parse::<WeightClassKg>() {
@@ -467,7 +489,9 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) {
 
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
     let event = match entry.event {
-        None => { return; }
+        None => {
+            return;
+        }
         Some(e) => e,
     };
 
@@ -498,27 +522,42 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         // Check that the SquatEquipment makes sense.
         if let Some(squat_eq) = entry.squat_equipment {
             if squat_eq > equipment {
-                report.error_on(line,
-                    format!("SquatEquipment '{}' can't be more supportive \
-                            than the Equipment '{}'", squat_eq, equipment));
+                report.error_on(
+                    line,
+                    format!(
+                        "SquatEquipment '{}' can't be more supportive \
+                         than the Equipment '{}'",
+                        squat_eq, equipment
+                    ),
+                );
             }
         }
 
         // Check that the BenchEquipment makes sense.
         if let Some(bench_eq) = entry.bench_equipment {
             if bench_eq > equipment {
-                report.error_on(line,
-                    format!("BenchEquipment '{}' can't be more supportive \
-                            than the Equipment '{}'", bench_eq, equipment));
+                report.error_on(
+                    line,
+                    format!(
+                        "BenchEquipment '{}' can't be more supportive \
+                         than the Equipment '{}'",
+                        bench_eq, equipment
+                    ),
+                );
             }
         }
 
         // Check that the DeadliftEquipment makes sense.
         if let Some(deadlift_eq) = entry.deadlift_equipment {
             if deadlift_eq > equipment {
-                report.error_on(line,
-                    format!("DeadliftEquipment '{}' can't be more supportive \
-                            than the Equipment '{}'", deadlift_eq, equipment));
+                report.error_on(
+                    line,
+                    format!(
+                        "DeadliftEquipment '{}' can't be more supportive \
+                         than the Equipment '{}'",
+                        deadlift_eq, equipment
+                    ),
+                );
             }
         }
     }
@@ -544,7 +583,7 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             }
         }
     }
-    
+
     // Check that TotalKg matches the Place.
     let has_totalkg: bool = entry.totalkg != WeightKg::from_i32(0);
     if let Some(place) = entry.place {
@@ -558,7 +597,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     // Check that a non-DQ lifter's total is the sum of their best attempts,
     // if their lifts have been recorded.
     if let Some(place) = entry.place {
-        if !place.is_dq() && has_totalkg
+        if !place.is_dq()
+            && has_totalkg
             && (entry.best3squatkg.is_non_zero()
                 || entry.best3benchkg.is_non_zero()
                 || entry.best3deadliftkg.is_non_zero())
@@ -567,8 +607,10 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
                 entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
 
             if (calculated - entry.totalkg).abs() > WeightKg::from_i32(50) {
-                let s = format!("Calculated TotalKg '{}', but meet recorded '{}'",
-                                calculated, entry.totalkg);
+                let s = format!(
+                    "Calculated TotalKg '{}', but meet recorded '{}'",
+                    calculated, entry.totalkg
+                );
                 report.error_on(line, s)
             }
         }
@@ -597,14 +639,24 @@ fn process_attempt_pair(
 
     // The bar weight shouldn't have lowered.
     if attempt.abs() < maxweight.abs() {
-        report.warning_on(line, format!("{}{}Kg '{}' lowered weight from '{}'",
-                                      lift, attempt_num, attempt, maxweight));
+        report.warning_on(
+            line,
+            format!(
+                "{}{}Kg '{}' lowered weight from '{}'",
+                lift, attempt_num, attempt, maxweight
+            ),
+        );
     }
 
     // A successful attempt shouldn't have been repeated.
     if !maxweight.is_failed() && attempt.abs() == maxweight {
-        report.error_on(line, format!("{}{}Kg '{}' repeated a successful attempt",
-                                      lift, attempt_num, attempt));
+        report.error_on(
+            line,
+            format!(
+                "{}{}Kg '{}' repeated a successful attempt",
+                lift, attempt_num, attempt
+            ),
+        );
     }
 
     if attempt.abs() >= maxweight.abs() {
@@ -634,15 +686,22 @@ fn check_attempt_consistency_helper(
 
     // If the best attempt was successful, it should be in the Best3Lift.
     if best > WeightKg::from_i32(0) && best != best3lift {
-        report.error_on(line, format!("Best3{}Kg '{}' does not match best attempt '{}'",
-                                      lift, best3lift, best));
+        report.error_on(
+            line,
+            format!(
+                "Best3{}Kg '{}' does not match best attempt '{}'",
+                lift, best3lift, best
+            ),
+        );
     }
 
     // If the best attempt was a failure, the least failure can be in the Best3Lift.
     if best < WeightKg::from_i32(0) && best3lift != WeightKg::from_i32(0) {
         if best != best3lift {
-            let s = format!("Best3{}Kg '{}' does not match least failed attempt '{}'",
-                            lift, best3lift, best);
+            let s = format!(
+                "Best3{}Kg '{}' does not match least failed attempt '{}'",
+                lift, best3lift, best
+            );
             report.error_on(line, s);
         }
     }
@@ -650,19 +709,40 @@ fn check_attempt_consistency_helper(
 
 fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
     // Squat attempts.
-    check_attempt_consistency_helper("Squat", entry.squat1kg, entry.squat2kg,
-                                     entry.squat3kg, entry.squat4kg,
-                                     entry.best3squatkg, line, report);
+    check_attempt_consistency_helper(
+        "Squat",
+        entry.squat1kg,
+        entry.squat2kg,
+        entry.squat3kg,
+        entry.squat4kg,
+        entry.best3squatkg,
+        line,
+        report,
+    );
 
     // Bench attempts.
-    check_attempt_consistency_helper("Bench", entry.bench1kg, entry.bench2kg,
-                                     entry.bench3kg, entry.bench4kg,
-                                     entry.best3benchkg, line, report);
+    check_attempt_consistency_helper(
+        "Bench",
+        entry.bench1kg,
+        entry.bench2kg,
+        entry.bench3kg,
+        entry.bench4kg,
+        entry.best3benchkg,
+        line,
+        report,
+    );
 
     // Deadlift attempts.
-    check_attempt_consistency_helper("Deadlift", entry.deadlift1kg, entry.deadlift2kg,
-                                     entry.deadlift3kg, entry.deadlift4kg,
-                                     entry.best3deadliftkg, line, report);
+    check_attempt_consistency_helper(
+        "Deadlift",
+        entry.deadlift1kg,
+        entry.deadlift2kg,
+        entry.deadlift3kg,
+        entry.deadlift4kg,
+        entry.best3deadliftkg,
+        line,
+        report,
+    );
 }
 
 /// Checks a single entries.csv file from an open `csv::Reader`.
@@ -833,9 +913,8 @@ where
 /// Checks a single entries.csv file by path.
 pub fn check_entries(
     entries_csv: PathBuf,
-    meet: Option<&Meet>
-) -> Result<Report, Box<Error>>
-{
+    meet: Option<&Meet>,
+) -> Result<Report, Box<Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
 
