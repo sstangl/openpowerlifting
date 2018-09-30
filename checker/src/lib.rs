@@ -7,7 +7,7 @@ extern crate strum_macros;
 extern crate toml;
 
 pub mod check_config;
-pub use check_config::check_config;
+pub use check_config::{check_config, Config};
 pub mod check_entries;
 use check_entries::check_entries;
 pub mod check_meet;
@@ -90,7 +90,7 @@ impl Report {
 }
 
 /// Checks a directory with meet data.
-pub fn check(meetdir: &Path) -> Result<Vec<Report>, Box<Error>> {
+pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<Vec<Report>, Box<Error>> {
     let mut acc = Vec::new();
 
     // Check the meet.csv.

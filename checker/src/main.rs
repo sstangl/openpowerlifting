@@ -9,6 +9,7 @@ use colored::*;
 use rayon::prelude::*;
 use walkdir::{DirEntry, WalkDir};
 
+use std::collections::BTreeMap;
 use std::env;
 use std::error::Error;
 use std::io::{self, Write};
@@ -85,7 +86,16 @@ fn print_summary(error_count: usize, warning_count: usize) {
     println!("Summary: {}, {}", error_str, warning_str);
 }
 
-fn get_configurations(meet_data_root: &Path) -> Option<()> {
+/// Map of federation folder, e.g., "ipf", to Config.
+type ConfigMap = BTreeMap<String, checker::Config>;
+
+/// Reads in all CONFIG.toml files project-wide.
+///
+/// Returns a map of (path -> Config) on success, or (errors, warnings) on
+/// failure.
+fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
+    let mut configmap = ConfigMap::new();
+
     // Build a list of every CONFIG.toml.
     let configs = WalkDir::new(&meet_data_root)
         .min_depth(1)
@@ -110,23 +120,31 @@ fn get_configurations(meet_data_root: &Path) -> Option<()> {
     let mut warning_count: usize = 0;
 
     // Parse each CONFIG.toml and file it in a hashmap.
-    for config in configs {
+    for configpath in configs {
         // Remember the filename for error reporting.
-        let sourcefile = config.clone();
+        let sourcefile: PathBuf = configpath.clone();
 
-        match checker::check_config(config) {
+        match checker::check_config(configpath) {
             Ok(result) => {
+                // Tally up and output and errors and warnings.
                 let (errors, warnings) = result.report.count_messages();
                 if errors > 0 || warnings > 0 {
                     error_count += errors;
                     warning_count += warnings;
                     write_report(&mut handle, result.report);
                 }
+
+                // Add the Config to the map.
+                if let Some(config) = result.config {
+                    // This has to be safe if the config parsed correctly.
+                    let feddir = sourcefile.parent().and_then(|p| p.file_name()).unwrap();
+                    configmap.insert(feddir.to_str().unwrap().to_string(), config);
+                }
             }
             Err(e) => {
                 println!("{}", sourcefile.as_path().to_str().unwrap());
                 println!(" Internal Error: {}", e.to_string().bold().purple());
-                return None;
+                return Err((error_count + 1, warning_count));
             }
         }
     }
@@ -135,10 +153,9 @@ fn get_configurations(meet_data_root: &Path) -> Option<()> {
     // TODO: Warnings should get forwarded also.
     // TODO: The summary printing should be controlled by main().
     if error_count > 0 {
-        print_summary(error_count, warning_count);
-        None
+        Err((error_count, warning_count))
     } else {
-        Some(())
+        Ok(configmap)
     }
 }
 
@@ -166,9 +183,10 @@ fn main() -> Result<(), Box<Error>> {
         _ => panic!("Too many arguments"),
     };
 
-    match get_configurations(&meet_data_root) {
-        Some(()) => {}
-        None => {
+    let configmap = match get_configurations(&meet_data_root) {
+        Ok(configmap) => configmap,
+        Err((errors, warnings)) => {
+            print_summary(errors, warnings);
             process::exit(1);
         }
     };
@@ -188,7 +206,17 @@ fn main() -> Result<(), Box<Error>> {
 
     // Iterate in parallel over each meet directory and apply checks.
     meetdirs.into_par_iter().for_each(|dir| {
-        match checker::check(dir.path()) {
+        // Determine the appropriate Config for this meet.
+        let feddir = dir
+            .path()
+            .parent()
+            .and_then(|p| p.file_name())
+            .and_then(|f| f.to_str())
+            .unwrap();
+        let config = configmap.get(feddir);
+
+        // Check the meet.
+        match checker::check(dir.path(), config) {
             Ok(reports) => {
                 // Acquire a mutex around stdout.
                 let stdout = io::stdout();
