@@ -162,6 +162,9 @@
 <optgroup label="{{strings.country.japan}}">
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.kazakhstan}}">
+  <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF - Kazakhstan Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.latvia}}">
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
 </optgroup>

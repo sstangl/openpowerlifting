@@ -498,13 +498,13 @@ def parse_sheetname(csv):
         sex_idx = csv.index('Sex')
         event_idx = csv.index('Event')
         for row in csv.rows:
-            if 'Men' in row[sn_idx]:
-                row[sex_idx] = 'M'
-                row[sn_idx] = row[sn_idx].replace('Men', '')
-            elif 'Women' in row[sn_idx]:
+            sheetname = row[sn_idx].lower()
+            if 'women' in sheetname or 'wo' in sheetname:
                 row[sex_idx] = 'F'
-                row[sn_idx] = row[sn_idx].replace('Women', '')
-
+                row[sn_idx] = sheetname.replace('women', '').replace('wo', '')
+            elif 'men' in sheetname:
+                row[sex_idx] = 'M'
+                row[sn_idx] = sheetname.replace('men', '')
             if 'pl' in row[sn_idx]:
                 row[event_idx] = 'SBD'
                 row[sn_idx] = row[sn_idx].replace('pl', '')
@@ -515,6 +515,30 @@ def parse_sheetname(csv):
                 row[event_idx] = 'D'
                 row[sn_idx] = row[sn_idx].replace('dl', '')
             row[sn_idx] = row[sn_idx].strip().replace('  ', ' ')
+    return csv
+
+
+def standardise_division(fed, csv):
+    if 'Division' in csv.fieldnames:
+        # IPF Feds that we are likely to use this script for
+        if fed in ['FPR', 'KPF', 'UkrainePF']:
+            div_idx = csv.index('Division')
+            for row in csv.rows:
+                if row[div_idx] == 'T':
+                    row[div_idx] = 'Sub-Juniors'
+                elif row[div_idx] == 'J':
+                    row[div_idx] = 'Juniors'
+                elif row[div_idx] == 'O':
+                    row[div_idx] = 'Open'
+                elif row[div_idx] == 'M1':
+                    row[div_idx] = 'Masters 1'
+                elif row[div_idx] == 'M2':
+                    row[div_idx] = 'Masters 2'
+                elif row[div_idx] == 'M3':
+                    row[div_idx] = 'Masters 3'
+                elif row[div_idx] == 'M4':
+                    row[div_idx] = 'Masters 4'
+    return csv
 
 
 def main(url):
@@ -542,7 +566,8 @@ def main(url):
     # Figure out event information.
     markevent(entriescsv)
 
-    parse_sheetname(entriescsv)
+    entriescsv = parse_sheetname(entriescsv)
+    entriescsv = standardise_division(meetcsv.rows[0][0], entriescsv)
 
     remove_empty_cols_ignore_fieldname(entriescsv)
 

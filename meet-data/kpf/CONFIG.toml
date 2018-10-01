@@ -1,0 +1,73 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    juniors = {name = "Juniors",min=0,max=23}
+    teen = {name = "Teen",min=0,max=19}
+    masters1 = {name = "Masters 1",min=39.5,max=999}
+    masters2 = {name = "Masters 2",min=49.5,max=999}
+    masters3 = {name = "Masters 3",min=59.5,max=999}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Juniors"]
+
+[weightclasses.teen_M]
+    classes = ["32","36","40","44","48","53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Teen"]
+
+[weightclasses.junior_F]
+    classes = ["40","43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors"]
+
+[weightclasses.teen_F]
+    classes = ["32","36","40","43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Teen"]
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "F"
+
+[exemptions]
+    1302 = ["check_row_weightclass_consistency"]
+    1802 = ["check_row_weightclass_consistency"]
+    1201 = ["check_row_weightclass_consistency","check_row_division"]
+    1305 = ["check_row_weightclass_consistency","check_row_division"]
+    1601 = ["check_row_weightclass_consistency"]
+    1303 = ["check_row_weightclass_consistency"]
+    1604 = ["check_row_weightclass_consistency"]
+    1705 = ["check_row_weightclass_consistency"]
+    1704 = ["check_row_weightclass_consistency"]
+    1702 = ["check_row_weightclass_consistency"]
+    1801 = ["check_row_weightclass_consistency"]
+    1503 = ["check_row_weightclass_consistency","check_row_division"]
+    1602 = ["check_row_weightclass_consistency"]
+    1803 = ["check_row_weightclass_consistency"]
+    1202 = ["check_row_weightclass_consistency"]
+    1606 = ["check_row_weightclass_sex"]
+    1502 = ["check_row_division"]
+    1203 = ["check_row_division"]

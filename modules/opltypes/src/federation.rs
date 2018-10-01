@@ -350,6 +350,10 @@ pub enum Federation {
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
 
+    /// Kazakhstan IPF affiliate.
+    #[strum(to_string = "KPF", serialize = "kpf")]
+    KPF,
+
     /// Icelandic IPF affiliate.
     #[strum(to_string = "KRAFT", serialize = "kraft")]
     KRAFT,
@@ -735,6 +739,7 @@ impl Federation {
             Federation::IRP => false,
             Federation::JPA => true,
             Federation::KRAFT => true,
+            Federation::KPF => true,
             Federation::LPF => true,
             Federation::MHP => false,
             Federation::MM => false,
@@ -892,6 +897,7 @@ impl Federation {
             Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
             Federation::KRAFT => Some(Country::Iceland),
+            Federation::KPF => Some(Country::Kazakhstan),
             Federation::LPF => Some(Country::Latvia),
             Federation::MHP => Some(Country::USA),
             Federation::MM => Some(Country::USA),
