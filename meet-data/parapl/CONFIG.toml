@@ -1,6 +1,9 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=22.5}
+    groupa = {name = "Group A", min=0, max=999}
+    groupb = {name = "Group B", min=0, max=999}
+    groupc = {name = "Group C", min=0, max=999}
 
 [weightclasses.default_M]
     classes = ["49","54","59","65","72","80","88","97","107","107+"]
