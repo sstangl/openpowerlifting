@@ -1,6 +1,9 @@
 ---
 ## OpenPowerlifting App Server Configuration.
 
+# Path to the Nginx access log.
+nginx_access_log: /var/log/nginx/access.log
+
 # Path where the single server binary should be installed.
 openpl_app_binary_path: /usr/sbin/openpl-app
 # Path where the data files should be installed.

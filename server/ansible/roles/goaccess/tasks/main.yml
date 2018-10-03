@@ -1,0 +1,10 @@
+---
+- name: make sure goaccess is the latest version
+  dnf:
+    name: goaccess
+    state: latest
+
+- name: copy goaccess configuration
+  template:
+    src: goaccess.conf
+    dest: /etc/goaccess.conf

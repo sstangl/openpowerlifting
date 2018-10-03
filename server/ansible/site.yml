@@ -4,4 +4,5 @@
   roles:
     - nginx
     - openpl-app
+    - goaccess
     - sysupdate
