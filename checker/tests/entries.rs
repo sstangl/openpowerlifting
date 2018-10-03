@@ -184,3 +184,11 @@ fn test_column_equipment() {
                 Test User,90,M,100,100,100,300,Raw,Multi-ply,SBD,1";
     assert_eq!(check(data), 1);
 }
+
+#[test]
+fn regression_tests() {
+    // Calculated total should be compared even if a lift is missing an attempt.
+    let data = "Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BirthYear,State,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg\n\
+                1,Chad Cooper,M,SBD,R-O,93,Raw,1998,SC,88.4,170,180,,180,92.5,-97.5,-97.5,92.5,192.5,212.5,215,215,522.5";
+    assert_eq!(check(data), 1);
+}
