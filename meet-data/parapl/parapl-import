@@ -60,13 +60,11 @@ def gethtml(url):
 
     selectAllDays = driver.find_element_by_id('DateSelectAll')
 
-    source = driver.page_source
-
     selectAllDays.click()
     time.sleep(3)
     main_source = driver.page_source
 
-    soup = BeautifulSoup(source, 'html.parser')
+    soup = BeautifulSoup(main_source, 'html.parser')
 
     tds = soup.find_all('td', {'class': 'ScheduleStatus'})
 
@@ -134,8 +132,12 @@ def getresults(soup):
     csv = Csv()
 
     # Get the results table.
-    restable = soup.find_all('table', {'class': 'ResTableFull'})[3]
-    if restable is None:
+    tables = soup.find_all('table', {'class': 'ResTableFull'})
+    if len(tables) == 4:
+        restable = tables[3]
+    elif len(tables) == 3:
+        restable = tables[2]
+    else:
         error("Couldn't find the results table.")
 
     descriptor = soup.find('div', {'id': 'TopInfoBoxSport_EventName'})
@@ -229,7 +231,7 @@ def getresults(soup):
             if td.find('span') and td.find('span').has_attr('title') and ii == nameidx:
                 text = td.find('span')['title']
 
-            if text == '-':
+            if text in ['-', 'RET']:
                 text = ''
 
             if td.find('strike'):
@@ -271,7 +273,7 @@ def reverse_names(csv):
         lastname = ' '.join(split_names[0:lastname_idx+1]).strip()
         name = firstname + ' ' + lastname
 
-        row[nameidx] = name
+        row[nameidx] = name.strip()
 
 
 def remove_empty_and_ignore_cols(csv):
@@ -316,6 +318,16 @@ def standardize_countries(csv):
             row[countryidx] = 'Iran'
         elif row[countryidx] == "Lao People's Democratic Republic":
             row[countryidx] = 'Laos'
+        elif row[countryidx] == 'United Arab Emirates':
+            row[countryidx] = 'UAE'
+        elif row[countryidx] == 'Republic of Moldova':
+            row[countryidx] = 'Moldova'
+        elif row[countryidx] == 'Chinese Taipei':
+            row[countryidx] = 'Taiwan'
+        elif row[countryidx] == 'Czech Republic':
+            row[countryidx] = 'Czechia'
+        elif row[countryidx] == "Côte d'Ivoire":
+            row[countryidx] = 'Ivory Coast'
 
 
 def fixplace(csv):
@@ -323,9 +335,13 @@ def fixplace(csv):
         return
 
     placeidx = csv.index('Place')
+    bestbenchidx = csv.index('Best3BenchKg')
     for row in csv.rows:
         if row[placeidx] == '':
             row[placeidx] = 'DQ'
+        if row[bestbenchidx] == 'DNS':
+            row[placeidx] = 'NS'
+            row[bestbenchidx] = ''
 
 
 def main(dirname, url):

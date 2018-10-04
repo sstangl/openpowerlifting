@@ -8,13 +8,13 @@ Place,Country,Name,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg
 7,Japan,Hiroshi Miura,47.63,116,-121,-121,,116,M,49,Group A,B,Raw,116
 8,Japan,Kazuki Okuyama,48.62,103,-109,109,,109,M,49,Group A,B,Raw,109
 9,Saudi Arabia,Maysar Olaymi,45.53,104,-111,-111,,104,M,49,Group A,B,Raw,104
-DQ,Philippines,Romeo Tayawa,48.70,-115,-115,-115,,,M,49,Group A,B,Raw,
-DD,Vietnam,Van Cong Le,47.96,180,,,,180,M,49,Group A,B,Raw,
+DQ,Philippines,Romeo Tayawa,48.7,-115,-115,-115,,,M,49,Group A,B,Raw,
+NS,Vietnam,Van Cong Le,47.96,,,,,,M,49,Group A,B,Raw,
 1,China,Jinyun Li,40.19,80,84,94,,94,F,41,Group A,B,Raw,94
 2,China,Zhe Cui,39.44,93,-100,-100,,93,F,41,Group A,B,Raw,93
 3,India,Kaur Manpreet Kaur Manpreet,40.16,70,-73,73,,73,F,41,Group A,B,Raw,73
 4,Kazakhstan,Yuliya Petrusseva,40.05,-57,-57,57,,57,F,41,Group A,B,Raw,57
-5,Kazakhstan,Tursynay Kabyl,39.60,-55,55,-60,,55,F,41,Group A,B,Raw,55
+5,Kazakhstan,Tursynay Kabyl,39.6,-55,55,-60,,55,F,41,Group A,B,Raw,55
 DQ,Japan,Miwa Naruke,40.62,-48,-48,-48,,,F,41,Group A,B,Raw,
 1,China,Lingling Guo,44.11,107,111,113,114,113,F,45,Group A,B,Raw,113
 2,Indonesia,Ni Nengah Widiasih,43.24,98,-101,101,,101,F,45,Group A,B,Raw,101
@@ -25,7 +25,7 @@ DQ,Japan,Miwa Naruke,40.62,-48,-48,-48,,,F,41,Group A,B,Raw,
 7,Thailand,Withieera Jaitong,43.55,58,-62,-62,,58,F,45,Group A,B,Raw,58
 8,Japan,Hiromi Kobayashi,43.76,55,58,-60,,58,F,45,Group A,B,Raw,58
 1,Thailand,Amorntep Pongsao,53.35,120,130,-140,,130,M,54,Group B,B,Raw,130
-2,Philippines,Agustin Kitan,53.60,120,-135,-140,,120,M,54,Group B,B,Raw,120
+2,Philippines,Agustin Kitan,53.6,120,-135,-140,,120,M,54,Group B,B,Raw,120
 3,Japan,Tomohiro Kouse,52.66,-109,109,-115,,109,M,54,Group B,B,Raw,109
 4,Japan,Mitsunori Ichikawa,51.22,103,-109,-115,,103,M,54,Group B,B,Raw,103
 5,South Korea,Daeyeol Kim,52.88,50,-55,-55,,50,M,54,Group B,B,Raw,50
@@ -34,4 +34,168 @@ DQ,Japan,Miwa Naruke,40.62,-48,-48,-48,,,F,41,Group A,B,Raw,
 3,Kazakhstan,David Degtyarev,52.12,153,158,160,,160,M,54,Group A,B,Raw,160
 4,South Korea,Keun Jin Choi,53.51,153,-158,-159,,153,M,54,Group A,B,Raw,153
 5,Iraq,Ali Al-Darraji,53.29,137,142,-144,,142,M,54,Group A,B,Raw,142
-6,Japan,Tetsuo Nishizaki,52.40,-132,132,-140,,132,M,54,Group A,B,Raw,132
+6,Japan,Tetsuo Nishizaki,52.4,-132,132,-140,,132,M,54,Group A,B,Raw,132
+1,Uzbekistan,Muslima Nuriddinova,49.38,65,73,,,73,F,50,Group B,B,Raw,73
+2,Thailand,Phikul Charoenying,49.57,60,-62,63,,63,F,50,Group B,B,Raw,63
+3,Australia,Kelly Cartwright,47.62,59,-63,-65,,59,F,50,Group B,B,Raw,59
+4,Australia,Kaia Scholl,46.62,48,51,54,,54,F,50,Group B,B,Raw,54
+5,Japan,Akiko Nakajima,48.31,52,-55,-55,,52,F,50,Group B,B,Raw,52
+1,China,Dandan Hu,49.45,108,-113,-113,,108,F,50,Group A,B,Raw,108
+2,Vietnam,Thi Linh Phuong Dang,49.66,95,-100,-109,,95,F,50,Group A,B,Raw,95
+3,Kazakhstan,Gulbanu Abdykhalykova,48.76,-80,80,82,,82,F,50,Group A,B,Raw,82
+4,Kazakhstan,Kabira Askarova,49.33,76,-81,-82,,76,F,50,Group A,B,Raw,76
+5,Mexico,Albor Maria Paredes,48.15,72,75,-78,,75,F,50,Group A,B,Raw,75
+6,South Korea,Yunki Shin,48.11,65,70,-76,,70,F,50,Group A,B,Raw,70
+1,China,Yongkai Qi,57.85,181,184,188,-192.5,188,M,59,Group A,B,Raw,188
+2,Iran,Pashaki Seyed Y. Yousefi,58.89,182,-185,-185,,182,M,59,Group A,B,Raw,182
+3,Chile,Juan Carlos Garrido,58.79,176,-180,-182,,176,M,59,Group A,B,Raw,176
+4,China,Jinglang Yang,58.79,175,-182,-185,,175,M,59,Group A,B,Raw,175
+5,Vietnam,Van Phuc Nguyen,56.93,150,155,-159,,155,M,59,Group A,B,Raw,155
+6,Thailand,Choochat Sukjarern,57.87,151,-156,-156,,151,M,59,Group A,B,Raw,151
+7,Japan,Yuya Toda,58.79,122,-126,126,,126,M,59,Group A,B,Raw,126
+8,South Korea,Gwangyeoul Park,57.26,110,115,-118,,115,M,59,Group A,B,Raw,115
+9,Japan,Yuji Okada,57.44,107,113,-117,,113,M,59,Group A,B,Raw,113
+1,Uzbekistan,Ruza Kuzieva,54.04,102,110,113,,113,F,55,Group A,B,Raw,113
+2,China,Shanshan Shi,53.89,103,105,-106,,105,F,55,Group A,B,Raw,105
+3,Chile,Camila Campos,54.9,101,104,-106,,104,F,55,Group A,B,Raw,104
+4,Vietnam,Hoang Tuyet Loan Chau,52.09,95,-103,-105,,95,F,55,Group A,B,Raw,95
+5,Indonesia,Rani Puji Astuti,53.91,85,-90,-96,,85,F,55,Group A,B,Raw,85
+6,UAE,Mozah Alzeyoudi,52.54,68,72,-75,,72,F,55,Group A,B,Raw,72
+7,South Korea,Sook Ja Choe,53.94,52,-57,-57,,52,F,55,Group A,B,Raw,52
+DQ,Thailand,Wandi Kongmuang,53.79,-85,-86,-86,,,F,55,Group A,B,Raw,
+DQ,Japan,Eri Macdonald,53.85,-53,-54,-54,,,F,55,Group A,B,Raw,
+1,Chile,Jorge Carinao,59.42,167,-172,-172,,167,M,65,Group B,B,Raw,167
+2,Vietnam,Thanh Xuan Nguyen,60.53,160,165,-170,,165,M,65,Group B,B,Raw,165
+3,Iraq,Hasan Al-Tameemi,64.99,-163,-163,163,,163,M,65,Group B,B,Raw,163
+4,Japan,Yoshiki Sano,64.31,120,126,130,,130,M,65,Group B,B,Raw,130
+5,Japan,Takashi Jo,64.05,120,125,128,,128,M,65,Group B,B,Raw,128
+6,Afghanistan,Sayed Hussain A. Sadaat,63.51,90,-100,-110,,90,M,65,Group B,B,Raw,90
+DQ,Japan,Masashi Shinoda,64.39,-124,-130,-131,,,M,65,Group B,B,Raw,
+DQ,South Korea,Gyuho Kim,64.7,-157,-157,-157,,,M,65,Group B,B,Raw,
+1,China,Lei Liu,64.46,196,201,202,,202,M,65,Group A,B,Raw,202
+2,China,Quanxi Yang,63.74,190,-200,201,,201,M,65,Group A,B,Raw,201
+3,Jordan,Mohammad Tarbash,64.82,180,185,187,,187,M,65,Group A,B,Raw,187
+4,Iran,Arangeh Amir Jafari,60.81,183,185,-187,,185,M,65,Group A,B,Raw,185
+5,India,Deep Jai Deep Jai,64.85,-182,182,-186,,182,M,65,Group A,B,Raw,182
+6,Malaysia,Bonnie Bunyau Gustin,64.52,170,176,180,,180,M,65,Group A,B,Raw,180
+7,Thailand,Narong Kasanun,63.55,170,-176,-176,,170,M,65,Group A,B,Raw,170
+DQ,Iran,Samad Abbasi,64.67,-182,-182,-186,,,M,65,Group A,B,Raw,
+1,Thailand,Thongsa Marasri,69.24,140,150,-160,,150,M,72,Group B,B,Raw,150
+2,Japan,Shogo Tanaka,70.17,130,140,146,,146,M,72,Group B,B,Raw,146
+3,Japan,Nobuhiro Saitoh,71.79,-135,140,146,,146,M,72,Group B,B,Raw,146
+4,Italy,Matteo Cattini,69.23,-143,143,-147,,143,M,72,Group B,B,Raw,143
+5,Kyrgyzstan,Maksat Argymbaev,71.72,130,135,-141,,135,M,72,Group B,B,Raw,135
+6,Saudi Arabia,Tarek Balgith,69.95,90,94,-99,,94,M,72,Group B,B,Raw,94
+7,Australia,Steven Henness,71.58,-93,93,-101,,93,M,72,Group B,B,Raw,93
+1,Iraq,Rasool Mohsin,71.98,210,217,219,,219,M,72,Group A,B,Raw,219
+2,Iran,Roohallah Rostami,71.69,211,-217,-219,,211,M,72,Group A,B,Raw,211
+3,China,Peng Hu,71.81,211,-217,-217,,211,M,72,Group A,B,Raw,211
+4,UK,Michael Yule,71.25,173,178,-180,,178,M,72,Group A,B,Raw,178
+5,Japan,Kentaro Higuchi,70.97,150,160,165,,165,M,72,Group A,B,Raw,165
+6,India,Rajinder Singh Rahelu,71.29,155,162,-165,,162,M,72,Group A,B,Raw,162
+7,Italy,Donato Telesca,71.33,153,161,-163,,161,M,72,Group A,B,Raw,161
+8,UAE,Saif Zaabi,66.08,142,148,-150,,148,M,72,Group A,B,Raw,148
+1,Mexico,Amalia Perez Vazquez,59.49,123,128,131,,131,F,61,Group A,B,Raw,131
+2,China,Jianjin Cui,60.95,112,118,-121,,118,F,61,Group A,B,Raw,118
+3,Indonesia,Yuliana Lili,59.61,85,90,93,,93,F,61,Group A,B,Raw,93
+4,South Korea,Youn Shil Jeong,60.71,78,83,85,,85,F,61,Group A,B,Raw,85
+5,Taiwan,Ya-Hsuan Lin,60.18,78,80,83,,83,F,61,Group A,B,Raw,83
+6,Thailand,Hat Motnok,57,65,-70,70,,70,F,61,Group A,B,Raw,70
+7,South Korea,Yuseon Hwang,60.2,-62,-62,62,,62,F,61,Group A,B,Raw,62
+1,China,Yujiao Tan,66.09,130,136,139,-140,139,F,67,Group A,B,Raw,139
+2,Kazakhstan,Raushan Koishibayeva,65.84,105,108,111,,111,F,67,Group A,B,Raw,111
+3,South Korea,Hyeong Hui Kim,65.49,98,104,110,,110,F,67,Group A,B,Raw,110
+4,Thailand,Somkhoun Anon,61.86,92,-95,95,,95,F,67,Group A,B,Raw,95
+5,Indonesia,Rahayu,66.1,90,-93,-93,,90,F,67,Group A,B,Raw,90
+6,Australia,Janel Manns,65.5,55,-59,59,,59,F,67,Group A,B,Raw,59
+7,Japan,Karin Morisaki,65.84,-47,47,50,,50,F,67,Group A,B,Raw,50
+1,China,Xiao-Fei Gu,79.05,220,227,-233,,227,M,80,Group A,B,Raw,227
+2,Iran,Nader Moradi,76.78,202,-211,-216,,202,M,80,Group A,B,Raw,202
+3,Kazakhstan,Nodarzhan Khamrullayev,78.6,155,160,-173,,160,M,80,Group A,B,Raw,160
+4,Japan,Akihisa Kanaya,76.95,128,-135,135,,135,M,80,Group A,B,Raw,135
+5,Japan,Yoshitaka Sato,78.13,135,-140,-140,,135,M,80,Group A,B,Raw,135
+6,Mongolia,Gan-Erdene Gansukh,78.93,117,-125,-130,,117,M,80,Group A,B,Raw,117
+7,Thailand,Kampa Pongtao,76.14,80,,,,80,M,80,Group A,B,Raw,80
+DQ,Japan,Hajime Ujiro,76.18,-146,-146,-146,,,M,80,Group A,B,Raw,
+DQ,Iraq,Mohammed Mohammed,76.31,-172,-172,-172,,,M,80,Group A,B,Raw,
+DQ,New Zealand,Matthew James Gordon,79.29,-147,-147,-147,,,M,80,Group A,B,Raw,
+1,Iraq,Salam Al-Shakkakee,85.5,-173,-173,173,,173,M,88,Group B,B,Raw,173
+2,India,Arun Ranga,84.49,162,168,-173,,168,M,88,Group B,B,Raw,168
+3,UAE,Adel Shanbih,83.8,160,167,-170,,167,M,88,Group B,B,Raw,167
+4,Australia,Ben Wright,86.96,157,-161,161,,161,M,88,Group B,B,Raw,161
+5,Thailand,Chinnaphop Khamdam,83.3,-155,155,-162,,155,M,88,Group B,B,Raw,155
+6,Australia,Pep Jones,83.5,107,112,-116,,112,M,88,Group B,B,Raw,112
+DQ,South Korea,Jung-Hoon Moon,87.12,-165,-165,-165,,,M,88,Group B,B,Raw,
+1,China,Jixiong Ye,84.72,225,-232.5,232.5,233.5,232.5,M,88,Group A,B,Raw,232
+2,Jordan,Khattab Abdelkareem M.A.,81.47,205,215,-225,,215,M,88,Group A,B,Raw,215
+3,Japan,Hideki Odo,84.75,183,191,195,,195,M,88,Group A,B,Raw,195
+4,Kazakhstan,Rakhmetzhan Khamayev,86.47,-180,186,192,,192,M,88,Group A,B,Raw,192
+5,Indonesia,Anto. Boi,85.9,185,190,-195,,190,M,88,Group A,B,Raw,190
+6,Uzbekistan,Farhod Umirzakov,84.88,173,178,181,,181,M,88,Group A,B,Raw,181
+7,Kazakhstan,Oleg Gridassov,84.7,177,-183,-183,,177,M,88,Group A,B,Raw,177
+1,China,Miaoyu Han,72.67,117,122,-130.5,-130.5,122,F,73,Group A,B,Raw,122
+2,Indonesia,Nurtani Purba,70.84,100,-110,-110,,100,F,73,Group A,B,Raw,100
+3,UAE,Haifa Naqbi,72.26,-90,94,100,,100,F,73,Group A,B,Raw,100
+4,Chile,Maria Antonieta Ortiz,69.67,95,-99,-100,,95,F,73,Group A,B,Raw,95
+5,Ireland,Britney Arendse,72.19,89,91,93,98.5,93,F,73,Group A,B,Raw,93
+6,South Korea,Eun Mi Yang,72.74,75,85,-88,,85,F,73,Group A,B,Raw,85
+7,Japan,Chika Sakamoto,71.36,60,65,67,,67,F,73,Group A,B,Raw,67
+DQ,Iraq,Osmanee Gharam Al,70.21,-93,-93,-93,,,F,73,Group A,B,Raw,
+1,China,Lili Xu,74.77,132,136,139,-140,139,F,79,Group A,B,Raw,139
+2,Indonesia,Siti Mahmudah,76.82,115,-120,-120,,115,F,79,Group A,B,Raw,115
+3,Taiwan,Tzu-Hui Lin,78.29,-108,108,-116,,108,F,79,Group A,B,Raw,108
+4,Iraq,Hanan Al-Majidi,76.93,-93,93,98,,98,F,79,Group A,B,Raw,98
+5,Kazakhstan,Aigul Baizhanova,77.6,67,70,-75,,70,F,79,Group A,B,Raw,70
+1,UAE,Rashed Hassan Ahmed,94.08,165,174,180,,180,M,97,Group B,B,Raw,180
+2,India,Joginder Singh,88.58,152,-160,161,,161,M,97,Group B,B,Raw,161
+3,South Korea,Sung Yun Jung,93.26,150,155,160,,160,M,97,Group B,B,Raw,160
+4,Singapore,Kalai Vanen,96.36,152,-157,157,,157,M,97,Group B,B,Raw,157
+5,South Korea,Gilbeom Seo,94.66,140,150,-160,,150,M,97,Group B,B,Raw,150
+6,Japan,Masaharu Ishihara,89.8,133,140,145,,145,M,97,Group B,B,Raw,145
+7,Japan,Makoto Majima,95.79,145,-155,-155,,145,M,97,Group B,B,Raw,145
+8,Afghanistan,Yousuf Khan Nabizada,90.97,130,140,-146,,140,M,97,Group B,B,Raw,140
+1,Iran,Seyedhamed Solhipouravanji,95,218,226,231,,231,M,97,Group A,B,Raw,231
+2,UAE,Mohammed Khamis Khalaf,92.45,217,225,230,,230,M,97,Group A,B,Raw,230
+3,China,Panpan Yan,93.52,207,211,216,,216,M,97,Group A,B,Raw,216
+4,Malaysia,Yee Khie Jong,94.85,205,210,215,,215,M,97,Group A,B,Raw,215
+5,Jordan,Aljuneidi Mutaz Z.D.,95.55,195,205,-212,,205,M,97,Group A,B,Raw,205
+6,China,Dong Qi,88.15,190,,,,190,M,97,Group A,B,Raw,190
+7,Indonesia,Atmaji Priambodo,94.83,180,190,-197,,190,M,97,Group A,B,Raw,190
+8,Jordan,Mohammad Abuarar,93.2,-173,173,-180,,173,M,97,Group A,B,Raw,173
+9,Chile,Frank Feliu,92.74,170,-177,-180,,170,M,97,Group A,B,Raw,170
+1,Japan,Katsuhito Nakatsuji,103.78,188,194,198,,198,M,107,Group B,B,Raw,198
+2,UAE,Ahmed Khamis Albaloushi,106.21,190,195,-200,,195,M,107,Group B,B,Raw,195
+3,Malaysia,Saad Mohd Shahmil Md,102.35,180,185,190,,190,M,107,Group B,B,Raw,190
+4,South Korea,Seong-Gu Lee,102.37,125,135,141,,141,M,107,Group B,B,Raw,141
+5,South Korea,Youngbae Moon,106.48,130,135,141,,141,M,107,Group B,B,Raw,141
+6,Thailand,Prakit Tongsang,102.87,120,-130,,,120,M,107,Group B,B,Raw,120
+1,Mongolia,Sodnompiljee Enkhbayar,106.38,230,235,239,,239,M,107,Group A,B,Raw,239
+2,Iran,Aliakbar Gharibshi,105.87,222,230,238,,238,M,107,Group A,B,Raw,238
+3,Iran,Saman Razi,102.62,218,222,-235,,222,M,107,Group A,B,Raw,222
+4,Uzbekistan,Nuriddin Davlatov,105.91,-204,211,-223,,211,M,107,Group A,B,Raw,211
+5,Iraq,Abbas Naisan,105.74,197,202,207,,207,M,107,Group A,B,Raw,207
+6,Kyrgyzstan,Zhyrgalbek Orosbaev,105.98,-200,200,-208,,200,M,107,Group A,B,Raw,200
+1,China,Fengmei Li,85.38,127,135,138,,138,F,86,Group A,B,Raw,138
+2,China,Feifei Zheng,81.13,134,136,-138,-139,136,F,86,Group A,B,Raw,136
+3,Jordan,Alhajaj Tharwh T.H.,84.66,120,-125,-127,,120,F,86,Group A,B,Raw,120
+4,UK,Louise Sugden,84.18,105,110,-112,,110,F,86,Group A,B,Raw,110
+5,South Korea,Youngsun Lee,84.93,105,-110,-113,,105,F,86,Group A,B,Raw,105
+6,Indonesia,Ni Nengah Widiasih,80.87,-90,-95,97,,97,F,86,Group A,B,Raw,97
+7,Kazakhstan,Lyazzat Zhakupova,85.53,87,92,-96,,92,F,86,Group A,B,Raw,92
+1,China,Xuemei Deng,104.06,137,141,146,-147,146,F,86+,Group A,B,Raw,146
+2,South Korea,Hyun Jung Lee,99.46,-114,114,-122,,114,F,86+,Group A,B,Raw,114
+3,Philippines,Adeline Ancheta,106.9,-100,105,-122,,105,F,86+,Group A,B,Raw,105
+4,Iraq,Huda Ali,109.64,-93,93,-100,,93,F,86+,Group A,B,Raw,93
+5,Kazakhstan,Mariya Auyezova,137.03,-82,85,-94,,85,F,86+,Group A,B,Raw,85
+6,Thailand,Netsuda Panna,101.64,75,80,-86,,80,F,86+,Group A,B,Raw,80
+1,Uzbekistan,Navruzbek Abdurasulov,107.15,203,-208,210,,210,M,107+,Group B,B,Raw,210
+2,South Korea,Keun Bae Chun,145.13,200,210,-220,,210,M,107+,Group B,B,Raw,210
+3,Kyrgyzstan,Adilet Kamchybekov,108.1,172,177,-180,,177,M,107+,Group B,B,Raw,177
+4,Japan,Yasuharu Matsuzaki,118.99,128,-136,136,,136,M,107+,Group B,B,Raw,136
+5,South Korea,Younghoon Park,114.54,135,-140,-142,,135,M,107+,Group B,B,Raw,135
+1,Iran,Siamand Rahman,198.7,270,280,-285,,280,M,107+,Group A,B,Raw,280
+2,Iran,Mansour Pourmirzaei,155.53,240,245,-265,,245,M,107+,Group A,B,Raw,245
+3,Iraq,Faris Al-Ajeeli,121.56,230,240,-241,,240,M,107+,Group A,B,Raw,240
+4,China,Mao Li,125.79,211,-222,222,,222,M,107+,Group A,B,Raw,222
+5,Saudi Arabia,Najim Khalid Al,155.57,206,210,212,,212,M,107+,Group A,B,Raw,212
+DQ,Jordan,Jamil Elshebli,125.14,-231,-234,-241,,,M,107+,Group A,B,Raw,

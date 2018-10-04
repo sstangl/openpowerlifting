@@ -47,6 +47,7 @@ pub enum Country {
     Chile,
     China,
     Colombia,
+    Congo,
     #[serde(rename = "Costa Rica")]
     #[strum(to_string = "Costa Rica")]
     CostaRica,
@@ -162,6 +163,7 @@ pub enum Country {
     Qatar,
     Romania,
     Russia,
+    Rwanda,
     Samoa,
     #[serde(rename = "Saudi Arabia")]
     #[strum(to_string = "Saudi Arabia")]
