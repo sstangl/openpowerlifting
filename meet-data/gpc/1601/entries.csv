@@ -6,7 +6,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Squat1Kg,Squat2Kg
 48,Tereza Rybová,F,1995,48,Czechia,Juniors,85,95,100,-100.5,100,40,47.5,-50,,47.5,105,115,117.5,,117.5,265,1,Wraps,SBD
 52,Kitti Suli,F,1995,49.9,Hungary,Juniors,75,-85,-85,,75,45,-50,-50,,45,75,85,-90,,85,205,1,Wraps,SBD
 52,Ana Knežević,F,1997,51.1,Serbia,T3,60,-71,72.5,,72.5,35,-37.5,-37.5,,35,-101.5,101.5,105,110,105,212.5,1,Wraps,SBD
-52,Zorana Dinic,F,1998,52,Serbia,T3,70,80,-90,,80,35,37.5,39,,39,85,92.5,-95,,92.5,211.5,2,Wraps,SBD
+52,Zorana Dinić,F,1998,52,Serbia,T3,70,80,-90,,80,35,37.5,39,,39,85,92.5,-95,,92.5,211.5,2,Wraps,SBD
 56,Tea Stojšić,F,1997,53.1,Croatia,T3,80,-85,-85,-85,80,45,-50,50,,50,110,-117.5,-117.5,-117.5,110,240,1,Wraps,SBD
 56,Daniela Silva,F,1969,53.3,Argentina,M2,80,90,-100,,90,45,50,-55,,50,100,110,120,,120,260,1,Wraps,SBD
 56,Emilija Jovanović,F,1992,53.7,Serbia,Open,-100,100,-110,,100,50,52.5,-55,,52.5,110,120,,,120,272.5,1,Wraps,SBD
@@ -46,7 +46,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Squat1Kg,Squat2Kg
 82.5,Vladana Radonjić,F,2001,81.3,Serbia,T1,110,125,135,140,135,40,50,-52.5,,50,110,120,127.5,,127.5,312.5,1,Wraps,SBD
 82.5,Martina Dostalova,F,1983,82.5,Czechia,Open,190,205,-217.5,,205,100,110,-117.5,121,110,200,220,230,-235.5,230,545,1,Wraps,SBD
 82.5,Minna Pajulahti,F,1981,82.5,Finland,Open,170,182.5,-195.5,,182.5,100,105,107.5,,107.5,182.5,195,-210,,195,485,3,Wraps,SBD
-90,Nina Markovic,F,1998,85.2,Montenegro,T3,120,130,140,,140,75,80,,,80,120,132.5,-140,,132.5,352.5,1,Wraps,SBD
+90,Nina Marković,F,1998,85.2,Montenegro,T3,120,130,140,,140,75,80,,,80,120,132.5,-140,,132.5,352.5,1,Wraps,SBD
 90,Leticia Bertoto,F,1971,86.4,Argentina,M1,190,200,-210,,200,100,116,121,,121,185,200.5,210,,210,531,1,Wraps,SBD
 90,Mariela Ortellado,F,1985,86.9,Argentina,Open,170,190.5,-200,,190.5,105,115,120.5,-122.5,120.5,205,215,-222.5,,215,526,1,Wraps,SBD
 110+,Colleen Fitzpatrick,F,1971,141,Canada,M2 +110kg,-120,120,150,157.5,150,-125,125,-132.5,,125,150,165,-180,,165,440,1,Wraps,SBD
@@ -209,7 +209,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Squat1Kg,Squat2Kg
 82.5,Gisela Witte,F,1958,78.2,Germany,Masters4,,,,,,45,55,65,70,65,,,,,,65,1,Raw,B
 82.5,Leticia Bertotto,F,1971,81.8,Argentina,Masters2,,,,,,110,-120,120,,120,,,,,,120,1,Raw,B
 90,Minna Pajulahti,F,1981,84.7,Finland,Seniors,,,,,,95,102.5,-112.5,,102.5,,,,,,102.5,2,Raw,B
-90,Nina Markovic,F,1998,85.7,Montenegro,SJ3,,,,,,72.5,77.5,80,,80,,,,,,80,1,Raw,B
+90,Nina Marković,F,1998,85.7,Montenegro,SJ3,,,,,,72.5,77.5,80,,80,,,,,,80,1,Raw,B
 90,Mariela Ortellado,F,1985,85.9,Argentina,Seniors,,,,,,100,105,115,,115,,,,,,115,1,Raw,B
 110,Andreja Valant,F,1980,91,Slovenia,Seniors,,,,,,65,-70,-70,,65,,,,,,65,1,Raw,B
 110+,Colleen Fitzpatrick,F,1971,141.4,Canada,Masters2,,,,,,-125,125,130,-137.5,130,,,,,,130,1,Raw,B
@@ -259,7 +259,7 @@ WeightClassKg,Name,Sex,BirthYear,BodyweightKg,Country,Division,Squat1Kg,Squat2Kg
 90,Attila Nyikos Kiss,M,1970,87.2,Hungary,Masters2,,,,,,120,125,-132.5,,125,,,,,,125,2,Raw,B
 90,Stefan Popovski,M,1988,87.6,Macedonia,Seniors,,,,,,195,-200,-200,,195,,,,,,195,2,Raw,B
 90,Denis Jean-Francois,M,1956,88,France,Masters5,,,,,,165,170,175,,175,,,,,,175,1,Raw,B
-90,Drazen Mladenović,M,1992,88,Bosnia and Herzegovina,Seniors,,,,,,155,162.5,-170,,162.5,,,,,,162.5,6,Raw,B
+90,Dražen Mladenović,M,1992,88,Bosnia and Herzegovina,Seniors,,,,,,155,162.5,-170,,162.5,,,,,,162.5,6,Raw,B
 90,Ivan Schoblocher,M,1989,88.2,Croatia,Seniors,,,,,,170,177.5,-180,,177.5,,,,,,177.5,5,Raw,B
 90,Mihaly Gonczol,M,1985,88.4,,Seniors,,,,,,220,230,240,-245,240,,,,,,240,1,Raw,B
 90,Benjamin Mező Áron,M,1996,88.6,Hungary,SJ3,,,,,,-130,-132.5,132.5,,132.5,,,,,,132.5,2,Raw,B
