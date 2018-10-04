@@ -422,6 +422,7 @@ HeaderHandlers = {
     'Name': check_column_name,
     'CyrillicName': check_column_cyrillicname,
     'JapaneseName': ignore_column,
+    'ChineseName': ignore_column,
     'Sex': check_column_sex,
     'Age': check_column_age,
     'Place': check_column_place,

@@ -94,6 +94,7 @@ enum Header {
     Name,
     CyrillicName,
     JapaneseName,
+    ChineseName,
     Sex,
     Age,
     Place,

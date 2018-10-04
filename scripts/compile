@@ -211,10 +211,15 @@ def agerange_from_division(csv, configtoml):
 def add_international_names(csv):
     if 'JapaneseName' in csv.fieldnames:
         intlidx = csv.index('JapaneseName')
-        nameidx = csv.index('Name')
-        for row in csv.rows:
-            if row[nameidx] == '':
-                row[nameidx] = row[intlidx]
+    elif 'ChineseName' in csv.fieldnames:
+        intlidx = csv.index('ChineseName')
+    else:
+        return
+
+    nameidx = csv.index('Name')
+    for row in csv.rows:
+        if row[nameidx] == '':
+            row[nameidx] = row[intlidx]
 
 
 def tested_from_division(division, federation):
@@ -259,9 +264,10 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
             add_cyrillic_name(row[nameidx], row[cyridx])
     newentries.remove_column_by_name("CyrillicName")
 
-    # Make use of Japanese Names
+    # Make use of Japanese/Chinese Names
     add_international_names(newentries)
     newentries.remove_column_by_name("JapaneseName")
+    newentries.remove_column_by_name("ChineseName")
 
     # Assign default Tested values.
     if 'Tested' not in newentries.fieldnames:
