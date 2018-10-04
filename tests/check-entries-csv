@@ -787,14 +787,27 @@ def check_row_division(row, csv, divisions, meetyear):
     for div_key in divisions:
         div = divisions[div_key]
         if row[csv.index('Division')] == div["name"]:
+
+            by_division = False
+            if float(div["max"]) % 1 == 0.5:  # Then this is a birthyear based division
+                by_division = True
+
             if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')].isdigit():
                 approxage = meetyear - int(row[csv.index('BirthYear')])
-                if approxage > float(div["max"]) + 0.5:
+
+                if by_division:
+                    maxage = float(div["max"]) + 0.5
+                    minage = float(div["min"]) - 0.5
+                else:
+                    maxage = float(div["max"]) + 1
+                    minage = float(div["min"]) - 1
+
+                if approxage > maxage:
                     pwarning("Lifter \"%s\" is too old(~%s) for division: %s" %
                              (row[csv.index('Name')],
                                  approxage,
                                  row[csv.index('Division')]))
-                elif approxage < int(div["min"]) - 0.5:
+                elif approxage < minage:
                     pwarning("Lifter \"%s\" is too young(~%s) for division: %s" %
                              (row[csv.index('Name')],
                                  approxage,
