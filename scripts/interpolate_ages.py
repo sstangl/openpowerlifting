@@ -523,7 +523,7 @@ def generate_hashmap(entriescsv, meetcsv):
             minage = float(minage_str)
             maxage = float(maxage_str)
         elif age != '':
-            if float(age) != float(age) % 1:
+            if float(age) % 1.0 != 0:
                 minage = int(float(age))
                 maxage = int(float(age)) + 1
             else:
