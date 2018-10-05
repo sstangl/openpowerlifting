@@ -87,6 +87,15 @@ impl Report {
         let (_, warnings) = self.count_messages();
         warnings
     }
+
+    /// Returns the name of the parent folder of the given file.
+    pub fn get_parent_folder(&self) -> Result<&str, &str> {
+        self.path
+            .as_path()
+            .parent()
+            .and_then(|p| p.file_name().and_then(|s| s.to_str()))
+            .ok_or("Insufficient parent directories")
+    }
 }
 
 /// Checks a directory with meet data.
@@ -100,7 +109,11 @@ pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<Vec<Report>, Box
     }
 
     // Check the entries.csv.
-    let report = check_entries(meetdir.join("entries.csv"), meetresult.meet.as_ref())?;
+    let report = check_entries(
+        meetdir.join("entries.csv"),
+        meetresult.meet.as_ref(),
+        config,
+    )?;
     if !report.messages.is_empty() {
         acc.push(report);
     }

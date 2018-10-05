@@ -11,11 +11,11 @@ use std::path::PathBuf;
 /// Executes checks against a string representation of a CSV,
 /// returning the number of errors.
 fn check(csv: &str) -> usize {
-    let report = Report::new(PathBuf::from("[inline]"));
+    let report = Report::new(PathBuf::from("[inline_parent]/[inline]"));
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_reader(csv.as_bytes());
-    let report = do_check(&mut rdr, report, None).unwrap();
+    let report = do_check(&mut rdr, None, None, report).unwrap();
     report.count_errors()
 }
 

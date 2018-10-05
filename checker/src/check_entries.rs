@@ -8,6 +8,7 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
+use check_config::{Config, Exemption};
 use check_meet::Meet;
 use Report;
 
@@ -625,6 +626,7 @@ fn process_attempt_pair(
     attempt_num: u32,
     maxweight: WeightKg,
     attempt: WeightKg,
+    exempt_lift_order: bool,
     line: u64,
     report: &mut Report,
 ) -> WeightKg {
@@ -639,8 +641,8 @@ fn process_attempt_pair(
     }
 
     // The bar weight shouldn't have lowered.
-    if attempt.abs() < maxweight.abs() {
-        report.warning_on(
+    if !exempt_lift_order && attempt.abs() < maxweight.abs() {
+        report.error_on(
             line,
             format!(
                 "{}{}Kg '{}' lowered weight from '{}'",
@@ -674,13 +676,38 @@ fn check_attempt_consistency_helper(
     attempt3: WeightKg,
     attempt4: WeightKg,
     best3lift: WeightKg,
+    exempt_lift_order: bool,
     line: u64,
     report: &mut Report,
 ) {
     // Check that the bar weight is ascending over attempts.
-    let mut maxweight = process_attempt_pair(lift, 2, attempt1, attempt2, line, report);
-    maxweight = process_attempt_pair(lift, 3, maxweight, attempt3, line, report);
-    process_attempt_pair(lift, 4, maxweight, attempt4, line, report);
+    let mut maxweight = process_attempt_pair(
+        lift,
+        2,
+        attempt1,
+        attempt2,
+        exempt_lift_order,
+        line,
+        report,
+    );
+    maxweight = process_attempt_pair(
+        lift,
+        3,
+        maxweight,
+        attempt3,
+        exempt_lift_order,
+        line,
+        report,
+    );
+    process_attempt_pair(
+        lift,
+        4,
+        maxweight,
+        attempt4,
+        exempt_lift_order,
+        line,
+        report,
+    );
 
     // Check the Best3Lift validity.
     let best = attempt1.max(attempt2.max(attempt3));
@@ -708,7 +735,12 @@ fn check_attempt_consistency_helper(
     }
 }
 
-fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
+fn check_attempt_consistency(
+    entry: &Entry,
+    exempt_lift_order: bool,
+    line: u64,
+    report: &mut Report,
+) {
     // Squat attempts.
     check_attempt_consistency_helper(
         "Squat",
@@ -717,6 +749,7 @@ fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
         entry.squat3kg,
         entry.squat4kg,
         entry.best3squatkg,
+        exempt_lift_order,
         line,
         report,
     );
@@ -729,6 +762,7 @@ fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
         entry.bench3kg,
         entry.bench4kg,
         entry.best3benchkg,
+        exempt_lift_order,
         line,
         report,
     );
@@ -741,6 +775,7 @@ fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
         entry.deadlift3kg,
         entry.deadlift4kg,
         entry.best3deadliftkg,
+        exempt_lift_order,
         line,
         report,
     );
@@ -752,12 +787,22 @@ fn check_attempt_consistency(entry: &Entry, line: u64, report: &mut Report) {
 /// for creating tests that do not have a backing CSV file.
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
-    mut report: Report,
     meet: Option<&Meet>,
+    config: Option<&Config>,
+    mut report: Report,
 ) -> Result<Report, Box<Error>>
 where
     R: io::Read,
 {
+    // Scan for check exemptions.
+    let exemptions = {
+        let parent_folder = &report.get_parent_folder()?;
+        config.map_or(None, |c| c.exemptions_for(parent_folder))
+    };
+    let exempt_lift_order: bool = exemptions.map_or(false, |el| {
+        el.iter().any(|&e| e == Exemption::ExemptLiftOrder)
+    });
+
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
         return Ok(report);
@@ -905,7 +950,7 @@ where
 
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
-        check_attempt_consistency(&entry, line, &mut report);
+        check_attempt_consistency(&entry, exempt_lift_order, line, &mut report);
     }
 
     Ok(report)
@@ -915,6 +960,7 @@ where
 pub fn check_entries(
     entries_csv: PathBuf,
     meet: Option<&Meet>,
+    config: Option<&Config>,
 ) -> Result<Report, Box<Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
@@ -930,5 +976,5 @@ pub fn check_entries(
         .terminator(csv::Terminator::Any(b'\n'))
         .from_path(&report.path)?;
 
-    Ok(do_check(&mut rdr, report, meet)?)
+    Ok(do_check(&mut rdr, meet, config, report)?)
 }

@@ -52,7 +52,7 @@ pub struct WeightClassConfig {
 
 /// Used to exempt a specific meet from some of the checks.
 #[derive(Copy, Clone, Debug, EnumString, PartialEq)]
-enum Exemption {
+pub enum Exemption {
     /// Exempts the meet from having only known divisions.
     #[strum(to_string = "check_row_division")]
     ExemptDivision,
@@ -77,6 +77,16 @@ pub struct ExemptionConfig {
     meet_folder: String,
     /// List of tests for which the meet should be exempt.
     exemptions: Vec<Exemption>,
+}
+
+impl Config {
+    /// Returns an optional list of exemptions for the given folder.
+    pub fn exemptions_for(&self, meet_folder: &str) -> Option<&[Exemption]> {
+        self.exemptions
+            .iter()
+            .find(|ec| ec.meet_folder == meet_folder)
+            .map(|ec| ec.exemptions.as_slice())
+    }
 }
 
 fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConfig> {
