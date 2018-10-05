@@ -23,11 +23,11 @@ Place,Name,Division,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3Bench
 1,Melissa Dunlap,Open,CA,82.5,79.65,35,152.5,75,,147.5,,375,SBD,Raw,F
 2,Kendra Daniel,Open,CA,82.5,80.85,29,115,65,,145,,325,SBD,Raw,F
 1,Andrea Thompson,Open,CA,90,86.9,31,90,52.5,,102.5,,245,SBD,Raw,F
-1,Miriam Beltran,Submaster,CA,48,47.15,39,97.5,65,,117.5,,280,SBD,Raw,F
-1,Caprice Flores,Submaster,CA,75,74.95,35,137.5,65,,147.5,,350,SBD,Raw,F
-2,Aida Escriva,Submaster,CA,75,74.35,38,110,67.5,,130,,307.5,SBD,Raw,F
-3,Yvonne Piper,Submaster,CA,75,74.25,38,110,55,,125,,290,SBD,Raw,F
-1,Melissa Dunlap,Submaster,CA,82.5,79.65,35,152.5,75,,147.5,,375,SBD,Raw,F
+1,Miriam Beltran,Submaster 35-39,CA,48,47.15,39,97.5,65,,117.5,,280,SBD,Raw,F
+1,Caprice Flores,Submaster 35-39,CA,75,74.95,35,137.5,65,,147.5,,350,SBD,Raw,F
+2,Aida Escriva,Submaster 35-39,CA,75,74.35,38,110,67.5,,130,,307.5,SBD,Raw,F
+3,Yvonne Piper,Submaster 35-39,CA,75,74.25,38,110,55,,125,,290,SBD,Raw,F
+1,Melissa Dunlap,Submaster 35-39,CA,82.5,79.65,35,152.5,75,,147.5,,375,SBD,Raw,F
 1,Rebecca Plaza,Master 40-44,CA,90,88.55,42,115,57.5,,120,,292.5,SBD,Raw,F
 1,Keeley Ehleis,Master 45-49,CA,60,58.8,45,112.5,80,82.5,137.5,,330,SBD,Raw,F
 1,Sarn Saecho,Junior 20-23,CA,67.5,66.15,21,142.5,110,,207.5,,460,SBD,Raw,M
@@ -65,9 +65,9 @@ Place,Name,Division,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3Bench
 1,Carasear Mao,Open,CA,125,116,30,217.5,125,,240,,582.5,SBD,Raw,M
 2,Kawika Baculpo,Open,CA,125,116.05,26,165,122.5,,230,,517.5,SBD,Raw,M
 1,Manuel Garcia,Open,CA,140+,143.6,25,205,122.5,,215,,542.5,SBD,Raw,M
-1,Anthony Perez,Submaster,CA,82.5,80.9,37,205,135,,245,,585,SBD,Raw,M
-1,Shoua Lo,Submaster,CA,90,89.6,36,172.5,130,,210,,512.5,SBD,Raw,M
-1,Antonio Manchuca,Submaster,CA,100,96.4,36,250,170,,320,,740,SBD,Raw,M
+1,Anthony Perez,Submaster 35-39,CA,82.5,80.9,37,205,135,,245,,585,SBD,Raw,M
+1,Shoua Lo,Submaster 35-39,CA,90,89.6,36,172.5,130,,210,,512.5,SBD,Raw,M
+1,Antonio Manchuca,Submaster 35-39,CA,100,96.4,36,250,170,,320,,740,SBD,Raw,M
 1,Vijay Ambavanekar,Master 45-49,CA,75,72.9,45,140,90,,155,,385,SBD,Raw,M
 1,George Davis,Master 65-69,CA,82.5,80.9,65,147.5,92.5,,152.5,,392.5,SBD,Raw,M
 1,Romeo Dublin,Master 40-44,CA,90,88.4,41,160,135,,237.5,,532.5,SBD,Raw,M
@@ -86,10 +86,10 @@ Place,Name,Division,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3Bench
 1,Bill Newman,Open,CA,125,123.45,33,307.5,227.5,,330,,865,SBD,Wraps,M
 DQ,Justin Lantz,Open,CA,125,123.6,29,-227.5,,,,,,SBD,Wraps,M
 1,Zachary Brown,Open,CA,140,128.75,36,255,145,,232.5,,632.5,SBD,Wraps,M
-1,Shane Stewart,Submaster,CA,100,91.25,38,277.5,210,,287.5,,775,SBD,Wraps,M
-1,Zachary Brown,Submaster,CA,140,128.75,36,255,145,,232.5,,632.5,SBD,Wraps,M
-1,Clay Edgin,Submaster,CA,140+,160.9,36,185,135,,270,,590,SBD,Wraps,M
-DQ,Aura Morris,Submaster,CA,82.5,77.7,37,170,-120,,,,,SBD,Single-ply,F
+1,Shane Stewart,Submaster 35-39,CA,100,91.25,38,277.5,210,,287.5,,775,SBD,Wraps,M
+1,Zachary Brown,Submaster 35-39,CA,140,128.75,36,255,145,,232.5,,632.5,SBD,Wraps,M
+1,Clay Edgin,Submaster 35-39,CA,140+,160.9,36,185,135,,270,,590,SBD,Wraps,M
+DQ,Aura Morris,Submaster 35-39,CA,82.5,77.7,37,170,-120,,,,,SBD,Single-ply,F
 1,Betsy Spann,Master 60-64,CA,67.5,66.35,60,117.5,75,,147.5,,340,SBD,Single-ply,F
 1,Gia Blackwell,Master 55-59,CA,75,68.95,56,147.5,82.5,,140,,370,SBD,Single-ply,F
 1,Michael Musto,Master 60-64,CA,100,98.25,62,242.5,172.5,,255,,670,SBD,Single-ply,M
@@ -97,7 +97,7 @@ DQ,Aura Morris,Submaster,CA,82.5,77.7,37,170,-120,,,,,SBD,Single-ply,F
 1,Richard Navarra,Open,CA,60,59.9,26,,130,,,,130,B,Raw,M
 1,Jody Woods,Open,CA,90,87.55,59,,175,,,,175,B,Raw,M
 1,Ryan Soper,Open,CA,110,102.9,27,,195,,,,195,B,Raw,M
-1,Joseph Rodrigues,Submaster,CA,82.5,78.2,37,,155,,,,155,B,Raw,M
+1,Joseph Rodrigues,Submaster 35-39,CA,82.5,78.2,37,,155,,,,155,B,Raw,M
 1,Leo Hoffman,Master 40-44,CA,90,85.8,43,,122.5,,,,122.5,B,Raw,M
 1,Jody Woods,Master 55-59,CA,90,87.55,59,,175,,,,175,B,Raw,M
 1,Tim Anderson,Master 60-64,CA,100,98.2,63,,147.5,,,,147.5,B,Raw,M

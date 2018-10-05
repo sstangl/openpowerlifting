@@ -13,7 +13,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Grace Kue,AL,82.5,76.75,28,90,42.5,125,257.5,F,Open,Raw,SBD
 1,Brandy Dickerson,AL,90+,129.15,29,170,87.5,170,427.5,F,Open,Raw,SBD
 2,Ashley Morey,GA,90+,98.4,28,97.5,52.5,115,265,F,Open,Raw,SBD
-1,Mandi Roberts,AL,82.5,77.25,37,115,72.5,157.5,345,F,Submaster,Raw,SBD
+1,Mandi Roberts,AL,82.5,77.25,37,115,72.5,157.5,345,F,Submaster 35-39,Raw,SBD
 1,Sheral Serafini,AL,67.5,62.7,53,97.5,57.5,110,265,F,Master 50-54,Raw,SBD
 1,Valeria Anderson,AL,82.5,79.5,43,107.5,70,155,332.5,F,Master 40-44,Raw,SBD
 1,Christian Sanguyo,AK,67.5,62.3,19,175,115,227.5,517.5,M,Junior 18-19,Raw,SBD
@@ -34,8 +34,8 @@ DQ,Thomas Grier,GA,110,108.15,26,267.5,,272.5,,M,Open,Raw,SBD
 1,Dustin Joiner,AL,125,117.85,27,157.5,165,230,552.5,M,Open,Raw,SBD
 2,Daniel Phillips,AL,125,121.55,29,172.5,142.5,225,540,M,Open,Raw,SBD
 1,Jake England,AL,140+,157,30,182.5,122.5,230,535,M,Open,Raw,SBD
-1,Matt Griffies,AL,100,96.45,35,145,107.5,147.5,400,M,Submaster,Raw,SBD
-1,Chris Stinson,AL,110,106.4,37,172.5,142.5,225,540,M,Submaster,Raw,SBD
+1,Matt Griffies,AL,100,96.45,35,145,107.5,147.5,400,M,Submaster 35-39,Raw,SBD
+1,Chris Stinson,AL,110,106.4,37,172.5,142.5,225,540,M,Submaster 35-39,Raw,SBD
 1,Chris Lentini,AL,75,73.15,40,197.5,155,240,592.5,M,Master 40-44,Raw,SBD
 1,Kristopher Morse,AL,90,83.75,40,82.5,60,110,252.5,M,Master 40-44,Raw,SBD
 1,Chris Webster,AL,100,99.7,41,197.5,142.5,250,590,M,Master 40-44,Raw,SBD
@@ -52,13 +52,13 @@ DQ,Matt Norman,GA,82.5,79.3,38,190,,220,,M,Open,Wraps,SBD
 2,Quintin Arnold,AL,100,94.75,29,280,175,312.5,767.5,M,Open,Wraps,SBD
 3,Johnathan Oldham,AL,100,94.8,26,287.5,147.5,290,725,M,Open,Wraps,SBD
 4,Randy Jones,AL,100,97.6,31,252.5,147.5,227.5,627.5,M,Open,Wraps,SBD
-DQ,Matt Norman,GA,82.5,79.3,38,190,,220,,M,Submaster,Wraps,SBD
+DQ,Matt Norman,GA,82.5,79.3,38,190,,220,,M,Submaster 35-39,Wraps,SBD
 DQ,Matt Norman,GA,82.5,79.3,38,,,,,M,Open,Raw,B
 1,Teddy Courcy,AL,90,88.65,45,,187.5,,187.5,M,Open,Raw,B
 2,Wallace Preston,GA,90,88.75,29,,147.5,,147.5,M,Open,Raw,B
 1,Scott Kanaday,AL,110,104.75,37,,175,,175,M,Open,Raw,B
 1,Joe Franklin,GA,125,119.35,46,,185,,185,M,Open,Raw,B
-1,Matt Norman,GA,82.5,79.3,38,,112.5,,112.5,M,Submaster,Raw,B
+1,Matt Norman,GA,82.5,79.3,38,,112.5,,112.5,M,Submaster 35-39,Raw,B
 1,Teddy Courcy,AL,90,88.65,45,,187.5,,187.5,M,Master 45-49,Raw,B
 1,Joe Franklin,GA,125,119.35,46,,185,,185,M,Master 45-49,Raw,B
 1,Jordain Sanguyo,FL,75,73.9,25,,,272.5,272.5,M,Open,Raw,D
@@ -66,8 +66,8 @@ DQ,Matt Norman,GA,82.5,79.3,38,,,,,M,Open,Raw,B
 1,Nick Layfield,AL,100,99,31,,,237.5,237.5,M,Open,Raw,D
 1,Nicarlto Oliver,AL,110,107.2,31,,,290,290,M,Open,Raw,D
 1,Jake England,AL,140+,157,30,,,230,230,M,Open,Raw,D
-1,Matt Norman,GA,82.5,79.3,38,,,220,220,M,Submaster,Raw,D
-1,Chris Stinson,AL,110,106.4,37,,,225,225,M,Submaster,Raw,D
+1,Matt Norman,GA,82.5,79.3,38,,,220,220,M,Submaster 35-39,Raw,D
+1,Chris Stinson,AL,110,106.4,37,,,225,225,M,Submaster 35-39,Raw,D
 1,Teddy Courcy,AL,90,88.65,45,,187.5,250,437.5,M,Open,Raw,BD
 1,Justin McGlaughn,AL,100,91.2,32,,170,245,415,M,Open,Raw,BD
 1,Jason Westbrook,,90,88.55,42,,122.5,167.5,290,M,Master 40-44,Raw,BD

@@ -18,9 +18,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 7,Valeria Arce Gonzalez,TX,75,74.9,22,90,60,115,265,F,Open,Raw,,,SBD
 1,Alexis Schmidt,TX,90+,98,26,165,87.5,185,437.5,F,Open,Raw,,,SBD
 2,Rebecca Foster,TX,90+,100.4,39,150,77.5,192.5,420,F,Open,Raw,,,SBD
-1,Rita Petersen,TX,52,52,37,65,40,92.5,197.5,F,Submaster,Raw,,,SBD
-1,Leslie Carrillo,TX,56,54.9,36,85,55,107.5,247.5,F,Submaster,Raw,,,SBD
-1,Rebecca Foster,TX,90+,100.4,39,150,77.5,192.5,420,F,Submaster,Raw,,,SBD
+1,Rita Petersen,TX,52,52,37,65,40,92.5,197.5,F,Submaster 35-39,Raw,,,SBD
+1,Leslie Carrillo,TX,56,54.9,36,85,55,107.5,247.5,F,Submaster 35-39,Raw,,,SBD
+1,Rebecca Foster,TX,90+,100.4,39,150,77.5,192.5,420,F,Submaster 35-39,Raw,,,SBD
 1,Christi Taylor,TX,56,54.6,47,82.5,57.5,112.5,252.5,F,Master 45-49,Raw,,,SBD
 1,Leslie de Silva,TX,67.5,62.7,41,95,37.5,112.5,245,F,Master 40-44,Raw,,,SBD
 1,Barak Bez,TX,67.5,64.6,22,160,105,182.5,447.5,M,Junior 20-23,Raw,,,SBD
@@ -53,10 +53,10 @@ DQ,Dennis Levine,TX,82.5,81.8,23,-240,145,285,,M,Open,Raw,,,SBD
 1,Armando Alaniz,TX,125,122,34,300,177.5,280,757.5,M,Open,Raw,,,SBD
 2,Kevin Portillo,TX,125,119.8,26,230,150,230,610,M,Open,Raw,,,SBD
 1,James Strickland,TX,140,131.9,36,272.5,280,272.5,825,M,Open,Raw,,287.5,SBD
-1,Jeff Mestayer,TX,90,86.4,36,237.5,180,242.5,660,M,Submaster,Raw,240,,SBD
-1,Rene Maldonado,TX,110,103.8,38,242.5,185,265,692.5,M,Submaster,Raw,,,SBD
-2,Jacob Zabala,TX,110,109,36,175,112.5,207.5,495,M,Submaster,Raw,,,SBD
-1,James Strickland,TX,140,131.9,36,272.5,280,272.5,825,M,Submaster,Raw,,287.5,SBD
+1,Jeff Mestayer,TX,90,86.4,36,237.5,180,242.5,660,M,Submaster 35-39,Raw,240,,SBD
+1,Rene Maldonado,TX,110,103.8,38,242.5,185,265,692.5,M,Submaster 35-39,Raw,,,SBD
+2,Jacob Zabala,TX,110,109,36,175,112.5,207.5,495,M,Submaster 35-39,Raw,,,SBD
+1,James Strickland,TX,140,131.9,36,272.5,280,272.5,825,M,Submaster 35-39,Raw,,287.5,SBD
 1,Mike Reid,TX,82.5,79.8,50,177.5,117.5,205,500,M,Master 50-54,Raw,,,SBD
 1,Corey Joyal,TX,100,97.9,40,247.5,162.5,272.5,682.5,M,Master 40-44,Raw,,,SBD
 2,Blake Johnson,TX,100,95.8,43,215,155,250,620,M,Master 40-44,Raw,,,SBD
@@ -89,7 +89,7 @@ DQ,Zachary White,TX,90,87.4,27,-207.5,145,240,,M,Open,Wraps,,,SBD
 4,Matthew Bauer,TX,100,97.9,29,202.5,115,212.5,530,M,Open,Wraps,,,SBD
 1,Rowdy Caskey,TX,110,100.2,33,277.5,210,250,737.5,M,Open,Wraps,,,SBD
 DQ,Matthew Grzesik,NY,110,104.9,24,245,-155,-235,,M,Open,Wraps,,,SBD
-DQ,Corey Tune,TX,125,113.6,38,220,-187.5,282.5,,M,Submaster,Wraps,,,SBD
+DQ,Corey Tune,TX,125,113.6,38,220,-187.5,282.5,,M,Submaster 35-39,Wraps,,,SBD
 1,Rudy Rios,TX,100,91.7,46,207.5,135,247.5,590,M,Master 45-49,Wraps,,,SBD
 1,Tim Searles,TX,110,106.5,47,222.5,147.5,255,625,M,Master 45-49,Wraps,,,SBD
 DQ,James Neuman,TX,140,135.2,42,162.5,-140,180,,M,Master 40-44,Wraps,,,SBD
@@ -98,13 +98,13 @@ DQ,Jerry Saldana,TX,90,88.8,36,247.5,-227.5,,,M,Open,Single-ply,,,SBD
 1,Erick Baker,TX,110,108.5,38,327.5,217.5,310,855,M,Open,Single-ply,,,SBD
 2,Bryan Gaston,TX,110,104.4,35,277.5,200,295,772.5,M,Open,Single-ply,,,SBD
 1,Connor Murphy,TX,140+,143.4,18,205,137.5,227.5,570,M,Open,Single-ply,,,SBD
-1,Erick Baker,TX,110,108.5,38,327.5,217.5,310,855,M,Submaster,Single-ply,,,SBD
+1,Erick Baker,TX,110,108.5,38,327.5,217.5,310,855,M,Submaster 35-39,Single-ply,,,SBD
 1,Christopher Morales,TX,75,72.4,21,,137.5,195,332.5,M,Junior 20-23,Raw,,,BD
 2,Gage Hinojosa,TX,75,68.9,20,,112.5,200,312.5,M,Junior 20-23,Raw,,,BD
 1,Daryl Carle,TX,90,88.5,33,,162.5,272.5,435,M,Open,Raw,,,BD
 1,Cayman Gentry,TX,110,107.7,32,,160,255,415,M,Open,Raw,,,BD
 DQ,Sam Webber,TX,140,129.7,30,,227.5,-300,,M,Open,Raw,,,BD
-1,Steve Calamars Jr,TX,75,72,36,,110,215,325,M,Submaster,Raw,,,BD
+1,Steve Calamars Jr,TX,75,72,36,,110,215,325,M,Submaster 35-39,Raw,,,BD
 1,Darla King,TX,67.5,65.5,42,,82.5,,82.5,F,Open,Raw,,,B
 2,Alexandra Peek,TX,67.5,65.4,23,,72.5,,72.5,F,Open,Raw,,,B
 1,Amanda Wolff,TX,75,70.9,27,,95,,95,F,Open,Raw,,,B
@@ -119,8 +119,8 @@ DQ,Sam Webber,TX,140,129.7,30,,227.5,-300,,M,Open,Raw,,,BD
 1,Rowdy Caskey,TX,110,100.2,33,,210,,210,M,Open,Raw,,,B
 1,Rene Garganta,TX,125,116.5,48,,235,,235,M,Open,Raw,,,B
 1,James Strickland,TX,140,131.9,36,,280,,280,M,Open,Raw,,287.5,B
-1,Adrian Copeland,TX,125,123.3,38,,215,,215,M,Submaster,Raw,,,B
-1,James Strickland,TX,140,131.9,36,,280,,280,M,Submaster,Raw,,287.5,B
+1,Adrian Copeland,TX,125,123.3,38,,215,,215,M,Submaster 35-39,Raw,,,B
+1,James Strickland,TX,140,131.9,36,,280,,280,M,Submaster 35-39,Raw,,287.5,B
 1,Rene Garganta,TX,125,116.5,48,,235,,235,M,Master 45-49,Raw,,,B
 1,Jonathan Marshall,AZ,100,99,43,,220,,220,M,Open,Single-ply,,,B
 1,Douglass Haycraft,TX,100,99.1,55,,217.5,,217.5,M,Master 55-59,Single-ply,,,B

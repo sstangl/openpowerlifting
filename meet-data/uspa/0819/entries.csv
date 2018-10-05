@@ -13,8 +13,8 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Bench4
 2,Julia Sweet,IL,90,88.5,47,102.5,77.5,,130,,310,F,Open,Raw,SBD
 DQ,Jamie Wenger,OH,90,90,24,,,,,,,F,Open,Raw,SBD
 1,Jennifer Lull,OH,90+,109.1,31,130,80,,155,,365,F,Open,Raw,SBD
-1,Sarah Dooley,OH,75,71.5,37,127.5,62.5,,140,,330,F,Submaster,Raw,SBD
-1,Nicolina Blackerby,OH,82.5,76,35,90,55,,125,127.5,270,F,Submaster,Raw,SBD
+1,Sarah Dooley,OH,75,71.5,37,127.5,62.5,,140,,330,F,Submaster 35-39,Raw,SBD
+1,Nicolina Blackerby,OH,82.5,76,35,90,55,,125,127.5,270,F,Submaster 35-39,Raw,SBD
 1,Julia Sweet,IL,90,88.5,47,102.5,77.5,,130,,310,F,Master 45-49,Raw,SBD
 1,Aaron Babet,OH,52,37.9,13,67.5,45,,107.5,,220,M,Junior 13-15,Raw,SBD
 1,David Wolverton,OH,60,59.3,15,72.5,57.5,,108,,238,M,Junior 13-15,Raw,SBD
@@ -94,9 +94,9 @@ DQ,Martin Cunningham,OH,90,89.9,21,,,,,,,M,Open,Raw,SBD
 1,Eric Pierce,OH,140,138.4,38,285,152.5,,320,,757.5,M,Open,Raw,SBD
 1,Jared Neal,OH,140+,141,27,320,200,,340,,860,M,Open,Raw,SBD
 2,Donald Cornelius,NY,140+,157.4,44,275,197.5,,300,,772.5,M,Open,Raw,SBD
-1,Nathan Blackerby,OH,90,85.2,38,175,115,,200,,490,M,Submaster,Raw,SBD
-1,Kyle Thigpen,OH,110,109.8,38,212.5,150,,257.5,,620,M,Submaster,Raw,SBD
-1,Eric Pierce,OH,140,138.4,38,285,152.5,,320,,757.5,M,Submaster,Raw,SBD
+1,Nathan Blackerby,OH,90,85.2,38,175,115,,200,,490,M,Submaster 35-39,Raw,SBD
+1,Kyle Thigpen,OH,110,109.8,38,212.5,150,,257.5,,620,M,Submaster 35-39,Raw,SBD
+1,Eric Pierce,OH,140,138.4,38,285,152.5,,320,,757.5,M,Submaster 35-39,Raw,SBD
 DQ,Sean Beach,OH,110,103.9,41,,,,,,,M,Master 40-44,Raw,SBD
 1,Terry Johnson,PA,125,110.4,44,155,100,,187.5,,442.5,M,Master 40-44,Raw,SBD
 1,Donald Cornelius,NY,140+,157.4,44,275,197.5,,300,,772.5,M,Master 40-44,Raw,SBD
@@ -127,7 +127,7 @@ DQ,Jared Brown,OH,82.5,82.1,27,,,,,,,M,Open,Wraps,SBD
 3,Connor Haverfield,ON,110,106.3,23,185,167.5,,272.5,,625,M,Open,Wraps,SBD
 1,Kevin Miller,OH,125,114.5,26,287.5,170,,317.5,,775,M,Open,Wraps,SBD
 1,Jason Frawley,PA,140+,143.9,25,272.5,165,,287.5,,725,M,Open,Wraps,SBD
-DQ,Nicholas Bunt,OH,82.5,81,36,120,,,,,,M,Submaster,Wraps,SBD
+DQ,Nicholas Bunt,OH,82.5,81,36,120,,,,,,M,Submaster 35-39,Wraps,SBD
 1,Michael Coe,IN,110,104.1,46,275,150,,320,,745,M,Master 45-49,Wraps,SBD
 1,Sara Takacs,OH,90,88.6,21,155,110,,152.5,,417.5,F,Open,Single-ply,SBD
 1,Natalie Freed,OH,52,49.5,31,,70,,,,70,F,Open,Raw,B
@@ -135,7 +135,7 @@ DQ,Nicholas Bunt,OH,82.5,81,36,120,,,,,,M,Submaster,Wraps,SBD
 1,Corey Payne,PA,125,110.5,16,,157.5,,,,157.5,M,Junior 16-17,Raw,B
 1,Phillip Roberts,OH,90,86.7,28,,165,,,,165,M,Open,Raw,B
 1,Terry Johnson,PA,125,110.4,44,,100,,,,100,M,Open,Raw,B
-1,Thad Tillison,OH,140,139.9,37,,237.5,,,,237.5,M,Submaster,Raw,B
+1,Thad Tillison,OH,140,139.9,37,,237.5,,,,237.5,M,Submaster 35-39,Raw,B
 1,Terry Johnson,PA,125,110.4,44,,100,,,,100,M,Master 40-44,Raw,B
 1,Bill Kraker,OH,140,140,48,,147.5,,,,147.5,M,Master 45-49,Raw,B
 1,Bradley Hadden,OH,140+,157,60,,165,,,,165,M,Master 60-64,Raw,B
@@ -152,15 +152,15 @@ DQ,Gino Naylor,OH,67.5,60.9,28,,,,,,,M,Open,Raw,D
 1,Donald Cornelius,NY,140+,157.4,44,,,,300,,300,M,Master 40-44,Raw,D
 1,Amanda Beightol,OH,52,51.2,36,,52.5,,107.5,,160,F,Open,Raw,BD
 1,Brenda Engle,OH,56,54.5,52,,50,,97.5,,147.5,F,Open,Raw,BD
-1,Amanda Beightol,OH,52,51.2,36,,52.5,,107.5,,160,F,Submaster,Raw,BD
+1,Amanda Beightol,OH,52,51.2,36,,52.5,,107.5,,160,F,Submaster 35-39,Raw,BD
 1,Brenda Engle,OH,56,54.5,52,,50,,97.5,,147.5,F,Master 50-54,Raw,BD
 1,Douglas Maiorana,PA,67.5,67,27,,145,,195,,340,M,Open,Raw,BD
 1,Efrain Tejada,OH,90,89.3,41,,150,,247.5,,397.5,M,Open,Raw,BD
 1,Steve Thompson,OH,110,108.4,40,,227.5,,297.5,,525,M,Open,Raw,BD
 2,Kyle Thigpen,OH,110,109.8,38,,150,,257.5,,407.5,M,Open,Raw,BD
 1,Terry Johnson,PA,125,110.4,44,,100,,187.5,,287.5,M,Open,Raw,BD
-1,Kyle Thigpen,OH,110,109.8,38,,150,,257.5,,407.5,M,Submaster,Raw,BD
-1,Thad Tillison,OH,140,139.9,37,,237.5,,300,,537.5,M,Submaster,Raw,BD
+1,Kyle Thigpen,OH,110,109.8,38,,150,,257.5,,407.5,M,Submaster 35-39,Raw,BD
+1,Thad Tillison,OH,140,139.9,37,,237.5,,300,,537.5,M,Submaster 35-39,Raw,BD
 1,Efrain Tejada,OH,90,89.3,41,,150,,247.5,,397.5,M,Master 40-44,Raw,BD
 1,Steve Thompson,OH,110,108.4,40,,227.5,,297.5,,525,M,Master 40-44,Raw,BD
 1,Terry Johnson,PA,125,110.4,44,,100,,187.5,,287.5,M,Master 40-44,Raw,BD

@@ -17,7 +17,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Kelsey Lueck,TX,90+,105.5,24,125,87.5,142.5,355,F,Open,Raw,SBD
 2,Nikki Johnson,TX,90+,128.7,23,122.5,60,125,307.5,F,Open,Raw,SBD
 3,Kacie Bone,TX,90+,107.3,30,100,60,115,275,F,Open,Raw,SBD
-1,Kelli Hudson,TX,75,70.6,39,132.5,70,140,342.5,F,Submaster,Raw,SBD
+1,Kelli Hudson,TX,75,70.6,39,132.5,70,140,342.5,F,Submaster 35-39,Raw,SBD
 DQ,Deanna Goss,TX,52,51.3,44,,47.5,95,,F,Master 40-44,Raw,SBD
 1,Laura Williams #2,TX,60,59.9,47,90,67.5,130,287.5,F,Master 45-49,Raw,SBD
 1,Betty Schmidt,TX,75,74,40,120,87.5,132.5,340,F,Master 40-44,Raw,SBD
@@ -52,10 +52,10 @@ DQ,Deanna Goss,TX,52,51.3,44,,47.5,95,,F,Master 40-44,Raw,SBD
 2,Sean Breard,TX,125,123.2,24,275,192.5,320,787.5,M,Open,Raw,SBD
 3,Greg Hargis,TX,125,123.2,50,230,170,332.5,732.5,M,Open,Raw,SBD
 4,James Dunbar,TX,125,122.9,30,247.5,157.5,277.5,682.5,M,Open,Raw,SBD
-1,Brantley Ranelle,TX,82.5,81.7,36,175,125,200,500,M,Submaster,Raw,SBD
-1,Robert Keele,TX,90,88.7,36,227.5,170,232.5,630,M,Submaster,Raw,SBD
-1,Jeris Hall,TX,110,107.6,35,270,195,287.5,752.5,M,Submaster,Raw,SBD
-1,Jesse Landes,TX,125,119.5,38,220,147.5,305,672.5,M,Submaster,Raw,SBD
+1,Brantley Ranelle,TX,82.5,81.7,36,175,125,200,500,M,Submaster 35-39,Raw,SBD
+1,Robert Keele,TX,90,88.7,36,227.5,170,232.5,630,M,Submaster 35-39,Raw,SBD
+1,Jeris Hall,TX,110,107.6,35,270,195,287.5,752.5,M,Submaster 35-39,Raw,SBD
+1,Jesse Landes,TX,125,119.5,38,220,147.5,305,672.5,M,Submaster 35-39,Raw,SBD
 1,Ben Marriott,TX,75,72.8,70,92.5,92.5,130,315,M,Master 70-74,Raw,SBD
 1,Donald Campbell,TX,82.5,82.4,43,185,102.5,217.5,505,M,Master 40-44,Raw,SBD
 1,Lloyd Oliver,TX,82.5,79.7,50,180,112.5,195,487.5,M,Master 50-54,Raw,SBD
@@ -68,15 +68,15 @@ DQ,Deanna Goss,TX,52,51.3,44,,47.5,95,,F,Master 40-44,Raw,SBD
 1,Scott Tully,KS,140+,156.5,41,210,177.5,267.5,655,M,Master 40-44,Raw,SBD
 1,Caitlin King,TX,75,69.1,22,132.5,75,157.5,365,F,Junior 20-23,Wraps,SBD
 1,Caitlin King,TX,75,69.1,22,132.5,75,157.5,365,F,Open,Wraps,SBD
-1,Heather Tully,KS,90,89.3,38,150,70,155,375,F,Submaster,Wraps,SBD
+1,Heather Tully,KS,90,89.3,38,150,70,155,375,F,Submaster 35-39,Wraps,SBD
 1,Jason Thomas,TX,82.5,82.5,24,245,150,245,640,M,Open,Wraps,SBD
 1,Marcus Case,TX,90,86.5,29,237.5,165,275,677.5,M,Open,Wraps,SBD
 1,Zach White,TX,100,96.8,28,215,157.5,255,627.5,M,Open,Wraps,SBD
 1,Emmanuel Dominguez,TX,110,107.7,29,257.5,172.5,300,730,M,Open,Wraps,SBD
 1,Jamie Collie,TX,125,120.1,31,242.5,155,275,672.5,M,Open,Wraps,SBD
 2,Elliott Minshew,TX,125,123.2,31,230,142.5,252.5,625,M,Open,Wraps,SBD
-1,Billy Cauley,TX,100,97.8,37,205,165,232.5,602.5,M,Submaster,Wraps,SBD
-1,Shae Jones,TX,110,109.8,39,290,220,275,785,M,Submaster,Wraps,SBD
+1,Billy Cauley,TX,100,97.8,37,205,165,232.5,602.5,M,Submaster 35-39,Wraps,SBD
+1,Shae Jones,TX,110,109.8,39,290,220,275,785,M,Submaster 35-39,Wraps,SBD
 1,Ernest James,TX,110,108.8,45,242.5,150,285,677.5,M,Master 45-49,Wraps,SBD
 1,Geramy Aleander,TX,82.5,82,26,332.5,250,300,882.5,M,Open,Single-ply,SBD
 1,Betty Schmidt,TX,75,74,40,,87.5,,87.5,F,Master 40-44,Raw,B
@@ -88,10 +88,10 @@ DQ,Deanna Goss,TX,52,51.3,44,,47.5,95,,F,Master 40-44,Raw,SBD
 1,Lauren Quiroz,TX,90,88.2,28,,,142.5,142.5,F,Open,Raw,D
 1,Wilson Ileso,TX,75,74.2,29,,,292.5,292.5,M,Open,Raw,D
 DQ,Patrick Tinajero,TX,110,105.4,35,,,,,M,Open,Raw,D
-DQ,Patrick Tinajero,TX,110,105.4,35,,,,,M,Submaster,Raw,D
+DQ,Patrick Tinajero,TX,110,105.4,35,,,,,M,Submaster 35-39,Raw,D
 1,Jeff Wilkinson,TX,125,121.2,47,,,275,275,M,Master 45-49,Raw,D
 1,Deanna Goss,TX,52,51.3,44,,47.5,95,142.5,F,Master 40-44,Raw,BD
 1,Michael Rich,TX,90,87,27,,130,180,310,M,Open,Raw,BD
 1,Joseph Kleiber,TX,100,98.7,34,,210,227.5,437.5,M,Open,Raw,BD
 DQ,Patrick Tinajero,TX,110,105.4,35,,162.5,,,M,Open,Raw,BD
-DQ,Patrick Tinajero,TX,110,105.4,35,,162.5,,,M,Submaster,Raw,BD
+DQ,Patrick Tinajero,TX,110,105.4,35,,162.5,,,M,Submaster 35-39,Raw,BD

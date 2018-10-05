@@ -9,9 +9,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Stephanie Cantrell,OR,82.5,78.15,39,130,67.5,180,377.5,F,Open,Raw,SBD,,,,Yes
 3,Christin Cole,WA,82.5,80,35,100,60,122.5,282.5,F,Open,Raw,SBD,,,,Yes
 1,Tarissa Richardson,OR,90+,122.6,32,110,82.5,160,352.5,F,Open,Raw,SBD,,,,Yes
-1,Stephanie Cantrell,OR,82.5,78.15,39,130,67.5,180,377.5,F,Submaster,Raw,SBD,,,,Yes
-2,Christin Cole,WA,82.5,80,35,100,60,122.5,282.5,F,Submaster,Raw,SBD,,,,Yes
-1,Erica Stillwagon,OR,90+,92.05,36,85,50,102.5,237.5,F,Submaster,Raw,SBD,,,,Yes
+1,Stephanie Cantrell,OR,82.5,78.15,39,130,67.5,180,377.5,F,Submaster 35-39,Raw,SBD,,,,Yes
+2,Christin Cole,WA,82.5,80,35,100,60,122.5,282.5,F,Submaster 35-39,Raw,SBD,,,,Yes
+1,Erica Stillwagon,OR,90+,92.05,36,85,50,102.5,237.5,F,Submaster 35-39,Raw,SBD,,,,Yes
 1,Sarah Rennells,WA,56,55.05,43,80,47.5,115,242.5,F,Master 40-44,Raw,SBD,,,,Yes
 1,Kimberly Perry,OR,56,54.75,53,85,55,97.5,237.5,F,Master 50-54,Raw,SBD,,,,Yes
 1,Chelsea Miller,OR,75,74.05,42,115,85.5,137.5,338,F,Master 40-44,Raw,SBD,118,,,Yes
@@ -35,8 +35,8 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Nathan Kelley,OR,90,87.15,33,182.5,137.5,227.5,547.5,M,Open,Raw,SBD,,,,Yes
 1,Pai'ea Robins,OR,110,103.15,20,205,145,260,610,M,Open,Raw,SBD,,,,Yes
 1,Noah Prangley,WA,125,118.9,20,187.5,117.5,227.5,532.5,M,Open,Raw,SBD,,,,Yes
-1,Andrew O'Connor,OR,82.5,82.45,36,180,120,217.5,517.5,M,Submaster,Raw,SBD,,,,Yes
-1,Willard Sheppy,OR,100,97.25,36,160,85,192.5,437.5,M,Submaster,Raw,SBD,,,,Yes
+1,Andrew O'Connor,OR,82.5,82.45,36,180,120,217.5,517.5,M,Submaster 35-39,Raw,SBD,,,,Yes
+1,Willard Sheppy,OR,100,97.25,36,160,85,192.5,437.5,M,Submaster 35-39,Raw,SBD,,,,Yes
 1,Todd Bezates,OR,90,89.8,43,175,122.5,227.5,525,M,Master 40-44,Raw,SBD,,,,Yes
 1,JR Holmdahl,WA,82.5,81.25,41,195,112.5,203,510.5,M,Open,Wraps,SBD,,,205,Yes
 1,Cody Stillwagon,OR,100,95.1,34,182.5,137.5,240,560,M,Open,Wraps,SBD,,,,Yes
@@ -52,7 +52,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 DQ,Patty Vondracek,WA,75,73.45,66,,,,,M,Open,Raw,B,,,,Yes
 1,Peter Martin,OR,125,121.25,48,,140,,140,M,Open,Raw,B,,,,Yes
 1,Sam Pecktol,OR,140+,153.65,63,,167.5,,167.5,M,Open,Raw,B,,,,Yes
-1,Jason Smith,OR,90,89.55,38,,85,,85,M,Submaster,Raw,B,,,,Yes
+1,Jason Smith,OR,90,89.55,38,,85,,85,M,Submaster 35-39,Raw,B,,,,Yes
 DQ,Patty Vondracek,WA,75,73.45,66,,,,,M,Master 65-69,Raw,B,,,,Yes
 1,Tim Eastman,WA,90,88.6,53,,110,,110,M,Master 50-54,Raw,B,,,,Yes
 1,Allen Phillips,OR,100,92.75,74,,107.5,,107.5,M,Master 70-74,Raw,B,,,,Yes
@@ -65,10 +65,10 @@ DQ,Patty Vondracek,WA,75,73.45,66,,,,,M,Master 65-69,Raw,B,,,,Yes
 1,Kim Nelson,WA,75,73.6,53,,,92.5,92.5,F,Master 50-54,Raw,D,,,,Yes
 1,Peter Martin,OR,125,121.25,48,,,227.5,227.5,M,Open,Raw,D,,,,Yes
 1,Sam Pecktol,OR,140+,153.65,63,,,245,245,M,Open,Raw,D,,,,Yes
-1,Jason Smith,OR,90,89.55,38,,,160,160,M,Submaster,Raw,D,,,,Yes
+1,Jason Smith,OR,90,89.55,38,,,160,160,M,Submaster 35-39,Raw,D,,,,Yes
 1,Vern Vondracek,WA,110,105.85,61,,,150,150,M,Master 60-64,Raw,D,,,,Yes
 1,Peter Martin,OR,125,121.25,48,,,227.5,227.5,M,Master 45-49,Raw,D,,,,Yes
 1,Sam Pecktol,OR,140+,153.65,63,,,245,245,M,Master 60-64,Raw,D,,,,Yes
 1,Ronica Lorenzen,or,75,71.95,28,,87.5,145,232.5,F,Open,Raw,BD,,,,Yes
 DQ,Dustin Sparks,OR,90,88.9,33,,,155,,M,Open,Raw,BD,,,,Yes
-1,Jason Smith,OR,90,89.55,38,,85,160,245,M,Submaster,Raw,BD,,,,Yes
+1,Jason Smith,OR,90,89.55,38,,85,160,245,M,Submaster 35-39,Raw,BD,,,,Yes

@@ -26,11 +26,11 @@ DQ,Jacqueline Mojica,FL,48,48,43,,,,,F,Open,Raw,SBD,Yes
 3,Richelle Smith,IA,90,88.2,35,130,60,147.5,337.5,F,Open,Raw,SBD,Yes
 1,Janelle Hartwig,IA,90+,129.8,31,192.5,115,202.5,510,F,Open,Raw,SBD,Yes
 2,Anna Murrill,GA,90+,99.6,37,135,87.5,165,387.5,F,Open,Raw,SBD,Yes
-1,Heidi Dehnel,TX,67.5,60.3,36,112.5,70,150,332.5,F,Submaster,Raw,SBD,Yes
-2,Desiree Savarese,GA,67.5,66.4,36,107.5,62.5,132.5,302.5,F,Submaster,Raw,SBD,Yes
-1,Amanda Lewis,IA,75,73.8,36,145,70,167.5,382.5,F,Submaster,Raw,SBD,Yes
-1,Aimee Halman,FL,82.5,80.6,36,137.5,80,155,372.5,F,Submaster,Raw,SBD,Yes
-1,Richelle Smith,IA,90,88.2,35,130,60,147.5,337.5,F,Submaster,Raw,SBD,Yes
+1,Heidi Dehnel,TX,67.5,60.3,36,112.5,70,150,332.5,F,Submaster 35-39,Raw,SBD,Yes
+2,Desiree Savarese,GA,67.5,66.4,36,107.5,62.5,132.5,302.5,F,Submaster 35-39,Raw,SBD,Yes
+1,Amanda Lewis,IA,75,73.8,36,145,70,167.5,382.5,F,Submaster 35-39,Raw,SBD,Yes
+1,Aimee Halman,FL,82.5,80.6,36,137.5,80,155,372.5,F,Submaster 35-39,Raw,SBD,Yes
+1,Richelle Smith,IA,90,88.2,35,130,60,147.5,337.5,F,Submaster 35-39,Raw,SBD,Yes
 DQ,Jacqueline Mojica,FL,48,48,43,,,,,F,Master 40-44,Raw,SBD,Yes
 1,Nicole Lamartine,WY,52,51.4,41,127.5,67.5,157.5,352.5,F,Master 40-44,Raw,SBD,Yes
 1,Candi Nostrant,OH,60,59.6,46,145,82.5,147.5,375,F,Master 45-49,Raw,SBD,Yes
@@ -95,11 +95,11 @@ DQ,Ryan Quady,GA,90,86.4,25,,,,,M,Open,Raw,SBD,Yes
 2,Nikita Koba,GA,125,117.5,23,275,172.5,330,777.5,M,Open,Raw,SBD,Yes
 3,Daniel Trefrey,TX,125,125,32,242.5,165,255,662.5,M,Open,Raw,SBD,Yes
 1,Shane Henley,MS,140,135.5,36,235,212.5,247.5,695,M,Open,Raw,SBD,Yes
-1,Ryan Urso,FL,75,74.1,38,182.5,125,190,497.5,M,Submaster,Raw,SBD,Yes
-1,Jeremy Smith,IA,82.5,81.6,36,210,162.5,247.5,620,M,Submaster,Raw,SBD,Yes
-2,Matt Norman,GA,82.5,79.9,37,195,122.5,242.5,560,M,Submaster,Raw,SBD,Yes
-1,Cardell Oliver,GA,100,99.2,38,280,190,327.5,797.5,M,Submaster,Raw,SBD,Yes
-1,Shane Henley,MS,140,135.5,36,235,212.5,247.5,695,M,Submaster,Raw,SBD,Yes
+1,Ryan Urso,FL,75,74.1,38,182.5,125,190,497.5,M,Submaster 35-39,Raw,SBD,Yes
+1,Jeremy Smith,IA,82.5,81.6,36,210,162.5,247.5,620,M,Submaster 35-39,Raw,SBD,Yes
+2,Matt Norman,GA,82.5,79.9,37,195,122.5,242.5,560,M,Submaster 35-39,Raw,SBD,Yes
+1,Cardell Oliver,GA,100,99.2,38,280,190,327.5,797.5,M,Submaster 35-39,Raw,SBD,Yes
+1,Shane Henley,MS,140,135.5,36,235,212.5,247.5,695,M,Submaster 35-39,Raw,SBD,Yes
 1,Don Wortmann,MO,75,74.9,49,142.5,102.5,185,430,M,Master 45-49,Raw,SBD,Yes
 1,David Heard,GA,82.5,81.6,56,172.5,142.5,240,555,M,Master 55-59,Raw,SBD,Yes
 2,Michael Morgan,KY,82.5,79.4,55,142.5,122.5,175,440,M,Master 55-59,Raw,SBD,Yes
@@ -114,7 +114,7 @@ DQ,Ryan Quady,GA,90,86.4,25,,,,,M,Open,Raw,SBD,Yes
 1,Kimberly Beitzell,MD,60,59.7,35,140,82.5,155,377.5,F,Open,Wraps,SBD,Yes
 1,Valerie Smith,GA,67.5,64,43,110,72.5,167.5,350,F,Open,Wraps,SBD,Yes
 2,Michelle Apodaca,CO,67.5,66.8,33,120,72.5,115,307.5,F,Open,Wraps,SBD,Yes
-1,Kimberly Beitzell,MD,60,59.7,35,140,82.5,155,377.5,F,Submaster,Wraps,SBD,Yes
+1,Kimberly Beitzell,MD,60,59.7,35,140,82.5,155,377.5,F,Submaster 35-39,Wraps,SBD,Yes
 1,Valerie Smith,GA,67.5,64,43,110,72.5,167.5,350,F,Master 40-44,Wraps,SBD,Yes
 1,Jacob Triplett,MO,75,72.5,17,157.5,105,187.5,450,M,Junior 16-17,Wraps,SBD,Yes
 1,Matt Cookson,KS,90,88.6,22,240,157.5,280,677.5,M,Junior 20-23,Wraps,SBD,Yes
@@ -140,7 +140,7 @@ DQ,Isaiah Ganilla,NC,90,85.3,26,175,,202.5,,M,Open,Wraps,SBD,Yes
 1,Damian Solis,NC,125,123.5,30,282.5,167.5,310,760,M,Open,Wraps,SBD,Yes
 2,Joshua Dodson-Collins,TN,125,125,28,265,177.5,310,752.5,M,Open,Wraps,SBD,Yes
 3,Sam Ferguson,UT,125,124.6,33,215,155,240,610,M,Open,Wraps,SBD,Yes
-1,Rene Maldonado,TX,110,101.9,38,250,182.5,247.5,680,M,Submaster,Wraps,SBD,Yes
+1,Rene Maldonado,TX,110,101.9,38,250,182.5,247.5,680,M,Submaster 35-39,Wraps,SBD,Yes
 1,Brook Anderson,CO,67.5,67.2,41,157.5,105,150,412.5,F,Open,Single-ply,SBD,Yes
 1,Lola Hernandez,CO,82.5,78.4,32,147.5,92.5,157.5,397.5,F,Open,Single-ply,SBD,Yes
 1,Brook Anderson,CO,67.5,67.2,41,157.5,105,150,412.5,F,Master 40-44,Single-ply,SBD,Yes

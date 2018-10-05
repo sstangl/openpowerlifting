@@ -23,8 +23,8 @@ DQ,Samantha Moeller,TX,75,71.5,33,122.5,,147.5,,F,Open,Raw,SBD
 1,Stephanie Davidson,TX,90+,102,32,160,75,160,395,F,Open,Raw,SBD
 2,Falon Renfroe,TX,90+,110.3,26,150,70,147.5,367.5,F,Open,Raw,SBD
 3,Sara Gibson,LA,90+,121.7,35,122.5,82.5,147.5,352.5,F,Open,Raw,SBD
-1,Nicole Gonzalez,TX,67.5,64.6,35,192.5,107.5,222.5,522.5,F,Submaster,Raw,SBD
-1,Sheena Burton,TX,75,73,36,120,77.5,150,347.5,F,Submaster,Raw,SBD
+1,Nicole Gonzalez,TX,67.5,64.6,35,192.5,107.5,222.5,522.5,F,Submaster 35-39,Raw,SBD
+1,Sheena Burton,TX,75,73,36,120,77.5,150,347.5,F,Submaster 35-39,Raw,SBD
 1,Tamara Stromberg,TX,52,50.6,40,112.5,52.5,138,303,F,Master 40-44,Raw,SBD
 1,Neaomi Quartucci,TX,75,70.9,43,140,72.5,142.5,355,F,Master 40-44,Raw,SBD
 1,Kelley Harvey,TX,90+,99.6,59,95,55,147.5,297.5,F,Master 55-59,Raw,SBD
@@ -64,21 +64,21 @@ DQ,Joshua McClelland,LA,110,104.6,27,200,162.5,,,M,Open,Raw,SBD
 5,Brice Meier,TX,125,119.3,27,250,187.5,255,692.5,M,Open,Raw,SBD
 6,Brandon Byrd #1,TX,125,111.2,32,170,117.5,215,502.5,M,Open,Raw,SBD
 1,Justin LaTouf,TX,140,131.8,33,180,135,205,520,M,Open,Raw,SBD
-1,Neil Devoe,TX,82.5,78.6,39,195,135,250,580,M,Submaster,Raw,SBD
-1,Joe Bider,TX,90,88.8,35,282.5,170,308,760.5,M,Submaster,Raw,SBD
-1,Anthony Rodriguez,TX,100,99,36,245,155,337.5,737.5,M,Submaster,Raw,SBD
-2,David Sun,TX,100,97,38,165,107.5,225,497.5,M,Submaster,Raw,SBD
-1,Jeris Hall,TX,110,107.5,35,290,215,290,795,M,Submaster,Raw,SBD
-2,Michael Kratz,TX,110,104,36,232.5,180,250,662.5,M,Submaster,Raw,SBD
-1,Zachary Mullins,TX,125,121.7,35,267.5,180,282.5,730,M,Submaster,Raw,SBD
-1,Jonathan Rhoden,TX,140,139.1,36,205,137.5,230,572.5,M,Submaster,Raw,SBD
+1,Neil Devoe,TX,82.5,78.6,39,195,135,250,580,M,Submaster 35-39,Raw,SBD
+1,Joe Bider,TX,90,88.8,35,282.5,170,308,760.5,M,Submaster 35-39,Raw,SBD
+1,Anthony Rodriguez,TX,100,99,36,245,155,337.5,737.5,M,Submaster 35-39,Raw,SBD
+2,David Sun,TX,100,97,38,165,107.5,225,497.5,M,Submaster 35-39,Raw,SBD
+1,Jeris Hall,TX,110,107.5,35,290,215,290,795,M,Submaster 35-39,Raw,SBD
+2,Michael Kratz,TX,110,104,36,232.5,180,250,662.5,M,Submaster 35-39,Raw,SBD
+1,Zachary Mullins,TX,125,121.7,35,267.5,180,282.5,730,M,Submaster 35-39,Raw,SBD
+1,Jonathan Rhoden,TX,140,139.1,36,205,137.5,230,572.5,M,Submaster 35-39,Raw,SBD
 1,Clarence Bostian,TX,90,89.1,41,210,150,227.5,587.5,M,Master 40-44,Raw,SBD
 1,BJ Whitehead,TX,125,115.2,41,320,195,325,840,M,Master 40-44,Raw,SBD
 1,Caitlin King,TX,67.5,67.4,23,162.5,80,162.5,405,F,Junior 20-23,Wraps,SBD
 1,Kat Dooley,TX,67.5,66,32,150,80,185,415,F,Open,Wraps,SBD
 2,Caitlin King,TX,67.5,67.4,23,162.5,80,162.5,405,F,Open,Wraps,SBD
 1,Barbara Lee #1,TX,75,70.9,36,215,115.5,223,553.5,F,Open,Wraps,SBD
-1,Barbara Lee #1,TX,75,70.9,36,215,115.5,223,553.5,F,Submaster,Wraps,SBD
+1,Barbara Lee #1,TX,75,70.9,36,215,115.5,223,553.5,F,Submaster 35-39,Wraps,SBD
 1,Omar Solis,TX,67.5,67.3,19,175,95,212.5,482.5,M,Junior 18-19,Wraps,SBD
 1,Thomas Soto,TX,67.5,66.9,23,255,142.5,275,672.5,M,Junior 20-23,Wraps,SBD
 1,Jessie Vallejo,TX,75,69.8,21,207.5,122.5,210,540,M,Junior 20-23,Wraps,SBD
@@ -92,9 +92,9 @@ DQ,Joshua McClelland,LA,110,104.6,27,200,162.5,,,M,Open,Raw,SBD
 1,Nick Matthai,IA,125,115.3,24,295,125,265,685,M,Open,Wraps,SBD
 2,Matthew Cox,TX,125,122.7,33,242.5,165,250,657.5,M,Open,Wraps,SBD
 3,Benjamin Rose,TX,125,117.2,29,185,152.5,207.5,545,M,Open,Wraps,SBD
-1,James Waldrop,TX,82.5,78.9,35,205,130,227.5,562.5,M,Submaster,Wraps,SBD
-1,Keithyon Gunter,TX,110,109.1,37,300,192.5,312.5,805,M,Submaster,Wraps,SBD
+1,James Waldrop,TX,82.5,78.9,35,205,130,227.5,562.5,M,Submaster 35-39,Wraps,SBD
+1,Keithyon Gunter,TX,110,109.1,37,300,192.5,312.5,805,M,Submaster 35-39,Wraps,SBD
 1,Todd Wotkyns,TX,100,94.7,40,245,182.5,265,692.5,M,Master 40-44,Wraps,SBD
 1,Erick Baker,TX,110,106.7,39,332.5,230,290,852.5,M,Open,Single-ply,SBD
 DQ,Boice Best,TX,110,108.4,26,,,280,,M,Open,Single-ply,SBD
-1,Erick Baker,TX,110,106.7,39,332.5,230,290,852.5,M,Submaster,Single-ply,SBD
+1,Erick Baker,TX,110,106.7,39,332.5,230,290,852.5,M,Submaster 35-39,Single-ply,SBD

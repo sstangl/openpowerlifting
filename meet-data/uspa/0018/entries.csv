@@ -1,20 +1,20 @@
 Place,Name,Sex,Event,Division,WeightClassKg,BodyweightKg,Age,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Equipment
-1,Narbe Mansourian,M,B,Open Men,67.5,65.32,,,,,,147.5,-152.5,-152.5,147.5,,,,,,147.5,Single-ply
-1,Steve Tamerius,M,B,Open Men,75,71.21,,,,,,92.5,-100,-100,92.5,,,,,,92.5,Single-ply
-DQ,Reuben Lopez,M,B,Open Men,82.5,81.19,,,,,,-142.5,-142.5,-145,,,,,,,,Single-ply
-1,Mario Valencia,M,B,Open Men,82.5,82.10,,,,,,160,170,172.5,172.5,,,,,,172.5,Single-ply
-1,Cory Dexter,M,B,Open Men,90,89.90,,,,,,175,190,-200,190,,,,,,190,Single-ply
-2,Charley Turner,M,B,Open Men,90,88.45,,,,,,150,155,-160,155,,,,,,155,Single-ply
-3,Zach Huskey,M,B,Open Men,90,88.90,,,,,,-140,142.5,-150,142.5,,,,,,142.5,Single-ply
-1,Malik Adam,M,B,Open Men,100,99.34,,,,,,192.5,200,-210,200,,,,,,200,Single-ply
-2,Daren Dowell,M,B,Open Men,100,98.43,,,,,,160,165,-170,165,,,,,,165,Single-ply
-3,Paul Roa,M,B,Open Men,100,97.52,,,,,,-125,137.5,-150,137.5,,,,,,137.5,Single-ply
-DQ,David Fagel,M,B,Open Men,100,94.80,,,,,,-197.5,-197.5,-197.5,,,,,,,,Single-ply
-1,Alvin Waldon,M,B,Open Men,110,108.64,,,,,,210,220,-225,220,,,,,,220,Single-ply
-2,Joe Grissom,M,B,Open Men,110,109.77,,,,,,-185,-185,185,185,,,,,,185,Single-ply
-3,Ron Garcia,M,B,Open Men,110,109.32,,,,,,142.5,155,-165,155,,,,,,155,Single-ply
-1,LeRoy Walker,M,B,Open Men,125,122.47,,,,,,200,-227.5,-227.5,200,,,,,,200,Single-ply
-2,Neil Ferone,M,B,Open Men,125,123.60,,,,,,185,195,-205,195,,,,,,195,Single-ply
+1,Narbe Mansourian,M,B,Open,67.5,65.32,,,,,,147.5,-152.5,-152.5,147.5,,,,,,147.5,Single-ply
+1,Steve Tamerius,M,B,Open,75,71.21,,,,,,92.5,-100,-100,92.5,,,,,,92.5,Single-ply
+DQ,Reuben Lopez,M,B,Open,82.5,81.19,,,,,,-142.5,-142.5,-145,,,,,,,,Single-ply
+1,Mario Valencia,M,B,Open,82.5,82.10,,,,,,160,170,172.5,172.5,,,,,,172.5,Single-ply
+1,Cory Dexter,M,B,Open,90,89.90,,,,,,175,190,-200,190,,,,,,190,Single-ply
+2,Charley Turner,M,B,Open,90,88.45,,,,,,150,155,-160,155,,,,,,155,Single-ply
+3,Zach Huskey,M,B,Open,90,88.90,,,,,,-140,142.5,-150,142.5,,,,,,142.5,Single-ply
+1,Malik Adam,M,B,Open,100,99.34,,,,,,192.5,200,-210,200,,,,,,200,Single-ply
+2,Daren Dowell,M,B,Open,100,98.43,,,,,,160,165,-170,165,,,,,,165,Single-ply
+3,Paul Roa,M,B,Open,100,97.52,,,,,,-125,137.5,-150,137.5,,,,,,137.5,Single-ply
+DQ,David Fagel,M,B,Open,100,94.80,,,,,,-197.5,-197.5,-197.5,,,,,,,,Single-ply
+1,Alvin Waldon,M,B,Open,110,108.64,,,,,,210,220,-225,220,,,,,,220,Single-ply
+2,Joe Grissom,M,B,Open,110,109.77,,,,,,-185,-185,185,185,,,,,,185,Single-ply
+3,Ron Garcia,M,B,Open,110,109.32,,,,,,142.5,155,-165,155,,,,,,155,Single-ply
+1,LeRoy Walker,M,B,Open,125,122.47,,,,,,200,-227.5,-227.5,200,,,,,,200,Single-ply
+2,Neil Ferone,M,B,Open,125,123.60,,,,,,185,195,-205,195,,,,,,195,Single-ply
 1,Ron Garcia,M,B,M 40-44,110,109.32,40,,,,,142.5,155,-165,155,,,,,,155,Single-ply
 DQ,Chuck McGuire,M,B,M 40-44,140,127.01,42,,,,,-160,-160,-160,,,,,,,,Single-ply
 1,Shawn Stone,M,B,M 45-49,100,96.62,49,,,,,165,175,-182.5,175,,,,,,175,Single-ply
@@ -35,17 +35,17 @@ DQ,John Parker,M,B,M 60-64,110,106.82,60,,,,,-125,-137.5,-137.5,,,,,,,,Single-pl
 1,Amy Razor,F,SBD,Women,82.5,82.10,47,90,-110,110,110,62.5,70,-75,70,102.5,110,115,115,,295,Single-ply
 1,Eric Charboneau,M,SBD,Teen 15-16,100,98.66,15,-137.5,137.5,-145,137.5,92.5,97.5,-100,97.5,147.5,160,175,175,,410,Single-ply
 1,Eric Graves,M,SBD,Teen 16-17,82.5,82.10,17,167.5,187.5,-192.5,187.5,97.5,105,-110,105,172.5,195,202.5,202.5,,495,Single-ply
-1,Steven Kato,M,SBD,Open Men,67.5,67.13,,-190,-190,190,190,122.5,-132.5,-132.5,122.5,175,200,-207.5,200,,512.5,Single-ply
-1,Bernardo Separa,M,SBD,Open Men,75,74.62,,-190,190,-212.5,190,142.5,155,-165,155,190,215,-227.5,215,,560,Single-ply
-1,Jari Niskala,M,SBD,Open Men,82.5,80.29,,-192.5,-192.5,192.5,192.5,137.5,-150,-150,137.5,210,227.5,240,240,,570,Single-ply
-2,Jose Hernandez,M,SBD,Open Men,82.5,80.29,,120,130,145,145,95,-102.5,102.5,102.5,120,140,160,160,,407.5,Single-ply
-1,Michael Belucio,M,SBD,Open Men,90,89.90,,212.5,227.5,240,240,100,,,100,202.5,217.5,-227.5,217.5,,557.5,Single-ply
-2,Patrick O'Neal,M,SBD,Open Men,90,89.58,26,100,112,132.5,132.5,85,100,-110,100,145,165,182.5,182.5,,415,Single-ply
-1,Pete Richter,M,SBD,Open Men,100,97.75,,125,145,-157.5,145,92.5,102.5,117.5,117.5,162.5,187.5,200,200,,462.5,Single-ply
-2,Shawn Nugent,M,SBD,Open Men,100,97.98,32,125,145,-160,145,72.5,-97.5,-100,72.5,145,157.5,-170,157.5,,375,Single-ply
-DQ,Ken James,M,SBD,Open Men,110,109.32,,-192.5,192.5,-210,192.5,147.5,-160,-160,147.5,-237.5,-237.5,,,,,Single-ply
-1,Robert Speno,M,SBD,Open Men,125,119.29,,305,327.5,-340,327.5,-207.5,-207.5,207.5,207.5,280,295,300,300,,835,Single-ply
-2,Emilio Paez,M,SBD,Open Men,125,117.25,,212.5,227.5,237.5,237.5,62.5,,,62.5,207.5,227.5,240,240,,540,Single-ply
+1,Steven Kato,M,SBD,Open,67.5,67.13,,-190,-190,190,190,122.5,-132.5,-132.5,122.5,175,200,-207.5,200,,512.5,Single-ply
+1,Bernardo Separa,M,SBD,Open,75,74.62,,-190,190,-212.5,190,142.5,155,-165,155,190,215,-227.5,215,,560,Single-ply
+1,Jari Niskala,M,SBD,Open,82.5,80.29,,-192.5,-192.5,192.5,192.5,137.5,-150,-150,137.5,210,227.5,240,240,,570,Single-ply
+2,Jose Hernandez,M,SBD,Open,82.5,80.29,,120,130,145,145,95,-102.5,102.5,102.5,120,140,160,160,,407.5,Single-ply
+1,Michael Belucio,M,SBD,Open,90,89.90,,212.5,227.5,240,240,100,,,100,202.5,217.5,-227.5,217.5,,557.5,Single-ply
+2,Patrick O'Neal,M,SBD,Open,90,89.58,26,100,112,132.5,132.5,85,100,-110,100,145,165,182.5,182.5,,415,Single-ply
+1,Pete Richter,M,SBD,Open,100,97.75,,125,145,-157.5,145,92.5,102.5,117.5,117.5,162.5,187.5,200,200,,462.5,Single-ply
+2,Shawn Nugent,M,SBD,Open,100,97.98,32,125,145,-160,145,72.5,-97.5,-100,72.5,145,157.5,-170,157.5,,375,Single-ply
+DQ,Ken James,M,SBD,Open,110,109.32,,-192.5,192.5,-210,192.5,147.5,-160,-160,147.5,-237.5,-237.5,,,,,Single-ply
+1,Robert Speno,M,SBD,Open,125,119.29,,305,327.5,-340,327.5,-207.5,-207.5,207.5,207.5,280,295,300,300,,835,Single-ply
+2,Emilio Paez,M,SBD,Open,125,117.25,,212.5,227.5,237.5,237.5,62.5,,,62.5,207.5,227.5,240,240,,540,Single-ply
 1,Vince Tanabe,M,SBD,M 40-44,67.5,64.86,40,192.5,-207.5,210,210,115,122.5,127.5,127.5,210,227.5,232.5,232.5,,570,Single-ply
 1,David Brekke,M,SBD,M 40-44,82.5,79.92,42,-142.5,142.5,-155,142.5,105,-115,-115,105,152.5,170,190,190,,437.5,Single-ply
 1,Michael Belucio,M,SBD,M 40-44,90,89.90,40,212.5,227.5,240,240,100,,,100,202.5,217.5,-227.5,217.5,,557.5,Single-ply
@@ -57,8 +57,8 @@ DQ,Ken James,M,SBD,Open Men,110,109.32,,-192.5,192.5,-210,192.5,147.5,-160,-160,
 1,Pete Wilson,M,SBD,M 65-69,90,87.54,66,-207.5,207.5,-215,207.5,145,150,157.5,157.5,180,187.5,192.5,192.5,,557.5,Single-ply
 1,Danny Herrera,M,SBD,M 65-69,125,119.98,65,220,-227.5,-237.5,220,-175,175,182.5,182.5,200,210,220,220,227.5,622.5,Single-ply
 1,Richard Simon,M,SBD,M 70-74,82.5,82.10,72,130,-150,-150,130,-110,110,-117.5,110,137.5,150,155,155,,395,Single-ply
-1,Steven Kato,M,D,Open Men,67.5,67.13,,,,,,,,,,175,200,-207.5,200,,200,Single-ply
-1,Paul Roa,M,D,Open Men,100,97.52,,,,,,,,,,167.5,182.5,210,210,,210,Single-ply
+1,Steven Kato,M,D,Open,67.5,67.13,,,,,,,,,,175,200,-207.5,200,,200,Single-ply
+1,Paul Roa,M,D,Open,100,97.52,,,,,,,,,,167.5,182.5,210,210,,210,Single-ply
 1,Steven Brown,M,D,M 45-49,125,122.02,49,,,,,,,,,237.5,260,,260,,260,Single-ply
 1,Bill Ennis,M,D,M 55-59,82.5,82.10,57,,,,,,,,,205,212.5,217.5,217.5,,217.5,Single-ply
 NS,Daniel Smith III,M,D,M 55-59,110,103.65,59,,,,,,,,,,,,,,,Single-ply

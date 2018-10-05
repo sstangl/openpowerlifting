@@ -7,16 +7,16 @@ Place,Name,Division,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3Bench
 1,Tayler Claflin,Open,UT,75,69.7,18,132.5,92.5,155,380,F,Raw,SBD
 2,Shay Ogden,Open,UT,75,71.4,41,102.5,60,142.5,305,F,Raw,SBD
 1,Marsha Simpson,Open,UT,90,89.2,39,97.5,55,122.5,275,F,Raw,SBD
-1,Marsha Simpson,SubMaster,UT,90,89.2,39,97.5,55,122.5,275,F,Raw,SBD
+1,Marsha Simpson,Submaster 35-39,UT,90,89.2,39,97.5,55,122.5,275,F,Raw,SBD
 1,Kristie Strand,Master,UT,56,55.4,50,107.5,60,117.5,285,F,Raw,SBD
-1,Shay Ogden,Masters,WY,75,71.4,41,102.5,60,142.5,305,F,Raw,SBD
+1,Shay Ogden,Master,WY,75,71.4,41,102.5,60,142.5,305,F,Raw,SBD
 1,Whitney Zucker,Open,UT,90+,100.8,30,100,55,125,280,F,Raw,SBD
 2,Amanda Langford,Open,UT,90+,93.8,27,92.5,55,100,247.5,F,Raw,SBD
 1,Amber Hinkle,Open,CO,67.5,65.8,37,,77.5,,77.5,F,Raw,B
 1,Marsha Simpson,Open,UT,90,89.2,39,,55,,55,F,Raw,B
-1,Marsha Simpson,SubMaster,UT,90,89.2,39,,55,,55,F,Raw,B
+1,Marsha Simpson,Submaster 35-39,UT,90,89.2,39,,55,,55,F,Raw,B
 1,Marsha Simpson,Open,UT,90,89.2,39,,,122.5,122.5,F,Raw,D
-1,Marsha Simpson,SubMaster,UT,90,89.2,39,,,122.5,122.5,F,Raw,D
+1,Marsha Simpson,Submaster 35-39,UT,90,89.2,39,,,122.5,122.5,F,Raw,D
 1,Jaxon Tijerina,Junior,UT,67.5,67.1,18,150,87.5,182.5,420,M,Raw,SBD
 1,Putheara Hang,Open,UT,75,75,30,195,150,232.5,577.5,M,Raw,SBD
 2,David Alam,Open,UT,75,70.3,28,142.5,100,167.5,410,M,Raw,SBD
@@ -28,13 +28,13 @@ Place,Name,Division,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3Bench
 2,Tanner Wendel,Open,UT,90,87,21,220,160,257.5,637.5,M,Raw,SBD
 3,Rad Gladfelder,Open,UT,90,88.2,30,120,105,222.5,447.5,M,Raw,SBD
 1,Tanner Wendel,Junior,UT,90,87,21,220,160,257.5,637.5,M,Raw,SBD
-1,Andrew Mower,SubMasters,UT,100,97.4,36,227.5,205,352.5,785,M,Raw,SBD
+1,Andrew Mower,SubMaster,UT,100,97.4,36,227.5,205,352.5,785,M,Raw,SBD
 DQ,Matthew Tunuvasa,Open,UT,100,98.3,24,235,165,-305,,M,Raw,SBD
 1,Jason Levin,Open,UT,110,107.6,39,215,145,240,600,M,Raw,SBD
 1,Derek Reasch,Open,UT,125,120.6,23,245,195,310,750,M,Raw,SBD
 2,Welly Lu,Open,UT,125,122.5,39,247.5,175,240,662.5,M,Raw,SBD
 1,Derek Reasch,Junior,UT,125,120.6,23,245,195,310,750,M,Raw,SBD
-1,Welly Lu,SubMasters,UT,125,122.5,39,247.5,175,240,662.5,M,Raw,SBD
+1,Welly Lu,SubMaster,UT,125,122.5,39,247.5,175,240,662.5,M,Raw,SBD
 1,Paul Blanchard,Open,UT,140,138.4,33,272.5,185,287.5,745,M,Raw,SBD
 1,Korbin Adamson,Junior,UT,82.5,78.4,22,207.5,120,250,577.5,M,Wraps,SBD
 1,Joshua Covey,Junior,UT,90,85.6,15,170,125,197.5,492.5,M,Wraps,SBD
@@ -42,7 +42,7 @@ DQ,Matthew Tunuvasa,Open,UT,100,98.3,24,235,165,-305,,M,Raw,SBD
 1,Liam Capel,Junior,UT,100,96.5,18,182.5,127.5,195,505,M,Wraps,SBD
 1,Joshua Maw,Open,UT,110,106.7,22,250,160,272.5,682.5,M,Wraps,SBD
 2,Mike Lezenby,Open,UT,110,103,27,210,140,245,595,M,Wraps,SBD
-1,Nathan Barnes,Masters,UT,110,104.9,42,227.5,175,242.5,645,M,Wraps,SBD
+1,Nathan Barnes,Master,UT,110,104.9,42,227.5,175,242.5,645,M,Wraps,SBD
 1,Benjamin Hansen,Junior,UT,140,136.9,21,250,177.5,295,722.5,M,Wraps,SBD
 1,Sam Ferguson,Open,UT,140,125.7,33,250,165,255,670,M,Wraps,SBD
 1,Ben Hardy,Junior,UT,82.5,76.7,19,,120,,120,M,Raw,B
@@ -54,7 +54,7 @@ DQ,Matthew Tunuvasa,Open,UT,100,98.3,24,235,165,-305,,M,Raw,SBD
 1,Ben Hardy,Junior,UT,82.5,76.7,19,,,227.5,227.5,M,Raw,D
 1,Rad Gladfelder,Open,UT,90,88.2,30,,,222.5,222.5,M,Raw,D
 1,Taylor Griffiths,Open,UT,100,96.7,23,,,305,305,M,Raw,D
-1,Roger Smith,Masters,UT,110,103.8,55,,,227.5,227.5,M,Raw,D
+1,Roger Smith,Master,UT,110,103.8,55,,,227.5,227.5,M,Raw,D
 1,John Mazza,Open,UT,125,119.9,35,,,332.5,332.5,M,Raw,D
 1,Jordan Betz,Open,UT,140,125.7,26,,,332.5,332.5,M,Raw,D
 2,Paul Blanchard,Open,UT,140,138.4,33,,,287.5,287.5,M,Raw,D

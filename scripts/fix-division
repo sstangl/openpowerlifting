@@ -6,80 +6,85 @@
 #
 # Overwrites the file in-place if it looks like no information is lost.
 
+import os
 import sys
-
-with open(sys.argv[1], 'r') as fd:
-    csv = [x.strip().split(',') for x in fd.readlines()]
-
-divindex = -1
-equipindex = -1
-
-for i in range(0, len(csv[0])):
-    if csv[0][i] == 'Division':
-        divindex = i
-    if csv[0][i] == 'Equipment':
-        equipindex = i
-
-if divindex == -1:
-    print("Missing division")
-    sys.exit(1)
+import oplcsv
 
 
-def is_int(x):
+def fix_division(filename):
+    csv = oplcsv.Csv(filename)
+
     try:
-        int(x)
-        return True
-    except ValueError:
-        return False
+        divindex = csv.index('Division')
+        equipindex = csv.index('Equipment')
+    except:
+        return
+
+    changed = False
+
+    for row in csv.rows:
+        div = row[divindex]
+
+        if div == 'Open Men':
+            div = 'Open'
+        elif div == 'Open Women':
+            div = 'Open'
+
+        if div.endswith(' Men'):
+            div = div.replace(' Men', '')
+        elif div.endswith(' Women'):
+            div = div.replace(' Women', '')
+
+        div = div.replace(' Men ', ' ')
+        div = div.replace(' Women ', ' ')
+
+        if div == 'Submaster' or div == 'SubMaster':
+            div = 'Submaster 35-39'
+        if div == 'Master 35-39':
+            div = 'Submaster 35-39'
+
+        div = div.replace('Masters', 'Master')
+
+        # Uh, yeah. USPA sure is standardized.
+        div = div.replace("Classic", '')
+        div = div.replace("Single-ply", '')
+        div = div.replace("Single-Ply", '')
+        div = div.replace("Single Ply", '')
+        div = div.replace("Singleply", '')
+        div = div.replace("SinglePly", '')
+        div = div.replace("single Ply", '')
+        div = div.replace("Single ply", '')
+        div = div.replace("Multi-ply", '')
+        div = div.replace("Multi-Ply", '')
+        div = div.replace("Multi Ply", '')
+        div = div.replace("Multiply", '')
+        div = div.replace("MultiPly", '')
+        div = div.replace("Multi", '')
+        div = div.replace("MULTI Ply", '')
+        div = div.replace("Raw", '')
+        div = div.replace("RAW", '')
+        div = div.replace("raw", '')
+
+        if row[divindex] != div and equipindex == -1:
+            if row[equipindex] == '':
+                print("Need equipment information")
+                sys.exit(1)
+
+        if row[divindex] != div:
+            row[divindex] = div
+            changed = True
+
+    if changed:
+        csv.write_filename(filename)
 
 
-for row in csv[1:]:
-    div = row[divindex]
-
-    if "open men" in div.lower():
-        div = "Open Men"
-    elif "open women" in div.lower():
-        div = "Open Women"
-
-    # Uh, yeah. USPA sure is standardized.
-    div = div.replace("Classic", '')
-    div = div.replace("Single-ply", '')
-    div = div.replace("Single-Ply", '')
-    div = div.replace("Single Ply", '')
-    div = div.replace("Singleply", '')
-    div = div.replace("SinglePly", '')
-    div = div.replace("single Ply", '')
-    div = div.replace("Single ply", '')
-    div = div.replace("Multi-ply", '')
-    div = div.replace("Multi-Ply", '')
-    div = div.replace("Multi Ply", '')
-    div = div.replace("Multiply", '')
-    div = div.replace("MultiPly", '')
-    div = div.replace("Multi", '')
-    div = div.replace("MULTI Ply", '')
-    div = div.replace("Raw", '')
-    div = div.replace("RAW", '')
-    div = div.replace("raw", '')
-
-    if row[divindex] != div and equipindex == -1:
-        if row[equipindex] == '':
-            print("Need equipment information")
-            sys.exit(1)
-
-    div = div.replace('SHW', '')
-    div = div.replace('308+', '')
-    div = div.replace('198+', '')
-
-    if is_int(div.split()[0]) or 'kg' in div.split()[0]:
-        div = ' '.join(div.split()[1:])
-
-    if div[-1] == '-':
-        div = div[:-1]
-
-    row[divindex] = div.strip()
-
-
-lines = [','.join(row) + "\n" for row in csv]
-
-with open(sys.argv[1], 'w') as fd:
-    fd.writelines(lines)
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        fix_division(sys.argv[1])
+    else:
+        for dirname, subdirs, files in os.walk(os.getcwd()):
+            if "meet-data" in subdirs:
+                subdirs[:] = ['meet-data']
+            if 'entries.csv' in files:
+                filepath = dirname + os.sep + 'entries.csv'
+                fix_division(filepath)

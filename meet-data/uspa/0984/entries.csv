@@ -15,8 +15,8 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Stepfanie Miller,IN,75,72.6,27,97.5,47.5,105,250,F,Open,Raw,SBD
 1,Amber Luci,OH,82.5,81.5,28,162.5,87.5,195,445,F,Open,Raw,SBD
 DQ,Charla Penny,OH,90,85.7,30,,,,,F,Open,Raw,SBD
-1,Sara Kelley,OH,90+,137.3,36,130,85,155,370,F,Submaster,Raw,SBD
-2,Jennifer Pierce,OH,90+,96.4,35,97.5,55,120,272.5,F,Submaster,Raw,SBD
+1,Sara Kelley,OH,90+,137.3,36,130,85,155,370,F,Submaster 35-39,Raw,SBD
+2,Jennifer Pierce,OH,90+,96.4,35,97.5,55,120,272.5,F,Submaster 35-39,Raw,SBD
 1,Rebecca Bruce,IN,52,52,46,102.5,60,157.5,320,F,Master 45-49,Raw,SBD
 1,Amy Palmer,OH,60,58.2,48,105,70,125,300,F,Master 45-49,Raw,SBD
 1,Sarah Farmer,OH,67.5,63.7,46,67.5,40,97.5,205,F,Master 45-49,Raw,SBD
@@ -68,8 +68,8 @@ DQ,Aaron Slabic,OH,75,73.3,22,182.5,112.5,,,M,Junior 20-23,Raw,SBD
 3,Nathaniel Mowery,IN,110,109.8,35,197.5,155,265,617.5,M,Open,Raw,SBD
 4,Chris Billups,IN,110,103,31,215,155,140,510,M,Open,Raw,SBD
 1,Don Humphreys,OH,140+,172.3,27,285,165,305,755,M,Open,Raw,SBD
-1,Rob Jaspers,OH,82.5,77.8,36,135,105,175,415,M,Submaster,Raw,SBD
-1,Justin Doles,OH,90,88.6,37,217.5,127.5,222.5,567.5,M,Submaster,Raw,SBD
+1,Rob Jaspers,OH,82.5,77.8,36,135,105,175,415,M,Submaster 35-39,Raw,SBD
+1,Justin Doles,OH,90,88.6,37,217.5,127.5,222.5,567.5,M,Submaster 35-39,Raw,SBD
 1,Rob Engelman,NC,75,72.5,45,155,117.5,177.5,450,M,Master 45-49,Raw,SBD
 1,Jeremy Courtney,OH,90,88.1,47,167.5,137.5,192.5,497.5,M,Master 45-49,Raw,SBD
 1,Brian Fitzharris,OH,100,98.4,40,215,,,215,M,Master 40-44,Raw,S
@@ -80,7 +80,7 @@ DQ,Hillary Birdsong,MO,56,55.1,32,,,,,F,Open,Wraps,SBD
 1,Theresa Hayes,OH,75,74.7,35,145,80,170,395,F,Open,Wraps,SBD
 1,Jonna Spelbring Priester,KY,90,89.5,40,127.5,62.5,132.5,322.5,F,Open,Wraps,SBD
 1,Melissa Gustafson,IN,90+,108.5,33,172.5,97.5,167.5,437.5,F,Open,Wraps,SBD
-1,Theresa Hayes,OH,75,74.7,35,145,80,170,395,F,Submaster,Wraps,SBD
+1,Theresa Hayes,OH,75,74.7,35,145,80,170,395,F,Submaster 35-39,Wraps,SBD
 DQ,Lisa Orr,MO,60,58.7,54,,,,,F,Master 50-54,Wraps,SBD
 1,Jonna Spelbring Priester,KY,90,89.5,40,127.5,62.5,132.5,322.5,F,Master 40-44,Wraps,SBD
 1,Braden Moss,IN,75,74.7,20,242.5,147.5,242.5,632.5,M,Junior 20-23,Wraps,SBD
@@ -112,8 +112,8 @@ DQ,Steffen Smith,IL,90,88.7,33,,,,,M,Open,Wraps,SBD
 6,Alex Nida,OH,110,105.3,32,190,97.5,242.5,530,M,Open,Wraps,SBD
 1,Matthew Barrie,OH,125,122.7,26,245,215,237.5,697.5,M,Open,Wraps,SBD
 1,Cooper Wage,WI,140+,152,30,357.5,235,327.5,920,M,Open,Wraps,SBD
-1,Dylan Wayman,OH,100,91.2,36,195,140,235,570,M,Submaster,Wraps,SBD
-1,James Gray,OH,125,117.3,37,197.5,117.5,187.5,502.5,M,Submaster,Wraps,SBD
+1,Dylan Wayman,OH,100,91.2,36,195,140,235,570,M,Submaster 35-39,Wraps,SBD
+1,James Gray,OH,125,117.3,37,197.5,117.5,187.5,502.5,M,Submaster 35-39,Wraps,SBD
 1,Reggie Dukes,IN,75,74.6,42,245,155,275,675,M,Master 40-44,Wraps,SBD
 1,Douglas Nostrant,OH,82.5,82,49,242.5,167.5,230,640,M,Master 45-49,Wraps,SBD
 1,Michael Coe,IN,100,98.8,47,265,175,322.5,762.5,M,Master 45-49,Wraps,SBD
@@ -122,8 +122,8 @@ DQ,Steffen Smith,IL,90,88.7,33,,,,,M,Open,Wraps,SBD
 1,Randy Naccarato,IN,125,121,56,190,160,250,600,M,Master 55-59,Single-ply,SBD
 1,Renee Brown,IN,67.5,66.5,36,,115,,115,F,Open,Raw,B
 DQ,Charla Penny,OH,90,85.7,30,,,,,F,Open,Raw,B
-1,Renee Brown,IN,67.5,66.5,36,,115,,115,F,Submaster,Raw,B
-1,Sara Kelley,OH,90+,137.3,36,,85,,85,F,Submaster,Raw,B
+1,Renee Brown,IN,67.5,66.5,36,,115,,115,F,Submaster 35-39,Raw,B
+1,Sara Kelley,OH,90+,137.3,36,,85,,85,F,Submaster 35-39,Raw,B
 1,Drew Bruns,OH,100,93.6,18,,152.5,,152.5,M,Junior 18-19,Raw,B
 1,Richard Fairchild III,IN,125,122.4,22,,237.5,,237.5,M,Junior 20-23,Raw,B
 1,Rob Engelman,NC,75,72.5,45,,117.5,,117.5,M,Open,Raw,B

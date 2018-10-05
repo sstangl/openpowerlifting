@@ -35,7 +35,7 @@ DQ,Chijioke Offor,AZ,56,55,43,,55,147.5,,F,Open,Raw,SBD
 5,Jessica Balderrama,AZ,90+,147.3,25,140,65,130,335,F,Open,Raw,SBD
 6,Sidney Bales,AZ,90+,95.8,59,112.5,60,130,302.5,F,Open,Raw,SBD
 DQ,Eugenia Tashquinth,AZ,90+,142.9,29,,,,,F,Open,Raw,SBD
-1,Kayla Bennett,AZ,90,87,35,135,70,160,365,F,Submaster,Raw,SBD
+1,Kayla Bennett,AZ,90,87,35,135,70,160,365,F,Submaster 35-39,Raw,SBD
 DQ,Chijioke Offor,AZ,56,55,43,,55,147.5,,F,Master 40-44,Raw,SBD
 1,Lani Hidalgo,AZ,67.5,64,44,100,57.5,122.5,280,F,Master 40-44,Raw,SBD
 1,Michelle Mazulis,NM,67.5,66.2,49,140,93,190,423,F,Master 45-49,Raw,SBD
@@ -72,9 +72,9 @@ DQ,Chijioke Offor,AZ,56,55,43,,55,147.5,,F,Master 40-44,Raw,SBD
 2,Wesley Brodbeck,AZ,140,137.2,37,205,210,275,690,M,Open,Raw,SBD
 3,Chris Donofrio,AZ,140,136.9,39,167.5,180,215,562.5,M,Open,Raw,SBD
 1,Miroslav Novak,NM,140+,144.1,31,265,182.5,277.5,725,M,Open,Raw,SBD
-1,Pat Serna,AZ,110,104.9,35,185,147.5,252.5,585,M,Submaster,Raw,SBD
-1,Tim Parker #1,AZ,140,133.3,37,312.5,215,300,827.5,M,Submaster,Raw,SBD
-2,Wesley Brodbeck,AZ,140,137.2,37,205,210,275,690,M,Submaster,Raw,SBD
+1,Pat Serna,AZ,110,104.9,35,185,147.5,252.5,585,M,Submaster 35-39,Raw,SBD
+1,Tim Parker #1,AZ,140,133.3,37,312.5,215,300,827.5,M,Submaster 35-39,Raw,SBD
+2,Wesley Brodbeck,AZ,140,137.2,37,205,210,275,690,M,Submaster 35-39,Raw,SBD
 1,Phillip Dominguez,AZ,75,74.8,42,130,107.5,167.5,405,M,Master 40-44,Raw,SBD
 1,Nick Banu,AZ,82.5,79.3,41,170,115,237.5,522.5,M,Master 40-44,Raw,SBD
 1,David Duffee,AZ,82.5,80.2,69,120,105,185,410,M,Master 65-69,Raw,SBD
@@ -97,12 +97,12 @@ DQ,Tom Sharp,AZ,100,99.2,27,272.5,,,,M,Open,Wraps,SBD
 3,Joe Ramirez,AZ,125,117.9,27,237.5,142.5,217.5,597.5,M,Open,Wraps,SBD
 1,Keith Parker,TX,140,127.4,27,275,195,295,765,M,Open,Wraps,SBD
 1,Martin Williams,AZ,140+,181.5,33,315,192.5,257.5,765,M,Open,Wraps,SBD
-1,Brandon Queen,AZ,90,88.7,35,245,155,255,655,M,Submaster,Wraps,SBD
-1,Jason Dorian,TX,110,107.9,35,232.5,195,285,712.5,M,Submaster,Wraps,SBD
+1,Brandon Queen,AZ,90,88.7,35,245,155,255,655,M,Submaster 35-39,Wraps,SBD
+1,Jason Dorian,TX,110,107.9,35,232.5,195,285,712.5,M,Submaster 35-39,Wraps,SBD
 1,Jason Best,AZ,125,122.6,41,235,177.5,260,672.5,M,Master 40-44,Wraps,SBD
 DQ,Jack Hawks,AZ,125,124.5,47,227.5,,272.5,,M,Master 45-49,Wraps,SBD
 1,Savannah Sparkes,AZ,56,56,18,,40,,40,F,Junior 18-19,Raw,B
-1,Kayla Bennett,AZ,90,87,35,,70,,70,F,Submaster,Raw,B
+1,Kayla Bennett,AZ,90,87,35,,70,,70,F,Submaster 35-39,Raw,B
 DQ,Miguel A Pena-Valenzuela,NM,75,73.9,20,,,,,M,Junior 20-23,Raw,B
 1,Daniel Buchak,AZ,110,109.8,22,,160,,160,M,Junior 20-23,Raw,B
 1,Jessen Hawks,AZ,125,123.5,23,,160,,160,M,Junior 20-23,Raw,B
@@ -110,8 +110,8 @@ DQ,Miguel A Pena-Valenzuela,NM,75,73.9,20,,,,,M,Junior 20-23,Raw,B
 1,Wesley Pellam,AZ,110,105.3,40,,190,,190,M,Open,Raw,B
 2,Daniel Buchak,AZ,110,109.8,22,,160,,160,M,Open,Raw,B
 1,Sean Dancer,AZ,125,120,46,,140,,140,M,Open,Raw,B
-1,Jason Dorian,TX,110,107.9,35,,195,,195,M,Submaster,Raw,B
-2,Jarod Williams,AZ,110,109.8,36,,177.5,,177.5,M,Submaster,Raw,B
+1,Jason Dorian,TX,110,107.9,35,,195,,195,M,Submaster 35-39,Raw,B
+2,Jarod Williams,AZ,110,109.8,36,,177.5,,177.5,M,Submaster 35-39,Raw,B
 1,David Duffee,AZ,82.5,80.2,69,,105,,105,M,Master 65-69,Raw,B
 1,Wesley Pellam,AZ,110,105.3,40,,190,,190,M,Master 40-44,Raw,B
 1,Joseph Grant,AZ,125,121.4,46,,185,,185,M,Master 45-49,Raw,B
@@ -122,7 +122,7 @@ DQ,Ken Shumute,AZ,125,115.1,59,,,,,M,Master 55-59,Single-ply,B
 1,Jessica Lenyard,AZ,60,59.1,22,,,150,150,F,Junior 20-23,Raw,D
 1,Jessica Lenyard,AZ,60,59.1,22,,,150,150,F,Open,Raw,D
 1,Keandra Mcgarr,CO,67.5,64.3,27,,,155,155,F,Open,Raw,D
-1,Kayla Bennett,AZ,90,87,35,,,160,160,F,Submaster,Raw,D
+1,Kayla Bennett,AZ,90,87,35,,,160,160,F,Submaster 35-39,Raw,D
 1,Malachi Klaus,AZ,90,87.2,19,,,250,250,M,Junior 18-19,Raw,D
 1,Daniel Buchak,AZ,110,109.8,22,,,247.5,247.5,M,Junior 20-23,Raw,D
 1,Jessen Hawks,AZ,125,123.5,23,,,265,265,M,Junior 20-23,Raw,D
@@ -131,8 +131,8 @@ DQ,Ken Shumute,AZ,125,115.1,59,,,,,M,Master 55-59,Single-ply,B
 1,Malachi Klaus,AZ,90,87.2,19,,,250,250,M,Open,Raw,D
 1,Daniel Buchak,AZ,110,109.8,22,,,247.5,247.5,M,Open,Raw,D
 1,Wesley Brodbeck,AZ,140,137.2,37,,,275,275,M,Open,Raw,D
-1,Jarod Williams,AZ,110,109.8,36,,,287.5,287.5,M,Submaster,Raw,D
-1,Wesley Brodbeck,AZ,140,137.2,37,,,275,275,M,Submaster,Raw,D
+1,Jarod Williams,AZ,110,109.8,36,,,287.5,287.5,M,Submaster 35-39,Raw,D
+1,Wesley Brodbeck,AZ,140,137.2,37,,,275,275,M,Submaster 35-39,Raw,D
 1,Albert Carlotti,TX,82.5,80.8,49,,,250,250,M,Master 45-49,Raw,D
 1,David Duffee,AZ,82.5,80.2,69,,,185,185,M,Master 65-69,Raw,D
 1,Joseph Grant,AZ,125,121.4,46,,,240,240,M,Master 45-49,Raw,D

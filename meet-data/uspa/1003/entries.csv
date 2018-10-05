@@ -11,9 +11,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Molly Johnson,CO,75,70.2,28,115,75,165,355,F,Open,Raw,SBD
 3,Kelli Kilpatrick,WY,75,69.7,37,92.5,67.5,125,285,F,Open,Raw,SBD
 1,Jessica Polk,WY,82.5,75.5,27,145,67.5,162.5,375,F,Open,Raw,SBD
-1,Tara Spero,WY,60,58.5,37,77.5,37.5,92.5,207.5,F,Submaster,Raw,SBD
-1,Melissa Hull,WY,67.5,66.5,35,100,62.5,130,292.5,F,Submaster,Raw,SBD
-1,Kelli Kilpatrick,WY,75,69.7,37,92.5,67.5,125,285,F,Submaster,Raw,SBD
+1,Tara Spero,WY,60,58.5,37,77.5,37.5,92.5,207.5,F,Submaster 35-39,Raw,SBD
+1,Melissa Hull,WY,67.5,66.5,35,100,62.5,130,292.5,F,Submaster 35-39,Raw,SBD
+1,Kelli Kilpatrick,WY,75,69.7,37,92.5,67.5,125,285,F,Submaster 35-39,Raw,SBD
 1,Bryden Wilson #1,WY,67.5,62.2,40,117.5,65,137.5,320,F,Master 40-44,Raw,SBD
 1,Shay Ogden,WY,75,73.8,41,130,75,157.5,362.5,F,Master 40-44,Raw,SBD
 1,Marsha Simpson,WY,82.5,80.8,40,102.5,55,145,302.5,F,Master 40-44,Raw,SBD
@@ -35,7 +35,7 @@ DQ,Victor Gutierrez,WY,125,119.7,23,,97.5,,,M,Junior 20-23,Raw,SBD
 2,Jordan Townsend,CO,100,97.7,34,157.5,125,237.5,520,M,Open,Raw,SBD
 3,Bart Engstrom,CO,100,94.3,28,142.5,115,195,452.5,M,Open,Raw,SBD
 1,Tony Woodruff,WY,110,105,30,210,145,222.5,577.5,M,Open,Raw,SBD
-1,Garry Claflin,WY,100,96.1,39,242.5,157.5,245,645,M,Submaster,Raw,SBD
+1,Garry Claflin,WY,100,96.1,39,242.5,157.5,245,645,M,Submaster 35-39,Raw,SBD
 1,Jason Grover,WY,100,99,43,167.5,115,185,467.5,M,Master 40-44,Raw,SBD
 2,Casey Boulter,WY,100,97,41,155,100,210,465,M,Master 40-44,Raw,SBD
 3,Chad Simkin,WY,100,96.1,42,152.5,105,205,462.5,M,Master 40-44,Raw,SBD
@@ -46,22 +46,22 @@ DQ,Tommy Upp,WY,100,97.1,40,142.5,105,,,M,Master 40-44,Raw,SBD
 1,Katlynn Hudson,ID,75,73,27,120,62.5,137.5,320,F,Open,Wraps,SBD
 1,Kaigan Young,ID,110,102.7,21,205,150,295,650,M,Junior 20-23,Wraps,SBD
 1,Tara Spero,WY,60,58.5,37,,37.5,,37.5,F,Open,Raw,B
-1,Tara Spero,WY,60,58.5,37,,37.5,,37.5,F,Submaster,Raw,B
-1,Melissa Hull,WY,67.5,66.5,35,,62.5,,62.5,F,Submaster,Raw,B
+1,Tara Spero,WY,60,58.5,37,,37.5,,37.5,F,Submaster 35-39,Raw,B
+1,Melissa Hull,WY,67.5,66.5,35,,62.5,,62.5,F,Submaster 35-39,Raw,B
 1,Dakota Simpson,WY,60,56.5,14,,45,,45,M,Junior 13-15,Raw,B
 1,Tommy Thoman,WY,100,99.5,25,,193.5,,193.5,M,Open,Raw,B
 2,Russell Jardine,ID,100,99.4,27,,177.5,,177.5,M,Open,Raw,B
 3,Clay Allen,WY,100,96.8,25,,172.5,,172.5,M,Open,Raw,B
-1,Garry Claflin,WY,100,96.1,39,,157.5,,157.5,M,Submaster,Raw,B
+1,Garry Claflin,WY,100,96.1,39,,157.5,,157.5,M,Submaster 35-39,Raw,B
 1,Andrew Gipson,WY,90,85.1,68,,137.5,,137.5,M,Master 65-69,Single-ply,B
 1,Megan Wilson,WY,75,73.3,18,,,102.5,102.5,F,Junior 18-19,Raw,D
 1,Tara Spero,WY,60,58.5,37,,,92.5,92.5,F,Open,Raw,D
-1,Tara Spero,WY,60,58.5,37,,,92.5,92.5,F,Submaster,Raw,D
-1,Melissa Hull,WY,67.5,66.5,35,,,130,130,F,Submaster,Raw,D
+1,Tara Spero,WY,60,58.5,37,,,92.5,92.5,F,Submaster 35-39,Raw,D
+1,Melissa Hull,WY,67.5,66.5,35,,,130,130,F,Submaster 35-39,Raw,D
 1,Shay Ogden,WY,75,73.8,41,,,157.5,157.5,F,Master 40-44,Raw,D
 1,Marsha Simpson,WY,82.5,80.8,40,,,145,145,F,Master 40-44,Raw,D
 1,Dakota Simpson,WY,60,56.5,14,,,72.5,72.5,M,Junior 13-15,Raw,D
-1,Garry Claflin,WY,100,96.1,39,,,245,245,M,Submaster,Raw,D
+1,Garry Claflin,WY,100,96.1,39,,,245,245,M,Submaster 35-39,Raw,D
 1,Katherine Dell,CO,75,69.4,30,,60,162.5,222.5,F,Open,Raw,BD
 1,Douglas Wellemeyer,WY,90,89.7,33,,147.5,217.5,365,M,Open,Raw,BD
 1,Rocky Jardine,ID,110,109.5,24,,140,207.5,347.5,M,Open,Raw,BD

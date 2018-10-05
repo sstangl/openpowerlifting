@@ -17,7 +17,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Rose BrownEagle,MD,82.5,82.1,32,140,77.5,137.5,355,F,Open,Raw,,SBD
 2,Hailey Ploski-Sarno,MD,82.5,79.5,26,110,52.5,115,277.5,F,Open,Raw,,SBD
 1,Alexa Gouker,PA,90+,103.8,26,137.5,82.5,152.5,372.5,F,Open,Raw,,SBD
-1,Karen Befano,MD,75,74.4,39,95,65,120,280,F,Submaster,Raw,,SBD
+1,Karen Befano,MD,75,74.4,39,95,65,120,280,F,Submaster 35-39,Raw,,SBD
 1,Gayla Channell,WV,52,51.2,57,70,52.5,130,252.5,F,Master 55-59,Raw,,SBD
 1,Tonya Miller,WV,56,52.6,45,92.5,47.5,125,265,F,Master 45-49,Raw,,SBD
 1,Sarah Santangelo,MD,67.5,65.3,41,117.5,65,120,302.5,F,Master 40-44,Raw,,SBD
@@ -60,8 +60,8 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Thomas Fulks,MD,140,138,27,200,127.5,215,542.5,M,Open,Raw,,SBD
 1,Jesse Kidd,WV,140+,149.7,35,282.5,195,318,795.5,M,Open,Raw,,SBD
 2,Ethan Dew,VA,140+,151,24,262.5,177.5,277.5,717.5,M,Open,Raw,,SBD
-1,Jason Blough,MD,82.5,79.3,37,182.5,125,217.5,525,M,Submaster,Raw,,SBD
-1,Jesse Kidd,WV,140+,149.7,35,282.5,195,318,795.5,M,Submaster,Raw,,SBD
+1,Jason Blough,MD,82.5,79.3,37,182.5,125,217.5,525,M,Submaster 35-39,Raw,,SBD
+1,Jesse Kidd,WV,140+,149.7,35,282.5,195,318,795.5,M,Submaster 35-39,Raw,,SBD
 1,Ed Smith,MD,100,96.1,46,170,132.5,217.5,520,M,Master 45-49,Raw,,SBD
 2,Michael Miller,MD,100,98.7,47,155,140,182.5,477.5,M,Master 45-49,Raw,,SBD
 1,Henry Williamson,MD,100,95.8,53,165,137.5,225,527.5,M,Master 50-54,Raw,,SBD
@@ -69,7 +69,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,George Mayer,MD,110,105.5,43,170,117.5,175,462.5,M,Master 40-44,Raw,,SBD
 1,James Mingle,MD,110,107.9,49,200,122.5,227.5,550,M,Master 45-49,Raw,,SBD
 1,Samantha Cantero,MD,90,85.1,24,145,77.5,170,392.5,F,Open,Wraps,,SBD
-DQ,Tamika Thomas,MD,90+,118.6,36,112.5,,150,,F,Submaster,Wraps,,SBD
+DQ,Tamika Thomas,MD,90+,118.6,36,112.5,,150,,F,Submaster 35-39,Wraps,,SBD
 1,Alessandro Rojas-Labra,DE,75,72,17,182.5,102.5,192.5,477.5,M,Junior 16-17,Wraps,,SBD
 1,Brandon Lara-Robles,DE,82.5,78.8,17,142.5,85,170,397.5,M,Junior 16-17,Wraps,,SBD
 1,Rudy Salandanan Jr,DE,100,96.8,22,280,170,280,730,M,Junior 20-23,Wraps,,SBD
@@ -82,14 +82,14 @@ DQ,Tamika Thomas,MD,90+,118.6,36,112.5,,150,,F,Submaster,Wraps,,SBD
 2,Nicholas Rookstool,WV,110,105.7,23,252.5,192.5,272.5,717.5,M,Open,Wraps,,SBD
 1,Tristan McCall,MD,125,115.1,27,185,145,237.5,567.5,M,Open,Wraps,,SBD
 DQ,Joseph Judd,VA,125,117.6,34,285,,,,M,Open,Wraps,,SBD
-1,Reinard Naves,MD,82.5,80.3,38,197.5,170,250,617.5,M,Submaster,Wraps,,SBD
+1,Reinard Naves,MD,82.5,80.3,38,197.5,170,250,617.5,M,Submaster 35-39,Wraps,,SBD
 1,Reggie Dukes,IN,75,75,42,245,170,272.5,687.5,M,Master 40-44,Wraps,,SBD
 1,Wayne Edelen,MD,90,88.2,45,227.5,130,230,587.5,M,Master 45-49,Wraps,,SBD
 1,Alexander Punchello,NJ,90,88.2,20,242.5,160,227.5,630,M,Junior 20-23,Single-ply,,SBD
 1,Andrew Williams,VA,82.5,80,27,190,150,242.5,582.5,M,Open,Single-ply,,SBD
 1,Phil Stracener,VA,125,120,37,300,205,320,825,M,Open,Single-ply,,SBD
 2,Terry Tsouroutis,VA,125,114.3,49,327.5,170,272.5,770,M,Open,Single-ply,,SBD
-1,Phil Stracener,VA,125,120,37,300,205,320,825,M,Submaster,Single-ply,,SBD
+1,Phil Stracener,VA,125,120,37,300,205,320,825,M,Submaster 35-39,Single-ply,,SBD
 1,Terry Tsouroutis,VA,125,114.3,49,327.5,170,272.5,770,M,Master 45-49,Single-ply,,SBD
 1,Koube Ngaaje,MD,44,43.8,33,,,117.5,117.5,F,Open,Raw,,D
 1,Stephanie Chavers,PA,56,55.3,30,,,137.5,137.5,F,Open,Raw,,D

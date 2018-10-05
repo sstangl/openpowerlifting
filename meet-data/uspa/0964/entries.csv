@@ -15,9 +15,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Jennifer Hobbs #1,TX,75,69.6,29,102.5,47.5,147.5,297.5,F,Open,Raw,SBD
 3,Marianne Davis,TX,75,73.3,24,105,52.5,115,272.5,F,Open,Raw,SBD
 1,Joy Love,TX,90+,117.8,25,97.5,55,145,297.5,F,Open,Raw,SBD
-1,Alicia Penny,TX,56,55.48,38,75,57.5,132.5,265,F,Submaster,Raw,SBD
-1,Amber Mestayer,TX,67.5,65.6,38,92.5,65,115,272.5,F,Submaster,Raw,SBD
-1,Corrin Graham,TX,82.5,78.1,35,80,30,75,185,F,Submaster,Raw,SBD
+1,Alicia Penny,TX,56,55.48,38,75,57.5,132.5,265,F,Submaster 35-39,Raw,SBD
+1,Amber Mestayer,TX,67.5,65.6,38,92.5,65,115,272.5,F,Submaster 35-39,Raw,SBD
+1,Corrin Graham,TX,82.5,78.1,35,80,30,75,185,F,Submaster 35-39,Raw,SBD
 1,Jennifer Martin-Logan,TX,67.5,62.3,46,70,40,92.5,202.5,F,Master 45-49,Raw,SBD
 1,Sara Forbes,TX,82.5,77.5,45,95,57.5,115,267.5,F,Master 45-49,Raw,SBD
 G,R.J. Hendon,TX,67.5,64.7,12,65,37.5,85,187.5,M,Junior,Raw,SBD
@@ -61,9 +61,9 @@ G,R.J. Hendon,TX,67.5,64.7,12,65,37.5,85,187.5,M,Junior,Raw,SBD
 1,Ahmad Abdel-Aziz,TX,140,131.5,23,280,155,290,725,M,Open,Raw,SBD
 2,Byron Biagas,LA,140,139.4,35,242.5,215,262.5,720,M,Open,Raw,SBD
 3,Max Casas,TX,140,138.8,17,240,152.5,260,652.5,M,Open,Raw,SBD
-1,Anthony Rodriguez,TX,100,98.4,35,242.5,155,350,747.5,M,Submaster,Raw,SBD
-1,Vinh Nguyen,TX,110,105.9,38,180,135,192.5,507.5,M,Submaster,Raw,SBD
-1,Zachary Mullins,TX,125,122.7,35,255,187.5,272.5,715,M,Submaster,Raw,SBD
+1,Anthony Rodriguez,TX,100,98.4,35,242.5,155,350,747.5,M,Submaster 35-39,Raw,SBD
+1,Vinh Nguyen,TX,110,105.9,38,180,135,192.5,507.5,M,Submaster 35-39,Raw,SBD
+1,Zachary Mullins,TX,125,122.7,35,255,187.5,272.5,715,M,Submaster 35-39,Raw,SBD
 1,John Griffin,TX,82.5,81.8,59,125,110,207.5,442.5,M,Master 55-59,Raw,SBD
 1,Matt Munson,TX,90,88.8,44,152.5,100,192.5,445,M,Master 40-44,Raw,SBD
 1,Brad Brewer,TX,100,95.2,40,150,137.5,182.5,470,M,Master 40-44,Raw,SBD
@@ -81,8 +81,8 @@ DQ,Katherine Mirabal,TX,48,46.8,22,,35,92.5,,F,Open,Wraps,SBD
 2,King Supa,TX,100,98.8,29,300,180,300,780,M,Open,Wraps,SBD
 DQ,Manuel Canizales,TX,100,98.7,29,,,287.5,,M,Open,Wraps,SBD
 1,Abraham Pena,TX,125,118.2,32,150,105,192.5,447.5,M,Open,Wraps,SBD
-1,Adam Bell #1,TX,110,106.2,36,225,165,255,645,M,Submaster,Wraps,SBD
-DQ,Keithyon Gunter,TX,110,107.3,37,,,310,,M,Submaster,Wraps,SBD
+1,Adam Bell #1,TX,110,106.2,36,225,165,255,645,M,Submaster 35-39,Wraps,SBD
+DQ,Keithyon Gunter,TX,110,107.3,37,,,310,,M,Submaster 35-39,Wraps,SBD
 DQ,David Gomez,TX,100,97.4,58,190,,,,M,Master 55-59,Wraps,SBD
 1,Keeley Jurca,TX,48,46.4,16,90,52.5,102.5,245,F,Junior 16-17,Single-ply,SBD
 1,Macy Davis,TX,82.5,81.3,16,152.5,90,142.5,385,F,Junior 16-17,Single-ply,SBD
@@ -102,8 +102,8 @@ DQ,Henry Thomason,TX,125,121.3,38,400,328,,,M,Open,Single-ply,SBD
 1,Anthony Rodriguez,TX,100,98.4,35,,,350,350,M,Open,Raw,D
 2,King Supa,TX,100,98.8,29,,,300,300,M,Open,Raw,D
 3,Manuel Canizales,TX,100,98.7,29,,,287.5,287.5,M,Open,Raw,D
-1,Anthony Rodriguez,TX,100,98.4,35,,,350,350,M,Submaster,Raw,D
-1,Keithyon Gunter,TX,110,107.3,37,,,310,310,M,Submaster,Raw,D
+1,Anthony Rodriguez,TX,100,98.4,35,,,350,350,M,Submaster 35-39,Raw,D
+1,Keithyon Gunter,TX,110,107.3,37,,,310,310,M,Submaster 35-39,Raw,D
 1,John Griffin,TX,82.5,81.8,59,,,207.5,207.5,M,Master 55-59,Raw,D
 1,Priscilla Eguia,TX,56,55.6,31,,47.5,100,147.5,F,Open,Raw,BD
 1,Marilyn Angel,TX,60,58.3,32,,47.5,105,152.5,F,Open,Raw,BD
@@ -111,6 +111,6 @@ DQ,Henry Thomason,TX,125,121.3,38,400,328,,,M,Open,Single-ply,SBD
 2,Dusty Gibson,TX,90,87.8,35,,152.5,230,382.5,M,Open,Raw,BD
 1,King Supa,TX,100,98.8,29,,180,300,480,M,Open,Raw,BD
 2,James Etchison,TX,100,96.4,39,,112.5,165,277.5,M,Open,Raw,BD
-1,Dusty Gibson,TX,90,87.8,35,,152.5,230,382.5,M,Submaster,Raw,BD
-DQ,Keithyon Gunter,TX,110,107.3,37,,,310,,M,Submaster,Raw,BD
+1,Dusty Gibson,TX,90,87.8,35,,152.5,230,382.5,M,Submaster 35-39,Raw,BD
+DQ,Keithyon Gunter,TX,110,107.3,37,,,310,,M,Submaster 35-39,Raw,BD
 1,Brian Propst,TX,110,105.1,49,,200,247.5,447.5,M,Master 45-49,Raw,BD
