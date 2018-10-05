@@ -145,7 +145,11 @@ enum Header {
 }
 
 /// Checks that the headers are valid.
-fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderIndexMap {
+fn check_headers(
+    headers: &csv::StringRecord,
+    config: Option<&Config>,
+    report: &mut Report,
+) -> HeaderIndexMap {
     // Build a map of (Header -> index).
     let known_header_count = Header::iter().count();
     let mut header_index_map: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
@@ -215,6 +219,13 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) -> HeaderInde
     }
     if !headers.iter().any(|x| x == "Event") {
         report.error("There must be an 'Event' column");
+    }
+
+    // Configured federations must have standardized divisions,
+    // and therefore must have a "Division" column.
+    if config.is_some() && !headers.iter().any(|x| x == "Division") {
+        // TODO: Fix warnings and change to error().
+        report.warning("Configured federations require a 'Division' column");
     }
 
     HeaderIndexMap(header_index_map)
@@ -480,6 +491,30 @@ fn check_column_tested(s: &str, line: u64, report: &mut Report) {
     match s {
         "" | "Yes" | "No" => (),
         _ => report.error_on(line, format!("Unknown Tested value '{}'", s)),
+    }
+}
+
+fn check_column_division(
+    s: &str,
+    config: Option<&Config>,
+    exempt_division: bool,
+    line: u64,
+    report: &mut Report,
+) {
+    if exempt_division {
+        return;
+    }
+
+    let config = match config {
+        Some(config) => config,
+        None => {
+            return;
+        }
+    };
+
+    // The division must appear in the configuration file.
+    if !config.divisions.iter().any(|d| d.name == s) {
+        report.error_on(line, format!("Unknown division '{}'", s));
     }
 }
 
@@ -802,8 +837,11 @@ where
     let exempt_lift_order: bool = exemptions.map_or(false, |el| {
         el.iter().any(|&e| e == Exemption::ExemptLiftOrder)
     });
+    let exempt_division: bool = exemptions.map_or(false, |el| {
+        el.iter().any(|&e| e == Exemption::ExemptDivision)
+    });
 
-    let headers: HeaderIndexMap = check_headers(rdr.headers()?, &mut report);
+    let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
     if !report.messages.is_empty() {
         return Ok(report);
     }
@@ -935,6 +973,15 @@ where
         }
 
         // Check optional fields.
+        if let Some(idx) = headers.get(Header::Division) {
+            check_column_division(
+                &record[idx],
+                config,
+                exempt_division,
+                line,
+                &mut report,
+            );
+        }
         if let Some(idx) = headers.get(Header::Country) {
             check_column_country(&record[idx], line, &mut report);
         }
