@@ -17,7 +17,7 @@ def fix_division(filename):
     try:
         divindex = csv.index('Division')
         equipindex = csv.index('Equipment')
-    except:
+    except IndexError:
         return
 
     changed = False
