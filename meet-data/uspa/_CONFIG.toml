@@ -1,0 +1,46 @@
+# USPA uses exact birthdays for their age classes.
+[divisions]
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 4, max = 12.5}
+    junior_13_15 = {name = "Junior 13-15", min = 13, max = 15}
+    junior_16_17 = {name = "Junior 16-17", min = 16, max = 17}
+    junior_18_19 = {name = "Junior 18-19", min = 18, max = 19}
+    junior_20_23 = {name = "Junior 20-23", min = 20, max = 23}
+    submaster = {name = "Submaster 35-39", min = 35, max = 39}
+    master_40_44 = {name = "Master 40-44", min = 40, max = 44}
+    master_45_49 = {name = "Master 45-49", min = 45, max = 49}
+    master_50_54 = {name = "Master 50-54", min = 50, max = 54}
+    master_55_59 = {name = "Master 55-59", min = 55, max = 59}
+    master_60_64 = {name = "Master 60-64", min = 60, max = 64}
+    master_65_69 = {name = "Master 65-69", min = 65, max = 69}
+    master_70_74 = {name = "Master 70-74", min = 70, max = 74}
+    master_75_79 = {name = "Master 75-79", min = 75, max = 79}
+    master_80_84 = {name = "Master 80-84", min = 80, max = 84}
+    master_80p = {name = "Master 80+", min = 80, max = 999}
+
+    old_master_40_49 = {name = "Master 40-49", min = 40, max = 49}
+    old_master_50_59 = {name = "Master 50-59", min = 50, max = 59}
+    old_master_60_69 = {name = "Master 60-69", min = 60, max = 69}
+    old_master_70_79 = {name = "Master 70-79", min = 70, max = 79}
+    old_master_60p = {name = "Master 60+", min = 60, max = 999}
+
+    highschool_frosh_soph = {name = "Frosh/Soph", min = 14.5, max = 16}
+    highschool_frosh_soph_jv = {name = "Frosh/Soph Junior Varsity", min = 14.5, max = 16}
+    highschool_junior_senior = {name = "Junior/Senior", min = 15.5, max = 18}
+    highschool_junior_senior_v = {name = "Junior/Senior Varsity", min = 15.5, max = 18}
+
+    police_fire = {name = "Police/Fire", min = 0, max = 999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    0075 = ["check_row_weightclass_sex"]
+    0168 = ["check_row_weightclass_sex"]
