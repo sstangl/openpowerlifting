@@ -10,7 +10,6 @@
 # 2) Each column's data are in expected formats for that column type.
 #
 
-import datetime
 import sys
 import os
 import toml
