@@ -1,34 +1,34 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Karel Ruso,1965,67,Sokol Nymburk,180,105,175,460,M,67.5,Single-ply,SBD
-2,Rosler Martin,1976,67,TJ Slovan Frydlant,110,90,170,370,M,67.5,Single-ply,SBD
-1,Jiří Janeček,1961,70,Sokol Nymburk,195,140,240,575,M,75,Single-ply,SBD
-2,Jan Hunčovský,1962,74.2,Merta Melnik,185,130,215,530,M,75,Single-ply,SBD
-3,Jan Rakusan,1971,72.5,TJ So Zizkov Praha,130,120,205,455,M,75,Single-ply,SBD
-1,Roman Krejčík,1962,78.7,TJ Ateso Jablonec,190,110,250,550,M,82.5,Single-ply,SBD
-2,Tomáš Mařík,1975,82.5,TJ Ateso Jablonec,190,135,215,540,M,82.5,Single-ply,SBD
-3,Roman Adam,1962,81.5,AC Caslav,175,120,225,520,M,82.5,Single-ply,SBD
-4,Jan Vimr,1979,77.7,TJ Ateso Jablonec,175,127.5,200,502.5,M,82.5,Single-ply,SBD
-5,Petr Damek,1961,77.4,So Kutna Hora,170,110,200,480,M,82.5,Single-ply,SBD
-DQ,Miroslav Slovák,1970,81.4,Sokol Nymburk,,,,,M,82.5,Single-ply,SBD
-1,Miroslav Hubáček,1967,85.2,Sokol Nymburk,255,190,275,720,M,90,Single-ply,SBD
-2,Karel Pavlů,1963,88.8,TJ Ateso Jablonec,230,152.5,252.5,635,M,90,Single-ply,SBD
-3,Marek Michal,1977,86.6,TJ Banik Most,195,157.5,220,572.5,M,90,Single-ply,SBD
-4,František Stříska,1967,85.2,Sokol Nymburk,205,125,220,550,M,90,Single-ply,SBD
-5,Zdenek Hunka,1954,87,Sokol Nymburk,190,140,210,540,M,90,Single-ply,SBD
-6,Milos Vesely,1965,85,So Kutna Hora,180,130,205,515,M,90,Single-ply,SBD
-7,Martin Cerny,1973,90,TJ So Zizkov Praha,170,130,200,500,M,90,Single-ply,SBD
-8,Pavel Novy,1977,89.5,TJ DKT Klara Praha,165,125,185,475,M,90,Single-ply,SBD
-9,Josef Sova,1973,85.3,So Kutna Hora,150,110,200,460,M,90,Single-ply,SBD
-DQ,Petr Barcal,1979,87.2,TJ Banik Most,,,,,M,90,Single-ply,SBD
-1,Zbyněk Krejča,1974,99.7,TJ DKT Klara Praha,265,175,255.5,695,M,100,Single-ply,SBD
-2,Jiří Filo,1974,96.7,SK Detrichov,240,170,250,660,M,100,Single-ply,SBD
-3,Jiří Koubek,1955,99.4,TJ So Zizkov Praha,215,165,230,610,M,100,Single-ply,SBD
-4,Karel Doležal,1972,92.6,Sokol Nymburk,225,145,230,600,M,100,Single-ply,SBD
-5,Jaroslav Kutt,1967,96,So Kutna Hora,180,140,220,540,M,100,Single-ply,SBD
-6,Jan Hoť,1977,96.9,SK Detrichov,190,120,220,530,M,100,Single-ply,SBD
-DQ,Petr Kolarik,1961,96.2,,190,,,,M,100,Single-ply,SBD
-1,Remigius Machura,1960,107.7,Paternidis Praha,265,165,280,710,M,110,Single-ply,SBD
-2,Richard Kraus,1974,106.9,TJ Ateso Jablonec,250,135,245,630,M,110,Single-ply,SBD
-3,Martin Ürban,1968,100.3,Sokol Nymburk,200,127.5,270,597.5,M,110,Single-ply,SBD
-4,Jiří Michálek,1973,106.7,TJ Ateso Jablonec,225,145,227.5,597.5,M,110,Single-ply,SBD
-1,Zdeněk Sedmík,1974,116.5,SKP Most,230,185,300,715,M,125,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Karel Ruso,1965,67,Sokol Nymburk,180,105,175,460,M,67.5,Single-ply,SBD,Open
+2,Rosler Martin,1976,67,TJ Slovan Frydlant,110,90,170,370,M,67.5,Single-ply,SBD,Open
+1,Jiří Janeček,1961,70,Sokol Nymburk,195,140,240,575,M,75,Single-ply,SBD,Open
+2,Jan Hunčovský,1962,74.2,Merta Melnik,185,130,215,530,M,75,Single-ply,SBD,Open
+3,Jan Rakusan,1971,72.5,TJ So Zizkov Praha,130,120,205,455,M,75,Single-ply,SBD,Open
+1,Roman Krejčík,1962,78.7,TJ Ateso Jablonec,190,110,250,550,M,82.5,Single-ply,SBD,Open
+2,Tomáš Mařík,1975,82.5,TJ Ateso Jablonec,190,135,215,540,M,82.5,Single-ply,SBD,Open
+3,Roman Adam,1962,81.5,AC Caslav,175,120,225,520,M,82.5,Single-ply,SBD,Open
+4,Jan Vimr,1979,77.7,TJ Ateso Jablonec,175,127.5,200,502.5,M,82.5,Single-ply,SBD,Open
+5,Petr Damek,1961,77.4,So Kutna Hora,170,110,200,480,M,82.5,Single-ply,SBD,Open
+DQ,Miroslav Slovák,1970,81.4,Sokol Nymburk,,,,,M,82.5,Single-ply,SBD,Open
+1,Miroslav Hubáček,1967,85.2,Sokol Nymburk,255,190,275,720,M,90,Single-ply,SBD,Open
+2,Karel Pavlů,1963,88.8,TJ Ateso Jablonec,230,152.5,252.5,635,M,90,Single-ply,SBD,Open
+3,Marek Michal,1977,86.6,TJ Banik Most,195,157.5,220,572.5,M,90,Single-ply,SBD,Open
+4,František Stříska,1967,85.2,Sokol Nymburk,205,125,220,550,M,90,Single-ply,SBD,Open
+5,Zdenek Hunka,1954,87,Sokol Nymburk,190,140,210,540,M,90,Single-ply,SBD,Open
+6,Milos Vesely,1965,85,So Kutna Hora,180,130,205,515,M,90,Single-ply,SBD,Open
+7,Martin Cerny,1973,90,TJ So Zizkov Praha,170,130,200,500,M,90,Single-ply,SBD,Open
+8,Pavel Novy,1977,89.5,TJ DKT Klara Praha,165,125,185,475,M,90,Single-ply,SBD,Open
+9,Josef Sova,1973,85.3,So Kutna Hora,150,110,200,460,M,90,Single-ply,SBD,Open
+DQ,Petr Barcal,1979,87.2,TJ Banik Most,,,,,M,90,Single-ply,SBD,Open
+1,Zbyněk Krejča,1974,99.7,TJ DKT Klara Praha,265,175,255.5,695,M,100,Single-ply,SBD,Open
+2,Jiří Filo,1974,96.7,SK Detrichov,240,170,250,660,M,100,Single-ply,SBD,Open
+3,Jiří Koubek,1955,99.4,TJ So Zizkov Praha,215,165,230,610,M,100,Single-ply,SBD,Open
+4,Karel Doležal,1972,92.6,Sokol Nymburk,225,145,230,600,M,100,Single-ply,SBD,Open
+5,Jaroslav Kutt,1967,96,So Kutna Hora,180,140,220,540,M,100,Single-ply,SBD,Open
+6,Jan Hoť,1977,96.9,SK Detrichov,190,120,220,530,M,100,Single-ply,SBD,Open
+DQ,Petr Kolarik,1961,96.2,,190,,,,M,100,Single-ply,SBD,Open
+1,Remigius Machura,1960,107.7,Paternidis Praha,265,165,280,710,M,110,Single-ply,SBD,Open
+2,Richard Kraus,1974,106.9,TJ Ateso Jablonec,250,135,245,630,M,110,Single-ply,SBD,Open
+3,Martin Ürban,1968,100.3,Sokol Nymburk,200,127.5,270,597.5,M,110,Single-ply,SBD,Open
+4,Jiří Michálek,1973,106.7,TJ Ateso Jablonec,225,145,227.5,597.5,M,110,Single-ply,SBD,Open
+1,Zdeněk Sedmík,1974,116.5,SKP Most,230,185,300,715,M,125,Single-ply,SBD,Open

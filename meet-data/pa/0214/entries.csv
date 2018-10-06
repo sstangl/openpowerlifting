@@ -1,28 +1,28 @@
-Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment
-Julie Marshall,F,52,51.75,80,100,-105,100,50,55,-60,55,90,100,-110,100,255,1,SBD,Single-ply
-Nicole Samara Bainbridge,F,67.5,66.55,-70,70,82.5,82.5,30,-40,-47.5,30,70,90,100,100,212.5,1,SBD,Single-ply
-Annette Thomas,F,75,70.3,-60,-60,60,60,42.5,-45,-45,42.5,105,110,115,115,217.5,1,SBD,Single-ply
-Melissa Ricks,F,82.5,78.1,60,75,85,85,42.5,47.5,-50,47.5,80,95,105,105,237.5,1,SBD,Single-ply
-Brendan Baker,M,67.5,65.55,155,-165,165,165,75,-85,-85,75,180,190,-200,190,430,1,SBD,Single-ply
-Peter Koitka,M,75,73.25,160,-180,-180,160,-105,-110,110,110,190,200,-210,200,470,3,SBD,Single-ply
-Sean Muir,M,75,75,200,-210,215,215,130,137.5,-140,137.5,235,-245,247.5,247.5,600,1,SBD,Single-ply
-Steve How Lum,M,75,74.7,160,170,180,180,100,105,110,110,140,155,170,170,460,4,SBD,Single-ply
-Nick Unsworth-Smith,M,75,73.05,190,200,210,210,-135,135,142.5,142.5,200,215,-235,215,567.5,2,SBD,Single-ply
-Grahame Homewood,M,82.5,82.3,190,-195,-195,190,115,120,-125,120,205,215,-225,215,525,2,SBD,Single-ply
-Andrew Lulham,M,82.5,82.3,160,180,195,195,115,125,132.5,132.5,200,,,200,527.5,1,SBD,Single-ply
-Tim Unsworth-Smith,M,90,84.45,175,185,195,195,135,145,150,150,190,205,-215,205,550,1,SBD,Single-ply
-Neil Lloyd-Jones,M,100,95.45,220,230,240,240,110,120,-125,120,210,-220,-220,210,570,2,SBD,Single-ply
-Masson John Fox,M,100,98.2,195,200,-205,200,-122.5,127.5,132.5,132.5,220,230,-240,230,562.5,3,SBD,Single-ply
-Ken Ware,M,100,93.7,225,-240,245,245,175,-185,185,185,245,265,275,275,705,1,SBD,Single-ply
-John Batley,M,125,115.2,255,265,275,275,135,142.5,-152.5,142.5,260,270,-277.5,270,687.5,3,SBD,Single-ply
-Peter Peirre,M,125,122.05,180,-200,200,200,155,165,-175,165,-210,-210,210,210,575,6,SBD,Single-ply
-Greg Phillips,M,125,117.35,-220,220,-240,220,-165,165,175,175,280,-305,,280,675,4,SBD,Single-ply
-Gary Roberts,M,125,123,280,300,310,310,165,170,175,175,260,270,275,275,760,2,SBD,Single-ply
-Andrew Logan,M,125,111.25,290,302.5,312.5,312.5,180,190.5,193.5,193.5,295,307.5,312.5,312.5,818.5,1,SBD,Single-ply
-Jason Green,M,125+,134.4,180,-200,-220,180,-130,140,-160,140,200,-225,-225,200,520,1,SBD,Single-ply
-Tane Robson-Webb,M,56,54.3,,,,,-100,100,103,103,,,,,102.5,1,B,Single-ply
-Chris Connors,M,56,55.7,,,,,80,90,95,95,,,,,95,1,B,Single-ply
-Gareth Winckle,M,75,74.4,,,,,142.5,-150,150,150,,,,,150,1,B,Single-ply
-Brett Eeles,M,82.5,81.2,,,,,-105,-105,-105,,,,,,,DQ,B,Single-ply
-Adam Firman,M,110,108.8,,,,,145,150,-160,150,,,,,150,2,B,Single-ply
-Michael Waters,M,110,109.95,,,,,-155,160,-170,160,,,,,160,1,B,Single-ply
+Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Division
+Julie Marshall,F,52,51.75,80,100,-105,100,50,55,-60,55,90,100,-110,100,255,1,SBD,Single-ply,Open
+Nicole Samara Bainbridge,F,67.5,66.55,-70,70,82.5,82.5,30,-40,-47.5,30,70,90,100,100,212.5,1,SBD,Single-ply,Open
+Annette Thomas,F,75,70.3,-60,-60,60,60,42.5,-45,-45,42.5,105,110,115,115,217.5,1,SBD,Single-ply,Open
+Melissa Ricks,F,82.5,78.1,60,75,85,85,42.5,47.5,-50,47.5,80,95,105,105,237.5,1,SBD,Single-ply,Open
+Brendan Baker,M,67.5,65.55,155,-165,165,165,75,-85,-85,75,180,190,-200,190,430,1,SBD,Single-ply,Open
+Peter Koitka,M,75,73.25,160,-180,-180,160,-105,-110,110,110,190,200,-210,200,470,3,SBD,Single-ply,Open
+Sean Muir,M,75,75,200,-210,215,215,130,137.5,-140,137.5,235,-245,247.5,247.5,600,1,SBD,Single-ply,Open
+Steve How Lum,M,75,74.7,160,170,180,180,100,105,110,110,140,155,170,170,460,4,SBD,Single-ply,Open
+Nick Unsworth-Smith,M,75,73.05,190,200,210,210,-135,135,142.5,142.5,200,215,-235,215,567.5,2,SBD,Single-ply,Open
+Grahame Homewood,M,82.5,82.3,190,-195,-195,190,115,120,-125,120,205,215,-225,215,525,2,SBD,Single-ply,Open
+Andrew Lulham,M,82.5,82.3,160,180,195,195,115,125,132.5,132.5,200,,,200,527.5,1,SBD,Single-ply,Open
+Tim Unsworth-Smith,M,90,84.45,175,185,195,195,135,145,150,150,190,205,-215,205,550,1,SBD,Single-ply,Open
+Neil Lloyd-Jones,M,100,95.45,220,230,240,240,110,120,-125,120,210,-220,-220,210,570,2,SBD,Single-ply,Open
+Masson John Fox,M,100,98.2,195,200,-205,200,-122.5,127.5,132.5,132.5,220,230,-240,230,562.5,3,SBD,Single-ply,Open
+Ken Ware,M,100,93.7,225,-240,245,245,175,-185,185,185,245,265,275,275,705,1,SBD,Single-ply,Open
+John Batley,M,125,115.2,255,265,275,275,135,142.5,-152.5,142.5,260,270,-277.5,270,687.5,3,SBD,Single-ply,Open
+Peter Peirre,M,125,122.05,180,-200,200,200,155,165,-175,165,-210,-210,210,210,575,6,SBD,Single-ply,Open
+Greg Phillips,M,125,117.35,-220,220,-240,220,-165,165,175,175,280,-305,,280,675,4,SBD,Single-ply,Open
+Gary Roberts,M,125,123,280,300,310,310,165,170,175,175,260,270,275,275,760,2,SBD,Single-ply,Open
+Andrew Logan,M,125,111.25,290,302.5,312.5,312.5,180,190.5,193.5,193.5,295,307.5,312.5,312.5,818.5,1,SBD,Single-ply,Open
+Jason Green,M,125+,134.4,180,-200,-220,180,-130,140,-160,140,200,-225,-225,200,520,1,SBD,Single-ply,Open
+Tane Robson-Webb,M,56,54.3,,,,,-100,100,103,103,,,,,102.5,1,B,Single-ply,Open
+Chris Connors,M,56,55.7,,,,,80,90,95,95,,,,,95,1,B,Single-ply,Open
+Gareth Winckle,M,75,74.4,,,,,142.5,-150,150,150,,,,,150,1,B,Single-ply,Open
+Brett Eeles,M,82.5,81.2,,,,,-105,-105,-105,,,,,,,DQ,B,Single-ply,Open
+Adam Firman,M,110,108.8,,,,,145,150,-160,150,,,,,150,2,B,Single-ply,Open
+Michael Waters,M,110,109.95,,,,,-155,160,-170,160,,,,,160,1,B,Single-ply,Open

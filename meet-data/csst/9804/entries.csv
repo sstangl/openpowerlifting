@@ -1,39 +1,39 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Pavel Malina,1960,59,TJ Viktorie Bohumin,165,105,170,440,M,60,Single-ply,SBD
-1,David Kenis,1977,66.5,TJ Loko Krnov,202.5,130,202.5,535,M,67.5,Single-ply,SBD
-2,Martin Čech,1974,67,Colb.Bystrice p.H.,190,110,225,525,M,67.5,Single-ply,SBD
-3,Franti Michalczyk,1954,67,TJ PD Ostrava,160,105,170,435,M,67.5,Single-ply,SBD
-1,Zdenek Soldan,1967,73.5,TJ Morava Kromeriz,200,120,220,540,M,75,Single-ply,SBD
-2,Panaiotis Marios,1960,74.5,TJ Loko Krnov,160,130,190,480,M,75,Single-ply,SBD
-3,Dalimil Matousek,1975,69.5,TJ SD Frydek-Mistek,170,105,190,465,M,75,Single-ply,SBD
-4,Petr Zahumensky,1979,68.5,TJ OKD Ostrava,140,108,180,427.5,M,75,Single-ply,SBD
-5,Marek Růžička,1983,71.3,TJ B.St.Mesto p.S.,142.5,85,162.5,390,M,75,Single-ply,SBD
-1,Rémy Krayzel,1955,81.5,TJ Loko Krnov,250,165,235,650,M,82.5,Single-ply,SBD
-2,Martin Licka,1977,79,SKS Vitkovice,170,143,200,512.5,M,82.5,Single-ply,SBD
-3,David Chrupka,1977,78.5,TJ Viktorie Bohumin,180,120,200,500,M,82.5,Single-ply,SBD
-4,Jindřich Nesrsta,1975,81.5,Colb.Bystrice p.H.,160,95,222.5,477.5,M,82.5,Single-ply,SBD
-5,Josef Vecerka,1971,77,TJ Loko Krnov,150,105,175,430,M,82.5,Single-ply,SBD
-6,Lukas Pelisek,1979,77.5,TJ SK RaN Ol.Zlin,130,105,160,395,M,82.5,Single-ply,SBD
-1,Michal Novák,1977,90,Colb.Bystrice p.H.,200,150,245,595,M,90,Single-ply,SBD
-2,Jindřich Červenka,1974,90,TJ Loko Krnov,190,140,242.5,572.5,M,90,Single-ply,SBD
-3,Jiří Kati,1965,88.5,TJ Slezan Opava,150,195,215,560,M,90,Single-ply,SBD
-4,Petr Ralis,1974,89,TJ SK RaN Ol.Zlin,200,112.5,215,527.5,M,90,Single-ply,SBD
-1,Dezidér Mihok,1975,97,TJ SK RaN Ol.Zlin,270,180,300,750,M,100,Single-ply,SBD
-2,Jiří Gryga,1968,98,TJ SD Frydek-Mistek,260,170,300,730,M,100,Single-ply,SBD
-3,Petr Kostelník,1956,99,TJ Tatra Pribor,200,200,250,650,M,100,Single-ply,SBD
-4,Miroslav Pupík,1962,97.7,TJ SD Frydek-Mistek,210,145,270,625,M,100,Single-ply,SBD
-5,Petr Ilík,1969,95.5,TJ Loko Krnov,220,155,240,615,M,100,Single-ply,SBD
-6,Antonín Růžička,1960,95.5,TJ B.St.Mesto p.S.,210,140,255,605,M,100,Single-ply,SBD
-7,Miroslav Hejda,1978,96,TJ Morava Kromeriz,195,127.5,260,582.5,M,100,Single-ply,SBD
-8,Jan Smolka,1974,95.5,TJ Morava Kromeriz,200,115,210,525,M,100,Single-ply,SBD
-9,Lubos Vaclavek,1973,96.5,TJ Loko Krnov,180,150,195,525,M,100,Single-ply,SBD
-10,Robert Galistel,1975,90.5,TJ Loko Krnov,160,125,205,490,M,100,Single-ply,SBD
-1,Stanislav Krček,1949,111,TJ SK RaN Ol.Zlin,210,160,250,620,M,125,Single-ply,SBD
-1,Eva Labuťová,1965,53,TJ Morava Kromeriz,105,67.5,130,302.5,F,56,Single-ply,SBD
-2,Lenka Hernova,1975,53.2,TJ PD Ostrava,87.5,47.5,110,245,F,56,Single-ply,SBD
-3,Dominika Drlikova,1981,55,TJ Viktorie Bohumin,85,45,95,225,F,56,Single-ply,SBD
-4,Hana Kozáková,1974,51,TJ Morava Kromeriz,65,40,82.5,187.5,F,52,Single-ply,SBD
-1,Petra Jurásková,1976,57.7,TJ SD Frydek-Mistek,130,60,150,340,F,60,Single-ply,SBD
-2,Alena Záhumenská,1958,58,TJ OKD Ostrava,105,62.5,150,317.5,F,60,Single-ply,SBD
-3,Hana Petříková,1971,82,TJ Ji Rymarov,150,70,170,390,F,82.5,Single-ply,SBD
-4,Bohdan Matouskova,1980,58.8,TJ SD Frydek-Mistek,85,40,90,215,F,60,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Pavel Malina,1960,59,TJ Viktorie Bohumin,165,105,170,440,M,60,Single-ply,SBD,Open
+1,David Kenis,1977,66.5,TJ Loko Krnov,202.5,130,202.5,535,M,67.5,Single-ply,SBD,Open
+2,Martin Čech,1974,67,Colb.Bystrice p.H.,190,110,225,525,M,67.5,Single-ply,SBD,Open
+3,Franti Michalczyk,1954,67,TJ PD Ostrava,160,105,170,435,M,67.5,Single-ply,SBD,Open
+1,Zdenek Soldan,1967,73.5,TJ Morava Kromeriz,200,120,220,540,M,75,Single-ply,SBD,Open
+2,Panaiotis Marios,1960,74.5,TJ Loko Krnov,160,130,190,480,M,75,Single-ply,SBD,Open
+3,Dalimil Matousek,1975,69.5,TJ SD Frydek-Mistek,170,105,190,465,M,75,Single-ply,SBD,Open
+4,Petr Zahumensky,1979,68.5,TJ OKD Ostrava,140,108,180,427.5,M,75,Single-ply,SBD,Open
+5,Marek Růžička,1983,71.3,TJ B.St.Mesto p.S.,142.5,85,162.5,390,M,75,Single-ply,SBD,Open
+1,Rémy Krayzel,1955,81.5,TJ Loko Krnov,250,165,235,650,M,82.5,Single-ply,SBD,Open
+2,Martin Licka,1977,79,SKS Vitkovice,170,143,200,512.5,M,82.5,Single-ply,SBD,Open
+3,David Chrupka,1977,78.5,TJ Viktorie Bohumin,180,120,200,500,M,82.5,Single-ply,SBD,Open
+4,Jindřich Nesrsta,1975,81.5,Colb.Bystrice p.H.,160,95,222.5,477.5,M,82.5,Single-ply,SBD,Open
+5,Josef Vecerka,1971,77,TJ Loko Krnov,150,105,175,430,M,82.5,Single-ply,SBD,Open
+6,Lukas Pelisek,1979,77.5,TJ SK RaN Ol.Zlin,130,105,160,395,M,82.5,Single-ply,SBD,Open
+1,Michal Novák,1977,90,Colb.Bystrice p.H.,200,150,245,595,M,90,Single-ply,SBD,Open
+2,Jindřich Červenka,1974,90,TJ Loko Krnov,190,140,242.5,572.5,M,90,Single-ply,SBD,Open
+3,Jiří Kati,1965,88.5,TJ Slezan Opava,150,195,215,560,M,90,Single-ply,SBD,Open
+4,Petr Ralis,1974,89,TJ SK RaN Ol.Zlin,200,112.5,215,527.5,M,90,Single-ply,SBD,Open
+1,Dezidér Mihok,1975,97,TJ SK RaN Ol.Zlin,270,180,300,750,M,100,Single-ply,SBD,Open
+2,Jiří Gryga,1968,98,TJ SD Frydek-Mistek,260,170,300,730,M,100,Single-ply,SBD,Open
+3,Petr Kostelník,1956,99,TJ Tatra Pribor,200,200,250,650,M,100,Single-ply,SBD,Open
+4,Miroslav Pupík,1962,97.7,TJ SD Frydek-Mistek,210,145,270,625,M,100,Single-ply,SBD,Open
+5,Petr Ilík,1969,95.5,TJ Loko Krnov,220,155,240,615,M,100,Single-ply,SBD,Open
+6,Antonín Růžička,1960,95.5,TJ B.St.Mesto p.S.,210,140,255,605,M,100,Single-ply,SBD,Open
+7,Miroslav Hejda,1978,96,TJ Morava Kromeriz,195,127.5,260,582.5,M,100,Single-ply,SBD,Open
+8,Jan Smolka,1974,95.5,TJ Morava Kromeriz,200,115,210,525,M,100,Single-ply,SBD,Open
+9,Lubos Vaclavek,1973,96.5,TJ Loko Krnov,180,150,195,525,M,100,Single-ply,SBD,Open
+10,Robert Galistel,1975,90.5,TJ Loko Krnov,160,125,205,490,M,100,Single-ply,SBD,Open
+1,Stanislav Krček,1949,111,TJ SK RaN Ol.Zlin,210,160,250,620,M,125,Single-ply,SBD,Open
+1,Eva Labuťová,1965,53,TJ Morava Kromeriz,105,67.5,130,302.5,F,56,Single-ply,SBD,Open
+2,Lenka Hernova,1975,53.2,TJ PD Ostrava,87.5,47.5,110,245,F,56,Single-ply,SBD,Open
+3,Dominika Drlikova,1981,55,TJ Viktorie Bohumin,85,45,95,225,F,56,Single-ply,SBD,Open
+4,Hana Kozáková,1974,51,TJ Morava Kromeriz,65,40,82.5,187.5,F,52,Single-ply,SBD,Open
+1,Petra Jurásková,1976,57.7,TJ SD Frydek-Mistek,130,60,150,340,F,60,Single-ply,SBD,Open
+2,Alena Záhumenská,1958,58,TJ OKD Ostrava,105,62.5,150,317.5,F,60,Single-ply,SBD,Open
+3,Hana Petříková,1971,82,TJ Ji Rymarov,150,70,170,390,F,82.5,Single-ply,SBD,Open
+4,Bohdan Matouskova,1980,58.8,TJ SD Frydek-Mistek,85,40,90,215,F,60,Single-ply,SBD,Open

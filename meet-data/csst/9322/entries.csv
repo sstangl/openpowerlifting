@@ -1,36 +1,36 @@
-Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Dana Pelikánová,1976,51.3,TJ Spartak Pelhřimov,45,50,-52.5,50,50,F,52,Single-ply,B
-1,Jana Skýbová,1962,60,TJ Baník Most,55,60,,60,60,F,60,Single-ply,B
-2,Dáša Fišerová,1975,57.4,L-S Club Vrchlabí,52.5,-55,-55,52.5,52.5,F,60,Single-ply,B
-1,Rudolf Böhm,1952,64.9,Sokol Vejprnice,125,130,-135,130,130,M,67.5,Single-ply,B
-2,Pavel Vorel,1965,66.5,TJ Škoda Č.Budějovice,120,-125,-125,120,120,M,67.5,Single-ply,B
-3,Werdner Koudelka,1973,67.5,TJ Spartak Chodov,-115,120,-125,120,120,M,67.5,Single-ply,B
-1,Roman Ryska,1972,68.3,Sokol Vršovice,140,150,157.5,157.5,157.5,M,75,Single-ply,B
-2,Vladimír Dufek,1956,74.9,TJ Jiskra Domažlice,140,-145,,140,140,M,75,Single-ply,B
-3,Jaroslav Kraft,1970,71.8,ŽBC Hrádek u Rokycan,115,120,125,125,125,M,75,Single-ply,B
-4,Stanislav Vaňourek,1962,70.2,Sokol Písek,122.5,-127.5,-130,122.5,122.5,M,75,Single-ply,B
-5,Mojmír Derka,1975,73.9,M.Boleslav,120,-130,-130,120,120,M,75,Single-ply,B
-1,Vasil Vatolin,1959,81.8,Sportcentrum Praha,165,172.5,-177.5,172.5,172.5,M,82.5,Single-ply,B
-2,Josef Michalíček,1967,82.5,Slovan Kamenice n.L,160,-165,-165,160,160,M,82.5,Single-ply,B
-3,Josef Hůla,1962,81.9,TJ Jiskra Domažlice,135,142.5,-147.5,142.5,142.5,M,82.5,Single-ply,B
-DQ,Václav Šefl,1972,76.8,ŽBC Hrádek u Rokycan,-125,,,,,M,82.5,Single-ply,B
-1,Josef Ptáček,1953,89.2,TJ Spartak Pelhřimov,165,170,-172.5,170,170,M,90,Single-ply,B
-2,Josef Mička,1949,88.6,TJ Slavoj Pacov,160,167,-170,167,167.5,M,90,Single-ply,B
-3,Josef Máška,1955,87.1,Fit.Club Pelhřimov,160,-167.5,-170,160,160,M,90,Single-ply,B
-4,Luboš Maršík,1952,89.9,Sokol Kramolná,-152.5,157.5,-162.5,157.5,157.5,M,90,Single-ply,B
-5,Zdeněk Brouček,1949,89.6,Sokol Vejprnice,140,145,-150,145,145,M,90,Single-ply,B
-DQ,Pavel Šefl,1973,87.9,ŽBC Hrádek u Rokycan,-125,-125,-125,,,M,90,Single-ply,B
-1,Jaroslav Wožniak,1955,96.7,TJ Klášterec n.O,180,185,-187.5,185,185,M,100,Single-ply,B
-2,Jiří Koubek,1955,98.8,Sokol Praha -Žižkov,175,180,185,185,185,M,100,Single-ply,B
-3,Petr Totzauer,1947,93,TJ Klášterec n.O,152,157.5,-162.5,157.5,157.5,M,100,Single-ply,B
-4,Miroslav Němec,1968,96.3,L-S Club Vrchlabí,145,155,-157.5,155,155,M,100,Single-ply,B
-5,Antonín Hlaváček,1953,98.2,ŽBC Hrádek u Rokycan,145,150,152.5,152.5,152.5,M,100,Single-ply,B
-6,Josef Váchal,1961,97.3,TJ Jiskra Domažlice,145,150,-152.5,150,150,M,100,Single-ply,B
-DQ,Jaroslav Smutný,1967,98.7,TJ Slovan Kamenice n.L,-130,-130,-130,,,M,100,Single-ply,B
-DQ,Luděk Michal,1969,94.8,Wilson Tábor,-120,-120,-120,,,M,100,Single-ply,B
-1,Vít Volf,1967,100.9,TJ Jiskra Domažlice,150,155,-160,155,155,M,110,Single-ply,B
-2,Bohumil Váňa,1951,109.9,Wilson Tábor,150,155,-160,155,155,M,110,Single-ply,B
-3,Jiří Krejčí,1951,101,TJ Baník Most,,140,-142.5,140,140,M,110,Single-ply,B
-4,Milan Němec,1953,101.5,TJ Škoda Č.Budějovice,140,-145,-145,140,140,M,110,Single-ply,B
-1,Josef Zajíc,1950,115.2,TJ Škoda Č.Budějovice,-170,170,175,175,175,M,125,Single-ply,B
-2,Bohuslav Lexa,1960,118,Fit Club Č.Budějovice,157.5,170,-175,170,170,M,125,Single-ply,B
+Place,Name,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Dana Pelikánová,1976,51.3,TJ Spartak Pelhřimov,45,50,-52.5,50,50,F,52,Single-ply,B,Open
+1,Jana Skýbová,1962,60,TJ Baník Most,55,60,,60,60,F,60,Single-ply,B,Open
+2,Dáša Fišerová,1975,57.4,L-S Club Vrchlabí,52.5,-55,-55,52.5,52.5,F,60,Single-ply,B,Open
+1,Rudolf Böhm,1952,64.9,Sokol Vejprnice,125,130,-135,130,130,M,67.5,Single-ply,B,Open
+2,Pavel Vorel,1965,66.5,TJ Škoda Č.Budějovice,120,-125,-125,120,120,M,67.5,Single-ply,B,Open
+3,Werdner Koudelka,1973,67.5,TJ Spartak Chodov,-115,120,-125,120,120,M,67.5,Single-ply,B,Open
+1,Roman Ryska,1972,68.3,Sokol Vršovice,140,150,157.5,157.5,157.5,M,75,Single-ply,B,Open
+2,Vladimír Dufek,1956,74.9,TJ Jiskra Domažlice,140,-145,,140,140,M,75,Single-ply,B,Open
+3,Jaroslav Kraft,1970,71.8,ŽBC Hrádek u Rokycan,115,120,125,125,125,M,75,Single-ply,B,Open
+4,Stanislav Vaňourek,1962,70.2,Sokol Písek,122.5,-127.5,-130,122.5,122.5,M,75,Single-ply,B,Open
+5,Mojmír Derka,1975,73.9,M.Boleslav,120,-130,-130,120,120,M,75,Single-ply,B,Open
+1,Vasil Vatolin,1959,81.8,Sportcentrum Praha,165,172.5,-177.5,172.5,172.5,M,82.5,Single-ply,B,Open
+2,Josef Michalíček,1967,82.5,Slovan Kamenice n.L,160,-165,-165,160,160,M,82.5,Single-ply,B,Open
+3,Josef Hůla,1962,81.9,TJ Jiskra Domažlice,135,142.5,-147.5,142.5,142.5,M,82.5,Single-ply,B,Open
+DQ,Václav Šefl,1972,76.8,ŽBC Hrádek u Rokycan,-125,,,,,M,82.5,Single-ply,B,Open
+1,Josef Ptáček,1953,89.2,TJ Spartak Pelhřimov,165,170,-172.5,170,170,M,90,Single-ply,B,Open
+2,Josef Mička,1949,88.6,TJ Slavoj Pacov,160,167,-170,167,167.5,M,90,Single-ply,B,Open
+3,Josef Máška,1955,87.1,Fit.Club Pelhřimov,160,-167.5,-170,160,160,M,90,Single-ply,B,Open
+4,Luboš Maršík,1952,89.9,Sokol Kramolná,-152.5,157.5,-162.5,157.5,157.5,M,90,Single-ply,B,Open
+5,Zdeněk Brouček,1949,89.6,Sokol Vejprnice,140,145,-150,145,145,M,90,Single-ply,B,Open
+DQ,Pavel Šefl,1973,87.9,ŽBC Hrádek u Rokycan,-125,-125,-125,,,M,90,Single-ply,B,Open
+1,Jaroslav Wožniak,1955,96.7,TJ Klášterec n.O,180,185,-187.5,185,185,M,100,Single-ply,B,Open
+2,Jiří Koubek,1955,98.8,Sokol Praha -Žižkov,175,180,185,185,185,M,100,Single-ply,B,Open
+3,Petr Totzauer,1947,93,TJ Klášterec n.O,152,157.5,-162.5,157.5,157.5,M,100,Single-ply,B,Open
+4,Miroslav Němec,1968,96.3,L-S Club Vrchlabí,145,155,-157.5,155,155,M,100,Single-ply,B,Open
+5,Antonín Hlaváček,1953,98.2,ŽBC Hrádek u Rokycan,145,150,152.5,152.5,152.5,M,100,Single-ply,B,Open
+6,Josef Váchal,1961,97.3,TJ Jiskra Domažlice,145,150,-152.5,150,150,M,100,Single-ply,B,Open
+DQ,Jaroslav Smutný,1967,98.7,TJ Slovan Kamenice n.L,-130,-130,-130,,,M,100,Single-ply,B,Open
+DQ,Luděk Michal,1969,94.8,Wilson Tábor,-120,-120,-120,,,M,100,Single-ply,B,Open
+1,Vít Volf,1967,100.9,TJ Jiskra Domažlice,150,155,-160,155,155,M,110,Single-ply,B,Open
+2,Bohumil Váňa,1951,109.9,Wilson Tábor,150,155,-160,155,155,M,110,Single-ply,B,Open
+3,Jiří Krejčí,1951,101,TJ Baník Most,,140,-142.5,140,140,M,110,Single-ply,B,Open
+4,Milan Němec,1953,101.5,TJ Škoda Č.Budějovice,140,-145,-145,140,140,M,110,Single-ply,B,Open
+1,Josef Zajíc,1950,115.2,TJ Škoda Č.Budějovice,-170,170,175,175,175,M,125,Single-ply,B,Open
+2,Bohuslav Lexa,1960,118,Fit Club Č.Budějovice,157.5,170,-175,170,170,M,125,Single-ply,B,Open

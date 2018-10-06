@@ -1,30 +1,30 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,Dezidér Mihok,1975,100.3,Olympia Zlin,300,200,320,820,Single-ply,SBD,M
-1,Ondřej Seidel,1975,85.5,Olympia Zlin,262.5,160,240,662.5,Single-ply,SBD,M
-1,Vlastimil Peterka,1975,74.8,Olympia Zlin,240,165,280,685,Single-ply,SBD,M
-1,Roman Urbánek,1956,96.6,Olympia Zlin,235,165,265,665,Single-ply,SBD,M
-1,Vratislav Čech,1965,102.5,Olympia Zlin,262.5,170,310,742.5,Single-ply,SBD,M
-2,Zbyněk Krejča,1974,98.1,Sokol Nymburk A,255,192.5,272.5,720,Single-ply,SBD,M
-2,Vladimír Medek,1964,77.3,Sokol Nymburk A,210,157.5,240,607.5,Single-ply,SBD,M
-2,Miroslav Hubáček,,85.6,Sokol Nymburk A,240,192.5,260,692.5,Single-ply,SBD,M
-2,Miroslav Vacek,1967,122,Sokol Nymburk A,270,175,275,720,Single-ply,SBD,M
-DQ,Lukáš Doubek,1979,103.9,Sokol Nymburk A,210,,195,,Single-ply,SBD,M
-3,Pavel Schaumann,1972,86,TJ Sokol Teskovice,215,137.5,242.5,595,Single-ply,SBD,M
-3,Václav Jaremczuk,,90.4,TJ Sokol Teskovice,240,155,267.5,662.5,Single-ply,SBD,M
-3,Stanislav Hoza,1956,84.5,TJ Sokol Teskovice,255,165,240,660,Single-ply,SBD,M
-3,Radim Hořínek,1975,96.8,TJ Sokol Teskovice,212.5,145,257.5,615,Single-ply,SBD,M
-4,David Kenis,1977,66.3,Jokomotiva Krnov A,200,130,100,430,Single-ply,SBD,M
-4,Petr Ilík,1969,94.6,Jokomotiva Krnov A,230,157.5,252.5,640,Single-ply,SBD,M
-4,Rémy Krayzel,1955,80.3,Jokomotiva Krnov A,235,160,220,615,Single-ply,SBD,M
-4,Jiří Zeman,1944,99.7,Jokomotiva Krnov A,230,170,255,655,Single-ply,SBD,M
-4,Ludvík Blahuta,1957,99.7,Jokomotiva Krnov A,250,155,260,665,Single-ply,SBD,M
-5,František Stříska,1971,87.7,Sokol Nymburk B,210,125,220,555,Single-ply,SBD,M
-5,Miroslav Slovák,1970,82.7,Sokol Nymburk B,200,145,220,565,Single-ply,SBD,M
-5,Martin Ürban,1968,97.1,Sokol Nymburk B,215,142.5,275,632.5,Single-ply,SBD,M
-5,Zdenek Hunka,1954,85.3,Sokol Nymburk B,190,137.5,210,537.5,Single-ply,SBD,M
-5,Karel Ruso,1965,67.4,Sokol Nymburk B,215,120,210,545,Single-ply,SBD,M
-6,Jiri Houdek,1982,61.7,TJ Svitavy,140,80,157.5,377.5,Single-ply,SBD,M
-6,Martin Otava,1981,75.4,TJ Svitavy,180,110,217.5,507.5,Single-ply,SBD,M
-6,Marek Hejtmánek,1973,82,TJ Svitavy,217.5,150,242.5,610,Single-ply,SBD,M
-6,Tomáš Otava,1976,80.4,TJ Svitavy,200,120,230,550,Single-ply,SBD,M
-6,Libor Novák,1966,80.4,TJ Svitavy,180,142.5,210,532.5,Single-ply,SBD,M
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Dezidér Mihok,1975,100.3,Olympia Zlin,300,200,320,820,Single-ply,SBD,M,Open
+1,Ondřej Seidel,1975,85.5,Olympia Zlin,262.5,160,240,662.5,Single-ply,SBD,M,Open
+1,Vlastimil Peterka,1975,74.8,Olympia Zlin,240,165,280,685,Single-ply,SBD,M,Open
+1,Roman Urbánek,1956,96.6,Olympia Zlin,235,165,265,665,Single-ply,SBD,M,Open
+1,Vratislav Čech,1965,102.5,Olympia Zlin,262.5,170,310,742.5,Single-ply,SBD,M,Open
+2,Zbyněk Krejča,1974,98.1,Sokol Nymburk A,255,192.5,272.5,720,Single-ply,SBD,M,Open
+2,Vladimír Medek,1964,77.3,Sokol Nymburk A,210,157.5,240,607.5,Single-ply,SBD,M,Open
+2,Miroslav Hubáček,,85.6,Sokol Nymburk A,240,192.5,260,692.5,Single-ply,SBD,M,Open
+2,Miroslav Vacek,1967,122,Sokol Nymburk A,270,175,275,720,Single-ply,SBD,M,Open
+DQ,Lukáš Doubek,1979,103.9,Sokol Nymburk A,210,,195,,Single-ply,SBD,M,Open
+3,Pavel Schaumann,1972,86,TJ Sokol Teskovice,215,137.5,242.5,595,Single-ply,SBD,M,Open
+3,Václav Jaremczuk,,90.4,TJ Sokol Teskovice,240,155,267.5,662.5,Single-ply,SBD,M,Open
+3,Stanislav Hoza,1956,84.5,TJ Sokol Teskovice,255,165,240,660,Single-ply,SBD,M,Open
+3,Radim Hořínek,1975,96.8,TJ Sokol Teskovice,212.5,145,257.5,615,Single-ply,SBD,M,Open
+4,David Kenis,1977,66.3,Jokomotiva Krnov A,200,130,100,430,Single-ply,SBD,M,Open
+4,Petr Ilík,1969,94.6,Jokomotiva Krnov A,230,157.5,252.5,640,Single-ply,SBD,M,Open
+4,Rémy Krayzel,1955,80.3,Jokomotiva Krnov A,235,160,220,615,Single-ply,SBD,M,Open
+4,Jiří Zeman,1944,99.7,Jokomotiva Krnov A,230,170,255,655,Single-ply,SBD,M,Open
+4,Ludvík Blahuta,1957,99.7,Jokomotiva Krnov A,250,155,260,665,Single-ply,SBD,M,Open
+5,František Stříska,1971,87.7,Sokol Nymburk B,210,125,220,555,Single-ply,SBD,M,Open
+5,Miroslav Slovák,1970,82.7,Sokol Nymburk B,200,145,220,565,Single-ply,SBD,M,Open
+5,Martin Ürban,1968,97.1,Sokol Nymburk B,215,142.5,275,632.5,Single-ply,SBD,M,Open
+5,Zdenek Hunka,1954,85.3,Sokol Nymburk B,190,137.5,210,537.5,Single-ply,SBD,M,Open
+5,Karel Ruso,1965,67.4,Sokol Nymburk B,215,120,210,545,Single-ply,SBD,M,Open
+6,Jiri Houdek,1982,61.7,TJ Svitavy,140,80,157.5,377.5,Single-ply,SBD,M,Open
+6,Martin Otava,1981,75.4,TJ Svitavy,180,110,217.5,507.5,Single-ply,SBD,M,Open
+6,Marek Hejtmánek,1973,82,TJ Svitavy,217.5,150,242.5,610,Single-ply,SBD,M,Open
+6,Tomáš Otava,1976,80.4,TJ Svitavy,200,120,230,550,Single-ply,SBD,M,Open
+6,Libor Novák,1966,80.4,TJ Svitavy,180,142.5,210,532.5,Single-ply,SBD,M,Open

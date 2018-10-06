@@ -1,13 +1,13 @@
-Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
-Susan Greenbank,F,77,82.5,90,-95,-95,90,55,-57.5,-57.5,55,120,127.5,-135,127.5,272.5,Single-ply,SBD,1
-Barry Daniel,M,74.4,75,-130,130,140,140,87.5,-90,-90,87.5,180,-190,-190,180,407.5,Single-ply,SBD,1
-Lachlan Crane,M,75,75,90,100,112.5,112.5,80,87.5,-90,87.5,120,130,140,140,340,Single-ply,SBD,2
-Michael Brook,M,76.6,82.5,140,150,160,160,120,125,-130,125,170,185,-200,185,470,Single-ply,SBD,1
-Ben Hayes,M,80.2,82.5,-120,-125,125,125,105,-110,-110,105,-150,155,165,165,395,Single-ply,SBD,2
-Andrew Lamb,M,87.7,90,140,-147.5,150,150,70,-77.5,-77.5,70,135,142.5,152.5,152.5,372.5,Single-ply,SBD,1
-Greg Molyneaux,M,99.7,100,140,160,180,180,120,130,140,140,150,170,190,190,510,Single-ply,SBD,1
-Lee James,M,94.9,100,140,150,160,160,130,-135,-135,130,160,180,200,200,490,Single-ply,SBD,2
-Rohan O'Reilly,M,91,100,130,137.5,145,145,90,97.5,-107.5,97.5,175,190,200,200,442.5,Single-ply,SBD,3
-Jorra Singh,M,69.9,75,,,,,-85,85,-90,85,,,,,85,Single-ply,B,1
-Nick Perks,M,81.2,82.5,,,,,130,135,-140,135,,,,,135,Single-ply,B,1
-Steve Yates,M,76.7,82.5,,,,,95,100,-105,100,,,,,100,Single-ply,B,2
+Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place,Division
+Susan Greenbank,F,77,82.5,90,-95,-95,90,55,-57.5,-57.5,55,120,127.5,-135,127.5,272.5,Single-ply,SBD,1,Open
+Barry Daniel,M,74.4,75,-130,130,140,140,87.5,-90,-90,87.5,180,-190,-190,180,407.5,Single-ply,SBD,1,Open
+Lachlan Crane,M,75,75,90,100,112.5,112.5,80,87.5,-90,87.5,120,130,140,140,340,Single-ply,SBD,2,Open
+Michael Brook,M,76.6,82.5,140,150,160,160,120,125,-130,125,170,185,-200,185,470,Single-ply,SBD,1,Open
+Ben Hayes,M,80.2,82.5,-120,-125,125,125,105,-110,-110,105,-150,155,165,165,395,Single-ply,SBD,2,Open
+Andrew Lamb,M,87.7,90,140,-147.5,150,150,70,-77.5,-77.5,70,135,142.5,152.5,152.5,372.5,Single-ply,SBD,1,Open
+Greg Molyneaux,M,99.7,100,140,160,180,180,120,130,140,140,150,170,190,190,510,Single-ply,SBD,1,Open
+Lee James,M,94.9,100,140,150,160,160,130,-135,-135,130,160,180,200,200,490,Single-ply,SBD,2,Open
+Rohan O'Reilly,M,91,100,130,137.5,145,145,90,97.5,-107.5,97.5,175,190,200,200,442.5,Single-ply,SBD,3,Open
+Jorra Singh,M,69.9,75,,,,,-85,85,-90,85,,,,,85,Single-ply,B,1,Open
+Nick Perks,M,81.2,82.5,,,,,130,135,-140,135,,,,,135,Single-ply,B,1,Open
+Steve Yates,M,76.7,82.5,,,,,95,100,-105,100,,,,,100,Single-ply,B,2,Open

@@ -1,37 +1,37 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Marcela Balogová,1974,48.3,SEMI Praha,85,70,117.5,272.5,F,52,Single-ply,SBD
-1,Iveta Peške,1974,54.8,Colbert Vítkovice,107.5,57.5,142.5,307.5,F,56,Single-ply,SBD
-1,Karel Ruso,1965,66.8,Sokol Nymburk,245,125,225,595,M,67.5,Single-ply,SBD
-2,Tomáš Šesták,1973,66.8,Viktorie Bohumín,205,117.5,220,542.5,M,67.5,Single-ply,SBD
-3,Jiří Furch,1975,65.3,Sokol Vranovice,170,135,185,490,M,67.5,Single-ply,SBD
-1,David Kenis,1977,73,TJ Loko Krnov,240,145,235,620,M,75,Single-ply,SBD
-2,Roman Krejčík,1962,75,KST FC-M Semily,195,112.5,280,587.5,M,75,Single-ply,SBD
-3,Petr Zámečník,1966,74.2,TJ Olympia Zlín,202.5,140,242.5,585,M,75,Single-ply,SBD
-4,Miloslav Kabrhel,1970,74.3,Bohemia Světlá n.S.,220,142.5,220,582.5,M,75,Single-ply,SBD
-5,Martin Turek,1972,74.1,Viktorie Bohumín,200,145,220,565,M,75,Single-ply,SBD
-6,Štěpán Hoza,1974,68.3,TJ Sokol Těškovice,207.5,135,220,562.5,M,75,Single-ply,SBD
-1,Stanislav Hoza,1956,82.5,TJ Sokol Těškovice,285,170,250,705,M,82.5,Single-ply,SBD
-2,Petr Krošlák,1967,82.5,Tn Hostinné,250,162.5,270,682.5,M,82.5,Single-ply,SBD
-3,Dušan Švarcbach,1975,80.9,FS TOTZI Klášterec,255,152.5,270,677.5,M,82.5,Single-ply,SBD
-1,Václav Ackermann,1973,86.3,SK PWL Vlčice,260,190,275,725,M,90,Single-ply,SBD
-2,Václav Jaremczuk,1963,90,TJ Sokol Těškovice,257.5,155,277.5,690,M,90,Single-ply,SBD
-3,Milan Greguš,1968,89.8,TJ Loko Krnov,265,177.5,245,687.5,M,90,Single-ply,SBD
-4,Ondřej Seidel,1975,89,Viktorie Bohumín,255,170,247.5,672.5,M,90,Single-ply,SBD
-5,Miroslav Pupík,1962,89.7,TJ SD Frýdek-Místek,200,150,270,620,M,90,Single-ply,SBD
-6,Jiří Stejskal,1977,88,Lovochemie Lovosice,215,140,255,610,M,90,Single-ply,SBD
-1,Martin Košnar,1978,99.3,Sokol Ústí n.L.,300,205,280,785,M,100,Single-ply,SBD
-2,Jaromi Kratochvíl,1978,95.9,SK PWL Vlčice,307.5,185,262.5,755,M,100,Single-ply,SBD
-3,Jiří Gryga,1968,96.5,TJ SD Frýdek-Místek,260,175,300,735,M,100,Single-ply,SBD
-4,Jan Pinc,1973,98.5,TJ Tn Lomnice n.L.,260,170,272.5,702.5,M,100,Single-ply,SBD
-5,Jaroslav Vinduška,1974,98,TJ Ateso Jablonec,250,200,250,700,M,100,Single-ply,SBD
-6,Martin Mořingl,1977,98.2,TJ Olympia Zlín,265,145,260,670,M,100,Single-ply,SBD
-1,Tomáš Šárik,1975,107.7,KST Jihlava,310,230,320,860,M,110,Single-ply,SBD
-2,Zbyněk Krejča,1974,109.1,Sokol Nymburk,320,220,275,815,M,110,Single-ply,SBD
-3,Patrik Chlupáček,1973,101.3,KST Jihlava,270,207.5,277.5,755,M,110,Single-ply,SBD
-4,Jan Soběslav,1974,106.9,Colbert Vítkovice,260,190,270,720,M,110,Single-ply,SBD
-1,Radek Juračka,1976,113.8,Power St.Město,300,215,320,835,M,125,Single-ply,SBD
-2,Jiří Effenberger,1975,110.2,Lovochemie Lovosice,295,162.5,300,757.5,M,125,Single-ply,SBD
-1,Miroslav Vacek,1967,126.3,Sokol Nymburk,305,195,300,800,M,125+,Single-ply,SBD
-2,Michal Létal,1975,125.1,SK Gita Podivín,280,180,290,750,M,125+,Single-ply,SBD
-3,Milan Mrázek,1958,129,TJ Sokol Lanžhot,260,185,267.5,712.5,M,125+,Single-ply,SBD
-4,Jiří Lacina,1969,125.1,LKM Plzeň,255,180,270,705,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Marcela Balogová,1974,48.3,SEMI Praha,85,70,117.5,272.5,F,52,Single-ply,SBD,Open
+1,Iveta Peške,1974,54.8,Colbert Vítkovice,107.5,57.5,142.5,307.5,F,56,Single-ply,SBD,Open
+1,Karel Ruso,1965,66.8,Sokol Nymburk,245,125,225,595,M,67.5,Single-ply,SBD,Open
+2,Tomáš Šesták,1973,66.8,Viktorie Bohumín,205,117.5,220,542.5,M,67.5,Single-ply,SBD,Open
+3,Jiří Furch,1975,65.3,Sokol Vranovice,170,135,185,490,M,67.5,Single-ply,SBD,Open
+1,David Kenis,1977,73,TJ Loko Krnov,240,145,235,620,M,75,Single-ply,SBD,Open
+2,Roman Krejčík,1962,75,KST FC-M Semily,195,112.5,280,587.5,M,75,Single-ply,SBD,Open
+3,Petr Zámečník,1966,74.2,TJ Olympia Zlín,202.5,140,242.5,585,M,75,Single-ply,SBD,Open
+4,Miloslav Kabrhel,1970,74.3,Bohemia Světlá n.S.,220,142.5,220,582.5,M,75,Single-ply,SBD,Open
+5,Martin Turek,1972,74.1,Viktorie Bohumín,200,145,220,565,M,75,Single-ply,SBD,Open
+6,Štěpán Hoza,1974,68.3,TJ Sokol Těškovice,207.5,135,220,562.5,M,75,Single-ply,SBD,Open
+1,Stanislav Hoza,1956,82.5,TJ Sokol Těškovice,285,170,250,705,M,82.5,Single-ply,SBD,Open
+2,Petr Krošlák,1967,82.5,Tn Hostinné,250,162.5,270,682.5,M,82.5,Single-ply,SBD,Open
+3,Dušan Švarcbach,1975,80.9,FS TOTZI Klášterec,255,152.5,270,677.5,M,82.5,Single-ply,SBD,Open
+1,Václav Ackermann,1973,86.3,SK PWL Vlčice,260,190,275,725,M,90,Single-ply,SBD,Open
+2,Václav Jaremczuk,1963,90,TJ Sokol Těškovice,257.5,155,277.5,690,M,90,Single-ply,SBD,Open
+3,Milan Greguš,1968,89.8,TJ Loko Krnov,265,177.5,245,687.5,M,90,Single-ply,SBD,Open
+4,Ondřej Seidel,1975,89,Viktorie Bohumín,255,170,247.5,672.5,M,90,Single-ply,SBD,Open
+5,Miroslav Pupík,1962,89.7,TJ SD Frýdek-Místek,200,150,270,620,M,90,Single-ply,SBD,Open
+6,Jiří Stejskal,1977,88,Lovochemie Lovosice,215,140,255,610,M,90,Single-ply,SBD,Open
+1,Martin Košnar,1978,99.3,Sokol Ústí n.L.,300,205,280,785,M,100,Single-ply,SBD,Open
+2,Jaromi Kratochvíl,1978,95.9,SK PWL Vlčice,307.5,185,262.5,755,M,100,Single-ply,SBD,Open
+3,Jiří Gryga,1968,96.5,TJ SD Frýdek-Místek,260,175,300,735,M,100,Single-ply,SBD,Open
+4,Jan Pinc,1973,98.5,TJ Tn Lomnice n.L.,260,170,272.5,702.5,M,100,Single-ply,SBD,Open
+5,Jaroslav Vinduška,1974,98,TJ Ateso Jablonec,250,200,250,700,M,100,Single-ply,SBD,Open
+6,Martin Mořingl,1977,98.2,TJ Olympia Zlín,265,145,260,670,M,100,Single-ply,SBD,Open
+1,Tomáš Šárik,1975,107.7,KST Jihlava,310,230,320,860,M,110,Single-ply,SBD,Open
+2,Zbyněk Krejča,1974,109.1,Sokol Nymburk,320,220,275,815,M,110,Single-ply,SBD,Open
+3,Patrik Chlupáček,1973,101.3,KST Jihlava,270,207.5,277.5,755,M,110,Single-ply,SBD,Open
+4,Jan Soběslav,1974,106.9,Colbert Vítkovice,260,190,270,720,M,110,Single-ply,SBD,Open
+1,Radek Juračka,1976,113.8,Power St.Město,300,215,320,835,M,125,Single-ply,SBD,Open
+2,Jiří Effenberger,1975,110.2,Lovochemie Lovosice,295,162.5,300,757.5,M,125,Single-ply,SBD,Open
+1,Miroslav Vacek,1967,126.3,Sokol Nymburk,305,195,300,800,M,125+,Single-ply,SBD,Open
+2,Michal Létal,1975,125.1,SK Gita Podivín,280,180,290,750,M,125+,Single-ply,SBD,Open
+3,Milan Mrázek,1958,129,TJ Sokol Lanžhot,260,185,267.5,712.5,M,125+,Single-ply,SBD,Open
+4,Jiří Lacina,1969,125.1,LKM Plzeň,255,180,270,705,M,125+,Single-ply,SBD,Open

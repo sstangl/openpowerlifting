@@ -1,11 +1,11 @@
-Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Valerie Silver,1949,F,60.7,55,60,65,65,40,-45,-45,40,95,105,-112.5,105,210,Raw,63,SBD
-1,Julia Wood,1991,F,67.9,-90,95,100,100,90,95,-102.5,95,90,100,-107.5,100,295,Single-ply,72,SBD
-1,Jordan Tom,1994,M,64.8,200,210,220,220,130,135,140,140,205,217.5,227.5,227.5,587.5,Single-ply,66,SBD
-1,Keijo Stenholm,1964,M,81.4,155,165,-170,165,125,-132.5,-132.5,125,160,-180,,160,450,Single-ply,83,SBD
-1,Abe Walton,1991,M,91.4,180,192.5,200,200,145,157.5,162.5,162.5,225,242.5,250,250,612.5,Single-ply,93,SBD
-2,Josh James,1992,M,91.5,195,202.5,210,210,-130,130,137.5,137.5,220,225,,225,572.5,Single-ply,93,SBD
-3,Kris Thiesfield,1991,M,92.1,180,-190,-195,180,125,132.5,-137.5,132.5,210,230,252.5,252.5,565,Single-ply,93,SBD
-1,Andrew Wai Fung Chung,1997,M,94,210,217.5,227.5,227.5,-130,-130,130,130,250,265,270,270,627.5,Single-ply,105,SBD
-2,Nick Maudsley,1997,M,95.1,185,202.5,215,215,110,117.5,125,125,205,225,-232.5,225,565,Single-ply,105,SBD
-DQ,Scott Meiklejohn,1991,M,81.3,,,,,140,145,150,150,,,,,,Single-ply,83,SBD
+Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Valerie Silver,1949,F,60.7,55,60,65,65,40,-45,-45,40,95,105,-112.5,105,210,Raw,63,SBD,Open
+1,Julia Wood,1991,F,67.9,-90,95,100,100,90,95,-102.5,95,90,100,-107.5,100,295,Single-ply,72,SBD,Open
+1,Jordan Tom,1994,M,64.8,200,210,220,220,130,135,140,140,205,217.5,227.5,227.5,587.5,Single-ply,66,SBD,Open
+1,Keijo Stenholm,1964,M,81.4,155,165,-170,165,125,-132.5,-132.5,125,160,-180,,160,450,Single-ply,83,SBD,Open
+1,Abe Walton,1991,M,91.4,180,192.5,200,200,145,157.5,162.5,162.5,225,242.5,250,250,612.5,Single-ply,93,SBD,Open
+2,Josh James,1992,M,91.5,195,202.5,210,210,-130,130,137.5,137.5,220,225,,225,572.5,Single-ply,93,SBD,Open
+3,Kris Thiesfield,1991,M,92.1,180,-190,-195,180,125,132.5,-137.5,132.5,210,230,252.5,252.5,565,Single-ply,93,SBD,Open
+1,Andrew Wai Fung Chung,1997,M,94,210,217.5,227.5,227.5,-130,-130,130,130,250,265,270,270,627.5,Single-ply,105,SBD,Open
+2,Nick Maudsley,1997,M,95.1,185,202.5,215,215,110,117.5,125,125,205,225,-232.5,225,565,Single-ply,105,SBD,Open
+DQ,Scott Meiklejohn,1991,M,81.3,,,,,140,145,150,150,,,,,,Single-ply,83,SBD,Open

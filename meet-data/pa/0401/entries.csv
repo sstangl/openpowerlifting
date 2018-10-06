@@ -1,10 +1,10 @@
-Place,Name,Age,Sex,Event,Equipment,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,Bernadette Fleming,,F,SBD,Single-ply,67.5,110,57.5,142.5,310
-2,Yuval Bar,,M,SBD,Single-ply,82.5,150,185,200,535
-1,Sean Trotter,,M,SBD,Single-ply,82.5,200,120,230,550
-DQ,Mick Taranto,,M,SBD,Single-ply,90,230,,,
-1,Daniel James Lacny,,M,SBD,Single-ply,100,135,80,145,360
-1,Rodney Clark,,M,SBD,Single-ply,110,100,150,150,400
-1,Jason Spear,,M,SBD,Single-ply,125,185,100,227.5,512.5
-2,Nick Olden,,M,SBD,Single-ply,125,25,172.5,75,272.5
-1,David Taranto,,M,SBD,Single-ply,125+,240,120,220,580
+Place,Name,Age,Sex,Event,Equipment,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division
+1,Bernadette Fleming,,F,SBD,Single-ply,67.5,110,57.5,142.5,310,Open
+2,Yuval Bar,,M,SBD,Single-ply,82.5,150,185,200,535,Open
+1,Sean Trotter,,M,SBD,Single-ply,82.5,200,120,230,550,Open
+DQ,Mick Taranto,,M,SBD,Single-ply,90,230,,,,Open
+1,Daniel James Lacny,,M,SBD,Single-ply,100,135,80,145,360,Open
+1,Rodney Clark,,M,SBD,Single-ply,110,100,150,150,400,Open
+1,Jason Spear,,M,SBD,Single-ply,125,185,100,227.5,512.5,Open
+2,Nick Olden,,M,SBD,Single-ply,125,25,172.5,75,272.5,Open
+1,David Taranto,,M,SBD,Single-ply,125+,240,120,220,580,Open

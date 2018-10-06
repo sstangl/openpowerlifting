@@ -1,28 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,Jiří Dvořák,1969,79,TJ Slavoj Pacov,182.5,107.5,210,500,Single-ply,SBD,M
-1,Martin Mička,1974,78.6,TJ Slavoj Pacov,190,120,220,530,Single-ply,SBD,M
-1,Miroslav Buzek,1972,81.4,TJ Slavoj Pacov,165,115,220,500,Single-ply,SBD,M
-1,Josef Mička,1949,99.9,TJ Slavoj Pacov,240,170,270,680,Single-ply,SBD,M
-2,Jiří Zeman,1944,97.8,TJ Loko Krnov B,220,145,225,590,Single-ply,SBD,M
-2,Václav Stuchlík,1950,82,TJ Loko Krnov B,192.5,100,207.5,500,Single-ply,SBD,M
-2,Josef Synek,1966,83.4,TJ Loko Krnov B,190,122.5,210,522.5,Single-ply,SBD,M
-2,Petr Ilík,1969,90.1,TJ Loko Krnov B,200,135,225,560,Single-ply,SBD,M
-3,Martin Bakus,1975,69.6,Trans Mirotice,162.5,105,192.5,460,Single-ply,SBD,M
-3,Jiří Krahulec,1966,81.5,Trans Mirotice,187.5,107.5,215,510,Single-ply,SBD,M
-3,Václav Kouba,1971,97.5,Trans Mirotice,215,137.5,225,577.5,Single-ply,SBD,M
-3,Stanislav Pichlik,1974,61.9,Trans Mirotice,130,85,170,385,Single-ply,SBD,M
-3,Jiří Vohryzka,1963,101.9,Trans Mirotice,215,135,210,560,Single-ply,SBD,M
-4,Ivo Brázda,1971,72.6,Sokol Rosice,150,95,200,445,Single-ply,SBD,M
-4,Petr Lahoda,1970,89.7,Sokol Rosice,200,150,220,570,Single-ply,SBD,M
-4,Tomáš Kostelníček,1971,96.9,Sokol Rosice,172.5,127.5,215,515,Single-ply,SBD,M
-4,Zdeněk Sklenář,1974,74.7,Sokol Rosice,160,125,205,490,Single-ply,SBD,M
-4,Jiri Kudelka,1974,81.5,Sokol Rosice,155,125,180,460,Single-ply,SBD,M
-5,Michal Krček,1978,80.5,TJ Olympia Zlin B,145,110,165,420,Single-ply,SBD,M
-5,Milan Kalbac,1976,89.9,TJ Olympia Zlin B,180,110,250,540,Single-ply,SBD,M
-5,Zdenek Balajka,1978,83.8,TJ Olympia Zlin B,150,90,180,420,Single-ply,SBD,M
-5,Michal Sevecek,1978,83.8,TJ Olympia Zlin B,150,105,190,445,Single-ply,SBD,M
-5,Roman Večeřa,1978,106.1,TJ Olympia Zlin B,140,107.5,230,477.5,Single-ply,SBD,M
-6,Tomas Zoubek,1978,70.3,KaST Trebic,110,70,150,330,Single-ply,SBD,M
-6,Milan Rejtar,1976,64.2,KaST Trebic,122.5,87.5,160,370,Single-ply,SBD,M
-6,Tomas Krcal,1974,82.3,KaST Trebic,100,80,150,330,Single-ply,SBD,M
-6,Petr Axman,1978,59.8,KaST Trebic,95,65,120,280,Single-ply,SBD,M
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Jiří Dvořák,1969,79,TJ Slavoj Pacov,182.5,107.5,210,500,Single-ply,SBD,M,Open
+1,Martin Mička,1974,78.6,TJ Slavoj Pacov,190,120,220,530,Single-ply,SBD,M,Open
+1,Miroslav Buzek,1972,81.4,TJ Slavoj Pacov,165,115,220,500,Single-ply,SBD,M,Open
+1,Josef Mička,1949,99.9,TJ Slavoj Pacov,240,170,270,680,Single-ply,SBD,M,Open
+2,Jiří Zeman,1944,97.8,TJ Loko Krnov B,220,145,225,590,Single-ply,SBD,M,Open
+2,Václav Stuchlík,1950,82,TJ Loko Krnov B,192.5,100,207.5,500,Single-ply,SBD,M,Open
+2,Josef Synek,1966,83.4,TJ Loko Krnov B,190,122.5,210,522.5,Single-ply,SBD,M,Open
+2,Petr Ilík,1969,90.1,TJ Loko Krnov B,200,135,225,560,Single-ply,SBD,M,Open
+3,Martin Bakus,1975,69.6,Trans Mirotice,162.5,105,192.5,460,Single-ply,SBD,M,Open
+3,Jiří Krahulec,1966,81.5,Trans Mirotice,187.5,107.5,215,510,Single-ply,SBD,M,Open
+3,Václav Kouba,1971,97.5,Trans Mirotice,215,137.5,225,577.5,Single-ply,SBD,M,Open
+3,Stanislav Pichlik,1974,61.9,Trans Mirotice,130,85,170,385,Single-ply,SBD,M,Open
+3,Jiří Vohryzka,1963,101.9,Trans Mirotice,215,135,210,560,Single-ply,SBD,M,Open
+4,Ivo Brázda,1971,72.6,Sokol Rosice,150,95,200,445,Single-ply,SBD,M,Open
+4,Petr Lahoda,1970,89.7,Sokol Rosice,200,150,220,570,Single-ply,SBD,M,Open
+4,Tomáš Kostelníček,1971,96.9,Sokol Rosice,172.5,127.5,215,515,Single-ply,SBD,M,Open
+4,Zdeněk Sklenář,1974,74.7,Sokol Rosice,160,125,205,490,Single-ply,SBD,M,Open
+4,Jiri Kudelka,1974,81.5,Sokol Rosice,155,125,180,460,Single-ply,SBD,M,Open
+5,Michal Krček,1978,80.5,TJ Olympia Zlin B,145,110,165,420,Single-ply,SBD,M,Open
+5,Milan Kalbac,1976,89.9,TJ Olympia Zlin B,180,110,250,540,Single-ply,SBD,M,Open
+5,Zdenek Balajka,1978,83.8,TJ Olympia Zlin B,150,90,180,420,Single-ply,SBD,M,Open
+5,Michal Sevecek,1978,83.8,TJ Olympia Zlin B,150,105,190,445,Single-ply,SBD,M,Open
+5,Roman Večeřa,1978,106.1,TJ Olympia Zlin B,140,107.5,230,477.5,Single-ply,SBD,M,Open
+6,Tomas Zoubek,1978,70.3,KaST Trebic,110,70,150,330,Single-ply,SBD,M,Open
+6,Milan Rejtar,1976,64.2,KaST Trebic,122.5,87.5,160,370,Single-ply,SBD,M,Open
+6,Tomas Krcal,1974,82.3,KaST Trebic,100,80,150,330,Single-ply,SBD,M,Open
+6,Petr Axman,1978,59.8,KaST Trebic,95,65,120,280,Single-ply,SBD,M,Open

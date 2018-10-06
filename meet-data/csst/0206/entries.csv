@@ -1,31 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Vendula Hrubá,1983,54.2,B.Sokolov,90,50,102.5,242.5,F,56,Single-ply,SBD
-1,Jitka Novotná,1975,58.6,TJ Slavoj Pacov,130,75,125,330,F,60,Single-ply,SBD
-1,Petra Stehlíková,1966,70.7,Sokol Nymburk,150,115,175,440,F,75,Single-ply,SBD
-1,Miroslav Hubka,1968,58.9,TJ TZ Rakovník,140,120.5,150,410,M,60,Single-ply,SBD
-DQ,Dušan Šiška,1983,59.2,Sokol Nymburk,100,,,,M,60,Single-ply,SBD
-1,Karel Ruso,1965,67.3,Sokol Nymburk,230,125,205,560,M,67.5,Single-ply,SBD
-2,Jan Weiss,1972,66.6,TJ AŠ Ml.Boleslav,195,135,210,540,M,67.5,Single-ply,SBD
-3,Radek Pustaj,1971,66.4,TJ Turnov,175,132.5,210,517.5,M,67.5,Single-ply,SBD
-1,Vladimír Medek,1962,74.5,TJ Sp Rokytnice,212.5,142.5,240,595,M,75,Single-ply,SBD
-2,Roman Krejčík,1962,74.7,Sokol Semily,200,105,280,585,M,75,Single-ply,SBD
-3,Petr Hrubý,1952,73.9,SK V&V Cheb,220,145,210,575,M,75,Single-ply,SBD
-4,Jan Hunčovský,1962,74.7,Sokol Nymburk,200,127.5,215,542.5,M,75,Single-ply,SBD
-DQ,Pavel Schauer,1951,73.8,TJ Spartak Chodov,200,,,,M,75,Single-ply,SBD
-1,Dušan Švarcbach,1975,78.7,FS TOTZI Klášterec,235,160,267.5,662.5,M,82.5,Single-ply,SBD
-2,Karel Rada,1973,82.1,TJ FC Staňkov,230,140,230,600,M,82.5,Single-ply,SBD
-1,Václav Ackermann,1973,85.9,SK PWL Vlčice,235,177.5,275,687.5,M,90,Single-ply,SBD
-2,Miroslav Dušák,1975,87.9,TJ Tn Lomnice n.L.,230,130,252.5,612.5,M,90,Single-ply,SBD
-3,Pavel Košnar,1981,83.6,TJ Ji Chřibská,230,135,230,595,M,90,Single-ply,SBD
-4,Petr Krákora,1973,89.3,TJ Dobřany,195,125,220,540,M,90,Single-ply,SBD
-1,Jaromír Kratochvíl,1978,94.4,SK PWL Vlčice,300,177.5,250,727.5,M,100,Single-ply,SBD
-2,Jan Pinc,1973,99,TJ Tn Lomnice n.L.,260,160,290,710,M,100,Single-ply,SBD
-1,Zbyněk Krejča,1974,109.7,Sokol Nymburk,300,210,285,795,M,110,Single-ply,SBD
-2,Martin Košnar,1978,104.4,Sokol Ústí n.L.,285,195,275,755,M,110,Single-ply,SBD
-3,Zoltán Kanát,1952,103.5,TJ Spartak Chodov,275,185,275,735,M,110,Single-ply,SBD
-4,Marcel Jansa,1969,105.7,FK Hostinné,262.5,180,270,712.5,M,110,Single-ply,SBD
-1,Radek Juračka,1976,114,Staré Město,300,210,330,840,M,125,Single-ply,SBD
-2,Miroslav Vacek,1967,121.4,Sokol Nymburk,300,175,295,770,M,125,Single-ply,SBD
-3,Jiří Effenberger,1975,110.9,Lovochemie Lovosice,270,142,272.5,684.5,M,125,Single-ply,SBD
-1,Josef Vohralík,1976,128.3,Sokol Nymburk,250,170,260,680,M,125+,Single-ply,SBD
-DQ,Jiří Lacina,1969,125.1,SK LKM Plzen,,,,,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Vendula Hrubá,1983,54.2,B.Sokolov,90,50,102.5,242.5,F,56,Single-ply,SBD,Open
+1,Jitka Novotná,1975,58.6,TJ Slavoj Pacov,130,75,125,330,F,60,Single-ply,SBD,Open
+1,Petra Stehlíková,1966,70.7,Sokol Nymburk,150,115,175,440,F,75,Single-ply,SBD,Open
+1,Miroslav Hubka,1968,58.9,TJ TZ Rakovník,140,120.5,150,410,M,60,Single-ply,SBD,Open
+DQ,Dušan Šiška,1983,59.2,Sokol Nymburk,100,,,,M,60,Single-ply,SBD,Open
+1,Karel Ruso,1965,67.3,Sokol Nymburk,230,125,205,560,M,67.5,Single-ply,SBD,Open
+2,Jan Weiss,1972,66.6,TJ AŠ Ml.Boleslav,195,135,210,540,M,67.5,Single-ply,SBD,Open
+3,Radek Pustaj,1971,66.4,TJ Turnov,175,132.5,210,517.5,M,67.5,Single-ply,SBD,Open
+1,Vladimír Medek,1962,74.5,TJ Sp Rokytnice,212.5,142.5,240,595,M,75,Single-ply,SBD,Open
+2,Roman Krejčík,1962,74.7,Sokol Semily,200,105,280,585,M,75,Single-ply,SBD,Open
+3,Petr Hrubý,1952,73.9,SK V&V Cheb,220,145,210,575,M,75,Single-ply,SBD,Open
+4,Jan Hunčovský,1962,74.7,Sokol Nymburk,200,127.5,215,542.5,M,75,Single-ply,SBD,Open
+DQ,Pavel Schauer,1951,73.8,TJ Spartak Chodov,200,,,,M,75,Single-ply,SBD,Open
+1,Dušan Švarcbach,1975,78.7,FS TOTZI Klášterec,235,160,267.5,662.5,M,82.5,Single-ply,SBD,Open
+2,Karel Rada,1973,82.1,TJ FC Staňkov,230,140,230,600,M,82.5,Single-ply,SBD,Open
+1,Václav Ackermann,1973,85.9,SK PWL Vlčice,235,177.5,275,687.5,M,90,Single-ply,SBD,Open
+2,Miroslav Dušák,1975,87.9,TJ Tn Lomnice n.L.,230,130,252.5,612.5,M,90,Single-ply,SBD,Open
+3,Pavel Košnar,1981,83.6,TJ Ji Chřibská,230,135,230,595,M,90,Single-ply,SBD,Open
+4,Petr Krákora,1973,89.3,TJ Dobřany,195,125,220,540,M,90,Single-ply,SBD,Open
+1,Jaromír Kratochvíl,1978,94.4,SK PWL Vlčice,300,177.5,250,727.5,M,100,Single-ply,SBD,Open
+2,Jan Pinc,1973,99,TJ Tn Lomnice n.L.,260,160,290,710,M,100,Single-ply,SBD,Open
+1,Zbyněk Krejča,1974,109.7,Sokol Nymburk,300,210,285,795,M,110,Single-ply,SBD,Open
+2,Martin Košnar,1978,104.4,Sokol Ústí n.L.,285,195,275,755,M,110,Single-ply,SBD,Open
+3,Zoltán Kanát,1952,103.5,TJ Spartak Chodov,275,185,275,735,M,110,Single-ply,SBD,Open
+4,Marcel Jansa,1969,105.7,FK Hostinné,262.5,180,270,712.5,M,110,Single-ply,SBD,Open
+1,Radek Juračka,1976,114,Staré Město,300,210,330,840,M,125,Single-ply,SBD,Open
+2,Miroslav Vacek,1967,121.4,Sokol Nymburk,300,175,295,770,M,125,Single-ply,SBD,Open
+3,Jiří Effenberger,1975,110.9,Lovochemie Lovosice,270,142,272.5,684.5,M,125,Single-ply,SBD,Open
+1,Josef Vohralík,1976,128.3,Sokol Nymburk,250,170,260,680,M,125+,Single-ply,SBD,Open
+DQ,Jiří Lacina,1969,125.1,SK LKM Plzen,,,,,M,125+,Single-ply,SBD,Open

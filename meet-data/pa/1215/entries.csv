@@ -1,12 +1,12 @@
-Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
-Robin Mihrshahi,M,73.2,74,165,170,175,175,122.5,127.5,132.5,132.5,192.5,205,215,215,522.5,Raw,SBD,1
-Ben Langton,M,82.9,83,165,175,180,180,117.5,122.5,-127.5,122.5,210,220,-230,220,522.5,Raw,SBD,1
-James Nuhn,M,81.6,83,175,185,-190,185,80,-85,,80,190,200,210,210,475,Raw,SBD,2
-Robert Barrett,M,82.7,83,160,-165,165,165,90,95,97.5,97.5,190,200,210,210,472.5,Raw,SBD,3
-Martin Reynolds,M,88.6,93,-155,155,162.5,162.5,125,130,-137.5,130,200,210,-215,210,502.5,Raw,SBD,1
-Daniel Klaer,M,102.5,105,175,185,195,195,105,110,-115,110,230,240,-250,240,545,Raw,SBD,1
-Lex Dourian,M,95.9,105,145,152.5,-160,152.5,117.5,122.5,-127.5,122.5,170,182.5,190,190,465,Raw,SBD,2
-Kym McIntosh,M,113.5,120,180,-195,-195,180,130,140,-145,140,210,225,-230,225,545,Raw,SBD,1
-Neil Fleming,M,118.2,120,100,125,,125,75,92.5,,92.5,160,180,-200,180,397.5,Raw,SBD,2
-Derek Mason,M,63.3,66,,,,,77.5,-82.5,82.5,82.5,,,,,82.5,Raw,B,1
-Ethan Korolyov,M,82.3,83,,,,,-115,115,-120,115,,,,,115,Raw,B,1
+Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place,Division
+Robin Mihrshahi,M,73.2,74,165,170,175,175,122.5,127.5,132.5,132.5,192.5,205,215,215,522.5,Raw,SBD,1,Open
+Ben Langton,M,82.9,83,165,175,180,180,117.5,122.5,-127.5,122.5,210,220,-230,220,522.5,Raw,SBD,1,Open
+James Nuhn,M,81.6,83,175,185,-190,185,80,-85,,80,190,200,210,210,475,Raw,SBD,2,Open
+Robert Barrett,M,82.7,83,160,-165,165,165,90,95,97.5,97.5,190,200,210,210,472.5,Raw,SBD,3,Open
+Martin Reynolds,M,88.6,93,-155,155,162.5,162.5,125,130,-137.5,130,200,210,-215,210,502.5,Raw,SBD,1,Open
+Daniel Klaer,M,102.5,105,175,185,195,195,105,110,-115,110,230,240,-250,240,545,Raw,SBD,1,Open
+Lex Dourian,M,95.9,105,145,152.5,-160,152.5,117.5,122.5,-127.5,122.5,170,182.5,190,190,465,Raw,SBD,2,Open
+Kym McIntosh,M,113.5,120,180,-195,-195,180,130,140,-145,140,210,225,-230,225,545,Raw,SBD,1,Open
+Neil Fleming,M,118.2,120,100,125,,125,75,92.5,,92.5,160,180,-200,180,397.5,Raw,SBD,2,Open
+Derek Mason,M,63.3,66,,,,,77.5,-82.5,82.5,82.5,,,,,82.5,Raw,B,1,Open
+Ethan Korolyov,M,82.3,83,,,,,-115,115,-120,115,,,,,115,Raw,B,1,Open

@@ -1,13 +1,13 @@
-Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment
-Kristie Amadio,F,60,59.3,85,90,100,100,-50,50,-55,50,100,110,120,120,270,1,SBD,Single-ply
-Julie Marshall,F,56,53.85,-95,-95,95,95,52.5,55,57.5,57.5,100,112.5,-117.5,112.5,265,1,SBD,Single-ply
-Stephen How Lum,M,75,73.4,-175,175,182.5,182.5,102.5,105,110,110,-202.5,207.5,212.5,212.5,505,2,SBD,Single-ply
-Szabolcs Horvath,M,75,74.35,200,210,217.5,217.5,-117.5,117.5,130,130,210,227.5,-232.5,227.5,575,1,SBD,Single-ply
-Andrew Lulham,M,82.5,81.9,205,215,220,220,127.5,132.5,137.5,137.5,230,-242.5,-260,230,587.5,1,SBD,Single-ply
-Luke Mackinlay,M,90,89.45,-200,200,-210,200,150,160,-170.5,160,230,240,-250,240,600,1,SBD,Single-ply
-Peter Thomson,M,100,93.1,180,190,-200,190,110,-115,115,115,200,-215,-215,200,505,1,SBD,Single-ply
-Sam Lane,M,125,117.5,80,90,100,100,50,60,-65,60,130,140,150,150,310,1,SBD,Single-ply
-Chris Connors,M,56,55.05,,,,,80,92.5,-100,92.5,,,,,92.5,1,B,Single-ply
-Kevin Rogers,M,67.5,67.3,,,,,90,-102.5,-102.5,90,,,,,90,1,B,Single-ply
-Peter Pierre,M,125,117.4,,,,,150,-170,-175,150,,,,,150,2,B,Single-ply
-Lee Munt,M,125,122.7,,,,,160,170,-175,170,,,,,170,1,B,Single-ply
+Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Division
+Kristie Amadio,F,60,59.3,85,90,100,100,-50,50,-55,50,100,110,120,120,270,1,SBD,Single-ply,Open
+Julie Marshall,F,56,53.85,-95,-95,95,95,52.5,55,57.5,57.5,100,112.5,-117.5,112.5,265,1,SBD,Single-ply,Open
+Stephen How Lum,M,75,73.4,-175,175,182.5,182.5,102.5,105,110,110,-202.5,207.5,212.5,212.5,505,2,SBD,Single-ply,Open
+Szabolcs Horvath,M,75,74.35,200,210,217.5,217.5,-117.5,117.5,130,130,210,227.5,-232.5,227.5,575,1,SBD,Single-ply,Open
+Andrew Lulham,M,82.5,81.9,205,215,220,220,127.5,132.5,137.5,137.5,230,-242.5,-260,230,587.5,1,SBD,Single-ply,Open
+Luke Mackinlay,M,90,89.45,-200,200,-210,200,150,160,-170.5,160,230,240,-250,240,600,1,SBD,Single-ply,Open
+Peter Thomson,M,100,93.1,180,190,-200,190,110,-115,115,115,200,-215,-215,200,505,1,SBD,Single-ply,Open
+Sam Lane,M,125,117.5,80,90,100,100,50,60,-65,60,130,140,150,150,310,1,SBD,Single-ply,Open
+Chris Connors,M,56,55.05,,,,,80,92.5,-100,92.5,,,,,92.5,1,B,Single-ply,Open
+Kevin Rogers,M,67.5,67.3,,,,,90,-102.5,-102.5,90,,,,,90,1,B,Single-ply,Open
+Peter Pierre,M,125,117.4,,,,,150,-170,-175,150,,,,,150,2,B,Single-ply,Open
+Lee Munt,M,125,122.7,,,,,160,170,-175,170,,,,,170,1,B,Single-ply,Open

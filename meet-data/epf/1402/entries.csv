@@ -1,24 +1,24 @@
-Place,Name,BirthYear,Sex,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment
-1,Amanda Planas Domínguez,1977,F,Spain,72,67.36,,,,,65,70,75,75,,,,,75,B,Raw
-2,Yamilet Zúñiga Muñoz,1979,F,Spain,47,45.83,,,,,45,50,52.5,52.5,,,,,52.5,B,Raw
-3,Martín Tomás Raquel,1972,F,Spain,63,61.12,,,,,45,50,52.5,52.5,,,,,52.5,B,Raw
-4,Eva Bravo García,1971,F,Spain,57,56.65,,,,,40,-42.5,-42.5,40,,,,,40,B,Raw
-1,Noel Melánie,1992,F,France,63,59.57,,,,,70,75,-80,75,,,,,75,B,Single-ply
-2,Pillot Ludivine,1981,F,France,57,56.15,,,,,70,-75,-75,70,,,,,70,B,Single-ply
-3,Cristina Lietor Martínez,1999,F,Spain,52,50.48,,,,,35,40,-47.5,40,,,,,40,B,Single-ply
-1,Poinson Adrien,1991,M,France,74,73.29,,,,,235,245,252.5,252.5,,,,,252.5,B,Single-ply
-2,Luis M. Jiménez Villalba,1976,M,Spain,66,64.42,,,,,200,210,-217.5,210,,,,,210,B,Single-ply
-3,Jaime Mariñosa Iglesias,1975,M,France,74,72.31,,,,,160,-170,170,170,,,,,170,B,Single-ply
-DQ,Grenier Allan,1990,M,France,105,100.51,,,,,-275,-282.5,-302.5,,,,,,,B,Single-ply
-1,Picot-Gueraud Romain,1987,M,France,83,82.95,300,-315,315,315,207.5,212.5,,212.5,275,300,-315,300,827.5,SBD,Single-ply
-2,Robert A. Ponce Ortiz,1987,M,Spain,93,88.9,-255,255,-272.5,255,140,150,,150,255,272.5,280,280,685,SBD,Single-ply
-3,Juan Jose Gonzalez Pastor,1977,M,Spain,66,65.6,145,162.5,,162.5,125,135,,135,175,195,205,205,502.5,SBD,Single-ply
-1,Rosa Vázquez Marfil,1979,F,Spain,47,45.92,92.5,97.5,-102.5,97.5,52.5,57.5,-60,57.5,100,105,-107.5,105,260,SBD,Raw
-2,Amanda Planas Domínguez,1977,F,Spain,72,66.78,-100,-102.5,102.5,102.5,70,75,77.5,77.5,150,160,-165,160,340,SBD,Raw
-3,Marina Cornwall,1954,F,UK,47,45.34,72.5,77.5,-82.5,77.5,45,47.5,-50,47.5,110,120,125,125,250,SBD,Raw
-4,Yamilet Zúñiga Muñoz,1979,F,Spain,47,45.03,75,82.5,-90,82.5,45,52.5,-55,52.5,85,92.5,102.5,102.5,237.5,SBD,Raw
-DQ,Natalia Pérez Garralón,1992,F,Spain,84+,99.09,90,100,105,105,-70,-70,-70,,135,142.5,-150,142.5,,SBD,Raw
-1,Pinheiro Gil,1987,M,France,93,92.36,250,260,265,265,175,180,-185,180,300,315,-325,315,760,SBD,Raw
-2,Karkusashvili Rubeni,1979,M,Spain,120,118.42,240,260,270,270,180,190,195,195,280,290,300,300,765,SBD,Raw
-3,Jorge Pérez Córdoba,1991,M,Spain,74,73.25,200,215,220,220,120,125,130,130,240,255,,255,605,SBD,Raw
-4,Alberto Rodríguez Pérez,1983,M,Spain,83,82.13,-225,225,-245,225,-137.5,137.5,145,145,250,265,280,280,650,SBD,Raw
+Place,Name,BirthYear,Sex,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Division
+1,Amanda Planas Domínguez,1977,F,Spain,72,67.36,,,,,65,70,75,75,,,,,75,B,Raw,Open
+2,Yamilet Zúñiga Muñoz,1979,F,Spain,47,45.83,,,,,45,50,52.5,52.5,,,,,52.5,B,Raw,Open
+3,Martín Tomás Raquel,1972,F,Spain,63,61.12,,,,,45,50,52.5,52.5,,,,,52.5,B,Raw,Open
+4,Eva Bravo García,1971,F,Spain,57,56.65,,,,,40,-42.5,-42.5,40,,,,,40,B,Raw,Open
+1,Noel Melánie,1992,F,France,63,59.57,,,,,70,75,-80,75,,,,,75,B,Single-ply,Open
+2,Pillot Ludivine,1981,F,France,57,56.15,,,,,70,-75,-75,70,,,,,70,B,Single-ply,Open
+3,Cristina Lietor Martínez,1999,F,Spain,52,50.48,,,,,35,40,-47.5,40,,,,,40,B,Single-ply,Open
+1,Poinson Adrien,1991,M,France,74,73.29,,,,,235,245,252.5,252.5,,,,,252.5,B,Single-ply,Open
+2,Luis M. Jiménez Villalba,1976,M,Spain,66,64.42,,,,,200,210,-217.5,210,,,,,210,B,Single-ply,Open
+3,Jaime Mariñosa Iglesias,1975,M,France,74,72.31,,,,,160,-170,170,170,,,,,170,B,Single-ply,Open
+DQ,Grenier Allan,1990,M,France,105,100.51,,,,,-275,-282.5,-302.5,,,,,,,B,Single-ply,Open
+1,Picot-Gueraud Romain,1987,M,France,83,82.95,300,-315,315,315,207.5,212.5,,212.5,275,300,-315,300,827.5,SBD,Single-ply,Open
+2,Robert A. Ponce Ortiz,1987,M,Spain,93,88.9,-255,255,-272.5,255,140,150,,150,255,272.5,280,280,685,SBD,Single-ply,Open
+3,Juan Jose Gonzalez Pastor,1977,M,Spain,66,65.6,145,162.5,,162.5,125,135,,135,175,195,205,205,502.5,SBD,Single-ply,Open
+1,Rosa Vázquez Marfil,1979,F,Spain,47,45.92,92.5,97.5,-102.5,97.5,52.5,57.5,-60,57.5,100,105,-107.5,105,260,SBD,Raw,Open
+2,Amanda Planas Domínguez,1977,F,Spain,72,66.78,-100,-102.5,102.5,102.5,70,75,77.5,77.5,150,160,-165,160,340,SBD,Raw,Open
+3,Marina Cornwall,1954,F,UK,47,45.34,72.5,77.5,-82.5,77.5,45,47.5,-50,47.5,110,120,125,125,250,SBD,Raw,Open
+4,Yamilet Zúñiga Muñoz,1979,F,Spain,47,45.03,75,82.5,-90,82.5,45,52.5,-55,52.5,85,92.5,102.5,102.5,237.5,SBD,Raw,Open
+DQ,Natalia Pérez Garralón,1992,F,Spain,84+,99.09,90,100,105,105,-70,-70,-70,,135,142.5,-150,142.5,,SBD,Raw,Open
+1,Pinheiro Gil,1987,M,France,93,92.36,250,260,265,265,175,180,-185,180,300,315,-325,315,760,SBD,Raw,Open
+2,Karkusashvili Rubeni,1979,M,Spain,120,118.42,240,260,270,270,180,190,195,195,280,290,300,300,765,SBD,Raw,Open
+3,Jorge Pérez Córdoba,1991,M,Spain,74,73.25,200,215,220,220,120,125,130,130,240,255,,255,605,SBD,Raw,Open
+4,Alberto Rodríguez Pérez,1983,M,Spain,83,82.13,-225,225,-245,225,-137.5,137.5,145,145,250,265,280,280,650,SBD,Raw,Open

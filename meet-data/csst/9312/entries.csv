@@ -1,28 +1,28 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Adina Hyková,1943,51.3,TJ Spartak Chodov,95,47.5,125,267.5,F,52,Single-ply,SBD
-1,Jaroslav Kozák,1947,55.7,TJ Olympia Zlín,125,75,155,355,M,56,Single-ply,SBD
-1,Ladislav Rolný,1948,65.7,TJ Lokomotiva Krnov,155,105,190,450,M,67.5,Single-ply,SBD
-1,Praszcz Tadeusz,1944,75,TJ Viktoria Bohumín,187.5,120,200,507.5,M,75,Single-ply,SBD
-2,Karel Hes,1948,74.4,TJ Tatran Lomnice n.L.,155,120,217.5,492.5,M,75,Single-ply,SBD
-3,Karel Šourek,1943,73.8,Fit Stará Boleslav,145,100,200,445,M,75,Single-ply,SBD
-4,Eftimakos Ziakas,1953,72.9,TJ Lokomotiva Krnov,140,82.5,170,392.5,M,75,Single-ply,SBD
-1,Werner Kotlík,1943,82,TJ Spartak Ústí n.L,190,135,220,545,M,82.5,Single-ply,SBD
-2,Václav Zlámal,1947,75.4,Arnold Otrokovice,170,132.5,212.5,515,M,82.5,Single-ply,SBD
-3,Emil Dresner,1949,81.8,TJ Tatran Bystřice p.H,185,135,195,515,M,82.5,Single-ply,SBD
-1,Josef Mička,1949,89.4,TJ Slavoj Pacov,260,170,260,690,M,90,Single-ply,SBD
-2,Zdeněk Krutil,1948,90,TJ Tatran Bystřice p.H,180,150,220,550,M,90,Single-ply,SBD
-3,Josef Čáp,1948,85.3,Sokol Česká Skalice,190,130,200,520,M,90,Single-ply,SBD
-4,Milan Voráč,1947,86.1,TJ Sokol Modřice,160,110,180,450,M,90,Single-ply,SBD
-1,Luboš Maršík,1952,90.8,Sokol Kramolná,230,157.5,250,637.5,M,100,Single-ply,SBD
-2,Wolf. Zimmermann,1941,95,TJ Ateso Jablonec,210,127.5,250,587.5,M,100,Single-ply,SBD
-3,Milan Ďuriš,1951,94.3,TJ Sokol Modřice,195,140,240,575,M,100,Single-ply,SBD
-4,Stanislav Maroň,1951,97,TJ Jiskra Havl.Brod,170,147.5,225,542.5,M,100,Single-ply,SBD
-5,Ladislav Novotný,1953,93.4,TJ Spartak Uh.Brod,175,135,200,510,M,100,Single-ply,SBD
-DQ,Ladislav Pál,1953,98,TJ Spartak Ústí n.L,195,,,,M,100,Single-ply,SBD
-1,Jiří Šafář,1950,104.3,KST Šíma Praha,247.5,160,300,707.5,M,110,Single-ply,SBD
-2,Josef Vážný,1952,106.3,FS V+V Cheb,250,175,260,685,M,110,Single-ply,SBD
-3,Jiří Zeman,1944,101,TJ Lokomotiva Krnov,225,160,230,615,M,110,Single-ply,SBD
-4,Jiří Krejčí,1951,104,TJ Baník Most,200,150,200,550,M,110,Single-ply,SBD
-1,Bedřich Řechka,1950,111.1,Jiskra Domažlice,210,140,260,610,M,125,Single-ply,SBD
-2,Stanislav Krček,1949,116.3,TJ Olympia Zlín,210,135,250,595,M,125,Single-ply,SBD
-3,Jindřich Gamrot,1952,113.3,FS V+V Cheb,220,125,210,555,M,125,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Adina Hyková,1943,51.3,TJ Spartak Chodov,95,47.5,125,267.5,F,52,Single-ply,SBD,Open
+1,Jaroslav Kozák,1947,55.7,TJ Olympia Zlín,125,75,155,355,M,56,Single-ply,SBD,Open
+1,Ladislav Rolný,1948,65.7,TJ Lokomotiva Krnov,155,105,190,450,M,67.5,Single-ply,SBD,Open
+1,Praszcz Tadeusz,1944,75,TJ Viktoria Bohumín,187.5,120,200,507.5,M,75,Single-ply,SBD,Open
+2,Karel Hes,1948,74.4,TJ Tatran Lomnice n.L.,155,120,217.5,492.5,M,75,Single-ply,SBD,Open
+3,Karel Šourek,1943,73.8,Fit Stará Boleslav,145,100,200,445,M,75,Single-ply,SBD,Open
+4,Eftimakos Ziakas,1953,72.9,TJ Lokomotiva Krnov,140,82.5,170,392.5,M,75,Single-ply,SBD,Open
+1,Werner Kotlík,1943,82,TJ Spartak Ústí n.L,190,135,220,545,M,82.5,Single-ply,SBD,Open
+2,Václav Zlámal,1947,75.4,Arnold Otrokovice,170,132.5,212.5,515,M,82.5,Single-ply,SBD,Open
+3,Emil Dresner,1949,81.8,TJ Tatran Bystřice p.H,185,135,195,515,M,82.5,Single-ply,SBD,Open
+1,Josef Mička,1949,89.4,TJ Slavoj Pacov,260,170,260,690,M,90,Single-ply,SBD,Open
+2,Zdeněk Krutil,1948,90,TJ Tatran Bystřice p.H,180,150,220,550,M,90,Single-ply,SBD,Open
+3,Josef Čáp,1948,85.3,Sokol Česká Skalice,190,130,200,520,M,90,Single-ply,SBD,Open
+4,Milan Voráč,1947,86.1,TJ Sokol Modřice,160,110,180,450,M,90,Single-ply,SBD,Open
+1,Luboš Maršík,1952,90.8,Sokol Kramolná,230,157.5,250,637.5,M,100,Single-ply,SBD,Open
+2,Wolf. Zimmermann,1941,95,TJ Ateso Jablonec,210,127.5,250,587.5,M,100,Single-ply,SBD,Open
+3,Milan Ďuriš,1951,94.3,TJ Sokol Modřice,195,140,240,575,M,100,Single-ply,SBD,Open
+4,Stanislav Maroň,1951,97,TJ Jiskra Havl.Brod,170,147.5,225,542.5,M,100,Single-ply,SBD,Open
+5,Ladislav Novotný,1953,93.4,TJ Spartak Uh.Brod,175,135,200,510,M,100,Single-ply,SBD,Open
+DQ,Ladislav Pál,1953,98,TJ Spartak Ústí n.L,195,,,,M,100,Single-ply,SBD,Open
+1,Jiří Šafář,1950,104.3,KST Šíma Praha,247.5,160,300,707.5,M,110,Single-ply,SBD,Open
+2,Josef Vážný,1952,106.3,FS V+V Cheb,250,175,260,685,M,110,Single-ply,SBD,Open
+3,Jiří Zeman,1944,101,TJ Lokomotiva Krnov,225,160,230,615,M,110,Single-ply,SBD,Open
+4,Jiří Krejčí,1951,104,TJ Baník Most,200,150,200,550,M,110,Single-ply,SBD,Open
+1,Bedřich Řechka,1950,111.1,Jiskra Domažlice,210,140,260,610,M,125,Single-ply,SBD,Open
+2,Stanislav Krček,1949,116.3,TJ Olympia Zlín,210,135,250,595,M,125,Single-ply,SBD,Open
+3,Jindřich Gamrot,1952,113.3,FS V+V Cheb,220,125,210,555,M,125,Single-ply,SBD,Open

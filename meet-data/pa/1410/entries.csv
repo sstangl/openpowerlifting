@@ -1,17 +1,17 @@
-Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Valerie Silver,1949,F,60.1,45,-47.5,47.5,47.5,40,-45,-45,40,70,82.5,92.5,92.5,180,Raw,63,SBD
-1,Alyce Reid,1987,F,66,75,85,-92.5,85,55,57.5,-60,57.5,120,127.5,-132.5,127.5,270,Raw,72,SBD
-DQ,Samantha Rigney,1989,F,74.05,-115,-130,-130,,50,60,-67.5,60,140,155,160,160,,Raw,84,SBD
-DQ,Heather Hope,1964,F,95.65,-57.5,-57.5,-65,,27.5,32.5,-35,32.5,90,102.5,110,110,,Raw,84+,SBD
-1,Jaimie Clarke,1982,M,58.55,85,87.5,-90,87.5,87.5,90,-92.5,90,150,152.5,-155,152.5,330,Raw,59,SBD
-1,David Thomas,1983,M,73.95,-175,180,-185,180,115,120,-127.5,120,200,215,225,225,525,Raw,74,SBD
-2,Scott Rigney,1987,M,71.15,160,170,-180,170,125,135,-140,135,185,200,205,205,510,Raw,74,SBD
-1,Robert Barrett,1988,M,82.4,175,185,190,190,115,125,-130,125,245,-260,260,260,575,Raw,83,SBD
-2,John Cappola,1950,M,81.95,155,165,170,170,75,85,90,90,200,227.5,-235,227.5,487.5,Raw,83,SBD
-1,Ewen Stanley,1983,M,96.85,-180,-200,200,200,-130,137.5,-142.5,137.5,210,230,245,245,582.5,Raw,105,SBD
-1,Keegan Holman,1984,M,113.25,170,180,185,185,120,130,135,135,200,215,220,220,540,Raw,120,SBD
-1,David Napper,1987,M,121.35,215,225,230,230,125,135,-140,135,270,280,285,285,650,Raw,120+,SBD
-1,Lauren Phillips,1985,F,56.7,,,,,50,-52.5,52.5,52.5,,,,,52.5,Raw,57,B
-1,Liam Gallagher,1985,M,66,,,,,120,-127.5,-127.5,120,,,,,120,Raw,66,B
-1,Ashley Dyball,1992,M,76.3,,,,,127.5,135,140,140,,,,,140,Raw,83,B
-DQ,Teisina Tongi,1990,M,100.45,,,,,-170,-175,-175,,,,,,,Raw,105,B
+Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Valerie Silver,1949,F,60.1,45,-47.5,47.5,47.5,40,-45,-45,40,70,82.5,92.5,92.5,180,Raw,63,SBD,Open
+1,Alyce Reid,1987,F,66,75,85,-92.5,85,55,57.5,-60,57.5,120,127.5,-132.5,127.5,270,Raw,72,SBD,Open
+DQ,Samantha Rigney,1989,F,74.05,-115,-130,-130,,50,60,-67.5,60,140,155,160,160,,Raw,84,SBD,Open
+DQ,Heather Hope,1964,F,95.65,-57.5,-57.5,-65,,27.5,32.5,-35,32.5,90,102.5,110,110,,Raw,84+,SBD,Open
+1,Jaimie Clarke,1982,M,58.55,85,87.5,-90,87.5,87.5,90,-92.5,90,150,152.5,-155,152.5,330,Raw,59,SBD,Open
+1,David Thomas,1983,M,73.95,-175,180,-185,180,115,120,-127.5,120,200,215,225,225,525,Raw,74,SBD,Open
+2,Scott Rigney,1987,M,71.15,160,170,-180,170,125,135,-140,135,185,200,205,205,510,Raw,74,SBD,Open
+1,Robert Barrett,1988,M,82.4,175,185,190,190,115,125,-130,125,245,-260,260,260,575,Raw,83,SBD,Open
+2,John Cappola,1950,M,81.95,155,165,170,170,75,85,90,90,200,227.5,-235,227.5,487.5,Raw,83,SBD,Open
+1,Ewen Stanley,1983,M,96.85,-180,-200,200,200,-130,137.5,-142.5,137.5,210,230,245,245,582.5,Raw,105,SBD,Open
+1,Keegan Holman,1984,M,113.25,170,180,185,185,120,130,135,135,200,215,220,220,540,Raw,120,SBD,Open
+1,David Napper,1987,M,121.35,215,225,230,230,125,135,-140,135,270,280,285,285,650,Raw,120+,SBD,Open
+1,Lauren Phillips,1985,F,56.7,,,,,50,-52.5,52.5,52.5,,,,,52.5,Raw,57,B,Open
+1,Liam Gallagher,1985,M,66,,,,,120,-127.5,-127.5,120,,,,,120,Raw,66,B,Open
+1,Ashley Dyball,1992,M,76.3,,,,,127.5,135,140,140,,,,,140,Raw,83,B,Open
+DQ,Teisina Tongi,1990,M,100.45,,,,,-170,-175,-175,,,,,,,Raw,105,B,Open

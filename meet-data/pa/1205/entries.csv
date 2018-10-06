@@ -1,10 +1,10 @@
-Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
-Shane van Erp,M,113.3,120,230,-245,-245,230,160,170,180,180,230,245,255,255,665,Single-ply,SBD,1
-Karl Farquharson,M,65.5,66,125,135,147.5,147.5,65,72.5,77.5,77.5,185,195,205,205,430,Raw,SBD,2
-Ethan Grey,M,66,66,147.5,155,165,165,77.5,85,-95,85,197.5,210,220,220,470,Raw,SBD,1
-Carl Sherry,M,78.1,83,180,190,-205,190,125,-130,-130,125,220,230,-235,230,545,Raw,SBD,1
-Brett Walding,M,78.6,83,120,130,-135,130,75,85,-90,85,140,150,160,160,375,Raw,SBD,3
-Aaron Hawkins,M,82.8,83,175,185,-190,185,95,-100,-100,95,205,220,-230,220,500,Raw,SBD,2
-Daniel Probst,M,87.5,93,145,160,170,170,100,110,117.5,117.5,170,190,200,200,487.5,Raw,SBD,1
-Scott Gebert,M,118.2,120,155,165,180,180,85,-95,-100,85,210,220,-240,220,485,Raw,SBD,1
-David Scadden,M,114,120,,,,,-190,-192.5,,,,,,,,Raw,B,DQ
+Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place,Division
+Shane van Erp,M,113.3,120,230,-245,-245,230,160,170,180,180,230,245,255,255,665,Single-ply,SBD,1,Open
+Karl Farquharson,M,65.5,66,125,135,147.5,147.5,65,72.5,77.5,77.5,185,195,205,205,430,Raw,SBD,2,Open
+Ethan Grey,M,66,66,147.5,155,165,165,77.5,85,-95,85,197.5,210,220,220,470,Raw,SBD,1,Open
+Carl Sherry,M,78.1,83,180,190,-205,190,125,-130,-130,125,220,230,-235,230,545,Raw,SBD,1,Open
+Brett Walding,M,78.6,83,120,130,-135,130,75,85,-90,85,140,150,160,160,375,Raw,SBD,3,Open
+Aaron Hawkins,M,82.8,83,175,185,-190,185,95,-100,-100,95,205,220,-230,220,500,Raw,SBD,2,Open
+Daniel Probst,M,87.5,93,145,160,170,170,100,110,117.5,117.5,170,190,200,200,487.5,Raw,SBD,1,Open
+Scott Gebert,M,118.2,120,155,165,180,180,85,-95,-100,85,210,220,-240,220,485,Raw,SBD,1,Open
+David Scadden,M,114,120,,,,,-190,-192.5,,,,,,,,Raw,B,DQ,Open

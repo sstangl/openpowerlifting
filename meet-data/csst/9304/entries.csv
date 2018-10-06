@@ -1,23 +1,23 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Silvie Čížová,1977,51.5,TJ Viktorie bohumín,90,50,120,260,F,52,Single-ply,SBD
-1,Žaneta Riedlová,1975,56,Jalex Krnov,75,47.5,100,222.5,F,56,Single-ply,SBD
-1,Jiří Ochman,1977,54.8,TJ Lokomotiva Krnov,100,55,110,265,M,56,Single-ply,SBD
-1,Jiří Schenk,1975,59.8,TJ Lokomotiva Krnov,142.5,80,152.5,375,M,60,Single-ply,SBD
-2,Jiří Furch,1975,57.3,Sokol Vranovice,122.5,80,157.5,360,M,60,Single-ply,SBD
-1,Jaroslav Tkadlec,1976,66.2,TJ Viktorie Bohumín,155,90,175,420,M,67.5,Single-ply,SBD
-2,Vlastimil Peterka,1975,63,TJ Olympia Zlín,140,90,185,415,M,67.5,Single-ply,SBD
-3,Kamil Jánoš,1975,63.1,Sokol Lanžhot,120,80,135,335,M,67.5,Single-ply,SBD
-4,Michal Faron,1976,66.6,Sokol Vranovice,110,82.5,125,317.5,M,67.5,Single-ply,SBD
-1,Libor Manda,1975,72.8,TJ Spartak Uh.Brod,142.5,97.5,172.5,412.5,M,75,Single-ply,SBD
-2,Vilém Neděla,1976,72.6,TJ Třebíč,130,90,185,405,M,75,Single-ply,SBD
-3,Radek Voráč,1975,74,Sokol Modřice,130,90,170,390,M,75,Single-ply,SBD
-4,Kamil Šulák,1976,73.6,Sokol Lanžhot,120,82.5,155,357.5,M,75,Single-ply,SBD
-5,Milan Šlahorek,1976,69.7,TJ Jeseník,100,75,140,315,M,75,Single-ply,SBD
-1,Ondřej Seidel,1975,80.6,TJ Viktorie Bohumín,210,120,220,550,M,82.5,Single-ply,SBD
-2,Dezidér Mihok,1975,81.6,TJ Olympia Zlín,187.5,127.5,220,535,M,82.5,Single-ply,SBD
-3,Jan Juřička,1976,80.8,Lednice,160,100,207.5,467.5,M,82.5,Single-ply,SBD
-4,Adam Dobeš,1975,78,TJ Jeseník,140,95,180,415,M,82.5,Single-ply,SBD
-5,Libor Josefík,1975,78.2,TJ Spartak Uh.Brod,132.5,107.5,175,415,M,82.5,Single-ply,SBD
-1,Robert Galistel,1975,86.2,TJ Lokomotiva Krnov,155,105,190,450,M,90,Single-ply,SBD
-DQ,Karel Machů,1975,88.9,TJ Olympia Zlín,,,,,M,90,Single-ply,SBD
-1,Zbyněk Černý,1976,120,Břeclav,180,130,220,530,M,125,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Silvie Čížová,1977,51.5,TJ Viktorie bohumín,90,50,120,260,F,52,Single-ply,SBD,Open
+1,Žaneta Riedlová,1975,56,Jalex Krnov,75,47.5,100,222.5,F,56,Single-ply,SBD,Open
+1,Jiří Ochman,1977,54.8,TJ Lokomotiva Krnov,100,55,110,265,M,56,Single-ply,SBD,Open
+1,Jiří Schenk,1975,59.8,TJ Lokomotiva Krnov,142.5,80,152.5,375,M,60,Single-ply,SBD,Open
+2,Jiří Furch,1975,57.3,Sokol Vranovice,122.5,80,157.5,360,M,60,Single-ply,SBD,Open
+1,Jaroslav Tkadlec,1976,66.2,TJ Viktorie Bohumín,155,90,175,420,M,67.5,Single-ply,SBD,Open
+2,Vlastimil Peterka,1975,63,TJ Olympia Zlín,140,90,185,415,M,67.5,Single-ply,SBD,Open
+3,Kamil Jánoš,1975,63.1,Sokol Lanžhot,120,80,135,335,M,67.5,Single-ply,SBD,Open
+4,Michal Faron,1976,66.6,Sokol Vranovice,110,82.5,125,317.5,M,67.5,Single-ply,SBD,Open
+1,Libor Manda,1975,72.8,TJ Spartak Uh.Brod,142.5,97.5,172.5,412.5,M,75,Single-ply,SBD,Open
+2,Vilém Neděla,1976,72.6,TJ Třebíč,130,90,185,405,M,75,Single-ply,SBD,Open
+3,Radek Voráč,1975,74,Sokol Modřice,130,90,170,390,M,75,Single-ply,SBD,Open
+4,Kamil Šulák,1976,73.6,Sokol Lanžhot,120,82.5,155,357.5,M,75,Single-ply,SBD,Open
+5,Milan Šlahorek,1976,69.7,TJ Jeseník,100,75,140,315,M,75,Single-ply,SBD,Open
+1,Ondřej Seidel,1975,80.6,TJ Viktorie Bohumín,210,120,220,550,M,82.5,Single-ply,SBD,Open
+2,Dezidér Mihok,1975,81.6,TJ Olympia Zlín,187.5,127.5,220,535,M,82.5,Single-ply,SBD,Open
+3,Jan Juřička,1976,80.8,Lednice,160,100,207.5,467.5,M,82.5,Single-ply,SBD,Open
+4,Adam Dobeš,1975,78,TJ Jeseník,140,95,180,415,M,82.5,Single-ply,SBD,Open
+5,Libor Josefík,1975,78.2,TJ Spartak Uh.Brod,132.5,107.5,175,415,M,82.5,Single-ply,SBD,Open
+1,Robert Galistel,1975,86.2,TJ Lokomotiva Krnov,155,105,190,450,M,90,Single-ply,SBD,Open
+DQ,Karel Machů,1975,88.9,TJ Olympia Zlín,,,,,M,90,Single-ply,SBD,Open
+1,Zbyněk Černý,1976,120,Břeclav,180,130,220,530,M,125,Single-ply,SBD,Open

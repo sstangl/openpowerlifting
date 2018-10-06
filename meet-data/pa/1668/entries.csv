@@ -1,11 +1,11 @@
-Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Taylor Eglinton,1992,F,61.2,92.5,100,112.5,112.5,50,55,-60,55,110,117.5,122.5,122.5,290,Raw,63,SBD
-2,Tara-Jane Hill,1992,F,59.1,-92.5,92.5,107.5,107.5,45,50,-55,50,105,112.5,117.5,117.5,275,Raw,63,SBD
-1,Jack Zadow,1991,M,82.8,205,217.5,225,225,115,122.5,127.5,127.5,220,237.5,247.5,247.5,600,Raw,83,SBD
-1,Joel Ridings,1989,M,91.8,160,-210,-260,160,140,175,-185,175,160,240,-265,240,575,Raw,93,SBD
-1,Paul Blaze,1997,M,95.1,210,222.5,232.5,232.5,137.5,145,150,150,212.5,225,235,235,617.5,Raw,105,SBD
-2,Pieter Uys,1986,M,93.3,182.5,190,202.5,202.5,132.5,142.5,-147.5,142.5,222.5,237.5,-255,237.5,582.5,Raw,105,SBD
-1,Ian Rae,1983,M,139.6,-210,210,227.5,227.5,135,140,150,150,215,230,235,235,612.5,Raw,120+,SBD
-2,Abraham Solomon,1989,M,133.1,-80,-80,80,80,40,65,-90,65,80,120,-155,120,265,Raw,120+,SBD
-1,Jaimie Clarke,1982,M,58.3,,,,,90,-97.5,97.5,97.5,,,,,97.5,Raw,59,B
-DQ,Laurie Bates,1985,M,81.7,,,,,-180,-180,-200,,,,,,,Raw,83,B
+Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Taylor Eglinton,1992,F,61.2,92.5,100,112.5,112.5,50,55,-60,55,110,117.5,122.5,122.5,290,Raw,63,SBD,Open
+2,Tara-Jane Hill,1992,F,59.1,-92.5,92.5,107.5,107.5,45,50,-55,50,105,112.5,117.5,117.5,275,Raw,63,SBD,Open
+1,Jack Zadow,1991,M,82.8,205,217.5,225,225,115,122.5,127.5,127.5,220,237.5,247.5,247.5,600,Raw,83,SBD,Open
+1,Joel Ridings,1989,M,91.8,160,-210,-260,160,140,175,-185,175,160,240,-265,240,575,Raw,93,SBD,Open
+1,Paul Blaze,1997,M,95.1,210,222.5,232.5,232.5,137.5,145,150,150,212.5,225,235,235,617.5,Raw,105,SBD,Open
+2,Pieter Uys,1986,M,93.3,182.5,190,202.5,202.5,132.5,142.5,-147.5,142.5,222.5,237.5,-255,237.5,582.5,Raw,105,SBD,Open
+1,Ian Rae,1983,M,139.6,-210,210,227.5,227.5,135,140,150,150,215,230,235,235,612.5,Raw,120+,SBD,Open
+2,Abraham Solomon,1989,M,133.1,-80,-80,80,80,40,65,-90,65,80,120,-155,120,265,Raw,120+,SBD,Open
+1,Jaimie Clarke,1982,M,58.3,,,,,90,-97.5,97.5,97.5,,,,,97.5,Raw,59,B,Open
+DQ,Laurie Bates,1985,M,81.7,,,,,-180,-180,-200,,,,,,,Raw,83,B,Open

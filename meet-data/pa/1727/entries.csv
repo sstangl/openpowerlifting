@@ -1,14 +1,14 @@
-Place,Name,BirthYear,Country,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Equipment,WeightClassKg,Event
-1,Andi Carlisle,1987,Australia,F,51.35,77.5,82.5,-85,82.5,82.5,Raw,52,B
-1,Kim Stevenson,1982,Australia,F,62.65,100,105,-107.5,105,105,Raw,63,B
-1,Jonathon George,1989,Australia,M,65.55,143,-150,-150,143,143,Raw,66,B
-1,Daiki Kodama,1979,Japan,M,75.05,190,210,-216.5,210,210,Raw,83,B
-2,Peter Gray,1956,Australia,M,82.5,142.5,-150,-150,142.5,142.5,Raw,83,B
-1,Caleb Voice,1989,Australia,M,90.9,210,217.5,-233.5,217.5,217.5,Raw,93,B
-2,Langer Wharton,1992,Nauru,M,92.9,-190,190,-195,190,190,Raw,93,B
-3,Angin Gadabui,1995,Nauru,M,89.65,172.5,182.5,185,185,185,Raw,93,B
-4,James Dudley,1996,Australia,M,86.1,132.5,140,-142.5,140,140,Raw,93,B
-1,Florian Loock,1982,Australia,M,104.4,200,-210,-235.5,200,200,Raw,105,B
-2,Matthew Crundall,1999,Australia,M,94.4,145,155,-162.5,155,155,Raw,105,B
-1,Richard Hozjan,1982,Australia,M,112.85,190,-200,-217.5,190,190,Raw,120,B
-DQ,Elvin Brechtefeld,1978,Nauru,M,119.45,-217.5,-217.5,-217.5,,,Raw,120,B
+Place,Name,BirthYear,Country,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Andi Carlisle,1987,Australia,F,51.35,77.5,82.5,-85,82.5,82.5,Raw,52,B,Open
+1,Kim Stevenson,1982,Australia,F,62.65,100,105,-107.5,105,105,Raw,63,B,Open
+1,Jonathon George,1989,Australia,M,65.55,143,-150,-150,143,143,Raw,66,B,Open
+1,Daiki Kodama,1979,Japan,M,75.05,190,210,-216.5,210,210,Raw,83,B,Open
+2,Peter Gray,1956,Australia,M,82.5,142.5,-150,-150,142.5,142.5,Raw,83,B,Open
+1,Caleb Voice,1989,Australia,M,90.9,210,217.5,-233.5,217.5,217.5,Raw,93,B,Open
+2,Langer Wharton,1992,Nauru,M,92.9,-190,190,-195,190,190,Raw,93,B,Open
+3,Angin Gadabui,1995,Nauru,M,89.65,172.5,182.5,185,185,185,Raw,93,B,Open
+4,James Dudley,1996,Australia,M,86.1,132.5,140,-142.5,140,140,Raw,93,B,Open
+1,Florian Loock,1982,Australia,M,104.4,200,-210,-235.5,200,200,Raw,105,B,Open
+2,Matthew Crundall,1999,Australia,M,94.4,145,155,-162.5,155,155,Raw,105,B,Open
+1,Richard Hozjan,1982,Australia,M,112.85,190,-200,-217.5,190,190,Raw,120,B,Open
+DQ,Elvin Brechtefeld,1978,Nauru,M,119.45,-217.5,-217.5,-217.5,,,Raw,120,B,Open

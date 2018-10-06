@@ -1,31 +1,31 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,PSK Union SPJ Praha,Va. Ackermann,1973,90.9,285,200,300,785,Single-ply,SBD,M
-1,PSK Union SPJ Praha,David Bauer,1976,89,205,102.5,220,527.5,Single-ply,SBD,M
-1,PSK Union SPJ Praha,Petr Krošlák,1967,81.1,260,162.5,270,692.5,Single-ply,SBD,M
-1,PSK Union SPJ Praha,Lad Strache,1974,84.4,235,165,240,640,Single-ply,SBD,M
-2,Gate Gym M. Boleslav,Karel Jiroušek,1979,73.8,260,150,272.5,682.5,Single-ply,SBD,M
-2,Gate Gym M. Boleslav,Boh Blazek,1976,75,232.5,165,225,622.5,Single-ply,SBD,M
-2,Gate Gym M. Boleslav,Rudolf Barák,1978,105.7,270,140,260,670,Single-ply,SBD,M
-2,Gate Gym M. Boleslav,Martin Krčmář,1975,100.3,232.5,175,230,637.5,Single-ply,SBD,M
-3,TJ Tatran OSTaK Hostinne,Marcel Jansa,1969,108,285,190,280,755,Single-ply,SBD,M
-3,TJ Tatran OSTaK Hostinne,Tomáš Urban,1985,87.3,255,155,250,660,Single-ply,SBD,M
-3,TJ Tatran OSTaK Hostinne,Michal Dymak,1971,96.7,230,160,265,655,Single-ply,SBD,M
-3,TJ Tatran OSTaK Hostinne,Petr Kašpar,1979,98.1,207.5,160,220,587.5,Single-ply,SBD,M
-4,TJ Rotas Rotava A,René Hrubý,1975,81.6,247.5,142.5,242.5,632.5,Single-ply,SBD,M
-4,TJ Rotas Rotava A,Jan Šedlbauer,1971,105.4,245,195,240,680,Single-ply,SBD,M
-4,TJ Rotas Rotava A,Jan Peterka,1955,153,240,165,300,705,Single-ply,SBD,M
-4,TJ Rotas Rotava A,Vlastimil Štrunc,1972,100.8,220,145,260,625,Single-ply,SBD,M
-5,TJ Dobrany,Petr Krákora,1973,90,215,130,230,575,Single-ply,SBD,M
-5,TJ Dobrany,Oldrich Bily,1977,97.6,200,130,230,560,Single-ply,SBD,M
-5,TJ Dobrany,Milan Pilar,1975,98.4,180,110,190,480,Single-ply,SBD,M
-5,TJ Dobrany,Michal Svab,1976,92.3,160,100,180,440,Single-ply,SBD,M
-6,Auto Skoda M.Boleslav,Jan Weiss,1972,66.8,212.5,125,220,557.5,Single-ply,SBD,M
-6,Auto Skoda M.Boleslav,Jan Hlaváč,1975,91,225,155,240,620,Single-ply,SBD,M
-6,Auto Skoda M.Boleslav,Petr Mazal,1978,84,157.5,112.5,170,440,Single-ply,SBD,M
-7,TJ Rotas Rotava B,Lad. Sturma,1967,84.5,180,170,210,560,Single-ply,SBD,M
-7,TJ Rotas Rotava B,Norbert Rau,1971,101,200,130,240,570,Single-ply,SBD,M
-7,TJ Rotas Rotava B,David Seidel,1984,87.3,170,120,195,485,Single-ply,SBD,M
-8,SK ISST Melnik,Jan Hunčovský,1962,75.9,195,130,200,525,Single-ply,SBD,M
-8,SK ISST Melnik,Josef Hirko,1986,66,100,95,150,345,Single-ply,SBD,M
-8,SK ISST Melnik,Tomas Lipavsky,1986,78.9,80,55,127.5,262.5,Single-ply,SBD,M
-8,SK ISST Melnik,David Soudský,1986,75,50,70,120,240,Single-ply,SBD,M
+Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,PSK Union SPJ Praha,Va. Ackermann,1973,90.9,285,200,300,785,Single-ply,SBD,M,Open
+1,PSK Union SPJ Praha,David Bauer,1976,89,205,102.5,220,527.5,Single-ply,SBD,M,Open
+1,PSK Union SPJ Praha,Petr Krošlák,1967,81.1,260,162.5,270,692.5,Single-ply,SBD,M,Open
+1,PSK Union SPJ Praha,Lad Strache,1974,84.4,235,165,240,640,Single-ply,SBD,M,Open
+2,Gate Gym M. Boleslav,Karel Jiroušek,1979,73.8,260,150,272.5,682.5,Single-ply,SBD,M,Open
+2,Gate Gym M. Boleslav,Boh Blazek,1976,75,232.5,165,225,622.5,Single-ply,SBD,M,Open
+2,Gate Gym M. Boleslav,Rudolf Barák,1978,105.7,270,140,260,670,Single-ply,SBD,M,Open
+2,Gate Gym M. Boleslav,Martin Krčmář,1975,100.3,232.5,175,230,637.5,Single-ply,SBD,M,Open
+3,TJ Tatran OSTaK Hostinne,Marcel Jansa,1969,108,285,190,280,755,Single-ply,SBD,M,Open
+3,TJ Tatran OSTaK Hostinne,Tomáš Urban,1985,87.3,255,155,250,660,Single-ply,SBD,M,Open
+3,TJ Tatran OSTaK Hostinne,Michal Dymak,1971,96.7,230,160,265,655,Single-ply,SBD,M,Open
+3,TJ Tatran OSTaK Hostinne,Petr Kašpar,1979,98.1,207.5,160,220,587.5,Single-ply,SBD,M,Open
+4,TJ Rotas Rotava A,René Hrubý,1975,81.6,247.5,142.5,242.5,632.5,Single-ply,SBD,M,Open
+4,TJ Rotas Rotava A,Jan Šedlbauer,1971,105.4,245,195,240,680,Single-ply,SBD,M,Open
+4,TJ Rotas Rotava A,Jan Peterka,1955,153,240,165,300,705,Single-ply,SBD,M,Open
+4,TJ Rotas Rotava A,Vlastimil Štrunc,1972,100.8,220,145,260,625,Single-ply,SBD,M,Open
+5,TJ Dobrany,Petr Krákora,1973,90,215,130,230,575,Single-ply,SBD,M,Open
+5,TJ Dobrany,Oldrich Bily,1977,97.6,200,130,230,560,Single-ply,SBD,M,Open
+5,TJ Dobrany,Milan Pilar,1975,98.4,180,110,190,480,Single-ply,SBD,M,Open
+5,TJ Dobrany,Michal Svab,1976,92.3,160,100,180,440,Single-ply,SBD,M,Open
+6,Auto Skoda M.Boleslav,Jan Weiss,1972,66.8,212.5,125,220,557.5,Single-ply,SBD,M,Open
+6,Auto Skoda M.Boleslav,Jan Hlaváč,1975,91,225,155,240,620,Single-ply,SBD,M,Open
+6,Auto Skoda M.Boleslav,Petr Mazal,1978,84,157.5,112.5,170,440,Single-ply,SBD,M,Open
+7,TJ Rotas Rotava B,Lad. Sturma,1967,84.5,180,170,210,560,Single-ply,SBD,M,Open
+7,TJ Rotas Rotava B,Norbert Rau,1971,101,200,130,240,570,Single-ply,SBD,M,Open
+7,TJ Rotas Rotava B,David Seidel,1984,87.3,170,120,195,485,Single-ply,SBD,M,Open
+8,SK ISST Melnik,Jan Hunčovský,1962,75.9,195,130,200,525,Single-ply,SBD,M,Open
+8,SK ISST Melnik,Josef Hirko,1986,66,100,95,150,345,Single-ply,SBD,M,Open
+8,SK ISST Melnik,Tomas Lipavsky,1986,78.9,80,55,127.5,262.5,Single-ply,SBD,M,Open
+8,SK ISST Melnik,David Soudský,1986,75,50,70,120,240,Single-ply,SBD,M,Open

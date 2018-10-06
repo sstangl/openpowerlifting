@@ -1,11 +1,11 @@
-Place,Name,BirthYear,Country,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Siantelle Pasqual,1994,Australia,F,55.25,125,-135,135,135,62.5,70,-75,70,145,155,-160,155,360,Raw,57,SBD
-1,Jennifer Thompson,1973,USA,F,61.45,130,140,-145,140,125,-137.5,137.5,137.5,160,190,-200,190,467.5,Raw,63,SBD
-2,Kelli Clarke,1980,Australia,F,61.9,152.5,160,167.5,167.5,70,75,-77.5,75,172.5,185,-192.5,185,427.5,Raw,63,SBD
-1,Brett Gibbs,1991,New Zealand,M,82.8,265,277.5,285,285,192.5,200,205.5,205.5,285,300,310,310,800.5,Raw,83,SBD
-2,Julian Van Der Zanden,1980,Australia,M,82.5,220,232.5,-237.5,232.5,140,145,-150,145,265,280,-290,280,657.5,Raw,83,SBD
-1,Zaid Faydi,1985,Australia,M,92.5,220,230,240,240,155,162.5,-167.5,162.5,270,280,287.5,287.5,690,Raw,93,SBD
-1,Jack Miles,1987,Australia,M,102.5,230,240,250,250,190,195,-200,195,300,312.5,-322.5,312.5,757.5,Raw,105,SBD
-1,Isaac Maldonado,1997,Australia,M,118.7,250,265,275,275,140,147.5,155,155,285,303,-312.5,303,733,Raw,120,SBD
-1,Blaine Sumner,1987,USA,M,166.65,375,395,415,415,225,235,240,240,325,347.5,-365,347.5,1002.5,Raw,120+,SBD
-2,Cameron McKenzie,1993,Australia,M,123.5,300,315,-320,315,187.5,195,-200,195,310,335.5,341,341,851,Raw,120+,SBD
+Place,Name,BirthYear,Country,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Siantelle Pasqual,1994,Australia,F,55.25,125,-135,135,135,62.5,70,-75,70,145,155,-160,155,360,Raw,57,SBD,Open
+1,Jennifer Thompson,1973,USA,F,61.45,130,140,-145,140,125,-137.5,137.5,137.5,160,190,-200,190,467.5,Raw,63,SBD,Open
+2,Kelli Clarke,1980,Australia,F,61.9,152.5,160,167.5,167.5,70,75,-77.5,75,172.5,185,-192.5,185,427.5,Raw,63,SBD,Open
+1,Brett Gibbs,1991,New Zealand,M,82.8,265,277.5,285,285,192.5,200,205.5,205.5,285,300,310,310,800.5,Raw,83,SBD,Open
+2,Julian Van Der Zanden,1980,Australia,M,82.5,220,232.5,-237.5,232.5,140,145,-150,145,265,280,-290,280,657.5,Raw,83,SBD,Open
+1,Zaid Faydi,1985,Australia,M,92.5,220,230,240,240,155,162.5,-167.5,162.5,270,280,287.5,287.5,690,Raw,93,SBD,Open
+1,Jack Miles,1987,Australia,M,102.5,230,240,250,250,190,195,-200,195,300,312.5,-322.5,312.5,757.5,Raw,105,SBD,Open
+1,Isaac Maldonado,1997,Australia,M,118.7,250,265,275,275,140,147.5,155,155,285,303,-312.5,303,733,Raw,120,SBD,Open
+1,Blaine Sumner,1987,USA,M,166.65,375,395,415,415,225,235,240,240,325,347.5,-365,347.5,1002.5,Raw,120+,SBD,Open
+2,Cameron McKenzie,1993,Australia,M,123.5,300,315,-320,315,187.5,195,-200,195,310,335.5,341,341,851,Raw,120+,SBD,Open

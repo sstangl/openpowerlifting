@@ -1,9 +1,9 @@
-Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Larissa Porter,1989,F,60.95,80,85,-90,85,55,60,-62.5,60,105,112.5,117.5,117.5,262.5,Raw,63,SBD
-1,Karen Gohery,1986,F,110.3,60,-70,80,80,45,-50,-52.5,45,70,80,95,95,220,Raw,84+,SBD
-2,Carla Chippendale,1978,F,95.15,-40,-45,50,50,40,45,50,50,65,70,82.5,82.5,182.5,Raw,84+,SBD
-1,Trung Bui,1993,M,72.4,120,130,145,145,72.5,77.5,82.5,82.5,175,185,195,195,422.5,Raw,74,SBD
-1,Mathew Hanus,1987,M,79.7,125,-135,-140,125,80,90,-100,90,180,190,200,200,415,Raw,83,SBD
-1,James Calter,1980,M,70.3,,,,,100,110,-120,110,,,,,110,Raw,74,B
-1,Garrith Chandler,1980,M,81.35,,,,,-107.5,107.5,-110,107.5,,,,,107.5,Raw,83,B
-DQ,Leah Chandler,1979,F,85.85,,,,,60,-62.5,,60,,,,,,Raw,84+,B
+Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Larissa Porter,1989,F,60.95,80,85,-90,85,55,60,-62.5,60,105,112.5,117.5,117.5,262.5,Raw,63,SBD,Open
+1,Karen Gohery,1986,F,110.3,60,-70,80,80,45,-50,-52.5,45,70,80,95,95,220,Raw,84+,SBD,Open
+2,Carla Chippendale,1978,F,95.15,-40,-45,50,50,40,45,50,50,65,70,82.5,82.5,182.5,Raw,84+,SBD,Open
+1,Trung Bui,1993,M,72.4,120,130,145,145,72.5,77.5,82.5,82.5,175,185,195,195,422.5,Raw,74,SBD,Open
+1,Mathew Hanus,1987,M,79.7,125,-135,-140,125,80,90,-100,90,180,190,200,200,415,Raw,83,SBD,Open
+1,James Calter,1980,M,70.3,,,,,100,110,-120,110,,,,,110,Raw,74,B,Open
+1,Garrith Chandler,1980,M,81.35,,,,,-107.5,107.5,-110,107.5,,,,,107.5,Raw,83,B,Open
+DQ,Leah Chandler,1979,F,85.85,,,,,60,-62.5,,60,,,,,,Raw,84+,B,Open

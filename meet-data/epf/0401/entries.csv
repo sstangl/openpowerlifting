@@ -1,16 +1,16 @@
-Place,Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment
-1,Monika Gavorníková,F,52,51.7,100,110,115,115,72.5,77.5,-80,77.5,120,130,-137.5,130,322.5,SBD,Single-ply
-1,Mariya Chepil,F,56,55.35,160,167.5,170.5,170.5,100,107.5,-110,107.5,160,170,175.5,175.5,453.5,SBD,Single-ply
-1,Dagmar Liptáková,F,60,56.9,125,130,132.5,132.5,75,80,85,85,125,135,140,140,357.5,SBD,Single-ply
-1,Yulia Goryachun,F,67.5,62.65,120,140,-170,140,65,72.5,-80,72.5,130,150,-167.5,150,362.5,SBD,Single-ply
-1,Zuzana Petejova,F,75,75,155,160,165,165,75,-80,80,80,155,165,170,170,415,SBD,Single-ply
-2,Andrea Sukhanych,F,75,70.65,135,145,155,155,77.5,82.5,87.5,87.5,135,145,-155,145,387.5,SBD,Single-ply
-1,Rosemarie Beer,F,82.5,82.15,165,172.5,-180,172.5,110,115,117.5,117.5,165,175,180,180,470,SBD,Single-ply
-1,Roman Akhlestin,M,75,73.15,250,-260,260,260,175,182.5,-190,182.5,220,-230,-230,220,662.5,SBD,Single-ply
-2,Richard Lettner,M,75,72,230,240,245,245,145,-152.5,152.5,152.5,245,-260,-260,245,642.5,SBD,Single-ply
-DQ,Gerhard Anton Mayer,M,75,74.8,210,-220,-225,210,-140,-140,-140,,,,,,,SBD,Single-ply
-1,Gerhard Grossbeck,M,82.5,82,280,-290,290,290,190,200,-205,200,260,270,-280,270,760,SBD,Single-ply
-2,Andriy Ivzhenko,M,82.5,80,270,-290,300,300,165,175,-180,175,265,,-285,265,740,SBD,Single-ply
-1,Thomas Loitersberger,M,90,82.85,-215,220,-225,220,152.5,157.5,-162.5,157.5,-225,225,235,235,612.5,SBD,Single-ply
-DQ,Kostyantyn Milyutin,M,90,88.6,270,-300,300,300,-200,-200,-200,,,,,,,SBD,Single-ply
-1,Yuriy Kostenko,M,110,101.8,300,317.5,325,325,200,210,-217.5,210,300,312.5,-325,312.5,847.5,SBD,Single-ply
+Place,Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Division
+1,Monika Gavorníková,F,52,51.7,100,110,115,115,72.5,77.5,-80,77.5,120,130,-137.5,130,322.5,SBD,Single-ply,Open
+1,Mariya Chepil,F,56,55.35,160,167.5,170.5,170.5,100,107.5,-110,107.5,160,170,175.5,175.5,453.5,SBD,Single-ply,Open
+1,Dagmar Liptáková,F,60,56.9,125,130,132.5,132.5,75,80,85,85,125,135,140,140,357.5,SBD,Single-ply,Open
+1,Yulia Goryachun,F,67.5,62.65,120,140,-170,140,65,72.5,-80,72.5,130,150,-167.5,150,362.5,SBD,Single-ply,Open
+1,Zuzana Petejova,F,75,75,155,160,165,165,75,-80,80,80,155,165,170,170,415,SBD,Single-ply,Open
+2,Andrea Sukhanych,F,75,70.65,135,145,155,155,77.5,82.5,87.5,87.5,135,145,-155,145,387.5,SBD,Single-ply,Open
+1,Rosemarie Beer,F,82.5,82.15,165,172.5,-180,172.5,110,115,117.5,117.5,165,175,180,180,470,SBD,Single-ply,Open
+1,Roman Akhlestin,M,75,73.15,250,-260,260,260,175,182.5,-190,182.5,220,-230,-230,220,662.5,SBD,Single-ply,Open
+2,Richard Lettner,M,75,72,230,240,245,245,145,-152.5,152.5,152.5,245,-260,-260,245,642.5,SBD,Single-ply,Open
+DQ,Gerhard Anton Mayer,M,75,74.8,210,-220,-225,210,-140,-140,-140,,,,,,,SBD,Single-ply,Open
+1,Gerhard Grossbeck,M,82.5,82,280,-290,290,290,190,200,-205,200,260,270,-280,270,760,SBD,Single-ply,Open
+2,Andriy Ivzhenko,M,82.5,80,270,-290,300,300,165,175,-180,175,265,,-285,265,740,SBD,Single-ply,Open
+1,Thomas Loitersberger,M,90,82.85,-215,220,-225,220,152.5,157.5,-162.5,157.5,-225,225,235,235,612.5,SBD,Single-ply,Open
+DQ,Kostyantyn Milyutin,M,90,88.6,270,-300,300,300,-200,-200,-200,,,,,,,SBD,Single-ply,Open
+1,Yuriy Kostenko,M,110,101.8,300,317.5,325,325,200,210,-217.5,210,300,312.5,-325,312.5,847.5,SBD,Single-ply,Open

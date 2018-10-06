@@ -1,21 +1,21 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Hana Pokludova,1978,54,SK V&V Cheb,100,40,100,240,F,56,Single-ply,SBD
-2,Vendula Hrubá,1983,54.8,B.Sokolov,85,47.5,100,232.5,F,56,Single-ply,SBD
-3,Marie Lokingová,1972,55,SK V&V Cheb,70,45,100,215,F,56,Single-ply,SBD
-1,Jitka Novotná,1975,57.5,TJ Slavoj Pacov,117.5,75,120,312.5,F,60,Single-ply,SBD
-1,Michael Strbakova,1983,80,SK V&V Cheb,170,90,165,425,M,82.5,Single-ply,SBD
-2,Katerin Fidlerova,1984,77.5,TJ Spartak Chodov,77.5,37.5,82.5,197.5,M,82.5,Single-ply,SBD
-1,Petr Hrubý,1952,73.3,SK V&V Cheb,220,145,210,575,M,75,Single-ply,SBD
-2,René Hrubý,1975,73.5,SK V&V Cheb,200,110,200,510,M,75,Single-ply,SBD
-3,Jan Kaluba,1965,75,Power Gym Plzen,180,102.5,200,482.5,M,75,Single-ply,SBD
-4,Frantise Sindelar,1973,75,TJ Dobrany,185,80,210,475,M,75,Single-ply,SBD
-1,Karel Rada,1973,82.5,TJ FC Stankov,220,140,240,600,M,82.5,Single-ply,SBD
-1,Petr Krákora,1973,89.5,TJ Dobrany,195,132.5,222.5,550,M,90,Single-ply,SBD
-DD,Jan Hart,1973,85,SK V&V Cheb,200,100,250,,M,90,Single-ply,SBD
-1,Michal Navrátil,1982,93,SK V&V Cheb,150,145,240,535,M,100,Single-ply,SBD
-1,Josef Sperer,1956,107,Bezdekov,200,110,230,540,M,110,Single-ply,SBD
-2,Jan Matula,1982,101.5,TJ Dobrany,170,130,215,515,M,110,Single-ply,SBD
-1,Jiří Lacina,1969,122,LKM Plzen,245,170,262.5,677.5,M,125,Single-ply,SBD
-2,Mirosla Hrabovsky,1973,112.5,Sokol Domazlice,180,137.5,237.5,555,M,125,Single-ply,SBD
-3,Michal Maťha,1980,119,TJ Dobrany,225,120,205,550,M,125,Single-ply,SBD
-DQ,Jan Stastny,1983,129,Hornik PWL Vejpr,,,,,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Hana Pokludova,1978,54,SK V&V Cheb,100,40,100,240,F,56,Single-ply,SBD,Open
+2,Vendula Hrubá,1983,54.8,B.Sokolov,85,47.5,100,232.5,F,56,Single-ply,SBD,Open
+3,Marie Lokingová,1972,55,SK V&V Cheb,70,45,100,215,F,56,Single-ply,SBD,Open
+1,Jitka Novotná,1975,57.5,TJ Slavoj Pacov,117.5,75,120,312.5,F,60,Single-ply,SBD,Open
+1,Michael Strbakova,1983,80,SK V&V Cheb,170,90,165,425,M,82.5,Single-ply,SBD,Open
+2,Katerin Fidlerova,1984,77.5,TJ Spartak Chodov,77.5,37.5,82.5,197.5,M,82.5,Single-ply,SBD,Open
+1,Petr Hrubý,1952,73.3,SK V&V Cheb,220,145,210,575,M,75,Single-ply,SBD,Open
+2,René Hrubý,1975,73.5,SK V&V Cheb,200,110,200,510,M,75,Single-ply,SBD,Open
+3,Jan Kaluba,1965,75,Power Gym Plzen,180,102.5,200,482.5,M,75,Single-ply,SBD,Open
+4,Frantise Sindelar,1973,75,TJ Dobrany,185,80,210,475,M,75,Single-ply,SBD,Open
+1,Karel Rada,1973,82.5,TJ FC Stankov,220,140,240,600,M,82.5,Single-ply,SBD,Open
+1,Petr Krákora,1973,89.5,TJ Dobrany,195,132.5,222.5,550,M,90,Single-ply,SBD,Open
+DD,Jan Hart,1973,85,SK V&V Cheb,200,100,250,,M,90,Single-ply,SBD,Open
+1,Michal Navrátil,1982,93,SK V&V Cheb,150,145,240,535,M,100,Single-ply,SBD,Open
+1,Josef Sperer,1956,107,Bezdekov,200,110,230,540,M,110,Single-ply,SBD,Open
+2,Jan Matula,1982,101.5,TJ Dobrany,170,130,215,515,M,110,Single-ply,SBD,Open
+1,Jiří Lacina,1969,122,LKM Plzen,245,170,262.5,677.5,M,125,Single-ply,SBD,Open
+2,Mirosla Hrabovsky,1973,112.5,Sokol Domazlice,180,137.5,237.5,555,M,125,Single-ply,SBD,Open
+3,Michal Maťha,1980,119,TJ Dobrany,225,120,205,550,M,125,Single-ply,SBD,Open
+DQ,Jan Stastny,1983,129,Hornik PWL Vejpr,,,,,M,125+,Single-ply,SBD,Open

@@ -1,24 +1,24 @@
-Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
-Peter Marsh,M,111.4,120,215,-225,225,225,145,150,157.5,157.5,195,205,212.5,212.5,595,Single-ply,SBD,1
-Odell Manuel,M,131,120+,-370,-380,-380,,-250,-250,-250,,-335,-350,-350,,,Single-ply,SBD,DQ
-Leanne Stacey,F,74.6,84,-105,-105,-105,,60,65,-70,65,110,115,120,120,,Raw,SBD,DQ
-Douglas Lorber,M,63.6,66,100,105,110,110,-75,80,82.5,82.5,110,122.5,125,125,317.5,Raw,SBD,1
-Nghiep Luu,M,68.3,74,172.5,182.5,187.5,187.5,95,-100,-100,95,247.5,262.5,271,271,553.5,Raw,SBD,1
-Eldene Smith,M,73.6,74,140,-150,-155,140,120,-125,125,125,190,210,220,220,485,Raw,SBD,2
-Ben Langton,M,80.6,83,-165,175,-185,175,115,122.5,130,130,215,225,-230,225,530,Raw,SBD,1
-Sean Putrtell,M,80.5,83,110,125,-142.5,125,100,105,-112.5,105,170,180,195,195,425,Raw,SBD,2
-Eamon Lindsay,M,82,83,60,-65,-70,60,120,125,-130,125,205,215,222.5,222.5,407.5,Raw,SBD,3
-Eddie Renton,M,91.4,93,185,195,205,205,125,132.5,137.5,137.5,220,235,245,245,587.5,Raw,SBD,1
-Kieran Sinclair,M,84.8,93,140,165,177.5,177.5,-105,105,110,110,165,185,205,205,492.5,Raw,SBD,2
-Tarin Bradford,M,101.7,105,230,240,250,250,135,145,155,155,240,255,-265,255,660,Raw,SBD,1
-Dave Keong,M,112.8,120,200,210,-225,210,110,120,130,130,240,250,-260,250,590,Raw,SBD,1
-Kym McIntosh,M,106.8,120,200,-210,-215,200,135,-145,-145,135,220,230,-240,230,565,Raw,SBD,2
-Brody Wieff,M,111.9,120,140,150,160,160,130,135,140,140,200,205,-210,205,505,Raw,SBD,3
-Neil Fleming,M,114.7,120,105,-130,-130,105,-80,-82.5,-82.5,,170,-185,-185,170,,Raw,SBD,DQ
-Ben Du Plessis,M,114,120,-175,-185,-190,,137.5,142.5,155,155,227.5,245,260,260,,Raw,SBD,DQ
-Trevor Dahtler,M,126.5,120+,,,,,-200,-200,-200,,,,,,,Single-ply,B,DQ
-Helen Allen,F,60.9,63,,,,,-70,-70,70,70,,,,,70,Single-ply,B,1
-Fred Litchfield,M,72.7,74,,,,,90,97.5,100,100,,,,,100,Raw,B,1
-Blake Wright,M,73.8,74,,,,,-90,95,-102.5,95,,,,,95,Raw,B,2
-Stephen Berry,M,96.5,105,,,,,-155,162.5,-165,162.5,,,,,162.5,Raw,B,1
-Paul Offord,M,135.1,120+,,,,,210,-221,221,221,,,,,221,Raw,B,1
+Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place,Division
+Peter Marsh,M,111.4,120,215,-225,225,225,145,150,157.5,157.5,195,205,212.5,212.5,595,Single-ply,SBD,1,Open
+Odell Manuel,M,131,120+,-370,-380,-380,,-250,-250,-250,,-335,-350,-350,,,Single-ply,SBD,DQ,Open
+Leanne Stacey,F,74.6,84,-105,-105,-105,,60,65,-70,65,110,115,120,120,,Raw,SBD,DQ,Open
+Douglas Lorber,M,63.6,66,100,105,110,110,-75,80,82.5,82.5,110,122.5,125,125,317.5,Raw,SBD,1,Open
+Nghiep Luu,M,68.3,74,172.5,182.5,187.5,187.5,95,-100,-100,95,247.5,262.5,271,271,553.5,Raw,SBD,1,Open
+Eldene Smith,M,73.6,74,140,-150,-155,140,120,-125,125,125,190,210,220,220,485,Raw,SBD,2,Open
+Ben Langton,M,80.6,83,-165,175,-185,175,115,122.5,130,130,215,225,-230,225,530,Raw,SBD,1,Open
+Sean Putrtell,M,80.5,83,110,125,-142.5,125,100,105,-112.5,105,170,180,195,195,425,Raw,SBD,2,Open
+Eamon Lindsay,M,82,83,60,-65,-70,60,120,125,-130,125,205,215,222.5,222.5,407.5,Raw,SBD,3,Open
+Eddie Renton,M,91.4,93,185,195,205,205,125,132.5,137.5,137.5,220,235,245,245,587.5,Raw,SBD,1,Open
+Kieran Sinclair,M,84.8,93,140,165,177.5,177.5,-105,105,110,110,165,185,205,205,492.5,Raw,SBD,2,Open
+Tarin Bradford,M,101.7,105,230,240,250,250,135,145,155,155,240,255,-265,255,660,Raw,SBD,1,Open
+Dave Keong,M,112.8,120,200,210,-225,210,110,120,130,130,240,250,-260,250,590,Raw,SBD,1,Open
+Kym McIntosh,M,106.8,120,200,-210,-215,200,135,-145,-145,135,220,230,-240,230,565,Raw,SBD,2,Open
+Brody Wieff,M,111.9,120,140,150,160,160,130,135,140,140,200,205,-210,205,505,Raw,SBD,3,Open
+Neil Fleming,M,114.7,120,105,-130,-130,105,-80,-82.5,-82.5,,170,-185,-185,170,,Raw,SBD,DQ,Open
+Ben Du Plessis,M,114,120,-175,-185,-190,,137.5,142.5,155,155,227.5,245,260,260,,Raw,SBD,DQ,Open
+Trevor Dahtler,M,126.5,120+,,,,,-200,-200,-200,,,,,,,Single-ply,B,DQ,Open
+Helen Allen,F,60.9,63,,,,,-70,-70,70,70,,,,,70,Single-ply,B,1,Open
+Fred Litchfield,M,72.7,74,,,,,90,97.5,100,100,,,,,100,Raw,B,1,Open
+Blake Wright,M,73.8,74,,,,,-90,95,-102.5,95,,,,,95,Raw,B,2,Open
+Stephen Berry,M,96.5,105,,,,,-155,162.5,-165,162.5,,,,,162.5,Raw,B,1,Open
+Paul Offord,M,135.1,120+,,,,,210,-221,221,221,,,,,221,Raw,B,1,Open

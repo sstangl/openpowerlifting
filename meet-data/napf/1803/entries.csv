@@ -1,17 +1,17 @@
-Place,Name,Sex,Event,Equipment,BirthYear,State,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg
-1,Rhaea Stinn,F,B,Single-ply,1988,,72,71.57,165,-179,179,179,179
-2,Bonica Brown,F,B,Single-ply,1988,NE,84+,132.65,-200,200,202.5,202.5,202.5
-3,Stephenie Dzurnak,F,B,Single-ply,1983,MA,84+,128.53,165,170,190,190,190
-DQ,Kelsey McCarthy,F,B,Single-ply,1992,MA,72,71.16,-175,-180,-180,,
-1,Per Nilsson,M,B,Single-ply,1974,,120+,121,300,315,-330,315,315
-2,Dustin Meaux,M,B,Single-ply,1984,TX,120+,154.1,305,-317.5,-317.5,305,305
-DQ,Jeffrey Snyder,M,B,Single-ply,1971,NC,120+,137.52,-347.5,-347.5,-347.5,,
-DQ,Blaine Sumner,M,B,Single-ply,1987,WY,120+,174.9,-395,-395,-410.5,,
-DQ,Michael Zawilinski,M,B,Single-ply,1980,RI,120+,189.55,-350,-360,-365,,
-DQ,Brady Stewart,M,B,Single-ply,1982,IL,120,119.87,-363,-363,-363,,
-1,Tim Anderson,M,B,Single-ply,1972,NE,105,103.23,-295,295,297.5,297.5,297.5
-2,Mike Ciupinski,M,B,Single-ply,1979,NJ,93,86.06,-257.5,-262.5,272.5,272.5,272.5
-3,Easton Schuster,M,B,Single-ply,1996,SD,93,91.45,265,-275,-275,265,265
-4,William Garcia,M,B,Single-ply,1990,CA,59,58.49,-182.5,182.5,-185,182.5,182.5
-DQ,Barry Antoniow,M,B,Single-ply,1972,,93,90.21,-275,-275,-275,,
-DQ,Daniel Thurman,M,B,Single-ply,1968,NE,105,100.65,-287.5,-287.5,-295,,
+Place,Name,Sex,Event,Equipment,BirthYear,State,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Division
+1,Rhaea Stinn,F,B,Single-ply,1988,,72,71.57,165,-179,179,179,179,Open
+2,Bonica Brown,F,B,Single-ply,1988,NE,84+,132.65,-200,200,202.5,202.5,202.5,Open
+3,Stephenie Dzurnak,F,B,Single-ply,1983,MA,84+,128.53,165,170,190,190,190,Open
+DQ,Kelsey McCarthy,F,B,Single-ply,1992,MA,72,71.16,-175,-180,-180,,,Open
+1,Per Nilsson,M,B,Single-ply,1974,,120+,121,300,315,-330,315,315,Open
+2,Dustin Meaux,M,B,Single-ply,1984,TX,120+,154.1,305,-317.5,-317.5,305,305,Open
+DQ,Jeffrey Snyder,M,B,Single-ply,1971,NC,120+,137.52,-347.5,-347.5,-347.5,,,Open
+DQ,Blaine Sumner,M,B,Single-ply,1987,WY,120+,174.9,-395,-395,-410.5,,,Open
+DQ,Michael Zawilinski,M,B,Single-ply,1980,RI,120+,189.55,-350,-360,-365,,,Open
+DQ,Brady Stewart,M,B,Single-ply,1982,IL,120,119.87,-363,-363,-363,,,Open
+1,Tim Anderson,M,B,Single-ply,1972,NE,105,103.23,-295,295,297.5,297.5,297.5,Open
+2,Mike Ciupinski,M,B,Single-ply,1979,NJ,93,86.06,-257.5,-262.5,272.5,272.5,272.5,Open
+3,Easton Schuster,M,B,Single-ply,1996,SD,93,91.45,265,-275,-275,265,265,Open
+4,William Garcia,M,B,Single-ply,1990,CA,59,58.49,-182.5,182.5,-185,182.5,182.5,Open
+DQ,Barry Antoniow,M,B,Single-ply,1972,,93,90.21,-275,-275,-275,,,Open
+DQ,Daniel Thurman,M,B,Single-ply,1968,NE,105,100.65,-287.5,-287.5,-295,,,Open

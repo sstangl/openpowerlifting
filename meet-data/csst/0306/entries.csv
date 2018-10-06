@@ -1,26 +1,26 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event
-1,Jaroslav Seiblová,1975,71.3,SK V&V Cheb,120,40,117.5,277.5,F,75,Single-ply,SBD
-1,Miroslav Hubka,1968,63.3,TJ TZ Rakovník,152.5,125,160,437.5,M,67.5,Single-ply,SBD
-1,Petr Hrubý,1952,74.8,B.Sokolov,210,152.5,220,582.5,M,75,Single-ply,SBD
-1,René Hrubý,1975,81.7,Rotas Rotava,245,137.5,230,612.5,M,82.5,Single-ply,SBD
-2,Emil Balogh,1983,80.7,B.Sokolov,240,127.5,220,587.5,M,82.5,Single-ply,SBD
-3,Jaroslav Kraft,1970,82,TJ ZBC Hrádek,190,142.5,215,547.5,M,82.5,Single-ply,SBD
-4,Ladislav Šturma,1967,80.7,Rotas Rotava,160,145,200,505,M,82.5,Single-ply,SBD
-5,Ladisla Konopásek,1964,79.4,TJ TZ Rakovník,145,100,170,415,M,82.5,Single-ply,SBD
-1,Michal Sekot,1961,86.5,SK LKM Plzeň,235,172.5,250,657.5,M,90,Single-ply,SBD
-2,Jiří Vácha,1962,89,TJ Spartak Chodov,210,140,235,585,M,90,Single-ply,SBD
-3,Zdeněk Kubeš,1977,89.9,Sokol Klatovy,200,125,232.5,557.5,M,90,Single-ply,SBD
-4,Petr Krákora,1973,90,TJ Dobřany,205,127.5,225,557.5,M,90,Single-ply,SBD
-5,Martin Tirala,1975,86.5,SK V&V Cheb,205,130,210,545,M,90,Single-ply,SBD
-6,Jarosla Mikulanda,1984,87,FC Wilson Tábor,190,100,240,530,M,90,Single-ply,SBD
-7,David Seidel,1984,89.9,Rotas Rotava,150,110,190,450,M,90,Single-ply,SBD
-1,František Janák,1975,99.5,FC Bílina,220,160,240,620,M,100,Single-ply,SBD
-2,Antonín Hlaváček,1953,99.3,TJ ZBC Hrádek,212.5,152.5,250,615,M,100,Single-ply,SBD
-3,Ladislav Mráz,1979,92,TJ Dobřany,225,155,232.5,612.5,M,100,Single-ply,SBD
-4,Norbert Rau,1971,99.4,Rotas Rotava,200,120,240,560,M,100,Single-ply,SBD
-1,Zoltán Kanát,1962,109.3,Spartak Chodov,250,180,245,675,M,110,Single-ply,SBD
-2,Jan Šedlbauer,1971,103.9,Rotas Rotava,225,185,240,650,M,110,Single-ply,SBD
-3,Vlastimil Štrunc,1972,103.7,Rotas Rotava,225,152.5,270,647.5,M,110,Single-ply,SBD
-1,Pavel Šefl,1973,111.4,TJ ZBC Hrádek,200,135,215,550,M,125,Single-ply,SBD
-DQ,Jiří Lacina,1969,123.4,SK LKM Plzeň,,,,,M,125,Single-ply,SBD
-1,Jan Peterka,1955,157.8,Rotas Rotava,260,170,300,730,M,125+,Single-ply,SBD
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,WeightClassKg,Equipment,Event,Division
+1,Jaroslav Seiblová,1975,71.3,SK V&V Cheb,120,40,117.5,277.5,F,75,Single-ply,SBD,Open
+1,Miroslav Hubka,1968,63.3,TJ TZ Rakovník,152.5,125,160,437.5,M,67.5,Single-ply,SBD,Open
+1,Petr Hrubý,1952,74.8,B.Sokolov,210,152.5,220,582.5,M,75,Single-ply,SBD,Open
+1,René Hrubý,1975,81.7,Rotas Rotava,245,137.5,230,612.5,M,82.5,Single-ply,SBD,Open
+2,Emil Balogh,1983,80.7,B.Sokolov,240,127.5,220,587.5,M,82.5,Single-ply,SBD,Open
+3,Jaroslav Kraft,1970,82,TJ ZBC Hrádek,190,142.5,215,547.5,M,82.5,Single-ply,SBD,Open
+4,Ladislav Šturma,1967,80.7,Rotas Rotava,160,145,200,505,M,82.5,Single-ply,SBD,Open
+5,Ladisla Konopásek,1964,79.4,TJ TZ Rakovník,145,100,170,415,M,82.5,Single-ply,SBD,Open
+1,Michal Sekot,1961,86.5,SK LKM Plzeň,235,172.5,250,657.5,M,90,Single-ply,SBD,Open
+2,Jiří Vácha,1962,89,TJ Spartak Chodov,210,140,235,585,M,90,Single-ply,SBD,Open
+3,Zdeněk Kubeš,1977,89.9,Sokol Klatovy,200,125,232.5,557.5,M,90,Single-ply,SBD,Open
+4,Petr Krákora,1973,90,TJ Dobřany,205,127.5,225,557.5,M,90,Single-ply,SBD,Open
+5,Martin Tirala,1975,86.5,SK V&V Cheb,205,130,210,545,M,90,Single-ply,SBD,Open
+6,Jarosla Mikulanda,1984,87,FC Wilson Tábor,190,100,240,530,M,90,Single-ply,SBD,Open
+7,David Seidel,1984,89.9,Rotas Rotava,150,110,190,450,M,90,Single-ply,SBD,Open
+1,František Janák,1975,99.5,FC Bílina,220,160,240,620,M,100,Single-ply,SBD,Open
+2,Antonín Hlaváček,1953,99.3,TJ ZBC Hrádek,212.5,152.5,250,615,M,100,Single-ply,SBD,Open
+3,Ladislav Mráz,1979,92,TJ Dobřany,225,155,232.5,612.5,M,100,Single-ply,SBD,Open
+4,Norbert Rau,1971,99.4,Rotas Rotava,200,120,240,560,M,100,Single-ply,SBD,Open
+1,Zoltán Kanát,1962,109.3,Spartak Chodov,250,180,245,675,M,110,Single-ply,SBD,Open
+2,Jan Šedlbauer,1971,103.9,Rotas Rotava,225,185,240,650,M,110,Single-ply,SBD,Open
+3,Vlastimil Štrunc,1972,103.7,Rotas Rotava,225,152.5,270,647.5,M,110,Single-ply,SBD,Open
+1,Pavel Šefl,1973,111.4,TJ ZBC Hrádek,200,135,215,550,M,125,Single-ply,SBD,Open
+DQ,Jiří Lacina,1969,123.4,SK LKM Plzeň,,,,,M,125,Single-ply,SBD,Open
+1,Jan Peterka,1955,157.8,Rotas Rotava,260,170,300,730,M,125+,Single-ply,SBD,Open

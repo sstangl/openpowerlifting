@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,Jiří Janoušek,1965,83.4,Sp Rokytnice,220,132.5,245,597.5,Single-ply,SBD,M
-1,Jitk Langhamerova,1975,65.8,Sp Rokytnice,120,62.5,137.5,320,Single-ply,SBD,F
-1,Vladimír Medek,1964,81,Sp Rokytnice,225,165,250,640,Single-ply,SBD,M
-1,Tomáš Sedláček,1965,95.4,Sp Rokytnice,240,180,260,680,Single-ply,SBD,M
-2,René Hrubý,1975,85,Rotas Rotava,245,145,252.5,642.5,Single-ply,SBD,M
-2,Jan Peterka,1955,144.5,Rotas Rotava,250,165,290,705,Single-ply,SBD,M
-2,Jan Šedlbauer,1971,101.8,Rotas Rotava,210,165,225,600,Single-ply,SBD,M
-2,Vlastimil Štrunc,1972,105.2,Rotas Rotava,220,145,260,625,Single-ply,SBD,M
-3,Karel Valim,1978,94.9,Sokol Melnik,200,122.5,215,537.5,Single-ply,SBD,M
-3,Jiří Vild,1978,93.5,Sokol Melnik,177.5,127.5,230,535,Single-ply,SBD,M
-3,Štefan Zvada,1953,95.6,Sokol Melnik,215,135,270,620,Single-ply,SBD,M
-3,Petr Žďánský,1977,88.2,Sokol Melnik,172.5,137.5,215,525,Single-ply,SBD,M
-4,Jan Weiss,1972,71.2,AS Mlada Boleslav,215,135,215,565,Single-ply,SBD,M
-4,Mojmír Derka,1975,75.8,AS Mlada Boleslav,50,145,150,345,Single-ply,SBD,M
-4,Petr Mazal,1978,81.2,AS Mlada Boleslav,185,120,190,495,Single-ply,SBD,M
-4,Jan Hlaváč,1975,90.2,AS Mlada Boleslav,220,150,245,615,Single-ply,SBD,M
-5,Radek Bešík,1980,88.8,So Kosmonosy,175,115,200,490,Single-ply,SBD,M
-5,František Bobek,1956,74.6,So Kosmonosy,160,110,205,475,Single-ply,SBD,M
-5,Roman Farkas,1974,100,So Kosmonosy,200,135,190,525,Single-ply,SBD,M
-5,Zdeněk Šudoma,1961,94.6,So Kosmonosy,185,120,210,515,Single-ply,SBD,M
-6,Pavel Barat,1975,94.8,Tn Hostinne B,200,130,230,560,Single-ply,SBD,M
-6,Karel Potocek,1980,89.4,Tn Hostinne B,185,125,210,520,Single-ply,SBD,M
-6,Martin Prokop,1984,66.8,Tn Hostinne B,165,90,210,465,Single-ply,SBD,M
-DQ,Tomáš Urban,1985,85.6,Tn Hostinne B,235,,,,Single-ply,SBD,M
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Jiří Janoušek,1965,83.4,Sp Rokytnice,220,132.5,245,597.5,Single-ply,SBD,M,Open
+1,Jitk Langhamerova,1975,65.8,Sp Rokytnice,120,62.5,137.5,320,Single-ply,SBD,F,Open
+1,Vladimír Medek,1964,81,Sp Rokytnice,225,165,250,640,Single-ply,SBD,M,Open
+1,Tomáš Sedláček,1965,95.4,Sp Rokytnice,240,180,260,680,Single-ply,SBD,M,Open
+2,René Hrubý,1975,85,Rotas Rotava,245,145,252.5,642.5,Single-ply,SBD,M,Open
+2,Jan Peterka,1955,144.5,Rotas Rotava,250,165,290,705,Single-ply,SBD,M,Open
+2,Jan Šedlbauer,1971,101.8,Rotas Rotava,210,165,225,600,Single-ply,SBD,M,Open
+2,Vlastimil Štrunc,1972,105.2,Rotas Rotava,220,145,260,625,Single-ply,SBD,M,Open
+3,Karel Valim,1978,94.9,Sokol Melnik,200,122.5,215,537.5,Single-ply,SBD,M,Open
+3,Jiří Vild,1978,93.5,Sokol Melnik,177.5,127.5,230,535,Single-ply,SBD,M,Open
+3,Štefan Zvada,1953,95.6,Sokol Melnik,215,135,270,620,Single-ply,SBD,M,Open
+3,Petr Žďánský,1977,88.2,Sokol Melnik,172.5,137.5,215,525,Single-ply,SBD,M,Open
+4,Jan Weiss,1972,71.2,AS Mlada Boleslav,215,135,215,565,Single-ply,SBD,M,Open
+4,Mojmír Derka,1975,75.8,AS Mlada Boleslav,50,145,150,345,Single-ply,SBD,M,Open
+4,Petr Mazal,1978,81.2,AS Mlada Boleslav,185,120,190,495,Single-ply,SBD,M,Open
+4,Jan Hlaváč,1975,90.2,AS Mlada Boleslav,220,150,245,615,Single-ply,SBD,M,Open
+5,Radek Bešík,1980,88.8,So Kosmonosy,175,115,200,490,Single-ply,SBD,M,Open
+5,František Bobek,1956,74.6,So Kosmonosy,160,110,205,475,Single-ply,SBD,M,Open
+5,Roman Farkas,1974,100,So Kosmonosy,200,135,190,525,Single-ply,SBD,M,Open
+5,Zdeněk Šudoma,1961,94.6,So Kosmonosy,185,120,210,515,Single-ply,SBD,M,Open
+6,Pavel Barat,1975,94.8,Tn Hostinne B,200,130,230,560,Single-ply,SBD,M,Open
+6,Karel Potocek,1980,89.4,Tn Hostinne B,185,125,210,520,Single-ply,SBD,M,Open
+6,Martin Prokop,1984,66.8,Tn Hostinne B,165,90,210,465,Single-ply,SBD,M,Open
+DQ,Tomáš Urban,1985,85.6,Tn Hostinne B,235,,,,Single-ply,SBD,M,Open

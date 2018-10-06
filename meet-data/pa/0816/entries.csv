@@ -1,22 +1,22 @@
-Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
-Julie Marshall,F,50.7,52,85,100,110,110,45,50,-55,50,80,-105,-105,80,240,Single-ply,SBD,1
-Lisa Stokes,F,55.8,56,110,115,-117.5,115,65,70,-72.5,70,132.5,-137.5,137.5,137.5,322.5,Single-ply,SBD,1
-Helen Allen,F,55.2,56,-102.5,102.5,112.5,112.5,57.5,-62.5,-62.5,57.5,142.5,150,-156,150,320,Single-ply,SBD,2
-Alexandra Tunnock,F,58.2,60,110,115,-117.5,115,72.5,77.5,-80,77.5,115,122.5,130,130,322.5,Single-ply,SBD,1
-Kerry Ann Smith,F,57.1,60,85,95,-100,95,62.5,65,67.5,67.5,105,112.5,117.5,117.5,280,Single-ply,SBD,2
-Browyn Evans,F,89.7,90,90,110,-115,110,55,60,62.5,62.5,100,112.5,120,120,292.5,Single-ply,SBD,1
-Theo Lagis,M,60,60,185,192.5,197.5,197.5,110,-115,115,115,230,-236,-236,230,542.5,Single-ply,SBD,1
-Rod Williams,M,82,82.5,175,185,195,195,122.5,130,132.5,132.5,200,210,220,220,547.5,Single-ply,SBD,1
-Alan Peirce,M,81.4,82.5,190,202.5,-207.5,202.5,110,-120,-120,110,225,-235,-235,225,537.5,Single-ply,SBD,2
-Lev Susany,M,81.8,82.5,170,-180,-180,170,-140,140,-147.5,140,180,195,-205,195,505,Single-ply,SBD,3
-Nick Perks,M,79.2,82.5,160,170,-180,170,110,-115,-115,110,175,185,-190,185,465,Single-ply,SBD,4
-Terry Power,M,88.8,90,210,225,230,230,120,130,135,135,230,250,-255,250,615,Single-ply,SBD,1
-Graeme Homewood,M,89.8,90,215,225,,225,120,127.5,135,135,210,220,-225,220,580,Single-ply,SBD,2
-Pavel Košnar,M,98.6,100,280,300,310,310,160,170,180,180,-265,265,285,285,775,Single-ply,SBD,1
-Peter Smith,M,123.5,125,260,280,287.5,287.5,165,-170,170,170,285,302.5,-307.5,302.5,760,Single-ply,SBD,1
-Graham Thomson,M,130.7,125+,260,275,-285,275,200,210,-220,210,275,285,295,295,780,Single-ply,SBD,1
-Jordan Wong,M,59.4,60,,,,,80,-90,-95,80,,,,,80,Single-ply,B,1
-Fred Litchfield,M,61.7,67.5,,,,,95,-100,-106.5,95,,,,,95,Single-ply,B,1
-Takahiro Amano,M,67.4,67.5,,,,,-205,-210,-210,,,,,,,Single-ply,B,DQ
-Jorra Sinott,M,72.3,75,,,,,75,80,-85,80,,,,,80,Single-ply,B,1
-Peter Pierre,M,125,125,,,,,-160,-160,-160,,,,,,,Single-ply,B,DQ
+Name,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Place,Division
+Julie Marshall,F,50.7,52,85,100,110,110,45,50,-55,50,80,-105,-105,80,240,Single-ply,SBD,1,Open
+Lisa Stokes,F,55.8,56,110,115,-117.5,115,65,70,-72.5,70,132.5,-137.5,137.5,137.5,322.5,Single-ply,SBD,1,Open
+Helen Allen,F,55.2,56,-102.5,102.5,112.5,112.5,57.5,-62.5,-62.5,57.5,142.5,150,-156,150,320,Single-ply,SBD,2,Open
+Alexandra Tunnock,F,58.2,60,110,115,-117.5,115,72.5,77.5,-80,77.5,115,122.5,130,130,322.5,Single-ply,SBD,1,Open
+Kerry Ann Smith,F,57.1,60,85,95,-100,95,62.5,65,67.5,67.5,105,112.5,117.5,117.5,280,Single-ply,SBD,2,Open
+Browyn Evans,F,89.7,90,90,110,-115,110,55,60,62.5,62.5,100,112.5,120,120,292.5,Single-ply,SBD,1,Open
+Theo Lagis,M,60,60,185,192.5,197.5,197.5,110,-115,115,115,230,-236,-236,230,542.5,Single-ply,SBD,1,Open
+Rod Williams,M,82,82.5,175,185,195,195,122.5,130,132.5,132.5,200,210,220,220,547.5,Single-ply,SBD,1,Open
+Alan Peirce,M,81.4,82.5,190,202.5,-207.5,202.5,110,-120,-120,110,225,-235,-235,225,537.5,Single-ply,SBD,2,Open
+Lev Susany,M,81.8,82.5,170,-180,-180,170,-140,140,-147.5,140,180,195,-205,195,505,Single-ply,SBD,3,Open
+Nick Perks,M,79.2,82.5,160,170,-180,170,110,-115,-115,110,175,185,-190,185,465,Single-ply,SBD,4,Open
+Terry Power,M,88.8,90,210,225,230,230,120,130,135,135,230,250,-255,250,615,Single-ply,SBD,1,Open
+Graeme Homewood,M,89.8,90,215,225,,225,120,127.5,135,135,210,220,-225,220,580,Single-ply,SBD,2,Open
+Pavel Košnar,M,98.6,100,280,300,310,310,160,170,180,180,-265,265,285,285,775,Single-ply,SBD,1,Open
+Peter Smith,M,123.5,125,260,280,287.5,287.5,165,-170,170,170,285,302.5,-307.5,302.5,760,Single-ply,SBD,1,Open
+Graham Thomson,M,130.7,125+,260,275,-285,275,200,210,-220,210,275,285,295,295,780,Single-ply,SBD,1,Open
+Jordan Wong,M,59.4,60,,,,,80,-90,-95,80,,,,,80,Single-ply,B,1,Open
+Fred Litchfield,M,61.7,67.5,,,,,95,-100,-106.5,95,,,,,95,Single-ply,B,1,Open
+Takahiro Amano,M,67.4,67.5,,,,,-205,-210,-210,,,,,,,Single-ply,B,DQ,Open
+Jorra Sinott,M,72.3,75,,,,,75,80,-85,80,,,,,80,Single-ply,B,1,Open
+Peter Pierre,M,125,125,,,,,-160,-160,-160,,,,,,,Single-ply,B,DQ,Open

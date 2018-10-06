@@ -1,29 +1,29 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,TJ Olympia Zlín A,Marek Žák,1981,79.6,265,175,260,700,Single-ply,SBD,M
-1,TJ Olympia Zlín A,Miroslav Hejda,1978,114,310,225,325,860,Single-ply,SBD,M
-1,TJ Olympia Zlín A,Milan Špingl,1980,145.4,425,285,335,1045,Single-ply,SBD,M
-1,TJ Olympia Zlín A,Zoltán Kanát,1962,117,300,255,290,845,Single-ply,SBD,M
-2,KST Jihalva,David Lupáč,1991,128.6,400,245,320,965,Single-ply,SBD,M
-2,KST Jihalva,Filip Sobotka,1993,103.9,310,215,295,820,Single-ply,SBD,M
-2,KST Jihalva,Tadeáš Kronovetr,1993,84.5,270,182.5,240,692.5,Single-ply,SBD,M
-2,KST Jihalva,Tomáš Šárik,1975,110,345,240,342.5,927.5,Single-ply,SBD,M
-3,TJ Sokol Nymburk A,Zbyněk Krejča,1974,118.2,335,272.5,302.5,910,Single-ply,SBD,M
-3,TJ Sokol Nymburk A,Jaromír Sršeň,1974,97.7,290,230,295,815,Single-ply,SBD,M
-3,TJ Sokol Nymburk A,Pavol Demčák,1977,119,345,270,275,890,Single-ply,SBD,M
-3,TJ Sokol Nymburk A,Tomaš Břinčil,1977,112.4,270,195,285,750,Single-ply,SBD,M
-4,KST Kuřim,Pavel Župka,1984,99.8,290,207.5,280,777.5,Single-ply,SBD,M
-4,KST Kuřim,Vladimír Pop,1975,116.7,320,215,270,805,Single-ply,SBD,M
-4,KST Kuřim,Jakub Koten,1991,82.5,272.5,177.5,230,680,Single-ply,SBD,M
-4,KST Kuřim,Lukáš Tkadlec,1989,82,280,215,250,745,Single-ply,SBD,M
-5,TJ Sokol Nymburk B,Karel Ruso,1965,68.5,262.5,105,240,607.5,Single-ply,SBD,M
-5,TJ Sokol Nymburk B,Jaroslav Jirout,1980,121.5,310,200,285,795,Single-ply,SBD,M
-5,TJ Sokol Nymburk B,Marcel Rösler,1976,75.4,220,155,240,615,Single-ply,SBD,M
-5,TJ Sokol Nymburk B,Jan Pinc,1973,121.2,290,230,260,780,Single-ply,SBD,M
-6,TJ Svitavy,Petr Theuser,1961,102,330,220,300,850,Single-ply,SBD,M
-6,TJ Svitavy,Tomáš Lacko,1982,78.2,257.5,167.5,245,670,Single-ply,SBD,M
-6,TJ Svitavy,Libor Novák,1966,81.2,215,162.5,225,602.5,Single-ply,SBD,M
-6,TJ Svitavy,Marek Hejtmánek,1973,82.6,220,150,220,590,Single-ply,SBD,M
-7,TJ Olympia Zlín B,Michal Krček,1978,102.9,275,195,277.5,747.5,Single-ply,SBD,M
-7,TJ Olympia Zlín B,Pavel Kaňák,1985,152.9,270,210,305,785,Single-ply,SBD,M
-7,TJ Olympia Zlín B,Kamil Večeřa,1978,81.3,240,150,240,630,Single-ply,SBD,M
-7,TJ Olympia Zlín B,Marián Odler,1988,118.1,280,170,270,720,Single-ply,SBD,M
+Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,TJ Olympia Zlín A,Marek Žák,1981,79.6,265,175,260,700,Single-ply,SBD,M,Open
+1,TJ Olympia Zlín A,Miroslav Hejda,1978,114,310,225,325,860,Single-ply,SBD,M,Open
+1,TJ Olympia Zlín A,Milan Špingl,1980,145.4,425,285,335,1045,Single-ply,SBD,M,Open
+1,TJ Olympia Zlín A,Zoltán Kanát,1962,117,300,255,290,845,Single-ply,SBD,M,Open
+2,KST Jihalva,David Lupáč,1991,128.6,400,245,320,965,Single-ply,SBD,M,Open
+2,KST Jihalva,Filip Sobotka,1993,103.9,310,215,295,820,Single-ply,SBD,M,Open
+2,KST Jihalva,Tadeáš Kronovetr,1993,84.5,270,182.5,240,692.5,Single-ply,SBD,M,Open
+2,KST Jihalva,Tomáš Šárik,1975,110,345,240,342.5,927.5,Single-ply,SBD,M,Open
+3,TJ Sokol Nymburk A,Zbyněk Krejča,1974,118.2,335,272.5,302.5,910,Single-ply,SBD,M,Open
+3,TJ Sokol Nymburk A,Jaromír Sršeň,1974,97.7,290,230,295,815,Single-ply,SBD,M,Open
+3,TJ Sokol Nymburk A,Pavol Demčák,1977,119,345,270,275,890,Single-ply,SBD,M,Open
+3,TJ Sokol Nymburk A,Tomaš Břinčil,1977,112.4,270,195,285,750,Single-ply,SBD,M,Open
+4,KST Kuřim,Pavel Župka,1984,99.8,290,207.5,280,777.5,Single-ply,SBD,M,Open
+4,KST Kuřim,Vladimír Pop,1975,116.7,320,215,270,805,Single-ply,SBD,M,Open
+4,KST Kuřim,Jakub Koten,1991,82.5,272.5,177.5,230,680,Single-ply,SBD,M,Open
+4,KST Kuřim,Lukáš Tkadlec,1989,82,280,215,250,745,Single-ply,SBD,M,Open
+5,TJ Sokol Nymburk B,Karel Ruso,1965,68.5,262.5,105,240,607.5,Single-ply,SBD,M,Open
+5,TJ Sokol Nymburk B,Jaroslav Jirout,1980,121.5,310,200,285,795,Single-ply,SBD,M,Open
+5,TJ Sokol Nymburk B,Marcel Rösler,1976,75.4,220,155,240,615,Single-ply,SBD,M,Open
+5,TJ Sokol Nymburk B,Jan Pinc,1973,121.2,290,230,260,780,Single-ply,SBD,M,Open
+6,TJ Svitavy,Petr Theuser,1961,102,330,220,300,850,Single-ply,SBD,M,Open
+6,TJ Svitavy,Tomáš Lacko,1982,78.2,257.5,167.5,245,670,Single-ply,SBD,M,Open
+6,TJ Svitavy,Libor Novák,1966,81.2,215,162.5,225,602.5,Single-ply,SBD,M,Open
+6,TJ Svitavy,Marek Hejtmánek,1973,82.6,220,150,220,590,Single-ply,SBD,M,Open
+7,TJ Olympia Zlín B,Michal Krček,1978,102.9,275,195,277.5,747.5,Single-ply,SBD,M,Open
+7,TJ Olympia Zlín B,Pavel Kaňák,1985,152.9,270,210,305,785,Single-ply,SBD,M,Open
+7,TJ Olympia Zlín B,Kamil Večeřa,1978,81.3,240,150,240,630,Single-ply,SBD,M,Open
+7,TJ Olympia Zlín B,Marián Odler,1988,118.1,280,170,270,720,Single-ply,SBD,M,Open

@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex
-1,Václav Jaremczuk,1963,85,Sokol Těškovice,230,150,257.5,637.5,Single-ply,SBD,M
-1,Pavel Schaumann,1972,80.5,Sokol Těškovice,242.5,135,250,627.5,Single-ply,SBD,M
-1,Radim Hořínek,1975,84,Sokol Těškovice,177.5,132.5,220,530,Single-ply,SBD,M
-1,Josef Sýkora,1969,58.5,Sokol Těškovice,125,80,165,370,Single-ply,SBD,M
-2,Jiří Gajdošík,1962,69,TJ Olympia Zlín,165,117.5,187.5,470,Single-ply,SBD,M
-2,Petr Zámečník,1966,72,TJ Olympia Zlín,175,130,235,540,Single-ply,SBD,M
-2,Vlastimol Peterka,1975,68,TJ Olympia Zlín,165,102.5,210,477.5,Single-ply,SBD,M
-2,Pavel Chovanec,1973,101.5,TJ Olympia Zlín,180,127.5,247.5,555,Single-ply,SBD,M
-3,Petr Gracias,1971,74,TJ Lokomotiva Krnov,165,120,202.5,487.5,Single-ply,SBD,M
-3,Kostas Ziakas,1966,72,TJ Lokomotiva Krnov,160,97.5,192.5,450,Single-ply,SBD,M
-3,Josef Synek,1966,82.5,TJ Lokomotiva Krnov,182.5,112.5,205,500,Single-ply,SBD,M
-3,Ladislav Rolný,1948,66.5,TJ Lokomotiva Krnov,160,107.5,192.5,460,Single-ply,SBD,M
-4,Pavel Pláteník,1974,74.5,Sokol Vranovice,210,120,212.5,542.5,Single-ply,SBD,M
-4,Jiří Furch,1975,59,Sokol Vranovice,130,85,165,380,Single-ply,SBD,M
-4,Oldřich Halfar,1973,81,Sokol Vranovice,150,110,222.5,482.5,Single-ply,SBD,M
-4,Petr Richter,1976,67.5,Sokol Vranovice,125,107.5,155,387.5,Single-ply,SBD,M
-5,Zdeněk Krutil,1948,88.5,TJ Bystřice p.H,175,152.5,220,547.5,Single-ply,SBD,M
-5,Jaromír Janečka,1972,84.5,TJ Bystřice p.H,170,112.5,210,492.5,Single-ply,SBD,M
-5,František Charvát,1973,86.5,TJ Bystřice p.H,160,125,202.5,487.5,Single-ply,SBD,M
-5,Karel Sedlář,1971,77.5,TJ Bystřice p.H,140,110,185,435,Single-ply,SBD,M
-6,Milan Babuněk,1973,80,TJ Třebíč.,165,107.5,200,472.5,Single-ply,SBD,M
-6,Vilém Neděla,1976,76,TJ Třebíč.,150,100,190,440,Single-ply,SBD,M
-6,Jan Pokorný,1973,76,TJ Třebíč.,125,105,175,405,Single-ply,SBD,M
-6,Roman Oborný,1975,72.5,TJ Třebíč.,160,115,180,455,Single-ply,SBD,M
+Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Václav Jaremczuk,1963,85,Sokol Těškovice,230,150,257.5,637.5,Single-ply,SBD,M,Open
+1,Pavel Schaumann,1972,80.5,Sokol Těškovice,242.5,135,250,627.5,Single-ply,SBD,M,Open
+1,Radim Hořínek,1975,84,Sokol Těškovice,177.5,132.5,220,530,Single-ply,SBD,M,Open
+1,Josef Sýkora,1969,58.5,Sokol Těškovice,125,80,165,370,Single-ply,SBD,M,Open
+2,Jiří Gajdošík,1962,69,TJ Olympia Zlín,165,117.5,187.5,470,Single-ply,SBD,M,Open
+2,Petr Zámečník,1966,72,TJ Olympia Zlín,175,130,235,540,Single-ply,SBD,M,Open
+2,Vlastimol Peterka,1975,68,TJ Olympia Zlín,165,102.5,210,477.5,Single-ply,SBD,M,Open
+2,Pavel Chovanec,1973,101.5,TJ Olympia Zlín,180,127.5,247.5,555,Single-ply,SBD,M,Open
+3,Petr Gracias,1971,74,TJ Lokomotiva Krnov,165,120,202.5,487.5,Single-ply,SBD,M,Open
+3,Kostas Ziakas,1966,72,TJ Lokomotiva Krnov,160,97.5,192.5,450,Single-ply,SBD,M,Open
+3,Josef Synek,1966,82.5,TJ Lokomotiva Krnov,182.5,112.5,205,500,Single-ply,SBD,M,Open
+3,Ladislav Rolný,1948,66.5,TJ Lokomotiva Krnov,160,107.5,192.5,460,Single-ply,SBD,M,Open
+4,Pavel Pláteník,1974,74.5,Sokol Vranovice,210,120,212.5,542.5,Single-ply,SBD,M,Open
+4,Jiří Furch,1975,59,Sokol Vranovice,130,85,165,380,Single-ply,SBD,M,Open
+4,Oldřich Halfar,1973,81,Sokol Vranovice,150,110,222.5,482.5,Single-ply,SBD,M,Open
+4,Petr Richter,1976,67.5,Sokol Vranovice,125,107.5,155,387.5,Single-ply,SBD,M,Open
+5,Zdeněk Krutil,1948,88.5,TJ Bystřice p.H,175,152.5,220,547.5,Single-ply,SBD,M,Open
+5,Jaromír Janečka,1972,84.5,TJ Bystřice p.H,170,112.5,210,492.5,Single-ply,SBD,M,Open
+5,František Charvát,1973,86.5,TJ Bystřice p.H,160,125,202.5,487.5,Single-ply,SBD,M,Open
+5,Karel Sedlář,1971,77.5,TJ Bystřice p.H,140,110,185,435,Single-ply,SBD,M,Open
+6,Milan Babuněk,1973,80,TJ Třebíč.,165,107.5,200,472.5,Single-ply,SBD,M,Open
+6,Vilém Neděla,1976,76,TJ Třebíč.,150,100,190,440,Single-ply,SBD,M,Open
+6,Jan Pokorný,1973,76,TJ Třebíč.,125,105,175,405,Single-ply,SBD,M,Open
+6,Roman Oborný,1975,72.5,TJ Třebíč.,160,115,180,455,Single-ply,SBD,M,Open

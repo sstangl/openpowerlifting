@@ -1,10 +1,10 @@
-Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event
-1,Leah Richardson,1984,F,62.6,80,90,-95,90,45,50,55,55,100,-112.5,-112.5,100,245,Raw,63,SBD
-1,Prue Pearson,1993,F,65.9,95,100,102.5,102.5,42.5,45,-50,45,135,140,142.5,142.5,290,Raw,72,SBD
-1,Gary Young,1983,M,73.5,192.5,200,,200,135,145,150,150,220,-230,230,230,580,Raw,74,SBD
-DQ,Geoff Lewis,1948,M,73.1,-105,-105,-105,,77.5,80,-82.5,80,140,-145,145,145,,Raw,74,SBD
-1,Leroi Williams,1990,M,82.5,-150,155,-167.5,155,100,110,115,115,170,180,-185,180,450,Raw,83,SBD
-1,Terence Taukave,1992,M,88.8,225,235,240,240,150,155,160,160,260,-270,-270,260,660,Raw,93,SBD
-1,Chris Smith,1985,M,97.2,180,190,200,200,145,155,162.5,162.5,210,230,245,245,607.5,Raw,105,SBD
-1,Lolita Lewis,1948,F,69.4,,,,,30,32.5,35,35,,,,,35,Raw,72,B
-1,Gordon Thorogood,1964,M,92.6,,,,,95,-102.5,-102.5,95,,,,,95,Single-ply,93,B
+Place,Name,BirthYear,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,WeightClassKg,Event,Division
+1,Leah Richardson,1984,F,62.6,80,90,-95,90,45,50,55,55,100,-112.5,-112.5,100,245,Raw,63,SBD,Open
+1,Prue Pearson,1993,F,65.9,95,100,102.5,102.5,42.5,45,-50,45,135,140,142.5,142.5,290,Raw,72,SBD,Open
+1,Gary Young,1983,M,73.5,192.5,200,,200,135,145,150,150,220,-230,230,230,580,Raw,74,SBD,Open
+DQ,Geoff Lewis,1948,M,73.1,-105,-105,-105,,77.5,80,-82.5,80,140,-145,145,145,,Raw,74,SBD,Open
+1,Leroi Williams,1990,M,82.5,-150,155,-167.5,155,100,110,115,115,170,180,-185,180,450,Raw,83,SBD,Open
+1,Terence Taukave,1992,M,88.8,225,235,240,240,150,155,160,160,260,-270,-270,260,660,Raw,93,SBD,Open
+1,Chris Smith,1985,M,97.2,180,190,200,200,145,155,162.5,162.5,210,230,245,245,607.5,Raw,105,SBD,Open
+1,Lolita Lewis,1948,F,69.4,,,,,30,32.5,35,35,,,,,35,Raw,72,B,Open
+1,Gordon Thorogood,1964,M,92.6,,,,,95,-102.5,-102.5,95,,,,,95,Single-ply,93,B,Open
