@@ -250,6 +250,36 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_column_birthyear(s: &str, meet: Option<&Meet>, line: u64, report: &mut Report) {
+    if s.is_empty() {
+        return;
+    }
+
+    match s.parse::<u32>() {
+        Ok(year) => {
+            if year < 1000 || year > 9999 {
+                report.error_on(line, format!("BirthYear '{}' must have 4 digits", year));
+            }
+
+            // Compare the BirthYear to the meet date for some basic sanity checks.
+            match meet {
+                Some(m) => {
+                    if year > m.date.year() - 4 || m.date.year() - year > 98 {
+                        report.error_on(
+                            line,
+                            format!("BirthYear '{}' looks implausible", year),
+                        );
+                    }
+                }
+                None => {}
+            }
+        }
+        Err(_) => {
+            report.error_on(line, format!("BirthYear '{}' must be a number", s));
+        }
+    }
+}
+
 fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut Report) {
     if s.is_empty() {
         return;
@@ -260,9 +290,12 @@ fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut R
             match meet {
                 Some(m) => {
                     if birthday.year() >= m.date.year() - 4
-                        || m.date.year() - birthday.year() >= 95
+                        || m.date.year() - birthday.year() > 98
                     {
-                        report.error_on(line, format!("BirthDay '{}' looks invalid", s));
+                        report.error_on(
+                            line,
+                            format!("BirthDay '{}' looks implausible", s),
+                        );
                     }
                 }
                 None => {}
@@ -1073,6 +1106,9 @@ where
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
             check_column_cyrillicname(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::BirthYear) {
+            check_column_birthyear(&record[idx], meet, line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthDay) {
             check_column_birthday(&record[idx], meet, line, &mut report);

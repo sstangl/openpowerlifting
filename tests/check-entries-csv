@@ -147,30 +147,6 @@ def check_column_name(s, row, csv):
         pwarning("Fix name casing: \"%s\"" % s)
 
 
-def check_column_division(s, row, csv):
-    if s.strip() != s or '  ' in s:
-        pwarning("Too much spacing for division: \"%s\"" % s)
-
-    if '"' in s:
-        perror("Illegal use of quote in division: %s" % s)
-
-    low = s.lower()
-
-    if 'raw' in low or 'single' in low or 'multi' in low or 'classic' in low:
-        pwarning('Division includes equipment: "%s"' % s)
-
-    if is_int(s.split()[0]) or 'SHW' in s:
-        pwarning('Division includes weight class: "%s"' % s)
-
-    if s[-1] is '-':
-        pwarning('Division ends in "-": "%s"' % s)
-
-    if 'guest' in low and 'Place' in csv.fieldnames:
-        if row[csv.index('Place')] not in ['G', 'DQ']:
-            pwarning('Lifter should be guest (Place = "G"): %s' %
-                     row[csv.index('Name')])
-
-
 def check_lift_column(s, row, csv):
     try:
         f = float(s)
@@ -189,18 +165,6 @@ def check_positive_number_column(s, row, csv):
             perror("Field cannot be zero: %s" % s)
     except ValueError:
         perror("Invalid field quantity: %s" % s)
-
-
-def check_column_birthyear(s, row, csv):
-    if len(s) != 4:
-        perror("BirthYear must be 4 digits: '%s'" % s)
-    elif not s.isdigit():
-        perror("BirthYear must be digits: '%s'" % s)
-    elif s[0] != '1' and s[0] != '2':
-        pwarning("BirthYear looks implausible: '%s'" % s)
-    else:
-        if int(s) <= 1900 or int(s) >= 2014:  # Needs updating now and then.
-            pwarning("BirthYear looks implausible: '%s'" % s)
 
 
 def check_row_weightclass(row, csv, weightclasses):
@@ -270,7 +234,7 @@ HeaderHandlers = {
     'Age': ignore_column,
     'Place': ignore_column,
     'Event': ignore_column,
-    'Division': check_column_division,
+    'Division': ignore_column,
     'Equipment': ignore_column,
     'SquatEquipment': ignore_column,
     'BenchEquipment': ignore_column,
@@ -278,7 +242,7 @@ HeaderHandlers = {
 
 
     # Temporary column for IPF, to be calculated as Age during compilation.
-    'BirthYear': check_column_birthyear,
+    'BirthYear': ignore_column,
     'BirthDay': ignore_column,
 
     # Stat columns. Only Kg is valid.
