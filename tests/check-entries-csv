@@ -849,30 +849,6 @@ def check_row_ageclass(row, csv):
                              (row[csv.index('Name')], ageclass))
 
 
-def check_row_equipment_year(row, csv, meet_year):
-    if 'Equipment' not in csv.fieldnames or not meet_year:
-        return
-
-    eqpidx = csv.index('Equipment')
-    eventidx = csv.index('Event')
-    equipment = row[eqpidx]
-    event = row[eventidx]
-    if equipment == 'Single-ply':
-        if 'S' in event and meet_year < 1977:
-            pwarning("Lifter %s has a single-ply squat pre 1977. "
-                     "Add an exception to the config?" %
-                     (row[csv.index('Name')]))
-        elif event in ['B', 'BD'] and meet_year < 1985:
-            pwarning("Lifter %s has a single-ply bench pre 1985. "
-                     "Add an exception to the config?" %
-                     (row[csv.index('Name')]))
-        # Need to find out when the deadlift suit was invented
-        # elif event == 'D' and meet_year < ????:
-        #     pwarning("Lifter %s has a single-ply deadlift pre ????. "\
-        #         "Add an exception to the config?" %
-        #              (row[csv.index('Name')]))
-
-
 def check_row(row, csv, configtoml, meet_date, meet_id):
     check_row_name_consistency(row, csv)
     check_row_event_consistency(row, csv)
@@ -937,10 +913,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                 row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
             check_row_lift_order(
                 row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
-        if (meet_id not in configtoml["exemptions"]
-                or "check_row_equipment_year"
-                not in configtoml["exemptions"][meet_id]):
-            check_row_equipment_year(row, csv, meet_year)
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)
         check_row_weightclass_consistency(row, csv, None)
@@ -953,8 +925,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
             row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
         check_row_weightclass(row, csv, None)
-
-        check_row_equipment_year(row, csv, meet_year)
 
     check_row_total_consistency(row, csv)
 

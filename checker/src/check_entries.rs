@@ -816,6 +816,92 @@ fn check_attempt_consistency(
     );
 }
 
+/// Checks that gear wasn't used prior to its date of invention.
+fn check_equipment_year(
+    entry: &Entry,
+    meet: Option<&Meet>,
+    line: u64,
+    report: &mut Report,
+) {
+    // Helper function for checking equipped status.
+    fn is_equipped(e: Option<Equipment>) -> bool {
+        e.map_or(false, |eq| match eq {
+            Equipment::Raw | Equipment::Wraps | Equipment::Straps => false,
+            Equipment::Single | Equipment::Multi => true,
+        })
+    }
+
+    // Inelegant unwrapping.
+    let date = match meet.and_then(|m| Some(&m.date)) {
+        Some(d) => d,
+        None => {
+            return;
+        }
+    };
+    let event = match entry.event {
+        Some(e) => e,
+        None => {
+            return;
+        }
+    };
+
+    // Years of equipment invention.
+    let squat_suit_invention_year = 1977;
+    let bench_shirt_invention_year = 1985;
+
+    // TODO: This is just a safe value.
+    // Need to figure out when deadlift suits were invented.
+    let deadlift_suit_invention_year = 1980;
+
+    // Check that squat equipment isn't listed before its invention.
+    if date.year() < squat_suit_invention_year
+        && (is_equipped(entry.squat_equipment)
+            || (event.has_squat() && is_equipped(entry.equipment)))
+    {
+        report.error_on(
+            line,
+            format!(
+                "Squat equipment wasn't invented until {}",
+                squat_suit_invention_year
+            ),
+        );
+    }
+
+    // Check that bench equipment isn't listed before its invention.
+    // TODO: This avoids conflation with the squat equipment.
+    if date.year() < bench_shirt_invention_year
+        && (is_equipped(entry.bench_equipment)
+            || (event.has_bench()
+                && !event.has_squat()
+                && is_equipped(entry.equipment)))
+    {
+        report.error_on(
+            line,
+            format!(
+                "Bench shirts weren't invented until {}",
+                bench_shirt_invention_year
+            ),
+        );
+    }
+
+    // Check that deadlift equipment isn't listed before its invention.
+    // TODO: This avoids conflation with the squat equipment.
+    if date.year() < deadlift_suit_invention_year
+        && (is_equipped(entry.deadlift_equipment)
+            || (event.has_deadlift()
+                && !event.has_squat()
+                && is_equipped(entry.equipment)))
+    {
+        report.error_on(
+            line,
+            format!(
+                "Deadlift suits weren't invented until {}",
+                deadlift_suit_invention_year
+            ),
+        );
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -998,6 +1084,7 @@ where
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
         check_attempt_consistency(&entry, exempt_lift_order, line, &mut report);
+        check_equipment_year(&entry, meet, line, &mut report);
     }
 
     Ok(report)
