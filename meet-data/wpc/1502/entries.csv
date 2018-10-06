@@ -18,8 +18,8 @@ Mina Atef Ibrahim,26,SBD,M,Single-ply,M_OES_AWPC,119.3,125,230,250,-260,,250,200
 Mohamed Ahmed Mohamed Elsaid Mourad,19,SBD,M,Single-ply,M_TES_3_AWPC,60,60,120,140,-150,,140,85,92.5,100,,100,160,180,190,-200,190,430,Egypt,,1
 Mohamed Said Youssef Mohamed,43,SBD,M,Single-ply,M_MES_1_AWPC,125.3,140,300,320,340,,340,160,200,,,200,200,-300,,,200,740,Egypt,,1
 Mohamed Said Youssef Mohamed,43,SBD,M,Single-ply,M_OES_AWPC,125.3,140,300,320,340,,340,160,200,-210,,200,200,-300,,,200,740,Egypt,,1
-Mohamed Yasser Mohamed Menaissy,17,SBD,M,Single-ply,M_TES_2_AWPC,60,60,145,-155,155,,155,-110,-115,115,,115,150,170,175,,175,445,Egypt,,1
-Mohamed Yasser Mohamed Menaissy,17,SBD,M,Single-ply,M_OES_AWPC,60,60,145,-155,155,,155,-110,-115,115,,115,150,170,175,,175,445,Egypt,,1
+Mohamed Menaissy,17,SBD,M,Single-ply,M_TES_2_AWPC,60,60,145,-155,155,,155,-110,-115,115,,115,150,170,175,,175,445,Egypt,,1
+Mohamed Menaissy,17,SBD,M,Single-ply,M_OES_AWPC,60,60,145,-155,155,,155,-110,-115,115,,115,150,170,175,,175,445,Egypt,,1
 Mostafa Osama Mostafa Anan,19,SBD,M,Single-ply,M_TES_3_AWPC,119.1,125,-180,180,200,220,200,-140,-140,140,,140,230,-255,-255,,230,570,Egypt,,1
 Mostafa Osama Mostafa Anan,19,SBD,M,Single-ply,M_OES_AWPC,119.1,125,-180,180,200,220,200,-140,-140,140,,140,230,-255,-255,,230,570,Egypt,,4
 Rich Flores,77,SBD,M,Multi-ply,M_MEM_8_AWPC,72.6,75,130,152.5,160,,160,62.5,70,75,,75,157.5,180,190,,190,425,USA,,1
@@ -73,7 +73,7 @@ Maresa Lee,20,SBD,F,Raw,F_JR_AWPC,84.5,90,117.5,125,132.5,,132.5,52.5,57.5,62.5,
 Megan O'Mahony,33,SBD,F,Raw,F_OR_AWPC,89,90,110,120,-130,,120,65,-70,70,,70,137.5,142.5,-155,,142.5,332.5,USA,,2
 Megan O'Mahony,33,SBD,F,Raw,F_SR_AWPC,89,90,110,120,-130,,120,65,-70,70,,70,137.5,142.5,-155,,142.5,332.5,USA,,1
 Mohamed Mourad,19,SBD,M,Raw,M_TR_3_AWPC,61,67.5,120,125,132.5,,132.5,85,90,95,,95,160,180,-200,,180,407.5,Egypt,,1
-Mohamed Yasser Mohamed Menaissy,17,SBD,M,Raw,M_TR_2_AWPC,59.9,60,90,110,120,,120,90,-105,105,,105,140,-175,175,,175,400,Egypt,,1
+Mohamed Menaissy,17,SBD,M,Raw,M_TR_2_AWPC,59.9,60,90,110,120,,120,90,-105,105,,105,140,-175,175,,175,400,Egypt,,1
 Mostafa Osama Mostafa Anan,19,SBD,M,Raw,M_TR_3_AWPC,118.8,125,140,160,180,,180,100,110,-120,,110,225,240,-252.5,,240,530,Egypt,,1
 Rebecca Drury,22,SBD,F,Raw,F_JR_AWPC,65.7,67.5,82.5,87.5,-92.5,,87.5,52.5,57.5,-60,,57.5,112.5,120,125,,125,270,Canada,,1
 Sheryl Shockley,58,SBD,F,Raw,F_MR_4_AWPC,77,82.5,82.5,87.5,92.5,-97.5,92.5,45,47.5,-50,,47.5,120,125,137.5,,137.5,277.5,USA,,1
@@ -88,7 +88,7 @@ Jacob Neumann,15,B,M,Raw,M_TR_1_AWPC,96.7,100,,,,,,52.5,62.5,70,,70,,,,,,70,USA,
 Linda Koos,60,B,F,Multi-ply,F_MEM_5_AWPC,97.7,90+,,,,,,35,-55,55,60,55,,,,,,55,USA,,1
 Linda Koos,60,B,F,Raw,F_MR_5_AWPC,97.7,90+,,,,,,35,,47.5,-52.5,47.5,,,,,,47.5,USA,,1
 Mohamed Mourad,19,B,M,Raw,M_TR_3_AWPC,61,67.5,,,,,,85,90,95,,95,,,,,,95,Egypt,,1
-Mohamed Yasser Mohamed Menaissy,17,B,M,Raw,M_TR_2_AWPC,59.9,60,,,,,,90,-105,105,,105,,,,,,105,Egypt,,1
+Mohamed Menaissy,17,B,M,Raw,M_TR_2_AWPC,59.9,60,,,,,,90,-105,105,,105,,,,,,105,Egypt,,1
 Mostafa Osama Mostafa Anan,19,B,M,Raw,M_TR_3_AWPC,118.8,125,,,,,,100,110,-120,,110,,,,,,110,Egypt,,1
 Sheryl Shockley,58,B,F,Raw,F_MR_4_AWPC,77,82.5,,,,,,45,47.5,-50,,47.5,,,,,,47.5,USA,,1
 Cimmeron Kirk,38,D,F,Raw,F_SR_AWPC,118.3,90+,,,,,,,,,,,155,162.5,167.5,172.5,167.5,167.5,Canada,,1
