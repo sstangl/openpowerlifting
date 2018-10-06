@@ -600,7 +600,6 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
 
     // If the lifter wasn't DQ'd, they should have data from each lift.
-    // TODO: Fix all the warnings and make these all report errors.
     if let Some(place) = entry.place {
         if !place.is_dq() {
             // Allow entries that only have a Total but no lift data.
@@ -871,9 +870,7 @@ fn check_equipment_year(
     // TODO: This avoids conflation with the squat equipment.
     if date.year() < bench_shirt_invention_year
         && (is_equipped(entry.bench_equipment)
-            || (event.has_bench()
-                && !event.has_squat()
-                && is_equipped(entry.equipment)))
+            || (event.has_bench() && !event.has_squat() && is_equipped(entry.equipment)))
     {
         report.error_on(
             line,

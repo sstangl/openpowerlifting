@@ -148,86 +148,6 @@ def check_column_name(s, row, csv):
         pwarning("Fix name casing: \"%s\"" % s)
 
 
-KnownRussianCharacters = \
-    "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" \
-    "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
-
-
-KnownUkrainianCharacters = \
-    "АаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя"
-
-
-# List of UTF-8 characters permitted in the CyrillicName column.
-KnownCyrillicCharacters = \
-    KnownRussianCharacters + KnownUkrainianCharacters \
-    + " -'"
-
-
-def check_column_cyrillicname(s, row, csv):
-    if '  ' in s:
-        perror("CyrillicName has too much spacing: \"%s\"" % s)
-
-    for c in s:
-        if c not in KnownCyrillicCharacters:
-            perror("CyrillicName '%s' doesn't look Cyrillic -- char '%s'" % (s, c))
-            break  # Printing more than one looks annoying.
-
-
-def check_column_sex(s, row, csv):
-    if s != "M" and s != "F":
-        perror("Unknown sex: %s" % s)
-
-
-def check_column_age(s, row, csv):
-    try:
-        age = int(s)
-        if age < 5:  # USPA actually let some 8 year olds compete...
-                    # Then SPF let a 7 year old.
-                    # Then UPA had 6 and 5 year olds... when does this end?
-            pwarning("Age unexpectedly low: %s" % s)
-        if age > 100:
-            pwarning("Age unexpectedly high: %s" % s)
-
-    except ValueError:
-        perror("Age is not a number: %s" % s)
-
-
-def check_column_place(s, row, csv):
-    # DQ = Disqualified
-    # NS = No-show
-    # G  = guest-lifter
-    # DD = disqualified by failing a drug test
-    if s not in ['DQ', 'NS', 'G', 'DD']:
-        try:
-            i = int(s)
-            if i <= 0:
-                perror("Place must be positive integer or known exception: %s" % s)
-        except ValueError:
-            perror("Place is not an integer or known exception: %s" % s)
-
-
-def check_column_event(s, row, csv):
-    found_illegal_char = False
-    found_duplicate_event = False
-    for c in s:
-        if c not in "SBD":
-            found_illegal_char = True
-        if s.count(c) >= 2:
-            found_duplicate_event = True
-
-    if 'S' in s and 'Best3SquatKg' not in csv.fieldnames:
-        perror("Squat event, but no Best3SquatKg")
-    if 'B' in s and 'Best3BenchKg' not in csv.fieldnames:
-        perror("Bench event, but no Best3BenchKg")
-    if 'D' in s and 'Best3DeadliftKg' not in csv.fieldnames:
-        perror("Deadlift event, but no Best3DeadliftKg")
-
-    if found_illegal_char:
-        perror("Unknown event type: %s" % s)
-    if found_duplicate_event:
-        perror("Duplicate event: %s" % s)
-
-
 def check_column_division(s, row, csv):
     if s.strip() != s or '  ' in s:
         pwarning("Too much spacing for division: \"%s\"" % s)
@@ -250,18 +170,6 @@ def check_column_division(s, row, csv):
         if row[csv.index('Place')] not in ['G', 'DQ']:
             pwarning('Lifter should be guest (Place = "G"): %s' %
                      row[csv.index('Name')])
-
-
-def check_column_equipment(s, row, csv):
-    # FIXME: Straps is just for Yury Belkin for the moment. He competed
-    # single-ply.
-    if s not in ['Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Straps']:
-        perror("Unknown equipment value: \"%s\"" % s)
-
-
-def check_column_event_equipment(s, row, csv):
-    if s not in ['', 'Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Straps']:
-        perror("Unknown event equipment value: \"%s\"" % s)
 
 
 def check_lift_column(s, row, csv):
@@ -294,47 +202,6 @@ def check_column_birthyear(s, row, csv):
     else:
         if int(s) <= 1900 or int(s) >= 2014:  # Needs updating now and then.
             pwarning("BirthYear looks implausible: '%s'" % s)
-
-
-def check_column_birthday(s, row, csv):
-    date = s
-    if len(date) != 10 or date.count('-') != 2:
-        perror("BirthDay in wrong format: \"%s\". Must be \"YYYY-MM-DD\"." % date)
-        year = ''
-        month = ''
-        day = ''
-    else:
-        # The split is valid. Check the individual Date components.
-        year, month, day = date.split('-')
-
-        # Make sure the parts are all digits and of the right length.
-        if not year.isdigit() or len(year) != 4:
-            perror("Year is not a number of length 4: \"%s\"." % year)
-        if not month.isdigit() or len(month) != 2:
-            perror("Month is not a number of length 2: \"%s\"." % month)
-        if not day.isdigit() or len(day) != 2:
-            perror("Day is not a number of length 2: \"%s\"." % day)
-
-        # Make sure that the numbers are in a plausible range.
-        year_int = int(year)
-        month_int = int(month)
-        day_int = int(day)
-
-        if year_int < 1860:
-            perror("Implausible year: \"%s\"." % year)
-        if month_int > 12:
-            perror("Implausible month: \"%s\"." % month)
-        if day_int > 31:
-            perror("Implausible day: \"%s\"." % day)
-
-        # Check that the meet date is not in the future
-        future_date = datetime.datetime.today() + datetime.timedelta(days=2)
-        meet_date = datetime.datetime.strptime(
-            date,
-            "%Y-%m-%d"
-        )
-        if meet_date >= future_date:
-            perror("Implausible date: %s is a future date" % date)
 
 
 def check_row_weightclass(row, csv, weightclasses):
@@ -381,24 +248,6 @@ def check_row_weightclass(row, csv, weightclasses):
             pass
 
 
-def check_column_bodyweightkg(s, row, csv):
-    check_positive_number_column(s, row, csv)
-    try:
-        f = float(s)
-
-        is_youth = False
-        if 'Division' in csv.fieldnames:
-            div = row[csv.index('Division')]
-            if 'y' in div.lower():
-                is_youth = True
-
-        # One federation had a pre-teen division where someone weighed ~19kg.
-        if (f < 19 and not is_youth) or f > 300:
-            pwarning("BodyweightKg looks implausible: '%s'" % s)
-    except ValueError:
-        pass
-
-
 def check_column_state(s, row, csv):
     if '  ' in s:
         pwarning("Too much spacing in state: \"%s\"" % s)
@@ -409,61 +258,56 @@ def check_column_state(s, row, csv):
             break
 
 
-def check_column_tested(s, row, csv):
-    if s != '' and s != 'Yes' and s != 'No':
-        perror("Tested column must be blank, 'Yes', or 'No', but found: \"%s\"" % s)
-
-
 def ignore_column(s, row, csv):
     pass
 
 
 HeaderHandlers = {
     'Name': check_column_name,
-    'CyrillicName': check_column_cyrillicname,
+    'CyrillicName': ignore_column,
     'JapaneseName': ignore_column,
     'ChineseName': ignore_column,
-    'Sex': check_column_sex,
-    'Age': check_column_age,
-    'Place': check_column_place,
-    'Event': check_column_event,
+    'Sex': ignore_column,
+    'Age': ignore_column,
+    'Place': ignore_column,
+    'Event': ignore_column,
     'Division': check_column_division,
-    'Equipment': check_column_equipment,
-    'SquatEquipment': check_column_event_equipment,
-    'BenchEquipment': check_column_event_equipment,
-    'DeadliftEquipment': check_column_event_equipment,
+    'Equipment': ignore_column,
+    'SquatEquipment': ignore_column,
+    'BenchEquipment': ignore_column,
+    'DeadliftEquipment': ignore_column,
 
 
     # Temporary column for IPF, to be calculated as Age during compilation.
     'BirthYear': check_column_birthyear,
-    'BirthDay': check_column_birthday,
+    'BirthDay': ignore_column,
 
     # Stat columns. Only Kg is valid.
     'WeightClassKg': ignore_column,
-    'BodyweightKg': check_column_bodyweightkg,
+    'BodyweightKg': ignore_column,
 
     # Lift columns. Only Kg is valid.
-    'Best3SquatKg': check_lift_column,
-    'Squat1Kg': check_lift_column,
-    'Squat2Kg': check_lift_column,
-    'Squat3Kg': check_lift_column,
-    'Squat4Kg': check_lift_column,
+    'Best3SquatKg': ignore_column,
+    'Squat1Kg': ignore_column,
+    'Squat2Kg': ignore_column,
+    'Squat3Kg': ignore_column,
+    'Squat4Kg': ignore_column,
 
-    'Best3BenchKg': check_lift_column,
-    'Bench1Kg': check_lift_column,
-    'Bench2Kg': check_lift_column,
-    'Bench3Kg': check_lift_column,
-    'Bench4Kg': check_lift_column,
+    'Best3BenchKg': ignore_column,
+    'Bench1Kg': ignore_column,
+    'Bench2Kg': ignore_column,
+    'Bench3Kg': ignore_column,
+    'Bench4Kg': ignore_column,
 
-    'Best3DeadliftKg': check_lift_column,
-    'Deadlift1Kg': check_lift_column,
-    'Deadlift2Kg': check_lift_column,
-    'Deadlift3Kg': check_lift_column,
-    'Deadlift4Kg': check_lift_column,
+    'Best3DeadliftKg': ignore_column,
+    'Deadlift1Kg': ignore_column,
+    'Deadlift2Kg': ignore_column,
+    'Deadlift3Kg': ignore_column,
+    'Deadlift4Kg': ignore_column,
 
-    'TotalKg': check_positive_number_column,
+    'TotalKg': ignore_column,
 
-    'Tested': check_column_tested,
+    'Tested': ignore_column,
 
     # Columns that we don't really care about.
     'State': check_column_state,
@@ -665,122 +509,6 @@ def check_row_weightclass_consistency(row, csv, weightclasses):
                        "(USAPL failed to enter bodyweight)" % row[csv.index('Name')])
 
 
-# Check that lifts are in ascending order.
-def check_row_lift_order(row, csv, attemptcols):
-    attempts = []
-    for col in attemptcols:
-        attempt = abs(float2(row[csv.index(col)])
-                      ) if col in csv.fieldnames else 0.0
-        if attempt != 0.0:
-            attempts.append(attempt)
-
-    if attempts != sorted(attempts):
-        pwarning("Lifter \"%s\" has non ascending attempts: %s" %
-                 (row[csv.index('Name')], ''.join(str(attempts))))
-
-    return
-
-# Checks that lifters have not retaken succesful attempts
-
-
-def check_row_success_consistency(row, csv, attemptcols):
-    attempts = []
-    for col in attemptcols:
-        attempt = float2(row[csv.index(col)]) if col in csv.fieldnames else 0.0
-        if attempt != 0.0:
-            attempts.append(attempt)
-
-    if len(attempts) < 2:
-        return
-
-    for ii in range(0, len(attempts) - 1):
-        following_attempts = [abs(x) for x in attempts[(ii + 1):]]
-        attempt = attempts[ii]
-
-        if attempts[ii] in following_attempts:
-            pwarning("Lifter \"%s\" has retaken successful attempt(s): %s" %
-                     (row[csv.index('Name')], ''.join(str(attempts))))
-
-    return
-
-
-def check_row_lift_consistency(row, csv, bestcol, attemptcols):
-    ''' Checks that Best3FooKg is actually the best of
-        (Foo1Kg, Foo2Kg, Foo3Kg), if present.'''
-    if bestcol not in csv.fieldnames:
-        return
-
-    # If the lifter was disqualified for doping, none of the attempts count.
-    if 'Place' in csv.fieldnames and row[csv.index('Place')] == 'DD':
-        return
-
-    attempts = []
-    for col in attemptcols:
-        attempt = float2(row[csv.index(col)]) if col in csv.fieldnames else 0.0
-        attempts.append(attempt)
-
-    best = max(attempts)
-
-    # If attempts aren't provided, then the best column is believed.
-    if best == 0:
-        return
-
-    # If the lifter bombed, the best column should be empty.
-    if best < 0:
-        if row[csv.index(bestcol)] != '':
-            perror("Lifter \"%s\" bombed on a lift, but column %s is not empty." %
-                   (row[csv.index('Name')], bestcol))
-        return
-
-    if best != float2(row[csv.index(bestcol)]):
-        perror("Entry for \"%s\" in column %s does not match attempts: "
-               "expected %s, got %s" %
-               (row[csv.index('Name')], bestcol, str(best), row[csv.index(bestcol)]))
-
-
-def check_row_total_consistency(row, csv):
-    if 'TotalKg' not in csv.fieldnames:
-        return
-
-    total = float2(row[csv.index('TotalKg')])
-    squat = float2(row[csv.index('Best3SquatKg')]
-                   ) if 'Best3SquatKg' in csv.fieldnames else 0
-    bench = float2(row[csv.index('Best3BenchKg')]
-                   ) if 'Best3BenchKg' in csv.fieldnames else 0
-    deadl = float2(row[csv.index('Best3DeadliftKg')]
-                   ) if 'Best3DeadliftKg' in csv.fieldnames else 0
-
-    # Disqualified, didn't finish the meet, etc.
-    if total <= 0:  # Should be zero.
-        if 'Place' in csv.fieldnames:
-            place = row[csv.index('Place')]
-            if place != 'DQ' and place != 'DD' and place != 'NS':
-                pwarning("Lifter has no total, but not marked DQ: \"%s\"" %
-                         row[csv.index('Name')])
-        return
-
-    # Federation only reported partial data -- SBD, but only B data.
-    if 'Event' in csv.fieldnames:
-        event = row[csv.index('Event')]
-        if 'S' in event and squat == 0:
-            return
-        if 'B' in event and bench == 0:
-            return
-        if 'D' in event and deadl == 0:
-            return
-
-    # Most federations round to 0.01, so rounding errors get introduced.
-    # Only flag the ones that are obviously wrong, otherwise, believe the
-    # federation.
-    if squat + bench + deadl == 0:
-        # Ignore that one RUPC meet that forgot to record what people lifted.
-        return
-    if abs(squat + bench + deadl - total) > 0.5:
-        perror("Total error: Calculated %f, but meet says %f" %
-               (squat + bench + deadl, total))
-        perror(" For row: %s" % row)
-
-
 def check_row_division(row, csv, divisions, meetyear):
     if 'Division' not in csv.fieldnames:
         return
@@ -905,42 +633,11 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                 or "check_row_weightclass_consistency"
                 not in configtoml["exemptions"][meet_id]):
             check_row_weightclass_consistency(row, csv, weight_classes)
-        if (meet_id not in configtoml["exemptions"] or
-                "check_row_lift_order" not in configtoml["exemptions"][meet_id]):
-            check_row_lift_order(
-                row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
-            check_row_lift_order(
-                row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
-            check_row_lift_order(
-                row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
     else:  # Run the default tests
         check_row_weightclass_sex(row, csv, None)
         check_row_weightclass_consistency(row, csv, None)
 
-        check_row_lift_order(
-            row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
-        check_row_lift_order(
-            row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
-        check_row_lift_order(
-            row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
-
         check_row_weightclass(row, csv, None)
-
-    check_row_total_consistency(row, csv)
-
-    check_row_lift_consistency(row, csv, 'Best3SquatKg', [
-                               'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
-    check_row_lift_consistency(row, csv, 'Best3BenchKg', [
-                               'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
-    check_row_lift_consistency(row, csv, 'Best3DeadliftKg',
-                               ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
-
-    check_row_success_consistency(
-        row, csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg'])
-    check_row_success_consistency(
-        row, csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg'])
-    check_row_success_consistency(
-        row, csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg'])
 
     check_row_ageclass(row, csv)
 
