@@ -224,8 +224,7 @@ fn check_headers(
     // Configured federations must have standardized divisions,
     // and therefore must have a "Division" column.
     if config.is_some() && !headers.iter().any(|x| x == "Division") {
-        // TODO: Fix warnings and change to error().
-        report.warning("Configured federations require a 'Division' column");
+        report.error("Configured federations require a 'Division' column");
     }
 
     HeaderIndexMap(header_index_map)
