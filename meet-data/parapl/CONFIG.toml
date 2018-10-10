@@ -4,6 +4,8 @@
     groupa = {name = "Group A", min=0, max=999}
     groupb = {name = "Group B", min=0, max=999}
     groupc = {name = "Group C", min=0, max=999}
+    lw = {name = "Lightweight", min=0, max=999}
+    hw = {name = "Heavyweight", min=0, max=999}
 
 [weightclasses.default_M]
     classes = ["49","54","59","65","72","80","88","97","107","107+"]
@@ -28,3 +30,4 @@
 [exemptions]
     1001 = ["check_row_lift_order"]
     1601 = ["check_row_lift_order"]
+    8401 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]

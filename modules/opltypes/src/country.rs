@@ -80,6 +80,7 @@ pub enum Country {
     Greece,
     Guatemala,
     Guyana,
+    Haiti,
     Honduras,
     #[serde(rename = "Hong Kong")]
     #[strum(to_string = "Hong Kong")]
@@ -198,6 +199,7 @@ pub enum Country {
     Tahiti,
     Taiwan,
     Tajikistan,
+    Tanzania,
     Thailand,
     Togo,
     Tonga,
@@ -222,6 +224,7 @@ pub enum Country {
     #[strum(to_string = "US Virgin Islands")]
     USVirginIslands,
     Uzbekistan,
+    Vanuatu,
     Venezuela,
     Vietnam,
     Wales,
