@@ -1,8 +1,8 @@
 //! Logic for each lifter's personal page.
 
-use opltypes::*;
 use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, Entry};
+use opltypes::*;
 
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]

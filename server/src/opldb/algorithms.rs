@@ -3,11 +3,11 @@
 use opltypes::*;
 use std::cmp;
 
-use opldb::{Entry, Meet, OplDb};
 use opldb::static_cache::NonSortedNonUnique;
-use opldb::static_cache::PossiblyOwnedSortedUnique;
 use opldb::static_cache::PossiblyOwnedNonSortedNonUnique;
+use opldb::static_cache::PossiblyOwnedSortedUnique;
 use opldb::static_cache::SortedUnique;
+use opldb::{Entry, Meet, OplDb};
 use pages::selection::*;
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
@@ -60,9 +60,15 @@ pub fn filter_glossbrenner(entry: &Entry) -> bool {
 #[inline]
 pub fn cmp_squat(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by SquatKg, higher first.
-    a.highest_squatkg().cmp(&b.highest_squatkg()).reverse()
+    a.highest_squatkg()
+        .cmp(&b.highest_squatkg())
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If equal, sort by Bodyweight, lower first.
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
@@ -73,9 +79,15 @@ pub fn cmp_squat(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_bench(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by BenchKg, higher first.
-    a.highest_benchkg().cmp(&b.highest_benchkg()).reverse()
+    a.highest_benchkg()
+        .cmp(&b.highest_benchkg())
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If equal, sort by Bodyweight, lower first.
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
@@ -86,9 +98,15 @@ pub fn cmp_bench(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_deadlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by DeadliftKg, higher first.
-    a.highest_deadliftkg().cmp(&b.highest_deadliftkg()).reverse()
+    a.highest_deadliftkg()
+        .cmp(&b.highest_deadliftkg())
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If equal, sort by Bodyweight, lower first.
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
@@ -99,9 +117,15 @@ pub fn cmp_deadlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by TotalKg, higher first.
-    a.totalkg.cmp(&b.totalkg).reverse()
+    a.totalkg
+        .cmp(&b.totalkg)
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If equal, sort by Bodyweight, lower first.
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
 }
@@ -110,9 +134,15 @@ pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by McCulloch, higher first.
-    a.mcculloch.cmp(&b.mcculloch).reverse()
+    a.mcculloch
+        .cmp(&b.mcculloch)
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If that's equal too, sort by Total, highest first.
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
@@ -121,9 +151,15 @@ pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by Wilks, higher first.
-    a.wilks.cmp(&b.wilks).reverse()
+    a.wilks
+        .cmp(&b.wilks)
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If that's equal too, sort by Total, highest first.
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
@@ -132,9 +168,15 @@ pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 #[inline]
 pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by Glossbrenner, higher first.
-    a.glossbrenner.cmp(&b.glossbrenner).reverse()
+    a.glossbrenner
+        .cmp(&b.glossbrenner)
+        .reverse()
         // If equal, sort by Date, earlier first.
-        .then(meets[a.meet_id as usize].date.cmp(&meets[b.meet_id as usize].date))
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
         // If that's equal too, sort by Total, highest first.
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
@@ -186,16 +228,19 @@ pub fn get_entry_indices_for<'db>(
             cur.intersect(&cache.log_linear_time.year2014),
         ),
         _ => {
-            let year = selection.year.as_u32().unwrap();  // Safe if not AllYears.
+            let year = selection.year.as_u32().unwrap(); // Safe if not AllYears.
             let filter = NonSortedNonUnique(
-                cur.0.iter()
-                .filter_map(|&i| {
-                    match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
-                        true => Some(i),
-                        false => None,
-                    }
-                })
-                .collect()
+                cur.0
+                    .iter()
+                    .filter_map(|&i| {
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).date.year()
+                            == year
+                        {
+                            true => Some(i),
+                            false => None,
+                        }
+                    })
+                    .collect(),
             );
             PossiblyOwnedNonSortedNonUnique::Owned(filter)
         }
@@ -208,8 +253,7 @@ pub fn get_entry_indices_for<'db>(
                 cur.0
                     .iter()
                     .filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation
-                            == fed
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed
                         {
                             true => Some(i),
                             false => None,
@@ -223,11 +267,9 @@ pub fn get_entry_indices_for<'db>(
             let filter = NonSortedNonUnique(
                 cur.0
                     .iter()
-                    .filter_map(|&i| {
-                        match metafed.contains(opldb.get_entry(i), meets) {
-                            true => Some(i),
-                            false => None,
-                        }
+                    .filter_map(|&i| match metafed.contains(opldb.get_entry(i), meets) {
+                        true => Some(i),
+                        false => None,
                     })
                     .collect(),
             );
@@ -244,67 +286,35 @@ pub fn get_entry_indices_for<'db>(
                     let class = opldb.get_entry(i).ageclass;
                     let matches: bool = match selection.ageclass {
                         AgeClassSelection::AllAges => true,
-                        AgeClassSelection::Youth512 => {
-                            class == AgeClass::Class5_12
-                        }
-                        AgeClassSelection::Juniors1315 => {
-                            class == AgeClass::Class13_15
-                        }
-                        AgeClassSelection::Juniors1617 => {
-                            class == AgeClass::Class16_17
-                        }
-                        AgeClassSelection::Juniors1819 => {
-                            class == AgeClass::Class18_19
-                        }
-                        AgeClassSelection::Juniors2023 => {
-                            class == AgeClass::Class20_23
-                        }
-                        AgeClassSelection::Seniors2434 => {
-                            class == AgeClass::Class24_34
-                        }
+                        AgeClassSelection::Youth512 => class == AgeClass::Class5_12,
+                        AgeClassSelection::Juniors1315 => class == AgeClass::Class13_15,
+                        AgeClassSelection::Juniors1617 => class == AgeClass::Class16_17,
+                        AgeClassSelection::Juniors1819 => class == AgeClass::Class18_19,
+                        AgeClassSelection::Juniors2023 => class == AgeClass::Class20_23,
+                        AgeClassSelection::Seniors2434 => class == AgeClass::Class24_34,
                         AgeClassSelection::Submasters3539 => {
                             class == AgeClass::Class35_39
                         }
                         AgeClassSelection::Masters4049 => {
-                            class == AgeClass::Class40_44
-                                || class == AgeClass::Class45_49
+                            class == AgeClass::Class40_44 || class == AgeClass::Class45_49
                         }
                         AgeClassSelection::Masters5059 => {
-                            class == AgeClass::Class50_54
-                                || class == AgeClass::Class55_59
+                            class == AgeClass::Class50_54 || class == AgeClass::Class55_59
                         }
                         AgeClassSelection::Masters6069 => {
-                            class == AgeClass::Class60_64
-                                || class == AgeClass::Class65_69
+                            class == AgeClass::Class60_64 || class == AgeClass::Class65_69
                         }
                         AgeClassSelection::Masters7079 => {
-                            class == AgeClass::Class70_74
-                                || class == AgeClass::Class75_79
+                            class == AgeClass::Class70_74 || class == AgeClass::Class75_79
                         }
-                        AgeClassSelection::Masters4044 => {
-                            class == AgeClass::Class40_44
-                        }
-                        AgeClassSelection::Masters4549 => {
-                            class == AgeClass::Class45_49
-                        }
-                        AgeClassSelection::Masters5054 => {
-                            class == AgeClass::Class50_54
-                        }
-                        AgeClassSelection::Masters5559 => {
-                            class == AgeClass::Class55_59
-                        }
-                        AgeClassSelection::Masters6064 => {
-                            class == AgeClass::Class60_64
-                        }
-                        AgeClassSelection::Masters6569 => {
-                            class == AgeClass::Class65_69
-                        }
-                        AgeClassSelection::Masters7074 => {
-                            class == AgeClass::Class70_74
-                        }
-                        AgeClassSelection::Masters7579 => {
-                            class == AgeClass::Class75_79
-                        }
+                        AgeClassSelection::Masters4044 => class == AgeClass::Class40_44,
+                        AgeClassSelection::Masters4549 => class == AgeClass::Class45_49,
+                        AgeClassSelection::Masters5054 => class == AgeClass::Class50_54,
+                        AgeClassSelection::Masters5559 => class == AgeClass::Class55_59,
+                        AgeClassSelection::Masters6064 => class == AgeClass::Class60_64,
+                        AgeClassSelection::Masters6569 => class == AgeClass::Class65_69,
+                        AgeClassSelection::Masters7074 => class == AgeClass::Class70_74,
+                        AgeClassSelection::Masters7579 => class == AgeClass::Class75_79,
                         AgeClassSelection::MastersOver80 => {
                             class == AgeClass::Class80_999
                         }
@@ -382,7 +392,6 @@ pub fn get_entry_indices_for<'db>(
 
     cur
 }
-
 
 /// Gets a full sorted list for the given selection.
 ///
@@ -462,9 +471,12 @@ pub fn get_full_sorted_uniqued<'db>(
         SortSelection::ByTotal => {
             cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total)
         }
-        SortSelection::ByGlossbrenner => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_glossbrenner, filter_glossbrenner)
-        }
+        SortSelection::ByGlossbrenner => cur.sort_and_unique_by(
+            &entries,
+            &meets,
+            cmp_glossbrenner,
+            filter_glossbrenner,
+        ),
         SortSelection::ByMcCulloch => {
             cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
         }

@@ -7,8 +7,8 @@ extern crate opltypes;
 extern crate server;
 
 use opltypes::*;
-use server::pages::selection::*;
 use server::opldb::algorithms;
+use server::pages::selection::*;
 
 mod common;
 

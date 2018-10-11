@@ -7,7 +7,7 @@ use std::cmp;
 use std::str::FromStr;
 
 use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
-use opldb::{self, Entry, algorithms};
+use opldb::{self, algorithms, Entry};
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
@@ -159,8 +159,9 @@ impl<'a> ResultsRow<'a> {
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
             points: match sort {
-                MeetSortSelection::ByDivision
-                | MeetSortSelection::ByWilks => entry.wilks.in_format(number_format),
+                MeetSortSelection::ByDivision | MeetSortSelection::ByWilks => {
+                    entry.wilks.in_format(number_format)
+                }
                 MeetSortSelection::ByGlossbrenner => {
                     entry.glossbrenner.in_format(number_format)
                 }
@@ -171,8 +172,13 @@ impl<'a> ResultsRow<'a> {
 
 /// Defines the order of events for the ByDivision display.
 const EVENT_SORT_ORDER: [Event; 7] = [
-    Event::sbd(), Event::bd(), Event::sb(), Event::sd(),
-    Event::s(), Event::b(), Event::d()
+    Event::sbd(),
+    Event::bd(),
+    Event::sb(),
+    Event::sd(),
+    Event::s(),
+    Event::b(),
+    Event::d(),
 ];
 
 /// Defines the order of equipment for the ByDivision display.
@@ -247,7 +253,8 @@ fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
     }
 
     // Next, sort by WeightClass.
-    a.weightclasskg.cmp(&b.weightclasskg)
+    a.weightclasskg
+        .cmp(&b.weightclasskg)
         // Finally, sort by Division.
         .then(cmp_by_division(a.get_division(), b.get_division()))
 }
@@ -255,7 +262,7 @@ fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
 fn finish_table<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
-    entries: &mut Vec<&'db Entry>
+    entries: &mut Vec<&'db Entry>,
 ) -> Table<'db> {
     entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
 
@@ -297,22 +304,22 @@ fn finish_table<'db>(
     Table { title, rows }
 }
 
-
-fn make_tables_by_division<'db> (
+fn make_tables_by_division<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
     meet_id: u32,
 ) -> Vec<Table<'db>> {
     let mut entries = opldb.get_entries_for_meet(meet_id);
     if entries.is_empty() {
-        return vec![Table { title: None, rows: vec![] }];
+        return vec![Table {
+            title: None,
+            rows: vec![],
+        }];
     }
 
     // Sort each entry so that entries that should be in the same table
     // appear next to each other in the vector.
-    entries.sort_unstable_by(|a, b| {
-        cmp_by_group(a, b)
-    });
+    entries.sort_unstable_by(|a, b| cmp_by_group(a, b));
 
     // Iterate over each entry, constructing a group.
     let mut key_entry = &entries[0];
@@ -346,8 +353,7 @@ fn make_tables_by_points<'db>(
     locale: &'db Locale,
     sort: MeetSortSelection,
     meet_id: u32,
-) -> Vec<Table<'db>>
-{
+) -> Vec<Table<'db>> {
     let meets = opldb.get_meets();
 
     // Display at most one entry for each lifter.
@@ -364,14 +370,10 @@ fn make_tables_by_points<'db>(
     match sort {
         MeetSortSelection::ByDivision => panic!("Unexpected ByDivision"),
         MeetSortSelection::ByGlossbrenner => {
-            entries.sort_unstable_by(|a, b| {
-                algorithms::cmp_glossbrenner(&meets, a, b)
-            });
+            entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
         }
         MeetSortSelection::ByWilks => {
-            entries.sort_unstable_by(|a, b| {
-                algorithms::cmp_wilks(&meets, a, b)
-            });
+            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks(&meets, a, b));
         }
     };
 
@@ -381,7 +383,7 @@ fn make_tables_by_points<'db>(
         .map(|(e, i)| ResultsRow::from(opldb, locale, sort, e, i))
         .collect();
 
-    vec!(Table { title: None, rows })
+    vec![Table { title: None, rows }]
 }
 
 impl<'db> Context<'db> {
@@ -396,15 +398,15 @@ impl<'db> Context<'db> {
             MeetSortSelection::ByDivision => {
                 make_tables_by_division(&opldb, &locale, meet_id)
             }
-            MeetSortSelection::ByWilks
-            | MeetSortSelection::ByGlossbrenner => {
+            MeetSortSelection::ByWilks | MeetSortSelection::ByGlossbrenner => {
                 make_tables_by_points(&opldb, &locale, sort, meet_id)
             }
         };
 
         let points_column_title = match sort {
-            MeetSortSelection::ByDivision
-            | MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
+            MeetSortSelection::ByDivision | MeetSortSelection::ByWilks => {
+                &locale.strings.columns.wilks
+            }
             MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
         };
 

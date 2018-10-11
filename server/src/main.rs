@@ -12,7 +12,6 @@ extern crate serde;
 extern crate serde_json;
 extern crate strum;
 
-
 #[cfg(test)]
 mod tests;
 

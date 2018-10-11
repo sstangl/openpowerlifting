@@ -1,7 +1,7 @@
 //! Logic for the display of the rankings page.
 
-use serde_json;
 use opltypes;
+use serde_json;
 
 use langpack::{self, Language, Locale};
 use opldb;

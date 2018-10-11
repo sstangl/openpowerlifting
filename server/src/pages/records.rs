@@ -44,7 +44,7 @@ impl RecordsSelection {
             sex: self.sex,
             ageclass: self.ageclass,
             year: self.year,
-            .. Selection::default()
+            ..Selection::default()
         }
     }
 
@@ -67,7 +67,7 @@ impl RecordsSelection {
         let mut parsed_sex: bool = false;
         let mut parsed_federation: bool = false;
         let mut parsed_classkind: bool = false;
-        let mut parsed_ageclass : bool = false;
+        let mut parsed_ageclass: bool = false;
         let mut parsed_year: bool = false;
 
         // Iterate over each path component, attempting to determine
@@ -87,7 +87,7 @@ impl RecordsSelection {
             } else if let Ok(f) = segment.parse::<FederationSelection>() {
                 if parsed_federation {
                     return Err(());
-                }   
+                }
                 ret.federation = f;
                 parsed_federation = true;
             // Check whether this is sex information.
@@ -128,7 +128,8 @@ impl RecordsSelection {
     }
 }
 
-/// Selects what kind of weight classes to use, as opposed to which specific class.
+/// Selects what kind of weight classes to use, as opposed to which specific
+/// class.
 #[derive(Copy, Clone, PartialEq, Serialize)]
 pub enum ClassKindSelection {
     Traditional,
@@ -180,21 +181,16 @@ pub struct SingleRecordCollector<'db> {
 impl<'db> Default for SingleRecordCollector<'db> {
     fn default() -> SingleRecordCollector<'db> {
         SingleRecordCollector {
-            accumulator: [None; 3]
+            accumulator: [None; 3],
         }
     }
 }
 
 impl<'db> SingleRecordCollector<'db> {
     /// Maybe sort this `Entry` into the `accumulator`.
-    pub fn integrate<F>(
-        &mut self,
-        meets: &'db [Meet],
-        entry: &'db Entry,
-        compare: &F,
-    )
+    pub fn integrate<F>(&mut self, meets: &'db [Meet], entry: &'db Entry, compare: &F)
     where
-        F : Fn(&[Meet], &Entry, &Entry) -> Ordering
+        F: Fn(&[Meet], &Entry, &Entry) -> Ordering,
     {
         let last = self.accumulator.len() - 1;
 
@@ -209,9 +205,10 @@ impl<'db> SingleRecordCollector<'db> {
             // This entry matched.
             // Since each lifter is only to be counted once in each category,
             // scan through the accumulator and look to replace an existing entry.
-            let same_lifter: Option<usize> = self.accumulator.iter().position(|opt| {
-                opt.map_or(false, |e| e.lifter_id == entry.lifter_id)
-            });
+            let same_lifter: Option<usize> = self
+                .accumulator
+                .iter()
+                .position(|opt| opt.map_or(false, |e| e.lifter_id == entry.lifter_id));
             match same_lifter {
                 None => {
                     self.accumulator[last] = Some(entry);
@@ -226,13 +223,11 @@ impl<'db> SingleRecordCollector<'db> {
             };
 
             // Always maintain sorted order.
-            self.accumulator.sort_by(|a, b| {
-                match (a, b) {
-                    (None, None) => Ordering::Equal,
-                    (Some(_), None) => Ordering::Less,
-                    (None, Some(_)) => Ordering::Greater,
-                    (Some(x), Some(y)) => compare(meets, x, y),
-                }
+            self.accumulator.sort_by(|a, b| match (a, b) {
+                (None, None) => Ordering::Equal,
+                (Some(_), None) => Ordering::Less,
+                (None, Some(_)) => Ordering::Greater,
+                (Some(x), Some(y)) => compare(meets, x, y),
             });
         }
     }
@@ -265,7 +260,9 @@ impl<'db> RecordCollector<'db> {
         class_max_inclusive: WeightKg,
     ) -> RecordCollector<'db> {
         RecordCollector {
-            weightclass_name, class_min_exclusive, class_max_inclusive,
+            weightclass_name,
+            class_min_exclusive,
+            class_max_inclusive,
 
             fullpower_squat: SingleRecordCollector::default(),
             fullpower_bench: SingleRecordCollector::default(),
@@ -277,13 +274,14 @@ impl<'db> RecordCollector<'db> {
         }
     }
 
-    /// Whether the given Entry is in the weight class this RecordCollector covers.
+    /// Whether the given Entry is in the weight class this RecordCollector
+    /// covers.
     #[inline]
     pub fn entry_in_class(&self, entry: &Entry) -> bool {
         // If bodyweight exists, just go by bodyweight.
         if entry.bodyweightkg.is_non_zero() {
-            return entry.bodyweightkg > self.class_min_exclusive &&
-                   entry.bodyweightkg <= self.class_max_inclusive;
+            return entry.bodyweightkg > self.class_min_exclusive
+                && entry.bodyweightkg <= self.class_max_inclusive;
         }
 
         // Otherwise, check for a SHW category with no recorded bodyweight.
@@ -301,20 +299,27 @@ impl<'db> RecordCollector<'db> {
         debug_assert!(self.entry_in_class(entry));
 
         if entry.event.is_full_power() {
-            self.fullpower_squat.integrate(meets, entry, &algorithms::cmp_squat);
-            self.fullpower_bench.integrate(meets, entry, &algorithms::cmp_bench);
-            self.fullpower_deadlift.integrate(meets, entry, &algorithms::cmp_deadlift);
-            self.fullpower_total.integrate(meets, entry, &algorithms::cmp_total);
+            self.fullpower_squat
+                .integrate(meets, entry, &algorithms::cmp_squat);
+            self.fullpower_bench
+                .integrate(meets, entry, &algorithms::cmp_bench);
+            self.fullpower_deadlift
+                .integrate(meets, entry, &algorithms::cmp_deadlift);
+            self.fullpower_total
+                .integrate(meets, entry, &algorithms::cmp_total);
         }
 
         if entry.event.has_squat() {
-            self.any_squat.integrate(meets, entry, &algorithms::cmp_squat);
+            self.any_squat
+                .integrate(meets, entry, &algorithms::cmp_squat);
         }
         if entry.event.has_bench() {
-            self.any_bench.integrate(meets, entry, &algorithms::cmp_bench);
+            self.any_bench
+                .integrate(meets, entry, &algorithms::cmp_bench);
         }
         if entry.event.has_deadlift() {
-            self.any_deadlift.integrate(meets, entry, &algorithms::cmp_deadlift);
+            self.any_deadlift
+                .integrate(meets, entry, &algorithms::cmp_deadlift);
         }
     }
 }
@@ -413,10 +418,13 @@ fn make_collectors<'db>(
         }
     };
 
-    classes.iter().map(|c| {
-        let (min, max) = c.to_bounds();
-        RecordCollector::new(c.to_weightclasskg(), min, max)
-    }).collect()
+    classes
+        .iter()
+        .map(|c| {
+            let (min, max) = c.to_bounds();
+            RecordCollector::new(c.to_weightclasskg(), min, max)
+        })
+        .collect()
 }
 
 fn find_records<'db>(
@@ -459,7 +467,11 @@ pub struct Table<'db> {
 
 impl<'db> Table<'db> {
     pub fn new(title: String, weight_column_label: &'db str) -> Table<'db> {
-        Table { title, weight_column_label, rows: vec![] }
+        Table {
+            title,
+            weight_column_label,
+            rows: vec![],
+        }
     }
 
     /// Append the results from a SingleRecordCollector.
@@ -470,34 +482,27 @@ impl<'db> Table<'db> {
         opldb: &'db OplDb,
         locale: &'db Locale,
         lift_selector: F,
-    )
-    where
-         F: Fn(&Entry) -> WeightKg
+    ) where
+        F: Fn(&Entry) -> WeightKg,
     {
         let mut rank: u32 = 0;
 
         for record in collector.accumulator.iter() {
             rank += 1;
 
-            let weightclass_display = if rank == 1 {
-                Some(weightclass)
-            } else {
-                None
-            };
+            let weightclass_display = if rank == 1 { Some(weightclass) } else { None };
 
             let row = match record {
-                None => {
-                    RecordsRow {
-                        rank,
-                        weightclass: weightclass_display,
-                        weight_lifted: None,
-                        date: None,
-                        path: None,
-                        federation: None,
-                        localized_name: None,
-                        lifter: None,
-                    }
-                }
+                None => RecordsRow {
+                    rank,
+                    weightclass: weightclass_display,
+                    weight_lifted: None,
+                    date: None,
+                    path: None,
+                    federation: None,
+                    localized_name: None,
+                    lifter: None,
+                },
                 Some(entry) => {
                     let meet = opldb.get_meet(entry.meet_id);
                     let lifter = opldb.get_lifter(entry.lifter_id);
@@ -505,14 +510,18 @@ impl<'db> Table<'db> {
                     RecordsRow {
                         rank,
                         weightclass: weightclass_display,
-                        weight_lifted: Some(lift_selector(entry)
-                            .as_type(locale.units)
-                            .in_format(locale.number_format)),
+                        weight_lifted: Some(
+                            lift_selector(entry)
+                                .as_type(locale.units)
+                                .in_format(locale.number_format),
+                        ),
                         date: Some(format!("{}", meet.date)),
                         path: Some(&meet.path),
                         federation: Some(meet.federation),
-                        localized_name:
-                            Some(get_localized_name(&lifter, locale.language)),
+                        localized_name: Some(get_localized_name(
+                            &lifter,
+                            locale.language,
+                        )),
                         lifter: Some(lifter),
                     }
                 }
@@ -575,45 +584,62 @@ fn prettify_records<'db>(
 
     // Collectors are ordered by weight class, ascending.
     for collector in records {
-        let class = collector.weightclass_name
+        let class = collector
+            .weightclass_name
             .as_type(locale.units)
             .in_format(locale.number_format);
 
-        fullpower_squat.append(&collector.fullpower_squat, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_squatkg()
-            });
-        fullpower_bench.append(&collector.fullpower_bench, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_benchkg()
-            });
-        fullpower_deadlift.append(&collector.fullpower_deadlift, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_deadliftkg()
-            });
-        fullpower_total.append(&collector.fullpower_total, class, opldb, locale,
-            |e: &Entry| {
-                e.totalkg
-            });
-        any_squat.append(&collector.any_squat, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_squatkg()
-            });
-        any_bench.append(&collector.any_bench, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_benchkg()
-            });
-        any_deadlift.append(&collector.any_deadlift, class, opldb, locale,
-            |e: &Entry| {
-                e.highest_deadliftkg()
-            });
+        fullpower_squat.append(
+            &collector.fullpower_squat,
+            class,
+            opldb,
+            locale,
+            |e: &Entry| e.highest_squatkg(),
+        );
+        fullpower_bench.append(
+            &collector.fullpower_bench,
+            class,
+            opldb,
+            locale,
+            |e: &Entry| e.highest_benchkg(),
+        );
+        fullpower_deadlift.append(
+            &collector.fullpower_deadlift,
+            class,
+            opldb,
+            locale,
+            |e: &Entry| e.highest_deadliftkg(),
+        );
+        fullpower_total.append(
+            &collector.fullpower_total,
+            class,
+            opldb,
+            locale,
+            |e: &Entry| e.totalkg,
+        );
+        any_squat.append(&collector.any_squat, class, opldb, locale, |e: &Entry| {
+            e.highest_squatkg()
+        });
+        any_bench.append(&collector.any_bench, class, opldb, locale, |e: &Entry| {
+            e.highest_benchkg()
+        });
+        any_deadlift.append(
+            &collector.any_deadlift,
+            class,
+            opldb,
+            locale,
+            |e: &Entry| e.highest_deadliftkg(),
+        );
     }
 
     // Defines the printed order.
     vec![
-        fullpower_squat, any_squat,
-        fullpower_bench, any_bench,
-        fullpower_deadlift, any_deadlift,
+        fullpower_squat,
+        any_squat,
+        fullpower_bench,
+        any_bench,
+        fullpower_deadlift,
+        any_deadlift,
         fullpower_total,
     ]
 }

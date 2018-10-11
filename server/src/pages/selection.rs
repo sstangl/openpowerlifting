@@ -338,60 +338,156 @@ impl WeightClassSelection {
     /// Returns the exact WeightClassKg this refers to.
     pub fn to_weightclasskg(self) -> WeightClassKg {
         match self {
-            WeightClassSelection::AllClasses => WeightClassKg::Over(WeightKg::from_i32(0)),
+            WeightClassSelection::AllClasses => {
+                WeightClassKg::Over(WeightKg::from_i32(0))
+            }
 
-            WeightClassSelection::T44 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(44)),
-            WeightClassSelection::T48 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(48)),
-            WeightClassSelection::T52 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
-            WeightClassSelection::T56 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(56)),
-            WeightClassSelection::T60 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(60)),
-            WeightClassSelection::T67_5 => WeightClassKg::UnderOrEqual(WeightKg::from_f32(67.5)),
-            WeightClassSelection::T75 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(75)),
-            WeightClassSelection::T82_5 => WeightClassKg::UnderOrEqual(WeightKg::from_f32(82.5)),
-            WeightClassSelection::T90 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(90)),
+            WeightClassSelection::T44 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(44))
+            }
+            WeightClassSelection::T48 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(48))
+            }
+            WeightClassSelection::T52 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(52))
+            }
+            WeightClassSelection::T56 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(56))
+            }
+            WeightClassSelection::T60 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(60))
+            }
+            WeightClassSelection::T67_5 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_f32(67.5))
+            }
+            WeightClassSelection::T75 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(75))
+            }
+            WeightClassSelection::T82_5 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_f32(82.5))
+            }
+            WeightClassSelection::T90 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(90))
+            }
             WeightClassSelection::TOver90 => WeightClassKg::Over(WeightKg::from_i32(90)),
-            WeightClassSelection::T100 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(100)),
-            WeightClassSelection::T110 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(110)),
-            WeightClassSelection::T125 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(125)),
-            WeightClassSelection::T140 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(140)),
-            WeightClassSelection::TOver140 => WeightClassKg::Over(WeightKg::from_i32(140)),
+            WeightClassSelection::T100 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(100))
+            }
+            WeightClassSelection::T110 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(110))
+            }
+            WeightClassSelection::T125 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(125))
+            }
+            WeightClassSelection::T140 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(140))
+            }
+            WeightClassSelection::TOver140 => {
+                WeightClassKg::Over(WeightKg::from_i32(140))
+            }
 
-            WeightClassSelection::IpfM53 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
-            WeightClassSelection::IpfM59 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
-            WeightClassSelection::IpfM66 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(66)),
-            WeightClassSelection::IpfM74 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(74)),
-            WeightClassSelection::IpfM83 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(83)),
-            WeightClassSelection::IpfM93 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(93)),
-            WeightClassSelection::IpfM105 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(105)),
-            WeightClassSelection::IpfM120 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(120)),
-            WeightClassSelection::IpfMOver120 => WeightClassKg::Over(WeightKg::from_i32(120)),
+            WeightClassSelection::IpfM53 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(53))
+            }
+            WeightClassSelection::IpfM59 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(59))
+            }
+            WeightClassSelection::IpfM66 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(66))
+            }
+            WeightClassSelection::IpfM74 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(74))
+            }
+            WeightClassSelection::IpfM83 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(83))
+            }
+            WeightClassSelection::IpfM93 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(93))
+            }
+            WeightClassSelection::IpfM105 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(105))
+            }
+            WeightClassSelection::IpfM120 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(120))
+            }
+            WeightClassSelection::IpfMOver120 => {
+                WeightClassKg::Over(WeightKg::from_i32(120))
+            }
 
-            WeightClassSelection::IpfF43 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(43)),
-            WeightClassSelection::IpfF47 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(47)),
-            WeightClassSelection::IpfF52 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
-            WeightClassSelection::IpfF57 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(57)),
-            WeightClassSelection::IpfF63 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(63)),
-            WeightClassSelection::IpfF72 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(72)),
-            WeightClassSelection::IpfF84 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(84)),
-            WeightClassSelection::IpfFOver84 => WeightClassKg::Over(WeightKg::from_i32(84)),
+            WeightClassSelection::IpfF43 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(43))
+            }
+            WeightClassSelection::IpfF47 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(47))
+            }
+            WeightClassSelection::IpfF52 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(52))
+            }
+            WeightClassSelection::IpfF57 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(57))
+            }
+            WeightClassSelection::IpfF63 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(63))
+            }
+            WeightClassSelection::IpfF72 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(72))
+            }
+            WeightClassSelection::IpfF84 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(84))
+            }
+            WeightClassSelection::IpfFOver84 => {
+                WeightClassKg::Over(WeightKg::from_i32(84))
+            }
 
-            WeightClassSelection::WpM62 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(62)),
-            WeightClassSelection::WpM69 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(69)),
-            WeightClassSelection::WpM77 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(77)),
-            WeightClassSelection::WpM85 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(85)),
-            WeightClassSelection::WpM94 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(94)),
-            WeightClassSelection::WpM105 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(105)),
-            WeightClassSelection::WpM120 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(120)),
-            WeightClassSelection::WpMOver120 => WeightClassKg::Over(WeightKg::from_i32(120)),
+            WeightClassSelection::WpM62 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(62))
+            }
+            WeightClassSelection::WpM69 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(69))
+            }
+            WeightClassSelection::WpM77 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(77))
+            }
+            WeightClassSelection::WpM85 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(85))
+            }
+            WeightClassSelection::WpM94 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(94))
+            }
+            WeightClassSelection::WpM105 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(105))
+            }
+            WeightClassSelection::WpM120 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(120))
+            }
+            WeightClassSelection::WpMOver120 => {
+                WeightClassKg::Over(WeightKg::from_i32(120))
+            }
 
-            WeightClassSelection::WpF48 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(48)),
-            WeightClassSelection::WpF53 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
-            WeightClassSelection::WpF58 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(58)),
-            WeightClassSelection::WpF64 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(64)),
-            WeightClassSelection::WpF72 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(72)),
-            WeightClassSelection::WpF84 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(84)),
-            WeightClassSelection::WpF100 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(100)),
-            WeightClassSelection::WpFOver100 => WeightClassKg::Over(WeightKg::from_i32(100)),
+            WeightClassSelection::WpF48 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(48))
+            }
+            WeightClassSelection::WpF53 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(53))
+            }
+            WeightClassSelection::WpF58 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(58))
+            }
+            WeightClassSelection::WpF64 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(64))
+            }
+            WeightClassSelection::WpF72 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(72))
+            }
+            WeightClassSelection::WpF84 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(84))
+            }
+            WeightClassSelection::WpF100 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(100))
+            }
+            WeightClassSelection::WpFOver100 => {
+                WeightClassKg::Over(WeightKg::from_i32(100))
+            }
         }
     }
 }

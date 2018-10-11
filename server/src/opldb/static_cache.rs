@@ -193,7 +193,13 @@ impl NonSortedNonUnique {
         let mut vec: Vec<u32> = groups
             .into_iter()
             // `min_by()` takes the best entry due to comparator ordering.
-            .map(|(_key, group)| *group.min_by(|&a, &b| compare(meets, &entries[*a as usize], &entries[*b as usize])).unwrap())
+            .map(|(_key, group)| {
+                *group
+                    .min_by(|&a, &b| {
+                        compare(meets, &entries[*a as usize], &entries[*b as usize])
+                    })
+                    .unwrap()
+            })
             .collect();
 
         vec.sort_by(|&a, &b| compare(meets, &entries[a as usize], &entries[b as usize]));
@@ -310,7 +316,11 @@ impl ConstantTimeCache {
                 &filter_mcculloch,
             ),
             glossbrenner: ConstantTimeBy::new(
-                loglin, mv, ev, &cmp_glossbrenner, &filter_glossbrenner
+                loglin,
+                mv,
+                ev,
+                &cmp_glossbrenner,
+                &filter_glossbrenner,
             ),
         }
     }

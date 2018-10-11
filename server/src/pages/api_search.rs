@@ -47,7 +47,8 @@ pub fn search_rankings<'db>(
         let entry = opldb.get_entry(list.0[i]);
         let lifter = opldb.get_lifter(entry.lifter_id);
 
-        if lifter.username.contains(&normalized) || lifter.username.contains(&backwards)
+        if lifter.username.contains(&normalized)
+            || lifter.username.contains(&backwards)
             || lifter
                 .instagram
                 .as_ref()

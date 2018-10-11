@@ -90,8 +90,17 @@ fn test_small_rankings_pages() {
 fn test_meet_pages_with_explicit_sorts() {
     let client = client();
     assert_eq!(client.get("/m/wrpf/bob4").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/m/wrpf/bob4/by-glossbrenner").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/m/wrpf/bob4/by-division").dispatch().status(), Status::Ok);
+    assert_eq!(
+        client
+            .get("/m/wrpf/bob4/by-glossbrenner")
+            .dispatch()
+            .status(),
+        Status::Ok
+    );
+    assert_eq!(
+        client.get("/m/wrpf/bob4/by-division").dispatch().status(),
+        Status::Ok
+    );
 }
 
 #[test]
@@ -242,7 +251,10 @@ fn test_language_cookie_nonsense() {
 fn test_rankings_nonsense() {
     let client = client();
     assert_eq!(
-        client.get("/rankings/push-pull/by-squat").dispatch().status(),
+        client
+            .get("/rankings/push-pull/by-squat")
+            .dispatch()
+            .status(),
         Status::Ok
     );
 }

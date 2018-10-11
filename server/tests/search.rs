@@ -2,9 +2,9 @@
 
 extern crate server;
 
+use server::opldb::algorithms;
 use server::pages::api_search::*;
 use server::pages::selection::*;
-use server::opldb::algorithms;
 
 mod common;
 

@@ -1,7 +1,7 @@
 //! Logic for the contact page.
 
-use opltypes;
 use langpack::{self, Locale};
+use opltypes;
 
 /// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]

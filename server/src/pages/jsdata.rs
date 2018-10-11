@@ -3,7 +3,7 @@
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use langpack::{self, LocalizeNumber, get_localized_name, Locale};
+use langpack::{self, get_localized_name, Locale, LocalizeNumber};
 use opldb::{Entry, OplDb};
 use pages::selection::SortSelection;
 
@@ -138,7 +138,9 @@ impl<'db> JsEntryRow<'db> {
                 | SortSelection::ByTotal
                 | SortSelection::ByWilks => entry.wilks.in_format(number_format),
                 SortSelection::ByMcCulloch => entry.mcculloch.in_format(number_format),
-                SortSelection::ByGlossbrenner => entry.glossbrenner.in_format(number_format),
+                SortSelection::ByGlossbrenner => {
+                    entry.glossbrenner.in_format(number_format)
+                }
             },
         }
     }

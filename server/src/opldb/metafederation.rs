@@ -10,8 +10,9 @@ use opldb::{Entry, Meet};
 /// that don't correspond neatly to just a single federation value.
 ///
 /// Definition of each MetaFederation is in the `contains` function.
-#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter,
-         EnumString)]
+#[derive(
+    Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString,
+)]
 pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
     #[strum(to_string = "all-tested")]
@@ -76,7 +77,7 @@ impl MetaFederation {
                 // Still check entry.tested: some fully-tested federations
                 // existed before drug-testing was available.
                 entry.tested && meet.federation.is_fully_tested()
-            },
+            }
             MetaFederation::AllAmateur => entry.tested,
             MetaFederation::AllArgentina => {
                 entry.lifter_country == Some(Country::Argentina)
@@ -136,8 +137,10 @@ impl MetaFederation {
             }
             MetaFederation::AllUK => {
                 entry.lifter_country.map_or(false, |c| c.is_in_uk())
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country().map_or(false, |c| c.is_in_uk()))
+                    || (entry.lifter_country == None && meet
+                        .federation
+                        .home_country()
+                        .map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::AllUkraine => {
                 entry.lifter_country == Some(Country::Ukraine)
@@ -269,4 +272,3 @@ mod tests {
         }
     }
 }
-

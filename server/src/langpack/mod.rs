@@ -1,10 +1,10 @@
 //! Internationalization facilities.
 
+use opltypes::*;
 use serde;
 use serde::ser::Serialize;
 use serde_json;
 use strum::IntoEnumIterator;
-use opltypes::*;
 
 use std::error::Error;
 use std::fmt;
@@ -678,7 +678,7 @@ impl Translations {
             Country::Macedonia => &self.country.macedonia,
             Country::Malaysia => &self.country.malaysia,
             Country::Mali => &self.country.mali,
-            Country::MarshallIslands=> &self.country.marshallislands,
+            Country::MarshallIslands => &self.country.marshallislands,
             Country::Mauritania => &self.country.mauritania,
             Country::Mexico => &self.country.mexico,
             Country::Moldova => &self.country.moldova,
@@ -721,7 +721,7 @@ impl Translations {
             Country::Singapore => &self.country.singapore,
             Country::Slovakia => &self.country.slovakia,
             Country::Slovenia => &self.country.slovenia,
-            Country::SolomonIslands=> &self.country.solomonislands,
+            Country::SolomonIslands => &self.country.solomonislands,
             Country::SouthAfrica => &self.country.southafrica,
             Country::SouthKorea => &self.country.southkorea,
             Country::Spain => &self.country.spain,
@@ -887,7 +887,8 @@ pub fn get_localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
     }
 }
 
-/// Localizes the separator between integer and fraction based on `NumberFormat`.
+/// Localizes the separator between integer and fraction based on
+/// `NumberFormat`.
 pub trait LocalizeNumber {
     type LocalizedType;
 
@@ -898,7 +899,10 @@ impl LocalizeNumber for WeightAny {
     type LocalizedType = LocalizedWeightAny;
 
     fn in_format(self, format: NumberFormat) -> LocalizedWeightAny {
-        LocalizedWeightAny { format, weight: self }
+        LocalizedWeightAny {
+            format,
+            weight: self,
+        }
     }
 }
 
@@ -906,7 +910,10 @@ impl LocalizeNumber for WeightClassAny {
     type LocalizedType = LocalizedWeightClassAny;
 
     fn in_format(self, format: NumberFormat) -> LocalizedWeightClassAny {
-        LocalizedWeightClassAny { format, class: self }
+        LocalizedWeightClassAny {
+            format,
+            class: self,
+        }
     }
 }
 
@@ -914,6 +921,9 @@ impl LocalizeNumber for Points {
     type LocalizedType = LocalizedPoints;
 
     fn in_format(self, format: NumberFormat) -> LocalizedPoints {
-        LocalizedPoints { format, points: self }
+        LocalizedPoints {
+            format,
+            points: self,
+        }
     }
 }
