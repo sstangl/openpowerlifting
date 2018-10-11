@@ -10,6 +10,8 @@ use opldb::{Entry, Meet};
 /// that don't correspond neatly to just a single federation value.
 ///
 /// Definition of each MetaFederation is in the `contains` function.
+///
+/// A MetaFederation may override handling of a Federation by sharing its to_string.
 #[derive(
     Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString,
 )]
@@ -57,6 +59,9 @@ pub enum MetaFederation {
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
+    /// HPLS, but excluding non-Croatian lifters.
+    #[strum(to_string = "hpls")]
+    HPLS,
     /// IPA, but only counting meets held in Canada.
     #[strum(to_string = "ipa-can")]
     IPACAN,
@@ -168,6 +173,11 @@ impl MetaFederation {
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
             }
+            MetaFederation::HPLS => {
+                meet.federation == Federation::HPLS
+                    && (entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Croatia))
+            }
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
             }
@@ -253,22 +263,5 @@ impl MetaFederationCache {
         }
 
         MetaFederationCache { cache: ret }
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use strum::IntoEnumIterator;
-
-    /// The Federation and MetaFederation enums must serialize
-    /// to unique strings.
-    #[test]
-    fn test_fed_metafed_conflicts() {
-        let v1: Vec<String> = Federation::iter().map(|f| f.to_string()).collect();
-        let v2: Vec<String> = MetaFederation::iter().map(|f| f.to_string()).collect();
-        for v in v1 {
-            assert!(!v2.contains(&v));
-        }
     }
 }

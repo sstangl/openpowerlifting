@@ -170,12 +170,15 @@ impl FromStr for FederationSelection {
     type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        if let Ok(fed) = s.parse::<Federation>() {
-            return Ok(FederationSelection::One(fed));
-        }
-
+        // Try to parse a MetaFederation first.
+        // A MetaFederation with the same name as a Federation
+        // may override the interpretation of that federation.
         if let Ok(meta) = s.parse::<MetaFederation>() {
             return Ok(FederationSelection::Meta(meta));
+        }
+
+        if let Ok(fed) = s.parse::<Federation>() {
+            return Ok(FederationSelection::One(fed));
         }
 
         Err(())

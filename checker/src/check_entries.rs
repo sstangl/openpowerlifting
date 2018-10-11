@@ -261,16 +261,13 @@ fn check_column_birthyear(s: &str, meet: Option<&Meet>, line: u64, report: &mut 
             }
 
             // Compare the BirthYear to the meet date for some basic sanity checks.
-            match meet {
-                Some(m) => {
-                    if year > m.date.year() - 4 || m.date.year() - year > 98 {
-                        report.error_on(
-                            line,
-                            format!("BirthYear '{}' looks implausible", year),
-                        );
-                    }
+            if let Some(m) = meet {
+                if year > m.date.year() - 4 || m.date.year() - year > 98 {
+                    report.error_on(
+                        line,
+                        format!("BirthYear '{}' looks implausible", year),
+                    );
                 }
-                None => {}
             }
         }
         Err(_) => {
