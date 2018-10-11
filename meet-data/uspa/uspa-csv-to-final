@@ -358,7 +358,10 @@ def parse(csv):
                 if 'open' in info:
                     divisionstate = 'Open' + agerange
                 elif 'submaster' in info:
-                    divisionstate = 'Submaster' + agerange
+                    if agerange:
+                        divisionstate = 'Submaster' + agerange
+                    else:
+                        divisionstate = 'Submaster 35-39'
                 elif 'junior' in info:
                     divisionstate = 'Junior' + agerange
                 elif 'jr' in info:
