@@ -1,0 +1,76 @@
+[divisions]
+    # Open divisions.
+    ama_open = {name = "Amateur Open", min = 0, max = 999}
+    pro_open = {name = "Pro Open", min = 0, max = 999}
+    elite_open = {name = "Elite Open", min = 0, max = 999}
+
+    # Youth -- Amateur only.
+    ama_youth = {name = "Amateur Youth", min = 5, max = 13}
+
+    # Teens -- Amateur only.
+    ama_teen_14_15 = {name = "Amateur Teen 14-15", min = 14, max = 15}
+    ama_teen_16_17 = {name = "Amateur Teen 16-17", min = 16, max = 17}
+    ama_teen_18_19 = {name = "Amateur Teen 18-19", min = 18, max = 19}
+
+    # Juniors.
+    ama_junior_20_23 = {name = "Amateur Junior 20-23", min = 20, max = 23}
+    pro_junior_20_23 = {name = "Pro Junior 20-23", min = 20, max = 23}
+
+    # Submasters.
+    ama_submaster_33_39 = {name = "Amateur Submaster 33-39", min = 33, max = 39}
+    pro_submaster_33_39 = {name = "Pro Submaster 33-39", min = 33, max = 39}
+
+    # Amateur Masters.
+    ama_master_40_44 = {name = "Amateur Master 40-44", min = 40, max = 44}
+    ama_master_45_49 = {name = "Amateur Master 45-49", min = 45, max = 49}
+    ama_master_50_54 = {name = "Amateur Master 50-54", min = 50, max = 54}
+    ama_master_55_59 = {name = "Amateur Master 55-59", min = 55, max = 59}
+    ama_master_60_64 = {name = "Amateur Master 60-64", min = 60, max = 64}
+    ama_master_65_69 = {name = "Amateur Master 65-69", min = 65, max = 69}
+    ama_master_70_74 = {name = "Amateur Master 70-74", min = 70, max = 74}
+    ama_master_75_79 = {name = "Amateur Master 75-79", min = 75, max = 79}
+    ama_master_80_84 = {name = "Amateur Master 80-84", min = 80, max = 84}
+    ama_master_85_89 = {name = "Amateur Master 85-89", min = 85, max = 89}
+    ama_master_90_94 = {name = "Amateur Master 90-94", min = 90, max = 94}
+    ama_master_95_99 = {name = "Amateur Master 95-99", min = 95, max = 99}
+    ama_master_100p  = {name = "Amateur Master 100+", min = 100, max = 999}
+
+    # Pro Masters.
+    pro_master_40_44 = {name = "Pro Master 40-44", min = 40, max = 44}
+    pro_master_45_49 = {name = "Pro Master 45-49", min = 45, max = 49}
+    pro_master_50_54 = {name = "Pro Master 50-54", min = 50, max = 54}
+    pro_master_55_59 = {name = "Pro Master 55-59", min = 55, max = 59}
+    pro_master_60_64 = {name = "Pro Master 60-64", min = 60, max = 64}
+    pro_master_65_69 = {name = "Pro Master 65-69", min = 65, max = 69}
+    pro_master_70_74 = {name = "Pro Master 70-74", min = 70, max = 74}
+    pro_master_75_79 = {name = "Pro Master 75-79", min = 75, max = 79}
+    pro_master_80_84 = {name = "Pro Master 80-84", min = 80, max = 84}
+    pro_master_85_89 = {name = "Pro Master 85-89", min = 85, max = 89}
+    pro_master_90_94 = {name = "Pro Master 90-94", min = 90, max = 94}
+    pro_master_95_99 = {name = "Pro Master 95-99", min = 95, max = 99}
+    pro_master_100p  = {name = "Pro Master 100+", min = 100, max = 999}
+
+    # Occupation-based divisions, limited to only Open and Master 50+.
+    ama_police_open = {name = "Police Amateur Open", min = 0, max = 999}
+    pro_police_open = {name = "Police Pro Open", min = 0, max = 999}
+    ama_police_50p = {name = "Police Amateur Master 50+", min = 50, max = 999}
+    pro_police_50p = {name = "Police Pro Master 50+", min = 50, max = 999}
+    ama_military_open = {name = "Military Amateur Open", min = 0, max = 999}
+    pro_military_open = {name = "Military Pro Open", min = 0, max = 999}
+    ama_military_50p = {name = "Military Amateur Master 50+", min = 50, max = 999}
+    pro_military_50p = {name = "Military Pro Master 50+", min = 50, max = 999}
+
+    # Miscellaneous divisions.
+    crossfit = {name = "Crossfit", min = 0, max = 999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90", "100", "100+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
