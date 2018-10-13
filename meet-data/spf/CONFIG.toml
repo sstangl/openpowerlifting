@@ -1,0 +1,35 @@
+[divisions]
+    open = {name = "Open", min = 0, max = 999}
+    preteen = {name = "Pre-Teen", min = 0, max = 12}
+    teenage_13_15 = {name = "Teenage 13-15", min = 13, max = 15}
+    teenage_16_17 = {name = "Teenage 16-17", min = 16, max = 17}
+    teenage_18_19 = {name = "Teenage 18-19", min = 18, max = 19}
+    junior_20_23 = {name = "Juniors", min = 20, max = 23}
+    submaster = {name = "Sub-Masters", min = 33, max = 39}
+    masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
+    masters_45_49 = {name = "Masters 45-49", min = 45, max = 49}
+    masters_50_54 = {name = "Masters 50-54", min = 50, max = 54}
+    masters_55_59 = {name = "Masters 55-59", min = 55, max = 59}
+    masters_60_64 = {name = "Masters 60-64", min = 60, max = 64}
+    masters_65_69 = {name = "Masters 65-69", min = 65, max = 69}
+    masters_70_74 = {name = "Masters 70-74", min = 70, max = 74}
+    masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
+    grandmaster   = {name = "Grand-Masters", min = 80, max = 999}
+
+    police_fire = {name = "Police and Fire", min = 0, max = 999}
+    special_olympics = {name = "Special Olympics", min = 0, max = 999}
+    crossfit = {name = "Crossfit", min = 0, max = 999}
+
+[weightclasses.default_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","118","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    1628 = ["check_row_weightclass_consistency", "check_row_weightclass_sex"]
+    1752 = ["check_row_weightclass_consistency", "check_row_weightclass_sex"]
