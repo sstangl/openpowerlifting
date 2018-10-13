@@ -9,7 +9,7 @@ use std::str::FromStr;
 /// The definition of the "Event" column.
 /// An `Event` is represented as a bitfield, with
 /// one bit for each of S, B, and D.
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub struct Event(u8);
 
 impl Event {

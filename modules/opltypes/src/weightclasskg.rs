@@ -22,6 +22,12 @@ pub enum WeightClassKg {
     None,
 }
 
+impl Default for WeightClassKg {
+    fn default() -> WeightClassKg {
+        WeightClassKg::None
+    }
+}
+
 /// Displayable, unit-less variant of WeightClassKg.
 ///
 /// Becasue the type of the weight is forgotten, these weights

@@ -20,6 +20,12 @@ pub enum Age {
     None,
 }
 
+impl Default for Age {
+    fn default() -> Age {
+        Age::None
+    }
+}
+
 impl Age {
     /// Convert from an i64. Used by the TOML deserializer.
     pub fn from_i64(n: i64) -> Result<Self, &'static str> {

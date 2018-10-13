@@ -23,6 +23,12 @@ pub enum Place {
     NS,
 }
 
+impl Default for Place {
+    fn default() -> Place {
+        Place::NS
+    }
+}
+
 impl Place {
     pub fn is_dq(&self) -> bool {
         match *self {

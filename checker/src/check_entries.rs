@@ -27,16 +27,16 @@ impl HeaderIndexMap {
 /// which further processing can use the standard datatype.
 #[derive(Default)]
 struct Entry {
-    pub sex: Option<Sex>,
-    pub age: Option<Age>,
-    pub place: Option<Place>,
-    pub event: Option<Event>,
+    pub sex: Sex,
+    pub age: Age,
+    pub place: Place,
+    pub event: Event,
     pub equipment: Option<Equipment>,
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
     pub deadlift_equipment: Option<Equipment>,
 
-    pub weightclasskg: Option<WeightClassKg>,
+    pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
 
     // Weights, defaulting to zero.
@@ -303,12 +303,12 @@ fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut R
     }
 }
 
-fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Option<Sex> {
+fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Sex {
     match s.parse::<Sex>() {
-        Ok(s) => Some(s),
+        Ok(s) => s,
         Err(_) => {
             report.error_on(line, format!("Invalid Sex '{}'", s));
-            None
+            Sex::default()
         }
     }
 }
@@ -392,17 +392,17 @@ fn check_column_deadliftequipment(
     }
 }
 
-fn check_column_place(s: &str, line: u64, report: &mut Report) -> Option<Place> {
+fn check_column_place(s: &str, line: u64, report: &mut Report) -> Place {
     match s.parse::<Place>() {
-        Ok(p) => Some(p),
+        Ok(p) => p,
         Err(_) => {
             report.error_on(line, format!("Invalid Place '{}'", s));
-            None
+            Place::default()
         }
     }
 }
 
-fn check_column_age(s: &str, line: u64, report: &mut Report) -> Option<Age> {
+fn check_column_age(s: &str, line: u64, report: &mut Report) -> Age {
     match s.parse::<Age>() {
         Ok(age) => {
             let num = match age {
@@ -417,11 +417,11 @@ fn check_column_age(s: &str, line: u64, report: &mut Report) -> Option<Age> {
                 report.warning_on(line, format!("Age '{}' unexpectedly high", s));
             }
 
-            Some(age)
+            age
         }
         Err(_) => {
             report.error_on(line, format!("Invalid Age '{}'", s));
-            None
+            Age::default()
         }
     }
 }
@@ -431,7 +431,7 @@ fn check_column_event(
     line: u64,
     headers: &HeaderIndexMap,
     report: &mut Report,
-) -> Option<Event> {
+) -> Event {
     match s.parse::<Event>() {
         Ok(event) => {
             if event.has_squat() && headers.get(Header::Best3SquatKg).is_none() {
@@ -443,11 +443,11 @@ fn check_column_event(
             if event.has_deadlift() && headers.get(Header::Best3DeadliftKg).is_none() {
                 report.error_on(line, "Event has 'D', but no Best3DeadliftKg");
             }
-            Some(event)
+            event
         }
         Err(e) => {
             report.error_on(line, format!("Invalid Event '{}': {}", s, e.to_string()));
-            None
+            Event::default()
         }
     }
 }
@@ -492,11 +492,7 @@ fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightK
     weight
 }
 
-fn check_column_weightclasskg(
-    s: &str,
-    line: u64,
-    report: &mut Report,
-) -> Option<WeightClassKg> {
+fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> WeightClassKg {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, "WeightClassKg cannot be zero");
@@ -508,10 +504,10 @@ fn check_column_weightclasskg(
     }
 
     match s.parse::<WeightClassKg>() {
-        Ok(w) => Some(w),
+        Ok(w) => w,
         Err(e) => {
             report.error_on(line, format!("Invalid WeightClassKg '{}': {}", s, e));
-            None
+            WeightClassKg::default()
         }
     }
 }
@@ -560,13 +556,7 @@ fn check_column_state(s: &str, line: u64, report: &mut Report) {
 }
 
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
-    let event = match entry.event {
-        None => {
-            return;
-        }
-        Some(e) => e,
-    };
-
+    let event = entry.event;
     let has_squat_data: bool = entry.has_squat_data();
     let has_bench_data: bool = entry.has_bench_data();
     let has_deadlift_data: bool = entry.has_deadlift_data();
@@ -635,55 +625,48 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
 
     // If the lifter wasn't DQ'd, they should have data from each lift.
-    if let Some(place) = entry.place {
-        if !place.is_dq() {
-            // Allow entries that only have a Total but no lift data.
-            if has_squat_data || has_bench_data || has_deadlift_data {
-                if !has_squat_data && event.has_squat() {
-                    let s = format!("Non-DQ Event '{}' requires squat data", event);
-                    report.error_on(line, s);
-                }
-                if !has_bench_data && event.has_bench() {
-                    let s = format!("Non-DQ Event '{}' requires bench data", event);
-                    report.error_on(line, s);
-                }
-                if !has_deadlift_data && event.has_deadlift() {
-                    let s = format!("Non-DQ Event '{}' requires deadlift data", event);
-                    report.error_on(line, s);
-                }
+    if !entry.place.is_dq() {
+        // Allow entries that only have a Total but no lift data.
+        if has_squat_data || has_bench_data || has_deadlift_data {
+            if !has_squat_data && event.has_squat() {
+                let s = format!("Non-DQ Event '{}' requires squat data", event);
+                report.error_on(line, s);
+            }
+            if !has_bench_data && event.has_bench() {
+                let s = format!("Non-DQ Event '{}' requires bench data", event);
+                report.error_on(line, s);
+            }
+            if !has_deadlift_data && event.has_deadlift() {
+                let s = format!("Non-DQ Event '{}' requires deadlift data", event);
+                report.error_on(line, s);
             }
         }
     }
 
     // Check that TotalKg matches the Place.
     let has_totalkg: bool = entry.totalkg != WeightKg::from_i32(0);
-    if let Some(place) = entry.place {
-        if place.is_dq() && has_totalkg {
-            report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
-        } else if !place.is_dq() && !has_totalkg {
-            report.error_on(line, format!("Non-DQ entries must have a TotalKg"));
-        }
+    if entry.place.is_dq() && has_totalkg {
+        report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
+    } else if !entry.place.is_dq() && !has_totalkg {
+        report.error_on(line, format!("Non-DQ entries must have a TotalKg"));
     }
 
     // Check that a non-DQ lifter's total is the sum of their best attempts,
     // if their lifts have been recorded.
-    if let Some(place) = entry.place {
-        if !place.is_dq()
-            && has_totalkg
-            && (entry.best3squatkg.is_non_zero()
-                || entry.best3benchkg.is_non_zero()
-                || entry.best3deadliftkg.is_non_zero())
-        {
-            let calculated =
-                entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
+    if !entry.place.is_dq()
+        && has_totalkg
+        && (entry.best3squatkg.is_non_zero()
+            || entry.best3benchkg.is_non_zero()
+            || entry.best3deadliftkg.is_non_zero())
+    {
+        let calculated = entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
 
-            if (calculated - entry.totalkg).abs() > WeightKg::from_f32(0.5) {
-                let s = format!(
-                    "Calculated TotalKg '{}', but meet recorded '{}'",
-                    calculated, entry.totalkg
-                );
-                report.error_on(line, s)
-            }
+        if (calculated - entry.totalkg).abs() > WeightKg::from_f32(0.5) {
+            let s = format!(
+                "Calculated TotalKg '{}', but meet recorded '{}'",
+                calculated, entry.totalkg
+            );
+            report.error_on(line, s)
         }
     }
 }
@@ -872,12 +855,7 @@ fn check_equipment_year(
             return;
         }
     };
-    let event = match entry.event {
-        Some(e) => e,
-        None => {
-            return;
-        }
-    };
+    let event = entry.event;
 
     // Years of equipment invention.
     let squat_suit_invention_year = 1977;

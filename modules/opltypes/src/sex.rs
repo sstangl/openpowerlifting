@@ -6,3 +6,9 @@ pub enum Sex {
     M,
     F,
 }
+
+impl Default for Sex {
+    fn default() -> Sex {
+        Sex::M
+    }
+}
