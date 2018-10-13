@@ -78,12 +78,6 @@ def is_int(s):
         return False
 
 
-def float2(s):
-    if s == '':
-        return 0.0
-    return float(s)
-
-
 def check_column_name(s, row, csv):
     if '  ' in s:
         pwarning("Too much spacing for name: \"%s\"" % s)
@@ -120,6 +114,9 @@ def check_column_name(s, row, csv):
         perror("Name contains illegal character(s): \"%s\"" % s)
 
     part = s.split()
+    if len(part) == 0:
+        return
+
     # Need this check for Indonesian names given as just initials
     if any(len(x.replace('.', '')) > 1 for x in part):
         if s.upper() == s or s.lower() == s:
@@ -147,31 +144,9 @@ def check_column_name(s, row, csv):
         pwarning("Fix name casing: \"%s\"" % s)
 
 
-def check_lift_column(s, row, csv):
-    try:
-        f = float(s)
-        if f == 0.0:
-            perror("Field cannot be zero: %s" % s)
-    except ValueError:
-        perror("Invalid lift quantity: %s" % s)
-
-
-def check_positive_number_column(s, row, csv):
-    try:
-        f = float(s)
-        if f < 0.0:
-            perror("Field cannot be negative: %s" % s)
-        if f == 0.0:
-            perror("Field cannot be zero: %s" % s)
-    except ValueError:
-        perror("Invalid field quantity: %s" % s)
-
-
 def check_row_weightclass(row, csv, weightclasses):
     if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] != "":
         wc = row[csv.index('WeightClassKg')]
-        if wc[-1] is '+':
-            check_positive_number_column(wc[:-1], row, csv)
 
         ipf_men = ['53', '59', '66', '74', '83', '93', '105', '120', '120+']
         ipf_women = ['43', '47', '52', '57', '63', '72', '84', '84+']
@@ -209,121 +184,6 @@ def check_row_weightclass(row, csv, weightclasses):
                 pwarning("Suspiciously low weight class: %s" % wc)
         except ValueError:
             pass
-
-
-def check_column_state(s, row, csv):
-    if '  ' in s:
-        pwarning("Too much spacing in state: \"%s\"" % s)
-
-    for c in s:
-        if not c.isalpha() and not c.isspace():
-            perror("Invalid character in state: \"%s\"" % s)
-            break
-
-
-def ignore_column(s, row, csv):
-    pass
-
-
-HeaderHandlers = {
-    'Name': check_column_name,
-    'CyrillicName': ignore_column,
-    'JapaneseName': ignore_column,
-    'ChineseName': ignore_column,
-    'Sex': ignore_column,
-    'Age': ignore_column,
-    'Place': ignore_column,
-    'Event': ignore_column,
-    'Division': ignore_column,
-    'Equipment': ignore_column,
-    'SquatEquipment': ignore_column,
-    'BenchEquipment': ignore_column,
-    'DeadliftEquipment': ignore_column,
-
-
-    # Temporary column for IPF, to be calculated as Age during compilation.
-    'BirthYear': ignore_column,
-    'BirthDay': ignore_column,
-
-    # Stat columns. Only Kg is valid.
-    'WeightClassKg': ignore_column,
-    'BodyweightKg': ignore_column,
-
-    # Lift columns. Only Kg is valid.
-    'Best3SquatKg': ignore_column,
-    'Squat1Kg': ignore_column,
-    'Squat2Kg': ignore_column,
-    'Squat3Kg': ignore_column,
-    'Squat4Kg': ignore_column,
-
-    'Best3BenchKg': ignore_column,
-    'Bench1Kg': ignore_column,
-    'Bench2Kg': ignore_column,
-    'Bench3Kg': ignore_column,
-    'Bench4Kg': ignore_column,
-
-    'Best3DeadliftKg': ignore_column,
-    'Deadlift1Kg': ignore_column,
-    'Deadlift2Kg': ignore_column,
-    'Deadlift3Kg': ignore_column,
-    'Deadlift4Kg': ignore_column,
-
-    'TotalKg': ignore_column,
-
-    'Tested': ignore_column,
-
-    # Columns that we don't really care about.
-    'State': check_column_state,
-
-    # Columns that we totally ignore but aren't bad to keep around.
-    'AgeClass': ignore_column,
-    'Team': ignore_column,
-    'Country-State': ignore_column,
-    'Country': ignore_column,
-    'College/University': ignore_column,
-    'School': ignore_column,
-    'Category': ignore_column,
-}
-
-KnownHeaders = HeaderHandlers.keys()
-
-
-def check_headers(csv):
-    if 'Name' not in csv.fieldnames:
-        perror('There must be a Name column.')
-
-    if 'BodyweightKg' not in csv.fieldnames and 'WeightClassKg' not in csv.fieldnames:
-        perror('There must be a BodyweightKg or WeightClassKg column.')
-
-    if 'Sex' not in csv.fieldnames:
-        perror('There must be a Sex column.')
-
-    if 'Equipment' not in csv.fieldnames:
-        perror('There must be an Equipment column.')
-
-    if 'TotalKg' not in csv.fieldnames:
-        perror('There must be a TotalKg column.')
-
-    if 'Place' not in csv.fieldnames:
-        perror("There must be a Place column.")
-
-    if 'Event' not in csv.fieldnames:
-        perror("There must be an Event column.")
-
-    for header in csv.fieldnames:
-        if header not in KnownHeaders:
-            perror("Unknown column header: %s" % header)
-
-        if csv.fieldnames.count(header) > 1:
-            perror("Duplicate column header: %s" % header)
-
-        # If lift data is present, we need a corresponding 'Best' column.
-        if 'Squat' in header and 'Best3SquatKg' not in csv.fieldnames:
-            pwarning('Squat data present, but missing Best3SquatKg')
-        if 'Bench' in header and 'Best3BenchKg' not in csv.fieldnames:
-            pwarning('Bench data present, but missing Best3BenchKg')
-        if 'Deadlift' in header and 'Best3DeadliftKg' not in csv.fieldnames:
-            pwarning('Deadlift data present, but missing Best3DeadliftKg')
 
 
 def check_row_name_consistency(row, csv):
@@ -603,31 +463,7 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
         check_row_weightclass(row, csv, None)
 
     check_row_ageclass(row, csv)
-
-    # Check individual cell values in isolation.
-    for i, text in enumerate(row):
-        if text.strip() != text:
-            perror("Extraneous whitespace for %s in row %s" %
-                   (text, ','.join(row)))
-
-        if text and csv.fieldnames[i] in KnownHeaders:
-            HeaderHandlers[csv.fieldnames[i]](text, row, csv)
-
-    # Sex may not be missing.
-    if 'Sex' in csv.fieldnames and not row[csv.index('Sex')]:
-        perror("Missing sex: %s" % ','.join(row))
-
-    # Equipment may not be missing.
-    if 'Equipment' in csv.fieldnames and not row[csv.index('Equipment')]:
-        perror("Missing equipment: %s" % ','.join(row))
-
-    # Event may not be missing.
-    if 'Event' in csv.fieldnames and not row[csv.index('Event')]:
-        perror("Missing event: %s" % ','.join(row))
-
-    # Place may not be missing.
-    if 'Place' in csv.fieldnames and not row[csv.index('Place')]:
-        perror("Missing place: %s" % ','.join(row))
+    check_column_name(row[csv.index('Name')], row, csv)
 
 
 def check(scriptname, filename, configtoml, meetpath):
@@ -638,8 +474,6 @@ def check(scriptname, filename, configtoml, meetpath):
 
     meet_id = os.path.basename(os.path.dirname(filename))
     meet_date = None
-
-    check_headers(csv)
 
     if meetpath != '':
         meet = oplcsv.Csv(meetpath)

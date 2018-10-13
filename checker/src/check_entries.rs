@@ -553,6 +553,12 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) {
     }
 }
 
+fn check_column_state(s: &str, line: u64, report: &mut Report) {
+    if !s.is_empty() && !s.is_ascii() {
+        report.error_on(line, format!("State '{}' must be ASCII", s));
+    }
+}
+
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
     let event = match entry.event {
         None => {
@@ -1096,6 +1102,9 @@ where
         }
         if let Some(idx) = headers.get(Header::Country) {
             check_column_country(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::State) {
+            check_column_state(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Tested) {
             check_column_tested(&record[idx], line, &mut report);
