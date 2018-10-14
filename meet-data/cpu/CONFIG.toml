@@ -34,7 +34,7 @@
 
 [weightclasses.old_M]
     # 140/140+ class is not a CPU WC, but there are a large number of old meets with this WC and no bodyweight
-    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+","140","140+"]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
 

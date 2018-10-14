@@ -1113,7 +1113,11 @@ fn check_weightclass_consistency(
         // by a check above, but now we additionally check that the bodyweight
         // isn't *also* in the weightclass that comes before it in the
         // ordered classes vector.
+        //
+        // But don't do this for SHW, because there can be multiple SHW
+        // weightclasses and the decision of which to use is arbitrary.
         if entry.bodyweightkg.is_non_zero()
+            && !entry.weightclasskg.is_shw()
             && index > 0
             && matched_group.classes[index - 1].matches_bodyweight(entry.bodyweightkg)
         {

@@ -81,6 +81,16 @@ impl WeightClassKg {
             WeightClassKg::None => false,
         }
     }
+
+    /// Whether this represents a Super HeavyWeight class.
+    #[inline]
+    pub fn is_shw(self) -> bool {
+        match self {
+            WeightClassKg::UnderOrEqual(_) => false,
+            WeightClassKg::Over(_) => true,
+            WeightClassKg::None => false,
+        }
+    }
 }
 
 impl fmt::Display for WeightClassKg {

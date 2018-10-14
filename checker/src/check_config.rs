@@ -276,6 +276,15 @@ fn parse_weightclasses(
             None => None,
         };
 
+        // The classes must be ordered from least to greatest.
+        // This ordering is required for the logic in check_weightclass_consistency.
+        for i in 1 .. classes.len() {
+            if classes[i-1] >= classes[i] {
+                report.error(format!("WeightClassKg '{}' occurs before '{}' in [weightclasses.{}]",
+                                     classes[i-1], classes[i], key));
+            }
+        }
+
         acc.push(WeightClassConfig {
             name: key.to_string(),
             classes,
