@@ -73,6 +73,14 @@ impl WeightClassKg {
             WeightUnits::Lbs => self.as_lbs(),
         }
     }
+
+    pub fn matches_bodyweight(self, bw: WeightKg) -> bool {
+        match self {
+            WeightClassKg::UnderOrEqual(cls) => bw <= cls,
+            WeightClassKg::Over(cls) => bw > cls,
+            WeightClassKg::None => false,
+        }
+    }
 }
 
 impl fmt::Display for WeightClassKg {

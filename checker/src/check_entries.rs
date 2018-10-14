@@ -8,9 +8,71 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use check_config::{Config, Exemption};
+use check_config::{Config, Exemption, WeightClassConfig};
 use check_meet::Meet;
 use Report;
+
+/// List of all plausible weightclasses, for non-configured federations.
+const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 54] = [
+    // IPF Men.
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(66)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(74)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(83)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(93)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(105)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(120)),
+    WeightClassKg::Over(WeightKg::from_i32(120)),
+    // IPF Women.
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(43)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(47)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(57)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(63)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(72)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(84)),
+    WeightClassKg::Over(WeightKg::from_i32(84)),
+    // Traditional and extra classes.
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(30)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(34)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(35)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(39)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(40)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(44)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(48)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(56)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(60)),
+    WeightClassKg::Over(WeightKg::from_i32(60)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_raw(67_50)),
+    WeightClassKg::Over(WeightKg::from_raw(67_50)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(75)),
+    WeightClassKg::Over(WeightKg::from_i32(75)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_raw(82_50)),
+    WeightClassKg::Over(WeightKg::from_i32(83)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(90)),
+    WeightClassKg::Over(WeightKg::from_i32(90)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(100)),
+    WeightClassKg::Over(WeightKg::from_i32(100)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(110)),
+    WeightClassKg::Over(WeightKg::from_i32(110)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_raw(117_50)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(125)),
+    WeightClassKg::Over(WeightKg::from_i32(125)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(140)),
+    WeightClassKg::Over(WeightKg::from_i32(140)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(145)),
+    WeightClassKg::Over(WeightKg::from_i32(145)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(155)),
+    WeightClassKg::Over(WeightKg::from_i32(155)),
+    // ProRaw classes.
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(70)),
+    WeightClassKg::Over(WeightKg::from_i32(70)),
+    WeightClassKg::Over(WeightKg::from_i32(70)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(80)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(95)),
+];
 
 /// Maps Header to index.
 struct HeaderIndexMap(Vec<Option<usize>>);
@@ -31,6 +93,7 @@ struct Entry {
     pub age: Age,
     pub place: Place,
     pub event: Event,
+    pub division: String,
     pub equipment: Option<Equipment>,
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
@@ -912,6 +975,171 @@ fn check_equipment_year(
     }
 }
 
+fn check_weightclass_consistency(
+    entry: &Entry,
+    meet: Option<&Meet>,
+    config: Option<&Config>,
+    exempt_weightclass_consistency: bool,
+    line: u64,
+    report: &mut Report,
+) {
+    // If the configuration exempts this check, do nothing.
+    if exempt_weightclass_consistency {
+        return;
+    }
+
+    // If there's no weightclass data, there's nothing to check.
+    if entry.weightclasskg == WeightClassKg::None {
+        // Configured federations should have weightclass data.
+        if config.is_some() {
+            report.warning_on(line, "Configured federations cannot omit WeightClassKg");
+        }
+        return;
+    }
+
+    // Any provided bodyweight should at least be plausible.
+    if entry.bodyweightkg.is_non_zero()
+        && !entry.weightclasskg.matches_bodyweight(entry.bodyweightkg)
+    {
+        report.warning_on(
+            line,
+            format!(
+                "BodyweightKg '{}' not in WeightClassKg '{}'",
+                entry.bodyweightkg, entry.weightclasskg
+            ),
+        );
+    }
+
+    // If there's nothing configured, we can still do some basic checks.
+    if config.is_none() {
+        // Check that the weightclass appears in the list of known defaults.
+        if !DEFAULT_WEIGHTCLASSES
+            .iter()
+            .any(|c| *c == entry.weightclasskg)
+        {
+            report.warning_on(
+                line,
+                format!(
+                    "Unknown unconfigured WeightClassKg '{}'",
+                    entry.weightclasskg
+                ),
+            );
+        }
+        return;
+    }
+
+    // The no-config case was handled above, so the config can be known here.
+    let config = config.unwrap();
+    let date = meet.map_or(Date::from_u32(20160101), |m| m.date);
+
+    // Attempt to find out what weightclass group this row is a member of.
+    //
+    // Groups are specified in an arbitrary order with date, sex, and division data.
+    // We want to find the one group that matches most closely.
+    let mut matched_group: Option<&WeightClassConfig> = None;
+    for group in &config.weightclasses {
+        // Sex and date information are mandatory and must match.
+        if date <= group.date_min || date >= group.date_max || entry.sex != group.sex {
+            continue;
+        }
+
+        // If there is a division qualifier, it must match.
+        let division_matches = match group.divisions {
+            Some(ref divs) => divs
+                .iter()
+                .any(|x| config.divisions[*x].name == entry.division),
+            None => true,
+        };
+
+        if !division_matches {
+            continue;
+        }
+
+        // Everything matches. Determine whether this group has a narrower scope
+        // than the currently best-known group.
+        if let Some(best) = matched_group {
+            // Ignore this group if it drops division information.
+            if best.divisions.is_some() && !group.divisions.is_some() {
+                continue;
+            }
+
+            // Check if two things matched and we don't have reason to prefer
+            // one over the other! That's an error in the configuration file,
+            // so whine at the user and select an arbitrary group.
+            if best.divisions.is_some() == group.divisions.is_some() {
+                report.warning_on(
+                    line,
+                    format!(
+                        "Matched both [weightclasses.{}] and [weightclasses.{}]",
+                        best.name, group.name
+                    ),
+                );
+            }
+        }
+
+        matched_group = Some(group);
+    }
+
+    // If no group matched, the config is in trouble.
+    if matched_group.is_none() {
+        report.warning_on(
+            line,
+            "Could not match to any weightclass group in the CONFIG.toml",
+        );
+        return;
+    }
+
+    // We've matched to a particular group in the config!
+    let matched_group = matched_group.unwrap();
+
+    // Find the index of the weightclass in the list.
+    let index: Option<usize> = matched_group
+        .classes
+        .iter()
+        .enumerate()
+        .find(|&(_, w)| *w == entry.weightclasskg)
+        .map_or(None, |(i, _)| Some(i));
+
+    if index.is_none() {
+        report.warning_on(
+            line,
+            format!(
+                "WeightClassKg '{}' not found in [weightclasses.{}]",
+                entry.weightclasskg, matched_group.name
+            ),
+        );
+    } else if let Some(index) = index {
+        // The bodyweight was already verified to be in the weightclass
+        // by a check above, but now we additionally check that the bodyweight
+        // isn't *also* in the weightclass that comes before it in the
+        // ordered classes vector.
+        if entry.bodyweightkg.is_non_zero()
+            && index > 0
+            && matched_group.classes[index - 1].matches_bodyweight(entry.bodyweightkg)
+        {
+            // This is an error state, but we can calculate a more helpful message.
+            // Iterate over all of the classes in order and find the first one
+            // that matches.
+            let first_match = matched_group
+                .classes
+                .iter()
+                .find(|c| c.matches_bodyweight(entry.bodyweightkg))
+                .unwrap();
+
+            report.warning_on(
+                line,
+                format!(
+                    "BodyweightKg '{}' matches '{}', not '{}' in [weightclasses.{}]",
+                    entry.bodyweightkg,
+                    first_match,
+                    entry.weightclasskg,
+                    matched_group.name
+                ),
+            );
+        }
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -935,6 +1163,10 @@ where
     });
     let exempt_division: bool = exemptions.map_or(false, |el| {
         el.iter().any(|&e| e == Exemption::ExemptDivision)
+    });
+    let exempt_weightclass_consistency: bool = exemptions.map_or(false, |el| {
+        el.iter()
+            .any(|&e| e == Exemption::ExemptWeightClassConsistency)
     });
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
@@ -1077,6 +1309,7 @@ where
                 line,
                 &mut report,
             );
+            entry.division = record[idx].to_string();
         }
         if let Some(idx) = headers.get(Header::Country) {
             check_column_country(&record[idx], line, &mut report);
@@ -1101,6 +1334,14 @@ where
         check_event_and_total_consistency(&entry, line, &mut report);
         check_attempt_consistency(&entry, exempt_lift_order, line, &mut report);
         check_equipment_year(&entry, meet, line, &mut report);
+        check_weightclass_consistency(
+            &entry,
+            meet,
+            config,
+            exempt_weightclass_consistency,
+            line,
+            &mut report,
+        );
     }
 
     Ok(report)

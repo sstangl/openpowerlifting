@@ -46,8 +46,14 @@ impl WeightKg {
     }
 
     #[inline]
-    pub fn from_i32(i: i32) -> WeightKg {
+    pub const fn from_i32(i: i32) -> WeightKg {
         WeightKg(i * 100)
+    }
+
+    // This only exists because from_f32() can't be const fn at the moment.
+    #[inline]
+    pub const fn from_raw(i: i32) -> WeightKg {
+        WeightKg(i)
     }
 
     #[inline]

@@ -35,6 +35,11 @@ pub struct DivisionConfig {
 
 #[derive(Debug)]
 pub struct WeightClassConfig {
+    /// The name of the TOML table member.
+    ///
+    /// For example, `[weightclasses.default_M]` has the name `default_M`.
+    pub name: String,
+
     /// List of weightclasses with the provided parameters.
     pub classes: Vec<WeightClassKg>,
     /// The earliest date at which these weightclasses existed.
@@ -47,7 +52,7 @@ pub struct WeightClassConfig {
     /// Specifies that these weightclasses are only for certain divisions.
     ///
     /// These are stored as indices into the Config's `divisions` list.
-    divisions: Option<Vec<usize>>,
+    pub divisions: Option<Vec<usize>>,
 }
 
 /// Used to exempt a specific meet from some of the checks.
@@ -272,6 +277,7 @@ fn parse_weightclasses(
         };
 
         acc.push(WeightClassConfig {
+            name: key.to_string(),
             classes,
             date_min: date_range.0,
             date_max: date_range.1,
