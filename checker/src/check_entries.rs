@@ -1067,7 +1067,7 @@ fn check_weightclass_consistency(
             // one over the other! That's an error in the configuration file,
             // so whine at the user and select an arbitrary group.
             if best.divisions.is_some() == group.divisions.is_some() {
-                report.warning_on(
+                report.error_on(
                     line,
                     format!(
                         "Matched both [weightclasses.{}] and [weightclasses.{}]",
