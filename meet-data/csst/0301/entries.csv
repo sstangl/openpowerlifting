@@ -1,25 +1,25 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Spartak Rokytnice Tj,Jakub Sedláček,1988,62.4,165,102.5,155,422.5,Single-ply,SBD,M,Open
-1,Spartak Rokytnice Tj,Jiří Janoušek,1965,74,180,120,215,515,Single-ply,SBD,M,Open
-1,Spartak Rokytnice Tj,Vladimír Medek,1964,82,232.5,167.5,255,655,Single-ply,SBD,M,Open
-1,Spartak Rokytnice Tj,Tomáš Sedláček,1965,94.9,275,180,260,715,Single-ply,SBD,M,Open
-2,Urtica Kopřivnice Tj,Jiří Brabec,1966,94.8,202.5,142.5,240,585,Single-ply,SBD,M,Open
-2,Urtica Kopřivnice Tj,Libor Burýšek,1968,81.2,225,175,240,640,Single-ply,SBD,M,Open
-2,Urtica Kopřivnice Tj,Josef Šimon,1965,90.2,215,137.5,260,612.5,Single-ply,SBD,M,Open
-2,Urtica Kopřivnice Tj,Tomáš Šeděnka,1976,102.8,255,150,230,635,Single-ply,SBD,M,Open
-3,Jemnice Sokol,Marcel Anděl,1958,92.6,185,150,240,575,Single-ply,SBD,M,Open
-3,Jemnice Sokol,Jiří Lukš,1971,96.2,215,150,210,575,Single-ply,SBD,M,Open
-3,Jemnice Sokol,Karel Kühtreiber,1977,92.7,220,180,240,640,Single-ply,SBD,M,Open
-3,Jemnice Sokol,Jiří Vejpustek,1974,100.2,212.5,170,270,652.5,Single-ply,SBD,M,Open
-4,Vranovice Sokol,Oldřich Halfar,1973,85.9,150,105,212.5,467.5,Single-ply,SBD,M,Open
-4,Vranovice Sokol,Josef Wächter,1968,96.7,160,135,220,515,Single-ply,SBD,M,Open
-4,Vranovice Sokol,Jiří Furch,1975,69,165,150,200,515,Single-ply,SBD,M,Open
-4,Vranovice Sokol,Pavel Pláteník,1974,78.7,215,140,220,575,Single-ply,SBD,M,Open
-5,Loko Krnov B Tj,Ladislav Rolný,1948,68.2,160,110,190,460,Single-ply,SBD,M,Open
-5,Loko Krnov B Tj,Jaroslav Pospíšil,1980,74.3,180,130,195,505,Single-ply,SBD,M,Open
-5,Loko Krnov B Tj,Václav Burda,1946,61.3,140,102.5,190,432.5,Single-ply,SBD,M,Open
-5,Loko Krnov B Tj,Petr Mikeska,1966,66.7,160,75,195,430,Single-ply,SBD,M,Open
-6,Jihlava Kst,Martin Hažva,1977,83.8,207.5,125,225,557.5,Single-ply,SBD,M,Open
-DQ,Jihlava Kst,Pavel Tříska,1979,83.3,210,,,,Single-ply,SBD,M,Open
-6,Jihlava Kst,Marcel Zavadil,1977,93.3,230,175,230,635,Single-ply,SBD,M,Open
-6,Jihlava Kst,Martin Chlupáček,1973,102,240,200,272.5,712.5,Single-ply,SBD,M,Open
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Spartak Rokytnice Tj,Jakub Sedláček,1988,67.5,62.4,165,102.5,155,422.5,Single-ply,SBD,M,Open
+1,Spartak Rokytnice Tj,Jiří Janoušek,1965,75,74,180,120,215,515,Single-ply,SBD,M,Open
+1,Spartak Rokytnice Tj,Vladimír Medek,1964,82.5,82,232.5,167.5,255,655,Single-ply,SBD,M,Open
+1,Spartak Rokytnice Tj,Tomáš Sedláček,1965,100,94.9,275,180,260,715,Single-ply,SBD,M,Open
+2,Urtica Kopřivnice Tj,Jiří Brabec,1966,100,94.8,202.5,142.5,240,585,Single-ply,SBD,M,Open
+2,Urtica Kopřivnice Tj,Libor Burýšek,1968,82.5,81.2,225,175,240,640,Single-ply,SBD,M,Open
+2,Urtica Kopřivnice Tj,Josef Šimon,1965,100,90.2,215,137.5,260,612.5,Single-ply,SBD,M,Open
+2,Urtica Kopřivnice Tj,Tomáš Šeděnka,1976,110,102.8,255,150,230,635,Single-ply,SBD,M,Open
+3,Jemnice Sokol,Marcel Anděl,1958,100,92.6,185,150,240,575,Single-ply,SBD,M,Open
+3,Jemnice Sokol,Jiří Lukš,1971,100,96.2,215,150,210,575,Single-ply,SBD,M,Open
+3,Jemnice Sokol,Karel Kühtreiber,1977,100,92.7,220,180,240,640,Single-ply,SBD,M,Open
+3,Jemnice Sokol,Jiří Vejpustek,1974,110,100.2,212.5,170,270,652.5,Single-ply,SBD,M,Open
+4,Vranovice Sokol,Oldřich Halfar,1973,90,85.9,150,105,212.5,467.5,Single-ply,SBD,M,Open
+4,Vranovice Sokol,Josef Wächter,1968,100,96.7,160,135,220,515,Single-ply,SBD,M,Open
+4,Vranovice Sokol,Jiří Furch,1975,75,69,165,150,200,515,Single-ply,SBD,M,Open
+4,Vranovice Sokol,Pavel Pláteník,1974,82.5,78.7,215,140,220,575,Single-ply,SBD,M,Open
+5,Loko Krnov B Tj,Ladislav Rolný,1948,75,68.2,160,110,190,460,Single-ply,SBD,M,Open
+5,Loko Krnov B Tj,Jaroslav Pospíšil,1980,75,74.3,180,130,195,505,Single-ply,SBD,M,Open
+5,Loko Krnov B Tj,Václav Burda,1946,67.5,61.3,140,102.5,190,432.5,Single-ply,SBD,M,Open
+5,Loko Krnov B Tj,Petr Mikeska,1966,67.5,66.7,160,75,195,430,Single-ply,SBD,M,Open
+6,Jihlava Kst,Martin Hažva,1977,90,83.8,207.5,125,225,557.5,Single-ply,SBD,M,Open
+DQ,Jihlava Kst,Pavel Tříska,1979,90,83.3,210,,,,Single-ply,SBD,M,Open
+6,Jihlava Kst,Marcel Zavadil,1977,100,93.3,230,175,230,635,Single-ply,SBD,M,Open
+6,Jihlava Kst,Martin Chlupáček,1973,110,102,240,200,272.5,712.5,Single-ply,SBD,M,Open

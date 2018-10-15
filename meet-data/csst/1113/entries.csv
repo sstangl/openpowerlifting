@@ -1,33 +1,33 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,Sex
-1,TJ Sokol Nymburk A,Jan Pinc,1973,118.8,300,235,280,815,SBD,Single-ply,Open,M
-1,TJ Sokol Nymburk A,Pavol Demčák,1977,118,310,265,285,860,SBD,Single-ply,Open,M
-1,TJ Sokol Nymburk A,Zbyněk Krejča,1974,116.6,340,270,302.5,912.5,SBD,Single-ply,Open,M
-1,TJ Sokol Nymburk A,Milan Špingl,1980,143.8,400,290,335,1025,SBD,Single-ply,Open,M
-2,Vitalmax Dětřichov,Marcel Rösler,1976,75.9,242.5,170,230,642.5,SBD,Single-ply,Open,M
-2,Vitalmax Dětřichov,Jaroslav Jirout,1980,121.4,315,200,280,795,SBD,Single-ply,Open,M
-2,Vitalmax Dětřichov,David Lupáč,1991,116.8,360,200,330,890,SBD,Single-ply,Open,M
-2,Vitalmax Dětřichov,Stanislav Balvín,1986,105.5,335,210,295,840,SBD,Single-ply,Open,M
-3,Olympia Zlín,Kamil Večeřa,1978,79.4,220,195,235,650,SBD,Single-ply,Open,M
-3,Olympia Zlín,Jiří Gryga,1968,107.8,300,187.5,320,807.5,SBD,Single-ply,Open,M
-3,Olympia Zlín,Zoltán Kanát,1962,115,320,220,260,800,SBD,Single-ply,Open,M
-3,Olympia Zlín,Miroslav Hejda,1978,123.5,330,245,310,885,SBD,Single-ply,Open,M
-4,Sporting Apis Praha,Dušan Švarcbach,1975,78.5,265,140,270,675,SBD,Single-ply,Open,M
-4,Sporting Apis Praha,Roman Tůma,1971,91.5,270,150,265,685,SBD,Single-ply,Open,M
-4,Sporting Apis Praha,Karel Válek,1980,92.1,280,212.5,275,767.5,SBD,Single-ply,Open,M
-4,Sporting Apis Praha,Martin Brabec,1975,103.7,310,215,312.5,837.5,SBD,Single-ply,Open,M
-5,KST Kuřim,Lukáš Tkadlec,1989,79.6,270,175,245,690,SBD,Single-ply,Open,M
-5,KST Kuřim,Pavel Župka,1984,98.2,275,175,300,750,SBD,Single-ply,Open,M
-5,KST Kuřim,Jiří Zimula,1983,105.5,285,190,270,745,SBD,Single-ply,Open,M
-5,KST Kuřim,Vladimír Pop,1975,114.9,285,200,280,765,SBD,Single-ply,Open,M
-6,TJ Sokol Nymburk B,Karel Ruso,1965,69.3,265,102.5,245,612.5,SBD,Single-ply,Open,M
-6,TJ Sokol Nymburk B,František Stříska,1971,105.3,255,175,245,675,SBD,Single-ply,Open,M
-6,TJ Sokol Nymburk B,Martin Kozák,1990,102.7,280,182.5,280,742.5,SBD,Single-ply,Open,M
-6,TJ Sokol Nymburk B,Tomáš Břimčil,1977,111.5,305,202.5,300,807.5,SBD,Single-ply,Open,M
-7,Loko Krnov,Remy Kreyzel,1955,81.9,230,175,200,605,SBD,Single-ply,Open,M
-7,Loko Krnov,Jíří Olejko,1977,97.3,250,195,235,680,SBD,Single-ply,Open,M
-7,Loko Krnov,Petr Vlach,1981,98.6,245,175,287.5,707.5,SBD,Single-ply,Open,M
-7,Loko Krnov,Antonín Pavlovec,1981,100.4,295,200,250,745,SBD,Single-ply,Open,M
-8,TJ Svitavy,Libor Novák,1966,81.9,200,147.5,220,567.5,SBD,Single-ply,Open,M
-8,TJ Svitavy,Marek Hejtmánek,1973,81.2,200,140,215,555,SBD,Single-ply,Open,M
-8,TJ Svitavy,Petr Dospěl,1986,102.6,225,147.5,217.5,590,SBD,Single-ply,Open,M
-8,TJ Svitavy,Petr Theuser,1961,98,342.5,225,292.5,860,SBD,Single-ply,Open,M
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,Sex
+1,TJ Sokol Nymburk A,Jan Pinc,1973,120,118.8,300,235,280,815,SBD,Single-ply,Open,M
+1,TJ Sokol Nymburk A,Pavol Demčák,1977,120,118,310,265,285,860,SBD,Single-ply,Open,M
+1,TJ Sokol Nymburk A,Zbyněk Krejča,1974,120,116.6,340,270,302.5,912.5,SBD,Single-ply,Open,M
+1,TJ Sokol Nymburk A,Milan Špingl,1980,120+,143.8,400,290,335,1025,SBD,Single-ply,Open,M
+2,Vitalmax Dětřichov,Marcel Rösler,1976,83,75.9,242.5,170,230,642.5,SBD,Single-ply,Open,M
+2,Vitalmax Dětřichov,Jaroslav Jirout,1980,120+,121.4,315,200,280,795,SBD,Single-ply,Open,M
+2,Vitalmax Dětřichov,David Lupáč,1991,120,116.8,360,200,330,890,SBD,Single-ply,Open,M
+2,Vitalmax Dětřichov,Stanislav Balvín,1986,120,105.5,335,210,295,840,SBD,Single-ply,Open,M
+3,Olympia Zlín,Kamil Večeřa,1978,83,79.4,220,195,235,650,SBD,Single-ply,Open,M
+3,Olympia Zlín,Jiří Gryga,1968,120,107.8,300,187.5,320,807.5,SBD,Single-ply,Open,M
+3,Olympia Zlín,Zoltán Kanát,1962,120,115,320,220,260,800,SBD,Single-ply,Open,M
+3,Olympia Zlín,Miroslav Hejda,1978,120+,123.5,330,245,310,885,SBD,Single-ply,Open,M
+4,Sporting Apis Praha,Dušan Švarcbach,1975,83,78.5,265,140,270,675,SBD,Single-ply,Open,M
+4,Sporting Apis Praha,Roman Tůma,1971,93,91.5,270,150,265,685,SBD,Single-ply,Open,M
+4,Sporting Apis Praha,Karel Válek,1980,93,92.1,280,212.5,275,767.5,SBD,Single-ply,Open,M
+4,Sporting Apis Praha,Martin Brabec,1975,105,103.7,310,215,312.5,837.5,SBD,Single-ply,Open,M
+5,KST Kuřim,Lukáš Tkadlec,1989,83,79.6,270,175,245,690,SBD,Single-ply,Open,M
+5,KST Kuřim,Pavel Župka,1984,105,98.2,275,175,300,750,SBD,Single-ply,Open,M
+5,KST Kuřim,Jiří Zimula,1983,120,105.5,285,190,270,745,SBD,Single-ply,Open,M
+5,KST Kuřim,Vladimír Pop,1975,120,114.9,285,200,280,765,SBD,Single-ply,Open,M
+6,TJ Sokol Nymburk B,Karel Ruso,1965,74,69.3,265,102.5,245,612.5,SBD,Single-ply,Open,M
+6,TJ Sokol Nymburk B,František Stříska,1971,120,105.3,255,175,245,675,SBD,Single-ply,Open,M
+6,TJ Sokol Nymburk B,Martin Kozák,1990,105,102.7,280,182.5,280,742.5,SBD,Single-ply,Open,M
+6,TJ Sokol Nymburk B,Tomáš Břimčil,1977,120,111.5,305,202.5,300,807.5,SBD,Single-ply,Open,M
+7,Loko Krnov,Remy Kreyzel,1955,83,81.9,230,175,200,605,SBD,Single-ply,Open,M
+7,Loko Krnov,Jíří Olejko,1977,105,97.3,250,195,235,680,SBD,Single-ply,Open,M
+7,Loko Krnov,Petr Vlach,1981,105,98.6,245,175,287.5,707.5,SBD,Single-ply,Open,M
+7,Loko Krnov,Antonín Pavlovec,1981,105,100.4,295,200,250,745,SBD,Single-ply,Open,M
+8,TJ Svitavy,Libor Novák,1966,83,81.9,200,147.5,220,567.5,SBD,Single-ply,Open,M
+8,TJ Svitavy,Marek Hejtmánek,1973,83,81.2,200,140,215,555,SBD,Single-ply,Open,M
+8,TJ Svitavy,Petr Dospěl,1986,105,102.6,225,147.5,217.5,590,SBD,Single-ply,Open,M
+8,TJ Svitavy,Petr Theuser,1961,105,98,342.5,225,292.5,860,SBD,Single-ply,Open,M

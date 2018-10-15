@@ -1,39 +1,39 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Iveta Peške,1974,54.5,Colbert Vitkovice,105,55,130,290,Single-ply,SBD,F,Open
-1,Tomáš Šesták,1973,67.5,Viktorie Bohumin,210,117.5,220,547.5,Single-ply,SBD,M,Open
-2,Štěpán Hoza,1974,67,TJ Sokol Teskovice,195,130,220,545,Single-ply,SBD,M,Open
-3,Jiří Furch,1975,67,Sokol Vranovice,172.5,130,200,502.5,Single-ply,SBD,M,Open
-1,Tomáš Lacko,1982,72,TJ Svitavy,230,140,227.5,597.5,Single-ply,SBD,M,Open
-2,Miloslav Kabrhel,1970,75,Bohemia Svetla n,220,140,227.5,587.5,Single-ply,SBD,M,Open
-3,Petr Zámečník,1966,74.5,TJ Olympia Zlin,195,135,242.5,572.5,Single-ply,SBD,M,Open
-4,Martin Turek,1972,74,Viktorie Bohumin,190,150,230,570,Single-ply,SBD,M,Open
-5,Aleš Brázda,1977,75,TJ Olympia Zlin,200,137.5,210,547.5,Single-ply,SBD,M,Open
-1,Jaroslav Chovan,1960,80,TJ PD Ostrava,195,135,245,575,Single-ply,SBD,M,Open
-2,Libor Novák,1966,80,TJ Svitavy,195,152.5,220,567.5,Single-ply,SBD,M,Open
-3,Petr Gracias,1971,81,TJ Loko Krnov,200,150,207.5,557.5,Single-ply,SBD,M,Open
-DQ,Marek Žák,1981,82,TJ Olympia Zlin,,,,,Single-ply,SBD,M,Open
-1,Ondřej Seidel,1975,90,Viktorie Bohumin,275,177.5,235,687.5,Single-ply,SBD,M,Open
-2,Václav Jaremczuk,1963,89,TJ Sokol Teskovice,247.5,157.5,270,675,Single-ply,SBD,M,Open
-3,Petr Ilík,1969,90,TJ Loko Krnov,250,157.5,250,657.5,Single-ply,SBD,M,Open
-4,Miroslav Pupík,1962,90,SK Frydek-Mistek,215,155,280,650,Single-ply,SBD,M,Open
-5,Marcel Zavadil,1977,88,TJ Slavoj Pacov,240,170,225,635,Single-ply,SBD,M,Open
-6,Karel Kühtreiber,1977,88.5,Sokol Jemnice,220,175,240,635,Single-ply,SBD,M,Open
-7,Jiro Olejko,1977,89.5,TJ Loko Krnov,230,152.5,240,622.5,Single-ply,SBD,M,Open
-8,Jan Smolka,1974,87.5,TJ Morava Kromeriz,210,135,235,580,Single-ply,SBD,M,Open
-9,Miroslav Peške,1972,88,Colbert Vitkovice,230,135,210,575,Single-ply,SBD,M,Open
-10,Jiří Fojta,1980,87,Colbert Vitkovice,210,110,240,560,Single-ply,SBD,M,Open
-DQ,Petr Krákora,1973,89.5,TJ Dobrany,,,,,Single-ply,SBD,M,Open
-1,David Chrupka,1977,99.5,Viktorie Bohumin,275,170,260,705,Single-ply,SBD,M,Open
-2,Milan Greguš,1968,94.5,TJ Loko Krnov,265,177.5,257.5,700,Single-ply,SBD,M,Open
-3,Martin Mořingl,1977,99,TJ Olympia Zlin,267.5,150,280,697.5,Single-ply,SBD,M,Open
-4,Michal Šafařík,1967,99.5,SK Kurim,255,175,245,675,Single-ply,SBD,M,Open
-5,Jiří Lukš,1971,97,Sokol Jemnice,220,150,220,590,Single-ply,SBD,M,Open
-1,Tomáš Šárik,1975,109,KST Jihlava,300,215,300,815,Single-ply,SBD,M,Open
-2,Patrik Chlupáček,1973,104,KST Jihlava,265,180,280,725,Single-ply,SBD,M,Open
-3,Jan Soběslav,1974,103,Colbert Vitkovice,250,180,270,700,Single-ply,SBD,M,Open
-4,Petr Krejčí,1979,102,Zekon Bystrice p.H.,240,165,280,685,Single-ply,SBD,M,Open
-5,Jan Horáček,1974,104,Zekon Bystrice p.H.,240,137.5,260,637.5,Single-ply,SBD,M,Open
-6,Jiří Valenta,1978,101,Sokol Jemnice,210,187.5,222.5,620,Single-ply,SBD,M,Open
-1,Michal Létal,1975,124,SK Gita Podivin,260,175,280,715,Single-ply,SBD,M,Open
-1,Milan Mrázek,1958,129,TJ Sokol Lanzhot,240,160,260,660,Single-ply,SBD,M,Open
-2,Robert Hansel,1969,126.5,Colbert Vitkovice,220,160,245,625,Single-ply,SBD,M,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Iveta Peške,1974,56,54.5,Colbert Vitkovice,105,55,130,290,Single-ply,SBD,F,Open
+1,Tomáš Šesták,1973,67.5,67.5,Viktorie Bohumin,210,117.5,220,547.5,Single-ply,SBD,M,Open
+2,Štěpán Hoza,1974,67.5,67,TJ Sokol Teskovice,195,130,220,545,Single-ply,SBD,M,Open
+3,Jiří Furch,1975,67.5,67,Sokol Vranovice,172.5,130,200,502.5,Single-ply,SBD,M,Open
+1,Tomáš Lacko,1982,75,72,TJ Svitavy,230,140,227.5,597.5,Single-ply,SBD,M,Open
+2,Miloslav Kabrhel,1970,75,75,Bohemia Svetla n,220,140,227.5,587.5,Single-ply,SBD,M,Open
+3,Petr Zámečník,1966,75,74.5,TJ Olympia Zlin,195,135,242.5,572.5,Single-ply,SBD,M,Open
+4,Martin Turek,1972,75,74,Viktorie Bohumin,190,150,230,570,Single-ply,SBD,M,Open
+5,Aleš Brázda,1977,75,75,TJ Olympia Zlin,200,137.5,210,547.5,Single-ply,SBD,M,Open
+1,Jaroslav Chovan,1960,82.5,80,TJ PD Ostrava,195,135,245,575,Single-ply,SBD,M,Open
+2,Libor Novák,1966,82.5,80,TJ Svitavy,195,152.5,220,567.5,Single-ply,SBD,M,Open
+3,Petr Gracias,1971,82.5,81,TJ Loko Krnov,200,150,207.5,557.5,Single-ply,SBD,M,Open
+DQ,Marek Žák,1981,82.5,82,TJ Olympia Zlin,,,,,Single-ply,SBD,M,Open
+1,Ondřej Seidel,1975,90,90,Viktorie Bohumin,275,177.5,235,687.5,Single-ply,SBD,M,Open
+2,Václav Jaremczuk,1963,90,89,TJ Sokol Teskovice,247.5,157.5,270,675,Single-ply,SBD,M,Open
+3,Petr Ilík,1969,90,90,TJ Loko Krnov,250,157.5,250,657.5,Single-ply,SBD,M,Open
+4,Miroslav Pupík,1962,90,90,SK Frydek-Mistek,215,155,280,650,Single-ply,SBD,M,Open
+5,Marcel Zavadil,1977,90,88,TJ Slavoj Pacov,240,170,225,635,Single-ply,SBD,M,Open
+6,Karel Kühtreiber,1977,90,88.5,Sokol Jemnice,220,175,240,635,Single-ply,SBD,M,Open
+7,Jiro Olejko,1977,90,89.5,TJ Loko Krnov,230,152.5,240,622.5,Single-ply,SBD,M,Open
+8,Jan Smolka,1974,90,87.5,TJ Morava Kromeriz,210,135,235,580,Single-ply,SBD,M,Open
+9,Miroslav Peške,1972,90,88,Colbert Vitkovice,230,135,210,575,Single-ply,SBD,M,Open
+10,Jiří Fojta,1980,90,87,Colbert Vitkovice,210,110,240,560,Single-ply,SBD,M,Open
+DQ,Petr Krákora,1973,90,89.5,TJ Dobrany,,,,,Single-ply,SBD,M,Open
+1,David Chrupka,1977,100,99.5,Viktorie Bohumin,275,170,260,705,Single-ply,SBD,M,Open
+2,Milan Greguš,1968,100,94.5,TJ Loko Krnov,265,177.5,257.5,700,Single-ply,SBD,M,Open
+3,Martin Mořingl,1977,100,99,TJ Olympia Zlin,267.5,150,280,697.5,Single-ply,SBD,M,Open
+4,Michal Šafařík,1967,100,99.5,SK Kurim,255,175,245,675,Single-ply,SBD,M,Open
+5,Jiří Lukš,1971,100,97,Sokol Jemnice,220,150,220,590,Single-ply,SBD,M,Open
+1,Tomáš Šárik,1975,110,109,KST Jihlava,300,215,300,815,Single-ply,SBD,M,Open
+2,Patrik Chlupáček,1973,110,104,KST Jihlava,265,180,280,725,Single-ply,SBD,M,Open
+3,Jan Soběslav,1974,110,103,Colbert Vitkovice,250,180,270,700,Single-ply,SBD,M,Open
+4,Petr Krejčí,1979,110,102,Zekon Bystrice p.H.,240,165,280,685,Single-ply,SBD,M,Open
+5,Jan Horáček,1974,110,104,Zekon Bystrice p.H.,240,137.5,260,637.5,Single-ply,SBD,M,Open
+6,Jiří Valenta,1978,110,101,Sokol Jemnice,210,187.5,222.5,620,Single-ply,SBD,M,Open
+1,Michal Létal,1975,125,124,SK Gita Podivin,260,175,280,715,Single-ply,SBD,M,Open
+1,Milan Mrázek,1958,125+,129,TJ Sokol Lanzhot,240,160,260,660,Single-ply,SBD,M,Open
+2,Robert Hansel,1969,125+,126.5,Colbert Vitkovice,220,160,245,625,Single-ply,SBD,M,Open

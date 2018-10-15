@@ -1,24 +1,24 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
-1,Milan Mejsnar,1982,62.7,TJ Vlcice,137.5,80,160,377.5,M,Single-ply,SBD,Juniors
-DQ,Jaromír Bobek,1983,63.5,TJ Slovan Frydlant,80,,,,M,Single-ply,SBD,Juniors
-1,Jaroslav Louda,1976,71.3,TJ Dobrany,200,130,212.5,542.5,M,Single-ply,SBD,Juniors
-2,Marcel Rössler,1976,73.8,TJ Slovan Frydlant,190,142.5,207.5,540,M,Single-ply,SBD,Juniors
-3,Jaroslav Cink,1976,71.6,TJ Slovan Frydlant,160,120,200,480,M,Single-ply,SBD,Juniors
-4,Jan Sobotka,1982,74.6,V+V Cheb,145,130,195,470,M,Single-ply,SBD,Juniors
-5,Bohumil Blažek,1976,71.9,TJ So Cejetice,165,120,180,465,M,Single-ply,SBD,Juniors
-6,Jiří Chalupný,1980,72.3,Ji Chribska,160,110,180,450,M,Single-ply,SBD,Juniors
-7,Jiří Ondráček,1982,69,TJ Vlcice,135,82.5,180.2,397.5,M,Single-ply,SBD,Juniors
-1,Martin Huk,1977,80.9,TJ Ateso Jablonec,220,157.5,230,607.5,M,Single-ply,SBD,Juniors
-2,Pavel Vesely,1982,76.1,TJ Vlcice,170,115,212.5,497.5,M,Single-ply,SBD,Juniors
-3,Pavel Košnar,1981,77.3,Ji Chribska,180,100,210,490,M,Single-ply,SBD,Juniors
-1,Jaromi Kratochvíl,1978,86.4,TJ Vlcice,250,160,235,645,M,Single-ply,SBD,Juniors
-2,Michal Navrátil,1982,88.8,V+V Cheb,125,115,205,445,M,Single-ply,SBD,Juniors
-1,Ondřej Přibyl,1979,98.3,TJ Ateso Jablonec,275,180,275,730,M,Single-ply,SBD,Juniors
-2,Jiří Laštovka,1976,95.2,SK FC Dobris,202.5,150,237.5,590,M,Single-ply,SBD,Juniors
-3,Vladimír Popelka,1980,93.5,TJ Ateso Jablonec,215,142.5,210,567.5,M,Single-ply,SBD,Juniors
-4,Vaclav Hajek,1980,98.4,TJ Slovan Frydlant,170,105,170,445,M,Single-ply,SBD,Juniors
-1,Luboš Šos,1978,105.9,Ji Chribska,232.5,155,272.5,660,M,Single-ply,SBD,Juniors
-2,Aleš Vacek,1976,105,SK FC Dobris,215,130,262.5,607.5,M,Single-ply,SBD,Juniors
-3,Vlastimil Kalaš,1979,105.4,TJ Vlcice,215,142.5,235,592.5,M,Single-ply,SBD,Juniors
-4,Michal Maťha,1980,106.6,TJ Dobrany,180,115,180,475,M,Single-ply,SBD,Juniors
-1,Jindric Berounsky,1977,123.9,FC Wilson Tabor,235,180,235,650,M,Single-ply,SBD,Juniors
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Milan Mejsnar,1982,67.5,62.7,TJ Vlcice,137.5,80,160,377.5,M,Single-ply,SBD,Juniors
+DQ,Jaromír Bobek,1983,67.5,63.5,TJ Slovan Frydlant,80,,,,M,Single-ply,SBD,Juniors
+1,Jaroslav Louda,1976,75,71.3,TJ Dobrany,200,130,212.5,542.5,M,Single-ply,SBD,Juniors
+2,Marcel Rössler,1976,75,73.8,TJ Slovan Frydlant,190,142.5,207.5,540,M,Single-ply,SBD,Juniors
+3,Jaroslav Cink,1976,75,71.6,TJ Slovan Frydlant,160,120,200,480,M,Single-ply,SBD,Juniors
+4,Jan Sobotka,1982,75,74.6,V+V Cheb,145,130,195,470,M,Single-ply,SBD,Juniors
+5,Bohumil Blažek,1976,75,71.9,TJ So Cejetice,165,120,180,465,M,Single-ply,SBD,Juniors
+6,Jiří Chalupný,1980,75,72.3,Ji Chribska,160,110,180,450,M,Single-ply,SBD,Juniors
+7,Jiří Ondráček,1982,75,69,TJ Vlcice,135,82.5,180.2,397.5,M,Single-ply,SBD,Juniors
+1,Martin Huk,1977,82.5,80.9,TJ Ateso Jablonec,220,157.5,230,607.5,M,Single-ply,SBD,Juniors
+2,Pavel Vesely,1982,82.5,76.1,TJ Vlcice,170,115,212.5,497.5,M,Single-ply,SBD,Juniors
+3,Pavel Košnar,1981,82.5,77.3,Ji Chribska,180,100,210,490,M,Single-ply,SBD,Juniors
+1,Jaromi Kratochvíl,1978,90,86.4,TJ Vlcice,250,160,235,645,M,Single-ply,SBD,Juniors
+2,Michal Navrátil,1982,90,88.8,V+V Cheb,125,115,205,445,M,Single-ply,SBD,Juniors
+1,Ondřej Přibyl,1979,100,98.3,TJ Ateso Jablonec,275,180,275,730,M,Single-ply,SBD,Juniors
+2,Jiří Laštovka,1976,100,95.2,SK FC Dobris,202.5,150,237.5,590,M,Single-ply,SBD,Juniors
+3,Vladimír Popelka,1980,100,93.5,TJ Ateso Jablonec,215,142.5,210,567.5,M,Single-ply,SBD,Juniors
+4,Vaclav Hajek,1980,100,98.4,TJ Slovan Frydlant,170,105,170,445,M,Single-ply,SBD,Juniors
+1,Luboš Šos,1978,110,105.9,Ji Chribska,232.5,155,272.5,660,M,Single-ply,SBD,Juniors
+2,Aleš Vacek,1976,110,105,SK FC Dobris,215,130,262.5,607.5,M,Single-ply,SBD,Juniors
+3,Vlastimil Kalaš,1979,110,105.4,TJ Vlcice,215,142.5,235,592.5,M,Single-ply,SBD,Juniors
+4,Michal Maťha,1980,110,106.6,TJ Dobrany,180,115,180,475,M,Single-ply,SBD,Juniors
+1,Jindric Berounsky,1977,125,123.9,FC Wilson Tabor,235,180,235,650,M,Single-ply,SBD,Juniors

@@ -1,25 +1,25 @@
-Place,Team,Name,BirthYear,BodyweightKg,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division
-1,TJ Sokol Nymburk C,Miroslav Slovák,1970,102.7,M,235,210,252.5,697.5,SBD,Single-ply,Open
-1,TJ Sokol Nymburk C,Pavla Kladivová,1984,73.1,F,170,95,155,420,SBD,Single-ply,Open
-1,TJ Sokol Nymburk C,František Stříska,1971,97.8,M,250,160,245,655,SBD,Single-ply,Open
-1,TJ Sokol Nymburk C,Tomaš Břinčil,1977,108.1,M,200,180,250,630,SBD,Single-ply,Open
-2,TJ Slovan Frýdlant v Č.,Jiří Filo,1974,93.6,M,230,185,260,675,SBD,Single-ply,Open
-2,TJ Slovan Frýdlant v Č.,Marcel Rösler,1976,75,M,180,152.5,230,562.5,SBD,Single-ply,Open
-2,TJ Slovan Frýdlant v Č.,Jaroslav Jirout,1980,113.8,M,260,160,250,670,SBD,Single-ply,Open
-2,TJ Slovan Frýdlant v Č.,Jaromír Vítek,1981,103.2,M,180,120,230,530,SBD,Single-ply,Open
-3,Factory Gym Litvínov B,Petr Kokš,1976,118.2,M,240,220,290,750,SBD,Single-ply,Open
-3,Factory Gym Litvínov B,David Málek,1976,103.8,M,175,160,240,575,SBD,Single-ply,Open
-3,Factory Gym Litvínov B,Jiří Janda,1972,121.2,M,190,160,240,590,SBD,Single-ply,Open
-3,Factory Gym Litvínov B,Petr Butora,1972,81.7,M,170,125,190,485,SBD,Single-ply,Open
-4,Spartak Pelhřimov,Roman Svoboda,1973,99.5,M,210,185,250,645,SBD,Single-ply,Open
-4,Spartak Pelhřimov,Václav Keller,1971,97.8,M,215,135,237.5,587.5,SBD,Single-ply,Open
-4,Spartak Pelhřimov,Aleš Vrzák,1957,86.2,M,172.5,135,217.5,525,SBD,Single-ply,Open
-4,Spartak Pelhřimov,Ondřej Šaláta,1980,55.9,M,132.5,70,147.5,350,SBD,Single-ply,Open
-5,TJ Sokol Praha Vršovic,Daniel Bachan,1971,99.9,M,227.5,185,232.5,645,SBD,Single-ply,Open
-5,TJ Sokol Praha Vršovic,Ondřej Lázna,1963,110.1,M,220,155,215,590,SBD,Single-ply,Open
-5,TJ Sokol Praha Vršovic,Miroslav Pavlíček,1987,95,M,175,100,190,465,SBD,Single-ply,Open
-DQ,TJ Sokol Praha Vršovic,Martin Šafář,1981,106.3,M,265,,,,SBD,Single-ply,Open
-6,TJ Sokol Nymburk D,Jaroslav Trávníček,1968,91.2,M,185,160,225,570,SBD,Single-ply,Open
-6,TJ Sokol Nymburk D,Bohumil Čmugr,1956,97.7,M,180,175,210,565,SBD,Single-ply,Open
-6,TJ Sokol Nymburk D,Jakub Skořepa,1986,86.2,M,185,125,180,490,SBD,Single-ply,Open
-DQ,TJ Sokol Nymburk D,Aleš Pešek,1977,111.1,M,185,,,,SBD,Single-ply,Open
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division
+1,TJ Sokol Nymburk C,Miroslav Slovák,1970,110,102.7,M,235,210,252.5,697.5,SBD,Single-ply,Open
+1,TJ Sokol Nymburk C,Pavla Kladivová,1984,75,73.1,F,170,95,155,420,SBD,Single-ply,Open
+1,TJ Sokol Nymburk C,František Stříska,1971,100,97.8,M,250,160,245,655,SBD,Single-ply,Open
+1,TJ Sokol Nymburk C,Tomaš Břinčil,1977,110,108.1,M,200,180,250,630,SBD,Single-ply,Open
+2,TJ Slovan Frýdlant v Č.,Jiří Filo,1974,100,93.6,M,230,185,260,675,SBD,Single-ply,Open
+2,TJ Slovan Frýdlant v Č.,Marcel Rösler,1976,75,75,M,180,152.5,230,562.5,SBD,Single-ply,Open
+2,TJ Slovan Frýdlant v Č.,Jaroslav Jirout,1980,125,113.8,M,260,160,250,670,SBD,Single-ply,Open
+2,TJ Slovan Frýdlant v Č.,Jaromír Vítek,1981,110,103.2,M,180,120,230,530,SBD,Single-ply,Open
+3,Factory Gym Litvínov B,Petr Kokš,1976,125,118.2,M,240,220,290,750,SBD,Single-ply,Open
+3,Factory Gym Litvínov B,David Málek,1976,110,103.8,M,175,160,240,575,SBD,Single-ply,Open
+3,Factory Gym Litvínov B,Jiří Janda,1972,125,121.2,M,190,160,240,590,SBD,Single-ply,Open
+3,Factory Gym Litvínov B,Petr Butora,1972,82.5,81.7,M,170,125,190,485,SBD,Single-ply,Open
+4,Spartak Pelhřimov,Roman Svoboda,1973,100,99.5,M,210,185,250,645,SBD,Single-ply,Open
+4,Spartak Pelhřimov,Václav Keller,1971,100,97.8,M,215,135,237.5,587.5,SBD,Single-ply,Open
+4,Spartak Pelhřimov,Aleš Vrzák,1957,90,86.2,M,172.5,135,217.5,525,SBD,Single-ply,Open
+4,Spartak Pelhřimov,Ondřej Šaláta,1980,56,55.9,M,132.5,70,147.5,350,SBD,Single-ply,Open
+5,TJ Sokol Praha Vršovic,Daniel Bachan,1971,100,99.9,M,227.5,185,232.5,645,SBD,Single-ply,Open
+5,TJ Sokol Praha Vršovic,Ondřej Lázna,1963,125,110.1,M,220,155,215,590,SBD,Single-ply,Open
+5,TJ Sokol Praha Vršovic,Miroslav Pavlíček,1987,100,95,M,175,100,190,465,SBD,Single-ply,Open
+DQ,TJ Sokol Praha Vršovic,Martin Šafář,1981,110,106.3,M,265,,,,SBD,Single-ply,Open
+6,TJ Sokol Nymburk D,Jaroslav Trávníček,1968,100,91.2,M,185,160,225,570,SBD,Single-ply,Open
+6,TJ Sokol Nymburk D,Bohumil Čmugr,1956,100,97.7,M,180,175,210,565,SBD,Single-ply,Open
+6,TJ Sokol Nymburk D,Jakub Skořepa,1986,90,86.2,M,185,125,180,490,SBD,Single-ply,Open
+DQ,TJ Sokol Nymburk D,Aleš Pešek,1977,125,111.1,M,185,,,,SBD,Single-ply,Open

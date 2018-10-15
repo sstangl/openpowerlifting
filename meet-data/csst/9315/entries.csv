@@ -1,29 +1,29 @@
-Place,Name,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Rudolf Hlavsa,84,TJ Spartak Rokytnice,205,112.5,225,542.5,Single-ply,SBD,M,Open
-1,Tomáš Sedláček,85,TJ Spartak Rokytnice,220,140,262.5,622.5,Single-ply,SBD,M,Open
-1,Jiří Schejbal,122,TJ Spartak Rokytnice,250,150,280,680,Single-ply,SBD,M,Open
-1,Vladimír Medek,75,TJ Spartak Rokytnice,205,140,240,585,Single-ply,SBD,M,Open
-2,Ladislav Pasecký,94.2,TJ Turnov,260,160,280,700,Single-ply,SBD,M,Open
-2,Pavel Plesar,71,TJ Turnov,145,120,202.5,467.5,Single-ply,SBD,M,Open
-2,Jiří Kopecký,75,TJ Turnov,175,125,195,495,Single-ply,SBD,M,Open
-2,Petr Plesar,75.5,TJ Turnov,155,127.5,187.5,470,Single-ply,SBD,M,Open
-3,Jiří Boháček,77.5,Šíma klub Praha,205,125,200,530,Single-ply,SBD,M,Open
-3,Pavel Hofman,107.8,Šíma klub Praha,235,125,215,575,Single-ply,SBD,M,Open
-3,Jiří Šafář,106,Šíma klub Praha,260,157.5,305,722.5,Single-ply,SBD,M,Open
-3,Jiří Štýrský,96.9,Šíma klub Praha,215,135,210,560,Single-ply,SBD,M,Open
-4,Luděk Jech,87,Sokol Nymburk B,185,120,220,525,Single-ply,SBD,M,Open
-4,Miroslav Hubáček,77.3,Sokol Nymburk B,192.5,145,240,577.5,Single-ply,SBD,M,Open
-4,Adam Šťastný,90.7,Sokol Nymburk B,200,135,230,565,Single-ply,SBD,M,Open
-4,Miloslav Matouš,74.5,Sokol Nymburk B,170,112.5,217.5,500,Single-ply,SBD,M,Open
-5,Zoltán Kanát,97,TJ Spartak Chodov,220,155,250,625,Single-ply,SBD,M,Open
-5,Antonín Urban,61.5,TJ Spartak Chodov,150,90,215,455,Single-ply,SBD,M,Open
-5,Manfréd Rőhm,84.5,TJ Spartak Chodov,245,155,200,600,Single-ply,SBD,M,Open
-5,Martin Ürban,56,TJ Spartak Chodov,110,70,130,310,Single-ply,SBD,M,Open
-6,Jiří Šálek,97,TJ SCHZ Lovosice B,225,135,220,580,Single-ply,SBD,M,Open
-6,Vladimír Ptáček,68,TJ SCHZ Lovosice B,150,95,177.5,422.5,Single-ply,SBD,M,Open
-6,Jiří Effenberger,84.5,TJ SCHZ Lovosice B,175,85,205,465,Single-ply,SBD,M,Open
-6,Pavel Kacl,66,TJ SCHZ Lovosice B,110,75,150,335,Single-ply,SBD,M,Open
-7,Jiří Vohryzka,91.2,Sokol Mirotice,167.5,120,205,492.5,Single-ply,SBD,M,Open
-7,Petr Zeithammel,78.3,Sokol Mirotice,142.5,80,175,397.5,Single-ply,SBD,M,Open
-7,Václav Kouba,85,Sokol Mirotice,160,117.5,200,477.5,Single-ply,SBD,M,Open
-7,Jiří Krahulec,80,Sokol Mirotice,157.5,95,172.5,425,Single-ply,SBD,M,Open
+Place,Name,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Rudolf Hlavsa,90,84,TJ Spartak Rokytnice,205,112.5,225,542.5,Single-ply,SBD,M,Open
+1,Tomáš Sedláček,90,85,TJ Spartak Rokytnice,220,140,262.5,622.5,Single-ply,SBD,M,Open
+1,Jiří Schejbal,125,122,TJ Spartak Rokytnice,250,150,280,680,Single-ply,SBD,M,Open
+1,Vladimír Medek,75,75,TJ Spartak Rokytnice,205,140,240,585,Single-ply,SBD,M,Open
+2,Ladislav Pasecký,100,94.2,TJ Turnov,260,160,280,700,Single-ply,SBD,M,Open
+2,Pavel Plesar,75,71,TJ Turnov,145,120,202.5,467.5,Single-ply,SBD,M,Open
+2,Jiří Kopecký,75,75,TJ Turnov,175,125,195,495,Single-ply,SBD,M,Open
+2,Petr Plesar,82.5,75.5,TJ Turnov,155,127.5,187.5,470,Single-ply,SBD,M,Open
+3,Jiří Boháček,82.5,77.5,Šíma klub Praha,205,125,200,530,Single-ply,SBD,M,Open
+3,Pavel Hofman,110,107.8,Šíma klub Praha,235,125,215,575,Single-ply,SBD,M,Open
+3,Jiří Šafář,110,106,Šíma klub Praha,260,157.5,305,722.5,Single-ply,SBD,M,Open
+3,Jiří Štýrský,100,96.9,Šíma klub Praha,215,135,210,560,Single-ply,SBD,M,Open
+4,Luděk Jech,90,87,Sokol Nymburk B,185,120,220,525,Single-ply,SBD,M,Open
+4,Miroslav Hubáček,82.5,77.3,Sokol Nymburk B,192.5,145,240,577.5,Single-ply,SBD,M,Open
+4,Adam Šťastný,100,90.7,Sokol Nymburk B,200,135,230,565,Single-ply,SBD,M,Open
+4,Miloslav Matouš,75,74.5,Sokol Nymburk B,170,112.5,217.5,500,Single-ply,SBD,M,Open
+5,Zoltán Kanát,100,97,TJ Spartak Chodov,220,155,250,625,Single-ply,SBD,M,Open
+5,Antonín Urban,67.5,61.5,TJ Spartak Chodov,150,90,215,455,Single-ply,SBD,M,Open
+5,Manfréd Rőhm,90,84.5,TJ Spartak Chodov,245,155,200,600,Single-ply,SBD,M,Open
+5,Martin Ürban,56,56,TJ Spartak Chodov,110,70,130,310,Single-ply,SBD,M,Open
+6,Jiří Šálek,100,97,TJ SCHZ Lovosice B,225,135,220,580,Single-ply,SBD,M,Open
+6,Vladimír Ptáček,75,68,TJ SCHZ Lovosice B,150,95,177.5,422.5,Single-ply,SBD,M,Open
+6,Jiří Effenberger,90,84.5,TJ SCHZ Lovosice B,175,85,205,465,Single-ply,SBD,M,Open
+6,Pavel Kacl,67.5,66,TJ SCHZ Lovosice B,110,75,150,335,Single-ply,SBD,M,Open
+7,Jiří Vohryzka,100,91.2,Sokol Mirotice,167.5,120,205,492.5,Single-ply,SBD,M,Open
+7,Petr Zeithammel,82.5,78.3,Sokol Mirotice,142.5,80,175,397.5,Single-ply,SBD,M,Open
+7,Václav Kouba,90,85,Sokol Mirotice,160,117.5,200,477.5,Single-ply,SBD,M,Open
+7,Jiří Krahulec,82.5,80,Sokol Mirotice,157.5,95,172.5,425,Single-ply,SBD,M,Open

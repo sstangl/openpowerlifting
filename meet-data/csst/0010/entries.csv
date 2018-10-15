@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Luděk Michal,1969,110.7,Sokol Nymburk A,270,190,260,720,Single-ply,SBD,M,Open
-1,Miroslav Vacek,1967,126,Sokol Nymburk A,290,180,290,760,Single-ply,SBD,M,Open
-1,Zbyněk Krejča,1974,110,Sokol Nymburk A,290,210,282.5,782.5,Single-ply,SBD,M,Open
-1,Josef Zámečník,1966,100,Sokol Nymburk A,280,180,260,720,Single-ply,SBD,M,Open
-2,Ondřej Seidel,1975,87.3,Olympia Zlin,270,160,237.5,667.5,Single-ply,SBD,M,Open
-2,Marek Žák,1981,81.5,Olympia Zlin,245,152.5,242.5,640,Single-ply,SBD,M,Open
-2,Tomáš Šárik,1975,106,Olympia Zlin,280,217.5,302.5,800,Single-ply,SBD,M,Open
-2,Martin Mořingl,1977,104.5,Olympia Zlin,252.5,152.5,272.5,677.5,Single-ply,SBD,M,Open
-3,Libor Novák,1966,82.1,TJ Svitavy,200,145,215,560,Single-ply,SBD,M,Open
-3,Antonín Šota,1955,110.4,TJ Svitavy,260,202.5,260,722.5,Single-ply,SBD,M,Open
-3,Tomáš Lacko,1982,67.5,TJ Svitavy,200,115,210,525,Single-ply,SBD,M,Open
-3,Petr Theuser,1961,93.9,TJ Svitavy,320,220,280,820,Single-ply,SBD,M,Open
-4,Stanislav Hoza,1956,82.8,So Teskovice,275,170,240,685,Single-ply,SBD,M,Open
-4,Václav Jaremczuk,1963,88.5,So Teskovice,255,165,280,700,Single-ply,SBD,M,Open
-4,Tomáš Hořínek,1974,94,So Teskovice,185,122.5,215,522.5,Single-ply,SBD,M,Open
-4,Pavel Schaumann,1972,91,So Teskovice,220,137.5,235.5,592.5,Single-ply,SBD,M,Open
-5,Martin Ürban,1968,101.5,Sokol Nymburk B,230,150,280,660,Single-ply,SBD,M,Open
-5,Karel Ruso,1965,69,Sokol Nymburk B,235,127.5,210,572.5,Single-ply,SBD,M,Open
-5,Jiří Janeček,1961,75.5,Sokol Nymburk B,205,145,210,560,Single-ply,SBD,M,Open
-5,Bohumil Čmugr,1956,94.5,Sokol Nymburk B,180,165,235,580,Single-ply,SBD,M,Open
-6,Jaroslav Kelner,1956,90.5,Loko Krnov,265,160,275,700,Single-ply,SBD,M,Open
-6,Jaroslav Planka,1968,60.8,Loko Krnov,155,115,205,475,Single-ply,SBD,M,Open
-6,Jaroslav Stašek,1973,123.5,Loko Krnov,275,150,275,700,Single-ply,SBD,M,Open
-DD,Rémy Krayzel,1979,79.5,Loko Krnov,245,165,220,,Single-ply,SBD,M,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Luděk Michal,1969,125,110.7,Sokol Nymburk A,270,190,260,720,Single-ply,SBD,M,Open
+1,Miroslav Vacek,1967,125+,126,Sokol Nymburk A,290,180,290,760,Single-ply,SBD,M,Open
+1,Zbyněk Krejča,1974,110,110,Sokol Nymburk A,290,210,282.5,782.5,Single-ply,SBD,M,Open
+1,Josef Zámečník,1966,100,100,Sokol Nymburk A,280,180,260,720,Single-ply,SBD,M,Open
+2,Ondřej Seidel,1975,90,87.3,Olympia Zlin,270,160,237.5,667.5,Single-ply,SBD,M,Open
+2,Marek Žák,1981,82.5,81.5,Olympia Zlin,245,152.5,242.5,640,Single-ply,SBD,M,Open
+2,Tomáš Šárik,1975,110,106,Olympia Zlin,280,217.5,302.5,800,Single-ply,SBD,M,Open
+2,Martin Mořingl,1977,110,104.5,Olympia Zlin,252.5,152.5,272.5,677.5,Single-ply,SBD,M,Open
+3,Libor Novák,1966,82.5,82.1,TJ Svitavy,200,145,215,560,Single-ply,SBD,M,Open
+3,Antonín Šota,1955,125,110.4,TJ Svitavy,260,202.5,260,722.5,Single-ply,SBD,M,Open
+3,Tomáš Lacko,1982,67.5,67.5,TJ Svitavy,200,115,210,525,Single-ply,SBD,M,Open
+3,Petr Theuser,1961,100,93.9,TJ Svitavy,320,220,280,820,Single-ply,SBD,M,Open
+4,Stanislav Hoza,1956,90,82.8,So Teskovice,275,170,240,685,Single-ply,SBD,M,Open
+4,Václav Jaremczuk,1963,90,88.5,So Teskovice,255,165,280,700,Single-ply,SBD,M,Open
+4,Tomáš Hořínek,1974,100,94,So Teskovice,185,122.5,215,522.5,Single-ply,SBD,M,Open
+4,Pavel Schaumann,1972,100,91,So Teskovice,220,137.5,235.5,592.5,Single-ply,SBD,M,Open
+5,Martin Ürban,1968,110,101.5,Sokol Nymburk B,230,150,280,660,Single-ply,SBD,M,Open
+5,Karel Ruso,1965,75,69,Sokol Nymburk B,235,127.5,210,572.5,Single-ply,SBD,M,Open
+5,Jiří Janeček,1961,82.5,75.5,Sokol Nymburk B,205,145,210,560,Single-ply,SBD,M,Open
+5,Bohumil Čmugr,1956,100,94.5,Sokol Nymburk B,180,165,235,580,Single-ply,SBD,M,Open
+6,Jaroslav Kelner,1956,100,90.5,Loko Krnov,265,160,275,700,Single-ply,SBD,M,Open
+6,Jaroslav Planka,1968,67.5,60.8,Loko Krnov,155,115,205,475,Single-ply,SBD,M,Open
+6,Jaroslav Stašek,1973,125,123.5,Loko Krnov,275,150,275,700,Single-ply,SBD,M,Open
+DD,Rémy Krayzel,1979,82.5,79.5,Loko Krnov,245,165,220,,Single-ply,SBD,M,Open

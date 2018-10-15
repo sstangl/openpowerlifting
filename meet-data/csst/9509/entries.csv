@@ -1,27 +1,27 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
-1,Jaroslav Hlousek,1976,54,FC LS Vrchlabi,140,85,185,410,M,Single-ply,SBD,Juniors
-1,Martin Valeš,1974,59.1,TJ Spartak Usti n.L,130,87.5,160,377.5,M,Single-ply,SBD,Juniors
-2,Martin Ürban,1977,59.1,TJ Spartak Chodov,125,85,155,365,M,Single-ply,SBD,Juniors
-1,Pavel Štajer,1973,67.5,TJ Sp Rokytnice,190,140,225,555,M,Single-ply,SBD,Juniors
-1,Ladislav Strache,1974,74,TJ Spartak Usti n.L,207.5,152.5,235,595,M,Single-ply,SBD,Juniors
-2,Martin Huk,1977,72.7,TJ Ateso Jablonec,190,115,195,500,M,Single-ply,SBD,Juniors
-3,Tomáš Mařík,1975,73.2,TJ Ateso Jablonec,170,112.5,190,472.5,M,Single-ply,SBD,Juniors
-1,Josef Svárovský,1974,75.1,TJ Ateso Jablonec,220,152.5,215,587.5,M,Single-ply,SBD,Juniors
-2,Vratislav Moudr,1977,82.5,TJ Sp Pelhrimov,210,147.5,217.5,575,M,Single-ply,SBD,Sub-Juniors
-3,Petr Brzek,1972,77.8,V&V Studio Cheb,195,110,210,515,M,Single-ply,SBD,Juniors
-4,Daniel Hušek,1979,76,Sokol Nymburk,175,115,200,490,M,Single-ply,SBD,Juniors
-5,Martin Mička,1974,76.8,TJ Slavoj Pacov,170,115,200,485,M,Single-ply,SBD,Juniors
-1,Igor Poliačik,1974,89.8,TJ Svitavy,190,145,250,585,M,Single-ply,SBD,Juniors
-2,Zbyněk Krejča,1974,87.5,TJ DKT Klara Praha,220,130,225,575,M,Single-ply,SBD,Juniors
-3,Milan Melichar,1975,85.9,TJ Dacice,175,130,225,530,M,Single-ply,SBD,Juniors
-4,Miroslav Buzek,1972,82.9,TJ Slavoj Pacov,167.5,110,215,492.5,M,Single-ply,SBD,Juniors
-5,Marek Cerveny,1973,86.4,TJ Spartak Chodov,160,105,180,445,M,Single-ply,SBD,Juniors
-1,Luděk Jech,1976,93.1,Sokol Nymburk,240,145,260,645,M,Single-ply,SBD,Juniors
-2,Marek Zimmermann,1972,98.5,TJ Ateso Jablonec,207.5,135,227.5,570,M,Single-ply,SBD,Juniors
-3,Richard Kraus,1974,99.6,TJ Ateso Jablonec,215,125,227.5,567.5,M,Single-ply,SBD,Juniors
-4,Jiří Michálek,1973,98.1,TJ Ateso Jablonec,175,120,205,500,M,Single-ply,SBD,Juniors
-1,Jiří Effenberger,1975,100.1,TJ Lovo Lovosice,232.5,122.5,250,605,M,Single-ply,SBD,Juniors
-2,Adam Šťastný,1973,100.3,Sokol Nymburk,225,145,235,605,M,Single-ply,SBD,Juniors
-3,Jan Pinc,1973,100.3,TJ Tn Lomnice n.L.,195,145,242.5,582.5,M,Single-ply,SBD,Juniors
-4,Jaroslav Šoukal,1972,106.3,TJ Sokol Vejprnice,180,172.5,230,582.5,M,Single-ply,SBD,Juniors
-1,Martin Lesk,1974,112.5,TJ Ateso Jablonec,230,152.5,250,632.5,M,Single-ply,SBD,Juniors
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Jaroslav Hlousek,1976,56,54,FC LS Vrchlabi,140,85,185,410,M,Single-ply,SBD,Juniors
+1,Martin Valeš,1974,60,59.1,TJ Spartak Usti n.L,130,87.5,160,377.5,M,Single-ply,SBD,Juniors
+2,Martin Ürban,1977,60,59.1,TJ Spartak Chodov,125,85,155,365,M,Single-ply,SBD,Juniors
+1,Pavel Štajer,1973,67.5,67.5,TJ Sp Rokytnice,190,140,225,555,M,Single-ply,SBD,Juniors
+1,Ladislav Strache,1974,75,74,TJ Spartak Usti n.L,207.5,152.5,235,595,M,Single-ply,SBD,Juniors
+2,Martin Huk,1977,75,72.7,TJ Ateso Jablonec,190,115,195,500,M,Single-ply,SBD,Juniors
+3,Tomáš Mařík,1975,75,73.2,TJ Ateso Jablonec,170,112.5,190,472.5,M,Single-ply,SBD,Juniors
+1,Josef Svárovský,1974,82.5,75.1,TJ Ateso Jablonec,220,152.5,215,587.5,M,Single-ply,SBD,Juniors
+2,Vratislav Moudr,1977,82.5,82.5,TJ Sp Pelhrimov,210,147.5,217.5,575,M,Single-ply,SBD,Sub-Juniors
+3,Petr Brzek,1972,82.5,77.8,V&V Studio Cheb,195,110,210,515,M,Single-ply,SBD,Juniors
+4,Daniel Hušek,1979,82.5,76,Sokol Nymburk,175,115,200,490,M,Single-ply,SBD,Juniors
+5,Martin Mička,1974,82.5,76.8,TJ Slavoj Pacov,170,115,200,485,M,Single-ply,SBD,Juniors
+1,Igor Poliačik,1974,90,89.8,TJ Svitavy,190,145,250,585,M,Single-ply,SBD,Juniors
+2,Zbyněk Krejča,1974,90,87.5,TJ DKT Klara Praha,220,130,225,575,M,Single-ply,SBD,Juniors
+3,Milan Melichar,1975,90,85.9,TJ Dacice,175,130,225,530,M,Single-ply,SBD,Juniors
+4,Miroslav Buzek,1972,90,82.9,TJ Slavoj Pacov,167.5,110,215,492.5,M,Single-ply,SBD,Juniors
+5,Marek Cerveny,1973,90,86.4,TJ Spartak Chodov,160,105,180,445,M,Single-ply,SBD,Juniors
+1,Luděk Jech,1976,100,93.1,Sokol Nymburk,240,145,260,645,M,Single-ply,SBD,Juniors
+2,Marek Zimmermann,1972,100,98.5,TJ Ateso Jablonec,207.5,135,227.5,570,M,Single-ply,SBD,Juniors
+3,Richard Kraus,1974,100,99.6,TJ Ateso Jablonec,215,125,227.5,567.5,M,Single-ply,SBD,Juniors
+4,Jiří Michálek,1973,100,98.1,TJ Ateso Jablonec,175,120,205,500,M,Single-ply,SBD,Juniors
+1,Jiří Effenberger,1975,110,100.1,TJ Lovo Lovosice,232.5,122.5,250,605,M,Single-ply,SBD,Juniors
+2,Adam Šťastný,1973,110,100.3,Sokol Nymburk,225,145,235,605,M,Single-ply,SBD,Juniors
+3,Jan Pinc,1973,110,100.3,TJ Tn Lomnice n.L.,195,145,242.5,582.5,M,Single-ply,SBD,Juniors
+4,Jaroslav Šoukal,1972,110,106.3,TJ Sokol Vejprnice,180,172.5,230,582.5,M,Single-ply,SBD,Juniors
+1,Martin Lesk,1974,125,112.5,TJ Ateso Jablonec,230,152.5,250,632.5,M,Single-ply,SBD,Juniors

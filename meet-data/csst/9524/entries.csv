@@ -1,37 +1,37 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Roman Pláteník,1974,76.4,Sokol Vranovice,200,110,230,540,Single-ply,SBD,M,Open
-1,Jiří Furch,1975,58.5,Sokol Vranovice,132.5,92.5,175,400,Single-ply,SBD,M,Open
-1,Oldřich Halfar,1971,81.3,Sokol Vranovice,150,110,230,490,Single-ply,SBD,M,Open
-1,Petr Richter,1975,68.7,Sokol Vranovice,130,115,170,415,Single-ply,SBD,M,Open
-2,Jiri Hala,1964,132,Sokol Mirotice,270,160,255,685,Single-ply,SBD,M,Open
-2,Václav Kouba,1968,94.9,Sokol Mirotice,215,132.5,220,567.5,Single-ply,SBD,M,Open
-2,Jiří Vohryzka,1964,101.5,Sokol Mirotice,210,140,215,565,Single-ply,SBD,M,Open
-2,Jiří Krahulec,1966,81.8,Sokol Mirotice,182.5,105,200,487.5,Single-ply,SBD,M,Open
-3,Petr Zámečník,1966,73.3,TJ KC Zlinstav Zlin,185,125,235,545,Single-ply,SBD,M,Open
-3,Jiří Gajdošík,1971,67.3,TJ KC Zlinstav Zlin,167.5,115,187.5,470,Single-ply,SBD,M,Open
-3,Antonín Babinský,1969,81.8,TJ KC Zlinstav Zlin,180,122.5,195,497.5,Single-ply,SBD,M,Open
-3,Martin Hájek,1972,87,TJ KC Zlinstav Zlin,165,90,190,445,Single-ply,SBD,M,Open
-4,Petr Gracias,1966,78.2,TJ Loko Krnov,185,140,210,535,Single-ply,SBD,M,Open
-4,Ladislav Rolný,1952,67.2,TJ Loko Krnov,160,110,187.5,457.5,Single-ply,SBD,M,Open
-4,Petr Ilík,1968,87.6,TJ Loko Krnov,190,120,230,540,Single-ply,SBD,M,Open
-4,Ziakas Eftimakos,1964,77,TJ Loko Krnov,150,92.5,180,422.5,Single-ply,SBD,M,Open
-5,Jaroslav Babica,1956,75.4,TJ SK RaN Zlin B,180,115,235,530,Single-ply,SBD,M,Open
-5,Milan Kalbac,1975,90.9,TJ SK RaN Zlin B,185,120,235,540,Single-ply,SBD,M,Open
-5,Aleš Brázda,1974,80.9,TJ SK RaN Zlin B,177.5,105,205,487.5,Single-ply,SBD,M,Open
-5,Karel Machů,1969,91.6,TJ SK RaN Zlin B,190,112.5,200,502.5,Single-ply,SBD,M,Open
-6,Petr Lahoda,1969,88.8,Sokol Rosice,190,150,230,570,Single-ply,SBD,M,Open
-6,Zdeněk Sklenář,1966,73.5,Sokol Rosice,150,125,200,475,Single-ply,SBD,M,Open
-6,Jiri Kudelka,1962,82.9,Sokol Rosice,155,125,190,470,Single-ply,SBD,M,Open
-6,Tomáš Kostelníček,1970,93.9,Sokol Rosice,160,120,205,485,Single-ply,SBD,M,Open
-7,Martin Mička,1974,78.9,TJ Slavoj Pacov,170,120,200,490,Single-ply,SBD,M,Open
-7,Miroslav Buzek,1973,84.7,TJ Slavoj Pacov,170,115,230,515,Single-ply,SBD,M,Open
-7,Jaroslav Prokop,1971,77.3,TJ Slavoj Pacov,160,115,200,475,Single-ply,SBD,M,Open
-7,Marcel Zavadil,1968,74.2,TJ Slavoj Pacov,110,117.5,170,397.5,Single-ply,SBD,M,Open
-8,Libor Průša,1970,88.9,TJ Trebic,185,130,225,540,Single-ply,SBD,M,Open
-8,Milan Babuněk,1971,82.2,TJ Trebic,160,105,190,455,Single-ply,SBD,M,Open
-8,Vitezslav Canek,1972,74.9,TJ Trebic,120,95,155,370,Single-ply,SBD,M,Open
-8,Karel Pleha,1970,79.8,TJ Trebic,125,90,155,370,Single-ply,SBD,M,Open
-9,Stanislav Furch,1974,69.6,So Vranovice B,145,82.5,160,387.5,Single-ply,SBD,M,Open
-9,Michal Faron,1974,72.4,So Vranovice B,135,95,160,390,Single-ply,SBD,M,Open
-9,Jiri Bezvoda,1973,92,So Vranovice B,157.5,107.5,195,460,Single-ply,SBD,M,Open
-9,Jaroslav Furch,1972,69.8,So Vranovice B,117.5,85,142.5,345,Single-ply,SBD,M,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Roman Pláteník,1974,82.5,76.4,Sokol Vranovice,200,110,230,540,Single-ply,SBD,M,Open
+1,Jiří Furch,1975,60,58.5,Sokol Vranovice,132.5,92.5,175,400,Single-ply,SBD,M,Open
+1,Oldřich Halfar,1971,82.5,81.3,Sokol Vranovice,150,110,230,490,Single-ply,SBD,M,Open
+1,Petr Richter,1975,75,68.7,Sokol Vranovice,130,115,170,415,Single-ply,SBD,M,Open
+2,Jiri Hala,1964,125+,132,Sokol Mirotice,270,160,255,685,Single-ply,SBD,M,Open
+2,Václav Kouba,1968,100,94.9,Sokol Mirotice,215,132.5,220,567.5,Single-ply,SBD,M,Open
+2,Jiří Vohryzka,1964,110,101.5,Sokol Mirotice,210,140,215,565,Single-ply,SBD,M,Open
+2,Jiří Krahulec,1966,82.5,81.8,Sokol Mirotice,182.5,105,200,487.5,Single-ply,SBD,M,Open
+3,Petr Zámečník,1966,75,73.3,TJ KC Zlinstav Zlin,185,125,235,545,Single-ply,SBD,M,Open
+3,Jiří Gajdošík,1971,67.5,67.3,TJ KC Zlinstav Zlin,167.5,115,187.5,470,Single-ply,SBD,M,Open
+3,Antonín Babinský,1969,82.5,81.8,TJ KC Zlinstav Zlin,180,122.5,195,497.5,Single-ply,SBD,M,Open
+3,Martin Hájek,1972,90,87,TJ KC Zlinstav Zlin,165,90,190,445,Single-ply,SBD,M,Open
+4,Petr Gracias,1966,82.5,78.2,TJ Loko Krnov,185,140,210,535,Single-ply,SBD,M,Open
+4,Ladislav Rolný,1952,67.5,67.2,TJ Loko Krnov,160,110,187.5,457.5,Single-ply,SBD,M,Open
+4,Petr Ilík,1968,90,87.6,TJ Loko Krnov,190,120,230,540,Single-ply,SBD,M,Open
+4,Ziakas Eftimakos,1964,82.5,77,TJ Loko Krnov,150,92.5,180,422.5,Single-ply,SBD,M,Open
+5,Jaroslav Babica,1956,82.5,75.4,TJ SK RaN Zlin B,180,115,235,530,Single-ply,SBD,M,Open
+5,Milan Kalbac,1975,100,90.9,TJ SK RaN Zlin B,185,120,235,540,Single-ply,SBD,M,Open
+5,Aleš Brázda,1974,82.5,80.9,TJ SK RaN Zlin B,177.5,105,205,487.5,Single-ply,SBD,M,Open
+5,Karel Machů,1969,100,91.6,TJ SK RaN Zlin B,190,112.5,200,502.5,Single-ply,SBD,M,Open
+6,Petr Lahoda,1969,90,88.8,Sokol Rosice,190,150,230,570,Single-ply,SBD,M,Open
+6,Zdeněk Sklenář,1966,75,73.5,Sokol Rosice,150,125,200,475,Single-ply,SBD,M,Open
+6,Jiri Kudelka,1962,90,82.9,Sokol Rosice,155,125,190,470,Single-ply,SBD,M,Open
+6,Tomáš Kostelníček,1970,100,93.9,Sokol Rosice,160,120,205,485,Single-ply,SBD,M,Open
+7,Martin Mička,1974,82.5,78.9,TJ Slavoj Pacov,170,120,200,490,Single-ply,SBD,M,Open
+7,Miroslav Buzek,1973,90,84.7,TJ Slavoj Pacov,170,115,230,515,Single-ply,SBD,M,Open
+7,Jaroslav Prokop,1971,82.5,77.3,TJ Slavoj Pacov,160,115,200,475,Single-ply,SBD,M,Open
+7,Marcel Zavadil,1968,75,74.2,TJ Slavoj Pacov,110,117.5,170,397.5,Single-ply,SBD,M,Open
+8,Libor Průša,1970,90,88.9,TJ Trebic,185,130,225,540,Single-ply,SBD,M,Open
+8,Milan Babuněk,1971,82.5,82.2,TJ Trebic,160,105,190,455,Single-ply,SBD,M,Open
+8,Vitezslav Canek,1972,75,74.9,TJ Trebic,120,95,155,370,Single-ply,SBD,M,Open
+8,Karel Pleha,1970,82.5,79.8,TJ Trebic,125,90,155,370,Single-ply,SBD,M,Open
+9,Stanislav Furch,1974,75,69.6,So Vranovice B,145,82.5,160,387.5,Single-ply,SBD,M,Open
+9,Michal Faron,1974,75,72.4,So Vranovice B,135,95,160,390,Single-ply,SBD,M,Open
+9,Jiri Bezvoda,1973,100,92,So Vranovice B,157.5,107.5,195,460,Single-ply,SBD,M,Open
+9,Jaroslav Furch,1972,75,69.8,So Vranovice B,117.5,85,142.5,345,Single-ply,SBD,M,Open

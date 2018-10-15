@@ -1,20 +1,20 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
-1,Jindřich Fogl,1979,51.1,TJ Ateso Jablonec,90,60,115,265,M,Single-ply,SBD,Sub-Juniors
-1,Milan Kyncl,1979,57.1,TJ Ateso Jablonec,107.5,55,150,312.5,M,Single-ply,SBD,Sub-Juniors
-1,Pavel Paldus,1980,66.1,TJ Ateso Jablonec,145,77.5,150,372.5,M,Single-ply,SBD,Sub-Juniors
-2,Tomas Mikes,1979,67.4,TJ Ateso Jablonec,110,67.5,147.5,325,M,Single-ply,SBD,Sub-Juniors
-3,Jan Cerny,1978,66.9,TJ Ateso Jablonec,122.5,67.5,132.5,322.5,M,Single-ply,SBD,Sub-Juniors
-1,Marcel Zavadil,1977,73.5,TJ Slavoj Pacov,155,130,170,455,M,Single-ply,SBD,Sub-Juniors
-2,Jiří Hájek,1978,74.5,TJ Ateso Jablonec,165,110,172.5,447.5,M,Single-ply,SBD,Sub-Juniors
-1,Daniel Hušek,1979,80.3,Sokol Nymburk,187.5,112.5,207.5,507.5,M,Single-ply,SBD,Sub-Juniors
-2,Filip Košťák,1977,81.5,TJ Ateso Jablonec,160,112.5,185,457.5,M,Single-ply,SBD,Sub-Juniors
-3,Robert Černovský,1978,79.7,SK El.Temelin,165,97.5,185,447.5,M,Single-ply,SBD,Sub-Juniors
-4,Jiří Strejc,1977,80.8,SK Detrichov,165,95,170,430,M,Single-ply,SBD,Sub-Juniors
-5,Jiri Rysanek,1979,80.3,Cechie Cejetice,130,100,160,390,M,Single-ply,SBD,Sub-Juniors
-6,Jiri Skala,1979,79.8,TJ Ateso Jablonec,125,62.5,140,327.5,M,Single-ply,SBD,Sub-Juniors
-1,Vratislav Moudr,1977,88.4,TJ Sp Pelhrimov,230,167.5,230,627.5,M,Single-ply,SBD,Sub-Juniors
-2,Lukáš Bušek,1977,84.8,Vrchlabi,200,117.5,222.5,540,M,Single-ply,SBD,Sub-Juniors
-3,Martin Žlábek,1977,86.9,SK El.Temelin,172.5,122.5,217.5,512.5,M,Single-ply,SBD,Sub-Juniors
-4,Jaromi Kratochvíl,1978,84.5,TJ Vlcice,185,120,205,510,M,Single-ply,SBD,Sub-Juniors
-1,Michal Figera,1979,98,TJ Vlcice,185,112.5,210,507.5,M,Single-ply,SBD,Sub-Juniors
-1,Jan Hoť,1977,100.8,SK Detrichov,175,115,210,500,M,Single-ply,SBD,Sub-Juniors
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Jindřich Fogl,1979,52,51.1,TJ Ateso Jablonec,90,60,115,265,M,Single-ply,SBD,Sub-Juniors
+1,Milan Kyncl,1979,60,57.1,TJ Ateso Jablonec,107.5,55,150,312.5,M,Single-ply,SBD,Sub-Juniors
+1,Pavel Paldus,1980,67.5,66.1,TJ Ateso Jablonec,145,77.5,150,372.5,M,Single-ply,SBD,Sub-Juniors
+2,Tomas Mikes,1979,67.5,67.4,TJ Ateso Jablonec,110,67.5,147.5,325,M,Single-ply,SBD,Sub-Juniors
+3,Jan Cerny,1978,67.5,66.9,TJ Ateso Jablonec,122.5,67.5,132.5,322.5,M,Single-ply,SBD,Sub-Juniors
+1,Marcel Zavadil,1977,75,73.5,TJ Slavoj Pacov,155,130,170,455,M,Single-ply,SBD,Sub-Juniors
+2,Jiří Hájek,1978,75,74.5,TJ Ateso Jablonec,165,110,172.5,447.5,M,Single-ply,SBD,Sub-Juniors
+1,Daniel Hušek,1979,82.5,80.3,Sokol Nymburk,187.5,112.5,207.5,507.5,M,Single-ply,SBD,Sub-Juniors
+2,Filip Košťák,1977,82.5,81.5,TJ Ateso Jablonec,160,112.5,185,457.5,M,Single-ply,SBD,Sub-Juniors
+3,Robert Černovský,1978,82.5,79.7,SK El.Temelin,165,97.5,185,447.5,M,Single-ply,SBD,Sub-Juniors
+4,Jiří Strejc,1977,82.5,80.8,SK Detrichov,165,95,170,430,M,Single-ply,SBD,Sub-Juniors
+5,Jiri Rysanek,1979,82.5,80.3,Cechie Cejetice,130,100,160,390,M,Single-ply,SBD,Sub-Juniors
+6,Jiri Skala,1979,82.5,79.8,TJ Ateso Jablonec,125,62.5,140,327.5,M,Single-ply,SBD,Sub-Juniors
+1,Vratislav Moudr,1977,90,88.4,TJ Sp Pelhrimov,230,167.5,230,627.5,M,Single-ply,SBD,Sub-Juniors
+2,Lukáš Bušek,1977,90,84.8,Vrchlabi,200,117.5,222.5,540,M,Single-ply,SBD,Sub-Juniors
+3,Martin Žlábek,1977,90,86.9,SK El.Temelin,172.5,122.5,217.5,512.5,M,Single-ply,SBD,Sub-Juniors
+4,Jaromi Kratochvíl,1978,90,84.5,TJ Vlcice,185,120,205,510,M,Single-ply,SBD,Sub-Juniors
+1,Michal Figera,1979,100,98,TJ Vlcice,185,112.5,210,507.5,M,Single-ply,SBD,Sub-Juniors
+1,Jan Hoť,1977,110,100.8,SK Detrichov,175,115,210,500,M,Single-ply,SBD,Sub-Juniors

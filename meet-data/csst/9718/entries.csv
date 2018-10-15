@@ -1,36 +1,36 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Miroslav Hubáček,1967,82.8,Sokol Nymburk,252.5,185,270,707.5,Single-ply,SBD,M,Open
-1,Jiří Janeček,1961,69.5,Sokol Nymburk,200,140,240,580,Single-ply,SBD,M,Open
-1,Karel Ruso,1965,67.1,Sokol Nymburk,215,110,200,525,Single-ply,SBD,M,Open
-1,Vladimír Medek,1964,78.3,Sokol Nymburk,210,145,240,595,Single-ply,SBD,M,Open
-1,Miroslav Vacek,1967,120.5,Sokol Nymburk,230,180,200,610,Single-ply,SBD,M,Open
-2,Ondřej Seidel,1975,82.9,TJ Olympie Zlin,240,150,250,640,Single-ply,SBD,M,Open
-2,Petr Gajdůšek,1975,72.1,TJ Olympie Zlin,175,105,190,470,Single-ply,SBD,M,Open
-2,Vratislav Čech,1965,103.2,TJ Olympie Zlin,255,155,315,725,Single-ply,SBD,M,Open
-2,Vlastimil Peterka,1975,73.4,TJ Olympie Zlin,235,152.5,260,647.5,Single-ply,SBD,M,Open
-2,Frantis Vincourek,1966,86.9,TJ Olympie Zlin,180,155,235,570,Single-ply,SBD,M,Open
-3,Jaroslav Planka,1968,61.8,Lokomotiva Krnov A,170,120,210,500,Single-ply,SBD,M,Open
-3,David Kenis,1977,65,Lokomotiva Krnov A,200,125,200,525,Single-ply,SBD,M,Open
-3,Remy Kreyzel,1955,82.5,Lokomotiva Krnov A,250,175,240,665,Single-ply,SBD,M,Open
-3,Petr Illík,1969,96.9,Lokomotiva Krnov A,225,145,240,610,Single-ply,SBD,M,Open
-3,Jindřich Červenka,1974,93.4,Lokomotiva Krnov A,220,150,260,630,Single-ply,SBD,M,Open
-4,Stanislav Hoza,1956,80.5,TJ Sokol Teskovice,210,147.5,220,577.5,Single-ply,SBD,M,Open
-4,Štěpán Hoza,1974,65.7,TJ Sokol Teskovice,150,95,180,425,Single-ply,SBD,M,Open
-4,Pavel Schaumann,1972,87,TJ Sokol Teskovice,225,145,240,610,Single-ply,SBD,M,Open
-4,Radim Hořínek,1975,99.9,TJ Sokol Teskovice,200,137.5,255,592.5,Single-ply,SBD,M,Open
-4,Václav Jaremczuk,1963,89.6,TJ Sokol Teskovice,230,150,265,645,Single-ply,SBD,M,Open
-5,Ladislav Rolný,1948,67.2,Lokomotiva Krnov B,170,115,190,475,Single-ply,SBD,M,Open
-5,Eftimakos Ziakas,1953,78.3,Lokomotiva Krnov B,160,100,180,440,Single-ply,SBD,M,Open
-5,Jaroslav Stašek,1973,124,Lokomotiva Krnov B,255,145,280,680,Single-ply,SBD,M,Open
-5,Jaroslav Kelner,1956,90,Lokomotiva Krnov B,280,165,275,720,Single-ply,SBD,M,Open
-DQ,Jiří Zeman,1944,102.8,Lokomotiva Krnov B,,,,,Single-ply,SBD,M,Open
-6,Ivan Zerzánek,1961,97.8,TJ Svitavy,240,160,240,640,Single-ply,SBD,M,Open
-6,Zdeněk Zvonič,1954,92,TJ Svitavy,220,150,270,640,Single-ply,SBD,M,Open
-DQ,Michal Andrlík,1972,79,TJ Svitavy,,,,,Single-ply,SBD,M,Open
-6,Libor Novák,1966,76.6,TJ Svitavy,170,130,200,500,Single-ply,SBD,M,Open
-6,Tomáš Lacko,1982,56.2,TJ Svitavy,152.5,85,167.5,405,Single-ply,SBD,M,Open
-7,Radim Jeník,1964,78.1,Sokol Zlin,200,155,215,570,Single-ply,SBD,M,Open
-7,Petr Zámečník,1966,75.5,Sokol Zlin,185,125,230,540,Single-ply,SBD,M,Open
-7,Jiří Gajdošík,1962,67.7,Sokol Zlin,165,117.5,177.5,460,Single-ply,SBD,M,Open
-7,Martin Hájek,1977,91,Sokol Zlin,200,110,230,540,Single-ply,SBD,M,Open
-7,Antonín Babinský,1970,83.2,Sokol Zlin,195,125,235,555,Single-ply,SBD,M,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Miroslav Hubáček,1967,90,82.8,Sokol Nymburk,252.5,185,270,707.5,Single-ply,SBD,M,Open
+1,Jiří Janeček,1961,75,69.5,Sokol Nymburk,200,140,240,580,Single-ply,SBD,M,Open
+1,Karel Ruso,1965,67.5,67.1,Sokol Nymburk,215,110,200,525,Single-ply,SBD,M,Open
+1,Vladimír Medek,1964,82.5,78.3,Sokol Nymburk,210,145,240,595,Single-ply,SBD,M,Open
+1,Miroslav Vacek,1967,125,120.5,Sokol Nymburk,230,180,200,610,Single-ply,SBD,M,Open
+2,Ondřej Seidel,1975,90,82.9,TJ Olympie Zlin,240,150,250,640,Single-ply,SBD,M,Open
+2,Petr Gajdůšek,1975,75,72.1,TJ Olympie Zlin,175,105,190,470,Single-ply,SBD,M,Open
+2,Vratislav Čech,1965,110,103.2,TJ Olympie Zlin,255,155,315,725,Single-ply,SBD,M,Open
+2,Vlastimil Peterka,1975,75,73.4,TJ Olympie Zlin,235,152.5,260,647.5,Single-ply,SBD,M,Open
+2,Frantis Vincourek,1966,90,86.9,TJ Olympie Zlin,180,155,235,570,Single-ply,SBD,M,Open
+3,Jaroslav Planka,1968,67.5,61.8,Lokomotiva Krnov A,170,120,210,500,Single-ply,SBD,M,Open
+3,David Kenis,1977,67.5,65,Lokomotiva Krnov A,200,125,200,525,Single-ply,SBD,M,Open
+3,Remy Kreyzel,1955,82.5,82.5,Lokomotiva Krnov A,250,175,240,665,Single-ply,SBD,M,Open
+3,Petr Illík,1969,100,96.9,Lokomotiva Krnov A,225,145,240,610,Single-ply,SBD,M,Open
+3,Jindřich Červenka,1974,100,93.4,Lokomotiva Krnov A,220,150,260,630,Single-ply,SBD,M,Open
+4,Stanislav Hoza,1956,82.5,80.5,TJ Sokol Teskovice,210,147.5,220,577.5,Single-ply,SBD,M,Open
+4,Štěpán Hoza,1974,67.5,65.7,TJ Sokol Teskovice,150,95,180,425,Single-ply,SBD,M,Open
+4,Pavel Schaumann,1972,90,87,TJ Sokol Teskovice,225,145,240,610,Single-ply,SBD,M,Open
+4,Radim Hořínek,1975,100,99.9,TJ Sokol Teskovice,200,137.5,255,592.5,Single-ply,SBD,M,Open
+4,Václav Jaremczuk,1963,90,89.6,TJ Sokol Teskovice,230,150,265,645,Single-ply,SBD,M,Open
+5,Ladislav Rolný,1948,67.5,67.2,Lokomotiva Krnov B,170,115,190,475,Single-ply,SBD,M,Open
+5,Eftimakos Ziakas,1953,82.5,78.3,Lokomotiva Krnov B,160,100,180,440,Single-ply,SBD,M,Open
+5,Jaroslav Stašek,1973,125,124,Lokomotiva Krnov B,255,145,280,680,Single-ply,SBD,M,Open
+5,Jaroslav Kelner,1956,90,90,Lokomotiva Krnov B,280,165,275,720,Single-ply,SBD,M,Open
+DQ,Jiří Zeman,1944,110,102.8,Lokomotiva Krnov B,,,,,Single-ply,SBD,M,Open
+6,Ivan Zerzánek,1961,100,97.8,TJ Svitavy,240,160,240,640,Single-ply,SBD,M,Open
+6,Zdeněk Zvonič,1954,100,92,TJ Svitavy,220,150,270,640,Single-ply,SBD,M,Open
+DQ,Michal Andrlík,1972,82.5,79,TJ Svitavy,,,,,Single-ply,SBD,M,Open
+6,Libor Novák,1966,82.5,76.6,TJ Svitavy,170,130,200,500,Single-ply,SBD,M,Open
+6,Tomáš Lacko,1982,60,56.2,TJ Svitavy,152.5,85,167.5,405,Single-ply,SBD,M,Open
+7,Radim Jeník,1964,82.5,78.1,Sokol Zlin,200,155,215,570,Single-ply,SBD,M,Open
+7,Petr Zámečník,1966,82.5,75.5,Sokol Zlin,185,125,230,540,Single-ply,SBD,M,Open
+7,Jiří Gajdošík,1962,75,67.7,Sokol Zlin,165,117.5,177.5,460,Single-ply,SBD,M,Open
+7,Martin Hájek,1977,100,91,Sokol Zlin,200,110,230,540,Single-ply,SBD,M,Open
+7,Antonín Babinský,1970,90,83.2,Sokol Zlin,195,125,235,555,Single-ply,SBD,M,Open

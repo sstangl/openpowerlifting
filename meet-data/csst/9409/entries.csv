@@ -1,31 +1,31 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3BenchKg,Sex,TotalKg,Event,Equipment,Division
-1,Jiří Furch,1975,58.6,Sokol Vranovice,90,M,90,B,Single-ply,Open
-1,Miroslav Fojtik,1976,66.8,Sokol Vranovice,80,M,80,B,Single-ply,Open
-DQ,Jaroslav Žák,1970,66.8,TJ Trebic,,M,,B,Single-ply,Open
-1,Zdeněk Lenoch,1951,74.9,Fitness Gym Neredin,140,M,140,B,Single-ply,Open
-2,Radim Jeník,1964,73.8,TJ Tatra Pribor,125,M,125,B,Single-ply,Open
-3,Pavel Nevedel,1973,73,Sokol Vranovice,112.5,M,112.5,B,Single-ply,Open
-4,Robert Cebe,1972,70.5,TJ Sokol Jemnice,85,M,85,B,Single-ply,Open
-DQ,Marcel Hajek,1969,69.5,,,M,,B,Single-ply,Open
-1,Čestmír Wolf,1959,82,TJ SD Frydek-Mistek,165,M,165,B,Single-ply,Open
-2,Frantis Vincourek,1966,77.8,TJ SK RaN Ol.Zlin,160,M,160,B,Single-ply,Open
-3,Jiří Kati,1965,81.7,TJ Slezan Opava,145,M,145,B,Single-ply,Open
-4,Desider Mihok,1975,82.3,TJ KC Zlinstav Zlin,145,M,145,B,Single-ply,Open
-5,Roman Pavlík,1975,79.8,TJ JE Dukovany,132.5,M,132.5,B,Single-ply,Open
-6,Lubomir Fanta,1963,77,TJ Sokol Jemnice,105,M,105,B,Single-ply,Open
-1,Bruno Walter,1967,89.3,Fitness Gym Neredin,155,M,155,B,Single-ply,Open
-DQ,Luboš Urbánek,1954,87.5,TJ Sokol Jemnice,,M,,B,Single-ply,Open
-1,Libor Brisuda,1971,91,TJ SD Frydek-Mistek,175,M,175,B,Single-ply,Open
-2,Petr Kostelník,1956,92.6,TJ Tatra Pribor,167.5,M,167.5,B,Single-ply,Open
-3,Ladislav Sas,1972,91,TJ Sternberk,165,M,165,B,Single-ply,Open
-4,Vladimir Kendura,1975,91.8,TJ Morava Kromeriz,155,M,155,B,Single-ply,Open
-5,Tomáš Šárik,1975,93.8,TJ Spartak Jihlava,150,M,150,B,Single-ply,Open
-6,Marcel Štěpánek,1971,90.7,TJ Svitavy,140,M,140,B,Single-ply,Open
-7,Igor Poliačik,1974,91,TJ Svitavy,140,M,140,B,Single-ply,Open
-8,Radim Krcek,1976,96,TJ SK RaN Ol.Zlin,137.5,M,137.5,B,Single-ply,Open
-1,Roman Bortel,1969,106.9,TJ Tatra Pribor,145,M,145,B,Single-ply,Open
-1,Venek Otevrel,1971,123.7,TJ SK RaN Ol.Zlin,205,M,205,B,Single-ply,Open
-2,Jindřich Petřík,1951,120.5,TJ Ji Rymarov,160,M,160,B,Single-ply,Open
-1,Eva Labuťová,1965,49.5,TJ Morava Kromeriz,52.5,F,52.5,B,Single-ply,Open
-1,Renata Hamplová,1974,56.9,TJ Ji Rymarov,65,F,65,B,Single-ply,Open
-1,Marie Podolska,1973,62.8,TJ JE Dukovany,45,F,45,B,Single-ply,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3BenchKg,Sex,TotalKg,Event,Equipment,Division
+1,Jiří Furch,1975,60,58.6,Sokol Vranovice,90,M,90,B,Single-ply,Open
+1,Miroslav Fojtik,1976,67.5,66.8,Sokol Vranovice,80,M,80,B,Single-ply,Open
+DQ,Jaroslav Žák,1970,67.5,66.8,TJ Trebic,,M,,B,Single-ply,Open
+1,Zdeněk Lenoch,1951,75,74.9,Fitness Gym Neredin,140,M,140,B,Single-ply,Open
+2,Radim Jeník,1964,75,73.8,TJ Tatra Pribor,125,M,125,B,Single-ply,Open
+3,Pavel Nevedel,1973,75,73,Sokol Vranovice,112.5,M,112.5,B,Single-ply,Open
+4,Robert Cebe,1972,75,70.5,TJ Sokol Jemnice,85,M,85,B,Single-ply,Open
+DQ,Marcel Hajek,1969,75,69.5,,,M,,B,Single-ply,Open
+1,Čestmír Wolf,1959,82.5,82,TJ SD Frydek-Mistek,165,M,165,B,Single-ply,Open
+2,Frantis Vincourek,1966,82.5,77.8,TJ SK RaN Ol.Zlin,160,M,160,B,Single-ply,Open
+3,Jiří Kati,1965,82.5,81.7,TJ Slezan Opava,145,M,145,B,Single-ply,Open
+4,Desider Mihok,1975,82.5,82.3,TJ KC Zlinstav Zlin,145,M,145,B,Single-ply,Open
+5,Roman Pavlík,1975,82.5,79.8,TJ JE Dukovany,132.5,M,132.5,B,Single-ply,Open
+6,Lubomir Fanta,1963,82.5,77,TJ Sokol Jemnice,105,M,105,B,Single-ply,Open
+1,Bruno Walter,1967,90,89.3,Fitness Gym Neredin,155,M,155,B,Single-ply,Open
+DQ,Luboš Urbánek,1954,90,87.5,TJ Sokol Jemnice,,M,,B,Single-ply,Open
+1,Libor Brisuda,1971,100,91,TJ SD Frydek-Mistek,175,M,175,B,Single-ply,Open
+2,Petr Kostelník,1956,100,92.6,TJ Tatra Pribor,167.5,M,167.5,B,Single-ply,Open
+3,Ladislav Sas,1972,100,91,TJ Sternberk,165,M,165,B,Single-ply,Open
+4,Vladimir Kendura,1975,100,91.8,TJ Morava Kromeriz,155,M,155,B,Single-ply,Open
+5,Tomáš Šárik,1975,100,93.8,TJ Spartak Jihlava,150,M,150,B,Single-ply,Open
+6,Marcel Štěpánek,1971,100,90.7,TJ Svitavy,140,M,140,B,Single-ply,Open
+7,Igor Poliačik,1974,100,91,TJ Svitavy,140,M,140,B,Single-ply,Open
+8,Radim Krcek,1976,100,96,TJ SK RaN Ol.Zlin,137.5,M,137.5,B,Single-ply,Open
+1,Roman Bortel,1969,110,106.9,TJ Tatra Pribor,145,M,145,B,Single-ply,Open
+1,Venek Otevrel,1971,125,123.7,TJ SK RaN Ol.Zlin,205,M,205,B,Single-ply,Open
+2,Jindřich Petřík,1951,125,120.5,TJ Ji Rymarov,160,M,160,B,Single-ply,Open
+1,Eva Labuťová,1965,52,49.5,TJ Morava Kromeriz,52.5,F,52.5,B,Single-ply,Open
+1,Renata Hamplová,1974,60,56.9,TJ Ji Rymarov,65,F,65,B,Single-ply,Open
+1,Marie Podolska,1973,67.5,62.8,TJ JE Dukovany,45,F,45,B,Single-ply,Open

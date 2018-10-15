@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
-1,Hana Takáčová,1954,64.5,TJ Spartak Chodov,157.5,82.5,150,390,F,Single-ply,SBD,Masters 1
-1,Jana Hranickova,1955,71.5,SK Kask.Chodov,115,60,117.5,292.5,F,Single-ply,SBD,Masters 1
-1,Franti Michalczyk,1954,67.4,TJ PD Ostrava,165,110,180,455,M,Single-ply,SBD,Masters 1
-1,Karel Šourek,1943,73.7,TJ So Cejetice,200,112.5,227.5,540,M,Single-ply,SBD,Masters 1
-2,Petr Hrubý,1952,73,V+V Cheb,200,135,200,535,M,Single-ply,SBD,Masters 1
-3,Františe Kirchner,1948,74.1,TJ PD Ostrava,160,120,180,460,M,Single-ply,SBD,Masters 1
-1,Aleš Vrzák,1957,81.7,TJ Sp Pelhrimov,170,120,200,490,M,Single-ply,SBD,Masters 1
-1,Jaroslav Kelner,1956,89.7,TJ Loko Krnov,280,160,280,720,M,Single-ply,SBD,Masters 1
-2,Zdenek Hunka,1954,87,Sokol Nymburk,222.5,147.5,220,590,M,Single-ply,SBD,Masters 1
-3,Wolfga Zimmermann,1941,90,TJ Ateso Jablonec,205,130,237.5,572.5,M,Single-ply,SBD,Masters 1
-4,Luboš Urbánek,1954,87.8,TJ Sokol Jemnice,205,135,230,570,M,Single-ply,SBD,Masters 1
-5,Jiří Krištofík,1951,89.9,TJ PD Ostrava,150,110,180,440,M,Single-ply,SBD,Masters 1
-1,Ladislav Pasecký,1959,92,TJ Loko Turnov,265,135,265,665,M,Single-ply,SBD,Masters 1
-2,Zvonic Zdenek,1954,94.7,TJ Svitavy,230,155,280,665,M,Single-ply,SBD,Masters 1
-3,Antonín Hlaváček,1953,98.7,ZBC Hradek,230,155,252.5,637.5,M,Single-ply,SBD,Masters 1
-4,Štefan Zvada,1953,99.6,So Melnik,220,137.5,262.5,620,M,Single-ply,SBD,Masters 1
-5,Jiří Koubek,1955,99,TJ So Zizkov Praha,190,165,220,575,M,Single-ply,SBD,Masters 1
-1,Josef Mička,1949,102.8,TJ Slavoj Pacov,270,187.5,270,727.5,M,Single-ply,SBD,Masters 1
-2,Jiří Zeman,1944,104.6,TJ Loko Krnov,245,160,250,655,M,Single-ply,SBD,Masters 1
-3,Václav Primus,1948,100.5,TJ Sp Pelhrimov,195,140,230,565,M,Single-ply,SBD,Masters 1
-1,Jiří Šafář,1950,115.7,Leciva Praha,267.5,150,312.5,730,M,Single-ply,SBD,Masters 1
-2,Bohumil Váňa,1951,123,FC Wilson Tabor,250,220,260,730,M,Single-ply,SBD,Masters 1
-3,Milan Mrázek,1958,122.4,Sokol Lanzhot,252.5,167.5,265,685,M,Single-ply,SBD,Masters 1
-4,Pavel Klepáč,1955,110.3,Colb.Bystrice p.H.,182.5,135,232.5,550,M,Single-ply,SBD,Masters 1
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Event,Division
+1,Hana Takáčová,1954,67.5,64.5,TJ Spartak Chodov,157.5,82.5,150,390,F,Single-ply,SBD,Masters 1
+1,Jana Hranickova,1955,75,71.5,SK Kask.Chodov,115,60,117.5,292.5,F,Single-ply,SBD,Masters 1
+1,Franti Michalczyk,1954,67.5,67.4,TJ PD Ostrava,165,110,180,455,M,Single-ply,SBD,Masters 1
+1,Karel Šourek,1943,75,73.7,TJ So Cejetice,200,112.5,227.5,540,M,Single-ply,SBD,Masters 1
+2,Petr Hrubý,1952,75,73,V+V Cheb,200,135,200,535,M,Single-ply,SBD,Masters 1
+3,Františe Kirchner,1948,75,74.1,TJ PD Ostrava,160,120,180,460,M,Single-ply,SBD,Masters 1
+1,Aleš Vrzák,1957,82.5,81.7,TJ Sp Pelhrimov,170,120,200,490,M,Single-ply,SBD,Masters 1
+1,Jaroslav Kelner,1956,90,89.7,TJ Loko Krnov,280,160,280,720,M,Single-ply,SBD,Masters 1
+2,Zdenek Hunka,1954,90,87,Sokol Nymburk,222.5,147.5,220,590,M,Single-ply,SBD,Masters 1
+3,Wolfga Zimmermann,1941,90,90,TJ Ateso Jablonec,205,130,237.5,572.5,M,Single-ply,SBD,Masters 1
+4,Luboš Urbánek,1954,90,87.8,TJ Sokol Jemnice,205,135,230,570,M,Single-ply,SBD,Masters 1
+5,Jiří Krištofík,1951,90,89.9,TJ PD Ostrava,150,110,180,440,M,Single-ply,SBD,Masters 1
+1,Ladislav Pasecký,1959,100,92,TJ Loko Turnov,265,135,265,665,M,Single-ply,SBD,Masters 1
+2,Zvonic Zdenek,1954,100,94.7,TJ Svitavy,230,155,280,665,M,Single-ply,SBD,Masters 1
+3,Antonín Hlaváček,1953,100,98.7,ZBC Hradek,230,155,252.5,637.5,M,Single-ply,SBD,Masters 1
+4,Štefan Zvada,1953,100,99.6,So Melnik,220,137.5,262.5,620,M,Single-ply,SBD,Masters 1
+5,Jiří Koubek,1955,100,99,TJ So Zizkov Praha,190,165,220,575,M,Single-ply,SBD,Masters 1
+1,Josef Mička,1949,110,102.8,TJ Slavoj Pacov,270,187.5,270,727.5,M,Single-ply,SBD,Masters 1
+2,Jiří Zeman,1944,110,104.6,TJ Loko Krnov,245,160,250,655,M,Single-ply,SBD,Masters 1
+3,Václav Primus,1948,110,100.5,TJ Sp Pelhrimov,195,140,230,565,M,Single-ply,SBD,Masters 1
+1,Jiří Šafář,1950,125,115.7,Leciva Praha,267.5,150,312.5,730,M,Single-ply,SBD,Masters 1
+2,Bohumil Váňa,1951,125,123,FC Wilson Tabor,250,220,260,730,M,Single-ply,SBD,Masters 1
+3,Milan Mrázek,1958,125,122.4,Sokol Lanzhot,252.5,167.5,265,685,M,Single-ply,SBD,Masters 1
+4,Pavel Klepáč,1955,125,110.3,Colb.Bystrice p.H.,182.5,135,232.5,550,M,Single-ply,SBD,Masters 1

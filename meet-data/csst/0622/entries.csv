@@ -1,27 +1,27 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment,Sex
-4,Sokol Nymburk A,Zbyněk Krejča,1975,111,305,265,292.5,862.5,Open,SBD,Single-ply,M
-DD,Sokol Nymburk A,Martin Košnar,1978,106.6,,,,,Open,SBD,Single-ply,M
-4,Sokol Nymburk A,Jan Pinc,1973,115.1,292.5,230,290,812.5,Open,SBD,Single-ply,M
-4,Sokol Nymburk A,Milan Špingl,1980,123.3,310,220,280,810,Open,SBD,Single-ply,M
-2,TJ Olympia Zlín,Tomáš Šárik,1975,111.5,320,237.5,310,867.5,Open,SBD,Single-ply,M
-2,TJ Olympia Zlín,Martin Mořingl,1977,93.3,275,170,285,730,Open,SBD,Single-ply,M
-2,TJ Olympia Zlín,Jiří Gryga,1968,105.9,290,200,310,800,Open,SBD,Single-ply,M
-2,TJ Olympia Zlín,Kamil Večeřa,1978,76.9,237.5,177.5,250,665,Open,SBD,Single-ply,M
-5,TJ Svitavy,Tomáš Lacko,1982,74.3,240,145,240,625,Open,SBD,Single-ply,M
-5,TJ Svitavy,Libor Novák,1966,82.3,205,162.5,232.5,600,Open,SBD,Single-ply,M
-DD,TJ Svitavy,Tomáš Urban,1980,91.9,,,,,Open,SBD,Single-ply,M
-5,TJ Svitavy,Petr Theuser,1961,99.1,320,225,310,855,Open,SBD,Single-ply,M
-4,TJ Sokol Těškovice,Stanislav Hoza,1956,86.1,285,175,230,690,Open,SBD,Single-ply,M
-4,TJ Sokol Těškovice,Štěpán Hoza,1974,70.7,200,135,220,555,Open,SBD,Single-ply,M
-4,TJ Sokol Těškovice,Václav Jaremczuk,1963,92.5,255,172.5,277.5,705,Open,SBD,Single-ply,M
-4,TJ Sokol Těškovice,Ján Beneš,1959,107.7,250,195,320,765,Open,SBD,Single-ply,M
-5,Sokol Nymburk B,Martin Ürban,1968,117.9,250,190,300,740,Open,SBD,Single-ply,M
-5,Sokol Nymburk B,Petr Slanička,1969,112,270,210,245,725,Open,SBD,Single-ply,M
-5,Sokol Nymburk B,Miroslav Kaliba,1974,108.1,290,220,255,765,Open,SBD,Single-ply,M
-5,Sokol Nymburk B,Karel Ruso,1965,69.1,225,105,220,550,Open,SBD,Single-ply,M
-6,TJ Lokomotiva Krnov,Milan Greguš,1968,93.5,265,200,257.5,722.5,Open,SBD,Single-ply,M
-6,TJ Lokomotiva Krnov,Jíří Olejko,1977,97.8,280,190,255,725,Open,SBD,Single-ply,M
-6,TJ Lokomotiva Krnov,Jan Fiala,1987,96.2,220,135,210,565,Open,SBD,Single-ply,M
-7,TJ Sokol Na Mělnice,Štefan Zvada,1953,100.9,230,150,265,645,Open,SBD,Single-ply,M
-DQ,TJ Sokol Na Mělnice,Petr Žďánský,1977,93.7,,,,,Open,SBD,Single-ply,M
-7,TJ Sokol Na Mělnice,Miroslav Pavlíček,1963,126.3,232.5,162.5,220,615,Open,SBD,Single-ply,M
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment,Sex
+4,Sokol Nymburk A,Zbyněk Krejča,1975,125,111,305,265,292.5,862.5,Open,SBD,Single-ply,M
+DD,Sokol Nymburk A,Martin Košnar,1978,110,106.6,,,,,Open,SBD,Single-ply,M
+4,Sokol Nymburk A,Jan Pinc,1973,125,115.1,292.5,230,290,812.5,Open,SBD,Single-ply,M
+4,Sokol Nymburk A,Milan Špingl,1980,125,123.3,310,220,280,810,Open,SBD,Single-ply,M
+2,TJ Olympia Zlín,Tomáš Šárik,1975,125,111.5,320,237.5,310,867.5,Open,SBD,Single-ply,M
+2,TJ Olympia Zlín,Martin Mořingl,1977,100,93.3,275,170,285,730,Open,SBD,Single-ply,M
+2,TJ Olympia Zlín,Jiří Gryga,1968,110,105.9,290,200,310,800,Open,SBD,Single-ply,M
+2,TJ Olympia Zlín,Kamil Večeřa,1978,82.5,76.9,237.5,177.5,250,665,Open,SBD,Single-ply,M
+5,TJ Svitavy,Tomáš Lacko,1982,75,74.3,240,145,240,625,Open,SBD,Single-ply,M
+5,TJ Svitavy,Libor Novák,1966,82.5,82.3,205,162.5,232.5,600,Open,SBD,Single-ply,M
+DD,TJ Svitavy,Tomáš Urban,1980,100,91.9,,,,,Open,SBD,Single-ply,M
+5,TJ Svitavy,Petr Theuser,1961,100,99.1,320,225,310,855,Open,SBD,Single-ply,M
+4,TJ Sokol Těškovice,Stanislav Hoza,1956,90,86.1,285,175,230,690,Open,SBD,Single-ply,M
+4,TJ Sokol Těškovice,Štěpán Hoza,1974,75,70.7,200,135,220,555,Open,SBD,Single-ply,M
+4,TJ Sokol Těškovice,Václav Jaremczuk,1963,100,92.5,255,172.5,277.5,705,Open,SBD,Single-ply,M
+4,TJ Sokol Těškovice,Ján Beneš,1959,110,107.7,250,195,320,765,Open,SBD,Single-ply,M
+5,Sokol Nymburk B,Martin Ürban,1968,125,117.9,250,190,300,740,Open,SBD,Single-ply,M
+5,Sokol Nymburk B,Petr Slanička,1969,125,112,270,210,245,725,Open,SBD,Single-ply,M
+5,Sokol Nymburk B,Miroslav Kaliba,1974,110,108.1,290,220,255,765,Open,SBD,Single-ply,M
+5,Sokol Nymburk B,Karel Ruso,1965,75,69.1,225,105,220,550,Open,SBD,Single-ply,M
+6,TJ Lokomotiva Krnov,Milan Greguš,1968,100,93.5,265,200,257.5,722.5,Open,SBD,Single-ply,M
+6,TJ Lokomotiva Krnov,Jíří Olejko,1977,100,97.8,280,190,255,725,Open,SBD,Single-ply,M
+6,TJ Lokomotiva Krnov,Jan Fiala,1987,100,96.2,220,135,210,565,Open,SBD,Single-ply,M
+7,TJ Sokol Na Mělnice,Štefan Zvada,1953,110,100.9,230,150,265,645,Open,SBD,Single-ply,M
+DQ,TJ Sokol Na Mělnice,Petr Žďánský,1977,100,93.7,,,,,Open,SBD,Single-ply,M
+7,TJ Sokol Na Mělnice,Miroslav Pavlíček,1963,125+,126.3,232.5,162.5,220,615,Open,SBD,Single-ply,M

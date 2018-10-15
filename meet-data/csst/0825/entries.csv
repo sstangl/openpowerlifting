@@ -1,31 +1,31 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment,Sex
-1,TJ Dobřany,Rostislav Kvarda,1986,111.4,302.5,215,265,782.5,Juniors,SBD,Single-ply,M
-1,TJ Dobřany,Ladislav Mráz,1979,89.4,235,180,245,660,Open,SBD,Single-ply,M
-1,TJ Dobřany,Petr Krákora,1973,89,230,140,255,625,Open,SBD,Single-ply,M
-1,TJ Dobřany,Vladimír Beránek,1982,100.9,240,165,225,630,Open,SBD,Single-ply,M
-2,SKST Litvínov,Dušan Švarcbach,1975,80.7,250,152.5,280,682.5,Open,SBD,Single-ply,M
-2,SKST Litvínov,František Janák,1975,110.8,280,232.5,260,772.5,Open,SBD,Single-ply,M
-2,SKST Litvínov,Radim Kopal,1974,82.7,210,167.5,207.5,585,Open,SBD,Single-ply,M
-2,SKST Litvínov,Tomáš Hellmich,1975,86,170,132.5,197.5,500,Open,SBD,Single-ply,M
-3,TJ Sokol Vršovice,Daniel Bachan,1971,99.7,240,180,220,640,Open,SBD,Single-ply,M
-3,TJ Sokol Vršovice,Jan Švagr,1984,87.4,200,160,200,560,Open,SBD,Single-ply,M
-3,TJ Sokol Vršovice,Marián Zvrtek,1976,100.6,210,150,235,595,Open,SBD,Single-ply,M
-3,TJ Sokol Vršovice,Radek Limon,1974,112.2,210,150,230,590,Open,SBD,Single-ply,M
-4,Sporting APIS Praha,Martin Šťastný,1973,89.7,240,180,200,620,Open,SBD,Single-ply,M
-4,Sporting APIS Praha,Roman Tůma,1971,86.1,200,120,250,570,Open,SBD,Single-ply,M
-4,Sporting APIS Praha,Jakub Hesoun,1987,97.7,210,162.5,215,587.5,Juniors,SBD,Single-ply,M
-4,Sporting APIS Praha,Martin Janota,1974,82.4,190,80,210,480,Open,SBD,Single-ply,M
-5,Spartak Chodov,Michal Kounovský,1971,91.9,200,142.5,240,582.5,Open,SBD,Single-ply,M
-5,Spartak Chodov,Radek Gregor,1973,99.5,190,115,250,555,Open,SBD,Single-ply,M
-5,Spartak Chodov,Pavel Schauer,1951,81.2,160,122.5,180,462.5,Masters 2,SBD,Single-ply,M
-5,Spartak Chodov,Jaroslav Hodík,1958,80.5,150,112.5,190,452.5,Masters 2,SBD,Single-ply,M
-6,SK Olymp Nový Bor,Daniel Pianka,1977,57.8,140,105,180,425,Open,SBD,Single-ply,M
-6,SK Olymp Nový Bor,Josef Hamaj,1980,119.1,200,230,200,630,Open,SBD,Single-ply,M
-6,SK Olymp Nový Bor,Soňa Koianová,1987,60.5,80,75,80,235,Juniors,SBD,Single-ply,F
-6,SK Olymp Nový Bor,Miroslava Kůrková,1982,62.6,70,30,70,170,Open,SBD,Single-ply,F
-7,"TJ Sokol Nymburk ""D""",Pavel Hulák,1974,105.7,230,210,247.5,687.5,Open,SBD,Single-ply,M
-7,"TJ Sokol Nymburk ""D""",Tomáš Skořepa,1989,59.8,140,90,155,385,Juniors,SBD,Single-ply,M
-7,"TJ Sokol Nymburk ""D""",Kateřina Hýblerová,1991,52.8,50,37.5,80,167.5,Sub-Juniors,SBD,Single-ply,F
-7,"TJ Sokol Nymburk ""D""",Martin Gottwald,1989,94.5,95,75,115,285,Juniors,SBD,Single-ply,M
-8,"TJ AŠ Mladá Boleslav ""B""",Roman Richter,1976,94,190,140,210,540,Open,SBD,Single-ply,M
-8,"TJ AŠ Mladá Boleslav ""B""",Alena Krčmářová,1975,66.7,100,62.5,122.5,285,Open,SBD,Single-ply,F
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment,Sex
+1,TJ Dobřany,Rostislav Kvarda,1986,125,111.4,302.5,215,265,782.5,Juniors,SBD,Single-ply,M
+1,TJ Dobřany,Ladislav Mráz,1979,90,89.4,235,180,245,660,Open,SBD,Single-ply,M
+1,TJ Dobřany,Petr Krákora,1973,90,89,230,140,255,625,Open,SBD,Single-ply,M
+1,TJ Dobřany,Vladimír Beránek,1982,110,100.9,240,165,225,630,Open,SBD,Single-ply,M
+2,SKST Litvínov,Dušan Švarcbach,1975,82.5,80.7,250,152.5,280,682.5,Open,SBD,Single-ply,M
+2,SKST Litvínov,František Janák,1975,125,110.8,280,232.5,260,772.5,Open,SBD,Single-ply,M
+2,SKST Litvínov,Radim Kopal,1974,90,82.7,210,167.5,207.5,585,Open,SBD,Single-ply,M
+2,SKST Litvínov,Tomáš Hellmich,1975,90,86,170,132.5,197.5,500,Open,SBD,Single-ply,M
+3,TJ Sokol Vršovice,Daniel Bachan,1971,100,99.7,240,180,220,640,Open,SBD,Single-ply,M
+3,TJ Sokol Vršovice,Jan Švagr,1984,90,87.4,200,160,200,560,Open,SBD,Single-ply,M
+3,TJ Sokol Vršovice,Marián Zvrtek,1976,110,100.6,210,150,235,595,Open,SBD,Single-ply,M
+3,TJ Sokol Vršovice,Radek Limon,1974,125,112.2,210,150,230,590,Open,SBD,Single-ply,M
+4,Sporting APIS Praha,Martin Šťastný,1973,90,89.7,240,180,200,620,Open,SBD,Single-ply,M
+4,Sporting APIS Praha,Roman Tůma,1971,90,86.1,200,120,250,570,Open,SBD,Single-ply,M
+4,Sporting APIS Praha,Jakub Hesoun,1987,100,97.7,210,162.5,215,587.5,Juniors,SBD,Single-ply,M
+4,Sporting APIS Praha,Martin Janota,1974,82.5,82.4,190,80,210,480,Open,SBD,Single-ply,M
+5,Spartak Chodov,Michal Kounovský,1971,100,91.9,200,142.5,240,582.5,Open,SBD,Single-ply,M
+5,Spartak Chodov,Radek Gregor,1973,100,99.5,190,115,250,555,Open,SBD,Single-ply,M
+5,Spartak Chodov,Pavel Schauer,1951,82.5,81.2,160,122.5,180,462.5,Masters 2,SBD,Single-ply,M
+5,Spartak Chodov,Jaroslav Hodík,1958,82.5,80.5,150,112.5,190,452.5,Masters 2,SBD,Single-ply,M
+6,SK Olymp Nový Bor,Daniel Pianka,1977,60,57.8,140,105,180,425,Open,SBD,Single-ply,M
+6,SK Olymp Nový Bor,Josef Hamaj,1980,125,119.1,200,230,200,630,Open,SBD,Single-ply,M
+6,SK Olymp Nový Bor,Soňa Koianová,1987,67.5,60.5,80,75,80,235,Juniors,SBD,Single-ply,F
+6,SK Olymp Nový Bor,Miroslava Kůrková,1982,67.5,62.6,70,30,70,170,Open,SBD,Single-ply,F
+7,"TJ Sokol Nymburk ""D""",Pavel Hulák,1974,110,105.7,230,210,247.5,687.5,Open,SBD,Single-ply,M
+7,"TJ Sokol Nymburk ""D""",Tomáš Skořepa,1989,60,59.8,140,90,155,385,Juniors,SBD,Single-ply,M
+7,"TJ Sokol Nymburk ""D""",Kateřina Hýblerová,1991,56,52.8,50,37.5,80,167.5,Sub-Juniors,SBD,Single-ply,F
+7,"TJ Sokol Nymburk ""D""",Martin Gottwald,1989,100,94.5,95,75,115,285,Juniors,SBD,Single-ply,M
+8,"TJ AŠ Mladá Boleslav ""B""",Roman Richter,1976,100,94,190,140,210,540,Open,SBD,Single-ply,M
+8,"TJ AŠ Mladá Boleslav ""B""",Alena Krčmářová,1975,67.5,66.7,100,62.5,122.5,285,Open,SBD,Single-ply,F

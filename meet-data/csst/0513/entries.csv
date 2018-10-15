@@ -1,25 +1,25 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Equipment,Event,Sex
-1,Václav Ackermann,1973,91.9,SKP PSJ Union Praha,295,205,300,800,Open,Single-ply,SBD,M
-1,Petr Krošlák,1967,85.9,SKP PSJ Union Praha,270,170,275,715,Open,Single-ply,SBD,M
-1,Ladislav Strache,1974,86.5,SKP PSJ Union Praha,240,150,270,660,Open,Single-ply,SBD,M
-1,David Bauer,1973,90.7,SKP PSJ Union Praha,205,120,240,565,Open,Single-ply,SBD,M
-2,Karel Jiroušek,1979,72.4,SK Aréna Nový Bor A,240,155,260,655,Open,Single-ply,SBD,M
-2,Daniel Dvořák,1976,103.4,SK Aréna Nový Bor A,240,215,285,740,Open,Single-ply,SBD,M
-2,Luboš Šos,1978,130.3,SK Aréna Nový Bor A,250,225,285,760,Open,Single-ply,SBD,M
-2,Jiří Hačkulič,1978,89.9,SK Aréna Nový Bor A,220,170,240,630,Open,Single-ply,SBD,M
-3,Petr Slanička,1969,107.5,Sokol Nymburk,250,200,247.5,697.5,Open,Single-ply,SBD,M
-3,František Stříska,1973,94.1,Sokol Nymburk,245,152.5,240,637.5,Open,Single-ply,SBD,M
-3,Miroslav Vacek,1967,126.1,Sokol Nymburk,270,180,240,690,Open,Single-ply,SBD,M
-3,Miroslav Slovák,1971,101.2,Sokol Nymburk,220,170,250,640,Open,Single-ply,SBD,M
-4,Martin Šafář,1981,108.1,Sokol Vršovice,270,192.5,240,702.5,Open,Single-ply,SBD,M
-4,Daniel Bachan,1971,102.4,Sokol Vršovice,210,175,227.5,612.5,Open,Single-ply,SBD,M
-4,Miroslav Pavlíček,1963,117.9,Sokol Vršovice,222.5,150,220,592.5,Masters 1,Single-ply,SBD,M
-4,Miroslav Pavlíček,1987,93.5,Sokol Vršovice,150,105,185,440,Sub-Juniors,Single-ply,SBD,M
-5,Jaromír Műller,1960,106.4,SK Aréna Nový Bor B,210,160,260,630,Masters 1,Single-ply,SBD,M
-5,Vojtěch Frk,1986,73.8,SK Aréna Nový Bor B,170,130,200,500,Juniors,Single-ply,SBD,M
-5,Zdeněk Slovák,1986,76,SK Aréna Nový Bor B,160,140,180,480,Juniors,Single-ply,SBD,M
-5,Martin Pánek,1984,80.9,SK Aréna Nový Bor B,170,120,195,485,Juniors,Single-ply,SBD,M
-6,Jan Hunčovský,1962,79.3,ISŠT Mělník,210,140,205,555,Masters 1,Single-ply,SBD,M
-6,Ondřej Daniš,1986,57.7,ISŠT Mělník,95,75,125,295,Juniors,Single-ply,SBD,M
-6,Hana Havlíčková,1989,54.2,ISŠT Mělník,40,35,60,135,Sub-Juniors,Single-ply,SBD,F
-DQ,Jana Hunčovská,1990,48.8,ISŠT Mělník,30,,,,Sub-Juniors,Single-ply,SBD,F
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Equipment,Event,Sex
+1,Václav Ackermann,1973,100,91.9,SKP PSJ Union Praha,295,205,300,800,Open,Single-ply,SBD,M
+1,Petr Krošlák,1967,90,85.9,SKP PSJ Union Praha,270,170,275,715,Open,Single-ply,SBD,M
+1,Ladislav Strache,1974,90,86.5,SKP PSJ Union Praha,240,150,270,660,Open,Single-ply,SBD,M
+1,David Bauer,1973,100,90.7,SKP PSJ Union Praha,205,120,240,565,Open,Single-ply,SBD,M
+2,Karel Jiroušek,1979,75,72.4,SK Aréna Nový Bor A,240,155,260,655,Open,Single-ply,SBD,M
+2,Daniel Dvořák,1976,110,103.4,SK Aréna Nový Bor A,240,215,285,740,Open,Single-ply,SBD,M
+2,Luboš Šos,1978,125+,130.3,SK Aréna Nový Bor A,250,225,285,760,Open,Single-ply,SBD,M
+2,Jiří Hačkulič,1978,90,89.9,SK Aréna Nový Bor A,220,170,240,630,Open,Single-ply,SBD,M
+3,Petr Slanička,1969,110,107.5,Sokol Nymburk,250,200,247.5,697.5,Open,Single-ply,SBD,M
+3,František Stříska,1973,100,94.1,Sokol Nymburk,245,152.5,240,637.5,Open,Single-ply,SBD,M
+3,Miroslav Vacek,1967,125+,126.1,Sokol Nymburk,270,180,240,690,Open,Single-ply,SBD,M
+3,Miroslav Slovák,1971,110,101.2,Sokol Nymburk,220,170,250,640,Open,Single-ply,SBD,M
+4,Martin Šafář,1981,110,108.1,Sokol Vršovice,270,192.5,240,702.5,Open,Single-ply,SBD,M
+4,Daniel Bachan,1971,110,102.4,Sokol Vršovice,210,175,227.5,612.5,Open,Single-ply,SBD,M
+4,Miroslav Pavlíček,1963,125,117.9,Sokol Vršovice,222.5,150,220,592.5,Masters 1,Single-ply,SBD,M
+4,Miroslav Pavlíček,1987,100,93.5,Sokol Vršovice,150,105,185,440,Sub-Juniors,Single-ply,SBD,M
+5,Jaromír Műller,1960,110,106.4,SK Aréna Nový Bor B,210,160,260,630,Masters 1,Single-ply,SBD,M
+5,Vojtěch Frk,1986,75,73.8,SK Aréna Nový Bor B,170,130,200,500,Juniors,Single-ply,SBD,M
+5,Zdeněk Slovák,1986,82.5,76,SK Aréna Nový Bor B,160,140,180,480,Juniors,Single-ply,SBD,M
+5,Martin Pánek,1984,82.5,80.9,SK Aréna Nový Bor B,170,120,195,485,Juniors,Single-ply,SBD,M
+6,Jan Hunčovský,1962,82.5,79.3,ISŠT Mělník,210,140,205,555,Masters 1,Single-ply,SBD,M
+6,Ondřej Daniš,1986,60,57.7,ISŠT Mělník,95,75,125,295,Juniors,Single-ply,SBD,M
+6,Hana Havlíčková,1989,56,54.2,ISŠT Mělník,40,35,60,135,Sub-Juniors,Single-ply,SBD,F
+DQ,Jana Hunčovská,1990,52,48.8,ISŠT Mělník,30,,,,Sub-Juniors,Single-ply,SBD,F

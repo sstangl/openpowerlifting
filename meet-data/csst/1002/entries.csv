@@ -1,25 +1,25 @@
-Place,Team,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,Sex
-1,TJ Lokomotiva Krnov,Milan Greguš,1968,96.4,285,197.5,242.5,725,SBD,Single-ply,Open,M
-1,TJ Lokomotiva Krnov,Petr Vlach,1981,95.9,240,162.5,262.5,665,SBD,Single-ply,Open,M
-1,TJ Lokomotiva Krnov,Rémy Krayzel,1955,80.9,230,170,200,600,SBD,Single-ply,Open,M
-1,TJ Lokomotiva Krnov,Jan Fiala,1987,100.4,265,160,215,640,SBD,Single-ply,Open,M
-2,SK Kuřim,Pavel Župka,1984,97.5,270,185,285,740,SBD,Single-ply,Open,M
-2,SK Kuřim,Sergev Děmčichin,1988,67.4,190,160,210,560,SBD,Single-ply,Open,M
-2,SK Kuřim,Vladimír Pop,1975,107.9,245,170,270,685,SBD,Single-ply,Open,M
-2,SK Kuřim,Jiří Opluštil,1980,95.8,185,135,220,540,SBD,Single-ply,Open,M
-3,TJ Sokol Těškovice,Václav Jaremczuk,1963,97.9,260,175,270,705,SBD,Single-ply,Open,M
-3,TJ Sokol Těškovice,Štěpán Hoza,1974,72.1,217.5,135,220,572.5,SBD,Single-ply,Open,M
-3,TJ Sokol Těškovice,Radim Hořínek,1975,105,220,145,245,610,SBD,Single-ply,Open,M
-3,TJ Sokol Těškovice,René Hoza,1993,73.1,205,115,180,500,SBD,Single-ply,Open,M
-4,TJ Viktorie Bohumín,Martin Turek,1972,88.8,225,192.5,225,642.5,SBD,Single-ply,Open,M
-4,TJ Viktorie Bohumín,Pavel Malina,1960,59.5,157.5,100,157.5,415,SBD,Single-ply,Open,M
-4,TJ Viktorie Bohumín,Aleš Spiewok,1967,89.5,190,162.5,180,532.5,SBD,Single-ply,Open,M
-4,TJ Viktorie Bohumín,Tomáš Turek,1994,88,202.5,112.5,190,505,SBD,Single-ply,Open,M
-5,SSK Colbert clubVítkovice,Jiří Zahraj,1968,102,190,230,200,620,SBD,Single-ply,Open,M
-5,SSK Colbert clubVítkovice,Pavel Žák,1985,110.5,227.5,192.5,210,630,SBD,Single-ply,Open,M
-5,SSK Colbert clubVítkovice,David Kiessewetter,1984,74,157.5,105,195,457.5,SBD,Single-ply,Open,M
-DQ,SSK Colbert clubVítkovice,Antonín Pavlovec,1981,89.8,,165,210,,SBD,Single-ply,Open,M
-6,TJ Sokol Pohořelice,Bronislav Tvrdoň,1971,59.5,165,128,160,453,SBD,Single-ply,Open,M
-6,TJ Sokol Pohořelice,Pavel Fučík,1978,114.4,200,140,220,560,SBD,Single-ply,Open,M
-6,TJ Sokol Pohořelice,Pavel Vážan,1991,65.9,140,105,150,395,SBD,Single-ply,Open,M
-DQ,TJ Sokol Pohořelice,Milan Ryšavý,1978,89.3,210,,215,,SBD,Single-ply,Open,M
+Place,Team,Name,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,Sex
+1,TJ Lokomotiva Krnov,Milan Greguš,1968,100,96.4,285,197.5,242.5,725,SBD,Single-ply,Open,M
+1,TJ Lokomotiva Krnov,Petr Vlach,1981,100,95.9,240,162.5,262.5,665,SBD,Single-ply,Open,M
+1,TJ Lokomotiva Krnov,Rémy Krayzel,1955,82.5,80.9,230,170,200,600,SBD,Single-ply,Open,M
+1,TJ Lokomotiva Krnov,Jan Fiala,1987,110,100.4,265,160,215,640,SBD,Single-ply,Open,M
+2,SK Kuřim,Pavel Župka,1984,100,97.5,270,185,285,740,SBD,Single-ply,Open,M
+2,SK Kuřim,Sergev Děmčichin,1988,67.5,67.4,190,160,210,560,SBD,Single-ply,Open,M
+2,SK Kuřim,Vladimír Pop,1975,110,107.9,245,170,270,685,SBD,Single-ply,Open,M
+2,SK Kuřim,Jiří Opluštil,1980,100,95.8,185,135,220,540,SBD,Single-ply,Open,M
+3,TJ Sokol Těškovice,Václav Jaremczuk,1963,100,97.9,260,175,270,705,SBD,Single-ply,Open,M
+3,TJ Sokol Těškovice,Štěpán Hoza,1974,75,72.1,217.5,135,220,572.5,SBD,Single-ply,Open,M
+3,TJ Sokol Těškovice,Radim Hořínek,1975,110,105,220,145,245,610,SBD,Single-ply,Open,M
+3,TJ Sokol Těškovice,René Hoza,1993,75,73.1,205,115,180,500,SBD,Single-ply,Open,M
+4,TJ Viktorie Bohumín,Martin Turek,1972,90,88.8,225,192.5,225,642.5,SBD,Single-ply,Open,M
+4,TJ Viktorie Bohumín,Pavel Malina,1960,60,59.5,157.5,100,157.5,415,SBD,Single-ply,Open,M
+4,TJ Viktorie Bohumín,Aleš Spiewok,1967,90,89.5,190,162.5,180,532.5,SBD,Single-ply,Open,M
+4,TJ Viktorie Bohumín,Tomáš Turek,1994,90,88,202.5,112.5,190,505,SBD,Single-ply,Open,M
+5,SSK Colbert clubVítkovice,Jiří Zahraj,1968,110,102,190,230,200,620,SBD,Single-ply,Open,M
+5,SSK Colbert clubVítkovice,Pavel Žák,1985,125,110.5,227.5,192.5,210,630,SBD,Single-ply,Open,M
+5,SSK Colbert clubVítkovice,David Kiessewetter,1984,75,74,157.5,105,195,457.5,SBD,Single-ply,Open,M
+DQ,SSK Colbert clubVítkovice,Antonín Pavlovec,1981,90,89.8,,165,210,,SBD,Single-ply,Open,M
+6,TJ Sokol Pohořelice,Bronislav Tvrdoň,1971,60,59.5,165,128,160,453,SBD,Single-ply,Open,M
+6,TJ Sokol Pohořelice,Pavel Fučík,1978,125,114.4,200,140,220,560,SBD,Single-ply,Open,M
+6,TJ Sokol Pohořelice,Pavel Vážan,1991,67.5,65.9,140,105,150,395,SBD,Single-ply,Open,M
+DQ,TJ Sokol Pohořelice,Milan Ryšavý,1978,90,89.3,210,,215,,SBD,Single-ply,Open,M

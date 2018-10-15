@@ -1,29 +1,29 @@
-Place,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
-1,Pavel Schaumann,1972,82.6,Sokol Těškovice,230,135,245,610,Single-ply,SBD,M,Open
-1,Radim Hořínek,1975,86,Sokol Těškovice,175,127.5,210,512.5,Single-ply,SBD,M,Open
-1,Josef Sýkora,1969,59.2,Sokol Těškovice,120,77.5,160,357.5,Single-ply,SBD,M,Open
-1,Václav Jaremczuk,1963,85.1,Sokol Těškovice,210,142.5,257.5,610,Single-ply,SBD,M,Open
-2,Pavel Pláteník,1974,73,Sokol Vranovice,205,115,212.5,532.5,Single-ply,SBD,M,Open
-2,Jiří Furch,1975,57.3,Sokol Vranovice,122.5,85,162.5,370,Single-ply,SBD,M,Open
-2,Oldřich Halfar,1973,80.6,Sokol Vranovice,145,110,227.5,482.5,Single-ply,SBD,M,Open
-2,Petr Richter,1976,65.5,Sokol Vranovice,125,110,155,390,Single-ply,SBD,M,Open
-3,Jiří Gajdošík,1962,68.2,TJ Olympia Zlín,165,117.5,180,462.5,Single-ply,SBD,M,Open
-3,Petr Zámečník,1966,72,TJ Olympia Zlín,172.5,130,230,532.5,Single-ply,SBD,M,Open
-3,Dezidér Mihok,1975,85.7,TJ Olympia Zlín,,137.5,222.5,360,Single-ply,BD,M,Open
-3,Vlastimil Peterka,1975,68.5,TJ Olympia Zlín,160,100,210,470,Single-ply,SBD,M,Open
-4,Ladislav Rolný,1948,67,TJ Lokomotiva Krnov,160,107.5,195,462.5,Single-ply,SBD,M,Open
-4,Jaroslav Stašek,1973,84,TJ Lokomotiva Krnov,180,100,210,490,Single-ply,SBD,M,Open
-4,Norbert Gűrtler,1973,104.2,TJ Lokomotiva Krnov,190,112.5,220,522.5,Single-ply,SBD,M,Open
-4,Petr Gracias,1971,73.2,TJ Lokomotiva Krnov,165,117.5,195,477.5,Single-ply,SBD,M,Open
-5,Stanislav Hořínek,1957,110.1,Spartak Jihlava,170,137.5,230,537.5,Single-ply,SBD,M,Open
-5,Martin Novák,1968,80.6,Spartak Jihlava,145,110,180,435,Single-ply,SBD,M,Open
-5,Jiří Zabloudil,1969,74.9,Spartak Jihlava,160,107.5,200,467.5,Single-ply,SBD,M,Open
-5,Tomáš Šárik,1975,87.7,Spartak Jihlava,170,132.5,220,522.5,Single-ply,SBD,M,Open
-6,Zdeněk Krutil,1948,87.6,TJ Bystřice p.H,160,140,205,505,Single-ply,SBD,M,Open
-6,Jaromír Janečka,1972,84.5,TJ Bystřice p.H,165,100,205,470,Single-ply,SBD,M,Open
-6,František Charvát,1973,88.7,TJ Bystřice p.H,140,117.5,195,452.5,Single-ply,SBD,M,Open
-6,Karel Sedlář,1971,77.8,TJ Bystřice p.H,132.5,112.5,172.5,417.5,Single-ply,SBD,M,Open
-7,Vilém Neděla,1976,75.8,TJ Třebíč,130,95,160,385,Single-ply,SBD,M,Open
-7,Roman Oborný,1975,71.6,TJ Třebíč,160,110,150,420,Single-ply,SBD,M,Open
-7,Milan Babuněk,1973,80.8,TJ Třebíč,150,90,150,390,Single-ply,SBD,M,Open
-7,Jan Pokorný,1973,75.9,TJ Třebíč,120,100,160,380,Single-ply,SBD,M,Open
+Place,Name,BirthYear,WeightClassKg,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
+1,Pavel Schaumann,1972,90,82.6,Sokol Těškovice,230,135,245,610,Single-ply,SBD,M,Open
+1,Radim Hořínek,1975,90,86,Sokol Těškovice,175,127.5,210,512.5,Single-ply,SBD,M,Open
+1,Josef Sýkora,1969,60,59.2,Sokol Těškovice,120,77.5,160,357.5,Single-ply,SBD,M,Open
+1,Václav Jaremczuk,1963,90,85.1,Sokol Těškovice,210,142.5,257.5,610,Single-ply,SBD,M,Open
+2,Pavel Pláteník,1974,75,73,Sokol Vranovice,205,115,212.5,532.5,Single-ply,SBD,M,Open
+2,Jiří Furch,1975,60,57.3,Sokol Vranovice,122.5,85,162.5,370,Single-ply,SBD,M,Open
+2,Oldřich Halfar,1973,82.5,80.6,Sokol Vranovice,145,110,227.5,482.5,Single-ply,SBD,M,Open
+2,Petr Richter,1976,67.5,65.5,Sokol Vranovice,125,110,155,390,Single-ply,SBD,M,Open
+3,Jiří Gajdošík,1962,75,68.2,TJ Olympia Zlín,165,117.5,180,462.5,Single-ply,SBD,M,Open
+3,Petr Zámečník,1966,75,72,TJ Olympia Zlín,172.5,130,230,532.5,Single-ply,SBD,M,Open
+3,Dezidér Mihok,1975,90,85.7,TJ Olympia Zlín,,137.5,222.5,360,Single-ply,BD,M,Open
+3,Vlastimil Peterka,1975,75,68.5,TJ Olympia Zlín,160,100,210,470,Single-ply,SBD,M,Open
+4,Ladislav Rolný,1948,67.5,67,TJ Lokomotiva Krnov,160,107.5,195,462.5,Single-ply,SBD,M,Open
+4,Jaroslav Stašek,1973,90,84,TJ Lokomotiva Krnov,180,100,210,490,Single-ply,SBD,M,Open
+4,Norbert Gűrtler,1973,110,104.2,TJ Lokomotiva Krnov,190,112.5,220,522.5,Single-ply,SBD,M,Open
+4,Petr Gracias,1971,75,73.2,TJ Lokomotiva Krnov,165,117.5,195,477.5,Single-ply,SBD,M,Open
+5,Stanislav Hořínek,1957,125,110.1,Spartak Jihlava,170,137.5,230,537.5,Single-ply,SBD,M,Open
+5,Martin Novák,1968,82.5,80.6,Spartak Jihlava,145,110,180,435,Single-ply,SBD,M,Open
+5,Jiří Zabloudil,1969,75,74.9,Spartak Jihlava,160,107.5,200,467.5,Single-ply,SBD,M,Open
+5,Tomáš Šárik,1975,90,87.7,Spartak Jihlava,170,132.5,220,522.5,Single-ply,SBD,M,Open
+6,Zdeněk Krutil,1948,90,87.6,TJ Bystřice p.H,160,140,205,505,Single-ply,SBD,M,Open
+6,Jaromír Janečka,1972,90,84.5,TJ Bystřice p.H,165,100,205,470,Single-ply,SBD,M,Open
+6,František Charvát,1973,90,88.7,TJ Bystřice p.H,140,117.5,195,452.5,Single-ply,SBD,M,Open
+6,Karel Sedlář,1971,82.5,77.8,TJ Bystřice p.H,132.5,112.5,172.5,417.5,Single-ply,SBD,M,Open
+7,Vilém Neděla,1976,82.5,75.8,TJ Třebíč,130,95,160,385,Single-ply,SBD,M,Open
+7,Roman Oborný,1975,75,71.6,TJ Třebíč,160,110,150,420,Single-ply,SBD,M,Open
+7,Milan Babuněk,1973,82.5,80.8,TJ Třebíč,150,90,150,390,Single-ply,SBD,M,Open
+7,Jan Pokorný,1973,82.5,75.9,TJ Třebíč,120,100,160,380,Single-ply,SBD,M,Open
