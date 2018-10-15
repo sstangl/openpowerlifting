@@ -44,7 +44,7 @@ pub struct WeightClassConfig {
     pub classes: Vec<WeightClassKg>,
     /// The earliest date at which these weightclasses existed.
     pub date_min: Date,
-    /// The date at which these weightclasses stopped existing.
+    /// The last date at which these weightclasses existed.
     pub date_max: Date,
     /// Which sex these weightclasses are for.
     pub sex: Sex,

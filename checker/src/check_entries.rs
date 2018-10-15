@@ -1039,7 +1039,7 @@ fn check_weightclass_consistency(
     let mut matched_group: Option<&WeightClassConfig> = None;
     for group in &config.weightclasses {
         // Sex and date information are mandatory and must match.
-        if date <= group.date_min || date >= group.date_max || entry.sex != group.sex {
+        if date < group.date_min || date > group.date_max || entry.sex != group.sex {
             continue;
         }
 
@@ -1082,7 +1082,7 @@ fn check_weightclass_consistency(
 
     // If no group matched, the config is in trouble.
     if matched_group.is_none() {
-        report.warning_on(
+        report.error_on(
             line,
             "Could not match to any weightclass group in the CONFIG.toml",
         );
