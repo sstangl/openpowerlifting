@@ -983,11 +983,6 @@ fn check_weightclass_consistency(
     line: u64,
     report: &mut Report,
 ) {
-    // If the configuration exempts this check, do nothing.
-    if exempt_weightclass_consistency {
-        return;
-    }
-
     // If there's no weightclass data, there's nothing to check.
     if entry.weightclasskg == WeightClassKg::None {
         // Configured federations should have weightclass data.
@@ -1008,6 +1003,11 @@ fn check_weightclass_consistency(
                 entry.bodyweightkg, entry.weightclasskg
             ),
         );
+    }
+
+    // If the configuration exempts consistency checking, stop here.
+    if exempt_weightclass_consistency {
+        return;
     }
 
     // If there's nothing configured, we can still do some basic checks.

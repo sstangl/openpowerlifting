@@ -7,6 +7,13 @@
     masters3 = {name = "Masters 3",min=59.5,max=999}
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
+    # Special divisions used with limited competitions.
+    # The weightclasses chosen for the boundaries aren't consistent.
+    light = { name = "Light", min = 0, max = 999 }
+    middle = { name = "Middle", min = 0, max = 999 }
+    heavy = { name = "Heavy", min = 0, max = 999 }
+    super = { name = "Super", min = 0, max = 999 }
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -58,7 +65,7 @@
     9501 = ["check_row_weightclass_consistency"]
     9603 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     9604 = ["check_row_weightclass_sex"]
-    9701 = ["check_row_division"]
+    9701 = ["check_row_weightclass_consistency"]
     9005 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     9705 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     9706 = ["check_row_weightclass_sex"]
@@ -67,11 +74,11 @@
     9904 = ["check_row_weightclass_consistency","check_row_weightclass_sex"]
     0003 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     0005 = ["check_row_weightclass_sex"]
-    0101 = ["check_row_division"]
-    0506 = ["check_row_division"]
+    0101 = ["check_row_weightclass_consistency"]
+    0506 = ["check_row_weightclass_consistency"]
     0702 = ["check_row_weightclass_consistency"]
-    0902 = ["check_row_division"]
-    1305 = ["check_row_division"]
+    0902 = ["check_row_division", "check_row_weightclass_consistency"]
+    1305 = ["check_row_weightclass_consistency"]
     1702 = ["check_row_division"]
     9906 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
     9104 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
