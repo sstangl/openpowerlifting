@@ -6,6 +6,7 @@
 
     # Youth -- Amateur only.
     ama_youth = {name = "Amateur Youth", min = 5, max = 13}
+    ama_youth_10 = {name = "Amateur Youth 10", min = 10, max = 10}
 
     # Teens -- Amateur only.
     ama_teen_14_15 = {name = "Amateur Teen 14-15", min = 14, max = 15}
@@ -69,7 +70,9 @@
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90", "100", "100+"]
+    # The SHW 100+ class intentionally conflicts with the 110 class. RPS is weird.
+    # Maybe we should just ignore their record categories and make it 110+.
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","100+"]
     date_range = ["1990-01-01", "9999-01-01"]
     sex = "F"
 
