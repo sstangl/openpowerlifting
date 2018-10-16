@@ -732,6 +732,19 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             report.error_on(line, s)
         }
     }
+
+    // Check that the TotalKg isn't something completely nonsensical.
+    // Usually this occurs when pounds were mislabeled as kilograms.
+    // The current Multi-ply record is 1367.
+    if entry.totalkg >= WeightKg::from_i32(1400) {
+        report.error_on(
+            line,
+            format!(
+                "TotalKg '{}' exceeds the world record. Are the weights actually in LBS?",
+                entry.totalkg
+            ),
+        );
+    }
 }
 
 // Compares an attempt versus the current ascending weight.
