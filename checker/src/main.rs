@@ -150,8 +150,6 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
     }
 
     // If there were errors, don't return anything.
-    // TODO: Warnings should get forwarded also.
-    // TODO: The summary printing should be controlled by main().
     if error_count > 0 {
         Err((error_count, warning_count))
     } else {
