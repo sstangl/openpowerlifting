@@ -13,7 +13,6 @@
 import sys
 import os
 import toml
-from bisect import bisect_left
 
 try:
     import oplcsv
@@ -144,48 +143,6 @@ def check_column_name(s, row, csv):
         pwarning("Fix name casing: \"%s\"" % s)
 
 
-def check_row_weightclass(row, csv, weightclasses):
-    if 'WeightClassKg' in csv.fieldnames and row[csv.index('WeightClassKg')] != "":
-        wc = row[csv.index('WeightClassKg')]
-
-        ipf_men = ['53', '59', '66', '74', '83', '93', '105', '120', '120+']
-        ipf_women = ['43', '47', '52', '57', '63', '72', '84', '84+']
-        ipf_women_extra = ['30', '35', '40']
-        ipl = ['48', '52', '56', '60', '67.5', '75', '82.5',
-               '90', '90+', '100', '110', '125', '125+']
-        rum_extra = ['44', '140', '140+']
-
-        apa_extra = ['39']  # Youth.
-        proraw_extra = ['70', '70+', '75+', '80', '95', '110+']
-        rps_extra = ['155']
-        spf_extra = ['117.5', '100+', '67.5+']
-        idfpf_extra = ['47.5', '50.5', '55.5', '58.5']
-        ipf_extra = ['60+']
-        old_usapl = ['145', '145+']
-        wnpf_extra = ['34']
-        wpau_extra = ['155', '155+']
-        wp_men_extra = ['62', '69', '77', '85', '94']
-        wp_women_extra = ['53', '58', '64', '100+']
-
-        ffforce_extra = ['83+']  # Cadet division, for youth.
-
-        classes = ipf_men + ipf_women + ipl + rum_extra + proraw_extra + \
-            rps_extra + spf_extra + ipf_extra + ipf_women_extra + \
-            old_usapl + ffforce_extra + wnpf_extra + apa_extra + \
-            idfpf_extra + wpau_extra + wp_men_extra + wp_women_extra
-
-        if ((not weightclasses and wc not in classes) or
-                (weightclasses and wc not in weightclasses)):
-            pwarning("Unknown weight class: %s" % wc)
-
-        try:
-            f = float(wc)
-            if f < 30:  # Nobody should weigh this little.
-                pwarning("Suspiciously low weight class: %s" % wc)
-        except ValueError:
-            pass
-
-
 def check_row_name_consistency(row, csv):
     if 'Name' in csv.fieldnames:
         name = row[csv.index('Name')]
@@ -195,141 +152,6 @@ def check_row_name_consistency(row, csv):
                     perror("JapaneseName field empty.")
             else:
                 perror("Name field empty.")
-
-
-# Assert that Event makes sense given the specified lifts.
-def check_row_event_consistency(row, csv):
-    if 'Event' not in csv.fieldnames:
-        return
-    if 'TotalKg' not in csv.fieldnames:
-        return
-
-    event = row[csv.index('Event')]
-
-    if 'S' not in event:
-        for i, header in enumerate(csv.fieldnames):
-            if 'Squat' in header and row[i]:
-                perror("Squat entered for non-squat Event. Row: %s" % row)
-
-    if 'B' not in event:
-        for i, header in enumerate(csv.fieldnames):
-            if 'Bench' in header and row[i]:
-                perror("Bench entered for non-bench Event. Row: %s" % row)
-
-    if 'D' not in event:
-        for i, header in enumerate(csv.fieldnames):
-            if 'Deadlift' in header and row[i]:
-                perror("Deadlift entered for non-deadlift Event. Row: %s" % row)
-
-    if 'Equipment' in csv.fieldnames:
-        if 'S' not in event and row[csv.index('Equipment')] == "Wraps":
-            perror("Event category doesn't use wraps. Row: %s" % row)
-
-    # Disqualified lifters must not have Totals.
-    if 'Place' in csv.fieldnames:
-        place = row[csv.index('Place')]
-
-        if place in ['DQ', 'NS', 'DD'] and row[csv.index('TotalKg')]:
-            perror("DQ'd lifter must not have a TotalKg. Row: %s" % row)
-
-
-# Checks that athletes of the wrong sex are not in a single-sex weight class
-def check_row_weightclass_sex(row, csv, weightclasses):
-
-    if 'Sex' not in csv.fieldnames or 'WeightClassKg' not in csv.fieldnames:
-        return
-
-    ipf_men = ['59', '66', '74', '83', '93', '105', '120',
-               '120+']  # No -53 as this is an IDFPF womens class
-    trad_men_only = ['125', '140', '140+']  # No 100,110 due to SPF,USPA etc
-    old_usapl_men_only = ['145', '145+']
-    wpau_men_only = ['155', '155+']
-
-    men_only = ipf_men + trad_men_only + old_usapl_men_only + wpau_men_only
-
-    # No -52kg as this overlaps with a traditional weight-class
-    ipf_women = ['43', '47', '57', '63', '72', '84', '84+']
-    trad_women_only = ['90+']  # SPF has 44 & 48 kg mens classes
-
-    women_only = ipf_women + trad_women_only
-
-    if weightclasses and row[csv.index('WeightClassKg')] != "":
-        if row[csv.index('WeightClassKg')] not in weightclasses:
-            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
-                     (row[csv.index('Name')], row[csv.index('Sex')],
-                      row[csv.index('WeightClassKg')]))
-    else:
-        if (row[csv.index('Sex')] is 'M' and
-                row[csv.index('WeightClassKg')] in women_only):
-            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
-                     (row[csv.index('Name')], row[csv.index('Sex')],
-                      row[csv.index('WeightClassKg')]))
-        elif (row[csv.index('Sex')] is 'F' and
-                row[csv.index('WeightClassKg')] in men_only):
-            pwarning("Lifter \"%s\" sex (%s) does not match WtCls (%s)" %
-                     (row[csv.index('Name')], row[csv.index('Sex')],
-                      row[csv.index('WeightClassKg')]))
-
-# Women shouldn't accidentally be given male SHW classes.
-# Bodyweight should match the weight class.
-
-
-def check_row_weightclass_consistency(row, csv, weightclasses):
-    if 'Sex' not in csv.fieldnames or 'WeightClassKg' not in csv.fieldnames:
-        return
-
-    wtcls = row[csv.index('WeightClassKg')].replace('+', '')
-    if not wtcls:
-        return
-
-    # No female category should be this high.
-    if row[csv.index('Sex')] == 'F':
-        try:
-            number = float(wtcls)
-            # This is probably higher than it should be because some USPA
-            # meets put women in male weightclasses for no reason.
-            # Made even higher thanks to the SPF.
-            if number > 120:
-                perror("Suspiciously high female weightclass: %s" %
-                       row[csv.index('WeightClassKg')])
-        except ValueError:
-            pass
-
-    if 'BodyweightKg' in csv.fieldnames:
-        bw = row[csv.index('BodyweightKg')]
-        if bw:
-            if row[csv.index('WeightClassKg')].endswith('+'):
-                if float(bw) <= float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
-                           (row[csv.index('Name')], row[csv.index('BodyweightKg')],
-                            row[csv.index('WeightClassKg')]))
-            else:
-                if float(bw) > float(wtcls):
-                    perror("Lifter \"%s\" BW (%s) does not match WtCls (%s)" %
-                           (row[csv.index('Name')], row[csv.index('BodyweightKg')],
-                            row[csv.index('WeightClassKg')]))
-                # If we know the weightclasses, make sure we are
-                # above the next weightclass down.
-                elif weightclasses:
-                    wcs = [float(wc.replace('+', '')) for wc in weightclasses]
-                    # Assumes weight classes are sorted for a slight time saving.
-                    if float(bw) > wcs[0]:
-                        if float(bw) <= wcs[bisect_left(
-                                wcs, float(row[csv.index('WeightClassKg')])) - 1]:
-                            pwarning("Lifter \"%s\" BW (%s) is too light "
-                                     "for WtCls (%s)" %
-                                     (row[csv.index('Name')],
-                                         row[csv.index('BodyweightKg')],
-                                         row[csv.index('WeightClassKg')]))
-
-    # USAPL's reporting site calculates weight class from bodyweight,
-    # so if they leave bodyweight blank it will assign the lowest weight class,
-    # giving the lifter a Wilks score of 1000+!
-    if 'usapl/' in globalFilename and 'BodyweightKg' in csv.fieldnames:
-        if row[csv.index('BodyweightKg')].strip() == '':
-            if row[csv.index('WeightClassKg')].strip() != '':
-                perror("WeightClass for %s must be zeroed "
-                       "(USAPL failed to enter bodyweight)" % row[csv.index('Name')])
 
 
 def check_row_division(row, csv, divisions, meetyear):
@@ -402,7 +224,6 @@ def check_row_ageclass(row, csv):
 
 def check_row(row, csv, configtoml, meet_date, meet_id):
     check_row_name_consistency(row, csv)
-    check_row_event_consistency(row, csv)
 
     if meet_date:
         meet_year = int(meet_date.split('-')[0])
@@ -445,22 +266,8 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                             weight_classes = wc_rule["classes"]
 
         if (meet_id not in configtoml["exemptions"] or
-                "check_row_weightclass_sex" not in configtoml["exemptions"][meet_id]):
-            check_row_weightclass_sex(row, csv, weight_classes)
-            check_row_weightclass(row, csv, weight_classes)
-
-        if (meet_id not in configtoml["exemptions"] or
                 "check_row_division" not in configtoml["exemptions"][meet_id]):
             check_row_division(row, csv, configtoml["divisions"], meet_year)
-        if (meet_id not in configtoml["exemptions"]
-                or "check_row_weightclass_consistency"
-                not in configtoml["exemptions"][meet_id]):
-            check_row_weightclass_consistency(row, csv, weight_classes)
-    else:  # Run the default tests
-        check_row_weightclass_sex(row, csv, None)
-        check_row_weightclass_consistency(row, csv, None)
-
-        check_row_weightclass(row, csv, None)
 
     check_row_ageclass(row, csv)
     check_column_name(row[csv.index('Name')], row, csv)
