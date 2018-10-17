@@ -66,10 +66,6 @@ pub enum Exemption {
     #[strum(to_string = "check_row_lift_order")]
     ExemptLiftOrder,
 
-    /// Allows lifters of any sex to compete in any known weightclass.
-    #[strum(to_string = "check_row_weightclass_sex")]
-    ExemptWeightClassSex,
-
     /// Allows lifters of any bodyweight to compete in any weightclass.
     #[strum(to_string = "check_row_weightclass_consistency")]
     ExemptWeightClassConsistency,

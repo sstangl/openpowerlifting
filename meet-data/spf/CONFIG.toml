@@ -31,5 +31,5 @@
     sex = "F"
 
 [exemptions]
-    1628 = ["check_row_weightclass_consistency", "check_row_weightclass_sex"]
-    1752 = ["check_row_weightclass_consistency", "check_row_weightclass_sex"]
+    1628 = ["check_row_weightclass_consistency"]
+    1752 = ["check_row_weightclass_consistency"]

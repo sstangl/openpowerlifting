@@ -4,5 +4,5 @@
     open = {name = "Open", min = 0, max = 999}
 
 [exemptions]
-    1301 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
-    1401 = ["check_row_weightclass_sex","check_row_weightclass_consistency"]
+    1301 = ["check_row_weightclass_consistency"]
+    1401 = ["check_row_weightclass_consistency"]
