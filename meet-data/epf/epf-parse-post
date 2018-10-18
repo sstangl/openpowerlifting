@@ -53,6 +53,7 @@ fi
 if [ "$process_success" == true ];then
 	# Show any warnings.
 	${REPOTESTDIR}/check-entries-csv entries.csv
+	${REPOSCRIPTDIR}/countries.py entries.csv
 fi
 
 echo "Done! Don't forget about meet.csv!"
