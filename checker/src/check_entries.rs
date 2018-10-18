@@ -475,9 +475,9 @@ fn check_column_age(s: &str, line: u64, report: &mut Report) -> Age {
             };
 
             if num < 5 {
-                report.warning_on(line, format!("Age '{}' unexpectedly low", s));
+                report.error_on(line, format!("Age '{}' unexpectedly low", s));
             } else if num > 100 {
-                report.warning_on(line, format!("Age '{}' unexpectedly high", s));
+                report.error_on(line, format!("Age '{}' unexpectedly high", s));
             }
 
             age
@@ -1009,7 +1009,7 @@ fn check_weightclass_consistency(
     if entry.bodyweightkg.is_non_zero()
         && !entry.weightclasskg.matches_bodyweight(entry.bodyweightkg)
     {
-        report.warning_on(
+        report.error_on(
             line,
             format!(
                 "BodyweightKg '{}' not in WeightClassKg '{}'",
