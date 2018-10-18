@@ -199,6 +199,10 @@ pub enum Federation {
     #[strum(to_string = "FALPO", serialize = "falpo")]
     FALPO,
 
+    /// Federace českého silového trojboje, GPC.
+    #[strum(to_string = "FCST", serialize = "fcst")]
+    FCST,
+
     /// Federación Mexicana de Powerlifting A.C., IPF.
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
@@ -706,6 +710,7 @@ impl Federation {
             Federation::EPA => true,
             Federation::EPF => true,
             Federation::FALPO => true,
+            Federation::FCST => false,
             Federation::FEMEPO => true,
             Federation::FEPOA => false,
             Federation::FESUPO => true,
@@ -865,6 +870,7 @@ impl Federation {
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
             Federation::FALPO => Some(Country::Argentina),
+            Federation::FCST => Some(Country::Czechia),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
