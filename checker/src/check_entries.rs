@@ -1114,7 +1114,7 @@ fn check_weightclass_consistency(
         .map_or(None, |(i, _)| Some(i));
 
     if index.is_none() {
-        report.warning_on(
+        report.error_on(
             line,
             format!(
                 "WeightClassKg '{}' not found in [weightclasses.{}]",
