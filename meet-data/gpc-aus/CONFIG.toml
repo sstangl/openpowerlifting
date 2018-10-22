@@ -9,6 +9,27 @@
     ftr = {name ="F-TR",min=13,max=19}
     mjr = {name ="M-JR",min=20,max=23}
     fjr = {name ="F-JR",min=20,max=23}
+
+    mt1r = {name ="M-T1R",min=0,max=999} # Not sure.
+    mt2r = {name ="M-T2R",min=0,max=999} # Not sure.
+    mt3r = {name ="M-T3R",min=0,max=999} # Not sure.
+    mm1r = {name ="M-M1R",min=40,max=44}
+    mm2r = {name ="M-M2R",min=45,max=49}
+    mm3r = {name ="M-M3R",min=50,max=54}
+    mm4r = {name ="M-M4R",min=55,max=59}
+    mm5r = {name ="M-M5R",min=60,max=64}
+    mm6r = {name ="M-M6R",min=65,max=69}
+
+    ft1r = {name ="F-T1R",min=0,max=999} # Not sure.
+    ft2r = {name ="F-T2R",min=0,max=999} # Not sure.
+    ft3r = {name ="F-T3R",min=0,max=999} # Not sure.
+    fm1r = {name ="F-M1R",min=40,max=44}
+    fm2r = {name ="F-M2R",min=45,max=49}
+    fm3r = {name ="F-M3R",min=50,max=54}
+    fm4r = {name ="F-M4R",min=55,max=59}
+    fm5r = {name ="F-M5R",min=60,max=64}
+    fm6r = {name ="F-M6R",min=65,max=69}
+
     m1r = {name ="M1R",min=40,max=44}
     f1r = {name ="F1R",min=40,max=44}
     m2r = {name ="M2R",min=45,max=49}
