@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Probes for new GPC-AUS meets.
-# The GPC-AUS site is very slow to load from the USA,
-# so older meets are remembered in `todo/URLLIST`,
-# and this file just probes the current front results page,
-# which shows the most recent 5 meets.
+# Probes for new meets from GPC-AUS.
+# Note that to use this script you will need Selenium installed
+# and geckodriver on your path.
 
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 import os
 import sys
+import time
+import logging
+from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
     import oplprobe
@@ -18,67 +21,68 @@ except ImportError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
-
-# Go back a few pages. Hopefully that's enough.
-RESULTS_URLS = [
-    "http://www.gpcaustralia.com/index.php/results?limitstart=0",
-    "http://www.gpcaustralia.com/index.php/results?start=5",
-    "http://www.gpcaustralia.com/index.php/results?start=10",
-    "http://www.gpcaustralia.com/index.php/results?start=15",
-]
-BASE_URL = "http://www.gpcaustralia.com"
+PAGES = 14
+URL = "https://gpcaustralia.com/competition-results/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
 
 
 def color(s):
     return "\033[1;32m" + s + "\033[0;m"
 
 
+def getpages(url, pagerange):
+    LOGGER.setLevel(logging.WARNING)
+    options = Options()
+    options.set_headless(headless=True)
+    driver = webdriver.Firefox(firefox_options=options)
+    driver.get(url)
+
+    pages = []
+    time.sleep(2)
+    for page in pagerange:
+        if page != 1:
+
+            button = driver.find_element_by_link_text(str(page))
+
+            button.click()
+            time.sleep(2)
+
+        pages.append(driver.page_source)
+    driver.quit()
+
+    return pages
+
+
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    # The most recent meet has a different class.
-    leading = soup.find_all("div", {"class": "items-leading"})
-    assert leading, "No <div> element with class `items-leading` found."
-
-    items = soup.find_all("div", {"class": "item"})
-    assert items, "No <div> element with class `item` found."
-
-    divs = leading + items
-
     urls = []
-    for div in divs:
-        links = div.find_all("a")
-        for link in links:
-            url = link['href'].strip()
 
-            # All results are in a documents/ subdir.
-            if 'results' not in url:
-                continue
+    table = soup.find('div', id='newsPanelResults')
+    for div in table.find_all('div', {'class': 'col-sm-10'}):
 
-            if '://' not in url:
-                url = BASE_URL + url
+        url = div.find('a')['href']
 
-            if url not in urls:
-                urls.append(url)
+        if url not in urls:
+            urls.append(url)
 
     return urls
 
 
 def main():
-    meets_list = []
-    for url in RESULTS_URLS:
-        html_content = oplprobe.gethtml(url)
-        meets_list += getmeetlist(html_content)
+    meetlist = []
+    pages = getpages(URL, range(1, PAGES+1))
 
-    with open(FEDDIR + '/todo/URLLIST') as fd:
-        for url in fd:
-            url = url.strip()
-            if url not in meets_list:
-                meets_list.append(url)
+    for page in pages:
+        meetlist = meetlist + getmeetlist(page)
 
     entered = oplprobe.getenteredurls(FEDDIR)
-    unentered = oplprobe.getunenteredurls(meets_list, entered)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[GPC-AUS]'), unentered)
 
