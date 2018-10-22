@@ -168,7 +168,10 @@
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF - Kazakhstan Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.latvia}}">
+  <option value="all-latvia" {% if selection.federation == "AllLatvia" %}selected{% endif %}>{{strings.selectors.fed.all_latvia}}</option>
+  <option value="gpc-lat" {% if selection.federation == "GPC-LAT" %}selected{% endif %}>GPC-LAT - GPC Latvia [GPC]</option>
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
+  <option value="wpc-latvia" {% if selection.federation == "WPC-Latvia" %}selected{% endif %}>WPC-Latvia - WPC Latvia [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MPA - Malaysian Powerlifting Alliance [GPA]</option>

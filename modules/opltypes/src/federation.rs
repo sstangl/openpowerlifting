@@ -259,6 +259,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-IRL", serialize = "gpc-irl")]
     GPCIRL,
 
+    /// Latvian branch of the GPC.
+    #[serde(rename = "GPC-LAT")]
+    #[strum(to_string = "GPC-LAT", serialize = "gpc-lat")]
+    GPCLAT,
+
     /// New Zealand branch of the GPC.
     #[serde(rename = "GPC-NZ")]
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
@@ -605,6 +610,11 @@ pub enum Federation {
     #[strum(to_string = "WPC-Germany", serialize = "wpc-germany")]
     WPCGermany,
 
+    /// Latvian WPC affiliate.
+    #[serde(rename = "WPC-Latvia")]
+    #[strum(to_string = "WPC-Latvia", serialize = "wpc-latvia")]
+    WPCLatvia,
+
     /// Moldovan WPC affiliate.
     #[serde(rename = "WPC-Moldova")]
     #[strum(to_string = "WPC-Moldova", serialize = "wpc-moldova")]
@@ -724,6 +734,7 @@ impl Federation {
             Federation::GPCAUS => false,
             Federation::GPCGB => false,
             Federation::GPCIRL => false,
+            Federation::GPCLAT => false,
             Federation::GPCNZ => false,
             Federation::GPCRUS => false,
             Federation::GPF => false,
@@ -809,6 +820,7 @@ impl Federation {
             Federation::WPAU => false,
             Federation::WPC => false,
             Federation::WPCGermany => false,
+            Federation::WPCLatvia => false,
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
             Federation::WPCRUS => false,
@@ -884,6 +896,7 @@ impl Federation {
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCGB => Some(Country::UK),
             Federation::GPCIRL => Some(Country::Ireland),
+            Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPF => None,
@@ -969,6 +982,7 @@ impl Federation {
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
             Federation::WPCGermany => Some(Country::Germany),
+            Federation::WPCLatvia => Some(Country::Latvia),
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),
             Federation::WPCRUS => Some(Country::Russia),
