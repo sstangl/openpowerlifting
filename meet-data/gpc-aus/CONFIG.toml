@@ -4,6 +4,7 @@
     mgr = {name ="M-GR",min=0,max=999} #Guest
     fgr = {name ="F-GR",min=0,max=999}
     moe = {name ="M-OE",min=0,max=999}
+    mje = {name ="M-JE",min=20,max=23}
     foe = {name ="F-OE",min=0,max=999}
     mtr = {name ="M-TR",min=13,max=19}
     mt1r = {name ="M-T1R",min=13,max=15}

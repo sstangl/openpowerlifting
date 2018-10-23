@@ -116,9 +116,9 @@ def getresults(soup):
                 csv.fieldnames += ['Age']
             elif h == 'Div':
                 csv.fieldnames += ['Division']
-            elif h == 'BWt (Kg)':
+            elif h in ['BWt (Kg)','BWt']:
                 csv.fieldnames += ['BodyweightKg']
-            elif h == 'WtCls (Kg)':
+            elif h in ['WtCls (Kg)','WtCls']:
                 csv.fieldnames += ['WeightClassKg']
             elif h == 'Glossbrenner':
                 csv.fieldnames += ['IGNORE']
@@ -160,13 +160,13 @@ def getresults(soup):
                 csv.fieldnames += ['Deadlift4Kg']
             elif h == 'Best Deadlift':
                 csv.fieldnames += ['Best3DeadliftKg']
-            elif h == 'PL Total':
+            elif h in ['PL Total','TOTAL','Pl Total']:
                 csv.fieldnames += ['TotalKg']
             elif h == 'Coeff Score':
                 csv.fieldnames += ['IGNORE']
             elif h == 'Age & Coeff':
                 csv.fieldnames += ['IGNORE']
-            elif h == 'Place code':
+            elif h in ['Place code','PLACE']:
                 csv.fieldnames += ['IGNORE']
             elif h == 'Pl-Div-WtCl':
                 csv.fieldnames += ['Place']
@@ -180,6 +180,8 @@ def getresults(soup):
                 csv.fieldnames += ['IGNORE']
             elif h == 'Meet':
                 csv.fieldnames += ['IGNORE']
+            elif h == '':
+                csv.fieldnames += ['IGNORE']                
             elif h == 'Age Div':
                 if 'Division' in csv.fieldnames:
                     csv.fieldnames[csv.fieldnames.index('Division')] = 'IGNORE'
@@ -196,6 +198,8 @@ def getresults(soup):
 
 
 def fix_place(csv):
+    if 'Place' not in csv.fieldnames:
+        return
     placeidx = csv.index('Place')
     for row in csv.rows:
         row[placeidx] = row[placeidx].split('-')[0]
@@ -235,6 +239,9 @@ def fix_names(csv):
 
 
 def fix_events(csv):
+    if 'Event' not in csv.fieldnames:
+        return
+
     eventidx = csv.index('Event')
     for row in csv.rows:
         event = row[eventidx]
@@ -262,6 +269,9 @@ def add_equipment(csv):
 
     if 'Equipment' not in csv.fieldnames:
         csv.append_column('Equipment')
+
+    if 'Event' not in csv.fieldnames:
+        return
 
     eqpidx = csv.index('Equipment')
     dividx = csv.index('Division')
