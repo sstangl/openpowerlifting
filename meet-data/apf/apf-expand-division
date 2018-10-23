@@ -46,7 +46,7 @@ def main(filename):
         else:
             raise Exception("unknown sex")
 
-        if 'AAPF' in div:
+        if 'AAPF' in div or 'AWPC' in div:
             row[testedidx] = 'Yes'
 
         # The CPF uses "Raw Assisted" (RA) and "Assisted Raw" (AR)
