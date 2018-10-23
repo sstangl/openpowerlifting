@@ -6,48 +6,33 @@
     moe = {name ="M-OE",min=0,max=999}
     foe = {name ="F-OE",min=0,max=999}
     mtr = {name ="M-TR",min=13,max=19}
+    mt1r = {name ="M-T1R",min=13,max=15}
+    mt2r = {name ="M-T2R",min=16,max=17}
+    mt3r = {name ="M-T3R",min=18,max=19}
     ftr = {name ="F-TR",min=13,max=19}
+    ft1r = {name ="F-T1R",min=13,max=15}
+    ft2r = {name ="F-T2R",min=16,max=17}
+    ft3r = {name ="F-T3R",min=18,max=19}
     mjr = {name ="M-JR",min=20,max=23}
     fjr = {name ="F-JR",min=20,max=23}
-
-    mt1r = {name ="M-T1R",min=0,max=999} # Not sure.
-    mt2r = {name ="M-T2R",min=0,max=999} # Not sure.
-    mt3r = {name ="M-T3R",min=0,max=999} # Not sure.
     mm1r = {name ="M-M1R",min=40,max=44}
-    mm2r = {name ="M-M2R",min=45,max=49}
-    mm3r = {name ="M-M3R",min=50,max=54}
-    mm4r = {name ="M-M4R",min=55,max=59}
-    mm5r = {name ="M-M5R",min=60,max=64}
-    mm6r = {name ="M-M6R",min=65,max=69}
-
-    ft1r = {name ="F-T1R",min=0,max=999} # Not sure.
-    ft2r = {name ="F-T2R",min=0,max=999} # Not sure.
-    ft3r = {name ="F-T3R",min=0,max=999} # Not sure.
     fm1r = {name ="F-M1R",min=40,max=44}
+    mm2r = {name ="M-M2R",min=45,max=49}
     fm2r = {name ="F-M2R",min=45,max=49}
+    mm3r = {name ="M-M3R",min=50,max=54}
     fm3r = {name ="F-M3R",min=50,max=54}
+    mm4r = {name ="M-M4R",min=55,max=59}
     fm4r = {name ="F-M4R",min=55,max=59}
+    mm5r = {name ="M-M5R",min=60,max=64}
     fm5r = {name ="F-M5R",min=60,max=64}
+    mm6r = {name ="M-M6R",min=65,max=69}
     fm6r = {name ="F-M6R",min=65,max=69}
-
-    m1r = {name ="M1R",min=40,max=44}
-    f1r = {name ="F1R",min=40,max=44}
-    m2r = {name ="M2R",min=45,max=49}
-    f2r = {name ="F2R",min=45,max=49}
-    m3r = {name ="M3R",min=50,max=54}
-    f3r = {name ="F3R",min=50,max=54}
-    m4r = {name ="M4R",min=55,max=59}
-    f4r = {name ="F4R",min=55,max=59}
-    m5r = {name ="M5R",min=60,max=64}
-    f5r = {name ="F5R",min=60,max=64}
-    m6r = {name ="M6R",min=65,max=69}
-    f6r = {name ="F6R",min=65,max=69}
-    m7r = {name ="M7R",min=70,max=74}
-    f7r = {name ="F7R",min=70,max=74}
-    m8r = {name ="M8R",min=75,max=79}
-    f8r = {name ="F8R",min=75,max=79}
-    m9r = {name ="M9R",min=80,max=999}
-    f9r = {name ="F9R",min=80,max=999}
+    mm7r = {name ="M-M7R",min=70,max=74}
+    fm7r = {name ="F-M7R",min=70,max=74}
+    mm8r = {name ="M-M8R",min=75,max=79}
+    fm8r = {name ="F-M8R",min=75,max=79}
+    mm9r = {name ="M-M9R",min=80,max=999}
+    fm9r = {name ="F-M9R",min=80,max=999}
 
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
