@@ -79,6 +79,11 @@ pub enum Federation {
     #[strum(to_string = "AIWBPA", serialize = "aiwbpa")]
     AIWBPA,
 
+    /// American Strength Association, an unaffiliated local federation
+    /// created to avoid membership fees for local competitions.
+    #[strum(to_string = "AmericanSA", serialize = "americansa")]
+    AmericanSA,
+
     /// American Powerlifting Association, WPA.
     #[strum(to_string = "APA", serialize = "apa")]
     APA,
@@ -690,6 +695,7 @@ impl Federation {
             Federation::AFPF => false,
             Federation::AfricanPF => true,
             Federation::AIWBPA => true,
+            Federation::AmericanSA => false,
             Federation::APA => false,
             Federation::APC => false,
             Federation::APF => false,
@@ -852,6 +858,7 @@ impl Federation {
             Federation::AFPF => Some(Country::USA),
             Federation::AfricanPF => None,
             Federation::AIWBPA => Some(Country::Indonesia),
+            Federation::AmericanSA => Some(Country::USA),
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
