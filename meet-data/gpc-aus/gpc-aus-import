@@ -116,9 +116,9 @@ def getresults(soup):
                 csv.fieldnames += ['Age']
             elif h == 'Div':
                 csv.fieldnames += ['Division']
-            elif h in ['BWt (Kg)','BWt']:
+            elif h in ['BWt (Kg)', 'BWt']:
                 csv.fieldnames += ['BodyweightKg']
-            elif h in ['WtCls (Kg)','WtCls']:
+            elif h in ['WtCls (Kg)', 'WtCls']:
                 csv.fieldnames += ['WeightClassKg']
             elif h == 'Glossbrenner':
                 csv.fieldnames += ['IGNORE']
@@ -160,13 +160,13 @@ def getresults(soup):
                 csv.fieldnames += ['Deadlift4Kg']
             elif h == 'Best Deadlift':
                 csv.fieldnames += ['Best3DeadliftKg']
-            elif h in ['PL Total','TOTAL','Pl Total']:
+            elif h in ['PL Total', 'TOTAL', 'Pl Total']:
                 csv.fieldnames += ['TotalKg']
             elif h == 'Coeff Score':
                 csv.fieldnames += ['IGNORE']
             elif h == 'Age & Coeff':
                 csv.fieldnames += ['IGNORE']
-            elif h in ['Place code','PLACE']:
+            elif h in ['Place code', 'PLACE']:
                 csv.fieldnames += ['IGNORE']
             elif h == 'Pl-Div-WtCl':
                 csv.fieldnames += ['Place']
@@ -181,7 +181,7 @@ def getresults(soup):
             elif h == 'Meet':
                 csv.fieldnames += ['IGNORE']
             elif h == '':
-                csv.fieldnames += ['IGNORE']                
+                csv.fieldnames += ['IGNORE']
             elif h == 'Age Div':
                 if 'Division' in csv.fieldnames:
                     csv.fieldnames[csv.fieldnames.index('Division')] = 'IGNORE'
