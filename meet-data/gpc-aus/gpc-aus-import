@@ -229,7 +229,7 @@ def add_sex(csv):
 def fix_names(csv):
     nameidx = csv.index('Name')
     for row in csv.rows:
-        row[nameidx] = re.sub(' \(.*?\)', '', row[nameidx])
+        row[nameidx] = re.sub(r' \(.*?\)', '', row[nameidx])
         row[nameidx] = row[nameidx].replace(' - ', '-')
         row[nameidx] = row[nameidx].title()
 

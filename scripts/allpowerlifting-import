@@ -140,7 +140,7 @@ def getresults(soup, url):
     subpages = soup.find('ul', id='pldb-table-subs')
 
     if subpages:
-        div_name = re.sub('\(.*?\)', '', subpages.find('li').text).strip()
+        div_name = re.sub(r'\(.*?\)', '', subpages.find('li').text).strip()
         csv.append_column('SheetName')
         for row in csv.rows:
             row[-1] = div_name.lower()
@@ -148,7 +148,7 @@ def getresults(soup, url):
         links = subpages.find_all('a')
 
         for link in links:
-            div_name = re.sub('\(.*?\)', '', link.text).strip()
+            div_name = re.sub(r'\(.*?\)', '', link.text).strip()
             subpage_ext = link['href'].split('/')[:-1][-1]
 
             subpage_url = url + subpage_ext + '/?all_attempts=1'
@@ -406,9 +406,9 @@ def unreverse_names(csv):
 
     for row in csv.rows:
         # Maiden names are given in brackets, remove these
-        row[nameidx] = re.sub('\(.*?\)', '', row[nameidx]).strip()
+        row[nameidx] = re.sub(r'\(.*?\)', '', row[nameidx]).strip()
         row[cyrillicnameidx] = re.sub(
-            '\(.*?\)', '', row[cyrillicnameidx]).strip()
+            r'\(.*?\)', '', row[cyrillicnameidx]).strip()
 
         parts = row[nameidx].split()
         if len(parts) > 1:

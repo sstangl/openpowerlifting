@@ -37,7 +37,7 @@ def error(msg):
 # So look for the URL with the largest &pagenum=# link.
 def get_num_pages(soup):
     # Python regexps appear to have an implied "^"...
-    regex = re.compile('.*pagenum=(\d+)')
+    regex = re.compile(r'.*pagenum=(\d+)')
     maxpage = 1
 
     for a in soup.find_all('a'):

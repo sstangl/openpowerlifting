@@ -113,8 +113,8 @@ def getmeetinfo(soup):
 
     # Strip out time if it's given
     place_date = re.sub(
-        '(klo)( |\. )(\d{2}|\d)(:|\.)(\d{2}|\d)', '', place_date)
-    place_date = re.sub('(klo)( |\. )(\d{2}|\d)', '', place_date)
+        r'(klo)( |\. )(\d{2}|\d)(:|\.)(\d{2}|\d)', '', place_date)
+    place_date = re.sub(r'(klo)( |\. )(\d{2}|\d)', '', place_date)
 
     place_date = place_date.replace('La ', '')
     place_date = place_date.replace('. ', '.')
@@ -122,7 +122,7 @@ def getmeetinfo(soup):
 
     # Date is sometimes formatted DD/MM YYYY
     if '/' in place_date and place_date.count('.') < 2:
-        place_date = re.sub('(?<=\/\d|\d{2}) ', '.', place_date, count=1)
+        place_date = re.sub(r'(?<=\/\d|\d{2}) ', '.', place_date, count=1)
         place_date = place_date.replace('/', '.')
 
     split_text = re.split("[, ]", place_date[::-1], maxsplit=1)
@@ -137,9 +137,9 @@ def getmeetinfo(soup):
         place = ' '.join(split_text[0:-1])
 
     # Sometimes year isn't given, try and find it in the title
-    if dotdate.count('.') == 1 and not re.search('\d{4}', dotdate):
+    if dotdate.count('.') == 1 and not re.search(r'\d{4}', dotdate):
         title = soup.find('title').text
-        year = re.search('\d{4}', title)
+        year = re.search(r'\d{4}', title)
         dotdate = dotdate + '.' + year.group(0)
 
     # Old meets have the place below the date
@@ -156,14 +156,14 @@ def getmeetinfo(soup):
     # If multiple days are given, remove the second
     # Dates spanning multiple months(sorry about how confusing this is)
     # Python doesn't support variable length look behind, hence the 4 lines
-    dotdate = re.sub('(?<=\d{2}\.\d{2})\.-.*?\..*?(?=\.)', '', dotdate)
-    dotdate = re.sub('(?<=\d{1}\.\d{2})\.-.*?\..*?(?=\.)', '', dotdate)
-    dotdate = re.sub('(?<=\d{1}\.\d{1})\.-.*?\..*?(?=\.)', '', dotdate)
-    dotdate = re.sub('(?<=\d{2}\.\d{1})\.-.*?\..*?(?=\.)', '', dotdate)
-    dotdate = re.sub('\.-.*?(?=\.)', '', dotdate)  # Dates spanning one month
+    dotdate = re.sub(r'(?<=\d{2}\.\d{2})\.-.*?\..*?(?=\.)', '', dotdate)
+    dotdate = re.sub(r'(?<=\d{1}\.\d{2})\.-.*?\..*?(?=\.)', '', dotdate)
+    dotdate = re.sub(r'(?<=\d{1}\.\d{1})\.-.*?\..*?(?=\.)', '', dotdate)
+    dotdate = re.sub(r'(?<=\d{2}\.\d{1})\.-.*?\..*?(?=\.)', '', dotdate)
+    dotdate = re.sub(r'\.-.*?(?=\.)', '', dotdate)  # Dates spanning one month
 
     # Clean up the name
-    name = re.sub('\d{4}', '', name)
+    name = re.sub(r'\d{4}', '', name)
     name = name.replace(',', '')
     name = name.replace('\xa0', ' ')
     name = name.replace('  ', ' ')
@@ -924,7 +924,7 @@ def main(url):
     # Remove things in brackets from name,
     # we do this here so as to not miss classic meets when assigning equipment
     meetcsv.rows[0][meetcsv.index('MeetName')] = re.sub(
-        '\(.*\)', '', meetcsv.rows[0][meetcsv.index('MeetName')])
+        r'\(.*\)', '', meetcsv.rows[0][meetcsv.index('MeetName')])
     meetcsv.rows[0][meetcsv.index(
         'MeetName')] = meetcsv.rows[0][meetcsv.index('MeetName')].strip()
 

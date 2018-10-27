@@ -162,7 +162,7 @@ def getresults(soup, meetcsv):
         text = curr_descriptor.text.lower()
         # Parse the division
         # Otherwise this is a team meet, Sex & WC are not given
-        if not re.match('\d\.', text):
+        if not re.match(r'\d\.', text):
             if 'ženy' in text:
                 sexstate = 'F'
                 text = text.replace('ženy', '').strip()
@@ -196,7 +196,7 @@ def getresults(soup, meetcsv):
 
             # Extract weight class information.
             if 'kg' in text:
-                wcstate = re.search('\d{3}|\d{2}', text).group(0)
+                wcstate = re.search(r'\d{3}|\d{2}', text).group(0)
                 if 'nad ' in text or '+' in text:  # SHW
                     wcstate = wcstate + '+'
                 if not wcstate:

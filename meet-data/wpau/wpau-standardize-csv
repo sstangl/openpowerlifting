@@ -237,7 +237,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('CyrillicName')
         elif text in ['city', 'місто', 'місце', 'регіон']:  # City /region
             fieldnames.append('IGNORE')
-        elif text in ['город', 'city / team', 'city \ club', 'city / club',
+        elif text in ['город', 'city / team', 'city \\ club', 'city / club',
                       'спорт клуб', 'клуб']:  # Home city/gym
             fieldnames.append('IGNORE')
         elif text in ['дата народ', 'день рождения', 'db', 'дата народження',
@@ -716,7 +716,7 @@ def cleanup_names(csv):
         nameidx = csv.index('Name')
 
     for row in csv.rows:
-        row[nameidx] = re.sub('\(.*\)', '', row[nameidx])
+        row[nameidx] = re.sub(r'\(.*\)', '', row[nameidx])
         row[nameidx] = ''.join([c for c in row[nameidx] if not c.isdigit()])
         row[nameidx] = row[nameidx].strip()
 

@@ -53,7 +53,7 @@ def main(*filenames):
     # Try and get the OPL code
     try:
         fed_code = fed_dict[fed.upper()]
-    except Exception as e:
+    except Exception:
         fed_code = ''
 
     meet_info = []

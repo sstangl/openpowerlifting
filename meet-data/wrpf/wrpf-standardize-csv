@@ -701,7 +701,7 @@ def cleanup_names(csv):
         nameidx = csv.index('Name')
 
     for row in csv.rows:
-        row[nameidx] = re.sub('\(.*\)', '', row[nameidx])
+        row[nameidx] = re.sub(r'\(.*\)', '', row[nameidx])
         row[nameidx] = row[nameidx].strip()
 
 
