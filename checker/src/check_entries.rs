@@ -990,17 +990,9 @@ fn check_weightclass_consistency(
     line: u64,
     report: &mut Report,
 ) {
-    // If there's no weightclass data, there's nothing to check.
-    if entry.weightclasskg == WeightClassKg::None {
-        // Configured federations should have weightclass data.
-        if config.is_some() {
-            report.warning_on(line, "Configured federations cannot omit WeightClassKg");
-        }
-        return;
-    }
-
     // Any provided bodyweight should at least be plausible.
     if entry.bodyweightkg.is_non_zero()
+        && entry.weightclasskg != WeightClassKg::None
         && !entry.weightclasskg.matches_bodyweight(entry.bodyweightkg)
     {
         report.error_on(
@@ -1014,6 +1006,15 @@ fn check_weightclass_consistency(
 
     // If the configuration exempts consistency checking, stop here.
     if exempt_weightclass_consistency {
+        return;
+    }
+
+    // If there's no weightclass data, there's nothing to check.
+    if entry.weightclasskg == WeightClassKg::None {
+        // Configured federations should have weightclass data.
+        if config.is_some() {
+            report.warning_on(line, "Configured federations cannot omit WeightClassKg");
+        }
         return;
     }
 

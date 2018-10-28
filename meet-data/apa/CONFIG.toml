@@ -58,4 +58,7 @@
 [exemptions]
     8701 = ["check_row_weightclass_consistency"]
     8702 = ["check_row_weightclass_consistency"]
+    8902 = ["check_row_weightclass_consistency"]  # Unreported.
+    8904 = ["check_row_weightclass_consistency"]  # Unreported.
+    8905 = ["check_row_weightclass_consistency"]  # Unreported.
     0902 = ["check_row_division"]
