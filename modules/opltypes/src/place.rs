@@ -30,8 +30,8 @@ impl Default for Place {
 }
 
 impl Place {
-    pub fn is_dq(&self) -> bool {
-        match *self {
+    pub fn is_dq(self) -> bool {
+        match self {
             Place::P(_) => false,
             Place::G => false,
             Place::DQ => true,

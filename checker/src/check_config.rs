@@ -349,7 +349,7 @@ fn parse_exemptions(value: &toml::Value, report: &mut Report) -> Vec<ExemptionCo
 }
 
 fn parse_config(
-    root: toml::Value,
+    root: &toml::Value,
     mut report: Report,
 ) -> Result<CheckResult, Box<Error>> {
     // The highest-level Value must be a table.
@@ -430,5 +430,5 @@ pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<Error>> {
 
     // Parse the entire string into TOML Value types.
     let root = config_str.parse::<toml::Value>()?;
-    Ok(parse_config(root, report)?)
+    Ok(parse_config(&root, report)?)
 }

@@ -346,18 +346,12 @@ fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut R
     match s.parse::<Date>() {
         Ok(birthday) => {
             // Compare the BirthDay to the meet date for some basic sanity checks.
-            match meet {
-                Some(m) => {
-                    if birthday.year() >= m.date.year() - 4
-                        || m.date.year() - birthday.year() > 98
-                    {
-                        report.error_on(
-                            line,
-                            format!("BirthDay '{}' looks implausible", s),
-                        );
-                    }
+            if let Some(m) = meet {
+                if birthday.year() >= m.date.year() - 4
+                    || m.date.year() - birthday.year() > 98
+                {
+                    report.error_on(line, format!("BirthDay '{}' looks implausible", s));
                 }
-                None => {}
             }
         }
         Err(e) => {
@@ -709,9 +703,9 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     // Check that TotalKg matches the Place.
     let has_totalkg: bool = entry.totalkg != WeightKg::from_i32(0);
     if entry.place.is_dq() && has_totalkg {
-        report.error_on(line, format!("DQ'd entries cannot have a TotalKg"));
+        report.error_on(line, "DQ'd entries cannot have a TotalKg");
     } else if !entry.place.is_dq() && !has_totalkg {
-        report.error_on(line, format!("Non-DQ entries must have a TotalKg"));
+        report.error_on(line, "Non-DQ entries must have a TotalKg");
     }
 
     // Check that a non-DQ lifter's total is the sum of their best attempts,
@@ -1043,7 +1037,7 @@ fn check_weightclass_consistency(
 
     // The no-config case was handled above, so the config can be known here.
     let config = config.unwrap();
-    let date = meet.map_or(Date::from_u32(20160101), |m| m.date);
+    let date = meet.map_or(Date::from_u32(2016_01_01), |m| m.date);
 
     // Attempt to find out what weightclass group this row is a member of.
     //
@@ -1072,7 +1066,7 @@ fn check_weightclass_consistency(
         // than the currently best-known group.
         if let Some(best) = matched_group {
             // Ignore this group if it drops division information.
-            if best.divisions.is_some() && !group.divisions.is_some() {
+            if best.divisions.is_some() && group.divisions.is_none() {
                 continue;
             }
 
@@ -1111,7 +1105,7 @@ fn check_weightclass_consistency(
         .iter()
         .enumerate()
         .find(|&(_, w)| *w == entry.weightclasskg)
-        .map_or(None, |(i, _)| Some(i));
+        .and_then(|(i, _)| Some(i));
 
     if index.is_none() {
         report.error_on(
@@ -1173,7 +1167,7 @@ where
     // Scan for check exemptions.
     let exemptions = {
         let parent_folder = &report.get_parent_folder()?;
-        config.map_or(None, |c| c.exemptions_for(parent_folder))
+        config.and_then(|c| c.exemptions_for(parent_folder))
     };
     let exempt_lift_order: bool = exemptions.map_or(false, |el| {
         el.iter().any(|&e| e == Exemption::ExemptLiftOrder)

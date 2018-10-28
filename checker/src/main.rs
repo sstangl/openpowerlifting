@@ -171,7 +171,7 @@ fn main() -> Result<(), Box<Error>> {
         // Command-line argument: just use that directory.
         2 => {
             let target = env::current_dir()?
-                .join(env::args().skip(1).next().unwrap_or(".".to_string()))
+                .join(env::args().nth(1).unwrap_or_else(|| ".".to_string()))
                 .canonicalize()?;
             if !target.exists() {
                 panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());

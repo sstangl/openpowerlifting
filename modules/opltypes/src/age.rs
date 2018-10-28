@@ -37,7 +37,7 @@ impl Age {
         if n < 0 {
             return Err("Age may not be negative");
         }
-        if n > (u8::max_value() as i64) {
+        if n > (i64::from(u8::max_value())) {
             return Err("Age can be at most 256");
         }
 

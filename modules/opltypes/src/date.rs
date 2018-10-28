@@ -21,17 +21,17 @@ impl Date {
     }
 
     #[inline]
-    pub fn year(&self) -> u32 {
+    pub fn year(self) -> u32 {
         self.0 / 10_000
     }
 
     #[inline]
-    pub fn month(&self) -> u32 {
+    pub fn month(self) -> u32 {
         (self.0 / 100) % 100
     }
 
     #[inline]
-    pub fn day(&self) -> u32 {
+    pub fn day(self) -> u32 {
         self.0 % 100
     }
 }
