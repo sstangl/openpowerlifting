@@ -1011,6 +1011,11 @@ fn check_weightclass_consistency(
 
     // If there's no weightclass data, there's nothing to check.
     if entry.weightclasskg == WeightClassKg::None {
+        // Weightclass data may be omitted for lifters who never showed up.
+        if entry.place == Place::NS {
+            return;
+        }
+
         // Configured federations should have weightclass data.
         if config.is_some() {
             report.warning_on(line, "Configured federations cannot omit WeightClassKg");
