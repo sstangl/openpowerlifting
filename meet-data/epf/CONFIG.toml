@@ -41,6 +41,10 @@
     sex = "F"
 
 [exemptions]
+    1006 = ["check_row_weightclass_consistency"]
+    0705 = ["check_row_weightclass_consistency"]
+    0701 = ["check_row_weightclass_consistency"]
+    0407 = ["check_row_weightclass_consistency"]
     9908 = ["check_row_weightclass_consistency"]
     9807 = ["check_row_weightclass_consistency"]
     9804 = ["check_row_weightclass_consistency"]
