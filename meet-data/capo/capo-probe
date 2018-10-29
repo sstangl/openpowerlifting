@@ -1,78 +1,53 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
-#
-# CAPO posts all results to a single page.
-#
-
 
 from bs4 import BeautifulSoup
 import os
 import sys
-import urllib.request
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
-MEETSURL = "http://www.capoaustralianpowerlifting.com.au/index.php/calendar-2/results"
-ROOTURL = "http://www.capoaustralianpowerlifting.com.au"
+URL = "https://www.capopowerlifting.com.au/capo-events/competition-results"
+BASEURL = "https://www.capopowerlifting.com.au"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-
-
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
 
 
 def color(s):
     return "\033[1;35m" + s + "\033[0;m"
 
 
-def gethtml():
-    with urllib.request.urlopen(MEETSURL) as r:
-        return r.read()
-
-
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    meetul = soup.find("div", {"itemprop": "articleBody"})
+    meet_list = soup.find("div", {"class": "page-content-tr"})
 
     urls = []
-    for a in meetul.find_all('a'):
-        href = a['href']
-        if href.startswith('/'):
-            href = ROOTURL + href
-        urls.append(href)
+    for a in meet_list.find_all('a'):
+        link = a['href']
 
-    return urls
+        if link.startswith('/'):
+            link = BASEURL + link
+        urls.append(link)
 
-
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
     return urls
 
 
 def main():
-    quick = False
-    if '--quick' in sys.argv:
-        quick = True
 
-    html = gethtml()
-    meetlist = getmeetlist(html)
-    known = getenteredurls()
+    meetlist = []
+    html = oplprobe.gethtml(URL)
+    meetlist = meetlist + getmeetlist(html)
 
-    count = 0
-    for m in meetlist:
-        if m not in known:
-            count += 1
-            if not quick or count <= 6:
-                print(color('[CAPO] ') + m)
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    if count > 0:
-        print(color('[CAPO] ') + '%d meets remaining.' % count)
+    oplprobe.print_meets(color('[CAPO]'), unentered)
 
 
 if __name__ == '__main__':

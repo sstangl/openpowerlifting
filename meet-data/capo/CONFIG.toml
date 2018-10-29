@@ -1,0 +1,43 @@
+[divisions]
+    mor = {name ="MO-R",min=0,max=999}
+    morp = {name ="MO-RP",min=0,max=999}
+    mosp = {name ="MO-SP",min=0,max=999}
+    momp = {name ="MO-MP",min=0,max=999}
+    for = {name ="FO-R",min=0,max=999}
+    forp = {name ="FO-RP",min=0,max=999}
+    fosp = {name ="FO-SP",min=0,max=999}
+    fomp = {name ="FO-MP",min=0,max=999}
+    mjr = {name ="MJ-R",min=20,max=23}
+    mjrp = {name ="MJ-RP",min=20,max=23}
+    mjsp = {name ="MJ-SP",min=20,max=23}
+    mjmp = {name ="MJ-MP",min=20,max=23}
+    fjr = {name ="FJ-R",min=20,max=23}
+    fjrp = {name ="FJ-RP",min=20,max=23}
+    mtr = {name ="MT-R",min=13,max=19}
+    mtrp = {name ="MT-RP",min=13,max=19}
+    mtmp = {name ="MT-MP",min=13,max=19}
+    ftr = {name ="FT-R",min=13,max=19}
+    ftrp = {name ="FT-RP",min=13,max=19}
+    mmr = {name ="MM-R",min=40,max=999}
+    mmrp = {name ="MM-RP",min=40,max=999}
+    mmsp = {name ="MM-SP",min=40,max=999}
+    mmmp = {name ="MM-MP",min=40,max=999}
+    fmr = {name ="FM-R",min=40,max=999}
+    fmrp = {name ="FM-RP",min=40,max=999}
+    fmmp = {name ="FM-MP",min=40,max=999}
+    msmr = {name ="MSM-R",min=33,max=39}
+    msmrp = {name ="MSM-RP",min=33,max=39}
+    msmsp = {name ="MSM-SP",min=33,max=39}
+    fsmr = {name ="FSM-R",min=33,max=39}
+    fsmrp = {name ="FSM-RP",min=33,max=39}
+[weightclasses.default_M]
+    classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]
