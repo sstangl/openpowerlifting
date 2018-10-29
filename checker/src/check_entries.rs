@@ -286,8 +286,11 @@ fn check_headers(
 
     // Configured federations must have standardized divisions,
     // and therefore must have a "Division" column.
-    if config.is_some() && !headers.iter().any(|x| x == "Division") {
-        report.error("Configured federations require a 'Division' column");
+    if let Some(config) = config {
+        // But only if the configuration file actually specifies divisions!
+        if !headers.iter().any(|x| x == "Division") && !config.divisions.is_empty() {
+            report.error("Configured federations require a 'Division' column");
+        }
     }
 
     HeaderIndexMap(header_index_map)
@@ -593,6 +596,13 @@ fn check_column_division(
             return;
         }
     };
+
+    // Configuration files covering directories with results from
+    // several federations, such as meet-data/plusa, can omit
+    // the list of divisions to effectively cause full exemption.
+    if config.divisions.is_empty() {
+        return;
+    }
 
     // The division must appear in the configuration file.
     if !config.divisions.iter().any(|d| d.name == s) {
@@ -1006,6 +1016,13 @@ fn check_weightclass_consistency(
 
     // If the configuration exempts consistency checking, stop here.
     if exempt_weightclass_consistency {
+        return;
+    }
+
+    // Configuration files covering directories with results from
+    // several federations, such as meet-data/plusa, can omit
+    // the list of divisions to effectively cause full exemption.
+    if config.map_or(false, |c| c.divisions.is_empty()) {
         return;
     }
 
