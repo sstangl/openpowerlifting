@@ -61,6 +61,9 @@ pub enum MetaFederation {
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
+    /// GPC-AUS, but excluding non-Australian lifters.
+    #[strum(to_string = "gpc-aus")]
+    GPCAUS,
     /// HPLS, but excluding non-Croatian lifters.
     #[strum(to_string = "hpls")]
     HPLS,
@@ -179,6 +182,11 @@ impl MetaFederation {
                         (meet.federation == Federation::IPF
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
+            }
+            MetaFederation::GPCAUS => {
+                meet.federation == Federation::GPCAUS
+                    && (entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Australia))
             }
             MetaFederation::HPLS => {
                 meet.federation == Federation::HPLS
