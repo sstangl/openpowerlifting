@@ -1,0 +1,49 @@
+# From http://www.idfpf.com/docs/rules/WDFPF_RULEBOOK_Book3_V1_Main_Fundamentals.pdf
+[divisions]
+    fo = {name="F-O", min=14, max=999}
+    ft1 = {name="F-T1", min=14, max=15}
+    ft2 = {name="F-T2", min=16, max=17}
+    ft3 = {name="F-T3", min=18, max=19}
+    fjr = {name="F-JR", min=20, max=23}
+    fm1 = {name="F-M1", min=40, max=44}
+    fm2 = {name="F-M2", min=45, max=49}
+    fm3 = {name="F-M3", min=50, max=54}
+    fm4 = {name="F-M4", min=55, max=59}
+    fm5 = {name="F-M5", min=60, max=64}
+    fm6 = {name="F-M6", min=65, max=69}
+    fm7 = {name="F-M7", min=70, max=74}
+    fm8 = {name="F-M8", min=75, max=79}
+    fm9 = {name="F-M9", min=80, max=84}
+    fm10 = {name="F-M10", min=85, max=89}
+    fm11 = {name="F-M11", min=90, max=94}
+    fm12 = {name="F-M12", min=95, max=99}
+
+    mo = {name="M-O", min=14, max=999}
+    mt1 = {name="M-T1", min=14, max=15}
+    mt2 = {name="M-T2", min=16, max=17}
+    mt3 = {name="M-T3", min=18, max=19}
+    mjr = {name="M-JR", min=20, max=23}
+    mm1 = {name="M-M1", min=40, max=44}
+    mm2 = {name="M-M2", min=45, max=49}
+    mm3 = {name="M-M3", min=50, max=54}
+    mm4 = {name="M-M4", min=55, max=59}
+    mm5 = {name="M-M5", min=60, max=64}
+    mm6 = {name="M-M6", min=65, max=69}
+    mm7 = {name="M-M7", min=70, max=74}
+    mm8 = {name="M-M8", min=75, max=79}
+    mm9 = {name="M-M9", min=80, max=84}
+    mm10 = {name="M-M10", min=85, max=89}
+    mm11 = {name="M-M11", min=90, max=94}
+    mm12 = {name="M-M12", min=95, max=99}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
