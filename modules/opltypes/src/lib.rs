@@ -26,7 +26,7 @@ pub use self::federation::Federation;
 mod place;
 pub use self::place::Place;
 mod points;
-pub use self::points::Points;
+pub use self::points::{Points, PointsSystem};
 mod sex;
 pub use self::sex::Sex;
 mod state;

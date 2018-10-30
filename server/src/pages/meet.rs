@@ -49,6 +49,9 @@ pub enum MeetSortSelection {
     ByDivision,
     ByGlossbrenner,
     ByWilks,
+
+    /// Special value that resolves to one of the others after lookup.
+    ByFederationDefault,
 }
 
 impl FromStr for MeetSortSelection {
@@ -124,7 +127,7 @@ impl<'a> ResultsRow<'a> {
     fn from(
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
-        sort: MeetSortSelection,
+        points_system: PointsSystem,
         entry: &'a opldb::Entry,
         rank: u32,
     ) -> ResultsRow<'a> {
@@ -158,13 +161,9 @@ impl<'a> ResultsRow<'a> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
-            points: match sort {
-                MeetSortSelection::ByDivision | MeetSortSelection::ByWilks => {
-                    entry.wilks.in_format(number_format)
-                }
-                MeetSortSelection::ByGlossbrenner => {
-                    entry.glossbrenner.in_format(number_format)
-                }
+            points: match points_system {
+                PointsSystem::Wilks => entry.wilks.in_format(number_format),
+                PointsSystem::Glossbrenner => entry.glossbrenner.in_format(number_format),
             },
         }
     }
@@ -262,6 +261,7 @@ fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
 fn finish_table<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
+    points_system: PointsSystem,
     entries: &mut Vec<&'db Entry>,
 ) -> Table<'db> {
     entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
@@ -298,7 +298,7 @@ fn finish_table<'db>(
 
     let rows: Vec<ResultsRow> = entries
         .iter()
-        .map(|e| ResultsRow::from(opldb, locale, MeetSortSelection::ByWilks, e, 0))
+        .map(|e| ResultsRow::from(opldb, locale, points_system, e, 0))
         .collect();
 
     Table { title, rows }
@@ -307,6 +307,7 @@ fn finish_table<'db>(
 fn make_tables_by_division<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
+    points_system: PointsSystem,
     meet_id: u32,
 ) -> Vec<Table<'db>> {
     let mut entries = opldb.get_entries_for_meet(meet_id);
@@ -335,7 +336,7 @@ fn make_tables_by_division<'db>(
 
         // This entry isn't part of the old group.
         // Finish the old group.
-        tables.push(finish_table(&opldb, &locale, &mut group));
+        tables.push(finish_table(&opldb, &locale, points_system, &mut group));
 
         // Start a new group.
         key_entry = &entry;
@@ -344,14 +345,14 @@ fn make_tables_by_division<'db>(
     }
 
     // Wrap up the last batch.
-    tables.push(finish_table(&opldb, &locale, &mut group));
+    tables.push(finish_table(&opldb, &locale, points_system, &mut group));
     tables
 }
 
 fn make_tables_by_points<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
-    sort: MeetSortSelection,
+    points_system: PointsSystem,
     meet_id: u32,
 ) -> Vec<Table<'db>> {
     let meets = opldb.get_meets();
@@ -367,20 +368,19 @@ fn make_tables_by_points<'db>(
         .map(|(_key, group)| group.max_by_key(|x| x.wilks).unwrap())
         .collect();
 
-    match sort {
-        MeetSortSelection::ByDivision => panic!("Unexpected ByDivision"),
-        MeetSortSelection::ByGlossbrenner => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
-        }
-        MeetSortSelection::ByWilks => {
+    match points_system {
+        PointsSystem::Wilks => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_wilks(&meets, a, b));
+        }
+        PointsSystem::Glossbrenner => {
+            entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
         }
     };
 
     let rows: Vec<ResultsRow> = entries
         .into_iter()
         .zip(1..)
-        .map(|(e, i)| ResultsRow::from(opldb, locale, sort, e, i))
+        .map(|(e, i)| ResultsRow::from(opldb, locale, points_system, e, i))
         .collect();
 
     vec![Table { title: None, rows }]
@@ -394,21 +394,46 @@ impl<'db> Context<'db> {
         sort: MeetSortSelection,
     ) -> Context<'db> {
         let meet = opldb.get_meet(meet_id);
+        let default_points: PointsSystem = meet.federation.default_points(meet.date);
+
         let tables: Vec<Table> = match sort {
             MeetSortSelection::ByDivision => {
-                make_tables_by_division(&opldb, &locale, meet_id)
+                make_tables_by_division(&opldb, &locale, default_points, meet_id)
             }
-            MeetSortSelection::ByWilks | MeetSortSelection::ByGlossbrenner => {
-                make_tables_by_points(&opldb, &locale, sort, meet_id)
+            MeetSortSelection::ByWilks => {
+                make_tables_by_points(&opldb, &locale, PointsSystem::Wilks, meet_id)
+            }
+            MeetSortSelection::ByGlossbrenner => make_tables_by_points(
+                &opldb,
+                &locale,
+                PointsSystem::Glossbrenner,
+                meet_id,
+            ),
+            MeetSortSelection::ByFederationDefault => {
+                make_tables_by_points(&opldb, &locale, default_points, meet_id)
             }
         };
 
         let points_column_title = match sort {
-            MeetSortSelection::ByDivision | MeetSortSelection::ByWilks => {
-                &locale.strings.columns.wilks
-            }
+            MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
             MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
+            MeetSortSelection::ByDivision | MeetSortSelection::ByFederationDefault => {
+                match default_points {
+                    PointsSystem::Wilks => &locale.strings.columns.wilks,
+                    PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
+                }
+            }
         };
+
+        let path_if_by_wilks = match default_points {
+            PointsSystem::Wilks => format!("/m/{}", meet.path),
+            _ => format!("/m/{}/by-wilks", meet.path),
+        };
+        let path_if_by_glossbrenner = match default_points {
+            PointsSystem::Glossbrenner => format!("/m/{}", meet.path),
+            _ => format!("/m/{}/by-glossbrenner", meet.path),
+        };
+        let path_if_by_division = format!("/m/{}/by-division", meet.path);
 
         Context {
             page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
@@ -416,14 +441,22 @@ impl<'db> Context<'db> {
             strings: locale.strings,
             units: locale.units,
             points_column_title,
-            sortselection: sort,
+            sortselection: match sort {
+                MeetSortSelection::ByDivision => MeetSortSelection::ByDivision,
+                MeetSortSelection::ByWilks => MeetSortSelection::ByWilks,
+                MeetSortSelection::ByGlossbrenner => MeetSortSelection::ByGlossbrenner,
+                MeetSortSelection::ByFederationDefault => match default_points {
+                    PointsSystem::Wilks => MeetSortSelection::ByWilks,
+                    PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
+                },
+            },
             meet: MeetInfo::from(&meet, locale.strings),
             has_age_data: true, // TODO: Maybe use again?
             tables,
             use_rank_column: sort != MeetSortSelection::ByDivision,
-            path_if_by_wilks: format!("/m/{}", meet.path.to_string()),
-            path_if_by_glossbrenner: format!("/m/{}/by-glossbrenner", meet.path),
-            path_if_by_division: format!("/m/{}/by-division", meet.path),
+            path_if_by_wilks,
+            path_if_by_glossbrenner,
+            path_if_by_division,
         }
     }
 }

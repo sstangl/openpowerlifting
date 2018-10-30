@@ -66,6 +66,10 @@ fn test_pages_load() {
     assert_eq!(client.get("/u/seanstangl").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/mlist").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/m/uspa/0485").dispatch().status(), Status::Ok);
+    assert_eq!(
+        client.get("/m/gpc-aus/1827").dispatch().status(),
+        Status::Ok
+    );
     assert_eq!(client.get("/status").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/data").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/faq").dispatch().status(), Status::Ok);

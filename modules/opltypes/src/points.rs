@@ -18,6 +18,12 @@ use std::str::FromStr;
 #[derive(Clone, Copy, Debug, Eq, Ord, PartialOrd, PartialEq)]
 pub struct Points(i32);
 
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub enum PointsSystem {
+    Wilks,
+    Glossbrenner,
+}
+
 impl Points {
     #[inline]
     pub fn from_i32(i: i32) -> Points {

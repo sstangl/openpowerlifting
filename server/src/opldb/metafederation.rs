@@ -11,7 +11,8 @@ use opldb::{Entry, Meet};
 ///
 /// Definition of each MetaFederation is in the `contains` function.
 ///
-/// A MetaFederation may override handling of a Federation by sharing its to_string.
+/// A MetaFederation may override handling of a Federation by sharing its
+/// to_string.
 #[derive(
     Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString,
 )]

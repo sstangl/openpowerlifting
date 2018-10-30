@@ -297,7 +297,7 @@ fn meet(
     cookies: Cookies,
 ) -> Option<Template> {
     let mut meetpath_str: &str = meetpath.to_str()?;
-    let mut sort = pages::meet::MeetSortSelection::ByWilks;
+    let mut sort = pages::meet::MeetSortSelection::ByFederationDefault;
 
     // The meetpath may contain an optional sorting directive.
     // If present, detect and remove that component from the path.
