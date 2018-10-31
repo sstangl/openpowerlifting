@@ -213,7 +213,7 @@ def getcolumnspans(rows):
 
 
 def parsepage(page):
-    words = [parseword(x) for x in page.getchildren()]
+    words = [parseword(x) for x in page]
     rows = sortintorows(words)
 
     # Don't give up if column spans can't be auto-detected for this page.
@@ -273,7 +273,7 @@ def main():
 
     doc = getdocroot(root)
     csv = ''
-    for page in doc.getchildren():
+    for page in doc:
         csv += parsepage(page)
 
     print(csv)
