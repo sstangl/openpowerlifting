@@ -228,6 +228,9 @@
 <optgroup label="{{strings.country.sweden}}">
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF - Svenska Styrkelyft Förbundet [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.thailand}}">
+  <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.ukraine}}">
   <option value="all-ukraine" {% if selection.federation == "AllUkraine" %}selected{% endif %}>{{strings.selectors.fed.all_ukraine}}</option>
   <option value="raw-ukr" {% if selection.federation == "RAW-UKR" %}selected{% endif %}>RAW-UKR - 100% RAW Powerlifting Federation Ukraine</option>

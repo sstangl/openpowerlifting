@@ -528,6 +528,10 @@ pub enum Federation {
     #[strum(to_string = "SVNL", serialize = "svnl")]
     SVNL,
 
+    /// Thai IPF affiliate.
+    #[strum(to_string = "ThaiPF", serialize = "thaipf")]
+    ThaiPF,
+
     /// Texas High School Powerlifting Association.
     #[strum(to_string = "THSPA", serialize = "thspa")]
     THSPA,
@@ -806,6 +810,7 @@ impl Federation {
             Federation::SSA => false,
             Federation::SSF => true,
             Federation::SVNL => true,
+            Federation::ThaiPF => true,
             Federation::THSPA => true,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
@@ -969,6 +974,7 @@ impl Federation {
             Federation::SSA => Some(Country::USA),
             Federation::SSF => Some(Country::Sweden),
             Federation::SVNL => Some(Country::Finland),
+            Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
             Federation::UkrainePA => Some(Country::Ukraine),
             Federation::UkrainePO => Some(Country::Ukraine),
@@ -1132,6 +1138,7 @@ impl Federation {
             Federation::SSA => PointsSystem::Wilks,
             Federation::SSF => PointsSystem::Wilks,
             Federation::SVNL => PointsSystem::Wilks,
+            Federation::ThaiPF => PointsSystem::Wilks,
             Federation::THSPA => PointsSystem::Wilks,
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
