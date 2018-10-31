@@ -18,15 +18,15 @@
   },
   "homepage": "https://gitlab.com/openpowerlifting/opl-data/#readme",
   "dependencies": {
-    "slickgrid": "^2.3.19"
+    "slickgrid": "^2.3.21"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.5.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-minify-constant-folding": "^0.2.0",
     "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.4",
     "typescript": "2.8.3",
     "webpack": "^3.11.0"
   }
