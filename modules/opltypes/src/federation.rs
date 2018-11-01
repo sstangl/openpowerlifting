@@ -158,6 +158,11 @@ pub enum Federation {
     #[strum(to_string = "CAPO", serialize = "capo")]
     CAPO,
 
+    /// Shortlived NZ branch of CAPO.
+    #[serde(rename = "CAPO-NZ")]
+    #[strum(to_string = "CAPO-NZ", serialize = "capo-nz")]
+    CAPONZ,
+
     /// Česká Asociace Silového Trojboje, GPC/WPC.
     #[strum(to_string = "CAST", serialize = "cast")]
     CAST,
@@ -720,6 +725,7 @@ impl Federation {
             Federation::BP => true,
             Federation::BVDK => true,
             Federation::CAPO => false,
+            Federation::CAPONZ => false,
             Federation::CAST => false,
             Federation::CommonwealthPF => true,
             Federation::CPC => false,
@@ -884,6 +890,7 @@ impl Federation {
             Federation::BP => Some(Country::UK),
             Federation::BVDK => Some(Country::Germany),
             Federation::CAPO => Some(Country::Australia),
+            Federation::CAPONZ => Some(Country::NewZealand),
             Federation::CAST => Some(Country::Czechia),
             Federation::CommonwealthPF => None,
             Federation::CPC => Some(Country::Canada),
@@ -1048,6 +1055,7 @@ impl Federation {
             Federation::BP => PointsSystem::Wilks,
             Federation::BVDK => PointsSystem::Wilks,
             Federation::CAPO => PointsSystem::Glossbrenner,
+            Federation::CAPONZ => PointsSystem::Glossbrenner,
             Federation::CAST => PointsSystem::Wilks,
             Federation::CommonwealthPF => PointsSystem::Wilks,
             Federation::CPC => PointsSystem::Wilks,
