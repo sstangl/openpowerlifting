@@ -43,6 +43,16 @@ function run_probes {
 	rm "${TMPFILE}"
 }
 
+# Sends the message in "$2" to Zulip chat with subject "$1".
+function send_message {
+	curl https://openpl.zulipchat.com/api/v1/messages \
+		-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
+		-d "type=stream" \
+		-d "to=probes" \
+		-d "subject=${1}" \
+		-d "content=${2}"
+}
+
 # This is the main function where updates happen.
 # If the network is down, the function is expected to return early,
 # at which point the main loop will try again with the next scheduled update.
@@ -107,22 +117,12 @@ function check_for_updates {
 		# Post each line as a separate message.
 		# Long messages seem to get truncated, but this is foolproof.
 		echo "${MSG}" | while read LINE; do
-			curl https://openpl.zulipchat.com/api/v1/messages \
-				-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
-				-d "type=stream" \
-				-d "to=probes" \
-				-d "subject=${SUBJECT}" \
-				-d "content=${LINE}"
+			send_message "${SUBJECT}" "${LINE}"
 		done
 
 		if [ "${HASMORE}" -eq "1" ]; then
 			LINE="Due to message limits, additional new meets were omitted."
-			curl https://openpl.zulipchat.com/api/v1/messages \
-				-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
-				-d "type=stream" \
-				-d "to=probes" \
-				-d "subject=${SUBJECT}" \
-				-d "content=${LINE}"
+			send_message "${SUBJECT}" "${LINE}"
 		fi
 	done
 }
