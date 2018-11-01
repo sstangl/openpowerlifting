@@ -66,7 +66,7 @@ function check_for_updates {
 	NEWLINES=$(comm -23 "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}")
 
 	# If there are no new lines, no further action is needed.
-	if [[ $(wc -l "${NEWLINES}") -eq 1 ]]; then
+	if [[ $(echo "${NEWLINES}" | wc -l) -le 1 ]]; then
 		rm "${TEMPORARY_PROBES_NEW}"
 		return 0
 	fi
@@ -93,10 +93,11 @@ function check_for_updates {
  		MSG=$(echo "${NEWLINES}" | grep -F "${FED}")
 
 		# Cap the number of lines to avoid extreme cases.
-		NUMLINES=$(echo "${NEWFEDMEETS}" | wc -l)
+		NUMLINES=$(echo "${MSG}" | wc -l)
 		if [[ "${NUMLINES}" -gt "${MAX_MSG_LINES}" ]]; then
 			HEAD=$(echo "${MSG}" | head -n "${MAX_MSG_LINES}")
-			MSG="${HEAD}\nShowing ${MAX_MSG_LINES} of ${NUMLINES} new meets."
+			MSG="${HEAD}
+Showing ${MAX_MSG_LINES} of ${NUMLINES} new meets."
 		fi
 
 		# Get the name of the federation without the brackets.
