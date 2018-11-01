@@ -49,8 +49,8 @@ function send_message {
 		-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
 		-d "type=stream" \
 		-d "to=probes" \
-		-d "subject=${1}" \
-		-d "content=${2}"
+		--data-urlencode "subject=${1}" \
+		--data-urlencode "content=${2}"
 }
 
 # This is the main function where updates happen.

@@ -27,4 +27,4 @@ curl https://openpl.zulipchat.com/api/v1/messages \
     -d "type=stream" \
     -d "to=general" \
     -d "subject=Deployment" \
-    -d "content=${MESSAGE}"
+    --data-urlencode "content=${MESSAGE}"
