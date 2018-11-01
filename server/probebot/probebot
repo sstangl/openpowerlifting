@@ -52,7 +52,7 @@ function check_for_updates {
 
 	# Is there already a list of probe results we can diff against?
 	# If not, silently create it now, and then we can diff at the next iteration.
-	if [[ ! -f "${PROBES_CACHE}" ]]; then
+	if [ ! -f "${PROBES_CACHE}" ]; then
 		# Assume the network succeeds here, since this is the seed run.
 		run_probes "${PROBES_CACHE}"
 		return 0
@@ -66,7 +66,7 @@ function check_for_updates {
 	NEWLINES=$(comm -23 "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}")
 
 	# If there are no new lines, no further action is needed.
-	if [[ $(echo "${NEWLINES}" | wc -l) -le 1 ]]; then
+	if [ -z "${NEWLINES}" ]; then
 		rm "${TEMPORARY_PROBES_NEW}"
 		return 0
 	fi
@@ -95,7 +95,7 @@ function check_for_updates {
 		# Cap the number of lines to avoid extreme cases.
 		NUMLINES=$(echo "${MSG}" | wc -l)
 		HASMORE="0"
-		if [[ "${NUMLINES}" -gt "${MAX_MSG_LINES}" ]]; then
+		if [ "${NUMLINES}" -gt "${MAX_MSG_LINES}" ]; then
 			MSG=$(echo "${MSG}" | head -n "${MAX_MSG_LINES}")
 			HASMORE="1"
 		fi
@@ -115,7 +115,7 @@ function check_for_updates {
 				-d "content=${LINE}"
 		done
 
-		if [[ "${HASMORE}" -eq "1" ]]; then
+		if [ "${HASMORE}" -eq "1" ]; then
 			LINE="Due to message limits, additional new meets were omitted."
 			curl https://openpl.zulipchat.com/api/v1/messages \
 				-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
