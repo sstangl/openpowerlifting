@@ -16,7 +16,7 @@
 #   5. Sleeps for a while.
 
 UPDATE_INTERVAL="1h"
-MAX_MSG_LINES="20"
+MAX_MSG_LINES="8"
 
 # Names of the temporary files used for comparing old and new probes.
 # We don't use `mktemp` because we want the results to be cached
