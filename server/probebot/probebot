@@ -1,0 +1,139 @@
+#!/usr/bin/env bash
+# Main driver for the OpenPowerlifting ProbeBot chatbot for our Zulip teamchat.
+#
+# The probebot exists in and updates the full OpenPowerlifting git repository.
+# The intention is that it be run from within GNU screen with its own user.
+#
+# The bot works as follows.
+# This script infinite-loops. Each iteration, it does the following steps.
+#
+#   1. Updates the git repo. This pulls in new versions of probe scripts and URL files.
+#   2. Ensures that a temporary file exists containing all the probe results the bot
+#      has seen up to this point -- we only want to send notifications on new results.
+#   3. Runs `make probe`, diffs the result from the temporary file, and then overwrites
+#      the temporary file with the new results.
+#   4. Sends the new results over to Zulip chat.
+#   5. Sleeps for a while.
+
+UPDATE_INTERVAL="1h"
+MAX_MSG_LINES="20"
+
+# Names of the temporary files used for comparing old and new probes.
+# We don't use `mktemp` because we want the results to be cached
+# between invocations of this script. Git knows to ignore these files.
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TEMPORARY_PROBES_NEW="${SCRIPTDIR}/probes-new.tmp"
+PROBES_CACHE="${SCRIPTDIR}/probes-cache.tmp"
+REPODIR="${SCRIPTDIR}/../../"
+
+# Runs the probes and does some cleanup, emitting the results to the file $1.
+function run_probes {
+	TMPFILE=$(mktemp)
+
+	# Execute "make probe", omitting some metadata lines.
+	# The output is sorted for the benefit of diffing later.
+	# TODO: How can we make `make` return from this function on failure?
+	make -C "${REPODIR}" probe | grep "\[" | grep -v "meets remaining" > "${TMPFILE}"
+
+	# Remove terminal color codes.
+	sed -r -i "s/[[:cntrl:]]\[[0-9]{1,3};[0-9]{,3}m//g" "${TMPFILE}"
+
+	# Now that only plain text remains, sorting is lexicographic.
+	sort -u "${TMPFILE}" > "${1}"
+	rm "${TMPFILE}"
+}
+
+# This is the main function where updates happen.
+# If the network is down, the function is expected to return early,
+# at which point the main loop will try again with the next scheduled update.
+function check_for_updates {
+	# Update the repo, getting new probe scripts and URL files.
+	git pull || return 1
+
+	# Is there already a list of probe results we can diff against?
+	# If not, silently create it now, and then we can diff at the next iteration.
+	if [[ ! -f "${PROBES_CACHE}" ]]; then
+		# Assume the network succeeds here, since this is the seed run.
+		run_probes "${PROBES_CACHE}"
+		return 0
+	fi
+
+	# Reaching this point means that there is a previous list to diff against.
+	# Run the probes anew, saving them to a new file.
+	run_probes "${TEMPORARY_PROBES_NEW}" || return 1
+
+	# Figure out which lines are new.
+	NEWLINES=$(comm -23 "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}")
+
+	# If there are no new lines, no further action is needed.
+	if [[ $(wc -l "${NEWLINES}") -eq 1 ]]; then
+		rm "${TEMPORARY_PROBES_NEW}"
+		return 0
+	fi
+
+	# Integrate everything into the cache, sorting and uniqing.
+	TMPFILE=$(mktemp)
+	cat "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}" | sort -u > "${TMPFILE}"
+	mv "${TMPFILE}" "${PROBES_CACHE}"
+	rm "${TEMPORARY_PROBES_NEW}"
+
+	# On to sending messages!
+	# We want to send one message per federation, so that similar meets
+	# get threaded together by subject, to make it easy to look through
+	# probe history.
+	#
+	# First, get a list of all federations that we're reporting on.
+	# This is like "[APA]", "[WRPF]", etc.
+	FEDLIST=$(echo "${NEWLINES}" | cut -f 1 -d ' ' | sort -u)
+
+	# For each of those federations, send a message!
+	echo "${FEDLIST}" | while read FED; do
+		# Use grep to extract just the meets for this federation.
+		# The "-F" means to not treat "[RPS]" as "R or P or S".
+ 		MSG=$(echo "${NEWLINES}" | grep -F "${FED}")
+
+		# Cap the number of lines to avoid extreme cases.
+		NUMLINES=$(echo "${NEWFEDMEETS}" | wc -l)
+		if [[ "${NUMLINES}" -gt "${MAX_MSG_LINES}" ]]; then
+			HEAD=$(echo "${MSG}" | head -n "${MAX_MSG_LINES}")
+			MSG="${HEAD}\nShowing ${MAX_MSG_LINES} of ${NUMLINES} new meets."
+		fi
+
+		# Get the name of the federation without the brackets.
+		# Fun fact: You can't do "[\[\]]", only one at a time.
+		SUBJECT=$(echo "${FED}" | sed 's/\[//g' | sed 's/\]//g')
+
+		# Post the message!
+		curl https://openpl.zulipchat.com/api/v1/messages \
+			-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
+			-d "type=stream" \
+			-d "to=probes" \
+			-d "subject=${SUBJECT}" \
+			-d "content=${MSG}"
+	done
+}
+
+# Require authentication variables.
+if [ -z "${ZULIP_PROBEBOT_EMAIL}" ]; then
+        echo " Error: ${0} requires ZULIP_PROBEBOT_EMAIL in ~/.bash_profile."
+	echo " The value can be found on the Settings / Your Bots page in Zulip."
+        exit 1
+fi
+if [ -z "${ZULIP_PROBEBOT_API_KEY}" ]; then
+        echo " Error: ${0} requires ZULIP_PROBEBOT_API_KEY in ~/.bash_profile."
+	echo " The value can be found on the Settings / Your Bots page in Zulip."
+        exit 1
+fi
+
+set -x  # Print every line.
+
+# Main loop. Kill the bot with Ctrl-C.
+while true;
+do
+	# Run the updater.
+	check_for_updates
+
+	# Sleep for a while.
+	echo "Next update in ${UPDATE_INTERVAL}."
+	sleep "${UPDATE_INTERVAL}"
+done

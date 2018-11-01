@@ -19,6 +19,7 @@ target/
 /meet-data/**/*.rtf
 
 # Temporary files.
+/server/probebot/*.tmp
 *.lnk
 *.swp
 *.swo
