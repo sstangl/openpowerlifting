@@ -94,23 +94,36 @@ function check_for_updates {
 
 		# Cap the number of lines to avoid extreme cases.
 		NUMLINES=$(echo "${MSG}" | wc -l)
+		HASMORE="0"
 		if [[ "${NUMLINES}" -gt "${MAX_MSG_LINES}" ]]; then
-			HEAD=$(echo "${MSG}" | head -n "${MAX_MSG_LINES}")
-			MSG="${HEAD}
-Showing ${MAX_MSG_LINES} of ${NUMLINES} new meets."
+			MSG=$(echo "${MSG}" | head -n "${MAX_MSG_LINES}")
+			HASMORE="1"
 		fi
 
 		# Get the name of the federation without the brackets.
 		# Fun fact: You can't do "[\[\]]", only one at a time.
 		SUBJECT=$(echo "${FED}" | sed 's/\[//g' | sed 's/\]//g')
 
-		# Post the message!
-		curl https://openpl.zulipchat.com/api/v1/messages \
-			-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
-			-d "type=stream" \
-			-d "to=probes" \
-			-d "subject=${SUBJECT}" \
-			-d "content=${MSG}"
+		# Post each line as a separate message.
+		# Long messages seem to get truncated, but this is foolproof.
+		echo "${MSG}" | while read LINE; do
+			curl https://openpl.zulipchat.com/api/v1/messages \
+				-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
+				-d "type=stream" \
+				-d "to=probes" \
+				-d "subject=${SUBJECT}" \
+				-d "content=${LINE}"
+		done
+
+		if [[ "${HASMORE}" -eq "1" ]]; then
+			LINE="Due to message limits, additional new meets were omitted."
+			curl https://openpl.zulipchat.com/api/v1/messages \
+				-u "${ZULIP_PROBEBOT_EMAIL}:${ZULIP_PROBEBOT_API_KEY}" \
+				-d "type=stream" \
+				-d "to=probes" \
+				-d "subject=${SUBJECT}" \
+				-d "content=${LINE}"
+		fi
 	done
 }
 
@@ -135,6 +148,6 @@ do
 	check_for_updates
 
 	# Sleep for a while.
-	echo "Next update in ${UPDATE_INTERVAL}."
+	echo "Next update in ${UPDATE_INTERVAL}. Current time is `date`."
 	sleep "${UPDATE_INTERVAL}"
 done
