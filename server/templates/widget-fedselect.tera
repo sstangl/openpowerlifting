@@ -97,6 +97,9 @@
   <option value="proraw" {% if selection.federation == "ProRaw" %}selected{% endif %}>ProRaw</option>
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.austria}}">
+  <option value="wuap-aut" {% if selection.federation == "WUAP-AUT" %}selected{% endif %}>WUAP-AUT - WUAP Austria [WUAP]</option>
+</optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpc" {% if selection.federation == "CPC" %}selected{% endif %}>CPC - Canadian Powerlifting Congress [WPC] (2016+)</option>

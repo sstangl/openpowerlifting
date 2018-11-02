@@ -684,6 +684,11 @@ pub enum Federation {
     /// World United Amateur Powerlifting.
     #[strum(to_string = "WUAP", serialize = "wuap")]
     WUAP,
+    
+    /// Austrian WUAP affiliate.
+    #[serde(rename = "WUAP-AUT")]
+    #[strum(to_string = "WUAP-AUT", serialize = "wuap-aut")]
+    WUAPAUT,
 
     /// Xtreme Powerlifting Coalition.
     #[strum(to_string = "XPC", serialize = "xpc")]
@@ -852,6 +857,7 @@ impl Federation {
             Federation::WRPFAUS => false,
             Federation::WRPFCAN => false,
             Federation::WUAP => false,
+            Federation::WUAPAUT => false,
             Federation::XPC => false,
         }
     }
@@ -1017,6 +1023,7 @@ impl Federation {
             Federation::WRPFAUS => Some(Country::Australia),
             Federation::WRPFCAN => Some(Country::Canada),
             Federation::WUAP => None,
+            Federation::WUAPAUT => Some(Country::Austria),
             Federation::XPC => Some(Country::USA),
         }
     }
@@ -1182,6 +1189,7 @@ impl Federation {
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFCAN => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,
+            Federation::WUAPAUT => PointsSystem::Wilks,
             Federation::XPC => PointsSystem::Wilks,
         }
     }
