@@ -1,0 +1,8 @@
+[divisions]
+# TODO
+
+[weightclasses]
+# TODO
+
+[exemptions]
+    0301 = ["check_row_weightclass_consistency"]  # Uses strange weightclasses.
