@@ -1127,7 +1127,7 @@ impl Federation {
             Federation::PA => PointsSystem::Wilks,
             Federation::PLZS => PointsSystem::Wilks,
             Federation::PRIDE => PointsSystem::Wilks,
-            Federation::ProRaw => PointsSystem::Wilks,
+            Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
             Federation::PZKFiTS => PointsSystem::Wilks,
             Federation::RAW => PointsSystem::Wilks,
