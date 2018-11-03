@@ -486,6 +486,29 @@ fn check_column_age(s: &str, line: u64, report: &mut Report) -> Age {
     }
 }
 
+fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
+    if s.is_empty() {
+        return;
+    }
+
+    // Ensure that there is a dash, or the split below can panic.
+    if s.chars().filter(|c| *c == '-').count() != 1 {
+        report.error_on(line, format!("AgeClass '{}' must be a range of two Ages", s));
+        return;
+    }
+
+    // Knowing that there is one dash, split into two parts.
+    let (left, right_with_dash) = s.split_at(s.find('-').unwrap());
+    let right = &right_with_dash[1..];
+
+    if left.parse::<Age>().is_err() {
+        report.error_on(line, format!("Lower bound of AgeClass '{}' looks invalid", s));
+    }
+    if right.parse::<Age>().is_err() {
+        report.error_on(line, format!("Upper bound of AgeClass '{}' looks invalid", s));
+    }
+}
+
 fn check_column_event(
     s: &str,
     line: u64,
@@ -1362,6 +1385,9 @@ where
         }
         if let Some(idx) = headers.get(Header::BirthDay) {
             check_column_birthday(&record[idx], meet, line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::AgeClass) {
+            check_column_ageclass(&record[idx], line, &mut report);
         }
 
         // Check consistency across fields.

@@ -52,5 +52,5 @@ pub enum AgeClass {
     Class80_999,
     #[serde(rename = "")]
     #[strum(serialize = "")]
-    Classblank,
+    None,
 }

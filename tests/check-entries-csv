@@ -205,23 +205,6 @@ def check_row_division(row, csv, divisions, meetyear):
              (row[csv.index('Name')], row[csv.index('Division')]))
 
 
-def check_row_ageclass(row, csv):
-    if 'AgeClass' in csv.fieldnames:
-        ageclassidx = csv.index('AgeClass')
-        ageclass = row[ageclassidx]
-
-        if ageclass != '':
-            if '-' not in ageclass:
-                pwarning("Lifter %s has an unrecognised ageclass: %s" %
-                         (row[csv.index('Name')], ageclass))
-            else:
-                [lower, upper] = ageclass.split('-')
-                if (not (lower.replace('.', '').isdigit() and
-                         upper.replace('.', '').isdigit())):
-                    pwarning("Lifter %s has an unrecognised ageclass: %s" %
-                             (row[csv.index('Name')], ageclass))
-
-
 def check_row(row, csv, configtoml, meet_date, meet_id):
     check_row_name_consistency(row, csv)
 
@@ -269,7 +252,6 @@ def check_row(row, csv, configtoml, meet_date, meet_id):
                 "check_row_division" not in configtoml["exemptions"][meet_id]):
             check_row_division(row, csv, configtoml["divisions"], meet_year)
 
-    check_row_ageclass(row, csv)
     check_column_name(row[csv.index('Name')], row, csv)
 
 

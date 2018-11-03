@@ -71,6 +71,11 @@ impl FromStr for Age {
             return Ok(Age::None);
         }
 
+        // Some of the CONFIG.toml files hardcode 999 to mean "max Age".
+        if s == "999" {
+            return Ok(Age::Exact(u8::max_value()));
+        }
+
         let v: Vec<&str> = s.split('.').collect();
         if v.len() == 1 {
             v[0].parse::<u8>().map(Age::Exact)
