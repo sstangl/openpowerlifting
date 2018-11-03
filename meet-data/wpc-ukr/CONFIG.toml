@@ -28,3 +28,5 @@
     sex = "F"
 
 [exemptions]
+    0905 = ["check_row_weightclass_consistency"]  # Didn't use weightclasses.
+    1402 = ["check_row_weightclass_consistency"]  # Used three weightclasses.

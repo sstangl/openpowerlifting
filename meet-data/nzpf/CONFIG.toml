@@ -49,3 +49,4 @@
 
 [exemptions]
     1212 = ["check_row_weightclass_consistency"]
+    1427 = ["check_row_weightclass_consistency"]  # Has unreported weightclasses.
