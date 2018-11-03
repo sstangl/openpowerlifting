@@ -343,6 +343,7 @@ fn check_column_birthyear(
                         format!("BirthYear '{}' looks implausible", year),
                     );
                 }
+                return None;
             }
 
             Some(year)
@@ -365,17 +366,21 @@ fn check_column_birthdate(
     }
 
     match s.parse::<Date>() {
-        Ok(birthdate) => {
+        Ok(bd) => {
             // Compare the BirthDate to the meet date for some basic sanity checks.
             if let Some(m) = meet {
-                if birthdate.year() >= m.date.year() - 4
-                    || m.date.year() - birthdate.year() > 98
-                {
+                if bd.year() >= m.date.year() - 4 || m.date.year() - bd.year() > 98 {
                     report.error_on(line, format!("BirthDate '{}' looks implausible", s));
+                    return None;
+                }
+
+                if let Err(e) = bd.age_on(m.date) {
+                    report.error_on(line, format!("BirthDate '{}' error: {}", s, e));
+                    return None;
                 }
             }
 
-            Some(birthdate)
+            Some(bd)
         }
         Err(e) => {
             report.error_on(line, format!("Invalid BirthDate '{}': '{}'", s, e));
@@ -1227,6 +1232,97 @@ fn check_weightclass_consistency(
     }
 }
 
+fn check_division_age_consistency(
+    entry: &Entry,
+    meet: Option<&Meet>,
+    config: Option<&Config>,
+    exempt_division: bool,
+    line: u64,
+    report: &mut Report,
+) {
+    // If we don't know when the meet was, there's nothing to diff against.
+    let meet_date = match meet {
+        Some(m) => m.date,
+        None => { return; }
+    };
+
+    // Since it will be needed a bunch below, if there's a BirthDate,
+    // figure out how old the lifter would be on the meet date.
+    let age_from_birthdate: Option<Age> = entry.birthdate.map_or(None, |birthdate| {
+        // Unwrapping is safe: the BirthDate column check already validated.
+        Some(birthdate.age_on(meet_date).unwrap())
+    });
+
+    // Check that the Age, BirthYear, and BirthDate columns are internally consistent.
+    if let Some(birthyear) = entry.birthyear {
+        // The maximum age assumes that the monthday of birth already occurred.
+        let max_age = birthyear * 10000 + 0101;  // January 1st of BirthYear.
+
+        // Pairwise check BirthYear and Age.
+        match entry.age {
+            // The age should be at the maximum or one year younger.
+            Age::Exact(age) =>  {
+                let age = age as u32;
+                if age != max_age && age + 1 != max_age {
+                    report.error_on(line, format!("Age '{}' doesn't match BirthYear '{}'",
+                                                  entry.age, birthyear));
+                }
+            }
+            // The age range should include the maximum or one below.
+            //
+            // For example, with a max_age of 27, the BirthYear allows for
+            // an Age of either 26 or 27. To be consistent, the approximate ages
+            // allowed are then 25.5, 26.5, and 27.5, since each has a plausible match.
+            Age::Approximate(age) => {
+                let age = age as u32;
+                if age != max_age && age + 1 != max_age && age + 2 != max_age {
+                    report.error_on(line, format!("Age '{}' doesn't match BirthYear '{}'",
+                                                  entry.age, birthyear));
+                }
+            }
+            Age::None => (),
+        };
+
+        // Pairwise check BirthYear and BirthDate.
+        if let Some(birthdate) = entry.birthdate {
+            if birthdate.year() != birthyear {
+                report.error_on(line,
+                                format!("BirthDate '{}' doesn't match BirthYear '{}'",
+                                        birthdate, birthyear));
+            }
+        }
+    }
+
+    // Pairwise check Age and BirthDate.
+    match entry.age {
+        Age::Exact(age) => {
+            if let Some(Age::Exact(bd_age)) = age_from_birthdate {
+                if age != bd_age {
+                    let s = format!("Age '{}' doesn't match BirthDate '{}', expected '{}'",
+                                    entry.age, entry.birthdate.unwrap(), bd_age);
+                    report.warning_on(line, s);
+                }
+            }
+        }
+        Age::Approximate(age) => {
+            if let Some(Age::Exact(bd_age)) = age_from_birthdate {
+                if age != bd_age && age != bd_age + 1 {
+                    let s = format!("Age '{}' doesn't match BirthDate '{}, expected '{}'",
+                                    entry.age, entry.birthdate.unwrap(), bd_age);
+                    report.error_on(line, s);
+                }
+            }
+        }
+        Age::None => (),
+    }
+
+    // Allow exemptions from division-specific checks.
+    if exempt_division {
+        return;
+    }
+
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -1431,6 +1527,14 @@ where
             meet,
             config,
             exempt_weightclass_consistency,
+            line,
+            &mut report,
+        );
+        check_division_age_consistency(
+            &entry,
+            meet,
+            config,
+            exempt_division,
             line,
             &mut report,
         );
