@@ -1035,7 +1035,7 @@ fn check_weightclass_consistency(
 
         // Configured federations should have weightclass data.
         if config.is_some() {
-            report.warning_on(line, "Configured federations cannot omit WeightClassKg");
+            report.error_on(line, "Configured federations cannot omit WeightClassKg");
         }
         return;
     }
@@ -1047,7 +1047,7 @@ fn check_weightclass_consistency(
             .iter()
             .any(|c| *c == entry.weightclasskg)
         {
-            report.warning_on(
+            report.error_on(
                 line,
                 format!(
                     "Unknown unconfigured WeightClassKg '{}'",
@@ -1160,7 +1160,7 @@ fn check_weightclass_consistency(
                 .find(|c| c.matches_bodyweight(entry.bodyweightkg))
                 .unwrap();
 
-            report.warning_on(
+            report.error_on(
                 line,
                 format!(
                     "BodyweightKg '{}' matches '{}', not '{}' in [weightclasses.{}]",
