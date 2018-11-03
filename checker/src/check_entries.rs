@@ -90,7 +90,6 @@ impl HeaderIndexMap {
 #[derive(Default)]
 struct Entry {
     pub sex: Sex,
-    pub age: Age,
     pub place: Place,
     pub event: Event,
     pub division: String,
@@ -98,6 +97,11 @@ struct Entry {
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
     pub deadlift_equipment: Option<Equipment>,
+
+    // Optional age information.
+    pub age: Age,
+    pub birthyear: Option<u32>,
+    pub birthdate: Option<Date>,
 
     pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
@@ -169,7 +173,7 @@ enum Header {
     BenchEquipment,
     DeadliftEquipment,
     BirthYear,
-    BirthDay,
+    BirthDate,
     Tested,
     AgeClass,
     Country,
@@ -315,9 +319,14 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     }
 }
 
-fn check_column_birthyear(s: &str, meet: Option<&Meet>, line: u64, report: &mut Report) {
+fn check_column_birthyear(
+    s: &str,
+    meet: Option<&Meet>,
+    line: u64,
+    report: &mut Report,
+) -> Option<u32> {
     if s.is_empty() {
-        return;
+        return None;
     }
 
     match s.parse::<u32>() {
@@ -335,30 +344,42 @@ fn check_column_birthyear(s: &str, meet: Option<&Meet>, line: u64, report: &mut 
                     );
                 }
             }
+
+            Some(year)
         }
         Err(_) => {
             report.error_on(line, format!("BirthYear '{}' must be a number", s));
+            None
         }
     }
 }
 
-fn check_column_birthday(s: &str, meet: Option<&Meet>, line: u64, report: &mut Report) {
+fn check_column_birthdate(
+    s: &str,
+    meet: Option<&Meet>,
+    line: u64,
+    report: &mut Report,
+) -> Option<Date> {
     if s.is_empty() {
-        return;
+        return None;
     }
+
     match s.parse::<Date>() {
-        Ok(birthday) => {
-            // Compare the BirthDay to the meet date for some basic sanity checks.
+        Ok(birthdate) => {
+            // Compare the BirthDate to the meet date for some basic sanity checks.
             if let Some(m) = meet {
-                if birthday.year() >= m.date.year() - 4
-                    || m.date.year() - birthday.year() > 98
+                if birthdate.year() >= m.date.year() - 4
+                    || m.date.year() - birthdate.year() > 98
                 {
-                    report.error_on(line, format!("BirthDay '{}' looks implausible", s));
+                    report.error_on(line, format!("BirthDate '{}' looks implausible", s));
                 }
             }
+
+            Some(birthdate)
         }
         Err(e) => {
-            report.error_on(line, format!("Invalid BirthDay '{}': '{}'", s, e));
+            report.error_on(line, format!("Invalid BirthDate '{}': '{}'", s, e));
+            None
         }
     }
 }
@@ -493,7 +514,10 @@ fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
 
     // Ensure that there is a dash, or the split below can panic.
     if s.chars().filter(|c| *c == '-').count() != 1 {
-        report.error_on(line, format!("AgeClass '{}' must be a range of two Ages", s));
+        report.error_on(
+            line,
+            format!("AgeClass '{}' must be a range of two Ages", s),
+        );
         return;
     }
 
@@ -502,10 +526,16 @@ fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
     let right = &right_with_dash[1..];
 
     if left.parse::<Age>().is_err() {
-        report.error_on(line, format!("Lower bound of AgeClass '{}' looks invalid", s));
+        report.error_on(
+            line,
+            format!("Lower bound of AgeClass '{}' looks invalid", s),
+        );
     }
     if right.parse::<Age>().is_err() {
-        report.error_on(line, format!("Upper bound of AgeClass '{}' looks invalid", s));
+        report.error_on(
+            line,
+            format!("Upper bound of AgeClass '{}' looks invalid", s),
+        );
     }
 }
 
@@ -1381,10 +1411,12 @@ where
             check_column_cyrillicname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
-            check_column_birthyear(&record[idx], meet, line, &mut report);
+            entry.birthyear =
+                check_column_birthyear(&record[idx], meet, line, &mut report);
         }
-        if let Some(idx) = headers.get(Header::BirthDay) {
-            check_column_birthday(&record[idx], meet, line, &mut report);
+        if let Some(idx) = headers.get(Header::BirthDate) {
+            entry.birthdate =
+                check_column_birthdate(&record[idx], meet, line, &mut report);
         }
         if let Some(idx) = headers.get(Header::AgeClass) {
             check_column_ageclass(&record[idx], line, &mut report);

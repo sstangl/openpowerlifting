@@ -125,18 +125,18 @@ TESTED_FEDERATIONS = [
 ]
 
 
-# Reads in the map Name => Birthday (as date string).
-def make_birthdays_map(lifterdir):
-    csv = Csv(lifterdir + os.sep + 'birthdays.csv')
+# Reads in the map Name => BirthDate (as date string).
+def make_birthdates_map(lifterdir):
+    csv = Csv(lifterdir + os.sep + 'birthdates.csv')
 
     nameidx = csv.index('Name')
-    birthdayidx = csv.index('Birthday')
+    birthdateidx = csv.index('BirthDate')
 
-    birthdays = dict()
+    birthdates = dict()
     for row in csv.rows:
-        birthdays[row[nameidx]] = row[birthdayidx]
+        birthdates[row[nameidx]] = row[birthdateidx]
 
-    return birthdays
+    return birthdates
 
 
 # Fills in the Age column from the BirthYear column if possible.
@@ -161,8 +161,8 @@ def age_from_birthyear(csv, date):
             row[ageidx] = str(lower_age) + '.5'
 
 
-# Fills in the Age column from the Birthday.
-def age_from_birthday(csv, date, birthdays):
+# Fills in the Age column from the BirthDate.
+def age_from_birthdate(csv, date, birthdates):
     if 'Age' not in csv.fieldnames:
         csv.append_column('Age')
 
@@ -174,16 +174,16 @@ def age_from_birthday(csv, date, birthdays):
         name = row[nameidx]
 
         # Hardcoded ages take precedence.
-        if row[ageidx] or name not in birthdays:
+        if row[ageidx] or name not in birthdates:
             continue
 
-        [birthyear, birthmonth, birthday] = birthdays[name].split('-')
+        [birthyear, birthmonth, birthdate] = birthdates[name].split('-')
         assert birthyear < year
 
         years = int(year) - int(birthyear)
         if (int(month) < int(birthmonth) or
                 (int(month) == int(birthmonth) and
-                    int(day) <= int(birthday))):
+                    int(day) <= int(birthdate))):
             years -= 1
 
         row[ageidx] = str(years)
@@ -242,7 +242,7 @@ def tested_from_division(division, federation):
 
 
 # Appends to entriescsv and meetscsv, while assigning a MeetID mapping.
-def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
+def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdates, configtoml):
     newentries = Csv(entriespath)
     newmeet = Csv(meetpath)
 
@@ -337,8 +337,8 @@ def addmeet(entriescsv, meetscsv, entriespath, meetpath, birthdays, configtoml):
 
     date = newmeet.rows[0][newmeet.index('Date')]
 
-    # Try deriving from Birthday first.
-    age_from_birthday(newentries, date, birthdays)
+    # Try deriving from BirthDate first.
+    age_from_birthdate(newentries, date, birthdates)
 
     # Otherwise, try deriving from BirthYear.
     age_from_birthyear(newentries, date)
@@ -483,7 +483,7 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.append_column('Country')
 
     # We remove these columns later, interpolate_ages needs to use them temporarily
-    entriescsv.append_column('BirthDay')
+    entriescsv.append_column('BirthDate')
     entriescsv.append_column('BirthYear')
     initial_entriescsv_num_columns = len(entriescsv.fieldnames) - 2
 
@@ -497,7 +497,7 @@ def main(builddir, meetdir, lifterdir):
     meetscsv.append_column('MeetName')
     initial_meetscsv_num_columns = len(meetscsv.fieldnames)
 
-    birthdays = make_birthdays_map(lifterdir)
+    birthdates = make_birthdates_map(lifterdir)
 
     configpath = ''
     configtoml = None
@@ -523,13 +523,13 @@ def main(builddir, meetdir, lifterdir):
             entriespath = dirname + os.sep + 'entries.csv'
             meetpath = dirname + os.sep + 'meet.csv'
             addmeet(entriescsv, meetscsv, entriespath,
-                    meetpath, birthdays, configtoml)
+                    meetpath, birthdates, configtoml)
 
     entriescsv = interpolate_ages.interpolate(entriescsv, meetscsv)
     entriescsv = interpolate_countries.interpolate(entriescsv)
 
     entriescsv.remove_column_by_name('BirthYear')
-    entriescsv.remove_column_by_name('BirthDay')
+    entriescsv.remove_column_by_name('BirthDate')
 
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)

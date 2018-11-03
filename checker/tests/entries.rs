@@ -138,7 +138,7 @@ fn test_column_event() {
 #[test]
 fn test_event_consistency() {
     // Bench-only lifter with valid data, but marked SBD.
-    let data = "Name,Division,BirthDay,WeightClassKg,BodyweightKg,Sex,Tested,\
+    let data = "Name,Division,BirthDate,WeightClassKg,BodyweightKg,Sex,Tested,\
                 Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,\
                 Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,\
                 Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Country\n\

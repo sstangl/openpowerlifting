@@ -596,12 +596,12 @@ def standardize_division_age(csv):
     bdidx = None
 
     if 'Division-Age' in csv.fieldnames:
-        csv.append_columns(['Division', 'BirthDay', 'Age'])
+        csv.append_columns(['Division', 'BirthDate', 'Age'])
 
         idx = csv.index('Division-Age')
         dividx = csv.index('Division')
         ageidx = csv.index('Age')
-        bdidx = csv.index('BirthDay')
+        bdidx = csv.index('BirthDate')
     else:
         idx = csv.index('Division')
         dividx = idx

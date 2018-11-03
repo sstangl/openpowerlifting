@@ -108,18 +108,18 @@ def is_by_consistent(lifter_data):
 # Helper function for calculating lifter ages
 
 
-def calc_age(birthday, date):
-    birthyear = get_year(birthday)
+def calc_age(birthdate, date):
+    birthyear = get_year(birthdate)
     curr_year = get_year(date)
 
-    # They haven't had their birthday
-    if get_monthday(birthday) > get_monthday(date):
+    # They haven't had their birthdate
+    if get_monthday(birthdate) > get_monthday(date):
         return curr_year - birthyear - 1
-    else:  # They've had their birthday
+    else:  # They've had their birthdate
         return curr_year - birthyear
 
 
-# Checks whether a lifter has a consistent birthday
+# Checks whether a lifter has a consistent birthdate
 def is_bd_consistent(lifter_data):
     global AGE_IDX
     global DATE_IDX
@@ -128,18 +128,18 @@ def is_bd_consistent(lifter_data):
     bdageidx = 0
     meetdateidx = 1
 
-    birthday = ''
+    birthdate = ''
     bd_data = []
     for age_data in lifter_data:
         age = age_data[AGE_IDX]
         date = age_data[DATE_IDX]
-        curr_birthday = age_data[BD_IDX]
+        curr_birthdate = age_data[BD_IDX]
 
-        if curr_birthday != '':
-            if birthday != '' and curr_birthday != birthday:
+        if curr_birthdate != '':
+            if birthdate != '' and curr_birthdate != birthdate:
                 return False
             else:
-                birthday = curr_birthday
+                birthdate = curr_birthdate
 
         if age != '':
             # this is an exact age
@@ -152,11 +152,11 @@ def is_bd_consistent(lifter_data):
 
         init_year = get_year(bd_data[0][meetdateidx])
 
-        # If we have a BirthDay, check that the data is consistent.
+        # If we have a BirthDate, check that the data is consistent.
         # If so, offset the age data so it is all from one year
         for age_date in bd_data:
-            if (birthday != '' and
-                    calc_age(birthday, age_date[meetdateidx]) != age_date[bdageidx]):
+            if (birthdate != '' and
+                    calc_age(birthdate, age_date[meetdateidx]) != age_date[bdageidx]):
                 return False
 
             curr_year = get_year(age_date[meetdateidx])
@@ -171,7 +171,7 @@ def is_bd_consistent(lifter_data):
     return True
 
 
-# Gives the range that a lifters birthday lies in
+# Gives the range that a lifters birthdate lies in
 def estimate_birthdate(lifter_data):
     global AGE_IDX
     global DATE_IDX
@@ -179,7 +179,7 @@ def estimate_birthdate(lifter_data):
     global BD_IDX
     bdageidx = 0
     meetdateidx = 1
-    # If a lifter has their birthday over the length of the meet we don't know
+    # If a lifter has their birthdate over the length of the meet we don't know
     max_meetlength = 12
 
     min_date = ''
@@ -189,7 +189,7 @@ def estimate_birthdate(lifter_data):
         age = age_data[AGE_IDX]
         date = age_data[DATE_IDX]
 
-        # If we have a birthday recorded just use that
+        # If we have a birthdate recorded just use that
         if age_data[BD_IDX] != '':
             return [age_data[BD_IDX], age_data[BD_IDX]]
 
@@ -239,7 +239,7 @@ def estimate_birthdate(lifter_data):
         return []
 
 
-# Gets the range where we know that the lifter hasn't had a birthday
+# Gets the range where we know that the lifter hasn't had a birthdate
 # this function assumes that there are no years where we see the lifter at different ages
 def get_known_range(lifter_data):
     global AGE_IDX
@@ -323,7 +323,7 @@ def interpolate_lifter(lifter_data):
 
     bd_range = estimate_birthdate(lifter_data)
 
-    if bd_range != []:  # Then we have a birthday range and can be semi-accurate
+    if bd_range != []:  # Then we have a birthdate range and can be semi-accurate
         for age_data in lifter_data:
             if age_data[AGE_IDX] == '' or float(age_data[AGE_IDX]) % 1 == 0.5:
                 curr_year = get_year(age_data[DATE_IDX])
@@ -336,7 +336,7 @@ def interpolate_lifter(lifter_data):
                         bd_range[0], age_data[DATE_IDX])
                     age_data[MINAGE_IDX] = age_data[AGE_IDX]
                     age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                else:  # We're not sure if they've had their birthday
+                else:  # We're not sure if they've had their birthdate
                     age_data[AGE_IDX] = curr_year - \
                         get_year(bd_range[0])-0.5
                     age_data[MINAGE_IDX] = int(age_data[AGE_IDX]-0.5)
@@ -373,7 +373,7 @@ def interpolate_lifter(lifter_data):
             by = max_by
 
         # If we have at least one exact age,
-        # then we have a range in which we know they don't have a birthday
+        # then we have a range in which we know they don't have a birthdate
         if approx_by != 0:
             known_range = get_known_range(lifter_data)
 
@@ -389,29 +389,29 @@ def interpolate_lifter(lifter_data):
                         age_data[MAXAGE_IDX] = int(age_data[AGE_IDX]+0.5)
                     else:
                         # Check whether known_range is an upper
-                        # or lower bound on the birthday
+                        # or lower bound on the birthdate
                         lower_bound = False
                         if approx_by < by:
                             lower_bound = True
 
-                        # Then the lifter hasn't had their birthday yet
+                        # Then the lifter hasn't had their birthdate yet
                         if lower_bound and curr_monthday <= known_range[1]:
                             age_data[AGE_IDX] = curr_year - by - 1
                             age_data[MINAGE_IDX] = age_data[AGE_IDX]
                             age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                        # Then we're not sure if they've had their birthday
+                        # Then we're not sure if they've had their birthdate
                         elif lower_bound and curr_monthday > known_range[1]:
                             age_data[AGE_IDX] = curr_year-by-0.5
                             age_data[MINAGE_IDX] = int(
                                 age_data[AGE_IDX]-0.5)
                             age_data[MAXAGE_IDX] = int(
                                 age_data[AGE_IDX]+0.5)
-                        # Then the lifter has had their birthday
+                        # Then the lifter has had their birthdate
                         elif curr_monthday >= known_range[0]:
                             age_data[AGE_IDX] = curr_year-by
                             age_data[MINAGE_IDX] = age_data[AGE_IDX]
                             age_data[MAXAGE_IDX] = age_data[AGE_IDX]
-                        # Then we're not sure if they've had their birthday
+                        # Then we're not sure if they've had their birthdate
                         else:
                             age_data[AGE_IDX] = curr_year-by-0.5
                             age_data[MINAGE_IDX] = int(
@@ -500,7 +500,7 @@ def generate_hashmap(entriescsv, meetcsv):
     meetIDidx = entriescsv.index('MeetID')
     ageclassidx = entriescsv.index('AgeClass')
     byidx = entriescsv.index('BirthYear')
-    bdidx = entriescsv.index('BirthDay')
+    bdidx = entriescsv.index('BirthDate')
 
     for row in entriescsv.rows:
         lifterID = int(row[lifterIDidx])
@@ -508,12 +508,12 @@ def generate_hashmap(entriescsv, meetcsv):
         meetID = int(row[meetIDidx])
 
         birthyear = ''
-        birthday = ''
+        birthdate = ''
         if row[byidx] != '':
             birthyear = int(row[byidx])
         if row[bdidx] != '':
             birthyear = int(row[bdidx].split('-')[0])
-            birthday = row[bdidx]
+            birthdate = row[bdidx]
 
         minage = 0
         maxage = 999
@@ -532,10 +532,10 @@ def generate_hashmap(entriescsv, meetcsv):
 
         if lifterID not in LifterAgeHash:
             LifterAgeHash[lifterID] = [
-                [age, minage, maxage, meetID, birthyear, birthday]]
+                [age, minage, maxage, meetID, birthyear, birthdate]]
         else:
             LifterAgeHash[lifterID].append(
-                [age, minage, maxage, meetID, birthyear, birthday])
+                [age, minage, maxage, meetID, birthyear, birthdate])
 
     meetIDidx = meetcsv.index('MeetID')
     dateidx = meetcsv.index('Date')
