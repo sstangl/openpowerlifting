@@ -31,6 +31,18 @@ REPODIR="${SCRIPTDIR}/../../"
 # Remember the original sourcefile MD5, for detecting changes.
 SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
 
+# Require authentication variables.
+if [ -z "${ZULIP_PROBEBOT_EMAIL}" ]; then
+        echo " Error: ${0} requires ZULIP_PROBEBOT_EMAIL in ~/.bash_profile."
+	echo " The value can be found on the Settings / Your Bots page in Zulip."
+        exit 1
+fi
+if [ -z "${ZULIP_PROBEBOT_API_KEY}" ]; then
+        echo " Error: ${0} requires ZULIP_PROBEBOT_API_KEY in ~/.bash_profile."
+	echo " The value can be found on the Settings / Your Bots page in Zulip."
+        exit 1
+fi
+
 # Runs the probes and does some cleanup, emitting the results to the file $1.
 function run_probes {
 	TMPFILE=$(mktemp)
@@ -61,7 +73,18 @@ function send_message {
 # This is the main function where updates happen.
 # If the network is down, the function is expected to return early,
 # at which point the main loop will try again with the next scheduled update.
-function check_for_updates {
+function run_iteration {
+	# Update the repo, getting new probe scripts and URL files.
+	git pull || return 1
+
+	# Check whether the source file changed.
+	CURRENT_SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
+	if [ "${SOURCEFILE_MD5}" != "${CURRENT_SOURCEFILE_MD5}" ]; then
+		# Replace the shell with a newer version of probebot.
+		# No new process is created.
+		exec "${SOURCEFILE}"
+	fi
+
 	# Is there already a list of probe results we can diff against?
 	# If not, silently create it now, and then we can diff at the next iteration.
 	if [ ! -f "${PROBES_CACHE}" ]; then
@@ -129,36 +152,13 @@ function check_for_updates {
 	rm "${TEMPORARY_PROBES_NEW}"
 }
 
-# Require authentication variables.
-if [ -z "${ZULIP_PROBEBOT_EMAIL}" ]; then
-        echo " Error: ${0} requires ZULIP_PROBEBOT_EMAIL in ~/.bash_profile."
-	echo " The value can be found on the Settings / Your Bots page in Zulip."
-        exit 1
-fi
-if [ -z "${ZULIP_PROBEBOT_API_KEY}" ]; then
-        echo " Error: ${0} requires ZULIP_PROBEBOT_API_KEY in ~/.bash_profile."
-	echo " The value can be found on the Settings / Your Bots page in Zulip."
-        exit 1
-fi
-
 set -x  # Print every line.
 
 # Main loop. Kill the bot with Ctrl-C.
 while true;
 do
-	# Update the repo, getting new probe scripts and URL files.
-	git pull || return 1
-
-	# Check whether the source file changed.
-	CURRENT_SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
-	if [ "${SOURCEFILE_MD5}" != "${CURRENT_SOURCEFILE_MD5}" ]; then
-		# Replace the shell with a newer version of probebot.
-		# No new process is created.
-		exec "${SOURCEFILE}"
-	fi
-
 	# Run the updater.
-	check_for_updates
+	run_iteration
 
 	# Sleep for a while.
 	echo "Next update in ${UPDATE_INTERVAL}. Current time is `date`."
