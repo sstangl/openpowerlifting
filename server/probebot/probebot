@@ -8,12 +8,13 @@
 # This script infinite-loops. Each iteration, it does the following steps.
 #
 #   1. Updates the git repo. This pulls in new versions of probe scripts and URL files.
-#   2. Ensures that a temporary file exists containing all the probe results the bot
+#   2. Checks if the probebot script itself changed -- if so, reloads itself.
+#   3. Ensures that a temporary file exists containing all the probe results the bot
 #      has seen up to this point -- we only want to send notifications on new results.
-#   3. Runs `make probe`, diffs the result from the temporary file, and then overwrites
+#   4. Runs `make probe`, diffs the result from the temporary file, and then overwrites
 #      the temporary file with the new results.
-#   4. Sends the new results over to Zulip chat.
-#   5. Sleeps for a while.
+#   5. Sends the new results over to Zulip chat.
+#   6. Sleeps for a while.
 
 UPDATE_INTERVAL="1h"
 MAX_MSG_LINES="8"
@@ -21,10 +22,14 @@ MAX_MSG_LINES="8"
 # Names of the temporary files used for comparing old and new probes.
 # We don't use `mktemp` because we want the results to be cached
 # between invocations of this script. Git knows to ignore these files.
+SOURCEFILE="${BASH_SOURCE[0]}"
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 TEMPORARY_PROBES_NEW="${SCRIPTDIR}/probes-new.tmp"
 PROBES_CACHE="${SCRIPTDIR}/probes-cache.tmp"
 REPODIR="${SCRIPTDIR}/../../"
+
+# Remember the original sourcefile MD5, for detecting changes.
+SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
 
 # Runs the probes and does some cleanup, emitting the results to the file $1.
 function run_probes {
@@ -57,9 +62,6 @@ function send_message {
 # If the network is down, the function is expected to return early,
 # at which point the main loop will try again with the next scheduled update.
 function check_for_updates {
-	# Update the repo, getting new probe scripts and URL files.
-	git pull || return 1
-
 	# Is there already a list of probe results we can diff against?
 	# If not, silently create it now, and then we can diff at the next iteration.
 	if [ ! -f "${PROBES_CACHE}" ]; then
@@ -80,12 +82,6 @@ function check_for_updates {
 		rm "${TEMPORARY_PROBES_NEW}"
 		return 0
 	fi
-
-	# Integrate everything into the cache, sorting and uniqing.
-	TMPFILE=$(mktemp)
-	cat "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}" | sort -u > "${TMPFILE}"
-	mv "${TMPFILE}" "${PROBES_CACHE}"
-	rm "${TEMPORARY_PROBES_NEW}"
 
 	# On to sending messages!
 	# We want to send one message per federation, so that similar meets
@@ -125,6 +121,12 @@ function check_for_updates {
 			send_message "${SUBJECT}" "${LINE}"
 		fi
 	done
+
+	# Integrate everything into the cache, sorting and uniqing.
+	TMPFILE=$(mktemp)
+	cat "${TEMPORARY_PROBES_NEW}" "${PROBES_CACHE}" | sort -u > "${TMPFILE}"
+	mv "${TMPFILE}" "${PROBES_CACHE}"
+	rm "${TEMPORARY_PROBES_NEW}"
 }
 
 # Require authentication variables.
@@ -144,6 +146,17 @@ set -x  # Print every line.
 # Main loop. Kill the bot with Ctrl-C.
 while true;
 do
+	# Update the repo, getting new probe scripts and URL files.
+	git pull || return 1
+
+	# Check whether the source file changed.
+	CURRENT_SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
+	if [ "${SOURCEFILE_MD5}" != "${CURRENT_SOURCEFILE_MD5}" ]; then
+		# Replace the shell with a newer version of probebot.
+		# No new process is created.
+		exec "${SOURCEFILE}"
+	fi
+
 	# Run the updater.
 	check_for_updates
 
