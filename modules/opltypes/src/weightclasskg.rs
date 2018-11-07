@@ -9,7 +9,7 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
-use {WeightAny, WeightKg, WeightUnits};
+use crate::{WeightAny, WeightKg, WeightUnits};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]

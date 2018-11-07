@@ -1,8 +1,10 @@
 //! Defines valid entries in the MeetState column.
 
 use strum::ParseError;
-use Country;
 
+use crate::Country;
+
+/// A state in a `Country`.
 pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),

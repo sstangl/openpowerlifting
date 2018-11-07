@@ -6,6 +6,7 @@ description = """
 Datatypes for the OpenPowerlifting database format.
 """
 license = "AGPLv3+"
+edition = "2018"
 
 [dependencies]
 serde = "1.0"

@@ -1,8 +1,8 @@
 //! Defines the `Federation` field for the `meets` table.
 
-use Country;
-use Date;
-use PointsSystem;
+use crate::Country;
+use crate::Date;
+use crate::PointsSystem;
 
 /// Enum of federations.
 ///

@@ -10,7 +10,7 @@ use std::num;
 use std::ops;
 use std::str::FromStr;
 
-use WeightUnits;
+use crate::WeightUnits;
 
 /// Represents numbers describing absolute weights.
 ///
