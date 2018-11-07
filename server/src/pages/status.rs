@@ -3,8 +3,8 @@
 use opltypes::*;
 use strum::IntoEnumIterator;
 
-use langpack::{self, Language, Locale};
-use opldb;
+use crate::langpack::{self, Language, Locale};
+use crate::opldb;
 
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]

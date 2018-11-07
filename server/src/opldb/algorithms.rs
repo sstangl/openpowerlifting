@@ -3,12 +3,12 @@
 use opltypes::*;
 use std::cmp;
 
-use opldb::static_cache::NonSortedNonUnique;
-use opldb::static_cache::PossiblyOwnedNonSortedNonUnique;
-use opldb::static_cache::PossiblyOwnedSortedUnique;
-use opldb::static_cache::SortedUnique;
-use opldb::{Entry, Meet, OplDb};
-use pages::selection::*;
+use crate::opldb::static_cache::NonSortedNonUnique;
+use crate::opldb::static_cache::PossiblyOwnedNonSortedNonUnique;
+use crate::opldb::static_cache::PossiblyOwnedSortedUnique;
+use crate::opldb::static_cache::SortedUnique;
+use crate::opldb::{Entry, Meet, OplDb};
+use crate::pages::selection::*;
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
 #[inline]

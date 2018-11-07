@@ -3,9 +3,9 @@
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use langpack::{self, get_localized_name, Locale, LocalizeNumber};
-use opldb::{Entry, OplDb};
-use pages::selection::SortSelection;
+use crate::langpack::{self, get_localized_name, Locale, LocalizeNumber};
+use crate::opldb::{Entry, OplDb};
+use crate::pages::selection::SortSelection;
 
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,

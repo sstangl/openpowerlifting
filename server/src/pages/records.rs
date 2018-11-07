@@ -7,9 +7,9 @@ use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
 
-use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
-use opldb::{algorithms, Entry, Lifter, Meet, OplDb};
-use pages::selection::*;
+use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use crate::opldb::{algorithms, Entry, Lifter, Meet, OplDb};
+use crate::pages::selection::*;
 
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(Copy, Clone, PartialEq, Serialize)]

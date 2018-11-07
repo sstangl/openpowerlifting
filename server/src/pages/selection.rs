@@ -7,7 +7,7 @@ use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
 
-use opldb::MetaFederation;
+use crate::opldb::MetaFederation;
 
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(PartialEq, Serialize)]

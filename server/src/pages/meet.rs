@@ -6,8 +6,8 @@ use opltypes::*;
 use std::cmp;
 use std::str::FromStr;
 
-use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
-use opldb::{self, algorithms, Entry};
+use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use crate::opldb::{self, algorithms, Entry};
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]

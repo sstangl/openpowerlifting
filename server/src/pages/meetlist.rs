@@ -5,9 +5,9 @@ use opltypes::*;
 use std::ffi::OsStr;
 use std::path;
 
-use langpack::{self, Language, Locale};
-use opldb::{self, Meet};
-use pages::selection::{FederationSelection, YearSelection};
+use crate::langpack::{self, Language, Locale};
+use crate::opldb::{self, Meet};
+use crate::pages::selection::{FederationSelection, YearSelection};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///

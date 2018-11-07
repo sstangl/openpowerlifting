@@ -1,7 +1,7 @@
 //! Logic for the data page.
 
-use langpack::{self, Language, Locale};
 use opltypes;
+use crate::langpack::{self, Language, Locale};
 
 /// The context object passed to `templates/data.html.tera`
 #[derive(Serialize)]

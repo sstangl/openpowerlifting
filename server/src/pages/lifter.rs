@@ -1,8 +1,9 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
-use opldb::{self, Entry};
 use opltypes::*;
+
+use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use crate::opldb::{self, Entry};
 
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]

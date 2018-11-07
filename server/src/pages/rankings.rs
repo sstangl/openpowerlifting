@@ -3,11 +3,10 @@
 use opltypes;
 use serde_json;
 
-use langpack::{self, Language, Locale};
-use opldb;
-
-use pages::api_rankings::get_slice;
-use pages::selection::Selection;
+use crate::langpack::{self, Language, Locale};
+use crate::opldb;
+use crate::pages::api_rankings::get_slice;
+use crate::pages::selection::Selection;
 
 /// The context object passed to `templates/rankings.html.tera`.
 #[derive(Serialize)]

@@ -6,8 +6,8 @@ use opltypes::*;
 use std::cmp::Ordering;
 use std::ops::Deref;
 
-use opldb::algorithms::*;
-use opldb::{Entry, Meet};
+use crate::opldb::algorithms::*;
+use crate::opldb::{Entry, Meet};
 
 /// List of indices into the opldb.entries vector,
 /// in no particular order, but such that entries from the same

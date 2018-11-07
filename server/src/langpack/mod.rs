@@ -12,7 +12,7 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
 
-use opldb;
+use crate::opldb;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]

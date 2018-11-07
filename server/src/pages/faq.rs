@@ -1,7 +1,7 @@
 //! Logic for the faq page.
 
-use langpack;
 use opltypes;
+use crate::langpack;
 
 /// The context object passed to `templates/faq.html.tera`
 #[derive(Serialize)]

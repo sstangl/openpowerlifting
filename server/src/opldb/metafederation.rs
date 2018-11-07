@@ -4,7 +4,7 @@ use itertools::Itertools;
 use opltypes::*;
 use strum::IntoEnumIterator;
 
-use opldb::{Entry, Meet};
+use crate::opldb::{Entry, Meet};
 
 /// Enum of MetaFederations. These are the entries in the federation selector
 /// that don't correspond neatly to just a single federation value.
