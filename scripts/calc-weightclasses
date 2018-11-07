@@ -21,8 +21,7 @@ def getwtcls(classtype, sex, bw):
             return '140+'
         weights = [0, 44, 48, 52, 56, 60, 67.5,
                    75, 82.5, 90, 100, 110, 125, 140]
-    else:
-        assert classtype == 'ipf'
+    elif classtype == 'ipf':
         if sex == 'M':
             if bw > 120:
                 return '120+'
@@ -32,6 +31,19 @@ def getwtcls(classtype, sex, bw):
             if bw > 84:
                 return '84+'
             weights = [0, 43, 47, 52, 57, 63, 72, 84]
+    elif classtype == 'wp':
+        if sex == 'M':
+            if bw > 120:
+                return '120+'
+            weights = [0, 62, 69, 77, 85, 94, 105, 120]
+        else:
+            assert sex == 'F'
+            if bw > 100:
+                return '100+'
+            weights = [0, 48, 53, 58, 64, 72, 84, 100]
+    else:
+        print("Unknown classtype %s" % classtype)
+        sys.exit(1)
 
     assert weights[0] == 0
     for i in range(1, len(weights) + 1):
@@ -43,7 +55,7 @@ def getwtcls(classtype, sex, bw):
 
 
 def main(classtype, filename):
-    assert classtype in ['trad', 'ipf']
+    assert classtype in ['trad', 'ipf', 'wp']
 
     csv = oplcsv.Csv(filename)
 
@@ -77,8 +89,8 @@ def main(classtype, filename):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3 or not sys.argv[1] in ["trad", "ipf"]:
-        print(" Usage: %s <trad,men,women> entries.csv")
+    if len(sys.argv) != 3 or not sys.argv[1] in ["trad", "ipf", "wp"]:
+        print(" Usage: %s <trad,ipf,wp> entries.csv")
         print(" Where: 'trad' is for the traditional weight classes")
         print("    and 'ipf' is for the IPF weight classes.")
         sys.exit(1)
