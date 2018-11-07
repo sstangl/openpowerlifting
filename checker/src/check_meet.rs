@@ -8,7 +8,7 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use Report;
+use crate::Report;
 
 /// Product of a successful parse.
 pub struct Meet {

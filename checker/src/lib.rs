@@ -7,11 +7,11 @@ extern crate strum_macros;
 extern crate toml;
 
 pub mod check_config;
-pub use check_config::{check_config, Config};
+pub use crate::check_config::{check_config, Config};
 pub mod check_entries;
-use check_entries::check_entries;
+use crate::check_entries::check_entries;
 pub mod check_meet;
-use check_meet::check_meet;
+use crate::check_meet::check_meet;
 
 use std::error::Error;
 use std::path::{Path, PathBuf};

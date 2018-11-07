@@ -9,7 +9,7 @@ use std::path::PathBuf;
 
 use std::io::Read;
 
-use Report;
+use crate::Report;
 
 pub struct CheckResult {
     pub report: Report,

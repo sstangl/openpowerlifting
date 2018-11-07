@@ -8,9 +8,9 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use check_config::{Config, Exemption, WeightClassConfig};
-use check_meet::Meet;
-use Report;
+use crate::check_config::{Config, Exemption, WeightClassConfig};
+use crate::check_meet::Meet;
+use crate::Report;
 
 /// List of all plausible weightclasses, for non-configured federations.
 const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 54] = [
