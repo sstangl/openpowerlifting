@@ -1300,7 +1300,7 @@ fn check_division_age_consistency(
                 if age != bd_age {
                     let s = format!("Age '{}' doesn't match BirthDate '{}', expected '{}'",
                                     entry.age, entry.birthdate.unwrap(), bd_age);
-                    report.warning_on(line, s);
+                    report.error_on(line, s);
                 }
             }
         }

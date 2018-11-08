@@ -1,15 +1,15 @@
 Name,Sex,BodyweightKg,Team,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Division,BirthDate,Age,Place
-Yuliya Umerenkova,F,67.2,Nosorog,180,192.5,200,200,-205,200,67.5,D,Multi-ply,Yes,,,,,,,,,,,Amateur Open,1980-12-09,34,1
+Yuliya Umerenkova,F,67.2,Nosorog,180,192.5,200,200,-205,200,67.5,D,Multi-ply,Yes,,,,,,,,,,,Amateur Open,1980-12-09,,1
 Marina Kamyshnikova,F,51.6,lichno,115,-125,125,125,,125,52,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,1979-02-16,35,1
 Aleksandr Belozerov,M,67.4,lichno,-200,200,-220,200,,200,67.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Teen 16-17,1997-03-28,17,1
 Maksim Monastyrev,M,81.2,lichno,215,225,235,235,,,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Teen 18-19,1996-04-23,18,DQ
-Vladimir Kulakov,M,77.1,lichno,117.5,127.5,,127.5,,127.5,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,1955-12-24,59,1
-Vladimir Kulakov,M,77.1,lichno,117.5,127.5,,127.5,,127.5,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Masters 55-59,1955-12-24,59,1
+Vladimir Kulakov,M,77.1,lichno,117.5,127.5,,127.5,,127.5,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,1955-12-24,,1
+Vladimir Kulakov,M,77.1,lichno,117.5,127.5,,127.5,,127.5,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Masters 55-59,1955-12-24,,1
 Igor Umerenkov,M,89.9,Nosorog,290,300,305,305,,305,90,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,1980-09-13,34,1
 Anastasiya Vedeneyeva,F,46.9,lichno,110,115,120,120,,120,48,D,Raw,Yes,,,,,,,,,,,Amateur Open,1981-11-21,33,1
 Darya Yevdokimova,F,53.9,lichno,117.5,-122.5,122.5,122.5,,122.5,56,D,Raw,Yes,,,,,,,,,,,Amateur Open,1988-06-06,26,1
-Anastasiya Zhdanova,F,52.5,lichno,85,95,105,105,,105,56,D,Raw,Yes,,,,,,,,,,,Amateur Open,1980-12-11,34,2
-Svetlana Kashirina,F,60,lichno,-135,-147.5,-147.5,,,,60,D,Raw,Yes,,,,,,,,,,,Amateur Open,1988-12-23,26,DQ
+Anastasiya Zhdanova,F,52.5,lichno,85,95,105,105,,105,56,D,Raw,Yes,,,,,,,,,,,Amateur Open,1980-12-11,,2
+Svetlana Kashirina,F,60,lichno,-135,-147.5,-147.5,,,,60,D,Raw,Yes,,,,,,,,,,,Amateur Open,1988-12-23,,DQ
 Liliya Semkova,F,62.4,lichno,90,100,,100,,100,67.5,D,Raw,Yes,,,,,,,,,,,Amateur Open 20-23,1991-11-05,23,1
 Anna Gutova,F,73.1,lichno,115,120,125,125,,125,75,D,Raw,Yes,,,,,,,,,,,Amateur Open,1988-04-04,26,1
 Yekaterina Popova,F,74.3,Good Lift,85,100,-110,100,,100,75,D,Raw,Yes,,,,,,,,,,,Amateur Open,1979-07-07,35,2
@@ -29,7 +29,7 @@ Vladimir Yermokhin,M,73.7,lichno,170,180,185,185,,185,75,D,Raw,Yes,,,,,,,,,,,Ama
 Artem Petrov,M,77.6,lichno,155,170,-185,170,,170,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Teen 16-17,1998-08-24,16,1
 Yevgeniy Gorshkov,M,79.4,lichno,235,245,255,255,,255,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Open,1981-11-13,33,1
 Mikhail Sotnikov,M,81.1,lichno,195,205,215,215,,215,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Open,1979-04-15,35,2
-Vladimir Kulakov,M,77.1,lichno,115,125,,125,,125,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Masters 55-59,1955-12-24,59,1
+Vladimir Kulakov,M,77.1,lichno,115,125,,125,,125,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Masters 55-59,1955-12-24,,1
 Vladimir Panfilov,M,81.3,lichno,150,160,170,170,,170,82.5,D,Raw,Yes,,,,,,,,,,,Amateur Masters 60-64,1953-01-21,61,1
 Danil Tyutyunnik,M,90,lichno,135,-140,-140,135,,135,90,D,Raw,Yes,,,,,,,,,,,Amateur Teen 16-17,1998-08-10,16,1
 Vladislav Kurasov,M,88.7,lichno,205,215,222.5,222.5,,222.5,90,D,Raw,Yes,,,,,,,,,,,Amateur Teen 18-19,1995-07-25,19,1
@@ -74,7 +74,7 @@ Andrey Dezhin,M,66.9,lichno,,,,,,152.5,67.5,B,Single-ply,Yes,145,152.5,-155,152.
 Ashot Avakyan,M,73.8,Medved,,,,,,130,75,B,Single-ply,Yes,130,-140,-140,130,,,,,,,Amateur Teen 18-19,1996-09-03,18,1
 Sergey Gurov,M,72.7,Galaxy,,,,,,125,75,B,Single-ply,Yes,115,125,-130,125,,,,,,,Amateur Open,1976-06-25,38,1
 Mikhail Sotnikov,M,81.1,lichno,,,,,,140,82.5,B,Single-ply,Yes,-140,140,-145,140,,,,,,,Amateur Open,1979-04-15,35,1
-Denis Dobryanskiy,M,86.4,lichno,,,,,,187.5,90,B,Single-ply,Yes,-182.5,187.5,-195,187.5,,,,,,,Amateur Open,1977-12-06,37,1
+Denis Dobryanskiy,M,86.4,lichno,,,,,,187.5,90,B,Single-ply,Yes,-182.5,187.5,-195,187.5,,,,,,,Amateur Open,1977-12-06,,1
 Aleksandr Makarov,M,88.1,lichno,,,,,,,90,B,Single-ply,Yes,-170,-180,-180,,,,,,,,Amateur Masters 55-59,1957-01-02,57,DQ
 Denis Grigoryev,M,99.1,lichno,,,,,,200,100,B,Single-ply,Yes,190,200,-207.5,200,,,,,,,Amateur Open,1982-08-07,32,1
 Roman Pogorelov,M,120.3,lichno,,,,,,210,125,B,Single-ply,Yes,-200,200,210,210,,,,,,,Amateur Teen 18-19,1996-08-01,18,1
@@ -86,15 +86,15 @@ Anna Mikhaylova,F,53.8,lichno,,,,,,40,56,B,Raw,Yes,40,-45,-47.5,40,,,,,,,Amateur
 Valentina Kovaleva,F,54.7,lichno,,,,,,62.5,56,B,Raw,Yes,60,62.5,-65,62.5,,,,,,,Amateur Open 20-23,1994-08-07,20,1
 Vera Storozhenko,F,54.7,lichno,,,,,,50,56,B,Raw,Yes,50,-52.5,-55,50,,,,,,,Amateur Open 20-23,1994-04-08,20,2
 Irina Morozova,F,55.7,lichno,,,,,,77.5,56,B,Raw,Yes,72.5,77.5,-80,77.5,,,,,,,Amateur Open,1987-01-24,27,1
-Olga Savritskaya,F,55.5,lichno,,,,,,60,56,B,Raw,Yes,57.5,60,-62.5,60,,,,,,,Amateur Open,1979-12-22,35,2
+Olga Savritskaya,F,55.5,lichno,,,,,,60,56,B,Raw,Yes,57.5,60,-62.5,60,,,,,,,Amateur Open,1979-12-22,,2
 Viktoriya Lyamzina,F,57.7,lichno,,,,,,70,60,B,Raw,Yes,-65,-67.5,70,70,,,,,,,Amateur Open,1985-04-22,29,1
 Anna Zhmulina,F,58,lichno,,,,,,70,60,B,Raw,Yes,70,-77.5,-77.5,70,,,,,,,Amateur Open,1983-11-04,31,2
 Svetlana Chebotareva,F,57.4,lichno,,,,,,52.5,60,B,Raw,Yes,50,-52.5,52.5,52.5,,,,,,,Amateur Masters 45-49,1968-06-05,46,1
 Yuliya Kuznetsova,F,64.3,lichno,,,,,,92.5,67.5,B,Raw,Yes,92.5,-97.5,-100,92.5,,,,,,,Amateur Open,1973-05-15,41,1
 Natalya Zagrebina,F,65.3,lichno,,,,,,82.5,67.5,B,Raw,Yes,77.5,82.5,-87.5,82.5,,,,,,,Amateur Open,1977-10-29,37,2
-Irina Romasenko,F,64.2,lichno,,,,,,75,67.5,B,Raw,Yes,75,-82.5,-82.5,75,,,,,,,Amateur Open,1975-12-22,39,3
+Irina Romasenko,F,64.2,lichno,,,,,,75,67.5,B,Raw,Yes,75,-82.5,-82.5,75,,,,,,,Amateur Open,1975-12-22,,3
 Yekaterina Popova,F,73,Good Lift,,,,,,70,75,B,Raw,Yes,67.5,70,-72.5,70,,,,,,,Amateur Open,1979-07-07,35,1
-Anastasiya Frolova,F,73.4,lichno,,,,,,65,75,B,Raw,Yes,60,65,-70,65,,,,,,,Amateur Open,1981-12-17,33,2
+Anastasiya Frolova,F,73.4,lichno,,,,,,65,75,B,Raw,Yes,60,65,-70,65,,,,,,,Amateur Open,1981-12-17,,2
 Svetlana Goryainova,F,78.4,lichno,,,,,,52.5,82.5,B,Raw,Yes,52.5,-60,-60,52.5,,,,,,,Amateur Open 20-23,1994-03-13,20,1
 Dmitriy Yurshin,M,51.1,lichno,,,,,,50,52,B,Raw,Yes,45,50,-52.5,50,,,,,,,Amateur Teen 13-15,2001-08-27,13,1
 Aleksey Shorokhov,M,51.7,Zdorovye,,,,,,87.5,52,B,Raw,Yes,77.5,82.5,87.5,87.5,90,,,,,,Amateur Teen 16-17,1998-07-15,16,1
@@ -102,9 +102,9 @@ Vadim Starikov,M,50.4,lichno,,,,,,67.5,52,B,Raw,Yes,-60,60,67.5,67.5,,,,,,,Amate
 Matvey Putilin,M,59.1,lichno,,,,,,65,60,B,Raw,Yes,-65,65,-75,65,,,,,,,Amateur Teen 13-15,1999-08-01,15,1
 Oleg Plastinin,M,59.1,lichno,,,,,,112.5,60,B,Raw,Yes,102.5,112.5,-117.5,112.5,,,,,,,Amateur Teen 18-19,1995-12-01,19,1
 Aleksandr Pchelintsev,M,58.4,lichno,,,,,,115,60,B,Raw,Yes,115,-120,-120,115,,,,,,,Amateur Open,1986-03-14,28,1
-Anton Shamin,M,65.2,lichno,,,,,,100,67.5,B,Raw,Yes,90,95,100,100,,,,,,,Amateur Teen 13-15,1998-12-19,16,1
+Anton Shamin,M,65.2,lichno,,,,,,100,67.5,B,Raw,Yes,90,95,100,100,,,,,,,Amateur Teen 13-15,1998-12-19,,1
 Dmitriy Ryadnov,M,65.6,lichno,,,,,,115,67.5,B,Raw,Yes,110,115,-117.5,115,,,,,,,Amateur Teen 16-17,1997-04-13,17,1
-Ivan Bogatyy,M,65.3,lichno,,,,,,107.5,67.5,B,Raw,Yes,-100,-100,107.5,107.5,,,,,,,Amateur Teen 16-17,1996-12-10,18,2
+Ivan Bogatyy,M,65.3,lichno,,,,,,107.5,67.5,B,Raw,Yes,-100,-100,107.5,107.5,,,,,,,Amateur Teen 16-17,1996-12-10,,2
 Andrey Kaymakov,M,65.9,lichno,,,,,,107.5,67.5,B,Raw,Yes,100,-107.5,107.5,107.5,,,,,,,Amateur Teen 18-19,1995-03-09,19,1
 Andrey Dezhin,M,66.9,lichno,,,,,,127.5,67.5,B,Raw,Yes,122.5,127.5,-130,127.5,,,,,,,Amateur Open 20-23,1992-07-30,22,1
 Ivan Luchenkov,M,61.4,lichno,,,,,,125,67.5,B,Raw,Yes,120,125,-127.5,125,,,,,,,Amateur Open 20-23,1991-03-30,23,2
@@ -120,17 +120,17 @@ Nikita Bybik,M,72.1,lichno,,,,,,,75,B,Raw,Yes,-105,-105,-105,,,,,,,,Amateur Teen
 Sergey Guseynov,M,75,lichno,,,,,,150,75,B,Raw,Yes,135,145,150,150,,,,,,,Amateur Open 20-23,1993-02-01,21,1
 Ivan Krylov,M,70.4,lichno,,,,,,145,75,B,Raw,Yes,125,135,145,145,,,,,,,Amateur Open 20-23,1993-11-15,21,2
 Pavel Bakiyev,M,71.7,lichno,,,,,,125,75,B,Raw,Yes,115,120,125,125,,,,,,,Amateur Open 20-23,1994-02-08,20,3
-Sergey Titov,M,72.3,lichno,,,,,,117.5,75,B,Raw,Yes,110,117.5,-120,117.5,,,,,,,Amateur Open 20-23,1990-12-24,24,4
+Sergey Titov,M,72.3,lichno,,,,,,117.5,75,B,Raw,Yes,110,117.5,-120,117.5,,,,,,,Amateur Open 20-23,1990-12-24,,4
 Sergey Kosinov,M,74.5,lichno,,,,,,107.5,75,B,Raw,Yes,107.5,-117.5,-117.5,107.5,,,,,,,Amateur Open 20-23,1994-01-03,20,5
 Danil Ilyasov,M,74.8,lichno,,,,,,105,75,B,Raw,Yes,105,-112.5,-117.5,105,,,,,,,Amateur Open 20-23,1992-03-08,22,6
 Vladimir Vulkanov,M,72.9,lichno,,,,,,,75,B,Raw,Yes,-125,-125,-125,,,,,,,,Amateur Open 20-23,1992-11-13,22,DQ
-Denis Sokov,M,74,lichno,,,,,,170,75,B,Raw,Yes,160,170,-180,170,,,,,,,Amateur Open,1985-12-06,29,1
+Denis Sokov,M,74,lichno,,,,,,170,75,B,Raw,Yes,160,170,-180,170,,,,,,,Amateur Open,1985-12-06,,1
 Artem Chebotarev,M,73.7,lichno,,,,,,145,75,B,Raw,Yes,135,140,145,145,,,,,,,Amateur Open,1990-02-10,24,2
 Roman Yudin,M,68,lichno,,,,,,105,75,B,Raw,Yes,100,-105,105,105,,,,,,,Amateur Open,1990-06-29,24,3
 Sergey Rudychev,M,72.1,lichno,,,,,,120,75,B,Raw,Yes,105,117.5,120,120,,,,,,,Amateur Masters 40-44,1974-06-08,40,1
 Oleg Vinokurov,M,75,lichno,,,,,,115,75,B,Raw,Yes,107.5,112.5,115,115,,,,,,,Amateur Masters 45-49,1966-05-10,48,1
 Fedor Yudin,M,80.9,lichno,,,,,,105,82.5,B,Raw,Yes,100,-105,105,105,,,,,,,Amateur Teen 16-17,1997-02-27,17,1
-Aleksey Melnikov,M,80.4,lichno,,,,,,,82.5,B,Raw,Yes,-117.5,-117.5,-117.5,,,,,,,,Amateur Teen 16-17,1997-12-05,17,DQ
+Aleksey Melnikov,M,80.4,lichno,,,,,,,82.5,B,Raw,Yes,-117.5,-117.5,-117.5,,,,,,,,Amateur Teen 16-17,1997-12-05,,DQ
 Dmitriy Zagrebin,M,81.8,lichno,,,,,,135,82.5,B,Raw,Yes,125,132.5,135,135,,,,,,,Amateur Teen 18-19,1996-07-28,18,1
 Vyacheslav Shulzhenko,M,76,lichno,,,,,,132.5,82.5,B,Raw,Yes,125,-132.5,132.5,132.5,,,,,,,Amateur Teen 18-19,1996-04-15,18,2
 Ruslan Sotvoldyev,M,78.3,lichno,,,,,,152.5,82.5,B,Raw,Yes,135,145,152.5,152.5,,,,,,,Amateur Open 20-23,1993-11-15,21,1
@@ -147,7 +147,7 @@ Vladimir Panfilov,M,81.3,lichno,,,,,,110,82.5,B,Raw,Yes,105,-110,110,110,,,,,,,A
 Dmitriy Zimin,M,83.9,lichno,,,,,,120,90,B,Raw,Yes,115,120,-127.5,120,,,,,,,Amateur Teen 18-19,1995-09-11,19,1
 Maksim Tolmachev,M,88.5,lichno,,,,,,170,90,B,Raw,Yes,170,-180,-180,170,,,,,,,Amateur Open 20-23,1991-06-30,23,1
 Gleb Glebov,M,86,lichno,,,,,,165,90,B,Raw,Yes,-152.5,155,165,165,,,,,,,Amateur Open,1984-10-11,30,1
-Denis Dobryanskiy,M,85.4,lichno,,,,,,157.5,90,B,Raw,Yes,157.5,-165,-165,157.5,,,,,,,Amateur Open,1977-12-06,37,2
+Denis Dobryanskiy,M,85.4,lichno,,,,,,157.5,90,B,Raw,Yes,157.5,-165,-165,157.5,,,,,,,Amateur Open,1977-12-06,,2
 Nikolay Polyanin,M,85.2,lichno,,,,,,155,90,B,Raw,Yes,145,155,-157.5,155,,,,,,,Amateur Open,1985-10-11,29,3
 Roman Yevsyukov,M,88.7,lichno,,,,,,155,90,B,Raw,Yes,-155,155,-160,155,,,,,,,Amateur Open,1979-12-01,35,4
 Ivan Minakov,M,83.9,lichno,,,,,,152.5,90,B,Raw,Yes,140,152.5,-155,152.5,,,,,,,Amateur Open,1984-10-19,30,5
@@ -165,14 +165,14 @@ Anton Borovlev,M,98.2,Nosorog,,,,,,162.5,100,B,Raw,Yes,155,160,162.5,162.5,,,,,,
 Oleg Filimonov,M,99.5,lichno,,,,,,235,100,B,Raw,Yes,225,235,-237.5,235,,,,,,,Amateur Open,1987-03-12,27,1
 Arman Grigoryan,M,94.6,lichno,,,,,,207.5,100,B,Raw,Yes,-207.5,-207.5,207.5,207.5,,,,,,,Amateur Open,1994-06-03,20,2
 Dmitriy Timofeyev,M,96.2,lichno,,,,,,177.5,100,B,Raw,Yes,172.5,177.5,-182.5,177.5,,,,,,,Amateur Open,1976-08-29,38,3
-Andrey Bogoslovskiy,M,96.5,lichno,,,,,,152.5,100,B,Raw,Yes,142.5,152.5,-162.5,152.5,,,,,,,Amateur Open,1978-03-24,36,4
+Andrey Bogoslovskiy,M,96.5,lichno,,,,,,152.5,100,B,Raw,Yes,142.5,152.5,-162.5,152.5,,,,,,,Amateur Open,1978-03-24,,4
 Aleksandr Kolesov,M,95,lichno,,,,,,140,100,B,Raw,Yes,140,-150,-150,140,,,,,,,Amateur Open,1984-05-15,30,5
 Arman Grigoryan,M,94.6,lichno,,,,,,,100,B,Raw,Yes,-207.5,,,,,,,,,,Amateur Open,1994-06-03,20,DQ
 Arman Grigoryan,M,94.6,lichno,,,,,,,100,B,Raw,Yes,-215,,,,,,,,,,Amateur Open,1994-06-03,20,DQ
-Nikolay Romasenko,M,98.5,lichno,,,,,,187.5,100,B,Raw,Yes,180,187.5,-195,187.5,,,,,,,Amateur Masters 40-44,1973-12-19,41,1
+Nikolay Romasenko,M,98.5,lichno,,,,,,187.5,100,B,Raw,Yes,180,187.5,-195,187.5,,,,,,,Amateur Masters 40-44,1973-12-19,,1
 Aleksey Menshikh,M,100,lichno,,,,,,162.5,100,B,Raw,Yes,155,162.5,-167.5,162.5,,,,,,,Amateur Masters 40-44,1972-02-08,42,2
 Sergey Polubinskiy,M,97.1,lichno,,,,,,135,100,B,Raw,Yes,135,-145,-145,135,,,,,,,Amateur Masters 40-44,1971-10-28,43,3
-Andrey Golubev,M,92.9,lichno,,,,,,130,100,B,Raw,Yes,125,130,-135,130,,,,,,,Amateur Masters 45-49,1966-12-22,48,1
+Andrey Golubev,M,92.9,lichno,,,,,,130,100,B,Raw,Yes,125,130,-135,130,,,,,,,Amateur Masters 45-49,1966-12-22,,1
 Mikhail Maslov,M,102.9,Zdorovye,,,,,,140,110,B,Raw,Yes,130,140,-147.5,140,,,,,,,Amateur Teen 18-19,1996-07-18,18,1
 Sergey Mordvinov,M,104.2,lichno,,,,,,215,110,B,Raw,Yes,207.5,215,-217.5,215,,,,,,,Amateur Open,1982-08-26,32,1
 Pavel Zhdanov,M,107.8,lichno,,,,,,180,110,B,Raw,Yes,180,-185,-185,180,,,,,,,Amateur Open,1980-01-01,34,2
@@ -210,7 +210,7 @@ Yuliya Kupriyanova,F,49.8,lichno,-60,,,,,,52,SBD,Raw,Yes,-35,,,,,-60,-65,-65,,,A
 Irina Dudyreva,F,50.9,Medved,120,-130,130,130,-145.5,300,52,SBD,Raw,Yes,60,67.5,70.5,70.5,-72.5,100,-110,-110,100,,Amateur Open,1990-04-15,24,1
 Elvira Fayzullina,F,51.2,lichno,105,110,115,115,,270,52,SBD,Raw,Yes,55,60,-65,60,,95,-100,-100,95,,Amateur Open,1987-01-23,27,2
 Alena Igoshina,F,55.1,lichno,120,130,135,135,,280,56,SBD,Raw,Yes,40,42.5,45,45,,90,95,100,100,,Amateur Open,1985-05-31,29,1
-Marina Sycheva,F,55.8,lichno,120,130,-140,130,,260,56,SBD,Raw,Yes,50,-55,-57.5,50,,80,-85,-85,80,,Amateur Open,1982-12-26,32,2
+Marina Sycheva,F,55.8,lichno,120,130,-140,130,,260,56,SBD,Raw,Yes,50,-55,-57.5,50,,80,-85,-85,80,,Amateur Open,1982-12-26,,2
 Tatyana Nekhoroshkova,F,54.7,lichno,100,-112.5,-112.5,100,,245,56,SBD,Raw,Yes,52.5,55,-57.5,55,,82.5,-90,90,90,,Amateur Open,1980-07-16,34,3
 Oksana Lugovskaya,F,53.3,lichno,95,102.5,110,110,,227.5,56,SBD,Raw,Yes,47.5,-52.5,-52.5,47.5,,65,70,-75,70,,Amateur Open,1989-01-11,25,4
 Tatyana Babina,F,55,lichno,77.5,82.5,85,85,,200,56,SBD,Raw,Yes,-37.5,-42.5,45,45,,65,70,-77.5,70,,Amateur Open,1981-08-04,33,5
@@ -218,9 +218,9 @@ Natalya Sayapina,F,54.8,lichno,-120,,,,,,56,SBD,Raw,Yes,-55,,,,,-80,-80,-80,,,Am
 Yuliya Vizgina,F,59.4,lichno,120,130,-132.5,130,,285,60,SBD,Raw,Yes,55,60,-65,60,,80,-95,95,95,,Amateur Open 20-23,1992-02-03,22,1
 Alena Shamanayeva,F,56.2,lichno,92.5,100,-105,100,,240,60,SBD,Raw,Yes,42.5,47.5,-55,47.5,,85,87.5,92.5,92.5,,Amateur Open 20-23,1993-10-05,21,2
 Yuliya Vizgina,F,59.4,lichno,120,130,-132.5,130,,285,60,SBD,Raw,Yes,55,60,-65,60,,80,-95,95,95,,Amateur Open,1992-02-03,22,1
-Svetlana Kashirina,F,59.2,lichno,-125,132.5,-137.5,132.5,,280,60,SBD,Raw,Yes,57.5,62.5,65,65,,-75,75,82.5,82.5,,Amateur Open,1988-12-23,26,2
+Svetlana Kashirina,F,59.2,lichno,-125,132.5,-137.5,132.5,,280,60,SBD,Raw,Yes,57.5,62.5,65,65,,-75,75,82.5,82.5,,Amateur Open,1988-12-23,,2
 Olga Nagornaya,F,60,Nosorog,115,125,132.5,132.5,,275,60,SBD,Raw,Yes,45,50,-52.5,50,,80,87.5,92.5,92.5,,Amateur Open,1982-07-24,32,3
-Darya Frolkina,F,58.5,lichno,80,90,95,95,,222.5,60,SBD,Raw,Yes,40,45,-47.5,45,,75,82.5,-85,82.5,,Amateur Open,1987-12-23,27,4
+Darya Frolkina,F,58.5,lichno,80,90,95,95,,222.5,60,SBD,Raw,Yes,40,45,-47.5,45,,75,82.5,-85,82.5,,Amateur Open,1987-12-23,,4
 Antonina Burbitko,F,60.7,lichno,145,155,165,165,,385,67.5,SBD,Raw,Yes,75,80,-85,80,,125,135,140,140,,Amateur Open,1992-09-17,22,1
 Antonina Tukacheva,F,74.5,Sbornaya,125,132.5,137.5,137.5,,292.5,75,SBD,Raw,Yes,50,55,-57.5,55,,90,95,100,100,,Amateur Open,1982-11-14,32,1
 Leon Gurin,M,53.8,lichno,80,90,-100,90,,240,56,SBD,Raw,Yes,65,70.5,-75,70.5,,75,-80,80,80,,Amateur Teen 13-15,1999-01-01,15,1
@@ -230,8 +230,8 @@ Sergey Volodarskiy,M,59.9,lichno,200,207.5,-215,207.5,,505,60,SBD,Raw,Yes,117.5,
 Vladislav Kashirin,M,67.4,lichno,190,200,210,210,,475,67.5,SBD,Raw,Yes,105,107.5,110,110,,155,-160,-165,155,,Amateur Open,1989-09-09,25,1
 Andrey Markovchin,M,66.5,lichno,180,192.5,-205,192.5,,417.5,67.5,SBD,Raw,Yes,-80,85,-95,85,,135,140,-150,140,,Amateur Open,1987-09-04,27,2
 Grigoriy Telnov,M,73,lichno,100,110,115,115,,282.5,75,SBD,Raw,Yes,60,62.5,-65,62.5,,90,100,105,105,,Amateur Teen 13-15,2000-04-18,14,1
-Aleksandr Sidorov,M,73.1,lichno,95,105,115,115,,257.5,75,SBD,Raw,Yes,40,45,-50,45,,82.5,90,97.5,97.5,,Amateur Teen 13-15,1999-12-26,15,2
-Stanislav Tsymbarenko,M,76.5,Sbornaya,-175,-185,185,185,,442.5,82.5,SBD,Raw,Yes,105,112.5,-117.5,112.5,,135,145,-150,145,,Amateur Teen 16-17,1997-12-16,17,1
+Aleksandr Sidorov,M,73.1,lichno,95,105,115,115,,257.5,75,SBD,Raw,Yes,40,45,-50,45,,82.5,90,97.5,97.5,,Amateur Teen 13-15,1999-12-26,,2
+Stanislav Tsymbarenko,M,76.5,Sbornaya,-175,-185,185,185,,442.5,82.5,SBD,Raw,Yes,105,112.5,-117.5,112.5,,135,145,-150,145,,Amateur Teen 16-17,1997-12-16,,1
 Dmitriy Knyrik,M,81.1,Nosorog,160,170,177.5,177.5,,387.5,82.5,SBD,Raw,Yes,77.5,82.5,85,85,,-105,115,125,125,,Amateur Teen 16-17,1997-05-18,17,2
 Vladislav Chicherin,M,81.8,lichno,130,140,150,150,,362.5,82.5,SBD,Raw,Yes,77.5,82.5,-87.5,82.5,,115,125,130,130,,Amateur Teen 16-17,1997-08-31,17,3
 Sergey Laskatelev,M,81.4,lichno,200,205,210,210,,515,82.5,SBD,Raw,Yes,125,130,-135,130,,170,-175,175,175,,Amateur Open,1988-09-22,26,1
@@ -262,7 +262,7 @@ Alexander Chekachkov,M,118.9,lichno,,,,,,250,125,B,Single-ply,No,240,-250,250,25
 Anzhela Kulagina,F,65.1,lichno,,,,,,117.5,67.5,B,Raw,No,110,117.5,,117.5,,,,,,,Pro Open,1988-11-04,26,1
 Natalya Trukhina,F,80.4,lichno,,,,,,155,82.5,B,Raw,No,150,155,-160,155,,,,,,,Pro Open 20-23,1991-07-01,23,1
 Natalya Trukhina,F,80.4,lichno,,,,,,155,82.5,B,Raw,No,150,155,-160,155,,,,,,,Pro Open,1991-07-01,23,1
-Roman Grigoryev,M,45.3,Galaxy,,,,,,40,52,B,Raw,No,35,-40,40,40,,,,,,,Pro Teen 13-15,2001-12-23,13,1
+Roman Grigoryev,M,45.3,Galaxy,,,,,,40,52,B,Raw,No,35,-40,40,40,,,,,,,Pro Teen 13-15,2001-12-23,,1
 Andrey Kaymakov,M,65.9,lichno,,,,,,,67.5,B,Raw,No,-100,,,,,,,,,,Pro Teen 18-19,1995-03-09,19,DQ
 Artem Nekhayev,M,65.7,lichno,,,,,,155,67.5,B,Raw,No,150,155,-160.5,155,,,,,,,Pro Open,1987-05-13,27,1
 Stanislav Milostnoy,M,74.7,lichno,,,,,,230,75,B,Raw,No,220,225,230,230,,,,,,,Pro Open,1978-01-01,36,1
@@ -288,7 +288,7 @@ Andrey Makarkin,M,99.9,lichno,,,,,,200,100,B,Raw,No,200,-210,-212.5,200,,,,,,,Pr
 Leonid Khlabynin,M,96.5,lichno,,,,,,175,100,B,Raw,No,175,-185,-190,175,,,,,,,Pro Open,1986-06-18,28,6
 Denis Zaytsev,M,91.3,lichno,,,,,,172.5,100,B,Raw,No,160,170,172.5,172.5,,,,,,,Pro Open,1983-02-22,31,7
 Dmitriy Polikarpov,M,96.8,lichno,,,,,,155,100,B,Raw,No,155,-165,-165,155,,,,,,,Pro Open,1979-08-01,35,8
-Yevgeniy Shtyrkov,M,97,lichno,,,,,,,100,B,Raw,No,-155,-165,-165,,,,,,,,Pro Open,1987-12-14,27,DQ
+Yevgeniy Shtyrkov,M,97,lichno,,,,,,,100,B,Raw,No,-155,-165,-165,,,,,,,,Pro Open,1987-12-14,,DQ
 Andrey Sumin,M,97.6,lichno,,,,,,212.5,100,B,Raw,No,200,-210,212.5,212.5,,,,,,,Pro Masters 50-54,1961-06-23,53,1
 Aleksandr Vdovushkin,M,92.8,lichno,,,,,,145,100,B,Raw,No,135,-145,145,145,,,,,,,Pro Masters 55-59,1956-11-04,58,1
 Anton Koksharov,M,104,lichno,,,,,,232.5,110,B,Raw,No,225,232.5,-237.5,232.5,,,,,,,Pro Open,1977-09-18,37,1
@@ -314,7 +314,7 @@ Vildan Rezyapov,M,123.1,Nosorog,-230,230,250,250,,720,125,SBD,Multi-ply,No,195,2
 Aleksandr Trezinskiy,M,121,lichno,300,315,325,325,,935,125,SBD,Multi-ply,No,250,-260,260,260,,350,-365,-372.5,350,,Pro Open,1980-06-10,34,1
 Dmitriy Markovskiy,M,87.5,lichno,260,267.5,272.5,272.5,-280,702.5,90,SBD,Single-ply,No,150,-160,-160,150,,-270,280,-285,280,,Pro Teen 18-19,1996-01-25,18,1
 Denis Kryuger,M,88.1,lichno,-190,-190,190,190,,575,90,SBD,Single-ply,No,140,145,-155,145,,235,240,-245,240,,Pro Teen 18-19,1996-09-01,18,2
-Stepan Spiridonov,M,83.1,lichno,240,-250,-250,240,,725,90,SBD,Single-ply,No,190,-200,-200,190,,285,-295,295,295,,Pro Open 20-23,1993-12-21,21,1
+Stepan Spiridonov,M,83.1,lichno,240,-250,-250,240,,725,90,SBD,Single-ply,No,190,-200,-200,190,,285,-295,295,295,,Pro Open 20-23,1993-12-21,,1
 Aleksandr Klimovich,M,89.6,lichno,280,-310,-310,280,,875,90,SBD,Single-ply,No,240,250,-255,250,,325,345,-360,345,,Pro Open,1980-05-28,34,1
 Roman Durnov,M,84.2,lichno,-220,,,,,,90,SBD,Single-ply,No,-185,-195,-195,,,270,285,-292.5,285,,Pro Open,1986-09-23,28,DQ
 Vyacheslav Ustinovich,M,98.1,lichno,-285,285,296,296,-310,801,100,SBD,Single-ply,No,210,215,-220,215,,290,-300,-300,290,,Pro Open 20-23,1993-03-11,21,1
