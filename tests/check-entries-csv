@@ -180,7 +180,7 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         for f in sys.argv[1:]:
             # Need to think of a good syntax for passing config files
-            check(sys.argv[0], f, None, None)
+            check(sys.argv[0], f, None)
 
     # Otherwise, check every file named entries.csv in the dirtree,
     # which is much faster than using `find -exec`.
