@@ -14,8 +14,15 @@ use std::str::FromStr;
 pub enum Age {
     /// The exact age of the lifter.
     Exact(u8),
-    /// The lower possible age of the lifter.
+
+    /// Either one of two ages, stored as the lower of the pair.
+    ///
+    /// For example, an Approximate Age of 19 means "19 or 20".
+    ///
+    /// Approximate Ages occur when derived from a BirthYear,
+    /// where it's not known whether the birthday occurred yet.
     Approximate(u8),
+
     /// No age specified.
     None,
 }
@@ -51,6 +58,83 @@ impl Age {
         let s = format!("{}", f);
         s.parse::<Age>()
     }
+
+    /// Whether the given Age is definitely less than another.
+    ///
+    /// Because of Approximate Ages, this does not produce a deterministic ordering,
+    /// but it is still useful to determine whether one Age is out of range
+    /// of another, usually for purposes of error checking.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Age;
+    /// let approx_18 = Age::Approximate(18);  // "18 or 19"
+    /// let approx_19 = Age::Approximate(19);  // "19 or 20"
+    /// let exact_20 = Age::Exact(20);
+    ///
+    /// assert_eq!(approx_18.is_definitely_less_than(exact_20), true);
+    /// assert_eq!(approx_19.is_definitely_less_than(exact_20), false);
+    /// ```
+    pub fn is_definitely_less_than(self, other: Age) -> bool {
+        match self {
+            Age::Exact(age) => {
+                match other {
+                    Age::Exact(other) => age < other,
+                    Age::Approximate(other) => age < other,
+                    Age::None => false,
+                }
+            }
+            Age::Approximate(age) => {
+                match other {
+                    Age::Exact(other) => age + 1 < other,
+                    Age::Approximate(other) => age + 1 < other,
+                    Age::None => false,
+                }
+            }
+            Age::None => false,
+        }
+    }
+
+    /// Whether the given Age is definitely greater than another.
+    ///
+    /// Because of Approximate Ages, this does not produce a deterministic ordering,
+    /// but it is still useful to determine whether one Age is out of range
+    /// of another, usually for purposes of error checking.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Age;
+    /// let approx_17 = Age::Approximate(17);  // "17 or 18"
+    /// let approx_19 = Age::Approximate(19);  // "19 or 20"
+    /// let exact_18 = Age::Exact(18);
+    /// let exact_19 = Age::Exact(19);
+    ///
+    /// assert_eq!(approx_17.is_definitely_greater_than(exact_18), false);
+    /// assert_eq!(approx_19.is_definitely_greater_than(exact_18), true);
+    /// assert_eq!(approx_19.is_definitely_greater_than(exact_19), false);
+    /// ```
+    pub fn is_definitely_greater_than(self, other: Age) -> bool {
+        match self {
+            Age::Exact(age) => {
+                match other {
+                    Age::Exact(other) => age > other,
+                    Age::Approximate(other) => age > other + 1,
+                    Age::None => false,
+                }
+            }
+            Age::Approximate(age) => {
+                match other {
+                    Age::Exact(other) => age > other,
+                    Age::Approximate(other) => age + 1 > other,
+                    Age::None => false,
+                }
+            }
+            Age::None => false,
+        }
+    }
+
 }
 
 impl fmt::Display for Age {

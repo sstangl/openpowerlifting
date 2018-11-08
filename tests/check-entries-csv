@@ -12,7 +12,6 @@
 
 import sys
 import os
-import toml
 
 try:
     import oplcsv
@@ -154,108 +153,12 @@ def check_row_name_consistency(row, csv):
                 perror("Name field empty.")
 
 
-def check_row_division(row, csv, divisions, meetyear):
-    if 'Division' not in csv.fieldnames:
-        return
-
-    for div_key in divisions:
-        div = divisions[div_key]
-        if row[csv.index('Division')] == div["name"]:
-
-            by_division = False
-            if float(div["max"]) % 1 == 0.5:  # Then this is a birthyear based division
-                by_division = True
-
-            if 'BirthYear' in csv.fieldnames and row[csv.index('BirthYear')].isdigit():
-                approxage = meetyear - int(row[csv.index('BirthYear')])
-
-                if by_division:
-                    maxage = float(div["max"]) + 0.5
-                    minage = float(div["min"]) - 0.5
-                else:
-                    maxage = float(div["max"]) + 1
-                    minage = float(div["min"]) - 1
-
-                if approxage > maxage:
-                    pwarning("Lifter \"%s\" is too old(~%s) for division: %s" %
-                             (row[csv.index('Name')],
-                                 approxage,
-                                 row[csv.index('Division')]))
-                elif approxage < minage:
-                    pwarning("Lifter \"%s\" is too young(~%s) for division: %s" %
-                             (row[csv.index('Name')],
-                                 approxage,
-                                 row[csv.index('Division')]))
-
-            elif 'Age' in csv.fieldnames and row[csv.index('Age')].isdigit():
-                if int(row[csv.index('Age')]) > round(div["max"] + 0.5):
-                    pwarning("Lifter \"%s\" is too old(%s) for division: %s" %
-                             (row[csv.index('Name')],
-                                 row[csv.index('Age')],
-                                 row[csv.index('Division')]))
-                elif int(row[csv.index('Age')]) < round(div["min"] - 0.5):
-                    pwarning("Lifter \"%s\" is too young(%s) for division: %s" %
-                             (row[csv.index('Name')],
-                                 row[csv.index('Age')],
-                                 row[csv.index('Division')]))
-
-            return
-
-    pwarning("Lifter \"%s\" has an unknown division: %s" %
-             (row[csv.index('Name')], row[csv.index('Division')]))
-
-
-def check_row(row, csv, configtoml, meet_date, meet_id):
+def check_row(row, csv, meet_date, meet_id):
     check_row_name_consistency(row, csv)
-
-    if meet_date:
-        meet_year = int(meet_date.split('-')[0])
-
-    if configtoml and meet_date:  # Then we actually have a config file
-
-        weight_classes = None
-
-        # Now find the correct weightclass group based on sex and division
-        # Need a sex to get the right weightclasses
-        if 'Sex' in csv.fieldnames and row[csv.index('Sex')]:
-            for wc_key in configtoml["weightclasses"]:
-                wc_rule = configtoml["weightclasses"][wc_key]
-
-                # Use the division if we have one
-                if 'Division' in csv.fieldnames and row[csv.index('Division')]:
-                    # Check the dates line up
-                    if (meet_date >= wc_rule["date_range"][0] and
-                            meet_date <= wc_rule["date_range"][1]):
-                        # Check the sex lines up
-                        if (("sex" in wc_rule and
-                                row[csv.index('Sex')] == wc_rule["sex"]) or
-                                "sex" not in wc_rule):
-                            if ("divisions" in wc_rule and row[csv.index('Division')]
-                                    in wc_rule["divisions"]):
-                                weight_classes = wc_rule["classes"]
-                            # This is a default, rule use it only if we haven't
-                            # found other rules
-                            elif "divisions" not in wc_rule and weight_classes is None:
-                                weight_classes = wc_rule["classes"]
-
-                elif "divisions" not in wc_rule:  # Otherwise use default
-                    # Check the dates line up
-                    if (meet_date >= wc_rule["date_range"][0] and
-                            meet_date <= wc_rule["date_range"][1]):
-                        # Check the sex lines up
-                        if (("sex" in wc_rule and
-                                row[csv.index('Sex')] == wc_rule["sex"]) or
-                                "sex" not in wc_rule):
-                            weight_classes = wc_rule["classes"]
-
-        if (meet_id not in configtoml["exemptions"] or
-                "check_row_division" not in configtoml["exemptions"][meet_id]):
-            check_row_division(row, csv, configtoml["divisions"], meet_year)
-
     check_column_name(row[csv.index('Name')], row, csv)
 
 
-def check(scriptname, filename, configtoml, meetpath):
+def check(scriptname, filename, meetpath):
     # Pretty-printer helper (so we only print the name once).
     reset_filename_state(filename)
 
@@ -264,24 +167,12 @@ def check(scriptname, filename, configtoml, meetpath):
     meet_id = os.path.basename(os.path.dirname(filename))
     meet_date = None
 
-    if meetpath != '':
-        meet = oplcsv.Csv(meetpath)
-        # Make sure that we have a proper date
-        if len(meet.rows) == 1 and "Date" in meet.fieldnames:
-            try:
-                meet_date = meet.rows[0][meet.index("Date")]
-                if (meet_date.count('-') != 2 or
-                        not meet_date.replace('-', '').isdigit()):
-                    meet_date = None
-            except IndexError:
-                pass
-
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
             perror("Column count mismatch for row: %s" % ','.join(row))
             continue
 
-        check_row(row, csv, configtoml, meet_date, meet_id)
+        check_row(row, csv, meet_date, meet_id)
 
 
 if __name__ == '__main__':
@@ -294,23 +185,9 @@ if __name__ == '__main__':
     # Otherwise, check every file named entries.csv in the dirtree,
     # which is much faster than using `find -exec`.
     else:
-        configpath = ''
-        configtoml = None
-        configfile = None
         for dirname, subdirs, files in os.walk(os.getcwd()):
             if "meet-data" in subdirs:
                 subdirs[:] = ['meet-data']
-
-            if configpath and os.path.dirname(configpath) not in dirname:
-                configpath = ''
-                configfile.close()
-                configtoml = None
-                configfile = None
-
-            if 'CONFIG.toml' in files:
-                configpath = dirname + os.sep + 'CONFIG.toml'
-                configfile = open(configpath, 'r', encoding='utf-8')
-                configtoml = toml.load(configfile)
 
             if 'entries.csv' in files:
                 entriespath = dirname + os.sep + 'entries.csv'
@@ -319,13 +196,10 @@ if __name__ == '__main__':
                 if 'meet.csv' in files:
                     meetpath = dirname + os.sep + 'meet.csv'
 
-                check(sys.argv[0], entriespath, configtoml, meetpath)
+                check(sys.argv[0], entriespath, meetpath)
 
                 if 'meet.csv' not in files:
                     perror('Missing meet.csv')
-
-        if configfile is not None:
-            configfile.close()
 
     print("Summary: %u errors, %u warnings." % (errorCount, warningCount))
     if errorCount > 0:
