@@ -1,0 +1,15 @@
+[divisions]
+    open_m = {name ="MO",min=0,max=999}
+    open_f = {name ="FO",min=0,max=999}
+[weightclasses.default_M]
+    classes = ["80","95","110","125","125+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["80","80+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+
+
+[exemptions]

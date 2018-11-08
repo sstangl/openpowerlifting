@@ -427,6 +427,10 @@ pub enum Federation {
     #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
 
+    /// New Zealand Open competition, standalone.
+    #[strum(to_string = "NZOpen", serialize = "nzopen")]
+    NZOpen,
+
     /// New Zealand Powerlifting Federation, IPF.
     #[strum(to_string = "NZPF", serialize = "nzpf")]
     NZPF,
@@ -795,6 +799,7 @@ impl Federation {
             Federation::NOTLD => false,
             Federation::NPA => false,
             Federation::NSF => true,
+            Federation::NZOpen => false,
             Federation::NZPF => true,
             Federation::OceaniaPF => true,
             Federation::OlomouckySilak => false,
@@ -961,6 +966,7 @@ impl Federation {
             Federation::NOTLD => Some(Country::USA),
             Federation::NPA => Some(Country::Israel),
             Federation::NSF => Some(Country::Norway),
+            Federation::NZOpen => Some(Country::NewZealand),
             Federation::NZPF => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::OlomouckySilak => Some(Country::Czechia),
@@ -1127,6 +1133,7 @@ impl Federation {
             Federation::NOTLD => PointsSystem::Wilks,
             Federation::NPA => PointsSystem::Wilks,
             Federation::NSF => PointsSystem::Wilks,
+            Federation::NZOpen => PointsSystem::Wilks,
             Federation::NZPF => PointsSystem::Wilks,
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::OlomouckySilak => PointsSystem::Wilks,
