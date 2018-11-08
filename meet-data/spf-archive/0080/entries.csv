@@ -1,28 +1,28 @@
-Name,WeightClassKg,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Squat4Kg,Bench4Kg,Deadlift4Kg,Event,Equipment,Sex,Division,Place
-Cody Adair,60,56.7,WV,70.31,43.09,88.45,201.85,79.38,,102.06,SBD,Wraps,M,Pre-Teen,1
-Spencer Jimick,75,68.95,VA,111.13,102.06,129.27,342.46,,,,SBD,Wraps,M,Teenage 16-17,1
-Andrew Jones,100,96.71,VA,113.4,108.86,181.44,403.7,,,192.78,SBD,Wraps,M,Teenage 18-19,1
-Stella Krupinski,82.5,80.29,VA,226.8,138.35,219.99,585.13,,,,SBD,Wraps,F,Open,1
-George Robinson,100,97.52,VA,165.56,136.08,215.46,517.1,,,,SBD,Wraps,M,Open,1
-Brandon McClaughterty,110,109.95,VA,226.8,206.38,226.8,659.98,,,,SBD,Wraps,M,Open,1
-Jay Wolcott,110,104.42,VA,165.56,124.74,170.1,460.4,,,,SBD,Wraps,M,Open,2
-Billy Barker,100,96.62,VA,129.27,127.01,176.9,433.18,,,,SBD,Wraps,M,Masters 40-44,1
-Donald Walters,82.5,82.1,WV,181.44,136.08,208.65,526.17,,,,SBD,Single-ply,M,Masters 55-59,1
-Adam Troutt,90,89.63,VA,,,,,,,,SBD,Multi-ply,M,Open,DQ
-Dennis Davis,125,110.68,VA,217.72,181.44,197.31,596.47,,,,SBD,Multi-ply,M,Open,1
-Monte Spaekman,140+,149.05,VA,453.59,288.03,256.28,997.9,,,,SBD,Multi-ply,M,Open,1
-Pete Cropp,110,108.5,VA,281.23,276.69,238.14,796.05,,,,SBD,Multi-ply,M,Masters 40-44,1
-Paul Sutphin,90,88.99,WV,256.28,138.35,240.4,635.03,,,,SBD,Multi-ply,M,Masters 55-59,1
-Jacob Dunn,56,55.34,WV,,65.77,124.74,190.51,,,,BD,Raw,M,Teenage 16-17,1
-Travis Pearl,90,88,VA,,149.69,204.12,353.8,,,208.65,BD,Raw,M,Juniors,1
-Armando Mineiro,140+,155.13,VA,,165.56,244.94,410.5,,,254.01,BD,Raw,M,Open,1
-Walter Canada,100,98.88,VA,,163.29,208.65,371.95,,,213.19,BD,Raw,M,Masters 50-54,1
-Joseph Price,100,92.99,VA,,158.76,226.8,385.55,,,,BD,Multi-ply,M,Juniors,1
-Derek Wingo,125,110.22,WV,,222.26,229.06,451.32,,226.8,,BD,Multi-ply,M,Open,1
-C.T. Talevi,67.5,66.5,VA,,122.47,,122.47,,,,B,Raw,M,Teenage 16-17,1
-Joseph Orange,100,97.89,VA,,154.22,,154.22,,,,B,Raw,M,Police/Fire,1
-Wes Shropshire,110,105.69,VA,,170.1,,170.1,,,,B,Raw,M,Masters 55-59,1
-Eugene Jones,110,105.32,VA,,129.27,,129.27,,,,B,Raw,M,Masters 80-84,1
-Jonathan Whorley,140,136.71,VA,,226.8,,226.8,,,,B,Multi-ply,M,Open,1
-Carl Tiller,110,102.51,VA,,,272.16,272.16,,,,D,Multi-ply,M,Masters 40-44,1
-Jared Mitchell,90,89.81,WV,,,183.7,183.7,,,192.78,D,Raw,M,Teenage 16-17,1
+Name,WeightClassKg,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Squat4Kg,Bench4Kg,Deadlift4Kg,Event,Equipment,Sex,Division,Place,AgeClass
+Cody Adair,60,56.7,WV,70.31,43.09,88.45,201.85,79.38,,102.06,SBD,Wraps,M,Pre-Teen,1,
+Spencer Jimick,75,68.95,VA,111.13,102.06,129.27,342.46,,,,SBD,Wraps,M,Teenage 16-17,1,
+Andrew Jones,100,96.71,VA,113.4,108.86,181.44,403.7,,,192.78,SBD,Wraps,M,Teenage 18-19,1,
+Stella Krupinski,82.5,80.29,VA,226.8,138.35,219.99,585.13,,,,SBD,Wraps,F,Open,1,
+George Robinson,100,97.52,VA,165.56,136.08,215.46,517.1,,,,SBD,Wraps,M,Open,1,
+Brandon McClaughterty,110,109.95,VA,226.8,206.38,226.8,659.98,,,,SBD,Wraps,M,Open,1,
+Jay Wolcott,110,104.42,VA,165.56,124.74,170.1,460.4,,,,SBD,Wraps,M,Open,2,
+Billy Barker,100,96.62,VA,129.27,127.01,176.9,433.18,,,,SBD,Wraps,M,Masters 40-44,1,
+Donald Walters,82.5,82.1,WV,181.44,136.08,208.65,526.17,,,,SBD,Single-ply,M,Masters 55-59,1,
+Adam Troutt,90,89.63,VA,,,,,,,,SBD,Multi-ply,M,Open,DQ,
+Dennis Davis,118,110.68,VA,217.72,181.44,197.31,596.47,,,,SBD,Multi-ply,M,Open,1,
+Monte Spaekman,140+,149.05,VA,453.59,288.03,256.28,997.9,,,,SBD,Multi-ply,M,Open,1,
+Pete Cropp,110,108.5,VA,281.23,276.69,238.14,796.05,,,,SBD,Multi-ply,M,Masters 40-44,1,
+Paul Sutphin,90,88.99,WV,256.28,138.35,240.4,635.03,,,,SBD,Multi-ply,M,Masters 55-59,1,
+Jacob Dunn,56,55.34,WV,,65.77,124.74,190.51,,,,BD,Raw,M,Teenage 16-17,1,
+Travis Pearl,90,88,VA,,149.69,204.12,353.8,,,208.65,BD,Raw,M,Juniors,1,
+Armando Mineiro,140+,155.13,VA,,165.56,244.94,410.5,,,254.01,BD,Raw,M,Open,1,
+Walter Canada,100,98.88,VA,,163.29,208.65,371.95,,,213.19,BD,Raw,M,Masters 50-54,1,
+Joseph Price,100,92.99,VA,,158.76,226.8,385.55,,,,BD,Multi-ply,M,Juniors,1,
+Derek Wingo,118,110.22,WV,,222.26,229.06,451.32,,226.8,,BD,Multi-ply,M,Open,1,
+C.T. Talevi,67.5,66.5,VA,,122.47,,122.47,,,,B,Raw,M,Teenage 16-17,1,
+Joseph Orange,100,97.89,VA,,154.22,,154.22,,,,B,Raw,M,Police and Fire,1,
+Wes Shropshire,110,105.69,VA,,170.1,,170.1,,,,B,Raw,M,Masters 55-59,1,
+Eugene Jones,110,105.32,VA,,129.27,,129.27,,,,B,Raw,M,Grand-Masters,1,80-84
+Jonathan Whorley,140,136.71,VA,,226.8,,226.8,,,,B,Multi-ply,M,Open,1,
+Carl Tiller,110,102.51,VA,,,272.16,272.16,,,,D,Multi-ply,M,Masters 40-44,1,
+Jared Mitchell,90,89.81,WV,,,183.7,183.7,,,192.78,D,Raw,M,Teenage 16-17,1,

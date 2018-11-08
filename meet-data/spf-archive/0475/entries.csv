@@ -1,13 +1,13 @@
 WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-75,18-19,M,Clay Sanders,18,73.12,MS,163.29,86.18,158.76,408.23,SBD,Wraps,1
+75,Teenage 18-19,M,Clay Sanders,18,73.12,MS,163.29,86.18,158.76,408.23,SBD,Wraps,1
 82.5,Open,M,Parker Smith,21,81.56,NC,226.8,165.56,242.67,635.03,SBD,Wraps,2
 82.5,Juniors,M,Parker Smith,21,81.56,NC,226.8,165.56,242.67,635.03,SBD,Wraps,1
 90,Juniors,M,Tyler Blalock,22,83.46,GA,206.38,147.42,190.51,544.31,SBD,Wraps,1
 110,Juniors,M,Zack Adkins,23,102.51,TN,204.12,120.2,226.8,551.11,SBD,Wraps,1
-117.5,Juniors,M,Mason White,20,117.03,NC,208.65,136.08,229.06,573.79,SBD,Wraps,1
-110,40-44,M,Mick Loyd,40,108.23,TN,142.88,113.4,158.76,415.04,SBD,Wraps,1
-125,40-44,M,Ken Morgan,41,121.38,MS,283.5,226.8,272.16,782.45,SBD,Wraps,1
-90,45-49,M,Brian Barger,46,89.81,TN,217.72,161.03,294.84,673.59,SBD,Wraps,1
+118,Juniors,M,Mason White,20,117.03,NC,208.65,136.08,229.06,573.79,SBD,Wraps,1
+110,Masters 40-44,M,Mick Loyd,40,108.23,TN,142.88,113.4,158.76,415.04,SBD,Wraps,1
+125,Masters 40-44,M,Ken Morgan,41,121.38,MS,283.5,226.8,272.16,782.45,SBD,Wraps,1
+90,Masters 45-49,M,Brian Barger,46,89.81,TN,217.72,161.03,294.84,673.59,SBD,Wraps,1
 67.5,Open,M,Evan Lemons,25,66.68,AL,226.8,127.01,242.67,596.47,SBD,Wraps,1
 82.5,Open,M,Mark Burnette,36,82.19,VA,251.74,167.83,260.82,680.39,SBD,Wraps,1
 90,Open,M,Cole Pittillo,29,82.64,NC,167.83,145.15,158.76,471.74,SBD,Wraps,2
@@ -17,15 +17,15 @@ WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg
 110,Open,M,Jorge Welch,25,107.41,NC,297.1,151.95,272.16,721.21,SBD,Wraps,2
 110,Open,M,Joseph Solis,27,104.33,NC,219.99,138.35,274.42,632.76,SBD,Wraps,3
 110,Open,M,Michael Wilinson,20,106.41,VA,251.74,142.88,226.8,621.42,SBD,Wraps,4
-117.5,Open,M,Luke Mullins,33,114.03,KY,215.46,151.95,244.94,612.35,SBD,Wraps,2
-117.5,Open,M,Gavin Havard,24,117.48,MS,340.19,208.65,285.76,834.61,SBD,Wraps,1
+118,Open,M,Luke Mullins,33,114.03,KY,215.46,151.95,244.94,612.35,SBD,Wraps,2
+118,Open,M,Gavin Havard,24,117.48,MS,340.19,208.65,285.76,834.61,SBD,Wraps,1
 125,Open,M,Damian Solis,24,123.2,NC,240.4,158.76,299.37,698.53,SBD,Wraps,2
 125,Open,M,Joe Ladnier,51,124.96,MS,340.19,249.48,317.51,907.18,SBD,Wraps,1
 140,Open,M,James Searcy,25,137.08,GA,362.87,204.12,362.87,929.86,SBD,Wraps,2
 140,Open,M,Matt Fryfogle,32,134.67,MS,378.75,249.48,328.85,957.08,SBD,Wraps,1
 140+,Open,M,Alex Busby,30,144.7,GA,254.01,185.97,267.62,707.6,SBD,Wraps,1
 125,Open,M,Michael Nowak,47,124.01,FL,183.7,147.42,226.8,557.92,SBD,Wraps,3
-125,45-49,M,Michael Nowak,47,124.01,FL,183.7,147.42,226.8,557.92,SBD,Wraps,1
+125,Masters 45-49,M,Michael Nowak,47,124.01,FL,183.7,147.42,226.8,557.92,SBD,Wraps,1
 67.5,Open,F,Britney Mynhier,31,64.23,KY,88.45,43.09,97.52,229.06,SBD,Wraps,1
 67.5,Open,F,Magau Zurlage,34,64.14,KY,68.04,47.63,104.33,219.99,SBD,Wraps,2
 75,Open,F,Megan Brooks,24,70.13,NC,108.86,74.84,122.47,306.17,SBD,Wraps,2
@@ -34,39 +34,39 @@ WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg
 90,Open,F,Alexis Eliopoulls,29,87.91,SC,161.03,111.13,172.37,444.52,SBD,Wraps,1
 82.5,Open,F,Shannon Nash,44,81.87,SC,165.56,142.88,183.7,492.15,SBD,Wraps,1
 90+,Open,F,Samantha Coleman,35,160.12,TN,288.03,165.56,226.8,680.39,SBD,Wraps,1
-100,Submasters,F,Natalynn Lewis,39,98.25,VA,108.86,70.31,124.74,303.91,SBD,Wraps,1
-100,Submasters,M,Derick Bolin,35,97.89,TN,210.92,145.15,233.6,589.67,SBD,Wraps,1
-117.5,Submasters,M,James McFarlane,33,112.76,GA,195.04,151.95,210.92,557.92,SBD,Wraps,1
-100,40-44,F,Rhonda Swaney,41,99.34,GA,181.44,86.18,167.83,435.45,SBD,Wraps,1
-67.5,16-17,M,Shon Paul Duke,17,67.04,AL,124.74,95.25,174.63,394.63,SBD,Raw,1
-75,Submasters,F,Jennifer Plummer,39,70.03,GA,142.88,81.65,142.88,367.41,SBD,Raw,1
+100,Sub-Masters,F,Natalynn Lewis,39,98.25,VA,108.86,70.31,124.74,303.91,SBD,Wraps,1
+100,Sub-Masters,M,Derick Bolin,35,97.89,TN,210.92,145.15,233.6,589.67,SBD,Wraps,1
+118,Sub-Masters,M,James McFarlane,33,112.76,GA,195.04,151.95,210.92,557.92,SBD,Wraps,1
+100,Masters 40-44,F,Rhonda Swaney,41,99.34,GA,181.44,86.18,167.83,435.45,SBD,Wraps,1
+67.5,Teenage 16-17,M,Shon Paul Duke,17,67.04,AL,124.74,95.25,174.63,394.63,SBD,Raw,1
+75,Sub-Masters,F,Jennifer Plummer,39,70.03,GA,142.88,81.65,142.88,367.41,SBD,Raw,1
 75,Open,F,Jennifer Plummer,39,70.03,GA,142.88,81.65,142.88,367.41,SBD,Raw,1
-110,45-49,M,Clarence Jackson,45,109.77,GA,231.33,176.9,240.4,648.64,SBD,Raw,1
+110,Masters 45-49,M,Clarence Jackson,45,109.77,GA,231.33,176.9,240.4,648.64,SBD,Raw,1
 140,Open,M,Justin Ridenhour,31,127.19,NC,226.8,192.78,249.48,669.05,SBD,Raw,1
-117.5,Submasters,M,Jeremiah Jones,35,113.67,GA,226.8,217.72,251.74,696.26,SBD,Single-ply,1
-117.5,Submasters,M,Jeremiah Jones,35,113.67,GA,,217.72,251.74,469.47,BD,Single-ply,1
-117.5,Submasters,M,Jeremiah Jones,35,113.67,GA,,,251.74,251.74,D,Single-ply,1
-110,18-19,M,Cole Morgan,18,107.14,MS,362.87,183.7,254.01,800.59,SBD,Multi-ply,1
-117.5,Open,M,Patrick Maupin,38,114.76,KY,385.55,294.84,351.53,1031.92,SBD,Multi-ply,1
-67.5,13-15,M,Jordan Mershimer,15,66.68,NC,,92.99,156.49,249.48,BD,Raw,1
+118,Sub-Masters,M,Jeremiah Jones,35,113.67,GA,226.8,217.72,251.74,696.26,SBD,Single-ply,1
+118,Sub-Masters,M,Jeremiah Jones,35,113.67,GA,,217.72,251.74,469.47,BD,Single-ply,1
+118,Sub-Masters,M,Jeremiah Jones,35,113.67,GA,,,251.74,251.74,D,Single-ply,1
+110,Teenage 18-19,M,Cole Morgan,18,107.14,MS,362.87,183.7,254.01,800.59,SBD,Multi-ply,1
+118,Open,M,Patrick Maupin,38,114.76,KY,385.55,294.84,351.53,1031.92,SBD,Multi-ply,1
+67.5,Teenage 13-15,M,Jordan Mershimer,15,66.68,NC,,92.99,156.49,249.48,BD,Raw,1
 110,Open,M,Kyle Thigpen,37,109.32,OH,,147.42,224.53,371.95,BD,Raw,1
-110,Submasters,M,Kyle Thigpen,37,109.32,OH,,147.42,224.53,371.95,BD,Raw,1
+110,Sub-Masters,M,Kyle Thigpen,37,109.32,OH,,147.42,224.53,371.95,BD,Raw,1
 90,Open,M,Jeff Battles,36,89.63,OH,,151.95,233.6,385.55,BD,Raw,1
-90,Submasters,M,Jeff Battles,36,89.63,OH,,151.95,233.6,385.55,BD,Raw,1
-117.5,Submasters,M,Steve Thompson,39,113.76,OH,,226.8,285.76,512.56,BD,Raw,1
+90,Sub-Masters,M,Jeff Battles,36,89.63,OH,,151.95,233.6,385.55,BD,Raw,1
+118,Sub-Masters,M,Steve Thompson,39,113.76,OH,,226.8,285.76,512.56,BD,Raw,1
 140+,Open,M,Jeff Clabo,41,144.06,TN,,185.97,285.76,471.74,BD,Raw,1
-56,50-54,F,Brenda Engle,50,55.43,OH,,49.9,99.79,149.69,BD,Raw,1
+56,Masters 50-54,F,Brenda Engle,50,55.43,OH,,49.9,99.79,149.69,BD,Raw,1
 67.5,Open,F,Stephanie Braz,24,67.13,TN,,49.9,,49.9,B,Raw,1
-82.5,70-74,M,Bill Lindsey,70,,VA,,117.93,,117.93,B,Raw,1
-82.5,45-49,M,Tim Bostic,47,82.01,SC,,147.42,,147.42,B,Raw,1
-90,75-79,M,William Hostetter,75,88.72,TN,,113.4,,113.4,B,Raw,1
+82.5,Masters 70-74,M,Bill Lindsey,70,,VA,,117.93,,117.93,B,Raw,1
+82.5,Masters 45-49,M,Tim Bostic,47,82.01,SC,,147.42,,147.42,B,Raw,1
+90,Masters 75-79,M,William Hostetter,75,88.72,TN,,113.4,,113.4,B,Raw,1
 90,Open,M,Dustin Waggoner,30,89.81,TN,,158.76,,158.76,B,Raw,1
-110,55-59,M,Steve Kyker,56,107.23,TN,,154.22,,154.22,B,Raw,1
-100,45-49,M,Steve Ramage,47,98.79,TN,,185.97,,185.97,B,Raw,1
-110,55-59,M,Ken Hancock,55,107.32,TN,,170.1,,170.1,B,Raw,1
-125,45-49,M,Wade Matthews,46,120.2,TN,,204.12,,204.12,B,Raw,1
+110,Masters 55-59,M,Steve Kyker,56,107.23,TN,,154.22,,154.22,B,Raw,1
+100,Masters 45-49,M,Steve Ramage,47,98.79,TN,,185.97,,185.97,B,Raw,1
+110,Masters 55-59,M,Ken Hancock,55,107.32,TN,,170.1,,170.1,B,Raw,1
+125,Masters 45-49,M,Wade Matthews,46,120.2,TN,,204.12,,204.12,B,Raw,1
 90,Open,F,Natasha Killian,26,83.46,GA,,,158.76,158.76,D,Raw,1
 100,Open,M,Patrick Curtis,30,97.98,GA,,,306.17,306.17,D,Raw,1
-100,Police/Fire,F,Jill Ebbing,44,98.25,GA,,,147.42,147.42,D,Raw,1
-140+,50-54,M,James Searcy Sr,50,156.49,GA,,,362.87,362.87,D,Raw,1
-110,55-59,M,Steve Kyker,56,107.23,TN,,,217.72,217.72,D,Raw,1
+100,Police and Fire,F,Jill Ebbing,44,98.25,GA,,,147.42,147.42,D,Raw,1
+140+,Masters 50-54,M,James Searcy Sr,50,156.49,GA,,,362.87,362.87,D,Raw,1
+110,Masters 55-59,M,Steve Kyker,56,107.23,TN,,,217.72,217.72,D,Raw,1

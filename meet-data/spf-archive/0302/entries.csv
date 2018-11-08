@@ -1,39 +1,39 @@
-Name,Sex,Equipment,Event,Age,Division,BodyweightKg,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,TotalKg,Place
-Abigail Rankl,F,Wraps,SBD,23,F-H-R Crossfit,94.8,150,70,,157.5,377.5,1
-Diane Anderson,F,Wraps,SBD,55,F-H-R,91.63,105,50,,137.5,292.5,1
-Sandra Laines,F,Wraps,SBD,57,F-H-R,99.34,92.5,55,,137.5,285,2
-Charlene Cohen,F,Wraps,SBD,33,F-L-R,59.65,117.5,60,,160,337.5,1
-Bobbie Benabides,F,Wraps,SBD,32,F-L-R,54.2,87.5,65,,137.5,290,2
-Sarah Wellberg,F,Raw,SBD,25,F-L-R,66.9,80,50,,125,255,3
-JoAnne Lauer,F,Wraps,SBD,49,F-L-R,74.39,102.5,55,,117.5,275,4
-Yi Chen,F,Wraps,SBD,53,F-L-R,57.61,77.5,45,,85,207.5,5
-Damon Thurman,M,Multi-ply,SBD,28,M-LT-MP,88.9,310,245,,230,784.99,1
-Matt Nickerson,M,Wraps,SBD,27,M-H-R,156.26,222.5,162.5,,227.5,612.49,1
-Bill Alex,M,Wraps,SBD,41,M-H-R,136.3,242.5,192.5,,,,DQ
-Dan Green,M,Wraps,SBD,30,M-M-R,108.64,375,235,,370,979.99,1
-Chris Ramos,M,Wraps,SBD,27,M-M-R,93.44,272.5,160,,272.5,704.99,2
-Andrew Corlett,M,Wraps,SBD,31,M-M-R,98.66,262.5,162.5,,285,709.99,3
-Michael Baxter,M,Wraps,SBD,24,M-M-R,96.16,242.5,177.5,,272.5,692.49,4
-David Law,M,Wraps,SBD,47,M-M-R,99.34,200,147.5,,212.5,559.99,5
-Mark Wilson,M,Wraps,SBD,49,M-M-R,109.54,170,110,,185,465,6
-Bryce Lewis,M,Wraps,SBD,26,M-L-R,89.81,257.5,175,,307.5,739.99,1
-Ryan Spencer,M,Wraps,SBD,39,M-L-R,74.84,205,137.5,,277.5,619.99,2
-Michael Russell Jr,M,Wraps,SBD,31,M-L-R,81.42,230,137.5,,252.5,619.99,3
-Christopher Adgett,M,Wraps,SBD,28,M-L-R,84.37,195,155,,242.5,592.49,4
-Jonathan Haskins,M,Wraps,SBD,22,M-L-R,67.36,147.5,102.5,,200,450,5
-Alex Tinsley,M,Wraps,SBD,35,M-L-R,88.9,172.5,150,,220,542.49,6
-Jason Mica Jr,M,Wraps,SBD,17,M-L-R,74.62,182.5,100,,182.5,465,7
-Lief Larson,M,Wraps,SBD,34,M-L-R,85.5,187.5,115,,197.5,499.99,8
-Martin Azzam,M,Wraps,SBD,23,M-L-R,89.36,160,147.5,,200,507.49,9
-Anthony Garcia,M,Wraps,SBD,16,M-L-R,58.06,120,80,,142.5,342.5,10
-Bren Veziroglu,M,Wraps,SBD,20,M-L-R,71.89,137.5,110,,160,407.5,11
-Nathan Suh,M,Wraps,SBD,18,M-L-R,85.28,177.5,85,,195,457.5,12
-Jarod Mica,M,Wraps,SBD,14,M-L-R,53.75,92.5,57.5,,120,270,13
-Dietrich Dejean,M,Wraps,SBD,34,M-L-R,74.84,192.5,,,,,DQ
-Mark Bell,M,Multi-ply,BD,36,M-M-MP,109.32,,240,,335,574.99,1
-Jimmy Doyle,M,Raw,B,24,M-M-R-BO,104.78,,182.5,,,182.5,1
-Juan Laija Jr,M,Raw,B,21,M-L-R-BO,80.74,,150,,,150,1
-Michael Russell,M,Raw,B,57,M-L-R-BO,59.42,,90,90.5,,90,2
-Eric Spoto,M,Raw,B,36,M-H-R-BO,143.11,,327.5,,,327.5,1
-Mike Burns,M,Multi-ply,B,37,M-M-MP-BO,108.41,,237.5,,,237.5,1
-Juan Laija,M,Multi-ply,B,43,M-M-MP-BO,99.11,,,,,,DQ
+Name,Sex,Equipment,Event,Age,Division,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,TotalKg,Place
+Abigail Rankl,F,Wraps,SBD,23,Crossfit,75+,94.8,150,70,,157.5,377.5,1
+Diane Anderson,F,Wraps,SBD,55,Heavy,75+,91.63,105,50,,137.5,292.5,1
+Sandra Laines,F,Wraps,SBD,57,Heavy,75+,99.34,92.5,55,,137.5,285,2
+Charlene Cohen,F,Wraps,SBD,33,Light,75,59.65,117.5,60,,160,337.5,1
+Bobbie Benabides,F,Wraps,SBD,32,Light,75,54.2,87.5,65,,137.5,290,2
+Sarah Wellberg,F,Raw,SBD,25,Light,75,66.9,80,50,,125,255,3
+JoAnne Lauer,F,Wraps,SBD,49,Light,75,74.39,102.5,55,,117.5,275,4
+Yi Chen,F,Wraps,SBD,53,Light,75,57.61,77.5,45,,85,207.5,5
+Damon Thurman,M,Multi-ply,SBD,28,Light,90,88.9,310,245,,230,784.99,1
+Matt Nickerson,M,Wraps,SBD,27,Heavy,110+,156.26,222.5,162.5,,227.5,612.49,1
+Bill Alex,M,Wraps,SBD,41,Heavy,110+,136.3,242.5,192.5,,,,DQ
+Dan Green,M,Wraps,SBD,30,Middle,110,108.64,375,235,,370,979.99,1
+Chris Ramos,M,Wraps,SBD,27,Middle,110,93.44,272.5,160,,272.5,704.99,2
+Andrew Corlett,M,Wraps,SBD,31,Middle,110,98.66,262.5,162.5,,285,709.99,3
+Michael Baxter,M,Wraps,SBD,24,Middle,110,96.16,242.5,177.5,,272.5,692.49,4
+David Law,M,Wraps,SBD,47,Middle,110,99.34,200,147.5,,212.5,559.99,5
+Mark Wilson,M,Wraps,SBD,49,Middle,110,109.54,170,110,,185,465,6
+Bryce Lewis,M,Wraps,SBD,26,Light,90,89.81,257.5,175,,307.5,739.99,1
+Ryan Spencer,M,Wraps,SBD,39,Light,90,74.84,205,137.5,,277.5,619.99,2
+Michael Russell Jr,M,Wraps,SBD,31,Light,90,81.42,230,137.5,,252.5,619.99,3
+Christopher Adgett,M,Wraps,SBD,28,Light,90,84.37,195,155,,242.5,592.49,4
+Jonathan Haskins,M,Wraps,SBD,22,Light,90,67.36,147.5,102.5,,200,450,5
+Alex Tinsley,M,Wraps,SBD,35,Light,90,88.9,172.5,150,,220,542.49,6
+Jason Mica Jr,M,Wraps,SBD,17,Light,90,74.62,182.5,100,,182.5,465,7
+Lief Larson,M,Wraps,SBD,34,Light,90,85.5,187.5,115,,197.5,499.99,8
+Martin Azzam,M,Wraps,SBD,23,Light,90,89.36,160,147.5,,200,507.49,9
+Anthony Garcia,M,Wraps,SBD,16,Light,90,58.06,120,80,,142.5,342.5,10
+Bren Veziroglu,M,Wraps,SBD,20,Light,90,71.89,137.5,110,,160,407.5,11
+Nathan Suh,M,Wraps,SBD,18,Light,90,85.28,177.5,85,,195,457.5,12
+Jarod Mica,M,Wraps,SBD,14,Light,90,53.75,92.5,57.5,,120,270,13
+Dietrich Dejean,M,Wraps,SBD,34,Light,90,74.84,192.5,,,,,DQ
+Mark Bell,M,Multi-ply,BD,36,Middle,110,109.32,,240,,335,574.99,1
+Jimmy Doyle,M,Raw,B,24,Middle,110,104.78,,182.5,,,182.5,1
+Juan Laija Jr,M,Raw,B,21,Light,90,80.74,,150,,,150,1
+Michael Russell,M,Raw,B,57,Light,90,59.42,,90,90.5,,90,2
+Eric Spoto,M,Raw,B,36,Heavy,110+,143.11,,327.5,,,327.5,1
+Mike Burns,M,Multi-ply,B,37,Middle,110,108.41,,237.5,,,237.5,1
+Juan Laija,M,Multi-ply,B,43,Middle,110,99.11,,,,,,DQ

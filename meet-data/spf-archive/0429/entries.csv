@@ -11,9 +11,9 @@ WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg
 90+,Open,F,Anna Predmore,32,110.5,KY,88.45,63.5,115.67,267.62,SBD,Wraps,2
 90+,Masters 45-49,F,Kerri Sue Davis,49,109.59,KY,151.95,70.31,165.56,387.82,SBD,Wraps,1
 52,Masters 55-59,F,Kathy Jones,56,49.62,KY,58.97,36.29,79.38,174.63,SBD,Wraps,1
-82.5,18-19,M,Jason Henry,18,81.83,KY,226.8,131.54,281.23,639.57,SBD,Wraps,1
-90,18-19,M,Charles Bradshaw,19,88.63,KY,235.87,113.4,231.33,580.6,SBD,Wraps,1
-90,18-19,M,Conner Stackhouse,18,88.09,OH,174.63,97.52,192.78,464.93,SBD,Wraps,2
+82.5,Teenage 18-19,M,Jason Henry,18,81.83,KY,226.8,131.54,281.23,639.57,SBD,Wraps,1
+90,Teenage 18-19,M,Charles Bradshaw,19,88.63,KY,235.87,113.4,231.33,580.6,SBD,Wraps,1
+90,Teenage 18-19,M,Conner Stackhouse,18,88.09,OH,174.63,97.52,192.78,464.93,SBD,Wraps,2
 60,Juniors,F,Lakeista Mullins,23,58.33,KY,124.74,54.43,145.15,324.32,SBD,Wraps,1
 67.5,Juniors,F,Grace Meloy,23,66.86,OH,113.4,58.97,117.93,290.3,SBD,Wraps,1
 75,Juniors,F,Ashley Myers,20,74.48,IN,158.76,72.57,145.15,376.48,SBD,Wraps,2
@@ -24,7 +24,7 @@ WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg
 90,Juniors,M,Ethan Waltz,23,88,IN,201.85,122.47,238.14,562.45,SBD,Wraps,2
 110,Juniors,M,Travis Nelson,22,103.51,TN,272.16,176.9,238.14,687.19,SBD,Wraps,1
 110,Juniors,M,Kody Trivette,21,108.77,KY,231.33,156.49,265.35,653.17,SBD,Wraps,2
-125,Juniors,M,Austin King,20,117.57,KY,265.35,183.7,317.51,766.57,SBD,Wraps,1
+118,Juniors,M,Austin King,20,117.57,KY,265.35,183.7,317.51,766.57,SBD,Wraps,1
 75,Open,M,Mike Brown,28,73.75,KY,226.8,149.69,231.33,607.81,SBD,Wraps,1
 75,Open,M,Tim Honey,26,73.94,OH,192.78,120.2,226.8,539.77,SBD,Wraps,2
 82.5,Open,M,Michael Justiniano,24,81.83,OH,278.96,204.12,272.16,755.23,SBD,Wraps,1
@@ -43,37 +43,37 @@ WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg
 100,Open,M,Robert Hayes,26,97.7,KY,231.33,149.69,278.96,659.98,SBD,Wraps,7
 100,Open,M,Jason Figg,,92.8,KY,269.89,188.24,201.85,659.98,SBD,Wraps,6
 100,Open,M,Scott Ramazani,32,93.53,KY,215.46,113.4,272.16,601.01,SBD,Wraps,8
-100,Police/Fire,M,Adam Ditmer,26,97.52,OH,183.7,244.94,226.8,655.44,SBD,Wraps,1
+100,Police and Fire,M,Adam Ditmer,26,97.52,OH,183.7,244.94,226.8,655.44,SBD,Wraps,1
 110,Open,M,Eldon Newcomb,,107.05,KY,340.19,272.16,263.08,875.43,SBD,Multi-ply,1
 110,Open,M,Ethan Farris,24,108.32,KY,217.72,161.03,294.84,673.58,SBD,Wraps,2
 110,Open,M,Nick Arnold,27,105.51,IN,206.38,158.76,251.74,616.89,SBD,Wraps,3
 110,Open,M,Luke Mullins,32,105.78,KY,192.78,120.2,229.06,542.04,SBD,Wraps,4
 110,Open,M,Kristopher Freeman,29,103.69,KY,174.63,124.74,233.6,532.97,SBD,Wraps,5
-117.5,Open,M,Michael Scrirner,30,117.48,KY,294.84,151.95,294.84,741.62,SBD,Wraps,1
+118,Open,M,Michael Scrirner,30,117.48,KY,294.84,151.95,294.84,741.62,SBD,Wraps,1
 125,Open,M,Dana Elmore,24,122.7,KY,294.84,195.04,294.84,784.71,SBD,Wraps,1
 125,Open,M,Jamison Richardson,25,124.38,KY,260.82,156.49,292.57,709.87,SBD,Wraps,2
 125,Open,M,Bobby Clark,36,122.38,KY,263.08,185.97,254.01,703.07,SBD,Wraps,3
 140,Open,M,Pitt Connelley,30,131.09,KY,299.37,199.58,281.23,780.18,SBD,Wraps,1
-110,Subs,M,Jesse McHone,38,107.77,OH,199.58,199.58,254.01,653.17,SBD,Wraps,1
-90+,Subs,F,Mechelle Pinkney,39,110.31,KY,117.93,77.11,154.22,349.27,SBD,Wraps,1
-90,Special Oly,M,Shawn Vogelgesang,37,85,OH,34.02,81.65,77.11,192.78,SBD,Wraps,1
-75,40-44,F,Allison Hagan,42,74.84,KY,88.45,63.5,115.67,267.62,SBD,Wraps,1
-75,40-44,F,Heather Levinson,44,70.49,KY,74.84,56.7,83.91,215.46,SBD,Wraps,2
-90,40-44,F,Nathalie Green,,89.81,KY,136.08,68.04,181.44,385.55,SBD,Wraps,1
-140,40-44,M,Scott Bryant,41,132.27,KY,263.08,181.44,288.03,732.55,SBD,Wraps,1
-125,45-49,M,Sam Garas,49,120.75,KY,113.4,104.33,192.78,410.5,SBD,Wraps,1
-90,50-54,M,James Robinson,54,87.09,KY,226.8,131.54,294.84,653.17,SBD,Wraps,1
-110,40-44,M,David Dean,44,106.78,KY,,113.4,165.56,278.96,BD,Raw,1
-90+,40-44,F,Judy Metcalf,43,120.84,KY,,68.04,147.42,215.46,BD,Raw,1
-82.5,13-15,F,Christina Crooks,14,81.74,OH,,63.5,115.67,179.17,BD,Raw,1
-90,65-69,F,Marie Metcalf,67,85.18,KY,,52.16,97.52,149.69,BD,Raw,1
-75,16-17,M,Samuel Luise,17,72.3,KY,,111.13,190.51,301.64,BD,Raw,1
-75,13-15,M,Andrew Vazquez,15,72.21,KY,,74.84,183.7,258.55,BD,Raw,1
-90,16-17,M,Michael Kimbell,17,89.27,KY,,145.15,249.48,394.63,BD,Raw,1
-100,Police/Fire,M,Scott Shields,,99.79,KY,,158.76,,158.76,B,Raw,1
-100,13-15,M,Daniel Kimbell,15,94.71,KY,,133.81,,133.81,B,Raw,1
-56,18-19,M,Brandon Waugh,,55.52,TN,,106.59,,106.59,B,Raw,1
+110,Sub-Masters,M,Jesse McHone,38,107.77,OH,199.58,199.58,254.01,653.17,SBD,Wraps,1
+90+,Sub-Masters,F,Mechelle Pinkney,39,110.31,KY,117.93,77.11,154.22,349.27,SBD,Wraps,1
+90,Special Olympics,M,Shawn Vogelgesang,37,85,OH,34.02,81.65,77.11,192.78,SBD,Wraps,1
+75,Masters 40-44,F,Allison Hagan,42,74.84,KY,88.45,63.5,115.67,267.62,SBD,Wraps,1
+75,Masters 40-44,F,Heather Levinson,44,70.49,KY,74.84,56.7,83.91,215.46,SBD,Wraps,2
+90,Masters 40-44,F,Nathalie Green,,89.81,KY,136.08,68.04,181.44,385.55,SBD,Wraps,1
+140,Masters 40-44,M,Scott Bryant,41,132.27,KY,263.08,181.44,288.03,732.55,SBD,Wraps,1
+125,Masters 45-49,M,Sam Garas,49,120.75,KY,113.4,104.33,192.78,410.5,SBD,Wraps,1
+90,Masters 50-54,M,James Robinson,54,87.09,KY,226.8,131.54,294.84,653.17,SBD,Wraps,1
+110,Masters 40-44,M,David Dean,44,106.78,KY,,113.4,165.56,278.96,BD,Raw,1
+90+,Masters 40-44,F,Judy Metcalf,43,120.84,KY,,68.04,147.42,215.46,BD,Raw,1
+82.5,Teenage 13-15,F,Christina Crooks,14,81.74,OH,,63.5,115.67,179.17,BD,Raw,1
+90,Masters 65-69,F,Marie Metcalf,67,85.18,KY,,52.16,97.52,149.69,BD,Raw,1
+75,Teenage 16-17,M,Samuel Luise,17,72.3,KY,,111.13,190.51,301.64,BD,Raw,1
+75,Teenage 13-15,M,Andrew Vazquez,15,72.21,KY,,74.84,183.7,258.55,BD,Raw,1
+90,Teenage 16-17,M,Michael Kimbell,17,89.27,KY,,145.15,249.48,394.63,BD,Raw,1
+100,Police and Fire,M,Scott Shields,,99.79,KY,,158.76,,158.76,B,Raw,1
+100,Teenage 13-15,M,Daniel Kimbell,15,94.71,KY,,133.81,,133.81,B,Raw,1
+56,Teenage 18-19,M,Brandon Waugh,,55.52,TN,,106.59,,106.59,B,Raw,1
 60,Open,F,Alicia Calogero,30,57.7,NC,,74.84,,74.84,B,Raw,1
 90,Open,M,Lievi Anderson,31,87.18,TN,,192.78,,192.78,B,Raw,1
 90,Open,M,Ricky Bolanos,30,87.18,NC,,158.76,,158.76,B,Raw,2
-117.5,60-64,M,Rick Cornett,63,113.13,KY,,158.76,,158.76,B,Raw,1
+118,Masters 60-64,M,Rick Cornett,63,113.13,KY,,158.76,,158.76,B,Raw,1

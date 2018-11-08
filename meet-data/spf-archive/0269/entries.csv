@@ -1,5 +1,5 @@
 Sex,Equipment,Division,Event,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,WeightClassKg,State,Place
-F,Wraps,Open,SBD,Jennifer Mack,90.72,61.23,138.35,290.3,,,1
+F,Wraps,Open,SBD,Jennifer Mack,90.72,61.23,138.35,290.3,56,,1
 F,Wraps,Open,SBD,Kathy Bello,38.56,36.29,77.11,151.95,56,VA,1
 F,Wraps,Open,SBD,Staci Murphy,120.2,61.23,117.93,299.37,67.5,,1
 F,Wraps,Open,SBD,Yuri Azoy,86.18,54.43,113.4,254.01,75,VA,1
@@ -21,7 +21,7 @@ M,Wraps,Open,SBD,John Spain,226.8,142.88,244.94,614.62,90,VA,1
 M,Wraps,Open,SBD,Ian Surgeoner,147.42,90.72,229.06,467.2,90,VA,2
 M,Wraps,Open,SBD,Jarrod Best,233.6,165.56,272.16,671.32,100,VA,2
 M,Wraps,Open,SBD,Roy Andrew,206.38,145.15,260.82,612.35,100,VA,3
-M,Wraps,Crossover,SBD,Jeff Lafferty,219.99,163.29,215.46,598.74,100,VA,1
+M,Wraps,Open,SBD,Jeff Lafferty,219.99,163.29,215.46,598.74,100,VA,1
 M,Wraps,Open,SBD,Jay Jones,195.04,108.86,222.26,526.17,100,VA,4
 M,Wraps,Open,SBD,Kyle Surgeoner,142.88,102.06,174.63,419.57,100,VA,5
 M,Wraps,Teenage,SBD,Kenneth Stephens,222.26,,,,100,VA,DQ
@@ -40,7 +40,7 @@ M,Wraps,Open,SBD,Trey McNeil,206.38,151.95,249.48,607.81,110,VA,2
 M,Wraps,Open,SBD,Johan Gylfason,226.8,149.69,226.8,603.28,110,NC,3
 M,Wraps,Open,SBD,Clif Calloway,170.1,142.88,235.87,548.85,110,MD,4
 M,Wraps,Masters 45-49,SBD,John Cannon,204.12,183.7,226.8,614.62,110,NC,1
-M,Wraps,Juniors,SBD,Omar Aminzoy,238.14,156.49,210.92,605.55,117.5,VA,1
+M,Wraps,Juniors,SBD,Omar Aminzoy,238.14,156.49,210.92,605.55,118,VA,1
 M,Wraps,Masters 40-44,SBD,Roscoe Ware,285.76,215.46,331.12,832.34,140,VA,1
 M,Wraps,Masters 45-49,SBD,Tracy Langdon,276.69,179.17,249.48,705.34,140+,NC,1
 M,Single-ply,Open,SBD,Matthew MacArthur,294.84,165.56,219.99,680.39,100,VA,1
@@ -57,8 +57,8 @@ M,Raw,Open,B,Bryce Peterson,,233.6,,233.6,110,VA,1
 M,Raw,Open,B,Anthony Davie,,215.46,,215.46,140,VA,1
 M,Raw,Open,B,Cole Mastin,,204.12,,204.12,140+,VA,1
 M,Single-ply,Open,B,Anthony Burgess,,163.29,,163.29,90,VA,1
-M,Single-ply,Open,B,Randy Robinson,,294.84,,294.84,117.5,WV,1
-M,Single-ply,Open,B,Shawn Keene,,247.21,,247.21,117.5,WV,2
+M,Single-ply,Open,B,Randy Robinson,,294.84,,294.84,118,WV,1
+M,Single-ply,Open,B,Shawn Keene,,247.21,,247.21,118,WV,2
 M,Raw,Open,BD,Shane Allen,,172.37,231.33,403.7,82.5,VA,1
 M,Raw,Open,BD,Bill Emmons,,133.81,238.14,371.95,100,VA,1
 M,Raw,Open,BD,Larry Davis,,226.8,306.17,532.97,140,MI,1

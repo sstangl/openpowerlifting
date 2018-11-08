@@ -1,23 +1,23 @@
 WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
-140,13-15,Neyland Fendley,SBD,Wraps,M,14,134.17,TN,182.5,97.5,207.5,487.5,1
-75,16-17,Justin Smith #10,SBD,Wraps,M,16,74.3,TN,190,137.5,250,577.5,1
-82.5,16-17,Matthew Breeden,SBD,Wraps,M,17,78.38,NC,142.5,117.5,185,445,1
-90,16-17,Chance Schubert,SBD,Wraps,M,17,82.1,TN,142.5,110,165,417.5,1
-100,16-17,Duncan Hundley,SBD,Wraps,M,17,99.7,TN,267.5,155,242.5,665,1
-100,16-17,Joshua Rodrigulz,SBD,Wraps,M,16,,NC,192.5,147.5,230,570,2
-125,16-17,Allen Richardson,SBD,Wraps,M,17,,TN,240,152.5,255,647.5,1
-75,18-19,Michael Holt,SBD,Wraps,M,19,72.12,TN,235,145,227.5,607.5,1
-100,18-19,Bryson Presley,SBD,Wraps,M,18,95.89,TN,220,162.5,250,632.5,1
-140+,18-19,Garrett Hovis,SBD,Wraps,M,18,154.22,NC,175,150,220,545,1
-90,40-44,Efrain Tejada,SBD,Wraps,M,40,89.27,CA,207.5,147.5,237.5,592.5,1
-140,40-44,James Freeman,SBD,Wraps,M,43,128.73,TN,250,205,260,715,1
-110,40-44,Daniel Carpenter,SBD,Wraps,M,43,105.51,AL,250,152.5,255,657.5,1
-100,45-49,Brian Barger,SBD,Wraps,M,46,96.25,TN,250,167.5,320,737.5,1
-110,50-54,Kirt Bruce,SBD,Wraps,M,51,109.77,NC,277.5,217.5,280,775,1
-90,55-56,Sean Softly,SBD,Wraps,M,56,87,AR,142.5,105,170,417.5,1
-117.5,70-74,Dan Whitt,SBD,Wraps,M,70,115.76,AR,155,132.5,195,482.5,1
+140,Teenage 13-15,Neyland Fendley,SBD,Wraps,M,14,134.17,TN,182.5,97.5,207.5,487.5,1
+75,Teenage 16-17,Justin Smith #10,SBD,Wraps,M,16,74.3,TN,190,137.5,250,577.5,1
+82.5,Teenage 16-17,Matthew Breeden,SBD,Wraps,M,17,78.38,NC,142.5,117.5,185,445,1
+82.5,Teenage 16-17,Chance Schubert,SBD,Wraps,M,17,82.1,TN,142.5,110,165,417.5,1
+100,Teenage 16-17,Duncan Hundley,SBD,Wraps,M,17,99.7,TN,267.5,155,242.5,665,1
+100,Teenage 16-17,Joshua Rodrigulz,SBD,Wraps,M,16,,NC,192.5,147.5,230,570,2
+125,Teenage 16-17,Allen Richardson,SBD,Wraps,M,17,,TN,240,152.5,255,647.5,1
+75,Teenage 18-19,Michael Holt,SBD,Wraps,M,19,72.12,TN,235,145,227.5,607.5,1
+100,Teenage 18-19,Bryson Presley,SBD,Wraps,M,18,95.89,TN,220,162.5,250,632.5,1
+140+,Teenage 18-19,Garrett Hovis,SBD,Wraps,M,18,154.22,NC,175,150,220,545,1
+90,Masters 40-44,Efrain Tejada,SBD,Wraps,M,40,89.27,CA,207.5,147.5,237.5,592.5,1
+140,Masters 40-44,James Freeman,SBD,Wraps,M,43,128.73,TN,250,205,260,715,1
+110,Masters 40-44,Daniel Carpenter,SBD,Wraps,M,43,105.51,AL,250,152.5,255,657.5,1
+100,Masters 45-49,Brian Barger,SBD,Wraps,M,46,96.25,TN,250,167.5,320,737.5,1
+110,Masters 50-54,Kirt Bruce,SBD,Wraps,M,51,109.77,NC,277.5,217.5,280,775,1
+90,Masters 55-59,Sean Softly,SBD,Wraps,M,56,87,AR,142.5,105,170,417.5,1
+118,Masters 70-74,Dan Whitt,SBD,Wraps,M,70,115.76,AR,155,132.5,195,482.5,1
 110,Juniors,Travis Nelson,SBD,Wraps,M,22,109.41,TN,285,195,265,745,1
-117.5,Juniors,Tyler Collins #1,SBD,Wraps,M,22,115.67,GA,302.5,202.5,322.5,827.5,1
+118,Juniors,Tyler Collins #1,SBD,Wraps,M,22,115.67,GA,302.5,202.5,322.5,827.5,1
 125,Juniors,Hayden Harbour,SBD,Wraps,M,22,122.83,MS,287.5,165,270,722.5,1
 90,Juniors,Dakota Snellings,SBD,Wraps,M,23,88.09,AL,187.5,162.5,250,600,1
 140,Juniors,Zach Smith,SBD,Wraps,M,22,137.89,AL,360,210,297.5,867.5,1
@@ -25,62 +25,62 @@ WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3Squa
 75,Open,Will Harrington,SBD,Wraps,M,43,74.75,NC,192.5,192.5,217.5,602.5,1
 100,Open,Matt Scoggins,SBD,Wraps,M,29,92.8,TN,190,160,210,560,2
 90,Open,Efrain Tejada,SBD,Wraps,M,40,89.27,OH,207.5,147.5,237.5,592.5,1
-117.5,Open,Ben Matthews,SBD,Wraps,M,33,110.59,GA,250,190,290,730,1
-117.5,Open,Forest Holt,SBD,Wraps,M,31,115.39,TN,237.5,180,252.5,670,2
-117.5,Open,Chris Collier,SBD,Wraps,M,26,115.12,VA,212.5,132.5,215,560,2
-117.5,Open,Dan Whitt,SBD,Wraps,M,70,115.76,AR,132.5,132.5,195,460,3
-117.5,Open,Kevin Quinton,SBD,Wraps,M,27,115.76,GA,335,202.5,340,877.5,1
+118,Open,Ben Matthews,SBD,Wraps,M,33,110.59,GA,250,190,290,730,1
+118,Open,Forest Holt,SBD,Wraps,M,31,115.39,TN,237.5,180,252.5,670,2
+118,Open,Chris Collier,SBD,Wraps,M,26,115.12,VA,212.5,132.5,215,560,2
+118,Open,Dan Whitt,SBD,Wraps,M,70,115.76,AR,132.5,132.5,195,460,3
+118,Open,Kevin Quinton,SBD,Wraps,M,27,115.76,GA,335,202.5,340,877.5,1
 140,Open,Pitt Connelley,SBD,Wraps,M,31,134.26,KY,335,202.5,325,862.5,1
-140,Police/Fire,Chris Rickles,SBD,Wraps,M,34,130,TN,282.5,197.5,272.5,752.5,1
-90,Subs,Joey Huneycutt,SBD,Wraps,M,35,88.81,NC,272.5,205,280,757.5,1
-90,Subs,Crystal Bowman,SBD,Wraps,F,36,87.72,GA,167.5,97.5,192.5,457.5,1
-100,Subs,Derick Bolin,SBD,Wraps,M,35,,TN,215,147.5,235,597.5,1
-100,Subs,Selena Edmondson,SBD,Wraps,F,38,,TN,192.5,92.5,170,455,1
+140,Police and Fire,Chris Rickles,SBD,Wraps,M,34,130,TN,282.5,197.5,272.5,752.5,1
+90,Sub-Masters,Joey Huneycutt,SBD,Wraps,M,35,88.81,NC,272.5,205,280,757.5,1
+90,Sub-Masters,Crystal Bowman,SBD,Wraps,F,36,87.72,GA,167.5,97.5,192.5,457.5,1
+100,Sub-Masters,Derick Bolin,SBD,Wraps,M,35,,TN,215,147.5,235,597.5,1
+100,Sub-Masters,Selena Edmondson,SBD,Wraps,F,38,,TN,192.5,92.5,170,455,1
 60,Open,Sara Simpson,SBD,Wraps,F,26,59.33,TN,135,80,160,375,1
 67.5,Open,Jacqueline Buhl,SBD,Wraps,F,32,,TN,117.5,65,135,317.5,1
-75,40-44,Tara Griffin,SBD,Wraps,F,41,72.57,TN,107.5,60,150,317.5,1
-56,13-15,Jacob Matthews,SBD,Raw,M,13,55.88,GA,82.5,52.5,102.5,237.5,1
-67.5,Subs,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
+75,Masters 40-44,Tara Griffin,SBD,Wraps,F,41,72.57,TN,107.5,60,150,317.5,1
+56,Teenage 13-15,Jacob Matthews,SBD,Raw,M,13,55.88,GA,82.5,52.5,102.5,237.5,1
+67.5,Sub-Masters,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
 67.5,Open,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
-82.5,13-15,Elijah Ball,SBD,Raw,M,15,81.19,TN,120,85,175,380,1
-90,13-15,Kanyn Koontz,SBD,Raw,F,13,89.81,TN,112.5,67.5,155,335,1
+82.5,Teenage 13-15,Elijah Ball,SBD,Raw,M,15,81.19,TN,120,85,175,380,1
+90,Teenage 13-15,Kanyn Koontz,SBD,Raw,F,13,89.81,TN,112.5,67.5,155,335,1
 90,Open,Matthew Walters,SBD,Raw,M,25,,TN,197.5,145,227.5,570,1
-100,50-54,Willard Johnson,SBD,Raw,M,51,97.79,AL,160,125,200,485,1
+100,Masters 50-54,Willard Johnson,SBD,Raw,M,51,97.79,AL,160,125,200,485,1
 110,Open,Aaron Ochoa,SBD,Raw,M,32,106.59,KY,242.5,172.5,270,685,1
-140+,18-19,Wyatt Blevins,SBD,Raw,M,18,170.32,KY,250,172.5,245,667.5,1
+140+,Teenage 18-19,Wyatt Blevins,SBD,Raw,M,18,170.32,KY,250,172.5,245,667.5,1
 82.5,Juniors,Andrew Carter,SBD,Single-ply,M,23,79.83,TN,185,147.5,187.5,520,1
-110,45-49,John Mackay,SBD,Single-ply,M,45,98.43,GA,262.5,182.5,252.5,697.5,1
-125,Subs,Chris Griffin,SBD,Single-ply,M,39,123.29,TN,250,175,227.5,652.5,1
-117.5,60-64,Thomas Bowman,SBD,Multi-ply,M,60,112.31,GA,342.5,62.5,290,695,1
-117.5,13-15,Camdon Cline,SBD,Multi-ply,M,15,114.58,IN,215,192.5,227.5,635,1
+100,Masters 45-49,John Mackay,SBD,Single-ply,M,45,98.43,GA,262.5,182.5,252.5,697.5,1
+125,Sub-Masters,Chris Griffin,SBD,Single-ply,M,39,123.29,TN,250,175,227.5,652.5,1
+118,Masters 60-64,Thomas Bowman,SBD,Multi-ply,M,60,112.31,GA,342.5,62.5,290,695,1
+118,Teenage 13-15,Camdon Cline,SBD,Multi-ply,M,15,114.58,IN,215,192.5,227.5,635,1
 140+,Juniors,Devin Wiggins,SBD,Multi-ply,M,20,154.04,GA,390,327.5,307.5,1025,1
-117.5,45-49,Frank Phillips,SBD,Multi-ply,M,45,117.39,TN,342.5,235,272.5,850,1
+118,Masters 45-49,Frank Phillips,SBD,Multi-ply,M,45,117.39,TN,342.5,235,272.5,850,1
 100,Juniors,Ryan Callahan,SBD,Multi-ply,M,21,97.52,GA,342.5,230,250,822.5,1
 56,Open,Brenda Engle,BD,Raw,F,51,54.79,OH,,50,97.5,147.5,1
-56,50-54,Brenda Engle,BD,Raw,F,51,54.79,OH,,50,97.5,147.5,1
-67.5,18-19,Joshua Howell,BD,Raw,M,18,64.32,IN,,162.5,192.5,355,1
+56,Masters 50-54,Brenda Engle,BD,Raw,F,51,54.79,OH,,50,97.5,147.5,1
+67.5,Teenage 18-19,Joshua Howell,BD,Raw,M,18,64.32,IN,,162.5,192.5,355,1
 75,Open,Charlie Prazak,BD,Raw,M,26,72.85,TN,,90,182.5,272.5,1
-90,40-44,Lee Hands,BD,Raw,M,43,84.46,GA,,125,182.5,307.5,1
-90,Police/Fire,Lee Hands,BD,Raw,M,43,84.46,GA,,125,182.5,307.5,1
-100,50-54,Willard Johnson,BD,Raw,M,51,97.79,AL,,125,200,325,1
+90,Masters 40-44,Lee Hands,BD,Raw,M,43,84.46,GA,,125,182.5,307.5,1
+90,Police and Fire,Lee Hands,BD,Raw,M,43,84.46,GA,,125,182.5,307.5,1
+100,Masters 50-54,Willard Johnson,BD,Raw,M,51,97.79,AL,,125,200,325,1
 110,Open,Matthias Maines,BD,Raw,M,26,106.37,GA,,212.5,320,532.5,1
 110,Open,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,2
-110,Subs,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,1
+110,Sub-Masters,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,1
 75,Open,Stephanie Braz,B,Raw,F,25,69.31,TN,,52.5,,52.5,1
-82.5,75-79,Gerald Lambdin,B,Raw,M,75,81.1,TN,,85,,85,1
-100,45-49,Todd Morgan,B,Raw,M,44,98.25,TN,,207.5,,207.5,1
+82.5,Masters 75-79,Gerald Lambdin,B,Raw,M,75,81.1,TN,,85,,85,1
+100,Masters 45-49,Todd Morgan,B,Raw,M,44,98.25,TN,,207.5,,207.5,1
 100,Open,Todd Morgan,B,Raw,M,44,98.25,TN,,207.5,,207.5,2
 100,Open,Tony Evans,B,Raw,M,,97.98,TN,,237.5,,237.5,1
-110,50-54,Darrin Webb,B,Raw,M,50,102.78,TN,,170,,170,1
+110,Masters 50-54,Darrin Webb,B,Raw,M,50,102.78,TN,,170,,170,1
 110,Open,Matthias Maines,B,Raw,M,26,106.41,GA,,212.5,,212.5,1
 110,Open,James Faust,B,Raw,M,,107.23,TN,,210,,210,2
-117.5,45-49,Gary Matthews,B,Raw,M,46,117.48,TN,,197.5,,197.5,1
-140,60-64,Hubert Davis,B,Raw,M,60,127.01,TN,,,,,DQ
-125,Open,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
-125,Subs,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
-140+,45-49,Henry Mincey,B,Raw,M,46,177.17,GA,,242.5,,242.5,1
+118,Masters 45-49,Gary Matthews,B,Raw,M,46,117.48,TN,,197.5,,197.5,1
+140,Masters 60-64,Hubert Davis,B,Raw,M,60,127.01,TN,,,,,DQ
+118,Open,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
+118,Sub-Masters,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
+140+,Masters 45-49,Henry Mincey,B,Raw,M,46,177.17,GA,,242.5,,242.5,1
 140+,Open,Henry Mincey,B,Raw,M,46,177.17,GA,,243,,243,1
-110,50-54,Darrin Webb,B,Single-ply,M,50,102.78,TN,,170,,170,1
+110,Masters 50-54,Darrin Webb,B,Single-ply,M,50,102.78,TN,,170,,170,1
 125,Juniors,Hayden Harbour,D,Raw,M,22,,MS,,,270,270,1
-100,50-54,Willard Johnson,D,Raw,M,51,97.79,AL,,,200,200,1
-100,Police/Fire,Jill Ebbing,D,Raw,F,44,,OH,,,152.5,152.5,1
+100,Masters 50-54,Willard Johnson,D,Raw,M,51,97.79,AL,,,200,200,1
+100,Police and Fire,Jill Ebbing,D,Raw,F,44,,OH,,,152.5,152.5,1

@@ -2,13 +2,13 @@ Name,WeightClassKg,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,
 Nikki Dunavant,60,59.42,SC,102.06,61.23,124.74,288.03,SBD,Wraps,F,Teenage 18-19,1
 Jillian Ward,67.5,67.13,NC,181.44,124.74,199.58,505.76,SBD,Wraps,F,Open,1
 Jenna Pakosta,90+,104.87,SC,170.1,88.45,190.51,449.06,SBD,Wraps,F,Open,1
-Renee Robinson,60,59.87,SC,72.57,65.77,95.25,233.59,SBD,Wraps,F,Submasters,1
+Renee Robinson,60,59.87,SC,72.57,65.77,95.25,233.59,SBD,Wraps,F,Sub-Masters,1
 Shannon Baxter,75,73.84,SC,86.18,45.36,102.06,233.6,SBD,Wraps,F,Masters 40-44,1
 Stacy Porfilio,52,48.9,SC,65.77,47.63,108.86,222.26,SBD,Wraps,F,Masters 45-49,1
 Addison Grantham,75,73.94,NC,174.63,142.88,192.78,510.29,SBD,Wraps,M,Juniors,1
 Ryan Cabanting,75,69.4,SC,83.91,72.57,115.67,272.15,SBD,Wraps,M,Juniors,2
 Jordan Smith,110,109.86,NC,294.84,172.37,283.5,750.71,SBD,Wraps,M,Juniors,1
-Kevin Painter,125,116.12,NC,317.51,206.38,272.16,796.05,SBD,Wraps,M,Juniors,1
+Kevin Painter,118,116.12,NC,317.51,206.38,272.16,796.05,SBD,Wraps,M,Juniors,1
 Tad Sliger,75,72.03,SC,156.49,102.06,170.1,428.65,SBD,Wraps,M,Open,1
 Tony DiLiegro,82.5,81.01,NC,260.82,170.1,226.8,657.72,SBD,Wraps,M,Open,1
 William Moorman,82.5,81.92,VA,145.15,124.74,251.74,521.63,SBD,Wraps,M,Open,2
@@ -25,16 +25,16 @@ Marvin Skipper,110,109.68,SC,285.76,213.19,317.51,816.46,SBD,Wraps,M,Open,2
 Zack Potter,110,109.59,SC,247.21,170.1,249.48,666.79,SBD,Wraps,M,Open,3
 Blake Parker,125,122.47,SC,272.16,167.83,278.96,718.95,SBD,Wraps,M,Open,1
 Troy Nash,140,135.81,SC,374.21,204.12,272.16,850.49,SBD,Wraps,M,Open,1
-William Moorman,82.5,81.92,VA,145.15,124.74,251.74,521.63,SBD,Wraps,M,Police/Fire,1
-John Stonestreet,90,88.99,NC,272.16,158.76,244.94,675.86,SBD,Wraps,M,Submasters,1
-Stewart Heiford,110,104.51,NC,127.01,81.65,183.7,392.36,SBD,Wraps,M,Submasters,1
+William Moorman,82.5,81.92,VA,145.15,124.74,251.74,521.63,SBD,Wraps,M,Police and Fire,1
+John Stonestreet,90,88.99,NC,272.16,158.76,244.94,675.86,SBD,Wraps,M,Sub-Masters,1
+Stewart Heiford,110,104.51,NC,127.01,81.65,183.7,392.36,SBD,Wraps,M,Sub-Masters,1
 John Enloe,90,89.81,SC,151.95,142.88,181.44,476.27,SBD,Wraps,M,Masters 40-44,1
-Mark McCollum,125,115.03,SC,260.82,165.56,238.14,664.52,SBD,Wraps,M,Masters 40-44,1
+Mark McCollum,118,115.03,SC,260.82,165.56,238.14,664.52,SBD,Wraps,M,Masters 40-44,1
 Herman Canada,110,108.86,NC,226.8,176.9,249.48,653.18,SBD,Wraps,M,Masters 40-44,1
 Cedric Woriax,140,132.27,NC,319.78,229.06,278.96,827.8,SBD,Wraps,M,Masters 45-49,1
 Narman Grantham,82.5,80.74,NC,181.44,99.79,176.9,458.13,SBD,Wraps,M,Masters 50-54,1
 Cameron Fields,100,99.06,GA,308.44,192.78,260.82,762.04,SBD,Single-ply,M,Open,1
-Shawn Jaquess,100,98.88,NC,222.26,163.29,226.8,612.35,SBD,Single-ply,M,Submasters,1
+Shawn Jaquess,100,98.88,NC,222.26,163.29,226.8,612.35,SBD,Single-ply,M,Sub-Masters,1
 Adam Wade,110,102.33,GA,294.84,183.7,272.16,750.7,SBD,Single-ply,M,Masters 45-49,1
 Nick Hrabley,82.5,80.38,SC,247.21,199.58,208.65,655.44,SBD,Multi-ply,M,Teenage 18-19,1
 Riley Burrows,90,86.73,AL,288.03,199.58,251.74,739.35,SBD,Multi-ply,M,Juniors,1
@@ -46,23 +46,23 @@ Douglas Scarborough,82.5,82.1,,242.67,102.06,238.14,582.87,SBD,Multi-ply,M,Maste
 William Koster,100,99.06,SC,208.65,142.88,170.1,521.63,SBD,Multi-ply,M,Masters 50-54,1
 Karl Tillman,125,124.56,SC,453.59,258.55,303.91,1016.05,SBD,Multi-ply,M,Masters 50-54,1
 Troy Nash,140,135.81,SC,374.21,,,374.21,S,Wraps,M,Open,1
-John Stonstreet,90,88.99,NC,272.16,,,272.16,S,Wraps,M,Submasters,1
+John Stonstreet,90,88.99,NC,272.16,,,272.16,S,Wraps,M,Sub-Masters,1
 Lysander Roberson,110,108.05,NC,,226.8,,226.8,B,Raw,M,Open,1
-Stan Barmore,125,115.21,SC,,281.23,,281.23,B,Raw,M,Open,1
-Dan Dalenberg,125,112.31,SC,,226.8,,226.8,B,Raw,M,Open,2
+Stan Barmore,118,115.21,SC,,281.23,,281.23,B,Raw,M,Open,1
+Dan Dalenberg,118,112.31,SC,,226.8,,226.8,B,Raw,M,Open,2
 Anytony Trzeciak,140+,145.15,NC,,165.56,,165.56,B,Raw,M,Open,1
-Michael Luna,110,105.6,NC,,210.92,,210.92,B,Raw,M,Submasters,1
-Jason Rovery,110,109.59,SC,,208.65,,208.65,B,Raw,M,Submasters,2
+Michael Luna,110,105.6,NC,,210.92,,210.92,B,Raw,M,Sub-Masters,1
+Jason Rovery,110,109.59,SC,,208.65,,208.65,B,Raw,M,Sub-Masters,2
 Dorsey Thomas,75,73.84,SC,,111.13,,111.13,B,Raw,M,Masters 50-54,1
 John Powell,125,123.1,SC,,127.01,,127.01,B,Raw,M,Masters 70-74,1
-JJ Warren,125,116.39,SC,,188.24,,188.24,B,Multi-ply,M,Police/Fire,1
+JJ Warren,118,116.39,SC,,188.24,,188.24,B,Multi-ply,M,Police and Fire,1
 Harry Wotring,110,109.32,SC,,278.96,,278.96,B,Multi-ply,M,Masters 50-54,1
 Adriana DelGaro,60,59.24,VA,,54.43,127.01,181.44,BD,Raw,F,Open,1
 Stacy Morris,67.5,66.59,VA,,79.38,145.15,224.53,BD,Raw,F,Open,1
 Shannon Sarmento,56,54.98,SC,,40.82,129.27,170.09,BD,Raw,F,Masters 40-44,1
 Tom Puglisi,82.5,76.75,NC,,113.4,197.31,310.71,BD,Raw,M,Juniors,1
 Shane Allen,90,89.63,VA,,204.12,249.48,453.6,BD,Raw,M,Open,1
-Dana Howe,125,112.58,NC,,190.51,283.5,474.01,BD,Raw,M,Open,1
+Dana Howe,118,112.58,NC,,190.51,283.5,474.01,BD,Raw,M,Open,1
 Fawn Yodice,75,70.31,SC,,,138.35,138.35,D,Raw,F,Open,1
 Logan Barber,100,99.7,NC,,,299.37,299.37,D,Raw,M,Open,1
 Roger Bowles Jr,125,123.56,NC,,,265.35,265.35,D,Raw,M,Masters 40-44,1

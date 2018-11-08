@@ -1,12 +1,12 @@
 Place,WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event
-1,67.5,Pre-Teens,F,Mistya Sawyer,12,62.1,Ar,102.06,49.9,136.08,288.03,Wraps,SBD
-1,56,18-19,F,Paige Corney,18,52.25,Ar,63.5,29.48,113.4,206.38,Wraps,SBD
+1,67.5,Pre-Teen,F,Mistya Sawyer,12,62.1,Ar,102.06,49.9,136.08,288.03,Wraps,SBD
+1,56,Teenage 18-19,F,Paige Corney,18,52.25,Ar,63.5,29.48,113.4,206.38,Wraps,SBD
 1,56,Open,F,Lacey Kelley,31,53.98,Ar,74.84,45.36,108.86,229.06,Wraps,SBD
 1,110,Open,F,Nicole Ward,35,109.77,Ar,151.95,70.31,181.44,403.7,Wraps,SBD
-1,67.5,Subs,F,Sara Newman,35,66.45,Ar,83.91,43.09,106.59,233.6,Wraps,SBD
-2,75,Subs,F,Samantha Wolf,33,71.67,Ar,92.99,45.36,120.2,258.55,Wraps,SBD
-1,75,Subs,F,Shemeko Strong,34,73.48,Ar,102.06,52.16,142.88,297.1,Wraps,SBD
-1,75,45-49,F,Robyn Halliburtin,47,72.57,Ar,83.91,45.36,102.06,231.33,Wraps,SBD
+1,67.5,Sub-Masters,F,Sara Newman,35,66.45,Ar,83.91,43.09,106.59,233.6,Wraps,SBD
+2,75,Sub-Masters,F,Samantha Wolf,33,71.67,Ar,92.99,45.36,120.2,258.55,Wraps,SBD
+1,75,Sub-Masters,F,Shemeko Strong,34,73.48,Ar,102.06,52.16,142.88,297.1,Wraps,SBD
+1,75,Masters 45-49,F,Robyn Halliburtin,47,72.57,Ar,83.91,45.36,102.06,231.33,Wraps,SBD
 1,56,Juniors,M,Zach Turney,23,54.7,Ar,90.72,92.99,127.01,310.71,Wraps,SBD
 2,75,Juniors,M,Wesley Collins,22,74.93,Ar,136.08,149.69,195.04,480.81,Wraps,SBD
 1,75,Juniors,M,Cara Hilles,22,70.31,Ar,176.9,113.4,201.85,492.15,Wraps,SBD
@@ -29,7 +29,7 @@ Place,WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3B
 1,100,Open,M,Jacob Moore,24,99.7,Ar,238.14,158.76,260.82,657.71,Wraps,SBD
 2,100,Open,M,Allen Fairchild,24,96.8,Ar,183.7,147.42,192.78,523.9,Wraps,SBD
 1,110,Open,M,Joe Fendley,31,103.87,Ar,156.49,113.4,204.12,474,Wraps,SBD
-1,117.5,Open,M,Jason Belt,24,115.21,Ar,263.08,174.63,317.51,755.23,Wraps,SBD
+1,118,Open,M,Jason Belt,24,115.21,Ar,263.08,174.63,317.51,755.23,Wraps,SBD
 1,125,Open,M,Ty Horton,,122.92,Ar,249.48,149.69,226.8,625.96,Wraps,SBD
 2,125,Open,M,Beracah Petersen,24,123.29,Ar,181.44,140.61,240.4,562.45,Wraps,SBD
 3,140,Open,M,Todd Ward,37,133.81,Ar,151.95,106.59,206.38,464.93,Wraps,SBD
@@ -37,28 +37,28 @@ Place,WeightClassKg,Division,Sex,Name,Age,BodyweightKg,State,Best3SquatKg,Best3B
 2,140,Open,M,Scotty Manning,32,134.26,Ar,242.67,176.9,254.01,673.58,Wraps,SBD
 1,140+,Open,M,Jason Wilcoxon,28,151.5,Ar,294.84,204.12,317.51,816.47,Wraps,SBD
 2,140+,Open,M,Paul Bushman,37,179.62,Ar,294.84,158.76,283.5,737.09,Wraps,SBD
-1,110,Police/Fire,M,Joey Butter,38,104.33,Ar,217.72,172.37,199.58,589.67,Wraps,SBD
-2,110,Police/Fire,M,Scott Newman,28,103.6,Ar,183.7,120.2,233.6,537.51,Wraps,SBD
+1,110,Police and Fire,M,Joey Butter,38,104.33,Ar,217.72,172.37,199.58,589.67,Wraps,SBD
+2,110,Police and Fire,M,Scott Newman,28,103.6,Ar,183.7,120.2,233.6,537.51,Wraps,SBD
 1,110,Sub-Masters,M,Bobby Bittle,35,107.05,Ar,226.8,195.04,213.19,635.03,Wraps,SBD
 2,110,Sub-Masters,M,Steve Higgens,33,101.51,Ar,181.44,147.42,226.8,555.65,Wraps,SBD
-1,100,40-44,M,Dan Brooks,41,99.34,Ar,265.35,172.37,283.5,721.21,Wraps,SBD
-1,82.5,65-69,M,Mike Reed,65,81.92,Ar,138.35,83.91,188.24,410.5,Wraps,SBD
-1,90,60-64,M,Benjamin Hooten,61,89.58,Ar,147.42,88.45,183.7,419.57,Wraps,SBD
-1,117.5,50-54,M,Larry Wood,52,115.67,Ar,208.65,185.97,136.08,530.7,Wraps,SBD
+1,100,Masters 40-44,M,Dan Brooks,41,99.34,Ar,265.35,172.37,283.5,721.21,Wraps,SBD
+1,82.5,Masters 65-69,M,Mike Reed,65,81.92,Ar,138.35,83.91,188.24,410.5,Wraps,SBD
+1,90,Masters 60-64,M,Benjamin Hooten,61,89.58,Ar,147.42,88.45,183.7,419.57,Wraps,SBD
+1,118,Masters 50-54,M,Larry Wood,52,115.67,Ar,208.65,185.97,136.08,530.7,Wraps,SBD
 1,100,Open,M,Brandon McKee,36,97.52,Ok,240.4,172.37,235.87,648.64,Single-ply,SBD
-1,117.5,Open,M,Dan Whitt,67,112.49,Ar,195.04,145.15,188.24,528.44,Single-ply,SBD
-1,117.5,65-69,M,Dan Whitt,67,112.49,Ar,195.04,145.15,188.24,528.44,Single-ply,SBD
-1,117.5,50-54,M,Chuck McConnell,,112.04,Tx,297.1,229.06,251.74,777.91,Multi-ply,SBD
+1,118,Open,M,Dan Whitt,67,112.49,Ar,195.04,145.15,188.24,528.44,Single-ply,SBD
+1,118,Masters 65-69,M,Dan Whitt,67,112.49,Ar,195.04,145.15,188.24,528.44,Single-ply,SBD
+1,118,Masters 50-54,M,Chuck McConnell,,112.04,Tx,297.1,229.06,251.74,777.91,Multi-ply,SBD
 1,140,Open,M,Henry Thomason,35,134.72,Tx,439.98,340.19,317.51,1097.69,Multi-ply,SBD
 1,75,Open,F,Stephanie Walker,,74.39,Ar,,115.67,,115.67,Raw,B
-1,100,45-49,M,Dan Martin,47,98.16,Ar,,190.51,,190.51,Raw,B
+1,100,Masters 45-49,M,Dan Martin,47,98.16,Ar,,190.51,,190.51,Raw,B
 1,100,Juniors,M,Emmanuel Lincoln,21,98.66,Ar,,188.24,,188.24,Raw,B
-1,90,Subs,M,Shannon Evans,57,89.36,Ar,,149.69,,149.69,Raw,B
-1,117.5,Open,M,Jeremah Johnson,31,114.76,Ar,188.24,,,188.24,Wraps,S
+1,90,Sub-Masters,M,Shannon Evans,57,89.36,Ar,,149.69,,149.69,Raw,B
+1,118,Open,M,Jeremah Johnson,31,114.76,Ar,188.24,,,188.24,Wraps,S
 1,82.5,Open,M,Brandon Bagwell,30,81.74,Ok,,120.2,165.56,285.76,Raw,BD
-1,90,45-49,M,Dave Shirley,45,89.81,Ar,,192.78,226.8,419.57,Raw,BD
-1,140,55-59,M,Milton Williams,57,139.71,Ar,,140.61,244.94,385.55,Raw,BD
-1,82.5,Subs,M,James Baker,,81.42,Ar,,124.74,158.76,283.5,Raw,BD
-1,117.5,Open,M,Jeremah Johnson,31,114.76,Ar,,188.24,272.16,460.4,Raw,BD
+1,90,Masters 45-49,M,Dave Shirley,45,89.81,Ar,,192.78,226.8,419.57,Raw,BD
+1,140,Masters 55-59,M,Milton Williams,57,139.71,Ar,,140.61,244.94,385.55,Raw,BD
+1,82.5,Sub-Masters,M,James Baker,,81.42,Ar,,124.74,158.76,283.5,Raw,BD
+1,118,Open,M,Jeremah Johnson,31,114.76,Ar,,188.24,272.16,460.4,Raw,BD
 1,82.5,Open,M,Eric Shelton,25,81.1,Ar,,,272.16,272.16,Raw,D
-1,82.5,50-54,M,Michael Lawrence,53,78.93,Ar,,,136.08,136.08,Single-ply,D
+1,82.5,Masters 50-54,M,Michael Lawrence,53,78.93,Ar,,,136.08,136.08,Single-ply,D

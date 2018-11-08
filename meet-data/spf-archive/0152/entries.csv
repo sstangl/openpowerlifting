@@ -13,7 +13,7 @@ Lisa Gniewek,70.31,NC,81.65,40.82,111.13,233.6,F,Masters 40-44,75,Wraps,SBD,,,1
 Christian Blackmon,57.15,AL,99.79,54.43,117.93,272.16,M,Teenage 13-15,60,Wraps,SBD,,,1
 Jason Mace,87.63,NC,149.69,92.99,158.76,401.43,M,Teenage 13-15,90,Wraps,SBD,,,1
 Nic Kemper,95.89,KY,213.19,124.74,210.92,548.85,M,Teenage 13-15,100,Wraps,SBD,,,1
-Raymond Bell,65.86,NC,136.08,68.04,140.61,344.73,M,Teenage 13-15,140,Wraps,SBD,,,1
+Raymond Bell,65.86,NC,136.08,68.04,140.61,344.73,M,Teenage 13-15,67.5,Wraps,SBD,,,1
 Mathew Kamisol,65.86,NC,161.03,81.65,158.76,401.43,M,Teenage 16-17,67.5,Wraps,SBD,,,1
 Chase McDaniel,74.8,KY,219.99,131.54,208.65,560.19,M,Teenage 16-17,75,Wraps,SBD,,,1
 Andrew Koontz,73.84,SC,149.69,86.18,183.7,419.57,M,Teenage 16-17,75,Wraps,SBD,,,2
@@ -51,8 +51,8 @@ Greg Crook,84.01,NC,254.01,170.1,249.48,673.58,M,Open,90,Wraps,SBD,,,1
 Robert Hensel,89.72,FL,263.08,158.76,226.8,648.64,M,Open,90,Wraps,SBD,,,2
 Jacob Gieseike,86.27,KY,206.38,131.54,260.82,598.74,M,Open,90,Wraps,SBD,,,3
 John Petruzzi,86.73,VA,,,,,M,Open,90,Wraps,SBD,,,DQ
-Jonathan Couick,89.54,NC,242.67,161.03,272.16,675.85,M,Submasters,90,Wraps,SBD,,,1
-David Crarter,96.71,NC,185.97,158.76,215.46,560.19,M,Submasters,100,Wraps,SBD,,,1
+Jonathan Couick,89.54,NC,242.67,161.03,272.16,675.85,M,Sub-Masters,90,Wraps,SBD,,,1
+David Crarter,96.71,NC,185.97,158.76,215.46,560.19,M,Sub-Masters,100,Wraps,SBD,,,1
 Larry Goodwin,88.72,AL,136.08,113.4,179.17,428.64,M,Masters 40-44,90,Wraps,SBD,,,1
 Jon Heisinger,,,,,,,M,Masters 40-44,100,Wraps,SBD,,,DQ
 Paul Leopard,79.11,AL,140.61,104.33,163.29,408.23,M,Masters 45-49,82.5,Wraps,SBD,,,1
@@ -71,14 +71,14 @@ Michael Cochran,59.87,AL,161.03,133.81,181.44,476.27,M,Masters 40-44,60,Single-p
 Camereon Fields,88,GA,204.12,,,204.12,M,Open,90,Single-ply,S,,,1
 Mathew York,82.1,TN,278.96,208.65,226.8,714.41,M,Juniors,82.5,Multi-ply,SBD,,,1
 Garrett Huffman,80.83,NC,365.14,251.74,249.48,866.36,M,Open,82.5,Multi-ply,SBD,,,1
-Marty Bavetz,,,,,,,M,Open,,Multi-ply,SBD,,,DQ
+Marty Bavetz,,,,,,,M,Open,82.5,Multi-ply,SBD,,,DQ
 Jason Coker,89.81,TX,408.23,365.14,249.48,1022.85,M,Open,90,Multi-ply,SBD,,,1
 Jeffery Baker,88,TN,260.82,149.69,263.08,673.58,M,Open,90,Multi-ply,SBD,,,2
 Brian Hill,99.79,NC,378.75,215.46,269.89,864.09,M,Open,100,Multi-ply,SBD,,,1
 Mark Steel,99.79,TN,,,,,M,Open,100,Multi-ply,SBD,,,DQ
 Joe Jester,99.61,OH,,,,,M,Open,100,Multi-ply,SBD,,,DQ
-Michael Rainey,99.79,GA,283.5,208.65,278.96,771.11,M,Submasters,100,Multi-ply,SBD,,,1
-Mark Steel,99.79,TN,,,,,M,Police/Fire,100,Multi-ply,SBD,,,DQ
+Michael Rainey,99.79,GA,283.5,208.65,278.96,771.11,M,Sub-Masters,100,Multi-ply,SBD,,,1
+Mark Steel,99.79,TN,,,,,M,Police and Fire,100,Multi-ply,SBD,,,DQ
 Mark Steel,99.79,TN,,,,,M,Masters 40-44,100,Multi-ply,SBD,,,DQ
 Joey Edwards,,,,,,,M,Masters 40-44,100,Multi-ply,SBD,,,DQ
 Adam Wade,98.43,GA,,,,,M,Masters 45-49,100,Multi-ply,SBD,,,DQ
@@ -94,7 +94,7 @@ Anthony Evans,89.36,GA,,195.04,,195.04,M,Open,90,Raw,B,,,1
 Chase Stratton,89.63,MO,,183.7,,183.7,M,Open,90,Raw,B,,,2
 Jason Rovey,,,,,,,M,Open,100,Raw,B,,,DQ
 Matt Millsaps,,,,,,,M,Open,100,Raw,B,,,DQ
-Jason Rovey,,,,,,,M,Submasters,,Raw,B,,,DQ
+Jason Rovey,,,,,,,M,Sub-Masters,100,Raw,B,,,DQ
 Joseph Sneed,,,,,,,M,Masters 40-44,82.5,Raw,B,,,DQ
 Barry Williams,96.52,NC,,226.8,,226.8,M,Masters 40-44,100,Raw,B,,,1
 Robert Maluso,99.79,TN,,158.76,,158.76,M,Masters 40-44,100,Raw,B,,,2
@@ -104,22 +104,22 @@ Chris Flowers,74.21,IN,,190.51,,190.51,M,Masters 45-49,75,Single-ply,B,,,1
 Bob Bassman,98.25,TX,,161.03,,161.03,M,Masters 70-74,100,Single-ply,B,,,1
 Josh Price,54.88,TN,,145.15,,145.15,M,Open,56,Multi-ply,B,,149.69,1
 Jason Coker,89.81,TX,,365.14,,365.14,M,Open,90,Multi-ply,B,,,1
-Lee Lichtle,81.1,FL,,154.22,,154.22,M,Police/Fire,82.5,Multi-ply,B,,,1
+Lee Lichtle,81.1,FL,,154.22,,154.22,M,Police and Fire,82.5,Multi-ply,B,,,1
 Lee Lichtle,81.1,FL,,154.22,,154.22,M,Masters 65-69,82.5,Multi-ply,B,,,1
 Ron Blackman,89.81,SC,,226.8,,226.8,M,Masters 65-69,90,Multi-ply,B,,,1
 Josh Love,84.64,VA,,,163.29,163.29,M,Open,90,Raw,D,,,1
 Tim Metcalf,74.12,NC,,,147.42,147.42,M,Masters 50-54,75,Raw,D,,,1
 Aaron Smith,99.34,GA,,,204.12,204.12,M,Open,100,Single-ply,D,,,1
-Don Millrany,99.61,TN,,,263.08,263.08,M,Submasters,100,Single-ply,D,,,1
+Don Millrany,99.61,TN,,,263.08,263.08,M,Sub-Masters,100,Single-ply,D,,,1
 Rob Hanners,74.39,VA,,,276.69,276.69,M,Open,75,Multi-ply,D,283.5,,1
 Justin Bethune,109.77,GA,260.82,183.7,285.76,730.28,M,Juniors,110,Wraps,SBD,,,1
 Josh Millwood,123.1,AL,235.87,151.95,272.16,659.98,M,Juniors,125,Wraps,SBD,,,1
 Dean Stokes,107.37,OH,306.17,226.8,322.05,855.02,M,Open,110,Wraps,SBD,,,1
-Ronald Henderson,114.76,TN,226.8,158.76,226.8,612.35,M,Open,117.5,Wraps,SBD,,,1
+Ronald Henderson,114.76,TN,226.8,158.76,226.8,612.35,M,Open,118,Wraps,SBD,,,1
 Heath Garrett,123.65,AL,306.17,183.7,328.85,818.73,M,Open,125,Wraps,SBD,,,1
 Michael Schultz,138.35,AL,328.85,226.8,319.78,875.43,M,Open,140,Wraps,SBD,,,1
 Thomas Dillard,165.92,VA,317.51,233.6,317.51,868.63,M,Open,140+,Wraps,SBD,,,1
-Ronald Henderson,114.76,TN,226.8,158.76,226.8,612.35,M,Submasters,117.5,Wraps,SBD,,,1
+Ronald Henderson,114.76,TN,226.8,158.76,226.8,612.35,M,Sub-Masters,118,Wraps,SBD,,,1
 Allen Underwood,108.86,NC,251.74,195.04,258.55,705.34,M,Masters 40-44,110,Wraps,SBD,,,1
 Nathan Holt,122.65,TX,317.51,174.63,290.3,782.45,M,Open,125,Single-ply,SBD,,,1
 Jonathan Byrd,134.54,NC,369.68,303.91,310.71,984.3,M,Open,140,Single-ply,SBD,,,1
@@ -142,21 +142,21 @@ James Robinson,123.83,KY,317.51,238.14,328.85,884.51,M,Masters 50-54,125,Multi-p
 Justin Bethune,109.77,GA,,183.7,285.76,469.47,M,Juniors,110,Raw,BD,,,1
 John Pinder,109.41,SC,,167.83,306.17,474,M,Masters 50-54,110,Raw,BD,,,1
 Jason Carter,148.42,TN,,265.35,283.5,548.85,M,Masters 40-44,140+,Single-ply,BD,,,1
-Anthony Ford,109.77,AL,,226.8,,226.8,M,Police/Fire,110,Raw,B,,231.33,1
-Paul Shoaf,136.08,AL,,151.95,,151.95,M,Police/Fire,140,Raw,B,,,1
+Anthony Ford,109.77,AL,,226.8,,226.8,M,Police and Fire,110,Raw,B,,231.33,1
+Paul Shoaf,136.08,AL,,151.95,,151.95,M,Police and Fire,140,Raw,B,,,1
 Anthony Ford,109.77,AL,,226.8,,226.8,M,Masters 40-44,110,Raw,B,,231.33,1
 Paul Shoaf,136.08,AL,,151.95,,151.95,M,Masters 45-49,140,Raw,B,,,1
 John Bible,149.69,TN,,213.19,,213.19,M,Masters 50-54,140+,Raw,B,,,1
 Gerald Lambdin,106.41,TN,,117.93,,117.93,M,Masters 70-74,110,Raw,B,,,1
-Forest Holt,111.58,TX,,,,,M,Open,117.5,Single-ply,B,,,DQ
+Forest Holt,111.58,TX,,,,,M,Open,118,Single-ply,B,,,DQ
 Mike Womack,157.03,TX,,362.87,,362.87,M,Open,140+,Single-ply,B,,,1
 Jack Kottwitz,158.76,AL,,344.73,,344.73,M,Open,140+,Single-ply,B,,,2
-Dana Farrow,105.69,GA,,,,,M,Submasters,110,Single-ply,B,,,DQ
+Dana Farrow,105.69,GA,,,,,M,Sub-Masters,110,Single-ply,B,,,DQ
 Don Wright,109.04,GA,,249.48,,249.48,M,Masters 40-44,110,Single-ply,B,,,1
-Tom Chapala,114.76,IN,,147.42,,147.42,M,Masters 70-74,117.5,Single-ply,B,,,1
+Tom Chapala,114.76,IN,,147.42,,147.42,M,Masters 70-74,118,Single-ply,B,,,1
 Joey Smith,128.19,NC,,347,,347,M,Open,140,Multi-ply,B,,,1
-Paul Lauffer,105.05,PA,,272.16,,272.16,M,Submasters,110,Multi-ply,B,,,1
-Joey Smith,128.19,NC,,347,,347,M,Submasters,140,Multi-ply,B,,,1
+Paul Lauffer,105.05,PA,,272.16,,272.16,M,Sub-Masters,110,Multi-ply,B,,,1
+Joey Smith,128.19,NC,,347,,347,M,Sub-Masters,140,Multi-ply,B,,,1
 Heath Garrett,123.65,AL,306.17,,,306.17,M,Open,125,Wraps,S,,,1
 Heath Garrett,123.65,AL,,,328.85,328.85,M,Open,125,Raw,D,,,1
-Mark Ferris,110.95,NC,,,272.16,272.16,M,Open,117.5,Raw,D,,,1
+Mark Ferris,110.95,NC,,,272.16,272.16,M,Open,118,Raw,D,,,1
