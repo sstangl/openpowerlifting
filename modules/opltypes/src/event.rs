@@ -19,42 +19,111 @@ impl Event {
     const BITFLAG_PUSHPULL: u8 = 0b011;
     const BITFLAG_FULLPOWER: u8 = 0b111;
 
+    /// Constructs a new Event with value "SBD".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::sbd().is_full_power());
+    /// ```
     #[inline(always)]
     pub const fn sbd() -> Event {
         Event(Self::BITFLAG_FULLPOWER)
     }
 
+    /// Constructs a new Event with value "BD".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::bd().is_push_pull());
+    /// ```
     #[inline(always)]
     pub const fn bd() -> Event {
         Event(Self::BITFLAG_BENCH | Self::BITFLAG_DEADLIFT)
     }
 
+    /// Constructs a new Event with value "SB".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::sb().has_squat());
+    /// assert!(Event::sb().has_bench());
+    /// assert!(!Event::sb().has_deadlift());
+    /// ```
     #[inline(always)]
     pub const fn sb() -> Event {
         Event(Self::BITFLAG_SQUAT | Self::BITFLAG_BENCH)
     }
 
+    /// Constructs a new Event with value "SD".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::sd().has_squat());
+    /// assert!(!Event::sd().has_bench());
+    /// assert!(Event::sd().has_deadlift());
+    /// ```
     #[inline(always)]
     pub const fn sd() -> Event {
         Event(Self::BITFLAG_SQUAT | Self::BITFLAG_DEADLIFT)
     }
 
+    /// Constructs a new Event with value "S".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::s().is_squat_only());
+    /// ```
     #[inline(always)]
     pub const fn s() -> Event {
         Event(Self::BITFLAG_SQUAT)
     }
 
+    /// Constructs a new Event with value "B".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::b().is_bench_only());
+    /// ```
     #[inline(always)]
     pub const fn b() -> Event {
         Event(Self::BITFLAG_BENCH)
     }
 
+    /// Constructs a new Event with value "D".
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::d().is_deadlift_only());
+    /// ```
     #[inline(always)]
     pub const fn d() -> Event {
         Event(Self::BITFLAG_DEADLIFT)
     }
 
     /// True iff the Event contains a Bench and a Deadlift.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Event;
+    /// assert!(Event::sbd().has_push_pull());
+    /// assert!(Event::bd().has_push_pull());
+    /// assert!(!Event::d().has_push_pull());
+    /// ```
     #[inline]
     pub fn has_push_pull(self) -> bool {
         self.0 & Self::BITFLAG_PUSHPULL == Self::BITFLAG_PUSHPULL

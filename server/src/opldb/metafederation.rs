@@ -153,10 +153,11 @@ impl MetaFederation {
             }
             MetaFederation::AllUK => {
                 entry.lifter_country.map_or(false, |c| c.is_in_uk())
-                    || (entry.lifter_country == None && meet
-                        .federation
-                        .home_country()
-                        .map_or(false, |c| c.is_in_uk()))
+                    || (entry.lifter_country == None
+                        && meet
+                            .federation
+                            .home_country()
+                            .map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::AllUkraine => {
                 entry.lifter_country == Some(Country::Ukraine)

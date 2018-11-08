@@ -4,7 +4,8 @@ use strum::ParseError;
 
 use crate::Country;
 
-/// A state in a `Country`.
+/// The State column.
+#[derive(Debug, PartialEq)]
 pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
@@ -17,6 +18,15 @@ pub enum State {
 }
 
 impl State {
+    /// Constructs a State for a specific Country.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::{Country, State, USAState};
+    /// let state = State::from_str_and_country("NY", Country::USA).unwrap();
+    /// assert_eq!(state, State::InUSA(USAState::NY));
+    /// ```
     pub fn from_str_and_country(s: &str, country: Country) -> Result<State, ParseError> {
         match country {
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),
@@ -34,14 +44,14 @@ impl State {
 
 /// A state in Australia.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum AustraliaState {
     ACT, NSW, NT, QLD, SA, TAS, VIC, WA
 }
 
 /// A state in Brazil.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum BrazilState {
     AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
     PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
@@ -49,21 +59,21 @@ pub enum BrazilState {
 
 /// A state in Canada.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
 
 /// A state in Germany.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum GermanyState {
     BW, BY, BE, BB, HB, HE, HH, MV, NI, NW, RP, SH, SL, SN, ST, TH
 }
 
 /// A state in India.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum IndiaState {
     AP, AR, AS, BR, CG, GA, GJ, HR, HP, JK, JH, KA,
     KL, MP, MH, MN, ML, MZ, NL, OR, PB, RJ, SK, TN,
@@ -72,7 +82,7 @@ pub enum IndiaState {
 
 /// A state in Mexico.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum MexicoState {
     AG, BC, BS, CM, CS, CH, CO, CL, DF, DG, GT,
     GR, HG, JA, EM, MI, MO, NA, NL, OA, PU, QT,
@@ -81,7 +91,7 @@ pub enum MexicoState {
 
 /// A state in New Zealand.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
     TAS, NSN, MBH, WTC, CAN, OTA, STL
@@ -89,7 +99,7 @@ pub enum NewZealandState {
 
 /// A state in the USA.
 #[cfg_attr(rustfmt, rustfmt_skip)]
-#[derive(EnumString)]
+#[derive(Debug, EnumString, PartialEq)]
 pub enum USAState {
     AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,
     KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC,

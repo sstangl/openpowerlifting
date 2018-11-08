@@ -1,6 +1,6 @@
 //! Defines the Sex field.
 
-/// The Sex field.
+/// The Sex column.
 #[derive(Clone, Copy, Debug, Deserialize, EnumString, PartialEq, Serialize)]
 pub enum Sex {
     M,

@@ -27,6 +27,7 @@ impl<'de> Visitor<'de> for YesNo {
     }
 }
 
+/// Deserialization helper, converting "Yes" and "No" to a boolean.
 pub fn deserialize_yes_no<'de, D>(de: D) -> Result<bool, D::Error>
 where
     D: serde::Deserializer<'de>,
