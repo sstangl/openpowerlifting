@@ -108,27 +108,21 @@ impl PartialOrd for WeightClassKg {
 impl Ord for WeightClassKg {
     fn cmp(&self, other: &WeightClassKg) -> Ordering {
         match self {
-            WeightClassKg::UnderOrEqual(kg) => {
-                match other {
-                    WeightClassKg::UnderOrEqual(other_kg) => kg.cmp(&other_kg),
-                    WeightClassKg::Over(_) => Ordering::Less,
-                    WeightClassKg::None => Ordering::Less,
-                }
-            }
-            WeightClassKg::Over(kg) => {
-                match other {
-                    WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
-                    WeightClassKg::Over(other_kg) => kg.cmp(&other_kg),
-                    WeightClassKg::None => Ordering::Less,
-                }
-            }
-            WeightClassKg::None => {
-                match other {
-                    WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
-                    WeightClassKg::Over(_) => Ordering::Greater,
-                    WeightClassKg::None => Ordering::Equal,
-                }
-            }
+            WeightClassKg::UnderOrEqual(kg) => match other {
+                WeightClassKg::UnderOrEqual(other_kg) => kg.cmp(&other_kg),
+                WeightClassKg::Over(_) => Ordering::Less,
+                WeightClassKg::None => Ordering::Less,
+            },
+            WeightClassKg::Over(kg) => match other {
+                WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
+                WeightClassKg::Over(other_kg) => kg.cmp(&other_kg),
+                WeightClassKg::None => Ordering::Less,
+            },
+            WeightClassKg::None => match other {
+                WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
+                WeightClassKg::Over(_) => Ordering::Greater,
+                WeightClassKg::None => Ordering::Equal,
+            },
         }
     }
 }

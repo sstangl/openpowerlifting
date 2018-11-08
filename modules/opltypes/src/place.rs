@@ -63,8 +63,8 @@ impl FromStr for Place {
             "DD" => Ok(Place::DD),
             "NS" => Ok(Place::NS),
             _ => {
-                let num = num::NonZeroU8::new(s.parse::<u8>()?)
-                    .ok_or_else(|| "Place cannot be '0'")?;
+                let num =
+                    num::NonZeroU8::new(s.parse::<u8>()?).ok_or_else(|| "Place cannot be '0'")?;
                 Ok(Place::P(num))
             }
         }

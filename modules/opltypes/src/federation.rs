@@ -64,11 +64,11 @@ pub enum Federation {
     #[strum(to_string = "ADFPF", serialize = "adfpf")]
     ADFPF,
 
-    /// Asociación Española de Powerlifting, IPF. 
+    /// Asociación Española de Powerlifting, IPF.
     #[strum(to_string = "AEP", serialize = "aep")]
     AEP,
 
-    /// American Frantz Powerlifting Federation 
+    /// American Frantz Powerlifting Federation
     #[strum(to_string = "AFPF", serialize = "afpf")]
     AFPF,
 
@@ -170,7 +170,7 @@ pub enum Federation {
     /// Commonwealth Powerlifting Federation, IPF.
     #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
     CommonwealthPF,
-    
+
     /// Canadian Powerlifting Congress, WPC.
     #[strum(to_string = "CPC", serialize = "cpc")]
     CPC,
@@ -684,7 +684,7 @@ pub enum Federation {
     /// World United Amateur Powerlifting.
     #[strum(to_string = "WUAP", serialize = "wuap")]
     WUAP,
-    
+
     /// Austrian WUAP affiliate.
     #[serde(rename = "WUAP-AUT")]
     #[strum(to_string = "WUAP-AUT", serialize = "wuap-aut")]

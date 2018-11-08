@@ -78,20 +78,16 @@ impl Age {
     /// ```
     pub fn is_definitely_less_than(self, other: Age) -> bool {
         match self {
-            Age::Exact(age) => {
-                match other {
-                    Age::Exact(other) => age < other,
-                    Age::Approximate(other) => age < other,
-                    Age::None => false,
-                }
-            }
-            Age::Approximate(age) => {
-                match other {
-                    Age::Exact(other) => age + 1 < other,
-                    Age::Approximate(other) => age + 1 < other,
-                    Age::None => false,
-                }
-            }
+            Age::Exact(age) => match other {
+                Age::Exact(other) => age < other,
+                Age::Approximate(other) => age < other,
+                Age::None => false,
+            },
+            Age::Approximate(age) => match other {
+                Age::Exact(other) => age + 1 < other,
+                Age::Approximate(other) => age + 1 < other,
+                Age::None => false,
+            },
             Age::None => false,
         }
     }
@@ -117,24 +113,19 @@ impl Age {
     /// ```
     pub fn is_definitely_greater_than(self, other: Age) -> bool {
         match self {
-            Age::Exact(age) => {
-                match other {
-                    Age::Exact(other) => age > other,
-                    Age::Approximate(other) => age > other + 1,
-                    Age::None => false,
-                }
-            }
-            Age::Approximate(age) => {
-                match other {
-                    Age::Exact(other) => age > other,
-                    Age::Approximate(other) => age + 1 > other,
-                    Age::None => false,
-                }
-            }
+            Age::Exact(age) => match other {
+                Age::Exact(other) => age > other,
+                Age::Approximate(other) => age > other + 1,
+                Age::None => false,
+            },
+            Age::Approximate(age) => match other {
+                Age::Exact(other) => age > other,
+                Age::Approximate(other) => age + 1 > other,
+                Age::None => false,
+            },
             Age::None => false,
         }
     }
-
 }
 
 impl fmt::Display for Age {
