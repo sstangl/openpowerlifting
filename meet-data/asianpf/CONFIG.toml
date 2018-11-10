@@ -41,10 +41,10 @@
     sex = "F"
 
 [exemptions]
-    9402 = ["check_row_weightclass_consistency"]
-    9602 = ["check_row_weightclass_consistency"]
-    9802 = ["check_row_weightclass_consistency"]
-    0002 = ["check_row_weightclass_consistency"]
-    0701 = ["check_row_weightclass_consistency"]  # Omits lowest weightclasses.
-    1002 = ["check_row_weightclass_consistency"]  # Omits lowest weightclasses.
-    1201 = ["check_row_weightclass_consistency"]  # Omits lowest weightclasses.
+    9402 = ["ExemptWeightClassConsistency"]
+    9602 = ["ExemptWeightClassConsistency"]
+    9802 = ["ExemptWeightClassConsistency"]
+    0002 = ["ExemptWeightClassConsistency"]
+    0701 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
+    1002 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
+    1201 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.

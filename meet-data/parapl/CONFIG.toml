@@ -28,6 +28,6 @@
     sex = "F"
 
 [exemptions]
-    1001 = ["check_row_lift_order"]
-    1601 = ["check_row_lift_order"]
-    8401 = ["check_row_weightclass_consistency"]
+    1001 = ["ExemptLiftOrder"]
+    1601 = ["ExemptLiftOrder"]
+    8401 = ["ExemptWeightClassConsistency"]

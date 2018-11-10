@@ -42,4 +42,4 @@
     sex = "F"
 
 [exemptions]
-    0102 = ["check_row_weightclass_consistency"]
+    0102 = ["ExemptWeightClassConsistency"]

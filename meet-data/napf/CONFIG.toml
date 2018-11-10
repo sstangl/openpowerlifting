@@ -44,9 +44,9 @@
     sex = "F"
 
 [exemptions]
-    7501 = ["check_row_weightclass_consistency"]
-    7601 = ["check_row_weightclass_consistency"]
-    7701 = ["check_row_weightclass_consistency"]
-    7801 = ["check_row_weightclass_consistency"]
-    1007 = ["check_row_weightclass_consistency"]
-    0701 = ["check_row_weightclass_consistency"]
+    7501 = ["ExemptWeightClassConsistency"]
+    7601 = ["ExemptWeightClassConsistency"]
+    7701 = ["ExemptWeightClassConsistency"]
+    7801 = ["ExemptWeightClassConsistency"]
+    1007 = ["ExemptWeightClassConsistency"]
+    0701 = ["ExemptWeightClassConsistency"]

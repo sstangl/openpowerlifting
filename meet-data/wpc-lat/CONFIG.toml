@@ -30,5 +30,5 @@
     sex = "F"
 
 [exemptions]
-    0902 = ["check_row_weightclass_consistency"]  # Removed 44 and 48 classes.
-    1001 = ["check_row_weightclass_consistency"]  # Removed 44 and 48 classes.
+    0902 = ["ExemptWeightClassConsistency"]  # Removed 44 and 48 classes.
+    1001 = ["ExemptWeightClassConsistency"]  # Removed 44 and 48 classes.

@@ -41,4 +41,4 @@
     sex = "F"
 
 [exemptions]
-    1403 = ["check_row_division"]
+    1403 = ["ExemptDivision"]

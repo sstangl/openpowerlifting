@@ -59,15 +59,12 @@ pub struct WeightClassConfig {
 #[derive(Copy, Clone, Debug, EnumString, PartialEq)]
 pub enum Exemption {
     /// Exempts the meet from having only known divisions.
-    #[strum(to_string = "check_row_division")]
     ExemptDivision,
 
     /// Exempts the meet from requiring monotonically ascending attempts.
-    #[strum(to_string = "check_row_lift_order")]
     ExemptLiftOrder,
 
     /// Allows lifters of any bodyweight to compete in any weightclass.
-    #[strum(to_string = "check_row_weightclass_consistency")]
     ExemptWeightClassConsistency,
 }
 

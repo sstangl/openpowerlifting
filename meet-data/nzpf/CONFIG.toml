@@ -48,5 +48,5 @@
     sex = "F"
 
 [exemptions]
-    1212 = ["check_row_weightclass_consistency"]
-    1427 = ["check_row_weightclass_consistency"]  # Has unreported weightclasses.
+    1212 = ["ExemptWeightClassConsistency"]
+    1427 = ["ExemptWeightClassConsistency"]  # Has unreported weightclasses.

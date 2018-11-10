@@ -44,6 +44,5 @@
     sex = "F"
 
 [exemptions]
-    1999-01-30-acf5c857 = ["check_row_division"]
-    2000-01-08-1346c372 = ["check_row_division"]
-
+    1999-01-30-acf5c857 = ["ExemptDivision"]
+    2000-01-08-1346c372 = ["ExemptDivision"]

@@ -14,4 +14,4 @@
     sex = "M"
 
 [exemptions]
-    1201 = ["check_row_weightclass_consistency"]  # Women don't have a weightclass.
+    1201 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.

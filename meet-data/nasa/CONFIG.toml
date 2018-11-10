@@ -5,4 +5,4 @@
 # TODO
 
 [exemptions]
-    0301 = ["check_row_weightclass_consistency"]  # Uses strange weightclasses.
+    0301 = ["ExemptWeightClassConsistency"]  # Uses strange weightclasses.

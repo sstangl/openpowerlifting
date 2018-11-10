@@ -56,9 +56,9 @@
     sex = "F"
 
 [exemptions]
-    8701 = ["check_row_weightclass_consistency"]
-    8702 = ["check_row_weightclass_consistency"]
-    8902 = ["check_row_weightclass_consistency"]  # Unreported.
-    8904 = ["check_row_weightclass_consistency"]  # Unreported.
-    8905 = ["check_row_weightclass_consistency"]  # Unreported.
-    0902 = ["check_row_division"]
+    8701 = ["ExemptWeightClassConsistency"]
+    8702 = ["ExemptWeightClassConsistency"]
+    8902 = ["ExemptWeightClassConsistency"]  # Unreported.
+    8904 = ["ExemptWeightClassConsistency"]  # Unreported.
+    8905 = ["ExemptWeightClassConsistency"]  # Unreported.
+    0902 = ["ExemptDivision"]

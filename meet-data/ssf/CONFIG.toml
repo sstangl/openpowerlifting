@@ -46,5 +46,5 @@
     sex = "F"
 
 [exemptions]
-    296 = ["check_row_weightclass_consistency"]  # Ignores 44 weightclass.
-    cbf653bf = ["check_row_weightclass_consistency"]  # Missing weight information.
+    296 = ["ExemptWeightClassConsistency"]  # Ignores 44 weightclass.
+    cbf653bf = ["ExemptWeightClassConsistency"]  # Missing weight information.

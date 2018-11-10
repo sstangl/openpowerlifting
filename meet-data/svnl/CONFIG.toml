@@ -62,12 +62,12 @@
     divisions = ["Under 18","Under 17","Under 15","Under 14"]
 
 [exemptions]
-    15008 = ["check_row_division"]
-    16063 = ["check_row_division"]
-    16064 = ["check_row_division"]
-    16016 = ["check_row_division"]
-    83004 = ["check_row_weightclass_consistency"]
-    80005 = ["check_row_weightclass_consistency"]
-    11002 = ["check_row_weightclass_consistency"]
-    16079 = ["check_row_weightclass_consistency"]
-    09002 = ["check_row_weightclass_consistency"]  # Ignores 52 weightclass.
+    15008 = ["ExemptDivision"]
+    16063 = ["ExemptDivision"]
+    16064 = ["ExemptDivision"]
+    16016 = ["ExemptDivision"]
+    83004 = ["ExemptWeightClassConsistency"]
+    80005 = ["ExemptWeightClassConsistency"]
+    11002 = ["ExemptWeightClassConsistency"]
+    16079 = ["ExemptWeightClassConsistency"]
+    09002 = ["ExemptWeightClassConsistency"]  # Ignores 52 weightclass.

@@ -25,8 +25,8 @@
     sex = "F"
 
 [exemptions]
-    1101 = ["check_row_weightclass_consistency"]
-    1102 = ["check_row_weightclass_consistency"]
-    1201 = ["check_row_weightclass_consistency"]
-    1401 = ["check_row_weightclass_consistency"]
-    1402 = ["check_row_weightclass_consistency"]  # Didn't use weightclasses.
+    1101 = ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptWeightClassConsistency"]
+    1201 = ["ExemptWeightClassConsistency"]
+    1401 = ["ExemptWeightClassConsistency"]
+    1402 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.

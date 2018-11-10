@@ -41,8 +41,8 @@
     sex = "F"
 
 [exemptions]
-    8605 = ["check_row_division"]
-    8819 = ["check_row_weightclass_consistency"]  # Ignored 52 weightclass.
-    8911 = ["check_row_weightclass_consistency"]  # Ignored 52 weightclass.
-    8916 = ["check_row_weightclass_consistency"]  # Ignored 52 weightclass.
-    9405 = ["check_row_weightclass_consistency"]  # Ignored 52 weightclass.
+    8605 = ["ExemptDivision"]
+    8819 = ["ExemptWeightClassConsistency"]  # Ignored 52 weightclass.
+    8911 = ["ExemptWeightClassConsistency"]  # Ignored 52 weightclass.
+    8916 = ["ExemptWeightClassConsistency"]  # Ignored 52 weightclass.
+    9405 = ["ExemptWeightClassConsistency"]  # Ignored 52 weightclass.
