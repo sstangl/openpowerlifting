@@ -30,6 +30,6 @@ echo PA, >> meet.csv
 ${REPOSCRIPTDIR}/calc-place entries.csv || true
 
 # Show any warnings.
-${REPOTESTDIR}/check-entries-csv entries.csv
+${REPOTESTDIR}/check
 
 echo "Done! Don't forget about meet.csv!"

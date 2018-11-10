@@ -22,6 +22,6 @@ ${REPOSCRIPTDIR}/csv-tokg entries.csv
 ${REPOSCRIPTDIR}/fix-weightclasses entries.csv
 
 # Show any warnings.
-${REPOSCRIPTDIR}/check-entries-csv entries.csv
+${REPOSCRIPTDIR}/check
 
 echo "Done! Don't forget about meet.csv!"

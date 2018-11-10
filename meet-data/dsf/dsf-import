@@ -584,7 +584,7 @@ def main(url):
         entriescsv.write(fd)
 
     subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep +
-                    'check-entries-csv', dirname + os.sep + 'entries.csv'])
+                    'check', dirname + os.sep + 'entries.csv'])
 
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)

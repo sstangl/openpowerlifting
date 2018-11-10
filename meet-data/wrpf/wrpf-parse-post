@@ -29,6 +29,6 @@ cp ${SCRIPTDIR}/../meet.template meet.csv
 echo "WRPF," >> meet.csv
 
 # Show any warnings.
-${REPOTESTSDIR}/check-entries-csv entries.csv
+${REPOTESTSDIR}/check
 
 echo "Done! Don't forget about meet.csv!"

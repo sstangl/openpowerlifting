@@ -14,7 +14,7 @@ do
 	do
 		java -jar /Users/blerner/openpowerlifting/tabula-1.0.1-jar-with-dependencies.jar -l $f >"results.csv"
 		python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "entries.csv"
-		python /Users/blerner/openpowerlifting/tests/check-entries-csv "entries.csv"> check_entries
+		bash /Users/blerner/openpowerlifting/tests/check > check_entries
 	done
 	echo $var > URL
 	cd ..

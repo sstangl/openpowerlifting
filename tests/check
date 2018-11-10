@@ -16,5 +16,4 @@ TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 )
 
 # Run the Python checks.
-${TESTSDIR}/check-entries-csv
 ${TESTSDIR}/check-sex-consistency

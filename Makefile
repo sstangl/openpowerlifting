@@ -30,7 +30,6 @@ server: csv
 # Make sure that all the fields in the CSV files are in expected formats.
 check:
 	cargo run --bin checker
-	tests/check-entries-csv
 	tests/check-sex-consistency
 	tests/check-lifter-data
 	tests/check-duplicates
