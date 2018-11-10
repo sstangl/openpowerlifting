@@ -1,7 +1,7 @@
 Place,Division,Name,WeightClassKg,Sex,BirthYear,Country,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment
 1,Sub-Juniors,Jeniffer Gonzalez,43,F,1995,Ecuador,42.8,107.5,47.5,110,265,SBD,Single-ply
 1,Open,Maria Belen Bosque,47,F,1987,Ecuador,46.7,120,70,140,330,SBD,Single-ply
-2,Open,Leddy A. Zuluaga L.,47,F,1978,Colombia,46.3,125,60,127.5,312.5,SBD,Single-ply
+2,Open,Leddy A. Zuluaga L,47,F,1978,Colombia,46.3,125,60,127.5,312.5,SBD,Single-ply
 1,Open,Vilma Ochoa Vargas,52,F,1980,Ecuador,51.2,200,100,175,475,SBD,Single-ply
 2,Open,Michelle Cevallos,52,F,1988,Ecuador,51.5,157.5,92.5,157.5,407.5,SBD,Single-ply
 3,Open,Patricia Silva,52,F,1984,Brazil,51.75,162.5,77.5,157.5,397.5,SBD,Single-ply
@@ -12,7 +12,7 @@ Place,Division,Name,WeightClassKg,Sex,BirthYear,Country,BodyweightKg,Best3SquatK
 1,Open,Irani Barbosa,57,F,1986,Brazil,56.5,192.5,110,167.5,470,SBD,Single-ply
 2,Open,Carla Alvarado,57,F,1986,Ecuador,55.63,175,85,167.5,427.5,SBD,Single-ply
 3,Open,Mery Jativa,57,F,1992,Ecuador,56,160,70,140,370,SBD,Single-ply
-DQ,Open,Sara Gutierrez M.,57,F,1975,Peru,52.8,160,,,,SBD,Single-ply
+DQ,Open,Sara Gutierrez M,57,F,1975,Peru,52.8,160,,,,SBD,Single-ply
 DQ,Open,Sandra M. Parra Prada,57,F,1978,Colombia,53.15,,92.5,140,,SBD,Single-ply
 1,Juniors,Mery Jativa,57,F,1992,Ecuador,56,160,70,140,370,SBD,Single-ply
 1,Sub-Juniors,Isabel C. Zapata,57,F,1995,Colombia,55.5,117.5,40,110,267.5,SBD,Single-ply
@@ -20,7 +20,7 @@ DQ,Open,Sandra M. Parra Prada,57,F,1978,Colombia,53.15,,92.5,140,,SBD,Single-ply
 1,Masters 2,Christine Wender,57,F,1955,Brazil,55.3,150,75,150,375,SBD,Single-ply
 1,Open,Cícera Tavares,63,F,1976,Brazil,62.1,202.5,100,207.5,510,SBD,Single-ply
 2,Open,Johanna Aguinaga,63,F,1993,Ecuador,63,200,127.5,160,487.5,SBD,Single-ply
-3,Open,Maria Z. Orrego T.,63,F,1984,Colombia,62.6,145,82.5,155,382.5,SBD,Single-ply
+3,Open,Maria Z. Orrego T,63,F,1984,Colombia,62.6,145,82.5,155,382.5,SBD,Single-ply
 1,Juniors,Johanna Aguinaga,63,F,1993,Ecuador,63,200,127.5,160,487.5,SBD,Single-ply
 2,Juniors,Laura Lizeth Orozco,63,F,1990,Colombia,60.4,150,60,117.5,327.5,SBD,Single-ply
 1,Masters 1,Yuli Ruiz,63,F,1966,Colombia,62.1,112.5,55,122.5,290,SBD,Single-ply
@@ -56,8 +56,8 @@ DQ,Open,Gabriel Quispe Loayza,66,M,1981,Peru,65,,,,,SBD,Single-ply
 1,Open,Eric Oishi,74,M,1979,Brazil,72.3,310,195,260,765,SBD,Single-ply
 2,Open,Miguel Curipoma,74,M,1987,Ecuador,73.1,277.5,170,260,707.5,SBD,Single-ply
 3,Open,Diego Jimenez,74,M,1989,Argentina,73.3,250,190,255,695,SBD,Single-ply
-4,Open,Giovanni Ferrari M.,74,M,1976,Peru,72.9,255,147.5,250,652.5,SBD,Single-ply
-5,Open,Jaider Victoria O.,74,M,1985,Colombia,72.7,220,140,235,595,SBD,Single-ply
+4,Open,Giovanni Ferrari M,74,M,1976,Peru,72.9,255,147.5,250,652.5,SBD,Single-ply
+5,Open,Jaider Victoria O,74,M,1985,Colombia,72.7,220,140,235,595,SBD,Single-ply
 1,Juniors,Diego Jimenez,74,M,1989,Argentina,73.3,250,190,255,695,SBD,Single-ply
 2,Juniors,Cesar Suarez,74,M,1992,Ecuador,73,255,157.5,230,642.5,SBD,Single-ply
 3,Juniors,Harold Stiven Rosero Henao,74,M,1990,Colombia,72,170,105,170,445,SBD,Single-ply
@@ -67,8 +67,8 @@ DQ,Open,Gabriel Quispe Loayza,66,M,1981,Peru,65,,,,,SBD,Single-ply
 2,Masters 1,Jhon Jairo Mejia Ortiz,74,M,1970,Colombia,73.4,242.5,112.5,210,565,SBD,Single-ply
 1,Open,José Castillo,83,M,1986,Ecuador,83,340,220,305,865,SBD,Single-ply
 2,Open,Marcelo Silva,83,M,1984,Brazil,82.3,295,240,272.5,807.5,SBD,Single-ply
-3,Open,Enrique Molina S.,83,M,1988,Peru,81.9,250,170,200,620,SBD,Single-ply
-DQ,Open,Giovanni Cruz S.,83,M,1984,Colombia,82.3,,170,240,,SBD,Single-ply
+3,Open,Enrique Molina S,83,M,1988,Peru,81.9,250,170,200,620,SBD,Single-ply
+DQ,Open,Giovanni Cruz S,83,M,1984,Colombia,82.3,,170,240,,SBD,Single-ply
 1,Juniors,Fabian Machado,83,M,1991,Ecuador,81.2,267.5,165,265,697.5,SBD,Single-ply
 2,Juniors,Felipe Oliveira,83,M,1990,Brazil,81.3,270,150,260,680,SBD,Single-ply
 3,Juniors,Ramiro Lemos,83,M,1992,Uruguay,81.5,245,155,230,630,SBD,Single-ply
@@ -85,9 +85,9 @@ DQ,Open,Elias Javier Fuentes Mejia,93,M,1982,Colombia,86.3,,210,270,,SBD,Single-
 3,Juniors,Pablo Read,93,M,1989,Uruguay,84.8,252.5,170,232.5,655,SBD,Single-ply
 1,Masters 1,Lazaro Barbosa,93,M,1965,Brazil,91,310,200,290,800,SBD,Single-ply
 2,Masters 1,Leonardo Cuartas,93,M,1965,Uruguay,91,250,170,220,640,SBD,Single-ply
-3,Masters 1,David Benitez M.,93,M,1972,Colombia,90.4,210,152.5,205,567.5,SBD,Single-ply
+3,Masters 1,David Benitez M,93,M,1972,Colombia,90.4,210,152.5,205,567.5,SBD,Single-ply
 4,Masters 1,Guillermo Benitez,93,M,1963,Colombia,84.4,210,155,190,555,SBD,Single-ply
-1,Masters 2,Fernando Navarrete P.,93,M,1959,Colombia,88.3,200,110,200,510,SBD,Single-ply
+1,Masters 2,Fernando Navarrete P,93,M,1959,Colombia,88.3,200,110,200,510,SBD,Single-ply
 1,Masters 3,Roberto Carvalho,93,M,1945,Brazil,86,220,120,200,540,SBD,Single-ply
 1,Open,Luciano Duarte,105,M,1975,Brazil,103.5,360.5,215,275,850.5,SBD,Single-ply
 2,Open,Nelson Martínez,105,M,1986,Ecuador,93.6,300,235,270,805,SBD,Single-ply

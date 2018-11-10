@@ -89,6 +89,7 @@ impl HeaderIndexMap {
 /// which further processing can use the standard datatype.
 #[derive(Default)]
 struct Entry {
+    pub name: String,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -323,6 +324,118 @@ fn check_headers(
     }
 
     HeaderIndexMap(header_index_map)
+}
+
+fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
+    // Allow discarding disambiguation (everything after optional '#').
+    let mut s = name;
+
+    // Lifters with the same name are disambiguated by tagging them
+    // with an integer preceded by the '#' character.
+    if let Some(i) = s.find('#') {
+        // The '#' must be preceded by a space.
+        if i > 0 && s.get(i - 1..i) != Some(" ") {
+            report.error_on(line, format!("Name '{}' must have a space before '#'", s));
+        }
+
+        // Everything after the '#' must be an integer.
+        if let Some(number) = s.get(i + 1..) {
+            for c in number.chars() {
+                if !c.is_ascii_digit() {
+                    report.error_on(
+                        line,
+                        format!("Name '{}' can only have numbers after '#'", s),
+                    );
+                    break;
+                }
+            }
+        } else {
+            report.error_on(line, format!("Name '{}' must have a number after '#'", s));
+        }
+
+        // For the purposes of the checks below, ignore the disambiguation.
+        s = name.get(..i).unwrap().trim_end();
+    }
+
+    // Standardize on suffices without periods. Also just in general.
+    if s.ends_with('.') {
+        report.error_on(line, format!("Name '{}' cannot end with a period", name));
+    }
+
+    // All characters must be alphabetical or one of some few exceptions.
+    for c in s.chars() {
+        if !c.is_alphabetic() && c != ' ' && c != '\'' && c != '.' && c != '-' {
+            report.error_on(line, format!("Name '{}' contains illegal characters", name));
+            break;
+        }
+    }
+
+    // Look at each component in part.
+    for (word_index, mut word) in s.split(' ').enumerate() {
+        // Some words are known exceptions, assuming they're not the first.
+        if word_index != 0 {
+            match word {
+                // Common short words that mostly translate to "the".
+                "bin" | "da" | "de" | "del" | "den" | "der" | "des" | "di" | "dos"
+                | "du" | "el" | "in't" | "la" | "le" | "los" | "v" | "v." | "v.d."
+                | "van" | "von" | "zur" => {
+                    continue;
+                }
+
+                // Standardize Dutch names on "v.d.".
+                "vd" | "v.d" | "vd." | "V.D." => {
+                    report.error_on(line, format!("Name '{}' should use 'v.d.'", name));
+                    continue;
+                }
+                _ => (),
+            }
+        }
+
+        // Some French names begin with "d'". Ignore that part.
+        // Spanish names should be capitalized like "DeLeon".
+        if word.starts_with("d'") {
+            word = word.get(2..).unwrap();
+        }
+
+        // Punctuation should never be a separate word.
+        if word == "-" || word == "." || word == "'" {
+            report.error_on(line, format!("Name '{}' has separable punctuation", name));
+            continue;
+        }
+
+        // Name components must usually start capitalized, with exceptions.
+        for c in word.chars().take(1) {
+            if !c.is_uppercase() {
+                report.error_on(
+                    line,
+                    format!("Name '{}' must have '{}' capitalized", name, word),
+                );
+            }
+        }
+    }
+
+    // Complain about meet data that got left over.
+    if s.ends_with("DT") || s.ends_with("SP") || s.ends_with("MP") {
+        report.error_on(
+            line,
+            format!("Name '{}' contains lifting information", name),
+        );
+    }
+
+    // Complain about Junior/Senior at the start of the name. USAPL does this.
+    if s.starts_with("Jr ") || s.starts_with("Sr ") {
+        report.error_on(line, format!("Name '{}' needs Jr/Sr moved to end", name));
+    }
+
+    // Suffices that must be fully-capitalized.
+    if s.ends_with("Ii") || s.ends_with("Iii") {
+        report.error_on(
+            line,
+            format!("Name '{}' must have suffix fully-capitalized", name),
+        );
+    }
+
+    name.to_string()
 }
 
 const CYRILLIC_CHARACTERS: &str =
@@ -1469,6 +1582,9 @@ where
         let mut entry = Entry::default();
 
         // Check mandatory fields.
+        if let Some(idx) = headers.get(Header::Name) {
+            entry.name = check_column_name(&record[idx], line, &mut report);
+        }
         if let Some(idx) = headers.get(Header::Sex) {
             entry.sex = check_column_sex(&record[idx], line, &mut report);
         }
