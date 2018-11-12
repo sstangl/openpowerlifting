@@ -230,7 +230,7 @@ pub fn check_meetname(
 
     // Check for excessive spacing.
     if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
-        report.error(format!("Excessive whitespace in MeetTown '{}'", s));
+        report.error(format!("Excessive whitespace in MeetName '{}'", s));
     }
 
     // The federation shouldn't be part of the name.
