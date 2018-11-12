@@ -71,6 +71,8 @@
     pro_police_open = {name = "Police Pro Open", min = 0, max = 999}
     ama_police_50p = {name = "Police Amateur Master 50+", min = 50, max = 999}
     pro_police_50p = {name = "Police Pro Master 50+", min = 50, max = 999}
+    ama_military_jun = {name = "Military Amateur Junior 20-23", min = 20, max = 23}
+    pro_military_jun = {name = "Military Pro Junior 20-23", min = 20, max = 23}
     ama_military_open = {name = "Military Amateur Open", min = 0, max = 999}
     pro_military_open = {name = "Military Pro Open", min = 0, max = 999}
     ama_military_50p = {name = "Military Amateur Master 50+", min = 50, max = 999}
