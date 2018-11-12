@@ -75,7 +75,7 @@ function send_message {
 # at which point the main loop will try again with the next scheduled update.
 function run_iteration {
 	# Update the repo, getting new probe scripts and URL files.
-	git pull || return 1
+	git pull --force || return 1
 
 	# Check whether the source file changed.
 	CURRENT_SOURCEFILE_MD5=$(md5sum "${SOURCEFILE}")
