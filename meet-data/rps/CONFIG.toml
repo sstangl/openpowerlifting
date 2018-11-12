@@ -13,6 +13,11 @@
     ama_teen_16_17 = {name = "Amateur Teen 16-17", min = 16, max = 17}
     ama_teen_18_19 = {name = "Amateur Teen 18-19", min = 18, max = 19}
 
+    # Pro Teen, not official divisions but have been used in several meets
+    pro_teen_14_15 = {name = "Pro Teen 14-15", min = 14, max = 15}
+    pro_teen_16_17 = {name = "Pro Teen 16-17", min = 16, max = 17}
+    pro_teen_18_19 = {name = "Pro Teen 18-19", min = 18, max = 19}
+    
     # Juniors.
     ama_junior_20_23 = {name = "Amateur Junior 20-23", min = 20, max = 23}
     pro_junior_20_23 = {name = "Pro Junior 20-23", min = 20, max = 23}
@@ -51,6 +56,16 @@
     pro_master_95_99 = {name = "Pro Master 95-99", min = 95, max = 99}
     pro_master_100p  = {name = "Pro Master 100+", min = 100, max = 999}
 
+
+    # Less specific divisions that have been used in meets
+    pro_master = {name = "Pro Master", min = 40, max = 999}
+    pro_master_50 = {name = "Pro Master 50+", min = 50, max = 999}
+    ama_master = {name = "Amateur Master", min = 40, max = 999}
+    ama_master_50 = {name = "Amateur Master 50+", min = 50, max = 999}
+    ama_teen = {name = "Amateur Teen", min = 14, max = 19}
+    ama_teen_13_15 = {name = "Amateur Teen 13-15", min = 13, max = 15}
+
+
     # Occupation-based divisions, limited to only Open and Master 50+.
     ama_police_open = {name = "Police Amateur Open", min = 0, max = 999}
     pro_police_open = {name = "Police Pro Open", min = 0, max = 999}
@@ -61,8 +76,15 @@
     ama_military_50p = {name = "Military Amateur Master 50+", min = 50, max = 999}
     pro_military_50p = {name = "Military Pro Master 50+", min = 50, max = 999}
 
+    # Occupation-based divisions, that have been used although they're not real divisions
+    pro_pfm_open = {name = "Police/Fire/Military Pro Open", min = 0, max = 999}
+    ama_pfm_open = {name = "Police/Fire/Military Amateur Open", min = 0, max = 999}
+
+
     # Miscellaneous divisions.
     crossfit = {name = "Crossfit", min = 0, max = 999}
+    specialolympics = {name = "Special Olympics", min = 0, max = 999}
+    paralympic = {name = "Paralympic", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -70,10 +92,11 @@
     sex = "M"
 
 [weightclasses.default_F]
-    # The SHW 100+ class intentionally conflicts with the 110 class. RPS is weird.
-    # Maybe we should just ignore their record categories and make it 110+.
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","100+"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+"]
     date_range = ["1990-01-01", "9999-01-01"]
     sex = "F"
 
 [exemptions]
+    1636 = ["ExemptWeightClassConsistency"]
+    1515 = ["ExemptWeightClassConsistency"]
+    1304 = ["ExemptWeightClassConsistency"]
