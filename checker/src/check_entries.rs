@@ -718,7 +718,17 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 
     match s.parse::<WeightKg>() {
-        Ok(w) => w,
+        Ok(w) => {
+            // Check for weights that are far beyond what's ever been lifted.
+            const MAX_KG: i32 = 600;
+            if header != Header::TotalKg &&
+                (w > WeightKg::from_i32(MAX_KG) || w < WeightKg::from_i32(-MAX_KG))
+            {
+                report.warning_on(line, format!("{} '{}' exceeds maximum expected weight",
+                                                header, s))
+            }
+            w
+        }
         Err(_) => {
             report.error_on(line, format!("Invalid {} '{}'", header, s));
             WeightKg::default()
