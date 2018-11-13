@@ -20,6 +20,7 @@ pub enum Country {
     Bahrain,
     Belarus,
     Belgium,
+    Belize,
     Benin,
     Bolivia,
     #[serde(rename = "Bosnia and Herzegovina")]
