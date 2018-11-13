@@ -140,8 +140,10 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
 
         // The age range must be nonmonotonically increasing.
         if min_age != max_age && !min_age.is_definitely_less_than(max_age) {
-            report.error(format!("Division '{}' has an invalid age range '{}-{}'",
-                                 key, min_age, max_age));
+            report.error(format!(
+                "Division '{}' has an invalid age range '{}-{}'",
+                key, min_age, max_age
+            ));
             continue;
         }
 
