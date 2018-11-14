@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -x
+
+echo "$1" > URL
+cp ../../meet.template meet.csv
+wget "$1"
+pdftotext -layout *.pdf
+mv *.txt results.txt
+../reveal-negatives results.txt
+cp results.txt entries.csv
