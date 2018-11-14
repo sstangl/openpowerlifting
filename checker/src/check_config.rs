@@ -33,6 +33,8 @@ pub struct DivisionConfig {
     pub max: Age,
     /// Optional restriction of this Division to a single Sex.
     pub sex: Option<Sex>,
+    /// Optional restriction of this Division to certain Equipment.
+    pub equipment: Option<Vec<Equipment>>,
 }
 
 #[derive(Debug)]
@@ -161,11 +163,49 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
             None => None,
         };
 
+        // An optional list of allowed equipment may be provided.
+        let equipment: Option<Vec<Equipment>> = match division.get("equipment") {
+            Some(v) => {
+                if let Some(array) = v.as_array() {
+                    if array.is_empty() {
+                        report.error(format!("{}.equipment cannot be empty", key));
+                    }
+
+                    let mut vec = Vec::with_capacity(array.len());
+                    for value in array {
+                        match value.clone().try_into::<Equipment>() {
+                            Ok(equipment) => {
+                                vec.push(equipment);
+                            }
+                            Err(e) => {
+                                report
+                                    .error(format!("Error in {}.equipment: {}", key, e));
+                            }
+                        }
+                    }
+                    Some(vec)
+                } else if let Some(s) = v.as_str() {
+                    match s.parse::<Equipment>() {
+                        Ok(equipment) => Some(vec![equipment]),
+                        Err(e) => {
+                            report.error(format!("Error in {}.equipment: {}", key, e));
+                            None
+                        }
+                    }
+                } else {
+                    report.error(format!("{}.equipment must be a sting or array", key));
+                    None
+                }
+            }
+            None => None,
+        };
+
         acc.push(DivisionConfig {
             name: name.to_string(),
             min: min_age,
             max: max_age,
             sex,
+            equipment,
         });
     }
 

@@ -1586,6 +1586,56 @@ fn check_division_sex_consistency(
     }
 }
 
+/// Checks that a configured division is consistent with any equipment
+/// restrictions.
+fn check_division_equipment_consistency(
+    entry: &Entry,
+    config: Option<&Config>,
+    line: u64,
+    report: &mut Report,
+) {
+    if entry.division.is_empty() {
+        return;
+    }
+
+    let equipment = match entry.equipment {
+        Some(e) => e,
+        None => {
+            return;
+        }
+    };
+
+    let config = match config {
+        Some(c) => c,
+        None => {
+            return;
+        }
+    };
+
+    // Get the configured sex for the division, or return if not specified.
+    let eqlist = match config.divisions.iter().find(|d| d.name == entry.division) {
+        Some(div) => match &div.equipment {
+            Some(vec) => vec,
+            None => {
+                return;
+            }
+        },
+        None => {
+            return;
+        }
+    };
+
+    if !eqlist.contains(&equipment) {
+        report.error_on(
+            line,
+            format!(
+                "Division '{}' does not allow equipment '{}'",
+                entry.division, equipment
+            ),
+        );
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -1805,6 +1855,7 @@ where
             &mut report,
         );
         check_division_sex_consistency(&entry, config, line, &mut report);
+        check_division_equipment_consistency(&entry, config, line, &mut report);
     }
 
     Ok(report)
