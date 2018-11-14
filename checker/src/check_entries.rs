@@ -1544,6 +1544,48 @@ fn check_division_age_consistency(
     }
 }
 
+/// Checks that a configured division is consistent with any sex restrictions.
+fn check_division_sex_consistency(
+    entry: &Entry,
+    config: Option<&Config>,
+    line: u64,
+    report: &mut Report,
+) {
+    if entry.division.is_empty() {
+        return;
+    }
+
+    let config = match config {
+        Some(c) => c,
+        None => {
+            return;
+        }
+    };
+
+    // Get the configured sex for the division, or return if not specified.
+    let sex = match config.divisions.iter().find(|d| d.name == entry.division) {
+        Some(div) => match div.sex {
+            Some(sex) => sex,
+            None => {
+                return;
+            }
+        },
+        None => {
+            return;
+        }
+    };
+
+    if sex != entry.sex {
+        report.error_on(
+            line,
+            format!(
+                "Division '{}' requires sex '{:?}', found '{:?}'",
+                entry.division, sex, entry.sex
+            ),
+        );
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -1762,6 +1804,7 @@ where
             line,
             &mut report,
         );
+        check_division_sex_consistency(&entry, config, line, &mut report);
     }
 
     Ok(report)

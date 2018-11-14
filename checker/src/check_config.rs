@@ -31,6 +31,8 @@ pub struct DivisionConfig {
     pub min: Age,
     /// The inclusive maximum Age for lifters in this division.
     pub max: Age,
+    /// Optional restriction of this Division to a single Sex.
+    pub sex: Option<Sex>,
 }
 
 #[derive(Debug)]
@@ -147,10 +149,23 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
             continue;
         }
 
+        // An optional sex restriction may be provided.
+        let sex: Option<Sex> = match division.get("sex") {
+            Some(v) => match v.clone().try_into::<Sex>() {
+                Ok(sex) => Some(sex),
+                Err(e) => {
+                    report.error(format!("Failed parsing {}.sex: {}", key, e));
+                    None
+                }
+            },
+            None => None,
+        };
+
         acc.push(DivisionConfig {
             name: name.to_string(),
             min: min_age,
             max: max_age,
+            sex,
         });
     }
 
