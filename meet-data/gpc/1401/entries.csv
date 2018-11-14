@@ -82,7 +82,7 @@ Place,Name,Division,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg
 1,Ivan Giňovský,M2,Slovakia,89.8,202.5,217.5,225,225,231,120,127.5,132.5,132.5,,202.5,215,222.5,222.5,,580,90,M,,Wraps,SBD
 2,Gérard Ivars,M2,France,87.1,-200,210,220,220,-230.5,110,115,120,120,,215,225,-240,225,,565,90,M,,Wraps,SBD
 1,Michal Červinka,M3,Slovakia,89.6,190,210,222.5,222.5,,110,117.5,120,120,,192.5,212.5,-232.5,212.5,,555,90,M,,Wraps,SBD
-1,Thomas Kutzsch Frank,M4,Germany,88.8,202.5,215,-223,215,,152.5,156,160,160,163,210,228,235,235,242.5,610,90,M,,Wraps,SBD
+1,Frank Thomas Kutzsch,M4,Germany,88.8,202.5,215,-223,215,,152.5,156,160,160,163,210,228,235,235,242.5,610,90,M,,Wraps,SBD
 1,Sándor Bezsenyi,M6,Hungary,84.6,140,150,157.5,157.5,,90,-100,102.5,102.5,,130,140,155,155,,415,90,M,,Wraps,SBD
 1,Filip Hácha,T2,Czechia,90.4,140,150,-160,150,,90,95,100,100,,190,202.5,207.5,207.5,,457.5,100,M,,Wraps,SBD
 1,Rajmund Nagy János,J,Hungary,98.1,250,-265,-265,250,,160,170,175,175,-183,285,300,315,315,,740,100,M,,Wraps,SBD
@@ -233,7 +233,7 @@ DQ,Johannes Impiö,O,Finland,139.2,400,-425,-425,400,,-285,-285,-285,,,,,,,,,140
 1,Patrik Tomáš,T3,Czechia,67.9,,,,,,105,110,112.5,112.5,-115,,,,,,112.5,75,M,,Raw,B
 1,Paweł Nowak,J,Poland,74.2,,,,,,155,157.5,162.5,162.5,,,,,,,162.5,75,M,,Raw,B
 2,Aslanbek Pchikhachev,J,Russia,73.4,,,,,,-120,140,-145,140,,,,,,,140,75,M,Асланбек Пчихачев,Raw,B
-1,Daniel Skrzyński Dominik,O,Poland,70.8,,,,,,170,180.5,-182.5,180.5,,,,,,,180.5,75,M,,Raw,B
+1,Dominik Skrzyński,O,Poland,70.8,,,,,,170,180.5,-182.5,180.5,,,,,,,180.5,75,M,,Raw,B
 2,Christian Clampariu,O,Austria,74.9,,,,,,142.5,152.5,-157.5,152.5,,,,,,,152.5,75,M,,Raw,B
 1,Guylhem Feraud,M6,France,73.3,,,,,,100,107.5,112.5,112.5,,,,,,,112.5,75,M,,Raw,B
 1,Mateusz Gajewicz,J,Poland,80.5,,,,,,185,-190,-190,185,,,,,,,185,82.5,M,,Raw,B
@@ -244,10 +244,10 @@ DQ,Johannes Impiö,O,Finland,139.2,400,-425,-425,400,,-285,-285,-285,,,,,,,,,140
 3,Martins Blums,O,Latvia,81.9,,,,,,155,-160,160,160,,,,,,,160,82.5,M,,Raw,B
 4,Milan Kaňka,O,Czechia,80.5,,,,,,140,145,-150,145,,,,,,,145,82.5,M,,Raw,B
 1,Aleksey Sutugin,M1,Russia,79.3,,,,,,140,150,155,155,,,,,,,155,82.5,M,Алексей Сутугин,Raw,B
-2,Attila Nyikos Kiss,M1,Hungary,81.7,,,,,,105,110,115,115,,,,,,,115,82.5,M,,Raw,B
+2,Attila Nyikos-Kiss,M1,Hungary,81.7,,,,,,105,110,115,115,,,,,,,115,82.5,M,,Raw,B
 1,Thomas Wagner,M4,Germany,79.8,,,,,,110,112.5,115,115,,,,,,,115,82.5,M,,Raw,B
 1,Gerd Meyerhofer,M8,Germany,78.5,,,,,,60,65,-70,65,,,,,,,65,82.5,M,,Raw,B
-1,Pavel Nosek,T2,Czechia,82.5,,,,,,115,120,125,125,,,,,,,125,90,M,,Raw,B
+1,Pavel Nosek,T2,Czechia,82.51,,,,,,115,120,125,125,,,,,,,125,90,M,,Raw,B
 1,Milos Jeknic,J,Montenegro,88.2,,,,,,180,185,-187.5,185,,,,,,,185,90,M,,Raw,B
 2,Márk Kurucz,J,Hungary,88.3,,,,,,170,177.5,-187.5,177.5,,,,,,,177.5,90,M,,Raw,B
 3,David Gryc,J,Czechia,89.3,,,,,,132.5,140,-145,140,,,,,,,140,90,M,,Raw,B
@@ -268,12 +268,12 @@ DQ,Johannes Impiö,O,Finland,139.2,400,-425,-425,400,,-285,-285,-285,,,,,,,,,140
 2,Valery Tomilov,M2,Israel,90,,,,,,160,170,175,175,,,,,,,175,90,M,,Raw,B
 3,Tilo Kupper,M2,Switzerland,88.6,,,,,,165,-167.5,167.5,167.5,,,,,,,167.5,90,M,,Raw,B
 4,Jean-Marc Albert,M2,France,89.6,,,,,,130,140,-145,140,,,,,,,140,90,M,,Raw,B
-5,Maris Pujats,M2,Latvia,82.5,,,,,,112.5,-125,-125,112.5,,,,,,,112.5,90,M,,Raw,B
-1,François Denis Jean,M4,France,87.1,,,,,,153,162.5,175,175,177.5,,,,,,175,90,M,,Raw,B
+5,Maris Pujats,M2,Latvia,82.51,,,,,,112.5,-125,-125,112.5,,,,,,,112.5,90,M,,Raw,B
+1,Jean-François Denis,M4,France,87.1,,,,,,153,162.5,175,175,177.5,,,,,,175,90,M,,Raw,B
 1,Jozef Völgyák,M5,Slovakia,88.5,,,,,,140,145,150,150,,,,,,,150,90,M,,Raw,B
 1,František Esser,M6,Czechia,89.7,,,,,,130,135,137.5,137.5,,,,,,,137.5,90,M,,Raw,B
 2,Valērijs Petrovs,M6,Latvia,89.9,,,,,,120,127.5,130,130,,,,,,,130,90,M,,Raw,B
-1,Gergő Vakarcs Viktor,T3,Hungary,93.5,,,,,,180,187.5,193,193,,,,,,,193,100,M,,Raw,B
+1,Viktor Gergő Vakarcs,T3,Hungary,93.5,,,,,,180,187.5,193,193,,,,,,,193,100,M,,Raw,B
 2,Petr Svoboda,T3,Czechia,96.2,,,,,,145,155,-162.5,155,,,,,,,155,100,M,,Raw,B
 1,Dávid Mészáros,J,Hungary,97.9,,,,,,200,207.5,213,213,,,,,,,213,100,M,,Raw,B
 2,Marek Brna,J,Slovakia,99.9,,,,,,180,190,-192.5,190,,,,,,,190,100,M,,Raw,B
@@ -426,7 +426,7 @@ DQ,Tomi Rantanen,O,Finland,138.2,,,,,,-350,-370,-390.5,,,,,,,,,140,M,,Multi-ply,
 2,Lukáš Dorazil,O,Czechia,65,,,,,,,,,,,145,-155,160,160,,160,67.5,M,,Raw,D
 1,Jakub Bouška,O,Czechia,70,,,,,,,,,,,180,190,-200,190,,190,75,M,,Raw,D
 1,Guylhem Feraud,M6,France,73.3,,,,,,,,,,,160,170,,170,,170,75,M,,Raw,D
-1,Richard Šos,T3,Czechia,75,,,,,,,,,,,150,165,180,180,,180,82.5,M,,Raw,D
+1,Richard Šos,T3,Czechia,75.01,,,,,,,,,,,150,165,180,180,,180,82.5,M,,Raw,D
 1,Kamil Jung,O,Czechia,78.3,,,,,,,,,,,140,150,160,160,,160,82.5,M,,Raw,D
 1,András Mák,M2,Hungary,80.6,,,,,,,,,,,220,230,-240,230,,230,82.5,M,,Raw,D
 1,Jaroslav Tomanec,M7,Czechia,81.6,,,,,,,,,,,137.5,142.5,147.5,147.5,,147.5,82.5,M,,Raw,D

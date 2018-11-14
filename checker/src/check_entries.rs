@@ -376,8 +376,8 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         if word_index != 0 {
             match word {
                 // Common short words that mostly translate to "the".
-                "bin" | "da" | "de" | "del" | "den" | "der" | "des" | "di" | "dos"
-                | "du" | "el" | "in't" | "la" | "le" | "los" | "v" | "v." | "v.d."
+                "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
+                | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "v" | "v." | "v.d."
                 | "van" | "von" | "zur" => {
                     continue;
                 }
