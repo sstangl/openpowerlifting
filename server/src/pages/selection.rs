@@ -907,7 +907,7 @@ mod tests {
         assert_eq!(s.sex, SexSelection::Women);
 
         let s = Selection::from_path(Path::new("/uspa/raw")).unwrap();
-        assert_eq!(s.federation, FederationSelection::One(Federation::USPA));
+        assert_eq!(s.federation, FederationSelection::Meta(MetaFederation::USPA));
         assert_eq!(s.equipment, EquipmentSelection::Raw);
     }
 
