@@ -77,11 +77,15 @@ pub enum MetaFederation {
     /// IPA, but only counting meets held in Canada.
     #[strum(to_string = "ipa-can")]
     IPACAN,
-
+    
+    /// IrishPO, excluding non-Irish lifters and including WPC results.
+    #[strum(to_string = "irishpo")]
+    IrishPO,
+    
     /// USPA, plus IPL results for American lifters.
     #[strum(to_string = "uspa")]
     USPA,
-
+    
     /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
@@ -209,6 +213,13 @@ impl MetaFederation {
             }
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
+            }
+            MetaFederation::IrishPO => {
+                (meet.federation == Federation::IrishPO
+                    && (entry.lifter_country.is_none()
+                        || entry.lifter_country == Some(Country::Ireland)))
+                    || (meet.federation == Federation::WPC
+                        && entry.lifter_country == Some(Country::Ireland))
             }
             MetaFederation::USPA => {
                 meet.federation == Federation::USPA
