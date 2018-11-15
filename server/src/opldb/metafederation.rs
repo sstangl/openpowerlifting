@@ -20,9 +20,11 @@ pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
     #[strum(to_string = "all-tested")]
     AllTested,
+
     /// All entries that have "Tested = Yes".
     #[strum(to_string = "all-amateur")]
     AllAmateur,
+
     #[strum(to_string = "all-argentina")]
     AllArgentina,
     #[strum(to_string = "all-australia")]
@@ -58,19 +60,29 @@ pub enum MetaFederation {
     AAPF,
     #[strum(to_string = "abpu")]
     ABPU,
+
     /// The BP federation is made up of smaller divisional federations,
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
+
     /// GPC-AUS, but excluding non-Australian lifters.
     #[strum(to_string = "gpc-aus")]
     GPCAUS,
+
     /// HPLS, but excluding non-Croatian lifters.
     #[strum(to_string = "hpls")]
     HPLS,
+
     /// IPA, but only counting meets held in Canada.
     #[strum(to_string = "ipa-can")]
     IPACAN,
+
+    /// USPA, plus IPL results for American lifters.
+    #[strum(to_string = "uspa")]
+    USPA,
+
+    /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
 }
@@ -198,8 +210,16 @@ impl MetaFederation {
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
             }
+            MetaFederation::USPA => {
+                meet.federation == Federation::USPA
+                    || (meet.federation == Federation::IPL
+                        && entry.lifter_country == Some(Country::USA))
+            }
             MetaFederation::USPATested => {
-                meet.federation == Federation::USPA && entry.tested
+                entry.tested &&
+                    (meet.federation == Federation::USPA
+                        || (meet.federation == Federation::IPL
+                            && entry.lifter_country == Some(Country::USA)))
             }
         }
     }
