@@ -66,6 +66,10 @@ pub enum MetaFederation {
     #[strum(to_string = "all-bp")]
     AllBP,
 
+    /// BVDK, but with international results also.
+    #[strum(to_string = "bvdk")]
+    BVDK,
+
     /// GPC-AUS, but excluding non-Australian lifters.
     #[strum(to_string = "gpc-aus")]
     GPCAUS,
@@ -77,15 +81,15 @@ pub enum MetaFederation {
     /// IPA, but only counting meets held in Canada.
     #[strum(to_string = "ipa-can")]
     IPACAN,
-    
+
     /// IrishPO, excluding non-Irish lifters and including WPC results.
     #[strum(to_string = "irishpo")]
     IrishPO,
-    
+
     /// USPA, plus IPL results for American lifters.
     #[strum(to_string = "uspa")]
     USPA,
-    
+
     /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
@@ -201,6 +205,13 @@ impl MetaFederation {
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
             }
+            MetaFederation::BVDK => match meet.federation {
+                Federation::BVDK => true,
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Germany)
+                }
+                _ => false,
+            },
             MetaFederation::GPCAUS => {
                 meet.federation == Federation::GPCAUS
                     && (entry.lifter_country == None
@@ -227,8 +238,8 @@ impl MetaFederation {
                         && entry.lifter_country == Some(Country::USA))
             }
             MetaFederation::USPATested => {
-                entry.tested &&
-                    (meet.federation == Federation::USPA
+                entry.tested
+                    && (meet.federation == Federation::USPA
                         || (meet.federation == Federation::IPL
                             && entry.lifter_country == Some(Country::USA)))
             }
