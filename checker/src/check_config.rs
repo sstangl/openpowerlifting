@@ -112,6 +112,14 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
             }
         };
 
+        // Ensure that the Division name is unique.
+        for already_seen in &acc {
+            if already_seen.name == name {
+                report.error(format!("Division name '{}' must be unique", name));
+                break;
+            }
+        }
+
         // Parse the minimum age.
         let min_age = match division.get("min") {
             Some(v) => match v.clone().try_into::<Age>() {
