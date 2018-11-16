@@ -467,7 +467,18 @@ def fix_cyrillic_names(csv):
         cyridx = csv.index('CyrillicName')
         for row in csv.rows:
             row[cyridx] = row[cyridx].replace('e', 'е').replace(
-                'x', 'х').replace('o', 'о').replace('T', 'Т').replace('i', 'і')
+                'x', 'х').replace('o', 'о').replace('T', 'Т').replace('i', 'і').replace(
+                    'O', 'О').replace('E', 'Е').replace('M', 'М').replace('I', 'І')
+
+# Replace random Unicode characters that AllPowerlifting uses with ASCII alternatives
+
+
+def fix_latin_names(csv):
+    if 'Name' in csv.fieldnames:
+        nameidx = csv.index('Name')
+        for row in csv.rows:
+            row[nameidx] = row[nameidx].replace('і', 'i').replace(
+                'О', 'O').replace('у', 'y').replace('о', 'o').replace('а', 'a')
 
 
 def remove_empty_cols_ignore_fieldname(csv):
@@ -562,6 +573,7 @@ def main(url):
     unreverse_names(entriescsv)
 
     fix_cyrillic_names(entriescsv)
+    fix_latin_names(entriescsv)
 
     # Figure out event information.
     markevent(entriescsv)

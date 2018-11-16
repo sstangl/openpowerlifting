@@ -1,0 +1,129 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    disabled = {name ="Disabled",min=0,max=999}
+    student = {name ="Student",min=0,max=999}
+    juniors = {name = "Juniors",min=0,max=22.5}
+    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
+    masters1 = {name = "Masters 1",min=39.5,max=48.5}
+    masters2 = {name = "Masters 2",min=49.5,max=58.5}
+    masters3 = {name = "Masters 3",min=59.5,max=68.5}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
+    teen1214 = {name = "Teen 12-14",min=12,max=14}
+    teen1415 = {name = "Teen 14-15",min=14,max=15}
+    teen1516 = {name = "Teen 15-16",min=15,max=16}
+    teen1718 = {name = "Teen 17-18",min=17,max=18}
+    teen1618 = {name = "Teen 16-18",min=16,max=18}
+    youth1215 = {name = "Youth 12-15",min=12,max=15}
+    youth1015 = {name = "Youth 10-15",min=10,max=15}
+    youth1113 = {name = "Youth 11-13",min=11,max=13}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Juniors"]
+
+[weightclasses.subjunior_M]
+    classes = ["43","46","49","53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Sub-Juniors","Teen 12-14","Teen 15-16","Teen 17-18"]
+
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors"]
+
+[weightclasses.subjunior_F]
+    classes = ["40","43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Sub-Juniors","Teen 12-14","Teen 15-16","Teen 17-18"]
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+
+[weightclasses.disabled_M]
+    classes = ["48","52","56","60","67.5","75","82.5","90","100","100+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+    divisions = ["Disabled"]
+
+[weightclasses.disabled_F]
+    classes = ["40","44","48","52","56","60","67.5","75","82.5","82.5+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "F"
+    divisions = ["Disabled"]
+
+[weightclasses.oldsubjunior_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","100+"]
+    date_range = ["0000-01-01","2003-12-31"]
+    sex = "M"
+    divisions = ["Sub-Juniors"]
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "F"
+
+[weightclasses.oldsubjunior_F]
+    classes = ["36","40","44","48","52","56","60","67.5","75","75+"]
+    date_range = ["0000-01-01","2003-12-31"]
+    sex = "F"
+    divisions = ["Sub-Juniors"]
+
+[exemptions]
+    9802 = ["ExemptWeightClassConsistency"]
+    9405 = ["ExemptWeightClassConsistency"]
+    9606 = ["ExemptWeightClassConsistency"]
+    9702 = ["ExemptWeightClassConsistency"]
+    9101 = ["ExemptWeightClassConsistency"]
+    9507 = ["ExemptWeightClassConsistency"]
+    9305 = ["ExemptWeightClassConsistency"]
+    9205 = ["ExemptWeightClassConsistency"]
+    0204 = ["ExemptWeightClassConsistency"]
+    0303 = ["ExemptWeightClassConsistency"]
+    1001 = ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptWeightClassConsistency"]
+    1207 = ["ExemptWeightClassConsistency"]
+    1404 = ["ExemptWeightClassConsistency"]
+    1405 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1410 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1511 = ["ExemptWeightClassConsistency"]
+    1504 = ["ExemptWeightClassConsistency"]
+    1507 = ["ExemptWeightClassConsistency"]
+    1505 = ["ExemptWeightClassConsistency"]
+    1506 = ["ExemptWeightClassConsistency"]
+    1203 = ["ExemptWeightClassConsistency"]
+    1204 = ["ExemptWeightClassConsistency"]
+    1208 = ["ExemptWeightClassConsistency"]
+    1301 = ["ExemptWeightClassConsistency"]
+    1601 = ["ExemptWeightClassConsistency"]
+    0901 = ["ExemptWeightClassConsistency"]
+    0701 = ["ExemptWeightClassConsistency"]
+    1305 = ["ExemptWeightClassConsistency"]
+    1603 = ["ExemptWeightClassConsistency"]
+    1604 = ["ExemptWeightClassConsistency"]
+    1010 = ["ExemptWeightClassConsistency"]
+    1003 = ["ExemptWeightClassConsistency"]
+    1210 = ["ExemptWeightClassConsistency"]
+    1411 = ["ExemptWeightClassConsistency"]
+    1002 = ["ExemptWeightClassConsistency"]
+    9905 = ["ExemptWeightClassConsistency"]
+    1801 = ["ExemptWeightClassConsistency"]
+    1501 = ["ExemptWeightClassConsistency"]
+    1406 = ["ExemptWeightClassConsistency"]
