@@ -411,6 +411,10 @@ pub enum Federation {
     #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
 
+    /// NORCAL Powerlifting Federation
+    #[strum(to_string = "NORCAL", serialize = "norcal")]
+    NORCAL,
+
     /// Nordic Powerlifting Federation, IPF.
     #[strum(to_string = "NordicPF", serialize = "nordicpf")]
     NordicPF,
@@ -794,6 +798,7 @@ impl Federation {
             Federation::NAP => false,
             Federation::NAPF => true,
             Federation::NASA => true,
+            Federation::NORCAL => true,
             Federation::NIPF => true,
             Federation::NordicPF => true,
             Federation::NOTLD => false,
@@ -961,6 +966,7 @@ impl Federation {
             Federation::NAP => Some(Country::Russia),
             Federation::NAPF => None,
             Federation::NASA => Some(Country::USA),
+            Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
             Federation::NOTLD => Some(Country::USA),
@@ -1128,6 +1134,7 @@ impl Federation {
             Federation::NAP => PointsSystem::Wilks,
             Federation::NAPF => PointsSystem::Wilks,
             Federation::NASA => PointsSystem::Wilks,
+            Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => PointsSystem::Wilks,
             Federation::NordicPF => PointsSystem::Wilks,
             Federation::NOTLD => PointsSystem::Wilks,
