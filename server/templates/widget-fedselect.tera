@@ -241,7 +241,7 @@
   <option value="raw-ukr" {% if selection.federation == "RAW-UKR" %}selected{% endif %}>RAW-UKR - 100% RAW Powerlifting Federation Ukraine</option>
   <option value="ukrpa" {% if selection.federation == "UkrainePA" %}selected{% endif %}>Ukraine Powerlifting Association</option>
   <option value="upc" {% if selection.federation == "UPC" %}selected{% endif %}>Ukrainian Powerlifting Committee</option>
-  <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>Ukrainian Powerlifting Federation</option>
+  <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>Ukrainian Powerlifting Federation [IPF]</option>
   <option value="ukrainepo" {% if selection.federation == "UkrainePO" %}selected{% endif %}>Ukrainian Powerlifting Organisation [WUAP]</option>
   <option value="wpau" {% if selection.federation == "WPAU" %}selected{% endif %}>WPAU - World Powerlifting Alliance Ukraine [WPA]</option>
   <option value="wpcukr" {% if selection.federation == "WPC-UKR" %}selected{% endif %}>WPC-UKR - WPC Ukraine</option>
