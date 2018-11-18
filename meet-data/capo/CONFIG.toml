@@ -1,73 +1,73 @@
 [divisions]
-    mor    = {name ="MO-R",min=0,max=999}
-    morp   = {name ="MO-RP",min=0,max=999}
-    mosp   = {name ="MO-SP",min=0,max=999}
-    momp   = {name ="MO-MP",min=0,max=999}
-    for    = {name ="FO-R",min=0,max=999}
-    forp   = {name ="FO-RP",min=0,max=999}
-    fosp   = {name ="FO-SP",min=0,max=999}
-    fomp   = {name ="FO-MP",min=0,max=999}
-    mjr    = {name ="MJ-R",min=20,max=23}
-    mjrp   = {name ="MJ-RP",min=20,max=23}
-    mjsp   = {name ="MJ-SP",min=20,max=23}
-    mjmp   = {name ="MJ-MP",min=20,max=23}
-    fjr    = {name ="FJ-R",min=20,max=23}
-    fjrp   = {name ="FJ-RP",min=20,max=23}
-    myr    = {name ="MY-R",min=5,max=12}
-    mtr    = {name ="MT-R",min=13,max=19}
-    mt1r   = {name ="MT1-R",min=13,max=15}
-    mt2r   = {name ="MT2-R",min=16,max=17}
-    mt3r   = {name ="MT3-R",min=18,max=19}
-    mt3rp  = {name ="MT3-RP",min=18,max=19}
-    mtrp   = {name ="MT-RP",min=13,max=19}
-    mtmp   = {name ="MT-MP",min=13,max=19}
-    fyr    = {name ="FY-R",min=5,max=12}
-    ftr    = {name ="FT-R",min=13,max=19}
-    ftrp   = {name ="FT-RP",min=13,max=19}
-    ft2r   = {name ="FT2-R",min=16,max=17}
-    ft2rp  = {name ="FT2-RP",min=16,max=17}
-    ft3r   = {name ="FT3-R",min=18,max=19}
-    ft3rp  = {name ="FT3-RP",min=18,max=19}
-    mmr    = {name ="MM-R",min=40,max=999}
-    mmrp   = {name ="MM-RP",min=40,max=999}
-    mmsp   = {name ="MM-SP",min=40,max=999}
-    mmmp   = {name ="MM-MP",min=40,max=999}
-    mm1r   = {name ="MM1-R",min=40,max=44}
-    mm1rp  = {name ="MM1-RP",min=40,max=44}
-    mm1sp  = {name ="MM1-SP",min=40,max=44}
-    mm2r   = {name ="MM2-R",min=45,max=49}
-    mm2rp  = {name ="MM2-RP",min=45,max=49}
-    mm2mp  = {name ="MM2-MP",min=45,max=49}
-    mm3r   = {name ="MM3-R",min=50,max=54}
-    mm3rp  = {name ="MM3-RP",min=50,max=54}
-    mm3mp  = {name ="MM3-MP",min=50,max=54}
-    mm4r   = {name ="MM4-R",min=55,max=59}
-    mm4rp  = {name ="MM4-RP",min=55,max=59}
-    mm4sp  = {name ="MM4-SP",min=55,max=59}
-    mm5r   = {name ="MM5-R",min=60,max=64}
-    mm5rp  = {name ="MM5-RP",min=60,max=64}
-    mm5sp  = {name ="MM5-SP",min=60,max=64}
-    mm6r   = {name ="MM6-R",min=65,max=69}
-    mm7r   = {name ="MM7-R",min=70,max=74}
-    mm8r   = {name ="MM8-R",min=75,max=79}
-    mm8rp  = {name ="MM9-RP",min=80,max=999}
-    fmr    = {name ="FM-R",min=40,max=999}
-    fmrp   = {name ="FM-RP",min=40,max=999}
-    fm1r   = {name ="FM1-R",min=40,max=44}
-    fm1rp  = {name ="FM1-RP",min=40,max=44}
-    fm2r   = {name ="FM2-R",min=45,max=49}
-    fm2rp  = {name ="FM2-RP",min=45,max=49}
-    fm3r   = {name ="FM3-R",min=50,max=54}
-    fm3rp  = {name ="FM3-RP",min=50,max=54}
-    fm4r   = {name ="FM4-R",min=55,max=59}
-    fmsp   = {name ="FM-SP",min=40,max=999}
-    fmmp   = {name ="FM-MP",min=40,max=999}
-    msmr   = {name ="MSM-R",min=33,max=39}
-    msmrp  = {name ="MSM-RP",min=33,max=39}
-    msmsp  = {name ="MSM-SP",min=33,max=39}
-    msmmp  = {name ="MSM-MP",min=33,max=39}
-    fsmr   = {name ="FSM-R",min=33,max=39}
-    fsmrp  = {name ="FSM-RP",min=33,max=39}
+    mor    = {name ="MO-R",min=0,max=999,sex="M", equipment="Raw"}
+    morp   = {name ="MO-RP",min=0,max=999,sex="M", equipment="Wraps"}
+    mosp   = {name ="MO-SP",min=0,max=999,sex="M", equipment="Single-ply"}
+    momp   = {name ="MO-MP",min=0,max=999,sex="M", equipment="Multi-ply"}
+    for    = {name ="FO-R",min=0,max=999,sex="F", equipment="Raw"}
+    forp   = {name ="FO-RP",min=0,max=999,sex="F", equipment="Wraps"}
+    fosp   = {name ="FO-SP",min=0,max=999,sex="F", equipment="Single-ply"}
+    fomp   = {name ="FO-MP",min=0,max=999,sex="F", equipment="Multi-ply"}
+    mjr    = {name ="MJ-R",min=20,max=23,sex="M", equipment="Raw"}
+    mjrp   = {name ="MJ-RP",min=20,max=23,sex="M", equipment="Wraps"}
+    mjsp   = {name ="MJ-SP",min=20,max=23,sex="M", equipment="Single-ply"}
+    mjmp   = {name ="MJ-MP",min=20,max=23,sex="M", equipment="Multi-ply"}
+    fjr    = {name ="FJ-R",min=20,max=23,sex="F", equipment="Raw"}
+    fjrp   = {name ="FJ-RP",min=20,max=23,sex="F", equipment="Wraps"}
+    myr    = {name ="MY-R",min=5,max=12,sex="M", equipment="Raw"}
+    mtr    = {name ="MT-R",min=13,max=19,sex="M", equipment="Raw"}
+    mt1r   = {name ="MT1-R",min=13,max=15,sex="M", equipment="Raw"}
+    mt2r   = {name ="MT2-R",min=16,max=17,sex="M", equipment="Raw"}
+    mt3r   = {name ="MT3-R",min=18,max=19,sex="M", equipment="Raw"}
+    mt3rp  = {name ="MT3-RP",min=18,max=19,sex="M", equipment="Wraps"}
+    mtrp   = {name ="MT-RP",min=13,max=19,sex="M", equipment="Wraps"}
+    mtmp   = {name ="MT-MP",min=13,max=19,sex="M", equipment="Multi-ply"}
+    fyr    = {name ="FY-R",min=5,max=12,sex="F", equipment="Raw"}
+    ftr    = {name ="FT-R",min=13,max=19,sex="F", equipment="Raw"}
+    ftrp   = {name ="FT-RP",min=13,max=19,sex="F", equipment="Wraps"}
+    ft2r   = {name ="FT2-R",min=16,max=17,sex="F", equipment="Raw"}
+    ft2rp  = {name ="FT2-RP",min=16,max=17,sex="F", equipment="Wraps"}
+    ft3r   = {name ="FT3-R",min=18,max=19,sex="F", equipment="Raw"}
+    ft3rp  = {name ="FT3-RP",min=18,max=19,sex="F", equipment="Wraps"}
+    mmr    = {name ="MM-R",min=40,max=999,sex="M", equipment="Raw"}
+    mmrp   = {name ="MM-RP",min=40,max=999,sex="M", equipment="Wraps"}
+    mmsp   = {name ="MM-SP",min=40,max=999,sex="M", equipment="Single-ply"}
+    mmmp   = {name ="MM-MP",min=40,max=999,sex="M", equipment="Multi-ply"}
+    mm1r   = {name ="MM1-R",min=40,max=44,sex="M", equipment="Raw"}
+    mm1rp  = {name ="MM1-RP",min=40,max=44,sex="M", equipment="Wraps"}
+    mm1sp  = {name ="MM1-SP",min=40,max=44,sex="M", equipment="Single-ply"}
+    mm2r   = {name ="MM2-R",min=45,max=49,sex="M", equipment="Raw"}
+    mm2rp  = {name ="MM2-RP",min=45,max=49,sex="M", equipment="Wraps"}
+    mm2mp  = {name ="MM2-MP",min=45,max=49,sex="M", equipment="Multi-ply"}
+    mm3r   = {name ="MM3-R",min=50,max=54,sex="M", equipment="Raw"}
+    mm3rp  = {name ="MM3-RP",min=50,max=54,sex="M", equipment="Wraps"}
+    mm3mp  = {name ="MM3-MP",min=50,max=54,sex="M", equipment="Multi-ply"}
+    mm4r   = {name ="MM4-R",min=55,max=59,sex="M", equipment="Raw"}
+    mm4rp  = {name ="MM4-RP",min=55,max=59,sex="M", equipment="Wraps"}
+    mm4sp  = {name ="MM4-SP",min=55,max=59,sex="M", equipment="Single-ply"}
+    mm5r   = {name ="MM5-R",min=60,max=64,sex="M", equipment="Raw"}
+    mm5rp  = {name ="MM5-RP",min=60,max=64,sex="M", equipment="Wraps"}
+    mm5sp  = {name ="MM5-SP",min=60,max=64,sex="M", equipment="Single-ply"}
+    mm6r   = {name ="MM6-R",min=65,max=69,sex="M", equipment="Raw"}
+    mm7r   = {name ="MM7-R",min=70,max=74,sex="M", equipment="Raw"}
+    mm8r   = {name ="MM8-R",min=75,max=79,sex="M", equipment="Raw"}
+    mm8rp  = {name ="MM9-RP",min=80,max=999,sex="M", equipment="Wraps"}
+    fmr    = {name ="FM-R",min=40,max=999,sex="F", equipment="Raw"}
+    fmrp   = {name ="FM-RP",min=40,max=999,sex="F", equipment="Wraps"}
+    fm1r   = {name ="FM1-R",min=40,max=44,sex="F", equipment="Raw"}
+    fm1rp  = {name ="FM1-RP",min=40,max=44,sex="F", equipment="Wraps"}
+    fm2r   = {name ="FM2-R",min=45,max=49,sex="F", equipment="Raw"}
+    fm2rp  = {name ="FM2-RP",min=45,max=49,sex="F", equipment="Wraps"}
+    fm3r   = {name ="FM3-R",min=50,max=54,sex="F", equipment="Raw"}
+    fm3rp  = {name ="FM3-RP",min=50,max=54,sex="F", equipment="Wraps"}
+    fm4r   = {name ="FM4-R",min=55,max=59,sex="F", equipment="Raw"}
+    fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
+    fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
+    msmr   = {name ="MSM-R",min=33,max=39,sex="M", equipment="Raw"}
+    msmrp  = {name ="MSM-RP",min=33,max=39,sex="M", equipment="Wraps"}
+    msmsp  = {name ="MSM-SP",min=33,max=39,sex="M", equipment="Single-ply"}
+    msmmp  = {name ="MSM-MP",min=33,max=39,sex="M", equipment="Multi-ply"}
+    fsmr   = {name ="FSM-R",min=33,max=39,sex="F", equipment="Raw"}
+    fsmrp  = {name ="FSM-RP",min=33,max=39,sex="F", equipment="Wraps"}
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","145","140+"]
     date_range = ["0000-01-01","9999-01-01"]
