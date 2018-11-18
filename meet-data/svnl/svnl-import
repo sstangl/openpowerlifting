@@ -53,8 +53,7 @@ def getresultsurl(url):
     html = gethtml(url)
     soup = BeautifulSoup(html, 'html.parser')
     div = soup.find('div', {
-                    'class': 'field field-name-body \
-                    field-type-text-with-summary field-label-hidden'})
+                    'class': 'field-item even'})
     resultsurl = div.a['href']
 
     try:
