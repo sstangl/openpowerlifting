@@ -52,8 +52,8 @@ fi
 #Checking this after create-meet-csv so we still have a meet file even with errors
 if [ "$process_success" == true ];then
 	# Show any warnings.
-	${REPOTESTDIR}/check
 	${REPOSCRIPTDIR}/countries.py entries.csv
+	${REPOTESTDIR}/check
 fi
 
 echo "Done! Don't forget about meet.csv!"
