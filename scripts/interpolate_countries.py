@@ -13,11 +13,11 @@ MEETID_IDX = 1
 def is_country_consistent(lifter_data):
     country = ''
     for entry in lifter_data:
-        if lifter_data[COUNTRY_IDX] != '':
-            if country != '' and lifter_data[COUNTRY_IDX] != country:
+        if entry[COUNTRY_IDX] != '':
+            if country != '' and entry[COUNTRY_IDX] != country:
                 return False
 
-            country = lifter_data[COUNTRY_IDX]
+            country = entry[COUNTRY_IDX]
 
     return True
 
@@ -40,7 +40,12 @@ def interpolate_countries(LifterCountryHash):
     newLifterHash = {}
 
     for lifter in LifterCountryHash:
+
+        if lifter != 53823:
+            continue
+
         if is_country_consistent(LifterCountryHash[lifter]):
+            print(LifterCountryHash[lifter])
             country = get_country(LifterCountryHash[lifter])
             newLifterHash[lifter] = LifterCountryHash[lifter]
 
