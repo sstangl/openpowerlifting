@@ -40,12 +40,7 @@ def interpolate_countries(LifterCountryHash):
     newLifterHash = {}
 
     for lifter in LifterCountryHash:
-
-        if lifter != 53823:
-            continue
-
         if is_country_consistent(LifterCountryHash[lifter]):
-            print(LifterCountryHash[lifter])
             country = get_country(LifterCountryHash[lifter])
             newLifterHash[lifter] = LifterCountryHash[lifter]
 
