@@ -58,6 +58,8 @@ pub enum MetaFederation {
 
     #[strum(to_string = "aapf")]
     AAPF,
+
+    /// BPU, but only tested entries.
     #[strum(to_string = "abpu")]
     ABPU,
 
@@ -65,6 +67,10 @@ pub enum MetaFederation {
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
+
+    /// BPU, but with international results also.
+    #[strum(to_string = "bpu")]
+    BPU,
 
     /// BVDK, but with international results also.
     #[strum(to_string = "bvdk")]
@@ -190,7 +196,9 @@ impl MetaFederation {
                         && meet.federation.home_country() == Some(Country::USA))
             }
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
-            MetaFederation::ABPU => meet.federation == Federation::BPU && entry.tested,
+            MetaFederation::ABPU => {
+                entry.tested && MetaFederation::BPU.contains(entry, meets)
+            }
             MetaFederation::AllBP => {
                 meet.federation == Federation::BAWLA
                     || meet.federation == Federation::BP
@@ -204,6 +212,11 @@ impl MetaFederation {
                         (meet.federation == Federation::IPF
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
+            }
+            MetaFederation::BPU => {
+                meet.federation == Federation::BPU
+                    || (meet.federation == Federation::WPC
+                        && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::BVDK => match meet.federation {
                 Federation::BVDK => true,
