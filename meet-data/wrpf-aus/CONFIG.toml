@@ -1,0 +1,35 @@
+[divisions]
+    mr_o = {name = "MR-O", min=0, max=999, equipment = ["Raw","Wraps"], sex="M"}
+    mr_t = {name = "MR-T", min=14, max=16, equipment = ["Raw","Wraps"], sex="M"}
+    mr_y = {name = "MR-Y", min=0, max=13, equipment = ["Raw","Wraps"], sex="M"}
+    mr_sj = {name = "MR-SJ", min=17, max=19, equipment = ["Raw","Wraps"], sex="M"}
+    mr_j = {name = "MR-J", min=20, max=23, equipment = ["Raw","Wraps"], sex="M"}
+    mr_m1 = {name = "MR-M1", min=40, max=49, equipment = ["Raw","Wraps"], sex="M"}
+    mr_m2 = {name = "MR-M2", min=50, max=59, equipment = ["Raw","Wraps"], sex="M"}
+    mr_m3 = {name = "MR-M3", min=60, max=69, equipment = ["Raw","Wraps"], sex="M"}
+    mr_m4 = {name = "MR-M4", min=70, max=999, equipment = ["Raw","Wraps"], sex="M"}
+    mr_m = {name = "MR-M", min=40, max=999, equipment = ["Raw","Wraps"], sex="M"}
+
+    fr_o = {name = "FR-O", min=0, max=999, equipment = ["Raw","Wraps"], sex="F"}
+    fr_t = {name = "FR-T", min=14, max=16, equipment = ["Raw","Wraps"], sex="F"}
+    fr_sj = {name = "FR-SJ", min=17, max=19, equipment = ["Raw","Wraps"], sex="F"}
+    fr_j = {name = "FR-J", min=20, max=23, equipment = ["Raw","Wraps"], sex="F"}
+    fr_m1 = {name = "FR-M1", min=40, max=49, equipment = ["Raw","Wraps"], sex="F"}
+    fr_m2 = {name = "FR-M2", min=50, max=59, equipment = ["Raw","Wraps"], sex="F"}
+    fr_m3 = {name = "FR-M3", min=60, max=999, equipment = ["Raw","Wraps"], sex="F"}
+    fr_m = {name = "FR-M", min=40, max=999, equipment = ["Raw","Wraps"], sex="F"}
+
+    msp_o = {name = "MSP-O", min=0, max=999, equipment = "Single-ply", sex = "M"}
+
+
+[weightclasses.M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
