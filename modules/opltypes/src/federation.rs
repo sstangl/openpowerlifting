@@ -455,6 +455,10 @@ pub enum Federation {
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
 
+    /// Powerlifting Association of the Philippines, IPF.
+    #[strum(to_string = "PAP", serialize = "pap")]
+    PAP,
+
     /// Powerlifting zveza Slovenije, IPF.
     #[strum(to_string = "PLZS", serialize = "plzs")]
     PLZS,
@@ -810,6 +814,7 @@ impl Federation {
             Federation::OlomouckySilak => false,
             Federation::ParaPL => true,
             Federation::PA => true,
+            Federation::PAP => true,
             Federation::PLZS => true,
             Federation::PRIDE => false,
             Federation::ProRaw => false,
@@ -978,6 +983,7 @@ impl Federation {
             Federation::OlomouckySilak => Some(Country::Czechia),
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
+            Federation::PAP => Some(Country::Philippines),
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PRIDE => Some(Country::USA),
             Federation::ProRaw => Some(Country::Australia),
@@ -1146,6 +1152,7 @@ impl Federation {
             Federation::OlomouckySilak => PointsSystem::Wilks,
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,
+            Federation::PAP => PointsSystem::Wilks,
             Federation::PLZS => PointsSystem::Wilks,
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::ProRaw => PointsSystem::Glossbrenner,

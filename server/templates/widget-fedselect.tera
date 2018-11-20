@@ -198,6 +198,9 @@
 <optgroup label="{{strings.country.norway}}">
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF - Norges Styrkeløftforbund [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.philippines}}">
+  <option value="pap" {% if selection.federation == "PAP" %}selected{% endif %}>PAP - Powerlifting Association of the Philippines [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.poland}}">
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS - Polski Związek Kulturystyki Fitness [IPF]</option>
 </optgroup>
