@@ -1,0 +1,40 @@
+# Rulebook: https://web.archive.org/web/20181120160722/http://www.upapower.com/development/wp-content/uploads/2015/11/official_upa_rulebook-3.pdf
+
+[divisions]
+    # Untested raw divisions.
+    mor = {name="MOR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    for = {name="FOR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mjr = {name="MJR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
+    fjr = {name="FJR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+
+    # Tested raw divisions.
+    morad = {name="MOR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    forad = {name="FOR-AD", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mjrad = {name="MJR-AD", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
+    fjrad = {name="FJR-AD", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+
+    # Untested equipped divisions.
+    mo = {name="MO", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    fo = {name="FO", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+
+    # Tested equipped divisions.
+    moad = {name="MO-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    foad = {name="FO-AD", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+
+    # Raw Elite divisions disallow wraps.
+    more = {name="MORE", min=0, max=999, sex="M", equipment="Raw"}
+    fore = {name="FORE", min=0, max=999, sex="F", equipment="Raw"}
+    moread = {name="MORE-AD", min=0, max=999, sex="M", equipment="Raw"}
+    foread = {name="FORE-AD", min=0, max=999, sex="F", equipment="Raw"}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
