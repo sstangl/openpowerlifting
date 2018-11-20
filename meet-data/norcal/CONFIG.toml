@@ -21,6 +21,7 @@
     master_80 = {name = "Master 80+", min = 80, max = 999}
     special = {name = "Special Olympian", min = 0, max = 999}
     novice = {name = "Novice", min = 0, max = 999}
+    lm = {name = "Law & Military", min = 0, max = 999}
 
 [weightclasses.current_M]
     classes = ["30","35","39","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
