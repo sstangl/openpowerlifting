@@ -125,13 +125,6 @@ fn test_username_redirects() {
 fn test_old_redirects() {
     let client = client();
 
-    let response = client.get("/lifters.html?q=Sean Stangl").dispatch();
-    assert_eq!(response.status(), Status::PermanentRedirect);
-    assert_eq!(
-        response.headers().get_one("location").unwrap(),
-        "/u/seanstangl"
-    );
-
     let response = client.get("/lifters.html?q=Sean%20Stangl").dispatch();
     assert_eq!(response.status(), Status::PermanentRedirect);
     assert_eq!(

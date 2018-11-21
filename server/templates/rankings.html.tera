@@ -24,8 +24,8 @@
     const translation_column_glossbrenner = "{{strings.columns.glossbrenner}}";
   </script>
 
-  <script src="/static/scripts/{{slickgrid_min_js}}"></script>
-  <script src="/static/scripts/{{rankings_js}}"></script>
+  <script src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
+  <script src="/static/scripts/{{statics::rankings_js()}}"></script>
 {% endblock includes %}
 
 {% block flexbox_hack %}

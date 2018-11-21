@@ -1,7 +1,7 @@
 {% extends "desktop-base" %}
 
 {% block includes %}
-  <script src="/static/scripts/{{records_js}}"></script>
+  <script src="/static/scripts/{{statics::records_js()}}"></script>
 {% endblock includes %}
 
 {% block topbar_hack %}

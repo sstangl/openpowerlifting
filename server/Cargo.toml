@@ -15,6 +15,5 @@ serde_derive = "1.0"
 serde_json = "1.0"
 strum = "0.11"
 strum_macros = "0.11"
-rocket = "0.3"
-rocket_codegen = "0.3"
-rocket_contrib = { version = "0.3", features = ["tera_templates"] }
+rocket = "0.4.0-rc.1"
+rocket_contrib = { version = "0.4.0-rc.1", features = ["tera_templates"] }

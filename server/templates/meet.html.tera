@@ -13,7 +13,7 @@
     const path_if_by_glossbrenner = "{{path_if_by_glossbrenner | safe}}";
     const path_if_by_division = "{{path_if_by_division | safe}}";
   </script>
-  <script src="/static/scripts/{{meet_js}}"></script>
+  <script src="/static/scripts/{{statics::meet_js()}}"></script>
 {% endblock includes %}
 
 {% block controls %}

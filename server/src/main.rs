@@ -1,12 +1,10 @@
-#![feature(plugin)]
-#![plugin(rocket_codegen)]
-#![feature(custom_derive)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
 extern crate accept_language;
 extern crate dotenv;
 extern crate opltypes;
 use opltypes::{Federation, WeightUnits};
-extern crate rocket;
+#[macro_use] extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 extern crate serde_json;
@@ -17,10 +15,10 @@ mod tests;
 
 use rocket::fairing::AdHoc;
 use rocket::http::{ContentType, Cookies, Status};
-use rocket::request::{self, FromRequest, Request};
+use rocket::request::{self, Form, FromRequest, Request};
 use rocket::response::{self, content, NamedFile, Redirect, Responder, Response};
 use rocket::{Outcome, State};
-use rocket_contrib::Template;
+use rocket_contrib::templates::Template;
 
 use strum::IntoEnumIterator;
 
@@ -251,7 +249,7 @@ fn lifter(
             // If the name just needs to be lowercased, redirect to that page.
             let lowercase = username.to_ascii_lowercase();
             let _guard = opldb.get_lifter_id(&lowercase)?;
-            return Some(Err(Redirect::permanent(&format!("/u/{}", lowercase))));
+            return Some(Err(Redirect::permanent(format!("/u/{}", lowercase))));
         }
         Some(id) => id,
     };
@@ -381,7 +379,6 @@ impl Responder<'static> for JsonString {
     }
 }
 
-// TODO: Version / magicValue / etc.
 #[derive(FromForm)]
 struct RankingsApiQuery {
     start: usize,
@@ -391,10 +388,10 @@ struct RankingsApiQuery {
 }
 
 /// API endpoint for fetching a slice of rankings data as JSON.
-#[get("/api/rankings/<selections..>?<query>")]
+#[get("/api/rankings/<selections..>?<query..>")]
 fn rankings_api(
     selections: Option<PathBuf>,
-    query: RankingsApiQuery,
+    query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
@@ -420,9 +417,9 @@ fn rankings_api(
     Some(JsonString(serde_json::to_string(&slice).ok()?))
 }
 
-#[get("/api/rankings?<query>")]
+#[get("/api/rankings?<query..>")]
 fn default_rankings_api<'db>(
-    query: RankingsApiQuery,
+    query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
@@ -437,10 +434,10 @@ struct SearchRankingsApiQuery {
 }
 
 /// API endpoint for rankings search.
-#[get("/api/search/rankings/<selections..>?<query>")]
+#[get("/api/search/rankings/<selections..>?<query..>")]
 fn search_rankings_api<'db>(
     selections: Option<PathBuf>,
-    query: SearchRankingsApiQuery,
+    query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
     let selection = match selections {
@@ -454,9 +451,9 @@ fn search_rankings_api<'db>(
     Some(JsonString(serde_json::to_string(&result).ok()?))
 }
 
-#[get("/api/search/rankings?<query>")]
+#[get("/api/search/rankings?<query..>")]
 fn default_search_rankings_api(
-    query: SearchRankingsApiQuery,
+    query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
     search_rankings_api(None, query, opldb)
@@ -467,11 +464,11 @@ struct OldIndexQuery {
     fed: String,
 }
 
-#[get("/?<query>")]
-fn old_index_query(query: OldIndexQuery) -> Option<Redirect> {
+#[get("/?<query..>")]
+fn old_index_query(query: Form<OldIndexQuery>) -> Option<Redirect> {
     let fed = query.fed.parse::<Federation>().ok()?;
     let target = format!("/rankings/{}", fed.to_string().to_ascii_lowercase());
-    Some(Redirect::permanent(&target))
+    Some(Redirect::permanent(target))
 }
 
 #[derive(FromForm)]
@@ -479,12 +476,12 @@ struct OldLiftersQuery {
     q: String,
 }
 
-#[get("/lifters.html?<query>")]
-fn old_lifters(opldb: State<ManagedOplDb>, query: OldLiftersQuery) -> Option<Redirect> {
+#[get("/lifters.html?<query..>")]
+fn old_lifters(opldb: State<ManagedOplDb>, query: Form<OldLiftersQuery>) -> Option<Redirect> {
     let name = &query.q;
     let id = opldb.get_lifter_id_by_name(name)?;
     let username = &opldb.get_lifter(id).username;
-    Some(Redirect::permanent(&format!("/u/{}", username)))
+    Some(Redirect::permanent(format!("/u/{}", username)))
 }
 
 #[derive(FromForm)]
@@ -497,12 +494,12 @@ fn old_meetlist() -> Redirect {
     Redirect::permanent("/mlist")
 }
 
-#[get("/meet.html?<query>")]
-fn old_meet(opldb: State<ManagedOplDb>, query: OldMeetQuery) -> Option<Redirect> {
+#[get("/meet.html?<query..>")]
+fn old_meet(opldb: State<ManagedOplDb>, query: Form<OldMeetQuery>) -> Option<Redirect> {
     let meetpath = &query.m;
     let id = opldb.get_meet_id(meetpath)?;
     let pathstr = &opldb.get_meet(id).path;
-    Some(Redirect::permanent(&format!("/m/{}", pathstr)))
+    Some(Redirect::permanent(format!("/m/{}", pathstr)))
 }
 
 #[get("/index.html")]
@@ -601,9 +598,9 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 old_contact,
             ],
         )
-        .catch(catchers![not_found, internal_error])
+        .register(catchers![not_found, internal_error])
         .attach(Template::fairing())
-        .attach(AdHoc::on_response(|_request, response| {
+        .attach(AdHoc::on_response("Delete Server Header", |_request, response| {
             response.remove_header("Server");
         }))
 }

@@ -1,5 +1,5 @@
 <div id="header">
-  <img class="header-logo" src="/static/images/{{logo_compressed_svg}}" alt="OpenPowerlifting"/>
+  <img class="header-logo" src="/static/images/{{statics::logo_compressed_svg()}}" alt="OpenPowerlifting"/>
   <a href="/" class="nav__link">{{strings.header.rankings}}</a>
   <a href="/records" class="nav__link">{{strings.header.records}}</a>
   <a href="/mlist" class="nav__link">{{strings.header.meets}}</a>
