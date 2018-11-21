@@ -18,7 +18,7 @@ def gethtml(url):
     request = urllib.request.Request(url)
     request.add_header('User-Agent', 'Mozilla/5.0 Gecko/20100101 Firefox/52.0')
 
-    with urllib.request.urlopen(request) as r:
+    with urllib.request.urlopen(request, timeout=10) as r:
         return r.read()
 
 
