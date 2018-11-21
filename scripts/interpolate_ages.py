@@ -553,22 +553,13 @@ def generate_hashmap(entriescsv, meetcsv):
     return [LifterAgeHash, MeetDateHash]
 
 
-def get_ageclass(minage, maxage, yearage=None):
+def get_ageclass(minage, maxage):
     global AGE_DIVISIONS
 
     for division in AGE_DIVISIONS:
         div_min = int(division.split('-')[0])
         div_max = int(division.split('-')[1])
-        # Base division off the age they are turning that year, if we know it
-        if yearage is not None:
-            # Check that yearage agrees with maxage and minage
-            # if not don't assign an AgeClass
-            if yearage < minage or yearage > maxage + 1:
-                return ''
-
-            if yearage <= div_max and yearage >= div_min:
-                return division
-        elif maxage <= div_max and minage >= div_min:
+        if maxage <= div_max and minage >= div_min:
             return division
 
     return ''
@@ -618,12 +609,6 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
             # Check the total to avoid the case of two lifters in the
             # same meet sharing a name (pending disambigation)
             if age_data[DATE_IDX] == int(meetID) and age_data[TOTAL_IDX] == total:
-                # The age that a lifter is turning that year
-                yearage = None
-                if age_data[BY_IDX] != '':
-                    yearage = int(MeetDateHash[age_data[DATE_IDX]].split(
-                        '-')[0]) - int(age_data[BY_IDX])
-
                 assert age_data[AGE_IDX] == '' or float(
                     age_data[AGE_IDX]) > 3.5
 
@@ -634,16 +619,16 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
                     # Deal with the case where the divisions tell us the birthyear
                     if (float(oldmin) - age_data[MINAGE_IDX]) == 0.5:
                         row[ageclassidx] = str(get_ageclass(
-                            float(oldmin), age_data[MAXAGE_IDX], yearage))
+                            float(oldmin), age_data[MAXAGE_IDX]))
                     elif (float(oldmax) - age_data[MAXAGE_IDX]) == 0.5:
                         row[ageclassidx] = str(get_ageclass(
-                            age_data[MINAGE_IDX], float(oldmax), yearage))
+                            age_data[MINAGE_IDX], float(oldmax)))
                     else:
                         row[ageclassidx] = str(get_ageclass(
-                            age_data[MINAGE_IDX], age_data[MAXAGE_IDX], yearage))
+                            age_data[MINAGE_IDX], age_data[MAXAGE_IDX]))
                 else:
                     row[ageclassidx] = str(get_ageclass(
-                        age_data[MINAGE_IDX], age_data[MAXAGE_IDX], yearage))
+                        age_data[MINAGE_IDX], age_data[MAXAGE_IDX]))
                 break
 
     return entriescsv
