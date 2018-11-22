@@ -191,4 +191,9 @@ fn regression_tests() {
     let data = "Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BirthYear,State,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg\n\
                 1,Chad Cooper,M,SBD,R-O,93,Raw,1998,SC,88.4,170,180,,180,92.5,-97.5,-97.5,92.5,192.5,212.5,215,215,522.5";
     assert_eq!(check(data), 1);
+
+    // Bench is a failure, but the lifter is given a total and not marked DQ.
+    let data = "Name,Sex,BodyweightKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Division,Age,Place\n\
+                Aleksey Krasnoshchekov,M,86,,,,,,170,90,SBD,Raw,No,-135,-135,-135,,,160,165,170,170,,Pro Masters 40-44,42,1";
+    assert_eq!(check(data), 1);
 }
