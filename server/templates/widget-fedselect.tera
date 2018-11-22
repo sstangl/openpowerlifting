@@ -117,6 +117,9 @@
 <optgroup label="{{strings.country.chile}}">
   <option value="achipo" {% if selection.federation == "ACHIPO" %}selected{% endif %}>ACHIPO - Alianza Chilena Powerlifting [GPA/IPO]</option>
 </optgroup>
+<optgroup label="{{strings.country.china}}">
+  <option value="chinapa" {% if selection.federation == "ChinaPA" %}selected{% endif %}>ChinaPA - Chinese Powerlifting Association [GPA/IPO]</option>
+</optgroup>
 <optgroup label="{{strings.country.croatia}}">
   <option value="all-croatia" {% if selection.federation == "AllCroatia" %}selected{% endif %}>{{strings.selectors.fed.all_croatia}}</option>
   <option value="croatia-ua" {% if selection.federation == "Croatia-UA" %}selected{% endif %}>Croatia-UA - Croatia [Unaffiliated]</option>
