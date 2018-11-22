@@ -60,6 +60,12 @@ def main():
     html = oplprobe.gethtml(URL)
     meetlist = getmeetlist(html)
 
+    with open(FEDDIR + '/todo/URLLIST') as fd:
+        for url in fd:
+            url = url.strip()
+            if url not in meetlist:
+                meetlist.append(url)
+
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
