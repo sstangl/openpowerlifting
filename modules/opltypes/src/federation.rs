@@ -114,6 +114,10 @@ pub enum Federation {
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
 
+    /// Australian Powerlifting League, IPL.
+    #[strum(to_string = "AusPL", serialize = "auspl")]
+    AusPL,
+
     /// British Amateur Weightlifting Association, predecessor to BP.
     #[strum(to_string = "BAWLA", serialize = "bawla")]
     BAWLA,
@@ -731,6 +735,7 @@ impl Federation {
             Federation::AsianPF => true,
             Federation::Atlantis => false,
             Federation::AusDFPF => true,
+            Federation::AusPL => false,
             Federation::BAWLA => true,
             Federation::BB => false,
             Federation::BBDD => false,
@@ -900,6 +905,7 @@ impl Federation {
             Federation::AsianPF => None,
             Federation::Atlantis => Some(Country::USA),
             Federation::AusDFPF => Some(Country::Australia),
+            Federation::AusPL => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
             Federation::BBDD => Some(Country::USA),
@@ -1069,6 +1075,7 @@ impl Federation {
             Federation::AsianPF => PointsSystem::Wilks,
             Federation::Atlantis => PointsSystem::Wilks,
             Federation::AusDFPF => PointsSystem::Wilks,
+            Federation::AusPL => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
             Federation::BBDD => PointsSystem::Wilks,

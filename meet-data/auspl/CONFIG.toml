@@ -1,0 +1,67 @@
+# AusPL uses exact birthdays for their age classes.
+[divisions]
+    mor = {name = "M-OR", min = 0, max = 999, sex='M',equipment = 'Raw'}
+    mj1r = {name = "M-J1R", min = 15, max = 19, sex='M',equipment = 'Raw'}
+    mj2r = {name = "M-J2R", min = 20, max = 23, sex='M',equipment = 'Raw'}
+    mm1r = {name = "M-M1R", min = 40, max = 44, sex='M',equipment = 'Raw'}
+    mm2r = {name = "M-M2R", min = 45, max = 49, sex='M',equipment = 'Raw'}
+    mm3r = {name = "M-M3R", min = 50, max = 54, sex='M',equipment = 'Raw'}
+    mm4r = {name = "M-M4R", min = 55, max = 59, sex='M',equipment = 'Raw'}
+    mm5r = {name = "M-M5R", min = 60, max = 64, sex='M',equipment = 'Raw'}
+    mm6r = {name = "M-M6R", min = 65, max = 69, sex='M',equipment = 'Raw'}
+    mm7r = {name = "M-M7R", min = 70, max = 74, sex='M',equipment = 'Raw'}
+    mm8r = {name = "M-M8R", min = 75, max = 79, sex='M',equipment = 'Raw'}
+    mm9r = {name = "M-M9R", min = 80, max = 999, sex='M',equipment = 'Raw'}
+
+    mocr = {name = "M-OCR", min = 0, max = 999, sex='M',equipment = 'Wraps'}
+    mj1cr = {name = "M-J1CR", min = 15, max = 19, sex='M',equipment = 'Wraps'}
+    mj2cr = {name = "M-J2CR", min = 20, max = 23, sex='M',equipment = 'Wraps'}
+    mm1cr = {name = "M-M1CR", min = 40, max = 44, sex='M',equipment = 'Wraps'}
+    mm2cr = {name = "M-M2CR", min = 45, max = 49, sex='M',equipment = 'Wraps'}
+    mm3cr = {name = "M-M3CR", min = 50, max = 54, sex='M',equipment = 'Wraps'}
+    mm4cr = {name = "M-M4CR", min = 55, max = 59, sex='M',equipment = 'Wraps'}
+    mm5cr = {name = "M-M5CR", min = 60, max = 64, sex='M',equipment = 'Wraps'}
+    mm6cr = {name = "M-M6CR", min = 65, max = 69, sex='M',equipment = 'Wraps'}
+    mm7cr = {name = "M-M7CR", min = 70, max = 74, sex='M',equipment = 'Wraps'}
+    mm8cr = {name = "M-M8CR", min = 75, max = 79, sex='M',equipment = 'Wraps'}
+    mm9cr = {name = "M-M9CR", min = 80, max = 999, sex='M',equipment = 'Wraps'}
+
+    for = {name = "F-OR", min = 0, max = 999, sex='F',equipment = 'Raw'}
+    fj1r = {name = "F-J1R", min = 15, max = 19, sex='F',equipment = 'Raw'}
+    fj2r = {name = "F-J2R", min = 20, max = 23, sex='F',equipment = 'Raw'}
+    fm1r = {name = "F-M1R", min = 40, max = 44, sex='F',equipment = 'Raw'}
+    fm2r = {name = "F-M2R", min = 45, max = 49, sex='F',equipment = 'Raw'}
+    fm3r = {name = "F-M3R", min = 50, max = 54, sex='F',equipment = 'Raw'}
+    fm4r = {name = "F-M4R", min = 55, max = 59, sex='F',equipment = 'Raw'}
+    fm5r = {name = "F-M5R", min = 60, max = 64, sex='F',equipment = 'Raw'}
+    fm6r = {name = "F-M6R", min = 65, max = 69, sex='F',equipment = 'Raw'}
+    fm7r = {name = "F-M7R", min = 70, max = 74, sex='F',equipment = 'Raw'}
+    fm8r = {name = "F-M8R", min = 75, max = 79, sex='F',equipment = 'Raw'}
+    fm9r = {name = "F-M9R", min = 80, max = 999, sex='F',equipment = 'Raw'}
+
+    focr = {name = "F-OCR", min = 0, max = 999, sex='F',equipment = 'Wraps'}
+    fj1cr = {name = "F-J1CR", min = 15, max = 19, sex='F',equipment = 'Wraps'}
+    fj2cr = {name = "F-J2CR", min = 20, max = 23, sex='F',equipment = 'Wraps'}
+    fm1cr = {name = "F-M1CR", min = 40, max = 44, sex='F',equipment = 'Wraps'}
+    fm2cr = {name = "F-M2CR", min = 45, max = 49, sex='F',equipment = 'Wraps'}
+    fm3cr = {name = "F-M3CR", min = 50, max = 54, sex='F',equipment = 'Wraps'}
+    fm4cr = {name = "F-M4CR", min = 55, max = 59, sex='F',equipment = 'Wraps'}
+    fm5cr = {name = "F-M5CR", min = 60, max = 64, sex='F',equipment = 'Wraps'}
+    fm6cr = {name = "F-M6CR", min = 65, max = 69, sex='F',equipment = 'Wraps'}
+    fm7cr = {name = "F-M7CR", min = 70, max = 74, sex='F',equipment = 'Wraps'}
+    fm8cr = {name = "F-M8CR", min = 75, max = 79, sex='F',equipment = 'Wraps'}
+    fm9cr = {name = "F-M9CR", min = 80, max = 999, sex='F',equipment = 'Wraps'}
+
+    fm1mp = {name = "F-M1MP", min = 40, max = 44, sex='F',equipment = 'Multi-ply'}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
