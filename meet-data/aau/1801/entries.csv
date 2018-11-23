@@ -1,0 +1,219 @@
+Place,Sex,Name,State,Country,Age,BodyweightKg,WeightClassKg,Event,Division,Equipment,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
+1,F,Isabella Martin,IL,USA,9,36.06,40,B,Y 8-9,Raw,,,33,,,,33
+1,F,Pearl Beck,NV,USA,19,41.46,48,B,Disabled,Raw,,,45,,,,45
+1,F,Damiyah Smith,OK,USA,12,46.95,48,B,T 12-13,Raw,,,50,,,,50
+1,F,Madison Hamilton,FL,USA,13,50.98,52,B,T 12-13,Raw,,,47.5,,,,47.5
+1,F,Erin Schuch,NV,USA,28,52.53,56,B,Open,Raw,,,60,,,,60
+1,F,Glenys Ramirez,LA,USA,28,59.92,60,B,Open,Raw,,,52.5,,,,52.5
+1,F,Monica Rosales,CA,USA,29,73.57,75,B,Open,Raw,,,57.5,,,,57.5
+1,F,Deepali Kulkarni,,India,39,81.01,82.5,B,Sub,Single-ply,,,42.5,,,,42.5
+1,F,Elora Hancock,WA,USA,13,89.45,90,B,Blind,Raw,,,30,,,,30
+1,F,Sampu Guha,,India,51,84.59,90,B,M 50-54,Raw,,,70,,,,70
+1,F,Kari Kraus,NE,USA,30,122.83,100+,B,Open,Raw,,,95,,,,95
+1,F,Catilyn Cook,OK,USA,15,109.5,100+,B,T 14-15,Raw,,,65,,,,65
+1,F,Isabella Martin,IL,USA,9,36.06,40,D,Y 8-9,Raw,,,,,87.5,90,87.5
+1,F,Olivia Stewart,WA,USA,11,40.51,44,D,Y 10-11,Raw,,,,,62.5,,62.5
+1,F,Damiyah Smith,OK,USA,12,46.95,48,D,T 12-13,Raw,,,,,107.5,,107.5
+1,F,Madison Hamilton,FL,USA,13,50.98,52,D,T 12-13,Raw,,,,,112.5,,112.5
+1,F,Karin Heindel,,Austria,62,57.24,60,D,M 60-64,Single-ply,,,,,95,,95
+1,F,Glenys Ramirez,LA,USA,28,59.92,60,D,Open,Raw,,,,,100,,100
+1,F,Carolyn Vanzlow,NV,USA,69,64.32,67.5,D,M 65-69,Raw,,,,,80,,80
+1,F,Monica Rosales,CA,USA,29,73.57,75,D,Open,Raw,,,,,125,,125
+1,F,Yvonne Von Stiphout,CA,USA,32,81.69,82.5,D,Open,Raw,,,,,170,172.5,170
+1,F,Lynne Castellanos,CA,USA,59,81.65,82.5,D,LM 55-59,Raw,,,,,140,,140
+1,F,Deepali Kulkarni,,India,39,81.01,82.5,D,Sub,Single-ply,,,,,100,,100
+1,F,Elora Hancock,WA,USA,13,89.45,90,D,Blind,Raw,,,,,77.5,82.5,77.5
+1,F,Anita Vargo,WA,USA,55,89.18,90,D,Law/Mil 55-59,Raw,,,,,130,137.5,130
+1,F,Anita Vargo,WA,USA,55,89.18,90,D,LM 55-59,Raw,,,,,130,137.5,130
+1,F,Kari Kraus,NE,USA,30,122.83,100+,D,Open,Raw,,,,,180,190,180
+1,F,Catilyn Cook,OK,USA,15,109.5,100+,D,T 14-15,Raw,,,,,147.5,150,147.5
+1,F,Isabella Martin,IL,USA,9,36.06,40,SBD,Y 8-9,Raw,65,,33,,87.5,90,185.5
+1,F,Chisato Dubose,WA,USA,54,47.31,48,SBD,M 50-54,Raw,85,85.5,45,,115,121,245
+1,F,Damiyah Smith,OK,USA,12,46.95,48,SBD,T 12-13,Raw,80,,50,,107.5,,237.5
+1,F,Skylar Duncan,WA,USA,17,45,48,SBD,T 16-17,Raw,55,,35,,85,,175
+1,F,Madison Hamilton,FL,USA,13,50.98,52,SBD,T 12-13,Raw,80,,47.5,,112.5,,240
+1,F,Julie Weiss,AZ,USA,37,55.47,56,SBD,Open,Raw,125,127.5,62.5,,137.5,,325
+1,F,Julie Weiss,AZ,USA,37,55.47,56,SBD,Sub,Raw,125,127.5,62.5,,137.5,,325
+1,F,Rosa Andrade,CA,USA,45,55.52,56,SBD,M 45-49,Raw,42.5,,33,,77.5,,153
+1,F,Asuba Alley-Barnes,WA,USA,30,57.33,60,SBD,Open,Raw,111,112,65,,147.5,,323.5
+1,F,Glenys Ramirez,LA,USA,28,59.92,60,SBD,Open,Raw,85,,52.5,,100,,237.5
+1,F,Valerie Silver,,Australia,69,57.65,60,SBD,LM 65-69,Raw,60,,42.5,,110,,212.5
+1,F,Leslie Goddard,CA,USA,60,66.59,67.5,SBD,M 60-64,Single-ply,75,,35,,90,,200
+1,F,Camille Curto,AZ,USA,38,67.31,67.5,SBD,Open,Raw,148.5,,87.5,,177.5,180,413.5
+1,F,Jessi Allen-Garbaldi,WA,USA,30,67.31,67.5,SBD,Open,Raw,92.5,97.5,50,,145,,287.5
+1,F,Camille Curto,AZ,USA,38,67.31,67.5,SBD,Sub,Raw,148.5,,87.5,,177.5,180,413.5
+1,F,Dawn Wermuth,TX,USA,50,64.46,67.5,SBD,LM 50-54,Raw,65,,65,,132.5,,262.5
+1,F,Dawn Wermuth,TX,USA,50,64.46,67.5,SBD,M 50-54,Raw,65,,65,,132.5,,262.5
+1,F,Maryah Wisner,WA,USA,14,63.87,67.5,SBD,T 14-15,Raw,57.5,,35,,105,,197.5
+1,F,Jenna Martz,WA,USA,17,64.05,67.5,SBD,T 16-17,Raw,100,,55,,135,,290
+1,F,Jasmine Lombato,AZ,USA,17,62.96,67.5,SBD,T 16-17,Raw,97.5,,57.5,,125,,280
+1,F,Bonnie Pauley,WA,USA,16,64.05,67.5,SBD,T 16-17,Single-ply,97.5,,47.5,,87.5,,232.5
+1,F,Sachie DuBose,WA,USA,18,69.49,75,SBD,Open,Raw,147.5,,73,,190.5,192.5,411
+1,F,Monica Rosales,CA,USA,29,73.57,75,SBD,Open,Raw,92.5,,57.5,,125,,275
+1,F,Letty Carcaise,WA,USA,16,68.45,75,SBD,T 16-17,Raw,67.5,70,40,,97.5,,205
+1,F,Falyn Christenson,WA,USA,17,72.85,75,SBD,T 16-17,Raw,62.5,,35,,80,,177.5
+1,F,Sachie DuBose,WA,USA,18,69.49,75,SBD,T 18-19,Raw,147.5,,73,,190.5,192.5,411
+1,F,Yvonne Von Stiphout,CA,USA,32,81.69,82.5,SBD,Open,Raw,130,,70,,170,172.5,370
+1,F,Katie Ruehle,CA,USA,33,82.05,82.5,SBD,Open,Raw,130,,75,,135,,340
+1,F,Holland Hayden,AR,USA,40,80.78,82.5,SBD,LM 40-44,Raw,130,,75,,165,,370
+1,F,Lynne Castellanos,CA,USA,59,81.65,82.5,SBD,LM 55-59,Raw,42.5,,42.5,,140,,225
+1,F,Alexis Potter,WA,USA,18,81.6,82.5,SBD,T 18-19,Raw,87.5,,50,,110,,247.5
+1,F,Deepali Kulkarni,,India,39,81.01,82.5,SBD,Sub,Single-ply,80,,42.5,,100,,222.5
+1,F,Chandler Marrs,NV,USA,51,88.5,90,SBD,M 50-54,Raw,87.5,,62.5,,137.5,,287.5
+1,F,Amber Born,WA,USA,13,88.86,90,SBD,T 12-13,Raw,47.5,,47.5,,92.5,,187.5
+1,F,Isabel Harnagy,WA,USA,16,84.1,90,SBD,T 16-17,Raw,110,,55,,130,,295
+1,F,Maggie Mcpherson,WA,USA,14,97.61,100,SBD,T 14-15,Raw,115,,50,,145,,310
+1,F,Edelmira Hutink,CA,USA,40,97.79,100,SBD,Law/Mil 40-44,Raw,110,,57.5,,137.5,,305
+1,F,Kari Kraus,NE,USA,30,122.83,100+,SBD,Open,Raw,145,,95,,180,190,420
+1,F,Javon Okray,LA,USA,38,111.13,100+,SBD,Sub,Raw,115,,65,,200,,380
+1,F,Edelmira Hutink,CA,USA,40,97.79,100,SBD,M 40-44,Raw,110,,57.5,,137.5,,305
+1,F,Catilyn Cook,OK,USA,15,109.5,100+,SBD,T 14-15,Raw,160,162.5,65,,147.5,150,372.5
+1,F,Arianna Salmond,WA,USA,16,102.06,100+,SBD,T 16-17,Raw,125,,65,,137.5,,327.5
+1,F,Mckinley Michaelson,WA,USA,16,114.58,100+,SBD,T 16-17,Raw,107.5,,65,,147.5,,320
+1,F,Andrea Cross,WA,USA,16,107.64,100+,SBD,T 16-17,Single-ply,60,,35,,100,,195
+1,F,Damiyah Smith,OK,USA,12,46.95,48,BD,T 12-13,Raw,,,50,,107.5,,157.5
+1,F,Aria Riley,CA,USA,13,45.77,48,BD,T 12-13,Raw,,,25,,75,,100
+1,F,Jean Dawkins,WA,USA,65,50.21,52,BD,LM 65-69,Raw,,,47.5,,90,,137.5
+1,F,Jean Dawkins,WA,USA,65,50.21,52,BD,M 65-69,Raw,,,47.5,,90,,137.5
+1,F,Madison Hamilton,FL,USA,13,50.98,52,BD,T 12-13,Raw,,,47.5,,112.5,,160
+1,F,Glenys Ramirez,LA,USA,28,59.92,60,BD,Open,Raw,,,52.5,,100,,152.5
+1,F,Leslie Goddard,CA,USA,60,66.59,67.5,BD,M 60-64,Single-ply,,,35,,90,,125
+1,F,Ana Shaw,TX,USA,46,67.36,67.5,BD,LM 45-49,Raw,,,60,,120,,180
+1,F,Carolyn Vanzlow,NV,USA,69,64.32,67.5,BD,M 65-69,Raw,,,40,,80,,120
+1,F,Nikki Young,CA,USA,17,62.69,67.5,BD,T 16-17,Raw,,,45,,97.5,,142.5
+1,F,Monica Rosales,CA,USA,29,73.57,75,BD,Open,Raw,,,57.5,,125,,182.5
+1,F,Carolyn Williams,WA,USA,60,74.62,75,BD,M 60-64,Raw,,,72.5,,140,140.5,212.5
+1,F,Elianna Loera,CA,USA,13,76.97,82.5,BD,T 12-13,Raw,,,27.5,,72.5,,100
+1,F,Elora Hancock,WA,USA,13,89.45,90,BD,Blind,Raw,,,30,,77.5,82.5,107.5
+1,F,Winifred Pristell,WA,USA,80,84.14,90,BD,M 80-84,Raw,,,62.5,63,98,,160.5
+1,F,Dolores Bailey,WA,USA,58,96.93,100,BD,M 55-59,Raw,,,53,,130,,183
+1,F,Kari Kraus,NE,USA,30,122.83,100+,BD,Open,Raw,,,95,,180,190,275
+1,F,Tamyra Whitaker,WA,USA,45,115.21,100+,BD,M 45-49,Raw,,,45,,92.5,,137.5
+1,F,Catilyn Cook,OK,USA,15,109.5,100+,BD,T 14-15,Raw,,,65,,147.5,150,212.5
+1,F,Kelli Born,WA,USA,17,115.53,100+,BD,T 16-17,Raw,,,60,,145,,205
+1,F,Katie Bowker,WA,USA,15,100.83,100+,BD,T 14-15,Single-ply,,,37.5,,105,,142.5
+1,M,Sergio Waters,AZ,USA,7,33.2,35,B,Y 6-7,Raw,,,21.5,22.5,,,21.5
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,LM 65-69,Single-ply,,,115,,,,115
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,M 65-69,Single-ply,,,115,,,,115
+3,M,Dovletnazar Atanazarov,,Turkmenistan,34,145.15,140+,B,Open,Raw,,,210,,,,210
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,LM 65-69,Raw,,,115,,,,115
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,M 65-69,Raw,,,115,,,,115
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,M 65-69,Single-ply,,,115,,,,115
+1,M,Martin Drake,NV,USA,67,67.45,67.5,B,LM 65-69,Single-ply,,,115,,,,115
+1,M,Tom Wilson,NV,USA,70,65.77,67.5,B,M 70-74,Raw,,,85,,,,85
+1,M,Leonard Sandberg,CA,USA,90,63.05,67.5,B,M 90-94,Raw,,,50,,,,50
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,B,LM 65-69,Single-ply,,,72.5,,,,72.5
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,B,M 65-69,Single-ply,,,72.5,,,,72.5
+2,M,Henry Fultz,CA,USA,59,82.37,82.5,B,Open,Raw,,,135,,,,135
+2,M,Henry Fultz,CA,USA,59,82.37,82.5,B,LM 55-59,Raw,,,135,,,,135
+3,M,Rajan Jain,,India,36,88.36,90,B,Sub,Raw,,,100,,,,100
+1,M,Coby Carden,OK,USA,61,89.36,90,B,LM 60-64,Raw,,,155,,,,155
+2,M,Bobby Adams,TX,USA,48,97.3,100,B,LM 45-49,Single-ply,,,107.5,,,,107.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,Law Mil Open,Raw,,,117.5,,,,117.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,Law/Mil 60-64,Raw,,,117.5,,,,117.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,L Law Mil Open,Raw,,,117.5,,,,117.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,L Law/Mil 60-64,Raw,,,117.5,,,,117.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,LM 60-64,Raw,,,117.5,,,,117.5
+3,M,Martin Vogh,AZ,USA,73,97.34,100,B,LM 70-74,Raw,,,65,,,,65
+3,M,Duane Burlingame,IL,USA,61,92.99,100,B,M 60-64,Raw,,,117.5,,,,117.5
+3,M,David Yancey,WA,USA,71,107,110,B,LM 70-74,Raw,,,100,105,,,100
+3,M,Glenn Wilkerson,TX,USA,75,106.82,110,B,LM 75-79,Raw,,,110,112.5,,,110
+3,M,Glenn Wilkerson,TX,USA,75,106.82,110,B,M 75-79,Raw,,,110,112.5,,,110
+3,M,Satya Prakash Masih,,India,60,124.06,125,B,M 60-64,Single-ply,,,90,,,,90
+3,M,Ivan Katz,CA,USA,71,124.19,125,B,LM 70-74,Raw,,,143,,,,143
+3,M,Satya Prakash Masih,,India,60,124.06,125,B,M 60-64,Raw,,,90,,,,90
+1,M,Michael Webb,OK,USA,55,133.17,140,B,LM 55-59,Raw,,,155,,,,155
+1,M,Raul Maximus Sandoval,CA,USA,6,34.93,35,D,Y 6-7,Raw,,,,,42.5,,42.5
+1,M,Oliver Stewart,WA,USA,10,36.02,40,D,Y 10-11,Raw,,,,,62.5,,62.5
+1,M,Lorenzo Stewart,WA,USA,12,51.26,52,D,Y 12-13,Raw,,,,,72.5,,72.5
+2,M,James Daws,NV,USA,28,67,67.5,D,Open,Raw,,,,,215,,215
+1,M,Tom Wilson,NV,USA,70,65.77,67.5,D,M 70-74,Raw,,,,,157.5,160,157.5
+2,M,Martin Heindel,,Austria,62,74.3,75,D,M 60-64,Single-ply,,,,,210,,210
+2,M,Bill Croft,NC,USA,55,77.56,82.5,D,LM 55-59,Single-ply,,,,,280,,280
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,D,LM 65-69,Single-ply,,,,,127.5,,127.5
+2,M,Bill Croft,NC,USA,55,77.56,82.5,D,M 55-59,Raw,,,,,280,,280
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,D,M 65-69,Single-ply,,,,,127.5,,127.5
+2,M,Bill Croft,NC,USA,55,77.56,82.5,D,Open,Single-ply,,,,,280,,280
+2,M,Wesley Tiffany,CA,USA,45,80.78,82.5,D,M 45-49,Raw,,,,,140,,140
+2,M,Kevin Shaw,TX,USA,51,89.99,90,D,LM 50-54,Single-ply,,,,,237.5,,237.5
+3,M,James Sprinkle,WA,USA,46,89.58,90,D,LM 45-49,Raw,,,,,228,,228
+3,M,Gary Young,CA,USA,74,89.18,90,D,LM 70-74,Raw,,,,,217.5,,217.5
+2,M,Mark Bryant,WA,USA,60,87,90,D,M 60-64,Raw,,,,,185,,185
+3,M,John Hammond,NV,USA,61,88.95,90,D,M 60-64,Raw,,,,,135,,135
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,Law Mil Open,Raw,,,,,227.5,,227.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,Law/Mil 60-64,Raw,,,,,227.5,,227.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,L Law Mil Open,Raw,,,,,227.5,,227.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,L Law/Mil 60-64,Raw,,,,,227.5,,227.5
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,LM 60-64,Raw,,,,,227.5,,227.5
+3,M,Martin Vogh,AZ,USA,73,97.34,100,D,LM 70-74,Raw,,,,,115,,115
+3,M,Duane Burlingame,IL,USA,61,92.99,100,D,M 60-64,Raw,,,,,227.5,,227.5
+3,M,David Yancey,WA,USA,71,107,110,D,LM 70-74,Raw,,,,,172.5,177.5,172.5
+3,M,Satya Prakash Masih,,India,60,124.06,125,D,M 60-64,Single-ply,,,,,170,,170
+3,M,Joseph Hochanadel,CO,USA,28,119.7,125,D,Law/Mil Open,Raw,,,,,275,,275
+2,M,Tauras Niumata,WA,USA,24,124.69,125,D,Open,Raw,,,,,195,,195
+3,M,Satya Prakash Masih,,India,60,124.06,125,D,M 60-64,Raw,,,,,170,,170
+1,M,Kaleb Hollis,WA,USA,12,33.66,35,SBD,Y 12-13,Raw,30,,20,,55,,105
+1,M,Timothy Bowker,WA,USA,10,47.9,48,SBD,Y 10-11,Raw,50,,20,,60,,130
+1,M,Christian Torch,AZ,USA,13,49.53,52,SBD,T 12-13,Raw,85,,47.5,,110,,242.5
+1,M,Robert Oban,WA,USA,15,51.8,52,SBD,T 14-15,Raw,67.5,,42.5,,107.5,,217.5
+1,M,Jonathan Barbee,WA,USA,18,50.8,52,SBD,T 18-19,Raw,100,,50,,122.5,,272.5
+1,M,Carlos Medina,CA,USA,17,54.7,56,SBD,T 16-17,Raw,92.5,,55,,120,,267.5
+1,M,Gordon Santee,CA,USA,72,58.79,60,SBD,LM 70-74,Raw,80,85,70,72.5,145,,295
+1,M,Gordon Santee,CA,USA,72,58.79,60,SBD,M 70-74,Raw,80,85,70,72.5,145,,295
+1,M,Jerry Moylan,OH,USA,65,65.59,67.5,SBD,M 65-69,Single-ply,128,,60,,137.5,,325.5
+1,M,Tom Wilson,NV,USA,70,65.77,67.5,SBD,M 70-74,Raw,107.5,110,85,,157.5,160,350
+1,M,Jeffery Torch,AZ,USA,14,65.77,67.5,SBD,T 14-15,Raw,117.5,,87.5,,177.5,,382.5
+1,M,Patrick Blevins,WA,USA,17,66.68,67.5,SBD,T 16-17,Raw,135,,70,,160,,365
+1,M,Dallas Joe,WA,USA,19,66.32,67.5,SBD,T 18-19,Raw,165,,117.5,,183,,465.5
+2,M,Robert Horton,AZ,USA,16,71.08,75,SBD,T 16-17,Raw,112.5,,100,,155,,367.5
+2,M,Wonbin Park,,South Korea,18,69.26,75,SBD,T 18-19,Raw,142.5,,90,,177.5,,410
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,SBD,LM 65-69,Single-ply,70,,72.5,,127.5,,270
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,SBD,M 65-69,Single-ply,70,,72.5,,127.5,,270
+2,M,Nikolas Betts,NV,USA,22,82.1,82.5,SBD,J,Raw,142.5,,120,,212.5,,475
+2,M,Bryan Jackson,CA,USA,39,80.6,82.5,SBD,Law/Mil Open,Raw,155,,107.5,,202.5,,465
+2,M,Bryan Jackson,CA,USA,39,80.6,82.5,SBD,Sub,Raw,155,,107.5,,202.5,,465
+2,M,Raymond Fougnier,MI,USA,75,81.19,82.5,SBD,LM 75-79,Raw,120.5,,80.5,,190,195,391
+2,M,Mikel Meadows,AZ,USA,50,82.1,82.5,SBD,M 50-54,Raw,182.5,,122.5,,215,,520
+3,M,Jeff Torch,AZ,USA,32,89.22,90,SBD,Open,Raw,195,,130,,245,,570
+3,M,James Sprinkle,WA,USA,46,89.58,90,SBD,Open,Raw,150,,115,,228,,493
+3,M,Gary Kulik,NV,USA,24,88.86,90,SBD,Open,Raw,95,,90,,182.5,,367.5
+3,M,James Sprinkle,WA,USA,46,89.58,90,SBD,LM 45-49,Raw,150,,115,,228,,493
+1,M,Coby Carden,OK,USA,61,89.36,90,SBD,LM 60-64,Raw,185,,155,,240,246,580
+3,M,Mathew Jones,WA,USA,73,89.54,90,SBD,M 70-74,Raw,117.5,,60,,152.5,,330
+3,M,Hunter Lindauer,WA,USA,15,89.31,90,SBD,T 14-15,Raw,172.5,,87.5,,205,,465
+3,M,Ronald Hagen,,Canada,45,96.89,100,SBD,M 45-49,Single-ply,260,,172.5,,255,,687.5
+3,M,Ronald Hagen,,Canada,45,96.89,100,SBD,Open,Single-ply,260,,172.5,,255,,687.5
+3,M,Nicklas Cline,WA,USA,16,93.98,100,SBD,T 16-17,Single-ply,70,,52.5,,120,,242.5
+3,M,Ethan Dobbs,WA,USA,18,90.22,100,SBD,T 18-19,Single-ply,135,,60,,157.5,,352.5
+3,M,David Martin,IL,USA,42,109,110,SBD,Law/Mil 40-44,Raw,237.5,242.5,142.5,,250,260,630
+3,M,Brian Benshoof,NE,USA,35,105.55,110,SBD,Open,Raw,270,,165,,267.5,272.5,702.5
+3,M,Brian Benshoof,NE,USA,35,105.55,110,SBD,Sub,Raw,270,,165,,267.5,272.5,702.5
+3,M,Brian Benshoof,NE,USA,35,105.55,110,SBD,Law/ Mil Sub,Raw,270,,165,,267.5,272.5,702.5
+3,M,David Yancey,WA,USA,71,107,110,SBD,LM 70-74,Raw,145,152.5,100,105,172.5,177.5,417.5
+3,M,Scott Hollis,WA,USA,46,109.77,110,SBD,M 45-49,Raw,97.5,,80,,157.5,,335
+3,M,Josiah Mackie,WA,USA,16,105.14,110,SBD,T 16-17,Raw,85,,65,,132.5,,282.5
+3,M,John Hochanadel,CO,USA,19,105.91,110,SBD,T 18-19,Raw,180,,127.5,,237.5,,545
+3,M,Satya Prakash Masih,,India,60,124.06,125,SBD,M 60-64,Single-ply,140,,90,,170,,400
+3,M,Paul Wrenn,TN,USA,71,115.85,125,SBD,M 70-74,Single-ply,190,,75,,177.5,,442.5
+3,M,Kros Andrade,CA,USA,46,114.89,125,SBD,M 45-49,Raw,170,,92.5,,200,,462.5
+3,M,Satya Prakash Masih,,India,60,124.06,125,SBD,M 60-64,Raw,140,,90,,170,,400
+3,M,Skyler Murray,WA,USA,18,136.3,140,SBD,T 18-19,Raw,277.5,,160,,250,,687.5
+1,M,Gordon Santee,CA,USA,72,58.79,60,BD,LM 70-74,Raw,,,70,72.5,145,,215
+1,M,Gordon Santee,CA,USA,72,58.79,60,BD,M 70-74,Raw,,,70,72.5,145,,215
+1,M,Rose Pristell,WA,USA,59,65.86,67.5,BD,LM 55-59,Raw,,,117.5,,210.5,,328
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,BD,LM 65-69,Single-ply,,,72.5,,127.5,,200
+2,M,Robert Bienvenu,LA,USA,69,82.1,82.5,BD,M 65-69,Single-ply,,,72.5,,127.5,,200
+2,M,Kevin Shaw,TX,USA,51,89.99,90,BD,LM 50-54,Single-ply,,,135,,237.5,,372.5
+3,M,Andre Dubose,WA,USA,22,85.18,90,BD,J,Raw,,,97.5,,147.5,,245
+3,M,Rob Clary,AZ,USA,51,88.22,90,BD,Open,Raw,,,137.5,,227.5,,365
+1,M,Coby Carden,OK,USA,61,89.36,90,BD,LM 60-64,Raw,,,155,,240,246,395
+2,M,Ben Nemo,TX,USA,43,88.41,90,BD,M 40-44,Raw,,,105,,172.5,,277.5
+3,M,Rob Clary,AZ,USA,51,88.22,90,BD,M 50-54,Raw,,,137.5,,227.5,,365
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,Law Mil Open,Raw,,,117.5,,227.5,,345
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,Law/Mil 60-64,Raw,,,117.5,,227.5,,345
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,L Law Mil Open,Raw,,,117.5,,227.5,,345
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,L Law/Mil 60-64,Raw,,,117.5,,227.5,,345
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,LM 60-64,Raw,,,117.5,,227.5,,345
+3,M,Duane Burlingame,IL,USA,61,92.99,100,BD,M 60-64,Raw,,,117.5,,227.5,,345
+1,M,James Bell,CA,USA,13,98.52,100,BD,T 12-13,Raw,,,60,,105,,165
+2,M,John Sincock,WA,USA,61,134.99,140,BD,LM 60-64,Raw,,,57.5,,117.5,,175
