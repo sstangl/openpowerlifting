@@ -1,0 +1,12 @@
+[package]
+name = "coefficients"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+description = """
+Calculations for powerlifting point coefficients.
+"""
+license = "AGPLv3+"
+edition = "2018"
+
+[dependencies]
+opltypes = { version = "0.1", path = "../opltypes/" }

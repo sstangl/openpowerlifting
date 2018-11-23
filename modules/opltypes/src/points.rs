@@ -25,6 +25,26 @@ pub enum PointsSystem {
     Glossbrenner,
 }
 
+impl From<f32> for Points {
+    fn from(f: f32) -> Points {
+        if f.is_finite() {
+            Points((f * 100.0).round() as i32)
+        } else {
+            Points(0)
+        }
+    }
+}
+
+impl From<f64> for Points {
+    fn from(f: f64) -> Points {
+        if f.is_finite() {
+            Points((f * 100.0).round() as i32)
+        } else {
+            Points(0)
+        }
+    }
+}
+
 impl Points {
     #[inline]
     pub fn from_i32(i: i32) -> Points {
@@ -66,13 +86,7 @@ impl FromStr for Points {
         if s.is_empty() {
             Ok(Points(0))
         } else {
-            let f = s.parse::<f32>()?;
-
-            if f.is_finite() {
-                Ok(Points((f * 100.0).round() as i32))
-            } else {
-                Ok(Points(0))
-            }
+            Ok(Points::from(s.parse::<f32>()?))
         }
     }
 }

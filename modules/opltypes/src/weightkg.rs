@@ -39,6 +39,18 @@ impl Serialize for WeightAny {
     }
 }
 
+impl From<WeightKg> for f32 {
+    fn from(w: WeightKg) -> f32 {
+        (w.0 as f32) / 100.0
+    }
+}
+
+impl From<WeightKg> for f64 {
+    fn from(w: WeightKg) -> f64 {
+        (w.0 as f64) / 100.0
+    }
+}
+
 impl WeightKg {
     #[inline]
     pub fn max_value() -> WeightKg {
