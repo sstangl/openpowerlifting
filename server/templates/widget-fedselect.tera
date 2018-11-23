@@ -232,6 +232,9 @@
 <optgroup label="{{strings.country.singapore}}">
   <option value="spa" {% if selection.federation == "SPA" %}selected{% endif %}>SPA - Singapore Powerlifting Alliance [GPA]</option>
 </optgroup>
+<optgroup label="{{strings.country.slovakia}}">
+  <option value="sast" {% if selection.federation == "SAST" %}selected{% endif %}>SAST - Slovenská asociásia silového trojboja [GPC]</option>
+</optgroup>
 <optgroup label="{{strings.country.slovenia}}">
   <option value="plzs" {% if selection.federation == "PLZS" %}selected{% endif %}>PLZS - Powerlifting zveza Slovenije [IPF]</option>
 </optgroup>

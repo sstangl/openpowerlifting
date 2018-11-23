@@ -517,6 +517,10 @@ pub enum Federation {
     #[strum(to_string = "RUPC", serialize = "rupc")]
     RUPC,
 
+    /// Slovenská asociásia silového trojboja, Slovakian GPC Affiliate.
+    #[strum(to_string = "SAST", serialize = "sast")]
+    SAST,
+
     /// Scottish Powerlifting, IPF.
     #[strum(to_string = "ScottishPL", serialize = "scottishpl")]
     ScottishPL,
@@ -837,6 +841,7 @@ impl Federation {
             Federation::RPS => false,
             Federation::RPU => false,
             Federation::RUPC => false,
+            Federation::SAST => false,
             Federation::ScottishPL => true,
             Federation::SCI => false,
             Federation::SCT => false,
@@ -1008,6 +1013,7 @@ impl Federation {
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
+            Federation::SAST => Some(Country::Slovakia),
             Federation::ScottishPL => Some(Country::Scotland),
             Federation::SCI => Some(Country::USA),
             Federation::SCT => Some(Country::Russia),
@@ -1179,6 +1185,7 @@ impl Federation {
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
+            Federation::SAST => PointsSystem::Glossbrenner,
             Federation::ScottishPL => PointsSystem::Wilks,
             Federation::SCI => PointsSystem::Wilks,
             Federation::SCT => PointsSystem::Wilks,
