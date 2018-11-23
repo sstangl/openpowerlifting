@@ -30,6 +30,7 @@ pub enum Country {
     #[serde(rename = "British Virgin Islands")]
     #[strum(to_string = "British Virgin Islands")]
     BritishVirginIslands,
+    Brunei,
     Bulgaria,
     #[serde(rename = "Burkina Faso")]
     #[strum(to_string = "Burkina Faso")]
@@ -121,6 +122,7 @@ pub enum Country {
     #[strum(to_string = "Marshall Islands")]
     MarshallIslands,
     Mauritania,
+    Mauritius,
     Mexico,
     Moldova,
     Mongolia,
