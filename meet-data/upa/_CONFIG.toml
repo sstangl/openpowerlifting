@@ -129,11 +129,69 @@
     mm9ad = {name="MM9-AD", min=80, max=84, sex="M", equipment=["Single-ply","Multi-ply"]}
     fm9ad = {name="FM9-AD", min=80, max=84, sex="F", equipment=["Single-ply","Multi-ply"]}
 
-    # Raw Elite divisions disallow wraps.
+    # Raw Elite divisions disallow wraps. Untested.
+    mt1re = {name="MT1RE", min=13, max=15, sex="M", equipment="Raw"}
+    ft1re = {name="FT1RE", min=13, max=15, sex="F", equipment="Raw"}
+    mt2re = {name="MT2RE", min=16, max=17, sex="M", equipment="Raw"}
+    ft2re = {name="FT2RE", min=16, max=17, sex="F", equipment="Raw"}
+    mt3re = {name="MT3RE", min=18, max=19, sex="M", equipment="Raw"}
+    ft3re = {name="FT3RE", min=18, max=19, sex="F", equipment="Raw"}
+    mjre = {name="MJRE", min=20, max=23, sex="M", equipment="Raw"}
+    fjre = {name="FJRE", min=20, max=23, sex="F", equipment="Raw"}
     more = {name="MORE", min=0, max=999, sex="M", equipment="Raw"}
     fore = {name="FORE", min=0, max=999, sex="F", equipment="Raw"}
+    msmre = {name="MSRE", min=33, max=39, sex="M", equipment="Raw"}
+    fsmre = {name="FSRE", min=33, max=39, sex="F", equipment="Raw"}
+    mm1re = {name="MM1RE", min=40, max=44, sex="M", equipment="Raw"}
+    fm1re = {name="FM1RE", min=40, max=44, sex="F", equipment="Raw"}
+    mm2re = {name="MM2RE", min=45, max=49, sex="M", equipment="Raw"}
+    fm2re = {name="FM2RE", min=45, max=49, sex="F", equipment="Raw"}
+    mm3re = {name="MM3RE", min=50, max=54, sex="M", equipment="Raw"}
+    fm3re = {name="FM3RE", min=50, max=54, sex="F", equipment="Raw"}
+    mm4re = {name="MM4RE", min=55, max=59, sex="M", equipment="Raw"}
+    fm4re = {name="FM4RE", min=55, max=59, sex="F", equipment="Raw"}
+    mm5re = {name="MM5RE", min=60, max=64, sex="M", equipment="Raw"}
+    fm5re = {name="FM5RE", min=60, max=64, sex="F", equipment="Raw"}
+    mm6re = {name="MM6RE", min=65, max=69, sex="M", equipment="Raw"}
+    fm6re = {name="FM6RE", min=65, max=69, sex="F", equipment="Raw"}
+    mm7re = {name="MM7RE", min=70, max=74, sex="M", equipment="Raw"}
+    fm7re = {name="FM7RE", min=70, max=74, sex="F", equipment="Raw"}
+    mm8re = {name="MM8RE", min=75, max=79, sex="M", equipment="Raw"}
+    fm8re = {name="FM8RE", min=75, max=79, sex="F", equipment="Raw"}
+    mm9re = {name="MM9RE", min=80, max=84, sex="M", equipment="Raw"}
+    fm9re = {name="FM9RE", min=80, max=84, sex="F", equipment="Raw"}
+
+    # Raw Elite divisions disallow wraps. Tested.
+    mt1read = {name="MT1RE-AD", min=13, max=15, sex="M", equipment="Raw"}
+    ft1read = {name="FT1RE-AD", min=13, max=15, sex="F", equipment="Raw"}
+    mt2read = {name="MT2RE-AD", min=16, max=17, sex="M", equipment="Raw"}
+    ft2read = {name="FT2RE-AD", min=16, max=17, sex="F", equipment="Raw"}
+    mt3read = {name="MT3RE-AD", min=18, max=19, sex="M", equipment="Raw"}
+    ft3read = {name="FT3RE-AD", min=18, max=19, sex="F", equipment="Raw"}
+    mjread = {name="MJRE-AD", min=20, max=23, sex="M", equipment="Raw"}
+    fjread = {name="FJRE-AD", min=20, max=23, sex="F", equipment="Raw"}
     moread = {name="MORE-AD", min=0, max=999, sex="M", equipment="Raw"}
     foread = {name="FORE-AD", min=0, max=999, sex="F", equipment="Raw"}
+    msmread = {name="MSRE-AD", min=33, max=39, sex="M", equipment="Raw"}
+    fsmread = {name="FSRE-AD", min=33, max=39, sex="F", equipment="Raw"}
+    mm1read = {name="MM1RE-AD", min=40, max=44, sex="M", equipment="Raw"}
+    fm1read = {name="FM1RE-AD", min=40, max=44, sex="F", equipment="Raw"}
+    mm2read = {name="MM2RE-AD", min=45, max=49, sex="M", equipment="Raw"}
+    fm2read = {name="FM2RE-AD", min=45, max=49, sex="F", equipment="Raw"}
+    mm3read = {name="MM3RE-AD", min=50, max=54, sex="M", equipment="Raw"}
+    fm3read = {name="FM3RE-AD", min=50, max=54, sex="F", equipment="Raw"}
+    mm4read = {name="MM4RE-AD", min=55, max=59, sex="M", equipment="Raw"}
+    fm4read = {name="FM4RE-AD", min=55, max=59, sex="F", equipment="Raw"}
+    mm5read = {name="MM5RE-AD", min=60, max=64, sex="M", equipment="Raw"}
+    fm5read = {name="FM5RE-AD", min=60, max=64, sex="F", equipment="Raw"}
+    mm6read = {name="MM6RE-AD", min=65, max=69, sex="M", equipment="Raw"}
+    fm6read = {name="FM6RE-AD", min=65, max=69, sex="F", equipment="Raw"}
+    mm7read = {name="MM7RE-AD", min=70, max=74, sex="M", equipment="Raw"}
+    fm7read = {name="FM7RE-AD", min=70, max=74, sex="F", equipment="Raw"}
+    mm8read = {name="MM8RE-AD", min=75, max=79, sex="M", equipment="Raw"}
+    fm8read = {name="FM8RE-AD", min=75, max=79, sex="F", equipment="Raw"}
+    mm9read = {name="MM9RE-AD", min=80, max=84, sex="M", equipment="Raw"}
+    fm9read = {name="FM9RE-AD", min=80, max=84, sex="F", equipment="Raw"}
 
     # Police and Fire divisions.
     mpfr = {name="MPFR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
@@ -157,3 +215,4 @@
 
 [exemptions]
     1716 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
+    1824 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
