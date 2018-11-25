@@ -24,6 +24,6 @@
     <option value="70-74" {% if selection.ageclass == "Masters7074" %}selected{% endif %}>Masters 70-74</option>
     <option value="75-79" {% if selection.ageclass == "Masters7579" %}selected{% endif %}>Masters 75-79</option>
   </optgroup>
-  <option value="over80" {% if selection.ageclass == "MastersOver80" %}selected{% endif %}>Masters 80+</option>
   -->
+  <option value="over80" {% if selection.ageclass == "MastersOver80" %}selected{% endif %}>Masters 80+</option>
 </select>
