@@ -1,17 +1,17 @@
 Name,Age,Sex,WeightClassKg,Place,Division,Equipment,Event,Squat1Kg,Squat2Kg,Squat3Kg,Bench1Kg,Bench2Kg,Bench3Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,TotalKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg
-Michaela Tynes,20,F,67.5,1,Junior 20-23,Raw,SBD,100,107.5,112.5,62.5,70,75,130,140,145,332.5,112.5,75,145
-Abigail Clugston,21,F,67.5,2,Junior 20-23,Raw,SBD,82.5,95,102.5,40,,,92.5,125,,267.5,102.5,40,125
-Yasmeen Lopez,23,F,82.5,1,Junior 20-23,Raw,SBD,120,125,132.5,47.5,52.5,57.5,125,135,142.5,332.5,132.5,57.5,142.5
-Aishling Murray,42,F,75,1,Master 40-44,Raw,D,,,,,,,137.5,142.5,150,150,,,150
-Russelle McDermott,41,F,60,1,Master 40-44,Raw,SBD,52.5,57.5,62.5,30,35,,102.5,107.5,,205,62.5,35,107.5
-Holly Morello,40,F,67.5,1,Master 40-44,Single-ply,SBD,82.5,87.5,92.5,67.5,70,72.5,130,-137.5,137.5,302.5,92.5,72.5,137.5
-Tiffany Keeling,44,F,67.5,1,Master 40-44,Raw,SBD,47.5,52.5,57.5,32.5,37.5,42.5,,115,120,220,57.5,42.5,120
-Shannah Ahmed,46,F,75,1,Master 45-49,Raw,SBD,82.5,100,,52.5,62.5,65,92.5,117.5,120,285,100,65,120
-Evelyn Porter,45,F,75,2,Master 45-49,Raw,SBD,75,85,,50,55,,80,90,97.5,237.5,85,55,97.5
-Miriam Bucks,57,F,52,1,Master 55-59,Single-ply,D,,,,,,,107.5,,,107.5,,,107.5
-Jeanne Watts,50,F,75,1,Master 50-54,Raw,SBD,80,,95,62.5,72.5,,135,145,152.5,320,95,72.5,152.5
-Angie Buschman,59,F,67.5,1,Master 55-59,Single-ply,SBD,-50,50,55,42.5,45,,115,122.5,130,230,55,45,130
-Charlene Muscio,68,F,75,1,Master 65-69,Raw,D,,,,,,,105,110,,110,,,110
+Michaela Tynes,20,F,67.5,1,Juniors 20-23,Raw,SBD,100,107.5,112.5,62.5,70,75,130,140,145,332.5,112.5,75,145
+Abigail Clugston,21,F,67.5,2,Juniors 20-23,Raw,SBD,82.5,95,102.5,40,,,92.5,125,,267.5,102.5,40,125
+Yasmeen Lopez,23,F,82.5,1,Juniors 20-23,Raw,SBD,120,125,132.5,47.5,52.5,57.5,125,135,142.5,332.5,132.5,57.5,142.5
+Aishling Murray,42,F,75,1,Masters 40-44,Raw,D,,,,,,,137.5,142.5,150,150,,,150
+Russelle McDermott,41,F,60,1,Masters 40-44,Raw,SBD,52.5,57.5,62.5,30,35,,102.5,107.5,,205,62.5,35,107.5
+Holly Morello,40,F,67.5,1,Masters 40-44,Single-ply,SBD,82.5,87.5,92.5,67.5,70,72.5,130,-137.5,137.5,302.5,92.5,72.5,137.5
+Tiffany Keeling,44,F,67.5,1,Masters 40-44,Raw,SBD,47.5,52.5,57.5,32.5,37.5,42.5,,115,120,220,57.5,42.5,120
+Shannah Ahmed,46,F,75,1,Masters 45-49,Raw,SBD,82.5,100,,52.5,62.5,65,92.5,117.5,120,285,100,65,120
+Evelyn Porter,45,F,75,2,Masters 45-49,Raw,SBD,75,85,,50,55,,80,90,97.5,237.5,85,55,97.5
+Miriam Bucks,57,F,52,1,Masters 55-59,Single-ply,D,,,,,,,107.5,,,107.5,,,107.5
+Jeanne Watts,50,F,75,1,Masters 50-54,Raw,SBD,80,,95,62.5,72.5,,135,145,152.5,320,95,72.5,152.5
+Angie Buschman,59,F,67.5,1,Masters 55-59,Single-ply,SBD,-50,50,55,42.5,45,,115,122.5,130,230,55,45,130
+Charlene Muscio,68,F,75,1,Masters 65-69,Raw,D,,,,,,,105,110,,110,,,110
 Maria Nunez,27,F,82.5,1,Novice,Raw,D,,,,,,,77.5,87.5,100,100,,,100
 Annie Zaks,33,F,52,1,Novice,Raw,SBD,75,80,85,37.5,40,45,107.5,112.5,117.5,247.5,85,45,117.5
 Debi Stoliar,38,F,60,1,Novice,Raw,SBD,97.5,100,105,52.5,55,57.5,110,115,122.5,285,105,57.5,122.5
@@ -38,15 +38,15 @@ Georgia Andrews,29,F,82.5,1,Open,Raw,SBD,97.5,107.5,,42.5,47.5,52.5,110,120,,280
 Christal Bundang,30,F,90,1,Open,Raw,SBD,90,95,100,50,52.5,55,105,115,125,280,100,55,125
 Ashleigh Campbell,30,F,100,1,Open,Raw,SBD,110,115,122.5,57.5,,60,130,140,145,327.5,122.5,60,145
 Julia Gorzei,28,F,100,2,Open,Raw,SBD,92.5,115,120,65,,,102.5,115,122.5,307.5,120,65,122.5
-Christina Campbell,39,F,82.5,1,Submaster 35-39,Raw,BD,,,,37.5,45,,97.5,105,110,155,,45,110
-Alyssa Gonzales,35,F,67.5,1,Submaster 35-39,Raw,SBD,97.5,102.5,107.5,52.5,57.5,,125,132.5,137.5,302.5,107.5,57.5,137.5
+Christina Campbell,39,F,82.5,1,Submasters 35-39,Raw,BD,,,,37.5,45,,97.5,105,110,155,,45,110
+Alyssa Gonzales,35,F,67.5,1,Submasters 35-39,Raw,SBD,97.5,102.5,107.5,52.5,57.5,,125,132.5,137.5,302.5,107.5,57.5,137.5
 Justina Marcias,13,F,67.5,1,Youth 12-13,Raw,SBD,47.5,57.5,62.5,25,32.5,35,52.5,62.5,65,162.5,62.5,35,65
-Luis Virrueta,20,M,90,1,Junior 20-23,Raw,SBD,125,137.5,145,85,,,142.5,,,372.5,145,85,142.5
-Darnell Simpkins,40,M,140,1,Master 40-44,Raw,BD,,,,,192.5,197.5,230,,250,447.5,,197.5,250
-Bob Levering,57,M,90,1,Master 55-59,Raw,BD,,,,145,,157.5,155,165,172.5,330,,157.5,172.5
-Robert Ciano,55,M,125,1,Master 55-59,Raw,BD,,,,155,162.5,,212.5,230,250,412.5,,162.5,250
-Ed Burgle,76,M,90,1,Master 75-79,Raw,BD,,,,,57.5,,102.5,110,115,172.5,,57.5,115
-Paul McCushon,83,M,100,1,Master 80+,Raw,BD,,,,,47.5,,,92.5,,140,,47.5,92.5
+Luis Virrueta,20,M,90,1,Juniors 20-23,Raw,SBD,125,137.5,145,85,,,142.5,,,372.5,145,85,142.5
+Darnell Simpkins,40,M,140,1,Masters 40-44,Raw,BD,,,,,192.5,197.5,230,,250,447.5,,197.5,250
+Bob Levering,57,M,90,1,Masters 55-59,Raw,BD,,,,145,,157.5,155,165,172.5,330,,157.5,172.5
+Robert Ciano,55,M,125,1,Masters 55-59,Raw,BD,,,,155,162.5,,212.5,230,250,412.5,,162.5,250
+Ed Burgle,76,M,90,1,Masters 75-79,Raw,BD,,,,,57.5,,102.5,110,115,172.5,,57.5,115
+Paul McCushon,83,M,100,1,Masters 80+,Raw,BD,,,,,47.5,,,92.5,,140,,47.5,92.5
 Kevin Woo,26,M,75,1,Novice,Raw,SBD,145,150,,110,115,120,202.5,215,227.5,497.5,150,120,227.5
 Don Doblados,29,M,82.5,1,Novice,Raw,SBD,115,120,125,85,90,,155,165,175,390,125,90,175
 Gabriel Amparano,24,M,90,1,Novice,Raw,SBD,145,155,172.5,92.5,97.5,,190,200,205,475,172.5,97.5,205
@@ -58,8 +58,8 @@ Nathan Patterson,31,M,90,1,Open,Raw,SBD,175,,182.5,175,182.5,187.5,237.5,247.5,,
 Zander Jepsen,30,M,90,2,Open,Raw,SBD,162,170,177.5,100,105,107.5,195,205,,490,177.5,107.5,205
 David Linares,27,M,140,1,Open,Raw,SBD,245,262.5,,152.5,165,,240,265,272.5,700,262.5,165,272.5
 Roy Doty,25,M,140,2,Open,Raw,SBD,200,217.5,230,137.5,,147.5,227.5,245,,622.5,230,147.5,245
-Dan Osburn,35,M,100,1,Submaster 35-39,Raw,BD,,,,,,157.5,202.5,215,225,382.5,,157.5,225
-Dan Osburn,35,M,100,1,Submaster 35-39,Raw,SBD,157.5,,,,,157.5,202.5,215,225,540,157.5,157.5,225
+Dan Osburn,35,M,100,1,Submasters 35-39,Raw,BD,,,,,,157.5,202.5,215,225,382.5,,157.5,225
+Dan Osburn,35,M,100,1,Submasters 35-39,Raw,SBD,157.5,,,,,157.5,202.5,215,225,540,157.5,157.5,225
 Jonathan Roux,15,M,75,1,Teen 14-15,Raw,SBD,135,142.5,145,70,75,80,152.5,157.5,160,385,145,80,160
 Lior Dubrowsky,16,M,100,1,Teen 16-17,Raw,B,,,,82.5,92.5,95,,,,95,,95,
 Brandon Er,16,M,67.5,1,Teen 16-17,Raw,BD,,,,92.5,97.5,,137.5,147.5,,245,,97.5,147.5

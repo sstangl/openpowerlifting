@@ -1,7 +1,7 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,F,Steph Puddicome,NL,52.6,57,Open,162.5,95.0,170.0,427.5,Single-ply,1
-SBD,M,Devin Benoit,NL,87.4,93,Junior,275.0,155.0,260.0,690.0,Single-ply,1
-SBD,F,Taylor Best,NL,75.7,84,Sub-Junior,90.0,50.0,138.5,278.5,Raw,1
+SBD,M,Devin Benoit,NL,87.4,93,Juniors,275.0,155.0,260.0,690.0,Single-ply,1
+SBD,F,Taylor Best,NL,75.7,84,Sub-Juniors,90.0,50.0,138.5,278.5,Raw,1
 SBD,M,Thomas Gear,NL,91.1,93,Open,200.0,167.5,275.0,642.5,Raw,1
 SBD,M,Sam Burt,NL,91.5,93,Open,165.0,137.5,207.5,510.0,Raw,2
 SBD,F,Tonya Power,NL,87.6,84+,Open,45.0,37.5,67.5,150.0,Raw,2
@@ -23,24 +23,24 @@ SBD,F,Kayla Bixby,NL,55.4,57,Open,82.5,40.0,97.5,220.0,Raw,3
 SBD,F,Danielle Hussey,NL,55.5,57,Open,97.5,47.5,102.5,247.5,Raw,1
 SBD,M,Adam Nolan,NL,114.1,120,Open,227.5,150.0,222.5,600.0,Raw,1
 SBD,M,Kyle Wamboldt,NL,100.9,105,Open,235.0,155.0,270.0,660.0,Raw,1
-SBD,F,Delores Hynes,NL,79.9,84,Master 2,102.5,42.5,117.5,262.5,Raw,1
-SBD,M,Gerald Chafe,NL,78.0,83,Master 2,135.0,85.0,160.0,380.0,Raw,1
-SBD,F,Bev Sharpe,NL,72.0,72,Master 2,110.0,47.5,115.0,272.5,Raw,1
-SBD,M,Jeff Butt,NL,92.8,93,Master 1,243.0,160.0,255.0,658.0,Raw,1
-SBD,F,Cathy Quinlan,NL,88.6,84+,Master 1,115.0,40.0,152.5,307.5,Raw,1
-SBD,F,Ellen St Croix,NL,84.0,84,Master 1,110.0,42.5,115.0,267.5,Raw,1
-SBD,M,Tom Kean,NL,81.8,83,Master 1,227.5,160.5,253.0,641.0,Raw,1
-SBD,M,Ronald Corcoran,NL,82.3,83,Master 1,152.5,100.0,197.5,450.0,Raw,3
-SBD,M,Rob Dyke,NL,80.8,83,Master 1,170.0,150.0,212.5,532.5,Raw,2
-SBD,F,Babette Meister,NL,63.0,63,Master 1,102.5,50.0,130.0,282.5,Raw,1
-SBD,F,Paula Roberts,NL,55.3,57,Master 1,110.0,62.5,137.5,310.0,Raw,1
-SBD,F,Nancy Smith,NL,49.6,52,Master 1,72.5,35.0,110.0,217.5,Raw,1
-SBD,M,Brandon Goodwin,NL,91.8,93,Junior,205.0,137.5,235.0,577.5,Raw,1
-SBD,F,Erica King,NL,90.8,84+,Junior,130.0,55.0,155.0,340.0,Raw,1
-SBD,M,Jordan Stuart,NL,82.1,83,Junior,195.0,117.5,250.0,562.5,Raw,1
-SBD,M,Evan Foote,NL,76.6,83,Junior,125.0,105.0,197.5,427.5,Raw,2
-SBD,M,Nicholas Wells,NL,64.5,66,Junior,130.0,77.5,182.5,390.0,Raw,1
-SBD,F,Taylor Piercey,NL,62.6,63,Junior,90.0,50.0,95.0,235.0,Raw,1
-SBD,F,Kendra Fleming,NL,62.0,63,Junior,85.0,32.5,110.0,227.5,Raw,2
-SBD,F,Delaina Roul,NL,46.9,47,Junior,75.0,30.0,97.5,202.5,Raw,1
-SBD,M,Sam Byrne,NL,99.6,105,Junior,240.0,100.0,220.0,560.0,Raw,1
+SBD,F,Delores Hynes,NL,79.9,84,Masters 2,102.5,42.5,117.5,262.5,Raw,1
+SBD,M,Gerald Chafe,NL,78.0,83,Masters 2,135.0,85.0,160.0,380.0,Raw,1
+SBD,F,Bev Sharpe,NL,72.0,72,Masters 2,110.0,47.5,115.0,272.5,Raw,1
+SBD,M,Jeff Butt,NL,92.8,93,Masters 1,243.0,160.0,255.0,658.0,Raw,1
+SBD,F,Cathy Quinlan,NL,88.6,84+,Masters 1,115.0,40.0,152.5,307.5,Raw,1
+SBD,F,Ellen St Croix,NL,84.0,84,Masters 1,110.0,42.5,115.0,267.5,Raw,1
+SBD,M,Tom Kean,NL,81.8,83,Masters 1,227.5,160.5,253.0,641.0,Raw,1
+SBD,M,Ronald Corcoran,NL,82.3,83,Masters 1,152.5,100.0,197.5,450.0,Raw,3
+SBD,M,Rob Dyke,NL,80.8,83,Masters 1,170.0,150.0,212.5,532.5,Raw,2
+SBD,F,Babette Meister,NL,63.0,63,Masters 1,102.5,50.0,130.0,282.5,Raw,1
+SBD,F,Paula Roberts,NL,55.3,57,Masters 1,110.0,62.5,137.5,310.0,Raw,1
+SBD,F,Nancy Smith,NL,49.6,52,Masters 1,72.5,35.0,110.0,217.5,Raw,1
+SBD,M,Brandon Goodwin,NL,91.8,93,Juniors,205.0,137.5,235.0,577.5,Raw,1
+SBD,F,Erica King,NL,90.8,84+,Juniors,130.0,55.0,155.0,340.0,Raw,1
+SBD,M,Jordan Stuart,NL,82.1,83,Juniors,195.0,117.5,250.0,562.5,Raw,1
+SBD,M,Evan Foote,NL,76.6,83,Juniors,125.0,105.0,197.5,427.5,Raw,2
+SBD,M,Nicholas Wells,NL,64.5,66,Juniors,130.0,77.5,182.5,390.0,Raw,1
+SBD,F,Taylor Piercey,NL,62.6,63,Juniors,90.0,50.0,95.0,235.0,Raw,1
+SBD,F,Kendra Fleming,NL,62.0,63,Juniors,85.0,32.5,110.0,227.5,Raw,2
+SBD,F,Delaina Roul,NL,46.9,47,Juniors,75.0,30.0,97.5,202.5,Raw,1
+SBD,M,Sam Byrne,NL,99.6,105,Juniors,240.0,100.0,220.0,560.0,Raw,1

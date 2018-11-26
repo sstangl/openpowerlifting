@@ -1,9 +1,9 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
 1,Brandy Messer,WV,82.5,81.2,38,138,77.5,167.5,383,F,Open,Raw,SBD
-1,Brandy Messer,WV,82.5,81.2,38,138,77.5,167.5,383,F,Submaster 35-39,Raw,SBD
-1,Zachary Standifur,WV,90,87.8,18,210.5,140,236,586.5,M,Junior 18-19,Raw,SBD
-1,Mihir Kamani,VA,100,97.4,23,212.5,142.5,275,630,M,Junior 20-23,Raw,SBD
-1,Nathan Moss,WV,125,116.2,17,172.5,137.5,195,505,M,Junior 16-17,Raw,SBD
+1,Brandy Messer,WV,82.5,81.2,38,138,77.5,167.5,383,F,Submasters 35-39,Raw,SBD
+1,Zachary Standifur,WV,90,87.8,18,210.5,140,236,586.5,M,Juniors 18-19,Raw,SBD
+1,Mihir Kamani,VA,100,97.4,23,212.5,142.5,275,630,M,Juniors 20-23,Raw,SBD
+1,Nathan Moss,WV,125,116.2,17,172.5,137.5,195,505,M,Juniors 16-17,Raw,SBD
 1,Jackson Gillespie,WV,82.5,78.6,37,190,150,220,560,M,Open,Raw,SBD
 1,Zachary Standifur,WV,90,87.8,18,210.5,140,236,586.5,M,Open,Raw,SBD
 2,Nathaniel Holley,WV,90,87.7,28,85,142.5,250,477.5,M,Open,Raw,SBD
@@ -11,11 +11,11 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Jeremy Rollman,WV,125,121.2,41,217.5,177.5,200,595,M,Open,Raw,SBD
 2,Nathan Moss,WV,125,116.2,17,172.5,137.5,195,505,M,Open,Raw,SBD
 1,James Belcher,WV,140,131.8,24,182.5,165,247.5,595,M,Open,Raw,SBD
-1,Jackson Gillespie,WV,82.5,78.6,37,190,150,220,560,M,Submaster 35-39,Raw,SBD
-1,Jeremy Rollman,WV,125,121.2,41,217.5,177.5,200,595,M,Master 40-44,Raw,SBD
-1,Jesse Goff,WV,100,98.7,21,197.5,122.5,210,530,M,Junior 20-23,Wraps,SBD
-1,Connor Haverfield,OH,110,106.8,23,190,170,287.5,647.5,M,Junior 20-23,Wraps,SBD
-1,Antonio Brown,WV,125,114.2,19,255,160,272.5,687.5,M,Junior 18-19,Wraps,SBD
+1,Jackson Gillespie,WV,82.5,78.6,37,190,150,220,560,M,Submasters 35-39,Raw,SBD
+1,Jeremy Rollman,WV,125,121.2,41,217.5,177.5,200,595,M,Masters 40-44,Raw,SBD
+1,Jesse Goff,WV,100,98.7,21,197.5,122.5,210,530,M,Juniors 20-23,Wraps,SBD
+1,Connor Haverfield,OH,110,106.8,23,190,170,287.5,647.5,M,Juniors 20-23,Wraps,SBD
+1,Antonio Brown,WV,125,114.2,19,255,160,272.5,687.5,M,Juniors 18-19,Wraps,SBD
 1,Jesse Goff,WV,100,98.7,21,197.5,122.5,210,530,M,Open,Wraps,SBD
 1,Connor Haverfield,OH,110,106.8,23,190,170,287.5,647.5,M,Open,Wraps,SBD
 1,Jonathan Jones,VA,125,110.9,30,245,192.5,290,727.5,M,Open,Wraps,SBD
@@ -25,20 +25,20 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Ernest Samples,WV,90,87.3,69,40,142.5,92.5,275,M,Open,Single-ply,SBD
 DQ,Chris Jividen,WV,110,105.8,29,265,,,,M,Open,Single-ply,SBD
 1,Jonathan Clark #3,WV,125,119,52,250,205,285,740,M,Open,Single-ply,SBD
-1,Danny Akers,VA,82.5,81.2,50,180,145,232.5,557.5,M,Master 50-54,Single-ply,SBD
-1,Ernest Samples,WV,90,87.3,69,40,142.5,92.5,275,M,Master 65-69,Single-ply,SBD
-1,Jonathan Clark #3,WV,125,119,52,250,205,285,740,M,Master 50-54,Single-ply,SBD
+1,Danny Akers,VA,82.5,81.2,50,180,145,232.5,557.5,M,Masters 50-54,Single-ply,SBD
+1,Ernest Samples,WV,90,87.3,69,40,142.5,92.5,275,M,Masters 65-69,Single-ply,SBD
+1,Jonathan Clark #3,WV,125,119,52,250,205,285,740,M,Masters 50-54,Single-ply,SBD
 1,Paul Sutphin,WV,100,96.9,62,215,120,215,550,M,Open,Multi-ply,SBD
-1,Paul Sutphin,WV,100,96.9,62,215,120,215,550,M,Master 60-64,Multi-ply,SBD
-1,Aaron Tucker,WV,56,54.8,15,,78,,78,M,Junior 13-15,Raw,B
+1,Paul Sutphin,WV,100,96.9,62,215,120,215,550,M,Masters 60-64,Multi-ply,SBD
+1,Aaron Tucker,WV,56,54.8,15,,78,,78,M,Juniors 13-15,Raw,B
 1,Aaron Tucker,WV,56,54.8,15,,78,,78,M,Open,Raw,B
 1,Jackson Gillespie,WV,82.5,78.6,37,,150,,150,M,Open,Raw,B
 1,Chris Proffitt,WV,110,106.2,25,,235,,235,M,Open,Raw,B
 2,Wesley Dorcas,WV,110,108.6,34,,207.5,,207.5,M,Open,Raw,B
 1,Mark Critzer,VA,125,118.7,52,,152.5,,152.5,M,Open,Raw,B
-1,Jackson Gillespie,WV,82.5,78.6,37,,150,,150,M,Submaster 35-39,Raw,B
-1,Mark Critzer,VA,125,118.7,52,,152.5,,152.5,M,Master 50-54,Raw,B
+1,Jackson Gillespie,WV,82.5,78.6,37,,150,,150,M,Submasters 35-39,Raw,B
+1,Mark Critzer,VA,125,118.7,52,,152.5,,152.5,M,Masters 50-54,Raw,B
 1,Dustin Russell,OH,110,106.9,35,,,255,255,M,Open,Multi-ply,D
-1,Dustin Russell,OH,110,106.9,35,,,255,255,M,Submaster 35-39,Multi-ply,D
+1,Dustin Russell,OH,110,106.9,35,,,255,255,M,Submasters 35-39,Multi-ply,D
 1,Jesse Bailes,WV,110,109.7,53,,160,182.5,342.5,M,Open,Raw,BD
-1,Jesse Bailes,WV,110,109.7,53,,160,182.5,342.5,M,Master 50-54,Raw,BD
+1,Jesse Bailes,WV,110,109.7,53,,160,182.5,342.5,M,Masters 50-54,Raw,BD

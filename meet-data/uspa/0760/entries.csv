@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Sylvie Hunter,LA,60,57.9,14,50,30,60,140,F,Junior 13-15,Raw,SBD
-1,Christa Kleem,MS,67.5,62.7,23,77.5,52.5,110,240,F,Junior 20-23,Raw,SBD
+1,Sylvie Hunter,LA,60,57.9,14,50,30,60,140,F,Juniors 13-15,Raw,SBD
+1,Christa Kleem,MS,67.5,62.7,23,77.5,52.5,110,240,F,Juniors 20-23,Raw,SBD
 1,Rebecca Koenig,FL,60,59.8,30,112.5,67.5,127.5,307.5,F,Open,Raw,SBD
 2,Jessica Bekowitz,MS,60,59.6,26,105,67.5,125,297.5,F,Open,Raw,SBD
 1,Aysha Elayan Kirk,LA,67.5,66.4,24,155,82.5,200,437.5,F,Open,Raw,SBD
@@ -10,17 +10,17 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Lian Hoffman,LA,75,75,26,157.5,90,197.5,445,F,Open,Raw,SBD
 2,Sloane Surber,MS,75,72.7,27,90,55,122.5,267.5,F,Open,Raw,SBD
 1,Susan Jones,LA,90+,108.2,34,120,72.5,162.5,355,F,Open,Raw,SBD
-1,Leigh Waldron,LA,67.5,66.3,37,90,57.5,115,262.5,F,Submaster 33-39,Raw,SBD
-1,Sandy Wentzel,FL,90,89.3,38,142.5,70,167.5,380,F,Submaster 33-39,Raw,SBD
-1,Kim Wilson,MS,60,59.4,48,110,70,165,345,F,Master 45-49,Raw,SBD
-1,Leah Michael,LA,67.5,67.1,62,112.5,92.5,145,350,F,Master 60-64,Raw,SBD
-1,Vicky Fox,MS,82.5,77.3,49,75,50,125,250,F,Master 45-49,Raw,SBD
-1,Avi Eisenstadt,FL,75,74.3,23,195,130,225,550,M,Junior 20-23,Raw,SBD
-1,Zarrick Jenkins,AL,90,88.5,20,210,150,212.5,572.5,M,Junior 20-23,Raw,SBD
-2,Jacob Dempsey,AL,90,89,21,185,147.5,197.5,530,M,Junior 20-23,Raw,SBD
-1,Patrick McWilliams,AL,100,95.6,21,187.5,107.5,192.5,487.5,M,Junior 20-23,Raw,SBD
-1,Nick Chesser,MS,125,120.2,18,227.5,160,247.5,635,M,Junior 18-19,Raw,SBD
-1,Tyler Griffis,FL,140+,178.7,21,260,215,255,730,M,Junior 20-23,Raw,SBD
+1,Leigh Waldron,LA,67.5,66.3,37,90,57.5,115,262.5,F,Submasters 33-39,Raw,SBD
+1,Sandy Wentzel,FL,90,89.3,38,142.5,70,167.5,380,F,Submasters 33-39,Raw,SBD
+1,Kim Wilson,MS,60,59.4,48,110,70,165,345,F,Masters 45-49,Raw,SBD
+1,Leah Michael,LA,67.5,67.1,62,112.5,92.5,145,350,F,Masters 60-64,Raw,SBD
+1,Vicky Fox,MS,82.5,77.3,49,75,50,125,250,F,Masters 45-49,Raw,SBD
+1,Avi Eisenstadt,FL,75,74.3,23,195,130,225,550,M,Juniors 20-23,Raw,SBD
+1,Zarrick Jenkins,AL,90,88.5,20,210,150,212.5,572.5,M,Juniors 20-23,Raw,SBD
+2,Jacob Dempsey,AL,90,89,21,185,147.5,197.5,530,M,Juniors 20-23,Raw,SBD
+1,Patrick McWilliams,AL,100,95.6,21,187.5,107.5,192.5,487.5,M,Juniors 20-23,Raw,SBD
+1,Nick Chesser,MS,125,120.2,18,227.5,160,247.5,635,M,Juniors 18-19,Raw,SBD
+1,Tyler Griffis,FL,140+,178.7,21,260,215,255,730,M,Juniors 20-23,Raw,SBD
 1,Avi Eisenstadt,FL,75,74.3,23,195,130,225,550,M,Open,Raw,SBD
 DQ,Hilmi Judeh,LA,82.5,82.45,31,162.5,115,-197.5,,M,Open,Raw,SBD
 1,Cole Barton,LA,90,86.6,27,267.5,177.5,277.5,722.5,M,Open,Raw,SBD
@@ -48,19 +48,19 @@ DQ,Bryan Anderson,MS,110,108.5,31,-175,125,185,,M,Open,Raw,SBD
 3,Shane Henley,MS,140,135.3,35,230,220,255,705,M,Open,Raw,SBD
 4,Brandon McClain,MS,140,132.3,33,227.5,152.5,272.5,652.5,M,Open,Raw,SBD
 1,Jeremiah Knight,AL,140+,146.1,31,240,182.5,320,742.5,M,Open,Raw,SBD
-1,Eric Holmbeck,MS,125,123.1,37,235,215,275,725,M,Submaster 33-39,Raw,SBD
-1,Shane Henley,MS,140,135.3,35,230,220,255,705,M,Submaster 33-39,Raw,SBD
-1,Jason Porter,MS,82.5,77.1,44,155,92.5,165,412.5,M,Master 40-44,Raw,SBD
-1,Michael Petyak,MS,100,99.4,43,220,147.5,220,587.5,M,Master 40-44,Raw,SBD
-1,Jayson Tisdale,MS,140,132.5,45,215,135,252.5,602.5,M,Master 45-49,Raw,SBD
+1,Eric Holmbeck,MS,125,123.1,37,235,215,275,725,M,Submasters 33-39,Raw,SBD
+1,Shane Henley,MS,140,135.3,35,230,220,255,705,M,Submasters 33-39,Raw,SBD
+1,Jason Porter,MS,82.5,77.1,44,155,92.5,165,412.5,M,Masters 40-44,Raw,SBD
+1,Michael Petyak,MS,100,99.4,43,220,147.5,220,587.5,M,Masters 40-44,Raw,SBD
+1,Jayson Tisdale,MS,140,132.5,45,215,135,252.5,602.5,M,Masters 45-49,Raw,SBD
 1,Tazzie Colomb,LA,82.5,81.5,50,185,102.5,197.5,485,F,Open,Wraps,SBD
-1,Tazzie Colomb,LA,82.5,81.5,50,185,102.5,197.5,485,F,Master 50-54,Wraps,SBD
-1,Annette Mitchell,FL,90,86.6,65,67.5,40,92.5,200,F,Master 65-69,Wraps,SBD
-1,Laura Moore,MS,90+,101.4,42,140,75,195,410,F,Master 40-44,Wraps,SBD
-1,Avery Vodanovich,LA,75,74.6,22,225,147.5,207.5,580,M,Junior 20-23,Wraps,SBD
-1,Josh Herzog,LA,82.5,79.8,21,242.5,157.5,247.5,647.5,M,Junior 20-23,Wraps,SBD
-DQ,Julius Bowens,MS,90,86.2,22,-227.5,147.5,235,,M,Junior 20-23,Wraps,SBD
-1,Jonathan Gray,MS,100,100,16,162.5,92.5,185,440,M,Junior 16-17,Wraps,SBD
+1,Tazzie Colomb,LA,82.5,81.5,50,185,102.5,197.5,485,F,Masters 50-54,Wraps,SBD
+1,Annette Mitchell,FL,90,86.6,65,67.5,40,92.5,200,F,Masters 65-69,Wraps,SBD
+1,Laura Moore,MS,90+,101.4,42,140,75,195,410,F,Masters 40-44,Wraps,SBD
+1,Avery Vodanovich,LA,75,74.6,22,225,147.5,207.5,580,M,Juniors 20-23,Wraps,SBD
+1,Josh Herzog,LA,82.5,79.8,21,242.5,157.5,247.5,647.5,M,Juniors 20-23,Wraps,SBD
+DQ,Julius Bowens,MS,90,86.2,22,-227.5,147.5,235,,M,Juniors 20-23,Wraps,SBD
+1,Jonathan Gray,MS,100,100,16,162.5,92.5,185,440,M,Juniors 16-17,Wraps,SBD
 1,Bill Lowrance,LA,75,75,39,215,157.5,202.5,575,M,Open,Wraps,SBD
 1,Josh Herzog,LA,82.5,79.8,21,242.5,157.5,247.5,647.5,M,Open,Wraps,SBD
 1,Andrew Lorino,LA,90,89.5,28,280,192.5,267.5,740,M,Open,Wraps,SBD
@@ -70,26 +70,26 @@ DQ,Julius Bowens,MS,90,86.2,22,-227.5,147.5,235,,M,Junior 20-23,Wraps,SBD
 1,Adam Hughes,LA,110,106.8,27,320,185,287.5,792.5,M,Open,Wraps,SBD
 2,Sean McCullars,AL,110,109.7,33,250,130,282.5,662.5,M,Open,Wraps,SBD
 1,Nicholas Donte McCoy,AL,125,118.6,32,350,212.5,277.5,840,M,Open,Wraps,SBD
-DQ,Roger Fox,MS,90,85.1,51,160,127.5,-185,,M,Master 50-54,Wraps,SBD
-1,John Hunter,LA,90,88.6,65,102.5,105,125,332.5,M,Master 65-69,Wraps,SBD
-1,Joey Lee,MS,110,101.5,44,205,125,250,580,M,Master 40-44,Wraps,SBD
-1,Patt Porter,FL,140,135.7,43,272.5,202.5,297.5,772.5,M,Master 40-44,Wraps,SBD
-1,John Micka,MS,140,133.1,46,276,75,75,426,M,Master 45-49,Wraps,SBD
-1,Jakob Trest,MS,75,69.6,18,210,130,215,555,M,Junior 18-19,Single-ply,SBD
-1,Dink Lumley,MS,110,104.3,55,190,170,192.5,552.5,M,Master 55-59,Single-ply,SBD
+DQ,Roger Fox,MS,90,85.1,51,160,127.5,-185,,M,Masters 50-54,Wraps,SBD
+1,John Hunter,LA,90,88.6,65,102.5,105,125,332.5,M,Masters 65-69,Wraps,SBD
+1,Joey Lee,MS,110,101.5,44,205,125,250,580,M,Masters 40-44,Wraps,SBD
+1,Patt Porter,FL,140,135.7,43,272.5,202.5,297.5,772.5,M,Masters 40-44,Wraps,SBD
+1,John Micka,MS,140,133.1,46,276,75,75,426,M,Masters 45-49,Wraps,SBD
+1,Jakob Trest,MS,75,69.6,18,210,130,215,555,M,Juniors 18-19,Single-ply,SBD
+1,Dink Lumley,MS,110,104.3,55,190,170,192.5,552.5,M,Masters 55-59,Single-ply,SBD
 1,Bill Lowrance,LA,75,75,39,,157.5,,157.5,M,Open,Raw,B
 1,Roman Gomez,MS,82.5,79.9,33,,122.5,,122.5,M,Open,Raw,B
 1,Garrett Griffin,LA,100,100,36,,235,,235,M,Open,Raw,B
 1,Steven Vinet,LA,125,114,30,,227.5,,227.5,M,Open,Raw,B
-1,Laura Moore,MS,90+,101.4,42,,,195,195,F,Master 40-44,Raw,D
+1,Laura Moore,MS,90+,101.4,42,,,195,195,F,Masters 40-44,Raw,D
 1,Jonathan Currey,LA,90,90,26,,,282.5,282.5,M,Open,Raw,D
 1,Ryan Kimball,LA,110,107.6,29,,,330,330,M,Open,Raw,D
 2,Jason Vermilyer,GA,110,102.8,29,,,305,305,M,Open,Raw,D
 3,Neal Dakmak,LA,110,110,29,,,305,305,M,Open,Raw,D
 1,Gary Brewer,FL,125,118.3,32,,,323.5,323.5,M,Open,Raw,D
 2,John Severson,FL,125,124.7,27,,,320,320,M,Open,Raw,D
-1,Richard Stewart,FL,125,113,51,,,260,260,M,Master 50-54,Raw,D
-1,Patt Porter,FL,140,135.7,43,,,297.5,297.5,M,Master 40-44,Raw,D
-2,Martin Rivera,LA,140,131.2,40,,,182.5,182.5,M,Master 40-44,Raw,D
-1,Greg Brown,FL,140,138.5,46,,,295,295,M,Master 40-44,Raw,D
+1,Richard Stewart,FL,125,113,51,,,260,260,M,Masters 50-54,Raw,D
+1,Patt Porter,FL,140,135.7,43,,,297.5,297.5,M,Masters 40-44,Raw,D
+2,Martin Rivera,LA,140,131.2,40,,,182.5,182.5,M,Masters 40-44,Raw,D
+1,Greg Brown,FL,140,138.5,46,,,295,295,M,Masters 40-44,Raw,D
 1,Ryan Kimball,LA,110,107.6,29,,195,330,525,M,Open,Raw,BD

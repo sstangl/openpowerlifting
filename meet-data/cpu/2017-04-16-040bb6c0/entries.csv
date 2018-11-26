@@ -1,12 +1,12 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Jeremy Lundgren,SK,124.0,120+,Open,272.5,175.0,272.5,720.0,Single-ply,1
 SBD,M,Travis Campbell,SK,99.1,105,Open,210.0,165.0,250.0,625.0,Single-ply,1
-SBD,M,Adam Deibert,SK,86.7,93,Sub-Junior,147.5,112.5,190.0,450.0,Raw,1
-SBD,F,Brianna Swyryda,SK,78.6,84,Sub-Junior,72.5,37.5,97.5,207.5,Raw,1
-SBD,M,Daniel Thrasher,SK,82.1,83,Sub-Junior,142.5,110.0,155.0,407.5,Raw,1
-SBD,F,Jenna Chessall,SK,60.1,63,Sub-Junior,55.0,27.5,75.0,157.5,Raw,2
-SBD,F,Cameron Stepp,SK,60.8,63,Sub-Junior,72.5,35.0,82.5,190.0,Raw,1
-SBD,M,Montana Fehr,SK,120.5,120+,Sub-Junior,150.0,125.0,185.0,460.0,Raw,1
+SBD,M,Adam Deibert,SK,86.7,93,Sub-Juniors,147.5,112.5,190.0,450.0,Raw,1
+SBD,F,Brianna Swyryda,SK,78.6,84,Sub-Juniors,72.5,37.5,97.5,207.5,Raw,1
+SBD,M,Daniel Thrasher,SK,82.1,83,Sub-Juniors,142.5,110.0,155.0,407.5,Raw,1
+SBD,F,Jenna Chessall,SK,60.1,63,Sub-Juniors,55.0,27.5,75.0,157.5,Raw,2
+SBD,F,Cameron Stepp,SK,60.8,63,Sub-Juniors,72.5,35.0,82.5,190.0,Raw,1
+SBD,M,Montana Fehr,SK,120.5,120+,Sub-Juniors,150.0,125.0,185.0,460.0,Raw,1
 SBD,M,Boyd Proctor,SK,88.2,93,Open,197.5,130.0,245.0,572.5,Raw,1
 SBD,M,Anthony Buziak,SK,89.6,93,Open,155.0,105.0,180.0,440.0,Raw,2
 SBD,F,Danielle Smith,SK,93.5,84+,Open,125.0,80.0,160.0,365.0,Raw,1
@@ -30,18 +30,18 @@ SBD,M,Jordan Vassell,SK,115.1,120,Open,75.0,50.0,105.0,230.0,Raw,3
 SBD,M,Eric McLenaghan,SK,113.1,120,Open,255.0,145.0,260.0,660.0,Raw,1
 SBD,M,Matt Allen,SK,103.9,105,Open,260.0,140.0,265.0,665.0,Raw,1
 SBD,M,Aaron Higgins,SK,97.4,105,Open,165.0,105.0,150.0,420.0,Raw,2
-SBD,F,Mava Brydges,SK,72.1,84,Master 3,90.0,55.0,107.5,252.5,Raw,1
-SBD,F,Martha Lyon,SK,84.2,84+,Master 2,65.0,45.0,100.0,210.0,Raw,1
-SBD,M,Randy Luzny,SK,59.9,66,Master 2,60.0,60.0,95.0,215.0,Raw,1
-SBD,F,Shirlene Palmer,SK,106.8,84+,Master 1,92.5,42.5,115.0,250.0,Raw,2
-SBD,F,Donna Bodnar,SK,98.4,84+,Master 1,132.0,52.5,145.0,329.5,Raw,1
-SBD,M,Leeland Hiebert,SK,85.4,93,Junior,192.5,112.5,182.5,487.5,Raw,1
-SBD,F,Hailey Marwood,SK,91.0,84+,Junior,132.5,60.0,140.0,332.5,Raw,1
-SBD,F,Taylor Folliott,SK,73.4,84,Junior,85.0,55.0,112.5,252.5,Raw,3
-SBD,F,Rashenna Grzybowski,SK,76.0,84,Junior,120.0,55.0,155.0,330.0,Raw,2
-SBD,F,Ashley Sepke,SK,74.0,84,Junior,135.0,62.5,137.5,335.0,Raw,1
-SBD,M,Houston Berg,SK,78.3,83,Junior,55.0,42.5,70.0,167.5,Raw,1
-SBD,M,Patrick Traves,SK,70.6,74,Junior,77.5,65.0,87.5,230.0,Raw,2
-SBD,M,Devon Yu,SK,73.6,74,Junior,165.0,125.0,142.5,432.5,Raw,1
-SBD,F,Taylor Leonhardt,SK,70.3,72,Junior,117.5,57.5,125.0,300.0,Raw,1
-SBD,F,Kirstie Armstead,SK,61.9,63,Junior,120.5,70.0,160.0,350.5,Raw,1
+SBD,F,Mava Brydges,SK,72.1,84,Masters 3,90.0,55.0,107.5,252.5,Raw,1
+SBD,F,Martha Lyon,SK,84.2,84+,Masters 2,65.0,45.0,100.0,210.0,Raw,1
+SBD,M,Randy Luzny,SK,59.9,66,Masters 2,60.0,60.0,95.0,215.0,Raw,1
+SBD,F,Shirlene Palmer,SK,106.8,84+,Masters 1,92.5,42.5,115.0,250.0,Raw,2
+SBD,F,Donna Bodnar,SK,98.4,84+,Masters 1,132.0,52.5,145.0,329.5,Raw,1
+SBD,M,Leeland Hiebert,SK,85.4,93,Juniors,192.5,112.5,182.5,487.5,Raw,1
+SBD,F,Hailey Marwood,SK,91.0,84+,Juniors,132.5,60.0,140.0,332.5,Raw,1
+SBD,F,Taylor Folliott,SK,73.4,84,Juniors,85.0,55.0,112.5,252.5,Raw,3
+SBD,F,Rashenna Grzybowski,SK,76.0,84,Juniors,120.0,55.0,155.0,330.0,Raw,2
+SBD,F,Ashley Sepke,SK,74.0,84,Juniors,135.0,62.5,137.5,335.0,Raw,1
+SBD,M,Houston Berg,SK,78.3,83,Juniors,55.0,42.5,70.0,167.5,Raw,1
+SBD,M,Patrick Traves,SK,70.6,74,Juniors,77.5,65.0,87.5,230.0,Raw,2
+SBD,M,Devon Yu,SK,73.6,74,Juniors,165.0,125.0,142.5,432.5,Raw,1
+SBD,F,Taylor Leonhardt,SK,70.3,72,Juniors,117.5,57.5,125.0,300.0,Raw,1
+SBD,F,Kirstie Armstead,SK,61.9,63,Juniors,120.5,70.0,160.0,350.5,Raw,1

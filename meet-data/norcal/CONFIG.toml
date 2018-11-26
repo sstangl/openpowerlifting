@@ -8,17 +8,17 @@
     teen_14 = {name = "Teen 14-15", min = 14, max = 15}
     teen_16 = {name = "Teen 16-17", min = 16, max = 17}
     teen_18 = {name = "Teen 18-19", min = 18, max = 19}
-    junior = {name = "Junior 20-23", min = 20, max = 23}
-    submaster = {name = "Submaster 35-39", min = 35, max = 39}
-    master_40 = {name = "Master 40-44", min = 40, max = 44}
-    master_45 = {name = "Master 45-49", min = 45, max = 49}
-    master_50 = {name = "Master 50-54", min = 50, max = 54}
-    master_55 = {name = "Master 55-59", min = 55, max = 59}
-    master_60 = {name = "Master 60-64", min = 60, max = 64}
-    master_65 = {name = "Master 65-69", min = 65, max = 69}
-    master_70 = {name = "Master 70-74", min = 70, max = 74}
-    master_75 = {name = "Master 75-79", min = 75, max = 79}
-    master_80 = {name = "Master 80+", min = 80, max = 999}
+    junior = {name = "Juniors 20-23", min = 20, max = 23}
+    submaster = {name = "Submasters 35-39", min = 35, max = 39}
+    master_40 = {name = "Masters 40-44", min = 40, max = 44}
+    master_45 = {name = "Masters 45-49", min = 45, max = 49}
+    master_50 = {name = "Masters 50-54", min = 50, max = 54}
+    master_55 = {name = "Masters 55-59", min = 55, max = 59}
+    master_60 = {name = "Masters 60-64", min = 60, max = 64}
+    master_65 = {name = "Masters 65-69", min = 65, max = 69}
+    master_70 = {name = "Masters 70-74", min = 70, max = 74}
+    master_75 = {name = "Masters 75-79", min = 75, max = 79}
+    master_80 = {name = "Masters 80+", min = 80, max = 999}
     special = {name = "Special Olympian", min = 0, max = 999}
     novice = {name = "Novice", min = 0, max = 999}
     lm = {name = "Law & Military", min = 0, max = 999}

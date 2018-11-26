@@ -1,7 +1,7 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Alexis Fry,IA,52,50.3,21,77.5,40,110,227.5,F,Junior 20-23,Raw,SBD
-1,Courtney Ford-Sartin,CA,75,74,23,160,75,172.5,407.5,F,Junior 20-23,Raw,SBD
-2,Mariyah Martinez,IL,75,70.2,20,112.5,67.5,145,325,F,Junior 20-23,Raw,SBD
+1,Alexis Fry,IA,52,50.3,21,77.5,40,110,227.5,F,Juniors 20-23,Raw,SBD
+1,Courtney Ford-Sartin,CA,75,74,23,160,75,172.5,407.5,F,Juniors 20-23,Raw,SBD
+2,Mariyah Martinez,IL,75,70.2,20,112.5,67.5,145,325,F,Juniors 20-23,Raw,SBD
 1,Emily Deugan,IA,56,53,34,95,55,107.5,257.5,F,Open,Raw,SBD
 1,Courtney Lawrenz,KS,67.5,63.8,34,115,67.5,162.5,345,F,Open,Raw,SBD
 2,Tabitha Todd,MO,67.5,64.7,33,97.5,45,115,257.5,F,Open,Raw,SBD
@@ -12,16 +12,16 @@ DQ,Stefanie Sampson,IA,75,73.7,29,80,,125,,F,Open,Raw,SBD
 2,Shayleen Simms,IA,82.5,81.6,29,145,57.5,145,347.5,F,Open,Raw,SBD
 1,Jenelle Korneman,MO,90+,114.4,33,142.5,82.5,145,370,F,Open,Raw,SBD
 2,Gabby Dvorak,NE,90+,113.6,26,140,70,147.5,357.5,F,Open,Raw,SBD
-1,Kim Smith,IA,60,56.2,54,97.5,57.5,115,270,F,Master 50-54,Raw,SBD
-1,Beth Burke,IA,75,74.3,40,85,47.5,107.5,240,F,Master 40-44,Raw,SBD
-1,Debbie Lucas,IA,75,74,48,100,65,130,295,F,Master 45-49,Raw,SBD
-1,Sheila Toney,IA,75,74.3,64,92.5,45,127.5,265,F,Master 60-64,Raw,SBD
-1,Timothy Devine,IA,67.5,66.4,21,182.5,117.5,207.5,507.5,M,Junior 20-23,Raw,SBD
-1,Devon Richards,IA,75,73.9,22,170,117.5,212.5,500,M,Junior 20-23,Raw,SBD
-1,Jorge Abascal,IL,82.5,80.2,21,167.5,97.5,195,460,M,Junior 20-23,Raw,SBD
-1,Austin Aiello,IL,90,88.3,20,207.5,132.5,272.5,612.5,M,Junior 20-23,Raw,SBD
-1,Joshua Mossholder,IL,100,96.3,23,207.5,145,275,627.5,M,Junior 20-23,Raw,SBD
-2,Luke Cummings,IA,100,93.1,21,217.5,157.5,200,575,M,Junior 20-23,Raw,SBD
+1,Kim Smith,IA,60,56.2,54,97.5,57.5,115,270,F,Masters 50-54,Raw,SBD
+1,Beth Burke,IA,75,74.3,40,85,47.5,107.5,240,F,Masters 40-44,Raw,SBD
+1,Debbie Lucas,IA,75,74,48,100,65,130,295,F,Masters 45-49,Raw,SBD
+1,Sheila Toney,IA,75,74.3,64,92.5,45,127.5,265,F,Masters 60-64,Raw,SBD
+1,Timothy Devine,IA,67.5,66.4,21,182.5,117.5,207.5,507.5,M,Juniors 20-23,Raw,SBD
+1,Devon Richards,IA,75,73.9,22,170,117.5,212.5,500,M,Juniors 20-23,Raw,SBD
+1,Jorge Abascal,IL,82.5,80.2,21,167.5,97.5,195,460,M,Juniors 20-23,Raw,SBD
+1,Austin Aiello,IL,90,88.3,20,207.5,132.5,272.5,612.5,M,Juniors 20-23,Raw,SBD
+1,Joshua Mossholder,IL,100,96.3,23,207.5,145,275,627.5,M,Juniors 20-23,Raw,SBD
+2,Luke Cummings,IA,100,93.1,21,217.5,157.5,200,575,M,Juniors 20-23,Raw,SBD
 1,Timothy Devine,IA,67.5,66.4,21,182.5,117.5,207.5,507.5,M,Open,Raw,SBD
 1,Eric Landau,IA,75,73.6,30,182.5,157.5,212.5,552.5,M,Open,Raw,SBD
 2,Devon Richards,IA,75,73.9,22,170,117.5,212.5,500,M,Open,Raw,SBD
@@ -38,8 +38,8 @@ DQ,Stefanie Sampson,IA,75,73.7,29,80,,125,,F,Open,Raw,SBD
 2,Dain Wadsworth,IA,125,111.6,35,240,180,260,680,M,Open,Raw,SBD
 3,Matthew Hansman,IA,125,112.5,27,252.5,177.5,192.5,622.5,M,Open,Raw,SBD
 1,Tyler Thomas,IA,140+,150.1,32,300,195,265,760,M,Open,Raw,SBD
-1,Jeremy Collum,MO,140+,153,39,252.5,102.5,240,595,M,Submaster 35-39,Raw,SBD
-1,Brad Lantto,MO,100,99.3,43,260,150,290,700,M,Master 40-44,Raw,SBD
+1,Jeremy Collum,MO,140+,153,39,252.5,102.5,240,595,M,Submasters 35-39,Raw,SBD
+1,Brad Lantto,MO,100,99.3,43,260,150,290,700,M,Masters 40-44,Raw,SBD
 1,Derek Mead,MO,75,74,23,272.5,160,272.5,705,M,Open,Wraps,SBD
 1,Mike McGivern,KS,90,86.8,31,330,195,310,835,M,Open,Wraps,SBD
 1,Taylor Kron,NE,100,98.7,24,267.5,145,262.5,675,M,Open,Wraps,SBD
@@ -49,12 +49,12 @@ DQ,Stefanie Sampson,IA,75,73.7,29,80,,125,,F,Open,Raw,SBD
 3,Javan Torres,IA,125,123.3,39,272.5,210,237.5,720,M,Open,Wraps,SBD
 1,Zach Severin,IA,140+,161.5,25,345,230,297.5,872.5,M,Open,Wraps,SBD
 1,Amy Perry,KS,67.5,66.7,49,142.5,75,150,367.5,F,Open,Single-ply,SBD
-1,Amy Perry,KS,67.5,66.7,49,142.5,75,150,367.5,F,Master 45-49,Single-ply,SBD
+1,Amy Perry,KS,67.5,66.7,49,142.5,75,150,367.5,F,Masters 45-49,Single-ply,SBD
 1,Jacob Stratton,IA,100,99.3,30,320,250,340,910,M,Open,Single-ply,SBD
-1,Bill Carlough,IL,90,87.5,57,277.5,220.5,235,733,M,Master 55-59,Single-ply,SBD
+1,Bill Carlough,IL,90,87.5,57,277.5,220.5,235,733,M,Masters 55-59,Single-ply,SBD
 1,David McCoskey,MO,110,107.9,56,,125,,125,M,Open,Single-ply,B
 1,Luke McCoskey,MO,125,122.6,27,,192.5,,192.5,M,Open,Single-ply,B
-1,Bill Carlough,IL,90,87.5,57,,220.5,,221,M,Master 55-59,Single-ply,B
-1,David McCoskey,MO,110,107.9,56,,125,,125,M,Master 55-59,Single-ply,B
-1,Miguel Conchola,KS,125,113,41,,130,237.5,367.5,M,Master 40-44,Raw,BD
+1,Bill Carlough,IL,90,87.5,57,,220.5,,221,M,Masters 55-59,Single-ply,B
+1,David McCoskey,MO,110,107.9,56,,125,,125,M,Masters 55-59,Single-ply,B
+1,Miguel Conchola,KS,125,113,41,,130,237.5,367.5,M,Masters 40-44,Raw,BD
 1,Jeff Frank,KS,140+,173.4,29,,340,332.5,672.5,M,Open,Multi-ply,BD

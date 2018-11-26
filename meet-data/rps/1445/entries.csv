@@ -11,8 +11,8 @@ M,Multi-ply,Pro Open,90,Aleksandr Bozhko,,88.35,200,125,175,500,SBD,4
 M,Multi-ply,Pro Open,90,Denis Sljusarev,,89.65,325,,,,SBD,DQ
 M,Multi-ply,Pro Open,100,Aleksandr Zlenko,,99.1,265,170,260,695,SBD,1
 M,Multi-ply,Pro Open,100,Aleksej Bokarev,,98.75,255,150,250,655,SBD,2
-M,Multi-ply,Pro Junior 20-23,110,Evgenij Gansh,,109.25,260,180,240,680,SBD,1
-M,Multi-ply,Pro Junior 20-23,110,Nikolaj Shestakov,,110,,,,,SBD,DQ
+M,Multi-ply,Pro Juniors 20-23,110,Evgenij Gansh,,109.25,260,180,240,680,SBD,1
+M,Multi-ply,Pro Juniors 20-23,110,Nikolaj Shestakov,,110,,,,,SBD,DQ
 M,Multi-ply,Pro Open,110,Vasilij Omelchenko,,104.05,,,,,SBD,DQ
 M,Multi-ply,Pro Open,110,Evgenij Zajcev,,110,,,,,SBD,DQ
 M,Multi-ply,Pro Open,125,Vasilij Omelchenko,,124.95,380,302.5,375.01,1057.51,SBD,1
@@ -22,7 +22,7 @@ F,Raw,Amateur Open,44,Irina Efremova,,42.65,100,52.5,120,272.5,SBD,1
 F,Raw,Amateur Teen 18-19,44,Samira Kazymova,,44,67.5,30,75,172.5,SBD,1
 F,Raw,Amateur Youth,48,Dinara Shpejter,12,47.63,45,27.5,62.5,135,SBD,1
 F,Raw,Amateur Teen 18-19,48,Uljana Podpalnaja,,47.9,100,47.5,55,202.5,SBD,1
-F,Raw,Amateur Junior 20-23,48,Ekaterina Kozlova,,47.9,85,55,110,250,SBD,1
+F,Raw,Amateur Juniors 20-23,48,Ekaterina Kozlova,,47.9,85,55,110,250,SBD,1
 F,Raw,Amateur Open,48,Cyregma Cyrenova,,47.35,75,40,105,220,SBD,3
 F,Raw,Amateur Open,48,Anna Ivleva,,47,80,50,125,255,SBD,1
 F,Raw,Amateur Open,48,Anna Koropec,,47.4,65,35,95,195,SBD,4
@@ -30,12 +30,12 @@ F,Raw,Amateur Open,48,Marina Kozlova,,47.05,62.5,37.5,87.5,187.5,SBD,5
 F,Raw,Amateur Open,48,Tatjana Bannova,,48,85,45,112.5,242.5,SBD,2
 F,Raw,Amateur Teen 16-17,52,Darja Karaseva,,51.5,50,32.5,75,157.5,SBD,1
 F,Raw,Amateur Teen 16-17,52,Anastasija Pudukova,,50.7,47.5,25,62.5,135,SBD,2
-F,Raw,Amateur Junior 20-23,52,Ekaterina Efimova,,48.3,85,50,97.5,232.5,SBD,1
+F,Raw,Amateur Juniors 20-23,52,Ekaterina Efimova,,48.3,85,50,97.5,232.5,SBD,1
 F,Raw,Amateur Teen 18-19,52,Darja Markova,,52,105,72.5,112.5,290,SBD,1
 F,Raw,Amateur Open,52,Tatjana Rashhepkina,,52,110,60,120,290,SBD,1
 F,Raw,Amateur Teen 14-15,56,Valerija Trjascina,,54.35,47.5,32.5,,80,SB,1
 F,Raw,Amateur Teen 18-19,56,Darja Safonova,,54.4,60,35,85,180,SBD,1
-F,Raw,Amateur Junior 20-23,56,Darja Suhanova,,54.75,,,,,SBD,DQ
+F,Raw,Amateur Juniors 20-23,56,Darja Suhanova,,54.75,,,,,SBD,DQ
 F,Raw,Amateur Open,56,Ekaterina Pushkareva,,55.2,100,57.5,112.5,270,SBD,1
 F,Raw,Amateur Open,56,Julija Dubrovina,,56,92.5,50,125,267.5,SBD,2
 F,Raw,Amateur Open,56,Oksana Maslennikova,,56,90,55,122.5,267.5,SBD,3
@@ -44,8 +44,8 @@ F,Raw,Amateur Open,56,Oksana Moiseenko,,55.75,60,42.5,70,172.5,SBD,5
 F,Raw,Amateur Teen 18-19,56,Elena Borovinskaja,,55.7,65,,105,,SBD,DQ
 F,Raw,Amateur Teen 16-17,60,Arina Belova,,57,55,35,72.5,162.5,SBD,2
 F,Raw,Amateur Teen 18-19,60,Angelina Kalinina,,59.95,97.5,45,117.5,260,SBD,1
-F,Raw,Amateur Junior 20-23,60,Anastasia Petrova,,59.9,77.5,37.5,80,195,SBD,2
-F,Raw,Amateur Junior 20-23,60,Aleksandra Pavlichenko,,58.8,107.5,57.5,137.5,302.5,SBD,1
+F,Raw,Amateur Juniors 20-23,60,Anastasia Petrova,,59.9,77.5,37.5,80,195,SBD,2
+F,Raw,Amateur Juniors 20-23,60,Aleksandra Pavlichenko,,58.8,107.5,57.5,137.5,302.5,SBD,1
 F,Raw,Amateur Open,60,Anastasia Petrova,,59.9,125,70,180,375,SBD,1
 F,Raw,Amateur Open,60,Nadezhda Burkova,,59.05,115,65,130,310,SBD,2
 F,Raw,Amateur Open,60,Marija Kurkova,,58.8,110,47.5,120,277.5,SBD,4
@@ -54,12 +54,12 @@ F,Raw,Amateur Teen 14-15,60,Anna Karpusha,,58.75,62.5,37.5,95,195,SBD,2
 F,Raw,Amateur Teen 16-17,60,Jana Miheeva,,57.7,102.5,52.5,102.5,257.5,SBD,1
 F,Raw,Amateur Open,60,Ekaterina Koshkareva,,60,115,65,130,310,SBD,3
 F,Raw,Amateur Teen 18-19,67.5,Marija Obydennova,,67.5,60,27.5,70,157.5,SBD,2
-F,Raw,Amateur Junior 20-23,67.5,Ekaterina Kozlova,,66.8,95,45,120,260,SBD,2
-F,Raw,Amateur Junior 20-23,67.5,Elena Muracheva,,65.95,115,60,130,305,SBD,1
+F,Raw,Amateur Juniors 20-23,67.5,Ekaterina Kozlova,,66.8,95,45,120,260,SBD,2
+F,Raw,Amateur Juniors 20-23,67.5,Elena Muracheva,,65.95,115,60,130,305,SBD,1
 F,Raw,Amateur Open,67.5,Olga Glamazdina,,62.95,67.5,35,95,197.5,SBD,2
 F,Raw,Amateur Open,67.5,Anna Sologubova,,65.2,75,50,105,230,SBD,1
 F,Raw,Amateur Teen 18-19,67.5,Anastasija Kochurina,,66.4,75,40,95,210,SBD,1
-F,Raw,Amateur Junior 20-23,75,Valerija Vinogradova,,69.9,65,35,82.5,182.5,SBD,1
+F,Raw,Amateur Juniors 20-23,75,Valerija Vinogradova,,69.9,65,35,82.5,182.5,SBD,1
 M,Raw,Amateur Teen 14-15,52,Denis Pervuhin,,51.45,77.5,60,105,242.5,SBD,1
 M,Raw,Amateur Teen 14-15,56,Artem Sidorov,,55,95,62.5,120,277.5,SBD,1
 M,Raw,Amateur Teen 16-17,56,Artem Oganisjan,,55.05,125,70,160,355,SBD,1
@@ -69,7 +69,7 @@ M,Raw,Amateur Teen 14-15,67.5,Leonid Plotnikov,,63.5,110,75,140,325,SBD,1
 M,Raw,Amateur Teen 14-15,67.5,Aleksandr Kamnev,,67.3,120,72.02,,,SBD,DQ
 M,Raw,Amateur Teen 16-17,67.5,Pavel Levites,,63.65,127.5,75,142.5,345,SBD,4
 M,Raw,Amateur Teen 16-17,67.5,Viktor Gapenko,,63.1,130,85,175,390,SBD,3
-M,Raw,Amateur Junior 20-23,67.5,Mihail Suslov,,65,190,122.5,225,537.5,SBD,1
+M,Raw,Amateur Juniors 20-23,67.5,Mihail Suslov,,65,190,122.5,225,537.5,SBD,1
 M,Raw,Amateur Open,67.5,Mihail Suslov,,65,190,122.5,225,537.5,SBD,1
 M,Raw,Amateur Open,67.5,Maksim Danilov,,67.3,165,130,205,500,SBD,2
 M,Raw,Amateur Open,67.5,Ilja Gurko,,67.45,165,112.5,192.5,470,SBD,3
@@ -86,8 +86,8 @@ M,Raw,Amateur Teen 14-15,75,Dmitrij Lapko,,72.05,135,90,180,405,SBD,1
 M,Raw,Amateur Teen 16-17,75,Artem Birjukov,,72.95,137.5,105,190,432.5,SBD,2
 M,Raw,Amateur Teen 16-17,75,Konstantin Marin,,74.35,130,90,145,365,SBD,3
 M,Raw,Amateur Teen 18-19,75,Danil Kornienko,,72.5,135,117.01,165,417.01,SBD,1
-M,Raw,Amateur Junior 20-23,75,Aleksej Volosov,,74.2,147.53,112.5,175,435.03,SBD,1
-M,Raw,Amateur Junior 20-23,75,Dmitrij Soshnikov,,73.65,145,100,165,410,SBD,2
+M,Raw,Amateur Juniors 20-23,75,Aleksej Volosov,,74.2,147.53,112.5,175,435.03,SBD,1
+M,Raw,Amateur Juniors 20-23,75,Dmitrij Soshnikov,,73.65,145,100,165,410,SBD,2
 M,Raw,Amateur Open,75,Aleksandr Ivanov,,73.75,185,120,235,540,SBD,1
 M,Raw,Amateur Open,75,Aleksej Krasnov,,74,170,120,210,500,SBD,2
 M,Raw,Amateur Open,75,Andrej Shuba,,74.25,140,120,235,495,SBD,3
@@ -96,11 +96,11 @@ M,Raw,Amateur Youth,75,Sergej Babkin,13,70.7,90,52.5,115,257.5,SBD,2
 M,Raw,Amateur Teen 16-17,75,Pavel Skiba,,72.72,150,110,185,445,SBD,1
 M,Raw,Amateur Teen 16-17,75,Vladislav Akimkin,,69.55,100,55,110,265,SBD,4
 M,Raw,Amateur Teen 16-17,82.5,Vitalij Harinskij,,78.1,107.5,85,135,327.5,SBD,4
-M,Raw,Amateur Junior 20-23,75,Dmitrij Kolikov,,75,182.5,117.5,205,505,SBD,4
-M,Raw,Amateur Junior 20-23,82.5,Aleksandr Bulatov,,80.75,205,125,205,535,SBD,1
-M,Raw,Amateur Junior 20-23,82.5,Matvej Jakovlev,,82.35,185,137.5,205,527.5,SBD,2
-M,Raw,Amateur Junior 20-23,82.5,Pavel Mitrakov,,79.9,165,107.5,180,452.5,SBD,5
-M,Raw,Amateur Master 55-59,82.5,Vjacheslav Piskalov,,80.25,220,105,230,555,SBD,1
+M,Raw,Amateur Juniors 20-23,75,Dmitrij Kolikov,,75,182.5,117.5,205,505,SBD,4
+M,Raw,Amateur Juniors 20-23,82.5,Aleksandr Bulatov,,80.75,205,125,205,535,SBD,1
+M,Raw,Amateur Juniors 20-23,82.5,Matvej Jakovlev,,82.35,185,137.5,205,527.5,SBD,2
+M,Raw,Amateur Juniors 20-23,82.5,Pavel Mitrakov,,79.9,165,107.5,180,452.5,SBD,5
+M,Raw,Amateur Masters 55-59,82.5,Vjacheslav Piskalov,,80.25,220,105,230,555,SBD,1
 M,Raw,Amateur Open,82.5,Vjacheslav Piskalov,,80.25,220,105,230,555,SBD,3
 M,Raw,Amateur Open,82.5,Aleksej Platoshin,,80.2,190,140,222.5,552.5,SBD,4
 M,Raw,Amateur Open,82.5,Matvej Jakovlev,,82.35,185,137.5,205,527.5,SBD,5
@@ -112,64 +112,64 @@ M,Raw,Amateur Teen 16-17,82.5,Nikita Vaneev,,77.8,120,80,130,330,SBD,3
 M,Raw,Amateur Teen 18-19,75,Sergej Monastyrev,,75,155,95,200,450,SBD,2
 M,Raw,Amateur Teen 18-19,82.5,Vadim Ditjatin,,81.45,170,100,200,470,SBD,1
 M,Raw,Amateur Teen 18-19,82.5,Anatolij Denisenko,,79.45,150,,,150,S,1
-M,Raw,Amateur Junior 20-23,82.5,Anton Konovalov,,82.5,160,145,210,515,SBD,3
+M,Raw,Amateur Juniors 20-23,82.5,Anton Konovalov,,82.5,160,145,210,515,SBD,3
 M,Raw,Amateur Open,82.5,Roman Hromov,,82.45,210,157.5,225,592.5,SBD,1
 M,Raw,Amateur Open,82.5,Egor Medvedev,,82.5,205,140,217.5,562.5,SBD,2
 M,Raw,Amateur Teen 16-17,90,Valentin Gajdul,,87.6,160,80,165,405,SBD,1
-M,Raw,Amateur Junior 20-23,90,Ilja Milkin,,89.4,195,145,220,560,SBD,1
-M,Raw,Amateur Master 55-59,90,Gennadij Pokshevatov,,87.55,220,115,220,555,SBD,1
+M,Raw,Amateur Juniors 20-23,90,Ilja Milkin,,89.4,195,145,220,560,SBD,1
+M,Raw,Amateur Masters 55-59,90,Gennadij Pokshevatov,,87.55,220,115,220,555,SBD,1
 M,Raw,Amateur Open,90,Gennadij Pokshevatov,,87.55,220,115,220,555,SBD,1
 M,Raw,Amateur Open,90,Andrej Vereshhagin,,89.45,177.5,125,217.5,520,SBD,2
 M,Raw,Amateur Open,90,Evgenij Chumakov,,87.95,160,102.5,182.5,445,SBD,3
 M,Raw,Amateur Teen 18-19,90,Kirill Jakovlev,,87.9,145,112.5,190,447.5,SBD,1
 M,Raw,Amateur Teen 18-19,100,Artem Goncharov,,93.95,160,115,210,485,SBD,1
-M,Raw,Amateur Master 50-54,100,Oleg Smolin,,97.6,200,152.5,220,572.5,SBD,1
+M,Raw,Amateur Masters 50-54,100,Oleg Smolin,,97.6,200,152.5,220,572.5,SBD,1
 M,Raw,Amateur Open,100,Ivan Zolotoverhov,,97.6,220,162.5,265,647.5,SBD,1
 M,Raw,Amateur Open,100,Aleksandr Pushkarev,,97.4,200,150,230,580,SBD,2
 M,Raw,Amateur Teen 14-15,100,Aleksej Vasilchuk,,91.65,160,90,160,410,SBD,1
 M,Raw,Amateur Teen 18-19,100,Aleksandr Klemeshov,,95.9,162.5,125,185,472.5,SBD,2
 M,Raw,Amateur Teen 16-17,110,Egor Shilov,,101.15,177.5,115,220,512.5,SBD,2
 M,Raw,Amateur Teen 18-19,110,Dmitrij Kvasov,,105,210,155,260,625,SBD,1
-M,Raw,Amateur Junior 20-23,110,Sergej Tarasenko,,103.45,187.5,130,242.5,560,SBD,1
-M,Raw,Amateur Junior 20-23,110,Nikolaj Antashkov,,109.35,190,140,230,560,SBD,2
+M,Raw,Amateur Juniors 20-23,110,Sergej Tarasenko,,103.45,187.5,130,242.5,560,SBD,1
+M,Raw,Amateur Juniors 20-23,110,Nikolaj Antashkov,,109.35,190,140,230,560,SBD,2
 M,Raw,Amateur Open,110,Nikolaj Antashkov,,109.35,190,140,230,560,SBD,1
 M,Raw,Amateur Teen 16-17,110,Sergej Hrupov,,103.35,195,110,210,515,SBD,1
 M,Raw,Amateur Teen 18-19,110,Denis Dementev,,105.3,195,130,215,540,SBD,2
 M,Raw,Amateur Open,125,Sergej Minjajlov,,119.6,220,142,210,571.99,SBD,1
 M,Raw,Amateur Open,140+,Pavel Mazyrin,,161.7,252.02,147.53,197.5,597.05,SBD,1
 M,Raw,Amateur Teen 16-17,140+,Aleksandr Kunov,,151.85,150,70,200,420,SBD,1
-F,Raw,Pro Junior 20-23,44,Snezhanna Aksarova,,42,,,,,SBD,DQ
-F,Raw,Pro Junior 20-23,52,Viktorija Avdeeva,,51.65,67.5,50,85,202.5,SBD,1
-F,Raw,Pro Junior 20-23,52,Evgenija Meteleva,,50.1,57.5,40,65,162.5,SBD,2
+F,Raw,Pro Juniors 20-23,44,Snezhanna Aksarova,,42,,,,,SBD,DQ
+F,Raw,Pro Juniors 20-23,52,Viktorija Avdeeva,,51.65,67.5,50,85,202.5,SBD,1
+F,Raw,Pro Juniors 20-23,52,Evgenija Meteleva,,50.1,57.5,40,65,162.5,SBD,2
 F,Raw,Pro Open,52,Tamara Rybalchenko,,50.7,77.5,,,,SBD,DQ
 F,Raw,Pro Open,52,Darja Markova,,52,105,72.5,112.5,290,SBD,1
-F,Raw,Pro Junior 20-23,56,Irina Molostova,,54.7,115,55,150,320,SBD,1
-F,Raw,Pro Master 45-49,56,Tatjana Tjurina,,55.15,85,40,100,225,SBD,1
+F,Raw,Pro Juniors 20-23,56,Irina Molostova,,54.7,115,55,150,320,SBD,1
+F,Raw,Pro Masters 45-49,56,Tatjana Tjurina,,55.15,85,40,100,225,SBD,1
 F,Raw,Pro Open,56,Irina Molostova,,54.7,115,55,150,320,SBD,1
 F,Raw,Pro Open,56,Sveta Pereladova,,56,110,45,120,275,SBD,2
-F,Raw,Pro Junior 20-23,60,Ekaterina Kuzmicheva,,59.9,,,105,,SBD,DQ
+F,Raw,Pro Juniors 20-23,60,Ekaterina Kuzmicheva,,59.9,,,105,,SBD,DQ
 F,Raw,Pro Open,60,Ekaterina Kuzmicheva,,59.9,85,,,,SBD,DQ
 F,Raw,Pro Open,67.5,Olga Nasonova,,64.65,150,87.5,170,407.5,SBD,1
 F,Raw,Pro Open,67.5,Irina Denisova,,66.3,125,70,155,350,SBD,2
 F,Raw,Pro Open,67.5,Ksenija Seljutina,,64.65,67.5,42.5,115,225,SBD,3
-M,Raw,Pro Junior 20-23,75,Konstantin Prockij,,74.55,150,135,210,495,SBD,1
+M,Raw,Pro Juniors 20-23,75,Konstantin Prockij,,74.55,150,135,210,495,SBD,1
 M,Raw,Pro Open,75,Aleksandr Zvjaglov,,73.55,155,107.5,180,442.5,SBD,1
-M,Raw,Pro Junior 20-23,82.5,Sergej Marchenko,,81.05,195,127.5,240,562.5,SBD,1
-M,Raw,Pro Junior 20-23,82.5,Roman Peshkov,,82.25,182.5,122.5,242.5,547.5,SBD,2
-M,Raw,Pro Junior 20-23,82.5,Aleksandr Ziganshin,,80.8,165,117.5,205,487.5,SBD,3
-M,Raw,Pro Junior 20-23,82.5,Vladislav Pechenkin,,81.9,130,75,152.5,357.5,SBD,4
-M,Raw,Pro Master 65-69,82.5,Mihail Elfimov,,79.55,100,55,130,285,SBD,1
+M,Raw,Pro Juniors 20-23,82.5,Sergej Marchenko,,81.05,195,127.5,240,562.5,SBD,1
+M,Raw,Pro Juniors 20-23,82.5,Roman Peshkov,,82.25,182.5,122.5,242.5,547.5,SBD,2
+M,Raw,Pro Juniors 20-23,82.5,Aleksandr Ziganshin,,80.8,165,117.5,205,487.5,SBD,3
+M,Raw,Pro Juniors 20-23,82.5,Vladislav Pechenkin,,81.9,130,75,152.5,357.5,SBD,4
+M,Raw,Pro Masters 65-69,82.5,Mihail Elfimov,,79.55,100,55,130,285,SBD,1
 M,Raw,Pro Open,82.5,Denis Makeev,,81.1,210,180,245,635,SBD,1
 M,Raw,Pro Open,82.5,Artem Safonov #2,,81.15,160,125,210,495,SBD,2
 M,Raw,Pro Open,82.5,Sergej Muhin,,79.8,145,125,220,490,SBD,3
-M,Raw,Pro Junior 20-23,90,Vladislav Filipovich,,90,250,195,295,740,SBD,1
-M,Raw,Pro Junior 20-23,90,Anton Birjukov,,89.2,250,170,305,725,SBD,2
-M,Raw,Pro Junior 20-23,90,Vladimir Buzkin,,88.9,220,180,270,670,SBD,3
-M,Raw,Pro Junior 20-23,90,Ignat Salnikov,,89.1,210,142.5,245,597.5,SBD,4
-M,Raw,Pro Junior 20-23,90,Nikolaj Najmushin,,88.6,215,147.5,232.5,595,SBD,5
-M,Raw,Pro Junior 20-23,90,Sergej Podjachev,,87.4,205,137.5,210,552.5,SBD,6
-M,Raw,Pro Junior 20-23,90,Gleb Sinkin,,89.8,200,142.5,200,542.5,SBD,7
-M,Raw,Pro Master 65-69,90,Nikolaj Bachurin,,87.8,,,200,200,D,1
+M,Raw,Pro Juniors 20-23,90,Vladislav Filipovich,,90,250,195,295,740,SBD,1
+M,Raw,Pro Juniors 20-23,90,Anton Birjukov,,89.2,250,170,305,725,SBD,2
+M,Raw,Pro Juniors 20-23,90,Vladimir Buzkin,,88.9,220,180,270,670,SBD,3
+M,Raw,Pro Juniors 20-23,90,Ignat Salnikov,,89.1,210,142.5,245,597.5,SBD,4
+M,Raw,Pro Juniors 20-23,90,Nikolaj Najmushin,,88.6,215,147.5,232.5,595,SBD,5
+M,Raw,Pro Juniors 20-23,90,Sergej Podjachev,,87.4,205,137.5,210,552.5,SBD,6
+M,Raw,Pro Juniors 20-23,90,Gleb Sinkin,,89.8,200,142.5,200,542.5,SBD,7
+M,Raw,Pro Masters 65-69,90,Nikolaj Bachurin,,87.8,,,200,200,D,1
 M,Raw,Pro Open,90,Vjacheslav Alekseev,,89.85,295,152.5,300,747.5,SBD,1
 M,Raw,Pro Open,90,Vladislav Filipovich,,90,250,195,295,740,SBD,2
 M,Raw,Pro Open,90,Anton Birjukov,,89.2,250,170,305,725,SBD,3
@@ -178,42 +178,42 @@ M,Raw,Pro Open,90,Aleksandr Havkunov,,89.7,240,185,,425,SB,1
 M,Raw,Pro Open,90,Ivan Belkin,,88.2,140,95,185,420,SBD,5
 M,Raw,Pro Open,90,Vladimir Cyganov,,88.8,150,107.5,160,417.5,SBD,6
 M,Raw,Pro Open,90,Vladimir Cherepanov,,88.65,,,,,SBD,DQ
-M,Raw,Pro Junior 20-23,100,Egor Musienko,,97.95,300,165,342.5,807.5,SBD,1
-M,Raw,Pro Junior 20-23,100,Nikolaj Tolokonnikov,,98.3,175,145,240,560,SBD,2
-M,Raw,Pro Junior 20-23,100,Sergej Alemchuk,,94.8,170,160,210,540,SBD,3
-M,Raw,Pro Junior 20-23,100,Dmitrij Podchasov,,97.1,,,190,190,D,1
-M,Raw,Pro Master 40-44,100,Ruslan Popov,,98.8,220,180,260,660,SBD,1
+M,Raw,Pro Juniors 20-23,100,Egor Musienko,,97.95,300,165,342.5,807.5,SBD,1
+M,Raw,Pro Juniors 20-23,100,Nikolaj Tolokonnikov,,98.3,175,145,240,560,SBD,2
+M,Raw,Pro Juniors 20-23,100,Sergej Alemchuk,,94.8,170,160,210,540,SBD,3
+M,Raw,Pro Juniors 20-23,100,Dmitrij Podchasov,,97.1,,,190,190,D,1
+M,Raw,Pro Masters 40-44,100,Ruslan Popov,,98.8,220,180,260,660,SBD,1
 M,Raw,Pro Open,100,Ivan Vasjunin,,100,282.5,225,305,812.5,SBD,1
 M,Raw,Pro Open,100,Egor Musienko,,97.95,300,165,342.5,807.5,SBD,2
 M,Raw,Pro Open,100,Stanislav Teljatin,,100,280,165,285,730,SBD,3
 M,Raw,Pro Open,100,Ruslan Popov,,98.8,220,180,260,660,SBD,4
 M,Raw,Pro Open,100,Aleksej Nakonechnyj,,97.05,200,135,230,565,SBD,5
-M,Raw,Pro Junior 20-23,110,Aleksandr Kurmashov,,106.85,265,190,260,715,SBD,1
-M,Raw,Pro Junior 20-23,110,Ivan Kaplun,,102.7,220,175,230,625,SBD,2
-M,Raw,Pro Master 50-54,110,Vladimir Panuev,,106.25,230,155,230,615,SBD,1
+M,Raw,Pro Juniors 20-23,110,Aleksandr Kurmashov,,106.85,265,190,260,715,SBD,1
+M,Raw,Pro Juniors 20-23,110,Ivan Kaplun,,102.7,220,175,230,625,SBD,2
+M,Raw,Pro Masters 50-54,110,Vladimir Panuev,,106.25,230,155,230,615,SBD,1
 M,Raw,Pro Open,110,Aleksandr Zlenko,,104.6,210,160,290,660,SBD,1
 M,Raw,Pro Open,110,Ivan Kaplun,,102.7,220,175,230,625,SBD,2
 M,Raw,Pro Open,110,Anton Zotov,,105.4,170,95,210,475,SBD,3
 M,Raw,Pro Open,110,Stanislav Teljatin,,110,,,,,SBD,DQ
-M,Raw,Pro Junior 20-23,125,Nikita Shafikov,,124.65,230,130,300,660,SBD,1
-M,Raw,Pro Master 40-44,125,Borislav Dzahsorov,,122.3,245,190,270,705,SBD,1
-M,Raw,Pro Master 45-49,125,Valerij Gorbunov,,115.35,240,145,265,650,SBD,1
+M,Raw,Pro Juniors 20-23,125,Nikita Shafikov,,124.65,230,130,300,660,SBD,1
+M,Raw,Pro Masters 40-44,125,Borislav Dzahsorov,,122.3,245,190,270,705,SBD,1
+M,Raw,Pro Masters 45-49,125,Valerij Gorbunov,,115.35,240,145,265,650,SBD,1
 M,Raw,Pro Open,125,Sergej Semakin,,120.05,312.5,195,355,862.5,SBD,1
 M,Raw,Pro Open,125,Sergej Farafontev,,116.25,265,175,295,735,SBD,2
 M,Raw,Pro Open,125,Vladimir Sviridov,,121.55,225,140,240,605,SBD,3
 M,Raw,Pro Open,140,Jurij Shmelev,,138.65,185,140,200,525,SBD,1
 F,Raw,Amateur Open,60,Saida Jegamova,,56.85,80,,,80,S,1
-F,Raw,Amateur Junior 20-23,67.5,Ekaterina Kozlova,,66.8,115,,,115,S,1
+F,Raw,Amateur Juniors 20-23,67.5,Ekaterina Kozlova,,66.8,115,,,115,S,1
 M,Raw,Amateur Open,82.5,Egor Medvedev,,82.5,205,,,205,S,2
-M,Raw,Amateur Master 55-59,82.5,Vjacheslav Piskalov,,80.25,220,,,220,S,1
+M,Raw,Amateur Masters 55-59,82.5,Vjacheslav Piskalov,,80.25,220,,,220,S,1
 M,Raw,Amateur Open,82.5,Vjacheslav Piskalov,,80.25,220,,,220,S,1
-M,Raw,Pro Junior 20-23,90,Sergej Podjachev,,87.4,205,,,205,S,2
+M,Raw,Pro Juniors 20-23,90,Sergej Podjachev,,87.4,205,,,205,S,2
 M,Raw,Pro Open,90,Sergej Podjachev,,87.4,205,,,205,S,2
-M,Raw,Pro Junior 20-23,90,Vladislav Filipovich,,90,250,,,250,S,1
+M,Raw,Pro Juniors 20-23,90,Vladislav Filipovich,,90,250,,,250,S,1
 M,Raw,Pro Open,90,Vladislav Filipovich,,90,250,,,250,S,1
-M,Raw,Pro Junior 20-23,100,Egor Musienko,,97.95,300,,,300,S,1
+M,Raw,Pro Juniors 20-23,100,Egor Musienko,,97.95,300,,,300,S,1
 M,Raw,Pro Open,100,Egor Musienko,,97.95,300,,,300,S,1
-M,Raw,Pro Master 50-54,110,Vladimir Panuev,,106.25,230,,,230,S,1
+M,Raw,Pro Masters 50-54,110,Vladimir Panuev,,106.25,230,,,230,S,1
 M,Raw,Amateur Open,140+,Pavel Mazyrin,,161.7,252.5,,,252.5,S,1
 F,Multi-ply,Pro Open,75,Anna Chubarova,,74.8,,145,,145,B,1
 M,Multi-ply,Amateur Teen 16-17,60,Aleksandr Ignatov,,58.8,,,,,B,DQ
@@ -228,8 +228,8 @@ M,Multi-ply,Amateur Open,82.5,Andrej Tomasik,,82.05,,187.5,,187.5,B,2
 M,Multi-ply,Amateur Open,82.5,Dmitrij Kondaurov,,81.4,,202.5,,202.5,B,1
 M,Multi-ply,Pro Open,90,Andrej Cherepanov,,85.7,,,,,B,DQ
 M,Multi-ply,Amateur Open,90,Nikolaj Kuznecov,,88.35,,160,,160,B,4
-M,Multi-ply,Pro Junior 20-23,90,Aleksandr Belov,,89.65,,160,,160,B,1
-M,Multi-ply,Amateur Junior 20-23,90,Kirill Karmanov,,84.25,,170,,170,B,1
+M,Multi-ply,Pro Juniors 20-23,90,Aleksandr Belov,,89.65,,160,,160,B,1
+M,Multi-ply,Amateur Juniors 20-23,90,Kirill Karmanov,,84.25,,170,,170,B,1
 M,Multi-ply,Amateur Open,90,Artem Lukjanov,,88.8,,190,,190,B,3
 M,Multi-ply,Amateur Open,90,Nucu Shiman,,88.6,,200,,200,B,2
 M,Multi-ply,Amateur Open,90,Sergej Harisov,,89.95,,217.5,,217.5,B,1
@@ -240,36 +240,36 @@ M,Multi-ply,Pro Open,110,Mihail Ryzhkin,,108.95,,250.02,,250.02,B,2
 M,Multi-ply,Pro Open,110,Vasilij Synkov,,100.15,,285,,285,B,1
 M,Multi-ply,Amateur Open,125,Artem Karakulov,,124.75,,,,,B,DQ
 M,Multi-ply,Pro Open,125,Aleksej Zherebcov,,118,,200,,200,B,3
-M,Multi-ply,Pro Junior 20-23,125,Maksim Nechaev,,118,,240,,240,B,1
+M,Multi-ply,Pro Juniors 20-23,125,Maksim Nechaev,,118,,240,,240,B,1
 M,Multi-ply,Pro Open,125,Maksim Nechaev,,118,,240,,240,B,2
 M,Multi-ply,Pro Open,125,Vasilij Omelchenko,,124.95,,290,,290,B,1
 F,Raw,Amateur Teen 16-17,48,Tatjana Alekseeva,,45.5,,35,,35,B,1
 F,Raw,Amateur Open,48,Natalja Bulgak,,47.15,,47.5,,47.5,B,1
-F,Raw,Amateur Junior 20-23,48,Ekaterina Kozlova,,47.75,,50,,50,B,1
-F,Raw,Amateur Master 50-54,52,Irina Gerasimova,,48.5,,45,,45,B,1
+F,Raw,Amateur Juniors 20-23,48,Ekaterina Kozlova,,47.75,,50,,50,B,1
+F,Raw,Amateur Masters 50-54,52,Irina Gerasimova,,48.5,,45,,45,B,1
 F,Raw,Amateur Open,52,Irina Gerasimova,,48.5,,45,,45,B,3
 F,Raw,Amateur Open,52,Natalja Melnikova,,51.55,,47.5,,47.5,B,2
-F,Raw,Amateur Master 40-44,52,Elena Diss,,50.75,,50,,50,B,1
+F,Raw,Amateur Masters 40-44,52,Elena Diss,,50.75,,50,,50,B,1
 F,Raw,Amateur Open,52,Anna Galkina,,50.8,,65,,65,B,1
-F,Raw,Amateur Master 45-49,56,Nonna Starostina,,54.75,,40,,40,B,2
+F,Raw,Amateur Masters 45-49,56,Nonna Starostina,,54.75,,40,,40,B,2
 F,Raw,Amateur Teen 14-15,56,Uljana Lukjanenko,,53.3,,42.5,,42.5,B,1
-F,Raw,Amateur Master 45-49,56,Elena Belova,,54.8,,45,,45,B,1
+F,Raw,Amateur Masters 45-49,56,Elena Belova,,54.8,,45,,45,B,1
 F,Raw,Amateur Open,56,Anastasija Astapenkova,,54.95,,52.5,,52.5,B,2
-F,Raw,Amateur Junior 20-23,56,Veronika Jarockaja,,54,,55,,55,B,1
+F,Raw,Amateur Juniors 20-23,56,Veronika Jarockaja,,54,,55,,55,B,1
 F,Raw,Amateur Open,56,Natalja Konovalova,,55.35,,122.5,,122.5,B,1
 F,Raw,Amateur Open,60,Natalja Kortukova,,56.85,,47.5,,47.5,B,1
-F,Raw,Amateur Junior 20-23,60,Alena Prosunchenko,,58.3,,65,,65,B,1
-F,Raw,Amateur Master 40-44,67.5,Irina Vysockaja,,65.7,,52.5,,52.5,B,1
+F,Raw,Amateur Juniors 20-23,60,Alena Prosunchenko,,58.3,,65,,65,B,1
+F,Raw,Amateur Masters 40-44,67.5,Irina Vysockaja,,65.7,,52.5,,52.5,B,1
 F,Raw,Amateur Teen 16-17,67.5,Viktorija Likochenko,,63.8,,55,,55,B,1
-F,Raw,Amateur Junior 20-23,75,Valentina Evsjukova,,72.75,,65,,65,B,1
+F,Raw,Amateur Juniors 20-23,75,Valentina Evsjukova,,72.75,,65,,65,B,1
 F,Raw,Amateur Open,75,Irina Panina,,71.65,,70,,70,B,2
 F,Raw,Amateur Open,75,Anna Slobodchikova,,73.75,,90,,90,B,1
 F,Raw,Amateur Open,100,Ekaterina Antuh,,92,,40,,40,B,1
 F,Raw,Amateur Teen 14-15,100,Ekaterina Antuh,,92,,40,,40,B,1
-F,Raw,Amateur Master 40-44,110,Elena Skobelkina,,105.05,,87.5,,87.5,B,1
+F,Raw,Amateur Masters 40-44,110,Elena Skobelkina,,105.05,,87.5,,87.5,B,1
 F,Raw,Amateur Open,110,Elena Skobelkina,,105.05,,87.5,,87.5,B,1
 M,Raw,Amateur Youth,52,Sergej Synkov,13,49.7,,75,,75,B,1
-M,Raw,Amateur Junior 20-23,60,Konstantin Djatlov,,58.75,,115,,115,B,1
+M,Raw,Amateur Juniors 20-23,60,Konstantin Djatlov,,58.75,,115,,115,B,1
 M,Raw,Amateur Open,67.5,Igor Chehov,,66.5,,115,,115,B,3
 M,Raw,Amateur Open,67.5,Aleksej Abramov,,67.3,,135,,135,B,2
 M,Raw,Amateur Open,67.5,Aleksej Manankov,,67.4,,140,,140,B,1
@@ -286,13 +286,13 @@ M,Raw,Amateur Open,75,Evgenij Zhivoj,,73.4,,142.5,,142.5,B,2
 M,Raw,Amateur Open,75,Husejn Ishmatov,,75,,145,,145,B,1
 M,Raw,Amateur Teen 18-19,82.5,Dmitrij Tarasenko,,76.85,,85,,85,B,1
 M,Raw,Amateur Teen 16-17,82.5,Anton Davydov,,78.55,,95,,95,B,1
-M,Raw,Amateur Junior 20-23,82.5,Sergej Mezheckij,,78.7,,130,,130,B,2
+M,Raw,Amateur Juniors 20-23,82.5,Sergej Mezheckij,,78.7,,130,,130,B,2
 M,Raw,Amateur Open,82.5,Fedor Chalyh,,77.9,,130,,130,B,10
 M,Raw,Amateur Open,82.5,Serezha Volgin,,82.45,,130,,130,B,11
-M,Raw,Amateur Master 45-49,82.5,Vsevolod Sandomirskij,,81.6,,140,,140,B,1
+M,Raw,Amateur Masters 45-49,82.5,Vsevolod Sandomirskij,,81.6,,140,,140,B,1
 M,Raw,Amateur Open,82.5,Stepan Slobozhanin,,81.1,,140,,140,B,9
 M,Raw,Amateur Open,82.5,Anton Tanakov,,81.3,,147.5,,147.5,B,8
-M,Raw,Amateur Junior 20-23,82.5,Dmitrij Goldenko,,80,,150,,150,B,1
+M,Raw,Amateur Juniors 20-23,82.5,Dmitrij Goldenko,,80,,150,,150,B,1
 M,Raw,Amateur Open,82.5,Denis Simahin,,81.65,,150,,150,B,7
 M,Raw,Amateur Open,82.5,Dmitrij Gerbel,,80.25,,152.5,,152.5,B,6
 M,Raw,Amateur Open,82.5,Vladimir Maljavkin,,79.4,,155,,155,B,4
@@ -301,73 +301,73 @@ M,Raw,Amateur Open,82.5,Evgenij Ritter,,81.25,,162.5,,162.5,B,3
 M,Raw,Amateur Open,82.5,Andrej Chalyj,,82.25,,167.5,,167.5,B,2
 M,Raw,Amateur Open,82.5,Andrej Brazhnik,,77.9,,180,,180,B,1
 M,Raw,Amateur Teen 18-19,90,Evgenij Metlushko,,89.3,,105,,105,B,1
-M,Raw,Amateur Master 60-64,90,Anatolij Pavlenko,,89.6,,112.5,,112.5,B,2
+M,Raw,Amateur Masters 60-64,90,Anatolij Pavlenko,,89.6,,112.5,,112.5,B,2
 M,Raw,Amateur Teen 16-17,90,Ivan Horev,,84.9,,117.5,,117.5,B,1
-M,Raw,Amateur Master 50-54,90,Aleksandr Kjubbar,,89.05,,120,,120,B,3
-M,Raw,Amateur Master 60-64,90,Aleksadr Razmahnin,,85.45,,122.5,,122.5,B,1
-M,Raw,Amateur Master 50-54,90,Nikolaj Kuznecov,,88.35,,125,,125,B,2
+M,Raw,Amateur Masters 50-54,90,Aleksandr Kjubbar,,89.05,,120,,120,B,3
+M,Raw,Amateur Masters 60-64,90,Aleksadr Razmahnin,,85.45,,122.5,,122.5,B,1
+M,Raw,Amateur Masters 50-54,90,Nikolaj Kuznecov,,88.35,,125,,125,B,2
 M,Raw,Amateur Open,90,Ivan Dikun,,88.25,,125,,125,B,9
 M,Raw,Amateur Open,90,Roman Shabaev,,83.7,,127.5,,127.5,B,8
-M,Raw,Amateur Junior 20-23,90,Nikita Novozhilov,,83.5,,130,,130,B,1
-M,Raw,Amateur Master 50-54,90,Vladimir Chumakov,,89.35,,130,,130,B,1
+M,Raw,Amateur Juniors 20-23,90,Nikita Novozhilov,,83.5,,130,,130,B,1
+M,Raw,Amateur Masters 50-54,90,Vladimir Chumakov,,89.35,,130,,130,B,1
 M,Raw,Amateur Open,90,Denis Savchenko,,88.4,,130,,130,B,7
 M,Raw,Amateur Open,90,Sergej Lodzhanskij,,87.35,,140,,140,B,4
 M,Raw,Amateur Open,90,Ivan Eliseev,,87.5,,140,,140,B,5
 M,Raw,Amateur Open,90,Dmitrij Poletaev,,87.55,,140,,140,B,6
-M,Raw,Amateur Master 45-49,90,Aleksandr Tjulenev,,88.85,,150,,150,B,1
+M,Raw,Amateur Masters 45-49,90,Aleksandr Tjulenev,,88.85,,150,,150,B,1
 M,Raw,Amateur Open,90,Stanislav Pavlov,,89.8,,155,,155,B,3
 M,Raw,Amateur Open,90,Artem Lukjanov,,88.8,,160,,160,B,2
 M,Raw,Amateur Open,90,Egor Pahomchik,,87.6,,172.5,,172.5,B,1
-M,Raw,Amateur Master 40-44,100,Sergej Nikolaev,,96.6,,,,,B,DQ
+M,Raw,Amateur Masters 40-44,100,Sergej Nikolaev,,96.6,,,,,B,DQ
 M,Raw,Amateur Open,100,Aleksandr Egorov,,95.85,,,,,B,DQ
 M,Raw,Amateur Open,100,Sergej Nikolaev,,96.6,,,,,B,DQ
 M,Raw,Amateur Open,100,Ruslan Holmatov,,97.2,,,,,B,DQ
 M,Raw,Amateur Open,100,Sergej Petrov,,98.6,,,,,B,DQ
-M,Raw,Amateur Junior 20-23,100,Dmitrij Podchasov,,97.1,,120,,120,B,4
-M,Raw,Amateur Master 55-59,100,Vjacheslav Nikolaev,,96.35,,125,,125,B,1
+M,Raw,Amateur Juniors 20-23,100,Dmitrij Podchasov,,97.1,,120,,120,B,4
+M,Raw,Amateur Masters 55-59,100,Vjacheslav Nikolaev,,96.35,,125,,125,B,1
 M,Raw,Amateur Open,100,Arkadij Drobchik,,93.8,,125,,125,B,11
 M,Raw,Amateur Open,100,Ilja Somov,,99.2,,140,,140,B,10
-M,Raw,Amateur Junior 20-23,100,Sergej Tkachenko,,96.35,,142.5,,142.5,B,3
+M,Raw,Amateur Juniors 20-23,100,Sergej Tkachenko,,96.35,,142.5,,142.5,B,3
 M,Raw,Amateur Open,100,Ivan Sipachev,,97.05,,142.5,,142.5,B,9
 M,Raw,Amateur Teen 18-19,100,Ruslan Bajramali,,98.8,,142.5,,142.5,B,1
-M,Raw,Amateur Master 40-44,100,Aleksandr Feofanov,,96.7,,145,,145,B,2
-M,Raw,Amateur Junior 20-23,100,Aleksandr Serdjukov,,98.7,,152.5,,152.5,B,2
-M,Raw,Amateur Master 60-64,100,Vladimir Vizgin,,94,,152.5,,152.5,B,1
+M,Raw,Amateur Masters 40-44,100,Aleksandr Feofanov,,96.7,,145,,145,B,2
+M,Raw,Amateur Juniors 20-23,100,Aleksandr Serdjukov,,98.7,,152.5,,152.5,B,2
+M,Raw,Amateur Masters 60-64,100,Vladimir Vizgin,,94,,152.5,,152.5,B,1
 M,Raw,Amateur Open,100,Denis Frolov,,95.25,,152.5,,152.5,B,8
 M,Raw,Amateur Open,100,Roman Suvorov,,97.7,,155,,155,B,7
-M,Raw,Amateur Master 40-44,100,Aleksandr Grjaznov,,94.9,,160,,160,B,1
+M,Raw,Amateur Masters 40-44,100,Aleksandr Grjaznov,,94.9,,160,,160,B,1
 M,Raw,Amateur Open,100,Ilja Somov,,99.2,,160,,160,B,6
 M,Raw,Amateur Open,100,Roman Haluev,,98.85,,162.5,,162.5,B,5
 M,Raw,Amateur Open,100,Sergej Voroncov,,92.25,,170,,170,B,3
 M,Raw,Amateur Open,100,Sergej Kolmychkov,,99.7,,170,,170,B,4
 M,Raw,Amateur Open,100,Sergej Gerber,,99.3,,175,,175,B,2
-M,Raw,Amateur Junior 20-23,100,Dmitrij Gerbel,,94.75,,187.5,,187.5,B,1
+M,Raw,Amateur Juniors 20-23,100,Dmitrij Gerbel,,94.75,,187.5,,187.5,B,1
 M,Raw,Amateur Open,100,Fedor Alekseev,,99.65,,187.5,,187.5,B,1
 M,Raw,Amateur Open,110,Nikita Mirsaev,,105.8,,150,,150,B,6
 M,Raw,Amateur Open,110,Mihail Ovsjannikov,,106.3,,152.5,,152.5,B,5
-M,Raw,Amateur Junior 20-23,110,Maksim Lamanov,,101.05,,155,,155,B,1
+M,Raw,Amateur Juniors 20-23,110,Maksim Lamanov,,101.05,,155,,155,B,1
 M,Raw,Amateur Open,110,Evgenij Mizin,,108.5,,162.5,,162.5,B,4
-M,Raw,Amateur Master 40-44,110,Sergej Markov,,107.15,,167.5,,167.5,B,2
+M,Raw,Amateur Masters 40-44,110,Sergej Markov,,107.15,,167.5,,167.5,B,2
 M,Raw,Amateur Open,110,Sergej Babin,,106.1,,167.5,,167.5,B,3
-M,Raw,Amateur Master 40-44,110,Evgenij Antuh,,106.9,,177.5,,177.5,B,1
+M,Raw,Amateur Masters 40-44,110,Evgenij Antuh,,106.9,,177.5,,177.5,B,1
 M,Raw,Amateur Open,110,Evgenij Antuh,,106.9,,177.5,,177.5,B,2
 M,Raw,Amateur Open,110,Maksim Starosvetskij,,107,,195,,195,B,1
 M,Raw,Amateur Open,125,Leonid Shevelkov,,116.55,,,,,B,DQ
-M,Raw,Amateur Master 50-54,125,Aleksandr Alekseenko,,110.2,,160,,160,B,1
+M,Raw,Amateur Masters 50-54,125,Aleksandr Alekseenko,,110.2,,160,,160,B,1
 M,Raw,Amateur Open,125,Aleksandr Alekseenko,,110.2,,160,,160,B,4
 M,Raw,Amateur Open,125,Andrej Ruban,,112,,167.5,,167.5,B,3
 M,Raw,Amateur Open,125,Ruslan Ziganshin,,116.7,,170,,170,B,2
-M,Raw,Amateur Master 40-44,125,Sulejman Musaev,,123,,175,,175,B,1
+M,Raw,Amateur Masters 40-44,125,Sulejman Musaev,,123,,175,,175,B,1
 M,Raw,Amateur Open,125,Leonid Shevelkov,,116.55,,180,,180,B,1
-M,Raw,Amateur Junior 20-23,125,Vladimir Samojlov,,115.85,,192.5,,192.5,B,1
+M,Raw,Amateur Juniors 20-23,125,Vladimir Samojlov,,115.85,,192.5,,192.5,B,1
 M,Raw,Amateur Open,140+,Pavel Filatov,,146.4,,182.5,,182.5,B,1
 F,Raw,Pro Open,56,Tatjana Lazareva,,55.9,,60,,60,B,1
 F,Raw,Pro Open,60,Natalja Shelest,,59.55,,75,,75,B,1
-F,Raw,Pro Junior 20-23,82.5,Olga Gerasimjuk,,78.15,,92.5,,92.5,B,1
+F,Raw,Pro Juniors 20-23,82.5,Olga Gerasimjuk,,78.15,,92.5,,92.5,B,1
 M,Raw,Pro Open,67.5,Anton Koropec,,64.95,,95,,95,B,1
 M,Raw,Pro Open,75,Artemij Gulin,,73.4,,122.5,,122.5,B,1
-M,Raw,Pro Master 40-44,82.5,Aleksej Usmanov,,82.1,,120,,120,B,1
-M,Raw,Pro Master 55-59,82.5,Aleksej Korobov,,81.25,,130,,130,B,1
+M,Raw,Pro Masters 40-44,82.5,Aleksej Usmanov,,82.1,,120,,120,B,1
+M,Raw,Pro Masters 55-59,82.5,Aleksej Korobov,,81.25,,130,,130,B,1
 M,Raw,Pro Open,82.5,Vladimir Krytcev,,81.25,,135,,135,B,4
 M,Raw,Pro Open,82.5,Danila Krasilnikov,,79.55,,147.5,,147.5,B,3
 M,Raw,Pro Open,82.5,Nikolaj Kashevarov,,81.65,,180,,180,B,1
@@ -375,12 +375,12 @@ M,Raw,Pro Open,82.5,Dmitrij Hovanskij,,81.7,,180,,180,B,2
 M,Raw,Pro Open,90,Andrej Kibardin,,87.45,,,,,B,DQ
 M,Raw,Pro Open,90,Anton Cherkashin,,86.85,,122.5,,122.5,B,7
 M,Raw,Pro Open,90,Aleksandr Stashevskij,,88,,130,,130,B,6
-M,Raw,Pro Master 60-64,90,Nikolaj Bachurin,,88,,140,,140,B,1
+M,Raw,Pro Masters 60-64,90,Nikolaj Bachurin,,88,,140,,140,B,1
 M,Raw,Pro Open,90,Andrej Sotnikov,,88.65,,140,,140,B,5
 M,Raw,Pro Open,90,Evgenij Rozbah,,89.1,,165,,165,B,4
 M,Raw,Pro Open,90,Maksim Sagajdak,,90,,170,,170,B,3
 M,Raw,Pro Open,90,Nikolaj Mihalchenko,,90,,182.5,,182.5,B,2
-M,Raw,Pro Master 40-44,90,Andrej Berkovich,,88.7,,185,,185,B,1
+M,Raw,Pro Masters 40-44,90,Andrej Berkovich,,88.7,,185,,185,B,1
 M,Raw,Pro Open,90,Sergej Panin,,90,,185,,185,B,1
 M,Raw,Pro Open,100,Petr Mihajlov,,99.4,,,,,B,DQ
 M,Raw,Pro Open,100,Pavel Akulov,,96.85,,180,,180,B,6
@@ -388,26 +388,26 @@ M,Raw,Pro Open,100,Ivan Klimenko,,98.05,,180,,180,B,7
 M,Raw,Pro Open,100,Aleksandr Duhinskij,,99.6,,180,,180,B,8
 M,Raw,Pro Open,100,Aleksej Pleshakov,,96.5,,190,,190,B,4
 M,Raw,Pro Open,100,Aleksej Novikov,,98.6,,190,,190,B,5
-M,Raw,Pro Master 45-49,100,Jurij Rubanov,,94.95,,192.5,,192.5,B,1
+M,Raw,Pro Masters 45-49,100,Jurij Rubanov,,94.95,,192.5,,192.5,B,1
 M,Raw,Pro Open,100,Anton Guselnikov,,98.6,,220,,220,B,2
 M,Raw,Pro Open,100,Konstantin Kovazhenko,,99.55,,220,,220,B,3
 M,Raw,Pro Open,100,Ivan Vasjunin,,100,,235,,235,B,1
-M,Raw,Pro Master 50-54,110,Vladimir Panuev,,107.25,,,,,B,DQ
-M,Raw,Pro Master 50-54,110,Mihail Ishhechkin,,107.8,,160,,160,B,1
+M,Raw,Pro Masters 50-54,110,Vladimir Panuev,,107.25,,,,,B,DQ
+M,Raw,Pro Masters 50-54,110,Mihail Ishhechkin,,107.8,,160,,160,B,1
 M,Raw,Pro Open,110,Anton Epihin,,110,,195,,195,B,3
-M,Raw,Pro Master 40-44,110,Vasilij Synkov,,100.15,,210,,210,B,1
+M,Raw,Pro Masters 40-44,110,Vasilij Synkov,,100.15,,210,,210,B,1
 M,Raw,Pro Open,110,Kirill Ignatev,,105.3,,210,,210,B,2
 M,Raw,Pro Open,110,Vitalij Vasilkov,,104,,232.5,,232.5,B,1
 M,Raw,Pro Open,125,Sergej Seliverstov,,112.7,,130,,130,B,2
-M,Raw,Pro Master 40-44,125,Mihail Batukov,,112.15,,162.5,,162.5,B,1
+M,Raw,Pro Masters 40-44,125,Mihail Batukov,,112.15,,162.5,,162.5,B,1
 M,Raw,Pro Open,125,Vasilij Omelchenko,,124.95,,242.5,,242.5,B,1
 F,Raw,Amateur Teen 18-19,44,Anna Pomelova,,43.8,,,110,110,D,1
 F,Raw,Amateur Open,44,Irina Efremova,,42.65,,,105,105,D,1
 F,Raw,Amateur Teen 18-19,44,Samira Kazymova,,44,,,105,105,D,2
 F,Raw,Amateur Open,48,Cyregma Cyrenova,,47.35,,,125,125,D,1
 F,Raw,Amateur Open,48,Tatjana Bannova,,48,,,95,95,D,2
-F,Raw,Amateur Master 45-49,52,Galina Elchina,,50.85,,,90,90,D,1
-F,Raw,Amateur Junior 20-23,56,Irina Molostova,,56,,,150,150,D,1
+F,Raw,Amateur Masters 45-49,52,Galina Elchina,,50.85,,,90,90,D,1
+F,Raw,Amateur Juniors 20-23,56,Irina Molostova,,56,,,150,150,D,1
 F,Raw,Amateur Open,56,Irina Molostova,,56,,,150,150,D,1
 F,Raw,Amateur Open,56,Ekaterina Pushkareva,,55.2,,,125,125,D,2
 F,Raw,Amateur Open,56,Julija Dubrovina,,56,,,122.5,122.5,D,3
@@ -415,43 +415,43 @@ F,Raw,Amateur Open,60,Ekaterina Kuzmicheva,,59.9,,,180,180,D,1
 F,Raw,Amateur Teen 18-19,60,Ekaterina Kuzmicheva,,59.9,,,180,180,D,1
 F,Raw,Amateur Open,60,Ekaterina Koshkareva,,60,,,137.5,137.5,D,2
 F,Raw,Amateur Open,60,Saida Jegamova,,56.85,,,105,105,D,3
-F,Raw,Amateur Junior 20-23,67.5,Ekaterina Kozlova,,66.8,,,130,130,D,1
+F,Raw,Amateur Juniors 20-23,67.5,Ekaterina Kozlova,,66.8,,,130,130,D,1
 F,Raw,Amateur Open,67.5,Polina Ivanova,,64.45,,,130,130,D,1
-F,Raw,Amateur Master 40-44,67.5,Anna Sologubova,,65.2,,,105,105,D,1
+F,Raw,Amateur Masters 40-44,67.5,Anna Sologubova,,65.2,,,105,105,D,1
 F,Raw,Amateur Open,67.5,Olga Glamazdina,,62.95,,,105,105,D,2
 F,Raw,Amateur Open,67.5,Anna Sologubova,,65.2,,,105,105,D,3
 F,Raw,Amateur Open,75,Irina Panina,,71.15,,,132.5,132.5,D,1
-F,Raw,Amateur Junior 20-23,75,Valerija Vinogradova,,69.9,,,120,120,D,1
+F,Raw,Amateur Juniors 20-23,75,Valerija Vinogradova,,69.9,,,120,120,D,1
 M,Raw,Amateur Open,67.5,Andrej Kolbin,,65.65,,,155,155,D,1
 M,Raw,Amateur Open,75,Andrej Shuba,,74.25,,,235,235,D,1
 M,Raw,Amateur Teen 16-17,75,Vladislav Zhigal'cov,,72.95,,,220,220,D,1
-M,Raw,Amateur Junior 20-23,75,Orzu Shokarimov,,75,,,205,205,D,1
+M,Raw,Amateur Juniors 20-23,75,Orzu Shokarimov,,75,,,205,205,D,1
 M,Raw,Amateur Teen 16-17,75,Sergej Pnev,,71.75,,,205,205,D,2
 M,Raw,Amateur Teen 18-19,75,Dmitrij Taratorkin,,74.65,,,195,195,D,1
 M,Raw,Amateur Open,82.5,Egor Medvedev,,82.5,,,217.5,217.5,D,1
-M,Raw,Amateur Master 55-59,82.5,Andrej Arsenov,,81.9,,,200,200,D,1
-M,Raw,Amateur Junior 20-23,90,Anton Biryukov,,89.2,,,305,305,D,1
+M,Raw,Amateur Masters 55-59,82.5,Andrej Arsenov,,81.9,,,200,200,D,1
+M,Raw,Amateur Juniors 20-23,90,Anton Biryukov,,89.2,,,305,305,D,1
 M,Raw,Amateur Open,90,Anton Biryukov,,89.2,,,305,305,D,1
-M,Raw,Amateur Junior 20-23,90,Vladislav Filipovich,,90,,,295,295,D,2
+M,Raw,Amateur Juniors 20-23,90,Vladislav Filipovich,,90,,,295,295,D,2
 M,Raw,Amateur Open,90,Vladislav Filipovich,,90,,,295,295,D,2
-M,Raw,Amateur Junior 20-23,90,Ignat Salnikov,,89.1,,,245,245,D,3
+M,Raw,Amateur Juniors 20-23,90,Ignat Salnikov,,89.1,,,245,245,D,3
 M,Raw,Amateur Open,90,Grigorij Agarkov,,89.7,,,232.5,232.5,D,3
 M,Raw,Amateur Open,90,Evgenij Cukanov,,88.95,,,230,230,D,4
 M,Raw,Amateur Open,90,Andrej Vereshhagin,,89.45,,,217.5,217.5,D,5
 M,Raw,Amateur Open,90,Mihail Rybanin,,87.55,,,210,210,D,7
-M,Raw,Amateur Junior 20-23,90,Sergey Podyachev,,87.4,,,210,210,D,4
+M,Raw,Amateur Juniors 20-23,90,Sergey Podyachev,,87.4,,,210,210,D,4
 M,Raw,Amateur Open,90,Sergey Podyachev,,87.4,,,210,210,D,6
-M,Raw,Amateur Master 50-54,90,Aleksandr Kjubbar,,89.3,,,200,200,D,1
-M,Raw,Amateur Master 65-69,90,Nikolay Bachurin,,87.8,,,200,200,D,1
+M,Raw,Amateur Masters 50-54,90,Aleksandr Kjubbar,,89.3,,,200,200,D,1
+M,Raw,Amateur Masters 65-69,90,Nikolay Bachurin,,87.8,,,200,200,D,1
 M,Raw,Amateur Open,90,Ivan Belkin,,88.2,,,185,185,D,8
-M,Raw,Amateur Master 55-59,90,Nikolaj Efanov,,88.8,,,180,180,D,1
+M,Raw,Amateur Masters 55-59,90,Nikolaj Efanov,,88.8,,,180,180,D,1
 M,Raw,Amateur Open,90,Vladimir Cherepanov,,88.65,,,,,D,DQ
-M,Raw,Amateur Junior 20-23,100,Egor Musienko,,97.95,,,342.5,342.5,D,1
+M,Raw,Amateur Juniors 20-23,100,Egor Musienko,,97.95,,,342.5,342.5,D,1
 M,Raw,Amateur Open,100,Egor Musienko,,97.95,,,342.5,342.5,D,1
 M,Raw,Amateur Open,100,Evgenij Zajcev,,98.3,,,270.02,270.02,D,2
 M,Raw,Amateur Open,100,Arkadij Drobchik,,94.9,,,220,220,D,3
-M,Raw,Amateur Junior 20-23,100,Dmirty Podchasov,,97.1,,,190,190,D,2
-M,Raw,Amateur Master 50-54,110,Vladimir Panuev,,106.25,,,230,230,D,1
+M,Raw,Amateur Juniors 20-23,100,Dmirty Podchasov,,97.1,,,190,190,D,2
+M,Raw,Amateur Masters 50-54,110,Vladimir Panuev,,106.25,,,230,230,D,1
 M,Raw,Amateur Open,125,Sergey Semakin,,120.05,,,355,355,D,1
 M,Raw,Amateur Open,125,Leonid Shevelkov,,116.65,,,240,240,D,2
 M,Raw,Amateur Teen 16-17,140+,Aleksandr Kunov,,151.85,,,200,200,D,1

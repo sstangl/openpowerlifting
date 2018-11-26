@@ -1,8 +1,8 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Marc Desjardins,QU,103.2,105,Open,250.0,185.0,272.5,707.5,Single-ply,1
-SBD,M,Rémy Dufour,QU,112.1,120,Master 2,230.0,212.5,240.0,682.5,Single-ply,1
-SBD,M,Étienne Després,QU,63.5,66,Sub-Junior,115.0,82.5,160.0,357.5,Raw,1
-SBD,M,Tom-Alexandre Leroux-Moreau,QU,45,53,Sub-Junior,55.0,32.5,72.5,160.0,Raw,1
+SBD,M,Rémy Dufour,QU,112.1,120,Masters 2,230.0,212.5,240.0,682.5,Single-ply,1
+SBD,M,Étienne Després,QU,63.5,66,Sub-Juniors,115.0,82.5,160.0,357.5,Raw,1
+SBD,M,Tom-Alexandre Leroux-Moreau,QU,45,53,Sub-Juniors,55.0,32.5,72.5,160.0,Raw,1
 SBD,M,Martin Lepage,QU,90.7,93,Open,185.0,105.0,225.0,515.0,Raw,4
 SBD,M,Joshua Arlusamy,QU,90.6,93,Open,180.0,120.0,230.0,530.0,Raw,3
 SBD,M,Guillaume Lamoureux,QU,88.2,93,Open,190.0,140.0,220.0,550.0,Raw,2
@@ -25,27 +25,27 @@ SBD,M,Maxime Faucher,QU,112.8,120,Open,250.0,147.5,255.0,652.5,Raw,2
 SBD,M,Christian Théorêt,QU,114.8,120,Open,235.0,140.0,240.0,615.0,Raw,3
 SBD,M,Olivier de Launière,QU,104.1,105,Open,255.0,165.0,275.0,695.0,Raw,1
 SBD,M,Jason Caouette,QU,100.9,105,Open,187.5,105.0,200.0,492.5,Raw,2
-SBD,F,Chantal Leroux,QU,70.7,72,Master 1,120.0,55.0,140.0,315.0,Raw,1
-SBD,M,Claude Dallaire,QU,91.4,93,Master 2,207.5,120.0,280.0,607.5,Raw,1
-SBD,F,Odette Michaud,QU,40.7,47,Master 2,87.5,37.5,127.5,252.5,Raw,1
-SBD,M,Éric Monette,QU,73,74,Master 1,145.0,102.5,192.5,440.0,Raw,1
-SBD,M,Steve Dubé,QU,116.1,120,Master 1,190.0,142.5,232.5,565.0,Raw,1
-SBD,M,Louis-Alexis Gratton,QU,88.2,93,Junior,200.0,137.5,227.5,565.0,Raw,1
-SBD,M,Hugo Laliberté,QU,80.2,83,Junior,162.5,102.5,205.0,470.0,Raw,2
-SBD,M,Francis Martineau,QU,81.8,83,Junior,157.5,125.0,197.5,480.0,Raw,1
-SBD,M,Maxence Hamel,QU,73.3,74,Junior,125.0,107.5,155.0,387.5,Raw,2
-SBD,M,Kelvin Franco,QU,69.9,74,Junior,120.0,102.5,180.0,402.5,Raw,1
-SBD,M,Maude Tremblay,QU,65.9,66,Junior,87.5,45.0,115.0,247.5,Raw,2
-SBD,M,Jessy Ouellette-Hulmann,QU,63.6,66,Junior,110.0,55.0,135.0,300.0,Raw,1
-SBD,F,Leah Mamane,QU,55.3,57,Junior,100.0,72.5,105.0,277.5,Raw,1
-SBD,F,Catherine Toupin-Laroche,QU,55.1,57,Junior,80.0,42.5,100.0,222.5,Raw,2
-SBD,M,Félix Guérin,QU,96.9,105,Junior,190.0,132.5,215.0,537.5,Raw,1
-SBD,M,Carl Majdalani,QU,95,105,Junior,172.5,107.5,230.0,510.0,Raw,2
+SBD,F,Chantal Leroux,QU,70.7,72,Masters 1,120.0,55.0,140.0,315.0,Raw,1
+SBD,M,Claude Dallaire,QU,91.4,93,Masters 2,207.5,120.0,280.0,607.5,Raw,1
+SBD,F,Odette Michaud,QU,40.7,47,Masters 2,87.5,37.5,127.5,252.5,Raw,1
+SBD,M,Éric Monette,QU,73,74,Masters 1,145.0,102.5,192.5,440.0,Raw,1
+SBD,M,Steve Dubé,QU,116.1,120,Masters 1,190.0,142.5,232.5,565.0,Raw,1
+SBD,M,Louis-Alexis Gratton,QU,88.2,93,Juniors,200.0,137.5,227.5,565.0,Raw,1
+SBD,M,Hugo Laliberté,QU,80.2,83,Juniors,162.5,102.5,205.0,470.0,Raw,2
+SBD,M,Francis Martineau,QU,81.8,83,Juniors,157.5,125.0,197.5,480.0,Raw,1
+SBD,M,Maxence Hamel,QU,73.3,74,Juniors,125.0,107.5,155.0,387.5,Raw,2
+SBD,M,Kelvin Franco,QU,69.9,74,Juniors,120.0,102.5,180.0,402.5,Raw,1
+SBD,M,Maude Tremblay,QU,65.9,66,Juniors,87.5,45.0,115.0,247.5,Raw,2
+SBD,M,Jessy Ouellette-Hulmann,QU,63.6,66,Juniors,110.0,55.0,135.0,300.0,Raw,1
+SBD,F,Leah Mamane,QU,55.3,57,Juniors,100.0,72.5,105.0,277.5,Raw,1
+SBD,F,Catherine Toupin-Laroche,QU,55.1,57,Juniors,80.0,42.5,100.0,222.5,Raw,2
+SBD,M,Félix Guérin,QU,96.9,105,Juniors,190.0,132.5,215.0,537.5,Raw,1
+SBD,M,Carl Majdalani,QU,95,105,Juniors,172.5,107.5,230.0,510.0,Raw,2
 B,M,Joanick Boilard,QU,92.2,93,Open,,217.5,,217.5,Single-ply,1
 B,M,Mahdi Altalibi,QU,72.4,74,Open,,140.0,,140.0,Single-ply,1
-B,M,Rémy Dufour,QU,112.1,120,Master 2,,210.0,,210.0,Single-ply,1
+B,M,Rémy Dufour,QU,112.1,120,Masters 2,,210.0,,210.0,Single-ply,1
 B,M,Alexandre Babin,QU,99.6,105,Open,,150.0,,150.0,Raw,1
-B,M,Yves Dubois,QU,86.4,93,Master 3,,137.5,,137.5,Raw,1
-B,M,Lee Levac,QU,92.3,93,Master 1,,165.0,,165.0,Raw,1
-B,M,Alexandre Ritcher,QU,92.7,93,Junior,,187.5,,187.5,Raw,1
-B,M,Marc Harvey,QU,108.5,120,Junior,,205.0,,205.0,Raw,1
+B,M,Yves Dubois,QU,86.4,93,Masters 3,,137.5,,137.5,Raw,1
+B,M,Lee Levac,QU,92.3,93,Masters 1,,165.0,,165.0,Raw,1
+B,M,Alexandre Ritcher,QU,92.7,93,Juniors,,187.5,,187.5,Raw,1
+B,M,Marc Harvey,QU,108.5,120,Juniors,,205.0,,205.0,Raw,1

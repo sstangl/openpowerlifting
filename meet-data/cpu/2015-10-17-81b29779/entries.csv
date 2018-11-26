@@ -1,10 +1,10 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Andrew Bryant,BC,82.8,83,Master 1,225.0,175.0,220.0,620.0,Single-ply,1
-SBD,M,Josh Lecher,BC,87.3,93,Sub-Junior,155.0,102.5,210.0,467.5,Raw,1
-SBD,M,Donovan Petitclerc,BC,76.1,83,Sub-Junior,147.5,87.5,185.0,420.0,Raw,2
-SBD,M,Bowen Zheng,BC,82.7,83,Sub-Junior,167.5,112.5,222.5,502.5,Raw,1
-SBD,M,Curtis Young,BC,70.7,74,Sub-Junior,175.0,102.5,175.0,452.5,Raw,1
-SBD,F,Tessa Sanders,BC,54.6,57,Sub-Junior,87.5,47.5,117.5,252.5,Raw,1
+SBD,M,Andrew Bryant,BC,82.8,83,Masters 1,225.0,175.0,220.0,620.0,Single-ply,1
+SBD,M,Josh Lecher,BC,87.3,93,Sub-Juniors,155.0,102.5,210.0,467.5,Raw,1
+SBD,M,Donovan Petitclerc,BC,76.1,83,Sub-Juniors,147.5,87.5,185.0,420.0,Raw,2
+SBD,M,Bowen Zheng,BC,82.7,83,Sub-Juniors,167.5,112.5,222.5,502.5,Raw,1
+SBD,M,Curtis Young,BC,70.7,74,Sub-Juniors,175.0,102.5,175.0,452.5,Raw,1
+SBD,F,Tessa Sanders,BC,54.6,57,Sub-Juniors,87.5,47.5,117.5,252.5,Raw,1
 SBD,M,Stephen Smith,BC,92.2,93,Open,160.0,85.0,187.5,432.5,Raw,8
 SBD,M,Ryan Fisher,BC,92.5,93,Open,217.5,112.5,230.0,560.0,Raw,4
 SBD,M,Johnson Shen,BC,92.0,93,Open,182.5,147.5,227.5,557.5,Raw,5
@@ -46,38 +46,38 @@ SBD,M,David Kang,BC,104.2,105,Open,245.0,135.0,242.5,622.5,Raw,2
 SBD,M,Chris Beaulieu,BC,103.2,105,Open,220.0,150.0,245.0,615.0,Raw,4
 SBD,M,Cailin Mackenzie,BC,99.5,105,Open,205.0,135.0,265.0,605.0,Raw,5
 SBD,M,Abraham Schapansky,BC,104.3,105,Open,227.5,150.0,245.0,622.5,Raw,3
-SBD,F,Debbie Noseworthy,BC,62.9,63,Master 2,67.5,35.0,85.0,187.5,Raw,1
-SBD,M,Patrick Selby,BC,102.3,105,Master 2,177.5,127.5,260.0,565.0,Raw,1
-SBD,M,Mark Rowe,BC,89.1,93,Master 1,177.5,112.5,182.5,472.5,Raw,1
-SBD,M,Lance Westfall,BC,90.0,93,Master 1,135.0,110.0,185.0,430.0,Raw,2
-SBD,M,Michael Danis,BC,81.7,83,Master 1,190.0,137.5,235.0,562.5,Raw,1
-SBD,M,Bill Brown,BC,81.7,83,Master 1,137.5,100.0,180.0,417.5,Raw,2
-SBD,F,Laurie Lehmann-Bernard,BC,66.4,72,Master 1,87.5,62.5,112.5,262.5,Raw,2
-SBD,F,Angela Thompson,BC,70.3,72,Master 1,110.0,60.0,135.0,305.0,Raw,1
-SBD,M,Siegmund Mueller,BC,101.2,105,Master 1,210.0,145.0,225.0,580.0,Raw,1
-SBD,M,Richard Yamaguchi,BC,91.9,93,Junior,175.0,95.0,222.5,492.5,Raw,3
-SBD,M,Jerome Carang,BC,91.0,93,Junior,175.0,127.5,215.0,517.5,Raw,2
-SBD,M,Brent Chapman,BC,90.3,93,Junior,190.0,125.0,220.0,535.0,Raw,1
-SBD,M,Matthew Taylor,BC,81.2,83,Junior,195.0,125.0,207.5,527.5,Raw,2
-SBD,M,Logan Tarasoff,BC,80.3,83,Junior,205.0,115.0,225.0,545.0,Raw,1
-SBD,M,Wesley Ha,BC,70.6,74,Junior,185.0,125.0,215.0,525.0,Raw,2
-SBD,M,Bryce Thomson,BC,73.1,74,Junior,222.5,110.0,240.0,572.5,Raw,1
-SBD,F,Ellen Humenny,BC,71.0,72,Junior,135.5,85.0,150.0,370.5,Raw,1
-SBD,M,Thunder Hortier-Goldstein,BC,64.5,66,Junior,187.5,115.0,197.5,500.0,Raw,1
-SBD,M,Cameron Scott,BC,65.0,66,Junior,140.0,95.0,170.0,405.0,Raw,2
-SBD,F,Jenna Sabino,BC,57.7,63,Junior,105.0,55.0,125.0,285.0,Raw,2
-SBD,F,Ferron Shea,BC,60.9,63,Junior,110.0,65.0,145.0,320.0,Raw,1
-SBD,F,Rachel Anyi,BC,57.0,57,Junior,137.5,75.0,142.5,355.0,Raw,1
-SBD,F,Jesse Kelly,BC,55.4,57,Junior,112.5,75.0,137.5,325.0,Raw,2
-SBD,F,Brittney Ward,BC,52.0,52,Junior,95.0,60.0,122.5,277.5,Raw,1
-SBD,M,Phong Bui,BC,117.8,120,Junior,195.0,142.5,230.0,567.5,Raw,1
-SBD,M,Manbir Binning,BC,113.1,120,Junior,135.0,115.0,185.0,435.0,Raw,3
-SBD,M,Albert Yamaguchi,BC,116.1,120,Junior,185.0,107.5,195.0,487.5,Raw,2
-SBD,M,Gabe Gomez,BC,98.5,105,Junior,245.0,165.0,265.0,675.0,Raw,1
-SBD,M,Edward Lovsin,BC,98.4,105,Junior,187.5,130.0,227.5,545.0,Raw,4
-SBD,M,Connor Visagie,BC,102.1,105,Junior,205.0,120.0,242.5,567.5,Raw,3
-SBD,M,Brodie Burdeny,BC,97.0,105,Junior,225.0,105.0,247.5,577.5,Raw,2
-B,M,Gable Wang,BC,73.2,74,Master 2,,115.0,,115.0,Single-ply,1
+SBD,F,Debbie Noseworthy,BC,62.9,63,Masters 2,67.5,35.0,85.0,187.5,Raw,1
+SBD,M,Patrick Selby,BC,102.3,105,Masters 2,177.5,127.5,260.0,565.0,Raw,1
+SBD,M,Mark Rowe,BC,89.1,93,Masters 1,177.5,112.5,182.5,472.5,Raw,1
+SBD,M,Lance Westfall,BC,90.0,93,Masters 1,135.0,110.0,185.0,430.0,Raw,2
+SBD,M,Michael Danis,BC,81.7,83,Masters 1,190.0,137.5,235.0,562.5,Raw,1
+SBD,M,Bill Brown,BC,81.7,83,Masters 1,137.5,100.0,180.0,417.5,Raw,2
+SBD,F,Laurie Lehmann-Bernard,BC,66.4,72,Masters 1,87.5,62.5,112.5,262.5,Raw,2
+SBD,F,Angela Thompson,BC,70.3,72,Masters 1,110.0,60.0,135.0,305.0,Raw,1
+SBD,M,Siegmund Mueller,BC,101.2,105,Masters 1,210.0,145.0,225.0,580.0,Raw,1
+SBD,M,Richard Yamaguchi,BC,91.9,93,Juniors,175.0,95.0,222.5,492.5,Raw,3
+SBD,M,Jerome Carang,BC,91.0,93,Juniors,175.0,127.5,215.0,517.5,Raw,2
+SBD,M,Brent Chapman,BC,90.3,93,Juniors,190.0,125.0,220.0,535.0,Raw,1
+SBD,M,Matthew Taylor,BC,81.2,83,Juniors,195.0,125.0,207.5,527.5,Raw,2
+SBD,M,Logan Tarasoff,BC,80.3,83,Juniors,205.0,115.0,225.0,545.0,Raw,1
+SBD,M,Wesley Ha,BC,70.6,74,Juniors,185.0,125.0,215.0,525.0,Raw,2
+SBD,M,Bryce Thomson,BC,73.1,74,Juniors,222.5,110.0,240.0,572.5,Raw,1
+SBD,F,Ellen Humenny,BC,71.0,72,Juniors,135.5,85.0,150.0,370.5,Raw,1
+SBD,M,Thunder Hortier-Goldstein,BC,64.5,66,Juniors,187.5,115.0,197.5,500.0,Raw,1
+SBD,M,Cameron Scott,BC,65.0,66,Juniors,140.0,95.0,170.0,405.0,Raw,2
+SBD,F,Jenna Sabino,BC,57.7,63,Juniors,105.0,55.0,125.0,285.0,Raw,2
+SBD,F,Ferron Shea,BC,60.9,63,Juniors,110.0,65.0,145.0,320.0,Raw,1
+SBD,F,Rachel Anyi,BC,57.0,57,Juniors,137.5,75.0,142.5,355.0,Raw,1
+SBD,F,Jesse Kelly,BC,55.4,57,Juniors,112.5,75.0,137.5,325.0,Raw,2
+SBD,F,Brittney Ward,BC,52.0,52,Juniors,95.0,60.0,122.5,277.5,Raw,1
+SBD,M,Phong Bui,BC,117.8,120,Juniors,195.0,142.5,230.0,567.5,Raw,1
+SBD,M,Manbir Binning,BC,113.1,120,Juniors,135.0,115.0,185.0,435.0,Raw,3
+SBD,M,Albert Yamaguchi,BC,116.1,120,Juniors,185.0,107.5,195.0,487.5,Raw,2
+SBD,M,Gabe Gomez,BC,98.5,105,Juniors,245.0,165.0,265.0,675.0,Raw,1
+SBD,M,Edward Lovsin,BC,98.4,105,Juniors,187.5,130.0,227.5,545.0,Raw,4
+SBD,M,Connor Visagie,BC,102.1,105,Juniors,205.0,120.0,242.5,567.5,Raw,3
+SBD,M,Brodie Burdeny,BC,97.0,105,Juniors,225.0,105.0,247.5,577.5,Raw,2
+B,M,Gable Wang,BC,73.2,74,Masters 2,,115.0,,115.0,Single-ply,1
 B,M,Ty Ku,BC,88.4,93,Open,,120.0,,120.0,Raw,1
 B,M,Ben Poss,BC,92.9,93,Open,,115.0,,115.0,Raw,2
 B,M,Graham Chan,BC,65.2,66,Open,,130.0,,130.0,Raw,1
@@ -87,6 +87,6 @@ B,M,Jason Klaus,BC,119.6,120,Open,,127.5,,127.5,Raw,2
 B,M,Matthew Hilton,BC,103.3,105,Open,,170.0,,170.0,Raw,1
 B,M,Jarret Adam,BC,95.6,105,Open,,132.5,,132.5,Raw,3
 B,M,Douglas Mansell,BC,105.0,105,Open,,145.0,,145.0,Raw,2
-B,M,Steven Reade,BC,86.9,93,Master 1,,162.5,,162.5,Raw,1
-B,M,Jason Viera,BC,80.0,83,Junior,,152.5,,152.5,Raw,1
-B,M,Brian Wang,BC,81.0,83,Junior,,75.0,,75.0,Raw,2
+B,M,Steven Reade,BC,86.9,93,Masters 1,,162.5,,162.5,Raw,1
+B,M,Jason Viera,BC,80.0,83,Juniors,,152.5,,152.5,Raw,1
+B,M,Brian Wang,BC,81.0,83,Juniors,,75.0,,75.0,Raw,2

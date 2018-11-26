@@ -1,11 +1,11 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Brett Clark,BC,67,74,Open,165,90,180,435,Single-ply,1
 SBD,M,John-Wesley Cummings,BC,104.4,105,Open,282.5,235,250,767.5,Single-ply,1
-SBD,F,Patricia Kowal,BC,61.4,63,Master 3,97.5,57.5,112.5,267.5,Single-ply,1
-SBD,M,Pranav Singh,BC,77.9,83,Sub-Junior,172.5,97.5,210,480,Raw,2
-SBD,M,Ewan Barker,BC,82,83,Sub-Junior,175,130,185,490,Raw,1
-SBD,M,Satveer Rai,BC,69.9,74,Sub-Junior,165,113,200,477.5,Raw,1
-SBD,M,Gurpreet Mann,BC,100.9,105,Sub-Junior,157.5,117.5,185,460,Raw,1
+SBD,F,Patricia Kowal,BC,61.4,63,Masters 3,97.5,57.5,112.5,267.5,Single-ply,1
+SBD,M,Pranav Singh,BC,77.9,83,Sub-Juniors,172.5,97.5,210,480,Raw,2
+SBD,M,Ewan Barker,BC,82,83,Sub-Juniors,175,130,185,490,Raw,1
+SBD,M,Satveer Rai,BC,69.9,74,Sub-Juniors,165,113,200,477.5,Raw,1
+SBD,M,Gurpreet Mann,BC,100.9,105,Sub-Juniors,157.5,117.5,185,460,Raw,1
 SBD,M,Shane Kutin,BC,89.5,93,Open,200,138,220,557.5,Raw,3
 SBD,M,Ryan Hunt,BC,91.2,93,Open,160,100,197.5,457.5,Raw,9
 SBD,M,Randy Montano,BC,92.6,93,Open,170,95,170,435,Raw,12
@@ -53,44 +53,44 @@ SBD,M,Kyle Griffith,BC,109.6,120,Open,207.5,167.5,250,625,Raw,2
 SBD,M,Harvir Dhupar,BC,105.9,120,Open,180,135,185,500,Raw,4
 SBD,M,Travis Briere,BC,97.6,105,Open,195,118,215,527.5,Raw,2
 SBD,M,Andrew Greenidge,BC,103,105,Open,232.5,155,265,652.5,Raw,1
-SBD,M,John Quinton,BC,126.1,120+,Master 2,160,140,185,485,Raw,1
-SBD,F,Kerry Schilder,BC,152.7,84+,Master 1,135,77.5,165,377.5,Raw,1
-SBD,F,Mary-Ann Middleton,BC,84,84,Master 1,120,65,147.5,332.5,Raw,1
-SBD,M,Bill Brown,BC,82.3,83,Master 1,160,102.5,170,432.5,Raw,1
-SBD,M,Zehou Wu,BC,89.3,93,Junior,202.5,105,212.5,520,Raw,3
-SBD,M,Judah Michael,BC,90.5,93,Junior,170,133,235,537.5,Raw,1
-SBD,M,Arsham Gill,BC,90,93,Junior,195,120,220,535,Raw,2
-SBD,F,Gurpreet Sangha,BC,76.5,84,Junior,105,45,125,275,Raw,1
-SBD,M,Zachary Shortis,BC,78.7,83,Junior,160,90,202.5,452.5,Raw,3
-SBD,M,Salvatore Balletta,BC,79.8,83,Junior,175,135,235,545,Raw,2
-SBD,M,Matthew Hay,BC,79.1,83,Junior,107.5,87.5,175,370,Raw,5
-SBD,M,Logan Tarasoff,BC,81.8,83,Junior,250.5,137.5,257.5,645.5,Raw,1
-SBD,M,Gurpreet Rai,BC,75.3,83,Junior,132.5,105,182.5,420,Raw,4
-SBD,M,Samuel Poirier,BC,71.8,74,Junior,160,108,192.5,460,Raw,4
-SBD,M,Liam Wharton,BC,71.8,74,Junior,182.5,120,227.5,530,Raw,1
-SBD,M,Kieran Barr,BC,69.5,74,Junior,180,108,190,477.5,Raw,2
-SBD,M,Frankie Law,BC,72.6,74,Junior,160,103,200,462.5,Raw,3
-SBD,F,Rachel Lakey,BC,70.2,72,Junior,97.5,52.5,142.5,292.5,Raw,2
-SBD,F,Jordan Moorhead,BC,69.7,72,Junior,102.5,55,102.5,260,Raw,3
-SBD,F,Jordan Moorhead,BC,69.7,72,Junior,102.5,55,102.5,260,Raw,4
-SBD,F,Jasmine St. Godard,BC,67.5,72,Junior,107.5,55,137.5,300,Raw,1
-SBD,M,Vasyl Frenchko,BC,65.4,66,Junior,175,110,185,470,Raw,1
-SBD,M,Matthew Chan,BC,64.5,66,Junior,160,105,195,460,Raw,2
-SBD,F,Parmpreet Rai,BC,57.1,63,Junior,90,57.5,117.5,265,Raw,2
-SBD,F,Jenna Sabino,BC,59.6,63,Junior,137.5,72.5,155,365,Raw,1
-SBD,F,Xuan Qi Ji,BC,54.7,57,Junior,87.5,40,127.5,255,Raw,1
-SBD,F,Sabina Wu,BC,51.1,52,Junior,120,60,122.5,302.5,Raw,1
-SBD,F,Caitlin Lim,BC,51.7,52,Junior,97.5,40,125,262.5,Raw,2
-SBD,M,Laine Jackart,BC,104.6,105,Junior,192.5,130,242.5,565,Raw,3
-SBD,M,Dayton Westerman,BC,96,105,Junior,185,142.5,257.5,585,Raw,2
-SBD,M,Brent Chapman,BC,97.4,105,Junior,215,147.5,250,612.5,Raw,1
+SBD,M,John Quinton,BC,126.1,120+,Masters 2,160,140,185,485,Raw,1
+SBD,F,Kerry Schilder,BC,152.7,84+,Masters 1,135,77.5,165,377.5,Raw,1
+SBD,F,Mary-Ann Middleton,BC,84,84,Masters 1,120,65,147.5,332.5,Raw,1
+SBD,M,Bill Brown,BC,82.3,83,Masters 1,160,102.5,170,432.5,Raw,1
+SBD,M,Zehou Wu,BC,89.3,93,Juniors,202.5,105,212.5,520,Raw,3
+SBD,M,Judah Michael,BC,90.5,93,Juniors,170,133,235,537.5,Raw,1
+SBD,M,Arsham Gill,BC,90,93,Juniors,195,120,220,535,Raw,2
+SBD,F,Gurpreet Sangha,BC,76.5,84,Juniors,105,45,125,275,Raw,1
+SBD,M,Zachary Shortis,BC,78.7,83,Juniors,160,90,202.5,452.5,Raw,3
+SBD,M,Salvatore Balletta,BC,79.8,83,Juniors,175,135,235,545,Raw,2
+SBD,M,Matthew Hay,BC,79.1,83,Juniors,107.5,87.5,175,370,Raw,5
+SBD,M,Logan Tarasoff,BC,81.8,83,Juniors,250.5,137.5,257.5,645.5,Raw,1
+SBD,M,Gurpreet Rai,BC,75.3,83,Juniors,132.5,105,182.5,420,Raw,4
+SBD,M,Samuel Poirier,BC,71.8,74,Juniors,160,108,192.5,460,Raw,4
+SBD,M,Liam Wharton,BC,71.8,74,Juniors,182.5,120,227.5,530,Raw,1
+SBD,M,Kieran Barr,BC,69.5,74,Juniors,180,108,190,477.5,Raw,2
+SBD,M,Frankie Law,BC,72.6,74,Juniors,160,103,200,462.5,Raw,3
+SBD,F,Rachel Lakey,BC,70.2,72,Juniors,97.5,52.5,142.5,292.5,Raw,2
+SBD,F,Jordan Moorhead,BC,69.7,72,Juniors,102.5,55,102.5,260,Raw,3
+SBD,F,Jordan Moorhead,BC,69.7,72,Juniors,102.5,55,102.5,260,Raw,4
+SBD,F,Jasmine St. Godard,BC,67.5,72,Juniors,107.5,55,137.5,300,Raw,1
+SBD,M,Vasyl Frenchko,BC,65.4,66,Juniors,175,110,185,470,Raw,1
+SBD,M,Matthew Chan,BC,64.5,66,Juniors,160,105,195,460,Raw,2
+SBD,F,Parmpreet Rai,BC,57.1,63,Juniors,90,57.5,117.5,265,Raw,2
+SBD,F,Jenna Sabino,BC,59.6,63,Juniors,137.5,72.5,155,365,Raw,1
+SBD,F,Xuan Qi Ji,BC,54.7,57,Juniors,87.5,40,127.5,255,Raw,1
+SBD,F,Sabina Wu,BC,51.1,52,Juniors,120,60,122.5,302.5,Raw,1
+SBD,F,Caitlin Lim,BC,51.7,52,Juniors,97.5,40,125,262.5,Raw,2
+SBD,M,Laine Jackart,BC,104.6,105,Juniors,192.5,130,242.5,565,Raw,3
+SBD,M,Dayton Westerman,BC,96,105,Juniors,185,142.5,257.5,585,Raw,2
+SBD,M,Brent Chapman,BC,97.4,105,Juniors,215,147.5,250,612.5,Raw,1
 B,M,Cole Thevenot,BC,99.1,105,Open,,202.5,,202.5,Single-ply,1
-B,M,Nivret Pandohal,BC,93,93,Sub-Junior,,105,,105,Raw,1
+B,M,Nivret Pandohal,BC,93,93,Sub-Juniors,,105,,105,Raw,1
 B,M,Julien Durant,BC,64.6,66,Open,,117.5,,117.5,Raw,1
 B,M,Xuan Phong Bui,BC,117.3,120,Open,,145,,145,Raw,1
 B,M,Douglas Mansell,BC,101,105,Open,,135,,135,Raw,1
-B,M,Eric McCooeye,BC,81.9,83,Master 4,,122.5,,122.5,Raw,1
-B,F,Deanna Clark,BC,54.1,57,Master 3,,35,,35,Raw,1
-B,F,Mary-Ann Middleton,BC,84.2,84+,Master 1,,67.5,,67.5,Raw,1
-B,M,Sahil Burns,BC,92,93,Junior,,158,,157.5,Raw,1
-B,M,Kalvir Dhaliwal,BC,107.2,120,Junior,,162.5,,162.5,Raw,1
+B,M,Eric McCooeye,BC,81.9,83,Masters 4,,122.5,,122.5,Raw,1
+B,F,Deanna Clark,BC,54.1,57,Masters 3,,35,,35,Raw,1
+B,F,Mary-Ann Middleton,BC,84.2,84+,Masters 1,,67.5,,67.5,Raw,1
+B,M,Sahil Burns,BC,92,93,Juniors,,158,,157.5,Raw,1
+B,M,Kalvir Dhaliwal,BC,107.2,120,Juniors,,162.5,,162.5,Raw,1

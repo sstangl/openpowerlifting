@@ -1,8 +1,8 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Nicollette Moratori,PA,56,53.7,16,57.5,32.5,102.5,192.5,F,Junior 16-17,Raw,SBD
-1,Kaitlin Herzog,NY,56,54.4,22,97.5,65,142.5,305,F,Junior 20-23,Raw,SBD
-1,Brittney Moratori,PA,60,59.3,18,92.5,42.5,127.5,262.5,F,Junior 18-19,Raw,SBD
-1,Samantha Moratori,PA,67.5,62.6,14,60,27.5,92.5,180,F,Junior 13-15,Raw,SBD
+1,Nicollette Moratori,PA,56,53.7,16,57.5,32.5,102.5,192.5,F,Juniors 16-17,Raw,SBD
+1,Kaitlin Herzog,NY,56,54.4,22,97.5,65,142.5,305,F,Juniors 20-23,Raw,SBD
+1,Brittney Moratori,PA,60,59.3,18,92.5,42.5,127.5,262.5,F,Juniors 18-19,Raw,SBD
+1,Samantha Moratori,PA,67.5,62.6,14,60,27.5,92.5,180,F,Juniors 13-15,Raw,SBD
 1,Patti Coates,PA,52,52,46,110,50,137.5,297.5,F,Open,Raw,SBD
 1,Kaitlin Herzog,NY,56,54.4,22,97.5,65,142.5,305,F,Open,Raw,SBD
 2,Brittany Halili,PA,56,55.4,28,107.5,65,107.5,280,F,Open,Raw,SBD
@@ -15,16 +15,16 @@ G,Jessica Kratz,PA,67.5,65.1,44,127.5,65,182.5,375,F,Open,Raw,SBD
 1,Dana Bannon,PA,82.5,81.1,34,107.5,52.5,112.5,272.5,F,Open,Raw,SBD
 2,Jahaira Roman,NJ,82.5,82,41,82.5,62.5,115,260,F,Open,Raw,SBD
 1,Cassie Haynes,PA,90+,90.2,33,155,77.5,190,422.5,F,Open,Raw,SBD
-1,Nicola Adamchik,PA,67.5,67.1,37,102.5,60,140,302.5,F,Submaster 35-39,Raw,SBD
-2,Marcie Haas,PA,67.5,67.2,38,85,57.5,127.5,270,F,Submaster 35-39,Raw,SBD
-1,Tayreen Partch,NY,90,85.6,37,105,60,125,290,F,Submaster 35-39,Raw,SBD
-1,Patti Coates,PA,52,52,46,110,50,137.5,297.5,F,Master 45-49,Raw,SBD
-G,Jessica Kratz,PA,67.5,65.1,44,127.5,65,182.5,375,F,Master 40-44,Raw,SBD
-1,Ruth Golden,NJ,67.5,64,62,60,45,107.5,212.5,F,Master 60-64,Raw,SBD
-1,Victor Phan,PA,67.5,65.1,23,127.5,97.5,175,400,M,Junior 20-23,Raw,SBD
-1,Vanden Grube,PA,90,88.3,19,235,130,285,650,M,Junior 18-19,Raw,SBD
-DQ,Mark Rosen,NY,110,109.6,21,-180,,,,M,Junior 20-23,Raw,SBD
-1,Zack Carr,PA,125,116.9,19,300,185,287.5,772.5,M,Junior 18-19,Raw,SBD
+1,Nicola Adamchik,PA,67.5,67.1,37,102.5,60,140,302.5,F,Submasters 35-39,Raw,SBD
+2,Marcie Haas,PA,67.5,67.2,38,85,57.5,127.5,270,F,Submasters 35-39,Raw,SBD
+1,Tayreen Partch,NY,90,85.6,37,105,60,125,290,F,Submasters 35-39,Raw,SBD
+1,Patti Coates,PA,52,52,46,110,50,137.5,297.5,F,Masters 45-49,Raw,SBD
+G,Jessica Kratz,PA,67.5,65.1,44,127.5,65,182.5,375,F,Masters 40-44,Raw,SBD
+1,Ruth Golden,NJ,67.5,64,62,60,45,107.5,212.5,F,Masters 60-64,Raw,SBD
+1,Victor Phan,PA,67.5,65.1,23,127.5,97.5,175,400,M,Juniors 20-23,Raw,SBD
+1,Vanden Grube,PA,90,88.3,19,235,130,285,650,M,Juniors 18-19,Raw,SBD
+DQ,Mark Rosen,NY,110,109.6,21,-180,,,,M,Juniors 20-23,Raw,SBD
+1,Zack Carr,PA,125,116.9,19,300,185,287.5,772.5,M,Juniors 18-19,Raw,SBD
 1,Julien Comte,PA,75,74.3,34,170,97.5,220,487.5,M,Open,Raw,SBD
 1,Curtis Henry,PA,82.5,78.6,33,195,150,245,590,M,Open,Raw,SBD
 2,Corey Henry,PA,82.5,80.3,27,160,165,240,565,M,Open,Raw,SBD
@@ -43,15 +43,15 @@ DQ,Mark Rosen,NY,110,109.6,21,-180,,,,M,Junior 20-23,Raw,SBD
 2,Zack Carr,PA,125,116.9,19,300,185,287.5,772.5,M,Open,Raw,SBD
 3,Dave Southard,PA,125,119.8,28,250,182.5,295,727.5,M,Open,Raw,SBD
 1,Lucas Banks,PA,140,133.1,23,295,217.5,340,852.5,M,Open,Raw,SBD
-1,Justin Eckert,PA,90,89.4,36,145,97.5,192.5,435,M,Submaster 35-39,Raw,SBD
-1,Jon Kleinle,PA,100,95.8,37,220,160,255,635,M,Submaster 35-39,Raw,SBD
-1,Roland Wilder,PA,110,108.6,37,202.5,165,215,582.5,M,Submaster 35-39,Raw,SBD
-2,Allen Purdy,NJ,110,103.8,37,190,135,232.5,557.5,M,Submaster 35-39,Raw,SBD
-1,Dan Rosenberry,PA,140+,157,40,125,92.5,165,382.5,M,Master 40-44,Raw,SBD
+1,Justin Eckert,PA,90,89.4,36,145,97.5,192.5,435,M,Submasters 35-39,Raw,SBD
+1,Jon Kleinle,PA,100,95.8,37,220,160,255,635,M,Submasters 35-39,Raw,SBD
+1,Roland Wilder,PA,110,108.6,37,202.5,165,215,582.5,M,Submasters 35-39,Raw,SBD
+2,Allen Purdy,NJ,110,103.8,37,190,135,232.5,557.5,M,Submasters 35-39,Raw,SBD
+1,Dan Rosenberry,PA,140+,157,40,125,92.5,165,382.5,M,Masters 40-44,Raw,SBD
 1,Cara Cable,PA,75,73.9,36,105,57.5,145,307.5,F,Open,Wraps,SBD
 2,Bree Crum,PA,75,73.4,26,80,55,115,250,F,Open,Wraps,SBD
 1,Paula Tabert,NJ,82.5,80.9,25,112.5,70,152.5,335,F,Open,Raw,SBD
-1,Ramona Patterson,PA,67.5,64.6,56,82.5,52.5,122.5,257.5,F,Master 55-59,Wraps,SBD
+1,Ramona Patterson,PA,67.5,64.6,56,82.5,52.5,122.5,257.5,F,Masters 55-59,Wraps,SBD
 1,Thomas Ferris,PA,75,72.9,26,190,125,200,515,M,Open,Wraps,SBD
 1,Michael Terruso,NJ,82.5,81.3,32,212.5,135,260,607.5,M,Open,Wraps,SBD
 1,Eric Kratz #1,PA,90,89.4,42,227.5,185,245,657.5,M,Open,Wraps,SBD
@@ -63,29 +63,29 @@ DQ,Mark Rosen,NY,110,109.6,21,-180,,,,M,Junior 20-23,Raw,SBD
 2,Cody Nyegaard,PA,110,106.1,30,240,190,272.5,702.5,M,Open,Wraps,SBD
 3,Lawrence Maday,PA,110,107.9,35,237.5,160,290,687.5,M,Open,Wraps,SBD
 1,Travis Hearn,MD,125,124.8,31,280,175,255,710,M,Open,Wraps,SBD
-1,Eric Kratz #1,PA,90,89.4,42,227.5,185,245,657.5,M,Master 40-44,Wraps,SBD
-1,Kyle Martin,PA,100,97,43,200,115,267.5,582.5,M,Master 40-44,Wraps,SBD
-1,Nicollette Moratori,PA,56,53.7,16,,32.5,,32.5,F,Junior 16-17,Raw,B
-1,Brittney Moratori,PA,60,59.3,18,,42.5,,42.5,F,Junior 18-19,Raw,B
-1,Samantha Moratori,PA,67.5,62.6,14,,27.5,,27.5,F,Junior 13-15,Raw,B
+1,Eric Kratz #1,PA,90,89.4,42,227.5,185,245,657.5,M,Masters 40-44,Wraps,SBD
+1,Kyle Martin,PA,100,97,43,200,115,267.5,582.5,M,Masters 40-44,Wraps,SBD
+1,Nicollette Moratori,PA,56,53.7,16,,32.5,,32.5,F,Juniors 16-17,Raw,B
+1,Brittney Moratori,PA,60,59.3,18,,42.5,,42.5,F,Juniors 18-19,Raw,B
+1,Samantha Moratori,PA,67.5,62.6,14,,27.5,,27.5,F,Juniors 13-15,Raw,B
 G,Jessica Kratz,PA,67.5,65.1,44,,65,,65,F,Open,Raw,B
-1,Tayreen Partch,NY,90,85.6,37,,60,,60,F,Submaster 35-39,Raw,B
-1,Maddox Haas,PA,60,58.7,13,,30,,30,M,Junior 13-15,Raw,B
+1,Tayreen Partch,NY,90,85.6,37,,60,,60,F,Submasters 35-39,Raw,B
+1,Maddox Haas,PA,60,58.7,13,,30,,30,M,Juniors 13-15,Raw,B
 1,Hunter Walls,MD,82.5,81.1,24,,135,,135,M,Open,Raw,B
 1,Adam Grube,PA,100,94.3,35,,147.5,,147.5,M,Open,Raw,B
 1,Andrew Norris,DE,125,120.4,31,,205,,205,M,Open,Raw,B
-1,David Kieffer,PA,110,109.3,47,,160,,160,M,Master 45-47,Raw,B
-1,Nicollette Moratori,PA,56,53.7,16,,,102.5,102.5,F,Junior 16-17,Raw,D
-1,Brittney Moratori,PA,60,59.3,18,,,127.5,127.5,F,Junior 18-19,Raw,D
-1,Samantha Moratori,PA,67.5,62.6,14,,,92.5,92.5,F,Junior 13-15,Raw,D
+1,David Kieffer,PA,110,109.3,47,,160,,160,M,Masters 45-47,Raw,B
+1,Nicollette Moratori,PA,56,53.7,16,,,102.5,102.5,F,Juniors 16-17,Raw,D
+1,Brittney Moratori,PA,60,59.3,18,,,127.5,127.5,F,Juniors 18-19,Raw,D
+1,Samantha Moratori,PA,67.5,62.6,14,,,92.5,92.5,F,Juniors 13-15,Raw,D
 1,Brittney Moratori,PA,60,59.3,18,,,127.5,127.5,F,Open,Raw,D
 G,Jessica Kratz,PA,67.5,65.1,44,,,182.5,182.5,F,Open,Raw,D
 1,Cassie Haynes,PA,90+,90.2,33,,,190,190,F,Open,Raw,D
-1,Tayreen Partch,NY,90,85.6,37,,,125,125,F,Submaster 35-39,Raw,D
-G,Jessica Kratz,PA,67.5,65.1,44,,,182.5,182.5,F,Master 40-44,Raw,D
-1,Maddox Haas,PA,60,58.7,13,,,80,80,M,Junior 13-15,Raw,D
+1,Tayreen Partch,NY,90,85.6,37,,,125,125,F,Submasters 35-39,Raw,D
+G,Jessica Kratz,PA,67.5,65.1,44,,,182.5,182.5,F,Masters 40-44,Raw,D
+1,Maddox Haas,PA,60,58.7,13,,,80,80,M,Juniors 13-15,Raw,D
 1,Adam Grube,PA,100,94.3,35,,,197.5,197.5,M,Open,Raw,D
 1,Mark Swatling,NY,140+,153.1,44,,,307.5,307.5,M,Open,Raw,D
-1,Sean McRae,PA,82.5,80.7,47,,,205,205,M,Master 40-44,Raw,D
-DQ,David Kieffer,PA,110,109.3,47,,,-252.5,,M,Master 45-49,Raw,D
-1,Mark Swatling,NY,140+,153.1,44,,,307.5,307.5,M,Master 40-44,Raw,D
+1,Sean McRae,PA,82.5,80.7,47,,,205,205,M,Masters 40-44,Raw,D
+DQ,David Kieffer,PA,110,109.3,47,,,-252.5,,M,Masters 45-49,Raw,D
+1,Mark Swatling,NY,140+,153.1,44,,,307.5,307.5,M,Masters 40-44,Raw,D

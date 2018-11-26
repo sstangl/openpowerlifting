@@ -1,8 +1,8 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Jocelyne Argueta,CA,56,56,22,67.5,32.5,102.5,202.5,F,Junior 20-23,Raw,SBD
-1,Bianca Delgado,CA,67.5,66.7,20,102.5,50,137.5,290,F,Junior 20-23,Raw,SBD
-2,Alondra Romero,CA,67.5,65.4,21,97.5,50,117.5,265,F,Junior 20-23,Raw,SBD
-3,Carolina Lara,CA,67.5,60.6,23,80,47.5,112.5,240,F,Junior 20-23,Raw,SBD
+1,Jocelyne Argueta,CA,56,56,22,67.5,32.5,102.5,202.5,F,Juniors 20-23,Raw,SBD
+1,Bianca Delgado,CA,67.5,66.7,20,102.5,50,137.5,290,F,Juniors 20-23,Raw,SBD
+2,Alondra Romero,CA,67.5,65.4,21,97.5,50,117.5,265,F,Juniors 20-23,Raw,SBD
+3,Carolina Lara,CA,67.5,60.6,23,80,47.5,112.5,240,F,Juniors 20-23,Raw,SBD
 1,Yolanda Presswood,CA,60,59.6,40,117.5,55,130,302.5,F,Open,Raw,SBD
 1,Andrea Gonzalez,CA,67.5,63.4,25,125,57.5,137.5,320,F,Open,Raw,SBD
 2,Michelle Machado,CA,67.5,66.9,26,97.5,55,125,277.5,F,Open,Raw,SBD
@@ -11,18 +11,18 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Samantha Verdugo,CA,75,73.1,24,125,62.5,140,327.5,F,Open,Raw,SBD
 2,Adrianna Sanchez,CA,75,68.2,28,92.5,42.5,120,255,F,Open,Raw,SBD
 1,Chelsea Dion,CA,90+,98.6,25,152.5,110,182.5,445,F,Open,Raw,SBD
-1,Annette Monge,CA,75,72.5,39,127.5,70,155,352.5,F,Submaster 35-39,Raw,SBD
-1,Emily Atwood,CA,82.5,80.7,34,60,40,102.5,202.5,F,Submaster 35-39,Raw,SBD
-1,Luis Mijangos,CA,75,70.4,19,132.5,75,177.5,385,M,Junior 18-19,Raw,SBD
-1,Ryder Miller,CA,75,74.8,20,195,115,210,520,M,Junior 20-23,Raw,SBD
-1,Jesus Concevida,CA,82.5,81.8,18,165,107.5,202.5,475,M,Junior 18-19,Raw,SBD
-1,Julio Reyes,CA,100,98.7,19,232.5,142.5,265,640,M,Junior 18-19,Raw,SBD
-1,Samuel Salgado,CA,100,96.1,23,220,157.5,235,612.5,M,Junior 20-23,Raw,SBD
-2,Fabian Cruz,CA,100,99,22,205,135,240,580,M,Junior 20-23,Raw,SBD
-DQ,Lu Halili,CA,100,98.5,23,260,157.5,-305,,M,Junior 20-23,Raw,SBD
-1,Johnny Velasquez,CA,110,105.6,17,192.5,150,205,547.5,M,Junior 16-17,Raw,SBD
-1,Derek Schaeffer,CA,110,104.6,23,190,150,247.5,587.5,M,Junior 20-23,Raw,SBD
-1,Danny Siguenza,CA,125,116.4,22,122.5,97.5,162.5,382.5,M,Junior 20-23,Raw,SBD
+1,Annette Monge,CA,75,72.5,39,127.5,70,155,352.5,F,Submasters 35-39,Raw,SBD
+1,Emily Atwood,CA,82.5,80.7,34,60,40,102.5,202.5,F,Submasters 35-39,Raw,SBD
+1,Luis Mijangos,CA,75,70.4,19,132.5,75,177.5,385,M,Juniors 18-19,Raw,SBD
+1,Ryder Miller,CA,75,74.8,20,195,115,210,520,M,Juniors 20-23,Raw,SBD
+1,Jesus Concevida,CA,82.5,81.8,18,165,107.5,202.5,475,M,Juniors 18-19,Raw,SBD
+1,Julio Reyes,CA,100,98.7,19,232.5,142.5,265,640,M,Juniors 18-19,Raw,SBD
+1,Samuel Salgado,CA,100,96.1,23,220,157.5,235,612.5,M,Juniors 20-23,Raw,SBD
+2,Fabian Cruz,CA,100,99,22,205,135,240,580,M,Juniors 20-23,Raw,SBD
+DQ,Lu Halili,CA,100,98.5,23,260,157.5,-305,,M,Juniors 20-23,Raw,SBD
+1,Johnny Velasquez,CA,110,105.6,17,192.5,150,205,547.5,M,Juniors 16-17,Raw,SBD
+1,Derek Schaeffer,CA,110,104.6,23,190,150,247.5,587.5,M,Juniors 20-23,Raw,SBD
+1,Danny Siguenza,CA,125,116.4,22,122.5,97.5,162.5,382.5,M,Juniors 20-23,Raw,SBD
 1,Kurt Niemeyer,CA,67.5,66.7,37,125,82.5,160,367.5,M,Open,Raw,SBD
 1,Aaron Talavera Curiel,CA,75,73.4,29,152.5,142.5,185,480,M,Open,Raw,SBD
 1,Nick Boyce,CA,82.5,80,31,210,125,215,550,M,Open,Raw,SBD
@@ -33,13 +33,13 @@ DQ,Lu Halili,CA,100,98.5,23,260,157.5,-305,,M,Junior 20-23,Raw,SBD
 3,Jordan Stapp,CA,100,98.5,23,147.5,120,215,482.5,M,Open,Raw,SBD
 DQ,Lu Halili,CA,100,98.5,23,260,157.5,-305,,M,Open,Raw,SBD
 1,Max Harmer,CA,110,101.7,24,192.5,125,227.5,545,M,Open,Raw,SBD
-1,Vinnie Franklin,CA,125,124.9,46,205,135,237.5,577.5,M,Master,Raw,SBD
-1,Omar Pacheco,CA,100,98.8,42,245,150,235,630,M,Master 40-44,Wraps,SBD
-1,Chris Flores,CA,100,97.7,46,220,185,272.5,677.5,M,Master 45-49,Wraps,SBD
+1,Vinnie Franklin,CA,125,124.9,46,205,135,237.5,577.5,M,Masters,Raw,SBD
+1,Omar Pacheco,CA,100,98.8,42,245,150,235,630,M,Masters 40-44,Wraps,SBD
+1,Chris Flores,CA,100,97.7,46,220,185,272.5,677.5,M,Masters 45-49,Wraps,SBD
 1,Jon Janbakhsh,CA,67.5,65.1,27,,122.5,,122.5,M,Open,Raw,B
 1,Thomas White,CA,90,86.2,30,,155,,155,M,Open,Raw,B
 1,Sammy Graham,CA,110,106.1,48,,202.5,,202.5,M,Open,Raw,B
-1,Rick Gutman,CA,75,73,63,,110,,110,M,Master 60-64,Raw,B
-1,Placido Gomez,NM,82.5,80.8,65,,120,,120,M,Master 65-69,Raw,B
-1,Daniel Blas,CA,90,86.2,54,,145,,145,M,Master 50-54,Raw,B
+1,Rick Gutman,CA,75,73,63,,110,,110,M,Masters 60-64,Raw,B
+1,Placido Gomez,NM,82.5,80.8,65,,120,,120,M,Masters 65-69,Raw,B
+1,Daniel Blas,CA,90,86.2,54,,145,,145,M,Masters 50-54,Raw,B
 1,Nick Stearns,CA,90,88.2,32,,,245,245,M,Open,Raw,D

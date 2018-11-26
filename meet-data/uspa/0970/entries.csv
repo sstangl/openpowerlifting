@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Jacqueline De Luna,CA,56,55.6,21,97.5,52.5,115,265,F,Junior 20-23,Raw,SBD
-1,Melissa Becera,CA,60,57.3,21,107.5,77.5,127.5,312.5,F,Junior 20-23,Raw,SBD
+1,Jacqueline De Luna,CA,56,55.6,21,97.5,52.5,115,265,F,Juniors 20-23,Raw,SBD
+1,Melissa Becera,CA,60,57.3,21,107.5,77.5,127.5,312.5,F,Juniors 20-23,Raw,SBD
 1,Desiree Guardado,CA,52,50.7,25,70,30,102.5,202.5,F,Open,Raw,SBD
 1,Eliry Queen Apacible,CA,56,53.7,27,105,47.5,115,267.5,F,Open,Raw,SBD
 1,Diana Gamez,CA,67.5,66.7,25,122.5,60,145,327.5,F,Open,Raw,SBD
@@ -8,19 +8,19 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Noelle Crow,CA,67.5,64.2,26,105,57.5,130,292.5,F,Open,Raw,SBD
 4,Elizabeth Ostro,CA,67.5,67.1,29,92.5,60,115,267.5,F,Open,Raw,SBD
 1,Deirdra Bridgett,CA,90+,110.5,27,140,65,175,380,F,Open,Raw,SBD
-1,Rachel Rainne,CA,60,58.4,36,77.5,57.5,107.5,242.5,F,Submaster 35-39,Raw,SBD
-1,Monique Patton,CA,67.5,62.7,43,95,45,112.5,252.5,F,Master 40-44,Raw,SBD
-1,James Nishida,CA,60,59.3,20,170,112.5,195,477.5,M,Junior 20-23,Raw,SBD
-1,Alec Lord,CA,67.5,61.3,19,120,70,125,315,M,Junior 18-19,Raw,SBD
-1,Nicholas Troung,CA,82.5,77,20,157.5,80.5,197.5,435.5,M,Junior 20-23,Raw,SBD
-DQ,Marvin Ramos,CA,82.5,80.9,20,160,-95,,,M,Junior 20-23,Raw,SBD
-1,Cage Bumbarger,CA,90,87.8,16,182.5,112.5,215,510,M,Junior 16-17,Raw,SBD
-2,Ameer Moukadam,CA,90,85.5,17,152.5,95,185,432.5,M,Junior 16-17,Raw,SBD
-1,Abdi Cervantes,CA,90,83.7,18,152.5,90,190,432.5,M,Junior 18-19,Raw,SBD
-1,Randy Sue,CA,100,98.4,23,252.5,157.5,245,655,M,Junior 20-23,Raw,SBD
-2,Daniel Avalos,CA,100,94.2,23,200,132.5,242.5,575,M,Junior 20-23,Raw,SBD
-3,Marcus Herron,CA,100,90.2,23,192.5,142.5,210,545,M,Junior 20-23,Raw,SBD
-4,Daniel Yang,CA,100,91.3,21,180,135,212.5,527.5,M,Junior 20-23,Raw,SBD
+1,Rachel Rainne,CA,60,58.4,36,77.5,57.5,107.5,242.5,F,Submasters 35-39,Raw,SBD
+1,Monique Patton,CA,67.5,62.7,43,95,45,112.5,252.5,F,Masters 40-44,Raw,SBD
+1,James Nishida,CA,60,59.3,20,170,112.5,195,477.5,M,Juniors 20-23,Raw,SBD
+1,Alec Lord,CA,67.5,61.3,19,120,70,125,315,M,Juniors 18-19,Raw,SBD
+1,Nicholas Troung,CA,82.5,77,20,157.5,80.5,197.5,435.5,M,Juniors 20-23,Raw,SBD
+DQ,Marvin Ramos,CA,82.5,80.9,20,160,-95,,,M,Juniors 20-23,Raw,SBD
+1,Cage Bumbarger,CA,90,87.8,16,182.5,112.5,215,510,M,Juniors 16-17,Raw,SBD
+2,Ameer Moukadam,CA,90,85.5,17,152.5,95,185,432.5,M,Juniors 16-17,Raw,SBD
+1,Abdi Cervantes,CA,90,83.7,18,152.5,90,190,432.5,M,Juniors 18-19,Raw,SBD
+1,Randy Sue,CA,100,98.4,23,252.5,157.5,245,655,M,Juniors 20-23,Raw,SBD
+2,Daniel Avalos,CA,100,94.2,23,200,132.5,242.5,575,M,Juniors 20-23,Raw,SBD
+3,Marcus Herron,CA,100,90.2,23,192.5,142.5,210,545,M,Juniors 20-23,Raw,SBD
+4,Daniel Yang,CA,100,91.3,21,180,135,212.5,527.5,M,Juniors 20-23,Raw,SBD
 1,Francis Tiempo,CA,60,59.7,28,140,105,162.5,407.5,M,Open,Raw,SBD
 1,Joel Zari,CA,75,73.2,29,187.5,140,197.5,525,M,Open,Raw,SBD
 2,Jose Ruiz,CA,75,74.3,22,182.5,102.5,205,490,M,Open,Raw,SBD
@@ -39,10 +39,10 @@ DQ,Marvin Ramos,CA,82.5,80.9,20,160,-95,,,M,Junior 20-23,Raw,SBD
 4,Bo Chea,CA,100,98.2,26,235,157.5,242.5,635,M,Open,Raw,SBD
 5,Adam Apacible,CA,100,97.6,26,190,142.5,230,562.5,M,Open,Raw,SBD
 1,Carlos Jiminez,CA,110,109.2,25,247.5,175,272.5,695,M,Open,Raw,SBD
-1,David Tedesco,CA,82.5,81.9,35,150,117.5,165,432.5,M,Submaster 35-39,Raw,SBD
-1,Jason Kelske,CA,90,88.9,36,212.5,130,260,602.5,M,Submaster 35-39,Raw,SBD
-1,Dale Sue,CA,67.5,66.1,58,97.5,87.5,172.5,357.5,M,Master 55-59,Raw,SBD
-1,Marcus Como,CA,110,104.7,43,162.5,112.5,192.5,467.5,M,Master 40-44,Raw,SBD
-1,Carolina Gutierrez,CA,44,42.8,21,67.5,27.5,70,165,F,Junior 20-23,Wraps,SBD
+1,David Tedesco,CA,82.5,81.9,35,150,117.5,165,432.5,M,Submasters 35-39,Raw,SBD
+1,Jason Kelske,CA,90,88.9,36,212.5,130,260,602.5,M,Submasters 35-39,Raw,SBD
+1,Dale Sue,CA,67.5,66.1,58,97.5,87.5,172.5,357.5,M,Masters 55-59,Raw,SBD
+1,Marcus Como,CA,110,104.7,43,162.5,112.5,192.5,467.5,M,Masters 40-44,Raw,SBD
+1,Carolina Gutierrez,CA,44,42.8,21,67.5,27.5,70,165,F,Juniors 20-23,Wraps,SBD
 1,Bryon Brubaker,CA,100,98.3,54,,240,,240,M,Open,Single-ply,B
 1,Jacob Ross,CA,110,106,41,,,210,210,M,Open,Raw,D

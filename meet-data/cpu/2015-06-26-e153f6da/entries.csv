@@ -1,7 +1,7 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Mark Holloway,NL,125.5,120+,Open,350.0,270.0,327.5,947.5,Single-ply,1
-SBD,M,Walt Forsey,NL,82.8,83,Master 3,270.0,160.0,278.0,708.0,Single-ply,1
-SBD,M,Devin Benoit,NL,81.3,83,Junior,257.5,145.0,245.0,647.5,Single-ply,1
+SBD,M,Walt Forsey,NL,82.8,83,Masters 3,270.0,160.0,278.0,708.0,Single-ply,1
+SBD,M,Devin Benoit,NL,81.3,83,Juniors,257.5,145.0,245.0,647.5,Single-ply,1
 SBD,M,Ryan Rowsell,NL,90.1,93,Open,225.0,165.0,265.0,655.0,Raw,1
 SBD,M,Matt Wells,NL,91.9,93,Open,202.5,135.0,220.0,557.5,Raw,3
 SBD,M,Keith Dunne,NL,91.2,93,Open,202.5,135.0,225.0,562.5,Raw,2
@@ -28,38 +28,38 @@ SBD,M,Michael Kirby,NL,118.1,120,Open,212.5,130.0,215.0,557.5,Raw,1
 SBD,M,Dion Gibbons,NL,101.7,105,Open,182.5,137.5,245.0,565.0,Raw,1
 SBD,M,Bruce Chafe,NL,99.2,105,Open,170.0,120.0,190.0,480.0,Raw,3
 SBD,M,Andy Langin,NL,99.1,105,Open,237.5,70.0,240.0,547.5,Raw,2
-SBD,M,Gerald Chafe,NL,73,74,Master 2,120.0,80.0,155.0,355.0,Raw,1
-SBD,F,Paula Snelgrove,NL,70.5,72,Master 2,47.5,37.5,105.0,190.0,Raw,1
-SBD,M,Ronald Corcoran,NL,90.2,93,Master 1,125.0,95.0,180.0,400.0,Raw,2
-SBD,M,Darren AuCoin,NL,88,93,Master 1,132.5,97.5,185.0,415.0,Raw,1
-SBD,F,Stephanie Kelly,NL,86.7,84+,Master 1,105.0,67.5,140.0,312.5,Raw,2
-SBD,F,Gail Soper,NL,85,84+,Master 1,125.0,65.0,135.0,325.0,Raw,1
-SBD,F,Ellen St Croix,NL,82.9,84,Master 1,102.5,40.0,105.0,247.5,Raw,1
-SBD,M,Rob Dyke,NL,81.9,83,Master 1,175.0,150.0,195.0,520.0,Raw,1
-SBD,M,Larry Walsh,NL,82.7,83,Master 1,170.0,100.0,222.5,492.5,Raw,2
-SBD,M,Timothy Foote,NL,73.8,74,Master 1,120.0,87.5,157.5,365.0,Raw,1
-SBD,F,Babette Meister,NL,68.4,72,Master 1,100.0,50.0,130.0,280.0,Raw,1
-SBD,F,Tonya Warren,NL,62.2,63,Master 1,100.0,55.0,127.5,282.5,Raw,1
-SBD,M,Mark Bowering,NL,126.9,120+,Master 1,177.5,97.5,232.5,507.5,Raw,2
-SBD,M,Bob Benoit,NL,138.9,120+,Master 1,192.5,162.5,237.5,592.5,Raw,1
-SBD,M,Martin Jones,NL,113.9,120,Master 1,165.0,95.0,182.5,442.5,Raw,1
-SBD,M,Warren John,NL,93,93,Junior,185.0,155.0,240.0,580.0,Raw,2
-SBD,M,Jonathan Thoms,NL,91.7,93,Junior,225.0,142.5,212.5,580.0,Raw,1
-SBD,M,Geoff Brace,NL,89.7,93,Junior,185.0,105.0,205.0,495.0,Raw,3
-SBD,F,Kaity Bennett,NL,127.7,84+,Junior,137.5,67.5,140.0,345.0,Raw,1
-SBD,M,Kyle Gosse,NL,82.9,83,Junior,200.0,135.0,227.5,562.5,Raw,1
-SBD,M,Kyle Crant,NL,82.2,83,Junior,170.0,117.5,182.5,470.0,Raw,3
-SBD,M,Brent Butler,NL,82.6,83,Junior,190.0,112.5,240.0,542.5,Raw,2
-SBD,M,Kris Tiller,NL,73.9,74,Junior,197.5,145.0,215.0,557.5,Raw,1
-SBD,M,Jeremy Coles,NL,70.3,74,Junior,175.0,125.0,235.0,535.0,Raw,2
-SBD,F,Shannon Hart,NL,58.9,63,Junior,107.5,55.0,117.5,280.0,Raw,1
-SBD,F,Lauren Burke,NL,51.8,52,Junior,55.0,42.5,87.5,185.0,Raw,1
-SBD,M,James Sweeney,NL,109.6,120,Junior,135.0,80.0,137.5,352.5,Raw,2
-SBD,M,James Singleton,NL,117.3,120,Junior,195.0,122.5,240.0,557.5,Raw,1
-SBD,M,Tyler Penney,NL,101.7,105,Junior,205.0,150.0,250.0,605.0,Raw,2
-SBD,M,Tyler Coombs,NL,104.2,105,Junior,185.0,112.5,230.0,527.5,Raw,3
-SBD,M,Jamie Critch,NL,103.7,105,Junior,212.5,157.5,250.0,620.0,Raw,1
+SBD,M,Gerald Chafe,NL,73,74,Masters 2,120.0,80.0,155.0,355.0,Raw,1
+SBD,F,Paula Snelgrove,NL,70.5,72,Masters 2,47.5,37.5,105.0,190.0,Raw,1
+SBD,M,Ronald Corcoran,NL,90.2,93,Masters 1,125.0,95.0,180.0,400.0,Raw,2
+SBD,M,Darren AuCoin,NL,88,93,Masters 1,132.5,97.5,185.0,415.0,Raw,1
+SBD,F,Stephanie Kelly,NL,86.7,84+,Masters 1,105.0,67.5,140.0,312.5,Raw,2
+SBD,F,Gail Soper,NL,85,84+,Masters 1,125.0,65.0,135.0,325.0,Raw,1
+SBD,F,Ellen St Croix,NL,82.9,84,Masters 1,102.5,40.0,105.0,247.5,Raw,1
+SBD,M,Rob Dyke,NL,81.9,83,Masters 1,175.0,150.0,195.0,520.0,Raw,1
+SBD,M,Larry Walsh,NL,82.7,83,Masters 1,170.0,100.0,222.5,492.5,Raw,2
+SBD,M,Timothy Foote,NL,73.8,74,Masters 1,120.0,87.5,157.5,365.0,Raw,1
+SBD,F,Babette Meister,NL,68.4,72,Masters 1,100.0,50.0,130.0,280.0,Raw,1
+SBD,F,Tonya Warren,NL,62.2,63,Masters 1,100.0,55.0,127.5,282.5,Raw,1
+SBD,M,Mark Bowering,NL,126.9,120+,Masters 1,177.5,97.5,232.5,507.5,Raw,2
+SBD,M,Bob Benoit,NL,138.9,120+,Masters 1,192.5,162.5,237.5,592.5,Raw,1
+SBD,M,Martin Jones,NL,113.9,120,Masters 1,165.0,95.0,182.5,442.5,Raw,1
+SBD,M,Warren John,NL,93,93,Juniors,185.0,155.0,240.0,580.0,Raw,2
+SBD,M,Jonathan Thoms,NL,91.7,93,Juniors,225.0,142.5,212.5,580.0,Raw,1
+SBD,M,Geoff Brace,NL,89.7,93,Juniors,185.0,105.0,205.0,495.0,Raw,3
+SBD,F,Kaity Bennett,NL,127.7,84+,Juniors,137.5,67.5,140.0,345.0,Raw,1
+SBD,M,Kyle Gosse,NL,82.9,83,Juniors,200.0,135.0,227.5,562.5,Raw,1
+SBD,M,Kyle Crant,NL,82.2,83,Juniors,170.0,117.5,182.5,470.0,Raw,3
+SBD,M,Brent Butler,NL,82.6,83,Juniors,190.0,112.5,240.0,542.5,Raw,2
+SBD,M,Kris Tiller,NL,73.9,74,Juniors,197.5,145.0,215.0,557.5,Raw,1
+SBD,M,Jeremy Coles,NL,70.3,74,Juniors,175.0,125.0,235.0,535.0,Raw,2
+SBD,F,Shannon Hart,NL,58.9,63,Juniors,107.5,55.0,117.5,280.0,Raw,1
+SBD,F,Lauren Burke,NL,51.8,52,Juniors,55.0,42.5,87.5,185.0,Raw,1
+SBD,M,James Sweeney,NL,109.6,120,Juniors,135.0,80.0,137.5,352.5,Raw,2
+SBD,M,James Singleton,NL,117.3,120,Juniors,195.0,122.5,240.0,557.5,Raw,1
+SBD,M,Tyler Penney,NL,101.7,105,Juniors,205.0,150.0,250.0,605.0,Raw,2
+SBD,M,Tyler Coombs,NL,104.2,105,Juniors,185.0,112.5,230.0,527.5,Raw,3
+SBD,M,Jamie Critch,NL,103.7,105,Juniors,212.5,157.5,250.0,620.0,Raw,1
 B,M,Mike Loder,NL,99.4,105,Open,,202.5,,202.5,Single-ply,1
-B,M,Bob Benoit,NL,140.6,120+,Master 1,,160.0,,160.0,Raw,1
-B,M,Troy Alcock,NL,79,83,Junior,,132.5,,132.5,Raw,1
-B,M,Warren John,NL,94,105,Junior,,150.0,,150.0,Raw,1
+B,M,Bob Benoit,NL,140.6,120+,Masters 1,,160.0,,160.0,Raw,1
+B,M,Troy Alcock,NL,79,83,Juniors,,132.5,,132.5,Raw,1
+B,M,Warren John,NL,94,105,Juniors,,150.0,,150.0,Raw,1

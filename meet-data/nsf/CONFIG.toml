@@ -1,12 +1,12 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    juniors = {name = "Junior 19-23",min=18.5,max=22.5}
+    juniors = {name = "Juniors 19-23",min=18.5,max=22.5}
     subjuniors = {name = "Teen 14-18",min=14,max=17.5}
-    master = {name = "Master",min=39.5,max=999}
-    master4049 = {name = "Master 40-49",min=39.5,max=48.5}
-    master5059 = {name = "Master 50-59",min=49.5,max=58.5}
-    master6069 = {name = "Master 60-69",min=59.5,max=68.5}
-    master70 = {name = "Master +70",min=70,max=999}
+    master = {name = "Masters",min=39.5,max=999}
+    master4049 = {name = "Masters 40-49",min=39.5,max=48.5}
+    master5059 = {name = "Masters 50-59",min=49.5,max=58.5}
+    master6069 = {name = "Masters 60-69",min=59.5,max=68.5}
+    master70 = {name = "Masters 70+",min=70,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -22,13 +22,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Junior 19-23","Teen 14-18"]
+    divisions = ["Juniors 19-23","Teen 14-18"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Junior 19-23","Teen 14-18"]
+    divisions = ["Juniors 19-23","Teen 14-18"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]

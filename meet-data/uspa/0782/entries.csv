@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Kristen Hutchins,AL,67.5,66.5,22,112.5,62.5,147.5,322.5,F,Junior 20-23,Raw,SBD
-2,Corey Burrage,AL,67.5,65.5,23,100,45,115,260,F,Junior 20-23,Raw,SBD
+1,Kristen Hutchins,AL,67.5,66.5,22,112.5,62.5,147.5,322.5,F,Juniors 20-23,Raw,SBD
+2,Corey Burrage,AL,67.5,65.5,23,100,45,115,260,F,Juniors 20-23,Raw,SBD
 1,Kristen Hutchins,AL,67.5,66.5,22,112.5,62.5,147.5,322.5,F,Open,Raw,SBD
 2,Desiree Savarese,GA,67.5,65.8,35,110,60,130,300,F,Open,Raw,SBD
 3,Corey Burrage,AL,67.5,65.5,23,100,45,115,260,F,Open,Raw,SBD
@@ -14,16 +14,16 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Ellen Grant,AL,90,86.8,35,90,60,110,260,F,Open,Raw,SBD
 4,Stephanie Horton,AL,90,84,25,100,42.5,112.5,255,F,Open,Raw,SBD
 1,Madison Fuller,AL,90+,109.2,27,107.5,70,147.5,325,F,Open,Raw,SBD
-1,Desiree Savarese,GA,67.5,65.8,35,110,60,130,300,F,Submaster 35-39,Raw,SBD
-1,April Pendergraph,AL,75,73.3,38,147.5,87.5,172.5,407.5,F,Submaster 35-39,Raw,SBD
-1,Ellen Grant,AL,90,86.8,35,90,60,110,260,F,Submaster 35-39,Raw,SBD
-1,Alex Moore,AL,90,83.5,17,165,112.5,215,492.5,M,Junior 17-18,Raw,SBD
-1,Seth Strickland,AL,90,84.6,18,212.5,150,260,622.5,M,Junior 18-19,Raw,SBD
-1,Jaden LaPointe,FL,100,96.8,15,230,132.5,225,587.5,M,Junior 13-15,Raw,SBD
-1,Kyle Ray,AL,100,90.9,23,185,175,252.5,612.5,M,Junior 20-23,Raw,SBD
-2,Tyler Singleton,AL,100,92.55,20,235,127.5,227.5,590,M,Junior 20-23,Raw,SBD
-3,Will Sansoucie,AL,100,95.8,23,197.5,105,227.5,530,M,Junior 20-23,Raw,SBD
-1,Keith Saffold,AL,110,101.3,20,212.5,167.5,235,615,M,Junior 20-23,Raw,SBD
+1,Desiree Savarese,GA,67.5,65.8,35,110,60,130,300,F,Submasters 35-39,Raw,SBD
+1,April Pendergraph,AL,75,73.3,38,147.5,87.5,172.5,407.5,F,Submasters 35-39,Raw,SBD
+1,Ellen Grant,AL,90,86.8,35,90,60,110,260,F,Submasters 35-39,Raw,SBD
+1,Alex Moore,AL,90,83.5,17,165,112.5,215,492.5,M,Juniors 17-18,Raw,SBD
+1,Seth Strickland,AL,90,84.6,18,212.5,150,260,622.5,M,Juniors 18-19,Raw,SBD
+1,Jaden LaPointe,FL,100,96.8,15,230,132.5,225,587.5,M,Juniors 13-15,Raw,SBD
+1,Kyle Ray,AL,100,90.9,23,185,175,252.5,612.5,M,Juniors 20-23,Raw,SBD
+2,Tyler Singleton,AL,100,92.55,20,235,127.5,227.5,590,M,Juniors 20-23,Raw,SBD
+3,Will Sansoucie,AL,100,95.8,23,197.5,105,227.5,530,M,Juniors 20-23,Raw,SBD
+1,Keith Saffold,AL,110,101.3,20,212.5,167.5,235,615,M,Juniors 20-23,Raw,SBD
 1,Chris Lentini,AL,75,72.35,40,182.5,140,210,532.5,M,Open,Raw,SBD
 1,Nicholas McCouch,GA,82.5,80.2,26,245,145,265,655,M,Open,Raw,SBD
 1,Shane Davis,AL,90,87.75,23,227.5,140,265,632.5,M,Open,Raw,SBD
@@ -38,19 +38,19 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Tyler Campbell,AL,110,103.7,27,237.5,100,272.5,610,M,Open,Raw,SBD
 4,Steven Sparks,AL,110,103.35,30,195,140,110,445,M,Open,Raw,SBD
 1,Eric Adams,MS,125,120.7,28,240,220,275,735,M,Open,Raw,SBD
-1,Ryan Urso,FL,75,71.85,38,165,112.5,190,467.5,M,Submaster 35-39,Raw,SBD
-1,Derek Thorne,AL,100,98.3,35,210,160,232.5,602.5,M,Submaster 35-39,Raw,SBD
-2,Matthew Griffies,AL,100,91.75,35,140,97.5,157.5,395,M,Submaster 35-39,Raw,SBD
-1,Chris Lentini,AL,75,73.25,40,182.5,140,210,532.5,M,Master 40-44,Raw,SBD
-1,Jimmy Newton,AL,82.5,79.9,42,147.5,135,175,457.5,M,Master 40-44,Raw,SBD
-1,Scott Shirley,AL,90,88.6,44,217.5,142.5,240,600,M,Master 40-44,Raw,SBD
-1,Juan Carlos García,AL,100,95.85,45,150,110,182.5,442.5,M,Master 45-49,Raw,SBD
-1,Pauline Dinh,TN,67.5,62.8,22,140,65,160,365,F,Junior 20-23,Wraps,SBD
+1,Ryan Urso,FL,75,71.85,38,165,112.5,190,467.5,M,Submasters 35-39,Raw,SBD
+1,Derek Thorne,AL,100,98.3,35,210,160,232.5,602.5,M,Submasters 35-39,Raw,SBD
+2,Matthew Griffies,AL,100,91.75,35,140,97.5,157.5,395,M,Submasters 35-39,Raw,SBD
+1,Chris Lentini,AL,75,73.25,40,182.5,140,210,532.5,M,Masters 40-44,Raw,SBD
+1,Jimmy Newton,AL,82.5,79.9,42,147.5,135,175,457.5,M,Masters 40-44,Raw,SBD
+1,Scott Shirley,AL,90,88.6,44,217.5,142.5,240,600,M,Masters 40-44,Raw,SBD
+1,Juan Carlos García,AL,100,95.85,45,150,110,182.5,442.5,M,Masters 45-49,Raw,SBD
+1,Pauline Dinh,TN,67.5,62.8,22,140,65,160,365,F,Juniors 20-23,Wraps,SBD
 1,Pauline Dinh,TN,67.5,62.8,22,140,65,160,365,F,Open,Wraps,SBD
 1,Corinne Crowley,AL,75,72.65,28,120,77.5,162.5,360,F,Open,Wraps,SBD
-1,Rodney Manor,MS,90,86.8,23,325,190,267.5,782.5,M,Junior 20-23,Wraps,SBD
-1,Stephen Murphy,TN,110,107,22,255,172.5,282.5,710,M,Junior 20-23,Wraps,SBD
-1,Marc Villere,LA,140+,169.65,22,345,195,245,785,M,Junior 20-23,Wraps,SBD
+1,Rodney Manor,MS,90,86.8,23,325,190,267.5,782.5,M,Juniors 20-23,Wraps,SBD
+1,Stephen Murphy,TN,110,107,22,255,172.5,282.5,710,M,Juniors 20-23,Wraps,SBD
+1,Marc Villere,LA,140+,169.65,22,345,195,245,785,M,Juniors 20-23,Wraps,SBD
 DQ,Joe Keith,MS,75,73,34,247.5,155,-242.5,,M,Open,Wraps,SBD
 1,Dantrell Carter,AL,82.5,80.6,31,242.5,205,272.5,720,M,Open,Wraps,SBD
 2,Mike Thomas,AL,82.5,79.75,44,165,110,190,465,M,Open,Wraps,SBD
@@ -65,17 +65,17 @@ DQ,Joe Keith,MS,75,73,34,247.5,155,-242.5,,M,Open,Wraps,SBD
 1,Stephen Ballard,AL,125,124.3,30,332.5,170,327.5,830,M,Open,Wraps,SBD
 1,Gary Royster,AL,140,134.75,33,272.5,227.5,245,745,M,Open,Wraps,SBD
 2,Jonathan Weinreich,AL,140,135.3,29,220,150,272.5,642.5,M,Open,Wraps,SBD
-1,Mike Thomas,AL,82.5,79.75,44,165,110,190,465,M,Master 40-44,Wraps,SBD
-1,Tjelvar Everett,AL,140+,142.2,46,272.5,137.5,250,660,M,Master 45-49,Wraps,SBD
-1,Kathy Czukor,AL,56,53.75,64,,42.5,,42.5,F,Master 60-64,Raw,B
+1,Mike Thomas,AL,82.5,79.75,44,165,110,190,465,M,Masters 40-44,Wraps,SBD
+1,Tjelvar Everett,AL,140+,142.2,46,272.5,137.5,250,660,M,Masters 45-49,Wraps,SBD
+1,Kathy Czukor,AL,56,53.75,64,,42.5,,42.5,F,Masters 60-64,Raw,B
 DQ,Clay Boyd,AL,75,72.05,27,,-127.5,,,M,Open,Raw,B
 DQ,Chris Neal,MS,82.5,81.8,43,,-247.5,,,M,Open,Raw,B
 1,Teddy Courcy,AL,100,96.9,44,,187.5,,187.5,M,Open,Raw,B
 1,Joe Franklin,GA,125,118.05,45,,182.5,,182.5,M,Open,Raw,B
-DQ,Chris Neal,MS,82.5,81.8,43,,-247.5,,,M,Master 40-44,Raw,B
-1,Teddy Courcy,AL,100,96.9,44,,187.5,,187.5,M,Master 40-44,Raw,B
-1,Joe Franklin,GA,125,118.05,45,,182.5,,182.5,M,Master 45-49,Raw,B
-1,Kathy Czukor,AL,56,53.75,64,,,85,85,F,Master 60-64,Raw,D
+DQ,Chris Neal,MS,82.5,81.8,43,,-247.5,,,M,Masters 40-44,Raw,B
+1,Teddy Courcy,AL,100,96.9,44,,187.5,,187.5,M,Masters 40-44,Raw,B
+1,Joe Franklin,GA,125,118.05,45,,182.5,,182.5,M,Masters 45-49,Raw,B
+1,Kathy Czukor,AL,56,53.75,64,,,85,85,F,Masters 60-64,Raw,D
 1,Clay Boyd,AL,75,72.05,27,,,192.5,192.5,M,Open,Raw,D
 1,Teddy Courcy,AL,100,96.9,44,,,250,250,M,Open,Raw,D
-1,Teddy Courcy,AL,100,96.9,44,,,250,250,M,Master 40-44,Raw,D
+1,Teddy Courcy,AL,100,96.9,44,,,250,250,M,Masters 40-44,Raw,D

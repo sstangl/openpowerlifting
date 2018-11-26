@@ -1,11 +1,11 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Sarah Pratt,CO,56,55.05,23,80,37.5,107.5,225,F,Junior 20-23,Raw,SBD
-1,Lea Cassidy,CO,60,59.25,19,87.5,47.5,100,235,F,Junior 18-19,Raw,SBD
-1,Madison Webb,CO,60,58.5,20,87.5,52.5,92.5,232.5,F,Junior 20-23,Raw,SBD
-1,Laura Wagner,CO,67.5,64.2,17,102.5,45,132.5,280,F,Junior 16-17,Raw,SBD
-1,Deborah Burcea,CO,75,71.45,16,97.5,52.5,125,275,F,Junior 16-17,Raw,SBD
-1,Cassandra Wright,CO,75,74.2,18,130,62.5,142.5,335,F,Junior 18-19,Raw,SBD
-2,Casey Lafon,CO,75,73.75,19,85,60,127.5,272.5,F,Junior 18-19,Raw,SBD
+1,Sarah Pratt,CO,56,55.05,23,80,37.5,107.5,225,F,Juniors 20-23,Raw,SBD
+1,Lea Cassidy,CO,60,59.25,19,87.5,47.5,100,235,F,Juniors 18-19,Raw,SBD
+1,Madison Webb,CO,60,58.5,20,87.5,52.5,92.5,232.5,F,Juniors 20-23,Raw,SBD
+1,Laura Wagner,CO,67.5,64.2,17,102.5,45,132.5,280,F,Juniors 16-17,Raw,SBD
+1,Deborah Burcea,CO,75,71.45,16,97.5,52.5,125,275,F,Juniors 16-17,Raw,SBD
+1,Cassandra Wright,CO,75,74.2,18,130,62.5,142.5,335,F,Juniors 18-19,Raw,SBD
+2,Casey Lafon,CO,75,73.75,19,85,60,127.5,272.5,F,Juniors 18-19,Raw,SBD
 1,Jackie Perea,CO,48,46.25,27,80,50,100,230,F,Open,Raw,SBD
 1,Angeliki Mustoe,CO,56,55.45,34,105,67.5,137.5,310,F,Open,Raw,SBD
 2,Amanda Mercado,CO,56,56,24,107.5,55,110,272.5,F,Open,Raw,SBD
@@ -27,25 +27,25 @@ DQ,Kate Dell,CO,67.5,66.8,29,,,,,F,Open,Raw,SBD
 1,Renae Allemann,CO,82.5,81.5,26,127.5,65,162.5,355,F,Open,Raw,SBD
 1,Aderinsola Awosefaju,CO,90+,105.1,34,107.5,67.5,145,320,F,Open,Raw,SBD
 DQ,Rachel Burkholder,CO,90+,114,36,,,,,F,Open,Raw,SBD
-1,Salina Vega,CO,75,72.4,37,150,100,182.5,432.5,F,Submaster 35-39,Raw,SBD
-1,Vicki Morgan,CO,52,51.6,54,102.5,60,132.5,295,F,Master 50-54,Raw,SBD
-1,Coco Ralston,CO,52,51.7,65,62.5,37.5,95,195,F,Master 65-69,Raw,SBD
-1,Kimberly Gillogly,CO,60,58.5,48,82.5,55,102.5,240,F,Master 45-49,Raw,SBD
-1,Lorrie Bosen,CO,60,59.04,54,82.5,57.5,120,260,F,Master 50-54,Raw,SBD
-DQ,Jennifer Skaufel,CO,67.5,60.4,44,,,,,F,Master 40-44,Raw,SBD
-DQ,Shannan Roskam,CO,67.5,64.45,42,,,,,F,Master 40-44,Raw,SBD
-1,Amy Corr,CO,75,71.1,43,87.5,52.5,110,250,F,Master 40-44,Raw,SBD
-1,Melissa Benson,CO,75,74.65,48,87.5,62.5,115,265,F,Master 45-49,Raw,SBD
-1,Kerstin Crabill,CO,82.5,78.25,44,77.5,50,125,252.5,F,Master 40-44,Raw,SBD
-1,Shelly Murray,CO,82.5,78.7,58,77.5,55,100,232.5,F,Master 55-59,Raw,SBD
-1,Sharon Rome,CO,90,89.5,55,90,65,117.5,272.5,F,Master 55-59,Raw,SBD
-1,Karen Eagle,CO,90+,106.6,43,120,62.5,137.5,320,F,Master 40-44,Raw,SBD
-1,Nick Culver,CO,75,72.65,19,160,85,200,445,M,Junior 18-19,Raw,SBD
-1,Justin Rialon,CO,75,73.05,20,200,125,265,590,M,Junior 20-23,Raw,SBD
-1,Jakob Seib,CO,90,86.7,18,130,92.5,195,417.5,M,Junior 18-19,Raw,SBD
-1,Caleb Cantrell,CO,100,99.3,16,142.5,92.5,162.5,397.5,M,Junior 16-17,Raw,SBD
-1,Austin Walker,CO,100,98.05,22,225,160,237.5,622.5,M,Junior 20-23,Raw,SBD
-1,Eric Olsen,CO,140,139.8,18,127.5,95,165,387.5,M,Junior 18-19,Raw,SBD
+1,Salina Vega,CO,75,72.4,37,150,100,182.5,432.5,F,Submasters 35-39,Raw,SBD
+1,Vicki Morgan,CO,52,51.6,54,102.5,60,132.5,295,F,Masters 50-54,Raw,SBD
+1,Coco Ralston,CO,52,51.7,65,62.5,37.5,95,195,F,Masters 65-69,Raw,SBD
+1,Kimberly Gillogly,CO,60,58.5,48,82.5,55,102.5,240,F,Masters 45-49,Raw,SBD
+1,Lorrie Bosen,CO,60,59.04,54,82.5,57.5,120,260,F,Masters 50-54,Raw,SBD
+DQ,Jennifer Skaufel,CO,67.5,60.4,44,,,,,F,Masters 40-44,Raw,SBD
+DQ,Shannan Roskam,CO,67.5,64.45,42,,,,,F,Masters 40-44,Raw,SBD
+1,Amy Corr,CO,75,71.1,43,87.5,52.5,110,250,F,Masters 40-44,Raw,SBD
+1,Melissa Benson,CO,75,74.65,48,87.5,62.5,115,265,F,Masters 45-49,Raw,SBD
+1,Kerstin Crabill,CO,82.5,78.25,44,77.5,50,125,252.5,F,Masters 40-44,Raw,SBD
+1,Shelly Murray,CO,82.5,78.7,58,77.5,55,100,232.5,F,Masters 55-59,Raw,SBD
+1,Sharon Rome,CO,90,89.5,55,90,65,117.5,272.5,F,Masters 55-59,Raw,SBD
+1,Karen Eagle,CO,90+,106.6,43,120,62.5,137.5,320,F,Masters 40-44,Raw,SBD
+1,Nick Culver,CO,75,72.65,19,160,85,200,445,M,Juniors 18-19,Raw,SBD
+1,Justin Rialon,CO,75,73.05,20,200,125,265,590,M,Juniors 20-23,Raw,SBD
+1,Jakob Seib,CO,90,86.7,18,130,92.5,195,417.5,M,Juniors 18-19,Raw,SBD
+1,Caleb Cantrell,CO,100,99.3,16,142.5,92.5,162.5,397.5,M,Juniors 16-17,Raw,SBD
+1,Austin Walker,CO,100,98.05,22,225,160,237.5,622.5,M,Juniors 20-23,Raw,SBD
+1,Eric Olsen,CO,140,139.8,18,127.5,95,165,387.5,M,Juniors 18-19,Raw,SBD
 1,Joe Greene,CO,75,74.5,26,242.5,165,305,712.5,M,Open,Raw,SBD
 2,Ryan Hughes,WY,75,72.75,33,162.5,112.5,227.5,502.5,M,Open,Raw,SBD
 3,Connor Fuqua,CO,75,68.4,28,157.5,102.5,205,465,M,Open,Raw,SBD
@@ -73,21 +73,21 @@ DQ,Shannan Roskam,CO,67.5,64.45,42,,,,,F,Master 40-44,Raw,SBD
 2,Samuel Cisneros,CO,125,116.6,26,175,147.5,200,522.5,M,Open,Raw,SBD
 1,Neal Ortiz,CO,140,131.8,45,240,202.5,272.5,715,M,Open,Raw,SBD
 1,Blaise Miyakusu,CO,140+,146.4,21,197.5,140,222.5,560,M,Open,Raw,SBD
-1,Chris Covington,CO,82.5,80.6,36,165,112.5,235,512.5,M,Submaster 35-39,Raw,SBD
-1,Jake Pavey,CO,90,89,36,242.5,177.5,237.5,657.5,M,Submaster 35-39,Raw,SBD
-1,Josh Laven,CO,110,105.9,36,212.5,152.5,260,625,M,Submaster 35-39,Raw,SBD
-1,Mark Cucinella,CO,75,69.95,66,155,112.5,187.5,455,M,Master 65-69,Raw,SBD
-1,Eric Smart,CO,82.5,81.65,42,160,137.5,192.5,490,M,Master 40-44,Raw,SBD
-1,Ernie O'Hara,CO,82.5,81,77,92.5,65,135,292.5,M,Master 75-79,Raw,SBD
-1,Jeremiah Meek,CO,90,88.7,41,192.5,130,220,542.5,M,Master 40-44,Raw,SBD
-1,Russell Clark,CO,90,89.05,55,232.5,135,277.5,645,M,Master 55-59,Raw,SBD
-1,Michael Cantrell,CO,100,99.3,41,210,140,202.5,552.5,M,Master 40-44,Raw,SBD
-1,Neil Buckley,CO,110,105.3,44,157.5,142.5,215,515,M,Master 40-44,Raw,SBD
-1,Mark Diamond,CO,110,103.1,55,227.5,125,240,592.5,M,Master 55-59,Raw,SBD
-1,Neal Ortiz,CO,140,131.8,45,240,202.5,272.5,715,M,Master 45-49,Raw,SBD
-1,Terry Moon,CO,140,128.2,55,142.5,95,155,392.5,M,Master 55-59,Raw,SBD
-1,Maxwell Belshe,CO,75,71.8,16,172.5,115,177.5,465,M,Junior 16-17,Wraps,SBD
-1,Zack Spradlin,CO,125,115.8,17,182.5,120,182.5,485,M,Junior 16-17,Wraps,SBD
+1,Chris Covington,CO,82.5,80.6,36,165,112.5,235,512.5,M,Submasters 35-39,Raw,SBD
+1,Jake Pavey,CO,90,89,36,242.5,177.5,237.5,657.5,M,Submasters 35-39,Raw,SBD
+1,Josh Laven,CO,110,105.9,36,212.5,152.5,260,625,M,Submasters 35-39,Raw,SBD
+1,Mark Cucinella,CO,75,69.95,66,155,112.5,187.5,455,M,Masters 65-69,Raw,SBD
+1,Eric Smart,CO,82.5,81.65,42,160,137.5,192.5,490,M,Masters 40-44,Raw,SBD
+1,Ernie O'Hara,CO,82.5,81,77,92.5,65,135,292.5,M,Masters 75-79,Raw,SBD
+1,Jeremiah Meek,CO,90,88.7,41,192.5,130,220,542.5,M,Masters 40-44,Raw,SBD
+1,Russell Clark,CO,90,89.05,55,232.5,135,277.5,645,M,Masters 55-59,Raw,SBD
+1,Michael Cantrell,CO,100,99.3,41,210,140,202.5,552.5,M,Masters 40-44,Raw,SBD
+1,Neil Buckley,CO,110,105.3,44,157.5,142.5,215,515,M,Masters 40-44,Raw,SBD
+1,Mark Diamond,CO,110,103.1,55,227.5,125,240,592.5,M,Masters 55-59,Raw,SBD
+1,Neal Ortiz,CO,140,131.8,45,240,202.5,272.5,715,M,Masters 45-49,Raw,SBD
+1,Terry Moon,CO,140,128.2,55,142.5,95,155,392.5,M,Masters 55-59,Raw,SBD
+1,Maxwell Belshe,CO,75,71.8,16,172.5,115,177.5,465,M,Juniors 16-17,Wraps,SBD
+1,Zack Spradlin,CO,125,115.8,17,182.5,120,182.5,485,M,Juniors 16-17,Wraps,SBD
 1,Matthew Rutledge,CO,67.5,67.2,31,165,122.5,182.5,470,M,Open,Wraps,SBD
 1,John Addison,CO,90,89.05,31,200,125,260,585,M,Open,Wraps,SBD
 1,Daniel Pintor,CO,100,96.35,27,237.5,162.5,242.5,642.5,M,Open,Wraps,SBD
@@ -98,26 +98,26 @@ DQ,Shannan Roskam,CO,67.5,64.45,42,,,,,F,Master 40-44,Raw,SBD
 1,James Casterline,CO,125,110.5,37,267.5,172.5,240,680,M,Open,Wraps,SBD
 2,Alex Judson,CO,125,123.2,27,260,155,252.5,667.5,M,Open,Wraps,SBD
 3,Zach Ferre,CO,125,118.9,28,192.5,147.5,192.5,532.5,M,Open,Wraps,SBD
-1,James Casterline,CO,125,110.5,37,267.5,172.5,240,680,M,Submaster 35-39,Wraps,SBD
-1,Daniel Czech,CO,125,120.3,50,205,130,227.5,562.5,M,Master 50-54,Wraps,SBD
+1,James Casterline,CO,125,110.5,37,267.5,172.5,240,680,M,Submasters 35-39,Wraps,SBD
+1,Daniel Czech,CO,125,120.3,50,205,130,227.5,562.5,M,Masters 50-54,Wraps,SBD
 1,Shane Landenberger,CO,90,86.1,46,250,155,262.5,667.5,M,Open,Single-ply,SBD
 2,Ron Krantz,CO,90,90,33,205,207.5,227.5,640,M,Open,Single-ply,SBD
-1,Shane Landenberger,CO,90,86.1,46,250,155,262.5,667.5,M,Master 45-49,Single-ply,SBD
+1,Shane Landenberger,CO,90,86.1,46,250,155,262.5,667.5,M,Masters 45-49,Single-ply,SBD
 DQ,Sara McCormick,CO,56,55.05,36,,,,,F,Open,Raw,B
 1,Rachael Chaskey,CO,75,72.9,29,,102.5,,102.5,F,Open,Raw,B
-1,Vicki Morgan,CO,52,51.6,54,,60,,60,F,Master 50-54,Raw,B
+1,Vicki Morgan,CO,52,51.6,54,,60,,60,F,Masters 50-54,Raw,B
 1,Eric Smart,CO,82.5,81.65,42,,137.5,,137.5,M,Open,Raw,B
-1,Eric Smart,CO,82.5,81.65,42,,137.5,,137.5,M,Master 40-44,Raw,B
+1,Eric Smart,CO,82.5,81.65,42,,137.5,,137.5,M,Masters 40-44,Raw,B
 1,Darren Veal,CO,100,99.8,47,,175,,175,M,Open,Raw,B
 1,Justin Osborn,CO,110,106.6,32,,172.5,,172.5,M,Open,Raw,B
 1,Manuel Talamantes,CO,140,130.1,44,,210,,210,M,Open,Raw,B
-1,Darren Veal,CO,100,99.8,47,,175,,175,M,Master 45-49,Raw,B
-1,Jared Burton,CO,110,105.6,46,,240,,240,M,Master 45-49,Raw,B
-1,Manuel Talamantes,CO,140,130.1,44,,210,,210,M,Master 40-44,Raw,B
-1,Larry Padgett,CO,140,127.8,52,,167.5,,167.5,M,Master 50-54,Raw,B
+1,Darren Veal,CO,100,99.8,47,,175,,175,M,Masters 45-49,Raw,B
+1,Jared Burton,CO,110,105.6,46,,240,,240,M,Masters 45-49,Raw,B
+1,Manuel Talamantes,CO,140,130.1,44,,210,,210,M,Masters 40-44,Raw,B
+1,Larry Padgett,CO,140,127.8,52,,167.5,,167.5,M,Masters 50-54,Raw,B
 1,Luke McCoskey,MO,125,124.6,26,,190,,190,M,Open,Single-ply,B
 2,David McCoskey,MO,125,111.3,56,,120,,120,M,Open,Single-ply,B
-1,David McCoskey,MO,125,111.3,56,,120,,120,M,Master 55-59,Single-ply,B
+1,David McCoskey,MO,125,111.3,56,,120,,120,M,Masters 55-59,Single-ply,B
 1,Sara McCormick,CO,56,55.05,36,,,120,120,F,Open,Raw,D
 1,Rachael Chaskey,CO,75,72.9,29,,,185,185,F,Open,Raw,D
 1,Linda Hanley,CO,90+,105.4,56,,,175,175,F,Open,Raw,D

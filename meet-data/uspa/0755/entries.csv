@@ -1,14 +1,14 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Mary Catherine Innace,NJ,75,71.7,21,82.5,,82.5,F,Junior 20-23,Raw,B
+1,Mary Catherine Innace,NJ,75,71.7,21,82.5,,82.5,F,Juniors 20-23,Raw,B
 1,Kyleigh Roth,NJ,56,54.6,31,82.5,,82.5,F,Open,Raw,B
 1,Laura Niedermayer,DE,60,59.1,31,85,,85,F,Open,Raw,B
 2,Stephanie Hanson,NJ,60,59.6,25,65,,65,F,Open,Raw,B
 1,Mary Catherine Innace,NJ,75,71.7,21,82.5,,82.5,F,Open,Raw,B
 1,Alicia Blanding,DE,90+,107.6,27,72.5,,72.5,F,Open,Raw,B
-1,Tristan Felchock,PA,82.5,81,19,107.5,,107.5,M,Junior 18-19,Raw,B
-DQ,Derek Keiser,PA,100,94.1,21,-155,,,M,Junior 20-23,Raw,B
-1,Anthony Grosso,PA,125,124.4,20,160,,160,M,Junior 20-23,Raw,B
-2,Rodman Holmes,PA,125,121.2,22,140,,140,M,Junior 20-23,Raw,B
+1,Tristan Felchock,PA,82.5,81,19,107.5,,107.5,M,Juniors 18-19,Raw,B
+DQ,Derek Keiser,PA,100,94.1,21,-155,,,M,Juniors 20-23,Raw,B
+1,Anthony Grosso,PA,125,124.4,20,160,,160,M,Juniors 20-23,Raw,B
+2,Rodman Holmes,PA,125,121.2,22,140,,140,M,Juniors 20-23,Raw,B
 1,Michael Doherty,PA,75,73.9,25,132.5,,132.5,M,Open,Raw,B
 2,John Marinangeli,DE,75,74.4,27,112.5,,112.5,M,Open,Raw,B
 1,Hunter Walls,MD,82.5,79.9,24,140,,140,M,Open,Raw,B
@@ -21,22 +21,22 @@ DQ,Derek Keiser,PA,100,94.1,21,-155,,,M,Junior 20-23,Raw,B
 2,Brian Hertzog,PA,125,115.4,32,182.5,,182.5,M,Open,Raw,B
 3,Rodman Holmes,PA,125,121.2,22,140,,140,M,Open,Raw,B
 1,Timothy Louisignau,DE,140,130.1,32,165,,165,M,Open,Raw,B
-1,Roland Wilder,PA,110,107.7,37,142.5,,142.5,M,Submaster 35-39,Raw,B
-1,William Konowitz,MD,90,85.5,63,85,,85,M,Master 60-64,Raw,B
-1,Nicollette Moratori,PA,56,53.4,16,,100,100,F,Junior 16-17,Raw,D
-1,Samantha Moratori,PA,60,59.6,14,,87.5,87.5,F,Junior 13-15,Raw,D
-1,Brittney Moratori,PA,60,60,17,,117.5,117.5,F,Junior 16-17,Raw,D
+1,Roland Wilder,PA,110,107.7,37,142.5,,142.5,M,Submasters 35-39,Raw,B
+1,William Konowitz,MD,90,85.5,63,85,,85,M,Masters 60-64,Raw,B
+1,Nicollette Moratori,PA,56,53.4,16,,100,100,F,Juniors 16-17,Raw,D
+1,Samantha Moratori,PA,60,59.6,14,,87.5,87.5,F,Juniors 13-15,Raw,D
+1,Brittney Moratori,PA,60,60,17,,117.5,117.5,F,Juniors 16-17,Raw,D
 1,Stephanie Hanson,NJ,60,59.6,25,,155,155,F,Open,Raw,D
 G,Jessica Kratz,PA,67.5,64.4,44,,165,165,F,Open,Raw,D
 1,Alicia Blanding,DE,90+,107.6,27,,182.5,182.5,F,Open,Raw,D
-G,Jessica Kratz,PA,67.5,64.4,44,,165,165,F,Master 40-44,Raw,D
-G,Rowan Kratz,PA,,,10,,70,70,M,Master 40-44,Raw,D
-G,Tristan Kratz,PA,,,11,,85,85,M,Master 40-44,Raw,D
-1,Khayal Marcano,NY,75,74.6,18,,242.5,242.5,M,Junior 18-19,Raw,D
-1,Tristan Felchock,PA,82.5,81,19,,195,195,M,Junior 18-19,Raw,D
-1,Austin Hoffman,PA,75,71.7,21,,232.5,232.5,M,Junior 20-23,Raw,D
-1,Anthony Grosso,PA,125,124.4,20,,240,240,M,Junior 20-23,Raw,D
-2,Rodman Holmes,PA,125,121.2,22,,212.5,212.5,M,Junior 20-23,Raw,D
+G,Jessica Kratz,PA,67.5,64.4,44,,165,165,F,Masters 40-44,Raw,D
+G,Rowan Kratz,PA,,,10,,70,70,M,Masters 40-44,Raw,D
+G,Tristan Kratz,PA,,,11,,85,85,M,Masters 40-44,Raw,D
+1,Khayal Marcano,NY,75,74.6,18,,242.5,242.5,M,Juniors 18-19,Raw,D
+1,Tristan Felchock,PA,82.5,81,19,,195,195,M,Juniors 18-19,Raw,D
+1,Austin Hoffman,PA,75,71.7,21,,232.5,232.5,M,Juniors 20-23,Raw,D
+1,Anthony Grosso,PA,125,124.4,20,,240,240,M,Juniors 20-23,Raw,D
+2,Rodman Holmes,PA,125,121.2,22,,212.5,212.5,M,Juniors 20-23,Raw,D
 1,Austin Hoffman,PA,75,71.7,21,,232.5,232.5,M,Open,Raw,D
 2,Michael Doherty,PA,75,73.9,25,,217.5,217.5,M,Open,Raw,D
 1,Eric Kratz #1,PA,90,89.8,42,,267.5,267.5,M,Open,Raw,D
@@ -47,7 +47,7 @@ G,Tristan Kratz,PA,,,11,,85,85,M,Master 40-44,Raw,D
 1,Porfirio Duran,NY,110,108.9,27,,315,315,M,Open,Raw,D
 1,Eric Opitz,NJ,125,125,24,,287.5,287.5,M,Open,Raw,D
 2,Rodman Holmes,PA,125,121.2,22,,212.5,212.5,M,Open,Raw,D
-1,Roland Wilder,PA,110,107.7,37,,227.5,227.5,M,Submaster 35-39,Raw,D
-1,Eric Kratz #1,PA,90,89.8,42,,267.5,267.5,M,Master 40-44,Raw,D
-1,David Siegfried,PA,90,88.5,52,,260,260,M,Master 50-54,Raw,D
-1,William Konowitz,MD,90,85.5,63,,165,165,M,Master 60-64,Raw,D
+1,Roland Wilder,PA,110,107.7,37,,227.5,227.5,M,Submasters 35-39,Raw,D
+1,Eric Kratz #1,PA,90,89.8,42,,267.5,267.5,M,Masters 40-44,Raw,D
+1,David Siegfried,PA,90,88.5,52,,260,260,M,Masters 50-54,Raw,D
+1,William Konowitz,MD,90,85.5,63,,165,165,M,Masters 60-64,Raw,D

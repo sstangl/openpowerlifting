@@ -1,5 +1,5 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Squat4Kg,Deadlift4Kg,Sex,Division,Equipment,Event
-1,Taelor Baetz,OK,60,59.8,19,82.5,47.5,120,250,,,F,Junior 18-19,Raw,SBD
+1,Taelor Baetz,OK,60,59.8,19,82.5,47.5,120,250,,,F,Juniors 18-19,Raw,SBD
 1,Bailey Harmon,OK,56,55.4,24,112.5,70,132.5,315,,,F,Open,Raw,SBD
 1,Michele Oller,OK,60,59.8,31,125,72.5,142.5,340,127.5,,F,Open,Raw,SBD
 2,Amanda Partain,OK,60,59.6,25,77.5,45,120,242.5,,,F,Open,Raw,SBD
@@ -9,12 +9,12 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Kirsten Olsson,MO,75,74.7,23,125,65,127.5,317.5,,,F,Open,Raw,SBD
 3,Stephanie Prewett,OK,75,74.9,32,77.5,47.5,95,220,,,F,Open,Raw,SBD
 1,Ashley Day,OK,90+,107,28,150,80,162.5,392.5,155,172.5,F,Open,Raw,SBD
-1,Angela Joines,OK,67.5,66.2,42,117.5,70,122.5,310,,,F,Master 40-44,Raw,SBD
-1,Wyatt Harper,OK,67.5,61.2,15,112.5,70,117.5,300,,,M,Junior 13-15,Raw,SBD
-DQ,Willis Minton,MO,75,72.3,20,177.5,,207.5,,,,M,Junior 20-23,Raw,SBD
-1,Rusty Bunce,OK,90,88.9,23,192.5,140,232.5,565,,,M,Junior 20-23,Raw,SBD
-1,Charles Frizzell,OK,100,92.7,21,222.5,155,262.5,640,,,M,Junior 20-23,Raw,SBD
-1,Dylan Lett,MO,110,108.3,19,225,132.5,267.5,625,,272.5,M,Junior 18-19,Raw,SBD
+1,Angela Joines,OK,67.5,66.2,42,117.5,70,122.5,310,,,F,Masters 40-44,Raw,SBD
+1,Wyatt Harper,OK,67.5,61.2,15,112.5,70,117.5,300,,,M,Juniors 13-15,Raw,SBD
+DQ,Willis Minton,MO,75,72.3,20,177.5,,207.5,,,,M,Juniors 20-23,Raw,SBD
+1,Rusty Bunce,OK,90,88.9,23,192.5,140,232.5,565,,,M,Juniors 20-23,Raw,SBD
+1,Charles Frizzell,OK,100,92.7,21,222.5,155,262.5,640,,,M,Juniors 20-23,Raw,SBD
+1,Dylan Lett,MO,110,108.3,19,225,132.5,267.5,625,,272.5,M,Juniors 18-19,Raw,SBD
 1,Arnulfo Toledo,OK,125,116,31,215,140,215,570,,,M,Open,Raw,SBD
 1,Jeremiah Parnell,OK,67.5,66.2,23,170,105,217.5,492.5,,,M,Open,Raw,SBD
 1,Justin Kimmel,OK,75,74.9,27,197.5,145,252.5,595,,,M,Open,Raw,SBD
@@ -30,9 +30,9 @@ DQ,Willis Minton,MO,75,72.3,20,177.5,,207.5,,,,M,Junior 20-23,Raw,SBD
 1,Ron Nichols,NE,110,108.5,32,282.5,232.5,275,790,,,M,Open,Raw,SBD
 2,Karl Crick,OK,110,105.6,28,200,155,227.5,582.5,,,M,Open,Raw,SBD
 3,Evan Botizan,OK,110,107.7,27,180,137.5,227.5,545,,,M,Open,Raw,SBD
-1,Luke Orcutt,OK,90,85.5,34,172.5,120,215,507.5,,,M,Submaster 35-39,Raw,SBD
-DQ,Katie Buchert,OK,67.5,67.5,23,120,,110,,,,F,Junior 20-23,Wraps,SBD
-1,Brock Williams,AL,82.5,81.6,19,220,125,272.5,617.5,,,M,Junior 18-19,Wraps,SBD
+1,Luke Orcutt,OK,90,85.5,34,172.5,120,215,507.5,,,M,Submasters 35-39,Raw,SBD
+DQ,Katie Buchert,OK,67.5,67.5,23,120,,110,,,,F,Juniors 20-23,Wraps,SBD
+1,Brock Williams,AL,82.5,81.6,19,220,125,272.5,617.5,,,M,Juniors 18-19,Wraps,SBD
 1,Christian Mendoza,OK,82.5,78.3,25,232.5,115,267.5,615,,,M,Open,Wraps,SBD
 1,Chris Blanton,OK,100,99,34,262.5,172.5,272.5,707.5,,,M,Open,Wraps,SBD
 1,Bryan Burke,OK,110,107.9,28,297.5,162.5,295,755,,,M,Open,Wraps,SBD
@@ -40,15 +40,15 @@ DQ,Katie Buchert,OK,67.5,67.5,23,120,,110,,,,F,Junior 20-23,Wraps,SBD
 3,David Laws,OK,110,105.4,29,170,137.5,225,532.5,,,M,Open,Wraps,SBD
 1,Saifoloi Anoai,OK,125,118.1,27,320,192.5,330,842.5,,,M,Open,Wraps,SBD
 1,Christopher Leech,KS,140,136.7,32,192.5,120,220,532.5,,,M,Open,Wraps,SBD
-1,Glynn Cooper,OK,100,100,51,192.5,125,210,527.5,,,M,Master 50-54,Wraps,SBD
-1,Chuck Cookson,KS,140,131,47,265,172.5,297.5,735,,,M,Master 45-49,Wraps,SBD
+1,Glynn Cooper,OK,100,100,51,192.5,125,210,527.5,,,M,Masters 50-54,Wraps,SBD
+1,Chuck Cookson,KS,140,131,47,265,172.5,297.5,735,,,M,Masters 45-49,Wraps,SBD
 1,Bailey Harmon,OK,56,55.4,24,,70,,70,,,F,Open,Raw,B
 1,Justin Kimmel,OK,75,74.9,27,,145,,145,,,M,Open,Raw,B
-1,Chad Ake,OK,75,73.8,44,,145,,145,,,M,Master 40-44,Raw,B
-1,Kathryn Pohlman,AZ,67.5,66.1,22,,,140,140,,,F,Junior 20-23,Raw,D
+1,Chad Ake,OK,75,73.8,44,,145,,145,,,M,Masters 40-44,Raw,B
+1,Kathryn Pohlman,AZ,67.5,66.1,22,,,140,140,,,F,Juniors 20-23,Raw,D
 1,Amanda Partain,OK,60,59.6,25,,,120,120,,,F,Open,Raw,D
 1,Taylor Pierce,OK,75,72.9,34,,,95,95,,,F,Open,Raw,D
 1,Mirelle McGee,OK,110,105.8,32,,,305,305,,,M,Open,Raw,D
 1,Clinton Partain,OK,100,98.3,25,,127.5,200,327.5,,,M,Open,Raw,BD
 DQ,Jonathan Medina,TX,140+,159.1,34,,190,,,,,M,Open,Raw,BD
-1,Donald Williams,OK,125,111.8,43,,147.5,217.5,365,,,M,Master 40-44,Raw,BD
+1,Donald Williams,OK,125,111.8,43,,147.5,217.5,365,,,M,Masters 40-44,Raw,BD

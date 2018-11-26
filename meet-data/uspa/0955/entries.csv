@@ -1,8 +1,8 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Leann Miller,OH,56,56,23,82.5,47.5,135,265,F,Junior 20-23,Raw,SBD
-2,Kaitlin Baker,OH,56,56,22,95,47.5,115,257.5,F,Junior 20-23,Raw,SBD
-1,Samantha Gatton,OH,67.5,66.5,18,92.5,45,82.5,220,F,Junior 18-19,Raw,SBD
-1,Elizabeth Kegley,OH,82.5,80.9,17,120,65,142.5,327.5,F,Junior 16-17,Raw,SBD
+1,Leann Miller,OH,56,56,23,82.5,47.5,135,265,F,Juniors 20-23,Raw,SBD
+2,Kaitlin Baker,OH,56,56,22,95,47.5,115,257.5,F,Juniors 20-23,Raw,SBD
+1,Samantha Gatton,OH,67.5,66.5,18,92.5,45,82.5,220,F,Juniors 18-19,Raw,SBD
+1,Elizabeth Kegley,OH,82.5,80.9,17,120,65,142.5,327.5,F,Juniors 16-17,Raw,SBD
 1,Ashley Hutchinson,PA,52,51.9,25,97.5,60,122.5,280,F,Open,Raw,SBD
 1,Madelyn Harrington,OH,56,55.6,23,112.5,70,112.5,295,F,Open,Raw,SBD
 2,Kaitlin Baker,OH,56,56,22,95,47.5,115,257.5,F,Open,Raw,SBD
@@ -13,12 +13,12 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Alora Lopez,OH,75,72.8,25,127.5,60,157.5,345,F,Open,Raw,SBD
 1,Sara Garverick,OH,82.5,77,36,117.5,67.5,150,335,F,Open,Raw,SBD
 2,Elizabeth Kegley,OH,82.5,80.9,17,120,65,142.5,327.5,F,Open,Raw,SBD
-1,Elizabeth Hicks,OH,82.5,78.9,49,80,50,132.5,262.5,F,Master 45-49,Raw,SBD
-1,Taran Rodriguez,OH,75,72,22,160,122.5,212.5,495,M,Junior 20-23,Raw,SBD
-2,Nicholas Keene,OH,75,70.4,20,165,85,177.5,427.5,M,Junior 20-23,Raw,SBD
-1,Dalton White,IN,90,89,19,245,145,205,595,M,Junior 18-19,Raw,SBD
-1,Alan Lostaglia,OH,90,88.8,20,180,140,210,530,M,Junior 20-23,Raw,SBD
-2,James Bond,OH,90,90,22,177.5,127.5,200,505,M,Junior 20-23,Raw,SBD
+1,Elizabeth Hicks,OH,82.5,78.9,49,80,50,132.5,262.5,F,Masters 45-49,Raw,SBD
+1,Taran Rodriguez,OH,75,72,22,160,122.5,212.5,495,M,Juniors 20-23,Raw,SBD
+2,Nicholas Keene,OH,75,70.4,20,165,85,177.5,427.5,M,Juniors 20-23,Raw,SBD
+1,Dalton White,IN,90,89,19,245,145,205,595,M,Juniors 18-19,Raw,SBD
+1,Alan Lostaglia,OH,90,88.8,20,180,140,210,530,M,Juniors 20-23,Raw,SBD
+2,James Bond,OH,90,90,22,177.5,127.5,200,505,M,Juniors 20-23,Raw,SBD
 1,Nathan Weaver,OH,75,72.4,21,190,140,247.5,577.5,M,Open,Raw,SBD
 2,Don Super,PA,75,74.4,27,207.5,130,220,557.5,M,Open,Raw,SBD
 3,Taran Rodriguez,OH,75,72,22,160,122.5,212.5,495,M,Open,Raw,SBD
@@ -38,19 +38,19 @@ DQ,Samuel Dagg,OH,82.5,81.1,23,170,,230,,M,Open,Raw,SBD
 DQ,James Dollman Jr,OH,125,120.8,25,,,,,M,Open,Raw,SBD
 1,Terrance Gilbert,OH,140+,150.8,28,317.5,187.5,300,805,M,Open,Raw,SBD
 2,James Thompson,OH,140+,144,29,227.5,142.5,272.5,642.5,M,Open,Raw,SBD
-1,Joe Robinette,OH,140,137.6,35,190,155,205,550,M,Submaster 35-39,Raw,SBD
-1,Travis Clark,OH,82.5,81.7,43,187.5,157.5,190,535,M,Master 40-44,Raw,SBD
-1,Robert Fleming,PA,110,110,50,117.5,100,182.5,400,M,Master 50-54,Raw,SBD
-1,Renee Boyer,OH,67.5,66.7,21,115,52.5,127.5,295,F,Junior 20-23,Wraps,SBD
-DQ,Ashley Petro,PA,67.5,61.3,22,120,,,,F,Junior 20-23,Wraps,SBD
-1,Sarah Farou,OH,82.5,79.1,22,132.5,47.5,140,320,F,Junior 20-23,Wraps,SBD
+1,Joe Robinette,OH,140,137.6,35,190,155,205,550,M,Submasters 35-39,Raw,SBD
+1,Travis Clark,OH,82.5,81.7,43,187.5,157.5,190,535,M,Masters 40-44,Raw,SBD
+1,Robert Fleming,PA,110,110,50,117.5,100,182.5,400,M,Masters 50-54,Raw,SBD
+1,Renee Boyer,OH,67.5,66.7,21,115,52.5,127.5,295,F,Juniors 20-23,Wraps,SBD
+DQ,Ashley Petro,PA,67.5,61.3,22,120,,,,F,Juniors 20-23,Wraps,SBD
+1,Sarah Farou,OH,82.5,79.1,22,132.5,47.5,140,320,F,Juniors 20-23,Wraps,SBD
 1,Sarah Farou,OH,82.5,79.1,22,132.5,47.5,140,320,F,Open,Wraps,SBD
 1,Martin Gorbey,OH,75,69.3,28,182.5,115,232.5,530,M,Open,Wraps,SBD
 1,Zach Crowe,OH,110,107.5,30,240,192.5,307.5,740,M,Open,Wraps,SBD
 1,Jacob Huff,OH,125,117.3,34,205,125,255,585,M,Open,Wraps,SBD
-1,Brian Stischok,OH,110,105,46,185,127.5,207.5,520,M,Master 45-49,Wraps,SBD
-2,Bob Roberts,OH,110,105.2,46,162.5,107.5,160,430,M,Master 45-49,Wraps,SBD
+1,Brian Stischok,OH,110,105,46,185,127.5,207.5,520,M,Masters 45-49,Wraps,SBD
+2,Bob Roberts,OH,110,105.2,46,162.5,107.5,160,430,M,Masters 45-49,Wraps,SBD
 1,Brian Happeny,OH,90,88.4,46,232.5,182.5,245,660,M,Open,Single-ply,SBD
 1,Shane Darrow,OH,100,96.7,27,,142.5,287.5,430,M,Open,Raw,BD
 DQ,Kyle Dussel,OH,125,121.2,30,,,300,,M,Open,Raw,BD
-1,Steven Sares,OH,100,90.2,57,,132.5,157.5,290,M,Master 55-59,Raw,BD
+1,Steven Sares,OH,100,90.2,57,,132.5,157.5,290,M,Masters 55-59,Raw,BD

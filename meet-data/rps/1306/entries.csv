@@ -1,14 +1,14 @@
 Sex,Equipment,Division,WeightClassKg,Name,Age,BodyweightKg,Best3SquatKg,Squat4Kg,Best3BenchKg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Place
-F,Wraps,Amateur Master 40-44,52,Christine Wood,44,51.35,79.38,,52.16,129.27,,260.82,SBD,1
-F,Wraps,Amateur Master 45-49,52,Elizabeth Grundy,48,51.8,97.52,,54.43,102.06,,254.01,SBD,1
+F,Wraps,Amateur Masters 40-44,52,Christine Wood,44,51.35,79.38,,52.16,129.27,,260.82,SBD,1
+F,Wraps,Amateur Masters 45-49,52,Elizabeth Grundy,48,51.8,97.52,,54.43,102.06,,254.01,SBD,1
 F,Single-ply,Amateur Teen 16-17,60,Danielle Ross,,58.88,117.93,,77.11,131.54,,326.59,SBD,1
 F,Raw,Amateur Open,60,Jessenia Soto,,59.96,102.06,,61.23,131.54,,294.84,SBD,1
 F,Raw,Amateur Open,60,Sarah Campbell,,59.69,72.57,,54.43,108.86,,235.87,SBD,2
-F,Wraps,Amateur Submaster 33-39,60,Nicole London,36,59.96,111.13,,56.7,136.08,,303.91,SBD,1
-F,Raw,Amateur Master 70-74,60,Audrey Donellan,71,56.52,79.38,,38.56,120.2,,238.14,SBD,1
-F,Multi-ply,Pro Master 40-44,67.5,Tammy B. Howard,42,64.05,167.83,,136.08,149.69,,453.59,SBD,1
+F,Wraps,Amateur Submasters 33-39,60,Nicole London,36,59.96,111.13,,56.7,136.08,,303.91,SBD,1
+F,Raw,Amateur Masters 70-74,60,Audrey Donellan,71,56.52,79.38,,38.56,120.2,,238.14,SBD,1
+F,Multi-ply,Pro Masters 40-44,67.5,Tammy B. Howard,42,64.05,167.83,,136.08,149.69,,453.59,SBD,1
 F,Wraps,Amateur Open,75,Rebecca Traylor,,73.84,147.42,,77.11,138.35,,362.87,SBD,1
-F,Raw,Amateur Junior 20-23,110+,Eliza Reed,,117.48,129.27,,61.23,170.1,,360.61,SBD,1
+F,Raw,Amateur Juniors 20-23,110+,Eliza Reed,,117.48,129.27,,61.23,170.1,,360.61,SBD,1
 M,Wraps,Amateur Teen 16-17,90,CJ Lewis,,84.64,131.54,,83.91,147.42,,362.87,SBD,1
 M,Raw,Elite Open,100,Robert Heydenberk,,98.61,254.01,,183.7,265.35,,703.07,SBD,1
 M,Raw,Amateur Teen 18-19,100,Robert Heydenberk,,98.61,254.01,,183.7,265.35,,703.07,SBD,1
@@ -21,47 +21,47 @@ M,Single-ply,Amateur Teen 18-19,75,Taylor Applegate,,74.21,181.44,,124.74,217.72
 M,Single-ply,Amateur Teen 16-17,82.5,Chris Gomez,,78.56,165.56,,113.4,204.12,,483.08,SBD,1
 M,Single-ply,Amateur Teen 16-17,90,Chris Kurtanik,,87,229.06,,156.49,249.48,,635.03,SBD,1
 M,Single-ply,Amateur Teen 16-17,100,Eddie Shaloub,,99.06,129.27,,106.59,158.76,,394.63,SBD,1
-M,Multi-ply,Amateur Master 45-49,67.5,Timothy Kingure,48,66.86,183.7,,113.4,183.7,,480.81,SBD,1
-M,Raw,Amateur Junior 20-23,75,Nate Miriello,,74.57,136.08,,129.27,231.33,,496.68,SBD,1
-M,Raw,Amateur Submaster 33-39,75,John Schlegel,,73.12,108.86,,104.33,158.76,,371.95,SBD,1
-M,Raw,Amateur Master 45-49,75,Richard McMillan,48,74.03,136.08,,113.4,172.37,,421.84,SBD,1
+M,Multi-ply,Amateur Masters 45-49,67.5,Timothy Kingure,48,66.86,183.7,,113.4,183.7,,480.81,SBD,1
+M,Raw,Amateur Juniors 20-23,75,Nate Miriello,,74.57,136.08,,129.27,231.33,,496.68,SBD,1
+M,Raw,Amateur Submasters 33-39,75,John Schlegel,,73.12,108.86,,104.33,158.76,,371.95,SBD,1
+M,Raw,Amateur Masters 45-49,75,Richard McMillan,48,74.03,136.08,,113.4,172.37,,421.84,SBD,1
 M,Wraps,Elite Open,75,Jason Manenkoff,,74.93,210.92,217.72,170.1,254.01,,635.03,SBD,1
 M,Wraps,Amateur Open,75,George Sobetsky,,72.39,124.74,,120.2,201.85,,446.79,SBD,1
 M,Raw,Amateur Open,82.5,Chris Rachfal,,82.37,217.72,,145.15,231.33,,594.21,SBD,1
 M,Wraps,Amateur Open,82.5,Brandon Christ,,80.38,215.46,,138.35,215.46,,569.26,SBD,1
 M,Multi-ply,Pro Open,82.5,Chad Weyandt,,80.92,308.44,,195.04,258.55,,762.04,SBD,1
-M,Raw,Amateur Junior 20-23,90,Aaron Brophy,,88.09,176.9,,138.35,251.74,,566.99,SBD,2
-M,Raw,Amateur Junior 20-23,90,Matt McMahon,,88.99,181.44,,138.35,261.95,267.62,581.73,SBD,1
+M,Raw,Amateur Juniors 20-23,90,Aaron Brophy,,88.09,176.9,,138.35,251.74,,566.99,SBD,2
+M,Raw,Amateur Juniors 20-23,90,Matt McMahon,,88.99,181.44,,138.35,261.95,267.62,581.73,SBD,1
 M,Raw,Amateur Open,90,Chris Philbin,,88.09,163.29,,138.35,210.92,,512.56,SBD,2
 M,Raw,Amateur Open,90,Jason Hagy,,87.63,204.12,,124.74,240.4,,569.26,SBD,1
 M,Raw,Police Amateur Open,90,Jason Hagy,,87.63,204.12,,124.74,240.4,,569.26,SBD,1
 M,Wraps,Amateur Open,90,Curtis Miller #1,,88.27,215.46,,124.74,254.01,,594.21,SBD,2
 M,Wraps,Amateur Open,90,Aaron Utermahlen,,89.36,226.8,,145.15,249.48,,621.42,SBD,1
-M,Single-ply,Amateur Master 50+,90,Christopher Jenkins,58,86.73,204.12,,136.08,238.14,,578.33,SBD,1
+M,Single-ply,Amateur Masters 50+,90,Christopher Jenkins,58,86.73,204.12,,136.08,238.14,,578.33,SBD,1
 M,Single-ply,Amateur Open,90,Joe Beckert,,84.55,235.87,,181.44,251.74,,669.05,SBD,1
 M,Multi-ply,Amateur Open,90,Ken Foreman,,88.09,204.12,,142.88,204.12,,551.11,SBD,1
 M,Raw,Amateur Open,140,Ryan Fetty,,133.45,244.94,,185.97,226.8,,657.71,SBD,1
 M,Multi-ply,Pro Open,140,George Underwood,,139.53,367.41,,281.23,294.84,,943.47,SBD,1
-F,Raw,Amateur Master 40-44,90,Kathryn Welcheck,42,89.36,,,47.63,,,47.63,B,1
+F,Raw,Amateur Masters 40-44,90,Kathryn Welcheck,42,89.36,,,47.63,,,47.63,B,1
 M,Raw,Amateur Teen 16-17,75,Noah Gomez,,74.84,,,151.95,,,151.95,B,1
-M,Raw,Amateur Submaster 33-39,82.5,Jon Mullany,,81.74,,,161.03,,,161.03,B,1
-M,Multi-ply,Amateur Master 55-59,82.5,Thomas Lewis,57,78.56,,,,,,,B,DQ
+M,Raw,Amateur Submasters 33-39,82.5,Jon Mullany,,81.74,,,161.03,,,161.03,B,1
+M,Multi-ply,Amateur Masters 55-59,82.5,Thomas Lewis,57,78.56,,,,,,,B,DQ
 M,Multi-ply,Pro Open,82.5,Chris Geers,,,,,,,,,B,DQ
-M,Multi-ply,Amateur Submaster 33-39,90,Jamie Matta,,88.81,,,267.62,,,267.62,B,1
-M,Raw,Amateur Master 45-49,90,Charlie Miriello,46,87.27,,,140.61,,,140.61,B,1
+M,Multi-ply,Amateur Submasters 33-39,90,Jamie Matta,,88.81,,,267.62,,,267.62,B,1
+M,Raw,Amateur Masters 45-49,90,Charlie Miriello,46,87.27,,,140.61,,,140.61,B,1
 M,Multi-ply,Police Amateur Open,90,Justin Vanscoy,,89.81,,,151.95,,,151.95,B,1
 M,Raw,Amateur Teen 14-15,67.5,Brandon Daubert,,66.95,,,,188.24,195.04,188.24,D,1
 M,Raw,Amateur Open,90,Ed Harrington,,89.99,,,172.37,204.12,,376.48,BD,1
-M,Multi-ply,Amateur Submaster 33-39,90,Jamie Matta,,88.81,,,267.62,247.21,,514.83,BD,1
-M,Raw,Amateur Junior 20-23,100,Taylor Fox,,98.52,229.06,,151.95,242.67,,623.69,SBD,1
+M,Multi-ply,Amateur Submasters 33-39,90,Jamie Matta,,88.81,,,267.62,247.21,,514.83,BD,1
+M,Raw,Amateur Juniors 20-23,100,Taylor Fox,,98.52,229.06,,151.95,242.67,,623.69,SBD,1
 M,Raw,Amateur Open,100,Jake Ketner,,99.25,199.58,,145.15,247.21,,591.94,SBD,2
 M,Raw,Amateur Open,100,Matthew Ginion,,98.52,272.16,,158.76,260.82,,691.73,SBD,1
-M,Raw,Pro Junior 20-23,100,Matt Tedona,,98.79,260.82,,195.04,303.91,,759.77,SBD,1
-M,Wraps,Pro Junior 20-23,100,Anthony Santora,,95.8,285.76,,149.69,281.23,,716.68,SBD,1
+M,Raw,Pro Juniors 20-23,100,Matt Tedona,,98.79,260.82,,195.04,303.91,,759.77,SBD,1
+M,Wraps,Pro Juniors 20-23,100,Anthony Santora,,95.8,285.76,,149.69,281.23,,716.68,SBD,1
 M,Multi-ply,Amateur Open,100,Chuck Brightbill,,98.16,328.85,,185.97,297.1,,811.93,SBD,1
 M,Multi-ply,Pro Open,100,Brian Reed,,99.79,374.21,,,,,,SBD,DQ
 M,Raw,Amateur Open,110,Eric Neil,,107.23,247.21,,142.88,242.67,,632.76,SBD,1
-M,Wraps,Amateur Junior 20-23,110,Aron Duncan,,104.33,222.26,,120.2,281.23,,623.69,SBD,1
+M,Wraps,Amateur Juniors 20-23,110,Aron Duncan,,104.33,222.26,,120.2,281.23,,623.69,SBD,1
 M,Wraps,Amateur Open,110,Matthew Votodian,,107.77,219.99,,124.74,188.24,,532.97,SBD,3
 M,Wraps,Amateur Open,110,Brad Hartlaub,,106.87,185.97,,149.69,229.06,,564.72,SBD,2
 M,Wraps,Amateur Open,110,Ron McClay,,104.87,233.6,,179.17,260.82,,673.58,SBD,1
@@ -72,17 +72,17 @@ M,Wraps,Amateur Open,125,Dwayne Wint,,120.29,238.14,,183.7,272.16,,694,SBD,1
 M,Single-ply,Amateur Open,125,Jason Sharp,,121.74,272.16,,215.46,238.14,,725.75,SBD,2
 M,Single-ply,Amateur Open,125,Tyler Bledsoe,,124.19,285.76,,222.26,308.44,,816.47,SBD,1
 M,Multi-ply,Amateur Open,125,Russell Hayward,,121.2,260.82,,208.65,240.4,,709.87,SBD,1
-M,Multi-ply,Pro Submaster 33-39,125,Timothy Reese,,123.1,297.1,,165.56,240.4,,703.07,SBD,1
-M,Wraps,Amateur Master 45-49,140,David Utermahlen,45,131.18,188.24,,122.47,192.78,,503.49,SBD,1
+M,Multi-ply,Pro Submasters 33-39,125,Timothy Reese,,123.1,297.1,,165.56,240.4,,703.07,SBD,1
+M,Wraps,Amateur Masters 45-49,140,David Utermahlen,45,131.18,188.24,,122.47,192.78,,503.49,SBD,1
 M,Multi-ply,Amateur Open,140,Tim Davis,,129.36,333.39,,229.06,281.23,,843.68,SBD,1
 M,Raw,Amateur Open,140+,Geroge Pearson,,144.06,226.8,,170.1,276.69,,673.58,SBD,1
-M,Multi-ply,Amateur Master 50-54,100,Walter Welcheck,54,98.88,,,,,,,SBD,DQ
-M,Raw,Amateur Master 55-59,110,Mike Brantley,,106.14,,,142.88,,,142.88,B,1
+M,Multi-ply,Amateur Masters 50-54,100,Walter Welcheck,54,98.88,,,,,,,SBD,DQ
+M,Raw,Amateur Masters 55-59,110,Mike Brantley,,106.14,,,142.88,,,142.88,B,1
 M,Raw,Pro Open,125,Barry Calhoun,,117.93,,,215.46,,,215.46,B,1
-M,Raw,Pro Master 40-44,125,Barry Calhoun,44,117.93,,,215.46,,,215.46,B,1
+M,Raw,Pro Masters 40-44,125,Barry Calhoun,44,117.93,,,215.46,,,215.46,B,1
 M,Raw,Police Pro Open,125,Barry Calhoun,,117.93,,,215.46,,,215.46,B,1
-M,Raw,Amateur Master 40-44,140,Jermaine Wilson,41,129.64,,,195.04,,,195.04,B,1
+M,Raw,Amateur Masters 40-44,140,Jermaine Wilson,41,129.64,,,195.04,,,195.04,B,1
 M,Single-ply,Pro Open,110,Tom Favata,,102.97,,,231.33,310.71,,542.04,BD,1
 M,Raw,Pro Open,125,Chris Germano,,114.21,,,174.63,265.35,,439.98,BD,1
 M,Raw,Pro Open,140+,Smash,,173.82,,,195.04,331.12,,526.17,BD,1
-M,Raw,Amateur Master 55-59,125,Dan Laird,58,114.58,,,,204.12,,204.12,D,1
+M,Raw,Amateur Masters 55-59,125,Dan Laird,58,114.58,,,,204.12,,204.12,D,1

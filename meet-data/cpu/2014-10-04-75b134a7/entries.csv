@@ -1,13 +1,13 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,F,Brittinay Rowland,SK,94,84+,Sub-Junior,190.0,95.0,175.5,460.5,Single-ply,1
-SBD,F,Mikayla Lohse,SK,50.7,52,Sub-Junior,127.5,57.5,145.0,330.0,Single-ply,1
+SBD,F,Brittinay Rowland,SK,94,84+,Sub-Juniors,190.0,95.0,175.5,460.5,Single-ply,1
+SBD,F,Mikayla Lohse,SK,50.7,52,Sub-Juniors,127.5,57.5,145.0,330.0,Single-ply,1
 SBD,M,Adam Kwan,AB,83.3,93,Open,217.5,132.5,227.5,577.5,Single-ply,1
 SBD,F,Dani Savoie,AB,71.6,72,Open,170.0,120.0,150.0,440.0,Single-ply,1
-SBD,F,Robyn Pearce,SK,56.2,57,Junior,145.0,72.5,135.0,352.5,Single-ply,1
-SBD,M,Seth Albersworth,AB,144.6,120+,Junior,350.0,215.0,230.0,795.0,Single-ply,1
-SBD,M,Brad Dayman,AB,130.1,120+,Junior,242.5,227.5,255.0,725.0,Single-ply,2
-SBD,M,Jimmy Veilleux-Marois,AB,72.9,74,Sub-Junior,167.5,105.0,217.5,490.0,Raw,2
-SBD,M,Danny Heintz,SK,73.4,74,Sub-Junior,182.5,115.0,205.0,502.5,Raw,1
+SBD,F,Robyn Pearce,SK,56.2,57,Juniors,145.0,72.5,135.0,352.5,Single-ply,1
+SBD,M,Seth Albersworth,AB,144.6,120+,Juniors,350.0,215.0,230.0,795.0,Single-ply,1
+SBD,M,Brad Dayman,AB,130.1,120+,Juniors,242.5,227.5,255.0,725.0,Single-ply,2
+SBD,M,Jimmy Veilleux-Marois,AB,72.9,74,Sub-Juniors,167.5,105.0,217.5,490.0,Raw,2
+SBD,M,Danny Heintz,SK,73.4,74,Sub-Juniors,182.5,115.0,205.0,502.5,Raw,1
 SBD,M,Brian Nedjelski,SK,90.5,93,Open,187.5,120.0,227.5,535.0,Raw,1
 SBD,F,Jessie Buydens,SK,116.9,84+,Open,170.0,100.0,180.0,450.0,Raw,1
 SBD,F,Yvonne Sanche,AB,81.1,84,Open,82.5,67.5,105.0,255.0,Raw,5
@@ -47,34 +47,34 @@ SBD,M,David Kang,BC,102.8,105,Open,240.0,130.0,240.0,610.0,Raw,7
 SBD,M,Christopher Bantle,AB,103.7,105,Open,185.0,127.5,220.0,532.5,Raw,10
 SBD,M,Bryce Krawczyk,AB,100.5,105,Open,270.0,160.0,320.0,750.0,Raw,1
 SBD,M,Adam Price,AB,102.5,105,Open,255.0,142.5,245.0,642.5,Raw,4
-SBD,F,Sandra Nase,SK,103,84+,Master 2,110.0,55.0,150.5,315.5,Raw,1
-SBD,M,Brent Woolnough,AB,104,105,Master 2,180.0,145.0,205.0,530.0,Raw,1
-SBD,F,Sandra Drake,AB,65.1,72,Master 1,105.0,57.5,150.0,312.5,Raw,1
-SBD,F,Coreen Neilson,AB,63.4,72,Master 1,85.0,55.0,125.0,265.0,Raw,2
-SBD,M,Randy Zhou,BC,88.3,93,Junior,280.0,170.0,255.0,705.0,Raw,1
-SBD,M,Michael Mighton,BC,91.4,93,Junior,237.5,160.0,255.0,652.5,Raw,2
-SBD,M,Kurt Engebretson,AB,90.6,93,Junior,175.0,140.0,220.0,535.0,Raw,4
-SBD,M,Beau Hanrahan,AB,89.6,93,Junior,212.5,170.0,237.5,620.0,Raw,3
-SBD,M,Willy Lam,AB,81.5,83,Junior,195.0,125.0,245.0,565.0,Raw,2
-SBD,M,Randy Yee,BC,80.3,83,Junior,225.0,132.5,250.0,607.5,Raw,1
-SBD,M,Jonathan Gough,SK,82.5,83,Junior,172.5,112.5,202.5,487.5,Raw,3
-SBD,M,Jason Tremblay,AB,81.8,83,Junior,152.5,115.0,195.0,462.5,Raw,4
-SBD,M,Ryley Russell,BC,72.6,74,Junior,225.0,132.5,240.0,597.5,Raw,1
-SBD,M,Joseph Cassidy,AB,73.4,74,Junior,175.0,107.5,187.5,470.0,Raw,4
-SBD,M,Johnny Choi,AB,74,74,Junior,205.0,107.5,215.0,527.5,Raw,2
-SBD,M,Adam Manery,AB,73.8,74,Junior,182.5,125.0,205.0,512.5,Raw,3
-SBD,F,Jillian Clark,AB,70.6,72,Junior,117.5,55.0,135.0,307.5,Raw,1
-SBD,F,Ariel Chessall,AB,71.1,72,Junior,112.5,57.5,125.0,295.0,Raw,2
-SBD,M,Larry Ko,AB,63.7,66,Junior,152.5,87.5,160.0,400.0,Raw,1
-SBD,F,Natalie Nikiforuk,AB,61.4,63,Junior,97.5,62.5,147.5,307.5,Raw,2
-SBD,F,Brittany Dewald,AB,60.9,63,Junior,110.0,52.5,145.0,307.5,Raw,1
-SBD,M,Jason Luo,AB,58.6,59,Junior,182.5,80.0,196.5,459.0,Raw,1
-SBD,F,Samantha Solie,SK,56,57,Junior,115.0,66.0,112.5,293.5,Raw,2
-SBD,F,Miranda Lovett,AB,54.1,57,Junior,80.0,50.0,125.0,255.0,Raw,3
-SBD,F,Breann Thiessen,AB,56.7,57,Junior,137.5,65.0,143.0,345.5,Raw,1
-SBD,F,Pamela Anderson,BC,49.1,52,Junior,115.0,65.0,125.0,305.0,Raw,1
-SBD,M,Shane Dixon,AB,112.5,120,Junior,262.5,187.5,300.5,750.5,Raw,1
-SBD,M,Wiliam DeJong,BC,99.7,105,Junior,192.5,132.5,272.5,597.5,Raw,3
-SBD,M,Sam Spinelli,AB,103.4,105,Junior,222.5,150.0,250.0,622.5,Raw,2
-SBD,M,Cody Barager,SK,103.7,105,Junior,232.5,163.0,255.0,650.5,Raw,1
-SBD,M,Anmol Nagra,AB,95.1,105,Junior,170.0,127.5,210.0,507.5,Raw,4
+SBD,F,Sandra Nase,SK,103,84+,Masters 2,110.0,55.0,150.5,315.5,Raw,1
+SBD,M,Brent Woolnough,AB,104,105,Masters 2,180.0,145.0,205.0,530.0,Raw,1
+SBD,F,Sandra Drake,AB,65.1,72,Masters 1,105.0,57.5,150.0,312.5,Raw,1
+SBD,F,Coreen Neilson,AB,63.4,72,Masters 1,85.0,55.0,125.0,265.0,Raw,2
+SBD,M,Randy Zhou,BC,88.3,93,Juniors,280.0,170.0,255.0,705.0,Raw,1
+SBD,M,Michael Mighton,BC,91.4,93,Juniors,237.5,160.0,255.0,652.5,Raw,2
+SBD,M,Kurt Engebretson,AB,90.6,93,Juniors,175.0,140.0,220.0,535.0,Raw,4
+SBD,M,Beau Hanrahan,AB,89.6,93,Juniors,212.5,170.0,237.5,620.0,Raw,3
+SBD,M,Willy Lam,AB,81.5,83,Juniors,195.0,125.0,245.0,565.0,Raw,2
+SBD,M,Randy Yee,BC,80.3,83,Juniors,225.0,132.5,250.0,607.5,Raw,1
+SBD,M,Jonathan Gough,SK,82.5,83,Juniors,172.5,112.5,202.5,487.5,Raw,3
+SBD,M,Jason Tremblay,AB,81.8,83,Juniors,152.5,115.0,195.0,462.5,Raw,4
+SBD,M,Ryley Russell,BC,72.6,74,Juniors,225.0,132.5,240.0,597.5,Raw,1
+SBD,M,Joseph Cassidy,AB,73.4,74,Juniors,175.0,107.5,187.5,470.0,Raw,4
+SBD,M,Johnny Choi,AB,74,74,Juniors,205.0,107.5,215.0,527.5,Raw,2
+SBD,M,Adam Manery,AB,73.8,74,Juniors,182.5,125.0,205.0,512.5,Raw,3
+SBD,F,Jillian Clark,AB,70.6,72,Juniors,117.5,55.0,135.0,307.5,Raw,1
+SBD,F,Ariel Chessall,AB,71.1,72,Juniors,112.5,57.5,125.0,295.0,Raw,2
+SBD,M,Larry Ko,AB,63.7,66,Juniors,152.5,87.5,160.0,400.0,Raw,1
+SBD,F,Natalie Nikiforuk,AB,61.4,63,Juniors,97.5,62.5,147.5,307.5,Raw,2
+SBD,F,Brittany Dewald,AB,60.9,63,Juniors,110.0,52.5,145.0,307.5,Raw,1
+SBD,M,Jason Luo,AB,58.6,59,Juniors,182.5,80.0,196.5,459.0,Raw,1
+SBD,F,Samantha Solie,SK,56,57,Juniors,115.0,66.0,112.5,293.5,Raw,2
+SBD,F,Miranda Lovett,AB,54.1,57,Juniors,80.0,50.0,125.0,255.0,Raw,3
+SBD,F,Breann Thiessen,AB,56.7,57,Juniors,137.5,65.0,143.0,345.5,Raw,1
+SBD,F,Pamela Anderson,BC,49.1,52,Juniors,115.0,65.0,125.0,305.0,Raw,1
+SBD,M,Shane Dixon,AB,112.5,120,Juniors,262.5,187.5,300.5,750.5,Raw,1
+SBD,M,Wiliam DeJong,BC,99.7,105,Juniors,192.5,132.5,272.5,597.5,Raw,3
+SBD,M,Sam Spinelli,AB,103.4,105,Juniors,222.5,150.0,250.0,622.5,Raw,2
+SBD,M,Cody Barager,SK,103.7,105,Juniors,232.5,163.0,255.0,650.5,Raw,1
+SBD,M,Anmol Nagra,AB,95.1,105,Juniors,170.0,127.5,210.0,507.5,Raw,4

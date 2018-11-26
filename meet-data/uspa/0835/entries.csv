@@ -9,14 +9,14 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Sloane Surber,MS,75,73.9,28,95,62.5,107.5,265,F,Open,Raw,SBD
 1,Denise Caballero,LA,82.5,82.4,38,112.5,70,140,322.5,F,Open,Raw,SBD
 2,Diana Gottschalk,MS,82.5,79.7,29,90,70,125,285,F,Open,Raw,SBD
-1,Carissa Cadman,LA,56,54.1,36,115,70,122.5,307.5,F,Submaster 33-39,Raw,SBD
-1,Maegan Minton,FL,60,60,38,80,50,107.5,237.5,F,Submaster 33-39,Raw,SBD
-1,Denise Caballero,LA,82.5,82.4,38,112.5,70,140,322.5,F,Submaster 33-39,Raw,SBD
-2,Laura Frost,LA,82.5,78.3,37,87.5,50,107.5,245,F,Submaster 33-39,Raw,SBD
-1,Wendy Heaslip,LA,56,55.1,50,132.5,80,127.5,340,F,Master 50-54,Raw,SBD
-1,Debrina Cox,LA,60,59.7,58,67.5,50,97.5,215,F,Master 55-59,Raw,SBD
-1,Leah Michael,LA,75,71.1,62,117.5,95,142.5,355,F,Master 60-64,Raw,SBD
-1,Vicky Fox,MS,82.5,79.6,49,67.5,47.5,127.5,242.5,F,Master 45-49,Raw,SBD
+1,Carissa Cadman,LA,56,54.1,36,115,70,122.5,307.5,F,Submasters 33-39,Raw,SBD
+1,Maegan Minton,FL,60,60,38,80,50,107.5,237.5,F,Submasters 33-39,Raw,SBD
+1,Denise Caballero,LA,82.5,82.4,38,112.5,70,140,322.5,F,Submasters 33-39,Raw,SBD
+2,Laura Frost,LA,82.5,78.3,37,87.5,50,107.5,245,F,Submasters 33-39,Raw,SBD
+1,Wendy Heaslip,LA,56,55.1,50,132.5,80,127.5,340,F,Masters 50-54,Raw,SBD
+1,Debrina Cox,LA,60,59.7,58,67.5,50,97.5,215,F,Masters 55-59,Raw,SBD
+1,Leah Michael,LA,75,71.1,62,117.5,95,142.5,355,F,Masters 60-64,Raw,SBD
+1,Vicky Fox,MS,82.5,79.6,49,67.5,47.5,127.5,242.5,F,Masters 45-49,Raw,SBD
 1,Matt Mabile,LA,82.5,79.4,25,192.5,142.5,215,550,M,Open,Raw,SBD
 1,Eric Lease,MS,90,88.7,32,205,135,230,570,M,Open,Raw,SBD
 2,Michael Doucet,LA,90,89.9,28,200,127.5,230,557.5,M,Open,Raw,SBD
@@ -30,13 +30,13 @@ DQ,Hilmi Judeh,LA,90,86.7,31,-165,,,,M,Open,Raw,SBD
 2,Daniel Hart,LA,125,117.6,32,257.5,162.5,272.5,692.5,M,Open,Raw,SBD
 1,John Newby,FL,140+,149.9,36,290,215,277.5,782.5,M,Open,Raw,SBD
 2,Daren Cressionnie,LA,140+,141.5,34,245,180,252.5,677.5,M,Open,Raw,SBD
-1,John Newby,FL,140+,149.9,36,290,215,277.5,782.5,M,Submaster 33-39,Raw,SBD
-1,Christopher Rountree,LA,82.5,82.3,41,175,115,227.5,517.5,M,Master 40-44,Raw,SBD
-DQ,AJ Schroeder,LA,110,107.9,44,242.5,-207.5,,,M,Master 40-44,Raw,SBD
-1,Jeff Kemble,MA,140,137.5,47,220,132.5,205,557.5,M,Master 45-49,Raw,SBD
+1,John Newby,FL,140+,149.9,36,290,215,277.5,782.5,M,Submasters 33-39,Raw,SBD
+1,Christopher Rountree,LA,82.5,82.3,41,175,115,227.5,517.5,M,Masters 40-44,Raw,SBD
+DQ,AJ Schroeder,LA,110,107.9,44,242.5,-207.5,,,M,Masters 40-44,Raw,SBD
+1,Jeff Kemble,MA,140,137.5,47,220,132.5,205,557.5,M,Masters 45-49,Raw,SBD
 1,Skylar Wickhorst,FL,67.5,65.1,25,117.5,70,145,332.5,M,Open,Wraps,SBD
-1,Kyreecus Welch,MS,60,58.5,23,155,112.5,182.5,450,M,Junior 20-23,Wraps,SBD
-1,Julius Bowens,MS,90,88,23,240,145,237.5,622.5,M,Junior 20-23,Wraps,SBD
+1,Kyreecus Welch,MS,60,58.5,23,155,112.5,182.5,450,M,Juniors 20-23,Wraps,SBD
+1,Julius Bowens,MS,90,88,23,240,145,237.5,622.5,M,Juniors 20-23,Wraps,SBD
 1,Joe Keith,MS,75,74.6,34,262.5,157.5,262.5,682.5,M,Open,Wraps,SBD
 2,Bill Lowrance,LA,75,73.4,40,195,145,185,525,M,Open,Wraps,SBD
 1,Andrew Lorino,LA,100,91.5,29,282.5,195,277.5,755,M,Open,Wraps,SBD
@@ -45,20 +45,20 @@ DQ,AJ Schroeder,LA,110,107.9,44,242.5,-207.5,,,M,Master 40-44,Raw,SBD
 2,Tim Turner,FL,110,109.4,36,252.5,147.5,262.5,662.5,M,Open,Wraps,SBD
 3,Chase Pierce,MS,110,103.6,30,215,137.5,205,557.5,M,Open,Wraps,SBD
 DQ,Eric Downey,LA,110,109.5,38,240,-227.5,,,M,Open,Wraps,SBD
-1,Tim Turner,FL,110,109.4,36,252.5,147.5,262.5,662.5,M,Submaster 33-39,Wraps,SBD
-1,Bill Lowrance,MS,75,73.4,40,195,145,185,525,M,Master 40-44,Wraps,SBD
-1,Heath Johnson,MS,140,137.1,41,252.5,172.5,245,670,M,Master 40-44,Wraps,SBD
-1,Alyssa Kirchner,MS,52,48.8,14,100,47.5,127.5,275,F,Junior 13-15,Single-ply,SBD
-1,Socrates Meza-Ayala II,MS,90,88,16,245,145,250,640,M,Junior 16-17,Single-ply,SBD
+1,Tim Turner,FL,110,109.4,36,252.5,147.5,262.5,662.5,M,Submasters 33-39,Wraps,SBD
+1,Bill Lowrance,MS,75,73.4,40,195,145,185,525,M,Masters 40-44,Wraps,SBD
+1,Heath Johnson,MS,140,137.1,41,252.5,172.5,245,670,M,Masters 40-44,Wraps,SBD
+1,Alyssa Kirchner,MS,52,48.8,14,100,47.5,127.5,275,F,Juniors 13-15,Single-ply,SBD
+1,Socrates Meza-Ayala II,MS,90,88,16,245,145,250,640,M,Juniors 16-17,Single-ply,SBD
 1,Roman Gomez,MS,82.5,80.5,33,,125,,125,M,Open,Raw,B
 1,Bobby Bowlin,GA,110,107.3,35,,215,,215,M,Open,Raw,B
 DQ,Eric Downey,LA,110,109.5,38,,-227.5,,,M,Open,Raw,B
 1,Ben Weldon,MS,140+,160,27,,227.5,,227.5,M,Open,Raw,B
-1,Bobby Bowlin,GA,110,107.3,35,,215,,215,M,Submaster 33-39,Raw,B
-1,Noah Addison,AL,100,99.8,72,,110,,110,M,Master 70-74,Raw,B
-1,Jay Gousset,MS,110,109.7,45,,175,,175,M,Master 45-49,Raw,B
-1,Russel Jackson,LA,110,106.4,58,,160,,160,M,Master 55-59,Raw,B
-DQ,Robert Bounds,MS,110,108.7,57,,-147.5,,,M,Master 55-59,Raw,B
+1,Bobby Bowlin,GA,110,107.3,35,,215,,215,M,Submasters 33-39,Raw,B
+1,Noah Addison,AL,100,99.8,72,,110,,110,M,Masters 70-74,Raw,B
+1,Jay Gousset,MS,110,109.7,45,,175,,175,M,Masters 45-49,Raw,B
+1,Russel Jackson,LA,110,106.4,58,,160,,160,M,Masters 55-59,Raw,B
+DQ,Robert Bounds,MS,110,108.7,57,,-147.5,,,M,Masters 55-59,Raw,B
 1,Gary Brewer,FL,125,118.9,33,,,327.5,327.5,M,Open,Raw,D
 1,DeShay Averhart,AL,100,99,21,,180,,180,M,Open,Raw,B
 1,Brandon Langlois,LA,110,102.9,32,,137.5,250,387.5,M,Open,Raw,BD

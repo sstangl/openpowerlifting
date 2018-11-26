@@ -5,9 +5,9 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,
 1,67.5,Susanne Furesund Westerberg,Single-ply,Fræna AK,63.60,95,102.5,107.5,107.5,65,-70,-70,65.0,-102.5,-102.5,102.5,102.5,275,Teen 14-18,F,SBD
 DQ,75,Marthe Stavik Aas,Single-ply,Fræna AK,69.30,100,110,120,120.0,-65,-65,-65,,-100,,,,,Teen 14-18,F,SBD
 1,90,Aina Lien,Single-ply,Røros SK,89.50,100,110,-117.5,110.0,47.5,55,57.5,57.5,100,110,-112.5,110.0,277.5,Teen 14-18,F,SBD
-1,67.5,Veronica Opdal,Single-ply,Oslo SK,66.30,135,145,150,150.0,87.5,92.5,-93.5,92.5,150,162.5,165,165.0,407.5,Junior 19-23,F,SBD
-1,90,Renate Loraas,Single-ply,Oslo SK,82.60,140,150,155,155.0,95,-101,-101,95.0,150,160,165,165.0,415,Junior 19-23,F,SBD
-1,60,Anita Stavik,Single-ply,Fræna AK,59.10,100,-110,110,110.0,50,-55,-55,50.0,105,112.5,117.5,117.5,277.5,Master 40-49,F,SBD
+1,67.5,Veronica Opdal,Single-ply,Oslo SK,66.30,135,145,150,150.0,87.5,92.5,-93.5,92.5,150,162.5,165,165.0,407.5,Juniors 19-23,F,SBD
+1,90,Renate Loraas,Single-ply,Oslo SK,82.60,140,150,155,155.0,95,-101,-101,95.0,150,160,165,165.0,415,Juniors 19-23,F,SBD
+1,60,Anita Stavik,Single-ply,Fræna AK,59.10,100,-110,110,110.0,50,-55,-55,50.0,105,112.5,117.5,117.5,277.5,Masters 40-49,F,SBD
 1,56,Stephan Svendson,Single-ply,Sandnes AK,55.70,90,105,-110,105.0,60,65,-70,65.0,110,122.5,-127.5,122.5,292.5,Teen 14-18,M,SBD
 1,60,Hans-Erik Folkeseth,Single-ply,Halden SI,59.00,-120,127.5,137.5,137.5,115,120,-125,120.0,155,167.5,176,176.0,433.5,Teen 14-18,M,SBD
 1,67.5,Michael Rosenberg,Single-ply,Brumunddal AK,63.90,-185,185,-195,185.0,112.5,117.5,120,120.0,180,195,206,206.0,511,Teen 14-18,M,SBD
@@ -35,77 +35,77 @@ DQ,67.5,Fredrik Danielsen,Single-ply,Øksfjord AK,66.50,147.5,155,160,160.0,-95,
 2,110,Lars Kilvik,Single-ply,Odin SK,100.90,155,162.5,-167.5,162.5,145,-150,-150,145.0,190,200,205,205.0,512.5,Teen 14-18,M,SBD
 3,110,Henrik A. Nordkvist,Single-ply,Odin SK,105.00,120,140,-150,140.0,125,130,135,135.0,200,220,225,225.0,500,Teen 14-18,M,SBD
 1,125+,Joar Alseth,Single-ply,Melhus IL,130.40,180,-192.5,-197.5,180.0,77.5,85,90,90.0,180,200,210,210.0,480,Teen 14-18,M,SBD
-1,60,Ken Alexander Olsen,Single-ply,Halden SI,59.50,120,130,135,135.0,110,-117.5,117.5,117.5,145,160,170,170.0,422.5,Junior 19-23,M,SBD
-1,67.5,Morten Helliesen,Single-ply,Ganddal AK,67.30,190,-202.5,-202.5,190.0,115,-120,120,120.0,200,210,-212.5,210.0,520,Junior 19-23,M,SBD
-2,67.5,Henrik Burvang,Single-ply,Drammen SI,66.00,165,175,180,180.0,117.5,-125,125,125.0,167.5,180,185,185.0,490,Junior 19-23,M,SBD
-DQ,67.5,Eirik Vea,Single-ply,Haugaland AK,66.90,-160,-165,165,165.0,-120,-120,-120,,180,190,-205,190.0,,Junior 19-23,M,SBD
-1,75,Stian Björge,Single-ply,Brumunddal AK,74.10,185,195,200,200.0,140,147.5,150,150.0,195,205,-210,205.0,555,Junior 19-23,M,SBD
-2,75,Knut Marius Steen,Single-ply,Steinkjer SK,74.50,190,-205,-205,190.0,105,112.5,-115,112.5,200,215,-230,215.0,517.5,Junior 19-23,M,SBD
-3,75,Martin Magerøy,Single-ply,Fræna AK,70.90,-130,135,-145,135.0,115,125,-132.5,125.0,145,160,170,170.0,430,Junior 19-23,M,SBD
-DQ,75,Fredrik Aasgaard,Single-ply,Oslo SK,74.50,190,205,-220,205.0,-135,-135,-135,,190,210,-215,210.0,,Junior 19-23,M,SBD
-1,82.5,Simen Imingen,Single-ply,Brumunddal AK,78.00,252.5,262.5,267.5,267.5,170,175,-177.5,175.0,242.5,252.5,-257.5,252.5,695,Junior 19-23,M,SBD
-2,82.5,Glenn Libekk,Single-ply,Ottestad Kast og Styrkeløft,80.90,-210,210,-220,210.0,185,192.5,197.5,197.5,-215,215,-220,215.0,622.5,Junior 19-23,M,SBD
-3,82.5,Alexander Høivik,Single-ply,Florø TIF,78.70,210,220,-227.5,220.0,180,185,-190,185.0,210,-217.5,-220,210.0,615,Junior 19-23,M,SBD
-4,82.5,Chris M. Bjørnevik,Single-ply,Hommersåk AK,80.10,160,165,-170,165.0,110,112.5,-115,112.5,-180,185,192.5,192.5,470,Junior 19-23,M,SBD
-DQ,82.5,Simon Petersvik,Single-ply,Hommersåk AK,81.00,175,182.5,187.5,187.5,-120,-120,-120,,180,190,195,195.0,,Junior 19-23,M,SBD
-1,90,Martin Gaare Bakke,Single-ply,Røros SK,89.30,265,277.5,290,290.0,140,145,147.5,147.5,225,232.5,237.5,237.5,675,Junior 19-23,M,SBD
-2,90,Michael Elle,Single-ply,Sandnes AK,84.20,220,-235,240,240.0,145,150,157.5,157.5,245,255,262.5,262.5,660,Junior 19-23,M,SBD
-3,90,Martin Nygård,Single-ply,Sandnes AK,89.50,200,220,-230,220.0,140,150,160,160.0,230,245,255,255.0,635,Junior 19-23,M,SBD
-4,90,Martin Waagen,Single-ply,Steinkjer SK,89.00,215,227.5,-240,227.5,145,-152.5,-152.5,145.0,237.5,-252.5,-255,237.5,610,Junior 19-23,M,SBD
-5,90,Aleksander Skårnes,Single-ply,Odin SK,82.90,200,210,220,220.0,125,132.5,-137.5,132.5,200,215,220,220.0,572.5,Junior 19-23,M,SBD
-6,90,Christian Lien,Single-ply,Røros SK,89.60,150,160,-170,160.0,-100,100,-112.5,100.0,160,180,190,190.0,450,Junior 19-23,M,SBD
-1,100,Jøren Skadsem Eikeland,Single-ply,Ganddal AK,99.00,-277.5,-280,280,280.0,-172.5,175,-180,175.0,265,280,285,285.0,740,Junior 19-23,M,SBD
-2,100,Stian Walgermo,Single-ply,Sjøholt AK,97.30,-260,260,-275,260.0,175,-180,-180,175.0,240,250,-257.5,250.0,685,Junior 19-23,M,SBD
-3,100,Martin Sørmo,Single-ply,Skogn IL,94.80,225,235,240,240.0,130,137.5,145,145.0,240,250,-260,250.0,635,Junior 19-23,M,SBD
-1,110,Jørgen Andreas Hansen,Single-ply,Oslo SK,106.50,-300,310,315,315.0,195,200,205,205.0,260,275,280,280.0,800,Junior 19-23,M,SBD
-2,110,Morten Hope,Single-ply,Odin SK,109.40,272.5,285,290,290.0,195,200,-205,200.0,230,245,-255,245.0,735,Junior 19-23,M,SBD
-3,110,Sindre Østebø Thomsen,Single-ply,Sandnes AK,108.40,-250,260,-280,260.0,-160,160,170,170.0,250,270,-280,270.0,700,Junior 19-23,M,SBD
-4,110,Iakov Dolgov,Single-ply,KK-67,102.90,-200,205,-215,205.0,165,-172.5,-175,165.0,235,245,250,250.0,620,Junior 19-23,M,SBD
-5,110,Kato Marøy,Single-ply,Bergen SK,108.40,125,-127.5,150,150.0,230,245,-255,245.0,125,150,-152.5,150.0,545,Junior 19-23,M,SBD
-1,125,Håkon Farstad,Single-ply,Fræna AK,123.40,-300,305,-315,305.0,-200,200,-205,200.0,285,305,-315,305.0,810,Junior 19-23,M,SBD
-2,125,Karl Andre Vignes,Single-ply,Ulefoss AK,113.20,220,235,245,245.0,157.5,167.5,-172.5,167.5,190,200,212.5,212.5,625,Junior 19-23,M,SBD
-DQ,125,Einar Sandaker Hernes,Single-ply,Fræna AK,110.80,-250,-250,-250,,-170,170,-180,170.0,240,250,260,260.0,,Junior 19-23,M,SBD
-1,125+,Jon Arne Herjuaune,Single-ply,KK-67,131.70,260,-270,275,275.0,180,190,195,195.0,250,270,280,280.0,750,Junior 19-23,M,SBD
-2,125+,Alexander Steinsland,Single-ply,Bergen SK,126.90,220,250,-270,250.0,231,-240,-240,231.0,200,225,-240,225.0,706,Junior 19-23,M,SBD
-1,60,Arne Sandstøl,Single-ply,Ganddal AK,59.50,115,120,-125,120.0,75,-80,80,80.0,137.5,145,150,150.0,350,Master 40-49,M,SBD
-1,75,Bjørn Astad,Single-ply,Oslo SK,74.50,240,255,-267.5,255.0,140,147.5,-152.5,147.5,200,-215,-215,200.0,602.5,Master 40-49,M,SBD
-1,82.5,Sigve Valentinsen,Single-ply,Sandnes AK,79.10,250,-260,265,265.0,160,170,180,180.0,240,255,-260,255.0,700,Master 40-49,M,SBD
-2,82.5,Odd Karsten Andersen,Single-ply,Stavanger SK,80.90,210,220,-225,220.0,145,150,-160,150.0,235,245,-260,245.0,615,Master 40-49,M,SBD
-3,82.5,Ove Idsø,Single-ply,Stavanger SK,82.20,200,-205,-205,200.0,160,167.5,-170,167.5,200,207.5,-212.5,207.5,575,Master 40-49,M,SBD
-4,82.5,Lars Knutson,Single-ply,Lørenskog AK,80.10,-175,175,-187.5,175.0,135,140,-142.5,140.0,190,210,220,220.0,535,Master 40-49,M,SBD
-1,90,Per Vilnes,Single-ply,Holmestrand AK,89.70,235,-250,-250,235.0,195,202.5,-207.5,202.5,225,240,250,250.0,687.5,Master 40-49,M,SBD
-2,90,Jørn Kroken,Single-ply,Brumunddal AK,88.70,212.5,220,225,225.0,185,192.5,-195,192.5,240,247.5,-252.5,247.5,665,Master 40-49,M,SBD
-3,90,Jan Edvard Jensen,Single-ply,Rana KK,89.40,237.5,250,-255,250.0,160,-167.5,167.5,167.5,230,240,-250,240.0,657.5,Master 40-49,M,SBD
-4,90,Michael Hellestø,Single-ply,Hommersåk AK,87.20,210,-212.5,-225,210.0,135,142.5,-150,142.5,220,230,240,240.0,592.5,Master 40-49,M,SBD
-5,90,Morten Engnes,Single-ply,Sande KK,88.30,190,-200,200,200.0,140,145,150,150.0,200,-210,210,210.0,560,Master 40-49,M,SBD
-1,100,Jan-Roger Johansen,Single-ply,Rana KK,99.70,312.5,-330,342.5,342.5,180,-185,185,185.0,285,292.5,-305,292.5,820,Master 40-49,M,SBD
-2,100,Jan Sjøl,Single-ply,Sande KK,95.00,220,230,235,235.0,155,160,165,165.0,240,250,-260,250.0,650,Master 40-49,M,SBD
-3,100,Pål Nilsen,Single-ply,Oslo SK,97.20,230,240,250,250.0,150,155,160,160.0,220,-230,232.5,232.5,642.5,Master 40-49,M,SBD
-4,100,Roy Duås,Single-ply,Hommersåk AK,94.70,-225,225,-230,225.0,170,-177.5,177.5,177.5,230,237.5,-242.5,237.5,640,Master 40-49,M,SBD
-DQ,100,Jan Arne Olsen,Single-ply,Odin SK,97.50,-205,-205,-205,,140,-145,-145,140.0,210,220,225,225.0,,Master 40-49,M,SBD
-1,110,John Bang,Single-ply,Karmøy SK,102.40,-270,280,,280.0,175,185,-190,185.0,290,305,310,310.0,775,Master 40-49,M,SBD
-2,110,Petter Time,Single-ply,Stavanger SK,103.60,260,270,280,280.0,170,180,190,190.0,260,270,-280,270.0,740,Master 40-49,M,SBD
-3,110,Tom Goldberg,Single-ply,Lørenskog AK,101.60,-200,200,-210,200.0,155,160,-165,160.0,215,230,240,240.0,600,Master 40-49,M,SBD
-1,125,Geir Arne Giseth,Single-ply,Odin SK,124.60,-300,-300,300,300.0,205,-210,-215,205.0,280,290,300,300.0,805,Master 40-49,M,SBD
-2,125,Ivar Bjørdal,Single-ply,Lørenskog AK,117.20,260,270,280,280.0,172.5,175,177.5,177.5,250,265,-270,265.0,722.5,Master 40-49,M,SBD
-3,125,Olav H. Trondal,Single-ply,Øksfjord AK,120.20,240,250,260,260.0,180,190,200,200.0,240,250,-265,250.0,710,Master 40-49,M,SBD
-DQ,125,Per-Alfred Rozenbergs-Deem,Single-ply,Odin SK,116.80,205,215,-220,215.0,-105,-105,-105,,205,210,-215,210.0,,Master 40-49,M,SBD
-DQ,125+,Trond Fjøren,Single-ply,Fræna AK,140.60,125,,,125.0,-275,-275,-286,,,,,,,Master 40-49,M,SB
-1,67.5,Sverre Paulsen,Single-ply,Sande KK,66.20,105,115,120,120.0,70,75,-77.5,75.0,125,135,-140,135.0,330,Master 50-59,M,SBD
-1,75,Sæmundur Guðmundsson,Single-ply,Stavanger SK,75.00,160,-175,-175,160.0,100,-110,-110,100.0,180,-192.5,-192.5,180.0,440,Master 50-59,M,SBD
-1,82.5,Sveinung Egeland,Single-ply,Hommersåk AK,77.50,175,185,190,190.0,120,127.5,130,130.0,200,210,215,215.0,535,Master 50-59,M,SBD
-2,82.5,Kurt Stangenes,Single-ply,Hommersåk AK,76.10,175,-180,-180,175.0,-120,120,-125,120.0,205,215,,215.0,510,Master 50-59,M,SBD
-1,100,Rune Johansen,Single-ply,Fredrikstad SK,100.00,220,230,235,235.0,-170,175,-177.5,175.0,220,232.5,247.5,247.5,657.5,Master 50-59,M,SBD
-2,100,Odd H. Helland,Single-ply,Stavanger SK,97.90,240,250,260,260.0,-160,160,170,170.0,210,220,225,225.0,655,Master 50-59,M,SBD
-3,100,Tore Gunnar Olsen,Single-ply,Sande KK,94.10,125,137.5,142.5,142.5,135,-145,-145,135.0,150,,,150.0,427.5,Master 50-59,M,SBD
-1,110,Rolf Stenberg,Single-ply,Sande KK,107.30,247.5,260,-267.5,260.0,172.5,-180,-180,172.5,237.5,250,267.5,267.5,700,Master 50-59,M,SBD
-1,125,Truls Nygaard,Single-ply,Holmestrand AK,119.70,227.5,237.5,245,245.0,225,-230,-230,225.0,217.5,227.5,232.5,232.5,702.5,Master 50-59,M,SBD
-2,125,Arild Berget,Single-ply,Røros SK,117.20,250,260,-270,260.0,175,-185,-185,175.0,150,,,150.0,585,Master 50-59,M,SBD
-1,67.5,Rolf A. Halvorsen,Single-ply,Odin SK,67.00,115,125,130,130.0,120,125,-127.5,125.0,130,135,140,140.0,395,Master 60-69,M,SBD
-1,82.5,Hans Martin Arnesen,Single-ply,IL Kraftsport,81.00,160,170,175,175.0,95,100,,100.0,180,200,-205,200.0,475,Master 60-69,M,SBD
-2,82.5,Georg Johnsen,Single-ply,Alta AK,79.90,160,170,-175,170.0,95,-97.5,-115,95.0,150,162.5,-170,162.5,427.5,Master 60-69,M,SBD
-1,90,Leif Ugelstad,Single-ply,KK-67,88.10,145,150,155,155.0,-110,110,-115,110.0,180,190,-200,190.0,455,Master 60-69,M,SBD
-1,100,Peer Bjaaland,Single-ply,Hammerfest KK,91.80,140,160,172.5,172.5,152.5,160,165,165.0,160,190,212.5,212.5,550,Master 60-69,M,SBD
-2,100,Arnfinn Skadsem,Single-ply,Ganddal AK,94.80,-160,165,185,185.0,107.5,115,120,120.0,-145,145,160,160.0,465,Master 60-69,M,SBD
-1,110,Truls Kristensen,Single-ply,Askim SK,109.30,240,252.5,257.5,257.5,135,142.5,-145,142.5,200,210,-215,210.0,610,Master 60-69,M,SBD
-G,90,Freyr Aðalsteinsson,Single-ply,Stavanger SK,84.70,210,-215,-215,210.0,135,145,-150,145.0,230,240,-250,240.0,595,Master 40-49,M,SBD
+1,60,Ken Alexander Olsen,Single-ply,Halden SI,59.50,120,130,135,135.0,110,-117.5,117.5,117.5,145,160,170,170.0,422.5,Juniors 19-23,M,SBD
+1,67.5,Morten Helliesen,Single-ply,Ganddal AK,67.30,190,-202.5,-202.5,190.0,115,-120,120,120.0,200,210,-212.5,210.0,520,Juniors 19-23,M,SBD
+2,67.5,Henrik Burvang,Single-ply,Drammen SI,66.00,165,175,180,180.0,117.5,-125,125,125.0,167.5,180,185,185.0,490,Juniors 19-23,M,SBD
+DQ,67.5,Eirik Vea,Single-ply,Haugaland AK,66.90,-160,-165,165,165.0,-120,-120,-120,,180,190,-205,190.0,,Juniors 19-23,M,SBD
+1,75,Stian Björge,Single-ply,Brumunddal AK,74.10,185,195,200,200.0,140,147.5,150,150.0,195,205,-210,205.0,555,Juniors 19-23,M,SBD
+2,75,Knut Marius Steen,Single-ply,Steinkjer SK,74.50,190,-205,-205,190.0,105,112.5,-115,112.5,200,215,-230,215.0,517.5,Juniors 19-23,M,SBD
+3,75,Martin Magerøy,Single-ply,Fræna AK,70.90,-130,135,-145,135.0,115,125,-132.5,125.0,145,160,170,170.0,430,Juniors 19-23,M,SBD
+DQ,75,Fredrik Aasgaard,Single-ply,Oslo SK,74.50,190,205,-220,205.0,-135,-135,-135,,190,210,-215,210.0,,Juniors 19-23,M,SBD
+1,82.5,Simen Imingen,Single-ply,Brumunddal AK,78.00,252.5,262.5,267.5,267.5,170,175,-177.5,175.0,242.5,252.5,-257.5,252.5,695,Juniors 19-23,M,SBD
+2,82.5,Glenn Libekk,Single-ply,Ottestad Kast og Styrkeløft,80.90,-210,210,-220,210.0,185,192.5,197.5,197.5,-215,215,-220,215.0,622.5,Juniors 19-23,M,SBD
+3,82.5,Alexander Høivik,Single-ply,Florø TIF,78.70,210,220,-227.5,220.0,180,185,-190,185.0,210,-217.5,-220,210.0,615,Juniors 19-23,M,SBD
+4,82.5,Chris M. Bjørnevik,Single-ply,Hommersåk AK,80.10,160,165,-170,165.0,110,112.5,-115,112.5,-180,185,192.5,192.5,470,Juniors 19-23,M,SBD
+DQ,82.5,Simon Petersvik,Single-ply,Hommersåk AK,81.00,175,182.5,187.5,187.5,-120,-120,-120,,180,190,195,195.0,,Juniors 19-23,M,SBD
+1,90,Martin Gaare Bakke,Single-ply,Røros SK,89.30,265,277.5,290,290.0,140,145,147.5,147.5,225,232.5,237.5,237.5,675,Juniors 19-23,M,SBD
+2,90,Michael Elle,Single-ply,Sandnes AK,84.20,220,-235,240,240.0,145,150,157.5,157.5,245,255,262.5,262.5,660,Juniors 19-23,M,SBD
+3,90,Martin Nygård,Single-ply,Sandnes AK,89.50,200,220,-230,220.0,140,150,160,160.0,230,245,255,255.0,635,Juniors 19-23,M,SBD
+4,90,Martin Waagen,Single-ply,Steinkjer SK,89.00,215,227.5,-240,227.5,145,-152.5,-152.5,145.0,237.5,-252.5,-255,237.5,610,Juniors 19-23,M,SBD
+5,90,Aleksander Skårnes,Single-ply,Odin SK,82.90,200,210,220,220.0,125,132.5,-137.5,132.5,200,215,220,220.0,572.5,Juniors 19-23,M,SBD
+6,90,Christian Lien,Single-ply,Røros SK,89.60,150,160,-170,160.0,-100,100,-112.5,100.0,160,180,190,190.0,450,Juniors 19-23,M,SBD
+1,100,Jøren Skadsem Eikeland,Single-ply,Ganddal AK,99.00,-277.5,-280,280,280.0,-172.5,175,-180,175.0,265,280,285,285.0,740,Juniors 19-23,M,SBD
+2,100,Stian Walgermo,Single-ply,Sjøholt AK,97.30,-260,260,-275,260.0,175,-180,-180,175.0,240,250,-257.5,250.0,685,Juniors 19-23,M,SBD
+3,100,Martin Sørmo,Single-ply,Skogn IL,94.80,225,235,240,240.0,130,137.5,145,145.0,240,250,-260,250.0,635,Juniors 19-23,M,SBD
+1,110,Jørgen Andreas Hansen,Single-ply,Oslo SK,106.50,-300,310,315,315.0,195,200,205,205.0,260,275,280,280.0,800,Juniors 19-23,M,SBD
+2,110,Morten Hope,Single-ply,Odin SK,109.40,272.5,285,290,290.0,195,200,-205,200.0,230,245,-255,245.0,735,Juniors 19-23,M,SBD
+3,110,Sindre Østebø Thomsen,Single-ply,Sandnes AK,108.40,-250,260,-280,260.0,-160,160,170,170.0,250,270,-280,270.0,700,Juniors 19-23,M,SBD
+4,110,Iakov Dolgov,Single-ply,KK-67,102.90,-200,205,-215,205.0,165,-172.5,-175,165.0,235,245,250,250.0,620,Juniors 19-23,M,SBD
+5,110,Kato Marøy,Single-ply,Bergen SK,108.40,125,-127.5,150,150.0,230,245,-255,245.0,125,150,-152.5,150.0,545,Juniors 19-23,M,SBD
+1,125,Håkon Farstad,Single-ply,Fræna AK,123.40,-300,305,-315,305.0,-200,200,-205,200.0,285,305,-315,305.0,810,Juniors 19-23,M,SBD
+2,125,Karl Andre Vignes,Single-ply,Ulefoss AK,113.20,220,235,245,245.0,157.5,167.5,-172.5,167.5,190,200,212.5,212.5,625,Juniors 19-23,M,SBD
+DQ,125,Einar Sandaker Hernes,Single-ply,Fræna AK,110.80,-250,-250,-250,,-170,170,-180,170.0,240,250,260,260.0,,Juniors 19-23,M,SBD
+1,125+,Jon Arne Herjuaune,Single-ply,KK-67,131.70,260,-270,275,275.0,180,190,195,195.0,250,270,280,280.0,750,Juniors 19-23,M,SBD
+2,125+,Alexander Steinsland,Single-ply,Bergen SK,126.90,220,250,-270,250.0,231,-240,-240,231.0,200,225,-240,225.0,706,Juniors 19-23,M,SBD
+1,60,Arne Sandstøl,Single-ply,Ganddal AK,59.50,115,120,-125,120.0,75,-80,80,80.0,137.5,145,150,150.0,350,Masters 40-49,M,SBD
+1,75,Bjørn Astad,Single-ply,Oslo SK,74.50,240,255,-267.5,255.0,140,147.5,-152.5,147.5,200,-215,-215,200.0,602.5,Masters 40-49,M,SBD
+1,82.5,Sigve Valentinsen,Single-ply,Sandnes AK,79.10,250,-260,265,265.0,160,170,180,180.0,240,255,-260,255.0,700,Masters 40-49,M,SBD
+2,82.5,Odd Karsten Andersen,Single-ply,Stavanger SK,80.90,210,220,-225,220.0,145,150,-160,150.0,235,245,-260,245.0,615,Masters 40-49,M,SBD
+3,82.5,Ove Idsø,Single-ply,Stavanger SK,82.20,200,-205,-205,200.0,160,167.5,-170,167.5,200,207.5,-212.5,207.5,575,Masters 40-49,M,SBD
+4,82.5,Lars Knutson,Single-ply,Lørenskog AK,80.10,-175,175,-187.5,175.0,135,140,-142.5,140.0,190,210,220,220.0,535,Masters 40-49,M,SBD
+1,90,Per Vilnes,Single-ply,Holmestrand AK,89.70,235,-250,-250,235.0,195,202.5,-207.5,202.5,225,240,250,250.0,687.5,Masters 40-49,M,SBD
+2,90,Jørn Kroken,Single-ply,Brumunddal AK,88.70,212.5,220,225,225.0,185,192.5,-195,192.5,240,247.5,-252.5,247.5,665,Masters 40-49,M,SBD
+3,90,Jan Edvard Jensen,Single-ply,Rana KK,89.40,237.5,250,-255,250.0,160,-167.5,167.5,167.5,230,240,-250,240.0,657.5,Masters 40-49,M,SBD
+4,90,Michael Hellestø,Single-ply,Hommersåk AK,87.20,210,-212.5,-225,210.0,135,142.5,-150,142.5,220,230,240,240.0,592.5,Masters 40-49,M,SBD
+5,90,Morten Engnes,Single-ply,Sande KK,88.30,190,-200,200,200.0,140,145,150,150.0,200,-210,210,210.0,560,Masters 40-49,M,SBD
+1,100,Jan-Roger Johansen,Single-ply,Rana KK,99.70,312.5,-330,342.5,342.5,180,-185,185,185.0,285,292.5,-305,292.5,820,Masters 40-49,M,SBD
+2,100,Jan Sjøl,Single-ply,Sande KK,95.00,220,230,235,235.0,155,160,165,165.0,240,250,-260,250.0,650,Masters 40-49,M,SBD
+3,100,Pål Nilsen,Single-ply,Oslo SK,97.20,230,240,250,250.0,150,155,160,160.0,220,-230,232.5,232.5,642.5,Masters 40-49,M,SBD
+4,100,Roy Duås,Single-ply,Hommersåk AK,94.70,-225,225,-230,225.0,170,-177.5,177.5,177.5,230,237.5,-242.5,237.5,640,Masters 40-49,M,SBD
+DQ,100,Jan Arne Olsen,Single-ply,Odin SK,97.50,-205,-205,-205,,140,-145,-145,140.0,210,220,225,225.0,,Masters 40-49,M,SBD
+1,110,John Bang,Single-ply,Karmøy SK,102.40,-270,280,,280.0,175,185,-190,185.0,290,305,310,310.0,775,Masters 40-49,M,SBD
+2,110,Petter Time,Single-ply,Stavanger SK,103.60,260,270,280,280.0,170,180,190,190.0,260,270,-280,270.0,740,Masters 40-49,M,SBD
+3,110,Tom Goldberg,Single-ply,Lørenskog AK,101.60,-200,200,-210,200.0,155,160,-165,160.0,215,230,240,240.0,600,Masters 40-49,M,SBD
+1,125,Geir Arne Giseth,Single-ply,Odin SK,124.60,-300,-300,300,300.0,205,-210,-215,205.0,280,290,300,300.0,805,Masters 40-49,M,SBD
+2,125,Ivar Bjørdal,Single-ply,Lørenskog AK,117.20,260,270,280,280.0,172.5,175,177.5,177.5,250,265,-270,265.0,722.5,Masters 40-49,M,SBD
+3,125,Olav H. Trondal,Single-ply,Øksfjord AK,120.20,240,250,260,260.0,180,190,200,200.0,240,250,-265,250.0,710,Masters 40-49,M,SBD
+DQ,125,Per-Alfred Rozenbergs-Deem,Single-ply,Odin SK,116.80,205,215,-220,215.0,-105,-105,-105,,205,210,-215,210.0,,Masters 40-49,M,SBD
+DQ,125+,Trond Fjøren,Single-ply,Fræna AK,140.60,125,,,125.0,-275,-275,-286,,,,,,,Masters 40-49,M,SB
+1,67.5,Sverre Paulsen,Single-ply,Sande KK,66.20,105,115,120,120.0,70,75,-77.5,75.0,125,135,-140,135.0,330,Masters 50-59,M,SBD
+1,75,Sæmundur Guðmundsson,Single-ply,Stavanger SK,75.00,160,-175,-175,160.0,100,-110,-110,100.0,180,-192.5,-192.5,180.0,440,Masters 50-59,M,SBD
+1,82.5,Sveinung Egeland,Single-ply,Hommersåk AK,77.50,175,185,190,190.0,120,127.5,130,130.0,200,210,215,215.0,535,Masters 50-59,M,SBD
+2,82.5,Kurt Stangenes,Single-ply,Hommersåk AK,76.10,175,-180,-180,175.0,-120,120,-125,120.0,205,215,,215.0,510,Masters 50-59,M,SBD
+1,100,Rune Johansen,Single-ply,Fredrikstad SK,100.00,220,230,235,235.0,-170,175,-177.5,175.0,220,232.5,247.5,247.5,657.5,Masters 50-59,M,SBD
+2,100,Odd H. Helland,Single-ply,Stavanger SK,97.90,240,250,260,260.0,-160,160,170,170.0,210,220,225,225.0,655,Masters 50-59,M,SBD
+3,100,Tore Gunnar Olsen,Single-ply,Sande KK,94.10,125,137.5,142.5,142.5,135,-145,-145,135.0,150,,,150.0,427.5,Masters 50-59,M,SBD
+1,110,Rolf Stenberg,Single-ply,Sande KK,107.30,247.5,260,-267.5,260.0,172.5,-180,-180,172.5,237.5,250,267.5,267.5,700,Masters 50-59,M,SBD
+1,125,Truls Nygaard,Single-ply,Holmestrand AK,119.70,227.5,237.5,245,245.0,225,-230,-230,225.0,217.5,227.5,232.5,232.5,702.5,Masters 50-59,M,SBD
+2,125,Arild Berget,Single-ply,Røros SK,117.20,250,260,-270,260.0,175,-185,-185,175.0,150,,,150.0,585,Masters 50-59,M,SBD
+1,67.5,Rolf A. Halvorsen,Single-ply,Odin SK,67.00,115,125,130,130.0,120,125,-127.5,125.0,130,135,140,140.0,395,Masters 60-69,M,SBD
+1,82.5,Hans Martin Arnesen,Single-ply,IL Kraftsport,81.00,160,170,175,175.0,95,100,,100.0,180,200,-205,200.0,475,Masters 60-69,M,SBD
+2,82.5,Georg Johnsen,Single-ply,Alta AK,79.90,160,170,-175,170.0,95,-97.5,-115,95.0,150,162.5,-170,162.5,427.5,Masters 60-69,M,SBD
+1,90,Leif Ugelstad,Single-ply,KK-67,88.10,145,150,155,155.0,-110,110,-115,110.0,180,190,-200,190.0,455,Masters 60-69,M,SBD
+1,100,Peer Bjaaland,Single-ply,Hammerfest KK,91.80,140,160,172.5,172.5,152.5,160,165,165.0,160,190,212.5,212.5,550,Masters 60-69,M,SBD
+2,100,Arnfinn Skadsem,Single-ply,Ganddal AK,94.80,-160,165,185,185.0,107.5,115,120,120.0,-145,145,160,160.0,465,Masters 60-69,M,SBD
+1,110,Truls Kristensen,Single-ply,Askim SK,109.30,240,252.5,257.5,257.5,135,142.5,-145,142.5,200,210,-215,210.0,610,Masters 60-69,M,SBD
+G,90,Freyr Aðalsteinsson,Single-ply,Stavanger SK,84.70,210,-215,-215,210.0,135,145,-150,145.0,230,240,-250,240.0,595,Masters 40-49,M,SBD

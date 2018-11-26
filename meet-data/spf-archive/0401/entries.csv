@@ -1,6 +1,6 @@
 Place,WeightClassKg,Sex,Division,Name,Age,BodyweightKg,State,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment
 1,48,M,Pre-Teen,Nick Mattison,12,47.63,AR,43.09,22.68,49.9,115.67,SBD,Wraps
-1,67.5,F,Sub-Masters,Sarah Newman,35,64.77,AR,97.52,47.63,120.2,265.35,SBD,Wraps
+1,67.5,F,Submasters,Sarah Newman,35,64.77,AR,97.52,47.63,120.2,265.35,SBD,Wraps
 1,75,F,Masters 40-44,Jodi Cupp,42,73.48,OK,120.2,63.5,154.22,337.93,SBD,Wraps
 2,75,F,Masters 40-44,DeLeigh Haley,44,71.12,AR,81.65,65.77,115.67,263.08,SBD,Wraps
 1,56,M,Teenage 13-15,Whit Baker,13,55.07,OK,90.72,45.36,120.2,256.28,SBD,Wraps
@@ -33,11 +33,11 @@ Place,WeightClassKg,Sex,Division,Name,Age,BodyweightKg,State,Best3SquatKg,Best3B
 2,140+,M,Open,LaRodrick Duncan,32,148.42,AR,365.14,215.46,306.17,886.77,SBD,Wraps
 3,140+,M,Open,Jesse Tripplett,24,140.34,OK,274.42,197.31,362.87,834.61,SBD,Wraps
 4,140+,M,Open,Aaron Schicht,27,147.33,AR,197.31,138.35,240.4,576.06,SBD,Wraps
-1,90,M,Sub-Masters,Marcus Nicholson,35,89.45,AR,226.8,170.1,215.46,612.35,SBD,Wraps
-1,118,M,Sub-Masters,Phillip Terifel,39,115.39,OK,267.62,165.56,265.35,698.53,SBD,Wraps
-1,110,M,Sub-Masters,Gregg Hartwick,39,107.77,AR,233.6,170.1,283.5,687.19,SBD,Wraps
-2,110,M,Sub-Masters,Joey Botter,39,106.23,AR,242.67,158.76,215.46,616.89,SBD,Wraps
-1,140,M,Sub-Masters,Darryll Wood,37,133.17,LA,199.58,140.61,229.06,569.26,SBD,Wraps
+1,90,M,Submasters,Marcus Nicholson,35,89.45,AR,226.8,170.1,215.46,612.35,SBD,Wraps
+1,118,M,Submasters,Phillip Terifel,39,115.39,OK,267.62,165.56,265.35,698.53,SBD,Wraps
+1,110,M,Submasters,Gregg Hartwick,39,107.77,AR,233.6,170.1,283.5,687.19,SBD,Wraps
+2,110,M,Submasters,Joey Botter,39,106.23,AR,242.67,158.76,215.46,616.89,SBD,Wraps
+1,140,M,Submasters,Darryll Wood,37,133.17,LA,199.58,140.61,229.06,569.26,SBD,Wraps
 1,82.5,M,Masters 40-44,Sean Baker,44,81.83,OK,251.74,151.95,233.6,637.3,SBD,Wraps
 1,90,M,Masters 40-44,William Rogers,44,86.18,OK,147.42,154.22,174.63,476.27,SBD,Wraps
 1,100,M,Masters 40-44,Dan Brooks,40,99.79,AR,274.42,181.44,283.5,739.36,SBD,Wraps
@@ -52,7 +52,7 @@ Place,WeightClassKg,Sex,Division,Name,Age,BodyweightKg,State,Best3SquatKg,Best3B
 1,75,M,Teenage 16-17,Taylor Parker,17,71.67,TX,199.58,108.86,154.22,462.66,SBD,Single-ply
 1,100,M,Open,Brandon McKee,26,97.7,OK,251.74,170.1,244.94,666.78,SBD,Single-ply
 1,140,M,Open,Henry Thomason,35,129.91,TX,462.66,319.78,319.78,1102.23,SBD,Single-ply
-1,140,M,Sub-Masters,Ross Bowsher,33,129.09,AR,317.51,190.51,285.76,793.79,SBD,Single-ply
+1,140,M,Submasters,Ross Bowsher,33,129.09,AR,317.51,190.51,285.76,793.79,SBD,Single-ply
 1,125,M,Juniors,Corbyn Arnold,20,124.28,AR,319.78,249.48,319.78,889.04,SBD,Multi-ply
 1,90,M,Masters 45-49,David Shirley,45,89.99,AR,317.51,235.87,276.69,830.07,SBD,Multi-ply
 1,82.5,M,Teenage 18-19,Clayton Harrell,19,81.19,AR,,113.4,174.63,288.03,BD,Raw
@@ -68,5 +68,5 @@ Place,WeightClassKg,Sex,Division,Name,Age,BodyweightKg,State,Best3SquatKg,Best3B
 1,100,M,Teenage 18-19,Blake Bowen,19,97.98,AR,,154.22,,154.22,B,Raw
 1,75,F,Open,Haley Hampton,29,72.57,AR,,65.77,,65.77,B,Raw
 1,118,M,Open,David St. Romain,25,112.49,AR,,238.14,,238.14,B,Raw
-1,110,M,Sub-Masters,Scott Summers,35,108.95,TN,,185.97,,185.97,B,Raw
+1,110,M,Submasters,Scott Summers,35,108.95,TN,,185.97,,185.97,B,Raw
 1,90,M,Masters 45-49,Keith Baker,46,87.36,AR,,147.42,,147.42,B,Raw

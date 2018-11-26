@@ -1,17 +1,17 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
-1,72,Sara D. Guddal,Single-ply,Askim SK,71.70,-155,155,-160,155.0,95,100,-105,100.0,110,120,130,130.0,385,Junior 19-23,F,SBD
-2,72,Julie Berger Johansen,Raw,Askim SK,71.20,115,122.5,127.5,127.5,52.5,57.5,60,60.0,125,132.5,137.5,137.5,325,Junior 19-23,F,SBD
-3,72,Ingvild Hansen,Raw,Askim SK,65.30,75,80,85,85.0,57.5,62.5,-65,62.5,100,110,117.5,117.5,265,Junior 19-23,F,SBD
+1,72,Sara D. Guddal,Single-ply,Askim SK,71.70,-155,155,-160,155.0,95,100,-105,100.0,110,120,130,130.0,385,Juniors 19-23,F,SBD
+2,72,Julie Berger Johansen,Raw,Askim SK,71.20,115,122.5,127.5,127.5,52.5,57.5,60,60.0,125,132.5,137.5,137.5,325,Juniors 19-23,F,SBD
+3,72,Ingvild Hansen,Raw,Askim SK,65.30,75,80,85,85.0,57.5,62.5,-65,62.5,100,110,117.5,117.5,265,Juniors 19-23,F,SBD
 1,72,Jenny Marie Johansen,Raw,Askim SK,69.10,90,97.5,105,105.0,67.5,72.5,75,75.0,115,122.5,130,130.0,310,Open,F,SBD
 2,72,Thea Lysaker,Raw,Askim SK,64.90,80,-87.5,87.5,87.5,42.5,47.5,50,50.0,100,115,122.5,122.5,260,Open,F,SBD
-1,84,Rita Guddal,Raw,Askim SK,75.30,95,102.5,-105,102.5,47.5,-52.5,-52.5,47.5,100,110,112.5,112.5,262.5,Master 40-49,F,SBD
+1,84,Rita Guddal,Raw,Askim SK,75.30,95,102.5,-105,102.5,47.5,-52.5,-52.5,47.5,100,110,112.5,112.5,262.5,Masters 40-49,F,SBD
 1,59,Hans Jørgen Fjeld,Raw,Askim SK,58.90,77.5,85,-90,85.0,70,75,77.5,77.5,105,112.5,120,120.0,282.5,Teen 14-18,M,SBD
 1,74,Erik Hermanseter,Raw,Askim SK,69.60,120,130,140,140.0,85,95,100,100.0,160,170,,170.0,410,Teen 14-18,M,SBD
 1,83,Adnan Pilica,Raw,Askim SK,81.40,100,-110,115,115.0,65,75,-77.5,75.0,120,130,140,140.0,330,Teen 14-18,M,SBD
 1,105,Thomas Pedersen,Raw,Askim SK,98.60,110,117.5,125,125.0,65,75,80,80.0,120,135,155,155.0,360,Teen 14-18,M,SBD
-1,83,Jørgen Hylen-Aasen,Raw,Oslo SK,82.40,175,182.5,187.5,187.5,115,120,-122.5,120.0,235,250,,250.0,557.5,Junior 19-23,M,SBD
-1,93,Jan Sigurd Karlsen,Single-ply,Askim SK,91.30,235,-242.5,-245,235.0,-160,160,165,165.0,230,-250,250,250.0,650,Junior 19-23,M,SBD
-2,93,Jan Erik Ødegård,Raw,Askim SK,87.20,160,172.5,177.5,177.5,105,112.5,120,120.0,155,165,175,175.0,472.5,Junior 19-23,M,SBD
+1,83,Jørgen Hylen-Aasen,Raw,Oslo SK,82.40,175,182.5,187.5,187.5,115,120,-122.5,120.0,235,250,,250.0,557.5,Juniors 19-23,M,SBD
+1,93,Jan Sigurd Karlsen,Single-ply,Askim SK,91.30,235,-242.5,-245,235.0,-160,160,165,165.0,230,-250,250,250.0,650,Juniors 19-23,M,SBD
+2,93,Jan Erik Ødegård,Raw,Askim SK,87.20,160,172.5,177.5,177.5,105,112.5,120,120.0,155,165,175,175.0,472.5,Juniors 19-23,M,SBD
 1,83,Andreas Jemtland,Single-ply,Ulefoss AK,81.50,210,220,-230,220.0,170,177.5,182.5,182.5,200,212.5,220,220.0,622.5,Open,M,SBD
 2,83,Arild Kolshus,Raw,Askim SK,81.90,185,200,207.5,207.5,115,120,-127.5,120.0,240,250,257.5,257.5,585,Open,M,SBD
 3,83,Christopher Haugland,Raw,Ulefoss AK,81.20,165,175,182.5,182.5,102.5,110,-115,110.0,200,207.5,-212.5,207.5,500,Open,M,SBD
@@ -24,9 +24,9 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,
 1,105,Bjørn Simen Rørvik,Raw,Ulefoss AK,104.60,190,202.5,,202.5,142.5,147.5,150,150.0,252.5,262.5,267.5,267.5,620,Open,M,SBD
 2,105,Daniel Gromstad Martinussen,Raw,Askim SK,101.30,,,,,155,160,-165,160.0,,,,,160,Open,M,B
 1,120,Øivind Back,Raw,Askim SK,114.40,240,250,255,255.0,150,160,-162.5,160.0,280,290,-301,290.0,705,Open,M,SBD
-1,105,Øystein Aas,Raw,Askim SK,101.20,205,215,-220,215.0,190,-195,-195,190.0,225,240,255,255.0,660,Master 40-49,M,SBD
-DQ,105,Ronny Olaisen,Single-ply,IL Kraftsport,103.80,,,,,-270,-270,,,,,,,,Master 40-49,M,B
-1,120,Jarle Adolfsen,Raw,Askim SK,117.20,-185,185,-195,185.0,150,-155,-155,150.0,200,-212.5,212.5,212.5,547.5,Master 40-49,M,SBD
-2,120,Pål Guddal,Raw,Askim SK,119.00,,,,,190,200,202.5,202.5,,,,,202.5,Master 40-49,M,B
-DQ,120+,Alexander Nilsson,Single-ply,Askim SK,123.50,-275,-275,-275,,215,226,-230,226.0,292.5,-300,-300,292.5,,Master 40-49,M,SBD
-1,105,Leif Sydengen,Single-ply,Askim SK,98.40,,,,,190,-195,-195,190.0,,,,,190,Master 50-59,M,B
+1,105,Øystein Aas,Raw,Askim SK,101.20,205,215,-220,215.0,190,-195,-195,190.0,225,240,255,255.0,660,Masters 40-49,M,SBD
+DQ,105,Ronny Olaisen,Single-ply,IL Kraftsport,103.80,,,,,-270,-270,,,,,,,,Masters 40-49,M,B
+1,120,Jarle Adolfsen,Raw,Askim SK,117.20,-185,185,-195,185.0,150,-155,-155,150.0,200,-212.5,212.5,212.5,547.5,Masters 40-49,M,SBD
+2,120,Pål Guddal,Raw,Askim SK,119.00,,,,,190,200,202.5,202.5,,,,,202.5,Masters 40-49,M,B
+DQ,120+,Alexander Nilsson,Single-ply,Askim SK,123.50,-275,-275,-275,,215,226,-230,226.0,292.5,-300,-300,292.5,,Masters 40-49,M,SBD
+1,105,Leif Sydengen,Single-ply,Askim SK,98.40,,,,,190,-195,-195,190.0,,,,,190,Masters 50-59,M,B

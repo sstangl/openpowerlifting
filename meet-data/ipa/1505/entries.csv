@@ -1,8 +1,8 @@
 Division,Equipment,WeightClassKg,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BodyweightKg,Age,Event,Sex,Place
 Amateur Teen (14-15),Wraps,67.5,Allison Dgien,68.04,47.63,86.18,201.85,63.28,14,SBD,F,1
 Amateur Teen (16-17),Wraps,75,Isabella Steed,77.11,47.63,122.47,247.21,69.49,17,SBD,F,1
-Amateur Junior,Wraps,52,Emily Gillespie,113.4,54.43,140.61,308.44,51.21,20,SBD,F,1
-Amateur Junior,Wraps,90,Cass Blackman,176.9,74.84,183.7,435.45,89.36,23,SBD,F,1
+Amateur Juniors,Wraps,52,Emily Gillespie,113.4,54.43,140.61,308.44,51.21,20,SBD,F,1
+Amateur Juniors,Wraps,90,Cass Blackman,176.9,74.84,183.7,435.45,89.36,23,SBD,F,1
 Amateur Open,Wraps,60,Laura Monroe,136.08,74.84,140.61,351.53,59.96,32,SBD,F,1
 Amateur Open,Wraps,60,Amy Pochodylo,72.57,36.29,106.59,215.46,58.97,24,SBD,F,2
 Amateur Open,Wraps,60,Christina Ranck,65.77,45.36,92.99,204.12,58.79,30,SBD,F,3
@@ -14,13 +14,13 @@ Amateur Open,Wraps,75,Yvonne DeMara,115.67,56.7,138.35,310.71,73.48,28,SBD,F,3
 Amateur Open,Wraps,90,Cass Blackman,176.9,74.84,183.7,435.45,89.36,23,SBD,F,1
 Amateur Open,Wraps,90,Jodi Cardinall,86.18,65.77,117.93,269.89,86.27,38,SBD,F,2
 Amateur Open,Wraps,90,Lisa Austin,79.38,49.9,102.06,231.33,86.18,41,SBD,F,3
-Amateur Submaster,Wraps,52,Kristina Martemucci,90.72,56.7,122.47,269.89,50.35,39,SBD,F,1
+Amateur Submasters,Wraps,52,Kristina Martemucci,90.72,56.7,122.47,269.89,50.35,39,SBD,F,1
 Pro Open,Wraps,67.5,Victoria Trabucco,102.06,58.97,154.22,315.25,65.32,23,SBD,F,1
 Amateur Teen (14-15),Wraps,67.5,Grady Alpert,102.06,102.06,147.42,351.53,67.45,15,SBD,M,1
 Amateur Teen (16-17),Wraps,75,Andrew Klockowski,192.78,117.93,215.46,526.17,74.84,17,SBD,M,1
 Amateur Teen (16-17),Wraps,82.5,Bryan Foster,120.2,97.52,183.7,401.43,78.93,16,SBD,M,1
 Amateur Teen (18-19),Wraps,90,Mark Derbyshire,161.03,111.13,219.99,492.15,82.96,19,SBD,M,1
-Amateur Junior,Wraps,90,Connor Whalen,174.63,127.01,235.87,537.51,89.49,23,SBD,M,1
+Amateur Juniors,Wraps,90,Connor Whalen,174.63,127.01,235.87,537.51,89.49,23,SBD,M,1
 Amateur Open,Wraps,75,Keith Spangenburg,133.81,117.93,215.46,467.2,72.57,27,SBD,M,1
 Amateur Open,Wraps,82.5,Durell Cull,267.62,188.24,290.3,746.16,82.1,34,SBD,M,1
 Amateur Open,Wraps,82.5,Adam Kreyer,165.56,120.2,213.19,498.95,80.97,29,SBD,M,2
@@ -33,33 +33,33 @@ Amateur Open,Wraps,110,Amel Kovacevic,197.31,142.88,233.6,573.79,104.33,25,SBD,M
 Amateur Open,Wraps,110,John Schnitzler,197.31,133.81,213.19,544.31,107.5,30,SBD,M,2
 Amateur Open,Wraps,125,Justin DeMara,256.28,165.56,294.84,716.68,117.44,27,SBD,M,1
 Amateur Open,Wraps,140,Matthew Rice,272.16,140.61,272.16,684.92,125.78,28,SBD,M,1
-Amateur Submaster,Wraps,100,Chris Olney,215.46,158.76,244.94,619.15,94.8,35,SBD,M,1
-Amateur Submaster,Wraps,100,Dan Bomysoad,181.44,145.15,215.46,542.04,97.89,34,SBD,M,2
-Amateur Master (40-44),Wraps,100,James Ingram,192.78,136.08,226.8,555.65,99.74,40,SBD,M,1
-Amateur Master (50-54),Wraps,90,William Scholl,192.78,124.74,167.83,485.34,88,52,SBD,M,1
-Amateur Master (50-54),Wraps,125,Dennis Spangenburg,204.12,99.79,244.94,548.85,122.92,54,SBD,M,1
+Amateur Submasters,Wraps,100,Chris Olney,215.46,158.76,244.94,619.15,94.8,35,SBD,M,1
+Amateur Submasters,Wraps,100,Dan Bomysoad,181.44,145.15,215.46,542.04,97.89,34,SBD,M,2
+Amateur Masters (40-44),Wraps,100,James Ingram,192.78,136.08,226.8,555.65,99.74,40,SBD,M,1
+Amateur Masters (50-54),Wraps,90,William Scholl,192.78,124.74,167.83,485.34,88,52,SBD,M,1
+Amateur Masters (50-54),Wraps,125,Dennis Spangenburg,204.12,99.79,244.94,548.85,122.92,54,SBD,M,1
 Amateur Open,Multi-ply,82.5,TJ Dunsmoor,301.64,206.38,238.14,746.16,79.38,24,SBD,M,1
-Pro Junior,Wraps,110,Tarik Lihic,244.94,145.15,226.8,616.89,104.01,23,SBD,M,1
-Pro Junior,Wraps,125,Kenan Hasanspahic,272.16,161.03,265.35,698.53,117.03,23,SBD,M,1
-Pro Junior,Wraps,140,Brandon Martin,294.84,199.58,308.44,802.86,131.41,22,SBD,M,1
+Pro Juniors,Wraps,110,Tarik Lihic,244.94,145.15,226.8,616.89,104.01,23,SBD,M,1
+Pro Juniors,Wraps,125,Kenan Hasanspahic,272.16,161.03,265.35,698.53,117.03,23,SBD,M,1
+Pro Juniors,Wraps,140,Brandon Martin,294.84,199.58,308.44,802.86,131.41,22,SBD,M,1
 Pro Open,Wraps,90,Ramon Zayas,281.23,181.44,276.69,739.36,89.81,24,SBD,M,1
 Pro Open,Wraps,110,Sean Green,337.93,204.12,326.59,868.63,108.86,28,SBD,M,1
 Pro Open,Wraps,125,Shawn Petronella,285.76,215.46,272.16,773.37,124.28,39,SBD,M,1
 Pro Open,Wraps,125,Kenan Hasanspahic,272.16,161.03,265.35,698.53,117.03,23,SBD,M,2
-Pro Submaster,Wraps,100,John Edwards,192.78,167.83,206.38,566.99,99.79,33,SBD,M,1
-Pro Master (40-44),Wraps,100,Kirk Dean,263.08,136.08,272.16,671.32,99.16,43,SBD,M,1
-Pro Master (50-54),Wraps,100,James Howell,297.1,142.88,244.94,684.92,98.88,50,SBD,M,1
-Amateur Junior,Raw,67.5,Christopher Caban,,106.59,215.46,322.05,67.36,22,BD,M,1
+Pro Submasters,Wraps,100,John Edwards,192.78,167.83,206.38,566.99,99.79,33,SBD,M,1
+Pro Masters (40-44),Wraps,100,Kirk Dean,263.08,136.08,272.16,671.32,99.16,43,SBD,M,1
+Pro Masters (50-54),Wraps,100,James Howell,297.1,142.88,244.94,684.92,98.88,50,SBD,M,1
+Amateur Juniors,Raw,67.5,Christopher Caban,,106.59,215.46,322.05,67.36,22,BD,M,1
 Amateur Open,Raw,67.5,Christopher Caban,,106.59,215.46,322.05,67.36,22,BD,M,1
-Amateur Submaster,Multi-ply,82.5,Michael Siecieska,,156.49,217.72,374.21,82.33,34,BD,M,1
+Amateur Submasters,Multi-ply,82.5,Michael Siecieska,,156.49,217.72,374.21,82.33,34,BD,M,1
 Pro Open,Raw,110,James Farina,,201.85,226.8,428.64,109.32,36,BD,M,1
-Pro Submaster,Raw,110,James Farina,,201.85,226.8,428.64,109.32,36,BD,M,1
-Amateur Submaster,Raw,60,Tiffany Edwards,,49.9,,49.9,59.87,38,B,F,1
-Amateur Master (50-54),Raw,90,Terri Korba,,65.77,,65.77,86.82,50,B,F,1
+Pro Submasters,Raw,110,James Farina,,201.85,226.8,428.64,109.32,36,BD,M,1
+Amateur Submasters,Raw,60,Tiffany Edwards,,49.9,,49.9,59.87,38,B,F,1
+Amateur Masters (50-54),Raw,90,Terri Korba,,65.77,,65.77,86.82,50,B,F,1
 Amateur Teen (18-19),Raw,100,Matthew Williams,,170.1,,170.1,95.71,19,B,M,1
-Amateur Submaster,Raw,125,Ramadan Muhammad,,158.76,,158.76,116.94,37,B,M,1
-Amateur Master (45-49),Raw,110,Michael Spezzano Sr,,161.03,,161.03,107.23,48,B,M,1
+Amateur Submasters,Raw,125,Ramadan Muhammad,,158.76,,158.76,116.94,37,B,M,1
+Amateur Masters (45-49),Raw,110,Michael Spezzano Sr,,161.03,,161.03,107.23,48,B,M,1
 Amateur Open,Multi-ply,125,Todd Laughlin,,233.6,,233.6,123.38,48,B,M,1
 Pro Open,Wraps,125,Mike Lackey,317.51,226.8,,544.31,110,22,SB,M,1
 Amateur Open,Raw,67.5,Alex Davies,,,165.56,165.56,67.09,21,D,M,1
-Amateur Master (60-64),Multi-ply,125,Fred Fischer,,,192.78,192.78,123.06,64,D,M,1
+Amateur Masters (60-64),Multi-ply,125,Fred Fischer,,,192.78,192.78,123.06,64,D,M,1

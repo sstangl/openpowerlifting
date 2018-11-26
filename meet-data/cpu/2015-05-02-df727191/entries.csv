@@ -1,7 +1,7 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Knolan Parent,AB,70.5,74,Sub-Junior,130.0,77.5,150.0,357.5,Raw,1
-SBD,M,Adrian Demetrow,AB,147.2,120+,Sub-Junior,97.5,97.5,130.0,325.0,Raw,1
-SBD,M,Connor Paquette,AB,117.0,120,Sub-Junior,165.0,102.5,187.5,455.0,Raw,1
+SBD,M,Knolan Parent,AB,70.5,74,Sub-Juniors,130.0,77.5,150.0,357.5,Raw,1
+SBD,M,Adrian Demetrow,AB,147.2,120+,Sub-Juniors,97.5,97.5,130.0,325.0,Raw,1
+SBD,M,Connor Paquette,AB,117.0,120,Sub-Juniors,165.0,102.5,187.5,455.0,Raw,1
 SBD,M,Sean Austin,AB,91.2,93,Open,190.0,140.0,230.0,560.0,Raw,1
 SBD,F,Rose Jeffares,AB,121.2,84+,Open,120.0,100.0,185.0,405.0,Raw,1
 SBD,F,Shelly Hollingshead,AB,76.4,84,Open,125.0,70.0,150.0,345.0,Raw,1
@@ -26,33 +26,33 @@ SBD,M,Alex Fry,AB,115.6,120,Open,155.0,130.0,202.5,487.5,Raw,2
 SBD,M,Patrick Greene,AB,102.1,105,Open,182.5,107.5,245.0,535.0,Raw,2
 SBD,M,Jeff Baker,AB,102.3,105,Open,227.5,142.5,240.0,610.0,Raw,1
 SBD,M,Aaron Monk,AB,93.9,105,Open,165.0,100.0,230.0,495.0,Raw,3
-SBD,F,Sylvia Gaucher,AB,94.5,84+,Master 3,77.5,45.0,125.0,247.5,Raw,1
-SBD,F,Allison Mahadeo,AB,62.7,63,Master 3,80.0,40.0,110.0,230.0,Raw,1
-SBD,F,Jennifer Nadeau,AB,62.2,63,Master 1,72.5,42.5,100.0,215.0,Raw,1
-SBD,M,Joe Reid,AB,110.8,120,Master 1,185.0,130.0,230.0,545.0,Raw,1
-SBD,M,Robert Szpil,AB,95.8,105,Master 1,180.0,165.0,220.0,565.0,Raw,1
-SBD,M,Roald Palaya,AB,85.9,93,Junior,152.5,80.0,187.5,420.0,Raw,5
-SBD,M,Justin Martins,AB,90.5,93,Junior,182.5,140.0,210.0,532.5,Raw,2
-SBD,M,Jordan Kreiser,AB,89.1,93,Junior,160.0,107.5,217.5,485.0,Raw,3
-SBD,M,Ethan Tymburski,AB,87.9,93,Junior,162.5,105.0,210.0,477.5,Raw,4
-SBD,M,Chris Gough,AB,91.7,93,Junior,180.0,122.5,247.5,550.0,Raw,1
-SBD,M,Willy Lam,AB,82.6,83,Junior,215.0,125.0,245.0,585.0,Raw,1
-SBD,M,Justin Quedado,AB,77.2,83,Junior,202.5,115.0,237.5,555.0,Raw,2
-SBD,M,Dylan Berg,AB,81.1,83,Junior,180.0,120.0,250.0,550.0,Raw,3
-SBD,M,Mitchell Nishimura,AB,73.4,74,Junior,227.5,147.5,260.0,635.0,Raw,1
-SBD,F,Brianna Chan,AB,60.4,63,Junior,142.5,75.0,165.0,382.5,Raw,1
-SBD,M,Eden Chow,AB,54.7,59,Junior,132.5,67.5,172.5,372.5,Raw,1
-SBD,F,Nicola Paviglianiti,AB,54.3,57,Junior,107.5,67.5,135.0,310.0,Raw,1
-SBD,F,Jessica Sklar,AB,54.9,57,Junior,90.0,52.5,112.5,255.0,Raw,2
-SBD,F,Tiffany Pham,AB,51.0,52,Junior,115.0,62.5,150.0,327.5,Raw,1
-SBD,M,Eric Sondergard,AB,117.2,120,Junior,252.5,110.0,240.0,602.5,Raw,1
-SBD,M,Kristers Sauka,AB,98.2,105,Junior,250.0,155.0,255.0,660.0,Raw,1
-SBD,M,Josh Kohlruss,AB,104.1,105,Junior,195.0,157.5,225.0,577.5,Raw,3
-SBD,M,Jeremy North,AB,99.5,105,Junior,237.5,142.5,265.0,645.0,Raw,2
+SBD,F,Sylvia Gaucher,AB,94.5,84+,Masters 3,77.5,45.0,125.0,247.5,Raw,1
+SBD,F,Allison Mahadeo,AB,62.7,63,Masters 3,80.0,40.0,110.0,230.0,Raw,1
+SBD,F,Jennifer Nadeau,AB,62.2,63,Masters 1,72.5,42.5,100.0,215.0,Raw,1
+SBD,M,Joe Reid,AB,110.8,120,Masters 1,185.0,130.0,230.0,545.0,Raw,1
+SBD,M,Robert Szpil,AB,95.8,105,Masters 1,180.0,165.0,220.0,565.0,Raw,1
+SBD,M,Roald Palaya,AB,85.9,93,Juniors,152.5,80.0,187.5,420.0,Raw,5
+SBD,M,Justin Martins,AB,90.5,93,Juniors,182.5,140.0,210.0,532.5,Raw,2
+SBD,M,Jordan Kreiser,AB,89.1,93,Juniors,160.0,107.5,217.5,485.0,Raw,3
+SBD,M,Ethan Tymburski,AB,87.9,93,Juniors,162.5,105.0,210.0,477.5,Raw,4
+SBD,M,Chris Gough,AB,91.7,93,Juniors,180.0,122.5,247.5,550.0,Raw,1
+SBD,M,Willy Lam,AB,82.6,83,Juniors,215.0,125.0,245.0,585.0,Raw,1
+SBD,M,Justin Quedado,AB,77.2,83,Juniors,202.5,115.0,237.5,555.0,Raw,2
+SBD,M,Dylan Berg,AB,81.1,83,Juniors,180.0,120.0,250.0,550.0,Raw,3
+SBD,M,Mitchell Nishimura,AB,73.4,74,Juniors,227.5,147.5,260.0,635.0,Raw,1
+SBD,F,Brianna Chan,AB,60.4,63,Juniors,142.5,75.0,165.0,382.5,Raw,1
+SBD,M,Eden Chow,AB,54.7,59,Juniors,132.5,67.5,172.5,372.5,Raw,1
+SBD,F,Nicola Paviglianiti,AB,54.3,57,Juniors,107.5,67.5,135.0,310.0,Raw,1
+SBD,F,Jessica Sklar,AB,54.9,57,Juniors,90.0,52.5,112.5,255.0,Raw,2
+SBD,F,Tiffany Pham,AB,51.0,52,Juniors,115.0,62.5,150.0,327.5,Raw,1
+SBD,M,Eric Sondergard,AB,117.2,120,Juniors,252.5,110.0,240.0,602.5,Raw,1
+SBD,M,Kristers Sauka,AB,98.2,105,Juniors,250.0,155.0,255.0,660.0,Raw,1
+SBD,M,Josh Kohlruss,AB,104.1,105,Juniors,195.0,157.5,225.0,577.5,Raw,3
+SBD,M,Jeremy North,AB,99.5,105,Juniors,237.5,142.5,265.0,645.0,Raw,2
 B,M,Ben Kozyra,AB,90.6,93,Open,,142.5,,142.5,Raw,1
 B,F,Rose Jeffares,AB,121.2,84+,Open,,105.0,,105.0,Raw,1
 B,F,Michelle Ward,AB,68.7,72,Open,,55.0,,55.0,Raw,1
 B,F,Laura Kien,AB,50.7,52,Open,,60.0,,60.0,Raw,1
 B,M,Steve Hollingshead,AB,93.5,105,Open,,150.0,,150.0,Raw,1
-B,M,Steve Chudley,AB,91.3,93,Master 2,,125.0,,125.0,Raw,1
-B,F,Rose Campbell,AB,67.9,72,Master 2,,68.0,,68.0,Raw,1
+B,M,Steve Chudley,AB,91.3,93,Masters 2,,125.0,,125.0,Raw,1
+B,F,Rose Campbell,AB,67.9,72,Masters 2,,68.0,,68.0,Raw,1

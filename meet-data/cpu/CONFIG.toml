@@ -1,11 +1,11 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    junior = {name = "Junior",min=0,max=22.5}
-    subjunior = {name = "Sub-Junior",min=0,max=17.5}
-    master1 = {name = "Master 1",min=39.5,max=48.5}
-    master2 = {name = "Master 2",min=49.5,max=58.5}
-    master3 = {name = "Master 3",min=59.5,max=68.5}
-    master4 = {name = "Master 4",min=69.5,max=999}
+    junior = {name = "Juniors",min=0,max=22.5}
+    subjunior = {name = "Sub-Juniors",min=0,max=17.5}
+    master1 = {name = "Masters 1",min=39.5,max=48.5}
+    master2 = {name = "Masters 2",min=49.5,max=58.5}
+    master3 = {name = "Masters 3",min=59.5,max=68.5}
+    master4 = {name = "Masters 4",min=69.5,max=999}
     specialolympics = {name = "SO",min=0,max=999}
     blind = {name = "Blind",min=0,max=999}
     disabled = {name = "Disabled",min=0,max=999}
@@ -24,13 +24,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Junior","Sub-Junior"]
+    divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Junior","Sub-Junior"]
+    divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.old_M]
     # 140/140+ class is not a CPU WC, but there are a large number of old meets with this WC and no bodyweight

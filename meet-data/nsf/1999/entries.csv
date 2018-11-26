@@ -1,9 +1,9 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
 1,84+,Oda Elise Refring,Single-ply,Moss SIK,95.10,67.5,80,95,95.0,40,50,57.5,57.5,77.5,92.5,105,105.0,257.5,Teen 14-18,F,SBD
-1,52,Caroline Hanssen,Single-ply,Moss SIK,49.60,117.5,-125,125,125.0,60,65,-67.5,65.0,117.5,125,130,130.0,320,Junior 19-23,F,SBD
-1,63,Maria Aas Løseth,Single-ply,Fræna AK,62.90,125,-135,-135,125.0,77.5,-82.5,-82.5,77.5,120,130,-135,130.0,332.5,Junior 19-23,F,SBD
-2,63,Ida- Mari Torgersen,Single-ply,SPUVI,63.00,95,-100,-100,95.0,52.5,57.5,-60,57.5,100,-110,-120,100.0,252.5,Junior 19-23,F,SBD
-DQ,84,Mariann Lunde Hugdal,Single-ply,Stavanger SK,81.90,-100,-100,-105,,60,65,70,70.0,95,105,110,110.0,,Junior 19-23,F,SBD
+1,52,Caroline Hanssen,Single-ply,Moss SIK,49.60,117.5,-125,125,125.0,60,65,-67.5,65.0,117.5,125,130,130.0,320,Juniors 19-23,F,SBD
+1,63,Maria Aas Løseth,Single-ply,Fræna AK,62.90,125,-135,-135,125.0,77.5,-82.5,-82.5,77.5,120,130,-135,130.0,332.5,Juniors 19-23,F,SBD
+2,63,Ida- Mari Torgersen,Single-ply,SPUVI,63.00,95,-100,-100,95.0,52.5,57.5,-60,57.5,100,-110,-120,100.0,252.5,Juniors 19-23,F,SBD
+DQ,84,Mariann Lunde Hugdal,Single-ply,Stavanger SK,81.90,-100,-100,-105,,60,65,70,70.0,95,105,110,110.0,,Juniors 19-23,F,SBD
 1,53,Benjamin Danielsen,Single-ply,Øksfjord AK,52.20,60,67.5,72.5,72.5,50,55,-57.5,55.0,92.5,97.5,102.5,102.5,230,Teen 14-18,M,SBD
 1,66,Simon Bråthe Johansen,Single-ply,Lenja AK,64.10,190,197.5,202.5,202.5,90,95,-100.5,95.0,200,215,-217.5,215.0,512.5,Teen 14-18,M,SBD
 2,66,Daði Már Jónsson,Single-ply,Island,65.40,-110,110,120,120.0,105,110,-115,110.0,150,165,-175,165.0,395,Teen 14-18,M,SBD
@@ -26,24 +26,24 @@ DQ,84,Mariann Lunde Hugdal,Single-ply,Stavanger SK,81.90,-100,-100,-105,,60,65,7
 4,105,Henrik Jensvold,Single-ply,Røros SK,103.90,170,190,-200,190.0,130,140,145,145.0,180,200,-217.5,200.0,535,Teen 14-18,M,SBD
 5,105,Markus Krøyseth,Single-ply,Øksfjord AK,99.80,155,-162.5,162.5,162.5,-90,90,-97.5,90.0,150,152.5,160,160.0,412.5,Teen 14-18,M,SBD
 1,120,Nicolai K. Titlestad,Single-ply,Sjøholt AK,116.20,257.5,-270,270,270.0,162.5,170,175,175.0,205,215,-225,215.0,660,Teen 14-18,M,SBD
-1,66,Kim Engen,Single-ply,Oslo SK,64.30,147.5,-157.5,160,160.0,105,-110,110,110.0,150,157.5,162.5,162.5,432.5,Junior 19-23,M,SBD
-1,83,André Midtby,Single-ply,Brumunddal AK,81.80,210,-220,220,220.0,140,-145,145,145.0,200,220,245,245.0,610,Junior 19-23,M,SBD
-2,83,Kenneth Hagen,Single-ply,Brumunddal AK,77.80,-200,207.5,217.5,217.5,160,165,-170,165.0,210,217.5,225,225.0,607.5,Junior 19-23,M,SBD
-3,83,Sindre Åseli,Single-ply,Oslo SK,81.70,210,220,-227.5,220.0,115,120,-125,120.0,210,222.5,227.5,227.5,567.5,Junior 19-23,M,SBD
-4,83,Asbjørn Lunde Brekke,Single-ply,Stavanger SK,79.80,175,185,200,200.0,110,120,125,125.0,180,200,-205,200.0,525,Junior 19-23,M,SBD
-5,83,Martin Bellika,Single-ply,Alta AK,78.40,185,197.5,207.5,207.5,95,100,105,105.0,165,180,190,190.0,502.5,Junior 19-23,M,SBD
-6,83,Simen Kjelgård,Single-ply,Oslo SK,82.20,115,122.5,-125,122.5,85,92.5,95,95.0,130,142.5,150,150.0,367.5,Junior 19-23,M,SBD
-1,93,Julian Lysvand,Single-ply,Steinkjer SK,90.80,235,242.5,-245,242.5,177.5,182.5,187.5,187.5,255,270,-280,270.0,700,Junior 19-23,M,SBD
-2,93,Erik Fredriksen,Single-ply,Brumunddal AK,90.20,-240,247.5,255,255.0,190,197.5,200,200.0,220,230,237.5,237.5,692.5,Junior 19-23,M,SBD
-3,93,Mikkel Østreng,Single-ply,SPUVI,91.60,200,215,220,220.0,175,180,182.5,182.5,185,197.5,205,205.0,607.5,Junior 19-23,M,SBD
-4,93,Roger Navarsete,Single-ply,Sogndal IL,92.10,120,130,140,140.0,207.5,-215,215,215.0,125,135,165,165.0,520,Junior 19-23,M,SBD
-5,93,Lars Ola Larsen,Single-ply,Moss SIK,85.00,140,165,-177.5,165.0,90,95,-100,95.0,160,175,180,180.0,440,Junior 19-23,M,SBD
-1,105,Endre Wollan,Single-ply,Oslo SK,103.00,270,-285,285,285.0,210,-215,215,215.0,280,300,,300.0,800,Junior 19-23,M,SBD
-2,105,Martin Synvis,Single-ply,Alta AK,95.30,245,250,260,260.0,150,-160,160,160.0,215,230,-240,230.0,650,Junior 19-23,M,SBD
-3,105,Tor Emil Gjøringbø,Single-ply,Førde IL,102.50,-270,270,-272.5,270.0,-140,140,-215,140.0,220,230,-245,230.0,640,Junior 19-23,M,SBD
-4,105,Mathias Leonhardsen,Single-ply,Bodø Atletklubb,98.10,200,210,-220,210.0,170,175,180,180.0,210,220,230,230.0,620,Junior 19-23,M,SBD
-1,120,Per Marius Hole,Single-ply,SPUVI,117.50,-270,-270,270,270.0,240,250,262.5,262.5,270,290,300,300.0,832.5,Junior 19-23,M,SBD
-2,120,Joar Alseth,Single-ply,Melhus IL,118.40,240,-250,255,255.0,135,145,-150,145.0,250,-265,265,265.0,665,Junior 19-23,M,SBD
-DQ,120,Asgeir Hoel,Single-ply,Sjøholt AK,109.30,250,260,-270,260.0,-180,-185,-185,,250,260,275,275.0,,Junior 19-23,M,SBD
-1,120+,Bård Tore Rogstad,Single-ply,Brumunddal AK,133.50,260,270,277.5,277.5,162.5,-170,-177.5,162.5,270,282.5,290,290.0,730,Junior 19-23,M,SBD
-2,120+,Benjamin Baldwin,Single-ply,Orkanger IF,129.20,250,-262.5,270,270.0,185,-190,190,190.0,245,260,-280,260.0,720,Junior 19-23,M,SBD
+1,66,Kim Engen,Single-ply,Oslo SK,64.30,147.5,-157.5,160,160.0,105,-110,110,110.0,150,157.5,162.5,162.5,432.5,Juniors 19-23,M,SBD
+1,83,André Midtby,Single-ply,Brumunddal AK,81.80,210,-220,220,220.0,140,-145,145,145.0,200,220,245,245.0,610,Juniors 19-23,M,SBD
+2,83,Kenneth Hagen,Single-ply,Brumunddal AK,77.80,-200,207.5,217.5,217.5,160,165,-170,165.0,210,217.5,225,225.0,607.5,Juniors 19-23,M,SBD
+3,83,Sindre Åseli,Single-ply,Oslo SK,81.70,210,220,-227.5,220.0,115,120,-125,120.0,210,222.5,227.5,227.5,567.5,Juniors 19-23,M,SBD
+4,83,Asbjørn Lunde Brekke,Single-ply,Stavanger SK,79.80,175,185,200,200.0,110,120,125,125.0,180,200,-205,200.0,525,Juniors 19-23,M,SBD
+5,83,Martin Bellika,Single-ply,Alta AK,78.40,185,197.5,207.5,207.5,95,100,105,105.0,165,180,190,190.0,502.5,Juniors 19-23,M,SBD
+6,83,Simen Kjelgård,Single-ply,Oslo SK,82.20,115,122.5,-125,122.5,85,92.5,95,95.0,130,142.5,150,150.0,367.5,Juniors 19-23,M,SBD
+1,93,Julian Lysvand,Single-ply,Steinkjer SK,90.80,235,242.5,-245,242.5,177.5,182.5,187.5,187.5,255,270,-280,270.0,700,Juniors 19-23,M,SBD
+2,93,Erik Fredriksen,Single-ply,Brumunddal AK,90.20,-240,247.5,255,255.0,190,197.5,200,200.0,220,230,237.5,237.5,692.5,Juniors 19-23,M,SBD
+3,93,Mikkel Østreng,Single-ply,SPUVI,91.60,200,215,220,220.0,175,180,182.5,182.5,185,197.5,205,205.0,607.5,Juniors 19-23,M,SBD
+4,93,Roger Navarsete,Single-ply,Sogndal IL,92.10,120,130,140,140.0,207.5,-215,215,215.0,125,135,165,165.0,520,Juniors 19-23,M,SBD
+5,93,Lars Ola Larsen,Single-ply,Moss SIK,85.00,140,165,-177.5,165.0,90,95,-100,95.0,160,175,180,180.0,440,Juniors 19-23,M,SBD
+1,105,Endre Wollan,Single-ply,Oslo SK,103.00,270,-285,285,285.0,210,-215,215,215.0,280,300,,300.0,800,Juniors 19-23,M,SBD
+2,105,Martin Synvis,Single-ply,Alta AK,95.30,245,250,260,260.0,150,-160,160,160.0,215,230,-240,230.0,650,Juniors 19-23,M,SBD
+3,105,Tor Emil Gjøringbø,Single-ply,Førde IL,102.50,-270,270,-272.5,270.0,-140,140,-215,140.0,220,230,-245,230.0,640,Juniors 19-23,M,SBD
+4,105,Mathias Leonhardsen,Single-ply,Bodø Atletklubb,98.10,200,210,-220,210.0,170,175,180,180.0,210,220,230,230.0,620,Juniors 19-23,M,SBD
+1,120,Per Marius Hole,Single-ply,SPUVI,117.50,-270,-270,270,270.0,240,250,262.5,262.5,270,290,300,300.0,832.5,Juniors 19-23,M,SBD
+2,120,Joar Alseth,Single-ply,Melhus IL,118.40,240,-250,255,255.0,135,145,-150,145.0,250,-265,265,265.0,665,Juniors 19-23,M,SBD
+DQ,120,Asgeir Hoel,Single-ply,Sjøholt AK,109.30,250,260,-270,260.0,-180,-185,-185,,250,260,275,275.0,,Juniors 19-23,M,SBD
+1,120+,Bård Tore Rogstad,Single-ply,Brumunddal AK,133.50,260,270,277.5,277.5,162.5,-170,-177.5,162.5,270,282.5,290,290.0,730,Juniors 19-23,M,SBD
+2,120+,Benjamin Baldwin,Single-ply,Orkanger IF,129.20,250,-262.5,270,270.0,185,-190,190,190.0,245,260,-280,260.0,720,Juniors 19-23,M,SBD

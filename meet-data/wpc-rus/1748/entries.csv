@@ -1,7 +1,7 @@
 Place,Name,CyrillicName,Sex,BirthYear,WeightClassKg,Event,Equipment,Division,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
 1,Regina Bochko,Регина Бочко,F,1991,52,SBD,Raw,Amateur Open 24-39,50.8,45,50,57.5,57.5,30,-32.5,-32.5,30,80,90,-100,90,177.5
 DQ,Islam Kozhasaev,Ислам Кожасаев,M,1999,67.5,SBD,Raw,Amateur Teenage 16-17,65.9,-165,-165,-165,,,,,,,,,,
-1,Khasan Khadiullin,Хасан Хадиуллин,M,1994,67.5,SBD,Raw,Amateur Junior 20-23,63.9,-100,100,110,110,60,-70,70,70,100,115,122.5,122.5,302.5
+1,Khasan Khadiullin,Хасан Хадиуллин,M,1994,67.5,SBD,Raw,Amateur Juniors 20-23,63.9,-100,100,110,110,60,-70,70,70,100,115,122.5,122.5,302.5
 DQ,Maksim Salo,Максим Сало,M,1999,75,SBD,Raw,Amateur Teenage 16-17,74.5,125,130,135,135,-92.5,-92.5,-92.5,,,,,,
 1,Aleksey Evlampev,Алексей Евлампьев,M,1998,75,SBD,Raw,Amateur Teenage 18-19,73.4,-125,-125,135,135,100,-102.5,-102.5,100,140,145,155,155,390
 DQ,Roman Dmitriev,Роман Дмитриев,M,1999,75,SBD,Raw,Amateur Teenage 18-19,72.6,-135,-135,-135,,,,,,,,,,
@@ -27,16 +27,16 @@ DQ,Rishat Gazizullin,Ришат Газизуллин,M,1990,75,B,Raw,Amateur Ope
 3,Artem Skakalskiy,Артем Скакальский,M,1984,82.5,B,Raw,Amateur Open 24-39,81.4,,,,,107.5,112.5,115,115,,,,,115
 1,Vasiliy Arkhipov,Василий Архипов,M,1991,90,B,Raw,Amateur Open 24-39,90,,,,,-145,145,-152.5,145,,,,,145
 2,Ramis Dautov,Рамис Даутов,M,1985,90,B,Raw,Amateur Open 24-39,88.9,,,,,135,-140,140,140,,,,,140
-1,Daniel Belyalov,Даниэль Белялов,M,1994,100,B,Raw,Amateur Junior 20-23,97.8,,,,,132.5,-140,-140,132.5,,,,,132.5
+1,Daniel Belyalov,Даниэль Белялов,M,1994,100,B,Raw,Amateur Juniors 20-23,97.8,,,,,132.5,-140,-140,132.5,,,,,132.5
 1,Dmitriy Bikteev,Дмитрий Биктеев,M,1968,100,B,Raw,Amateur Masters 45-49,98.9,,,,,140,155,-162.5,155,,,,,155
 1,Pavel Zinkevich,Павел Зинкевич,M,1964,100,B,Raw,Amateur Masters 50-54,99,,,,,145,150,-152.5,150,,,,,150
 1,Valeriya Akhmetzhanova,Валерия Ахметжанова,F,1998,48,D,Raw,Amateur Teenage 18-19,47.1,,,,,,,,,87.5,92.5,,92.5,92.5
 1,Elvira Garipova,Эльвира Гарипова,F,2000,52,D,Raw,Amateur Teenage 16-17,51.6,,,,,,,,,105,110,-115,110,110
-1,Sultan Khayrullin,Султан Хайруллин,M,1995,67.5,D,Raw,Amateur Junior 20-23,67.5,,,,,,,,,180,190,200,200,200
+1,Sultan Khayrullin,Султан Хайруллин,M,1995,67.5,D,Raw,Amateur Juniors 20-23,67.5,,,,,,,,,180,190,200,200,200
 1,Irek Rizvanov,Ирек Ризванов,M,1992,67.5,D,Raw,Amateur Open 24-39,65.3,,,,,,,,,170,180,190,190,190
 2,Rafail Gabdullin,Рафаиль Габдуллин,M,1989,67.5,D,Raw,Amateur Open 24-39,66.4,,,,,,,,,125,130,-145,130,130
-1,Rinat Mukhamedyarov,Ринат Мухамедьяров,M,1995,75,D,Raw,Amateur Junior 20-23,73.3,,,,,,,,,170,180,190,190,190
-2,Stanislav Lekomtsev,Станислав Лекомцев,M,1997,75,D,Raw,Amateur Junior 20-23,70,,,,,,,,,177.5,-182.5,-182.5,177.5,177.5
+1,Rinat Mukhamedyarov,Ринат Мухамедьяров,M,1995,75,D,Raw,Amateur Juniors 20-23,73.3,,,,,,,,,170,180,190,190,190
+2,Stanislav Lekomtsev,Станислав Лекомцев,M,1997,75,D,Raw,Amateur Juniors 20-23,70,,,,,,,,,177.5,-182.5,-182.5,177.5,177.5
 1,Anton Ikryannikov,Антон Икрянников,M,1988,82.5,D,Raw,Amateur Open 24-39,81.6,,,,,,,,,210,215,222.5,222.5,222.5
 2,Anton Golyak,Антон Голяк,M,1991,82.5,D,Raw,Amateur Open 24-39,81.8,,,,,,,,,-170,170,185,185,185
 DQ,Mikhail Rudenko,Михаил Руденко,M,1992,82.5,D,Raw,Amateur Open 24-39,81.9,,,,,,,,,-175,-175,,,
@@ -48,9 +48,9 @@ DQ,Mikhail Rudenko,Михаил Руденко,M,1992,82.5,D,Raw,Amateur Open 24
 1,Dmitriy Yarmukhametov,Дмитрий Ярмухаметов,M,1979,75,D,Single-ply,Amateur Open 24-39,73.1,,,,,,,,,150,170,180,180,180
 1,Niyaz Shaydullin,Нияз Шайдуллин,M,1999,75,SBD,Raw,Pro Teenage 18-19,72.8,145,155,160,160,97.5,105,-110,105,190,200,210,210,475
 1,Dmitriy Lonshakov,Дмитрий Лоншаков,M,1998,82.5,SBD,Raw,Pro Teenage 18-19,79.7,160,167.5,172.5,172.5,100,105,-110,105,-200,200,215,215,492.5
-1,Rostislav Tikhonov,Ростислав Тихонов,M,1996,75,SBD,Wraps,Pro Junior 20-23,71.6,155,165,-175,165,105,110,-112.5,110,160,-175,175,175,450
+1,Rostislav Tikhonov,Ростислав Тихонов,M,1996,75,SBD,Wraps,Pro Juniors 20-23,71.6,155,165,-175,165,105,110,-112.5,110,160,-175,175,175,450
 1,Vladislav Batyrev,Владислав Батырев,M,1976,125,SBD,Wraps,Pro Open 24-39,119.8,270,287.5,-295,287.5,160,170,,170,-260,260,-270,260,717.5
-1,Bulat Zagidullin,Булат Загидуллин,M,1994,82.5,B,Raw,Pro Junior 20-23,80.3,,,,,107.5,-110,-112.5,107.5,,,,,107.5
+1,Bulat Zagidullin,Булат Загидуллин,M,1994,82.5,B,Raw,Pro Juniors 20-23,80.3,,,,,107.5,-110,-112.5,107.5,,,,,107.5
 1,Dmitriy Smirnov,Дмитрий Смирнов,M,1984,82.5,B,Raw,Pro Open 24-39,80,,,,,135,150,,150,,,,,150
 2,Almaz Bekmansurov,Алмаз Бекмансуров,M,1979,82.5,B,Raw,Pro Open 24-39,80.3,,,,,125,130,-135,130,,,,,130
 1,Ruslan Garifullin,Руслан Гарифуллин,M,1990,90,B,Raw,Pro Open 24-39,89.8,,,,,180,-190,,180,,,,,180

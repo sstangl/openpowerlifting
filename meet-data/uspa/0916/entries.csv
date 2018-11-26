@@ -1,5 +1,5 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg,Event
-1,Nicole Combs,WA,67.5,66.9,23,115,57.5,127.5,300,F,Junior 20-23,Raw,,,SBD
+1,Nicole Combs,WA,67.5,66.9,23,115,57.5,127.5,300,F,Juniors 20-23,Raw,,,SBD
 1,Tiffany Baxter,WA,52,52,22,122.5,72.5,135,330,F,Open,Raw,,,SBD
 1,Rena Bartlett,WA,56,54.9,24,92.5,52.5,122.5,267.5,F,Open,Raw,,,SBD
 1,Sarah Ward,WA,67.5,63,27,117.5,57.5,140,315,F,Open,Raw,,,SBD
@@ -8,10 +8,10 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Cindy Slone,OR,82.5,80.1,39,162.5,92.5,183,438,F,Open,Raw,,,SBD
 2,Nicole Fiasco,WA,82.5,82,29,125,67.5,140,332.5,F,Open,Raw,,,SBD
 3,Nicole Fong,WA,82.5,79.6,29,127.5,65,137.5,330,F,Open,Raw,,,SBD
-1,Leah Hardesty,WA,60,59.3,38,110,57.5,142.5,310,F,Submaster 35-39,Raw,,,SBD
-1,Cindy Slone,OR,82.5,80.1,39,162.5,92.5,183,438,F,Submaster 35-39,Raw,,,SBD
-1,Wyatt Jensen,MT,125,122.9,16,135,107.5,195,437.5,M,Junior 16-17,Raw,,,SBD
-1,Kevin Antonio,WA,100,99.4,16,182.5,127.5,220,530,M,Junior 16-17,Raw,,,SBD
+1,Leah Hardesty,WA,60,59.3,38,110,57.5,142.5,310,F,Submasters 35-39,Raw,,,SBD
+1,Cindy Slone,OR,82.5,80.1,39,162.5,92.5,183,438,F,Submasters 35-39,Raw,,,SBD
+1,Wyatt Jensen,MT,125,122.9,16,135,107.5,195,437.5,M,Juniors 16-17,Raw,,,SBD
+1,Kevin Antonio,WA,100,99.4,16,182.5,127.5,220,530,M,Juniors 16-17,Raw,,,SBD
 1,Oscar Martinez,WA,67.5,67.4,47,167.5,137.5,218,523,M,Open,Raw,,,SBD
 1,Karl Jones,WA,75,74.3,29,205,137.5,265,607.5,M,Open,Raw,,,SBD
 2,Michael Chunn,WA,75,74.8,43,190,92.5,237.5,520,M,Open,Raw,,,SBD
@@ -33,43 +33,43 @@ DQ,Michael Snow,CA,100,93.1,27,165,-140,202.5,,M,Open,Raw,,,SBD
 3,Donny Tudahl,MT,110,109.5,26,275,207.5,292.5,775,M,Open,Raw,,,SBD
 1,Nathan Brandhorst,WA,125,119.6,23,320,227.5,342.5,890,M,Open,Raw,,,SBD
 2,Wyatt Jensen,MT,125,122.9,16,135,107.5,195,437.5,M,Open,Raw,,,SBD
-1,Adam Evans,WA,110,108.1,38,195,147.5,285,627.5,M,Submaster 35-39,Raw,,,SBD
-2,Jake Brumfield,WA,110,108.6,37,220,150,237.5,607.5,M,Submaster 35-39,Raw,,,SBD
-1,Michael Chunn,WA,75,74.8,43,190,92.5,237.5,520,M,Master 40-44,Raw,,,SBD
-1,Jack Curnow,WA,125,124.3,43,195,182.5,227.5,605,M,Master 40-44,Raw,,,SBD
-1,Oscar Martinez,WA,67.5,67.4,47,167.5,137.5,218,523,M,Master 45-49,Raw,,,SBD
-1,Mark Kisling,WA,100,99.2,60,142.5,125,192.5,460,M,Master 60-64,Raw,,,SBD
-1,Terrence Austin,WA,75,73.2,56,145,122.5,190,457.5,M,Master 55-59,Raw,,,SBD
-1,Evangeline Munson,WA,82.5,80.7,21,165,80,195,440,F,Junior 20-23,Wraps,,,SBD
+1,Adam Evans,WA,110,108.1,38,195,147.5,285,627.5,M,Submasters 35-39,Raw,,,SBD
+2,Jake Brumfield,WA,110,108.6,37,220,150,237.5,607.5,M,Submasters 35-39,Raw,,,SBD
+1,Michael Chunn,WA,75,74.8,43,190,92.5,237.5,520,M,Masters 40-44,Raw,,,SBD
+1,Jack Curnow,WA,125,124.3,43,195,182.5,227.5,605,M,Masters 40-44,Raw,,,SBD
+1,Oscar Martinez,WA,67.5,67.4,47,167.5,137.5,218,523,M,Masters 45-49,Raw,,,SBD
+1,Mark Kisling,WA,100,99.2,60,142.5,125,192.5,460,M,Masters 60-64,Raw,,,SBD
+1,Terrence Austin,WA,75,73.2,56,145,122.5,190,457.5,M,Masters 55-59,Raw,,,SBD
+1,Evangeline Munson,WA,82.5,80.7,21,165,80,195,440,F,Juniors 20-23,Wraps,,,SBD
 1,Evangeline Munson,WA,82.5,80.7,21,165,80,195,440,F,Open,Wraps,,,SBD
-1,Lisa Kromer,WA,60,60,42,130,77.5,155,362.5,F,Master 40-44,Wraps,,,SBD
-1,Ken Keller,WA,110,108.7,23,257.5,165,250,672.5,M,Junior 20-23,Wraps,,,SBD
-1,Hector Mejia,WA,140,140,39,235,140,227.5,602.5,M,Junior 20-23,Wraps,237.5,230,SBD
+1,Lisa Kromer,WA,60,60,42,130,77.5,155,362.5,F,Masters 40-44,Wraps,,,SBD
+1,Ken Keller,WA,110,108.7,23,257.5,165,250,672.5,M,Juniors 20-23,Wraps,,,SBD
+1,Hector Mejia,WA,140,140,39,235,140,227.5,602.5,M,Juniors 20-23,Wraps,237.5,230,SBD
 1,Mackie Fleishman,WA,82.5,81.5,30,260,202.5,282.5,745,M,Open,Wraps,,,SBD
 2,Tyler Stevens,WA,82.5,80.3,28,170,115,220,505,M,Open,Wraps,,,SBD
 1,Conor Ames,WA,100,99.7,30,267.5,177.5,302.5,747.5,M,Open,Wraps,,,SBD
 1,Jesse Drach,WA,125,120.9,30,305,227.5,320,852.5,M,Open,Wraps,,,SBD
 1,Cindy Slone,OR,82.5,80.1,39,,92.5,,92.5,F,Open,Raw,,,B
 1,Natasha Keeney,WA,90+,96.2,27,,70,,70,F,Open,Raw,,,B
-1,Cindy Slone,OR,82.5,80.1,39,,92.5,,92.5,F,Submaster 35-39,Raw,,,B
-1,Kelly Guest,MT,75,69.1,46,,65,,65,F,Master 45-49,Raw,,,B
-DQ,Zade Hakki,WA,90,83.6,21,,-140,,,M,Junior 20-23,Raw,,,B
+1,Cindy Slone,OR,82.5,80.1,39,,92.5,,92.5,F,Submasters 35-39,Raw,,,B
+1,Kelly Guest,MT,75,69.1,46,,65,,65,F,Masters 45-49,Raw,,,B
+DQ,Zade Hakki,WA,90,83.6,21,,-140,,,M,Juniors 20-23,Raw,,,B
 1,Zach McSloy,MT,82.5,82.2,28,,157.5,,157.5,M,Open,Raw,,,B
 1,Bryan Cain,WA,100,98.6,28,,187.5,,187.5,M,Open,Raw,,,B
 2,David Van Skike,WA,100,99.3,48,,160,,160,M,Open,Raw,,,B
-1,Adam Evans,WA,110,108.1,38,,147.5,,147.5,M,Submaster 35-39,Raw,,,B
-1,Ricky Lahourcade,WA,110,99.2,42,,192.5,,192.5,M,Master 40-44,Raw,,,B
-1,Jack Curnow,WA,125,124.3,43,,182.5,,182.5,M,Master 40-44,Raw,,,B
-1,James Getchell,WA,140,131.2,44,,182.5,,182.5,M,Master 40-44,Raw,,,B
-1,David Van Skike,WA,100,99.3,48,,160,,160,M,Master 45-49,Raw,,,B
+1,Adam Evans,WA,110,108.1,38,,147.5,,147.5,M,Submasters 35-39,Raw,,,B
+1,Ricky Lahourcade,WA,110,99.2,42,,192.5,,192.5,M,Masters 40-44,Raw,,,B
+1,Jack Curnow,WA,125,124.3,43,,182.5,,182.5,M,Masters 40-44,Raw,,,B
+1,James Getchell,WA,140,131.2,44,,182.5,,182.5,M,Masters 40-44,Raw,,,B
+1,David Van Skike,WA,100,99.3,48,,160,,160,M,Masters 45-49,Raw,,,B
 1,Cindy Slone,OR,82.5,80.1,39,,,183,183,F,Open,Raw,,,D
-1,Cindy Slone,OR,82.5,80.1,39,,,183,183,F,Submaster 35-39,Raw,,,D
-1,Kelly Guest,MT,75,69.1,46,,,127.5,127.5,F,Master 45-49,Raw,,,D
+1,Cindy Slone,OR,82.5,80.1,39,,,183,183,F,Submasters 35-39,Raw,,,D
+1,Kelly Guest,MT,75,69.1,46,,,127.5,127.5,F,Masters 45-49,Raw,,,D
 1,Karl Jones,WA,75,74.3,29,,,265,265,M,Open,Raw,,,D
 1,Zach McSloy,MT,82.5,82.2,28,,,247.5,247.5,M,Open,Raw,,,D
 1,Bryan Cain,WA,100,98.6,28,,,287.5,287.5,M,Open,Raw,,,D
 2,Michael Snow,CA,100,93.1,27,,,202.5,202.5,M,Open,Raw,,,D
 1,Patricio Ramirez,OR,125,117.4,40,,,282.5,282.5,M,Open,Raw,,,D
-1,Adam Evans,WA,110,108.1,38,,,285,285,M,Submaster 35-39,Raw,,,D
-1,Patricio Ramirez,OR,125,117.4,40,,,282.5,282.5,M,Master 40-44,Raw,,,D
-2,Jack Curnow,WA,125,124.3,43,,,227.5,227.5,M,Master 40-44,Raw,,,D
+1,Adam Evans,WA,110,108.1,38,,,285,285,M,Submasters 35-39,Raw,,,D
+1,Patricio Ramirez,OR,125,117.4,40,,,282.5,282.5,M,Masters 40-44,Raw,,,D
+2,Jack Curnow,WA,125,124.3,43,,,227.5,227.5,M,Masters 40-44,Raw,,,D

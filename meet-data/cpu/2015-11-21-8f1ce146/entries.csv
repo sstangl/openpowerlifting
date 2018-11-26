@@ -2,12 +2,12 @@ Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3Bench
 SBD,M,Frank Duca,ON,91.5,93,Open,285.0,147.5,302.5,735.0,Single-ply,1
 SBD,M,Art Chan,ON,75.4,83,Open,200.0,150.0,230.0,580.0,Single-ply,1
 SBD,M,Chris Fudge,ON,73.0,74,Open,190.0,115.0,212.5,517.5,Single-ply,1
-SBD,M,Jerry Marentette,ON,85.6,93,Master 2,237.5,110.0,250.0,597.5,Single-ply,1
-SBD,F,Glorianne Papolis,ON,57.4,63,Master 2,125.0,65.0,142.5,332.5,Single-ply,1
-SBD,F,Jayne Egan,ON,50.5,52,Master 2,122.5,70.0,142.5,335.0,Single-ply,1
-SBD,M,Ron Strong,ON,122.0,120+,Master 2,225.0,160.0,175.0,560.0,Single-ply,1
-SBD,F,Erin Denton,ON,99.2,84+,Master 1,75.0,135.0,100.0,310.0,Single-ply,1
-SBD,F,Lisa Nigh,ON,83.0,84,Master 1,115.0,72.5,137.5,325.0,Single-ply,1
+SBD,M,Jerry Marentette,ON,85.6,93,Masters 2,237.5,110.0,250.0,597.5,Single-ply,1
+SBD,F,Glorianne Papolis,ON,57.4,63,Masters 2,125.0,65.0,142.5,332.5,Single-ply,1
+SBD,F,Jayne Egan,ON,50.5,52,Masters 2,122.5,70.0,142.5,335.0,Single-ply,1
+SBD,M,Ron Strong,ON,122.0,120+,Masters 2,225.0,160.0,175.0,560.0,Single-ply,1
+SBD,F,Erin Denton,ON,99.2,84+,Masters 1,75.0,135.0,100.0,310.0,Single-ply,1
+SBD,F,Lisa Nigh,ON,83.0,84,Masters 1,115.0,72.5,137.5,325.0,Single-ply,1
 SBD,M,Walter Cariazo,ON,90.8,93,Open,250.0,162.5,300.0,712.5,Raw,1
 SBD,M,Taro Yamashita,ON,89.1,93,Open,220.0,145.0,282.5,647.5,Raw,2
 SBD,M,Steven Botts,ON,93.0,93,Open,227.5,125.0,275.0,627.5,Raw,3
@@ -60,47 +60,47 @@ SBD,M,Trung Lieu,ON,102.5,105,Open,240.0,190.0,260.0,690.0,Raw,4
 SBD,M,Taylor Shadgett,ON,104.2,105,Open,300.0,170.0,305.0,775.0,Raw,1
 SBD,M,Kristin Fischer,ON,100.2,105,Open,250.0,172.5,267.5,690.0,Raw,3
 SBD,M,Justin Alfante,ON,104.0,105,Open,270.0,165.0,295.0,730.0,Raw,2
-SBD,M,Robert Carron,ON,73.0,74,Master 4,75.0,75.0,107.5,257.5,Raw,1
-SBD,F,Janice Shulman,ON,51.2,52,Master 4,55.0,40.0,80.0,175.0,Raw,1
-SBD,M,Kevin Stirling,ON,88.5,93,Master 3,75.0,127.5,125.0,327.5,Raw,1
-SBD,F,Linda Rousseau,ON,81.2,84,Master 3,105.0,57.5,85.0,247.5,Raw,1
-SBD,M,Stan Goss,ON,82.5,83,Master 3,145.0,95.0,182.5,422.5,Raw,1
-SBD,F,Jo-Anne Larabie,ON,70.1,72,Master 3,80.0,45.0,95.0,220.0,Raw,1
-SBD,M,Miroslav Koprnicky,ON,96.0,105,Master 3,180.0,147.5,210.0,537.5,Raw,1
-SBD,M,Jerry Marentette,ON,84.3,93,Master 2,200.0,122.5,242.5,565.0,Raw,2
-SBD,M,James Abraham,ON,83.9,93,Master 2,200.0,127.5,242.5,570.0,Raw,1
-SBD,F,Wendy Norton,ON,98.5,84+,Master 2,120.0,65.0,157.5,342.5,Raw,1
-SBD,F,Shari Khawaja,ON,80.2,84,Master 2,127.5,90.0,162.5,380.0,Raw,2
-SBD,F,Janine Wheeler,ON,82.6,84,Master 2,95.0,60.0,110.0,265.0,Raw,3
-SBD,F,Felicia Greenidge,ON,83.4,84,Master 2,142.5,72.5,172.5,387.5,Raw,1
-SBD,M,Jeff Becker,ON,82.6,83,Master 2,220.0,147.5,250.0,617.5,Raw,1
-SBD,F,Brenda Banning,ON,58.7,63,Master 2,95.0,55.0,122.5,272.5,Raw,1
-SBD,F,Anne Kayler,ON,56.1,57,Master 2,80.0,52.5,105.0,237.5,Raw,1
-SBD,M,Ron Strong,ON,120.6,120+,Master 2,240.0,150.0,280.0,670.0,Raw,1
-SBD,M,Jim Norton,ON,100.9,105,Master 2,170.0,115.0,207.5,492.5,Raw,1
-SBD,M,Scott Shulman,ON,88.4,93,Master 1,160.0,110.0,227.5,497.5,Raw,1
-SBD,F,Marlene Miranda,ON,102.4,84+,Master 1,120.0,75.0,155.0,350.0,Raw,2
-SBD,F,Louisa Vukovic,ON,101.1,84+,Master 1,120.0,85.0,165.0,370.0,Raw,1
-SBD,F,Lesley Hammil,ON,115.8,84+,Master 1,100.0,80.0,150.0,330.0,Raw,3
-SBD,F,Dari Vecchio,ON,81.8,84,Master 1,110.0,77.5,147.5,335.0,Raw,1
-SBD,F,Kim Milani,ON,71.0,72,Master 1,112.5,60.0,145.0,317.5,Raw,2
-SBD,F,Anita Santos,ON,69.6,72,Master 1,130.0,62.5,145.5,338.0,Raw,1
-SBD,M,Chris Aviado,ON,63.1,66,Master 1,170.0,162.5,210.0,542.5,Raw,1
-SBD,F,Shana Betz,ON,63.0,63,Master 1,105.0,60.0,127.5,292.5,Raw,1
-SBD,F,Juanita Koo,ON,55.1,57,Master 1,95.0,55.0,122.5,272.5,Raw,1
-SBD,F,Shelley Sandiford,ON,50.0,52,Master 1,95.0,57.5,135.0,287.5,Raw,2
-SBD,F,Heather Amundrud,ON,51.6,52,Master 1,105.0,62.5,122.5,290.0,Raw,1
-SBD,M,Steve Magistrale,ON,119.8,120,Master 1,255.0,175.0,280.0,710.0,Raw,1
-SBD,M,Roberto Celio,ON,99.3,105,Master 1,245.0,132.5,252.5,630.0,Raw,1
-SBD,M,Craig Hirota,ON,104.6,105,Master 1,220.0,155.0,255.0,630.0,Raw,2
+SBD,M,Robert Carron,ON,73.0,74,Masters 4,75.0,75.0,107.5,257.5,Raw,1
+SBD,F,Janice Shulman,ON,51.2,52,Masters 4,55.0,40.0,80.0,175.0,Raw,1
+SBD,M,Kevin Stirling,ON,88.5,93,Masters 3,75.0,127.5,125.0,327.5,Raw,1
+SBD,F,Linda Rousseau,ON,81.2,84,Masters 3,105.0,57.5,85.0,247.5,Raw,1
+SBD,M,Stan Goss,ON,82.5,83,Masters 3,145.0,95.0,182.5,422.5,Raw,1
+SBD,F,Jo-Anne Larabie,ON,70.1,72,Masters 3,80.0,45.0,95.0,220.0,Raw,1
+SBD,M,Miroslav Koprnicky,ON,96.0,105,Masters 3,180.0,147.5,210.0,537.5,Raw,1
+SBD,M,Jerry Marentette,ON,84.3,93,Masters 2,200.0,122.5,242.5,565.0,Raw,2
+SBD,M,James Abraham,ON,83.9,93,Masters 2,200.0,127.5,242.5,570.0,Raw,1
+SBD,F,Wendy Norton,ON,98.5,84+,Masters 2,120.0,65.0,157.5,342.5,Raw,1
+SBD,F,Shari Khawaja,ON,80.2,84,Masters 2,127.5,90.0,162.5,380.0,Raw,2
+SBD,F,Janine Wheeler,ON,82.6,84,Masters 2,95.0,60.0,110.0,265.0,Raw,3
+SBD,F,Felicia Greenidge,ON,83.4,84,Masters 2,142.5,72.5,172.5,387.5,Raw,1
+SBD,M,Jeff Becker,ON,82.6,83,Masters 2,220.0,147.5,250.0,617.5,Raw,1
+SBD,F,Brenda Banning,ON,58.7,63,Masters 2,95.0,55.0,122.5,272.5,Raw,1
+SBD,F,Anne Kayler,ON,56.1,57,Masters 2,80.0,52.5,105.0,237.5,Raw,1
+SBD,M,Ron Strong,ON,120.6,120+,Masters 2,240.0,150.0,280.0,670.0,Raw,1
+SBD,M,Jim Norton,ON,100.9,105,Masters 2,170.0,115.0,207.5,492.5,Raw,1
+SBD,M,Scott Shulman,ON,88.4,93,Masters 1,160.0,110.0,227.5,497.5,Raw,1
+SBD,F,Marlene Miranda,ON,102.4,84+,Masters 1,120.0,75.0,155.0,350.0,Raw,2
+SBD,F,Louisa Vukovic,ON,101.1,84+,Masters 1,120.0,85.0,165.0,370.0,Raw,1
+SBD,F,Lesley Hammil,ON,115.8,84+,Masters 1,100.0,80.0,150.0,330.0,Raw,3
+SBD,F,Dari Vecchio,ON,81.8,84,Masters 1,110.0,77.5,147.5,335.0,Raw,1
+SBD,F,Kim Milani,ON,71.0,72,Masters 1,112.5,60.0,145.0,317.5,Raw,2
+SBD,F,Anita Santos,ON,69.6,72,Masters 1,130.0,62.5,145.5,338.0,Raw,1
+SBD,M,Chris Aviado,ON,63.1,66,Masters 1,170.0,162.5,210.0,542.5,Raw,1
+SBD,F,Shana Betz,ON,63.0,63,Masters 1,105.0,60.0,127.5,292.5,Raw,1
+SBD,F,Juanita Koo,ON,55.1,57,Masters 1,95.0,55.0,122.5,272.5,Raw,1
+SBD,F,Shelley Sandiford,ON,50.0,52,Masters 1,95.0,57.5,135.0,287.5,Raw,2
+SBD,F,Heather Amundrud,ON,51.6,52,Masters 1,105.0,62.5,122.5,290.0,Raw,1
+SBD,M,Steve Magistrale,ON,119.8,120,Masters 1,255.0,175.0,280.0,710.0,Raw,1
+SBD,M,Roberto Celio,ON,99.3,105,Masters 1,245.0,132.5,252.5,630.0,Raw,1
+SBD,M,Craig Hirota,ON,104.6,105,Masters 1,220.0,155.0,255.0,630.0,Raw,2
 B,M,Chris Fudge,ON,75.2,83,Open,,100.0,,100.0,Single-ply,1
 B,M,Art Chan,ON,73.2,74,Open,,170.0,,170.0,Single-ply,1
 B,M,Erik Willis,ON,117.3,120,Open,,200.0,,200.0,Single-ply,1
-B,M,Fred English,ON,110.9,120,Master 3,,182.5,,182.5,Single-ply,1
-B,M,Jerry Marentette,ON,83.7,93,Master 2,,165.0,,165.0,Single-ply,1
-B,M,John Noguera,ON,82.6,83,Master 2,,110.0,,110.0,Single-ply,1
-B,M,Robert Truchon,ON,87.7,93,Master 1,,130.0,,130.0,Single-ply,1
-B,M,John Beres,ON,137.9,120+,Master 1,,200.0,,200.0,Single-ply,1
+B,M,Fred English,ON,110.9,120,Masters 3,,182.5,,182.5,Single-ply,1
+B,M,Jerry Marentette,ON,83.7,93,Masters 2,,165.0,,165.0,Single-ply,1
+B,M,John Noguera,ON,82.6,83,Masters 2,,110.0,,110.0,Single-ply,1
+B,M,Robert Truchon,ON,87.7,93,Masters 1,,130.0,,130.0,Single-ply,1
+B,M,John Beres,ON,137.9,120+,Masters 1,,200.0,,200.0,Single-ply,1
 B,M,Jean-Phillippe Thivierge,ON,92.6,93,Open,,155.0,,155.0,Raw,1
 B,M,Chris Fudge,ON,75.2,83,Open,,100.0,,100.0,Raw,1
 B,M,Loc Nguyen,ON,71.6,74,Open,,152.5,,152.5,Raw,1
@@ -110,11 +110,11 @@ B,M,Tim Ekert,ON,131.0,120+,Open,,200.0,,200.0,Raw,2
 B,M,Stephen Jesso,ON,183.1,120+,Open,,230.0,,230.0,Raw,1
 B,M,Trung Lieu,ON,104.2,105,Open,,192.5,,192.5,Raw,2
 B,M,Leon Brown,ON,100.8,105,Open,,217.5,,217.5,Raw,1
-B,F,Ellynne Dickson,ON,113.6,84+,Master 3,,57.5,,57.5,Raw,1
-B,M,Jerry Marentette,ON,83.7,93,Master 2,,110.0,,110.0,Raw,1
-B,M,Robert Monti,ON,82.3,83,Master 2,,132.5,,132.5,Raw,1
-B,M,John Noguera,ON,82.6,83,Master 2,,110.0,,110.0,Raw,2
-B,M,Ron Dillig,ON,102.8,105,Master 2,,140.0,,140.0,Raw,1
-B,M,Mark Dawson,ON,104.0,105,Master 2,,117.5,,117.5,Raw,2
-B,M,John Beres,ON,137.9,120+,Master 1,,175.0,,175.0,Raw,1
-B,M,Michael Previdsa,ON,88.1,93,Junior,,157.5,,157.5,Raw,1
+B,F,Ellynne Dickson,ON,113.6,84+,Masters 3,,57.5,,57.5,Raw,1
+B,M,Jerry Marentette,ON,83.7,93,Masters 2,,110.0,,110.0,Raw,1
+B,M,Robert Monti,ON,82.3,83,Masters 2,,132.5,,132.5,Raw,1
+B,M,John Noguera,ON,82.6,83,Masters 2,,110.0,,110.0,Raw,2
+B,M,Ron Dillig,ON,102.8,105,Masters 2,,140.0,,140.0,Raw,1
+B,M,Mark Dawson,ON,104.0,105,Masters 2,,117.5,,117.5,Raw,2
+B,M,John Beres,ON,137.9,120+,Masters 1,,175.0,,175.0,Raw,1
+B,M,Michael Previdsa,ON,88.1,93,Juniors,,157.5,,157.5,Raw,1

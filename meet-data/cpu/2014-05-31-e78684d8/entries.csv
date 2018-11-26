@@ -1,7 +1,7 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Brandon Ward,ON,92.6,93,Open,265.0,172.5,260.0,697.5,Single-ply,1
 SBD,M,Marc Desjardins,ON,109.3,120,Open,315.0,190.0,292.5,797.5,Single-ply,1
-SBD,M,Seamus Smith,ON,88.6,93,Sub-Junior,140.0,110.0,195.0,445.0,Raw,1
+SBD,M,Seamus Smith,ON,88.6,93,Sub-Juniors,140.0,110.0,195.0,445.0,Raw,1
 SBD,M,Ian MacFayden,ON,92.4,93,Open,192.5,125.0,240.0,557.5,Raw,1
 SBD,F,Meaghan Peer,ON,85.7,84+,Open,112.5,50.0,127.5,290.0,Raw,1
 SBD,F,Teneshia Samuel,ON,78.9,84,Open,115.0,90.0,142.5,347.5,Raw,1
@@ -31,19 +31,19 @@ SBD,M,Nick Halatsis,ON,95.5,105,Open,182.5,130.0,250.0,562.5,Raw,4
 SBD,M,Matt Oliver,ON,102.6,105,Open,230.0,162.5,265.0,657.5,Raw,2
 SBD,M,James Cash,ON,102.4,105,Open,215.0,125.0,250.0,590.0,Raw,3
 SBD,M,Dimitri Magirias,ON,101.9,105,Open,170.0,122.5,220.0,512.5,Raw,6
-SBD,M,Ron Dillig,ON,92.3,93,Master 2,180.0,127.5,207.5,515.0,Raw,1
-SBD,M,Peter Ring,ON,80.3,83,Master 2,145.0,115.0,182.5,442.5,Raw,1
-SBD,M,Roberto Celio,ON,98.1,105,Master 1,242.5,132.5,247.5,622.5,Raw,1
-SBD,M,Frank Mayer,ON,97.5,105,Master 1,205.0,152.5,230.0,587.5,Raw,2
-SBD,M,Connor Breadmore,ON,74.0,74,Junior,150.0,110.0,187.5,447.5,Raw,1
-SBD,M,Killian Hamilton,ON,70.1,74,Junior,145.0,87.5,205.0,437.5,Raw,1
-SBD,M,Wesley Tin,ON,65.3,66,Junior,190.0,105.0,217.5,512.5,Raw,1
-SBD,F,Jessica Culver,ON,45.0,47,Junior,77.5,45.0,115.0,237.5,Raw,1
-SBD,M,Mark Tatangelo,ON,104.9,105,Junior,245.0,155.0,270.0,670.0,Raw,1
-SBD,M,Joey Weatherill,ON,93.2,105,Junior,185.0,137.5,227.5,550.0,Raw,2
+SBD,M,Ron Dillig,ON,92.3,93,Masters 2,180.0,127.5,207.5,515.0,Raw,1
+SBD,M,Peter Ring,ON,80.3,83,Masters 2,145.0,115.0,182.5,442.5,Raw,1
+SBD,M,Roberto Celio,ON,98.1,105,Masters 1,242.5,132.5,247.5,622.5,Raw,1
+SBD,M,Frank Mayer,ON,97.5,105,Masters 1,205.0,152.5,230.0,587.5,Raw,2
+SBD,M,Connor Breadmore,ON,74.0,74,Juniors,150.0,110.0,187.5,447.5,Raw,1
+SBD,M,Killian Hamilton,ON,70.1,74,Juniors,145.0,87.5,205.0,437.5,Raw,1
+SBD,M,Wesley Tin,ON,65.3,66,Juniors,190.0,105.0,217.5,512.5,Raw,1
+SBD,F,Jessica Culver,ON,45.0,47,Juniors,77.5,45.0,115.0,237.5,Raw,1
+SBD,M,Mark Tatangelo,ON,104.9,105,Juniors,245.0,155.0,270.0,670.0,Raw,1
+SBD,M,Joey Weatherill,ON,93.2,105,Juniors,185.0,137.5,227.5,550.0,Raw,2
 B,M,Chris Fudge,ON,81.8,83,Open,,170.0,,170.0,Single-ply,1
-B,F,Sue Thomson,ON,49.2,52,Master 2,,77.5,,77.5,Single-ply,1
-B,M,Alex Podshibiakin,ON,155.9,120+,Master 2,,225.0,,225.0,Single-ply,1
+B,F,Sue Thomson,ON,49.2,52,Masters 2,,77.5,,77.5,Single-ply,1
+B,M,Alex Podshibiakin,ON,155.9,120+,Masters 2,,225.0,,225.0,Single-ply,1
 B,M,Philip Luu,ON,87.5,93,Open,,125.0,,125.0,Raw,1
 B,F,Nancy Mainville,ON,79.0,84,Open,,75.0,,75.0,Raw,1
 B,M,Eric Flemming,ON,72.6,74,Open,,115.0,,115.0,Raw,2
@@ -53,10 +53,10 @@ B,M,Chris Aviado,ON,63.7,66,Open,,137.5,,137.5,Raw,1
 B,F,Julie Ditzend,ON,54.4,57,Open,,72.5,,72.5,Raw,2
 B,F,Joanna Rieber,ON,52.4,57,Open,,80.0,,80.0,Raw,1
 B,M,Jeffery Herbert,ON,136.8,120+,Open,,200.0,,200.0,Raw,1
-B,F,Linda Rousseau,ON,77.3,84,Master 3,,60.0,,60.0,Raw,1
-B,F,Linda McFeeters,ON,70.6,72,Master 2,,62.5,,62.5,Raw,1
-B,M,Leon Brown,ON,95.7,105,Master 1,,207.5,,207.5,Raw,1
-B,M,Zach Pare,ON,92.5,93,Junior,,132.5,,132.5,Raw,2
-B,M,Mark Tenuta,ON,89.4,93,Junior,,157.5,,157.5,Raw,1
-B,M,Brandon Nytschyk,ON,92.2,93,Junior,,107.5,,107.5,Raw,3
-B,F,Kelly Lien,ON,54.7,57,Junior,,70.0,,70.0,Raw,1
+B,F,Linda Rousseau,ON,77.3,84,Masters 3,,60.0,,60.0,Raw,1
+B,F,Linda McFeeters,ON,70.6,72,Masters 2,,62.5,,62.5,Raw,1
+B,M,Leon Brown,ON,95.7,105,Masters 1,,207.5,,207.5,Raw,1
+B,M,Zach Pare,ON,92.5,93,Juniors,,132.5,,132.5,Raw,2
+B,M,Mark Tenuta,ON,89.4,93,Juniors,,157.5,,157.5,Raw,1
+B,M,Brandon Nytschyk,ON,92.2,93,Juniors,,107.5,,107.5,Raw,3
+B,F,Kelly Lien,ON,54.7,57,Juniors,,70.0,,70.0,Raw,1

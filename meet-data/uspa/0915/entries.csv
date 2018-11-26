@@ -1,9 +1,9 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Emilie Patino,TX,56,55.8,15,60,32.5,77.5,170,F,Junior 13-15,Raw,SBD
-1,Valeria Arce Gonzalez,TX,67.5,66,23,102.5,57.5,150,310,F,Junior 20-23,Raw,SBD
-2,Leigh Ann Whittington,TX,67.5,61.4,23,102.5,52.5,130,285,F,Junior 20-23,Raw,SBD
-3,Sarah Martinez-Garcia,TX,67.5,64.6,22,105,50,115,270,F,Junior 20-23,Raw,SBD
-1,Leslie Rodríguez,TX,82.5,78.6,22,132.5,60,145,337.5,F,Junior 20-23,Raw,SBD
+1,Emilie Patino,TX,56,55.8,15,60,32.5,77.5,170,F,Juniors 13-15,Raw,SBD
+1,Valeria Arce Gonzalez,TX,67.5,66,23,102.5,57.5,150,310,F,Juniors 20-23,Raw,SBD
+2,Leigh Ann Whittington,TX,67.5,61.4,23,102.5,52.5,130,285,F,Juniors 20-23,Raw,SBD
+3,Sarah Martinez-Garcia,TX,67.5,64.6,22,105,50,115,270,F,Juniors 20-23,Raw,SBD
+1,Leslie Rodríguez,TX,82.5,78.6,22,132.5,60,145,337.5,F,Juniors 20-23,Raw,SBD
 1,Isis Sullivan,TX,56,55.3,34,102.5,65,142.5,310,F,Open,Raw,SBD
 1,Candace Windsor,LA,67.5,65.2,25,117.5,52.5,147.5,317.5,F,Open,Raw,SBD
 2,Valeria Arce Gonzalez,TX,67.5,66,23,102.5,57.5,150,310,F,Open,Raw,SBD
@@ -14,16 +14,16 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 7,Rosy Mejia,TX,67.5,64.5,26,65,42.5,95,202.5,F,Open,Raw,SBD
 1,Ashley Nunez,TX,82.5,80.1,28,172.5,97.5,195,465,F,Open,Raw,SBD
 2,Leslie Rodríguez,TX,82.5,78.6,22,132.5,60,145,337.5,F,Open,Raw,SBD
-1,Alicia Penny,TX,56,54.9,38,82.5,57.5,127.5,267.5,F,Submaster 35-39,Raw,SBD
-1,Katherine Brown,TX,75,71.9,50,117.5,70,165,352.5,F,Master 50-54,Raw,SBD
-1,Fatima Patterson,TX,90,85.4,42,92.5,75,125,292.5,F,Master 40-44,Raw,SBD
-DQ,Luke Revere,TX,67.5,67,16,192.5,,215,,M,Junior 16-17,Raw,SBD
-1,Ray Valdez,TX,82.5,79,23,230,137.5,262.5,630,M,Junior 20-23,Raw,SBD
-1,Marc Villarreal,TX,100,98,17,182.5,150,245,577.5,M,Junior 16-17,Raw,SBD
-2,Jacob Holmes,TX,100,92.6,16,102.5,80,142.5,325,M,Junior 16-17,Raw,SBD
-1,Taylor Hull,TX,100,97.26,19,260,155,260,675,M,Junior 18-19,Raw,SBD
-1,Cameron Bustos,TX,100,94.66,20,160,130,190,480,M,Junior 20-23,Raw,SBD
-1,Josh Fowler,TX,110,107.8,20,250,195,285,730,M,Junior 20-23,Raw,SBD
+1,Alicia Penny,TX,56,54.9,38,82.5,57.5,127.5,267.5,F,Submasters 35-39,Raw,SBD
+1,Katherine Brown,TX,75,71.9,50,117.5,70,165,352.5,F,Masters 50-54,Raw,SBD
+1,Fatima Patterson,TX,90,85.4,42,92.5,75,125,292.5,F,Masters 40-44,Raw,SBD
+DQ,Luke Revere,TX,67.5,67,16,192.5,,215,,M,Juniors 16-17,Raw,SBD
+1,Ray Valdez,TX,82.5,79,23,230,137.5,262.5,630,M,Juniors 20-23,Raw,SBD
+1,Marc Villarreal,TX,100,98,17,182.5,150,245,577.5,M,Juniors 16-17,Raw,SBD
+2,Jacob Holmes,TX,100,92.6,16,102.5,80,142.5,325,M,Juniors 16-17,Raw,SBD
+1,Taylor Hull,TX,100,97.26,19,260,155,260,675,M,Juniors 18-19,Raw,SBD
+1,Cameron Bustos,TX,100,94.66,20,160,130,190,480,M,Juniors 20-23,Raw,SBD
+1,Josh Fowler,TX,110,107.8,20,250,195,285,730,M,Juniors 20-23,Raw,SBD
 1,Albert Mata,TX,67.5,63.4,25,157.5,90,205,452.5,M,Open,Raw,SBD
 2,Alon Trevino,TX,67.5,66.5,26,137.5,107.5,187.5,432.5,M,Open,Raw,SBD
 1,Abraham Ramirez,TX,75,74.6,19,207.5,155,225,587.5,M,Open,Raw,SBD
@@ -51,34 +51,34 @@ DQ,Dennis Levine,TX,75,74.4,24,,142.5,282.5,,M,Open,Raw,SBD
 1,Jose Armas,TX,140,137.7,19,257.5,227.5,230,715,M,Open,Raw,SBD
 1,Michael Zoch,TX,140+,154.3,28,285,185,252.5,722.5,M,Open,Raw,SBD
 2,Juan Perez,TX,140+,174.3,24,235,165,230,630,M,Open,Raw,SBD
-1,Chance Rennie,TX,90,89.2,39,215,142.5,205,562.5,M,Submaster 35-39,Raw,SBD
-2,Jacob Elliff,TX,90,85.4,36,150,105,150,405,M,Submaster 35-39,Raw,SBD
-1,Steven Martin,TX,110,104.6,46,162.5,137.5,187.5,487.5,M,Master 45-49,Raw,SBD
-DQ,Henry Patino,TX,140,132.8,43,212.5,,,,M,Master 40-44,Raw,SBD
+1,Chance Rennie,TX,90,89.2,39,215,142.5,205,562.5,M,Submasters 35-39,Raw,SBD
+2,Jacob Elliff,TX,90,85.4,36,150,105,150,405,M,Submasters 35-39,Raw,SBD
+1,Steven Martin,TX,110,104.6,46,162.5,137.5,187.5,487.5,M,Masters 45-49,Raw,SBD
+DQ,Henry Patino,TX,140,132.8,43,212.5,,,,M,Masters 40-44,Raw,SBD
 1,Brooke Gabel,TX,75,71.5,26,152.5,95,157.5,405,F,Open,Wraps,SBD
 2,Audrey Flores,TX,75,70.7,26,120,50,127.5,297.5,F,Open,Wraps,SBD
 1,Amie Mullen,TX,82.5,80.1,25,117.5,47.5,122.5,287.5,F,Open,Wraps,SBD
-1,Edgar Acevedo,TX,75,74.3,21,240,160,245,645,M,Junior 20-23,Wraps,SBD
-1,Hunter Work,TX,82.5,80,23,235,165,227.5,627.5,M,Junior 20-23,Wraps,SBD
-2,Allen Olvera,TX,82.5,80.4,22,215,115,227.5,557.5,M,Junior 20-23,Wraps,SBD
-1,Andre Agan,TX,100,96.3,20,232.5,137.5,235,605,M,Junior 20-23,Wraps,SBD
+1,Edgar Acevedo,TX,75,74.3,21,240,160,245,645,M,Juniors 20-23,Wraps,SBD
+1,Hunter Work,TX,82.5,80,23,235,165,227.5,627.5,M,Juniors 20-23,Wraps,SBD
+2,Allen Olvera,TX,82.5,80.4,22,215,115,227.5,557.5,M,Juniors 20-23,Wraps,SBD
+1,Andre Agan,TX,100,96.3,20,232.5,137.5,235,605,M,Juniors 20-23,Wraps,SBD
 1,Hunter Work,TX,82.5,80,23,235,165,227.5,627.5,M,Open,Wraps,SBD
 2,Allen Olvera,TX,82.5,80.4,22,215,115,227.5,557.5,M,Open,Wraps,SBD
 1,Andre Agan,TX,100,96.3,20,232.5,137.5,235,605,M,Open,Wraps,SBD
 1,Ogden J Myklebust III,TX,110,108.7,30,322.5,220,375,917.5,M,Open,Wraps,SBD
 1,Mike Boucher,TX,125,114.7,33,272.5,192.5,275,740,M,Open,Wraps,SBD
-1,Janie Aguero,TX,48,47.3,15,65,37.5,82.5,185,F,Junior 13-15,Single-ply,SBD
-1,Maddie Burke,TX,82.5,77.5,15,90,65,127.5,282.5,F,Junior 13-15,Single-ply,SBD
-1,Lxamri Bolden,TX,82.5,79.5,16,187.5,127.5,185,500,M,Junior 16-17,Single-ply,SBD
+1,Janie Aguero,TX,48,47.3,15,65,37.5,82.5,185,F,Juniors 13-15,Single-ply,SBD
+1,Maddie Burke,TX,82.5,77.5,15,90,65,127.5,282.5,F,Juniors 13-15,Single-ply,SBD
+1,Lxamri Bolden,TX,82.5,79.5,16,187.5,127.5,185,500,M,Juniors 16-17,Single-ply,SBD
 1,Geramy Alexander,TX,82.5,81.1,21,322.5,260,290,872.5,M,Open,Single-ply,SBD
-1,Brianna Pipitone,TX,67.5,67.4,21,,52.5,,52.5,F,Junior 20-23,Raw,B
+1,Brianna Pipitone,TX,67.5,67.4,21,,52.5,,52.5,F,Juniors 20-23,Raw,B
 1,Angelina Hong,TX,48,47.8,22,,92.5,,92.5,F,Open,Raw,B
-1,Kaleb Hairston,TX,82.5,79.4,18,,147.5,,147.5,M,Junior 18-19,Raw,B
+1,Kaleb Hairston,TX,82.5,79.4,18,,147.5,,147.5,M,Juniors 18-19,Raw,B
 1,Marvin Jones,TX,67.5,67.5,32,,110,,110,M,Open,Raw,B
 1,Kaleb Hairston,TX,82.5,79.4,18,,147.5,,147.5,M,Open,Raw,B
 1,Kenderick Webb,TX,90,89.7,32,,187.5,,187.5,M,Open,Raw,B
 1,Jacob Bell,TX,125,120,37,,237.5,,237.5,M,Open,Raw,B
-1,Jacob Bell,TX,125,120,37,,237.5,,237.5,M,Submaster 35-39,Raw,B
-1,Wayne Small,TX,90,89.6,48,,160,,160,M,Master 45-49,Raw,B
-1,Brian Propst,TX,110,108.01,49,,197.5,,197.5,M,Master 45-49,Raw,B
-1,Eric LaBarge,TX,125,115.7,41,,200,,200,M,Master 40-44,Raw,B
+1,Jacob Bell,TX,125,120,37,,237.5,,237.5,M,Submasters 35-39,Raw,B
+1,Wayne Small,TX,90,89.6,48,,160,,160,M,Masters 45-49,Raw,B
+1,Brian Propst,TX,110,108.01,49,,197.5,,197.5,M,Masters 45-49,Raw,B
+1,Eric LaBarge,TX,125,115.7,41,,200,,200,M,Masters 40-44,Raw,B

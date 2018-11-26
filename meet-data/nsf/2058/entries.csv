@@ -1,7 +1,7 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
 1,72,Elin Johannessen,Single-ply,Sande KK,68.60,80,-85,-85,80.0,45,50,55,55.0,100,105,112.5,112.5,247.5,Teen 14-18,F,SBD
-1,84,Tine S. Heimdal,Raw,Bergen SK,82.30,45,55,-70,55.0,37.5,40,42.5,42.5,90,105,-112.5,105.0,202.5,Junior 19-23,F,SBD
-1,84+,Charlotte Bratten Lund,Raw,Bergen SK,84.70,45,-75,-75,45.0,37.5,42.5,-45,42.5,70,105,110,110.0,197.5,Junior 19-23,F,SBD
+1,84,Tine S. Heimdal,Raw,Bergen SK,82.30,45,55,-70,55.0,37.5,40,42.5,42.5,90,105,-112.5,105.0,202.5,Juniors 19-23,F,SBD
+1,84+,Charlotte Bratten Lund,Raw,Bergen SK,84.70,45,-75,-75,45.0,37.5,42.5,-45,42.5,70,105,110,110.0,197.5,Juniors 19-23,F,SBD
 1,57,Layla Bjerga,Single-ply,Sandnes AK,54.70,100,107.5,-110,107.5,40,45,-50,45.0,100,110,120,120.0,272.5,Open,F,SBD
 1,63,Marini Jacobsen,Single-ply,IL Kraftsport,62.00,132.5,137.5,-142.5,137.5,80,82.5,-85,82.5,132.5,135,137.5,137.5,357.5,Open,F,SBD
 1,72,Tone Beddari Blackstad,Single-ply,Oslo SK,71.50,145,152.5,160,160.0,67.5,72.5,-75,72.5,140,150,-155,150.0,382.5,Open,F,SBD
@@ -11,7 +11,7 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,
 1,84,Kristin Thorvaldsen,Single-ply,Oslo SK,74.60,132.5,137.5,-142.5,137.5,67.5,72.5,75,75.0,137.5,147.5,-150,147.5,360,Open,F,SBD
 2,84,Rebecca Mekonnen,Raw,Bergen SK,73.80,60,70,-72.5,70.0,50,57.5,60,60.0,100,110,115,115.0,245,Open,F,SBD
 1,84+,Linn Borgland Johansen,Single-ply,Oslo SK,105.00,-155,155,160,160.0,72.5,-77.5,80,80.0,125,135,145,145.0,385,Open,F,SBD
-1,57,Ann Kristin Olsen,Single-ply,Moss SIK,55.70,110,120,-130,120.0,90,101,,101.0,110,115,120,120.0,341,Master 40-49,F,SBD
+1,57,Ann Kristin Olsen,Single-ply,Moss SIK,55.70,110,120,-130,120.0,90,101,,101.0,110,115,120,120.0,341,Masters 40-49,F,SBD
 1,66,Simon Bråthe Johansen,Single-ply,Lenja AK,65.70,190,200,,200.0,90,97.5,100,100.0,200,210,-217.5,210.0,510,Teen 14-18,M,SBD
 2,66,Jørgen Sørbø,Single-ply,Sande KK,63.20,-60,75,90,90.0,65,75,-82.5,75.0,80,100,120,120.0,285,Teen 14-18,M,SBD
 1,74,Eivind Sjøl,Single-ply,Sande KK,73.20,150,160,165,165.0,95,102.5,105,105.0,180,190,-195,190.0,460,Teen 14-18,M,SBD
@@ -20,17 +20,17 @@ DQ,83,Thomas Steinnes Nordqvist,Single-ply,Sande KK,75.30,-190,-190,-190,,120,-1
 1,93,Henrik Fosslien,Single-ply,Sande KK,87.60,70,90,-100,90.0,100,107.5,110,110.0,130,145,160,160.0,360,Teen 14-18,M,SBD
 1,120,Johnny Nordanger,Raw,Bergen SK,109.10,150,157.5,167.5,167.5,140,-147.5,-147.5,140.0,180,187.5,195,195.0,502.5,Teen 14-18,M,SBD
 1,120+,Jørgen Imingen,Single-ply,Brumunddal AK,157.90,195,215,240,240.0,-125,130,142.5,142.5,175,210,,210.0,592.5,Teen 14-18,M,SBD
-1,66,Tore Økland,Raw,Haugaland AK,62.20,120,130,135,135.0,90,95,-100,95.0,150,160,-165,160.0,390,Junior 19-23,M,SBD
-1,74,Kim Engen,Single-ply,Oslo SK,67.90,150,162.5,167.5,167.5,110,-117.5,117.5,117.5,160,170,,170.0,455,Junior 19-23,M,SBD
-1,83,Alexander Lykseth,Single-ply,Kristiansand AK,82.00,-210,-210,210,210.0,115,120,-122.5,120.0,210,220,230,230.0,560,Junior 19-23,M,SBD
-2,83,Magnus Ruud,Single-ply,Sande KK,81.00,185,200,-210,200.0,130,137.5,145,145.0,182.5,190,205,205.0,550,Junior 19-23,M,SBD
-3,83,Tom C. M. Rygh,Raw,Bergen SK,77.90,90,92.5,112.5,112.5,90,92.5,-97.5,92.5,135,145,155,155.0,360,Junior 19-23,M,SBD
-1,93,Erik Fredriksen,Single-ply,Brumunddal AK,90.60,260,267.5,,267.5,-195,195,202.5,202.5,220,230,,230.0,700,Junior 19-23,M,SBD
-2,93,André Midtby,Single-ply,Brumunddal AK,87.00,230,-240,240,240.0,-160,160,167.5,167.5,230,242.5,,242.5,650,Junior 19-23,M,SBD
-3,93,Mikkel Østreng,Single-ply,SPUVI,91.40,-210,220,-225,220.0,175,-185,185,185.0,190,207.5,220,220.0,625,Junior 19-23,M,SBD
-4,93,Jonas Larsen,Single-ply,Lenja AK,88.90,190,-200,200,200.0,130,-140,145,145.0,190,-205,,190.0,535,Junior 19-23,M,SBD
-1,105,Håkon Mørk Solaas,Single-ply,IL Kraftsport,103.40,200,-215,220,220.0,135,140,145,145.0,205,215,225,225.0,590,Junior 19-23,M,SBD
-1,120+,Bård Tore Rogstad,Single-ply,Brumunddal AK,139.50,250,265,-275,265.0,170,177.5,185,185.0,250,265,,265.0,715,Junior 19-23,M,SBD
+1,66,Tore Økland,Raw,Haugaland AK,62.20,120,130,135,135.0,90,95,-100,95.0,150,160,-165,160.0,390,Juniors 19-23,M,SBD
+1,74,Kim Engen,Single-ply,Oslo SK,67.90,150,162.5,167.5,167.5,110,-117.5,117.5,117.5,160,170,,170.0,455,Juniors 19-23,M,SBD
+1,83,Alexander Lykseth,Single-ply,Kristiansand AK,82.00,-210,-210,210,210.0,115,120,-122.5,120.0,210,220,230,230.0,560,Juniors 19-23,M,SBD
+2,83,Magnus Ruud,Single-ply,Sande KK,81.00,185,200,-210,200.0,130,137.5,145,145.0,182.5,190,205,205.0,550,Juniors 19-23,M,SBD
+3,83,Tom C. M. Rygh,Raw,Bergen SK,77.90,90,92.5,112.5,112.5,90,92.5,-97.5,92.5,135,145,155,155.0,360,Juniors 19-23,M,SBD
+1,93,Erik Fredriksen,Single-ply,Brumunddal AK,90.60,260,267.5,,267.5,-195,195,202.5,202.5,220,230,,230.0,700,Juniors 19-23,M,SBD
+2,93,André Midtby,Single-ply,Brumunddal AK,87.00,230,-240,240,240.0,-160,160,167.5,167.5,230,242.5,,242.5,650,Juniors 19-23,M,SBD
+3,93,Mikkel Østreng,Single-ply,SPUVI,91.40,-210,220,-225,220.0,175,-185,185,185.0,190,207.5,220,220.0,625,Juniors 19-23,M,SBD
+4,93,Jonas Larsen,Single-ply,Lenja AK,88.90,190,-200,200,200.0,130,-140,145,145.0,190,-205,,190.0,535,Juniors 19-23,M,SBD
+1,105,Håkon Mørk Solaas,Single-ply,IL Kraftsport,103.40,200,-215,220,220.0,135,140,145,145.0,205,215,225,225.0,590,Juniors 19-23,M,SBD
+1,120+,Bård Tore Rogstad,Single-ply,Brumunddal AK,139.50,250,265,-275,265.0,170,177.5,185,185.0,250,265,,265.0,715,Juniors 19-23,M,SBD
 1,83,Stian Björge,Single-ply,Brumunddal AK,81.20,255,267.5,-275,267.5,190,195,200,200.0,220,232.5,240,240.0,707.5,Open,M,SBD
 1,93,Sverre Diesen,Single-ply,Sande KK,90.70,242.5,250,-260,250.0,220,222.5,-230,222.5,220,-227.5,-227.5,220.0,692.5,Open,M,SBD
 2,93,Petter Harila Westerby,Single-ply,Oslo SK,88.20,200,210,215,215.0,130,135,-140,135.0,250,260,-270,260.0,610,Open,M,SBD
@@ -45,11 +45,11 @@ DQ,83,Thomas Steinnes Nordqvist,Single-ply,Sande KK,75.30,-190,-190,-190,,120,-1
 1,120+,Lars S. Kirkebøen,Raw,Sande KK,157.90,265,275,285,285.0,170,180,-190,180.0,310,335,-350,335.0,800,Open,M,SBD
 2,120+,Thorleif Thorsen,Single-ply,Haugaland AK,125.10,220,225,230,230.0,150,160,165,165.0,240,255,262.5,262.5,657.5,Open,M,SBD
 DQ,120+,Lars Dalby Markussen,Single-ply,Halden SI,130.00,-370,-370,-380,,-267.5,,,,,,,,,Open,M,SB
-1,83,Bjørn Astad,Single-ply,Oslo SK,75.40,220,230,,230.0,130,-140,-140,130.0,180,,,180.0,540,Master 40-49,M,SBD
-1,93,Geir Gregersen,Single-ply,Sande KK,90.30,260,280,290,290.0,-197.5,-197.5,197.5,197.5,240,255,262.5,262.5,750,Master 40-49,M,SBD
-1,120,Per Ove Sjøl,Single-ply,Sande KK,116.60,-270,290,-310,290.0,-215,215,225,225.0,270,290,-312.5,290.0,805,Master 40-49,M,SBD
-2,120,Jan Arne Lykseth,Single-ply,Kristiansand AK,114.20,240,250,-260,250.0,-195,-195,195,195.0,250,260,-270,260.0,705,Master 40-49,M,SBD
-3,120,Runar Saxegård,Single-ply,Lenja AK,113.80,-170,170,-185,170.0,170,-180,-180,170.0,210,-230,,210.0,550,Master 40-49,M,SBD
-1,83,Sverre Paulsen,Single-ply,Sande KK,77.70,120,130,135,135.0,85,-92.5,92.5,92.5,150,160,165,165.0,392.5,Master 50-59,M,SBD
-1,120+,Jan Helge Rustan,Single-ply,Sande KK,123.80,150,162.5,-165,162.5,145,155,,155.0,190,207.5,,207.5,525,Master 50-59,M,SBD
-1,105,Per Nagy,Single-ply,Lørenskog AK,101.30,170,190,,190.0,127.5,-137.5,-137.5,127.5,190,,,190.0,507.5,Master 60-69,M,SBD
+1,83,Bjørn Astad,Single-ply,Oslo SK,75.40,220,230,,230.0,130,-140,-140,130.0,180,,,180.0,540,Masters 40-49,M,SBD
+1,93,Geir Gregersen,Single-ply,Sande KK,90.30,260,280,290,290.0,-197.5,-197.5,197.5,197.5,240,255,262.5,262.5,750,Masters 40-49,M,SBD
+1,120,Per Ove Sjøl,Single-ply,Sande KK,116.60,-270,290,-310,290.0,-215,215,225,225.0,270,290,-312.5,290.0,805,Masters 40-49,M,SBD
+2,120,Jan Arne Lykseth,Single-ply,Kristiansand AK,114.20,240,250,-260,250.0,-195,-195,195,195.0,250,260,-270,260.0,705,Masters 40-49,M,SBD
+3,120,Runar Saxegård,Single-ply,Lenja AK,113.80,-170,170,-185,170.0,170,-180,-180,170.0,210,-230,,210.0,550,Masters 40-49,M,SBD
+1,83,Sverre Paulsen,Single-ply,Sande KK,77.70,120,130,135,135.0,85,-92.5,92.5,92.5,150,160,165,165.0,392.5,Masters 50-59,M,SBD
+1,120+,Jan Helge Rustan,Single-ply,Sande KK,123.80,150,162.5,-165,162.5,145,155,,155.0,190,207.5,,207.5,525,Masters 50-59,M,SBD
+1,105,Per Nagy,Single-ply,Lørenskog AK,101.30,170,190,,190.0,127.5,-137.5,-137.5,127.5,190,,,190.0,507.5,Masters 60-69,M,SBD

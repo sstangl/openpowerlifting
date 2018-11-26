@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Squat4Kg,Deadlift4Kg,Event
-1,Ellie Wilkinson,MT,90,86.73,19,125,57.5,160,342.5,F,Junior 18-19,Raw,,,SBD
-1,Megan Genung,MT,67.5,66.3,21,125.5,65,155,345.5,F,Junior 20-23,Raw,,,SBD
+1,Ellie Wilkinson,MT,90,86.73,19,125,57.5,160,342.5,F,Juniors 18-19,Raw,,,SBD
+1,Megan Genung,MT,67.5,66.3,21,125.5,65,155,345.5,F,Juniors 20-23,Raw,,,SBD
 1,Miriam Smith,MT,56,55,36,80,50,92.5,222.5,F,Open,Raw,,,SBD
 1,Taime Knowlton,MT,60,59.85,24,95,55,135,285,F,Open,Raw,,,SBD
 1,Megan Genung,MT,67.5,66.3,21,125.5,65,155,345.5,F,Open,Raw,,,SBD
@@ -8,8 +8,8 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Kelsey Malek,MT,82.5,78.95,24,90,50,122.5,262.5,F,Open,Raw,,,SBD
 1,Ellie Wilkinson,MT,90,86.73,19,125,57.5,160,342.5,F,Open,Raw,,,SBD
 2,Kate Hardman,MT,90,85.2,30,110,67.5,150,327.5,F,Open,Raw,,,SBD
-1,Erik Pino,MT,60,59.15,16,152.5,90,192.5,435,M,Junior 16-17,Raw,,,SBD
-1,Jared Brenden,MT,90,87,18,227.5,145,242.5,615,M,Junior 18-19,Raw,,,SBD
+1,Erik Pino,MT,60,59.15,16,152.5,90,192.5,435,M,Juniors 16-17,Raw,,,SBD
+1,Jared Brenden,MT,90,87,18,227.5,145,242.5,615,M,Juniors 18-19,Raw,,,SBD
 1,Bryan Hannan,ID,75,71.5,27,200,130,247.5,577.5,M,Open,Raw,,,SBD
 1,Blake Smith,WY,82.5,80.75,52,172.5,125,202.5,500,M,Open,Raw,,,SBD
 1,Jason Harmala,MT,90,89.4,30,245,147.5,272.5,665,M,Open,Raw,,,SBD
@@ -27,43 +27,43 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Rock Henderson,MT,140,136.8,44,225,150,247.5,622.5,M,Open,Raw,,,SBD
 1,Nathan Goodluck,MT,140+,151.55,31,195,160,200,555,M,Open,Raw,,,SBD
 2,Andrew Malek,MT,140+,146.9,25,150,90,205,445,M,Open,Raw,,,SBD
-1,Lonnie Miller,MT,125,122.7,37,210,137.5,252.5,600,M,Submaster 35-39,Raw,,,SBD
-1,Blake Smith,WY,82.5,80.75,52,172.5,125,202.5,500,M,Master 50-54,Raw,,,SBD
-1,Chris Bohenek,MT,100,95.8,41,195,160,210,565,M,Master 40-44,Raw,,,SBD
-1,Eddie Argumedo,WY,110,108.8,44,162.5,215,172.5,550,M,Master 40-44,Raw,,,SBD
-1,Brett Whitlock,WY,110,101.8,56,130,122.5,197.5,450,M,Master 55-59,Raw,,,SBD
-1,Rock Henderson,MT,140,136.8,44,225,150,247.5,622.5,M,Master 40-44,Raw,,,SBD
-1,Rylee Hudson,ID,60,58.9,22,127.5,55,130,312.5,F,Junior 20-23,Wraps,,,SBD
+1,Lonnie Miller,MT,125,122.7,37,210,137.5,252.5,600,M,Submasters 35-39,Raw,,,SBD
+1,Blake Smith,WY,82.5,80.75,52,172.5,125,202.5,500,M,Masters 50-54,Raw,,,SBD
+1,Chris Bohenek,MT,100,95.8,41,195,160,210,565,M,Masters 40-44,Raw,,,SBD
+1,Eddie Argumedo,WY,110,108.8,44,162.5,215,172.5,550,M,Masters 40-44,Raw,,,SBD
+1,Brett Whitlock,WY,110,101.8,56,130,122.5,197.5,450,M,Masters 55-59,Raw,,,SBD
+1,Rock Henderson,MT,140,136.8,44,225,150,247.5,622.5,M,Masters 40-44,Raw,,,SBD
+1,Rylee Hudson,ID,60,58.9,22,127.5,55,130,312.5,F,Juniors 20-23,Wraps,,,SBD
 1,Kayla Schelle,MT,75,69.8,28,137.5,75,135,347.5,F,Open,Wraps,,,SBD
 2,Katlynn Hudson,ID,75,71.6,26,120,65,132.5,317.5,F,Open,Wraps,,,SBD
-1,Daniele Hudson,ID,75,68.3,49,122.5,60,117.5,300,F,Master 45-49,Wraps,,,SBD
-1,Tyler Sebring,ID,90,87.2,22,207.5,117.5,237.5,562.5,M,Junior 20-23,Wraps,,,SBD
+1,Daniele Hudson,ID,75,68.3,49,122.5,60,117.5,300,F,Masters 45-49,Wraps,,,SBD
+1,Tyler Sebring,ID,90,87.2,22,207.5,117.5,237.5,562.5,M,Juniors 20-23,Wraps,,,SBD
 1,John Roy,MT,125,123.9,28,250,170,275,695,M,Open,Wraps,,,SBD
-1,Dacid Hudson,ID,82.5,75.3,56,190,112.5,210,512.5,M,Master 55-59,Single-ply,,,SBD
+1,Dacid Hudson,ID,82.5,75.3,56,190,112.5,210,512.5,M,Masters 55-59,Single-ply,,,SBD
 1,Tonya Shaffer,MT,60,59.9,44,,77.5,,77.5,F,Open,Raw,,,B
-1,Tonya Shaffer,MT,60,59.9,44,,77.5,,77.5,F,Master 40-44,Raw,,,B
-1,Ben Bleskin,MT,125,115,20,,167.5,,167.5,M,Junior 20-23,Raw,,,B
+1,Tonya Shaffer,MT,60,59.9,44,,77.5,,77.5,F,Masters 40-44,Raw,,,B
+1,Ben Bleskin,MT,125,115,20,,167.5,,167.5,M,Juniors 20-23,Raw,,,B
 1,Chris Bohenek,MT,100,95.8,41,,160,,160,M,Open,Raw,,,B
 1,Jeff Tucker,WY,125,122.95,50,,235,,235,M,Open,Raw,,,B
 2,River Newman,MT,125,118.65,28,,165,,165,M,Open,Raw,,,B
-1,Kevin Coombs,MT,100,92.65,40,,160,,160,M,Master 40-44,Raw,,,B
-2,Chris Bohenek,MT,100,95.8,41,,160,,160,M,Master 40-44,Raw,,,B
-1,David Dunlop,MT,100,99.2,50,,142.5,,142.5,M,Master 50-54,Raw,,,B
-1,Jeff Tucker,WY,125,122.95,50,,235,,235,M,Master 50-54,Raw,,,B
-1,Palmer Hoovestal,MT,125,115.9,55,,152.5,,152.5,M,Master 55-59,Raw,,,B
-1,Reid Hammer,ND,82.5,76.1,20,,,220,220,M,Junior 20-23,Raw,,,D
+1,Kevin Coombs,MT,100,92.65,40,,160,,160,M,Masters 40-44,Raw,,,B
+2,Chris Bohenek,MT,100,95.8,41,,160,,160,M,Masters 40-44,Raw,,,B
+1,David Dunlop,MT,100,99.2,50,,142.5,,142.5,M,Masters 50-54,Raw,,,B
+1,Jeff Tucker,WY,125,122.95,50,,235,,235,M,Masters 50-54,Raw,,,B
+1,Palmer Hoovestal,MT,125,115.9,55,,152.5,,152.5,M,Masters 55-59,Raw,,,B
+1,Reid Hammer,ND,82.5,76.1,20,,,220,220,M,Juniors 20-23,Raw,,,D
 1,Brett Doberdruk,MT,82.5,80.65,32,,,252.5,252.5,M,Open,Raw,,260,D
 1,James Wilson,MT,100,95.95,28,,,325,325,M,Open,Raw,,,D
 2,Daniel Iverson,WY,100,97.4,28,,,222.5,222.5,M,Open,Raw,,,D
 3,Chris Bohenek,MT,100,95.8,41,,,210,210,M,Open,Raw,,,D
 1,River Newman,MT,125,118.65,28,,,210,210,M,Open,Raw,,,D
-1,Chris Bohenek,MT,100,95.8,41,,,210,210,M,Master 40-44,Raw,,,D
-1,Palmer Hoovestal,MT,125,115.9,55,,,272.5,272.5,M,Master 55-59,Raw,,,D
+1,Chris Bohenek,MT,100,95.8,41,,,210,210,M,Masters 40-44,Raw,,,D
+1,Palmer Hoovestal,MT,125,115.9,55,,,272.5,272.5,M,Masters 55-59,Raw,,,D
 1,Suzanne Ady,MT,90+,116,46,,77.5,155,232.5,F,Open,Raw,,,BD
-1,Suzanne Ady,MT,90+,116,46,,77.5,155,232.5,F,Master 45-49,Raw,,,BD
+1,Suzanne Ady,MT,90+,116,46,,77.5,155,232.5,F,Masters 45-49,Raw,,,BD
 1,James Wilson,MT,100,95.95,28,,182.5,325,507.5,M,Open,Raw,,,BD
 1,Eddie Argumedo,WY,110,108.8,44,,215,172.5,387.5,M,Open,Raw,,,BD
 1,John Grosulak,MT,125,121.75,31,,190,282.5,472.5,M,Open,Raw,,,BD
 1,Jim Haga,ND,140+,160.5,50,,142.5,220,362.5,M,Open,Raw,,,BD
-1,Eddie Argumedo,WY,110,108.8,44,,215,172.5,387.5,M,Master 40-44,Raw,,,BD
-1,Jim Haga,ND,140+,160.5,50,,142.5,362.5,505,M,Master 50-54,Raw,,,BD
+1,Eddie Argumedo,WY,110,108.8,44,,215,172.5,387.5,M,Masters 40-44,Raw,,,BD
+1,Jim Haga,ND,140+,160.5,50,,142.5,362.5,505,M,Masters 50-54,Raw,,,BD

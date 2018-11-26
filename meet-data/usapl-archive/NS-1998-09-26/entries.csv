@@ -7,7 +7,7 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 56,F,Single-ply,Open,Yvette Vlack,75,,B,75,2
 56,F,Single-ply,Open,Robyn Slagle,62.5,,B,62.5,3
 56,F,Single-ply,Open,Susan Douglas,50,,B,50,4
-56,F,Single-ply,Junior,Jill Darling,90,,B,90,1
+56,F,Single-ply,Juniors,Jill Darling,90,,B,90,1
 56,F,Single-ply,Masters 50-54,Joyce Orme,70,,B,70,1
 60,F,Single-ply,Open,Bettina Altizer,110,,B,110,1
 60,F,Single-ply,Open,Jerri Lippert,105,,B,105,2
@@ -24,7 +24,7 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 75,F,Single-ply,Lifetime,Helen Sauer,100,,B,100,1
 75,F,Single-ply,Masters 45-49,Helen Sauer,100,,B,100,1
 75,F,Single-ply,Masters 50-54,Pat Kennedy,85,,B,85,1
-75,F,Single-ply,Junior,Tiffany Saven,50,,B,50,1
+75,F,Single-ply,Juniors,Tiffany Saven,50,,B,50,1
 75,F,Single-ply,Teen 14-15,Beth Tompkins,75,,B,75,1
 90,F,Single-ply,Open,Judi Francis,90,,B,90,1
 90,F,Single-ply,Open,Linda Knittel,85,,B,85,2
@@ -50,8 +50,8 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 67.5,M,Single-ply,Lifetime,Lance Slaughter,182.5,,B,182.5,1
 67.5,M,Single-ply,Lifetime,Chuck Brunson,175,,B,175,2
 67.5,M,Single-ply,Lifetime,Cody Bartlett,102.5,,B,102.5,3
-67.5,M,Single-ply,Junior,Kevin Lannon,160,,B,160,1
-67.5,M,Single-ply,Junior,Dan Bedford,137.5,,B,137.5,2
+67.5,M,Single-ply,Juniors,Kevin Lannon,160,,B,160,1
+67.5,M,Single-ply,Juniors,Dan Bedford,137.5,,B,137.5,2
 67.5,M,Single-ply,Collegiate,Dan Bedford,137.5,,B,137.5,1
 67.5,M,Raw,Open,Cody Bartlett,102.5,,B,102.5,1
 67.5,M,Single-ply,Police and Firemen,Russ Burnett,,,B,,DQ
@@ -70,9 +70,9 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 75,M,Single-ply,Police and Fire,Nick Merorelli,167.5,,B,167.5,1
 75,M,Single-ply,Police and Fire,Paul Fleming,165,,B,165,2
 75,M,Raw,Open,David Seman,130,,B,130,1
-75,M,Single-ply,Junior,Mike Didonato,170,,B,170,1
-75,M,Single-ply,Junior,Jonathan Gray,160,,B,160,2
-75,M,Single-ply,Junior,Chad Norris,125,,B,125,3
+75,M,Single-ply,Juniors,Mike Didonato,170,,B,170,1
+75,M,Single-ply,Juniors,Jonathan Gray,160,,B,160,2
+75,M,Single-ply,Juniors,Chad Norris,125,,B,125,3
 75,M,Single-ply,Collegiate,Jonathan Gray,160,,B,160,1
 82.5,M,Single-ply,Open,Leonard McCormick Jr,220,227.5,B,220,1
 82.5,M,Single-ply,Open,Scott Kerman,205,,B,205,2
@@ -117,7 +117,7 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 90,M,Raw,Open,Matt Sulzer,127.5,,B,127.5,3
 90,M,Single-ply,Collegiate,Greg Vanson,160,,B,160,1
 90,M,Single-ply,Police and Firemen,Mike Crawford,190,,B,190,1
-90,M,Single-ply,Junior,Jeff Sussman,192.5,,B,192.5,1
+90,M,Single-ply,Juniors,Jeff Sussman,192.5,,B,192.5,1
 100,M,Single-ply,Open,Anthony Succarotte,235,,B,235,1
 100,M,Single-ply,Open,Casey Rennart,230,,B,230,2
 100,M,Single-ply,Open,Ralph Young Jr,227.5,,B,227.5,3
@@ -131,7 +131,7 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 100,M,Single-ply,Lifetime,Bill Denlinger,182.5,,B,182.5,4
 100,M,Single-ply,Lifetime,Joe Keough,165,,B,165,5
 100,M,Single-ply,Police and Fire,Joe Keough,165,,B,165,1
-100,M,Single-ply,Junior,Pat Wilson,222.5,,B,222.5,1
+100,M,Single-ply,Juniors,Pat Wilson,222.5,,B,222.5,1
 110,M,Single-ply,Open,David Doan,250,,B,250,1
 110,M,Single-ply,Open,Raoul Donati,245,,B,245,2
 110,M,Single-ply,Open,Kevin Mayer,235,,B,235,3
@@ -186,7 +186,7 @@ WeightClassKg,Sex,Equipment,Division,Name,Best3BenchKg,Bench4Kg,Event,TotalKg,Pl
 125+,M,Raw,Open,Richard Gries,190,,B,190,2
 125+,M,Single-ply,Police and Firemen,Robert Cutts,250,,B,250,1
 125+,M,Single-ply,Police and Firemen,James Kimble,197.5,,B,197.5,2
-125+,M,Single-ply,Junior,Mike Penavick,215,,B,215,1
+125+,M,Single-ply,Juniors,Mike Penavick,215,,B,215,1
 67.5,M,Single-ply,16-17,Daniel Cease Jr,67.5,,B,67.5,1
 67.5,M,Single-ply,18-19,Dominic Curatolo,122.5,,B,122.5,1
 75,M,Single-ply,16-17,Joe Sweger,157.5,,B,157.5,1

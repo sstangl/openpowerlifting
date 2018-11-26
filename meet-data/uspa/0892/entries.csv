@@ -1,5 +1,5 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Maria Torres,CA,75,70.2,21,110,57.5,137.5,305,F,Junior 20-23,Raw,SBD
+1,Maria Torres,CA,75,70.2,21,110,57.5,137.5,305,F,Juniors 20-23,Raw,SBD
 1,Lindsay Epperly,CA,60,59.95,28,112.5,70,150,332.5,F,Open,Raw,SBD
 2,Genevieve Rohe,CA,60,57.95,31,70,45,85,200,F,Open,Raw,SBD
 1,Samantha Chastain,CA,67.5,66.6,27,127.5,57.5,127.5,312.5,F,Open,Raw,SBD
@@ -10,13 +10,13 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Lisa Voss,CA,90,88.85,51,80,62.5,140,282.5,F,Open,Raw,SBD
 1,Beverly Pappas,CA,90+,96.35,27,115,65,137.5,317.5,F,Open,Raw,SBD
 2,Michelle Huntley,CA,90+,136.9,50,110,72.5,130,312.5,F,Open,Raw,SBD
-1,Mirtha Delatorre,CA,75,73.2,46,133,65,142.5,340.5,F,Master 45-49,Raw,SBD
-1,Lisa Voss,CA,90,88.85,51,80,62.5,140,282.5,F,Master 50-54,Raw,SBD
-1,Michelle Huntley,CA,90+,136.9,50,110,72.5,130,312.5,F,Master 50-54,Raw,SBD
-1,Adrien Whitehurst,CA,90,87.7,23,250,150,295,695,M,Junior 20-23,Raw,SBD
-2,Joseph Karamatic,CA,90,89.45,22,192.5,137.5,212.5,542.5,M,Junior 20-23,Raw,SBD
-1,Jack Van Dine,CA,110,106.3,15,160,105,205,470,M,Junior 13-15,Raw,SBD
-1,Josh Battersby,CA,125,119.05,22,252.5,152.5,272.5,677.5,M,Junior 20-23,Raw,SBD
+1,Mirtha Delatorre,CA,75,73.2,46,133,65,142.5,340.5,F,Masters 45-49,Raw,SBD
+1,Lisa Voss,CA,90,88.85,51,80,62.5,140,282.5,F,Masters 50-54,Raw,SBD
+1,Michelle Huntley,CA,90+,136.9,50,110,72.5,130,312.5,F,Masters 50-54,Raw,SBD
+1,Adrien Whitehurst,CA,90,87.7,23,250,150,295,695,M,Juniors 20-23,Raw,SBD
+2,Joseph Karamatic,CA,90,89.45,22,192.5,137.5,212.5,542.5,M,Juniors 20-23,Raw,SBD
+1,Jack Van Dine,CA,110,106.3,15,160,105,205,470,M,Juniors 13-15,Raw,SBD
+1,Josh Battersby,CA,125,119.05,22,252.5,152.5,272.5,677.5,M,Juniors 20-23,Raw,SBD
 1,William Moore,CA,75,74.1,25,227.5,137.5,247.5,612.5,M,Open,Raw,SBD
 1,Steven McDermott,CA,82.5,79.55,31,160,95,205,460,M,Open,Raw,SBD
 2,Joshua Perez,CA,82.5,76.2,26,155,120,180,455,M,Open,Raw,SBD
@@ -26,24 +26,24 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Doug Carroll,CA,110,106.6,56,205,125,275,605,M,Open,Raw,SBD
 3,Derek Brockenborough,CA,110,108.2,28,180,115,215,510,M,Open,Raw,SBD
 4,Jack Van Dine,CA,110,106.3,15,160,105,205,470,M,Open,Raw,SBD
-1,Christine Coll,CA,75,68.85,20,95,60,135,290,F,Junior 20-23,Wraps,SBD
+1,Christine Coll,CA,75,68.85,20,95,60,135,290,F,Juniors 20-23,Wraps,SBD
 1,Janie Baythavong,CA,52,49.7,27,112.5,52.5,115,280,F,Open,Wraps,SBD
 1,Christine Coll,CA,75,68.85,20,95,60,135,290,F,Open,Wraps,SBD
 1,Megan McKibben,CA,82.5,80.95,29,127.5,60,160,347.5,F,Open,Wraps,SBD
-1,Allan Rivers,CA,75,70.9,17,132.5,112.5,177.5,422.5,M,Junior 16-17,Wraps,SBD
+1,Allan Rivers,CA,75,70.9,17,132.5,112.5,177.5,422.5,M,Juniors 16-17,Wraps,SBD
 1,Tyler Milligan,CA,140,136.95,25,257.5,160,302.5,720,M,Open,Wraps,SBD
-1,Dustin Behne,CA,100,93.4,36,212.5,150,250,612.5,M,Submaster 35-39,Wraps,SBD
-1,Randee Kotlar,CA,90,89.45,22,,70,,70,F,Junior 20-23,Raw,B
-1,Jamie Quilici,NV,67.5,65.9,38,,67.5,,67.5,F,Submaster 35-39,Raw,B
-1,Beata Jarvis,CA,60,58.95,48,,60,,60,F,Master 45-49,Raw,B
-1,Linda Halliday,CA,60,58.4,57,,52.5,,52.5,F,Master 55-59,Raw,B
-1,Michael Covarruvias,CA,82.5,80.25,17,,137.5,,137.5,M,Junior 16-17,Raw,B
-1,Steven O'Brien,CA,90,88.5,68,,122.5,,122.5,M,Master 65-69,Raw,B
-1,Randee Kotlar,CA,90,89.45,22,,,155,155,F,Junior 20-23,Raw,D
+1,Dustin Behne,CA,100,93.4,36,212.5,150,250,612.5,M,Submasters 35-39,Wraps,SBD
+1,Randee Kotlar,CA,90,89.45,22,,70,,70,F,Juniors 20-23,Raw,B
+1,Jamie Quilici,NV,67.5,65.9,38,,67.5,,67.5,F,Submasters 35-39,Raw,B
+1,Beata Jarvis,CA,60,58.95,48,,60,,60,F,Masters 45-49,Raw,B
+1,Linda Halliday,CA,60,58.4,57,,52.5,,52.5,F,Masters 55-59,Raw,B
+1,Michael Covarruvias,CA,82.5,80.25,17,,137.5,,137.5,M,Juniors 16-17,Raw,B
+1,Steven O'Brien,CA,90,88.5,68,,122.5,,122.5,M,Masters 65-69,Raw,B
+1,Randee Kotlar,CA,90,89.45,22,,,155,155,F,Juniors 20-23,Raw,D
 1,Mary Barker,CA,75,71.8,26,,,137.5,137.5,F,Open,Raw,D
 1,Raeleen Avila,CA,90,84.45,30,,,110,110,F,Open,Raw,D
-1,DeeAnna Serna,CA,90,88.1,49,,,117.5,117.5,F,Master 45-49,Raw,D
-1,Michael Covarruvias,CA,82.5,80.25,17,,,182.5,182.5,M,Junior 16-17,Raw,D
-DQ,JC Tolle,CA,125,117.45,48,,-235,,,M,Master 45-49,Single-ply,B
-1,JC Tolle,CA,125,117.45,48,,,235,235,M,Master 45-49,Single-ply,D
-1,Mark Menslage,CA,125,112.5,52,,,280,280,M,Master 50-54,Single-ply,D
+1,DeeAnna Serna,CA,90,88.1,49,,,117.5,117.5,F,Masters 45-49,Raw,D
+1,Michael Covarruvias,CA,82.5,80.25,17,,,182.5,182.5,M,Juniors 16-17,Raw,D
+DQ,JC Tolle,CA,125,117.45,48,,-235,,,M,Masters 45-49,Single-ply,B
+1,JC Tolle,CA,125,117.45,48,,,235,235,M,Masters 45-49,Single-ply,D
+1,Mark Menslage,CA,125,112.5,52,,,280,280,M,Masters 50-54,Single-ply,D

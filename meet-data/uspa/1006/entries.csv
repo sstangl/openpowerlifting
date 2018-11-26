@@ -1,13 +1,13 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Diamond Devereaux,PA,75,74.9,23,57.5,,57.5,F,Junior 20-23,Raw,B
+1,Diamond Devereaux,PA,75,74.9,23,57.5,,57.5,F,Juniors 20-23,Raw,B
 1,Diamond Devereaux,PA,75,74.9,23,57.5,,57.5,F,Open,Raw,B
 1,Marisa Drew,PA,82.5,76,26,105,,105,F,Open,Raw,B
 2,Megan Verbeck,PA,82.5,75.6,31,62.5,,62.5,F,Open,Raw,B
 3,Clare Suhanich,PA,82.5,80.4,61,55,,55,F,Open,Raw,B
-1,Clare Suhanich,PA,82.5,80.4,61,55,,55,F,Master 60-64,Raw,B
-1,Jake Dunn,PA,90,86.6,18,112.5,,112.5,M,Junior 18-19,Raw,B
-1,Cameron Richard,PA,100,95.9,22,115,,115,M,Junior 20-23,Raw,B
-1,Jake Holmes,PA,140,126.2,23,147.5,,147.5,M,Junior 20-23,Raw,B
+1,Clare Suhanich,PA,82.5,80.4,61,55,,55,F,Masters 60-64,Raw,B
+1,Jake Dunn,PA,90,86.6,18,112.5,,112.5,M,Juniors 18-19,Raw,B
+1,Cameron Richard,PA,100,95.9,22,115,,115,M,Juniors 20-23,Raw,B
+1,Jake Holmes,PA,140,126.2,23,147.5,,147.5,M,Juniors 20-23,Raw,B
 1,Brian Creazzo,PA,90,88.7,43,165,,165,M,Open,Raw,B
 2,Christopher Nicolas,NJ,90,85.4,25,137.5,,137.5,M,Open,Raw,B
 1,Justin Savakinus,PA,100,98,26,175,,175,M,Open,Raw,B
@@ -18,23 +18,23 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3BenchKg,Best3DeadliftKg,Tot
 1,James Chong,PA,140,132.3,35,202.5,,202.5,M,Open,Raw,B
 2,Jake Holmes,PA,140,126.2,23,147.5,,147.5,M,Open,Raw,B
 1,Pedro Mejias,NY,140+,203,38,242.5,,242.5,M,Open,Raw,B
-1,Michael Correa,NY,100,99,37,150,,150,M,Submaster 35-39,Raw,B
-1,James Chong,PA,140,132.3,35,202.5,,202.5,M,Submaster 35-39,Raw,B
-1,Brian Creazzo,PA,90,88.7,43,165,,165,M,Master 40-44,Raw,B
-1,Howard Aaron,PA,90,84.6,64,145,,145,M,Master 60-64,Raw,B
-1,Neil Belman,PA,110,103.7,56,115,,115,M,Master 55-59,Raw,B
+1,Michael Correa,NY,100,99,37,150,,150,M,Submasters 35-39,Raw,B
+1,James Chong,PA,140,132.3,35,202.5,,202.5,M,Submasters 35-39,Raw,B
+1,Brian Creazzo,PA,90,88.7,43,165,,165,M,Masters 40-44,Raw,B
+1,Howard Aaron,PA,90,84.6,64,145,,145,M,Masters 60-64,Raw,B
+1,Neil Belman,PA,110,103.7,56,115,,115,M,Masters 55-59,Raw,B
 DQ,Steve Pollock,NJ,110,104.9,46,,,,M,Open,Single-ply,B
-DQ,Steve Pollock,NJ,110,104.9,46,,,,M,Master 45-49,Single-ply,B
-1,Diamond Devereaux,PA,75,74.9,23,,150,150,F,Junior 20-23,Raw,D
+DQ,Steve Pollock,NJ,110,104.9,46,,,,M,Masters 45-49,Single-ply,B
+1,Diamond Devereaux,PA,75,74.9,23,,150,150,F,Juniors 20-23,Raw,D
 1,Diamond Devereaux,PA,75,74.9,23,,150,150,F,Open,Raw,D
 1,Marisa Drew,PA,82.5,76,26,,205,205,F,Open,Raw,D
 2,Megan Verbeck,PA,82.5,75.6,31,,120,120,F,Open,Raw,D
 3,Clare Suhanich,PA,82.5,80.4,61,,95,95,F,Open,Raw,D
-1,Clare Suhanich,PA,82.5,80.4,61,,95,95,F,Master 60-64,Raw,D
-1,Matt Reither,PA,90,86.8,19,,220,220,M,Junior 18-19,Raw,D
-2,Jake Dunn,PA,90,86.6,18,,197.5,197.5,M,Junior 18-19,Raw,D
-1,Cameron Richard,PA,100,95.9,22,,182.5,182.5,M,Junior 20-23,Raw,D
-1,Jake Holmes,PA,140,126.2,23,,227.5,227.5,M,Junior 20-23,Raw,D
+1,Clare Suhanich,PA,82.5,80.4,61,,95,95,F,Masters 60-64,Raw,D
+1,Matt Reither,PA,90,86.8,19,,220,220,M,Juniors 18-19,Raw,D
+2,Jake Dunn,PA,90,86.6,18,,197.5,197.5,M,Juniors 18-19,Raw,D
+1,Cameron Richard,PA,100,95.9,22,,182.5,182.5,M,Juniors 20-23,Raw,D
+1,Jake Holmes,PA,140,126.2,23,,227.5,227.5,M,Juniors 20-23,Raw,D
 1,Christopher Nicolas,NJ,90,85.4,25,,227.5,227.5,M,Open,Raw,D
 DQ,Brian Creazzo,PA,90,88.7,43,,,,M,Open,Raw,D
 1,Dillan Hollinshead,PA,100,99.3,24,,310,310,M,Open,Raw,D
@@ -46,9 +46,9 @@ DQ,Brian Creazzo,PA,90,88.7,43,,,,M,Open,Raw,D
 5,Ed Komissar,PA,110,107.1,28,,255,255,M,Open,Raw,D
 1,James Chong,PA,140,132.3,35,,285,285,M,Open,Raw,D
 2,Jake Holmes,PA,140,126.2,23,,227.5,227.5,M,Open,Raw,D
-1,Ed Ferkel,PA,90,86.6,35,,227.5,227.5,M,Submaster 35-39,Raw,D
-1,James Chong,PA,140,132.3,35,,285,285,M,Submaster 35-39,Raw,D
-DQ,Brian Creazzo,PA,90,88.7,43,,,,M,Master 40-44,Raw,D
-1,Neil Belman,PA,110,103.7,56,,212.5,212.5,M,Master 55-59,Raw,D
+1,Ed Ferkel,PA,90,86.6,35,,227.5,227.5,M,Submasters 35-39,Raw,D
+1,James Chong,PA,140,132.3,35,,285,285,M,Submasters 35-39,Raw,D
+DQ,Brian Creazzo,PA,90,88.7,43,,,,M,Masters 40-44,Raw,D
+1,Neil Belman,PA,110,103.7,56,,212.5,212.5,M,Masters 55-59,Raw,D
 1,Steve Pollock,NJ,110,104.9,46,,240,240,M,Open,Single-ply,D
-1,Steve Pollock,NJ,110,104.9,46,,240,240,M,Master 45-49,Single-ply,D
+1,Steve Pollock,NJ,110,104.9,46,,240,240,M,Masters 45-49,Single-ply,D

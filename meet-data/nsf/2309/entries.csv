@@ -1,17 +1,17 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
-1,57,Hege Augestad,Raw,Oslo SK,56.50,57.5,62.5,72.5,72.5,37.5,42.5,45,45.0,70,80,87.5,87.5,205,Junior 19-23,F,SBD
+1,57,Hege Augestad,Raw,Oslo SK,56.50,57.5,62.5,72.5,72.5,37.5,42.5,45,45.0,70,80,87.5,87.5,205,Juniors 19-23,F,SBD
 1,84,Maria Birkeli,Raw,Halden SI,83.00,90,95,-100,95.0,77.5,82.5,85,85.0,125,132.5,140,140.0,320,Open,F,SBD
 2,84,Camilla Fredriksen,Raw,Moss SIK,77.90,90,-97.5,97.5,97.5,50,57.5,62.5,62.5,110,117.5,125,125.0,285,Open,F,SBD
-1,57,Grete Gangnæs,Raw,Askim SK,56.80,80,85,92.5,92.5,75,80,85,85.0,110,120,-125,120.0,297.5,Master 50-59,F,SBD
-1,63,Tove Hansen,Raw,IL Kraftsport,57.30,,,,,30,32.5,-35,32.5,,,,,32.5,Master 60-69,F,B
-DQ,63,Jorunn Jacobsen,Raw,Oslo SK,60.60,,,,,-47.5,-50,-50,,,,,,,Master 60-69,F,B
+1,57,Grete Gangnæs,Raw,Askim SK,56.80,80,85,92.5,92.5,75,80,85,85.0,110,120,-125,120.0,297.5,Masters 50-59,F,SBD
+1,63,Tove Hansen,Raw,IL Kraftsport,57.30,,,,,30,32.5,-35,32.5,,,,,32.5,Masters 60-69,F,B
+DQ,63,Jorunn Jacobsen,Raw,Oslo SK,60.60,,,,,-47.5,-50,-50,,,,,,,Masters 60-69,F,B
 1,105,Joakim Sørensen Ingebrigtsen,Raw,Oslo SK,95.50,140,155,165,165.0,120,127.5,-130,127.5,150,170,182.5,182.5,475,Teen 14-18,M,SBD
-1,66,Hans-Erik Folkeseth,Raw,Halden SI,64.20,150,160,170,170.0,105,112.5,-117.5,112.5,-220,220,-240,220.0,502.5,Junior 19-23,M,SBD
-1,74,Alexander Helland,Raw,Halden SI,73.30,110,120,-127.5,120.0,25,,,25.0,170,185,-190,185.0,330,Junior 19-23,M,SBD
-1,93,Bjørn Christian Thon,Raw,Halden SI,85.70,,,,,-70,75,77.5,77.5,,,,,77.5,Junior 19-23,M,B
-1,105,Håkon Mørk Solaas,Raw,IL Kraftsport,98.40,160,165,-175,165.0,115,120,-125,120.0,220,235,240,240.0,525,Junior 19-23,M,SBD
-1,120,Håkon Andresen,Raw,Oslo SK,109.80,210,220,225,225.0,150,160,-165,160.0,250,275,290,290.0,675,Junior 19-23,M,SBD
-2,120,Jørgen Nordstrøm,Raw,Oslo SK,106.00,182.5,192.5,200,200.0,135,142.5,150,150.0,220,235,-240,235.0,585,Junior 19-23,M,SBD
+1,66,Hans-Erik Folkeseth,Raw,Halden SI,64.20,150,160,170,170.0,105,112.5,-117.5,112.5,-220,220,-240,220.0,502.5,Juniors 19-23,M,SBD
+1,74,Alexander Helland,Raw,Halden SI,73.30,110,120,-127.5,120.0,25,,,25.0,170,185,-190,185.0,330,Juniors 19-23,M,SBD
+1,93,Bjørn Christian Thon,Raw,Halden SI,85.70,,,,,-70,75,77.5,77.5,,,,,77.5,Juniors 19-23,M,B
+1,105,Håkon Mørk Solaas,Raw,IL Kraftsport,98.40,160,165,-175,165.0,115,120,-125,120.0,220,235,240,240.0,525,Juniors 19-23,M,SBD
+1,120,Håkon Andresen,Raw,Oslo SK,109.80,210,220,225,225.0,150,160,-165,160.0,250,275,290,290.0,675,Juniors 19-23,M,SBD
+2,120,Jørgen Nordstrøm,Raw,Oslo SK,106.00,182.5,192.5,200,200.0,135,142.5,150,150.0,220,235,-240,235.0,585,Juniors 19-23,M,SBD
 1,66,Jan-Erik Christiansen,Raw,Halden SI,61.10,,,,,110,115,120,120.0,,,,,120,Open,M,B
 1,74,Fredrik Aasgaard,Raw,Oslo SK,73.30,185,200,,200.0,120,130,-135,130.0,205,217.5,-222.5,217.5,547.5,Open,M,SBD
 1,83,Nikolai Gransjøen,Raw,Oslo SK,81.30,-155,160,167.5,167.5,105,115,-120,115.0,205,217.5,-225,217.5,500,Open,M,SBD
@@ -25,9 +25,9 @@ DQ,63,Jorunn Jacobsen,Raw,Oslo SK,60.60,,,,,-47.5,-50,-50,,,,,,,Master 60-69,F,B
 3,120,Joachim Benjamin Løkkevik,Raw,Askim SK,117.50,,,,,180,-190,-190,180.0,,,,,180,Open,M,B
 1,120+,Martin Borgland Rønning,Raw,Oslo SK,154.20,270,-295,300,300.0,225,232.5,-237.5,232.5,285,292.5,-300,292.5,825,Open,M,SBD
 2,120+,Sven-Erik Nilsen,Raw,Askim SK,122.60,-180,180,190,190.0,150,-160,-160,150.0,230,240,-250,240.0,580,Open,M,SBD
-1,74,Bjørn Astad,Raw,Oslo SK,73.90,,,,,100,,,100.0,,,,,100,Master 40-49,M,B
-1,105,Bjørn Flem,Raw,Lørenskog AK,104.50,190,192.5,-210,192.5,150,160,-165,160.0,190,210,220,220.0,572.5,Master 40-49,M,SBD
-2,105,Terje C. Samuelsen,Raw,Halden SI,102.80,,,,,130,-137.5,-137.5,130.0,,,,,130,Master 40-49,M,B
-1,120,Runar Saxegård,Raw,Lenja AK,119.90,,,,,150,155,160,160.0,,,,,160,Master 40-49,M,B
-1,120+,Frode Frøysland,Raw,IL Kraftsport,162.40,,,,,150,160,-170,160.0,,,,,160,Master 50-59,M,B
-1,105,Per Nagy,Raw,Lørenskog AK,97.90,140,-150,,140.0,-90,100,110,110.0,190,,,190.0,440,Master 60-69,M,SBD
+1,74,Bjørn Astad,Raw,Oslo SK,73.90,,,,,100,,,100.0,,,,,100,Masters 40-49,M,B
+1,105,Bjørn Flem,Raw,Lørenskog AK,104.50,190,192.5,-210,192.5,150,160,-165,160.0,190,210,220,220.0,572.5,Masters 40-49,M,SBD
+2,105,Terje C. Samuelsen,Raw,Halden SI,102.80,,,,,130,-137.5,-137.5,130.0,,,,,130,Masters 40-49,M,B
+1,120,Runar Saxegård,Raw,Lenja AK,119.90,,,,,150,155,160,160.0,,,,,160,Masters 40-49,M,B
+1,120+,Frode Frøysland,Raw,IL Kraftsport,162.40,,,,,150,160,-170,160.0,,,,,160,Masters 50-59,M,B
+1,105,Per Nagy,Raw,Lørenskog AK,97.90,140,-150,,140.0,-90,100,110,110.0,190,,,190.0,440,Masters 60-69,M,SBD

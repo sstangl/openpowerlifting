@@ -2,18 +2,18 @@ Place,Name,Event,Sex,Division,WeightClassKg,Country,Equipment,Squat1Kg,Squat2Kg,
 1,Elbisa Zehethofer,B,F,M 40-44,52,Austria,Multi-ply,,,,,,60,70,75,-80,75,,,,,,75
 1,Sabrina Horanek,B,F,Open,82.5,Austria,Multi-ply,,,,,,47.5,55,60,,60,,,,,,60
 1,Patricia Luxner,B,F,M 40-44,90,Austria,Raw,,,,,,72.5,82.5,90,-100,90,,,,,,90
-1,Herbert Langaschek,B,M,Junior,56,Austria,Raw,,,,,,70,75,80,-82.5,80,,,,,,80
+1,Herbert Langaschek,B,M,Juniors,56,Austria,Raw,,,,,,70,75,80,-82.5,80,,,,,,80
 1,Christoph Müller,B,M,Open,67.5,Austria,Raw,,,,,,90,95,-100,,95,,,,,,95
 1,Erwin Trichlin,B,M,M 75-79,67.5,Austria,Raw,,,,,,85,90,92.5,,92.5,,,,,,92.5
 1,Siegfried Kogler,B,M,M 50-54,75,Austria,Multi-ply,,,,,,115,120,125,,125,,,,,,125
 1,Mario Heidenreich,B,M,Open,75,Austria,Raw,,,,,,90,95,-100,,95,,,,,,95
 1,Raphael Kaufmann,B,M,Teenage,82.5,Austria,Raw,,,,,,100,105,110,,110,,,,,,110
 1,Arno Köstinger,B,M,M 45-49,82.5,Austria,Raw,,,,,,150,-160,-160,,150,,,,,,150
-1,Arno Köstinger Jr,B,M,Junior,82.5,Austria,Raw,,,,,,130,-145,-145,,130,,,,,,130
+1,Arno Köstinger Jr,B,M,Juniors,82.5,Austria,Raw,,,,,,130,-145,-145,,130,,,,,,130
 1,Philipp Temel,B,M,Open,82.5,Austria,Raw,,,,,,80,85,-90,,85,,,,,,85
 1,Mario Auer,B,M,M 45-49,90,Austria,Raw,,,,,,155,-165,165,,165,,,,,,165
 1,Andreas Eiginger,B,M,Open,100,Austria,Raw,,,,,,170,175,-182.5,,175,,,,,,175
-1,Andreas Ferian,B,M,Junior,90,Austria,Multi-ply,,,,,,200,210,,,210,,,,,,210
+1,Andreas Ferian,B,M,Juniors,90,Austria,Multi-ply,,,,,,200,210,,,210,,,,,,210
 1,Alfred Stolz,B,M,M 75-79,90,Austria,Raw,,,,,,105,112.5,-120,,112.5,,,,,,112.5
 2,Daniel Baumgartner,B,M,Open,100,Austria,Raw,,,,,,170,175,-180,,175,,,,,,175
 2,Andreas Bischof,B,M,Open,100,Austria,Multi-ply,,,,,,-165,170,-185,,170,,,,,,170
@@ -31,7 +31,7 @@ Place,Name,Event,Sex,Division,WeightClassKg,Country,Equipment,Squat1Kg,Squat2Kg,
 2,Johannes Mauracher,B,M,Open,125,Austria,Raw,,,,,,200,210,,,210,,,,,,210
 1,Josef Nussbaumer,B,M,M 65-69,125,Austria,Raw,,,,,,130,140,150,,150,,,,,,150
 1,Sirko Petermann,B,M,M 40-44,125,Austria,Raw,,,,,,165,175,185,190,185,,,,,,185
-1,Mirko Poljak,B,M,Junior,125,Croatia,Raw,,,,,,182.5,190,195,,195,,,,,,195
+1,Mirko Poljak,B,M,Juniors,125,Croatia,Raw,,,,,,182.5,190,195,,195,,,,,,195
 1,Mario Prünster,B,M,M 45-49,140,Austria,Raw,,,,,,-165,167.5,-172.5,,167.5,,,,,,167.5
 1,Christian Raidel,B,M,Open,125,Austria,Raw,,,,,,227.5,239,-250,,239,,,,,,239
 DQ,Franz Seewald,B,M,Open,125,Austria,Multi-ply,,,,,,-260,-260,,,,,,,,,
@@ -61,19 +61,19 @@ DQ,Tristan Bauer,SBD,M,Open,110,Austria,Wraps,-250.0,-250.0,-250.0,,,147.5,152.5
 3,Thomas Frattner,SBD,M,Open,90,Austria,Wraps,225.0,245.0,-250.0,,245.0,135.0,-145.0,-145.0,,135.0,215.0,230.0,245.0,,245.0,625.0
 2,Dominic Lugger,SBD,M,Open,90,Austria,Wraps,205.0,-220.0,225.0,,225.0,155.0,-160.0,-160.0,,155.0,240.0,267.5,-275.0,,267.5,647.5
 1,Markus Vieselthaler,SBD,M,Open,90,Austria,Wraps,-200.0,-200.0,230.0,,230.0,130.0,145.0,-152.5,,145.0,260.0,280.0,295.0,,295.0,670.0
-1,Manuel Weiß,SBD,M,Junior,90,Austria,Wraps,160.0,180.0,190.0,,190.0,110.0,-120.0,120.0,,120.0,220.0,240.0,-245,,240.0,550.0
+1,Manuel Weiß,SBD,M,Juniors,90,Austria,Wraps,160.0,180.0,190.0,,190.0,110.0,-120.0,120.0,,120.0,220.0,240.0,-245,,240.0,550.0
 1,Gerald Endl,SBD,M,M 40-44,100,Austria,Wraps,160.0,-180.0,-180.0,,160.0,100.0,-110.0,-110.0,,100.0,180.0,192.5,-200,,192.5,452.5
 1,Josef Marx,SBD,M,M 55-59,100,Austria,Wraps,180.0,200.0,-210.0,,200.0,130.0,140.0,-150.0,,140.0,230.0,240.0,-245.0,,240.0,580.0
 1,Heinrich Stroi,SBD,M,M 65-69,100,Austria,Multi-ply,130.0,150.0,,,150.0,110.0,-120.0,120.0,,120.0,160.0,180.0,200.0,,200.0,470.0
 1,Michael Korber,SBD,M,Open,100,Austria,Multi-ply,225.0,240.0,250.0,,250.0,150.0,-160.0,,,150.0,220.0,250.0,270.0,,270.0,670.0
-1,Samuel Hausberger,SBD,M,Junior,125,Austria,Wraps,240.0,250.0,-260.0,,250.0,190.0,202.5,210.0,,210.0,300.0,-305.0,-305.0,,300.0,760.0
+1,Samuel Hausberger,SBD,M,Juniors,125,Austria,Wraps,240.0,250.0,-260.0,,250.0,190.0,202.5,210.0,,210.0,300.0,-305.0,-305.0,,300.0,760.0
 2,Matthias Janda,SBD,M,Open,125,Austria,Wraps,200.0,220.0,-225.0,,220.0,140.0,150.0,-155.0,,150.0,230.0,240.0,250.0,,250.0,620.0
 1,Michael Lengyel,SBD,M,Open,125,Austria,Wraps,260.0,270.0,-280.0,,270.0,160.0,170.0,-180.0,,170.0,250.0,260.0,270.0,,270.0,710.0
 1,Gerhard Trawöger,SBD,M,M 45-49,125,Austria,Wraps,260.0,275.0,285.0,,285.0,160.0,-170.0,-170.0,,160.0,260.0,285.0,-300.0,,285.0,730.0
 DQ,Alfred Wimmer,SBD,M,Open,140,Austria,Multi-ply,330.0,360.0,-370.0,,360,-240.0,-240.0,-265.0,,,-310.0,,,,,
 1,Markus Zehethofer,SBD,M,M 40-44,140,Austria,Multi-ply,370.0,400.0,410.0,,410.0,270.0,290.0,-295.0,,290.0,320.0,335.0,-345.0,,335.0,1035.0
 1,Werner Rampler,D,M,M 50-54,67.5,Austria,Raw,,,,,,,,,,,160,170,180,,180,180
-1,Julian Scharpf,D,M,Junior,75,Austria,Raw,,,,,,,,,,,180,202.5,-207.5,,202.5,202.5
+1,Julian Scharpf,D,M,Juniors,75,Austria,Raw,,,,,,,,,,,180,202.5,-207.5,,202.5,202.5
 1,Patrik Aschaber,D,M,Open,82.5,Austria,Raw,,,,,,,,,,,200,220,240,,240,240
 1,Erwin Loritsch,D,M,M 55-59,90,Austria,Multi-ply,,,,,,,,,,,215,220,225,,225,225
 1,Peter Razenböck,D,M,Open,90,Austria,Raw,,,,,,,,,,,250,-260,-260,,250,250
@@ -82,6 +82,6 @@ DQ,Alfred Wimmer,SBD,M,Open,140,Austria,Multi-ply,330.0,360.0,-370.0,,360,-240.0
 1,Christopher Eibl,D,M,Open,100,Austria,Raw,,,,,,,,,,,240,260,281,-300,281,281
 1,Christopher Eibl,D,M,Open,100,Austria,Multi-ply,,,,,,,,,,,210,,,,210,210
 1,Helmut Silberbauer,D,M,M 50-54,100,Austria,Raw,,,,,,,,,,,230,250,265,,265,265
-1,Helmut Silberbauer Jr,D,M,Junior,100,Austria,Raw,,,,,,,,,,,185,205,220,,220,220
+1,Helmut Silberbauer Jr,D,M,Juniors,100,Austria,Raw,,,,,,,,,,,185,205,220,,220,220
 1,Aleksander Hendzel,D,M,Teenage,125,Austria,Raw,,,,,,,,,,,180,200,-217.5,,200,200
 1,Martin Wildauer,D,M,Open,140+,Austria,Raw,,,,,,,,,,,330,350,370,,370,370

@@ -32,15 +32,15 @@ WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3Squa
 118,Open,Kevin Quinton,SBD,Wraps,M,27,115.76,GA,335,202.5,340,877.5,1
 140,Open,Pitt Connelley,SBD,Wraps,M,31,134.26,KY,335,202.5,325,862.5,1
 140,Police and Fire,Chris Rickles,SBD,Wraps,M,34,130,TN,282.5,197.5,272.5,752.5,1
-90,Sub-Masters,Joey Huneycutt,SBD,Wraps,M,35,88.81,NC,272.5,205,280,757.5,1
-90,Sub-Masters,Crystal Bowman,SBD,Wraps,F,36,87.72,GA,167.5,97.5,192.5,457.5,1
-100,Sub-Masters,Derick Bolin,SBD,Wraps,M,35,,TN,215,147.5,235,597.5,1
-100,Sub-Masters,Selena Edmondson,SBD,Wraps,F,38,,TN,192.5,92.5,170,455,1
+90,Submasters,Joey Huneycutt,SBD,Wraps,M,35,88.81,NC,272.5,205,280,757.5,1
+90,Submasters,Crystal Bowman,SBD,Wraps,F,36,87.72,GA,167.5,97.5,192.5,457.5,1
+100,Submasters,Derick Bolin,SBD,Wraps,M,35,,TN,215,147.5,235,597.5,1
+100,Submasters,Selena Edmondson,SBD,Wraps,F,38,,TN,192.5,92.5,170,455,1
 60,Open,Sara Simpson,SBD,Wraps,F,26,59.33,TN,135,80,160,375,1
 67.5,Open,Jacqueline Buhl,SBD,Wraps,F,32,,TN,117.5,65,135,317.5,1
 75,Masters 40-44,Tara Griffin,SBD,Wraps,F,41,72.57,TN,107.5,60,150,317.5,1
 56,Teenage 13-15,Jacob Matthews,SBD,Raw,M,13,55.88,GA,82.5,52.5,102.5,237.5,1
-67.5,Sub-Masters,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
+67.5,Submasters,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
 67.5,Open,Jennifer Plummer,SBD,Raw,F,39,66.86,GA,135,82.5,150,367.5,1
 82.5,Teenage 13-15,Elijah Ball,SBD,Raw,M,15,81.19,TN,120,85,175,380,1
 90,Teenage 13-15,Kanyn Koontz,SBD,Raw,F,13,89.81,TN,112.5,67.5,155,335,1
@@ -50,7 +50,7 @@ WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3Squa
 140+,Teenage 18-19,Wyatt Blevins,SBD,Raw,M,18,170.32,KY,250,172.5,245,667.5,1
 82.5,Juniors,Andrew Carter,SBD,Single-ply,M,23,79.83,TN,185,147.5,187.5,520,1
 100,Masters 45-49,John Mackay,SBD,Single-ply,M,45,98.43,GA,262.5,182.5,252.5,697.5,1
-125,Sub-Masters,Chris Griffin,SBD,Single-ply,M,39,123.29,TN,250,175,227.5,652.5,1
+125,Submasters,Chris Griffin,SBD,Single-ply,M,39,123.29,TN,250,175,227.5,652.5,1
 118,Masters 60-64,Thomas Bowman,SBD,Multi-ply,M,60,112.31,GA,342.5,62.5,290,695,1
 118,Teenage 13-15,Camdon Cline,SBD,Multi-ply,M,15,114.58,IN,215,192.5,227.5,635,1
 140+,Juniors,Devin Wiggins,SBD,Multi-ply,M,20,154.04,GA,390,327.5,307.5,1025,1
@@ -65,7 +65,7 @@ WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3Squa
 100,Masters 50-54,Willard Johnson,BD,Raw,M,51,97.79,AL,,125,200,325,1
 110,Open,Matthias Maines,BD,Raw,M,26,106.37,GA,,212.5,320,532.5,1
 110,Open,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,2
-110,Sub-Masters,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,1
+110,Submasters,Kyle Thigpen,BD,Raw,M,38,109.5,OH,,147.5,240,387.5,1
 75,Open,Stephanie Braz,B,Raw,F,25,69.31,TN,,52.5,,52.5,1
 82.5,Masters 75-79,Gerald Lambdin,B,Raw,M,75,81.1,TN,,85,,85,1
 100,Masters 40-44,Todd Morgan,B,Raw,M,44,98.25,TN,,207.5,,207.5,1
@@ -77,7 +77,7 @@ WeightClassKg,Division,Name,Event,Equipment,Sex,Age,BodyweightKg,State,Best3Squa
 118,Masters 45-49,Gary Matthews,B,Raw,M,46,117.48,TN,,197.5,,197.5,1
 140,Masters 60-64,Hubert Davis,B,Raw,M,60,127.01,TN,,,,,DQ
 118,Open,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
-118,Sub-Masters,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
+118,Submasters,Steve Thompson,B,Raw,M,39,115.94,OH,,160,,160,1
 140+,Masters 45-49,Henry Mincey,B,Raw,M,46,177.17,GA,,242.5,,242.5,1
 140+,Open,Henry Mincey,B,Raw,M,46,177.17,GA,,243,,243,1
 110,Masters 50-54,Darrin Webb,B,Single-ply,M,50,102.78,TN,,170,,170,1

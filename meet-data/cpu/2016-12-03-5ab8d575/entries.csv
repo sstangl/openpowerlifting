@@ -1,14 +1,14 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,John MacDonald,PE,126.0,120+,Open,342.5,285.5,285.0,913.0,Single-ply,1
-SBD,M,Nigel Perry,PE,84.2,93,Sub-Junior,125.0,72.5,185.0,382.5,Raw,1
-SBD,M,Marcus Ferguson,PE,77.0,83,Sub-Junior,150.0,92.5,162.5,405.0,Raw,3
-SBD,M,Connor Stiles,NB,80.9,83,Sub-Junior,160.0,100.0,192.5,452.5,Raw,1
-SBD,M,Anthony Nendarto,PE,82.4,83,Sub-Junior,165.0,95.0,170.0,430.0,Raw,2
-SBD,M,Chandler Gard,PE,66.3,74,Sub-Junior,125.0,90.0,165.0,380.0,Raw,1
-SBD,M,Tyson Veniot,PE,52.6,53,Sub-Junior,117.5,75.0,150.0,342.5,Raw,1
-SBD,M,Ryan MacKay,NS,52.8,53,Sub-Junior,65.0,37.5,92.5,195.0,Raw,2
-SBD,M,Derek Smith,NS,133.1,120+,Sub-Junior,242.5,150.0,260.0,652.5,Raw,1
-SBD,M,Jacob Sinnott,PE,100.9,105,Sub-Junior,205.0,130.0,235.0,570.0,Raw,1
+SBD,M,Nigel Perry,PE,84.2,93,Sub-Juniors,125.0,72.5,185.0,382.5,Raw,1
+SBD,M,Marcus Ferguson,PE,77.0,83,Sub-Juniors,150.0,92.5,162.5,405.0,Raw,3
+SBD,M,Connor Stiles,NB,80.9,83,Sub-Juniors,160.0,100.0,192.5,452.5,Raw,1
+SBD,M,Anthony Nendarto,PE,82.4,83,Sub-Juniors,165.0,95.0,170.0,430.0,Raw,2
+SBD,M,Chandler Gard,PE,66.3,74,Sub-Juniors,125.0,90.0,165.0,380.0,Raw,1
+SBD,M,Tyson Veniot,PE,52.6,53,Sub-Juniors,117.5,75.0,150.0,342.5,Raw,1
+SBD,M,Ryan MacKay,NS,52.8,53,Sub-Juniors,65.0,37.5,92.5,195.0,Raw,2
+SBD,M,Derek Smith,NS,133.1,120+,Sub-Juniors,242.5,150.0,260.0,652.5,Raw,1
+SBD,M,Jacob Sinnott,PE,100.9,105,Sub-Juniors,205.0,130.0,235.0,570.0,Raw,1
 SBD,F,Jeri Munro,PE,78.8,84,Open,122.5,70.0,167.5,360.0,Raw,1
 SBD,F,Hailey Batchilder,PE,76.7,84,Open,122.5,62.5,142.5,327.5,Raw,2
 SBD,F,Miranda Crane,PE,67.3,72,Open,110.0,60.0,150.0,320.0,Raw,1
@@ -17,24 +17,24 @@ SBD,F,Margaret Carpenter,PE,56.8,57,Open,90.0,37.5,117.5,245.0,Raw,1
 SBD,F,Jill MacFarlane,PE,52.3,57,Open,92.5,50.0,95.0,237.5,Raw,2
 SBD,M,RJ Forbes,NB,114.9,120,Open,200.0,137.5,210.0,547.5,Raw,2
 SBD,M,Matt Ross,PE,117.5,120,Open,272.5,155.0,280.0,707.5,Raw,1
-SBD,M,John Fraser,PE,92.4,93,Master 3,197.5,147.5,245.0,590.0,Raw,1
-SBD,M,Tilman Gallant,PE,82.6,83,Master 3,115.0,127.5,135.0,377.5,Raw,1
-SBD,M,Allen Proffitt,PE,108.9,120,Master 3,150.0,120.0,220.0,490.0,Raw,1
-SBD,M,Wyatt Inman,PE,93.0,93,Master 1,167.5,120.0,210.0,497.5,Raw,2
-SBD,M,Shaun Patterson,PE,92.7,93,Master 1,75.0,95.0,145.0,315.0,Raw,3
-SBD,M,JP Richard,PE,92.2,93,Master 1,237.5,170.0,285.0,692.5,Raw,1
-SBD,F,Tracy Curran,PE,68.6,72,Master 1,97.5,60.0,105.0,262.5,Raw,1
-SBD,F,Nicole MacKay,NS,66.2,72,Master 1,82.5,40.5,102.5,225.5,Raw,3
-SBD,F,Glenda MacDonald,PE,69.5,72,Master 1,87.5,42.5,122.5,252.5,Raw,2
-SBD,M,Jonathan Kan,NB,92.1,93,Junior,175.0,122.5,195.0,492.5,Raw,1
-SBD,M,Philip MacLellan,NB,71.1,74,Junior,190.0,135.0,205.0,530.0,Raw,1
-SBD,M,Colton Matheson,PE,49.9,53,Junior,37.5,25.0,47.5,110.0,Raw,1
-SBD,M,Sam Brooks,NB,104.6,105,Junior,207.5,142.5,205.0,555.0,Raw,2
-SBD,M,Logan Vessey,PE,104.2,105,Junior,227.5,145.0,275.0,647.5,Raw,1
-SBD,M,Bryce Martin,NB,100.8,105,Junior,177.5,107.5,195.0,480.0,Raw,3
-B,M,Tyson Veniot,PE,55.0,59,Sub-Junior,,80.0,,80.0,Raw,1
+SBD,M,John Fraser,PE,92.4,93,Masters 3,197.5,147.5,245.0,590.0,Raw,1
+SBD,M,Tilman Gallant,PE,82.6,83,Masters 3,115.0,127.5,135.0,377.5,Raw,1
+SBD,M,Allen Proffitt,PE,108.9,120,Masters 3,150.0,120.0,220.0,490.0,Raw,1
+SBD,M,Wyatt Inman,PE,93.0,93,Masters 1,167.5,120.0,210.0,497.5,Raw,2
+SBD,M,Shaun Patterson,PE,92.7,93,Masters 1,75.0,95.0,145.0,315.0,Raw,3
+SBD,M,JP Richard,PE,92.2,93,Masters 1,237.5,170.0,285.0,692.5,Raw,1
+SBD,F,Tracy Curran,PE,68.6,72,Masters 1,97.5,60.0,105.0,262.5,Raw,1
+SBD,F,Nicole MacKay,NS,66.2,72,Masters 1,82.5,40.5,102.5,225.5,Raw,3
+SBD,F,Glenda MacDonald,PE,69.5,72,Masters 1,87.5,42.5,122.5,252.5,Raw,2
+SBD,M,Jonathan Kan,NB,92.1,93,Juniors,175.0,122.5,195.0,492.5,Raw,1
+SBD,M,Philip MacLellan,NB,71.1,74,Juniors,190.0,135.0,205.0,530.0,Raw,1
+SBD,M,Colton Matheson,PE,49.9,53,Juniors,37.5,25.0,47.5,110.0,Raw,1
+SBD,M,Sam Brooks,NB,104.6,105,Juniors,207.5,142.5,205.0,555.0,Raw,2
+SBD,M,Logan Vessey,PE,104.2,105,Juniors,227.5,145.0,275.0,647.5,Raw,1
+SBD,M,Bryce Martin,NB,100.8,105,Juniors,177.5,107.5,195.0,480.0,Raw,3
+B,M,Tyson Veniot,PE,55.0,59,Sub-Juniors,,80.0,,80.0,Raw,1
 B,M,Ryan MacLellan,BC,86.7,93,Open,,182.5,,182.5,Raw,1
 B,F,Hailey Batchilder,PE,77.4,84,Open,,62.5,,62.5,Raw,1
 B,F,Miranda Crane,PE,66.9,72,Open,,62.5,,62.5,Raw,1
-B,M,Tilman Gallant,PE,83.8,93,Master 3,,125.0,,125.0,Raw,1
-B,M,Colton Matheson,PE,50.7,53,Junior,,27.5,,27.5,Raw,1
+B,M,Tilman Gallant,PE,83.8,93,Masters 3,,125.0,,125.0,Raw,1
+B,M,Colton Matheson,PE,50.7,53,Juniors,,27.5,,27.5,Raw,1

@@ -10,7 +10,7 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Best3BenchKg,TotalKg,Divisi
 3,82.5,Trude Fagerli,Single-ply,Oslo SK,77.00,67.5,67.5,Open,F,B
 1,90,Ragnhild Nystuen,Single-ply,Brumunddal AK,87.00,47.5,47.5,Open,F,B
 1,90+,Mona Hanstad,Single-ply,Brumunddal AK,103.30,62.5,62.5,Open,F,B
-1,56,Audhild Mathiesen,Single-ply,Fredrikstad SK,54.70,70,70,Master 40-49,F,B
+1,56,Audhild Mathiesen,Single-ply,Fredrikstad SK,54.70,70,70,Masters 40-49,F,B
 1,60,Glenn Thomas Johansen,Single-ply,Sande KK,60.00,77.5,77.5,Teen 14-18,M,B
 1,67.5,Ole Kristen Johnsrud,Single-ply,Sande KK,66.10,100,100,Teen 14-18,M,B
 2,67.5,Bård Bøhlum,Single-ply,Sande KK,61.40,92.5,92.5,Teen 14-18,M,B
@@ -32,20 +32,20 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Best3BenchKg,TotalKg,Divisi
 1,100,Henrik Framnes,Single-ply,Sande KK,94.10,150,150,Teen 14-18,M,B
 2,100,Eirik Jørgensen,Single-ply,Fræna AK,92.20,122.5,122.5,Teen 14-18,M,B
 1,110,Jan Gunnar Pedersen,Single-ply,Florø TIF,107.70,150,150,Teen 14-18,M,B
-1,67.5,David Zijdemans,Single-ply,Flekkefjord AK,66.60,132.5,132.5,Junior 19-23,M,B
-2,67.5,Kay Åge Jacobsen,Single-ply,Florø TIF,67.00,110,110,Junior 19-23,M,B
-1,75,Are Arntsen,Single-ply,Oslo SK,72.40,125,125,Junior 19-23,M,B
-2,75,Kim Are Jacobsen,Single-ply,Florø TIF,69.30,110,110,Junior 19-23,M,B
-1,82.5,Thomas Skjelland,Single-ply,Oslo SK,80.40,160,160,Junior 19-23,M,B
-2,82.5,Ketil Bergmann,Single-ply,KK-67,81.70,145,145,Junior 19-23,M,B
-3,82.5,Kjetil Olsen,Single-ply,Alta AK,80.30,130,130,Junior 19-23,M,B
-4,82.5,John Sylte,Single-ply,Ålesund SK,80.60,130,130,Junior 19-23,M,B
-5,82.5,Glenn Robert Benjamindsen,Single-ply,Valdres AK,77.40,105,105,Junior 19-23,M,B
-1,90,Dag R.Ørsvik Øye,Single-ply,Fræna AK,86.20,175,175,Junior 19-23,M,B
-2,90,Tom Egil Olsen,Single-ply,IL Kraftsport,90.00,150,150,Junior 19-23,M,B
-3,90,Dag Øivind Madsen,Single-ply,Oslo SK,87.30,140,140,Junior 19-23,M,B
-1,100,Jan Einar Roven,Single-ply,Fræna AK,94.40,180,180,Junior 19-23,M,B
-1,110,Geir Gåsland,Single-ply,Alta AK,101.70,160,160,Junior 19-23,M,B
+1,67.5,David Zijdemans,Single-ply,Flekkefjord AK,66.60,132.5,132.5,Juniors 19-23,M,B
+2,67.5,Kay Åge Jacobsen,Single-ply,Florø TIF,67.00,110,110,Juniors 19-23,M,B
+1,75,Are Arntsen,Single-ply,Oslo SK,72.40,125,125,Juniors 19-23,M,B
+2,75,Kim Are Jacobsen,Single-ply,Florø TIF,69.30,110,110,Juniors 19-23,M,B
+1,82.5,Thomas Skjelland,Single-ply,Oslo SK,80.40,160,160,Juniors 19-23,M,B
+2,82.5,Ketil Bergmann,Single-ply,KK-67,81.70,145,145,Juniors 19-23,M,B
+3,82.5,Kjetil Olsen,Single-ply,Alta AK,80.30,130,130,Juniors 19-23,M,B
+4,82.5,John Sylte,Single-ply,Ålesund SK,80.60,130,130,Juniors 19-23,M,B
+5,82.5,Glenn Robert Benjamindsen,Single-ply,Valdres AK,77.40,105,105,Juniors 19-23,M,B
+1,90,Dag R.Ørsvik Øye,Single-ply,Fræna AK,86.20,175,175,Juniors 19-23,M,B
+2,90,Tom Egil Olsen,Single-ply,IL Kraftsport,90.00,150,150,Juniors 19-23,M,B
+3,90,Dag Øivind Madsen,Single-ply,Oslo SK,87.30,140,140,Juniors 19-23,M,B
+1,100,Jan Einar Roven,Single-ply,Fræna AK,94.40,180,180,Juniors 19-23,M,B
+1,110,Geir Gåsland,Single-ply,Alta AK,101.70,160,160,Juniors 19-23,M,B
 1,56,Henrik Olsen,Single-ply,Odin SK,55.40,92.5,92.5,Open,M,B
 1,60,Thomas Iversen,Single-ply,Askim SK,59.00,120,120,Open,M,B
 2,60,Svein Walstad,Single-ply,IL Kraftsport,59.30,117.5,117.5,Open,M,B
@@ -94,38 +94,38 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Best3BenchKg,TotalKg,Divisi
 6,125,Glenn Viktor Evensen,Single-ply,SPUVI,119.50,180,180,Open,M,B
 1,125+,Ove Andreassen,Single-ply,Sande KK,159.90,245,245,Open,M,B
 2,125+,Trond Fjøren,Single-ply,Fræna AK,134.20,190,190,Open,M,B
-1,67.5,Birger Sundstøl,Single-ply,Kristiansand AK,66.40,100,100,Master 40-49,M,B
-2,67.5,Sverre Paulsen,Single-ply,Sande KK,67.50,70,70,Master 40-49,M,B
-1,75,Lars Midtbø,Single-ply,Sundbyfoss SK,73.30,130.5,130.5,Master 40-49,M,B
-2,75,Arne Johansen,Single-ply,AK Fryktløs,73.50,120,120,Master 40-49,M,B
-1,82.5,Rolf Olsen,Single-ply,Halden SI,81.10,152.5,152.5,Master 40-49,M,B
-2,82.5,Einar Fond,Single-ply,Sogndal IL,81.20,137.5,137.5,Master 40-49,M,B
-3,82.5,Morten Engnes,Single-ply,Sande KK,82.40,137.5,137.5,Master 40-49,M,B
-1,100,Kjell Sandmo,Single-ply,Lørenskog AK,98.30,170,170,Master 40-49,M,B
-1,110,Nils Espeseter,Single-ply,Sogndal IL,100.60,207.5,207.5,Master 40-49,M,B
-2,110,Kjell Arne Sollien,Single-ply,Brumunddal AK,109.60,175,175,Master 40-49,M,B
-1,125,Geir Sommerseth,Single-ply,Moss SIK,122.30,200,200,Master 40-49,M,B
-2,125,Vidar Alexander Ringvold,Single-ply,Brumunddal AK,111.50,185,185,Master 40-49,M,B
-1,125+,Truls Nygaard,Single-ply,Oslo SK,125.60,195,195,Master 40-49,M,B
-2,125+,Per Åge Madsen,Single-ply,Sande KK,125.30,190,190,Master 40-49,M,B
-1,60,Richard Bergmann,Single-ply,KK-67,59.80,62.5,62.5,Master 50-59,M,B
-1,75,Arild Hårklau,Single-ply,Bergen Helsesportlag,74.20,112.5,112.5,Master 50-59,M,B
-1,82.5,Bjarne Synstad,Single-ply,Lørenskog AK,80.70,160,160,Master 50-59,M,B
-2,82.5,Peer Bjaaland,Single-ply,Hammerfest KK,80.20,122.5,122.5,Master 50-59,M,B
-3,82.5,Mohammad Balouch,Single-ply,Drammen SI,78.60,117.5,117.5,Master 50-59,M,B
-4,82.5,Øyvind Kvakkestad,Single-ply,Askim SK,79.80,105,105,Master 50-59,M,B
-5,82.5,Thorbjørn Myhre,Single-ply,Ålesund SK,78.70,100,100,Master 50-59,M,B
-1,90,Svein Lind,Single-ply,Brønnøy SK,88.90,132.5,132.5,Master 50-59,M,B
-2,90,Ghulam Mustafa,Single-ply,Oslo SK,89.10,130,130,Master 50-59,M,B
-3,90,Ketil Hodne,Single-ply,Brumunddal AK,84.60,125,125,Master 50-59,M,B
-4,90,Per Olav Lillesveen,Single-ply,Brumunddal AK,89.00,125,125,Master 50-59,M,B
-1,110,Gunnar Østby,Single-ply,Lørenskog AK,107.70,182.5,182.5,Master 50-59,M,B
-2,110,Robert Øren,Single-ply,Odin SK,107.60,155,155,Master 50-59,M,B
-1,125+,Jostein Dyrkorn,Single-ply,Brønnøy SK,164.10,185,185,Master 50-59,M,B
-1,75,Rolf A. Halvorsen,Single-ply,Odin SK,73.40,120,120,Master 60-69,M,B
-1,82.5,Sven Berg,Single-ply,Nidelv IL,82.20,100,100,Master 60-69,M,B
-2,82.5,Gunnar Welde,Single-ply,Nidelv IL,81.00,90,90,Master 60-69,M,B
-1,90,Knut Kæmpe,Single-ply,Lørenskog AK,87.80,145,145,Master 60-69,M,B
-1,100,Arne Hoffmann,Single-ply,Nes SIL,97.50,145,145,Master 60-69,M,B
-2,100,Jan Bolland,Single-ply,Nidelv IL,96.60,115,115,Master 60-69,M,B
-1,110,Truls Kristensen,Single-ply,Fredrikstad SK,109.70,167.5,167.5,Master 60-69,M,B
+1,67.5,Birger Sundstøl,Single-ply,Kristiansand AK,66.40,100,100,Masters 40-49,M,B
+2,67.5,Sverre Paulsen,Single-ply,Sande KK,67.50,70,70,Masters 40-49,M,B
+1,75,Lars Midtbø,Single-ply,Sundbyfoss SK,73.30,130.5,130.5,Masters 40-49,M,B
+2,75,Arne Johansen,Single-ply,AK Fryktløs,73.50,120,120,Masters 40-49,M,B
+1,82.5,Rolf Olsen,Single-ply,Halden SI,81.10,152.5,152.5,Masters 40-49,M,B
+2,82.5,Einar Fond,Single-ply,Sogndal IL,81.20,137.5,137.5,Masters 40-49,M,B
+3,82.5,Morten Engnes,Single-ply,Sande KK,82.40,137.5,137.5,Masters 40-49,M,B
+1,100,Kjell Sandmo,Single-ply,Lørenskog AK,98.30,170,170,Masters 40-49,M,B
+1,110,Nils Espeseter,Single-ply,Sogndal IL,100.60,207.5,207.5,Masters 40-49,M,B
+2,110,Kjell Arne Sollien,Single-ply,Brumunddal AK,109.60,175,175,Masters 40-49,M,B
+1,125,Geir Sommerseth,Single-ply,Moss SIK,122.30,200,200,Masters 40-49,M,B
+2,125,Vidar Alexander Ringvold,Single-ply,Brumunddal AK,111.50,185,185,Masters 40-49,M,B
+1,125+,Truls Nygaard,Single-ply,Oslo SK,125.60,195,195,Masters 40-49,M,B
+2,125+,Per Åge Madsen,Single-ply,Sande KK,125.30,190,190,Masters 40-49,M,B
+1,60,Richard Bergmann,Single-ply,KK-67,59.80,62.5,62.5,Masters 50-59,M,B
+1,75,Arild Hårklau,Single-ply,Bergen Helsesportlag,74.20,112.5,112.5,Masters 50-59,M,B
+1,82.5,Bjarne Synstad,Single-ply,Lørenskog AK,80.70,160,160,Masters 50-59,M,B
+2,82.5,Peer Bjaaland,Single-ply,Hammerfest KK,80.20,122.5,122.5,Masters 50-59,M,B
+3,82.5,Mohammad Balouch,Single-ply,Drammen SI,78.60,117.5,117.5,Masters 50-59,M,B
+4,82.5,Øyvind Kvakkestad,Single-ply,Askim SK,79.80,105,105,Masters 50-59,M,B
+5,82.5,Thorbjørn Myhre,Single-ply,Ålesund SK,78.70,100,100,Masters 50-59,M,B
+1,90,Svein Lind,Single-ply,Brønnøy SK,88.90,132.5,132.5,Masters 50-59,M,B
+2,90,Ghulam Mustafa,Single-ply,Oslo SK,89.10,130,130,Masters 50-59,M,B
+3,90,Ketil Hodne,Single-ply,Brumunddal AK,84.60,125,125,Masters 50-59,M,B
+4,90,Per Olav Lillesveen,Single-ply,Brumunddal AK,89.00,125,125,Masters 50-59,M,B
+1,110,Gunnar Østby,Single-ply,Lørenskog AK,107.70,182.5,182.5,Masters 50-59,M,B
+2,110,Robert Øren,Single-ply,Odin SK,107.60,155,155,Masters 50-59,M,B
+1,125+,Jostein Dyrkorn,Single-ply,Brønnøy SK,164.10,185,185,Masters 50-59,M,B
+1,75,Rolf A. Halvorsen,Single-ply,Odin SK,73.40,120,120,Masters 60-69,M,B
+1,82.5,Sven Berg,Single-ply,Nidelv IL,82.20,100,100,Masters 60-69,M,B
+2,82.5,Gunnar Welde,Single-ply,Nidelv IL,81.00,90,90,Masters 60-69,M,B
+1,90,Knut Kæmpe,Single-ply,Lørenskog AK,87.80,145,145,Masters 60-69,M,B
+1,100,Arne Hoffmann,Single-ply,Nes SIL,97.50,145,145,Masters 60-69,M,B
+2,100,Jan Bolland,Single-ply,Nidelv IL,96.60,115,115,Masters 60-69,M,B
+1,110,Truls Kristensen,Single-ply,Fredrikstad SK,109.70,167.5,167.5,Masters 60-69,M,B

@@ -2,12 +2,12 @@ Sex,Equipment,Division,WeightClassKg,Name,BodyweightKg,Best3SquatKg,Best3BenchKg
 F,Wraps,Pro Open,48,April Shumaker,47.63,134.99,94.98,147.51,377.48,SBD,1
 F,Wraps,Amateur Open,60,Amy Bouse,59.69,85,62.51,112.5,260.01,SBD,2
 F,Wraps,Amateur Open,60,Genna Brugal,59.78,112.5,57.52,150,320.02,SBD,1
-F,Wraps,Amateur Junior 20-23,67.5,Victoria Campese,67.13,85,50,95,230,SBD,1
+F,Wraps,Amateur Juniors 20-23,67.5,Victoria Campese,67.13,85,50,95,230,SBD,1
 F,Wraps,Pro Open,67.5,Lyndsay Bramble,67.13,147.5,70.01,157.53,375.04,SBD,1
 F,Wraps,Amateur Open,67.5,Angela Parra,65.5,175,90,155.03,420.03,SBD,1
 F,Wraps,Amateur Open,75,Megan McDonald,74.84,122.5,70,160.03,352.53,SBD,1
-F,Wraps,Amateur Submaster 33-39,75,Nikki Raczynski,74.84,120,62.5,147.53,330.03,SBD,1
-F,Wraps,Amateur Submaster 33-39,82.5,Rita Black,78.02,70,50,152.5,272.5,SBD,1
+F,Wraps,Amateur Submasters 33-39,75,Nikki Raczynski,74.84,120,62.5,147.53,330.03,SBD,1
+F,Wraps,Amateur Submasters 33-39,82.5,Rita Black,78.02,70,50,152.5,272.5,SBD,1
 F,Wraps,Amateur Open,110+,Heather Weston,114.67,125,57.5,110.02,292.52,SBD,1
 F,Wraps,Pro Open,100,Leah Davis,92.99,192.5,90,192.53,475.03,SBD,2
 F,Wraps,Pro Open,110+,Sara Berlin,132.81,227.5,132.5,232.54,592.54,SBD,1
@@ -16,11 +16,11 @@ F,Raw,Pro Open,110+,April Mathis,120.2,,205,,205,B,1
 F,Raw,Amateur Open,110,Angie Becker,108.32,,65,160.03,225.03,BD,1
 M,Wraps,Amateur Teen 14-15,52,Mason Burritt,50.17,72.5,42.5,110,225,SBD,1
 M,Wraps,Amateur Teen 14-15,60,Harley Entwistle,59.6,142.5,82.5,152.5,377.5,SBD,1
-M,Raw,Amateur Junior 20-23,67.5,Justin Consing,65.32,,100,162.5,262.5,BD,1
-M,Wraps,Amateur Submaster 33-39,67.5,Sergio Leon,66.86,137.5,105,187.5,430,SBD,1
-M,Wraps,Amateur Master 70-74,75,Roger Shaw,74.03,147.5,95,167.5,410,SBD,1
+M,Raw,Amateur Juniors 20-23,67.5,Justin Consing,65.32,,100,162.5,262.5,BD,1
+M,Wraps,Amateur Submasters 33-39,67.5,Sergio Leon,66.86,137.5,105,187.5,430,SBD,1
+M,Wraps,Amateur Masters 70-74,75,Roger Shaw,74.03,147.5,95,167.5,410,SBD,1
 M,Wraps,Amateur Open,75,Roger Shaw,74.03,147.5,95,167.5,410,SBD,1
-M,Raw,Amateur Junior 20-23,82.5,Benjamin West,77.11,,117.04,207.5,324.54,BD,1
+M,Raw,Amateur Juniors 20-23,82.5,Benjamin West,77.11,,117.04,207.5,324.54,BD,1
 M,Wraps,Amateur Open,82.5,Mike Kaplan,82.28,97.5,95,152.5,345,SBD,3
 M,Wraps,Amateur Open,82.5,Byron Zamora,81.56,180,122.5,212.5,515,SBD,2
 M,Wraps,Amateur Open,82.5,Ryan Swanson,80.29,215,155,245,615,SBD,1
@@ -30,38 +30,38 @@ M,Wraps,Amateur Teen 18-19,82.5,Brian Burritt Jr,82.01,187.5,132.5,270,590,SBD,2
 M,Wraps,Amateur Teen 18-19,82.5,David Glazer,81.47,197.5,142.5,232.5,572.5,SBD,3
 M,Wraps,Amateur Teen 18-19,82.5,David Glazer,81.47,197.5,142.5,232.5,572.5,SBD,4
 M,Wraps,Amateur Teen 18-19,82.5,Ryan Swanson,80.29,215,155,245,615,SBD,1
-M,Wraps,Pro Master 40-44,90,Chester Merrill,89.81,170,115,227.5,512.5,SBD,2
-M,Wraps,Pro Master 40-44,90,Richard Meyer,89.81,227.5,172.5,247.5,647.5,SBD,1
-M,Wraps,Pro Master 50-54,90,Terry Jacobs,89.81,215,137.5,240,592.5,SBD,1
+M,Wraps,Pro Masters 40-44,90,Chester Merrill,89.81,170,115,227.5,512.5,SBD,2
+M,Wraps,Pro Masters 40-44,90,Richard Meyer,89.81,227.5,172.5,247.5,647.5,SBD,1
+M,Wraps,Pro Masters 50-54,90,Terry Jacobs,89.81,215,137.5,240,592.5,SBD,1
 M,Wraps,Amateur Open,90,John Stearns,85.46,120,165,172.5,457.5,SBD,2
 M,Wraps,Amateur Open,90,Terrance Chandler,88,165,152.5,270,587.5,SBD,1
 M,Wraps,Pro Open,90,Terry Jacobs,89.81,215,137.5,240,592.5,SBD,3
 M,Wraps,Pro Open,90,Filipe Gusmao,89.27,275,150,250,675,SBD,2
 M,Wraps,Pro Open,90,Ben Sheard,89.9,277.5,155,247.5,680,SBD,1
 M,Wraps,Amateur Teen 18-19,90,Jacob Strong,87.18,180,115,195,490,SBD,1
-M,Wraps,Pro Junior 20-23,100,Pat Thompson,95.8,280,187.5,322.5,790,SBD,1
+M,Wraps,Pro Juniors 20-23,100,Pat Thompson,95.8,280,187.5,322.5,790,SBD,1
 M,Raw,Amateur Open,100,David Watson #1,97.16,252.5,182.5,300,735,SBD,1
 M,Wraps,Pro Open,100,Brent Delgado,98.16,260,182.5,287.5,730,SBD,1
 M,Wraps,Pro Open,100,Todd Guggisberg,99.7,267.5,152.5,255,675,SBD,2
-M,Wraps,Amateur Master 50-54,110,Larry Poliner,105.69,200,165,215,580,SBD,1
+M,Wraps,Amateur Masters 50-54,110,Larry Poliner,105.69,200,165,215,580,SBD,1
 M,Wraps,Amateur Open,110,Nicholas Martin,108.86,182.5,130,227.5,540,SBD,5
 M,Wraps,Amateur Open,110,Blake Anderson,105.87,195,137.5,215,547.5,SBD,4
 M,Wraps,Amateur Open,110,Andy Polk,109.59,215,140,290,645,SBD,2
 M,Wraps,Amateur Open,110,Justin Haskins,105.32,227.5,145,227.5,600,SBD,3
 M,Wraps,Amateur Open,110,Brandon Hagerott,105.96,242.5,155,280,677.5,SBD,1
 M,Wraps,Pro Open,110,Mike Armour,109.23,272.5,217.5,310,800,SBD,1
-M,Wraps,Amateur Submaster 33-39,110,Joe Welch,109.13,162.5,140,197.5,500,SBD,1
+M,Wraps,Amateur Submasters 33-39,110,Joe Welch,109.13,162.5,140,197.5,500,SBD,1
 M,Wraps,Pro Open,125,Cory Black,123.38,250,182.5,272.5,705,SBD,3
 M,Wraps,Pro Open,125,Jason Kowalewski,121.65,265,200,285,750,SBD,2
 M,Wraps,Pro Open,125,Roberto Perez,123.56,342.5,220,300,862.5,SBD,1
-M,Wraps,Pro Submaster 33-39,125,Cory Black,123.38,250,182.5,272.5,705,SBD,2
-M,Wraps,Pro Submaster 33-39,125,Brad Bickford,117.21,290,187.5,250,727.5,SBD,1
+M,Wraps,Pro Submasters 33-39,125,Cory Black,123.38,250,182.5,272.5,705,SBD,2
+M,Wraps,Pro Submasters 33-39,125,Brad Bickford,117.21,290,187.5,250,727.5,SBD,1
 M,Wraps,Amateur Open,140,Zack Weston,135.85,215,152.5,207.5,575,SBD,1
 M,Wraps,Pro Open,140,Derek Wade,138.44,355,230,345,930,SBD,1
 M,Wraps,Pro Open,140,Billy Tutko,137.67,367.5,250,305,922.5,SBD,2
-M,Raw,Pro Master 45-49,82.5,Brian D Burritt Sr,82.1,,182.5,,182.5,B,1
+M,Raw,Pro Masters 45-49,82.5,Brian D Burritt Sr,82.1,,182.5,,182.5,B,1
 M,Raw,Pro Open,82.5,Brian D Burritt Sr,82.1,,182.5,,182.5,B,1
-M,Raw,Pro Master 55-59,90,Brian Hart,89.36,,165,,165,B,1
-M,Raw,Pro Master 50-54,100,Robert Boisclair,95.71,,137.5,,137.5,B,1
-M,Raw,Pro Master 45-49,110,Martin Green,104.69,,165,,165,B,1
-M,Raw,Pro Master 55-59,110,George Boldissar,108.14,,185,,185,B,1
+M,Raw,Pro Masters 55-59,90,Brian Hart,89.36,,165,,165,B,1
+M,Raw,Pro Masters 50-54,100,Robert Boisclair,95.71,,137.5,,137.5,B,1
+M,Raw,Pro Masters 45-49,110,Martin Green,104.69,,165,,165,B,1
+M,Raw,Pro Masters 55-59,110,George Boldissar,108.14,,185,,185,B,1

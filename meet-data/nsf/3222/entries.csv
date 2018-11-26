@@ -1,11 +1,11 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
-1,63,Ingvild Hansen,Raw,Askim SK,62.15,92.5,97.5,102.5,102.5,-75,-75,75,75.0,115,120,125,125.0,302.5,Junior 19-23,F,SBD
-2,63,Elise Rosenborg,Raw,IL Kraftsport,61.10,85,90,95,95.0,70,72.5,75,75.0,112.5,117.5,120,120.0,290,Junior 19-23,F,SBD
-3,63,Marte Tollhaug Røstad,Raw,Nes SIL,60.70,80,85,92.5,92.5,40,45,50,50.0,120,130,-140,130.0,272.5,Junior 19-23,F,SBD
-1,72,Inger-Lene Sunnarvik,Raw,IL Kraftsport,72.00,137.5,-145,-148,137.5,95,-100,,95.0,150,,,150.0,382.5,Junior 19-23,F,SBD
-1,84,Julie Berger Johansen,Raw,Askim SK,76.00,140,147.5,152.5,152.5,65,70,-72.5,70.0,140,150,160,160.0,382.5,Junior 19-23,F,SBD
-2,84,Anna Sørlie Heranger,Raw,Oslo SK,81.75,125,130,137.5,137.5,77.5,82.5,-85,82.5,150,157.5,-165,157.5,377.5,Junior 19-23,F,SBD
-3,84,Silje Haube,Raw,Askim SK,76.35,102.5,110,115,115.0,82.5,87.5,-90,87.5,120,130,132.5,132.5,335,Junior 19-23,F,SBD
+1,63,Ingvild Hansen,Raw,Askim SK,62.15,92.5,97.5,102.5,102.5,-75,-75,75,75.0,115,120,125,125.0,302.5,Juniors 19-23,F,SBD
+2,63,Elise Rosenborg,Raw,IL Kraftsport,61.10,85,90,95,95.0,70,72.5,75,75.0,112.5,117.5,120,120.0,290,Juniors 19-23,F,SBD
+3,63,Marte Tollhaug Røstad,Raw,Nes SIL,60.70,80,85,92.5,92.5,40,45,50,50.0,120,130,-140,130.0,272.5,Juniors 19-23,F,SBD
+1,72,Inger-Lene Sunnarvik,Raw,IL Kraftsport,72.00,137.5,-145,-148,137.5,95,-100,,95.0,150,,,150.0,382.5,Juniors 19-23,F,SBD
+1,84,Julie Berger Johansen,Raw,Askim SK,76.00,140,147.5,152.5,152.5,65,70,-72.5,70.0,140,150,160,160.0,382.5,Juniors 19-23,F,SBD
+2,84,Anna Sørlie Heranger,Raw,Oslo SK,81.75,125,130,137.5,137.5,77.5,82.5,-85,82.5,150,157.5,-165,157.5,377.5,Juniors 19-23,F,SBD
+3,84,Silje Haube,Raw,Askim SK,76.35,102.5,110,115,115.0,82.5,87.5,-90,87.5,120,130,132.5,132.5,335,Juniors 19-23,F,SBD
 DQ,57,Julie Dahle-Eliassen,Raw,Christiania AK,56.80,110,-117.5,117.5,117.5,-62.5,-62.5,-62.5,,100,110,120,120.0,,Open,F,SBD
 1,63,Kamilla Kolvig,Raw,Christiania AK,61.65,130,-135,-135,130.0,62.5,-65,-65,62.5,160,170,-175,170.0,362.5,Open,F,SBD
 2,63,Maria Rolland,Raw,Askim SK,61.00,80,85,-90,85.0,45,47.5,50,50.0,95,105,110,110.0,245,Open,F,SBD
@@ -18,12 +18,12 @@ DQ,57,Julie Dahle-Eliassen,Raw,Christiania AK,56.80,110,-117.5,117.5,117.5,-62.5
 1,84,Ingvill Lindisdatter,Raw,IL Kraftsport,84.00,125,130,-132.5,130.0,62.5,65,67.5,67.5,150,157.5,-162.5,157.5,355,Open,F,SBD
 2,84,Camilla Thornquist,Raw,Askim SK,75.15,90,100,102.5,102.5,65,-70,70,70.0,110,120,130,130.0,302.5,Open,F,SBD
 3,84,Mina Svele,Raw,IL Kraftsport,77.85,,,,,75,80,85,85.0,,,,,85,Open,F,B
-1,84,Anette Grøntvedt,Raw,Askim SK,81.85,110,117.5,-120,117.5,50,55,-60,55.0,110,120,127.5,127.5,300,Master 40-49,F,SBD
-2,84,Hege Braathen,Raw,Frogner AK,75.95,80,87.5,90,90.0,55,60,-65,60.0,115,120,122.5,122.5,272.5,Master 40-49,F,SBD
-3,84,Irene Theodorsen,Raw,Frogner AK,83.40,85,-90,-92.5,85.0,50,55,-60,55.0,120,125,130,130.0,270,Master 40-49,F,SBD
-1,57,Tove Hansen,Raw,IL Kraftsport,56.55,50,55,60,60.0,37.5,40,43,43.0,80,85,87.5,87.5,190.5,Master 60-69,F,SBD
-1,63,Jorunn Jacobsen,Raw,Oslo SK,60.55,,,,,-52.5,55,-57.5,55.0,,,,,55,Master +70,F,B
-1,84,Anne Mari Clausen,Raw,Oslo SK,80.95,72.5,-75,-75,72.5,50,-52.5,-52.5,50.0,77.5,80,85,85.0,207.5,Master +70,F,SBD
+1,84,Anette Grøntvedt,Raw,Askim SK,81.85,110,117.5,-120,117.5,50,55,-60,55.0,110,120,127.5,127.5,300,Masters 40-49,F,SBD
+2,84,Hege Braathen,Raw,Frogner AK,75.95,80,87.5,90,90.0,55,60,-65,60.0,115,120,122.5,122.5,272.5,Masters 40-49,F,SBD
+3,84,Irene Theodorsen,Raw,Frogner AK,83.40,85,-90,-92.5,85.0,50,55,-60,55.0,120,125,130,130.0,270,Masters 40-49,F,SBD
+1,57,Tove Hansen,Raw,IL Kraftsport,56.55,50,55,60,60.0,37.5,40,43,43.0,80,85,87.5,87.5,190.5,Masters 60-69,F,SBD
+1,63,Jorunn Jacobsen,Raw,Oslo SK,60.55,,,,,-52.5,55,-57.5,55.0,,,,,55,Masters 70+,F,B
+1,84,Anne Mari Clausen,Raw,Oslo SK,80.95,72.5,-75,-75,72.5,50,-52.5,-52.5,50.0,77.5,80,85,85.0,207.5,Masters 70+,F,SBD
 1,66,Hans Jørgen Fjeld,Raw,Askim SK,64.80,107.5,112.5,120,120.0,93,97.5,100.5,100.5,135,145,150,150.0,370.5,Teen 14-18,M,SBD
 2,66,Frank Kværner,Raw,Nes SIL,62.10,107.5,112.5,115,115.0,77.5,80,-82.5,80.0,150,165,-172.5,165.0,360,Teen 14-18,M,SBD
 1,74,Chido Nnoli,Raw,Oslo SK,72.85,175,185,191,191.0,97.5,105,110,110.0,215,231,235,235.0,536,Teen 14-18,M,SBD
@@ -33,14 +33,14 @@ DQ,57,Julie Dahle-Eliassen,Raw,Christiania AK,56.80,110,-117.5,117.5,117.5,-62.5
 1,93,Nils-Petter Johansen,Raw,Askim SK,91.85,162.5,172.5,180,180.0,105,112.5,-120,112.5,210,217.5,225,225.0,517.5,Teen 14-18,M,SBD
 2,93,Teodor Maanum Grøndalen,Raw,Lørenskog AK,85.65,-120,-127.5,127.5,127.5,90,95,-100,95.0,140,150,160,160.0,382.5,Teen 14-18,M,SBD
 1,105,Thomas Pedersen,Raw,Askim SK,101.20,150,-157.5,-157.5,150.0,97.5,102.5,-105,102.5,165,175,,175.0,427.5,Teen 14-18,M,SBD
-1,74,Simon Bråthe Johansen,Raw,Lenja AK,73.80,180,190,-200.5,190.0,110,117.5,-120,117.5,220,232.5,238,238.0,545.5,Junior 19-23,M,SBD
-DQ,74,Kai-Remi Berge,Raw,IL Kraftsport,71.90,160,167.5,175,175.0,-125,-133,-133,,180,192.5,200,200.0,,Junior 19-23,M,SBD
-1,93,Patryk Marek Zapala,Raw,Askim SK,90.30,175,190,-205,190.0,130,-140,-140,130.0,230,250,260,260.0,580,Junior 19-23,M,SBD
-1,105,Sander Jakobsen,Raw,Askim SK,100.55,190,197.5,-202.5,197.5,130,137.5,-140,137.5,230,240,245,245.0,580,Junior 19-23,M,SBD
-2,105,Andrew S E Andersen Eriksen,Raw,Lenja AK,99.50,170,180,190,190.0,150,155,-157.5,155.0,200,210,220,220.0,565,Junior 19-23,M,SBD
-3,105,Johnny Stokke,Raw,Oslo SK,96.20,145,160,-170,160.0,137.5,142.5,-147.5,142.5,190,205,-210,205.0,507.5,Junior 19-23,M,SBD
-4,105,Andreas Andersson,Raw,Halden SI,98.70,150,160,167.5,167.5,100,105,107.5,107.5,210,220,-225,220.0,495,Junior 19-23,M,SBD
-1,120,Olve Heitmann,Raw,IL Kraftsport,117.00,180,190,195,195.0,142.5,147.5,-152.5,147.5,260,275,-282.5,275.0,617.5,Junior 19-23,M,SBD
+1,74,Simon Bråthe Johansen,Raw,Lenja AK,73.80,180,190,-200.5,190.0,110,117.5,-120,117.5,220,232.5,238,238.0,545.5,Juniors 19-23,M,SBD
+DQ,74,Kai-Remi Berge,Raw,IL Kraftsport,71.90,160,167.5,175,175.0,-125,-133,-133,,180,192.5,200,200.0,,Juniors 19-23,M,SBD
+1,93,Patryk Marek Zapala,Raw,Askim SK,90.30,175,190,-205,190.0,130,-140,-140,130.0,230,250,260,260.0,580,Juniors 19-23,M,SBD
+1,105,Sander Jakobsen,Raw,Askim SK,100.55,190,197.5,-202.5,197.5,130,137.5,-140,137.5,230,240,245,245.0,580,Juniors 19-23,M,SBD
+2,105,Andrew S E Andersen Eriksen,Raw,Lenja AK,99.50,170,180,190,190.0,150,155,-157.5,155.0,200,210,220,220.0,565,Juniors 19-23,M,SBD
+3,105,Johnny Stokke,Raw,Oslo SK,96.20,145,160,-170,160.0,137.5,142.5,-147.5,142.5,190,205,-210,205.0,507.5,Juniors 19-23,M,SBD
+4,105,Andreas Andersson,Raw,Halden SI,98.70,150,160,167.5,167.5,100,105,107.5,107.5,210,220,-225,220.0,495,Juniors 19-23,M,SBD
+1,120,Olve Heitmann,Raw,IL Kraftsport,117.00,180,190,195,195.0,142.5,147.5,-152.5,147.5,260,275,-282.5,275.0,617.5,Juniors 19-23,M,SBD
 1,66,Emil Røvik,Raw,Nes SIL,65.35,110,120,125,125.0,-80,85,-90,85.0,160,170,180,180.0,390,Open,M,SBD
 1,74,Fredrik Aasgaard,Raw,Oslo SK,73.80,200,207.5,-210,207.5,135,140,,140.0,217.5,227.5,-235,227.5,575,Open,M,SBD
 2,74,Rovin Bhandari,Raw,Oslo SK,69.60,132.5,137.5,145,145.0,82.5,85,90,90.0,165,177.5,190,190.0,425,Open,M,SBD
@@ -68,18 +68,18 @@ DQ,74,Kai-Remi Berge,Raw,IL Kraftsport,71.90,160,167.5,175,175.0,-125,-133,-133,
 7,120,Ole Jonny Kaldal,Raw,Frogner AK,119.00,160,165,-175,165.0,100,105,110,110.0,170,180,-200,180.0,455,Open,M,SBD
 1,120+,Runar Saxegård,Raw,Lenja AK,121.20,-152.5,-157.5,157.5,157.5,162.5,170,-175,170.0,210,-227.5,,210.0,537.5,Open,M,SBD
 2,120+,Robert Bekkeli Eide,Raw,Oslo SK,138.00,-170,-170,170,170.0,125,-130,130,130.0,200,207.5,217.5,217.5,517.5,Open,M,SBD
-1,83,Hans Erik Maack,Raw,Askim SK,79.50,120,127.5,135,135.0,95,102.5,107.5,107.5,155,160,170,170.0,412.5,Master 40-49,M,SBD
-1,105,Christer Dehlin,Raw,Oslo SK,99.90,180,-190,195,195.0,120,130,135,135.0,200,212.5,222.5,222.5,552.5,Master 40-49,M,SBD
-2,105,Øystein Aas,Raw,Askim SK,101.35,,,,,185,-193,-193,185.0,,,,,185,Master 40-49,M,B
-1,120,Jarle Adolfsen,Raw,Askim SK,118.85,190,200,-210,200.0,155,160,-165,160.0,210,220,-225,220.0,580,Master 40-49,M,SBD
-1,120+,Alexander Nilsson,Raw,Askim SK,127.70,245,255,257.5,257.5,190,200,202.5,202.5,280,290,-295,290.0,750,Master 40-49,M,SBD
-2,120+,Kenneth Kvande,Raw,IL Kraftsport,134.90,225,235,245,245.0,175,-182.5,-182.5,175.0,265,275,,275.0,695,Master 40-49,M,SBD
-1,83,Tormod Andersen,Raw,Lenja AK,82.70,150,182.5,200,200.0,110,-120,120,120.0,200,240,270,270.0,590,Master 50-59,M,SBD
-2,83,Hogne Syversen,Raw,Lenja AK,82.45,75,,,75.0,140,-145,145,145.0,75,,,75.0,295,Master 50-59,M,SBD
-1,105,Jarle Hoffmann,Raw,Nes SIL,103.45,150,155,-160,155.0,130,135,140,140.0,170,180,,180.0,475,Master 50-59,M,SBD
-1,120,Ingar Merli,Raw,Frogner AK,116.20,190,205,215,215.0,130,140,145,145.0,250,265,275,275.0,635,Master 50-59,M,SBD
-1,74,Egil Walseth,Raw,Nes SIL,66.70,,,,,85,-90,,85.0,,,,,85,Master 60-69,M,B
-1,93,Per Nagy,Raw,Lørenskog AK,92.95,-135,135,-145,135.0,75,,,75.0,180,-202.5,,180.0,390,Master 60-69,M,SBD
-1,105,Leif Sydengen,Raw,Askim SK,100.35,,,,,145,152.5,-160,152.5,,,,,152.5,Master 60-69,M,B
-1,120,Truls Kristensen,Raw,Askim SK,109.45,120,135,150,150.0,110,117.5,-120,117.5,120,142.5,162.5,162.5,430,Master +70,M,SBD
+1,83,Hans Erik Maack,Raw,Askim SK,79.50,120,127.5,135,135.0,95,102.5,107.5,107.5,155,160,170,170.0,412.5,Masters 40-49,M,SBD
+1,105,Christer Dehlin,Raw,Oslo SK,99.90,180,-190,195,195.0,120,130,135,135.0,200,212.5,222.5,222.5,552.5,Masters 40-49,M,SBD
+2,105,Øystein Aas,Raw,Askim SK,101.35,,,,,185,-193,-193,185.0,,,,,185,Masters 40-49,M,B
+1,120,Jarle Adolfsen,Raw,Askim SK,118.85,190,200,-210,200.0,155,160,-165,160.0,210,220,-225,220.0,580,Masters 40-49,M,SBD
+1,120+,Alexander Nilsson,Raw,Askim SK,127.70,245,255,257.5,257.5,190,200,202.5,202.5,280,290,-295,290.0,750,Masters 40-49,M,SBD
+2,120+,Kenneth Kvande,Raw,IL Kraftsport,134.90,225,235,245,245.0,175,-182.5,-182.5,175.0,265,275,,275.0,695,Masters 40-49,M,SBD
+1,83,Tormod Andersen,Raw,Lenja AK,82.70,150,182.5,200,200.0,110,-120,120,120.0,200,240,270,270.0,590,Masters 50-59,M,SBD
+2,83,Hogne Syversen,Raw,Lenja AK,82.45,75,,,75.0,140,-145,145,145.0,75,,,75.0,295,Masters 50-59,M,SBD
+1,105,Jarle Hoffmann,Raw,Nes SIL,103.45,150,155,-160,155.0,130,135,140,140.0,170,180,,180.0,475,Masters 50-59,M,SBD
+1,120,Ingar Merli,Raw,Frogner AK,116.20,190,205,215,215.0,130,140,145,145.0,250,265,275,275.0,635,Masters 50-59,M,SBD
+1,74,Egil Walseth,Raw,Nes SIL,66.70,,,,,85,-90,,85.0,,,,,85,Masters 60-69,M,B
+1,93,Per Nagy,Raw,Lørenskog AK,92.95,-135,135,-145,135.0,75,,,75.0,180,-202.5,,180.0,390,Masters 60-69,M,SBD
+1,105,Leif Sydengen,Raw,Askim SK,100.35,,,,,145,152.5,-160,152.5,,,,,152.5,Masters 60-69,M,B
+1,120,Truls Kristensen,Raw,Askim SK,109.45,120,135,150,150.0,110,117.5,-120,117.5,120,142.5,162.5,162.5,430,Masters 70+,M,SBD
 G,83,Kjell Egil Bakkelund,Raw,Sande KK,82.55,230,240,-247.5,240.0,180,187.5,195,195.0,290,310,320,320.0,755,Open,M,SBD

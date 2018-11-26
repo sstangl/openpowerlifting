@@ -1,9 +1,9 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Jason Dyck,AB,103.7,105,Open,300.0,185.0,245.0,730.0,Single-ply,1
-SBD,M,Josiah Nickel,AB,80.8,83,Sub-Junior,177.5,105.0,245.0,527.5,Raw,1
-SBD,M,Hunter Gunn,AB,82.1,83,Sub-Junior,137.5,92.5,167.5,397.5,Raw,2
-SBD,M,Aryan Patnaik,AB,64.3,66,Sub-Junior,142.5,82.5,175.0,400.0,Raw,1
-SBD,F,Tori Laperriere,AB,56.9,57,Sub-Junior,123.0,70.0,132.0,325.0,Raw,1
+SBD,M,Josiah Nickel,AB,80.8,83,Sub-Juniors,177.5,105.0,245.0,527.5,Raw,1
+SBD,M,Hunter Gunn,AB,82.1,83,Sub-Juniors,137.5,92.5,167.5,397.5,Raw,2
+SBD,M,Aryan Patnaik,AB,64.3,66,Sub-Juniors,142.5,82.5,175.0,400.0,Raw,1
+SBD,F,Tori Laperriere,AB,56.9,57,Sub-Juniors,123.0,70.0,132.0,325.0,Raw,1
 SBD,M,Willy Lam,AB,90.8,93,Open,250.0,147.5,295.0,692.5,Raw,1
 SBD,M,Nathan Le,AB,88.0,93,Open,225.0,150.0,275.0,650.0,Raw,4
 SBD,M,Luke McRae,AB,91.0,93,Open,242.5,170.0,280.0,692.5,Raw,2
@@ -60,46 +60,46 @@ SBD,M,Jordan Tallis,AB,101.6,105,Open,230.0,142.5,227.5,600.0,Raw,6
 SBD,M,Jonathan Cognac,AB,104.6,105,Open,245.0,170.0,255.0,670.0,Raw,2
 SBD,M,Jesse Silbernagel,AB,101.8,105,Open,200.0,157.5,270.0,627.5,Raw,5
 SBD,M,Alex Pronchuk,AB,104.3,105,Open,247.5,162.5,290.0,700.0,Raw,1
-SBD,M,John MacQueen,AB,79.7,83,Master 3,160.0,120.0,180.0,460.0,Raw,1
-SBD,F,Janique Lafond,AB,50.6,52,Master 2,92.5,47.5,112.5,252.5,Raw,1
-SBD,M,Murray Stodalka,AB,98.6,105,Master 2,137.5,142.5,165.0,445.0,Raw,1
-SBD,F,Theresa Beeber,AB,78.0,84,Master 1,77.5,55.0,127.5,260.0,Raw,2
-SBD,F,Carole Vachon,AB,81.0,84,Master 1,125.0,70.0,152.5,347.5,Raw,1
-SBD,M,Ryan Thiessen,AB,82.0,83,Master 1,212.5,130.0,250.0,592.5,Raw,1
-SBD,M,Brian Colbourne,AB,79.5,83,Master 1,145.0,125.0,195.0,465.0,Raw,2
-SBD,F,Jennifer Nadeau,AB,68.0,72,Master 1,82.5,50.0,112.5,245.0,Raw,2
-SBD,F,Cathy McDonald,AB,67.9,72,Master 1,97.5,45.0,115.0,257.5,Raw,1
-SBD,F,Denise Royer,AB,61.6,63,Master 1,110.0,72.5,122.5,305.0,Raw,1
-SBD,M,Joe Reid,AB,113.5,120,Master 1,210.0,140.0,237.5,587.5,Raw,1
-SBD,M,Jim Derksen,AB,103.6,105,Master 1,210.0,137.5,250.0,597.5,Raw,1
-SBD,M,Matt Zukowski,AB,88.2,93,Junior,187.5,110.0,227.5,525.0,Raw,2
-SBD,M,David McNeil,AB,92.7,93,Junior,195.0,145.0,250.0,590.0,Raw,1
-SBD,M,Bryce MacArthur,AB,91.8,93,Junior,192.5,115.0,202.5,510.0,Raw,3
-SBD,M,Ben Kovacs,AB,91.3,93,Junior,180.0,102.5,205.0,487.5,Raw,4
-SBD,F,Kayla Filiatrault,AB,79.5,84,Junior,148.0,65.0,160.0,373.0,Raw,2
-SBD,F,Jasmine Starman,AB,82.7,84,Junior,155.0,77.5,157.5,390.0,Raw,1
-SBD,M,Simon Baldo,AB,80.5,83,Junior,175.0,120.0,195.0,490.0,Raw,2
-SBD,M,John Mark Nicolet,AB,78.5,83,Junior,192.5,117.5,242.5,552.5,Raw,1
-SBD,M,Nicolas L'Amarca,AB,70.6,74,Junior,170.0,135.0,207.5,512.5,Raw,2
-SBD,M,Melnard De Leon,AB,72.7,74,Junior,180.0,120.0,277.5,577.5,Raw,1
-SBD,M,Alexander Hague,AB,73.6,74,Junior,152.5,107.5,195.0,455.0,Raw,3
-SBD,F,Abby Fenton,AB,67.6,72,Junior,112.5,65.0,145.0,322.5,Raw,1
-SBD,M,WynnTai Chai,AB,65.3,66,Junior,152.5,87.5,172.5,412.5,Raw,3
-SBD,M,Noel Banduyang,AB,63.6,66,Junior,165.0,102.5,210.0,477.5,Raw,2
-SBD,M,Alan Chung,AB,62.9,66,Junior,170.0,100.0,227.5,497.5,Raw,1
-SBD,F,Krystin Paquette,AB,62.7,63,Junior,105.0,70.0,142.5,317.5,Raw,2
-SBD,F,Keira Brenholen,AB,63.0,63,Junior,125.0,60.0,145.0,330.0,Raw,1
-SBD,M,Yash Sharma,AB,55.0,59,Junior,122.5,85.0,185.0,392.5,Raw,1
-SBD,F,Grace Collins,AB,56.9,57,Junior,115.0,57.5,127.5,300.0,Raw,1
-SBD,F,Erin Young-Lowe,AB,56.7,57,Junior,95.0,57.5,97.5,250.0,Raw,2
-SBD,F,Roberta Le,AB,50.5,52,Junior,90.0,52.5,122.5,265.0,Raw,2
-SBD,F,Marie Joaquin,AB,49.9,52,Junior,125.0,60.0,132.5,317.5,Raw,1
-SBD,F,Hannah Shin,AB,46.9,47,Junior,97.5,32.5,110.0,240.0,Raw,1
-SBD,M,Kevin Vuong,AB,112.8,120,Junior,192.5,135.0,205.0,532.5,Raw,2
-SBD,M,Brian Kravtsov,AB,113.4,120,Junior,260.0,137.5,227.5,625.0,Raw,1
-SBD,M,Zachary Chwok,AB,102.6,105,Junior,272.5,175.0,280.0,727.5,Raw,1
-SBD,M,Joel Johnston,AB,102.5,105,Junior,220.0,115.0,212.5,547.5,Raw,3
-SBD,M,Bralen Sundquist,AB,102.4,105,Junior,235.0,152.5,277.5,665.0,Raw,2
+SBD,M,John MacQueen,AB,79.7,83,Masters 3,160.0,120.0,180.0,460.0,Raw,1
+SBD,F,Janique Lafond,AB,50.6,52,Masters 2,92.5,47.5,112.5,252.5,Raw,1
+SBD,M,Murray Stodalka,AB,98.6,105,Masters 2,137.5,142.5,165.0,445.0,Raw,1
+SBD,F,Theresa Beeber,AB,78.0,84,Masters 1,77.5,55.0,127.5,260.0,Raw,2
+SBD,F,Carole Vachon,AB,81.0,84,Masters 1,125.0,70.0,152.5,347.5,Raw,1
+SBD,M,Ryan Thiessen,AB,82.0,83,Masters 1,212.5,130.0,250.0,592.5,Raw,1
+SBD,M,Brian Colbourne,AB,79.5,83,Masters 1,145.0,125.0,195.0,465.0,Raw,2
+SBD,F,Jennifer Nadeau,AB,68.0,72,Masters 1,82.5,50.0,112.5,245.0,Raw,2
+SBD,F,Cathy McDonald,AB,67.9,72,Masters 1,97.5,45.0,115.0,257.5,Raw,1
+SBD,F,Denise Royer,AB,61.6,63,Masters 1,110.0,72.5,122.5,305.0,Raw,1
+SBD,M,Joe Reid,AB,113.5,120,Masters 1,210.0,140.0,237.5,587.5,Raw,1
+SBD,M,Jim Derksen,AB,103.6,105,Masters 1,210.0,137.5,250.0,597.5,Raw,1
+SBD,M,Matt Zukowski,AB,88.2,93,Juniors,187.5,110.0,227.5,525.0,Raw,2
+SBD,M,David McNeil,AB,92.7,93,Juniors,195.0,145.0,250.0,590.0,Raw,1
+SBD,M,Bryce MacArthur,AB,91.8,93,Juniors,192.5,115.0,202.5,510.0,Raw,3
+SBD,M,Ben Kovacs,AB,91.3,93,Juniors,180.0,102.5,205.0,487.5,Raw,4
+SBD,F,Kayla Filiatrault,AB,79.5,84,Juniors,148.0,65.0,160.0,373.0,Raw,2
+SBD,F,Jasmine Starman,AB,82.7,84,Juniors,155.0,77.5,157.5,390.0,Raw,1
+SBD,M,Simon Baldo,AB,80.5,83,Juniors,175.0,120.0,195.0,490.0,Raw,2
+SBD,M,John Mark Nicolet,AB,78.5,83,Juniors,192.5,117.5,242.5,552.5,Raw,1
+SBD,M,Nicolas L'Amarca,AB,70.6,74,Juniors,170.0,135.0,207.5,512.5,Raw,2
+SBD,M,Melnard De Leon,AB,72.7,74,Juniors,180.0,120.0,277.5,577.5,Raw,1
+SBD,M,Alexander Hague,AB,73.6,74,Juniors,152.5,107.5,195.0,455.0,Raw,3
+SBD,F,Abby Fenton,AB,67.6,72,Juniors,112.5,65.0,145.0,322.5,Raw,1
+SBD,M,WynnTai Chai,AB,65.3,66,Juniors,152.5,87.5,172.5,412.5,Raw,3
+SBD,M,Noel Banduyang,AB,63.6,66,Juniors,165.0,102.5,210.0,477.5,Raw,2
+SBD,M,Alan Chung,AB,62.9,66,Juniors,170.0,100.0,227.5,497.5,Raw,1
+SBD,F,Krystin Paquette,AB,62.7,63,Juniors,105.0,70.0,142.5,317.5,Raw,2
+SBD,F,Keira Brenholen,AB,63.0,63,Juniors,125.0,60.0,145.0,330.0,Raw,1
+SBD,M,Yash Sharma,AB,55.0,59,Juniors,122.5,85.0,185.0,392.5,Raw,1
+SBD,F,Grace Collins,AB,56.9,57,Juniors,115.0,57.5,127.5,300.0,Raw,1
+SBD,F,Erin Young-Lowe,AB,56.7,57,Juniors,95.0,57.5,97.5,250.0,Raw,2
+SBD,F,Roberta Le,AB,50.5,52,Juniors,90.0,52.5,122.5,265.0,Raw,2
+SBD,F,Marie Joaquin,AB,49.9,52,Juniors,125.0,60.0,132.5,317.5,Raw,1
+SBD,F,Hannah Shin,AB,46.9,47,Juniors,97.5,32.5,110.0,240.0,Raw,1
+SBD,M,Kevin Vuong,AB,112.8,120,Juniors,192.5,135.0,205.0,532.5,Raw,2
+SBD,M,Brian Kravtsov,AB,113.4,120,Juniors,260.0,137.5,227.5,625.0,Raw,1
+SBD,M,Zachary Chwok,AB,102.6,105,Juniors,272.5,175.0,280.0,727.5,Raw,1
+SBD,M,Joel Johnston,AB,102.5,105,Juniors,220.0,115.0,212.5,547.5,Raw,3
+SBD,M,Bralen Sundquist,AB,102.4,105,Juniors,235.0,152.5,277.5,665.0,Raw,2
 B,F,Mimi Frank,AB,60.5,63,Open,,120.0,,120.0,Single-ply,1
 B,M,Matt Parry,AB,119.7,120,Open,,177.5,,177.5,Single-ply,1
 B,M,Kris Hynes,AB,102.6,105,Open,,182.5,,182.5,Single-ply,1
@@ -109,12 +109,12 @@ B,F,Ryley Kornelsen,AB,65.7,72,Open,,65.0,,65.0,Raw,1
 B,F,Jessica Pietrzyk,AB,70.9,72,Open,,57.5,,57.5,Raw,2
 B,M,Shane Martin,AB,114.6,120,Open,,235.0,,235.0,Raw,1
 B,M,Rory McIntyre,AB,103.5,105,Open,,135.0,,135.0,Raw,1
-B,M,Michael Wade,AB,92.2,93,Master 2,,135.0,,135.0,Raw,1
-B,M,John Ralf,AB,103.9,105,Master 2,,155.0,,155.0,Raw,1
-B,M,Tim Loreman,AB,90.6,93,Master 1,,120.0,,120.0,Raw,2
-B,M,Kevin Weiss,AB,88.0,93,Master 1,,150.0,,150.0,Raw,1
-B,F,Rose Clift,AB,123.9,84+,Master 1,,120.0,,120.0,Raw,1
-B,M,Nelson Dang,AB,81.8,83,Junior,,150.0,,150.0,Raw,1
-B,F,Essie Watt,AB,69.4,72,Junior,,77.5,,77.5,Raw,1
-B,F,Meghan Law,AB,63.0,63,Junior,,67.5,,67.5,Raw,1
-B,F,Erin Young-Lowe,AB,56.9,57,Junior,,57.5,,57.5,Raw,1
+B,M,Michael Wade,AB,92.2,93,Masters 2,,135.0,,135.0,Raw,1
+B,M,John Ralf,AB,103.9,105,Masters 2,,155.0,,155.0,Raw,1
+B,M,Tim Loreman,AB,90.6,93,Masters 1,,120.0,,120.0,Raw,2
+B,M,Kevin Weiss,AB,88.0,93,Masters 1,,150.0,,150.0,Raw,1
+B,F,Rose Clift,AB,123.9,84+,Masters 1,,120.0,,120.0,Raw,1
+B,M,Nelson Dang,AB,81.8,83,Juniors,,150.0,,150.0,Raw,1
+B,F,Essie Watt,AB,69.4,72,Juniors,,77.5,,77.5,Raw,1
+B,F,Meghan Law,AB,63.0,63,Juniors,,67.5,,67.5,Raw,1
+B,F,Erin Young-Lowe,AB,56.9,57,Juniors,,57.5,,57.5,Raw,1

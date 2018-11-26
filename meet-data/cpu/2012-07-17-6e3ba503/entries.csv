@@ -1,9 +1,9 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Mark MacWilliams,ON,81.2,83,Open,200.0,135.0,195.0,530.0,Single-ply,1
-SBD,M,Brendan Wood,ON,80.6,83,Sub-Junior,132.5,80.0,182.5,395.0,Raw,1
-SBD,F,Melissande Gagne,ON,71.9,72,Sub-Junior,102.5,52.5,117.5,272.5,Raw,1
-SBD,F,Kinsey Maxwell,ON,53.0,57,Sub-Junior,62.5,27.5,82.5,172.5,Raw,1
-SBD,F,Leicy Ditmar,ON,47.4,52,Sub-Junior,52.5,35.0,70.0,157.5,Raw,1
+SBD,M,Brendan Wood,ON,80.6,83,Sub-Juniors,132.5,80.0,182.5,395.0,Raw,1
+SBD,F,Melissande Gagne,ON,71.9,72,Sub-Juniors,102.5,52.5,117.5,272.5,Raw,1
+SBD,F,Kinsey Maxwell,ON,53.0,57,Sub-Juniors,62.5,27.5,82.5,172.5,Raw,1
+SBD,F,Leicy Ditmar,ON,47.4,52,Sub-Juniors,52.5,35.0,70.0,157.5,Raw,1
 SBD,M,Daniel Laporte,ON,89.8,93,Open,185.0,110.0,202.5,497.5,Raw,1
 SBD,F,Leslie Moon,ON,83.2,84,Open,77.5,50.0,110.0,237.5,Raw,2
 SBD,F,Jennifer Crawford,ON,79.1,84,Open,87.5,60.0,102.5,250.0,Raw,1
@@ -30,27 +30,27 @@ SBD,M,Kevin O'Brien,ON,104.5,105,Open,180.0,110.0,245.0,535.0,Raw,2
 SBD,M,Jonathan Beals,ON,100.6,105,Open,125.0,92.5,152.5,370.0,Raw,4
 SBD,M,Caleb Cox,ON,101.2,105,Open,207.5,132.5,225.0,565.0,Raw,1
 SBD,M,Ashwin Juneja,ON,102.2,105,Open,165.0,105.0,202.5,472.5,Raw,3
-SBD,M,Donald Carrieres,ON,81.7,83,Master 3,180.0,130.0,217.5,527.5,Raw,1
-SBD,M,Paul Charron,ON,73.1,74,Master 2,137.5,125.0,170.0,432.5,Raw,1
-SBD,M,Leon Brown,ON,89.9,93,Master 1,215.0,190.0,225.0,630.0,Raw,1
-SBD,F,Shelley Colter,ON,115.9,84+,Master 1,105.0,65.0,132.5,302.5,Raw,2
-SBD,F,Lesley Hammil,ON,107.9,84+,Master 1,142.5,75.0,167.5,385.0,Raw,1
-SBD,F,Karen Maxwell,ON,61.9,63,Master 1,55.0,40.0,90.0,185.0,Raw,1
-SBD,F,Jayne Major,ON,50.6,52,Master 1,105.0,50.0,130.0,285.0,Raw,1
-SBD,M,John Beres,ON,140.8,120+,Master 1,215.0,175.0,245.0,635.0,Raw,2
-SBD,M,Chris Yantha,ON,128.1,120+,Master 1,257.5,150.0,292.5,700.0,Raw,1
-SBD,M,Brent Patrick,ON,87.7,93,Junior,200.0,120.0,232.5,552.5,Raw,1
-SBD,M,Michael Clement,ON,72.8,74,Junior,202.5,137.5,222.5,562.5,Raw,1
-SBD,F,Carolyne Savage,ON,71.3,72,Junior,97.5,62.5,135.0,295.0,Raw,1
-SBD,F,Shelby Postma,ON,58.1,63,Junior,97.5,40.0,132.5,270.0,Raw,1
-SBD,F,Leah Mamane,ON,55.7,57,Junior,90.0,65.0,117.5,272.5,Raw,1
-SBD,M,Patrick Hammond,ON,102.9,105,Junior,160.0,100.0,220.0,480.0,Raw,1
+SBD,M,Donald Carrieres,ON,81.7,83,Masters 3,180.0,130.0,217.5,527.5,Raw,1
+SBD,M,Paul Charron,ON,73.1,74,Masters 2,137.5,125.0,170.0,432.5,Raw,1
+SBD,M,Leon Brown,ON,89.9,93,Masters 1,215.0,190.0,225.0,630.0,Raw,1
+SBD,F,Shelley Colter,ON,115.9,84+,Masters 1,105.0,65.0,132.5,302.5,Raw,2
+SBD,F,Lesley Hammil,ON,107.9,84+,Masters 1,142.5,75.0,167.5,385.0,Raw,1
+SBD,F,Karen Maxwell,ON,61.9,63,Masters 1,55.0,40.0,90.0,185.0,Raw,1
+SBD,F,Jayne Major,ON,50.6,52,Masters 1,105.0,50.0,130.0,285.0,Raw,1
+SBD,M,John Beres,ON,140.8,120+,Masters 1,215.0,175.0,245.0,635.0,Raw,2
+SBD,M,Chris Yantha,ON,128.1,120+,Masters 1,257.5,150.0,292.5,700.0,Raw,1
+SBD,M,Brent Patrick,ON,87.7,93,Juniors,200.0,120.0,232.5,552.5,Raw,1
+SBD,M,Michael Clement,ON,72.8,74,Juniors,202.5,137.5,222.5,562.5,Raw,1
+SBD,F,Carolyne Savage,ON,71.3,72,Juniors,97.5,62.5,135.0,295.0,Raw,1
+SBD,F,Shelby Postma,ON,58.1,63,Juniors,97.5,40.0,132.5,270.0,Raw,1
+SBD,F,Leah Mamane,ON,55.7,57,Juniors,90.0,65.0,117.5,272.5,Raw,1
+SBD,M,Patrick Hammond,ON,102.9,105,Juniors,160.0,100.0,220.0,480.0,Raw,1
 B,M,Chris Fudge,ON,73.1,74,Open,,142.5,,142.5,Single-ply,1
 B,F,Maggie Rafferty,ON,59.9,63,Open,,92.5,,92.5,Single-ply,1
 B,F,Nicole Gervais,ON,106.8,84+,Open,,85.0,,85.0,Raw,1
 B,M,Philippe Bjerring,ON,70.8,74,Open,,110.0,,110.0,Raw,1
 B,F,Natasha Sadowski,ON,72.0,72,Open,,60.0,,60.0,Raw,1
 B,M,Curd Hos,ON,148.8,120+,Open,,192.5,,192.5,Raw,1
-B,M,George Flikas,ON,124.3,120+,Master 4,,187.5,,187.5,Raw,1
-B,M,Fred English,ON,116.2,120,Master 2,,165.0,,165.0,Raw,1
-B,M,Leon Brown,ON,89.5,93,Master 1,,190.0,,190.0,Raw,1
+B,M,George Flikas,ON,124.3,120+,Masters 4,,187.5,,187.5,Raw,1
+B,M,Fred English,ON,116.2,120,Masters 2,,165.0,,165.0,Raw,1
+B,M,Leon Brown,ON,89.5,93,Masters 1,,190.0,,190.0,Raw,1

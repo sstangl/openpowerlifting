@@ -1,7 +1,7 @@
 Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
 1,52,Emilie Dahl,Single-ply,Nes SIL,49.65,70,-75,75,75.0,-30,32.5,35,35.0,95,100,105,105.0,215,Teen 14-18,F,SBD
-1,72,Monika Kvam,Single-ply,Brumunddal AK,70.20,142.5,-150,152.5,152.5,90,95,97.5,97.5,130,137.5,142.5,142.5,392.5,Junior 19-23,F,SBD
-1,84+,Veslemøy Klokkersveen Kristensen,Single-ply,Brumunddal AK,103.85,,,,,85,92.5,-100,92.5,,,,,92.5,Junior 19-23,F,B
+1,72,Monika Kvam,Single-ply,Brumunddal AK,70.20,142.5,-150,152.5,152.5,90,95,97.5,97.5,130,137.5,142.5,142.5,392.5,Juniors 19-23,F,SBD
+1,84+,Veslemøy Klokkersveen Kristensen,Single-ply,Brumunddal AK,103.85,,,,,85,92.5,-100,92.5,,,,,92.5,Juniors 19-23,F,B
 1,63,Jenny Marie Johansen,Single-ply,Oslo SK,61.85,-170,-170,170,170.0,97.5,102.5,-105,102.5,170,-175,-177.5,170.0,442.5,Open,F,SBD
 2,63,Linn Andersen Engevik,Single-ply,Brumunddal AK,59.95,137.5,142.5,145,145.0,97.5,-102.5,102.5,102.5,135,140,-145,140.0,387.5,Open,F,SBD
 3,63,Linn Hèlen Solbakken Fjeld,Single-ply,Askim SK,61.85,,,,,100,102.5,105,105.0,,,,,105,Open,F,B
@@ -12,12 +12,12 @@ Place,WeightClassKg,Name,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,
 4,84,Camilla Thornquist,Single-ply,Askim SK,82.05,,,,,95,-97.5,-97.5,95.0,,,,,95,Open,F,B
 1,84+,Lene Granly,Single-ply,Oslo SK,86.60,195,202.5,207.5,207.5,110,115,120,120.0,170,180,185,185.0,512.5,Open,F,SBD
 2,84+,Stine Mari Forsberg,Single-ply,Brumunddal AK,100.35,155,165,170,170.0,95,102.5,105,105.0,145,155,-160,155.0,430,Open,F,SBD
-1,52,Cathrine Bjelland,Single-ply,Lørenskog AK,51.65,75,-80,-80,75.0,40,42.5,45,45.0,95,105,,105.0,225,Master 40-49,F,SBD
-1,63,Inger Hedvig Bryn,Single-ply,Askim SK,62.65,152.5,-157.5,-157.5,152.5,87.5,93,95,95.0,142.5,-150,155,155.0,402.5,Master 40-49,F,SBD
+1,52,Cathrine Bjelland,Single-ply,Lørenskog AK,51.65,75,-80,-80,75.0,40,42.5,45,45.0,95,105,,105.0,225,Masters 40-49,F,SBD
+1,63,Inger Hedvig Bryn,Single-ply,Askim SK,62.65,152.5,-157.5,-157.5,152.5,87.5,93,95,95.0,142.5,-150,155,155.0,402.5,Masters 40-49,F,SBD
 1,74,Ludvik Moen,Single-ply,Brumunddal AK,73.10,170,180,185,185.0,125,130,132.5,132.5,150,160,165,165.0,482.5,Teen 14-18,M,SBD
 1,83,Hermann Moen,Single-ply,Brumunddal AK,82.45,190,202.5,210,210.0,145,150,-155,150.0,180,190,195,195.0,555,Teen 14-18,M,SBD
-1,83,Tore Flobergseter,Single-ply,Oslo SK,81.35,105,112.5,117.5,117.5,80,87.5,92.5,92.5,150,160,165,165.0,375,Junior 19-23,M,SBD
-1,93,Henrik Hagen,Single-ply,Oslo SK,92.10,280,-292.5,292.5,292.5,170,177.5,-182.5,177.5,260,-272.5,272.5,272.5,742.5,Junior 19-23,M,SBD
+1,83,Tore Flobergseter,Single-ply,Oslo SK,81.35,105,112.5,117.5,117.5,80,87.5,92.5,92.5,150,160,165,165.0,375,Juniors 19-23,M,SBD
+1,93,Henrik Hagen,Single-ply,Oslo SK,92.10,280,-292.5,292.5,292.5,170,177.5,-182.5,177.5,260,-272.5,272.5,272.5,742.5,Juniors 19-23,M,SBD
 1,66,Hans-Erik Folkeseth,Single-ply,Halden SI,64.85,235,240,,240.0,150,155,157.5,157.5,-275,275,285,285.0,682.5,Open,M,SBD
 1,83,Marius Ødegård,Single-ply,Brumunddal AK,82.65,190,202.5,-207.5,202.5,-117.5,120,-127.5,120.0,185,195,-200,195.0,517.5,Open,M,SBD
 1,93,Erik Elvsvingen,Single-ply,Nes SIL,91.90,230,245,255,255.0,150,160,170,170.0,260,-270,270,270.0,695,Open,M,SBD
@@ -35,16 +35,16 @@ DQ,105,Øystein Aas,Single-ply,Askim SK,103.15,180,,,180.0,-260,-260,-260,,-180,
 3,120,Andre Hoffmann,Single-ply,Nes SIL,110.40,200,210,220,220.0,157.5,165,-172.5,165.0,200,215,225,225.0,610,Open,M,SBD
 4,120,Daniel Gromstad Martinussen,Single-ply,Askim SK,107.30,,,,,207.5,215,222.5,222.5,,,,,222.5,Open,M,B
 1,120+,Hans Andreas Kaasa,Single-ply,Oslo SK,139.35,,,,,205,215,220,220.0,,,,,220,Open,M,B
-1,120,Thomas Puzicha,Single-ply,Halden SI,106.65,250,257.5,265,265.0,155,162.5,165,165.0,240,255,-260,255.0,685,Master 40-49,M,SBD
-DQ,120+,Robert Bekkeli Eide,Single-ply,Oslo SK,150.70,-265,-275,-275,,195,200,-205,200.0,210,230,-245,230.0,,Master 40-49,M,SBD
-1,74,Jan Roytvand,Single-ply,OPIL,68.95,,,,,85,95,,95.0,,,,,95,Master 50-59,M,B
-1,83,Hans Erik Maack,Single-ply,Askim SK,82.75,135,140,142.5,142.5,-105,110,,110.0,170,182.5,185,185.0,437.5,Master 50-59,M,SBD
-1,105,Jarle Hoffmann,Single-ply,Nes SIL,104.15,200,205,210,210.0,150,160,-165,160.0,190,-200,-200,190.0,560,Master 50-59,M,SBD
-2,105,Tor Granvang,Single-ply,Brumunddal AK,101.20,,,,,-200,-200,200,200.0,,,,,200,Master 50-59,M,B
-1,120,Ronny Andersen,Single-ply,Lørenskog AK,118.50,185,-187.5,195,195.0,130,140,145,145.0,200,210,,210.0,550,Master 50-59,M,SBD
-2,120,Alf Granvang,Single-ply,Brumunddal AK,106.95,,,,,170,180,185,185.0,,,,,185,Master 50-59,M,B
-3,120,Terje C. Samuelsen,Single-ply,Halden SI,108.00,,,,,180,-185,-185,180.0,,,,,180,Master 50-59,M,B
-1,83,Bjarne Synstad,Single-ply,Lørenskog AK,81.75,,,,,210,-220,-220,210.0,,,,,210,Master 60-69,M,B
-1,120,Vidar Alexander Ringvold,Single-ply,Brumunddal AK,109.75,-220,-230,230,230.0,210,-220,-220,210.0,180,200,-210,200.0,640,Master 60-69,M,SBD
-1,120,Truls Kristensen,Single-ply,Askim SK,112.65,,,,,120,125,-127.5,125.0,,,,,125,Master +70,M,B
+1,120,Thomas Puzicha,Single-ply,Halden SI,106.65,250,257.5,265,265.0,155,162.5,165,165.0,240,255,-260,255.0,685,Masters 40-49,M,SBD
+DQ,120+,Robert Bekkeli Eide,Single-ply,Oslo SK,150.70,-265,-275,-275,,195,200,-205,200.0,210,230,-245,230.0,,Masters 40-49,M,SBD
+1,74,Jan Roytvand,Single-ply,OPIL,68.95,,,,,85,95,,95.0,,,,,95,Masters 50-59,M,B
+1,83,Hans Erik Maack,Single-ply,Askim SK,82.75,135,140,142.5,142.5,-105,110,,110.0,170,182.5,185,185.0,437.5,Masters 50-59,M,SBD
+1,105,Jarle Hoffmann,Single-ply,Nes SIL,104.15,200,205,210,210.0,150,160,-165,160.0,190,-200,-200,190.0,560,Masters 50-59,M,SBD
+2,105,Tor Granvang,Single-ply,Brumunddal AK,101.20,,,,,-200,-200,200,200.0,,,,,200,Masters 50-59,M,B
+1,120,Ronny Andersen,Single-ply,Lørenskog AK,118.50,185,-187.5,195,195.0,130,140,145,145.0,200,210,,210.0,550,Masters 50-59,M,SBD
+2,120,Alf Granvang,Single-ply,Brumunddal AK,106.95,,,,,170,180,185,185.0,,,,,185,Masters 50-59,M,B
+3,120,Terje C. Samuelsen,Single-ply,Halden SI,108.00,,,,,180,-185,-185,180.0,,,,,180,Masters 50-59,M,B
+1,83,Bjarne Synstad,Single-ply,Lørenskog AK,81.75,,,,,210,-220,-220,210.0,,,,,210,Masters 60-69,M,B
+1,120,Vidar Alexander Ringvold,Single-ply,Brumunddal AK,109.75,-220,-230,230,230.0,210,-220,-220,210.0,180,200,-210,200.0,640,Masters 60-69,M,SBD
+1,120,Truls Kristensen,Single-ply,Askim SK,112.65,,,,,120,125,-127.5,125.0,,,,,125,Masters 70+,M,B
 G,93,Julian Lysvand,Single-ply,Steinkjer SK,92.35,302.5,310,315,315.0,-230,230,-235,230.0,-305,-305,305,305.0,850,Open,M,SBD

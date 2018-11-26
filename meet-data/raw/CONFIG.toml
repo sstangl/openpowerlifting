@@ -6,17 +6,17 @@
     teen_14 = {name = "Teen 14-15", min = 14, max = 15, equipment="Raw"}
     teen_16 = {name = "Teen 16-17", min = 16, max = 17, equipment="Raw"}
     teen_18 = {name = "Teen 18-19", min = 18, max = 19, equipment="Raw"}
-    junior = {name = "Junior 20-24", min = 20, max = 24, equipment="Raw"}
-    submaster = {name = "Submaster 35-39", min = 35, max = 39, equipment="Raw"}
-    master_40 = {name = "Master 40-44", min = 40, max = 44, equipment="Raw"}
-    master_45 = {name = "Master 45-49", min = 45, max = 49, equipment="Raw"}
-    master_50 = {name = "Master 50-54", min = 50, max = 54, equipment="Raw"}
-    master_55 = {name = "Master 55-59", min = 55, max = 59, equipment="Raw"}
-    master_60 = {name = "Master 60-64", min = 60, max = 64, equipment="Raw"}
-    master_65 = {name = "Master 65-69", min = 65, max = 69, equipment="Raw"}
-    master_70 = {name = "Master 70-74", min = 70, max = 74, equipment="Raw"}
-    master_75 = {name = "Master 75-79", min = 75, max = 79, equipment="Raw"}
-    master_80 = {name = "Master 80+", min = 80, max = 999, equipment="Raw"}
+    junior = {name = "Juniors 20-24", min = 20, max = 24, equipment="Raw"}
+    submaster = {name = "Submasters 35-39", min = 35, max = 39, equipment="Raw"}
+    master_40 = {name = "Masters 40-44", min = 40, max = 44, equipment="Raw"}
+    master_45 = {name = "Masters 45-49", min = 45, max = 49, equipment="Raw"}
+    master_50 = {name = "Masters 50-54", min = 50, max = 54, equipment="Raw"}
+    master_55 = {name = "Masters 55-59", min = 55, max = 59, equipment="Raw"}
+    master_60 = {name = "Masters 60-64", min = 60, max = 64, equipment="Raw"}
+    master_65 = {name = "Masters 65-69", min = 65, max = 69, equipment="Raw"}
+    master_70 = {name = "Masters 70-74", min = 70, max = 74, equipment="Raw"}
+    master_75 = {name = "Masters 75-79", min = 75, max = 79, equipment="Raw"}
+    master_80 = {name = "Masters 80+", min = 80, max = 999, equipment="Raw"}
     lfm = {name = "Law/Fire/Military", min = 0, max = 999, equipment="Raw"}
     special = {name = "Special Olympics", min = 0, max = 999, equipment="Raw"}
     handicapped = {name = "Handicapped", min = 0, max = 999, equipment="Raw"}
@@ -29,17 +29,17 @@
     c_teen_14 = {name = "Classic Teen 14-15", min = 14, max = 15, equipment="Raw"}
     c_teen_16 = {name = "Classic Teen 16-17", min = 16, max = 17, equipment="Raw"}
     c_teen_18 = {name = "Classic Teen 18-19", min = 18, max = 19, equipment="Raw"}
-    c_junior = {name = "Classic Junior 20-24", min = 20, max = 24, equipment="Raw"}
-    c_submaster = {name = "Classic Submaster 35-39", min = 35, max = 39, equipment="Raw"}
-    c_master_40 = {name = "Classic Master 40-44", min = 40, max = 44, equipment="Raw"}
-    c_master_45 = {name = "Classic Master 45-49", min = 45, max = 49, equipment="Raw"}
-    c_master_50 = {name = "Classic Master 50-54", min = 50, max = 54, equipment="Raw"}
-    c_master_55 = {name = "Classic Master 55-59", min = 55, max = 59, equipment="Raw"}
-    c_master_60 = {name = "Classic Master 60-64", min = 60, max = 64, equipment="Raw"}
-    c_master_65 = {name = "Classic Master 65-69", min = 65, max = 69, equipment="Raw"}
-    c_master_70 = {name = "Classic Master 70-74", min = 70, max = 74, equipment="Raw"}
-    c_master_75 = {name = "Classic Master 75-79", min = 75, max = 79, equipment="Raw"}
-    c_master_80 = {name = "Classic Master 80+", min = 80, max = 999, equipment="Raw"}
+    c_junior = {name = "Classic Juniors 20-24", min = 20, max = 24, equipment="Raw"}
+    c_submaster = {name = "Classic Submasters 35-39", min = 35, max = 39, equipment="Raw"}
+    c_master_40 = {name = "Classic Masters 40-44", min = 40, max = 44, equipment="Raw"}
+    c_master_45 = {name = "Classic Masters 45-49", min = 45, max = 49, equipment="Raw"}
+    c_master_50 = {name = "Classic Masters 50-54", min = 50, max = 54, equipment="Raw"}
+    c_master_55 = {name = "Classic Masters 55-59", min = 55, max = 59, equipment="Raw"}
+    c_master_60 = {name = "Classic Masters 60-64", min = 60, max = 64, equipment="Raw"}
+    c_master_65 = {name = "Classic Masters 65-69", min = 65, max = 69, equipment="Raw"}
+    c_master_70 = {name = "Classic Masters 70-74", min = 70, max = 74, equipment="Raw"}
+    c_master_75 = {name = "Classic Masters 75-79", min = 75, max = 79, equipment="Raw"}
+    c_master_80 = {name = "Classic Masters 80+", min = 80, max = 999, equipment="Raw"}
     c_lfm = {name = "Classic Law/Fire/Military", min = 0, max = 999, equipment="Raw"}
     c_special = {name = "Classic Special Olympics", min = 0, max = 999, equipment="Raw"}
     c_handicapped = {name = "Classic Handicapped", min = 0, max = 999, equipment="Raw"}

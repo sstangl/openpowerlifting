@@ -1,9 +1,9 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Joel Klassen,BC,135.7,120+,Open,252.5,187.5,320.0,760.0,Single-ply,1
 SBD,M,John-Wesley Cummings,BC,103.4,105,Open,260.0,207.5,180.0,647.5,Single-ply,1
-SBD,M,Ryan Flier,BC,78.9,83,Sub-Junior,105.0,85.0,150.0,340.0,Raw,1
-SBD,M,Alex Chitan,BC,76.1,83,Sub-Junior,25.0,87.5,167.5,280.0,Raw,2
-SBD,M,Liam Wharton,BC,63.3,66,Sub-Junior,135.0,92.5,152.5,380.0,Raw,1
+SBD,M,Ryan Flier,BC,78.9,83,Sub-Juniors,105.0,85.0,150.0,340.0,Raw,1
+SBD,M,Alex Chitan,BC,76.1,83,Sub-Juniors,25.0,87.5,167.5,280.0,Raw,2
+SBD,M,Liam Wharton,BC,63.3,66,Sub-Juniors,135.0,92.5,152.5,380.0,Raw,1
 SBD,M,Tyler Wiebe,BC,90.5,93,Open,180.0,117.5,182.5,480.0,Raw,5
 SBD,M,Tim Delage,BC,91.1,93,Open,195.0,115.0,235.0,545.0,Raw,2
 SBD,M,Kyle Larson,BC,87.7,93,Open,185.0,135.0,210.0,530.0,Raw,3
@@ -32,26 +32,26 @@ SBD,M,Gordon Sjodin,BC,106.8,120,Open,200.0,165.0,100.0,465.0,Raw,1
 SBD,M,Ryan Gallo,BC,104.9,105,Open,230.0,155.0,245.0,630.0,Raw,1
 SBD,M,Mohamed Ali,BC,100.0,105,Open,152.5,135.0,232.5,520.0,Raw,3
 SBD,M,Christopher Soo,BC,100.6,105,Open,215.0,137.5,275.0,627.5,Raw,2
-SBD,M,Douglas Brown,BC,80.4,83,Master 2,122.5,65.0,177.5,365.0,Raw,1
-SBD,M,Mark Rowe,BC,89.4,93,Master 1,175.0,112.5,170.0,457.5,Raw,1
-SBD,M,Bill Brown,BC,82.0,83,Master 1,150.0,97.5,185.0,432.5,Raw,1
-SBD,F,Bette Festing,BC,57.1,63,Master 1,100.0,55.0,130.0,285.0,Raw,1
-SBD,M,Adam Cheal,BC,117.5,120,Master 1,190.0,100.0,210.0,500.0,Raw,1
-SBD,M,Jason Allard,BC,99.6,105,Master 1,205.0,135.0,215.0,555.0,Raw,1
-SBD,M,Simon Lee,BC,84.8,93,Junior,237.5,125.0,257.5,620.0,Raw,1
-SBD,M,Matthew Liao,BC,93.0,93,Junior,195.0,122.5,220.0,537.5,Raw,4
-SBD,M,Jordan Lam,BC,89.1,93,Junior,210.0,147.5,230.0,587.5,Raw,2
-SBD,M,Brent Chapman,BC,89.9,93,Junior,202.5,132.5,240.0,575.0,Raw,3
-SBD,F,Clarissa Castro,BC,91.0,84+,Junior,107.5,72.5,137.5,317.5,Raw,1
-SBD,F,Olivia Lim,BC,83.6,84,Junior,125.0,60.0,165.0,350.0,Raw,1
-SBD,M,Donovan Petitclerc,BC,79.7,83,Junior,170.0,97.5,200.0,467.5,Raw,1
-SBD,M,Walid Sadiqi,BC,73.6,74,Junior,150.0,127.5,190.0,467.5,Raw,4
-SBD,M,Michael Cheung,BC,71.6,74,Junior,175.0,102.5,212.5,490.0,Raw,2
-SBD,M,Jefte Sistoza,BC,73.3,74,Junior,170.0,90.0,217.5,477.5,Raw,3
-SBD,M,Alex Hannaford,BC,72.5,74,Junior,190.0,107.5,217.5,515.0,Raw,1
-SBD,F,Seonaid Waterson,BC,71.4,72,Junior,92.5,55.0,107.5,255.0,Raw,1
-SBD,M,Josh Romero,BC,64.4,66,Junior,150.0,87.5,205.0,442.5,Raw,3
-SBD,M,Jason Lau,BC,63.9,66,Junior,170.0,120.0,200.0,490.0,Raw,1
-SBD,M,Eric Hoang,BC,63.3,66,Junior,162.5,112.5,187.5,462.5,Raw,2
-SBD,M,Albert Yamaguchi,BC,120.7,120+,Junior,220.0,117.5,228.0,565.5,Raw,1
-SBD,M,Connor Elliott,BC,95.8,105,Junior,210.0,145.0,255.0,610.0,Raw,1
+SBD,M,Douglas Brown,BC,80.4,83,Masters 2,122.5,65.0,177.5,365.0,Raw,1
+SBD,M,Mark Rowe,BC,89.4,93,Masters 1,175.0,112.5,170.0,457.5,Raw,1
+SBD,M,Bill Brown,BC,82.0,83,Masters 1,150.0,97.5,185.0,432.5,Raw,1
+SBD,F,Bette Festing,BC,57.1,63,Masters 1,100.0,55.0,130.0,285.0,Raw,1
+SBD,M,Adam Cheal,BC,117.5,120,Masters 1,190.0,100.0,210.0,500.0,Raw,1
+SBD,M,Jason Allard,BC,99.6,105,Masters 1,205.0,135.0,215.0,555.0,Raw,1
+SBD,M,Simon Lee,BC,84.8,93,Juniors,237.5,125.0,257.5,620.0,Raw,1
+SBD,M,Matthew Liao,BC,93.0,93,Juniors,195.0,122.5,220.0,537.5,Raw,4
+SBD,M,Jordan Lam,BC,89.1,93,Juniors,210.0,147.5,230.0,587.5,Raw,2
+SBD,M,Brent Chapman,BC,89.9,93,Juniors,202.5,132.5,240.0,575.0,Raw,3
+SBD,F,Clarissa Castro,BC,91.0,84+,Juniors,107.5,72.5,137.5,317.5,Raw,1
+SBD,F,Olivia Lim,BC,83.6,84,Juniors,125.0,60.0,165.0,350.0,Raw,1
+SBD,M,Donovan Petitclerc,BC,79.7,83,Juniors,170.0,97.5,200.0,467.5,Raw,1
+SBD,M,Walid Sadiqi,BC,73.6,74,Juniors,150.0,127.5,190.0,467.5,Raw,4
+SBD,M,Michael Cheung,BC,71.6,74,Juniors,175.0,102.5,212.5,490.0,Raw,2
+SBD,M,Jefte Sistoza,BC,73.3,74,Juniors,170.0,90.0,217.5,477.5,Raw,3
+SBD,M,Alex Hannaford,BC,72.5,74,Juniors,190.0,107.5,217.5,515.0,Raw,1
+SBD,F,Seonaid Waterson,BC,71.4,72,Juniors,92.5,55.0,107.5,255.0,Raw,1
+SBD,M,Josh Romero,BC,64.4,66,Juniors,150.0,87.5,205.0,442.5,Raw,3
+SBD,M,Jason Lau,BC,63.9,66,Juniors,170.0,120.0,200.0,490.0,Raw,1
+SBD,M,Eric Hoang,BC,63.3,66,Juniors,162.5,112.5,187.5,462.5,Raw,2
+SBD,M,Albert Yamaguchi,BC,120.7,120+,Juniors,220.0,117.5,228.0,565.5,Raw,1
+SBD,M,Connor Elliott,BC,95.8,105,Juniors,210.0,145.0,255.0,610.0,Raw,1

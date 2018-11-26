@@ -1,16 +1,16 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Daniel VanNostrand,NS,68.6,74,Sub-Junior,110.0,70.0,150.0,330.0,Single-ply,1
+SBD,M,Daniel VanNostrand,NS,68.6,74,Sub-Juniors,110.0,70.0,150.0,330.0,Single-ply,1
 SBD,M,Peter Squires,NS,109.3,120,Open,222.5,162.5,227.5,612.5,Single-ply,1
-SBD,M,Brendon Williamson,NS,90.8,93,Junior,257.5,132.5,280.0,670.0,Single-ply,1
-SBD,M,Tyler Ramsay,PE,110.4,120,Junior,302.5,197.5,275.0,775.0,Single-ply,1
-SBD,M,Jeffrey O'Quinn,NS,91.6,93,Sub-Junior,207.5,112.5,215.0,535.0,Raw,1
-SBD,M,Andy Langin,NS,91.6,93,Sub-Junior,193.0,87.5,220.5,501.0,Raw,2
-SBD,M,Alexander Jeffers,NS,90.5,93,Sub-Junior,105.0,67.5,147.5,320.0,Raw,3
-SBD,M,Brandon Goodwin,NS,82.6,83,Sub-Junior,180.0,117.5,235.0,532.5,Raw,1
-SBD,M,Spencer MacKenzie,NS,73.9,74,Sub-Junior,107.5,82.5,162.5,352.5,Raw,3
-SBD,M,Matthew Jessome,NS,68.1,74,Sub-Junior,150.0,85.0,180.0,415.0,Raw,1
-SBD,M,Jamison Sampson,NS,71.5,74,Sub-Junior,135.0,102.5,162.5,400.0,Raw,2
-SBD,M,Tristan Martel,NS,63.3,66,Sub-Junior,155.0,127.5,215.0,497.5,Raw,1
+SBD,M,Brendon Williamson,NS,90.8,93,Juniors,257.5,132.5,280.0,670.0,Single-ply,1
+SBD,M,Tyler Ramsay,PE,110.4,120,Juniors,302.5,197.5,275.0,775.0,Single-ply,1
+SBD,M,Jeffrey O'Quinn,NS,91.6,93,Sub-Juniors,207.5,112.5,215.0,535.0,Raw,1
+SBD,M,Andy Langin,NS,91.6,93,Sub-Juniors,193.0,87.5,220.5,501.0,Raw,2
+SBD,M,Alexander Jeffers,NS,90.5,93,Sub-Juniors,105.0,67.5,147.5,320.0,Raw,3
+SBD,M,Brandon Goodwin,NS,82.6,83,Sub-Juniors,180.0,117.5,235.0,532.5,Raw,1
+SBD,M,Spencer MacKenzie,NS,73.9,74,Sub-Juniors,107.5,82.5,162.5,352.5,Raw,3
+SBD,M,Matthew Jessome,NS,68.1,74,Sub-Juniors,150.0,85.0,180.0,415.0,Raw,1
+SBD,M,Jamison Sampson,NS,71.5,74,Sub-Juniors,135.0,102.5,162.5,400.0,Raw,2
+SBD,M,Tristan Martel,NS,63.3,66,Sub-Juniors,155.0,127.5,215.0,497.5,Raw,1
 SBD,M,Ryne Piovesan,NS,89.9,93,Open,190.0,117.5,262.5,570.0,Raw,2
 SBD,M,Ryan Kells,NS,91.9,93,Open,192.5,115.0,265.0,572.5,Raw,1
 SBD,M,Taylor Morrison,NS,82.2,83,Open,175.0,140.0,225.0,540.0,Raw,2
@@ -23,30 +23,30 @@ SBD,M,John MacDonald,PE,117.6,120,Open,275.0,185.0,313.0,773.0,Raw,1
 SBD,M,Stephen MacKenzie,NS,98.3,105,Open,215.0,152.5,235.0,602.5,Raw,2
 SBD,M,Matthew Landry,NS,98.4,105,Open,200.0,132.5,240.0,572.5,Raw,3
 SBD,M,Dylan MacIntrye,NS,98.8,105,Open,227.5,150.0,260.0,637.5,Raw,1
-SBD,M,Colin Boutilier,NS,86.14,93,Master 4,145.0,115.0,162.5,422.5,Raw,1
-SBD,M,Steve Flemming,NS,92.5,93,Master 2,142.5,132.5,165.0,440,Raw,1
-SBD,M,Tom Nichols,NS,116.4,120,Master 2,250.0,195.0,288.0,733.0,Raw,1
-SBD,M,Tim Scantlebury,NS,90.5,93,Master 1,175.0,117.5,205.0,497.5,Raw,2
-SBD,M,Matthew MacKay,NS,92.4,93,Master 1,202.5,132.5,245.0,580.0,Raw,1
-SBD,M,Donald O'Leary,NS,82.2,83,Master 1,182.5,137.5,230.0,550.0,Raw,1
-SBD,M,Robert Snow,NS,135.8,120+,Master 1,190.0,162.5,260.0,612.5,Raw,1
-SBD,M,Kullen Deveaux,NS,83.8,93,Junior,162.5,100.0,207.5,470.0,Raw,2
-SBD,M,Brian Talbot,NS,91.2,93,Junior,212.5,155.0,232.5,600.0,Raw,1
-SBD,M,Jeff Nippard,NS,79.2,83,Junior,205.0,160.0,232.5,597.5,Raw,1
-SBD,M,Kris Tiller,NS,72.2,74,Junior,182.5,142.5,190.0,515.0,Raw,2
-SBD,M,Kody MacDonald,NS,73.8,74,Junior,162.5,92.5,197.5,452.5,Raw,3
-SBD,M,Josh Hancott,NS,73.6,74,Junior,247.5,152.5,252.5,652.5,Raw,1
-SBD,F,Cara Petipas,NS,64.3,72,Junior,115.0,57.5,120.0,292.5,Raw,1
-SBD,F,Michelle Smith,NS,60.5,63,Junior,107.5,52.5,142.5,302.5,Raw,1
-SBD,F,Jana Andersen-Aitken,NS,57.7,63,Junior,97.5,67.5,127.5,292.5,Raw,2
-SBD,M,Nick Grant,NS,113.4,120,Junior,227.5,145.0,250.0,622.5,Raw,1
-SBD,M,Dylan Marsh,NS,116.5,120,Junior,187.5,102.5,190.0,480.0,Raw,2
+SBD,M,Colin Boutilier,NS,86.14,93,Masters 4,145.0,115.0,162.5,422.5,Raw,1
+SBD,M,Steve Flemming,NS,92.5,93,Masters 2,142.5,132.5,165.0,440,Raw,1
+SBD,M,Tom Nichols,NS,116.4,120,Masters 2,250.0,195.0,288.0,733.0,Raw,1
+SBD,M,Tim Scantlebury,NS,90.5,93,Masters 1,175.0,117.5,205.0,497.5,Raw,2
+SBD,M,Matthew MacKay,NS,92.4,93,Masters 1,202.5,132.5,245.0,580.0,Raw,1
+SBD,M,Donald O'Leary,NS,82.2,83,Masters 1,182.5,137.5,230.0,550.0,Raw,1
+SBD,M,Robert Snow,NS,135.8,120+,Masters 1,190.0,162.5,260.0,612.5,Raw,1
+SBD,M,Kullen Deveaux,NS,83.8,93,Juniors,162.5,100.0,207.5,470.0,Raw,2
+SBD,M,Brian Talbot,NS,91.2,93,Juniors,212.5,155.0,232.5,600.0,Raw,1
+SBD,M,Jeff Nippard,NS,79.2,83,Juniors,205.0,160.0,232.5,597.5,Raw,1
+SBD,M,Kris Tiller,NS,72.2,74,Juniors,182.5,142.5,190.0,515.0,Raw,2
+SBD,M,Kody MacDonald,NS,73.8,74,Juniors,162.5,92.5,197.5,452.5,Raw,3
+SBD,M,Josh Hancott,NS,73.6,74,Juniors,247.5,152.5,252.5,652.5,Raw,1
+SBD,F,Cara Petipas,NS,64.3,72,Juniors,115.0,57.5,120.0,292.5,Raw,1
+SBD,F,Michelle Smith,NS,60.5,63,Juniors,107.5,52.5,142.5,302.5,Raw,1
+SBD,F,Jana Andersen-Aitken,NS,57.7,63,Juniors,97.5,67.5,127.5,292.5,Raw,2
+SBD,M,Nick Grant,NS,113.4,120,Juniors,227.5,145.0,250.0,622.5,Raw,1
+SBD,M,Dylan Marsh,NS,116.5,120,Juniors,187.5,102.5,190.0,480.0,Raw,2
 B,M,John MacDonald,PE,119.1,120,Open,,267.5,,267.5,Single-ply,1
 B,M,Paul Travis,NS,93.7,105,Open,,202.5,,202.5,Single-ply,1
-B,M,Tilman Gallant,PE,82.7,83,Master 3,,160.0,,160.0,Single-ply,1
-B,M,Chad Sinclair,NS,82.6,83,Junior,,120.0,,120.0,Single-ply,1
+B,M,Tilman Gallant,PE,82.7,83,Masters 3,,160.0,,160.0,Single-ply,1
+B,M,Chad Sinclair,NS,82.6,83,Juniors,,120.0,,120.0,Single-ply,1
 B,M,Mike Sweeney,NS,91.3,93,Open,,132.5,,132.5,Raw,1
 B,F,Alisa MacKenzie,NS,77,84,Open,,75.0,,75.0,Raw,1
-B,M,Danny Sutherland,NS,128.7,120+,Master 1,,187.5,,187.5,Raw,1
-B,M,Jamie Jury,NS,105.3,120,Master 1,,160.0,,160.0,Raw,1
-B,M,James Jury,NS,70.6,74,Junior,,105.0,,105.0,Raw,1
+B,M,Danny Sutherland,NS,128.7,120+,Masters 1,,187.5,,187.5,Raw,1
+B,M,Jamie Jury,NS,105.3,120,Masters 1,,160.0,,160.0,Raw,1
+B,M,James Jury,NS,70.6,74,Juniors,,105.0,,105.0,Raw,1

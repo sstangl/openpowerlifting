@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Isabel Diaz,NC,67.5,61.3,23,102.5,45,122.5,270,F,Junior 20-23,Raw,SBD
-1,Marina Hafey,VA,75,71.4,21,95,42.5,117.5,255,F,Junior 20-23,Raw,SBD
+1,Isabel Diaz,NC,67.5,61.3,23,102.5,45,122.5,270,F,Juniors 20-23,Raw,SBD
+1,Marina Hafey,VA,75,71.4,21,95,42.5,117.5,255,F,Juniors 20-23,Raw,SBD
 1,Amanda Allen,NC,60,59.3,29,132.5,87.5,170,390,F,Open,Raw,SBD
 2,Elise Metts,GA,60,59.4,33,135,75,150,360,F,Open,Raw,SBD
 3,Chelsi Warren,TN,60,58.7,25,80,50,85,215,F,Open,Raw,SBD
@@ -8,9 +8,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Janelle Jones,NC,67.5,67.1,34,112.5,60,117.5,290,F,Open,Raw,SBD
 DQ,Tiffany Clemins,WV,75,74.3,24,,,,,F,Open,Raw,SBD
 1,Christina Tupper,NC,90,89.5,29,142.5,80,157.5,380,F,Open,Raw,SBD
-1,John Riggins,TN,82.5,81.3,17,162.5,112.5,185,460,M,Junior 16-17,Raw,SBD
-1,Elijah Ball,TN,90,85.9,16,145,100,200,445,M,Junior 16-17,Raw,SBD
-1,Brandon Arthur,NC,100,99.3,22,240,187.5,240,667.5,M,Junior 20-23,Raw,SBD
+1,John Riggins,TN,82.5,81.3,17,162.5,112.5,185,460,M,Juniors 16-17,Raw,SBD
+1,Elijah Ball,TN,90,85.9,16,145,100,200,445,M,Juniors 16-17,Raw,SBD
+1,Brandon Arthur,NC,100,99.3,22,240,187.5,240,667.5,M,Juniors 20-23,Raw,SBD
 1,Eric Clarke,TN,75,71,25,135,100,167.5,402.5,M,Open,Raw,SBD
 1,Jacob Lucheon,TN,82.5,80.4,25,202.5,125,237.5,565,M,Open,Raw,SBD
 1,Josh Quattrone,NC,90,88.7,36,215,157.5,242.5,615,M,Open,Raw,SBD
@@ -23,19 +23,19 @@ DQ,Tiffany Clemins,WV,75,74.3,24,,,,,F,Open,Raw,SBD
 2,Greg Simpson,GA,125,118.2,47,235,165,240,640,M,Open,Raw,SBD
 1,Jon Heck,KS,140,139.2,23,230,185,285,700,M,Open,Raw,SBD
 1,Trevor Vasser,VA,140+,170.4,25,320,220,325,865,M,Open,Raw,SBD
-1,Ed Anton,GA,100,99.5,46,242.5,182.5,272.5,697.5,M,Master 45-49,Raw,SBD
-1,Greg Simpson,GA,125,118.2,47,235,165,240,640,M,Master 45-49,Raw,SBD
-1,Alex Tindal,TN,75,74.1,19,250,140,250,640,M,Junior 18-19,Wraps,SBD
-1,Dezman Crow,NC,82.5,81.3,20,165,112.5,205,482.5,M,Junior 20-23,Wraps,SBD
-DQ,Parker Smith,NC,82.5,80.6,23,,,,,M,Junior 20-23,Wraps,SBD
-1,Hobie Proctor,NC,90,86.8,22,157.5,112.5,177.5,447.5,M,Junior 20-23,Wraps,SBD
-1,Keagan Richards,TN,125,123.7,23,272.5,157.5,272.5,702.5,M,Junior 20-23,Wraps,SBD
+1,Ed Anton,GA,100,99.5,46,242.5,182.5,272.5,697.5,M,Masters 45-49,Raw,SBD
+1,Greg Simpson,GA,125,118.2,47,235,165,240,640,M,Masters 45-49,Raw,SBD
+1,Alex Tindal,TN,75,74.1,19,250,140,250,640,M,Juniors 18-19,Wraps,SBD
+1,Dezman Crow,NC,82.5,81.3,20,165,112.5,205,482.5,M,Juniors 20-23,Wraps,SBD
+DQ,Parker Smith,NC,82.5,80.6,23,,,,,M,Juniors 20-23,Wraps,SBD
+1,Hobie Proctor,NC,90,86.8,22,157.5,112.5,177.5,447.5,M,Juniors 20-23,Wraps,SBD
+1,Keagan Richards,TN,125,123.7,23,272.5,157.5,272.5,702.5,M,Juniors 20-23,Wraps,SBD
 1,Seth Langley,GA,75,73.5,26,197.5,90,210,497.5,M,Open,Wraps,SBD
 1,Franklin McCoy,NC,82.5,80.4,25,245,152.5,227.5,625,M,Open,Wraps,SBD
 1,Rodney Manor,MS,90,89.9,24,310,192.5,265,767.5,M,Open,Wraps,SBD
 1,Tee Cummins,MS,100,99.6,24,365,207.5,340,912.5,M,Open,Wraps,SBD
-1,Gary Allen,NC,140,139.9,52,347.5,265.5,265,878,M,Master 50-54,Single-ply,SBD
-1,Paul Sutphin,WV,100,97.5,62,217.5,122.5,217.5,557.5,M,Master 60-64,Multi-ply,SBD
+1,Gary Allen,NC,140,139.9,52,347.5,265.5,265,878,M,Masters 50-54,Single-ply,SBD
+1,Paul Sutphin,WV,100,97.5,62,217.5,122.5,217.5,557.5,M,Masters 60-64,Multi-ply,SBD
 1,Drew Dunlap,WV,90,89.3,30,,160,,160,M,Open,Raw,B
 1,Bobby Hayes,KY,110,103.3,28,,,308,308,M,Open,Raw,D
 1,Justin Bowling,TN,100,91.2,33,,160,225,385,M,Open,Raw,BD

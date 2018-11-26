@@ -1,11 +1,11 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Michel Lebrun,QU,110.5,120,Open,252.5,227.5,280.0,760.0,Single-ply,1
-SBD,M,Rémy Dufour,QU,103.3,105,Master 2,142.5,170.0,263.0,575.5,Single-ply,1
-SBD,M,Jacques Potvin,QU,102.5,105,Master 2,200.0,145.0,185.0,530.0,Single-ply,2
-SBD,M,Benjamin Court,QU,134.3,120+,Junior,290.0,227.5,272.5,790.0,Single-ply,1
-SBD,M,Nicolas Waskiewicz,QU,78.5,83,Sub-Junior,110.0,80.0,125.0,315.0,Raw,2
-SBD,M,Jean-François Hébert,QU,74.9,83,Sub-Junior,132.5,102.5,190.0,425.0,Raw,1
-SBD,M,William Veilleux,QU,62.4,66,Sub-Junior,140.0,90.0,190.0,420.0,Raw,1
+SBD,M,Rémy Dufour,QU,103.3,105,Masters 2,142.5,170.0,263.0,575.5,Single-ply,1
+SBD,M,Jacques Potvin,QU,102.5,105,Masters 2,200.0,145.0,185.0,530.0,Single-ply,2
+SBD,M,Benjamin Court,QU,134.3,120+,Juniors,290.0,227.5,272.5,790.0,Single-ply,1
+SBD,M,Nicolas Waskiewicz,QU,78.5,83,Sub-Juniors,110.0,80.0,125.0,315.0,Raw,2
+SBD,M,Jean-François Hébert,QU,74.9,83,Sub-Juniors,132.5,102.5,190.0,425.0,Raw,1
+SBD,M,William Veilleux,QU,62.4,66,Sub-Juniors,140.0,90.0,190.0,420.0,Raw,1
 SBD,M,Yann Tremblay,QU,85.6,93,Open,240.0,160.0,242.5,642.5,Raw,2
 SBD,M,Quentin Weber,QU,91.1,93,Open,237.5,152.5,275.0,665.0,Raw,1
 SBD,M,Guillaume Lamoureux,QU,84.8,93,Open,190.0,140.0,210.0,540.0,Raw,3
@@ -25,26 +25,26 @@ SBD,M,Ryan Lapadat,QU,98.7,105,Open,230.0,150.0,272.5,652.5,Raw,2
 SBD,M,Maxime Fraser,QU,103.0,105,Open,220.0,127.5,240.0,587.5,Raw,3
 SBD,M,Laurent Fontaine,QU,103.0,105,Open,270.0,180.0,270.0,720.0,Raw,1
 SBD,M,Jason Caouette,QU,98.7,105,Open,177.5,110.0,202.5,490.0,Raw,4
-SBD,F,Janet Warne,QU,55.6,57,Master 3,90.0,50.0,92.5,232.5,Raw,1
-SBD,F,Odette Michaud,QU,40.0,47,Master 2,90.0,37.5,130.0,257.5,Raw,1
-SBD,M,Mathieu Villeneuve,QU,86.3,93,Master 1,145.0,102.5,180.0,427.5,Raw,1
-SBD,M,Jean-Sébastien Rhéaume,QU,65.9,66,Master 1,187.5,127.5,217.5,532.5,Raw,1
-SBD,M,Steve Dubé,QU,116.1,120,Master 1,210.0,150.0,230.0,590.0,Raw,1
-SBD,F,Jessica Laniel,QU,77.4,84,Junior,105.0,52.5,115.0,272.5,Raw,1
-SBD,M,Mathieu Chartier,QU,76.2,83,Junior,145.0,90.0,192.5,427.5,Raw,2
-SBD,M,Hugo Laliberté,QU,81.5,83,Junior,197.5,100.0,227.5,525.0,Raw,1
-SBD,M,Mathieu Bernaquez,QU,69.7,74,Junior,170.0,126.5,210.0,506.5,Raw,1
-SBD,M,Benoit Giguère,QU,70.5,74,Junior,147.5,90.0,185.0,422.5,Raw,2
-SBD,M,Jessy Ouellette-Hulmann,QU,61.4,66,Junior,127.5,65.0,160.0,352.5,Raw,1
+SBD,F,Janet Warne,QU,55.6,57,Masters 3,90.0,50.0,92.5,232.5,Raw,1
+SBD,F,Odette Michaud,QU,40.0,47,Masters 2,90.0,37.5,130.0,257.5,Raw,1
+SBD,M,Mathieu Villeneuve,QU,86.3,93,Masters 1,145.0,102.5,180.0,427.5,Raw,1
+SBD,M,Jean-Sébastien Rhéaume,QU,65.9,66,Masters 1,187.5,127.5,217.5,532.5,Raw,1
+SBD,M,Steve Dubé,QU,116.1,120,Masters 1,210.0,150.0,230.0,590.0,Raw,1
+SBD,F,Jessica Laniel,QU,77.4,84,Juniors,105.0,52.5,115.0,272.5,Raw,1
+SBD,M,Mathieu Chartier,QU,76.2,83,Juniors,145.0,90.0,192.5,427.5,Raw,2
+SBD,M,Hugo Laliberté,QU,81.5,83,Juniors,197.5,100.0,227.5,525.0,Raw,1
+SBD,M,Mathieu Bernaquez,QU,69.7,74,Juniors,170.0,126.5,210.0,506.5,Raw,1
+SBD,M,Benoit Giguère,QU,70.5,74,Juniors,147.5,90.0,185.0,422.5,Raw,2
+SBD,M,Jessy Ouellette-Hulmann,QU,61.4,66,Juniors,127.5,65.0,160.0,352.5,Raw,1
 B,M,Mathieu Tremblay,QU,92.8,93,Open,,205.0,,205.0,Single-ply,1
-B,M,Maxime Lamarre,QU,76.7,83,Junior,,132.5,,132.5,Single-ply,1
-B,M,Étienne Labrecque,QU,74.0,74,Sub-Junior,,110.0,,110.0,Raw,1
+B,M,Maxime Lamarre,QU,76.7,83,Juniors,,132.5,,132.5,Single-ply,1
+B,M,Étienne Labrecque,QU,74.0,74,Sub-Juniors,,110.0,,110.0,Raw,1
 B,M,Jonathan Simard,QU,91.5,93,Open,,192.5,,192.5,Raw,1
 B,M,Bradley Jenkin,QU,107.3,120,Open,,132.5,,132.5,Raw,1
-B,M,Yves Dubois,QU,89.4,93,Master 3,,147.5,,147.5,Raw,1
-B,M,Claude Dallaire,QU,91.1,93,Master 2,,125.0,,125.0,Raw,1
-B,M,Martin Ferland,QU,103.9,105,Master 2,,157.5,,157.5,Raw,1
-B,M,Luc Gaignard,QU,131.5,120+,Master 1,,170.0,,170.0,Raw,1
-B,M,Francis Pouliot,QU,91.3,93,Junior,,110.0,,110.0,Raw,1
-B,M,Michaël Duval,QU,78.5,83,Junior,,100.0,,100.0,Raw,1
-B,M,Jean-François Caron #1,QU,127.6,120+,Junior,,207.5,,207.5,Raw,1
+B,M,Yves Dubois,QU,89.4,93,Masters 3,,147.5,,147.5,Raw,1
+B,M,Claude Dallaire,QU,91.1,93,Masters 2,,125.0,,125.0,Raw,1
+B,M,Martin Ferland,QU,103.9,105,Masters 2,,157.5,,157.5,Raw,1
+B,M,Luc Gaignard,QU,131.5,120+,Masters 1,,170.0,,170.0,Raw,1
+B,M,Francis Pouliot,QU,91.3,93,Juniors,,110.0,,110.0,Raw,1
+B,M,Michaël Duval,QU,78.5,83,Juniors,,100.0,,100.0,Raw,1
+B,M,Jean-François Caron #1,QU,127.6,120+,Juniors,,207.5,,207.5,Raw,1

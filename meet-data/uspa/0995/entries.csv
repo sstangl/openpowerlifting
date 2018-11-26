@@ -1,9 +1,9 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Brooke Lanster,FL,48,46.9,16,77.5,37.5,112.5,227.5,F,Junior 16-17,Raw,SBD
-1,Sarah Burkett,FL,52,51.3,22,125,82.5,135,342.5,F,Junior 20-23,Raw,SBD
-1,Kelly Flanagan,FL,56,53.2,22,105,47.5,120,272.5,F,Junior 20-23,Raw,SBD
-1,Victoria Tillotson,FL,67.5,66.7,21,117.5,47.5,120,285,F,Junior 20-23,Raw,SBD
-1,Jessica Howard,FL,90+,119.5,23,155,85,160,400,F,Junior 20-23,Raw,SBD
+1,Brooke Lanster,FL,48,46.9,16,77.5,37.5,112.5,227.5,F,Juniors 16-17,Raw,SBD
+1,Sarah Burkett,FL,52,51.3,22,125,82.5,135,342.5,F,Juniors 20-23,Raw,SBD
+1,Kelly Flanagan,FL,56,53.2,22,105,47.5,120,272.5,F,Juniors 20-23,Raw,SBD
+1,Victoria Tillotson,FL,67.5,66.7,21,117.5,47.5,120,285,F,Juniors 20-23,Raw,SBD
+1,Jessica Howard,FL,90+,119.5,23,155,85,160,400,F,Juniors 20-23,Raw,SBD
 1,Melissa Grix,FL,44,43.5,27,95,57.5,120,272.5,F,Open,Raw,SBD
 1,Sarah Carver,FL,56,53.6,30,102.5,72.5,122.5,297.5,F,Open,Raw,SBD
 2,Heather Cote,FL,56,54.9,28,75,57.5,100,232.5,F,Open,Raw,SBD
@@ -21,24 +21,24 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Malisa Mackay,FL,90+,106,36,117.5,67.5,160,345,F,Open,Raw,SBD
 4,Jessica Butler,FL,90+,140.8,27,137.5,57.5,142.5,337.5,F,Open,Raw,SBD
 5,Ivy Knight,FL,90+,125.1,32,135,67.5,125,327.5,F,Open,Raw,SBD
-1,Hattie Attebery,FL,67.5,64.7,37,95,57.5,125,277.5,F,Submaster 35-39,Raw,SBD
-1,Morgan Muresan,FL,90,87.3,37,92.5,55,127.5,275,F,Submaster 35-39,Raw,SBD
-1,Malisa Mackay,FL,90+,106,36,117.5,67.5,160,345,F,Submaster 35-39,Raw,SBD
-1,Heather Garbez,FL,60,58.7,41,90.5,50,122.5,263,F,Master 40-44,Raw,SBD
-2,Annie Au,FL,60,56.1,40,67.5,47.5,112.5,227.5,F,Master 40-44,Raw,SBD
-1,Alison O'Connor,FL,75,72.6,43,67.5,40,75,182.5,F,Master 40-44,Raw,SBD
-1,Curtis Colasurdo,FL,75,74.9,19,172.5,105,177.5,455,M,Junior 18-19,Raw,SBD
-1,Marco Nader,FL,82.5,76,16,152.5,105,182.5,440,M,Junior 16-17,Raw,SBD
-1,Zak Thompson,FL,82.5,80.7,23,175,105,180,460,M,Junior 20-23,Raw,SBD
-2,Kyle Ma,FL,82.5,81.5,22,165,92.5,197.5,455,M,Junior 20-23,Raw,SBD
-1,Zach Schulze,FL,90,89.6,23,255,187.5,265,707.5,M,Junior 20-23,Raw,SBD
-2,Steven Roberts,FL,90,88.6,20,215,145,230,590,M,Junior 20-23,Raw,SBD
-3,Brandon Ziemba,FL,90,84.7,22,172.5,125,267.5,565,M,Junior 20-23,Raw,SBD
-4,Jonathan Abrahamson,FL,90,87.4,22,172.5,125,215,512.5,M,Junior 20-23,Raw,SBD
-1,Peter Higuera,FL,100,93.1,22,242.5,165,272.5,680,M,Junior 20-23,Raw,SBD
-2,Phil Horrocks,FL,100,99.7,21,175,120,202.5,497.5,M,Junior 20-23,Raw,SBD
-3,Vinny Porcelli,FL,100,94.1,20,172.5,105,205,482.5,M,Junior 20-23,Raw,SBD
-1,Christopher Surrena,FL,125,117.7,19,185,147.5,192.5,525,M,Junior 18-19,Raw,SBD
+1,Hattie Attebery,FL,67.5,64.7,37,95,57.5,125,277.5,F,Submasters 35-39,Raw,SBD
+1,Morgan Muresan,FL,90,87.3,37,92.5,55,127.5,275,F,Submasters 35-39,Raw,SBD
+1,Malisa Mackay,FL,90+,106,36,117.5,67.5,160,345,F,Submasters 35-39,Raw,SBD
+1,Heather Garbez,FL,60,58.7,41,90.5,50,122.5,263,F,Masters 40-44,Raw,SBD
+2,Annie Au,FL,60,56.1,40,67.5,47.5,112.5,227.5,F,Masters 40-44,Raw,SBD
+1,Alison O'Connor,FL,75,72.6,43,67.5,40,75,182.5,F,Masters 40-44,Raw,SBD
+1,Curtis Colasurdo,FL,75,74.9,19,172.5,105,177.5,455,M,Juniors 18-19,Raw,SBD
+1,Marco Nader,FL,82.5,76,16,152.5,105,182.5,440,M,Juniors 16-17,Raw,SBD
+1,Zak Thompson,FL,82.5,80.7,23,175,105,180,460,M,Juniors 20-23,Raw,SBD
+2,Kyle Ma,FL,82.5,81.5,22,165,92.5,197.5,455,M,Juniors 20-23,Raw,SBD
+1,Zach Schulze,FL,90,89.6,23,255,187.5,265,707.5,M,Juniors 20-23,Raw,SBD
+2,Steven Roberts,FL,90,88.6,20,215,145,230,590,M,Juniors 20-23,Raw,SBD
+3,Brandon Ziemba,FL,90,84.7,22,172.5,125,267.5,565,M,Juniors 20-23,Raw,SBD
+4,Jonathan Abrahamson,FL,90,87.4,22,172.5,125,215,512.5,M,Juniors 20-23,Raw,SBD
+1,Peter Higuera,FL,100,93.1,22,242.5,165,272.5,680,M,Juniors 20-23,Raw,SBD
+2,Phil Horrocks,FL,100,99.7,21,175,120,202.5,497.5,M,Juniors 20-23,Raw,SBD
+3,Vinny Porcelli,FL,100,94.1,20,172.5,105,205,482.5,M,Juniors 20-23,Raw,SBD
+1,Christopher Surrena,FL,125,117.7,19,185,147.5,192.5,525,M,Juniors 18-19,Raw,SBD
 1,Juan Vasquez-Rosas,FL,67.5,65.1,29,160,125,170,455,M,Open,Raw,SBD
 2,Fidel Lopez,FL,67.5,66.8,29,120,95,165,380,M,Open,Raw,SBD
 1,Javier Rodriguez,FL,75,74.6,24,170,127.5,187.5,485,M,Open,Raw,SBD
@@ -69,19 +69,19 @@ DQ,Michael Salazar,FL,100,99.2,27,,,,,M,Open,Raw,SBD
 4,Jason Waters,FL,110,109.7,30,197.5,125,227.5,550,M,Open,Raw,SBD
 5,Jesse Arellanes,FL,110,105.2,26,160,137.5,172.5,470,M,Open,Raw,SBD
 1,Frank Medina,FL,140+,152.7,28,305,175,290,770,M,Open,Raw,SBD
-1,Alfred Villoch,FL,90,88.7,40,227.5,160,272.5,660,M,Master 40-44,Raw,SBD
-1,Paul Frese,GA,90,90,48,192.5,145,230,567.5,M,Master 45-49,Raw,SBD
-1,Audrey Miller,FL,90+,121.6,23,167.5,62.5,170,400,F,Junior 20-23,Wraps,SBD
+1,Alfred Villoch,FL,90,88.7,40,227.5,160,272.5,660,M,Masters 40-44,Raw,SBD
+1,Paul Frese,GA,90,90,48,192.5,145,230,567.5,M,Masters 45-49,Raw,SBD
+1,Audrey Miller,FL,90+,121.6,23,167.5,62.5,170,400,F,Juniors 20-23,Wraps,SBD
 1,Blanca Villoch,FL,56,55.8,34,197.5,100,192.5,490,F,Open,Wraps,SBD
 1,Audrey Miller,FL,90+,121.6,23,167.5,62.5,170,400,F,Open,Wraps,SBD
-1,Christine Davis,FL,90+,109.1,40,170,92.5,182.5,445,F,Master 40-44,Wraps,SBD
-1,Elias Matute,FL,90,88.6,21,210,125,250,585,M,Junior 20-23,Wraps,SBD
-1,Calvin King,FL,110,107.4,21,227.5,160,232.5,620,M,Junior 20-23,Wraps,SBD
+1,Christine Davis,FL,90+,109.1,40,170,92.5,182.5,445,F,Masters 40-44,Wraps,SBD
+1,Elias Matute,FL,90,88.6,21,210,125,250,585,M,Juniors 20-23,Wraps,SBD
+1,Calvin King,FL,110,107.4,21,227.5,160,232.5,620,M,Juniors 20-23,Wraps,SBD
 1,Jacob Sundey,FL,90,90,22,290,190,282.5,762.5,M,Open,Wraps,SBD
 1,Ryan Abernethy,FL,110,103.7,28,225,140,272.5,637.5,M,Open,Wraps,SBD
-1,Judson Costas,FL,90,89.1,58,182.5,137.5,205,525,M,Master 55-59,Wraps,SBD
-1,Shawn Woolcock,FL,125,122.1,40,272.5,142.5,291,706,M,Master 40-44,Wraps,SBD
-1,Steven Roberts,FL,90,88.6,20,,145,,145,M,Junior 20-23,Raw,B
+1,Judson Costas,FL,90,89.1,58,182.5,137.5,205,525,M,Masters 55-59,Wraps,SBD
+1,Shawn Woolcock,FL,125,122.1,40,272.5,142.5,291,706,M,Masters 40-44,Wraps,SBD
+1,Steven Roberts,FL,90,88.6,20,,145,,145,M,Juniors 20-23,Raw,B
 1,Leo Smith,FL,110,109.2,29,,205,,205,M,Open,Raw,B
-1,James Walker,FL,110,103.2,59,,165,,165,M,Master 55-59,Raw,B
+1,James Walker,FL,110,103.2,59,,165,,165,M,Masters 55-59,Raw,B
 1,Joseph Gyurica,FL,90,88.2,28,,,295,295,M,Open,Raw,D

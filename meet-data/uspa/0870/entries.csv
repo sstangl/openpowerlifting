@@ -1,7 +1,7 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Stephanie Duran,WA,56,55.1,23,120,57.5,150,327.5,F,Junior 20-23,Raw,SBD
-1,Serena Dahring,WA,67.5,67,19,97.5,52.5,135,285,F,Junior 18-19,Raw,SBD
-1,Maya Hiebert,NY,75,74.3,21,115,65,132.5,312.5,F,Junior 20-23,Raw,SBD
+1,Stephanie Duran,WA,56,55.1,23,120,57.5,150,327.5,F,Juniors 20-23,Raw,SBD
+1,Serena Dahring,WA,67.5,67,19,97.5,52.5,135,285,F,Juniors 18-19,Raw,SBD
+1,Maya Hiebert,NY,75,74.3,21,115,65,132.5,312.5,F,Juniors 20-23,Raw,SBD
 1,Tiana Morris,WA,52,51.9,28,105,52.5,130,287.5,F,Open,Raw,SBD
 1,Alyssa Micheals,WA,56,55.5,28,120,47.5,142.5,310,F,Open,Raw,SBD
 1,Allie Scott,WA,67.5,67.5,26,132.5,70,157.5,360,F,Open,Raw,SBD
@@ -12,15 +12,15 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Debra Booth,WA,82.5,81.2,52,112.5,72.5,145,330,F,Open,Raw,SBD
 1,Christina Carothers,WA,90+,96.9,28,155,82.5,165,402.5,F,Open,Raw,SBD
 2,Christine Hawkins,WA,90+,130.8,34,112.5,67.5,117.5,297.5,F,Open,Raw,SBD
-1,Becky Enright,WA,67.5,66.8,38,160,75,155,390,F,Submaster 35-39,Raw,SBD
-1,Debra Booth,WA,82.5,81.2,52,112.5,72.5,145,330,F,Master 50-54,Raw,SBD
-1,Jacob Vickers,WA,100,99,15,145,80,190,415,M,Junior 13-15,Raw,SBD
-1,Paul Glenski,WA,75,72.9,17,132.5,85,157.5,375,M,Junior 16-17,Raw,SBD
-1,Max Feng,CA,90,88.9,19,187.5,102.5,242.5,532.5,M,Junior 18-19,Raw,SBD
-1,Christopher Appel,WA,67.5,66.1,23,160,115,170,445,M,Junior 20-23,Raw,SBD
-1,Giremine Ballestra,WA,82.5,78,20,115,87.5,152.5,355,M,Junior 20-23,Raw,SBD
-1,Kevin Beamish,WA,100,98.6,21,210,132.5,262.5,605,M,Junior 20-23,Raw,SBD
-1,Neil Austin,WA,125,117.7,22,250,200,275,725,M,Junior 20-23,Raw,SBD
+1,Becky Enright,WA,67.5,66.8,38,160,75,155,390,F,Submasters 35-39,Raw,SBD
+1,Debra Booth,WA,82.5,81.2,52,112.5,72.5,145,330,F,Masters 50-54,Raw,SBD
+1,Jacob Vickers,WA,100,99,15,145,80,190,415,M,Juniors 13-15,Raw,SBD
+1,Paul Glenski,WA,75,72.9,17,132.5,85,157.5,375,M,Juniors 16-17,Raw,SBD
+1,Max Feng,CA,90,88.9,19,187.5,102.5,242.5,532.5,M,Juniors 18-19,Raw,SBD
+1,Christopher Appel,WA,67.5,66.1,23,160,115,170,445,M,Juniors 20-23,Raw,SBD
+1,Giremine Ballestra,WA,82.5,78,20,115,87.5,152.5,355,M,Juniors 20-23,Raw,SBD
+1,Kevin Beamish,WA,100,98.6,21,210,132.5,262.5,605,M,Juniors 20-23,Raw,SBD
+1,Neil Austin,WA,125,117.7,22,250,200,275,725,M,Juniors 20-23,Raw,SBD
 1,Robert Almazan,WA,67.5,67,27,185,117.5,210,512.5,M,Open,Raw,SBD
 1,Clayton Abalos,WA,75,74.4,27,165,112.5,222.5,500,M,Open,Raw,SBD
 1,Christian Guloy,WA,82.5,75.5,29,220,150,250,620,M,Open,Raw,SBD
@@ -37,22 +37,22 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 2,Brendan Bermea,WA,125,117.6,29,217.5,107.5,245,570,M,Open,Raw,SBD
 1,Justin Pisani,WA,140+,154.4,30,262.5,165,295,722.5,M,Open,Raw,SBD
 2,Rone Gore,WA,140+,164.9,33,150,97.5,165,412.5,M,Open,Raw,SBD
-1,Josh Dotson,WA,100,97.5,39,185,122.5,220,527.5,M,Submaster 35-39,Raw,SBD
-1,Terrence Austin,WA,75,72.9,56,130,115,185,430,M,Master 55-59,Raw,SBD
-1,Ron White,WA,75,74.5,75,45,75,87.5,207.5,M,Master 75-79,Raw,SBD
+1,Josh Dotson,WA,100,97.5,39,185,122.5,220,527.5,M,Submasters 35-39,Raw,SBD
+1,Terrence Austin,WA,75,72.9,56,130,115,185,430,M,Masters 55-59,Raw,SBD
+1,Ron White,WA,75,74.5,75,45,75,87.5,207.5,M,Masters 75-79,Raw,SBD
 1,Tasha Whelan,WA,67.5,65.5,32,172.5,90,202.5,465,F,Open,Wraps,SBD
 1,Tiffany Gardner,WA,90+,107.3,33,112.5,57.5,145,315,F,Open,Wraps,SBD
 1,Dan Stephenson,WA,100,95.5,28,282.5,175,275,732.5,M,Open,Wraps,SBD
-1,Jack Sharp,WA,140,132,44,227.5,137.5,260,625,M,Master 40-44,Wraps,SBD
-1,Craig Orwin,WA,90,88.2,23,245,140,205,590,M,Junior 20-23,Single-ply,SBD
+1,Jack Sharp,WA,140,132,44,227.5,137.5,260,625,M,Masters 40-44,Wraps,SBD
+1,Craig Orwin,WA,90,88.2,23,245,140,205,590,M,Juniors 20-23,Single-ply,SBD
 1,Craig Orwin,WA,90,88.2,23,245,140,205,590,M,Open,Single-ply,SBD
-1,Hope Thompson,WA,90+,92.1,36,,55,,55,F,Submaster 35-39,Raw,B
-1,Nathan Smith #2,WA,140,133.2,19,,122.5,,122.5,M,Junior 18-19,Raw,B
-1,Eben Erickson,WA,82.5,80.1,47,,137.5,,137.5,M,Master 45-49,Raw,B
-1,Vince Eldridge,WA,140+,151.6,52,,125,,125,M,Master 50-54,Raw,B
-1,Terrence Austin,WA,75,72.9,56,,115,,115,M,Master 55-59,Raw,B
-1,Phil Fernandez,WA,90,85.5,57,,122.5,,122.5,M,Master 55-59,Single-ply,B
-1,Hope Thompson,WA,90+,92.1,36,,,122.5,122.5,F,Submaster 35-39,Raw,D
-1,Nathan Smith #2,WA,140,133.2,19,,,210,210,M,Junior 18-19,Raw,D
-1,Eben Erickson,WA,82.5,80.1,47,,,137.5,137.5,M,Master 45-49,Raw,D
-1,Terrence Austin,WA,75,72.9,56,,,185,185,M,Master 55-59,Raw,D
+1,Hope Thompson,WA,90+,92.1,36,,55,,55,F,Submasters 35-39,Raw,B
+1,Nathan Smith #2,WA,140,133.2,19,,122.5,,122.5,M,Juniors 18-19,Raw,B
+1,Eben Erickson,WA,82.5,80.1,47,,137.5,,137.5,M,Masters 45-49,Raw,B
+1,Vince Eldridge,WA,140+,151.6,52,,125,,125,M,Masters 50-54,Raw,B
+1,Terrence Austin,WA,75,72.9,56,,115,,115,M,Masters 55-59,Raw,B
+1,Phil Fernandez,WA,90,85.5,57,,122.5,,122.5,M,Masters 55-59,Single-ply,B
+1,Hope Thompson,WA,90+,92.1,36,,,122.5,122.5,F,Submasters 35-39,Raw,D
+1,Nathan Smith #2,WA,140,133.2,19,,,210,210,M,Juniors 18-19,Raw,D
+1,Eben Erickson,WA,82.5,80.1,47,,,137.5,137.5,M,Masters 45-49,Raw,D
+1,Terrence Austin,WA,75,72.9,56,,,185,185,M,Masters 55-59,Raw,D

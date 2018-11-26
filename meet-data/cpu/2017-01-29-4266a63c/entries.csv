@@ -1,7 +1,7 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Matt Parry,AB,,120,Open,212.5,172.5,220.0,605.0,Single-ply,1
-SBD,M,Derrick Chuong,AB,,83,Sub-Junior,200.0,130.0,227.5,557.5,Raw,1
-SBD,M,Tommy Xu,AB,,66,Sub-Junior,155.0,97.5,175.0,427.5,Raw,1
+SBD,M,Derrick Chuong,AB,,83,Sub-Juniors,200.0,130.0,227.5,557.5,Raw,1
+SBD,M,Tommy Xu,AB,,66,Sub-Juniors,155.0,97.5,175.0,427.5,Raw,1
 SBD,M,Mike Crowe,AB,,93,Open,195.0,160.0,225.0,580.0,Raw,2
 SBD,M,Jayce Plouffe,AB,,93,Open,232.5,142.5,247.5,622.5,Raw,1
 SBD,M,Jason Brien,AB,,93,Open,192.5,140.0,230.0,562.5,Raw,3
@@ -26,21 +26,21 @@ SBD,M,Mitch Jacobsen,AB,,120,Open,210.0,135.0,250.0,595.0,Raw,3
 SBD,M,Eric Sondergard,AB,,120,Open,265.0,130.0,257.5,652.5,Raw,1
 SBD,M,Carl Lehr,AB,,120,Open,212.5,115.0,250.0,577.5,Raw,4
 SBD,M,Cameron Kennedy,AB,,105,Open,230.0,157.5,237.5,625.0,Raw,1
-SBD,F,Hannah Gray,AB,,84+,Master 1,110.0,60.0,150.0,320.0,Raw,1
-SBD,F,Yvonne Sanche,AB,,84,Master 1,107.5,70.0,137.5,315.0,Raw,1
-SBD,F,Jody McPeak,AB,,63,Master 1,110.0,57.5,132.5,300.0,Raw,1
-SBD,F,Debra Chrenek,AB,,63,Master 1,100.0,52.5,120.0,272.5,Raw,2
-SBD,M,Joe Reid,AB,,120,Master 1,200.0,135.0,235.0,570.0,Raw,2
-SBD,M,Adam Price,AB,,120,Master 1,275.0,187.5,262.5,725.0,Raw,1
-SBD,M,Wayne Burry,AB,,105,Master 1,192.5,110.0,237.5,540.0,Raw,1
-SBD,M,Ravjot Dhillon,AB,,93,Junior,175.0,130.0,217.5,522.5,Raw,1
-SBD,F,Kamille Lim,AB,,72,Junior,105.0,52.5,120.0,277.5,Raw,1
-SBD,M,Jordan Hoang,AB,,66,Junior,160.0,100.0,197.5,457.5,Raw,1
-SBD,M,Irwin Tang,AB,,66,Junior,147.5,92.5,165.0,405.0,Raw,3
-SBD,M,Arnold Vendiola,AB,,66,Junior,167.5,87.5,202.5,457.5,Raw,2
-SBD,F,Meghan Law,AB,,63,Junior,95.0,50.0,105.0,250.0,Raw,1
-SBD,F,Nicolette VanLanduyt,AB,,57,Junior,70.0,45.0,115.0,230.0,Raw,1
-SBD,M,Kai Klatt,AB,,120,Junior,220.0,160.0,262.5,642.5,Raw,1
+SBD,F,Hannah Gray,AB,,84+,Masters 1,110.0,60.0,150.0,320.0,Raw,1
+SBD,F,Yvonne Sanche,AB,,84,Masters 1,107.5,70.0,137.5,315.0,Raw,1
+SBD,F,Jody McPeak,AB,,63,Masters 1,110.0,57.5,132.5,300.0,Raw,1
+SBD,F,Debra Chrenek,AB,,63,Masters 1,100.0,52.5,120.0,272.5,Raw,2
+SBD,M,Joe Reid,AB,,120,Masters 1,200.0,135.0,235.0,570.0,Raw,2
+SBD,M,Adam Price,AB,,120,Masters 1,275.0,187.5,262.5,725.0,Raw,1
+SBD,M,Wayne Burry,AB,,105,Masters 1,192.5,110.0,237.5,540.0,Raw,1
+SBD,M,Ravjot Dhillon,AB,,93,Juniors,175.0,130.0,217.5,522.5,Raw,1
+SBD,F,Kamille Lim,AB,,72,Juniors,105.0,52.5,120.0,277.5,Raw,1
+SBD,M,Jordan Hoang,AB,,66,Juniors,160.0,100.0,197.5,457.5,Raw,1
+SBD,M,Irwin Tang,AB,,66,Juniors,147.5,92.5,165.0,405.0,Raw,3
+SBD,M,Arnold Vendiola,AB,,66,Juniors,167.5,87.5,202.5,457.5,Raw,2
+SBD,F,Meghan Law,AB,,63,Juniors,95.0,50.0,105.0,250.0,Raw,1
+SBD,F,Nicolette VanLanduyt,AB,,57,Juniors,70.0,45.0,115.0,230.0,Raw,1
+SBD,M,Kai Klatt,AB,,120,Juniors,220.0,160.0,262.5,642.5,Raw,1
 B,M,Kris Hynes,AB,,105,Open,,170.0,,170.0,Single-ply,1
 B,M,Jordan Elhatton,AB,,93,Open,,112.5,,112.5,Raw,1
 B,F,Lisa Martinuk,AB,,84,Open,,40.0,,40.0,Raw,1
@@ -51,6 +51,6 @@ B,F,Maria Frank,AB,,63,Open,,82.5,,82.5,Raw,1
 B,M,Ross Allard,AB,,120,Open,,130.0,,130.0,Raw,1
 B,M,Daniel Nikiforuk,AB,,105,Open,,170.0,,170.0,Raw,1
 B,M,Alexander Vassilimis,AB,,105,Open,,145.0,,145.0,Raw,2
-B,F,Hannah Gray,AB,,84+,Master 1,,62.5,,62.5,Raw,1
-B,M,Ryan Lawley,AB,,74,Master 1,,100.0,,100.0,Raw,1
-B,M,Adam Price,AB,,120,Master 1,,185.0,,185.0,Raw,1
+B,F,Hannah Gray,AB,,84+,Masters 1,,62.5,,62.5,Raw,1
+B,M,Ryan Lawley,AB,,74,Masters 1,,100.0,,100.0,Raw,1
+B,M,Adam Price,AB,,120,Masters 1,,185.0,,185.0,Raw,1

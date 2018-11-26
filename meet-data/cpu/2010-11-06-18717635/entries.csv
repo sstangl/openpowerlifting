@@ -1,10 +1,10 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Samuel B. Gasparo,QU,82.3,82.5,Sub-Junior,180.0,132.5,200.0,512.5,Single-ply,2
-SBD,M,Dale Bélanger-Bouffard,QU,80.1,82.5,Sub-Junior,251.0,202.5,220.0,673.5,Single-ply,1
-SBD,M,Alexandre Tremblay,QU,69.2,75,Sub-Junior,142.5,97.5,152.5,392.5,Single-ply,1
-SBD,M,Simon Miller,QU,59.3,60,Sub-Junior,120.0,97.5,140.0,357.5,Single-ply,1
-SBD,F,Savanah Porzuczek,QU,53.7,56,Sub-Junior,85.0,57.5,132.5,275.0,Single-ply,1
-SBD,M,Nicolas Rioux,QU,48.5,52,Sub-Junior,72.5,40.0,100.0,212.5,Single-ply,1
+SBD,M,Samuel B. Gasparo,QU,82.3,82.5,Sub-Juniors,180.0,132.5,200.0,512.5,Single-ply,2
+SBD,M,Dale Bélanger-Bouffard,QU,80.1,82.5,Sub-Juniors,251.0,202.5,220.0,673.5,Single-ply,1
+SBD,M,Alexandre Tremblay,QU,69.2,75,Sub-Juniors,142.5,97.5,152.5,392.5,Single-ply,1
+SBD,M,Simon Miller,QU,59.3,60,Sub-Juniors,120.0,97.5,140.0,357.5,Single-ply,1
+SBD,F,Savanah Porzuczek,QU,53.7,56,Sub-Juniors,85.0,57.5,132.5,275.0,Single-ply,1
+SBD,M,Nicolas Rioux,QU,48.5,52,Sub-Juniors,72.5,40.0,100.0,212.5,Single-ply,1
 SBD,M,J-Philippe Lachance,QU,89.8,90,Open,232.5,165.0,260.0,657.5,Single-ply,1
 SBD,M,Alan Boudreault,QU,87.4,90,Open,205.0,135.0,207.5,547.5,Single-ply,2
 SBD,M,Stéphane Chiquette,QU,78.0,82.5,Open,192.5,142.5,227.5,562.5,Single-ply,2
@@ -17,21 +17,21 @@ SBD,F,Angie Lavallée,QU,55.1,56,Open,117.5,70.0,125.0,312.5,Single-ply,1
 SBD,M,Patrick Doucet,QU,120.2,125,Open,237.5,212.5,230.0,680.0,Single-ply,1
 SBD,M,Joël Boulianne,QU,101.3,110,Open,265.0,192.5,265.0,722.5,Single-ply,1
 SBD,M,Jonathan Gilbert,QU,96.8,100,Open,240.0,182.5,265.0,687.5,Single-ply,1
-SBD,F,Janet Warne,QU,59.3,60,Master 2,112.5,70.0,117.5,300.0,Single-ply,1
-SBD,M,François Cazes,QU,74.5,75,Master 1,172.5,115.0,190.0,477.5,Single-ply,1
-SBD,F,Odette Michaud,QU,39.6,44,Master 1,85.0,37.5,127.5,250.0,Single-ply,1
-SBD,M,Francis Rousseau,QU,119.3,125,Master 1,305.0,227.5,275.0,807.5,Single-ply,1
-SBD,M,Jacques Potvin,QU,97.1,100,Master 1,240.0,192.5,240.0,672.5,Single-ply,1
-SBD,M,Yann Tremblay,QU,82.9,90,Junior,182.5,142.5,227.5,552.5,Single-ply,2
-SBD,M,Nicholas L-Fogel,QU,84.8,90,Junior,150.0,80.0,190.0,420.0,Single-ply,3
-SBD,M,Christopher Neveu,QU,88.2,90,Junior,245.0,157.5,235.0,637.5,Single-ply,1
-SBD,M,Yves Brousseau,QU,74.5,75,Junior,272.5,202.5,235.0,710.0,Single-ply,1
-SBD,M,Laurent Fontaine,QU,103.5,110,Junior,270.0,200.0,255.0,725.0,Single-ply,1
-B,M,Olivier Dufour,QU,79.5,82.5,Sub-Junior,,165.0,,165.0,Single-ply,2
-B,M,Dale Bélanger-Bouffard,QU,80.1,82.5,Sub-Junior,,205.0,,205.0,Single-ply,1
+SBD,F,Janet Warne,QU,59.3,60,Masters 2,112.5,70.0,117.5,300.0,Single-ply,1
+SBD,M,François Cazes,QU,74.5,75,Masters 1,172.5,115.0,190.0,477.5,Single-ply,1
+SBD,F,Odette Michaud,QU,39.6,44,Masters 1,85.0,37.5,127.5,250.0,Single-ply,1
+SBD,M,Francis Rousseau,QU,119.3,125,Masters 1,305.0,227.5,275.0,807.5,Single-ply,1
+SBD,M,Jacques Potvin,QU,97.1,100,Masters 1,240.0,192.5,240.0,672.5,Single-ply,1
+SBD,M,Yann Tremblay,QU,82.9,90,Juniors,182.5,142.5,227.5,552.5,Single-ply,2
+SBD,M,Nicholas L-Fogel,QU,84.8,90,Juniors,150.0,80.0,190.0,420.0,Single-ply,3
+SBD,M,Christopher Neveu,QU,88.2,90,Juniors,245.0,157.5,235.0,637.5,Single-ply,1
+SBD,M,Yves Brousseau,QU,74.5,75,Juniors,272.5,202.5,235.0,710.0,Single-ply,1
+SBD,M,Laurent Fontaine,QU,103.5,110,Juniors,270.0,200.0,255.0,725.0,Single-ply,1
+B,M,Olivier Dufour,QU,79.5,82.5,Sub-Juniors,,165.0,,165.0,Single-ply,2
+B,M,Dale Bélanger-Bouffard,QU,80.1,82.5,Sub-Juniors,,205.0,,205.0,Single-ply,1
 B,M,Sébastien Ouellet,QU,62.5,67.5,Open,,117.5,,117.5,Single-ply,1
 B,F,Karyne Turcotte,QU,66.1,67.5,Open,,90.0,,90.0,Single-ply,1
 B,M,Michel Lebrun,QU,104.6,110,Open,,217.5,,217.5,Single-ply,1
-B,F,Denise Ouellet,QU,73.2,75,Master 3,,60.0,,60.0,Single-ply,1
-B,M,Martin Ferland,QU,108.0,110,Master 1,,200.0,,200.0,Single-ply,1
-B,M,Henri-Paul Tremblay,QU,128.6,125+,Junior,,200.0,,200.0,Single-ply,1
+B,F,Denise Ouellet,QU,73.2,75,Masters 3,,60.0,,60.0,Single-ply,1
+B,M,Martin Ferland,QU,108.0,110,Masters 1,,200.0,,200.0,Single-ply,1
+B,M,Henri-Paul Tremblay,QU,128.6,125+,Juniors,,200.0,,200.0,Single-ply,1

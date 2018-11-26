@@ -1,9 +1,9 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Marian Martinez,CA,48,47.7,23,92.5,47.5,120,260,F,Junior 20-23,Raw,SBD
-1,Jane Lee,CA,56,53.7,23,97.5,57.5,112.5,267.5,F,Junior 20-23,Raw,SBD
-1,Jennifer Le,CA,60,59.4,21,110,52.5,145,307.5,F,Junior 20-23,Raw,SBD
-1,Elsie Woo,CA,67.5,64.7,22,120,75,142.5,337.5,F,Junior 20-23,Raw,SBD
-1,Hanna Alvarez,CA,90,87.8,23,140,60,127.5,327.5,F,Junior 20-23,Raw,SBD
+1,Marian Martinez,CA,48,47.7,23,92.5,47.5,120,260,F,Juniors 20-23,Raw,SBD
+1,Jane Lee,CA,56,53.7,23,97.5,57.5,112.5,267.5,F,Juniors 20-23,Raw,SBD
+1,Jennifer Le,CA,60,59.4,21,110,52.5,145,307.5,F,Juniors 20-23,Raw,SBD
+1,Elsie Woo,CA,67.5,64.7,22,120,75,142.5,337.5,F,Juniors 20-23,Raw,SBD
+1,Hanna Alvarez,CA,90,87.8,23,140,60,127.5,327.5,F,Juniors 20-23,Raw,SBD
 1,Marian Martinez,CA,48,47.7,23,92.5,47.5,120,260,F,Open,Raw,SBD
 1,Aggie Punzalan,CA,56,52.5,30,90,55,117.5,262.5,F,Open,Raw,SBD
 2,Amanda Carillo,CA,56,54,25,82.5,47.5,110,240,F,Open,Raw,SBD
@@ -16,17 +16,17 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 3,Emma McWilliams,CA,75,71.3,23,100,65,125,290,F,Open,Raw,SBD
 1,Nyssa Leon,CA,82.5,80.3,27,127.5,57.5,172.5,357.5,F,Open,Raw,SBD
 1,Hanna Alvarez,CA,90,87.8,23,140,60,127.5,327.5,F,Open,Raw,SBD
-1,Leah Turano,CA,52,50,35,97.5,52.5,122.5,272.5,F,Submaster 35-39,Raw,SBD
-1,Alec Lord,CA,67.5,63.5,19,112.5,70,120,302.5,M,Junior 18-19,Raw,SBD
-1,Haik Gavadian,CA,75,72.5,18,157.5,110,162.5,430,M,Junior 18-19,Raw,SBD
-1,Erik Gomez,CA,75,72.7,21,175,105,200,480,M,Junior 20-23,Raw,SBD
-2,James Taylor,CA,75,72.1,21,147.5,125,200,472.5,M,Junior 20-23,Raw,SBD
-1,Daryll Layugan,CA,82.5,81.3,23,225,137.5,242.5,605,M,Junior 20-23,Raw,SBD
-2,Dylan Zastrow,CA,82.5,81.6,23,205,132.5,247.5,585,M,Junior 20-23,Raw,SBD
-1,Jordan Fajardo,CA,90,88.1,17,215,130,232.5,577.5,M,Junior 16-17,Raw,SBD
-DQ,Everett Saldana,CA,90,88.8,18,-145,102.5,197.5,,M,Junior 18-19,Raw,SBD
-DQ,Randy Sue,CA,100,92.1,22,247.5,-152.5,,,M,Junior 20-23,Raw,SBD
-1,Lu Cordero,CA,125,112.8,23,290,192.5,320,802.5,M,Junior 20-23,Raw,SBD
+1,Leah Turano,CA,52,50,35,97.5,52.5,122.5,272.5,F,Submasters 35-39,Raw,SBD
+1,Alec Lord,CA,67.5,63.5,19,112.5,70,120,302.5,M,Juniors 18-19,Raw,SBD
+1,Haik Gavadian,CA,75,72.5,18,157.5,110,162.5,430,M,Juniors 18-19,Raw,SBD
+1,Erik Gomez,CA,75,72.7,21,175,105,200,480,M,Juniors 20-23,Raw,SBD
+2,James Taylor,CA,75,72.1,21,147.5,125,200,472.5,M,Juniors 20-23,Raw,SBD
+1,Daryll Layugan,CA,82.5,81.3,23,225,137.5,242.5,605,M,Juniors 20-23,Raw,SBD
+2,Dylan Zastrow,CA,82.5,81.6,23,205,132.5,247.5,585,M,Juniors 20-23,Raw,SBD
+1,Jordan Fajardo,CA,90,88.1,17,215,130,232.5,577.5,M,Juniors 16-17,Raw,SBD
+DQ,Everett Saldana,CA,90,88.8,18,-145,102.5,197.5,,M,Juniors 18-19,Raw,SBD
+DQ,Randy Sue,CA,100,92.1,22,247.5,-152.5,,,M,Juniors 20-23,Raw,SBD
+1,Lu Cordero,CA,125,112.8,23,290,192.5,320,802.5,M,Juniors 20-23,Raw,SBD
 1,Tristan Mejia,CA,60,58.8,27,137.5,92.5,185,415,M,Open,Raw,SBD
 2,Michael Shin,CA,60,59.2,29,130,95,157.5,382.5,M,Open,Raw,SBD
 1,Aidan Vosooghi,CA,67.5,62.2,22,107.5,77.5,137.5,322.5,M,Open,Raw,SBD
@@ -50,17 +50,17 @@ DQ,Randy Sue,CA,100,92.1,22,247.5,-152.5,,,M,Junior 20-23,Raw,SBD
 3,Ron Fitzgerald,CA,100,94,26,240,150,237.5,627.5,M,Open,Raw,SBD
 4,Ralph Punzalan,CA,100,98.5,33,195,150,192.5,537.5,M,Open,Raw,SBD
 1,Aaron Barrera,CA,110,106.2,23,180,130,227.5,537.5,M,Open,Raw,SBD
-1,Jason Kelske,CA,100,95.6,35,220,142.5,272.5,635,M,Submaster 35-39,Raw,SBD
-1,Dale Sue,CA,67.5,65.9,57,95,90,165,350,M,Master 55-59,Raw,SBD
-1,Charles Tseng,CA,100,97.6,40,165,130,240,535,M,Master 40-44,Raw,SBD
-1,Jacob Ross,CA,110,107.5,40,167.5,130,207.5,505,M,Master 40-44,Raw,SBD
-1,Tim Fitzgerald,CA,110,109.3,47,157.5,132.5,182.5,472.5,M,Master 45-49,Raw,SBD
+1,Jason Kelske,CA,100,95.6,35,220,142.5,272.5,635,M,Submasters 35-39,Raw,SBD
+1,Dale Sue,CA,67.5,65.9,57,95,90,165,350,M,Masters 55-59,Raw,SBD
+1,Charles Tseng,CA,100,97.6,40,165,130,240,535,M,Masters 40-44,Raw,SBD
+1,Jacob Ross,CA,110,107.5,40,167.5,130,207.5,505,M,Masters 40-44,Raw,SBD
+1,Tim Fitzgerald,CA,110,109.3,47,157.5,132.5,182.5,472.5,M,Masters 45-49,Raw,SBD
 1,Jared Robinson,CA,110,108.5,39,235,185,272.5,692.5,M,Open,Wraps,SBD
 DQ,Ryan Frazier,CA,125,120.2,28,205,-170,230,,M,Open,Wraps,SBD
-1,Tom Lujan,CA,82.5,82.4,54,140,90,160,390,M,Master 50-54,Wraps,SBD
-1,Darren Robuck,CA,110,107.3,50,212.5,155,227.5,595,M,Master 50-54,Wraps,SBD
-1,Arthur Fu,CA,82.5,80.8,64,182.5,145,182.5,510,M,Master 60-64,Single-ply,SBD
-DQ,Nicholas Householder,CA,82.5,79,19,,-107.5,,,M,Junior 18-19,Raw,B
+1,Tom Lujan,CA,82.5,82.4,54,140,90,160,390,M,Masters 50-54,Wraps,SBD
+1,Darren Robuck,CA,110,107.3,50,212.5,155,227.5,595,M,Masters 50-54,Wraps,SBD
+1,Arthur Fu,CA,82.5,80.8,64,182.5,145,182.5,510,M,Masters 60-64,Single-ply,SBD
+DQ,Nicholas Householder,CA,82.5,79,19,,-107.5,,,M,Juniors 18-19,Raw,B
 1,Charles Rocamboli,CA,60,59.3,40,,117.5,,117.5,M,Open,Raw,B
 1,Crelson Cabuco,CA,75,73.2,31,,110,,110,M,Open,Raw,B
 1,Ralph Punzalan,CA,100,98.5,33,,150,,150,M,Open,Raw,B

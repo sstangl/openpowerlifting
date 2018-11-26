@@ -1,15 +1,15 @@
 [divisions]
-    subjunior = {name="Subjunior", min=0, max=20}
-    junior = {name="Junior", min=21, max=23}
+    subjunior = {name="Sub-Juniors", min=0, max=20}
+    junior = {name="Juniors", min=21, max=23}
     open = {name="Open", min=0, max=999}
-    master40_44 = {name="Master 40-44", min=40, max=44}
-    master45_49 = {name="Master 45-49", min=45, max=49}
-    master50_54 = {name="Master 50-54", min=50, max=54}
-    master55_59 = {name="Master 55-59", min=55, max=59}
-    master60_64 = {name="Master 60-64", min=60, max=64}
-    master65_69 = {name="Master 65-69", min=65, max=69}
-    master70_74 = {name="Master 70-74", min=70, max=74}
-    master75_79 = {name="Master 75-79", min=75, max=79}
+    master40_44 = {name="Masters 40-44", min=40, max=44}
+    master45_49 = {name="Masters 45-49", min=45, max=49}
+    master50_54 = {name="Masters 50-54", min=50, max=54}
+    master55_59 = {name="Masters 55-59", min=55, max=59}
+    master60_64 = {name="Masters 60-64", min=60, max=64}
+    master65_69 = {name="Masters 65-69", min=65, max=69}
+    master70_74 = {name="Masters 70-74", min=70, max=74}
+    master75_79 = {name="Masters 75-79", min=75, max=79}
 
 [weightclasses.default_M]
     classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]

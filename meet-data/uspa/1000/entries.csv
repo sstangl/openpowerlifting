@@ -1,8 +1,8 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Alyssa Montgomery,KY,56,52.6,20,80,52.5,122.5,255,F,Junior 20-23,Raw,SBD
-1,Michaela Dukes,KY,67.5,64.2,17,85,52.5,122.5,260,F,Junior 16-17,Raw,SBD
-DQ,Victoria Thiery,KY,67.5,67.1,22,105,,,,F,Junior 20-23,Raw,SBD
-1,Cierra Crowe,KY,75,73.6,19,130,70,170,370,F,Junior 18-19,Raw,SBD
+1,Alyssa Montgomery,KY,56,52.6,20,80,52.5,122.5,255,F,Juniors 20-23,Raw,SBD
+1,Michaela Dukes,KY,67.5,64.2,17,85,52.5,122.5,260,F,Juniors 16-17,Raw,SBD
+DQ,Victoria Thiery,KY,67.5,67.1,22,105,,,,F,Juniors 20-23,Raw,SBD
+1,Cierra Crowe,KY,75,73.6,19,130,70,170,370,F,Juniors 18-19,Raw,SBD
 1,Amber Chapman,KY,48,46.8,29,82.5,62.5,102.5,247.5,F,Open,Raw,SBD
 1,Keiko Warner,KY,56,56,30,125,70,137.5,332.5,F,Open,Raw,SBD
 2,Alyssa Montgomery,KY,56,52.6,20,80,52.5,122.5,255,F,Open,Raw,SBD
@@ -25,17 +25,17 @@ DQ,Victoria Thiery,KY,67.5,67.1,22,105,,,,F,Open,Raw,SBD
 1,Marie Metcalf,KY,90,87.5,69,95,52.5,117.5,265,F,Open,Raw,SBD
 2,Tammy Jones,IN,90,86.9,40,72.5,60,95,227.5,F,Open,Raw,SBD
 1,Amanda Hayes,KY,90+,115.4,26,132.5,62.5,150,345,F,Open,Raw,SBD
-1,Cynthia Collins,KY,75,71,62,40,40,127.5,207.5,F,Master 60-64,Raw,SBD
-1,Tammy Jones,IN,90,86.9,40,72.5,60,95,227.5,F,Master 40-44,Raw,SBD
-1,Marie Metcalf,KY,90,87.5,69,95,52.5,117.5,265,F,Master 65-69,Raw,SBD
-1,Brian Dodge,IL,75,72.2,22,185,102.5,207.5,495,M,Junior 20-23,Raw,SBD
-1,Ethan O'Boyle,NE,82.5,80,19,177.5,125,195,497.5,M,Junior 18-19,Raw,SBD
-1,Cody Kramer,KY,90,87.8,16,182.5,142.5,205,530,M,Junior 16-17,Raw,SBD
-1,Ryan Delahanty,OH,90,87.6,19,185,122.5,242.5,550,M,Junior 18-19,Raw,SBD
-1,Kyj Mandzy,KY,90,89.3,23,205,147.5,217.5,570,M,Junior 20-23,Raw,SBD
-1,Jonah Plummer,KY,100,98.9,16,150,72.5,185,407.5,M,Junior 16-17,Raw,SBD
-1,Reese Menke,KY,100,98.8,21,207.5,147.5,242.5,597.5,M,Junior 20-23,Raw,SBD
-1,Clayton Condon,KY,110,104.6,22,227.5,150,250,627.5,M,Junior 20-23,Raw,SBD
+1,Cynthia Collins,KY,75,71,62,40,40,127.5,207.5,F,Masters 60-64,Raw,SBD
+1,Tammy Jones,IN,90,86.9,40,72.5,60,95,227.5,F,Masters 40-44,Raw,SBD
+1,Marie Metcalf,KY,90,87.5,69,95,52.5,117.5,265,F,Masters 65-69,Raw,SBD
+1,Brian Dodge,IL,75,72.2,22,185,102.5,207.5,495,M,Juniors 20-23,Raw,SBD
+1,Ethan O'Boyle,NE,82.5,80,19,177.5,125,195,497.5,M,Juniors 18-19,Raw,SBD
+1,Cody Kramer,KY,90,87.8,16,182.5,142.5,205,530,M,Juniors 16-17,Raw,SBD
+1,Ryan Delahanty,OH,90,87.6,19,185,122.5,242.5,550,M,Juniors 18-19,Raw,SBD
+1,Kyj Mandzy,KY,90,89.3,23,205,147.5,217.5,570,M,Juniors 20-23,Raw,SBD
+1,Jonah Plummer,KY,100,98.9,16,150,72.5,185,407.5,M,Juniors 16-17,Raw,SBD
+1,Reese Menke,KY,100,98.8,21,207.5,147.5,242.5,597.5,M,Juniors 20-23,Raw,SBD
+1,Clayton Condon,KY,110,104.6,22,227.5,150,250,627.5,M,Juniors 20-23,Raw,SBD
 1,Brian Dodge,IL,75,72.2,22,185,102.5,207.5,495,M,Open,Raw,SBD
 2,Don Jones,KY,75,74.1,61,107.5,72.5,125,305,M,Open,Raw,SBD
 1,Levi Perez,KY,82.5,80.7,25,215,155,250,620,M,Open,Raw,SBD
@@ -76,22 +76,22 @@ DQ,Ronald Perkins,IN,100,90.7,25,,,,,M,Open,Raw,SBD
 DQ,Joshua Stilger,IN,110,101.1,27,152.5,,,,M,Open,Raw,SBD
 1,Douglas Blank,KY,125,111.5,27,210,162.5,230,602.5,M,Open,Raw,SBD
 DQ,Jason Belcher,WV,140,138.6,36,,,,,M,Open,Raw,SBD
-1,James Masek,IN,90,83.5,38,140,97.5,187.5,425,M,Submaster 35-39,Raw,SBD
-1,Stephen Potts,KY,100,94.9,39,230,175,262.5,667.5,M,Submaster 35-39,Raw,SBD
-2,Denver Saunders,KY,100,98.6,38,212.5,155,240,607.5,M,Submaster 35-39,Raw,SBD
-DQ,Jason Belcher,WV,140,138.6,36,,,,,M,Submaster 35-39,Raw,SBD
-1,Don Jones,KY,75,74.1,61,107.5,72.5,125,305,M,Master 60-64,Raw,SBD
-1,Michael Morgan,KY,82.5,79.9,56,145,115,182.5,442.5,M,Master 55-59,Raw,SBD
-1,Charliann Martin,KY,67.5,66.5,22,92.5,42.5,117.5,252.5,F,Junior 20-23,Wraps,SBD
-1,Natalie Hayden,KY,82.5,80.1,15,110,62.5,130,302.5,F,Junior 13-15,Wraps,SBD
+1,James Masek,IN,90,83.5,38,140,97.5,187.5,425,M,Submasters 35-39,Raw,SBD
+1,Stephen Potts,KY,100,94.9,39,230,175,262.5,667.5,M,Submasters 35-39,Raw,SBD
+2,Denver Saunders,KY,100,98.6,38,212.5,155,240,607.5,M,Submasters 35-39,Raw,SBD
+DQ,Jason Belcher,WV,140,138.6,36,,,,,M,Submasters 35-39,Raw,SBD
+1,Don Jones,KY,75,74.1,61,107.5,72.5,125,305,M,Masters 60-64,Raw,SBD
+1,Michael Morgan,KY,82.5,79.9,56,145,115,182.5,442.5,M,Masters 55-59,Raw,SBD
+1,Charliann Martin,KY,67.5,66.5,22,92.5,42.5,117.5,252.5,F,Juniors 20-23,Wraps,SBD
+1,Natalie Hayden,KY,82.5,80.1,15,110,62.5,130,302.5,F,Juniors 13-15,Wraps,SBD
 1,Charliann Martin,KY,67.5,66.5,22,92.5,42.5,117.5,252.5,F,Open,Wraps,SBD
 1,Natalie Hayden,KY,82.5,80.1,15,110,62.5,130,302.5,F,Open,Wraps,SBD
 1,Britta Maggard,KY,90,84.9,31,172.5,95,192.5,460,F,Open,Wraps,SBD
 1,Kelli Chapman,KY,90+,103.2,24,120,75,145,340,F,Open,Wraps,SBD
-1,Alex Tindal,TN,75,74.7,20,265,160,282.5,707.5,M,Junior 20-23,Wraps,SBD
-1,Will Birch,IN,90,87.8,22,220,142.5,232.5,595,M,Junior 20-23,Wraps,SBD
-1,Jared Roosa,IL,110,103.6,23,250,170,230,650,M,Junior 20-23,Wraps,SBD
-1,Griffin Uhl,IN,125,118.2,23,337.5,205,365,907.5,M,Junior 20-23,Wraps,SBD
+1,Alex Tindal,TN,75,74.7,20,265,160,282.5,707.5,M,Juniors 20-23,Wraps,SBD
+1,Will Birch,IN,90,87.8,22,220,142.5,232.5,595,M,Juniors 20-23,Wraps,SBD
+1,Jared Roosa,IL,110,103.6,23,250,170,230,650,M,Juniors 20-23,Wraps,SBD
+1,Griffin Uhl,IN,125,118.2,23,337.5,205,365,907.5,M,Juniors 20-23,Wraps,SBD
 1,Alex Tindal,TN,75,74.7,20,265,160,282.5,707.5,M,Open,Wraps,SBD
 2,Mark Meier,IL,75,74.3,36,177.5,125,232.5,535,M,Open,Wraps,SBD
 3,Logan Wheatley,IN,75,73.6,25,170,100,190,460,M,Open,Wraps,SBD
@@ -112,14 +112,14 @@ DQ,Jason Belcher,WV,140,138.6,36,,,,,M,Submaster 35-39,Raw,SBD
 2,Matt Organ,IL,125,122.9,41,265,195,280,740,M,Open,Wraps,SBD
 1,Jon McKinstry,IL,140,131.6,28,297.5,250,342.5,890,M,Open,Wraps,SBD
 2,Joe Baxter,KY,140,135.6,37,295,172.5,272.5,740,M,Open,Wraps,SBD
-1,Mark Meier,IL,75,74.3,36,177.5,125,232.5,535,M,Submaster 35-39,Wraps,SBD
-1,Jason Davis,KY,90,89.6,39,206,157.5,247.5,611,M,Submaster 35-39,Wraps,SBD
-1,Joe Baxter,KY,140,135.6,37,295,172.5,272.5,740,M,Submaster 35-39,Wraps,SBD
-1,Gary Martin,KY,90,87,60,100,75,170,345,M,Master 60-64,Wraps,SBD
-1,Brian Nolen,KY,110,101.4,44,187.5,157.5,267.5,612.5,M,Master 40-44,Wraps,SBD
-1,Matt Organ,IL,125,122.9,41,265,195,280,740,M,Master 40-44,Wraps,SBD
-1,Kyj Mandzy,KY,90,89.3,23,,147.5,,147.5,M,Junior 20-23,Raw,B
-1,Clayton Condon,KY,110,104.6,22,,150,,150,M,Junior 20-23,Raw,B
+1,Mark Meier,IL,75,74.3,36,177.5,125,232.5,535,M,Submasters 35-39,Wraps,SBD
+1,Jason Davis,KY,90,89.6,39,206,157.5,247.5,611,M,Submasters 35-39,Wraps,SBD
+1,Joe Baxter,KY,140,135.6,37,295,172.5,272.5,740,M,Submasters 35-39,Wraps,SBD
+1,Gary Martin,KY,90,87,60,100,75,170,345,M,Masters 60-64,Wraps,SBD
+1,Brian Nolen,KY,110,101.4,44,187.5,157.5,267.5,612.5,M,Masters 40-44,Wraps,SBD
+1,Matt Organ,IL,125,122.9,41,265,195,280,740,M,Masters 40-44,Wraps,SBD
+1,Kyj Mandzy,KY,90,89.3,23,,147.5,,147.5,M,Juniors 20-23,Raw,B
+1,Clayton Condon,KY,110,104.6,22,,150,,150,M,Juniors 20-23,Raw,B
 1,Kyle Harris,IL,82.5,76.3,29,,127.5,,127.5,M,Open,Raw,B
 1,Kyj Mandzy,KY,90,89.3,23,,147.5,,147.5,M,Open,Raw,B
 1,Clayton Condon,KY,110,104.6,22,,150,,150,M,Open,Raw,B
@@ -128,7 +128,7 @@ DQ,Dustin Minks,IN,140+,141.7,39,,,,,M,Open,Single-ply,B
 2,Michael Morgan,KY,82.5,79.9,56,,,182.5,182.5,M,Open,Raw,D
 1,Travis Urschel,OH,100,98.9,41,,,280,280,M,Open,Raw,D
 1,Robert Hayes,KY,110,105.3,28,,,318,318,M,Open,Raw,D
-1,Michael Morgan,KY,82.5,79.9,56,,,182.5,182.5,M,Master 55-59,Raw,D
-1,Travis Urschel,OH,100,98.9,41,,,280,280,M,Master 40-44,Raw,D
+1,Michael Morgan,KY,82.5,79.9,56,,,182.5,182.5,M,Masters 55-59,Raw,D
+1,Travis Urschel,OH,100,98.9,41,,,280,280,M,Masters 40-44,Raw,D
 1,Carole Yocum,KY,90+,99,48,,60,127.5,187.5,F,Open,Raw,BD
-1,Carole Yocum,KY,90+,99,48,,60,127.5,187.5,F,Master 45-49,Raw,BD
+1,Carole Yocum,KY,90+,99,48,,60,127.5,187.5,F,Masters 45-49,Raw,BD

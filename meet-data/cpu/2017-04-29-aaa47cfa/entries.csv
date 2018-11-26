@@ -1,9 +1,9 @@
 Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
 SBD,M,Mike Loder,NL,104.2,105,Open,260,227.5,275,762.5,Single-ply,1
-SBD,M,Marcus Whiteway,NL,92.9,93,Sub-Junior,125,107.5,165,397.5,Raw,1
-SBD,F,Mackenzie Rose,NL,59.1,63,Sub-Junior,100,53,120,273,Raw,1
-SBD,M,Liam Buckingham,NL,58.6,59,Sub-Junior,100,57.5,140,297.5,Raw,1
-SBD,M,Nathan Hayden,NL,111.9,120,Sub-Junior,207.5,95,217.5,520,Raw,1
+SBD,M,Marcus Whiteway,NL,92.9,93,Sub-Juniors,125,107.5,165,397.5,Raw,1
+SBD,F,Mackenzie Rose,NL,59.1,63,Sub-Juniors,100,53,120,273,Raw,1
+SBD,M,Liam Buckingham,NL,58.6,59,Sub-Juniors,100,57.5,140,297.5,Raw,1
+SBD,M,Nathan Hayden,NL,111.9,120,Sub-Juniors,207.5,95,217.5,520,Raw,1
 SBD,M,Sam Burt,NL,92,93,Open,182.5,147.5,227.5,557.5,Raw,1
 SBD,F,Rebecca Adams,NL,93.3,84+,Open,150,65,162.5,377.5,Raw,2
 SBD,F,Lindsay Hollahan,NL,124,84+,Open,165.5,65,175,405.5,Raw,1
@@ -25,32 +25,32 @@ SBD,F,Michelle Harwood,NL,61.2,63,Open,90,47.5,112.5,250,Raw,4
 SBD,F,Courtney Gibbons,NL,57.2,63,Open,107.5,62.5,115,285,Raw,3
 SBD,M,Gerald Young,NL,172,120+,Open,227.5,140,235,602.5,Raw,1
 SBD,M,Mike Owens,NL,101.2,105,Open,175,100,200,475,Raw,1
-SBD,M,Darren Hann,NL,91.3,93,Master 2,210,115,165,490,Raw,1
-SBD,F,Linda Guillemette,NL,76.8,84,Master 2,92.5,60,127.5,280,Raw,1
-SBD,F,Grace Hudson,NL,75.2,84,Master 2,80,47.5,110,237.5,Raw,2
-SBD,M,Paul Vincent,NL,82.8,83,Master 2,130,80,182.5,392.5,Raw,1
-SBD,F,Anne Beaumaster,NL,58.4,63,Master 2,75,40,92.5,207.5,Raw,1
-SBD,M,Peter Hynes,NL,120.7,120+,Master 2,162.5,100,205,467.5,Raw,1
-SBD,F,Tonya Power,NL,93.8,84+,Master 1,67.5,40,82.5,190,Raw,3
-SBD,F,Cathy Quinlan,NL,91.1,84+,Master 1,130,50,167.5,347.5,Raw,1
-SBD,F,Alisa Cutler,NL,111.1,84+,Master 1,112.5,52.5,167.5,332.5,Raw,2
-SBD,F,Nadine Barter,NL,74.7,84,Master 1,92.5,47.5,102.5,242.5,Raw,2
-SBD,F,Heather Unsworth,NL,78.8,84,Master 1,100,52.5,130,282.5,Raw,1
-SBD,M,Tim Foote,NL,82.6,83,Master 1,150,90,187.5,427.5,Raw,1
-SBD,M,Jay McGrath,NL,64.5,66,Master 1,132.5,92.5,172.5,397.5,Raw,1
-SBD,F,Joanne Rose,NL,61.5,63,Master 1,87.5,45,120,252.5,Raw,1
-SBD,M,DJ Clarke,NL,91.4,93,Junior,232.5,125,237.5,595,Raw,2
-SBD,M,Brandon Goodwin,NL,92.7,93,Junior,210,147.5,240,597.5,Raw,1
-SBD,F,Nicole Goodyear,NL,90.6,84+,Junior,85,60,110,255,Raw,1
-SBD,F,Tara Hudson,NL,69.7,72,Junior,75,47.5,112.5,235,Raw,1
-SBD,F,Olivia Smith,NL,57.5,63,Junior,82.5,37.5,105,225,Raw,1
+SBD,M,Darren Hann,NL,91.3,93,Masters 2,210,115,165,490,Raw,1
+SBD,F,Linda Guillemette,NL,76.8,84,Masters 2,92.5,60,127.5,280,Raw,1
+SBD,F,Grace Hudson,NL,75.2,84,Masters 2,80,47.5,110,237.5,Raw,2
+SBD,M,Paul Vincent,NL,82.8,83,Masters 2,130,80,182.5,392.5,Raw,1
+SBD,F,Anne Beaumaster,NL,58.4,63,Masters 2,75,40,92.5,207.5,Raw,1
+SBD,M,Peter Hynes,NL,120.7,120+,Masters 2,162.5,100,205,467.5,Raw,1
+SBD,F,Tonya Power,NL,93.8,84+,Masters 1,67.5,40,82.5,190,Raw,3
+SBD,F,Cathy Quinlan,NL,91.1,84+,Masters 1,130,50,167.5,347.5,Raw,1
+SBD,F,Alisa Cutler,NL,111.1,84+,Masters 1,112.5,52.5,167.5,332.5,Raw,2
+SBD,F,Nadine Barter,NL,74.7,84,Masters 1,92.5,47.5,102.5,242.5,Raw,2
+SBD,F,Heather Unsworth,NL,78.8,84,Masters 1,100,52.5,130,282.5,Raw,1
+SBD,M,Tim Foote,NL,82.6,83,Masters 1,150,90,187.5,427.5,Raw,1
+SBD,M,Jay McGrath,NL,64.5,66,Masters 1,132.5,92.5,172.5,397.5,Raw,1
+SBD,F,Joanne Rose,NL,61.5,63,Masters 1,87.5,45,120,252.5,Raw,1
+SBD,M,DJ Clarke,NL,91.4,93,Juniors,232.5,125,237.5,595,Raw,2
+SBD,M,Brandon Goodwin,NL,92.7,93,Juniors,210,147.5,240,597.5,Raw,1
+SBD,F,Nicole Goodyear,NL,90.6,84+,Juniors,85,60,110,255,Raw,1
+SBD,F,Tara Hudson,NL,69.7,72,Juniors,75,47.5,112.5,235,Raw,1
+SBD,F,Olivia Smith,NL,57.5,63,Juniors,82.5,37.5,105,225,Raw,1
 B,F,Sabrina Belanger,NL,64.5,72,Open,,70,,70,Single-ply,1
 B,F,Rebecca Adams,NL,93.2,84+,Open,,60,,60,Raw,1
 B,F,Sarah Pike,NL,68.6,72,Open,,60,,60,Raw,1
-B,M,Darren Hann,NL,91.1,93,Master 2,,112.5,,112.5,Raw,1
-B,F,Grace Hudson,NL,76.2,84,Master 2,,47.5,,47.5,Raw,1
-B,M,Peter Hynes,NL,120.1,120+,Master 2,,110,,110,Raw,1
-B,F,Tonya Power,NL,94.7,84+,Master 1,,40,,40,Raw,1
-B,F,Nadine Barter,NL,75.2,84,Master 1,,50,,50,Raw,1
-B,M,Jay McGrath,NL,64.7,66,Master 1,,92.5,,92.5,Raw,1
-B,F,Tara Hudson,NL,70.6,72,Junior,,45,,45,Raw,1
+B,M,Darren Hann,NL,91.1,93,Masters 2,,112.5,,112.5,Raw,1
+B,F,Grace Hudson,NL,76.2,84,Masters 2,,47.5,,47.5,Raw,1
+B,M,Peter Hynes,NL,120.1,120+,Masters 2,,110,,110,Raw,1
+B,F,Tonya Power,NL,94.7,84+,Masters 1,,40,,40,Raw,1
+B,F,Nadine Barter,NL,75.2,84,Masters 1,,50,,50,Raw,1
+B,M,Jay McGrath,NL,64.7,66,Masters 1,,92.5,,92.5,Raw,1
+B,F,Tara Hudson,NL,70.6,72,Juniors,,45,,45,Raw,1

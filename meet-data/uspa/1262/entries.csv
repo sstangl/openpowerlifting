@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Sydney Alizadeh,MO,56,54.7,22,112.5,60,140,312.5,F,Junior 20-23,Raw,SBD
-1,Ruthie Duncan,MO,67.5,67.25,16,85,57.5,127.5,270,F,Junior 16-17,Raw,SBD
+1,Sydney Alizadeh,MO,56,54.7,22,112.5,60,140,312.5,F,Juniors 20-23,Raw,SBD
+1,Ruthie Duncan,MO,67.5,67.25,16,85,57.5,127.5,270,F,Juniors 16-17,Raw,SBD
 1,Sydney Alizadeh,MO,56,54.7,22,112.5,60,140,312.5,F,Open,Raw,SBD
 2,Meagan Johnson,MO,56,54.5,29,70,42.5,95,207.5,F,Open,Raw,SBD
 1,Carmella Mattingly,MO,60,58.6,47,145,70,155,370,F,Open,Raw,SBD
@@ -16,18 +16,18 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Anna Krattli,MO,90,87.65,29,112.5,52.5,127.5,292.5,F,Open,Raw,SBD
 1,Nicole Stone,MO,90+,106.25,28,137.5,72.5,165,375,F,Open,Raw,SBD
 2,Veronica Guffey,MO,90+,97.6,30,110,55,132.5,297.5,F,Open,Raw,SBD
-1,Katie Ross,KS,82.5,78.6,37,107.5,57.5,120,285,F,Submaster 35-39,Raw,SBD
-1,Carmella Mattingly,MO,60,58.6,47,145,70,155,370,F,Master 45-49,Raw,SBD
-1,Leesa Jackson,MO,60,57.9,56,70,35,87.5,192.5,F,Master 55-59,Raw,SBD
-1,Susan Harrison,MO,67.5,65,41,147.5,90,165,402.5,F,Master 40-44,Raw,SBD
-1,Monica Gillespie,MO,75,69.55,51,90,52.5,115,257.5,F,Master 50-54,Raw,SBD
-1,Trina Allen,MO,75,69.9,58,65,40,90,195,F,Master 55-59,Raw,SBD
-1,Stacie Korte,MO,82.5,79.95,57,87.5,67.5,142.5,297.5,F,Master 55-59,Raw,SBD
-1,Dylan Sullivan,MO,75,73.25,23,167.5,133,205,505.5,M,Junior 20-23,Raw,SBD
-1,Chalmer Brickhaus,MO,82.5,81,17,170,110,207.5,487.5,M,Junior 16-17,Raw,SBD
-1,Blake Mattingly,MO,82.5,80.9,20,222.5,155,240,617.5,M,Junior 20-23,Raw,SBD
-1,Kyle Holdman,MO,90,89.6,17,212.5,120,212.5,545,M,Junior 16-17,Raw,SBD
-1,Noah Duncan,MO,125,122.1,20,232.5,132.5,242.5,607.5,M,Junior 20-23,Raw,SBD
+1,Katie Ross,KS,82.5,78.6,37,107.5,57.5,120,285,F,Submasters 35-39,Raw,SBD
+1,Carmella Mattingly,MO,60,58.6,47,145,70,155,370,F,Masters 45-49,Raw,SBD
+1,Leesa Jackson,MO,60,57.9,56,70,35,87.5,192.5,F,Masters 55-59,Raw,SBD
+1,Susan Harrison,MO,67.5,65,41,147.5,90,165,402.5,F,Masters 40-44,Raw,SBD
+1,Monica Gillespie,MO,75,69.55,51,90,52.5,115,257.5,F,Masters 50-54,Raw,SBD
+1,Trina Allen,MO,75,69.9,58,65,40,90,195,F,Masters 55-59,Raw,SBD
+1,Stacie Korte,MO,82.5,79.95,57,87.5,67.5,142.5,297.5,F,Masters 55-59,Raw,SBD
+1,Dylan Sullivan,MO,75,73.25,23,167.5,133,205,505.5,M,Juniors 20-23,Raw,SBD
+1,Chalmer Brickhaus,MO,82.5,81,17,170,110,207.5,487.5,M,Juniors 16-17,Raw,SBD
+1,Blake Mattingly,MO,82.5,80.9,20,222.5,155,240,617.5,M,Juniors 20-23,Raw,SBD
+1,Kyle Holdman,MO,90,89.6,17,212.5,120,212.5,545,M,Juniors 16-17,Raw,SBD
+1,Noah Duncan,MO,125,122.1,20,232.5,132.5,242.5,607.5,M,Juniors 20-23,Raw,SBD
 1,Jeremy Bull,MO,67.5,65.85,24,112.5,72.5,147.5,332.5,M,Open,Raw,SBD
 1,Dylan Sullivan,MO,75,73.25,23,167.5,133,205,505.5,M,Open,Raw,SBD
 2,Garrett Scott,MO,75,71.05,24,170,120,210,500,M,Open,Raw,SBD
@@ -45,22 +45,22 @@ DQ,Nik Jehle,MO,100,98.55,25,222.5,147.5,,,M,Open,Raw,SBD
 2,Daniel Duncan,MO,125,122.4,25,255,147.5,272.5,675,M,Open,Raw,SBD
 1,John Ross,MO,140,133.15,30,242.5,180,287.5,710,M,Open,Raw,SBD
 1,Jordan Gibson,MO,140+,186.5,26,255,100,220,575,M,Open,Raw,SBD
-1,Albert Alvarado,MO,90,88.15,35,205,145,230,580,M,Submaster 35-39,Raw,SBD
-1,Robert Doll #2,MO,140,140,39,295,210,295,800,M,Submaster 35-39,Raw,SBD
-1,Jared Moser,MO,75,71.35,40,135,102.5,112.5,350,M,Master 40-44,Raw,SBD
-1,Mike Zimmerman,MO,125,114.5,40,292.5,200,292.5,785,M,Master 40-44,Raw,SBD
-1,Michael Thompson,MO,125,115.5,58,195,160,227.5,582.5,M,Master 55-59,Raw,SBD
-1,Robert Cunningham,IL,67.5,67.15,23,200,95,200,495,M,Junior 20-23,Wraps,SBD
-DQ,Kyle Walls,IL,75,69.8,17,177.5,75,,,M,Junior 16-17,Wraps,SBD
-DQ,Gabe Winschel,IL,82.5,82.2,17,,,,,M,Junior 16-17,Wraps,SBD
+1,Albert Alvarado,MO,90,88.15,35,205,145,230,580,M,Submasters 35-39,Raw,SBD
+1,Robert Doll #2,MO,140,140,39,295,210,295,800,M,Submasters 35-39,Raw,SBD
+1,Jared Moser,MO,75,71.35,40,135,102.5,112.5,350,M,Masters 40-44,Raw,SBD
+1,Mike Zimmerman,MO,125,114.5,40,292.5,200,292.5,785,M,Masters 40-44,Raw,SBD
+1,Michael Thompson,MO,125,115.5,58,195,160,227.5,582.5,M,Masters 55-59,Raw,SBD
+1,Robert Cunningham,IL,67.5,67.15,23,200,95,200,495,M,Juniors 20-23,Wraps,SBD
+DQ,Kyle Walls,IL,75,69.8,17,177.5,75,,,M,Juniors 16-17,Wraps,SBD
+DQ,Gabe Winschel,IL,82.5,82.2,17,,,,,M,Juniors 16-17,Wraps,SBD
 1,Umberto Ramirez,MO,100,98.8,29,255,170,272.5,697.5,M,Open,Wraps,SBD
-1,Jeff Brown,MO,100,99.1,50,250,175,272.5,697.5,M,Master 50-54,Wraps,SBD
-1,William E Bill Duncan,MO,140+,165,59,205,120,185,510,M,Master 55-59,Wraps,SBD
-1,Anna Haney,MO,82.5,78.05,70,,70,,70,F,Master 70-74,Raw,B
-1,Dylan Sullivan,MO,75,73.25,23,,133,,133,M,Junior 20-23,Raw,B
+1,Jeff Brown,MO,100,99.1,50,250,175,272.5,697.5,M,Masters 50-54,Wraps,SBD
+1,William E Bill Duncan,MO,140+,165,59,205,120,185,510,M,Masters 55-59,Wraps,SBD
+1,Anna Haney,MO,82.5,78.05,70,,70,,70,F,Masters 70-74,Raw,B
+1,Dylan Sullivan,MO,75,73.25,23,,133,,133,M,Juniors 20-23,Raw,B
 1,Jeremy Bull,MO,67.5,65.85,24,,72.5,,72.5,M,Open,Raw,B
 1,Dylan Sullivan,MO,75,73.25,23,,133,,133,M,Open,Raw,B
 1,Johnny Johnson,MO,90,90,30,,185,,185,M,Open,Raw,B
 1,Chase Stratton,MO,110,108.7,31,,197.5,,197.5,M,Open,Raw,B
 1,Jeremy Bull,MO,67.5,65.85,24,,,147.5,147.5,M,Open,Raw,D
-1,Edward Reuscher,MO,140,138.5,35,,195,302.5,497.5,M,Submaster 35-39,Raw,BD
+1,Edward Reuscher,MO,140,138.5,35,,195,302.5,497.5,M,Submasters 35-39,Raw,BD

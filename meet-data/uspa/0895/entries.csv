@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event
-1,Paola Hegerle,AZ,52,51.4,22,115,67.5,130,312.5,F,Junior 20-23,Raw,SBD
-1,Diana Garcia,CA,60,58.9,23,110,60,115,285,F,Junior 20-23,Raw,SBD
+1,Paola Hegerle,AZ,52,51.4,22,115,67.5,130,312.5,F,Juniors 20-23,Raw,SBD
+1,Diana Garcia,CA,60,58.9,23,110,60,115,285,F,Juniors 20-23,Raw,SBD
 1,Paola Hegerle,AZ,52,51.4,22,115,67.5,130,312.5,F,Open,Raw,SBD
 1,Jennifer Goss,CA,60,56.2,26,67.5,47.5,117.5,232.5,F,Open,Raw,SBD
 1,Ciji Hoffman,CA,67.5,66.8,31,115,62.5,137.5,315,F,Open,Raw,SBD
@@ -8,9 +8,9 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Nyssa Leon,CA,75,74.2,28,127.5,55,177.5,360,F,Open,Raw,SBD
 2,Sonya Terrell,CA,75,70.6,29,92.5,40,125,257.5,F,Open,Raw,SBD
 1,Katy Nicholson,CA,90,87.1,29,125,67.5,165,357.5,F,Open,Raw,SBD
-1,Shelly Negrete,CA,52,51.8,52,57.5,47.5,102.5,207.5,F,Master 50-54,Raw,SBD
-1,Kevin Nguyen,CA,75,74.8,21,190,95,182.5,467.5,M,Junior 20-23,Raw,SBD
-1,Chris Fey,CA,90,88.7,20,150,110,212.5,472.5,M,Junior 20-23,Raw,SBD
+1,Shelly Negrete,CA,52,51.8,52,57.5,47.5,102.5,207.5,F,Masters 50-54,Raw,SBD
+1,Kevin Nguyen,CA,75,74.8,21,190,95,182.5,467.5,M,Juniors 20-23,Raw,SBD
+1,Chris Fey,CA,90,88.7,20,150,110,212.5,472.5,M,Juniors 20-23,Raw,SBD
 1,Steven Vo,CA,60,59.6,24,142.5,75,165,382.5,M,Open,Raw,SBD
 1,Kamaron Martinez,CA,75,74.3,25,167.5,167.5,237.5,572.5,M,Open,Raw,SBD
 1,Dean Chung,CA,82.5,79.7,24,245,147.5,317.5,710,M,Open,Raw,SBD
@@ -25,14 +25,14 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 5,Matthew Gonzalez,CA,100,96.8,30,197.5,117.5,240,555,M,Open,Raw,SBD
 1,Ian Swift,CA,110,106.3,25,222.5,162.5,232.5,617.5,M,Open,Raw,SBD
 2,Charles Anderson #1,CA,110,109.3,33,195,162.5,200,557.5,M,Open,Raw,SBD
-1,George Pessell,CA,100,96.5,58,192.5,145,230,567.5,M,Master 55-59,Raw,SBD
+1,George Pessell,CA,100,96.5,58,192.5,145,230,567.5,M,Masters 55-59,Raw,SBD
 1,Amelia Manlutac,CA,56,55,35,95,47.5,120,262.5,F,Open,Wraps,SBD
-1,Amelia Manlutac,CA,56,55,35,95,47.5,120,262.5,F,Submaster 35-39,Wraps,SBD
+1,Amelia Manlutac,CA,56,55,35,95,47.5,120,262.5,F,Submasters 35-39,Wraps,SBD
 1,Daniel Baca,CA,90,89.1,27,202.5,130,237.5,570,M,Open,Wraps,SBD
 1,Alex Hamilton,CA,125,119.5,30,197.5,125,250,572.5,M,Open,Wraps,SBD
 1,Victor Sanchez,CA,140+,180.3,34,307.5,192.5,287.5,787.5,M,Open,Wraps,SBD
-1,Justin Dreng,CA,82.5,75.1,19,,130.5,,130.5,M,Junior 18-19,Raw,B
-1,Noah Thiel,CA,100,94.1,17,,150,,150,M,Junior 16-17,Raw,B
+1,Justin Dreng,CA,82.5,75.1,19,,130.5,,130.5,M,Juniors 18-19,Raw,B
+1,Noah Thiel,CA,100,94.1,17,,150,,150,M,Juniors 16-17,Raw,B
 1,Kamaron Martinez,CA,75,74.3,25,,167.5,,167.5,M,Open,Raw,B
 1,Ralphael Nguyen,CA,82.5,78.3,24,,140,,140,M,Open,Raw,B
 2,Thomas Truong,CA,82.5,81.4,25,,137.5,,137.5,M,Open,Raw,B
@@ -40,5 +40,5 @@ Place,Name,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3D
 1,Thomas Truong,CA,82.5,81.4,25,,,230,230,M,Open,Raw,D
 2,Ralphael Nguyen,CA,82.5,78.3,24,,,227.5,227.5,M,Open,Raw,D
 1,Alex Hamilton,CA,125,119.5,30,,,250,250,M,Open,Raw,D
-1,Sandy Scott,CA,60,58.7,75,,45,87.5,132.5,F,Master 75-79,Raw,BD
+1,Sandy Scott,CA,60,58.7,75,,45,87.5,132.5,F,Masters 75-79,Raw,BD
 DQ,Levi Lehman,CA,125,120.6,29,,157.5,,,M,Open,Raw,BD

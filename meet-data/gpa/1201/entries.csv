@@ -1,8 +1,8 @@
 Name,Country,Sex,BirthDate,Event,Equipment,WeightClassKg,BodyweightKg,Division,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place
 Julia Picolotto de Souza,Brazil,F,1997-10-03,SBD,Wraps,56,54.4,Tn13-15,115,125,-135,,125,40,-45,,,40,130,140,145,,145,310,1
 Gabriela Damasceno,Brazil,F,1996-03-08,SBD,Wraps,56,55.5,Tn16-17,50,60,70,,70,20,25,,,25,100,110,,,110,205,1
-Deisy Prieto Gomez,Argentina,F,1992-10-18,SBD,Wraps,67.5,67.1,Junior,90,-100,100,,100,55,60,65,,65,100,110,125,,125,290,1
-Veronica Hugo,Argentina,F,1992-06-18,SBD,Wraps,90,89.9,Junior,-165,165,170,,170,60,67.5,-75,,67.5,160,170,175,,175,412.5,1
+Deisy Prieto Gomez,Argentina,F,1992-10-18,SBD,Wraps,67.5,67.1,Juniors,90,-100,100,,100,55,60,65,,65,100,110,125,,125,290,1
+Veronica Hugo,Argentina,F,1992-06-18,SBD,Wraps,90,89.9,Juniors,-165,165,170,,170,60,67.5,-75,,67.5,160,170,175,,175,412.5,1
 Fernanda Vaccaro,Argentina,F,1979-01-23,SBD,Wraps,48,47.4,Open,90,97.5,100,105,100,45,-52.5,52.5,,52.5,100,107.5,115,120,115,267.5,1
 Rosana Chrestia,Argentina,F,,SBD,Wraps,56,55.8,O/M40-44,130,140,145,-150,145,80,85,87.5,-90,87.5,145,152.5,160,165,160,392.5,1
 Ariel Bulmash,USA,F,1995-11-06,SBD,Wraps,56,56,O/T 16-17,120,-130,,,120,72.5,77.5,-82.5,,77.5,145,-160,-160,,145,342.5,2
@@ -28,12 +28,12 @@ Jose Salgado,Argentina,M,1993-08-10,SBD,Wraps,67.5,66.7,Tn18-19,-175,180,192.5,2
 Alejandro Bentancour,Argentina,M,,SBD,Wraps,75,74.2,Tn18-19,170,190,197.5,205,197.5,100,110,,,110,200,225,-246,,225,532.5,1
 Bruno Rastelli,Brazil,M,1994-05-04,SBD,Wraps,82.5,79.5,Tn18-19,-160,160,-170,,160,-90,90,100,,100,220,230,-235,,230,490,2
 Erik Mateyka,Argentina,M,,SBD,Wraps,82.5,80,Tn18-19,210,225,-235,,225,135,-142.5,-142.5,,135,220,235,250.5,,250.5,610.5,1
-German Morales,Argentina,M,,SBD,Wraps,67.5,67,Junior,175,190,-205,,190,100,107.5,-115,,107.5,-190,195,-210,,195,492.5,1
-Santiago Mincciaca,Argentina,M,1990-01-22,SBD,Wraps,75,73.9,Junior,225,-240,240,,240,-140,-140,140,-150,140,200,215,230.5,,230.5,610.5,1
-Kyle Scott,USA,M,1991-04-01,SBD,Wraps,75,74.4,Junior,-205,205,207.5,,207.5,140,-145,,,140,222.5,-227.5,,,222.5,570,2
-Jonathan Rondon,Argentina,M,,SBD,Wraps,82.5,81.2,Junior,190,,,,190,140,147.5,155,158,155,200,220,240,255.5,240,585,1
-Eloy Gonzalez,Argentina,M,,SBD,Wraps,110,106.6,Junior,240,-260,260,,260,150,160,,,160,250,-280,-280,,250,670,1
-Sergio Mardones,Chile,M,,SBD,Wraps,125,118,Junior,-260,260,-310,,260,150,-160,-160,,150,240,250,-260,,250,660,1
+German Morales,Argentina,M,,SBD,Wraps,67.5,67,Juniors,175,190,-205,,190,100,107.5,-115,,107.5,-190,195,-210,,195,492.5,1
+Santiago Mincciaca,Argentina,M,1990-01-22,SBD,Wraps,75,73.9,Juniors,225,-240,240,,240,-140,-140,140,-150,140,200,215,230.5,,230.5,610.5,1
+Kyle Scott,USA,M,1991-04-01,SBD,Wraps,75,74.4,Juniors,-205,205,207.5,,207.5,140,-145,,,140,222.5,-227.5,,,222.5,570,2
+Jonathan Rondon,Argentina,M,,SBD,Wraps,82.5,81.2,Juniors,190,,,,190,140,147.5,155,158,155,200,220,240,255.5,240,585,1
+Eloy Gonzalez,Argentina,M,,SBD,Wraps,110,106.6,Juniors,240,-260,260,,260,150,160,,,160,250,-280,-280,,250,670,1
+Sergio Mardones,Chile,M,,SBD,Wraps,125,118,Juniors,-260,260,-310,,260,150,-160,-160,,150,240,250,-260,,250,660,1
 Marcos Vinicius,Brazil,M,,SBD,Wraps,75,74,Especial,40,60,-80,,60,50,60,65,,65,110,120,130,,130,255,1
 Ernesto Milian,USA,M,1947-11-07,SBD,Wraps,52,48,M65-69,102.5,117.5,127.5,,127.5,77.5,85,87.5,,87.5,155,170,177.5,,177.5,392.5,1
 Jose Mata,Argentina,M,1941-04-29,SBD,Wraps,67.5,64,M70-74,120,130.5,135,137.5,135,65,70.5,75,80,75,130,140.5,145,150,145,355,1
@@ -93,11 +93,11 @@ Anna Khudayarov,Finland,F,1988-01-24,B,Raw,82.5,78.4,Open,,,,,,105,115,120,122.5
 Débora Ester,Brazil,F,1982-02-23,B,Raw,82.5,81.1,Open,,,,,,80,90,-95,,90,,,,,,90,2
 Dana Tripp,USA,F,1972-05-30,B,Raw,52,50,M40-44,,,,,,40,42.5,43,45,43,,,,,,43,1
 Rodrigo Naulle,Argentina,M,1997-04-16,B,Raw,100,97.2,Tn13-15,,,,,,70,85,87.5,,87.5,,,,,,87.5,1
-Leandro Villarreal,Argentina,M,1990-09-21,B,Raw,67.5,66.5,Junior,,,,,,100,102.5,107.5,,107.5,,,,,,107.5,1
-Jonathan Reyes,Argentina,M,1990-08-09,B,Raw,75,73.1,Junior,,,,,,115,-122.5,-122.5,,115,,,,,,115,1
-Facundo Galvan,Argentina,M,1985-01-28,B,Raw,82.5,82.2,Junior,,,,,,135,145,-155,,145,,,,,,145,1
-Victor Medeiros,Brazil,M,1992-01-11,B,Raw,90,88.4,Junior,,,,,,120,135,140,,140,,,,,,140,1
-Sergio Mardones,Chile,M,1989-05-10,B,Raw,125,120.9,Junior,,,,,,-150,150,155,,155,,,,,,155,1
+Leandro Villarreal,Argentina,M,1990-09-21,B,Raw,67.5,66.5,Juniors,,,,,,100,102.5,107.5,,107.5,,,,,,107.5,1
+Jonathan Reyes,Argentina,M,1990-08-09,B,Raw,75,73.1,Juniors,,,,,,115,-122.5,-122.5,,115,,,,,,115,1
+Facundo Galvan,Argentina,M,1985-01-28,B,Raw,82.5,82.2,Juniors,,,,,,135,145,-155,,145,,,,,,145,1
+Victor Medeiros,Brazil,M,1992-01-11,B,Raw,90,88.4,Juniors,,,,,,120,135,140,,140,,,,,,140,1
+Sergio Mardones,Chile,M,1989-05-10,B,Raw,125,120.9,Juniors,,,,,,-150,150,155,,155,,,,,,155,1
 Mario Bianchi,Argentina,M,1969-09-05,B,Raw,67.5,66.5,M40-44,,,,,,110,115,120,-122.5,120,,,,,,120,1
 Nestor Gonzalez,Argentina,M,1960-07-26,B,Raw,75,73.3,M40-44,,,,,,115,122.5,-127.5,,122.5,,,,,,122.5,1
 Pedro Verdezoto,Ecuador,M,1971-11-19,B,Raw,82.5,82.5,M40-44,,,,,,155,165,-170,,165,,,,,,165,2
