@@ -16,8 +16,8 @@ except ImportError:
     import oplprobe
 
 
-FED_URL = "https://uspfthelegend.com/"
-RESULTS_URL = "https://uspfthelegend.com/Meet_Results.html"
+USPF_RESULTS_URL = "https://uspfthelegend.com/Meet_Results.html"
+USPF_ILLINOIS_RESULTS_URL = "http://uspfil.com/results"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -25,7 +25,8 @@ def color(s):
     return "\033[1;37m" + s + "\033[0;m"
 
 
-def getmeetlist(html):
+def uspf_getmeetlist(html):
+    FED_URL = "https://uspfthelegend.com/"
     soup = BeautifulSoup(html, 'html.parser')
 
     main = soup.find_all("div", {"class": "LayoutContainer"})
@@ -37,10 +38,28 @@ def getmeetlist(html):
     return list(filter(lambda link: '.pdf' in link,
                        set(map(lambda link: FED_URL + link['href'].strip(), links))))
 
+def uspf_illinois_getmeetlist(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    main = soup.find_all("table", {"class": "table"})
+    assert main, "No <table> element with class `table` found."
+
+    links = main[0].find_all('a')
+    assert links, 'No <a> elements found.'
+
+    return list(filter(lambda link: 'results/' in link,
+                       set(map(lambda link: link['href'].strip(), links))))
+
 
 def main():
-    html_content = oplprobe.gethtml(RESULTS_URL)
-    meets_list = getmeetlist(html_content)
+    # Get results from the main USPF site.
+    html_content = oplprobe.gethtml(USPF_RESULTS_URL)
+    meets_list = uspf_getmeetlist(html_content)
+
+    # Get results from the USPF Illinois affiliate also.
+    # The main site seems to omit these meets.
+    html_content = oplprobe.gethtml(USPF_ILLINOIS_RESULTS_URL)
+    meets_list += uspf_illinois_getmeetlist(html_content)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meets_list, entered)
