@@ -650,6 +650,11 @@ pub enum Federation {
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
 
+    /// WPC meets hosted by METAL gym Finland.
+    #[serde(rename = "WPC-Finland")]
+    #[strum(to_string = "WPC-Finland", serialize = "wpc-finland")]
+    WPCFinland,
+
     /// German WPC affiliate.
     #[serde(rename = "WPC-Germany")]
     #[strum(to_string = "WPC-Germany", serialize = "wpc-germany")]
@@ -879,6 +884,7 @@ impl Federation {
             Federation::WPAU => false,
             Federation::WBC => false,
             Federation::WPC => false,
+            Federation::WPCFinland => false,
             Federation::WPCGermany => false,
             Federation::WPCLatvia => false,
             Federation::WPCMoldova => false,
@@ -1052,6 +1058,7 @@ impl Federation {
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
+            Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCGermany => Some(Country::Germany),
             Federation::WPCLatvia => Some(Country::Latvia),
             Federation::WPCMoldova => Some(Country::Moldova),
@@ -1225,6 +1232,7 @@ impl Federation {
             Federation::WPARUS => PointsSystem::Wilks,
             Federation::WPAU => PointsSystem::Wilks,
             Federation::WPC => PointsSystem::Glossbrenner,
+            Federation::WPCFinland => PointsSystem::Glossbrenner,
             Federation::WPCGermany => PointsSystem::Glossbrenner,
             Federation::WPCLatvia => PointsSystem::Glossbrenner,
             Federation::WPCMoldova => PointsSystem::Glossbrenner,

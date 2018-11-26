@@ -140,8 +140,9 @@
 </optgroup>
 <optgroup label="{{strings.country.finland}}">
   <option value="all-finland" {% if selection.federation == "AllFinland" %}selected{% endif %}>{{strings.selectors.fed.all_finland}}</option>
-  <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA]</option>
+  <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA/WABDL]</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL - Suomen Voimanostoliitto ry [IPF]</option>
+  <option value="wpcfinland" {% if selection.federation == "WPC-Finland" %}selected{% endif %}>WPC-Finland - WPC Finland [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.france}}">
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
