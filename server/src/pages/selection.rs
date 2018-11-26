@@ -584,9 +584,9 @@ impl FromStr for SexSelection {
 pub enum AgeClassSelection {
     AllAges,
     Youth512,
-    Juniors1315,
-    Juniors1617,
-    Juniors1819,
+    Teenage1315,
+    Teenage1617,
+    Teenage1819,
     Juniors2023,
     Seniors2434,
     Submasters3539,
@@ -617,9 +617,9 @@ impl FromStr for AgeClassSelection {
         match s {
             // No entry for AllAges, since it's default.
             "5-12" => Ok(AgeClassSelection::Youth512),
-            "13-15" => Ok(AgeClassSelection::Juniors1315),
-            "16-17" => Ok(AgeClassSelection::Juniors1617),
-            "18-19" => Ok(AgeClassSelection::Juniors1819),
+            "13-15" => Ok(AgeClassSelection::Teenage1315),
+            "16-17" => Ok(AgeClassSelection::Teenage1617),
+            "18-19" => Ok(AgeClassSelection::Teenage1819),
             "20-23" => Ok(AgeClassSelection::Juniors2023),
             "24-34" => Ok(AgeClassSelection::Seniors2434),
             "35-39" => Ok(AgeClassSelection::Submasters3539),

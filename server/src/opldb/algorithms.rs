@@ -287,9 +287,9 @@ pub fn get_entry_indices_for<'db>(
                     let matches: bool = match selection.ageclass {
                         AgeClassSelection::AllAges => true,
                         AgeClassSelection::Youth512 => class == AgeClass::Class5_12,
-                        AgeClassSelection::Juniors1315 => class == AgeClass::Class13_15,
-                        AgeClassSelection::Juniors1617 => class == AgeClass::Class16_17,
-                        AgeClassSelection::Juniors1819 => class == AgeClass::Class18_19,
+                        AgeClassSelection::Teenage1315 => class == AgeClass::Class13_15,
+                        AgeClassSelection::Teenage1617 => class == AgeClass::Class16_17,
+                        AgeClassSelection::Teenage1819 => class == AgeClass::Class18_19,
                         AgeClassSelection::Juniors2023 => class == AgeClass::Class20_23,
                         AgeClassSelection::Seniors2434 => class == AgeClass::Class24_34,
                         AgeClassSelection::Submasters3539 => {
