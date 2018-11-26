@@ -269,6 +269,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-AUS", serialize = "gpc-aus")]
     GPCAUS,
 
+    /// Canadian branch of the GPC.
+    #[serde(rename = "GPC-CAN")]
+    #[strum(to_string = "GPC-CAN", serialize = "gpc-can")]
+    GPCCAN,
+
     /// British branch of the GPC.
     #[serde(rename = "GPC-GB")]
     #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
@@ -339,10 +344,6 @@ pub enum Federation {
     /// Irish Drug-Free Powerlifting Federation.
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
-
-    /// A Canadian federation.
-    #[strum(to_string = "IndependentPA", serialize = "independentpa")]
-    IndependentPA,
 
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
@@ -807,7 +808,7 @@ impl Federation {
             Federation::IBSA => true,
             Federation::IDFPA => true,
             Federation::IDFPF => true,
-            Federation::IndependentPA => false,
+            Federation::GPCCAN => false,
             Federation::IPA => false,
             Federation::IPC => false,
             Federation::IPF => true,
@@ -965,6 +966,7 @@ impl Federation {
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
+            Federation::GPCCAN => Some(Country::Canada),
             Federation::GPCGB => Some(Country::UK),
             Federation::GPCIRL => Some(Country::Ireland),
             Federation::GPCLAT => Some(Country::Latvia),
@@ -981,7 +983,6 @@ impl Federation {
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
-            Federation::IndependentPA => Some(Country::Canada),
             Federation::IPA => Some(Country::USA),
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
@@ -1139,6 +1140,7 @@ impl Federation {
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Glossbrenner,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
+            Federation::GPCCAN => PointsSystem::Glossbrenner,
             Federation::GPCGB => PointsSystem::Glossbrenner,
             Federation::GPCIRL => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
@@ -1155,7 +1157,6 @@ impl Federation {
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::Wilks,
-            Federation::IndependentPA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => PointsSystem::Wilks,
