@@ -38,6 +38,7 @@ def uspf_getmeetlist(html):
     return list(filter(lambda link: '.pdf' in link,
                        set(map(lambda link: FED_URL + link['href'].strip(), links))))
 
+
 def uspf_illinois_getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
