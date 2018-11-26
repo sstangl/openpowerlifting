@@ -142,7 +142,7 @@
   <option value="all-finland" {% if selection.federation == "AllFinland" %}selected{% endif %}>{{strings.selectors.fed.all_finland}}</option>
   <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA/WABDL]</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL - Suomen Voimanostoliitto ry [IPF]</option>
-  <option value="wpcfinland" {% if selection.federation == "WPC-Finland" %}selected{% endif %}>WPC-Finland - WPC Finland [WPC]</option>
+  <option value="wpc-finland" {% if selection.federation == "WPC-Finland" %}selected{% endif %}>WPC-Finland - WPC Finland [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.france}}">
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
@@ -151,7 +151,7 @@
   <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>{{strings.selectors.fed.all_germany}}</option>
   <option value="bvdk" {% if selection.federation == "BVDK" %}selected{% endif %}>BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>
   <option value="gpu" {% if selection.federation == "GPU" %}selected{% endif %}>GPU - German Powerlifting Union [WPU]</option>
-  <option value="wpcgermany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC-Germany - WPC Germany [WPC]</option>
+  <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC-Germany - WPC Germany [WPC]</option>
 </optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
