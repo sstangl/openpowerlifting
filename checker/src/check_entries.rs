@@ -397,6 +397,12 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
             word = word.get(2..).unwrap();
         }
 
+        // Disallow nicknames. They're usually written as "Tom 'Tommy' Thompson".
+        if word.starts_with('\'') {
+            report.error_on(line, format!("Name '{}' cannot contain nicknames", name));
+            continue;
+        }
+
         // Punctuation should never be a separate word.
         if word == "-" || word == "." || word == "'" {
             report.error_on(line, format!("Name '{}' has separable punctuation", name));

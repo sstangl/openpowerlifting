@@ -81,6 +81,7 @@ pub enum Country {
     Ghana,
     Germany,
     Greece,
+    Guam,
     Guatemala,
     Guyana,
     Haiti,
