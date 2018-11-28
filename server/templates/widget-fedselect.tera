@@ -26,7 +26,8 @@
   <option value="fesupo" {% if selection.federation == "FESUPO" %}selected{% endif %}>FESUPO - Federación Sudamericana de Powerlifting [IPF]</option>
   <option value="napf" {% if selection.federation == "NAPF" %}selected{% endif %}>NAPF - North American Powerlifting Federation [IPF]</option>
   <option value="nordicpf" {% if selection.federation == "NordicPF" %}selected{% endif %}>NordicPF - Nordic Powerlifting Federation [IPF]</option>
-  <option value="oceaniapf" {% if selection.federation == "OceaniaPF" %}selected{% endif %}>OceaniaPF - Oceania Powerlifting Federation</option>
+  <option value="oceaniapf" {% if selection.federation == "OceaniaPF" %}selected{% endif %}>OceaniaPF - Oceania Powerlifting Federation [WP]</option>
+  <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF - Oceania Regional Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.usa}}">
   <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>{{strings.selectors.fed.all_usa}}</option>

@@ -137,8 +137,8 @@ def main():
     html_OTA = oplprobe.gethtml(URL_OTA)
     meetlist_OTA = getmeetlist_sporty(html_OTA)
 
-    html_CD = oplprobe.gethtml(URL_CD)
-    meetlist_CD = getmeetlist_cd(html_CD)
+    # html_CD = oplprobe.gethtml(URL_CD)
+    # meetlist_CD = getmeetlist_cd(html_CD)
 
     meetlist_NZPF = []
     for url in URLS_NZPF:
@@ -146,7 +146,7 @@ def main():
         meetlist_NZPF = meetlist_NZPF + getmeetlist_sporty(html_NZPF)
 
     meetlist = meetlist_WBOP + meetlist_AKL + meetlist_NTL + \
-        meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV + meetlist_CD
+        meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV  # + meetlist_CD
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

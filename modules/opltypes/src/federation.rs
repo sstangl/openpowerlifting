@@ -448,13 +448,17 @@ pub enum Federation {
     #[strum(to_string = "NZPF", serialize = "nzpf")]
     NZPF,
 
-    /// Oceania Powerlifting Federation, IPF.
+    /// Oceania Powerlifting Federation, WP.
     #[strum(to_string = "OceaniaPF", serialize = "oceaniapf")]
     OceaniaPF,
 
     /// Olomoucký Silák, a yearly bench competition in Czechia.
     #[strum(to_string = "OlomouckySilak", serialize = "olomouckysilak")]
     OlomouckySilak,
+    
+    /// Oceania Regional Powerlifting Federation, IPF.
+    #[strum(to_string = "ORPF", serialize = "orpf")]
+    ORPF,
 
     /// Paralympic Powerlifting.
     #[strum(to_string = "ParaPL", serialize = "parapl")]
@@ -837,6 +841,7 @@ impl Federation {
             Federation::NZPF => true,
             Federation::OceaniaPF => true,
             Federation::OlomouckySilak => false,
+            Federation::ORPF => true,
             Federation::ParaPL => true,
             Federation::PA => true,
             Federation::PAP => true,
@@ -1011,6 +1016,7 @@ impl Federation {
             Federation::NZPF => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::OlomouckySilak => Some(Country::Czechia),
+            Federation::ORPF => None,
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
             Federation::PAP => Some(Country::Philippines),
@@ -1185,6 +1191,7 @@ impl Federation {
             Federation::NZPF => PointsSystem::Wilks,
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::OlomouckySilak => PointsSystem::Wilks,
+            Federation::ORPF => PointsSystem::Wilks,
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,
             Federation::PAP => PointsSystem::Wilks,
