@@ -295,6 +295,8 @@ def consume_first_column(csv):
             elif row[0] == 'EBP' or row[0] == 'EQP BP':
                 event = 'B'
                 equipment = 'Single-ply'
+            elif row[0] == 'PUSH/PULL':
+                event = 'BD'
             elif (row[0] == 'EQP' or row[0] == 'EQ' or row[0] == 'EQD' or
                     row[0] == 'EQD MEN'):
                 event = 'SBD'
