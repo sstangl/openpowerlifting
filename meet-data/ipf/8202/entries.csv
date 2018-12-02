@@ -1,39 +1,40 @@
-Place,Name,Division,BirthYear,Country,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,WeightClassKg,Event,Equipment,Sex
-1,C. Lockard,Masters 1,,USA,,112.5,65,150,327.5,52,SBD,Single-ply,M
-1,J. Lusk,Masters 1,1939,USA,55.7,160,92.5,185,437.5,56,SBD,Single-ply,M
-1,Arne Rygh,Masters 1,1940,Norway,59.8,185,115,190,490,60,SBD,Single-ply,M
-1,James Moir,Masters 1,1936,Canada,,225,165,250,640,67.5,SBD,Single-ply,M
-2,Viljo Karvinen,Masters 1,1936,Finland,67.3,230,155,125,510,67.5,SBD,Single-ply,M
-1,Floid Lyon,Masters 1,1938,France,74.7,257.5,147.5,272.5,677.5,75,SBD,Single-ply,M
-2,Mauri Lappalainen,Masters 1,1941,Finland,74.4,255,135,282.5,672.5,75,SBD,Single-ply,M
-3,Tom Dangerfield,Masters 1,1942,UK,74.6,242.5,135,250,627.5,75,SBD,Single-ply,M
-4,K. De Vries,Masters 1,1941,Canada,73.8,205,132.5,215,552.5,75,SBD,Single-ply,M
-5,Trygve Nordtømme,Masters 1,,Norway,,195,100,215,510,75,SBD,Single-ply,M
-1,Matti Haaksiala,Masters 1,,Finland,,245,160,245,650,82.5,SBD,Single-ply,M
-2,B. Larsen,Masters 1,,Norway,,265,140,240,645,82.5,SBD,Single-ply,M
-3,M. Lukich,Masters 1,,Canada,,200,102.5,227.5,530,82.5,SBD,Single-ply,M
-1,Nate Foster,Masters 1,1938,USA,89.8,262.5,162.5,302.5,727.5,90,SBD,Single-ply,M
-2,W. Partillo,Masters 1,,USA,,227.5,165,227.5,620,90,SBD,Single-ply,M
-3,J. Sarich,Masters 1,1940,Canada,89.7,200,147.5,237.5,585,90,SBD,Single-ply,M
-4,V. Christopherson,Masters 1,1941,Norway,89.4,185,125,230,540,90,SBD,Single-ply,M
-1,D. Mills,Masters 1,1939,USA,99.8,327.5,202.5,325,855,100,SBD,Single-ply,M
-2,J. Monstrad,Masters 1,,Norway,,215,100,267.5,582.5,100,SBD,Single-ply,M
-1,M. Mitchell,Masters 1,1940,USA,109.9,325,192.5,300,817.5,110,SBD,Single-ply,M
-DQ,Dieter Pietsch,Masters 1,1942,West Germany,109.7,,,,,110,SBD,Single-ply,M
-DQ,W. Chapoton,Masters 1,1939,USA,109.6,,,,,110,SBD,Single-ply,M
-1,Pentti Nikkanen,Masters 1,1938,Finland,124.3,280,187.5,300,767.5,125,SBD,Single-ply,M
-2,Hal Hudson,Masters 1,1937,USA,123.2,272.5,175,262.5,710,125,SBD,Single-ply,M
-1,Dan Martin,Masters 1,1939,USA,136.4,292.5,185,307.5,785,125+,SBD,Single-ply,M
-1,Tom Gennaro,Masters 2,1932,USA,51.1,92.5,72.5,127.5,292.5,52,SBD,Single-ply,M
-1,T. Koike,Masters 2,1930,Japan,55.8,105,72.5,125,302.5,56,SBD,Single-ply,M
-1,Ted Brown,Masters 2,1930,UK,59.8,177.5,115,202.5,495,60,SBD,Single-ply,M
-1,P. Neyer,Masters 2,1928,USA,67.3,200,100,242.5,542.5,67.5,SBD,Single-ply,M
-2,M. Ferguson,Masters 2,1929,USA,67.3,160,95,195,450,67.5,SBD,Single-ply,M
-1,Kjell Skybak,Masters 2,1929,Norway,74.7,240,140,285,665,75,SBD,Single-ply,M
-1,F. Perry,Masters 2,,USA,,102.5,92.5,165,360,82.5,SBD,Single-ply,M
-1,D. Johanson,Masters 2,,USA,,227.5,137.5,245,610,90,SBD,Single-ply,M
-1,Hjalmarsson,Masters 2,,Iceland,,225,127.5,270,622.5,100,SBD,Single-ply,M
-2,E. Nagy,Masters 2,,USA,,222.5,150,245,617.5,100,SBD,Single-ply,M
-1,J. Wright,Masters 2,,Australia,,265,170,290,725,110,SBD,Single-ply,M
-2,B. Oyangen,Masters 2,,Norway,,270,145,280,695,110,SBD,Single-ply,M
-1,B. Ross,Masters 2,1929,USA,123.2,255,170,277.5,702.5,125,SBD,Single-ply,M
+Place,Name,Division,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Event,Equipment,Sex
+1,C. Lockard,Masters 1,,USA,50.12,102.5,112.5,-122.5,112.5,57.5,65,-67.5,65,140,150,-152.5,150,327.5,52,SBD,Single-ply,M
+1,J. Lusk,Masters 1,1939,USA,55.7,160,-165,-165,160,-92.5,92.5,,92.5,185,-192.5,,185,437.5,56,SBD,Single-ply,M
+1,Arne Rygh,Masters 1,1940,Norway,59.8,-175,175,185,185,107.5,112.5,115,115,190,-200,-200,190,490,60,SBD,Single-ply,M
+1,James Moir,Masters 1,1936,Canada,67.5,225,-240,-240,225,155,160,165,165,240,250,-260,250,640,67.5,SBD,Single-ply,M
+2,Viljo Karvinen,Masters 1,1936,Finland,67.3,230,,,230,145,155,-205,155,-125,125,,125,510,67.5,SBD,Single-ply,M
+1,Floid Lyon,Masters 1,1938,France,74.7,-257.5,257.5,-272.5,257.5,147.5,-155,-155,147.5,250,265,272.5,272.5,677.5,75,SBD,Single-ply,M
+2,Mauri Lappalainen,Masters 1,1941,Finland,74.4,-255,255,-270,255,135,-140,-140,135,260,282.5,-290,282.5,672.5,75,SBD,Single-ply,M
+3,Tom Dangerfield,Masters 1,1942,UK,74.6,227.5,242.5,-250,242.5,132.5,-137.5,-137.5,132.5,252.5,-272.5,-272.5,252.5,627.5,75,SBD,Single-ply,M
+4,K. De Vries,Masters 1,1941,Canada,73.8,190,205,-215,205,125,-130,132.5,132.5,190,205,215,215,552.5,75,SBD,Single-ply,M
+5,Trygve Nordtømme,Masters 1,,Norway,74.28,-195,-195,195,195,100,-110,-110,100,200,215,-220,215,510,75,SBD,Single-ply,M
+1,Matti Haaksiala,Masters 1,,Finland,79.27,200,230,245,245,140,155,165,165,230,245,-255,245,655,82.5,SBD,Single-ply,M
+2,B. Larsen,Masters 1,,Norway,79.83,250,260,265,265,140,-145,-145,140,200,240,-255,240,645,82.5,SBD,Single-ply,M
+3,M. Lukich,Masters 1,,Canada,75.3,180,192.5,200,200,102.5,-110,-110,102.5,205,220,227.5,227.5,530,82.5,SBD,Single-ply,M
+1,Nate Foster,Masters 1,1938,USA,89.8,227.5,250,262.5,262.5,147.5,157.5,162.5,162.5,272.5,302.5,-325,302.5,727.5,90,SBD,Single-ply,M
+2,W. Partillo,Masters 1,,USA,88.45,205,227.5,,227.5,160,165,-175,165,205,227.5,-237.5,227.5,620,90,SBD,Single-ply,M
+3,J. Sarich,Masters 1,1940,Canada,89.7,200,-227.5,-227.5,200,140,145,147.5,147.5,-237.5,237.5,,237.5,585,90,SBD,Single-ply,M
+4,V. Christopherson,Masters 1,1941,Norway,89.4,185,-200,-200,185,120,125,-130,125,220,230,-250,230,540,90,SBD,Single-ply,M
+1,Don Mills,Masters 1,1939,USA,99.8,307.5,327.5,-340,327.5,202.5,-215,-215,202.5,307.5,325,-340,325,855,100,SBD,Single-ply,M
+2,Jan Monstad,Masters 1,,Norway,94.6,190,205,215,215,100,-107.5,-110,100,240,255,267.5,267.5,582.5,100,SBD,Single-ply,M
+1,M. Mitchell,Masters 1,1940,USA,109.9,325,-335,-335,325,182.5,192.5,-200,192.5,250,285,300,300,817.5,110,SBD,Single-ply,M
+DQ,Dieter Pietsch,Masters 1,1942,West Germany,109.7,,,,,,,,,,,,,,110,SBD,Single-ply,M
+DQ,W. Chapoton,Masters 1,1939,USA,109.6,,,,,,,,,,,,,,110,SBD,Single-ply,M
+1,Pentti Nikkanen,Masters 1,1938,Finland,124.3,250,270,280,280,170,180,187.5,187.5,-270,270,300,300,767.5,125,SBD,Single-ply,M
+2,Hal Hudson,Masters 1,1937,USA,123.2,-245,245,272.5,272.5,175,-187.5,-187.5,175,-257.5,-257.5,262.5,262.5,710,125,SBD,Single-ply,M
+1,Dan Martin,Masters 1,1939,USA,136.4,250,280,-292.5,280,160,180,-185,180,285,-327.5,327.5,327.5,787.5,125+,SBD,Single-ply,M
+1,Tom Gennaro,Masters 2,1932,USA,51.1,85,90,92.5,92.5,65,70,72.5,72.5,115,122.5,127.5,127.5,292.5,52,SBD,Single-ply,M
+1,T. Koike,Masters 2,1930,Japan,55.8,105,-120,-125,105,65,67.5,72.5,72.5,-125,125,-135,125,302.5,56,SBD,Single-ply,M
+1,Ted Brown,Masters 2,1930,UK,59.8,150,170,177.5,177.5,105,112.5,115,115,180,202.5,-207.5,202.5,495,60,SBD,Single-ply,M
+1,P. Neyer,Masters 2,1928,USA,67.3,192.5,200,-207.5,200,100,-105,-105,100,232.5,242.5,,242.5,542.5,67.5,SBD,Single-ply,M
+2,M. Ferguson,Masters 2,1929,USA,67.3,-142.5,142.5,160,160,85,92.5,95,95,177.5,195,-200,195,450,67.5,SBD,Single-ply,M
+1,Kjell Skybak,Masters 2,1929,Norway,74.7,230,-240,240,240,130,137.5,140,140,270,285,-300,285,665,75,SBD,Single-ply,M
+1,F. Perry,Masters 2,,USA,80.4,95,102.5,-112.5,102.5,92.5,-100,-100,92.5,95,137.5,165,165,360,82.5,SBD,Single-ply,M
+2,J. Elder,Masters 2,,USA,81.31,112.5,-137.5,-137.5,112.5,62.5,-67.5,67.5,67.5,150,165,-182.5,165,345,82.5,SBD,Single-ply,M
+1,Daryl Johnson,Masters 2,,USA,89.02,195,215,227.5,227.5,137.5,-142.5,,137.5,227.5,237.5,245,245,610,90,SBD,Single-ply,M
+1,Hjalmarsson,Masters 2,,Iceland,99,215,-225,225,225,-127.5,-127.5,127.5,127.5,270,-290,-290,270,622.5,100,SBD,Single-ply,M
+2,Ernie Nagy,Masters 2,,USA,97.9,207.5,222.5,-232.5,222.5,140,150,-160,150,210,230,245,245,617.5,100,SBD,Single-ply,M
+1,John Wright,Masters 2,,Australia,104.6,-255,255,265,265,160,165,170,170,270,280,290,290,725,110,SBD,Single-ply,M
+2,B. Oyangen,Masters 2,,Norway,109.1,260,270,-280,270,145,-155,-155,145,260,280,-290,280,695,110,SBD,Single-ply,M
+1,B. Ross,Masters 2,1929,USA,123.2,255,-272.5,-277.5,255,147.5,170,-182.5,170,255,277.5,292.5,292.5,717.5,125,SBD,Single-ply,M
