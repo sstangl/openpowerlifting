@@ -501,6 +501,11 @@ pub enum Federation {
     #[strum(to_string = "RAW-CAN", serialize = "raw-can")]
     RAWCAN,
 
+    /// 100% RAW Federation Iceland.
+    #[serde(rename = "RAW-Island")]
+    #[strum(to_string = "RAW-Island", serialize = "raw-island")]
+    RAWIsland,
+
     /// 100% RAW Federation Ukraine.
     #[serde(rename = "RAW-UKR")]
     #[strum(to_string = "RAW-UKR", serialize = "raw-ukr")]
@@ -664,6 +669,11 @@ pub enum Federation {
     #[serde(rename = "WPC-Germany")]
     #[strum(to_string = "WPC-Germany", serialize = "wpc-germany")]
     WPCGermany,
+
+    /// Icelandic WPC affiliate.
+    #[serde(rename = "WPC-Island")]
+    #[strum(to_string = "WPC-Island", serialize = "wpc-island")]
+    WPCIsland,
 
     /// Latvian WPC affiliate.
     #[serde(rename = "WPC-Latvia")]
@@ -852,6 +862,7 @@ impl Federation {
             Federation::PZKFiTS => true,
             Federation::RAW => true,
             Federation::RAWCAN => true,
+            Federation::RAWIsland => true,
             Federation::RAWUKR => true,
             Federation::RAWU => false,
             Federation::RPS => false,
@@ -892,6 +903,7 @@ impl Federation {
             Federation::WPC => false,
             Federation::WPCFinland => false,
             Federation::WPCGermany => false,
+            Federation::WPCIsland => false,
             Federation::WPCLatvia => false,
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
@@ -1027,6 +1039,7 @@ impl Federation {
             Federation::PZKFiTS => Some(Country::Poland),
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
+            Federation::RAWIsland => Some(Country::Iceland),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
             Federation::RPS => Some(Country::USA),
@@ -1067,6 +1080,7 @@ impl Federation {
             Federation::WPC => None,
             Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCGermany => Some(Country::Germany),
+            Federation::WPCIsland => Some(Country::Iceland),
             Federation::WPCLatvia => Some(Country::Latvia),
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),
@@ -1202,6 +1216,7 @@ impl Federation {
             Federation::PZKFiTS => PointsSystem::Wilks,
             Federation::RAW => PointsSystem::Wilks,
             Federation::RAWCAN => PointsSystem::Wilks,
+            Federation::RAWIsland => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
             Federation::RPS => PointsSystem::Wilks,
@@ -1242,6 +1257,7 @@ impl Federation {
             Federation::WPC => PointsSystem::Glossbrenner,
             Federation::WPCFinland => PointsSystem::Glossbrenner,
             Federation::WPCGermany => PointsSystem::Glossbrenner,
+            Federation::WPCIsland => PointsSystem::Glossbrenner,
             Federation::WPCLatvia => PointsSystem::Glossbrenner,
             Federation::WPCMoldova => PointsSystem::Glossbrenner,
             Federation::WPCPortugal => PointsSystem::Glossbrenner,
