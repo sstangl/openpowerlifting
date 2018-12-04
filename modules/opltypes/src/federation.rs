@@ -345,6 +345,10 @@ pub enum Federation {
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
 
+    /// Islenska Kraftlyfingafelagid, Icelandic GPC? affiliate.
+    #[strum(to_string = "IKF", serialize = "ikf")]
+    IKF,
+
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
 
@@ -822,6 +826,7 @@ impl Federation {
             Federation::IBSA => true,
             Federation::IDFPA => true,
             Federation::IDFPF => true,
+            Federation::IKF => false,
             Federation::GPCCAN => false,
             Federation::IPA => false,
             Federation::IPC => false,
@@ -1000,6 +1005,7 @@ impl Federation {
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
+            Federation::IKF => Some(Country::Iceland),
             Federation::IPA => Some(Country::USA),
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
@@ -1177,6 +1183,7 @@ impl Federation {
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::Wilks,
+            Federation::IKF => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => PointsSystem::Wilks,
