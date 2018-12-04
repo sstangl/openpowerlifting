@@ -1,37 +1,17 @@
-Name,Event,WeightClassKg,Sex,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Division,Place
-Rúnar Geirmundsson,BD,67.5,M,70,80,-87.5,80,160,180,-202.5,180,260,Raw,Open,1
-Kári Elísson,BD,75,M,130,135,-140,135,220,240,,240,375,Raw,Open,1
-Haukur Valdimar Pálsson,BD,82.5,M,80,90,-100,90,200,210,-220,210,300,Raw,Open,2
-Kári Árnason,BD,82.5,M,110,-120,-120,110,190,205,215,215,325,Raw,Open,1
-Friðrik Hrafn Pálsson,BD,90,M,120,130,137.5,137.5,180,200,-220,200,337.5,Raw,Open,1
-Helgi Ólafsson,BD,90,M,100,110,-115,110,200,215,-230,215,325,Raw,Open,2
-Sigurður Halldórsson,D,100,M,,,,,220,240,252.5,252.5,252.5,Raw,Open,2
-Jóhann Örn Helgason,BD,100,M,100,-110,-110,100,180,200,215,215,315,Raw,Open,1
-Andri Björnsson,BD,110,M,150,170,-185,170,250,270,-280,270,440,Raw,Open,1
-Arnar Styr Björnsson,BD,110,M,120,130,-140,130,260,280,-300,280,410,Raw,Open,2
-Fjölnir Guðmannson,B,110,M,-180,180,-200,180,,,,,180,Raw,Open,3
-Óli Valur Guðjónsson,BD,125,M,180,-200,,180,300,320,-330,320,500,Raw,Open,1
-Skúli Ármannsson,BD,140,M,-140,150,160,160,220,260,-300,260,420,Raw,Open,2
-Páll Logason,BD,140,M,210,225,235,235,320,340,-360,340,575,Raw,Open,1
-Hafþór Júlíus Björnsson,BD,140+,M,150,160,175,175,280,310,330,330,505,Raw,Open,1
-Stefanía María Arnardóttir,BD,67.5,F,40,45,-50,45,115,130,-140,130,175,Raw,Open,1
-Rúnar Geirmundsson,B,67.5,M,70,80,-87.5,80,,,,,80,Raw,Open,1
-Kári Elísson,B,75,M,130,135,-140,135,,,,,135,Raw,Open,1
-Kári Árnason,B,82.5,M,110,-120,-120,110,,,,,110,Raw,Open,1
-Friðrik Hrafn Pálsson,B,90,M,120,130,137.5,137.5,,,,,137.5,Raw,Open,1
-Jóhann Örn Helgason,B,100,M,100,-110,-110,100,,,,,100,Raw,Open,1
-Fjölnir Guðmannson,B,110,M,-180,180,-200,180,,,,,180,Raw,Open,1
-Óli Valur Guðjónsson,B,125,M,180,-200,,180,,,,,180,Raw,Open,1
-Páll Logason,B,140,M,210,225,235,235,,,,,235,Raw,Open,1
-Hafþór Júlíus Björnsson,B,140+,M,150,160,175,175,,,,,175,Raw,Open,1
-Stefanía María Arnardóttir,B,67.5,F,40,45,-50,45,,,,,45,Raw,Open,1
-Rúnar Geirmundsson,D,67.5,M,,,,,160,180,-202.5,180,180,Raw,Open,1
-Kári Elísson,D,75,M,,,,,220,240,,240,240,Raw,Open,1
-Kári Árnason,D,82.5,M,,,,,190,205,215,215,215,Raw,Open,1
-Helgi Ólafsson,D,90,M,,,,,200,215,-230,215,215,Raw,Open,1
-Sigurður Halldórsson,D,100,M,,,,,220,240,252.5,252.5,252.5,Raw,Open,1
-Arnar Styr Björnsson,D,110,M,,,,,260,280,-300,280,280,Raw,Open,1
-Óli Valur Guðjónsson,D,125,M,,,,,300,320,-330,320,320,Raw,Open,1
-Páll Logason,D,140,M,,,,,320,340,-360,340,340,Raw,Open,1
-Hafþór Júlíus Björnsson,D,140+,M,,,,,280,310,330,330,330,Raw,Open,1
-Stefanía María Arnardóttir,D,67.5,F,,,,,115,130,-140,130,130,Raw,Open,1
+Name,Event,WeightClassKg,BodyweightKg,Sex,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Division,Place
+Rúnar Geirmundsson,BD,67.5,66.24,M,70,80,-87.5,80,160,180,-202.5,180,260,Raw,Open,1
+Kári Elísson,BD,75,72.71,M,130,135,-140,135,220,240,,240,375,Raw,Open,1
+Haukur Valdimar Pálsson,BD,82.5,81.88,M,80,90,-100,90,200,210,-220,210,300,Raw,Open,2
+Kári Árnason,BD,82.5,77.81,M,110,-120,-120,110,190,205,215,215,325,Raw,Open,1
+Friðrik Hrafn Pálsson,BD,90,88.1,M,120,130,137.5,137.5,180,200,-220,200,337.5,Raw,Open,1
+Helgi Ólafsson,BD,90,87.48,M,100,110,-115,110,200,215,-230,215,325,Raw,Open,2
+Sigurður Halldórsson,D,100,92.68,M,,,,,220,240,252.5,252.5,252.5,Raw,Open,2
+Jóhann Örn Helgason,BD,100,97.42,M,100,-110,-110,100,180,200,215,215,315,Raw,Open,1
+Andri Björnsson,BD,110,109.12,M,150,170,-185,170,250,270,-280,270,440,Raw,Open,1
+Arnar Styr Björnsson,BD,110,108.97,M,120,130,-140,130,260,280,-300,280,410,Raw,Open,2
+Fjölnir Guðmannson,B,110,109.77,M,-180,180,-200,180,,,,,180,Raw,Open,3
+Óli Valur Guðjónsson,BD,125,115.51,M,180,-200,,180,300,320,-330,320,500,Raw,Open,1
+Skúli Ármannsson,BD,140,128.11,M,-140,150,160,160,220,260,-300,260,420,Raw,Open,2
+Páll Logason,BD,140,138.07,M,210,225,235,235,320,340,-360,340,575,Raw,Open,1
+Hafþór Júlíus Björnsson,BD,140+,157.05,M,150,160,175,175,280,310,330,330,505,Raw,Open,1
+Stefanía María Arnardóttir,BD,67.5,63.54,F,40,45,-50,45,115,130,-140,130,175,Raw,Open,1
