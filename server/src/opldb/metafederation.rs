@@ -171,6 +171,11 @@ impl MetaFederation {
                     || (entry.lifter_country == None
                         && meet.federation.home_country() == Some(Country::Israel))
             }
+            MetaFederation::AllKazakhstan => {
+                entry.lifter_country == Some(Country::Kazakhstan)
+                    || (entry.lifter_country == None
+                        && meet.federation.home_country() == Some(Country::Kazakhstan))
+            }
             MetaFederation::AllLatvia => {
                 entry.lifter_country == Some(Country::Latvia)
                     || (entry.lifter_country == None
