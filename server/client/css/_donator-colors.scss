@@ -112,6 +112,16 @@
       $umiami-green 56%, $umiami-green);
 }
 
+.matt_gradient {
+  @include gradient-prereqs($default-color);
+  background-image: 
+    linear-gradient(to right top,
+      #e9aa74, #f0a086, #ee9b9b,
+      #e399ae, #d09bbd, #c799bf,
+      #bc98c0, #b296c0, #b28fbc,
+      #b387b7, #b580b1, #b678ab);
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
