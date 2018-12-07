@@ -4,7 +4,8 @@ extern crate accept_language;
 extern crate dotenv;
 extern crate opltypes;
 use opltypes::{Federation, WeightUnits};
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 extern crate rocket_contrib;
 extern crate serde;
 extern crate serde_json;
@@ -477,7 +478,10 @@ struct OldLiftersQuery {
 }
 
 #[get("/lifters.html?<query..>")]
-fn old_lifters(opldb: State<ManagedOplDb>, query: Form<OldLiftersQuery>) -> Option<Redirect> {
+fn old_lifters(
+    opldb: State<ManagedOplDb>,
+    query: Form<OldLiftersQuery>,
+) -> Option<Redirect> {
     let name = &query.q;
     let id = opldb.get_lifter_id_by_name(name)?;
     let username = &opldb.get_lifter(id).username;
@@ -600,9 +604,12 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         )
         .register(catchers![not_found, internal_error])
         .attach(Template::fairing())
-        .attach(AdHoc::on_response("Delete Server Header", |_request, response| {
-            response.remove_header("Server");
-        }))
+        .attach(AdHoc::on_response(
+            "Delete Server Header",
+            |_request, response| {
+                response.remove_header("Server");
+            },
+        ))
 }
 
 fn load_langinfo() -> Result<LangInfo, Box<Error>> {

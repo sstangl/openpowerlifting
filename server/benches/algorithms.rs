@@ -1,7 +1,9 @@
+//! Defines benchmarks for internal OplDb data structures and algorithms.
+
 #![feature(test)]
 
 extern crate server;
-use server::opldb::CachedFilter;
+use server::opldb::algorithms::*;
 use server::opldb::OplDb;
 
 use std::sync::{Once, ONCE_INIT};
@@ -30,6 +32,7 @@ mod benches {
     extern crate test;
     use self::test::Bencher;
 
+    /// Time taken to enumerate all the entries for a single lifter.
     #[bench]
     fn bench_get_entries_for_lifter(b: &mut Bencher) {
         let opldb = db();
@@ -38,6 +41,7 @@ mod benches {
         });
     }
 
+    /// Time taken to enumerate all the entries for a single meet.
     #[bench]
     fn bench_get_entries_for_meet(b: &mut Bencher) {
         let opldb = db();
@@ -46,49 +50,19 @@ mod benches {
         });
     }
 
+    /// Time taken to sort and unique all Raw and Wraps entries by Wilks.
     #[bench]
-    fn bench_filter_raw_intersect_2017(b: &mut Bencher) {
+    fn raw_wraps_sort_and_unique_by_wilks(b: &mut Bencher) {
         let opldb = db();
-        let filter_raw = opldb.get_filter(CachedFilter::EquipmentRaw);
-        let filter_2017 = opldb.get_filter(CachedFilter::Year2017);
+        let cache = opldb.get_static_cache();
 
         b.iter(|| {
-            filter_raw.intersect(filter_2017);
-        });
-    }
-
-    #[bench]
-    fn bench_union_2016_2017(b: &mut Bencher) {
-        let opldb = db();
-        let filter_2016 = opldb.get_filter(CachedFilter::Year2016);
-        let filter_2017 = opldb.get_filter(CachedFilter::Year2017);
-
-        b.iter(|| {
-            filter_2016.union(filter_2017);
-        });
-    }
-
-    #[bench]
-    fn bench_sort_and_unique_by(b: &mut Bencher) {
-        let opldb = db();
-        let filter = opldb.get_filter(CachedFilter::EquipmentRaw);
-
-        b.iter(|| {
-            filter.sort_and_unique_by(&opldb, |x, y| {
-                let x_w = opldb.get_entry(x).wilks;
-                let y_w = opldb.get_entry(y).wilks;
-                x_w.cmp(&y_w)
-            });
-        });
-    }
-
-    #[bench]
-    fn bench_sort_and_unique_by_wilks(b: &mut Bencher) {
-        let opldb = db();
-        let filter = opldb.get_filter(CachedFilter::EquipmentRaw);
-
-        b.iter(|| {
-            filter.sort_and_unique_by_wilks(&opldb);
+            cache.log_linear_time.raw_wraps.sort_and_unique_by(
+                opldb.get_entries(),
+                opldb.get_meets(),
+                &cmp_wilks,
+                &filter_wilks,
+            );
         });
     }
 }
