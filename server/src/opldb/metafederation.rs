@@ -45,6 +45,8 @@ pub enum MetaFederation {
     AllIreland,
     #[strum(to_string = "all-israel")]
     AllIsrael,
+    #[strum(to_string = "all-kazakhstan")]
+    AllKazakhstan,
     #[strum(to_string = "all-latvia")]
     AllLatvia,
     #[strum(to_string = "all-newzealand")]

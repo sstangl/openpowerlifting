@@ -180,7 +180,9 @@
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.kazakhstan}}">
+  <option value="all-latvia" {% if selection.federation == "AllKazakhstan" %}selected{% endif %}>{{strings.selectors.fed.all_kazakhstan}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF - Kazakhstan Powerlifting Federation [IPF]</option>
+  <option value="wpc-kaz" {% if selection.federation == "WPC-KAZ" %}selected{% endif %}>WPC Kazakhstan</option>
 </optgroup>
 <optgroup label="{{strings.country.latvia}}">
   <option value="all-latvia" {% if selection.federation == "AllLatvia" %}selected{% endif %}>{{strings.selectors.fed.all_latvia}}</option>
