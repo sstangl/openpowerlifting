@@ -203,6 +203,10 @@ pub enum Federation {
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
 
+    /// Dutch IPF affiliate.
+    #[strum(to_string = "DPF", serialize = "dpf")]
+    DPF,
+
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
@@ -799,6 +803,7 @@ impl Federation {
             Federation::CPO => false,
             Federation::CPU => true,
             Federation::CSST => true,
+            Federation::DPF => true,
             Federation::DSF => true,
             Federation::EPA => true,
             Federation::EPF => true,
@@ -978,6 +983,7 @@ impl Federation {
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
             Federation::CSST => Some(Country::Czechia),
+            Federation::DPF => Some(Country::Netherlands),
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
@@ -1157,6 +1163,7 @@ impl Federation {
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
+            Federation::DPF => PointsSystem::Wilks,
             Federation::DSF => PointsSystem::Wilks,
             Federation::EPA => PointsSystem::Wilks,
             Federation::EPF => PointsSystem::Wilks,

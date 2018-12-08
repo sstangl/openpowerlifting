@@ -13,6 +13,7 @@ pub enum State {
     InGermany(GermanyState),
     InIndia(IndiaState),
     InMexico(MexicoState),
+    InNetherlands(NetherlandsState),
     InNewZealand(NewZealandState),
     InUSA(USAState),
 }
@@ -35,6 +36,7 @@ impl State {
             Country::Germany => Ok(State::InGermany(s.parse::<GermanyState>()?)),
             Country::India => Ok(State::InIndia(s.parse::<IndiaState>()?)),
             Country::Mexico => Ok(State::InMexico(s.parse::<MexicoState>()?)),
+            Country::Netherlands => Ok(State::InNetherlands(s.parse::<NetherlandsState>()?)),
             Country::NewZealand => Ok(State::InNewZealand(s.parse::<NewZealandState>()?)),
             Country::USA => Ok(State::InUSA(s.parse::<USAState>()?)),
             _ => Err(ParseError::VariantNotFound),
@@ -87,6 +89,14 @@ pub enum MexicoState {
     AG, BC, BS, CM, CS, CH, CO, CL, DF, DG, GT,
     GR, HG, JA, EM, MI, MO, NA, NL, OA, PU, QT,
     QR, SL, SI, SO, TB, TM, TL, VE, YU, ZA
+}
+
+/// A state in the Netherlands
+#[cfg_attr(rustfmt, rustfmt_skip)]
+#[derive(Debug, EnumString, PartialEq)]
+pub enum NetherlandsState {
+    DR, FL, FR, GE, GR, LI, NB, NH, OV, UT, ZE,
+    ZH
 }
 
 /// A state in New Zealand.
