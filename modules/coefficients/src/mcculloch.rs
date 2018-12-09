@@ -131,7 +131,7 @@ fn age_coeff(age: Age) -> f64 {
     match age {
         // Exact ages perform table lookup.
         Age::Exact(age) => {
-            if age as usize > AGE_COEFFICIENTS.len() {
+            if age as usize >= AGE_COEFFICIENTS.len() {
                 AGE_COEFFICIENTS[AGE_COEFFICIENTS.len() - 1]
             } else {
                 AGE_COEFFICIENTS[usize::from(age)]
@@ -146,7 +146,7 @@ fn age_coeff(age: Age) -> f64 {
                 AGE_COEFFICIENTS[usize::from(age) + 1]
             } else {
                 // For Masters, assume the lower age.
-                if usize::from(age) > AGE_COEFFICIENTS.len() {
+                if usize::from(age) >= AGE_COEFFICIENTS.len() {
                     AGE_COEFFICIENTS[AGE_COEFFICIENTS.len() - 1]
                 } else {
                     AGE_COEFFICIENTS[usize::from(age)]
@@ -172,4 +172,27 @@ pub fn mcculloch(sex: Sex, bodyweight: WeightKg, total: WeightKg, age: Age) -> P
 
     let age_coefficient: f64 = age_coeff(age);
     Points::from(wilks_coefficient * age_coefficient * f64::from(total))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn bounds_check() {
+        // Don't panic.
+        age_coeff(Age::Exact(u8::min_value()));
+        age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8 - 1));
+        age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8));
+        age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8 + 1));
+        age_coeff(Age::Exact(u8::max_value()));
+
+        age_coeff(Age::Approximate(u8::min_value()));
+        age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8 - 1));
+        age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8));
+        age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8 + 1));
+        age_coeff(Age::Approximate(u8::max_value()));
+
+        age_coeff(Age::None);
+    }
 }
