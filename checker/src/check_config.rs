@@ -123,7 +123,10 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
         // Standardize on plural variants.
         // For example, require "Masters" instead of "Master".
         if name.contains("Master") && !name.contains("Masters") {
-            report.error(format!("Division name '{}' must use plural 'Masters'", name));
+            report.error(format!(
+                "Division name '{}' must use plural 'Masters'",
+                name
+            ));
         }
 
         // Parse the minimum age.

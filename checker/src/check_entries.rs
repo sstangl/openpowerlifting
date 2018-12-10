@@ -376,9 +376,9 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         if word_index != 0 {
             match word {
                 // Common short words that mostly translate to "the".
-                "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
-                | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "v" | "v." | "v.d."
-                | "van" | "von" | "zur" => {
+                "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di"
+                | "dos" | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "v"
+                | "v." | "v.d." | "van" | "von" | "zur" => {
                     continue;
                 }
 
@@ -1070,14 +1070,15 @@ fn check_attempt_consistency_helper(
     }
 
     // If the best attempt was a failure, the least failure can be in the Best3Lift.
-    if best < WeightKg::from_i32(0) && best3lift != WeightKg::from_i32(0) {
-        if best != best3lift {
-            let s = format!(
-                "Best3{}Kg '{}' does not match least failed attempt '{}'",
-                lift, best3lift, best
-            );
-            report.error_on(line, s);
-        }
+    if best < WeightKg::from_i32(0)
+        && best3lift != WeightKg::from_i32(0)
+        && best != best3lift
+    {
+        let s = format!(
+            "Best3{}Kg '{}' does not match least failed attempt '{}'",
+            lift, best3lift, best
+        );
+        report.error_on(line, s);
     }
 }
 
@@ -1406,7 +1407,7 @@ fn check_division_age_consistency(
 
     // Since it will be needed a bunch below, if there's a BirthDate,
     // figure out how old the lifter would be on the meet date.
-    let age_from_birthdate: Option<Age> = entry.birthdate.map_or(None, |birthdate| {
+    let age_from_birthdate: Option<Age> = entry.birthdate.and_then(|birthdate| {
         // Unwrapping is safe: the BirthDate column check already validated.
         Some(birthdate.age_on(meet_date).unwrap())
     });
@@ -1421,7 +1422,7 @@ fn check_division_age_consistency(
         match entry.age {
             // The age should be at the maximum or one year younger.
             Age::Exact(age) => {
-                let age = age as u32;
+                let age = u32::from(age);
                 if age != max_age && age + 1 != max_age {
                     report.error_on(
                         line,
@@ -1438,7 +1439,7 @@ fn check_division_age_consistency(
             // an Age of either 26 or 27. To be consistent, the approximate ages
             // allowed are then 25.5, 26.5, and 27.5, since each has a plausible match.
             Age::Approximate(age) => {
-                let age = age as u32;
+                let age = u32::from(age);
                 if age != max_age && age + 1 != max_age && age + 2 != max_age {
                     report.error_on(
                         line,
