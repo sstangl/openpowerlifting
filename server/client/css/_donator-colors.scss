@@ -41,6 +41,10 @@
   @include name-color(#507CFF);
 }
 
+.turquoise {
+  @include name-color(#40e0d0);
+}
+
 .red {
   @include name-color(#FB3640);
 }
