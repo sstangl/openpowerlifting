@@ -47,7 +47,7 @@ impl From<WeightKg> for f32 {
 
 impl From<WeightKg> for f64 {
     fn from(w: WeightKg) -> f64 {
-        (w.0 as f64) / 100.0
+        f64::from(w.0) / 100.0
     }
 }
 

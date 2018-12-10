@@ -45,14 +45,14 @@ impl State {
 }
 
 /// A state in Australia.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum AustraliaState {
     ACT, NSW, NT, QLD, SA, TAS, VIC, WA
 }
 
 /// A state in Brazil.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum BrazilState {
     AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
@@ -60,21 +60,21 @@ pub enum BrazilState {
 }
 
 /// A state in Canada.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
 
 /// A state in Germany.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum GermanyState {
     BW, BY, BE, BB, HB, HE, HH, MV, NI, NW, RP, SH, SL, SN, ST, TH
 }
 
 /// A state in India.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum IndiaState {
     AP, AR, AS, BR, CG, GA, GJ, HR, HP, JK, JH, KA,
@@ -83,7 +83,7 @@ pub enum IndiaState {
 }
 
 /// A state in Mexico.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum MexicoState {
     AG, BC, BS, CM, CS, CH, CO, CL, DF, DG, GT,
@@ -92,7 +92,7 @@ pub enum MexicoState {
 }
 
 /// A state in the Netherlands
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum NetherlandsState {
     DR, FL, FR, GE, GR, LI, NB, NH, OV, UT, ZE,
@@ -100,7 +100,7 @@ pub enum NetherlandsState {
 }
 
 /// A state in New Zealand.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
@@ -108,7 +108,7 @@ pub enum NewZealandState {
 }
 
 /// A state in the USA.
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 #[derive(Debug, EnumString, PartialEq)]
 pub enum USAState {
     AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,

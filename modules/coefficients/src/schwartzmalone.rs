@@ -18,7 +18,7 @@ pub fn schwartz_coefficient(bodyweightkg: f64) -> f64 {
 /// Calculates the Malone coefficient, used for women.
 pub fn malone_coefficient(bodyweightkg: f64) -> f64 {
     // Values calculated by fitting to coefficient tables.
-    const A: f64 = 106.0115863236130;
+    const A: f64 = 106.011586323613;
     const B: f64 = -1.293027130579051;
     const C: f64 = 0.322935585328304;
 
