@@ -3,6 +3,7 @@ name = "server"
 version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 edition = "2018"
+license = "AGPL-3.0-or-later"
 
 [dependencies]
 opltypes = { version = "0.1", path = "../modules/opltypes/" }

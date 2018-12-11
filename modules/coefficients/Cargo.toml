@@ -5,7 +5,7 @@ authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 description = """
 Calculations for powerlifting point coefficients.
 """
-license = "AGPLv3+"
+license = "AGPL-3.0-or-later"
 edition = "2018"
 
 [dependencies]
