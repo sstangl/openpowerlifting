@@ -18,6 +18,8 @@ use crate::opldb;
 #[allow(non_camel_case_types)]
 #[derive(Clone, Copy, Debug, EnumIter, EnumString, Serialize)]
 pub enum Language {
+    /// Czech.
+    cz,
     /// German, without regional variance.
     de,
     /// English, without regional variance (US).
@@ -68,6 +70,7 @@ impl fmt::Display for Language {
             f,
             "{}",
             match self {
+                Language::cz => "cz",
                 Language::de => "de",
                 Language::en => "en",
                 Language::eo => "eo",
@@ -490,6 +493,7 @@ pub struct Translations {
 /// Owner struct of all translation state.
 #[derive(Default)]
 pub struct LangInfo {
+    cz: Option<Translations>,
     de: Option<Translations>,
     en: Option<Translations>,
     eo: Option<Translations>,
@@ -526,6 +530,7 @@ impl LangInfo {
         let trans = serde_json::from_str(&contents)?;
 
         match language {
+            Language::cz => self.cz = trans,
             Language::de => self.de = trans,
             Language::en => self.en = trans,
             Language::eo => self.eo = trans,
@@ -553,6 +558,7 @@ impl LangInfo {
 
     pub fn get_translations(&self, language: Language) -> &Translations {
         match language {
+            Language::cz => self.cz.as_ref().unwrap(),
             Language::de => self.de.as_ref().unwrap(),
             Language::en => self.en.as_ref().unwrap(),
             Language::eo => self.eo.as_ref().unwrap(),
@@ -790,6 +796,7 @@ impl Language {
         // Taken from the following list:
         // https://en.wikipedia.org/wiki/Decimal_separator
         match self {
+            Language::cz => NumberFormat::ArabicComma,
             Language::de => NumberFormat::ArabicComma,
             Language::en => NumberFormat::ArabicPeriod,
             Language::eo => NumberFormat::ArabicComma,
