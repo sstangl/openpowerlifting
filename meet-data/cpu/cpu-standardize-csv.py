@@ -286,6 +286,21 @@ def standardize_location(csv):
     csv.remove_column_by_index(locationidx)
 
 
+def standardize_division(csv):
+    if 'Division' not in csv.fieldnames:
+        return
+    idx = csv.index('Division')
+
+    for row in csv.rows:
+        div = row[idx].strip()
+        if div == 'Sub-Junior':
+            row[idx] = 'Sub-Juniors'
+        elif div == 'Junior':
+            row[idx] = 'Juniors'
+        elif 'Master ' in div:
+            row[idx] = div.replace('Master ', 'Masters ')
+
+
 def remove_international_meets(csv):
     assert 'MeetName' in csv.fieldnames
     assert 'State' in csv.fieldnames  # Lifter state. "CAN" if foreign.
@@ -323,6 +338,7 @@ def standardize(csv):
     standardize_name(csv)
     standardize_meetname(csv)
     standardize_location(csv)
+    standardize_division(csv)
 
     # Sort the database stably.
     # Order isn't too important, as long as it doesn't jump around a lot.
