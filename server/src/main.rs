@@ -123,12 +123,19 @@ fn select_weight_units(language: Language, cookies: &Cookies) -> WeightUnits {
 
 fn make_locale<'db>(
     langinfo: &'db LangInfo,
+    lang: Option<String>,
     languages: AcceptLanguage,
     cookies: &Cookies,
 ) -> Locale<'db> {
-    let lang = select_display_language(languages, &cookies);
-    let units = select_weight_units(lang, &cookies);
-    Locale::new(&langinfo, lang, units)
+    let language = match lang.and_then(|s| s.parse::<Language>().ok()) {
+        // Allow an explicit "lang" GET parameter the "lang" cookie.
+        Some(lang) => lang,
+        // Otherwise, consult the cookies or defaults.
+        None => select_display_language(languages, &cookies),
+    };
+
+    let units = select_weight_units(language, &cookies);
+    Locale::new(&langinfo, language, units)
 }
 
 /// A file served from /static.
@@ -190,16 +197,17 @@ fn root_apple_touch_icon(encoding: AcceptEncoding) -> Option<StaticFile> {
     statics(PathBuf::from("images/apple-touch-icon.png"), encoding)
 }
 
-#[get("/rankings/<selections..>")]
+#[get("/rankings/<selections..>?<lang>")]
 fn rankings(
     selections: PathBuf,
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
     let selection = pages::selection::Selection::from_path(&selections).ok()?;
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
     Some(Template::render("rankings", &context))
 }
@@ -209,9 +217,10 @@ fn rankings_redirect() -> Redirect {
     Redirect::to("/")
 }
 
-#[get("/records/<selections..>")]
+#[get("/records/<selections..>?<lang>")]
 fn records(
     selections: Option<PathBuf>,
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
@@ -222,24 +231,26 @@ fn records(
     } else {
         pages::records::RecordsSelection::default()
     };
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::records::Context::new(&opldb, &locale, &selection);
     Some(Template::render("records", &context))
 }
 
-#[get("/records")]
+#[get("/records?<lang>")]
 fn records_default(
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    records(None, opldb, langinfo, languages, cookies)
+    records(None, lang, opldb, langinfo, languages, cookies)
 }
 
-#[get("/u/<username>")]
+#[get("/u/<username>?<lang>")]
 fn lifter(
     username: String,
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
@@ -255,14 +266,15 @@ fn lifter(
         Some(id) => id,
     };
 
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::lifter::Context::new(&opldb, &locale, lifter_id);
     Some(Ok(Template::render("lifter", &context)))
 }
 
-#[get("/mlist/<mselections..>")]
+#[get("/mlist/<mselections..>?<lang>")]
 fn meetlist(
     mselections: Option<PathBuf>,
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
@@ -272,24 +284,26 @@ fn meetlist(
         None => pages::meetlist::MeetListSelection::default(),
         Some(p) => pages::meetlist::MeetListSelection::from_path(&p).ok()?,
     };
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::meetlist::Context::new(&opldb, &locale, &mselection);
     Some(Template::render("meetlist", &context))
 }
 
-#[get("/mlist")]
+#[get("/mlist?<lang>")]
 fn meetlist_default(
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    meetlist(None, opldb, langinfo, languages, cookies)
+    meetlist(None, lang, opldb, langinfo, languages, cookies)
 }
 
-#[get("/m/<meetpath..>")]
+#[get("/m/<meetpath..>?<lang>")]
 fn meet(
     meetpath: PathBuf,
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
@@ -307,67 +321,87 @@ fn meet(
     }
 
     let meet_id = opldb.get_meet_id(meetpath_str)?;
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
     Some(Template::render("meet", &context))
 }
 
-#[get("/status")]
+#[get("/status?<lang>")]
 fn status(
+    lang: Option<String>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::status::Context::new(&opldb, &locale);
     Some(Template::render("status", &context))
 }
 
-#[get("/data")]
+#[get("/data?<lang>")]
 fn data(
+    lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::data::Context::new(&locale);
     Some(Template::render("data", &context))
 }
 
-#[get("/faq")]
+#[get("/faq?<lang>")]
 fn faq(
+    lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::faq::Context::new(&locale);
     Some(Template::render("faq", &context))
 }
 
-#[get("/contact")]
+#[get("/contact?<lang>")]
 fn contact(
+    lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::contact::Context::new(&locale);
     Some(Template::render("contact", &context))
 }
 
-#[get("/")]
+#[derive(Responder)]
+enum IndexReturn {
+    Redirect(Redirect),
+    Template(Template),
+}
+
+#[get("/?<lang>&<fed>")]
 fn index(
+    lang: Option<String>,
+    fed: Option<String>, // For handling old-style URLs.
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
     cookies: Cookies,
-) -> Option<Template> {
+) -> Option<IndexReturn> {
+    // Handle old-style URLs. Hopefully we can remove this code one day.
+    if let Some(fedstr) = fed {
+        let fed = fedstr.parse::<Federation>().ok()?;
+        let target = format!("/rankings/{}", fed.to_string().to_ascii_lowercase());
+        return Some(IndexReturn::Redirect(Redirect::permanent(target)));
+    }
+
+    // Otherwise, render the main rankings template.
     let selection = pages::selection::Selection::default();
-    let locale = make_locale(&langinfo, languages, &cookies);
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
-    Some(Template::render("rankings", &context))
+    Some(IndexReturn::Template(Template::render("rankings", &context)))
 }
 
 /// Return type for pre-rendered Json strings.
@@ -460,37 +494,15 @@ fn default_search_rankings_api(
     search_rankings_api(None, query, opldb)
 }
 
-#[derive(FromForm)]
-struct OldIndexQuery {
-    fed: String,
-}
-
-#[get("/?<query..>")]
-fn old_index_query(query: Form<OldIndexQuery>) -> Option<Redirect> {
-    let fed = query.fed.parse::<Federation>().ok()?;
-    let target = format!("/rankings/{}", fed.to_string().to_ascii_lowercase());
-    Some(Redirect::permanent(target))
-}
-
-#[derive(FromForm)]
-struct OldLiftersQuery {
-    q: String,
-}
-
-#[get("/lifters.html?<query..>")]
+#[get("/lifters.html?<q>")]
 fn old_lifters(
     opldb: State<ManagedOplDb>,
-    query: Form<OldLiftersQuery>,
+    q: String,
 ) -> Option<Redirect> {
-    let name = &query.q;
+    let name = &q;
     let id = opldb.get_lifter_id_by_name(name)?;
     let username = &opldb.get_lifter(id).username;
     Some(Redirect::permanent(format!("/u/{}", username)))
-}
-
-#[derive(FromForm)]
-struct OldMeetQuery {
-    m: String,
 }
 
 #[get("/meetlist.html")]
@@ -498,9 +510,9 @@ fn old_meetlist() -> Redirect {
     Redirect::permanent("/mlist")
 }
 
-#[get("/meet.html?<query..>")]
-fn old_meet(opldb: State<ManagedOplDb>, query: Form<OldMeetQuery>) -> Option<Redirect> {
-    let meetpath = &query.m;
+#[get("/meet.html?<m>")]
+fn old_meet(opldb: State<ManagedOplDb>, m: String) -> Option<Redirect> {
+    let meetpath = &m;
     let id = opldb.get_meet_id(meetpath)?;
     let pathstr = &opldb.get_meet(id).path;
     Some(Redirect::permanent(format!("/m/{}", pathstr)))
@@ -596,7 +608,6 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 old_meetlist,
                 old_meet,
                 old_index,
-                old_index_query,
                 old_data,
                 old_faq,
                 old_contact,

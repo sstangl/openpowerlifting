@@ -243,6 +243,26 @@ fn test_language_cookie_nonsense() {
     assert!(res.body_string().unwrap().contains("<html lang=\"en\""));
 }
 
+/// Passing the "?lang=" GET parameter should override the "lang" cookie.
+#[test]
+fn test_language_getparam_override() {
+    let client = client();
+    let lang_cookie = Cookie::new("lang", "ru");
+    let mut res = client.get("/?lang=de").cookie(lang_cookie).dispatch();
+    assert_eq!(res.status(), Status::Ok);
+    assert!(res.body_string().unwrap().contains("<html lang=\"de\""));
+}
+
+/// Passing nonsense to the "?lang=" GET parameter should still use the cookie.
+#[test]
+fn test_language_getparam_nonsense() {
+    let client = client();
+    let lang_cookie = Cookie::new("lang", "ru");
+    let mut res = client.get("/?lang=fgsfds").cookie(lang_cookie).dispatch();
+    assert_eq!(res.status(), Status::Ok);
+    assert!(res.body_string().unwrap().contains("<html lang=\"ru\""));
+}
+
 /// Test that some nonsensical rankings options don't crash the server.
 #[test]
 fn test_rankings_nonsense() {
