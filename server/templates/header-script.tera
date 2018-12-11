@@ -3,7 +3,8 @@ function change_language() {
  var time = new Date();
  time.setFullYear(time.getFullYear()+3);
  document.cookie="lang="+document.getElementById("langselect").value+"; expires="+time.toUTCString()+"; path=/; ";
- window.location.href = window.location.href;
+ var h = window.location.href;
+ window.location.href = h.substring(0, h.indexOf("?"));
 }
 function change_units() {
  var time = new Date();
