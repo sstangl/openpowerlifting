@@ -203,10 +203,6 @@ pub enum Federation {
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
 
-    /// Dutch IPF affiliate.
-    #[strum(to_string = "DPF", serialize = "dpf")]
-    DPF,
-
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
@@ -444,6 +440,10 @@ pub enum Federation {
     #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
 
+    /// National Powerlifting Association of the Netherlands.
+    #[strum(to_string = "NPB", serialize = "npb")]
+    NPB,
+
     /// Norwegian IPF affiliate.
     #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
@@ -463,7 +463,7 @@ pub enum Federation {
     /// Olomoucký Silák, a yearly bench competition in Czechia.
     #[strum(to_string = "OlomouckySilak", serialize = "olomouckysilak")]
     OlomouckySilak,
-    
+
     /// Oceania Regional Powerlifting Federation, IPF.
     #[strum(to_string = "ORPF", serialize = "orpf")]
     ORPF,
@@ -803,7 +803,6 @@ impl Federation {
             Federation::CPO => false,
             Federation::CPU => true,
             Federation::CSST => true,
-            Federation::DPF => true,
             Federation::DSF => true,
             Federation::EPA => true,
             Federation::EPF => true,
@@ -861,6 +860,7 @@ impl Federation {
             Federation::NordicPF => true,
             Federation::NOTLD => false,
             Federation::NPA => false,
+            Federation::NPB => true,
             Federation::NSF => true,
             Federation::NZOpen => false,
             Federation::NZPF => true,
@@ -983,7 +983,6 @@ impl Federation {
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
             Federation::CSST => Some(Country::Czechia),
-            Federation::DPF => Some(Country::Netherlands),
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
@@ -1041,6 +1040,7 @@ impl Federation {
             Federation::NordicPF => None,
             Federation::NOTLD => Some(Country::USA),
             Federation::NPA => Some(Country::Israel),
+            Federation::NPB => Some(Country::Netherlands),
             Federation::NSF => Some(Country::Norway),
             Federation::NZOpen => Some(Country::NewZealand),
             Federation::NZPF => Some(Country::NewZealand),
@@ -1163,7 +1163,6 @@ impl Federation {
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
-            Federation::DPF => PointsSystem::Wilks,
             Federation::DSF => PointsSystem::Wilks,
             Federation::EPA => PointsSystem::Wilks,
             Federation::EPF => PointsSystem::Wilks,
@@ -1221,6 +1220,7 @@ impl Federation {
             Federation::NordicPF => PointsSystem::Wilks,
             Federation::NOTLD => PointsSystem::Wilks,
             Federation::NPA => PointsSystem::Wilks,
+            Federation::NPB => PointsSystem::Wilks,
             Federation::NSF => PointsSystem::Wilks,
             Federation::NZOpen => PointsSystem::Wilks,
             Federation::NZPF => PointsSystem::Wilks,

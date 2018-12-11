@@ -199,6 +199,9 @@
 <optgroup label="{{strings.country.moldova}}">
   <option value="wpc-moldova" {% if selection.federation == "WPC-Moldova" %}selected{% endif %}>WPC Moldova</option>
 </optgroup>
+<optgroup label="{{strings.country.netherlands}}">
+  <option value="npb" {% if selection.federation == "NPB" %}selected{% endif %}>NPB - Nederlandse Powerlifting Bond [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.newzealand}}">
   <option value="all-newzealand" {% if selection.federation == "AllNewZealand" %}selected{% endif %}>{{strings.selectors.fed.all_newzealand}}</option>
   <option value="capo-nz" {% if selection.federation == "CAPO-NZ" %}selected{% endif %}>CAPO-NZ - CAPO New Zealand [WPC/GPA/IPO]</option>
