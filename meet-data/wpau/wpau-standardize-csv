@@ -252,7 +252,7 @@ def parse_fieldnames(sheet, obj):
                                                      'best', 'absolut', 'gf pts',
                                                      'mf pts', 'f pts',
                                                      'сумма малоуна', 'formula summ',
-                                                     'coef summ']):  # Wilks
+                                                     'coef summ', 'formulas']):  # Wilks
             fieldnames.append('IGNORE')
         elif text in ['виконаний норматив', 'викон норматив',
                       'вик норматив впа україна', 'вик розр',
@@ -681,7 +681,8 @@ def cleanup_lift(csv, fieldname):
             if amount != '':
                 amount = amount.split()[0]
 
-                amount = ''.join(c for c in amount if c.isdigit() or c in ['.', '-'])
+                amount = ''.join(
+                    c for c in amount if c.isdigit() or c in ['.', '-'])
                 amount = amount.replace('.00', '').replace('.0', '')
 
                 if (amount == 'X' or amount.replace('-', '') == '0' or
