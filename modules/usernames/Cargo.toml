@@ -5,8 +5,7 @@ authors = ["Matt Pearce <matt@openpowerlifting.org>"]
 description = """
 For converting a name into the corresponding username.
 """
-license = "AGPLv3+"
+license = "AGPL-3.0-or-later"
 edition = "2018"
 
 [dependencies]
-opltypes = { version = "0.1", path = "../opltypes/" }

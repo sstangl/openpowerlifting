@@ -1316,9 +1316,6 @@ dependencies = [
 [[package]]
 name = "usernames"
 version = "0.1.0"
-dependencies = [
- "opltypes 0.1.0",
-]
 
 [[package]]
 name = "utf8-ranges"

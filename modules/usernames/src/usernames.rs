@@ -1,7 +1,6 @@
-#![allow(unused)]
+//! Implements Name to Username conversion logic.
 
-
-//calculates the ascii equivalent of a name
+/// Calculates the ASCII equivalent of a Name.
 fn convert_to_ascii(name: &str) -> Result<String, String> {
     let mut ascii_name = String::with_capacity(name.len());
 
@@ -42,10 +41,10 @@ fn convert_to_ascii(name: &str) -> Result<String, String> {
             });
         }
     }
-    return Ok(ascii_name);
+    Ok(ascii_name)
 }
 
-//Allowed non-latin characters
+/// Whether the character should be silently omitted.
 fn is_exception(letter: char) -> bool {
     match letter {
         ' ' | '\\' | '#' | '.' | '-' => true,
@@ -53,40 +52,56 @@ fn is_exception(letter: char) -> bool {
     }
 }
 
-//Check if character is Japanese/Chinese
+/// Checks if the given character is Chinese/Japanese/Korean.
 fn is_eastasian(letter: char) -> bool {
     let ord: u32 = letter as u32;
     match ord {
         //CJK Compatibility
-        13056...13311 => true,
+        13_056...13_311 => true,
         //CJK Unified Ideographs
-        19968...40959 => true,
+        19_968...40_959 => true,
         //CJK Compatibility Forms
-        65072...65103 => true,
+        65_072...65_103 => true,
         //CJK Compatibility Ideographs
-        63744...64255 => true,
+        63_744...64_255 => true,
         //CJK Compatibility Ideographs Supplement
-        194560...195103 => true,
+        194_560...195_103 => true,
         //Katakana
-        12448...12543 => true,
+        12_448...12_543 => true,
         //CJK Radicals Supplement
-        11904...12031 => true,
+        11_904...12_031 => true,
         //CJK Unified Ideographs Extension A
-        13312...19903 => true,
+        13_312...19_903 => true,
         //CJK Unified Ideographs Extension B
-        131072...173791 => true,
+        131_072...173_791 => true,
         //CJK Unified Ideographs Extension C
-        173824...177983 => true,
+        173_824...177_983 => true,
         //CJK Unified Ideographs Extension D
-        177984...178207 => true,
+        177_984...178_207 => true,
         //CJK Unified Ideographs Extension E
-        178208...183983 => true,
+        178_208...183_983 => true,
         //Non East-Asian
         _ => false,
     }
 }
 
+/// Given a UTF-8 Name, create the corresponding ASCII Username.
+///
+/// Usernames are used throughout the project as unique identifiers
+/// for individual lifters.
+///
+/// # Examples
+///
+/// ```
+/// # use usernames::make_username;
+/// let username = make_username("Ed Coan").unwrap();
+/// assert_eq!(username, "edcoan");
+/// ```
 pub fn make_username(name: &str) -> Result<String, String> {
+    if name.is_empty() {
+        return Ok("".to_string());
+    }
+
     if name.chars().all(|x| is_eastasian(x) || is_exception(x)) {
         let ea_id: String = name
             .chars()
@@ -101,6 +116,12 @@ pub fn make_username(name: &str) -> Result<String, String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_empty() {
+        assert_eq!(make_username("").unwrap(), "");
+    }
+
     #[test]
     fn test_ascii() {
         assert_eq!(make_username("JOHN SMITH").unwrap(), "johnsmith");
