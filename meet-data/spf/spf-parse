@@ -112,7 +112,7 @@ def fixevent(csv):
         elif row[idx] == 'Strict Curls':
             row[idx] = 'curls-deleteme'
         else:
-            error("Unknown event: %s" % row[idx])
+            row[idx] = '???'
 
 
 # Depends on fixevent(), so that bench-only isn't marked Wraps.
