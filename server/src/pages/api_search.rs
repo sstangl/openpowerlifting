@@ -1,5 +1,7 @@
 //! Implements the /api/search endpoints.
 
+use usernames::make_username;
+
 use crate::opldb::{algorithms, OplDb};
 use crate::pages::selection::Selection;
 
@@ -19,11 +21,15 @@ pub fn search_rankings<'db>(
     // Convert the query string to a normalized form.
     // This tries to make it look like a username, since we're
     // just doing comparisons on the username.
-    // TODO: Handle non-ASCII UTF-8 characters.
-    let lowercase: String = query.to_ascii_lowercase();
+    let normalized: String = match make_username(query) {
+        Ok(s) => s,
+        Err(_) => {
+            return SearchRankingsResult { next_index: None };
+        }
+    };
 
-    let normalized: String = lowercase.replace(" ", "");
-    let backwards: String = lowercase
+    let backwards: String = query
+        .to_ascii_lowercase()
         .split_whitespace()
         .rev()
         .collect::<Vec<&str>>()

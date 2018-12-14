@@ -10,7 +10,10 @@ extern crate serde_json;
 extern crate strum;
 #[macro_use]
 extern crate strum_macros;
+
+// Internal dependencies.
 extern crate opltypes;
+extern crate usernames;
 
 // Exported modules.
 pub mod langpack;
