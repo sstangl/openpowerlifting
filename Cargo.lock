@@ -1314,6 +1314,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "usernames"
+version = "0.1.0"
+dependencies = [
+ "opltypes 0.1.0",
+]
+
+[[package]]
 name = "utf8-ranges"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"

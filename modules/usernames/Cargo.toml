@@ -1,0 +1,12 @@
+[package]
+name = "usernames"
+version = "0.1.0"
+authors = ["Matt Pearce <matt@openpowerlifting.org>"]
+description = """
+For converting a name into the corresponding username.
+"""
+license = "AGPLv3+"
+edition = "2018"
+
+[dependencies]
+opltypes = { version = "0.1", path = "../opltypes/" }

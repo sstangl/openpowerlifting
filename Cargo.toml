@@ -3,6 +3,7 @@ members = [
     "checker",
     "modules/coefficients",
     "modules/opltypes",
+    "modules/usernames",
     "server",
 ]
 
