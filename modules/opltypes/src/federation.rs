@@ -179,6 +179,10 @@ pub enum Federation {
     #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
     CommonwealthPF,
 
+    /// Canadian Powerlifting Association, WPA.
+    #[strum(to_string = "CPA", serialize = "cpa")]
+    CPA,
+
     /// Canadian Powerlifting Congress, WPC.
     #[strum(to_string = "CPC", serialize = "cpc")]
     CPC,
@@ -802,6 +806,7 @@ impl Federation {
             Federation::CAST => false,
             Federation::ChinaPA => false,
             Federation::CommonwealthPF => true,
+            Federation::CPA => false,
             Federation::CPC => false,
             Federation::CPF => false,
             Federation::CPL => false,
@@ -983,6 +988,7 @@ impl Federation {
             Federation::CAST => Some(Country::Czechia),
             Federation::ChinaPA => Some(Country::China),
             Federation::CommonwealthPF => None,
+            Federation::CPA => Some(Country::Canada),
             Federation::CPC => Some(Country::Canada),
             Federation::CPF => Some(Country::Canada),
             Federation::CPL => Some(Country::Canada),
@@ -1164,6 +1170,7 @@ impl Federation {
             Federation::CAST => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
             Federation::CommonwealthPF => PointsSystem::Wilks,
+            Federation::CPA => PointsSystem::Wilks,
             Federation::CPC => PointsSystem::Wilks,
             Federation::CPF => PointsSystem::Wilks,
             Federation::CPL => PointsSystem::Wilks,

@@ -105,6 +105,7 @@
 </optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
+  <option value="cpa" {% if selection.federation == "CPA" %}selected{% endif %}>CPA - Canadian Powerlifting Association [WPA]</option>
   <option value="cpc" {% if selection.federation == "CPC" %}selected{% endif %}>CPC - Canadian Powerlifting Congress [WPC] (2016+)</option>
   <option value="cpf" {% if selection.federation == "CPF" %}selected{% endif %}>CPF - Canadian Powerlifting Federation [WPC] (2016+)</option>
   <option value="cpl" {% if selection.federation == "CPL" %}selected{% endif %}>CPL - Canadian Powerlifting League [IPL]</option>
