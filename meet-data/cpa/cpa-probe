@@ -34,15 +34,21 @@ def color(s):
 
 
 def getmeetlist(html):
-    soup = BeautifulSoup(html, 'html.parser')
-    entry_content = soup.find("div", {"id": "CONTENU"})
-
     urls = []
-    for a in entry_content.find_all('a'):
+
+    # Unfortunately we can't just use the entry_content because
+    # BeautifulSoup believes that it doesn't cover all the year tables.
+    # So this is the only way to not omit a bunch of results.
+    soup = BeautifulSoup(html, 'html.parser')
+    for a in soup.find_all('a'):
+
         # A bunch of the links are just "<a></a>", weirdly.
         try:
             url = a['href']
         except KeyError:
+            continue
+
+        if 'mailto:' in url:
             continue
 
         if 'http://' not in url:
