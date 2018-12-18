@@ -131,7 +131,7 @@ fn age_coeff(age: Age) -> f64 {
     match age {
         // Exact ages perform table lookup.
         Age::Exact(age) => {
-            if age as usize >= AGE_COEFFICIENTS.len() {
+            if usize::from(age) >= AGE_COEFFICIENTS.len() {
                 AGE_COEFFICIENTS[AGE_COEFFICIENTS.len() - 1]
             } else {
                 AGE_COEFFICIENTS[usize::from(age)]
