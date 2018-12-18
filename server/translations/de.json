@@ -16,10 +16,10 @@
 	},
 	"header": {
 		"rankings": "Platzierungen",
-		"records": "Records",
+		"records": "Rekorde",
 		"meets": "Wettkämpfe",
 		"data": "Daten",
-		"status": "Projektlage",
+		"status": "Projektstatus",
 		"faq": "FAQ",
 		"contact": "Kontakt",
 		"shop": "Shop",
@@ -290,18 +290,18 @@
 			"all_ireland": "Alle irischen Verbände",
 			"all_israel": "Alle israelischen Verbände",
 			"all_kazakhstan": "All Kazakh Lifters",
-			"all_latvia": "All Latvian Lifters",
+			"all_latvia": "All lettischen Verbände",
 			"all_newzealand": "All New Zealand Lifters",
 			"all_russia": "Alle russischen Verbände",
 			"all_uk": "Alle UK Verbände",
 			"all_ukraine": "Alle ukrainischen Verbände"
 		},
 		"ageclass": {
-			"all": "All Ages"
+			"all": "Alle Altersklasse"
 		}
 	},
 	"lifter_page": {
-		"personal_bests": "Persnliche Bestleistung",
-		"competition_results": "Wettkampfresultat"
+		"personal_bests": "Persönliche Bestleistung",
+		"competition_results": "Wettkampfsergebnisse"
 	}
 }
