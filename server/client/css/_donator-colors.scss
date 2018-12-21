@@ -130,6 +130,12 @@
       #b387b7, #b580b1, #b678ab);
 }
 
+// Red, Gray, Black.
+.carlos {
+  @include gradient-prereqs(#444444);
+  background-image: linear-gradient(to right, #FB3640, #444444, #000000);
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
