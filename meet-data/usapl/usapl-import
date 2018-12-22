@@ -452,6 +452,14 @@ def main(url):
     inferequipment(entriescsv)
     markdrugtest(entriescsv)
 
+    # Since USAPL only provides BirthYear info, and we keep having to add
+    # Age and BirthDate columns by lifter request after importation,
+    # just add blank column pre-emptively to avoid large file rewrites.
+    if 'Age' not in entriescsv.fieldnames:
+        entriescsv.append_column('Age')
+    if 'BirthDate' not in entriescsv.fieldnames:
+        entriescsv.append_column('BirthDate')
+
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
 
