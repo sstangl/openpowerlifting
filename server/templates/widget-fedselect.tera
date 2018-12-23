@@ -55,6 +55,7 @@
   <option value="rawu" {% if selection.federation == "RAWU" %}selected{% endif %}>RAWU - Raw United Powerlifting Federation</option>
   <option value="rps" {% if selection.federation == "RPS" %}selected{% endif %}>RPS - Revolution Powerlifting Syndicate</option>
   <option value="rupc" {% if selection.federation == "RUPC" %}selected{% endif %}>RUPC - Raw Unity Powerlifting Championships</option>
+  <option value="slp" {% if selection.federation == "SLP" %}selected{% endif %}>SLP - Son Light Power</option>
   <option value="spf" {% if selection.federation == "SPF" %}selected{% endif %}>SPF - Southern Powerlifting Federation</option>
   <option value="ssa" {% if selection.federation == "SSA" %}selected{% endif %}>SSA - Syndicated Strength Alliance</option>
   <option value="thspa" {% if selection.federation == "THSPA" %}selected{% endif %}>THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>

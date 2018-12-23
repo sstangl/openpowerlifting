@@ -134,6 +134,10 @@ pub enum Federation {
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
 
+    /// Bench America, short lived Bench invitiational meet.
+    #[strum(to_string = "BenchAmerica", serialize = "benchamerica")]
+    BenchAmerica,
+
     /// Defunct British WPC affiliate.
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
@@ -222,6 +226,10 @@ pub enum Federation {
     /// Federación Argentina de Levantamiento de Potencia, IPF.
     #[strum(to_string = "FALPO", serialize = "falpo")]
     FALPO,
+
+    /// Fellowship of Christian Athletes, Defunct US based federation.
+    #[strum(to_string = "FCA", serialize = "fca")]
+    FCA,
 
     /// Federace českého silového trojboje, GPC.
     #[strum(to_string = "FCST", serialize = "fcst")]
@@ -555,6 +563,10 @@ pub enum Federation {
     #[strum(to_string = "SCT", serialize = "sct")]
     SCT,
 
+    /// Son Light Power, US based federation
+    #[strum(to_string = "SLP", serialize = "slp")]
+    SLP,
+    
     /// Singapore Powerlifting Alliance.
     #[strum(to_string = "SPA", serialize = "spa")]
     SPA,
@@ -795,6 +807,7 @@ impl Federation {
             Federation::BB => false,
             Federation::BBDD => false,
             Federation::BDFPA => true,
+            Federation::BenchAmerica => false,
             Federation::BPC => false,
             Federation::BPF => false,
             Federation::BPO => false,
@@ -817,6 +830,7 @@ impl Federation {
             Federation::EPA => true,
             Federation::EPF => true,
             Federation::FALPO => true,
+            Federation::FCA => false,
             Federation::FCST => false,
             Federation::FEMEPO => true,
             Federation::FEPOA => false,
@@ -897,6 +911,7 @@ impl Federation {
             Federation::ScottishPL => true,
             Federation::SCI => false,
             Federation::SCT => false,
+            Federation::SLP => false,
             Federation::SPA => false,
             Federation::SPF => false,
             Federation::SPSS => false,
@@ -977,6 +992,7 @@ impl Federation {
             Federation::BB => Some(Country::Russia),
             Federation::BBDD => Some(Country::USA),
             Federation::BDFPA => Some(Country::UK),
+            Federation::BenchAmerica => Some(Country::USA),
             Federation::BPC => Some(Country::UK),
             Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
@@ -999,6 +1015,7 @@ impl Federation {
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
             Federation::FALPO => Some(Country::Argentina),
+            Federation::FCA => Some(Country::USA),
             Federation::FCST => Some(Country::Czechia),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
@@ -1079,6 +1096,7 @@ impl Federation {
             Federation::ScottishPL => Some(Country::Scotland),
             Federation::SCI => Some(Country::USA),
             Federation::SCT => Some(Country::Russia),
+            Federation::SLP => Some(Country::USA),
             Federation::SPA => Some(Country::Singapore),
             Federation::SPF => Some(Country::USA),
             Federation::SPSS => Some(Country::Russia),
@@ -1159,6 +1177,7 @@ impl Federation {
             Federation::BB => PointsSystem::Wilks,
             Federation::BBDD => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
+            Federation::BenchAmerica => PointsSystem::Wilks,
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
@@ -1181,6 +1200,7 @@ impl Federation {
             Federation::EPA => PointsSystem::Wilks,
             Federation::EPF => PointsSystem::Wilks,
             Federation::FALPO => PointsSystem::Wilks,
+            Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
             Federation::FEMEPO => PointsSystem::Wilks,
             Federation::FEPOA => PointsSystem::Wilks,
@@ -1261,6 +1281,7 @@ impl Federation {
             Federation::ScottishPL => PointsSystem::Wilks,
             Federation::SCI => PointsSystem::Wilks,
             Federation::SCT => PointsSystem::Wilks,
+            Federation::SLP => PointsSystem::Wilks,
             Federation::SPA => PointsSystem::Wilks,
             Federation::SPF => PointsSystem::Wilks,
             Federation::SPSS => PointsSystem::Wilks,
