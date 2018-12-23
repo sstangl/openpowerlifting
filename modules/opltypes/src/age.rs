@@ -4,6 +4,7 @@ use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
+use std::cmp::Ordering;
 use std::fmt;
 use std::num;
 use std::str::FromStr;
@@ -12,7 +13,7 @@ use crate::Date;
 
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Age {
     /// The exact age of the lifter.
     Exact(u8),
@@ -27,12 +28,6 @@ pub enum Age {
 
     /// No age specified.
     None,
-}
-
-impl Default for Age {
-    fn default() -> Age {
-        Age::None
-    }
 }
 
 impl Age {
@@ -80,6 +75,23 @@ impl Age {
             Age::Approximate(0)
         } else {
             Age::Approximate((on_year - birthyear - 1) as u8)
+        }
+    }
+
+    /// Converts to an `Option<u8>`.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Age;
+    /// assert_eq!(Age::Exact(23).to_u8_option(), Some(23));
+    /// assert_eq!(Age::Approximate(23).to_u8_option(), Some(23));
+    /// assert_eq!(Age::None.to_u8_option(), None);
+    /// ```
+    pub fn to_u8_option(self) -> Option<u8> {
+        match self {
+            Age::Exact(age) | Age::Approximate(age) => Some(age),
+            Age::None => None,
         }
     }
 
@@ -148,6 +160,53 @@ impl Age {
                 Age::None => false,
             },
             Age::None => false,
+        }
+    }
+}
+
+impl Default for Age {
+    fn default() -> Age {
+        Age::None
+    }
+}
+
+impl PartialOrd for Age {
+    fn partial_cmp(&self, other: &Age) -> Option<Ordering> {
+        match self {
+            Age::Exact(age) => match other {
+                Age::Exact(other_age) => Some(age.cmp(&other_age)),
+                Age::Approximate(other_age) => {
+                    if *other_age == u8::max_value() {
+                        if *age == u8::max_value() {
+                            Some(Ordering::Equal)
+                        } else {
+                            Some(Ordering::Less)
+                        }
+                    } else {
+                        Some(age.cmp(&(other_age + 1)))
+                    }
+                }
+                Age::None => Some(Ordering::Less),
+            },
+            Age::Approximate(age) => match other {
+                Age::Exact(other_age) => {
+                    if *age == u8::max_value() {
+                        if *other_age == u8::max_value() {
+                            Some(Ordering::Equal)
+                        } else {
+                            Some(Ordering::Greater)
+                        }
+                    } else {
+                        Some((age + 1).cmp(&(other_age)))
+                    }
+                }
+                Age::Approximate(other_age) => Some(age.cmp(&other_age)),
+                Age::None => Some(Ordering::Less),
+            },
+            Age::None => match other {
+                Age::Exact(_) | Age::Approximate(_) => Some(Ordering::Greater),
+                Age::None => Some(Ordering::Equal),
+            },
         }
     }
 }
