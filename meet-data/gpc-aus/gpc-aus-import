@@ -160,7 +160,7 @@ def getresults(soup):
                 csv.fieldnames += ['Deadlift4Kg']
             elif h == 'Best Deadlift':
                 csv.fieldnames += ['Best3DeadliftKg']
-            elif h in ['PL Total', 'TOTAL', 'Pl Total']:
+            elif h in ['PL Total', 'TOTAL', 'Pl Total','Push Pull Total']:
                 csv.fieldnames += ['TotalKg']
             elif h == 'Coeff Score':
                 csv.fieldnames += ['IGNORE']
