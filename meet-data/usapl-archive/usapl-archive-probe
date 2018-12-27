@@ -22,7 +22,7 @@ def color(s):
 
 
 def getmeetlist():
-    listnames = ['URLLIST', 'URL-CA', 'URL-MA', 'URL-MS', 'URL-TX']
+    listnames = ['URLLIST', 'URL-CA', 'URL-MA', 'URL-MI', 'URL-MS', 'URL-TX']
     meetlist = []
     for list in listnames:
         with open(FEDDIR + os.sep + list, 'r') as fd:
