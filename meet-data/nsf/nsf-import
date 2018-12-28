@@ -141,11 +141,11 @@ def getresults(soup):
             if 'ungdom' in text:
                 divstate = text.replace('ungdom', 'Teen')
             elif 'junior' in text:
-                divstate = text.replace('junior', 'Junior')
+                divstate = text.replace('junior', 'Juniors')
             elif 'åpen' in text:
                 divstate = 'Open'
             elif 'veteran' in text:
-                divstate = text.replace('veteran', 'Master')
+                divstate = text.replace('veteran', 'Masters')
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
