@@ -120,6 +120,13 @@
       $umiami-green 56%, $umiami-green);
 }
 
+.purple_to_green {
+  $purple: #AE76FF;
+  $green: #51DA27;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to right, $purple, $green);
+}
+
 .matt_gradient {
   @include gradient-prereqs($default-color);
   background-image: 
