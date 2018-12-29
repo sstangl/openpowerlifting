@@ -156,6 +156,9 @@
   <option value="gpu" {% if selection.federation == "GPU" %}selected{% endif %}>GPU - German Powerlifting Union [WPU]</option>
   <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC Germany</option>
 </optgroup>
+<optgroup label="{{strings.country.greece}}">
+  <option value="all-greece" {% if selection.federation == "AllGreece" %}selected{% endif %}>{{strings.selectors.fed.all_greece}}</option>
+</optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="all-iceland" {% if selection.federation == "AllIceland" %}selected{% endif %}>{{strings.selectors.fed.all_iceland}}</option>
   <option value="ikf" {% if selection.federation == "IKF" %}selected{% endif %}>IKF - Íslenska Kraftlyfingafélagið [GPC/WPC]</option>

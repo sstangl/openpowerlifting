@@ -461,6 +461,7 @@ pub struct FedSelectorTranslations {
     pub all_czechia: String,
     pub all_finland: String,
     pub all_germany: String,
+    pub all_greece: String,
     pub all_iceland: String,
     pub all_ireland: String,
     pub all_israel: String,

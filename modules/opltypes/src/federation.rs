@@ -223,6 +223,10 @@ pub enum Federation {
     #[strum(to_string = "EPF", serialize = "epf")]
     EPF,
 
+    /// Ελληνικό Σωματείο Δυναμικού Τριάθλου, multi-fed Greek affiliate.
+    #[strum(to_string = "ESDT", serialize = "esdt")]
+    ESDT,
+
     /// Federación Argentina de Levantamiento de Potencia, IPF.
     #[strum(to_string = "FALPO", serialize = "falpo")]
     FALPO,
@@ -829,6 +833,7 @@ impl Federation {
             Federation::DSF => true,
             Federation::EPA => true,
             Federation::EPF => true,
+            Federation::ESDT => false,
             Federation::FALPO => true,
             Federation::FCA => false,
             Federation::FCST => false,
@@ -1014,6 +1019,7 @@ impl Federation {
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
+            Federation::ESDT => Some(Country::Greece),
             Federation::FALPO => Some(Country::Argentina),
             Federation::FCA => Some(Country::USA),
             Federation::FCST => Some(Country::Czechia),
@@ -1199,6 +1205,7 @@ impl Federation {
             Federation::DSF => PointsSystem::Wilks,
             Federation::EPA => PointsSystem::Wilks,
             Federation::EPF => PointsSystem::Wilks,
+            Federation::ESDT => PointsSystem::Wilks,
             Federation::FALPO => PointsSystem::Wilks,
             Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
