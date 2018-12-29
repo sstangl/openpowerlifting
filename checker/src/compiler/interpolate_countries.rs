@@ -1,3 +1,5 @@
+//! Implementation of Country interpolation.
+
 use crate::check_entries::Entry;
 use opltypes::*;
 
@@ -11,7 +13,6 @@ fn is_country_consistent(entries: &[Entry]) -> bool {
             curr_country = entry.country;
         }
     }
-
     true
 }
 
@@ -117,5 +118,4 @@ mod tests {
 
         assert!(interp_arr.iter().eq(old_arr.iter()));
     }
-
 }
