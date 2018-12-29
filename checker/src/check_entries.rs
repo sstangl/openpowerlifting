@@ -87,8 +87,8 @@ impl HeaderIndexMap {
 ///
 /// The intention is for each field to only be parsed once, after
 /// which further processing can use the standard datatype.
-#[derive(Default)]
-struct Entry {
+#[derive(Default, PartialEq)]
+pub struct Entry {
     pub name: String,
     pub sex: Sex,
     pub place: Place,
@@ -124,6 +124,8 @@ struct Entry {
     pub deadlift2kg: WeightKg,
     pub deadlift3kg: WeightKg,
     pub deadlift4kg: WeightKg,
+
+    pub country: Option<Country>,
 }
 
 impl Entry {
@@ -824,9 +826,17 @@ fn check_column_division(
     }
 }
 
-fn check_column_country(s: &str, line: u64, report: &mut Report) {
-    if !s.is_empty() && s.parse::<Country>().is_err() {
-        report.error_on(line, format!("Unknown Country '{}'", s));
+fn check_column_country(s: &str, line: u64, report: &mut Report) -> Option<Country> {
+    if s.is_empty() {
+        return None;
+    }
+
+    match s.parse::<Country>() {
+        Ok(c) => Some(c),
+        Err(_) => {
+            report.error_on(line, format!("Unknown Country '{}'", s));
+            None
+        }
     }
 }
 
@@ -1818,7 +1828,7 @@ where
             entry.division = record[idx].to_string();
         }
         if let Some(idx) = headers.get(Header::Country) {
-            check_column_country(&record[idx], line, &mut report);
+            entry.country = check_column_country(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::State) {
             check_column_state(&record[idx], line, &mut report);

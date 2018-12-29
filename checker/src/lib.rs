@@ -13,6 +13,8 @@ use crate::check_entries::check_entries;
 pub mod check_meet;
 use crate::check_meet::check_meet;
 
+mod compiler;
+
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
