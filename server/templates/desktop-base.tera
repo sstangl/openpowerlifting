@@ -32,6 +32,5 @@
   {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
 
   {% include "header-script" %}
-  {% include "google-analytics" %}
 </body>
 </html>
