@@ -143,7 +143,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
             }
             Err(e) => {
                 println!("{}", sourcefile.as_path().to_str().unwrap());
-                println!(" Internal Error: {}", e.to_string().bold().purple());
+                println!(" Internal Error: {}", e.to_string().bold().red());
                 return Err((error_count + 1, warning_count));
             }
         }
@@ -241,7 +241,7 @@ fn main() -> Result<(), Box<Error>> {
                     handle.write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
                 let _ = handle.write_fmt(format_args!(
                     " Internal Error: {}\n",
-                    e.to_string().bold().purple()
+                    e.to_string().bold().red()
                 ));
             }
         };
