@@ -22,6 +22,8 @@ pub enum Language {
     cz,
     /// German, without regional variance.
     de,
+    /// Greek.
+    el,
     /// English, without regional variance (US).
     en,
     /// Esperanto.
@@ -72,6 +74,7 @@ impl fmt::Display for Language {
             match self {
                 Language::cz => "cz",
                 Language::de => "de",
+                Language::el => "el",
                 Language::en => "en",
                 Language::eo => "eo",
                 Language::es => "es",
@@ -502,6 +505,7 @@ pub struct Translations {
 pub struct LangInfo {
     cz: Option<Translations>,
     de: Option<Translations>,
+    el: Option<Translations>,
     en: Option<Translations>,
     eo: Option<Translations>,
     es: Option<Translations>,
@@ -539,6 +543,7 @@ impl LangInfo {
         match language {
             Language::cz => self.cz = trans,
             Language::de => self.de = trans,
+            Language::el => self.el = trans,
             Language::en => self.en = trans,
             Language::eo => self.eo = trans,
             Language::es => self.es = trans,
@@ -567,6 +572,7 @@ impl LangInfo {
         match language {
             Language::cz => self.cz.as_ref().unwrap(),
             Language::de => self.de.as_ref().unwrap(),
+            Language::el => self.el.as_ref().unwrap(),
             Language::en => self.en.as_ref().unwrap(),
             Language::eo => self.eo.as_ref().unwrap(),
             Language::es => self.es.as_ref().unwrap(),
@@ -805,6 +811,7 @@ impl Language {
         match self {
             Language::cz => NumberFormat::ArabicComma,
             Language::de => NumberFormat::ArabicComma,
+            Language::el => NumberFormat::ArabicComma,
             Language::en => NumberFormat::ArabicPeriod,
             Language::eo => NumberFormat::ArabicComma,
             Language::es => NumberFormat::ArabicPeriod, // TODO: Only Central America.
