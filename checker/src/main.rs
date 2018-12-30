@@ -250,9 +250,14 @@ fn main() -> Result<(), Box<Error>> {
     let error_count = error_count.load(Ordering::SeqCst);
     let warning_count = warning_count.load(Ordering::SeqCst);
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
+
+    if internal_error_count > 0 {
+        process::exit(1);
+    }
+
     print_summary(error_count, warning_count);
 
-    if error_count > 0 || internal_error_count > 0 {
+    if error_count > 0 {
         process::exit(1);
     }
     Ok(())
