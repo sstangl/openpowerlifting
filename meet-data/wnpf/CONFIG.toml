@@ -1,0 +1,76 @@
+[divisions]
+    #Current divisions
+    open = {name ="O",min=0,max=999}
+    youth7_8 = {name = "7-8",min=7,max=8}
+    youth9_10 = {name = "9-10",min=9,max=10}
+    youth11_12 = {name = "11-12",min=11,max=12}
+    teen13_14 = {name = "13-14",min=13,max=14}
+    teen15_16 = {name = "15-16",min=15,max=16}
+    teen17_19 = {name = "17-19",min=17,max=19}
+    junior = {name = "JR",min=20,max=23}
+    masters40_44 = {name = "40-44",min=40,max=44}
+    masters45_49 = {name = "45-49",min=45,max=49}
+    masters50_54 = {name = "50-54",min=50,max=54}
+    masters55_59 = {name = "55-59",min=55,max=59}
+    masters60_64 = {name = "60-64",min=60,max=64}
+    masters65_69 = {name = "65-69",min=65,max=69}
+    masters70_74 = {name = "70-74",min=70,max=74}
+    masters75_79 = {name = "75-79",min=75,max=79}
+    masters80_84 = {name = "80-84",min=80,max=84}
+    masters85_89 = {name = "85-89",min=85,max=89}
+    masters90plus = {name = "90+",min=90,max=999}
+    pfm = {name = "P/F/M",min=0,max=999}
+
+    #Old divisions
+    masters40_49 = {name = "40-49",min=40,max=49}
+    masters50_59 = {name = "50-59",min=50,max=59}
+    masters60_69 = {name = "60-69",min=60,max=69}
+    masters70_79 = {name = "70-79",min=70,max=79}
+    masters80_89 = {name = "80-89",min=80,max=89}
+    teen13_16 = {name = "13-16",min=13,max=16}
+
+    #Misc
+    novice = {name ="NV",min=0,max=999}
+    lifetime = {name ="LT",min=0,max=999}
+    submasters = {name ="SM",min=35,max=39}
+    masters90_94 = {name = "90-94",min=90,max=94}
+    special_olympics = {name = "SO",min=0,max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","82.5+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+
+# I'm just guessing at when they switched the weightclasses around
+[weightclasses.youth_M]
+    classes = ["27.22","34.02","40.82","48","52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range=["2016-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["7-8","9-10","11-12"]
+
+[weightclasses.youth_F]
+    classes = ["27.22","34.02","40.82","44","48","52","56","60","67.5","75","82.5","82.5+"]
+    date_range=["2016-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["7-8","9-10","11-12"]
+
+
+[weightclasses.oldyouth_M]
+    classes = ["27.22","36.29","40.82","45.39","52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range=["0000-01-01","2015-12-31"]
+    sex = "M"
+    divisions = ["9-10","11-12"]
+
+[weightclasses.oldyouth_F]
+    classes = ["27.22","36.29","44","48","52","56","60","67.5","75","82.5","82.5+"]
+    date_range=["0000-01-01","2015-12-31"]
+    sex = "F"
+    divisions = ["9-10","11-12"]
+
+[exemptions]
+  
