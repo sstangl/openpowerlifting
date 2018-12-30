@@ -143,6 +143,10 @@
   background-image: linear-gradient(to right, #FB3640, #444444, #000000);
 }
 
+.peter_spence {
+  @include name-color(#BF262B);
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
