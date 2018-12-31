@@ -628,7 +628,11 @@ fn check_column_place(s: &str, line: u64, report: &mut Report) -> Place {
     match s.parse::<Place>() {
         Ok(p) => p,
         Err(_) => {
-            report.error_on(line, format!("Invalid Place '{}'", s));
+            if s.is_empty() {
+                report.error_on(line, format!("Invalid Place '': should it be 'DQ'?"));
+            } else {
+                report.error_on(line, format!("Invalid Place '{}'", s));
+            }
             Place::default()
         }
     }
