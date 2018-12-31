@@ -9,27 +9,56 @@
     masters2 = {name = "Masters 2",min=49.5,max=58.5}
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
+    master40_44 = {name="Masters 40-44", min=40, max=43.5}
+    master45_49 = {name="Masters 45-49", min=45, max=48.5}
+    master50_54 = {name="Masters 50-54", min=50, max=53.5}
+    master55_59 = {name="Masters 55-59", min=55, max=58.5}
+    master60_64 = {name="Masters 60-64", min=60, max=63.5}
+    master65_69 = {name="Masters 65-69", min=65, max=68.5}
+    master70_74 = {name="Masters 70-74", min=70, max=73.5}
+    master75_79 = {name="Masters 75-79", min=75, max=78.5}
 
-
-[weightclasses.default_M]
-    classes = ["59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+[weightclasses.WP_M]
+    classes = ["62","69","77","85","94","105","120","120+"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "M"
 
-[weightclasses.default_F]
-    classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+[weightclasses.WP_F]
+    classes = ["48","53","58","64","72","84","100","100+"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "F"
 
-[weightclasses.junior_M]
-    classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+[weightclasses.WP_juniorM]
+    classes = ["56","62","69","77","85","94","105","105+"]
+    date_range=["2018-08-25","9999-01-01"]
     sex = "M"
     divisions = ["Juniors","Sub-Juniors"]
 
-[weightclasses.junior_F]
+[weightclasses.WP_juniorF]
+    classes = ["44","48","53","58","64","72","84","84+"]
+    date_range=["2018-08-25","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.IPF_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","2018-08-24"]
+    sex = "M"
+
+[weightclasses.IPF_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2018-08-24"]
+    sex = "F"
+
+[weightclasses.IPF_juniorM]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","2018-08-24"]
+    sex = "M"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.IPF_juniorF]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2018-08-24"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 

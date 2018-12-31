@@ -51,6 +51,9 @@ pub enum Country {
     China,
     Colombia,
     Congo,
+    #[serde(rename = "Cook Islands")]
+    #[strum(to_string = "Cook Islands")]
+    CookIslands,
     #[serde(rename = "Costa Rica")]
     #[strum(to_string = "Costa Rica")]
     CostaRica,
