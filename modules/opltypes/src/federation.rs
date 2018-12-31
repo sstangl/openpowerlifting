@@ -207,6 +207,11 @@ pub enum Federation {
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
+    /// Croatia - Unaffiliated
+    #[serde(rename = "Croatia-UA")]
+    #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
+    CroatiaUA,
+
     /// Český svaz silového trojboje, Czech IPF affiliate.
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
@@ -331,11 +336,6 @@ pub enum Federation {
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
 
-    /// Croatia - Unaffiliated
-    #[serde(rename = "Croatia-UA")]
-    #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
-    CroatiaUA,
-
     /// Croatian IPF affiliate
     #[strum(to_string = "HPLS", serialize = "hpls")]
     HPLS,
@@ -348,6 +348,10 @@ pub enum Federation {
     /// Croatian Powerlifting Organization
     #[strum(to_string = "HPO", serialize = "hpo")]
     HPO,
+
+    /// Hybrid Performance Method, Stefi Cohen's gym.
+    #[strum(to_string = "HybridPM", serialize = "hybridpm")]
+    HybridPM,
 
     /// International Blind Sport Assocation.
     #[strum(to_string = "IBSA", serialize = "ibsa")]
@@ -861,6 +865,7 @@ impl Federation {
             Federation::HPLS => true,
             Federation::HPLSUA => false,
             Federation::HPO => false,
+            Federation::HybridPM => false,
             Federation::IBSA => true,
             Federation::IDFPA => true,
             Federation::IDFPF => true,
@@ -1048,6 +1053,7 @@ impl Federation {
             Federation::HPLS => Some(Country::Croatia),
             Federation::HPLSUA => Some(Country::Croatia),
             Federation::HPO => Some(Country::Croatia),
+            Federation::HybridPM => Some(Country::USA),
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
@@ -1234,6 +1240,7 @@ impl Federation {
             Federation::HPLS => PointsSystem::Wilks,
             Federation::HPLSUA => PointsSystem::Wilks,
             Federation::HPO => PointsSystem::Wilks,
+            Federation::HybridPM => PointsSystem::Wilks,
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::Wilks,
