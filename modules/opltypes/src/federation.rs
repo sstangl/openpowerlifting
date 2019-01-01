@@ -138,11 +138,15 @@ pub enum Federation {
     #[strum(to_string = "BenchAmerica", serialize = "benchamerica")]
     BenchAmerica,
 
+    /// British Powerlifting, IPF. Formerly named GBPF.
+    #[strum(to_string = "BP", serialize = "bp")]
+    BP,
+
     /// Defunct British WPC affiliate.
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
 
-    /// British WPU affiliate.
+    /// British Powerlifting Federation, WPU/WRPF.
     #[strum(to_string = "BPF", serialize = "bpf")]
     BPF,
 
@@ -153,10 +157,6 @@ pub enum Federation {
     /// British Powerlifting Union.
     #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
-
-    /// British Powerlifting, IPF. Formerly named GBPF.
-    #[strum(to_string = "BP", serialize = "bp")]
-    BP,
 
     /// Bundesverband Deutscher Kraftdreikämpf, IPF.
     #[strum(to_string = "BVDK", serialize = "bvdk")]
@@ -816,11 +816,11 @@ impl Federation {
             Federation::BBDD => false,
             Federation::BDFPA => true,
             Federation::BenchAmerica => false,
+            Federation::BP => true,
             Federation::BPC => false,
             Federation::BPF => false,
             Federation::BPO => false,
             Federation::BPU => false,
-            Federation::BP => true,
             Federation::BVDK => true,
             Federation::CAPO => false,
             Federation::CAPONZ => false,
@@ -1003,11 +1003,11 @@ impl Federation {
             Federation::BBDD => Some(Country::USA),
             Federation::BDFPA => Some(Country::UK),
             Federation::BenchAmerica => Some(Country::USA),
+            Federation::BP => Some(Country::UK),
             Federation::BPC => Some(Country::UK),
             Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
             Federation::BPU => Some(Country::UK),
-            Federation::BP => Some(Country::UK),
             Federation::BVDK => Some(Country::Germany),
             Federation::CAPO => Some(Country::Australia),
             Federation::CAPONZ => Some(Country::NewZealand),
@@ -1190,11 +1190,11 @@ impl Federation {
             Federation::BBDD => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
             Federation::BenchAmerica => PointsSystem::Wilks,
+            Federation::BP => PointsSystem::Wilks,
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Wilks,
-            Federation::BP => PointsSystem::Wilks,
             Federation::BVDK => PointsSystem::Wilks,
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
