@@ -159,8 +159,22 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
             }
         };
 
+        // TODO: This fixes the case of {9.5, 10.5}, where is_definitely_less_than
+        // fails. TODO: But it could be less of a hack. Maybe define PartialOrd?
+        let mut valid_approximate_ages = false;
+        if let Age::Approximate(a) = min_age {
+            if let Age::Approximate(b) = max_age {
+                if a < b {
+                    valid_approximate_ages = true;
+                }
+            }
+        }
+
         // The age range must be nonmonotonically increasing.
-        if min_age != max_age && !min_age.is_definitely_less_than(max_age) {
+        if min_age != max_age
+            && !min_age.is_definitely_less_than(max_age)
+            && !valid_approximate_ages
+        {
             report.error(format!(
                 "Division '{}' has an invalid age range '{}-{}'",
                 key, min_age, max_age
