@@ -37,12 +37,6 @@
 
 <p>This site has no ads or paywalls -- we are generously funded by donations from the powerlifting community via <a href="https://www.patreon.com/openpowerlifting">Patreon</a>. As a way of saying thanks, donators have the option of choosing a custom color for their name.</p>
 
-<h2>Why aren't my IPL results shown?</h2>
-
-<p>Although the IPL and the USPA are run by the same people, they organized as separate federations. You probably got to the site via the link on the USPA site, and are therefore viewing the rankings for just the USPA -- change the federation selector to "IPL" or "All Feds" and your results should be there.</p>
-
-<p>If you're ever not sure if we have results of yours, try clicking on your name.</p>
-
 <h2>Why are WRPF totals lower than reported? (Why isn't Yury #1?)</h2>
 
 <p>The WRPF allows up to 5 attempts for small, "professional" powerlifting meets, with all lifts counting toward the total. We recalculate WRPF totals and Wilks such that only the first three attempts count toward the total.</p>
@@ -67,18 +61,6 @@
 
 <p>The core team probably won't be able to work on this any time soon, but the issue is particularly beginner-friendly, although time-consuming. If you are interested in helping with division data cleanup, please look at <a href="https://gitlab.com/openpowerlifting/opl-data/issues/57">Issue #57</a>.</p>
 
-<h2>What counts as Drug-Tested?</h2>
-
-<p>After community discussion, we decided to assess drug-testedness on the federation level. In the current model, a federation is either tested or untested -- it can't be both. If an untested federation hosts tested meets, they'll count only toward untested records.</p>
-
-<p>Some federations pretend that they are really two federations, one tested, one untested, that just so happen to host meets in the same place at the same time. Those also count as untested.</p>
-
-<p>Some federations have an "Amateur/Pro" split, where after you perform to a certain standard, they force you to compete untested. Those federations also count as untested.</p>
-
-<p>The only federations that count as tested are intended to be those with a strong organization-wide drug-free culture. The good news is that there are many such federations, and it's very easy to find one to compete in, if you so choose.</p>
-
-<p>It is conceivable that this policy could change in the future. Doing so would require the general powerlifting community to accept that tested records can be broken in largely-untested federations. We would need to have another discussion about this on <a href="https://www.reddit.com/r/powerlifting">reddit.com/r/powerlifting</a>.</p>
-
 <h2>How does this site work? Do you just download results from the federations?</h2>
 
 <p>Hopefully in the future that will be possible, but right now that isn't possible, because the majority of federations are operating with extremely old and bad technology: PDF files instead of databases.</p>
@@ -93,7 +75,7 @@
 
 <p>We are currently a team of about eight powerlifters.</p>
 
-<p>If you think you might like to help out, please send an e-mail for an invite code to the team chat.</p>
+<p>If you think you might like to help out, please send an e-mail for an invitation to the team chat.</p>
 
 <h2>Why is this site free? (With the subtext of: What's the ruse here?)</h2>
 
