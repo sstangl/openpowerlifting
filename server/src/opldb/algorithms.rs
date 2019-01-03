@@ -212,6 +212,9 @@ pub fn get_entry_indices_for<'db>(
     // Apply the Year filter.
     cur = match selection.year {
         YearSelection::AllYears => cur,
+        YearSelection::Year2019 => PossiblyOwnedNonSortedNonUnique::Owned(
+            cur.intersect(&cache.log_linear_time.year2019),
+        ),
         YearSelection::Year2018 => PossiblyOwnedNonSortedNonUnique::Owned(
             cur.intersect(&cache.log_linear_time.year2018),
         ),

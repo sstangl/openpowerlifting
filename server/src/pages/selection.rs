@@ -645,6 +645,7 @@ impl FromStr for AgeClassSelection {
 #[derive(Copy, Clone, Debug, PartialEq, Serialize)]
 pub enum YearSelection {
     AllYears,
+    Year2019,
     Year2018,
     Year2017,
     Year2016,
@@ -707,6 +708,7 @@ impl FromStr for YearSelection {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             // No entry for AllYears, since it's default.
+            "2019" => Ok(YearSelection::Year2019),
             "2018" => Ok(YearSelection::Year2018),
             "2017" => Ok(YearSelection::Year2017),
             "2016" => Ok(YearSelection::Year2016),
@@ -771,6 +773,7 @@ impl YearSelection {
     pub fn as_u32(self) -> Option<u32> {
         match self {
             YearSelection::AllYears => None,
+            YearSelection::Year2019 => Some(2019),
             YearSelection::Year2018 => Some(2018),
             YearSelection::Year2017 => Some(2017),
             YearSelection::Year2016 => Some(2016),
