@@ -234,6 +234,7 @@ def check_name_disambiguation(names):
             # Just use a warning, to avoid making meets really annoying to
             # enter.
             pwarning("Lifter '%s' needs disambiguation in some meet data." % name)
+            print(" https://www.openpowerlifting.org/u/%s" % get_username(name))
 
         # All the variants of that name should be accounted for.
         for k in range(1, int(count) + 1):
