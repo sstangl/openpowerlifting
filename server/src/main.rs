@@ -256,19 +256,52 @@ fn lifter(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Result<Template, Redirect>> {
-    let lifter_id = match opldb.get_lifter_id(&username) {
-        None => {
-            // If the name just needs to be lowercased, redirect to that page.
-            let lowercase = username.to_ascii_lowercase();
-            let _guard = opldb.get_lifter_id(&lowercase)?;
-            return Some(Err(Redirect::permanent(format!("/u/{}", lowercase))));
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+
+    // Disambiguations end with a digit.
+    // Some lifters may have failed to be merged with their disambiguated username.
+    // Therefore, for usernames without a digit, it cannot be assumed that they are
+    // *not* a disambiguation.
+    let is_definitely_disambiguation: bool = username
+        .chars()
+        .last()
+        .map_or(false, |c| c.is_ascii_digit());
+
+    let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
+        let mut v = vec![];
+        if let Some(id) = opldb.get_lifter_id(&username) {
+            v.push(id);
         }
-        Some(id) => id,
+        v
+    } else {
+        opldb.get_lifters_under_username(&username)
     };
 
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::lifter::Context::new(&opldb, &locale, lifter_id);
-    Some(Ok(Template::render("lifter", &context)))
+    match lifter_ids.len() {
+        // If no LifterID was found, maybe the name just needs to be lowercased.
+        0 => {
+            let lowercase = username.to_ascii_lowercase();
+            let _guard = opldb.get_lifter_id(&lowercase)?;
+            Some(Err(Redirect::permanent(format!("/u/{}", lowercase))))
+        }
+
+        // If a specific lifter was referenced, return the lifter's unique page.
+        1 => {
+            let context = pages::lifter::Context::new(&opldb, &locale, lifter_ids[0]);
+            Some(Ok(Template::render("lifter", &context)))
+        }
+
+        // If multiple lifters were referenced, return a disambiguation page.
+        _ => {
+            let context = pages::disambiguation::Context::new(
+                &opldb,
+                &locale,
+                &username,
+                &lifter_ids,
+            );
+            Some(Ok(Template::render("disambiguation", &context)))
+        }
+    }
 }
 
 #[get("/mlist/<mselections..>?<lang>")]
@@ -401,7 +434,9 @@ fn index(
     let selection = pages::selection::Selection::default();
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
-    Some(IndexReturn::Template(Template::render("rankings", &context)))
+    Some(IndexReturn::Template(Template::render(
+        "rankings", &context,
+    )))
 }
 
 /// Return type for pre-rendered Json strings.
@@ -495,10 +530,7 @@ fn default_search_rankings_api(
 }
 
 #[get("/lifters.html?<q>")]
-fn old_lifters(
-    opldb: State<ManagedOplDb>,
-    q: String,
-) -> Option<Redirect> {
+fn old_lifters(opldb: State<ManagedOplDb>, q: String) -> Option<Redirect> {
     let name = &q;
     let id = opldb.get_lifter_id_by_name(name)?;
     let username = &opldb.get_lifter(id).username;

@@ -1,0 +1,61 @@
+{% extends "desktop-base" %}
+
+{% block topbar_hack %}
+  <div class="topbar-without-controls">
+{% endblock topbar_hack %}
+
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
+
+{% block body %}
+  <div class="mixed-content">
+
+    <h1>Lifter Disambiguation</h1>
+
+    {% for variant in variants %}
+      <h2><a href="/u/{{variant.lifter.username}}"><span class="{{variant.lifter.color}}">{{variant.localized_name}}</span> ({{variant.lifter_sex}}){% if variant.lifter.instagram %}<a href="https://instagram.com/{{variant.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if variant.lifter.vkontakte %}<a href="https://vk.com/{{variant.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% if variant.lifter.flair == "bbbc" %} <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo" style="padding-left: 6px;"/>{% endif %}</a></h2>
+
+      <table>
+        <thead><tr>
+          <th>{{strings.columns.place}}</th>
+          <th>{{strings.columns.federation}}</th>
+          <th>{{strings.columns.date}}</th>
+          <th>{{strings.columns.location}}</th>
+          <th>{{strings.columns.meetname}}</th>
+          <th>{{strings.columns.division}}</th>
+          <th>{{strings.columns.age}}</th>
+          <th>{{strings.columns.equipment}}</th>
+          <th>{{strings.columns.weightclass}}</th>
+          <th>{{strings.columns.bodyweight}}</th>
+          <th>{{strings.columns.squat}}</th>
+          <th>{{strings.columns.bench}}</th>
+          <th>{{strings.columns.deadlift}}</th>
+          <th>{{strings.columns.total}}</th>
+          <th>{{strings.columns.wilks}}</th>
+        </tr></thead>
+        <tbody>
+        {% for this in variant.meet_results %}
+          <tr>
+            <td>{{this.place}}</td>
+            <td>{{this.federation}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
+            <td><a href="/m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
+            <td>{{this.division}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.equipment}}</td>
+            <td>{{this.weightclass}}</td>
+            <td>{{this.bodyweight}}</td>
+            <td>{{this.squat}}</td>
+            <td>{{this.bench}}</td>
+            <td>{{this.deadlift}}</td>
+            <td>{{this.total}}</td>
+            <td>{{this.wilks}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% endfor %}
+  </div>
+{% endblock body %}

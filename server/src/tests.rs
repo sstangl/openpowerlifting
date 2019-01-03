@@ -74,6 +74,9 @@ fn test_pages_load() {
     assert_eq!(client.get("/data").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/faq").dispatch().status(), Status::Ok);
     assert_eq!(client.get("/contact").dispatch().status(), Status::Ok);
+
+    // Test a disambiguation page.
+    assert_eq!(client.get("/u/joshsmith").dispatch().status(), Status::Ok);
 }
 
 /// Some rankings pages that contain only a few entries have

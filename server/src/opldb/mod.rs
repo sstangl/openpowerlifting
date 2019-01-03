@@ -402,6 +402,27 @@ impl OplDb {
         None
     }
 
+    /// Get a list of all lifters that have the same username base,
+    /// which doesn't include numbers for disambiguation.
+    ///
+    /// For example, "johndoe" matches "johndoe" and "johndoe1",
+    /// but does not match "johndoenut".
+    pub fn get_lifters_under_username(&self, base: &str) -> Vec<u32> {
+        let mut acc = vec![];
+        for i in 0..self.lifters.len() {
+            let username = &self.lifters[i].username;
+            if username.starts_with(base) {
+                // If the base is shared, the remainder of the string
+                // should be empty or a number for disambiguation.
+                let (_, remainder) = username.split_at(base.len());
+                if remainder.is_empty() || remainder.parse::<u8>().is_ok() {
+                    acc.push(i as u32);
+                }
+            }
+        }
+        acc
+    }
+
     /// Look up the lifter_id by Name.
     ///
     /// This function exists for compatibility for the old site.

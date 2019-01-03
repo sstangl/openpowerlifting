@@ -7,6 +7,7 @@ pub mod selection;
 // Template context providers.
 pub mod contact;
 pub mod data;
+pub mod disambiguation;
 pub mod faq;
 pub mod lifter;
 pub mod meet;

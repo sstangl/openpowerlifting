@@ -79,7 +79,7 @@ pub struct MeetResultsRow<'a> {
 }
 
 impl<'a> MeetResultsRow<'a> {
-    fn from(
+    pub fn from(
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
         entry: &'a opldb::Entry,
