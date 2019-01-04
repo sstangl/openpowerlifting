@@ -7,7 +7,7 @@
 
 import oplcsv
 import sys
-from coefficient import glossbrenner, wilks, mcculloch
+from coefficient import glossbrenner, wilks, mcculloch, ipf
 
 
 def to_string(f):
@@ -43,14 +43,19 @@ def main(filename):
         csv.append_column('McCulloch')
     if 'Glossbrenner' not in csv.fieldnames:
         csv.append_column('Glossbrenner')
+    if 'IPFPoints' not in csv.fieldnames:
+        csv.append_column('IPFPoints')
 
     indexSex = csv.index('Sex')
+    indexEquipment = csv.index('Equipment')
+    indexEvent = csv.index('Event')
     indexAge = csv.index('Age')
     indexBodyweight = csv.index('BodyweightKg')
     indexTotal = csv.index('TotalKg')
     indexWilks = csv.index('Wilks')
     indexMcCulloch = csv.index('McCulloch')
     indexGlossbrenner = csv.index('Glossbrenner')
+    indexIPFPoints = csv.index('IPFPoints')
 
     for row in csv.rows:
         sex = row[indexSex]
@@ -84,6 +89,10 @@ def main(filename):
         # Add the Glossbrenner score to the row.
         gloss = glossbrenner(sex == 'M', bodyweight, total)
         row[indexGlossbrenner] = to_string(gloss)
+
+        # Add the IPF Points to the row.
+        ipfpoints = ipf(sex, row[indexEquipment], row[indexEvent], bodyweight, total)
+        row[indexIPFPoints] = to_string(ipfpoints)
 
     csv.write_filename(filename)
     return 0

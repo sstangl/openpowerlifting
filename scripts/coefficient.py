@@ -4,6 +4,8 @@
 # Helper library for Wilks, Schwartz/Malone & Glossbrenner calculation.
 #
 
+import math
+
 
 def wilksCoeff(a, b, c, d, e, f, x):
     return 500 / (a + b * x + c * x**2 + d * x**3 + e * x**4 + f * x**5)
@@ -240,3 +242,63 @@ def glossbrenner(isMale, bodyweightKg, totalKg):
     if isMale:
         return glossCoeffMen(bodyweightKg) * totalKg
     return glossCoeffWomen(bodyweightKg) * totalKg
+
+
+IPF_COEFFICIENTS = {
+    'M': {
+        'Raw': {
+            'SBD': [310.67, 857.785, 53.216, 147.0835],
+            'B': [86.4745, 259.155, 17.57845, 53.122]
+        },
+        'Single-ply': {
+            'SBD': [387.265, 1121.28, 80.6324, 222.4896],
+            'B': [133.94, 441.465, 35.3938, 113.0057]
+        }
+    },
+    'F': {
+        'Raw': {
+            'SBD': [125.1435, 228.03, 34.5246, 86.8301],
+            'B': [25.0485, 43.848, 6.7172, 13.952]
+        },
+        'Single-ply': {
+            'SBD': [176.58, 373.315, 48.4534, 110.0103],
+            'B': [49.106, 124.209, 23.199, 67.492]
+        }
+    }
+}
+
+
+def ipf(sex, equipment, event, bodyweightKg, totalKg):
+    global IPF_COEFFICIENTS
+
+    # Non-positive bodyweight or total is undefined.
+    if bodyweightKg <= 0 or totalKg <= 0:
+        return 0
+
+    # Normalize equipment to (Raw, Single-ply).
+    if equipment == 'Wraps' or equipment == 'Straps':
+        equipment = 'Raw'
+    elif equipment == 'Multi-ply':
+        equipment = 'Single-ply'
+
+    # The IPF formula is only defined for some parameters.
+    if equipment not in ['Raw', 'Single-ply']:
+        return 0
+    if event not in ['SBD', 'B']:
+        return 0
+    if sex not in ['M', 'F']:
+        return 0
+
+    # Look up parameters.
+    [mean1, mean2, dev1, dev2] = IPF_COEFFICIENTS[sex][equipment][event]
+
+    # Calculate the properties of the normal distribution.
+    bwLog = math.log(bodyweightKg)
+    mean = mean1 * bwLog - mean2
+    dev = dev1 * bwLog - dev2
+
+    # Prevent division by zero.
+    if dev == 0.0:
+        return 0
+
+    return max(0, 500 + 100 * (totalKg - mean) / dev)
