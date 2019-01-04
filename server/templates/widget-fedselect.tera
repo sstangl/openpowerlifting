@@ -45,7 +45,6 @@
   <option value="hardcore" {% if selection.federation == "Hardcore" %}selected{% endif %}>Hardcore - Hardcore Powerlifting</option>
   <option value="herc" {% if selection.federation == "HERC" %}selected{% endif %}>HERC - Hercules</option>
   <option value="ipa" {% if selection.federation == "IPA" %}selected{% endif %}>IPA - International Powerlifting Association (2014+)</option>
-  <option value="mhp" {% if selection.federation == "MHP" %}selected{% endif %}>MHP - Maximum Human Performance</option>
   <option value="mm" {% if selection.federation == "MM" %}selected{% endif %}>MM - Metal Militia</option>
   <option value="pride" {% if selection.federation == "PRIDE" %}selected{% endif %}>PRIDE - Pride Powerlifting</option>
   <option value="nasa" {% if selection.federation == "NASA" %}selected{% endif %}>NASA - Natural Athlete Strength Association (2016+)</option>
@@ -164,7 +163,7 @@
   <option value="all-iceland" {% if selection.federation == "AllIceland" %}selected{% endif %}>{{strings.selectors.fed.all_iceland}}</option>
   <option value="ikf" {% if selection.federation == "IKF" %}selected{% endif %}>IKF - Íslenska Kraftlyfingafélagið [GPC/WPC]</option>
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
-  <option value="raw-iceland" {% if selection.federation == "RAW-Iceland" %}selected{% endif %}>RAW-Iceland 100% RAW Powerlifting Federation Iceland</option>
+  <option value="raw-iceland" {% if selection.federation == "RAW-Iceland" %}selected{% endif %}>RAW-Iceland</option>
   <option value="wpc-iceland" {% if selection.federation == "WPC-Iceland" %}selected{% endif %}>WPC Iceland</option>
 </optgroup>
 <optgroup label="{{strings.country.indonesia}}">
