@@ -374,6 +374,7 @@ pub struct ColumnTranslations {
     pub wilks: String,
     pub mcculloch: String,
     pub glossbrenner: String,
+    pub ipfpoints: String,
     pub num_lifters: String,
 }
 
@@ -421,6 +422,7 @@ pub struct SortSelectorTranslations {
     pub by_total: String,
     pub by_allometric: String,
     pub by_glossbrenner: String,
+    pub by_ipfpoints: String,
     pub by_mcculloch: String,
     pub by_wilks: String,
     pub by_division: String,

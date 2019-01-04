@@ -22,6 +22,7 @@
     const translation_column_wilks = "{{strings.columns.wilks}}";
     const translation_column_mcculloch = "{{strings.columns.mcculloch}}";
     const translation_column_glossbrenner = "{{strings.columns.glossbrenner}}";
+    const translation_column_ipfpoints = "{{strings.columns.ipfpoints}}";
   </script>
 
   <script src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>

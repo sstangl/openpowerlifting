@@ -7,6 +7,7 @@
   </optgroup>
   <optgroup label="{{strings.selectors.sort.points}}">
     <option value="by-glossbrenner" {% if selection.sort == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
+    <option disabled value="by-ipf-points" {% if selection.sort == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
     <option value="by-mcculloch" {% if selection.sort == "ByMcCulloch" %}selected{% endif %}>{{strings.selectors.sort.by_mcculloch}}</option>
     <option value="by-wilks" {% if selection.sort == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
   </optgroup>

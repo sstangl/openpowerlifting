@@ -122,6 +122,8 @@ pub struct Entry {
     pub mcculloch: Points,
     #[serde(rename(deserialize = "Glossbrenner"))]
     pub glossbrenner: Points,
+    #[serde(rename(deserialize = "IPFPoints"))]
+    pub ipfpoints: Points,
     #[serde(
         rename(deserialize = "Tested"),
         deserialize_with = "deserialize_yes_no"
