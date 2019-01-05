@@ -2,8 +2,40 @@
 
 [divisions]
     open = {name = "Open", min = 0, max = 999}
+    masters = {name = "Masters 40+", min = 40, max = 999}
+
+[weightclasses.default_M]
+    classes = ["68.49","79.83","91.17","100.24","102.51","113.85","125.19","136.53","125.19+","136.53+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["54.88","63.96","68.49","73.03","82.1","91.17","91.17+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
 
 [exemptions]
-    1301 = ["ExemptWeightClassConsistency"]
-    1401 = ["ExemptWeightClassConsistency"]
+    1101 = ["ExemptDivision","ExemptWeightClassConsistency"]
+    1001 = ["ExemptDivision","ExemptWeightClassConsistency"]
+    1302 = ["ExemptWeightClassConsistency"]
+    1204 = ["ExemptWeightClassConsistency"]
+    1203 = ["ExemptWeightClassConsistency"]
+    1202 = ["ExemptWeightClassConsistency"]
     1201 = ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptDivision","ExemptWeightClassConsistency"]
+    1002 = ["ExemptWeightClassConsistency"]
+    0901 = ["ExemptWeightClassConsistency"]
+    0902 = ["ExemptWeightClassConsistency"]
+    0702 = ["ExemptWeightClassConsistency"]
+    0701 = ["ExemptWeightClassConsistency"]
+    0601 = ["ExemptWeightClassConsistency"]
+    1401 = ["ExemptWeightClassConsistency"]
+    1501 = ["ExemptWeightClassConsistency"]
+    1503 = ["ExemptWeightClassConsistency"]
+    1304 = ["ExemptWeightClassConsistency"]
+    1207 = ["ExemptWeightClassConsistency"]
+    1206 = ["ExemptWeightClassConsistency"]
+    1205 = ["ExemptWeightClassConsistency"]
+    1402 = ["ExemptWeightClassConsistency"]
+    1403 = ["ExemptWeightClassConsistency"]
+    1502 = ["ExemptWeightClassConsistency"]
