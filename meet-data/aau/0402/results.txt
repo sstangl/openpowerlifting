@@ -1,0 +1,488 @@
+sex   first      last         state      div          qge wt cl         class     B SQ      R SQ   B BP          R BP         B DL       R DL   TOT           TOT #
+F     SARAH      BIDDLE       INDIANA    BENCH          12         88   RY 12-13                          37.5                                         37.5     82.6725
+F     ANNA       ORTOSOVA     SLOVAKIA   BENCH          42        105   DISABLED                           85                                            85     187.391
+F     HEATHER    FRY          TEXAS      BENCH          24        114   LIFE                              52.5                                         52.5    115.7415
+F     MARIA      BARTOSOVA    SLOVAKIA   BENCH          44        123   DISABLED                           85           90                               85     187.391
+F     BRENDA     AGUIRE       MEXICO     BENCH                    123   OPEN                                                                              0           0
+F     JACKIE     YARBROUGH    ARIZONA    BENCH          59        123   R LAW/MIL                     35                                                 35      77.161
+F     TEALE      ADELMAN      NEW MEXICOBENCH           33        123   SUB                            117.5            120                           117.5    259.0405
+F     ELODIA     WOMACK       CALIFORNIA BENCH          41        132   LM 40-44                          60                                             60     132.276
+F     CYNTHIA    GERVAIS      NORTH CAROBENCH           34        132   R OPEN                            45                                             45      99.207
+F     ELODIA     WOMACK       CALIFORNIA BENCH          41        132   RLM 40-44                         50                                             50      110.23
+F     MARY       HETZEL       COLORADO BENCH            45        148   LM 45-49                        87.5                                           87.5    192.9025
+F     JEAN       GARDELLA     RHODE ISLANBENCH                    148   R OPEN                           100                                            100      220.46
+F     JEAN       GARDELLA     RHODE ISLANBENCH                    148   R SUB                            100                                            100      220.46
+F     GRETCHEN   ASHTON       CALIFORNIA BENCH          45        165   LIFE                              95            100                              95     209.437
+F     GRETCHEN   ASHTON       CALIFORNIA BENCH          45        165   LM 45-49                          95            100                              95     209.437
+F     GRETCHEN   ASHTON       CALIFORNIA BENCH          45        165   M 45-49                           95            100                              95     209.437
+F     GRETCHEN   ASHTON       CALIFORNIA BENCH          45        165   OPEN                              95            100                              95     209.437
+F     SVITLANA   VIYCHUK      UKRAINE    BENCH          32        165   OPEN                                                                              0           0
+F     MARGOT     O HALLORAN   CALIFORNIA BENCH          14        165   RT 14-15                        55                                               55     121.253
+F     ABIGAIL    BIDDLE       INDIANA    BENCH          16        165   RT 16-17                        60                                               60     132.276
+F     MARGOT     O HALLORAN   CALIFORNIA BENCH          14        165   T 14-15                         70                                               70     154.322
+F     KELLY      WOMAK        CALIFORNIA BENCH                    181   JR                            117.5                                           117.5    259.0405
+F     KELLY      WOMAK        CALIFORNIA BENCH                    181   OPEN                          117.5                                           117.5    259.0405
+F     ALANNAGH   MC TIGHE     COLORADO BENCH            53        198   M 50-54                        97.5             100                            97.5    214.9485
+F     HANNAH     BIDDLE       INDIANA    BENCH          14        199   RT 14-15                       47.5                                            47.5    104.7185
+F     SARAH      BIDDLE       INDIANA    DEADLIFT       12         88   RY 12-13                                                    75                   75     165.345
+F     HELENE     TROPP        CALIFORNIA DEADLIFT       65         97   RM 65-69                                                  97.5                 97.5    214.9485
+F     HEATHER    FRY          TEXAS      DEADLIFT       24        114   LIFE                                                     102.5                102.5    225.9715
+F     CYNTHIA    GERVAIS      NORTH CARODEADLIFT        34        132   R OPEN                                                    97.5                 97.5    214.9485
+F     SUASN      COLLINS      ARIZONA    DEADLIFT       43        165   RLM 40-44                                                 130                  130      286.598
+F     DEBBIE     SELBY        CALIFORNIA DEADLIFT       48        165   RLM 45-49                                                 110                   110     242.506
+F     DEBBIE     SELBY        CALIFORNIA DEADLIFT       48        165   RM 45-49                                                   110                  110     242.506
+F     ABIGAIL    BIDDLE       INDIANA    DEADLIFT       16        165   RT 16-17                                                 130.5                130.5    287.7003
+F     HANNAH     BIDDLE       INDIANA    DEADLIFT       14        199   RT 14-15                                                  97.5                 97.5    214.9485
+F     SARAH      BIDDLE       INDIANA    POWERLIFTING   12         88   RY 12-13         60                35                       75                  170     374.782
+F     MEXICO     F1           MEXICO     POWERLIFTING              97   OPEN                                                                              0           0
+F     JOANNE     SHEAR        MASS       POWERLIFTING   54        114   M 50-54        100                 55                    137.5                292.5    644.8455
+F     HEATHER    FRY          TEXAS      POWERLIFTING   24        114   OPEN            115               52.5                   102.5                  270     595.242
+F     ROBIN      HEDRICK      TEXAS      POWERLIFTING   39        123   LIFE             70                50                     100                   220     485.012
+F     KLEANNA    GUTIEREZ     OREGON     POWERLIFTING   26        123   OPEN             80                55                     115                   250      551.15
+F     BRENDA     AGUIRE       MEXICO     POWERLIFTING             123   OPEN                                                                              0           0
+F     BRENDA     AGUIRE       MEXICO     POWERLIFTING             123   OPEN                                                                              0           0
+F     SHARON     HOFFMAN      VIRGINIA   POWERLIFTING   34        123   R OPEN                                                                            0           0
+F     LAURA      ANDERSON     MISSOURI   POWERLIFTING   38        123   SUB            72.5               52.5                   107.5                232.5    512.5695
+F     HEATHER    HUGHES       TEXAS      POWERLIFTING   41        132   M 40-44        135                72.5                    170                 377.5    832.2365
+F     CYNTHIA    GERVAIS      NORTH CAROPOWERLIFTING    34        132   R OPEN         52.5                45                     97.5                  195     429.897
+F     MELINDA    CARTER       TEXAS      POWERLIFTING   37        132   SUB           137.5               67.5                    150                   355     782.633
+F     DIANE      MANNO        ARIZONA    POWERLIFTING   42        148   LM 40-44       110                625                    117.5                                0
+F   MARY       HETZEL        COLORADO POWERLIFTING     45   148   LM 45-49     140             87.5            155    382.5   843.2595
+F   MEXICO     F3            MEXICO     POWERLIFTING        148   OPEN                                                    0          0
+F   MEXICO     F4            MEXICO     POWERLIFTING        148   OPEN                                                    0          0
+F   JEAN       GARDELLA      RHODE ISLANPOWERLIFTING        148   R OPEN        110              100            140     350     771.61
+F   JEAN       GARDELLA      RHODE ISLANPOWERLIFTING        148   R SUB         110              100            140     350     771.61
+F   GENNY      CATON         VIRGINIA   POWERLIFTING   47   148   RLM 45-49      80               95   100      130     305    672.403
+F   GENNY      CATON         VIRGINIA   POWERLIFTING   47   148   RM 45-49       80               95   100     130     305     672.403
+F   CHANICE    SUTHERLAND    CALIFORNIA POWERLIFTING   14   148   RT 14-15     92.5    95         50           115    257.5   567.6845
+F   SABRINA    BAGBY                    POWERLIFTING   48   165   LM 45-49    117.5               65          127.5    310     683.426
+F   GRETCHEN   ASHTON        CALIFORNIA POWERLIFTING   45   165   LM 45-49       70               95   100     125     290     639.334
+F   GRETCHEN   ASHTON        CALIFORNIA POWERLIFTING   45   165   M 45-49        70               95   100     125     290     639.334
+F   DEBBIE     SELBY         CALIFORNIA POWERLIFTING   48   165   RLM 45-49      45             37.5            110   192.5   424.3855
+F   ELAINE     WAUGH         NEW MEXICOPOWERLIFTING    63   165   RM 60-64       55          42.5              97.5     195    429.897
+F   ABIGAIL    BIDDLE        INDIANA    POWERLIFTING   16   165   RT 16-17      105               60          130.5   295.5   651.4593
+F   ABIGAIL    BIDDLE        INDIANA    POWERLIFTING   16   165   T 16-17       105               60          130.5   295.5   651.4593
+F   BETHANY    SCHWANINGER   ILLINOIS   POWERLIFTING   18   165   T 18-19     127.5             67.5            155    350      771.61
+F   GISELLE    COSTAS        PUERTO RICOPOWERLIFTING   24   181   OPEN          190   200     107.5           227.5    525    1157.415
+F   JESSICA    OUTMAN        PENNSYLVANPOWERLIFTING    15   181   RT 14-15     37.5             62.5          117.5   217.5   479.5005
+F   FLORENCE   WILSON        PENNSYLVANPOWERLIFTING    10   181   RY 10-11     37.5   42.5      27.5   28.5      45    110     242.506
+F   MELISSA    GARRETT       TENNESSEE POWERLIFTING    26   199   OPEN          175               90          157.5   422.5   931.4435
+F   HANNAH     BIDDLE        INDIANA    POWERLIFTING   14   199   RT 14-15     87.5             47.5           97.5   232.5   512.5695
+F   HANNAH     BIDDLE        INDIANA    POWERLIFTING   14   199   T 14-15      87.5             47.5           97.5   232.5   512.5695
+F   ALECIA     BENNINGER     OHIO       POWERLIFTING   19   199   T 18-19     182.5               85            170   437.5   964.5125
+F   SARAH      BIDDLE        INDIANA    PUSHPULL       12    88   RY 12-13                        35             75    110     242.506
+F   KELLY      FLAHIVE       CALIFORNIA PUSHPULL       16   105   RT 16-17                      52.5           110    162.5   358.2475
+F   BRENDA     AGUIRE        MEXICO     PUSHPULL            123   OPEN                                                    0          0
+F   CYNTHIA    GERVAIS       NORTH CAROPUSHPULL        34   132   R OPEN                          45           97.5   142.5   314.1555
+F   LEAH       SHERMAN       CALIFORNIA PUSHPULL       14   132   RT 14-15                        35            95     130     286.598
+F   LYNN       NAFTEL        CALIFORNIA PUSHPULL       57   148   RLM 55-59                     47.5          107.5    155     341.713
+F   LYNN       NAFTEL        CALIFORNIA PUSHPULL       57   148   RM 55-59                      47.5          107.5    155     341.713
+F   SUASN      COLLINS       ARIZONA    PUSHPULL       43   165   RLM 40-44                       60           130     190     418.874
+F   ELAINE     WAUGH         NEW MEXICOPUSHPULL        63   165   RM 60-64      55           42.5              97.5    195     429.897
+F   ABIGAIL    BIDDLE        INDIANA    PUSHPULL       16   165   RT 16-17                        60          130.5   190.5   419.9763
+F   HANNAH     BIDDLE        INDIANA    PUSHPULL       14   199   RT 14-15                      47.5           97.5    145     319.667
+M   JACK       DUNHAM        CALIFORNIA BENCH          11    97   RY 10-11                        40                     40     88.184
+M   BRAD       WILLIAMSON    OKLAHOMA BENCH            15   114   T 14-15                                                 0          0
+M   MIKE       BOOKER        CALIFORNIA BENCH          22   123   R OPEN                        165                     165    363.759
+M   MARK       SCHULTZ       NEVADA     BENCH          46   132   RLM 45-49                                               0          0
+M   VICTOR     HILL JR       CALIFORNIA BENCH          15   132   RT 14-15                       65                      65    143.299
+M   NARBE      MANSOURIAN    CALIFORNIA BENCH          28   148   LIFE                        162.5                   162.5   358.2475
+M   JORGE      ORTEGA        MEXICO     BENCH          32   148   OPEN         195              120           212.5   527.5   1162.927
+M   NARBE      MANSOURIAN    CALIFORNIA BENCH          28   148   OPEN                        162.5                   162.5   358.2475
+M   NARBE      MANSOURIAN    CALIFORNIA BENCH          28   148   RAW LIFE                    162.5                   162.5   358.2475
+M   NARBE      MANSOURIAN    CALIFORNIA BENCH          28   148   RAW OPEN                    162.5                   162.5   358.2475
+M   DARIN      BENNETT       CALIFORNIA BENCH          41   148   RLM 40-44                   130.5                   130.5   287.7003
+M   MAC        SCOTT         ARIZONA    BENCH          52   148   RLM 50-54                      90                      90    198.414
+M   ROGER      TINKHAM       INDIANA    BENCH          50   148   RLM 50-54                    67.5                    67.5   148.8105
+M   JIM        SELBY         CALIFORNIA BENCH          75   148   RLM 75-79                  55                          55    121.253
+M   DARIN      BENNETT       CALIFORNIA BENCH          41   148   RM 40-44                    130.5                   130.5   287.7003
+M   ROGER     TINKHAM       INDIANA    BENCH   50   148   RM 50-54           67.5             67.5   148.8105
+M   ALEX      MARTINEZ      CALIFORNIA BENCH   16   148   RT 16-17           97.5             97.5   214.9485
+M   JERRY     URIBE         CALIFORNIA BENCH   17   148   RT 16-17             95              95     209.437
+M   JERRY     URIBE         CALIFORNIA BENCH   17   148   RT 16-17             95              95     209.437
+M   JOSEPH    MOON          CALIFORNIA BENCH   13   148   RY 12-13             90              90     198.414
+M   EVAN      DAVIDSON      ARIZONA    BENCH   33   165   OPEN              187.5            187.5   413.3625
+M   GENE      MARSHALL      MASS       BENCH   37   165   OPEN                185             185     407.851
+M   AARON     BENES         CALIFORNIA BENCH   25   165   OPEN               92.5             92.5   203.9255
+M   RAY       LOPEZ         CALIFORNIA BENCH   68   165   RLM 65-69       127.5   130.000    127.5   281.0865
+M   JAMES     MATHEWS       CALIFORNIA BENCH   70   165   RLM 70-74       92.5                92.5   203.9255
+M   MARK      MATHEWS JR    CALIFORNIA BENCH   14   165   RT 14-15            130             130     286.598
+M   SHAWN     WINGERT       MISSOURI   BENCH   36   165   SUB                 140             140     308.644
+M   MIKE      BINGHAM       PENNSYLVANBENCH    39   181   LAW/MIL             170             170     374.782
+M   DAVID     TORREZ        NEW MEXICOBENCH    27   181   LIFE        0                          0          0
+M   RICH      BRANCH        CALIFORNIA BENCH   48   181   LM 45-49          152.5            152.5   336.2015
+M   MARTIN    DRAKE         CALIFORNIA BENCH   53   181   LM 50-54          155.5            155.5   342.8153
+M   STEVE     KYLIS         CALIFORNIA BENCH   52   181   LM 50-54                               0          0
+M   STEVE     KYLIS         CALIFORNIA BENCH   52   181   LM 50-54                               0          0
+M   GREG      CLOVER        CALIFORNIA BENCH   55   181   LM 55-59          147.5            147.5   325.1785
+M   JOHN      HOPF          NEW YORK BENCH     58   181   LM 55-59          127.5            127.5   281.0865
+M   STEPHEN   MONTROSE      FLORIDA    BENCH   87   181   LM 85-89    0                          0          0
+M   CHARLES   PETERS        MASS       BENCH   40   181   M 40-44           167.5            167.5   369.2705
+M   GREG      CLOVER        CALIFORNIA BENCH   55   181   M 55-59           147.5            147.5   325.1785
+M   LES       CRAMER        FLORIDA    BENCH   62   181   M 60-64          60                  60     132.276
+M   RUDY      LOZANO        CALIFORNIA BENCH   65   181   M 65-69          160                160     352.736
+M   RICHARD   SIMON         CALIFORNIA BENCH   73   181   M 70-74          110                110     242.506
+M   MIKE      BINGHAM       PENNSYLVANBENCH    39   181   OPEN                170             170     374.782
+M   SAUL      BALDARAMO     MEXICO     BENCH   32   181   OPEN                165             165     363.759
+M   KEVIN     NUNEZ         CALIFORNIA BENCH   34   181   R LIFE            137.5            137.5   303.1325
+M   KEVIN     NUNEZ         CALIFORNIA BENCH   34   181   R OPEN            137.5            137.5   303.1325
+M   THOMAS    HENDRON       NEVADA     BENCH   47   181   RLM 45-49           105             105     231.483
+M   GREG      CLOVER        CALIFORNIA BENCH   55   181   RLM 55-59         147.5            147.5   325.1785
+M   YOGI      SUMNER        NORTH CAROBENCH    55   181   RLM 55-59           115    120.5    115     253.529
+M   THOMAS    HENDRON       NEVADA     BENCH   47   181   RM 45-49            105             105     231.483
+M   MARTIN    DRAKE         CALIFORNIA BENCH   53   181   RM 50-54            140      141    140     308.644
+M   GREG      CLOVER        CALIFORNIA BENCH   55   181   RM 55-59          147.5            147.5   325.1785
+M   MATT      CLARK         CALIFORNIA BENCH   16   181   RT 16-17            110             110     242.506
+M   MIKE      BINGHAM       PENNSYLVANBENCH    39   181   SUB                 170             170     374.782
+M   JOSE      CABRERA       PUERTO RICOBENCH   41   198   LIFE              172.5            172.5   380.2935
+M   AURELIO   VELAZQUEZ     CALIFORNIA BENCH   40   198   LIFE              142.5            142.5   314.1555
+M   LES       HILGER        CALIFORNIA BENCH   61   198   LM 60-64        142.5   146.000    142.5   314.1555
+M   FRED      COLLINGWOOD   CALIFORNIA BENCH   60   198   LM 60-64         141    143.000     141    310.8486
+M   KURT      MATISON       ARKANSAS BENCH     40   198   M 40-44                                0          0
+M   BILL      WEISS         CALIFORNIA BENCH   45   198   M 45-49                                0          0
+M   RONALD    MATHESON      ARIZONA    BENCH   61   198   M 60-64         167.5              167.5   369.2705
+M   TROY      STUART        KANSAS     BENCH   30   198   OPEN                220             220     485.012
+M   SEAN      DEMARINIS     CALIFORNIA BENCH   18   198   OPEN                  0                0          0
+M   SAM       ARASE         CALIFORNIA BENCH   46   198   R LAW/MIL           175             175     385.805
+M   AURELIO   VELAZQUEZ     CALIFORNIA BENCH   40   198   R LAW/MIL         142.5            142.5   314.1555
+M   SAM        ARASE          CALIFORNIA BENCH   46   198   RLM 45-49      175              175     385.805
+M   HERB       HEALD          TEXAS      BENCH   54   198   RLM 50-54      110              110     242.506
+M   FRED       COLLINGWOOD    CALIFORNIA BENCH   60   198   RLM 60-64   141    143.000      141    310.8486
+M   BILL       WEISS          CALIFORNIA BENCH   45   198   RM 45-49     127.5             127.5   281.0865
+M   HERB       HEALD          TEXAS      BENCH   54   198   RM 50-54       110              110     242.506
+M   SEAN       DEMARINIS      CALIFORNIA BENCH   18   198   T 18-19          0                 0          0
+M   DON        FROESE         CANADA     BENCH   50   220   LAW/MIL                            0          0
+M   NORM       JUDD           NORTH DAKOBENCH    47   220   LIFE          192.5            192.5   424.3855
+M   OSCAR      ORENGO         PUERTO RICOBENCH   33   220   LIFE           180              180     396.828
+M   NORM       JUDD           NORTH DAKOBENCH    47   220   LM 45-49      192.5            192.5   424.3855
+M   DON        FROESE         CANADA     BENCH   50   220   LM 50-54                           0          0
+M   BOB        DUNHAM         CALIFORNIA BENCH   40   220   M 40-44       242.5            242.5   534.6155
+M   DON        FROESE         CANADA     BENCH   50   220   M 50-54                            0          0
+M   BOB        EVANS          CALIFORNIA BENCH   58   220   M 55-59     182.5              182.5   402.3395
+M   MIKE       ROMERO                    BENCH   36   220   OPEN          257.5            257.5   567.6845
+M   JOE        THOMPSON       IOWA       BENCH   31   220   OPEN          232.5     240    232.5   512.5695
+M   MICHAEL    CARROL         GREAT BRITABENCH   34   220   R OPEN                             0          0
+M   LEO        CICHELI        NEW YORK BENCH     44   220   RLM 40-44     202.5            202.5   446.4315
+M   MARK       MATHEWS        CALIFORNIA BENCH   41   220   RLM 40-44       175             175     385.805
+M   JOHN       KUHAR          OHIO       BENCH   57   220   RLM 55-59     172.5            172.5   380.2935
+M   EARL       EVATT          ARIZONA    BENCH   70   220   RLM 70-74    130    132.500     130     286.598
+M   JOHN       KUHAR          OHIO       BENCH   57   220   RM 55-59      172.5            172.5   380.2935
+M   EARL       EVATT          ARIZONA    BENCH   70   220   RM 70-74     130    132.500     130     286.598
+M   JORDAN     INDOVINO       CALIFORNIA BENCH   15   220   RT 14-15        150             150      330.69
+M   MARCO      GARCIA         CALIFORNIA BENCH   16   220   RT 16-17      107.5            107.5   236.9945
+M   STEVE      WILLIAMS       CALIFORNIA BENCH   46   242   LAW/MIL       222.5            222.5   490.5235
+M   MIKE       STUMBO         TEXAS      BENCH   46   242   LAW/MIL         215             215     473.989
+M   MO         RAU            CALIFORNIA BENCH   66   242   LM 65-69    137.5              137.5   303.1325
+M   LEE        ELIFF          TEXAS      BENCH   44   242   M 40-44       232.5      240   232.5   512.5695
+M   KIM        BROWNFIELD     OKLAHOMA BENCH          242   M 40-44                            0          0
+M   STEVE      WILLIAMS       CALIFORNIA BENCH   46   242   M 45-49       222.5            222.5   490.5235
+M   MIKE       STUMBO         TEXAS      BENCH   46   242   M 45-49        215              215     473.989
+M   VITILAY    BOBCHENKO      UKRAINE    BENCH   25   242   OPEN                               0          0
+M   KIM        BROWNFIELD     OKLAHOMA BENCH          242   OPEN                               0          0
+M   RON        GAVETT         CALIFORNIA BENCH   39   242   R SUB           195             195     429.897
+M   VICTOR     HILL           CALIFORNIA BENCH   43   242   RM 40-44        160             160     352.736
+M   MARK       BOWNE          CALIFORNIA BENCH   15   242   RT 14-15      167.5            167.5   369.2705
+M   JONATHAN   MORGAN         CALIFORNIA BENCH   15   242   RT 14-15      107.5            107.5   236.9945
+M   AL         FRITZ          HAWAII     BENCH   36   242   SUB             230             230     507.058
+M   MIKE       WOMAK          CALIFORNIA BENCH        275   JR            272.5            272.5   600.7535
+M   COLIN      BONNEAU        CANADA     BENCH   57   275   LM 55-59      227.5     235    227.5   501.5465
+M   TOM        STARKWEATHER   CALIFORNIA BENCH   43   275   M 40-44         220             220     485.012
+M   COLIN      BONNEAU        CANADA     BENCH   57   275   M 55-59       227.5     235    227.5   501.5465
+M   COLIN      RHODES         NEW MEXICOBENCH    37   275   OPEN            300             300      661.38
+M   SCOTT      HOEKSTRA       CALIFORNIA BENCH   38   275   OPEN            275             275     606.265
+M   MIKE       WOMAK          CALIFORNIA BENCH        275   OPEN          272.5            272.5   600.7535
+M   JUSTIN     RANSBOTTOM     OKLAHOMA BENCH          275   OPEN            245             245     540.127
+M   JEFF       FAHRENBRUCH    ARIZONA    BENCH        275   R OPEN      182.5              182.5   402.3395
+M   TOM        STARKWEATHER   CALIFORNIA BENCH   43   275   RM 40-44        205             205     451.943
+M   JEFF       FAHRENBRUCH   ARIZONA    BENCH             275   RM 50-54        182.5                             182.5   402.3395
+M   MIKE       ADELMAN       NEW MEXICOBENCH         40   308   M 40-44             255                            255     562.173
+M   RICHARD    KAHLE         NEW MEXICOBENCH              308   OPEN                255                            255     562.173
+M   GREG       PAYNE         HAWAII     BENCH        39   308   R SUB             222.5   227.5                   222.5   490.5235
+M   SALVADOR   RAMIREZ       MEXICO     BENCH        27   320   OPEN                245                            245     540.127
+M   JEFF       PHIILIPS                 BENCH        44   320   RLM 40-44           190                             190    418.874
+M   PETER      STEPHANIDES   SLOVAKIA   BENCH        33         DISABLED            150                            150      330.69
+M   MARIO      GONZALES      CALIFORNIA BENCH        16         RT 16-17                                              0          0
+M   ZACH       FIGUEROA                 DEADLIFT           77                                       60               60    132.276
+M   PATRICK    MARCHESSON    CALIFORNIA DEADLIFT     31   148   R OPEN                            182.5           182.5   402.3395
+M   STEVE      FREIDES       NEW JERSEYDEADLIFT      49   148   RLM 45-49                         157.5           157.5   347.2245
+M   STEVE      FREIDES       NEW JERSEYDEADLIFT      49   148   RM 45-49                          157.5           157.5   347.2245
+M   JOSEPH     MOON          CALIFORNIA DEADLIFT     13   148   RY 12-13                           156             156    343.9176
+M   MARTIN     MONTGOMERY    INDIANA    DEADLIFT     62   165   LM 60-64                                              0          0
+M   JIM        WARNER        OHIO       DEADLIFT     48   165   M 45-49                                               0          0
+M   MARTIN     MONTGOMERY    INDIANA    DEADLIFT     62   165   M 60-64                                               0          0
+M   JIM        WARNER        OHIO       DEADLIFT     48   165   OPEN                                                  0          0
+M   JAMES      MATHEWS       CALIFORNIA DEADLIFT     70   165   RLM 70-74                          180             180     396.828
+M   RICH       BRANCH        CALIFORNIA DEADLIFT     48   181   LM 45-49                          227.5    228    227.5   501.5465
+M   BRAD       WEBER         NORTH DAKODEADLIFT      52   181   LM 50-54                          232.5           232.5   512.5695
+M   STEPHEN    MONTROSE      FLORIDA    DEADLIFT     87   181   LM 85-89    0                                         0          0
+M   BRAD       WEBER         NORTH DAKODEADLIFT      52   181   M 50-54                           232.5           232.5   512.5695
+M   YOGI       SUMNER        NORTH CARODEADLIFT      55   181   RLM 55-59                          150             150      330.69
+M   BILL       ENNIS         CALIFORNIA DEADLIFT     57   181   RM 55-59                                              0          0
+M   CARLOS     ACOSTA        CALIFORNIA DEADLIFT     65   181   RM 65-69                           175    182.5    175     385.805
+M   JOSE       CABRERA       PUERTO RICODEADLIFT     41   198   LIFE                               250             250      551.15
+M   TOMMY      WILLIAMS      MARYLAND DEADLIFT       43   198   R LIFE                             290             290     639.334
+M   TOMMY      WILLIAMS      MARYLAND DEADLIFT       43   198   R OPEN                             290             290     639.334
+M   TOMMY      WILLIAMS      MARYLAND DEADLIFT       43   198   RLM 40-44                          290             290     639.334
+M   HERB       HEALD         TEXAS      DEADLIFT     54   198   RLM 50-54                         172.5           172.5   380.2935
+M   TOMMY      WILLIAMS      MARYLAND DEADLIFT       43   198   RM 40-44                           290             290     639.334
+M   HERB       HEALD         TEXAS      DEADLIFT     54   198   RM 50-54                          172.5           172.5   380.2935
+M   BERNABE    DELAROSA      CALIFORNIA DEADLIFT     17   198   RT 16-17                           225             225     496.035
+M   OSCAR      ORENGO        PUERTO RICODEADLIFT     33   220   LIFE                               250             250      551.15
+M   OSWALDO    AGUIRE        MEXICO     DEADLIFT     28   220   OPEN               205                             205     451.943
+M   OSWALDO    AGUIRE        MEXICO     DEADLIFT          220   R OPEN             205             300             505    1113.323
+M   MARTIN     VOGT          ARIZONA    DEADLIFT     60   220   RLM 60-64                          155             155     341.713
+M   JOHN       DUMONT        CALIFORNIA DEADLIFT     60   242   M 60-64                            245             245     540.127
+M   LUIS       MENDIVIL      MEXICO     DEADLIFT     25   242   OPEN               190             265             455    1003.093
+M   LUIS       MENDIVIL      MEXICO     DEADLIFT     25   242   R OPEN      0      165             260             425     936.955
+M   STEVE      LANDRY        CALIFORNIA DEADLIFT          242   SUB                                300             300      661.38
+M   ALAN       NICOL         GREAT BRITADEADLIFT     57   275   LIFE                               260             260     573.196
+M   ALAN       NICOL         GREAT BRITADEADLIFT     57   275   LM 55-59                           260             260     573.196
+M   RYAN       STEWART       CALIFORNIA DEADLIFT     25   275   R OPEN                            257.5           257.5   567.6845
+M   ALAN       NICOL         GREAT BRITADEADLIFT     57   275   RLM 55-59                          260             260     573.196
+M   JOHN       HELDT         NEVADA     DEADLIFT     34   308   R OPEN                             250             250      551.15
+
+M   CHASE      AKINA         HAWAII   POWERLIFTING    9    77 RY 8-9                                                 0          0
+M   BRAD       WILLIAMSON    OKLAHOMA POWERLIFTING   15   114 T 14-15                                                0          0
+M   GLEN       MURPHY        MARYLAND POWERLIFTING     45   123   LM 45-49    137.5   102.5                140             380     837.748
+M   MIKE       BOOKER        CALIFORNIA POWERLIFTING   22   123   R OPEN      227.5        165            147.5            540    1190.484
+M   MARK       GRILLO        CALIFORNIA POWERLIFTING   15   123   RT 14-15     92.5         70             100            262.5   578.7075
+M   NATE       CARLIN        PENNSYLVANPOWERLIFTING    10   123   RY 10-11      60          51      55     97.5           208.5   459.6591
+M   STEPHEN    GOLDBERG      ARIZONA    POWERLIFTING   35   132   LIFE         135          95            172.5           402.5   887.3515
+M   MARK       SCHULTZ       NEVADA     POWERLIFTING   46   132   RLM 45-49    100         87.5            160            347.5   766.0985
+M   GARY       LANDESS       INDIANA    POWERLIFTING   51   132   RLM 50-54     55         72.5           112.5            240     529.104
+M   MARK       SCHULTZ       NEVADA     POWERLIFTING   46   132   RM 45-49     100         87.5            160            347.5   766.0985
+M   GARY       LANDESS       INDIANA    POWERLIFTING   51   132   RM 50-54      55         72.5           112.5            240     529.104
+M   TAYLOR     JOHNSON       PENNSYLVANPOWERLIFTING    15   132   RT 14-15     125          75             100             300      661.38
+M   THOMAS     MC CARTY      MASS       POWERLIFTING   47   148   LM 45-49    192.5       132.5     140    215             540    1190.484
+M   TERRY      HEDRICK       TEXAS      POWERLIFTING   47   148   LM 45-49    177.5        125             225            527.5   1162.927
+M   CASEY      BROWN         COLORADO POWERLIFTING     41   148   M 40-44      245         140             265             650     1432.99
+M   THOMAS     MC CARTY      MASS       POWERLIFTING   47   148   M 45-49     192.5       132.5     140    215             540    1190.484
+M   THOMAS     MC CARTY      MASS       POWERLIFTING   47   148   OPEN        192.5       132.5     140    215             540    1190.484
+M   JORGE      ORTEGA        MEXICO     POWERLIFTING   32   148   OPEN         195         120            212.5           527.5   1162.927
+M   JORGE      ORTEGA        MEXICO     POWERLIFTING   32   148   OPEN                     120                              120    264.552
+M   K.V.A.N.   Chamara       SRI LANKA POWERLIFTING    27   148   OPEN                                                        0          0
+M   RAY        HOULE         NEW HAMPSHPOWERLIFTING    45   148   RLM 45-49    140        107.5            140            387.5   854.2825
+M   STEVE      FREIDES       NEW JERSEYPOWERLIFTING    49   148   RLM 45-49    110          85            157.5           352.5   777.1215
+M   RAY        HOULE         NEW HAMPSHPOWERLIFTING    45   148   RM 45-49     140        107.5            140            387.5   854.2825
+M   STEVE      FREIDES       NEW JERSEYPOWERLIFTING    49   148   RM 45-49     110          85            157.5           352.5   777.1215
+M   JIM        SELBY         CALIFORNIA POWERLIFTING   75   148   RM 75-79     67.5      55               112.5            235     518.081
+M   ARMON      GUTIEREZ      CALIFORNIA POWERLIFTING   17   148   RT 16-17     140          85            192.5           417.5   920.4205
+M   ARMON      GUTIEREZ      CALIFORNIA POWERLIFTING   17   148   RT 16-17     140          85            192.5           417.5   920.4205
+M   JERRY      URIBE         CALIFORNIA POWERLIFTING   17   148   RT 16-17    132.5                        125            257.5   567.6845
+M   JOSEPH     MOON          CALIFORNIA POWERLIFTING   13   148   RY 12-13    132.5                        156            288.5   636.0271
+M   KORY       JONES         TEXAS      POWERLIFTING   18   165   HS 18-19    187.5           115          215            517.5   1140.881
+M   TIM        HOULDCRAFT    MASS       POWERLIFTING   21   165   JR          182.5           150         182.5            515    1135.369
+M   MICHAEL    COX           TEXAS      POWERLIFTING   40   165   LAW/MIL      165                                         165     363.759
+M   MARK       WOODWORTH     OHIO       POWERLIFTING   42   165   LM 40-44    242.5       157.5            240             640    1410.944
+M   MICHAEL    COX           TEXAS      POWERLIFTING   40   165   LM 40-44     165                                         165     363.759
+M   RON        SCOTT         CALIFORNIA POWERLIFTING   57   165   LM 55-59     190         92.5            210    212.5   492.5   1085.766
+M   LEON       MC CRARY      MASS       POWERLIFTING   67   165   LM 65-69     130       60                175             365     804.679
+M   LEON       MC CRARY      MASS       POWERLIFTING   67   165   M 65-69      130       60                175             365     804.679
+M   GENE       MARSHALL      MASS       POWERLIFTING   37   165   OPEN        267.5         185            255            707.5   1559.755
+M   B.A.R.S.   Premasinghe   SRI LANKA POWERLIFTING    23   165   OPEN                                                        0          0
+M   B.A.R.S.   Premasinghe   SRI LANKA POWERLIFTING    23   165   OPEN            0                                           0          0
+M   MEXICO     M2            MEXICO     POWERLIFTING        165   OPEN            0                                           0          0
+M   ROBERT     HERBST        NEW YORK POWERLIFTING     46   165   R LIFE      137.5       132.5            210              480   1058.208
+M   AARON      BENES         CALIFORNIA POWERLIFTING   25   165   R OPEN       150         92.5            200            442.5   975.5355
+M   ROBERT     HERBST        NEW YORK POWERLIFTING     46   165   RLM 45-49   137.5       132.5            210              480   1058.208
+M   ROBERT     BARTH         NORTH CAROPOWERLIFTING    43   165   RM 40-44    152.5        130            212.5            495    1091.277
+M   ROBERT     BARTH         NORTH CAROPOWERLIFTING    43   165   RM 40-44    152.5        130            212.5            495    1091.277
+M   ROBERT     HERBST        NEW YORK POWERLIFTING     46   165   RM 45-49    137.5       132.5            210              480   1058.208
+M   BRANDON    QUINN         PENNSYLVANPOWERLIFTING    18   165   RT 16-17     150         115            197.5           462.5   1019.628
+M   GENE       MARSHALL      MASS       POWERLIFTING   37   165   SUB         267.5        185             255            707.5   1559.755
+M   SHAWN      WINGERT       MISSOURI   POWERLIFTING   36   165   SUB          160         140             205            505     1113.323
+M   RICKY LEE   CRAIN        OKLAHOMA POWERLIFTING     15   165   T 14-15     157.5      80             160          397.5   876.3285
+M   BRAD        WEBER        NORTH DAKOPOWERLIFTING    52   181   LIFE         200      133            232.5         565.5   1246.701
+M   MARTIN      DRAKE        CALIFORNIA POWERLIFTING   53   181   LIFE          65     155.5             65          285.5   629.4133
+M   DAVID       TORREZ       NEW MEXICOPOWERLIFTING    27   181   LIFE            0                                      0          0
+M   TERRY       PERKINS      OHIO       POWERLIFTING   43   181   LM 40-44    282.5    167.5            245           695    1532.197
+M   RICH        BRANCH       CALIFORNIA POWERLIFTING   48   181   LM 45-49     210     152.5           227.5   228    590    1300.714
+M   BRAD        WEBER        NORTH DAKOPOWERLIFTING    52   181   LM 50-54     200      133            232.5         565.5   1246.701
+M   MARTIN      DRAKE        CALIFORNIA POWERLIFTING   53   181   LM 50-54      65     155.5             65          285.5   629.4133
+M   STEVE       KYLIS        CALIFORNIA POWERLIFTING   52   181   LM 50-54                                               0          0
+M   STEVE       KYLIS        CALIFORNIA POWERLIFTING   52   181   LM 50-54        0                                      0          0
+M   STEPHEN     MONTROSE     FLORIDA    POWERLIFTING   87   181   LM 85-89        0                                      0          0
+M   CHARLES     PETERS       MASS       POWERLIFTING   40   181   M 40-44      240     167.5           227.5          635    1399.921
+M   MARTIN      DRAKE        CALIFORNIA POWERLIFTING   53   181   M 50-54       65     155.5             65          285.5   629.4133
+M   SAUL        BALDARAMO    MEXICO     POWERLIFTING   32   181   OPEN        242.5     165             225          632.5    1394.41
+M   E.A.        Sampath      SRI LANKA POWERLIFTING    21   181   OPEN                                                   0          0
+M   E.A.        Sampath      SRI LANKA POWERLIFTING    21   181   OPEN            0                                      0          0
+M   CHARLES STOCKING         CALIFORNIA POWERLIFTING   24   181   R LIFE      212.5     130            237.5          580    1278.668
+M   CHARLES STOCKING         CALIFORNIA POWERLIFTING   24   181   R OPEN      212.5     130            237.5          580    1278.668
+M   WILLE     WONG           CANADA     POWERLIFTING   43   181   RLM 40-44       0                                      0          0
+M   JOE       FORMATO        VIRGINIA   POWERLIFTING   47   181   RLM 45-49   162.5    122.5           207.5         492.5   1085.766
+M   MARTIN    DRAKE          CALIFORNIA POWERLIFTING   53   181   RLM 50-54     65      140     141      65           270     595.242
+M   YOGI      SUMNER         NORTH CAROPOWERLIFTING    55   181   RLM 55-59    105      115    120.5    150           370     815.702
+M   WILLE     WONG           CANADA     POWERLIFTING   43   181   RM 40-44        0                                      0          0
+M   TED       HOFFMAN        VIRGINIA   POWERLIFTING   44   181   RM 40-44        0                                      0          0
+M   JOE       FORMATO        VIRGINIA   POWERLIFTING   47   181   RM 45-49    162.5    122.5           207.5         492.5   1085.766
+M   MARTIN    DRAKE          CALIFORNIA POWERLIFTING   53   181   RM 50-54      65      140     141      65           270     595.242
+M   LUIS      MANERA         CALIFORNIA POWERLIFTING   17   181   RT 16-17     145       95            182.5         422.5   931.4435
+M   JON       BAILEY         CALIFORNIA POWERLIFTING   16   181   RT 16-17        0                                      0          0
+M   ELLIOT    BRANDY         CALIFORNIA POWERLIFTING   16   181   RT 16-17        0                                      0          0
+M   MIKE      PEDITTO        PENNSYLVANPOWERLIFTING    16   181   RT 16-17                                               0          0
+M   DAN       DEUTER         TEXAS      POWERLIFTING   44   198   LAW/MIL     192.5     170             205          567.5   1251.111
+M   KURT      MATISON        ARKANSAS POWERLIFTING     40   198   LAW/MIL         0                                      0          0
+M   JOSE      CABRERA        PUERTO RICOPOWERLIFTING   41   198   LIFE        217.5    172.5            250           640    1410.944
+M   DAN       DEUTER         TEXAS      POWERLIFTING   44   198   LM 40-44    192.5     170             205          567.5   1251.111
+M   JOSE      CABRERA        PUERTO RICOPOWERLIFTING   41   198   LM 40-44    217.5                     250          467.5   1030.651
+M   DAVE      MANSFIELD      MASS       POWERLIFTING   58   198   LM 55-59    262.5   135              247.5          645    1421.967
+M   TIM       FITZGIBBON     ARIZONA    POWERLIFTING   56   198   LM 55-59     175     117.5           192.5          485    1069.231
+M   KURT      MATISON        ARKANSAS POWERLIFTING     40   198   M 40-44         0                                      0          0
+M   VONNA RAY BAXTER         TEXAS      POWERLIFTING   46   198   M 45-49     272.5     170             265          707.5   1559.755
+M   EDDIE     WHITE          MISSOURI   POWERLIFTING   55   198   M 55-59      250     167.5            300    305   717.5   1581.801
+M   DAVE        MANSFIELD    MASS      POWERLIFTING    58   198   M 55-59     262.5     135            247.5          645    1421.967
+M   TIM         FITZGIBBON   ARIZONA   POWERLIFTING    56   198   M 55-59      175     117.5           192.5          485    1069.231
+M   GARY        GREEN        MARYLAND POWERLIFTING     38   198   OPEN         265      190            267.5   280   722.5   1592.824
+M   KURT        MATISON      ARKANSAS POWERLIFTING     40   198   OPEN            0                                      0          0
+M   NATE        RHOTEN       NORTH CAROPOWERLIFTING    22   198   R JR         240     157.5           262.5          660    1455.036
+M   NATE        RHOTEN       NORTH CAROPOWERLIFTING    22   198   R OPEN       240     157.5           262.5          660    1455.036
+M   TOMMY       WILLIAMS     MARYLAND POWERLIFTING     43   198   R OPEN       205     142.5            290          637.5   1405.433
+M   WAYNE       PENNELL      NORTH CAROPOWERLIFTING    35   198   R SUB        235     167.5            265          667.5   1471.571
+M   TOMMY     WILLIAMS        MARYLAND POWERLIFTING     43   198   RM 40-44     205              142.5          290          637.5   1405.433
+M   WATSON    DAVIS           CALIFORNIA POWERLIFTING   42   198   RM 40-44     185               97.5          215          497.5   1096.789
+M   EDWIN     LEWIS           CALIFORNIA POWERLIFTING   55   198   RM 55-59     180                100          195           475    1047.185
+M   BERNABE   DELAROSA        CALIFORNIA POWERLIFTING   17   198   RT 16-17    182.5             132.5          225           540    1190.484
+M   JOB       HOU-SEY         WISCONSIN POWERLIFTING    37   198   SUB         197.5             147.5          195           540    1190.484
+M   JON       WEISMAN         ARIZONA    POWERLIFTING   40   220   LAW/MIL     277.5             192.5          275           745    1642.427
+M   DAVE      MURO            CALIFORNIA POWERLIFTING   34   220   LIFE        272.5             177.5          300           750     1653.45
+M   NORM      JUDD            NORTH DAKOPOWERLIFTING    47   220   LIFE         255              192.5          255          702.5   1548.732
+M   OSCAR     ORENGO          PUERTO RICOPOWERLIFTING   33   220   LIFE         265                180          250           695    1532.197
+M   NORM      JUDD            NORTH DAKOPOWERLIFTING    47   220   LM 45-49     255              192.5          255          702.5   1548.732
+M   JON       WEISMAN         ARIZONA    POWERLIFTING   40   220   M 40-44     277.5             192.5          275           745    1642.427
+M   BOB       EVANS           CALIFORNIA POWERLIFTING   58   220   M 55-59     222.5           182.5            170           575    1267.645
+M   WILLIAM   LEEDY           CALIFORNIA POWERLIFTING   74   220   M 70-74      170            117.5            215          502.5   1107.812
+M   JOE       THOMPSON        IOWA       POWERLIFTING   31   220   OPEN         305              232.5   240    290          827.5   1824.307
+M   DAVE      MURO            CALIFORNIA POWERLIFTING   34   220   OPEN         271              177.5          300          748.5   1650.143
+M   OSCAR     ORENGO          PUERTO RICOPOWERLIFTING   33   220   OPEN         265                180          250           695    1532.197
+M   COLOLO    RAMIREZ         MEXICO     POWERLIFTING        220   OPEN                                                          0          0
+M   CRAIG     HOFFMAN         MASS       POWERLIFTING        220   R JR         200               160           245           605    1333.783
+M   RAY       DI BARTOLOMEO   CALIFORNIA POWERLIFTING   27   220   R LIFE       248               175           260           683    1505.742
+M   RAY       DI BARTOLOMEO   CALIFORNIA POWERLIFTING   27   220   R OPEN       248               175           260           683    1505.742
+M   WES       ALLEN           CALIFORNIA POWERLIFTING   31   220   R OPEN       185               120          197.5         502.5   1107.812
+M   KEITH     MANNIES         CALIFORNIA POWERLIFTING   31   220   R OPEN         0                                              0          0
+M   RANDY     CHEATAM         ARIZONA    POWERLIFTING   43   220   RLM 40-44                      145                         145     319.667
+M   ED        BERTEAUX        CALIFORNIA POWERLIFTING   50   220   RLM 50-54   190.5             167.5   170   227.5         585.5   1290.793
+M   KEITH     HOBMAN          CANADA     POWERLIFTING   46   220   RM 45-49     240              162.5         272.5          675    1488.105
+M   JACK      RHOTEN          NORTH CAROPOWERLIFTING    57   220   RM 55-59     240               150           265           655    1444.013
+M   RICHARD   DIGREGORIO      CALIFORNIA POWERLIFTING   17   220   RT 16-17    152.5              105          167.5          425     936.955
+M   MARCO     GARCIA          CALIFORNIA POWERLIFTING   16   220   RT 16-17    142.5             107.5          160           410     903.886
+M   SHAWN     AHOAMANA        CALIFORNIA POWELIFTING    17   220   RT 16-17        0                                             0          0
+M   ANDRES    TOPCHI          CALIFORNIA POWERLIFTING   19   220   RT 18-19     195              192.5         227.5          615    1355.829
+M   CHRIS     ANDERSON        NEW MEXICOPOWERLIFTING    17   220   T 16-17     227.5    240      187.5         247.5   255   662.5   1460.548
+M   KIRK      KARWOSKI        MARYLAND POWERLIFTING     38   242   GUEST        375                210          350           935    2061.301
+M   AL        FRITZ           HAWAII     POWERLIFTING   36   242   LAW/MIL      320                230         287.5         837.5   1846.353
+M   JEFF      BLAINE          IOWA       POWERLIFTING   28   242   LAW/MIL      290                175          285           750     1653.45
+M   BOBBY     WILSON          NORTH CAROPOWERLIFTING    45   242   LIFE        302.5   302.5       220          300          822.5   1813.284
+M   RICK      CHAVEZ          FLORIDA    POWERLIFTING   48   242   LIFE        320.5               180         257.5          758    1671.087
+M   MARK      WILCOX          MASS       POWERLIFTING   41   242   LIFE        257.5             172.5          255           685    1510.151
+M   TRACY     LARSON          NORTH DAKOPOWERLIFTING    38   242   LIFE        262.5             172.5          230           665    1466.059
+M   NEIL      EDDINS          TEXAS      POWERLIFTING   41   242   LM 40-44    257.5               210          295          762.5   1681.008
+M   MARK      WILCOX          MASS       POWERLIFTING   41   242   LM 40-44    257.5             172.5          255           685    1510.151
+M   BOBBY     WILSON          NORTH CAROPOWERLIFTING    45   242   LM 45-49    302.5   302.5       220          300          822.5   1813.284
+M   RICK      CHAVEZ          FLORIDA    POWERLIFTING   48   242   LM 45-49    320.5               180         257.5          758    1671.087
+M   GARY      CLOCK           NORTH DAKOPOWERLIFTING    55   242   LM 55-59    247.5               185          250          682.5    1504.64
+M   BOBBY     WILSON          NORTH CAROPOWERLIFTING    45   242   M 45-49     302.5   302.5       220          300          822.5   1813.284
+M   RICK      CHAVEZ          FLORIDA    POWERLIFTING   48   242   M 45-49     320.5               180         257.5          758    1671.087
+M   GARY      CLOCK           NORTH DAKOPOWERLIFTING    55   242   M 55-59     247.5               185          250          682.5    1504.64
+M   BILL      HELMICK         NEW MEXICOPOWERLIFTING    62   242   M 60-64      220                170         252.5         642.5   1416.456
+M   JOHN      DUMONT          CALIFORNIA POWERLIFTING   60   242   M 60-64      230             60              245           535    1179.461
+M   AL        FRITZ           HAWAII     POWERLIFTING   36   242   OPEN         320                230         287.5         837.5   1846.353
+M   RICK       CHAVEZ       FLORIDA    POWERLIFTING   48   242   OPEN        320.5            180     257.5             758    1671.087
+M   DAVID      ROMAN        CALIFORNIA POWERLIFTING   49   242   R LAW/MIL   202.5            160      215            577.5    1273.157
+M   MATT       RHOTEN       NORTH CAROPOWERLIFTING    24   242   R LIFE      252.5   253 PASSED                            0          0
+M   MARK       EMERALD      MASS       POWERLIFTING   42   242   R OPEN      192.5            165     217.5             575    1267.645
+M   MATT       RHOTEN       NORTH CAROPOWERLIFTING    24   242   R OPEN      252.5   253 PASSED                            0          0
+M   MARK       EMERALD      MASS       POWERLIFTING   42   242   RLM 40-44   192.5            165     217.5             575    1267.645
+M   JACK       RHOTEN       NORTH CAROPOWERLIFTING    57   242   RLM 55-59    240             150      265              655    1444.013
+M   MARK       EMERALD      MASS       POWERLIFTING   42   242   RM 40-44    192.5            165     217.5             575    1267.645
+M   SCOTT      HAMILTON     CALIFORNIA POWERLIFTING   40   242   RM 40-44    182.5            165      195            542.5    1195.996
+M   DAVID      ROMAN        CALIFORNIA POWERLIFTING   49   242   RM 45-49    202.5            160      215            577.5    1273.157
+M   MARK       BOWNE        PENNSYLVANPOWERLIFTING    15   242   RT 14-15    102.5          167.5      200    205       470    1036.162
+M   AL         FRITZ        HAWAII     POWERLIFTING   36   242   SUB           320            230     287.5           837.5    1846.353
+M   BOB        BRUNNER      NORTH DAKOPOWERLIFTING    22   275   JR          232.5            175      275            682.5     1504.64
+M   BOB        BRUNNER      NORTH DAKOPOWERLIFTING    22   275   LIFE        232.5            175      275            682.5     1504.64
+M   SAM        PEKTOL       OREGON     POWERLIFTING   50   275   M 50-54     272.5          217.5     272.5           762.5    1681.008
+M   DANNY      HERRERA      CALIFORNIA POWERLIFTING   67   275   M 65-69     227.5          182.5      220              630    1388.898
+M   ROBERT     SPENO        CALIFORNIA POWERLIFTING   35   275   OPEN            0       BOMB                       #NULL!     #NULL!
+M   JUSTIN     RANSBOTTOM   OKLAHOMA POWERLIFTING          275   OPEN          325            245     322.5           892.5    1967.606
+M   EMILIO     PAEZ         CALIFORNIA POWERLIFTING   25   275   R LIFE        260            175      260              695    1532.197
+M   EMILIO     PAEZ         CALIFORNIA POWERLIFTING   25   275   R OPEN        260            175      260              695    1532.197
+M   ROGER      MORTON       ARIZONA    POWERLIFTING   49   275   RLM 45-49    185           132.5      210            527.5    1162.927
+M   JIM        WAGNER       NEVADA     POWERLIFTING   52   275   RLM 50-54    210             155      200              565    1245.599
+M   SHAWN      SHAFFER      PENNSYLVANPOWERLIFTING    18   275   RT 18-19     92.5             65     182.5             340     749.564
+M   ROBERT     SPENO        CALIFORNIA POWERLIFTING   35   275   SUB             0       BOMB                       #NULL!     #NULL!
+M   DAN        DRISCOLL     MASS       POWERLIFTING   39   275   SUB         267.5          187.5     272.5           727.5    1603.847
+M   TRACY      LARSON       NORTH DAKOPOWERLIFTING    38   275   SUB         262.5          172.5      230              665    1466.059
+M   RICHARD    SAMARRON     TEXAS      POWERLIFTING   34   308   LIFE         285             175     282.5           742.5    1636.916
+M   PAUL       WRENN        TENNESSEE POWERLIFTING    57   308   M 55-59      260             137     272.5           669.5     1475.98
+M   RICHARD    KAHLE        NEW MEXICOPOWERLIFTING         308   OPEN        347.5            255     307.5             910    2006.186
+M   LARRY      LARSEN       MASS       POWERLIFTING   58   320   LM 55-59    182.5         155         210            547.5    1207.019
+M   DAVID      OYLER        ILLINOIS   POWERLIFTING   41   320   M 40-44      320             185      290              795    1752.657
+M   LARRY      LARSEN       MASS       POWERLIFTING   58   320   M 55-59     182.5            155      210            547.5    1207.019
+M   SALVADOR   RAMIREZ      MEXICO     POWERLIFTING   27   320   OPEN         335             245      270              850     1873.91
+M   ZEKE       WILSON       PENNSYLVANPOWERLIFTING    47   320   RM 45-49                                 0                0          0
+M   AHUNDA     DENKINS      CALIFORNIA POWERLIFTING   17   320   RT 16-17     145           117.5     157.5             420     925.932
+M   SCOTT      MARCUM       OHIO       POWERLIFTING   36   320   SUB         322.5          227.5      295              845    1862.887
+M   KENYATTA   EALEY        CALIFORNIA PUSHPULL       15   123   RT 14-15                                                  0          0
+M   JORGE      ORTEGA       MEXICO     PUSHPULL       32   148   OPEN         195               120   212.5           527.5    1162.927
+M   JORGE      ORTEGA       MEXICO     PUSHPULL       32   148   OPEN                           120   212.5           332.5    733.0295
+M   JOHNNY     HOYT         CALIFORNIA PUSHPULL       20   148   R JR                           105    150              255     562.173
+M   MAC        SCOTT        ARIZONA    PUSHPULL       52   148   RLM 50-54                       90    140              230     507.058
+M   JIM        SELBY        CALIFORNIA PUSHPULL       75   148   RLM 75-79                 55         112.5           167.5    369.2705
+M   JIM        SELBY        CALIFORNIA PUSHPULL       75   148   RM 75-79                  55         112.5           167.5    369.2705
+M   JAVIER     VASQUEZ      CALIFORNIA PUSHPULL       15   148   RT 14-15                                                  0          0
+M   AARON      HORNING      CALIFORNIA PUSHPULL       15   148   RT 16-17                    77.5      160            237.5    523.5925
+M   DANIEL     RAMOS        CALIFORNIA PUSHPULL       17   148   RT 16-17                                                  0          0
+M   JAMES      MATHEWS      CALIFORNIA PUSHPULL       70   165   RLM 70-74                 92.5        180            272.5    600.7535
+M   BEN        BAUCH        CALIFORNIA PUSHPULL       17   165   RT 16-17                        95    165              260     573.196
+M   KEVIN      SHAW         CALIFORNIA PUSHPULL            181   LIFE                           170   237.5           407.5    898.3745
+M   RICH       BRANCH      CALIFORNIA PUSHPULL   48        181   LM 45-49          152.5             227.5    228     380     837.748
+M   STEVE      KYLIS       CALIFORNIA PUSHPULL   52        181   LM 50-54                                                0          0
+M   STEVE      KYLIS       CALIFORNIA PUSHPULL   52        181   LM 50-54    0                                           0          0
+M   STEPHEN    MONTROSE    FLORIDA    PUSHPULL   87        181   LM 85-89                                                0          0
+M   SAUL       BALDARAMO   MEXICO     PUSHPULL   32        181   OPEN                 165             225             390     859.794
+M   YOGI       SUMNER      NORTH CAROPUSHPULL    55        181   RLM 55-59            115    120.5    150             265     584.219
+M   JERRY      HOMER       ARIZONA    PUSHPULL   64        181   RLM 60-64       117.5    120.000     150            267.5   589.7305
+M   JIM        NAFTEL      CALIFORNIA PUSHPULL   60        181   RLM 60-64         80                147.5           227.5   501.5465
+M   JIM        NAFTEL      CALIFORNIA PUSHPULL   60        181   RM 60-64          80                147.5           227.5   501.5465
+M   CARLOS     ACOSTA      CALIFORNIA PUSHPULL   65        181   RM 65-69         100                 175    182.5    275     606.265
+M   RYAN       SANDERS     CALIFORNIA PUSHPULL   18        181   RT 18-19             110             160             270     595.242
+M   TOMMY      WILLIAMS    MARYLAND PUSHPULL     43        198   R OPEN             142.5             290            432.5   953.4895
+M   WAYNE      PENNELL     NORTH CAROPUSHPULL    35        198   R SUB              167.5             265            432.5   953.4895
+M   HERB       HEALD       TEXAS      PUSHPULL   54        198   RLM 50-54            110            172.5           282.5   622.7995
+M   TOMMY      WILLIAMS    MARYLAND PUSHPULL     43        198   RM 40-44           142.5             290            432.5   953.4895
+M   HERB       HEALD       TEXAS      PUSHPULL   54        198   RM 50-54             110            172.5           282.5   622.7995
+M   LUIS       HERNANDEZ   CALIFORNIA PUSHPULL   15        198   RT 14-15             105             150             255     562.173
+M   NORM       LAMBERT     CANADA     PUSHPULL   53        220   LM 50-54               0      155                       0          0
+M   NORM       LAMBERT     CANADA     PUSHPULL   53        220   M 50-54                0      155                       0          0
+M   JIM        WEISS       CALIFORNIA PUSHPULL   77        220   M 75-79               80            122.5            160     352.736
+M   OSWALDO    AGUIRE      MEXICO     PUSHPULL   28        220   OPEN                 205             300             505    1113.323
+M   OSWALDO    AGUIRE      MEXICO     PUSHPULL   28        220   OPEN                 205             300             505    1113.323
+M   MARK       MATHEWS     CALIFORNIA PUSHPULL   41        220   RLM 40-44            175            192.5           367.5   810.1905
+M   RANDY      CHEATAM     ARIZONA    PUSHPULL   43        220   RLM 40-44            145             170             315     694.449
+M   MARTIN     VOGT        ARIZONA    PUSHPULL   60        220   RLM 60-64        97.5                155            252.5   556.6615
+M   NEIL       EDDINS      TEXAS      PUSHPULL   41        242   LM 40-44             210             295             505    1113.323
+M   GARY       CLOCK       NORTH DAKOPUSHPULL    55        242   LM 55-59             185             250             435     959.001
+M   BILL       HELMICK     CALIFORNIA PUSHPULL   62        242   M 60-64              170            252.5           422.5   931.4435
+M   LUIS       MENDIVIL    MEXICO     PUSHPULL   25        242   OPEN                 190             265             455    1003.093
+M   RAMON      FIGUEROA    CALIFORNIA PUSHPULL   51        242   R LAW/MIL            155            232.5           387.5   854.2825
+M   LUIS       MENDIVIL    MEXICO     PUSHPULL   25        242   R OPEN      0        165             260             425     936.955
+M   BRANDON    BLACKWOOD   CALIFORNIA PUSHPULL   36        242   R SUB                140             185             325     716.495
+M   FELIPE     ZEPEDA      CALIFORNIA PUSHPULL   47        242   RLM 45-49   0                                           0          0
+M   GENE       ABERNATHY   CALIFORNIA PUSHPULL   58        242   RLM 55-59       145                  235              380    837.748
+M   THOMAS     SCHADE      CALIFORNIA PUSHPULL   44        242   RM 40-44         182.5              282.5            465    1025.139
+M   MATHEW     EDWARDS     CALIFORNIA PUSHPULL   16        242   RT 16-17          82.5              172.5            255     562.173
+M   BOB        BRUNNER     NORTH DAKOPUSHPULL    22        275   JR                 175               275             450      992.07
+M   TOM        ALLRED      MICHIGAN   PUSHPULL   40        275   LAW/MIL            215               265             480    1058.208
+M   TOM        ALLRED      MICHIGAN   PUSHPULL   40        275   M 40-44            215               265             480    1058.208
+M   DILLON     JENKINS     ARIZONA    PUSHPULL   20        275   R JR               185               260             445     981.047
+M   JIM        WAGNER      NEVADA     PUSHPULL   52        275   RLM 50-54          155               200             355     782.633
+M   RICHARD    KAHLE       NEW MEXICOPUSHPULL              308   LIFE               255              307.5           562.5   1240.088
+M   RICK       DENCH       NEW MEXICOPUSHPULL    43        308   LM 40-44           185                               185     407.851
+M   JOHN       HELDT       NEVADA     PUSHPULL   34        308   R OPEN           172.5               250            422.5   931.4435
+M   SALVADOR   RAMIREZ     MEXICO     PUSHPULL   27        320   OPEN               245               270             515    1135.369
+M   MARLOW     YOUNAN      CALIFORNIA PUSHPULL   17 ????         RT 16-17           105                               105     231.483
+M   MARIO      GONZALES    CALIFORNIA PUSHPULL   16              RT 16-17                                                0          0
+                                                                                                                         0          0
+
