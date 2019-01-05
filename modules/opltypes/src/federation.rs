@@ -207,7 +207,7 @@ pub enum Federation {
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
-    /// Croatia - Unaffiliated
+    /// Unaffiliated meets held in Croatia.
     #[serde(rename = "Croatia-UA")]
     #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
     CroatiaUA,
@@ -388,6 +388,11 @@ pub enum Federation {
     #[serde(rename = "IPL-NZ")]
     #[strum(to_string = "IPL-NZ", serialize = "ipl-nz")]
     IPLNZ,
+
+    /// Unaffiliated meets held in Ireland.
+    #[serde(rename = "Ireland-UA")]
+    #[strum(to_string = "Ireland-UA", serialize = "ireland-ua")]
+    IrelandUA,
 
     /// Irish Powerlifting Federation, IPF.
     #[strum(to_string = "IrishPF", serialize = "irishpf")]
@@ -872,6 +877,7 @@ impl Federation {
             Federation::IPF => true,
             Federation::IPL => false,
             Federation::IPLNZ => false,
+            Federation::IrelandUA => false,
             Federation::IrishPF => true,
             Federation::IrishPO => false,
             Federation::IRP => false,
@@ -1058,6 +1064,7 @@ impl Federation {
             Federation::IPF => None,
             Federation::IPL => None,
             Federation::IPLNZ => Some(Country::NewZealand),
+            Federation::IrelandUA => Some(Country::Ireland),
             Federation::IrishPF => Some(Country::Ireland),
             Federation::IrishPO => Some(Country::Ireland),
             Federation::IRP => None,
@@ -1256,6 +1263,7 @@ impl Federation {
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPL => PointsSystem::Wilks,
             Federation::IPLNZ => PointsSystem::Wilks,
+            Federation::IrelandUA => PointsSystem::Wilks,
             Federation::IrishPF => Federation::ipf_rules_on(date),
             Federation::IrishPO => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
