@@ -60,7 +60,7 @@ pub fn filter_glossbrenner(entry: &Entry) -> bool {
 #[inline]
 pub fn filter_ipfpoints(entry: &Entry) -> bool {
     // IPF Points are defined to be zero if DQ.
-    entry.glossbrenner > Points::from_i32(0)
+    entry.ipfpoints > Points::from_i32(0)
 }
 
 /// Defines an `Ordering` of Entries by Squat.
