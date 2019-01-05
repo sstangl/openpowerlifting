@@ -416,6 +416,10 @@ pub enum Federation {
     #[strum(to_string = "LPF", serialize = "lpf")]
     LPF,
 
+    /// Maximum Human Performance, a vitamin company.
+    #[strum(to_string = "MHP", serialize = "mhp")]
+    MHP,
+
     /// Metal Militia, a small, independent federation.
     #[strum(to_string = "MM", serialize = "mm")]
     MM,
@@ -879,6 +883,7 @@ impl Federation {
             Federation::KRAFT => true,
             Federation::KPF => true,
             Federation::LPF => true,
+            Federation::MHP => false,
             Federation::MM => false,
             Federation::MPA => false,
             Federation::NAP => false,
@@ -1065,6 +1070,7 @@ impl Federation {
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::LPF => Some(Country::Latvia),
+            Federation::MHP => Some(Country::USA),
             Federation::MM => Some(Country::USA),
             Federation::MPA => Some(Country::Malaysia),
             Federation::NAP => Some(Country::Russia),
@@ -1251,6 +1257,7 @@ impl Federation {
             Federation::KRAFT => PointsSystem::Wilks,
             Federation::KPF => PointsSystem::Wilks,
             Federation::LPF => PointsSystem::Wilks,
+            Federation::MHP => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,
