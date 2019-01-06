@@ -12,6 +12,7 @@ pub struct Context<'a> {
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub lifter_sex: &'a str,
+    pub show_sex_column: bool,
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: WeightUnits,
@@ -67,6 +68,7 @@ pub struct MeetResultsRow<'a> {
     pub meet_path: &'a str,
     pub division: Option<&'a str>,
     pub age: Age,
+    pub sex: &'a str,
     pub equipment: &'a str,
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,
@@ -106,6 +108,7 @@ impl<'a> MeetResultsRow<'a> {
                 Some(ref s) => Some(&s),
             },
             age: entry.age,
+            sex: strings.translate_sex(entry.sex),
             equipment: strings.translate_equipment(entry.equipment),
             weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
             bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
@@ -324,7 +327,21 @@ impl<'a> Context<'a> {
 
         let bests = calculate_bests(&locale, &entries);
 
-        let lifter_sex = locale.strings.translate_sex(entries[0].sex);
+        // Do all the entries have the same Sex?
+        // If not, we want to show a "Sex" column for debugging.
+        let mut consistent_sex: bool = true;
+        for entry in entries.iter().skip(1) {
+            if entry.sex != entries[0].sex {
+                consistent_sex = false;
+                break;
+            }
+        }
+
+        let lifter_sex = if consistent_sex {
+            locale.strings.translate_sex(entries[0].sex)
+        } else {
+            "?"
+        };
 
         // Display the meet results, most recent first.
         let meet_results = entries
@@ -341,6 +358,7 @@ impl<'a> Context<'a> {
             localized_name: get_localized_name(&lifter, locale.language),
             lifter,
             lifter_sex,
+            show_sex_column: !consistent_sex,
             bests,
             meet_results,
         }

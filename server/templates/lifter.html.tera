@@ -50,6 +50,9 @@
         <th>{{strings.columns.location}}</th>
         <th>{{strings.columns.meetname}}</th>
         <th>{{strings.columns.division}}</th>
+        {% if show_sex_column %}
+          <th>{{strings.columns.sex}}</th>
+        {% endif %}
         <th>{{strings.columns.age}}</th>
         <th>{{strings.columns.equipment}}</th>
         <th>{{strings.columns.weightclass}}</th>
@@ -69,6 +72,9 @@
           <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
           <td><a href="/m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
+          {% if show_sex_column %}
+            <td>{{this.sex}}</td>
+          {% endif %}
           <td>{{this.age}}</td>
           <td>{{this.equipment}}</td>
           <td>{{this.weightclass}}</td>
