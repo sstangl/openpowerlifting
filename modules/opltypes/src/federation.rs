@@ -532,9 +532,9 @@ pub enum Federation {
     RAWCAN,
 
     /// Icelandic fed, confusingly not an 100% Raw affiliate
-    #[serde(rename = "RAW-Iceland")]
-    #[strum(to_string = "RAW-Iceland", serialize = "raw-iceland")]
-    RAWIceland,
+    #[serde(rename = "Raw-Iceland")]
+    #[strum(to_string = "Raw-Iceland", serialize = "raw-iceland")]
+    RawIceland,
 
     /// 100% RAW Federation Ukraine.
     #[serde(rename = "RAW-UKR")]
@@ -912,7 +912,7 @@ impl Federation {
             Federation::PZKFiTS => true,
             Federation::RAW => true,
             Federation::RAWCAN => true,
-            Federation::RAWIceland => false,
+            Federation::RawIceland => false,
             Federation::RAWUKR => true,
             Federation::RAWU => false,
             Federation::RPS => false,
@@ -1099,7 +1099,7 @@ impl Federation {
             Federation::PZKFiTS => Some(Country::Poland),
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
-            Federation::RAWIceland => Some(Country::Iceland),
+            Federation::RawIceland => Some(Country::Iceland),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
             Federation::RPS => Some(Country::USA),
@@ -1298,7 +1298,7 @@ impl Federation {
             Federation::PZKFiTS => Federation::ipf_rules_on(date),
             Federation::RAW => PointsSystem::Wilks,
             Federation::RAWCAN => PointsSystem::Wilks,
-            Federation::RAWIceland => PointsSystem::Wilks,
+            Federation::RawIceland => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
             Federation::RPS => PointsSystem::Wilks,
