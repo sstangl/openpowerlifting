@@ -1251,7 +1251,6 @@ impl Federation {
             Federation::KRAFT => PointsSystem::Wilks,
             Federation::KPF => PointsSystem::Wilks,
             Federation::LPF => PointsSystem::Wilks,
-            Federation::MHP => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,
