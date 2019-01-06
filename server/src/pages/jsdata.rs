@@ -141,9 +141,7 @@ impl<'db> JsEntryRow<'db> {
                 SortSelection::ByGlossbrenner => {
                     entry.glossbrenner.in_format(number_format)
                 }
-                SortSelection::ByIPFPoints => {
-                    entry.ipfpoints.in_format(number_format)
-                }
+                SortSelection::ByIPFPoints => entry.ipfpoints.in_format(number_format),
             },
         }
     }

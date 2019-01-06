@@ -26,6 +26,7 @@ pub struct Context<'db> {
     // other sorts, just tell it what the paths are.
     pub path_if_by_wilks: String,
     pub path_if_by_glossbrenner: String,
+    pub path_if_by_ipfpoints: String,
     pub path_if_by_division: String,
 
     /// True iff the meet reported any age data.
@@ -48,6 +49,7 @@ pub struct Table<'db> {
 pub enum MeetSortSelection {
     ByDivision,
     ByGlossbrenner,
+    ByIPFPoints,
     ByWilks,
 
     /// Special value that resolves to one of the others after lookup.
@@ -61,6 +63,7 @@ impl FromStr for MeetSortSelection {
         match s {
             "by-division" => Ok(MeetSortSelection::ByDivision),
             "by-glossbrenner" => Ok(MeetSortSelection::ByGlossbrenner),
+            "by-ipf-points" => Ok(MeetSortSelection::ByIPFPoints),
             "by-wilks" => Ok(MeetSortSelection::ByWilks),
             _ => Err(()),
         }
@@ -164,6 +167,7 @@ impl<'a> ResultsRow<'a> {
             points: match points_system {
                 PointsSystem::Wilks => entry.wilks.in_format(number_format),
                 PointsSystem::Glossbrenner => entry.glossbrenner.in_format(number_format),
+                PointsSystem::IPFPoints => entry.ipfpoints.in_format(number_format),
             },
         }
     }
@@ -375,6 +379,9 @@ fn make_tables_by_points<'db>(
         PointsSystem::Glossbrenner => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
         }
+        PointsSystem::IPFPoints => {
+            entries.sort_unstable_by(|a, b| algorithms::cmp_ipfpoints(&meets, a, b));
+        }
     };
 
     let rows: Vec<ResultsRow> = entries
@@ -409,6 +416,9 @@ impl<'db> Context<'db> {
                 PointsSystem::Glossbrenner,
                 meet_id,
             ),
+            MeetSortSelection::ByIPFPoints => {
+                make_tables_by_points(&opldb, &locale, PointsSystem::IPFPoints, meet_id)
+            }
             MeetSortSelection::ByFederationDefault => {
                 make_tables_by_points(&opldb, &locale, default_points, meet_id)
             }
@@ -417,10 +427,12 @@ impl<'db> Context<'db> {
         let points_column_title = match sort {
             MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
             MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
+            MeetSortSelection::ByIPFPoints => &locale.strings.columns.ipfpoints,
             MeetSortSelection::ByDivision | MeetSortSelection::ByFederationDefault => {
                 match default_points {
                     PointsSystem::Wilks => &locale.strings.columns.wilks,
                     PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
+                    PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
                 }
             }
         };
@@ -432,6 +444,10 @@ impl<'db> Context<'db> {
         let path_if_by_glossbrenner = match default_points {
             PointsSystem::Glossbrenner => format!("/m/{}", meet.path),
             _ => format!("/m/{}/by-glossbrenner", meet.path),
+        };
+        let path_if_by_ipfpoints = match default_points {
+            PointsSystem::IPFPoints => format!("/m/{}", meet.path),
+            _ => format!("/m/{}/by-ipf-points", meet.path),
         };
         let path_if_by_division = format!("/m/{}/by-division", meet.path);
 
@@ -445,9 +461,11 @@ impl<'db> Context<'db> {
                 MeetSortSelection::ByDivision => MeetSortSelection::ByDivision,
                 MeetSortSelection::ByWilks => MeetSortSelection::ByWilks,
                 MeetSortSelection::ByGlossbrenner => MeetSortSelection::ByGlossbrenner,
+                MeetSortSelection::ByIPFPoints => MeetSortSelection::ByIPFPoints,
                 MeetSortSelection::ByFederationDefault => match default_points {
                     PointsSystem::Wilks => MeetSortSelection::ByWilks,
                     PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
+                    PointsSystem::IPFPoints => MeetSortSelection::ByIPFPoints,
                 },
             },
             meet: MeetInfo::from(&meet, locale.strings),
@@ -456,6 +474,7 @@ impl<'db> Context<'db> {
             use_rank_column: sort != MeetSortSelection::ByDivision,
             path_if_by_wilks,
             path_if_by_glossbrenner,
+            path_if_by_ipfpoints,
             path_if_by_division,
         }
     }

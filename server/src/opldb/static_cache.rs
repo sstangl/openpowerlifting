@@ -323,7 +323,13 @@ impl ConstantTimeCache {
                 &cmp_glossbrenner,
                 &filter_glossbrenner,
             ),
-            ipfpoints: ConstantTimeBy::new(loglin, mv, ev, &cmp_ipfpoints, &filter_ipfpoints),
+            ipfpoints: ConstantTimeBy::new(
+                loglin,
+                mv,
+                ev,
+                &cmp_ipfpoints,
+                &filter_ipfpoints,
+            ),
         }
     }
 }

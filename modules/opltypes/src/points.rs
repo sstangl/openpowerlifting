@@ -23,6 +23,7 @@ pub struct Points(i32);
 pub enum PointsSystem {
     Wilks,
     Glossbrenner,
+    IPFPoints,
 }
 
 impl From<f32> for Points {

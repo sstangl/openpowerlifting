@@ -7,6 +7,7 @@
 // These are generated inline via templates/meet.html.tera.
 declare const path_if_by_wilks: string;
 declare const path_if_by_glossbrenner: string;
+declare const path_if_by_ipfpoints: string;
 declare const path_if_by_division: string;
 
 let selSort: HTMLSelectElement;
@@ -23,6 +24,9 @@ function redirect() {
             break;
         case "by-division":
             window.location.href = path_if_by_division;
+            break;
+        case "by-ipf-points":
+            window.location.href = path_if_by_ipfpoints;
             break;
     }
 }
