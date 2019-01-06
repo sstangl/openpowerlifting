@@ -400,6 +400,7 @@ pub enum Federation {
     /// International RAW Powerlifting
     #[strum(to_string = "IRP", serialize = "irp")]
     IRP,
+
     /// Japan Powerlifting Federation, IPF.
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
@@ -570,7 +571,7 @@ pub enum Federation {
     /// Son Light Power, US based federation
     #[strum(to_string = "SLP", serialize = "slp")]
     SLP,
-    
+
     /// Singapore Powerlifting Alliance.
     #[strum(to_string = "SPA", serialize = "spa")]
     SPA,
@@ -657,7 +658,6 @@ pub enum Federation {
     /// Not sure what this stands for, Anthony Clark set a bench record in this fed.
     #[strum(to_string = "WBC", serialize = "wbc")]
     WBC,
-
 
     /// World Drug-Free Powerlifting Association.
     #[strum(to_string = "WDFPF", serialize = "wdfpf")]
@@ -1155,8 +1155,20 @@ impl Federation {
         }
     }
 
+    /// Helper function for specifying the PointsSystem of federations under IPF rules.
+    #[inline]
+    fn ipf_rules_on(date: Date) -> PointsSystem {
+        // The IPF and their affiliates developed a new federation-specific
+        // formula beginning in 2019.
+        if date.year() >= 2019 {
+            PointsSystem::IPFPoints
+        } else {
+            PointsSystem::Wilks
+        }
+    }
+
     /// Which points system is default for a federation's meet.
-    pub fn default_points(self, _meetdate: Date) -> PointsSystem {
+    pub fn default_points(self, date: Date) -> PointsSystem {
         match self {
             Federation::_365Strong => PointsSystem::Wilks,
             Federation::AAP => PointsSystem::Wilks,
@@ -1166,16 +1178,16 @@ impl Federation {
             Federation::ADAU => PointsSystem::Wilks,
             Federation::ADFPA => PointsSystem::Wilks,
             Federation::ADFPF => PointsSystem::Wilks,
-            Federation::AEP => PointsSystem::Wilks,
+            Federation::AEP => Federation::ipf_rules_on(date),
             Federation::AFPF => PointsSystem::Wilks,
-            Federation::AfricanPF => PointsSystem::Wilks,
-            Federation::AIWBPA => PointsSystem::Wilks,
+            Federation::AfricanPF => Federation::ipf_rules_on(date),
+            Federation::AIWBPA => Federation::ipf_rules_on(date),
             Federation::AmericanSA => PointsSystem::Wilks,
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APU => PointsSystem::Wilks,
-            Federation::AsianPF => PointsSystem::Wilks,
+            Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::Atlantis => PointsSystem::Wilks,
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
@@ -1184,37 +1196,37 @@ impl Federation {
             Federation::BBDD => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
             Federation::BenchAmerica => PointsSystem::Wilks,
-            Federation::BP => PointsSystem::Wilks,
+            Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Wilks,
-            Federation::BVDK => PointsSystem::Wilks,
+            Federation::BVDK => Federation::ipf_rules_on(date),
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
             Federation::CAST => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
-            Federation::CommonwealthPF => PointsSystem::Wilks,
+            Federation::CommonwealthPF => Federation::ipf_rules_on(date),
             Federation::CPA => PointsSystem::Wilks,
             Federation::CPC => PointsSystem::Wilks,
             Federation::CPF => PointsSystem::Wilks,
             Federation::CPL => PointsSystem::Wilks,
             Federation::CPO => PointsSystem::Wilks,
-            Federation::CPU => PointsSystem::Wilks,
+            Federation::CPU => Federation::ipf_rules_on(date),
             Federation::CSST => PointsSystem::Wilks,
-            Federation::DSF => PointsSystem::Wilks,
-            Federation::EPA => PointsSystem::Wilks,
-            Federation::EPF => PointsSystem::Wilks,
+            Federation::DSF => Federation::ipf_rules_on(date),
+            Federation::EPA => Federation::ipf_rules_on(date),
+            Federation::EPF => Federation::ipf_rules_on(date),
             Federation::ESDT => PointsSystem::Wilks,
-            Federation::FALPO => PointsSystem::Wilks,
+            Federation::FALPO => Federation::ipf_rules_on(date),
             Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
-            Federation::FEMEPO => PointsSystem::Wilks,
+            Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
-            Federation::FESUPO => PointsSystem::Wilks,
-            Federation::FFForce => PointsSystem::Wilks,
+            Federation::FESUPO => Federation::ipf_rules_on(date),
+            Federation::FFForce => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
-            Federation::FPR => PointsSystem::Wilks,
+            Federation::FPR => Federation::ipf_rules_on(date),
             Federation::GoldenDouble => PointsSystem::Wilks,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
@@ -1231,7 +1243,7 @@ impl Federation {
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
-            Federation::HPLS => PointsSystem::Wilks,
+            Federation::HPLS => Federation::ipf_rules_on(date),
             Federation::HPLSUA => PointsSystem::Wilks,
             Federation::HPO => PointsSystem::Wilks,
             Federation::HybridPM => PointsSystem::Wilks,
@@ -1241,41 +1253,41 @@ impl Federation {
             Federation::IKF => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
-            Federation::IPF => PointsSystem::Wilks,
+            Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPL => PointsSystem::Wilks,
             Federation::IPLNZ => PointsSystem::Wilks,
-            Federation::IrishPF => PointsSystem::Wilks,
+            Federation::IrishPF => Federation::ipf_rules_on(date),
             Federation::IrishPO => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
-            Federation::JPA => PointsSystem::Wilks,
-            Federation::KRAFT => PointsSystem::Wilks,
-            Federation::KPF => PointsSystem::Wilks,
-            Federation::LPF => PointsSystem::Wilks,
+            Federation::JPA => Federation::ipf_rules_on(date),
+            Federation::KPF => Federation::ipf_rules_on(date),
+            Federation::KRAFT => Federation::ipf_rules_on(date),
+            Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MM => PointsSystem::Wilks,
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,
-            Federation::NAPF => PointsSystem::Wilks,
+            Federation::NAPF => Federation::ipf_rules_on(date),
             Federation::NASA => PointsSystem::Wilks,
             Federation::NORCAL => PointsSystem::Wilks,
-            Federation::NIPF => PointsSystem::Wilks,
-            Federation::NordicPF => PointsSystem::Wilks,
+            Federation::NIPF => Federation::ipf_rules_on(date),
+            Federation::NordicPF => Federation::ipf_rules_on(date),
             Federation::NOTLD => PointsSystem::Wilks,
             Federation::NPA => PointsSystem::Wilks,
             Federation::NPB => PointsSystem::Wilks,
-            Federation::NSF => PointsSystem::Wilks,
+            Federation::NSF => Federation::ipf_rules_on(date),
             Federation::NZOpen => PointsSystem::Wilks,
-            Federation::NZPF => PointsSystem::Wilks,
+            Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::OlomouckySilak => PointsSystem::Wilks,
-            Federation::ORPF => PointsSystem::Wilks,
+            Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,
-            Federation::PAP => PointsSystem::Wilks,
-            Federation::PLZS => PointsSystem::Wilks,
+            Federation::PAP => Federation::ipf_rules_on(date),
+            Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
-            Federation::PZKFiTS => PointsSystem::Wilks,
+            Federation::PZKFiTS => Federation::ipf_rules_on(date),
             Federation::RAW => PointsSystem::Wilks,
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
@@ -1285,7 +1297,7 @@ impl Federation {
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
             Federation::SAST => PointsSystem::Glossbrenner,
-            Federation::ScottishPL => PointsSystem::Wilks,
+            Federation::ScottishPL => Federation::ipf_rules_on(date),
             Federation::SCI => PointsSystem::Wilks,
             Federation::SCT => PointsSystem::Wilks,
             Federation::SLP => PointsSystem::Wilks,
@@ -1293,16 +1305,16 @@ impl Federation {
             Federation::SPF => PointsSystem::Wilks,
             Federation::SPSS => PointsSystem::Wilks,
             Federation::SSA => PointsSystem::Wilks,
-            Federation::SSF => PointsSystem::Wilks,
-            Federation::SVNL => PointsSystem::Wilks,
-            Federation::ThaiPF => PointsSystem::Wilks,
+            Federation::SSF => Federation::ipf_rules_on(date),
+            Federation::SVNL => Federation::ipf_rules_on(date),
+            Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
             Federation::UPA => PointsSystem::Wilks,
             Federation::UPC => PointsSystem::Wilks,
-            Federation::UkrainePF => PointsSystem::Wilks,
-            Federation::USAPL => PointsSystem::Wilks,
+            Federation::UkrainePF => Federation::ipf_rules_on(date),
+            Federation::USAPL => Federation::ipf_rules_on(date),
             Federation::USPS => PointsSystem::Wilks,
             Federation::USPF => PointsSystem::Wilks,
             Federation::USPA => PointsSystem::Wilks,
@@ -1312,7 +1324,7 @@ impl Federation {
             Federation::WABDL => PointsSystem::Wilks,
             Federation::WBC => PointsSystem::Wilks,
             Federation::WDFPF => PointsSystem::Wilks,
-            Federation::WelshPA => PointsSystem::Wilks,
+            Federation::WelshPA => Federation::ipf_rules_on(date),
             Federation::WP => PointsSystem::Wilks,
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,
