@@ -15,8 +15,10 @@
     mem2 = {name ="M-E-M2",min=49.5,max=58.5,equipment="Single-ply"}
     mcm3 = {name ="M-C-M3",min=59.5,max=68.5,equipment="Raw"}
     mem3 = {name ="M-E-M3",min=59.5,max=68.5,equipment="Single-ply"}
-    mcm4 = {name ="M-C-M4",min=69.5,max=999,equipment="Raw"}
-    mem4 = {name ="M-E-M4",min=69.5,max=999,equipment="Single-ply"}
+    mcm4 = {name ="M-C-M4",min=69.5,max=78.5,equipment="Raw"}
+    mem4 = {name ="M-E-M4",min=69.5,max=78.5,equipment="Single-ply"}
+    mcm5 = {name ="M-C-M5",min=79.5,max=999,equipment="Raw"}
+    mem5 = {name ="M-E-M5",min=79.5,max=999,equipment="Single-ply"}
 
     fcopen = {name ="F-C-Open",min=0,max=999,equipment="Raw"}
     feopen = {name ="F-E-Open",min=0,max=999,equipment="Single-ply"}
@@ -36,6 +38,8 @@
     fem3 = {name ="F-E-M3",min=59.5,max=68.5,equipment="Single-ply"}
     fcm4 = {name ="F-C-M4",min=69.5,max=999,equipment="Raw"}
     fem4 = {name ="F-E-M4",min=69.5,max=999,equipment="Single-ply"}
+    fcm5 = {name ="F-C-M5",min=79.5,max=999,equipment="Raw"}
+    fem5 = {name ="F-E-M5",min=79.5,max=999,equipment="Single-ply"}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
