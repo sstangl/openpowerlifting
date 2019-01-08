@@ -121,6 +121,7 @@ pub enum Country {
     Macedonia,
     Malaysia,
     Mali,
+    Malta,
     #[serde(rename = "Marshall Islands")]
     #[strum(to_string = "Marshall Islands")]
     MarshallIslands,
