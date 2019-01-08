@@ -136,6 +136,7 @@ def main(max_pages):
     csv.append_column('Wilks')
     csv.append_column('Year')
     csv.append_column('Unequipped')
+    csv.append_column('IPFPoints')
 
     # Handle the first page specially, to extract num_pages.
     html = gethtml(URL)

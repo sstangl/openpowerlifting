@@ -17,6 +17,11 @@ IGNOREFILE = CPUDIR + os.sep + "IGNORE"
 # Meets are filed into folders by a unique ID.
 def meethash(csv, row):
     date = row[csv.index('Date')]
+
+    # Sigh, patch up an error.
+    if date == '-12-08':
+        date = '2018-12-08'
+
     assert len(date) == 10
 
     meetname = row[csv.index('MeetName')]
