@@ -289,6 +289,15 @@ pub enum Federation {
     #[strum(to_string = "FPR", serialize = "fpr")]
     FPR,
 
+    /// Unaffiliated meets held in Germany.
+    #[serde(rename = "Germany-UA")]
+    #[strum(to_string = "Germany-UA", serialize = "germany-ua")]
+    GermanyUA,
+
+    /// Global Powerlifting Union, Ukrainian GPC affiliate.
+    #[strum(to_string = "GlobalPU", serialize = "globalpu")]
+    GlobalPU,
+
     /// Global Powerlifting Association.
     #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
@@ -340,10 +349,6 @@ pub enum Federation {
     /// Global Powerlifting Federation
     #[strum(to_string = "GPF", serialize = "gpf")]
     GPF,
-
-    /// Global Powerlifting Union, Ukrainian GPC affiliate.
-    #[strum(to_string = "GlobalPU", serialize = "globalpu")]
-    GlobalPU,
 
     /// German Powerlifting Union, WPU.
     #[strum(to_string = "GPU", serialize = "gpu")]
@@ -961,6 +966,8 @@ impl Federation {
             Federation::FIPL => true,
             Federation::FPO => false,
             Federation::FPR => true,
+            Federation::GermanyUA => false,
+            Federation::GlobalPU => false,
             Federation::GPA => false,
             Federation::GPACRO => false,
             Federation::GPC => false,
@@ -971,7 +978,6 @@ impl Federation {
             Federation::GPCNZ => false,
             Federation::GPCRUS => false,
             Federation::GPF => false,
-            Federation::GlobalPU => false,
             Federation::GPU => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
@@ -1173,6 +1179,8 @@ impl Federation {
             Federation::FIPL => Some(Country::Italy),
             Federation::FPO => Some(Country::Finland),
             Federation::FPR => Some(Country::Russia),
+            Federation::GermanyUA => Some(Country::Germany),
+            Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPC => None,
@@ -1184,7 +1192,6 @@ impl Federation {
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPF => None,
-            Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPU => Some(Country::Germany),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
@@ -1396,6 +1403,8 @@ impl Federation {
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPR => Federation::ipf_rules_on(date),
+            Federation::GermanyUA => PointsSystem::Wilks,
+            Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Glossbrenner,
@@ -1407,7 +1416,6 @@ impl Federation {
             Federation::GPCNZ => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
-            Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPU => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,

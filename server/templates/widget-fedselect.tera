@@ -163,6 +163,7 @@
   <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>{{strings.selectors.fed.all_germany}}</option>
   <option value="bvdk" {% if selection.federation == "BVDK" %}selected{% endif %}>BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>
   <option value="gpu" {% if selection.federation == "GPU" %}selected{% endif %}>GPU - German Powerlifting Union [WPU]</option>
+  <option value="insanity" {% if selection.federation == "Insanity" %}selected{% endif %}>Insanity Meet</option>
   <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC Germany</option>
 </optgroup>
 <optgroup label="{{strings.country.greece}}">
