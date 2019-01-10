@@ -1,7 +1,7 @@
 Sex,WeightClassKg,Name,AgeClass,Team,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Equipment,Event,Place
-F,52,Louise Edwards,23.5-38.5,YNE,51.9,102.5,47.5,135,285,Female,Single-ply,SBD,2
-F,60,Janelle Yeats,23.5-38.5,YNE,59.8,87.5,55.5,132.5,275.5,Female,Single-ply,SBD,3
-F,82.5,Valerie Ritchie,39.5-48.5,NW,78.5,160,112.5,160,432.5,Female,Single-ply,SBD,1
+F,52,Louise Edwards,23.5-38.5,YNE,51.9,102.5,47.5,135,285,F-E-Open,Single-ply,SBD,2
+F,60,Janelle Yeats,23.5-38.5,YNE,59.8,87.5,55.5,132.5,275.5,F-E-Open,Single-ply,SBD,3
+F,82.5,Valerie Ritchie,39.5-48.5,NW,78.5,160,112.5,160,432.5,F-E-Open,Single-ply,SBD,1
 M,56,Hassan Celik,0-17.5,YNE,55.9,115,77.5,155,347.5,M-E-Open,Single-ply,SBD,4
 M,75,Daniel Schofield,0-22.5,NW,73.4,117.5,82.5,155,355,M-E-Open,Single-ply,SBD,3
 M,75,Paul Cooper,23.5-38.5,YNE,74.2,140,145,195,480,M-E-Open,Single-ply,SBD,8
@@ -17,5 +17,5 @@ M,110,Michael Claydon,23.5-38.5,YNE,108.9,255,185,265,705,M-E-Open,Single-ply,SB
 M,125,Christopher Ashton Woodhead,39.5-48.5,YNE,124.6,306,177.5,252.5,736,M-E-Open,Single-ply,SBD,1
 M,125+,Bryn Evans,23.5-38.5,NW,131.5,250,202.5,250,702.5,M-E-Open,Single-ply,SBD,2
 M,52,Nathan Miller,0-17.5,YNE,51.9,107.5,67.5,136,311,M-E-Open,Single-ply,SBD,9
-M,90,Aron Lohan,0-22.5,NW,87,225,175,210,610,M-E-G,Single-ply,SBD,G
-M,125+,John McMahon,39.5-48.5,NW,130,110,160,400,670,M-E-G,Single-ply,SBD,G
+M,90,Aron Lohan,0-22.5,NW,87,225,175,210,610,M-E-Guest,Single-ply,SBD,G
+M,125+,John McMahon,39.5-48.5,NW,130,110,160,400,670,M-E-Guest,Single-ply,SBD,G
