@@ -349,6 +349,10 @@ pub enum Federation {
     #[strum(to_string = "HPO", serialize = "hpo")]
     HPO,
 
+    /// Hantang Powerlifting
+    #[strum(to_string = "HTPL", serialize = "htpl")]
+    HTPL,
+
     /// Hybrid Performance Method, Stefi Cohen's gym.
     #[strum(to_string = "HybridPM", serialize = "hybridpm")]
     HybridPM,
@@ -866,6 +870,7 @@ impl Federation {
             Federation::HPLS => true,
             Federation::HPLSUA => false,
             Federation::HPO => false,
+            Federation::HTPL => true,
             Federation::HybridPM => false,
             Federation::IBSA => true,
             Federation::IDFPA => true,
@@ -1054,6 +1059,7 @@ impl Federation {
             Federation::HPLS => Some(Country::Croatia),
             Federation::HPLSUA => Some(Country::Croatia),
             Federation::HPO => Some(Country::Croatia),
+            Federation::HTPL => Some(Country::China),
             Federation::HybridPM => Some(Country::USA),
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
@@ -1253,6 +1259,7 @@ impl Federation {
             Federation::HPLS => Federation::ipf_rules_on(date),
             Federation::HPLSUA => PointsSystem::Wilks,
             Federation::HPO => PointsSystem::Wilks,
+            Federation::HTPL => PointsSystem::Wilks,
             Federation::HybridPM => PointsSystem::Wilks,
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
