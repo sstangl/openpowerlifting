@@ -7,12 +7,14 @@ Presentation of this data is available at [OpenPowerlifting.org](http://www.open
 
 **Powerlifting to the People.**
 
-## Code Licensing
+## Licensing
+
+### Code Licensing
 
 All OpenPowerlifting code is Free/Libre software under the GNU AGPLv3+.<br/>
 Please refer to the LICENSE file.
 
-## Data Licensing
+### Data Licensing
 
 OpenPowerlifting data (`*.csv`) under `meet-data/` is contributed to the public domain.
 
@@ -34,3 +36,32 @@ Sample attribution text:
 
 If you modify the data or add useful new data, please consider contributing<br/>
 the changes back so the entire powerlifting community may benefit.
+
+## Development Installation
+
+### Fedora 29
+
+First, [installing the Rust programming language](https://rustup.rs) using `rustup`.<br/>
+When a menu appears, choose "Customize installation".<br/>
+Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.<br/>
+Continue pressing Enter at the remaining prompts until Rust is installed.
+
+```bash
+curl https://sh.rustup.rs -sSf | sh
+```
+
+Log out and log back in to allow `~/.cargo/bin` to be part of your default shell `$PATH`.
+
+Install dependencies:
+
+```bash
+sudo dnf install make npm python3-toml python3-beautifulsoup4 ansible
+```
+
+Build the project and run the server:
+
+```bash
+make
+cd server
+cargo run --release
+```
