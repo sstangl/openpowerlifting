@@ -3,7 +3,7 @@
 [![Build Status](https://gitlab.com/openpowerlifting/opl-data/badges/master/pipeline.svg)](https://gitlab.com/openpowerlifting/opl-data/commits/master)
 
 A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.<br/>
-Presentation of this data is available at [OpenPowerlifting.org](http://www.openpowerlifting.org).
+Presentation of this data is available at [OpenPowerlifting.org](https://www.openpowerlifting.org).
 
 **Powerlifting to the People.**
 
@@ -31,7 +31,7 @@ so that people may know about this project and help contribute data.
 
 Sample attribution text:
 
-> This page uses data from the OpenPowerlifting project, http://www.openpowerlifting.org.<br/>
+> This page uses data from the OpenPowerlifting project, https://www.openpowerlifting.org.<br/>
 > You may download a copy of the data at https://gitlab.com/openpowerlifting/opl-data.
 
 If you modify the data or add useful new data, please consider contributing<br/>
