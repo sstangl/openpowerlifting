@@ -41,14 +41,16 @@ the changes back so the entire powerlifting community may benefit.
 
 ### Fedora 29
 
-First, [installing the Rust programming language](https://rustup.rs) using `rustup`.<br/>
-When a menu appears, choose "Customize installation".<br/>
-Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.<br/>
-Continue pressing Enter at the remaining prompts until Rust is installed.
+First, install the "nightly" version of the Rust programming language using `rustup`:
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
 ```
+
+When a menu appears, choose "Customize installation".<br/>
+Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.<br/>
+Continue pressing Enter at the remaining prompts until Rust is installed.
+
 
 Log out and log back in to allow `~/.cargo/bin` to be part of your default shell `$PATH`.
 
