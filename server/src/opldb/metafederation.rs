@@ -100,6 +100,10 @@ pub enum MetaFederation {
     #[strum(to_string = "irishpo")]
     IrishPO,
 
+    /// NPB, but with international results also.
+    #[strum(to_string = "npb")]
+    NPB,
+
     /// USPA, plus IPL results for American lifters.
     #[strum(to_string = "uspa")]
     USPA,
@@ -272,6 +276,13 @@ impl MetaFederation {
                         || entry.lifter_country == Some(Country::Ireland)))
                     || (meet.federation == Federation::WPC
                         && entry.lifter_country == Some(Country::Ireland))
+            }
+            MetaFederation::NPB => match meet.federation {
+                Federation::NPB => true,
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Netherlands)
+                }
+                _ => false,
             }
             MetaFederation::USPA => {
                 meet.federation == Federation::USPA
