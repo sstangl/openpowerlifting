@@ -39,11 +39,14 @@ def download_file(url, resultsname):
 
     driver.quit()
 
+    if os.path.exists("geckodriver.log"):
+        os.remove("geckodriver.log")
+
     # Rename the file
     filename = sorted([os.path.join(os.getcwd(), basename)
                        for basename in os.listdir(os.getcwd())], key=os.path.getctime)[0]
     shutil.move(filename, os.path.join(os.getcwd(), resultsname))
-    os.remove("geckodriver.log")
+
 
 
 if __name__ == '__main__':
