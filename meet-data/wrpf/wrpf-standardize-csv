@@ -288,9 +288,9 @@ def parse_fieldnames(sheet):
         elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион',
                                     'age categoty']):
             fieldnames.append('Division-Age')
-        # Catch all for birthyear if this isn't a division-age column
+        # Catch all for birthdate if this isn't a division-age column
         elif 'дата' in text:
-            fieldnames.append('BirthYear')
+            fieldnames.append('BirthDate')
         elif text in ['собств вес', 'собств', 'соб', 'вес', 'собственный вес',
                       'собственный', 'body weight', 'собcтвенный вес', 'собст вес',
                       'соб вес', 'собстввес', 'вага', 'св']:
