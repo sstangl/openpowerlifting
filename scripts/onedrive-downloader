@@ -37,6 +37,11 @@ def download_file(url, resultsname):
         "m_excelWebRenderer_ewaCtl_btnDownload-Medium20")
     download_button.click()
 
+    time.sleep(1)
+    alertbox = driver.find_element_by_id("errorbuttonarea")
+    yes_button = alertbox.find_element_by_class_name("ewa-dlg-button")
+    yes_button.click()
+
     driver.quit()
 
     if os.path.exists("geckodriver.log"):
@@ -46,7 +51,6 @@ def download_file(url, resultsname):
     filename = sorted([os.path.join(os.getcwd(), basename)
                        for basename in os.listdir(os.getcwd())], key=os.path.getctime)[0]
     shutil.move(filename, os.path.join(os.getcwd(), resultsname))
-
 
 
 if __name__ == '__main__':
