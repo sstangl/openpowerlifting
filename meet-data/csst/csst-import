@@ -22,6 +22,7 @@ except ImportError:
 
 
 def gethtml(url):
+    profile = webdriver.FirefoxProfile()
     foptions = Options()
     foptions.headless = True
     driver = webdriver.Firefox(profile, options=foptions)
