@@ -24,9 +24,9 @@ except ImportError:
 
 
 def get_pages(url):
-    options = Options()
-    options.set_headless(headless=True)
-    driver = webdriver.Firefox(firefox_options=options)
+    foptions = Options()
+    foptions.headless = True
+    driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
     pages = []
