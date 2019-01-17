@@ -293,7 +293,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('BirthDate')
         elif text in ['собств вес', 'собств', 'соб', 'вес', 'собственный вес',
                       'собственный', 'body weight', 'собcтвенный вес', 'собст вес',
-                      'соб вес', 'собстввес', 'вага', 'св']:
+                      'соб вес', 'собстввес', 'вага', 'св', 'собственнный вес']:
             fieldnames.append('BodyweightKg')
         elif text == 'весовая категория':
             fieldnames.append('WeightClassKg')
