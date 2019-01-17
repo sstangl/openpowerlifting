@@ -38,9 +38,11 @@ def download_file(url, resultsname):
     download_button.click()
 
     time.sleep(1)
-    alertbox = driver.find_element_by_id("errorbuttonarea")
-    yes_button = alertbox.find_element_by_class_name("ewa-dlg-button")
-    yes_button.click()
+
+    alertbox = driver.find_elements_by_id("errorbuttonarea")
+    if len(alertbox) != 0:
+        yes_button = alertbox[0].find_element_by_class_name("ewa-dlg-button")
+        yes_button.click()
 
     driver.quit()
 

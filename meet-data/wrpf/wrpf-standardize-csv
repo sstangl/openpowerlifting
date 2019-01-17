@@ -327,7 +327,7 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['жим', 'жим 1', 'benchpress 1', 'жим макс кг 1',
-                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1']:
+                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1', 'жим лёжа 1']:
             assert header[i + 1].lower() in ['2', 'bp2']
             assert header[i + 2].lower() in ['3', 'bp3']
             fieldnames.append('Bench1Kg')
@@ -421,7 +421,7 @@ def parse_sheet(sheet):
         return csv
     elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
                                   'армейский', 'тяговое', 'военный', 'двоеборье',
-                                  '1_2 веса', 'многоповтор']):  # Bench reps
+                                  '1_2 веса', 'многоповтор', 'жд']):  # Bench reps
         return csv
     elif 'богатырский' in title:  # Heroic Press ?? Some kind of overhead press maybe
         return csv
@@ -439,6 +439,10 @@ def parse_sheet(sheet):
     elif 'крж' in title:  # ??
         return csv
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
+        return csv
+    elif 'бицепс' in title:  # Curl
+        return csv
+    elif 'isf' in title:  # Some kind of calesthetics competition
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
