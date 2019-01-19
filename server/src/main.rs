@@ -268,11 +268,11 @@ fn lifter(
         .map_or(false, |c| c.is_ascii_digit());
 
     let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
-        let mut v = vec![];
         if let Some(id) = opldb.get_lifter_id(&username) {
-            v.push(id);
+            vec![id]
+        } else {
+            vec![]
         }
-        v
     } else {
         opldb.get_lifters_under_username(&username)
     };
