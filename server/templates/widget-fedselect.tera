@@ -177,6 +177,7 @@
   <option value="idfpf" {% if selection.federation == "IDFPF" %}selected{% endif %}>IDFPF - Irish Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="irishpf" {% if selection.federation == "IrishPF" %}selected{% endif %}>IrishPF - Irish Powerlifting Federation [IPF]</option>
   <option value="irishpo" {% if selection.federation == "IrishPO" %}selected{% endif %}>IrishPO - Irish Powerlifting Organization [IPL]</option>
+  <option value="wrpf-ireland" {% if selection.federation == "WRPF-Ireland" %}selected{% endif %}>WRPF Ireland</option>
 </optgroup>
 <optgroup label="{{strings.country.israel}}">
   <option value="all-israel" {% if selection.federation == "AllIsrael" %}selected{% endif %}>{{strings.selectors.fed.all_israel}}</option>

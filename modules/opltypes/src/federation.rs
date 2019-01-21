@@ -777,6 +777,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Iceland", serialize = "wrpf-iceland")]
     WRPFIceland,
 
+    /// Irish WRPF affiliate.
+    #[serde(rename = "WRPF-Ireland")]
+    #[strum(to_string = "WRPF-Ireland", serialize = "wrpf-ireland")]
+    WRPFIreland,
+
     /// Slovenian WRPF affiliate.
     #[serde(rename = "WRPF-Slovenia")]
     #[strum(to_string = "WRPF-Slovenia", serialize = "wrpf-slovenia")]
@@ -979,6 +984,7 @@ impl Federation {
             Federation::WRPFAUS => false,
             Federation::WRPFCAN => false,
             Federation::WRPFIceland => false,
+            Federation::WRPFIreland => false,
             Federation::WRPFSlovenia => false,
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
@@ -1168,6 +1174,7 @@ impl Federation {
             Federation::WRPFAUS => Some(Country::Australia),
             Federation::WRPFCAN => Some(Country::Canada),
             Federation::WRPFIceland => Some(Country::Iceland),
+            Federation::WRPFIreland => Some(Country::Ireland),
             Federation::WRPFSlovenia => Some(Country::Slovenia),
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
@@ -1369,6 +1376,7 @@ impl Federation {
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFCAN => PointsSystem::Wilks,
             Federation::WRPFIceland => PointsSystem::Wilks,
+            Federation::WRPFIreland => PointsSystem::Wilks,
             Federation::WRPFSlovenia => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
