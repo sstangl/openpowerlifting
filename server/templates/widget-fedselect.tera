@@ -246,7 +246,9 @@
   <option value="wrpf" {% if selection.federation == "WRPF" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
 </optgroup>
 <optgroup label="{{strings.country.serbia}}">
+  <option value="all-serbia" {% if selection.federation == "AllSerbia" %}selected{% endif %}>{{strings.selectors.fed.all_serbia}}</option>
   <option value="usps" {% if selection.federation == "USPS" %}selected{% endif %}>USPS - Ujedinjeni Srpski powerlifting savez [GPC]</option>
+  <option value="wrpf-srb" {% if selection.federation == "WRPF-SRB" %}selected{% endif %}>WRPF-SRB - WRPF Srbija</option>
 </optgroup>
 <optgroup label="{{strings.country.singapore}}">
   <option value="spa" {% if selection.federation == "SPA" %}selected{% endif %}>SPA - Singapore Powerlifting Alliance [GPA]</option>
