@@ -7,17 +7,24 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
-import os
 import sys
-import urllib.request
+import os
+import datetime
+from os.path import join, realpath, dirname
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(
+        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 # URL needs updating every year.
 MEETSURL = "http://meets.revolutionpowerlifting.com/results/2019-meet-results/"
 if datetime.datetime.now().strftime("%Y") != "2019":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
-RPSDIR = os.path.dirname(os.path.realpath(__file__))
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def error(msg):
@@ -27,11 +34,6 @@ def error(msg):
 
 def color(s):
     return "\033[1;32m" + s + "\033[0;m"
-
-
-def gethtml():
-    with urllib.request.urlopen(MEETSURL) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -46,23 +48,16 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(RPSDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                urls.append(fd.readline().strip())
-    return urls
-
-
 def main():
-    html = gethtml()
-    meetlist = getmeetlist(html)
-    known = getenteredurls()
+    meetlist = []
 
-    for m in meetlist:
-        if m not in known:
-            print(color('[RPS] ') + m)
+    html = oplprobe.gethtml(MEETSURL)
+    meetlist = meetlist + getmeetlist(html)
+
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    oplprobe.print_meets(color('[RPS]'), unentered)
 
 
 if __name__ == '__main__':
