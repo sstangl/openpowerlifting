@@ -5,14 +5,21 @@
 
 
 from bs4 import BeautifulSoup
-import os
 import sys
-import urllib.request
+import os
+from os.path import join, realpath, dirname
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(
+        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-FEDURL = "http://herculesgym.net/meet_info.html"
-BASEURL = "http://herculesgym.net"
+FEDURL = "http://hercpowerlifting.com/meet_info.html"
+BASEURL = "http://hercpowerlifting.com"
 
 
 def error(msg):
@@ -22,11 +29,6 @@ def error(msg):
 
 def color(s):
     return "\033[1;31m" + s + "\033[0;m"
-
-
-def gethtml(url):
-    with urllib.request.urlopen(url) as r:
-        return r.read()
 
 
 def getmeetlist(html):
@@ -55,26 +57,16 @@ def getmeetlist(html):
     return urls
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.append(k.strip())
-    return urls
-
-
 def main():
+    meetlist = []
 
-    html = gethtml(FEDURL)
-    meetlist = getmeetlist(html)
+    html = oplprobe.gethtml(FEDURL)
+    meetlist = meetlist + getmeetlist(html)
 
-    known = getenteredurls()
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if m not in known:
-            print(color('[Hercules] ') + m)
+    oplprobe.print_meets(color('[Hercules]'), unentered)
 
 
 if __name__ == '__main__':
