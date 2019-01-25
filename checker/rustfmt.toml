@@ -1,1 +1,3 @@
-../server/rustfmt.toml
+max_width = 90
+wrap_comments = true
+normalize_comments = true
