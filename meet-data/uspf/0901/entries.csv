@@ -1,4 +1,4 @@
-Name,WeightClassKg,Division,Sex,Event,Equipment,Name,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
+Place,WeightClassKg,Division,Sex,Event,Equipment,Name,BodyweightKg,Age,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
 DQ,48,Teen 16-17,F,SBD,Single-ply,Lexi Senseney,46.54,16,55,,26,,,,
 1,52,Teen 18-19,F,SBD,Single-ply,Ren Yamashita,51.48,19,125,,80,,137.5,,342.5
 1,67.5,Teen 13-15,F,SBD,Single-ply,Madison James,64.68,14,75,,55,,125,,255
@@ -11,7 +11,7 @@ DQ,75,Open,F,SBD,Single-ply,Cara Westin,71.94,46,-169.5,,,,,,
 1,90,Open,F,SBD,Single-ply,Janet Loveall,87.54,40,217.5,,150,,217.5,,585
 1,90+,Open,F,SBD,Single-ply,Nicki I'Anson,90.36,43,177.5,,100,,172.5,,450
 1,56,Masters 45-49,F,SBD,Single-ply,Suzanne Hedman,55.11,49,115,,85,,140,,340
-1,60,Masters 50-54,F,SBD,Single-ply,Bonnie Aerts,53.89,50,75,,20,,125.5,127.5,220.5
+1,56,Masters 50-54,F,SBD,Single-ply,Bonnie Aerts,53.89,50,75,,20,,125.5,127.5,220.5
 DQ,60,Masters 40-44,F,SBD,Single-ply,Georgiann Puckett,58.6,44,-90,,,,,,
 1,60,Masters 50-54,F,SBD,Single-ply,Sabra Callahan,56.25,53,112.5,,92.5,,125,,330
 1,67.5,Masters 40-44,F,SBD,Single-ply,Karen Matthews,66.77,40,80,,50,,102.5,,232.5
@@ -117,7 +117,6 @@ DQ,75,Masters 45-49,M,SBD,Single-ply,Paul Wach,71.85,47,-90,,,,,,
 1,82.5,Masters 65-69,M,SBD,Single-ply,Dan Martin,81.1,69,205,,115,,227.5,,547.5
 2,82.5,Masters 65-69,M,SBD,Single-ply,Roy Taylor,78.38,69,142.5,,65,,182.5,,390
 1,82.5,Masters 80+,M,SBD,Single-ply,Martin Garry,80.56,80,112.5,137.5,87.5,,165,,365
-4th-303,,,M,SBD,Single-ply,,,,,,,,,,
 DQ,90,Masters 40-44,M,SBD,Single-ply,Jose Hernandez,86.09,41,-250,,,,,,
 DQ,90,Masters 40-44,M,SBD,Single-ply,George Soto,87.54,40,200,,-162.5,,,,
 DQ,90,Masters 40-44,M,SBD,Single-ply,Patrick Harrity,85.28,44,-209.5,,,,,,
@@ -176,7 +175,7 @@ DQ,125,Masters 65-69,M,SBD,Single-ply,Larry Kidney,123.74,69,-102,,,,,,
 1,90,Masters 45-49,F,B,Single-ply,Tracie Marquez,88.81,46,,,72.5,,,,72.5
 1,90+,Masters 50-54,F,B,Single-ply,Mary Rubcic-Tawzer,98.79,53,,,67.5,,,,67.5
 1,52,Teen 13-15,F,B,Single-ply,Freddy Boza,49.35,15,,,70,,,,70
-1,60,Teen 16-17,F,B,Single-ply,Hunter Hernandez,55.34,17,,,95,100,,,95
+1,56,Teen 16-17,F,B,Single-ply,Hunter Hernandez,55.34,17,,,95,100,,,95
 1,67.5,Teen 16-17,M,B,Single-ply,Brad Evans,62.51,16,,,65,,,,65
 1,75,Teen 16-17,M,B,Single-ply,Aric Evans,71.49,17,,,102.5,,,,102.5
 DQ,75,Teen 16-17,M,B,Single-ply,Josh Puckett,71.85,16,,,,,,,
@@ -232,8 +231,8 @@ DQ,75,Masters 55-59,M,B,Single-ply,Ken Van Buren,73.12,57,,,-154.5,,,,
 1,90,Masters 40-44,M,B,Single-ply,Patrick Harrity,86,44,,,145,,,,145
 2,90,Masters 40-44,M,B,Single-ply,Jose Hernandez,86.82,41,,,142.5,,,,142.5
 DQ,90,Masters 40-44,M,B,Single-ply,Bruce Mendoza,87.63,41,,,-242,,,,
-1,90,Masters 55-59,M,B,Single-ply,Rudy Lozano,83.46,69,,,175,182.5,,,175
-2,90,Masters 55-59,M,B,Single-ply,Steve Bloom,89.18,68,,,130,,,,130
+1,90,Masters 65-69,M,B,Single-ply,Rudy Lozano,83.46,69,,,175,182.5,,,175
+2,90,Masters 65-69,M,B,Single-ply,Steve Bloom,89.18,68,,,130,,,,130
 1,90,Masters 70-74,M,B,Single-ply,William Prince,89.18,71,,,138,,,,138
 2,90,Masters 70-74,M,B,Single-ply,Harry Packer,84.91,74,,,70,,,,70
 1,100,Masters 45-49,M,B,Single-ply,Bryon Brubaker,99.88,46,,,267.5,,,,267.5
