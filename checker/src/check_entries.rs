@@ -1612,10 +1612,12 @@ fn check_division_sex_consistency(
 fn check_division_equipment_consistency(
     entry: &Entry,
     config: Option<&Config>,
+    exempt_division: bool,
     line: u64,
     report: &mut Report,
 ) {
-    if entry.division.is_empty() {
+    // Allow exemptions from division-specific checks.
+    if exempt_division || entry.division.is_empty() {
         return;
     }
 
@@ -1876,7 +1878,13 @@ where
             &mut report,
         );
         check_division_sex_consistency(&entry, config, line, &mut report);
-        check_division_equipment_consistency(&entry, config, line, &mut report);
+        check_division_equipment_consistency(
+            &entry,
+            config,
+            exempt_division,
+            line,
+            &mut report,
+        );
     }
 
     Ok(report)
