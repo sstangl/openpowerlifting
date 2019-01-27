@@ -55,7 +55,7 @@ def getmeetinfo(soup):
     elif fed in ['UPF']:
         fed = 'UkrainePF'
     elif fed == 'ROP':
-    	fed = 'RPU'
+        fed = 'RPU'
 
     # Get the location.
     venuerow = fedrow.find_next_sibling()
