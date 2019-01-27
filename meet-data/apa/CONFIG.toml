@@ -41,6 +41,9 @@
     teen1819 = {name ="Teen 18-19",min=18,max=19} #Teen 3
     juniors2023 = {name ="Juniors 20-23",min=19.5,max=23}
     novice = {name ="Novice",min=0,max=999}
+    
+
+    masters = {name ="Masters",min=40,max=999}
 
 
 
