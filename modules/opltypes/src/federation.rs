@@ -759,6 +759,7 @@ pub enum Federation {
     WPUF,
 
     /// World Powerlifting Union Russia
+    #[serde(rename = "WPU-RUS")]
     #[strum(to_string = "WPU-RUS", serialize = "wpu-rus")]
     WPURUS,
 
