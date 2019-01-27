@@ -758,6 +758,10 @@ pub enum Federation {
     #[strum(to_string = "WPUF", serialize = "wpuf")]
     WPUF,
 
+    /// World Powerlifting Union Russia
+    #[strum(to_string = "WPU-RUS", serialize = "wpu-rus")]
+    WPURUS,
+
     /// World Natural Powerlifting Federation.
     #[strum(to_string = "WNPF", serialize = "wnpf")]
     WNPF,
@@ -990,6 +994,7 @@ impl Federation {
             Federation::WPF => false,
             Federation::WPU => false,
             Federation::WPUF => false,
+            Federation::WPURUS => false,
             Federation::WRPF => false,
             Federation::WRPFAUS => false,
             Federation::WRPFCAN => false,
@@ -1181,6 +1186,7 @@ impl Federation {
             Federation::WPF => None,
             Federation::WPU => None,
             Federation::WPUF => Some(Country::Ukraine),
+            Federation::WPURUS => Some(Country::Russia),
             Federation::WNPF => Some(Country::USA),
             Federation::WRPF => Some(Country::Russia),
             Federation::WRPFAUS => Some(Country::Australia),
@@ -1385,6 +1391,7 @@ impl Federation {
             Federation::WPF => PointsSystem::Wilks,
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,
+            Federation::WPURUS => PointsSystem::Wilks,
             Federation::WNPF => PointsSystem::Wilks,
             Federation::WRPF => PointsSystem::Wilks,
             Federation::WRPFAUS => PointsSystem::Wilks,

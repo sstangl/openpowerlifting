@@ -54,6 +54,8 @@ def getmeetinfo(soup):
         fed = 'FPR'
     elif fed in ['UPF']:
         fed = 'UkrainePF'
+    elif fed == 'ROP':
+    	fed = 'RPU'
 
     # Get the location.
     venuerow = fedrow.find_next_sibling()
@@ -519,12 +521,18 @@ def parse_sheetname(csv):
             if 'pl' in row[sn_idx]:
                 row[event_idx] = 'SBD'
                 row[sn_idx] = row[sn_idx].replace('pl', '')
+            elif 'squat' in row[sn_idx]:
+                row[event_idx] = 'S'
+                row[sn_idx] = row[sn_idx].replace('squat', '')
             elif 'bp' in row[sn_idx]:
                 row[event_idx] = 'B'
                 row[sn_idx] = row[sn_idx].replace('bp', '')
             elif 'dl' in row[sn_idx]:
                 row[event_idx] = 'D'
                 row[sn_idx] = row[sn_idx].replace('dl', '')
+            elif 'pp' in row[sn_idx]:
+                row[event_idx] = 'BD'
+                row[sn_idx] = row[sn_idx].replace('pp', '')
             row[sn_idx] = row[sn_idx].strip().replace('  ', ' ')
     return csv
 
