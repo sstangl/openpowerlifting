@@ -324,6 +324,10 @@ pub enum Federation {
     #[strum(to_string = "GPF", serialize = "gpf")]
     GPF,
 
+    /// Global Powerlifting Union, Ukrainian GPC affiliate.
+    #[strum(to_string = "GlobalPU", serialize = "globalpu")]
+    GlobalPU,
+
     /// German Powerlifting Union, WPU.
     #[strum(to_string = "GPU", serialize = "gpu")]
     GPU,
@@ -613,6 +617,10 @@ pub enum Federation {
     #[strum(to_string = "THSPA", serialize = "thspa")]
     THSPA,
 
+    /// Ukrainian Drug-Free Powerlifting Federation
+    #[strum(to_string = "UDFPF", serialize = "udfpf")]
+    UDFPF,
+
     /// Ukraine Powerlifting Association.
     #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
     UkrainePA,
@@ -887,6 +895,7 @@ impl Federation {
             Federation::GPCNZ => false,
             Federation::GPCRUS => false,
             Federation::GPF => false,
+            Federation::GlobalPU => false,
             Federation::GPU => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
@@ -960,6 +969,7 @@ impl Federation {
             Federation::SVNL => true,
             Federation::ThaiPF => true,
             Federation::THSPA => true,
+            Federation::UDFPF => true,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
             Federation::UPA => false,
@@ -1081,6 +1091,7 @@ impl Federation {
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPF => None,
+            Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPU => Some(Country::Germany),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
@@ -1153,6 +1164,7 @@ impl Federation {
             Federation::SVNL => Some(Country::Finland),
             Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
+            Federation::UDFPF => Some(Country::Ukraine),
             Federation::UkrainePA => Some(Country::Ukraine),
             Federation::UkrainePO => Some(Country::Ukraine),
             Federation::UPA => Some(Country::USA),
@@ -1286,6 +1298,7 @@ impl Federation {
             Federation::GPCNZ => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
+            Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPU => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
@@ -1358,6 +1371,7 @@ impl Federation {
             Federation::SVNL => Federation::ipf_rules_on(date),
             Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
+            Federation::UDFPF => PointsSystem::Wilks,
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
             Federation::UPA => PointsSystem::Wilks,

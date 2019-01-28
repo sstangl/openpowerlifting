@@ -367,7 +367,7 @@ def expand_fourths(csv, bestlift, lift4):
             row[lift4idx] = row[lift4idx].replace(')', '').strip()
 
 
-def fixplace(csv):
+def fix_place(csv):
     placeidx = csv.index('Place')
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
@@ -380,7 +380,7 @@ def fixplace(csv):
             row[totalidx] = ''  # Instead of a zero.
 
 
-def fixtotals(csv):
+def fix_totals(csv):
     if 'TotalKg' not in csv.fieldnames:
         csv.insert_column(len(csv.fieldnames), 'TotalKg')
 
@@ -411,6 +411,10 @@ def unreverse_names(csv):
         row[nameidx] = re.sub(r'\(.*?\)', '', row[nameidx]).strip()
         row[cyrillicnameidx] = re.sub(
             r'\(.*?\)', '', row[cyrillicnameidx]).strip()
+
+        # Remove nicknames
+        row[nameidx] = re.sub('".*?"', '', row[nameidx])
+        row[nameidx] = row[nameidx].replace('  ', ' ').strip()
 
         parts = row[nameidx].split()
         if len(parts) > 1:
@@ -470,7 +474,8 @@ def fix_cyrillic_names(csv):
         for row in csv.rows:
             row[cyridx] = row[cyridx].replace('e', 'е').replace(
                 'x', 'х').replace('o', 'о').replace('T', 'Т').replace('i', 'і').replace(
-                    'O', 'О').replace('E', 'Е').replace('M', 'М').replace('I', 'І')
+                    'O', 'О').replace('E', 'Е').replace('M', 'М').replace(
+                    'I', 'І').replace('c', 'с')
 
 # Replace random Unicode characters that AllPowerlifting uses with ASCII alternatives
 
@@ -480,7 +485,25 @@ def fix_latin_names(csv):
         nameidx = csv.index('Name')
         for row in csv.rows:
             row[nameidx] = row[nameidx].replace('і', 'i').replace(
-                'О', 'O').replace('у', 'y').replace('о', 'o').replace('а', 'a')
+                'О', 'O').replace('у', 'y').replace('о', 'o').replace(
+                'а', 'a').replace('г', 'r')
+
+# Use our form of the country names
+
+
+def fix_countries(csv):
+    if 'Country' in csv.fieldnames:
+        countryidx = csv.index('Country')
+        for row in csv.rows:
+            country = row[countryidx]
+            new_country = country
+            if country == 'Slovak Republic':
+                new_country = 'Slovakia'
+            elif country == 'Czech Republic':
+                new_country = 'Czechia'
+            elif country == 'Tadjikistan':
+                new_country = 'Tajikistan'
+            row[countryidx] = new_country
 
 
 def remove_empty_cols_ignore_fieldname(csv):
@@ -596,8 +619,10 @@ def main(url):
     if 'Wilks' in entriescsv.fieldnames:
         entriescsv.remove_column_by_name('Wilks')
 
-    fixtotals(entriescsv)
-    fixplace(entriescsv)
+    fix_totals(entriescsv)
+    fix_place(entriescsv)
+
+    fix_countries(entriescsv)
 
     # Remove all the columns named 'IGNORE'
     while 'IGNORE' in entriescsv.fieldnames:

@@ -26,6 +26,7 @@ pub enum Country {
     #[serde(rename = "Bosnia and Herzegovina")]
     #[strum(to_string = "Bosnia and Herzegovina")]
     BosniaAndHerzegovina,
+    Botswana,
     Brazil,
     #[serde(rename = "British Virgin Islands")]
     #[strum(to_string = "British Virgin Islands")]

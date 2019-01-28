@@ -1,0 +1,32 @@
+[divisions]
+    o = {name="O", min=14, max=999}
+    t1 = {name="T1", min=14, max=15}
+    t2 = {name="T2", min=16, max=17}
+    t3 = {name="T3", min=18, max=19}
+    j = {name="J", min=20, max=23}
+    m1 = {name="M1", min=40, max=44}
+    m2 = {name="M2", min=45, max=49}
+    m3 = {name="M3", min=50, max=54}
+    m4 = {name="M4", min=55, max=59}
+    m5 = {name="M5", min=60, max=64}
+    m6 = {name="M6", min=65, max=69}
+    m7 = {name="M7", min=70, max=74}
+    m8 = {name="M8", min=75, max=79}
+    m9 = {name="M9", min=80, max=84}
+    m10 = {name="M10", min=85, max=89}
+    m11 = {name="M11", min=90, max=94}
+    m12 = {name="M12", min=95, max=99}
+
+    pfm = {name="PFM", min=14, max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
