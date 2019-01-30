@@ -207,6 +207,10 @@ pub enum Federation {
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
+    /// Crimean Republic Powerlifting and Extreme Bench Press Association 
+    #[strum(to_string = "CRPEBA", serialize = "crpeba")]
+    CRPEBA,
+
     /// Unaffiliated meets held in Croatia.
     #[serde(rename = "Croatia-UA")]
     #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
@@ -871,6 +875,7 @@ impl Federation {
             Federation::CPL => false,
             Federation::CPO => false,
             Federation::CPU => true,
+            Federation::CRPEBA => false,
             Federation::CSST => true,
             Federation::DSF => true,
             Federation::EPA => true,
@@ -1066,6 +1071,8 @@ impl Federation {
             Federation::CPL => Some(Country::Canada),
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
+            //Initially Ukraine,until annexation
+            Federation::CRPEBA => Some(Country::Russia),
             Federation::CSST => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
@@ -1273,6 +1280,7 @@ impl Federation {
             Federation::CPL => PointsSystem::Wilks,
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => Federation::ipf_rules_on(date),
+            Federation::CRPEBA => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
             Federation::EPA => Federation::ipf_rules_on(date),

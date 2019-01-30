@@ -27,7 +27,7 @@ def internal_to_kg_string(s):
 
 
 def to_kg(s):
-    if s[-1] is '+':
+    if s[-1] == '+':
         amount = internal_to_kg_string(s[:-1])
         # Handle an error where the importer thought the weightclass was KG
         # and converted 'SHW' to a number in Kg.
