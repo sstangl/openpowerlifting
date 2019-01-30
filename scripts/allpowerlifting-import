@@ -486,7 +486,7 @@ def fix_latin_names(csv):
         for row in csv.rows:
             row[nameidx] = row[nameidx].replace('і', 'i').replace(
                 'О', 'O').replace('у', 'y').replace('о', 'o').replace(
-                'а', 'a').replace('г', 'r')
+                'а', 'a').replace('г', 'r').replace('с', 'c')
 
 # Use our form of the country names
 

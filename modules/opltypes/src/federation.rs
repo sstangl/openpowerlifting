@@ -268,10 +268,6 @@ pub enum Federation {
     #[strum(to_string = "FPR", serialize = "fpr")]
     FPR,
 
-    /// Russian stand-alone competition.
-    #[strum(to_string = "GoldenDouble", serialize = "goldendouble")]
-    GoldenDouble,
-
     /// Global Powerlifting Association.
     #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
@@ -564,6 +560,11 @@ pub enum Federation {
     /// Raw Unity.
     #[strum(to_string = "RUPC", serialize = "rupc")]
     RUPC,
+
+    /// Unaffiliated meets held in Russia.
+    #[serde(rename = "Russia-UA")]
+    #[strum(to_string = "Russia-UA", serialize = "russia-ua")]
+    RussiaUA,
 
     /// Slovenská asociásia silového trojboja, Slovakian GPC Affiliate.
     #[strum(to_string = "SAST", serialize = "sast")]
@@ -884,7 +885,6 @@ impl Federation {
             Federation::FFForce => true,
             Federation::FPO => false,
             Federation::FPR => true,
-            Federation::GoldenDouble => false,
             Federation::GPA => false,
             Federation::GPACRO => false,
             Federation::GPC => false,
@@ -956,6 +956,7 @@ impl Federation {
             Federation::RPS => false,
             Federation::RPU => false,
             Federation::RUPC => false,
+            Federation::RussiaUA => false,
             Federation::SAST => false,
             Federation::ScottishPL => true,
             Federation::SCI => false,
@@ -1079,7 +1080,6 @@ impl Federation {
             Federation::FFForce => Some(Country::France),
             Federation::FPO => Some(Country::Finland),
             Federation::FPR => Some(Country::Russia),
-            Federation::GoldenDouble => Some(Country::Russia),
             Federation::GPA => None,
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPC => None,
@@ -1151,6 +1151,7 @@ impl Federation {
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
+            Federation::RussiaUA => Some(Country::Russia),
             Federation::SAST => Some(Country::Slovakia),
             Federation::ScottishPL => Some(Country::Scotland),
             Federation::SCI => Some(Country::USA),
@@ -1286,7 +1287,6 @@ impl Federation {
             Federation::FFForce => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPR => Federation::ipf_rules_on(date),
-            Federation::GoldenDouble => PointsSystem::Wilks,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Glossbrenner,
@@ -1358,6 +1358,7 @@ impl Federation {
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
+            Federation::RussiaUA => PointsSystem::Wilks,
             Federation::SAST => PointsSystem::Glossbrenner,
             Federation::ScottishPL => Federation::ipf_rules_on(date),
             Federation::SCI => PointsSystem::Wilks,
