@@ -310,7 +310,7 @@ def getpagedata(soup):
     # These columns are added from the category rows.
     csv.fieldnames += ['WeightClassKg', 'Sex']
 
-    wcstate = None
+    wcstate = ''
 
     # If unspecified assume male and fix later
     sexstate = 'M'
@@ -331,7 +331,6 @@ def getpagedata(soup):
                 if '+' in wcstate:
                     wcstate = wcstate.replace('+', '')+'+'
         else:
-            assert wcstate
 
             row = []
             for td in tr.find_all('td'):
