@@ -106,10 +106,6 @@ pub enum Federation {
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
 
-    /// Series of Raw meets hosted by the Atlantis company.
-    #[strum(to_string = "Atlantis", serialize = "atlantis")]
-    Atlantis,
-
     /// Australian Drug-Free Powerlifting Federation, WDFPF.
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
@@ -357,10 +353,6 @@ pub enum Federation {
     #[strum(to_string = "HTPL", serialize = "htpl")]
     HTPL,
 
-    /// Hybrid Performance Method, Stefi Cohen's gym.
-    #[strum(to_string = "HybridPM", serialize = "hybridpm")]
-    HybridPM,
-
     /// International Blind Sport Assocation.
     #[strum(to_string = "IBSA", serialize = "ibsa")]
     IBSA,
@@ -461,10 +453,6 @@ pub enum Federation {
     /// Nordic Powerlifting Federation, IPF.
     #[strum(to_string = "NordicPF", serialize = "nordicpf")]
     NordicPF,
-
-    /// Night of the Living Deadlift.
-    #[strum(to_string = "NOTLD", serialize = "notld")]
-    NOTLD,
 
     /// National Powerlifting Association of Israel.
     #[strum(to_string = "NPA", serialize = "npa")]
@@ -645,6 +633,11 @@ pub enum Federation {
     /// Ukrainian Powerlifting Federation, IPF.
     #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
     UkrainePF,
+
+    /// Unaffiliated meets held in the USA.
+    #[serde(rename = "USA-UA")]
+    #[strum(to_string = "USA-UA", serialize = "usa-ua")]
+    USAUA,
 
     /// USA Powerlifting, IPF.
     #[strum(to_string = "USAPL", serialize = "usapl")]
@@ -858,7 +851,6 @@ impl Federation {
             Federation::APF => false,
             Federation::APU => true,
             Federation::AsianPF => true,
-            Federation::Atlantis => false,
             Federation::AusDFPF => true,
             Federation::AusPL => false,
             Federation::BAWLA => true,
@@ -917,7 +909,6 @@ impl Federation {
             Federation::HPLSUA => false,
             Federation::HPO => false,
             Federation::HTPL => true,
-            Federation::HybridPM => false,
             Federation::IBSA => true,
             Federation::IDFPA => true,
             Federation::IDFPF => true,
@@ -944,7 +935,6 @@ impl Federation {
             Federation::NIPF => true,
             Federation::NORCAL => true,
             Federation::NordicPF => true,
-            Federation::NOTLD => false,
             Federation::NPA => false,
             Federation::NPB => true,
             Federation::NSF => true,
@@ -989,6 +979,7 @@ impl Federation {
             Federation::UPA => false,
             Federation::UPC => false,
             Federation::UkrainePF => true,
+            Federation::USAUA => false,
             Federation::USAPL => true,
             Federation::USMilAbroad => false,
             Federation::USPS => false,
@@ -1056,7 +1047,6 @@ impl Federation {
             Federation::APF => Some(Country::USA),
             Federation::APU => Some(Country::Australia),
             Federation::AsianPF => None,
-            Federation::Atlantis => Some(Country::USA),
             Federation::AusDFPF => Some(Country::Australia),
             Federation::AusPL => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
@@ -1117,7 +1107,6 @@ impl Federation {
             Federation::HPLSUA => Some(Country::Croatia),
             Federation::HPO => Some(Country::Croatia),
             Federation::HTPL => Some(Country::China),
-            Federation::HybridPM => Some(Country::USA),
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
@@ -1143,7 +1132,6 @@ impl Federation {
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
-            Federation::NOTLD => Some(Country::USA),
             Federation::NPA => Some(Country::Israel),
             Federation::NPB => Some(Country::Netherlands),
             Federation::NSF => Some(Country::Norway),
@@ -1188,6 +1176,7 @@ impl Federation {
             Federation::UPA => Some(Country::USA),
             Federation::UPC => Some(Country::Ukraine),
             Federation::UkrainePF => Some(Country::Ukraine),
+            Federation::USAUA => Some(Country::USA),
             Federation::USAPL => Some(Country::USA),
             Federation::USMilAbroad => Some(Country::USA),
             Federation::USPS => Some(Country::Serbia),
@@ -1267,7 +1256,6 @@ impl Federation {
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APU => PointsSystem::Wilks,
             Federation::AsianPF => Federation::ipf_rules_on(date),
-            Federation::Atlantis => PointsSystem::Wilks,
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
@@ -1327,7 +1315,6 @@ impl Federation {
             Federation::HPLSUA => PointsSystem::Wilks,
             Federation::HPO => PointsSystem::Wilks,
             Federation::HTPL => PointsSystem::Wilks,
-            Federation::HybridPM => PointsSystem::Wilks,
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::Wilks,
@@ -1353,7 +1340,6 @@ impl Federation {
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
-            Federation::NOTLD => PointsSystem::Wilks,
             Federation::NPA => PointsSystem::Wilks,
             Federation::NPB => PointsSystem::Wilks,
             Federation::NSF => Federation::ipf_rules_on(date),
@@ -1398,6 +1384,7 @@ impl Federation {
             Federation::UPA => PointsSystem::Wilks,
             Federation::UPC => PointsSystem::Wilks,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
+            Federation::USAUA => PointsSystem::Wilks,
             Federation::USAPL => Federation::ipf_rules_on(date),
             Federation::USMilAbroad => PointsSystem::Wilks,
             Federation::USPS => PointsSystem::Wilks,
