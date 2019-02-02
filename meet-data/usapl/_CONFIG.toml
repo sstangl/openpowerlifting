@@ -189,52 +189,81 @@
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.default_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "F"
 
 [weightclasses.junior_M]
     classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "M"
     divisions = [
         "MR-T", "MR-T1", "MR-T2", "MR-T3", "MR-TJ", "MR-Jr",
-        "M-T", "M-T1", "M-T2", "M-T3", "M-TJ", "M-Jr"
+        "M-T", "M-T1", "M-T2", "M-T3", "M-TJ", "M-Jr",
+	"MR-JV", "M-JV", "MR-V", "M-V", "MR-HS", "M-HS", "MR-C", "M-C"
     ]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "F"
     divisions = [
         "FR-T", "FR-T1", "FR-T2", "FR-T3", "FR-TJ", "FR-Jr",
-        "F-T", "F-T1", "F-T2", "F-T3", "F-TJ", "F-Jr"
+        "F-T", "F-T1", "F-T2", "F-T3", "F-TJ", "F-Jr",
+	"FR-JV", "F-JV", "FR-V", "F-V", "FR-HS", "F-HS", "FR-C", "F-C"
     ]
 
 [weightclasses.youth_M]
     classes = ["30","35","40","44","48","53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "M"
     divisions = ["MR-Y", "MR-Y1", "MR-Y2", "MR-Y3", "M-Y", "M-Y1", "M-Y2", "M-Y3"]
 
 [weightclasses.youth_F]
     classes = ["30","35","40","43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","9999-01-01"]
     sex = "F"
     divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
-    date_range = ["0000-01-01","2010-12-31"]
+    date_range = ["0000-01-01","2014-12-31"]
     sex = "M"
 
 [weightclasses.old_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-01-01","2010-12-31"]
+    date_range = ["0000-01-01","2014-12-31"]
     sex = "F"
 
 [exemptions]
+    # 2012 IPF Weight Classes (not widely adopted until 2015).
+    2012-08-03 = ["ExemptWeightClassConsistency"]
+
+    # 2014 IPF Weight Classes (not widely adopted until 2015).
+    AZ-2014-01 = ["ExemptWeightClassConsistency"]
+    NS-2014-01 = ["ExemptWeightClassConsistency"]
+    NS-2014-05 = ["ExemptWeightClassConsistency"]
+    NS-2014-09 = ["ExemptWeightClassConsistency"]
+    USAPL-2014-01 = ["ExemptWeightClassConsistency"]
+
+    # 2016 Traditional Weight Classes.
+    IA-2016-01 = ["ExemptWeightClassConsistency"]
+    LA-2016-03 = ["ExemptWeightClassConsistency"]
+    NS-2016-02 = ["ExemptWeightClassConsistency"]
+    PA-2016-10 = ["ExemptWeightClassConsistency"]
+    WI-2016-03 = ["ExemptWeightClassConsistency"]
+    WI-2016-13 = ["ExemptWeightClassConsistency"]
+    WI-2016-08 = ["ExemptWeightClassConsistency"]
+
+    # 2017 Traditional Weight Classes.
+    GA-2017-01 = ["ExemptWeightClassConsistency"]
+    IA-2017-04 = ["ExemptWeightClassConsistency"]
+    LA-2017-07 = ["ExemptWeightClassConsistency"]
+    NS-2017-05 = ["ExemptWeightClassConsistency"]
+    MI-2017-07 = ["ExemptWeightClassConsistency"]
+    MN-2017-02 = ["ExemptWeightClassConsistency"]
+    SD-2017-02 = ["ExemptWeightClassConsistency"]
