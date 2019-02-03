@@ -12,7 +12,7 @@ MAXAGE_IDX = 2
 DATE_IDX = 3
 BY_IDX = 4
 BD_IDX = 5
-TOTAL_IDX = 6
+LINENUM_IDX = 6
 
 AGE_DIVISIONS = ['5-12', '13-15', '16-17', '18-19', '20-23', '24-34', '35-39',
                  '40-44', '45-49', '50-54', '55-59', '60-64', '65-69', '70-74',
@@ -56,9 +56,9 @@ def is_by_consistent(lifter_data):
             new_year = get_year(age_data[DATE_IDX])
 
             new_mindate = age_data[DATE_IDX]
-            new_minage = age_data[MINAGE_IDX]
+            new_minage = int(age_data[MINAGE_IDX])
             new_maxdate = age_data[DATE_IDX]
-            new_maxage = age_data[MAXAGE_IDX]
+            new_maxage = round(age_data[MAXAGE_IDX])
 
             if age_data[AGE_IDX] != '':
                 # Want the lower age if age is derived from birthyear
@@ -503,13 +503,12 @@ def generate_hashmap(entriescsv, meetcsv):
     ageclassidx = entriescsv.index('AgeClass')
     byidx = entriescsv.index('BirthYear')
     bdidx = entriescsv.index('BirthDate')
-    totalidx = entriescsv.index('TotalKg')
 
+    line = 0
     for row in entriescsv.rows:
         lifterID = int(row[lifterIDidx])
         age = row[ageidx]
         meetID = int(row[meetIDidx])
-        total = row[totalidx]
 
         birthyear = ''
         birthdate = ''
@@ -536,10 +535,11 @@ def generate_hashmap(entriescsv, meetcsv):
 
         if lifterID not in LifterAgeHash:
             LifterAgeHash[lifterID] = [
-                [age, minage, maxage, meetID, birthyear, birthdate, total]]
+                [age, minage, maxage, meetID, birthyear, birthdate, line]]
         else:
             LifterAgeHash[lifterID].append(
-                [age, minage, maxage, meetID, birthyear, birthdate, total])
+                [age, minage, maxage, meetID, birthyear, birthdate, line])
+        line = line+1
 
     meetIDidx = meetcsv.index('MeetID')
     dateidx = meetcsv.index('Date')
@@ -592,23 +592,22 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
     lifterIDidx = entriescsv.index('LifterID')
     ageidx = entriescsv.index('Age')
     meetIDidx = entriescsv.index('MeetID')
-    totalidx = entriescsv.index('TotalKg')
 
     if 'AgeClass' not in entriescsv.fieldnames:
         entriescsv.append_column('AgeClass')
 
     ageclassidx = entriescsv.index('AgeClass')
 
+    line = 0
     for row in entriescsv.rows:
         lifterID = row[lifterIDidx]
         meetID = row[meetIDidx]
-        total = row[totalidx]
 
         for age_data in LifterAgeHash[int(lifterID)]:
 
-            # Check the total to avoid the case of two lifters in the
+            # Check the linenum to avoid the case of two lifters in the
             # same meet sharing a name (pending disambigation)
-            if age_data[DATE_IDX] == int(meetID) and age_data[TOTAL_IDX] == total:
+            if age_data[DATE_IDX] == int(meetID) and age_data[LINENUM_IDX] == line:
                 assert age_data[AGE_IDX] == '' or float(
                     age_data[AGE_IDX]) > 3.5
 
@@ -630,6 +629,7 @@ def update_csv(entriescsv, MeetDateHash, LifterAgeHash):
                     row[ageclassidx] = str(get_ageclass(
                         age_data[MINAGE_IDX], age_data[MAXAGE_IDX]))
                 break
+        line = line+1
 
     return entriescsv
 
