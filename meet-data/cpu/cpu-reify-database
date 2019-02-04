@@ -21,6 +21,8 @@ def meethash(csv, row):
     # Sigh, patch up an error.
     if date == '-12-08':
         date = '2018-12-08'
+    if date == '-12-01':
+        date = '2018-12-01'
 
     assert len(date) == 10
 
