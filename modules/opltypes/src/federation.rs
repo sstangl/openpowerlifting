@@ -260,6 +260,10 @@ pub enum Federation {
     #[strum(to_string = "FFForce", serialize = "ffforce")]
     FFForce,
 
+    /// Florida High School Athletics Association.
+    #[strum(to_string = "FHSAA", serialize = "fhsaa")]
+    FHSAA,
+
     /// Finland Powerlifting Organization, IPA.
     #[strum(to_string = "FPO", serialize = "fpo")]
     FPO,
@@ -888,6 +892,7 @@ impl Federation {
             Federation::FEPOA => false,
             Federation::FESUPO => true,
             Federation::FFForce => true,
+            Federation::FHSAA => true,
             Federation::FPO => false,
             Federation::FPR => true,
             Federation::GPA => false,
@@ -1085,6 +1090,7 @@ impl Federation {
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
             Federation::FFForce => Some(Country::France),
+            Federation::FHSAA => Some(Country::USA),
             Federation::FPO => Some(Country::Finland),
             Federation::FPR => Some(Country::Russia),
             Federation::GPA => None,
@@ -1293,6 +1299,7 @@ impl Federation {
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
             Federation::FFForce => Federation::ipf_rules_on(date),
+            Federation::FHSAA => PointsSystem::Wilks,
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPR => Federation::ipf_rules_on(date),
             Federation::GPA => PointsSystem::Wilks,
