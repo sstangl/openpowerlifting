@@ -247,7 +247,7 @@
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
-    dateRange = ["1998-01-01","9999-01-01"]
+    dateRange = ["0000-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.default_F]
