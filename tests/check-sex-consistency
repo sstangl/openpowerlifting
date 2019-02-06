@@ -95,6 +95,10 @@ def process_file(path):
         if len(first) == 1 or (len(first) == 2 and first[-1] == '.'):
             continue
 
+        # If only a last name is given, we probably have false positives
+        if name.count(' ') == 0:
+            continue
+
         if name not in NameToSexHash:
             NameToSexHash[name] = [0, 0]
 
