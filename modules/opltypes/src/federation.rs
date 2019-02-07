@@ -751,6 +751,11 @@ pub enum Federation {
     #[strum(to_string = "WPC-RUS", serialize = "wpc-rus")]
     WPCRUS,
 
+    /// South African WPC affiliate.
+    #[serde(rename = "WPC-SA")]
+    #[strum(to_string = "WPC-SA", serialize = "wpc-sa")]
+    WPCSA,
+
     /// Ukrainian WPC affiliate.
     #[serde(rename = "WPC-UKR")]
     #[strum(to_string = "WPC-UKR", serialize = "wpc-ukr")]
@@ -1011,6 +1016,7 @@ impl Federation {
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
             Federation::WPCRUS => false,
+            Federation::WPCSA => false,
             Federation::WPCUKR => false,
             Federation::WPF => false,
             Federation::WPLeague => false,
@@ -1208,6 +1214,7 @@ impl Federation {
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),
             Federation::WPCRUS => Some(Country::Russia),
+            Federation::WPCSA => Some(Country::SouthAfrica),
             Federation::WPCUKR => Some(Country::Ukraine),
             Federation::WPF => None,
             Federation::WPLeague => Some(Country::Ukraine),
@@ -1417,6 +1424,7 @@ impl Federation {
             Federation::WPCMoldova => PointsSystem::Glossbrenner,
             Federation::WPCPortugal => PointsSystem::Glossbrenner,
             Federation::WPCRUS => PointsSystem::Glossbrenner,
+            Federation::WPCSA => PointsSystem::Glossbrenner,
             Federation::WPCUKR => PointsSystem::Glossbrenner,
             Federation::WPF => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,

@@ -260,6 +260,9 @@
   <option value="plzs" {% if selection.federation == "PLZS" %}selected{% endif %}>PLZS - Powerlifting zveza Slovenije [IPF]</option>
   <option value="wrpf-slovenia" {% if selection.federation == "WRPF-Slovenia" %}selected{% endif %}>WRPF Slovenia</option>
 </optgroup>
+<optgroup label="{{strings.country.southafrica}}">
+  <option value="wpc-sa" {% if selection.federation == "WPC-SA" %}selected{% endif %}>WPC-SA - WPC South Africa</option>
+</optgroup>
 <optgroup label="{{strings.country.spain}}">
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
 </optgroup>
