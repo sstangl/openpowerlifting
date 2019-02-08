@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="{{language}}">
 <head>
+  {# Static header parts. #}
+  <meta charset="utf-8" />
+
   {# Dynamic header parts. #}
   <title>{{page_title}}</title>
-
-  {# Static header parts. #}
-  <meta charset="utf-8">
 
   {# External sources -- these should be self-hosted eventually. #}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
