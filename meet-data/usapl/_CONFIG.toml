@@ -243,10 +243,20 @@
     # 2012 IPF Weight Classes (not widely adopted until 2015).
     2012-08-03 = ["ExemptWeightClassConsistency"]
 
+    # 2013 IPF Weight Classes (not widely adopted until 2015).
+    NS-2013-01 = ["ExemptWeightClassConsistency", "ExemptDivision"]
+    NS-2013-03 = ["ExemptWeightClassConsistency"]
+
     # 2014 IPF Weight Classes (not widely adopted until 2015).
     AZ-2014-01 = ["ExemptWeightClassConsistency"]
     NS-2014-01 = ["ExemptWeightClassConsistency"]
+    NS-2014-02 = ["ExemptWeightClassConsistency"]
+    NS-2014-03 = ["ExemptWeightClassConsistency"]
+    NS-2014-04 = ["ExemptWeightClassConsistency"]
     NS-2014-05 = ["ExemptWeightClassConsistency"]
+    NS-2014-06 = ["ExemptWeightClassConsistency"]
+    NS-2014-07 = ["ExemptWeightClassConsistency"]
+    NS-2014-08 = ["ExemptWeightClassConsistency"]
     NS-2014-09 = ["ExemptWeightClassConsistency"]
     USAPL-2014-01 = ["ExemptWeightClassConsistency"]
 
@@ -254,6 +264,7 @@
     IA-2016-01 = ["ExemptWeightClassConsistency"]
     LA-2016-03 = ["ExemptWeightClassConsistency"]
     NS-2016-02 = ["ExemptWeightClassConsistency"]
+    NS-2016-09 = ["ExemptWeightClassConsistency"]
     PA-2016-10 = ["ExemptWeightClassConsistency"]
     WI-2016-03 = ["ExemptWeightClassConsistency"]
     WI-2016-13 = ["ExemptWeightClassConsistency"]
@@ -267,3 +278,7 @@
     MI-2017-07 = ["ExemptWeightClassConsistency"]
     MN-2017-02 = ["ExemptWeightClassConsistency"]
     SD-2017-02 = ["ExemptWeightClassConsistency"]
+
+    # Miscellaneous exemptions.
+    NS-2015-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
+    NS-2018-01 = ["ExemptDivision"] # Ashton Rouska wore Wraps.
