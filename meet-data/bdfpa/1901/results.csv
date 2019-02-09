@@ -1,0 +1,32 @@
+Flight,First Name,Last Name,Gender,Body Weight (kg),Weight Class,Age Class,Squat Equipped?,Squat Single Lift?,Squat 1 Weight (kg),Squat 2 Weight (kg),Squat 3 Weight (kg),Bench Equipped?,Bench Single Lift?,Bench 1 Weight (kg),Bench 2 Weight (kg),Bench 3 Weight (kg),Deadlift Equipped?,Deadlift Single Lift?,Deadlift 1 Weight (kg),Deadlift 2 Weight (kg),Deadlift 3 Weight (kg),Total (kg),Wilks,SchwartzMalone
+Flight 1,Sarah,Givens,Female,70,70kg,Masters 1,No,No,67,70,70,No,No,50,55,57.5,No,No,120,122.5,127.5,252.5,251.2,191.8
+Flight 1,Carly,Gowland,Female,63,63kg,Open,No,No,70,75,82.5,No,No,42,47.5,50,No,No,105,112.5,120,252.5,271.17,208.49
+Flight 1,Yasmin,Harris,Female,63,63kg,Junior,No,No,75,80,85,No,No,50,55,57.5,No,No,100,115,120,262.5,281.91,216.75
+Flight 1,Claire,Napier,Female,80,80kg,Masters 2,No,No,50,60,70,No,No,45,50,52.5,No,No,80,90,100,220,201.3,151.76
+Flight 1,Amelia,O'Donnell,Female,90,90kg,Teenage 2,No,No,80,90,100,No,No,40,45,52.5,No,No,100,110,120,265,228.98,167.4
+Flight 1,Zoe,Plummer,Female,63,63kg,Masters 2,No,No,50,60,75,No,No,50,55,55,No,No,95,105,110,235,252.38,194.04
+Flight 1,Sarah,Robinson,Female,90,90kg,Masters 1,No,No,,,,No,Yes,42,45,47.5,No,Yes,70,80,90,0,0,0
+Flight 1,Susan,Sabuda,Female,63,63kg,Masters 5,No,No,45,50,55,No,No,40,45,50,No,No,80,85,90,190,204.05,156.88
+Flight 1,Emma,Templeton,Female,76,80kg,Open,No,No,95,100,105,No,No,55,60,65,No,No,115,125,135,305,287.58,217.59
+Flight 1,Emma,Wilson,Female,70,70kg,Open,No,No,90,100,105,No,No,50,50,55,No,No,130,140,140,285,283.53,216.49
+Flight 2,Ryan,Cashmore,Male,90,90kg,Open,No,No,150,160,0,No,No,120,130,140,No,No,200,200,205,500,319.2,293.05
+Flight 2,Will,Duffield,Male,82,82.5kg,Open,No,No,185,185,185,No,No,90,100,110,No,No,190,200,210,0,0,0
+Flight 2,Leonardo,Frigeni,Male,67,67.5kg,Teenage 2,No,No,110,120,130,No,No,65,70,70,No,No,140,155,165,360,279.23,262.58
+Flight 2,Jonathan ,Gregson,Male,67,67.5kg,Open,No,No,,,,No,No,,,,No,Yes,62,75,85,0,0,0
+Flight 2,Nick ,Hill,Male,82,82.5kg,Open,Yes,No,155,170,170,Yes,Yes,100,110,117.5,No,Yes,195,210,210,490,329.46,304.49
+Flight 2,Raivis,Hofs,Male,90,90kg,Open,No,No,170,185,192.5,No,No,120,130,137.5,No,No,215,220,225,547.5,349.52,320.89
+Flight 2,Alex,Innes,Male,75,75kg,Teenage 2,No,No,,,,No,Yes,90,95,97.5,No,No,,,,0,0,0
+Flight 2,Adam,Maddison,Male,90,90kg,Open,No,No,185,190,195,No,No,105,110,110,No,No,200,210,215,510,325.58,298.91
+Flight 2,Andy,Mckenzie,Male,75,75kg,Open,No,No,150,170,180,No,No,90,100,105,No,No,220,230,235,510,363.41,339.46
+Flight 2,Paul,Metcalfe,Male,100,100kg,Masters 3,No,No,,,,No,Yes,40,45,50,No,No,,,,0,0,0
+Flight 2,Richard,Taylor,Male,90,90kg,Open,No,No,170,190,200,No,No,120,130,137.5,No,No,220,230,250,550,351.12,322.36
+Flight 2,Bogdan,Tighineanu,Male,90,90kg,Masters 1,No,No,,,,No,Yes,125,130,135,No,No,,,,0,0,0
+Flight 3,Michael,Blevins,Male,110,110kg,Open,No,Yes,190,200,210,No,No,,,,No,Yes,240,260,270,0,0,0
+Flight 3,Chris,Bradburn,Male,145,145kg,Open,No,No,160,165,175,No,No,100,110,115,No,No,130,145,160,445,247.4,221.52
+Flight 3,Michael,Givens,Male,90,90kg,Masters 2,No,No,130,135,140,No,No,85,90,92.5,No,No,160,165,170,395,252.17,231.51
+Flight 3,Gary,Lovett,Male,100,100kg,Masters 2,No,No,,,,No,No,170,182.5,187.5,No,No,,,,0,0,0
+Flight 3,Andrew,Naylor,Male,125,125kg,Open,No,No,230,245,255,No,No,160,170,175,No,No,270,285,300,730,415.99,380.18
+Flight 3,Connor,O'Donnell,Male,100,100kg,Teenage 1,No,No,160,170,180,No,No,90,100,105,No,No,190,205,220,505,307.34,280.02
+Flight 3,Frank,O'Donnell,Male,145,145kg,Masters 4,No,No,180,190,200,No,No,130,140,140,No,No,250,270,280,600,333.57,298.68
+Flight 3,Harry,Regan,Male,110,110kg,Junior,No,No,200,212.5,220,No,No,110,115,122.5,No,No,260,280,295,630,370.75,337.81
+Flight 3,John ,Schmidt,Male,110,110kg,Masters 2,No,No,100,110,140,No,No,110,117.5,125,No,No,140,155,167.5,402.5,236.87,215.82
