@@ -216,21 +216,30 @@ fn main() -> Result<(), Box<Error>> {
         // Check the meet.
         match checker::check(dir.path(), config) {
             Ok(reports) => {
-                // Acquire a mutex around stdout.
-                let stdout = io::stdout();
-                let mut handle = stdout.lock();
-
-                for report in reports {
-                    // Update the error and warning counts.
+                // Count how many new errors and warnings were generated.
+                let mut local_errors = 0;
+                let mut local_warnings = 0;
+                for report in &reports {
                     let (errors, warnings) = report.count_messages();
-                    if errors > 0 {
-                        error_count.fetch_add(errors, Ordering::SeqCst);
-                    }
-                    if warnings > 0 {
-                        warning_count.fetch_add(warnings, Ordering::SeqCst);
-                    }
+                    local_errors += errors;
+                    local_warnings += warnings;
+                }
 
-                    write_report(&mut handle, report);
+                // Update the global error and warning counts.
+                if local_errors > 0 {
+                    error_count.fetch_add(local_errors, Ordering::SeqCst);
+                }
+                if local_warnings > 0 {
+                    warning_count.fetch_add(local_warnings, Ordering::SeqCst);
+                }
+
+                // Emit reports all together.
+                if local_errors > 0 || local_warnings > 0 {
+                    let stdout = io::stdout();
+                    let mut handle = stdout.lock();
+                    for report in reports {
+                        write_report(&mut handle, report);
+                    }
                 }
             }
             Err(e) => {
