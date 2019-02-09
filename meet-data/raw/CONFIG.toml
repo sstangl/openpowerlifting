@@ -58,6 +58,7 @@
     date_range = ["2013-01-01", "9999-01-01"]
     sex = "F"
 
+
 # From https://web.archive.org/web/20100331160114/http://www.rawpowerlifting.com:80/pdf/GeneralRules.pdf
 # End date is a guess -- the 2015 classes are same as the 2018 classes, though.
 [weightclasses.old_M]
@@ -77,3 +78,4 @@
     1826 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
     1829 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
     1833 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
+    1615 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
