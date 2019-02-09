@@ -15,6 +15,7 @@ pub enum State {
     InMexico(MexicoState),
     InNetherlands(NetherlandsState),
     InNewZealand(NewZealandState),
+    InRussia(RussiaState),
     InUSA(USAState),
 }
 
@@ -38,6 +39,7 @@ impl State {
             Country::Mexico => Ok(State::InMexico(s.parse::<MexicoState>()?)),
             Country::Netherlands => Ok(State::InNetherlands(s.parse::<NetherlandsState>()?)),
             Country::NewZealand => Ok(State::InNewZealand(s.parse::<NewZealandState>()?)),
+            Country::Russia => Ok(State::InRussia(s.parse::<RussiaState>()?)),
             Country::USA => Ok(State::InUSA(s.parse::<USAState>()?)),
             _ => Err(ParseError::VariantNotFound),
         }
@@ -105,6 +107,18 @@ pub enum NetherlandsState {
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
     TAS, NSN, MBH, WTC, CAN, OTA, STL
+}
+
+/// A state in Russia.
+#[rustfmt::skip]
+#[derive(Debug, EnumString, PartialEq)]
+pub enum RussiaState {
+    AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
+    SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRO, STA, ZAB, AMU, ARK,
+    AST, BEL, BRY, CHE, IRK, IVA, KGD, KLU, KEM, KIR, KOS, KGN, KRS, LEN,
+    LIP, MAG, MOS, MUR, NIZ, NGR, NVS, OMS, ORE, ORL, PNZ, PSK, ROS, RYA, 
+    SAK, SAM, SAR, SMO, SVE, TAM, TOM, TUL, TVE, TYE, TYU, ULY, VLA, VGG,
+    VLG, VOR, YAR, MOW, SPE, YEV, CHU, KHM, NEN, YAN
 }
 
 /// A state in the USA.
