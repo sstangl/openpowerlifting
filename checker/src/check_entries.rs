@@ -1360,11 +1360,36 @@ fn check_weightclass_consistency(
         .and_then(|(i, _)| Some(i));
 
     if index.is_none() {
+        // Try to make a helpful suggestion about the most likely candidate.
+        let suggestion: WeightClassKg = if entry.bodyweightkg.is_non_zero() {
+            // Find a class that matches the bodyweight.
+            matched_group
+                .classes
+                .iter()
+                .find(|w| w.matches_bodyweight(entry.bodyweightkg))
+                .map_or(WeightClassKg::None, |w| *w)
+        } else if entry.weightclasskg.is_shw() {
+            // Suggest any SHW weightclass.
+            matched_group
+                .classes
+                .iter()
+                .find(|w| w.is_shw())
+                .map_or(WeightClassKg::None, |w| *w)
+        } else {
+            // No bodyweight information is provided: look for the first weightclass
+            // that has a value above the invalid one.
+            matched_group
+                .classes
+                .iter()
+                .find(|w| *w > &entry.weightclasskg)
+                .map_or(WeightClassKg::None, |w| *w)
+        };
+
         report.error_on(
             line,
             format!(
-                "WeightClassKg '{}' not found in [weightclasses.{}]",
-                entry.weightclasskg, matched_group.name
+                "WeightClassKg '{}' not found in [weightclasses.{}], suggest '{}'",
+                entry.weightclasskg, matched_group.name, suggestion
             ),
         );
     } else if let Some(index) = index {
