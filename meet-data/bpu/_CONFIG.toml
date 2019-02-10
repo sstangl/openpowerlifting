@@ -8,8 +8,8 @@
     mm1crbpu = {name ="M_M1_CR_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
     mm1sbpu = {name ="M_M1_S_BPU",min=40,max=44,equipment="Single-ply",sex="M"}
     mm1mbpu = {name ="M_M1_M_BPU",min=40,max=44,equipment="Multi-ply",sex="M"}
-    mm2rbpu = {name ="M_M2_CR_BPU",min=45,max=49,equipment="Raw",sex="M"}
-    mm2crbpu = {name ="M_M2_R_BPU",min=45,max=49,equipment=["Raw","Wraps"],sex="M"}
+    mm2rbpu = {name ="M_M2_R_BPU",min=45,max=49,equipment="Raw",sex="M"}
+    mm2crbpu = {name ="M_M2_CR_BPU",min=45,max=49,equipment=["Raw","Wraps"],sex="M"}
     mm2sbpu = {name ="M_M2_S_BPU",min=45,max=49,equipment="Single-ply",sex="M"}
     mm2mbpu = {name ="M_M2_M_BPU",min=45,max=49,equipment="Multi-ply",sex="M"}
     mm3rbpu = {name ="M_M3_R_BPU",min=50,max=54,equipment="Raw",sex="M"}
@@ -17,7 +17,7 @@
     mm3sbpu = {name ="M_M3_S_BPU",min=50,max=54,equipment="Single-ply",sex="M"}
     mm3mbpu = {name ="M_M3_M_BPU",min=50,max=54,equipment="Multi-ply",sex="M"}
     mm4rbpu = {name ="M_M4_R_BPU",min=55,max=59,equipment="Raw",sex="M"}
-    mm4crbpu = {name ="M_M4_R_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
+    mm4crbpu = {name ="M_M4_CR_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
     mm4sbpu = {name ="M_M4_S_BPU",min=55,max=59,equipment="Single-ply",sex="M"}
     mm4mbpu = {name ="M_M4_M_BPU",min=55,max=59,equipment="Multi-ply",sex="M"}
     mm5rbpu = {name ="M_M5_R_BPU",min=60,max=64,equipment="Raw",sex="M"}
@@ -117,7 +117,7 @@
     fjcrbpu = {name ="F_J_CR_BPU",min=20,max=23,equipment=["Raw","Wraps"],sex="F"}
     fjsbpu = {name ="F_J_S_BPU",min=20,max=23,equipment="Single-ply",sex="F"}
     fjmbpu = {name ="F_J_M_BPU",min=20,max=23,equipment="Multi-ply",sex="F"}
-    fsrbpu = {name ="F_S_R_BPU",min=33,max=23,equipment="Raw",sex="F"}
+    fsrbpu = {name ="F_S_R_BPU",min=33,max=39,equipment="Raw",sex="F"}
     fscrbpu = {name ="F_S_CR_BPU",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fssbpu = {name ="F_S_S_BPU",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmbpu = {name ="F_S_M_BPU",min=33,max=39,equipment="Multi-ply",sex="F"}
@@ -240,7 +240,7 @@
     fjcrabpu = {name ="F_J_CR_ABPU",min=20,max=23,equipment=["Raw","Wraps"],sex="F"}
     fjsabpu = {name ="F_J_S_ABPU",min=20,max=23,equipment="Single-ply",sex="F"}
     fjmabpu = {name ="F_J_M_ABPU",min=20,max=23,equipment="Multi-ply",sex="F"}
-    fsrabpu = {name ="F_S_R_ABPU",min=33,max=23,equipment="Raw",sex="F"}
+    fsrabpu = {name ="F_S_R_ABPU",min=33,max=39,equipment="Raw",sex="F"}
     fscrabpu = {name ="F_S_CR_ABPU",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fssabpu = {name ="F_S_S_ABPU",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmabpu = {name ="F_S_M_ABPU",min=33,max=39,equipment="Multi-ply",sex="F"}
