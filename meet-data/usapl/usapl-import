@@ -111,14 +111,14 @@ def parsedivision(div):
     s = s.replace('Collegiate', 'C')
     s = s.replace('Special Olympian', 'SO')
     s = s.replace('Open', 'O')
-    s = s.replace('Junior', 'JR')
+    s = s.replace('Junior', 'Jr')
     s = s.replace('Youth', 'Y')
     s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military Open', 'MO')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
-    s = s.replace('Female-', '')
-    s = s.replace('Male-', '')
+    s = s.replace('Female-', 'F')
+    s = s.replace('Male-', 'M')
     s = s.replace('GuestLifter', 'G')
     s = s.replace('Varsity', 'V')
     if len(s) > 6:
@@ -360,6 +360,19 @@ def infersex(csv):
             row[sexidx] = 'F'
 
 
+def fixupdivisions(csv):
+    dividx = csv.index("Division")
+    sexidx = csv.index("Sex")
+
+    # Add sex information to the division.
+    for row in csv.rows:
+        div = row[dividx]
+        if not div.startswith('M') and not div.startswith('F'):
+            div = row[sexidx] + "-" + div
+            div = div.replace('-R', 'R')
+            row[dividx] = div
+
+
 def inferequipment(csv):
     dividx = csv.index("Division")
     eqpidx = csv.index("Equipment")
@@ -450,6 +463,7 @@ def main(url):
     makebestcolumns(entriescsv)
     markdqs(entriescsv)
     infersex(entriescsv)
+    fixupdivisions(entriescsv)
     inferequipment(entriescsv)
     markdrugtest(entriescsv)
 
