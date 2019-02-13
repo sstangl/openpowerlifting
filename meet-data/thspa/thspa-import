@@ -178,9 +178,9 @@ def enterdivision(csv, divurl):
                 error("Don't know how to split name: %s" % name)
 
             # Sometimes only the first name is all-caps, for no good reason.
-            if len(last) >= 3 and last.isupper():
+            if len(last) >= 3 and (last.isupper() or last.islower()):
                 last = last.title()
-            if len(first) >= 3 and first.isupper():
+            if len(first) >= 3 and (first.isupper() or first.islower()):
                 first = first.title()
 
             name = first + ' ' + last + jr
@@ -195,7 +195,7 @@ def enterdivision(csv, divurl):
         team = cells[4].text.strip()
 
         # Sixth column is BodyweightLBS, needs conversion to Kg.
-        bw = strtokg(cells[5].text)
+        bw = strtokg(cells[5].text.replace('999', ''))
 
         # 7-10 columns are Squat,Bench,Deadlift,Total, need conversion to Kg.
         squat = strtokg(cells[6].text)
@@ -235,6 +235,30 @@ def removeemptycolumns(csv):
             csv.remove_column_by_index(i)
 
 
+# Some meets DQ people for bombing but still list a total, others allow lifters who bomb
+# and event to place.
+def fix_dqs(csv):
+    totalidx = csv.index('TotalKg')
+    placeidx = csv.index('Place')
+    eventidx = csv.index('Event')
+    bsqidx = csv.index('Best3SquatKg')
+    bbpidx = csv.index('Best3BenchKg')
+    bdlidx = csv.index('Best3DeadliftKg')
+
+    for row in csv.rows:
+        if row[placeidx] == 'DQ':
+            row[totalidx] = ''
+        else:
+            event = ''
+            if row[bsqidx] != '':
+                event += 'S'
+            if row[bbpidx] != '':
+                event += 'B'
+            if row[bdlidx] != '':
+                event += 'D'
+        row[eventidx] = event
+
+
 def makemeetcsv(soup):
     heading = soup.find('span', {'id': 'lblHeading'}).text
     heading = heading.replace(',', ' ')
@@ -263,6 +287,16 @@ def makemeetcsv(soup):
     location = location.replace(' Tx', '')
     location = location.replace(' HS', '')
     location = location.replace('High School', '').strip()
+
+    meetname = meetname.replace('#', '')
+    meetname = meetname.replace('2019', '')
+    meetname = meetname.replace('2018', '')
+    meetname = meetname.replace('2017', '')
+    meetname = meetname.replace('2016', '')
+    meetname = meetname.replace('2015', '')
+    meetname = meetname.replace('2014', '').strip()
+
+    location = location.replace('  ', ' ')
 
     csv = Csv()
     csv.append_column('Federation')
@@ -293,6 +327,8 @@ def main(url):
         enterdivision(entriescsv, divurl)
 
     removeemptycolumns(entriescsv)
+
+    fix_dqs(entriescsv)
 
     meetcsv = makemeetcsv(soup)
 
