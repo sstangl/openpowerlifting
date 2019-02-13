@@ -117,13 +117,17 @@ def parsedivision(div):
     s = s.replace('Military Open', 'MO')
     s = s.replace('Military', 'ML')
     s = s.replace(' ', '')
-    s = s.replace('Female-', 'F')
-    s = s.replace('Male-', 'M')
+    s = s.replace('Female-', 'F-')
+    s = s.replace('Male-', 'M-')
     s = s.replace('GuestLifter', 'G')
     s = s.replace('Varsity', 'V')
+
+    # Fix Some common mistakes that crop up.
+    s = s.replace('SJr', 'SJ')
+    s = s.replace('-R', 'R')
+
     if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div, s))
-
     return (s, eq)
 
 
