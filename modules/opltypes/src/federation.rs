@@ -130,6 +130,10 @@ pub enum Federation {
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
 
+    // Belarus Powerlifting Federation, IPF.
+    #[strum(to_string = "BelPF", serialize = "belpf")]
+    BelPF,
+
     /// Bench America, short lived Bench invitiational meet.
     #[strum(to_string = "BenchAmerica", serialize = "benchamerica")]
     BenchAmerica,
@@ -232,6 +236,10 @@ pub enum Federation {
     #[strum(to_string = "ESDT", serialize = "esdt")]
     ESDT,
 
+    /// Federation Bench Press Double-event, Russian fed.
+    #[strum(to_string = "FBPD", serialize = "fbpd")]
+    FBPD,
+    
     /// Federación Argentina de Levantamiento de Potencia, IPF.
     #[strum(to_string = "FALPO", serialize = "falpo")]
     FALPO,
@@ -814,6 +822,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Ireland", serialize = "wrpf-ireland")]
     WRPFIreland,
 
+    /// Polish WRPF affiliate.
+    #[serde(rename = "WRPF-POL")]
+    #[strum(to_string = "WRPF-POL", serialize = "wrpf-pol")]
+    WRPFPOL,
+
     /// Slovenian WRPF affiliate.
     #[serde(rename = "WRPF-Slovenia")]
     #[strum(to_string = "WRPF-Slovenia", serialize = "wrpf-slovenia")]
@@ -866,6 +879,7 @@ impl Federation {
             Federation::BB => false,
             Federation::BBDD => false,
             Federation::BDFPA => true,
+            Federation::BelPF => true,
             Federation::BenchAmerica => false,
             Federation::BP => true,
             Federation::BPC => false,
@@ -891,6 +905,7 @@ impl Federation {
             Federation::EPF => true,
             Federation::ESDT => false,
             Federation::FALPO => true,
+            Federation::FBPD => false,
             Federation::FCA => false,
             Federation::FCST => false,
             Federation::FEMEPO => true,
@@ -1029,6 +1044,7 @@ impl Federation {
             Federation::WRPFCAN => false,
             Federation::WRPFIceland => false,
             Federation::WRPFIreland => false,
+            Federation::WRPFPOL => false,
             Federation::WRPFSlovenia => false,
             Federation::WRPFSRB => false,
             Federation::WUAP => false,
@@ -1064,6 +1080,7 @@ impl Federation {
             Federation::BB => Some(Country::Russia),
             Federation::BBDD => Some(Country::USA),
             Federation::BDFPA => Some(Country::UK),
+            Federation::BelPF => Some(Country::Belarus),
             Federation::BenchAmerica => Some(Country::USA),
             Federation::BP => Some(Country::UK),
             Federation::BPC => Some(Country::UK),
@@ -1090,6 +1107,7 @@ impl Federation {
             Federation::EPF => None,
             Federation::ESDT => Some(Country::Greece),
             Federation::FALPO => Some(Country::Argentina),
+            Federation::FBPD => Some(Country::Russia),
             Federation::FCA => Some(Country::USA),
             Federation::FCST => Some(Country::Czechia),
             Federation::FEMEPO => Some(Country::Mexico),
@@ -1228,6 +1246,7 @@ impl Federation {
             Federation::WRPFCAN => Some(Country::Canada),
             Federation::WRPFIceland => Some(Country::Iceland),
             Federation::WRPFIreland => Some(Country::Ireland),
+            Federation::WRPFPOL => Some(Country::Poland),
             Federation::WRPFSlovenia => Some(Country::Slovenia),
             Federation::WRPFSRB => Some(Country::Serbia),
             Federation::WUAP => None,
@@ -1275,6 +1294,7 @@ impl Federation {
             Federation::BB => PointsSystem::Wilks,
             Federation::BBDD => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
+            Federation::BelPF => Federation::ipf_rules_on(date),
             Federation::BenchAmerica => PointsSystem::Wilks,
             Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
@@ -1300,6 +1320,7 @@ impl Federation {
             Federation::EPF => Federation::ipf_rules_on(date),
             Federation::ESDT => PointsSystem::Wilks,
             Federation::FALPO => Federation::ipf_rules_on(date),
+            Federation::FBPD => PointsSystem::Wilks,
             Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
             Federation::FEMEPO => Federation::ipf_rules_on(date),
@@ -1438,6 +1459,7 @@ impl Federation {
             Federation::WRPFCAN => PointsSystem::Wilks,
             Federation::WRPFIceland => PointsSystem::Wilks,
             Federation::WRPFIreland => PointsSystem::Wilks,
+            Federation::WRPFPOL => PointsSystem::Wilks,
             Federation::WRPFSlovenia => PointsSystem::Wilks,
             Federation::WRPFSRB => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,

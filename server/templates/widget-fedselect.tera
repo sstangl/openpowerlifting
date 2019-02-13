@@ -104,6 +104,9 @@
 <optgroup label="{{strings.country.austria}}">
   <option value="wuap-aut" {% if selection.federation == "WUAP-AUT" %}selected{% endif %}>WUAP-AUT - WUAP Austria [WUAP]</option>
 </optgroup>
+<optgroup label="{{strings.country.belarus}}">
+  <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF - Belarus Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpa" {% if selection.federation == "CPA" %}selected{% endif %}>CPA - Canadian Powerlifting Association [WPA]</option>
@@ -225,7 +228,9 @@
   <option value="pap" {% if selection.federation == "PAP" %}selected{% endif %}>PAP - Powerlifting Association of the Philippines [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.poland}}">
+  <option value="all-russia" {% if selection.federation == "AllPoland" %}selected{% endif %}>{{strings.selectors.fed.all_poland}}</option>
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS - Polski Związek Kulturystyki Fitness [IPF]</option>
+  <option value="wrpf-pol" {% if selection.federation == "WRPF-POL" %}selected{% endif %}>WRPF-POL - WRPF Poland</option>
 </optgroup>
 <optgroup label="{{strings.country.portugal}}">
   <option value="wpc-portugal" {% if selection.federation == "WPC-Portugal" %}selected{% endif %}>WPC Portugal</option>
@@ -233,6 +238,7 @@
 <optgroup label="{{strings.country.russia}}">
   <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>{{strings.selectors.fed.all_russia}}</option>
   <option value="bb" {% if selection.federation == "BB" %}selected{% endif %}>BB - Bogatyr Brotherhood [GPA]</option>
+  <option value="fbpd" {% if selection.federation == "FBPD" %}selected{% endif %}>FBPD - Federation Bench Press Double Event</option>
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR - Russian Powerlifting Federation [IPF]</option>
   <option value="gpc-rus" {% if selection.federation == "GPC-RUS" %}selected{% endif %}>GPC-RUS - GPC Russia [GPC]</option>
   <option value="nap" {% if selection.federation == "NAP" %}selected{% endif %}>NAP - National Association of Powerlifting [IPA]</option>
