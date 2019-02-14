@@ -286,8 +286,15 @@
     SD-2017-02 = ["ExemptWeightClassConsistency"]
     WI-2017-01 = ["ExemptWeightClassConsistency"]
     WI-2017-07 = ["ExemptWeightClassConsistency"]
+    WI-2017-17 = ["ExemptWeightClassConsistency"]
+
+    # 2018 Traditional Weight Classes.
+    WI-2018-01 = ["ExemptWeightClassConsistency"]
+    WI-2018-09 = ["ExemptWeightClassConsistency"]
 
     # Miscellaneous exemptions.
+    AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     IA-2014-01 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
+    IA-2015-02 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     NS-2015-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     NS-2018-01 = ["ExemptDivision"] # Ashton Rouska wore Wraps.

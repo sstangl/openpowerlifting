@@ -1,14 +1,14 @@
 Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BirthYear,State,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
-1,F,Karen Backenstose,B,R-M1a-B,57,Raw,1976,PA,55.5,,,,,60,65,67.5,67.5,,,,,67.5
-1,F,Jackelin Moran,B,R-O-B,57,Raw,1992,VA,56.8,,,,,45,50,52.5,52.5,,,,,52.5
-1,F,Sherry Weaver,B,R-O-B,84+,Raw,1964,PA,111.7,,,,,67.5,75,-82.5,75,,,,,75
-1,M,Howard Sturman,B,R-M2b-B,93,Raw,1958,MD,91.4,,,,,152.5,157.5,-162.5,157.5,,,,,157.5
-1,M,Thomas Sawyer,B,R-M2b-B,120,Raw,1961,PA,109.7,,,,,155,-160,160,160,,,,,160
-1,M,Thomas Wilde,B,R-M3b-B,74,Raw,1948,PA,72.7,,,,,80,-85,-85,80,,,,,80
-1,M,Jim McKenna,B,R-M3b-B,105,Raw,1948,PA,99.4,,,,,130,-137.5,137.5,137.5,,,,,137.5
-1,M,Theodore Knoll,B,R-Mil-B,93,Raw,1982,PA,88.1,,,,,172.5,177.5,-185,177.5,,,,,177.5
-1,M,Jeffrey McDaniel,B,R-O-B,93,Raw,1981,PA,92.5,,,,,-187.5,187.5,-200,187.5,,,,,187.5
-2,M,Theodore Knoll,B,R-O-B,93,Raw,1982,PA,88.1,,,,,172.5,177.5,-185,177.5,,,,,177.5
+1,F,Karen Backenstose,B,FR-M1a,57,Raw,1976,PA,55.5,,,,,60,65,67.5,67.5,,,,,67.5
+1,F,Jackelin Moran,B,FR-O,57,Raw,1992,VA,56.8,,,,,45,50,52.5,52.5,,,,,52.5
+1,F,Sherry Weaver,B,FR-O,84+,Raw,1964,PA,111.7,,,,,67.5,75,-82.5,75,,,,,75
+1,M,Howard Sturman,B,MR-M2b,93,Raw,1958,MD,91.4,,,,,152.5,157.5,-162.5,157.5,,,,,157.5
+1,M,Thomas Sawyer,B,MR-M2b,120,Raw,1961,PA,109.7,,,,,155,-160,160,160,,,,,160
+1,M,Thomas Wilde,B,MR-M3b,74,Raw,1948,PA,72.7,,,,,80,-85,-85,80,,,,,80
+1,M,Jim McKenna,B,MR-M3b,105,Raw,1948,PA,99.4,,,,,130,-137.5,137.5,137.5,,,,,137.5
+1,M,Theodore Knoll,B,MR-MO,93,Raw,1982,PA,88.1,,,,,172.5,177.5,-185,177.5,,,,,177.5
+1,M,Jeffrey McDaniel,B,MR-O,93,Raw,1981,PA,92.5,,,,,-187.5,187.5,-200,187.5,,,,,187.5
+2,M,Theodore Knoll,B,MR-O,93,Raw,1982,PA,88.1,,,,,172.5,177.5,-185,177.5,,,,,177.5
 1,F,Gabrielle Shkreli,SBD,FR-Jr,57,Raw,1997,NY,55.1,97.5,107.5,-117.5,107.5,37.5,45,-50,45,122.5,137.5,-142.5,137.5,290
 1,F,Sheri Patterson,SBD,FR-M1a,72,Raw,1976,PA,66.7,95,102.5,105,105,60,62.5,-65,62.5,127.5,132.5,137.5,137.5,305
 1,F,Cathy Avery,SBD,FR-M1b,63,Raw,1969,PA,62.9,105,112.5,117.5,117.5,65,70,72.5,72.5,117.5,127.5,137.5,137.5,327.5
@@ -123,5 +123,5 @@ DQ,M,Phillip Herndon,SBD,MR-O,93,Raw,1995,PA,91.2,250,265,-272.5,265,150,160,165
 1,M,Alexander Punchello,SBD,MR-T3,105,Raw,1998,NJ,99.5,-175,175,185,185,105,112.5,-115,112.5,180,185,195,195,492.5
 1,M,Nicholas Cataldi,SBD,MR-T3,120,Raw,1998,PA,106.4,265,272.5,-280,272.5,142.5,155,160,160,265,270.5,,270.5,703
 1,M,Brandon Ragoonath,SBD,M-T3,93,Single-ply,1998,NY,89.3,255,-275,-282.5,255,-172.5,172.5,190,190,272.5,295,-307.5,295,740
-1,F,Rachel Jones,BD,R-O-PP,84+,Raw,1983,PA,84.1,,,,,57.5,62.5,67.5,67.5,115,125,135,135,202.5
-1,M,Kevin Grab,BD,R-Jr-PP,83,Raw,1994,PA,81.1,,,,,52.5,57.5,65,65,157.5,175,182.5,182.5,247.5
+1,F,Rachel Jones,BD,FR-O,84+,Raw,1983,PA,84.1,,,,,57.5,62.5,67.5,67.5,115,125,135,135,202.5
+1,M,Kevin Grab,BD,MR-Jr,83,Raw,1994,PA,81.1,,,,,52.5,57.5,65,65,157.5,175,182.5,182.5,247.5
