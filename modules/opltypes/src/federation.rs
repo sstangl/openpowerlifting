@@ -207,7 +207,7 @@ pub enum Federation {
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
-    /// Crimean Republic Powerlifting and Extreme Bench Press Association 
+    /// Crimean Republic Powerlifting and Extreme Bench Press Association
     #[strum(to_string = "CRPEBA", serialize = "crpeba")]
     CRPEBA,
 
@@ -239,7 +239,7 @@ pub enum Federation {
     /// Federation Bench Press Double-event, Russian fed.
     #[strum(to_string = "FBPD", serialize = "fbpd")]
     FBPD,
-    
+
     /// Federación Argentina de Levantamiento de Potencia, IPF.
     #[strum(to_string = "FALPO", serialize = "falpo")]
     FALPO,
@@ -772,7 +772,7 @@ pub enum Federation {
     /// World Powerlifting Federation.
     #[strum(to_string = "WPF", serialize = "wpf")]
     WPF,
-    
+
     /// World Powerlifting League.
     #[strum(to_string = "WPLeague", serialize = "wpleague")]
     WPLeague,

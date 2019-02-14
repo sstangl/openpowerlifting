@@ -229,8 +229,8 @@ mod tests {
     #[test]
     fn test_is_definitely_less_than() {
         let approx_17 = Age::Approximate(17); // "17 or 18"
-        let approx_18 = Age::Approximate(18); // "17 or 18"
-        let approx_19 = Age::Approximate(19); // "17 or 18"
+        let approx_18 = Age::Approximate(18); // "18 or 19"
+        let approx_19 = Age::Approximate(19); // "19 or 20"
         let exact_17 = Age::Exact(17);
         let exact_18 = Age::Exact(18);
         let exact_19 = Age::Exact(19);
@@ -269,8 +269,8 @@ mod tests {
     #[test]
     fn test_is_definitely_greater_than() {
         let approx_17 = Age::Approximate(17); // "17 or 18"
-        let approx_18 = Age::Approximate(18); // "17 or 18"
-        let approx_19 = Age::Approximate(19); // "17 or 18"
+        let approx_18 = Age::Approximate(18); // "18 or 19"
+        let approx_19 = Age::Approximate(19); // "19 or 20"
         let exact_17 = Age::Exact(17);
         let exact_18 = Age::Exact(18);
         let exact_19 = Age::Exact(19);
