@@ -1,6 +1,6 @@
 Place,Name,Division,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Sex,BirthYear,Equipment,Event
 1,Leslie Watson,O,UK,48,46,85,95,-100,95,,60,62.5,65,65,,102.5,-107.5,-107.5,102.5,262.5,F,1948,Multi-ply,SBD
-1,Svetlana Ņefjodova,M3,Latvia,48,47,-85,85,95,95,,50,52.5,55,55,,105,115,122.5,122.5,272.5,F,1950,Multi-ply,SBD
+1,Svetlana Ņefjodova,M4,Latvia,48,47,-85,85,95,95,,50,52.5,55,55,,105,115,122.5,122.5,272.5,F,1950,Multi-ply,SBD
 1,Kimberley Elyn,T2,Belgium,56,56,110,118,120,120,,60,72.5,75,75,,107.5,115,120,120,315,F,,Multi-ply,SBD
 1,Natacha Herbepin,O,France,56,54,140,150,155,155,,75,80,-82.5,80,,145,160,165,165,400,F,1971,Multi-ply,SBD
 1,Lesley Jayne Thomas,M1,UK,56,55,175,,190,190,,80,85,-87.5,85,-93,145,152.5,157.5,157.5,432.5,F,1966,Multi-ply,SBD
@@ -45,7 +45,7 @@ DQ,Rustam Musaev,O,Azerbaijan,75,71,,,,,,,,,,,,,,,,M,1978,Multi-ply,SBD
 2,Michael Molgedey,M1,Germany,75,73,215,227.5,235,235,,135,145,-150,145,,210,230,242.5,242.5,622.5,M,1964,Multi-ply,SBD
 3,Patrick Van Oosterwijck,M1,Belgium,75,73,175,185,200,200,,95,105,110,110,,195,215,,215,525,M,,Multi-ply,SBD
 1,Marcel Ingold,M4,Switzerland,75,71,-150,150,170,170,,90,100,,100,,160,180,,180,450,M,1947,Multi-ply,SBD
-1,Janis Paulukas,M5,Latvia,75,74,180,190,200,200,,130,140,,140,,220,,,220,560,M,1949,Multi-ply,SBD
+1,Janis Paulukas,M4,Latvia,75,74,180,190,200,200,,130,140,,140,,220,,,220,560,M,1949,Multi-ply,SBD
 1,Konrad Högg,M6,Austria,75,74,130,140,150,150,,133,145.5,147.5,147.5,,120,150,160,160,457.5,M,1938,Multi-ply,SBD
 2,Alois Fasolin,M6,Germany,75,70,120,-130,-130,120,,85,90,-92.5,90,,120,-130,130,130,340,M,1939,Multi-ply,SBD
 1,Gregor Muller,T3,Austria,82.5,82,190,210,,210,,110,120,-130,120,,210,232.5,237.5,237.5,567.5,M,,Multi-ply,SBD
@@ -158,7 +158,7 @@ DQ,Ian Mitchell,O,UK,140,126,,,,,,,,,,,,,,,,M,1967,Multi-ply,SBD
 1,Jakub Havelka,T2,Czechia,140+,142,,280,300,300,310,200,,217.5,217.5,,230,,,230,747.5,M,,Multi-ply,SBD
 1,Markku Kalliola Kari,O,Finland,140+,158,455,475,-500,475,,325,355,-365,355,,270,,297.5,297.5,1127.5,M,1963,Multi-ply,SBD
 1,Leslie Watson,O,UK,48,46,,,,,,60,62.5,65,65,,,,,,65,F,1948,Multi-ply,B
-1,Svetlana Ņefjodova,M3,Latvia,48,46,,,,,,-50,-52.5,52.5,52.5,,,,,,52.5,F,1950,Multi-ply,B
+1,Svetlana Ņefjodova,M4,Latvia,48,46,,,,,,-50,-52.5,52.5,52.5,,,,,,52.5,F,1950,Multi-ply,B
 1,Beatrice Beneke,O,Germany,56,55,,,,,,60,65,67.5,67.5,,,,,,67.5,F,1974,Multi-ply,B
 1,Angela Debudey,M1,Germany,56,53,,,,,,50,52.5,-55,52.5,,,,,,52.5,F,,Multi-ply,B
 1,Sabra Callahan,M3,USA,56,55,,,,,,-90,90,92.5,92.5,,,,,,92.5,F,1955,Multi-ply,B
@@ -243,7 +243,7 @@ DQ,Laurent Gonzalez,O,France,90,88,,,,,,-230,,,,,,,,,,M,1969,Multi-ply,B
 1,Klaus Krüger,M3,Germany,90,88,,,,,,200,210,,210,,,,,,210,M,1952,Multi-ply,B
 1,Viacheslav Porozky,M4,Israel,90,89,,,,,,140,155,,155,,,,,,155,M,1947,Multi-ply,B
 1,Roland Götz,M5,Germany,90,87,,,,,,145,,,145,,,,,,145,M,1946,Multi-ply,B
-2,Klaus-Werner Pascke,M5,Germany,90,87,,,,,,120,135,,135,,,,,,135,M,1947,Multi-ply,B
+2,Klaus-Werner Pascke,M4,Germany,90,87,,,,,,120,135,,135,,,,,,135,M,1947,Multi-ply,B
 1,LB Baker,M6,USA,90,87,,,,,,100,115,120,120,,,,,,120,M,1937,Multi-ply,B
 2,Ian Morris,M6,Ireland,90,86,,,,,,100,-105,,100,,,,,,100,M,1939,Multi-ply,B
 1,Glen Abbeel,T1,Belgium,100,92,,,,,,75,80,82.5,82.5,,,,,,82.5,M,,Multi-ply,B
@@ -271,7 +271,7 @@ DQ,Peter Bittman,M2,Germany,100,97,,,,,,,,-237.5,,,,,,,,M,1959,Multi-ply,B
 3,Karel Leibl,M3,Czechia,100,97,,,,,,150,160,-165,160,,,,,,160,M,1954,Multi-ply,B
 1,Axel Gersdorf,M4,Germany,100,96,,,,,,200,,,200,,,,,,200,M,1951,Multi-ply,B
 2,Hans-Jurgen Borkowski,M4,Germany,100,98,,,,,,185,,,185,,,,,,185,M,1950,Multi-ply,B
-1,Alexandrs Smelovs,M5,Latvia,100,91.75,,,,,,160,185,-200,185,,,,,,185,M,1947,Multi-ply,B
+1,Alexandrs Smelovs,M4,Latvia,100,91.75,,,,,,160,185,-200,185,,,,,,185,M,1947,Multi-ply,B
 2,Billy Coleman,M5,USA,100,91,,,,,,160,-167.5,-167.5,160,,,,,,160,M,,Multi-ply,B
 1,Marc LeBolay,M6,France,100,99.1,,,,,,170,-175,175,175,,,,,,175,M,1938,Multi-ply,B
 1,Andis Volkovs,T3,Latvia,100,100,,,,,,170,180,190,190,,,,,,190,M,1988,Multi-ply,B
@@ -298,7 +298,7 @@ DQ,Ibrahim Ibrahimov,O,Azerbaijan,110,108,,,,,,,-280,-305,,,,,,,,M,1981,Multi-pl
 2,Klaus Grosser,M3,Germany,110,106,,,,,,190,,,190,,,,,,190,M,1955,Multi-ply,B
 1,Michael King,M4,UK,110,107,,,,,,,227.5,235.5,235.5,,,,,,235.5,M,1950,Multi-ply,B
 2,Herve Pincemin,M4,France,110,101,,,,,,,185,,185,,,,,,185,M,1950,Multi-ply,B
-1,Joachim Eulenstein,M5,Germany,110,108,,,,,,140,150,160,160,,,,,,160,M,1947,Multi-ply,B
+1,Joachim Eulenstein,M4,Germany,110,108,,,,,,140,150,160,160,,,,,,160,M,1947,Multi-ply,B
 1,Johann Feniuk,M6,Germany,100,100,,,,,,,150,,150,,,,,,150,M,1940,Multi-ply,B
 1,Gerard Zappa,M8,Belgium,110,106,,,,,,120,130,-140,130,140,,,,,130,M,,Multi-ply,B
 1,Matti Lehto,J,Finland,125,122,,,,,,225,240,,240,,,,,,240,M,1983,Multi-ply,B
