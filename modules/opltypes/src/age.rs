@@ -120,7 +120,7 @@ impl Age {
             },
             Age::Approximate(age) => match other {
                 Age::Exact(other) => age > other,
-                Age::Approximate(other) => age + 1 > other,
+                Age::Approximate(other) => age > other + 1,
                 Age::None => false,
             },
             Age::None => false,
@@ -224,5 +224,85 @@ mod tests {
 
         let a = "".parse::<Age>().unwrap();
         assert_eq!(format!("{}", a), "");
+    }
+
+    #[test]
+    fn test_is_definitely_less_than() {
+        let approx_17 = Age::Approximate(17); // "17 or 18"
+        let approx_18 = Age::Approximate(18); // "17 or 18"
+        let approx_19 = Age::Approximate(19); // "17 or 18"
+        let exact_17 = Age::Exact(17);
+        let exact_18 = Age::Exact(18);
+        let exact_19 = Age::Exact(19);
+
+        // Lower approximates compared to higher approximates.
+        assert_eq!(approx_17.is_definitely_less_than(approx_17), false);
+        assert_eq!(approx_17.is_definitely_less_than(approx_18), false);
+        assert_eq!(approx_17.is_definitely_less_than(approx_19), true);
+
+        // Higher approximates compared to lower approximates.
+        assert_eq!(approx_19.is_definitely_less_than(approx_17), false);
+        assert_eq!(approx_19.is_definitely_less_than(approx_18), false);
+        assert_eq!(approx_19.is_definitely_less_than(approx_19), false);
+
+        // Lower exacts compared to higher approximates.
+        assert_eq!(exact_17.is_definitely_less_than(approx_17), false);
+        assert_eq!(exact_17.is_definitely_less_than(approx_18), true);
+        assert_eq!(exact_17.is_definitely_less_than(approx_19), true);
+
+        // Higher approximates compared to lower exacts.
+        assert_eq!(approx_19.is_definitely_less_than(exact_17), false);
+        assert_eq!(approx_19.is_definitely_less_than(exact_18), false);
+        assert_eq!(approx_19.is_definitely_less_than(exact_19), false);
+
+        // Lower approximates compared to higher exacts.
+        assert_eq!(approx_17.is_definitely_less_than(exact_17), false);
+        assert_eq!(approx_17.is_definitely_less_than(exact_18), false);
+        assert_eq!(approx_17.is_definitely_less_than(exact_19), true);
+
+        // Higher exacts compared to lower approximates.
+        assert_eq!(exact_19.is_definitely_less_than(approx_17), false);
+        assert_eq!(exact_19.is_definitely_less_than(approx_18), false);
+        assert_eq!(exact_19.is_definitely_less_than(approx_19), false);
+    }
+
+    #[test]
+    fn test_is_definitely_greater_than() {
+        let approx_17 = Age::Approximate(17); // "17 or 18"
+        let approx_18 = Age::Approximate(18); // "17 or 18"
+        let approx_19 = Age::Approximate(19); // "17 or 18"
+        let exact_17 = Age::Exact(17);
+        let exact_18 = Age::Exact(18);
+        let exact_19 = Age::Exact(19);
+
+        // Lower approximates compared to higher approximates.
+        assert_eq!(approx_17.is_definitely_greater_than(approx_17), false);
+        assert_eq!(approx_17.is_definitely_greater_than(approx_18), false);
+        assert_eq!(approx_17.is_definitely_greater_than(approx_19), false);
+
+        // Higher approximates compared to lower approximates.
+        assert_eq!(approx_19.is_definitely_greater_than(approx_17), true);
+        assert_eq!(approx_19.is_definitely_greater_than(approx_18), false);
+        assert_eq!(approx_19.is_definitely_greater_than(approx_19), false);
+
+        // Lower exacts compared to higher approximates.
+        assert_eq!(exact_17.is_definitely_greater_than(approx_17), false);
+        assert_eq!(exact_17.is_definitely_greater_than(approx_18), false);
+        assert_eq!(exact_17.is_definitely_greater_than(approx_19), false);
+
+        // Higher approximates compared to lower exacts.
+        assert_eq!(approx_19.is_definitely_greater_than(exact_17), true);
+        assert_eq!(approx_19.is_definitely_greater_than(exact_18), true);
+        assert_eq!(approx_19.is_definitely_greater_than(exact_19), false);
+
+        // Lower approximates compared to higher exacts.
+        assert_eq!(approx_17.is_definitely_greater_than(exact_17), false);
+        assert_eq!(approx_17.is_definitely_greater_than(exact_18), false);
+        assert_eq!(approx_17.is_definitely_greater_than(exact_19), false);
+
+        // Higher exacts compared to lower approximates.
+        assert_eq!(exact_19.is_definitely_greater_than(approx_17), true);
+        assert_eq!(exact_19.is_definitely_greater_than(approx_18), false);
+        assert_eq!(exact_19.is_definitely_greater_than(approx_19), false);
     }
 }
