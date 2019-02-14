@@ -488,8 +488,8 @@ fn check_column_birthyear(
                         line,
                         format!("BirthYear '{}' looks implausible", year),
                     );
+                    return None;
                 }
-                return None;
             }
 
             Some(year)
@@ -1463,7 +1463,7 @@ fn check_division_age_consistency(
             Age::Exact(age) => {
                 let age = u32::from(age);
                 if age != max_age && age + 1 != max_age {
-                    report.error_on(
+                    report.warning_on(
                         line,
                         format!(
                             "Age '{}' doesn't match BirthYear '{}'",
@@ -1495,7 +1495,7 @@ fn check_division_age_consistency(
         // Pairwise check BirthYear and BirthDate.
         if let Some(birthdate) = entry.birthdate {
             if birthdate.year() != birthyear {
-                report.error_on(
+                report.warning_on(
                     line,
                     format!(
                         "BirthDate '{}' doesn't match BirthYear '{}'",
@@ -1570,7 +1570,7 @@ fn check_division_age_consistency(
     let age = entry.age_on(meet_date);
 
     if age.is_definitely_less_than(min_age) {
-        report.error_on(
+        report.warning_on(
             line,
             format!(
                 "Calculated Age {} too young for division '{}': min age {}",
@@ -1580,7 +1580,7 @@ fn check_division_age_consistency(
     }
 
     if age.is_definitely_greater_than(max_age) {
-        report.error_on(
+        report.warning_on(
             line,
             format!(
                 "Calculated Age {} too old for division '{}': max age {}",
