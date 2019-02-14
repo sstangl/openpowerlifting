@@ -177,7 +177,7 @@ impl Entry {
         // If the BirthYear is provided, calculate an approximate age.
         if let Some(birthyear) = self.birthyear {
             if date.year() >= birthyear {
-                return Age::Approximate((date.year() - birthyear) as u8);
+                return Age::from_birthyear_on_date(birthyear, date);
             }
         }
 
@@ -1454,43 +1454,20 @@ fn check_division_age_consistency(
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
     if let Some(birthyear) = entry.birthyear {
-        // The maximum age assumes that the monthday of birth already occurred.
-        let max_age = birthyear * 10000 + 0101; // January 1st of BirthYear.
+        let approx_age = Age::from_birthyear_on_date(birthyear, meet_date);
 
         // Pairwise check BirthYear and Age.
-        match entry.age {
-            // The age should be at the maximum or one year younger.
-            Age::Exact(age) => {
-                let age = u32::from(age);
-                if age != max_age && age + 1 != max_age {
-                    report.warning_on(
-                        line,
-                        format!(
-                            "Age '{}' doesn't match BirthYear '{}'",
-                            entry.age, birthyear
-                        ),
-                    );
-                }
-            }
-            // The age range should include the maximum or one below.
-            //
-            // For example, with a max_age of 27, the BirthYear allows for
-            // an Age of either 26 or 27. To be consistent, the approximate ages
-            // allowed are then 25.5, 26.5, and 27.5, since each has a plausible match.
-            Age::Approximate(age) => {
-                let age = u32::from(age);
-                if age != max_age && age + 1 != max_age && age + 2 != max_age {
-                    report.error_on(
-                        line,
-                        format!(
-                            "Age '{}' doesn't match BirthYear '{}'",
-                            entry.age, birthyear
-                        ),
-                    );
-                }
-            }
-            Age::None => (),
-        };
+        if approx_age.is_definitely_less_than(entry.age)
+            || approx_age.is_definitely_greater_than(entry.age)
+        {
+            report.warning_on(
+                line,
+                format!(
+                    "Age '{}' doesn't match BirthYear '{}'",
+                    entry.age, birthyear
+                ),
+            );
+        }
 
         // Pairwise check BirthYear and BirthDate.
         if let Some(birthdate) = entry.birthdate {

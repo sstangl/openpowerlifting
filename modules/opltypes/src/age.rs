@@ -8,6 +8,8 @@ use std::fmt;
 use std::num;
 use std::str::FromStr;
 
+use crate::Date;
+
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
 #[derive(Copy, Clone, Debug, PartialEq)]
@@ -58,6 +60,29 @@ impl Age {
         let s = format!("{}", f);
         s.parse::<Age>()
     }
+
+    /// Given a BirthYear, calculates the approximate age of the lifter
+    /// on the given Date.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::{Age, Date};
+    /// let date = Date::from_u32(2019_02_16);
+    /// assert_eq!(Age::from_birthyear_on_date(1988, date), Age::Approximate(30));
+    /// ```
+    pub fn from_birthyear_on_date(birthyear: u32, on_date: Date) -> Self {
+        let on_year = on_date.year();
+
+        if (on_year < birthyear) {
+            Age::None
+        } else if (on_year == birthyear) {
+            Age::Approximate(0)
+        } else {
+            Age::Approximate((on_year - birthyear - 1) as u8)
+        }
+    }
+
 
     /// Whether the given Age is definitely less than another.
     ///
