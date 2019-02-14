@@ -1463,8 +1463,8 @@ fn check_division_age_consistency(
             report.warning_on(
                 line,
                 format!(
-                    "Age '{}' doesn't match BirthYear '{}'",
-                    entry.age, birthyear
+                    "Age '{}' doesn't match BirthYear '{}', expected '{}'",
+                    entry.age, birthyear, approx_age
                 ),
             );
         }
