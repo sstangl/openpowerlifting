@@ -74,15 +74,14 @@ impl Age {
     pub fn from_birthyear_on_date(birthyear: u32, on_date: Date) -> Self {
         let on_year = on_date.year();
 
-        if (on_year < birthyear) {
+        if on_year < birthyear {
             Age::None
-        } else if (on_year == birthyear) {
+        } else if on_year == birthyear {
             Age::Approximate(0)
         } else {
             Age::Approximate((on_year - birthyear - 1) as u8)
         }
     }
-
 
     /// Whether the given Age is definitely less than another.
     ///
