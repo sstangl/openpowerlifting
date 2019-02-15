@@ -776,7 +776,7 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Weight
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, "WeightClassKg cannot be zero");
-    } else if s.starts_with('0') {
+    } else if s.starts_with('0') && s != "0+" {
         report.error_on(
             line,
             format!("WeightClassKg cannot start with 0 in '{}'", s),
