@@ -450,7 +450,7 @@ const CYRILLIC_CHARACTERS: &str =
     "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
      АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\
      ҐґЄєЖжІіЇї\
-     -' ";
+     -' .";
 
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     for c in s.chars() {
