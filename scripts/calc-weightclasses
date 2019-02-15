@@ -41,6 +41,9 @@ def getwtcls(classtype, sex, bw):
             if bw > 100:
                 return '100+'
             weights = [0, 48, 53, 58, 64, 72, 84, 100]
+    elif classtype == 'thspa':
+        weights = [0, 51.71, 55.79, 59.87, 67.13, 74.84, 82.1,
+                   89.81, 99.79, 109.77, 124.74]
     else:
         print("Unknown classtype %s" % classtype)
         sys.exit(1)
@@ -55,7 +58,7 @@ def getwtcls(classtype, sex, bw):
 
 
 def main(classtype, filename):
-    assert classtype in ['trad', 'ipf', 'wp']
+    assert classtype in ['trad', 'ipf', 'wp', 'thspa']
 
     csv = oplcsv.Csv(filename)
 
@@ -89,8 +92,8 @@ def main(classtype, filename):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3 or not sys.argv[1] in ["trad", "ipf", "wp"]:
-        print(" Usage: %s <trad,ipf,wp> entries.csv")
+    if len(sys.argv) != 3 or not sys.argv[1] in ["trad", "ipf", "wp", "thspa"]:
+        print(" Usage: %s <trad,ipf,wp,thspa> entries.csv")
         print(" Where: 'trad' is for the traditional weight classes")
         print("    and 'ipf' is for the IPF weight classes.")
         sys.exit(1)

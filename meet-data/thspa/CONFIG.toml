@@ -1,0 +1,17 @@
+[divisions]
+    # The main division used for almost everything.
+    boys = {name="Boys", min=0, max=999, sex="M", equipment="Single-ply"}
+
+    freshmen = {name="Freshmen", min=0, max=999, sex="M", equipment="Single-ply"}
+    jv = {name="Junior Varsity", min=0, max=999, sex="M", equipment="Single-ply"}
+    v = {name="Varsity", min=0, max=999, sex="M", equipment="Single-ply"}
+
+    div2 = {name="Div 2", min=0, max=999, sex="M", equipment="Single-ply"}
+
+# THSPA uses pounds classes with exact pound values.
+[weightclasses.default_M]
+    classes = ["51.71","55.79","59.87","67.13","74.84","82.1","89.81","99.79","109.77","124.74","124.74+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[exemptions]

@@ -45,29 +45,27 @@ def strtokg(s):
 
 def weightclass2kg(s, sex):
     if s == '114':
-        return '52'
+        return '51.71'
     if s == '123':
-        return '56'
+        return '55.79'
     if s == '132':
-        return '60'
+        return '59.87'
     if s == '148':
-        return '67.5'
+        return '67.13'
     if s == '165':
-        return '75'
+        return '74.84'
     if s == '181':
-        return '82.5'
+        return '82.1'
     if s == '198':
-        return '90'
+        return '89.81'
     if s == '220':
-        return '100'
+        return '99.79'
     if s == '242':
-        return '110'
+        return '109.77'
     if s == '275':
-        return '125'
-    if s == 'SHW' and sex == 'M':
-        return '125+'
-    if s == 'SHW' and sex == 'F':
-        return '90+'
+        return '124.74'
+    if s == 'SHW':
+        return '124.74+'
 
     if s == 'UNC':  # Unconfirmed.
         return ''
@@ -259,6 +257,17 @@ def fix_dqs(csv):
         row[eventidx] = event
 
 
+# Lifters who have no bodyweight and no total should be marked "NS".
+def fix_noshows(csv):
+    bwidx = csv.index('BodyweightKg')
+    totalidx = csv.index('TotalKg')
+    placeidx = csv.index('Place')
+
+    for row in csv.rows:
+        if row[bwidx] == "" and row[totalidx] == "":
+            row[placeidx] = "NS"
+
+
 def makemeetcsv(soup):
     heading = soup.find('span', {'id': 'lblHeading'}).text
     heading = heading.replace(',', ' ')
@@ -329,6 +338,7 @@ def main(url):
     removeemptycolumns(entriescsv)
 
     fix_dqs(entriescsv)
+    fix_noshows(entriescsv)
 
     meetcsv = makemeetcsv(soup)
 

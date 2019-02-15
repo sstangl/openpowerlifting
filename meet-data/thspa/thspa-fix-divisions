@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+
+import oplcsv
+import sys
+import os
+
+
+# Map of substitutions.
+DIVISION_MAP = {
+    "Freshmen Boys": "Freshmen",
+    "FRESHMEN BOYS": "Freshmen",
+    "Boys Ninth Grade": "Freshmen",
+    "Boys Ninth": "Freshmen",
+    "Boys JV": "Junior Varsity",
+    "Boys V": "Varsity",
+    "Juniors Varsity": "Junior Varsity",
+    "Div 2 Boys": "Div 2",
+    "Boys Varsity": "Varsity",
+    "Boys Freshman": "Freshmen",
+    "Boys Freshmen": "Freshmen",
+}
+
+
+def standardize_division_csv(csv):
+    '''Standardizes the Division column.
+       Returns true iff something was changed.'''
+    global DIVISION_MAP
+
+    if 'Division' not in csv.fieldnames:
+        return False
+    idx = csv.index('Division')
+
+    changed = False
+    for row in csv.rows:
+        division = row[idx]
+        if division in DIVISION_MAP:
+            row[idx] = DIVISION_MAP[division]
+            changed = True
+            continue
+        elif division.upper() in DIVISION_MAP:
+            row[idx] = DIVISION_MAP[division.upper()]
+            changed = True
+            continue
+
+    return changed
+
+
+def standardize_division_filename(filename):
+    csv = oplcsv.Csv(filename)
+    if standardize_division_csv(csv):
+        csv.write_filename(filename)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        standardize_division_filename(sys.argv[1])
+    else:
+        for dirname, subdirs, files in os.walk(os.getcwd()):
+            if "meet-data" in subdirs:
+                subdirs[:] = ['meet-data']
+            if 'entries.csv' in files:
+                filepath = dirname + os.sep + 'entries.csv'
+                standardize_division_filename(filepath)
