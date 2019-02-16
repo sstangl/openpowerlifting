@@ -1,0 +1,23 @@
+[divisions]
+    # The main division used for almost everything.
+    girls = {name="Girls", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    freshmen = {name="Freshmen", min=0, max=999, sex="F", equipment="Single-ply"}
+    jv = {name="Junior Varsity", min=0, max=999, sex="F", equipment="Single-ply"}
+    v = {name="Varsity", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    # Divisions (within a region of Texas).
+    div1 = {name="Div 1", min=0, max=999, sex="F", equipment="Single-ply"}
+    div2 = {name="Div 2", min=0, max=999, sex="F", equipment="Single-ply"}
+    div3 = {name="Div 3", min=0, max=999, sex="F", equipment="Single-ply"}
+
+# THSWPA uses pounds classes with exact pound values.
+#
+# Although the classes appear as "181", "198" etc., the rulebook specifies that the
+# precise maximum value allowed in that class is "181.5", "198.5", and so on for each.
+[weightclasses.default_F]
+    classes = ["44.23","47.85","51.94","56.02","60.1","67.36","75.07","82.33","90.04","100.02","117.71","100.02+","117.71+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]

@@ -20,7 +20,26 @@ DIVISION_MAP = {
     "Boys Varsity": "Varsity",
     "Boys Freshman": "Freshmen",
     "Boys Freshmen": "Freshmen",
-    "BOYS": "Boys"
+    "BOYS": "Boys",
+
+    # Divisions for Girls (lets this script be used for THSWPA).
+    "THSPA Girls": "Girls",
+    "GIRLS": "Girls",
+    "Varsity Girls": "Varsity",
+    "Girls Varsity": "Varsity",
+    "JV Girls": "Junior Varsity",
+    "Junior Varsity Girls": "Junior Varsity",
+    "Girls Division 1": "Div 1",
+    "Girls Ninth Grade": "Freshmen",
+    "Girls Ninth grade": "Freshmen",
+    "Girls J.V.": "Junior Varsity",
+    "Girls Ninth": "Freshmen",
+    "Girls JV": "Junior Varsity",
+    "Region 5 Division 2": "Div 2",
+    "Region 5 Division 3": "Div 3",
+    "Division 2": "Div 2",
+    "Girls Division 2": "Div 2",
+    "Division 3": "Div 3"
 }
 
 
