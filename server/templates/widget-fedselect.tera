@@ -153,7 +153,9 @@
   <option value="wpc-finland" {% if selection.federation == "WPC-Finland" %}selected{% endif %}>WPC Finland</option>
 </optgroup>
 <optgroup label="{{strings.country.france}}">
+  <option value="all-france" {% if selection.federation == "AllFrance" %}selected{% endif %}>{{strings.selectors.fed.all_france}}</option>
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
+  <option value="wpc-france" {% if selection.federation == "WPC-France" %}selected{% endif %}>WPC France</option>
 </optgroup>
 <optgroup label="{{strings.country.germany}}">
   <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>{{strings.selectors.fed.all_germany}}</option>
