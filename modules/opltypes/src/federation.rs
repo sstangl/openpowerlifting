@@ -553,6 +553,10 @@ pub enum Federation {
     #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
 
+    /// Rhino Powerlifting Club, South African GPC Affiliate.
+    #[strum(to_string = "RhinoPC", serialize = "rhinopc")]
+    RhinoPC,
+
     /// Revolution Powerlifting Syndicate.
     #[strum(to_string = "RPS", serialize = "rps")]
     RPS,
@@ -569,6 +573,10 @@ pub enum Federation {
     #[serde(rename = "Russia-UA")]
     #[strum(to_string = "Russia-UA", serialize = "russia-ua")]
     RussiaUA,
+
+    /// South African Powerlifting Federation, IPF.
+    #[strum(to_string = "SAPF", serialize = "sapf")]
+    SAPF,
 
     /// Slovenská asociásia silového trojboja, Slovakian GPC Affiliate.
     #[strum(to_string = "SAST", serialize = "sast")]
@@ -990,10 +998,12 @@ impl Federation {
             Federation::RAWIceland => false,
             Federation::RAWUKR => true,
             Federation::RAWU => false,
+            Federation::RhinoPC => false,
             Federation::RPS => false,
             Federation::RPU => false,
             Federation::RUPC => false,
             Federation::RussiaUA => false,
+            Federation::SAPF => true,
             Federation::SAST => false,
             Federation::ScottishPL => true,
             Federation::SCI => false,
@@ -1194,10 +1204,12 @@ impl Federation {
             Federation::RAWIceland => Some(Country::Iceland),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
+            Federation::RhinoPC => Some(Country::SouthAfrica),
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
             Federation::RussiaUA => Some(Country::Russia),
+            Federation::SAPF => Some(Country::SouthAfrica),
             Federation::SAST => Some(Country::Slovakia),
             Federation::ScottishPL => Some(Country::Scotland),
             Federation::SCI => Some(Country::USA),
@@ -1409,10 +1421,12 @@ impl Federation {
             Federation::RAWIceland => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
+            Federation::RhinoPC => PointsSystem::Glossbrenner,
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
             Federation::RussiaUA => PointsSystem::Wilks,
+            Federation::SAPF => Federation::ipf_rules_on(date),
             Federation::SAST => PointsSystem::Glossbrenner,
             Federation::ScottishPL => Federation::ipf_rules_on(date),
             Federation::SCI => PointsSystem::Wilks,

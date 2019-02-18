@@ -270,6 +270,9 @@
   <option value="wrpf-slovenia" {% if selection.federation == "WRPF-Slovenia" %}selected{% endif %}>WRPF Slovenia</option>
 </optgroup>
 <optgroup label="{{strings.country.southafrica}}">
+  <option value="all-southafrica" {% if selection.federation == "AllSouthAfrica" %}selected{% endif %}>{{strings.selectors.fed.all_southafrica}}</option>
+  <option value="rhinopc" {% if selection.federation == "RhinoPC" %}selected{% endif %}>RhinoPC - Rhino Powerlifting Club [GPC]</option>
+  <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF - South African Powerlifting Federation [IPF]</option>
   <option value="wpc-sa" {% if selection.federation == "WPC-SA" %}selected{% endif %}>WPC-SA - WPC South Africa</option>
 </optgroup>
 <optgroup label="{{strings.country.spain}}">
