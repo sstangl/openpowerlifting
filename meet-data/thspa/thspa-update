@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Automatic updating for THSPA.
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "$($SCRIPTDIR/thspa-probe)" | grep http | cut -f 2 -d ' ' | while read i; do
+	$SCRIPTDIR/thspa-import "$i"
+done

@@ -1,8 +1,8 @@
 [divisions]
     # The main division used for almost everything.
-    girls = {name="Girls", min=0, max=999, sex="F", equipment="Single-ply"}
+    girls = {name="Girls", min=13, max=19, sex="F", equipment="Single-ply"}
 
-    freshmen = {name="Freshmen", min=0, max=999, sex="F", equipment="Single-ply"}
+    freshmen = {name="Freshmen", min=13, max=15, sex="F", equipment="Single-ply"}
     jv = {name="Junior Varsity", min=0, max=999, sex="F", equipment="Single-ply"}
     v = {name="Varsity", min=0, max=999, sex="F", equipment="Single-ply"}
 
