@@ -110,6 +110,7 @@ def parsedivision(div):
     s = s.replace('High School', 'HS')
     s = s.replace('Collegiate', 'C')
     s = s.replace('Special Olympian', 'SO')
+    s = s.replace('Sub Junior', 'SJ')
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'Jr')
     s = s.replace('Youth', 'Y')
