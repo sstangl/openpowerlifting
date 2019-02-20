@@ -125,17 +125,8 @@ def enterdivision(csv, divurl):
     division = heading.split(' - ')[-1].replace('THSPA', '').strip()
     division = division.replace('  ', ' ')
 
-    # Division contains sex information.
-    if 'boys' in division.lower() and 'girls' not in division.lower():
-        sex = 'M'
-    elif division == 'Junior Varsity' or division == 'Varsity':
-        sex = 'M'
-    elif division == 'Freshmen':
-        sex = 'M'
-    elif division == 'Div 2':
-        sex = 'M'
-    else:
-        error('Unknown division "%s" on page %s' % (division, divurl))
+    # THSPA is only for boys.
+    sex = 'M'
 
     # Get the table.
     table = soup.find('table', {'id': 'grdIndividualResults'})

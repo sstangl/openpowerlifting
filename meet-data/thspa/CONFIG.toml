@@ -3,10 +3,12 @@
     boys = {name="Boys", min=13, max=19, sex="M", equipment="Single-ply"}
 
     freshmen = {name="Freshmen", min=13, max=15, sex="M", equipment="Single-ply"}
-    jv = {name="Junior Varsity", min=0, max=999, sex="M", equipment="Single-ply"}
-    v = {name="Varsity", min=0, max=999, sex="M", equipment="Single-ply"}
+    jv = {name="Junior Varsity", min=13, max=19, sex="M", equipment="Single-ply"}
+    v = {name="Varsity", min=13, max=19, sex="M", equipment="Single-ply"}
 
-    div2 = {name="Div 2", min=0, max=999, sex="M", equipment="Single-ply"}
+    div1 = {name="Div 1", min=13, max=19, sex="M", equipment="Single-ply"}
+    div2 = {name="Div 2", min=13, max=19, sex="M", equipment="Single-ply"}
+    div3 = {name="Div 3", min=13, max=19, sex="M", equipment="Single-ply"}
 
 # THSPA uses pounds classes with exact pound values.
 [weightclasses.default_M]

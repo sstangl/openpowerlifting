@@ -49,12 +49,11 @@ def getwtcls(classtype, sex, bw):
         sys.exit(1)
 
     assert weights[0] == 0
-    for i in range(1, len(weights) + 1):
+    for i in range(1, len(weights)):
         if bw <= weights[i] and bw > weights[i - 1]:
             return str(weights[i])
 
-    print(" Couldn't find weightclass for bodyweight %s" % bw)
-    sys.exit(1)
+    return str(weights[len(weights)-1]) + "+"
 
 
 def main(classtype, filename):
