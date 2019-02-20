@@ -714,6 +714,11 @@ pub enum Federation {
     #[strum(to_string = "WP", serialize = "wp")]
     WP,
 
+    /// World Powerlifting New Zealand.
+    #[serde(rename = "WP-NZ")]
+    #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
+    WPNZ,
+
     /// World Powerlifting Alliance.
     #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
@@ -1056,6 +1061,7 @@ impl Federation {
             Federation::WPCUKR => false,
             Federation::WPF => false,
             Federation::WPLeague => false,
+            Federation::WPNZ => true,
             Federation::WPRO => false,
             Federation::WPU => false,
             Federation::WPUF => false,
@@ -1261,6 +1267,7 @@ impl Federation {
             Federation::WPCUKR => Some(Country::Ukraine),
             Federation::WPF => None,
             Federation::WPLeague => Some(Country::Ukraine),
+            Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPRO => Some(Country::Ukraine),
             Federation::WPU => None,
             Federation::WPUF => Some(Country::Ukraine),
@@ -1478,6 +1485,7 @@ impl Federation {
             Federation::WPCUKR => PointsSystem::Glossbrenner,
             Federation::WPF => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
+            Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPRO => PointsSystem::Wilks,
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,

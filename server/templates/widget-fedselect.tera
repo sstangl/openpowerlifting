@@ -223,6 +223,7 @@
   <option value="ipl-nz" {% if selection.federation == "IPL-NZ" %}selected{% endif %}>IPL-NZ - IPL New Zealand [IPL]</option>
   <option value="nzopen" {% if selection.federation == "NZOpen" %}selected{% endif %}>NZOpen - New Zealand Open</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF - New Zealand Powerlifting Federation [IPF]</option>
+  <option value="wp-nz" {% if selection.federation == "WP-NZ" %}selected{% endif %}>WP-NZ - World Powerlifting NZ</option>
 </optgroup>
 <optgroup label="{{strings.country.norway}}">
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF - Norges Styrkeløftforbund [IPF]</option>
