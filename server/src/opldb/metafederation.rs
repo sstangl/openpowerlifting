@@ -81,6 +81,10 @@ pub enum MetaFederation {
     #[strum(to_string = "abpu")]
     ABPU,
 
+    /// AEP, but with international results also.
+    #[strum(to_string = "aep")]
+    AEP,
+
     /// The BP federation is made up of smaller divisional federations,
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
@@ -269,6 +273,13 @@ impl MetaFederation {
             MetaFederation::ABPU => {
                 entry.tested && MetaFederation::BPU.contains(entry, meets)
             }
+            MetaFederation::AEP => match meet.federation {
+                Federation::AEP => true,
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Spain)
+                }
+                _ => false,
+            },
             MetaFederation::AllBP => {
                 meet.federation == Federation::BAWLA
                     || meet.federation == Federation::BP
