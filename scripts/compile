@@ -492,6 +492,7 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.append_column('BirthDate')
     entriescsv.append_column('BirthYear')
     initial_entriescsv_num_columns = len(entriescsv.fieldnames) - 2
+    initial_fieldnames = entriescsv.fieldnames[:]
 
     meetscsv.append_column('MeetID')
     meetscsv.append_column('MeetPath')
@@ -537,6 +538,17 @@ def main(builddir, meetdir, lifterdir):
     entriescsv.remove_column_by_name('BirthYear')
     entriescsv.remove_column_by_name('BirthDate')
 
+    # If these asserts fail, then new columns have been added.
+    # Check the written files: new columns are at the end.
+    # Columns need to be explicitly added above to be in a known order,
+    # and then scripts/compile-sqlite needs to be notified of the column type.
+    if len(entriescsv.fieldnames) != initial_entriescsv_num_columns:
+        for fieldname in entriescsv.fieldnames:
+            if fieldname not in initial_fieldnames:
+                print("EXTRA FIELDNAME: \"%s\"" % fieldname)
+    assert len(entriescsv.fieldnames) == initial_entriescsv_num_columns
+    assert len(meetscsv.fieldnames) == initial_meetscsv_num_columns
+
     # Construct the lifters.csv.
     build_lifterscsv(lifterdir, builddir)
 
@@ -545,13 +557,6 @@ def main(builddir, meetdir, lifterdir):
 
     entriescsv.write_filename(entriescsvpath)
     meetscsv.write_filename(meetscsvpath)
-
-    # If these asserts fail, then new columns have been added.
-    # Check the written files: new columns are at the end.
-    # Columns need to be explicitly added above to be in a known order,
-    # and then scripts/compile-sqlite needs to be notified of the column type.
-    assert len(entriescsv.fieldnames) == initial_entriescsv_num_columns
-    assert len(meetscsv.fieldnames) == initial_meetscsv_num_columns
 
 
 if __name__ == '__main__':
