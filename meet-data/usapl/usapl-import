@@ -193,7 +193,7 @@ def makeentriescsv(soup):
                 elif 'Male' in s:
                     state_sex = 'M'
 
-        elif k == 20:
+        elif k == 21:
             # This is a results row.
             assert state_event is not None
             assert state_division is not None
@@ -207,21 +207,22 @@ def makeentriescsv(soup):
             birthyear = cells[3].text.strip()
             team = cells[4].text.strip()
             state = cells[5].text.strip()
-            bodyweightkg = cells[6].text.strip()
+            # lot = cells[6].text.strip() # Not used.
+            bodyweightkg = cells[7].text.strip()
 
-            squat1kg = cells[7].text.strip()
-            squat2kg = cells[8].text.strip()
-            squat3kg = cells[9].text.strip()
-            bench1kg = cells[10].text.strip()
-            bench2kg = cells[11].text.strip()
-            bench3kg = cells[12].text.strip()
-            deadlift1kg = cells[13].text.strip()
-            deadlift2kg = cells[14].text.strip()
-            deadlift3kg = cells[15].text.strip()
-            totalkg = cells[16].text.strip()
-            # wilks = cells[17].text.strip() # Not used. Always recalculated.
-            # drugtested = cells[18].text.strip() # Not used.
-            # unknown = cells[19].text.strip() # Not used.
+            squat1kg = cells[8].text.strip()
+            squat2kg = cells[9].text.strip()
+            squat3kg = cells[10].text.strip()
+            bench1kg = cells[11].text.strip()
+            bench2kg = cells[12].text.strip()
+            bench3kg = cells[13].text.strip()
+            deadlift1kg = cells[14].text.strip()
+            deadlift2kg = cells[15].text.strip()
+            deadlift3kg = cells[16].text.strip()
+            totalkg = cells[17].text.strip()
+            # wilks = cells[18].text.strip() # Not used. Always recalculated.
+            # drugtested = cells[19].text.strip() # Not used.
+            # unknown = cells[20].text.strip() # Not used.
 
             row = ['' for x in csv.fieldnames]
             row[csv.index('WeightClassKg')] = weightclasskg
