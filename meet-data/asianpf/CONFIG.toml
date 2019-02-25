@@ -48,3 +48,5 @@
     0701 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
     1002 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
     1201 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
+    1101 = ["ExemptDivision"]
+    0801 = ["ExemptDivision"]
