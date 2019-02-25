@@ -1,5 +1,8 @@
 extern crate opltypes;
 
+mod dots;
+pub use crate::dots::dots;
+
 mod glossbrenner;
 pub use crate::glossbrenner::glossbrenner;
 
