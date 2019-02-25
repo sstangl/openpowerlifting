@@ -29,11 +29,7 @@ URL_NTL_NOV = "http://www.sporty.co.nz/northlandpowerlifting/" \
     "Novice-Competition-results/2018-1"
 URL_OTA = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
 
-URLS_NZPF = ["http://www.nzpowerlifting.co.nz/results/nz-events",
-             "http://www.nzpowerlifting.co.nz/results/national-pl-championship",
-             "http://www.nzpowerlifting.co.nz/results/national-classic-pl-championship",
-             "http://www.nzpowerlifting.co.nz/results/national-bp-championships",
-             "http://www.nzpowerlifting.co.nz/results/northsouth-island"]
+URL_NZPF = "http://www.nzpowerlifting.co.nz/Results-Rankings/National-Results"
 
 
 def error(msg):
@@ -55,6 +51,8 @@ def getmeetlist_sporty(html):
     urls = []
 
     for a in splitter_settings.find_all('a'):
+        if not a.has_attr('data-cke-saved-href'):
+            continue
         url = a['data-cke-saved-href']
 
         if 'sportsground' in url:
@@ -140,10 +138,8 @@ def main():
     # html_CD = oplprobe.gethtml(URL_CD)
     # meetlist_CD = getmeetlist_cd(html_CD)
 
-    meetlist_NZPF = []
-    for url in URLS_NZPF:
-        html_NZPF = oplprobe.gethtml(url)
-        meetlist_NZPF = meetlist_NZPF + getmeetlist_sporty(html_NZPF)
+    html_NZPF = oplprobe.gethtml(URL_NZPF)
+    meetlist_NZPF = getmeetlist_sporty(html_NZPF)
 
     meetlist = meetlist_WBOP + meetlist_AKL + meetlist_NTL + \
         meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV  # + meetlist_CD
@@ -153,6 +149,8 @@ def main():
 
     oplprobe.print_meets(color('[NZPF]'), unentered)
     print(color('[NZPF] ') + 'Check Canterbury Powerlifting Facebook page.')
+    print(color('[NZPF] ') +
+          'Check Central Districts Powerlifting Facebook page.')
 
 
 if __name__ == '__main__':
