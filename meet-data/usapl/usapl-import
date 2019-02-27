@@ -105,6 +105,7 @@ def parsedivision(div):
     # "both M1a and M1b", and it's impossible to distinguish the two.
     s = div
     s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
+    s = s.replace('Teen and Junior', 'TJ')
     s = s.replace('Master', 'M')  # As in "Master 1a"
     s = s.replace('Teen', 'T')  # As in "Teen 1"
     s = s.replace('High School', 'HS')
