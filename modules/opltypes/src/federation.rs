@@ -514,6 +514,10 @@ pub enum Federation {
     #[strum(to_string = "PLZS", serialize = "plzs")]
     PLZS,
 
+    /// Papua New Guinea Powerlifting Federation, IPF.
+    #[strum(to_string = "PNGPF", serialize = "pngpf")]
+    PNGPF,
+
     /// A defunct stand-alone US federation.
     #[strum(to_string = "PRIDE", serialize = "pride")]
     PRIDE,
@@ -994,6 +998,7 @@ impl Federation {
             Federation::PA => true,
             Federation::PAP => true,
             Federation::PLZS => true,
+            Federation::PNGPF => true,
             Federation::PRIDE => false,
             Federation::ProRaw => false,
             Federation::PRPA => false,
@@ -1201,6 +1206,7 @@ impl Federation {
             Federation::PA => Some(Country::Australia),
             Federation::PAP => Some(Country::Philippines),
             Federation::PLZS => Some(Country::Slovenia),
+            Federation::PNGPF => Some(Country::PapuaNewGuinea),
             Federation::PRIDE => Some(Country::USA),
             Federation::ProRaw => Some(Country::Australia),
             Federation::PRPA => Some(Country::USA),
@@ -1419,6 +1425,7 @@ impl Federation {
             Federation::PA => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PLZS => Federation::ipf_rules_on(date),
+            Federation::PNGPF => Federation::ipf_rules_on(date),
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
