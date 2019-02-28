@@ -15,17 +15,31 @@ fn get_parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
     };
 
     const SBD: Event = Event::sbd();
+    const S: Event = Event::s();
     const B: Event = Event::b();
+    const D: Event = Event::d();
 
     match (event, sex, equipment) {
         (SBD, Sex::M, Equipment::Raw) => (310.67, 857.785, 53.216, 147.0835),
         (SBD, Sex::M, Equipment::Single) => (387.265, 1121.28, 80.6324, 222.4896),
         (SBD, Sex::F, Equipment::Raw) => (125.1435, 228.03, 34.5246, 86.8301),
         (SBD, Sex::F, Equipment::Single) => (176.58, 373.315, 48.4534, 110.0103),
+
+        (S, Sex::M, Equipment::Raw) => (123.1000, 363.0850, 25.1667, 75.4311),
+        (S, Sex::M, Equipment::Single) => (150.4850, 446.4450, 36.5155, 103.7061),
+        (S, Sex::F, Equipment::Raw) => (50.4790, 105.6320, 19.1846, 56.2215),
+        (S, Sex::F, Equipment::Single) => (74.6855, 171.5850, 21.9475, 52.2948),
+
         (B, Sex::M, Equipment::Raw) => (86.4745, 259.155, 17.57845, 53.122),
         (B, Sex::M, Equipment::Single) => (133.94, 441.465, 35.3938, 113.0057),
         (B, Sex::F, Equipment::Raw) => (25.0485, 43.848, 6.7172, 13.952),
         (B, Sex::F, Equipment::Single) => (49.106, 124.209, 23.199, 67.492),
+
+        (D, Sex::M, Equipment::Raw) => (103.5355, 244.7650, 15.3714, 31.5022),
+        (D, Sex::M, Equipment::Single) => (110.1350, 263.6600, 14.9960, 23.0110),
+        (D, Sex::F, Equipment::Raw) => (47.1360, 67.3490, 9.1555, 13.6700),
+        (D, Sex::F, Equipment::Single) => (51.0020, 69.8265, 8.5802, 5.7258),
+
         _ => (0.0, 0.0, 0.0, 0.0),
     }
 }
@@ -45,7 +59,7 @@ pub fn ipf(
     let (mean1, mean2, dev1, dev2) = get_parameters(sex, equipment, event);
 
     // Exit early for undefined cases.
-    if mean1 == 0.0 || bodyweight <= WeightKg::from_i32(0) {
+    if mean1 == 0.0 || bodyweight < WeightKg::from_i32(40) {
         return Points::from_i32(0);
     }
 
