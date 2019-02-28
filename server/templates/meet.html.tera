@@ -14,7 +14,7 @@
     const path_if_by_ipfpoints = "{{path_if_by_ipfpoints | safe}}";
     const path_if_by_division = "{{path_if_by_division | safe}}";
   </script>
-  <script src="/static/scripts/{{statics::meet_js()}}"></script>
+  <script defer src="/static/scripts/{{statics::meet_js()}}"></script>
 {% endblock includes %}
 
 {% block controls %}

@@ -25,8 +25,8 @@
     const translation_column_ipfpoints = "{{strings.columns.ipfpoints}}";
   </script>
 
-  <script src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
-  <script src="/static/scripts/{{statics::rankings_js()}}"></script>
+  <script defer src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
+  <script defer src="/static/scripts/{{statics::rankings_js()}}"></script>
 {% endblock includes %}
 
 {% block flexbox_hack %}
