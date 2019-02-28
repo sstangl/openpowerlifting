@@ -248,21 +248,29 @@ IPF_COEFFICIENTS = {
     'M': {
         'Raw': {
             'SBD': [310.67, 857.785, 53.216, 147.0835],
-            'B': [86.4745, 259.155, 17.57845, 53.122]
+            'S': [123.1000, 363.0850, 25.1667, 75.4311],
+            'B': [86.4745, 259.155, 17.57845, 53.122],
+            'D': [103.5355, 244.7650, 15.3714, 31.5022]
         },
         'Single-ply': {
             'SBD': [387.265, 1121.28, 80.6324, 222.4896],
-            'B': [133.94, 441.465, 35.3938, 113.0057]
+            'S': [150.4850, 446.4450, 36.5155, 103.7061],
+            'B': [133.94, 441.465, 35.3938, 113.0057],
+            'D': [110.1350, 263.6600, 14.9960, 23.0110]
         }
     },
     'F': {
         'Raw': {
             'SBD': [125.1435, 228.03, 34.5246, 86.8301],
-            'B': [25.0485, 43.848, 6.7172, 13.952]
+            'S': [50.4790, 105.6320, 19.1846, 56.2215],
+            'B': [25.0485, 43.848, 6.7172, 13.952],
+            'D': [47.1360, 67.3490, 9.1555, 13.6700]
         },
         'Single-ply': {
             'SBD': [176.58, 373.315, 48.4534, 110.0103],
-            'B': [49.106, 124.209, 23.199, 67.492]
+            'S': [74.6855, 171.5850, 21.9475, 52.2948],
+            'B': [49.106, 124.209, 23.199, 67.492],
+            'D': [51.0020, 69.8265, 8.5802, 5.7258]
         }
     }
 }
@@ -271,8 +279,8 @@ IPF_COEFFICIENTS = {
 def ipf(sex, equipment, event, bodyweightKg, totalKg):
     global IPF_COEFFICIENTS
 
-    # Non-positive bodyweight or total is undefined.
-    if bodyweightKg <= 0 or totalKg <= 0:
+    # The IPF set lower bounds beyond which points are undefined.
+    if bodyweightKg < 40 or totalKg <= 0:
         return 0
 
     # Normalize equipment to (Raw, Single-ply).
@@ -284,7 +292,7 @@ def ipf(sex, equipment, event, bodyweightKg, totalKg):
     # The IPF formula is only defined for some parameters.
     if equipment not in ['Raw', 'Single-ply']:
         return 0
-    if event not in ['SBD', 'B']:
+    if event not in ['SBD', 'S', 'B', 'D']:
         return 0
     if sex not in ['M', 'F']:
         return 0
