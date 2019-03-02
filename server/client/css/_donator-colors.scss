@@ -124,6 +124,13 @@
       $umiami-green 56%, $umiami-green);
 }
 
+.green_to_gray {
+  $neongreen: #39ff14;
+  $lightgray: #A1A1A1;
+  @include gradient-prereqs($neongreen);
+  background-image: linear-gradient(to right, $neongreen, $lightgray);
+}
+
 .red_to_white {
   $red: #FB3640;
   $white: #EDF2F4;
