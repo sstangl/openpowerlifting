@@ -110,6 +110,11 @@ pub enum Federation {
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
 
+    /// Australian Powerlifting Federation, IPF.
+    /// PA precursor
+    #[strum(to_string = "AusPF", serialize = "auspf")]
+    AusPF,
+
     /// Australian Powerlifting League, IPL.
     #[strum(to_string = "AusPL", serialize = "auspl")]
     AusPL,
@@ -900,6 +905,7 @@ impl Federation {
             Federation::APU => true,
             Federation::AsianPF => true,
             Federation::AusDFPF => true,
+            Federation::AusPF => false,
             Federation::AusPL => false,
             Federation::BAWLA => true,
             Federation::BB => false,
@@ -1107,6 +1113,7 @@ impl Federation {
             Federation::APU => Some(Country::Australia),
             Federation::AsianPF => None,
             Federation::AusDFPF => Some(Country::Australia),
+            Federation::AusPF => Some(Country::Australia),
             Federation::AusPL => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
@@ -1327,6 +1334,7 @@ impl Federation {
             Federation::APU => PointsSystem::Wilks,
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::Wilks,
+            Federation::AusPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
