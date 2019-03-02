@@ -100,6 +100,12 @@
   background-image: linear-gradient(to right, #507CFF, #EDF2F4);
 }
 
+// Blue, white, and red.
+.iceland {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #005DB5, #EDF2F4, #DD1832);
+}
+
 // Green, white, and orange.
 .ireland {
   $ireland-green: #009A64;
