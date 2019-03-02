@@ -8,6 +8,8 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
+use usernames::make_username;
+
 use crate::check_config::{Config, Exemption, WeightClassConfig};
 use crate::check_meet::Meet;
 use crate::Report;
@@ -93,6 +95,7 @@ impl HeaderIndexMap {
 #[derive(Default, PartialEq)]
 pub struct Entry {
     pub name: String,
+    pub username: String,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -1889,6 +1892,14 @@ where
             line,
             &mut report,
         );
+
+        // Create the username if applicable.
+        if !entry.name.is_empty() {
+            match usernames::make_username(&entry.name) {
+                Ok(username) => entry.username = username,
+                Err(msg) => report.error_on(line, format!("Username error: {}", msg)),
+            }
+        }
     }
 
     Ok(report)

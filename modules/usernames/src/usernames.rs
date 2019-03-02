@@ -37,7 +37,15 @@ fn convert_to_ascii(name: &str) -> Result<String, String> {
                 'ý' | 'ỳ' | 'ỹ' => "y",
                 'ł' => "w",
                 'ž' | 'ż' | 'ź' => "z",
-                _ => return Err(format!("Unknown char type {:?}", letter)),
+                '\u{307}' => "", // A Turkish critical mark.
+                _ => {
+                    return Err(format!(
+                        "Unknown character '{}' ({:?}) in '{}'",
+                        letter,
+                        letter,
+                        name.to_lowercase()
+                    ));
+                }
             });
         }
     }
@@ -47,7 +55,7 @@ fn convert_to_ascii(name: &str) -> Result<String, String> {
 /// Whether the character should be silently omitted.
 fn is_exception(letter: char) -> bool {
     match letter {
-        ' ' | '\\' | '#' | '.' | '-' => true,
+        ' ' | '\\' | '#' | '.' | '-' | '\'' => true,
         _ => false,
     }
 }
