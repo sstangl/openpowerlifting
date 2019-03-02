@@ -81,6 +81,9 @@ impl HeaderIndexMap {
     pub fn get(&self, header: Header) -> Option<usize> {
         self.0[header as usize]
     }
+    pub fn has(&self, header: Header) -> bool {
+        self.0[header as usize].is_some()
+    }
 }
 
 /// Stores parsed data for a single row.
@@ -246,15 +249,15 @@ fn check_headers(
 ) -> HeaderIndexMap {
     // Build a map of (Header -> index).
     let known_header_count = Header::iter().count();
-    let mut header_index_map: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
+    let mut header_index_vec: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
     for _ in 0..known_header_count {
-        header_index_map.push(None);
+        header_index_vec.push(None);
     }
 
     // There must be headers.
     if headers.is_empty() {
         report.error("Missing column headers");
-        return HeaderIndexMap(header_index_map);
+        return HeaderIndexMap(header_index_vec);
     }
 
     let mut has_squat = false;
@@ -262,15 +265,16 @@ fn check_headers(
     let mut has_deadlift = false;
 
     for (i, header) in headers.iter().enumerate() {
-        // Every header must be known. Build the header_index_map.
+        // Every header must be known. Build the header_index_vec.
         match header.parse::<Header>() {
-            Ok(known) => header_index_map[known as usize] = Some(i),
+            Ok(known) => {
+                // Error on duplicate headers.
+                if header_index_vec[known as usize].is_some() {
+                    report.error(format!("Duplicate header '{}'", header));
+                }
+                header_index_vec[known as usize] = Some(i)
+            }
             Err(_) => report.error(format!("Unknown header '{}'", header)),
-        }
-
-        // Test for duplicate headers.
-        if headers.iter().skip(i + 1).any(|x| x == header) {
-            report.error(format!("Duplicate header '{}'", header));
         }
 
         has_squat = has_squat || header.contains("Squat");
@@ -278,40 +282,39 @@ fn check_headers(
         has_deadlift = has_deadlift || header.contains("Deadlift");
     }
 
+    let header_map = HeaderIndexMap(header_index_vec);
+
     // If there is data for a particular lift, there must be a 'Best' column.
-    if has_squat && !headers.iter().any(|x| x == "Best3SquatKg") {
+    if has_squat && !header_map.has(Header::Best3SquatKg) {
         report.error("Squat data requires a 'Best3SquatKg' column");
     }
-    if has_bench && !headers.iter().any(|x| x == "Best3BenchKg") {
+    if has_bench && !header_map.has(Header::Best3BenchKg) {
         report.error("Bench data requires a 'Best3BenchKg' column");
     }
-    if has_deadlift && !headers.iter().any(|x| x == "Best3DeadliftKg") {
+    if has_deadlift && !header_map.has(Header::Best3DeadliftKg) {
         report.error("Deadlift data requires a 'Best3DeadliftKg' column");
     }
 
     // Test for mandatory columns.
-    if !headers.iter().any(|x| x == "Name") {
+    if !header_map.has(Header::Name) {
         report.error("There must be a 'Name' column");
     }
-    if !headers
-        .iter()
-        .any(|x| x == "BodyweightKg" || x == "WeightClassKg")
-    {
+    if !header_map.has(Header::WeightClassKg) && !header_map.has(Header::BodyweightKg) {
         report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
     }
-    if !headers.iter().any(|x| x == "Sex") {
+    if !header_map.has(Header::Sex) {
         report.error("There must be a 'Sex' column");
     }
-    if !headers.iter().any(|x| x == "Equipment") {
+    if !header_map.has(Header::Equipment) {
         report.error("There must be an 'Equipment' column");
     }
-    if !headers.iter().any(|x| x == "TotalKg") {
+    if !header_map.has(Header::TotalKg) {
         report.error("There must be a 'TotalKg' column");
     }
-    if !headers.iter().any(|x| x == "Place") {
+    if !header_map.has(Header::Place) {
         report.error("There must be a 'Place' column");
     }
-    if !headers.iter().any(|x| x == "Event") {
+    if !header_map.has(Header::Event) {
         report.error("There must be an 'Event' column");
     }
 
@@ -319,12 +322,12 @@ fn check_headers(
     // and therefore must have a "Division" column.
     if let Some(config) = config {
         // But only if the configuration file actually specifies divisions!
-        if !headers.iter().any(|x| x == "Division") && !config.divisions.is_empty() {
+        if !header_map.has(Header::Division) && !config.divisions.is_empty() {
             report.error("Configured federations require a 'Division' column");
         }
     }
 
-    HeaderIndexMap(header_index_map)
+    header_map
 }
 
 fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
