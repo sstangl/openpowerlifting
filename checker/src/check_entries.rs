@@ -704,13 +704,13 @@ fn check_column_event(
 ) -> Event {
     match s.parse::<Event>() {
         Ok(event) => {
-            if event.has_squat() && headers.get(Header::Best3SquatKg).is_none() {
+            if event.has_squat() && !headers.has(Header::Best3SquatKg) {
                 report.error_on(line, "Event has 'S', but no Best3SquatKg");
             }
-            if event.has_bench() && headers.get(Header::Best3BenchKg).is_none() {
+            if event.has_bench() && !headers.has(Header::Best3BenchKg) {
                 report.error_on(line, "Event has 'B', but no Best3BenchKg");
             }
-            if event.has_deadlift() && headers.get(Header::Best3DeadliftKg).is_none() {
+            if event.has_deadlift() && !headers.has(Header::Best3DeadliftKg) {
                 report.error_on(line, "Event has 'D', but no Best3DeadliftKg");
             }
             event
