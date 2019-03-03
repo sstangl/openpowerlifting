@@ -459,6 +459,10 @@ pub enum Federation {
     #[strum(to_string = "NASA", serialize = "nasa")]
     NASA,
 
+    /// Nauru Powerlifting Federation, IPF.
+    #[strum(to_string = "NauruPF", serialize = "naurupf")]
+    NauruPF,
+
     /// Northern Ireland Powerlifting Federation.
     #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
@@ -989,6 +993,7 @@ impl Federation {
             Federation::NAP => false,
             Federation::NAPF => true,
             Federation::NASA => true,
+            Federation::NauruPF => true,
             Federation::NIPF => true,
             Federation::NORCAL => true,
             Federation::NordicPF => true,
@@ -1198,6 +1203,7 @@ impl Federation {
             Federation::NAP => Some(Country::Russia),
             Federation::NAPF => None,
             Federation::NASA => Some(Country::USA),
+            Federation::NauruPF => Some(Country::Nauru),
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
@@ -1418,6 +1424,7 @@ impl Federation {
             Federation::NAP => PointsSystem::Wilks,
             Federation::NAPF => Federation::ipf_rules_on(date),
             Federation::NASA => PointsSystem::Wilks,
+            Federation::NauruPF => Federation::ipf_rules_on(date),
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
