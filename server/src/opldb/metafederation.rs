@@ -18,12 +18,12 @@ use crate::opldb::{Entry, Meet};
 )]
 pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
-    #[strum(to_string = "all-tested")]
-    AllTested,
+    #[strum(to_string = "fully-tested")]
+    FullyTested,
 
     /// All entries that have "Tested = Yes".
-    #[strum(to_string = "all-amateur")]
-    AllAmateur,
+    #[strum(to_string = "all-tested")]
+    AllTested,
 
     #[strum(to_string = "all-argentina")]
     AllArgentina,
@@ -139,12 +139,12 @@ impl MetaFederation {
         let meet: &Meet = &meets[entry.meet_id as usize];
 
         match self {
-            MetaFederation::AllTested => {
+            MetaFederation::FullyTested => {
                 // Still check entry.tested: some fully-tested federations
                 // existed before drug-testing was available.
                 entry.tested && meet.federation.is_fully_tested()
             }
-            MetaFederation::AllAmateur => entry.tested,
+            MetaFederation::AllTested => entry.tested,
             MetaFederation::AllArgentina => {
                 entry.lifter_country == Some(Country::Argentina)
                     || (entry.lifter_country == None

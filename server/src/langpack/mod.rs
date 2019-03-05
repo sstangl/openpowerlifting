@@ -457,8 +457,8 @@ pub struct EventSelectorTranslations {
 #[derive(Serialize, Deserialize)]
 pub struct FedSelectorTranslations {
     pub all: String,
+    pub fully_tested: String,
     pub all_tested: String,
-    pub all_amateur: String,
     pub international: String,
     pub regional: String,
     pub all_usa: String,
