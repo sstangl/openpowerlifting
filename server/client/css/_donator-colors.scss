@@ -123,11 +123,18 @@
 .umiami {
   $umiami-orange: #F47321; // Their exact orange.
   $umiami-green: #009f5f; // A little lighter than their green, to be readable.
-  @include gradient-prereqs(#F47321);
+  @include gradient-prereqs($umiami-orange);
   background-image:
     linear-gradient(to right,
       $umiami-orange, $umiami-orange 55%, // Customized for "Stefanie Cohen".
       $umiami-green 56%, $umiami-green);
+}
+
+.blue_to_gold {
+  $blue: #507CFF;
+  $gold: #FFD700;
+  @include gradient-prereqs($gold);
+  background-image: linear-gradient(to right, $blue, $gold);
 }
 
 .green_to_gray {
