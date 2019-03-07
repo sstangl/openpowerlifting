@@ -21,11 +21,12 @@ except ImportError:
 # URL needs updating every year.
 # Also be careful to check if there are any result links that don't contain
 # the string "results", since they won't get picked up by the script below.
-if datetime.datetime.now().strftime("%Y") != "2018":
+if datetime.datetime.now().strftime("%Y") != "2019":
     print("Warning: APA fetch URL needs updating for new year.", file=sys.stderr)
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 URLS = [
+    "http://www.apa-wpa.com/APA/us-meet-results/2019-2/",
     "http://www.apa-wpa.com/APA/us-meet-results/2018-2/",
     "http://www.apa-wpa.com/APA/us-meet-results/2017-2/"
 ]
