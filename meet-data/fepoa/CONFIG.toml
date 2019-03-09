@@ -1,0 +1,59 @@
+[divisions]
+    mo = {name ="MO",min=0,max=999,sex="M"}
+    mj = {name ="MJ",min=20,max=23,sex="M"}
+    mt1 = {name ="MT1",min=13,max=15,sex="M"}
+    mt2 = {name ="MT2",min=16,max=17,sex="M"}
+    mt3 = {name ="MT3",min=18,max=19,sex="M"}
+    m1 = {name ="M1",min=40,max=44,sex="M"}
+    m2 = {name ="M2",min=45,max=49,sex="M"}
+    m3 = {name ="M3",min=50,max=54,sex="M"}
+    m4 = {name ="M4",min=55,max=59,sex="M"}
+    m5 = {name ="M5",min=60,max=64,sex="M"}
+    m6 = {name ="M6",min=65,max=69,sex="M"}
+    m7 = {name ="M7",min=70,max=74,sex="M"}
+    m8 = {name ="M8",min=75,max=79,sex="M"}
+    m9 = {name ="M9",min=80,max=999,sex="M"}
+    msm = {name ="MSM",min=33,max=39,sex="M"}
+
+    fo = {name ="FO",min=0,max=999,sex="F"}
+    fj = {name ="FJ",min=20,max=23,sex="F"}
+    ft1 = {name ="FT1",min=13,max=15,sex="F"}
+    ft2 = {name ="FT2",min=16,max=17,sex="F"}
+    ft3 = {name ="FT3",min=18,max=19,sex="F"}
+    f1 = {name ="F1",min=40,max=44,sex="F"}
+    f2 = {name ="F2",min=45,max=49,sex="F"}
+    f3 = {name ="F3",min=50,max=54,sex="F"}
+    f4 = {name ="F4",min=55,max=59,sex="F"}
+    f5 = {name ="F5",min=60,max=64,sex="F"}
+    f6 = {name ="F6",min=65,max=69,sex="F"}
+    f7 = {name ="F7",min=70,max=74,sex="F"}
+    f8 = {name ="F8",min=75,max=79,sex="F"}
+    f9 = {name ="F9",min=80,max=999,sex="F"}
+    fsm = {name ="FSM",min=33,max=39,sex="F"}
+
+    #Especial - Special Olympics maybe?
+    mes = {name ="MES",min=0,max=999,sex="M"} 
+    fes = {name ="FES",min=0,max=999,sex="F"} 
+
+
+[weightclasses.default_M]
+    classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
+    date_range = ["2016-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","110","110+"]
+    date_range = ["2016-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2015-12-31"]
+    sex = "F"
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
+    date_range = ["0000-01-01","2015-12-31"]
+    sex = "M"
+
+[exemptions]

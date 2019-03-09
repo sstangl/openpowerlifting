@@ -86,7 +86,7 @@
 </optgroup>
 <optgroup label="{{strings.country.argentina}}">
   <option value="all-argentina" {% if selection.federation == "AllArgentina" %}selected{% endif %}>{{strings.selectors.fed.all_argentina}}</option>
-  <option value="aap" {% if selection.federation == "AAP" %}selected{% endif %}>AAP - Alianza Argentina Powerlifting [GPA/IPO]</option>
+  <option value="aap" {% if selection.federation == "AAP" %}selected{% endif %}>AAP - Alianza Argentina Powerlifting [GPA/IPO/WRPF]</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO - Federación Argentina de Levantamiento de Potencia [IPF]</option>
   <option value="fepoa" {% if selection.federation == "FEPOA" %}selected{% endif %}>FEPOA - Federación de Powerlifting Argentino [GPC]</option>
 </optgroup>
