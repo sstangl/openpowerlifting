@@ -1465,7 +1465,7 @@ fn check_division_age_consistency(
         if approx_age.is_definitely_less_than(entry.age)
             || approx_age.is_definitely_greater_than(entry.age)
         {
-            report.warning_on(
+            report.error_on(
                 line,
                 format!(
                     "Age '{}' doesn't match BirthYear '{}', expected '{}'",
@@ -1477,7 +1477,7 @@ fn check_division_age_consistency(
         // Pairwise check BirthYear and BirthDate.
         if let Some(birthdate) = entry.birthdate {
             if birthdate.year() != birthyear {
-                report.warning_on(
+                report.error_on(
                     line,
                     format!(
                         "BirthDate '{}' doesn't match BirthYear '{}'",
@@ -1552,7 +1552,7 @@ fn check_division_age_consistency(
     let age = entry.age_on(meet_date);
 
     if age.is_definitely_less_than(min_age) {
-        report.warning_on(
+        report.error_on(
             line,
             format!(
                 "Calculated Age {} too young for division '{}': min age {}",
@@ -1562,7 +1562,7 @@ fn check_division_age_consistency(
     }
 
     if age.is_definitely_greater_than(max_age) {
-        report.warning_on(
+        report.error_on(
             line,
             format!(
                 "Calculated Age {} too old for division '{}': max age {}",
