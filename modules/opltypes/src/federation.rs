@@ -953,7 +953,7 @@ impl Federation {
             Federation::FESUPO => true,
             Federation::FFForce => true,
             Federation::FHSAA => true,
-            Federation::FIPL => false,
+            Federation::FIPL => true,
             Federation::FPO => false,
             Federation::FPR => true,
             Federation::GPA => false,
