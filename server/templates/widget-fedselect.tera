@@ -191,6 +191,9 @@
   <option value="ipc" {% if selection.federation == "IPC" %}selected{% endif %}>IPC - Israel Powerlifting Community [IPO]</option>
   <option value="npa" {% if selection.federation == "NPA" %}selected{% endif %}>NPA - National Powerlifting Association of Israel</option>
 </optgroup>
+<optgroup label="{{strings.country.italy}}">
+  <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL - Federazione Italiana Powerlifting [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.japan}}">
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
 </optgroup>
