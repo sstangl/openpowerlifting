@@ -23,8 +23,8 @@
     <option value="55-59" {% if selection.ageclass == "Masters5559" %}selected{% endif %}>Masters 55-59</option>
     <option value="60-64" {% if selection.ageclass == "Masters6064" %}selected{% endif %}>Masters 60-64</option>
     <option value="65-69" {% if selection.ageclass == "Masters6569" %}selected{% endif %}>Masters 65-69</option>
-    <option value="70-74" {% if selection.ageclass == "Masters7074" %}selected{% endif %}>Masters 70-74</option>
   -->
+    <option value="70-74" {% if selection.ageclass == "Masters7074" %}selected{% endif %}>Masters 70-74</option>
     <option value="75-79" {% if selection.ageclass == "Masters7579" %}selected{% endif %}>Masters 75-79</option>
   </optgroup>
   <option value="over80" {% if selection.ageclass == "MastersOver80" %}selected{% endif %}>Masters 80+</option>
