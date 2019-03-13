@@ -412,6 +412,8 @@ pub struct WeightClassSelectorTranslations {
     pub traditional: String,
     pub ipfmen: String,
     pub ipfwomen: String,
+    pub para_men: String,
+    pub para_women: String,
     pub wp_men: String,
     pub wp_women: String,
 }

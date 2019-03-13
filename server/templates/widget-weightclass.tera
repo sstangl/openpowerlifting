@@ -38,6 +38,30 @@
     <option value="ipf84"{% if selection.weightclasses == "IpfF84" %} selected{% endif %}>{% if units == "Kg" %}-84{% else %}-185{% endif %}</option>
     <option value="ipfover84"{% if selection.weightclasses == "IpfFOver84" %} selected{% endif %}>{% if units == "Kg" %}84+{% else %}185+{% endif %}</option>
   </optgroup>
+  <optgroup label="{{strings.selectors.weightclass.para_men}}">
+    <option value="para49"{% if selection.weightclasses == "ParaM49" %} selected{% endif %}>{% if units == "Kg" %}-49{% else %}-108{% endif %}</option>
+    <option value="para54"{% if selection.weightclasses == "ParaM54" %} selected{% endif %}>{% if units == "Kg" %}-54{% else %}-119{% endif %}</option>
+    <option value="para59"{% if selection.weightclasses == "ParaM59" %} selected{% endif %}>{% if units == "Kg" %}-59{% else %}-130{% endif %}</option>
+    <option value="para65"{% if selection.weightclasses == "ParaM65" %} selected{% endif %}>{% if units == "Kg" %}-65{% else %}-143{% endif %}</option>
+    <option value="para72"{% if selection.weightclasses == "ParaM72" %} selected{% endif %}>{% if units == "Kg" %}-72{% else %}-159{% endif %}</option>
+    <option value="para80"{% if selection.weightclasses == "ParaM80" %} selected{% endif %}>{% if units == "Kg" %}-80{% else %}-176{% endif %}</option>
+    <option value="para88"{% if selection.weightclasses == "ParaM88" %} selected{% endif %}>{% if units == "Kg" %}-88{% else %}-194{% endif %}</option>
+    <option value="para97"{% if selection.weightclasses == "ParaM97" %} selected{% endif %}>{% if units == "Kg" %}-97{% else %}-214{% endif %}</option>
+    <option value="para107"{% if selection.weightclasses == "ParaM107" %} selected{% endif %}>{% if units == "Kg" %}-107{% else %}-236{% endif %}</option>
+    <option value="paraover107"{% if selection.weightclasses == "ParaMOver107" %} selected{% endif %}>{% if units == "Kg" %}107+{% else %}236+{% endif %}</option>
+  </optgroup>
+  <optgroup label="{{strings.selectors.weightclass.para_women}}">
+    <option value="para41"{% if selection.weightclasses == "ParaF41" %} selected{% endif %}>{% if units == "Kg" %}-41{% else %}-90{% endif %}</option>
+    <option value="para45"{% if selection.weightclasses == "ParaF45" %} selected{% endif %}>{% if units == "Kg" %}-45{% else %}-99{% endif %}</option>
+    <option value="para50"{% if selection.weightclasses == "ParaF50" %} selected{% endif %}>{% if units == "Kg" %}-50{% else %}-110{% endif %}</option>
+    <option value="para55"{% if selection.weightclasses == "ParaF55" %} selected{% endif %}>{% if units == "Kg" %}-55{% else %}-121{% endif %}</option>
+    <option value="para61"{% if selection.weightclasses == "ParaF61" %} selected{% endif %}>{% if units == "Kg" %}-61{% else %}-134{% endif %}</option>
+    <option value="para67"{% if selection.weightclasses == "ParaF67" %} selected{% endif %}>{% if units == "Kg" %}-67{% else %}-148{% endif %}</option>
+    <option value="para73"{% if selection.weightclasses == "ParaF73" %} selected{% endif %}>{% if units == "Kg" %}-73{% else %}-161{% endif %}</option>
+    <option value="para79"{% if selection.weightclasses == "ParaF79" %} selected{% endif %}>{% if units == "Kg" %}-79{% else %}-174{% endif %}</option>
+    <option value="para86"{% if selection.weightclasses == "ParaF86" %} selected{% endif %}>{% if units == "Kg" %}-86{% else %}-190{% endif %}</option>
+    <option value="paraover86"{% if selection.weightclasses == "ParaFOver86" %} selected{% endif %}>{% if units == "Kg" %}86+{% else %}190+{% endif %}</option>
+  </optgroup>
   <optgroup label="{{strings.selectors.weightclass.wp_men}}">
     <option value="wp62"{% if selection.weightclasses == "WpM62" %} selected{% endif %}>{% if units == "Kg" %}-62{% else %}-136{% endif %}</option>
     <option value="wp69"{% if selection.weightclasses == "WpM69" %} selected{% endif %}>{% if units == "Kg" %}-69{% else %}-152{% endif %}</option>

@@ -243,6 +243,30 @@ pub enum WeightClassSelection {
     IpfF84,
     IpfFOver84,
 
+    // Para Men.
+    ParaM49,
+    ParaM54,
+    ParaM59,
+    ParaM65,
+    ParaM72,
+    ParaM80,
+    ParaM88,
+    ParaM97,
+    ParaM107,
+    ParaMOver107,
+
+    // Para Women.
+    ParaF41,
+    ParaF45,
+    ParaF50,
+    ParaF55,
+    ParaF61,
+    ParaF67,
+    ParaF73,
+    ParaF79,
+    ParaF86,
+    ParaFOver86,
+
     // WP Men.
     WpM62,
     WpM69,
@@ -317,6 +341,28 @@ impl WeightClassSelection {
             WeightClassSelection::IpfF72 => make_bounds(63.0, 72.0),
             WeightClassSelection::IpfF84 => make_bounds(72.0, 84.0),
             WeightClassSelection::IpfFOver84 => make_bound_over(84.0),
+
+            WeightClassSelection::ParaM49 => make_bounds(0.0, 49.0),
+            WeightClassSelection::ParaM54 => make_bounds(49.0, 54.0),
+            WeightClassSelection::ParaM59 => make_bounds(54.0, 59.0),
+            WeightClassSelection::ParaM65 => make_bounds(59.0, 65.0),
+            WeightClassSelection::ParaM72 => make_bounds(65.0, 72.0),
+            WeightClassSelection::ParaM80 => make_bounds(72.0, 80.0),
+            WeightClassSelection::ParaM88 => make_bounds(80.0, 88.0),
+            WeightClassSelection::ParaM97 => make_bounds(88.0, 97.0),
+            WeightClassSelection::ParaM107 => make_bounds(97.0, 107.0),
+            WeightClassSelection::ParaMOver107 => make_bound_over(107.0),
+
+            WeightClassSelection::ParaF41 => make_bounds(0.0, 41.0),
+            WeightClassSelection::ParaF45 => make_bounds(41.0, 45.0),
+            WeightClassSelection::ParaF50 => make_bounds(45.0, 50.0),
+            WeightClassSelection::ParaF55 => make_bounds(50.0, 55.0),
+            WeightClassSelection::ParaF61 => make_bounds(55.0, 61.0),
+            WeightClassSelection::ParaF67 => make_bounds(61.0, 67.0),
+            WeightClassSelection::ParaF73 => make_bounds(67.0, 73.0),
+            WeightClassSelection::ParaF79 => make_bounds(73.0, 79.0),
+            WeightClassSelection::ParaF86 => make_bounds(79.0, 86.0),
+            WeightClassSelection::ParaFOver86 => make_bound_over(86.0),
 
             WeightClassSelection::WpM62 => make_bounds(0.0, 62.0),
             WeightClassSelection::WpM69 => make_bounds(62.0, 69.0),
@@ -442,6 +488,68 @@ impl WeightClassSelection {
                 WeightClassKg::Over(WeightKg::from_i32(84))
             }
 
+            WeightClassSelection::ParaM49 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(49))
+            }
+            WeightClassSelection::ParaM54 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(54))
+            }
+            WeightClassSelection::ParaM59 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(59))
+            }
+            WeightClassSelection::ParaM65 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(65))
+            }
+            WeightClassSelection::ParaM72 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(72))
+            }
+            WeightClassSelection::ParaM80 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(80))
+            }
+            WeightClassSelection::ParaM88 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(88))
+            }
+            WeightClassSelection::ParaM97 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(97))
+            }
+            WeightClassSelection::ParaM107 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(107))
+            }
+            WeightClassSelection::ParaMOver107 => {
+                WeightClassKg::Over(WeightKg::from_i32(107))
+            }
+
+            WeightClassSelection::ParaF41 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(41))
+            }
+            WeightClassSelection::ParaF45 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(45))
+            }
+            WeightClassSelection::ParaF50 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(50))
+            }
+            WeightClassSelection::ParaF55 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(55))
+            }
+            WeightClassSelection::ParaF61 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(61))
+            }
+            WeightClassSelection::ParaF67 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(67))
+            }
+            WeightClassSelection::ParaF73 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(73))
+            }
+            WeightClassSelection::ParaF79 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(79))
+            }
+            WeightClassSelection::ParaF86 => {
+                WeightClassKg::UnderOrEqual(WeightKg::from_i32(86))
+            }
+            WeightClassSelection::ParaFOver86 => {
+                WeightClassKg::Over(WeightKg::from_i32(86))
+            }
+
             WeightClassSelection::WpM62 => {
                 WeightClassKg::UnderOrEqual(WeightKg::from_i32(62))
             }
@@ -534,6 +642,28 @@ impl FromStr for WeightClassSelection {
             "ipf72" => Ok(WeightClassSelection::IpfF72),
             "ipf84" => Ok(WeightClassSelection::IpfF84),
             "ipfover84" => Ok(WeightClassSelection::IpfFOver84),
+
+            "para49" => Ok(WeightClassSelection::ParaM49),
+            "para54" => Ok(WeightClassSelection::ParaM54),
+            "para59" => Ok(WeightClassSelection::ParaM59),
+            "para65" => Ok(WeightClassSelection::ParaM65),
+            "para72" => Ok(WeightClassSelection::ParaM72),
+            "para80" => Ok(WeightClassSelection::ParaM80),
+            "para88" => Ok(WeightClassSelection::ParaM88),
+            "para97" => Ok(WeightClassSelection::ParaM97),
+            "para107" => Ok(WeightClassSelection::ParaM107),
+            "paraover107" => Ok(WeightClassSelection::ParaMOver107),
+
+            "para41" => Ok(WeightClassSelection::ParaF41),
+            "para45" => Ok(WeightClassSelection::ParaF45),
+            "para50" => Ok(WeightClassSelection::ParaF50),
+            "para55" => Ok(WeightClassSelection::ParaF55),
+            "para61" => Ok(WeightClassSelection::ParaF61),
+            "para67" => Ok(WeightClassSelection::ParaF67),
+            "para73" => Ok(WeightClassSelection::ParaF73),
+            "para79" => Ok(WeightClassSelection::ParaF79),
+            "para86" => Ok(WeightClassSelection::ParaF86),
+            "paraover86" => Ok(WeightClassSelection::ParaFOver86),
 
             "wp62" => Ok(WeightClassSelection::WpM62),
             "wp69" => Ok(WeightClassSelection::WpM69),

@@ -134,6 +134,7 @@ impl RecordsSelection {
 pub enum ClassKindSelection {
     Traditional,
     IPF,
+    Para,
     WP,
 }
 
@@ -144,6 +145,7 @@ impl FromStr for ClassKindSelection {
         match s {
             // No parsing for Traditional: it's the default.
             "ipf-classes" => Ok(ClassKindSelection::IPF),
+            "para-classes" => Ok(ClassKindSelection::Para),
             "wp-classes" => Ok(ClassKindSelection::WP),
             _ => Err(()),
         }
@@ -386,6 +388,37 @@ fn make_collectors<'db>(
                     WeightClassSelection::IpfF72,
                     WeightClassSelection::IpfF84,
                     WeightClassSelection::IpfFOver84,
+                ]
+            }
+        }
+
+        // Para Powerlifting classes.
+        ClassKindSelection::Para => {
+            if sex == SexSelection::Men {
+                vec![
+                    WeightClassSelection::ParaM49,
+                    WeightClassSelection::ParaM54,
+                    WeightClassSelection::ParaM59,
+                    WeightClassSelection::ParaM65,
+                    WeightClassSelection::ParaM72,
+                    WeightClassSelection::ParaM80,
+                    WeightClassSelection::ParaM88,
+                    WeightClassSelection::ParaM97,
+                    WeightClassSelection::ParaM107,
+                    WeightClassSelection::ParaMOver107,
+                ]
+            } else {
+                vec![
+                    WeightClassSelection::ParaF41,
+                    WeightClassSelection::ParaF45,
+                    WeightClassSelection::ParaF50,
+                    WeightClassSelection::ParaF55,
+                    WeightClassSelection::ParaF61,
+                    WeightClassSelection::ParaF67,
+                    WeightClassSelection::ParaF73,
+                    WeightClassSelection::ParaF79,
+                    WeightClassSelection::ParaF86,
+                    WeightClassSelection::ParaFOver86,
                 ]
             }
         }
