@@ -137,6 +137,13 @@
   background-image: linear-gradient(to right, $blue, $gold);
 }
 
+.blue_to_yellow {
+  $blue: #507CFF;
+  $yellow: #FFFC00;
+  @include gradient-prereqs($blue);
+  background-image: linear-gradient(to right, $blue, $yellow);
+}
+
 .green_to_gray {
   $neongreen: #39ff14;
   $lightgray: #A1A1A1;
