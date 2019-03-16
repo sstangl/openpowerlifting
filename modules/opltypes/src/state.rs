@@ -1,11 +1,12 @@
 //! Defines valid entries in the MeetState column.
 
+use serde::ser::Serialize;
 use strum::ParseError;
 
 use crate::Country;
 
 /// The State column.
-#[derive(Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
@@ -46,16 +47,36 @@ impl State {
     }
 }
 
+impl Serialize for State {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match self {
+            State::InAustralia(s) => s.serialize(serializer),
+            State::InBrazil(s) => s.serialize(serializer),
+            State::InCanada(s) => s.serialize(serializer),
+            State::InGermany(s) => s.serialize(serializer),
+            State::InIndia(s) => s.serialize(serializer),
+            State::InMexico(s) => s.serialize(serializer),
+            State::InNetherlands(s) => s.serialize(serializer),
+            State::InNewZealand(s) => s.serialize(serializer),
+            State::InRussia(s) => s.serialize(serializer),
+            State::InUSA(s) => s.serialize(serializer),
+        }
+    }
+}
+
 /// A state in Australia.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum AustraliaState {
     ACT, NSW, NT, QLD, SA, TAS, VIC, WA
 }
 
 /// A state in Brazil.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum BrazilState {
     AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
     PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
@@ -63,21 +84,21 @@ pub enum BrazilState {
 
 /// A state in Canada.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
 
 /// A state in Germany.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum GermanyState {
     BW, BY, BE, BB, HB, HE, HH, MV, NI, NW, RP, SH, SL, SN, ST, TH
 }
 
 /// A state in India.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum IndiaState {
     AP, AR, AS, BR, CG, GA, GJ, HR, HP, JK, JH, KA,
     KL, MP, MH, MN, ML, MZ, NL, OR, PB, RJ, SK, TN,
@@ -86,7 +107,7 @@ pub enum IndiaState {
 
 /// A state in Mexico.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum MexicoState {
     AG, BC, BS, CM, CS, CH, CO, CL, DF, DG, GT,
     GR, HG, JA, EM, MI, MO, NA, NL, OA, PU, QT,
@@ -95,7 +116,7 @@ pub enum MexicoState {
 
 /// A state in the Netherlands
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum NetherlandsState {
     DR, FL, FR, GE, GR, LI, NB, NH, OV, UT, ZE,
     ZH
@@ -103,7 +124,7 @@ pub enum NetherlandsState {
 
 /// A state in New Zealand.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
     TAS, NSN, MBH, WTC, CAN, OTA, STL
@@ -111,7 +132,7 @@ pub enum NewZealandState {
 
 /// A state in Russia.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum RussiaState {
     AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
     SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRO, STA, ZAB, AMU, ARK,
@@ -123,7 +144,7 @@ pub enum RussiaState {
 
 /// A state in the USA.
 #[rustfmt::skip]
-#[derive(Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum USAState {
     AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,
     KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC,
