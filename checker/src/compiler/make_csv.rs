@@ -5,8 +5,8 @@ use opltypes::*;
 
 use std::path::Path;
 
-use crate::MeetData;
 use crate::checklib::Meet;
+use crate::MeetData;
 
 /// Serialization source for the meets.csv.
 /// The MeetData continues as the backing store.

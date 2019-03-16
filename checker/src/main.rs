@@ -169,7 +169,7 @@ fn main() -> Result<(), Box<Error>> {
             clap::Arg::with_name("compile")
                 .short("c")
                 .long("compile")
-                .help("Compiles the database into build/*.csv")
+                .help("Compiles the database into build/*.csv"),
         )
         .arg(
             clap::Arg::with_name("PATH")
@@ -226,66 +226,69 @@ fn main() -> Result<(), Box<Error>> {
     let internal_error_count = AtomicUsize::new(0);
 
     // Iterate in parallel over each meet directory and apply checks.
-    let meetdata: Vec<MeetData> = meetdirs.into_par_iter().filter_map(|dir| {
-        // Determine the appropriate Config for this meet.
-        let feddir = dir
-            .path()
-            .parent()
-            .and_then(|p| p.file_name())
-            .and_then(|f| f.to_str())
-            .unwrap();
-        let config = configmap.get(feddir);
+    let meetdata: Vec<MeetData> = meetdirs
+        .into_par_iter()
+        .filter_map(|dir| {
+            // Determine the appropriate Config for this meet.
+            let feddir = dir
+                .path()
+                .parent()
+                .and_then(|p| p.file_name())
+                .and_then(|f| f.to_str())
+                .unwrap();
+            let config = configmap.get(feddir);
 
-        // Check the meet.
-        match checker::check(dir.path(), config) {
-            Ok(checkresult) => {
-                let reports = checkresult.reports;
-                // Count how many new errors and warnings were generated.
-                let mut local_errors = 0;
-                let mut local_warnings = 0;
-                for report in &reports {
-                    let (errors, warnings) = report.count_messages();
-                    local_errors += errors;
-                    local_warnings += warnings;
-                }
+            // Check the meet.
+            match checker::check(dir.path(), config) {
+                Ok(checkresult) => {
+                    let reports = checkresult.reports;
+                    // Count how many new errors and warnings were generated.
+                    let mut local_errors = 0;
+                    let mut local_warnings = 0;
+                    for report in &reports {
+                        let (errors, warnings) = report.count_messages();
+                        local_errors += errors;
+                        local_warnings += warnings;
+                    }
 
-                // Update the global error and warning counts.
-                if local_errors > 0 {
-                    error_count.fetch_add(local_errors, Ordering::SeqCst);
-                }
-                if local_warnings > 0 {
-                    warning_count.fetch_add(local_warnings, Ordering::SeqCst);
-                }
+                    // Update the global error and warning counts.
+                    if local_errors > 0 {
+                        error_count.fetch_add(local_errors, Ordering::SeqCst);
+                    }
+                    if local_warnings > 0 {
+                        warning_count.fetch_add(local_warnings, Ordering::SeqCst);
+                    }
 
-                // Emit reports all together.
-                if local_errors > 0 || local_warnings > 0 {
-                    let stdout = io::stdout();
-                    let mut handle = stdout.lock();
-                    for report in reports {
-                        write_report(&mut handle, report);
+                    // Emit reports all together.
+                    if local_errors > 0 || local_warnings > 0 {
+                        let stdout = io::stdout();
+                        let mut handle = stdout.lock();
+                        for report in reports {
+                            write_report(&mut handle, report);
+                        }
+                    }
+
+                    // Map to the MeetData for collection.
+                    match (checkresult.meet, checkresult.entries) {
+                        (Some(meet), Some(entries)) => Some(MeetData { meet, entries }),
+                        _ => None,
                     }
                 }
-
-                // Map to the MeetData for collection.
-                match (checkresult.meet, checkresult.entries) {
-                    (Some(meet), Some(entries)) => Some(MeetData { meet, entries }),
-                    _ => None
+                Err(e) => {
+                    internal_error_count.fetch_add(1, Ordering::SeqCst);
+                    let stderr = io::stderr();
+                    let mut handle = stderr.lock();
+                    let _ = handle
+                        .write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
+                    let _ = handle.write_fmt(format_args!(
+                        " Internal Error: {}\n",
+                        e.to_string().bold().red()
+                    ));
+                    None
                 }
             }
-            Err(e) => {
-                internal_error_count.fetch_add(1, Ordering::SeqCst);
-                let stderr = io::stderr();
-                let mut handle = stderr.lock();
-                let _ =
-                    handle.write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
-                let _ = handle.write_fmt(format_args!(
-                    " Internal Error: {}\n",
-                    e.to_string().bold().red()
-                ));
-                None
-            }
-        }
-    }).collect();
+        })
+        .collect();
 
     let error_count = error_count.load(Ordering::SeqCst);
     let warning_count = warning_count.load(Ordering::SeqCst);
