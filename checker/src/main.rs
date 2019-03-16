@@ -1,9 +1,10 @@
 //! Checks CSV data files for validity.
 
-extern crate checker;
-extern crate colored;
-extern crate rayon;
-extern crate walkdir;
+extern crate checker; // The "src/lib.rs" module.
+extern crate clap; // Command Line Argument Parser.
+extern crate colored; // Allows outputting pretty terminal colors.
+extern crate rayon; // A work-stealing auto-parallelism library.
+extern crate walkdir; // Allows walking through a directory, looking at files.
 
 use colored::*;
 use rayon::prelude::*;
@@ -158,6 +159,19 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
 }
 
 fn main() -> Result<(), Box<Error>> {
+    // Build the command-line argument parsing in code.
+    // This is a little verbose, but it's easy to change.
+    let argmatches = clap::App::new("OpenPowerlifting Checker")
+        .version("0.1")
+        .about("Checks and compiles the OpenPowerlifting database")
+        .arg(
+            clap::Arg::with_name("PATH")
+                .help("Optionally restricts processing to just this parent directory")
+                .required(false)
+                .index(1),
+        )
+        .get_matches();
+
     // Get handles to various parts of the project.
     let project_root = get_project_root()?;
     let meet_data_root = project_root.join("meet-data");
@@ -165,20 +179,21 @@ fn main() -> Result<(), Box<Error>> {
         panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
     }
 
-    let search_root = match env::args().count() {
-        // No command-line argument: go over the entire project.
-        1 => meet_data_root.clone(),
-        // Command-line argument: just use that directory.
-        2 => {
-            let target = env::current_dir()?
-                .join(env::args().nth(1).unwrap_or_else(|| ".".to_string()))
-                .canonicalize()?;
-            if !target.exists() {
-                panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
+    // Validate arguments.
+    let search_root = match argmatches.value_of("PATH") {
+        None => meet_data_root.clone(),
+        Some(path) => {
+            let full_path = env::current_dir()?.join(path);
+            // Canonicalization will fail if the path doesn't exist.
+            match full_path.canonicalize() {
+                Ok(p) => p,
+                Err(e) => {
+                    let msg = full_path.to_str().unwrap();
+                    println!("{}: {}", msg, e);
+                    process::exit(1);
+                }
             }
-            target
         }
-        _ => panic!("Too many arguments"),
     };
 
     let configmap = match get_configurations(&meet_data_root) {

@@ -451,11 +451,10 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
     name.to_string()
 }
 
-const CYRILLIC_CHARACTERS: &str =
-    "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
-     АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\
-     ҐґЄєЖжІіЇї\
-     -' .";
+const CYRILLIC_CHARACTERS: &str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
+                                   АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\
+                                   ҐґЄєЖжІіЇї\
+                                   -' .";
 
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
     for c in s.chars() {

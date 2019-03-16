@@ -10,6 +10,7 @@ license = "AGPL-3.0-or-later"
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 usernames = { version = "0.1", path = "../modules/usernames/" }
 chrono = "0.4"
+clap = "2.32"
 colored = "1.6"
 csv = "1.0"
 rayon = "1.0"
