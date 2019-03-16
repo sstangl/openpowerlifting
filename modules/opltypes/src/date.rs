@@ -2,6 +2,7 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::fmt;
 use std::num;
@@ -13,7 +14,7 @@ use crate::Age;
 /// with no timezone or time data.
 /// Dates in this format can be stored as a `u32` with value YYYYMMDD.
 /// This format is compact and remains human-readable.
-#[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct Date(u32);
 
 impl Date {
@@ -140,6 +141,17 @@ impl fmt::Display for Date {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let (y, m, d) = (self.year(), self.month(), self.day());
         write!(f, "{:04}-{:02}-{:02}", y, m, d)
+    }
+}
+
+impl Serialize for Date {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        let (y, m, d) = (self.year(), self.month(), self.day());
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        serializer.serialize_str(&format!("{:04}-{:02}-{:02}", y, m, d))
     }
 }
 
