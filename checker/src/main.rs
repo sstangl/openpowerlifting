@@ -166,6 +166,12 @@ fn main() -> Result<(), Box<Error>> {
         .version("0.1")
         .about("Checks and compiles the OpenPowerlifting database")
         .arg(
+            clap::Arg::with_name("compile")
+                .short("c")
+                .long("compile")
+                .help("Compiles the database into build/*.csv")
+        )
+        .arg(
             clap::Arg::with_name("PATH")
                 .help("Optionally restricts processing to just this parent directory")
                 .required(false)
@@ -181,6 +187,7 @@ fn main() -> Result<(), Box<Error>> {
     }
 
     // Validate arguments.
+    let is_compiling: bool = argmatches.is_present("compile");
     let search_root = match argmatches.value_of("PATH") {
         None => meet_data_root.clone(),
         Some(path) => {
@@ -289,5 +296,11 @@ fn main() -> Result<(), Box<Error>> {
     if error_count > 0 || internal_error_count > 0 {
         process::exit(1);
     }
+
+    if is_compiling {
+        let buildpath = project_root.join("build");
+        checker::compiler::make_csv(&meetdata, &buildpath)?;
+    }
+
     Ok(())
 }

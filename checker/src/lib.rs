@@ -1,6 +1,10 @@
+#![feature(inner_deref)] // Used for converting Option<String> to Option<&str>.
+
 extern crate chrono;
 extern crate csv;
 extern crate opltypes;
+#[macro_use]
+extern crate serde_derive;
 extern crate strum;
 #[macro_use]
 extern crate strum_macros;
@@ -12,7 +16,7 @@ pub use crate::checklib::entries::{check_entries, Entry};
 pub use crate::checklib::meet::{check_meet, Meet};
 pub use crate::checklib::CheckResult;
 
-mod compiler;
+pub mod compiler;
 
 use std::error::Error;
 use std::path::{Path, PathBuf};

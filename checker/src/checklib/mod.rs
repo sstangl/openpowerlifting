@@ -5,9 +5,9 @@ pub mod config;
 pub mod entries;
 pub mod meet;
 
-use crate::Report;
-use entries::Entry;
-use meet::Meet;
+pub use crate::Report;
+pub use entries::Entry;
+pub use meet::Meet;
 
 /// Returns the generated structures and any associated reports.
 pub struct CheckResult {

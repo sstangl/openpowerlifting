@@ -12,6 +12,7 @@ use crate::Report;
 
 /// Product of a successful parse.
 pub struct Meet {
+    pub path: String,
     pub federation: Federation,
     pub date: Date,
     pub country: Country,
@@ -52,7 +53,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
 }
 
 /// Checks that the MeetPath contains only characters valid in a URL.
-pub fn check_meetpath(report: &mut Report) {
+pub fn check_meetpath(report: &mut Report) -> String {
     // Because the report owns the path, we can't call mutable methods
     // like error() and warning() until the path reference is dropped.
     // Instead of allocating a heap-vec, just remember what errors occurred.
@@ -65,12 +66,19 @@ pub fn check_meetpath(report: &mut Report) {
         if let Some(s) = parent.to_str() {
             // The MeetPath is just the stuff after "meet-data/".
             let pathstart: usize = s.rfind("meet-data").unwrap_or(0);
+            let skipstr: usize = "meet-data".len() + 1;
+            let meetpath: String = s.chars().skip(pathstart + skipstr).collect();
 
             // Each character may only be alphanumeric ASCII or "/".
-            for c in s.chars().skip(pathstart) {
+            for c in meetpath.chars() {
                 if !c.is_ascii_alphanumeric() && c != '/' && c != '-' {
                     ascii_error = true;
+                    break;
                 }
+            }
+
+            if !ascii_error {
+                return meetpath;
             }
         } else {
             utf8_error = true;
@@ -89,6 +97,8 @@ pub fn check_meetpath(report: &mut Report) {
     if parent_error {
         report.error("Path had insufficient parent directories");
     }
+
+    String::new()
 }
 
 /// Checks the Federation column.
@@ -256,6 +266,7 @@ pub fn check_meetname(
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     mut report: Report,
+    meetpath: String,
 ) -> Result<CheckResult, Box<Error>>
 where
     R: io::Read,
@@ -303,6 +314,7 @@ where
         && name.is_some()
     {
         let meet = Meet {
+            path: meetpath,
             federation: federation.unwrap(),
             date: date.unwrap(),
             country: country.unwrap(),
@@ -330,12 +342,12 @@ pub fn check_meet(meet_csv: PathBuf) -> Result<CheckResult, Box<Error>> {
         return Ok(CheckResult { report, meet: None });
     }
 
-    check_meetpath(&mut report);
+    let meetpath = check_meetpath(&mut report);
 
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .terminator(csv::Terminator::Any(b'\n'))
         .from_path(&report.path)?;
 
-    Ok(do_check(&mut rdr, report)?)
+    Ok(do_check(&mut rdr, report, meetpath)?)
 }
