@@ -6,6 +6,7 @@ extern crate colored; // Allows outputting pretty terminal colors.
 extern crate rayon; // A work-stealing auto-parallelism library.
 extern crate walkdir; // Allows walking through a directory, looking at files.
 
+use checker::MeetData;
 use colored::*;
 use rayon::prelude::*;
 use walkdir::{DirEntry, WalkDir};
@@ -218,7 +219,7 @@ fn main() -> Result<(), Box<Error>> {
     let internal_error_count = AtomicUsize::new(0);
 
     // Iterate in parallel over each meet directory and apply checks.
-    meetdirs.into_par_iter().for_each(|dir| {
+    let meetdata: Vec<MeetData> = meetdirs.into_par_iter().filter_map(|dir| {
         // Determine the appropriate Config for this meet.
         let feddir = dir
             .path()
@@ -257,6 +258,12 @@ fn main() -> Result<(), Box<Error>> {
                         write_report(&mut handle, report);
                     }
                 }
+
+                // Map to the MeetData for collection.
+                match (checkresult.meet, checkresult.entries) {
+                    (Some(meet), Some(entries)) => Some(MeetData { meet, entries }),
+                    _ => None
+                }
             }
             Err(e) => {
                 internal_error_count.fetch_add(1, Ordering::SeqCst);
@@ -268,9 +275,10 @@ fn main() -> Result<(), Box<Error>> {
                     " Internal Error: {}\n",
                     e.to_string().bold().red()
                 ));
+                None
             }
-        };
-    });
+        }
+    }).collect();
 
     let error_count = error_count.load(Ordering::SeqCst);
     let warning_count = warning_count.load(Ordering::SeqCst);

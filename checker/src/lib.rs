@@ -17,6 +17,14 @@ mod compiler;
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
+/// All checker-generated data structures for a single meet.
+///
+/// After the checker, this serves as the permanent backing data store.
+pub struct MeetData {
+    pub meet: Meet,
+    pub entries: Vec<Entry>,
+}
+
 /// A data error or warning message that should be reported.
 #[derive(Debug)]
 pub enum Message {
