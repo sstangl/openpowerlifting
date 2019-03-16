@@ -88,6 +88,11 @@ impl HeaderIndexMap {
     }
 }
 
+pub struct CheckResult {
+    pub report: Report,
+    pub entries: Option<Vec<Entry>>,
+}
+
 /// Stores parsed data for a single row.
 ///
 /// The intention is for each field to only be parsed once, after
@@ -1674,7 +1679,7 @@ pub fn do_check<R>(
     meet: Option<&Meet>,
     config: Option<&Config>,
     mut report: Report,
-) -> Result<Report, Box<Error>>
+) -> Result<CheckResult, Box<Error>>
 where
     R: io::Read,
 {
@@ -1696,8 +1701,13 @@ where
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
     if !report.messages.is_empty() {
-        return Ok(report);
+        return Ok(CheckResult {
+            report,
+            entries: None,
+        });
     }
+
+    let mut entries: Vec<Entry> = Vec::new();
 
     // This allocation can be re-used for each row.
     let mut record = csv::StringRecord::new();
@@ -1899,9 +1909,14 @@ where
                 Err(msg) => report.error_on(line, format!("Username error: {}", msg)),
             }
         }
+
+        entries.push(entry);
     }
 
-    Ok(report)
+    Ok(CheckResult {
+        report,
+        entries: Some(entries),
+    })
 }
 
 /// Checks a single entries.csv file by path.
@@ -1909,14 +1924,17 @@ pub fn check_entries(
     entries_csv: PathBuf,
     meet: Option<&Meet>,
     config: Option<&Config>,
-) -> Result<Report, Box<Error>> {
+) -> Result<CheckResult, Box<Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
 
     // The entries.csv file must exist.
     if !report.path.exists() {
         report.error("File does not exist");
-        return Ok(report);
+        return Ok(CheckResult {
+            report,
+            entries: None,
+        });
     }
 
     let mut rdr = csv::ReaderBuilder::new()

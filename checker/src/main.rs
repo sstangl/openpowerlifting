@@ -230,7 +230,8 @@ fn main() -> Result<(), Box<Error>> {
 
         // Check the meet.
         match checker::check(dir.path(), config) {
-            Ok(reports) => {
+            Ok(checkresult) => {
+                let reports = checkresult.reports;
                 // Count how many new errors and warnings were generated.
                 let mut local_errors = 0;
                 let mut local_warnings = 0;

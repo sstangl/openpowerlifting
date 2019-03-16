@@ -9,9 +9,9 @@ extern crate toml;
 pub mod check_config;
 pub use crate::check_config::{check_config, Config};
 pub mod check_entries;
-use crate::check_entries::check_entries;
+use crate::check_entries::{check_entries, Entry};
 pub mod check_meet;
-use crate::check_meet::check_meet;
+use crate::check_meet::{check_meet, Meet};
 
 mod compiler;
 
@@ -30,6 +30,13 @@ pub enum Message {
 pub struct Report {
     pub path: PathBuf,
     pub messages: Vec<Message>,
+}
+
+/// Returns the generated structures and any associated reports.
+pub struct CheckResult {
+    pub reports: Vec<Report>,
+    pub meet: Option<Meet>,
+    pub entries: Option<Vec<Entry>>,
 }
 
 impl Report {
@@ -101,7 +108,7 @@ impl Report {
 }
 
 /// Checks a directory with meet data.
-pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<Vec<Report>, Box<Error>> {
+pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<CheckResult, Box<Error>> {
     let mut acc = Vec::new();
 
     // Check the meet.csv.
@@ -111,13 +118,13 @@ pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<Vec<Report>, Box
     }
 
     // Check the entries.csv.
-    let report = check_entries(
+    let entriesresult = check_entries(
         meetdir.join("entries.csv"),
         meetresult.meet.as_ref(),
         config,
     )?;
-    if !report.messages.is_empty() {
-        acc.push(report);
+    if !entriesresult.report.messages.is_empty() {
+        acc.push(entriesresult.report);
     }
 
     // Check for commonly-misnamed files.
@@ -127,5 +134,9 @@ pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<Vec<Report>, Box
         acc.push(report);
     }
 
-    Ok(acc)
+    Ok(CheckResult {
+        reports: acc,
+        meet: meetresult.meet,
+        entries: entriesresult.entries,
+    })
 }
