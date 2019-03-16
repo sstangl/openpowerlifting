@@ -15,7 +15,7 @@ use std::str::FromStr;
 /// Instead of storing as `f32`, we can store as `u32 * 100`,
 /// allowing the use of normal registers for what are effectively
 /// floating-point operations, and removing all `dtoa()` calls.
-#[derive(Clone, Copy, Debug, Eq, Ord, PartialOrd, PartialEq)]
+#[derive(Clone, Copy, Debug, Default, Eq, Ord, PartialOrd, PartialEq)]
 pub struct Points(i32);
 
 /// Enum of known powerlifting points systems, like Wilks and Glossbrenner.

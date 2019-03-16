@@ -1,7 +1,6 @@
 //! Implementation of Country interpolation.
 
 use crate::checklib::entries::Entry;
-use opltypes::*;
 
 fn is_country_consistent(entries: &[Entry]) -> bool {
     let mut curr_country = None;
@@ -32,6 +31,7 @@ pub fn interpolate(entries: &mut [Entry]) {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use opltypes::*;
 
     // Helper function for generating test data
     fn entry(country: Option<Country>) -> Entry {

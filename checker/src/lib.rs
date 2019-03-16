@@ -1,7 +1,9 @@
 #![feature(inner_deref)] // Used for converting Option<String> to Option<&str>.
 
 extern crate chrono;
+extern crate coefficients;
 extern crate csv;
+extern crate hashbrown;
 extern crate opltypes;
 #[macro_use]
 extern crate serde_derive;

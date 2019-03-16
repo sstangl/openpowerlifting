@@ -16,6 +16,12 @@ pub enum Equipment {
     Straps,
 }
 
+impl Default for Equipment {
+    fn default() -> Equipment {
+        Equipment::Multi
+    }
+}
+
 impl fmt::Display for Equipment {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {

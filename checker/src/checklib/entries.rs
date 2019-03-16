@@ -1,5 +1,6 @@
 //! Checks for entries.csv files.
 
+use coefficients::{glossbrenner, ipf, wilks};
 use csv;
 use opltypes::*;
 use strum::IntoEnumIterator;
@@ -7,8 +8,6 @@ use strum::IntoEnumIterator;
 use std::error::Error;
 use std::io;
 use std::path::PathBuf;
-
-use usernames::make_username;
 
 use crate::checklib::config::{Config, Exemption, WeightClassConfig};
 use crate::checklib::meet::Meet;
@@ -105,7 +104,7 @@ pub struct Entry {
     pub place: Place,
     pub event: Event,
     pub division: String,
-    pub equipment: Option<Equipment>,
+    pub equipment: Equipment,
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
     pub deadlift_equipment: Option<Equipment>,
@@ -137,6 +136,15 @@ pub struct Entry {
     pub deadlift4kg: WeightKg,
 
     pub country: Option<Country>,
+
+    // Points are always recalculated, never taken from the data.
+    //
+    // McCulloch points are not calculated here, because they are Age-dependent.
+    // Because the Age may be inferred by the compiler from surrounding data,
+    // McCulloch calculation is left to a later phase.
+    pub wilks: Points,
+    pub glossbrenner: Points,
+    pub ipfpoints: Points,
 }
 
 impl Entry {
@@ -554,12 +562,12 @@ fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Sex {
     }
 }
 
-fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Option<Equipment> {
+fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Equipment {
     match s.parse::<Equipment>() {
-        Ok(eq) => Some(eq),
+        Ok(eq) => eq,
         Err(_) => {
             report.error_on(line, format!("Invalid Equipment '{}'", s));
-            None
+            Equipment::Multi
         }
     }
 }
@@ -861,6 +869,7 @@ fn check_column_state(s: &str, line: u64, report: &mut Report) {
 
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
     let event = entry.event;
+    let equipment = entry.equipment;
     let has_squat_data: bool = entry.has_squat_data();
     let has_bench_data: bool = entry.has_bench_data();
     let has_deadlift_data: bool = entry.has_deadlift_data();
@@ -877,54 +886,52 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
 
     // Check that the Equipment makes sense for the given Event.
-    if let Some(equipment) = entry.equipment {
-        if equipment == Equipment::Wraps && !event.has_squat() {
-            report.error_on(line, format!("Event '{}' doesn't use Wraps", event));
-        }
-        if equipment == Equipment::Straps && !event.has_deadlift() {
-            report.error_on(line, format!("Event '{}' doesn't use Straps", event));
-        }
+    if equipment == Equipment::Wraps && !event.has_squat() {
+        report.error_on(line, format!("Event '{}' doesn't use Wraps", event));
+    }
+    if equipment == Equipment::Straps && !event.has_deadlift() {
+        report.error_on(line, format!("Event '{}' doesn't use Straps", event));
+    }
 
-        // Check that the SquatEquipment makes sense.
-        if let Some(squat_eq) = entry.squat_equipment {
-            if squat_eq > equipment {
-                report.error_on(
-                    line,
-                    format!(
-                        "SquatEquipment '{}' can't be more supportive \
-                         than the Equipment '{}'",
-                        squat_eq, equipment
-                    ),
-                );
-            }
+    // Check that the SquatEquipment makes sense.
+    if let Some(squat_eq) = entry.squat_equipment {
+        if squat_eq > equipment {
+            report.error_on(
+                line,
+                format!(
+                    "SquatEquipment '{}' can't be more supportive \
+                     than the Equipment '{}'",
+                    squat_eq, equipment
+                ),
+            );
         }
+    }
 
-        // Check that the BenchEquipment makes sense.
-        if let Some(bench_eq) = entry.bench_equipment {
-            if bench_eq > equipment {
-                report.error_on(
-                    line,
-                    format!(
-                        "BenchEquipment '{}' can't be more supportive \
-                         than the Equipment '{}'",
-                        bench_eq, equipment
-                    ),
-                );
-            }
+    // Check that the BenchEquipment makes sense.
+    if let Some(bench_eq) = entry.bench_equipment {
+        if bench_eq > equipment {
+            report.error_on(
+                line,
+                format!(
+                    "BenchEquipment '{}' can't be more supportive \
+                     than the Equipment '{}'",
+                    bench_eq, equipment
+                ),
+            );
         }
+    }
 
-        // Check that the DeadliftEquipment makes sense.
-        if let Some(deadlift_eq) = entry.deadlift_equipment {
-            if deadlift_eq > equipment {
-                report.error_on(
-                    line,
-                    format!(
-                        "DeadliftEquipment '{}' can't be more supportive \
-                         than the Equipment '{}'",
-                        deadlift_eq, equipment
-                    ),
-                );
-            }
+    // Check that the DeadliftEquipment makes sense.
+    if let Some(deadlift_eq) = entry.deadlift_equipment {
+        if deadlift_eq > equipment {
+            report.error_on(
+                line,
+                format!(
+                    "DeadliftEquipment '{}' can't be more supportive \
+                     than the Equipment '{}'",
+                    deadlift_eq, equipment
+                ),
+            );
         }
     }
 
@@ -1186,7 +1193,7 @@ fn check_equipment_year(
     // Check that squat equipment isn't listed before its invention.
     if date.year() < squat_suit_invention_year
         && (is_equipped(entry.squat_equipment)
-            || (event.has_squat() && is_equipped(entry.equipment)))
+            || (event.has_squat() && is_equipped(Some(entry.equipment))))
     {
         report.error_on(
             line,
@@ -1201,7 +1208,9 @@ fn check_equipment_year(
     // TODO: This avoids conflation with the squat equipment.
     if date.year() < bench_shirt_invention_year
         && (is_equipped(entry.bench_equipment)
-            || (event.has_bench() && !event.has_squat() && is_equipped(entry.equipment)))
+            || (event.has_bench()
+                && !event.has_squat()
+                && is_equipped(Some(entry.equipment))))
     {
         report.error_on(
             line,
@@ -1218,7 +1227,7 @@ fn check_equipment_year(
         && (is_equipped(entry.deadlift_equipment)
             || (event.has_deadlift()
                 && !event.has_squat()
-                && is_equipped(entry.equipment)))
+                && is_equipped(Some(entry.equipment))))
     {
         report.error_on(
             line,
@@ -1632,13 +1641,7 @@ fn check_division_equipment_consistency(
         return;
     }
 
-    let equipment = match entry.equipment {
-        Some(e) => e,
-        None => {
-            return;
-        }
-    };
-
+    let equipment = entry.equipment;
     let config = match config {
         Some(c) => c,
         None => {
@@ -1901,6 +1904,12 @@ where
             line,
             &mut report,
         );
+
+        // Calculate points (except for McCulloch, which is Age-dependent).
+        let bw = entry.bodyweightkg;
+        entry.wilks = wilks(entry.sex, bw, entry.totalkg);
+        entry.glossbrenner = glossbrenner(entry.sex, bw, entry.totalkg);
+        entry.ipfpoints = ipf(entry.sex, entry.equipment, entry.event, bw, entry.totalkg);
 
         // Create the username if applicable.
         if !entry.name.is_empty() {
