@@ -62,7 +62,7 @@ PRETTY_REQUESTS=$(printf "%'d" "${TOTAL_REQUESTS}")
 PRETTY_VISITORS=$(printf "%'d" "${UNIQUE_VISITORS}")
 
 # Build the components into a message.
-MESSAGE="On ${PRETTY_DATE}, we handled ${PRETTY_REQUESTS} requests from ${PRETTY_VISITORS} visitors."
+MESSAGE="On ${PRETTY_DATE} we handled ${PRETTY_REQUESTS} requests from ${PRETTY_VISITORS} visitors."
 
 # Post the message to Zulip.
 curl https://openpl.zulipchat.com/api/v1/messages \
