@@ -1,5 +1,5 @@
 WeightClassKg,Division,Sex,Name,JapaneseName,Age,Team,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,TotalKg,Place,Event,Equipment
-75,Disabled,M,,大堂 秀樹,25,デンソー刈谷,75,145,150,155,-156,155,155,1,B,Single-ply
+75,Disabled,M,Hideki Odo,大堂 秀樹,25,デンソー刈谷,75,145,150,155,-156,155,155,1,B,Single-ply
 44,Open,F,,西村 泰子,36,個人,43.45,72.5,-77.5,80,-83.5,80,80,1,B,Single-ply
 44,Open,F,,岩崎 朗子,37,スポーツコネクション,43.5,70,75,-80,,75,75,2,B,Single-ply
 44,Open,F,,北村 順子,38,シャーク同好会,43.65,62.5,67.5,75,,75,75,3,B,Single-ply
@@ -13,15 +13,15 @@ WeightClassKg,Division,Sex,Name,JapaneseName,Age,Team,BodyweightKg,Bench1Kg,Benc
 52,Open,F,,小懸 早知子,40,パワーフィットネス,,,,,,,,NS,B,Single-ply
 56,Open,F,,根本 美佳,34,神之木台トレーニングジム,53.45,77.5,87.5,-92.5,,87.5,87.5,1,B,Single-ply
 56,Open,F,,高橋 朋子,38,新潟トレーニングセンター,55.25,77.5,-82.5,82.5,,82.5,82.5,2,B,Single-ply
-60,Open,F,,和田 真紀,33,パワーウェーブ,58.65,120,-130,-130,,120,120,1,B,Single-ply
+60,Open,F,Maki Wada,和田 真紀,33,パワーウェーブ,58.65,120,-130,-130,,120,120,1,B,Single-ply
 60,Open,F,,古味 良子,46,T-REX沼津,59.8,110,-115,-115,,110,110,2,B,Single-ply
-67.5,Open,F,,山崎 頼子,41,金太郎トレーニングクラブ,65.4,110,117.5,-120,,117.5,117.5,1,B,Single-ply
+67.5,Open,F,Yoriko Yamazaki,山崎 頼子,41,金太郎トレーニングクラブ,65.4,110,117.5,-120,,117.5,117.5,1,B,Single-ply
 67.5,Open,F,,青木 千帆,27,個人,61.65,105,-112.5,115,-120,115,115,2,B,Single-ply
 67.5,Open,F,,澤 千代美,51,パワーハウス,66.35,107.5,-112.5,-112.5,,107.5,107.5,3,B,Single-ply
 67.5,Open,F,,瀬川 照枝,50,マルヤジム,65.85,-100,100,-110,,100,100,4,B,Single-ply
 67.5,Open,F,,加藤 ゆかり,32,個人,67.25,-95,95,-110,,95,95,5,B,Single-ply
 67.5,Open,F,,河野 理恵,28,高松トレーニングクラブ,66,75,82.5,-90,,82.5,82.5,6,B,Single-ply
-75,Open,F,,大庭 公子,47,遠賀勤労者TC,70.55,110,115,117.5,120,117.5,117.5,1,B,Single-ply
+75,Open,F,Kimiko Oba,大庭 公子,47,遠賀勤労者TC,70.55,110,115,117.5,120,117.5,117.5,1,B,Single-ply
 90,Open,F,,関谷 昌子,21,東京農業大学,88.75,80.5,85,90,-92.5,90,90,1,B,Single-ply
 52,Open,M,Hiroyuki Ishiwatari,石渡 啓之,41,個人,51.46,-145.5,145.5,150,153.5,150,150,1,B,Single-ply
 52,Open,M,,山下 豊,42,ラピタスポーツクラブ,51.7,-120,120,125,,125,125,2,B,Single-ply
@@ -83,7 +83,7 @@ WeightClassKg,Division,Sex,Name,JapaneseName,Age,Team,BodyweightKg,Bench1Kg,Benc
 90,Open,M,,江藤 陽市,48,タケイ・パワージム,,,,,,,,NS,B,Single-ply
 90,Open,M,,北川 武志,43,個人,87.05,-210,-210,-212.5,,,,DQ,B,Single-ply
 90,Open,M,,中谷 幸市,41,国士舘高校,89.5,-220,-220,-237.5,,,,DQ,B,Single-ply
-100,Open,M,,原 新一,27,東レ名古屋,97.6,222.5,-232.5,237.5,244,237.5,237.5,1,B,Single-ply
+100,Open,M,Shinichi Hara,原 新一,27,東レ名古屋,97.6,222.5,-232.5,237.5,244,237.5,237.5,1,B,Single-ply
 100,Open,M,,関 幸男,32,SEKI.GYM,99,225,235,-240,,235,235,2,B,Single-ply
 100,Open,M,,井上 康勝,40,岩崎BC,99.05,217.5,-227.5,-227.5,,217.5,217.5,3,B,Single-ply
 100,Open,M,,花田 祥之,46,ラピタスポーツクラブ,99.05,205,215,-217.5,,215,215,4,B,Single-ply
@@ -99,4 +99,4 @@ WeightClassKg,Division,Sex,Name,JapaneseName,Age,Team,BodyweightKg,Bench1Kg,Benc
 110,Open,M,,藤本 章夫,52,フジモトジム,101.15,175,180,182.5,,182.5,182.5,3,B,Single-ply
 110,Open,M,,行安 忠和,32,フィットネスクラブ高松,103.35,-192.5,-192.5,-192.5,,,,DQ,B,Single-ply
 125+,Open,M,Daisuke Midote,三土手 大介,29,パワーハウス,132,285,-300.5,300.5,-311,300.5,300.5,1,B,Single-ply
-125+,Open,M,,氏家 一郎,43,アサマトレーニングクラブ,154.65,240,250,255.5,,255.5,255.5,2,B,Single-ply
+125+,Open,M,Ichirou Uijie,氏家 一郎,43,アサマトレーニングクラブ,154.65,240,250,255.5,,255.5,255.5,2,B,Single-ply
