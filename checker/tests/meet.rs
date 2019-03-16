@@ -3,7 +3,7 @@
 extern crate checker;
 extern crate csv;
 
-use checker::check_meet::{self, do_check};
+use checker::checklib::meet::do_check;
 use checker::Report;
 
 use std::path::PathBuf;
@@ -27,7 +27,7 @@ fn check_meetpath(s: &str) -> usize {
     path.push("meet.csv");
 
     let mut report = Report::new(path);
-    check_meet::check_meetpath(&mut report);
+    checker::checklib::meet::check_meetpath(&mut report);
     report.count_errors()
 }
 

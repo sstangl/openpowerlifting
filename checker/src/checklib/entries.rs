@@ -10,8 +10,8 @@ use std::path::PathBuf;
 
 use usernames::make_username;
 
-use crate::check_config::{Config, Exemption, WeightClassConfig};
-use crate::check_meet::Meet;
+use crate::checklib::config::{Config, Exemption, WeightClassConfig};
+use crate::checklib::meet::Meet;
 use crate::Report;
 
 /// List of all plausible weightclasses, for non-configured federations.

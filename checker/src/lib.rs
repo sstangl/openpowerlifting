@@ -6,12 +6,11 @@ extern crate strum;
 extern crate strum_macros;
 extern crate toml;
 
-pub mod check_config;
-pub use crate::check_config::{check_config, Config};
-pub mod check_entries;
-use crate::check_entries::{check_entries, Entry};
-pub mod check_meet;
-use crate::check_meet::{check_meet, Meet};
+pub mod checklib;
+pub use crate::checklib::config::{check_config, Config};
+pub use crate::checklib::entries::{check_entries, Entry};
+pub use crate::checklib::meet::{check_meet, Meet};
+pub use crate::checklib::CheckResult;
 
 mod compiler;
 
@@ -30,13 +29,6 @@ pub enum Message {
 pub struct Report {
     pub path: PathBuf,
     pub messages: Vec<Message>,
-}
-
-/// Returns the generated structures and any associated reports.
-pub struct CheckResult {
-    pub reports: Vec<Report>,
-    pub meet: Option<Meet>,
-    pub entries: Option<Vec<Entry>>,
 }
 
 impl Report {

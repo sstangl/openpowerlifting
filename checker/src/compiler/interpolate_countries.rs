@@ -1,6 +1,6 @@
 //! Implementation of Country interpolation.
 
-use crate::check_entries::Entry;
+use crate::checklib::entries::Entry;
 use opltypes::*;
 
 fn is_country_consistent(entries: &[Entry]) -> bool {

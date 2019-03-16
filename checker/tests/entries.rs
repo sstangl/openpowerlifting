@@ -3,7 +3,7 @@
 extern crate checker;
 extern crate csv;
 
-use checker::check_entries::do_check;
+use checker::checklib::entries::do_check;
 use checker::Report;
 
 use std::path::PathBuf;
