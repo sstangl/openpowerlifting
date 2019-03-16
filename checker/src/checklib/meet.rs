@@ -65,9 +65,10 @@ pub fn check_meetpath(report: &mut Report) -> String {
     if let Some(parent) = report.path.parent() {
         if let Some(s) = parent.to_str() {
             // The MeetPath is just the stuff after "meet-data/".
-            let pathstart: usize = s.rfind("meet-data").unwrap_or(0);
-            let skipstr: usize = "meet-data".len() + 1;
-            let meetpath: String = s.chars().skip(pathstart + skipstr).collect();
+            let meetpath: String = match s.rfind("meet-data") {
+                Some(i) => s.chars().skip(i + "meet-data".len() + 1).collect(),
+                None => s.to_string(),
+            };
 
             // Each character may only be alphanumeric ASCII or "/".
             for c in meetpath.chars() {
