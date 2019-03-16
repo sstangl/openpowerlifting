@@ -201,6 +201,7 @@
   <option value="all-kazakhstan" {% if selection.federation == "AllKazakhstan" %}selected{% endif %}>{{strings.selectors.fed.all_kazakhstan}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF - Kazakhstan Powerlifting Federation [IPF]</option>
   <option value="wpc-kaz" {% if selection.federation == "WPC-KAZ" %}selected{% endif %}>WPC Kazakhstan</option>
+  <option value="wrpf-kaz" {% if selection.federation == "WRPF-KAZ" %}selected{% endif %}>WRPF Kazakhstan</option>
 </optgroup>
 <optgroup label="{{strings.country.latvia}}">
   <option value="all-latvia" {% if selection.federation == "AllLatvia" %}selected{% endif %}>{{strings.selectors.fed.all_latvia}}</option>
