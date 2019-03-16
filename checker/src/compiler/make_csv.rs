@@ -12,7 +12,7 @@ use crate::MeetData;
 /// The MeetData continues as the backing store.
 #[derive(Serialize)]
 struct MeetRow<'d> {
-    #[serde(rename = "MeetId")]
+    #[serde(rename = "MeetID")]
     pub id: u32,
     #[serde(rename = "MeetPath")]
     pub path: &'d str,
@@ -49,7 +49,7 @@ pub fn make_csv(meetdata: &[MeetData], buildpath: &Path) -> Result<(), csv::Erro
     // Generate paths to the individual output files.
     let entries_path = buildpath.join("entries.csv");
     let lifters_path = buildpath.join("lifters.csv");
-    let meet_path = buildpath.join("meet.csv");
+    let meet_path = buildpath.join("meets.csv");
 
     // Create CSV writers.
     let mut meet_wtr = WriterBuilder::new()
