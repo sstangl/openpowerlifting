@@ -1,0 +1,6 @@
+[Unit]
+Description=Outputs visitor information into the Zulip team chat
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/visitorbot

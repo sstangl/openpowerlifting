@@ -8,3 +8,27 @@
   template:
     src: goaccess.conf
     dest: /etc/goaccess.conf
+
+- name: install the visitorbot script
+  template:
+    src: visitorbot
+    dest: /usr/bin/visitorbot
+    mode: 0775
+
+- name: make sure visitorbot.service is installed
+  template:
+    src: visitorbot.service
+    dest: /etc/systemd/system/visitorbot.service
+  notify: reload systemd
+
+- name: make sure visitorbot.timer is installed
+  template:
+    src: visitorbot.timer
+    dest: /etc/systemd/system/visitorbot.timer
+  notify: reload systemd
+
+- name: make sure the visitorbot timer is running
+  service:
+    name: visitorbot.timer
+    state: started
+    enabled: yes

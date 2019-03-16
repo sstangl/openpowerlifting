@@ -1,0 +1,69 @@
+#!/usr/bin/bash
+
+LOGFILE="/var/log/nginx/access.log"
+
+# Get the API keys from the Ansible controller.
+# The lines below are filled in by the template.
+ZULIP_VISITORBOT_EMAIL="{{ lookup('env','ZULIP_VISITORBOT_EMAIL') }}"
+ZULIP_VISITORBOT_API_KEY="{{ lookup('env','ZULIP_VISITORBOT_API_KEY') }}"
+
+# No point in parsing the log if the keys are not supplied.
+if [[ -z "${ZULIP_VISITORBOT_EMAIL}" ]]; then
+	echo "Missing env variable ZULIP_VISITORBOT_EMAIL"
+	exit 1
+fi
+if [[ -z "${ZULIP_VISITORBOT_API_KEY}" ]]; then
+	echo "Missing env variable ZULIP_VISITORBOT_API_KEY"
+	exit 1
+fi
+
+# Goaccess needs to generate into a temp file that ends with ".csv".
+TEMPFILE=$(mktemp --tmpdir "visitorbot.XXXXXX.csv")
+
+# Generate a date in Nginx log format, like "08/Mar/2019".
+# Choosing 13:00 is an attempt to avoid Daylight Savings Time issues.
+YESTERDAY=$(date -d "yesterday 13:00" "+%d/%b/%Y")
+
+# Also make a pretty version for use in the final message.
+# This makes a date like "Wednesday, March 6".
+PRETTY_DATE=$(date -d "yesterday 13:00" "+%A, %B %-d")
+
+# Use goaccess to generate the temp report file, using grep to limit
+# the rows that are processed to just those that occurred yesterday.
+#
+# The "-" after goaccess is critical: it's required for systemd,
+# otherwise goaccess doesn't realize that it's supposed to read from stdin.
+grep "${YESTERDAY}" "${LOGFILE}" | goaccess - --ignore-crawlers -o "${TEMPFILE}"
+
+# The ${TEMPFILE} now contains a bunch of lines that look like the lines below:
+#  "0",,"general",,,,,,,,"2019-03-15 17:37:28 +0000","date_time"
+#  "1",,"general",,,,,,,,"101942","total_requests"
+#  "2",,"general",,,,,,,,"38421","valid_requests"
+#  "3",,"general",,,,,,,,"0","failed_requests"
+#  "4",,"general",,,,,,,,"6","generation_time"
+#  "5",,"general",,,,,,,,"3198","unique_visitors"
+#  "6",,"general",,,,,,,,"16096","unique_files"
+#  "7",,"general",,,,,,,,"0","excluded_hits"
+#  "8",,"general",,,,,,,,"4491","unique_referrers"
+#  "9",,"general",,,,,,,,"214","unique_not_found"
+#  "10",,"general",,,,,,,,"10","unique_static_files"
+#  "11",,"general",,,,,,,,"0","log_size"
+#  "12",,"general",,,,,,,,"264721600","bandwidth"
+#  "13",,"general",,,,,,,,"STDIN","log_path"
+# Followed by many detailed lines about individual files that we don't care about.
+
+# Parse the ${TEMPFILE} into variables and clean up.
+TOTAL_REQUESTS=$(head -n 14 "${TEMPFILE}" | grep "total_requests" | cut -d , -f 11 | tr --delete \")
+UNIQUE_VISITORS=$(head -n 14 "${TEMPFILE}" | grep "unique_visitors" | cut -d , -f 11 | tr --delete \")
+rm "${TEMPFILE}"
+
+# Build the components into a message.
+MESSAGE="On ${PRETTY_DATE}, we had ${TOTAL_REQUESTS} requests and ${UNIQUE_VISITORS} visitors."
+
+# Post the message to Zulip.
+curl https://openpl.zulipchat.com/api/v1/messages \
+    -u "${ZULIP_VISITORBOT_EMAIL}:${ZULIP_VISITORBOT_API_KEY}" \
+    -d "type=stream" \
+    -d "to=social media" \
+    -d "subject=Visitors" \
+    --data-urlencode "content=${MESSAGE}"
