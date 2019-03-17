@@ -137,16 +137,7 @@ TESTED_FEDERATIONS = [
 
 # Reads in the map Name => BirthDate (as date string).
 def make_birthdates_map(lifterdir):
-    csv = Csv(lifterdir + os.sep + 'birthdates.csv')
-
-    nameidx = csv.index('Name')
-    birthdateidx = csv.index('BirthDate')
-
-    birthdates = dict()
-    for row in csv.rows:
-        birthdates[row[nameidx]] = row[birthdateidx]
-
-    return birthdates
+    return {}  # The birthdates file was deleted in favor of age interpolation.
 
 
 # Fills in the Age column from the BirthYear column if possible.
