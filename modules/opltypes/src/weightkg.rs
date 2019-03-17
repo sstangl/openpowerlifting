@@ -29,13 +29,32 @@ pub struct WeightKg(i32);
 #[derive(Copy, Clone, Debug)]
 pub struct WeightAny(i32);
 
+impl Serialize for WeightKg {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        if self.0 == 0 {
+            // Avoid a call to format!().
+            serializer.serialize_str("")
+        } else {
+            // TODO: Write into a stack-allocated fixed-size buffer.
+            serializer.serialize_str(&format!("{}", self))
+        }
+    }
+}
 impl Serialize for WeightAny {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        serializer.serialize_str(&format!("{}", self))
+        if self.0 == 0 {
+            // Avoid a call to format!().
+            serializer.serialize_str("")
+        } else {
+            // TODO: Write into a stack-allocated fixed-size buffer.
+            serializer.serialize_str(&format!("{}", self))
+        }
     }
 }
 

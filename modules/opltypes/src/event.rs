@@ -2,6 +2,7 @@
 
 use serde;
 use serde::de::{self, Deserialize, Visitor};
+use serde::ser::Serialize;
 
 use std::fmt;
 use std::str::FromStr;
@@ -190,6 +191,15 @@ impl fmt::Display for Event {
             write!(f, "D")?
         }
         Ok(())
+    }
+}
+
+impl Serialize for Event {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(&format!("{}", self))
     }
 }
 
