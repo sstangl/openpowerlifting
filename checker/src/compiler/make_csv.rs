@@ -1,5 +1,6 @@
 //! Transforms a `Vec<MeetData>` into the final CSV files.
 
+use coefficients::mcculloch;
 use csv::{QuoteStyle, WriterBuilder};
 use hashbrown::HashMap;
 use opltypes::*;
@@ -111,14 +112,18 @@ struct EntriesRow<'d> {
     glossbrenner: Points,
     #[serde(rename = "IPFPoints")]
     ipfpoints: Points,
-    //    #[serde(rename = "Tested")] // TODO
-    //    tested: // TODO
+    #[serde(rename = "Tested")]
+    tested: &'static str,
     #[serde(rename = "Country")]
     country: Option<Country>,
 }
 
 impl<'d> EntriesRow<'d> {
     fn from(entry: &'d Entry, meet_id: u32, lifter_id: u32) -> EntriesRow<'d> {
+        // McCulloch points are calculated as late as possible because they are
+        // Age-dependent, and the lifter's Age may be inferred by post-checker phases.
+        let mcpts = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, entry.age);
+
         EntriesRow {
             meet_id: meet_id,
             lifter_id: lifter_id,
@@ -147,10 +152,11 @@ impl<'d> EntriesRow<'d> {
             best3deadliftkg: entry.best3deadliftkg,
             totalkg: entry.totalkg,
             place: entry.place,
-            wilks: Points::from_i32(0),        // TODO
-            mcculloch: Points::from_i32(0),    // TODO
-            glossbrenner: Points::from_i32(0), // TODO
-            ipfpoints: Points::from_i32(0),    // TODO
+            wilks: entry.wilks,
+            mcculloch: mcpts,
+            glossbrenner: entry.glossbrenner,
+            ipfpoints: entry.ipfpoints,
+            tested: if entry.tested { "Yes" } else { "" },
             country: entry.country,
         }
     }

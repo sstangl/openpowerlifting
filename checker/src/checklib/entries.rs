@@ -135,6 +135,7 @@ pub struct Entry {
     pub deadlift3kg: WeightKg,
     pub deadlift4kg: WeightKg,
 
+    pub tested: bool,
     pub country: Option<Country>,
 
     // Points are always recalculated, never taken from the data.
@@ -809,10 +810,14 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Weight
     }
 }
 
-fn check_column_tested(s: &str, line: u64, report: &mut Report) {
+fn check_column_tested(s: &str, line: u64, report: &mut Report) -> bool {
     match s {
-        "" | "Yes" | "No" => (),
-        _ => report.error_on(line, format!("Unknown Tested value '{}'", s)),
+        "Yes" => true,
+        "" | "No" => false,
+        _ => {
+            report.error_on(line, format!("Unknown Tested value '{}'", s));
+            false
+        }
     }
 }
 
@@ -1859,7 +1864,7 @@ where
             check_column_state(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Tested) {
-            check_column_tested(&record[idx], line, &mut report);
+            entry.tested = check_column_tested(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
             check_column_cyrillicname(&record[idx], line, &mut report);
