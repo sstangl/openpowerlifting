@@ -7,10 +7,10 @@ use std::fmt;
 pub enum Equipment {
     Raw,
     Wraps,
-    #[serde(rename(deserialize = "Single-ply"))]
+    #[serde(rename = "Single-ply")]
     #[strum(serialize = "Single-ply")]
     Single,
-    #[serde(rename(deserialize = "Multi-ply"))]
+    #[serde(rename = "Multi-ply")]
     #[strum(serialize = "Multi-ply")]
     Multi,
     Straps,

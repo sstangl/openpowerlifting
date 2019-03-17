@@ -7,7 +7,7 @@ use opltypes::*;
 
 use std::path::Path;
 
-use crate::checklib::{Entry, Meet};
+use crate::checklib::{Entry, LifterData, LifterDataMap, Meet};
 use crate::MeetData;
 
 /// Serialization source for the meets.csv.
@@ -162,26 +162,107 @@ impl<'d> EntriesRow<'d> {
     }
 }
 
-pub fn make_csv(meetdata: &[MeetData], buildpath: &Path) -> Result<(), csv::Error> {
-    // Generate paths to the individual output files.
-    let entries_path = buildpath.join("entries.csv");
-    let lifters_path = buildpath.join("lifters.csv");
-    let meets_path = buildpath.join("meets.csv");
+/// Serialization source for the lifters.csv.
+///
+/// The `'md` lifetime refers to the `&[MeetData]` data owner, while
+/// the `'ld` lifetime refers to the LifterDataMap data owner.
+#[derive(Serialize)]
+struct LiftersRow<'md, 'ld> {
+    #[serde(rename = "LifterID")]
+    id: u32,
+    #[serde(rename = "Name")]
+    name: &'md str,
+    #[serde(rename = "CyrillicName")]
+    cyrillicname: Option<&'md str>,
+    #[serde(rename = "Username")]
+    username: &'md str,
+    #[serde(rename = "Instagram")]
+    instagram: Option<&'ld str>,
+    #[serde(rename = "VKontakte")]
+    vkontakte: Option<&'ld str>,
+    #[serde(rename = "Color")]
+    color: Option<&'ld str>,
+    #[serde(rename = "Flair")]
+    flair: Option<&'ld str>,
+}
 
+impl<'md, 'ld> LiftersRow<'md, 'ld> {
+    fn from(
+        entrydata: &'md EntryLifterData,
+        lifterdata: &'ld LifterData,
+    ) -> LiftersRow<'md, 'ld> {
+        LiftersRow {
+            id: entrydata.id,
+            name: entrydata.name,
+            cyrillicname: entrydata.cyrillicname,
+            username: entrydata.username,
+            instagram: lifterdata.instagram.deref(),
+            vkontakte: lifterdata.vkontakte.deref(),
+            color: lifterdata.color.deref(),
+            flair: lifterdata.flair.deref(),
+        }
+    }
+}
+
+/// A struct for collecting unique lifter data while iterating over the Entries.
+struct EntryLifterData<'md> {
+    id: u32,
+    name: &'md str,
+    username: &'md str, // Stored again for simplicity of iteration.
+    cyrillicname: Option<&'md str>,
+}
+
+impl<'md> EntryLifterData<'md> {
+    fn from(entry: &'md Entry, lifter_id: u32) -> EntryLifterData {
+        EntryLifterData {
+            id: lifter_id,
+            name: &entry.name,
+            username: &entry.username,
+            cyrillicname: entry.cyrillicname.deref(),
+        }
+    }
+
+    /// This is not solely vanity: server tests require 'seanstangl' with ID 0,
+    /// since we needed something with a stable ID to test against.
+    fn seanstangl() -> EntryLifterData<'md> {
+        EntryLifterData {
+            id: 0,
+            name: "Sean Stangl",
+            username: "seanstangl",
+            cyrillicname: Some("Шон Стангл"),
+        }
+    }
+}
+
+/// Map from Username to EntryLifterData.
+type EntryLifterDataMap<'md> = HashMap<&'md str, EntryLifterData<'md>>;
+
+pub fn make_csv(
+    meetdata: &[MeetData],
+    lifterdata: &LifterDataMap,
+    buildpath: &Path,
+) -> Result<(), csv::Error> {
     // Create CSV writers.
-    let mut meets_wtr = WriterBuilder::new()
-        .quote_style(QuoteStyle::Never)
-        .terminator(Terminator::Any(b'\n'))
-        .from_path(&meets_path)?;
     let mut entries_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))
-        .from_path(&entries_path)?;
+        .from_path(&buildpath.join("entries.csv"))?;
+    let mut lifters_wtr = WriterBuilder::new()
+        .quote_style(QuoteStyle::Never)
+        .terminator(Terminator::Any(b'\n'))
+        .from_path(&buildpath.join("lifters.csv"))?;
+    let mut meets_wtr = WriterBuilder::new()
+        .quote_style(QuoteStyle::Never)
+        .terminator(Terminator::Any(b'\n'))
+        .from_path(&buildpath.join("meets.csv"))?;
+
+    // For remembering consistent lifter information across multiple Entries.
+    let mut lifter_hash = EntryLifterDataMap::new();
+    lifter_hash.insert("seanstangl", EntryLifterData::seanstangl());
 
     // Data structures for assigning globally-unique IDs.
     let mut next_meet_id: u32 = 0;
     let mut next_lifter_id: u32 = 1; // 0 is for "seanstangl", needed by server tests.
-    let mut lifter_hash: HashMap<&str, u32> = HashMap::new();
 
     for MeetData { meet, entries } in meetdata {
         // Unique ID for this meet.
@@ -193,9 +274,40 @@ pub fn make_csv(meetdata: &[MeetData], buildpath: &Path) -> Result<(), csv::Erro
 
         // Write a line for each entry.
         for entry in entries {
-            // TODO: Use an actual lifter_id.
-            entries_wtr.serialize(EntriesRow::from(&entry, meet_id, 0))?;
+            // See whether this lifter already exists in the EntryLifterDataMap.
+            // If it does not, then we haven't seen the lifter before,
+            // so a new LifterID is generated.
+            let lifter_id = match lifter_hash.get_mut(entry.username.as_str()) {
+                Some(data) => {
+                    // If there was already data present, maybe the new Entry
+                    // has more information that could be attributed.
+                    if data.cyrillicname.is_none() && entry.cyrillicname.is_some() {
+                        data.cyrillicname = entry.cyrillicname.deref();
+                    }
+                    data.id
+                }
+                None => {
+                    let lifter_id = next_lifter_id;
+                    next_lifter_id += 1;
+                    let data = EntryLifterData::from(&entry, lifter_id);
+                    lifter_hash.insert(&entry.username, data);
+                    lifter_id
+                }
+            };
+
+            // Write out to entries.csv.
+            entries_wtr.serialize(EntriesRow::from(&entry, meet_id, lifter_id))?;
         }
+    }
+
+    // With all LifterIDs now assigned, iterate over all lifters in sorted order.
+    let mut lifters: Vec<&EntryLifterData> = lifter_hash.values().collect();
+    lifters.sort_by_key(|x| x.id);
+
+    for lifter in lifters {
+        let default = LifterData::default();
+        let data = lifterdata.get(lifter.username).unwrap_or(&default);
+        lifters_wtr.serialize(LiftersRow::from(&lifter, &data))?;
     }
 
     Ok(())

@@ -190,7 +190,12 @@ impl Serialize for Age {
         S: serde::Serializer,
     {
         // TODO: Write into a stack-allocated fixed-size buffer.
-        serializer.serialize_str(&format!("{}", self))
+        let s = match *self {
+            Age::Exact(n) => format!("{}", n),
+            Age::Approximate(n) => format!("{}.5", n),
+            Age::None => String::default(),
+        };
+        serializer.serialize_str(&s)
     }
 }
 

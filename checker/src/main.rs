@@ -309,6 +309,7 @@ fn main() -> Result<(), Box<Error>> {
             write_report(&mut handle, report);
         }
     }
+    let lifterdata = result.map;
 
     print_summary(error_count + internal_error_count, warning_count);
 
@@ -318,7 +319,7 @@ fn main() -> Result<(), Box<Error>> {
 
     if is_compiling {
         let buildpath = project_root.join("build");
-        checker::compiler::make_csv(&meetdata, &buildpath)?;
+        checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
     }
 
     Ok(())

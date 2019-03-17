@@ -100,6 +100,7 @@ pub struct CheckResult {
 pub struct Entry {
     pub name: String,
     pub username: String,
+    pub cyrillicname: Option<String>,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -470,7 +471,7 @@ const CYRILLIC_CHARACTERS: &str = "абвгдеёжзийклмнопрстуф�
                                    ҐґЄєЖжІіЇї\
                                    -' .";
 
-fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
+fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     for c in s.chars() {
         if !CYRILLIC_CHARACTERS.contains(c) {
             let msg = format!(
@@ -478,9 +479,11 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) {
                 s, c
             );
             report.error_on(line, msg);
-            break;
+            return None;
         }
     }
+
+    Some(s.to_string())
 }
 
 fn check_column_birthyear(
@@ -1867,7 +1870,8 @@ where
             entry.tested = check_column_tested(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
-            check_column_cyrillicname(&record[idx], line, &mut report);
+            entry.cyrillicname =
+                check_column_cyrillicname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
             entry.birthyear =

@@ -21,7 +21,7 @@ impl<'de> Visitor<'de> for YesNo {
     {
         match value {
             "Yes" => Ok(true),
-            "No" => Ok(false),
+            "No" | "" => Ok(false),
             _ => Err(E::custom("not Yes/No")),
         }
     }
