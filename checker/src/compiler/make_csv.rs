@@ -1,7 +1,7 @@
 //! Transforms a `Vec<MeetData>` into the final CSV files.
 
 use coefficients::mcculloch;
-use csv::{QuoteStyle, WriterBuilder};
+use csv::{QuoteStyle, Terminator, WriterBuilder};
 use hashbrown::HashMap;
 use opltypes::*;
 
@@ -171,9 +171,11 @@ pub fn make_csv(meetdata: &[MeetData], buildpath: &Path) -> Result<(), csv::Erro
     // Create CSV writers.
     let mut meets_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
+        .terminator(Terminator::Any(b'\n'))
         .from_path(&meets_path)?;
     let mut entries_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
+        .terminator(Terminator::Any(b'\n'))
         .from_path(&entries_path)?;
 
     // Data structures for assigning globally-unique IDs.

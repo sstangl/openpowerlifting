@@ -15,6 +15,9 @@ extern crate toml;
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};
 pub use crate::checklib::entries::{check_entries, Entry};
+pub use crate::checklib::lifterdata::{
+    check_lifterdata, LifterData, LifterDataCheckResult, LifterDataMap,
+};
 pub use crate::checklib::meet::{check_meet, Meet};
 pub use crate::checklib::CheckResult;
 
@@ -74,6 +77,11 @@ impl Report {
     pub fn warning_on(&mut self, line: u64, message: impl ToString) {
         let msg = format!(" Line {}: {}", line, message.to_string());
         self.messages.push(Message::Warning(msg));
+    }
+
+    /// Whether a report has any messages.
+    pub fn has_messages(&self) -> bool {
+        !self.messages.is_empty()
     }
 
     /// Returns how many messages there are of (errors, warnings).

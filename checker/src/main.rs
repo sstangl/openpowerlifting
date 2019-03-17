@@ -290,9 +290,25 @@ fn main() -> Result<(), Box<Error>> {
         })
         .collect();
 
-    let error_count = error_count.load(Ordering::SeqCst);
-    let warning_count = warning_count.load(Ordering::SeqCst);
+    // Move out of atomics.
+    let mut error_count = error_count.load(Ordering::SeqCst);
+    let mut warning_count = warning_count.load(Ordering::SeqCst);
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
+
+    // Check the lifter-data/ files.
+    let result = checker::check_lifterdata(&project_root.join("lifter-data"));
+    for report in result.reports {
+        let (errors, warnings) = report.count_messages();
+        error_count += errors;
+        warning_count += warnings;
+
+        // Pretty-print any messages.
+        if report.has_messages() {
+            let stdout = io::stdout();
+            let mut handle = stdout.lock();
+            write_report(&mut handle, report);
+        }
+    }
 
     print_summary(error_count + internal_error_count, warning_count);
 
