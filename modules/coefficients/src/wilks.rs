@@ -43,6 +43,9 @@ pub fn wilks_coefficient_women(bodyweightkg: f64) -> f64 {
 
 /// Calculates Wilks points.
 pub fn wilks(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
+    if bodyweight.is_zero() || total.is_zero() {
+        return Points::from_i32(0);
+    }
     let coefficient: f64 = match sex {
         Sex::M => wilks_coefficient_men(f64::from(bodyweight)),
         Sex::F => wilks_coefficient_women(f64::from(bodyweight)),

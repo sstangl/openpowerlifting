@@ -59,7 +59,7 @@ pub fn ipf(
     let (mean1, mean2, dev1, dev2) = get_parameters(sex, equipment, event);
 
     // Exit early for undefined cases.
-    if mean1 == 0.0 || bodyweight < WeightKg::from_i32(40) {
+    if mean1 == 0.0 || bodyweight < WeightKg::from_i32(40) || total.is_zero() {
         return Points::from_i32(0);
     }
 

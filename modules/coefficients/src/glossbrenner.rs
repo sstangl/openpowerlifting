@@ -36,6 +36,9 @@ fn glossbrenner_coefficient_women(bodyweightkg: f64) -> f64 {
 ///
 /// This points system is most often used by GPC affiliates.
 pub fn glossbrenner(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
+    if bodyweight.is_zero() || total.is_zero() {
+        return Points::from_i32(0);
+    }
     let coefficient: f64 = match sex {
         Sex::M => glossbrenner_coefficient_men(f64::from(bodyweight)),
         Sex::F => glossbrenner_coefficient_women(f64::from(bodyweight)),
@@ -64,6 +67,12 @@ mod tests {
         assert_eq!(
             glossbrenner(Sex::F, WeightKg::from_i32(60), WeightKg::from_i32(500)),
             Points::from(492.53032)
+        );
+
+        // Zero bodyweight should be treated as "unknown bodyweight".
+        assert_eq!(
+            glossbrenner(Sex::M, WeightKg::from_i32(0), WeightKg::from_i32(500)),
+            Points::from_i32(0)
         );
     }
 }

@@ -32,6 +32,9 @@ pub fn malone_coefficient(bodyweightkg: f64) -> f64 {
 ///
 /// Schwartz-Malone is an older system that was superseded by Wilks.
 pub fn schwartzmalone(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
+    if bodyweight.is_zero() || total.is_zero() {
+        return Points::from_i32(0);
+    }
     let coefficient: f64 = match sex {
         Sex::M => schwartz_coefficient(f64::from(bodyweight)),
         Sex::F => malone_coefficient(f64::from(bodyweight)),

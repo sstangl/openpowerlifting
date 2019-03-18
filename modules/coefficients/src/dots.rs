@@ -42,6 +42,9 @@ pub fn dots_coefficient_women(bodyweightkg: f64) -> f64 {
 ///
 /// The author of the Dots formula is Tim Konertz <tim.konertz@outlook.com>.
 pub fn dots(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
+    if bodyweight.is_zero() || total.is_zero() {
+        return Points::from_i32(0);
+    }
     let coefficient: f64 = match sex {
         Sex::M => dots_coefficient_men(f64::from(bodyweight)),
         Sex::F => dots_coefficient_women(f64::from(bodyweight)),

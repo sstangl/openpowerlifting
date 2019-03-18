@@ -104,6 +104,12 @@ impl WeightKg {
 
     /// Whether the weight is zero, representing a lift not taken.
     #[inline]
+    pub fn is_zero(self) -> bool {
+        self == WeightKg::from_i32(0)
+    }
+
+    /// Whether the weight is not zero, representing a taken lift.
+    #[inline]
     pub fn is_non_zero(self) -> bool {
         self != WeightKg::from_i32(0)
     }
