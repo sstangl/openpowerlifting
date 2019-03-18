@@ -1849,6 +1849,17 @@ where
                 check_column_weightclasskg(&record[idx], line, &mut report);
         }
 
+        // If no bodyweight is given but there is a bounded weightclass,
+        // assume the pessimal case of the lifter at the top of the class.
+        if entry.bodyweightkg.is_zero() {
+            match entry.weightclasskg {
+                WeightClassKg::UnderOrEqual(w) => {
+                    entry.bodyweightkg = w;
+                }
+                _ => {}
+            }
+        }
+
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
             check_column_division(
