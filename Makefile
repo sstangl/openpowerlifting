@@ -1,4 +1,4 @@
-.PHONY: builddir csv sqlite check probe-quick probe deploy clean
+.PHONY: builddir csv datadist sqlite check probe-quick probe deploy clean
 
 DATADIR := meet-data
 BUILDDIR := build
@@ -16,6 +16,8 @@ builddir:
 csv: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-points "${BUILDDIR}/${PLFILE}"
+
+datadist: csv
 	scripts/make-data-distribution
 	bzip2 -f build/openpowerlifting.csv
 
