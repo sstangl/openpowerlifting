@@ -40,7 +40,7 @@ def getmeetinfo(soup):
     csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
                       'MeetState', 'MeetTown', 'MeetName']
 
-    name = soup.find('span', id='ctl00_ContentPlaceHolder2_Header').text
+    name = soup.find('span', id='ContentPlaceHolder2_Header').text
 
     fed = 'SSF'
     country = 'Sweden'
@@ -96,7 +96,7 @@ def getresults(soup):
 
     # Get the results table.
     results = soup.find_all(
-        'table', id='ctl00_ContentPlaceHolder2_contestTable')
+        'table', id='ContentPlaceHolder2_contestTable')
     if len(results) == 0:
         error("Couldn't find the results table.")
 
