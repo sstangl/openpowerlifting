@@ -99,7 +99,7 @@ def getmeetinfo(soup):
     # Name is sometimes split across two lines, with first line club name
     # this is a somewhat hacky way of finding the date-line
     if ((trs[curr_line+1].find('td').text.count('.') > 0 or
-        trs[curr_line+1].find('td').text.count('/') > 0)
+         trs[curr_line+1].find('td').text.count('/') > 0)
             and len([True for c in trs[curr_line+1].text if c.isdigit()]) > 2):
         name = trs[curr_line].find('td').text
         # Get the place & date.
@@ -375,7 +375,8 @@ def getresults(soup, meet_name, url):
                 elif h in ['yt', 'tulos', 'yht', 'total', 'result',
                            'yht tulos', 'yhteis- tulos', 'yt / kg']:
                     csv.fieldnames += ['TotalKg']
-                elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts']:
+                elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts',
+                           'ipf pist', 'ipf pts']:
                     csv.fieldnames += ['Wilks']
                 elif h == 'jpist' or h == 'j pist':
                     csv.fieldnames += ['Points']
