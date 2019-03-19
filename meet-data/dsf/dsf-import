@@ -583,13 +583,13 @@ def main(url):
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
 
-    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep +
-                    'check', dirname + os.sep + 'entries.csv'])
-
     with open(dirname + os.sep + 'meet.csv', 'w') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
+
+    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep +
+                    'check', dirname + os.sep + 'entries.csv'])
 
     print("Imported into %s." % dirname)
 
