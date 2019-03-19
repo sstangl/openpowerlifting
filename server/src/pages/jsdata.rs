@@ -25,7 +25,7 @@ pub struct JsEntryRow<'db> {
 
     pub sex: &'db str,
     pub equipment: &'db str,
-    pub age: Age,
+    pub age: PrettyAge,
     pub division: &'db Option<String>,
     pub bodyweight: langpack::LocalizedWeightAny,
     pub weightclass: langpack::LocalizedWeightClassAny,
@@ -112,7 +112,7 @@ impl<'db> JsEntryRow<'db> {
 
             sex: strings.translate_sex(entry.sex),
             equipment: strings.translate_equipment(entry.equipment),
-            age: entry.age,
+            age: PrettyAge::from(entry.age),
             division: &entry.division,
             bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
             weightclass: entry.weightclasskg.as_type(units).in_format(number_format),

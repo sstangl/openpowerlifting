@@ -12,7 +12,7 @@ extern crate strum_macros;
 
 // Public exports.
 mod age;
-pub use self::age::Age;
+pub use self::age::{Age, PrettyAge};
 mod country;
 pub use self::country::Country;
 mod date;

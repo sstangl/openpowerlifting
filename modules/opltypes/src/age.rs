@@ -30,6 +30,16 @@ pub enum Age {
     None,
 }
 
+/// An opaque wrapper for `Age` that serializes to "23~" instead of "23.5".
+#[derive(Copy, Clone, Debug)]
+pub struct PrettyAge(Age);
+
+impl From<Age> for PrettyAge {
+    fn from(a: Age) -> PrettyAge {
+        PrettyAge { 0: a }
+    }
+}
+
 impl Age {
     /// Convert from an i64. Used by the TOML deserializer.
     pub fn from_i64(n: i64) -> Result<Self, &'static str> {
@@ -295,6 +305,21 @@ impl<'de> Deserialize<'de> for Age {
         D: serde::Deserializer<'de>,
     {
         deserializer.deserialize_str(AgeVisitor)
+    }
+}
+
+impl Serialize for PrettyAge {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        let s = match self.0 {
+            Age::Exact(n) => format!("{}", n),
+            Age::Approximate(n) => format!("{}~", n),
+            Age::None => String::default(),
+        };
+        serializer.serialize_str(&s)
     }
 }
 
