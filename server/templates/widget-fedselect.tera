@@ -175,6 +175,7 @@
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
   <option value="raw-iceland" {% if selection.federation == "RAW-Iceland" %}selected{% endif %}>RAW-Iceland - 100% RAW Powerlifting Federation Icreland</option>
   <option value="wpc-iceland" {% if selection.federation == "WPC-Iceland" %}selected{% endif %}>WPC Iceland</option>
+  <option value="wrpf-iceland" {% if selection.federation == "WRPF-Iceland" %}selected{% endif %}>WRPF Iceland</option>
 </optgroup>
 <optgroup label="{{strings.country.indonesia}}">
   <option value="AIWBPA" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA - All Indonesia Weightlifting, Bodybuilding & Powerlifting Association [IPF]</option>
