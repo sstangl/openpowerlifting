@@ -1,11 +1,8 @@
 /// Age Interpolation: infer lifter Age given available age-related information.
 use chrono::{Datelike, Duration, NaiveDate};
 use opltypes::*;
-use std::cmp;
-use std::cmp::Ordering;
-use std::fmt;
 
-use crate::Entry;
+use std::cmp::Ordering;
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub struct AgeData {
@@ -707,6 +704,7 @@ fn is_agedata_consistent(entries: &[AgeData]) -> bool {
 }
 
 // Interpolate a lifters age information
+#[allow(dead_code)]
 fn interpolate(entries: &mut [AgeData]) {
     let bd_constraint = estimate_birthdate(entries);
 
