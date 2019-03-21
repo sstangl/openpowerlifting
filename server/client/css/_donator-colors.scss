@@ -189,6 +189,13 @@
   background-image: linear-gradient(to right, $red, $white);
 }
 
+.turquoise_to_magenta {
+  $turquoise: #40E0D0;
+  $magenta: #FF00FF;
+  @include gradient-prereqs($turquoise);
+  background-image: linear-gradient(to right, $turquoise, $magenta);
+}
+
 // Red, Gray, Black.
 .carlos {
   @include gradient-prereqs(#444444);
