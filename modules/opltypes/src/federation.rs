@@ -689,6 +689,10 @@ pub enum Federation {
     #[strum(to_string = "USAPL", serialize = "usapl")]
     USAPL,
 
+    /// USA Raw Bench Press Federation (Defunct).
+    #[strum(to_string = "USARawBP", serialize = "usarawbp")]
+    USARawBP,
+
     /// Catch-all for overseas meets done by US Military members
     #[strum(to_string = "USMilAbroad", serialize = "usmilabroad")]
     USMilAbroad,
@@ -1063,6 +1067,7 @@ impl Federation {
             Federation::UkrainePF => true,
             Federation::USAUA => false,
             Federation::USAPL => true,
+            Federation::USARawBP => false,
             Federation::USMilAbroad => false,
             Federation::USPS => false,
             Federation::USPF => false,
@@ -1276,6 +1281,7 @@ impl Federation {
             Federation::UkrainePF => Some(Country::Ukraine),
             Federation::USAUA => Some(Country::USA),
             Federation::USAPL => Some(Country::USA),
+            Federation::USARawBP => Some(Country::USA),
             Federation::USMilAbroad => Some(Country::USA),
             Federation::USPS => Some(Country::Serbia),
             Federation::USPF => Some(Country::USA),
@@ -1500,6 +1506,7 @@ impl Federation {
             Federation::UkrainePF => Federation::ipf_rules_on(date),
             Federation::USAUA => PointsSystem::Wilks,
             Federation::USAPL => Federation::ipf_rules_on(date),
+            Federation::USARawBP => PointsSystem::Wilks,
             Federation::USMilAbroad => PointsSystem::Wilks,
             Federation::USPS => PointsSystem::Wilks,
             Federation::USPF => PointsSystem::Wilks,
