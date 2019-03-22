@@ -6,7 +6,7 @@ extern crate colored; // Allows outputting pretty terminal colors.
 extern crate rayon; // A work-stealing auto-parallelism library.
 extern crate walkdir; // Allows walking through a directory, looking at files.
 
-use checker::MeetData;
+use checker::{AllMeetData, SingleMeetData};
 use colored::*;
 use rayon::prelude::*;
 use walkdir::{DirEntry, WalkDir};
@@ -226,7 +226,7 @@ fn main() -> Result<(), Box<Error>> {
     let internal_error_count = AtomicUsize::new(0);
 
     // Iterate in parallel over each meet directory and apply checks.
-    let meetdata: Vec<MeetData> = meetdirs
+    let singlemeets: Vec<SingleMeetData> = meetdirs
         .into_par_iter()
         .filter_map(|dir| {
             // Determine the appropriate Config for this meet.
@@ -268,9 +268,11 @@ fn main() -> Result<(), Box<Error>> {
                         }
                     }
 
-                    // Map to the MeetData for collection.
+                    // Map to the SingleMeetData for collection.
                     match (checkresult.meet, checkresult.entries) {
-                        (Some(meet), Some(entries)) => Some(MeetData { meet, entries }),
+                        (Some(meet), Some(entries)) => {
+                            Some(SingleMeetData { meet, entries })
+                        }
                         _ => None,
                     }
                 }
@@ -289,6 +291,9 @@ fn main() -> Result<(), Box<Error>> {
             }
         })
         .collect();
+
+    // Give ownership to the permanent data store.
+    let meetdata = AllMeetData::from(singlemeets);
 
     // Move out of atomics.
     let mut error_count = error_count.load(Ordering::SeqCst);

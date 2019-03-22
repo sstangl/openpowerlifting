@@ -1,4 +1,4 @@
-//! Transforms a `Vec<MeetData>` into the final CSV files.
+//! Transforms `AllMeetData`` into the final CSV files.
 
 use coefficients::mcculloch;
 use csv::{QuoteStyle, Terminator, WriterBuilder};
@@ -8,10 +8,10 @@ use opltypes::*;
 use std::path::Path;
 
 use crate::checklib::{Entry, LifterData, LifterDataMap, Meet};
-use crate::MeetData;
+use crate::{AllMeetData, SingleMeetData};
 
 /// Serialization source for the meets.csv.
-/// The MeetData continues as the backing store.
+/// The AllMeetData continues as the backing store.
 #[derive(Serialize)]
 struct MeetsRow<'d> {
     #[serde(rename = "MeetID")]
@@ -164,7 +164,7 @@ impl<'d> EntriesRow<'d> {
 
 /// Serialization source for the lifters.csv.
 ///
-/// The `'md` lifetime refers to the `&[MeetData]` data owner, while
+/// The `'md` lifetime refers to the `AllMeetData` data owner, while
 /// the `'ld` lifetime refers to the LifterDataMap data owner.
 #[derive(Serialize)]
 struct LiftersRow<'md, 'ld> {
@@ -238,7 +238,7 @@ impl<'md> EntryLifterData<'md> {
 type EntryLifterDataMap<'md> = HashMap<&'md str, EntryLifterData<'md>>;
 
 pub fn make_csv(
-    meetdata: &[MeetData],
+    meetdata: &AllMeetData,
     lifterdata: &LifterDataMap,
     buildpath: &Path,
 ) -> Result<(), csv::Error> {
@@ -264,7 +264,7 @@ pub fn make_csv(
     let mut next_meet_id: u32 = 0;
     let mut next_lifter_id: u32 = 1; // 0 is for "seanstangl", needed by server tests.
 
-    for MeetData { meet, entries } in meetdata {
+    for SingleMeetData { meet, entries } in meetdata.meets.iter() {
         // Unique ID for this meet.
         let meet_id = next_meet_id;
         next_meet_id += 1;
