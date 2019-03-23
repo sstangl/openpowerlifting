@@ -18,6 +18,10 @@ target/
 /meet-data/**/*.xml
 /meet-data/**/*.rtf
 
+# Tool output.
+perf.data
+perf.data.old
+
 # Temporary files.
 /server/probebot/*.tmp
 *.lnk
