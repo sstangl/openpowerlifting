@@ -11,7 +11,7 @@ use std::path::PathBuf;
 
 use crate::checklib::config::{Config, Exemption, WeightClassConfig};
 use crate::checklib::meet::Meet;
-use crate::Report;
+use crate::{EntryIndex, Report};
 
 /// List of all plausible weightclasses, for non-configured federations.
 const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 54] = [
@@ -96,7 +96,7 @@ pub struct CheckResult {
 ///
 /// The intention is for each field to only be parsed once, after
 /// which further processing can use the standard datatype.
-#[derive(Default, PartialEq)]
+#[derive(Default)]
 pub struct Entry {
     pub name: String,
     pub username: String,
@@ -147,6 +147,12 @@ pub struct Entry {
     pub wilks: Points,
     pub glossbrenner: Points,
     pub ipfpoints: Points,
+
+    /// The index of this `Entry` in the `AllMeetData`.
+    ///
+    /// Because this refers to vector indices in the final `AllMeetData`,
+    /// it can only be constructed after the checker is completely finished.
+    pub index: Option<EntryIndex>,
 }
 
 impl Entry {

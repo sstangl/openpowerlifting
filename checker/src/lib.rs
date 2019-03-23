@@ -24,7 +24,8 @@ pub use crate::checklib::CheckResult;
 pub mod compiler;
 
 mod meetdata;
-pub use meetdata::{AllMeetData, SingleMeetData};
+use meetdata::EntryIndex;
+pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
 
 use std::error::Error;
 use std::path::{Path, PathBuf};

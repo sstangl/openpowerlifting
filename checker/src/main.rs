@@ -293,7 +293,7 @@ fn main() -> Result<(), Box<Error>> {
         .collect();
 
     // Give ownership to the permanent data store.
-    let meetdata = AllMeetData::from(singlemeets);
+    let mut meetdata = AllMeetData::from(singlemeets);
 
     // Move out of atomics.
     let mut error_count = error_count.load(Ordering::SeqCst);
@@ -323,6 +323,9 @@ fn main() -> Result<(), Box<Error>> {
     }
 
     if is_compiling {
+        let liftermap = meetdata.create_liftermap();
+        checker::compiler::interpolate_country(&mut meetdata, &liftermap);
+
         let buildpath = project_root.join("build");
         checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
     }
