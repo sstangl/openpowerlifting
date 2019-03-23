@@ -86,6 +86,10 @@ pub enum Federation {
     #[strum(to_string = "AmericanSA", serialize = "americansa")]
     AmericanSA,
 
+    /// All Natural Physique and Power Conference (Defunct).
+    #[strum(to_string = "ANPPC", serialize = "anppc")]
+    ANPPC,
+
     /// American Powerlifting Association, WPA.
     #[strum(to_string = "APA", serialize = "apa")]
     APA,
@@ -921,6 +925,7 @@ impl Federation {
             Federation::AfricanPF => true,
             Federation::AIWBPA => true,
             Federation::AmericanSA => false,
+            Federation::ANPPC => false,
             Federation::APA => false,
             Federation::APC => false,
             Federation::APF => false,
@@ -1134,6 +1139,7 @@ impl Federation {
             Federation::AfricanPF => None,
             Federation::AIWBPA => Some(Country::Indonesia),
             Federation::AmericanSA => Some(Country::USA),
+            Federation::ANPPC => Some(Country::USA),
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
@@ -1360,6 +1366,7 @@ impl Federation {
             Federation::AfricanPF => Federation::ipf_rules_on(date),
             Federation::AIWBPA => Federation::ipf_rules_on(date),
             Federation::AmericanSA => PointsSystem::Wilks,
+            Federation::ANPPC => PointsSystem::Wilks,
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
