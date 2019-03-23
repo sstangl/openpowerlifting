@@ -264,7 +264,7 @@ pub fn make_csv(
     let mut next_meet_id: u32 = 0;
     let mut next_lifter_id: u32 = 1; // 0 is for "seanstangl", needed by server tests.
 
-    for SingleMeetData { meet, entries } in meetdata.meets.iter() {
+    for SingleMeetData { meet, entries } in meetdata.get_meets() {
         // Unique ID for this meet.
         let meet_id = next_meet_id;
         next_meet_id += 1;
