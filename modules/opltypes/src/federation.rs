@@ -110,6 +110,11 @@ pub enum Federation {
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
 
+    /// Unaffiliated meets held in Australia, for historical meets pre AAPLF.
+    #[serde(rename = "AUS-UA")]
+    #[strum(to_string = "AUS-UA", serialize = "aus-ua")]
+    AUSUA,
+
     /// Australian Drug-Free Powerlifting Federation, WDFPF.
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
@@ -931,6 +936,7 @@ impl Federation {
             Federation::APF => false,
             Federation::APU => true,
             Federation::AsianPF => true,
+            Federation::AUSUA => false,
             Federation::AusDFPF => true,
             Federation::AusPF => false,
             Federation::AusPL => false,
@@ -1145,6 +1151,7 @@ impl Federation {
             Federation::APF => Some(Country::USA),
             Federation::APU => Some(Country::Australia),
             Federation::AsianPF => None,
+            Federation::AUSUA => Some(Country::Australia),
             Federation::AusDFPF => Some(Country::Australia),
             Federation::AusPF => Some(Country::Australia),
             Federation::AusPL => Some(Country::Australia),
@@ -1372,6 +1379,7 @@ impl Federation {
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APU => PointsSystem::Wilks,
             Federation::AsianPF => Federation::ipf_rules_on(date),
+            Federation::AUSUA => PointsSystem::Wilks,
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
