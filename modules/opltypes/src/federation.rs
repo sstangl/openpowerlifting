@@ -110,11 +110,6 @@ pub enum Federation {
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
 
-    /// Unaffiliated meets held in Australia, for historical meets pre AAPLF.
-    #[serde(rename = "AUS-UA")]
-    #[strum(to_string = "AUS-UA", serialize = "aus-ua")]
-    AUSUA,
-
     /// Australian Drug-Free Powerlifting Federation, WDFPF.
     #[strum(to_string = "AusDFPF", serialize = "ausdfpf")]
     AusDFPF,
@@ -127,6 +122,10 @@ pub enum Federation {
     /// Australian Powerlifting League, IPL.
     #[strum(to_string = "AusPL", serialize = "auspl")]
     AusPL,
+
+    /// Australian Weightlifting Federation, meets pre AAPLF.
+    #[strum(to_string = "AWF", serialize = "awf")]
+    AWF,
 
     /// British Amateur Weightlifting Association, predecessor to BP.
     #[strum(to_string = "BAWLA", serialize = "bawla")]
@@ -936,10 +935,10 @@ impl Federation {
             Federation::APF => false,
             Federation::APU => true,
             Federation::AsianPF => true,
-            Federation::AUSUA => false,
             Federation::AusDFPF => true,
             Federation::AusPF => false,
             Federation::AusPL => false,
+            Federation::AWF => false,
             Federation::BAWLA => true,
             Federation::BB => false,
             Federation::BBDD => false,
@@ -1151,10 +1150,10 @@ impl Federation {
             Federation::APF => Some(Country::USA),
             Federation::APU => Some(Country::Australia),
             Federation::AsianPF => None,
-            Federation::AUSUA => Some(Country::Australia),
             Federation::AusDFPF => Some(Country::Australia),
             Federation::AusPF => Some(Country::Australia),
             Federation::AusPL => Some(Country::Australia),
+            Federation::AWF => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
             Federation::BBDD => Some(Country::USA),
@@ -1379,10 +1378,10 @@ impl Federation {
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APU => PointsSystem::Wilks,
             Federation::AsianPF => Federation::ipf_rules_on(date),
-            Federation::AUSUA => PointsSystem::Wilks,
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
+            Federation::AWF => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
             Federation::BBDD => PointsSystem::Wilks,
