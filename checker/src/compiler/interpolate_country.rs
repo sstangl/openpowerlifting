@@ -37,3 +37,71 @@ pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::checklib::{Entry, Meet};
+    use crate::SingleMeetData;
+
+    /// Helper function to generate a single-meet AllMeetData struct
+    /// from a list of entries.
+    fn meetdata_from_vec(entries: Vec<Entry>) -> AllMeetData {
+        let meet = Meet::test_default();
+        let singlemeetdata = SingleMeetData { meet, entries };
+        AllMeetData::from(vec![singlemeetdata])
+    }
+
+    /// If no entries have a set Country, interpolation should not do anything.
+    #[test]
+    fn all_none() {
+        let entries = vec![Entry::default(), Entry::default()];
+        let mut meetdata = meetdata_from_vec(entries);
+        let liftermap = meetdata.create_liftermap();
+        interpolate_country(&mut meetdata, &liftermap);
+
+        assert_eq!(meetdata.get_entry_at(0, 0).country, None);
+        assert_eq!(meetdata.get_entry_at(0, 1).country, None);
+    }
+
+    /// If only one entry has a set Country, propagate that Country.
+    #[test]
+    fn one_some() {
+        let usa = Entry {
+            country: Some(Country::USA),
+            ..Entry::default()
+        };
+
+        let mut meetdata =
+            meetdata_from_vec(vec![Entry::default(), usa, Entry::default()]);
+        let liftermap = meetdata.create_liftermap();
+        interpolate_country(&mut meetdata, &liftermap);
+
+        assert_eq!(meetdata.get_entry_at(0, 0).country, Some(Country::USA));
+        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::USA));
+        assert_eq!(meetdata.get_entry_at(0, 2).country, Some(Country::USA));
+    }
+
+    /// If two entries conflict, don't propagate a Country.
+    #[test]
+    fn conflict() {
+        let usa = Entry {
+            country: Some(Country::USA),
+            ..Entry::default()
+        };
+        let russia = Entry {
+            country: Some(Country::Russia),
+            ..Entry::default()
+        };
+
+        let mut meetdata =
+            meetdata_from_vec(vec![Entry::default(), usa, Entry::default(), russia]);
+        let liftermap = meetdata.create_liftermap();
+        interpolate_country(&mut meetdata, &liftermap);
+
+        assert_eq!(meetdata.get_entry_at(0, 0).country, None);
+        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::USA));
+        assert_eq!(meetdata.get_entry_at(0, 2).country, None);
+        assert_eq!(meetdata.get_entry_at(0, 3).country, Some(Country::Russia));
+    }
+}

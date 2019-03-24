@@ -89,6 +89,12 @@ impl AllMeetData {
         &self.meets[index.meetdata_index as usize].entries[index.entry_index as usize]
     }
 
+    /// Shorthand for use in tests: constructs an EntryIndex inline.
+    #[cfg(test)]
+    pub fn get_entry_at(&self, meetdata_index: usize, entry_index: usize) -> &Entry {
+        &self.meets[meetdata_index].entries[entry_index]
+    }
+
     /// Borrows an `Entry` mutably by `EntryIndex`.
     ///
     /// Note that because the lifetime of each Entry is equal to the lifetime

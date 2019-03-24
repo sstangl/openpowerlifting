@@ -21,6 +21,22 @@ pub struct Meet {
     pub name: String,
 }
 
+impl Meet {
+    /// Generates a default Meet for purposes of testing.
+    #[cfg(test)]
+    pub fn test_default() -> Meet {
+        Meet {
+            path: "test/1901".to_string(),
+            federation: Federation::WRPF,
+            date: Date::from_u32(2019_03_01),
+            country: opltypes::Country::USA,
+            state: None,
+            town: None,
+            name: "Test Meet".to_string(),
+        }
+    }
+}
+
 pub struct CheckResult {
     pub report: Report,
     pub meet: Option<Meet>,
