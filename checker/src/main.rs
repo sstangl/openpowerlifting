@@ -325,6 +325,7 @@ fn main() -> Result<(), Box<Error>> {
     if is_compiling {
         let liftermap = meetdata.create_liftermap();
         checker::compiler::interpolate_country(&mut meetdata, &liftermap);
+        checker::compiler::interpolate_age(&mut meetdata, &liftermap);
 
         let buildpath = project_root.join("build");
         checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;

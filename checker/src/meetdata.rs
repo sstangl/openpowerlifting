@@ -80,6 +80,11 @@ impl AllMeetData {
         self.meets.as_mut_slice()
     }
 
+    /// Borrows a `Meet` by `EntryIndex`.
+    pub fn get_meet(&self, index: EntryIndex) -> &Meet {
+        &self.meets[index.meetdata_index as usize].meet
+    }
+
     /// Borrows an `Entry` by `EntryIndex`.
     ///
     /// Note that because the lifetime of each Entry is equal to the lifetime

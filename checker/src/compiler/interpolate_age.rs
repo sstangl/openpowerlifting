@@ -1,8 +1,56 @@
-/// Age Interpolation: infer lifter Age given available age-related information.
+//! Infers a lifter's Age given surrounding Age-related information.
+
 use chrono::{Datelike, Duration, NaiveDate};
 use opltypes::*;
 
+use crate::{AllMeetData, EntryIndex, LifterMap};
+
 use std::cmp::Ordering;
+
+/// Holds a minimum and maximum possible BirthDate.
+///
+/// For purposes of simplicity, the internal Date logic here is not concerned
+/// with whether or not a given Date actually exists, and assume that every
+/// month has exactly 31 days. This is valid because we are only concerned with
+/// whether a given MeetDate is less than or greater than a (possibly
+/// nonexistent) Date.
+#[derive(Debug, Default)]
+struct BirthDateRange {
+    pub min: Option<Date>,
+    pub max: Option<Date>,
+}
+
+/// Named return enum from the BirthDateRange narrow functions, for clarity.
+#[derive(Debug, PartialEq)]
+enum NarrowResult {
+    /// Returned if the new range information was successfully integrated.
+    Integrated,
+    /// Returned if the new data conflicted with the known range.
+    Conflict,
+}
+
+impl BirthDateRange {
+    /// Shorthand constructor for use in test code.
+    #[cfg(test)]
+    pub fn at(min: Option<u32>, max: Option<u32>) -> BirthDateRange {
+        BirthDateRange {
+            min: min.map(|x| Date::from_u32(x)),
+            max: max.map(|x| Date::from_u32(x)),
+        }
+    }
+
+    /// Narrows the range by a known BirthDate.
+    pub fn narrow_by_birthdate(&mut self, birthdate: Date) -> NarrowResult {
+        let min: Date = self.min.unwrap_or_else(|| Date::from_u32(1000_01_01));
+        let max: Date = self.max.unwrap_or_else(|| Date::from_u32(9999_12_31));
+        if birthdate < min || birthdate > max {
+            return NarrowResult::Conflict;
+        }
+        self.min = Some(birthdate);
+        self.max = Some(birthdate);
+        NarrowResult::Integrated
+    }
+}
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub struct AgeData {
@@ -746,9 +794,90 @@ fn interpolate(entries: &mut [AgeData]) {
     }
 }
 
+/// Determines a minimal BirthDateRange consistent with all given Entries.
+///
+/// Executes in `O(n)` over the indices list.
+fn get_birthdate_range(
+    meetdata: &mut AllMeetData,
+    indices: &[EntryIndex],
+) -> BirthDateRange {
+    let unknown = BirthDateRange::default();
+    let mut range = BirthDateRange::default();
+    for &index in indices {
+        // Extract the MeetDate first. Because of the borrow checker, the Meet and Entry
+        // structs cannot be referenced simultaneously.
+        let meetdate: Date = meetdata.get_meet(index).date;
+        let entry = meetdata.get_entry(index);
+
+        // Narrow by BirthDate.
+        if let Some(birthdate) = entry.birthdate {
+            if range.narrow_by_birthdate(birthdate) == NarrowResult::Conflict {
+                return unknown;
+            }
+        }
+    }
+
+    range
+}
+
+/// Attempts to infer BirthDate range for each lifter, used to assign Age
+/// values.
+pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
+    for (_username, indices) in liftermap {
+        // Interpolation requires multiple entries.
+        if indices.len() < 2 {
+            continue;
+        }
+
+        let range = get_birthdate_range(meetdata, indices);
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    use NarrowResult::{Conflict, Integrated};
+
+    #[test]
+    fn range_narrow_by_birthdate() {
+        let birthdate = Date::from_u32(1967_02_03);
+
+        // Test a BirthDate against unknown bounds.
+        let mut bdr = BirthDateRange::default();
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
+        assert_eq!(bdr.min, Some(birthdate));
+        assert_eq!(bdr.max, Some(birthdate));
+
+        // Test a BirthDate that narrows an upper bound.
+        let mut bdr = BirthDateRange::at(None, Some(2019_04_24));
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
+        assert_eq!(bdr.min, Some(birthdate));
+        assert_eq!(bdr.max, Some(birthdate));
+
+        // Test a BirthDate that conflicts with an upper bound.
+        let mut bdr = BirthDateRange::at(None, Some(1967_02_02));
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Conflict);
+
+        // Test a BirthDate that narrows a lower bound.
+        let mut bdr = BirthDateRange::at(Some(1955_02_03), None);
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
+        assert_eq!(bdr.min, Some(birthdate));
+        assert_eq!(bdr.max, Some(birthdate));
+
+        // Test a BirthDate that conflicts with a lower bound.
+        let mut bdr = BirthDateRange::at(Some(1967_02_04), None);
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Conflict);
+
+        // Test a BirthDate that provides no additional new information.
+        let mut bdr = BirthDateRange::at(Some(1967_02_03), Some(1967_02_03));
+        assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
+        assert_eq!(bdr.min, Some(birthdate));
+        assert_eq!(bdr.max, Some(birthdate));
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////
+    // Matt's tests below (need to rephrase in terms of new data structures)
+    ///////////////////////////////////////////////////////////////////////////////
 
     // asserts that all permutation of an array give the same birthdate constraint
     // This is a super crappy way of doing this, write something better :P
