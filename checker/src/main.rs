@@ -166,6 +166,14 @@ fn main() -> Result<(), Box<Error>> {
         .version("0.1")
         .about("Checks and compiles the OpenPowerlifting database")
         .arg(
+            clap::Arg::with_name("debug-age")
+                .short("a")
+                .long("debug-age")
+                .value_name("username")
+                .takes_value(true)
+                .help("Prints age interpolation info for the given username"),
+        )
+        .arg(
             clap::Arg::with_name("compile")
                 .short("c")
                 .long("compile")
@@ -188,6 +196,9 @@ fn main() -> Result<(), Box<Error>> {
 
     // Validate arguments.
     let is_compiling: bool = argmatches.is_present("compile");
+    let debug_age_username: Option<&str> = argmatches.value_of("debug-age");
+    let is_debugging: bool = debug_age_username.is_some();
+
     let search_root = match argmatches.value_of("PATH") {
         None => meet_data_root.clone(),
         Some(path) => {
@@ -322,13 +333,22 @@ fn main() -> Result<(), Box<Error>> {
         process::exit(1);
     }
 
-    if is_compiling {
+    // The default mode without arguments just performs data checks.
+    if is_compiling || is_debugging {
         let liftermap = meetdata.create_liftermap();
         checker::compiler::interpolate_country(&mut meetdata, &liftermap);
+
+        // Perform age interpolation.
+        if let Some(u) = debug_age_username {
+            checker::compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, u);
+        }
         checker::compiler::interpolate_age(&mut meetdata, &liftermap);
 
-        let buildpath = project_root.join("build");
-        checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
+        // Perform final compilation if requested.
+        if is_compiling {
+            let buildpath = project_root.join("build");
+            checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
+        }
     }
 
     Ok(())

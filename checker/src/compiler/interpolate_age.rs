@@ -6,6 +6,7 @@ use opltypes::*;
 use crate::{AllMeetData, EntryIndex, LifterMap};
 
 use std::cmp::{self, Ordering};
+use std::fmt;
 
 /// Holds a minimum and maximum possible BirthDate.
 ///
@@ -14,7 +15,7 @@ use std::cmp::{self, Ordering};
 /// month has exactly 31 days. This is valid because we are only concerned with
 /// whether a given MeetDate is less than or greater than a (possibly
 /// nonexistent) Date.
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 struct BirthDateRange {
     pub min: Date,
     pub max: Date,
@@ -31,6 +32,13 @@ impl Default for BirthDateRange {
             min: BDR_DEFAULT_MIN,
             max: BDR_DEFAULT_MAX,
         }
+    }
+}
+
+impl fmt::Display for BirthDateRange {
+    /// Used for --debug-age output.
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "({}, {})", self.min, self.max)
     }
 }
 
@@ -52,6 +60,28 @@ impl BirthDateRange {
             min: min.map(|x| Date::from_u32(x)).unwrap_or(default.min),
             max: max.map(|x| Date::from_u32(x)).unwrap_or(default.max),
         }
+    }
+
+    /// Returns the Age on a given Date given the known range.
+    pub fn age_on(&self, date: Date) -> Age {
+        // Get exact ages with respect to the bounds.
+        let min_inferred = self.min.age_on(date).unwrap_or(Age::None);
+        let max_inferred = self.max.age_on(date).unwrap_or(Age::None);
+
+        // If they match, return that Age::Exact.
+        if min_inferred == max_inferred {
+            return min_inferred;
+        }
+
+        // If they are off-by-one, return an Age::Approximate.
+        let min_num = min_inferred.to_u8_option().unwrap_or(std::u8::MIN) as u32;
+        let max_num = max_inferred.to_u8_option().unwrap_or(std::u8::MAX) as u32;
+        if min_num == max_num + 1 {
+            return Age::Approximate(min_num as u8);
+        }
+
+        // The range was too wide to infer a specific Age.
+        Age::None
     }
 
     /// Intersects this BirthDateRange with another.
@@ -831,12 +861,54 @@ fn interpolate(entries: &mut [AgeData]) {
     }
 }
 
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_integrated<T>(
+    debug: bool,
+    range: &BirthDateRange,
+    fieldname: &str,
+    field: &T,
+    path: &Option<String>,
+) where
+    T: fmt::Display,
+{
+    if debug {
+        println!(
+            "Narrowed to {} by {} '{}' in '{}'",
+            range,
+            fieldname,
+            field,
+            path.as_ref().unwrap()
+        );
+    }
+}
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_conflict<T>(debug: bool, fieldname: &str, field: &T, path: &Option<String>)
+where
+    T: fmt::Display,
+{
+    if debug {
+        println!(
+            "Conflict with {} '{}' in '{}'",
+            fieldname,
+            field,
+            path.as_ref().unwrap()
+        );
+    }
+}
+
 /// Determines a minimal BirthDateRange consistent with all given Entries.
+///
+/// If no consistent BirthDateRange could be determined,
+/// `BirthDateRange::default()` is returned.
 ///
 /// Executes in `O(n)` over the indices list.
 fn get_birthdate_range(
     meetdata: &mut AllMeetData,
     indices: &[EntryIndex],
+    debug: bool,
 ) -> BirthDateRange {
     let unknown = BirthDateRange::default();
     let mut range = BirthDateRange::default();
@@ -844,24 +916,96 @@ fn get_birthdate_range(
         // Extract the MeetDate first. Because of the borrow checker, the Meet and Entry
         // structs cannot be referenced simultaneously.
         let meetdate: Date = meetdata.get_meet(index).date;
+
+        // Get the MeetPath for more helpful debugging output.
+        // Cloning is OK since this is only for a few entries for one lifter.
+        let path: Option<String> = if debug {
+            Some(meetdata.get_meet(index).path.clone())
+        } else {
+            None
+        };
+
         let entry = meetdata.get_entry(index);
 
         // Narrow by BirthDate.
         if let Some(birthdate) = entry.birthdate {
             if range.narrow_by_birthdate(birthdate) == NarrowResult::Conflict {
+                trace_conflict(debug, "BirthDate", &birthdate, &path);
                 return unknown;
             }
+            trace_integrated(debug, &range, "BirthDate", &birthdate, &path);
         }
 
         // Narrow by BirthYear.
         if let Some(birthyear) = entry.birthyear {
             if range.narrow_by_birthyear(birthyear) == NarrowResult::Conflict {
+                trace_conflict(debug, "BirthYear", &birthyear, &path);
                 return unknown;
             }
+            trace_integrated(debug, &range, "BirthYear", &birthyear, &path);
         }
     }
 
+    if debug {
+        println!("Final range {}", range);
+    }
     range
+}
+
+/// Given a known BirthDateRange, calculate the lifter's `Age` in each Entry.
+///
+/// The BirthDateRange was already validated by `get_birthdate_range()`,
+/// so it is guaranteed to be consistent over all the Entries.
+///
+/// Executes in `O(n)` over the indices list.
+fn infer_from_range(
+    meetdata: &mut AllMeetData,
+    indices: &[EntryIndex],
+    range: BirthDateRange,
+    debug: bool,
+) {
+    for &index in indices {
+        let meetdate: Date = meetdata.get_meet(index).date;
+        let entry = meetdata.get_entry_mut(index);
+
+        let age_on_date = range.age_on(meetdate);
+        if debug {
+            println!("Inferred Age {:?} on {}", age_on_date, meetdate);
+        }
+
+        match age_on_date {
+            Age::Exact(_) => entry.age = age_on_date,
+            Age::Approximate(_) => {
+                // Don't overwrite an exact Age with an approximate Age.
+                if !entry.age.is_exact() {
+                    entry.age = age_on_date;
+                }
+            }
+            Age::None => (),
+        };
+    }
+}
+
+/// Age interpolation for a single lifter's entries.
+fn interpolate_age_single_lifter(
+    meetdata: &mut AllMeetData,
+    indices: &[EntryIndex],
+    debug: bool,
+) {
+    let range = get_birthdate_range(meetdata, indices, debug);
+    infer_from_range(meetdata, indices, range, debug);
+}
+
+/// Public-facing entry point for debugging a single lifter's interpolation.
+pub fn interpolate_age_debug_for(
+    meetdata: &mut AllMeetData,
+    liftermap: &LifterMap,
+    username: &str,
+) {
+    match liftermap.get(username) {
+        Some(indices) => interpolate_age_single_lifter(meetdata, indices, true),
+        None => println!("Username '{}' not found", username),
+    }
 }
 
 /// Attempts to infer BirthDate range for each lifter, used to assign Age
@@ -869,11 +1013,9 @@ fn get_birthdate_range(
 pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
     for (_username, indices) in liftermap {
         // Interpolation requires multiple entries.
-        if indices.len() < 2 {
-            continue;
+        if indices.len() >= 2 {
+            interpolate_age_single_lifter(meetdata, indices, false);
         }
-
-        let range = get_birthdate_range(meetdata, indices);
     }
 }
 

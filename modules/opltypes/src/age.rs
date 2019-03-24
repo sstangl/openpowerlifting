@@ -172,6 +172,23 @@ impl Age {
             Age::None => false,
         }
     }
+
+    /// Whether the given Age is an Age::Exact.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Age;
+    /// assert!(Age::Exact(23).is_exact());
+    /// assert!(!Age::Approximate(23).is_exact());
+    /// assert!(!Age::None.is_exact());
+    /// ```
+    pub fn is_exact(self) -> bool {
+        match self {
+            Age::Exact(_) => true,
+            Age::Approximate(_) | Age::None => false,
+        }
+    }
 }
 
 impl Default for Age {
