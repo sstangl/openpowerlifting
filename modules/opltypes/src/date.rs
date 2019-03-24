@@ -32,7 +32,7 @@ impl Date {
     /// assert_eq!(date.day(), 16);
     /// ```
     #[inline]
-    pub fn from_u32(u: u32) -> Date {
+    pub const fn from_u32(u: u32) -> Date {
         Date(u)
     }
 

@@ -14,10 +14,24 @@ use std::cmp::Ordering;
 /// month has exactly 31 days. This is valid because we are only concerned with
 /// whether a given MeetDate is less than or greater than a (possibly
 /// nonexistent) Date.
-#[derive(Debug, Default)]
+#[derive(Debug)]
 struct BirthDateRange {
-    pub min: Option<Date>,
-    pub max: Option<Date>,
+    pub min: Date,
+    pub max: Date,
+}
+
+/// An unrealistically low Date for use as a default minimum.
+const BDR_DEFAULT_MIN: Date = Date::from_u32(1100_01_01);
+/// An unrealistically high Date for use as a default maximum.
+const BDR_DEFAULT_MAX: Date = Date::from_u32(9997_06_15);
+
+impl Default for BirthDateRange {
+    fn default() -> Self {
+        BirthDateRange {
+            min: BDR_DEFAULT_MIN,
+            max: BDR_DEFAULT_MAX,
+        }
+    }
 }
 
 /// Named return enum from the BirthDateRange narrow functions, for clarity.
@@ -33,21 +47,20 @@ impl BirthDateRange {
     /// Shorthand constructor for use in test code.
     #[cfg(test)]
     pub fn at(min: Option<u32>, max: Option<u32>) -> BirthDateRange {
+        let default = BirthDateRange::default();
         BirthDateRange {
-            min: min.map(|x| Date::from_u32(x)),
-            max: max.map(|x| Date::from_u32(x)),
+            min: min.map(|x| Date::from_u32(x)).unwrap_or(default.min),
+            max: max.map(|x| Date::from_u32(x)).unwrap_or(default.max),
         }
     }
 
     /// Narrows the range by a known BirthDate.
     pub fn narrow_by_birthdate(&mut self, birthdate: Date) -> NarrowResult {
-        let min: Date = self.min.unwrap_or_else(|| Date::from_u32(1000_01_01));
-        let max: Date = self.max.unwrap_or_else(|| Date::from_u32(9999_12_31));
-        if birthdate < min || birthdate > max {
+        if birthdate < self.min || birthdate > self.max {
             return NarrowResult::Conflict;
         }
-        self.min = Some(birthdate);
-        self.max = Some(birthdate);
+        self.min = birthdate;
+        self.max = birthdate;
         NarrowResult::Integrated
     }
 }
@@ -845,14 +858,14 @@ mod tests {
         // Test a BirthDate against unknown bounds.
         let mut bdr = BirthDateRange::default();
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
-        assert_eq!(bdr.min, Some(birthdate));
-        assert_eq!(bdr.max, Some(birthdate));
+        assert_eq!(bdr.min, birthdate);
+        assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that narrows an upper bound.
         let mut bdr = BirthDateRange::at(None, Some(2019_04_24));
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
-        assert_eq!(bdr.min, Some(birthdate));
-        assert_eq!(bdr.max, Some(birthdate));
+        assert_eq!(bdr.min, birthdate);
+        assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that conflicts with an upper bound.
         let mut bdr = BirthDateRange::at(None, Some(1967_02_02));
@@ -861,8 +874,8 @@ mod tests {
         // Test a BirthDate that narrows a lower bound.
         let mut bdr = BirthDateRange::at(Some(1955_02_03), None);
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
-        assert_eq!(bdr.min, Some(birthdate));
-        assert_eq!(bdr.max, Some(birthdate));
+        assert_eq!(bdr.min, birthdate);
+        assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that conflicts with a lower bound.
         let mut bdr = BirthDateRange::at(Some(1967_02_04), None);
@@ -871,8 +884,8 @@ mod tests {
         // Test a BirthDate that provides no additional new information.
         let mut bdr = BirthDateRange::at(Some(1967_02_03), Some(1967_02_03));
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
-        assert_eq!(bdr.min, Some(birthdate));
-        assert_eq!(bdr.max, Some(birthdate));
+        assert_eq!(bdr.min, birthdate);
+        assert_eq!(bdr.max, birthdate);
     }
 
     ///////////////////////////////////////////////////////////////////////////////
