@@ -5,7 +5,7 @@ use opltypes::*;
 
 use crate::{AllMeetData, EntryIndex, LifterMap};
 
-use std::cmp::Ordering;
+use std::cmp::{self, Ordering};
 
 /// Holds a minimum and maximum possible BirthDate.
 ///
@@ -54,6 +54,17 @@ impl BirthDateRange {
         }
     }
 
+    /// Intersects this BirthDateRange with another.
+    pub fn intersect(&mut self, other: &BirthDateRange) -> NarrowResult {
+        if self.min > other.max || other.min > self.max {
+            NarrowResult::Conflict
+        } else {
+            self.min = cmp::max(self.min, other.min);
+            self.max = cmp::min(self.max, other.max);
+            NarrowResult::Integrated
+        }
+    }
+
     /// Narrows the range by a known BirthDate.
     pub fn narrow_by_birthdate(&mut self, birthdate: Date) -> NarrowResult {
         if birthdate < self.min || birthdate > self.max {
@@ -62,6 +73,19 @@ impl BirthDateRange {
         self.min = birthdate;
         self.max = birthdate;
         NarrowResult::Integrated
+    }
+
+    /// Narrows the range by a known BirthYear.
+    pub fn narrow_by_birthyear(&mut self, birthyear: u32) -> NarrowResult {
+        let year_in_date: u32 = birthyear * 1_00_00;
+        let min_yeardate = Date::from_u32(year_in_date + 01_01); // Jan 1.
+        let max_yeardate = Date::from_u32(year_in_date + 12_31); // Dec 31.
+
+        let birthyear_range = BirthDateRange {
+            min: min_yeardate,
+            max: max_yeardate,
+        };
+        self.intersect(&birthyear_range)
     }
 }
 
@@ -828,6 +852,13 @@ fn get_birthdate_range(
                 return unknown;
             }
         }
+
+        // Narrow by BirthYear.
+        if let Some(birthyear) = entry.birthyear {
+            if range.narrow_by_birthyear(birthyear) == NarrowResult::Conflict {
+                return unknown;
+            }
+        }
     }
 
     range
@@ -886,6 +917,41 @@ mod tests {
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
         assert_eq!(bdr.min, birthdate);
         assert_eq!(bdr.max, birthdate);
+    }
+
+    #[test]
+    fn range_narrow_by_birthyear() {
+        // Test a BirthYear against unknown bounds.
+        let mut bdr = BirthDateRange::default();
+        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
+        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+
+        // Test a BirthYear that narrows an upper bound.
+        let mut bdr = BirthDateRange::at(None, Some(1983_04_24));
+        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
+        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+
+        // Test a BirthYear that conflicts with an upper bound.
+        let mut bdr = BirthDateRange::at(None, Some(1981_01_01));
+        assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
+
+        // Test a BirthYear that narrows a lower bound.
+        let mut bdr = BirthDateRange::at(Some(1981_01_01), None);
+        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
+        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+
+        // Test a BirthYear that conflicts with a lower bound.
+        let mut bdr = BirthDateRange::at(Some(1983_01_01), None);
+        assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
+
+        // Test a BirthYear that entirely contains the known range.
+        let mut bdr = BirthDateRange::at(Some(1982_03_04), Some(1982_05_06));
+        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1982_03_04));
+        assert_eq!(bdr.max, Date::from_u32(1982_05_06));
     }
 
     ///////////////////////////////////////////////////////////////////////////////
