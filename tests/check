@@ -7,12 +7,19 @@ set -e
 
 TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+# When no arguments are passed, limit checking to just the current directory.
+if [ $# -eq 0 ]; then
+	CHECKER_ARGUMENTS="${CURDIR}"
+else
+	CHECKER_ARGUMENTS=$@
+fi
+
 # Run the checker first.
 (
 	REPODIR="$( dirname "${TESTSDIR}" )"
 	CURDIR="$( pwd )"
 	cd ${REPODIR}
-	cargo run --bin checker "${CURDIR}"
+	cargo run --bin checker -- $CHECKER_ARGUMENTS
 )
 
 # Run the Python checks.
