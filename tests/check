@@ -22,5 +22,7 @@ fi
 	cargo run --bin checker -- $CHECKER_ARGUMENTS
 )
 
-# Run the Python checks.
-${TESTSDIR}/check-sex-consistency
+# Run the Python checks. But only if no arguments were provided.
+if [ $# -eq 0 ]; then
+	${TESTSDIR}/check-sex-consistency
+fi
