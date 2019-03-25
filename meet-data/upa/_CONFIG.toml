@@ -38,40 +38,40 @@
     fmxr = {name="FMXR", min=40, max=999, sex="F", equipment=["Raw","Wraps"]}
 
     # Tested raw divisions.
-    mt1rad = {name="MT1R-AD", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
-    ft1rad = {name="FT1R-AD", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
-    mt2rad = {name="MT2R-AD", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
-    ft2rad = {name="FT2R-AD", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
-    mt3rad = {name="MT3R-AD", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
-    ft3rad = {name="FT3R-AD", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
-    mtxrad = {name="MTXR-AD", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
-    ftxrad = {name="FTXR-AD", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
-    mjrad = {name="MJR-AD", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
-    fjrad = {name="FJR-AD", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
-    morad = {name="MOR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
-    forad = {name="FOR-AD", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
-    msmrad = {name="MSR-AD", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
-    fsmrad = {name="FSR-AD", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
-    mm1rad = {name="MM1R-AD", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
-    fm1rad = {name="FM1R-AD", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
-    mm2rad = {name="MM2R-AD", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
-    fm2rad = {name="FM2R-AD", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
-    mm3rad = {name="MM3R-AD", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
-    fm3rad = {name="FM3R-AD", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
-    mm4rad = {name="MM4R-AD", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
-    fm4rad = {name="FM4R-AD", min=55, max=59, sex="F", equipment=["Raw","Wraps"]}
-    mm5rad = {name="MM5R-AD", min=60, max=64, sex="M", equipment=["Raw","Wraps"]}
-    fm5rad = {name="FM5R-AD", min=60, max=64, sex="F", equipment=["Raw","Wraps"]}
-    mm6rad = {name="MM6R-AD", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
-    fm6rad = {name="FM6R-AD", min=65, max=69, sex="F", equipment=["Raw","Wraps"]}
-    mm7rad = {name="MM7R-AD", min=70, max=74, sex="M", equipment=["Raw","Wraps"]}
-    fm7rad = {name="FM7R-AD", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
-    mm8rad = {name="MM8R-AD", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
-    fm8rad = {name="FM8R-AD", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
-    mm9rad = {name="MM9R-AD", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
-    fm9rad = {name="FM9R-AD", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
-    mmxrad = {name="MMXR-AD", min=40, max=999, sex="M", equipment=["Raw","Wraps"]}
-    fmxrad = {name="FMXR-AD", min=40, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mt1rad = {name="MT1R-AD", min=13, max=15, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    ft1rad = {name="FT1R-AD", min=13, max=15, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mt2rad = {name="MT2R-AD", min=16, max=17, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    ft2rad = {name="FT2R-AD", min=16, max=17, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mt3rad = {name="MT3R-AD", min=18, max=19, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    ft3rad = {name="FT3R-AD", min=18, max=19, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mtxrad = {name="MTXR-AD", min=13, max=19, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    ftxrad = {name="FTXR-AD", min=13, max=19, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mjrad = {name="MJR-AD", min=20, max=23, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fjrad = {name="FJR-AD", min=20, max=23, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    morad = {name="MOR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    forad = {name="FOR-AD", min=0, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    msmrad = {name="MSR-AD", min=33, max=39, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fsmrad = {name="FSR-AD", min=33, max=39, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm1rad = {name="MM1R-AD", min=40, max=44, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm1rad = {name="FM1R-AD", min=40, max=44, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm2rad = {name="MM2R-AD", min=45, max=49, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm2rad = {name="FM2R-AD", min=45, max=49, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm3rad = {name="MM3R-AD", min=50, max=54, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm3rad = {name="FM3R-AD", min=50, max=54, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm4rad = {name="MM4R-AD", min=55, max=59, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm4rad = {name="FM4R-AD", min=55, max=59, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm5rad = {name="MM5R-AD", min=60, max=64, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm5rad = {name="FM5R-AD", min=60, max=64, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm6rad = {name="MM6R-AD", min=65, max=69, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm6rad = {name="FM6R-AD", min=65, max=69, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm7rad = {name="MM7R-AD", min=70, max=74, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm7rad = {name="FM7R-AD", min=70, max=74, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm8rad = {name="MM8R-AD", min=75, max=79, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm8rad = {name="FM8R-AD", min=75, max=79, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm9rad = {name="MM9R-AD", min=80, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fm9rad = {name="FM9R-AD", min=80, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mmxrad = {name="MMXR-AD", min=40, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fmxrad = {name="FMXR-AD", min=40, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
 
     # Untested equipped divisions.
     mt1 = {name="MT1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
@@ -110,40 +110,40 @@
     fmx = {name="FMX", min=40, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
 
     # Tested equipped divisions.
-    mt1ad = {name="MT1-AD", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
-    ft1ad = {name="FT1-AD", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mt2ad = {name="MT2-AD", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"]}
-    ft2ad = {name="FT2-AD", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mt3ad = {name="MT3-AD", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
-    ft3ad = {name="FT3-AD", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mtxad = {name="MTX-AD", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
-    ftxad = {name="FTX-AD", min=13, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mjad = {name="MJ-AD", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fjad = {name="FJ-AD", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
-    moad = {name="MO-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    foad = {name="FO-AD", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
-    msmad = {name="MS-AD", min=33, max=39, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fsmad = {name="FS-AD", min=33, max=39, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm1ad = {name="MM1-AD", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm1ad = {name="FM1-AD", min=40, max=44, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm2ad = {name="MM2-AD", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm2ad = {name="FM2-AD", min=45, max=49, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm3ad = {name="MM3-AD", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm3ad = {name="FM3-AD", min=50, max=54, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm4ad = {name="MM4-AD", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm4ad = {name="FM4-AD", min=55, max=59, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm5ad = {name="MM5-AD", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm5ad = {name="FM5-AD", min=60, max=64, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm6ad = {name="MM6-AD", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm6ad = {name="FM6-AD", min=65, max=69, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm7ad = {name="MM7-AD", min=70, max=74, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm7ad = {name="FM7-AD", min=70, max=74, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm8ad = {name="MM8-AD", min=75, max=79, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm8ad = {name="FM8-AD", min=75, max=79, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mm9ad = {name="MM9-AD", min=80, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fm9ad = {name="FM9-AD", min=80, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mmxad = {name="MMX-AD", min=40, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    fmxad = {name="FMX-AD", min=40, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    mt1ad = {name="MT1-AD", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    ft1ad = {name="FT1-AD", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mt2ad = {name="MT2-AD", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    ft2ad = {name="FT2-AD", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mt3ad = {name="MT3-AD", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    ft3ad = {name="FT3-AD", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mtxad = {name="MTX-AD", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    ftxad = {name="FTX-AD", min=13, max=19, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mjad = {name="MJ-AD", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fjad = {name="FJ-AD", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    moad = {name="MO-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    foad = {name="FO-AD", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    msmad = {name="MS-AD", min=33, max=39, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fsmad = {name="FS-AD", min=33, max=39, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm1ad = {name="MM1-AD", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm1ad = {name="FM1-AD", min=40, max=44, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm2ad = {name="MM2-AD", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm2ad = {name="FM2-AD", min=45, max=49, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm3ad = {name="MM3-AD", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm3ad = {name="FM3-AD", min=50, max=54, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm4ad = {name="MM4-AD", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm4ad = {name="FM4-AD", min=55, max=59, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm5ad = {name="MM5-AD", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm5ad = {name="FM5-AD", min=60, max=64, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm6ad = {name="MM6-AD", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm6ad = {name="FM6-AD", min=65, max=69, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm7ad = {name="MM7-AD", min=70, max=74, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm7ad = {name="FM7-AD", min=70, max=74, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm8ad = {name="MM8-AD", min=75, max=79, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm8ad = {name="FM8-AD", min=75, max=79, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mm9ad = {name="MM9-AD", min=80, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fm9ad = {name="FM9-AD", min=80, max=999, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    mmxad = {name="MMX-AD", min=40, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested="Yes"}
+    fmxad = {name="FMX-AD", min=40, max=999, sex="F", equipment=["Single-ply","Multi-ply"], tested="Yes"}
 
     # Raw Elite divisions disallow wraps. Untested.
     mt1re = {name="MT1RE", min=13, max=15, sex="M", equipment="Raw"}
@@ -182,46 +182,46 @@
     fmxre = {name="FMXRE", min=40, max=999, sex="F", equipment="Raw"}
 
     # Raw Elite divisions disallow wraps. Tested.
-    mt1read = {name="MT1RE-AD", min=13, max=15, sex="M", equipment="Raw"}
-    ft1read = {name="FT1RE-AD", min=13, max=15, sex="F", equipment="Raw"}
-    mt2read = {name="MT2RE-AD", min=16, max=17, sex="M", equipment="Raw"}
-    ft2read = {name="FT2RE-AD", min=16, max=17, sex="F", equipment="Raw"}
-    mt3read = {name="MT3RE-AD", min=18, max=19, sex="M", equipment="Raw"}
-    ft3read = {name="FT3RE-AD", min=18, max=19, sex="F", equipment="Raw"}
-    mtxread = {name="MTXRE-AD", min=18, max=19, sex="M", equipment="Raw"}
-    ftxread = {name="FTXRE-AD", min=18, max=19, sex="F", equipment="Raw"}
-    mjread = {name="MJRE-AD", min=20, max=23, sex="M", equipment="Raw"}
-    fjread = {name="FJRE-AD", min=20, max=23, sex="F", equipment="Raw"}
-    moread = {name="MORE-AD", min=0, max=999, sex="M", equipment="Raw"}
-    foread = {name="FORE-AD", min=0, max=999, sex="F", equipment="Raw"}
-    msmread = {name="MSRE-AD", min=33, max=39, sex="M", equipment="Raw"}
-    fsmread = {name="FSRE-AD", min=33, max=39, sex="F", equipment="Raw"}
-    mm1read = {name="MM1RE-AD", min=40, max=44, sex="M", equipment="Raw"}
-    fm1read = {name="FM1RE-AD", min=40, max=44, sex="F", equipment="Raw"}
-    mm2read = {name="MM2RE-AD", min=45, max=49, sex="M", equipment="Raw"}
-    fm2read = {name="FM2RE-AD", min=45, max=49, sex="F", equipment="Raw"}
-    mm3read = {name="MM3RE-AD", min=50, max=54, sex="M", equipment="Raw"}
-    fm3read = {name="FM3RE-AD", min=50, max=54, sex="F", equipment="Raw"}
-    mm4read = {name="MM4RE-AD", min=55, max=59, sex="M", equipment="Raw"}
-    fm4read = {name="FM4RE-AD", min=55, max=59, sex="F", equipment="Raw"}
-    mm5read = {name="MM5RE-AD", min=60, max=64, sex="M", equipment="Raw"}
-    fm5read = {name="FM5RE-AD", min=60, max=64, sex="F", equipment="Raw"}
-    mm6read = {name="MM6RE-AD", min=65, max=69, sex="M", equipment="Raw"}
-    fm6read = {name="FM6RE-AD", min=65, max=69, sex="F", equipment="Raw"}
-    mm7read = {name="MM7RE-AD", min=70, max=74, sex="M", equipment="Raw"}
-    fm7read = {name="FM7RE-AD", min=70, max=74, sex="F", equipment="Raw"}
-    mm8read = {name="MM8RE-AD", min=75, max=79, sex="M", equipment="Raw"}
-    fm8read = {name="FM8RE-AD", min=75, max=79, sex="F", equipment="Raw"}
-    mm9read = {name="MM9RE-AD", min=80, max=999, sex="M", equipment="Raw"}
-    fm9read = {name="FM9RE-AD", min=80, max=999, sex="F", equipment="Raw"}
-    mmxread = {name="MMXRE-AD", min=40, max=999, sex="M", equipment="Raw"}
-    fmxread = {name="FMXRE-AD", min=40, max=999, sex="F", equipment="Raw"}
+    mt1read = {name="MT1RE-AD", min=13, max=15, sex="M", equipment="Raw", tested="Yes"}
+    ft1read = {name="FT1RE-AD", min=13, max=15, sex="F", equipment="Raw", tested="Yes"}
+    mt2read = {name="MT2RE-AD", min=16, max=17, sex="M", equipment="Raw", tested="Yes"}
+    ft2read = {name="FT2RE-AD", min=16, max=17, sex="F", equipment="Raw", tested="Yes"}
+    mt3read = {name="MT3RE-AD", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
+    ft3read = {name="FT3RE-AD", min=18, max=19, sex="F", equipment="Raw", tested="Yes"}
+    mtxread = {name="MTXRE-AD", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
+    ftxread = {name="FTXRE-AD", min=18, max=19, sex="F", equipment="Raw", tested="Yes"}
+    mjread = {name="MJRE-AD", min=20, max=23, sex="M", equipment="Raw", tested="Yes"}
+    fjread = {name="FJRE-AD", min=20, max=23, sex="F", equipment="Raw", tested="Yes"}
+    moread = {name="MORE-AD", min=0, max=999, sex="M", equipment="Raw", tested="Yes"}
+    foread = {name="FORE-AD", min=0, max=999, sex="F", equipment="Raw", tested="Yes"}
+    msmread = {name="MSRE-AD", min=33, max=39, sex="M", equipment="Raw", tested="Yes"}
+    fsmread = {name="FSRE-AD", min=33, max=39, sex="F", equipment="Raw", tested="Yes"}
+    mm1read = {name="MM1RE-AD", min=40, max=44, sex="M", equipment="Raw", tested="Yes"}
+    fm1read = {name="FM1RE-AD", min=40, max=44, sex="F", equipment="Raw", tested="Yes"}
+    mm2read = {name="MM2RE-AD", min=45, max=49, sex="M", equipment="Raw", tested="Yes"}
+    fm2read = {name="FM2RE-AD", min=45, max=49, sex="F", equipment="Raw", tested="Yes"}
+    mm3read = {name="MM3RE-AD", min=50, max=54, sex="M", equipment="Raw", tested="Yes"}
+    fm3read = {name="FM3RE-AD", min=50, max=54, sex="F", equipment="Raw", tested="Yes"}
+    mm4read = {name="MM4RE-AD", min=55, max=59, sex="M", equipment="Raw", tested="Yes"}
+    fm4read = {name="FM4RE-AD", min=55, max=59, sex="F", equipment="Raw", tested="Yes"}
+    mm5read = {name="MM5RE-AD", min=60, max=64, sex="M", equipment="Raw", tested="Yes"}
+    fm5read = {name="FM5RE-AD", min=60, max=64, sex="F", equipment="Raw", tested="Yes"}
+    mm6read = {name="MM6RE-AD", min=65, max=69, sex="M", equipment="Raw", tested="Yes"}
+    fm6read = {name="FM6RE-AD", min=65, max=69, sex="F", equipment="Raw", tested="Yes"}
+    mm7read = {name="MM7RE-AD", min=70, max=74, sex="M", equipment="Raw", tested="Yes"}
+    fm7read = {name="FM7RE-AD", min=70, max=74, sex="F", equipment="Raw", tested="Yes"}
+    mm8read = {name="MM8RE-AD", min=75, max=79, sex="M", equipment="Raw", tested="Yes"}
+    fm8read = {name="FM8RE-AD", min=75, max=79, sex="F", equipment="Raw", tested="Yes"}
+    mm9read = {name="MM9RE-AD", min=80, max=999, sex="M", equipment="Raw", tested="Yes"}
+    fm9read = {name="FM9RE-AD", min=80, max=999, sex="F", equipment="Raw", tested="Yes"}
+    mmxread = {name="MMXRE-AD", min=40, max=999, sex="M", equipment="Raw", tested="Yes"}
+    fmxread = {name="FMXRE-AD", min=40, max=999, sex="F", equipment="Raw", tested="Yes"}
 
     # Police and Fire divisions.
     mpfr = {name="MPFR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     fpfr = {name="FPFR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
-    mpfrad = {name="MPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
-    fpfrad = {name="FPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    mpfrad = {name="MPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    fpfrad = {name="FPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
 
     # Guest divisions.
     mgr = {name="MGR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
