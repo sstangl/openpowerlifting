@@ -1052,8 +1052,13 @@ fn interpolate_age_single_lifter(
     indices: &[EntryIndex],
     debug: bool,
 ) {
+    // Attempt to determine bounds for a BirthDate. O(indices).
     let range = get_birthdate_range(meetdata, indices, debug);
-    infer_from_range(meetdata, indices, range, debug);
+
+    // If found, attempt to apply those bounds. O(indices).
+    if range != BirthDateRange::default() {
+        infer_from_range(meetdata, indices, range, debug);
+    }
 }
 
 /// Public-facing entry point for debugging a single lifter's interpolation.
