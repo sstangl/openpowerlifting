@@ -311,39 +311,97 @@ pub fn get_entry_indices_for<'db>(
                 .iter()
                 .filter_map(|&i| {
                     let class = opldb.get_entry(i).ageclass;
+                    let age = opldb.get_entry(i).age;
                     let matches: bool = match selection.ageclass {
                         AgeClassSelection::AllAges => true,
-                        AgeClassSelection::Youth512 => class == AgeClass::Class5_12,
-                        AgeClassSelection::Teenage1315 => class == AgeClass::Class13_15,
-                        AgeClassSelection::Teenage1617 => class == AgeClass::Class16_17,
-                        AgeClassSelection::Teenage1819 => class == AgeClass::Class18_19,
-                        AgeClassSelection::Juniors2023 => class == AgeClass::Class20_23,
-                        AgeClassSelection::Seniors2434 => class == AgeClass::Class24_34,
+                        AgeClassSelection::Youth512 => {
+                            class == AgeClass::Class5_12
+                                || AgeClass::Class5_12.contains(age)
+                        }
+                        AgeClassSelection::Teenage1315 => {
+                            class == AgeClass::Class13_15
+                                || AgeClass::Class13_15.contains(age)
+                        }
+                        AgeClassSelection::Teenage1617 => {
+                            class == AgeClass::Class16_17
+                                || AgeClass::Class16_17.contains(age)
+                        }
+                        AgeClassSelection::Teenage1819 => {
+                            class == AgeClass::Class18_19
+                                || AgeClass::Class18_19.contains(age)
+                        }
+                        AgeClassSelection::Juniors2023 => {
+                            class == AgeClass::Class20_23
+                                || AgeClass::Class20_23.contains(age)
+                        }
+                        AgeClassSelection::Seniors2434 => {
+                            class == AgeClass::Class24_34
+                                || AgeClass::Class24_34.contains(age)
+                        }
                         AgeClassSelection::Submasters3539 => {
                             class == AgeClass::Class35_39
+                                || AgeClass::Class35_39.contains(age)
                         }
                         AgeClassSelection::Masters4049 => {
-                            class == AgeClass::Class40_44 || class == AgeClass::Class45_49
+                            class == AgeClass::Class40_44
+                                || class == AgeClass::Class45_49
+                                || AgeClass::Class40_44.contains(age)
+                                || AgeClass::Class45_49.contains(age)
+                            // FIXME: This contains() logic doesn't work on boundaries.
                         }
                         AgeClassSelection::Masters5059 => {
-                            class == AgeClass::Class50_54 || class == AgeClass::Class55_59
+                            class == AgeClass::Class50_54
+                                || class == AgeClass::Class55_59
+                                || AgeClass::Class50_54.contains(age)
+                                || AgeClass::Class55_59.contains(age)
                         }
                         AgeClassSelection::Masters6069 => {
-                            class == AgeClass::Class60_64 || class == AgeClass::Class65_69
+                            class == AgeClass::Class60_64
+                                || class == AgeClass::Class65_69
+                                || AgeClass::Class60_64.contains(age)
+                                || AgeClass::Class65_69.contains(age)
                         }
                         AgeClassSelection::Masters7079 => {
-                            class == AgeClass::Class70_74 || class == AgeClass::Class75_79
+                            class == AgeClass::Class70_74
+                                || class == AgeClass::Class75_79
+                                || AgeClass::Class70_74.contains(age)
+                                || AgeClass::Class75_79.contains(age)
                         }
-                        AgeClassSelection::Masters4044 => class == AgeClass::Class40_44,
-                        AgeClassSelection::Masters4549 => class == AgeClass::Class45_49,
-                        AgeClassSelection::Masters5054 => class == AgeClass::Class50_54,
-                        AgeClassSelection::Masters5559 => class == AgeClass::Class55_59,
-                        AgeClassSelection::Masters6064 => class == AgeClass::Class60_64,
-                        AgeClassSelection::Masters6569 => class == AgeClass::Class65_69,
-                        AgeClassSelection::Masters7074 => class == AgeClass::Class70_74,
-                        AgeClassSelection::Masters7579 => class == AgeClass::Class75_79,
+                        AgeClassSelection::Masters4044 => {
+                            class == AgeClass::Class40_44
+                                || AgeClass::Class40_44.contains(age)
+                        }
+                        AgeClassSelection::Masters4549 => {
+                            class == AgeClass::Class45_49
+                                || AgeClass::Class45_49.contains(age)
+                        }
+                        AgeClassSelection::Masters5054 => {
+                            class == AgeClass::Class50_54
+                                || AgeClass::Class50_54.contains(age)
+                        }
+                        AgeClassSelection::Masters5559 => {
+                            class == AgeClass::Class55_59
+                                || AgeClass::Class55_59.contains(age)
+                        }
+                        AgeClassSelection::Masters6064 => {
+                            class == AgeClass::Class60_64
+                                || AgeClass::Class60_64.contains(age)
+                        }
+                        AgeClassSelection::Masters6569 => {
+                            class == AgeClass::Class65_69
+                                || AgeClass::Class65_69.contains(age)
+                        }
+                        AgeClassSelection::Masters7074 => {
+                            class == AgeClass::Class70_74
+                                || AgeClass::Class70_74.contains(age)
+                        }
+                        AgeClassSelection::Masters7579 => {
+                            class == AgeClass::Class75_79
+                                || AgeClass::Class75_79.contains(age)
+                        }
                         AgeClassSelection::MastersOver80 => {
                             class == AgeClass::Class80_999
+                                || AgeClass::Class80_999.contains(age)
                         }
                     };
                     if matches {
