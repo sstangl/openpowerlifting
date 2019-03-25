@@ -290,10 +290,10 @@ fn infer_from_range(
             println!("Inferred Age {:?} on {}", age_on_date, meetdate);
         }
 
-        // Assign the entry's Age if it's more specific than the current value.
         match age_on_date {
             Age::Exact(_) => entry.age = age_on_date,
             Age::Approximate(_) => {
+                // Don't overwrite an exact Age with an approximate Age.
                 if !entry.age.is_exact() {
                     entry.age = age_on_date;
                 }

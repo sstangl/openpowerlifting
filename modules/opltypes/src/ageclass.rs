@@ -1,8 +1,5 @@
 //! Defines the `AgeClass` field for the `entries` table.
 
-use crate::Age;
-
-/// The AgeClass column, used for rankings and records by the server.
 #[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
 pub enum AgeClass {
     #[serde(rename = "5-12")]
@@ -56,37 +53,4 @@ pub enum AgeClass {
     #[serde(rename = "")]
     #[strum(serialize = "")]
     None,
-}
-
-impl AgeClass {
-    /// Whether a given Age is definitely contained within the AgeClass.
-    pub fn contains(self, age: Age) -> bool {
-        let (min, max) = match age {
-            Age::Exact(n) => (n, n),
-            Age::Approximate(n) => (n, n + 1),
-            Age::None => {
-                return false;
-            }
-        };
-
-        match self {
-            AgeClass::Class5_12 => min >= 5 && max <= 12,
-            AgeClass::Class13_15 => min >= 13 && max <= 15,
-            AgeClass::Class16_17 => min >= 16 && max <= 17,
-            AgeClass::Class18_19 => min >= 18 && max <= 19,
-            AgeClass::Class20_23 => min >= 20 && max <= 23,
-            AgeClass::Class24_34 => min >= 24 && max <= 34,
-            AgeClass::Class35_39 => min >= 35 && max <= 39,
-            AgeClass::Class40_44 => min >= 40 && max <= 44,
-            AgeClass::Class45_49 => min >= 45 && max <= 49,
-            AgeClass::Class50_54 => min >= 50 && max <= 54,
-            AgeClass::Class55_59 => min >= 55 && max <= 59,
-            AgeClass::Class60_64 => min >= 60 && max <= 64,
-            AgeClass::Class65_69 => min >= 65 && max <= 69,
-            AgeClass::Class70_74 => min >= 70 && max <= 74,
-            AgeClass::Class75_79 => min >= 75 && max <= 79,
-            AgeClass::Class80_999 => min >= 80,
-            AgeClass::None => false,
-        }
-    }
 }
