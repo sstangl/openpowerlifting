@@ -1688,6 +1688,24 @@ fn check_division_equipment_consistency(
     }
 }
 
+/// Returns Testedness based on division configuration.
+fn get_tested_from_division_config(entry: &Entry, config: Option<&Config>) -> bool {
+    let config = match config {
+        Some(c) => c,
+        None => {
+            return entry.tested;
+        }
+    };
+
+    match config.divisions.iter().find(|d| d.name == entry.division) {
+        Some(div) => match div.tested {
+            Some(value) => value,
+            None => entry.tested,
+        },
+        None => entry.tested,
+    }
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -1884,6 +1902,10 @@ where
             );
             entry.division = record[idx].to_string();
         }
+
+        // Assign the Tested column if it's configured for the Division.
+        entry.tested = get_tested_from_division_config(&entry, config);
+
         if let Some(idx) = headers.get(Header::Country) {
             entry.country = check_column_country(&record[idx], line, &mut report);
         }

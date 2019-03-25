@@ -35,6 +35,9 @@ pub struct DivisionConfig {
     pub sex: Option<Sex>,
     /// Optional restriction of this Division to certain Equipment.
     pub equipment: Option<Vec<Equipment>>,
+    /// Optional Tested default for this division. May be overridden by the
+    /// Tested column.
+    pub tested: Option<bool>,
 }
 
 #[derive(Debug)]
@@ -231,12 +234,27 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
             None => None,
         };
 
+        // Provides a Tested flag which sets some divisions as default-Tested.
+        let tested: Option<bool> = match division.get("tested").and_then(|x| x.as_str()) {
+            Some(v) => match v {
+                "Yes" => Some(true),
+                "No" => Some(false),
+                _ => {
+                    report
+                        .error(format!("Failed parsing {}.tested: invalid '{}'", key, v));
+                    None
+                }
+            },
+            None => None,
+        };
+
         acc.push(DivisionConfig {
             name: name.to_string(),
             min: min_age,
             max: max_age,
             sex,
             equipment,
+            tested,
         });
     }
 
