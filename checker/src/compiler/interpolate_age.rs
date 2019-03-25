@@ -51,6 +51,24 @@ enum NarrowResult {
     Conflict,
 }
 
+/// Helper function: increments a Date by a single day.
+///
+/// For simplicity, because it doesn't matter in this context, every month
+/// is assumed to have exactly 31 days.
+fn next_day(date: Date) -> Date {
+    let (mut year, mut month, mut day) = (date.year(), date.month(), date.day());
+    day += 1;
+    if day > 31 {
+        day = 1;
+        month += 1;
+    }
+    if month > 12 {
+        month = 1;
+        year += 1;
+    }
+    Date::from_u32(year * 1_00_00 + month * 1_00 + day)
+}
+
 impl BirthDateRange {
     /// Shorthand constructor for use in test code.
     #[cfg(test)]
@@ -116,6 +134,39 @@ impl BirthDateRange {
             max: max_yeardate,
         };
         self.intersect(&birthyear_range)
+    }
+
+    /// Narrows the range by a known Age on a specific Date.
+    pub fn narrow_by_age(&mut self, age: Age, on_date: Date) -> NarrowResult {
+        let (year, monthday) = (on_date.year(), on_date.monthday());
+        match age {
+            Age::Exact(age) => {
+                let age = age as u32;
+
+                // The greatest possible BirthDate is if their birthday is that day.
+                let max = Date::from_u32((year - age) * 1_00_00 + monthday);
+
+                // The least possible BirthDate is if their birthday is the next day.
+                let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
+
+                self.intersect(&BirthDateRange { min, max })
+            }
+            Age::Approximate(age) => {
+                let age = age as u32;
+
+                // The greatest possible BirthDate is if the approximate age was
+                // an under-estimate (the higher value is correct) and that day
+                // is their birthday.
+                let max = Date::from_u32((year - age + 1) * 1_00_00 + monthday);
+
+                // The least possible BirthDate is if the lower bound of the age
+                // was correct and their birthday is the next day.
+                let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
+
+                self.intersect(&BirthDateRange { min, max })
+            }
+            Age::None => NarrowResult::Integrated,
+        }
     }
 }
 
@@ -944,6 +995,15 @@ fn get_birthdate_range(
             }
             trace_integrated(debug, &range, "BirthYear", &birthyear, &path);
         }
+
+        // Narrow by Age.
+        if entry.age != Age::None {
+            if range.narrow_by_age(entry.age, meetdate) == NarrowResult::Conflict {
+                trace_conflict(debug, "Age", &entry.age, &path);
+                return unknown;
+            }
+            trace_integrated(debug, &range, "Age", &entry.age, &path);
+        }
     }
 
     if debug {
@@ -1094,6 +1154,30 @@ mod tests {
         assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
         assert_eq!(bdr.min, Date::from_u32(1982_03_04));
         assert_eq!(bdr.max, Date::from_u32(1982_05_06));
+    }
+
+    #[test]
+    fn range_narrow_by_age() {
+        // Test an Age::Exact against unknown bounds.
+        let mut bdr = BirthDateRange::default();
+        let date = Date::from_u32(2019_01_04);
+        assert_eq!(bdr.narrow_by_age(Age::Exact(30), date), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1988_01_05));
+        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
+
+        // Test an Age::Approximate against unknown bounds.
+        let mut bdr = BirthDateRange::default();
+        let date = Date::from_u32(2019_01_04);
+        assert_eq!(bdr.narrow_by_age(Age::Approximate(30), date), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1988_01_05));
+        assert_eq!(bdr.max, Date::from_u32(1990_01_04));
+
+        // Test December 31st roll-over.
+        let mut bdr = BirthDateRange::default();
+        let date = Date::from_u32(2018_12_31);
+        assert_eq!(bdr.narrow_by_age(Age::Exact(30), date), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1988_01_01));
+        assert_eq!(bdr.max, Date::from_u32(1988_12_31));
     }
 
     ///////////////////////////////////////////////////////////////////////////////
