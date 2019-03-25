@@ -112,6 +112,7 @@ pub struct Entry {
 
     // Optional age information.
     pub age: Age,
+    pub ageclass: AgeClass,
     pub birthyear: Option<u32>,
     pub birthdate: Option<Date>,
 
@@ -1930,6 +1931,9 @@ where
             line,
             &mut report,
         );
+
+        // Assign the AgeClass based on Age.
+        entry.ageclass = AgeClass::from_age(entry.age);
 
         // Calculate points (except for McCulloch, which is Age-dependent).
         let bw = entry.bodyweightkg;

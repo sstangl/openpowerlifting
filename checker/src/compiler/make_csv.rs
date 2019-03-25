@@ -131,7 +131,7 @@ impl<'d> EntriesRow<'d> {
             event: entry.event,
             equipment: entry.equipment,
             age: entry.age,
-            ageclass: AgeClass::None, // TODO
+            ageclass: entry.ageclass,
             division: &entry.division,
             bodyweightkg: entry.bodyweightkg,
             weightclasskg: entry.weightclasskg,

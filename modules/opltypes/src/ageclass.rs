@@ -1,5 +1,8 @@
 //! Defines the `AgeClass` field for the `entries` table.
 
+use crate::Age;
+
+/// The AgeClass used by the server for partitioning into age categories.
 #[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
 pub enum AgeClass {
     #[serde(rename = "5-12")]
@@ -53,4 +56,53 @@ pub enum AgeClass {
     #[serde(rename = "")]
     #[strum(serialize = "")]
     None,
+}
+
+impl Default for AgeClass {
+    fn default() -> AgeClass {
+        AgeClass::None
+    }
+}
+
+impl AgeClass {
+    /// Assign an AgeClass based on Age.
+    ///
+    /// Ambiguous cases get assigned to the pessimal class (closest to Senior).
+    pub fn from_age(age: Age) -> AgeClass {
+        let (min, max) = match age {
+            Age::Exact(n) => (n, n),
+            Age::Approximate(n) => (n, n + 1),
+            Age::None => {
+                return AgeClass::None;
+            }
+        };
+
+        // Handle the sub-senior classes, which round up.
+        if max < 30 {
+            match max {
+                05...12 => AgeClass::Class5_12,
+                13...15 => AgeClass::Class13_15,
+                16...17 => AgeClass::Class16_17,
+                18...19 => AgeClass::Class18_19,
+                20...23 => AgeClass::Class20_23,
+                24...34 => AgeClass::Class24_34,
+                _ => AgeClass::None,
+            }
+        } else {
+            match min {
+                24...34 => AgeClass::Class24_34,
+                35...39 => AgeClass::Class35_39,
+                40...44 => AgeClass::Class40_44,
+                45...49 => AgeClass::Class45_49,
+                50...54 => AgeClass::Class50_54,
+                55...59 => AgeClass::Class55_59,
+                60...64 => AgeClass::Class60_64,
+                65...69 => AgeClass::Class65_69,
+                70...74 => AgeClass::Class70_74,
+                75...79 => AgeClass::Class75_79,
+                80...200 => AgeClass::Class80_999,
+                _ => AgeClass::None,
+            }
+        }
+    }
 }

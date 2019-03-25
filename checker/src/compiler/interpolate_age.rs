@@ -300,6 +300,11 @@ fn infer_from_range(
             }
             Age::None => (),
         };
+
+        // Update the AgeClass to match the Age, if applicable.
+        if entry.ageclass == AgeClass::None {
+            entry.ageclass = AgeClass::from_age(age_on_date);
+        }
     }
 }
 
