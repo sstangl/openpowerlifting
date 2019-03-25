@@ -1,4 +1,4 @@
-.PHONY: builddir csv datadist sqlite check probe-quick probe deploy clean
+.PHONY: builddir python-csv datadist sqlite check probe-quick probe deploy clean
 
 DATADIR := meet-data
 BUILDDIR := build
@@ -12,8 +12,12 @@ all: csv server
 builddir:
 	mkdir -p '${BUILDDIR}'
 
-# Cram all the data into a single, huge CSV file.
+# Cram all the data into huge CSV files. New hotness.
 csv: builddir
+	cargo run --bin checker -- --compile
+
+# Cram all the data into huge CSV files. Uses the old code.
+python-csv: builddir
 	scripts/compile "${BUILDDIR}" "${DATADIR}" "lifter-data"
 	scripts/csv-points "${BUILDDIR}/${PLFILE}"
 
