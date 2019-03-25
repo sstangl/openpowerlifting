@@ -1867,6 +1867,12 @@ where
             }
         }
 
+        // Set the Tested column early for federations that are fully-Tested.
+        // This allows check_column_tested() to override it later if needed.
+        if let Some(meet) = meet {
+            entry.tested = meet.federation.is_fully_tested();
+        }
+
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
             check_column_division(
