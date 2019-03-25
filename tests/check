@@ -9,7 +9,7 @@ TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 # When no arguments are passed, limit checking to just the current directory.
 if [ $# -eq 0 ]; then
-	CHECKER_ARGUMENTS="${CURDIR}"
+	CHECKER_ARGUMENTS="$( pwd )"
 else
 	CHECKER_ARGUMENTS=$@
 fi
