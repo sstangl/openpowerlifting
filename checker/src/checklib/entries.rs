@@ -1748,7 +1748,7 @@ where
     // This allocation can be re-used for each row.
     let mut record = csv::StringRecord::new();
     while rdr.read_record(&mut record)? {
-        let line = record.position().map_or(0, |p| p.line());
+        let line = record.position().map_or(0, csv::Position::line);
 
         // Check each field for whitespace errors.
         for field in &record {
@@ -1877,11 +1877,8 @@ where
         // If no bodyweight is given but there is a bounded weightclass,
         // assume the pessimal case of the lifter at the top of the class.
         if entry.bodyweightkg.is_zero() {
-            match entry.weightclasskg {
-                WeightClassKg::UnderOrEqual(w) => {
-                    entry.bodyweightkg = w;
-                }
-                _ => {}
+            if let WeightClassKg::UnderOrEqual(w) = entry.weightclasskg {
+                entry.bodyweightkg = w;
             }
         }
 

@@ -1,7 +1,7 @@
 //! Checks for CONFIG.toml files.
 
 use opltypes::*;
-use toml;
+use toml::{self, Value};
 
 use std::error::Error;
 use std::fs::File;
@@ -94,7 +94,7 @@ impl Config {
     }
 }
 
-fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConfig> {
+fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
     let mut acc = vec![];
 
     let table = match value.as_table() {
@@ -107,7 +107,7 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
 
     for (key, division) in table {
         // Parse the division name.
-        let name: &str = match division.get("name").and_then(|v| v.as_str()) {
+        let name: &str = match division.get("name").and_then(Value::as_str) {
             Some(s) => s,
             None => {
                 report.error(format!("Value '{}.name' must be a String", key));
@@ -235,7 +235,7 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
         };
 
         // Provides a Tested flag which sets some divisions as default-Tested.
-        let tested: Option<bool> = match division.get("tested").and_then(|x| x.as_str()) {
+        let tested: Option<bool> = match division.get("tested").and_then(Value::as_str) {
             Some(v) => match v {
                 "Yes" => Some(true),
                 "No" => Some(false),
@@ -262,7 +262,7 @@ fn parse_divisions(value: &toml::Value, report: &mut Report) -> Vec<DivisionConf
 }
 
 fn parse_weightclasses(
-    value: &toml::Value,
+    value: &Value,
     divisions: &[DivisionConfig],
     report: &mut Report,
 ) -> Vec<WeightClassConfig> {
@@ -278,7 +278,7 @@ fn parse_weightclasses(
 
     for (key, weightclass) in table {
         // Parse the list of weightclasses.
-        let classes = match weightclass.get("classes").and_then(|v| v.as_array()) {
+        let classes = match weightclass.get("classes").and_then(Value::as_array) {
             Some(array) => {
                 let mut vec = Vec::with_capacity(array.len());
                 for value in array {
@@ -300,7 +300,7 @@ fn parse_weightclasses(
         };
 
         // Parse the min and max dates.
-        let date_range = match weightclass.get("date_range").and_then(|v| v.as_array()) {
+        let date_range = match weightclass.get("date_range").and_then(Value::as_array) {
             Some(array) => {
                 if array.len() != 2 {
                     report.error(format!("Array '{}.date_range' must have 2 items", key));
@@ -330,7 +330,7 @@ fn parse_weightclasses(
         };
 
         // Parse the sex restriction.
-        let sex = match weightclass.get("sex").and_then(|v| v.as_str()) {
+        let sex = match weightclass.get("sex").and_then(Value::as_str) {
             Some(s) => match s.parse::<Sex>() {
                 Ok(sex) => sex,
                 Err(e) => {
@@ -408,7 +408,7 @@ fn parse_weightclasses(
     acc
 }
 
-fn parse_exemptions(value: &toml::Value, report: &mut Report) -> Vec<ExemptionConfig> {
+fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> {
     let mut acc = vec![];
 
     let table = match value.as_table() {
@@ -458,10 +458,7 @@ fn parse_exemptions(value: &toml::Value, report: &mut Report) -> Vec<ExemptionCo
     acc
 }
 
-fn parse_config(
-    root: &toml::Value,
-    mut report: Report,
-) -> Result<CheckResult, Box<Error>> {
+fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Error>> {
     // The highest-level Value must be a table.
     let table = match root.as_table() {
         Some(t) => t,
@@ -539,6 +536,6 @@ pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<Error>> {
     file.read_to_string(&mut config_str)?;
 
     // Parse the entire string into TOML Value types.
-    let root = config_str.parse::<toml::Value>()?;
+    let root = config_str.parse::<Value>()?;
     Ok(parse_config(&root, report)?)
 }

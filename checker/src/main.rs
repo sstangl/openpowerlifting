@@ -139,7 +139,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
                 // Add the Config to the map.
                 if let Some(config) = result.config {
                     // This has to be safe if the config parsed correctly.
-                    let feddir = sourcefile.parent().and_then(|p| p.file_name()).unwrap();
+                    let feddir = sourcefile.parent().and_then(Path::file_name).unwrap();
                     configmap.insert(feddir.to_str().unwrap().to_string(), config);
                 }
             }
@@ -226,7 +226,7 @@ fn main() -> Result<(), Box<Error>> {
     // Build a list of every directory containing meet results.
     let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
         .into_iter()
-        .filter_map(|entry| entry.ok())
+        .filter_map(Result::ok)
         .filter(|entry| is_meetdir(entry))
         .collect();
 
@@ -244,8 +244,8 @@ fn main() -> Result<(), Box<Error>> {
             let feddir = dir
                 .path()
                 .parent()
-                .and_then(|p| p.file_name())
-                .and_then(|f| f.to_str())
+                .and_then(Path::file_name)
+                .and_then(std::ffi::OsStr::to_str)
                 .unwrap();
             let config = configmap.get(feddir);
 

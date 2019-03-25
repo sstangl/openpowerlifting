@@ -125,8 +125,8 @@ impl<'d> EntriesRow<'d> {
         let mcpts = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, entry.age);
 
         EntriesRow {
-            meet_id: meet_id,
-            lifter_id: lifter_id,
+            meet_id,
+            lifter_id,
             sex: entry.sex,
             event: entry.event,
             equipment: entry.equipment,

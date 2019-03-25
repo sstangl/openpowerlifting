@@ -91,10 +91,10 @@ impl BirthDateRange {
         }
 
         // If they are off-by-one, return an Age::Approximate.
-        let min_num = min_inferred.to_u8_option().unwrap_or(std::u8::MIN) as u32;
-        let max_num = max_inferred.to_u8_option().unwrap_or(std::u8::MAX) as u32;
-        if min_num == max_num + 1 {
-            return Age::Approximate(min_num as u8);
+        let min_num = min_inferred.to_u8_option().unwrap_or(std::u8::MIN);
+        let max_num = max_inferred.to_u8_option().unwrap_or(std::u8::MAX);
+        if u32::from(min_num) == u32::from(max_num) + 1 {
+            return Age::Approximate(min_num);
         }
 
         // The range was too wide to infer a specific Age.
@@ -140,7 +140,7 @@ impl BirthDateRange {
         let (year, monthday) = (on_date.year(), on_date.monthday());
         match age {
             Age::Exact(age) => {
-                let age = age as u32;
+                let age = u32::from(age);
 
                 // The greatest possible BirthDate is if their birthday is that day.
                 let max = Date::from_u32((year - age) * 1_00_00 + monthday);
@@ -151,7 +151,7 @@ impl BirthDateRange {
                 self.intersect(&BirthDateRange { min, max })
             }
             Age::Approximate(age) => {
-                let age = age as u32;
+                let age = u32::from(age);
 
                 // The greatest possible BirthDate is if the approximate age was
                 // an under-estimate (the higher value is correct) and that day

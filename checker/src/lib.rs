@@ -112,7 +112,7 @@ impl Report {
         self.path
             .as_path()
             .parent()
-            .and_then(|p| p.file_name().and_then(|s| s.to_str()))
+            .and_then(|p| p.file_name().and_then(std::ffi::OsStr::to_str))
             .ok_or("Insufficient parent directories")
     }
 }
