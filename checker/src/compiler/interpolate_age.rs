@@ -254,18 +254,40 @@ fn trace_integrated<T>(
 
 /// Helper function for debug-mode printing to keep the code legible.
 #[inline]
-fn trace_conflict<T>(debug: bool, fieldname: &str, field: &T, path: &Option<String>)
-where
+fn trace_conflict<T>(
+    debug: bool,
+    range: &BirthDateRange,
+    meetdate: Date,
+    fieldname: &str,
+    field: &T,
+    path: &Option<String>,
+) where
     T: fmt::Display,
 {
     if debug {
+        let age_on: Option<String> = match range.age_on(meetdate) {
+            Age::None => None,
+            age => Some(format!("{:?}", age)),
+        };
+
         println!(
-            "{} {} {} {} {}",
+            "{} {} {} {} {}{}{}{}",
             "Conflict with".bold().red(),
             fieldname,
             field,
             "in".bold().red(),
-            path.as_ref().unwrap()
+            path.as_ref().unwrap(),
+            if age_on.is_some() {
+                " -- expected ".bold().red()
+            } else {
+                "".red()
+            },
+            if age_on.is_some() { "Age " } else { "" },
+            if let Some(age) = age_on {
+                format!("{}", age)
+            } else {
+                "".to_string()
+            }
         );
     }
 }
@@ -286,7 +308,7 @@ fn get_birthdate_range(
     for &index in indices {
         // Extract the MeetDate first. Because of the borrow checker, the Meet and Entry
         // structs cannot be referenced simultaneously.
-        let meetdate: Date = meetdata.get_meet(index).date;
+        let mdate: Date = meetdata.get_meet(index).date;
 
         // Get the MeetPath for more helpful debugging output.
         // Cloning is OK since this is only for a few entries for one lifter.
@@ -301,7 +323,7 @@ fn get_birthdate_range(
         // Narrow by BirthDate.
         if let Some(birthdate) = entry.birthdate {
             if range.narrow_by_birthdate(birthdate) == NarrowResult::Conflict {
-                trace_conflict(debug, "BirthDate", &birthdate, &path);
+                trace_conflict(debug, &range, mdate, "BirthDate", &birthdate, &path);
                 return unknown;
             }
             trace_integrated(debug, &range, "BirthDate", &birthdate, &path);
@@ -310,7 +332,7 @@ fn get_birthdate_range(
         // Narrow by BirthYear.
         if let Some(birthyear) = entry.birthyear {
             if range.narrow_by_birthyear(birthyear) == NarrowResult::Conflict {
-                trace_conflict(debug, "BirthYear", &birthyear, &path);
+                trace_conflict(debug, &range, mdate, "BirthYear", &birthyear, &path);
                 return unknown;
             }
             trace_integrated(debug, &range, "BirthYear", &birthyear, &path);
@@ -318,8 +340,8 @@ fn get_birthdate_range(
 
         // Narrow by Age.
         if entry.age != Age::None {
-            if range.narrow_by_age(entry.age, meetdate) == NarrowResult::Conflict {
-                trace_conflict(debug, "Age", &entry.age, &path);
+            if range.narrow_by_age(entry.age, mdate) == NarrowResult::Conflict {
+                trace_conflict(debug, &range, mdate, "Age", &entry.age, &path);
                 return unknown;
             }
             trace_integrated(debug, &range, "Age", &entry.age, &path);
@@ -336,10 +358,10 @@ fn get_birthdate_range(
             if range.narrow_by_division(
                 entry.division_age_min,
                 entry.division_age_max,
-                meetdate,
+                mdate,
             ) == NarrowResult::Conflict
             {
-                trace_conflict(debug, "Division", &agerange, &path);
+                trace_conflict(debug, &range, mdate, "Division", &agerange, &path);
                 return unknown;
             }
             trace_integrated(debug, &range, "Division", &agerange, &path);
@@ -383,22 +405,22 @@ fn infer_from_range(
     debug: bool,
 ) {
     for &index in indices {
-        let meetdate: Date = meetdata.get_meet(index).date;
+        let mdate: Date = meetdata.get_meet(index).date;
         let entry = meetdata.get_entry_mut(index);
 
-        let age_on_date = range.age_on(meetdate);
+        let age_on_date = range.age_on(mdate);
 
         match age_on_date {
             Age::Exact(_) => {
                 if !entry.age.is_exact() {
-                    trace_inference(debug, "Age", &age_on_date, meetdate);
+                    trace_inference(debug, "Age", &age_on_date, mdate);
                     entry.age = age_on_date;
                 }
             }
             Age::Approximate(_) => {
                 // Don't overwrite an exact Age with an approximate Age.
                 if !entry.age.is_exact() {
-                    trace_inference(debug, "Age", &age_on_date, meetdate);
+                    trace_inference(debug, "Age", &age_on_date, mdate);
                     entry.age = age_on_date;
                 }
             }
@@ -409,18 +431,18 @@ fn infer_from_range(
         if entry.ageclass == AgeClass::None {
             entry.ageclass = AgeClass::from_age(age_on_date);
             if entry.ageclass != AgeClass::None {
-                trace_inference(debug, "AgeClass (via Age)", &entry.ageclass, meetdate);
+                trace_inference(debug, "AgeClass (via Age)", &entry.ageclass, mdate);
             }
         }
 
         // If no specific Age is known, maybe Division information
         // can be used to at least find a range.
         if entry.ageclass == AgeClass::None {
-            let age_min = range.min.age_on(meetdate).unwrap_or(Age::None);
-            let age_max = range.max.age_on(meetdate).unwrap_or(Age::None);
+            let age_min = range.min.age_on(mdate).unwrap_or(Age::None);
+            let age_max = range.max.age_on(mdate).unwrap_or(Age::None);
             entry.ageclass = AgeClass::from_range(age_min, age_max);
             if entry.ageclass != AgeClass::None {
-                trace_inference(debug, "AgeClass (via Range)", &entry.ageclass, meetdate);
+                trace_inference(debug, "AgeClass (via Range)", &entry.ageclass, mdate);
             }
         }
     }
