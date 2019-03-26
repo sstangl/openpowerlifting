@@ -173,14 +173,13 @@ impl BirthDateRange {
             Age::Approximate(age) => {
                 let age = u32::from(age);
 
-                // The greatest possible BirthDate is if the approximate age was
-                // an under-estimate (the higher value is correct) and that day
-                // is their birthday.
-                let max = Date::from_u32((year - age + 1) * 1_00_00 + monthday);
+                // The greatest possible BirthDate is if the lifter is younger,
+                // and that day is their birthday.
+                let max = Date::from_u32((year - age) * 1_00_00 + monthday);
 
-                // The least possible BirthDate is if the lower bound of the age
-                // was correct and their birthday is the next day.
-                let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
+                // The least possible BirthDate is if the lifter is older,
+                // and their birthday is the next day.
+                let min = next_day(Date::from_u32((year - age - 2) * 1_00_00 + monthday));
 
                 self.intersect(&BirthDateRange::new(min, max))
             }
@@ -201,9 +200,10 @@ impl BirthDateRange {
         let birthdate_max = match min {
             Age::Exact(age) | Age::Approximate(age) => {
                 // The greatest possible BirthDate is if their birthday is that day.
+                // In the case of an Approximate, the lifter is the younger option.
                 Date::from_u32((year - u32::from(age)) * 1_00_00 + monthday)
             }
-            Age::None => BDR_DEFAULT_MIN,
+            Age::None => BDR_DEFAULT_MAX,
         };
 
         // Determine the minimum BirthDate from the greater Age (they are older).
@@ -215,11 +215,11 @@ impl BirthDateRange {
             }
             Age::Approximate(age) => {
                 let age = u32::from(age);
-                // The least possible BirthDate is if the lower bound of the age
-                // was correct and their birthday is the next day.
-                next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday))
+                // The least possible BirthDate is if their birthday is the next day,
+                // assuming that they are as old as allowed.
+                next_day(Date::from_u32((year - age - 2) * 1_00_00 + monthday))
             }
-            Age::None => BDR_DEFAULT_MAX,
+            Age::None => BDR_DEFAULT_MIN,
         };
 
         let range = BirthDateRange::new(birthdate_min, birthdate_max);
@@ -576,8 +576,8 @@ mod tests {
         let mut bdr = BirthDateRange::default();
         let date = Date::from_u32(2019_01_04);
         assert_eq!(bdr.narrow_by_age(Age::Approximate(30), date), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1988_01_05));
-        assert_eq!(bdr.max, Date::from_u32(1990_01_04));
+        assert_eq!(bdr.min, Date::from_u32(1987_01_05));
+        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
 
         // Test December 31st roll-over.
         let mut bdr = BirthDateRange::default();
@@ -596,5 +596,12 @@ mod tests {
         assert_eq!(bdr.narrow_by_division(min, max, date), Integrated);
         assert_eq!(bdr.min, Date::from_u32(1984_01_05));
         assert_eq!(bdr.max, Date::from_u32(1989_01_04));
+
+        // Regression test from Andrey Malanichev.
+        // The Division is 0-17~, and Andrey was 18.
+        let mut bdr = BirthDateRange::at(Some(1983_03_16), Some(1983_03_16));
+        let date = Date::from_u32(2001_07_26);
+        let (min, max) = (Age::Exact(0), Age::Approximate(17));
+        assert_eq!(bdr.narrow_by_division(min, max, date), Integrated);
     }
 }
