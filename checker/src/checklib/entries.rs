@@ -115,6 +115,10 @@ pub struct Entry {
     pub ageclass: AgeClass,
     pub birthyear: Option<u32>,
     pub birthdate: Option<Date>,
+    /// Minimum Age associated with the Division per the CONFIG, inclusive.
+    pub division_age_min: Age,
+    /// Maximum Age associated with the Division per the CONFIG, inclusive.
+    pub division_age_max: Age,
 
     pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
@@ -1461,6 +1465,10 @@ fn check_weightclass_consistency(
     }
 }
 
+/// Checks internal age consistency, and checks that the CONFIG-controlled Age
+/// range is consistent with the known data.
+///
+/// Returns the (min_age, max_age) associated with the Division.
 fn check_division_age_consistency(
     entry: &Entry,
     meet: Option<&Meet>,
@@ -1468,12 +1476,12 @@ fn check_division_age_consistency(
     exempt_division: bool,
     line: u64,
     report: &mut Report,
-) {
+) -> (Age, Age) {
     // If we don't know when the meet was, there's nothing to diff against.
     let meet_date = match meet {
         Some(m) => m.date,
         None => {
-            return;
+            return (Age::None, Age::None);
         }
     };
 
@@ -1549,14 +1557,14 @@ fn check_division_age_consistency(
 
     // Allow exemptions from division-specific checks.
     if exempt_division || entry.division.is_empty() {
-        return;
+        return (Age::None, Age::None);
     }
 
     // If no divisions are configured, there's nothing left to do.
     let config = match config {
         Some(config) => config,
         None => {
-            return;
+            return (Age::None, Age::None);
         }
     };
 
@@ -1564,7 +1572,7 @@ fn check_division_age_consistency(
     // several federations, such as meet-data/plusa, can omit
     // the list of divisions to effectively cause full exemption.
     if config.divisions.is_empty() {
-        return;
+        return (Age::None, Age::None);
     }
 
     // Division string errors are already handled by check_column_division().
@@ -1572,7 +1580,7 @@ fn check_division_age_consistency(
         match config.divisions.iter().find(|d| d.name == entry.division) {
             Some(div) => (div.min, div.max),
             None => {
-                return;
+                return (Age::None, Age::None);
             }
         };
 
@@ -1598,6 +1606,8 @@ fn check_division_age_consistency(
             ),
         );
     }
+
+    (min_age, max_age)
 }
 
 /// Checks that a configured division is consistent with any sex restrictions.
@@ -1940,7 +1950,8 @@ where
             line,
             &mut report,
         );
-        check_division_age_consistency(
+
+        let (division_age_min, division_age_max) = check_division_age_consistency(
             &entry,
             meet,
             config,
@@ -1948,6 +1959,9 @@ where
             line,
             &mut report,
         );
+        entry.division_age_min = division_age_min;
+        entry.division_age_max = division_age_max;
+
         check_division_sex_consistency(&entry, config, line, &mut report);
         check_division_equipment_consistency(
             &entry,
@@ -1959,6 +1973,10 @@ where
 
         // Assign the AgeClass based on Age.
         entry.ageclass = AgeClass::from_age(entry.age);
+        // Or assign the AgeClass based on Division information.
+        if entry.ageclass == AgeClass::None {
+            entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
+        }
 
         // Calculate points (except for McCulloch, which is Age-dependent).
         let bw = entry.bodyweightkg;

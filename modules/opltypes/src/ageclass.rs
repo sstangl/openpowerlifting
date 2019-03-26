@@ -100,9 +100,25 @@ impl AgeClass {
                 65...69 => AgeClass::Class65_69,
                 70...74 => AgeClass::Class70_74,
                 75...79 => AgeClass::Class75_79,
-                80...200 => AgeClass::Class80_999,
+                80...255 => AgeClass::Class80_999,
                 _ => AgeClass::None,
             }
+        }
+    }
+
+    /// Assign an AgeClass based on a range of Ages.
+    ///
+    /// The range generally comes from a configured Division.
+    ///
+    /// TODO: Note that because of the limitation in AgeClass, this cannot
+    /// TODO: handle Divisions like 40-49.
+    pub fn from_range(min: Age, max: Age) -> AgeClass {
+        let class_min = AgeClass::from_age(min);
+        let class_max = AgeClass::from_age(max);
+        if class_min == class_max {
+            class_min
+        } else {
+            AgeClass::None
         }
     }
 }

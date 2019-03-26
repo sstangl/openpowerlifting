@@ -1,5 +1,6 @@
 //! Infers a lifter's Age given surrounding Age-related information.
 
+use colored::*;
 use opltypes::*;
 
 use crate::{AllMeetData, EntryIndex, LifterMap};
@@ -34,10 +35,17 @@ impl Default for BirthDateRange {
     }
 }
 
+impl BirthDateRange {
+    pub fn new(min: Date, max: Date) -> BirthDateRange {
+        assert!(min <= max);
+        BirthDateRange { min, max }
+    }
+}
+
 impl fmt::Display for BirthDateRange {
     /// Used for --debug-age output.
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "({}, {})", self.min, self.max)
+        write!(f, "[{}, {}]", self.min, self.max)
     }
 }
 
@@ -48,6 +56,21 @@ enum NarrowResult {
     Integrated,
     /// Returned if the new data conflicted with the known range.
     Conflict,
+}
+
+/// Helper struct for Division AgeClass ranges.
+///
+/// This mostly exists to have something to pretty-print for errors.
+struct AgeRange {
+    pub min: Age,
+    pub max: Age,
+}
+
+impl fmt::Display for AgeRange {
+    /// Used for --debug-age output.
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}-{}", self.min, self.max)
+    }
 }
 
 /// Helper function: increments a Date by a single day.
@@ -73,10 +96,10 @@ impl BirthDateRange {
     #[cfg(test)]
     pub fn at(min: Option<u32>, max: Option<u32>) -> BirthDateRange {
         let default = BirthDateRange::default();
-        BirthDateRange {
-            min: min.map(|x| Date::from_u32(x)).unwrap_or(default.min),
-            max: max.map(|x| Date::from_u32(x)).unwrap_or(default.max),
-        }
+        BirthDateRange::new(
+            min.map(|x| Date::from_u32(x)).unwrap_or(default.min),
+            max.map(|x| Date::from_u32(x)).unwrap_or(default.max),
+        )
     }
 
     /// Returns the Age on a given Date given the known range.
@@ -128,10 +151,7 @@ impl BirthDateRange {
         let min_yeardate = Date::from_u32(year_in_date + 01_01); // Jan 1.
         let max_yeardate = Date::from_u32(year_in_date + 12_31); // Dec 31.
 
-        let birthyear_range = BirthDateRange {
-            min: min_yeardate,
-            max: max_yeardate,
-        };
+        let birthyear_range = BirthDateRange::new(min_yeardate, max_yeardate);
         self.intersect(&birthyear_range)
     }
 
@@ -148,7 +168,7 @@ impl BirthDateRange {
                 // The least possible BirthDate is if their birthday is the next day.
                 let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
 
-                self.intersect(&BirthDateRange { min, max })
+                self.intersect(&BirthDateRange::new(min, max))
             }
             Age::Approximate(age) => {
                 let age = u32::from(age);
@@ -162,10 +182,48 @@ impl BirthDateRange {
                 // was correct and their birthday is the next day.
                 let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
 
-                self.intersect(&BirthDateRange { min, max })
+                self.intersect(&BirthDateRange::new(min, max))
             }
             Age::None => NarrowResult::Integrated,
         }
+    }
+
+    /// Narrows the range by a known Division Age range on a specific Date.
+    pub fn narrow_by_division(
+        &mut self,
+        min: Age,
+        max: Age,
+        on_date: Date,
+    ) -> NarrowResult {
+        let (year, monthday) = (on_date.year(), on_date.monthday());
+
+        // Determine the maximum BirthDate from the lower Age (they are younger).
+        let birthdate_max = match min {
+            Age::Exact(age) | Age::Approximate(age) => {
+                // The greatest possible BirthDate is if their birthday is that day.
+                Date::from_u32((year - u32::from(age)) * 1_00_00 + monthday)
+            }
+            Age::None => BDR_DEFAULT_MIN,
+        };
+
+        // Determine the minimum BirthDate from the greater Age (they are older).
+        let birthdate_min = match max {
+            Age::Exact(age) => {
+                let age = u32::from(age);
+                // The least possible BirthDate is if their birthday is the next day.
+                next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday))
+            }
+            Age::Approximate(age) => {
+                let age = u32::from(age);
+                // The least possible BirthDate is if the lower bound of the age
+                // was correct and their birthday is the next day.
+                next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday))
+            }
+            Age::None => BDR_DEFAULT_MAX,
+        };
+
+        let range = BirthDateRange::new(birthdate_min, birthdate_max);
+        self.intersect(&range)
     }
 }
 
@@ -182,10 +240,13 @@ fn trace_integrated<T>(
 {
     if debug {
         println!(
-            "Narrowed to {} by {} '{}' in '{}'",
+            "{} {} {} {} {} {} {}",
+            "Narrowed to".green(),
             range,
+            "by".green(),
             fieldname,
             field,
+            "in".green(),
             path.as_ref().unwrap()
         );
     }
@@ -199,9 +260,11 @@ where
 {
     if debug {
         println!(
-            "Conflict with {} '{}' in '{}'",
+            "{} {} {} {} {}",
+            "Conflict with".bold().red(),
             fieldname,
             field,
+            "in".bold().red(),
             path.as_ref().unwrap()
         );
     }
@@ -261,12 +324,50 @@ fn get_birthdate_range(
             }
             trace_integrated(debug, &range, "Age", &entry.age, &path);
         }
+
+        // Narrow by Division Age.
+        if entry.division_age_min != Age::None || entry.division_age_max != Age::None {
+            // Struct to get debugging pretty-printing.
+            let agerange = AgeRange {
+                min: entry.division_age_min,
+                max: entry.division_age_max,
+            };
+
+            if range.narrow_by_division(
+                entry.division_age_min,
+                entry.division_age_max,
+                meetdate,
+            ) == NarrowResult::Conflict
+            {
+                trace_conflict(debug, "Division", &agerange, &path);
+                return unknown;
+            }
+            trace_integrated(debug, &range, "Division", &agerange, &path);
+        }
     }
 
     if debug {
-        println!("Final range {}", range);
+        println!("{} {}", "Final range".bold().green(), range);
     }
     range
+}
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_inference<T>(debug: bool, fieldname: &str, field: &T, date: Date)
+where
+    T: fmt::Debug,
+{
+    if debug {
+        println!(
+            "{} {} {:?} {} {}",
+            "Inferred".bold().purple(),
+            fieldname,
+            field,
+            "on".bold().purple(),
+            date
+        );
+    }
 }
 
 /// Given a known BirthDateRange, calculate the lifter's `Age` in each Entry.
@@ -286,9 +387,7 @@ fn infer_from_range(
         let entry = meetdata.get_entry_mut(index);
 
         let age_on_date = range.age_on(meetdate);
-        if debug {
-            println!("Inferred Age {:?} on {}", age_on_date, meetdate);
-        }
+        trace_inference(debug, "Age", &age_on_date, meetdate);
 
         match age_on_date {
             Age::Exact(_) => entry.age = age_on_date,
@@ -304,6 +403,20 @@ fn infer_from_range(
         // Update the AgeClass to match the Age, if applicable.
         if entry.ageclass == AgeClass::None {
             entry.ageclass = AgeClass::from_age(age_on_date);
+            if entry.ageclass != AgeClass::None {
+                trace_inference(debug, "AgeClass (via Age)", &entry.ageclass, meetdate);
+            }
+        }
+
+        // If no specific Age is known, maybe Division information
+        // can be used to at least find a range.
+        if entry.ageclass == AgeClass::None {
+            let age_min = range.min.age_on(meetdate).unwrap_or(Age::None);
+            let age_max = range.max.age_on(meetdate).unwrap_or(Age::None);
+            entry.ageclass = AgeClass::from_range(age_min, age_max);
+            if entry.ageclass != AgeClass::None {
+                trace_inference(debug, "AgeClass (via Range)", &entry.ageclass, meetdate);
+            }
         }
     }
 }
@@ -445,5 +558,16 @@ mod tests {
         assert_eq!(bdr.narrow_by_age(Age::Exact(30), date), Integrated);
         assert_eq!(bdr.min, Date::from_u32(1988_01_01));
         assert_eq!(bdr.max, Date::from_u32(1988_12_31));
+    }
+
+    #[test]
+    fn range_narrow_by_division() {
+        // Basic sanity test.
+        let mut bdr = BirthDateRange::default();
+        let date = Date::from_u32(2019_01_04);
+        let (min, max) = (Age::Exact(30), Age::Exact(34));
+        assert_eq!(bdr.narrow_by_division(min, max, date), Integrated);
+        assert_eq!(bdr.min, Date::from_u32(1984_01_05));
+        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
     }
 }

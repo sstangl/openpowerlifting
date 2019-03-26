@@ -1,16 +1,17 @@
 #![feature(inner_deref)] // Used for converting Option<String> to Option<&str>.
 
-extern crate chrono;
-extern crate coefficients;
-extern crate csv;
-extern crate hashbrown;
-extern crate opltypes;
+extern crate chrono; // Used to get the current date.
+extern crate coefficients; // Calculates points.
+extern crate colored; // Used to provide pretty output for debug modes.
+extern crate csv; // Provides CSV reading and writing.
+extern crate hashbrown; // A faster hash implementation (will become Rust default).
+extern crate opltypes; // Datatypes common to all OpenPowerlifting projects.
 #[macro_use]
-extern crate serde_derive;
-extern crate strum;
+extern crate serde_derive; // Provides struct serialization and deserialization.
+extern crate strum; // Used for iterating over enums.
 #[macro_use]
-extern crate strum_macros;
-extern crate toml;
+extern crate strum_macros; // Used for iterating over enums.
+extern crate toml; // Knows how to read the CONFIG.toml format.
 
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};
