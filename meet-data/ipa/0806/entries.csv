@@ -17,9 +17,9 @@ WeightClassKg,Sex,Equipment,Division,Event,Name,Best3SquatKg,Best3BenchKg,Best3D
 48,F,Multi-ply,Pro Open,SBD,Elaine Grimwood,154.22,83.91,149.69,387.82,1
 60,F,Multi-ply,Pro Open,SBD,Jules Furniss,174.63,120.2,142.88,437.72,1
 90+,F,Wraps,Pro Open,SBD,Ame Rychlak,,,170.1,,DQ
-100,M,Multi-ply,Amateur Juniors,SBD,Roman Rozek,317.51,195.04,290.3,802.86,1
-125,M,Multi-ply,Amateur Juniors,SBD,Ryan Woody,272.16,204.12,272.16,748.43,1
-67.5,M,Wraps,Amateur Juniors,SBD,Michael O'Brien,138.35,,158.76,,DQ
+100,M,Multi-ply,Amateur Juniors 20-23,SBD,Roman Rozek,317.51,195.04,290.3,802.86,1
+125,M,Multi-ply,Amateur Juniors 20-23,SBD,Ryan Woody,272.16,204.12,272.16,748.43,1
+67.5,M,Wraps,Amateur Juniors 20-23,SBD,Michael O'Brien,138.35,,158.76,,DQ
 125,M,Multi-ply,Amateur Open,SBD,Ryan Horn,362.87,244.94,254.01,861.83,1
 125,M,Multi-ply,Amateur Open,SBD,Chris Phillips,272.16,274.42,283.5,830.07,2
 125,M,Multi-ply,Amateur Open,SBD,Jerry Groff Jr,278.96,181.44,238.14,698.53,3
@@ -30,7 +30,7 @@ WeightClassKg,Sex,Equipment,Division,Event,Name,Best3SquatKg,Best3BenchKg,Best3D
 100,M,Multi-ply,Amateur Masters 70-74,SBD,Bob Vastine,,129.27,204.12,,DQ
 75,M,Multi-ply,Elite Amateur Open,SBD,Brian Crowe,317.51,229.06,238.14,784.71,1
 100,M,Multi-ply,Elite Amateur Open,SBD,Chris DelPreore,349.27,258.55,281.23,889.04,1
-125,M,Multi-ply,Pro Juniors,SBD,Matt Burke,315.25,242.67,251.74,809.66,1
+125,M,Multi-ply,Pro Juniors 20-23,SBD,Matt Burke,315.25,242.67,251.74,809.66,1
 90,M,Multi-ply,Pro Open,SBD,Mike Yontz,249.48,170.1,247.21,666.78,1
 110,M,Multi-ply,Pro Open,SBD,Anthony Ditillo,362.87,244.94,272.16,879.97,1
 110,M,Multi-ply,Pro Open,SBD,Dave Smiley,340.19,226.8,294.84,861.83,2
@@ -39,7 +39,7 @@ WeightClassKg,Sex,Equipment,Division,Event,Name,Best3SquatKg,Best3BenchKg,Best3D
 140,M,Multi-ply,Pro Open,SBD,Andrew Vale,362.87,204.12,306.17,873.17,1
 140+,M,Multi-ply,Pro Open,SBD,Donnie Thompson #1,560.19,412.77,344.73,1317.69,1
 100,M,Wraps,Pro Open,SBD,Nelson Snyder,238.14,170.1,238.14,646.37,1
-110,M,Multi-ply,Pro Submasters,SBD,Dave Smiley,340.19,226.8,294.84,861.83,1
+110,M,Multi-ply,Pro Submasters 33-39,SBD,Dave Smiley,340.19,226.8,294.84,861.83,1
 125,M,Multi-ply,Pro Masters 40-44,SBD,John Casciato,272.16,181.44,240.4,694,1
 140,M,Multi-ply,Pro Masters 40-44,SBD,Robert Gormus,374.21,299.37,285.76,959.35,1
 100,M,Multi-ply,Pro Masters 45-49,SBD,Tim Myers,272.16,170.1,283.5,725.75,1
@@ -58,17 +58,17 @@ WeightClassKg,Sex,Equipment,Division,Event,Name,Best3SquatKg,Best3BenchKg,Best3D
 110,M,Multi-ply,Amateur Open,B,Gabriel Naspinski,,260.82,,260.82,1
 140,M,Multi-ply,Amateur Open,B,Jason Pavlek,,240.4,,240.4,1
 140+,M,Multi-ply,Amateur Open,B,Brian Ernst,,265.35,,265.35,1
-100,M,Multi-ply,Amateur Submasters,B,Russell Pugh,,229.06,,229.06,1
-140+,M,Multi-ply,Amateur Submasters,B,Brian Ernst,,265.35,,265.35,1
-140,M,Multi-ply,Amateur Submasters,B,Larry Short,,204.12,,204.12,1
-140,M,Raw,Amateur Submasters,B,Larry Short,,204.12,,204.12,1
-110,M,Multi-ply,Amateur Submasters,B,Walter Welcheck,,210.92,,210.92,1
+100,M,Multi-ply,Amateur Submasters 33-39,B,Russell Pugh,,229.06,,229.06,1
+140+,M,Multi-ply,Amateur Submasters 33-39,B,Brian Ernst,,265.35,,265.35,1
+140,M,Multi-ply,Amateur Submasters 33-39,B,Larry Short,,204.12,,204.12,1
+140,M,Raw,Amateur Submasters 33-39,B,Larry Short,,204.12,,204.12,1
+110,M,Multi-ply,Amateur Submasters 33-39,B,Walter Welcheck,,210.92,,210.92,1
 100,M,Multi-ply,Pro Open,B,Dan Blankenship,,238.14,,238.14,1
 110,M,Multi-ply,Pro Open,B,Vincent Cook,,294.84,,294.84,1
 110,M,Multi-ply,Pro Open,B,Adam Hartlaub,,233.6,,233.6,2
 110,M,Multi-ply,Pro Open,B,Justin Holmes,,195.04,,195.04,3
 140+,M,Multi-ply,Pro Open,B,Robert McCray,,412.77,,412.77,1
-100,M,Multi-ply,Pro Submasters,B,Scott Rowe #1,,301.64,,301.64,1
+100,M,Multi-ply,Pro Submasters 33-39,B,Scott Rowe #1,,301.64,,301.64,1
 110,M,Multi-ply,Pro Masters 45-49,B,Randy Robinson,,285.76,,285.76,1
 125,M,Multi-ply,Pro Masters 45-49,B,Robert Norris,,306.17,,306.17,1
 140+,M,Multi-ply,Pro Masters 60-64,B,Bob O'Brien,,204.12,,204.12,1
