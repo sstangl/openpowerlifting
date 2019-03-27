@@ -341,6 +341,7 @@ fn main() -> Result<(), Box<Error>> {
         // Perform age interpolation.
         if let Some(u) = debug_age_username {
             checker::compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, u);
+            process::exit(0); // TODO: Complain if someone passes --compile.
         }
         checker::compiler::interpolate_age(&mut meetdata, &liftermap);
 

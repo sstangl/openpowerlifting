@@ -105,8 +105,10 @@ impl BirthDateRange {
     /// Returns the Age on a given Date given the known range.
     pub fn age_on(&self, date: Date) -> Age {
         // Get exact ages with respect to the bounds.
-        let min_inferred = self.min.age_on(date).unwrap_or(Age::None);
-        let max_inferred = self.max.age_on(date).unwrap_or(Age::None);
+        // The minimum Age comes from the maximum BirthDate.
+        let min_inferred = self.max.age_on(date).unwrap_or(Age::None);
+        // The maximum Age comes from the minimum BirthDate.
+        let max_inferred = self.min.age_on(date).unwrap_or(Age::None);
 
         // If they match, return that Age::Exact.
         if min_inferred == max_inferred {
