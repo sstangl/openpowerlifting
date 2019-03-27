@@ -30,6 +30,9 @@ pub struct WeightKg(i32);
 pub struct WeightAny(i32);
 
 impl Serialize for WeightKg {
+    /// Serialize with two decimal places, exactly as in the original.
+    ///
+    /// This is intended for use by the compiler when writing the entries.csv.
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: serde::Serializer,
@@ -38,12 +41,29 @@ impl Serialize for WeightKg {
             // Avoid a call to format!().
             serializer.serialize_str("")
         } else {
+            let integer = self.0 / 100;
+            let mut fraction = self.0.abs() % 100;
+
+            // Change `50` to `5`.
+            if fraction % 10 == 0 {
+                fraction = fraction / 10;
+            }
+
             // TODO: Write into a stack-allocated fixed-size buffer.
-            serializer.serialize_str(&format!("{}", self))
+            if fraction == 0 {
+                serializer.serialize_str(&format!("{}", integer))
+            } else {
+                serializer.serialize_str(&format!("{}.{}", integer, fraction))
+            }
         }
     }
 }
+
 impl Serialize for WeightAny {
+    /// Serialize with one decimal place, pretty-printed.
+    ///
+    /// This is valid since WeightAny is intended only for situations
+    /// in which pretty weights should be displayed.
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: serde::Serializer,
