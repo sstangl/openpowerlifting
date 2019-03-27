@@ -1,0 +1,57 @@
+# From http://wabdl.org/documents/2018/08/wabdl-rule-book-as-of-892018.pdf
+[divisions]
+    class1 = {name="Class 1", min=14, max=999}
+    open = {name="Open", min=16, max=999}
+    eliteopen = {name="Elite Open", min=16, max=999}
+    teen1213 = {name="Teen 12-13", min=12, max=13}
+    teen1415 = {name="Teen 14-15", min=14, max=15}
+    teen1617 = {name="Teen 16-17", min=16, max=17}
+    teen1819 = {name="Teen 18-19", min=18, max=19}
+
+
+    juniors2025 = {name="Juniors 20-25", min=20, max=25}
+    submasters3339 = {name="Submasters 33-39", min=33, max=39}
+    masters4046 = {name="Masters 40-46", min=40, max=46}
+    masters4753 = {name="Masters 47-53", min=47, max=53}
+    masters5460 = {name="Masters 54-60", min=54, max=60}
+    masters6167 = {name="Masters 61-67", min=61, max=67}
+    masters6874 = {name="Masters 68-74", min=68, max=74}
+    masters7579 = {name="Masters 75-79", min=75, max=79}
+    masters8084 = {name="Masters 80-84", min=80, max=84}
+    masters8589 = {name="Masters 85-89", min=85, max=89}
+    masters90plus = {name="Masters 90", min=90, max=999}
+
+    lawfireopen = {name="Law-Fire Open", min=16, max=999}
+    lawfiresubmasters = {name="Law-Fire Submasters", min=33, max=39}
+    lawfire4047 = {name="Law-Fire 40-47", min=40, max=47}
+    lawfire4855 = {name="Law-Fire 48-55", min=48, max=55}
+    lawfire5663 = {name="Law-Fire 56-63", min=56, max=63}
+    lawfire64 = {name="Law-Fire 64", min=64, max=999}
+
+    specialolympian = {name="Special Olympian", min=0, max=999}
+    disabled11319 = {name="Disabled 1 13-19", min=13, max=19}
+    disabled12039 = {name="Disabled 1 20-39", min=20, max=39}
+    disabled14059 = {name="Disabled 1 40-59", min=40, max=59}
+    disabled160 = {name="Disabled 1 60", min=60, max=999}
+    disabled21319 = {name="Disabled 2 13-19", min=13, max=19}
+    disabled22039 = {name="Disabled 2 20-39", min=20, max=39}
+    disabled24059 = {name="Disabled 2 40-59", min=40, max=59}
+    disabled260 = {name="Disabled 2 60", min=60, max=999}
+
+    teen1619 = {name="Teen 16-19", min=16, max=19}
+    lawfire56 = {name="Law-Fire 56", min=56, max=999}
+    disabled = {name="Disabled", min=0, max=999}
+    masters9599 = {name="Masters 95-99", min=95, max=99}
+
+
+[weightclasses.default_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","117.5","125","140","140+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","90+","100+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]

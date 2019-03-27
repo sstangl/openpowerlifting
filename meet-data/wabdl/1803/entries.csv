@@ -81,7 +81,7 @@ BD,M,Teen 16-17,100,Raw,137.5,,207.5,,345,Jake Romo,CA,1
 BD,M,Teen 16-17,67.5,Raw,90,,170,,260,Alex Wei,CA,1
 B,F,Class 1,67.5,Single-ply,50,,,,50,Angie Buschman,CA,1
 B,F,Class 1,82.5,Raw,45,,,,45,Brandi Kary,CA,1
-B,F,Juniors,67.5,Single-ply,92.5,,,,92.5,Jamie Tsuji,CA,1
+B,F,Juniors 20-25,67.5,Single-ply,92.5,,,,92.5,Jamie Tsuji,CA,1
 B,F,Law-Fire Submasters,52,Single-ply,87.5,92.5,,,87.5,Jamie Field,CA,1
 B,F,Masters 40-46,67.5,Single-ply,70,,,,70,Holly Morello,CA,1
 B,F,Masters 40-46,67.5,Raw,67.5,,,,67.5,Dede Soekardi,CA,1
@@ -105,9 +105,9 @@ B,F,Open,75,Single-ply,110,,,,110,Beverly Anolin,CA,1
 B,F,Open,75,Single-ply,110,,,,110,Nicole Campbell,CA,2
 B,F,Open,75,Raw,77.5,82.5,,,77.5,Jeanne Nielsen,CA,1
 B,F,Open,82.5,Single-ply,90,,,,90,Sylvia Nix,CA,1
-B,F,Submasters,60,Raw,40,,,,40,Angelica Luiz,CA,1
-B,F,Submasters,75,Single-ply,110,,,,110,Nicole Campbell,CA,1
-B,F,Submasters,90,Raw,62.5,,,,62.5,Crystal Luiz-Jones,CA,1
+B,F,Submasters 33-39,60,Raw,40,,,,40,Angelica Luiz,CA,1
+B,F,Submasters 33-39,75,Single-ply,110,,,,110,Nicole Campbell,CA,1
+B,F,Submasters 33-39,90,Raw,62.5,,,,62.5,Crystal Luiz-Jones,CA,1
 B,F,Teen 18-19,52,Raw,55,,,,55,Kaci Singh,CA,1
 B,F,Teen 18-19,82.5,Single-ply,87.5,,,,87.5,Carys Cook,NV,1
 D,F,Class 1,52,Raw,,,65,,65,Namita Nandan,CA,1
@@ -118,8 +118,8 @@ D,F,Class 1,82.5,Raw,,,110,,110,Brandi Kary,CA,1
 D,F,Class 1,90,Single-ply,,,110,,110,Amy Amber,CA,1
 D,F,Class 1,90,Raw,,,147.5,,147.5,Crystal Luiz-Jones,CA,1
 D,F,Class 1,100,Single-ply,,,155,,155,Tara Walsh,CA,1
-D,F,Juniors,60,Raw,,,112.5,117.5,112.5,Kaylee Luiz,CA,1
-D,F,Juniors,67.5,Single-ply,,,152.5,165.5,152.5,Jamie Tsuji,CA,1
+D,F,Juniors 20-25,60,Raw,,,112.5,117.5,112.5,Kaylee Luiz,CA,1
+D,F,Juniors 20-25,67.5,Single-ply,,,152.5,165.5,152.5,Jamie Tsuji,CA,1
 D,F,Law-Fire Submasters,52,Single-ply,,,142.5,,142.5,Jamie Field,CA,1
 D,F,Masters 40-46,60,Raw,,,87.5,,87.5,Rebecca Cassady,CA,1
 D,F,Masters 40-46,60,Single-ply,,,125,,125,Katie Lynch,NV,1
@@ -145,14 +145,14 @@ D,F,Open,67.5,Multi-ply,,,182.5,185,182.5,Janine Jadallah,CA,1
 D,F,Open,75,Single-ply,,,167.5,,167.5,Beverly Anolin,CA,1
 D,F,Open,75,Raw,,,152.5,,152.5,Jeanne Nielsen,CA,1
 D,F,Open,82.5,Single-ply,,,162.5,,162.5,Sylvia Nix,CA,1
-D,F,Submasters,60,Raw,,,92.5,97.5,92.5,Angelica Luiz,CA,1
-D,F,Submasters,75,Single-ply,,,137.5,,137.5,Nicole Campbell,CA,1
-D,F,Submasters,90,Raw,,,147.5,,147.5,Crystal Luiz-Jones,CA,1
+D,F,Submasters 33-39,60,Raw,,,92.5,97.5,92.5,Angelica Luiz,CA,1
+D,F,Submasters 33-39,75,Single-ply,,,137.5,,137.5,Nicole Campbell,CA,1
+D,F,Submasters 33-39,90,Raw,,,147.5,,147.5,Crystal Luiz-Jones,CA,1
 D,F,Teen 18-19,52,Raw,,,117.5,130,117.5,Kaci Singh,CA,1
 D,F,Teen 18-19,82.5,Single-ply,,,137.5,142.5,137.5,Carys Cook,NV,1
 BD,F,Class 1,67.5,Single-ply,50,,137.5,,187.5,Angie Buschman,CA,1
 BD,F,Class 1,82.5,Raw,45,,110,,155,Brandi Kary,CA,1
-BD,F,Juniors,67.5,Single-ply,92.5,,152.5,,245,Jamie Tsuji,CA,1
+BD,F,Juniors 20-25,67.5,Single-ply,92.5,,152.5,,245,Jamie Tsuji,CA,1
 BD,F,Law-Fire Submasters,52,Single-ply,87.5,,142.5,,230,Jamie Field,CA,1
 BD,F,Masters 40-46,82.5,Raw,45,,110,,155,Brandi Kary,CA,1
 BD,F,Masters 40-46,67.5,Single-ply,70,,137.5,,207.5,Holly Morello,CA,1
@@ -173,6 +173,6 @@ BD,F,Open,52,Single-ply,72.5,,117.5,,190,Kim Maslana,CA,2
 BD,F,Open,75,Raw,77.5,,152.5,,230,Jeanne Nielsen,CA,1
 BD,F,Open,82.5,Single-ply,90,,162.5,,252.5,Sylvia Nix,CA,1
 BD,F,Open,52,Single-ply,77.5,,115,,192.5,Morgan Matteoni,NV,1
-BD,F,Submasters,75,Single-ply,110,,137.5,,247.5,Nicole Campbell,CA,1
+BD,F,Submasters 33-39,75,Single-ply,110,,137.5,,247.5,Nicole Campbell,CA,1
 BD,F,Teen 18-19,52,Raw,55,,117.5,,172.5,Kaci Singh,CA,1
 BD,F,Teen 18-19,82.5,Single-ply,87.5,,137.5,,225,Carys Cook,NV,1

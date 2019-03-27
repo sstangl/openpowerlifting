@@ -15,8 +15,8 @@ B,M,Juniors 20-25,100,Raw,185,,,,185,Zach Sullivan,HI,1
 B,M,Juniors 20-25,90,Raw,150,,,,150,Devin-Jackson DJ Kawewehi,HI,1
 B,M,Juniors 20-25,56,Single-ply,,,,,,Jallel Fabro,HI,DQ
 B,M,Juniors 20-25,82.5,Raw,185,,,,185,Scott A Beach,HI,1
-B,M,Law/Fire Masters 40-47,100,Single-ply,,,,,,Robert Saludares,HI,DQ
-B,M,Law/Fire Open,140+,Raw,,,,,,Brian Vickers,TX,DQ
+B,M,Law-Fire 40-47,100,Single-ply,,,,,,Robert Saludares,HI,DQ
+B,M,Law-Fire Open,140+,Raw,,,,,,Brian Vickers,TX,DQ
 B,M,Masters 40-46,75,Single-ply,,,,,,Donald Ramil,HI,DQ
 B,M,Masters 40-46,140+,Multi-ply,,,,,,Hiram Kaikaina III,HI,DQ
 B,M,Masters 47-53,90,Raw,185.5,,,,185.5,Louie Mansanas,HI,1
@@ -68,12 +68,12 @@ D,M,Juniors 20-25,140+,Raw,,,307.5,315,307.5,Amos White,HI,1
 D,M,Juniors 20-25,100,Raw,,,237.5,,237.5,Zach Sullivan,HI,1
 D,M,Juniors 20-25,90,Raw,,,230,,230,Devin-Jackson Kawewehi,HI,1
 D,M,Juniors 20-25,56,Single-ply,,,185,192.5,185,Jallel Fabro,HI,1
-D,M,Law/Fire Masters 40-47,100,Single-ply,,,227.5,,227.5,Robert Saludares,HI,1
-D,M,Law/Fire Masters 48-55,140+,Single-ply,,,287.5,,287.5,Duke Gumpfer,HI,1
-D,M,Law/Fire Open,140+,Raw,,,192.5,,192.5,Brian Vickers,TX,1
-D,M,Law/Fire Open,100,Single-ply,,,305,,305,Davey Silva,HI,1
-D,M,Law/Fire Submasters 33-39,100,Raw,,,255,,255,Nathan Olaivar,HI,1
-D,M,Law/Fire Submasters 33-39,140+,Raw,,,282.5,295,282.5,Anthony Marcus,HI,1
+D,M,Law-Fire 40-47,100,Single-ply,,,227.5,,227.5,Robert Saludares,HI,1
+D,M,Law-Fire 48-55,140+,Single-ply,,,287.5,,287.5,Duke Gumpfer,HI,1
+D,M,Law-Fire Open,140+,Raw,,,192.5,,192.5,Brian Vickers,TX,1
+D,M,Law-Fire Open,100,Single-ply,,,305,,305,Davey Silva,HI,1
+D,M,Law-Fire Submasters,100,Raw,,,255,,255,Nathan Olaivar,HI,1
+D,M,Law-Fire Submasters,140+,Raw,,,282.5,295,282.5,Anthony Marcus,HI,1
 D,M,Masters 47-53,140+,Single-ply,,,287.5,,287.5,Duke Gumpfer,HI,1
 D,M,Masters 54-60,140+,Single-ply,,,215,,215,James Mersberg,HI,1
 D,M,Masters 54-60,90,Single-ply,,,225,,225,David Georges,HI,1
@@ -89,7 +89,7 @@ D,M,Open,75,Single-ply,,,227.5,,227.5,Dean Kaneshiro,HI,1
 D,M,Open,110,Raw,,,,,,Charley Feldman,HI,DQ
 D,M,Submasters 33-39,110,Raw,,,255,260,255,DJ Tano,HI,1
 D,M,Submasters 33-39,100,Single-ply,,,335,,335,Edwin Manmano,HI,1
-D,M,Teen 14-15*,75,Single-ply,,,147.5,,147.5,Asheemo Daily,HI,1
+D,M,Teen 14-15,75,Single-ply,,,147.5,,147.5,Asheemo Daily,HI,1
 D,M,Teen 14-15,60,Raw,,,147.5,150,147.5,Logan Villareal,HI,1
 D,M,Teen 14-15,48,Raw,,,110,,110,Olin Kobayashi,HI,1
 D,M,Teen 16-17,75,Raw,,,205,,205,Kaison Uehara,OR,1
@@ -106,8 +106,8 @@ BD,M,Juniors 20-25,100,Raw,185,,237.5,,422.5,Zach Sullivan,HI,1
 BD,M,Juniors 20-25,90,Raw,150,,247.5,,397.5,Devin-Jackson Kawewehi,HI,1
 BD,M,Juniors 20-25,75,Single-ply,147.5,,280.5,,428,Dustin Zuniga,HI,1
 BD,M,Juniors 20-25,56,Single-ply,,,185,192.5,,Jallel Fabro,HI,DQ
-BD,M,Law/Fire Masters 40-47,100,Single-ply,,,227.5,,,Robert Saludares,HI,DQ
-BD,M,Law/Fire Open,140+,Raw,180,,192.5,,,Brian Vickers,TX,DQ
+BD,M,Law-Fire 40-47,100,Single-ply,,,227.5,,,Robert Saludares,HI,DQ
+BD,M,Law-Fire Open,140+,Raw,180,,192.5,,,Brian Vickers,TX,DQ
 BD,M,Masters 54-60,140+,Single-ply,,,215,,,James Mersberg,HI,DQ
 BD,M,Masters 75-79,110,Raw,85.5,,102.5,105,188,William Coleman,HI,1
 BD,M,Masters 75-79,60,Raw,45,,87.5,,132.5,Eugene Kawamata,HI,1
@@ -128,7 +128,7 @@ B,F,Juniors 20-25,90,Raw,77.5,,,,77.5,Jessica Muskat,HI,1
 B,F,Juniors 20-25,75,Raw,60,,,,60,Mahealani Hiraoka,HI,1
 B,F,Juniors 20-25,56,Single-ply,57.5,,,,57.5,Caitlin Ferreira,HI,1
 B,F,Juniors 20-25,48,Single-ply,75,,,,75,Cailee Awa,HI,1
-B,F,Law/Fire Open,60,Raw,82.5,,,,82.5,Ashley Carillo,HI,1
+B,F,Law-Fire Open,60,Raw,82.5,,,,82.5,Ashley Carillo,HI,1
 B,F,Masters 40-46,90+,Single-ply,125,130,,,125,Trisha Puou,HI,1
 B,F,Masters 40-46,60,Raw,72.5,75,,,72.5,Lainey Kelly,HI,1
 B,F,Masters 40-46,60,Raw,,,,,,Leilani Felipe,HI,DQ
@@ -140,7 +140,7 @@ B,F,Masters 68-74,60,Raw,47.5,48,,,47.5,Leona Pereza,HI,1
 B,F,Masters 68-74,56,Raw,20,,,,20,Patricia Hamamoto,HI,1
 B,F,Masters 68-74,67.5,Raw,32.5,,,,32.5,Charlene Choy,HI,1
 B,F,Masters 85-89,60,Raw,27.5,,,,27.5,Liliian H Wakuzawa,HI,1
-B,F,Masters 90+,60,Raw,25,27.5,,,25,Violet Hiranaka,HI,1
+B,F,Masters 90,60,Raw,25,27.5,,,25,Violet Hiranaka,HI,1
 B,F,Open,67.5,Raw,75,,,,75,Frances Young,HI,1
 B,F,Open,90+,Single-ply,125,130,,,125,Trisha Puou,HI,1
 B,F,Open,60,Single-ply,97.5,,,,97.5,Brittnei Pasion-Almeida,HI,1
@@ -162,7 +162,7 @@ D,F,Class 1,75,Raw,,,148.5,,148.5,Terri Aiwohi,HI,1
 D,F,Juniors 20-25,90,Raw,,,152.5,,152.5,Jessica Muskat,HI,1
 D,F,Juniors 20-25,75,Raw,,,145,,145,Mahealani Hiraoka,HI,1
 D,F,Juniors 20-25,48,Single-ply,,,151.5,,151.5,Cailee Awa,HI,1
-D,F,Law/Fire Open,60,Raw,,,172.5,182.5,172.5,Ashley Carillo,HI,1
+D,F,Law-Fire Open,60,Raw,,,172.5,182.5,172.5,Ashley Carillo,HI,1
 D,F,Masters 40-46,90+,Single-ply,,,188,,188,Trisha Puou,HI,1
 D,F,Masters 40-46,60,Raw,,,142.5,,142.5,Leilani Felipe,HI,1
 D,F,Masters 47-53,75,Raw,,,148.5,,148.5,Terri Aiwohi,HI,1

@@ -13,10 +13,10 @@ J. P. Turanski,CA,D,Multi-ply,Class 1,M,117.5,,,272.5,,272.5,1
 Brad Cikana,CA,D,Multi-ply,Class 1,M,125,,,242.5,,242.5,1
 Vic Karpenko,CA,D,Multi-ply,Juniors 20-25,M,90,,,245,,245,1
 Michael Minahan,CA,D,Multi-ply,Juniors 20-25,M,100,,,230,,230,1
-Kathleen Girard,CA,D,Multi-ply,Juniors,F,67.5,,,150,165,150,1
-Ted Ornduff,CA,D,Multi-ply,Law/Fire Masters 40-47,M,100,,,230,,230,1
-Arthur Clayton,CA,D,Multi-ply,Law/Fire Masters 40-47,M,110,,,240,,240,1
-Manny Burruel,CA,D,Multi-ply,Law/Fire Masters 48-55,M,117.5,,,275,283,275,1
+Kathleen Girard,CA,D,Multi-ply,Juniors 20-25,F,67.5,,,150,165,150,1
+Ted Ornduff,CA,D,Multi-ply,Law-Fire 40-47,M,100,,,230,,230,1
+Arthur Clayton,CA,D,Multi-ply,Law-Fire 40-47,M,110,,,240,,240,1
+Manny Burruel,CA,D,Multi-ply,Law-Fire 48-55,M,117.5,,,275,283,275,1
 Mike Healy,CA,D,Multi-ply,Masters 40-46,M,100,,,192.5,,192.5,1
 Dan Peterson,CA,D,Multi-ply,Masters 40-46,M,100,,,185,,185,2
 Steve Gaytan,CA,D,Multi-ply,Masters 40-46,M,110,,,232.5,,232.5,1
@@ -53,7 +53,7 @@ Jon Shapiro,CA,D,Multi-ply,Special Olympian,M,67.5,,,160,,160,1
 Holly James,CA,D,Multi-ply,Special Olympian,F,75,,,70,,70,1
 Al Tortorelli,CA,D,Multi-ply,Submasters 33-39,M,90,,,282.5,,282.5,1
 Ed Barnes,CA,D,Multi-ply,Submasters 33-39,M,100,,,237.5,,237.5,1
-Disarie Spencer,CA,D,Multi-ply,Submasters,F,75,,,150,152.5,150,1
+Disarie Spencer,CA,D,Multi-ply,Submasters 33-39,F,75,,,150,152.5,150,1
 Zack Hampel,CA,D,Multi-ply,Teen 12-13,M,52,,,92.5,102.5,92.5,1
 Cameron Ciano,CA,D,Multi-ply,Teen 12-13,M,67.5,,,130,140,130,1
 Dominick Narigi,CA,D,Multi-ply,Teen 16-19,M,75,,,235,,235,1
@@ -88,17 +88,17 @@ Vic Karpenko,CA,B,Multi-ply,Juniors 20-25,M,90,205,,,,205,1
 Michael Minahan,CA,B,Multi-ply,Juniors 20-25,M,100,160,,,,160,1
 Daniel Reeves,AZ,B,Multi-ply,Juniors 20-25,M,110,193,,,,193,1
 Mike Womack,CA,B,Multi-ply,Juniors 20-25,M,140,388,,,,388,1
-Erica Ansberry,CA,B,Multi-ply,Juniors,F,60,70,,,,70,1
-Kathleen Girard,CA,B,Multi-ply,Juniors,F,67.5,92.5,,,,92.5,1
-Lauren Vaterlaus,CA,B,Multi-ply,Juniors,F,82.5,,,,,,DQ
-Ted Ornduff,CA,B,Multi-ply,Law/Fire Masters 40-47,M,100,190,,,,190,1
-Arthur Clayton,CA,B,Multi-ply,Law/Fire Masters 40-47,M,110,205,,,,205,1
-Jaime Tovar,CA,B,Multi-ply,Law/Fire Masters 40-47,M,125,265,,,,265,1
-Manny Burruel,CA,B,Multi-ply,Law/Fire Masters 48-55,M,117.5,167.5,,,,167.5,1
-Bruce Sabin,CA,B,Multi-ply,Law/Fire Masters 48-55,M,140,240,260.5,,,240,1
-Michal Johnson,CA,B,Multi-ply,Law/Fire Masters 48-55,M,140+,233.5,,,,233.5,1
-JC Tolle,CA,B,Multi-ply,Law/Fire Submasters,M,117.5,238.5,,,,238.5,1
-Daniele Mc Collum,CA,B,Multi-ply,Law/Fire Submasters,F,75,102.5,105,,,102.5,1
+Erica Ansberry,CA,B,Multi-ply,Juniors 20-25,F,60,70,,,,70,1
+Kathleen Girard,CA,B,Multi-ply,Juniors 20-25,F,67.5,92.5,,,,92.5,1
+Lauren Vaterlaus,CA,B,Multi-ply,Juniors 20-25,F,82.5,,,,,,DQ
+Ted Ornduff,CA,B,Multi-ply,Law-Fire 40-47,M,100,190,,,,190,1
+Arthur Clayton,CA,B,Multi-ply,Law-Fire 40-47,M,110,205,,,,205,1
+Jaime Tovar,CA,B,Multi-ply,Law-Fire 40-47,M,125,265,,,,265,1
+Manny Burruel,CA,B,Multi-ply,Law-Fire 48-55,M,117.5,167.5,,,,167.5,1
+Bruce Sabin,CA,B,Multi-ply,Law-Fire 48-55,M,140,240,260.5,,,240,1
+Michal Johnson,CA,B,Multi-ply,Law-Fire 48-55,M,140+,233.5,,,,233.5,1
+JC Tolle,CA,B,Multi-ply,Law-Fire Submasters,M,117.5,238.5,,,,238.5,1
+Daniele Mc Collum,CA,B,Multi-ply,Law-Fire Submasters,F,75,102.5,105,,,102.5,1
 Barry Cavanaugh,CA,B,Multi-ply,Masters 40-46,M,90,,,,,,DQ
 Dan Peterson,CA,B,Multi-ply,Masters 40-46,M,100,,,,,,DQ
 Fil Dena III,NV,B,Multi-ply,Masters 40-46,M,100,202.5,,,,202.5,1
@@ -166,11 +166,11 @@ Danny Dorado,CA,B,Multi-ply,Submasters 33-39,M,110,,,,,,DQ
 James Hunter,CA,B,Multi-ply,Submasters 33-39,M,117.5,290.5,303,,,290.5,1
 Roy Bradshaw,CA,B,Multi-ply,Submasters 33-39,M,140+,320,,,,320,1
 Roy Lamont,CA,B,Multi-ply,Submasters 33-39,M,140+,207.5,,,,207.5,2
-Mondae Nunes,CA,B,Multi-ply,Submasters,F,60,52.5,,,,52.5,1
-Daniele Mc Collum,CA,B,Multi-ply,Submasters,F,75,102.5,105,,,102.5,1
-Disarie Spencer,CA,B,Multi-ply,Submasters,F,75,55,,,,55,2
-Cynthia Matulia,CA,B,Multi-ply,Submasters,F,90,95,,,,95,1
-Tina Riley,CA,B,Multi-ply,Submasters,F,90+,110,,,,110,1
+Mondae Nunes,CA,B,Multi-ply,Submasters 33-39,F,60,52.5,,,,52.5,1
+Daniele Mc Collum,CA,B,Multi-ply,Submasters 33-39,F,75,102.5,105,,,102.5,1
+Disarie Spencer,CA,B,Multi-ply,Submasters 33-39,F,75,55,,,,55,2
+Cynthia Matulia,CA,B,Multi-ply,Submasters 33-39,F,90,95,,,,95,1
+Tina Riley,CA,B,Multi-ply,Submasters 33-39,F,90+,110,,,,110,1
 Cameron Ciano,CA,B,Multi-ply,Teen 12-13,M,67.5,55,,,,55,1
 Juan Laija,CA,B,Multi-ply,Teen 14-15,M,67.5,138.5,,,,138.5,1
 John Minahan III,CA,B,Multi-ply,Teen 16-19,M,56,92.5,95,,,92.5,1
