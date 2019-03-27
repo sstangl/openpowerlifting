@@ -27,5 +27,5 @@ To edit the file,
    5. Make sure that there is exactly one empty line at the very bottom of the file.
    6. Scroll to the bottom of the page, write a description of your changes, and click "Commit Changes".
    7. Copy and paste the title of the new merge request into the Description textbox.
-   8. Check all three checkboxes next to the phrases "Remove source branch when merge request is accepted," "Squash commits when merge request is accepted," and "Allow edits from maintainers."
+   8. Check all three checkboxes next to the phrases "Delete source branch when merge request is accepted.", "Squash commits when merge request is accepted," and "Allow commits from members who can merge to the target branch."
    9. Click the "Submit Merge Request" button.
