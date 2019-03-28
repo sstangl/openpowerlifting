@@ -1,6 +1,6 @@
 Place,WeightClassKg,Name,State,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Sex,Event,Equipment
 1,75,Donald Judd,AZ,74.03,102.5,55,140,297.5,m4,M,SBD,Single-ply
-1,56,Danielle Carmickle,AZ,55.34,112.5,65,110,287.5,sm2,F,SBD,Single-ply
+1,56,Danielle Carmickle,AZ,55.34,112.5,65,110,287.5,wsm2,F,SBD,Single-ply
 1,100,Marty Einstein,AZ,92.53,,210,,210,m2,M,B,Single-ply
 1,100,Jon Marshall,AZ,93.89,,177.5,,177.5,smp,M,B,Single-ply
 1,82.5,Fred Millan IV,AZ,81.19,,162.5,,162.5,m1,M,B,Single-ply
@@ -20,7 +20,7 @@ Place,WeightClassKg,Name,State,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3Deadl
 1,82.5,Justin Harper,AZ,78.47,,,207.5,207.5,nov,M,D,Raw
 1,56,Vin Voeun,AZ,52.53,,,155,155,sm2,M,D,Raw
 1,82.5,Justin Harper,AZ,78.47,,145,,145,nov,M,B,Raw
-1,56,Nicole Anderson,AZ,54.52,,62.5,,62.5,sm2,F,B,Raw
+1,56,Nicole Anderson,AZ,54.52,,62.5,,62.5,wsm2,F,B,Raw
 1,52,Breanna Beck,AZ,49.9,,,35,35,hs,M,D,Raw
 1,44,Karson Carmickle,AZ,29.12,,,20,20,youth,M,D,Raw
 1,44,Karson Carmickle,AZ,29.12,,18.5,,18.5,youth,M,B,Raw
@@ -56,11 +56,11 @@ Place,WeightClassKg,Name,State,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3Deadl
 1,140,Tiberius Catinas,AZ,134.81,182.5,142.5,195,520,jr,M,SBD,Wraps
 1,90,Frank Rader,AZ,86.82,145,67.5,165,377.5,m2,M,SBD,Wraps
 1,110,Gene Lawrence,AZ,108.59,50,110,147.5,307.5,m4,M,SBD,Wraps
-1,60,Hope Ozer,AZ,58.6,62.5,35,85,182.5,m3,F,SBD,Wraps
-1,67.5,Rae Rader,AZ,66.13,65,35,80,180,m2,F,SBD,Wraps
-1,56,Lisa Bickel,AZ,53.89,,47.5,,47.5,mp,F,B,Raw
-1,60,Hope Ozer,AZ,58.6,,35,,35,m3,F,B,Raw
-1,67.5,Elizabeth Walters,AZ,65.05,,27.5,,27.5,m3,F,B,Raw
+1,60,Hope Ozer,AZ,58.6,62.5,35,85,182.5,wm3,F,SBD,Wraps
+1,67.5,Rae Rader,AZ,66.13,65,35,80,180,wm2,F,SBD,Wraps
+1,56,Lisa Bickel,AZ,53.89,,47.5,,47.5,wmp,F,B,Raw
+1,60,Hope Ozer,AZ,58.6,,35,,35,wm3,F,B,Raw
+1,67.5,Elizabeth Walters,AZ,65.05,,27.5,,27.5,wm3,F,B,Raw
 1,110,Gene Lawrence,AZ,108.59,,110,147.5,257.5,m4,M,BD,Raw
-1,60,Hope Ozer,AZ,58.6,,35,85,120,m3,F,BD,Raw
-1,67.5,Elizabeth Walters,AZ,65.05,,27.5,57.5,85,m3,F,BD,Raw
+1,60,Hope Ozer,AZ,58.6,,35,85,120,wm3,F,BD,Raw
+1,67.5,Elizabeth Walters,AZ,65.05,,27.5,57.5,85,wm3,F,BD,Raw

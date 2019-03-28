@@ -1,9 +1,9 @@
 Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment
 1,90,Gary Green,MD,M,84.1,215,160,230,605,m1,SBD,Single-ply
-1,44,Sara Florence,KY,F,44,65,40,87.5,192.5,pure,SBD,Wraps
-1,75,Candace Wells,KY,F,73.84,138.5,70,167.5,376,jr,SBD,Wraps
-1,90,Brittany Sebok,WV,F,86.55,100,58.5,127.5,286,nov,SBD,Wraps
-1,90+,Kayla Tabor,WV,F,93.62,125,80,127.5,332.5,nov,SBD,Wraps
+1,44,Sara Florence,KY,F,44,65,40,87.5,192.5,wpure,SBD,Wraps
+1,75,Candace Wells,KY,F,73.84,138.5,70,167.5,376,wjr,SBD,Wraps
+1,90,Brittany Sebok,WV,F,86.55,100,58.5,127.5,286,wnov,SBD,Wraps
+1,90+,Kayla Tabor,WV,F,93.62,125,80,127.5,332.5,wnov,SBD,Wraps
 1,67.5,Grant Evans,WI,M,66.32,105,132.5,200,437.5,int,SBD,Wraps
 1,90,Justin Manning,KY,M,88.9,190,130,250,570,pure,SBD,Wraps
 1,100,Anthony Thorn,KY,M,95.62,192.5,147.5,265,605,jr,SBD,Raw
@@ -31,15 +31,15 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,125,Keith Underwood,OH,M,115.48,,182.5,237.5,420,p+f,BD,Raw
 1,125,Greg Simpson,OH,M,114.85,,167.5,235,402.5,sm2,BD,Raw
 1,125,Thomas Wooten,OH,M,122.56,,120,,120,sm1,B,Raw
-1,75,Alicia Ayers,OH,F,69.58,,70,150,220,pn,BD,Raw
+1,75,Alicia Ayers,OH,F,69.58,,70,150,220,wpn,BD,Raw
 1,125,Ethan Caldwell,KY,M,114.03,,100,175,275,hsp,BD,Raw
 1,100,Arthur Lewis,KY,M,96.98,,100,235,335,nov,BD,Raw
 1,82.5,Mike Romano,IL,M,78.2,,147.5,185,332.5,m2,BD,Raw
 1,125,Thomas Wooten,OH,M,122.56,,120,172.5,292.5,sm1,BD,Raw
-1,90+,Kayla Tabor,WV,F,93.62,,80,127.5,207.5,nov,BD,Raw
-1,90,Brittany Sebok,WV,F,86.55,,58.5,127.5,186,nov,BD,Raw
+1,90+,Kayla Tabor,WV,F,93.62,,80,127.5,207.5,wnov,BD,Raw
+1,90,Brittany Sebok,WV,F,86.55,,58.5,127.5,186,wnov,BD,Raw
 1,125,Greg Simpson,OH,M,114.85,,167.5,235,402.5,sm2,BD,Raw
-1,90+,Heather Lawrence,KY,F,121.93,,42.5,,42.5,bsm2,B,Raw
+1,90+,Heather Lawrence,KY,F,121.93,,42.5,,42.5,wbsm2,B,Raw
 1,82.5,Mike Romano,IL,M,78.2,,147.5,,147.5,bm2,B,Raw
 1,140+,Joe Barnes,KY,M,150.5,,240,,240,bopen,B,Raw
 1,140+,Joe Barnes,KY,M,150.5,,240,,240,bsm1,B,Raw

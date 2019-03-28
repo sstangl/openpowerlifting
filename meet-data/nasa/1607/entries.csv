@@ -1,10 +1,10 @@
 Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment
 1,110,Nick Dwinell,OK,M,106.64,,211,,211,m3,B,Single-ply
 1,82.5,Cody VandeWeerd,KS,M,79.61,,162.5,,162.5,bpsm1,B,Single-ply
-1,67.5,Rachel Malchose,MO,F,66.18,,65,137.5,202.5,sm2,BD,Raw
-1,67.5,Rachel Malchose,MO,F,66.18,,65,137.5,202.5,smp,BD,Raw
-1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,m2,BD,Raw
-1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,mp,BD,Raw
+1,67.5,Rachel Malchose,MO,F,66.18,,65,137.5,202.5,wsm2,BD,Raw
+1,67.5,Rachel Malchose,MO,F,66.18,,65,137.5,202.5,wsmp,BD,Raw
+1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,wm2,BD,Raw
+1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,wmp,BD,Raw
 1,110,Sam Tuckwin,KS,M,100.92,,,215,215,dlteen,D,Raw
 1,82.5,Chris Beck,KS,M,81.15,,160,,160,bpmp,B,Raw
 1,140,Matthew Jones,KS,M,127.32,,195,,195,bpmp,B,Raw
@@ -14,8 +14,8 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,110,Mark Kelly,KS,M,106.41,,167.5,220,387.5,mp,BD,Raw
 1,110,Alexander Wolke,KS,M,106.78,,160,227.5,387.5,jr,BD,Raw
 1,67.5,Damien Goforth,KS,M,64.64,,120,165,285,int,BD,Raw
-1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,m2,BD,Raw
-1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,mp,BD,Raw
+1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,wm2,BD,Raw
+1,67.5,Ruth Brown,MO,F,65.59,,40,117.5,157.5,wmp,BD,Raw
 1,67.5,Kenneth Goad,KS,M,65.05,,40,70,110,m5,BD,Raw
 1,82.5,Jay Suber,KS,M,78.52,245,155,282.5,682.5,jr,SBD,Wraps
 1,100,Robbie Schultz,MO,M,99.74,232.5,177.5,270,680,sm1,SBD,Wraps
@@ -34,11 +34,11 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,67.5,Anthony Richards,MO,M,67.45,130,95,162.5,387.5,jr,SBD,Wraps
 1,125,Owen MacDonald,KS,M,113.9,160,125,202.5,487.5,jr,SBD,Wraps
 1,125,Owen MacDonald,KS,M,113.9,160,125,202.5,487.5,nov,SBD,Wraps
-1,60,Paula Noble,MO,F,58.33,110,62.5,137.5,310,open,SBD,Wraps
-1,75,Gina Schmidtlein,KS,F,73.57,125,65,132.5,322.5,nov,SBD,Wraps
-1,67.5,Rachel Malchose,MO,F,66.18,87.5,65,137.5,290,sm2,SBD,Wraps
-1,67.5,Rachel Malchose,MO,F,66.18,87.5,65,137.5,290,smp,SBD,Wraps
-1,60,Taylor Friedfeld,KS,F,58.56,95,50,97.5,242.5,retrojr,SBD,Raw
-1,82.5,Libby Eddings,KS,F,81.28,95,57.5,125,277.5,open,SBD,Wraps
-1,56,Isabel Barrera,KS,F,55.43,80,40,95,215,teen,SBD,Wraps
-1,90+,Shelly Bullard,KS,F,96.62,110,57.5,122.5,290,nov,SBD,Wraps
+1,60,Paula Noble,MO,F,58.33,110,62.5,137.5,310,wopen,SBD,Wraps
+1,75,Gina Schmidtlein,KS,F,73.57,125,65,132.5,322.5,wnov,SBD,Wraps
+1,67.5,Rachel Malchose,MO,F,66.18,87.5,65,137.5,290,wsm2,SBD,Wraps
+1,67.5,Rachel Malchose,MO,F,66.18,87.5,65,137.5,290,wsmp,SBD,Wraps
+1,60,Taylor Friedfeld,KS,F,58.56,95,50,97.5,242.5,wretrojr,SBD,Raw
+1,82.5,Libby Eddings,KS,F,81.28,95,57.5,125,277.5,wopen,SBD,Wraps
+1,56,Isabel Barrera,KS,F,55.43,80,40,95,215,wteen,SBD,Wraps
+1,90+,Shelly Bullard,KS,F,96.62,110,57.5,122.5,290,wnov,SBD,Wraps

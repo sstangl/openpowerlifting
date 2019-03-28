@@ -1,21 +1,21 @@
 Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Event,Equipment
 1,75,Kat Reinier,NM,F,71.21,115,75,150,340,wm1,SBD,Raw
 2,75,Teresa Espindola,NM,F,70.03,85,65,147.5,297.5,wm1,SBD,Raw
-1,52,Victoria Arrowsmith,NM,F,51.3,77.5,60,117.5,255,open,SBD,Wraps
-1,75,Christine Grant,NM,F,74.3,110,60,142.5,312.5,m2,SBD,Wraps
-1,90,Samanthan Belin,NM,F,87.5,115,77.5,147.5,340,nov,SBD,Wraps
-1,75,Cathy Arlowe,NM,F,74.43,105,65,130,300,m1,SBD,Wraps
-1,90,Abigail Driver,NM,F,83.37,97.5,32.5,122.5,252.5,teen,SBD,Wraps
-1,90+,Flor Gurrola,NM,F,94.85,95,47.5,115,257.5,m1,SBD,Wraps
-DQ,90+,Angelica Macias,NM,F,103.46,90,47.5,,,sm2,SBD,Wraps
+1,52,Victoria Arrowsmith,NM,F,51.3,77.5,60,117.5,255,wopen,SBD,Wraps
+1,75,Christine Grant,NM,F,74.3,110,60,142.5,312.5,wm2,SBD,Wraps
+1,90,Samanthan Belin,NM,F,87.5,115,77.5,147.5,340,wnov,SBD,Wraps
+1,75,Cathy Arlowe,NM,F,74.43,105,65,130,300,wm1,SBD,Wraps
+1,90,Abigail Driver,NM,F,83.37,97.5,32.5,122.5,252.5,wteen,SBD,Wraps
+1,90+,Flor Gurrola,NM,F,94.85,95,47.5,115,257.5,wm1,SBD,Wraps
+DQ,90+,Angelica Macias,NM,F,103.46,90,47.5,,,wsm2,SBD,Wraps
 1,44,Cody Hanson #2,NM,M,29.12,27.5,22.5,60,110,youth,SBD,Wraps
 2,44,Sergio Waters,AZ,M,29.48,27.5,20,45,92.5,youth,SBD,Wraps
-1,75,Cathy Arlowe,NM,F,74.43,,65,130,195,m1,BD,Raw
-1,75,Cathy Arlowe,NM,F,74.43,,65,130,195,m1,BD,Raw
-1,75,Emily Amburgey,NM,F,73.12,,60,115,175,hs,BD,Raw
-1,75,Emily Amburgey,NM,F,73.12,,60,115,175,teen,BD,Raw
-1,90,Elaine Waugh,NM,F,83.51,,35,95,130,m4,BD,Raw
-DQ,90+,Angelica Macias,NM,F,103.46,,47.5,,,sm2,BD,Raw
+1,75,Cathy Arlowe,NM,F,74.43,,65,130,195,wm1,BD,Raw
+1,75,Cathy Arlowe,NM,F,74.43,,65,130,195,wm1,BD,Raw
+1,75,Emily Amburgey,NM,F,73.12,,60,115,175,whs,BD,Raw
+1,75,Emily Amburgey,NM,F,73.12,,60,115,175,wteen,BD,Raw
+1,90,Elaine Waugh,NM,F,83.51,,35,95,130,wm4,BD,Raw
+DQ,90+,Angelica Macias,NM,F,103.46,,47.5,,,wsm2,BD,Raw
 1,67.5,Jacob Grimm,AZ,M,65.32,112.5,62.5,132.5,307.5,hs,SBD,Single-ply
 1,125,Mike Buttovich,NM,M,112.04,,,250,250,m3,D,Single-ply
 1,82.5,Jason Potts,NM,M,80.38,,105,182.5,287.5,sm2,BD,Raw
@@ -67,11 +67,11 @@ DQ,90+,Angelica Macias,NM,F,103.46,,47.5,,,sm2,BD,Raw
 1,90,William Richardson,NM,M,88.99,95,60,127.5,282.5,m3,SBD,Raw
 DQ,140+,Brennen Becenti,NM,M,168.74,160,,190,,hs,SBD,Raw
 1,125,Cody Hanson #1,NM,M,119.75,,137.5,,137.5,p+f,B,Raw
-1,75,Kat Reinier,NM,F,71.21,,75,,75,m1,B,Raw
-2,75,Cathy Arlowe,NM,F,74.43,,65,,65,m1,B,Raw
+1,75,Kat Reinier,NM,F,71.21,,75,,75,wm1,B,Raw
+2,75,Cathy Arlowe,NM,F,74.43,,65,,65,wm1,B,Raw
 1,44,Cody Hanson #2,NM,M,29.12,,22.5,,22.5,youth,B,Raw
-1,90,Elaine Waugh,NM,F,83.51,,35,,35,m4,B,Raw
+1,90,Elaine Waugh,NM,F,83.51,,35,,35,wm4,B,Raw
 1,82.5,Barry Christian,NM,M,81.56,,110,,110,m3,B,Raw
 1,67.5,Nicko Gallegos,NM,M,66.86,,65,,65,nov,B,Raw
-1,75,Emily Amburgey,NM,F,73.12,,60,,60,hs,B,Raw
+1,75,Emily Amburgey,NM,F,73.12,,60,,60,whs,B,Raw
 1,90,Andrew Smith #5,NM,M,85.28,87.5,,,87.5,sqteen,S,Wraps

@@ -5,11 +5,11 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,100,Jonathan Clark #2,WV,M,98.52,170,155,240,565,int,SBD,Single-ply
 1,110,Shawn Burgraff,WV,M,109.77,337.5,205,352.5,895,int,SBD,Single-ply
 1,125,Corey Sites,OH,M,118.84,232.5,182.5,210,625,pure,SBD,Single-ply
-1,56,Susan Larrick,WV,F,54.88,80,42.5,115,237.5,m2,SBD,Wraps
-1,67.5,Kortni Matteson,MI,F,64.5,85,57.5,146,288.5,int,SBD,Wraps
-1,75,Kristen Summers,WV,F,69.58,90,57.5,112.5,260,int,SBD,Wraps
-1,75,Rose Mary Mihaliak,WV,F,70.49,77.5,50,115,242.5,m3,SBD,Wraps
-1,82.5,Jamie Robinette,WV,F,78.29,117.5,70,137.5,325,int,SBD,Wraps
+1,56,Susan Larrick,WV,F,54.88,80,42.5,115,237.5,wm2,SBD,Wraps
+1,67.5,Kortni Matteson,MI,F,64.5,85,57.5,146,288.5,wint,SBD,Wraps
+1,75,Kristen Summers,WV,F,69.58,90,57.5,112.5,260,wint,SBD,Wraps
+1,75,Rose Mary Mihaliak,WV,F,70.49,77.5,50,115,242.5,wm3,SBD,Wraps
+1,82.5,Jamie Robinette,WV,F,78.29,117.5,70,137.5,325,wint,SBD,Wraps
 1,82.5,Travis Ferrell,WV,M,76.02,157.5,112.5,202.5,472.5,teen,SBD,Wraps
 1,82.5,Greyson Caplinger,WV,M,81.1,150,122.5,185,457.5,nov,SBD,Wraps
 1,90,Willard Ausborne,WV,M,89.45,192.5,155,225,572.5,nov,SBD,Wraps
@@ -26,9 +26,9 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,75,Ozzie Roach,WV,M,73.84,,77.5,,77.5,m3,B,Raw
 1,82.5,Brian Helmondollar,WV,M,80.56,,120,,120,m2,B,Raw
 1,110,Coty Whitt,WV,M,109.13,,187.5,,187.5,int,B,Raw
-1,60,Renee Rader,WV,F,59.87,,47.5,115,162.5,sm,BD,Raw
-1,75,Rose Mary Mihaliak,WV,F,70.49,,50,115,165,m3,BD,Raw
-1,82.5,Jamie Robinette,WV,F,78.29,,70,137.5,207.5,int,BD,Raw
+1,60,Renee Rader,WV,F,59.87,,47.5,115,162.5,wsm,BD,Raw
+1,75,Rose Mary Mihaliak,WV,F,70.49,,50,115,165,wm3,BD,Raw
+1,82.5,Jamie Robinette,WV,F,78.29,,70,137.5,207.5,wint,BD,Raw
 1,82.5,Brian Helmondollar,WV,M,80.56,,120,165,285,m2,BD,Raw
 1,100,Peyton Palmer,WV,M,99.61,,115,147.5,262.5,hsp,BD,Raw
 1,100,Peyton Palmer,WV,M,99.61,,115,147.5,262.5,teen,BD,Raw

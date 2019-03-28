@@ -1,8 +1,110 @@
 [divisions]
-# TODO
+	# #Full Power
+ #    open = {name="open", min=0, max=999,sex='M'}
+ #    youth = {name="youth", min=5, max=12,sex='M'}
+ #    hs = {name="hs", min=13, max=19,sex='M'}
+ #    teen = {name="teen", min=13, max=19,sex='M'}
+ #    jr = {name="jr", min=20, max=23,sex='M'}
+ #    int = {name="int", min=24, max=29,sex='M'}
+ #    sm1 = {name="sm1", min=30, max=35,sex='M'}
+ #    sm2 = {name="sm2", min=35, max=39,sex='M'}
+ #    m1 = {name="m1", min=40, max=49,sex='M'}
+ #    m2 = {name="m2", min=50, max=59,sex='M'}
+ #    m3 = {name="m3", min=60, max=69,sex='M'}
+ #    m4 = {name="m4", min=70, max=999,sex='M'}
+ #    nov = {name="nov", min=0, max=999,sex='M'}
+ #    pf = {name="p+f", min=0, max=999,sex='M'}
+ #    pure = {name="pure", min=0, max=999,sex='M'}
+
+ #    wopen = {name="wopen", min=0, max=999,sex='F'}
+ #    wyouth = {name="wyouth", min=5, max=12,sex='F'}
+ #    whs = {name="whs", min=13, max=19,sex='F'}
+ #    wteen = {name="wteen", min=13, max=19,sex='F'}
+ #    wjr = {name="wjr", min=20, max=23,sex='F'}
+ #    wint = {name="wint", min=24, max=29,sex='F'}
+ #    wsm1 = {name="wsm1", min=30, max=35,sex='F'}
+ #    wsm2 = {name="wsm2", min=35, max=39,sex='F'}
+ #    wm1 = {name="wm1", min=40, max=49,sex='F'}
+ #    wm2 = {name="wm2", min=50, max=59,sex='F'}
+ #    wm3 = {name="wm3", min=60, max=69,sex='F'}
+ #    wm4 = {name="wm4", min=70, max=999,sex='F'}
+ #    wnov = {name="wnov", min=0, max=999,sex='F'}
+ #    wpf = {name="wp+f", min=0, max=999,sex='F'}
+ #    wpure = {name="wpure", min=0, max=999,sex='F'}
+
+ #    #Bench
+ #    bpopen = {name="bpopen", min=0, max=999,sex='M'}
+ #    bphs = {name="bphs", min=13, max=19,sex='M'}
+ #    bpteen = {name="bpteen", min=13, max=19,sex='M'}
+ #    bpjr = {name="bpjr", min=20, max=23,sex='M'}
+ #    bpint = {name="bpint", min=24, max=29,sex='M'}
+ #    bpsm1 = {name="bpsm1", min=30, max=35,sex='M'}
+ #    bpsm2 = {name="bpsm2", min=35, max=39,sex='M'}
+ #    bpm1 = {name="bpm1", min=40, max=49,sex='M'}
+ #    bpm2 = {name="bpm2", min=50, max=59,sex='M'}
+ #    bpm3 = {name="bpm3", min=60, max=69,sex='M'}
+ #    bpm4 = {name="bpm4", min=70, max=999,sex='M'}
+ #    bpnov = {name="bpnov", min=0, max=999,sex='M'}
+ #    bppf = {name="bpp+f", min=0, max=999,sex='M'}
+ #    bppure = {name="bppure", min=0, max=999,sex='M'}
+
+ #    wbpopen = {name="wbpopen", min=0, max=999,sex='F'}
+ #    wbphs = {name="wbphs", min=13, max=19,sex='F'}
+ #    wbpteen = {name="wbpteen", min=13, max=19,sex='F'}
+ #    wbpjr = {name="wbpjr", min=20, max=23,sex='F'}
+ #    wbpint = {name="wbpint", min=24, max=29,sex='F'}
+ #    wbpsm1 = {name="wbpsm1", min=30, max=35,sex='F'}
+ #    wbpsm2 = {name="wbpsm2", min=35, max=39,sex='F'}
+ #    wbpm1 = {name="wbpm1", min=40, max=49,sex='F'}
+ #    wbpm2 = {name="wbpm2", min=50, max=59,sex='F'}
+ #    wbpm3 = {name="wbpm3", min=60, max=69,sex='F'}
+ #    wbpm4 = {name="wbpm4", min=70, max=999,sex='F'}
+ #    wbpnov = {name="wbpnov", min=0, max=999,sex='F'}
+ #    wbppf = {name="wbpp+f", min=0, max=999,sex='F'}
+ #    wbppure = {name="wbppure", min=0, max=999,sex='F'}
+
+
+ #    #Deadlift
+ #    dlopen = {name="dlopen", min=0, max=999,sex='M'}
+ #    dlhs = {name="dlhs", min=13, max=19,sex='M'}
+ #    dlteen = {name="dlteen", min=13, max=19,sex='M'}
+ #    dljr = {name="dljr", min=20, max=23,sex='M'}
+ #    dlint = {name="dlint", min=24, max=29,sex='M'}
+ #    dlsm1 = {name="dlsm1", min=30, max=35,sex='M'}
+ #    dlsm2 = {name="dlsm2", min=35, max=39,sex='M'}
+ #    dlm1 = {name="dlm1", min=40, max=49,sex='M'}
+ #    dlm2 = {name="dlm2", min=50, max=59,sex='M'}
+ #    dlm3 = {name="dlm3", min=60, max=69,sex='M'}
+ #    dlm4 = {name="dlm4", min=70, max=999,sex='M'}
+ #    dlnov = {name="dlnov", min=0, max=999,sex='M'}
+ #    dlpf = {name="dlp+f", min=0, max=999,sex='M'}
+ #    dlpure = {name="dlpure", min=0, max=999,sex='M'}
+
+ #    wdlopen = {name="wdlopen", min=0, max=999,sex='F'}
+ #    wdlhs = {name="wdlhs", min=13, max=19,sex='F'}
+ #    wdlteen = {name="wdlteen", min=13, max=19,sex='F'}
+ #    wdljr = {name="wdljr", min=20, max=23,sex='F'}
+ #    wdlint = {name="wdlint", min=24, max=29,sex='F'}
+ #    wdlsm1 = {name="wdlsm1", min=30, max=35,sex='F'}
+ #    wdlsm2 = {name="wdlsm2", min=35, max=39,sex='F'}
+ #    wdlm1 = {name="wdlm1", min=40, max=49,sex='F'}
+ #    wdlm2 = {name="wdlm2", min=50, max=59,sex='F'}
+ #    wdlm3 = {name="wdlm3", min=60, max=69,sex='F'}
+ #    wdlm4 = {name="wdlm4", min=70, max=999,sex='F'}
+ #    wdlnov = {name="wdlnov", min=0, max=999,sex='F'}
+ #    wdlpf = {name="wdlp+f", min=0, max=999,sex='F'}
+ #    wdlpure = {name="wdlpure", min=0, max=999,sex='F'}
 
 [weightclasses]
-# TODO
+# [weightclasses.default_M]
+#     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+#     date_range = ["1900-01-01", "9999-01-01"]
+#     sex = "M"
+
+# [weightclasses.default_F]
+#     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+#     date_range = ["1900-01-01", "9999-01-01"]
+#     sex = "F"
 
 [exemptions]
     0301 = ["ExemptWeightClassConsistency"]  # Uses strange weightclasses.

@@ -6,7 +6,7 @@ Place,WeightClassKg,Name,State,BodyweightKg,Squat4Kg,Best3SquatKg,Best3BenchKg,B
 1,75,Cody Green,LA,69.63,,130,70,130,330,hs,M,SBD,Single-ply
 1,75,Cody Green,LA,69.63,,130,70,130,330,teen,M,SBD,Single-ply
 1,52,Alan Cripps,TX,44.91,,80,50,100,230,teen,M,SBD,Single-ply
-1,82.5,Josee Solleder,TX,81.65,,25,47.5,82.5,155,m1,F,SBD,Single-ply
+1,82.5,Josee Solleder,TX,81.65,,25,47.5,82.5,155,wm1,F,SBD,Single-ply
 1,90,Billy Reeves,TX,84.82,,,202.5,,202.5,open,M,B,Single-ply
 1,90,Billy Reeves,TX,84.82,,,202.5,,202.5,sm1,M,B,Single-ply
 1,90,Billy Reeves,TX,84.82,,,202.5,,202.5,smp,M,B,Single-ply
@@ -21,7 +21,7 @@ Place,WeightClassKg,Name,State,BodyweightKg,Squat4Kg,Best3SquatKg,Best3BenchKg,B
 1,140,Doug Shingleton,TX,139.93,,,,265,265,mp,M,D,Raw
 1,67.5,Brendan Brustad,OK,65.32,,,,160,160,p+f,M,D,Raw
 1,44,Robert Hendon,TX,31.75,,,17.5,50,67.5,youth,M,BD,Raw
-1,56,Paige Fabela,TX,55.79,,,,122.5,122.5,open,F,D,Raw
+1,56,Paige Fabela,TX,55.79,,,,122.5,122.5,wopen,F,D,Raw
 1,44,Gavin Garner,TX,25.4,,,17.5,,17.5,youth,M,B,Raw
 1,100,Isaac Gingery,TX,90.72,,,75,,75,teen,M,B,Raw
 1,90,Coby Countryman,TX,89.13,,,72.5,,72.5,hs,M,B,Raw
@@ -36,10 +36,10 @@ Place,WeightClassKg,Name,State,BodyweightKg,Squat4Kg,Best3SquatKg,Best3BenchKg,B
 1,100,Rion Gardner,TX,98.43,,185,130,230,545,int,M,SBD,Wraps
 2,90,Nat Margolis,TX,88.9,,165,122.5,210,497.5,jr,M,SBD,Wraps
 1,110,Ricky Vargas,TX,105.23,,175,145,185,505,open,M,SBD,Wraps
-1,48,Peyton Garner,TX,46.72,,60,37.5,77.5,175,open,F,SBD,Wraps
-1,48,Peyton Garner,TX,46.72,,60,37.5,77.5,175,pure,F,SBD,Wraps
+1,48,Peyton Garner,TX,46.72,,60,37.5,77.5,175,wopen,F,SBD,Wraps
+1,48,Peyton Garner,TX,46.72,,60,37.5,77.5,175,wpure,F,SBD,Wraps
 DQ,44,Fred Solleder,TX,33.11,,,20,37.5,,youth,M,SBD,Wraps
-1,56,Annastasha Gingery,TX,55.88,,,87.5,,87.5,open,F,B,Raw
+1,56,Annastasha Gingery,TX,55.88,,,87.5,,87.5,wopen,F,B,Raw
 1,100,Jimmy Roberts,TX,92.08,,,160,265,425,sm2,M,BD,Raw
 1,125,Michael Adams,TX,120.66,,,135,215,350,mp,M,BD,Raw
 1,67.5,Brendan Brustad,OK,65.32,,,70,160,230,p+f,M,BD,Raw
