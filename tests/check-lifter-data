@@ -210,6 +210,7 @@ def check_name_disambiguation(names):
     # Names with variants in the disambiguation file should occur in meet
     # files.
     for (name, count) in csv.rows:
+        print(name)
         # Each name can only occur once.
         if name in seenset:
             perror("%s: Name '%s' occurs more than once." % (filename, name))
