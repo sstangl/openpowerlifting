@@ -1,9 +1,9 @@
 Name,Age,Division,Tested,Sex,Equipment,Event,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Team,Place
 Dan Banworth,49,MM2R,No,M,Raw,B,128.2,140,,,,,167.5,175,-185,175,,,,,175,,1
 Shawn Berneman,41,MM1R,No,M,Raw,B,116.8,125,,,,,175,-182.5,-182.5,175,,,,,175,North Iowa Powerlifting,1
-Scott Marsiglio,39,MSMR,No,M,Raw,B,89.4,90,,,,,142.5,145,150,150,,,,,150,,1
-Nick Schluter,35,MSMR,No,M,Raw,B,133.2,140,,,,,155,170,-182.5,170,,,,,170,,1
-Jason Berding,36,MSMR,No,M,Raw,B,128.4,140,,,,,145,157.5,-165,157.5,,,,,157.5,North Iowa Powerlifting,2
+Scott Marsiglio,39,MSR,No,M,Raw,B,89.4,90,,,,,142.5,145,150,150,,,,,150,,1
+Nick Schluter,35,MSR,No,M,Raw,B,133.2,140,,,,,155,170,-182.5,170,,,,,170,,1
+Jason Berding,36,MSR,No,M,Raw,B,128.4,140,,,,,145,157.5,-165,157.5,,,,,157.5,North Iowa Powerlifting,2
 Andrew Bahr,23,MJR,No,M,Raw,B,115.4,125,,,,,195,205,215,215,,,,,215,*Raw Best Lifter,1
 Dylan Heile,16,MT2R,No,M,Raw,B,76.6,82.5,,,,,122.5,127.5,-132.5,127.5,,,,,127.5,,1
 Mike Olmstead,32,MO-AD,Yes,M,Multi-ply,B,137.2,140,,,,,217.5,227.5,232.5,232.5,,,,,232.5,,1
@@ -11,7 +11,7 @@ Adam Cornelis,27,MOR,No,M,Raw,B,99.2,100,,,,,160,167.5,-177.5,167.5,,,,,167.5,,1
 Karle Heile,46,MOR,No,M,Raw,B,94.6,100,,,,,132.5,137.5,142.5,142.5,,,,,142.5,,2
 Corey Wyllie,37,MOR,No,M,Raw,B,119.4,125,,,,,-235,-235,,,,,,,,Carpenter Powerlifting,DQ
 Mark Veirs,49,MM2,No,M,Multi-ply,B,74.4,75,,,,,180,190,200,200,,,,,200,,1
-Dan Grauerholz,36,MSM,No,M,Multi-ply,B,144.8,140+,,,,,-365,-365,-365,,,,,,,North Iowa Powerlifting,DQ
+Dan Grauerholz,36,MS,No,M,Multi-ply,B,144.8,140+,,,,,-365,-365,-365,,,,,,,North Iowa Powerlifting,DQ
 Jay Baltierra,16,MT2,No,M,Multi-ply,B,94.8,100,,,,,-212.5,212.5,-227.5,212.5,,,,,212.5,North Iowa Powerlifting,1
 Josh Lentz,24,MO,No,M,Multi-ply,B,88.2,90,,,,,297.5,305,-320,305,,,,,305,North Iowa Powerlifting,1
 Jake Prazak,35,MO,No,M,Multi-ply,B,108.8,110,,,,,-420,-420,-420,,,,,,,North Iowa Powerlifting,DQ
@@ -56,8 +56,8 @@ Mike Neuendorf,22,MO,No,M,Multi-ply,SBD,125.2,140,387.5,-397.5,-412.5,387.5,-257
 David Damminga,26,MO,No,M,Multi-ply,SBD,170.2,140+,345,367.5,440,440,-312.5,-312.5,312.5,312.5,320,340,352.5,352.5,1105,Twin Cities Barbell,1
 Kent Fleming,24,MO,No,M,Multi-ply,SBD,168.2,140+,-365,-365,-365,,,,,,,,,,,Big Iron Gym,DQ
 Paul Gonzalez,29,MOR,No,M,Raw,BD,100,100,,,,,147.5,155,-165,155,240,247.5,255,255,410,Jakked Hardcore Gym,1
-Richard Frontjes,39,MSMR,No,M,Raw,D,84,90,,,,,,,,,182.5,187.5,-195,187.5,187.5,,1
-Crystal Wells,35,FSMR,No,F,Wraps,SBD,62.2,67.5,85,-95,-95,85,52.5,-57.5,-57.5,52.5,125,137.5,140,140,277.5,Jakked Hardcore Gym,1
+Richard Frontjes,39,MSR,No,M,Raw,D,84,90,,,,,,,,,182.5,187.5,-195,187.5,187.5,,1
+Crystal Wells,35,FSR,No,F,Wraps,SBD,62.2,67.5,85,-95,-95,85,52.5,-57.5,-57.5,52.5,125,137.5,140,140,277.5,Jakked Hardcore Gym,1
 Kayse Dunton,30,FOR,No,F,Wraps,SBD,53.8,56,-85,85,-92.5,85,62.5,-67.5,-67.5,62.5,115,125,-137.5,125,272.5,22nd St. Barbell,1
 Elizabeth Gebauer,24,FOR,No,F,Wraps,SBD,60,60,115,125,-137.5,125,62.5,-67.5,-67.5,62.5,125,137.5,-150,137.5,325,Pro Gym,1
 Katie Simmons,29,FOR,No,F,Wraps,SBD,67.5,67.5,85,-92.5,92.5,92.5,62.5,67.5,-72.5,67.5,127.5,-137.5,137.5,137.5,297.5,,1

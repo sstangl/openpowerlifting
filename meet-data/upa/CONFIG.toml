@@ -226,6 +226,23 @@
     # Guest divisions.
     mgr = {name="MGR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     fgr = {name="FGR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mg = {name="MG", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mgad = {name="MG-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested = "Yes"}
+    mgrad = {name="MGR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested = "Yes"}
+
+    fg = {name="FG", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+
+    # Misc divisions
+    crossfit = {name="Crossfit", min=0, max=999}
+    myr = {name="MYR", min=0, max=12, sex="M"}
+    myrad = {name="MYR-AD", min=0, max=12, sex="M", tested="Yes"}
+    fyr = {name="FYR", min=0, max=12, sex="F"}
+    fyrad = {name="FYR-AD", min=0, max=12, sex="F", tested="Yes"}
+    lw = {name="LW", min=0, max=999}
+    mw = {name="MW", min=0, max=999}
+    hw = {name="HW", min=0, max=999}
+    shw = {name="SHW", min=0, max=999}
+    specialolympics = {name="Special Olympics", min=0, max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -240,3 +257,13 @@
 [exemptions]
     1716 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
     1824 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
+    1828 = ["ExemptWeightClassConsistency"]
+    1723 = ["ExemptWeightClassConsistency"]
+    1626 = ["ExemptWeightClassConsistency"]
+    1510 = ["ExemptWeightClassConsistency"]
+    1706 = ["ExemptWeightClassConsistency"]
+    1815 = ["ExemptWeightClassConsistency"]
+    1512 = ["ExemptWeightClassConsistency"]
+    1632 = ["ExemptWeightClassConsistency"]
+    1715 = ["ExemptWeightClassConsistency"]
+    1712 = ["ExemptWeightClassConsistency"]
