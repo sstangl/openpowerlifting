@@ -1978,6 +1978,20 @@ where
             entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
         }
 
+        // If the Age wasn't assigned yet, infer it from any surrounding information.
+        if let Some(meet) = meet {
+            if entry.age == Age::None {
+                if let Some(birthdate) = entry.birthdate {
+                    entry.age = birthdate.age_on(meet.date).unwrap_or(Age::None);
+                }
+            }
+            if entry.age == Age::None {
+                if let Some(birthyear) = entry.birthyear {
+                    entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
+                }
+            }
+        }
+
         // Calculate points (except for McCulloch, which is Age-dependent).
         let bw = entry.bodyweightkg;
         entry.wilks = wilks(entry.sex, bw, entry.totalkg);
