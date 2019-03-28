@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Helpful script when adding meets, to just run all the tests on the CWD.
+# Helpful interface to the checker.
 #
 
 set -e
@@ -9,20 +9,20 @@ TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 # When no arguments are passed, limit checking to just the current directory.
 if [ $# -eq 0 ]; then
-	CHECKER_ARGUMENTS="$( pwd )"
+	if [ -d "meet-data" ]; then
+		# Specify meet-data/ from the build root, otherwise it will
+		# read the build/ directory also.
+		CHECKER_ARGUMENTS="$( pwd )/meet-data"
+	else
+		CHECKER_ARGUMENTS="$( pwd )"
+	fi
 else
 	CHECKER_ARGUMENTS=$@
 fi
 
-# Run the checker first.
+# Run the checker.
 (
 	REPODIR="$( dirname "${TESTSDIR}" )"
-	CURDIR="$( pwd )"
 	cd ${REPODIR}
 	cargo run --bin checker -- $CHECKER_ARGUMENTS
 )
-
-# Run the Python checks. But only if no arguments were provided.
-if [ $# -eq 0 ]; then
-	${TESTSDIR}/check-sex-consistency
-fi
