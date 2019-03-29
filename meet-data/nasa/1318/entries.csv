@@ -30,7 +30,7 @@ Place,WeightClassKg,Name,Age,State,BodyweightKg,Division,Sex,Event,Equipment,Bes
 1,90,Pat Kroken,,NM,83.23,wm3,F,SBD,Wraps,82.5,32.5,105,220
 1,75,Becky Turner,,TX,70.31,wbpm2,F,B,Raw,,107.5,,107.5
 1,75,Becky Turner,,TX,70.31,wbpmp,F,B,Raw,,107.5,,107.5
-1,82.5,Camille Reliford,,AZ,79.83,wbpsmp,F,B,Raw,,65,,65
+1,82.5,Camille Reliford,,AZ,79.83,wbpsm,F,B,Raw,,65,,65
 1,90,Raye Lynn Wiley,,LA,89.77,wbpm1,F,B,Raw,,65,,65
 2,75,Bernice Gill,,NM,74.57,wbpmp,F,B,Raw,,52.5,,52.5
 1,75,Sonja Tideman,,NM,73.03,wsmp,F,BD,Raw,,67.5,140,207.5
@@ -87,7 +87,7 @@ Place,WeightClassKg,Name,Age,State,BodyweightKg,Division,Sex,Event,Equipment,Bes
 1,82.5,Gerald Donahue,,NM,81.65,m3,M,BD,Raw,,95,160,255
 2,82.5,Rodney Hotz,,NM,78.93,m2,M,BD,Raw,,85,155,240
 1,67.5,Shane England,,TX,65.77,dlsm,M,D,Raw,,,145,145
-1,60,Truong Billy Vo,,OK,58.97,bpsmp,M,B,Raw,,107.5,,107.5
+1,60,Truong Billy Vo,,OK,58.97,bpsm,M,B,Raw,,107.5,,107.5
 1,82.5,Jamie McDougal,,AR,82.1,mp,M,SBD,Wraps,242.5,185,292.5,720
 1,82.5,Terry Perkins,52,OH,81.33,m2,M,SBD,Wraps,272.5,142.5,227.5,642.5
 1,82.5,Tuan Tran,,TX,79.83,smp,M,SBD,Wraps,215,160,230,605
@@ -98,7 +98,7 @@ Place,WeightClassKg,Name,Age,State,BodyweightKg,Division,Sex,Event,Equipment,Bes
 1,75,Alex Martinez,,TX,73.94,m2,M,SBD,Wraps,115,80,160,355
 2,75,Albert Gonzales,,NM,69.81,m3,M,SBD,Wraps,90,75,117.5,282.5
 1,82.5,Shannon Patton,,TX,81.51,bpm2,M,B,Raw,,137.5,,137.5
-1,60,Truong Billy Vo,,OK,58.97,bpsmp,M,B,Raw,,107.5,,107.5
+1,60,Truong Billy Vo,,OK,58.97,bpsm,M,B,Raw,,107.5,,107.5
 1,82.5,Russell Carr,,TX,77.56,bpm4,M,B,Raw,,95,,95
 1,82.5,Jason Marshall,,TX,81.19,smp,M,BD,Raw,,137.5,267.5,405
 2,82.5,Tuan Tran,,TX,79.83,smp,M,BD,Raw,,160,230,390
@@ -173,7 +173,7 @@ DQ,90,Kevin Shaw,,TX,89.4,mp,M,SBD,Wraps,,,,
 3,110,Paul Roberts,,TX,102.78,m1,M,SBD,Wraps,145,102.5,182.5,430
 1,125,Chris Lindblad,,TX,120.66,m2,M,SBD,Wraps,65,122.5,100,287.5
 DQ,100,David Torres #2,,TX,95.93,smp,M,SBD,Wraps,205,145,,
-1,90,Kirk Juliano,,TX,87.86,bpsmp,M,B,Raw,,185,,185
+1,90,Kirk Juliano,,TX,87.86,bpsm,M,B,Raw,,185,,185
 1,140,Christian Strybel,,TX,131.09,bpsm,M,B,Raw,,210,,210
 1,100,Sean Seligman,,AR,96.98,bpm2,M,B,Raw,,182.5,,182.5
 1,100,Sean Seligman,,AR,96.98,bpopen,M,B,Raw,,182.5,,182.5
@@ -184,7 +184,7 @@ DQ,100,David Torres #2,,TX,95.93,smp,M,SBD,Wraps,205,145,,
 1,125,Joseph McClung,,TX,114.08,bpsm,M,B,Raw,,167.5,,167.5
 1,90,George Martin,,KS,88.68,bpm2,M,B,Raw,,145,,145
 1,90,Chris Dean,,TX,89.36,bpsm,M,B,Raw,,145,,145
-2,90,Chris Dean,,TX,89.36,bpsmp,M,B,Raw,,145,,145
+2,90,Chris Dean,,TX,89.36,bpsm,M,B,Raw,,145,,145
 1,110,Cliff Grubbs,,TX,100.74,bpm2,M,B,Raw,,132.5,,132.5
 DQ,110,Nick Dwinell,,OK,102.01,bpm2,M,SBD,Wraps,,,,
 1,90,Jimmy Roberts,,TX,85.68,sm,M,BD,Raw,,155,252.5,407.5
