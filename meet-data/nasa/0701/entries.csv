@@ -33,7 +33,7 @@ DQ,60,Colter Bowers,NE,58.33,122.5,,,,open,M,SBD,Single-ply
 1,75,Chris Golden,TX,74.3,227.5,182.5,237.5,647.5,open,M,SBD,Single-ply
 1,140,Henry Thomason,TX,129.64,357.5,207.5,297.5,862.5,open,M,SBD,Single-ply
 1,140+,Thomas Allred,MI,144.88,340,255,282.5,877.5,open,M,SBD,Single-ply
-1,140+,Thomas Allred,MI,144.88,340,255,282.5,877.5,pfm,M,SBD,Single-ply
+1,140+,Thomas Allred,MI,144.88,340,255,282.5,877.5,p+f,M,SBD,Single-ply
 DQ,60,Colter Bowers,NE,58.33,122.5,,,,pure,M,SBD,Single-ply
 1,67.5,Spencer Westwood,UT,67.04,220,145,212.5,577.5,pure,M,SBD,Single-ply
 1,125,Rich Kahle,NM,123.42,367.5,257.5,305,930,pure,M,SBD,Single-ply
@@ -83,8 +83,8 @@ DQ,90,Andrew Wolf,NM,88.72,,,,,open,M,B,Single-ply
 1,110,Greg Alvarado,TX,107.73,,205,,205,open,M,B,Single-ply
 2,110,John Lynn III,CO,110,,190,,190,open,M,B,Single-ply
 1,140,Tom Manno,AZ,139.43,,305,,305,open,M,B,Single-ply
-1,125,John Hoover,WV,118.61,,237.5,,237.5,pfm,M,B,Single-ply
-1,140+,Robin James,TX,153.59,,212.5,,212.5,pfm,M,B,Single-ply
+1,125,John Hoover,WV,118.61,,237.5,,237.5,p+f,M,B,Single-ply
+1,140+,Robin James,TX,153.59,,212.5,,212.5,p+f,M,B,Single-ply
 1,110,Greg Alvarado,TX,107.73,,205,,205,sm1,M,B,Single-ply
 1,110,John Lynn III,CO,110,,190,,190,sm2,M,B,Single-ply
 1,82.5,Ray Widdison,UT,82.19,,177.5,,177.5,smp,M,B,Single-ply
@@ -135,7 +135,7 @@ DQ,60,Colter Bowers,NE,58.33,,,,,teen,M,BD,Single-ply
 1,90,Susan Collins,AZ,87.45,,72.5,140,212.5,wm1,F,BD,Single-ply
 1,75,Gayle Clawson,AZ,73.03,,60,110,170,wm3,F,BD,Single-ply
 1,90,Susan Collins,AZ,87.45,,72.5,140,212.5,wopen,F,BD,Single-ply
-1,44,Samson Hou-Seye,WI,29.57,,21,41,62,youth,M,BD,Single-ply
+1,40,Samson Hou-Seye,WI,29.57,,21,41,62,youth,M,BD,Single-ply
 1,52,Kelsey Ishimatsu,AZ,50.8,,25,72.5,97.5,wyouth,F,BD,Single-ply
 1,52,Kelsey Ishimatsu,AZ,50.8,,25,72.5,97.5,wyouth,F,BD,Single-ply
 1,60,Jose Garcia,NV,59.06,,87.5,,87.5,jr,M,B,Raw
@@ -165,7 +165,7 @@ DQ,110,Glenn Wilkerson,TX,107.5,,,,,m3,M,B,Raw
 1,140+,Clay Tawzer,CA,162.39,,147.5,,147.5,pure,M,B,Raw
 1,60,Jose Garcia,NV,59.06,,87.5,,87.5,teen,M,B,Raw
 1,82.5,Jorge Gonzalez #2,NV,81.42,,132.5,,132.5,teen,M,B,Raw
-1,60,Tina Rogers,WI,59.96,,47.5,,47.5,wpure,M,B,Raw
+1,60,Tina Rogers,WI,59.96,,47.5,,47.5,wpure,F,B,Raw
 DQ,60,Colter Bowers,NE,58.33,122.5,,,,hs,M,SBD,Raw
 1,75,Royce Lauck,AZ,74.16,127.5,107.5,190,425,hs,M,SBD,Raw
 1,75,Ben Wallace #2,OH,74.57,167.5,132.5,180,480,jr,M,SBD,Raw

@@ -1,6 +1,6 @@
 Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Division,Event,Equipment
 1,90+,Nicole Peterson,CO,F,99.34,,55,72.50,67.5,122.5,wint,BD,Raw
-1,44,Josefita Claunch,CO,F,22.04,,,,35,35,wyouth,D,Raw
+1,40,Josefita Claunch,CO,F,22.04,,,,35,35,wyouth,D,Raw
 1,75,Nicole Nies,CO,F,71.89,130,80,,180,390,wopen,SBD,Wraps
 1,52,Vicki Morgan,CO,F,51.21,102.5,57.5,,125,285,wm2,SBD,Wraps
 1,52,Jamie Medina,CO,F,51.12,87.5,52.5,,130,270,wpure,SBD,Wraps
@@ -42,7 +42,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Deadli
 1,110,Jeff Miller,CO,M,101.38,,130,,195,325,m2,BD,Raw
 1,75,Gil Padilla,CO,M,70.81,,97.5,,167.5,265,open,BD,Raw
 1,110,Adrian Martinez,CO,M,107.55,,140,,150,290,m3,BD,Raw
-1,44,Conrad Claunch,CO,M,28.49,,17.5,,45,62.5,youth,BD,Raw
+1,40,Conrad Claunch,CO,M,28.49,,17.5,,45,62.5,youth,BD,Raw
 1,67.5,Adam Pollard,CO,M,67.4,,,,137.5,137.5,sm1,D,Raw
 1,82.5,Devin Thomas,CO,M,81.42,220,142.5,,295,657.5,jr,SBD,Wraps
 1,82.5,Devin Thomas,CO,M,81.42,220,142.5,,295,657.5,nov,SBD,Wraps
@@ -57,7 +57,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Deadli
 1,82.5,Wesley Percefull,CO,M,80.1,187.5,150,,235,572.5,int,SBD,Wraps
 1,100,James Casterline,CO,M,98.93,245,142.5,,247.5,635,smp,SBD,Wraps
 1,100,Joe Anderson,CO,M,95.84,240,142.5,250.00,242.5,625,mp,SBD,Wraps
-1,100,Joe Anderson,CO,M,95.84,240,142.5,250.00,242.5,625,mpf,SBD,Wraps
+1,100,Joe Anderson,CO,M,95.84,240,142.5,250.00,242.5,625,p+f,SBD,Wraps
 2,82.5,Mark Allen,CO,M,77.65,207.5,117.5,,235,560,jr,SBD,Wraps
 1,82.5,Mark Allen,CO,M,77.65,207.5,117.5,,235,560,pure,SBD,Wraps
 1,110,Cody Meeker,CO,M,107.86,235,182.5,,240,657.5,m1,SBD,Wraps
@@ -93,7 +93,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Deadli
 2,82.5,Oscar Guillen,CO,M,79.56,157.5,115,,192.5,465,nov,SBD,Wraps
 1,110,Tyler Balaban,ND,M,101.97,192.5,127.5,,205,525,nov,SBD,Wraps
 1,67.5,Mark Jones,CO,M,66.09,145,95,,170,410,m1,SBD,Wraps
-1,67.5,Mark Jones,CO,M,66.09,145,95,,170,410,mpf,SBD,Wraps
+1,67.5,Mark Jones,CO,M,66.09,145,95,,170,410,p+f,SBD,Wraps
 1,67.5,Leonard Donadio,CO,M,63.64,130,97.5,,160,387.5,nov,SBD,Wraps
 1,110,Jeff Miller,CO,M,101.38,150,130,,195,475,m2,SBD,Wraps
 1,75,Gil Padilla,CO,M,70.81,120,97.5,,167.5,385,open,SBD,Wraps
@@ -105,13 +105,13 @@ DQ,67.5,Jeff Cummings,CO,M,66.13,160,,,190,,open,SBD,Wraps
 1,90,Eduardo Briones,CO,M,88.68,135,82.5,,165,382.5,m3,SBD,Wraps
 DQ,75,Gary Farrell,CO,M,74.16,147.5,,,170,,open,SBD,Wraps
 1,125,Zack Birnbaum,CO,M,118.12,135,75,,175,385,int,SBD,Wraps
-1,44,Conrad Claunch,CO,M,28.49,20,17.5,,45,82.5,youth,SBD,Wraps
+1,40,Conrad Claunch,CO,M,28.49,20,17.5,,45,82.5,youth,SBD,Wraps
 DQ,100,Sean Reagan,CO,M,97.61,,,,,,open,SBD,Wraps
 1,100,Garrett Koger,CO,M,99.2,,160,,295,455,open,BD,Raw
 2,100,Todd Wotkyns,CO,M,96.21,,175,,272.5,447.5,open,BD,Raw
 1,100,Sean Reagan,CO,M,97.61,,182.5,,262.5,445,sm2,BD,Raw
 1,110,Mike Valdez,CO,M,106.1,,210,,252.5,462.5,sm1,BD,Raw
-1,82.5,John Dean,ND,M,60.83,,125,,187.5,312.5,nov,BD,Raw
+1,67.5,John Dean,ND,M,60.83,,125,,187.5,312.5,nov,BD,Raw
 1,140,Ryan McCloud,CO,M,132.86,,160,,260,420,sm1,BD,Raw
 1,100,Gregg Martin,CO,M,97.93,,150,,215,365,sm1,BD,Raw
 1,90,Bryan Sudduth,CO,M,83.6,,120,,182.5,302.5,m2,BD,Raw
