@@ -105,7 +105,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('BodyweightKg')
             elif 'ком очки' in text:
                 fieldnames.append('IGNORE')
-            elif 'очки по вилксу' in text or 'коэф виллс' in text:  # Wilks
+            # Wilks/IPF Points
+            elif 'очки по вилксу' in text or 'коэф виллс' in text or 'очки ipf' in text:
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
@@ -132,11 +133,11 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
-            elif 'рез-т присед' in text or text == 'прис':
+            elif 'рез-т присед' in text or text == 'прис' or text == 'резт присед':
                 fieldnames.append('Best3SquatKg')
-            elif 'рез-т жим' in text or text == 'жим':
+            elif 'рез-т жим' in text or text == 'жим' or text == 'резт жим':
                 fieldnames.append('Best3BenchKg')
-            elif 'рез-т тяга' in text or text == 'тяга':
+            elif 'рез-т тяга' in text or text == 'тяга' or text == 'резт тяга':
                 fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
