@@ -32,8 +32,8 @@
     mm7crbpu = {name ="M_M7_CR_BPU",min=70,max=74,equipment=["Raw","Wraps"],sex="M"}
     mm7sbpu = {name ="M_M7_S_BPU",min=70,max=74,equipment="Single-ply",sex="M"}
     mm7mbpu = {name ="M_M7_M_BPU",min=70,max=74,equipment="Multi-ply",sex="M"}
-    mm8rbpu = {name ="M_M8_CR_BPU",min=75,max=79,equipment="Raw",sex="M"}
-    mm8crbpu = {name ="M_M8_R_BPU",min=75,max=79,equipment=["Raw","Wraps"],sex="M"}
+    mm8rbpu = {name ="M_M8_CR_BPU",min=75,max=79,equipment=["Raw","Wraps"],sex="M"}
+    mm8crbpu = {name ="M_M8_R_BPU",min=75,max=79,equipment="Raw",sex="M"}
     mm8sbpu = {name ="M_M8_S_BPU",min=75,max=79,equipment="Single-ply",sex="M"}
     mm8mbpu = {name ="M_M8_M_BPU",min=75,max=79,equipment="Multi-ply",sex="M"}
     mm9rbpu = {name ="M_M9_R_BPU",min=80,max=999,equipment="Raw",sex="M"}
@@ -256,4 +256,7 @@
     sex = "F"
 
 [exemptions]
+    1606 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
     1707 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
+    1803 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
+    1811 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
