@@ -3,7 +3,8 @@ Place,WeightClassKg,Sex,Event,Equipment,Name,State,BodyweightKg,Division,Bench1K
 1,54,F,B,Raw,Katie Oswalt,OH,53.16,wteen,47.5,52.5,-55,,52.5,52.5
 1,58,F,B,Raw,Erin Lawson,OH,54.88,whs,27.5,-30,-30,,27.5,27.5
 1,58,F,B,Raw,Brandy Ludwig,OH,57.97,wteen,47.5,-52.5,-52.5,,47.5,47.5
-1,58,F,B,Raw,Megan Scholl,OH,56.34,wpn,50,55,-57.5,,55,55
+1,58,F,B,Raw,Megan Scholl,OH,56.34,wnov,50,55,-57.5,,55,55
+1,58,F,B,Raw,Megan Scholl,OH,56.34,wpure,50,55,-57.5,,55,55
 1,63,F,B,Raw,Aubree Judy,OH,59.69,wteen,35,-40,-40,,35,35
 1,70,F,B,Raw,Ellen Alleman,OH,69.04,wjr,37.5,42.5,45,-47.5,45,45
 1,77,F,B,Raw,Tara Palmer,OH,76.48,wjr,-52.5,-52.5,52.5,-55,52.5,52.5
@@ -38,7 +39,8 @@ Place,WeightClassKg,Sex,Event,Equipment,Name,State,BodyweightKg,Division,Bench1K
 3,77.5,M,B,Raw,Mike Willis,OH,76.57,hs,80,87.5,-90,,87.5,87.5
 1,77.5,M,B,Raw,Reggie Johnson,OH,77.29,teen,95,102.5,110,,110,110
 1,77.5,M,B,Raw,Frank Newbill,OH,75.84,int,142.5,162.5,-167.5,,162.5,162.5
-DQ,77.5,M,B,Raw,Ron Maynard,OH,75.61,pn,-137.5,-155,-155,,,
+DQ,77.5,M,B,Raw,Ron Maynard,OH,75.61,nov,-137.5,-155,-155,,,
+DQ,77.5,M,B,Raw,Ron Maynard,OH,75.61,pure,-137.5,-155,-155,,,
 1,77.5,M,B,Raw,Ed McCorriston,PA,76.7,pure,145,152.5,-157.5,,152.5,152.5
 1,77.5,M,B,Raw,Daren Sea,KY,77.11,smp,110,112.5,-115,,112.5,112.5
 1,77.5,M,B,Raw,Ed McCorriston,PA,76.7,sm2,145,152.5,157.5,,157.5,157.5
@@ -50,7 +52,8 @@ DQ,77.5,M,B,Raw,Ron Maynard,OH,75.61,pn,-137.5,-155,-155,,,
 1,85,M,B,Raw,Adam Roberts,OH,84.28,jr,140,147.5,-157.5,,147.5,147.5
 1,85,M,B,Raw,Jeff Daniel,OH,83.32,smp,-115,120,125,,125,125
 1,85,M,B,Raw,James Sparks,OH,82.42,smp,112.5,-122.5,-122.5,,112.5,112.5
-1,85,M,B,Raw,Larry Donahue,OH,83.91,smp2,105,115,122.5,125,122.5,122.5
+1,85,M,B,Raw,Larry Donahue,OH,83.91,smp,105,115,122.5,125,122.5,122.5
+1,85,M,B,Raw,Larry Donahue,OH,83.91,sm2,105,115,122.5,125,122.5,122.5
 1,85,M,B,Raw,James Sparks,OH,82.42,sm1,112.5,-122.5,-122.5,,112.5,112.5
 1,85,M,B,Raw,Alan Zimmerman,IN,83.05,m1,127.5,132.5,-137.5,,132.5,132.5
 1,85,M,B,Raw,Alan Zimmerman,IN,83.05,m5,127.5,132.5,-137.5,,132.5,132.5
@@ -62,7 +65,8 @@ DQ,77.5,M,B,Raw,Ron Maynard,OH,75.61,pn,-137.5,-155,-155,,,
 1,93,M,B,Raw,Mike Connor,OH,89.95,jr,-137.5,137.5,-142.5,,137.5,137.5
 2,93,M,B,Raw,Brian Pence,OH,89.45,jr,117.5,125,-132.5,,125,125
 1,93,M,B,Raw,Luke Erlinger,OH,89.68,smp,92.5,105,-107.5,,105,105
-1,93,M,B,Raw,Roger Lyons,OH,89.9,pn,85,-92.5,-92.5,,85,85
+1,93,M,B,Raw,Roger Lyons,OH,89.9,nov,85,-92.5,-92.5,,85,85
+1,93,M,B,Raw,Roger Lyons,OH,89.9,pure,85,-92.5,-92.5,,85,85
 1,93,M,B,Raw,Keith Ankeney,OH,90.08,smp,142.5,150,-155,,150,150
 DQ,93,M,B,Raw,Dave Hopkens,OH,90.95,m1,-155,-155,-155,,,
 DQ,93,M,B,Raw,Dave Hopkens,OH,90.95,m5,-155,-155,-155,,,
@@ -72,8 +76,10 @@ DQ,93,M,B,Raw,Dave Hopkens,OH,90.95,m5,-155,-155,-155,,,
 4,103,M,B,Raw,Nate Lowe,OH,96.62,hs,82.5,92.5,-100,,92.5,92.5
 5,103,M,B,Raw,Dustin Gantz,OH,97.98,hs,75,80,85,,85,85
 1,103,M,B,Raw,John Kuhns,OH,95.16,int,145,155,-165,,155,155
-1,103,M,B,Raw,Tom Boyer,OH,101.2,smp1,155,162.5,-170,,162.5,162.5
-2,103,M,B,Raw,Mike Williams,OH,99.74,smp1,140,145,150,,150,150
+1,103,M,B,Raw,Tom Boyer,OH,101.2,sm1,155,162.5,-170,,162.5,162.5
+2,103,M,B,Raw,Mike Williams,OH,99.74,sm1,140,145,150,,150,150
+1,103,M,B,Raw,Tom Boyer,OH,101.2,smp,155,162.5,-170,,162.5,162.5
+2,103,M,B,Raw,Mike Williams,OH,99.74,smp,140,145,150,,150,150
 1,103,M,B,Raw,Tyler Alexander,OH,102.83,sm1,142.5,-165,-165,,142.5,142.5
 1,103,M,B,Raw,Robert Coots,KY,102.97,smp,172.5,192.5,-205,,192.5,192.5
 2,103,M,B,Raw,Gary Wombold,OH,98.84,smp,150,-160,-160,,150,150
@@ -83,12 +89,14 @@ DQ,103,M,B,Raw,Mike Brown,OH,101.92,m2,-165,-165,-165,,,
 1,103,M,B,Raw,Doug Price,OH,97.48,sm2,195,215,-220,,215,215
 1,103,M,B,Raw,Charles Workman,OH,98.38,m3,120,127.5,-132.5,,127.5,127.5
 1,103,M,B,Raw,Herb Yakel,OH,97.07,m4,100,115,120,125,120,120
-1,103,M,B,Raw,Tom Boyer,OH,101.2,smp5,155,162.5,-170,,162.5,162.5
+1,103,M,B,Raw,Tom Boyer,OH,101.2,smp,155,162.5,-170,,162.5,162.5
 1,113.5,M,B,Raw,Aaron Butler,OH,109.32,teen,147.5,162.5,176,182.5,176,176
 2,113.5,M,B,Raw,Chris Foster,OH,106.96,teen,100,110,117.5,-122.5,117.5,117.5
-1,113.5,M,B,Raw,Rob Wiseman,OH,113.04,pn,147.5,155,-165,,155,155
+1,113.5,M,B,Raw,Rob Wiseman,OH,113.04,nov,147.5,155,-165,,155,155
+1,113.5,M,B,Raw,Rob Wiseman,OH,113.04,pure,147.5,155,-165,,155,155
 DQ,113.5,M,B,Raw,Harry Wotring,OH,110.36,m1,-195,-195,-195,,,
-1,113.5,M,B,Raw,Joe French,OH,112.94,smp1,142.5,155,167.5,,167.5,167.5
+1,113.5,M,B,Raw,Joe French,OH,112.94,sm1,142.5,155,167.5,,167.5,167.5
+1,113.5,M,B,Raw,Joe French,OH,112.94,smp,142.5,155,167.5,,167.5,167.5
 1,113.5,M,B,Raw,Danny Canter,OH,109.23,sm1,160,-185,185,,185,185
 2,113.5,M,B,Raw,Les Boyer,OH,107.91,sm1,170,182.5,-187.5,,182.5,182.5
 3,113.5,M,B,Raw,Teal Davis,OH,113.49,sm1,165,172.5,177.5,,177.5,177.5
@@ -103,9 +111,10 @@ DQ,113.5,M,B,Raw,Jeff Ritzler,OH,110.99,sm2,-185,-185,-195,,,
 1,127,M,B,Raw,Jeff Baker,OH,126.82,int,-190,190,207.5,-209.5,207.5,207.5
 1,127,M,B,Raw,Jeff Peshek,OH,124.47,pure,260,-266,-266,,260,260
 2,127,M,B,Raw,Paul Bryant #1,OH,122.02,pure,185,-190,,,185,185
-1,127,M,B,Raw,Paul Bryant #1,OH,122.02,pn,185,-190,,,185,185
+1,127,M,B,Raw,Paul Bryant #1,OH,122.02,nov,185,-190,,,185,185
 1,127,M,B,Raw,Paul Bryant #1,OH,122.02,sm1,185,-190,,,185,185
-1,127,M,B,Raw,Jon Klotz,OH,123.2,smp2,185,190,195,197.5,195,195
+1,127,M,B,Raw,Jon Klotz,OH,123.2,smp,185,190,195,197.5,195,195
+1,127,M,B,Raw,Jon Klotz,OH,123.2,sm2,185,190,195,197.5,195,195
 1,127,M,B,Raw,Jeff Peshek,OH,124.47,sm2,260,-266,-266,,260,260
 2,127,M,B,Raw,Palmo Aracrt,OH,126.42,sm2,225,-237.5,-237.5,,225,225
 3,127,M,B,Raw,David Mason,OH,126.33,sm2,180,-192.5,-192.5,,180,180
@@ -116,7 +125,8 @@ DQ,113.5,M,B,Raw,Jeff Ritzler,OH,110.99,sm2,-185,-185,-195,,,
 1,143,M,B,Raw,Jay Montgomery,KY,139.12,smp,93,215,-232.5,,215,215
 2,143,M,B,Raw,Steve Williams,OH,128,smp,182.5,-205,-205,,182.5,182.5
 3,143,M,B,Raw,Eric Wiessinger,OH,137.17,smp,147.5,157.5,-167.5,,157.5,157.5
-1,143,M,B,Raw,Steve Williams,OH,128,pn,182.5,-205,-205,,182.5,182.5
+1,143,M,B,Raw,Steve Williams,OH,128,nov,182.5,-205,-205,,182.5,182.5
+1,143,M,B,Raw,Steve Williams,OH,128,pure,182.5,-205,-205,,182.5,182.5
 1,143,M,B,Raw,Mike Giese,OH,142.56,m1,172.5,177.5,182.5,,182.5,182.5
 1,143+,M,B,Raw,BJ Miller,OH,159.21,hs,127.5,137.5,-145,,137.5,137.5
 DQ,143+,M,B,Raw,Earl Curry,OH,161.03,m1,-182.5,-182.5,-182.5,,,

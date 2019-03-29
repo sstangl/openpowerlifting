@@ -37,7 +37,7 @@ DQ,90,Regan O'Dell,IL,M,Single-ply,89.54,mp,,,,,,-125,,,B
 1,67.5,Jeff Phillips #1,AR,M,Single-ply,64.95,smp,,,,,,127.5,228.5,356,BD
 1,90,Jamie McDougal,AR,M,Single-ply,83.1,smp,,,,,,172.5,250,422.5,BD
 1,140,John Crone Jr,AR,M,Single-ply,129.05,smp,,,,,,170,272.5,442.5,BD
-1,44,Jennifer Rutledge,OK,F,Single-ply,27.22,wbenchhs,,,,,,62.5,,62.5,B
+1,44,Jennifer Rutledge,OK,F,Single-ply,27.22,wbphs,,,,,,62.5,,62.5,B
 1,82.5,Jamie Tanner,KS,F,Single-ply,78.93,wjr,,,,,,60,112.5,172.5,BD
 1,90+,Michelle Gailey,TX,F,Single-ply,111.47,wm1,,,,,,77.5,190,267.5,BD
 1,75,Elaine Waugh,NM,F,Single-ply,73.39,wm3,,,,,,45,97.5,142.5,BD
@@ -46,10 +46,10 @@ DQ,90,Regan O'Dell,IL,M,Single-ply,89.54,mp,,,,,,-125,,,B
 1,90,Rachel May,TX,F,Single-ply,89.02,wopen,,,,,,65,137.5,202.5,BD
 1,90+,Jessica Springer,TX,F,Single-ply,101.88,wpure,,,,,,117.5,197.5,315,BD
 1,67.5,Sarah Brilliant,TX,F,Single-ply,66.22,wsmp,,,,,,45,80,125,BD
-1,44,Kelsey Ishimatsu,AZ,F,Single-ply,36.2,wyouth,,,,,,17.5,45,62.5,BD
+1,40,Kelsey Ishimatsu,AZ,F,Single-ply,36.2,wyouth,,,,,,17.5,45,62.5,BD
 1,52,Carly Wingert,MO,F,Single-ply,50.76,wyouth,,,,,,37.5,75,112.5,BD
-1,66,Quinton Wingert,MO,M,Single-ply,23.68,youth,,,,,,17.5,52.5,70,BD
-1,35,Ty Kennedy,KS,M,Single-ply,30.84,youth,,,,,,22.5,52.5,75,BD
+1,40,Quinton Wingert,MO,M,Single-ply,23.68,youth,,,,,,17.5,52.5,70,BD
+1,40,Ty Kennedy,KS,M,Single-ply,30.84,youth,,,,,,22.5,52.5,75,BD
 1,40,Cody Anderson,MO,M,Single-ply,37.92,youth,,,,,,25,65,90,BD
 1,100,Michael Oyler,IL,M,Single-ply,99.43,youth,,,,,,55,100,155,BD
 1,100,Chris Anderson,NM,M,Single-ply,100,hs,215,230,245,245,,177.5,260,682.5,SBD
@@ -95,7 +95,7 @@ DQ,90,Regan O'Dell,IL,M,Single-ply,89.54,mp,,,,,,-125,,,B
 3,90,Larry Dennis,CO,M,Single-ply,88.9,mp,165,192.5,-215,192.5,,182.5,192.5,567.5,SBD
 1,140+,David Oyler,IL,M,Single-ply,190.33,mp,295,-320,320,320,,195,290,805,SBD
 3,140+,Shelby Jones #2,TX,M,Single-ply,158.3,mp,272.5,-295,295,295,,165,207.5,667.5,SBD
-1,100,Todd Campbell,CO,M,Single-ply,98.52,nat,182.5,-227.5,-227.5,182.5,,182.5,142.5,507.5,SBD
+1,100,Todd Campbell,CO,M,Single-ply,98.52,open,182.5,-227.5,-227.5,182.5,,182.5,142.5,507.5,SBD
 1,100,Don Gulling,IL,M,Single-ply,97.16,nov,-200,200,-215,200,,162.5,237.5,600,SBD
 1,140+,Alan Borden,TX,M,Single-ply,146.87,nov,265,280,295,295,,160,260,715,SBD
 1,90,Austin McKay,OK,M,Single-ply,88,nov,165,182.5,-195,182.5,,102.5,190,475,SBD
@@ -140,7 +140,7 @@ DQ,100,Joe Thompson,IA,M,Single-ply,95.93,pure,-305,-310,-310,,,,,,SBD
 1,90,Ross Conner,NM,M,Single-ply,88.41,teen,200,227.5,242.5,242.5,,140,210,592.5,SBD
 2,90,Austin McKay,OK,M,Single-ply,88,teen,165,182.5,-195,182.5,,102.5,190,475,SBD
 1,67.5,Jacob Cox,OK,M,Single-ply,66.41,teen,47.5,52.5,70,70,,35,77.5,182.5,SBD
-1,90+,Jessica Springer,TX,F,Single-ply,101.88,want,-100,110,130,130,,117.5,197.5,445,SBD
+1,90+,Jessica Springer,TX,F,Single-ply,101.88,wopen,-100,110,130,130,,117.5,197.5,445,SBD
 1,52,Heather Fry,TX,F,Single-ply,51.82,wint,-117.5,-117.5,125,125,,57.5,128.5,311,SBD
 1,56,Jill Yamashita,UT,F,Single-ply,55.88,wint,85,112.5,127.5,127.5,-140,95,173.5,396,SBD
 1,60,Heather Hughes,TX,F,Single-ply,58.69,wm1,-132.5,132.5,142.5,142.5,-147.5,70,175,387.5,SBD
@@ -152,7 +152,7 @@ DQ,90+,Kay Berryman,TX,F,Single-ply,95.93,wm1,-105,-105,-105,,,57.5,,,SBD
 1,82.5,Anna Kahle,NM,F,Single-ply,80.4,wpure,100,112.5,125,125,,60,125,310,SBD
 1,60,Melinda Carter,TX,F,Single-ply,59.06,wsm2,137.5,145,152.5,152.5,,75,162.5,390,SBD
 1,82.5,Anna Kahle,NM,F,Single-ply,80.4,wteen,100,112.5,125,125,,60,125,310,SBD
-1,35,Rory Bean,OK,M,Single-ply,31.3,youth,27.5,30,32.5,32.5,,25,50,107.5,SBD
+1,40,Rory Bean,OK,M,Single-ply,31.3,youth,27.5,30,32.5,32.5,,25,50,107.5,SBD
 1,90,Patrick Hughes,TX,M,Single-ply,88.13,jr,,,,,,105,155,260,BD
 1,140,Bob Brunner,ND,M,Single-ply,126.87,jr,,,,,,182.5,290,472.5,BD
 1,67.5,Dave Edmondson,UT,M,Single-ply,67.27,m1,,,,,,145,235,380,BD
@@ -244,7 +244,7 @@ DQ,125,Gene Knight,OK,M,Single-ply,119.57,m2,,,,,,-180,,,B
 2,75,Harold Hager,AR,M,Single-ply,72.57,pure,,,,,,92.5,,92.5,B
 1,90,Troy Stuart,KS,M,Single-ply,87.91,pure,,,,,,215,,215,B
 2,100,Ronnie Powell,NE,M,Single-ply,91.81,pure,,,,,,160,,160,B
-DQ,100,Mike Romero,,M,Single-ply,99.7,,,,,,,,,,B
+DQ,100,Mike Romero,,M,Single-ply,99.7,open,,,,,,,,,B
 1,110,Frank Schuetz,VA,M,Single-ply,105.87,pure,,,,,,217.5,,217.5,B
 2,110,Earl Evatt,AZ,M,Single-ply,104.6,pure,,,,,,132.5,,132.5,B
 1,100,Joe Thompson,IA,M,Single-ply,95.93,sm1,,,,,,110,,110,B
@@ -260,5 +260,6 @@ DQ,90,Jon Mejia,OK,M,Single-ply,86.45,teen,,,,,,-60,,,B
 1,75,Jo Ann Petray,AR,F,Single-ply,73.03,wm3,,,,,,40,,40,B
 1,56,Jill Yamashita,UT,F,Single-ply,55.88,wopen,,,,,,95,,95,B
 1,67.5,Lisa Siddell,NM,F,Single-ply,62.78,wopen,,,,,,92.5,,92.5,B
-1,56,Jill Yamashita,UT,F,Single-ply,55.88,wpn,,,,,,95,,95,B
+1,56,Jill Yamashita,UT,F,Single-ply,55.88,wpure,,,,,,95,,95,B
+1,56,Jill Yamashita,UT,F,Single-ply,55.88,wnov,,,,,,95,,95,B
 1,60,Teale Adelmann,NM,F,Single-ply,56.31,wsm1,,,,,,107.5,,107.5,B

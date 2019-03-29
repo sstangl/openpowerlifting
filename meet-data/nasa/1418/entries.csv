@@ -7,7 +7,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,67.5,Samantha Neeley,KY,F,64.64,97.5,57.5,142.5,297.5,wint,SBD,Wraps
 1,67.5,Suzanne Waldrop,KY,F,63.78,120,52.5,162.5,335,wm1,SBD,Wraps
 1,67.5,Emily Clark,KY,F,65.14,95,47.5,140,282.5,wsm1,SBD,Wraps
-2,75,Kim Harris,KY,F,68.22,67.5,40,85,192.5,wnovat,SBD,Wraps
+2,75,Kim Harris,KY,F,68.22,67.5,40,85,192.5,wopen,SBD,Wraps
 1,75,Elizabeth Kunz,KY,F,73.57,85,45,137.5,267.5,wint,SBD,Wraps
 1,75,Brittany Kuhn,KY,F,68.95,90,57.5,112.5,260,wpure,SBD,Wraps
 2,75,Kim Harris,KY,F,68.22,67.5,40,85,192.5,wsm2,SBD,Wraps
@@ -16,7 +16,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,82.5,Leah Anderson,KY,F,78.38,90,57.5,137.5,285,wint,SBD,Wraps
 1,82.5,Jennifer Rankin,KY,F,77.65,100,47.5,137.5,285,wm1,SBD,Wraps
 1,82.5,Jennifer Rankin,KY,F,77.65,100,47.5,137.5,285,wmp,SBD,Wraps
-1,82.5,Leah Anderson,KY,F,78.38,100,57.5,137.5,295,wnovat,SBD,Wraps
+1,82.5,Leah Anderson,KY,F,78.38,100,57.5,137.5,295,wopen,SBD,Wraps
 1,82.5,Betsy Keating,KY,F,78.47,90,45,125,260,wpure,SBD,Wraps
 1,82.5,Betsy Keating,KY,F,78.47,90,45,125,260,wsm2,SBD,Wraps
 1,82.5,Betsy Keating,KY,F,78.47,90,45,125,260,wsmp,SBD,Wraps
@@ -30,7 +30,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 2,110,AJ Descosiers,KY,M,104.33,165,105,217.5,487.5,pure,SBD,Wraps
 1,110,Jonathan Purcell,KY,M,104.51,230,125,242.5,597.5,pure,SBD,Wraps
 1,125,Matt French,KY,M,115.85,240,197.5,237.5,675,int,SBD,Wraps
-1,125,Anthony Pernice,KY,M,109.95,280,160,317.5,757.5,open,SBD,Wraps
+1,110,Anthony Pernice,KY,M,109.95,280,160,317.5,757.5,open,SBD,Wraps
 1,140,Letroy Higgins,KY,M,135.44,317.5,195,330,842.5,pure,SBD,Wraps
 1,82.5,Michiko Arnold,KY,F,80.38,77.5,60,97.5,235,whs,SBD,Single-ply
 1,90,Brian Ely,KY,M,87.45,190,115,202.5,507.5,m2,SBD,Single-ply
@@ -55,5 +55,5 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,100,Sean Gentry,KY,M,96.39,,170,,170,bpm1,B,Raw
 1,100,Mel Shuffett,KY,M,91.35,,117.5,,117.5,bpm3,B,Raw
 1,100,Don Gibson,WV,M,94.53,,42.5,,42.5,bpm4,B,Raw
-1,110,Evan Richardson,KY,M,102.78,,160,,160,bhs,B,Raw
+1,110,Evan Richardson,KY,M,102.78,,160,,160,bphs,B,Raw
 1,125,Josh Wills,KY,M,123.56,,252.5,,252.5,pure,B,Single-ply
