@@ -8,13 +8,18 @@
  #    int = {name="int", min=24, max=29,sex='M'}
  #    sm1 = {name="sm1", min=30, max=35,sex='M'}
  #    sm2 = {name="sm2", min=35, max=39,sex='M'}
+ #    sm = {name="sm", min=30, max=39,sex='M'}
  #    m1 = {name="m1", min=40, max=49,sex='M'}
  #    m2 = {name="m2", min=50, max=59,sex='M'}
  #    m3 = {name="m3", min=60, max=69,sex='M'}
- #    m4 = {name="m4", min=70, max=999,sex='M'}
+ #    m4 = {name="m4", min=70, max=79,sex='M'}
+ #    m5 = {name="m5", min=80, max=999,sex='M'}
  #    nov = {name="nov", min=0, max=999,sex='M'}
  #    pf = {name="p+f", min=0, max=999,sex='M'}
  #    pure = {name="pure", min=0, max=999,sex='M'}
+ #    smp = {name="smp",min=40,max=999,sex='M'} #Submasters Pure?   
+ #    mp = {name="mp",min=40,max=999,sex='M'} #Masters Pure?
+ #    so = {name="so",min=0,max=999,sex='M'} #Special olympics
 
  #    wopen = {name="wopen", min=0, max=999,sex='F'}
  #    wyouth = {name="wyouth", min=5, max=12,sex='F'}
@@ -24,22 +29,29 @@
  #    wint = {name="wint", min=24, max=29,sex='F'}
  #    wsm1 = {name="wsm1", min=30, max=35,sex='F'}
  #    wsm2 = {name="wsm2", min=35, max=39,sex='F'}
+ #    wsm = {name="wsm", min=30, max=39,sex='F'}
  #    wm1 = {name="wm1", min=40, max=49,sex='F'}
  #    wm2 = {name="wm2", min=50, max=59,sex='F'}
  #    wm3 = {name="wm3", min=60, max=69,sex='F'}
  #    wm4 = {name="wm4", min=70, max=999,sex='F'}
+ #    wm5 = {name="wm5", min=80, max=999,sex='F'}
  #    wnov = {name="wnov", min=0, max=999,sex='F'}
  #    wpf = {name="wp+f", min=0, max=999,sex='F'}
  #    wpure = {name="wpure", min=0, max=999,sex='F'}
+ #    wsmp = {name="wsmp",min=40,max=999,sex='F'} #Submasters Pure?
+ #    wmp = {name="wmp",min=40,max=999,sex='F'} #Masters Pure?
+ #    wso = {name="wso",min=0,max=999,sex='M'} #Special olympics
 
  #    #Bench
  #    bpopen = {name="bpopen", min=0, max=999,sex='M'}
+ #    bpyouth = {name="bpyouth", min=5, max=12,sex='M'}
  #    bphs = {name="bphs", min=13, max=19,sex='M'}
  #    bpteen = {name="bpteen", min=13, max=19,sex='M'}
  #    bpjr = {name="bpjr", min=20, max=23,sex='M'}
  #    bpint = {name="bpint", min=24, max=29,sex='M'}
  #    bpsm1 = {name="bpsm1", min=30, max=35,sex='M'}
  #    bpsm2 = {name="bpsm2", min=35, max=39,sex='M'}
+ #    bpsm = {name="bpsm", min=30, max=39,sex='M'}
  #    bpm1 = {name="bpm1", min=40, max=49,sex='M'}
  #    bpm2 = {name="bpm2", min=50, max=59,sex='M'}
  #    bpm3 = {name="bpm3", min=60, max=69,sex='M'}
@@ -47,6 +59,9 @@
  #    bpnov = {name="bpnov", min=0, max=999,sex='M'}
  #    bppf = {name="bpp+f", min=0, max=999,sex='M'}
  #    bppure = {name="bppure", min=0, max=999,sex='M'}
+ #    bpsmp = {name="bpsmp",min=40,max=999,sex='M'} #Submasters Pure?   
+ #    bpmp = {name="bpmp",min=40,max=999,sex='M'} #Masters Pure?
+ #    bpso = {name="bpso",min=0,max=999,sex='M'} #Special olympics
 
  #    wbpopen = {name="wbpopen", min=0, max=999,sex='F'}
  #    wbphs = {name="wbphs", min=13, max=19,sex='F'}
@@ -62,10 +77,12 @@
  #    wbpnov = {name="wbpnov", min=0, max=999,sex='F'}
  #    wbppf = {name="wbpp+f", min=0, max=999,sex='F'}
  #    wbppure = {name="wbppure", min=0, max=999,sex='F'}
-
+ #    wbpsmp = {name="wbpsmp",min=40,max=999,sex='F'} #Submasters Pure?   
+ #    wbpmp = {name="wbpmp",min=40,max=999,sex='F'} #Masters Pure?
 
  #    #Deadlift
  #    dlopen = {name="dlopen", min=0, max=999,sex='M'}
+ #    dlyouth = {name="dlyouth", min=5, max=12,sex='M'}
  #    dlhs = {name="dlhs", min=13, max=19,sex='M'}
  #    dlteen = {name="dlteen", min=13, max=19,sex='M'}
  #    dljr = {name="dljr", min=20, max=23,sex='M'}
@@ -79,6 +96,8 @@
  #    dlnov = {name="dlnov", min=0, max=999,sex='M'}
  #    dlpf = {name="dlp+f", min=0, max=999,sex='M'}
  #    dlpure = {name="dlpure", min=0, max=999,sex='M'}
+ #    dlsmp = {name="dlsmp",min=40,max=999,sex='M'} #Submasters Pure?   
+ #    dlmp = {name="dlmp",min=40,max=999,sex='M'} #Masters Pure?
 
  #    wdlopen = {name="wdlopen", min=0, max=999,sex='F'}
  #    wdlhs = {name="wdlhs", min=13, max=19,sex='F'}
@@ -94,6 +113,53 @@
  #    wdlnov = {name="wdlnov", min=0, max=999,sex='F'}
  #    wdlpf = {name="wdlp+f", min=0, max=999,sex='F'}
  #    wdlpure = {name="wdlpure", min=0, max=999,sex='F'}
+
+ #    #Retro divisions - bare knee
+ #    retroopen = {name="retroopen", min=0, max=999,sex='M', equipment='Raw'}
+ #    retroyouth = {name="retroyouth", min=5, max=12,sex='M', equipment='Raw'}
+ #    retrohs = {name="retrohs", min=13, max=19,sex='M', equipment='Raw'}
+ #    retroteen = {name="retroteen", min=13, max=19,sex='M', equipment='Raw'}
+ #    retrojr = {name="retrojr", min=20, max=23,sex='M', equipment='Raw'}
+ #    retroint = {name="retroint", min=24, max=29,sex='M', equipment='Raw'}
+ #    retrosm1 = {name="retrosm1", min=30, max=35,sex='M', equipment='Raw'}
+ #    retrosm2 = {name="retrosm2", min=35, max=39,sex='M', equipment='Raw'}
+ #    retrom1 = {name="retrom1", min=40, max=49,sex='M', equipment='Raw'}
+ #    retrom2 = {name="retrom2", min=50, max=59,sex='M', equipment='Raw'}
+ #    retrom3 = {name="retrom3", min=60, max=69,sex='M', equipment='Raw'}
+ #    retrom4 = {name="retrom4", min=70, max=999,sex='M', equipment='Raw'}
+ #    retronov = {name="retronov", min=0, max=999,sex='M', equipment='Raw'}
+ #    retropf = {name="retrop+f", min=0, max=999,sex='M', equipment='Raw'}
+ #    retropure = {name="retropure", min=0, max=999,sex='M', equipment='Raw'}
+ #    retrosmp = {name="retrosmp",min=40,max=999,sex='M', equipment='Raw'}
+ #    retromp = {name="retromp",min=40,max=999,sex='M', equipment='Raw'}
+
+ #    retrowopen = {name="retrowopen", min=0, max=999,sex='F', equipment='Raw'}
+ #    retrowyouth = {name="retrowyouth", min=5, max=12,sex='F', equipment='Raw'}
+ #    retrowhs = {name="retrowhs", min=13, max=19,sex='F', equipment='Raw'}
+ #    retrowteen = {name="retrowteen", min=13, max=19,sex='F', equipment='Raw'}
+ #    retrowjr = {name="retrowjr", min=20, max=23,sex='F', equipment='Raw'}
+ #    retrowint = {name="retrowint", min=24, max=29,sex='F', equipment='Raw'}
+ #    retrowsm1 = {name="retrowsm1", min=30, max=35,sex='F', equipment='Raw'}
+ #    retrowsm2 = {name="retrowsm2", min=35, max=39,sex='F', equipment='Raw'}
+ #    retrowm1 = {name="retrowm1", min=40, max=49,sex='F', equipment='Raw'}
+ #    retrowm2 = {name="retrowm2", min=50, max=59,sex='F', equipment='Raw'}
+ #    retrowm3 = {name="retrowm3", min=60, max=69,sex='F', equipment='Raw'}
+ #    retrowm4 = {name="retrowm4", min=70, max=999,sex='F', equipment='Raw'}
+ #    retrownov = {name="retrownov", min=0, max=999,sex='F', equipment='Raw'}
+ #    retrowpf = {name="retrowp+f", min=0, max=999,sex='F', equipment='Raw'}
+ #    retrowpure = {name="retrowpure", min=0, max=999,sex='F', equipment='Raw'}
+ #    retrowsmp = {name="retrowsmp",min=40,max=999,sex='F', equipment='Raw'}
+ #    retrowmp = {name="retrowmp",min=40,max=999,sex='F', equipment='Raw'}
+
+
+ #    #Misc divisions
+ #    pfm = {name="pfm", min=0, max=999,sex='M'}
+ #    light = {name="light", min=0, max=999,sex='M'}
+ #    middle = {name="middle", min=0, max=999,sex='M'}
+ #    heavy = {name="heavy", min=0, max=999,sex='M'}
+
+
+
 
 [weightclasses]
 # [weightclasses.default_M]

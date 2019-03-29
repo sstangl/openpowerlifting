@@ -11,9 +11,9 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 2,60,Rebecca Thompson,TX,F,56.61,112.5,60,130,302.5,wsm2,SBD,Wraps
 1,90+,Kathryn Case,TX,F,134.31,172.5,90,167.5,430,wopen,SBD,Wraps
 1,90+,Kathryn Case,TX,F,134.31,172.5,90,167.5,430,wsm1,SBD,Wraps
-1,90+,Stephanie Thomas,TX,F,144.79,107.5,57.5,152.5,317.5,wretroopen,SBD,Raw
-1,90,Mindi Green,TX,F,88.81,95,42.5,102.5,240,wretroopen,SBD,Raw
-1,75,Jennifer Seaton,TX,F,74.84,52.5,30,80,162.5,wretroopen,SBD,Raw
+1,90+,Stephanie Thomas,TX,F,144.79,107.5,57.5,152.5,317.5,retrowopen,SBD,Raw
+1,90,Mindi Green,TX,F,88.81,95,42.5,102.5,240,retrowopen,SBD,Raw
+1,75,Jennifer Seaton,TX,F,74.84,52.5,30,80,162.5,retrowopen,SBD,Raw
 1,90+,LaTosha Cleaver,TX,F,90.72,,80,216,296,wsm2,BD,Raw
 1,75,Kelly Pickering,TX,F,74.12,,57.5,110,167.5,wmp,BD,Raw
 1,60,Larrin Ford,TX,F,59.01,,,155,155,wsm2,D,Raw
@@ -57,7 +57,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,75,Chad Tucker,AR,M,71.67,,115,217.5,332.5,jr,BD,Raw
 1,125,Ronnie Snowton,TX,M,122.38,,205,,205,bpm2,B,Raw
 1,110,Michael Brown,TX,M,104.33,,147.5,,147.5,bphc,B,Raw
-1,125,Grover Anthony,TX,M,118.93,,137.5,,137.5,bpsm2,B,Raw
+1,125,Grover Anthony,TX,M,118.93,,137.5,,137.5,bpsmp2,B,Raw
 1,75,Terry Hedrick,TX,M,69.72,,105,,105,bpm3,B,Raw
 1,140+,Warren Norris,TX,M,174.22,,165,,165,bpm2,B,Raw
 1,75,Danny Harris,OK,M,73.39,,55,,55,bpm2,B,Raw
@@ -77,7 +77,7 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,82.5,Jose Escobar,TX,M,79.42,217.5,135,210,562.5,jr,SBD,Wraps
 1,75,Chad Tucker,AR,M,71.67,185,115,217.5,517.5,jr,SBD,Wraps
 1,75,Chad Tucker,AR,M,71.67,185,115,217.5,517.5,open,SBD,Wraps
-1,75,Chad Tucker,AR,M,71.67,185,115,217.5,517.5,p&f,SBD,Wraps
+1,75,Chad Tucker,AR,M,71.67,185,115,217.5,517.5,pfm,SBD,Wraps
 1,125,Grover Anthony,TX,M,118.93,227.5,137.5,265,630,retrosm2,SBD,Raw
 1,125,Victor Gomez,TX,M,116.03,197.5,157.5,267.5,622.5,int,SBD,Wraps
 1,110,Benjamin Brock,TX,M,103.06,197.5,160,217.5,575,mp,SBD,Wraps
@@ -102,5 +102,5 @@ Place,WeightClassKg,Name,State,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3D
 1,75,Robert Ortega,TX,M,70.67,,90,155,245,m3,BD,Raw
 1,110,Lyndon LaPlante,TX,M,109.54,,75,160,235,so,BD,Raw
 1,100,Jay Youngblood,TX,M,97.25,,125,212.5,337.5,m2,BD,Single-ply
-1,75,Chad Tucker,AR,M,71.67,,115,,115,p&f,B,Raw
+1,75,Chad Tucker,AR,M,71.67,,115,,115,pfm,B,Raw
 1,110,Lyndon LaPlante,TX,M,109.54,,75,,75,so,B,Raw
