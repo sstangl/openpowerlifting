@@ -252,12 +252,17 @@ impl MetaFederation {
                         && meet.federation.home_country() == Some(Country::SouthAfrica))
             }
             MetaFederation::AllUK => {
-                entry.lifter_country.map_or(false, |c| c.is_in_uk())
-                    || (entry.lifter_country == None
-                        && meet
-                            .federation
-                            .home_country()
-                            .map_or(false, |c| c.is_in_uk()))
+                // UK lifters can set UK records abroad, except in Ireland.
+                if meet.country == Country::Ireland {
+                    false
+                } else {
+                    entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                        || (entry.lifter_country == None
+                            && meet
+                                .federation
+                                .home_country()
+                                .map_or(false, |c| c.is_in_uk()))
+                }
             }
             MetaFederation::AllUkraine => {
                 entry.lifter_country == Some(Country::Ukraine)
