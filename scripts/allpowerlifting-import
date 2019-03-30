@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 # Import data from the AllPowerlifting website. This script should only be used
 # for meets where AllPowerlifting is the primary source.
 
@@ -11,6 +10,10 @@ import os
 import sys
 import urllib.request
 import re
+import subprocess
+
+scriptsdir = os.path.dirname(os.path.realpath(__file__))
+importdir = os.getcwd()
 
 
 def gethtml(url):
@@ -74,21 +77,23 @@ def getmeetinfo(soup):
     # Get the date.
     daterow = venuerow.find_next_sibling()
     longdate = daterow.find_all('td')[1].text
-    [daymonth, year] = longdate.split(',')
-    year = year.strip()
+    if ',' in longdate:
+        [daymonth, year] = longdate.split(',')
+        year = year.strip()
 
-    month = daymonth.split(' ')[0]
-    day = daymonth.split(' ')[1]
+        month = daymonth.split(' ')[0]
+        day = daymonth.split(' ')[1]
 
-    for month_key in month_dict.keys():
-        if month.lower() in month_key:
-            month = month_dict[month_key]
-            break
+        for month_key in month_dict.keys():
+            if month.lower() in month_key:
+                month = month_dict[month_key]
+                break
+        if len(day) == 1:
+            day = '0' + day
 
-    if len(day) == 1:
-        day = '0' + day
-
-    date = year + '-' + month + '-' + day
+        date = year + '-' + month + '-' + day
+    else:
+        date = ''
 
     # Get the competition name.
     h1 = soup.find('h1')
@@ -124,20 +129,22 @@ def getresults(soup, url):
     # so grab it with the Russian names
     url = url.replace('?all_attempts=1', '')
 
-    [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
-    csv.append_column('CyrillicName')
-    cyrnameidx = csv.index('CyrillicName')
-    nameidx = csv.index('Name')
+    # The english site is currently broken
+    if 'en.' in url:
+        [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
+        csv.append_column('CyrillicName')
+        cyrnameidx = csv.index('CyrillicName')
+        nameidx = csv.index('Name')
 
-    if 'BirthYear' not in csv.fieldnames:
-        csv.append_column('BirthYear')
-    byidx = csv.index('BirthYear')
+        if 'BirthYear' not in csv.fieldnames:
+            csv.append_column('BirthYear')
+        byidx = csv.index('BirthYear')
 
-    for ii in range(len(csv.rows)):
-        if csv.rows[ii][nameidx] != russian_names[ii]:
-            csv.rows[ii][cyrnameidx] = russian_names[ii]
+        for ii in range(len(csv.rows)):
+            if csv.rows[ii][nameidx] != russian_names[ii]:
+                csv.rows[ii][cyrnameidx] = russian_names[ii]
 
-        csv.rows[ii][byidx] = birthyears[ii]
+            csv.rows[ii][byidx] = birthyears[ii]
 
     subpages = soup.find('ul', id='pldb-table-subs')
 
@@ -162,22 +169,23 @@ def getresults(soup, url):
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
 
-            [russian_names, birthyears] = get_cyrillic_names_and_birthyears(
-                subpage_url.replace('?all_attempts=1', ''))
-            subpage_csv.append_column('CyrillicName')
+            if 'Name' in subpage_csv.fieldnames:
+                [russian_names, birthyears] = get_cyrillic_names_and_birthyears(
+                    subpage_url.replace('?all_attempts=1', ''))
 
-            cyrnameidx = subpage_csv.index('CyrillicName')
-            nameidx = subpage_csv.index('Name')
+                subpage_csv.append_column('CyrillicName')
+                cyrnameidx = subpage_csv.index('CyrillicName')
+                nameidx = subpage_csv.index('Name')
 
-            if 'BirthYear' not in subpage_csv.fieldnames:
-                subpage_csv.append_column('BirthYear')
-            byidx = subpage_csv.index('BirthYear')
+                if 'BirthYear' not in subpage_csv.fieldnames:
+                    subpage_csv.append_column('BirthYear')
+                byidx = subpage_csv.index('BirthYear')
 
-            for ii in range(len(subpage_csv.rows)):
-                if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
-                    subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
+                for ii in range(len(subpage_csv.rows)):
+                    if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
+                        subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
 
-                subpage_csv.rows[ii][byidx] = birthyears[ii]
+                    subpage_csv.rows[ii][byidx] = birthyears[ii]
 
             subpage_csv.append_column('SheetName')
             for row in subpage_csv.rows:
@@ -256,53 +264,55 @@ def getpagedata(soup):
     for h in headers:
         if h in [' ', '\xa0']:
             csv.fieldnames += ['IGNORE']
-        elif h == 'Pl':
+        elif h in ['Pl', 'М']:
             csv.fieldnames += ['Place']
         elif h == 'Lifter':
             csv.fieldnames += ['Name']
-        elif h == 'Age cls':
+        elif h == 'Спортсмен':
+            csv.fieldnames += ['CyrillicName']
+        elif h in ['Age cls', 'Возр']:
             csv.fieldnames += ['Division']
-        elif h == 'BY':
+        elif h in ['BY', 'ГР']:
             csv.fieldnames += ['BirthYear']
         elif h == 'From':
             csv.fieldnames += ['IGNORE']
-        elif h == 'Body wt':
+        elif h in ['Body wt', 'Вес']:
             csv.fieldnames += ['BodyweightKg']
-        elif h == 'SQ1':
+        elif h in ['SQ1', 'П1']:
             csv.fieldnames += ['Squat1Kg']
-        elif h == 'SQ2':
+        elif h in ['SQ2', 'П2']:
             csv.fieldnames += ['Squat2Kg']
-        elif h == 'SQ3':
+        elif h in ['SQ3', 'П3']:
             csv.fieldnames += ['Squat3Kg']
-        elif h == 'SQ':
+        elif h in ['SQ', 'П']:
             csv.fieldnames += ['Best3SquatKg']
-        elif h == 'BP1':
+        elif h in ['BP1', 'Ж1']:
             csv.fieldnames += ['Bench1Kg']
-        elif h == 'BP2':
+        elif h in ['BP2', 'Ж2']:
             csv.fieldnames += ['Bench2Kg']
-        elif h == 'BP3':
+        elif h in ['BP3', 'Ж3']:
             csv.fieldnames += ['Bench3Kg']
-        elif h == 'BP':
+        elif h in ['BP', 'Ж']:
             csv.fieldnames += ['Best3BenchKg']
-        elif h == 'DL1':
+        elif h in ['DL1', 'Т1']:
             csv.fieldnames += ['Deadlift1Kg']
-        elif h == 'DL2':
+        elif h in ['DL2', 'Т2']:
             csv.fieldnames += ['Deadlift2Kg']
-        elif h == 'DL3':
+        elif h in ['DL3', 'Т3']:
             csv.fieldnames += ['Deadlift3Kg']
-        elif h == 'DL':
+        elif h in ['DL', 'Т']:
             csv.fieldnames += ['Best3DeadliftKg']
-        elif h == 'Total':
+        elif h in ['Total', 'Сумма']:
             csv.fieldnames += ['TotalKg']
-        elif h == 'Nat':
+        elif h in ['Nat', 'Откуда']:
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
-        elif h in ['R', 'W', 'S/M', 'S']:  # Resh, Wilks, Schwartz/Malone
+        elif h in ['R', 'W', 'S/M', 'S', 'G']:  # Resh, Wilks, Schwartz/Malone
             csv.fieldnames += ['IGNORE']
         elif h == 'Team':
             csv.fieldnames += ['IGNORE']
-        elif h == 'Coach':
+        elif h in ['Coach', 'Тренер']:
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
@@ -322,9 +332,9 @@ def getpagedata(soup):
         if len(row) == 1:
             # Extract sex information.
             text = row[0].lower()
-            if 'women' in text:
+            if 'women' in text or 'женщины' in text:
                 sexstate = 'F'
-            elif 'men' in text:
+            elif 'men' in text or 'мужчины' in text:
                 sexstate = 'M'
             elif 'category' in text:
                 wcstate = text.replace('category ', '').replace(' kg', '')
@@ -402,23 +412,28 @@ def fix_totals(csv):
 
 
 def unreverse_names(csv):
-    nameidx = csv.index('Name')
+    nameidx = None
+    if 'Name' in csv.fieldnames:
+        nameidx = csv.index('Name')
     cyrillicnameidx = csv.index('CyrillicName')
 
     for row in csv.rows:
+
         # Maiden names are given in brackets, remove these
-        row[nameidx] = re.sub(r'\(.*?\)', '', row[nameidx]).strip()
         row[cyrillicnameidx] = re.sub(
             r'\(.*?\)', '', row[cyrillicnameidx]).strip()
 
-        # Remove nicknames
-        row[nameidx] = re.sub('".*?"', '', row[nameidx])
-        row[nameidx] = row[nameidx].replace('  ', ' ').strip()
+        if nameidx:
+            # Maiden names are given in brackets, remove these
+            row[nameidx] = re.sub(r'\(.*?\)', '', row[nameidx]).strip()
+            # Remove nicknames
+            row[nameidx] = re.sub('".*?"', '', row[nameidx])
+            row[nameidx] = row[nameidx].replace('  ', ' ').strip()
 
-        parts = row[nameidx].split()
-        if len(parts) > 1:
-            fixed = [parts[-1]] + parts[:-1]
-            row[nameidx] = ' '.join(fixed)
+            parts = row[nameidx].split()
+            if len(parts) > 1:
+                fixed = [parts[-1]] + parts[:-1]
+                row[nameidx] = ' '.join(fixed)
 
         parts = row[cyrillicnameidx].split()
         if len(parts) > 1:
@@ -641,6 +656,10 @@ def main(url):
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
+
+    if 'Name' not in entriescsv.fieldnames:
+        subprocess.run([scriptsdir+os.sep+"calc-latin-names",
+                        importdir+os.sep+dirname+os.sep+"entries.csv"])
 
     print("Imported into %s." % dirname)
 

@@ -205,6 +205,9 @@
   <option value="wpc-kaz" {% if selection.federation == "WPC-KAZ" %}selected{% endif %}>WPC Kazakhstan</option>
   <option value="wrpf-kaz" {% if selection.federation == "WRPF-KAZ" %}selected{% endif %}>WRPF Kazakhstan</option>
 </optgroup>
+<optgroup label="{{strings.country.kazakhstan}}">
+  <option value="wpc-kgz" {% if selection.federation == "WPC-KGZ" %}selected{% endif %}>WPC Kyrgyzstan</option>
+</optgroup>
 <optgroup label="{{strings.country.latvia}}">
   <option value="all-latvia" {% if selection.federation == "AllLatvia" %}selected{% endif %}>{{strings.selectors.fed.all_latvia}}</option>
   <option value="gpc-lat" {% if selection.federation == "GPC-LAT" %}selected{% endif %}>GPC-LAT - GPC Latvia [GPC]</option>
