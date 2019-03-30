@@ -188,6 +188,11 @@ pub enum Federation {
     #[strum(to_string = "CAST", serialize = "cast")]
     CAST,
 
+    /// Unaffiliated meets held in Czechia.
+    #[serde(rename = "Czechia-UA")]
+    #[strum(to_string = "Czechia-UA", serialize = "chzechia-ua")]
+    CzechiaUA,
+
     /// Chinese Powerlifting Association, GPA.
     #[strum(to_string = "ChinaPA", serialize = "chinapa")]
     ChinaPA,
@@ -515,10 +520,6 @@ pub enum Federation {
     /// Oceania Powerlifting Federation, WP.
     #[strum(to_string = "OceaniaPF", serialize = "oceaniapf")]
     OceaniaPF,
-
-    /// Olomoucký Silák, a yearly bench competition in Czechia.
-    #[strum(to_string = "OlomouckySilak", serialize = "olomouckysilak")]
-    OlomouckySilak,
 
     /// Oceania Regional Powerlifting Federation, IPF.
     #[strum(to_string = "ORPF", serialize = "orpf")]
@@ -969,6 +970,7 @@ impl Federation {
             Federation::CPU => true,
             Federation::CRPEBA => false,
             Federation::CSST => true,
+            Federation::CzechiaUA => false,
             Federation::DSF => true,
             Federation::EPA => true,
             Federation::EPF => true,
@@ -1038,7 +1040,6 @@ impl Federation {
             Federation::NZOpen => false,
             Federation::NZPF => true,
             Federation::OceaniaPF => true,
-            Federation::OlomouckySilak => false,
             Federation::ORPF => true,
             Federation::ParaPL => true,
             Federation::PA => true,
@@ -1186,6 +1187,7 @@ impl Federation {
             //Initially Ukraine,until annexation
             Federation::CRPEBA => Some(Country::Russia),
             Federation::CSST => Some(Country::Czechia),
+            Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
@@ -1255,7 +1257,6 @@ impl Federation {
             Federation::NZOpen => Some(Country::NewZealand),
             Federation::NZPF => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
-            Federation::OlomouckySilak => Some(Country::Czechia),
             Federation::ORPF => None,
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
@@ -1414,6 +1415,7 @@ impl Federation {
             Federation::CPU => Federation::ipf_rules_on(date),
             Federation::CRPEBA => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
+            Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
             Federation::EPA => Federation::ipf_rules_on(date),
             Federation::EPF => Federation::ipf_rules_on(date),
@@ -1483,7 +1485,6 @@ impl Federation {
             Federation::NZOpen => PointsSystem::Wilks,
             Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::OceaniaPF => PointsSystem::Wilks,
-            Federation::OlomouckySilak => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,

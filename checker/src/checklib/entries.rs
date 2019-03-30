@@ -14,7 +14,7 @@ use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
 /// List of all plausible weightclasses, for non-configured federations.
-const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 54] = [
+const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 49] = [
     // IPF Men.
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
@@ -67,12 +67,6 @@ const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 54] = [
     WeightClassKg::Over(WeightKg::from_i32(145)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(155)),
     WeightClassKg::Over(WeightKg::from_i32(155)),
-    // ProRaw classes.
-    WeightClassKg::UnderOrEqual(WeightKg::from_i32(70)),
-    WeightClassKg::Over(WeightKg::from_i32(70)),
-    WeightClassKg::Over(WeightKg::from_i32(70)),
-    WeightClassKg::UnderOrEqual(WeightKg::from_i32(80)),
-    WeightClassKg::UnderOrEqual(WeightKg::from_i32(95)),
 ];
 
 /// Maps Header to index.

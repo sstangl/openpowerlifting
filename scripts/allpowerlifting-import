@@ -304,7 +304,7 @@ def getpagedata(soup):
             csv.fieldnames += ['Best3DeadliftKg']
         elif h in ['Total', 'Сумма']:
             csv.fieldnames += ['TotalKg']
-        elif h in ['Nat', 'Откуда','Стр']:
+        elif h in ['Nat', 'Откуда', 'Стр']:
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
