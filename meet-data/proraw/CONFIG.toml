@@ -1,0 +1,32 @@
+[divisions]
+    # ProRaw does not have age divisions.
+    mor = {name="M-OR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    for = {name="F-OR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+
+[weightclasses.default_M]
+    classes = ["80","95","110","125","125+"]
+    date_range = ["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["60","75","75+"]
+    date_range = ["2011-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    001 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
+    002 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
+    003 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
+    004 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
+    005 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
+    006 = ["ExemptWeightClassConsistency"] # No weight information for Bench-only.
+    007 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+    008 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+    009 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+    010 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+    011 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+
+    # For early BigDogs meets, lifters were assumed to weight 140+ instead of 125+,
+    # so that their records would count for the 140+ class.
+    bigdogs = ["ExemptWeightClassConsistency"] # All lifters assumed 140+
+    bigdogs2 = ["ExemptWeightClassConsistency"] # All lifters assumed 140+
