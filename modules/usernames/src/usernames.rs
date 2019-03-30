@@ -111,7 +111,7 @@ pub fn make_username(name: &str) -> Result<String, String> {
         return Ok(String::default());
     }
 
-    if name.chars().all(|x| is_eastasian(x) || is_exception(x)) {
+    if name.chars().any(is_eastasian) {
         let ea_id: String = name
             .chars()
             .map(|letter| (letter as u32).to_string())
@@ -127,19 +127,19 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_empty() {
+    fn empty() {
         assert_eq!(make_username("").unwrap(), "");
     }
 
     #[test]
-    fn test_ascii() {
+    fn ascii() {
         assert_eq!(make_username("JOHN SMITH").unwrap(), "johnsmith");
         assert_eq!(make_username("Petr Petráš").unwrap(), "petrpetras");
         assert_eq!(make_username("Auðunn Jónsson").unwrap(), "audunnjonsson");
     }
 
     #[test]
-    fn test_eastasian() {
+    fn eastasian() {
         assert_eq!(
             make_username("武田 裕介").unwrap(),
             "ea-2749430000323502920171"
@@ -151,13 +151,25 @@ mod tests {
     }
 
     #[test]
-    fn test_disambig() {
+    fn eastasian_regression() {
+        assert!(make_username("佐々木博之").is_ok());
+        assert!(make_username("石川記みよ").is_ok());
+        assert!(make_username("加藤 みどり").is_ok());
+        assert!(make_username("澤山 あおい").is_ok());
+        assert!(make_username("ラナ　ヘメンドラ　チャンドラ").is_ok());
+        assert!(make_username("宮口 ｼｮｰﾝﾏｷ").is_ok());
+        assert!(make_username("みぶ 真也").is_ok());
+        assert!(make_username("松浦すぐる").is_ok());
+    }
+
+    #[test]
+    fn disambig() {
         assert_eq!(make_username("John Smith #1").unwrap(), "johnsmith1");
         assert_eq!(make_username("Kevin Jäger #1").unwrap(), "kevinjager1");
     }
 
     #[test]
-    fn test_exception() {
+    fn exception() {
         assert_eq!(
             make_username("Brenda v.d. Meulen").unwrap(),
             "brendavdmeulen"
@@ -169,12 +181,12 @@ mod tests {
     }
 
     #[test]
-    fn test_invalid_utf8() {
+    fn invalid_utf8() {
         assert!(make_username("John Smith❤ ").is_err());
     }
 
     #[test]
-    fn test_invalid_ascii() {
+    fn invalid_ascii() {
         assert!(make_username("John Smith; ").is_err());
     }
 }
