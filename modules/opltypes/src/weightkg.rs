@@ -145,10 +145,9 @@ impl WeightKg {
         // Round down to the hundredth place.
         let mut rounded = f.round() as i32;
 
-        // If the fractional part is very close to a whole number,
-        // it is likely a rounding error on a meet originally
-        // reported in LBS. Add a correction factor.
-        if (rounded % 100) == 99 {
+        // Pounds values tend to be reported only to the nearest tenth.
+        // If the fractional part is close to another tenth, add a correction.
+        if (rounded % 10) == 9 {
             rounded += 1;
         }
 
@@ -356,13 +355,18 @@ mod tests {
         let w = "775.64".parse::<WeightKg>().unwrap();
         assert_eq!(w.as_lbs().0, 1710_00);
 
-        // 1710.02 lbs should be unchanged.
+        // 1710.02 lbs should be unchanged, since that's over 1710.
+        // If it really was 1710, it would have been "775.64".
         let w = "775.65".parse::<WeightKg>().unwrap();
         assert_eq!(w.as_lbs().0, 1710_02);
 
         // 434.99 lbs (reported by federation as 435).
         let w = "197.31".parse::<WeightKg>().unwrap();
         assert_eq!(w.as_lbs().0, 435_00);
+
+        // 240.4 lbs should be unchanged.
+        let w = "109.04".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, 240_40);
     }
 
     #[test]
