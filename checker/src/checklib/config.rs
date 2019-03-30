@@ -38,6 +38,8 @@ pub struct DivisionConfig {
     /// Optional Tested default for this division. May be overridden by the
     /// Tested column.
     pub tested: Option<bool>,
+    /// Specifies a Place that this division must have. Used for Guests.
+    pub place: Option<Place>,
 }
 
 #[derive(Debug)]
@@ -248,6 +250,19 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             None => None,
         };
 
+        // Provides a Place value that all entries in the Division must have.
+        // This is used to enforce Guest divisions being marked Guest.
+        let place: Option<Place> = match division.get("place").and_then(Value::as_str) {
+            Some(s) => match s.parse::<Place>() {
+                Ok(p) => Some(p),
+                Err(e) => {
+                    report.error(format!("Failed parsing {}.place: {}", key, e));
+                    None
+                }
+            },
+            None => None,
+        };
+
         acc.push(DivisionConfig {
             name: name.to_string(),
             min: min_age,
@@ -255,6 +270,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             sex,
             equipment,
             tested,
+            place,
         });
     }
 

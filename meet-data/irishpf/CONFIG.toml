@@ -1,7 +1,7 @@
 [divisions]
     # Men's Raw.
     mo = {name="M-O", min=0, max=999, equipment="Raw", sex="M"}
-    mg = {name="M-G", min=0, max=999, equipment="Raw", sex="M"}
+    mg = {name="M-G", min=0, max=999, equipment="Raw", sex="M", place="G"}
     msj = {name="M-SJ", min=0, max=19, equipment="Raw", sex="M"}
     mjr = {name="M-JR", min=20, max=23, equipment="Raw", sex="M"}
     msr = {name="M-SR", min=24, max=34, equipment="Raw", sex="M"}
@@ -15,11 +15,11 @@
     # Men's Equipped.
     me = {name="M-E", min=0, max=999, equipment="Single-ply", sex="M"}
     msre = {name="M-SR-E", min=24, max=34, equipment="Single-ply", sex="M"}
-    mu23ge = {name="M-U23-G-E", min=0, max=23, equipment="Single-ply", sex="M"}
+    mu23ge = {name="M-U23-G-E", min=0, max=23, equipment="Single-ply", sex="M", place="G"}
 
     # Women's Raw.
     fo = {name="F-O", min=0, max=999, equipment="Raw", sex="F"}
-    fg = {name="F-G", min=0, max=999, equipment="Raw", sex="F"}
+    fg = {name="F-G", min=0, max=999, equipment="Raw", sex="F", place="G"}
     fsj = {name="F-SJ", min=0, max=19, equipment="Raw", sex="F"}
     fjr = {name="F-JR", min=20, max=23, equipment="Raw", sex="F"}
     fsr = {name="F-SR", min=24, max=34, equipment="Raw", sex="F"}
@@ -29,7 +29,7 @@
     fu18 = {name="F-U18", min=0, max=18, equipment="Raw", sex="F"}
     fu21 = {name="F-U21", min=0, max=21, equipment="Raw", sex="F"}
     fu23 = {name="F-U23", min=0, max=23, equipment="Raw", sex="F"}
-    fu23g = {name="F-U23-G", min=0, max=23, equipment="Raw", sex="F"}
+    fu23g = {name="F-U23-G", min=0, max=23, equipment="Raw", sex="F", place="G"}
 
     # Women's Equipped.
     fe = {name="F-E", min=0, max=999, equipment="Single-ply", sex="F"}

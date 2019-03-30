@@ -1645,8 +1645,51 @@ fn check_division_sex_consistency(
         report.error_on(
             line,
             format!(
-                "Division '{}' requires sex '{:?}', found '{:?}'",
+                "Division '{}' requires Sex '{:?}', found '{:?}'",
                 entry.division, sex, entry.sex
+            ),
+        );
+    }
+}
+
+/// Checks that a configured division is consistent with any Place restrictions.
+fn check_division_place_consistency(
+    entry: &Entry,
+    config: Option<&Config>,
+    line: u64,
+    report: &mut Report,
+) {
+    if entry.division.is_empty() {
+        return;
+    }
+
+    let config = match config {
+        Some(c) => c,
+        None => {
+            return;
+        }
+    };
+
+    // Get the configured place for the division, or return if not specified.
+    let place = match config.divisions.iter().find(|d| d.name == entry.division) {
+        Some(div) => match div.place {
+            Some(place) => place,
+            None => {
+                return;
+            }
+        },
+        None => {
+            return;
+        }
+    };
+
+    // Only perform checks if the entry was non-DQ'd.
+    if !entry.place.is_dq() && place != entry.place {
+        report.error_on(
+            line,
+            format!(
+                "Division '{}' requires Place '{:?}', found '{:?}'",
+                entry.division, place, entry.place
             ),
         );
     }
@@ -1963,6 +2006,7 @@ where
         entry.division_age_max = division_age_max;
 
         check_division_sex_consistency(&entry, config, line, &mut report);
+        check_division_place_consistency(&entry, config, line, &mut report);
         check_division_equipment_consistency(
             &entry,
             config,
