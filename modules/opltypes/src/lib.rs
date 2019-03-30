@@ -10,6 +10,11 @@ extern crate strum;
 #[macro_use]
 extern crate strum_macros;
 
+// External dependencies used only in testing code.
+#[cfg(test)]
+#[macro_use]
+extern crate serde_json;
+
 // Public exports.
 mod age;
 pub use self::age::{Age, PrettyAge};

@@ -38,23 +38,24 @@ impl Serialize for WeightKg {
         S: serde::Serializer,
     {
         if self.0 == 0 {
-            // Avoid a call to format!().
-            serializer.serialize_str("")
+            return serializer.serialize_str("");
+        }
+
+        let integer = self.0 / 100;
+        let fraction = self.0.abs() % 100;
+
+        // TODO: Write into a stack-allocated fixed-size buffer.
+        if fraction == 0 {
+            serializer.serialize_str(&format!("{}", integer))
         } else {
-            let integer = self.0 / 100;
-            let mut fraction = self.0.abs() % 100;
-
-            // Change `50` to `5`.
-            if fraction % 10 == 0 {
-                fraction = fraction / 10;
-            }
-
-            // TODO: Write into a stack-allocated fixed-size buffer.
-            if fraction == 0 {
-                serializer.serialize_str(&format!("{}", integer))
+            let fstr = if fraction % 10 == 0 {
+                // Serialize "50" as "5".
+                format!("{}", fraction / 10)
             } else {
-                serializer.serialize_str(&format!("{}.{}", integer, fraction))
-            }
+                // Serialize "5" as "05".
+                format!("{:0>2}", fraction)
+            };
+            serializer.serialize_str(&format!("{}.{}", integer, fstr))
         }
     }
 }
@@ -391,6 +392,28 @@ mod tests {
 
         let w = "-0.000".parse::<WeightKg>().unwrap();
         assert_eq!(format!("{}", w), "");
+    }
+
+    /// Ensures that WeightKg serialization matches the original to 2 decimal places.
+    ///
+    /// Serialization is performed by the compiler.
+    #[test]
+    fn test_weightkg_serialize() {
+        let w = "0.00".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 0_00);
+        assert_eq!(json!(w), "");
+
+        let w = "109.04".parse::<WeightKg>().unwrap(); // Issue 2941.
+        assert_eq!(w.0, 109_04);
+        assert_eq!(json!(w), "109.04");
+
+        let w = "109.40".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 109_40);
+        assert_eq!(json!(w), "109.4");
+
+        let w = "200.00".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 200_00);
+        assert_eq!(json!(w), "200");
     }
 
     #[test]
