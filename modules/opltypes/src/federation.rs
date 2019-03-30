@@ -718,13 +718,13 @@ pub enum Federation {
     #[strum(to_string = "USPA", serialize = "uspa")]
     USPA,
 
-    /// Unified Strength Sports Federation
+    /// United States Strengthlifting Federation.
     #[strum(to_string = "USSF", serialize = "ussf")]
     USSF,
 
-    /// United States Strengthlifting Federation
-    #[strum(to_string = "USSLF", serialize = "usslf")]
-    USSLF,
+    /// Unified Strength Sports Federation.
+    #[strum(to_string = "USSports", serialize = "ussports")]
+    USSports,
 
     /// Vietnam Powerlifting Alliance, GPA.
     #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
@@ -1093,7 +1093,7 @@ impl Federation {
             Federation::USPF => false,
             Federation::USPA => false,
             Federation::USSF => false,
-            Federation::USSLF => false,
+            Federation::USSports => false,
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
             Federation::WABDL => true,
@@ -1311,7 +1311,7 @@ impl Federation {
             Federation::USPF => Some(Country::USA),
             Federation::USPA => Some(Country::USA),
             Federation::USSF => Some(Country::USA),
-            Federation::USSLF => Some(Country::USA),
+            Federation::USSports => Some(Country::USA),
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
             Federation::WABDL => Some(Country::USA),
@@ -1540,7 +1540,7 @@ impl Federation {
             Federation::USPF => PointsSystem::Wilks,
             Federation::USPA => PointsSystem::Wilks,
             Federation::USSF => PointsSystem::Wilks,
-            Federation::USSLF => PointsSystem::Wilks,
+            Federation::USSports => PointsSystem::Wilks,
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::WABDL => PointsSystem::Wilks,
