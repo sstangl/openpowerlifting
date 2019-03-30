@@ -1998,12 +1998,29 @@ where
         entry.glossbrenner = glossbrenner(entry.sex, bw, entry.totalkg);
         entry.ipfpoints = ipf(entry.sex, entry.equipment, entry.event, bw, entry.totalkg);
 
+        // If the Name isn't provided, but there is an international name,
+        // just use the international name.
+        if entry.name.is_empty() {
+            if let Some(idx) = headers.get(Header::JapaneseName) {
+                entry.name = record[idx].to_string();
+            }
+        }
+        if entry.name.is_empty() {
+            if let Some(idx) = headers.get(Header::ChineseName) {
+                entry.name = record[idx].to_string();
+            }
+        }
+
         // Create the username if applicable.
         if !entry.name.is_empty() {
             match usernames::make_username(&entry.name) {
                 Ok(username) => entry.username = username,
                 Err(msg) => report.error_on(line, format!("Username error: {}", msg)),
             }
+        }
+
+        if entry.name.is_empty() {
+            report.error_on(line, "No Name was given or could be inferred");
         }
 
         entries.push(entry);
