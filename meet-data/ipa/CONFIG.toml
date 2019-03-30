@@ -52,8 +52,8 @@
     eama_masters_45_49 = {name="Elite Amateur Masters 45-49", min=45, max=49, tested="Yes"}
 
     # Non-standard divisions that make sense to include.
-    ama_guest = {name="Amateur Guest", min=0, max=999, tested="Yes"}
-    pro_guest = {name="Pro Guest", min=0, max=999}
+    ama_guest = {name="Amateur Guest", min=0, max=999, tested="Yes", place="G"}
+    pro_guest = {name="Pro Guest", min=0, max=999, place="G"}
     ama_military = {name="Amateur Military", min=0, max=999, tested="Yes"}
     pro_military = {name="Pro Military", min=0, max=999}
     ama_special = {name="Amateur Special Olympics", min=0, max=999, tested="Yes"}

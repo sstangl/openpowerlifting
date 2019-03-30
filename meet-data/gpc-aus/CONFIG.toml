@@ -1,8 +1,8 @@
 [divisions]
     mor = {name ="M-OR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     for = {name ="F-OR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
-    mgr = {name ="M-GR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]} # Guest
-    fgr = {name ="F-GR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]} # Guest
+    mgr = {name ="M-GR", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
+    fgr = {name ="F-GR", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
     moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
     mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
     foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}

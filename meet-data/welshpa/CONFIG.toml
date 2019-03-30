@@ -44,10 +44,10 @@
     fem5 = {name ="F-E-M5",min=79.5,max=999,equipment="Single-ply"}
 
     #Misc divisions
-    mcg = {name ="M-C-G",min=0,max=999,equipment="Raw"} #Guest
-    meg = {name ="M-E-G",min=0,max=999,equipment="Single-ply"}
-    fcg = {name ="F-C-G",min=0,max=999,equipment="Raw"}
-    feg = {name ="F-E-G",min=0,max=999,equipment="Single-ply"}
+    mcg = {name ="M-C-G",min=0,max=999,equipment="Raw",place="G"}
+    meg = {name ="M-E-G",min=0,max=999,equipment="Single-ply",place="G"}
+    fcg = {name ="F-C-G",min=0,max=999,equipment="Raw",place="G"}
+    feg = {name ="F-E-G",min=0,max=999,equipment="Single-ply",place="G"}
     mcn = {name ="M-C-N",min=0,max=999,equipment="Raw"} #Novice
     men = {name ="M-E-N",min=0,max=999,equipment="Single-ply"}
     fcn = {name ="F-C-N",min=0,max=999,equipment="Raw"}

@@ -224,13 +224,14 @@
     fpfrad = {name="FPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
 
     # Guest divisions.
-    mgr = {name="MGR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
-    fgr = {name="FGR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
-    mg = {name="MG", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mgad = {name="MG-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested = "Yes"}
-    mgrad = {name="MGR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested = "Yes"}
-
-    fg = {name="FG", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    mgr = {name="MGR", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
+    fgr = {name="FGR", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
+    mg = {name="MG", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"], place="G"}
+    fg = {name="FG", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"], place="G"}
+    mgad = {name="MG-AD", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"], tested = "Yes", place="G"}
+    fgad = {name="FG-AD", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"], tested = "Yes", place="G"}
+    mgrad = {name="MGR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested = "Yes", place="G"}
+    fgrad = {name="FGR-AD", min=0, max=999, sex="F", equipment=["Raw","Wraps"], tested = "Yes", place="G"}
 
     # Misc divisions
     crossfit = {name="Crossfit", min=0, max=999}

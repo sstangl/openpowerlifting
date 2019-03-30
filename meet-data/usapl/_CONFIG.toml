@@ -36,7 +36,7 @@
     mrm5 = {name="MR-M5", min=79.5, max=88.5, sex="M", equipment="Raw"}
     mrm6 = {name="MR-M6", min=89.5, max=98.5, sex="M", equipment="Raw"}
     mrm7 = {name="MR-M7", min=99.5, max=999, sex="M", equipment="Raw"}
-    mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw"}
+    mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
 
     # Official divisions, Raw Women.
     fro = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
@@ -71,7 +71,7 @@
     frm5 = {name="FR-M5", min=79.5, max=88.5, sex="F", equipment="Raw"}
     frm6 = {name="FR-M6", min=89.5, max=98.5, sex="F", equipment="Raw"}
     frm7 = {name="FR-M7", min=99.5, max=999, sex="F", equipment="Raw"}
-    frg = {name="FR-G", min=0, max=999, sex="F", equipment="Raw"}
+    frg = {name="FR-G", min=0, max=999, sex="F", equipment="Raw", place="G"}
 
     # Official divisions, Equipped Men.
     mo = {name="M-O", min=0, max=999, sex="M", equipment="Single-ply"}
@@ -106,7 +106,7 @@
     mm5 = {name="M-M5", min=79.5, max=88.5, sex="M", equipment="Single-ply"}
     mm6 = {name="M-M6", min=89.5, max=98.5, sex="M", equipment="Single-ply"}
     mm7 = {name="M-M7", min=99.5, max=999, sex="M", equipment="Single-ply"}
-    mg = {name="M-G", min=0, max=999, sex="M", equipment="Single-ply"}
+    mg = {name="M-G", min=0, max=999, sex="M", equipment="Single-ply", place="G"}
 
     # Official divisions, Equipped Women.
     fo = {name="F-O", min=0, max=999, sex="F", equipment="Single-ply"}
@@ -141,7 +141,7 @@
     fm5 = {name="F-M5", min=79.5, max=88.5, sex="F", equipment="Single-ply"}
     fm6 = {name="F-M6", min=89.5, max=98.5, sex="F", equipment="Single-ply"}
     fm7 = {name="F-M7", min=99.5, max=999, sex="F", equipment="Single-ply"}
-    fg = {name="F-G", min=0, max=999, sex="F", equipment="Single-ply"}
+    fg = {name="F-G", min=0, max=999, sex="F", equipment="Single-ply", place="G"}
 
     # Junior Varsity.
     mrjv = {name="MR-JV", min=0, max=999, sex="M", equipment="Raw"}
