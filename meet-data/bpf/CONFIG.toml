@@ -1,0 +1,138 @@
+[divisions]
+    m_open_raw = {name = "MOpe-Ra", min = 0, max = 999,sex='M',equipment='Raw'}
+    m_t1_raw = {name = "MT-1-Ra", min = 13, max = 15,sex='M',equipment='Raw'}
+    m_t2_raw = {name = "MT-2-Ra", min = 16, max = 17,sex='M',equipment='Raw'}
+    m_t3_raw = {name = "MT-3-Ra", min = 18, max = 19,sex='M',equipment='Raw'}
+    m_jun_raw = {name = "MJun-Ra", min = 20, max = 23,sex='M',equipment='Raw'}
+    m_m1_raw = {name = "MM-1-Ra", min = 40, max = 44,sex='M',equipment='Raw'}
+    m_m2_raw = {name = "MM-2-Ra", min = 45, max = 49,sex='M',equipment='Raw'}
+    m_m3_raw = {name = "MM-3-Ra", min = 50, max = 54,sex='M',equipment='Raw'}
+    m_m4_raw = {name = "MM-4-Ra", min = 55, max = 59,sex='M',equipment='Raw'}
+    m_m5_raw = {name = "MM-5-Ra", min = 60, max = 64,sex='M',equipment='Raw'}
+    m_m6_raw = {name = "MM-6-Ra", min = 65, max = 69,sex='M',equipment='Raw'}
+    m_m7_raw = {name = "MM-7-Ra", min = 70, max = 74,sex='M',equipment='Raw'}
+    m_m8_raw = {name = "MM-8-Ra", min = 75, max = 79,sex='M',equipment='Raw'}
+    m_m9_raw = {name = "MM-9-Ra", min = 80, max = 999,sex='M',equipment='Raw'}
+    m_t_raw = {name = "MT-Ra", min = 13, max = 19,sex='M',equipment='Raw'}
+
+    f_open_raw = {name = "FOpe-Ra", min = 0, max = 999,sex='F',equipment='Raw'}
+    f_t1_raw = {name = "FT-1-Ra", min = 13, max = 15,sex='F',equipment='Raw'}
+    f_t2_raw = {name = "FT-2-Ra", min = 16, max = 17,sex='F',equipment='Raw'}
+    f_t3_raw = {name = "FT-3-Ra", min = 18, max = 19,sex='F',equipment='Raw'}
+    f_jun_raw = {name = "FJun-Ra", min = 20, max = 23,sex='F',equipment='Raw'}
+    f_m1_raw = {name = "FM-1-Ra", min = 40, max = 44,sex='F',equipment='Raw'}
+    f_m2_raw = {name = "FM-2-Ra", min = 45, max = 49,sex='F',equipment='Raw'}
+    f_m3_raw = {name = "FM-3-Ra", min = 50, max = 54,sex='F',equipment='Raw'}
+    f_m4_raw = {name = "FM-4-Ra", min = 55, max = 59,sex='F',equipment='Raw'}
+    f_m5_raw = {name = "FM-5-Ra", min = 60, max = 64,sex='F',equipment='Raw'}
+    f_m6_raw = {name = "FM-6-Ra", min = 65, max = 69,sex='F',equipment='Raw'}
+    f_m7_raw = {name = "FM-7-Ra", min = 70, max = 74,sex='F',equipment='Raw'}
+    f_m8_raw = {name = "FM-8-Ra", min = 75, max = 79,sex='F',equipment='Raw'}
+    f_m9_raw = {name = "FM-9-Ra", min = 80, max = 999,sex='F',equipment='Raw'}
+    f_t_raw = {name = "FT-Ra", min = 13, max = 19,sex='F',equipment='Raw'}
+
+    m_open_wraps = {name = "MOpe-CR", min = 0, max = 999,sex='M',equipment='Wraps'}
+    m_t1_wraps = {name = "MT-1-CR", min = 13, max = 15,sex='M',equipment='Wraps'}
+    m_t2_wraps = {name = "MT-2-CR", min = 16, max = 17,sex='M',equipment='Wraps'}
+    m_t3_wraps = {name = "MT-3-CR", min = 18, max = 19,sex='M',equipment='Wraps'}
+    m_jun_wraps = {name = "MJun-CR", min = 20, max = 23,sex='M',equipment='Wraps'}
+    m_m1_wraps = {name = "MM-1-CR", min = 40, max = 44,sex='M',equipment='Wraps'}
+    m_m2_wraps = {name = "MM-2-CR", min = 45, max = 49,sex='M',equipment='Wraps'}
+    m_m3_wraps = {name = "MM-3-CR", min = 50, max = 54,sex='M',equipment='Wraps'}
+    m_m4_wraps = {name = "MM-4-CR", min = 55, max = 59,sex='M',equipment='Wraps'}
+    m_m5_wraps = {name = "MM-5-CR", min = 60, max = 64,sex='M',equipment='Wraps'}
+    m_m6_wraps = {name = "MM-6-CR", min = 65, max = 69,sex='M',equipment='Wraps'}
+    m_m7_wraps = {name = "MM-7-CR", min = 70, max = 74,sex='M',equipment='Wraps'}
+    m_m8_wraps = {name = "MM-8-CR", min = 75, max = 79,sex='M',equipment='Wraps'}
+    m_m9_wraps = {name = "MM-9-CR", min = 80, max = 999,sex='M',equipment='Wraps'}
+    m_t_wraps = {name = "MT-CR", min = 13, max = 19,sex='M',equipment='Wraps'}
+
+
+
+    f_open_wraps = {name = "FOpe-CR", min = 0, max = 999,sex='F',equipment='Wraps'}
+    f_t1_wraps = {name = "FT-1-CR", min = 13, max = 15,sex='F',equipment='Wraps'}
+    f_t2_wraps = {name = "FT-2-CR", min = 16, max = 17,sex='F',equipment='Wraps'}
+    f_t3_wraps = {name = "FT-3-CR", min = 18, max = 19,sex='F',equipment='Wraps'}
+    f_jun_wraps = {name = "FJun-CR", min = 20, max = 23,sex='F',equipment='Wraps'}
+    f_m1_wraps = {name = "FM-1-CR", min = 40, max = 44,sex='F',equipment='Wraps'}
+    f_m2_wraps = {name = "FM-2-CR", min = 45, max = 49,sex='F',equipment='Wraps'}
+    f_m3_wraps = {name = "FM-3-CR", min = 50, max = 54,sex='F',equipment='Wraps'}
+    f_m4_wraps = {name = "FM-4-CR", min = 55, max = 59,sex='F',equipment='Wraps'}
+    f_m5_wraps = {name = "FM-5-CR", min = 60, max = 64,sex='F',equipment='Wraps'}
+    f_m6_wraps = {name = "FM-6-CR", min = 65, max = 69,sex='F',equipment='Wraps'}
+    f_m7_wraps = {name = "FM-7-CR", min = 70, max = 74,sex='F',equipment='Wraps'}
+    f_m8_wraps = {name = "FM-8-CR", min = 75, max = 79,sex='F',equipment='Wraps'}
+    f_m9_wraps = {name = "FM-9-CR", min = 80, max = 999,sex='F',equipment='Wraps'}
+
+
+    m_open_single = {name = "MOpe-SP", min = 0, max = 999,sex='M',equipment='Single-ply'}
+    m_t1_single = {name = "MT-1-SP", min = 13, max = 15,sex='M',equipment='Single-ply'}
+    m_t2_single = {name = "MT-2-SP", min = 16, max = 17,sex='M',equipment='Single-ply'}
+    m_t3_single = {name = "MT-3-SP", min = 18, max = 19,sex='M',equipment='Single-ply'}
+    m_jun_single = {name = "MJun-SP", min = 20, max = 23,sex='M',equipment='Single-ply'}
+    m_m1_single = {name = "MM-1-SP", min = 40, max = 44,sex='M',equipment='Single-ply'}
+    m_m2_single = {name = "MM-2-SP", min = 45, max = 49,sex='M',equipment='Single-ply'}
+    m_m3_single = {name = "MM-3-SP", min = 50, max = 54,sex='M',equipment='Single-ply'}
+    m_m4_single = {name = "MM-4-SP", min = 55, max = 59,sex='M',equipment='Single-ply'}
+    m_m5_single = {name = "MM-5-SP", min = 60, max = 64,sex='M',equipment='Single-ply'}
+    m_m6_single = {name = "MM-6-SP", min = 65, max = 69,sex='M',equipment='Single-ply'}
+    m_m7_single = {name = "MM-7-SP", min = 70, max = 74,sex='M',equipment='Single-ply'}
+    m_m8_single = {name = "MM-8-SP", min = 75, max = 79,sex='M',equipment='Single-ply'}
+    m_m9_single = {name = "MM-9-SP", min = 80, max = 999,sex='M',equipment='Single-ply'}
+
+    f_open_single = {name = "FOpe-SP", min = 0, max = 999,sex='F',equipment='Single-ply'}
+    f_t1_single = {name = "FT-1-SP", min = 13, max = 15,sex='F',equipment='Single-ply'}
+    f_t2_single = {name = "FT-2-SP", min = 16, max = 17,sex='F',equipment='Single-ply'}
+    f_t3_single = {name = "FT-3-SP", min = 18, max = 19,sex='F',equipment='Single-ply'}
+    f_jun_single = {name = "FJun-SP", min = 20, max = 23,sex='F',equipment='Single-ply'}
+    f_m1_single = {name = "FM-1-SP", min = 40, max = 44,sex='F',equipment='Single-ply'}
+    f_m2_single = {name = "FM-2-SP", min = 45, max = 49,sex='F',equipment='Single-ply'}
+    f_m3_single = {name = "FM-3-SP", min = 50, max = 54,sex='F',equipment='Single-ply'}
+    f_m4_single = {name = "FM-4-SP", min = 55, max = 59,sex='F',equipment='Single-ply'}
+    f_m5_single = {name = "FM-5-SP", min = 60, max = 64,sex='F',equipment='Single-ply'}
+    f_m6_single = {name = "FM-6-SP", min = 65, max = 69,sex='F',equipment='Single-ply'}
+    f_m7_single = {name = "FM-7-SP", min = 70, max = 74,sex='F',equipment='Single-ply'}
+    f_m8_single = {name = "FM-8-SP", min = 75, max = 79,sex='F',equipment='Single-ply'}
+    f_m9_single = {name = "FM-9-SP", min = 80, max = 999,sex='F',equipment='Single-ply'}
+
+    m_open_multi = {name = "MOpe-MP", min = 0, max = 999,sex='M',equipment='Multi-ply'}
+    m_t1_multi = {name = "MT-1-MP", min = 13, max = 15,sex='M',equipment='Multi-ply'}
+    m_t2_multi = {name = "MT-2-MP", min = 16, max = 17,sex='M',equipment='Multi-ply'}
+    m_t3_multi = {name = "MT-3-MP", min = 18, max = 19,sex='M',equipment='Multi-ply'}
+    m_jun_multi = {name = "MJun-MP", min = 20, max = 23,sex='M',equipment='Multi-ply'}
+    m_m1_multi = {name = "MM-1-MP", min = 40, max = 44,sex='M',equipment='Multi-ply'}
+    m_m2_multi = {name = "MM-2-MP", min = 45, max = 49,sex='M',equipment='Multi-ply'}
+    m_m3_multi = {name = "MM-3-MP", min = 50, max = 54,sex='M',equipment='Multi-ply'}
+    m_m4_multi = {name = "MM-4-MP", min = 55, max = 59,sex='M',equipment='Multi-ply'}
+    m_m5_multi = {name = "MM-5-MP", min = 60, max = 64,sex='M',equipment='Multi-ply'}
+    m_m6_multi = {name = "MM-6-MP", min = 65, max = 69,sex='M',equipment='Multi-ply'}
+    m_m7_multi = {name = "MM-7-MP", min = 70, max = 74,sex='M',equipment='Multi-ply'}
+    m_m8_multi = {name = "MM-8-MP", min = 75, max = 79,sex='M',equipment='Multi-ply'}
+    m_m9_multi = {name = "MM-9-MP", min = 80, max = 999,sex='M',equipment='Multi-ply'}
+
+    f_open_multi = {name = "FOpe-MP", min = 0, max = 999,sex='F',equipment='Multi-ply'}
+    f_t1_multi = {name = "FT-1-MP", min = 13, max = 15,sex='F',equipment='Multi-ply'}
+    f_t2_multi = {name = "FT-2-MP", min = 16, max = 17,sex='F',equipment='Multi-ply'}
+    f_t3_multi = {name = "FT-3-MP", min = 18, max = 19,sex='F',equipment='Multi-ply'}
+    f_jun_multi = {name = "FJun-MP", min = 20, max = 23,sex='F',equipment='Multi-ply'}
+    f_m1_multi = {name = "FM-1-MP", min = 40, max = 44,sex='F',equipment='Multi-ply'}
+    f_m2_multi = {name = "FM-2-MP", min = 45, max = 49,sex='F',equipment='Multi-ply'}
+    f_m3_multi = {name = "FM-3-MP", min = 50, max = 54,sex='F',equipment='Multi-ply'}
+    f_m4_multi = {name = "FM-4-MP", min = 55, max = 59,sex='F',equipment='Multi-ply'}
+    f_m5_multi = {name = "FM-5-MP", min = 60, max = 64,sex='F',equipment='Multi-ply'}
+    f_m6_multi = {name = "FM-6-MP", min = 65, max = 69,sex='F',equipment='Multi-ply'}
+    f_m7_multi = {name = "FM-7-MP", min = 70, max = 74,sex='F',equipment='Multi-ply'}
+    f_m8_multi = {name = "FM-8-MP", min = 75, max = 79,sex='F',equipment='Multi-ply'}
+    f_m9_multi = {name = "FM-9-MP", min = 80, max = 999,sex='F',equipment='Multi-ply'}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
