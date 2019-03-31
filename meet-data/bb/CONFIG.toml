@@ -1,0 +1,32 @@
+[divisions]
+    open = {name = "Open", min = 0, max = 999}
+    pro = {name = "Pro", min = 0, max = 999}
+    elite = {name = "Elite", min = 0, max = 999}
+    teens = {name = "Teens", min = 13, max = 19}
+    juniors = {name = "Juniors", min = 0, max = 23}
+    masters = {name = "Masters", min = 40, max = 999}
+
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    #BB seemed to pick and choose weight classes meet to meet
+    0901 = ["ExemptWeightClassConsistency"]
+    0902 = ["ExemptWeightClassConsistency"]
+    0903 = ["ExemptWeightClassConsistency"]
+    0904 = ["ExemptWeightClassConsistency"]
+    1001 = ["ExemptWeightClassConsistency"]
+    1002 = ["ExemptWeightClassConsistency"]
+    1003 = ["ExemptWeightClassConsistency"]
+    1004 = ["ExemptWeightClassConsistency"]
+    1101 = ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptWeightClassConsistency"]
+    1201 = ["ExemptWeightClassConsistency"]
