@@ -10,7 +10,7 @@ F,Gretchen Ashton,CA,USA,44,B,67.5,67.04,Single-ply,LM 40-44,97.5,,,,97.5,1
 F,Gretchen Ashton,CA,USA,44,B,67.5,67.04,Single-ply,M 40-44,97.5,,,,97.5,1
 F,Gretchen Ashton,CA,USA,44,B,67.5,67.04,Single-ply,Open,97.5,,,,97.5,1
 F,Margot O'Halloran,CA,USA,13,B,82.5,77.02,Raw,Open,50,,,,50,1
-F,Margot O'Halloran,CA,USA,13,B,82.5,77.02,Raw,Y 12-13,50,,,,50,1
+F,Margot O'Halloran,CA,USA,13,B,82.5,77.02,Raw,T 12-13,50,,,,50,1
 F,Sharon Pipes,CA,USA,64,B,90,89.36,Raw,LM 60-64,50,,,,50,1
 F,Sharon Pipes,CA,USA,64,B,90,89.36,Raw,M 60-64,50,,,,50,1
 F,Valerie Crowell,CA,USA,44,B,90,,Raw,M 40-44,90,,,,90,1
@@ -19,7 +19,7 @@ F,Debbie Selby,CA,USA,46,D,67.5,67.13,Raw,LM 45-49,,,105,,105,1
 F,Debbie Selby,CA,USA,46,D,67.5,67.13,Raw,M 45-49,,,105,,105,1
 F,Kirstin Avalos,CA,USA,16,D,67.5,67.02,Raw,HS 16-17,,,107.5,112.5,107.5,1
 F,Rolanda Dixon,CA,USA,36,D,75,74.57,Raw,Open,,,152.5,,152.5,1
-F,Margot O'Halloran,CA,USA,13,D,82.5,77.02,Raw,Y 12-13,,,92.5,,92.5,1
+F,Margot O'Halloran,CA,USA,13,D,82.5,77.02,Raw,T 12-13,,,92.5,,92.5,1
 F,Valerie Crowell,CA,USA,44,D,90,,Raw,M 40-44,,,112.5,,112.5,1
 F,Tamara Garret,CA,USA,17,BD,60,,Raw,HS 16-17,52.5,107.5,116,,168.5,1
 F,Melissa Havatone,AZ,USA,42,BD,67.5,66.79,Raw,M 40-44,42.5,,95,,137.5,1
@@ -27,13 +27,13 @@ F,Kristina Walker,CA,USA,17,BD,67.5,62.41,Raw,HS 16-17,52.5,,85,,137.5,1
 F,Debbie Selby,CA,USA,46,BD,67.5,67.13,Raw,LM 45-49,37.5,,105,,142.5,1
 F,Lynn Naftel,CA,USA,58,BD,67.5,62.05,Raw,LM 55-59,65,,92.5,95,157.5,1
 F,Lynn Naftel,CA,USA,58,BD,67.5,62.05,Raw,M 55-59,65,,92.5,95,157.5,1
-F,Caroline Piatek,CA,USA,20,BD,67.5,64.77,Raw,J,62.5,67.5,122.5,125,185,1
+F,Caroline Piatek,CA,USA,20,BD,67.5,64.77,Raw,JR,62.5,67.5,122.5,125,185,1
 F,Alexis Aguilar,CA,USA,17,BD,75,,Raw,HS 16-17,47.5,,97.5,,145,1
 F,Susan Collins,AZ,USA,41,BD,75,74.75,Raw,LM 40-44,42.5,,100.5,105,143,1
 F,Brenda Mathews,CA,USA,53,BD,75,69.85,Raw,M 50-54,47.5,,105,,152.5,1
 F,Susan Thompson,CA,USA,41,BD,75,71.67,Raw,Life,65,,105,,170,1
 F,Susan Thompson,CA,USA,41,BD,75,71.67,Raw,M 40-44,65,,105,,170,1
-F,Margot O'Halloran,CA,USA,13,BD,82.5,77.02,Raw,Y 12-13,50,,92.5,,142.5,1
+F,Margot O'Halloran,CA,USA,13,BD,82.5,77.02,Raw,T 12-13,50,,92.5,,142.5,1
 F,Sarah Sherman,CA,USA,17,BD,82.5,78.47,Raw,HS 16-17,65,,130,,195,1
 F,Diana Vigario,CA,USA,35,BD,82.5,81.37,Raw,Open,82.5,85,155,,237.5,1
 F,Katlin Thissel,CA,USA,18,BD,90,,Raw,HS 18-19,,,,,,DQ
@@ -54,7 +54,7 @@ M,Mike Stainbrook,AZ,USA,66,B,75,74.16,Raw,LM 65-69,90,,,,90,1
 M,Tom Krusic,CA,USA,62,B,75,74.84,Raw,M 60-64,90,,,,90,2
 M,Jim Wilson #1,CA,USA,61,B,75,74.66,Raw,M 60-64,90,,,,90,1
 M,Mike Stainbrook,AZ,USA,66,B,75,74.16,Raw,M 65-69,90,,,,90,1
-M,Mark Mathews Jr,CA,USA,13,B,75,74.39,Raw,YOUTH 12-13,100,105,,,100,1
+M,Mark Mathews Jr,CA,USA,13,B,75,74.39,Raw,T 12-13,100,105,,,100,1
 M,Eddie Bledsoe,CA,USA,17,B,82.5,81.83,Raw,T 16-17,85,,,,85,1
 M,Richard Opalinski,CA,USA,71,B,82.5,81.47,Raw,M 70-74,87.5,,,,87.5,1
 M,Eddie Bledsoe,CA,USA,17,B,82.5,81.83,Single-ply,T 16-17,95,,,,95,1
@@ -68,13 +68,13 @@ M,Doug Wathen,CA,USA,39,B,82.5,81.56,Raw,Open,160,,,,160,1
 M,Rudy Lozano,CA,USA,63,B,82.5,81.65,Single-ply,M 60-64,161,,,,161,1
 M,Rich Branch,CA,USA,47,BD,82.5,81.92,Single-ply,LM 45-49,150,,217.5,,367.5,1
 M,Ron Matheson,AZ,USA,60,B,90,89.72,Single-ply,M 60-64,,,,,,DQ
-M,Steve Hendrix,CA,USA,22,B,90,,Raw,J,82.5,,,,82.5,1
+M,Steve Hendrix,CA,USA,22,B,90,,Raw,JR,82.5,,,,82.5,1
 M,Ken Halbert,CA,USA,57,B,90,88,Raw,M 55-59,90,,,,90,1
 M,Drew McKinney,TX,USA,15,B,90,86.91,Single-ply,T 14-15,102.5,,,,102.5,1
 M,Bill Weiss,CA,USA,42,B,90,86.18,Raw,LM 40-44,117.5,,,,117.5,2
 M,Bill Weiss,CA,USA,42,B,90,86.18,Single-ply,LM 40-44,137.3,,,,137.3,2
 M,Martin Drake,CA,USA,52,B,90,87.54,Raw,M 50-54,142.5,144,,,142.5,1
-M,Charley Turner,,Canada,37,B,90,,Raw,Submasters,145,,,,145,1
+M,Charley Turner,,Canada,37,B,90,,Raw,Sub,145,,,,145,1
 M,Martin Drake,CA,USA,52,B,90,88,Single-ply,LM 50-54,160,,,,160,1
 M,Martin Drake,CA,USA,52,B,90,88,Single-ply,M 50-54,160,,,,160,1
 M,Martin Drake,CA,USA,52,B,90,88,Single-ply,Open,160,,,,160,1
@@ -91,14 +91,14 @@ M,Ed Berteaux,CA,USA,49,B,100,99.43,Single-ply,LM 45-49,167.5,172.5,,,167.5,1
 M,Gerald Homer,AZ,USA,63,B,100,96.62,Single-ply,M 60-64,175,177.5,,,175,1
 M,Malik Adams,CA,USA,25,B,100,,Single-ply,Open,200,,,,200,1
 M,Mark Dillard,CA,USA,40,B,110,105.69,Raw,M 40-44,167.5,,,,,DQ
-M,Richard Sussman,CA,USA,47,B,110,,Single-ply,M 40-44,,,,,,DQ
+M,Richard Sussman,CA,USA,47,B,110,,Single-ply,M 45-49,,,,,,DQ
 M,Jack Lano,CA,USA,81,B,110,105.51,Raw,LM 80-84,25,,,,25,1
 M,Jack Lano,CA,USA,81,B,110,105.51,Raw,M 80-84,25,,,,25,1
 M,Jim Graham,CA,USA,54,B,110,105.23,Raw,Law/Mil,160,,,,160,1
 M,Jim Graham,CA,USA,54,B,110,105.23,Raw,LM 50-54,160,,,,160,1
 M,Jim Graham,CA,USA,54,B,110,105.23,Raw,M 50-54,160,,,,160,1
 M,Devin Dixon,CA,USA,33,B,110,108.86,Raw,Open,170,,,,170,1
-M,Mark White,CA,USA,38,B,110,104.78,Raw,Submasters,175,,,,175,1
+M,Mark White,CA,USA,38,B,110,104.78,Raw,Sub,175,,,,175,1
 M,Mark Mathews Sr,CA,USA,40,B,110,106.69,Raw,LM 40-44,175,,,,175,1
 M,Eric Weirather,CA,USA,33,B,125,114.9,Raw,Novice,115,,,,115,1
 M,Edgar Estrada,CA,USA,16,B,125,124.74,Raw,HS 16-17,120,,,,120,1
@@ -115,11 +115,11 @@ M,Tom Strakweather,CA,USA,42,B,125,,Single-ply,M 40-44,215,,,,215,1
 M,Tom Strakweather,CA,USA,42,B,125,,Single-ply,Open,215,,,,215,2
 M,Ryan Dewit,CA,USA,28,B,125,122.11,Raw,Open,237.5,245,,,237.5,1
 M,Scott Hoekstra,CA,USA,36,B,125,115.21,Single-ply,Open,247.5,,,,247.5,1
-M,Scott Hoekstra,CA,USA,36,B,125,115.21,Single-ply,Submasters,247.5,,,,247.5,1
+M,Scott Hoekstra,CA,USA,36,B,125,115.21,Single-ply,Sub,247.5,,,,247.5,1
 M,Sam Byrum,CA,USA,17,B,145,129.64,Raw,HS 16-17,127.5,,,,127.5,1
 M,Joshua Weaver,CA,USA,18,B,145+,180.53,Single-ply,T 18-19,132.5,,,,132.5,1
 M,Dan Faasamala,CA,USA,41,B,145+,173.73,Raw,M 40-44,250,,,,250,1
-M,Mario Kurn,CA,USA,13,D,56,53.61,Raw,Y 12-13,,,107.5,108.5,107.5,1
+M,Mario Kurn,CA,USA,13,D,56,53.61,Raw,T 12-13,,,107.5,108.5,107.5,1
 M,Brian Jones,CA,USA,15,D,60,59.6,Raw,HS 14-15,,,135,,135,1
 M,Jonathan Boyden,CA,USA,15,D,67.5,65.77,Raw,T 14-15,,,165,,165,1
 M,Mike Stainbrook,AZ,USA,66,D,75,74.16,Raw,LM 65-69,,,112.5,113,112.5,1
@@ -139,27 +139,27 @@ M,Matt Dattage,CA,USA,18,D,90,,Raw,T 18-19,,,,,,DQ
 M,Shane Toal,CA,USA,,D,90,86.64,Raw,Open,,,182.5,,182.5,2
 M,Drew McKinney,TX,USA,15,D,90,86.91,Single-ply,T 14-15,,,182.5,,182.5,1
 M,David Mears,CA,USA,,D,90,89.81,Raw,Open,,,190,,190,1
-M,Matthew Spurrier,IN,USA,23,D,90,89.72,Raw,J,,,210,,210,1
+M,Matthew Spurrier,IN,USA,23,D,90,89.72,Raw,JR,,,210,,210,1
 M,Michael Kidd,CA,USA,,D,90,88.9,Single-ply,M 40-44,,,230,,230,1
 M,Michael Kidd,CA,USA,,D,90,88.9,Single-ply,Law/Mil,,,230,,230,1
 M,Michael Kidd,CA,USA,,D,90,88.9,Single-ply,Open,,,230,,230,1
 M,Kevin Fisher,CA,USA,48,D,100,99.56,Single-ply,M 45-49,,,300,,300,1
-M,Richard Sussman,CA,USA,47,D,110,,Single-ply,M 40-44,,,,,,DQ
+M,Richard Sussman,CA,USA,47,D,110,,Single-ply,M 45-49,,,,,,DQ
 M,Jack Lano,CA,USA,81,D,110,105.51,Raw,LM 80-84,,,75,,75,1
 M,Jack Lano,CA,USA,81,D,110,105.51,Raw,M 80-84,,,75,,75,1
 M,Tom Casetole,CA,USA,33,D,110,109.77,Raw,Open,,,220,,220,1
 M,Mark D'Iorio,RI,USA,35,D,110,109.95,Single-ply,Open,,,332,,332,1
-M,Mark D'Iorio,RI,USA,35,D,110,109.95,Single-ply,Submasters,,,332,,332,1
+M,Mark D'Iorio,RI,USA,35,D,110,109.95,Single-ply,Sub,,,332,,332,1
 M,Brandon Philips,CA,USA,27,D,125,121.56,Raw,Open,,,257.5,,257.5,1
 M,Michael White,CA,USA,35,D,125,120.93,Raw,Law/Mil,,,272.5,,272.5,1
-M,Casey Schafer,CA,USA,13,BD,40,39.55,Raw,Y 12-13,32.5,,82.5,,115,1
-M,Collin Thomas,CA,USA,13,BD,44,42,Raw,Y 12-13,35,,75,,110,1
-M,Chris Schafer,CA,USA,13,BD,52,51.44,Raw,Y 12-13,32.5,,70,,102.5,3
-M,Mike Moser,CA,USA,13,BD,56,54.52,Raw,Y 12-13,45,,87.5,,132.5,2
+M,Casey Schafer,CA,USA,13,BD,40,39.55,Raw,T 12-13,32.5,,82.5,,115,1
+M,Collin Thomas,CA,USA,13,BD,44,42,Raw,T 12-13,35,,75,,110,1
+M,Chris Schafer,CA,USA,13,BD,52,51.44,Raw,T 12-13,32.5,,70,,102.5,3
+M,Mike Moser,CA,USA,13,BD,56,54.52,Raw,T 12-13,45,,87.5,,132.5,2
 M,Vincent Fultz,CA,USA,14,BD,56,54.88,Raw,T 14-15,55,,102.5,,157.5,1
-M,John Mossy,CA,USA,13,BD,52,50.53,Raw,Y 12-13,55,,112.5,,167.5,1
-M,Chase Hardage,CA,USA,13,BD,56,55.7,Raw,Y 12-13,45,,105,108,150,2
-M,Kyller Hossan,CA,USA,13,BD,56,53.07,Raw,Y 12-13,50,,102.5,,152.5,1
+M,John Mossy,CA,USA,13,BD,52,50.53,Raw,T 12-13,55,,112.5,,167.5,1
+M,Chase Hardage,CA,USA,13,BD,56,55.7,Raw,T 12-13,45,,105,108,150,2
+M,Kyller Hossan,CA,USA,13,BD,56,53.07,Raw,T 12-13,50,,102.5,,152.5,1
 M,Jim Selby,CA,USA,74,BD,56,55,Raw,LM 70-74,52.5,,105,,157.5,1
 M,Jim Selby,CA,USA,74,BD,56,55,Raw,M 70-74,52.5,,105,,157.5,1
 M,Jose Nevarez,CA,USA,15,BD,56,54.34,Raw,HS 14-15,75,77.5,145,,220,1
@@ -170,16 +170,16 @@ M,Alex Martinez,CA,USA,15,BD,60,58.74,Raw,HS 14-15,77.5,,135,,212.5,1
 M,Mark Schultz,CA,USA,44,BD,60,59.15,Raw,M 40-44,92.5,,150,155,242.5,1
 M,Gregg Welsh,CA,USA,58,B,67.5,65.77,Raw,M 55-59,85,,,,85,1
 M,Gregg Welsh,CA,USA,58,BD,67.5,65.77,Raw,LM 55-59,85,,105,,190,1
-M,John Kenyan,CA,USA,13,BD,67.5,67.04,Raw,Y 12-13,72.5,,122.5,,195,1
+M,John Kenyan,CA,USA,13,BD,67.5,67.04,Raw,T 12-13,72.5,,122.5,,195,1
 M,Jim Garcia,CA,USA,44,BD,67.5,66.34,Raw,M 40-44,92.5,,147.5,,240,1
 M,James Mathews,CA,USA,69,BD,67.5,67.31,Raw,LM 65-69,85,,165,,250,1
 M,Corbin Cutshaw,CA,USA,14,BD,67.5,65.77,Raw,HS 14-15,77.5,,175,,252.5,3
-M,Johnny Hoyt,CA,USA,18,BD,67.5,66.56,Raw,Teen 18-19,105,107.5,155,,260,1
+M,Johnny Hoyt,CA,USA,18,BD,67.5,66.56,Raw,T 18-19,105,107.5,155,,260,1
 M,Jonathan Boyden,CA,USA,15,BD,67.5,65.77,Raw,HS 14-15,100,,165,,265,2
 M,Kyle Hoekstra,CA,USA,14,BD,67.5,67.13,Raw,HS 14-15,80,,190,195,270,1
 M,Gerardo Diaz,CA,USA,18,BD,67.5,66.95,Raw,HS 18-19,92.5,,182.5,,275,1
 M,Adam Crawley,CA,USA,18,BD,75,,Raw,HS 18-19,,,,,,DQ
-M,BM Wijerathne,,Sri Lanka,,BD,75,,Single-ply,Submasters,,,,,,DQ
+M,BM Wijerathne,,Sri Lanka,,BD,75,,Single-ply,Sub,,,,,,DQ
 M,Mike Stainbrook,AZ,USA,66,BD,75,74.16,Raw,LM 65-69,90,,112.5,113,202.5,1
 M,Mike Stainbrook,AZ,USA,66,BD,75,74.16,Raw,M 65-69,90,,112.5,113,202.5,1
 M,Travis Mossy,CA,USA,16,BD,75,74.75,Raw,HS 16-17,92.5,,170,,262.5,1
@@ -192,12 +192,12 @@ M,Mathew Cronin,CA,USA,18,BD,82.5,,Raw,T 18-19,82.5,,142.5,,225,1
 M,Eddie Bledsoe,CA,USA,17,BD,82.5,81.83,Single-ply,T 16-17,95,,137.5,,232.5,1
 M,Richard Simon,CA,USA,72,BD,82.5,82.1,Single-ply,M 70-74,112.5,,155,,267.5,1
 M,Carlos Acosta,CA,USA,63,BD,82.5,81.92,Raw,M 60-64,105,,165,,270,1
-M,Bill Campbell,CA,USA,38,BD,82.5,80.74,Raw,Submasters,97.5,,220,,317.5,2
+M,Bill Campbell,CA,USA,38,BD,82.5,80.74,Raw,Sub,97.5,,220,,317.5,2
 M,Bernabe De La Rosa,CA,USA,16,BD,90,87.27,Raw,HS 16-17,115,117.5,210,215,325,1
 M,Rich Branch,CA,USA,47,BD,82.5,81.92,Single-ply,LM 45-49,150,,217.5,,367.5,2
 M,Doug Wathen,CA,USA,39,BD,82.5,81.56,Raw,Life,160,,212.5,,372.5,2
 M,Doug Wathen,CA,USA,39,BD,82.5,81.56,Raw,Open,160,,212.5,,372.5,1
-M,Doug Wathen,CA,USA,39,BD,82.5,81.56,Raw,Submasters,160,,212.5,,372.5,1
+M,Doug Wathen,CA,USA,39,BD,82.5,81.56,Raw,Sub,160,,212.5,,372.5,1
 M,Michael Petrus,IL,USA,40,BD,82.5,81.19,Raw,Life,135,,272.5,277.5,407.5,1
 M,Michael Petrus,IL,USA,40,BD,82.5,81.19,Raw,LM 40-44,135,,272.5,277.5,407.5,1
 M,Michael Petrus,IL,USA,40,BD,82.5,81.19,Raw,M 40-44,135,,272.5,277.5,407.5,1
@@ -212,19 +212,19 @@ M,Michael Kidd,CA,USA,,BD,90,88.9,Single-ply,Law/Mil,142.5,,230,,372.5,1
 M,Michael Kidd,CA,USA,,BD,90,88.9,Single-ply,Open,142.5,,230,,372.5,1
 M,Henry Fultz,CA,USA,44,BD,90,89.92,Raw,M 40-44,170,,220,,390,1
 M,Kevin Shaw,CA,USA,35,BD,90,89.81,Single-ply,Life,180,,265,,445,1
-M,Chris Meier,CA,USA,,BD,90,89.58,Raw,Submasters,177.5,,267.5,,445,1
+M,Chris Meier,CA,USA,,BD,90,89.58,Raw,Sub,177.5,,267.5,,445,1
 M,Paul Tremblay,CA,USA,15,BD,100,93.89,Raw,HS 14-15,75,,142.5,,217.5,3
 M,Sean Garnett,CA,USA,14,BD,100,93.44,Raw,HS 14-15,80,,155,,235,2
 M,Nestor Zapata,CA,USA,14,BD,100,95.03,Raw,HS 14-15,107.5,,172.5,,280,1
 M,Will Satterwaite,CA,USA,26,BD,100,99.34,Raw,Open,137.5,,182.5,,320,2
 M,William Leedy,CA,USA,72,BD,100,99.34,Single-ply,M 70-74,135,,217.5,,352.5,1
 M,Kamal Charafeddine,,Netherlands,36,BD,100,99.34,Raw,Open,195,,240,,435,1
-M,Kamal Charafeddine,,Netherlands,36,BD,100,99.34,Raw,Submasters,195,,240,,435,1
+M,Kamal Charafeddine,,Netherlands,36,BD,100,99.34,Raw,Sub,195,,240,,435,1
 M,Jack Lano,CA,USA,81,BD,110,105.51,Raw,LM 80-84,25,,75,,100,1
 M,Jack Lano,CA,USA,81,BD,110,105.51,Raw,M 80-84,25,,75,,100,1
 M,Rodney Bills,CA,USA,47,BD,110,105.32,Raw,Novice,92.5,,185,,277.5,1
 M,Dave Patterson,CA,USA,,BD,110,103.69,Single-ply,Life,132.5,,220,,352.5,1
-M,Dave Patterson,CA,USA,,BD,110,103.69,Single-ply,Submasters,132.5,,220,,352.5,1
+M,Dave Patterson,CA,USA,,BD,110,103.69,Single-ply,Sub,132.5,,220,,352.5,1
 M,Tom Casetole,CA,USA,33,BD,110,109.77,Raw,Open,140,,220,,360,1
 M,Gene Abernathy,CA,USA,56,BD,110,107.77,Raw,LM 55-59,152.5,,232.5,235,385,1
 M,Barrett Marum,CA,USA,24,BD,110,107.5,Single-ply,Open,162.5,,235,,397.5,1

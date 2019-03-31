@@ -1,0 +1,138 @@
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    y = {name ="Y",min=5,max=12} 
+    y5 = {name ="Y 5",min=5,max=5} 
+    y6_7 = {name ="Y 6-7",min=6,max=7} 
+    y7_8 = {name ="Y 7-8",min=7,max=8} 
+    y8_9 = {name ="Y 8-9",min=8,max=9} 
+    y9_10 = {name ="Y 9-10",min=9,max=10} 
+    y10_11 = {name ="Y 10-11",min=10,max=11} 
+    t12_13 = {name ="T 12-13",min=12,max=13} 
+    t14_15 = {name ="T 14-15",min=14,max=15} 
+    t16_17 = {name ="T 16-17",min=16,max=17} 
+    t18_19 = {name ="T 18-19",min=18,max=19} 
+    hs14_15 = {name ="HS 14-15",min=14,max=15} 
+    hs16_17 = {name ="HS 16-17",min=16,max=17} 
+    hs18_19 = {name ="HS 18-19",min=18,max=19} 
+    jr = {name ="JR",min=20,max=23} 
+    sub = {name ="Sub",min=35,max=39} 
+    m4044 = {name ="M 40-44",min=40,max=44} 
+    m4549 = {name ="M 45-49",min=45,max=49}
+    m5054 = {name ="M 50-54",min=50,max=54}
+    m5559 = {name ="M 55-59",min=55,max=59}  
+    m6064 = {name ="M 60-64",min=60,max=64}
+    m6569 = {name ="M 65-69",min=65,max=69}   
+    m7074 = {name ="M 70-74",min=70,max=74} 
+    m7579 = {name ="M 75-79",min=75,max=79} 
+    m8084 = {name ="M 80-84",min=80,max=84} 
+    m8589 = {name ="M 85-89",min=85,max=89} 
+    m9094 = {name ="M 90-94",min=90,max=94} 
+    m9599 = {name ="M 95-99",min=95,max=99} 
+
+    #Raw
+    ropen = {name ="R Open",min=0,max=999,equipment="Raw"}
+    ry = {name ="RY",min=5,max=12,equipment="Raw"} 
+    ry5 = {name ="RY 5",min=5,max=5,equipment="Raw"} 
+    ry6_7 = {name ="RY 6-7",min=6,max=7,equipment="Raw"} 
+    ry8_9 = {name ="RY 8-9",min=8,max=9,equipment="Raw"} 
+    ry10_11 = {name ="RY 10-11",min=10,max=11,equipment="Raw"} 
+    rt12_13 = {name ="RT 12-13",min=12,max=13,equipment="Raw"} 
+    rt14_15 = {name ="RT 14-15",min=14,max=15,equipment="Raw"} 
+    rt16_17 = {name ="RT 16-17",min=16,max=17,equipment="Raw"} 
+    rt18_19 = {name ="RT 18-19",min=18,max=19,equipment="Raw"}
+    rhs = {name ="RHS",min=13,max=19,equipment="Raw"} 
+    rhs14_15 = {name ="RHS 14-15",min=14,max=15,equipment="Raw"} 
+    rhs16_17 = {name ="RHS 16-17",min=16,max=17,equipment="Raw"} 
+    rhs18_19 = {name ="RHS 18-19",min=18,max=19,equipment="Raw"} 
+    rjr = {name ="R JR",min=20,max=23,equipment="Raw"} 
+    rsub = {name ="R Sub",min=35,max=39,equipment="Raw"} 
+    rm4044 = {name ="RM 40-44",min=40,max=44,equipment="Raw"} 
+    rm4549 = {name ="RM 45-49",min=45,max=49,equipment="Raw"}
+    rm5054 = {name ="RM 50-54",min=50,max=54,equipment="Raw"}
+    rm5559 = {name ="RM 55-59",min=55,max=59,equipment="Raw"}  
+    rm6064 = {name ="RM 60-64",min=60,max=64,equipment="Raw"}
+    rm6569 = {name ="RM 65-69",min=65,max=69,equipment="Raw"}   
+    rm7074 = {name ="RM 70-74",min=70,max=74,equipment="Raw"} 
+    rm7579 = {name ="RM 75-79",min=75,max=79,equipment="Raw"} 
+    rm8084 = {name ="RM 80-84",min=80,max=84,equipment="Raw"} 
+    rm8589 = {name ="RM 85-89",min=85,max=89,equipment="Raw"} 
+    rm9094 = {name ="RM 90-94",min=90,max=94,equipment="Raw"} 
+    rm9599 = {name ="RM 95-99",min=95,max=99,equipment="Raw"} 
+
+    #Lifetime
+    lsub = {name ="L Sub",min=35,max=39} 
+    lm4044 = {name ="LM 40-44",min=40,max=44} 
+    lm4549 = {name ="LM 45-49",min=45,max=49}
+    lm5054 = {name ="LM 50-54",min=50,max=54}
+    lm5559 = {name ="LM 55-59",min=55,max=59}  
+    lm6064 = {name ="LM 60-64",min=60,max=64}
+    lm6569 = {name ="LM 65-69",min=65,max=69}   
+    lm7074 = {name ="LM 70-74",min=70,max=74} 
+    lm7579 = {name ="LM 75-79",min=75,max=79}  
+    lm8084 = {name ="LM 80-84",min=80,max=84} 
+    lm8589 = {name ="LM 85-89",min=85,max=89} 
+    lm9094 = {name ="LM 90-94",min=90,max=94} 
+    lm9599 = {name ="LM 95-99",min=95,max=99} 
+
+    #Raw Lifetime
+    rlm4044 = {name ="RLM 40-44",min=40,max=44,equipment="Raw"} 
+    rlm4549 = {name ="RLM 45-49",min=45,max=49,equipment="Raw"}
+    rlm5054 = {name ="RLM 50-54",min=50,max=54,equipment="Raw"}
+    rlm5559 = {name ="RLM 55-59",min=55,max=59,equipment="Raw"}  
+    rlm6064 = {name ="RLM 60-64",min=60,max=64,equipment="Raw"}
+    rlm6569 = {name ="RLM 65-69",min=65,max=69,equipment="Raw"}   
+    rlm7074 = {name ="RLM 70-74",min=70,max=74,equipment="Raw"} 
+    rlm7579 = {name ="RLM 75-79",min=75,max=79,equipment="Raw"}     
+    rlm8084 = {name ="RLM 80-84",min=80,max=84,equipment="Raw"} 
+    rlm8589 = {name ="RLM 85-89",min=85,max=89,equipment="Raw"} 
+    rlm9094 = {name ="RLM 90-94",min=90,max=94,equipment="Raw"} 
+    rlm9599 = {name ="RLM 95-99",min=95,max=99,equipment="Raw"} 
+
+    law_mil = {name ="Law/Mil",min=0,max=999}
+    rlaw_mil = {name ="R Law/Mil",min=0,max=999,equipment="Raw"}
+    llaw_mil = {name ="L Law/Mil",min=0,max=999}
+    life = {name ="Life",min=0,max=999}
+    rlife = {name ="R Life",min=0,max=999,equipment="Raw"}
+    disabled = {name ="Disabled",min=0,max=999}
+    rdisabled = {name ="R Disabled",min=0,max=999,equipment="Raw"}
+    novice = {name ="Novice",min=0,max=999}
+    rnovice = {name ="R Novice",min=0,max=999,equipment="Raw"}
+    blind = {name ="Blind",min=0,max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2009-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","100+"]
+    date_range = ["2009-01-01","9999-01-01"]
+    sex = "F"
+
+#Don't know when the weightclasses were changed, but it was before 2009
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["0000-01-01","2009-12-31"]
+    sex = "M"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2009-12-31"]
+    sex = "F"
+
+[weightclasses.youth_M]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","145","140+","145+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Y","RY","Y 5","RY 5","Y 6-7","RY 6-7","Y 7-8","Y 8-9","Y 9-10","RY 8-9","Y 10-11","RY 10-11","T 12-13", "RT 12-13", "T 14-15", "RT 14-15", "T 16-17", "RT 16-17", "T 18-19","RT 18-19"]
+
+[weightclasses.youth_F]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","90+","100+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"    
+    divisions = ["Y","RY","Y 5","RY 5","Y 6-7","RY 6-7","Y 7-8","Y 8-9","RY 8-9","Y 9-10","Y 10-11","RY 10-11","T 12-13", "RT 12-13", "T 14-15", "RT 14-15", "T 16-17", "RT 16-17", "T 18-19","RT 18-19"]
+
+[exemptions]
+    0001 = ["ExemptWeightClassConsistency"]
+    0402 = ["ExemptWeightClassConsistency"]
+    1705 = ["ExemptWeightClassConsistency"]
