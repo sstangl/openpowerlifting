@@ -43,5 +43,6 @@
     sex = "F"
 
 [exemptions]
+    0013 = ["ExemptWeightClassConsistency"] # Lifter missing weight info.
     0075 = ["ExemptWeightClassConsistency"]
     0168 = ["ExemptWeightClassConsistency"]
