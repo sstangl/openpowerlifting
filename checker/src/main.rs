@@ -195,7 +195,7 @@ fn main() -> Result<(), Box<Error>> {
 
     // Validate arguments.
     let is_compiling: bool = argmatches.is_present("compile");
-    let debug_age_username: Option<&str> = argmatches.value_of("debug-age");
+    let debug_age_username: Option<&str> = argmatches.value_of("age");
     let is_debugging: bool = debug_age_username.is_some();
 
     let search_root = match argmatches.value_of("PATH") {
