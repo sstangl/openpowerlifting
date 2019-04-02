@@ -2009,13 +2009,6 @@ where
             &mut report,
         );
 
-        // Assign the AgeClass based on Age.
-        entry.ageclass = AgeClass::from_age(entry.age);
-        // Or assign the AgeClass based on Division information.
-        if entry.ageclass == AgeClass::None {
-            entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
-        }
-
         // If the Age wasn't assigned yet, infer it from any surrounding information.
         if let Some(meet) = meet {
             if entry.age == Age::None {
@@ -2028,6 +2021,13 @@ where
                     entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
                 }
             }
+        }
+
+        // Assign the AgeClass based on Age.
+        entry.ageclass = AgeClass::from_age(entry.age);
+        // Or assign the AgeClass based on Division information.
+        if entry.ageclass == AgeClass::None {
+            entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
         }
 
         // Calculate points (except for McCulloch, which is Age-dependent).
