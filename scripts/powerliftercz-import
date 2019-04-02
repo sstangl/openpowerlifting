@@ -1,0 +1,536 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Import data from powerlifter.cz
+# Note that to use this script you will need Selenium installed
+# and geckodriver on your path.
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+import os
+import sys
+import time
+import errno
+import logging
+import re
+from selenium.webdriver.remote.remote_connection import LOGGER
+import subprocess
+
+scriptsdir = os.path.dirname(os.path.realpath(__file__))
+importdir = os.getcwd()
+
+try:
+    from oplcsv import Csv
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
+
+
+def get_tabs(url):
+    LOGGER.setLevel(logging.WARNING)
+    profile = webdriver.FirefoxProfile()
+    foptions = Options()
+    foptions.headless = True
+    driver = webdriver.Firefox(profile, options=foptions)
+    driver.get(url)
+
+    tab_button = driver.find_element_by_id(
+        "ctl00_Content_Body_edtEvent")
+
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+    tab_button = soup.find("select", {"id": "ctl00_Content_Body_edtEvent"})
+
+    tabs = tab_button.find_all('option')
+
+    tabs_source = []
+    for tab in tabs:
+        driver.get(tab['value'])
+        tabs_source.append([driver.page_source, tab.text])
+        time.sleep(0.1)
+
+    driver.quit()
+
+    return tabs_source
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    sys.exit(1)
+
+
+def getmeetinfo(soup):
+    csv = Csv()
+    csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
+                      'MeetState', 'MeetTown', 'MeetName']
+
+    name = soup.find('h2').text
+    state = ''
+    date = soup.find('tbody').find('td').text
+    fed = soup.find('tbody').find_all('td')[2].text
+
+    date_split = date.split(' ')
+    year = date_split[2]
+    month = date_split[1]
+    day = date_split[0].replace('.', '')
+
+    if len(day) == 1:
+        day = '0'+day
+
+    date = year+'-'+month+'-'+day
+
+    if fed == 'SAST':
+        country = 'Slovakia'
+
+    country = ''
+    town = ''
+
+    row = [fed, date, country, state, town, name]
+    csv.rows = [row]
+    return csv
+
+
+def expand_colspans(tr, enclosing_soup):
+    ths = tr.find_all('th')
+    for ii in range(len(ths)-1, -1, -1):
+        if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
+            for jj in range(0, (int(ths[ii]['colspan'])-1)):
+                blank_th = enclosing_soup.new_tag('th')
+                ths[ii].insert_after(blank_th)
+    del ths[ii]['colspan']
+
+
+def get_subtable_results(soup, tabname, enclosing_soup):
+    csv = Csv()
+    division = soup.find("h3").text[::-1].replace(',', '.')
+
+    trs = soup.find_all("tr")
+
+    expand_colspans(trs[0], enclosing_soup)
+
+    headers = [x.text.strip()[::-1]
+               for x in trs[0].find_all('th')]
+    results = trs[1:]
+
+    for header in headers:
+        if header in ['Poradie', 'Por.']:
+            csv.fieldnames += ['Place']
+        elif header == '/ RN / TH / Lot icaižaťúS':
+            csv.fieldnames += ['Name', 'BirthYear-BodyweightKg-IGNORE']
+        elif header == 'Oddiel, klub, krajina':
+            csv.fieldnames += ['Country-IGNORE-Team']
+        elif header == 'DR':
+            csv.fieldnames += ['Best3SquatKg']
+        elif header == 'BP':
+            csv.fieldnames += ['Best3BenchKg']
+        elif header == 'ŤM':
+            csv.fieldnames += ['Best3DeadliftKg']
+        elif header == 'Trojboj':
+            csv.fieldnames += ['TotalKg']
+        elif header == 'R+F/MC':
+            csv.fieldnames += ['IGNORE']
+        elif header == 'VT':
+            csv.fieldnames += ['IGNORE']
+        elif header == '1' and tabname == 'Drep':
+            csv.fieldnames += ['Squat1Kg']
+        elif header == '2' and tabname == 'Drep':
+            csv.fieldnames += ['Squat2Kg']
+        elif header == '3' and tabname == 'Drep':
+            csv.fieldnames += ['Squat3Kg']
+        elif header == '4R' and tabname == 'Drep':
+            csv.fieldnames += ['Squat4Kg']
+        elif header == '1' and tabname == 'Benčpres':
+            csv.fieldnames += ['Bench1Kg']
+        elif header == '2' and tabname == 'Benčpres':
+            csv.fieldnames += ['Bench2Kg']
+        elif header == '3' and tabname == 'Benčpres':
+            csv.fieldnames += ['Bench3Kg']
+        elif header == '4R' and tabname == 'Benčpres':
+            csv.fieldnames += ['Bench4Kg']
+        elif header == '1' and tabname == 'Mŕtvy ťah':
+            csv.fieldnames += ['Deadlift1Kg']
+        elif header == '2' and tabname == 'Mŕtvy ťah':
+            csv.fieldnames += ['Deadlift2Kg']
+        elif header == '3' and tabname == 'Mŕtvy ťah':
+            csv.fieldnames += ['Deadlift3Kg']
+        elif header == '4R' and tabname == 'Mŕtvy ťah':
+            csv.fieldnames += ['Deadlift4Kg']
+        elif (header == '' and csv.fieldnames != []
+              and csv.fieldnames[-1] in
+                ['Best3SquatKg', 'Best3BenchKg', 'Best3DeadliftKg']):
+            csv.fieldnames += ['IGNORE']
+        elif header == '':
+            csv.fieldnames += ['']
+        else:
+            print(header)
+
+    csv.fieldnames += ['Division']
+
+    for line in results:
+        row = []
+        for td in line.find_all('td'):
+
+            if td.find('a'):
+                row += [td.find('a').text.replace(',', '.').strip()]
+
+            if td.find('div'):  # then the text is reversed
+                row += [re.sub(r'(?<=\d)NR', '',
+                               td.find('div').text.replace(',', '.')[::-1]).strip()]
+            if not (td.find('a') or td.find('div')):
+                row += [td.text.replace(',', '.').strip()]
+
+        row += [division]
+        csv.rows += [row]
+
+    return csv
+
+
+def get_results(soup, tabname):
+    csv = Csv()
+
+    # Get the results table.
+    content = soup.find("div", {"class": "content"})
+
+    if content is None:
+        error("Couldn't find the results table.")
+
+    subtables = content.find_all("div", {"class": "print-together"})
+    for subtable in subtables:
+        if 'teams' in subtable['class']:
+            continue
+        subtable_csv = get_subtable_results(subtable, tabname, soup)
+        csv.cat(subtable_csv)
+
+    return csv
+
+
+def fix_place(csv):
+    if 'Place' not in csv.fieldnames:
+        return
+    placeidx = csv.index('Place')
+    for row in csv.rows:
+        row[placeidx] = row[placeidx].replace('.', '')
+        if row[placeidx] in ['-', '0']:
+            row[placeidx] = 'DQ'
+
+
+def fix_names(csv):
+    nameidx = csv.index('Name')
+    for row in csv.rows:
+        split_names = row[nameidx].split(' ')
+        first_name = ''
+        last_name = ''
+        ii = 0
+        while ii < len(split_names):
+            if split_names[ii].isupper():
+                last_name = last_name + ' ' + split_names[ii].title()
+                ii += 1
+            else:
+                break
+        while ii < len(split_names):
+            first_name = first_name + ' ' + split_names[ii]
+            ii += 1
+        row[nameidx] = first_name.strip()+' '+last_name.strip()
+
+
+def markevent(csv):
+    assert 'Event' not in csv.fieldnames
+    csv.append_column('Event')
+
+    evtidx = csv.index('Event')
+
+    def getevtindices(csv, fieldl):
+        indexlist = []
+        for f in fieldl:
+            try:
+                indexlist.append(csv.index(f))
+            except ValueError:
+                pass
+        return indexlist
+
+    squatidxl = getevtindices(
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Best3SquatKg'])
+    benchidxl = getevtindices(
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Best3BenchKg'])
+    deadliftidxl = getevtindices(
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Best3DeadliftKg'])
+
+    for row in csv.rows:
+        evt = ''
+        for i in squatidxl:
+            if row[i] != '':
+                evt = evt + 'S'
+                break
+        for i in benchidxl:
+            if row[i] != '':
+                evt = evt + 'B'
+                break
+        for i in deadliftidxl:
+            if row[i] != '':
+                evt = evt + 'D'
+                break
+        row[evtidx] = evt
+
+
+def remove_empty_cols_ignore_fieldname(csv):
+    def iscolempty(csv, i):
+        for row in csv.rows:
+            if row[i]:
+                return False
+        return True
+
+    def getemptyidx(csv):
+        for i, col in enumerate(csv.fieldnames):
+            if iscolempty(csv, i):
+                return i
+        return -1
+
+    while 'IGNORE' in csv.fieldnames:
+        csv.remove_column_by_name('IGNORE')
+
+    while True:
+        idx = getemptyidx(csv)
+        if idx == -1:
+            return
+        csv.remove_column_by_index(idx)
+
+
+# Attempts are given, but not the Best3SquatKg columns, etc.
+def calc_best_lift(csv, col, attemptlist):
+    if col in csv.fieldnames:
+        return
+    for k in attemptlist:
+        assert k in csv.fieldnames
+
+    csv.insert_column(csv.index(attemptlist[-1]) + 1, col)
+
+    for row in csv.rows:
+        best = 0
+        for k in attemptlist:
+            try:
+                attempt = float(row[csv.index(k)])
+            except ValueError:
+                attempt = 0
+            if attempt > best:
+                best = attempt
+        if best > 0:
+            row[csv.index(col)] = str(best)
+
+
+def split_cols(csv):
+    # Fix the headers
+    ii = 0
+
+    while ii < len(csv.fieldnames):
+
+        split_header = csv.fieldnames[ii].split('-')
+        csv.fieldnames[ii] = split_header[0]
+        jj = 1
+        for h in split_header[:0:-1]:
+            csv.fieldnames.insert(ii+1, h)
+            jj += 1
+        ii += jj
+
+    # Fix the rows
+    for row in csv.rows:
+        ii = 0
+
+        while ii < len(row):
+            if row[ii] != '' and row[ii][0] == '/':
+                row[ii] = row[ii][1:].strip()
+
+            split_row = re.split('/| - ', row[ii])
+            row[ii] = split_row[0].strip()
+            jj = 1
+            for r in split_row[:0:-1]:
+                row.insert(ii+1, r.replace("\xa0", '').strip())
+                jj += 1
+            ii += jj
+
+
+def parse_division(csv):
+    if 'Sex' not in csv.fieldnames:
+        csv.append_column('Sex')
+
+    if 'WeightClassKg' not in csv.fieldnames:
+        csv.append_column('WeightClassKg')
+
+    if 'Equipment' not in csv.fieldnames:
+        csv.append_column('Equipment')
+
+    sexidx = csv.index('Sex')
+    dividx = csv.index('Division')
+    wcidx = csv.index('WeightClassKg')
+    eqpidx = csv.index('Equipment')
+
+    for row in csv.rows:
+        row[sexidx] = 'M'
+        if 'Women' in row[dividx]:
+            row[sexidx] = 'F'
+            row[dividx] = row[dividx].replace('Women', '').strip()
+        if 'Men' in row[dividx]:
+            row[sexidx] = 'M'
+            row[dividx] = row[dividx].replace('Men', '').strip()
+
+        m = re.search(
+            r'\d\d(?=kg)|\d\d\.\d(?=kg)|\d\d\d(?=kg)|\+\d\d\\d(?=kg)', row[dividx])
+
+        row[wcidx] = m.group(0)
+
+        if '+' in row[wcidx]:
+            row[wcidx] = row[wcidx].replace('+', '')+'+'
+            row[dividx] = row[dividx].replace(m.group(0)+'kg', '')
+        else:
+            row[dividx] = row[dividx].replace('-'+m.group(0)+'kg', '')
+
+        if 'RAW' in row[dividx]:
+            row[eqpidx] = 'Raw'
+            row[dividx] = row[dividx].replace('RAW', '')
+        if 'EQUIPPED' in row[dividx]:
+            row[eqpidx] = 'Equipped'
+            row[dividx] = row[dividx].replace('EQUIPPED', '')
+
+        row[dividx] = row[dividx].strip()
+
+        if row[dividx] == '':
+            row[dividx] = 'Open'
+
+
+def find_attempts(csv, lifteridx):
+    nameidx = csv.index('Name')
+    sq1idx = csv.index('Squat1Kg')
+    sq2idx = csv.index('Squat2Kg')
+    sq3idx = csv.index('Squat3Kg')
+    sq4idx = csv.index('Squat4Kg')
+    bp1idx = csv.index('Bench1Kg')
+    bp2idx = csv.index('Bench2Kg')
+    bp3idx = csv.index('Bench3Kg')
+    bp4idx = csv.index('Bench4Kg')
+    dl1idx = csv.index('Deadlift1Kg')
+    dl2idx = csv.index('Deadlift2Kg')
+    dl3idx = csv.index('Deadlift3Kg')
+    dl4idx = csv.index('Deadlift4Kg')
+
+    ii = 0
+    delrows = []
+    for ii in range(len(csv.rows)):
+        row = csv.rows[ii]
+        if row[nameidx] == csv.rows[lifteridx][nameidx] and ii != lifteridx:
+            if row[sq1idx] != '':
+                csv.rows[lifteridx][sq1idx] = row[sq1idx]
+                csv.rows[lifteridx][sq2idx] = row[sq2idx]
+                csv.rows[lifteridx][sq3idx] = row[sq3idx]
+                csv.rows[lifteridx][sq4idx] = row[sq4idx]
+                if ii not in delrows:
+                    delrows += [ii]
+            elif row[bp1idx] != '':
+                csv.rows[lifteridx][bp1idx] = row[bp1idx]
+                csv.rows[lifteridx][bp2idx] = row[bp2idx]
+                csv.rows[lifteridx][bp3idx] = row[bp3idx]
+                csv.rows[lifteridx][bp4idx] = row[bp4idx]
+                if ii not in delrows:
+                    delrows += [ii]
+            elif row[dl1idx] != '':
+                csv.rows[lifteridx][dl1idx] = row[dl1idx]
+                csv.rows[lifteridx][dl2idx] = row[dl2idx]
+                csv.rows[lifteridx][dl3idx] = row[dl3idx]
+                csv.rows[lifteridx][dl4idx] = row[dl4idx]
+                if ii not in delrows:
+                    delrows += [ii]
+
+    # Now remove the extra rows
+    for jj in delrows[::-1]:
+        del csv.rows[jj]
+
+
+def matchup_attempts(csv):
+    sq1idx = csv.index('Squat1Kg')
+    bp1idx = csv.index('Bench1Kg')
+    dl1idx = csv.index('Deadlift1Kg')
+
+    ii = 0
+    while ii < len(csv.rows):
+        # If we only have best attempts
+        if (csv.rows[ii][sq1idx] == '' and csv.rows[ii][bp1idx] == ''
+                and csv.rows[ii][dl1idx] == ''):
+            find_attempts(csv, ii)
+        ii += 1
+
+
+def cleanup_cols(csv):
+    for row in csv.rows:
+        for col in row:
+            if col in ['-', '#', '0']:
+                col = ''
+
+
+def main(dirname, url):
+
+    tabs = get_tabs(url)
+
+    soup = BeautifulSoup(tabs[0][0], 'html.parser')
+    meetcsv = getmeetinfo(soup)
+
+    entriescsv = Csv()
+    for tab in tabs:
+        soup = BeautifulSoup(tab[0], 'html.parser')
+        currcsv = get_results(soup, tab[1])
+        entriescsv.cat(currcsv)
+
+    if len(entriescsv.rows) == 0:
+        error("No rows found!")
+
+    split_cols(entriescsv)
+
+    remove_empty_cols_ignore_fieldname(entriescsv)
+    fix_names(entriescsv)
+
+    parse_division(entriescsv)
+
+    matchup_attempts(entriescsv)
+
+    markevent(entriescsv)
+    fix_place(entriescsv)
+
+    cleanup_cols(entriescsv)
+
+    if ('Squat1Kg' in entriescsv.fieldnames and
+            'Best3SquatKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3SquatKg', [
+                       'Squat1Kg', 'Squat2Kg', 'Squat3Kg'])
+    if ('Bench1Kg' in entriescsv.fieldnames and
+            'Best3BenchKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3BenchKg', [
+                       'Bench1Kg', 'Bench2Kg', 'Bench3Kg'])
+    if ('Deadlift1Kg' in entriescsv.fieldnames and
+            'Best3DeadliftKg' not in entriescsv.fieldnames):
+        calc_best_lift(entriescsv, 'Best3DeadliftKg', [
+                       'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
+
+    try:
+        os.makedirs(dirname)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+        else:
+            error("Directory '%s' already exists." % dirname)
+
+    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
+        entriescsv.write(fd)
+    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+        meetcsv.write(fd)
+    with open(dirname + os.sep + 'URL', 'w') as fd:
+        fd.write(url + "\n")
+
+    subprocess.run([scriptsdir+os.sep+"countries.py",
+                    importdir+os.sep+dirname+os.sep+"entries.csv"])
+
+    print("Imported into %s." % dirname)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print("Usage: %s dirname url" % sys.argv[0])
+    main(sys.argv[1], sys.argv[2])
