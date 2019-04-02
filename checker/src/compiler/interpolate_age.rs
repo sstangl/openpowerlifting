@@ -413,14 +413,8 @@ fn infer_from_range(
         let age_on_date = range.age_on(mdate);
 
         match age_on_date {
-            Age::Exact(_) => {
-                if !entry.age.is_exact() {
-                    trace_inference(debug, "Age", &age_on_date, mdate);
-                    entry.age = age_on_date;
-                }
-            }
-            Age::Approximate(_) => {
-                // Don't overwrite an exact Age with an approximate Age.
+            Age::Exact(_) | Age::Approximate(_) => {
+                // Only overwrite Approximate Ages.
                 if !entry.age.is_exact() {
                     trace_inference(debug, "Age", &age_on_date, mdate);
                     entry.age = age_on_date;
