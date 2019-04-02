@@ -11,7 +11,7 @@ use std::fmt;
 /// Holds a minimum and maximum possible BirthDate.
 ///
 /// For purposes of simplicity, the internal Date logic here is not concerned
-/// with whether or not a given Date actually exists, and assume that every
+/// with whether or not a given Date actually exists, and assumes that every
 /// month has exactly 31 days. This is valid because we are only concerned with
 /// whether a given MeetDate is less than or greater than a (possibly
 /// nonexistent) Date.
