@@ -166,12 +166,11 @@ fn main() -> Result<(), Box<Error>> {
         .version("0.1")
         .about("Checks and compiles the OpenPowerlifting database")
         .arg(
-            clap::Arg::with_name("debug-age")
-                .short("a")
-                .long("debug-age")
+            clap::Arg::with_name("age")
+                .long("age")
                 .value_name("username")
                 .takes_value(true)
-                .help("Prints age interpolation info for the given username"),
+                .help("Prints age interpolation debug info for the given username"),
         )
         .arg(
             clap::Arg::with_name("compile")
