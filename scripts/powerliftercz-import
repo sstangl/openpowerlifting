@@ -84,8 +84,12 @@ def getmeetinfo(soup):
     if fed == 'SAST':
         country = 'Slovakia'
 
-    country = ''
+    country = str(soup.find('div', {'class': 'location'}).find_all('span')[1])
+    country = country[country.find('"/>')+3:].replace('</span>', '').strip()
     town = ''
+
+    if country == 'Czech Republic':
+        country = 'Czechia'
 
     row = [fed, date, country, state, town, name]
     csv.rows = [row]
@@ -102,9 +106,9 @@ def expand_colspans(tr, enclosing_soup):
     del ths[ii]['colspan']
 
 
-def get_subtable_results(soup, tabname, enclosing_soup):
+def get_subtable_results(soup, tabname, tablename, enclosing_soup):
     csv = Csv()
-    division = soup.find("h3").text[::-1].replace(',', '.')
+    tablename = tablename.replace(',', '.')
 
     trs = soup.find_all("tr")
 
@@ -157,6 +161,8 @@ def get_subtable_results(soup, tabname, enclosing_soup):
             csv.fieldnames += ['Deadlift3Kg']
         elif header == '4R' and tabname == 'Mŕtvy ťah':
             csv.fieldnames += ['Deadlift4Kg']
+        elif header == 'D':
+            csv.fieldnames += ['Division']
         elif (header == '' and csv.fieldnames != []
               and csv.fieldnames[-1] in
                 ['Best3SquatKg', 'Best3BenchKg', 'Best3DeadliftKg']):
@@ -166,7 +172,7 @@ def get_subtable_results(soup, tabname, enclosing_soup):
         else:
             print(header)
 
-    csv.fieldnames += ['Division']
+    csv.fieldnames += ['TableName']
 
     for line in results:
         row = []
@@ -176,12 +182,12 @@ def get_subtable_results(soup, tabname, enclosing_soup):
                 row += [td.find('a').text.replace(',', '.').strip()]
 
             if td.find('div'):  # then the text is reversed
-                row += [re.sub(r'(?<=\d)NR', '',
+                row += [re.sub(r'(?<=\d)(NR|WR|CR|PR)', '',
                                td.find('div').text.replace(',', '.')[::-1]).strip()]
             if not (td.find('a') or td.find('div')):
                 row += [td.text.replace(',', '.').strip()]
 
-        row += [division]
+        row += [tablename]
         csv.rows += [row]
 
     return csv
@@ -196,11 +202,18 @@ def get_results(soup, tabname):
     if content is None:
         error("Couldn't find the results table.")
 
-    subtables = content.find_all("div", {"class": "print-together"})
-    for subtable in subtables:
-        if 'teams' in subtable['class']:
+    titles = content.find_all('h3')
+    subtables = content.find_all("table")
+    for ii in range(len(subtables)):
+        if not subtables[ii].has_attr('class'):
             continue
-        subtable_csv = get_subtable_results(subtable, tabname, soup)
+        if titles[ii].find('div', {'class': 'reversed'}):
+            title = titles[ii].text[::-1]
+        else:
+            title = titles[ii].text
+
+        subtable_csv = get_subtable_results(
+            subtables[ii], tabname, title, soup)
         csv.cat(subtable_csv)
 
     return csv
@@ -211,6 +224,7 @@ def fix_place(csv):
         return
     placeidx = csv.index('Place')
     for row in csv.rows:
+        row[placeidx] = row[placeidx].split('/')[-1]
         row[placeidx] = row[placeidx].replace('.', '')
         if row[placeidx] in ['-', '0']:
             row[placeidx] = 'DQ'
@@ -322,6 +336,7 @@ def calc_best_lift(csv, col, attemptlist):
 def split_cols(csv):
     # Fix the headers
     ii = 0
+    country_fed_team_idx = csv.index('Country-IGNORE-Team')
 
     while ii < len(csv.fieldnames):
 
@@ -336,6 +351,12 @@ def split_cols(csv):
     # Fix the rows
     for row in csv.rows:
         ii = 0
+        # Sometimes they label the column Country,Fed,Team but there is no fed
+        if row[country_fed_team_idx].count('-') == 1:
+            row[country_fed_team_idx] = row[country_fed_team_idx].replace(
+                ' - ', ' -  - ')
+        elif row[country_fed_team_idx].count('-') == 0:
+            row[country_fed_team_idx] = row[country_fed_team_idx]+' -  - '
 
         while ii < len(row):
             if row[ii] != '' and row[ii][0] == '/':
@@ -350,7 +371,7 @@ def split_cols(csv):
             ii += jj
 
 
-def parse_division(csv):
+def parse_tablename(csv):
     if 'Sex' not in csv.fieldnames:
         csv.append_column('Sex')
 
@@ -360,42 +381,53 @@ def parse_division(csv):
     if 'Equipment' not in csv.fieldnames:
         csv.append_column('Equipment')
 
+    if 'Division' not in csv.fieldnames:
+        csv.append_column('Division')
+
     sexidx = csv.index('Sex')
-    dividx = csv.index('Division')
+    tablenameidx = csv.index('TableName')
     wcidx = csv.index('WeightClassKg')
     eqpidx = csv.index('Equipment')
+    dividx = csv.index('Division')
 
     for row in csv.rows:
+
         row[sexidx] = 'M'
-        if 'Women' in row[dividx]:
+        if any(x in row[tablenameidx] for x in ['Women', 'Ženy']):
             row[sexidx] = 'F'
-            row[dividx] = row[dividx].replace('Women', '').strip()
-        if 'Men' in row[dividx]:
+            row[tablenameidx] = row[tablenameidx].replace(
+                'Women', '').replace('Ženy', '').strip()
+        if any(x in row[tablenameidx] for x in ['Men', 'Dorastenci']):
             row[sexidx] = 'M'
-            row[dividx] = row[dividx].replace('Men', '').strip()
+            row[tablenameidx] = row[tablenameidx].replace(
+                'Men', '').replace('Dorastenci', '').strip()
 
         m = re.search(
-            r'\d\d(?=kg)|\d\d\.\d(?=kg)|\d\d\d(?=kg)|\+\d\d\\d(?=kg)', row[dividx])
+            r'\d\d(?=kg)|\d\d\.\d(?=kg)|\d\d\d(?=kg)|\+\d\d\\d(?=kg)', row[tablenameidx])
+        if m:
+            row[wcidx] = m.group(0)
 
-        row[wcidx] = m.group(0)
-
-        if '+' in row[wcidx]:
-            row[wcidx] = row[wcidx].replace('+', '')+'+'
-            row[dividx] = row[dividx].replace(m.group(0)+'kg', '')
-        else:
-            row[dividx] = row[dividx].replace('-'+m.group(0)+'kg', '')
-
-        if 'RAW' in row[dividx]:
+            if '+' in row[wcidx]:
+                row[wcidx] = row[wcidx].replace('+', '')+'+'
+                row[tablenameidx] = row[dividx].replace(m.group(0)+'kg', '')
+            else:
+                row[tablenameidx] = row[tablenameidx].replace(
+                    '-'+m.group(0)+'kg', '')
+        if 'RAW' in row[tablenameidx]:
             row[eqpidx] = 'Raw'
-            row[dividx] = row[dividx].replace('RAW', '')
-        if 'EQUIPPED' in row[dividx]:
+            row[tablenameidx] = row[tablenameidx].replace('RAW', '')
+        if 'EQUIPPED' in row[tablenameidx]:
             row[eqpidx] = 'Equipped'
-            row[dividx] = row[dividx].replace('EQUIPPED', '')
+            row[tablenameidx] = row[tablenameidx].replace('EQUIPPED', '')
 
-        row[dividx] = row[dividx].strip()
+        row[tablenameidx] = row[tablenameidx].strip()
+
+        if row[dividx] == '':
+            row[dividx] = row[tablenameidx]
 
         if row[dividx] == '':
             row[dividx] = 'Open'
+    csv.fieldnames[tablenameidx] = 'IGNORE'
 
 
 def find_attempts(csv, lifteridx):
@@ -446,24 +478,25 @@ def find_attempts(csv, lifteridx):
 
 
 def matchup_attempts(csv):
-    sq1idx = csv.index('Squat1Kg')
-    bp1idx = csv.index('Bench1Kg')
-    dl1idx = csv.index('Deadlift1Kg')
+    if 'Squat1Kg' in csv.fieldnames:
+        sq1idx = csv.index('Squat1Kg')
+        bp1idx = csv.index('Bench1Kg')
+        dl1idx = csv.index('Deadlift1Kg')
 
-    ii = 0
-    while ii < len(csv.rows):
-        # If we only have best attempts
-        if (csv.rows[ii][sq1idx] == '' and csv.rows[ii][bp1idx] == ''
-                and csv.rows[ii][dl1idx] == ''):
-            find_attempts(csv, ii)
-        ii += 1
+        ii = 0
+        while ii < len(csv.rows):
+            # If we only have best attempts
+            if (csv.rows[ii][sq1idx] == '' and csv.rows[ii][bp1idx] == ''
+                    and csv.rows[ii][dl1idx] == ''):
+                find_attempts(csv, ii)
+            ii += 1
 
 
 def cleanup_cols(csv):
     for row in csv.rows:
-        for col in row:
-            if col in ['-', '#', '0']:
-                col = ''
+        for ii in range(len(row)):
+            if row[ii] in ['-', '#', '0', '?']:
+                row[ii] = ''
 
 
 def main(dirname, url):
@@ -481,18 +514,18 @@ def main(dirname, url):
 
     if len(entriescsv.rows) == 0:
         error("No rows found!")
-
+    # Needs to be called before split_cols
+    fix_place(entriescsv)
     split_cols(entriescsv)
+
+    parse_tablename(entriescsv)
 
     remove_empty_cols_ignore_fieldname(entriescsv)
     fix_names(entriescsv)
 
-    parse_division(entriescsv)
-
     matchup_attempts(entriescsv)
 
     markevent(entriescsv)
-    fix_place(entriescsv)
 
     cleanup_cols(entriescsv)
 
