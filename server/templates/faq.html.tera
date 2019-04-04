@@ -55,12 +55,6 @@
 
 <p>Records and rankings are calculated off bodyweight, not weightclass, so your lifts will still count in the right places.</p>
 
-<h2>Can you add an age group selector? (Juniors, Masters, etc.)</h2>
-
-<p>We'd like to. So: yes, eventually. The problem is that the division data as reported by federations is extremely messy, and we need to clean it up before it becomes useful. At the moment, if we added such a control, the results would be extremely misleading.</p>
-
-<p>The core team probably won't be able to work on this any time soon, but the issue is particularly beginner-friendly, although time-consuming. If you are interested in helping with division data cleanup, please look at <a href="https://gitlab.com/openpowerlifting/opl-data/issues/57">Issue #57</a>.</p>
-
 <h2>How does this site work? Do you just download results from the federations?</h2>
 
 <p>Hopefully in the future that will be possible, but right now that isn't possible, because the majority of federations are operating with extremely old and bad technology: PDF files instead of databases.</p>
