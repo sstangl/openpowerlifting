@@ -122,7 +122,20 @@ impl<'d> EntriesRow<'d> {
     fn from(entry: &'d Entry, meet_id: u32, lifter_id: u32) -> EntriesRow<'d> {
         // McCulloch points are calculated as late as possible because they are
         // Age-dependent, and the lifter's Age may be inferred by post-checker phases.
-        let mcpts = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, entry.age);
+        let est_age = if !entry.age.is_none() {
+            entry.age
+        } else {
+            // From known bounds, choose the one that's closest to Senior (~30).
+            entry.ageclass.to_range().map_or(Age::None, |(min, max)| {
+                if max < Age::Exact(30) {
+                    max
+                } else {
+                    min
+                }
+            })
+        };
+
+        let mcculloch = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, est_age);
 
         EntriesRow {
             meet_id,
@@ -153,7 +166,7 @@ impl<'d> EntriesRow<'d> {
             totalkg: entry.totalkg,
             place: entry.place,
             wilks: entry.wilks,
-            mcculloch: mcpts,
+            mcculloch,
             glossbrenner: entry.glossbrenner,
             ipfpoints: entry.ipfpoints,
             tested: if entry.tested { "Yes" } else { "" },

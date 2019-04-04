@@ -189,6 +189,20 @@ impl Age {
             Age::Approximate(_) | Age::None => false,
         }
     }
+
+    /// Whether the given Age is an Age::None.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Age;
+    /// assert!(!Age::Exact(23).is_none());
+    /// assert!(!Age::Approximate(23).is_none());
+    /// assert!(Age::None.is_none());
+    /// ```
+    pub fn is_none(self) -> bool {
+        self == Age::None
+    }
 }
 
 impl Default for Age {

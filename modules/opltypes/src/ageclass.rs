@@ -121,6 +121,42 @@ impl AgeClass {
             AgeClass::None
         }
     }
+
+    /// Returns a tuple of the inclusive Age range bounds for the AgeClass.
+    pub fn to_range(self) -> Option<(Age, Age)> {
+        match self {
+            AgeClass::Class5_12 => Some((Age::Exact(5), Age::Exact(12))),
+            AgeClass::Class13_15 => Some((Age::Exact(13), Age::Exact(15))),
+            AgeClass::Class16_17 => Some((Age::Exact(16), Age::Exact(17))),
+            AgeClass::Class18_19 => Some((Age::Exact(18), Age::Exact(19))),
+            AgeClass::Class20_23 => Some((Age::Exact(20), Age::Exact(23))),
+            AgeClass::Class24_34 => Some((Age::Exact(24), Age::Exact(34))),
+            AgeClass::Class35_39 => Some((Age::Exact(35), Age::Exact(39))),
+            AgeClass::Class40_44 => Some((Age::Exact(40), Age::Exact(44))),
+            AgeClass::Class45_49 => Some((Age::Exact(45), Age::Exact(49))),
+            AgeClass::Class50_54 => Some((Age::Exact(50), Age::Exact(54))),
+            AgeClass::Class55_59 => Some((Age::Exact(55), Age::Exact(59))),
+            AgeClass::Class60_64 => Some((Age::Exact(60), Age::Exact(64))),
+            AgeClass::Class65_69 => Some((Age::Exact(65), Age::Exact(69))),
+            AgeClass::Class70_74 => Some((Age::Exact(70), Age::Exact(74))),
+            AgeClass::Class75_79 => Some((Age::Exact(75), Age::Exact(79))),
+            AgeClass::Class80_999 => Some((Age::Exact(80), Age::Exact(255))),
+            AgeClass::None => None,
+        }
+    }
+
+    /// Whether the given AgeClass is an AgeClass::None.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::AgeClass;
+    /// assert!(!AgeClass::Class20_23.is_none());
+    /// assert!(AgeClass::None.is_none());
+    /// ```
+    pub fn is_none(self) -> bool {
+        self == AgeClass::None
+    }
 }
 
 #[cfg(test)]
@@ -129,6 +165,7 @@ mod tests {
 
     #[test]
     fn from_age() {
-        assert_eq!(AgeClass::from_age(Age::Approximate(40)), AgeClass::Class40_44);
+        let approx_40 = Age::Approximate(40);
+        assert_eq!(AgeClass::from_age(approx_40), AgeClass::Class40_44);
     }
 }
