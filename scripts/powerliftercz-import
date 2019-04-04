@@ -36,20 +36,20 @@ def get_tabs(url):
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
-    tab_button = driver.find_element_by_id(
-        "ctl00_Content_Body_edtEvent")
-
     soup = BeautifulSoup(driver.page_source, 'html.parser')
 
     tab_button = soup.find("select", {"id": "ctl00_Content_Body_edtEvent"})
 
-    tabs = tab_button.find_all('option')
+    if tab_button:
+        tabs = tab_button.find_all('option')
 
-    tabs_source = []
-    for tab in tabs:
-        driver.get(tab['value'])
-        tabs_source.append([driver.page_source, tab.text])
-        time.sleep(0.1)
+        tabs_source = []
+        for tab in tabs:
+            driver.get(tab['value'])
+            tabs_source.append([driver.page_source, tab.text])
+            time.sleep(0.1)
+    else:  # otherwise the meet data is all on one page
+        tabs_source = [[driver.page_source, '']]
 
     driver.quit()
 
@@ -163,6 +163,8 @@ def get_subtable_results(soup, tabname, tablename, enclosing_soup):
             csv.fieldnames += ['Deadlift4Kg']
         elif header == 'D':
             csv.fieldnames += ['Division']
+        elif header == 'Wilks':
+            csv.fieldnames += ['IGNORE']
         elif (header == '' and csv.fieldnames != []
               and csv.fieldnames[-1] in
                 ['Best3SquatKg', 'Best3BenchKg', 'Best3DeadliftKg']):
@@ -170,7 +172,8 @@ def get_subtable_results(soup, tabname, tablename, enclosing_soup):
         elif header == '':
             csv.fieldnames += ['']
         else:
-            print(header)
+            csv.fieldnames += [header]
+            print('Unknown header '+header)
 
     csv.fieldnames += ['TableName']
 
@@ -336,7 +339,10 @@ def calc_best_lift(csv, col, attemptlist):
 def split_cols(csv):
     # Fix the headers
     ii = 0
-    country_fed_team_idx = csv.index('Country-IGNORE-Team')
+    if 'Country-IGNORE-Team' in csv.fieldnames:
+        country_fed_team_idx = csv.index('Country-IGNORE-Team')
+    else:
+        country_fed_team_idx = None
 
     while ii < len(csv.fieldnames):
 
@@ -351,12 +357,13 @@ def split_cols(csv):
     # Fix the rows
     for row in csv.rows:
         ii = 0
-        # Sometimes they label the column Country,Fed,Team but there is no fed
-        if row[country_fed_team_idx].count('-') == 1:
-            row[country_fed_team_idx] = row[country_fed_team_idx].replace(
-                ' - ', ' -  - ')
-        elif row[country_fed_team_idx].count('-') == 0:
-            row[country_fed_team_idx] = row[country_fed_team_idx]+' -  - '
+        if country_fed_team_idx:
+            # Sometimes they label the column Country,Fed,Team but there is no fed
+            if row[country_fed_team_idx].count('-') == 1:
+                row[country_fed_team_idx] = row[country_fed_team_idx].replace(
+                    ' - ', ' -  - ')
+            elif row[country_fed_team_idx].count('-') == 0:
+                row[country_fed_team_idx] = row[country_fed_team_idx]+' -  - '
 
         while ii < len(row):
             if row[ii] != '' and row[ii][0] == '/':
@@ -397,10 +404,10 @@ def parse_tablename(csv):
             row[sexidx] = 'F'
             row[tablenameidx] = row[tablenameidx].replace(
                 'Women', '').replace('Ženy', '').strip()
-        if any(x in row[tablenameidx] for x in ['Men', 'Dorastenci']):
+        if any(x in row[tablenameidx] for x in ['Men', 'Muži']):
             row[sexidx] = 'M'
             row[tablenameidx] = row[tablenameidx].replace(
-                'Men', '').replace('Dorastenci', '').strip()
+                'Men', '').replace('Muži', '').strip()
 
         m = re.search(
             r'\d\d(?=kg)|\d\d\.\d(?=kg)|\d\d\d(?=kg)|\+\d\d\\d(?=kg)', row[tablenameidx])
