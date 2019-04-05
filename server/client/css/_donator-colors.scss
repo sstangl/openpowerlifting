@@ -144,6 +144,13 @@
   background-image: linear-gradient(to right, $neongreen, $lightgray);
 }
 
+.green_to_white {
+  $green: #51DA27;
+  $white: #EDF2F4;
+  @include gradient-prereqs($green);
+  background-image: linear-gradient(to right, $green, $white);
+}
+
 .pink_to_purple {
   $pink: #FF69B4;
   $purple: #AE76FF;
