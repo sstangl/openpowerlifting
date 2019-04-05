@@ -297,7 +297,9 @@
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.sweden}}">
+  <option value="all-sweden" {% if selection.federation == "AllSweden" %}selected{% endif %}>{{strings.selectors.fed.all_sweden}}</option>
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF - Svenska Styrkelyft Förbundet [IPF]</option>
+  <option value="wrpf-sweden" {% if selection.federation == "WRPF-Sweden" %}selected{% endif %}>WRPF Sweden</option>
 </optgroup>
 <optgroup label="{{strings.country.thailand}}">
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
