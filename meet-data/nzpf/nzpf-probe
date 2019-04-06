@@ -22,7 +22,7 @@ BASEURL_SPORTY = "http://www.sporty.co.nz/asset/downloadasset?id="
 
 URL_WBOP = "http://www.sporty.co.nz/wbop/Results-1"
 URL_AKL = "http://www.sporty.co.nz/aucklandpowerlifting/Results"
-URL_CD = "http://cdpowerlifting.org.nz/records-and-results/results/"
+URL_CD = "https://www.sporty.co.nz/WellingtonCentralPowerlifting/Results-1/tab1#"
 URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/" \
           "Northland-Champs-3-lift-Bench-results-Nominat/2018-2"
 URL_NTL_NOV = "http://www.sporty.co.nz/northlandpowerlifting/" \
@@ -101,21 +101,6 @@ def getmeetlist_sporty_partial(html, code):
             urls.append(url)
     return urls
 
-# Probe for the Central Districts site
-
-
-def getmeetlist_cd(html):
-    soup = BeautifulSoup(html, 'html.parser')
-    div = soup.find("div", {"id": "post-694"})
-    urls = []
-
-    for a in div.find_all('a'):
-        url = a['href']
-        if url not in urls:
-            urls.append(url)
-
-    return urls
-
 
 def main():
     meetlist = []
@@ -135,14 +120,14 @@ def main():
     html_OTA = oplprobe.gethtml(URL_OTA)
     meetlist_OTA = getmeetlist_sporty(html_OTA)
 
-    # html_CD = oplprobe.gethtml(URL_CD)
-    # meetlist_CD = getmeetlist_cd(html_CD)
+    html_CD = oplprobe.gethtml(URL_CD)
+    meetlist_CD = getmeetlist_sporty_partial(html_CD, "797402")
 
     html_NZPF = oplprobe.gethtml(URL_NZPF)
     meetlist_NZPF = getmeetlist_sporty(html_NZPF)
 
     meetlist = meetlist_WBOP + meetlist_AKL + meetlist_NTL + \
-        meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV  # + meetlist_CD
+        meetlist_OTA + meetlist_NZPF + meetlist_NTL_NOV + meetlist_CD
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
