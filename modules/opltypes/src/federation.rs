@@ -929,6 +929,11 @@ pub enum Federation {
     /// Xtreme Powerlifting Coalition.
     #[strum(to_string = "XPC", serialize = "xpc")]
     XPC,
+
+    /// Polish version of the XPC
+    #[serde(rename = "XPC-Poland")]
+    #[strum(to_string = "XPC-Poland", serialize = "xpc-poland")]
+    XPCPoland,
 }
 
 impl Federation {
@@ -1148,6 +1153,7 @@ impl Federation {
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
             Federation::XPC => false,
+            Federation::XPCPoland => false,
         }
     }
 
@@ -1368,6 +1374,7 @@ impl Federation {
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
             Federation::XPC => Some(Country::USA),
+            Federation::XPCPoland => Some(Country::Poland),
         }
     }
 
@@ -1599,6 +1606,7 @@ impl Federation {
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
             Federation::XPC => PointsSystem::Wilks,
+            Federation::XPCPoland => PointsSystem::Wilks,
         }
     }
 }
