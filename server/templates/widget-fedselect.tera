@@ -295,7 +295,9 @@
   <option value="wpc-sa" {% if selection.federation == "WPC-SA" %}selected{% endif %}>WPC-SA - WPC South Africa</option>
 </optgroup>
 <optgroup label="{{strings.country.spain}}">
+  <option value="all-spain" {% if selection.federation == "AllSpain" %}selected{% endif %}>{{strings.selectors.fed.all_spain}}</option>
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
+  <option value="wrpf-spain" {% if selection.federation == "WRPF-Spain" %}selected{% endif %}>WRPF Spain</option>
 </optgroup>
 <optgroup label="{{strings.country.sweden}}">
   <option value="all-sweden" {% if selection.federation == "AllSweden" %}selected{% endif %}>{{strings.selectors.fed.all_sweden}}</option>
