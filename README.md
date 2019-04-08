@@ -57,7 +57,7 @@ Log out and log back in to allow `~/.cargo/bin` to be part of your default shell
 Install dependencies:
 
 ```bash
-sudo dnf install make npm python3-toml python3-beautifulsoup4 python3-flake8 ansible parallel
+sudo dnf install make npm python3-toml python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js
 ```
 
 Build the project and run the server:
