@@ -13,44 +13,37 @@ pub struct Context<'a> {
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: WeightUnits,
-    pub fed_statuses: Vec<FederationStatus<'a>>,
+    pub fed_statuses: Vec<FederationStatus>,
     pub num_entries: u32,
     pub num_meets: u32,
     pub num_lifters: u32,
 }
 
 #[derive(Serialize)]
-pub struct FederationStatus<'a> {
+pub struct FederationStatus {
     pub fed: Federation,
-    pub status: &'a str,
+    pub status: &'static str,
     pub meet_count: usize,
 }
 
-impl<'a> FederationStatus<'a> {
-    fn from(fed: Federation, status: &'a str, meet_count: usize) -> FederationStatus<'a> {
+impl FederationStatus {
+    fn new(fed: Federation) -> FederationStatus {
         FederationStatus {
             fed,
-            status,
-            meet_count,
+            status: "Incomplete",
+            meet_count: 0,
         }
     }
 }
 
 impl<'a> Context<'a> {
     pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale) -> Context<'a> {
-        let mut fed_statuses: Vec<FederationStatus> = vec![];
+        let mut statuses: Vec<FederationStatus> =
+            Federation::iter().map(FederationStatus::new).collect();
 
-        for federation in Federation::iter() {
-            let fed_status = "Incomplete";
-            // TODO: Make this more efficient
-            let fed_meet_count = opldb
-                .get_meets()
-                .iter()
-                .filter(|m| m.federation == federation)
-                .count();
-            let fed_status =
-                FederationStatus::from(federation, fed_status, fed_meet_count);
-            fed_statuses.push(fed_status);
+        for meet in opldb.get_meets() {
+            let idx = meet.federation as usize;
+            statuses[idx].meet_count += 1;
         }
 
         Context {
@@ -58,7 +51,7 @@ impl<'a> Context<'a> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            fed_statuses,
+            fed_statuses: statuses,
             num_entries: opldb.get_entries().len() as u32,
             num_meets: opldb.get_meets().len() as u32,
             num_lifters: opldb.get_lifters().len() as u32,
