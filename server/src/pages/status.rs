@@ -67,6 +67,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BPU as usize].status = complete;
     statuses[HERC as usize].status = complete;
     statuses[PA as usize].status = complete;
+    statuses[ProRaw as usize].status = complete;
     statuses[RPS as usize].status = complete;
     statuses[SCT as usize].status = complete;
     statuses[THSPA as usize].status = complete;
@@ -168,6 +169,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IrishPF as usize].format = html;
     statuses[IrishPO as usize].format = xls_unstructured;
     statuses[PA as usize].format = html;
+    statuses[ProRaw as usize].format = xls_unstructured;
     statuses[RAW as usize].format = pdf_unstructured;
     statuses[RPS as usize].format = html;
     statuses[SPF as usize].format = html;
@@ -203,6 +205,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IrishPF as usize].ease = easy;
     statuses[IrishPO as usize].ease = easy;
     statuses[PA as usize].ease = easy;
+    statuses[ProRaw as usize].ease = medium;
     statuses[RAW as usize].ease = difficult;
     statuses[RPS as usize].ease = easy;
     statuses[SPF as usize].ease = easy;
@@ -237,6 +240,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[PA as usize].maintainers = email_sean;
+    statuses[ProRaw as usize].maintainers = email_sean;
     statuses[RPS as usize].maintainers = email_sean;
     statuses[ScottishPL as usize].maintainers = email_robby;
     statuses[SPF as usize].maintainers = email_sean;
