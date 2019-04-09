@@ -20,15 +20,23 @@
     <table>
       <thead><tr>
         <th>Name</th>
+        <th>Meets Entered</th>
         <th>Status</th>
-        <th>Meets In Database</th>
+	<th>New Meet Detection</th>
+	<th>Results Format</th>
+	<th>Ease of Import</th>
+        <th>Maintainers</th>
       </tr></thead>
       <tbody>
       {% for this in fed_statuses %}
         <tr>
           <td>{{this.fed}}</td>
-          <td>{{this.status}}</td>
           <td>{{this.meet_count}}</td>
+          <td>{{this.status}}</td>
+	  <td>{{this.has_probe}}</td>
+	  <td>{{this.format}}</td>
+	  <td>{{this.ease}}</td>
+          <td>{{this.maintainers | safe}}</td>
         </tr>
       {% endfor %}
       </tbody>
