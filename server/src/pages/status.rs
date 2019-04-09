@@ -200,6 +200,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     // Maintainership variables.
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
+    let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
 
     // Maintainership information.
@@ -211,12 +212,14 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CPU as usize].maintainers = email_sean;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
+    statuses[GPCGB as usize].maintainers = email_robby;
     statuses[HERC as usize].maintainers = email_sean;
     statuses[IPF as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[PA as usize].maintainers = email_sean;
     statuses[RPS as usize].maintainers = email_sean;
+    statuses[ScottishPL as usize].maintainers = email_robby;
     statuses[SPF as usize].maintainers = email_sean;
     statuses[USAPL as usize].maintainers = email_sean;
     statuses[USPA as usize].maintainers = email_sean;
