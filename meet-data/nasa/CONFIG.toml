@@ -21,6 +21,7 @@ smp = {name="smp",min=40,max=999,sex='M'} #Submasters Pure?
 mp = {name="mp",min=40,max=999,sex='M'} #Masters Pure?
 so = {name="so",min=0,max=999,sex='M'} #Special olympics
 hc = {name="hc",min=0,max=999,sex='M'} #Handicapped
+mevol = {name="mevol",min=0,max=999,sex='M'} #No idea.
 
 wopen = {name="wopen", min=0, max=999,sex='F'}
 wyouth = {name="wyouth", min=5, max=12,sex='F'}
