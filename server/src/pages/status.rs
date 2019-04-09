@@ -129,6 +129,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[UnitedPC as usize].has_probe = yes;
     statuses[UPA as usize].has_probe = yes;
     statuses[USAPL as usize].has_probe = yes;
+    statuses[USPA as usize].has_probe = yes;
     statuses[USPF as usize].has_probe = yes;
     statuses[WABDL as usize].has_probe = yes;
     statuses[WPAU as usize].has_probe = yes;
