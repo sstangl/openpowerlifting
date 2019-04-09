@@ -62,6 +62,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     // Completeness.
     let complete = "Complete";
     statuses[_365Strong as usize].status = complete;
+    statuses[APU as usize].status = complete;
     statuses[BB as usize].status = complete;
     statuses[BPU as usize].status = complete;
     statuses[HERC as usize].status = complete;
@@ -149,6 +150,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let pdf_unstructured = "PDF (Unstructured)";
     let xls_unstructured = "XLS (Unstructured)";
     statuses[_365Strong as usize].format = xls_unstructured;
+    statuses[APU as usize].format = pdf_structured;
     statuses[BB as usize].format = xls_unstructured;
     statuses[BP as usize].format = pdf_unstructured;
     statuses[BPF as usize].format = xls_unstructured;
@@ -177,6 +179,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let medium = "Medium";
     let difficult = "Difficult";
     statuses[_365Strong as usize].ease = difficult;
+    statuses[APU as usize].ease = easy;
     statuses[BB as usize].ease = difficult;
     statuses[BPF as usize].ease = easy;
     statuses[BPU as usize].ease = easy;
@@ -206,6 +209,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
     statuses[APF as usize].maintainers = email_gem;
+    statuses[APU as usize].maintainers = email_sean;
     statuses[BP as usize].maintainers = email_jo;
     statuses[BPF as usize].maintainers = email_gem;
     statuses[BPU as usize].maintainers = email_gem;
