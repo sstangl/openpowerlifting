@@ -171,6 +171,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IPF as usize].format = html;
     statuses[IrishPF as usize].format = html;
     statuses[IrishPO as usize].format = xls_unstructured;
+    statuses[NASA as usize].format = pdf_structured;
     statuses[PA as usize].format = html;
     statuses[ProRaw as usize].format = xls_unstructured;
     statuses[RAW as usize].format = pdf_unstructured;
@@ -207,6 +208,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IPF as usize].ease = easy;
     statuses[IrishPF as usize].ease = easy;
     statuses[IrishPO as usize].ease = easy;
+    statuses[NASA as usize].ease = easy;
     statuses[PA as usize].ease = easy;
     statuses[ProRaw as usize].ease = medium;
     statuses[RAW as usize].ease = difficult;
@@ -221,6 +223,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WRPFAUS as usize].ease = impossible;
 
     // Maintainership variables.
+    let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
@@ -241,6 +244,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[HERC as usize].maintainers = email_sean;
     statuses[IPF as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
+    statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[PA as usize].maintainers = email_sean;
     statuses[ProRaw as usize].maintainers = email_sean;
