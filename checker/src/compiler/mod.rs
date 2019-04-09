@@ -4,7 +4,7 @@ mod interpolate_age;
 pub use interpolate_age::{interpolate_age, interpolate_age_debug_for};
 
 mod interpolate_country;
-pub use interpolate_country::interpolate_country;
+pub use interpolate_country::{interpolate_country, interpolate_country_debug_for};
 
 mod make_csv;
 pub use make_csv::make_csv;

@@ -1,39 +1,139 @@
 //! Implementation of Country interpolation.
 
+use colored::*;
 use opltypes::Country;
 
 use crate::{AllMeetData, EntryIndex, LifterMap};
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_found_initial(debug: bool, country: Country, path: &Option<String>) {
+    if debug {
+        println!(
+            "{} {:#?} {} {}",
+            "Found initial Country".green(),
+            country,
+            "in".green(),
+            path.as_ref().unwrap()
+        );
+    }
+}
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_matched(debug: bool, country: Country, path: &Option<String>) {
+    if debug {
+        println!(
+            "{} {:#?} {} {}",
+            "Matched Country".green(),
+            country,
+            "in".green(),
+            path.as_ref().unwrap()
+        );
+    }
+}
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_conflict(debug: bool, country: Country, path: &Option<String>) {
+    if debug {
+        println!(
+            "{} {:#?} {} {}",
+            "Conflict with Country".bold().red(),
+            country,
+            "in".bold().red(),
+            path.as_ref().unwrap()
+        );
+    }
+}
+
+/// Helper function for debug-mode printing to keep the code legible.
+#[inline]
+fn trace_inferred(debug: bool, country: Country, path: &Option<String>) {
+    if debug {
+        println!(
+            "{} {:#?} {} {}",
+            "Inferred Country".bold().green(),
+            country,
+            "in".bold().green(),
+            path.as_ref().unwrap()
+        );
+    }
+}
 
 /// Returns a single Country that is consistent for all the Entries.
 fn get_consistent_country(
     meetdata: &AllMeetData,
     indices: &[EntryIndex],
+    debug: bool,
 ) -> Option<Country> {
     let mut country = None;
-    for index in indices {
-        let entry = meetdata.get_entry(*index);
+
+    for &index in indices {
+        // Get the MeetPath for more helpful debugging output.
+        let path: Option<String> = if debug {
+            Some(meetdata.get_meet(index).path.clone())
+        } else {
+            None
+        };
+
+        let entry = meetdata.get_entry(index);
         if entry.country.is_some() {
-            if country.is_some() && country != entry.country {
-                return None;
+            if country.is_some() {
+                if country != entry.country {
+                    trace_conflict(debug, entry.country.unwrap(), &path);
+                    return None;
+                } else {
+                    trace_matched(debug, entry.country.unwrap(), &path);
+                }
+            } else {
+                trace_found_initial(debug, entry.country.unwrap(), &path);
+                country = entry.country;
             }
-            country = entry.country;
         }
     }
     country
 }
 
+/// Country interpolation for a single lifter's entries.
+fn interpolate_country_single_lifter(
+    meetdata: &mut AllMeetData,
+    indices: &[EntryIndex],
+    debug: bool,
+) {
+    if let Some(country) = get_consistent_country(&meetdata, &indices, debug) {
+        for &index in indices {
+            // Get the MeetPath for more helpful debugging output.
+            let path: Option<String> = if debug {
+                Some(meetdata.get_meet(index).path.clone())
+            } else {
+                None
+            };
+
+            trace_inferred(debug, country, &path);
+            meetdata.get_entry_mut(index).country = Some(country);
+        }
+    }
+}
+
+/// Public-facing entry point for debugging a single lifter's interpolation.
+pub fn interpolate_country_debug_for(
+    meetdata: &mut AllMeetData,
+    liftermap: &LifterMap,
+    username: &str,
+) {
+    match liftermap.get(username) {
+        Some(indices) => interpolate_country_single_lifter(meetdata, indices, true),
+        None => println!("Username '{}' not found", username),
+    }
+}
+
 /// Attempts to infer a Country for a lifter from surrounding Entry data.
 pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
-    for (_username, indexvec) in liftermap {
+    for (_username, indices) in liftermap {
         // Interpolation requires multiple entries.
-        if indexvec.len() < 2 {
-            continue;
-        }
-
-        if let Some(country) = get_consistent_country(&meetdata, &indexvec) {
-            for index in indexvec {
-                meetdata.get_entry_mut(*index).country = Some(country);
-            }
+        if indices.len() >= 2 {
+            interpolate_country_single_lifter(meetdata, indices, false);
         }
     }
 }

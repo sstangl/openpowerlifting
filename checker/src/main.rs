@@ -6,7 +6,7 @@ extern crate colored; // Allows outputting pretty terminal colors.
 extern crate rayon; // A work-stealing auto-parallelism library.
 extern crate walkdir; // Allows walking through a directory, looking at files.
 
-use checker::{AllMeetData, SingleMeetData};
+use checker::{compiler, AllMeetData, SingleMeetData};
 use colored::*;
 use rayon::prelude::*;
 use walkdir::{DirEntry, WalkDir};
@@ -173,6 +173,13 @@ fn main() -> Result<(), Box<Error>> {
                 .help("Prints age interpolation debug info for the given username"),
         )
         .arg(
+            clap::Arg::with_name("country")
+                .long("country")
+                .value_name("username")
+                .takes_value(true)
+                .help("Prints country interpolation debug info for the given username"),
+        )
+        .arg(
             clap::Arg::with_name("compile")
                 .short("c")
                 .long("compile")
@@ -196,7 +203,9 @@ fn main() -> Result<(), Box<Error>> {
     // Validate arguments.
     let is_compiling: bool = argmatches.is_present("compile");
     let debug_age_username: Option<&str> = argmatches.value_of("age");
-    let is_debugging: bool = debug_age_username.is_some();
+    let debug_country_username: Option<&str> = argmatches.value_of("country");
+    let is_debugging: bool =
+        debug_age_username.is_some() || debug_country_username.is_some();
 
     let search_root = match argmatches.value_of("PATH") {
         None => meet_data_root.clone(),
@@ -335,19 +344,25 @@ fn main() -> Result<(), Box<Error>> {
     // The default mode without arguments just performs data checks.
     if is_compiling || is_debugging {
         let liftermap = meetdata.create_liftermap();
-        checker::compiler::interpolate_country(&mut meetdata, &liftermap);
+
+        // Perform country interpolation.
+        if let Some(u) = debug_country_username {
+            compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, u);
+            process::exit(0); // TODO: Complain if someone passes --compile.
+        }
+        compiler::interpolate_country(&mut meetdata, &liftermap);
 
         // Perform age interpolation.
         if let Some(u) = debug_age_username {
-            checker::compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, u);
+            compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
-        checker::compiler::interpolate_age(&mut meetdata, &liftermap);
+        compiler::interpolate_age(&mut meetdata, &liftermap);
 
         // Perform final compilation if requested.
         if is_compiling {
             let buildpath = project_root.join("build");
-            checker::compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
+            compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
         }
     }
 
