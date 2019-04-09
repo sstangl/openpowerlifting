@@ -226,6 +226,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
+    let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
 
@@ -233,19 +234,27 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].maintainers = email_sean;
     statuses[APF as usize].maintainers = email_gem;
     statuses[APU as usize].maintainers = email_sean;
+    statuses[AusPL as usize].maintainers = email_matt;
     statuses[BP as usize].maintainers = email_jo;
     statuses[BPF as usize].maintainers = email_gem;
     statuses[BPU as usize].maintainers = email_gem;
+    statuses[CAPO as usize].maintainers = email_matt;
     statuses[CPF as usize].maintainers = email_sean;
     statuses[CPU as usize].maintainers = email_sean;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
+    statuses[GPCAUS as usize].maintainers = email_matt;
     statuses[GPCGB as usize].maintainers = email_robby;
+    statuses[GPCNZ as usize].maintainers = email_matt;
     statuses[HERC as usize].maintainers = email_sean;
     statuses[IPF as usize].maintainers = email_jo;
+    statuses[IPLNZ as usize].maintainers = email_matt;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
+    statuses[NZPF as usize].maintainers = email_matt;
+    statuses[OceaniaPF as usize].maintainers = email_matt;
+    statuses[ORPF as usize].maintainers = email_matt;
     statuses[PA as usize].maintainers = email_sean;
     statuses[ProRaw as usize].maintainers = email_sean;
     statuses[RPS as usize].maintainers = email_sean;
@@ -260,6 +269,8 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WPC as usize].maintainers = email_gem;
     statuses[WPCFinland as usize].maintainers = email_gem;
     statuses[WPCFrance as usize].maintainers = email_gem;
+    statuses[WPNZ as usize].maintainers = email_matt;
+    statuses[WRPFAUS as usize].maintainers = email_matt;
 
     // Don't ask for maintainership applications for defunct, completed federations.
     statuses[BB as usize].maintainers = "";
