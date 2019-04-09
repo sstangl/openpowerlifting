@@ -65,6 +65,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BB as usize].status = complete;
     statuses[HERC as usize].status = complete;
     statuses[PA as usize].status = complete;
+    statuses[RPS as usize].status = complete;
     statuses[SCT as usize].status = complete;
     statuses[THSPA as usize].status = complete;
     statuses[THSWPA as usize].status = complete;
