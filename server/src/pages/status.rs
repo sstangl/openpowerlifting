@@ -146,6 +146,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     // Results format.
     let database = "Database";
     let html = "HTML";
+    let jpg = "JPG Images";
     let pdf_structured = "PDF (Structured)";
     let pdf_unstructured = "PDF (Unstructured)";
     let xls_unstructured = "XLS (Unstructured)";
@@ -173,11 +174,13 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[USPA as usize].format = pdf_structured;
     statuses[WelshPA as usize].format = pdf_unstructured;
     statuses[WPC as usize].format = xls_unstructured;
+    statuses[WRPFAUS as usize].format = jpg;
 
     // Subjective ease of importation.
     let easy = "Easy";
     let medium = "Medium";
     let difficult = "Difficult";
+    let impossible = "Impossible";
     statuses[_365Strong as usize].ease = difficult;
     statuses[APU as usize].ease = easy;
     statuses[BB as usize].ease = difficult;
@@ -199,6 +202,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[USAPL as usize].ease = easy;
     statuses[USPA as usize].ease = easy;
     statuses[WPC as usize].ease = medium;
+    statuses[WRPFAUS as usize].ease = impossible;
 
     // Maintainership variables.
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
