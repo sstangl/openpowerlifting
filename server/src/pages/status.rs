@@ -67,6 +67,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BPU as usize].status = complete;
     statuses[DSF as usize].status = complete;
     statuses[HERC as usize].status = complete;
+    statuses[IPF as usize].status = complete;
     statuses[IrishPF as usize].status = complete;
     statuses[PA as usize].status = complete;
     statuses[ProRaw as usize].status = complete;
@@ -256,11 +257,13 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[APF as usize].maintainers = email_gem;
     statuses[APU as usize].maintainers = email_sean;
     statuses[AusPL as usize].maintainers = email_matt;
+    statuses[BAWLA as usize].maintainers = email_jo;
     statuses[BP as usize].maintainers = email_jo;
     statuses[BPF as usize].maintainers = email_gem;
     statuses[BPU as usize].maintainers = email_gem;
     statuses[BVDK as usize].maintainers = email_romi;
     statuses[CAPO as usize].maintainers = email_matt;
+    statuses[CommonwealthPF as usize].maintainers = email_jo;
     statuses[CPF as usize].maintainers = email_sean;
     statuses[CPU as usize].maintainers = email_sean;
     statuses[EPA as usize].maintainers = email_jo;
@@ -271,6 +274,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[HERC as usize].maintainers = email_sean;
     statuses[IPF as usize].maintainers = email_jo;
     statuses[IPLNZ as usize].maintainers = email_matt;
+    statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
