@@ -157,21 +157,28 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].format = xls_unstructured;
     statuses[APF as usize].format = xls_unstructured;
     statuses[APU as usize].format = pdf_structured;
+    statuses[AusPL as usize].format = pdf_structured;
     statuses[BB as usize].format = xls_unstructured;
     statuses[BDFPA as usize].format = jpg;
     statuses[BP as usize].format = pdf_unstructured;
     statuses[BPF as usize].format = xls_unstructured;
     statuses[BPU as usize].format = xls_unstructured;
+    statuses[CAPO as usize].format = pdf_unstructured;
     statuses[CPF as usize].format = pdf_unstructured;
     statuses[CPU as usize].format = database;
     statuses[DSF as usize].format = database;
     statuses[EPA as usize].format = pdf_unstructured;
     statuses[EPF as usize].format = html;
+    statuses[GPCAUS as usize].format = html;
     statuses[IPA as usize].format = xls_unstructured;
     statuses[IPF as usize].format = html;
+    statuses[IPLNZ as usize].format = pdf_structured;
     statuses[IrishPF as usize].format = html;
     statuses[IrishPO as usize].format = xls_unstructured;
     statuses[NASA as usize].format = pdf_structured;
+    statuses[NZPF as usize].format = pdf_unstructured;
+    statuses[OceaniaPF as usize].format = pdf_structured;
+    statuses[ORPF as usize].format = pdf_structured;
     statuses[PA as usize].format = html;
     statuses[ProRaw as usize].format = xls_unstructured;
     statuses[RAW as usize].format = pdf_unstructured;
@@ -184,6 +191,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[USPA as usize].format = pdf_structured;
     statuses[WelshPA as usize].format = pdf_unstructured;
     statuses[WPC as usize].format = xls_unstructured;
+    statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = jpg;
 
     // Subjective ease of importation.
@@ -194,21 +202,28 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].ease = difficult;
     statuses[APF as usize].ease = difficult;
     statuses[APU as usize].ease = easy;
+    statuses[AusPL as usize].ease = medium;
     statuses[BB as usize].ease = difficult;
     statuses[BDFPA as usize].ease = impossible;
     statuses[BP as usize].ease = medium;
     statuses[BPF as usize].ease = easy;
     statuses[BPU as usize].ease = easy;
+    statuses[CAPO as usize].ease = medium;
     statuses[CPF as usize].ease = medium;
     statuses[CPU as usize].ease = easy;
     statuses[DSF as usize].ease = easy;
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
+    statuses[GPCAUS as usize].ease = easy;
     statuses[IPA as usize].ease = difficult;
     statuses[IPF as usize].ease = easy;
+    statuses[IPLNZ as usize].ease = medium;
     statuses[IrishPF as usize].ease = easy;
     statuses[IrishPO as usize].ease = easy;
     statuses[NASA as usize].ease = easy;
+    statuses[NZPF as usize].ease = difficult;
+    statuses[OceaniaPF as usize].ease = medium;
+    statuses[ORPF as usize].ease = difficult;
     statuses[PA as usize].ease = easy;
     statuses[ProRaw as usize].ease = medium;
     statuses[RAW as usize].ease = difficult;
@@ -220,6 +235,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[USAPL as usize].ease = easy;
     statuses[USPA as usize].ease = easy;
     statuses[WPC as usize].ease = medium;
+    statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = impossible;
 
     // Maintainership variables.
