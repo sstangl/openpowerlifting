@@ -830,6 +830,7 @@ pub enum YearSelection {
     Year1967,
     Year1966,
     Year1965,
+    Year1964,
 }
 
 impl FromStr for YearSelection {
@@ -893,6 +894,7 @@ impl FromStr for YearSelection {
             "1967" => Ok(YearSelection::Year1967),
             "1966" => Ok(YearSelection::Year1966),
             "1965" => Ok(YearSelection::Year1965),
+            "1964" => Ok(YearSelection::Year1964),
             _ => Err(()),
         }
     }
@@ -958,6 +960,7 @@ impl YearSelection {
             YearSelection::Year1967 => Some(1967),
             YearSelection::Year1966 => Some(1966),
             YearSelection::Year1965 => Some(1965),
+            YearSelection::Year1964 => Some(1964),
         }
     }
 }

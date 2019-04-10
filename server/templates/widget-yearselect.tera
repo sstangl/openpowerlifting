@@ -55,4 +55,5 @@
   <option value="1967"{% if selection.year == "Year1967" %} selected{% endif %}>1967</option>
   <option value="1966"{% if selection.year == "Year1966" %} selected{% endif %}>1966</option>
   <option value="1965"{% if selection.year == "Year1965" %} selected{% endif %}>1965</option>
+  <option value="1964"{% if selection.year == "Year1964" %} selected{% endif %}>1964</option>
 </select>
