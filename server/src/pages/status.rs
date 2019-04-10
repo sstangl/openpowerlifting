@@ -155,6 +155,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let pdf_unstructured = "PDF (Unstructured)";
     let xls_unstructured = "XLS (Unstructured)";
     statuses[_365Strong as usize].format = xls_unstructured;
+    statuses[APA as usize].format = html;
     statuses[APF as usize].format = xls_unstructured;
     statuses[APU as usize].format = pdf_structured;
     statuses[AusPL as usize].format = pdf_structured;
@@ -200,6 +201,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let difficult = "Difficult";
     let impossible = "Impossible";
     statuses[_365Strong as usize].ease = difficult;
+    statuses[APA as usize].ease = medium;
     statuses[APF as usize].ease = difficult;
     statuses[APU as usize].ease = easy;
     statuses[AusPL as usize].ease = medium;
