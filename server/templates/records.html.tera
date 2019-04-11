@@ -57,7 +57,7 @@
       <tr>
         <td>{{this.weightclass}}</td>
         <td>{{this.rank}}</td>
-        <td>{% if this.lifter %}<a class="{{this.lifter.color}}" href="/u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% if this.lifter.flair == "bbbc" %} <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo" style="padding-left: 6px;"/>{% endif %}{% endif %}</td>
+        <td>{% if this.lifter %}<a class="{{this.lifter.color}}" href="/u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% endif %}</td>
         <td>{{this.weight_lifted}}</td>
         <td>{% if this.date %}<a href="/m/{{this.path | safe}}">{{this.date}}</a>{% endif %}</td>
         <td>{{this.federation}}</td>

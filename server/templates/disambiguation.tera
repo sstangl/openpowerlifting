@@ -14,7 +14,7 @@
     <h1>Lifter Disambiguation</h1>
 
     {% for variant in variants %}
-      <h2><a href="/u/{{variant.lifter.username}}"><span class="{{variant.lifter.color}}">{{variant.localized_name}}</span> ({{variant.lifter_sex}}){% if variant.lifter.instagram %}<a href="https://instagram.com/{{variant.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if variant.lifter.vkontakte %}<a href="https://vk.com/{{variant.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% if variant.lifter.flair == "bbbc" %} <img src="https://raw.githubusercontent.com/sstangl/openpowerlifting-static/gh-pages/bbbc.png" class="bosslogo" style="padding-left: 6px;"/>{% endif %}</a></h2>
+      <h2><a href="/u/{{variant.lifter.username}}"><span class="{{variant.lifter.color}}">{{variant.localized_name}}</span> ({{variant.lifter_sex}}){% if variant.lifter.instagram %}<a href="https://instagram.com/{{variant.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if variant.lifter.vkontakte %}<a href="https://vk.com/{{variant.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</a></h2>
 
       <table>
         <thead><tr>
