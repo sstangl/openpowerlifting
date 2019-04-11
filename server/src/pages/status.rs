@@ -189,6 +189,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[RAW as usize].format = pdf_unstructured;
     statuses[RPS as usize].format = html;
     statuses[SPF as usize].format = html;
+    statuses[SwissPL as usize].format = pdf_structured;
     statuses[THSPA as usize].format = database;
     statuses[THSWPA as usize].format = database;
     statuses[UPA as usize].format = pdf_unstructured;
@@ -237,6 +238,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[RAW as usize].ease = difficult;
     statuses[RPS as usize].ease = easy;
     statuses[SPF as usize].ease = easy;
+    statuses[SwissPL as usize].ease = difficult;
     statuses[THSPA as usize].ease = medium;
     statuses[THSWPA as usize].ease = medium;
     statuses[UPA as usize].ease = difficult;

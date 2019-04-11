@@ -657,6 +657,10 @@ pub enum Federation {
     #[strum(to_string = "SVNL", serialize = "svnl")]
     SVNL,
 
+    /// Swiss IPF affiliate. Previously affiliated to many untested federations.
+    #[strum(to_string = "SwissPL", serialize = "swisspl")]
+    SwissPL,
+
     /// Thai IPF affiliate.
     #[strum(to_string = "ThaiPF", serialize = "thaipf")]
     ThaiPF,
@@ -1100,6 +1104,7 @@ impl Federation {
             Federation::SSA => false,
             Federation::SSF => true,
             Federation::SVNL => true,
+            Federation::SwissPL => false,
             Federation::ThaiPF => true,
             Federation::THSPA => true,
             Federation::THSWPA => true,
@@ -1323,6 +1328,7 @@ impl Federation {
             Federation::SSA => Some(Country::USA),
             Federation::SSF => Some(Country::Sweden),
             Federation::SVNL => Some(Country::Finland),
+            Federation::SwissPL => Some(Country::Switzerland),
             Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
             Federation::THSWPA => Some(Country::USA),
@@ -1557,6 +1563,7 @@ impl Federation {
             Federation::SSA => PointsSystem::Wilks,
             Federation::SSF => Federation::ipf_rules_on(date),
             Federation::SVNL => Federation::ipf_rules_on(date),
+            Federation::SwissPL => PointsSystem::Wilks,
             Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,
