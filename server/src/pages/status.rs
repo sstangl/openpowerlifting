@@ -152,6 +152,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let database = "Database";
     let html = "HTML";
     let jpg = "JPG Images";
+    let magazines = "Magazines";
     let pdf_structured = "PDF (Structured)";
     let pdf_unstructured = "PDF (Unstructured)";
     let xls_unstructured = "XLS (Unstructured)";
@@ -169,6 +170,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CAPO as usize].format = pdf_unstructured;
     statuses[CPF as usize].format = pdf_unstructured;
     statuses[CPU as usize].format = database;
+    statuses[DBKV as usize].format = magazines;
     statuses[DSF as usize].format = database;
     statuses[EPA as usize].format = pdf_unstructured;
     statuses[EPF as usize].format = html;
@@ -216,6 +218,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CAPO as usize].ease = medium;
     statuses[CPF as usize].ease = medium;
     statuses[CPU as usize].ease = easy;
+    statuses[DBKV as usize].ease = medium;
     statuses[DSF as usize].ease = easy;
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
@@ -266,6 +269,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CommonwealthPF as usize].maintainers = email_jo;
     statuses[CPF as usize].maintainers = email_sean;
     statuses[CPU as usize].maintainers = email_sean;
+    statuses[DBKV as usize].maintainers = email_romi;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
     statuses[GPCAUS as usize].maintainers = email_matt;

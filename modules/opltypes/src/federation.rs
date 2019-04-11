@@ -238,6 +238,10 @@ pub enum Federation {
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
 
+    /// Deutscher Bodybuilding und Kraftsport Verband, first German federation.
+    #[strum(to_string = "DBKV", serialize = "dbkv")]
+    DBKV,
+
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
@@ -993,6 +997,7 @@ impl Federation {
             Federation::CPU => true,
             Federation::CRPEBA => false,
             Federation::CSST => true,
+            Federation::DBKV => false,
             Federation::CzechiaUA => false,
             Federation::DSF => true,
             Federation::EPA => true,
@@ -1215,6 +1220,7 @@ impl Federation {
             //Initially Ukraine,until annexation
             Federation::CRPEBA => Some(Country::Russia),
             Federation::CSST => Some(Country::Czechia),
+            Federation::DBKV => Some(Country::Germany),
             Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
             Federation::EPA => Some(Country::England),
@@ -1448,6 +1454,7 @@ impl Federation {
             Federation::CPU => Federation::ipf_rules_on(date),
             Federation::CRPEBA => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
+            Federation::DBKV => PointsSystem::Wilks,
             Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
             Federation::EPA => Federation::ipf_rules_on(date),
