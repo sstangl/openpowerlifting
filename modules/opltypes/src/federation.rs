@@ -171,6 +171,10 @@ pub enum Federation {
     #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
 
+    /// Bundesverbandes Deutscher Gewichtheber, pre-BVDK.
+    #[strum(to_string = "BVDG", serialize = "bvdg")]
+    BVDG,
+
     /// Bundesverband Deutscher Kraftdreikämpf, IPF.
     #[strum(to_string = "BVDK", serialize = "bvdk")]
     BVDK,
@@ -987,6 +991,7 @@ impl Federation {
             Federation::BPF => false,
             Federation::BPO => false,
             Federation::BPU => false,
+            Federation::BVDG => true,
             Federation::BVDK => true,
             Federation::CAPO => false,
             Federation::CAPONZ => false,
@@ -1210,6 +1215,7 @@ impl Federation {
             Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
             Federation::BPU => Some(Country::UK),
+            Federation::BVDG => Some(Country::Germany),
             Federation::BVDK => Some(Country::Germany),
             Federation::CAPO => Some(Country::Australia),
             Federation::CAPONZ => Some(Country::NewZealand),
@@ -1446,6 +1452,7 @@ impl Federation {
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Wilks,
+            Federation::BVDG => PointsSystem::Wilks,
             Federation::BVDK => Federation::ipf_rules_on(date),
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
