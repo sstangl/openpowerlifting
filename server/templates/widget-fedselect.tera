@@ -304,6 +304,10 @@
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF - Svenska Styrkelyft Förbundet [IPF]</option>
   <option value="wrpf-sweden" {% if selection.federation == "WRPF-Sweden" %}selected{% endif %}>WRPF Sweden</option>
 </optgroup>
+<optgroup label="{{strings.country.switzerland}}">
+  <option value="all-switzerland" {% if selection.federation == "AllSwitzerland" %}selected{% endif %}>{{strings.selectors.fed.all_switzerland}}</option>
+  <option value="swisspl" {% if selection.federation == "SwissPL" %}selected{% endif %}>Swiss Powerlifting</option>
+</optgroup>
 <optgroup label="{{strings.country.thailand}}">
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
 </optgroup>

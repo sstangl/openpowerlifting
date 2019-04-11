@@ -71,6 +71,8 @@ pub enum MetaFederation {
     AllSouthAfrica,
     #[strum(to_string = "all-sweden")]
     AllSweden,
+    #[strum(to_string = "all-switzerland")]
+    AllSwitzerland,
     #[strum(to_string = "all-uk")]
     AllUK,
     #[strum(to_string = "all-ukraine")]
@@ -264,6 +266,11 @@ impl MetaFederation {
                 entry.lifter_country == Some(Country::Sweden)
                     || (entry.lifter_country == None
                         && meet.federation.home_country() == Some(Country::Sweden))
+            }
+            MetaFederation::AllSwitzerland => {
+                entry.lifter_country == Some(Country::Switzerland)
+                    || (entry.lifter_country == None
+                        && meet.federation.home_country() == Some(Country::Switzerland))
             }
             MetaFederation::AllUK => {
                 // UK lifters can set UK records abroad, except in Ireland.
