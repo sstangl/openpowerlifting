@@ -698,6 +698,7 @@ pub enum Federation {
     UPC,
 
     /// United Powerlifting Congress Germany. WPC, GPC, WUAP.
+    #[serde(rename = "UPC-Germany")]
     #[strum(to_string = "UPC-Germany", serialize="upc-germany")]
     UPCGermany,
 
