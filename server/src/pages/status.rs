@@ -136,6 +136,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[UkrainePF as usize].has_probe = yes;
     statuses[UnitedPC as usize].has_probe = yes;
     statuses[UPA as usize].has_probe = yes;
+    statuses[UPCGermany as usize].has_probe = yes;
     statuses[USAPL as usize].has_probe = yes;
     statuses[USPA as usize].has_probe = yes;
     statuses[USPF as usize].has_probe = yes;
@@ -194,6 +195,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[THSPA as usize].format = database;
     statuses[THSWPA as usize].format = database;
     statuses[UPA as usize].format = pdf_unstructured;
+    statuses[UPCGermany as usize].format = pdf_unstructured;
     statuses[USAPL as usize].format = database;
     statuses[USPA as usize].format = pdf_structured;
     statuses[WelshPA as usize].format = pdf_unstructured;
@@ -244,6 +246,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[THSPA as usize].ease = medium;
     statuses[THSWPA as usize].ease = medium;
     statuses[UPA as usize].ease = difficult;
+    statuses[UPCGermany as usize].ease = difficult;
     statuses[USAPL as usize].ease = easy;
     statuses[USPA as usize].ease = easy;
     statuses[WPC as usize].ease = medium;

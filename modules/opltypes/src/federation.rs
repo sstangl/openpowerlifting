@@ -697,6 +697,10 @@ pub enum Federation {
     #[strum(to_string = "UPC", serialize = "upc")]
     UPC,
 
+    /// United Powerlifting Congress Germany. WPC, GPC, WUAP.
+    #[strum(to_string = "UPC-Germany", serialize="upc-germany")]
+    UPCGermany,
+
     /// Ukrainian Powerlifting Federation, IPF.
     #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
     UkrainePF,
@@ -1118,6 +1122,7 @@ impl Federation {
             Federation::UkrainePO => false,
             Federation::UPA => false,
             Federation::UPC => false,
+            Federation::UPCGermany => false,
             Federation::UkrainePF => true,
             Federation::UnitedPC => false,
             Federation::USAUA => false,
@@ -1343,6 +1348,7 @@ impl Federation {
             Federation::UkrainePO => Some(Country::Ukraine),
             Federation::UPA => Some(Country::USA),
             Federation::UPC => Some(Country::Ukraine),
+            Federation::UPCGermany => Some(Country::Germany),
             Federation::UkrainePF => Some(Country::Ukraine),
             Federation::UnitedPC => Some(Country::Germany),
             Federation::USAUA => Some(Country::USA),
@@ -1579,6 +1585,7 @@ impl Federation {
             Federation::UkrainePO => PointsSystem::Wilks,
             Federation::UPA => PointsSystem::Wilks,
             Federation::UPC => PointsSystem::Wilks,
+            Federation::UPCGermany => PointsSystem::Glossbrenner,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
             Federation::UnitedPC => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
