@@ -1,0 +1,19 @@
+:%s/DR/  /ge
+:%s/,/./ge
+:%s/   /  /ge
+:%s/  / /ge
+:%s/  / /ge
+:%s/  / /ge
+:%s/  / /ge
+:%s/  / /ge
+:%s/  / /ge
+:%s/ /,/g
+:%s/,disq\./,DQ/ge
+:%s/,disq/,DQ/ge
+:%s/,xxx,/,,/ge
+:%s/,xxx,/,,/ge
+:%s/,x/,-/ge
+:%s/M,/M /ge
+:%s/T,/T /ge
+:%s/,open,/,Open,/ge
+:wq
