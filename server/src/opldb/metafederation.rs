@@ -326,6 +326,7 @@ impl MetaFederation {
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::BVDK => match meet.federation {
+                Federation::BVDG => true, // Precursor to the BVDK.
                 Federation::BVDK => true,
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Germany)

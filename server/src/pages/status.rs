@@ -166,6 +166,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BP as usize].format = pdf_unstructured;
     statuses[BPF as usize].format = xls_unstructured;
     statuses[BPU as usize].format = xls_unstructured;
+    statuses[BVDG as usize].format = magazines;
     statuses[BVDK as usize].format = pdf_unstructured;
     statuses[CAPO as usize].format = pdf_unstructured;
     statuses[CPF as usize].format = pdf_unstructured;
@@ -215,6 +216,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BP as usize].ease = medium;
     statuses[BPF as usize].ease = easy;
     statuses[BPU as usize].ease = easy;
+    statuses[BVDG as usize].ease = difficult;
     statuses[BVDK as usize].ease = medium;
     statuses[CAPO as usize].ease = medium;
     statuses[CPF as usize].ease = medium;
@@ -266,6 +268,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[BP as usize].maintainers = email_jo;
     statuses[BPF as usize].maintainers = email_gem;
     statuses[BPU as usize].maintainers = email_gem;
+    statuses[BVDG as usize].maintainers = email_romi;
     statuses[BVDK as usize].maintainers = email_romi;
     statuses[CAPO as usize].maintainers = email_matt;
     statuses[CommonwealthPF as usize].maintainers = email_jo;
