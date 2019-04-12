@@ -8,7 +8,7 @@ WeightClassKg,Sex,Division,Place,JapaneseName,Name,Age,Team,BodyweightKg,Best3Sq
 56,M,Juniors,1,古賀 光範,,21,芝浦工業大学,55.5,210,,127.5,,215,,552.5,SBD,Single-ply
 56,M,Juniors,2,白石 匡,,22,個 人,55.5,175,,117.5,,200,,492.5,SBD,Single-ply
 56,M,Juniors,3,加藤 良典,,20,名城大学,55.6,165,,102.5,,175,,442.5,SBD,Single-ply
-60,M,Juniors,1,角館 武,,22,ZERO IN,60,235,,171,172.5,210,,616,SBD,Single-ply
+60,M,Juniors,1,角館 武,Kakudate Takeshi,22,ZERO IN,60,235,,171,172.5,210,,616,SBD,Single-ply
 60,M,Juniors,2,前川 正範,,20,岡山商科大学,59.25,180,,125,,195,,500,SBD,Single-ply
 60,M,Juniors,3,増田 洋一,,19,トライデント専門学校,59.6,185,,110,,190,,485,SBD,Single-ply
 67.5,M,Juniors,1,岡本 孝義,,20,岡山商科大学,65.1,185,,130,,230,,545,SBD,Single-ply
@@ -22,7 +22,7 @@ WeightClassKg,Sex,Division,Place,JapaneseName,Name,Age,Team,BodyweightKg,Best3Sq
 44,F,Masters 1,1,神永 淳子,,45,チーム度肝,42.2,75,,52.5,,100,,227.5,SBD,Single-ply
 48,F,Masters 1,1,瀧澤 和子,,42,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,47.8,95,,67.5,,120,,282.5,SBD,Single-ply
 56,F,Masters 1,DQ,酒井 千春,,40,個 人,55.3,110,,,,,,,SBD,Single-ply
-60,F,Masters 1,1,石川 和子,,47,さぬきスポーツ,60,140,,90,,155,,385,SBD,Single-ply
+60,F,Masters 1,1,石川 和子,Kazuko Ishikawa,47,さぬきスポーツ,60,140,,90,,155,,385,SBD,Single-ply
 67.5,F,Masters 1,1,鎌倉 由美子,,40,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,63.35,115,,60,,145,,320,SBD,Single-ply
 48,F,Masters 2,1,松本 晴美,Harumi Matsumoto,49,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,47.5,110,,70,,132.5,135,312.5,SBD,Single-ply
 48,F,Masters 2,2,渡辺 敬子,,52,五泉フィットネスクラブ,47.9,110,,62.5,,115,,287.5,SBD,Single-ply
@@ -30,19 +30,19 @@ WeightClassKg,Sex,Division,Place,JapaneseName,Name,Age,Team,BodyweightKg,Best3Sq
 56,F,Masters 2,1,木村 初子,Hatsuko Kimura,51,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,54.8,160,,85,,155,,400,SBD,Single-ply
 56,F,Masters 2,2,黒澤 幸子,,51,ビタミンハウス,55.6,125,,70,,120,,315,SBD,Single-ply
 60,F,Masters 2,1,田中 小姫,,53,スーパーｸﾗﾌﾞ名古屋,58.9,90,,62.5,,95,,247.5,SBD,Single-ply
-75,F,Masters 2,DQ,瀬川 照枝,,52,マルヤジム,69.2,,,,,,,,SBD,Single-ply
+75,F,Masters 2,DQ,瀬川 照枝,Terue Segawa,52,マルヤジム,69.2,,,,,,,,SBD,Single-ply
 52,M,Masters 1,1,清水 浩,Hiroshi Shimizu,45,愛三工業,51.95,155,,110,,170,,435,SBD,Single-ply
 52,M,Masters 1,2,藤原 春悦,,41,ＡＫＩＴＡﾊﾟﾜｰｸﾗﾌﾞ,51.9,150,,100,,175,,425,SBD,Single-ply
 56,M,Masters 1,1,外輪 保弘,,48,広島ﾄﾚｰﾆﾝｸﾞｾﾝﾀｰ,55.7,192.5,,95,,195,,482.5,SBD,Single-ply
 56,M,Masters 1,2,鈴木 俊彦,,41,個 人,55.9,160,,117.5,,187.5,,465,SBD,Single-ply
 60,M,Masters 1,1,柴田 仁志,,44,個 人,59.7,190,,137.5,,212.5,,540,SBD,Single-ply
-67.5,M,Masters 1,1,高橋 雅之,,43,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,67.45,240,,180,,217.5,,637.5,SBD,Single-ply
+67.5,M,Masters 1,1,高橋 雅之,Masayuki Takahashi,43,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,67.45,240,,180,,217.5,,637.5,SBD,Single-ply
 67.5,M,Masters 1,2,多田 敏彦,,47,ｴｲﾌﾞﾙFC,66.85,225,,155,,230,,610,SBD,Single-ply
-67.5,M,Masters 1,3,川辺 一郎,,42,パワーフィットネス,67.2,210,,177.5,,185,,572.5,SBD,Single-ply
+67.5,M,Masters 1,3,川辺 一郎,Ichiro Kawabe,42,パワーフィットネス,67.2,210,,177.5,,185,,572.5,SBD,Single-ply
 67.5,M,Masters 1,4,寺門 浩之,,43,水戸市協会,66.85,185,,140,,210,,535,SBD,Single-ply
 67.5,M,Masters 1,5,原 吉則,,45,高松ﾄﾚｰﾆﾝｸﾞｸﾗﾌﾞ,67.4,185,,105,,235,,525,SBD,Single-ply
 67.5,M,Masters 1,DQ,坪井 信二,,44,愛三工業,66.7,,,,,,,,SBD,Single-ply
-75,M,Masters 1,1,伊藤 学,,41,マツモトジム,74.45,252.5,,165,,257.5,,675,SBD,Single-ply
+75,M,Masters 1,1,伊藤 学,Manabu Ito,41,マツモトジム,74.45,252.5,,165,,257.5,,675,SBD,Single-ply
 75,M,Masters 1,2,松田 隆明,,44,イズミフィットネスｸﾗﾌﾞ,74.75,261.5,,150,,230,,641.5,SBD,Single-ply
 75,M,Masters 1,3,小ニ田 弘,,46,マツモトジム,74.3,220,,145,,265,,630,SBD,Single-ply
 75,M,Masters 1,4,中根 明宏,,47,小樽パワー協会,73.8,240,,160,,220,,620,SBD,Single-ply
@@ -72,9 +72,9 @@ WeightClassKg,Sex,Division,Place,JapaneseName,Name,Age,Team,BodyweightKg,Best3Sq
 60,M,Masters 3,1,相田 俊明,,62,イズミフィットネスｸﾗﾌﾞ,59.5,180,,105,,190,,475,SBD,Single-ply
 60,M,Masters 3,2,政川 秀男,,64,大館愛好会,58.2,140,,77.5,,190,,407.5,SBD,Single-ply
 60,M,Masters 3,3,岩上 勝夫,,59,チームこん平,59.4,142.5,,110,,155,,407.5,SBD,Single-ply
-67.5,M,Masters 3,1,馬籠 徹,,60,宇都宮タイガース,67.3,140,,155,,145,,440,SBD,Single-ply
+67.5,M,Masters 3,1,馬籠 徹,Toru Magome,60,宇都宮タイガース,67.3,140,,155,,145,,440,SBD,Single-ply
 67.5,M,Masters 3,2,大澤 英夫,,62,仙台体育館,67,140,,100,,180,,420,SBD,Single-ply
 67.5,M,Masters 3,3,山井 啓一,,64,ｱｻﾏﾄﾚｰﾆﾝｸﾞクラブ,65.15,160,,80,,165,,405,SBD,Single-ply
-75,M,Masters 3,1,佐藤 俊彦,,62,個 人,74.45,220,,100,,225,,545,SBD,Single-ply
+75,M,Masters 3,1,佐藤 俊彦,Toshihiko Sato,62,個 人,74.45,220,,100,,225,,545,SBD,Single-ply
 75,M,Masters 3,2,木下 秀人,,63,入間ＰＣ,74.6,125,,100,,162.5,,387.5,SBD,Single-ply
-75,M,Masters 3,3,大澤 充,,61,ＯＫ ＧＹＭ,72.1,135,,90,,160,,385,SBD,Single-ply
+75,M,Masters 3,3,大澤 充,Mitsuru Osawa,61,ＯＫ ＧＹＭ,72.1,135,,90,,160,,385,SBD,Single-ply

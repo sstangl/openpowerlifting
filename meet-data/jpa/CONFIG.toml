@@ -1,17 +1,20 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
-    juniors = {name = "Juniors",min=0,max=23}
-    subjuniors = {name = "Sub-Juniors",min=0,max=18}
-    masters1 = {name = "Masters 1",min=39,max=999}
-    masters2 = {name = "Masters 2",min=49,max=999}
-    masters3 = {name = "Masters 3",min=59,max=999}
-    masters4 = {name = "Masters 4",min=64,max=999}
-    masters5 = {name = "Masters 5",min=69,max=999}
+    juniors = {name = "Juniors",min=0,max=22.5}
+    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
+    masters1 = {name = "Masters 1",min=39.5,max=48.5}
+    masters2 = {name = "Masters 2",min=49.5,max=58.5}
+    masters3 = {name = "Masters 3",min=59.5,max=68.5}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
 
     firefighter = {name ="Firefighter",min=0,max=999}
     sdf = {name ="Self Defense Force",min=0,max=999}
     police = {name ="Police",min=0,max=999}
     disabled = {name ="Disabled",min=0,max=999}
+    highschool = {name ="High School",min=13,max=19}
+    student = {name ="Student",min=0,max=999}
+    teachers = {name ="Teachers",min=0,max=999}
+    blind = {name ="Blind",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -27,13 +30,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","High School"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","High School"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
@@ -47,3 +50,40 @@
 
 [exemptions]
     1002 = ["ExemptWeightClassConsistency"]
+    0207 = ["ExemptWeightClassConsistency"]
+    0209 = ["ExemptWeightClassConsistency"]
+    0006 = ["ExemptWeightClassConsistency"]
+    0108 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    0009 = ["ExemptWeightClassConsistency"]
+    0107 = ["ExemptWeightClassConsistency"]
+    0106 = ["ExemptWeightClassConsistency"]
+    0105 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    0008 = ["ExemptWeightClassConsistency"]
+    0007 = ["ExemptWeightClassConsistency"]
+    0210 = ["ExemptWeightClassConsistency"]
+    1608 = ["ExemptWeightClassConsistency"]
+    1510 = ["ExemptWeightClassConsistency"]
+    1409 = ["ExemptWeightClassConsistency"]
+    1511 = ["ExemptWeightClassConsistency"]
+    1507 = ["ExemptWeightClassConsistency"]
+    1611 = ["ExemptWeightClassConsistency"]
+    1309 = ["ExemptDivision"]
+    1408 = ["ExemptWeightClassConsistency"]
+    0204 = ["ExemptDivision"]
+    0405 = ["ExemptDivision"]
+    0306 = ["ExemptDivision"]
+    0305 = ["ExemptDivision"]
+    0307 = ["ExemptDivision"]
+    1610 = ["ExemptWeightClassConsistency"]
+    1307 = ["ExemptWeightClassConsistency"]
+    0302 = ["ExemptDivision"]
+    0001 = ["ExemptDivision"]
+    0103 = ["ExemptDivision"]
+    0104 = ["ExemptDivision"]
+    1405 = ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptDivision"]
+    1809 = ["ExemptWeightClassConsistency"]
+    1807 = ["ExemptWeightClassConsistency"]
+    1810 = ["ExemptWeightClassConsistency"]
+    1710 = ["ExemptWeightClassConsistency"]
+    1707 = ["ExemptWeightClassConsistency"]

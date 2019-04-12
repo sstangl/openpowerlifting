@@ -8,7 +8,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 岩本 幸子,,個人,39,F,Open,55.85,57,95,97.5,-100,97.5,97.5,1,B,Raw
 伊藤 由実子,,個人,35,F,Open,56.65,57,45,50,-55,50,50,2,B,Raw
 山崎 頼子,Yoriko Yamazaki,金太郎ﾄﾚｰﾆﾝｸﾞｸﾗﾌﾞ,52,F,Open,62.4,63,95,100,-103,100,100,1,B,Raw
-赤川 智子,,F.T.GYM,28,F,Open,57.75,63,62.5,67.5,70,70,70,2,B,Raw
+赤川 智子,Tomoko Akagawa,F.T.GYM,28,F,Open,57.75,63,62.5,67.5,70,70,70,2,B,Raw
 鈴木 美貴子,,阪南大学ｳｴｲﾄﾄﾚｰﾆﾝｸﾞｸﾗﾌﾞ,21,F,Open,63,63,60,66,70,70,70,3,B,Raw
 奥田 由香,,スポーツジムB＆F,27,F,Open,65.3,72,-50,50,-57.5,50,50,1,B,Raw
 徳武 恵美,Emi Tokutake,個人,47,F,Open,73.65,84,105,110.5,-112.5,110.5,110.5,1,B,Raw
@@ -18,7 +18,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 東坂 康司,Koji Higashisaka,K's GYM,32,M,Open,58.96,59,160.5,162.5,165,165,165,1,B,Raw
 藤田 雄次,Yuji Fujita,ストロングライン,27,M,Open,53.4,59,130,-137.5,137.5,137.5,137.5,2,B,Raw
 安樂 佳貴,,個人,23,M,Open,48.2,59,132.5,-137.5,-137.5,132.5,132.5,3,B,Raw
-蛯原 孝晴,,個人,31,M,Open,58.8,59,132.5,-140,-140,132.5,132.5,4,B,Raw
+蛯原 孝晴,Takaharu Ebihara,個人,31,M,Open,58.8,59,132.5,-140,-140,132.5,132.5,4,B,Raw
 清水 義之,,トップウェルネス,31,M,Open,58.2,59,125,130,-132.5,130,130,5,B,Raw
 井上 卓,,ノーリミッツ,26,M,Open,55.54,59,-125,125,-130,125,125,6,B,Raw
 松崎 秀彦,,ゴールドジム名古屋金山,24,M,Open,57.76,59,105,107.5,-110,107.5,107.5,7,B,Raw
@@ -106,7 +106,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 佐藤 倫子,,レッツゴー河内,69,F,Masters 3,51.55,52,45,50,-55.5,50,50,1,B,Raw
 磯田 あかね,,team 力姫石川,41,F,Masters 1,55.95,57,60,-62.5,62.5,62.5,62.5,1,B,Raw
 高垣 慶子,,FIGHT CLUB,50,F,Masters 2,62.4,63,40,42.5,-45,42.5,42.5,1,B,Raw
-池田 尚也,Naoya Ikeda,個人,42,M,Masters 1,57.76,59,140,145,-151,145,145,1,B,Raw
+池田 尚也,Ikeda Naoya,個人,42,M,Masters 1,57.76,59,140,145,-151,145,145,1,B,Raw
 高田 勇二,Yuji Takada,平塚総合体育館,46,M,Masters 1,58.04,59,135,140,145,145,145,2,B,Raw
 中田 和夫,Kazuo Nakata,K's GYM,44,M,Masters 1,58.36,59,135,140,145,145,145,3,B,Raw
 田中 祐一郎,,個人,44,M,Masters 1,58.68,59,120,122.5,125,125,125,4,B,Raw
@@ -117,7 +117,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 亀田 司,,チーム度肝,50,M,Masters 2,58.3,59,100,110,-112.5,110,110,2,B,Raw
 上尾 辰弘,,個人,52,M,Masters 2,58.02,59,107.5,-110,-112.5,107.5,107.5,3,B,Raw
 石角 敬次,,個人,56,M,Masters 2,54.28,59,100,105,-110,105,105,4,B,Raw
-浜山 久雄,,新日鉄名古屋BC,64,M,Masters 3,57.92,59,110,115,-125,115,115,1,B,Raw
+浜山 久雄,Hisao Hamayama,新日鉄名古屋BC,64,M,Masters 3,57.92,59,110,115,-125,115,115,1,B,Raw
 佐野 博,,栄スポーツセンター,61,M,Masters 3,55.42,59,90,95,-100,95,95,2,B,Raw
 着本 弘,,個人,60,M,Masters 3,56.36,59,-90,-90,90,90,90,3,B,Raw
 宇谷 正紀,,フジモトジム,63,M,Masters 3,57.5,59,-102.5,-102.5,,,,DQ,B,Raw
@@ -139,8 +139,8 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 園田 啓輔,,WTC藤井寺,53,M,Masters 2,62.62,66,105,-112.5,-112.5,105,105,7,B,Raw
 元木 公太郎,,エイブルフィットネスクラブ,50,M,Masters 2,63.88,66,90,92.5,-95,92.5,92.5,8,B,Raw
 吉田 雅己,,ＭＡＸＧＹＭ,54,M,Masters 2,,66,,,,,,NS,B,Raw
-佐藤 恵二,,パワーハルクジム,59,M,Masters 3,65.7,66,-133,133,135,135,135,1,B,Raw
-段安 忠信,,個人,67,M,Masters 3,64.1,66,110,115,117.5,117.5,117.5,2,B,Raw
+佐藤 恵二,Keiji Sato,パワーハルクジム,59,M,Masters 3,65.7,66,-133,133,135,135,135,1,B,Raw
+段安 忠信,Tadanobu Danyasu,個人,67,M,Masters 3,64.1,66,110,115,117.5,117.5,117.5,2,B,Raw
 新田 幸治,,WTC藤井寺,64,M,Masters 3,64.54,66,105,107.5,117.5,117.5,117.5,3,B,Raw
 木下 俊弘,,スポーツジムB＆F,64,M,Masters 3,61.96,66,100,110,112.5,112.5,112.5,4,B,Raw
 中ノ瀬 啓作,,粕屋ドーム,61,M,Masters 3,65.94,66,107.5,112.5,-115,112.5,112.5,5,B,Raw
@@ -149,7 +149,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 曹 偉,,フジモトジム,59,M,Masters 3,65.9,66,80,82.5,85,85,85,8,B,Raw
 岩崎 実,,個人,71,M,Masters 4,64.64,66,105,-107.5,-110.5,105,105,1,B,Raw
 藤田 俊夫,,個人,77,M,Masters 4,65.64,66,90,95,-100,95,95,2,B,Raw
-竹井 保満,,烈剛河内,83,M,Masters 4,63.34,66,70,75,80,80,80,3,B,Raw
+竹井 保満,Yasumitsu Takei,烈剛河内,83,M,Masters 4,63.34,66,70,75,80,80,80,3,B,Raw
 酒井 ジュンヤ,,BBGYM,41,M,Masters 1,72.34,74,162.5,167.5,172.5,172.5,172.5,1,B,Raw
 古川 公一,Kouichi Furukawa,K's GYM,45,M,Masters 1,73.32,74,157.5,160,-172.5,160,160,2,B,Raw
 清水 達也,,サン笠寺,41,M,Masters 1,72.46,74,152.5,-160,-165,152.5,152.5,3,B,Raw
@@ -195,7 +195,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 杉﨑 幹男,,個人,63,M,Masters 3,89.26,93,125,135,140,140,140,2,B,Raw
 米山 敏男,,ﾌｨｯﾄﾈｽｼﾞﾑ ｱｸｾｽ,59,M,Masters 3,87.46,93,130,,,130,130,3,B,Raw
 長島 義孝,,個人,67,M,Masters 3,87.6,93,102.5,-107.5,-107.5,102.5,102.5,4,B,Raw
-山森 智行,,K's GYM,39,M,Masters 1,104.08,105,175,180,-185,180,180,1,B,Raw
+山森 智行,Tomoyuki Yamamori,K's GYM,39,M,Masters 1,104.08,105,175,180,-185,180,180,1,B,Raw
 大山 覚,,チーム鉄腕,46,M,Masters 1,103.08,105,165,175,-177.5,175,175,2,B,Raw
 駒田 哲也,,SASUKE,40,M,Masters 1,101.46,105,150,155,-160,155,155,3,B,Raw
 井戸 浩和,,ピーススポーツクラブ,51,M,Masters 2,97.56,105,155,165,-167.5,165,165,1,B,Raw
@@ -203,7 +203,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 井上 健,,BBGYM,41,M,Masters 1,108.16,120,152.5,160,-165,160,160,2,B,Raw
 戸谷 英司,,個人,40,M,Masters 1,132.32,120+,160,170,175,175,175,1,B,Raw
 北浦 希,,吹田市消防,33,F,Open,61.55,63,40,50,-52.5,50,50,1,B,Raw
-蛯原 孝晴,,取手消防署,31,M,Open,58.8,59,130,132.5,,132.5,132.5,1,B,Raw
+蛯原 孝晴,Takaharu Ebihara,取手消防署,31,M,Open,58.8,59,130,132.5,,132.5,132.5,1,B,Raw
 井上 卓,,目黒消防署,26,M,Open,55.54,59,120,125,-130,125,125,2,B,Raw
 松岡 俊,,航空自衛隊熊谷基地,29,M,Open,58.82,59,115,120,125,125,125,3,B,Raw
 本田 正吾,,大分市消防,30,M,Open,58.46,59,85,95,-100,95,95,4,B,Raw

@@ -1,7 +1,7 @@
 JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Place,Event,Equipment
 木村 育史,Yasufumi Kimura,Ｋ’ｓ ＧＹＭ,35,M,Open,58.88,59,195,200,-205,200,200,1,B,Single-ply
 広永 賢司,,Ｋ’ｓ ＧＹＭ,27,M,Open,65.8,66,165,175,180,180,180,1,B,Single-ply
-竹井 保満,,烈剛河内,82,M,Masters 4,62.76,66,90,95,-100,95,95,1,B,Single-ply
+竹井 保満,Yasumitsu Takei,烈剛河内,82,M,Masters 4,62.76,66,90,95,-100,95,95,1,B,Single-ply
 木下 俊弘,,スポーツジムB＆F,64,M,Masters 3,62.94,66,100,110,112.5,112.5,112.5,1,B,Single-ply
 中畑 俊朗,,岸和田トレーニングセンター,63,M,Masters 3,65.2,66,105,110,-112.5,110,110,2,B,Single-ply
 井上 和明,,Ｋ’ｓ ＧＹＭ,38,M,Open,71.56,74,160,-220,-231.5,160,160,1,B,Single-ply
@@ -14,19 +14,19 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 藤川 慶二,,ＢＢＧＹＭ,39,M,Open,82.66,83,155,160,-165,160,160,3,B,Single-ply
 飴谷 繁章,,スポーツジムＢ＆Ｆ,44,M,Masters 1,82.46,83,-170,-170,-170,,,DQ,B,Single-ply
 立石 修平,,スポーツジムＢ＆Ｆ,35,M,Open,82.26,83,190,200,-202.5,200,200,G,B,Single-ply
-北川 武志,,Ｋ’ｓ ＧＹＭ,53,M,Open,89.22,93,222.5,-241,-241,222.5,222.5,1,B,Single-ply
+北川 武志,Takeshi Kitagawa,Ｋ’ｓ ＧＹＭ,53,M,Open,89.22,93,222.5,-241,-241,222.5,222.5,1,B,Single-ply
 梁本 智弘,,Ｋ’ｓ ＧＹＭ,24,M,Open,92.74,93,200,-210,-210,200,200,2,B,Single-ply
 ゼニーテ,,Ｋ’ｓ ＧＹＭ,39,M,Open,89.74,93,-190,-200,-205,,,DQ,B,Single-ply
 葛西 昌彦,Masahiko Kassai,Ｋ’ｓ ＧＹＭ,40,M,Masters 1,92.4,93,-240.5,-240.5,242.5,242.5,242.5,1,B,Single-ply
 廣岡 覚,,Ｋ’ｓ ＧＹＭ,44,M,Masters 1,86.86,93,-170,170,-180,170,170,2,B,Single-ply
 中嶋 幸雄,,個人,50,M,Open,91.2,93,-175,177.5,-180,177.5,177.5,G,B,Single-ply
-山森 智行,,Ｋ’ｓ ＧＹＭ,39,M,Open,104.3,105,262.5,270,280,280,280,1,B,Single-ply
+山森 智行,Tomoyuki Yamamori,Ｋ’ｓ ＧＹＭ,39,M,Open,104.3,105,262.5,270,280,280,280,1,B,Single-ply
 亀井 大策,,個人,32,M,Open,103.02,105,220,-230,230,230,230,2,B,Single-ply
 上田 真司,Shinji Ueda,Ｋ’ｓ ＧＹＭ,39,M,Open,119.32,120,330,342.5,-360.5,342.5,342.5,1,B,Single-ply
 伊藤 智,Satoshi Ito,Ｋ’ｓ ＧＹＭ,45,M,Masters 1,110.56,120,265,-280,-280,265,265,1,B,Single-ply
 岩本 幸子,,個人,38,F,Open,55.76,57,90,-95,-95,90,90,1,B,Raw
 伊藤 由美子,,個人,34,F,Open,54.84,57,35,40,-45,40,40,2,B,Raw
-林 久子,,チーム鉄腕,59,F,Open,56.2,57,57.5,60,-62.5,60,60,G,B,Raw
+林 久子,Hisako Hayashi,チーム鉄腕,59,F,Open,56.2,57,57.5,60,-62.5,60,60,G,B,Raw
 徳武 恵美,Emi Tokutake,個人,47,F,Open,74.74,84,100,106,107,107,107,G,B,Raw
 安樂 佳貴,,個人,23,M,Juniors,49.64,53,110,120,130,130,130,1,B,Raw
 木村 育史,Yasufumi Kimura,Ｋ’ｓ ＧＹＭ,35,M,Open,58.88,59,120,140,-147.5,140,140,1,B,Raw
@@ -96,7 +96,7 @@ JapaneseName,Name,Team,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Benc
 黒岩 剛,,個人,48,M,Open,88.42,93,180,190,-200.5,190,190,1,B,Raw
 辻村 明徳,,個人,31,M,Open,90.74,93,-180,180,-185,180,180,2,B,Raw
 金 聖学,,個人,27,M,Open,87.92,93,152.5,160,165,165,165,3,B,Raw
-北川 武志,,Ｋ’ｓ ＧＹＭ,53,M,Open,89.22,93,152.5,157.5,-167.5,157.5,157.5,4,B,Raw
+北川 武志,Takeshi Kitagawa,Ｋ’ｓ ＧＹＭ,53,M,Open,89.22,93,152.5,157.5,-167.5,157.5,157.5,4,B,Raw
 梁本 智弘,,Ｋ’ｓ ＧＹＭ,24,M,Open,92.74,93,140,150,157.5,157.5,157.5,5,B,Raw
 ゼニーテ,,Ｋ’ｓ ＧＹＭ,39,M,Open,89.74,93,150,-155,-155,150,150,6,B,Raw
 中西 正樹,,個人,24,M,Open,90.84,93,130,140,-145,140,140,7,B,Raw
