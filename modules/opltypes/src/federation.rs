@@ -705,10 +705,6 @@ pub enum Federation {
     #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
     UkrainePF,
 
-    /// United Powerlifting Congress, German WPC Affiliate
-    #[strum(to_string = "UnitedPC", serialize = "unitedpc")]
-    UnitedPC,
-
     /// Unaffiliated meets held in the USA.
     #[serde(rename = "USA-UA")]
     #[strum(to_string = "USA-UA", serialize = "usa-ua")]
@@ -1124,7 +1120,6 @@ impl Federation {
             Federation::UPC => false,
             Federation::UPCGermany => false,
             Federation::UkrainePF => true,
-            Federation::UnitedPC => false,
             Federation::USAUA => false,
             Federation::USAPL => true,
             Federation::USARawBP => false,
@@ -1350,7 +1345,6 @@ impl Federation {
             Federation::UPC => Some(Country::Ukraine),
             Federation::UPCGermany => Some(Country::Germany),
             Federation::UkrainePF => Some(Country::Ukraine),
-            Federation::UnitedPC => Some(Country::Germany),
             Federation::USAUA => Some(Country::USA),
             Federation::USAPL => Some(Country::USA),
             Federation::USARawBP => Some(Country::USA),
@@ -1587,7 +1581,6 @@ impl Federation {
             Federation::UPC => PointsSystem::Wilks,
             Federation::UPCGermany => PointsSystem::Glossbrenner,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
-            Federation::UnitedPC => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
             Federation::USAPL => Federation::ipf_rules_on(date),
             Federation::USARawBP => PointsSystem::Wilks,
