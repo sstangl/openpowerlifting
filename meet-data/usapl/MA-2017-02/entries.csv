@@ -1,6 +1,6 @@
 Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BirthYear,Team,State,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
 1,M,Jake Connolly,B,MR-V,74,Raw,1999,,MA,67.20,,,,,115,120,125,125.0,,,,,125
-1,M,Daniel Baez,SBD,M-G,59,Single-ply,1998,,NJ,59.00,147.5,157.5,167.5,167.5,90,95,102.5,102.5,145,152.5,165,165.0,435
+G,M,Daniel Baez,SBD,M-G,59,Single-ply,1998,,NJ,59.00,147.5,157.5,167.5,167.5,90,95,102.5,102.5,145,152.5,165,165.0,435
 1,M,Max Freitas,SBD,M-JV,74,Single-ply,2001,,MA,71.00,107.5,117.5,-137.5,117.5,55,67.5,-72.5,67.5,95,110,125,125.0,310
 2,M,Derek Hoang,SBD,M-JV,74,Single-ply,2001,Saint John's High School,MA,72.00,77.5,-82.5,87.5,87.5,55,60,65,65.0,-125,125,127.5,127.5,280
 1,M,Brendon Bunnell,SBD,M-JV,83,Single-ply,2001,,MA,78.00,-90,-90,90,90.0,52.5,60,-67.5,60.0,80,95,110,110.0,260
@@ -93,7 +93,7 @@ DQ,M,Christian Sotelo,SBD,M-Y,74,Single-ply,2000,,MA,69.00,-160,-160,-160,,-97.5
 1,M,Mark Mulhern,SBD,M-Y,93,Single-ply,1999,,MA,90.20,187.5,-202.5,-202.5,187.5,95,105,-115,105.0,210,-227.5,-227.5,210.0,502.5
 1,M,Owen Haynes,SBD,M-Y,120,Single-ply,1999,,MA,113.60,170,-190,-190,170.0,77.5,87.5,92.5,92.5,165,182.5,-190,182.5,445
 1,M,Nicholas Cristina,SBD,M-Y,120+,Single-ply,1999,,MA,135.00,220,235,250,250.0,117.5,125,132.5,132.5,180,195,-207.5,195.0,577.5
-1,F,Rebecca Semanski,SBD,FR-G,72,Raw,1994,,NJ,63.80,55,62.5,-70,62.5,35,37.5,-40,37.5,80,95,110,110.0,210
+G,F,Rebecca Semanski,SBD,FR-G,72,Raw,1994,,NJ,63.80,55,62.5,-70,62.5,35,37.5,-40,37.5,80,95,110,110.0,210
 1,F,Lily Tran,SBD,FR-HS,57,Raw,2001,,MA,54.20,90,95,100,100.0,37.5,42.5,-45,42.5,92.5,100,-110,100.0,242.5
 1,F,Engracia Scheller,SBD,FR-HS,72,Raw,2004,,MA,67.80,60,62.5,65,65.0,-32.5,35,-37.5,35.0,65,70,75,75.0,175
 1,F,Tiffany Lam,SBD,FR-V,52,Raw,2000,,MA,50.00,60,65,70,70.0,35,40,-42.5,40.0,57.5,65,70,70.0,180
