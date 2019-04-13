@@ -33,6 +33,10 @@
   @include name-color(#AE76FF);
 }
 
+.gold {
+  @include name-color(#FFD700);
+}
+
 .green {
   @include name-color(#51DA27);
 }

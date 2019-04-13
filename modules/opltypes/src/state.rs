@@ -93,7 +93,38 @@ pub enum CanadaState {
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum GermanyState {
-    BW, BY, BE, BB, HB, HE, HH, MV, NI, NW, RP, SH, SL, SN, ST, TH
+    /// Baden-Württemberg.
+    BW,
+    /// Bavaria.
+    BY,
+    /// Berlin.
+    BE,
+    /// Brandenburg.
+    BB,
+    /// Bremen.
+    HB,
+    /// Hesse.
+    HE,
+    /// Hamburg.
+    HH,
+    /// Mecklenburg-Vorpommern.
+    MV,
+    /// Lower Saxony.
+    NI,
+    /// North Rhine-Westphalia.
+    NW,
+    /// Rhineland-Palatinate.
+    RP,
+    /// Schleswig-Holstein.
+    SH,
+    /// Saarland.
+    SL,
+    /// Saxony.
+    SN,
+    /// Saxony-Anhalt.
+    ST,
+    /// Thuringia.
+    TH,
 }
 
 /// A state in India.
