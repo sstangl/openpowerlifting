@@ -21,3 +21,5 @@
 [exemptions]
     1201 = ["ExemptWeightClassConsistency"]
     1001 = ["ExemptDivision"]
+    0901 = ["ExemptDivision","ExemptWeightClassConsistency"]
+    1101 = ["ExemptDivision","ExemptWeightClassConsistency"]
