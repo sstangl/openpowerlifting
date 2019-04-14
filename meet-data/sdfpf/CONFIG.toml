@@ -1,0 +1,50 @@
+# From http://sdfpf.ch/wp-content/uploads/2018/12/WDFPF-RULEBOOK-Main-Fundamentals.pdf
+[divisions]
+    fo = {name="F-O", min=14, max=999, sex="F"}
+    ft1 = {name="F-T1", min=14, max=15, sex="F"}
+    ft2 = {name="F-T2", min=16, max=17, sex="F"}
+    ft3 = {name="F-T3", min=18, max=19, sex="F"}
+    fjr = {name="F-JR", min=20, max=23, sex="F"}
+    fm1 = {name="F-M1", min=40, max=44, sex="F"}
+    fm2 = {name="F-M2", min=45, max=49, sex="F"}
+    fm3 = {name="F-M3", min=50, max=54, sex="F"}
+    fm4 = {name="F-M4", min=55, max=59, sex="F"}
+    fm5 = {name="F-M5", min=60, max=64, sex="F"}
+    fm6 = {name="F-M6", min=65, max=69, sex="F"}
+    fm7 = {name="F-M7", min=70, max=74, sex="F"}
+    fm8 = {name="F-M8", min=75, max=79, sex="F"}
+    fm9 = {name="F-M9", min=80, max=84, sex="F"}
+    fm10 = {name="F-M10", min=85, max=89, sex="F"}
+    fm11 = {name="F-M11", min=90, max=94, sex="F"}
+    fm12 = {name="F-M12", min=95, max=99, sex="F"}
+
+    mo = {name="M-O", min=14, max=999, sex="M"}
+    mt1 = {name="M-T1", min=14, max=15, sex="M"}
+    mt2 = {name="M-T2", min=16, max=17, sex="M"}
+    mt3 = {name="M-T3", min=18, max=19, sex="M"}
+    mjr = {name="M-JR", min=20, max=23, sex="M"}
+    mm1 = {name="M-M1", min=40, max=44, sex="M"}
+    mm2 = {name="M-M2", min=45, max=49, sex="M"}
+    mm3 = {name="M-M3", min=50, max=54, sex="M"}
+    mm4 = {name="M-M4", min=55, max=59, sex="M"}
+    mm5 = {name="M-M5", min=60, max=64, sex="M"}
+    mm6 = {name="M-M6", min=65, max=69, sex="M"}
+    mm7 = {name="M-M7", min=70, max=74, sex="M"}
+    mm8 = {name="M-M8", min=75, max=79, sex="M"}
+    mm9 = {name="M-M9", min=80, max=84, sex="M"}
+    mm10 = {name="M-M10", min=85, max=89, sex="M"}
+    mm11 = {name="M-M11", min=90, max=94, sex="M"}
+    mm12 = {name="M-M12", min=95, max=99, sex="M"}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    1504 = ["ExemptWeightClassConsistency", "ExemptLiftOrder"] # Lifter was allowed to compete in wrong weightclass.

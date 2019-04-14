@@ -633,6 +633,10 @@ pub enum Federation {
     #[strum(to_string = "SCT", serialize = "sct")]
     SCT,
 
+    /// Swiss Drug-Free Powerlifting Federation, Swiss WDFPF Affiliate.
+    #[strum(to_string = "SDFPF", serialize = "sdfpf")]
+    SDFPF,
+
     /// Son Light Power, US based federation
     #[strum(to_string = "SLP", serialize = "slp")]
     SLP,
@@ -699,7 +703,7 @@ pub enum Federation {
 
     /// United Powerlifting Congress Germany. WPC, GPC, WUAP.
     #[serde(rename = "UPC-Germany")]
-    #[strum(to_string = "UPC-Germany", serialize="upc-germany")]
+    #[strum(to_string = "UPC-Germany", serialize = "upc-germany")]
     UPCGermany,
 
     /// Ukrainian Powerlifting Federation, IPF.
@@ -1103,6 +1107,7 @@ impl Federation {
             Federation::ScottishPL => true,
             Federation::SCI => false,
             Federation::SCT => false,
+            Federation::SDFPF => true,
             Federation::SLP => false,
             Federation::SPA => false,
             Federation::SPF => false,
@@ -1328,6 +1333,7 @@ impl Federation {
             Federation::ScottishPL => Some(Country::Scotland),
             Federation::SCI => Some(Country::USA),
             Federation::SCT => Some(Country::Russia),
+            Federation::SDFPF => Some(Country::Switzerland),
             Federation::SLP => Some(Country::USA),
             Federation::SPA => Some(Country::Singapore),
             Federation::SPF => Some(Country::USA),
@@ -1564,6 +1570,7 @@ impl Federation {
             Federation::ScottishPL => Federation::ipf_rules_on(date),
             Federation::SCI => PointsSystem::Wilks,
             Federation::SCT => PointsSystem::Wilks,
+            Federation::SDFPF => PointsSystem::Wilks,
             Federation::SLP => PointsSystem::Wilks,
             Federation::SPA => PointsSystem::Wilks,
             Federation::SPF => PointsSystem::Wilks,
