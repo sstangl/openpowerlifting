@@ -6,6 +6,8 @@ After=network.target
 # Also check out https://www.nginx.com/resources/wiki/start/topics/examples/systemd/
 [Service]
 Type=simple
+Restart=always
+RestartSec=10
 ExecStart="{{ openpl_app_binary_path }}" --set-cwd "{{ openpl_app_data_path }}"
 
 [Install]
