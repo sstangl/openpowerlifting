@@ -118,6 +118,12 @@
   background-image: linear-gradient(to right, #005DB5, #EDF2F4, #DD1832);
 }
 
+// Millennial pink color palette
+.millennial_pink_color_palette {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #FB958B, #F7A583, #F7BAA1, #FB9FA4, #FF9E99);
+}
+
 // Green, white, and orange.
 .ireland {
   $ireland-green: #009A64;
