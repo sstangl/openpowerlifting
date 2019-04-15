@@ -242,6 +242,14 @@
   @include name-color(#BF262B);
 }
 
+// Green and red.
+.rob_hall {
+  $green: #51DA27;
+  $red: #FB3640;
+  @include gradient-prereqs($green);
+  background-image: linear-gradient(to right, $green 45%, $red 55%);
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
