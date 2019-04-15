@@ -1,0 +1,83 @@
+[divisions]
+    #Current divisions
+    snr = {name ="SNR",min=0,max=999}
+    youth7_u = {name = "7-U",min=4,max=7}
+    youth7_8 = {name = "7-8",min=7,max=8}
+    youth8_9 = {name = "8-9",min=8,max=9}
+    youth10_11 = {name = "10-11",min=10,max=11}
+    teen12_13 = {name = "12-13",min=12,max=13}
+    teen13_14 = {name = "13-14",min=13,max=14}
+    teen14_15 = {name = "14-15",min=14,max=15}
+    teen16_17 = {name = "16-17",min=16,max=17}
+    teen18_19 = {name = "18-19",min=18,max=19}
+    junior20_23 = {name = "20-23",min=20,max=23}
+    junior20_24 = {name = "20-24",min=20,max=24}
+    senior24_39 = {name = "24-39",min=24,max=39}
+    senior25_29 = {name = "25-29",min=25,max=29}
+    senior30_34 = {name = "30-34",min=30,max=34}
+    submasters35_39 = {name = "35-39",min=35,max=39}
+    masters40_44 = {name = "40-44",min=40,max=44}
+    masters45_49 = {name = "45-49",min=45,max=49}
+    masters50_54 = {name = "50-54",min=50,max=54}
+    masters55_59 = {name = "55-59",min=55,max=59}
+    masters60_64 = {name = "60-64",min=60,max=64}
+    masters65_69 = {name = "65-69",min=65,max=69}
+    masters70_74 = {name = "70-74",min=70,max=74}
+    masters75_79 = {name = "75-79",min=75,max=79}
+    masters80_84 = {name = "80-84",min=80,max=84}
+    masters85_89 = {name = "85-89",min=85,max=89}
+    masters90_94 = {name = "90-94",min=90,max=94}
+    masters95_99 = {name = "95-99",min=95,max=99}
+ 
+    # Bare division
+    im_snr = {name ="Ironman SNR",min=0,max=999}
+    im_youth7_u = {name = "Ironman 7-U",min=4,max=7}
+    im_youth8_9 = {name = "Ironman 8-9",min=8,max=9}
+    im_youth10_11 = {name = "Ironman 10-11",min=10,max=11}
+    im_teen12_13 = {name = "Ironman 12-13",min=12,max=13}
+    im_teen13_14 = {name = "Ironman 13-14",min=13,max=14}
+    im_teen14_15 = {name = "Ironman 14-15",min=14,max=15}
+    im_teen16_17 = {name = "Ironman 16-17",min=16,max=17}
+    im_teen18_19 = {name = "Ironman 18-19",min=18,max=19}
+    im_junior20_24 = {name = "Ironman 20-24",min=20,max=24}
+    im_senior25_29 = {name = "Ironman 25-29",min=25,max=29}
+    im_senior30_34 = {name = "Ironman 30-34",min=30,max=34}
+    im_submasters35_39 = {name = "Ironman 35-39",min=35,max=39}
+    im_masters40_44 = {name = "Ironman 40-44",min=40,max=44}
+    im_masters45_49 = {name = "Ironman 45-49",min=45,max=49}
+    im_masters50_54 = {name = "Ironman 50-54",min=50,max=54}
+    im_masters55_59 = {name = "Ironman 55-59",min=55,max=59}
+    im_masters60_64 = {name = "Ironman 60-64",min=60,max=64}
+    im_masters65_69 = {name = "Ironman 65-69",min=65,max=69}
+    im_masters70_74 = {name = "Ironman 70-74",min=70,max=74}
+    im_masters75_79 = {name = "Ironman 75-79",min=75,max=79}
+    im_masters80_84 = {name = "Ironman 80-84",min=80,max=84}
+    im_masters85_89 = {name = "Ironman 85-89",min=85,max=89}
+    im_masters90_94 = {name = "Ironman 90-94",min=90,max=94}
+    im_masters95_99 = {name = "Ironman 95-99",min=95,max=99}
+
+    handicapped = {name ="Handicapped",min=0,max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","110","90+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.youth_M]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["7-U","7-8","8-9","10-11","12-13","Ironman 7-U","Ironman 8-9","Ironman 10-11","Ironman 12-13"]
+
+[weightclasses.youth_F]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["7-U","7-8","8-9","10-11","12-13","Ironman 7-U","Ironman 8-9","Ironman 10-11","Ironman 12-13"]
+
+[exemptions]
