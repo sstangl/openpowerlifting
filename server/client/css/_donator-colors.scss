@@ -29,6 +29,10 @@
   @include name-color(#FFB6C1);
 }
 
+.limegreen {
+  @include name-color(#32CD32);
+}
+
 .purple {
   @include name-color(#AE76FF);
 }
