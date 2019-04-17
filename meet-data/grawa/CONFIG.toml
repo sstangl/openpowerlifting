@@ -1,0 +1,19 @@
+[divisions]
+    aktive = {name ="Aktive",min=0,max=999,equipment="Raw"}
+    junioren = {name = "Junioren",min=0,max=23,equipment="Raw"}
+    teen = {name = "Teen",min=0,max=19,equipment="Raw"}
+    mastersi = {name = "Masters I",min=39,max=49,equipment="Raw"}
+    mastersii = {name = "Masters II",min=49,max=59,equipment="Raw"}
+    mastersiii = {name = "Masters III",min=59,max=999,equipment="Raw"}
+
+[weightclasses.default_M]
+    classes = ["75","95","115","115+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "M"
+
+[exemptions]
+    1101 = ["ExemptWeightClassConsistency"]  # No BW or weightclasses.
+    1102 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1103 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    1201 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1202 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.

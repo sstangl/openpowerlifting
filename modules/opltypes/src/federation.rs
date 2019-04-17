@@ -375,6 +375,10 @@ pub enum Federation {
     #[strum(to_string = "GPU", serialize = "gpu")]
     GPU,
 
+    /// German RAW Association, IRP.
+    #[strum(to_string = "GRAWA", serialize = "grawa")]
+    GRAWA,
+
     /// Defunct stand-alone US federation.
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
     Hardcore,
@@ -1042,6 +1046,7 @@ impl Federation {
             Federation::GPCRUS => false,
             Federation::GPF => false,
             Federation::GPU => false,
+            Federation::GRAWA => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
             Federation::CroatiaUA => false,
@@ -1269,6 +1274,7 @@ impl Federation {
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPF => None,
             Federation::GPU => Some(Country::Germany),
+            Federation::GRAWA => Some(Country::Germany),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
             Federation::CroatiaUA => Some(Country::Croatia),
@@ -1506,6 +1512,7 @@ impl Federation {
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPU => PointsSystem::Wilks,
+            Federation::GRAWA => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
