@@ -111,6 +111,9 @@
 <optgroup label="{{strings.country.belarus}}">
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF - Belarus Powerlifting Federation [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.brazil}}">
+  <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB - Confederação Brasileira de Levantamentos Básicos [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpa" {% if selection.federation == "CPA" %}selected{% endif %}>CPA - Canadian Powerlifting Association [WPA]</option>
