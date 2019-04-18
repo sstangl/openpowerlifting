@@ -460,7 +460,7 @@ def getdirname(soup):
     return date
 
 
-def main(url):
+def main(url, importdir):
     html = gethtml(url)
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -484,6 +484,8 @@ def main(url):
 
     meetcsv = makemeetcsv(soup)
     dirname = getdirname(soup)
+    if importdir is not None:
+        dirname = importdir
 
     try:
         os.makedirs(dirname)
@@ -504,6 +506,9 @@ def main(url):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
-    main(sys.argv[1])
+    if len(sys.argv) < 2:
+        print("Usage: %s url <importdir>" % sys.argv[0])
+
+    url = sys.argv[1]
+    importdir = sys.argv[2] if len(sys.argv) > 2 else None
+    main(url, importdir)

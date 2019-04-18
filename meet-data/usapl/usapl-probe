@@ -11,17 +11,19 @@
 from bs4 import BeautifulSoup
 import os
 import sys
-import urllib.request
+from os.path import join, realpath, dirname
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(
+        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 MEETSURL = "http://usapl.liftingdatabase.com/competitions"
 BASEURL = "http://usapl.liftingdatabase.com/"
-USAPLDIR = os.path.dirname(os.path.realpath(__file__))
-
-
-def gethtml():
-    with urllib.request.urlopen(MEETSURL) as r:
-        return r.read()
+FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def error(msg):
@@ -33,20 +35,6 @@ def color(s):
     return "\033[1;36m" + s + "\033[0;m"
 
 
-# Named tuple.
-class Meet:
-
-    def __init__(self, sanction, url):
-        self.sanction = sanction.replace(' ', '').strip()
-        self.url = url
-
-    def __str__(self):
-        return self.sanction
-
-    def __repr__(self):
-        return str(self)
-
-
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -56,50 +44,27 @@ def getmeetlist(html):
     elif len(tables) == 0:
         error("No table found.")
 
-    meetlist = []
-
+    urls = []
     t = tables[0].find('tbody')
     for row in t.find_all('tr'):
         cells = row.find_all('td')
         if len(cells) != 6:
             error("Table row doesn't contain expected number of cells.")
 
-        sanction = cells[2].text.strip()
         url = BASEURL + cells[1].find('a')['href']
+        if url not in urls:  # Sometimes the entries show up twice.
+            urls.append(url)
 
-        # XXX: Disregard this one clearly-incorrect sanction. Remove when USAPL
-        # fixes.
-        if sanction == 'NS-016-07':
-            continue
-
-        if sanction == 'KS2017-01':
-            sanction = 'KS-2017-01'
-        if sanction == 'LA-2018- 02':
-            sanction = 'LA-2018-02'
-        if sanction == 'OH-2018-6':
-            sanction = 'OH-2018-06'
-
-        # Only count those rows that begin with a letter, like "CA-2016-02".
-        if sanction and sanction[0].isalpha() and sanction.count('-') == 2:
-            meetlist.append(Meet(sanction, url))
-
-    return meetlist
-
-
-# Entered meets are stored in the current directory in a directory with
-# the sanction ID.
-def getenteredmeets():
-    return os.listdir(USAPLDIR)
+    return urls
 
 
 def main():
-    html = gethtml()
+    html = oplprobe.gethtml(MEETSURL)
     meetlist = getmeetlist(html)
-    known = getenteredmeets()
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    for m in meetlist:
-        if m.sanction not in known:
-            print(color("[USAPL] ") + m.url)
+    oplprobe.print_meets(color('[USAPL]'), unentered)
 
 
 if __name__ == '__main__':
