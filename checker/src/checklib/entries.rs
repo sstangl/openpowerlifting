@@ -425,7 +425,8 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         }
 
         // Disallow nicknames. They're usually written as "Tom 'Tommy' Thompson".
-        if word.starts_with('\'') {
+        // Allow 't, the abbreviation for the dutch word het.
+        if word.starts_with('\'') && word != "'t" {
             report.error_on(line, format!("Name '{}' cannot contain nicknames", name));
             continue;
         }
