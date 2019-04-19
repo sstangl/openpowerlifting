@@ -1,0 +1,66 @@
+[divisions]
+    mor = {name ="MO", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    for = {name ="FO", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mt1r = {name ="MT1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
+    mt2r = {name ="MT2", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
+    mt3r = {name ="MT3", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
+    ftr = {name ="FT", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
+    ft1r = {name ="FT1", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
+    ft2r = {name ="FT2", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
+    ft3r = {name ="FT3", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
+    mjr = {name ="MJ", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
+    fjr = {name ="FJ", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+    mm1r = {name ="MM1", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
+    fm1r = {name ="FM1", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
+    mm2r = {name ="MM2", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
+    fm2r = {name ="FM2", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
+    mm3r = {name ="MM3", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
+    fm3r = {name ="FM3", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
+    mm4r = {name ="MM4", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
+    fm4r = {name ="FM4", min=55, max=59, sex="F", equipment=["Raw","Wraps"]}
+    mm5r = {name ="MM5", min=60, max=64, sex="M", equipment=["Raw","Wraps"]}
+    fm5r = {name ="FM5", min=60, max=64, sex="F", equipment=["Raw","Wraps"]}
+    mm6r = {name ="MM6", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
+    fm6r = {name ="FM6", min=65, max=69, sex="F", equipment=["Raw","Wraps"]}
+    mm7r = {name ="MM7", min=70, max=74, sex="M", equipment=["Raw","Wraps"]}
+    fm7r = {name ="FM7", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
+    mm8r = {name ="MM8", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
+    fm8r = {name ="FM8", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
+    mm9r = {name ="MM9", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
+    fm9r = {name ="FM9", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
+
+    moe = {name ="MOE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mje = {name ="MJE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
+    met1 = {name ="MET1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
+    met2 = {name ="MET2", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"]}
+    met3 = {name ="MET3", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem1 = {name ="MEM1", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem2 = {name ="MEM2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem3 = {name ="MEM3", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem4 = {name ="MEM4", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem5 = {name ="MEM5", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem6 = {name ="MEM6", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply"]}
+
+    foe = {name ="FOE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fet1 = {name ="FET1", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fet2 = {name ="FET2", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fet3 = {name ="FET3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem1 = {name ="FEM1", min=40, max=44, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem2 = {name ="FEM2", min=45, max=49, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem3 = {name ="FEM3", min=50, max=54, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem4 = {name ="FEM4", min=55, max=59, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem5 = {name ="FEM5", min=60, max=64, sex="F", equipment=["Single-ply","Multi-ply"]}
+    fem6 = {name ="FEM6", min=65, max=69, sex="F", equipment=["Single-ply","Multi-ply"]}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]
