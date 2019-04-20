@@ -123,7 +123,7 @@ pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<CheckResult, Box
     let mut acc = Vec::new();
 
     // Check the meet.csv.
-    let meetresult = check_meet(meetdir.join("meet.csv"))?;
+    let meetresult = check_meet(meetdir.join("meet.csv"), config)?;
     if !meetresult.report.messages.is_empty() {
         acc.push(meetresult.report);
     }

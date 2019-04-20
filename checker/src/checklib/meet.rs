@@ -8,6 +8,7 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
+use crate::checklib::config::Config;
 use crate::Report;
 
 /// Product of a successful parse.
@@ -34,7 +35,7 @@ impl Meet {
             state: None,
             town: None,
             name: "Test Meet".to_string(),
-            ruleset: RuleSet,
+            ruleset: RuleSet::default(),
         }
     }
 }
@@ -294,6 +295,27 @@ pub fn check_meetname(
     Some(s.to_string())
 }
 
+/// Gets the default RuleSet for this meet.
+fn get_configured_ruleset(config: Option<&Config>, date: Option<Date>) -> RuleSet {
+    // If there is incomplete specification, just use the defaults.
+    if config.is_none() || date.is_none() {
+        return RuleSet::default();
+    }
+
+    let config = config.unwrap();
+    let date = date.unwrap();
+
+    // Take the first RuleSet that matches the given Date.
+    for section in config.rulesets.iter() {
+        if date >= section.date_min && date <= section.date_max {
+            return section.ruleset;
+        }
+    }
+
+    // If none match, just use the default.
+    RuleSet::default()
+}
+
 /// Checks the optional RuleSet column.
 fn check_ruleset(s: &str, report: &mut Report) -> RuleSet {
     match s.parse::<RuleSet>() {
@@ -311,6 +333,7 @@ fn check_ruleset(s: &str, report: &mut Report) -> RuleSet {
 /// for creating tests that do not have a backing CSV file.
 pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
+    config: Option<&Config>,
     mut report: Report,
     meetpath: String,
 ) -> Result<CheckResult, Box<Error>>
@@ -348,7 +371,8 @@ where
     );
 
     // Check the optional columns.
-    let mut ruleset = RuleSet::default();
+    // The RuleSet is set to the federation default, unless it's overridden.
+    let mut ruleset = get_configured_ruleset(config, date);
     if record.len() > REQUIRED_HEADERS.len() {
         ruleset = check_ruleset(record.get(REQUIRED_HEADERS.len()).unwrap(), &mut report);
     }
@@ -386,7 +410,10 @@ where
 }
 
 /// Checks a single meet.csv file by path.
-pub fn check_meet(meet_csv: PathBuf) -> Result<CheckResult, Box<Error>> {
+pub fn check_meet(
+    meet_csv: PathBuf,
+    config: Option<&Config>,
+) -> Result<CheckResult, Box<Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(meet_csv);
 
@@ -403,5 +430,5 @@ pub fn check_meet(meet_csv: PathBuf) -> Result<CheckResult, Box<Error>> {
         .terminator(csv::Terminator::Any(b'\n'))
         .from_path(&report.path)?;
 
-    Ok(do_check(&mut rdr, report, meetpath)?)
+    Ok(do_check(&mut rdr, config, report, meetpath)?)
 }

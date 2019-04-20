@@ -21,6 +21,7 @@ pub struct Config {
     pub divisions: Vec<DivisionConfig>,
     pub weightclasses: Vec<WeightClassConfig>,
     pub exemptions: Vec<ExemptionConfig>,
+    pub rulesets: Vec<RuleSetConfig>,
 }
 
 #[derive(Debug)]
@@ -62,6 +63,16 @@ pub struct WeightClassConfig {
     ///
     /// These are stored as indices into the Config's `divisions` list.
     pub divisions: Option<Vec<usize>>,
+}
+
+#[derive(Debug)]
+pub struct RuleSetConfig {
+    /// The active RuleSet for the given date range.
+    pub ruleset: RuleSet,
+    /// The earliest date on which to apply this RuleSet.
+    pub date_min: Date,
+    /// The last date on which to apply this RuleSet.
+    pub date_max: Date,
 }
 
 /// Used to exempt a specific meet from some of the checks.
@@ -424,6 +435,80 @@ fn parse_weightclasses(
     acc
 }
 
+fn parse_rulesets(value: &Value, report: &mut Report) -> Vec<RuleSetConfig> {
+    let mut acc = vec![];
+
+    let table = match value.as_table() {
+        Some(t) => t,
+        None => {
+            report.error("Section 'rulesets' must be a Table");
+            return acc;
+        }
+    };
+
+    for (key, section) in table {
+        // Parse the list of rulesets.
+        let ruleset = match section.get("ruleset").and_then(Value::as_array) {
+            Some(array) => {
+                let mut ruleset = RuleSet::default();
+                for value in array {
+                    match value.clone().try_into::<Rule>() {
+                        Ok(rule) => {
+                            ruleset.add(rule);
+                        }
+                        Err(e) => {
+                            report.error(format!("Error in '{}.ruleset': {}", key, e));
+                        }
+                    }
+                }
+                ruleset
+            }
+            None => {
+                report.error(format!("Value '{}.ruleset' must be an Array", key));
+                continue;
+            }
+        };
+
+        // Parse the min and max dates.
+        let date_range = match section.get("date_range").and_then(Value::as_array) {
+            Some(array) => {
+                if array.len() != 2 {
+                    report.error(format!("Array '{}.date_range' must have 2 items", key));
+                    continue;
+                }
+                // TODO: These clone() calls can be removed by using Value::as_str().
+                let date_min = match array[0].clone().try_into::<Date>() {
+                    Ok(date) => date,
+                    Err(e) => {
+                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        continue;
+                    }
+                };
+                let date_max = match array[1].clone().try_into::<Date>() {
+                    Ok(date) => date,
+                    Err(e) => {
+                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        continue;
+                    }
+                };
+                (date_min, date_max)
+            }
+            None => {
+                report.error(format!("Value '{}.date_range' must be an Array", key));
+                continue;
+            }
+        };
+
+        acc.push(RuleSetConfig {
+            ruleset,
+            date_min: date_range.0,
+            date_max: date_range.1,
+        });
+    }
+
+    acc
+}
+
 fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> {
     let mut acc = vec![];
 
@@ -511,6 +596,12 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Err
         }
     };
 
+    // Parse the optional "rulesets" table.
+    let rulesets = match table.get("rulesets") {
+        Some(v) => parse_rulesets(v, &mut report),
+        None => vec![],
+    };
+
     // Parse the "exemptions" table.
     let exemptions = match table.get("exemptions") {
         Some(v) => parse_exemptions(v, &mut report),
@@ -526,7 +617,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Err
     // Detect unknown sections.
     for key in table.keys() {
         match key.as_str() {
-            "divisions" | "exemptions" | "weightclasses" => (),
+            "divisions" | "exemptions" | "rulesets" | "weightclasses" => (),
             _ => {
                 report.error(format!("Unknown section '{}'", key));
             }
@@ -539,6 +630,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Err
             divisions,
             weightclasses,
             exemptions,
+            rulesets,
         }),
     })
 }
