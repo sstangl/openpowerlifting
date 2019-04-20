@@ -232,8 +232,44 @@ fn cmp_by_division(a: Option<&str>, b: Option<&str>) -> cmp::Ordering {
     a.cmp(&b)
 }
 
+/// Helper function for use in `cmp_by_group`.
+#[inline]
+fn cmp_by_equipment(ruleset: RuleSet, a: &Entry, b: &Entry) -> cmp::Ordering {
+    // A rule may combine all equipment into one category.
+    if ruleset.contains(Rule::CombineAllEquipment) {
+        return cmp::Ordering::Equal;
+    }
+
+    let a_equipment = order_by_equipment(a.equipment);
+    let b_equipment = order_by_equipment(b.equipment);
+
+    if a_equipment != b_equipment {
+        // A rule may combine Raw and Wraps into one equipment category.
+        if ruleset.contains(Rule::CombineRawAndWraps) {
+            let x = a.equipment == Equipment::Raw || a.equipment == Equipment::Wraps;
+            let y = b.equipment == Equipment::Raw || b.equipment == Equipment::Wraps;
+            if x && y {
+                return cmp::Ordering::Equal;
+            }
+        }
+
+        // A rule may combine Single-ply and Multi-ply into one equipment category.
+        if ruleset.contains(Rule::CombineSingleAndMulti) {
+            let x = a.equipment == Equipment::Single || a.equipment == Equipment::Multi;
+            let y = b.equipment == Equipment::Single || b.equipment == Equipment::Multi;
+            if x && y {
+                return cmp::Ordering::Equal;
+            }
+        }
+
+        return a_equipment.cmp(&b_equipment);
+    }
+
+    cmp::Ordering::Equal
+}
+
 /// Compares two entries for grouping into per-division tables.
-fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
+fn cmp_by_group(ruleset: RuleSet, a: &Entry, b: &Entry) -> cmp::Ordering {
     // First, sort by Event.
     let a_event = EVENT_SORT_ORDER.iter().position(|&x| x == a.event).unwrap();
     let b_event = EVENT_SORT_ORDER.iter().position(|&x| x == b.event).unwrap();
@@ -242,10 +278,9 @@ fn cmp_by_group(a: &Entry, b: &Entry) -> cmp::Ordering {
     }
 
     // Next, sort by Equipment.
-    let a_equipment = order_by_equipment(a.equipment);
-    let b_equipment = order_by_equipment(b.equipment);
-    if a_equipment != b_equipment {
-        return a_equipment.cmp(&b_equipment);
+    let by_equipment = cmp_by_equipment(ruleset, a, b);
+    if by_equipment != cmp::Ordering::Equal {
+        return by_equipment;
     }
 
     // Next, sort by Sex.
@@ -266,6 +301,7 @@ fn finish_table<'db>(
     opldb: &'db opldb::OplDb,
     locale: &'db Locale,
     points_system: PointsSystem,
+    ruleset: RuleSet,
     entries: &mut Vec<&'db Entry>,
 ) -> Table<'db> {
     entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
@@ -277,7 +313,23 @@ fn finish_table<'db>(
         Sex::M => &locale.strings.selectors.sex.m,
         Sex::F => &locale.strings.selectors.sex.f,
     };
-    let equip: &str = locale.strings.translate_equipment(entries[0].equipment);
+
+    let equip: &str = if ruleset.contains(Rule::CombineAllEquipment) {
+        "" // No equipment specifier.
+    } else if ruleset.contains(Rule::CombineRawAndWraps)
+        && (entries[0].equipment == Equipment::Raw
+            || entries[0].equipment == Equipment::Wraps)
+    {
+        locale.strings.translate_equipment(Equipment::Wraps)
+    } else if ruleset.contains(Rule::CombineSingleAndMulti)
+        && (entries[0].equipment == Equipment::Single
+            || entries[0].equipment == Equipment::Multi)
+    {
+        locale.strings.translate_equipment(Equipment::Multi)
+    } else {
+        locale.strings.translate_equipment(entries[0].equipment)
+    };
+
     let class = entries[0].weightclasskg.as_type(units).in_format(format);
     let div: &str = match entries[0].division {
         Some(ref s) => s,
@@ -313,6 +365,7 @@ fn make_tables_by_division<'db>(
     locale: &'db Locale,
     points_system: PointsSystem,
     meet_id: u32,
+    ruleset: RuleSet,
 ) -> Vec<Table<'db>> {
     let mut entries = opldb.get_entries_for_meet(meet_id);
     if entries.is_empty() {
@@ -324,7 +377,7 @@ fn make_tables_by_division<'db>(
 
     // Sort each entry so that entries that should be in the same table
     // appear next to each other in the vector.
-    entries.sort_unstable_by(|a, b| cmp_by_group(a, b));
+    entries.sort_unstable_by(|a, b| cmp_by_group(ruleset, a, b));
 
     // Iterate over each entry, constructing a group.
     let mut key_entry = &entries[0];
@@ -333,14 +386,20 @@ fn make_tables_by_division<'db>(
 
     for entry in &entries {
         // Keep batching entries that are in the same group.
-        if cmp_by_group(entry, key_entry) == cmp::Ordering::Equal {
+        if cmp_by_group(ruleset, entry, key_entry) == cmp::Ordering::Equal {
             group.push(entry);
             continue;
         }
 
         // This entry isn't part of the old group.
         // Finish the old group.
-        tables.push(finish_table(&opldb, &locale, points_system, &mut group));
+        tables.push(finish_table(
+            &opldb,
+            &locale,
+            points_system,
+            ruleset,
+            &mut group,
+        ));
 
         // Start a new group.
         key_entry = &entry;
@@ -349,7 +408,13 @@ fn make_tables_by_division<'db>(
     }
 
     // Wrap up the last batch.
-    tables.push(finish_table(&opldb, &locale, points_system, &mut group));
+    tables.push(finish_table(
+        &opldb,
+        &locale,
+        points_system,
+        ruleset,
+        &mut group,
+    ));
     tables
 }
 
@@ -404,9 +469,13 @@ impl<'db> Context<'db> {
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
 
         let tables: Vec<Table> = match sort {
-            MeetSortSelection::ByDivision => {
-                make_tables_by_division(&opldb, &locale, default_points, meet_id)
-            }
+            MeetSortSelection::ByDivision => make_tables_by_division(
+                &opldb,
+                &locale,
+                default_points,
+                meet_id,
+                meet.ruleset,
+            ),
             MeetSortSelection::ByWilks => {
                 make_tables_by_points(&opldb, &locale, PointsSystem::Wilks, meet_id)
             }

@@ -54,6 +54,8 @@ pub struct Meet {
     pub town: Option<String>,
     #[serde(rename(deserialize = "MeetName"))]
     pub name: String,
+    #[serde(rename(deserialize = "RuleSet"))]
+    pub ruleset: RuleSet,
 
     /// Number of unique competitors, by LifterID.
     /// Calculated at load-time.

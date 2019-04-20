@@ -1,3 +1,9 @@
+# Configuration for GPC-AUS.
+
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     mor = {name ="M-OR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     for = {name ="F-OR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
