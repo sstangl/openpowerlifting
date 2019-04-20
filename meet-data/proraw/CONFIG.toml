@@ -1,3 +1,9 @@
+# Configuration for ProRaw.
+
+[rulesets.default]
+    ruleset = ["CombineAllEquipment"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     # ProRaw does not have age divisions.
     mor = {name="M-OR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}

@@ -1,6 +1,11 @@
+# Configuration for GPC-NZ.
+
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     open = {name ="Open",min=0,max=999}
-
     submasters = {name ="Submasters",min=33,max=39}
     teen1315 = {name ="Teen 1",min=13,max=15}
     teen1617 = {name ="Teen 2",min=16,max=17}

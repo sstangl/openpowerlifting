@@ -1,3 +1,9 @@
+# Configuration for GPC.
+
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     or = {name ="O",min=0,max=999}
     j = {name ="J",min=20,max=23}
