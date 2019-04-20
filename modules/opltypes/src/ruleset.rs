@@ -17,6 +17,9 @@ pub enum Rule {
 
     /// Lifters in "Single-ply" and "Multi-ply" compete in the same category.
     CombineSingleAndMulti,
+
+    /// There was no equipment category: everyone competed together.
+    CombineAllEquipment,
 }
 
 /// Packed storage for all active RuleSet.

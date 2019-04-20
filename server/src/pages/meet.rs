@@ -235,6 +235,11 @@ fn cmp_by_division(a: Option<&str>, b: Option<&str>) -> cmp::Ordering {
 /// Helper function for use in `cmp_by_group`.
 #[inline]
 fn cmp_by_equipment(ruleset: RuleSet, a: &Entry, b: &Entry) -> cmp::Ordering {
+    // A rule may combine all equipment into one category.
+    if ruleset.contains(Rule::CombineAllEquipment) {
+        return cmp::Ordering::Equal;
+    }
+
     let a_equipment = order_by_equipment(a.equipment);
     let b_equipment = order_by_equipment(b.equipment);
 
@@ -309,7 +314,9 @@ fn finish_table<'db>(
         Sex::F => &locale.strings.selectors.sex.f,
     };
 
-    let equip: &str = if ruleset.contains(Rule::CombineRawAndWraps)
+    let equip: &str = if ruleset.contains(Rule::CombineAllEquipment) {
+        "" // No equipment specifier.
+    } else if ruleset.contains(Rule::CombineRawAndWraps)
         && (entries[0].equipment == Equipment::Raw
             || entries[0].equipment == Equipment::Wraps)
     {
