@@ -312,6 +312,8 @@ def consume_first_column(csv):
                 pass
             elif row[0] == 'PUSH / PULL':
                 event = 'BD'
+            elif row[0] == "DEADLIFT ONLY":
+                event = 'D'
             else:
                 error("Unknown state change in first column: \"%s\"" % row[0])
 
