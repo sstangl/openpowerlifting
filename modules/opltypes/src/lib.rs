@@ -32,6 +32,8 @@ mod place;
 pub use self::place::Place;
 mod points;
 pub use self::points::{Points, PointsSystem};
+mod ruleset;
+pub use self::ruleset::{Rule, RuleSet};
 mod sex;
 pub use self::sex::Sex;
 mod state;
