@@ -19,6 +19,7 @@ pub struct Meet {
     pub state: Option<State>,
     pub town: Option<String>,
     pub name: String,
+    pub ruleset: RuleSet,
 }
 
 impl Meet {
@@ -33,6 +34,7 @@ impl Meet {
             state: None,
             town: None,
             name: "Test Meet".to_string(),
+            ruleset: RuleSet,
         }
     }
 }
@@ -43,7 +45,7 @@ pub struct CheckResult {
 }
 
 /// Every meet.csv must have exactly these headers in the same order.
-const KNOWN_HEADERS: [&str; 6] = [
+const REQUIRED_HEADERS: [&str; 6] = [
     "Federation",
     "Date",
     "MeetCountry",
@@ -52,18 +54,34 @@ const KNOWN_HEADERS: [&str; 6] = [
     "MeetName",
 ];
 
+/// Optional headers may appear after the required ones.
+const OPTIONAL_HEADERS: [&str; 1] = ["RuleSet"];
+
 /// Checks that the headers are fixed and correct.
 fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     // Check header length.
-    if headers.len() != KNOWN_HEADERS.len() {
-        report.error(format!("There must be {} columns", KNOWN_HEADERS.len()));
+    let minheaders = REQUIRED_HEADERS.len();
+    let maxheaders = REQUIRED_HEADERS.len() + OPTIONAL_HEADERS.len();
+
+    if headers.len() < minheaders {
+        report.error(format!("There must be at least {} columns", minheaders));
+        return;
+    } else if headers.len() > maxheaders {
+        report.error(format!("There can be at most {} columns", maxheaders));
         return;
     }
 
-    // Check header exact value.
-    for (i, header) in headers.iter().enumerate() {
-        if header != KNOWN_HEADERS[i] {
-            report.error(format!("Column {} must be '{}'", i, KNOWN_HEADERS[i]));
+    // Check required headers.
+    for (i, header) in headers.iter().take(REQUIRED_HEADERS.len()).enumerate() {
+        if header != REQUIRED_HEADERS[i] {
+            report.error(format!("Column {} must be '{}'", i, REQUIRED_HEADERS[i]));
+        }
+    }
+
+    // Check optional headers.
+    for header in headers.iter().skip(REQUIRED_HEADERS.len()) {
+        if !OPTIONAL_HEADERS.contains(&header) {
+            report.error(format!("Unknown optional column '{}'", &header));
         }
     }
 }
@@ -276,6 +294,17 @@ pub fn check_meetname(
     Some(s.to_string())
 }
 
+/// Checks the optional RuleSet column.
+fn check_ruleset(s: &str, report: &mut Report) -> RuleSet {
+    match s.parse::<RuleSet>() {
+        Ok(ruleset) => ruleset,
+        Err(_) => {
+            report.error(format!("Failed parsing RuleSet '{}'", s));
+            RuleSet::default()
+        }
+    }
+}
+
 /// Checks a single meet.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -305,6 +334,7 @@ where
         return Ok(CheckResult { report, meet: None });
     }
 
+    // Check the required columns.
     let federation = check_federation(record.get(0).unwrap(), &mut report);
     let date = check_date(record.get(1).unwrap(), &mut report);
     let country = check_meetcountry(record.get(2).unwrap(), &mut report);
@@ -316,6 +346,12 @@ where
         record.get(0).unwrap(),
         record.get(1).unwrap(),
     );
+
+    // Check the optional columns.
+    let mut ruleset = RuleSet::default();
+    if record.len() > REQUIRED_HEADERS.len() {
+        ruleset = check_ruleset(record.get(REQUIRED_HEADERS.len()).unwrap(), &mut report);
+    }
 
     // Attempt to read another row -- but there shouldn't be one.
     if rdr.read_record(&mut record)? {
@@ -338,6 +374,7 @@ where
             state,
             town,
             name: name.unwrap(),
+            ruleset: ruleset,
         };
         Ok(CheckResult {
             report,

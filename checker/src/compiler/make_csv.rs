@@ -30,6 +30,8 @@ struct MeetsRow<'d> {
     pub town: Option<&'d str>,
     #[serde(rename = "MeetName")]
     pub name: &'d str,
+    #[serde(rename = "RuleSet")]
+    pub ruleset: RuleSet,
 }
 
 impl<'d> MeetsRow<'d> {
@@ -43,6 +45,7 @@ impl<'d> MeetsRow<'d> {
             state: meet.state,
             town: meet.town.deref(),
             name: &meet.name,
+            ruleset: meet.ruleset,
         }
     }
 }

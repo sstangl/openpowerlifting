@@ -77,7 +77,12 @@ impl Serialize for RuleSet {
     where
         S: serde::Serializer,
     {
-        serializer.serialize_u32(self.0)
+        if self.0 == 0 {
+            // Output nothing instead of zero to save some space.
+            serializer.serialize_str("")
+        } else {
+            serializer.serialize_u32(self.0)
+        }
     }
 }
 
