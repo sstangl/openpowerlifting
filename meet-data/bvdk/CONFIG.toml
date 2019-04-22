@@ -46,3 +46,4 @@
 
 [exemptions]
     0901 = ["ExemptWeightClassConsistency"]
+    1311 = ["ExemptWeightClassConsistency"] #Used a reduced number of weightclasses
