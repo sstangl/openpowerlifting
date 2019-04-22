@@ -128,6 +128,10 @@ pub enum MetaFederation {
     #[strum(to_string = "npb")]
     NPB,
 
+    /// PA, but excluding non-Australian lifters.
+    #[strum(to_string = "pa")]
+    PA,
+
     /// USAPL, but with international results also.
     USAPL,
 
@@ -370,6 +374,14 @@ impl MetaFederation {
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Netherlands)
                 }
+                _ => false,
+            },
+            MetaFederation::PA => match meet.federation {
+                Federation::PA => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Australia)
+                }
+                Federation::WP => entry.lifter_country == Some(Country::Australia),
                 _ => false,
             },
             MetaFederation::USAPL => match meet.federation {
