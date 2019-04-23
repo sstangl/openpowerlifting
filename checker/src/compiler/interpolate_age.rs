@@ -410,6 +410,7 @@ fn infer_from_range(
         let mdate: Date = meetdata.get_meet(index).date;
         let entry = meetdata.get_entry_mut(index);
 
+        let entry_had_exact_age = entry.age.is_exact();
         let age_on_date = range.age_on(mdate);
 
         match age_on_date {
@@ -424,7 +425,11 @@ fn infer_from_range(
         };
 
         // Update the AgeClass to match the Age, if applicable.
-        if entry.ageclass == AgeClass::None {
+        //
+        // If the entry initially had an Age::Approximate, the AgeClass matched
+        // by previous information (and set by the checker) may be different
+        // than the current best match.
+        if entry.ageclass == AgeClass::None || !entry_had_exact_age {
             entry.ageclass = AgeClass::from_age(age_on_date);
             if entry.ageclass != AgeClass::None {
                 trace_inference(debug, "AgeClass (via Age)", &entry.ageclass, mdate);
