@@ -413,7 +413,7 @@ impl MetaFederation {
                     entry.lifter_country == None
                         || entry.lifter_country == Some(Country::Thailand)
                 }
-                Federation::IPF | Federation::OceaniaPF | Federation::AsianPF => {
+                Federation::IPF | Federation::ORPF | Federation::AsianPF => {
                     entry.lifter_country == Some(Country::Thailand)
                 }
                 _ => false,
