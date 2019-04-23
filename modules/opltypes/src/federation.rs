@@ -481,6 +481,10 @@ pub enum Federation {
     #[strum(to_string = "LPF", serialize = "lpf")]
     LPF,
 
+    /// Michigan High School Powerlifting Association
+    #[strum(to_string = "MHSPLA", serialize = "mhspla")]
+    MHSPLA,
+
     /// Metal Militia, a small, independent federation.
     #[strum(to_string = "MM", serialize = "mm")]
     MM,
@@ -1087,6 +1091,7 @@ impl Federation {
             Federation::KRAFT => true,
             Federation::KPF => true,
             Federation::LPF => true,
+            Federation::MHSPLA => false,
             Federation::MM => false,
             Federation::MPA => false,
             Federation::NAP => false,
@@ -1317,6 +1322,7 @@ impl Federation {
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::LPF => Some(Country::Latvia),
+            Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
             Federation::MPA => Some(Country::Malaysia),
             Federation::NAP => Some(Country::Russia),
@@ -1558,6 +1564,7 @@ impl Federation {
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => Federation::ipf_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
+            Federation::MHSPLA => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,

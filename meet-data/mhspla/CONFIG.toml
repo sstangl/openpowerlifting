@@ -1,0 +1,16 @@
+[divisions]
+    jv = {name="Junior Varsity", min=13, max=19, equipment="Raw"}
+    v = {name="Varsity", min=13, max=19, equipment="Raw"}
+    o = {name="Open", min=13, max=19, equipment="Raw"}
+
+# MHPLA uses pounds classes with exact pound values.
+[weightclasses.default_M]
+    classes = ["51.71","55.79","59.87","65.77","70.31","74.84","82.1","88","93.89","99.79","109.77","124.74","124.74+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+[weightclasses.default_F]
+    classes = ["44","47.63","51.71","55.79","59.87","65.77","70.31","74.84","82.1","89.81","99.79","109.77","99.79+","109.77+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+[exemptions]
+    1501 = ["ExemptWeightClassConsistency"]
