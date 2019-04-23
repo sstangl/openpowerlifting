@@ -142,6 +142,9 @@ pub enum MetaFederation {
     /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
+
+    /// ThaiPF, excluding non-Thai lifters and including IPF results.
+    ThaiPF,
 }
 
 impl MetaFederation {
@@ -405,6 +408,16 @@ impl MetaFederation {
                         || (meet.federation == Federation::IPL
                             && entry.lifter_country == Some(Country::USA)))
             }
+            MetaFederation::ThaiPF => match meet.federation {
+                Federation::ThaiPF => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Thailand)
+                }
+                Federation::IPF | Federation::OceaniaPF => {
+                    entry.lifter_country == Some(Country::Thailand)
+                }
+                _ => false,
+            },
         }
     }
 }
