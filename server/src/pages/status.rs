@@ -65,8 +65,13 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[APU as usize].status = complete;
     statuses[BB as usize].status = complete;
     statuses[BPU as usize].status = complete;
+    statuses[CroatiaUA as usize].status = complete;
     statuses[DSF as usize].status = complete;
+    statuses[GPACRO as usize].status = complete;
     statuses[HERC as usize].status = complete;
+    statuses[HPLS as usize].status = complete;
+    statuses[HPLSUA as usize].status = complete;
+    statuses[HPO as usize].status = complete;
     statuses[IPF as usize].status = complete;
     statuses[IrishPF as usize].status = complete;
     statuses[PA as usize].status = complete;
@@ -171,11 +176,15 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CAPO as usize].format = pdf_unstructured;
     statuses[CPF as usize].format = pdf_unstructured;
     statuses[CPU as usize].format = database;
+    statuses[CroatiaUA as usize].format = jpg;
     statuses[DBKV as usize].format = magazines;
     statuses[DSF as usize].format = database;
     statuses[EPA as usize].format = pdf_unstructured;
     statuses[EPF as usize].format = html;
     statuses[GPCAUS as usize].format = html;
+    statuses[HPLS as usize].format = xls_unstructured;
+    statuses[HPLSUA as usize].format = jpg;
+    statuses[HPO as usize].format = html;
     statuses[IPA as usize].format = xls_unstructured;
     statuses[IPF as usize].format = html;
     statuses[IPLNZ as usize].format = pdf_structured;
@@ -222,11 +231,15 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CAPO as usize].ease = medium;
     statuses[CPF as usize].ease = medium;
     statuses[CPU as usize].ease = easy;
+    statuses[CroatiaUA as usize].ease = difficult;
     statuses[DBKV as usize].ease = medium;
     statuses[DSF as usize].ease = easy;
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
     statuses[GPCAUS as usize].ease = easy;
+    statuses[HPLS as usize].ease = medium;
+    statuses[HPLSUA as usize].ease = difficult;
+    statuses[HPO as usize].ease = medium;
     statuses[IPA as usize].ease = difficult;
     statuses[IPF as usize].ease = easy;
     statuses[IPLNZ as usize].ease = medium;
@@ -260,6 +273,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_romi = "<a href=\"mailto:romi@openpowerlifting.org\">Romi@</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
+    let email_alan = "<a href=\"mailto:alan.zgb@gmail.com\">alan@</a>";
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
@@ -276,13 +290,18 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CommonwealthPF as usize].maintainers = email_jo;
     statuses[CPF as usize].maintainers = email_sean;
     statuses[CPU as usize].maintainers = email_sean;
+    statuses[CroatiaUA as usize].maintainers = email_alan;
     statuses[DBKV as usize].maintainers = email_romi;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
+    statuses[GPACRO as usize].maintainers = email_alan;
     statuses[GPCAUS as usize].maintainers = email_matt;
     statuses[GPCGB as usize].maintainers = email_robby;
     statuses[GPCNZ as usize].maintainers = email_matt;
     statuses[HERC as usize].maintainers = email_sean;
+    statuses[HPLS as usize].maintainers = email_alan;
+    statuses[HPLSUA as usize].maintainers = email_alan;
+    statuses[HPO as usize].maintainers = email_alan;
     statuses[IPF as usize].maintainers = email_jo;
     statuses[IPLNZ as usize].maintainers = email_matt;
     statuses[IrelandUA as usize].maintainers = email_jo;
