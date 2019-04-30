@@ -214,6 +214,9 @@
   <option value="wpc-kaz" {% if selection.federation == "WPC-KAZ" %}selected{% endif %}>WPC Kazakhstan</option>
   <option value="wrpf-kaz" {% if selection.federation == "WRPF-KAZ" %}selected{% endif %}>WRPF Kazakhstan</option>
 </optgroup>
+<optgroup label="{{strings.country.kuwait}}">
+  <option value="kuwaitpl" {% if selection.federation == "KuwaitPL" %}selected{% endif %}>KuwaitPL - Kuwait Powerlifting League [IPL]</option>
+</optgroup>
 <optgroup label="{{strings.country.kyrgyzstan}}">
   <option value="wpc-kgz" {% if selection.federation == "WPC-KGZ" %}selected{% endif %}>WPC Kyrgyzstan</option>
 </optgroup>
