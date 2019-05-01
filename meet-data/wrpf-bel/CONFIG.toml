@@ -1,5 +1,6 @@
 [divisions]
     open = {name="Open", min=0, max=999}
+    teens = {name="Teens", min=13, max=19}
     teens1416 = {name="Teens 14-16", min=14, max=16}
     teens1719 = {name="Teens 17-19", min=17, max=19}
     juniors = {name="Juniors 20-23", min=20, max=23}
@@ -20,3 +21,4 @@
 
 [exemptions]
     1801 = ["ExemptWeightClassConsistency"] # Strange classes for Masters and Juniors.
+    1901 = ["ExemptWeightClassConsistency"] # Strange classes for Masters and Juniors.
