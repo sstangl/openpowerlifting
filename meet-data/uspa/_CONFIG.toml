@@ -33,6 +33,9 @@
     police_fire = {name = "Police/Fire", min = 0, max = 999}
     special_olympian= {name = "Special Olympian", min = 0, max = 999}
 
+    # Old divisions. No longer in use.
+    juniors_15_19 = {name = "Juniors 15-19", min = 15, max = 19}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
@@ -45,5 +48,6 @@
 
 [exemptions]
     0013 = ["ExemptWeightClassConsistency"] # Lifter missing weight info.
+    0041 = ["ExemptWeightClassConsistency"] # 200lbs and 200+lbs classes.
     0075 = ["ExemptWeightClassConsistency"]
     0168 = ["ExemptWeightClassConsistency"]
