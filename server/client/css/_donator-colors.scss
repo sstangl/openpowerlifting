@@ -201,6 +201,13 @@
   background-image: linear-gradient(to right, $purple, $green);
 }
 
+.purple_to_turquoise {
+  $purple: #AE76FF;
+  $turquoise: #40E0D0;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to right, $purple, $turquoise);
+}
+
 .matt_gradient {
   @include gradient-prereqs($default-color);
   background-image: 
