@@ -225,6 +225,13 @@
   background-image: linear-gradient(to right, $red, $white);
 }
 
+.all_red_top_down {
+  $red: #FB3640;
+  $darker_red: #AE252C;
+  @include gradient-prereqs($darker-red);
+  background-image: linear-gradient(to bottom, $red, $darker_red);
+}
+
 .turquoise_to_magenta {
   $turquoise: #40E0D0;
   $magenta: #FF00FF;
