@@ -1,12 +1,12 @@
 Name,Place,Division,Sex,Equipment,State,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
-Ellen Stein,1,Light 97-132 by Wilks formula,F,Wraps,NY,60,59.56,60,157.5,85,,180,,422.5,SBD
-Danielle Columby,2,Light 97-132 by Wilks formula,F,Wraps,AZ,52,50.44,29,130,70,,152.5,,352.5,SBD
-Nicki Crapotta,3,Light 97-132 by Wilks formula,F,Wraps,CA,60,59.78,27,140,75,,172.5,,387.5,SBD
-Ashley Paiz,4,Light 97-132 by Wilks formula,F,Wraps,NM,56,55.88,24,135,65,,130,,330,SBD
-Tara Webber,1,Heavy 148- by Wilks formula,F,Wraps,Canada,82.5,81.19,24,197.5,120,,195,,512.5,SBD
-Nancy Sarieh,2,Heavy 148- by Wilks formula,F,Wraps,CA,75,74.39,30,152.5,72.5,,200,,425,SBD
-Bernice Fuss,3,Heavy 148- by Wilks formula,F,Wraps,Canada,75,70.13,57,127.5,100,108,150,161,377.5,SBD
-Angela Adams,DQ,Heavy 148- by Wilks formula,F,Wraps,TN,90+,95.98,38,-145,102.5,,180,,,SBD
+Ellen Stein,1,LW,F,Wraps,NY,60,59.56,60,157.5,85,,180,,422.5,SBD
+Danielle Columby,2,LW,F,Wraps,AZ,60,50.44,29,130,70,,152.5,,352.5,SBD
+Nicki Crapotta,3,LW,F,Wraps,CA,60,59.78,27,140,75,,172.5,,387.5,SBD
+Ashley Paiz,4,LW,F,Wraps,NM,60,55.88,24,135,65,,130,,330,SBD
+Tara Webber,1,HW,F,Wraps,Canada,60+,81.19,24,197.5,120,,195,,512.5,SBD
+Nancy Sarieh,2,HW,F,Wraps,CA,60+,74.39,30,152.5,72.5,,200,,425,SBD
+Bernice Fuss,3,HW,F,Wraps,Canada,60+,70.13,57,127.5,100,108,150,161,377.5,SBD
+Angela Adams,DQ,HW,F,Wraps,TN,60+,95.98,38,-145,102.5,,180,,,SBD
 James McCabe,1,Open,M,Wraps,CA,60,59.78,23,227.5,122.5,,230,,580,SBD
 Carlos Zarate,1,Open,M,Wraps,CA,67.5,66.59,22,167.5,115,,182.5,,465,SBD
 Bill Lotter,1,Open,M,Wraps,MA,75,74.48,25,232.5,127.5,,265,,625,SBD
@@ -34,20 +34,20 @@ Benjamin Bindseil,2,Open,M,Wraps,TX,140,135.99,24,292.5,200,,305,,797.5,SBD
 Ben Moore,1,Open,M,Wraps,MO,140+,158.67,36,367.5,207.5,,347.5,,922.5,SBD
 Jeff Frank,2,Open,M,Wraps,KS,140+,168.51,25,365,227.5,,320,,912.5,SBD
 Mike Kromer,3,Open,M,Wraps,WA,140+,158.94,40,347.5,227.5,,295,,870,SBD
-Susan Salazar,1,Light 97-132 by Wilks formula,F,Raw,CA,60,59.56,38,155,90,,185,,430,SBD
-Tina Daneshmand,2,Light 97-132 by Wilks formula,F,Raw,CA,48,47.76,27,105,62.5,,157.5,,325,SBD
-Joan Jennings,3,Light 97-132 by Wilks formula,F,Raw,WA,60,57.33,32,122.5,77.5,,150,,350,SBD
-Desiree Morgan,4,Light 97-132 by Wilks formula,F,Raw,CA,56,55.84,25,125,62.5,,155,,342.5,SBD
-Suzanne Davis,5,Light 97-132 by Wilks formula,F,Raw,AZ,56,53.75,42,100,62.5,,162.5,,325,SBD
-Tiffany Leung,6,Light 97-132 by Wilks formula,F,Raw,CA,44,42,22,92.5,40,,127.5,,260,SBD
-Emily Hu #1,DQ,Light 97-132 by Wilks formula,F,Raw,CA,52,51.62,31,95,-87.5,,,,,SBD
-Molly O'Rourke,1,Heavy 148- by Wilks formula,F,Raw,CA,90+,102.1,30,192.5,127.5,,220,,540,SBD
-Tara Maier,2,Heavy 148- by Wilks formula,F,Raw,AZ,75,74.16,19,143.5,92.5,,165,,401,SBD
-Jenna Doyle,3,Heavy 148- by Wilks formula,F,Raw,CA,75,74.8,23,137.5,75,,187.5,,400,SBD
-Malinda Gustafson,4,Heavy 148- by Wilks formula,F,Raw,AZ,75,74.8,35,135,82.5,,162.5,,380,SBD
-Nicole Pettel,5,Heavy 148- by Wilks formula,F,Raw,CA,67.5,66.59,21,132.5,75,,135,,342.5,SBD
-Nicole Herbig,6,Heavy 148- by Wilks formula,F,Raw,CA,67.5,67.22,24,115,57.5,,137.5,,310,SBD
-Sheri Stiles,DQ,Heavy 148- by Wilks formula,F,Raw,MN,75,70.08,25,-135,72.5,,172.5,,,SBD
+Susan Salazar,1,LW,F,Raw,CA,60,59.56,38,155,90,,185,,430,SBD
+Tina Daneshmand,2,LW,F,Raw,CA,60,47.76,27,105,62.5,,157.5,,325,SBD
+Joan Jennings,3,LW,F,Raw,WA,60,57.33,32,122.5,77.5,,150,,350,SBD
+Desiree Morgan,4,LW,F,Raw,CA,60,55.84,25,125,62.5,,155,,342.5,SBD
+Suzanne Davis,5,LW,F,Raw,AZ,60,53.75,42,100,62.5,,162.5,,325,SBD
+Tiffany Leung,6,LW,F,Raw,CA,60,42,22,92.5,40,,127.5,,260,SBD
+Emily Hu #1,DQ,LW,F,Raw,CA,60,51.62,31,95,-87.5,,,,,SBD
+Molly O'Rourke,1,HW,F,Raw,CA,60+,102.1,30,192.5,127.5,,220,,540,SBD
+Tara Maier,2,HW,F,Raw,AZ,60+,74.16,19,143.5,92.5,,165,,401,SBD
+Jenna Doyle,3,HW,F,Raw,CA,60+,74.8,23,137.5,75,,187.5,,400,SBD
+Malinda Gustafson,4,HW,F,Raw,AZ,60+,74.8,35,135,82.5,,162.5,,380,SBD
+Nicole Pettel,5,HW,F,Raw,CA,60+,66.59,21,132.5,75,,135,,342.5,SBD
+Nicole Herbig,6,HW,F,Raw,CA,60+,67.22,24,115,57.5,,137.5,,310,SBD
+Sheri Stiles,DQ,HW,F,Raw,MN,60+,70.08,25,-135,72.5,,172.5,,,SBD
 Scott Layman,1,Open,M,Raw,CA,67.5,66.32,43,215,137.5,,222.5,,575,SBD
 Dan Carpenter,2,Open,M,Raw,FL,67.5,65.54,35,185,117.5,,235,,537.5,SBD
 Gary Slater,1,Open,M,Raw,CA,75,74.21,42,230,178,,242.5,,650.5,SBD
@@ -68,8 +68,8 @@ Jimmy Doyle,2,Open,M,Raw,CA,100,99.74,25,,190,,,,190,B
 Ryan DeWitt,1,Open,M,Raw,CA,125,122.2,38,,227.5,,,,227.5,B
 David Douglas,1,Open,M,Raw,CA,140,129.77,26,,247.5,,,,247.5,B
 LeRoy Walker,1,Open,M,Raw,CA,140+,159.66,36,,277.5,283,,,277.5,B
-Tina Daneshmand,1,Deadlift,F,Raw,CA,48,47.76,27,,,,157.5,162.5,157.5,D
-Jill Mills,1,Deadlift,F,Raw,TX,82.5,78.29,41,,,,227.5,,227.5,D
+Tina Daneshmand,1,Open,F,Raw,CA,48,47.76,27,,,,157.5,162.5,157.5,D
+Jill Mills,1,Open,F,Raw,TX,82.5,78.29,41,,,,227.5,,227.5,D
 Antonio Machuca,1,Open,M,Raw,CA,90,89.99,33,,,,317.5,,317.5,D
 Greg Khoudikian,2,Open,M,Raw,CA,90,89.58,21,,,,275,,275,D
 Luigi Fagiani,1,Open,M,Raw,NY,100,98.57,23,,,,332.5,,332.5,D

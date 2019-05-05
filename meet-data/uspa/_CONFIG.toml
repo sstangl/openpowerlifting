@@ -36,6 +36,12 @@
     # Old divisions. No longer in use.
     juniors_15_19 = {name = "Juniors 15-19", min = 15, max = 19}
 
+    # Special weightclass based divisions
+    LW = {name = "LW", min = 0, max = 999}
+    MW = {name = "MW", min = 0, max = 999}
+    HW = {name = "HW", min = 0, max = 999}
+
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
@@ -51,3 +57,10 @@
     0041 = ["ExemptWeightClassConsistency"] # 200lbs and 200+lbs classes.
     0075 = ["ExemptWeightClassConsistency"]
     0168 = ["ExemptWeightClassConsistency"]
+    0299 = ["ExemptWeightClassConsistency"] # 60kg & 60+kg women's classes.
+    0270 = ["ExemptWeightClassConsistency"] # LW,MW,HW weightclasses.
+    0061 = ["ExemptWeightClassConsistency"] # 125+kg class.
+    0050 = ["ExemptWeightClassConsistency"] # 125+kg class.
+    0030 = ["ExemptWeightClassConsistency"] # No weightclasses for pro lifters.
+    0024 = ["ExemptWeightClassConsistency"] # 125+kg class.
+    0020 = ["ExemptWeightClassConsistency"] # No weightclasses for masters lifters.

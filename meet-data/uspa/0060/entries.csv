@@ -1,7 +1,7 @@
 Name,Division,Sex,WeightClassKg,BodyweightKg,Age,Event,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Equipment,Place
-Trisha Layman,Juniors,F,48,46.72,13,SBD,52.50,30.00,,65.00,,147.50,Single-ply,1
-Alex Decker,Juniors,F,56,52.89,20,SBD,70.00,45.00,,115.00,,230.00,Single-ply,1
-Teresa Merkelbach,Juniors,F,90+,93.44,22,SBD,62.50,52.50,,112.50,,227.50,Single-ply,1
+Trisha Layman,Juniors 13-15,F,48,46.72,13,SBD,52.50,30.00,,65.00,,147.50,Single-ply,1
+Alex Decker,Juniors 20-23,F,56,52.89,20,SBD,70.00,45.00,,115.00,,230.00,Single-ply,1
+Teresa Merkelbach,Juniors 20-23,F,90+,93.44,22,SBD,62.50,52.50,,112.50,,227.50,Single-ply,1
 Catherine LaMantia,Open,F,60,59.87,15,SBD,50.00,32.50,,92.50,,175.00,Single-ply,1
 Karen Matthews,Open,F,67.5,65.23,38,SBD,145.00,80.00,,160.00,,385.00,Single-ply,1
 Rolanda Dixon,Open,F,82.5,77.93,39,SBD,160.00,102.50,,175.00,,437.49,Single-ply,1
@@ -10,17 +10,17 @@ Nicki I'Anson,Open,F,90+,97.98,40,SBD,160.00,110.00,,162.50,,432.50,Single-ply,1
 Karen Matthews,Submasters 35-39,F,67.5,65.23,38,SBD,145.00,80.00,,160.00,,385.00,Single-ply,1
 Rolanda Dixon,Submasters 35-39,F,82.5,77.93,39,SBD,160.00,102.50,,175.00,,437.49,Single-ply,1
 Nicki I'Anson,Masters,F,90+,97.98,40,SBD,160.00,110.00,,162.50,,432.50,Single-ply,1
-Dalton Horine,Juniors,M,75,68.04,14,SBD,110.00,77.50,,130.00,,317.50,Single-ply,3
-Joe Dominguez,Juniors,M,82.5,79.29,15,SBD,160.00,100.00,,182.50,,442.50,Single-ply,1
-Jake Campos,Juniors,M,82.5,82.10,14,SBD,125.00,85.00,,140.00,,350.00,Single-ply,2
-Peyton Seals,Juniors,M,75,73.57,17,SBD,137.50,80.00,,155.00,,372.49,Single-ply,2
-Phil Owens,Juniors,M,90,89.09,17,SBD,182.50,130.00,,200.00,,512.50,Single-ply,1
-Drew Horine,Juniors,M,100,95.89,17,SBD,187.50,127.50,,197.50,,512.50,Single-ply,1
-Ross Thompson,Juniors,M,75,73.30,19,SBD,155.00,120.00,,182.50,,457.49,Single-ply,1
-John Gambos,Juniors,M,100,94.71,18,SBD,155.00,120.00,,185.00,,460.00,Single-ply,2
-O'Neil Roussell,Juniors,M,140+,162.48,21,SBD,230.00,187.50,,245.00,,662.49,Single-ply,1
-Anthony Cissell,Juniors,M,140+,146.33,21,SBD,220.00,182.50,,192.50,,595.00,Single-ply,2
-Nathan Wright,Juniors,M,140+,140.89,21,SBD,260.00,-217.27,,,,,Single-ply,DQ
+Dalton Horine,Juniors 13-15,M,75,68.04,14,SBD,110.00,77.50,,130.00,,317.50,Single-ply,3
+Joe Dominguez,Juniors 13-15,M,82.5,79.29,15,SBD,160.00,100.00,,182.50,,442.50,Single-ply,1
+Jake Campos,Juniors 13-15,M,82.5,82.10,14,SBD,125.00,85.00,,140.00,,350.00,Single-ply,2
+Peyton Seals,Juniors 16-17,M,75,73.57,17,SBD,137.50,80.00,,155.00,,372.49,Single-ply,2
+Phil Owens,Juniors 16-17,M,90,89.09,17,SBD,182.50,130.00,,200.00,,512.50,Single-ply,1
+Drew Horine,Juniors 16-17,M,100,95.89,17,SBD,187.50,127.50,,197.50,,512.50,Single-ply,1
+Ross Thompson,Juniors 18-19,M,75,73.30,19,SBD,155.00,120.00,,182.50,,457.49,Single-ply,1
+John Gambos,Juniors 18-19,M,100,94.71,18,SBD,155.00,120.00,,185.00,,460.00,Single-ply,2
+O'Neil Roussell,Juniors 20-23,M,140+,162.48,21,SBD,230.00,187.50,,245.00,,662.49,Single-ply,1
+Anthony Cissell,Juniors 20-23,M,140+,146.33,21,SBD,220.00,182.50,,192.50,,595.00,Single-ply,2
+Nathan Wright,Juniors 20-23,M,140+,140.89,21,SBD,260.00,-217.27,,,,,Single-ply,DQ
 Charlie LaMantia,Open,M,52,47.54,10,SBD,35.00,30.00,,67.50,,132.50,Single-ply,1
 Scott Layman,Open,M,67.5,66.90,36,SBD,250.00,177.50,,220.00,,647.49,Single-ply,1
 Daniel Sorenson,Open,M,67.5,67.45,43,SBD,210.00,150.00,,237.50,,597.49,Single-ply,2
@@ -68,7 +68,7 @@ Roy Taylor,Masters,M,90,87.00,66,SBD,132.50,85.00,,177.50,,395.00,Single-ply,3
 Larry Manly,Masters,M,82.5,81.19,70,SBD,125.00,97.50,,142.50,,365.00,Single-ply,2
 Pete Wilson,Masters,M,90,89.81,70,SBD,205.00,150.00,,192.50,,547.50,Single-ply,2
 Robert Cortes,Masters,M,75,69.67,76,SBD,147.50,105.00,,201.00,,453.50,Single-ply,1
-Alex Decker,Juniors,F,56,52.89,20,B,,45.00,,,,45.00,Single-ply,1
+Alex Decker,Juniors 20-23,F,56,52.89,20,B,,45.00,,,,45.00,Single-ply,1
 Bonnie Aerts,Open,F,52,50.71,48,B,,45.00,,,,45.00,Single-ply,1
 Nicki I'Anson,Open,F,90+,97.98,40,B,,110.00,,,,110.00,Single-ply,1
 Mary Rubcic-Tawzer,Open,F,90+,102.06,50,B,,42.50,,,,42.50,Single-ply,2
@@ -79,10 +79,10 @@ Nicki I'Anson,Masters,F,90+,97.98,40,B,,110.00,,,,110.00,Single-ply,1
 Bonnie Aerts,Masters,F,52,50.71,48,B,,45.00,,,,45.00,Single-ply,2
 Anne Larson,Masters,F,56,53.48,45,B,,59.00,,,,59.00,Single-ply,1
 Mary Rubcic-Tawzer,Masters,F,90+,102.06,50,B,,42.50,,,,42.50,Single-ply,2
-Joe Iriberri,Juniors,M,75,72.21,14,B,,95.00,,,,95.00,Single-ply,1
-Chase Craft,Juniors,M,100,94.17,17,B,,122.50,,,,122.50,Single-ply,2
-Jonathan Hoffmann,Juniors,M,110,108.59,19,B,,227.50,,,,227.50,Single-ply,1
-Greg Butler,Juniors,M,100,95.89,22,B,,185.00,,,,185.00,Single-ply,1
+Joe Iriberri,Juniors 13-15,M,75,72.21,14,B,,95.00,,,,95.00,Single-ply,1
+Chase Craft,Juniors 16-17,M,100,94.17,17,B,,122.50,,,,122.50,Single-ply,2
+Jonathan Hoffmann,Juniors 18-19,M,110,108.59,19,B,,227.50,,,,227.50,Single-ply,1
+Greg Butler,Juniors 20-23,M,100,95.89,22,B,,185.00,,,,185.00,Single-ply,1
 Nikolai Maynard,Open,M,52,49.26,16,B,,40.00,,,,40.00,Single-ply,1
 James Maynard,Open,M,60,57.70,39,B,,-59.87,,,,,Single-ply,DQ
 Rogelio Sanchez,Open,M,67.5,66.13,31,B,,82.50,,,,82.50,Single-ply,1
@@ -110,7 +110,7 @@ Bob Evans #1,Masters,M,110,105.69,60,B,,185.00,,,,185.00,Single-ply,1
 Rudy Lozano,Masters,M,82.5,81.19,67,B,,177.50,,,,177.50,Single-ply,1
 Jim Andres,Masters,M,60,58.97,72,B,,70.00,,,,70.00,Single-ply,1
 Larry Manly,Masters,M,82.5,81.19,70,B,,97.50,,,,97.50,Single-ply,2
-Alex Decker,Juniors,F,56,52.89,20,D,,,,115.00,,115.00,Single-ply,1
+Alex Decker,Juniors 20-23,F,56,52.89,20,D,,,,115.00,,115.00,Single-ply,1
 Bonnie Aerts,Open,F,52,50.71,48,D,,,,85.00,,85.00,Single-ply,1
 Nicki I'Anson,Open,F,90+,97.98,40,D,,,,162.50,,162.50,Single-ply,1
 Mary Rubcic-Tawzer,Open,F,90+,102.06,50,D,,,,90.00,,90.00,Single-ply,2
@@ -121,9 +121,9 @@ Michelle Kilikauskas,Masters,F,52,50.17,48,D,,,,87.50,,87.50,Single-ply,1
 Bonnie Aerts,Masters,F,52,50.71,48,D,,,,85.00,,85.00,Single-ply,2
 Mary Rubcic-Tawzer,Masters,F,90+,102.06,50,D,,,,90.00,,90.00,Single-ply,2
 Opal Belanger,Masters,F,56,54.34,68,D,,,,47.50,,47.50,Single-ply,1
-Chase Craft,Juniors,M,100,94.17,17,D,,,,200.00,,200.00,Single-ply,1
-Jonathan Hoffmann,Juniors,M,110,108.59,19,D,,,,227.50,,227.50,Single-ply,1
-Dalziel Soto,Juniors,M,75,73.12,22,D,,,,185.00,,185.00,Single-ply,1
+Chase Craft,Juniors 16-17,M,100,94.17,17,D,,,,200.00,,200.00,Single-ply,1
+Jonathan Hoffmann,Juniors 18-19,M,110,108.59,19,D,,,,227.50,,227.50,Single-ply,1
+Dalziel Soto,Juniors 20-23,M,75,73.12,22,D,,,,185.00,,185.00,Single-ply,1
 Omar Alaqeeli,Open,M,56,53.34,27,D,,,,125.00,,125.00,Single-ply,1
 Joseph Lipanovich,Open,M,75,74.84,24,D,,,,182.50,,182.50,Single-ply,1
 Pavel Tsatsouline,Open,M,82.5,82.19,37,D,,,,222.50,,222.50,Single-ply,1

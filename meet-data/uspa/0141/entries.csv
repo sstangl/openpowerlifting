@@ -1,5 +1,5 @@
 Place,Name,Division,WeightClassKg,BodyweightKg,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Equipment,Deadlift4Kg,Bench4Kg,Event
-1,Jenna Neeley,Juniors,60,59.69,23,182.5,92.5,157.5,432.5,F,Single-ply,,,SBD
+1,Jenna Neeley,Juniors 20-23,60,59.69,23,182.5,92.5,157.5,432.5,F,Single-ply,,,SBD
 1,Ren Yamashita,Open,52,51.17,21,165,95,142.5,402.5,F,Single-ply,,,SBD
 1,Suzanne Hedman,Open,56,54.79,51,155,110,155,420,F,Single-ply,,,SBD
 1,Jenna Neeley,Open,60,59.69,23,182.5,92.5,157.5,432.5,F,Single-ply,,,SBD
@@ -25,15 +25,15 @@ DQ,Georgiann Puckett,Masters,60,59.6,46,130,-90,,,F,Single-ply,,,SBD
 DQ,Gia Blackwell,Masters,75,72.76,50,-187.5,92.5,165,,F,Single-ply,,,SBD
 1,Zee Helmick,Masters,82.5,80.74,44,87.5,40,100,227.5,F,Single-ply,,,SBD
 1,Nicki I'Anson,Masters,90,89.09,45,175,132.5,162.5,470,F,Single-ply,,,SBD
-DQ,Josh Puckett,Juniors,82.5,81.47,18,-237.5,,,,M,Single-ply,,,SBD
-1,Cameron Willis,Juniors,90,84.01,15,145,92.5,167.5,405,M,Single-ply,,,SBD
-1,Vahe Shatakhyan,Juniors,90,88.99,23,207.5,155,265,627.5,M,Single-ply,,,SBD
-1,Cole Hale,Juniors,100,92.71,19,185,120,190,495,M,Single-ply,,,SBD
-1,Michael Nehme,Juniors,100,96.34,21,237.5,187.5,267.5,692.5,M,Single-ply,,,SBD
-1,Brady Jones,Juniors,125,122.47,23,282.5,187.5,302.5,772.5,M,Single-ply,,,SBD
-2,Kamuela Wassman,Juniors,125,123.01,23,255,195,285,735,M,Single-ply,,,SBD
-3,Grant Hallock,Juniors,125,115.12,22,220,170,237.5,627.5,M,Single-ply,,,SBD
-DQ,Dustin Gates,Juniors,125,116.12,22,-295,272.5,265,,M,Single-ply,,,SBD
+DQ,Josh Puckett,Juniors 20-23,82.5,81.47,18,-237.5,,,,M,Single-ply,,,SBD
+1,Cameron Willis,Juniors 20-23,90,84.01,15,145,92.5,167.5,405,M,Single-ply,,,SBD
+1,Vahe Shatakhyan,Juniors 20-23,90,88.99,23,207.5,155,265,627.5,M,Single-ply,,,SBD
+1,Cole Hale,Juniors 20-23,100,92.71,19,185,120,190,495,M,Single-ply,,,SBD
+1,Michael Nehme,Juniors 20-23,100,96.34,21,237.5,187.5,267.5,692.5,M,Single-ply,,,SBD
+1,Brady Jones,Juniors 20-23,125,122.47,23,282.5,187.5,302.5,772.5,M,Single-ply,,,SBD
+2,Kamuela Wassman,Juniors 20-23,125,123.01,23,255,195,285,735,M,Single-ply,,,SBD
+3,Grant Hallock,Juniors 20-23,125,115.12,22,220,170,237.5,627.5,M,Single-ply,,,SBD
+DQ,Dustin Gates,Juniors 20-23,125,116.12,22,-295,272.5,265,,M,Single-ply,,,SBD
 1,Jonathon Bareng,Open,60,59.78,28,245,165,250,660,M,Single-ply,,,SBD
 2,Keary Molinaro,Open,60,59.96,29,162.5,110,160,432.5,M,Single-ply,,,SBD
 1,Scott Layman,Open,67.5,64.32,40,250,160,232.5,642.5,M,Single-ply,,,SBD
@@ -119,7 +119,7 @@ DQ,Scott Cartwright,Masters,140+,151.14,41,457.5,-330,,,M,Single-ply,,,SBD
 1,Brian Meek,Masters,140,125.28,65,255,172.5,227.5,655,M,Single-ply,,,SBD
 1,Emily Jones,Open USAF,60,59.42,27,97.5,55,142.5,295,F,Single-ply,,,SBD
 2,Margie Rodgers,Open USMC,60,59.96,25,95,57.5,92.5,245,F,Single-ply,,,SBD
-1,Cole Hale,Juniors USN,100,92.71,19,185,120,190,495,M,Single-ply,,,SBD
+1,Cole Hale,Juniors 20-23 USN,100,92.71,19,185,120,190,495,M,Single-ply,,,SBD
 1,Keary Molinaro,Open USMC,60,59.96,29,162.5,110,160,432.5,M,Single-ply,,,SBD
 1,Reynaldo Desenganio,Open USMC,67.5,66.22,28,150,150,232.5,532.5,M,Single-ply,,,SBD
 1,Matthew Reep,Open USMC,75,74.39,37,192.5,190,220,602.5,M,Single-ply,,,SBD
@@ -155,14 +155,14 @@ DQ,JR Mancini,Open,110,106.5,32,332.5,-230,,,M,Multi-ply,,,SBD
 DQ,Mark Folweiler,Open,140+,182.71,20,370,-252.5,,,M,Multi-ply,,,SBD
 1,Ken Wheeler,Masters,110,107.59,57,340,157.5,252.5,750,M,Multi-ply,,,SBD
 1,Tony Rodenburg,Masters,125,118.12,54,155,125,230,510,M,Multi-ply,,,SBD
-1,London Chow,Juniors,52,49.8,15,,40,,40,F,Single-ply,,,B
+1,London Chow,Juniors 20-23,52,49.8,15,,40,,40,F,Single-ply,,,B
 1,Shanrekia Bower,Submasters 35-39,90+,123.83,35,,150,,150,F,Single-ply,,,B
 1,Gayle Arrowood,Masters,60,59.87,51,,58,,58,F,Single-ply,,,B
 1,Trace Ryan,Masters,67.5,66.86,41,,65,,65,F,Single-ply,,,B
 1,Karen Parnow,Masters,67.5,65.59,53,,77.5,,77.5,F,Single-ply,,78,B
 1,Tracie Marquez,Masters,90,88.99,48,,67.5,,67.5,F,Single-ply,,,B
-1,Garrett Fulbright,Juniors,67.5,67.4,19,,120,,120,M,Single-ply,,,B
-1,Lester Dedrick,Juniors,140+,213.19,17,,185,,185,M,Single-ply,,,B
+1,Garrett Fulbright,Juniors 20-23,67.5,67.4,19,,120,,120,M,Single-ply,,,B
+1,Lester Dedrick,Juniors 20-23,140+,213.19,17,,185,,185,M,Single-ply,,,B
 1,Matt Kinsell,Open,67.5,67.04,35,,160,,160,M,Single-ply,,,B
 1,Anthony Fregoso,Open,90,86.82,34,,140,,140,M,Single-ply,,,B
 1,Stacy Dedrick,Open,100,97.79,46,,230,,230,M,Single-ply,,,B
@@ -199,9 +199,9 @@ DQ,Rich Lopez,Masters,140+,156.4,40,,-295,,,M,Single-ply,,,B
 1,Bob Evans #1,Masters USN Vet,110,109.59,64,,185,,185,M,Single-ply,,,B
 1,Dennis Reneau,Masters USMC Vet,125,111.58,40,,330,,330,M,Single-ply,,,B
 1,Ron Moormeister,Masters Army Vet,140,126.19,64,,237.5,,237.5,M,Single-ply,,,B
-DQ,Jade Mendelson,Juniors,90,87.54,14,,-130,,,F,Multi-ply,,,B
+DQ,Jade Mendelson,Juniors 20-23,90,87.54,14,,-130,,,F,Multi-ply,,,B
 1,Maricelle Mendelson,Open,90+,105.41,38,,132.5,,132.5,F,Multi-ply,,,B
-DQ,Chris Larson #1,Juniors,90,86.27,16,,-122.5,,,M,Multi-ply,,,B
+DQ,Chris Larson #1,Juniors 20-23,90,86.27,16,,-122.5,,,M,Multi-ply,,,B
 1,Matthew Daisa,Open,75,73.57,34,,200,,200,M,Multi-ply,,,B
 1,Clay Tawzer,Open,140+,159.66,28,,200,,200,M,Multi-ply,,,B
 DQ,Scot Mendelson,Open,140,139.43,42,,-502.5,,,M,Multi-ply,,,B
@@ -221,7 +221,7 @@ DQ,Scot Mendelson,Open,140,139.43,42,,-502.5,,,M,Multi-ply,,,B
 3,Dagmar Nelson,Masters,67.5,64.95,50,,,100,100,F,Single-ply,,,D
 1,Linda Adam,Masters,67.5,60.51,56,,,97.5,97.5,F,Single-ply,,,D
 1,Tracie Marquez,Masters,90,88.99,48,,,122.5,122.5,F,Single-ply,,,D
-1,Garrett Fulbright,Juniors,67.5,67.4,19,,,197.5,197.5,M,Single-ply,,,D
+1,Garrett Fulbright,Juniors 20-23,67.5,67.4,19,,,197.5,197.5,M,Single-ply,,,D
 1,Jason Kelske,Open,90,89.27,29,,,295,295,M,Single-ply,,,D
 2,Peter Tapia,Open,90,87.54,41,,,227.5,227.5,M,Single-ply,,,D
 3,Anthony Fregoso,Open,90,86.82,34,,,202.5,202.5,M,Single-ply,,,D
