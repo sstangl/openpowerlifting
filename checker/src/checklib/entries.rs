@@ -14,7 +14,11 @@ use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
 /// List of all plausible weightclasses, for non-configured federations.
-const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 49] = [
+const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 52] = [
+    // FIXME: Temporary classes while USPA is unconfigured.
+    WeightClassKg::UnderOrEqual(WeightKg::from_raw(90_72)),
+    WeightClassKg::Over(WeightKg::from_raw(90_72)),
+    WeightClassKg::Over(WeightKg::from_raw(82_50)),
     // IPF Men.
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
