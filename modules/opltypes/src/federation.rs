@@ -669,6 +669,11 @@ pub enum Federation {
     #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
 
+    /// SPF Ireland
+    #[serde(rename = "SPF-IRL")]
+    #[strum(to_string = "SPF-IRL", serialize = "spf-irl")]
+    SPFIRL,
+
     /// Societatem Potentis Species Sports, a defunct Russian raw federation.
     #[strum(to_string = "SPSS", serialize = "spss")]
     SPSS,
@@ -1141,6 +1146,7 @@ impl Federation {
             Federation::SLP => false,
             Federation::SPA => false,
             Federation::SPF => false,
+            Federation::SPFIRL => false,
             Federation::SPSS => false,
             Federation::SSA => false,
             Federation::SSF => true,
@@ -1373,6 +1379,7 @@ impl Federation {
             Federation::SLP => Some(Country::USA),
             Federation::SPA => Some(Country::Singapore),
             Federation::SPF => Some(Country::USA),
+            Federation::SPFIRL => Some(Country::Ireland),
             Federation::SPSS => Some(Country::Russia),
             Federation::SSA => Some(Country::USA),
             Federation::SSF => Some(Country::Sweden),
@@ -1616,6 +1623,7 @@ impl Federation {
             Federation::SLP => PointsSystem::Wilks,
             Federation::SPA => PointsSystem::Wilks,
             Federation::SPF => PointsSystem::Wilks,
+            Federation::SPFIRL => PointsSystem::Wilks,
             Federation::SPSS => PointsSystem::Wilks,
             Federation::SSA => PointsSystem::Wilks,
             Federation::SSF => Federation::ipf_rules_on(date),
