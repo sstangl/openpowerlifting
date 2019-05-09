@@ -239,6 +239,13 @@
   background-image: linear-gradient(to bottom, $red, $darker_red);
 }
 
+.teal_to_white {
+  $teal: #01ECE3;
+  $white: #EDF2F4;
+  @include gradient-prereqs($teal);
+  background-image: linear-gradient(to right, $teal, $white);
+}
+
 .turquoise_to_magenta {
   $turquoise: #40E0D0;
   $magenta: #FF00FF;
