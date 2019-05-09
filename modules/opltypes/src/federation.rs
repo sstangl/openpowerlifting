@@ -553,6 +553,10 @@ pub enum Federation {
     #[strum(to_string = "ORPF", serialize = "orpf")]
     ORPF,
 
+    /// Österreichischer Verband für Kraftdreikampf, IPF.
+    #[strum(to_string = "OEVK", serialize = "oevk")]
+    OEVK,
+
     /// Paralympic Powerlifting.
     #[strum(to_string = "ParaPL", serialize = "parapl")]
     ParaPL,
@@ -1118,6 +1122,7 @@ impl Federation {
             Federation::NZPF => true,
             Federation::OceaniaPF => true,
             Federation::ORPF => true,
+            Federation::OEVK => true,
             Federation::ParaPL => true,
             Federation::PA => true,
             Federation::PAP => true,
@@ -1351,6 +1356,7 @@ impl Federation {
             Federation::NZPF => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::ORPF => None,
+            Federation::OEVK => Some(Country::Austria),
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
             Federation::PAP => Some(Country::Philippines),
@@ -1595,6 +1601,7 @@ impl Federation {
             Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
+            Federation::OEVK => Federation::ipf_rules_on(date),
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),

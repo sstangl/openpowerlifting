@@ -107,6 +107,7 @@
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.austria}}">
+  <option value="oevk" {% if selection.federation == "OEVK" %}selected{% endif %}>OEVK - Österreichischer Verband für Kraftdreikampf [IPF]</option>
   <option value="wuap-aut" {% if selection.federation == "WUAP-AUT" %}selected{% endif %}>WUAP-AUT - WUAP Austria [WUAP]</option>
 </optgroup>
 <optgroup label="{{strings.country.belarus}}">
