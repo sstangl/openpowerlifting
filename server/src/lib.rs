@@ -12,6 +12,7 @@ extern crate strum;
 extern crate strum_macros;
 
 // Internal dependencies.
+extern crate coefficients;
 extern crate opltypes;
 extern crate usernames;
 

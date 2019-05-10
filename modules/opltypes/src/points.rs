@@ -21,9 +21,10 @@ pub struct Points(i32);
 /// Enum of known powerlifting points systems, like Wilks and Glossbrenner.
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub enum PointsSystem {
-    Wilks,
     Glossbrenner,
     IPFPoints,
+    NASA,
+    Wilks,
 }
 
 impl From<f32> for Points {

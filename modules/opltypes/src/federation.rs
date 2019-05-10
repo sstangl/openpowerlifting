@@ -1589,7 +1589,7 @@ impl Federation {
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,
             Federation::NAPF => Federation::ipf_rules_on(date),
-            Federation::NASA => PointsSystem::Wilks,
+            Federation::NASA => PointsSystem::NASA,
             Federation::NauruPF => Federation::ipf_rules_on(date),
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),

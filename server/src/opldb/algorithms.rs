@@ -1,5 +1,6 @@
 //! Shared algorithms that operate on StaticCache data.
 
+use coefficients;
 use opltypes::*;
 use std::cmp;
 
@@ -194,6 +195,30 @@ pub fn cmp_ipfpoints(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by IPF Points, higher first.
     a.ipfpoints
         .cmp(&b.ipfpoints)
+        .reverse()
+        // If equal, sort by Date, earlier first.
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
+/// Defines an `Ordering` of Entries by NASA Points.
+///
+/// Because NASA points aren't stored on the Entry, they are recalculated
+/// each comparison. The computation is not particularly expensive,
+/// but does involve floating-point division.
+#[inline]
+pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    let a_points = coefficients::nasa(a.bodyweightkg, a.totalkg);
+    let b_points = coefficients::nasa(b.bodyweightkg, b.totalkg);
+
+    // First sort by NASA Points, higher first.
+    a_points
+        .cmp(&b_points)
         .reverse()
         // If equal, sort by Date, earlier first.
         .then(
