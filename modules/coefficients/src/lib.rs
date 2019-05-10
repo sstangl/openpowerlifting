@@ -12,6 +12,9 @@ pub use crate::ipf::ipf;
 mod mcculloch;
 pub use crate::mcculloch::mcculloch;
 
+mod nasa;
+pub use crate::nasa::nasa;
+
 mod schwartzmalone;
 pub use crate::schwartzmalone::schwartzmalone;
 
