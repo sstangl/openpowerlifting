@@ -49,6 +49,13 @@
     dis_open = {name = "Disabled Open", min = 0, max = 999}
     dis_juniors_20_23 = {name = "Disabled Juniors 20-23", min = 20, max = 23}
 
+    army_open = {name = "Army Open", min = 0, max = 999}
+    army_juniors_20_23 = {name = "Army Juniors 20-23", min = 20, max = 23}
+    army_masters_40_44 = {name = "Army Masters 40-44", min = 40, max = 44}
+    army_masters_50_54 = {name = "Army Masters 50-54", min = 50, max = 54}
+
+
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
