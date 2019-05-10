@@ -52,6 +52,7 @@
     army_open = {name = "Army Open", min = 0, max = 999}
     army_juniors_20_23 = {name = "Army Juniors 20-23", min = 20, max = 23}
     army_masters_40_44 = {name = "Army Masters 40-44", min = 40, max = 44}
+    army_masters_45_49 = {name = "Army Masters 45-49", min = 45, max = 49}
     army_masters_50_54 = {name = "Army Masters 50-54", min = 50, max = 54}
 
 
@@ -71,3 +72,4 @@
     1702 = ["ExemptWeightClassConsistency"] #120kg class & missing weightclasses
     1807 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     1703 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+    1904 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
