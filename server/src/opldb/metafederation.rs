@@ -128,6 +128,10 @@ pub enum MetaFederation {
     #[strum(to_string = "npb")]
     NPB,
 
+    /// OEVK, but with international results also.
+    #[strum(to_string = "oevk")]
+    OEVK,
+
     /// PA, but excluding non-Australian lifters.
     #[strum(to_string = "pa")]
     PA,
@@ -345,8 +349,11 @@ impl MetaFederation {
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::BVDK => match meet.federation {
-                Federation::BVDG => true, // Precursor to the BVDK.
-                Federation::BVDK => true,
+                // BVDG is the precursor to the BVDK.
+                Federation::BVDG | Federation::BVDK => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Germany)
+                }
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Germany)
                 }
@@ -376,6 +383,16 @@ impl MetaFederation {
                 Federation::NPB => true,
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Netherlands)
+                }
+                _ => false,
+            },
+            MetaFederation::OEVK => match meet.federation {
+                Federation::OEVK => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Austria)
+                }
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Austria)
                 }
                 _ => false,
             },
