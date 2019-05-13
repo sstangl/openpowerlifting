@@ -34,6 +34,7 @@
     special_olympian= {name = "Special Olympian", min = 0, max = 999}
 
     # Old divisions. No longer in use.
+    natural = {name = "Natural", min = 0, max = 999, tested = "Yes"}
     juniors_15_19 = {name = "Juniors 15-19", min = 15, max = 19}
 
     # Special weightclass based divisions
