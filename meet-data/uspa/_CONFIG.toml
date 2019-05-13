@@ -56,6 +56,7 @@
     0003 = ["ExemptWeightClassConsistency"] # Special Olympics used no classes.
     0005 = ["ExemptWeightClassConsistency"] # Women had a 60+ class.
     0008 = ["ExemptWeightClassConsistency"] # Masters didn't use weightclasses.
+    0011 = ["ExemptWeightClassConsistency"] # Lifter missing weight info.
     0013 = ["ExemptWeightClassConsistency"] # Lifter missing weight info.
     0041 = ["ExemptWeightClassConsistency"] # 200lbs and 200+lbs classes.
     0044 = ["ExemptDivision"] # Odd junior divisions, like 19-23.
