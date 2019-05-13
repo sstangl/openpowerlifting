@@ -11,7 +11,7 @@ DQ,John Hansen Jr,M,SBD,Raw,75,Juniors 16-17,74.84,17,142.5,-85,,172.5,
 1,Alex Young,M,SBD,Raw,100,Juniors 20-23,93.44,22,170,117.5,,240,527.5
 1,Tyler Sage,M,SBD,Raw,125,Juniors 16-17,122.83,17,227.5,152.5,,217.5,597.5
 1,Ed Martinez,M,SBD,Raw,125,Juniors 20-23,118.21,23,182.5,125,,192.5,500
-1,David Douglas,M,SBD,Multi-ply,125,Juniors 20-23,122.11,23,207.5,300,,270,777.5
+1,David Douglas,M,SBD,Single-ply,125,Juniors 20-23,122.11,23,207.5,300,,270,777.5
 1,Reynaldo Desenganio,M,SBD,Raw,67.5,Open,65.59,28,137.5,125,,182.5,445
 2,Scott Leonardson,M,SBD,Raw,67.5,Open,66.77,29,132.5,87.5,,155,375
 1,Chris Loo,M,SBD,Multi-ply,67.5,Open,64.59,30,142.5,92.5,,167.5,402.5
@@ -30,7 +30,7 @@ DQ,John Hansen Jr,M,SBD,Raw,75,Juniors 16-17,74.84,17,142.5,-85,,172.5,
 1,Chris Suhler,M,SBD,Raw,110,Open,106.68,25,227.5,145,,295,667.5
 2,Barrett Marum,M,SBD,Raw,110,Open,109.32,32,230,160,,262.5,652.5
 3,Jonathan Haley,M,SBD,Raw,110,Open,102.51,26,225,155,,250,630
-1,David Douglas,M,SBD,Multi-ply,125,Open,122.11,23,207.5,300,,270,777.5
+1,David Douglas,M,SBD,Single-ply,125,Open,122.11,23,207.5,300,,270,777.5
 1,O'Neil Roussell,M,SBD,Multi-ply,140,Open,135.53,24,325,220,,305,850
 1,Matt Kinsell,M,SBD,Raw,67.5,Submasters 35-39,66.13,35,165,125,128,187.5,477.5
 1,Matthew Reep,M,SBD,Raw,75,Submasters 35-39,73.75,36,182.5,167.5,,215,565
@@ -52,14 +52,14 @@ DQ,Al Gonzales,M,SBD,Multi-ply,125,Masters 40-44,114.31,40,-250,147.5,,285,
 DQ,Shayaun Nejad,M,B,Raw,82.5,Juniors 13-15,80.2,15,,-122.5,,,
 1,Spencer McCray,M,B,Raw,82.5,Juniors 18-19,79.29,19,,120,,,120
 1,Barry Moores,M,B,Raw,90,Juniors 16-17,84.19,17,,110,,,110
-1,David Douglas,M,B,Multi-ply,125,Juniors 20-23,122.11,23,,300,,,300
+1,David Douglas,M,B,Single-ply,125,Juniors 20-23,122.11,23,,300,,,300
 1,Reynaldo Desenganio,M,B,Raw,67.5,Open,65.59,28,,125,,,125
 1,Rudy Garcia,M,B,Multi-ply,82.5,Open,79.92,36,,175,,,175
 2,Carlos Rivas,M,B,Multi-ply,82.5,Open,80.2,47,,172.5,,,172.5
 1,Jess Santos,M,B,Raw,90,Open,84.28,38,,160,,,160
 1,David Taylor,M,B,Multi-ply,90,Open,88.54,50,,170,,,170
 1,Alfred Manso,M,B,Raw,110,Open,104.42,60,,125,,,125
-1,David Douglas,M,B,Multi-ply,125,Open,122.11,23,,300,,,300
+1,David Douglas,M,B,Single-ply,125,Open,122.11,23,,300,,,300
 2,Alan Aerts,M,B,Multi-ply,125,Open,122.47,54,,212.5,,,212.5
 1,Greg Dupas,M,B,Raw,125,Open,123.92,26,,172.5,,,172.5
 DQ,Rich Lopez,M,B,Multi-ply,140+,Open,153.86,39,,-322.5,,,
@@ -80,11 +80,11 @@ DQ,Felix Santos,M,B,Raw,75,Masters 40-44,70.4,42,,-167.5,,,
 1,Zack Smith,M,D,Raw,75,Juniors 13-15,69.76,15,,,,117.5,117.5
 1,Joseph Schoof,M,D,Raw,75,Juniors 18-19,74.39,19,,,,210,210
 1,Weylen White,M,D,Raw,100,Juniors 16-17,98.43,17,,,,192.5,192.5
-1,David Douglas,M,D,Multi-ply,125,Juniors 20-23,122.11,23,,,,270,270
+1,David Douglas,M,D,Single-ply,125,Juniors 20-23,122.11,23,,,,270,270
 1,Kristof Kjelby,M,D,Raw,140,Juniors 20-23,133.81,20,,,,267.5,267.5
 1,Jeremy Stover,M,D,Raw,90,Open,88.63,31,,,,257.5,257.5
 2,Juan Mendoza,M,D,Raw,90,Open,83.37,26,,,,180,180
-1,David Douglas,M,D,Multi-ply,125,Open,122.11,23,,,,270,270
+1,David Douglas,M,D,Single-ply,125,Open,122.11,23,,,,270,270
 1,Rich Lopez,M,D,Multi-ply,140+,Open,153.86,39,,,,185,185
 1,Ken Lukaszewski,M,D,Multi-ply,110,Submasters 35-39,105.51,38,,,,215,215
 1,Rich Lopez,M,D,Multi-ply,140+,Submasters 35-39,153.86,39,,,,185,185
@@ -98,14 +98,14 @@ DQ,Betty Heriford,F,BD,Multi-ply,75,Open,70.76,59,,-117.5,,170,
 DQ,Betty Heriford,F,BD,Multi-ply,75,Masters 55-59,70.76,59,,-117.5,,170,
 1,Nicki I'Anson,F,BD,Multi-ply,90,Masters 40-44,88.22,44,,115,,165,280
 1,Jesse McMillian,M,BD,Raw,90,Juniors 20-23,87.27,21,,125,,180,305
-1,David Douglas,M,BD,Multi-ply,125,Juniors 20-23,122.11,23,,300,,270,570
+1,David Douglas,M,BD,Single-ply,125,Juniors 20-23,122.11,23,,300,,270,570
 1,Patrick McGrath,M,BD,Raw,75,Open,74.57,26,,92.5,,200,292.5
 1,Matthew Brown,M,BD,Raw,82.5,Open,75.84,27,,135,,217.5,352.5
 1,Brian Kiraly,M,BD,Multi-ply,82.5,Open,81.56,30,,167.5,,275,442.5
 1,Thomas Geist,M,BD,Raw,90,Open,89.18,27,,155,,215,370
 1,Jacob Jackson,M,BD,Raw,110,Open,100.97,30,,185,,272.5,457.5
 2,Jonathan Haley,M,BD,Raw,110,Open,102.51,26,,155,,250,405
-1,David Douglas,M,BD,Multi-ply,125,Open,122.11,23,,300,,270,570
+1,David Douglas,M,BD,Single-ply,125,Open,122.11,23,,300,,270,570
 2,Robert Duran,M,BD,Multi-ply,125,Open,124.28,33,,265,,297.5,562.5
 DQ,Rich Lopez,M,BD,Multi-ply,140+,Open,153.86,39,,-322.5,,185,
 1,John Bostick,M,BD,Multi-ply,100,Submasters 35-39,97.52,39,,220,,322.5,542.5
