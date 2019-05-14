@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+# Often it happens that wrpf-standardize-csv fails, and
+# the scripts must be updated to handle the new csv format.
+#
+# This file contains the commands that would be executed at the end
+# of wrpf-parse, that I have to execute by hand in case things go wrong,
+# to save me some repetitive typing.
+#
+
+set -e
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+REPOTESTSDIR="${SCRIPTDIR}/../../tests"
+
+
+n=`ls  | grep 'results.*\.csv' | wc -l`
+
+touch results.csv
+
+for (( ii=1; ii<=${n};ii++))
+do
+	${SCRIPTDIR}/ap-standardize-csv "results"${ii}".csv" > "entries"${ii}".csv"
+	cat "results"${ii}".csv" >> results.csv
+	rm "results"${ii}".csv"
+done
+
+
+entries=($(seq 1 1 ${n}))
+entries=("${entries[@]/%/.csv}")
+entries=("${entries[@]/#/entries}")
+
+#Only merge entry files if they have all processed correctly
+if [ ${n} -gt 1 ];then
+	${REPOSCRIPTDIR}/csv-cat ${entries[@]} > entries.csv
+	rm ${entries[@]}
+else
+	mv entries1.csv entries.csv
+fi
+
+${REPOSCRIPTDIR}/calc-latin-names entries.csv
+
+# Get rid of zero-columns.
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
+sed -i -e 's/,0\.0,/,,/g' entries.csv
+
+cp ${SCRIPTDIR}/../meet.template meet.csv
+echo "RPU,,Russia,,," >> meet.csv
+
+# Show any warnings.
+${REPOTESTSDIR}/check
+
+echo "Done! Don't forget about meet.csv!"

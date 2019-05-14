@@ -1,5 +1,5 @@
 Place,WeightClassKg,Name,CyrillicName,Sex,Division,BirthYear,Age,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment
-1,52,Anastasiya Osmetkina,Анастасия Осметкина,F,Juniors,1996,20,51.5,50,60,65,65,25,-30,-35,25,-50,60,70,70,160,SBD,Wraps
+1,52,Anastasiya Osmetkina,Анастасия Осметкина,F,Juniors 20-23,1996,20,51.5,50,60,65,65,25,-30,-35,25,-50,60,70,70,160,SBD,Wraps
 1,52,Elena Shabanova,Елена Шабанова,F,Open,1967,49,51.8,60,67.5,72.5,72.5,35,40,-42.5,40,60,70,75,75,187.5,SBD,Wraps
 1,60,Valeriya Mazurantova,Валерия Мазурантова,F,Open,1993,22,59.25,110,120,125,125,45,50,-52.5,50,110,120,130,130,305,SBD,Wraps
 1,75,Vadim Mikhaylov,Вадим Михайлов,M,Open,1988,27,71.4,180,195,-220,195,120,-130,130,130,215,-225,,215,540,SBD,Wraps
@@ -18,7 +18,7 @@ DQ,67.5,Nadezhda Davydova,Надежда Давыдова,F,Open,1989,27,63.15,,
 1,75,Oleg Dyl,Олег Дыль,M,Open,1988,27,74.6,,,,,145,155,-160,155,,,,,155,B,Raw
 1,75,Roman Pasko,Роман Паско,M,Masters,1972,44,74.85,,,,,145,150,155,155,,,,,155,B,Raw
 1,82.5,Egor Kolesnikov,Егор Колесников,M,Open,1994,22,81.7,,,,,145,150,-152.5,150,,,,,150,B,Raw
-1,82.5,Egor Kolesnikov,Егор Колесников,M,Juniors,1994,22,81.7,,,,,145,150,-152.5,150,,,,,150,B,Raw
+1,82.5,Egor Kolesnikov,Егор Колесников,M,Juniors 20-23,1994,22,81.7,,,,,145,150,-152.5,150,,,,,150,B,Raw
 2,82.5,Sergey Ponomarev,Сергей Пономарев,M,Open,1983,33,79.7,,,,,140,147.5,-152.5,147.5,,,,,147.5,B,Raw
 1,90,Andrey Boyarchik,Андрей Боярчик,M,Open,1987,28,90,,,,,170,-180,-180,170,,,,,170,B,Raw
 2,90,Aleksandr Shabanov,Александр Шабанов,M,Open,1992,24,87.6,,,,,-165,165,-172.5,165,,,,,165,B,Raw
@@ -28,14 +28,14 @@ DQ,67.5,Nadezhda Davydova,Надежда Давыдова,F,Open,1989,27,63.15,,
 DQ,90,Albert Achvava,Альберт Ачвава,M,Open,1989,27,86.85,,,,,-175,-175,-175,,,,,,,B,Raw
 1,100,Egor Smirnov,Егор Смирнов,M,Open,1985,30,98,,,,,160,-172.5,175,175,,,,,175,B,Raw
 2,100,Gor Agababyan,Гор Агабабян,M,Open,1990,26,99.95,,,,,150,-165,-165,150,,,,,150,B,Raw
-DQ,100,Aleksandr Kostyrko,Александр Костырко,M,Juniors,1995,21,98.25,,,,,-150,-150,-150,,,,,,,B,Raw
+DQ,100,Aleksandr Kostyrko,Александр Костырко,M,Juniors 20-23,1995,21,98.25,,,,,-150,-150,-150,,,,,,,B,Raw
 DQ,100,Aleksey Rukavishnikov,Алексей Рукавишников,M,Open,1980,36,99.89,,,,,-175,-175,-175,,,,,,,B,Raw
 1,110,Vasiliy Emrolenko,Василий Емроленко,M,Open,1989,27,106.25,,,,,175,-185,-185,175,,,,,175,B,Raw
 1,110,Vadim Grechanyy,Вадим Гречаный,M,Masters,1973,43,110,,,,,150,160,172.5,172.5,,,,,172.5,B,Raw
 1,125,Ruslan Musaev,Руслан Мусаев,M,Open,1984,32,113,,,,,195,202.5,-205,202.5,,,,,202.5,B,Raw
 1,75,Vadim Mikhaylov,Вадим Михайлов,M,Open,1988,27,71.4,,,,,,,,,215,-225,,215,215,D,Raw
-1,82.5,Dmitriy Sheremet,Дмитрий Шеремет,M,Juniors,2000,16,78.9,,,,,,,,,120,140,157.5,157.5,157.5,D,Raw
+1,82.5,Dmitriy Sheremet,Дмитрий Шеремет,M,Teen 14-16,2000,16,78.9,,,,,,,,,120,140,157.5,157.5,157.5,D,Raw
 1,90,Mikhayil Lukyanov,Михайил Лукьянов,M,Open,1988,28,89.6,,,,,,,,,270,-285,-295,270,270,D,Raw
-1,100,Andrey Mayorshin,Андрей Майоршин,M,Juniors,2000,16,92.15,,,,,,,,,180,200,212.5,212.5,212.5,D,Raw
+1,100,Andrey Mayorshin,Андрей Майоршин,M,Teen 14-16,2000,16,92.15,,,,,,,,,180,200,212.5,212.5,212.5,D,Raw
 1,110,Andrey Demekhov,Андрей Демехов,M,Open,1984,,107.8,,,,,,,,,250,260,265,265,265,D,Raw
 1,75,Anastasiya Kondratyuk,Анастасия Кондратюк,F,Open,1989,27,73.3,,,,,,,,,140,-150,-150,140,140,D,Raw

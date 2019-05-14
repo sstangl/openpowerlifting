@@ -1,0 +1,64 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -lt 2 ]; then
+	echo " Usage: $0 dirname url"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+
+mkdir "$1"
+cd "$1"
+
+
+#Process $#-1 meet files
+for (( ii=2; ii<=$# ; ii++))
+do
+	cp ${!ii} "results"$((ii-1))".xlsx"
+
+
+	# Convert the spreadsheet to HTML.
+	libreoffice --headless --convert-to html "results"$((ii-1))".xlsx"
+
+	# Move the results.html to tmp.xls -- newer versions of LibreOffice don't
+	# understand how to convert HTML -> CSV, but do understand XLS -> CSV.
+	mv "results"$((ii-1))".html" tmp.xls
+
+
+	#Remove red font colour in front of <s> tags
+	sed -i -e 's/<s><font face="Arial Cyr" color="#C0504D">/-/g' tmp.xls
+	sed -i -e 's/<\/font>//g' tmp.xls
+
+
+	# Convert <s> to "-".
+	sed -i -e 's/<s>/-/g' tmp.xls
+	sed -i -e 's/<\/s>//g' tmp.xls
+
+
+	#Remove sdvals from html, otherwise LibreOffice ignores negatives when converting to csv
+	sed -i -e 's/sdval="[^\"]*"//g' tmp.xls
+
+	# Convert commas in numbers to periods
+	sed -i -e 's/,/\./g' tmp.xls
+
+	# Convert the HTML back to CSV.
+	# The --infilter argument is necessary to get LibreOffice to stop parsing
+	# the encoding as ISO-8859-1, and preserve the UTF8 encoding.
+	# See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
+	libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
+	mv tmp.csv "results"$((ii-1))".csv"
+
+	# Remove some dash-only columns from the CSV.
+	sed -i -e 's/,-,/,,/g' "results"$((ii-1))".csv"
+	sed -i -e 's/,-,/,,/g' "results"$((ii-1))".csv"
+
+
+	rm tmp.xls "results"$((ii-1))".xlsx"
+
+done
+
+${SCRIPTDIR}/ap-parse-post

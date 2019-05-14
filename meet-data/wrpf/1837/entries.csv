@@ -1,15 +1,15 @@
 Place,Sex,Name,CyrillicName,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,Division,Age,BirthDate
-1,F,Sofiya Vedernikova,София Ведерникова,60,40,-50,-50,40,,40,60,B,Raw,No,,,,,,Pro Girls 14-16,15,2003-08-01
+1,F,Sofiya Vedernikova,София Ведерникова,60,40,-50,-50,40,,40,60,B,Raw,No,,,,,,Pro Teen 14-16,15,2003-08-01
 1,F,Gulnara Kapitonova,Гульнара Капитонова,58,-65,65,70,70,,70,60,B,Raw,No,,,,,,Pro Open,29,1989-09-15
-2,F,Evgeniya Nesterova,Евгения Нестерова,54.2,45,50,-55,50,,50,60,B,Raw,No,,,,,,Pro Open,26,1991-11-19
+2,F,Evgeniya Nesterova,Евгения Нестерова,54.2,45,50,-55,50,,50,56,B,Raw,No,,,,,,Pro Open,26,1991-11-19
 3,F,Elizaveta Bogdanova,Елизавета Богданова,59.2,45,-50,50,50,,50,60,B,Raw,No,,,,,,Pro Open,29,1989-02-10
 1,F,Marina Ivanova,Марина Иванова,62.9,75,80,82.5,82.5,,82.5,67.5,B,Raw,No,,,,,,Pro Open,29,1989-07-04
 2,F,Anita Boychuk,Анита Бойчук,65,60,65,70,70,,70,67.5,B,Raw,No,,,,,,Pro Open,24,1994-11-07
 1,F,Karina Omelchenko,Карина Омельченко,74.4,55,60,-65,60,,60,75,B,Raw,No,,,,,,Pro Juniors 20-23,20,1997-11-21
 1,F,Natalya Tomskikh,Наталья Томских,73.4,40,45,50,50,,50,75,B,Raw,No,,,,,,Pro Open,34,1984-10-01
 1,M,Roman Belyy,Роман Белый,65.9,75,85,-87.5,85,,85,67.5,B,Raw,No,,,,,,Pro Teen 14-16,16,2002-03-05
-1,M,Georgiy Kuzmin,Георгий Кузьмин,66.9,100,107.5,110,110,,110,67.5,B,Raw,No,,,,,,Pro Teen 17-19,17,2001-08-15
-2,M,Nikita Kutergin,Никита Кутергин,67.5,70,75,-80,75,,75,67.5,B,Raw,No,,,,,,Pro Teen 17-19,17,2001-06-11
+1,M,Georgiy Kuzmin,Георгий Кузьмин,66.9,100,107.5,110,110,,110,67.5,B,Raw,No,,,,,,Pro Sub-Juniors 17-19,17,2001-08-15
+2,M,Nikita Kutergin,Никита Кутергин,67.5,70,75,-80,75,,75,67.5,B,Raw,No,,,,,,Pro Sub-Juniors 17-19,17,2001-06-11
 1,M,Albert Gladko,Альберт Гладько,73.1,120,127.5,-130,127.5,,127.5,75,B,Raw,No,,,,,,Pro Open,26,1991-11-15
 2,M,Andrey Frolov,Андрей Фролов,75,-120,125,127.5,127.5,,127.5,75,B,Raw,No,,,,,,Pro Open,36,1982-02-26
 1,M,Sergey Pozynenko,Сергей Позыненко,75,122.5,130,132.5,132.5,,132.5,75,B,Raw,No,,,,,,Pro Masters 50-59,57,1961-04-06
@@ -38,7 +38,7 @@ Place,Sex,Name,CyrillicName,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg
 4,M,Roman Kovrov,Роман Ковров,100,142.5,147.5,152.5,152.5,,152.5,100,B,Raw,No,,,,,,Pro Open,39,1979-08-06
 5,M,Andrey Metlyaev,Андрей Метляев,93.7,140,150,-157.5,150,,150,100,B,Raw,No,,,,,,Pro Open,28,1989-11-18
 6,M,Kirill Klepitsa,Кирилл Клепица,99.9,115,125,130,130,,130,100,B,Raw,No,,,,,,Pro Open,30,1988-07-15
-1,M,Ilya Ryabikov,Илья Рябиков,109.8,140,147.5,152.5,152.5,,152.5,110,B,Raw,No,,,,,,Pro Teen 17-19,18,2000-01-17
+1,M,Ilya Ryabikov,Илья Рябиков,109.8,140,147.5,152.5,152.5,,152.5,110,B,Raw,No,,,,,,Pro Sub-Juniors 17-19,18,2000-01-17
 1,M,Pavel Noskov,Павел Носков,104.8,175,192.5,,192.5,,192.5,110,B,Raw,No,,,,,,Pro Open,25,1993-04-03
 2,M,Vasiliy Okrugin,Василий Округин,107.3,175,182.5,190,190,,190,110,B,Raw,No,,,,,,Pro Open,29,1988-11-22
 3,M,Aleksey Tirskikh,Алексей Тирских,108,150,160,-170,160,,160,110,B,Raw,No,,,,,,Pro Open,33,1985-10-04
@@ -47,9 +47,9 @@ Place,Sex,Name,CyrillicName,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg
 2,M,Roman Chernykh,Роман Черных,112.7,140,-145,-145,140,,140,125,B,Raw,No,,,,,,Pro Open,38,1980-09-02
 1,M,Konstantin Vlasov,Константин Власов,124,165,170,175,175,,175,125,B,Raw,No,,,,,,Pro Masters 40-49,44,1974-08-03
 1,M,Sergey Kharitonov,Сергей Харитонов,191.6,250,260,-270,260,,260,140+,B,Raw,No,,,,,,Pro Open,31,1987-04-06
-1,F,Sofiya Vedernikova,София Ведерникова,60,,,,,,80,,D,Raw,No,70,-80,80,80,,Pro Girls 14-16,15,2003-08-01
-1,F,Evgeniya Nesterova,Евгения Нестерова,54.2,,,,,,105,,D,Raw,No,95,100,105,105,,Pro Open,26,1991-11-19
-2,F,Gulnara Kapitonova,Гульнара Капитонова,58.1,,,,,,95,,D,Raw,No,80,95,-100,95,,Pro Open,29,1989-09-15
+1,F,Sofiya Vedernikova,София Ведерникова,60,,,,,,80,60,D,Raw,No,70,-80,80,80,,Pro Teen 14-16,15,2003-08-01
+1,F,Evgeniya Nesterova,Евгения Нестерова,54.2,,,,,,105,56,D,Raw,No,95,100,105,105,,Pro Open,26,1991-11-19
+2,F,Gulnara Kapitonova,Гульнара Капитонова,58.1,,,,,,95,60,D,Raw,No,80,95,-100,95,,Pro Open,29,1989-09-15
 1,M,Konstantin Shadrin,Константин Шадрин,75,,,,,,165,75,D,Raw,No,145,155,165,165,,Pro Open,29,1989-03-27
 1,M,Pavel Gaychuk,Павел Гайчук,79.4,,,,,,150,82.5,D,Raw,No,140,150,,150,,Pro Juniors 20-23,23,1995-04-06
 1,M,Denis Potaychuk,Денис Потайчук,82.4,,,,,,220,82.5,D,Raw,No,205,212.5,220,220,,Pro Open,27,1990-12-05
