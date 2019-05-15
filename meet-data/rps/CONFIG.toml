@@ -5,10 +5,13 @@
     pro_open = {name = "Pro Open", min = 0, max = 999}
 
     # Elite divisions. Elite only has an "Open" category, no age categories.
+    # Nevertheless, some meets include a Juniors division erroneously.
+    #
     # Confusingly, the Elite division counts in competition as the Pro division.
     # It's just a way to say "Tested Pro" and isn't actually a separate division.
     # Nevertheless for purposes of records it is a division.
     elite_open = {name = "Elite Open", min = 0, max = 999, tested="Yes"}
+    elite_junior_20_23 = {name = "Elite Juniors 20-23", min = 20, max = 23, tested="Yes"}
 
     # Youth -- Amateur only.
     ama_youth = {name = "Amateur Youth", min = 5, max = 13, tested="Yes"}
