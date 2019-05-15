@@ -1,3 +1,5 @@
+# Configuration for the APF/AAPF/WPC.
+
 [divisions]
     # APF Divisions.
     morapf = {name ="M_OR_APF",min=0,max=999,equipment="Raw",sex="M"}
@@ -256,3 +258,4 @@
     sex = "F"
 
 [exemptions]
+    1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
