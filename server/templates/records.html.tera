@@ -15,6 +15,7 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
+      {% include "widget-fedselect" %}
       {% include "widget-equipmentselect" %}
       <select id="classkindselect">
         <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
@@ -26,7 +27,6 @@
         <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "widget-fedselect" %}
       {% include "widget-ageselect" %}
       {% include "widget-yearselect" %}
     </div>
