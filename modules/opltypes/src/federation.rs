@@ -135,10 +135,6 @@ pub enum Federation {
     #[strum(to_string = "BB", serialize = "bb")]
     BB,
 
-    /// Baddest Bench, Deadliest Deadlift. Yearly meets run by John Inzer.
-    #[strum(to_string = "BBDD", serialize = "bbdd")]
-    BBDD,
-
     /// British Drug-Free Powerlifting Assocation.
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
@@ -1021,7 +1017,6 @@ impl Federation {
             Federation::AWF => false,
             Federation::BAWLA => true,
             Federation::BB => false,
-            Federation::BBDD => false,
             Federation::BDFPA => true,
             Federation::BelPF => true,
             Federation::BenchAmerica => false,
@@ -1254,7 +1249,6 @@ impl Federation {
             Federation::AWF => Some(Country::Australia),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
-            Federation::BBDD => Some(Country::USA),
             Federation::BDFPA => Some(Country::UK),
             Federation::BelPF => Some(Country::Belarus),
             Federation::BenchAmerica => Some(Country::USA),
@@ -1500,7 +1494,6 @@ impl Federation {
             Federation::AWF => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
-            Federation::BBDD => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
             Federation::BelPF => Federation::ipf_rules_on(date),
             Federation::BenchAmerica => PointsSystem::Wilks,
