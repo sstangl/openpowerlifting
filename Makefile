@@ -38,11 +38,11 @@ check:
 
 # Run all probes in a quick mode that only shows a few pending meets.
 probe-quick:
-	find "${DATADIR}" -name "*-probe" | sort | parallel --keep-order --will-cite "{} --quick"
+	find "${DATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
 
 # Run all probes.
 probe:
-	find "${DATADIR}" -name "*-probe" | sort | parallel --keep-order --will-cite
+	find "${DATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite
 
 # Push the current version to the webservers.
 deploy:
