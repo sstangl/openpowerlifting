@@ -1,38 +1,38 @@
-Name,Sex,BodyweightKg,WeightClassKg,Division,Age,Equipment,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Place
-Alex Carbone,M,85.91,90,Masters 40+,46,Raw,147.42,138.35,,226.8,,512.56,SBD,1
-Allison Hind,F,74.66,75,Open,37,Wraps,226.8,154.22,,208.65,,589.67,SBD,1
-Andrew Koch,M,88.81,90,Open,22,Raw,208.65,158.76,,265.35,,632.76,SBD,2
-Antonio Soullas,M,35.11,52,Youth,10,Raw,,,,68.04,,68.04,D,1
-Billy Avvenire,M,102.6,110,Submasters 35-39,35,Raw,210.92,145.15,,238.14,,594.21,SBD,1
-Carol Clarke,F,78.83,82.5,Masters 40+,64,Raw,83.91,56.7,,122.47,,263.08,SBD,1
-Catharine Novick,F,64.95,67.5,Submasters 35-39,39,Wraps,124.74,61.23,,124.74,,310.71,SBD,1
-Chris Soullas,M,88.99,90,Open,29,Raw,188.24,185.97,,285.76,,659.98,SBD,1
-Collin Stirpe,M,87.45,90,Open,24,Raw,213.19,136.08,,276.69,,625.96,SBD,3
-Dan Predmore,M,104.87,110,Open,24,Wraps,351.53,215.46,,278.96,,845.95,SBD,1
-Dave Kingwater,M,109.59,110,Masters 40+,46,Multi-ply,,322.05,,,,322.05,B,1
-Ethan Teller,M,73.84,75,Teen 14-15,15,Wraps,115.67,74.84,,142.88,,333.39,SBD,1
-Evan Ellis,M,134.99,140,Open,25,Raw,170.1,95.25,,215.46,,480.81,SBD,1
-Giacomo Moritz,M,19.5,52,Youth,8,Raw,34.93,20.41,,54.43,,109.77,SBD,1
-Gregory Kukulski,M,98.43,100,Open,33,Raw,192.78,136.08,,204.12,,532.97,SBD,3
-Hunter Hull,M,96.8,100,Open,20,Wraps,185.97,124.74,,217.72,,528.44,SBD,4
-James Farina,M,115.76,125,Masters 40+,,Wraps,256.28,215.46,,254.01,,725.75,SBD,1
-James Farina,M,115.76,125,Open,,Wraps,256.28,215.46,,254.01,,725.75,SBD,2
-Janaina Barreto-Romero,F,112.58,90+,Open,27,Wraps,181.44,72.57,,181.44,,435.45,SBD,1
-Jason Tanner,M,99.06,100,Masters 40+,41,Raw,190.51,104.33,,204.12,,498.95,SBD,2
-Jen Hazzard,F,55.7,56,Open,33,Wraps,124.74,72.57,,174.63,,371.95,SBD,1
-Jonathan Shkavritko,M,84.19,90,Open,22,Raw,183.7,120.2,,226.8,,530.7,SBD,6
-Kara Kiehn,F,116.3,90+,Open,29,Raw,,74.84,,,,74.84,B,1
-Keith Bellomo,M,96.52,100,Masters 40+,47,Raw,197.31,147.42,,215.46,,560.19,SBD,1
-Kyle Sheridan,M,98.16,100,Open,29,Raw,281.23,163.29,,349.27,,793.79,SBD,1
-Marc-Antoine Provost-Doure,M,114.03,125,Open,28,Wraps,299.37,165.56,,276.69,,741.62,SBD,1
-Matt Champlin,M,101.51,110,Open,28,Raw,,,,254.01,,254.01,D,1
-Mike Cellini,M,86.36,90,Open,21,Raw,226.8,129.27,,260.82,,616.89,SBD,4
-Mike Ferlito,M,102.33,110,Masters 40+,,Raw,,145.15,149.69,224.53,,369.68,BD,1
-Olivia DeGraw,F,56.7,60,Teen 14-15,15,Raw,49.9,34.02,,74.84,,158.76,SBD,1
-Shannon McPheron,F,82.28,82.5,Masters 40+,42,Raw,,68.04,,158.76,,226.8,BD,1
-Sophia Gervais,F,29.57,44,Youth,7,Raw,34.02,22.68,,54.43,56.7,111.13,SBD,1
-Susan Hudson,F,67.22,67.5,Masters 40+,53,Wraps,138.35,79.38,,174.63,,392.36,SBD,1
-Ted Damiano,M,108.05,110,Open,33,Wraps,242.67,185.97,,272.16,,700.8,SBD,2
-Tim Coe,M,89.9,90,Open,27,Wraps,190.51,136.08,,256.28,,582.87,SBD,5
-Tyr Morford,M,97.79,100,Open,21,Multi-ply,335.66,229.06,,265.35,,830.07,SBD,1
-Zach Sjoblom,M,98.88,100,Open,27,Raw,238.14,158.76,,244.94,,641.83,SBD,2
+Name,Sex,BodyweightKg,WeightClassKg,Division,Age,Equipment,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Place,BirthDate
+Alex Carbone,M,85.91,90,Masters 40+,46,Raw,147.42,138.35,,226.8,,512.56,SBD,1,
+Allison Hind,F,74.66,75,Open,37,Wraps,226.8,154.22,,208.65,,589.67,SBD,1,
+Andrew Koch,M,88.81,90,Open,22,Raw,208.65,158.76,,265.35,,632.76,SBD,2,
+Antonio Soullas,M,35.11,52,Youth,10,Raw,,,,68.04,,68.04,D,1,
+Billy Avvenire,M,102.6,110,Submasters 35-39,35,Raw,210.92,145.15,,238.14,,594.21,SBD,1,
+Carol Clarke,F,78.83,82.5,Masters 40+,64,Raw,83.91,56.7,,122.47,,263.08,SBD,1,
+Catharine Novick,F,64.95,67.5,Submasters 35-39,39,Wraps,124.74,61.23,,124.74,,310.71,SBD,1,
+Chris Soullas,M,88.99,90,Open,29,Raw,188.24,185.97,,285.76,,659.98,SBD,1,
+Collin Stirpe,M,87.45,90,Open,24,Raw,213.19,136.08,,276.69,,625.96,SBD,3,
+Dan Predmore,M,104.87,110,Open,24,Wraps,351.53,215.46,,278.96,,845.95,SBD,1,
+Dave Kingwater,M,109.59,110,Masters 40+,46,Multi-ply,,322.05,,,,322.05,B,1,
+Ethan Teller,M,73.84,75,Teen 14-15,15,Wraps,115.67,74.84,,142.88,,333.39,SBD,1,
+Evan Ellis,M,134.99,140,Open,25,Raw,170.1,95.25,,215.46,,480.81,SBD,1,
+Giacomo Moritz,M,19.5,52,Youth,8,Raw,34.93,20.41,,54.43,,109.77,SBD,1,
+Gregory Kukulski,M,98.43,100,Open,33,Raw,192.78,136.08,,204.12,,532.97,SBD,3,
+Hunter Hull,M,96.8,100,Open,20,Wraps,185.97,124.74,,217.72,,528.44,SBD,4,
+James Farina,M,115.76,125,Masters 40+,,Wraps,256.28,215.46,,254.01,,725.75,SBD,1,
+James Farina,M,115.76,125,Open,,Wraps,256.28,215.46,,254.01,,725.75,SBD,2,
+Janaina Barreto-Romero,F,112.58,90+,Open,27,Wraps,181.44,72.57,,181.44,,435.45,SBD,1,
+Jason Tanner,M,99.06,100,Masters 40+,41,Raw,190.51,104.33,,204.12,,498.95,SBD,2,
+Jen Hazzard,F,55.7,56,Open,33,Wraps,124.74,72.57,,174.63,,371.95,SBD,1,
+Jonathan Shkavritko,M,84.19,90,Open,22,Raw,183.7,120.2,,226.8,,530.7,SBD,6,
+Kara Kiehn,F,116.3,90+,Open,29,Raw,,74.84,,,,74.84,B,1,
+Keith Bellomo,M,96.52,100,Masters 40+,47,Raw,197.31,147.42,,215.46,,560.19,SBD,1,
+Kyle Sheridan,M,98.16,100,Open,29,Raw,281.23,163.29,,349.27,,793.79,SBD,1,
+Marc-Antoine Provost-Doure,M,114.03,125,Open,28,Wraps,299.37,165.56,,276.69,,741.62,SBD,1,
+Matt Champlin,M,101.51,110,Open,28,Raw,,,,254.01,,254.01,D,1,
+Mike Cellini,M,86.36,90,Open,21,Raw,226.8,129.27,,260.82,,616.89,SBD,4,
+Mike Ferlito,M,102.33,110,Masters 40+,,Raw,,145.15,149.69,224.53,,369.68,BD,1,
+Olivia DeGraw,F,56.7,60,Teen 14-15,15,Raw,49.9,34.02,,74.84,,158.76,SBD,1,
+Shannon McPheron,F,82.28,82.5,Masters 40+,42,Raw,,68.04,,158.76,,226.8,BD,1,
+Sophia Gervais,F,29.57,44,Youth,7,Raw,34.02,22.68,,54.43,56.7,111.13,SBD,1,
+Susan Hudson,F,67.22,67.5,Masters 40+,53,Wraps,138.35,79.38,,174.63,,392.36,SBD,1,
+Ted Damiano,M,108.05,110,Open,33,Wraps,242.67,185.97,,272.16,,700.8,SBD,2,1986-05-15
+Tim Coe,M,89.9,90,Open,27,Wraps,190.51,136.08,,256.28,,582.87,SBD,5,
+Tyr Morford,M,97.79,100,Open,21,Multi-ply,335.66,229.06,,265.35,,830.07,SBD,1,
+Zach Sjoblom,M,98.88,100,Open,27,Raw,238.14,158.76,,244.94,,641.83,SBD,2,
