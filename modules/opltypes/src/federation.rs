@@ -102,7 +102,7 @@ pub enum Federation {
     #[strum(to_string = "APF", serialize = "apf")]
     APF,
 
-    /// Australian Powerlifting Union.
+    /// Australian Powerlifting Union, IPF.
     #[strum(to_string = "APU", serialize = "apu")]
     APU,
 
@@ -1486,7 +1486,7 @@ impl Federation {
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
-            Federation::APU => PointsSystem::Wilks,
+            Federation::APU => Federation::ipf_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPF => PointsSystem::Wilks,
