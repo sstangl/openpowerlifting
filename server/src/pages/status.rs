@@ -193,6 +193,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[NASA as usize].format = pdf_structured;
     statuses[NZPF as usize].format = pdf_unstructured;
     statuses[OceaniaPF as usize].format = pdf_structured;
+    statuses[OEVK as usize].format = pdf_unstructured;
     statuses[ORPF as usize].format = pdf_structured;
     statuses[PA as usize].format = html;
     statuses[ProRaw as usize].format = xls_unstructured;
@@ -248,6 +249,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[NASA as usize].ease = easy;
     statuses[NZPF as usize].ease = difficult;
     statuses[OceaniaPF as usize].ease = medium;
+    statuses[OEVK as usize].ease = difficult;
     statuses[ORPF as usize].ease = difficult;
     statuses[PA as usize].ease = easy;
     statuses[ProRaw as usize].ease = medium;
@@ -270,6 +272,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
+    let email_milena = "<a href=\"mailto:milena@openpowerlifting.org\">milena@</a>";
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_romi = "<a href=\"mailto:romi@openpowerlifting.org\">Romi@</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
@@ -310,6 +313,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[NZPF as usize].maintainers = email_matt;
     statuses[OceaniaPF as usize].maintainers = email_matt;
+    statuses[OEVK as usize].maintainers = email_milena;
     statuses[ORPF as usize].maintainers = email_matt;
     statuses[PA as usize].maintainers = email_sean;
     statuses[ProRaw as usize].maintainers = email_sean;
