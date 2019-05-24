@@ -687,7 +687,7 @@ impl<'db> Context<'db> {
         let tables = prettify_records(records, opldb, locale);
 
         Context {
-            page_title: &locale.strings.header.records,
+            page_title: "Powerlifting Records",
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
