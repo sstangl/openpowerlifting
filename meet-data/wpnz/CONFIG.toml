@@ -1,5 +1,5 @@
 [divisions]
-    subjunior = {name="Sub-Juniors", min=0, max=17.5}
+    youth = {name="Youth", min=14, max=17.5}
     junior = {name="Juniors", min=18, max=22.5}
     open = {name="Open", min=0, max=999}
     master40_44 = {name="Masters 40-44", min=40, max=43.5}
@@ -16,9 +16,22 @@
     date_range = ["2018-08-01", "9999-01-01"]
     sex = "M"
 
+[weightclasses.youth_M]
+    classes = ["62", "69", "77", "85", "94", "105", "105+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "M"
+    divisions = ["Youth"]
+
 [weightclasses.default_F]
     classes = ["48", "53", "58", "64", "72", "84", "100", "100+"]
     date_range = ["2018-08-01", "9999-01-01"]
     sex = "F"
+
+[weightclasses.youth_F]
+    classes = ["48", "53", "58", "64", "72", "84", "84+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "F"
+    divisions = ["Youth"]
+
 
 [exemptions]
