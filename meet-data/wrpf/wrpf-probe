@@ -36,10 +36,15 @@ def getmeetlist(html):
     urls = []
     for a in alist:
         link = a['href']
+        if link.startswith('#'):
+            continue
+
         # A bunch of links are just '/files/foo.xls'
         if link.startswith('/'):
             link = DOMAIN + link
-        urls.append(link)
+
+        if link not in urls:
+            urls.append(link)
 
     return urls
 
