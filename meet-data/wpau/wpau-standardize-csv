@@ -462,7 +462,7 @@ def parse_sheet(sheet):
                 division = ''
             continue
         elif any(search_str in text for search_str in ['муж. (', 'men (', 'male',
-                                                       'men.', 'мужчины', 'men']):
+                                                       'men.', 'мужчины', 'man']):
             sex = 'M'
             if '(' in text or '\\' in text:
                 division = ''.join(re.findall(
@@ -533,6 +533,7 @@ def parse_sheet(sheet):
 #   Открытая 20-23 (21.11.1986)/30
 # Converts to English and separates into Division and Age columns.
 def standardize_division_age(csv):
+
     assert 'Tested' in csv.fieldnames
     assert 'Amateur' in csv.fieldnames
     assert 'Division' in csv.fieldnames
