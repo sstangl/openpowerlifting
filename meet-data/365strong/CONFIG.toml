@@ -1,4 +1,7 @@
+# 365Strong configuration.
+
 [divisions]
+    # Generic divisions.
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 5, max = 12}
     T1 = {name = "T1", min = 13, max = 15}
@@ -14,6 +17,66 @@
     M7 = {name = "M7", min = 70, max = 74}
     M8 = {name = "M8", min = 75, max = 89}
     M9 = {name = "M9", min = 80, max = 999}
+
+    # Open divisions, men.
+    moprx = {name = "M-OP-R-X", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    moprt = {name = "M-OP-R-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    moprn = {name = "M-OP-R-U", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="No"}
+    mopspx = {name = "M-OP-SP-X", min=0, max=999, sex="M", equipment="Single-ply"}
+    mopspt = {name = "M-OP-SP-T", min=0, max=999, sex="M", equipment="Single-ply", tested="Yes"}
+    mopspn = {name = "M-OP-SP-U", min=0, max=999, sex="M", equipment="Single-ply", tested="No"}
+    mopmpx = {name = "M-OP-MP-X", min=0, max=999, sex="M", equipment="Multi-ply"}
+    mopmpt = {name = "M-OP-MP-T", min=0, max=999, sex="M", equipment="Multi-ply", tested="Yes"}
+    mopmpn = {name = "M-OP-MP-U", min=0, max=999, sex="M", equipment="Multi-ply", tested="No"}
+    mobrx = {name = "M-OB-R-X", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    mobrt = {name = "M-OB-R-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    mobrn = {name = "M-OB-R-U", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="No"}
+    mobspx = {name = "M-OB-SP-X", min=0, max=999, sex="M", equipment="Single-ply"}
+    mobspt = {name = "M-OB-SP-T", min=0, max=999, sex="M", equipment="Single-ply", tested="Yes"}
+    mobspn = {name = "M-OB-SP-U", min=0, max=999, sex="M", equipment="Single-ply", tested="No"}
+    mobmpx = {name = "M-OB-MP-X", min=0, max=999, sex="M", equipment="Multi-ply"}
+    mobmpt = {name = "M-OB-MP-T", min=0, max=999, sex="M", equipment="Multi-ply", tested="Yes"}
+    mobmpn = {name = "M-OB-MP-U", min=0, max=999, sex="M", equipment="Multi-ply", tested="No"}
+
+    # Open divisions, women.
+    foprx = {name = "F-OP-R-X", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    foprt = {name = "F-OP-R-T", min=0, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    foprn = {name = "F-OP-R-U", min=0, max=999, sex="F", equipment=["Raw","Wraps"], tested="No"}
+    fopspx = {name = "F-OP-SP-X", min=0, max=999, sex="F", equipment="Single-ply"}
+    fopspt = {name = "F-OP-SP-T", min=0, max=999, sex="F", equipment="Single-ply", tested="Yes"}
+    fopspn = {name = "F-OP-SP-U", min=0, max=999, sex="F", equipment="Single-ply", tested="No"}
+    fopmpx = {name = "F-OP-MP-X", min=0, max=999, sex="F", equipment="Multi-ply"}
+    fopmpt = {name = "F-OP-MP-T", min=0, max=999, sex="F", equipment="Multi-ply", tested="Yes"}
+    fopmpn = {name = "F-OP-MP-U", min=0, max=999, sex="F", equipment="Multi-ply", tested="No"}
+
+    # Novice divisions, men.
+    mnprx = {name = "M-NP-R-X", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    mnprt = {name = "M-NP-R-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    mnprn = {name = "M-NP-R-U", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="No"}
+    mnpspx = {name = "M-NP-SP-X", min=0, max=999, sex="M", equipment="Single-ply"}
+    mnpspt = {name = "M-NP-SP-T", min=0, max=999, sex="M", equipment="Single-ply", tested="Yes"}
+    mnpspn = {name = "M-NP-SP-U", min=0, max=999, sex="M", equipment="Single-ply", tested="No"}
+    mnpmpx = {name = "M-NP-MP-X", min=0, max=999, sex="M", equipment="Multi-ply"}
+    mnpmpt = {name = "M-NP-MP-T", min=0, max=999, sex="M", equipment="Multi-ply", tested="Yes"}
+    mnpmpn = {name = "M-NP-MP-U", min=0, max=999, sex="M", equipment="Multi-ply", tested="No"}
+    mnbrx = {name = "M-NB-R-X", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    mnbrt = {name = "M-NB-R-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    mnbrn = {name = "M-NB-R-U", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="No"}
+    mnbspx = {name = "M-NB-SP-X", min=0, max=999, sex="M", equipment="Single-ply"}
+    mnbspt = {name = "M-NB-SP-T", min=0, max=999, sex="M", equipment="Single-ply", tested="Yes"}
+    mnbspn = {name = "M-NB-SP-U", min=0, max=999, sex="M", equipment="Single-ply", tested="No"}
+    mnbmpx = {name = "M-NB-MP-X", min=0, max=999, sex="M", equipment="Multi-ply"}
+    mnbmpt = {name = "M-NB-MP-T", min=0, max=999, sex="M", equipment="Multi-ply", tested="Yes"}
+    mnbmpn = {name = "M-NB-MP-U", min=0, max=999, sex="M", equipment="Multi-ply", tested="No"}
+
+    # Miscellaneous divisions that haven't been fully expanded yet.
+    mt3prx = {name = "M-T3P-R-X", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
+    mm2prx = {name = "M-M2P-R-X", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
+    mm3prx = {name = "M-M3P-R-X", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
+    mm3brx = {name = "M-M3B-MP-X", min=50, max=54, sex="M", equipment="Multi-ply"}
+    mmpfprt = {name = "M-MPFP-R-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+
+    fm1prx = {name = "F-M1P-R-X", min=40, max=44, equipment=["Raw","Wraps"]}
 
     novice = {name = "Novice", min = 0, max = 999}
     mpf = {name = "MPF", min = 0, max = 999}
