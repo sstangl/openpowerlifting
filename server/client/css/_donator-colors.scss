@@ -260,6 +260,13 @@
   background-image: linear-gradient(to right, $turquoise, $magenta);
 }
 
+.yellow_to_purple {
+  $yellow: #FFFC00;
+  $purple: #AE76FF;
+  @include gradient-prereqs($yellow);
+  background-image: linear-gradient(to right, $yellow, $purple);
+}
+
 // Red, Gray, Black.
 .carlos {
   @include gradient-prereqs(#444444);
