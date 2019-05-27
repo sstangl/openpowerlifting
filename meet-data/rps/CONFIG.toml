@@ -117,6 +117,7 @@
     sex = "F"
 
 [exemptions]
-    1636 = ["ExemptWeightClassConsistency"]
-    1515 = ["ExemptWeightClassConsistency"]
     1304 = ["ExemptWeightClassConsistency"]
+    1515 = ["ExemptWeightClassConsistency"]
+    1636 = ["ExemptWeightClassConsistency"]
+    1927 = ["ExemptDivision"] # Not really an RPS meet (GPC-USA).

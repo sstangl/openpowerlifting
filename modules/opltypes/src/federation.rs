@@ -362,6 +362,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
 
+    /// USA branch of the GPC.
+    #[serde(rename = "GPC-USA")]
+    #[strum(to_string = "GPC-USA", serialize = "gpc-usa")]
+    GPCUSA,
+
     /// Russian branch of the GPC.
     #[serde(rename = "GPC-RUS")]
     #[strum(to_string = "GPC-RUS", serialize = "gpc-rus")]
@@ -1069,6 +1074,7 @@ impl Federation {
             Federation::GPCIRL => false,
             Federation::GPCLAT => false,
             Federation::GPCNZ => false,
+            Federation::GPCUSA => false,
             Federation::GPCRUS => false,
             Federation::GPF => false,
             Federation::GPU => false,
@@ -1303,6 +1309,7 @@ impl Federation {
             Federation::GPCIRL => Some(Country::Ireland),
             Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
+            Federation::GPCUSA => Some(Country::USA),
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPF => None,
             Federation::GPU => Some(Country::Germany),
@@ -1547,6 +1554,7 @@ impl Federation {
             Federation::GPCIRL => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
             Federation::GPCNZ => PointsSystem::Glossbrenner,
+            Federation::GPCUSA => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPU => PointsSystem::Wilks,
