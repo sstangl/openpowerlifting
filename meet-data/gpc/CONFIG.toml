@@ -21,6 +21,9 @@
     m9 = {name ="M9",min=80,max=999}
     sm = {name ="SM",min=33,max=39}
 
+    # Paralympics.
+    para = {name="Para", min=0, max=999}
+
     #Not real divisions, but have been used on occasion
     m10 = {name ="M10",min=80,max=84}
     m11 = {name ="M11",min=85,max=89}
