@@ -163,6 +163,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let xls_unstructured = "XLS (Unstructured)";
     let xls_structured = "XLS (Structured)";
     statuses[_365Strong as usize].format = xls_structured;
+    statuses[AEP as usize].format = html;
     statuses[APA as usize].format = html;
     statuses[APF as usize].format = xls_unstructured;
     statuses[APU as usize].format = pdf_structured;
@@ -219,6 +220,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let difficult = "Difficult";
     let impossible = "Impossible";
     statuses[_365Strong as usize].ease = easy;
+    statuses[AEP as usize].ease = medium;
     statuses[APA as usize].ease = medium;
     statuses[APF as usize].ease = difficult;
     statuses[APU as usize].ease = easy;
@@ -270,6 +272,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
 
     // Maintainership variables.
     let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
+    let email_enno = "<a href=\"mailto:enno@openpowerlifting.org\">enno@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
@@ -281,6 +284,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
+    statuses[AEP as usize].maintainers = email_enno;
     statuses[APF as usize].maintainers = email_gem;
     statuses[APU as usize].maintainers = email_sean;
     statuses[AusPL as usize].maintainers = email_matt;
