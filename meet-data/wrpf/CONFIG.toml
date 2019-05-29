@@ -1,3 +1,5 @@
+# Configuration for the WRPF.
+
 [divisions]
     #Official WRPF divisions
     open = {name = "Open", min = 0, max = 999}
