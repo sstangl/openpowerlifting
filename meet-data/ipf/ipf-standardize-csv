@@ -106,7 +106,7 @@ def remove_non_lifter_rows(csv):
             break
         del csv.rows[idx]
 
-    if csv.rows[0][0] == 'PL.':
+    if csv.rows[0][0] in ['PL.', 'Rnk']:
         del csv.rows[0]
 
 
@@ -350,7 +350,9 @@ def standardize_bench_only(csv):
     fieldnames.append('BirthYear')
     fieldnames.append('Country')
     fieldnames.append('BodyweightKg')
-    fieldnames.append('XXX_wilksfactor')
+
+    if len(csv.rows[0]) > 12:
+        fieldnames.append('XXX_wilksfactor')
     fieldnames.append('XXX_lot')
 
     fieldnames.append('Bench1Kg')
@@ -406,7 +408,7 @@ def main(filename):
     # Fieldnames given for the detailed spreadsheet.
     if len(csv.rows[0]) in [21, 22]:
         standardize_full_meet(csv)
-    elif len(csv.rows[0]) in [13, 14]:  # Bench only
+    elif len(csv.rows[0]) in [12, 13, 14]:  # Bench only
         standardize_bench_only(csv)
     else:  # Leave the csv exactly the same as the results file
         with open(filename, "r") as fd:
