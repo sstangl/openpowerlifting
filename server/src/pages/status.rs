@@ -213,6 +213,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WPC as usize].format = xls_unstructured;
     statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = jpg;
+    statuses[WUAP as usize].format = pdf_structured;
 
     // Subjective ease of importation.
     let easy = "Easy";
@@ -269,6 +270,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WPC as usize].ease = medium;
     statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = impossible;
+    statuses[WUAP as usize].ease = difficult;
 
     // Maintainership variables.
     let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
