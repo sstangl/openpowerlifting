@@ -2,7 +2,7 @@
 
 OpenPowerlifting can optionally associate lifters with their Instagram profiles.
 
-The list of `Name` to `Instagram` associations is tracked by the file [lifter-data/social-instagram.csv](https://gitlab.com/openpowerlifting/opl-datablob/master/lifter-data/social-instagram.csv).
+The list of `Name` to `Instagram` associations is tracked by the file [lifter-data/social-instagram.csv](https://gitlab.com/openpowerlifting/opl-data/blob/master/lifter-data/social-instagram.csv).
 
 An example of the table format is below:
 
