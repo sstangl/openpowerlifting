@@ -372,6 +372,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-RUS", serialize = "gpc-rus")]
     GPCRUS,
 
+    /// Croatian branch of the GPA and WUAP. Successor to HPO.
+    #[serde(rename = "GPC-WUAP-CRO")]
+    #[strum(to_string = "GPC-WUAP-CRO", serialize = "gpc-wuap-cro")]
+    GPCWUAPCRO,
+
     /// Global Powerlifting Federation
     #[strum(to_string = "GPF", serialize = "gpf")]
     GPF,
@@ -396,20 +401,20 @@ pub enum Federation {
     #[strum(to_string = "HPC", serialize = "hpc")]
     HPC,
 
-    /// Croatian IPF affiliate
+    /// Croatian IPF affiliate.
     #[strum(to_string = "HPLS", serialize = "hpls")]
     HPLS,
 
-    /// Croatian Powerlifting Federation before getting affiliated with IPF
+    /// Croatian Powerlifting Federation before getting affiliated with the IPF.
     #[serde(rename = "HPLS-UA")]
     #[strum(to_string = "HPLS-UA", serialize = "hpls-ua")]
     HPLSUA,
 
-    /// Croatian Powerlifting Organization
+    /// Croatian Powerlifting Organization. Defunct: became GPC-WUAP-CRO.
     #[strum(to_string = "HPO", serialize = "hpo")]
     HPO,
 
-    /// Hantang Powerlifting
+    /// Hantang Powerlifting, from China.
     #[strum(to_string = "HTPL", serialize = "htpl")]
     HTPL,
 
@@ -429,6 +434,7 @@ pub enum Federation {
     #[strum(to_string = "IKF", serialize = "ikf")]
     IKF,
 
+    /// International Powerlifting Association.
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
 
@@ -674,7 +680,7 @@ pub enum Federation {
     #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
 
-    /// SPF Ireland
+    /// Southern Powerlifting Federation Ireland.
     #[serde(rename = "SPF-IRL")]
     #[strum(to_string = "SPF-IRL", serialize = "spf-irl")]
     SPFIRL,
@@ -1076,6 +1082,7 @@ impl Federation {
             Federation::GPCNZ => false,
             Federation::GPCUSA => false,
             Federation::GPCRUS => false,
+            Federation::GPCWUAPCRO => false,
             Federation::GPF => false,
             Federation::GPU => false,
             Federation::GRAWA => false,
@@ -1311,6 +1318,7 @@ impl Federation {
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCUSA => Some(Country::USA),
             Federation::GPCRUS => Some(Country::Russia),
+            Federation::GPCWUAPCRO => Some(Country::Croatia),
             Federation::GPF => None,
             Federation::GPU => Some(Country::Germany),
             Federation::GRAWA => Some(Country::Germany),
@@ -1556,6 +1564,7 @@ impl Federation {
             Federation::GPCNZ => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
+            Federation::GPCWUAPCRO => PointsSystem::Wilks,
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPU => PointsSystem::Wilks,
             Federation::GRAWA => PointsSystem::Wilks,

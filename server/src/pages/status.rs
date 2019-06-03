@@ -68,6 +68,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[CroatiaUA as usize].status = complete;
     statuses[DSF as usize].status = complete;
     statuses[GPACRO as usize].status = complete;
+    statuses[GPCWUAPCRO as usize].status = complete;
     statuses[HERC as usize].status = complete;
     statuses[HPLS as usize].status = complete;
     statuses[HPLSUA as usize].status = complete;
@@ -184,6 +185,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[EPA as usize].format = pdf_unstructured;
     statuses[EPF as usize].format = html;
     statuses[GPCAUS as usize].format = html;
+    statuses[GPCWUAPCRO as usize].format = html;
     statuses[HPLS as usize].format = xls_unstructured;
     statuses[HPLSUA as usize].format = jpg;
     statuses[HPO as usize].format = html;
@@ -242,6 +244,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
     statuses[GPCAUS as usize].ease = easy;
+    statuses[GPCWUAPCRO as usize].ease = medium;
     statuses[HPLS as usize].ease = medium;
     statuses[HPLSUA as usize].ease = difficult;
     statuses[HPO as usize].ease = medium;
@@ -308,6 +311,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[GPCAUS as usize].maintainers = email_matt;
     statuses[GPCGB as usize].maintainers = email_robby;
     statuses[GPCNZ as usize].maintainers = email_matt;
+    statuses[GPCWUAPCRO as usize].maintainers = email_alan;
     statuses[HERC as usize].maintainers = email_sean;
     statuses[HPLS as usize].maintainers = email_alan;
     statuses[HPLSUA as usize].maintainers = email_alan;

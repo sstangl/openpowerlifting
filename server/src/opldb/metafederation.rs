@@ -112,6 +112,10 @@ pub enum MetaFederation {
     #[strum(to_string = "gpc-aus")]
     GPCAUS,
 
+    /// GPC-WUAP-CRO, but including HPO results and excluding non-Croatians.
+    #[strum(to_string = "gpc-wuap-cro")]
+    GPCWUAPCRO,
+
     /// HPLS, but excluding non-Croatian lifters.
     #[strum(to_string = "hpls")]
     HPLS,
@@ -363,6 +367,12 @@ impl MetaFederation {
                 meet.federation == Federation::GPCAUS
                     && (entry.lifter_country == None
                         || entry.lifter_country == Some(Country::Australia))
+            }
+            MetaFederation::GPCWUAPCRO => {
+                (meet.federation == Federation::GPCWUAPCRO
+                    || meet.federation == Federation::HPO)
+                    && (entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Croatia))
             }
             MetaFederation::HPLS => {
                 meet.federation == Federation::HPLS
