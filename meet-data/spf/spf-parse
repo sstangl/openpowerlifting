@@ -135,10 +135,21 @@ def fixequipment(csv):
             row[eqidx] = "Single-ply"
         elif eq == "Slingshot":
             row[eqidx] = "Slingshot"
+        elif eq == "Straps":
+            row[eqidx] = "Straps"
         elif eq == '':
             pass  # This means copy from the row above, usually.
         else:
             error("Unknown equipment: %s" % row[eqidx])
+
+
+def fixdivision(csv):
+    dividx = csv.index("Division")
+
+    for row in csv.rows:
+        div = row[dividx]
+        if div == "Sub-Masters":
+            row[dividx] = "Submasters"
 
 
 def main(url):
@@ -151,6 +162,7 @@ def main(url):
 
     fixevent(csv)
     fixequipment(csv)
+    fixdivision(csv)
 
     with open('entries.csv', 'w') as fd:
         csv.write(fd)
