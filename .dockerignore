@@ -1,0 +1,50 @@
+# Temporary Files
+*.tmp
+*.lnk
+*.swp
+*.swo
+*.~*
+.DS_Store
+.idea/
+__pycache__
+npm-debug.log
+geckodriver.log
+*.retry
+
+.dockerignore
+.git
+.gitattributes
+.gitignore
+.gitkeep
+.gitlab-ci.yml
+.travis.yml
+Dockerfile
+
+# Documentation
+LICENSE
+*.md
+docs/
+
+# Built artifacts
+build/
+node_modules/
+target/
+
+# Temporary fetch directories.
+/meet-data/**/fetch/
+
+# Binary meet data files.
+/meet-data/**/*.pdf
+/meet-data/**/*.xls
+/meet-data/**/*.xlsx
+/meet-data/**/*.xlsm
+/meet-data/**/*.doc
+/meet-data/**/*.docx
+/meet-data/**/*.odt
+/meet-data/**/*.ods
+/meet-data/**/*.xml
+/meet-data/**/*.rtf
+
+# Tool output.
+perf.data
+perf.data.old

@@ -51,7 +51,6 @@ When a menu appears, choose "Customize installation".<br/>
 Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.<br/>
 Continue pressing Enter at the remaining prompts until Rust is installed.
 
-
 Log out and log back in to allow `~/.cargo/bin` to be part of your default shell `$PATH`.
 
 Install dependencies:
@@ -67,3 +66,14 @@ make
 cd server
 cargo run --release
 ```
+
+### Docker
+
+To run the server using Docker, simply build and run:
+
+```
+docker build -t opl .
+docker run -p 8000:8000 opl
+```
+
+Access at http://localhost:8000/ per usual.
