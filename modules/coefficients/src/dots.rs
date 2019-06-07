@@ -41,6 +41,9 @@ pub fn dots_coefficient_women(bodyweightkg: f64) -> f64 {
 /// unsuitable, German lifters therefore came up with their own formula.
 ///
 /// The author of the Dots formula is Tim Konertz <tim.konertz@outlook.com>.
+///
+/// Tim says that Dots is an acronym for "Dynamic Objective Team Scoring,"
+/// but that they chose the acronym before figuring out the expansion.
 pub fn dots(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
     if bodyweight.is_zero() || total.is_zero() {
         return Points::from_i32(0);
