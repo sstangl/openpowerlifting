@@ -3,7 +3,7 @@
 #
 # Probes the CPU main page for new meets.
 # The CPU updated their website and removed raw database access.
-# 
+#
 # On the new site, in order to look up a meet in the database, you need
 # to either already know its full name or know a lifter in that meet.
 # The CPU pulls a "Latest Results" list from the database and shows that on
