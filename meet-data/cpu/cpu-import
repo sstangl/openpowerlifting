@@ -296,6 +296,10 @@ def canonicalize_divisions(csv):
     for row in csv.rows:
         if 'Master ' in row[dividx]:
             row[dividx] = row[dividx].replace('Master ', 'Masters ')
+        elif row[dividx] == 'Junior':
+            row[dividx] = 'Juniors'
+        elif row[dividx] == 'Sub-Junior':
+            row[dividx] = 'Sub-Juniors'
 
 
 def get_dirname(meetcsv):
