@@ -4,6 +4,7 @@
 
 import zlib
 
+
 # `date` is a ISO8601 datestring like "2019-01-16".
 # `name` is the name of the competition.
 def meethash(date, name):
@@ -11,6 +12,7 @@ def meethash(date, name):
     namehash = format(zlib.crc32(bytes(name, 'utf-8')), '08x')
     assert len(namehash) == 8
     return "%s-%s" % (date, namehash)
+
 
 if __name__ == '__main__':
     import sys
