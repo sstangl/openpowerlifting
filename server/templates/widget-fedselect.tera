@@ -288,6 +288,7 @@
 </optgroup>
 <optgroup label="{{strings.country.serbia}}">
   <option value="all-serbia" {% if selection.federation == "AllSerbia" %}selected{% endif %}>{{strings.selectors.fed.all_serbia}}</option>
+  <option value="plss" {% if selection.federation == "PLSS" %}selected{% endif %}>PLSS - Power Lifting Savez Srbije [IPF]</option>
   <option value="usps" {% if selection.federation == "USPS" %}selected{% endif %}>USPS - Ujedinjeni Srpski powerlifting savez [GPC]</option>
   <option value="wrpf-srb" {% if selection.federation == "WRPF-SRB" %}selected{% endif %}>WRPF-SRB - WRPF Srbija - Republika Srpska</option>
 </optgroup>
