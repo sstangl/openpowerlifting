@@ -655,7 +655,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         ))
 }
 
-fn load_langinfo() -> Result<LangInfo, Box<Error>> {
+fn load_langinfo() -> Result<LangInfo, Box<dyn Error>> {
     let mut langinfo = langpack::LangInfo::default();
     for language in Language::iter() {
         let path = format!("translations/{}.json", language);
@@ -664,7 +664,7 @@ fn load_langinfo() -> Result<LangInfo, Box<Error>> {
     Ok(langinfo)
 }
 
-fn main() -> Result<(), Box<Error>> {
+fn main() -> Result<(), Box<dyn Error>> {
     // Accept an optional "--set-cwd" argument to manually specify the
     // current working directory. This allows the binary and the data
     // to be separated on a production server.

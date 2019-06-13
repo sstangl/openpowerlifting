@@ -190,7 +190,7 @@ pub struct OplDb {
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
-fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<Error>> {
+fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(250_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
@@ -204,7 +204,7 @@ fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<Error>> {
 }
 
 /// Reads the `meet.csv` file into a Vec<Meet>.
-fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<Error>> {
+fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(15_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
@@ -223,7 +223,7 @@ fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<Error>> {
 fn import_entries_csv(
     file: &str,
     meets: &mut Vec<Meet>,
-) -> Result<(Vec<Entry>, MetaFederationCache), Box<Error>> {
+) -> Result<(Vec<Entry>, MetaFederationCache), Box<dyn Error>> {
     let mut vec = Vec::with_capacity(700_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
@@ -296,7 +296,7 @@ impl OplDb {
         lifters_csv: &str,
         meets_csv: &str,
         entries_csv: &str,
-    ) -> Result<OplDb, Box<Error>> {
+    ) -> Result<OplDb, Box<dyn Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let mut meets = import_meets_csv(meets_csv)?;
         let (entries, metafed_cache) = import_entries_csv(entries_csv, &mut meets)?;

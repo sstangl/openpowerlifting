@@ -551,7 +551,7 @@ impl LangInfo {
         &mut self,
         language: Language,
         filename: &str,
-    ) -> Result<(), Box<Error>> {
+    ) -> Result<(), Box<dyn Error>> {
         let file = File::open(filename)?;
         let mut buf_reader = BufReader::new(file);
         let mut contents = String::new();

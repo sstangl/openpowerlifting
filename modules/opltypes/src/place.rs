@@ -54,7 +54,7 @@ impl fmt::Display for Place {
 }
 
 impl FromStr for Place {
-    type Err = Box<Error>;
+    type Err = Box<dyn Error>;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {

@@ -336,7 +336,7 @@ pub fn do_check<R>(
     config: Option<&Config>,
     mut report: Report,
     meetpath: String,
-) -> Result<CheckResult, Box<Error>>
+) -> Result<CheckResult, Box<dyn Error>>
 where
     R: io::Read,
 {
@@ -413,7 +413,7 @@ where
 pub fn check_meet(
     meet_csv: PathBuf,
     config: Option<&Config>,
-) -> Result<CheckResult, Box<Error>> {
+) -> Result<CheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(meet_csv);
 

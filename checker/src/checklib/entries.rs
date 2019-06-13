@@ -1767,7 +1767,7 @@ pub fn do_check<R>(
     meet: Option<&Meet>,
     config: Option<&Config>,
     mut report: Report,
-) -> Result<CheckResult, Box<Error>>
+) -> Result<CheckResult, Box<dyn Error>>
 where
     R: io::Read,
 {
@@ -2080,7 +2080,7 @@ pub fn check_entries(
     entries_csv: PathBuf,
     meet: Option<&Meet>,
     config: Option<&Config>,
-) -> Result<CheckResult, Box<Error>> {
+) -> Result<CheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
 

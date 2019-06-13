@@ -80,27 +80,27 @@ impl AgeClass {
         // Handle the sub-senior classes, which round up.
         if max < 30 {
             match max {
-                05...12 => AgeClass::Class5_12,
-                13...15 => AgeClass::Class13_15,
-                16...17 => AgeClass::Class16_17,
-                18...19 => AgeClass::Class18_19,
-                20...23 => AgeClass::Class20_23,
-                24...34 => AgeClass::Class24_34,
+                05..=12 => AgeClass::Class5_12,
+                13..=15 => AgeClass::Class13_15,
+                16..=17 => AgeClass::Class16_17,
+                18..=19 => AgeClass::Class18_19,
+                20..=23 => AgeClass::Class20_23,
+                24..=34 => AgeClass::Class24_34,
                 _ => AgeClass::None,
             }
         } else {
             match min {
-                24...34 => AgeClass::Class24_34,
-                35...39 => AgeClass::Class35_39,
-                40...44 => AgeClass::Class40_44,
-                45...49 => AgeClass::Class45_49,
-                50...54 => AgeClass::Class50_54,
-                55...59 => AgeClass::Class55_59,
-                60...64 => AgeClass::Class60_64,
-                65...69 => AgeClass::Class65_69,
-                70...74 => AgeClass::Class70_74,
-                75...79 => AgeClass::Class75_79,
-                80...255 => AgeClass::Class80_999,
+                24..=34 => AgeClass::Class24_34,
+                35..=39 => AgeClass::Class35_39,
+                40..=44 => AgeClass::Class40_44,
+                45..=49 => AgeClass::Class45_49,
+                50..=54 => AgeClass::Class50_54,
+                55..=59 => AgeClass::Class55_59,
+                60..=64 => AgeClass::Class60_64,
+                65..=69 => AgeClass::Class65_69,
+                70..=74 => AgeClass::Class70_74,
+                75..=79 => AgeClass::Class75_79,
+                80..=255 => AgeClass::Class80_999,
                 _ => AgeClass::None,
             }
         }

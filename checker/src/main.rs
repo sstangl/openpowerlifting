@@ -28,7 +28,7 @@ fn is_meetdir(entry: &DirEntry) -> bool {
 }
 
 /// Determines the project root from the binary path.
-fn get_project_root() -> Result<PathBuf, Box<Error>> {
+fn get_project_root() -> Result<PathBuf, Box<dyn Error>> {
     const ERR: &str = "get_project_root() ran out of parent directories";
     Ok(env::current_exe()? // root/target/release/binary
         .parent()
@@ -159,7 +159,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
     }
 }
 
-fn main() -> Result<(), Box<Error>> {
+fn main() -> Result<(), Box<dyn Error>> {
     // Build the command-line argument parsing in code.
     // This is a little verbose, but it's easy to change.
     let argmatches = clap::App::new("OpenPowerlifting Checker")

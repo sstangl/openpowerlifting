@@ -119,7 +119,10 @@ impl Report {
 }
 
 /// Checks a directory with meet data.
-pub fn check(meetdir: &Path, config: Option<&Config>) -> Result<CheckResult, Box<Error>> {
+pub fn check(
+    meetdir: &Path,
+    config: Option<&Config>,
+) -> Result<CheckResult, Box<dyn Error>> {
     let mut acc = Vec::new();
 
     // Check the meet.csv.

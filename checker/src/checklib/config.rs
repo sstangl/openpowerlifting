@@ -559,7 +559,7 @@ fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> 
     acc
 }
 
-fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Error>> {
+fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn Error>> {
     // The highest-level Value must be a table.
     let table = match root.as_table() {
         Some(t) => t,
@@ -636,7 +636,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<Err
 }
 
 /// Main entry point to CONFIG.toml testing.
-pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<Error>> {
+pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<dyn Error>> {
     let report = Report::new(config);
 
     let mut file = File::open(&report.path)?;

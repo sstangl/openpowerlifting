@@ -65,29 +65,29 @@ fn is_eastasian(letter: char) -> bool {
     let ord: u32 = letter as u32;
     match ord {
         // CJK Compatibility.
-        13_056...13_311 => true,
+        13_056..=13_311 => true,
         // CJK Unified Ideographs.
-        19_968...40_959 => true,
+        19_968..=40_959 => true,
         // CJK Compatibility Forms.
-        65_072...65_103 => true,
+        65_072..=65_103 => true,
         // CJK Compatibility Ideographs.
-        63_744...64_255 => true,
+        63_744..=64_255 => true,
         // CJK Compatibility Ideographs Supplement.
-        194_560...195_103 => true,
+        194_560..=195_103 => true,
         // Katakana.
-        12_448...12_543 => true,
+        12_448..=12_543 => true,
         // CJK Radicals Supplement.
-        11_904...12_031 => true,
+        11_904..=12_031 => true,
         // CJK Unified Ideographs Extension A.
-        13_312...19_903 => true,
+        13_312..=19_903 => true,
         // CJK Unified Ideographs Extension B.
-        131_072...173_791 => true,
+        131_072..=173_791 => true,
         // CJK Unified Ideographs Extension C.
-        173_824...177_983 => true,
+        173_824..=177_983 => true,
         // CJK Unified Ideographs Extension D.
-        177_984...178_207 => true,
+        177_984..=178_207 => true,
         // CJK Unified Ideographs Extension E.
-        178_208...183_983 => true,
+        178_208..=183_983 => true,
         // Non East-Asian.
         _ => false,
     }

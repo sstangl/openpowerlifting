@@ -47,7 +47,7 @@ struct DonatorColorsRow {
 fn check_donator_colors(
     report: &mut Report,
     map: &mut LifterDataMap,
-) -> Result<(), Box<Error>> {
+) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
@@ -105,7 +105,10 @@ struct FlairRow {
 }
 
 /// Checks `lifter-data/flair.csv`, mutating the LifterDataMap.
-fn check_flair(report: &mut Report, map: &mut LifterDataMap) -> Result<(), Box<Error>> {
+fn check_flair(
+    report: &mut Report,
+    map: &mut LifterDataMap,
+) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
@@ -166,7 +169,7 @@ struct InstagramRow {
 fn check_social_instagram(
     report: &mut Report,
     map: &mut LifterDataMap,
-) -> Result<(), Box<Error>> {
+) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
@@ -228,7 +231,7 @@ struct VKontakteRow {
 fn check_social_vkontakte(
     report: &mut Report,
     map: &mut LifterDataMap,
-) -> Result<(), Box<Error>> {
+) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
