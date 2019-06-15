@@ -155,6 +155,7 @@ impl FromStr for ClassKindSelection {
 /// The context object passed to `templates/records.html.tera`.
 #[derive(Serialize)]
 pub struct Context<'db> {
+    pub urlprefix: &'static str,
     pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
@@ -687,6 +688,7 @@ impl<'db> Context<'db> {
         let tables = prettify_records(records, opldb, locale);
 
         Context {
+            urlprefix: "/",
             page_title: "Powerlifting Records",
             language: locale.language,
             strings: locale.strings,

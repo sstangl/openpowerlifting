@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass --output-style compressed css/style.scss build/css/style.css",
+    "sass-openipf": "node-sass --output-style compressed css/openipf.scss build/css/openipf.css",
     "webpack": "webpack --env.prod --display-error-details --optimize-minimize"
   },
   "repository": {

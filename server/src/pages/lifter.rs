@@ -8,6 +8,7 @@ use crate::opldb::{self, Entry};
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
+    pub urlprefix: &'static str,
     pub page_title: &'a str,
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
@@ -351,6 +352,7 @@ impl<'a> Context<'a> {
             .collect();
 
         Context {
+            urlprefix: "/",
             page_title: get_localized_name(&lifter, locale.language),
             language: locale.language,
             strings: locale.strings,

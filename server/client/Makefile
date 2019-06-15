@@ -20,6 +20,7 @@ builddir:
 
 css: builddir npminit
 	npm run sass
+	npm run sass-openipf
 
 images: builddir
 	cp ${PROJECTDATA}/logo-on-white.svg "${BUILDDIR}/images/logo-compressed.svg"

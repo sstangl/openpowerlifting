@@ -1,18 +1,18 @@
-{% extends "desktop-base" %}
+{% extends "openipf/desktop-base" %}
 
 {% block includes %}
   <script type="text/javascript">
     const initial_data = {{data | safe}};
     const urlprefix = "{{urlprefix | safe}}";
 
-    const default_equipment = "raw_wraps";
+    const default_equipment = "raw";
     const default_weightclass = "all";
-    const default_fed = "all";
+    const default_fed = "ipf-and-affiliates";
     const default_sex = "all";
     const default_ageclass = "all";
     const default_year = "all";
-    const default_event = "all";
-    const default_sort = "by-wilks";
+    const default_event = "full-power";
+    const default_sort = "by-ipf-points";
 
     const translation_column_formulaplace = "{{strings.columns.formulaplace}}";
     const translation_column_liftername = "{{strings.columns.liftername}}";
@@ -50,18 +50,18 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      {% include "widget-fedselect" %}
-      {% include "widget-equipmentselect" %}
-      {% include "widget-weightclass" %}
+      {% include "openipf/widget-fedselect" %}
+      {% include "openipf/widget-equipmentselect" %}
+      {% include "openipf/widget-weightclass" %}
       <select id="sexselect">
         <option value="all"{% if selection.sex == "AllSexes" %} selected{% endif %}>{{strings.selectors.sex.all}}</option>
         <option value="men"{% if selection.sex == "Men" %} selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "widget-ageselect" %}
+      {% include "openipf/widget-ageselect" %}
       {% include "widget-yearselect" %}
-      {% include "widget-eventselect" %}
-      {% include "widget-sortselect" %}
+      {% include "openipf/widget-eventselect" %}
+      {% include "openipf/widget-sortselect" %}
     </div>
     <div id="controls-right">
       <input type="text" id="searchfield" autofocus/>

@@ -1,0 +1,4 @@
+<select id="equipmentselect">
+  <option value="raw"{% if selection.equipment == "Raw" %} selected{% endif %}>Classic</option>
+  <option value="single"{% if selection.equipment == "Single" %} selected{% endif %}>Equipped</option>
+</select>

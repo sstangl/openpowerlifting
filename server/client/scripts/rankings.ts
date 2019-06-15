@@ -12,6 +12,17 @@ declare var Slick;
 
 // Variables provided by the server.
 declare const initial_data;
+declare const urlprefix: string; // For navigation only, not for API calls.
+
+declare const default_equipment: string;
+declare const default_weightclass: string;
+declare const default_fed: string;
+declare const default_sex: string;
+declare const default_ageclass: string;
+declare const default_year: string;
+declare const default_event: string;
+declare const default_sort: string;
+
 declare const translation_column_formulaplace: string;
 declare const translation_column_liftername: string;
 declare const translation_column_federation: string;
@@ -79,7 +90,7 @@ function makeDataProvider() {
             }
 
             let name = '<a class="' + entry[Column.Color] +
-                '" href="/u/' + entry[Column.Username] + '">' +
+                '" href="' + urlprefix + 'u/' + entry[Column.Username] + '">' +
                 entry[Column.Name] + '</a>';
 
             if (entry[Column.Instagram]) {
@@ -94,7 +105,7 @@ function makeDataProvider() {
                         '<i class="fa fa-vk fa-resize"></i></a>';
             }
 
-            const date = '<a href="/m/' + entry[Column.Path] + '">' +
+            const date = '<a href="' + urlprefix + 'm/' + entry[Column.Path] + '">' +
                 entry[Column.Date] + '</a>';
 
             return {
@@ -178,28 +189,28 @@ function selection_to_points_title(): string {
 // for the default selection.
 function selection_to_path(): string {
     let url = "";
-    if (selEquipment.value !== "raw_wraps") {
+    if (selEquipment.value !== default_equipment) {
         url += "/" + selEquipment.value;
     }
-    if (selWeightClass.value !== "all") {
+    if (selWeightClass.value !== default_weightclass) {
         url += "/" + selWeightClass.value;
     }
-    if (selFed.value !== "all") {
+    if (selFed.value !== default_fed) {
         url += "/" + selFed.value;
     }
-    if (selSex.value !== "all") {
+    if (selSex.value !== default_sex) {
         url += "/" + selSex.value;
     }
-    if (selAgeClass.value !== "all") {
+    if (selAgeClass.value !== default_ageclass) {
         url += "/" + selAgeClass.value;
     }
-    if (selYear.value !== "all") {
+    if (selYear.value !== default_year) {
         url += "/" + selYear.value;
     }
-    if (selEvent.value !== "all") {
+    if (selEvent.value !== default_event) {
         url += "/" + selEvent.value;
     }
-    if (selSort.value !== "by-wilks") {
+    if (selSort.value !== default_sort) {
         url += "/" + selSort.value;
     }
     return url;
@@ -241,7 +252,7 @@ function restoreSelectionState(state) {
 // change to match.
 function changeSelection() {
     let path = selection_to_path();
-    let url = path ? ("/rankings" + path) : "/";
+    let url = path ? (urlprefix + "rankings" + path) : urlprefix;
 
     // Adding new history state is suppressed when this function is used
     // to cause data updates on back/forward site navigation.

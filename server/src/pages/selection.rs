@@ -10,7 +10,7 @@ use std::str::FromStr;
 use crate::opldb::MetaFederation;
 
 /// Query selection descriptor, corresponding to HTML widgets.
-#[derive(PartialEq, Serialize)]
+#[derive(Copy, Clone, PartialEq, Serialize)]
 pub struct Selection {
     pub equipment: EquipmentSelection,
     pub federation: FederationSelection,
@@ -38,8 +38,8 @@ impl Default for Selection {
 }
 
 impl Selection {
-    pub fn from_path(p: &path::Path) -> Result<Self, ()> {
-        let mut ret = Selection::default();
+    pub fn from_path(p: &path::Path, default: &Selection) -> Result<Self, ()> {
+        let mut ret: Selection = default.clone();
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

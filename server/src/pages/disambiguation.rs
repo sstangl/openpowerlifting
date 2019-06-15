@@ -12,6 +12,7 @@ use crate::pages::lifter::MeetResultsRow;
 /// The context object passed to `templates/disambiguation.tera`
 #[derive(Serialize)]
 pub struct Context<'db> {
+    pub urlprefix: &'static str,
     pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
@@ -72,6 +73,7 @@ impl<'db> Context<'db> {
         });
 
         Context {
+            urlprefix: "/",
             page_title: "Disambiguation",
             language: locale.language,
             strings: locale.strings,

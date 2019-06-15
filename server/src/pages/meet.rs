@@ -13,6 +13,7 @@ use crate::opldb::{self, algorithms, Entry};
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
 pub struct Context<'db> {
+    pub urlprefix: &'static str,
     pub page_title: String,
     pub meet: MeetInfo<'db>,
     pub language: Language,
@@ -541,6 +542,7 @@ impl<'db> Context<'db> {
         };
 
         Context {
+            urlprefix: "/",
             page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
             language: locale.language,
             strings: locale.strings,

@@ -124,6 +124,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ipa-can")]
     IPACAN,
 
+    /// IPF including all affiliates, local and regional.
+    #[strum(to_string = "ipf-and-affiliates")]
+    IPFAndAffiliates,
+
     /// IrishPO, excluding non-Irish lifters and including WPC results.
     #[strum(to_string = "irishpo")]
     IrishPO,
@@ -381,6 +385,9 @@ impl MetaFederation {
             }
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
+            }
+            MetaFederation::IPFAndAffiliates => {
+                meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
             }
             MetaFederation::IrishPO => {
                 (meet.federation == Federation::IrishPO

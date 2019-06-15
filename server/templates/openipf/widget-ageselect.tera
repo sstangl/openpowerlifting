@@ -1,0 +1,9 @@
+<select id="ageselect">
+  <option value="all"{% if selection.ageclass == "AllAges" %} selected{% endif %}>Open</option>
+  <option value="sub-juniors" {% if selection.ageclass == "SubJuniors" %}selected{% endif %}>Sub-Juniors</option>
+  <option value="juniors" {% if selection.ageclass == "Juniors" %}selected{% endif %}>Juniors</option>
+  <option value="masters1" {% if selection.ageclass == "Masters1" %}selected{% endif %}>Masters 1</option>
+  <option value="masters2" {% if selection.ageclass == "Masters2" %}selected{% endif %}>Masters 2</option>
+  <option value="masters3" {% if selection.ageclass == "Masters3" %}selected{% endif %}>Masters 3</option>
+  <option value="masters4" {% if selection.ageclass == "Masters4" %}selected{% endif %}>Masters 4</option>
+</select>

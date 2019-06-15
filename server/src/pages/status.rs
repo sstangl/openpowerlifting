@@ -9,6 +9,7 @@ use crate::opldb;
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
+    pub urlprefix: &'static str,
     pub page_title: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
@@ -361,6 +362,7 @@ impl<'a> Context<'a> {
         set_hardcoded_strings(&mut statuses);
 
         Context {
+            urlprefix: "/",
             page_title: &locale.strings.header.status,
             language: locale.language,
             strings: locale.strings,

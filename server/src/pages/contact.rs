@@ -7,6 +7,7 @@ use crate::langpack::{self, Locale};
 /// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]
 pub struct Context<'a> {
+    pub urlprefix: &'static str,
     pub page_title: &'a str,
     pub language: langpack::Language,
     pub strings: &'a langpack::Translations,
@@ -16,6 +17,7 @@ pub struct Context<'a> {
 impl<'a> Context<'a> {
     pub fn new(locale: &'a Locale) -> Context<'a> {
         Context {
+            urlprefix: "/",
             page_title: &locale.strings.header.contact,
             strings: locale.strings,
             language: locale.language,

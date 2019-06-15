@@ -117,6 +117,7 @@ impl<'db> MeetInfo<'db> {
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]
 pub struct Context<'db> {
+    pub urlprefix: &'static str,
     pub page_title: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
@@ -188,6 +189,7 @@ impl<'db> Context<'db> {
         let total_meets = meets.len();
 
         Context {
+            urlprefix: "/",
             page_title: &locale.strings.header.meets,
             language: locale.language,
             strings: locale.strings,

@@ -10,6 +10,9 @@
 
 declare var Slick;
 
+// Provided by the rankings template.
+declare const urlprefix: string;
+
 let langselect;
 let weightunits;
 
@@ -90,7 +93,7 @@ export function RemoteCache(
     function makeApiUrl(item: WorkItem): string {
         const startRow = Math.max(item.startRow, 0);
         const endRow = item.endRow;
-        return `/api/rankings${selection}?start=${startRow}&end=${endRow}&lang=${language}&units=${units}`;
+        return `${urlprefix}api/rankings${selection}?start=${startRow}&end=${endRow}&lang=${language}&units=${units}`;
     }
 
     // Given more JSON data, add it to the rows array.
