@@ -126,6 +126,16 @@ impl BirthDateRange {
         Age::None
     }
 
+    /// Returns the BirthYear for the known range, if possible.
+    pub fn birthyear(&self) -> Option<u32> {
+        let known_year = self.min.year();
+        if known_year == self.max.year() {
+            Some(known_year)
+        } else {
+            None
+        }
+    }
+
     /// Intersects this BirthDateRange with another.
     pub fn intersect(&mut self, other: &BirthDateRange) -> NarrowResult {
         if self.min > other.max || other.min > self.max {
@@ -412,7 +422,9 @@ fn infer_from_range(
 
         let entry_had_exact_age = entry.age.is_exact();
         let age_on_date = range.age_on(mdate);
+        let birthyear: Option<u32> = range.birthyear();
 
+        // Update the lifter's Age.
         match age_on_date {
             Age::Exact(_) | Age::Approximate(_) => {
                 // Only overwrite Approximate Ages.
@@ -423,6 +435,12 @@ fn infer_from_range(
             }
             Age::None => (),
         };
+
+        // Update the lifter's BirthYear.
+        if entry.birthyear.is_none() && birthyear.is_some() {
+            trace_inference(debug, "BirthYear", &birthyear, mdate);
+            entry.birthyear = birthyear;
+        }
 
         // Update the AgeClass to match the Age, if applicable.
         //
