@@ -1,15 +1,39 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Evan Wiseman,NL,77,83,Sub-Juniors,150,115,210,475,Raw,1
-SBD,F,Victoria Guy,NL,68.3,72,Sub-Juniors,82.5,40,110,232.5,Raw,1
-SBD,M,Declan Unsworth,NL,65.3,66,Sub-Juniors,92.5,70,142.5,305,Raw,1
-SBD,F,Katie Hamlyn,NL,85,84+,Open,125,47.5,135,307.5,Raw,1
-SBD,F,Kayla Roberts,NL,56.5,57,Open,92.5,35,117.5,245,Raw,2
-SBD,F,Danielle Sullivan,NL,56.7,57,Open,95,42.5,112.5,250,Raw,1
-SBD,F,Sharon McCarthy,NL,82.3,84,Masters 2,97.5,47.5,130,275,Raw,1
-SBD,F,Donna Foote,NL,106.2,84+,Masters 1,120,60,155,335,Raw,1
-SBD,F,Jennifer Nakashima,NL,79.4,84,Masters 1,105,45,115,265,Raw,1
-SBD,F,Elizabeth Carew,NL,70.7,72,Masters 1,87.5,50,120,257.5,Raw,1
-SBD,M,Phillip Hann,NL,89.3,93,Juniors,195,120,187.5,502.5,Raw,1
-SBD,F,Haley O'Driscoll,NL,77.5,84,Juniors,130,57.5,137.5,325,Raw,1
-SBD,M,Reilly Lane,NL,65.9,66,Juniors,142.5,87.5,192.5,422.5,Raw,1
-SBD,F,Alexandra Hodder,NL,56.6,57,Juniors,100,47.5,117.5,265,Raw,1
+Place,Name,BirthDate,Sex,State,Division,Equipment,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
+1,Victoria Guy,,F,NL,Sub-Juniors,Raw,68.25,72,75,80,82.5,82.5,35,37.5,40,40,90,100,110,110,232.5,SBD
+1,Alexandra Hodder,,F,NL,Juniors,Raw,56.55,57,85,92.5,100,100,40,47.5,-52.5,47.5,105,112.5,117.5,117.5,265,SBD
+1,Sasha Ali,,F,NL,Juniors,Raw,68.66,72,100,107.5,115,115,45,50,-55,50,105,112.5,122.5,122.5,287.5,SBD
+1,Haley O'Driscoll,,F,NL,Juniors,Raw,77.5,84,120,125,130,130,55,-57.5,57.5,57.5,125,132.5,137.5,137.5,325,SBD
+1,Danielle Sullivan,,F,NL,Open,Raw,56.65,57,90,95,-97.5,95,35,37.5,42.5,42.5,100,107.5,112.5,112.5,250,SBD
+2,Kayla Roberts,,F,NL,Open,Raw,56.45,57,82.5,87.5,92.5,92.5,35,-40,-40,35,105,112.5,117.5,117.5,245,SBD
+1,Sarah Rice,,F,NL,Open,Raw,83.77,84,92.5,100,107.5,107.5,47.5,52.5,55,55,115,125,130,130,292.5,SBD
+1,Katie Hamlyn,,F,NL,Open,Raw,85,84+,112.5,117.5,125,125,42.5,45,47.5,47.5,120,125,135,135,307.5,SBD
+1,Heather Milley,,F,NL,Masters 1,Raw,60.28,63,75,80,87.5,87.5,42.5,45,-47.5,45,95,102.5,110,110,242.5,SBD
+1,Elizabeth Carew,,F,NL,Masters 1,Raw,70.7,72,80,-87.5,87.5,87.5,47.5,50,-52.5,50,110,120,-130,120,257.5,SBD
+1,Jennifer Nakashima,,F,NL,Masters 1,Raw,79.35,84,92.5,97.5,105,105,40,42.5,45,45,100,110,115,115,265,SBD
+1,Donna Foote,,F,NL,Masters 1,Raw,106.2,84+,-110,110,120,120,52.5,57.5,60,60,140,155,-157.5,155,335,SBD
+1,Sharon McCarthy,,F,NL,Masters 2,Raw,82.3,84,-90,90,97.5,97.5,42.5,45,47.5,47.5,115,130,-132.5,130,275,SBD
+1,Gerri Howlett,,F,NL,Masters 3,Raw,72.5,84,50,60,70,70,30,37.5,-47.5,37.5,80,100,-130,100,207.5,SBD
+1,Declan Unsworth,,M,NL,Sub-Juniors,Raw,65.3,66,85,90,92.5,92.5,62.5,67.5,70,70,120,135,142.5,142.5,305,SBD
+1,Evan Wiseman,,M,NL,Sub-Juniors,Raw,77.01,83,135,140,150,150,100,107.5,115,115,182.5,200,210,210,475,SBD
+1,Reilly Lane,,M,NL,Juniors,Raw,65.9,66,127.5,137.5,142.5,142.5,77.5,85,87.5,87.5,172.5,185,192.5,192.5,422.5,SBD
+1,Terrence Fitzpatrick,,M,NL,Juniors,Raw,68.45,74,110,120,130,130,90,-95,95,95,145,160,175,175,400,SBD
+1,Colin Hunt,,M,NL,Juniors,Raw,87.52,93,195,205,210,210,135,142.5,145,145,192.5,207.5,217.5,217.5,572.5,SBD
+2,Phillip Hann,,M,NL,Juniors,Raw,89.3,93,185,195,-205,195,115,120,-125,120,175,187.5,-200,187.5,502.5,SBD
+1,Kevin Fowler,,M,NL,Open,Raw,144.58,120+,170,185,207.5,207.5,135,150,167.5,167.5,225,245,272.5,272.5,647.5,SBD
+1,Mitch Flannigan,,M,NL,Masters 1,Raw,95.15,105,150,162.5,170,170,95,97.5,102.5,102.5,185,195,200,200,472.5,SBD
+1,Olga Sullivan,,F,NL,Masters 1,Single-ply,88.7,84+,55,-57.5,-57.5,55,70,75,80,80,75,-77.5,-77.5,75,210,SBD
+1,Kim Connors,,F,NL,Masters 2,Single-ply,57,57,102.5,-107.5,107.5,107.5,55,57.5,60.5,60.5,125,133,136,136,304,SBD
+1,Bronson Jacque,,M,NL,Open,Single-ply,81.67,83,210,220,227.5,227.5,165,-175,-175,165,225,237.5,-245,237.5,630,SBD
+1,Jessica Summers,,F,NL,SO,Raw,48.5,52,,,,,15,20,22.5,22.5,40,45,52.5,52.5,75,BD
+1,Emily Pitt,,F,NL,SO,Raw,97,84+,,,,,30,35,40,40,75,80,85,85,125,BD
+1,David Horne,,M,NL,SO,Raw,64,66,,,,,50,55,62.5,62.5,105,117.5,127.5,127.5,190,BD
+2,Nathan Eddison,,M,NL,SO,Raw,62,66,,,,,35,40,42.5,42.5,85,92.5,100,100,142.5,BD
+3,Niall McCan,,M,NL,SO,Raw,64.8,66,,,,,40,42.5,47.5,47.5,65,67.5,72.5,72.5,120,BD
+4,Jonathan Roache,,M,NL,SO,Raw,63,66,,,,,32.5,37.5,42.5,42.5,65,72.5,77.5,77.5,120,BD
+1,Ryan Drover,,M,NL,SO,Raw,79.4,83,,,,,40,47.5,50,50,95,107.5,117.5,117.5,167.5,BD
+1,Daniel Horne,,M,NL,SO,Raw,87.6,93,,,,,50,57.5,62.5,62.5,105,120,-130,120,182.5,BD
+2,Luke Kennedy,,M,NL,SO,Raw,89.2,93,,,,,45,52.5,57.5,57.5,90,100,110,110,167.5,BD
+3,Robbie Dewling,,M,NL,SO,Raw,83.9,93,,,,,40,45,50,50,90,92.5,95,95,145,BD
+1,Shaughn Conners,,M,NL,SO,Raw,102.2,105,,,,,35,42.5,47.5,47.5,90,100,115,115,162.5,BD
+2,Mark Collins,,M,NL,SO,Raw,103.7,105,,,,,45,50,55,55,,,,,55,B
+1,Shane Mahon,,M,NL,SO,Raw,106.5,120,,,,,70,77.5,82.5,82.5,165,175,182.5,182.5,265,BD
