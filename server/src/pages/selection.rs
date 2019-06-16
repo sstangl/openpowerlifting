@@ -1034,15 +1034,17 @@ mod tests {
 
     #[test]
     fn test_selection_from_path() {
-        let s = Selection::from_path(Path::new("/raw/men")).unwrap();
+        let d = Selection::default();
+
+        let s = Selection::from_path(Path::new("/raw/men"), &d).unwrap();
         assert_eq!(s.equipment, EquipmentSelection::Raw);
         assert_eq!(s.sex, SexSelection::Men);
 
-        let s = Selection::from_path(Path::new("/wraps/women")).unwrap();
+        let s = Selection::from_path(Path::new("/wraps/women"), &d).unwrap();
         assert_eq!(s.equipment, EquipmentSelection::Wraps);
         assert_eq!(s.sex, SexSelection::Women);
 
-        let s = Selection::from_path(Path::new("/uspa/raw")).unwrap();
+        let s = Selection::from_path(Path::new("/uspa/raw"), &d).unwrap();
         assert_eq!(
             s.federation,
             FederationSelection::Meta(MetaFederation::USPA)
@@ -1052,20 +1054,22 @@ mod tests {
 
     #[test]
     fn test_selection_from_path_errors() {
+        let d = Selection::default();
+
         // Selectors should not be applied more than once per category.
-        assert!(Selection::from_path(Path::new("/raw/raw")).is_err());
-        assert!(Selection::from_path(Path::new("/wraps/raw")).is_err());
-        assert!(Selection::from_path(Path::new("/women/men")).is_err());
-        assert!(Selection::from_path(Path::new("/women/women/women/raw")).is_err());
+        assert!(Selection::from_path(Path::new("/raw/raw"), &d).is_err());
+        assert!(Selection::from_path(Path::new("/wraps/raw"), &d).is_err());
+        assert!(Selection::from_path(Path::new("/women/men"), &d).is_err());
+        assert!(Selection::from_path(Path::new("/women/women/women/raw"), &d).is_err());
 
         // Disallow stupid URLs that would ordinarily work fine.
-        assert!(Selection::from_path(Path::new("/raw///////")).is_err());
-        assert!(Selection::from_path(Path::new("////raw////")).is_err());
-        assert!(Selection::from_path(Path::new("////////raw")).is_err());
+        assert!(Selection::from_path(Path::new("/raw///////"), &d).is_err());
+        assert!(Selection::from_path(Path::new("////raw////"), &d).is_err());
+        assert!(Selection::from_path(Path::new("////////raw"), &d).is_err());
 
         // Disallow nonsense.
-        assert!(Selection::from_path(Path::new("912h3h123h12ch39")).is_err());
-        assert!(Selection::from_path(Path::new(".......")).is_err());
-        assert!(Selection::from_path(Path::new("/menwomen")).is_err());
+        assert!(Selection::from_path(Path::new("912h3h123h12ch39"), &d).is_err());
+        assert!(Selection::from_path(Path::new("......."), &d).is_err());
+        assert!(Selection::from_path(Path::new("/menwomen"), &d).is_err());
     }
 }
