@@ -22,7 +22,7 @@
         <th style="width: 80px;">{{strings.columns.bench}}</th>
         <th style="width: 80px;">{{strings.columns.deadlift}}</th>
         <th style="width: 80px;">{{strings.columns.total}}</th>
-        <th style="width: 80px;">{{strings.columns.wilks}}</th>
+        <th style="width: 80px;">{{strings.columns.ipfpoints}}</th>
         <th></th>{# Intentionally-blank filler column. #}
       </tr></thead>
       <tbody>
@@ -33,7 +33,7 @@
             <td>{% if this.bench %}{{this.bench}}{% endif %}</td>
             <td>{% if this.deadlift %}{{this.deadlift}}{% endif %}</td>
             <td>{% if this.total %}{{this.total}}{% endif %}</td>
-            <td>{% if this.wilks %}{{this.wilks}}{% endif %}</td>
+            <td>{% if this.ipfpoints %}{{this.ipfpoints}}{% endif %}</td>
             <td></td>{# Intentionally-blank filler column. #}
           </tr>
         {% endfor %}
@@ -61,7 +61,7 @@
         <th>{{strings.columns.bench}}</th>
         <th>{{strings.columns.deadlift}}</th>
         <th>{{strings.columns.total}}</th>
-        <th>{{strings.columns.wilks}}</th>
+        <th>{{strings.columns.ipfpoints}}</th>
       </tr></thead>
       <tbody>
       {% for this in meet_results %}
@@ -83,7 +83,7 @@
           <td>{{this.bench}}</td>
           <td>{{this.deadlift}}</td>
           <td>{{this.total}}</td>
-          <td>{{this.wilks}}</td>
+          <td>{{this.ipfpoints}}</td>
         </tr>
       {% endfor %}
       </tbody>
