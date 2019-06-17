@@ -390,18 +390,11 @@ impl<'a> Context<'a> {
                                                                         */
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
-
-        // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
-        if let Some(f) = entry_filter {
-            entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
-        }
-        entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
-
-        let bests = calculate_bests(&locale, &entries);
 
         // Do all the entries have the same Sex?
         // If not, we want to show a "Sex" column for debugging.
+        // This must be done before we apply any entry_filter.
         let mut consistent_sex: bool = true;
         for entry in entries.iter().skip(1) {
             if entry.sex != entries[0].sex {
@@ -409,12 +402,19 @@ impl<'a> Context<'a> {
                 break;
             }
         }
-
-        let lifter_sex = if consistent_sex {
+        let lifter_sex = if !entries.is_empty() && consistent_sex {
             locale.strings.translate_sex(entries[0].sex)
         } else {
             "?"
         };
+
+        // Filter and sort the entries, oldest entries first.
+        if let Some(f) = entry_filter {
+            entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
+        }
+        entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+
+        let bests = calculate_bests(&locale, &entries);
 
         // Determine if any of the entries have attempt information.
         // If a federation only reports Bests, we don't want lots of empty columns.
