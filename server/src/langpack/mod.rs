@@ -152,6 +152,11 @@ pub struct EquipmentTranslations {
     pub single: String,
     pub multi: String,
     pub straps: String,
+
+    /// Terminology for OpenIPF, meaning "Raw".
+    pub classic: String,
+    /// Terminology for OpenIPF, meaning "Single-ply".
+    pub equipped: String,
 }
 
 #[derive(Serialize, Deserialize)]

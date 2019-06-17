@@ -200,6 +200,25 @@ pub fn lifter(
                 Some(ipf_only_filter),
             );
             context.urlprefix = LOCAL_PREFIX;
+
+            // Change the equipment terminology to be IPF-specific.
+            for best in &mut context.bests {
+                if best.equipment == &locale.strings.equipment.raw {
+                    best.equipment = &locale.strings.equipment.classic;
+                }
+                if best.equipment == &locale.strings.equipment.single {
+                    best.equipment = &locale.strings.equipment.equipped;
+                }
+            }
+            for result in &mut context.meet_results {
+                if result.equipment == &locale.strings.equipment.raw {
+                    result.equipment = &locale.strings.equipment.classic;
+                }
+                if result.equipment == &locale.strings.equipment.single {
+                    result.equipment = &locale.strings.equipment.equipped;
+                }
+            }
+
             Some(Ok(Template::render("openipf/lifter", &context)))
         }
 

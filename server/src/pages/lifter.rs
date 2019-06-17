@@ -418,22 +418,23 @@ impl<'a> Context<'a> {
 
         // Determine if any of the entries have attempt information.
         // If a federation only reports Bests, we don't want lots of empty columns.
-        let has_attempts = entries.iter().find(
-            |&e| {
+        let has_attempts = entries
+            .iter()
+            .find(|&e| {
                 e.squat1kg.is_non_zero()
-                || e.squat2kg.is_non_zero()
-                || e.squat3kg.is_non_zero()
-                || e.squat4kg.is_non_zero()
-                || e.bench1kg.is_non_zero()
-                || e.bench2kg.is_non_zero()
-                || e.bench3kg.is_non_zero()
-                || e.bench4kg.is_non_zero()
-                || e.deadlift1kg.is_non_zero()
-                || e.deadlift2kg.is_non_zero()
-                || e.deadlift3kg.is_non_zero()
-                || e.deadlift4kg.is_non_zero()
-            }
-        ).is_some();
+                    || e.squat2kg.is_non_zero()
+                    || e.squat3kg.is_non_zero()
+                    || e.squat4kg.is_non_zero()
+                    || e.bench1kg.is_non_zero()
+                    || e.bench2kg.is_non_zero()
+                    || e.bench3kg.is_non_zero()
+                    || e.bench4kg.is_non_zero()
+                    || e.deadlift1kg.is_non_zero()
+                    || e.deadlift2kg.is_non_zero()
+                    || e.deadlift3kg.is_non_zero()
+                    || e.deadlift4kg.is_non_zero()
+            })
+            .is_some();
 
         // Display the meet results, most recent first.
         let meet_results = entries
