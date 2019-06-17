@@ -319,11 +319,17 @@ impl<'a> Context<'a> {
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
         lifter_id: u32,
+        entry_filter: Option<fn(&'a opldb::OplDb, &'a Entry) -> bool>, /* For use by
+                                                                        * distributions.
+                                                                        */
     ) -> Context<'a> {
         let lifter = opldb.get_lifter(lifter_id);
 
         // Get a list of the entries for this lifter, oldest entries first.
         let mut entries = opldb.get_entries_for_lifter(lifter_id);
+        if let Some(f) = entry_filter {
+            entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
+        }
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
         let bests = calculate_bests(&locale, &entries);

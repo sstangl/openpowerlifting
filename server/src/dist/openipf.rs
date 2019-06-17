@@ -8,11 +8,12 @@ use opltypes::*;
 
 use rocket::http::Cookies;
 use rocket::request::Form;
+use rocket::response::Redirect;
 use rocket::State;
 use rocket_contrib::templates::Template;
 
 use server::langpack::{Language, Locale};
-use server::opldb::MetaFederation;
+use server::opldb::{self, Entry, MetaFederation};
 use server::pages;
 
 use std::path::PathBuf;
@@ -144,4 +145,74 @@ pub fn default_search_rankings_api(
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
     search_rankings_api(None, query, opldb)
+}
+
+/// Used to show only IPF-sanctioned meets.
+fn ipf_only_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
+    let meet = opldb.get_meet(e.meet_id);
+    meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
+}
+
+#[get("/u/<username>?<lang>")]
+pub fn lifter(
+    username: String,
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Result<Template, Redirect>> {
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+
+    // Disambiguations end with a digit.
+    // Some lifters may have failed to be merged with their disambiguated username.
+    // Therefore, for usernames without a digit, it cannot be assumed that they are
+    // *not* a disambiguation.
+    let is_definitely_disambiguation: bool = username
+        .chars()
+        .last()
+        .map_or(false, |c| c.is_ascii_digit());
+
+    let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
+        if let Some(id) = opldb.get_lifter_id(&username) {
+            vec![id]
+        } else {
+            vec![]
+        }
+    } else {
+        opldb.get_lifters_under_username(&username)
+    };
+
+    match lifter_ids.len() {
+        // If no LifterID was found, maybe the name just needs to be lowercased.
+        0 => {
+            let lowercase = username.to_ascii_lowercase();
+            let _guard = opldb.get_lifter_id(&lowercase)?;
+            Some(Err(Redirect::permanent(format!("/u/{}", lowercase))))
+        }
+
+        // If a specific lifter was referenced, return the lifter's unique page.
+        1 => {
+            let mut context = pages::lifter::Context::new(
+                &opldb,
+                &locale,
+                lifter_ids[0],
+                Some(ipf_only_filter),
+            );
+            context.urlprefix = LOCAL_PREFIX;
+            Some(Ok(Template::render("openipf/lifter", &context)))
+        }
+
+        // If multiple lifters were referenced, return a disambiguation page.
+        _ => {
+            let mut context = pages::disambiguation::Context::new(
+                &opldb,
+                &locale,
+                &username,
+                &lifter_ids,
+            );
+            context.urlprefix = LOCAL_PREFIX;
+            Some(Ok(Template::render("openipf/disambiguation", &context)))
+        }
+    }
 }

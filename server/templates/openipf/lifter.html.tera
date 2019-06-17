@@ -1,4 +1,4 @@
-{% extends "desktop-base" %}
+{% extends "openipf/desktop-base" %}
 
 {% block topbar_hack %}
   <div class="topbar-without-controls">

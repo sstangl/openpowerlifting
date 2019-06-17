@@ -190,7 +190,8 @@ fn lifter(
 
         // If a specific lifter was referenced, return the lifter's unique page.
         1 => {
-            let context = pages::lifter::Context::new(&opldb, &locale, lifter_ids[0]);
+            let context =
+                pages::lifter::Context::new(&opldb, &locale, lifter_ids[0], None);
             Some(Ok(Template::render("lifter", &context)))
         }
 
@@ -534,6 +535,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::default_rankings_api,
                 dist::openipf::search_rankings_api,
                 dist::openipf::default_search_rankings_api,
+                dist::openipf::lifter,
             ],
         )
         .register(catchers![not_found, internal_error])
