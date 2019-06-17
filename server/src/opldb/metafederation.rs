@@ -128,6 +128,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-and-affiliates")]
     IPFAndAffiliates,
 
+    /// IPF including select international sub-affiliates.
+    #[strum(to_string = "ipf-internationals")]
+    IPFInternationals,
+
     /// IrishPO, excluding non-Irish lifters and including WPC results.
     #[strum(to_string = "irishpo")]
     IrishPO,
@@ -389,6 +393,17 @@ impl MetaFederation {
             MetaFederation::IPFAndAffiliates => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
             }
+            MetaFederation::IPFInternationals => match meet.federation {
+                Federation::IPF
+                | Federation::AfricanPF
+                | Federation::AsianPF
+                | Federation::EPF
+                | Federation::FESUPO
+                | Federation::NAPF
+                | Federation::ORPF
+                | Federation::CommonwealthPF => true,
+                _ => false,
+            },
             MetaFederation::IrishPO => {
                 (meet.federation == Federation::IrishPO
                     && (entry.lifter_country.is_none()

@@ -1,5 +1,6 @@
 <select id="fedselect">
 <option value="ipf-and-affiliates" {% if selection.federation == "IpfAndAffiliates" %}selected{% endif %}>All Affiliates</option>
+<option value="ipf-internationals" {% if selection.federation == "IpfInternationals" %}selected{% endif %}>All Internationals</option>
 <optgroup label="{{strings.selectors.fed.international}}">
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF</option>
 </optgroup>
