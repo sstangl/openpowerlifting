@@ -1,11 +1,11 @@
-{% extends "desktop-base" %}
+{% extends "openipf/desktop-base" %}
 
 {% block includes %}
   <script type="text/javascript">
     const urlprefix = "{{urlprefix | safe }}";
-    const default_equipment = "raw_wraps";
-    const default_classkind = "traditional-classes";
-    const default_fed = "all";
+    const default_equipment = "raw";
+    const default_classkind = "ipf-classes";
+    const default_fed = "ipf-and-affiliates";
     const default_sex = "men";
     const default_ageclass = "all";
     const default_year = "all";
@@ -24,19 +24,13 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      {% include "widget-fedselect" %}
-      {% include "widget-equipmentselect" %}
-      <select id="classkindselect">
-        <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
-        <option value="ipf-classes" {% if selection.classkind == "IPF" %}selected{% endif %}>IPF</option>
-        <option value="para-classes" {% if selection.classkind == "Para" %}selected{% endif %}>Para</option>
-        <option value="wp-classes" {% if selection.classkind == "WP" %}selected{% endif %}>WP</option>
-      </select>
+      {% include "openipf/widget-fedselect" %}
+      {% include "openipf/widget-equipmentselect" %}
       <select id="sexselect">
         <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "widget-ageselect" %}
+      {% include "openipf/widget-ageselect" %}
       {% include "widget-yearselect" %}
     </div>
   </div>

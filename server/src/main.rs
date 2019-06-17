@@ -129,13 +129,19 @@ fn records(
     languages: AcceptLanguage,
     cookies: Cookies,
 ) -> Option<Template> {
+    let default = pages::records::RecordsSelection::default();
     let selection = if let Some(sel) = selections {
-        pages::records::RecordsSelection::from_path(&sel).ok()?
+        pages::records::RecordsSelection::from_path(&sel, &default).ok()?
     } else {
-        pages::records::RecordsSelection::default()
+        default
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::records::Context::new(&opldb, &locale, &selection);
+    let context = pages::records::Context::new(
+        &opldb,
+        &locale,
+        &selection,
+        &pages::selection::Selection::default(),
+    );
     Some(Template::render("records", &context))
 }
 
@@ -535,6 +541,8 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::default_rankings_api,
                 dist::openipf::search_rankings_api,
                 dist::openipf::default_search_rankings_api,
+                dist::openipf::records,
+                dist::openipf::records_default,
                 dist::openipf::lifter,
             ],
         )

@@ -4,8 +4,18 @@
 
 'use strict';
 
+// Variables provided by the server.
+declare const urlprefix: string;
+
+declare const default_equipment: string;
+declare const default_classkind: string | undefined;
+declare const default_fed: string;
+declare const default_sex: string;
+declare const default_ageclass: string;
+declare const default_year: string;
+
 let selEquipment: HTMLSelectElement;
-let selClassKind: HTMLSelectElement;
+let selClassKind: HTMLSelectElement | null; // OpenIPF doesn't use this.
 let selSex: HTMLSelectElement;
 let selFederation: HTMLSelectElement;
 let selAgeClass: HTMLSelectElement;
@@ -15,22 +25,22 @@ let selRecordsYear: HTMLSelectElement;
 // for the default selection.
 function records_selection_to_path(): string {
     let url = "";
-    if (selEquipment.value !== "raw_wraps") {
+    if (selEquipment.value !== default_equipment) {
         url += "/" + selEquipment.value;
     }
-    if (selClassKind.value !== "traditional-classes") {
+    if (selClassKind && selClassKind.value !== default_classkind) {
         url += "/" + selClassKind.value;
     }
-    if (selFederation.value !== "all") {
+    if (selFederation.value !== default_fed) {
         url += "/" + selFederation.value;
     }
-    if (selSex.value !== "men") {
+    if (selSex.value !== default_sex) {
         url += "/" + selSex.value;
     }
-    if (selAgeClass.value !== "all") {
+    if (selAgeClass.value !== default_ageclass) {
         url += "/" + selAgeClass.value;
     }
-    if (selRecordsYear.value !== "all") {
+    if (selRecordsYear.value !== default_year) {
         url += "/" + selRecordsYear.value;
     }
     return url;
@@ -42,14 +52,16 @@ function records_reload() {
     let path = records_selection_to_path();
 
     if (path === "") {
-        window.location.href = "/records";
+        window.location.href = urlprefix + "records";
     } else {
-        window.location.href = "/records" + path;
+        window.location.href = urlprefix + "records" + path;
     }
 }
 
 function records_addSelectorListeners(selector) {
-    selector.addEventListener("change", records_reload);
+    if (selector) {
+        selector.addEventListener("change", records_reload);
+    }
 }
 
 function records_addEventListeners() {

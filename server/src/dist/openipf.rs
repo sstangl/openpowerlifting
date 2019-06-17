@@ -147,6 +147,52 @@ pub fn default_search_rankings_api(
     search_rankings_api(None, query, opldb)
 }
 
+#[get("/records/<selections..>?<lang>")]
+pub fn records(
+    selections: Option<PathBuf>,
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let default_rankings = default_openipf_selection();
+    let default = pages::records::RecordsSelection {
+        equipment: default_rankings.equipment,
+        federation: default_rankings.federation,
+        sex: pages::selection::SexSelection::Men,
+        classkind: pages::records::ClassKindSelection::IPF,
+        ageclass: default_rankings.ageclass,
+        year: default_rankings.year,
+    };
+
+    let selection = if let Some(sel) = selections {
+        pages::records::RecordsSelection::from_path(&sel, &default).ok()?
+    } else {
+        default
+    };
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::records::Context::new(
+        &opldb,
+        &locale,
+        &selection,
+        &default_openipf_selection(),
+    );
+    context.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/records", &context))
+}
+
+#[get("/records?<lang>")]
+pub fn records_default(
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    records(None, lang, opldb, langinfo, languages, cookies)
+}
+
 /// Used to show only IPF-sanctioned meets.
 fn ipf_only_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
     let meet = opldb.get_meet(e.meet_id);
