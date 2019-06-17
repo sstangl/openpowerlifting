@@ -6,6 +6,9 @@
 
 declare var Slick;
 
+// Provided by the rankings template.
+declare const urlprefix: string;
+
 export interface SearchRankingsResult {
     next_index: (number | null);
 }
@@ -34,7 +37,7 @@ export function RankingsSearcher() {
         // Remove some characters that will cause malformed URLs.
         const query = item.query.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '_');
         const startRow = Math.max(item.startRow, 0);
-        return `/api/search/rankings${item.path}?q=${query}&start=${startRow}`;
+        return `${urlprefix}api/search/rankings${item.path}?q=${query}&start=${startRow}`;
     }
 
     // Cancels any pending or active AJAX calls.

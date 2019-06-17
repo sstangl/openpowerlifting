@@ -382,13 +382,6 @@ fn default_rankings_api<'db>(
     rankings_api(None, query, opldb, langinfo)
 }
 
-// TODO: Version / magicValue / etc.
-#[derive(FromForm)]
-struct SearchRankingsApiQuery {
-    q: String,
-    start: usize,
-}
-
 /// API endpoint for rankings search.
 #[get("/api/search/rankings/<selections..>?<query..>")]
 fn search_rankings_api<'db>(
@@ -538,7 +531,9 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::index,
                 dist::openipf::rankings,
                 dist::openipf::rankings_api,
-                dist::openipf::rankings_api_default_bug_workaround,
+                dist::openipf::default_rankings_api,
+                dist::openipf::search_rankings_api,
+                dist::openipf::default_search_rankings_api,
             ],
         )
         .register(catchers![not_found, internal_error])

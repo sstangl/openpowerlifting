@@ -144,3 +144,10 @@ pub struct RankingsApiQuery {
     pub lang: String,
     pub units: String,
 }
+
+// TODO: Version / magicValue / etc.
+#[derive(FromForm)]
+pub struct SearchRankingsApiQuery {
+    pub q: String,
+    pub start: usize,
+}

@@ -110,13 +110,38 @@ pub fn rankings_api(
     Some(JsonString(serde_json::to_string(&slice).ok()?))
 }
 
-/// Default API endpoint -- there seems to be a bug in Rocket when there's no
-/// selection path.
 #[get("/api/rankings?<query..>")]
-pub fn rankings_api_default_bug_workaround(
+pub fn default_rankings_api(
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
     rankings_api(None, query, opldb, langinfo)
+}
+
+/// API endpoint for rankings search.
+#[get("/api/search/rankings/<selections..>?<query..>")]
+pub fn search_rankings_api<'db>(
+    selections: Option<PathBuf>,
+    query: Form<SearchRankingsApiQuery>,
+    opldb: State<ManagedOplDb>,
+) -> Option<JsonString> {
+    let default = default_openipf_selection();
+    let selection = match selections {
+        None => default,
+        Some(path) => pages::selection::Selection::from_path(&path, &default).ok()?,
+    };
+
+    let result =
+        pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
+
+    Some(JsonString(serde_json::to_string(&result).ok()?))
+}
+
+#[get("/api/search/rankings?<query..>")]
+pub fn default_search_rankings_api(
+    query: Form<SearchRankingsApiQuery>,
+    opldb: State<ManagedOplDb>,
+) -> Option<JsonString> {
+    search_rankings_api(None, query, opldb)
 }
