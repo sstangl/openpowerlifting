@@ -9,11 +9,11 @@
   <option value="epf" {% if selection.federation == "EPF" %}selected{% endif %}>EPF / Europe</option>
   <option value="fesupo" {% if selection.federation == "FESUPO" %}selected{% endif %}>FESUPO / South America</option>
   <option value="napf" {% if selection.federation == "NAPF" %}selected{% endif %}>NAPF / North America</option>
+  <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF / Oceania</option>
 </optgroup>
 <optgroup label="{{strings.selectors.fed.regional}}">
   <option value="commonwealthpf" {% if selection.federation == "CommonwealthPF" %}selected{% endif %}>CommonwealthPF</option>
   <option value="nordicpf" {% if selection.federation == "NordicPF" %}selected{% endif %}>NordicPF</option>
-  <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF / Oceania</option>
 </optgroup>
 <optgroup label="Countries">
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP / {{strings.country.spain}}</option>
