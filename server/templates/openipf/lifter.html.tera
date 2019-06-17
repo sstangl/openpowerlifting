@@ -57,9 +57,15 @@
         <th>{{strings.columns.equipment}}</th>
         <th>{{strings.columns.weightclass}}</th>
         <th>{{strings.columns.bodyweight}}</th>
-        <th>{{strings.columns.squat}}</th>
-        <th>{{strings.columns.bench}}</th>
-        <th>{{strings.columns.deadlift}}</th>
+        {% if show_attempts %}
+          <th colspan="3">{{strings.columns.squat}}</th>
+          <th colspan="3">{{strings.columns.bench}}</th>
+          <th colspan="3">{{strings.columns.deadlift}}</th>
+        {% else %}
+          <th>{{strings.columns.squat}}</th>
+          <th>{{strings.columns.bench}}</th>
+          <th>{{strings.columns.deadlift}}</th>
+        {% endif %}
         <th>{{strings.columns.total}}</th>
         <th>{{strings.columns.ipfpoints}}</th>
       </tr></thead>
@@ -79,9 +85,21 @@
           <td>{{this.equipment}}</td>
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
-          <td>{{this.squat}}</td>
-          <td>{{this.bench}}</td>
-          <td>{{this.deadlift}}</td>
+          {% if show_attempts %}
+            <td>{% if this.squat1 %}{{this.squat1}}{% else %}{{this.squat}}{% endif %}</td>
+            <td>{{this.squat2}}</td>
+            <td>{{this.squat3}}</td>
+            <td>{% if this.bench1 %}{{this.bench1}}{% else %}{{this.bench}}{% endif %}</td>
+            <td>{{this.bench2}}</td>
+            <td>{{this.bench3}}</td>
+            <td>{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.deadlift}}{% endif %}</td>
+            <td>{{this.deadlift2}}</td>
+            <td>{{this.deadlift3}}</td>
+          {% else %}
+            <td>{{this.squat}}</td>
+            <td>{{this.bench}}</td>
+            <td>{{this.deadlift}}</td>
+          {% endif %}
           <td>{{this.total}}</td>
           <td>{{this.ipfpoints}}</td>
         </tr>
