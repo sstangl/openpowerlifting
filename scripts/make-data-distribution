@@ -27,12 +27,12 @@ def build_lifterid_to_name_map(lifterspath):
 def main():
     scriptsdir = os.path.dirname(os.path.realpath(__file__))
     projectdir = os.path.dirname(scriptsdir)
-    builddir = projectdir + os.sep + "build"
+    builddir = os.sep.join([projectdir, 'build'])
 
-    entriespath = builddir + os.sep + "entries.csv"
-    meetspath = builddir + os.sep + "meets.csv"
-    lifterspath = builddir + os.sep + "lifters.csv"
-    targetpath = builddir + os.sep + "openpowerlifting.csv"
+    entriespath = os.sep.join([builddir, 'entries.csv'])
+    meetspath = os.sep.join([builddir, 'meets.csv'])
+    lifterspath = os.sep.join([builddir, 'lifters.csv'])
+    targetpath = os.sep.join([builddir, 'openpowerlifting.csv'])
 
     lifterid_map = build_lifterid_to_name_map(lifterspath)
 

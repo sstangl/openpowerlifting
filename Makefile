@@ -7,6 +7,9 @@ PLFILE := entries.csv
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
+DATE := $(shell date --iso-8601)
+DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}
+
 all: csv server
 
 builddir:
@@ -16,9 +19,14 @@ builddir:
 csv: builddir
 	cargo run --bin checker -- --compile
 
-datadist: csv
+# Build the CSV file hosted on the Data page for use by humans.
+# The intention is to make it easy to use for people on Windows.
+data: csv
+	mkdir -p "${DATADIR}"
 	scripts/make-data-distribution
-	bzip2 -f build/openpowerlifting.csv
+	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
+	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
+	zip -r "${BUILDDIR}/openpowerlifting-latest.zip" "${DATADIR}"
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csv
