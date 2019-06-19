@@ -26,7 +26,9 @@ data: csv
 	scripts/make-data-distribution
 	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
 	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
-	zip -r "${BUILDDIR}/openpowerlifting-latest.zip" "${DATADIR}"
+	cp docs/data-readme.md '${DATADIR}/README.txt'
+	rm -f "${BUILDDIR}/openpowerlifting-latest.zip"
+	cd "${BUILDDIR}" && zip -r "openpowerlifting-latest.zip" "openpowerlifting-${DATE}"
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csv
