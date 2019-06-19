@@ -26,7 +26,7 @@ To the extent possible under law, all data (`*.csv`) in the `meet-data/` folder 
 of all copyright and related or neighboring rights. The work is published from the United States.
 
 Although you are under no requirement to do so, if you incorporate OpenPowerlifting</br>
-data into your project, please consider adding a statement of attribution,</br>
+data into your project, please consider adding a statement of attribution</br>
 so that people may know about this project and help contribute data.
 
 Sample attribution text:
