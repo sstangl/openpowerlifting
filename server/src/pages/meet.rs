@@ -299,11 +299,15 @@ fn cmp_by_group(ruleset: RuleSet, a: &Entry, b: &Entry) -> cmp::Ordering {
         return a_sex.cmp(&b_sex);
     }
 
-    // Next, sort by WeightClass.
-    a.weightclasskg
-        .cmp(&b.weightclasskg)
-        // Finally, sort by Division.
-        .then(cmp_by_division(a.get_division(), b.get_division()))
+    // Next, sort by Division.
+    let a_div = a.get_division();
+    let b_div = b.get_division();
+    if a_div != b_div {
+        return cmp_by_division(a_div, b_div);
+    }
+
+    // Finally, sort by WeightClass.
+    a.weightclasskg.cmp(&b.weightclasskg)
 }
 
 fn finish_table<'db>(
