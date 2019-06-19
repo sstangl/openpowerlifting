@@ -260,8 +260,6 @@ enum Header {
 
     // Columns below this point are ignored.
     Team,
-    #[strum(serialize = "Country-State")]
-    CountryState,
     State,
     #[strum(serialize = "College/University")]
     CollegeUniversity,
