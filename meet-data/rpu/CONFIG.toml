@@ -24,6 +24,9 @@
 
     pro_open = {name = "Pro Open", min = 0, max = 999}
     pro_teen = {name = "Pro Teen", min = 13, max = 19}
+    pro_teen_13_15 = {name = "Pro Teen 13-15", min = 13, max = 15}
+    pro_teen_16_17 = {name = "Pro Teen 16-17", min = 16, max = 17}
+    pro_teen_18_19 = {name = "Pro Teen 18-19", min = 18, max = 19}
     pro_teen_15_19 = {name = "Pro Teen 15-19", min = 15, max = 19}
     pro_juniors_20_23 = {name = "Pro Juniors 20-23", min = 20, max = 23}
     pro_masters = {name = "Pro Masters", min = 40, max = 999}
