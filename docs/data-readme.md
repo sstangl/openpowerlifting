@@ -56,39 +56,101 @@ The `Equipment` column is defined by [modules/opltypes/src/equipment.rs](https:/
 
 ### Age
 
+Optional. The age of the lifter on the start date of the meet, if known.
+
+Ages can be one of two types: exact or approximate. Exact ages are given as integer numbers, for example `23`. Approximate ages are given as an integer plus `0.5`, for example `23.5`.
+
+Approximate ages mean that the lifter could be either of *two* possible ages. For an approximate age of `n + 0.5`, the possible ages are `n` or `n+1`. For example, a lifter with the given age `23.5` could be either `23` or `24` -- we don't have enough information to know.
+
+Approximate ages occur because some federations only provide us with birth year information. So another way to think about approximate ages is that `23.5` implies that the lifter turns `24` that year.
+
+The `Age` column is defined by [modules/opltypes/src/age.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/age.rs).
 
 ### AgeClass
 
+Optional. The age class in which the filter falls, for example `40-45`.
+
+AgeClass is mostly useful because sometimes a federation will report that a lifter competed in the 50-54 divison without providing any further age information. This way, we can still tag them as 50-54, even if the `Age` column is empty.
+
+The full range available to `AgeClass` is defined by [modules/opltypes/src/ageclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/ageclass.rs). 
 
 ### Division
 
+Optional. Free-form UTF-8 text describing the division of competition, like `Open` or `Juniors 20-23` or `Professional`.
+
+Some federations are *configured* in our database, which means that we have agreed on a limited set of division options for that federation, and we have rewritten their results to only use that set, and tests enforce that. Even still, divisions are not standardized *between* configured federation: it really is free-form text, just to provide context.
+
+Information about age should not be extracted from the `Division`, but from the `AgeClass` column.
 
 ### BodyweightKg
 
+Optional. The recorded bodyweight of the lifter at the time of competition, to two decimal places.
 
 ### WeightClassKg
 
+Optional. The weight class in which the lifter competed, to two decimal places.
+
+Weight classes can be specified as a maximum or as a minimum. Maximums are specified by just the number, for example `90` means "up to (and including) 90kg." minimums are specified by a `+` to the right of the number, for example `90+` means "above (and excluding) 90kg."
+
+`WeightClassKg` is defined by [modules/opltypes/src/weightclasskg.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/weightclasskg.rs).
 
 ### Squat1Kg, Bench1Kg, Deadlift1Kg
 
+Optional. First attempts for each of squat, bench, and deadlift, respectively. Maximum of two decimal places.
+
+Negative values indicate failed attempts.
+
+Not all federations report attempt information. Some federations only report Best attempts.
 
 ### Squat2Kg, Bench2Kg, Deadlift2Kg
 
+Optional. Second attempts for each of squat, bench, and deadlift, respectively. Maximum of two decimal places.
+
+Negative values indicate failed attempts.
+
+Not all federations report attempt information. Some federations only report Best attempts.
 
 ### Squat3Kg, Bench3Kg, Deadlift3Kg
 
+Optional. Third attempts for each of squat, bench, and deadlift, respectively. Maximum of two decimal places.
+
+Negative values indicate failed attempts.
+
+Not all federations report attempt information. Some federations only report Best attempts.
 
 ### Squat4Kg, Bench4Kg, Deadlift4Kg
 
+Optional. Fourth attempts for each of squat, bench, and deadlift, respectively. Maximum of two decimal places.
+
+Negative values indicate failed attempts.
+
+Fourth attempts are special, in that they do not count toward the `Best3TotalKg`. They are used for recording single-lift records.
 
 ### Best3SquatKg, Best3BenchKg, Best3DeadliftKg
 
+Optional. Maximum of the first three successful attempts for the lift.
+
+Rarely may be negative: that is used by some federations to report the lowest weight the lifter attempted and failed.
 
 ### TotalKg
 
+Optional. Sum of `Best3SquatKg`, `Best3BenchKg`, and `Best3DeadliftKg`, if all three lifts were a success. If one of the lifts was failed, or the lifter was disqualified for some other reason, the `TotalKg` is empty.
+
+Rarely, mostly for older meets, a federation will report the total but not *any* lift information.
 
 ### Place
 
+Mandatory. The recorded place of the lifter in the given division at the end of the meet.
+
+Values are as follows:
+
+- Positive number: the place the lifter came in.
+- G: Guest lifter. The lifter succeeded, but wasn't eligible for awards.
+- DQ: Disqualified. Note that DQ could be for procedural reasons, not just failed attempts.
+- DD: Doping Disqualification. The lifter failed a drug test.
+- NS: No-Show. The lifter did not show up on the meet day.
+
+The `Place` column is defined by [modules/opltypes/src/place.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/place.rs).
 
 ### Wilks
 
