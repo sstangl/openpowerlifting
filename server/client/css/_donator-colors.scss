@@ -289,6 +289,13 @@
   background-image: linear-gradient(to right, $green 45%, $red 55%);
 }
 
+// Designed by Mike Overkamp.
+.mike_overkamp {
+  font-family: monospace;
+  @include gradient-prereqs(#1E8AFB);
+  background-image: linear-gradient(to bottom, #f00 40%, #fff 40%, #fff 80%, #1E8AFB 80%, #1E8AFB 100%);
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
