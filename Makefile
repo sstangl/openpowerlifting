@@ -23,7 +23,7 @@ csv: builddir
 # The intention is to make it easy to use for people on Windows.
 data: csv
 	mkdir -p "${DATADIR}"
-	scripts/make-data-distribution
+	cargo run --bin checker -- --compile-onefile
 	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
 	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
 	cp docs/data-readme.md '${DATADIR}/README.txt'

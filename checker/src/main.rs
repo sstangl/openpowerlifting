@@ -186,6 +186,12 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .help("Compiles the database into build/*.csv"),
         )
         .arg(
+            clap::Arg::with_name("compile-onefile")
+                .short("1")
+                .long("compile-onefile")
+                .help("Compiles build/openpowerlifting.csv, the easy-use variant"),
+        )
+        .arg(
             clap::Arg::with_name("PATH")
                 .help("Optionally restricts processing to just this parent directory")
                 .required(false)
@@ -201,7 +207,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     // Validate arguments.
-    let is_compiling: bool = argmatches.is_present("compile");
+    let is_compiling: bool =
+        argmatches.is_present("compile") || argmatches.is_present("compile-onefile");
     let debug_age_username: Option<&str> = argmatches.value_of("age");
     let debug_country_username: Option<&str> = argmatches.value_of("country");
     let is_debugging: bool =
@@ -360,9 +367,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         compiler::interpolate_age(&mut meetdata, &liftermap);
 
         // Perform final compilation if requested.
-        if is_compiling {
+        if argmatches.is_present("compile") {
             let buildpath = project_root.join("build");
             compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
+        }
+        if argmatches.is_present("compile-onefile") {
+            let buildpath = project_root.join("build");
+            compiler::make_onefile_csv(&meetdata, &buildpath)?;
         }
     }
 

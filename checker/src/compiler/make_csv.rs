@@ -1,4 +1,4 @@
-//! Transforms `AllMeetData`` into the final CSV files.
+//! Transforms `AllMeetData` into the final CSV files.
 
 use coefficients::mcculloch;
 use csv::{QuoteStyle, Terminator, WriterBuilder};
