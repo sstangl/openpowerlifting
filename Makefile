@@ -21,7 +21,7 @@ csv: builddir
 
 # Build the CSV file hosted on the Data page for use by humans.
 # The intention is to make it easy to use for people on Windows.
-data: csv
+data: builddir
 	mkdir -p "${DATADIR}"
 	cargo run --bin checker -- --compile-onefile
 	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
