@@ -25,7 +25,7 @@
      pages want specially-marked headers. So we do both, for the moment. Gross! #}
   {% block flexbox_hack %}{% endblock flexbox_hack %}
     {% block topbar_hack %}{% endblock topbar_hack %}
-      {% include "header" %}
+      {% include "openipf/header" %}
       {% block controls %}{% endblock controls %}
     {% block topbar_hack_end %}{% endblock topbar_hack_end %}
     {% block body %}{% endblock body %}

@@ -7,7 +7,7 @@
   align-items: stretch;
 
   background-color: $header-background-color;
-  color: $control-text-color;
+  color: $header-color;
 
   height: $header-height;
   width: 100%;
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
 
-  color: $control-text-color;
+  color: $header-color;
   font-size: 9pt;
   font-weight: bold;
   text-decoration: none;

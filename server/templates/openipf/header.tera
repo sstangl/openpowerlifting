@@ -1,0 +1,18 @@
+<div id="header">
+  <img class="header-logo" src="/static/images/{{statics::logo_on_black_svg()}}" alt="OpenPowerlifting"/>
+  <a href="{{urlprefix | safe}}" class="nav__link">{{strings.header.rankings}}</a>
+  <a href="{{urlprefix | safe}}records" class="nav__link">{{strings.header.records}}</a>
+  <a href="{{urlprefix | safe}}mlist" class="nav__link">{{strings.header.meets}}</a>
+  <a href="{{urlprefix | safe}}data" class="nav__link">{{strings.header.data}}</a>
+  <a href="{{urlprefix | safe}}status" class="nav__link">{{strings.header.status}}</a>
+  <a href="{{urlprefix | safe}}faq" class="nav__link">{{strings.header.faq}}</a>
+  <a href="{{urlprefix | safe}}contact" class="nav__link">{{strings.header.contact}}</a>
+  <a href="https://openpowerlifting.bigcartel.com" class="nav__link" rel="noopener" target="_blank">{{strings.header.shop}}</a>
+  <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
+  <a href="https://instagram.com/openpowerlifting" class="nav__link" rel="noopener" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a href="javascript:void(0)" class="nav__link header-hamburger" onClick="document.getElementById('header').classList.toggle('responsive')">&#9776;</a>
+  <div id="header-right">
+    {% include "widget-weightunits" %}
+    {% include "widget-langselect" %}
+  </div>
+</div>
