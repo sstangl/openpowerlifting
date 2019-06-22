@@ -32,7 +32,7 @@ def get_tabs(url):
     LOGGER.setLevel(logging.WARNING)
     profile = webdriver.FirefoxProfile()
     foptions = Options()
-    # foptions.headless = True
+    foptions.headless = True
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
@@ -173,7 +173,7 @@ def get_subtable_results(soup, tabname, tablename, enclosing_soup):
             csv.fieldnames += ['']
         else:
             csv.fieldnames += [header]
-            print('Unknown header '+header+' '+tabname)
+            print('Unknown header '+header)
 
     csv.fieldnames += ['TableName']
 
