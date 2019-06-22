@@ -15,7 +15,7 @@
 {% block controls %}
   <div id="controls">
     {% include "widget-fedselect" %}
-    {% include "widget-yearselect" %}
+    {% include "common/widget-yearselect" %}
   </div>
 {% endblock controls %}
 

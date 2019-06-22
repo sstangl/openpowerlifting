@@ -59,7 +59,7 @@
         <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
       {% include "openipf/widget-ageselect" %}
-      {% include "widget-yearselect" %}
+      {% include "common/widget-yearselect" %}
       {% include "openipf/widget-eventselect" %}
       {% include "openipf/widget-sortselect" %}
     </div>
