@@ -18,6 +18,7 @@
     masters8 = {name = "M8", min=75, max=79}
     masters9 = {name = "M9", min=80, max=999}
     veterani = {name = "Veterāni", min=40, max=999}
+    teen = {name = "T", min=13, max=19}
 
 [weightclasses.M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
