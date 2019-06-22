@@ -321,3 +321,16 @@ pub fn meet(
     context.urlprefix = LOCAL_PREFIX;
     Some(Template::render("openipf/meet", &context))
 }
+
+#[get("/faq?<lang>")]
+pub fn faq(
+    lang: Option<String>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::faq::Context::new(&locale);
+    context.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/faq", &context))
+}

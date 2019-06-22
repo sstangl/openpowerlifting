@@ -1,4 +1,4 @@
-{% extends "desktop-base" %}
+{% extends "openipf/desktop-base" %}
 {% block topbar_hack %}
   <div class="topbar">
 {% endblock topbar_hack %}
@@ -13,57 +13,53 @@
 
 <h1>Frequently Asked Questions</h1>
 
+<h2>What is this site? How does it relate to OpenPowerlifting?</h2>
+
+<p>This site is an IPF-specific frontend for the OpenPowerlifting database. The backend is exactly the same as OpenPowerlifting.</p>
+
+<h2>Why did you make an IPF-specific frontend?</h2>
+
+<p>Top IPF lifters did not interact much with the OpenPowerlifting website. That is problematic for us, because our accuracy depends on lifters using the database and reporting errors.</p>
+
+<p>We suspect this is because OpenPowerlifting's homepage uses defaults that are not applicable for the IPF. Although the IPF's categories can be selected by the website's controls, that takes a significant number of clicks and is a bad user experience. So we think the main site was just too difficult for IPF lifters to use, in a way that was not true for lifters from other federations.</p>
+
+<p>This site is set up so the defaults are what IPF lifters expect. We hope that by doing this, IPF lifters engage more with the data, and IPF affiliates get more motivated to work with us on archiving results.</p>
+
 <h2>How do I send in my meet results?</h2>
 
 <p>Wait for the federation to post the official results on their website, and then send us an e-mail with a link. Alternatively, if you are a meet director, have the original spreadsheets, and have reason to believe that the federation will sit on the data for a long time or lose data along the way, you can e-mail us the spreadsheets.</p>
 
 <p>We strongly prefer that results be posted on the federation website, so that they can be crawled by the <a href="https://www.archive.org">Internet Archive</a>.</p>
 
-<p>We operate differently from other record-keeping sites: we only track full competitions, not individual records. We do not include personal records independently of the context in which they occurred. The major benefit of doing it this way is that we archive the competition results of everyone who competed in Powerlifting, not just the record-holders.</p>
+<p>We operate differently from other record-keeping sites: we only track full competitions, not individual records. We do not include personal records independently of the context in which they occurred. The major benefit of doing it this way is that we archive the competition results of everyone who competed, not just the record-holders.</p>
 
 <h2>I had a meet last weekend, why is it not on the site?</h2>
       
-<p>Most likely, we're waiting on the federation to post results. For the majority of federations, particularly in the USA, it typically takes up to a month for a federation to post results from one of its meets.</p>
+<p>Most likely, we're waiting on the federation to post results.</p>
 
 <p>If the federation posted results and they're still not on the site for a while, please send an e-mail. We enter in meets in rough "order of volunteer enthusiasm," but if someone sends us a message that a particular meet is important to them, we'll prioritize that one. Otherwise, we're working through an endless backlog.</p>
 
 <h2>How do I add a link to my Instagram?</h2>
 
-<p>First, find your name and click on it to see your full meet history. Check for errors, missing competitions, competitions that are not yours, etc.</p>
+<p>Find your name and click on it to see your full meet history. Check for errors, missing competitions, competitions that are not yours, etc.</p>
 
-<p>Next, either message @openpowerlifting on Instagram with your full name, date of birth (YYYY-MM-DD), best meet total (and the federation that total was achieved in), and lastly include any errors you found in your meet history. You can also send this information in an e-mail to issues@openpowerlifting.org if you prefer.</p>
+<p>Then, either message @openpowerlifting on Instagram with your full name, date of birth (YYYY-MM-DD), best meet total (and the federation that total was achieved in), and identify any errors you found in your meet history. You can also send this information in an e-mail to issues@openpowerlifting.org.</p>
 
-<p>If you know what GitLab is, you can actually tag your Instagram yourself, without asking us at all -- documentation for how to do that <a href="https://gitlab.com/openpowerlifting/opl-data/blob/master/docs/social-media.md">is hosted here</a>.</p>
+<p>If you know what GitLab is, you can actually tag your Instagram yourself, without asking us at all. Documentation for how to do that <a href="https://gitlab.com/openpowerlifting/opl-data/blob/master/docs/social-media.md">is hosted here</a>.</p>
 
 <h2>What do colored names mean?</h2>
 
 <p>This site has no ads or paywalls -- we are generously funded by donations from the powerlifting community <a href="https://www.patreon.com/join/openpowerlifting">through Patreon</a>. As a way of saying thanks, donators have the option of choosing a custom color for their name.</p>
 
-<h2>Why are WRPF totals lower than reported? (Why isn't Yury #1?)</h2>
-
-<p>The WRPF allows up to 5 attempts for small, "professional" powerlifting meets, with all lifts counting toward the total. We recalculate WRPF totals and Wilks such that only the first three attempts count toward the total.</p>
-
-<p>Lifts after the first three are still good for the single-lift records and rankings -- just not for the total.</p>
-
-<h2>I competed Raw, why am I marked as Wraps?</h2>
-
-<p>You competed in a federation that doesn't distinguish between sleeves and wraps.</p>
-
-<p>If you send us video proof that your squats were not wrapped, we'll change it.</p>
-
-<h2>Why is my weightclass wrong?</h2>
-
-<p>You entered a competition that uses fewer weightclass divisions than normal. For example, the yearly SPF Reebok Record Breakers meet uses three weightclasses for men and two weightclasses for women. The weightclass shown is the one you "entered".</p>
-
-<p>Records and rankings are calculated off bodyweight, not weightclass, so your lifts will still count in the right places.</p>
-
 <h2>How does this site work? Do you just download results from the federations?</h2>
 
-<p>Hopefully in the future that will be possible, but right now that isn't possible, because the majority of federations are operating with extremely old and bad technology: PDF files instead of databases.</p>
+<p>Federations post results in random formats, so unfortunately the process remains manual and can only be partially automated at best. Each meet on the site was manually added by a human contributor and passed review by a project maintainer.</p>
 
-<p>The <a href="{{urlprefix | safe}}status">status page</a> shows how many meets are in our database. Every one of these meets was downloaded and entered by hand. As you can imagine, this takes a tremendous amount of time and energy. On average, meets that are posted as PDFs take about 20 minutes to enter, and meets that are posted as spreadsheets take between 5 minutes to an hour to enter, usually depending on how Russian the source federation is. For some federations, we wrote programs that slightly simplify the process, but still require manual review.</p>
+<p>At least for the IPF, the situation is getting better: many affiliates now use real databases for reporting their own results. Unfortunately, the data <i>within</i> those databases tends to contain significant errors, and the Web UIs present incomplete information.
 
-<p>We strongly encourage federations to stop using PDF. Although PDFs look like spreadsheets to humans, to a computer they are functionally equivalent to JPG files, and converting them back to spreadsheets is extremely error-prone. Instead, we suggest hosting meet results as HTML.</p>
+<p>The hardest formats for us to deal with are images and PDFs.</p>
+
+<p>Images typically occur when a federation prefers a Facebook page over having their own website. Facebook then massively blurs the pictures, so OCR technology cannot automatically decipher it. These federations require retyping all the results. A single meet in this format typically takes around an hour and a half to add. That is too long, and we can't commit to that work. We strongly encourage federations to not use images for official results.</p>
 
 <p>The one cool thing we do have is automated <i>detection</i> of meets -- for many federations, we've written Web scrapers that automatically let us know when new results are available. Although we still have to enter them by hand, at least we don't have to go looking for them.</p>
 
@@ -72,6 +68,8 @@
 <p>We are currently a team of about eight powerlifters.</p>
 
 <p>If you think you might like to help out, please send an e-mail for an invitation to the team chat.</p>
+
+<p>Our goal is to have one maintainer for each federation. Ideally, that person would be a lifter or official in that federation, so that they can provide context for the data. Current maintainers are listed on the <a href="{{urlprefix | safe}}status">status page</a>.</p>
 
 <h2>Why is this site free? (With the subtext of: What's the ruse here?)</h2>
 
