@@ -281,3 +281,43 @@ pub fn lifter(
         }
     }
 }
+
+#[get("/m/<meetpath..>?<lang>")]
+pub fn meet(
+    meetpath: PathBuf,
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let mut meetpath_str: &str = meetpath.to_str()?;
+    let mut sort = pages::meet::MeetSortSelection::ByFederationDefault;
+
+    // The meetpath may contain an optional sorting directive.
+    // If present, detect and remove that component from the path.
+    let component = meetpath.as_path().file_name()?.to_str()?;
+    if let Ok(sortselection) = component.parse::<pages::meet::MeetSortSelection>() {
+        sort = sortselection;
+        meetpath_str = meetpath.as_path().parent()?.to_str()?;
+    }
+
+    let meet_id = opldb.get_meet_id(meetpath_str)?;
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
+
+    // Change the equipment terminology to be IPF-specific.
+    for table in &mut context.tables {
+        for row in &mut table.rows {
+            if row.equipment == &locale.strings.equipment.raw {
+                row.equipment = &locale.strings.equipment.classic;
+            }
+            if row.equipment == &locale.strings.equipment.single {
+                row.equipment = &locale.strings.equipment.equipped;
+            }
+        }
+    }
+
+    context.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/meet", &context))
+}

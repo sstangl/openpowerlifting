@@ -527,22 +527,23 @@ impl<'db> Context<'db> {
             MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
         };
 
-        let path_if_by_division = format!("/m/{}/by-division", meet.path);
+        // Paths do not include the urlprefix, which defaults to "/".
+        let path_if_by_division = format!("m/{}/by-division", meet.path);
         let path_if_by_glossbrenner = match default_points {
-            PointsSystem::Glossbrenner => format!("/m/{}", meet.path),
-            _ => format!("/m/{}/by-glossbrenner", meet.path),
+            PointsSystem::Glossbrenner => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-glossbrenner", meet.path),
         };
         let path_if_by_ipfpoints = match default_points {
-            PointsSystem::IPFPoints => format!("/m/{}", meet.path),
-            _ => format!("/m/{}/by-ipf-points", meet.path),
+            PointsSystem::IPFPoints => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-ipf-points", meet.path),
         };
         let path_if_by_nasa = match default_points {
-            PointsSystem::NASA => format!("/m/{}", meet.path),
-            _ => format!("/m/{}/by-nasa", meet.path),
+            PointsSystem::NASA => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-nasa", meet.path),
         };
         let path_if_by_wilks = match default_points {
-            PointsSystem::Wilks => format!("/m/{}", meet.path),
-            _ => format!("/m/{}/by-wilks", meet.path),
+            PointsSystem::Wilks => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-wilks", meet.path),
         };
 
         Context {

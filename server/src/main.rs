@@ -544,6 +544,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::records,
                 dist::openipf::records_default,
                 dist::openipf::lifter,
+                dist::openipf::meet,
             ],
         )
         .register(catchers![not_found, internal_error])
