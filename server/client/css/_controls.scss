@@ -40,7 +40,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/static/images/select_dropdown_red.png) 96% / 15% no-repeat $control-background-color;
+  background: url($control-selector-image) 96% / 15% no-repeat $control-background-color;
 
   // Prevent text from overlapping the downward arrow.
   text-overflow: ellipsis;
