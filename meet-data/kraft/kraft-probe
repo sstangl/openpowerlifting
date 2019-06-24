@@ -19,8 +19,9 @@ except ImportError:
 
 
 URLS = ["http://results.kraft.is/meets",
-        "http://results.kraft.is/meets/2017",
+        "http://results.kraft.is/meets/2018",
         # The URLs below were already fully-added.
+        # "http://results.kraft.is/meets/2017",
         # "http://results.kraft.is/meets/2016",
         # "http://results.kraft.is/meets/2015",
         # "http://results.kraft.is/meets/2014",
@@ -91,7 +92,8 @@ def getmeetlist(html):
 
     urls = []
 
-    table = soup.find('table', id='meetCalendarTable')
+    table = soup.find(
+        'div', {'class': 'col-md-8 offset-md-2 col-xs-12 meetpg-block'})
 
     for a in table.find_all('a'):
         url = a['href']
