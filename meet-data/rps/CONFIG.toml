@@ -101,6 +101,9 @@
     pro_pfm_open = {name = "Police/Fire/Military Pro Open", min = 0, max = 999}
     ama_pfm_open = {name = "Police/Fire/Military Amateur Open", min = 0, max = 999, tested="Yes"}
 
+    # Adaptive divisions. Not sure what these are.
+    adaptive_open= {name = "Adaptive Open", min = 0, max = 999}
+
 
     # Miscellaneous divisions.
     crossfit = {name = "Crossfit", min = 0, max = 999}
