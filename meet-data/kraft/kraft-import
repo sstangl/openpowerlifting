@@ -40,13 +40,13 @@ def getmeetinfo(soup):
     csv.fieldnames = ['Federation', 'Date', 'MeetCountry',
                       'MeetState', 'MeetTown', 'MeetName']
 
-    mainbody = soup.find('div', {'class': 'grid_12 mainbody'})
+    info = soup.find('div', {'class': 'm-portlet portlet-btm-space'})
 
-    name = mainbody.find('h1').text
+    name = info.find('h1').text
     name = name.replace("KRAFT", "").strip()
 
     # Get the date.
-    dateplace = mainbody.find('p').text
+    dateplace = info.find_all('div')[-1].text
 
     split_text = [text.strip()
                   for text in dateplace.split('\r\n') if text.strip() != '']
@@ -115,111 +115,121 @@ def getresults(soup):
     wcstate = None
 
     # Get the results table.
-    results = soup.find_all('table', id='resultTable')
-    if len(results) == 0:
+    result_tables = soup.find_all('div',
+                                  {'class': 'm-portlet__body portlet-body-padding'})
+    if len(result_tables) < 2:
         error("Couldn't find the results table.")
 
-    table = results[0]
+    for table in result_tables[1:]:
+        curr_csv = Csv()
 
-    trs = table.find_all(['tr'])
+        trs = table.find_all(['tr'])
 
-    # Get the first division
-    startdiv = trs[0].h4.text.strip()
-    if 'Women' in startdiv:
-        sexstate = 'F'
-    elif 'Men' in startdiv:
-        sexstate = 'M'
+        # Get the first division
+        startdiv = table.find('div', {'class': 'm-section__sub'}).text.strip()
+        if 'Women' in startdiv:
+            sexstate = 'F'
+        elif 'Men' in startdiv:
+            sexstate = 'M'
 
-    divstate = get_division(startdiv)
+        divstate = get_division(startdiv)
+        # Get column information.
+        expand_colspans(trs[0], soup)
+        expand_colspans(trs[1], soup)
+        header1 = trs[0].find_all('th')
+        header2 = trs[1].find_all('th')
+        event_text = [header1[ii].text.strip()
+                      for ii in range(len(header1))]
 
-    # Get column information.
-    expand_colspans(trs[1], soup)
-    header1 = trs[1].find_all('th')
-    header2 = trs[2].find_all('th')
-    headers = [header1[ii].text.strip()+header2[ii].text.strip()
-               for ii in range(min(len(header1), len(header2)))]
+        headers = [header2[ii].text.strip()
+                   for ii in range(len(header2))]
 
-    iterable = iter(range(len(headers)))
+        iterable = iter(range(len(headers)))
 
-    csv.fieldnames = []
-    for ii in iterable:
-        h = headers[ii]
-        if h == '#':
-            csv.fieldnames += ['Place']
-        elif h == 'Name':
-            csv.fieldnames += ['Name']
-        elif h == 'Born':
-            csv.fieldnames += ['BirthYear']
-        elif h == 'Team':
-            csv.fieldnames += ['Team']
-        elif h == 'Weight':
-            csv.fieldnames += ['BodyweightKg']
-        elif h == 'Squat1':
-            csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
-            [next(iterable) for x in range(2)]
-        elif h == 'Benchpress1':
-            csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
-            [next(iterable) for x in range(2)]
-        elif h == 'Deadlift1':
-            csv.fieldnames += ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg']
-            [next(iterable) for x in range(2)]
-        elif h == 'Total':
-            csv.fieldnames += ['TotalKg']
-        elif h == 'Wilks':
-            csv.fieldnames += ['Wilks']
-        elif h == '':
-            csv.fieldnames += ['IGNORE']
-        else:
-            error("Unknown column name: \"%s\"" % h)
+        curr_csv.fieldnames = []
 
-    # These columns are added from the category rows.
-    csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
-
-    for tr in trs[3:]:
-        row = [x.text for x in tr.find_all(["td", "th"])]
-        # Rows of length >1 are actual results, of length 1 are categories.
-        if len(row) == 1 and row[0].strip() != '':
-            text = row[0].lower()
-            if ' kg' in text:
-                wcstate = text.replace('kg', '').strip().replace(',', '.')
-                continue
-
-            if 'women' in text:
-                sexstate = 'F'
-            elif 'men' in text:
-                sexstate = 'M'
-
-            div = get_division(text)
-
-            # Extract division information.
-            if div:
-                divstate = div
+        for ii in iterable:
+            h = headers[ii]
+            curr_event = event_text[ii]
+            if h == '#':
+                curr_csv.fieldnames += ['Place']
+            elif h == 'Name':
+                curr_csv.fieldnames += ['Name']
+            elif h == 'Born':
+                curr_csv.fieldnames += ['BirthYear']
+            elif h == 'Team':
+                curr_csv.fieldnames += ['Team']
+            elif h == 'Weight':
+                curr_csv.fieldnames += ['BodyweightKg']
+            elif h == '1' and curr_event == 'Squat':
+                curr_csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
+                [next(iterable) for x in range(2)]
+            elif h == '1' and curr_event == 'Benchpress':
+                curr_csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
+                [next(iterable) for x in range(2)]
+            elif h == '1' and curr_event == 'Deadlift':
+                curr_csv.fieldnames += ['Deadlift1Kg',
+                                        'Deadlift2Kg', 'Deadlift3Kg']
+                [next(iterable) for x in range(2)]
+            elif h == 'Total':
+                curr_csv.fieldnames += ['TotalKg']
+            elif h == 'Wilks' or h == 'IPF Points':
+                curr_csv.fieldnames += ['Wilks']
+            elif h == '':
+                curr_csv.fieldnames += ['IGNORE']
             else:
-                error("Unknown state: \"%s\"" % row[0])
+                error("Unknown column name: \"%s\"" % h)
 
-        elif row != [] and row[0].strip() not in ['#', '']:
-            assert divstate
-            assert sexstate
-            assert wcstate
+        # These columns are added from the category rows.
+        curr_csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
 
-            # Accumulate the row, but we need to look at the class of each td
-            # to figure out whether lifts were good or bad.
-            row = []
-            for td in tr.find_all(['td', 'th']):
-                text = td.text.strip()
-                text = text.replace(',', '.')
+        for tr in trs[1:]:
+            row = [x.text for x in tr.find_all(["td", "th"])]
 
-                if td.span:
-                    c = td.span.get('style')
-                    if c and 'color:red' in c:  # Failed lift.
-                        text = '-' + text
-                elif text == '-':
-                    text = ''
+            # Rows of length >1 are actual results, of length 1 are categories.
+            if len(row) == 1 and row[0].strip() != '':
+                text = row[0].lower()
+                if ' kg' in text:
+                    wcstate = text.replace('kg', '').strip().replace(',', '.')
+                    continue
 
-                row.append(text.replace('  ', ' '))
+                if 'women' in text:
+                    sexstate = 'F'
+                elif 'men' in text:
+                    sexstate = 'M'
 
-            row = row + [divstate, sexstate, wcstate]
-            csv.rows += [row]
+                div = get_division(text)
+
+                # Extract division information.
+                if div:
+                    divstate = div
+                else:
+                    error("Unknown state: \"%s\"" % row[0])
+
+            elif row != [] and row[0].strip() not in ['#', '']:
+                assert divstate
+                assert sexstate
+                assert wcstate
+
+                # Accumulate the row, but we need to look at the class of each td
+                # to figure out whether lifts were good or bad.
+                row = []
+                for td in tr.find_all(['td', 'th']):
+                    text = td.text.strip().replace('\r\n', '')
+                    text = text.replace(',', '.')
+
+                    if td.span:
+                        c = td.span.get('style')
+                        if c and 'color:red' in c:  # Failed lift.
+                            text = '-' + text
+                    elif text == '-':
+                        text = ''
+
+                    row.append(text.replace('  ', ' '))
+
+                row = row + [divstate, sexstate, wcstate]
+                curr_csv.rows += [row]
+        csv.cat(curr_csv)
 
     return csv
 
@@ -414,11 +424,13 @@ def main(url):
     if 'Squat1Kg' in entriescsv.fieldnames:
         if ('Squat2Kg' not in entriescsv.fieldnames and
                 'Squat3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'Best3SquatKg'
+            entriescsv.fieldnames[entriescsv.index(
+                'Squat1Kg')] = 'Best3SquatKg'
     if 'Bench1Kg' in entriescsv.fieldnames:
         if ('Bench2Kg' not in entriescsv.fieldnames and
                 'Bench3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'Best3BenchKg'
+            entriescsv.fieldnames[entriescsv.index(
+                'Bench1Kg')] = 'Best3BenchKg'
     if 'Deadlift1Kg' in entriescsv.fieldnames:
         if ('Deadlift2Kg' not in entriescsv.fieldnames and
                 'Deadlift3Kg' not in entriescsv.fieldnames):
