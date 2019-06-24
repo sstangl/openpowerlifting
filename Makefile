@@ -1,6 +1,6 @@
 .PHONY: builddir datadist sqlite check probe-quick probe deploy clean
 
-DATADIR := meet-data
+MEETDATADIR := meet-data
 BUILDDIR := build
 
 PLFILE := entries.csv
@@ -48,11 +48,11 @@ check:
 
 # Run all probes in a quick mode that only shows a few pending meets.
 probe-quick:
-	find "${DATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
+	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
 
 # Run all probes.
 probe:
-	find "${DATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite
+	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite
 
 # Push the current version to the webservers.
 deploy:
@@ -62,17 +62,17 @@ clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf 'scripts/__pycache__'
 	rm -rf 'tests/__pycache__'
-	rm -rf '${DATADIR}/apf/__pycache__'
-	rm -rf '${DATADIR}/cpu/__pycache__'
-	rm -rf '${DATADIR}/ipf/__pycache__'
-	rm -rf '${DATADIR}/nasa/__pycache__'
-	rm -rf '${DATADIR}/nipf/__pycache__'
-	rm -rf '${DATADIR}/nsf/__pycache__'
-	rm -rf '${DATADIR}/pa/__pycache__'
-	rm -rf '${DATADIR}/rps/__pycache__'
-	rm -rf '${DATADIR}/spf/__pycache__'
-	rm -rf '${DATADIR}/thspa/__pycache__'
-	rm -rf '${DATADIR}/usapl/__pycache__'
-	rm -rf '${DATADIR}/wrpf/__pycache__'
+	rm -rf '${MEETDATADIR}/apf/__pycache__'
+	rm -rf '${MEETDATADIR}/cpu/__pycache__'
+	rm -rf '${MEETDATADIR}/ipf/__pycache__'
+	rm -rf '${MEETDATADIR}/nasa/__pycache__'
+	rm -rf '${MEETDATADIR}/nipf/__pycache__'
+	rm -rf '${MEETDATADIR}/nsf/__pycache__'
+	rm -rf '${MEETDATADIR}/pa/__pycache__'
+	rm -rf '${MEETDATADIR}/rps/__pycache__'
+	rm -rf '${MEETDATADIR}/spf/__pycache__'
+	rm -rf '${MEETDATADIR}/thspa/__pycache__'
+	rm -rf '${MEETDATADIR}/usapl/__pycache__'
+	rm -rf '${MEETDATADIR}/wrpf/__pycache__'
 	$(MAKE) -C server clean
 	rm -rf target
