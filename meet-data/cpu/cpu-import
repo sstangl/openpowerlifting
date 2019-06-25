@@ -224,7 +224,7 @@ def remove_empty_lift_columns(csv):
 def make_best_columns(csv):
 
     def tonumber(s):
-        if not s:
+        if not s or s == "-":
             return 0
         return float(s)
 
