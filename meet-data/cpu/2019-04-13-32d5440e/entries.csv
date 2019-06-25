@@ -1,40 +1,40 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Mehar Bhogal,BC,90.4,93,Juniors,240,195,255,690,Single-ply,1
-SBD,F,Ishika Sethi,BC,61.5,63,Sub-Juniors,92.5,47.5,120,260,Raw,1
-SBD,M,Raffy Guda,BC,92.7,93,Open,215,112.5,215,542.5,Raw,1
-SBD,F,Anna-Marie Bennette,BC,107.3,84+,Open,122.5,60,140,322.5,Raw,1
-SBD,M,Michael Paine,BC,81.9,83,Open,182.5,122.5,240,545,Raw,1
-SBD,M,Hao Wu,BC,82.4,83,Open,180,120,215,515,Raw,2
-SBD,M,Chaman Toor,BC,73.5,74,Open,165,107.5,205,477.5,Raw,1
-SBD,F,Stacey Silva,BC,71.1,72,Open,92.5,45,112.5,250,Raw,1
-SBD,M,Ka Kit Tam,BC,65.3,66,Open,142.5,85,180,407.5,Raw,2
-SBD,M,Benjamin Wangsawidjaja,BC,65.4,66,Open,152.5,107.5,195,455,Raw,1
-SBD,F,Pamela Shami,BC,57.8,63,Open,100,60,122.5,282.5,Raw,3
-SBD,F,Momoka Koshikawa,BC,62.6,63,Open,135,75,140,350,Raw,1
-SBD,F,Amanda Chan,BC,61.4,63,Open,105,47.5,140,292.5,Raw,2
-SBD,F,Nihleen Sharma,BC,56.6,57,Open,65,40,92.5,197.5,Raw,2
-SBD,F,Jessica Kalynn,BC,54.6,57,Open,107.5,72.5,130,310,Raw,1
-SBD,F,Teri-Lynn Nelson,BC,50.6,52,Open,77.5,42.5,125,245,Raw,1
-SBD,F,Dionne Peralta,BC,47.4,52,Open,90,37.5,105,232.5,Raw,2
-SBD,M,Evan Quon,BC,145.5,120+,Open,230,165,255,650,Raw,2
-SBD,M,Daniel Lewis,BC,127.1,120+,Open,260,200,290,750,Raw,1
-SBD,M,Dustin Egelstad,BC,116.8,120,Open,195,142.5,250,587.5,Raw,1
-SBD,M,Robert Cooper,BC,103.9,105,Open,225,140,280,645,Raw,1
-SBD,M,Richard Broderick,BC,96.4,105,Open,140,120,207.5,467.5,Raw,4
-SBD,M,Patrick Selby,BC,102.1,105,Open,192.5,127.5,252.5,572.5,Raw,3
-SBD,M,Connor Elliott,BC,99.1,105,Open,207.5,150,262.5,620,Raw,2
-SBD,F,Sharlene Brunjes,BC,60.8,63,Masters 3,85,42.5,115,242.5,Raw,1
-SBD,M,Jonathan Michael,BC,80.5,83,Masters 2,142.5,87.5,155,385,Raw,1
-SBD,M,Joe Costa Oliveira,BC,104.9,105,Masters 2,252.5,145,250,647.5,Raw,1
-SBD,M,Sangwon Jo,BC,72,74,Juniors,167.5,102.5,212.5,482.5,Raw,2
-SBD,M,King To Wong,BC,66.9,74,Juniors,140,125,165,430,Raw,3
-SBD,M,Eric Jung,BC,72.4,74,Juniors,185,102.5,217.5,505,Raw,1
-SBD,F,Zoe Peterson,BC,62.5,63,Juniors,115,67.5,147.5,330,Raw,1
-SBD,F,Jenna Nadeau,BC,58.3,63,Juniors,90,45,97.5,232.5,Raw,2
-SBD,M,Pham Quoc Bao Nguyen,BC,58.7,59,Juniors,142.5,90,182.5,415,Raw,1
-SBD,F,Fiona Chen,BC,54.6,57,Juniors,112.5,47.5,132.5,292.5,Raw,1
-SBD,M,Sam Firouzli,BC,51.2,53,Juniors,75,70,160.5,305.5,Raw,1
-SBD,F,Briana Mundeling,BC,49.7,52,Juniors,72.5,37.5,90,200,Raw,1
-SBD,M,Kaiyu Li,BC,130.4,120+,Juniors,220,135,237.5,592.5,Raw,2
-SBD,M,James Johnston,BC,124.5,120+,Juniors,200,140,260,600,Raw,1
-SBD,M,Kaizhi Chen,BC,107.9,120,Juniors,185,87.5,180,452.5,Raw,1
+Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place,BirthDate
+SBD,M,Mehar Bhogal,BC,90.4,93,Juniors,240,195,255,690,Single-ply,1,
+SBD,F,Ishika Sethi,BC,61.5,63,Sub-Juniors,92.5,47.5,120,260,Raw,1,
+SBD,M,Raffy Guda,BC,92.7,93,Open,215,112.5,215,542.5,Raw,1,
+SBD,F,Anna-Marie Bennette,BC,107.3,84+,Open,122.5,60,140,322.5,Raw,1,
+SBD,M,Michael Paine,BC,81.9,83,Open,182.5,122.5,240,545,Raw,1,
+SBD,M,Hao Wu,BC,82.4,83,Open,180,120,215,515,Raw,2,
+SBD,M,Chaman Toor,BC,73.5,74,Open,165,107.5,205,477.5,Raw,1,
+SBD,F,Stacey Silva,BC,71.1,72,Open,92.5,45,112.5,250,Raw,1,
+SBD,M,Ka Kit Tam,BC,65.3,66,Open,142.5,85,180,407.5,Raw,2,
+SBD,M,Benjamin Wangsawidjaja,BC,65.4,66,Open,152.5,107.5,195,455,Raw,1,
+SBD,F,Pamela Shami,BC,57.8,63,Open,100,60,122.5,282.5,Raw,3,
+SBD,F,Momoka Koshikawa,BC,62.6,63,Open,135,75,140,350,Raw,1,
+SBD,F,Amanda Chan,BC,61.4,63,Open,105,47.5,140,292.5,Raw,2,
+SBD,F,Nihleen Sharma,BC,56.6,57,Open,65,40,92.5,197.5,Raw,2,
+SBD,F,Jessica Kalynn,BC,54.6,57,Open,107.5,72.5,130,310,Raw,1,
+SBD,F,Teri-Lynn Nelson,BC,50.6,52,Open,77.5,42.5,125,245,Raw,1,
+SBD,F,Dionne Peralta,BC,47.4,52,Open,90,37.5,105,232.5,Raw,2,
+SBD,M,Evan Quon,BC,145.5,120+,Open,230,165,255,650,Raw,2,
+SBD,M,Daniel Lewis #1,BC,127.1,120+,Open,260,200,290,750,Raw,1,1993-09-21
+SBD,M,Dustin Egelstad,BC,116.8,120,Open,195,142.5,250,587.5,Raw,1,
+SBD,M,Robert Cooper,BC,103.9,105,Open,225,140,280,645,Raw,1,
+SBD,M,Richard Broderick,BC,96.4,105,Open,140,120,207.5,467.5,Raw,4,
+SBD,M,Patrick Selby,BC,102.1,105,Open,192.5,127.5,252.5,572.5,Raw,3,
+SBD,M,Connor Elliott,BC,99.1,105,Open,207.5,150,262.5,620,Raw,2,
+SBD,F,Sharlene Brunjes,BC,60.8,63,Masters 3,85,42.5,115,242.5,Raw,1,
+SBD,M,Jonathan Michael,BC,80.5,83,Masters 2,142.5,87.5,155,385,Raw,1,
+SBD,M,Joe Costa Oliveira,BC,104.9,105,Masters 2,252.5,145,250,647.5,Raw,1,
+SBD,M,Sangwon Jo,BC,72,74,Juniors,167.5,102.5,212.5,482.5,Raw,2,
+SBD,M,King To Wong,BC,66.9,74,Juniors,140,125,165,430,Raw,3,
+SBD,M,Eric Jung,BC,72.4,74,Juniors,185,102.5,217.5,505,Raw,1,
+SBD,F,Zoe Peterson,BC,62.5,63,Juniors,115,67.5,147.5,330,Raw,1,
+SBD,F,Jenna Nadeau,BC,58.3,63,Juniors,90,45,97.5,232.5,Raw,2,
+SBD,M,Pham Quoc Bao Nguyen,BC,58.7,59,Juniors,142.5,90,182.5,415,Raw,1,
+SBD,F,Fiona Chen,BC,54.6,57,Juniors,112.5,47.5,132.5,292.5,Raw,1,
+SBD,M,Sam Firouzli,BC,51.2,53,Juniors,75,70,160.5,305.5,Raw,1,
+SBD,F,Briana Mundeling,BC,49.7,52,Juniors,72.5,37.5,90,200,Raw,1,
+SBD,M,Kaiyu Li,BC,130.4,120+,Juniors,220,135,237.5,592.5,Raw,2,
+SBD,M,James Johnston,BC,124.5,120+,Juniors,200,140,260,600,Raw,1,
+SBD,M,Kaizhi Chen,BC,107.9,120,Juniors,185,87.5,180,452.5,Raw,1,
