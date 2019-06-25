@@ -94,7 +94,7 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд', 'press']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'press','лёжа','стоя']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
@@ -327,7 +327,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['жим', 'жим 1', 'benchpress 1', 'жим макс кг 1',
-                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1', 'жим лёжа 1']:
+                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1', 'жим лёжа 1',
+                      'жим стоя 1']:
             assert header[i + 1].lower() in ['2', 'bp2']
             assert header[i + 2].lower() in ['3', 'bp3']
             fieldnames.append('Bench1Kg')
@@ -374,7 +375,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
 
         else:
-            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+            die('parse_fieldnames(): Unknown column header text: "%s"' % text)
 
     return fieldnames
 
@@ -632,7 +633,7 @@ def standardize_division_age(csv):
             division = 'Teen'
         elif 'мастера' in row[idx]or 'master' in row[idx]:
             division = 'Masters'
-        elif any(div in row[idx] for div in['открытая', 'open', 'открыая']):
+        elif any(div in row[idx] for div in['открытая', 'open', 'открыая', 'откртыая']):
             division = 'Open'
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = 'Juniors 20-23'
