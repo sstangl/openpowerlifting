@@ -282,6 +282,8 @@
 
     #Misc
     mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
+    mnemapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
+    fnemapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
     mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
     fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
     m4049 = {name ="M 40-49",min=40,max=49}
