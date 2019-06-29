@@ -206,7 +206,9 @@
   <option value="npa" {% if selection.federation == "NPA" %}selected{% endif %}>NPA - National Powerlifting Association of Israel</option>
 </optgroup>
 <optgroup label="{{strings.country.italy}}">
+  <option value="all-italy" {% if selection.federation == "AllItaly" %}selected{% endif %}>{{strings.selectors.fed.all_italy}}</option>
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL - Federazione Italiana Powerlifting [IPF]</option>
+  <option value="wpc-italy" {% if selection.federation == "WPC-Italy" %}selected{% endif %}>WPC Italy</option>
 </optgroup>
 <optgroup label="{{strings.country.japan}}">
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
