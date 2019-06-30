@@ -42,6 +42,10 @@
     mmcr9apf = {name ="M_MCR_9_APF",min=80,max=999,equipment=["Raw","Wraps"],sex="M"}
     mms9apf = {name ="M_MES_9_APF",min=80,max=999,equipment="Single-ply",sex="M"}
     mmm9apf = {name ="M_MEM_9_APF",min=80,max=999,equipment="Multi-ply",sex="M"}
+    mmrxapf = {name ="M_MR_X_APF",min=40,max=999,equipment="Raw",sex="M"}
+    mmcrxapf = {name ="M_MCR_X_APF",min=40,max=999,equipment=["Raw","Wraps"],sex="M"}
+    mmsxapf = {name ="M_MES_X_APF",min=40,max=999,equipment="Single-ply",sex="M"}
+    mmmxapf = {name ="M_MEM_X_APF",min=40,max=999,equipment="Multi-ply",sex="M"}
     mmtr1apf = {name ="M_TR_1_APF",min=13,max=15,equipment="Raw",sex="M"}
     mmtcr1apf = {name ="M_TCR_1_APF",min=13,max=15,equipment=["Raw","Wraps"],sex="M"}
     mmts1apf = {name ="M_TES_1_APF",min=13,max=15,equipment="Single-ply",sex="M"}
@@ -54,6 +58,10 @@
     mmtcr3apf = {name ="M_TCR_3_APF",min=18,max=19,equipment=["Raw","Wraps"],sex="M"}
     mmts3apf = {name ="M_TES_3_APF",min=18,max=19,equipment="Single-ply",sex="M"}
     mmtm3apf = {name ="M_TEM_3_APF",min=18,max=19,equipment="Multi-ply",sex="M"}
+    mmtrxapf = {name ="M_TR_X_APF",min=13,max=19,equipment="Raw",sex="M"}
+    mmtcrxapf = {name ="M_TCR_X_APF",min=13,max=19,equipment=["Raw","Wraps"],sex="M"}
+    mmtsxapf = {name ="M_TES_X_APF",min=13,max=19,equipment="Single-ply",sex="M"}
+    mmtmxapf = {name ="M_TEM_X_APF",min=13,max=19,equipment="Multi-ply",sex="M"}
     mjrapf = {name ="M_JR_APF",min=20,max=23,equipment="Raw",sex="M"}
     mjcrapf = {name ="M_JCR_APF",min=20,max=23,equipment=["Raw","Wraps"],sex="M"}
     mjsapf = {name ="M_JES_APF",min=20,max=23,equipment="Single-ply",sex="M"}
@@ -103,6 +111,10 @@
     fmcr9apf = {name ="F_MCR_9_APF",min=80,max=999,equipment=["Raw","Wraps"],sex="F"}
     fms9apf = {name ="F_MES_9_APF",min=80,max=999,equipment="Single-ply",sex="F"}
     fmm9apf = {name ="F_MEM_9_APF",min=80,max=999,equipment="Multi-ply",sex="F"}
+    fmrxapf = {name ="F_MR_X_APF",min=40,max=999,equipment="Raw",sex="F"}
+    fmcrxapf = {name ="F_MCR_X_APF",min=40,max=999,equipment=["Raw","Wraps"],sex="F"}
+    fmsxapf = {name ="F_MES_X_APF",min=40,max=999,equipment="Single-ply",sex="F"}
+    fmmxapf = {name ="F_MEM_X_APF",min=40,max=999,equipment="Multi-ply",sex="F"}
     fmtr1apf = {name ="F_TR_1_APF",min=13,max=15,equipment="Raw",sex="F"}
     fmtcr1apf = {name ="F_TCR_1_APF",min=13,max=15,equipment=["Raw","Wraps"],sex="F"}
     fmts1apf = {name ="F_TES_1_APF",min=13,max=15,equipment="Single-ply",sex="F"}
@@ -115,6 +127,10 @@
     fmtcr3apf = {name ="F_TCR_3_APF",min=18,max=19,equipment=["Raw","Wraps"],sex="F"}
     fmts3apf = {name ="F_TES_3_APF",min=18,max=19,equipment="Single-ply",sex="F"}
     fmtm3apf = {name ="F_TEM_3_APF",min=18,max=19,equipment="Multi-ply",sex="F"}
+    fmtrxapf = {name ="F_TR_X_APF",min=13,max=19,equipment="Raw",sex="F"}
+    fmtcrxapf = {name ="F_TCR_X_APF",min=13,max=19,equipment=["Raw","Wraps"],sex="F"}
+    fmtsxapf = {name ="F_TES_X_APF",min=13,max=19,equipment="Single-ply",sex="F"}
+    fmtmxapf = {name ="F_TEM_X_APF",min=13,max=19,equipment="Multi-ply",sex="F"}
     fjrapf = {name ="F_JR_APF",min=20,max=23,equipment="Raw",sex="F"}
     fjcrapf = {name ="F_JCR_APF",min=20,max=23,equipment=["Raw","Wraps"],sex="F"}
     fjsapf = {name ="F_JES_APF",min=20,max=23,equipment="Single-ply",sex="F"}
@@ -165,6 +181,10 @@
     mmcr9aapf = {name ="M_MCR_9_AAPF",min=80,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms9aapf = {name ="M_MES_9_AAPF",min=80,max=999,equipment="Single-ply",sex="M",tested="Yes"}
     mmm9aapf = {name ="M_MEM_9_AAPF",min=80,max=999,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmrxaapf = {name ="M_MR_X_AAPF",min=40,max=999,equipment="Raw",sex="M",tested="Yes"}
+    mmcrxaapf = {name ="M_MCR_X_AAPF",min=40,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmsxaapf = {name ="M_MES_X_AAPF",min=40,max=999,equipment="Single-ply",sex="M",tested="Yes"}
+    mmmxaapf = {name ="M_MEM_X_AAPF",min=40,max=999,equipment="Multi-ply",sex="M",tested="Yes"}
     mmtr1aapf = {name ="M_TR_1_AAPF",min=13,max=15,equipment="Raw",sex="M",tested="Yes"}
     mmtcr1aapf = {name ="M_TCR_1_AAPF",min=13,max=15,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmts1aapf = {name ="M_TES_1_AAPF",min=13,max=15,equipment="Single-ply",sex="M",tested="Yes"}
@@ -177,6 +197,10 @@
     mmtcr3aapf = {name ="M_TCR_3_AAPF",min=18,max=19,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmts3aapf = {name ="M_TES_3_AAPF",min=18,max=19,equipment="Single-ply",sex="M",tested="Yes"}
     mmtm3aapf = {name ="M_TEM_3_AAPF",min=18,max=19,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmtrxaapf = {name ="M_TR_X_AAPF",min=13,max=19,equipment="Raw",sex="M",tested="Yes"}
+    mmtcrxaapf = {name ="M_TCR_X_AAPF",min=13,max=19,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmtsxaapf = {name ="M_TES_X_AAPF",min=13,max=19,equipment="Single-ply",sex="M",tested="Yes"}
+    mmtmxaapf = {name ="M_TEM_X_AAPF",min=13,max=19,equipment="Multi-ply",sex="M",tested="Yes"}
     mjraapf = {name ="M_JR_AAPF",min=20,max=23,equipment="Raw",sex="M",tested="Yes"}
     mjcraapf = {name ="M_JCR_AAPF",min=20,max=23,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mjsaapf = {name ="M_JES_AAPF",min=20,max=23,equipment="Single-ply",sex="M",tested="Yes"}
@@ -226,6 +250,10 @@
     fmcr9aapf = {name ="F_MCR_9_AAPF",min=80,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms9aapf = {name ="F_MES_9_AAPF",min=80,max=999,equipment="Single-ply",sex="F",tested="Yes"}
     fmm9aapf = {name ="F_MEM_9_AAPF",min=80,max=999,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmrxaapf = {name ="F_MR_X_AAPF",min=40,max=999,equipment="Raw",sex="F",tested="Yes"}
+    fmcrxaapf = {name ="F_MCR_X_AAPF",min=40,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
+    fmsxaapf = {name ="F_MES_X_AAPF",min=40,max=999,equipment="Single-ply",sex="F",tested="Yes"}
+    fmmxaapf = {name ="F_MEM_X_AAPF",min=40,max=999,equipment="Multi-ply",sex="F",tested="Yes"}
     fmtr1aapf = {name ="F_TR_1_AAPF",min=13,max=15,equipment="Raw",sex="F",tested="Yes"}
     fmtcr1aapf = {name ="F_TCR_1_AAPF",min=13,max=15,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmts1aapf = {name ="F_TES_1_AAPF",min=13,max=15,equipment="Single-ply",sex="F",tested="Yes"}
@@ -238,6 +266,10 @@
     fmtcr3aapf = {name ="F_TCR_3_AAPF",min=18,max=19,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmts3aapf = {name ="F_TES_3_AAPF",min=18,max=19,equipment="Single-ply",sex="F",tested="Yes"}
     fmtm3aapf = {name ="F_TEM_3_AAPF",min=18,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtrxaapf = {name ="F_TR_X_AAPF",min=13,max=19,equipment="Raw",sex="F",tested="Yes"}
+    fmtcrxaapf = {name ="F_TCR_X_AAPF",min=13,max=19,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
+    fmtsxaapf = {name ="F_TES_X_AAPF",min=13,max=19,equipment="Single-ply",sex="F",tested="Yes"}
+    fmtm3aapf = {name ="F_TEM_X_AAPF",min=13,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
     fjraapf = {name ="F_JR_AAPF",min=20,max=23,equipment="Raw",sex="F",tested="Yes"}
     fjcraapf = {name ="F_JCR_AAPF",min=20,max=23,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fjsaapf = {name ="F_JES_AAPF",min=20,max=23,equipment="Single-ply",sex="F",tested="Yes"}
@@ -246,6 +278,19 @@
     fscraapf = {name ="F_SCR_AAPF",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssaapf = {name ="F_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmaapf = {name ="F_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
+
+
+    #Misc
+    mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"}
+    m4049 = {name ="M 40-49",min=40,max=49}
+    m5059 = {name ="M 50-59",min=50,max=59}
+    m6069 = {name ="M 60-69",min=60,max=69}
+    m60p = {name ="M 60+",min=60,max=999}
+    novice = {name ="Novice",min=0,max=999}
+    junior_teen = {name ="Junior/Teen",min=13,max=23}
+    hs = {name ="High School",min=13,max=19}
+    belowclassI = {name ="Below Class I",min=0,max=999}
+    firefighter = {name ="Firefighter",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
