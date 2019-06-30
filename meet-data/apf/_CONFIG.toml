@@ -281,16 +281,16 @@
 
 
     #Misc
-    mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"}
+    mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
+    mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
+    fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
     m4049 = {name ="M 40-49",min=40,max=49}
     m5059 = {name ="M 50-59",min=50,max=59}
     m6069 = {name ="M 60-69",min=60,max=69}
     m60p = {name ="M 60+",min=60,max=999}
-    novice = {name ="Novice",min=0,max=999}
     junior_teen = {name ="Junior/Teen",min=13,max=23}
     hs = {name ="High School",min=13,max=19}
     belowclassI = {name ="Below Class I",min=0,max=999}
-    firefighter = {name ="Firefighter",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -304,3 +304,4 @@
 
 [exemptions]
     1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
+    0803 = ["ExemptDivision"] # LW and HW
