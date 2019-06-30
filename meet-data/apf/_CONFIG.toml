@@ -305,3 +305,4 @@
 [exemptions]
     1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
     0803 = ["ExemptDivision"] # LW and HW
+    0913 = ["ExemptDivision"] # Different High School divisions
