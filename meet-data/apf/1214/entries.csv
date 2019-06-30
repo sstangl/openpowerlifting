@@ -1,34 +1,34 @@
 Equipment,Division,BodyweightKg,WeightClassKg,Sex,Name,Event,Country,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place
-Raw,T 18-19,64,67.5,M,Jorge Solano,B,Colombia,,,,,,-120,120,-122.5,,120,,,,,,120,1
-Raw,Open,66.7,67.5,M,Luis Bermejo,B,Colombia,,,,,,127.5,-135,-135,,127.5,,,,,,127.5,1
-Multi-ply,Open,65.7,67.5,M,Giovani Rodas,B,Colombia,,,,,,140,142.5,145,,145,,,,,,145,1
-Raw,Open,88.5,90,M,Oscar Matute,B,Nicaragua,,,,,,150,-160,160,,160,,,,,,160,1
-Multi-ply,Jun,99.9,100,M,Joseph Medina,B,Colombia,,,,,,257.5,265,-280,,265,,,,,,265,1
-Multi-ply,Open,99.9,100,M,Joseph Medina,B,Colombia,,,,,,257.5,265,-280,,265,,,,,,265,1
-Multi-ply,Open,96,100,M,Javier Cortes,B,Colombia,,,,,,240,250,-285,,250,,,,,,250,2
-Raw,Open,95.4,100,M,Daniel Zarco,B,Colombia,,,,,,150,160,,,160,,,,,,160,1
-Multi-ply,Open,52,52,F,Sandra Parra,B,Colombia,,,,,,-90,-90,-90,,,,,,,,,DQ
-Raw,Open,65,67.5,F,Daysi Kuischman,B,Colombia,,,,,,60,67.5,70,,70,,,,,,70,1
-Raw,Open,58.7,60,F,Marilia Coutinho,SBD,Brazil,140,145,-150,,145,90,95,-100,,95,155,165,-170,,165,405,1
-Raw,Open,65,67.5,F,Daysi Kuischman,SBD,Colombia,140,150,-160,,150,65,72.5,75,-77.5,75,130,142.5,-152.5,,142.5,367.5,1
-Raw,Open,73.4,75,M,Carlos Robinsson,SBD,Colombia,-180,180,-200,,180,130,140,-145,,140,180,-200,,,180,500,1
-Raw,M 45-49,70,75,M,Raul Amil,SBD,Argentina,145,155,-162.5,,155,100,105,-107.5,,105,165,175,185,,185,445,1
-Raw,T 16-17,80.9,82.5,M,Miguel Quiroga,SBD,Colombia,-150,-150,150,,150,-110,110,-120,,110,-180,190,-200,,190,450,1
-Raw,T18-19,88.4,90,M,Jason Samper,SBD,Colombia,240,-260,-260,,240,110,120,-127.5,,120,270,285,-290,,285,645,1
-Raw,Open,88.9,90,M,Carlos Llosa,SBD,Brazil,205,215,225,-230,225,125,132.5,-135,,132.5,205,215,-225,,215,572.5,1
-Raw,T 16-17,92.1,100,M,Juan Pablo España,SBD,Colombia,-150,-155,155,,155,100,-102.5,-110,,100,180,190,-200,,190,445,1
-Raw,T 13-15,93.6,100,M,Daniel De Mier,SBD,Colombia,120,122.5,145,,145,80,-90,90,,90,-170,170,185,,185,420,1
-Raw,Jun,97.9,100,M,Joseph Medina,SBD,Colombia,-295,295,-305,,295,210,217.5,222.5,,222.5,300,-315,-330,,300,817.5,1
-Raw,Open,97.9,100,M,Joseph Medina,SBD,Colombia,-295,295,-305,,295,210,217.5,222.5,,222.5,300,-315,-330,,300,817.5,1
-Raw,Open,123.4,125,M,Mauro Spinardi,SBD,Argentina,290,310,320,,320,215,230,,,230,315,330,-345,,330,880,1
-Multi-ply,Open,52,52,F,Sandra Parra,SBD,Colombia,-150,150,-160,,150,-85,85,-90,,85,125,132.5,-140,,132.5,367.5,1
-Multi-ply,Open,75.4,82.5,F,Iris Vasquez,SBD,El Salvador,130,150,-152.5,,150,55,60,-65,,60,140,-152.5,152.5,,152.5,362.5,1
-Multi-ply,Junior,75,75,M,Cristian Garces,SBD,Colombia,200,250,265,,265,150,160,170,,170,-220,220,232.5,-240,232.5,667.5,1
-Multi-ply,Open,79.2,82.5,M,Jhon Valencia,SBD,Colombia,200,220,230,,230,130,142.5,-150,,142.5,200,215,230,,230,602.5,1
-Multi-ply,M 55-59,72.8,75,M,Luis Montañez,SBD,Colombia,200,-215,215,,215,110,120,-125,,120,170,-180,-180,,170,505,1
-Multi-ply,Open,66.7,67.5,M,Luis Bermejo,SBD,Colombia,215,222.5,225,,225,132.5,-140,-140,,132.5,220,-230,-230,,220,577.5,1
-Multi-ply,Open,65.6,67.5,M,Giovani Rodas,SBD,Colombia,-200,200,202.5,,202.5,140,142.5,145,,145,210,-212.5,-212.5,,210,557.5,2
-Multi-ply,Open,88.9,90,M,Juan Carlos Granados,SBD,Colombia,270,290,-310,,290,175,190,-210,,190,220,,,,220,700,1
-Multi-ply,M 45-49,97.5,100,M,Saul Salazar,SBD,Colombia,270,275,295,305,295,-170,170,185,-200,185,270,285,-305,,285,765,1
-Multi-ply,Open,121.7,125,M,Alberto Gutierrez,SBD,Colombia,300,315,-320,,315,140,155,160,,160,275,290,-300,,290,765,1
-Multi-ply,Open,137,140,M,Leonardo Cavaglia,SBD,Argentina,365,385,400,,400,255,265,,,265,260,280,-300,,280,945,1
+Raw,M_TR_3_WPC,64,67.5,M,Jorge Solano,B,Colombia,,,,,,-120,120,-122.5,,120,,,,,,120,1
+Raw,M_OR_WPC,66.7,67.5,M,Luis Bermejo,B,Colombia,,,,,,127.5,-135,-135,,127.5,,,,,,127.5,1
+Multi-ply,M_OEM_WPC,65.7,67.5,M,Giovani Rodas,B,Colombia,,,,,,140,142.5,145,,145,,,,,,145,1
+Raw,M_OR_WPC,88.5,90,M,Oscar Matute,B,Nicaragua,,,,,,150,-160,160,,160,,,,,,160,1
+Multi-ply,M_JEM_WPC,99.9,100,M,Joseph Medina,B,Colombia,,,,,,257.5,265,-280,,265,,,,,,265,1
+Multi-ply,M_OEM_WPC,99.9,100,M,Joseph Medina,B,Colombia,,,,,,257.5,265,-280,,265,,,,,,265,1
+Multi-ply,M_OEM_WPC,96,100,M,Javier Cortes,B,Colombia,,,,,,240,250,-285,,250,,,,,,250,2
+Raw,M_OR_WPC,95.4,100,M,Daniel Zarco,B,Colombia,,,,,,150,160,,,160,,,,,,160,1
+Multi-ply,F_OEM_WPC,52,52,F,Sandra Parra,B,Colombia,,,,,,-90,-90,-90,,,,,,,,,DQ
+Raw,F_OR_WPC,65,67.5,F,Daysi Kuischman,B,Colombia,,,,,,60,67.5,70,,70,,,,,,70,1
+Raw,F_OR_WPC,58.7,60,F,Marilia Coutinho,SBD,Brazil,140,145,-150,,145,90,95,-100,,95,155,165,-170,,165,405,1
+Raw,F_OR_WPC,65,67.5,F,Daysi Kuischman,SBD,Colombia,140,150,-160,,150,65,72.5,75,-77.5,75,130,142.5,-152.5,,142.5,367.5,1
+Raw,M_OR_WPC,73.4,75,M,Carlos Robinsson,SBD,Colombia,-180,180,-200,,180,130,140,-145,,140,180,-200,,,180,500,1
+Raw,M_MR_2_WPC,70,75,M,Raul Amil,SBD,Argentina,145,155,-162.5,,155,100,105,-107.5,,105,165,175,185,,185,445,1
+Raw,M_TR_2_WPC,80.9,82.5,M,Miguel Quiroga,SBD,Colombia,-150,-150,150,,150,-110,110,-120,,110,-180,190,-200,,190,450,1
+Raw,M_TR_3_WPC,88.4,90,M,Jason Samper,SBD,Colombia,240,-260,-260,,240,110,120,-127.5,,120,270,285,-290,,285,645,1
+Raw,M_OR_WPC,88.9,90,M,Carlos Llosa,SBD,Brazil,205,215,225,-230,225,125,132.5,-135,,132.5,205,215,-225,,215,572.5,1
+Raw,M_TR_2_WPC,92.1,100,M,Juan Pablo España,SBD,Colombia,-150,-155,155,,155,100,-102.5,-110,,100,180,190,-200,,190,445,1
+Raw,M_TR_1_WPC,93.6,100,M,Daniel De Mier,SBD,Colombia,120,122.5,145,,145,80,-90,90,,90,-170,170,185,,185,420,1
+Raw,M_JR_WPC,97.9,100,M,Joseph Medina,SBD,Colombia,-295,295,-305,,295,210,217.5,222.5,,222.5,300,-315,-330,,300,817.5,1
+Raw,M_OR_WPC,97.9,100,M,Joseph Medina,SBD,Colombia,-295,295,-305,,295,210,217.5,222.5,,222.5,300,-315,-330,,300,817.5,1
+Raw,M_OR_WPC,123.4,125,M,Mauro Spinardi,SBD,Argentina,290,310,320,,320,215,230,,,230,315,330,-345,,330,880,1
+Multi-ply,F_OEM_WPC,52,52,F,Sandra Parra,SBD,Colombia,-150,150,-160,,150,-85,85,-90,,85,125,132.5,-140,,132.5,367.5,1
+Multi-ply,F_OEM_WPC,75.4,82.5,F,Iris Vasquez,SBD,El Salvador,130,150,-152.5,,150,55,60,-65,,60,140,-152.5,152.5,,152.5,362.5,1
+Multi-ply,M_JEM_WPC,75,75,M,Cristian Garces,SBD,Colombia,200,250,265,,265,150,160,170,,170,-220,220,232.5,-240,232.5,667.5,1
+Multi-ply,M_OEM_WPC,79.2,82.5,M,Jhon Valencia,SBD,Colombia,200,220,230,,230,130,142.5,-150,,142.5,200,215,230,,230,602.5,1
+Multi-ply,M_MEM_4_WPC,72.8,75,M,Luis Montañez,SBD,Colombia,200,-215,215,,215,110,120,-125,,120,170,-180,-180,,170,505,1
+Multi-ply,M_OEM_WPC,66.7,67.5,M,Luis Bermejo,SBD,Colombia,215,222.5,225,,225,132.5,-140,-140,,132.5,220,-230,-230,,220,577.5,1
+Multi-ply,M_OEM_WPC,65.6,67.5,M,Giovani Rodas,SBD,Colombia,-200,200,202.5,,202.5,140,142.5,145,,145,210,-212.5,-212.5,,210,557.5,2
+Multi-ply,M_OEM_WPC,88.9,90,M,Juan Carlos Granados,SBD,Colombia,270,290,-310,,290,175,190,-210,,190,220,,,,220,700,1
+Multi-ply,M_MEM_2_WPC,97.5,100,M,Saul Salazar,SBD,Colombia,270,275,295,305,295,-170,170,185,-200,185,270,285,-305,,285,765,1
+Multi-ply,M_OEM_WPC,121.7,125,M,Alberto Gutierrez,SBD,Colombia,300,315,-320,,315,140,155,160,,160,275,290,-300,,290,765,1
+Multi-ply,M_OEM_WPC,137,140,M,Leonardo Cavaglia,SBD,Argentina,365,385,400,,400,255,265,,,265,260,280,-300,,280,945,1
