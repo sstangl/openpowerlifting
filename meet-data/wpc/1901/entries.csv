@@ -47,8 +47,8 @@ Jacinta Smith,45,F,F_MR_2_AWPC,116,90+,-120,125,130,130,,75,-80,-80,75,,130,140,
 Cristina Catalfamo,48,F,F_MR_2_WPC,50.95,52,80,85,90,90,95.5,40,45,-47.5,45,,95,100,105,105,,240,Italy,SBD,Raw,,1
 Sue Chatton,50,F,F_MR_3_AWPC,47.65,48,70,-75,-75,70,,47.5,50,-51,50,,105,107.5,110,110,112.5,230,UK,SBD,Raw,Yes,1
 Maria Maher,54,F,F_MR_3_AWPC,67.2,67.5,,,,,,67.5,-70,-70,67.5,,,,,,,67.5,Ireland,B,Raw,Yes,1
-Knuutila Virpi,52,F,F_MR_3_WPC,82,82.5,,,,,,122.5,132.5,140,140,,,,,,,140,Finland,B,Raw,,1
-Knuutila Virpi,52,F,F_MR_3_WPC,82,82.5,,,,,,,,,,,205,220,-235,220,,220,Finland,D,Raw,,1
+Virpi Knuutila,52,F,F_MR_3_WPC,82,82.5,,,,,,122.5,132.5,140,140,,,,,,,140,Finland,B,Raw,,1
+Virpi Knuutila,52,F,F_MR_3_WPC,82,82.5,,,,,,,,,,,205,220,-235,220,,220,Finland,D,Raw,,1
 Linda Hicks,57,F,F_MR_4_AWPC,71.5,75,,,,,,65,70,-75,70,,,,,,,70,UK,B,Raw,Yes,1
 Patricia Wetton,56,F,F_MR_4_AWPC,74.9,75,102.5,-107.5,107.5,107.5,,60,62.5,65,65,,130,135,,135,,307.5,UK,SBD,Raw,Yes,1
 Karin Heindl,62,F,F_MR_6_WPC,56.9,60,,,,,,38.5,42.5,45,45,,,,,,,45,Austria,B,Raw,,1
@@ -68,7 +68,7 @@ Hannah Venn-Munns,32,F,F_OCR_AWPC,73.8,75,92.5,100,107.5,107.5,,62.5,67.5,-70,67
 Donna Baxter-Phillips,30,F,F_OCR_AWPC,73.2,75,120,130,-140,130,,70,-75,-75,70,,145,157.5,-167.5,157.5,,357.5,UK,SBD,Wraps,Yes,1
 Emma Ryall,36,F,F_OCR_AWPC,79,82.5,110,-117.5,117.5,117.5,,55,60,62.5,62.5,,130,140,145,145,,325,Ireland,SBD,Wraps,Yes,3
 Stephanie Kyle,33,F,F_OCR_AWPC,82.2,82.5,-145,145,-155,145,,72.5,-77.5,-77.5,72.5,,140,152.5,160,160,,377.5,UK,SBD,Wraps,Yes,2
-Aishling Judge,30,F,F_OCR_AWPC,77.1,82.5,150,160,-171,160,,70,72.5,75,75,,175,185,-187.5,185,,420,Ireland,SBD,Wraps,Yes,1
+Aisling Judge,30,F,F_OCR_AWPC,77.1,82.5,150,160,-171,160,,70,72.5,75,75,,175,185,-187.5,185,,420,Ireland,SBD,Wraps,Yes,1
 Fay Northcott,27,F,F_OCR_AWPC,86.65,90,150,160,-165,160,,70,-72.5,,70,,165,175,-182.5,175,,405,UK,SBD,Wraps,Yes,2
 Iwona Karwowska,36,F,F_OCR_AWPC,85.5,90,162.5,170,180,180,185,77.5,-85,-85,77.5,,147.5,155,162.5,162.5,,420,UK,SBD,Wraps,Yes,1
 Amy Larkin,35,F,F_OCR_AWPC,109.2,90+,125,130,135,135,,67.5,70,72.5,72.5,,125,130,135,135,,342.5,Ireland,SBD,Wraps,Yes,4
@@ -131,8 +131,8 @@ Natalia Hipola Carrasco,37,F,F_OR_WPC,60,60,,,,,,,,,,,150,162.5,-167.5,162.5,,16
 Sandra Evans,34,F,F_OR_WPC,61.55,67.5,,,,,,52.5,55,-57.5,55,,,,,,,55,Ireland,B,Raw,,2
 Lolita Zankl,60,F,F_OR_WPC,65.5,67.5,,,,,,100,110,115,115,,,,,,,115,Germany,B,Raw,,1
 Lolita Zankl,60,F,F_OR_WPC,65.5,67.5,,,,,,,,,,,160,170,180,180,,180,Germany,D,Raw,,1
-Antonina La Malfa,31,F,F_OR_WPC,68.45,75,,,,,,80,85,87.5,87.5,,,,,,,87.5,Italy,B,Raw,,1
-Antonina La Malfa,31,F,F_OR_WPC,68.45,75,,,,,,,,,,,147.5,157.5,-162.5,157.5,,157.5,Italy,D,Raw,,1
+Antonella La Malfa,31,F,F_OR_WPC,68.45,75,,,,,,80,85,87.5,87.5,,,,,,,87.5,Italy,B,Raw,,1
+Antonella La Malfa,31,F,F_OR_WPC,68.45,75,,,,,,,,,,,147.5,157.5,-162.5,157.5,,157.5,Italy,D,Raw,,1
 Sarah Skehan,30,F,F_OR_WPC,111.95,90+,,,,,,,,,,,145,-165,-165,145,,145,Ireland,D,Raw,,1
 Sue Vaughey,38,F,F_OR_WPC,100,90+,115,130,140,140,,65,72.5,-75,72.5,,135,147.5,155,155,,367.5,Ireland,SBD,Raw,,1
 Jade Medhurst,17,F,F_TCR_2_AWPC,67.25,67.5,92.5,97.5,-102.5,97.5,,55,-60,-60,55,,135,142.5,-153,142.5,,295,UK,SBD,Wraps,Yes,1
@@ -281,13 +281,13 @@ Kane Francis,26,M,M_OCR_AWPC,132.9,140,250,265,,265,,170,-180,180,180,,260,275,2
 Vincent Todaro,34,M,M_OCR_WPC,59.15,60,165,-170,-170,165,,90,92.5,-97.5,92.5,,200,207.5,210,210,,467.5,France,SBD,Wraps,,1
 Manuel Celeghin,27,M,M_OCR_WPC,69.25,75,150,-170,170,170,,90,-100,-100,90,,180,-200,-200,180,,440,Italy,SBD,Wraps,,3
 Niall Reddan,26,M,M_OCR_WPC,74,75,210,220,-232.5,220,,137.5,140,142.5,142.5,,210,225,235,235,,597.5,Ireland,SBD,Wraps,,2
-Ciryl Diago,26,M,M_OCR_WPC,73.85,75,250,262.5,270,270,,145,152.5,155,155,,245,260,-265.5,260,,685,France,SBD,Wraps,,1
+Cyril Diago,26,M,M_OCR_WPC,73.85,75,250,262.5,270,270,,145,152.5,155,155,,245,260,-265.5,260,,685,France,SBD,Wraps,,1
 Donovan Rognon,29,M,M_OCR_WPC,77.35,82.5,200,-220,-220,200,,-110,110,-115,110,,-250,250,,250,,560,France,SBD,Wraps,,2
 Sylvain Bayamati,29,M,M_OCR_WPC,81.55,82.5,-220,220,-240,220,,-140,,152.5,152.5,,240,255,-262.5,255,,627.5,France,SBD,Wraps,,1
 PJ Kehoe,25,M,M_OCR_WPC,87.45,90,245,255,-260,255,,140,150,155,155,,200,215,230,230,,640,Ireland,SBD,Wraps,,4
 Ian Williams,26,M,M_OCR_WPC,88.45,90,-230,-230,230,230,,165,170,-172.5,170,,235,245,250,250,,650,UK,SBD,Wraps,,3
 Jacek Toczydlowski,37,M,M_OCR_WPC,89.35,90,240.5,255,265,265,,155,162.5,167.5,167.5,,245,257.5,267.5,267.5,,700,UK,SBD,Wraps,,2
-Calista Gabriele,40,M,M_OCR_WPC,89.7,90,265,280,-285,280,,135,140,-145,140,,265,285,300,300,,720,Italy,SBD,Wraps,,1
+Gabriele Calista,40,M,M_OCR_WPC,89.7,90,265,280,-285,280,,135,140,-145,140,,265,285,300,300,,720,Italy,SBD,Wraps,,1
 Thomas Belkacemi,32,M,M_OCR_WPC,88,90,-240,,-260,,,-150,,,,,,,,,,,France,SBD,Wraps,,DQ
 Michael Crowley,29,M,M_OCR_WPC,96.4,100,185,200,-210,200,,107.5,117.5,122.5,122.5,,215,225,237.5,237.5,,560,Ireland,SBD,Wraps,,3
 Herman Fibranz,35,M,M_OCR_WPC,98.7,100,230,-240,-250,230,,180,-200,-200,180,,240,260,-272.5,260,,670,France,SBD,Wraps,,2
@@ -321,9 +321,9 @@ Gavin Browne,28,M,M_OES_WPC,96.65,100,,,,,,,,,,,200,-230,230,230,,230,Ireland,D,
 Phil Watkins,50,M,M_OES_WPC,93.45,100,,,,,,,,,,,300,317.5,,317.5,,317.5,UK,D,Single-ply,,1
 Rinaldo Visser,37,M,M_OES_WPC,97.15,100,310,325,-340,325,,220,-230,-230,220,,300,315,-325,315,,860,Ireland,SBD,Single-ply,,1
 Paul Morgan,46,M,M_OES_WPC,106.95,110,,,,,,150,-260,-270,150,,,,,,,150,UK,B,Single-ply,,2
-Gaspere Impeduglia,31,M,M_OES_WPC,102.1,110,,,,,,195,205,210,210,,,,,,,210,Italy,B,Single-ply,,1
+Gaspare Impeduglia,31,M,M_OES_WPC,102.1,110,,,,,,195,205,210,210,,,,,,,210,Italy,B,Single-ply,,1
 Marouane Baoufi,31,M,M_OES_WPC,106.45,110,,,,,,,,,,,270,-292.5,-302.5,270,,270,France,D,Single-ply,,2
-Gaspere Impeduglia,31,M,M_OES_WPC,102.1,110,,,,,,,,,,,255,272.5,-302.5,272.5,,272.5,Italy,D,Single-ply,,1
+Gaspare Impeduglia,31,M,M_OES_WPC,102.1,110,,,,,,,,,,,255,272.5,-302.5,272.5,,272.5,Italy,D,Single-ply,,1
 Isak Apelgren,37,M,M_OES_WPC,118.75,125,,,,,,-210,,,,,,,,,,,Sweden,B,Single-ply,,DQ
 Isak Apelgren,37,M,M_OES_WPC,118.75,125,,,,,,,,,,,290,300,-310,300,,300,Sweden,D,Single-ply,,1
 Andreas Møller,37,M,M_OES_WPC,129.95,140,-340,-340,-340,,,,,,,,,,,,,,,SBD,Single-ply,,DQ
@@ -376,7 +376,7 @@ Baptiste Marchais,25,M,M_OR_WPC,97.8,100,,,,,,220,-235,235,235,,,,,,,235,France,
 Jason Boggan,30,M,M_OR_WPC,99.25,100,200,230,242.5,242.5,,130,142.5,-152.5,142.5,,240,270,-282.5,270,,655,Ireland,SBD,Raw,,2
 Matteo Bozza,26,M,M_OR_WPC,90.6,100,225,230,240,240,,160,165,-170,165,,275,285,-292.5,285,,690,Italy,SBD,Raw,,1
 Andrei Kabantseff,42,M,M_OR_WPC,106.55,110,,,,,,145,165,172.5,172.5,,,,,,,172.5,Estonia,B,Raw,,3
-Gaspere Impeduglia,31,M,M_OR_WPC,102.1,110,,,,,,170,-180,180,180,,,,,,,180,Italy,B,Raw,,2
+Gaspare Impeduglia,31,M,M_OR_WPC,102.1,110,,,,,,170,-180,180,180,,,,,,,180,Italy,B,Raw,,2
 Jonathan Bottin,31,M,M_OR_WPC,108,110,,,,,,-207.5,207.5,-210,207.5,,,,,,,207.5,France,B,Raw,,1
 Sandro Eusébio,44,M,M_OR_WPC,110,110,,,,,,,,,,,300,-330,-330,300,,300,Portugal,D,Raw,,3
 Naël Cetout,29,M,M_OR_WPC,106.95,110,,,,,,,,,,,310,-325,-325,310,,310,France,D,Raw,,2
@@ -387,7 +387,7 @@ David O'Sullivan,27,M,M_OR_WPC,109.2,110,265,280,-287.5,280,,175,185,190,190,,31
 Hristo Muskov,33,M,M_OR_WPC,123.35,125,,,,,,,,,,,310,335,-352.5,335,,335,Bulgaria,D,Raw,,1
 Alexander Zaitsev,39,M,M_OR_WPC,116.65,125,300,315,325,325,,200,-210,,200,,300,315,-327.5,315,,840,Russia,SBD,Raw,,2
 Alexander Clarke,29,M,M_OR_WPC,122.35,125,277.5,285,290,290,,205,212.5,220,220,,350,-370,-370,350,,860,UK,SBD,Raw,,1
-Franceschi Claudio,26,M,M_OR_WPC,125.8,140,220,235,-250,235,,160,170,-180,170,,265,280,-290,280,,685,Italy,SBD,Raw,,1
+Claudio Franceschi,26,M,M_OR_WPC,125.8,140,220,235,-250,235,,160,170,-180,170,,265,280,-290,280,,685,Italy,SBD,Raw,,1
 Łukasz Toczylowski,34,M,M_OR_WPC,147.95,140+,,,,,,220,232.5,235,235,,,,,,,235,Italy,B,Raw,,1
 Romualdas Bakutis,17,M,M_TCR_2_AWPC,79.65,82.5,170,180,190,190,,110,120,-125,120,,145,155,166,166,,476,UK,SBD,Wraps,Yes,1
 Arnis Piekus,17,M,M_TCR_2_AWPC,89.7,90,180,-190,190,190,,97.5,102.5,-105,102.5,,195,-202.5,207.5,207.5,-212.5,500,Ireland,SBD,Wraps,Yes,1
