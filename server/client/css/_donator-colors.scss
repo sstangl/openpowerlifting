@@ -243,6 +243,13 @@
   background-image: linear-gradient(to right, $red, $yellow);
 }
 
+.red_to_yellow_to_red {
+  $red: #FB3640;
+  $yellow: #FFFC00;
+  @include gradient-prereqs($red);
+  background-image: linear-gradient(to right, $red, $yellow, $red);
+}
+
 .red_to_white {
   $red: #FB3640;
   $white: #EDF2F4;
