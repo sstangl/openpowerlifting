@@ -1,33 +1,33 @@
 Name,Sex,Age,Division,Equipment,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Place
-Frank Ventriglia Sr,M,64,Masters 51+,Wraps,110,104.3,125,77.5,140,342.5,SBD,1
-Tim Lane,M,55,Masters 51+,Multi-ply,125,123.8,365,165,272.5,802.5,SBD,1
-Ronald Carrier,M,54,Masters 51+,Wraps,82.5,79.4,157.7,92.5,182.5,432.7,SBD,1
-Michael Socoby,M,58,Masters 51+,Wraps,140,139.3,272.5,192.5,272.5,737.5,SBD,1
-Mark Ironfield,M,51,Masters 51+,Multi-ply,110,104.8,347.5,207.5,307.5,862.5,SBD,1
-James Banville,M,50,Masters 40-50,Wraps,100,98,220,137.5,192.5,550,SBD,1
-John Westleigh,M,47,Masters 40-50,Single-ply,110,104,275,210,245,730,SBD,1
-Gordon McGriff,M,46,Masters 40-50,Wraps,82.5,81.6,160,102.5,182.5,445,SBD,1
-George Sotirakis,M,41,Masters 40-51,Wraps,110,108,305,272.5,275,852.5,SBD,1
-Kathy Wood,F,60,Masters,Wraps,82.5,80.7,55,,100,,SBD,DQ
-Kathrine Holt,F,40,Masters,Wraps,90+,117.5,107.5,70,145,322.5,SBD,1
-Meredith Hanby,F,36,Open,Wraps,90,82.8,120,62.5,140,322.5,SBD,1
-Kimberly Johnson,F,27,Open,Wraps,67.5,60.8,117.5,60,120,297.5,SBD,1
-Michelle Riesbeck,F,29,Open,Wraps,56,53,97.5,,115,,SBD,DQ
-Juliette Carrier,F,16,Teen,Wraps,75,72.1,77.5,40,110,227.5,SBD,1
-Connor Jajoie,M,15,Teen,Wraps,75,73,185,137.5,182.5,505,SBD,1
-Matt Bubar,M,25,Open,Raw,125,118.8,172.5,122.5,227.5,522.5,SBD,1
-Melinda Hurt,F,,Open,Raw,82.5,78.9,147.5,85,160,392.5,SBD,1
-Russ Simms,M,24,Open,Wraps,75,74.4,120,67.5,165,352.5,SBD,1
-Dustin Cyr,M,29,Open,Wraps,82.5,81.6,230,167.5,257.5,655,SBD,1
-Noah Tranten,M,23,Open,Wraps,90,84.4,255,170,242.5,667.5,SBD,1
-Rafel Solano,M,30,Open,Wraps,90,86.2,242.5,130,205,577.5,SBD,3
-Abe Milnis,M,19,Open,Wraps,90,89.8,227.5,142.5,295,665,SBD,2
-Ethan Baker,M,35,Open,Multi-ply,100,98.7,365,230,275,870,SBD,1
-Frank Ventriglia Jr,M,39,Open,Wraps,100,96.6,185,107.5,202.5,495,SBD,2
-Josh Beaulieu,M,26,Open,Wraps,100,98,242.5,125,250,617.5,SBD,1
-Keenan McLaughlin,M,29,Open,Wraps,110,103.4,227.5,137.5,255,620,SBD,2
-Bryce Kronk,M,25,Open,Wraps,110,100.7,307.5,207.5,275,790,SBD,1
-George Sotirakos,M,41,Open,Multi-ply,110,108,305,272.5,275,852.5,SBD,1
-Greg Panora,M,33,Open,Wraps,125,119.7,365,235,340,940,SBD,1
-Brian Genovisi,M,28,Open,Wraps,125,110.7,205,112.5,227.5,545,SBD,2
-Harold Spetla,M,24,Open,Wraps,140,132.9,272.5,172.5,272.5,717.5,SBD,1
+Frank Ventriglia Sr,M,64,M_MR_5_APF,Raw,110,104.3,125,77.5,140,342.5,SBD,1
+Tim Lane,M,55,M_MEM_4_APF,Multi-ply,125,123.8,365,165,272.5,802.5,SBD,1
+Ronald Carrier,M,54,M_MR_3_APF,Raw,82.5,79.4,157.7,92.5,182.5,432.7,SBD,1
+Michael Socoby,M,58,M_MR_4_APF,Raw,140,139.3,272.5,192.5,272.5,737.5,SBD,1
+Mark Ironfield,M,51,M_MEM_3_APF,Multi-ply,110,104.8,347.5,207.5,307.5,862.5,SBD,1
+James Banville,M,50,M_MR_3_APF,Raw,100,98,220,137.5,192.5,550,SBD,1
+John Westleigh,M,47,M_MES_2_APF,Single-ply,110,104,275,210,245,730,SBD,1
+Gordon McGriff,M,46,M_MR_2_APF,Raw,82.5,81.6,160,102.5,182.5,445,SBD,1
+George Sotirakis,M,41,M_MR_1_APF,Raw,110,108,305,272.5,275,852.5,SBD,1
+Kathy Wood,F,60,F_MR_5_APF,Raw,82.5,80.7,55,,100,,SBD,DQ
+Kathrine Holt,F,40,F_MR_1_APF,Raw,90+,117.5,107.5,70,145,322.5,SBD,1
+Meredith Hanby,F,36,F_OR_APF,Raw,90,82.8,120,62.5,140,322.5,SBD,1
+Kimberly Johnson,F,27,F_OR_APF,Raw,67.5,60.8,117.5,60,120,297.5,SBD,1
+Michelle Riesbeck,F,29,F_OR_APF,Raw,56,53,97.5,,115,,SBD,DQ
+Juliette Carrier,F,16,F_TR_2_APF,Raw,75,72.1,77.5,40,110,227.5,SBD,1
+Connor Jajoie,M,15,M_TR_1_APF,Raw,75,73,185,137.5,182.5,505,SBD,1
+Matt Bubar,M,25,M_OR_APF,Raw,125,118.8,172.5,122.5,227.5,522.5,SBD,1
+Melinda Hurt,F,,F_OR_APF,Raw,82.5,78.9,147.5,85,160,392.5,SBD,1
+Russ Simms,M,24,M_OR_APF,Raw,75,74.4,120,67.5,165,352.5,SBD,1
+Dustin Cyr,M,29,M_OR_APF,Raw,82.5,81.6,230,167.5,257.5,655,SBD,1
+Noah Tranten,M,23,M_OR_APF,Raw,90,84.4,255,170,242.5,667.5,SBD,1
+Rafel Solano,M,30,M_OR_APF,Raw,90,86.2,242.5,130,205,577.5,SBD,3
+Abe Milnis,M,19,M_OR_APF,Raw,90,89.8,227.5,142.5,295,665,SBD,2
+Ethan Baker,M,35,M_OEM_APF,Multi-ply,100,98.7,365,230,275,870,SBD,1
+Frank Ventriglia Jr,M,39,M_OR_APF,Raw,100,96.6,185,107.5,202.5,495,SBD,2
+Josh Beaulieu,M,26,M_OR_APF,Raw,100,98,242.5,125,250,617.5,SBD,1
+Keenan McLaughlin,M,29,M_OR_APF,Raw,110,103.4,227.5,137.5,255,620,SBD,2
+Bryce Kronk,M,25,M_OR_APF,Raw,110,100.7,307.5,207.5,275,790,SBD,1
+George Sotirakos,M,41,M_OEM_APF,Multi-ply,110,108,305,272.5,275,852.5,SBD,1
+Greg Panora,M,33,M_OR_APF,Raw,125,119.7,365,235,340,940,SBD,1
+Brian Genovisi,M,28,M_OR_APF,Raw,125,110.7,205,112.5,227.5,545,SBD,2
+Harold Spetla,M,24,M_OR_APF,Raw,140,132.9,272.5,172.5,272.5,717.5,SBD,1
