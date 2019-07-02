@@ -86,6 +86,9 @@ pub enum Exemption {
 
     /// Allows lifters of any bodyweight to compete in any weightclass.
     ExemptWeightClassConsistency,
+
+    /// Allows a meet to contain implausibly young or old lifters.
+    ExemptAge,
 }
 
 #[derive(Debug)]

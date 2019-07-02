@@ -269,7 +269,7 @@
     fmtrxaapf = {name ="F_TR_X_AAPF",min=13,max=19,equipment="Raw",sex="F",tested="Yes"}
     fmtcrxaapf = {name ="F_TCR_X_AAPF",min=13,max=19,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmtsxaapf = {name ="F_TES_X_AAPF",min=13,max=19,equipment="Single-ply",sex="F",tested="Yes"}
-    fmtm3aapf = {name ="F_TEM_X_AAPF",min=13,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtmxaapf = {name ="F_TEM_X_AAPF",min=13,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
     fjraapf = {name ="F_JR_AAPF",min=20,max=23,equipment="Raw",sex="F",tested="Yes"}
     fjcraapf = {name ="F_JCR_AAPF",min=20,max=23,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fjsaapf = {name ="F_JES_AAPF",min=20,max=23,equipment="Single-ply",sex="F",tested="Yes"}
@@ -282,8 +282,8 @@
 
     #Misc
     mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
-    mnemapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
-    fnemapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
+    mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
+    fnrapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
     mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
     fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
     mcemapf = {name ="M_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Collegiate
@@ -307,6 +307,7 @@
     sex = "F"
 
 [exemptions]
-    1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
     0803 = ["ExemptDivision"] # LW and HW
     0913 = ["ExemptDivision"] # Different High School divisions
+    1758 = ["ExemptAge"] # Guest lifter of age 4.
+    1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.

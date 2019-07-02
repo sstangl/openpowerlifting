@@ -667,19 +667,21 @@ fn check_column_place(s: &str, line: u64, report: &mut Report) -> Place {
     }
 }
 
-fn check_column_age(s: &str, line: u64, report: &mut Report) -> Age {
+fn check_column_age(s: &str, exempt_age: bool, line: u64, report: &mut Report) -> Age {
     match s.parse::<Age>() {
         Ok(age) => {
-            let num = match age {
-                Age::Exact(n) => n,
-                Age::Approximate(n) => n,
-                Age::None => 24,
-            };
+            if !exempt_age {
+                let num = match age {
+                    Age::Exact(n) => n,
+                    Age::Approximate(n) => n,
+                    Age::None => 24,
+                };
 
-            if num < 5 {
-                report.error_on(line, format!("Age '{}' unexpectedly low", s));
-            } else if num > 100 {
-                report.error_on(line, format!("Age '{}' unexpectedly high", s));
+                if num < 5 {
+                    report.error_on(line, format!("Age '{}' unexpectedly low", s));
+                } else if num > 100 {
+                    report.error_on(line, format!("Age '{}' unexpectedly high", s));
+                }
             }
 
             age
@@ -1784,6 +1786,8 @@ where
         el.iter()
             .any(|&e| e == Exemption::ExemptWeightClassConsistency)
     });
+    let exempt_age: bool =
+        exemptions.map_or(false, |el| el.iter().any(|&e| e == Exemption::ExemptAge));
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
     if !report.messages.is_empty() {
@@ -1836,7 +1840,7 @@ where
             entry.place = check_column_place(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Age) {
-            entry.age = check_column_age(&record[idx], line, &mut report);
+            entry.age = check_column_age(&record[idx], exempt_age, line, &mut report);
         }
         if let Some(idx) = headers.get(Header::Event) {
             entry.event = check_column_event(&record[idx], line, &headers, &mut report);
