@@ -176,6 +176,13 @@
   background-image: linear-gradient(to right, $lightblue, $white);
 }
 
+.neongreen_to_white {
+  $neongreen: #39ff14;
+  $white: #EDF2F4;
+  @include gradient-prereqs($neongreen);
+  background-image: linear-gradient(to right, $neongreen, $white);
+}
+
 .pink_to_lightblue {
   $pink: #FF69B4;
   $lightblue: #43D1FF;
