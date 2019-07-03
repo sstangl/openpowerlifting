@@ -36,16 +36,16 @@ WeightClassKg,Age,BodyweightKg,Name,Division,Sex,Event,Equipment,Squat1Kg,Squat2
 82.5,14,77.7,Carlos Cuellar,M_OEM_APF,M,D,Multi-ply,,,,,,,,,140,147.5,155,155,155,1
 125,21,114.94,Paul Richards,M_OEM_APF,M,D,Multi-ply,,,,,,,,,215,250,-272.5,250,250,1
 140,29,131.72,Raul Gonzales,M_OEM_APF,M,D,Multi-ply,,,,,,,,,207.5,235,-257.5,235,235,1
-82.5,17,77.29,Brian Norris,M_JEM_APF,M,D,Multi-ply,,,,,,,,,122.5,132.5,140,140,140,1
-90,15,87.95,Nathan Bailey,M_JEM_APF,M,D,Multi-ply,,,,,,,,,137.5,-152.5,167.5,167.5,167.5,1
-110,17,103.78,Mark Esparza,M_JEM_APF,M,D,Multi-ply,,,,,,,,,180,217.5,-232.5,217.5,217.5,1
-125,17,115.44,Tim Godby,M_JEM_APF,M,D,Multi-ply,,,,,,,,,200,-215,-215,200,200,1
+82.5,17,77.29,Brian Norris,M_TEM_2_APF,M,D,Multi-ply,,,,,,,,,122.5,132.5,140,140,140,1
+90,15,87.95,Nathan Bailey,M_TEM_1_APF,M,D,Multi-ply,,,,,,,,,137.5,-152.5,167.5,167.5,167.5,1
+110,17,103.78,Mark Esparza,M_TEM_2_APF,M,D,Multi-ply,,,,,,,,,180,217.5,-232.5,217.5,217.5,1
+125,17,115.44,Tim Godby,M_TEM_2_APF,M,D,Multi-ply,,,,,,,,,200,-215,-215,200,200,1
 75,47,74.93,Marloe Mosley,M_MEM_2_APF,M,D,Multi-ply,,,,,,,,,-192.5,192.5,-207.5,192.5,192.5,1
 90,49,87.27,Myles Cavanagh,M_MEM_2_APF,M,D,Multi-ply,,,,,,,,,125,147.5,160,160,160,1
 82.5,52,82.01,Harvey Hall,M_MEM_3_APF,M,D,Multi-ply,,,,,,,,,182.5,200,-210,200,200,1
 82.5,50,81.28,Bill Norris,M_MEM_3_APF,M,SD,Multi-ply,122.5,,,122.5,,,,,122.5,137.5,147.5,147.5,270,1
 90,51,89.81,Don Mullins,M_MEM_3_APF,M,D,Multi-ply,,,,,,,,,170,205,-215,205,205,1
-140,35,138.89,Gregory Jones,Firefighter,M,SBD,Multi-ply,-255,272.5,,272.5,175,185,195,195,272.5,282.5,290,290,757.5,1
+140,35,138.89,Gregory Jones,M_PFEM_APF,M,SBD,Multi-ply,-255,272.5,,272.5,175,185,195,195,272.5,282.5,290,290,757.5,1
 52,13,50.35,Michael Blackburn,M_TEM_1_APF,M,SBD,Multi-ply,-102.5,102.5,-105,102.5,52.5,-55,-55,52.5,-77.5,77.5,,77.5,232.5,1
 82.5,14,77.7,Carlos Cuellar,M_TEM_1_APF,M,SBD,Multi-ply,-135,135,137.5,137.5,95,105,110,110,140,147.5,155,155,402.5,1
 90,14,83.6,Dillon Bramblitt,M_TEM_1_APF,M,SBD,Multi-ply,-137.5,137.5,142.5,142.5,100,107.5,115,115,150,157.5,165,165,422.5,1
@@ -130,13 +130,13 @@ WeightClassKg,Age,BodyweightKg,Name,Division,Sex,Event,Equipment,Squat1Kg,Squat2
 48,29,47.54,Kelly LaCour,F_OEM_APF,F,SBD,Multi-ply,87.5,102.5,-105,102.5,-52.5,57.5,60,60,102.5,115,117.5,117.5,280,1
 52,46,51.75,Pat Metcalf,F_OEM_APF,F,SBD,Multi-ply,100,117.5,-137.5,117.5,62.5,-70,-70,62.5,100,122.5,-142.5,122.5,302.5,1
 90,32,85.28,Frankie Thompson,F_OEM_APF,F,SBD,Multi-ply,112.5,-142.5,142.5,142.5,42.5,62.5,82.5,82.5,110,162.5,-182.5,162.5,387.5,1
-44,15,43.91,Ashley Wilson,F_JEM_APF,F,SBD,Multi-ply,80,85,-90,85,32.5,35,40,40,77.5,80,-92.5,80,205,1
-52,14,49.58,Amanda Harris,F_JEM_APF,F,SBD,Multi-ply,100,-110,-110,100,60,67.5,70,70,92.5,105,115,115,285,1
-60,15,59.65,Ashley Barrera,F_JEM_APF,F,SBD,Multi-ply,137.5,145,150,150,60,67.5,75,75,147.5,160,162.5,162.5,387.5,1
-75,18,73.94,Erin Fitzpatrick,F_JEM_APF,F,SBD,Multi-ply,137.5,152.5,-157.5,152.5,57.5,62.5,-70,62.5,137.5,142.5,-147.5,142.5,357.5,1
-82.5,17,81.6,Courtney Gathright,F_JEM_APF,F,SBD,Multi-ply,172.5,182.5,-195,182.5,100,107.5,115,115,150,162.5,-170,162.5,460,1
-82.5,17,78.7,Lisa Wilson #3,F_JEM_APF,F,SBD,Multi-ply,102.5,107.5,-110,107.5,57.5,60,-65,60,105,110,115,115,283,2
-90+,15,96.43,Ashton Linehan,F_JEM_APF,F,SBD,Multi-ply,152.5,172.5,-182.5,172.5,72.5,77.5,-82.5,77.5,145,150,-160,150,400,1
+44,15,43.91,Ashley Wilson,F_TEM_1_APF,F,SBD,Multi-ply,80,85,-90,85,32.5,35,40,40,77.5,80,-92.5,80,205,1
+52,14,49.58,Amanda Harris,F_TEM_1_APF,F,SBD,Multi-ply,100,-110,-110,100,60,67.5,70,70,92.5,105,115,115,285,1
+60,15,59.65,Ashley Barrera,F_TEM_1_APF,F,SBD,Multi-ply,137.5,145,150,150,60,67.5,75,75,147.5,160,162.5,162.5,387.5,1
+75,18,73.94,Erin Fitzpatrick,F_TEM_3_APF,F,SBD,Multi-ply,137.5,152.5,-157.5,152.5,57.5,62.5,-70,62.5,137.5,142.5,-147.5,142.5,357.5,1
+82.5,17,81.6,Courtney Gathright,F_TEM_2_APF,F,SBD,Multi-ply,172.5,182.5,-195,182.5,100,107.5,115,115,150,162.5,-170,162.5,460,1
+82.5,17,78.7,Lisa Wilson #3,F_TEM_2_APF,F,SBD,Multi-ply,102.5,107.5,-110,107.5,57.5,60,-65,60,105,110,115,115,283,2
+90+,15,96.43,Ashton Linehan,F_TEM_1_APF,F,SBD,Multi-ply,152.5,172.5,-182.5,172.5,72.5,77.5,-82.5,77.5,145,150,-160,150,400,1
 56,36,54.61,Renae Sassenhagen,F_SEM_APF,F,SBD,Multi-ply,75,80,87.5,87.5,60,-67.5,67.5,67.5,112.5,120,130,130,285,1
 60,36,59.1,Liz Nesuda,F_SEM_APF,F,SBD,Multi-ply,102.5,112.5,117.5,117.5,70,77.5,-82.5,77.5,92.5,115,125,125,320,1
 75,42,74.8,Susan Hartley,F_MEM_1_APF,F,SBD,Multi-ply,-117.5,-117.5,-117.5,,,,,,,,,,,DQ
@@ -146,8 +146,8 @@ WeightClassKg,Age,BodyweightKg,Name,Division,Sex,Event,Equipment,Squat1Kg,Squat2
 90,60,83.01,Hope Stockton Ross,F_MEM_5_APF,F,SBD,Multi-ply,110,120,125,125,55,57.5,60,60,110,120,125,125,310,1
 56,68,55.07,Sylvia Clark,F_MEM_6_APF,F,SBD,Multi-ply,72.5,80,-85,80,42.5,45,47.5,47.5,72.5,82.5,92.5,92.5,220,1
 67.5,67,65.73,Sue Clark,F_MEM_6_APF,F,SBD,Multi-ply,90,97.5,105,105,52.5,60,-65,60,115,130,140,140,305,1
-60,25,59.01,Sabrina Kingston,Novice,F,SBD,Multi-ply,47.5,57.5,70,70,37.5,50,-60,50,55,77.5,102.5,102.5,222.5,1
-82.5,27,81.1,Marlena Soultarie,Novice,F,SBD,Multi-ply,-92.5,92.5,105,105,52.5,62.5,-75,62.5,87.5,92.5,112.5,112.5,280,1
+60,25,59.01,Sabrina Kingston,F_NEM_APF,F,SBD,Multi-ply,47.5,57.5,70,70,37.5,50,-60,50,55,77.5,102.5,102.5,222.5,1
+82.5,27,81.1,Marlena Soultarie,F_NEM_APF,F,SBD,Multi-ply,-92.5,92.5,105,105,52.5,62.5,-75,62.5,87.5,92.5,112.5,112.5,280,1
 52,46,51.75,Pat Metcalf,F_OEM_APF,F,B,Multi-ply,,,,,62.5,-70,-70,62.5,,,,,62.5,1
 75,42,74.8,Susan Hartley,F_OEM_APF,F,B,Multi-ply,,,,,82.5,-87.5,-87.5,82.5,,,,,82.5,1
 82.5,31,81.37,Michelle Oeltjen,F_OEM_APF,F,B,Multi-ply,,,,,92.5,-95,95,95,,,,,95,1

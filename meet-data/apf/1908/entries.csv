@@ -10,7 +10,7 @@ Alyssa Haws,35,F,Raw,F_OR_APF,73,75,70,77.5,82.5,82.5,40,45,-52.5,45,105,112.5,1
 Spencer Haro,12,F,Raw,F_YR_AAPF,63.3,67.5,42.5,52.5,-60,52.5,25,-30,30,30,57.5,67.5,77.5,77.5,160,1,,SBD,Yes
 Becky Mauney,52,F,Raw,F_MR_3_AAPF,80,82.5,-82.5,87.5,-100,87.5,47.5,-52.5,52.5,52.5,85,100,-115,100,240,1,,SBD,Yes
 Dave Rounsevelle,60,M,Raw,M_MR_5_AAPF,89.6,90,125,137.5,147.5,147.5,87.5,92.5,97.5,97.5,172.5,187.5,195,195,440,1,,SBD,Yes
-David Rangel,27,M,Wraps,M_MCR_1_AAPF,84.7,90,222.5,230,237.5,237.5,152.5,157.5,-160,157.5,232.5,242.5,247.5,247.5,642.5,1,,SBD,Yes
+David Rangel,27,M,Wraps,M_OCR_AAPF,84.7,90,222.5,230,237.5,237.5,152.5,157.5,-160,157.5,232.5,242.5,247.5,247.5,642.5,1,,SBD,Yes
 Michael Coleman,40,M,Raw,M_MR_1_AAPF,75,75,132.5,137.5,142.5,142.5,112.5,117.5,-125,117.5,177.5,-180,180,180,440,1,Warehouse 13,SBD,Yes
 Thomas K Walke,41,M,Raw,M_MR_1_AAPF,90.5,100,120,127.5,140,140,115,125,-132.5,125,142.5,155,167.5,167.5,432.5,1,The Gym,SBD,Yes
 David Woolley,38,M,Multi-ply,M_SEM_APF,118.6,125,312.5,327.5,335,335,227.5,-237.5,-237.5,227.5,-290,290,317.5,317.5,880,1,Warehouse 13,SBD,
@@ -50,14 +50,14 @@ Kyle Reader,28,M,Raw,M_OR_AAPF,165,140+,185,200,210,210,107.5,115,-125,115,185,2
 Nathaniel Breese,20,M,Raw,M_OR_APF,83.9,90,160,175,190,190,120,132.5,142.5,142.5,210,222.5,-235,222.5,555,1,,SBD,
 Taryn Reader,6,M,Raw,M_YR_AAPF,28.8,52,,,,,,,,,30,32.5,35,35,35,1,The Gym,D,Yes
 Robby Raymond Staker,13,M,Raw,M_TR_1_AAPF,53.2,56,42.5,-52.5,-52.5,42.5,30,35,45,45,42.5,52.5,65,65,152.5,1,The Gym,SBD,Yes
-Daniel Messick,38,M,Wraps,M _SCR_AAPF,63.8,67.5,-110,-110,-110,,-55,-55,-55,,-122.5,,,,,DQ,,SBD,Yes
+Daniel Messick,38,M,Wraps,M_SCR_AAPF,63.8,67.5,-110,-110,-110,,-55,-55,-55,,-122.5,,,,,DQ,,SBD,Yes
 Justin Varner,34,M,Raw,M_SR_AAPF,99.8,100,135,140,145,145,125,130,,130,175,182.5,187.5,187.5,462.5,1,,SBD,Yes
 Becky Mauney,52,F,Raw,F_MR_3_AAPF,80,82.5,-82.5,87.5,-100,87.5,47.5,-52.5,52.5,52.5,85,100,-115,100,240,1,,SBD,Yes
 Chanel Gailey,21,F,Raw,F_JR_AAPF,47,48,,,,,-55,-57.5,57.5,57.5,,,,,57.5,1,The Gym,B,Yes
 Jami Grove,35,F,Single-ply,F_OES_AAPF,67.2,67.5,,,,,90,95,-100,95,,,,,95,1,,B,Yes
 Camille Ochoa,17,F,Raw,F_TR_2_AAPF,50.4,52,,,,,35,-40,40,40,,,,,40,1,The Gym,B,Yes
 Mike Brownsfield,45,M,Raw,M_MR_2_APF,119.1,125,,,,,212.5,227.5,-232.5,227.5,,,,,227.5,1,,B,
-Anthony Rangel,28,M,Raw,M_MR_1_AAPF,108.2,110,,,,,187.5,192.5,-200,192.5,,,,,192.5,1,Warehouse 13,B,Yes
+Anthony Rangel,28,M,Raw,M_OR_AAPF,108.2,110,,,,,187.5,192.5,-200,192.5,,,,,192.5,1,Warehouse 13,B,Yes
 Charles Clark,33,M,Raw,M_SR_AAPF,127.4,140,,,,,192.5,205,-215,205,,,,,205,1,,B,Yes
 Samoa Allen,23,M,Raw,M_JR_APF,102.4,110,,,,,142.5,152.5,167.5,167.5,,,,,167.5,1,,B,
 Scott Mecham,40,M,Single-ply,M_OES_APF,112,125,,,,,350,-365,-365,350,,,,,350,1,Warehouse 13,B,
@@ -65,7 +65,7 @@ Ryan Marble,32,M,Multi-ply,M_OEM_AAPF,99.5,100,,,,,350,-365,365,365,,,,,365,1,,B
 Anthony Rangel,28,M,Raw,M_OR_AAPF,108.2,110,,,,,187.5,192.5,-200,192.5,,,,,192.5,1,,B,Yes
 Mike Brownsfield,45,M,Raw,M_OR_APF,119.1,125,,,,,212.5,227.5,-232.5,227.5,,,,,227.5,1,Warehouse 13,B,
 Mike McElroy,38,M,Raw,M_OR_APF,138.5,140,,,,,222.5,230,235,235,,,,,235,1,Warehouse 13,B,
-Mia Snook,6,F,Raw,F_YR_AAPF,22.1,,,,,,,,,,25,27.5,30,30,30,1,The Gym,D,Yes
+Mia Snook,6,F,Raw,F_YR_AAPF,22.1,44,,,,,,,,,25,27.5,30,30,30,1,The Gym,D,Yes
 Anna Tamez,33,F,Raw,F_SCR_AAPF,58.3,60,,,,,,,,,120,127.5,140,140,140,1,The Gym,D,Yes
 Kyla Hillam,28,F,Raw,F_OR_AAPF,66.7,67.5,,,,,,,,,117.5,125,132.5,132.5,132.5,1,,D,Yes
 Martin N Hollis Jr,59,M,Single-ply,M_MES_4_APF,117.9,125,,,,,,,,,150,157.5,160,160,160,1,,D,

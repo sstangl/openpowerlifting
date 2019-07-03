@@ -38,7 +38,7 @@ Dolgor Altangerel,F_TR_2_AWPC,1996-11-18,82.5,F,SBD,Raw,Yes,82.2,Mongolia,80,95,
 Irina Yaroshenko,F_OR_AWPC,1986-12-04,90,F,SBD,Raw,Yes,89.35,Russia,152.5,162.5,170,,170,87.5,95,100,,100,175,195,205,,205,475,1
 Artem Sinitsyn,M_TR_1_AWPC,1998-10-19,56,M,SBD,Raw,Yes,56,Russia,102.5,-110,110,,110,62.5,-70,70,72.5,70,112.5,117.5,122.5,,122.5,302.5,1
 Dmitriy Sindeyev,M_TR_1_AWPC,2000-02-11,56,M,SBD,Raw,Yes,56,Russia,70,80,90,,90,60,65,-70,,65,100,110,120,,120,275,2
-Dmitriy Boronnikov,M_TR_1_AWPC,2002-12-30,56,M,SBD,Raw,Yes,56,Ukraine,80,85,-90,,85,40,42.5,-45,,42.5,85,90,92.5,,92.5,220,3
+Dmitriy Boronnikov,M_YR_AWPC,2002-12-30,56,M,SBD,Raw,Yes,56,Ukraine,80,85,-90,,85,40,42.5,-45,,42.5,85,90,92.5,,92.5,220,3
 Pavel Derzhakov,M_JR_AWPC,1992-07-04,56,M,SBD,Raw,Yes,55.2,Russia,-110,-110,110,,110,95,100,-102.5,,100,145,157.5,167.5,,167.5,377.5,1
 Nikita Tremaskin,M_TR_1_AWPC,1999-07-15,60,M,SBD,Raw,Yes,56.9,Russia,67.5,80,85,,85,50,-60,60,,60,-95,95,110,,110,255,1
 Nikita Arkhipov,M_TR_2_AWPC,1998-04-08,60,M,SBD,Raw,Yes,59.2,Russia,130,140,-145,,140,75,80,85,,85,165,175,-180.5,,175,400,1
@@ -232,8 +232,8 @@ Vizhe Mirmirani,F_MEM_2_AWPC,1965-04-14,60,F,SBD,Multi-ply,Yes,59.3,Russia,140,1
 Yuliya Umerenkova,F_OEM_AWPC,1980-12-09,67.5,F,SBD,Multi-ply,Yes,67.4,Russia,185,195,200,,200,100,105,-110,,105,-185,-185,-185,,,,DQ
 Igor Lyubaev,M_OEM_AWPC,1979-04-30,67.5,M,SBD,Multi-ply,Yes,64.55,Russia,210,230,240,-251,240,120,130,-140,,130,210,222.5,235,-242.5,235,605,1
 Ivan Bezrukov,M_OEM_AWPC,1989-01-05,67.5,M,SBD,Multi-ply,Yes,67.5,Russia,-190,190,-195,,190,105,-110,-110,,105,200,205,-210,,205,500,2
-Ayurbold Gansukh,M_JES_AWPC,1991-08-27,75,M,SBD,Multi-ply,Yes,69,Mongolia,230,245,255,,255,145,155,165,,165,190,202.5,-212.5,,202.5,622.5,1
-Oleg Son,M_JES_AWPC,1991-05-22,75,M,SBD,Multi-ply,Yes,74.5,Russia,235,-250,250,,250,137.5,145,150,,150,207.5,222.5,-227.5,,222.5,622.5,2
+Ayurbold Gansukh,M_JEM_AWPC,1991-08-27,75,M,SBD,Multi-ply,Yes,69,Mongolia,230,245,255,,255,145,155,165,,165,190,202.5,-212.5,,202.5,622.5,1
+Oleg Son,M_JEM_AWPC,1991-05-22,75,M,SBD,Multi-ply,Yes,74.5,Russia,235,-250,250,,250,137.5,145,150,,150,207.5,222.5,-227.5,,222.5,622.5,2
 Kostas Telidis,M_OEM_AWPC,1989-04-18,75,M,SBD,Multi-ply,Yes,74.5,Russia,240,-252.5,260,,260,200,216,-222.5,,216,200,220,235,,235,711,1
 Oleg Son,M_OEM_AWPC,1991-05-22,75,M,SBD,Multi-ply,Yes,74.5,Russia,235,-250,250,,250,137.5,145,150,,150,207.5,222.5,-227.5,,222.5,622.5,2
 Maksim Tovstonog,M_OEM_AWPC,1983-06-05,75,M,SBD,Multi-ply,Yes,74.4,Russia,220,-230,-235,,220,160,-170,-170,,160,220,230,-242.5,,230,610,3
@@ -253,15 +253,15 @@ Dzhamal Akhmedzade,M_OEM_AWPC,1984-06-20,110,M,SBD,Multi-ply,Yes,103.4,Azerbaija
 Vasiliy Voropayev,M_MEM_4_AWPC,1956-06-10,110,M,SBD,Multi-ply,Yes,104.2,Russia,-210,215,225,,225,115,125,-132.5,,125,240,250,,,250,600,1
 Vasiliy Shpodarev,M_OEM_AWPC,1989-01-13,125,M,SBD,Multi-ply,Yes,123.5,Russia,280,310,330,,330,260,-280,280,,280,280,-310,-310,,280,890,1
 Khadbaatar Buyandalai,M_OEM_AWPC,1990-01-06,125,M,SBD,Multi-ply,Yes,118.2,Mongolia,250,270,-300,,270,160,-175,185,,185,230,260,-300,,260,715,2
-Anastasiya Dzyuba,F_TR_1_AWPC,2003-10-13,44,F,B,Raw,Yes,43,Russia,,,,,,45,50,-55,,50,,,,,,50,1
-Darya Namesova,F_TR_1_AWPC,2003-04-22,44,F,B,Raw,Yes,40,Russia,,,,,,35,-40,40,,40,,,,,,40,2
+Anastasiya Dzyuba,F_YR_AWPC,2003-10-13,44,F,B,Raw,Yes,43,Russia,,,,,,45,50,-55,,50,,,,,,50,1
+Darya Namesova,F_YR_AWPC,2003-04-22,44,F,B,Raw,Yes,40,Russia,,,,,,35,-40,40,,40,,,,,,40,2
 Alena Lalokina,F_TR_3_AWPC,1995-04-24,44,F,B,Raw,Yes,43.1,Russia,,,,,,-40,40,-42.5,,40,,,,,,40,1
 Yelena Sorokina,F_OR_AWPC,1985-04-28,44,F,B,Raw,Yes,43.1,Russia,,,,,,57.5,62.5,-65,,62.5,,,,,,62.5,1
 Olga Lebedeva,F_OR_AWPC,1984-09-25,44,F,B,Raw,Yes,43,Russia,,,,,,42.5,-45,-45,,42.5,,,,,,42.5,2
 Kristina Koshutina,F_OR_AWPC,1989-06-23,44,F,B,Raw,Yes,41.8,Russia,,,,,,-40,-40,-40,,,,,,,,,DQ
 Anna Savchuk,F_OR_AWPC,1984-08-20,44,F,B,Raw,Yes,43,Russia,,,,,,-50,-52.5,-52.5,,,,,,,,,DQ
 Yuliya Murasheva,F_MR_1_AWPC,1970-04-23,44,F,B,Raw,Yes,42.7,Russia,,,,,,-75,75,77.5,,77.5,,,,,,77.5,1
-Viktoriya Yultsova,F_TR_1_AWPC,2002-04-06,48,F,B,Raw,Yes,47.2,Russia,,,,,,55,57.5,60,-65.5,60,,,,,,60,1
+Viktoriya Yultsova,F_YR_AWPC,2002-04-06,48,F,B,Raw,Yes,47.2,Russia,,,,,,55,57.5,60,-65.5,60,,,,,,60,1
 Natalya Krikunova,F_OR_AWPC,1981-07-19,48,F,B,Raw,Yes,46.8,Russia,,,,,,57.5,62.5,65,,65,,,,,,65,1
 Viktoriya Yultsova,F_OR_AWPC,2002-04-06,48,F,B,Raw,Yes,47.2,Russia,,,,,,55,57.5,60,-65.5,60,,,,,,60,2
 Yelena Anikovskaya,F_OR_AWPC,1986-12-26,48,F,B,Raw,Yes,48,Russia,,,,,,55,60,-62.5,,60,,,,,,60,3
@@ -310,7 +310,7 @@ Alla Pugovkina,F_OR_AWPC,1975-12-12,82.5,F,B,Raw,Yes,81.6,Russia,,,,,,100,105,-1
 Lidiya Charkova,F_OR_AWPC,1968-07-06,82.5,F,B,Raw,Yes,80.6,Russia,,,,,,82.5,-85,-85,,82.5,,,,,,82.5,2
 Lidiya Charkova,F_MR_2_AWPC,1968-07-06,82.5,F,B,Raw,Yes,80.6,Russia,,,,,,80,-85,-85,,80,,,,,,80,1
 Erin Shel-Fetengof,F_OR_AWPC,1983-05-01,90+,F,B,Raw,Yes,113.9,Russia,,,,,,117.5,122.5,127.5,,127.5,,,,,,127.5,1
-Sergey Synkov,M_TR_1_AWPC,2001-11-26,52,M,B,Raw,Yes,46.4,Russia,,,,,,55,60,65,,65,,,,,,65,1
+Sergey Synkov,M_YR1_AWPC,2001-11-26,52,M,B,Raw,Yes,46.4,Russia,,,,,,55,60,65,,65,,,,,,65,1
 Kaplan Skhalyakho,M_JR_AWPC,1990-08-28,52,M,B,Raw,Yes,52,Russia,,,,,,90,95,-97.5,,95,,,,,,95,1
 Sergey Karaziya,M_OR_AWPC,1987-11-30,56,M,B,Raw,Yes,53.6,Russia,,,,,,155,-160,-160,,155,,,,,,155,1
 Igor Artemyev,M_MR_1_AWPC,1971-12-22,56,M,B,Raw,Yes,55.3,Russia,,,,,,115,-120,-120,,115,,,,,,115,1
@@ -323,7 +323,7 @@ Andrey Larin,M_JR_AWPC,1992-01-20,60,M,B,Raw,Yes,59.1,Russia,,,,,,100,105,-107.5
 Andrey Larin,M_OR_AWPC,1992-01-20,60,M,B,Raw,Yes,59.1,Russia,,,,,,100,105,-107.5,,105,,,,,,105,1
 Oleg Artemyev,M_MR_1_AWPC,1971-12-22,60,M,B,Raw,Yes,59.3,Russia,,,,,,120,126,,,126,,,,,,126,1
 Oleg Dvoynikov,M_MR_3_AWPC,1960-10-08,60,M,B,Raw,Yes,59.4,Russia,,,,,,97.5,-100,,,97.5,,,,,,97.5,1
-Viktor Fedotov,M_TR_1_AWPC,2002-01-21,67.5,M,B,Raw,Yes,66.6,Russia,,,,,,55,60,62.5,,62.5,,,,,,62.5,1
+Viktor Fedotov,M_YR_AWPC,2002-01-21,67.5,M,B,Raw,Yes,66.6,Russia,,,,,,55,60,62.5,,62.5,,,,,,62.5,1
 Artem Zelenin,M_TR_2_AWPC,1996-09-08,67.5,M,B,Raw,Yes,64.7,Russia,,,,,,120,-122.5,122.5,,122.5,,,,,,122.5,1
 Aleksandr Semerenko,M_TR_3_AWPC,1996-05-02,67.5,M,B,Raw,Yes,63.5,Moldova,,,,,,130.5,135,-137.5,,135,,,,,,135,1
 Shamil Apazaov,M_JR_AWPC,1994-05-23,67.5,M,B,Raw,Yes,67.1,Russia,,,,,,132.5,-137.5,-137.5,,132.5,,,,,,132.5,1
@@ -523,7 +523,7 @@ Denis Ogloblin,M_OR_AWPC,1967-05-12,125,M,B,Raw,Yes,123.6,Russia,,,,,,205,210,-2
 Yevgeniy Sibilev,M_OR_AWPC,1970-03-08,125,M,B,Raw,Yes,124,Russia,,,,,,195,207.5,-212.5,,207.5,,,,,,207.5,4
 Sergey Bobchikhin,M_OR_AWPC,1975-06-25,125,M,B,Raw,Yes,120.9,Russia,,,,,,200,-210,-210,,200,,,,,,200,5
 Aristakes Mkhitaryan,M_OR_AWPC,1979-09-13,125,M,B,Raw,Yes,120.3,Armenia,,,,,,-215,-215,-215,,,,,,,,,DQ
-Ruslan Murashko,M_MR_1_AWPC,1974-08-22,125,M,B,Raw,Yes,119.8,Belarus,,,,,,200,210,-215,,210,,,,,,210,1
+Ruslan Murashko,M_OR_AWPC,1974-08-22,125,M,B,Raw,Yes,119.8,Belarus,,,,,,200,210,-215,,210,,,,,,210,1
 Vadim Pchelkin,M_MR_1_AWPC,1971-09-10,125,M,B,Raw,Yes,117.5,Russia,,,,,,195,205,207.5,,207.5,,,,,,207.5,2
 Pavel Dekusar,M_MR_1_AWPC,1973-09-27,125,M,B,Raw,Yes,122.6,Russia,,,,,,195,202.5,207.5,,207.5,,,,,,207.5,3
 Yevgeniy Sibilev,M_MR_1_AWPC,1970-03-08,125,M,B,Raw,Yes,124,Russia,,,,,,195,207.5,-212.5,,207.5,,,,,,207.5,4
@@ -590,7 +590,7 @@ Ariunbaatar Sharavdorj,M_OES_AWPC,1982-04-09,82.5,M,B,Single-ply,Yes,82.5,Mongol
 Konstantin Dremenkov,M_MES_2_AWPC,1966-07-21,82.5,M,B,Single-ply,Yes,79.5,Belarus,,,,,,177.5,187.5,-192.5,,187.5,,,,,,187.5,1
 Marat Ramatov,M_MES_2_AWPC,1968-03-06,82.5,M,B,Single-ply,Yes,81.9,Kyrgyzstan,,,,,,-185,-190,-190,,,,,,,,,DQ
 Sergey Goncharov,M_MES_5_AWPC,1952-03-22,82.5,M,B,Single-ply,Yes,82.5,Russia,,,,,,130,140,150,,150,,,,,,150,1
-Yevgeniy Zhurkin,M_MR_6_AWPC,1945-02-13,82.5,M,B,Single-ply,Yes,81.7,Russia,,,,,,87.5,92.5,97.5,,97.5,,,,,,97.5,1
+Yevgeniy Zhurkin,M_MEM_6_AWPC,1945-02-13,82.5,M,B,Single-ply,Yes,81.7,Russia,,,,,,87.5,92.5,97.5,,97.5,,,,,,97.5,1
 Vladislav Sannikov,M_MES_8_AWPC,1938-10-29,82.5,M,B,Single-ply,Yes,77.1,Russia,,,,,,87.5,92.5,95,,95,,,,,,95,1
 Artush Karapetyan,M_JES_AWPC,1991-10-20,90,M,B,Single-ply,Yes,86.8,Russia,,,,,,-170,170,180,-190,180,,,,,,180,1
 Battumur Khumuugul,M_OES_AWPC,1974-10-05,90,M,B,Single-ply,Yes,88.9,Mongolia,,,,,,230,237.5,250,,250,,,,,,250,1
@@ -695,7 +695,7 @@ Igor Simanovskiy,M_MEM_2_AWPC,1965-03-28,125,M,B,Multi-ply,Yes,116.2,Russia,,,,,
 Aleksandr Maksimushkin,M_MEM_5_AWPC,1950-11-03,125,M,B,Multi-ply,Yes,112.7,Russia,,,,,,-200,-200,200,,200,,,,,,200,1
 Irakliy Kondzhariya,M_OEM_AWPC,1977-09-12,140,M,B,Multi-ply,Yes,129,Russia,,,,,,270,-280,-280,,270,,,,,,270,1
 Aleksandr Ballod,M_OEM_AWPC,1979-08-17,140+,M,B,Multi-ply,Yes,146,Russia,,,,,,270,-285,-285,,270,,,,,,270,1
-Anastasiya Dzyuba,F_TR_1_AWPC,2003-10-13,44,F,D,Raw,Yes,43,Russia,,,,,,,,,,,-67.5,70,77.5,82.5,77.5,77.5,1
+Anastasiya Dzyuba,F_YR_AWPC,2003-10-13,44,F,D,Raw,Yes,43,Russia,,,,,,,,,,,-67.5,70,77.5,82.5,77.5,77.5,1
 Alina Sazonova,F_OR_AWPC,1988-10-08,44,F,D,Raw,Yes,43.6,Russia,,,,,,,,,,,-95,95,-100,,95,95,1
 Oksana Martinovich,F_JR_AWPC,1992-05-20,48,F,D,Raw,Yes,47.5,Russia,,,,,,,,,,,122.5,-130,-130,,122.5,122.5,1
 Natalya Krikunova,F_OR_AWPC,1981-07-19,48,F,D,Raw,Yes,46.3,Russia,,,,,,,,,,,120,-125,125,,125,125,1
@@ -732,7 +732,7 @@ Artur Gladyshchev,M_TR_2_AWPC,1996-12-19,60,M,D,Raw,Yes,59.7,Russia,,,,,,,,,,,-1
 Islam Misostishkhov,M_JR_AWPC,1991-07-15,60,M,D,Raw,Yes,59.7,Russia,,,,,,,,,,,200,-215,215,-217.5,215,215,1
 Viktor Stanovskiy,M_OR_AWPC,1999-11-10,60,M,D,Raw,Yes,57.7,Moldova,,,,,,,,,,,130,-140,-140,,130,130,1
 Oleg Dvoynikov,M_MR_3_AWPC,1960-10-08,60,M,D,Raw,Yes,59.2,Russia,,,,,,,,,,,160,172.5,177.5,,177.5,177.5,1
-Viktor Fedotov,M_TR_1_AWPC,2002-01-21,67.5,M,D,Raw,Yes,66.2,Russia,,,,,,,,,,,-100,-100,100,,100,100,1
+Viktor Fedotov,M_YR_AWPC,2002-01-21,67.5,M,D,Raw,Yes,66.2,Russia,,,,,,,,,,,-100,-100,100,,100,100,1
 Igor Zverev,M_TR_2_AWPC,1997-07-18,67.5,M,D,Raw,Yes,65.7,Russia,,,,,,,,,,,-165,-165,-165,,,,DQ
 Mark Borisov,M_TR_3_AWPC,1996-06-25,67.5,M,D,Raw,Yes,67,Russia,,,,,,,,,,,-217.5,-217.5,217.5,-225,217.5,217.5,1
 Ruslan Rakhmanov,M_TR_3_AWPC,1995-08-24,67.5,M,D,Raw,Yes,67.3,Russia,,,,,,,,,,,-190,205,217.5,218,217.5,217.5,2

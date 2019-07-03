@@ -1,13 +1,13 @@
 Name,Age,Equipment,Sex,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event
-Minna Kousa,39,Multi-ply,F,F_OM_APF,73.4,75,190,205,-215,,205,107.5,115,-120,,115,150,165,170,,170,490,1,SBD
-Vesa Nissilä,54,Multi-ply,M,M_M3_APF,110.9,125,-250,250,270,,270,165,175,185,,185,205,-225,225,,225,680,1,SBD
-Pasi Koukkula,45,Multi-ply,M,M_M2_APF,87.8,90,200,,,,200,135,145,,,145,265,290.5,-300,,290.5,635.5,1,SBD
-Antti Hämäläinen,43,Multi-ply,M,M_M1_APF,90,90,290,-310,-310,,290,185,-200,-200,,185,270,290,-305,,290,765,1,SBD
-Jonne Fräntilä,29,Multi-ply,M,M_OM_APF,67.3,67.5,230,245,255,,255,170,180,-190,,180,200,215,230,,230,665,1,SBD
-Janne Nissilä,25,Multi-ply,M,M_OM_APF,90,90,225,-255,267.5,,267.5,185,-200,-200,,185,220,-247.5,-247.5,,220,672.5,1,SBD
-Oskari Lehtinen,27,Multi-ply,M,M_OM_APF,99.5,100,415,435,-450,,435,-300,300,,,300,310,330,-335,,330,1065,1,SBD
-Jani Lantiainen,30,Multi-ply,M,M_OM_APF,93.2,100,375,400,-420,,400,-260,260,-270,,260,310,340,-350,,340,1000,2,SBD
-Pauli Rahkonen,30,Multi-ply,M,M_OM_APF,124.1,125,400,420,440,,440,330,345,,,345,-315,315,335,,335,1120,1,SBD
+Minna Kousa,39,Multi-ply,F,F_OEM_APF,73.4,75,190,205,-215,,205,107.5,115,-120,,115,150,165,170,,170,490,1,SBD
+Vesa Nissilä,54,Multi-ply,M,M_MEM_3_APF,110.9,125,-250,250,270,,270,165,175,185,,185,205,-225,225,,225,680,1,SBD
+Pasi Koukkula,45,Multi-ply,M,M_MEM_2_APF,87.8,90,200,,,,200,135,145,,,145,265,290.5,-300,,290.5,635.5,1,SBD
+Antti Hämäläinen,43,Multi-ply,M,M_MEM_1_APF,90,90,290,-310,-310,,290,185,-200,-200,,185,270,290,-305,,290,765,1,SBD
+Jonne Fräntilä,29,Multi-ply,M,M_OEM_APF,67.3,67.5,230,245,255,,255,170,180,-190,,180,200,215,230,,230,665,1,SBD
+Janne Nissilä,25,Multi-ply,M,M_OEM_APF,90,90,225,-255,267.5,,267.5,185,-200,-200,,185,220,-247.5,-247.5,,220,672.5,1,SBD
+Oskari Lehtinen,27,Multi-ply,M,M_OEM_APF,99.5,100,415,435,-450,,435,-300,300,,,300,310,330,-335,,330,1065,1,SBD
+Jani Lantiainen,30,Multi-ply,M,M_OEM_APF,93.2,100,375,400,-420,,400,-260,260,-270,,260,310,340,-350,,340,1000,2,SBD
+Pauli Rahkonen,30,Multi-ply,M,M_OEM_APF,124.1,125,400,420,440,,440,330,345,,,345,-315,315,335,,335,1120,1,SBD
 Outi Myllykoski,26,Raw,F,F_OR_APF,59.9,60,95,-102.5,107.5,,107.5,72.5,80,-82.5,,80,110,115,122.5,,122.5,310,1,SBD
 Raimo Sjögren,72,Raw,M,M_MR_7_APF,101.6,110,120,130,140,,140,70,75,-80,,75,140,155,170,,170,385,1,SBD
 Billy Haavisto,51,Raw,M,M_MR_3_APF,113,125,210,230,-240,,230,180,192.5,,,192.5,270,275,,,275,697.5,1,SBD
@@ -45,13 +45,13 @@ Jouko Laine,32,Wraps,M,M_OCR_APF,95.4,100,170,180,185,,185,115,120,125,,125,190,
 Eduard Khanjyan,31,Wraps,M,M_OCR_APF,108.4,110,380,400,-410,,400,210,-217.5,,,210,320,-340,-342.5,,320,930,1,SBD
 Ville Suominen,34,Wraps,M,M_OCR_APF,107.9,110,310,330,-335,,330,175,180,185,,185,305,315,320,,320,835,2,SBD
 Samuli Ketola,24,Wraps,M,M_OCR_APF,119.8,125,-300,,,,,,,,,,,,,,,,DQ,SBD
-Tapio Laine,64,Multi-ply,M,M_MM_5_APF,123.3,125,,,,,,-240,-240,240,,240,,,,,,240,1,B
-Reijo Marin,57,Multi-ply,M,M_MM_4_APF,109.6,110,,,,,,-200,200,,,200,,,,,,200,1,B
-Jarno Rajala,43,Multi-ply,M,M_MM_1_APF,140.2,140+,,,,,,275,285,,,285,,,,,,285,1,B
-Arttu Wahlström,30,Multi-ply,M,M_OM_APF,81.2,82.5,,,,,,200,-210,-218,,200,,,,,,200,1,B
-Mikko Matikainen,27,Multi-ply,M,M_OM_APF,100,100,,,,,,210,217.5,-225,,217.5,,,,,,217.5,1,B
-Janne Nissilä,25,Multi-ply,M,M_OM_APF,92.9,100,,,,,,-190,190,-202.5,,190,,,,,,190,2,B
-Petteri Hosio Henrik,37,Multi-ply,M,M_OM_APF,108.9,110,,,,,,-342.5,-342.5,-342.5,,,,,,,,,DQ,B
+Tapio Laine,64,Multi-ply,M,M_MEM_5_APF,123.3,125,,,,,,-240,-240,240,,240,,,,,,240,1,B
+Reijo Marin,57,Multi-ply,M,M_MEM_4_APF,109.6,110,,,,,,-200,200,,,200,,,,,,200,1,B
+Jarno Rajala,43,Multi-ply,M,M_MEM_1_APF,140.2,140+,,,,,,275,285,,,285,,,,,,285,1,B
+Arttu Wahlström,30,Multi-ply,M,M_OEM_APF,81.2,82.5,,,,,,200,-210,-218,,200,,,,,,200,1,B
+Mikko Matikainen,27,Multi-ply,M,M_OEM_APF,100,100,,,,,,210,217.5,-225,,217.5,,,,,,217.5,1,B
+Janne Nissilä,25,Multi-ply,M,M_OEM_APF,92.9,100,,,,,,-190,190,-202.5,,190,,,,,,190,2,B
+Petteri Hosio Henrik,37,Multi-ply,M,M_OEM_APF,108.9,110,,,,,,-342.5,-342.5,-342.5,,,,,,,,,DQ,B
 Maiju Hilander,59,Raw,F,F_MR_4_APF,73.6,75,,,,,,60,70,75,,75,,,,,,75,1,B
 Johanna Bies,45,Raw,F,F_MR_2_APF,59,60,,,,,,-100.5,-100.5,-100.5,,,,,,,,,DQ,B
 Mira Mustonen,46,Raw,F,F_MR_2_APF,74.4,75,,,,,,85,95,100,,100,,,,,,100,1,B
@@ -99,15 +99,15 @@ Eduard Khanjyan,31,Raw,M,M_OR_APF,113.5,125,,,,,,205,215,-220,,215,,,,,,215,1,B
 Timo Seppänen,41,Raw,M,M_OR_APF,115.2,125,,,,,,200,-215,215,-220,215,,,,,,215,2,B
 Tero Vuorio,36,Raw,M,M_OR_APF,123.9,125,,,,,,150,165,-180,,165,,,,,,165,3,B
 Jussi Kananen,32,Raw,M,M_OR_APF,150.6,140+,,,,,,180,190,-192.5,,190,,,,,,190,1,B
-Seppo Laukkanen,54,Single-ply,M,M_MS_3_APF,105.3,110,,,,,,,,,,,280,290,-296,,290,290,1,D
-Miikka Heikkinen,41,Single-ply,M,M_MS_1_APF,110.8,125,,,,,,,,,,,305.5,320,-325,,320,320,1,D
+Seppo Laukkanen,54,Single-ply,M,M_MES_3_APF,105.3,110,,,,,,,,,,,280,290,-296,,290,290,1,D
+Miikka Heikkinen,41,Single-ply,M,M_MES_1_APF,110.8,125,,,,,,,,,,,305.5,320,-325,,320,320,1,D
 Maiju Hilander,59,Raw,F,F_MR_4_APF,73.6,75,,,,,,,,,,,150,160,170,,170,170,1,D
 Leena Stålstedt,48,Raw,F,F_MR_2_APF,78.8,82.5,,,,,,,,,,,120,-155,,,120,120,1,D
 Natalia Gadolin,23,Raw,F,F_JR_APF,93.5,90+,,,,,,,,,,,150,170,-175,,170,170,1,D
 Carolina Aftab,33,Raw,F,F_OR_APF,58.7,60,,,,,,,,,,,115,125,-135,,125,125,1,D
 Sanna Purhonen,31,Raw,F,F_OR_APF,65,67.5,,,,,,,,,,,160,170,-182.5,,170,170,1,D
 Leena Stålstedt,48,Raw,F,F_OR_APF,78.8,82.5,,,,,,,,,,,120,-155,,,120,120,1,D
-Kauko Viitala,78,Raw,M,M_M8_R_APF,80.9,82.5,,,,,,,,,,,140,150,-155,,150,150,1,D
+Kauko Viitala,78,Raw,M,M_MR_8_APF,80.9,82.5,,,,,,,,,,,140,150,-155,,150,150,1,D
 Aimo Mursu,74,Raw,M,M_MR_7_APF,81.7,82.5,,,,,,,,,,,160,175,185,,185,185,1,D
 Rane Ovaska,56,Raw,M,M_MR_4_APF,81,82.5,,,,,,,,,,,200,215,-222.5,,215,215,1,D
 Jere Marttila,55,Raw,M,M_MR_4_APF,96.7,100,,,,,,,,,,,170,190,200,,200,200,1,D

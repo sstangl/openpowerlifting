@@ -1,15 +1,15 @@
 Name,Age,Division,Event,Equipment,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Team,Place
 Cosette Neely,37,F_SES_APF,B,Single-ply,F,43.8,44,,,,,,,,,92.5,,,,,,92.5,,1
-Kristin Floreno,33,F_OES_APF,SBD,Multi-ply,F,46.8,48,,,,85,,,,,52.5,,,,,90,227.5,,1
-Kristin Floreno,33,F_SES_APF,SBD,Multi-ply,F,46.8,48,,,,85,,,,,52.5,,,,,90,227.5,,1
+Kristin Floreno,33,F_OEM_APF,SBD,Multi-ply,F,46.8,48,,,,85,,,,,52.5,,,,,90,227.5,,1
+Kristin Floreno,33,F_SEM_APF,SBD,Multi-ply,F,46.8,48,,,,85,,,,,52.5,,,,,90,227.5,,1
 Kerri Hurlock,17,F_TES_2_APF,SBD,Single-ply,F,50.4,52,,,,57.5,,,,,32.5,,,,,70,160,,1
-Caitlin Nathalie-Sullivan,24,F_MES_APF,SBD,Multi-ply,F,74.4,75,,,,227.5,,,,,105,,,,,182.5,515,,1
+Caitlin Nathalie-Sullivan,24,F_OES_APF,SBD,Multi-ply,F,74.4,75,,,,227.5,,,,,105,,,,,182.5,515,,1
 Joan Hurlock,49,F_MES_2_APF,B,Single-ply,F,69.2,75,,,,,,,,,57.5,,,,,,57.5,,1
 Joan Hurlock,49,F_MES_2_APF,D,Single-ply,F,69.2,75,,,,,,,,,,,,,,105,105,,1
 Joan Hurlock,49,F_MES_2_APF,SBD,Single-ply,F,69.2,75,,,,85,,,,,57.5,,,,,105,247.5,,1
 Krista Ford,48,F_MEM_2_APF,SBD,Multi-ply,F,82.5,82.5,,,,237.5,,,,,110,,,,,192.5,540,,1
 Abigail Mass,17,F_TEM_2_APF,SBD,Multi-ply,F,88,90,,,,182.5,,,,,87.5,,,,,132.5,402.5,,1
-Linda Koos,60,F_MEM_5_APF,B,Multi-ply,F,96.8,100,,,,,,,,,47.5,,,,,,47.5,,1
+Linda Koos,60,F_MEM_5_APF,B,Multi-ply,F,96.8,90+,,,,,,,,,47.5,,,,,,47.5,,1
 Jason Gonzales,22,M_JES_APF,SBD,Single-ply,M,65.2,67.5,,,,182.5,,,,,137.5,,,,,182.5,502.5,,1
 Ed Castaneda,23,M_JES_APF,SBD,Single-ply,M,81.4,82.5,,,,222.5,,,,,137.5,,,,,205,565,,1
 Zach Hallford,18,M_TES_3_APF,SBD,Single-ply,M,94.4,100,,,,277.5,,,,,190,,,,,232.5,700,,1
@@ -28,13 +28,13 @@ Dustin Timothy Johnson,27,M_OEM_APF,SBD,Multi-ply,M,99,100,332.5,-352.5,352.5,35
 Fred Choate,45,M_MEM_2_APF,SBD,Multi-ply,M,88,90,-172.5,-192.5,192.5,192.5,-125,-125,125,,125,172.5,182.5,192.5,,192.5,510,Team Fua Ortiz Powerlifting,1
 Gary Reichert,55,M_MEM_4_APF,SBD,Multi-ply,M,70.4,75,-205,205,-227.5,205,100,142.5,147.5,,147.5,200,237.5,-250,,237.5,590,,1
 Jim Grandick,46,M_MEM_2_APF,SBD,Multi-ply,M,122.6,125,432.5,445,-455,445,330,-345,345,,345,305,-327.5,327.5,,327.5,1117.5,Big Iron Compound,1
-Jim Grandick,46,M_OES_APF,SBD,Multi-ply,M,122.6,125,432.5,445,-455,445,330,-345,345,,345,305,-327.5,327.5,,327.5,1117.5,Big Iron Compound,1
+Jim Grandick,46,M_OEM_APF,SBD,Multi-ply,M,122.6,125,432.5,445,-455,445,330,-345,345,,345,305,-327.5,327.5,,327.5,1117.5,Big Iron Compound,1
 Joe Mass #2,45,M_MEM_2_APF,SBD,Multi-ply,M,124.2,125,-310,-310,310,310,195,-205,205,,205,227.5,242.5,250,,250,765,Big Iron Compound,2
 Matt Olsen,25,M_OES_APF,SBD,Single-ply,M,158,140+,365,385,-400,385,-245,-245,245,,245,-292.5,292.5,-310,,292.5,922.5,Absolute Power,1
 Mike Strom,35,M_OEM_APF,SBD,Multi-ply,M,81.6,82.5,345,365,-372.5,365,275,-292.5,-292.5,,275,227.5,250,-267.5,,250,890,Monster Garage Gym,1
 Mitchell Deskis,24,M_OES_APF,SBD,Single-ply,M,81.6,82.5,245,260,277.5,277.5,147.5,157.5,-165,,157.5,275,285,-295,,285,720,,1
 Ryan Marble,28,M_OES_APF,SBD,Single-ply,M,89,90,252.5,-265,265,265,220,235,245,,245,-237.5,-237.5,237.5,,237.5,747.5,Brutal Powerlifting,1
-Scott Kuderick,41,M_OES_APF,SBD,Multi-ply,M,90,90,-305,305,,305,160,,,,160,222.5,245,-272.5,,245,710,Liberation Garage Barbell,1
+Scott Kuderick,41,M_OEM_APF,SBD,Multi-ply,M,90,90,-305,305,,305,160,,,,160,222.5,245,-272.5,,245,710,Liberation Garage Barbell,1
 Steve Brock,44,M_MEM_1_APF,SBD,Multi-ply,M,138,140,-422.5,-422.5,-422.5,,-295,,,,,,,,,,,Monster Garage Gym,DQ
 Steve Brock,44,M_OEM_APF,SBD,Multi-ply,M,138,140,-422.5,-422.5,-422.5,,-295,,,,,,,,,,,Monster Garage Gym,DQ
 Aaron Chavez,42,M_MES_1_APF,D,Single-ply,M,145,140+,,,,,,,,,,287.5,300,-318,,300,300,,1
@@ -45,7 +45,7 @@ Chris McGrail,36,M_OES_APF,D,Single-ply,M,82.1,82.5,,,,,,,,,,-300,300,312.5,-320
 Dana Walker,38,M_OEM_APF,D,Multi-ply,M,80.2,82.5,,,,,,,,,,-252.5,252.5,-275,,252.5,252.5,Brutal Powerlifting,2
 Dick Zenzen,63,M_MEM_5_APF,D,Multi-ply,M,113.8,125,,,,,,,,,,195,210,,,210,210,Zenzen Barbell,1
 Dustin Slepicka,28,M_OEM_APF,D,Multi-ply,M,181,140+,,,,,,,,,,345,-377.5,,,345,345,Big Iron Compound,1
-Greg Ripley,54,M_MEM_3_APF,D,Single-ply,M,75,75,,,,,,,,,,-190,,,,,,Motor City Barbell,DQ
+Greg Ripley,54,M_MES_3_APF,D,Single-ply,M,75,75,,,,,,,,,,-190,,,,,,Motor City Barbell,DQ
 Jake Jensen,25,M_OES_APF,D,Single-ply,M,108.4,110,,,,,,,,,,295,-300,-300,,295,295,,1
 Lance Davis,48,M_MES_2_APF,D,Single-ply,M,109,110,,,,,,,,,,227.5,-250,-250,,227.5,227.5,Brutal Powerlifting,1
 Michael Deskis,56,M_MES_4_APF,D,Single-ply,M,66,67.5,,,,,,,,,,237.5,-247.5,-247.5,,237.5,237.5,,1

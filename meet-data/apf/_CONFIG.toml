@@ -70,6 +70,7 @@
     mscrapf = {name ="M_SCR_APF",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
     mssapf = {name ="M_SES_APF",min=33,max=39,equipment="Single-ply",sex="M"}
     msmapf = {name ="M_SEM_APF",min=33,max=39,equipment="Multi-ply",sex="M"}
+    myrapf = {name ="M_YR_APF",min=0,max=12,equipment="Raw",sex="M"} #Youth
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -139,6 +140,7 @@
     fscrapf = {name ="F_SCR_APF",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fssapf = {name ="F_SES_APF",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmapf = {name ="F_SEM_APF",min=33,max=39,equipment="Multi-ply",sex="F"}
+    fyrapf = {name ="F_YR_APF",min=0,max=12,equipment="Raw",sex="F"} #Youth
 
     # AAPF Divisions.
     moraapf = {name ="M_OR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -209,6 +211,7 @@
     mscraapf = {name ="M_SCR_AAPF",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssaapf = {name ="M_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmaapf = {name ="M_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
+    myraapf = {name ="M_YR_AAPF",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
 
     foraapf = {name ="F_OR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focraapf = {name ="F_OCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -278,6 +281,7 @@
     fscraapf = {name ="F_SCR_AAPF",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssaapf = {name ="F_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmaapf = {name ="F_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
+    fyraapf = {name ="F_YR_AAPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
@@ -348,6 +352,7 @@
     mscrwpc = {name ="M_SCR_WPC",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
     msswpc = {name ="M_SES_WPC",min=33,max=39,equipment="Single-ply",sex="M"}
     msmwpc = {name ="M_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="M"}
+    myrwpc = {name ="M_YR_WPC",min=0,max=12,equipment="Raw",sex="M"} #Youth
 
     forwpc = {name ="F_OR_WPC",min=0,max=999,equipment="Raw",sex="F"}
     focrwpc = {name ="F_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -417,8 +422,9 @@
     fscrwpc = {name ="F_SCR_WPC",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fsswpc = {name ="F_SES_WPC",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="F"}
+    fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
 
-    # AAPF Divisions.
+    # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
     mocrawpc = {name ="M_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mosawpc = {name ="M_OES_AWPC",min=0,max=999,equipment="Single-ply",sex="M",tested="Yes"}
@@ -487,6 +493,8 @@
     mscrawpc = {name ="M_SCR_AWPC",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssawpc = {name ="M_SES_AWPC",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmawpc = {name ="M_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
+    myrawpc = {name ="M_YR_AWPC",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
+    mycrawpc = {name ="M_YCR_AWPC",min=0,max=12,equipment="Wraps",sex="M",tested="Yes"} #Youth
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -556,15 +564,20 @@
     fscrawpc = {name ="F_SCR_AWPC",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssawpc = {name ="F_SES_AWPC",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmawpc = {name ="F_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
+    fyrawpc = {name ="F_YR_AWPC",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
 
     #Misc
     mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
+    mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
     mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
     fnrapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
     mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
     fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
     mcemapf = {name ="M_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Collegiate
     fcemapf = {name ="F_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Collegiate
+    msorapf = {name ="M_SOR_APF",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
+    msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
+
     m4049 = {name ="M 40-49",min=40,max=49}
     m5059 = {name ="M 50-59",min=50,max=59}
     m6069 = {name ="M 60-69",min=60,max=69}
