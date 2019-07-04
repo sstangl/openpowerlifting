@@ -71,6 +71,18 @@
     mssapf = {name ="M_SES_APF",min=33,max=39,equipment="Single-ply",sex="M"}
     msmapf = {name ="M_SEM_APF",min=33,max=39,equipment="Multi-ply",sex="M"}
     myrapf = {name ="M_YR_APF",min=0,max=12,equipment="Raw",sex="M"} #Youth
+    mycrapf = {name ="M_YCR_APF",min=0,max=12,equipment=["Raw","Wraps"],sex="M"} #Youth
+    myemapf = {name ="M_YEM_APF",min=0,max=12,equipment="Multi-ply",sex="M"} #Youth
+    msoemapf = {name ="M_SOEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Special Olympics
+    msorapf = {name ="M_SOR_APF",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
+    mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
+    mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
+    fnrapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
+    mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
+    mcemapf = {name ="M_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Collegiate
+    mgrapf = {name ="M_GR_APF",min=0,max=999,equipment="Raw",sex="M",place="G"} #Guest
+    mgemapf = {name ="M_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="M",place="G"} #Guest
+
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -141,6 +153,12 @@
     fssapf = {name ="F_SES_APF",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmapf = {name ="F_SEM_APF",min=33,max=39,equipment="Multi-ply",sex="F"}
     fyrapf = {name ="F_YR_APF",min=0,max=12,equipment="Raw",sex="F"} #Youth
+    fycrapf = {name ="F_YCR_APF",min=0,max=12,equipment=["Raw","Wraps"],sex="F"} #Youth
+    fyemapf = {name ="F_YEM_APF",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
+    fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
+    fcemapf = {name ="F_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Collegiate
+    fsorapf = {name ="F_SOR_APF",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
+    fgemapf = {name ="F_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="F",place="G"} #Guest
 
     # AAPF Divisions.
     moraapf = {name ="M_OR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -212,6 +230,14 @@
     mssaapf = {name ="M_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmaapf = {name ="M_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
     myraapf = {name ="M_YR_AAPF",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
+    myemaapf = {name ="M_YEM_AAPF",min=0,max=12,equipment="Multi-ply",sex="M",tested="Yes"} #Youth
+    msoemaapf = {name ="M_SOEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Special Olympics
+    msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
+    mpfraapf = {name ="M_PFR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Police/Fire
+    mpfemaapf = {name ="M_PFEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
+    mnemaapf = {name ="M_NEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Novice
+    mnraapf = {name ="M_NR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Novice
+    mgraapf = {name ="M_GR_AAPF",min=0,max=999,equipment="Raw",sex="M",place="G",tested="Yes"} #Guest
 
     foraapf = {name ="F_OR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focraapf = {name ="F_OCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -282,6 +308,7 @@
     fssaapf = {name ="F_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmaapf = {name ="F_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
     fyraapf = {name ="F_YR_AAPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
+    fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
@@ -353,6 +380,9 @@
     msswpc = {name ="M_SES_WPC",min=33,max=39,equipment="Single-ply",sex="M"}
     msmwpc = {name ="M_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="M"}
     myrwpc = {name ="M_YR_WPC",min=0,max=12,equipment="Raw",sex="M"} #Youth
+    myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="M"} #Youth
+    mpfrwpc = {name ="M_PFR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
+    msorwpc = {name ="M_SOR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
 
     forwpc = {name ="F_OR_WPC",min=0,max=999,equipment="Raw",sex="F"}
     focrwpc = {name ="F_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -495,6 +525,8 @@
     msmawpc = {name ="M_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
     myrawpc = {name ="M_YR_AWPC",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
     mycrawpc = {name ="M_YCR_AWPC",min=0,max=12,equipment="Wraps",sex="M",tested="Yes"} #Youth
+    myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment="Multi-ply",sex="M",tested="Yes"} #Youth
+    mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -567,17 +599,6 @@
     fyrawpc = {name ="F_YR_AWPC",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
 
     #Misc
-    mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Police/Fire
-    mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
-    mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
-    fnrapf = {name ="F_NR_APF",min=0,max=999,equipment="Raw",sex="F"} #Novice
-    mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Novice
-    fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
-    mcemapf = {name ="M_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="M"} #Collegiate
-    fcemapf = {name ="F_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Collegiate
-    msorapf = {name ="M_SOR_APF",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
-    msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
-
     m4049 = {name ="M 40-49",min=40,max=49}
     m5059 = {name ="M 50-59",min=50,max=59}
     m6069 = {name ="M 60-69",min=60,max=69}
@@ -598,8 +619,30 @@
 
 [exemptions]
     0803 = ["ExemptDivision"] # LW and HW
-    0913 = ["ExemptDivision"] # Different High School divisions
+    0913 = ["ExemptDivision","ExemptWeightClassConsistency"] # Different High School divisions,Mens 90+
     1758 = ["ExemptAge"] # Guest lifter of age 4.
     1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
     1702 = ["ExemptDivision"] # Different High School divisions
     1847 = ["ExemptDivision"] # WPO
+    0701 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1101 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1401 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1710 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1701 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1305 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0607 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1853 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1306 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0703 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1716 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1008 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0608 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1502 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0914 = ["ExemptWeightClassConsistency"] # April Mathis in 125 class with no BW
+    1404 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0721 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1301 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    1709 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    0506 = ["ExemptWeightClassConsistency"] # Sidney Thoms in 110 class with no BW
+    0702 = ["ExemptWeightClassConsistency"] # A Forezzi in 48 class with no BW
+    0402 = ["ExemptWeightClassConsistency"] # Missing weightclasses

@@ -1,6 +1,6 @@
 Name,Age,State,Sex,WeightClassKg,BodyweightKg,Equipment,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Place
 Samantha Clements,25,UT,F,56,54.6,Wraps,F_OCR_AAPF,80,35,100,215,SBD,1
-Ryan Marble,29,UT,M,100,97,Multi-ply,M_OM_APF,,,,,B,DQ
+Ryan Marble,29,UT,M,100,97,Multi-ply,M_OEM_APF,,,,,B,DQ
 Dillan Mart,19,UT,M,60,57.2,Raw,M_TR_3_APF,,,165,165,D,1
 Brady McBride,18,UT,M,67.5,63.6,Raw,M_TR_3_AAPF,,102.5,,102.5,B,1
 Brady McBride,18,UT,M,67.5,63.6,Raw,M_TR_3_APF,,102.5,,102.5,B,1
@@ -11,7 +11,7 @@ Emilee White,20,UT,F,75,68,Raw,F_JR_APF,85,52.5,102.5,240,SBD,1
 Jason Worthen,40,UT,M,125,114.8,Raw,M_MR_1_APF,,175,250,425,BD,1
 Jason Worthen,40,UT,M,125,114.8,Raw,M_MR_1_AAPF,,175,250,425,BD,1
 Josh Campbell,28,UT,M,110,102.4,Wraps,M_OCR_APF,215,165,257.5,637.5,SBD,1
-Sue Kennedy,42,UT,F,125,117.4,Raw,F_MR_1_APF,142.5,110,182.5,435,SBD,1
+Sue Kennedy,42,UT,F,90+,117.4,Raw,F_MR_1_APF,142.5,110,182.5,435,SBD,1
 Crystal Moulton,36,UT,F,67.5,61,Raw,F_SR_APF,110,60,125,295,SBD,1
 Derek Reasch,22,UT,M,125,114.6,Wraps,M_OCR_APF,227.5,182.5,252.5,662.5,SBD,1
 Derek Reasch,22,UT,M,125,114.6,Wraps,M_OCR_AAPF,227.5,182.5,252.5,662.5,SBD,1
@@ -19,10 +19,10 @@ Derek Reasch,22,UT,M,125,114.6,Wraps,M_JCR_APF,227.5,182.5,252.5,662.5,SBD,1
 Derek Reasch,22,UT,M,125,114.6,Wraps,M_JCR_AAPF,227.5,182.5,252.5,662.5,SBD,1
 Karl Pfanzelter,45,UT,M,100,94.6,Raw,M_MR_2_APF,,220,,220,B,1
 Jason Gonzalez,23,UT,M,67.5,63.4,Raw,M_JR_APF,185,140,195,520,SBD,1
-Rubecca Koning,75,UT,F,75,73.2,Raw,F_MR_6_APF,40,25,62.5,127.5,SBD,1
+Rubecca Koning,75,UT,F,75,73.2,Raw,F_MR_8_APF,40,25,62.5,127.5,SBD,1
 Lynndsey Eldridge,28,UT,F,67.5,60.2,Wraps,F_OCR_APF,110,70,137.5,317.5,SBD,1
 Christy James,39,ID,F,90,84.4,Raw,F_OR_AAPF,110,55,145,310,SBD,1
-Scott Mecham,37,UT,M,110,109.6,Single-ply,M_OS_APF,,372.5,,372.5,B,1
+Scott Mecham,37,UT,M,110,109.6,Single-ply,M_OES_APF,,372.5,,372.5,B,1
 Richard Weaver,49,UT,M,82.5,81,Wraps,M_MCR_2_APF,127,100,170,397,SBD,1
 Richard Weaver,49,UT,M,82.5,81,Wraps,M_MCR_2_AAPF,127,100,170,397,SBD,1
 Devon Parcell,36,UT,M,100,96.2,Raw,M_SR_APF,207.5,152.5,227.5,587.5,SBD,1
@@ -35,7 +35,7 @@ Morgan Taylor #1,19,UT,F,67.5,62.2,Raw,F_TR_3_AAPF,127.5,60,152.5,340,SBD,1
 Maurice Van Dinter,21,UT,M,82.5,81.4,Raw,M_JR_APF,257.5,127.5,250,635,SBD,1
 Brian Saxton,37,UT,M,140+,156.6,Raw,M_SR_APF,257.5,157.5,245,660,SBD,1
 Ethan Radin,24,ID,M,75,73.4,Raw,M_OR_AAPF,175,125,227.5,527.5,SBD,1
-Amy Evans,26,UT,F,67.5,65.4,Single-ply,F_OS_APF,,,125,125,D,1
+Amy Evans,26,UT,F,67.5,65.4,Single-ply,F_OES_APF,,,125,125,D,1
 Tayler Claflin,17,WY,F,67.5,66.6,Raw,F_TR_2_APF,115,82.5,140,337.5,SBD,1
 Daniel Lu,27,UT,M,,,Wraps,M_OCR_APF,,,,,SBD,NS
 Brody Ellis,19,UT,M,100,95.2,Wraps,M_TCR_3_APF,290,165,287.5,742.5,SBD,1
@@ -49,22 +49,22 @@ Jake Benson,22,UT,M,90,87.2,Raw,M_JR_APF,217.5,145,262.5,625,SBD,1
 Terry Vogel,43,UT,M,100,97.4,Raw,M_MR_1_APF,152.5,,,,SBD,DQ
 Terry Vogel,43,UT,M,100,97.4,Raw,M_OR_APF,152.5,,,,SBD,DQ
 Houstin Schroff,20,UT,M,90,88.2,Raw,M_JR_APF,160,122.5,210,492.5,SBD,2
-David Woolley,35,ID,M,125,120.6,Multi-ply,M_SM_APF,310,200,295,805,SBD,1
+David Woolley,35,ID,M,125,120.6,Multi-ply,M_SEM_APF,310,200,295,805,SBD,1
 Joshua LaRe,19,UT,M,67.5,65.4,Raw,M_TR_3_AAPF,137.5,92.5,172.5,402.5,SBD,1
 Joey Hollinger,20,UT,M,100,97,Raw,M_JR_AAPF,145,80,200,425,SBD,1
-Jason Levin,38,UT,M,110,108,Raw,M_SM_APF,210,150,230,590,SBD,1
+Jason Levin,38,UT,M,110,108,Raw,M_SR_APF,210,150,230,590,SBD,1
 Dallin Scuggs,25,UT,M,82.5,82,Raw,M_OR_AAPF,155,132.5,215,502.5,SBD,2
 Chris McGrail,37,UT,M,82.5,82.14,Raw,M_OR_APF,,,320,320,D,1
-Chris McGrail,37,UT,M,82.5,82.14,Single-ply,M_OS_APF,,,320,320,D,1
-Chris McGrail,37,UT,M,82.5,82.14,Multi-ply,M_OM_APF,,,320,320,D,1
+Chris McGrail,37,UT,M,82.5,82.14,Single-ply,M_OES_APF,,,320,320,D,1
+Chris McGrail,37,UT,M,82.5,82.14,Multi-ply,M_OEM_APF,,,320,320,D,1
 Hayden Brown,17,UT,M,100,97.8,Raw,M_TR_2_AAPF,165,115,210,490,SBD,1
 Hunter Brown,15,UT,M,67.5,65.8,Raw,M_TR_1_AAPF,127.5,75,150,352.5,SBD,1
 Vickie Shaw,40,UT,F,67.5,63.2,Raw,F_MR_1_AAPF,,,142.5,142.5,D,1
 David Martinez #16,31,UT,M,82.5,80.2,Raw,M_OR_AAPF,197.5,125,200,522.5,SBD,1
-Mike Saunders,36,UT,M,110,108.2,Single-ply,M_OS_AAPF,,,,,B,DQ
+Mike Saunders,36,UT,M,110,108.2,Single-ply,M_OES_AAPF,,,,,B,DQ
 Alexis Holman,23,UT,F,75,69,Raw,F_JR_AAPF,105,62.5,122.5,290,SBD,1
-Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MS_3_APF,150,185,210,545,SBD,1
-Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MS_3_APF,,185,,185,B,1
-Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MS_3_APF,,,210,210,D,1
-Emilee Kennedy,12,UT,F,43,42.8,Raw,F_OR_AAPF,42.5,32.5,52.5,127.5,SBD,1
+Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MES_3_APF,150,185,210,545,SBD,1
+Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MES_3_APF,,185,,185,B,1
+Jon Cunningham,51,UT,M,75,73.4,Single-ply,M_MES_3_APF,,,210,210,D,1
+Emilee Kennedy,12,UT,F,44,42.8,Raw,F_OR_AAPF,42.5,32.5,52.5,127.5,SBD,1
 Raymond Case,14,UT,M,56,54.4,Raw,M_TR_1_AAPF,82.5,47.5,95,225,SBD,1
