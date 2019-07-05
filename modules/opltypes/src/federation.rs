@@ -298,6 +298,10 @@ pub enum Federation {
     #[strum(to_string = "FHSAA", serialize = "fhsaa")]
     FHSAA,
 
+    /// Federazione Italiana Atletica Pesante
+    #[strum(to_string = "FIAP", serialize = "fiap")]
+    FIAP,
+
     /// Federazione Italiana Powerlifting, IPF.
     #[strum(to_string = "FIPL", serialize = "fipl")]
     FIPL,
@@ -1080,6 +1084,7 @@ impl Federation {
             Federation::FESUPO => true,
             Federation::FFForce => true,
             Federation::FHSAA => true,
+            Federation::FIAP => true,
             Federation::FIPL => true,
             Federation::FPO => false,
             Federation::FPR => true,
@@ -1318,6 +1323,7 @@ impl Federation {
             Federation::FESUPO => None,
             Federation::FFForce => Some(Country::France),
             Federation::FHSAA => Some(Country::USA),
+            Federation::FIAP => Some(Country::Italy),
             Federation::FIPL => Some(Country::Italy),
             Federation::FPO => Some(Country::Finland),
             Federation::FPR => Some(Country::Russia),
@@ -1555,6 +1561,7 @@ impl Federation {
             Federation::FESUPO => Some(Federation::IPF),
             Federation::FFForce => Some(Federation::IPF),
             Federation::FHSAA => None,
+            Federation::FIAP => None,
             Federation::FIPL => Some(Federation::IPF),
             Federation::FPO => None,
             Federation::FPR => Some(Federation::IPF),
@@ -1809,6 +1816,7 @@ impl Federation {
             Federation::FESUPO => Federation::ipf_rules_on(date),
             Federation::FFForce => Federation::ipf_rules_on(date),
             Federation::FHSAA => PointsSystem::Wilks,
+            Federation::FIAP => Federation::ipf_rules_on(date),
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPR => Federation::ipf_rules_on(date),
