@@ -1,0 +1,15 @@
+[divisions] #These are a guess
+    open = {name ="Open",min=0,max=999}
+    disabled = {name ="Disabled",min=0,max=999}
+    juniors1721 = {name = "Juniors 17-21",min=17,max=21}
+    teen1316 = {name = "Teen 13-16",min=13,max=16}
+    masters50p = {name = "Masters 50+",min=50,max=999}
+
+
+[weightclasses.default_M]
+    classes = ["82.5","90","100","100+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "M"
+
+[exemptions]
+    1901 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.

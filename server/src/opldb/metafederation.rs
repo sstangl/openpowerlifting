@@ -29,6 +29,8 @@ pub enum MetaFederation {
     AllArgentina,
     #[strum(to_string = "all-australia")]
     AllAustralia,
+    #[strum(to_string = "all-belarus")]
+    AllBelarus,
     #[strum(to_string = "all-brazil")]
     AllBrazil,
     #[strum(to_string = "all-canada")]
@@ -191,6 +193,11 @@ impl MetaFederation {
                 entry.lifter_country == Some(Country::Australia)
                     || (entry.lifter_country == None
                         && meet.federation.home_country() == Some(Country::Australia))
+            }
+            MetaFederation::AllBelarus => {
+                entry.lifter_country == Some(Country::Belarus)
+                    || (entry.lifter_country == None
+                        && meet.federation.home_country() == Some(Country::Belarus))
             }
             MetaFederation::AllBrazil => {
                 entry.lifter_country == Some(Country::Brazil)

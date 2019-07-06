@@ -397,6 +397,12 @@ pub enum Federation {
     #[strum(to_string = "GRAWA", serialize = "grawa")]
     GRAWA,
 
+    /// GSF-Belarus, 
+    #[serde(rename = "GSF-Belarus")]
+    #[strum(to_string = "GSF-Belarus", serialize = "gsf-belarus")]
+    GSFBelarus,
+
+
     /// Defunct stand-alone US federation.
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
     Hardcore,
@@ -1109,6 +1115,7 @@ impl Federation {
             Federation::GPF => false,
             Federation::GPU => false,
             Federation::GRAWA => false,
+            Federation::GSFBelarus => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
             Federation::CroatiaUA => false,
@@ -1350,6 +1357,7 @@ impl Federation {
             Federation::GPF => None,
             Federation::GPU => Some(Country::Germany),
             Federation::GRAWA => Some(Country::Germany),
+            Federation::GSFBelarus => Some(Country::Belarus),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
             Federation::CroatiaUA => Some(Country::Croatia),
@@ -1589,6 +1597,7 @@ impl Federation {
             Federation::GPF => None,
             Federation::GPU => None,
             Federation::GRAWA => None,
+            Federation::GSFBelarus => None,
             Federation::Hardcore => None,
             Federation::HERC => None,
             Federation::CroatiaUA => None,
@@ -1845,6 +1854,7 @@ impl Federation {
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPU => PointsSystem::Wilks,
             Federation::GRAWA => PointsSystem::Wilks,
+            Federation::GSFBelarus => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
