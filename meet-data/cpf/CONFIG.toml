@@ -70,6 +70,8 @@
     mscrcpf = {name ="M_SCR_CPF",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
     msscpf = {name ="M_SES_CPF",min=33,max=39,equipment="Single-ply",sex="M"}
     msmcpf = {name ="M_SEM_CPF",min=33,max=39,equipment="Multi-ply",sex="M"}
+    myescpf = {name ="M_YES_CPF",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
+    myrcpf = {name ="M_YR_CPF",min=0,max=12,equipment="Raw",sex="M"} #Youth
 
 
     forcpf = {name ="F_OR_CPF",min=0,max=999,equipment="Raw",sex="F"}
@@ -140,6 +142,7 @@
     fscrcpf = {name ="F_SCR_CPF",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fsscpf = {name ="F_SES_CPF",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmcpf = {name ="F_SEM_CPF",min=33,max=39,equipment="Multi-ply",sex="F"}
+    fyrcpf = {name ="F_YR_CPF",min=0,max=12,equipment="Raw",sex="F"} #Youth
 
 
     # ACPF Divisions.
@@ -211,6 +214,7 @@
     mscracpf = {name ="M_SCR_ACPF",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssacpf = {name ="M_SES_ACPF",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmacpf = {name ="M_SEM_ACPF",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
+    myrcapf = {name ="M_YR_ACPF",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
 
     foracpf = {name ="F_OR_ACPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focracpf = {name ="F_OCR_ACPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -280,6 +284,7 @@
     fscracpf = {name ="F_SCR_ACPF",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssacpf = {name ="F_SES_ACPF",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmacpf = {name ="F_SEM_ACPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
+    fyrcapf = {name ="F_YR_ACPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -292,4 +297,10 @@
     sex = "F"
 
 [exemptions]
- 
+     1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1904 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1820 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1702 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1725 = ["ExemptWeightClassConsistency"] # Missing weightclasses
