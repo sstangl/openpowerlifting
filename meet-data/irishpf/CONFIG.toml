@@ -1,10 +1,12 @@
+# Configuration for the IrishPF.
+
 [divisions]
     # Men's Raw.
     mo = {name="M-O", min=0, max=999, equipment="Raw", sex="M"}
     mg = {name="M-G", min=0, max=999, equipment="Raw", sex="M", place="G"}
     msj = {name="M-SJ", min=0, max=19, equipment="Raw", sex="M"}
     mjr = {name="M-JR", min=20, max=23, equipment="Raw", sex="M"}
-    msr = {name="M-SR", min=24, max=34, equipment="Raw", sex="M"}
+    msr = {name="M-SR", min=24, max=34.5, equipment="Raw", sex="M"}
     mm1 = {name="M-M1", min=40, max=49, equipment="Raw", sex="M"}
     mm2 = {name="M-M2", min=50, max=59, equipment="Raw", sex="M"}
     mm3 = {name="M-M3", min=60, max=69, equipment="Raw", sex="M"}
@@ -14,7 +16,7 @@
 
     # Men's Equipped.
     me = {name="M-E", min=0, max=999, equipment="Single-ply", sex="M"}
-    msre = {name="M-SR-E", min=24, max=34, equipment="Single-ply", sex="M"}
+    msre = {name="M-SR-E", min=24, max=34.5, equipment="Single-ply", sex="M"}
     mu23ge = {name="M-U23-G-E", min=0, max=23, equipment="Single-ply", sex="M", place="G"}
 
     # Women's Raw.
@@ -22,7 +24,7 @@
     fg = {name="F-G", min=0, max=999, equipment="Raw", sex="F", place="G"}
     fsj = {name="F-SJ", min=0, max=19, equipment="Raw", sex="F"}
     fjr = {name="F-JR", min=20, max=23, equipment="Raw", sex="F"}
-    fsr = {name="F-SR", min=24, max=34, equipment="Raw", sex="F"}
+    fsr = {name="F-SR", min=24, max=34.5, equipment="Raw", sex="F"}
     fm1 = {name="F-M1", min=40, max=49, equipment="Raw", sex="F"}
     fm2 = {name="F-M2", min=50, max=59, equipment="Raw", sex="F"}
     fm3 = {name="F-M3", min=60, max=69, equipment="Raw", sex="F"}
