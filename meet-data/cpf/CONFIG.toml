@@ -1,5 +1,10 @@
 # Configuration for the CPF/ACPF.
 
+# Equipment is reported in the Division. For display, just respect Division.
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     # CPF Divisions.
     morcpf = {name ="M_OR_CPF",min=0,max=999,equipment="Raw",sex="M"}
@@ -284,7 +289,8 @@
     fscracpf = {name ="F_SCR_ACPF",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssacpf = {name ="F_SES_ACPF",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmacpf = {name ="F_SEM_ACPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
-    fyrcapf = {name ="F_YR_ACPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
+    fyracpf = {name ="F_YR_ACPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} # Youth
+    fpracpf = {name ="F_PR_ACPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} # Police/Military
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -297,10 +303,11 @@
     sex = "F"
 
 [exemptions]
-     1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1904 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1820 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1702 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses
-     1725 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+     1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1702 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1725 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1820 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1904 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+     1909 = ["ExemptWeightClassConsistency"] # Missing weight info for one lifter.
