@@ -112,10 +112,10 @@ def main():
     meetlist_AKL = getmeetlist_sporty_partial(html_AKL, "357445")
 
     html_NTL_NOV = oplprobe.gethtml(URL_NTL_NOV)
-    meetlist_NTL_NOV = []#getmeetlist_sporty_partial(html_NTL_NOV, "644298")
+    meetlist_NTL_NOV = []  # getmeetlist_sporty_partial(html_NTL_NOV, "644298")
 
     html_NTL = oplprobe.gethtml(URL_NTL)
-    meetlist_NTL = []#getmeetlist_sporty_partial(html_NTL, "675128")
+    meetlist_NTL = []  # getmeetlist_sporty_partial(html_NTL, "675128")
 
     html_OTA = oplprobe.gethtml(URL_OTA)
     meetlist_OTA = getmeetlist_sporty(html_OTA)
