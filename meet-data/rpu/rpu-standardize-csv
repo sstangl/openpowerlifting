@@ -80,7 +80,7 @@ def parse_sheetname(s):
         elif word == 'спр':  # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
-        elif word in ['gpa', 'gpa-ipo-d', 'gpa-ipo']:
+        elif word in ['gpa', 'gpa-ipo-d', 'gpa-ipo','ipo']:
             assert not federation
             federation = 'GPA'
 
@@ -302,7 +302,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['жим', 'жим 1', 'benchpress 1', 'жим макс кг 1',
-                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1']:
+                      'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1',
+                      'жим лёжа 1', 'жим лёжа 2', 'жим лёжа 3']:
             assert header[i + 1].lower() in ['2', 'bp2']
             assert header[i + 2].lower() in ['3', 'bp3']
             fieldnames.append('Bench1Kg')
@@ -422,6 +423,8 @@ def parse_sheet(sheet):
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
         return csv
     elif 'строгий' in title:  # curl
+        return csv
+    elif 'спр' in title: # Not powerlifting
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
@@ -606,7 +609,7 @@ def standardize_division_age(csv):
         elif 'открытая' in row[idx] or 'open' in row[idx] or 'o' in row[idx]:
             division = 'Open'
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
-            division = 'Juniors'
+            division = 'Juniors 20-23'
         elif 'девушки' in row[idx]:
             division = 'Girls'
         elif 'ветераны' in row[idx]:
