@@ -177,6 +177,12 @@ def getresults(soup):
                 csv.fieldnames += ['Team']
             elif h in ['Events', 'Event']:
                 csv.fieldnames += ['Event']
+            elif h == 'DivSex':
+                csv.fieldnames += ['Sex']
+            elif h == 'DivCat':
+                csv.fieldnames += ['IGNORE']
+            elif h == 'DivAge':
+                csv.fieldnames += ['IGNORE']
             elif h == 'Date':
                 csv.fieldnames += ['IGNORE']
             elif h == 'Meet':
