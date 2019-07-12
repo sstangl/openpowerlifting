@@ -1,10 +1,10 @@
 Place,Name,Age,Sex,Division,Equipment,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event
-1,Peter Bennett,77,M,M_MEM_3_APF,Multi-ply,90,88.5,155,80,185,420,SBD
-2,Dana Gillespie,66,M,M_MEM_3_APF,Multi-ply,100,98.9,255,60,230,545,SBD
+1,Peter Bennett,77,M,M_MEM_8_APF,Multi-ply,90,88.5,155,80,185,420,SBD
+2,Dana Gillespie,66,M,M_MEM_6_APF,Multi-ply,100,98.9,255,60,230,545,SBD
 3,James Banville,51,M,M_MEM_3_APF,Multi-ply,110,106.1,245,162.5,205,612.5,SBD
-4,Michael Wonyetye,62,M,M_MEM_3_APF,Multi-ply,82.5,81.6,237.5,30,65,332.5,SBD
-1,Ray Simoglou,50,M,M_MEM_1_APF,Multi-ply,90,89.4,227.5,160,242,629.5,SBD
-DQ,Chris LaJoie,50,M,M_MEM_1_APF,Multi-ply,110,108.9,275,,,,SBD
+4,Michael Wonyetye,62,M,M_MEM_5_APF,Multi-ply,82.5,81.6,237.5,30,65,332.5,SBD
+1,Ray Simoglou,50,M,M_MEM_3_APF,Multi-ply,90,89.4,227.5,160,242,629.5,SBD
+DQ,Chris Lajoie,50,M,M_MEM_3_APF,Multi-ply,110,108.9,275,,,,SBD
 1,Patty Drake,49,F,F_MEM_2_APF,Multi-ply,90,87.5,120,60,145,325,SBD
 2,Cheryl Russell,55,F,F_MEM_4_APF,Multi-ply,75,69.4,80,55,115,250,SBD
 3,Kathryn Holt,41,F,F_MEM_1_APF,Multi-ply,90+,121.6,125,87.5,167.5,380,SBD
@@ -14,7 +14,7 @@ DQ,Chris LaJoie,50,M,M_MEM_1_APF,Multi-ply,110,108.9,275,,,,SBD
 2,Joe Kenney,16,M,M_TEM_2_APF,Multi-ply,75,72.1,157.5,92.5,182.5,432.5,SBD
 3,Riley Libby,19,M,M_TEM_3_APF,Multi-ply,82.5,79.8,150,102.5,185,437.5,SBD
 4,Chandan McCall,16,M,M_TEM_2_APF,Multi-ply,110,107.5,160,110,190,460,SBD
-DQ,Connor LaJoie,16,M,M_TEM_2_APF,Multi-ply,75,74.8,,152.5,170,,SBD
+DQ,Connor Lajoie,16,M,M_TEM_2_APF,Multi-ply,75,74.8,,152.5,170,,SBD
 1,Carlos Reed,29,M,M_OEM_APF,Multi-ply,125,120.7,,192.5,,192.5,B
 2,Drew Richards,32,M,M_OEM_APF,Multi-ply,140,130.6,,192.5,,192.5,B
 DQ,Ryan LaJoie,19,M,M_TEM_3_APF,Multi-ply,75,74.8,,,,,B
@@ -35,7 +35,7 @@ DQ,Ryan LaJoie,19,M,M_TEM_3_APF,Multi-ply,75,74.8,,,,,B
 15,Slava Babayan,32,M,M_OR_APF,Raw,100,99.8,30,187.5,265,482.5,SBD
 16,Loc Nguyen,24,M,M_OR_APF,Raw,75,73,132.5,102.5,155,390,SBD
 17,Martin Harrison,20,M,M_OR_APF,Raw,82.5,81.2,132.5,70,147.5,350,SBD
-18,Frank  Ventriglia Sr. ,65,M,M_OR_APF,Raw,110,104.8,102.5,77.5,137.5,317.5,SBD
+18,Frank Ventriglia Sr,65,M,M_OR_APF,Raw,110,104.8,102.5,77.5,137.5,317.5,SBD
 1,Lydia Frangos,23,F,F_OR_APF,Raw,90+,101.2,155,80,170,405,SBD
 2,Kathryn Holt,41,F,F_OR_APF,Raw,90+,121.6,125,87.5,167.5,380,SBD
 3,Patty Drake,49,F,F_OR_APF,Raw,90,87.5,120,60,145,325,SBD
@@ -56,5 +56,5 @@ DQ,Mike Danforth,46,M,M_OEM_APF,Multi-ply,82.5,81.2,,,,,SBD
 1,Ryan Martin,32,M,M_OEM_APF,Multi-ply,110,107,275,197.5,245,717.5,SBD
 2,Cormac Walsh,20,M,M_OEM_APF,Multi-ply,110,106.1,232.5,147.5,262.5,642.5,SBD
 3,Brian Genovisi,29,M,M_OEM_APF,Multi-ply,110,107,212.5,125,230,567.5,SBD
-1,Chris Wiers,39,M,M_OEM_APF,Multi-ply,140+,147,387.5,295,387.5,"1,070.00",SBD
+1,Chris Wiers,39,M,M_OEM_APF,Multi-ply,140+,147,387.5,295,387.5,1070,SBD
 2,William Gorman,24,M,M_OEM_APF,Multi-ply,140+,201.9,365,207.5,327.5,900,SBD
