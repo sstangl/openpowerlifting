@@ -4,7 +4,7 @@ set -x
 
 echo "$1" > URL
 cp ../../meet.template meet.csv
-wget --output-document="results.pdf" "$1"
+wget --output-document="original.pdf" "$1"
 pdftotext -layout *.pdf
-../reveal-negatives results.txt
-cp results.txt entries.csv
+../reveal-negatives original.txt
+cp original.txt entries.csv

@@ -14,7 +14,7 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
-${SCRIPTDIR}/rpu-standardize-csv results.csv > entries.csv
+${SCRIPTDIR}/rpu-standardize-csv original.csv > entries.csv
 
 ${REPOSCRIPTDIR}/calc-best-lifts entries.csv
 ${REPOSCRIPTDIR}/calc-latin-names entries.csv

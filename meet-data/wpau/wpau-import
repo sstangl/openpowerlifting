@@ -29,7 +29,7 @@ if [ -f main2.html ]; then
 fi
 
 
-# Get the links to the individual sheets from the results file
+# Get the links to the individual sheets from the original file
 mapfile -t sheet_links < <( ${SCRIPTDIR}/wpau-get-sheet-links main.html )
 
 #Now that we have the sheet links we no longer need the containing page
@@ -40,8 +40,8 @@ if [ ${#sheet_links[*]}/2 == 1 ];then #Only number the result files if there is 
 	r_nums[0]=''
 fi
 
-if [ -f results.csv ]; then
-	rm results.csv
+if [ -f original.csv ]; then
+	rm original.csv
 fi
 
 
@@ -50,73 +50,73 @@ fi
 #Expand the sheet links into full paths
 for (( ii=0; ii!= $((${#sheet_links[@]}/2)) ;++ii))
 do
-  wget --output-document="results"${r_nums[$ii]}".html" ${2%/*}"/"${sheet_links[$((2*ii+1))]} #Link is every second line
+  wget --output-document="original"${r_nums[$ii]}".html" ${2%/*}"/"${sheet_links[$((2*ii+1))]} #Link is every second line
 
     #file is returning 8859 when it's formatted in 1251 for some reason
-    file "results"${r_nums[$ii]}".html" | grep ISO-8859 && iconv -f WINDOWS-1251 -t UTF8 "results"${r_nums[$ii]}".html" > temp.html
+    file "original"${r_nums[$ii]}".html" | grep ISO-8859 && iconv -f WINDOWS-1251 -t UTF8 "original"${r_nums[$ii]}".html" > temp.html
     if [ -f temp.html ]; then
-	    mv temp.html "results"${r_nums[$ii]}".html"
-	    sed -i -e 's/charset=windows-1251/charset=UTF-8/g' "results"${r_nums[$ii]}".html"
+	    mv temp.html "original"${r_nums[$ii]}".html"
+	    sed -i -e 's/charset=windows-1251/charset=UTF-8/g' "original"${r_nums[$ii]}".html"
     fi
 
 
-     cp "results"${r_nums[$ii]}".html" "results"${r_nums[$ii]}".xls"
+     cp "original"${r_nums[$ii]}".html" "original"${r_nums[$ii]}".xls"
 
 	# Replace any commas in the xls file with periods.
 	# Commas are used as decimal points in the European style.
-	sed -i -e 's/,/\./g' "results"${r_nums[$ii]}".xls"
+	sed -i -e 's/,/\./g' "original"${r_nums[$ii]}".xls"
 
 	# Strikethrough HTML is used to denote failures.
 	# Replace <s> with '-' and remove </s>.
-	sed -i -e 's/<s>/-/g' "results"${r_nums[$ii]}".xls" 
-	sed -i -e 's/<\/s>//g' "results"${r_nums[$ii]}".xls"
+	sed -i -e 's/<s>/-/g' "original"${r_nums[$ii]}".xls" 
+	sed -i -e 's/<\/s>//g' "original"${r_nums[$ii]}".xls"
 
     #Convert red background to fails
-    sed -i -e 's/<font color="#000000">//g' "results"${r_nums[$ii]}".xls"
-    sed -i -e 's/bgcolor="#FF0000".*sdnum="3081;">/sdnum="3081;">-/g' "results"${r_nums[$ii]}".xls"
+    sed -i -e 's/<font color="#000000">//g' "original"${r_nums[$ii]}".xls"
+    sed -i -e 's/bgcolor="#FF0000".*sdnum="3081;">/sdnum="3081;">-/g' "original"${r_nums[$ii]}".xls"
 
 
 	# Use LibreOffice to automatically convert the <table> to a csv file.
-	# This creates results.csv.
-	libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 "results"${r_nums[$ii]}".xls"
+	# This creates original.csv.
+	libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 "original"${r_nums[$ii]}".xls"
 
-	rm "results"${r_nums[$ii]}".html" "results"${r_nums[$ii]}".xls"
+	rm "original"${r_nums[$ii]}".html" "original"${r_nums[$ii]}".xls"
 
 	# ASCII 0xa0 (a space) creeps in everywhere for no good reason.
 	#Using \xa0 was corrupting characters for some reason
-	sed -i -e 's/ //g' "results"${r_nums[$ii]}".csv"
+	sed -i -e 's/ //g' "original"${r_nums[$ii]}".csv"
 
 	# Remove redundant spacing.
-	sed -i -e 's/  / /g' "results"${r_nums[$ii]}".csv"
-	sed -i -e 's/, /,/g' "results"${r_nums[$ii]}".csv"
-	sed -i -e 's/ ,/,/g' "results"${r_nums[$ii]}".csv"
+	sed -i -e 's/  / /g' "original"${r_nums[$ii]}".csv"
+	sed -i -e 's/, /,/g' "original"${r_nums[$ii]}".csv"
+	sed -i -e 's/ ,/,/g' "original"${r_nums[$ii]}".csv"
 
 	# Failures are denoted as "X", when we just want a blank space.
-	sed -i -e 's/,X,/,,/g' "results"${r_nums[$ii]}".csv"
+	sed -i -e 's/,X,/,,/g' "original"${r_nums[$ii]}".csv"
 
 	# Skips are sometimes denotes as "#"
-	sed -i -e 's/#//g' "results"${r_nums[$ii]}".csv"
+	sed -i -e 's/#//g' "original"${r_nums[$ii]}".csv"
 
 	# Birth year sometimes has a question mark
-	sed -i -e 's/,?,/,,/g' "results"${r_nums[$ii]}".csv"
+	sed -i -e 's/,?,/,,/g' "original"${r_nums[$ii]}".csv"
 
-    actualsize=$(wc -c <'results'${r_nums[$ii]}'.csv')
+    actualsize=$(wc -c <'original'${r_nums[$ii]}'.csv')
     
     #Check that the sheet isn't empty
     if [ $actualsize -ge 2 ]; then
 		# #Now write the sheet name to the first line
-		echo -e 'Sheet '$ii': '${sheet_links[$((2*ii))]}'\n' | cat - 'results'${r_nums[$ii]}'.csv' > temp && mv temp 'results'${r_nums[$ii]}'.csv'
+		echo -e 'Sheet '$ii': '${sheet_links[$((2*ii))]}'\n' | cat - 'original'${r_nums[$ii]}'.csv' > temp && mv temp 'original'${r_nums[$ii]}'.csv'
 
 	    #Now combine all the sheets into one big csv
-		cat 'results'${r_nums[$ii]}'.csv' >> results.csv
-		echo >> results.csv
+		cat 'original'${r_nums[$ii]}'.csv' >> original.csv
+		echo >> original.csv
 	fi
-	rm 'results'${r_nums[$ii]}'.csv'
+	rm 'original'${r_nums[$ii]}'.csv'
 done
 
 
 if [ ${#sheet_names[*]} == 1 ]; then
-	echo -e 'Sheet 1: '$sheet_names'\n' | cat - results.csv > temp && mv temp results.csv
+	echo -e 'Sheet 1: '$sheet_names'\n' | cat - original.csv > temp && mv temp original.csv
 fi
 
 

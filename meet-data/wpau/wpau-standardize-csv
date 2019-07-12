@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Standardize the results.csv to the OpenPowerlifting
+# Standardize the original.csv to the OpenPowerlifting
 # internal format.
 #
 
@@ -69,7 +69,7 @@ def split_by_sheet(lines):
                         sheetlist[-2][get_header_linenum(sheetlist[-2])])
                     # Change the attempt labels to the right events
 
-        elif ('results in pounds' in ''.join(line[0]).lower() or
+        elif ('original in pounds' in ''.join(line[0]).lower() or
                 ''.join(line[0]) == 'MULTY REP BENCH' or
                 'багатоповторний' in ''.join(line[0]).lower()):
             break
@@ -173,7 +173,7 @@ def parse_sheetname(s):
             pass
         elif word == 'bdl':
             pass
-        elif word == 'results':
+        elif word == 'original':
             pass
         elif word == 'абсолютна':
             pass
@@ -286,7 +286,7 @@ def parse_fieldnames(sheet, obj):
         elif text == 'mam':  # Age coefficient?
             fieldnames.append('IGNORE')
 
-        elif text in ['сумма', 'total', 'result', 'результат', 'results',
+        elif text in ['сумма', 'total', 'result', 'результат', 'original',
                       'total sum', 'сума', 'підсумок']:
             fieldnames.append('TotalKg')
 
@@ -846,6 +846,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s results.csv" % sys.argv[0], file=sys.stderr)
+        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

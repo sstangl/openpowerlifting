@@ -10,27 +10,27 @@ fi
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-# Download the website to results.html
-wget --output-document=results.html "$1"
+# Download the website to original.html
+wget --output-document=original.html "$1"
 echo "$1" > URL
 
 # Sometimes the documents are encoded in ISO-8859-1.
-file results.html | grep ISO-8859 && iconv -f ISO-8859-1 -t UTF-8 results.html > results2.html
-if [ -f results2.html ]; then
-        mv results2.html results.html
+file original.html | grep ISO-8859 && iconv -f ISO-8859-1 -t UTF-8 original.html > original2.html
+if [ -f original2.html ]; then
+        mv original2.html original.html
 fi
 
 # The HTML is grotesquely malformed, and BeautifulSoup can't parse it.
 # But LibreOffice's parser is very forgiving, so we just use that.
-# Creates results.csv.
-dos2unix results.html
-mv results.html results.xls
-libreoffice --headless --convert-to csv results.xls
+# Creates original.csv.
+dos2unix original.html
+mv original.html original.xls
+libreoffice --headless --convert-to csv original.xls
 
 # If CSV conversion completed successfully, remove the intermediary
 # files early to benefit terminal autocompletion.
-if [ -f results.csv ]; then
-	rm results.xls
+if [ -f original.csv ]; then
+	rm original.xls
 fi
 
 cp "${SCRIPTDIR}/../meet.template" "meet.csv"

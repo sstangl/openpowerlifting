@@ -10,7 +10,7 @@ This guide is intended to take you step-by-step into adding a meet into the data
 - npm
 - node
 
-## Part 1: Creating `meet.csv`, `entries.csv`, `URL`,  and `results.txt` files
+## Part 1: Creating `meet.csv`, `entries.csv`, `URL`,  and `original.txt` files
 *Important* before you get started, remember `meet.csv`, `entries.csv`, and `URL` files need to be saved in the same folder.
 
 ### Step 1: Create the `meet.csv` file (In Excel, LibreOffice, or another spreadsheet program)
@@ -104,7 +104,7 @@ Tips
 1. Copy and paste or type the URL of the meet results into Notepad/any text editor.
 2. Save the file as `URL` in the same folder as the two previous files. Note that this file has no extension.
 
-### Step 4: Creating the `results.txt` file (in Ubuntu)
+### Step 4: Creating the `original.txt` file (in Ubuntu)
 This step requires that you have the URL of the `.pdf` file of the meet results.
 1. Install poppler `sudo apt-get install poppler-utils`.
 2. Go to the federation's directory for which you are trying to add the meet. Type `cd openpowerlifting/meet-data/${FEDNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to).
@@ -113,9 +113,9 @@ This step requires that you have the URL of the `.pdf` file of the meet results.
 5. Download the `.pdf` file of the meet results. Type `wget ${URL}` (where `${URL}` is the URL of the `.pdf` file) to .
 6. Type `ls` to figure out the name of the `.pdf` downloaded.
 7. Convert the `.pdf` file to a `.txt` file. Type `pdftotext -layout ${PDF}` (where `${PDF}` is the name of the `.pdf` file downloaded) which.
-8. Rename the `${TXT}` file to `results.txt`. Type `mv ${TXT} results.txt` (where ${TXT} is same name of the `.pdf` earlier, with a `.txt` file extension instead).
+8. Rename the `${TXT}` file to `original.txt`. Type `mv ${TXT} original.txt` (where ${TXT} is same name of the `.pdf` earlier, with a `.txt` file extension instead).
 9. Remove the `.pdf` file downloaded in step two. Type `rm *.pdf`. *Be careful* to only include no spaces between `*` and `.pdf` because `rm *.pdf` will delete all your files!
-You are now ready to upload the `entries.csv`, `results.csv`, and `URL` files created earlier.
+You are now ready to upload the `entries.csv`, `original.csv`, and `URL` files created earlier.
 
 ## Part 2: Uploading meet 
 
@@ -135,7 +135,7 @@ You are now ready to upload the `entries.csv`, `results.csv`, and `URL` files cr
 1. You need to add `entries.csv` file so type `git add entries.csv`.
 2. You need to add `meet.csv` file so type `git add meet.csv`.
 3. You need to add `URL` file so type `git add URL`.
-4. You need to add `results.txt` file so type `git add results.txt`
+4. You need to add `original.txt` file so type `git add original.txt`
 5. Next, commit the above files by typing `git commit -m  "${DIRNAME}" ` (where `${DIRNAME}` is the directory you just added).
 6. Push the above files by typing `git remote add mine ${URL_TO_YOUR_FORK}`.
 7. You will be asked for your GitLab username and password.

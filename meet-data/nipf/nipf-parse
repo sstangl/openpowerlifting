@@ -3,52 +3,52 @@
 set -e
 
 if [ $# -ne 1 ]; then
-	echo " Usage: $0 http://url/to/results/page"
+	echo " Usage: $0 http://url/to/original/page"
 	exit 1
 fi
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-# Download the website to results.html.
-wget --output-document=results.html "$1"
+# Download the website to original.html.
+wget --output-document=original.html "$1"
 
 # Save the website URL for future use, since it's pretty hard to tell
 # what meets on the site are tracked and which aren't.
 echo "$1" > URL
 
 # Sometimes the documents are encoded in ISO-8859-1.
-file results.html | grep Non-ISO && iconv -f  ISO-8859-1 -t UTF-8 results.html > results2.html
-if [ -f results2.html ]; then
-    mv results2.html results.html
+file original.html | grep Non-ISO && iconv -f  ISO-8859-1 -t UTF-8 original.html > original2.html
+if [ -f original2.html ]; then
+    mv original2.html original.html
 fi
 
-# Extract just the results tables from results.html.
-# Save it as results.xls so that libreoffice can convert to csv.
-${SCRIPTDIR}/nipf-extract-table results.html > results.xls
+# Extract just the original tables from original.html.
+# Save it as original.xls so that libreoffice can convert to csv.
+${SCRIPTDIR}/nipf-extract-table original.html > original.xls
 
 # Remove any commas in the xls file.
-sed -i -e 's/,//g' results.xls
+sed -i -e 's/,//g' original.xls
 
 # Failed lifts are "<td style='background-color: Red'>".
-sed -i -e "s/<td style='background-color: Red'>/<td>-/g" results.xls
-sed -i -e "s/<td style=\"background-color: Red\">/<td>-/g" results.xls
+sed -i -e "s/<td style='background-color: Red'>/<td>-/g" original.xls
+sed -i -e "s/<td style=\"background-color: Red\">/<td>-/g" original.xls
 
 # Use LibreOffice to automatically convert the <table> to a csv file.
-# This creates results.csv.
-libreoffice --headless --convert-to csv results.xls
+# This creates original.csv.
+libreoffice --headless --convert-to csv original.xls
 
 # If CSV conversion completed successfully, remove the intermediary
 # files early to benefit terminal autocompletion.
-if [ -f results.csv ]; then
-	rm results.html results.xls
+if [ -f original.csv ]; then
+	rm original.html original.xls
 fi
 
 cp "${SCRIPTDIR}/../meet.template" "meet.csv"
 
 echo "Division,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Wilks,Place" > entries.csv
 
-tail -n +2 results.csv >> entries.csv
+tail -n +2 original.csv >> entries.csv
 
 # Remove failure dashes.
 sed -i -e "s/,-,/,,/g" entries.csv

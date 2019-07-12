@@ -12,9 +12,9 @@ CSVFILE=${BASENAME}.csv
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-# Make the results.txt.
+# Make the original.txt.
 pdftotext -layout "$1"
-mv ${BASENAME}.txt results.txt
+mv ${BASENAME}.txt original.txt
 
 # Creates some HTML file.
 ${SCRIPTDIR}/uspa-pdf-to-bbox "$1"

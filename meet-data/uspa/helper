@@ -21,4 +21,4 @@ mv *meet* meet.csv
 ${DIR}/uspa-parse "$1.pdf"
 rm "$1.pdf"
 
-git add results.txt entries.csv meet.csv
+git add original.txt entries.csv meet.csv

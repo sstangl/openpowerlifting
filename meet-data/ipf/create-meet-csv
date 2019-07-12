@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Partially populates meet.csv from the results file
+# Partially populates meet.csv from the original file
 
 import sys
 import csv
@@ -43,12 +43,12 @@ def remove_all(s, substrs):
 
 def main(*filenames):
 
-    results_file = open(filenames[0], 'r')
-    results_reader = csv.reader(results_file)
-    results = list(results_reader)
-    results_file.close()
+    original_file = open(filenames[0], 'r')
+    original_reader = csv.reader(original_file)
+    original = list(original_reader)
+    original_file.close()
 
-    fed = results[0][0]
+    fed = original[0][0]
 
     # Try and get the OPL code
     try:
@@ -59,8 +59,8 @@ def main(*filenames):
     meet_info = []
     # Have a hunt around for the meet info
     for ii in range(0, 3):
-        if len(results[ii]) != 0:
-            meet_info = split_no_brackets(results[ii][0], '.')
+        if len(original[ii]) != 0:
+            meet_info = split_no_brackets(original[ii][0], '.')
             if len(meet_info) > 3:  # Looks like we've found the meet info
                 break
 
@@ -97,20 +97,20 @@ def main(*filenames):
         meet_state = ''  # This needs to be done manually
         meet_town = meet_location[0:meet_location.rfind('(')].strip()
 
-        # If more than one results file has been passed, then see if we can
+        # If more than one original file has been passed, then see if we can
         # extract more information
         if len(filenames) > 1:
             for filename in filenames[1:]:
-                results_file = open(filename, 'r')
-                results_reader = csv.reader(results_file)
-                results = list(results_reader)
+                original_file = open(filename, 'r')
+                original_reader = csv.reader(original_file)
+                original = list(original_reader)
 
                 for ii in range(0, 5):
-                    meet_info = split_no_brackets(results[ii][0], '.')
+                    meet_info = split_no_brackets(original[ii][0], '.')
                     if len(meet_info) > 3:  # Looks like we've found the meet info
                         break
                 if meet_info != []:
-                    # Men and womens results are named under different meets
+                    # Men and womens original are named under different meets
                     # even though they were the same
                     new_meet_name = meet_info[0]
                     if new_meet_name != meet_name:
@@ -133,7 +133,7 @@ def main(*filenames):
                     if new_meet_date < meet_date:
                         meet_date = new_meet_date
 
-                results_file.close()
+                original_file.close()
 
         meet_file.writerow([fed_code, meet_date, meet_country,
                             meet_state, meet_town, meet_name])
@@ -141,6 +141,6 @@ def main(*filenames):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print(" Usage: %s results.csv" % sys.argv[0], file=sys.stderr)
+        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
         sys.exit(1)
     main(*sys.argv[1:])

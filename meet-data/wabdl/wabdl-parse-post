@@ -6,8 +6,8 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
-# Parse results.csv into entries.csv.
-${SCRIPTDIR}/wabdl-standardize-csv results.csv > entries.csv
+# Parse original.csv into entries.csv.
+${SCRIPTDIR}/wabdl-standardize-csv original.csv > entries.csv
 
 # Convert to Kg, assuming that the meet was conducted in Kg,
 # but was reported in LBS because America.

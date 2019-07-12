@@ -5,8 +5,8 @@ set -e
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
-# Use NASA-specific knowledge to parse results.csv into entries.csv.
-${SCRIPTDIR}/nasa-standardize-csv results.csv > entries.csv
+# Use NASA-specific knowledge to parse original.csv into entries.csv.
+${SCRIPTDIR}/nasa-standardize-csv original.csv > entries.csv
 
 # Change 'X' in place to 'DQ'.
 sed -i -e "s/^X,/DQ,/g" entries.csv

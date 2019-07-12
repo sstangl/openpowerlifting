@@ -8,7 +8,7 @@
 #
 
 # HOW TO USE:
-# 1. Run the script e.g. python nasa-standardize-csv results.csv > entries.csv
+# 1. Run the script e.g. python nasa-standardize-csv original.csv > entries.csv
 # 2. If no error is produced, great! Open entries.csv and double check all the entries
 #    marked as DQ are in indeed disqualified. This is a week point of the script.
 # 3. Run check check-entries

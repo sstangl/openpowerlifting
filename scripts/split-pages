@@ -10,7 +10,7 @@
 import sys
 
 if len(sys.argv) != 2:
-    print(' Usage: %s results.txt' % sys.argv[0], file=sys.stderr)
+    print(' Usage: %s original.txt' % sys.argv[0], file=sys.stderr)
     sys.exit(1)
 
 with open(sys.argv[1], 'r') as fd:

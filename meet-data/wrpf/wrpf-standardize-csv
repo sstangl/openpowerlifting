@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Given a results.csv as outputted by wrpf-parse, parse each sheet one at a time
+# Given a original.csv as outputted by wrpf-parse, parse each sheet one at a time
 # and join all the sheets together into an OpenPowerlifting-formatted CSV file.
 
 import sys
@@ -126,7 +126,7 @@ def parse_sheetname(s):
         elif 'бинт' in word or word == 'wraps':
             equipment = 'Wraps'
         elif word in ['безкипировки', 'raw', 'безэкип', 'классический', 'классич']:
-            die('Fix parse_sheetname(): Meet contains raw and wraps results, '
+            die('Fix parse_sheetname(): Meet contains raw and wraps original, '
                 'this needs to be done manually.')
             equipment = 'Wraps'
 
@@ -399,7 +399,7 @@ def parse_sheet(sheet):
     elif 'roll' in title or 'ролл' in title:
         return csv
     elif 'командный зачет' in title:
-        return csv  # Team results
+        return csv  # Team original
     elif 'командное первенство' in title:
         return csv
     elif 'apollo' in title or 'appol' in title or 'аполл' in title:
@@ -801,6 +801,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s results.csv > entries.csv" % sys.argv[0])
+        print(" Usage: %s original.csv > entries.csv" % sys.argv[0])
         sys.exit(1)
     sys.exit(main(sys.argv[1]))

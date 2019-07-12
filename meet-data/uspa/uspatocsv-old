@@ -242,7 +242,7 @@ def USPA_add_4ths_row(csv, columnRanges, line):
 
 # Begin main script.
 if len(sys.argv) != 2:
-    print(" Usage: " + sys.argv[0] + " results.txt")
+    print(" Usage: " + sys.argv[0] + " original.txt")
     sys.exit(1)
 
 filename = sys.argv[1]

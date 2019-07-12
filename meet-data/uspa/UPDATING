@@ -26,12 +26,12 @@ To convert an old (but still post-2010 or so) meet result spreadsheet PDF to CSV
   1.  Create a folder named after the unique meet number.
   2.  Download the results PDF into that folder.
   3.  Run `pdftotext -layout *.pdf`.
-  4.  Rename the output text file to results.txt
+  4.  Rename the output text file to original.txt
   5.  Delete the original PDF file.
-  6.  Manually edit results.txt to vertically align columns.
-  7.  From within the folder, run ../uspatocsv-old results.txt, changing results.txt until it passes.
-  8.  Redirect the output of `../uspatocsv-old results.txt` as entries.csv.
-  9.  Manually create meet.csv using the header in results.txt.
+  6.  Manually edit original.txt to vertically align columns.
+  7.  From within the folder, run ../uspatocsv-old original.txt, changing original.txt until it passes.
+  8.  Redirect the output of `../uspatocsv-old original.txt` as entries.csv.
+  9.  Manually create meet.csv using the header in original.txt.
   10. Add the new folder to git and push.
 
 With regard to the Wilks column, USPA sometimes publishes scores marked Wilks

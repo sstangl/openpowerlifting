@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Often it happens that rps-standardize-csv fails, and
-# results.csv must be hand-edited to get it to a reasonable format.
+# original.csv must be hand-edited to get it to a reasonable format.
 #
 # This file contains the commands that would be executed at the end
 # of rps-parse, that I have to execute by hand in case things go wrong,
@@ -14,8 +14,8 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
-# Use RPS-specific knowledge to parse results.csv into entries.csv.
-${SCRIPTDIR}/rps-standardize-csv results.csv > entries.csv
+# Use RPS-specific knowledge to parse original.csv into entries.csv.
+${SCRIPTDIR}/rps-standardize-csv original.csv > entries.csv
 
 # Convert to kg.
 ${REPOSCRIPTDIR}/csv-tokg entries.csv

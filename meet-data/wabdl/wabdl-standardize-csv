@@ -147,7 +147,7 @@ def main():
     # Isolate table lines.
     # The UTF-8 is malformed, so also replace errors.
     found_fieldnames = False
-    for line in open("results.csv", errors="backslashreplace"):
+    for line in open("original.csv", errors="backslashreplace"):
         lower = line.lower()
 
         # Detect the fieldnames line.

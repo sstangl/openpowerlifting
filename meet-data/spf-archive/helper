@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-FILENAME="todo/results-${1}.csv"
+FILENAME="todo/original-${1}.csv"
 
 if [ ! -f "${FILENAME}" ]; then
     echo " File '${FILENAME}' not found."
@@ -13,6 +13,6 @@ if [ ! -f "${FILENAME}" ]; then
 fi
 
 mkdir "${1}"
-git mv "${FILENAME}" "${1}/results.csv"
-cp "${1}/results.csv" "${1}/entries.csv"
+git mv "${FILENAME}" "${1}/original.csv"
+cp "${1}/original.csv" "${1}/entries.csv"
 cp "../meet.template" "${1}/meet.csv"

@@ -35,7 +35,7 @@ Each meet is described completely by files named `entries.csv` and `meet.csv`, t
 In addition, there are some required-if-applicable files that are not currently used to build the database, but provide helpful information:
 
 - A file named `URL` includes a list of URLs, one on each line, pointing to the original source of the results.
-- A file named `results.txt` (if source was PDF) or `results.csv` (if source was a spreadsheet) documents the original, un-edited version of the results as downloaded from the source. This is important in case of error.
+- A file named `original.txt` (if source was PDF) or `original.csv` (if source was a spreadsheet) documents the original, un-edited version of the results as downloaded from the source. This is important in case of error.
 
 
 ## Structure of meet.csv

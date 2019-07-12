@@ -12,8 +12,8 @@ do
 	cd /Users/blerner/openpowerlifting/meet-data/nasa/todo/"$COUNTER"
 	for f in *;
 	do
-		java -jar /Users/blerner/openpowerlifting/tabula-1.0.1-jar-with-dependencies.jar -l $f >"results.csv"
-		python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "results.csv" > "entries.csv"
+		java -jar /Users/blerner/openpowerlifting/tabula-1.0.1-jar-with-dependencies.jar -l $f >"original.csv"
+		python /Users/blerner/openpowerlifting/meet-data/nasa/nasa-standardize-csv "original.csv" > "entries.csv"
 		bash /Users/blerner/openpowerlifting/tests/check > check_entries
 	done
 	echo $var > URL
