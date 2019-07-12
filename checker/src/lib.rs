@@ -147,6 +147,16 @@ pub fn check(
         report.error("Must be named 'URL' with no extension");
         acc.push(report);
     }
+    if meetdir.join("results.csv").exists() {
+        let mut report = Report::new(meetdir.join("results.csv"));
+        report.error("'results.csv' files should now be named 'original.csv'");
+        acc.push(report);
+    }
+    if meetdir.join("results.txt").exists() {
+        let mut report = Report::new(meetdir.join("results.txt"));
+        report.error("'results.txt' files should now be named 'original.txt'");
+        acc.push(report);
+    }
 
     Ok(CheckResult {
         reports: acc,
