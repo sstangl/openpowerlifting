@@ -29,10 +29,6 @@
   @include name-color(#FFB6C1);
 }
 
-.limegreen {
-  @include name-color(#32CD32);
-}
-
 .purple {
   @include name-color(#AE76FF);
 }
@@ -49,8 +45,16 @@
   @include name-color(#11782f);
 }
 
+.limegreen {
+  @include name-color(#32CD32);
+}
+
 .neongreen {
   @include name-color(#39ff14);
+}
+
+.olivegreen {
+  @include name-color(#556B2F);
 }
 
 .lightblue {
