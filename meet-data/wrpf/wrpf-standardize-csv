@@ -82,9 +82,12 @@ def parse_sheetname(s):
         elif word == 'спр':  # Some other federation that does multi-ply.
             assert not federation
             federation = 'SPR'
-        elif word in ['gpa', 'gpaipod', 'gpaipo']:
+        elif word in ['gpa', 'gpaipod', 'gpaipo','ipo']:
             assert not federation
             federation = 'GPA'
+        elif word == 'ipl':
+            assert not federation
+            federation = 'IPL'            
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
@@ -446,6 +449,8 @@ def parse_sheet(sheet):
         return csv
     elif 'isf' in title:  # Some kind of calesthetics competition
         return csv
+    elif 'спр' in title: # Strongman
+        return csv
 
     # Figure out event, equipment, etc., and store in obj.
     obj = parse_sheetname(sheet[0][0].split(':')[1])
@@ -554,9 +559,9 @@ def standardize_division_age(csv):
         # Fill in the Division.
         # Handle the divisions with numbers first.
         if 'открытая 20-23' in row[idx]:
-            division = 'Open 20-23'
+            division = 'Juniors 20-23'
         elif 'открытая 24-39' in row[idx]:
-            division = 'Open 24-39'
+            division = 'Open'
         elif ('юниорки 20-23' in row[idx] or 'juniors 20-23' in row[idx] or
                 'юниор 20-23' in row[idx] or 'юниоры 20-23' in row[idx]):
             division = 'Juniors 20-23'
