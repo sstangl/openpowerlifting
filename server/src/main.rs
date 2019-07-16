@@ -460,7 +460,17 @@ fn old_contact() -> Redirect {
 #[get("/robots.txt")]
 fn robots_txt() -> &'static str {
     // Allow robots full site access except for JSON endpoints.
-    "User-agent: *\nDisallow: /api/"
+    r#"User-agent: *
+Disallow: /api/
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /"#
 }
 
 #[catch(404)]

@@ -343,8 +343,8 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WPC as usize].maintainers = email_gem;
     statuses[WPCFinland as usize].maintainers = email_gem;
     statuses[WPCFrance as usize].maintainers = email_gem;
-	statuses[WPCItaly as usize].maintainers = email_gem;
-	statuses[WPCPortugal as usize].maintainers = email_gem;
+    statuses[WPCItaly as usize].maintainers = email_gem;
+    statuses[WPCPortugal as usize].maintainers = email_gem;
     statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_matt;
 
