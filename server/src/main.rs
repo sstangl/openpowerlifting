@@ -463,6 +463,10 @@ fn robots_txt() -> &'static str {
     r#"User-agent: *
 Disallow: /api/
 
+# Disallow bots from marketing and SEO companies.
+User-agent: AhrefsBot
+Disallow: /
+
 User-agent: MJ12bot
 Disallow: /
 
