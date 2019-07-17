@@ -78,7 +78,7 @@ The full range available to `AgeClass` is defined by [modules/opltypes/src/agecl
 
 Optional. Free-form UTF-8 text describing the division of competition, like `Open` or `Juniors 20-23` or `Professional`.
 
-Some federations are *configured* in our database, which means that we have agreed on a limited set of division options for that federation, and we have rewritten their results to only use that set, and tests enforce that. Even still, divisions are not standardized *between* configured federation: it really is free-form text, just to provide context.
+Some federations are *configured* in our database, which means that we have agreed on a limited set of division options for that federation, and we have rewritten their results to only use that set, and tests enforce that. Even still, divisions are not standardized *between* configured federations: it really is free-form text, just to provide context.
 
 Information about age should not be extracted from the `Division`, but from the `AgeClass` column.
 
