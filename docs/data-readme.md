@@ -1,6 +1,6 @@
 # OpenPowerlifting Data Distribution README
 
-For a rendered version of this document, [view the README on GitLab](https://gitlab.com/openpowerlifting/opl-data/blob/master/docs/facebook-guidelines.md).
+For a rendered version of this document, [view the README on GitLab](https://gitlab.com/openpowerlifting/opl-data/blob/master/docs/data-readme.md).
 
 
 ## CSV Data Format
