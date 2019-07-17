@@ -253,6 +253,11 @@ pub enum Federation {
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
+    
+    /// Unaffiliated meets held in England.
+    #[serde(rename = "England-UA")]
+    #[strum(to_string = "England-UA", serialize = "england-ua")]
+    EnglandUA,
 
     /// English Powerlifting Association, IPF.
     #[strum(to_string = "EPA", serialize = "epa")]
@@ -1083,6 +1088,7 @@ impl Federation {
             Federation::DBKV => false,
             Federation::CzechiaUA => false,
             Federation::DSF => true,
+            Federation::EnglandUA => false,
             Federation::EPA => true,
             Federation::EPF => true,
             Federation::ESDT => false,
@@ -1324,6 +1330,7 @@ impl Federation {
             Federation::DBKV => Some(Country::Germany),
             Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
+            Federation::EnglandUA => Some(Country::England),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
             Federation::ESDT => Some(Country::Greece),
@@ -1564,6 +1571,7 @@ impl Federation {
             Federation::DBKV => None,
             Federation::CzechiaUA => None,
             Federation::DSF => Some(Federation::IPF),
+            Federation::EnglandUA => None,
             Federation::EPA => Some(Federation::IPF),
             Federation::EPF => Some(Federation::IPF),
             Federation::ESDT => None,
@@ -1821,6 +1829,7 @@ impl Federation {
             Federation::DBKV => PointsSystem::Wilks,
             Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
+            Federation::EnglandUA => PointsSystem::Wilks,
             Federation::EPA => Federation::ipf_rules_on(date),
             Federation::EPF => Federation::ipf_rules_on(date),
             Federation::ESDT => PointsSystem::Wilks,
