@@ -55,6 +55,9 @@ def replace_common_fieldnames(csv):
     if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Wilks;McC;Total':
         csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;sq;BP;' \
                  'bp;DL;dl;Total;Wilks;McC;lbs'.split(';')
+    if s == 'Place;Name;State;Wt;Weight;Age;SQ;Kg;BP;Kg;DL;Kg;Total;Kg;Wilks;McC':
+        csv[0] = 'Place;Name;State;Wt;Weight;Age;SQ;SQ;BP;BP;' \
+                 'DL;DL;Total;Total;Wilks;McC'.split(';')
 
 
 def fixcolnames(columns):
