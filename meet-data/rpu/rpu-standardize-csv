@@ -424,6 +424,8 @@ def parse_sheet(sheet):
         return csv
     elif 'строгий' in title:  # curl
         return csv
+    elif 'экскалибур' in title:
+    	return csv
     elif 'спр' in title:  # Not powerlifting
         return csv
 
@@ -627,7 +629,7 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = row[amateuridx] + ' ' + division
+        division = division
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.

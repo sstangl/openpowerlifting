@@ -21,6 +21,7 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
+    masters = {name = "Masters", min = 40, max = 999}
 
     pro_open = {name = "Pro Open", min = 0, max = 999}
     pro_teen = {name = "Pro Teen", min = 13, max = 19}
@@ -77,3 +78,10 @@
     1703 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     1904 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
     1605 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1523 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+    1528 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1514 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1521 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1520 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1506 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+    1538 = ["ExemptWeightClassConsistency"] #Missing weightclasses
