@@ -425,7 +425,7 @@ def parse_sheet(sheet):
     elif 'строгий' in title:  # curl
         return csv
     elif 'экскалибур' in title:
-    	return csv
+        return csv
     elif 'спр' in title:  # Not powerlifting
         return csv
 
@@ -515,7 +515,6 @@ def standardize_division_age(csv):
     idx = csv.index('Division-Age')
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
-    amateuridx = csv.index('Amateur')
     bdidx = csv.index('BirthDate')
 
     for row in csv.rows:
