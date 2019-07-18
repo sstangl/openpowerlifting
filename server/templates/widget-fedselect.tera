@@ -86,6 +86,7 @@
   <option value="nipf" {% if selection.federation == "NIPF" %}selected{% endif %}>NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL - Scottish Powerlifting [IPF]</option>
   <option value="welshpa" {% if selection.federation == "WelshPA" %}selected{% endif %}>WelshPA - Welsh Powerlifting Association [IPF]</option>
+  <option value="wrpf-uk" {% if selection.federation == "WRPF-UK" %}selected{% endif %}>WRPF UK</option>
 </optgroup>
 <optgroup label="{{strings.country.argentina}}">
   <option value="all-argentina" {% if selection.federation == "AllArgentina" %}selected{% endif %}>{{strings.selectors.fed.all_argentina}}</option>
