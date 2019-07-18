@@ -86,7 +86,7 @@ def parse_sheetname(s):
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
-                      'ча-пл', 'ка-пл', 'паурлифтинг']:
+                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание']:
             assert not event
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
@@ -504,25 +504,32 @@ def parse_sheet(sheet):
 # Converts to English and separates into Division and Age columns.
 def standardize_division_age(csv):
     assert 'Division-Age' in csv.fieldnames
-    assert 'Tested' in csv.fieldnames
     assert 'Amateur' in csv.fieldnames
     assert 'Division' not in csv.fieldnames
     assert 'Age' not in csv.fieldnames
 
-    csv.append_columns(['Division', 'Age'])
+    csv.append_columns(['Division', 'Age', 'BirthDate'])
 
     idx = csv.index('Division-Age')
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
     amateuridx = csv.index('Amateur')
+    bdidx = csv.index('BirthDate')
 
     for row in csv.rows:
         # Fill in the Age.
         if '/' in row[idx]:
+
             row[ageidx] = row[idx].split('/')[1].strip()
 
         row[idx] = row[idx].replace(' - ', '-')
         row[idx] = row[idx].lower().strip()
+        row[bdidx] = row[idx].split('/')[0]
+        if '(' in row[bdidx]:
+            row[bdidx] = re.search(r"(?<=\().*?(?=\))", row[bdidx]).group(0)
+            parts = row[bdidx].split('.')
+            if len(parts) == 3:
+                row[bdidx] = parts[2]+'-'+parts[1]+'-'+parts[0]
 
         # Fill in the Division.
         # Handle the divisions with numbers first.
