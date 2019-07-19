@@ -115,6 +115,7 @@
   <option value="all-belarus" {% if selection.federation == "AllBelarus" %}selected{% endif %}>{{strings.selectors.fed.all_belarus}}</option>
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF - Belarus Powerlifting Federation [IPF]</option>
   <option value="gsf-belarus" {% if selection.federation == "GSF-Belarus" %}selected{% endif %}>GSF Belarus</option>
+  <option value="wrpf-belarus" {% if selection.federation == "WRPF-Belarus" %}selected{% endif %}>WRPF Belarus</option>
 </optgroup>
 <optgroup label="{{strings.country.brazil}}">
   <option value="all-brazil" {% if selection.federation == "AllBrazil" %}selected{% endif %}>{{strings.selectors.fed.all_brazil}}</option>
@@ -277,7 +278,9 @@
   <option value="xpc-poland" {% if selection.federation == "XPC-Poland" %}selected{% endif %}>XPC Poland</option>
 </optgroup>
 <optgroup label="{{strings.country.portugal}}">
+  <option value="all-portugal" {% if selection.federation == "AllPortugal" %}selected{% endif %}>{{strings.selectors.fed.all_portugal}}</option>
   <option value="wpc-portugal" {% if selection.federation == "WPC-Portugal" %}selected{% endif %}>WPC Portugal</option>
+  <option value="wrpf-portugal" {% if selection.federation == "WRPF-Portugal" %}selected{% endif %}>WRPF Portugal</option>
 </optgroup>
 <optgroup label="{{strings.country.russia}}">
   <option value="all-russia" {% if selection.federation == "AllRussia" %}selected{% endif %}>{{strings.selectors.fed.all_russia}}</option>
