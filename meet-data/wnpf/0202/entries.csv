@@ -23,11 +23,11 @@ WeightClassKg,Division,AgeClass,Sex,Name,Best3BenchKg,Best3DeadliftKg,TotalKg,Ev
 75,O,,M,Elrod,195.04,,195.04,B,Multi-ply,1
 75,O,,M,Henderson,163.29,,163.29,B,Multi-ply,2
 75,O,,M,Gillum,115.67,,115.67,B,Raw,1
-75,O,,M,Legg,102.06,,102.06,B,Raw,2
+75,O,,M,Bob Legg,102.06,,102.06,B,Raw,2
 75,40-49,,M,Henderson,163.29,,163.29,B,Multi-ply,1
 75,50-59,,M,Lane #2,115.67,,115.67,B,Raw,1
-75,50-59,,M,Legg,102.06,,102.06,B,Raw,2
-75,P/F/M,,M,Legg,102.06,,102.06,B,Raw,1
+75,50-59,,M,Bob Legg,102.06,,102.06,B,Raw,2
+75,P/F/M,,M,Bob Legg,102.06,,102.06,B,Raw,1
 75,70-79,,M,Fort,81.65,,81.65,B,Multi-ply,1
 82.5,O,,M,Ryan,183.71,,183.71,B,Multi-ply,1
 82.5,O,,M,Richards,176.9,,176.9,B,Multi-ply,2
@@ -49,24 +49,24 @@ WeightClassKg,Division,AgeClass,Sex,Name,Best3BenchKg,Best3DeadliftKg,TotalKg,Ev
 100,JR 20-25,20-25,M,Wallace,206.38,,206.38,B,Raw,1
 100,JR 20-25,20-25,M,Copenhaver,188.24,,188.24,B,Multi-ply,1
 100,O,,M,Wallace,206.38,,206.38,B,Raw,1
-100,O,,M,Barrett,254.01,,254.01,B,Multi-ply,1
+100,O,,M,Peter Barrett,254.01,,254.01,B,Multi-ply,1
 100,O,,M,Wondra,161.03,,161.03,B,Multi-ply,2
-100,SM,,M,Barrett,254.01,,254.01,B,Multi-ply,1
+100,SM,,M,Peter Barrett,254.01,,254.01,B,Multi-ply,1
 100,40-49,,M,Wondra,161.03,,161.03,B,Multi-ply,1
-100,50-59,,M,Cote,190.51,,190.51,B,Multi-ply,1
+100,50-59,,M,Roland Cote,190.51,,190.51,B,Multi-ply,1
 100,50-59,,M,Caterisano,167.83,,167.83,B,Multi-ply,2
 100,70-79,,M,McGuire,120.2,,120.2,B,Multi-ply,1
 110,O,,M,Feehan,256.28,,256.28,B,Multi-ply,1
 110,O,,M,Nick Maltezos,204.12,,204.12,B,Multi-ply,2
 110,O,,M,Defalco,,,,B,Multi-ply,DQ
 110,O,,M,Federowicz,174.63,,174.63,B,Raw,1
-110,O,,M,Hicks,138.35,,138.35,B,Raw,2
+110,O,,M,Jeff Hicks,138.35,,138.35,B,Raw,2
 110,SM,,M,Feehan,256.28,,256.28,B,Multi-ply,1
 110,40-49,,M,Massaro,167.83,,167.83,B,Raw,1
-110,40-49,,M,Hicks,138.35,,138.35,B,Raw,2
+110,40-49,,M,Jeff Hicks,138.35,,138.35,B,Raw,2
 110,50-59,,M,Brown,192.78,,192.78,B,Multi-ply,1
 110,50-59,,M,Glenney,183.71,,183.71,B,Multi-ply,2
-110,70-79,,M,Romero,102.06,,102.06,B,Multi-ply,1
+110,70-79,,M,Ray Romero,102.06,,102.06,B,Multi-ply,1
 125,JR 20-25,20-25,M,White,242.67,,242.67,B,Raw,1
 125,JR 20-25,20-25,M,White,267.62,,267.62,B,Multi-ply,1
 125,JR 20-25,20-25,M,Kalfrin,183.71,,183.71,B,Multi-ply,2
@@ -100,7 +100,7 @@ WeightClassKg,Division,AgeClass,Sex,Name,Best3BenchKg,Best3DeadliftKg,TotalKg,Ev
 67.5,O,,M,Melrose,,136.08,136.08,D,Raw,1
 67.5,50-59,,M,Gary Hoxworth,,219.99,219.99,D,Raw,1
 75,JR 20-25,20-25,M,Albert,,238.14,238.14,D,Raw,2
-75,50-59,,M,Legg,,161.03,161.03,D,Raw,3
+75,50-59,,M,Bob Legg,,161.03,161.03,D,Raw,3
 75,50-59,,M,Lane #2,,149.69,149.69,D,Raw,4
 82.5,O,,M,Rock,,244.94,244.94,D,Raw,2
 82.5,O,,M,Neiman,,251.74,251.74,D,Multi-ply,3
@@ -143,7 +143,7 @@ WeightClassKg,Division,AgeClass,Sex,Name,Best3BenchKg,Best3DeadliftKg,TotalKg,Ev
 75,JR 20-25,20-25,M,Albert,124.74,238.14,362.87,BD,Raw,1
 75,40-49,,M,Catrambone,124.74,183.71,308.44,BD,Raw,1
 75,50-59,,M,Lane #2,115.67,149.69,265.35,BD,Raw,1
-75,50-59,,M,Legg,102.06,161.03,263.08,BD,Raw,2
+75,50-59,,M,Bob Legg,102.06,161.03,263.08,BD,Raw,2
 82.5,17-19,,M,DeStafano,131.54,249.48,381.02,BD,Raw,1
 82.5,O,,M,Rock,151.95,244.94,396.89,BD,Raw,1
 82.5,O,,M,Zimmerman,161.03,208.65,369.68,BD,Multi-ply,1
@@ -160,7 +160,7 @@ WeightClassKg,Division,AgeClass,Sex,Name,Best3BenchKg,Best3DeadliftKg,TotalKg,Ev
 100,O,,M,Brice,195.04,251.74,446.79,BD,Multi-ply,1
 100,O,,M,Wondra,161.03,215.46,376.48,BD,Multi-ply,2
 100,40-49,,M,Wondra,161.03,215.46,376.48,BD,Multi-ply,1
-100,50-59,,M,Cote,190.51,226.8,417.31,BD,Multi-ply,1
+100,50-59,,M,Roland Cote,190.51,226.8,417.31,BD,Multi-ply,1
 100,50-59,,M,Caterisano,167.83,204.12,371.95,BD,Multi-ply,2
 110,17-19,,M,Puglisi,127.01,242.67,369.68,BD,Multi-ply,1
 110,O,,M,Perrotta,188.24,249.48,437.72,BD,Multi-ply,1
