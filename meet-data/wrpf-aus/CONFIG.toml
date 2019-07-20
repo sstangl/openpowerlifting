@@ -17,6 +17,7 @@
     fr_m1 = {name = "FR-M1", min=40, max=49, equipment = ["Raw","Wraps"], sex="F"}
     fr_m2 = {name = "FR-M2", min=50, max=59, equipment = ["Raw","Wraps"], sex="F"}
     fr_m3 = {name = "FR-M3", min=60, max=999, equipment = ["Raw","Wraps"], sex="F"}
+    fr_m4 = {name = "FR-M4", min=70, max=999, equipment = ["Raw","Wraps"], sex="F"}
     fr_m = {name = "FR-M", min=40, max=999, equipment = ["Raw","Wraps"], sex="F"}
 
     msp_o = {name = "MSP-O", min=0, max=999, equipment = "Single-ply", sex = "M"}
