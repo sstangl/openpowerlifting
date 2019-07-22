@@ -86,7 +86,7 @@ def parse_sheetname(s):
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
-                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание']:
+                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг']:
             assert not event
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
@@ -110,9 +110,12 @@ def parse_sheetname(s):
 
         # Equipment
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
-                      '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной']:
+                      '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
+                      'одн', 'однос', 'однослойн']:
             equipment = 'Single-ply'
-        elif word in ['экипировке', 'm ply', 'eq', 'многослой', 'экипировка']:
+        elif word in ['экипировка', 'экипировке', 'eq', 'эипировке', 'экип'] and equipment == 'Single-ply':
+            continue
+        elif word in ['m ply', 'многослой']:
             equipment = 'Multi-ply'
         elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
                       'облегченная', 'облегченной', 'слинг']:
@@ -153,7 +156,7 @@ def parse_sheetname(s):
         elif 'экип' in word:  # Equipment
             pass
         # We don't seperately track Paralympic bench right now
-        elif word == 'handicaped':
+        elif word in ['handicaped', 'пода']:
             pass
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте']:
@@ -279,7 +282,7 @@ def parse_fieldnames(sheet):
         elif text == 'team':
             fieldnames.append('Team')
         elif any(x in text for x in ['gloss', 'коэф', 'resh', 'залуцкий', 'рейшел',
-                                     'залутский']):
+                                     'залутский', 'reichel']):
             # This is not the Wilks, but the WilksCoefficient.
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
@@ -347,7 +350,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == '':
             fieldnames.append('IGNORE')
-        elif text == 'командный зачет':  # Team points
+        elif text in ['командный зачет', 'командные очки']:  # Team points
             fieldnames.append('IGNORE')
         elif text == 'баллы':  # Points
             fieldnames.append('IGNORE')
@@ -450,7 +453,7 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Tested')
     csv.fieldnames.append('Federation')
 
-    weightclass = None
+    weightclass = ''
 
     # Iterate over each line, skipping the two header lines.
     for line in sheet[get_header_linenum(sheet) + 2:]:
@@ -527,6 +530,8 @@ def standardize_division_age(csv):
         row[idx] = row[idx].lower().strip()
         row[bdidx] = row[idx].split('/')[0]
         if '(' in row[bdidx]:
+            if ')' not in row[bdidx]:
+                row[bdidx] = row[bdidx] + ')'
             row[bdidx] = re.search(r"(?<=\().*?(?=\))", row[bdidx]).group(0)
             parts = row[bdidx].split('.')
             if len(parts) == 3:
@@ -610,9 +615,9 @@ def standardize_division_age(csv):
             division = 'Masters 4'
 
         # Catch all for remaining divisions
-        elif 'teen' in row[idx] or 'юноши' in row[idx]:
+        elif 'teen' in row[idx] or 'юноши' in row[idx] or 'юноша' in row[idx]:
             division = 'Teen'
-        elif 'мастера' in row[idx]or 'master' in row[idx]:
+        elif 'мастера' in row[idx] or 'master' in row[idx] or 'мастер' in row[idx]:
             division = 'Masters'
         elif 'открытая' in row[idx] or 'open' in row[idx] or 'o' in row[idx]:
             division = 'Open'
@@ -620,8 +625,8 @@ def standardize_division_age(csv):
             division = 'Juniors 20-23'
         elif 'девушки' in row[idx]:
             division = 'Girls'
-        elif 'ветераны' in row[idx]:
-            division = 'Veterans'
+        elif 'ветераны' in row[idx] or 'ветеран' in row[idx]:
+            division = 'Masters'
         elif row[idx] != '':
             die('Fix standardize_division_age(): Unknown division "%s"' %
                 row[idx])
@@ -645,20 +650,7 @@ def cleanup_place(csv):
         if '.00' in row[place_idx]:  # Convert place to an integer if it wasn't already
             row[place_idx] = str(int(float(row[place_idx])))
 
-        # Somewhat convoluted way of checking if a lifter is marked DQ and has
-        # a nonzero total
-        if (row[place_idx] == 'DQ' and
-                row[total_idx].replace('.', '').replace('-', '').isdigit() and
-                float(row[total_idx]) != 0.0):
-            row[place_idx] = 'DD'
-            row[total_idx] = ''
-        elif (row[place_idx] == '' and
-                row[total_idx].replace('.', '').replace('-', '').isdigit() and
-                float(row[total_idx]) != 0.0):
-            row[place_idx] = 'DD'
-            row[total_idx] = ''
-        # Everything else is a regular DQ
-        elif not row[place_idx] or row[place_idx] == '-':
+        if not row[place_idx] or row[place_idx] == '-':
             row[place_idx] = 'DQ'
         elif (row[total_idx].replace('.', '').replace('-', '').isdigit() and
                 float(row[total_idx]) == 0.0):

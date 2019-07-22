@@ -24,11 +24,11 @@ def download_file(url, resultsname):
     profile.set_preference("browser.download.dir", os.getcwd())
 
     foptions = Options()
-    foptions.headless = True
+    foptions.add_argument("--headless")
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
-    time.sleep(2)
+    time.sleep(5)
 
     iframe = driver.find_element_by_id('sdx_ow_iframe')
     driver.switch_to.frame(iframe)
