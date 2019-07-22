@@ -219,7 +219,7 @@
 
     # Police and Fire divisions.
     mpfr = {name="MPFR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
-    fpfr = {name="FPFR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    fpfr = {name="FPFR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mpfrad = {name="MPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     fpfrad = {name="FPFR-AD", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
 
