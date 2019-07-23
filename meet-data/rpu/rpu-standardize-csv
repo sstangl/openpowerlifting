@@ -369,7 +369,8 @@ def parse_sheet(sheet):
     assert sheet[0][0].count(':') == 1
 
     csv = oplcsv.Csv()
-    title = sheet[0][0].lower()
+    title = sheet[0][0].lower().replace('_', ' ')
+
     # Ignore some sheets that don't contain any powerlifting.
     if 'судейская кол' in title:
         return csv
@@ -731,7 +732,10 @@ def cleanup_weightclass(csv):
 def cleanup_bodyweight(csv):
     idx = csv.index('BodyweightKg')
     for row in csv.rows:
-        row[idx] = row[idx].split()[0]
+        split_bw = row[idx].split()
+        if len(split_bw) == 0:
+            return
+        row[idx] = split_bw[0]
 
 
 def main(filename):
