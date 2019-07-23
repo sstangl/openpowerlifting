@@ -1,100 +1,68 @@
-Place,Name,BirthYear,BirthDate,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Division,Event,Sex,Equipment
-1,Maruska Bertoli,1979,,Italy,51.8,120,127.5,135,135,72.5,77.5,80,80,150,160,165,165,380,52,Masters 1,SBD,F,Raw
-2,Christine Rebello,1972,,Netherlands,51.8,107.5,115,120,120,62.5,67.5,-70,67.5,140,150,-155,150,337.5,52,Masters 1,SBD,F,Raw
-3,Cat Shamel,1977,,UK,51.3,110,115,-117.5,115,65,67.5,-70,67.5,135,140,147.5,147.5,330,52,Masters 1,SBD,F,Raw
-4,Tiina Marjusaari,1977,,Finland,51.9,102.5,107.5,110,110,70,72.5,-75,72.5,135,145,-150,145,327.5,52,Masters 1,SBD,F,Raw
-5,Marianne Bouvard,1976,,France,50.3,102.5,107.5,-112.5,107.5,70,-72.5,72.5,72.5,115,125,-130,125,305,52,Masters 1,SBD,F,Raw
-6,Karen McKernan,1977,,Ireland,51.9,102.5,-107.5,-107.5,102.5,57.5,62.5,-65,62.5,110,115,-120,115,280,52,Masters 1,SBD,F,Raw
-7,Anna Tarnowska,1978,,Poland,52,95,-100,-100,95,37.5,-40,,37.5,115,-122.5,-122.5,115,247.5,52,Masters 1,SBD,F,Raw
-8,Bérangère Cottret,1975,,France,51.1,85,90,-95,90,-40,42.5,-45,42.5,105,-115,-115,105,237.5,52,Masters 1,SBD,F,Raw
-1,Helen Hughes #1,1976,,UK,56.1,112.5,120,125,125,80,-85,-85,80,132.5,140,-145,140,345,57,Masters 1,SBD,F,Raw
-2,Julie Dahle,1978,,Norway,57,115,120,-125,120,80,85,87.5,87.5,120,125,130,130,337.5,57,Masters 1,SBD,F,Raw
-3,Roberta Monaco,1975,,Italy,53.9,100,107.5,112.5,112.5,62.5,65,67.5,67.5,130,142.5,150,150,330,57,Masters 1,SBD,F,Raw
-4,Tanja Korhonen,1978,,Finland,56.1,110,115,-120,115,67.5,-72.5,-72.5,67.5,120,130,142.5,142.5,325,57,Masters 1,SBD,F,Raw
-5,Sarah Flynn,1973,,Ireland,55.6,112.5,117.5,120,120,52.5,55,-57.5,55,135,142.5,-145,142.5,317.5,57,Masters 1,SBD,F,Raw
-6,Courtney Evors,1979,,Germany,56,105,110,-112.5,110,55,57.5,60,60,130,135,-137.5,135,305,57,Masters 1,SBD,F,Raw
-DQ,Véronique Descours,1971,,France,56.3,-105,-105,-105,,65,-70,-70,65,130,142.5,-147.5,142.5,,57,Masters 1,SBD,F,Raw
-1,Colette Haddon,1974,,Netherlands,62.4,135,140,142.5,142.5,75,77.5,-80,77.5,162.5,172.5,175,175,395,63,Masters 1,SBD,F,Raw
-2,Monica Rasmussen,1972,,Norway,62.2,155,160.5,-162.5,160.5,70,75,-77.5,75,150,155,-162.5,155,390.5,63,Masters 1,SBD,F,Raw
-3,Raquel de la Calle Labarzana,1977,,Spain,62.9,145,-150,150,150,72.5,75,77.5,77.5,147.5,155,-157.5,155,382.5,63,Masters 1,SBD,F,Raw
-4,Katri Backman,1977,,Finland,62.1,130,135,-140,135,77.5,82.5,-85,82.5,155,160,-165,160,377.5,63,Masters 1,SBD,F,Raw
-5,Daniela Falck,1975,,Germany,62.8,-117.5,120,125,125,67.5,72.5,-75,72.5,147.5,155,157.5,157.5,355,63,Masters 1,SBD,F,Raw
-6,Sharon Holmes #1,1972,,UK,61.8,130,135,137.5,137.5,70,72.5,75,75,135,140,-145,140,352.5,63,Masters 1,SBD,F,Raw
-7,Anett Kiss,1976,,Hungary,61.6,122.5,-130,-130,122.5,62.5,67.5,70,70,150,-157.5,157.5,157.5,350,63,Masters 1,SBD,F,Raw
-8,Beverley Rodgers,1972,,UK,62.7,117.5,-125,-125,117.5,77.5,82.5,-87.5,82.5,-125,-125,125,125,325,63,Masters 1,SBD,F,Raw
-9,Zaneta Possehl,1977,,Germany,60.3,105,110,112.5,112.5,60,67.5,70,70,120,130,132.5,132.5,315,63,Masters 1,SBD,F,Raw
-1,Eno Majomi,1974,,UK,71,162.5,172.5,175,175,87.5,95,100,100,175,190,-198,190,465,72,Masters 1,SBD,F,Raw
-2,Niamh Savage,1978,,Ireland,70.9,130,135,140,140,60,65,-67.5,65,160,172.5,177.5,177.5,382.5,72,Masters 1,SBD,F,Raw
-3,Izabela Chatlinska,1978,,Poland,71.7,-140,140,150,150,60,65,-67.5,65,150,160,167.5,167.5,382.5,72,Masters 1,SBD,F,Raw
-4,Sanna Joutsela,1973,,Finland,70,120,130,-135,130,82.5,-87.5,87.5,87.5,145,157.5,-165,157.5,375,72,Masters 1,SBD,F,Raw
-5,Lise Reierskog,1977,,Norway,71.5,125,132.5,-140,132.5,80,85,87.5,87.5,145,155,-165,155,375,72,Masters 1,SBD,F,Raw
-6,Věra Fišerová,1973,,Czechia,70.9,95,-105,-112.5,95,45,50,-55,50,125,130,135,135,280,72,Masters 1,SBD,F,Raw
-7,Milena Đurđević,1978,,Croatia,66.6,80,90,92.5,92.5,45,47.5,50,50,115,125,130,130,272.5,72,Masters 1,SBD,F,Raw
-8,Carola Jungwirth,1979,,Germany,63.6,90,-95,-95,90,-57.5,57.5,-60,57.5,110,117.5,-122.5,117.5,265,72,Masters 1,SBD,F,Raw
-DQ,Saara Laine,1979,,Finland,70.5,140,145,150,150,-72.5,-72.5,-72.5,,175,-182.5,182.5,182.5,,72,Masters 1,SBD,F,Raw
-1,Karen Tvedt,1977,1977-01-04,Norway,82.3,175,185,192.5,192.5,90,-95,-95,90,165,-175,-175,165,447.5,84,Masters 1,SBD,F,Raw
-2,Jenni Sherwood,1973,,UK,82.2,140,150,-152.5,150,70,75,80,80,175,182.5,185,185,415,84,Masters 1,SBD,F,Raw
-3,Hilde Dretvik,1974,,Norway,83.6,135,140,145,145,90,-92.5,92.5,92.5,165,172.5,177.5,177.5,415,84,Masters 1,SBD,F,Raw
-4,Piia Valkonen,1973,,Finland,82.1,135,145,150,150,85,90,-92.5,90,155,165,-175,165,405,84,Masters 1,SBD,F,Raw
-5,Mia Öhrnell,1972,,Sweden,79.7,150,157.5,-160,157.5,82.5,87.5,90,90,145,152.5,-155,152.5,400,84,Masters 1,SBD,F,Raw
-6,Lorraine McKenna,1973,,Ireland,82.4,145,152.5,155,155,55,57.5,60,60,160,167.5,172.5,172.5,387.5,84,Masters 1,SBD,F,Raw
-7,Linda Vedestig,1978,,Sweden,81.9,135,140,142.5,142.5,70,72.5,-75,72.5,152.5,160,165,165,380,84,Masters 1,SBD,F,Raw
-8,Nicole Craig,1976,,Ireland,82.4,100,110,117.5,117.5,62.5,65,67.5,67.5,160,170,177.5,177.5,362.5,84,Masters 1,SBD,F,Raw
-9,Julia Szoverfi,1978,,Hungary,82.7,100,110,115,115,60,-65,-65,60,130,140,147.5,147.5,322.5,84,Masters 1,SBD,F,Raw
-1,Melinda Lombosi,1978,,Hungary,137,175,185,192.5,192.5,135,-140,-140,135,175,192.5,-203,192.5,520,84+,Masters 1,SBD,F,Raw
-2,Jo Whiteley,1970,,UK,126.1,175,185,190.5,190.5,92.5,97.5,-100,97.5,175,185,190,190,478,84+,Masters 1,SBD,F,Raw
-3,Tracy O'Callaghan,1978,,UK,97.6,177.5,-185,-190,177.5,82.5,87.5,90,90,185,195,-203,195,462.5,84+,Masters 1,SBD,F,Raw
-4,Barbara Claassen,1971,,Netherlands,98.5,165,175,-180,175,80,85,-90,85,170,177.5,185,185,445,84+,Masters 1,SBD,F,Raw
-5,Susanne Manninen,1977,,Finland,97.9,125,135,142.5,142.5,65,70,72.5,72.5,150,165,175,175,390,84+,Masters 1,SBD,F,Raw
-6,Kristina Grimstad Nordstrand,1978,,Norway,85.9,120,130,135,135,75,80,85,85,140,150,155,155,375,84+,Masters 1,SBD,F,Raw
-7,Emma Kiely,1974,,Ireland,88.2,120,127.5,-132.5,127.5,67.5,70,-72.5,70,160,170,177.5,177.5,375,84+,Masters 1,SBD,F,Raw
-8,Horvath Boglarka,1977,,Hungary,121.9,-130,130,135,135,62.5,67.5,70,70,155,170,-180,170,375,84+,Masters 1,SBD,F,Raw
-9,Birgitte Lorentzen,1975,,Norway,110.8,120,130,142.5,142.5,77.5,85,-90,85,130,145,-155,145,372.5,84+,Masters 1,SBD,F,Raw
-1,Nathalie Feraud,1967,,France,46.5,95,-100,-100,95,65,70,-72.5,70,120,127.5,-135,127.5,292.5,47,Masters 2,SBD,F,Raw
-2,Elena Borgatti,1969,,Italy,45.7,102.5,108,-110.5,108,-55,55,57.5,57.5,125,-132.5,-132.5,125,290.5,47,Masters 2,SBD,F,Raw
-3,June Stamp,1969,,UK,45.9,92.5,97.5,100,100,-45,45,47.5,47.5,102.5,107.5,112.5,112.5,260,47,Masters 2,SBD,F,Raw
-4,Ana Sternfeld,1968,,Spain,46.1,87.5,-92.5,-92.5,87.5,45,47.5,-50,47.5,100,107.5,-127.5,107.5,242.5,47,Masters 2,SBD,F,Raw
-1,Magdolna Petróczki,1968,,Hungary,51.5,90,-100,100,100,65,70,-72.5,70,125,135,142.5,142.5,312.5,52,Masters 2,SBD,F,Raw
-2,Hege Henriksen Bubandt,1961,,Norway,51.5,90,-95,-95,90,47.5,-50,-50,47.5,130,137.5,-140,137.5,275,52,Masters 2,SBD,F,Raw
-3,Lorraine Box,1966,,UK,51.4,77.5,82.5,-85,82.5,40,45,47.5,47.5,110,-117.5,117.5,117.5,247.5,52,Masters 2,SBD,F,Raw
-1,Petra Mlejnková,1967,,Czechia,55.4,107.5,112.5,115,115,65,70,-72.5,70,127.5,135,140,140,325,57,Masters 2,SBD,F,Raw
-2,Leena Jokitalo-Luomakoski,1961,,Finland,55.4,-105,105,115,115,57.5,-60,60,60,135,145,-152.5,145,320,57,Masters 2,SBD,F,Raw
-3,Sofia Rudin,1968,,Sweden,56.6,105,112.5,-118,112.5,50,-55,-55,50,127.5,-135,-137.5,127.5,290,57,Masters 2,SBD,F,Raw
-4,Grazyna Gebala,1966,,Poland,56.8,-85,85,90,90,42.5,45,-47.5,45,100,105,-112.5,105,240,57,Masters 2,SBD,F,Raw
-1,Karen Barry,1966,,Ireland,62.5,127.5,132.5,135,135,67.5,72.5,-75,72.5,132.5,142.5,-147.5,142.5,350,63,Masters 2,SBD,F,Raw
-2,Lynda Banks,1965,,UK,62,107.5,112.5,115,115,60,65,-67.5,65,137.5,145,-147.5,145,325,63,Masters 2,SBD,F,Raw
-3,Diane Stockwell,1967,,UK,61.7,105,-110,110,110,65,-70,-70,65,125,132.5,137.5,137.5,312.5,63,Masters 2,SBD,F,Raw
-4,Laure Romain Livy,1967,,France,62,-110,-110,110,110,52.5,55,-57.5,55,-130,130,-140,130,295,63,Masters 2,SBD,F,Raw
-5,Margetta Salminen,1961,,Finland,62.2,87.5,92.5,97.5,97.5,-62.5,62.5,65,65,117.5,122.5,-127.5,122.5,285,63,Masters 2,SBD,F,Raw
-6,Helena Birath,1963,,Sweden,62.1,-100,100,105,105,45,50,-52.5,50,125,-132.5,-132.5,125,280,63,Masters 2,SBD,F,Raw
-1,Joy Mineo,1967,,UK,67.1,112.5,117.5,120,120,70,75,77.5,77.5,155,165,-172.5,165,362.5,72,Masters 2,SBD,F,Raw
-2,Farkas Laszlone,1967,,Hungary,69.9,115,122.5,-130,122.5,77.5,-82.5,82.5,82.5,140,-150,,140,345,72,Masters 2,SBD,F,Raw
-3,Stina Sundling,1964,,Sweden,71.6,90,-97.5,100,100,52.5,57.5,60,60,115,122.5,127.5,127.5,287.5,72,Masters 2,SBD,F,Raw
-DQ,Helen Twomey,1967,,Ireland,71.4,-117.5,-120,-120,,65,67.5,-70,67.5,145,152.5,-155,152.5,,72,Masters 2,SBD,F,Raw
-1,Inger Blikra,1961,,Norway,82.4,120,135.5,-148,135.5,95,105,-110.5,105,160,170,178,178,418.5,84,Masters 2,SBD,F,Raw
-2,Jackie Blasbery,1963,,UK,83.9,110,120,-125,120,75,80,85,85,152.5,162.5,165,165,370,84,Masters 2,SBD,F,Raw
-3,Gro-Berit Stavheim,1964,,Norway,80.8,122.5,127.5,132.5,132.5,75,80,-82.5,80,147.5,155,-160,155,367.5,84,Masters 2,SBD,F,Raw
-4,Louise Wicks,1968,,UK,83.3,120,-125,125,125,62.5,65,67.5,67.5,150,-160,160,160,352.5,84,Masters 2,SBD,F,Raw
-5,Tiina Kiviranta,1966,,Finland,83.4,120,127.5,136,136,65,-70,-70,65,135,145,-155,145,346,84,Masters 2,SBD,F,Raw
-1,Betty Gray,1962,,UK,103.9,130,140,-147.5,140,70,72.5,75,75,185,198,-205,198,413,84+,Masters 2,SBD,F,Raw
-2,Marie Ebbeke,1967,,Sweden,100.1,147.5,155,-165.5,155,-65,65,67.5,67.5,155,162.5,-165,162.5,385,84+,Masters 2,SBD,F,Raw
-3,Pernille Brathen Rita,1968,,Norway,94.9,125,132.5,-135,132.5,67.5,72.5,75,75,160,170,-175,170,377.5,84+,Masters 2,SBD,F,Raw
-DQ,Nelson Pia Skovborg,1963,,Denmark,164.9,142.5,150,-157.5,150,80,-85,85,85,-152.5,-160,-160,,,84+,Masters 2,SBD,F,Raw
-1,Linda Kaminski,1956,,UK,47.7,92.5,97.5,100,100,37.5,40,-42.5,40,127.5,135,140,140,280,52,Masters 3,SBD,F,Raw
-1,Edith Guennec,1956,,France,55.4,90,100,105.5,105.5,52.5,-57.5,-57.5,52.5,145,-150,-150,145,303,57,Masters 3,SBD,F,Raw
-2,Jenny Hunter,1958,,UK,52.1,72.5,80,85,85,60,65,67.5,67.5,110,122.5,127.5,127.5,280,57,Masters 3,SBD,F,Raw
-3,Caroline Cunniffe,1957,,Ireland,55.2,77.5,82.5,87.5,87.5,42.5,45,-47.5,45,100,105,110,110,242.5,57,Masters 3,SBD,F,Raw
-1,Elisabeth Keiml,1959,,Austria,59.8,107.5,115,-120.5,115,62.5,65,67.5,67.5,125,135,145,145,327.5,63,Masters 3,SBD,F,Raw
-2,Flóra Kosztin,1955,,Hungary,60.2,100,-102.5,102.5,102.5,85,90,-92.5,90,130,135,-137.5,135,327.5,63,Masters 3,SBD,F,Raw
-3,Kirsti Løken,1954,,Norway,61.6,100,105,-107.5,105,52.5,55,57.5,57.5,125,132.5,-142.5,132.5,295,63,Masters 3,SBD,F,Raw
-4,Daisy Blondan,1959,,France,60.8,-95,95,-102.5,95,-70,70,72.5,72.5,125,-133.5,-135,125,292.5,63,Masters 3,SBD,F,Raw
-1,Sara Del Duca,1954,,Italy,70.5,90,95,-97.5,95,70,-75.5,-75.5,70,137.5,-146,148,148,313,72,Masters 3,SBD,F,Raw
-2,Gloria Fitzpatrick,1959,,UK,69.7,100,-110,110,110,55,60,62.5,62.5,130,-140,140,140,312.5,72,Masters 3,SBD,F,Raw
-3,Joyce Park,1958,,UK,68.6,100,105,110,110,57.5,60,62.5,62.5,122.5,130,137.5,137.5,310,72,Masters 3,SBD,F,Raw
-4,Christine Liege Marie,1955,,France,65.2,92.5,100,105,105,60,65,67.5,67.5,112.5,122.5,-130,122.5,295,72,Masters 3,SBD,F,Raw
-5,Régine Billard,1955,,France,66.5,65,70,-72.5,70,37.5,40,-42.5,40,105,110,-112.5,110,220,72,Masters 3,SBD,F,Raw
-1,Tove Michalsen,1959,,Norway,79.9,105,-115.5,115.5,115.5,52.5,57.5,62.5,62.5,127.5,137.5,-142.5,137.5,315.5,84,Masters 3,SBD,F,Raw
-1,Marit Pettersen,1954,,Norway,89.6,-115,115,-125.5,115,60,62.5,-65,62.5,142.5,-155.5,-155.5,142.5,320,84+,Masters 3,SBD,F,Raw
-1,Britten Fernström,1949,,Sweden,54.9,72.5,77.5,-80,77.5,47.5,50,53,53,-105,105,110,110,240.5,57,Masters 4,SBD,F,Raw
-1,Adina Hyková,1943,,Czechia,60.5,57.5,65,70,70,57.5,61,61.5,61.5,100,110,115,115,246.5,63,Masters 4,SBD,F,Raw
-1,Anne Mari Clausen,1942,,Norway,70.5,-60,62.5,67.5,67.5,45,47.5,-50,47.5,82.5,90,95,95,210,72,Masters 4,SBD,F,Raw
+Place,WeightClassKg,Sex,Event,Equipment,Name,BirthYear,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division
+1,59,M,B,Raw,Manvel Gasparyan,1978,58.1,Armenia,,,,,85,92.5,-97.5,92.5,,,,,92.5,Open
+1,66,M,B,Raw,Rafal Wit,1995,65.22,Poland,,,,,130,140,-145,140,,,,,140,Open
+2,66,M,B,Raw,Armen Martirosyan,1992,64.01,Armenia,,,,,105,110,-115,110,,,,,110,Open
+3,66,M,B,Raw,Radoslaw Debicki,2001,62.46,Poland,,,,,95,102.5,-110,102.5,,,,,102.5,Open
+1,74,M,B,Raw,Dmitrii Luchkin,1986,72.68,Russia,,,,,185,190,-195,190,,,,,190,Open
+2,74,M,B,Raw,Alexey Nazarenko,1989,72.99,Russia,,,,,175,180,185,185,,,,,185,Open
+3,74,M,B,Raw,Albertas Motiecius,1994,72.69,Lithuania,,,,,160,170,175,175,,,,,175,Open
+4,74,M,B,Raw,Ara Hovanessyan,1992,73.95,Armenia,,,,,130,137.5,-142.5,137.5,,,,,137.5,Open
+1,83,M,B,Raw,Maksim Beloborodov,1983,82.25,Russia,,,,,190,200,-207.5,200,,,,,200,Open
+2,83,M,B,Raw,Levon Kocharyan,1985,79.14,Armenia,,,,,-160,165,-170,165,,,,,165,Open
+3,83,M,B,Raw,Anton Rusakou,1994,75.63,Belarus,,,,,152.5,155,157.5,157.5,,,,,157.5,Open
+4,83,M,B,Raw,Tatul Harutunyan,1987,81.7,Armenia,,,,,140,150,-157.5,150,,,,,150,Open
+1,93,M,B,Raw,Aleh Yermak,1989,92.12,Belarus,,,,,215,-220,-220,215,,,,,215,Open
+2,93,M,B,Raw,Araik Arakelyan,1973,92.47,Armenia,,,,,115,122.5,130,130,,,,,130,Open
+1,105,M,B,Raw,Alexey Kudryavtsev,1988,104.09,Russia,,,,,210,220,-225,220,,,,,220,Open
+2,105,M,B,Raw,Paulius Morkvėnas,1992,102.38,Lithuania,,,,,195,205,-220,205,,,,,205,Open
+3,105,M,B,Raw,Harut Avanesyan,1990,101.94,Armenia,,,,,140,-150,-160,140,,,,,140,Open
+1,120,M,B,Raw,Aliaksandr Dziamyanau,1986,111.33,Belarus,,,,,-225,-225,225,225,,,,,225,Open
+2,120,M,B,Raw,Michal Nowalinski,1988,116.16,Poland,,,,,200,-205,-205,200,,,,,200,Open
+3,120,M,B,Raw,Arkadia Zakarian,1972,110.3,Armenia,,,,,155,165,-172.5,165,,,,,165,Open
+1,120+,M,B,Raw,Vitaliy Morozevich,1966,200,Russia,,,,,180,205,-225,205,,,,,205,Open
+2,120+,M,B,Raw,Oleg Razzhivin,1972,125.78,Russia,,,,,130,135,140,140,,,,,140,Open
+1,59,M,SBD,Raw,Manvel Gasparyan,1978,57.76,Armenia,110,120,-130,120,85,90,95,95,150,170,180,180,395,Open
+1,66,M,SBD,Raw,Albert Stankevich,2002,65.95,Belarus,185,195,-210,195,100,105,110,110,170,185,-187.5,185,490,Open
+2,66,M,SBD,Raw,Armen Martirosyan,1992,63.74,Armenia,135,142.5,150,150,105,110,-112.5,110,190,200,205,205,465,Open
+3,66,M,SBD,Raw,Linas Abakas,1999,62.8,Lithuania,142.5,-150,-150,142.5,102.5,107.5,-110,107.5,180,-200,,180,430,Open
+1,74,M,SBD,Raw,Artsiom Savelyeu,1998,72.11,Belarus,240,255,-258,255,135,142.5,-145,142.5,220,245,-265,245,642.5,Open
+2,74,M,SBD,Raw,Ara Hovanessyan,1992,73.64,Armenia,-165,170,-180,170,130,140,-145,140,190,200,-210,200,510,Open
+1,83,M,SBD,Raw,Yauheni Kautsevich,1988,82.22,Belarus,250,260,-265,260,160,165,-167.5,165,280,290,-300,290,715,Open
+2,83,M,SBD,Raw,Tatul Harutyunyan,1987,81.97,Armenia,160,170,180,180,145,-150,-150,145,200,210,220,220,545,Open
+1,93,M,SBD,Raw,Aliaksei Sheikin,1988,92.17,Belarus,230,240,242.5,242.5,175,180,-185,180,270,280,-285,280,702.5,Open
+2,93,M,SBD,Raw,Mikalai Khomich,1974,92.25,Belarus,225,240,-255,240,155,162.5,-170,162.5,255,275,-302.5,275,677.5,Open
+3,93,M,SBD,Raw,Balint P. Nagy,1994,92.33,Hungary,220,230,-235,230,145,155,165,165,245,255,-265,255,650,Open
+4,93,M,SBD,Raw,Arayik Arakelyan,1973,92.95,Armenia,190,205,220,220,115,125,-135,125,200,210,-220,210,555,Open
+1,105,M,SBD,Raw,Dzmitry Mankevich,1997,102.61,Belarus,270,280,285,285,170,180,-185,180,305,315,-317.5,315,780,Open
+2,105,M,SBD,Raw,Sergii Kovalenko,1994,102.32,Ukraine,-265,-270,270,270,170,180,-185,180,280,300,-315,300,750,Open
+3,105,M,SBD,Raw,Harut Avanesyan,1990,101.9,Armenia,200,215,-230,215,140,152.5,-155,152.5,230,-250,,230,597.5,Open
+1,120,M,SBD,Raw,Serhii Lubchenko,1988,119.19,Ukraine,275,-290,-295,275,190,205,-210,205,280,-300,-335,280,760,Open
+2,120,M,SBD,Raw,Ilya Puchyk,1988,112.44,Belarus,240,247.5,252.5,252.5,150,-157.5,-157.5,150,250,255,260,260,662.5,Open
+3,120,M,SBD,Raw,Karen Ghahramanyan,1978,105.07,Armenia,220,230,240,240,145,150,-155,150,230,242.5,252.5,252.5,642.5,Open
+1,47,F,B,Raw,Hanna Krychko,1996,43.93,Belarus,,,,,65,67.5,72.5,72.5,,,,,72.5,Open
+1,52,F,B,Raw,Tatiana Belskaya,2002,50.8,Russia,,,,,52.5,57.5,60,60,,,,,60,Open
+1,57,F,B,Raw,Natalia Prymachenka,1987,55.91,Belarus,,,,,100,105,-110,105,,,,,105,Open
+2,57,F,B,Raw,Sofya Shubtsova,1965,54.94,Belarus,,,,,80,-82.5,-82.5,80,,,,,80,Open
+3,57,F,B,Raw,Karina Chebunina,2003,55.6,Russia,,,,,42.5,47.5,50,50,,,,,50,Open
+1,63,F,B,Raw,Iryna Hardouskaya,1996,60.47,Belarus,,,,,95,105,110,110,,,,,110,Open
+2,63,F,B,Raw,Nadezhda Churilova,1996,61.76,Russia,,,,,80,-85,85,85,,,,,85,Open
+3,63,F,B,Raw,Glafira Anikina,2001,62.33,Russia,,,,,55,60,62.5,62.5,,,,,62.5,Open
+1,72,F,B,Raw,Viktoryia Bardouskaya,1995,68.62,Belarus,,,,,90,95,97.5,97.5,,,,,97.5,Open
+2,72,F,B,Raw,Kinga Moczydlowska,1983,70.48,Poland,,,,,-90,90,-92.5,90,,,,,90,Open
+1,84,F,B,Raw,Aneta Szot,1984,72.85,Poland,,,,,95,-100,100,100,,,,,100,Open
+1,47,F,SBD,Raw,Maria Zabelina,1997,46.81,Russia,105,110,-112.5,110,55,60,62.5,62.5,132.5,140,145,145,317.5,Open
+2,47,F,SBD,Raw,Zuzanna Kula,1999,46.23,Poland,105,110,112.5,112.5,65,-70,-70,65,125,132.5,137.5,137.5,315,Open
+1,52,F,SBD,Raw,Marina Gaiduchenok,1984,51.35,Russia,107.5,-112.5,112.5,112.5,70,-72.5,-72.5,70,145,157.5,-165,157.5,340,Open
+2,52,F,SBD,Raw,Nadzeya Tsiareshka,2001,51.88,Belarus,80,82.5,90,90,50,55,-57.5,55,105,110,115,115,260,Open
+1,57,F,SBD,Raw,Ekaterina Nazarova,2000,56.69,Russia,122.5,-127.5,-127.5,122.5,72.5,77.5,80,80,125,130,-135,130,332.5,Open
+2,57,F,SBD,Raw,Sofya Shubtsova,1965,55.97,Belarus,102.5,107.5,-112.5,107.5,77.5,-82.5,-82.5,77.5,130,-137.5,137.5,137.5,322.5,Open
+1,63,F,SBD,Raw,Inna Filimonova #1,1976,57.65,Russia,150,160,165,165,72.5,77.5,82.5,82.5,160,175,182.5,182.5,430,Open
+2,63,F,SBD,Raw,Aiste Motiece,1996,62.62,Lithuania,100,107.5,110,110,62.5,70,-72.5,70,130,140,150,150,330,Open
+3,63,F,SBD,Raw,Aliaksandra Burykina,1999,62.18,Belarus,120,127.5,-130,127.5,57.5,62.5,-67.5,62.5,115,122.5,-125,122.5,312.5,Open
+1,72,F,SBD,Raw,Viktoryia Bardouskaya,1995,68.52,Belarus,-160,160,-170,160,85,90,95,95,180,-187.5,-190,180,435,Open
+2,72,F,SBD,Raw,Barbara Feher,1994,65.02,Hungary,115,125,-130,125,50,55,,55,115,125,-130,125,305,Open
+3,72,F,SBD,Raw,Valeryia Zhabinskaya,2003,63.75,Belarus,80,82.5,90,90,52.5,57.5,-62.5,57.5,87.5,95,100,100,247.5,Open
+1,84,F,SBD,Raw,Anna Wieczorek,1984,83.27,Poland,107.5,160,170,170,75,80,-82.5,80,170,175,177.5,177.5,427.5,Open
+2,84,F,SBD,Raw,Kseniya Kupa,2001,80.39,Belarus,157.5,-165,-165,157.5,75,77.5,-82.5,77.5,177.5,185,-190,185,420,Open
+1,84+,F,SBD,Raw,Nargiz Isaeva,1990,102.76,Russia,145,157.5,162.5,162.5,85,90,95,95,155,165,170,170,427.5,Open
+2,84+,F,SBD,Raw,Katsiaryna Zharalo,1998,132.06,Belarus,120,-130,-140,120,75,80,82.5,82.5,120,130,140,140,342.5,Open
