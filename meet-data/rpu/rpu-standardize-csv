@@ -113,7 +113,8 @@ def parse_sheetname(s):
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн']:
             equipment = 'Single-ply'
-        elif word in ['экипировка', 'экипировке', 'eq', 'эипировке', 'экип'] and equipment == 'Single-ply':
+        elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
+                      'экип'] and equipment == 'Single-ply':
             continue
         elif word in ['m ply', 'многослой']:
             equipment = 'Multi-ply'
@@ -137,7 +138,7 @@ def parse_sheetname(s):
         # Grammatical ignorables.
         elif word == 'в':
             pass
-        elif word == 'лежа':
+        elif word in ['лежа', 'лёжа']:
             pass
         elif word == 'на':
             pass
@@ -411,7 +412,7 @@ def parse_sheet(sheet):
     elif 'богатырский' in title:  # Heroic Press ?? Some kind of overhead press maybe
         return csv
     elif any(x in title for x in ['корпус', 'судейски', 'командный зачёт',
-                                  'абсолютный', 'судейство']):  # Results
+                                  'абсолютный', 'судейство', 'cудейская']):  # Results
         return csv
     elif 'арм' in title:  # Arm wrestling
         return csv
@@ -613,6 +614,8 @@ def standardize_division_age(csv):
             division = 'Masters 3'
         elif 'мастера 4' in row[idx] or 'm4' in row[idx]:
             division = 'Masters 4'
+        elif 'veterans 40+' in row[idx]:
+            division = 'Masters 40+'
 
         # Catch all for remaining divisions
         elif 'teen' in row[idx] or 'юноши' in row[idx] or 'юноша' in row[idx]:
