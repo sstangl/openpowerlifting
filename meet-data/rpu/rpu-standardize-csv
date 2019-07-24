@@ -393,7 +393,7 @@ def parse_sheet(sheet):
         return csv
     elif 'excalibur' in title or 'эскалибур' in title:
         return csv
-    elif 'silver bullet' in title:
+    elif 'bullet' in title:
         return csv
     elif 'block' in title or 'блок' in title or 'кирпич' in title:
         return csv
@@ -506,9 +506,46 @@ def parse_sheet(sheet):
     return csv
 
 
+def get_division(age_str):
+    age = int(age_str)
+    if age < 13:
+        return 'Youth'
+    elif age <= 15:
+        return 'Teen 13-15'
+    elif age <= 17:
+        return 'Teen 16-17'
+    elif age <= 19:
+        return 'Teen 18-19'
+    elif age <= 23:
+        return 'Juniors 20-23'
+    elif age <= 34:
+        return 'Open'
+    elif age <= 39:
+        return 'Submasters 35-39'
+    elif age <= 44:
+        return 'Masters 40-44'
+    elif age <= 49:
+        return 'Masters 45-49'
+    elif age <= 54:
+        return 'Masters 50-54'
+    elif age <= 59:
+        return 'Masters 55-59'
+    elif age <= 64:
+        return 'Masters 60-64'
+    elif age <= 69:
+        return 'Masters 65-69'
+    elif age <= 74:
+        return 'Masters 70-74'
+    elif age <= 79:
+        return 'Masters 75-79'
+    else:
+        return 'Masters 80+'
+
 # Handles the Division-Age column, which looks like below:
 #   Открытая 20-23 (21.11.1986)/30
 # Converts to English and separates into Division and Age columns.
+
+
 def standardize_division_age(csv):
     assert 'Division-Age' in csv.fieldnames
     assert 'Amateur' in csv.fieldnames
@@ -541,96 +578,46 @@ def standardize_division_age(csv):
 
         # Fill in the Division.
         # Handle the divisions with numbers first.
-        if 'открытая 20-23' in row[idx]:
-            division = 'Open 20-23'
-        elif 'открытая 24-39' in row[idx]:
-            division = 'Open 24-39'
-        elif ('юниорки 20-23' in row[idx] or 'juniors 20-23' in row[idx] or
-                'юниор 20-23' in row[idx] or 'юниоры 20-23' in row[idx]):
+        if '20-23' in row[idx]:
             division = 'Juniors 20-23'
-        elif 'девушки 14-16' in row[idx]:
-            division = 'Girls 14-16'
-        elif 'юноши 13-15' in row[idx] or 'teen 13-15' in row[idx]:
+        elif '24-39' in row[idx]:
+            division = 'Open'
+        elif '13-15' in row[idx]:
             division = 'Teen 13-15'
-        elif 'teen 13-19' in row[idx] or 'юноши 13-19' in row[idx]:
-            division = 'Teen 13-19'
-        elif ('юноши 15-19' in row[idx]or 'teenage 15-19' in row[idx] or
-                'teens 15-19' in row[idx]):
-            division = 'Teen 15-19'
-        elif 'юноши 14-16' in row[idx]:
-            division = 'Teen 14-16'
-        elif 'юноши 14-18' in row[idx]:
-            division = 'Teen 14-18'
-        elif 'юноши 16-17' in row[idx] or 'teen 16-17' in row[idx]:
+        elif '16-17' in row[idx]:
             division = 'Teen 16-17'
-        elif 'юноши 18-19' in row[idx] or 'teen 18-19' in row[idx]:
+        elif '18-19' in row[idx]:
             division = 'Teen 18-19'
-        elif 'юноши 17-19' in row[idx] or 'teen 17-19' in row[idx]:
-            division = 'Teen 17-19'
-        elif 'тeenager t1' in row[idx] or 't1' in row[idx]:
-            division = 'Teen T1'
-        elif 'тeenager t2' in row[idx] or 't2' in row[idx]:
-            division = 'Teen T2'
-        elif 'тeenager t2' in row[idx] or 't3' in row[idx]:
-            division = 'Teen T3'
-        elif 'sub masters 33-39' in row[idx]:
-            division = 'Sub Masters 33-39'
-        elif 'masters 40+' in row[idx]:
-            division = 'Masters 40+'
-        elif 'мастера 40-44' in row[idx] or 'masters 40-44' in row[idx]:
+        elif '40-44' in row[idx]:
             division = 'Masters 40-44'
-        elif 'masters 40-45' in row[idx]:
-            division = 'Masters 40-45'
-        elif ('master 40-49' in row[idx] or 'masters 40-49' in row[idx] or
-                'мастера 40-49' in row[idx]):
-            division = 'Masters 40-49'
-        elif 'мастера 45-49' in row[idx] or 'masters 45-49' in row[idx]:
+        elif '45-49' in row[idx]:
             division = 'Masters 45-49'
-        elif 'masters 45-50' in row[idx]:
-            division = 'Masters 45-50'
-        elif 'мастера 50-54' in row[idx] or 'masters 50-54' in row[idx]:
+        elif '50-54' in row[idx]:
             division = 'Masters 50-54'
-        elif ('master 50-59' in row[idx] or 'masters 50-59' in row[idx] or
-                'мастера 50-59' in row[idx]):
-            division = 'Masters 50-59'
-        elif 'мастера 55-59' in row[idx] or 'masters 55-59' in row[idx]:
+        elif '55-59' in row[idx]:
             division = 'Masters 55-59'
-        elif 'мастера 60-64' in row[idx] or 'masters 60-64' in row[idx]:
+        elif '60-64' in row[idx]:
             division = 'Masters 60-64'
-        elif 'master 60-69' in row[idx] or 'мастера 60-69' in row[idx]:
-            division = 'Masters 60-69'
-        elif 'masters 65-69' in row[idx] or 'мастера 65-69' in row[idx]:
+        elif '65-69' in row[idx]:
             division = 'Masters 65-69'
-        elif 'masters 70-74' in row[idx]:
+        elif '70-74' in row[idx]:
             division = 'Masters 70-74'
-        elif 'мастера 70-79' in row[idx] or 'master 70-79' in row[idx]:
-            division = 'Masters 70-79'
-        elif 'мастера 75-79' in row[idx]:
+        elif '75-79' in row[idx]:
             division = 'Masters 75-79'
-        elif 'мастера 1' in row[idx] or 'm1' in row[idx]:
-            division = 'Masters 1'
-        elif 'мастера 2' in row[idx] or 'm2' in row[idx]:
-            division = 'Masters 2'
-        elif 'мастера 3' in row[idx] or 'm3' in row[idx]:
-            division = 'Masters 3'
-        elif 'мастера 4' in row[idx] or 'm4' in row[idx]:
-            division = 'Masters 4'
-        elif 'veterans 40+' in row[idx]:
-            division = 'Masters 40+'
+        elif '80+' in row[idx]:
+            division = 'Masters 80+'
 
         # Catch all for remaining divisions
-        elif 'teen' in row[idx] or 'юноши' in row[idx] or 'юноша' in row[idx]:
-            division = 'Teen'
-        elif 'мастера' in row[idx] or 'master' in row[idx] or 'мастер' in row[idx]:
-            division = 'Masters'
+        elif ('teen' in row[idx] or 'юноши' in row[idx] or
+                'юноша' in row[idx] or 'девушки' in row[idx]):
+            division = get_division(row[ageidx])
+        elif ('мастер' in row[idx] or 'master' in row[idx] or 'veteran' in row[idx] or
+              'ветеран' in row[idx]):
+            division = get_division(row[ageidx])
+        elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
+            division = get_division(row[ageidx])
         elif 'открытая' in row[idx] or 'open' in row[idx] or 'o' in row[idx]:
             division = 'Open'
-        elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
-            division = 'Juniors 20-23'
-        elif 'девушки' in row[idx]:
-            division = 'Girls'
-        elif 'ветераны' in row[idx] or 'ветеран' in row[idx]:
-            division = 'Masters'
         elif row[idx] != '':
             die('Fix standardize_division_age(): Unknown division "%s"' %
                 row[idx])
