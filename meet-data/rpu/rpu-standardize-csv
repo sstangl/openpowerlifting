@@ -404,7 +404,7 @@ def parse_sheet(sheet):
     elif 'лог лифт' in title:
         return csv
     elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
-                                  'армейский', 'тяговое', 'военный', 'двоеборье',
+                                  'армейский', 'тяговое', 'военный',
                                   '1_2 веса']):  # Bench reps
         return csv
     # Bench and then bench for reps
