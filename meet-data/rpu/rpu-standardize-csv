@@ -369,7 +369,7 @@ def parse_sheet(sheet):
     assert sheet[0][0].count(':') == 1
 
     csv = oplcsv.Csv()
-    title = sheet[0][0].lower().replace('_', ' ').replace('.','')
+    title = sheet[0][0].lower().replace('_', ' ').replace('.', '')
 
     # Ignore some sheets that don't contain any powerlifting.
     if 'судейская кол' in title:
@@ -506,7 +506,7 @@ def parse_sheet(sheet):
     return csv
 
 
-def get_division(age_str,currdiv):
+def get_division(age_str, currdiv):
     if age_str == '':
         return currdiv
     age = int(age_str)
