@@ -24,7 +24,7 @@ def download_file(url, resultsname):
     profile.set_preference("browser.download.dir", os.getcwd())
 
     foptions = Options()
-    foptions.add_argument("--headless")
+    #foptions.add_argument("--headless")
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
