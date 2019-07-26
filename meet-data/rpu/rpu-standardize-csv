@@ -122,7 +122,7 @@ def parse_sheetname(s):
         elif word in ['m ply', 'многослой', 'мног']:
             equipment = 'Multi-ply'
         elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
-                      'облегченная', 'облегченной', 'слинг']:
+                      'облегченная', 'облегченной', 'слинг', 'софстанд', 'соф']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
@@ -164,7 +164,7 @@ def parse_sheetname(s):
             pass
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
-                      'стандартдк', 'сандарт']:
+                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая']:
             pass
         elif word == 'фжд':  # Don't know what this means
             pass
@@ -617,8 +617,8 @@ def standardize_division_age(csv):
         elif ('teen' in row[idx] or 'юноши' in row[idx] or
                 'юноша' in row[idx] or 'девушки' in row[idx]):
             division = get_division(row[ageidx], row[idx])
-        elif ('мастер' in row[idx] or 'master' in row[idx] or 'veteran' in row[idx] or
-              'ветеран' in row[idx]):
+        elif any(x in row[idx] for x in ['мастер', 'master', 'veteran', 'ветеран',
+                                         'm1', 'm2', 'm3']):
             division = get_division(row[ageidx], row[idx])
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = get_division(row[ageidx], row[idx])
