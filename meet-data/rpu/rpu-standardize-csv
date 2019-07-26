@@ -55,12 +55,12 @@ def parse_sheetname(s):
     # Parse word-by-word to make sure that every word is understood.
     s = s.lower()
 
-    if 'без экип' in s:  # Need to do 'without equipment' seperately
+    if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
-        # We want to remove all strings that start with 'без экип'
+        # We want to remove all strings that start with 'без эк'
         s = s.replace('без', '')
         split_str = s.split()
-        index = [ii for ii, s in enumerate(split_str) if 'экип' in s][0]
+        index = [ii for ii, s in enumerate(split_str) if 'эк' in s][0]
         del split_str[index]
         s = ' '.join(split_str)
 
@@ -83,6 +83,9 @@ def parse_sheetname(s):
         elif word in ['gpa', 'gpa-ipo-d', 'gpa-ipo', 'ipo']:
             assert not federation
             federation = 'GPA'
+        elif word == 'ipl':
+            assert not federation
+            federation = 'IPL'
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
@@ -116,7 +119,7 @@ def parse_sheetname(s):
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
-        elif word in ['m ply', 'многослой']:
+        elif word in ['m ply', 'многослой', 'мног']:
             equipment = 'Multi-ply'
         elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
                       'облегченная', 'облегченной', 'слинг']:
@@ -160,7 +163,8 @@ def parse_sheetname(s):
         elif word in ['handicaped', 'пода']:
             pass
         # Extra terms for slingshot bench
-        elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте']:
+        elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
+                      'стандартдк', 'сандарт']:
             pass
         elif word == 'фжд':  # Don't know what this means
             pass
@@ -276,7 +280,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('BirthYear')
         elif text in ['собств вес', 'собств', 'соб', 'вес', 'собственный вес',
                       'собственный', 'body weight', 'собcтвенный вес', 'собст вес',
-                      'соб вес', 'собстввес', 'вага', 'св']:
+                      'соб вес', 'собстввес', 'вага', 'св', 'собствственный']:
             fieldnames.append('BodyweightKg')
         elif text == 'весовая категория':
             fieldnames.append('WeightClassKg')
@@ -372,7 +376,7 @@ def parse_sheet(sheet):
     title = sheet[0][0].lower().replace('_', ' ').replace('.', '')
 
     # Ignore some sheets that don't contain any powerlifting.
-    if 'судейская кол' in title:
+    if 'судейская' in title:
         return csv
     elif 'нж' in title or 'народный' in title or 'народн жим' in title:
         # This is the "People's Bench", which I think is bench-for-reps.
