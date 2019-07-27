@@ -30,19 +30,19 @@ def download_file(url, resultsname):
     foptions.add_argument("--headless")
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
-
+    time.sleep(30)
     iframe = driver.find_element_by_id('sdx_ow_iframe')
-    driver.switch_to.frame(iframe)
-    # Wait until we can click the download button
-    element = WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located(
-            (By.ID, "m_excelWebRenderer_ewaCtl_btnDownload-Medium20"))
-    )
+    # driver.switch_to.frame(iframe)
+    # # Wait until we can click the download button
+    # element = WebDriverWait(driver, 30).until(
+    #     EC.presence_of_element_located(
+    #         (By.ID, "m_excelWebRenderer_ewaCtl_btnDownload-Medium20"))
+    # )
     download_button = driver.find_element_by_id(
         "m_excelWebRenderer_ewaCtl_btnDownload-Medium20")
     download_button.click()
 
-    time.sleep(5)
+    time.sleep(1)
 
     alertbox = driver.find_elements_by_id("errorbuttonarea")
     if len(alertbox) != 0:

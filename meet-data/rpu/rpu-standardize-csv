@@ -54,7 +54,7 @@ def parse_sheetname(s):
 
     # Parse word-by-word to make sure that every word is understood.
     s = s.lower()
-
+    
     if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
         # We want to remove all strings that start with 'без эк'
@@ -67,10 +67,11 @@ def parse_sheetname(s):
     if 'без дк' in s:  # Do 'Without drug test' seperately
         s = s.replace('без дк', '')
 
-    s = s.replace('.', ' ').replace('"', '').replace(
+    s = s.replace('.', ' ').replace('"', ' ').replace(
         '_', ' ').replace('(', ' ').replace(')', ' ')
     s = s.replace(' & ', '&')
-    s = s.replace('д к', 'дк')  # Drug tested
+    if len(s) > 3 and s[-3:] == 'д к':
+        s = s.replace('д к', 'дк')  # Drug tested
 
     for word in s.split():
         # Federations
@@ -112,22 +113,23 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Equipment
+        elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
+                      'облегченная', 'облегченной', 'слинг', 'софстанд', 'соф', 'cофт']:
+            equipment = 'Multi-ply'
+            event = 'B'
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн']:
-            equipment = 'Single-ply'
+            if equipment == '':
+                equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
         elif word in ['m ply', 'многослой', 'мног']:
             equipment = 'Multi-ply'
-        elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
-                      'облегченная', 'облегченной', 'слинг', 'софстанд', 'соф', 'cофт']:
-            equipment = 'Multi-ply'
-            event = 'B'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
-                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая']:
+                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая', 'жест']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
@@ -186,6 +188,8 @@ def parse_sheetname(s):
         elif word == 'лежа-народные':  # Something to do with amateur bench, not sure
             pass
         elif word == 'забавы':  # Fun? Maybe amateurs
+            pass
+        elif word == 'колен': # Knees
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
@@ -382,7 +386,7 @@ def parse_sheet(sheet):
     elif 'нж' in title or 'народный' in title or 'народн жим' in title:
         # This is the "People's Bench", which I think is bench-for-reps.
         return csv
-    elif 'пауэрспорт' in title or 'powersport' in title:
+    elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
         return csv  # "Power sport", overhead-press + bicep-curl
     elif 'roll' in title or 'ролл' in title:
         return csv
@@ -408,7 +412,7 @@ def parse_sheet(sheet):
         return csv
     elif 'лог лифт' in title:
         return csv
-    elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
+    elif any(x in title for x in ['фжд', 'военный', '1 вес', 'жд любители',
                                   'армейский', 'тяговое', 'военный',
                                   '1_2 веса']):  # Bench reps
         return csv
@@ -435,8 +439,6 @@ def parse_sheet(sheet):
     elif 'строгий' in title:  # curl
         return csv
     elif 'экскалибур' in title:
-        return csv
-    elif 'спр' in title:  # Strongman
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
