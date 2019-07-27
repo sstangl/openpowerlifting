@@ -20,6 +20,7 @@ if [[ $2 == *"1drv"* ]]; then
 	# Convert the spreadsheet to HTML.
 	# The spreadsheet will have multiple pages -- these will all be added to one document.
 	libreoffice --headless --convert-to html "original.xlsx"
+	EXTENSION="xlsx"
 else
 	# Remember whether it's XLS or XLSX.
 	EXTENSION="${2##*.}"
