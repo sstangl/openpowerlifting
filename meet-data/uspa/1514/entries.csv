@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Equipment,Event,Squat4Kg,Bench4Kg,Deadlift4Kg,Tested
 1,Desiree Lucero,NM,44,43,,23,62.5,45,100,207.5,F,Juniors 20-23,Raw,SBD,,,,Yes
-1,Natalie Do,CA,48,47.2,,22,122.5,55,160,337.5,F,Juniors 20-23,Raw,SBD,,,,Yes
+1,Natalie Do,CA,48,47.2,,22,122.5,55,160,337.5,F,Juniors 20-23,Raw,SBD,125,,,Yes
 2,Regan Wilson,TX,48,47.4,,21,87.5,50,102.5,240,F,Juniors 20-23,Raw,SBD,,,,Yes
 1,Melody Xaiyavong,TX,56,55.8,,23,127.5,75,145,347.5,F,Juniors 20-23,Raw,SBD,,,,Yes
 2,Stephanie McCullough,CA,56,55.2,,22,127.5,70,140,337.5,F,Juniors 20-23,Raw,SBD,,,,Yes
@@ -19,7 +19,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Best3SquatKg,Best3Benc
 2,Jastyn Shilts,OR,75,74.8,,19,120,67.5,170,357.5,F,Juniors 18-19,Raw,SBD,,,,Yes
 1,Cindy Hoang-Tran,CA,75,73.7,,23,142.5,80,168,390.5,F,Juniors 20-23,Raw,SBD,,,,Yes
 2,Jessica Doan,CA,75,73.1,,21,137.5,60,152.5,350,F,Juniors 20-23,Raw,SBD,,,,Yes
-1,Helen Murphy,OH,82.5,79.8,,15,140,62.5,132.5,335,F,Juniors 13-15,Raw,SBD,,65,,Yes
+1,Helen Murphy,OH,82.5,79.8,,15,140,62.5,132.5,335,F,Juniors 13-15,Raw,SBD,145,65,,Yes
 1,Peyton Karns,WA,82.5,80.6,,22,177.5,80,137.5,395,F,Juniors 20-23,Raw,SBD,,,,Yes
 DQ,Taylor Hallera,CA,82.5,80.8,,23,,,,,F,Juniors 20-23,Raw,SBD,,,,Yes
 DQ,Monica Gonzalez,TX,90,88.6,,23,,,,,F,Juniors 20-23,Raw,SBD,,,,Yes
@@ -28,7 +28,7 @@ DQ,Monica Gonzalez,TX,90,88.6,,23,,,,,F,Juniors 20-23,Raw,SBD,,,,Yes
 2,Kelsey Brown #1,IL,90+,134,,22,190,67.5,162.5,420,F,Juniors 20-23,Raw,SBD,,,,Yes
 3,Makailuh Morrison,CA,90+,170.9,,23,142.5,75,162.5,380,F,Juniors 20-23,Raw,SBD,,,,Yes
 1,Desiree Lucero,NM,44,43,,23,62.5,45,100,207.5,F,Open,Raw,SBD,,,,Yes
-1,Natalie Do,CA,48,47.2,,22,122.5,55,160,337.5,F,Open,Raw,SBD,,,,Yes
+1,Natalie Do,CA,48,47.2,,22,122.5,55,160,337.5,F,Open,Raw,SBD,125,,,Yes
 1,Raishel Phares,DE,52,50.4,,28,115,75,152.5,342.5,F,Open,Raw,SBD,,,,Yes
 2,Stevie Seeley,OR,52,51.2,,28,117.5,72.5,142.5,332.5,F,Open,Raw,SBD,,,,Yes
 3,Tamara Stromberg,TX,52,51.2,,41,122.5,60,140,322.5,F,Open,Raw,SBD,,,,Yes
@@ -80,7 +80,7 @@ DQ,Isabel Shingler,FL,60,59.1,,24,,77.5,,,F,Open,Raw,SBD,,,,Yes
 7,Hannah Polly,OH,67.5,60.8,,26,137.5,77.5,165,380,F,Open,Raw,SBD,,,,Yes
 8,Nicola Adamchik,PA,67.5,66.6,,39,137.5,75,165,377.5,F,Open,Raw,SBD,,,,Yes
 9,Aimee Hale,CA,67.5,64.8,,40,130,70,175.5,375.5,F,Open,Raw,SBD,,,180,Yes
-10,Sara Jones,CA,67.5,66.2,,51,135,75.5,155,365.5,F,Open,Raw,SBD,,,,Yes
+10,Sara Jones,CA,67.5,66.2,,51,135,75.5,155,365.5,F,Open,Raw,SBD,137.5,,,Yes
 11,Irene Truong,CA,67.5,66.3,,30,122.5,67.5,152.5,342.5,F,Open,Raw,SBD,,,,Yes
 12,Isabel Teich,AZ,67.5,66.4,,17,127.5,70,145,342.5,F,Open,Raw,SBD,,,,Yes
 13,Danielle Durochik,IN,67.5,67.4,,27,120,60,160,340,F,Open,Raw,SBD,,,,Yes
@@ -129,7 +129,7 @@ DQ,Sophia Cabrera,CA,75,71.4,,29,,,,,F,Open,Raw,SBD,,,,Yes
 12,Dakota Duffy,MD,82.5,80.1,,27,147.5,65,160,372.5,F,Open,Raw,SBD,,,,Yes
 13,Carleen Cuevas,CA,82.5,81.9,,29,130,67.5,160,357.5,F,Open,Raw,SBD,,,,Yes
 14,Brittany Turner,DC,82.5,78.7,,28,125,72.5,150,347.5,F,Open,Raw,SBD,,,,Yes
-15,Helen Murphy,OH,82.5,79.8,,15,140,62.5,132.5,335,F,Open,Raw,SBD,,65,,Yes
+15,Helen Murphy,OH,82.5,79.8,,15,140,62.5,132.5,335,F,Open,Raw,SBD,145,65,,Yes
 16,Kristyn Whisman,PA,82.5,81,,35,120,65,150,335,F,Open,Raw,SBD,,,,Yes
 17,Linda Arvey,PA,82.5,80.8,,68,110,72.5,150,332.5,F,Open,Raw,SBD,,,155,Yes
 1,Michelle Perez,CO,90,89.8,,28,160,70,180,410,F,Open,Raw,SBD,,,,Yes
@@ -188,7 +188,7 @@ DQ,Sophia Cabrera,CA,75,71.4,,29,,,,,F,Open,Raw,SBD,,,,Yes
 1,Aimee Hale,CA,67.5,64.8,,40,130,70,175.5,375.5,F,Masters 40-44,Raw,SBD,,,180,Yes
 1,Erin Hook,MI,67.5,65,,47,115,67.5,165,347.5,F,Masters 45-49,Raw,SBD,,,,Yes
 2,Shannon Paulson,CA,67.5,65,,48,87.5,80,137.5,305,F,Masters 45-49,Raw,SBD,,,,Yes
-1,Sara Jones,CA,67.5,66.2,,51,135,75.5,155,365.5,F,Masters 50-54,Raw,SBD,,,,Yes
+1,Sara Jones,CA,67.5,66.2,,51,135,75.5,155,365.5,F,Masters 50-54,Raw,SBD,137.5,,,Yes
 2,Charsell Kincaid,MI,67.5,64.8,,51,125,62.5,162.5,350,F,Masters 50-54,Raw,SBD,,,,Yes
 1,Kay Walden,KS,67.5,67,,58,117.5,55,137.5,310,F,Masters 55-59,Raw,SBD,,,,Yes
 2,Lorrie Bosen,CO,67.5,65.7,,56,77.5,60,125,262.5,F,Masters 55-59,Raw,SBD,,,,Yes
@@ -343,7 +343,7 @@ DQ,Danny Lima,CA,125,120.4,,32,,145,235,,M,Open,Raw,SBD,,,,Yes
 2,Reggie Loyola,NV,90,90,,38,220,157.5,277.5,655,M,Submasters 35-39,Raw,SBD,,,,Yes
 1,John Reidy,OH,110,107.4,,38,190,155,222.5,567.5,M,Submasters 35-39,Raw,SBD,,,,Yes
 1,Adam Kerrigan,NV,140+,151.9,,38,230,160,275,665,M,Submasters 35-39,Raw,SBD,,,,Yes
-1,Gordon Santee,CA,60,58.6,,72,75,67.5,137.5,280,M,Masters 70-74,Raw,SBD,,73,140.5,Yes
+1,Gordon Santee,CA,60,58.6,,72,75,67.5,137.5,280,M,Masters 70-74,Raw,SBD,80,73,140.5,Yes
 DQ,Mark Lazo,CA,67.5,67,,40,,80,,,M,Masters 40-44,Raw,SBD,,,,Yes
 1,Andy Friend,OR,67.5,62,,46,150,100,205,455,M,Masters 45-49,Raw,SBD,,,,Yes
 1,Kevin Meskew,CA,67.5,66.2,,63,112.5,87.5,172.5,372.5,M,Masters 60-64,Raw,SBD,,,,Yes
@@ -444,7 +444,7 @@ DQ,Patrick Diggins,NV,140,129.6,,59,165,,,,M,Masters 55-59,Wraps,SBD,,,,Yes
 1,Dwon Johnson,GA,140+,174.6,,42,320,167.5,285,772.5,M,Masters 40-44,Wraps,SBD,,,,Yes
 1,Bobbi Walden,NC,60,59.2,,27,115,75,147.5,337.5,F,Open,Single-ply,SBD,,,,Yes
 1,Deana D'Andrea,AZ,75,74.7,,32,190.5,115,192.5,498,F,Open,Single-ply,SBD,,,,Yes
-1,Joseph Hwang,GA,67.5,66.8,,30,230,135,240,605,M,Open,Single-ply,SBD,,,245,Yes
+1,Joseph Hwang,GA,67.5,66.8,,30,230,135,240,605,M,Open,Single-ply,SBD,237.5,,245,Yes
 1,Keith Kanemoto,CA,90,86.1,,60,272.5,195,237.5,705,M,Open,Single-ply,SBD,,,,Yes
 1,James Grinstead,CA,100,99,,30,277.5,175,260,712.5,M,Open,Single-ply,SBD,,,,Yes
 1,Joe Walden,KS,82.5,80.4,,62,182.5,105,197.5,485,M,Masters 60-64,Single-ply,SBD,,115,,Yes
