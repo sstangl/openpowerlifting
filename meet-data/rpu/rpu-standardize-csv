@@ -122,7 +122,12 @@ def parse_sheetname(s):
         elif word in ['m ply', 'многослой', 'мног']:
             equipment = 'Multi-ply'
         elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
-                      'облегченная', 'облегченной', 'слинг', 'софстанд', 'соф']:
+                      'облегченная', 'облегченной', 'слинг', 'софстанд', 'соф', 'cофт']:
+            equipment = 'Multi-ply'
+            event = 'B'
+        # Extra terms for slingshot bench
+        elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
+                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
@@ -161,10 +166,6 @@ def parse_sheetname(s):
             pass
         # We don't seperately track Paralympic bench right now
         elif word in ['handicaped', 'пода']:
-            pass
-        # Extra terms for slingshot bench
-        elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
-                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая']:
             pass
         elif word == 'фжд':  # Don't know what this means
             pass

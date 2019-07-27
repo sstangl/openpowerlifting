@@ -30,3 +30,4 @@
 [exemptions]
     0905 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1402 = ["ExemptWeightClassConsistency"]  # Used three weightclasses.
+    0702 = ["ExemptWeightClassConsistency", "ExemptDivision"]  # No Weightclasses, LW/HW

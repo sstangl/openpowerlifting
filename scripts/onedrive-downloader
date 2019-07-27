@@ -6,7 +6,10 @@
 # and geckodriver on your path.
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import os
 import sys
 import time
@@ -28,16 +31,18 @@ def download_file(url, resultsname):
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
 
-    time.sleep(15)
-
     iframe = driver.find_element_by_id('sdx_ow_iframe')
     driver.switch_to.frame(iframe)
-
+    # Wait until we can click the download button
+    element = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located(
+            (By.ID, "m_excelWebRenderer_ewaCtl_btnDownload-Medium20"))
+    )
     download_button = driver.find_element_by_id(
         "m_excelWebRenderer_ewaCtl_btnDownload-Medium20")
     download_button.click()
 
-    time.sleep(1)
+    time.sleep(5)
 
     alertbox = driver.find_elements_by_id("errorbuttonarea")
     if len(alertbox) != 0:
