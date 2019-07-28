@@ -54,7 +54,7 @@ def parse_sheetname(s):
 
     # Parse word-by-word to make sure that every word is understood.
     s = s.lower()
-    
+
     if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
         # We want to remove all strings that start with 'без эк'
@@ -189,7 +189,7 @@ def parse_sheetname(s):
             pass
         elif word == 'забавы':  # Fun? Maybe amateurs
             pass
-        elif word == 'колен': # Knees
+        elif word == 'колен':  # Knees
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
@@ -276,6 +276,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
+        elif text == 'город/область':
+            fieldnames.append('IGNORE')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
         elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион']):
@@ -297,10 +299,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
             fieldnames.append('IGNORE')
-        elif 'город' in text or 'регіон' in text:
-            # We don't care about city-level information.
-            fieldnames.append('IGNORE')
-        elif text == 'сountry/city/state' or text == 'страна/город/область':
+        elif text in ['сountry/city/state', 'страна/город/область']:
             fieldnames.append('Country/City/State')
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1']:
             assert header[i + 1].lower() in ['2', 'sq2']
@@ -367,7 +366,6 @@ def parse_fieldnames(sheet):
 
         else:
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
-
     return fieldnames
 
 
@@ -621,7 +619,7 @@ def standardize_division_age(csv):
                 'юноша' in row[idx] or 'девушки' in row[idx]):
             division = get_division(row[ageidx], row[idx])
         elif any(x in row[idx] for x in ['мастер', 'master', 'veteran', 'ветеран',
-                                         'm1', 'm2', 'm3']):
+                                         'm1', 'm2', 'm3', 'м1', 'м2']):
             division = get_division(row[ageidx], row[idx])
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = get_division(row[ageidx], row[idx])
