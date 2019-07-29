@@ -34,7 +34,7 @@ def download_file(url, resultsname):
     iframe = driver.find_element_by_id('sdx_ow_iframe')
     driver.switch_to.frame(iframe)
     # Wait until we can click the download button
-    element = WebDriverWait(driver, 30).until(
+    WebDriverWait(driver, 30).until(
         EC.presence_of_element_located(
             (By.ID, "m_excelWebRenderer_ewaCtl_btnDownload-Medium20"))
     )
