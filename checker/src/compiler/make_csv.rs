@@ -43,7 +43,7 @@ impl<'d> MeetsRow<'d> {
             date: meet.date,
             country: meet.country,
             state: meet.state,
-            town: meet.town.deref(),
+            town: meet.town.as_deref(),
             name: &meet.name,
             ruleset: meet.ruleset,
         }
@@ -212,10 +212,10 @@ impl<'md, 'ld> LiftersRow<'md, 'ld> {
             name: entrydata.name,
             cyrillicname: entrydata.cyrillicname,
             username: entrydata.username,
-            instagram: lifterdata.instagram.deref(),
-            vkontakte: lifterdata.vkontakte.deref(),
-            color: lifterdata.color.deref(),
-            flair: lifterdata.flair.deref(),
+            instagram: lifterdata.instagram.as_deref(),
+            vkontakte: lifterdata.vkontakte.as_deref(),
+            color: lifterdata.color.as_deref(),
+            flair: lifterdata.flair.as_deref(),
         }
     }
 }
@@ -234,7 +234,7 @@ impl<'md> EntryLifterData<'md> {
             id: lifter_id,
             name: &entry.name,
             username: &entry.username,
-            cyrillicname: entry.cyrillicname.deref(),
+            cyrillicname: entry.cyrillicname.as_deref(),
         }
     }
 
@@ -298,7 +298,7 @@ pub fn make_csv(
                     // If there was already data present, maybe the new Entry
                     // has more information that could be attributed.
                     if data.cyrillicname.is_none() && entry.cyrillicname.is_some() {
-                        data.cyrillicname = entry.cyrillicname.deref();
+                        data.cyrillicname = entry.cyrillicname.as_deref();
                     }
                     data.id
                 }
