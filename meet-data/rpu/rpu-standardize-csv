@@ -125,7 +125,7 @@ def parse_sheetname(s):
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
-        elif word in ['m ply', 'многослой', 'мног', 'многослойная']:
+        elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной']:
             equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
@@ -288,7 +288,7 @@ def parse_fieldnames(sheet):
         elif text in ['собств вес', 'собств', 'соб', 'вес', 'собственный вес',
                       'собственный', 'body weight', 'собcтвенный вес', 'собст вес',
                       'соб вес', 'собстввес', 'вага', 'св', 'собствственный',
-                      'собственнный вес']:
+                      'собственнный вес', 'собственныйвес']:
             fieldnames.append('BodyweightKg')
         elif text == 'весовая категория':
             fieldnames.append('WeightClassKg')
