@@ -119,13 +119,14 @@ def parse_sheetname(s):
             event = 'B'
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
-                      'одн', 'однос', 'однослойн']:
+                      'одн', 'однос', 'однослойн', 'однопетельная']:
             if equipment != 'Multi-ply':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
-        elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной']:
+        elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
+                      'многопетельная']:
             equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
@@ -302,7 +303,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text in ['сountry/city/state', 'страна/город/область']:
             fieldnames.append('Country/City/State')
-        elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1']:
+        elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
+                      'приседания 1']:
             assert header[i + 1].lower() in ['2', 'sq2']
             assert header[i + 2].lower() in ['3', 'sq3']
             fieldnames.append('Squat1Kg')
@@ -380,7 +382,7 @@ def parse_sheet(sheet):
     title = sheet[0][0].lower().replace('_', ' ').replace('.', '')
 
     # Ignore some sheets that don't contain any powerlifting.
-    if 'судейская' in title or 'судеская' in title:
+    if 'судейская' in title or 'судеская' in title or 'судьи' in title:
         return csv
     elif 'нж' in title or 'народный' in title or 'народн жим' in title:
         # This is the "People's Bench", which I think is bench-for-reps.
@@ -620,8 +622,7 @@ def standardize_division_age(csv):
             division = 'Masters 80+'
 
         # Catch all for remaining divisions
-        elif ('teen' in row[idx] or 'юноши' in row[idx] or
-                'юноша' in row[idx] or 'девушки' in row[idx]):
+        elif any(x in row[idx] for x in ['teen', 'юноши', 'юноша', 'девушки', 'девуши']):
             division = get_division(row[ageidx], row[idx])
         elif any(x in row[idx] for x in ['мастер', 'master', 'veteran', 'ветеран',
                                          'm1', 'm2', 'm3', 'м1', 'м2']):
