@@ -120,7 +120,7 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн']:
-            if equipment == '':
+            if equipment != 'Multi-ply':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
@@ -440,6 +440,8 @@ def parse_sheet(sheet):
     elif 'экскалибур' in title:
         return csv
     elif 'стоя' in title:  # Overhead Press
+        return csv
+    elif 'saxon' in title:
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
