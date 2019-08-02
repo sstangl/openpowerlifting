@@ -16,8 +16,9 @@ except ImportError:
 URLS = ["http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2015",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2016",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2017",
-        "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2018"]
-BASEURL = "http://russia-powerlifting.ru/"
+        "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2018",
+        "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2019"]
+BASEURL = "http://russia-powerlifting.ru"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
