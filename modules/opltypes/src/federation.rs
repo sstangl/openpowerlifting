@@ -175,6 +175,11 @@ pub enum Federation {
     #[strum(to_string = "BVDK", serialize = "bvdk")]
     BVDK,
 
+    /// Unaffiliated meets held in Canada.
+    #[serde(rename = "Canada-UA")]
+    #[strum(to_string = "Canada-UA", serialize = "canada-ua")]
+    CanadaUA,
+
     /// Australian WPC/GPA affiliate.
     #[strum(to_string = "CAPO", serialize = "capo")]
     CAPO,
@@ -1090,6 +1095,7 @@ impl Federation {
             Federation::BPU => false,
             Federation::BVDG => true,
             Federation::BVDK => true,
+            Federation::CanadaUA => false,
             Federation::CAPO => false,
             Federation::CAPONZ => false,
             Federation::CAST => false,
@@ -1335,6 +1341,7 @@ impl Federation {
             Federation::BPU => Some(Country::UK),
             Federation::BVDG => Some(Country::Germany),
             Federation::BVDK => Some(Country::Germany),
+            Federation::CanadaUA => Some(Country::Canada),
             Federation::CAPO => Some(Country::Australia),
             Federation::CAPONZ => Some(Country::NewZealand),
             Federation::CAST => Some(Country::Czechia),
@@ -1581,6 +1588,7 @@ impl Federation {
             Federation::BPU => Some(Federation::WPC),
             Federation::BVDG => None,
             Federation::BVDK => Some(Federation::IPF),
+            Federation::CanadaUA => None,
             Federation::CAPO => None,
             Federation::CAPONZ => None,
             Federation::CAST => None,
@@ -1843,6 +1851,7 @@ impl Federation {
             Federation::BPU => PointsSystem::Wilks,
             Federation::BVDG => PointsSystem::Wilks,
             Federation::BVDK => Federation::ipf_rules_on(date),
+            Federation::CanadaUA => PointsSystem::Wilks,
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
             Federation::CAST => PointsSystem::Wilks,
