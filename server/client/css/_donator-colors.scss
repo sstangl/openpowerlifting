@@ -208,6 +208,13 @@
   background-image: linear-gradient(to right, $neongreen, $white);
 }
 
+.neongreen_to_royalblue {
+  $neongreen: #39ff14;
+  $royalblue: #507CFF;
+  @include gradient-prereqs($neongreen);
+  background-image: linear-gradient(to right, $neongreen, $royalblue);
+}
+
 .pink_to_lightblue {
   $pink: #FF69B4;
   $lightblue: #43D1FF;
