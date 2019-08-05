@@ -8,7 +8,7 @@ REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTDIR="${SCRIPTDIR}/../../tests"
 
 
-n=`ls  | grep 'results.*\.csv' | wc -l`
+n=`ls  | grep 'original.*\.csv' | wc -l`
 
 r_nums=($(seq 1 1 ${n}))
 if [ ${n} == 1 ];then #Result files are only numbered if there is more than one
@@ -18,9 +18,9 @@ fi
 process_success=true
 for (( ii=1; ii<=${n};ii++))
 do
-	${SCRIPTDIR}/ipf-standardize-csv "results"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
+	${SCRIPTDIR}/ipf-standardize-csv "original"${r_nums[$((ii-1))]}".csv" > "entries"${r_nums[$((ii-1))]}".csv"
 	#Check if ipf-standardize-csv was able to deal with this file
-	if cmp -s "results"${r_nums[$((ii-1))]}".csv" "entries"${r_nums[$((ii-1))]}".csv" ; then
+	if cmp -s "original"${r_nums[$((ii-1))]}".csv" "entries"${r_nums[$((ii-1))]}".csv" ; then
 		echo "Error: ipf-standardize-csv does not know how to handle this format. Leaving entries"${r_nums[$((ii-1))]}".csv unstandardized."
 		process_success=false
 	fi
@@ -37,11 +37,11 @@ if [ ${n} -gt 1 ] && [ "$process_success" == true ];then
 fi
 
 
-results=( "${r_nums[@]/%/.csv}" )
-results=( "${results[@]/#/results}" )
+originals=( "${r_nums[@]/%/.csv}" )
+originals=( "${originals[@]/#/original}" )
 
-# Experimental - generate meet.csv from the results file
-${SCRIPTDIR}/create-meet-csv ${results[@]} > meet.csv
+# Experimental - generate meet.csv from the original file
+${SCRIPTDIR}/create-meet-csv ${originals[@]} > meet.csv
 
 #Check if create-meet-csv was able to deal with this file
 if cmp -s meet.csv ${SCRIPTDIR}/../meet.template ; then
