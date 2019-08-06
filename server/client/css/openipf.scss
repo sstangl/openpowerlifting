@@ -42,3 +42,8 @@ $mobile-cutoff: 600px;
 @import "records-columns";
 @import "donator-colors";
 @import "layout";
+
+// Override the setting in "layout": prefer blackish to yellowish.
+h2 {
+  color: $default-color;
+}
