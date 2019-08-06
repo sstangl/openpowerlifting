@@ -646,6 +646,10 @@ pub enum Federation {
     #[strum(to_string = "RAW-Iceland", serialize = "raw-iceland")]
     RAWIceland,
 
+    /// Raw Iron Powerlifting League, an independent tested Texas federation.
+    #[strum(to_string = "RawIronPL", serialize = "rawironpl")]
+    RawIronPL,
+
     /// 100% RAW Federation Ukraine.
     #[serde(rename = "RAW-UKR")]
     #[strum(to_string = "RAW-UKR", serialize = "raw-ukr")]
@@ -1207,6 +1211,7 @@ impl Federation {
             Federation::RAW => true,
             Federation::RAWCAN => true,
             Federation::RAWIceland => false,
+            Federation::RawIronPL => true,
             Federation::RAWUKR => true,
             Federation::RAWU => false,
             Federation::RhinoPC => false,
@@ -1454,6 +1459,7 @@ impl Federation {
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
             Federation::RAWIceland => Some(Country::Iceland),
+            Federation::RawIronPL => Some(Country::USA),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
             Federation::RhinoPC => Some(Country::SouthAfrica),
@@ -1705,6 +1711,7 @@ impl Federation {
             Federation::RAW => None,
             Federation::RAWCAN => None,
             Federation::RAWIceland => None,
+            Federation::RawIronPL => None,
             Federation::RAWUKR => None,
             Federation::RAWU => None,
             Federation::RhinoPC => None,
@@ -1963,6 +1970,7 @@ impl Federation {
             Federation::RAW => PointsSystem::Wilks,
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
+            Federation::RawIronPL => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
             Federation::RhinoPC => PointsSystem::Glossbrenner,
