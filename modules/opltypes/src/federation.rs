@@ -782,6 +782,10 @@ pub enum Federation {
     #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
     UkrainePF,
 
+    /// Ukrainian Powerlifting League, IPL.
+    #[strum(to_string = "UPL", serialize = "upl")]
+    UPL,
+
     /// Unaffiliated meets held in the USA.
     #[serde(rename = "USA-UA")]
     #[strum(to_string = "USA-UA", serialize = "usa-ua")]
@@ -1244,6 +1248,7 @@ impl Federation {
             Federation::UPC => false,
             Federation::UPCGermany => false,
             Federation::UkrainePF => true,
+            Federation::UPL => false,
             Federation::USAUA => false,
             Federation::USAPL => true,
             Federation::USARawBP => false,
@@ -1492,6 +1497,7 @@ impl Federation {
             Federation::UPC => Some(Country::Ukraine),
             Federation::UPCGermany => Some(Country::Germany),
             Federation::UkrainePF => Some(Country::Ukraine),
+            Federation::UPL => Some(Country::Ukraine),
             Federation::USAUA => Some(Country::USA),
             Federation::USAPL => Some(Country::USA),
             Federation::USARawBP => Some(Country::USA),
@@ -1744,6 +1750,7 @@ impl Federation {
             Federation::UPC => Some(Federation::UPC),
             Federation::UPCGermany => Some(Federation::UPC),
             Federation::UkrainePF => Some(Federation::IPF),
+            Federation::UPL => Some(Federation::IPL),
             Federation::USAUA => None,
             Federation::USAPL => Some(Federation::IPF),
             Federation::USARawBP => None,
@@ -2003,6 +2010,7 @@ impl Federation {
             Federation::UPC => PointsSystem::Wilks,
             Federation::UPCGermany => PointsSystem::Glossbrenner,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
+            Federation::UPL => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
             Federation::USAPL => Federation::ipf_rules_on(date),
             Federation::USARawBP => PointsSystem::Wilks,
