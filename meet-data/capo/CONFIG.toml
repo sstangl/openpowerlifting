@@ -16,7 +16,9 @@
     myr    = {name ="MY-R",min=5,max=12,sex="M", equipment="Raw"}
     mtr    = {name ="MT-R",min=13,max=19,sex="M", equipment="Raw"}
     mt1r   = {name ="MT1-R",min=13,max=15,sex="M", equipment="Raw"}
+    mt1rp   = {name ="MT1-RP",min=13,max=15,sex="M", equipment="Wraps"}
     mt2r   = {name ="MT2-R",min=16,max=17,sex="M", equipment="Raw"}
+    mt2rp  = {name ="MT2-RP",min=16,max=17,sex="M", equipment="Wraps"}
     mt3r   = {name ="MT3-R",min=18,max=19,sex="M", equipment="Raw"}
     mt3rp  = {name ="MT3-RP",min=18,max=19,sex="M", equipment="Wraps"}
     mtrp   = {name ="MT-RP",min=13,max=19,sex="M", equipment="Wraps"}
