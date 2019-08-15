@@ -4,7 +4,7 @@
     open = {name ="Open", min=0, max=999}
     t = {name ="Teen", min=13, max=19}
     juniors = {name ="Juniors", min=20, max=23}
-    masters = {name ="Masters", min=40, max=49}
+    masters = {name ="Masters", min=40, max=99}
 
 [weightclasses.default_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
