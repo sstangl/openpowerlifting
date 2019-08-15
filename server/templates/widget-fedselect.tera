@@ -211,6 +211,7 @@
   <option value="all-israel" {% if selection.federation == "AllIsrael" %}selected{% endif %}>{{strings.selectors.fed.all_israel}}</option>
   <option value="ipc" {% if selection.federation == "IPC" %}selected{% endif %}>IPC - Israel Powerlifting Community [IPO]</option>
   <option value="npa" {% if selection.federation == "NPA" %}selected{% endif %}>NPA - National Powerlifting Association of Israel</option>
+  <option value="wpc-israel" {% if selection.federation == "WPC-Israel" %}selected{% endif %}>WPC Israel</option>
 </optgroup>
 <optgroup label="{{strings.country.italy}}">
   <option value="all-italy" {% if selection.federation == "AllItaly" %}selected{% endif %}>{{strings.selectors.fed.all_italy}}</option>
