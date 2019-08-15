@@ -318,6 +318,7 @@
     fyraapf = {name ="F_YR_AAPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesaapf = {name ="F_YES_AAPF",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
+    fpfemapf = {name ="F_PFEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="F"} #Police/Fire
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
@@ -667,3 +668,4 @@
     1646 = ["ExemptWeightClassConsistency", "ExemptDivision"] # High school stuff
     1324 = ["ExemptWeightClassConsistency"] #Missing weightclass & Division
     1343 = ["ExemptWeightClassConsistency", "ExemptDivision"] # High school stuff
+    1346 = ["ExemptWeightClassConsistency"] # Missing weightclass
