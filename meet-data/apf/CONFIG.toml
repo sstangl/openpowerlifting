@@ -165,6 +165,7 @@
     fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Novice
     fcemapf = {name ="F_CEM_APF",min=0,max=999,equipment="Multi-ply",sex="F"} #Collegiate
     fsorapf = {name ="F_SOR_APF",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
+    fgrapf = {name ="F_GR_APF",min=0,max=999,equipment="Raw",sex="F",place="G"} #Guest
     fgemapf = {name ="F_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="F",place="G"} #Guest
 
     # AAPF Divisions.
