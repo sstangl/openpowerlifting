@@ -110,6 +110,8 @@ def check_social_media(names):
     except ValueError:
         return 1
 
+    allowed_dups = ["mr_mrs_alaniz", "ek_power923"]
+
     # Check rows.
     for row in csv.rows:
         if len(row) != len(csv.fieldnames):
@@ -133,7 +135,7 @@ def check_social_media(names):
             lifters.add(row[nameidx])
 
         # Prevent duplicate instagrams.
-        if row[instagramidx] in instagrams and row[instagramidx] != "mr_mrs_alaniz":
+        if row[instagramidx] in instagrams and row[instagramidx] not in allowed_dups:
             perror("%s: Instagram used by two different lifters: '%s'."
                    % (filename, row[instagramidx]))
         else:
