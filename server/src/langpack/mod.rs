@@ -64,6 +64,10 @@ pub enum Language {
     #[serde(rename = "zh-Hant")]
     #[strum(to_string = "zh-Hant")]
     zh_hant,
+    /// Chinese, written in Simplified Chinese script.
+    #[serde(rename = "zh-Hans")]
+    #[strum(to_string = "zh-Hans")]
+    zh_hans,
 }
 
 impl fmt::Display for Language {
@@ -94,6 +98,7 @@ impl fmt::Display for Language {
                 Language::uk => "uk",
                 Language::vi => "vi",
                 Language::zh_hant => "zh-Hant",
+                Language::zh_hans => "zh-Hans",
             }
         )
     }
@@ -553,6 +558,7 @@ pub struct LangInfo {
     uk: Option<Translations>,
     vi: Option<Translations>,
     zh_hant: Option<Translations>,
+    zh_hans: Option<Translations>,
 }
 
 impl LangInfo {
@@ -591,6 +597,7 @@ impl LangInfo {
             Language::uk => self.uk = trans,
             Language::vi => self.vi = trans,
             Language::zh_hant => self.zh_hant = trans,
+            Language::zh_hans => self.zh_hans = trans,
         };
 
         Ok(())
@@ -620,6 +627,7 @@ impl LangInfo {
             Language::uk => self.uk.as_ref().unwrap(),
             Language::vi => self.vi.as_ref().unwrap(),
             Language::zh_hant => self.zh_hant.as_ref().unwrap(),
+            Language::zh_hans => self.zh_hans.as_ref().unwrap(),
         }
     }
 }
@@ -862,6 +870,7 @@ impl Language {
             Language::uk => NumberFormat::ArabicComma,
             Language::vi => NumberFormat::ArabicComma,
             Language::zh_hant => NumberFormat::ArabicPeriod,
+            Language::zh_hans => NumberFormat::ArabicPeriod,
         }
     }
 }
