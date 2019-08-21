@@ -9,10 +9,10 @@ use server::opldb::OplDb;
 use rocket::http::{Cookie, Header, Status};
 use rocket::local::Client;
 
-use std::sync::{Once, ONCE_INIT};
+use std::sync::Once;
 
 static mut OPLDB_GLOBAL: Option<OplDb> = None;
-static OPLDB_INIT: Once = ONCE_INIT;
+static OPLDB_INIT: Once = Once::new();
 
 fn db() -> &'static OplDb {
     const LIFTERS_CSV: &str = "../build/lifters.csv";
@@ -33,7 +33,7 @@ fn db() -> &'static OplDb {
 }
 
 static mut LANGINFO_GLOBAL: Option<LangInfo> = None;
-static LANGINFO_INIT: Once = ONCE_INIT;
+static LANGINFO_INIT: Once = Once::new();
 
 fn langinfo() -> &'static LangInfo {
     unsafe {

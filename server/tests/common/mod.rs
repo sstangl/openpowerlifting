@@ -2,10 +2,10 @@
 
 use server::opldb::OplDb;
 
-use std::sync::{Once, ONCE_INIT};
+use std::sync::Once;
 
 static mut OPLDB_GLOBAL: Option<OplDb> = None;
-static OPLDB_INIT: Once = ONCE_INIT;
+static OPLDB_INIT: Once = Once::new();
 
 pub fn db() -> &'static OplDb {
     const LIFTERS_CSV: &str = "../build/lifters.csv";
