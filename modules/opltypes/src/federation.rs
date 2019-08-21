@@ -548,6 +548,10 @@ pub enum Federation {
     #[strum(to_string = "NauruPF", serialize = "naurupf")]
     NauruPF,
 
+    /// NextGenPF, a USA-IN Push/Pull/Curl federation.
+    #[strum(to_string = "NextGenPF", serialize = "nextgenpf")]
+    NextGenPF,
+
     /// Northern Ireland Powerlifting Federation.
     #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
@@ -1196,6 +1200,7 @@ impl Federation {
             Federation::NAPF => true,
             Federation::NASA => true,
             Federation::NauruPF => true,
+            Federation::NextGenPF => false,
             Federation::NIPF => true,
             Federation::NORCAL => true,
             Federation::NordicPF => true,
@@ -1446,6 +1451,7 @@ impl Federation {
             Federation::NAPF => None,
             Federation::NASA => Some(Country::USA),
             Federation::NauruPF => Some(Country::Nauru),
+            Federation::NextGenPF => Some(Country::USA),
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
@@ -1695,6 +1701,7 @@ impl Federation {
             Federation::NAPF => Some(Federation::IPF),
             Federation::NASA => None,
             Federation::NauruPF => Some(Federation::IPF),
+            Federation::NextGenPF => None,
             Federation::NORCAL => None,
             Federation::NIPF => Some(Federation::IPF),
             Federation::NordicPF => Some(Federation::IPF),
@@ -1961,6 +1968,7 @@ impl Federation {
             Federation::NAPF => Federation::ipf_rules_on(date),
             Federation::NASA => PointsSystem::NASA,
             Federation::NauruPF => Federation::ipf_rules_on(date),
+            Federation::NextGenPF => PointsSystem::Wilks,
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
