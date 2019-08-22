@@ -363,6 +363,25 @@
   background-image: linear-gradient(to bottom, #f00 40%, #fff 40%, #fff 80%, #1E8AFB 80%, #1E8AFB 100%);
 }
 
+// Designed by Johan Frisk.
+.johan_frisk {
+  @include gradient-prereqs(#000000);
+  font-weight: bold;
+  font-variant: small-caps;
+  text-decoration-line: none;
+  background-image: linear-gradient( to bottom, #bf262b, #ffa200 );
+  text-shadow: 0px -1px 3px #ffa20066;
+  letter-spacing: 1px;
+}
+
+.fire_animation {
+  animation: fire_animation 0.75s infinite linear alternate;
+}
+@keyframes fire_animation {
+  from { text-shadow: 0px -1px 3px #ffa20024; }
+  to { text-shadow: 0px -1px 3px #ffa200cc; }
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
