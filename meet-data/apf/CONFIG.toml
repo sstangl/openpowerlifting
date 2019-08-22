@@ -467,6 +467,7 @@
     fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="F"}
     fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
+    fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
 
     # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
