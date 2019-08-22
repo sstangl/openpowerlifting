@@ -418,7 +418,7 @@ impl<'a> Context<'a> {
 
         // Determine if any of the entries have attempt information.
         // If a federation only reports Bests, we don't want lots of empty columns.
-        let _has_attempts = entries
+        let has_attempts = entries
             .iter()
             .find(|&e| {
                 e.squat1kg.is_non_zero()
@@ -453,7 +453,7 @@ impl<'a> Context<'a> {
             lifter,
             lifter_sex,
             show_sex_column: !consistent_sex,
-            show_attempts: false, // _has_attempts,
+            show_attempts: has_attempts,
             bests,
             meet_results,
         }
