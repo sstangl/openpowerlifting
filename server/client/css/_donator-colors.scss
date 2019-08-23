@@ -310,6 +310,13 @@
   background-image: linear-gradient(to right, $red, $white);
 }
 
+.red_to_white_to_red {
+  $red: #FB3640;
+  $white: #EDF2F4;
+  @include gradient-prereqs($red);
+  background-image: linear-gradient(to right, $red, $white, $red);
+}
+
 .all_red_top_down {
   $red: #FB3640;
   $darker_red: #AE252C;
