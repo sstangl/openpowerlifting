@@ -781,7 +781,7 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 }
 
-fn check_positive_weight(
+fn check_nonnegative_weight(
     s: &str,
     line: u64,
     header: Header,
@@ -794,7 +794,7 @@ fn check_positive_weight(
 }
 
 fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightKg {
-    let weight = check_positive_weight(s, line, Header::BodyweightKg, report);
+    let weight = check_nonnegative_weight(s, line, Header::BodyweightKg, report);
     if weight != WeightKg::from_i32(0) {
         if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
             report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
@@ -978,6 +978,17 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         report.error_on(line, "DQ'd entries cannot have a TotalKg");
     } else if !entry.place.is_dq() && !has_totalkg {
         report.error_on(line, "Non-DQ entries must have a TotalKg");
+    }
+
+    // If any "Best" lift is failed, the lifter must be DQ'd.
+    if !entry.place.is_dq() && entry.best3squatkg < WeightKg::from_i32(0) {
+        report.error_on(line, "Non-DQ entries cannot have a negative Best3SquatKg");
+    }
+    if !entry.place.is_dq() && entry.best3benchkg < WeightKg::from_i32(0) {
+        report.error_on(line, "Non-DQ entries cannot have a negative Best3BenchKg");
+    }
+    if !entry.place.is_dq() && entry.best3deadliftkg < WeightKg::from_i32(0) {
+        report.error_on(line, "Non-DQ entries cannot have a negative Best3DeadliftKg");
     }
 
     // Check that a non-DQ lifter's total is the sum of their best attempts,
@@ -1916,7 +1927,7 @@ where
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
             entry.totalkg =
-                check_positive_weight(&record[idx], line, Header::TotalKg, &mut report);
+                check_nonnegative_weight(&record[idx], line, Header::TotalKg, &mut report);
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
