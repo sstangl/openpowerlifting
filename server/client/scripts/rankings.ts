@@ -198,9 +198,18 @@ function selection_to_path(): string {
     if (selFed.value !== default_fed) {
         url += "/" + selFed.value;
     }
-    if (selSex.value !== default_sex) {
+
+    // In certain situations, the WeightClass selector is allowed to assign Sex.
+    // It looks for a tag like sex="men" or sex="women" on the <option>.
+    const sexAttribute = selWeightClass.selectedOptions[0].attributes["sex"];
+    if (sexAttribute !== undefined) {
+        const sex = sexAttribute.value;
+        selSex.value = sex;
+        url += "/" + sex;
+    } else if (selSex.value !== default_sex) {
         url += "/" + selSex.value;
     }
+
     if (selAgeClass.value !== default_ageclass) {
         url += "/" + selAgeClass.value;
     }
