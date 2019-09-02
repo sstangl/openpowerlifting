@@ -230,6 +230,30 @@ pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
 
+/// Defines an `Ordering` of Entries by Reshel points.
+///
+/// Because Reshel points aren't stored on the Entry, they are recalculated
+/// each comparison. The computation is not particularly expensive,
+/// but does involve powf().
+#[inline]
+pub fn cmp_reshel(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    let a_points = coefficients::reshel(a.sex, a.bodyweightkg, a.totalkg);
+    let b_points = coefficients::reshel(b.sex, b.bodyweightkg, b.totalkg);
+
+    // First sort by Reshel points, higher first.
+    a_points
+        .cmp(&b_points)
+        .reverse()
+        // If equal, sort by Date, earlier first.
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
 /// Gets a list of all entry indices matching the given selection.
 pub fn get_entry_indices_for<'db>(
     selection: &Selection,

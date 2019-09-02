@@ -276,6 +276,7 @@
 </optgroup>
 <optgroup label="{{strings.country.philippines}}">
   <option value="pap" {% if selection.federation == "PAP" %}selected{% endif %}>PAP - Powerlifting Association of the Philippines [IPF]</option>
+  <option value="phpl" {% if selection.federation == "PHPL" %}selected{% endif %}>PHPL - Philippines Powerlifting [GPA]</option>
 </optgroup>
 <optgroup label="{{strings.country.poland}}">
   <option value="all-poland" {% if selection.federation == "AllPoland" %}selected{% endif %}>{{strings.selectors.fed.all_poland}}</option>

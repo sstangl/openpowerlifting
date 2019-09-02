@@ -53,6 +53,7 @@ pub enum MeetSortSelection {
     ByDivision,
     ByGlossbrenner,
     ByIPFPoints,
+    ByReshel,
     ByNASA,
     ByWilks,
 
@@ -67,8 +68,9 @@ impl FromStr for MeetSortSelection {
         match s {
             "by-division" => Ok(MeetSortSelection::ByDivision),
             "by-glossbrenner" => Ok(MeetSortSelection::ByGlossbrenner),
-            "by-nasa" => Ok(MeetSortSelection::ByNASA),
             "by-ipf-points" => Ok(MeetSortSelection::ByIPFPoints),
+            "by-reshel" => Ok(MeetSortSelection::ByReshel),
+            "by-nasa" => Ok(MeetSortSelection::ByNASA),
             "by-wilks" => Ok(MeetSortSelection::ByWilks),
             _ => Err(()),
         }
@@ -172,6 +174,10 @@ impl<'a> ResultsRow<'a> {
             points: match points_system {
                 PointsSystem::Wilks => entry.wilks.in_format(number_format),
                 PointsSystem::Glossbrenner => entry.glossbrenner.in_format(number_format),
+                PointsSystem::Reshel => {
+                    let points = coefficients::reshel(entry.sex, entry.bodyweightkg, entry.totalkg);
+                    points.in_format(number_format)
+                }
                 PointsSystem::NASA => {
                     let points = coefficients::nasa(entry.bodyweightkg, entry.totalkg);
                     points.in_format(number_format)
@@ -457,6 +463,9 @@ fn make_tables_by_points<'db>(
         PointsSystem::IPFPoints => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_ipfpoints(&meets, a, b));
         }
+        PointsSystem::Reshel => {
+            entries.sort_unstable_by(|a, b| algorithms::cmp_reshel(&meets, a, b));
+        }
         PointsSystem::NASA => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_nasa(&meets, a, b));
         }
@@ -504,6 +513,9 @@ impl<'db> Context<'db> {
             MeetSortSelection::ByNASA => {
                 make_tables_by_points(&opldb, &locale, PointsSystem::NASA, meet_id)
             }
+            MeetSortSelection::ByReshel => {
+                make_tables_by_points(&opldb, &locale, PointsSystem::Reshel, meet_id)
+            }
             MeetSortSelection::ByWilks => {
                 make_tables_by_points(&opldb, &locale, PointsSystem::Wilks, meet_id)
             }
@@ -518,12 +530,14 @@ impl<'db> Context<'db> {
                     PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
                     PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
                     PointsSystem::NASA => "NASA",
+                    PointsSystem::Reshel => "Reshel",
                     PointsSystem::Wilks => &locale.strings.columns.wilks,
                 }
             }
             MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
             MeetSortSelection::ByIPFPoints => &locale.strings.columns.ipfpoints,
             MeetSortSelection::ByNASA => "NASA",
+            MeetSortSelection::ByReshel => "Reshel",
             MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
         };
 
@@ -557,11 +571,13 @@ impl<'db> Context<'db> {
                 MeetSortSelection::ByDivision => MeetSortSelection::ByDivision,
                 MeetSortSelection::ByGlossbrenner => MeetSortSelection::ByGlossbrenner,
                 MeetSortSelection::ByIPFPoints => MeetSortSelection::ByIPFPoints,
+                MeetSortSelection::ByReshel => MeetSortSelection::ByReshel,
                 MeetSortSelection::ByNASA => MeetSortSelection::ByNASA,
                 MeetSortSelection::ByWilks => MeetSortSelection::ByWilks,
                 MeetSortSelection::ByFederationDefault => match default_points {
                     PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
                     PointsSystem::IPFPoints => MeetSortSelection::ByIPFPoints,
+                    PointsSystem::Reshel => MeetSortSelection::ByReshel,
                     PointsSystem::NASA => MeetSortSelection::ByNASA,
                     PointsSystem::Wilks => MeetSortSelection::ByWilks,
                 },

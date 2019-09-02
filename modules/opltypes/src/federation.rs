@@ -608,6 +608,10 @@ pub enum Federation {
     #[strum(to_string = "PAP", serialize = "pap")]
     PAP,
 
+    /// Philippine Powerlifting, GPA/APA.
+    #[strum(to_string = "PHPL", serialize = "phpl")]
+    PHPL,
+
     /// Power Lifting Savez Srbije, IPF.
     #[strum(to_string = "PLSS", serialize = "plss")]
     PLSS,
@@ -1215,6 +1219,7 @@ impl Federation {
             Federation::ParaPL => true,
             Federation::PA => true,
             Federation::PAP => true,
+            Federation::PHPL => false,
             Federation::PLSS => true,
             Federation::PLZS => true,
             Federation::PNGPF => true,
@@ -1466,6 +1471,7 @@ impl Federation {
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
             Federation::PAP => Some(Country::Philippines),
+            Federation::PHPL => Some(Country::Philippines),
             Federation::PLSS => Some(Country::Serbia),
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PNGPF => Some(Country::PapuaNewGuinea),
@@ -1721,6 +1727,7 @@ impl Federation {
                 Some(Federation::IPF)
             },
             Federation::PAP => Some(Federation::IPF),
+            Federation::PHPL => Some(Federation::GPA),
             Federation::PLSS => Some(Federation::IPF),
             Federation::PLZS => Some(Federation::IPF),
             Federation::PNGPF => Some(Federation::IPF),
@@ -1983,6 +1990,7 @@ impl Federation {
             Federation::ParaPL => PointsSystem::Wilks,
             Federation::PA => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
+            Federation::PHPL => PointsSystem::Reshel,
             Federation::PLSS => Federation::ipf_rules_on(date),
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),

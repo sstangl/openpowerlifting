@@ -23,6 +23,7 @@ pub struct Points(i32);
 pub enum PointsSystem {
     Glossbrenner,
     IPFPoints,
+    Reshel,
     NASA,
     Wilks,
 }
