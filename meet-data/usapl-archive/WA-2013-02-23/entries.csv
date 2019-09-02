@@ -1,6 +1,6 @@
 WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
 57,F,Raw,B,FR-M2a,Ruth Kirby,1960,56.8,,45,,45,1
-84+,F,Raw,B,FR-M4a,Winifred Pristell,1938,87.3,,67.5,,67.5,1
+84+,F,Raw,B,FR-M4b,Winifred Pristell,1938,87.3,,67.5,,67.5,1
 72,F,Raw,B,FR-O,Lisa Luraghi,1974,63.6,,57.5,,57.5,1
 120,M,Raw,B,MR-M1a,Jerry Flatterich,,108.7,,170,,170,1
 93,M,Raw,B,MR-M2a,Phil Fernandez,,86.3,,127.5,,127.5,1
@@ -24,7 +24,7 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 120,M,Raw,D,MR-O,Sean Gilliland,1977,108.6,,,227.5,227.5,1
 83,M,Raw,D,MR-T1,Menia Dang,,79.8,,,165,165,1
 57,F,Single-ply,SBD,F-M1a,Danna Snow,1969,54.9,125,80,155,360,1
-72,F,Single-ply,SBD,F-M1a,Colleen Hansford,1968,67.5,155,75,137.5,367.5,1
+72,F,Single-ply,SBD,F-M1b,Colleen Hansford,1968,67.5,155,75,137.5,367.5,1
 84,F,Single-ply,SBD,F-M1a,Sarah Bohlen,1969,78.3,137.5,82.5,142.5,362.5,1
 63,F,Single-ply,SBD,F-M1b,Cathy Belben,1967,59.7,92.5,60,117.5,270,1
 84+,F,Single-ply,SBD,F-M1b,Michelle Fayant,1964,88.9,165,125,175,465,1
@@ -63,8 +63,8 @@ WeightClassKg,Sex,Equipment,Event,Division,Name,BirthYear,BodyweightKg,Best3Squa
 120,M,Raw,SBD,MR-M1b,Jeff Olsen,1965,107.7,217.5,157.5,245,620,1
 120,M,Raw,SBD,MR-M1b,Chris Williams #4,1967,106.4,192.5,162.5,247.5,602.5,2
 120,M,Raw,SBD,MR-M1b,Gary Sewell,1967,108.1,197.5,130,210,537.5,4
-120,M,Raw,SBD,MR-M1b,Brett Robbins,1963,115.9,210,125,227.5,562.5,3
-120,M,Raw,SBD,MR-M1b,Lance Robbins,1963,111.1,182.5,125,220,527.5,5
+120,M,Raw,SBD,MR-M2a,Brett Robbins,1963,115.9,210,125,227.5,562.5,3
+120,M,Raw,SBD,MR-M2a,Lance Robbins,1963,111.1,182.5,125,220,527.5,5
 74,M,Raw,B,MR-M2a,Rose Pristell,,71.3,,97.5,,97.5,1
 93,M,Raw,SBD,MR-M2a,Larry Hill,1960,87.9,165,127.5,227.5,520,1
 120+,M,Raw,SBD,MR-M2a,Dennis Miner,1960,120.5,220,150,285,655,1

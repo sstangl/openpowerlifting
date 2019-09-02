@@ -1504,8 +1504,11 @@ fn check_division_age_consistency(
 
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
+    let age_from_birthyear: Option<Age> = entry.birthyear.and_then(|birthyear| {
+        Some(Age::from_birthyear_on_date(birthyear, meet_date))
+    });
     if let Some(birthyear) = entry.birthyear {
-        let approx_age = Age::from_birthyear_on_date(birthyear, meet_date);
+        let approx_age = age_from_birthyear.unwrap();
 
         // Pairwise check BirthYear and Age.
         if approx_age.is_definitely_less_than(entry.age)
@@ -1615,6 +1618,43 @@ fn check_division_age_consistency(
                 age, entry.division, max_age
             ),
         );
+    }
+
+    // Handle specially the case of BirthYear-based age divisions.
+    // The issue is that if we define a division that is 19.5-22.5 (IPF Juniors),
+    // the "is_definitely" checks above will permit ages between 19-23,
+    // and therefore allow Age::Approximate(18), since that is not definitely
+    // lower than 19.5. That allows lifters to be in *either* T3 or Juniors,
+    // even though federation rules would only allow one.
+    if let Age::Approximate(min) = min_age {
+        if let Age::Approximate(max) = max_age {
+            if let Some(Age::Approximate(age)) = age_from_birthyear {
+                // Compare approximate age values exactly.
+                if age < min {
+                    report.error_on(
+                        line,
+                        format!(
+                            "BirthYear Age {} too young for division '{}': min age {}",
+                            age_from_birthyear.unwrap(),
+                            entry.division,
+                            min_age
+                        )
+                    );
+                }
+
+                if age > max {
+                    report.error_on(
+                        line,
+                        format!(
+                            "BirthYear Age {} too old for division '{}': max age {}",
+                            age_from_birthyear.unwrap(),
+                            entry.division,
+                            max_age
+                        )
+                    );
+                }
+            }
+        }
     }
 
     (min_age, max_age)
