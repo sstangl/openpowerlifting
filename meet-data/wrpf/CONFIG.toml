@@ -82,20 +82,23 @@
     army_masters_50_54 = {name = "Army Masters 50-54", min = 50, max = 54}
 
 
-    #WRPF-USA
-    mro = {name = "MR-O", min = 0, max = 999, equipment="Raw",sex="M"}
-    mrt = {name = "MR-T", min = 14, max = 16, equipment="Raw",sex="M"}
-    mrsubjr = {name = "MR-SubJR", min = 17, max = 19, equipment="Raw",sex="M"}
-    mrjr = {name = "MR-JR", min = 20, max = 23, equipment="Raw",sex="M"}
-    mrm1 = {name = "MR-M1", min = 40, max = 49, equipment="Raw",sex="M"}
-    mrm2 = {name = "MR-M2", min = 50, max = 59, equipment="Raw",sex="M"}
-    mrm3 = {name = "MR-M3", min = 60, max = 69, equipment="Raw",sex="M"}
-    fro = {name = "FR-O", min = 0, max = 999, equipment="Raw",sex="F"}
-    frsubjr = {name = "FR-SubJR", min = 17, max = 19, equipment="Raw",sex="F"}
-    frjr = {name = "FR-JR", min = 20, max = 23, equipment="Raw",sex="F"}
-    frm1 = {name = "FR-M1", min = 40, max = 49, equipment="Raw",sex="F"}
-    frm2 = {name = "FR-M2", min = 50, max = 59, equipment="Raw",sex="F"}
-    frm3 = {name = "FR-M3", min = 60, max = 69, equipment="Raw",sex="F"}
+    # WRPF-USA and WRPF-AUS
+    mro = {name = "MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    mrt = {name = "MR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="M"}
+    mrsubjr = {name = "MR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="M"}
+    mrjr = {name = "MR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="M"}
+    mrm = {name = "MR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    mrm1 = {name = "MR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="M"}
+    mrm2 = {name = "MR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="M"}
+    mrm3 = {name = "MR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="M"}
+    fro = {name = "FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
+    frt = {name = "FR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="F"}
+    frsubjr = {name = "FR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="F"}
+    frjr = {name = "FR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="F"}
+    frm = {name = "FR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="F"}
+    frm1 = {name = "FR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="F"}
+    frm2 = {name = "FR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="F"}
+    frm3 = {name = "FR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="F"}
     
     mwo = {name = "MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
     mwsubjr = {name = "MW-SubJR", min = 17, max = 19, equipment="Wraps",sex="M"}
@@ -107,13 +110,15 @@
     fwjr = {name = "FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
     fwm1 = {name = "FW-M1", min = 40, max = 49, equipment="Wraps",sex="F"}
     
-    pro_mro = {name = "Pro MR-O", min = 0, max = 999, equipment="Raw",sex="M"}
-    pro_fro = {name = "Pro FR-O", min = 0, max = 999, equipment="Raw",sex="F"}
+    pro_mro = {name = "Pro MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    pro_fro = {name = "Pro FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
     pro_mwo = {name = "Pro MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
     pro_fwo = {name = "Pro FW-O", min = 0, max = 999, equipment="Wraps",sex="F"}
     pro_fwjr = {name = "Pro FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
 
     meo = {name = "ME-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+    mem = {name = "ME-M", min = 40, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+    feo = {name = "FE-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="F"}
 
 
 [weightclasses.default_M]
