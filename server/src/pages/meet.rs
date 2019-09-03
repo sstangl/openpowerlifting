@@ -175,7 +175,11 @@ impl<'a> ResultsRow<'a> {
                 PointsSystem::Wilks => entry.wilks.in_format(number_format),
                 PointsSystem::Glossbrenner => entry.glossbrenner.in_format(number_format),
                 PointsSystem::Reshel => {
-                    let points = coefficients::reshel(entry.sex, entry.bodyweightkg, entry.totalkg);
+                    let points = coefficients::reshel(
+                        entry.sex,
+                        entry.bodyweightkg,
+                        entry.totalkg,
+                    );
                     points.in_format(number_format)
                 }
                 PointsSystem::NASA => {

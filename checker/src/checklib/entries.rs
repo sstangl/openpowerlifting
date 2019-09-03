@@ -988,7 +988,10 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         report.error_on(line, "Non-DQ entries cannot have a negative Best3BenchKg");
     }
     if !entry.place.is_dq() && entry.best3deadliftkg < WeightKg::from_i32(0) {
-        report.error_on(line, "Non-DQ entries cannot have a negative Best3DeadliftKg");
+        report.error_on(
+            line,
+            "Non-DQ entries cannot have a negative Best3DeadliftKg",
+        );
     }
 
     // Check that a non-DQ lifter's total is the sum of their best attempts,
@@ -1504,9 +1507,9 @@ fn check_division_age_consistency(
 
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
-    let age_from_birthyear: Option<Age> = entry.birthyear.and_then(|birthyear| {
-        Some(Age::from_birthyear_on_date(birthyear, meet_date))
-    });
+    let age_from_birthyear: Option<Age> = entry
+        .birthyear
+        .and_then(|birthyear| Some(Age::from_birthyear_on_date(birthyear, meet_date)));
     if let Some(birthyear) = entry.birthyear {
         let approx_age = age_from_birthyear.unwrap();
 
@@ -1638,7 +1641,7 @@ fn check_division_age_consistency(
                             age_from_birthyear.unwrap(),
                             entry.division,
                             min_age
-                        )
+                        ),
                     );
                 }
 
@@ -1650,7 +1653,7 @@ fn check_division_age_consistency(
                             age_from_birthyear.unwrap(),
                             entry.division,
                             max_age
-                        )
+                        ),
                     );
                 }
             }
@@ -1966,8 +1969,12 @@ where
 
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
-            entry.totalkg =
-                check_nonnegative_weight(&record[idx], line, Header::TotalKg, &mut report);
+            entry.totalkg = check_nonnegative_weight(
+                &record[idx],
+                line,
+                Header::TotalKg,
+                &mut report,
+            );
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {

@@ -258,7 +258,7 @@ pub enum Federation {
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
-    
+
     /// Unaffiliated meets held in England.
     #[serde(rename = "England-UA")]
     #[strum(to_string = "England-UA", serialize = "england-ua")]
@@ -407,11 +407,10 @@ pub enum Federation {
     #[strum(to_string = "GRAWA", serialize = "grawa")]
     GRAWA,
 
-    /// GSF-Belarus, 
+    /// GSF-Belarus,
     #[serde(rename = "GSF-Belarus")]
     #[strum(to_string = "GSF-Belarus", serialize = "gsf-belarus")]
     GSFBelarus,
-
 
     /// Defunct stand-alone US federation.
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
@@ -1721,11 +1720,13 @@ impl Federation {
             Federation::OEVK => Some(Federation::IPF),
             Federation::ParaPL => None,
             // PA lost IPF affiliation in 2018, replaced by the APU.
-            Federation::PA => if date.year() >= 2018 {
-                Some(Federation::WP)
-            } else {
-                Some(Federation::IPF)
-            },
+            Federation::PA => {
+                if date.year() >= 2018 {
+                    Some(Federation::WP)
+                } else {
+                    Some(Federation::IPF)
+                }
+            }
             Federation::PAP => Some(Federation::IPF),
             Federation::PHPL => Some(Federation::GPA),
             Federation::PLSS => Some(Federation::IPF),
