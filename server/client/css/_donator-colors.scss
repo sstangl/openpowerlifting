@@ -389,6 +389,41 @@
   to { text-shadow: 0px -1px 3px #ffa200cc; }
 }
 
+// Runescape flash3
+@keyframes flash3 {
+  0%{
+    color: #00B000;
+  }
+  50%{
+    color: #80FF80;
+  }
+}
+
+.flash3 {
+  animation: flash3 0.45s steps(1, end) infinite;
+}
+
+// Runescape glow3
+@keyframes glow3 {
+  0%{
+    color: #FFFFFF;
+  } 25%{
+    color: #00B000;
+  } 50% {
+    color: #FFFFFF;
+  } 67.5%{
+    color: #00FFFF;
+  } 75% {
+    color: #0000FF;
+  } 100% {
+    color: #FFFFFF;
+  }
+}
+
+.glow3 {
+  animation: glow3 3s linear infinite;
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
