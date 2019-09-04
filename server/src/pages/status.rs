@@ -40,6 +40,9 @@ pub struct FederationStatus {
 
     /// People who have committed to keeping this federation updated.
     pub maintainers: &'static str,
+
+    /// The federation's Instagram account.
+    pub instagram: &'static str,
 }
 
 impl FederationStatus {
@@ -53,6 +56,7 @@ impl FederationStatus {
             ease: "",
             maintainers:
                 "None (<a href=\"mailto:updates@openpowerlifting.org\">Apply</a>)",
+            instagram: "",
         }
     }
 }
@@ -351,6 +355,11 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     // Don't ask for maintainership applications for defunct, completed federations.
     statuses[BB as usize].maintainers = "";
     statuses[SCT as usize].maintainers = "";
+
+    // Federation Instagram accounts.
+    statuses[IPF as usize].instagram = "theipf";
+    statuses[SPF as usize].instagram = "southernpowerliftingfederation";
+    statuses[USPA as usize].instagram = "uspapower";
 }
 
 impl<'a> Context<'a> {
