@@ -377,6 +377,12 @@
   background-image: linear-gradient(to bottom, #f00 40%, #fff 40%, #fff 80%, #1E8AFB 80%, #1E8AFB 100%);
 }
 
+// Designed by Jetter Lewis.
+.jetter_lewis {
+  color: #FB3640; // Red
+  text-decoration-color: #51DA27; // Green
+}
+
 // Designed by Johan Frisk.
 .johan_frisk {
   @include gradient-prereqs(#000000);
