@@ -166,6 +166,13 @@
   background-image: linear-gradient(to right, $blue, $gold);
 }
 
+.blue_to_green {
+  $blue: #507CFF;
+  $green: #51DA27;
+  @include gradient-prereqs($green);
+  background-image: linear-gradient(to right, $blue, $green);
+}
+
 .blue_to_lightblue {
   $blue: #507CFF;
   $lightblue: #43D1FF;
