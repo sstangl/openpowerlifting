@@ -38,10 +38,10 @@
     foes = {name ="FO ES", min=0, max=999, sex="F", equipment = ["Raw","Wraps"]}
     mjes = {name ="MJ ES", min=20, max=23, sex="M", equipment = ["Raw","Wraps"]}
     fjes = {name ="FJ ES", min=20, max=23, sex="F", equipment = ["Raw","Wraps"]}
-    m4044es = {name ="M 40-44 ES", min=40, max=44, sex="M", equipment = ["Raw","Wraps"]} 
-    f4044es = {name ="F 40-44 ES", min=40, max=44, sex="F", equipment = ["Raw","Wraps"]} 
-    m6569es = {name ="M 65-69 ES", min=65, max=69, sex="M", equipment = ["Raw","Wraps"]} 
-    f6569es = {name ="F 65-69 ES", min=65, max=69, sex="F", equipment = ["Raw","Wraps"]} 
+    m4044es = {name ="M 40-44 ES", min=40, max=44, sex="M", equipment = ["Raw","Wraps"]}
+    f4044es = {name ="F 40-44 ES", min=40, max=44, sex="F", equipment = ["Raw","Wraps"]}
+    m6569es = {name ="M 65-69 ES", min=65, max=69, sex="M", equipment = ["Raw","Wraps"]}
+    f6569es = {name ="F 65-69 ES", min=65, max=69, sex="F", equipment = ["Raw","Wraps"]}
 
 
     moeq = {name ="MO EQ", min=0, max=999, sex="M", equipment = ["Single-ply","Multi-ply"]}
@@ -60,7 +60,12 @@
     f5054eq = {name ="F 50-54 EQ", min=50, max=54, sex="F", equipment = ["Single-ply","Multi-ply"]}
     m5559eq = {name ="M 55-59 EQ", min=55, max=59, sex="M", equipment = ["Single-ply","Multi-ply"]}
     f5559eq = {name ="F 55-59 EQ", min=55, max=59, sex="F", equipment = ["Single-ply","Multi-ply"]}
-
+    m6064eq = {name ="M 60-64 EQ", min=60, max=64, sex="M", equipment = ["Single-ply","Multi-ply"]}
+    f6064eq = {name ="F 60-64 EQ", min=60, max=64, sex="F", equipment = ["Single-ply","Multi-ply"]}
+    m6569eq = {name ="M 65-69 EQ", min=65, max=69, sex="M", equipment = ["Single-ply","Multi-ply"]}
+    f6569eq = {name ="F 65-69 EQ", min=65, max=69, sex="F", equipment = ["Single-ply","Multi-ply"]}
+    m7074eq = {name ="M 70-74 EQ", min=70, max=74, sex="M", equipment = ["Single-ply","Multi-ply"]}
+    f7074eq = {name ="F 70-74 EQ", min=70, max=74, sex="F", equipment = ["Single-ply","Multi-ply"]}
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
     date_range = ["2016-01-01","9999-01-01"]
