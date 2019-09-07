@@ -8,6 +8,7 @@ use crate::Country;
 /// The State column.
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub enum State {
+    InArgentina(ArgentinaState),
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
     InCanada(CanadaState),
@@ -32,6 +33,7 @@ impl State {
     /// ```
     pub fn from_str_and_country(s: &str, country: Country) -> Result<State, ParseError> {
         match country {
+            Country::Argentina => Ok(State::InArgentina(s.parse::<ArgentinaState>()?)),
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),
             Country::Brazil => Ok(State::InBrazil(s.parse::<BrazilState>()?)),
             Country::Canada => Ok(State::InCanada(s.parse::<CanadaState>()?)),
@@ -53,6 +55,7 @@ impl Serialize for State {
         S: serde::Serializer,
     {
         match self {
+            State::InArgentina(s) => s.serialize(serializer),
             State::InAustralia(s) => s.serialize(serializer),
             State::InBrazil(s) => s.serialize(serializer),
             State::InCanada(s) => s.serialize(serializer),
@@ -65,6 +68,59 @@ impl Serialize for State {
             State::InUSA(s) => s.serialize(serializer),
         }
     }
+}
+
+/// A state in Argentina.
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+pub enum ArgentinaState {
+    /// Ciudad Autónoma de Buenos Aires.
+    CA,
+    /// Buenos Aires.
+    BA,
+    /// Catamarca.
+    CT,
+    /// Chaco.
+    CC,
+    /// Chubut.
+    CH,
+    /// Córdoba.
+    CB,
+    /// Corrientes.
+    CN,
+    /// Entre Ríos.
+    ER,
+    /// Formosa.
+    FM,
+    /// Jujuy.
+    JY,
+    /// La Pampa.
+    LP,
+    /// La Rioja.
+    LR,
+    /// Mendoza.
+    MZ,
+    /// Misiones.
+    MN,
+    /// Neuquén.
+    NQ,
+    /// Río Negro.
+    RN,
+    /// Salta.
+    SA,
+    /// San Juan.
+    SJ,
+    /// San Luis.
+    SL,
+    /// Santa Cruz.
+    SC,
+    /// Santa Fe.
+    SF,
+    /// Santiago del Estero.
+    SE,
+    /// Tierra del Fuego.
+    TF,
+    /// Tucumán.
+    TM,
 }
 
 /// A state in Australia.
@@ -90,7 +146,6 @@ pub enum CanadaState {
 }
 
 /// A state in Germany.
-#[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum GermanyState {
     /// Baden-Württemberg.
