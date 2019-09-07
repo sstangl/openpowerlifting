@@ -112,6 +112,10 @@ fn test_meet_pages_with_explicit_sorts() {
         client.get("/m/wrpf/bob4/by-division").dispatch().status(),
         Status::Ok
     );
+    assert_eq!(
+        client.get("/m/wrpf/bob4/by-total").dispatch().status(),
+        Status::Ok
+    );
 }
 
 #[test]

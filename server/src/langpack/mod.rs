@@ -439,6 +439,7 @@ pub struct SortSelectorTranslations {
     pub by_ipfpoints: String,
     pub by_mcculloch: String,
     pub by_nasa: String,
+    pub by_reshel: String,
     pub by_wilks: String,
     pub by_division: String,
     pub weight: String,

@@ -23,9 +23,12 @@ pub struct Points(i32);
 pub enum PointsSystem {
     Glossbrenner,
     IPFPoints,
-    Reshel,
     NASA,
+    Reshel,
     Wilks,
+
+    /// Expresses that the meet doesn't use a points system.
+    Total,
 }
 
 impl From<f32> for Points {

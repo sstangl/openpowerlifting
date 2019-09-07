@@ -1,5 +1,7 @@
 //! Defines fields that represent weights.
 
+use crate::Points;
+
 use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
@@ -239,6 +241,11 @@ impl WeightAny {
                 format!("{}", integer)
             }
         }
+    }
+
+    /// Used to reinterpret the weight as points, for `PointsSystem::Total`.
+    pub fn as_points(self) -> Points {
+        Points::from_i32(self.0)
     }
 }
 

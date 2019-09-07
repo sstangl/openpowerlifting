@@ -9,11 +9,13 @@
 
 {% block includes %}
   <script type="text/javascript">
-    const path_if_by_wilks = "{{urlprefix | safe}}{{path_if_by_wilks | safe}}";
+    const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
     const path_if_by_glossbrenner = "{{urlprefix | safe}}{{path_if_by_glossbrenner | safe}}";
     const path_if_by_ipfpoints = "{{urlprefix | safe}}{{path_if_by_ipfpoints | safe}}";
     const path_if_by_nasa = "{{urlprefix | safe}}{{path_if_by_nasa | safe}}";
-    const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
+    const path_if_by_reshel = "{{urlprefix | safe}}{{path_if_by_reshel | safe}}";
+    const path_if_by_total = "{{urlprefix | safe}}{{path_if_by_total | safe}}";
+    const path_if_by_wilks = "{{urlprefix | safe}}{{path_if_by_wilks | safe}}";
   </script>
   <script defer src="/static/scripts/{{statics::meet_js()}}"></script>
 {% endblock includes %}
@@ -26,6 +28,8 @@
         <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
         <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
         <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>
+        <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
+        <option value="by-total" {% if sortselection == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
         <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
       </select>
     </div>
