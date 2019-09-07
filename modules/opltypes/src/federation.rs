@@ -201,6 +201,10 @@ pub enum Federation {
     #[strum(to_string = "ChinaPA", serialize = "chinapa")]
     ChinaPA,
 
+    /// Colombian Powerlifting Federation, IPF.
+    #[strum(to_string = "ColPF", serialize = "colpf")]
+    ColPF,
+
     /// Commonwealth Powerlifting Federation, IPF.
     #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
     CommonwealthPF,
@@ -1121,6 +1125,7 @@ impl Federation {
             Federation::CAST => false,
             Federation::CBLB => true,
             Federation::ChinaPA => false,
+            Federation::ColPF => true,
             Federation::CommonwealthPF => true,
             Federation::CONBRAP => false,
             Federation::CPA => false,
@@ -1372,6 +1377,7 @@ impl Federation {
             Federation::CAST => Some(Country::Czechia),
             Federation::CBLB => Some(Country::Brazil),
             Federation::ChinaPA => Some(Country::China),
+            Federation::ColPF => Some(Country::Colombia),
             Federation::CommonwealthPF => None,
             Federation::CONBRAP => Some(Country::Brazil),
             Federation::CPA => Some(Country::Canada),
@@ -1624,6 +1630,7 @@ impl Federation {
             Federation::CAST => None,
             Federation::CBLB => Some(Federation::IPF),
             Federation::ChinaPA => None,
+            Federation::ColPF => Some(Federation::IPF),
             Federation::CommonwealthPF => Some(Federation::IPF),
             Federation::CONBRAP => Some(Federation::GPC),
             Federation::CPA => None,
@@ -1894,6 +1901,7 @@ impl Federation {
             Federation::CAST => PointsSystem::Wilks,
             Federation::CBLB => Federation::ipf_rules_on(date),
             Federation::ChinaPA => PointsSystem::Wilks,
+            Federation::ColPF => Federation::ipf_rules_on(date),
             Federation::CommonwealthPF => Federation::ipf_rules_on(date),
             Federation::CONBRAP => PointsSystem::Glossbrenner,
             Federation::CPA => PointsSystem::Wilks,

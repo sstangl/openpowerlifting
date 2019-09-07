@@ -145,6 +145,9 @@
   <option value="chinapa" {% if selection.federation == "ChinaPA" %}selected{% endif %}>ChinaPA - Chinese Powerlifting Association [GPA/IPO]</option>
   <option value="htpl" {% if selection.federation == "HTPL" %}selected{% endif %}>HTPL - Hantang Powerlifting</option>
 </optgroup>
+<optgroup label="{{strings.country.colombia}}">
+  <option value="colpa" {% if selection.federation == "ColPA" %}selected{% endif %}>ColPA - Colombian Powerlifting Federation [IPF]</option>>
+</optgroup>
 <optgroup label="{{strings.country.croatia}}">
   <option value="all-croatia" {% if selection.federation == "AllCroatia" %}selected{% endif %}>{{strings.selectors.fed.all_croatia}}</option>
   <option value="croatia-ua" {% if selection.federation == "Croatia-UA" %}selected{% endif %}>Croatia-UA - Croatia [Unaffiliated]</option>
