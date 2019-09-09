@@ -358,6 +358,14 @@
   background-image: linear-gradient(to right, #FB3640, #444444, #000000);
 }
 
+// Chicago Bears orange.
+// That orange is too dark, so also a white drop-shadow.
+.chicago_bears {
+  $bears-orange: #C83803;
+  @include name-color($bears-orange);
+  text-shadow: #FFF 1px 1px 1px;
+}
+
 .peter_spence {
   @include name-color(#BF262B);
 }
