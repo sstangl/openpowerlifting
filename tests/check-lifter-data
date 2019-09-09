@@ -154,7 +154,7 @@ def check_usernames(names):
     for name in names:
         username = get_username(name)
         if not username:
-            perror('No username generated for Name "%s".' % name)
+            pwarning('No username generated for Name "%s".' % name)
         elif not username[0].isalpha():
             perror('Username "%s" must start with a letter.' % username)
         elif not is_ascii(username):
