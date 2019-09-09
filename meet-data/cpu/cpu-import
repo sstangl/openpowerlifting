@@ -34,7 +34,7 @@ def canonicalize_number(s):
 
 def parsehtml(html):
     # Decode network bytes as UTF-8.
-    html = html.decode('utf-8')
+    html = html.decode('utf-8', errors='replace')
 
     # The HTML is malformed. We do some spot corrections first.
     html = html.replace("<font size='2'>", "")
@@ -49,10 +49,10 @@ def parsehtml(html):
 
     # The header looks like "2019 Belle River Open, Belle River, ON".
     header = table.find('font', {'size': '5'}).contents[0]
-    split_header = header.split(', ')
+    split_header = header.split(',')
     assert len(split_header) >= 3
 
-    province = split_header[-1]
+    province = split_header[-1].strip()
     town = split_header[-2].replace('  ', ' ').strip()
     meetname = ', '.join(split_header[0:-2]).replace('  ', ' ').strip()
 
