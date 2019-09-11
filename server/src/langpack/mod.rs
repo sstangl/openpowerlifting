@@ -434,6 +434,7 @@ pub struct SortSelectorTranslations {
     pub by_bench: String,
     pub by_deadlift: String,
     pub by_total: String,
+    pub by_ah: String,
     pub by_allometric: String,
     pub by_glossbrenner: String,
     pub by_ipfpoints: String,

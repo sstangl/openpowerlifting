@@ -9,6 +9,7 @@
 
 {% block includes %}
   <script type="text/javascript">
+    const path_if_by_ah = "{{urlprefix | safe}}{{path_if_by_ah | safe}}";
     const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
     const path_if_by_glossbrenner = "{{urlprefix | safe}}{{path_if_by_glossbrenner | safe}}";
     const path_if_by_ipfpoints = "{{urlprefix | safe}}{{path_if_by_ipfpoints | safe}}";
@@ -24,6 +25,7 @@
   <div id="controls">
     <div id="controls-left">
       <select id="sortselect">
+        <option value="by-ah" {% if sortselection == "ByAH" %}selected{% endif %}>{{strings.selectors.sort.by_ah}}</option>
         <option value="by-division" {% if sortselection == "ByDivision" %}selected{% endif %}>{{strings.selectors.sort.by_division}}</option>
         <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
         <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>

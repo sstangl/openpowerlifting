@@ -5,6 +5,7 @@
 'use strict';
 
 // These are generated inline via templates/meet.html.tera.
+declare const path_if_by_ah: string;
 declare const path_if_by_division: string;
 declare const path_if_by_glossbrenner: string;
 declare const path_if_by_ipfpoints: string;
@@ -19,6 +20,9 @@ let selSort: HTMLSelectElement;
 // change to match.
 function redirect() {
     switch (selSort.value) {
+        case "by-ah":
+            window.location.href = path_if_by_ah;
+            break;
         case "by-division":
             window.location.href = path_if_by_division;
             break;

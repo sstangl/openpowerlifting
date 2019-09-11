@@ -1996,7 +1996,7 @@ impl Federation {
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
-            Federation::ParaPL => PointsSystem::Wilks,
+            Federation::ParaPL => PointsSystem::AH,
             Federation::PA => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
