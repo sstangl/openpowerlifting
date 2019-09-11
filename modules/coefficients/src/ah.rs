@@ -16,8 +16,6 @@ pub fn ah_coefficient_men(bodyweightkg: f64) -> f64 {
     const AM1: f64 = 3.2695;
     const AM2: f64 = 1.95;
 
-    // Upper bound avoids asymptote.
-    // Lower bound avoids children with huge coefficients.
     let adjusted = bodyweightkg.max(32.0).min(157.0);
 
     AM1 / adjusted.log10().powf(AM2)
@@ -37,8 +35,6 @@ pub fn ah_coefficient_women(bodyweightkg: f64) -> f64 {
     const AG1: f64 = 2.7566;
     const AG10: f64 = 1.8;
 
-    // Upper bound avoids asymptote.
-    // Lower bound avoids children with huge coefficients.
     let adjusted = bodyweightkg.max(28.0).min(112.0);
 
     AG1 / adjusted.log10().powf(AG10)
