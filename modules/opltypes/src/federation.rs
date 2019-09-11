@@ -599,7 +599,7 @@ pub enum Federation {
     #[strum(to_string = "OEVK", serialize = "oevk")]
     OEVK,
 
-    /// Paralympic Powerlifting.
+    /// World Paralympic Powerlifting.
     #[strum(to_string = "ParaPL", serialize = "parapl")]
     ParaPL,
 
