@@ -25,14 +25,18 @@
   <div id="controls">
     <div id="controls-left">
       <select id="sortselect">
-        <option value="by-ah" {% if sortselection == "ByAH" %}selected{% endif %}>{{strings.selectors.sort.by_ah}}</option>
-        <option value="by-division" {% if sortselection == "ByDivision" %}selected{% endif %}>{{strings.selectors.sort.by_division}}</option>
-        <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
-        <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
-        <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>
-        <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
-        <option value="by-total" {% if sortselection == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
-        <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+        <optgroup label="{{strings.selectors.sort.weight}}">
+          <option value="by-division" {% if sortselection == "ByDivision" %}selected{% endif %}>{{strings.selectors.sort.by_division}}</option>
+          <option value="by-total" {% if sortselection == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
+        </optgroup>
+        <optgroup label="{{strings.selectors.sort.points}}">
+          <option value="by-ah" {% if sortselection == "ByAH" %}selected{% endif %}>{{strings.selectors.sort.by_ah}}</option>
+          <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
+          <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
+          <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>
+          <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
+          <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+        </optgroup>
       </select>
     </div>
     <div id="controls-right">
@@ -70,7 +74,7 @@
       <tbody>
       {% for table in tables %}
         {% if table.title %}
-	  <td colspan="12" class="divheader">{{table.title}}</td>
+          <td colspan="12" class="divheader">{{table.title}}</td>
         {% endif %}
       {% for this in table.rows %}
         <tr>
