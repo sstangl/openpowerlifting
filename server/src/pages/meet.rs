@@ -71,11 +71,12 @@ impl FromStr for MeetSortSelection {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
+            "by-ah" => Ok(MeetSortSelection::ByAH),
             "by-division" => Ok(MeetSortSelection::ByDivision),
             "by-glossbrenner" => Ok(MeetSortSelection::ByGlossbrenner),
             "by-ipf-points" => Ok(MeetSortSelection::ByIPFPoints),
-            "by-reshel" => Ok(MeetSortSelection::ByReshel),
             "by-nasa" => Ok(MeetSortSelection::ByNASA),
+            "by-reshel" => Ok(MeetSortSelection::ByReshel),
             "by-total" => Ok(MeetSortSelection::ByTotal),
             "by-wilks" => Ok(MeetSortSelection::ByWilks),
             _ => Err(()),
