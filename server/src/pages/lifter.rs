@@ -78,11 +78,21 @@ pub struct MeetResultsRow<'a> {
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,
 
-    // Bests.
+    // Bests, including 4th attempts
     pub squat: langpack::LocalizedWeightAny,
     pub bench: langpack::LocalizedWeightAny,
     pub deadlift: langpack::LocalizedWeightAny,
+
+    // Total, excluding 4th attempts.
     pub total: langpack::LocalizedWeightAny,
+
+    // Best of first 3 attempts.
+    //
+    // This is needed when the template wants to show attempts,
+    // but the row only includes, for example, Best3SquatKg and Squat4Kg.
+    pub best3squat: langpack::LocalizedWeightAny,
+    pub best3bench: langpack::LocalizedWeightAny,
+    pub best3deadlift: langpack::LocalizedWeightAny,
 
     // Attempts.
     // Remember that federations might only report bests!
@@ -150,6 +160,13 @@ impl<'a> MeetResultsRow<'a> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
+
+            best3squat: entry.best3squatkg.as_type(units).in_format(number_format),
+            best3bench: entry.best3benchkg.as_type(units).in_format(number_format),
+            best3deadlift: entry
+                .best3deadliftkg
+                .as_type(units)
+                .in_format(number_format),
 
             squat1: entry.squat1kg.as_type(units).in_format(number_format),
             squat2: entry.squat2kg.as_type(units).in_format(number_format),

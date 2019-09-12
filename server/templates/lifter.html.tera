@@ -86,15 +86,15 @@
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
           {% if show_attempts %}
-            <td>{% if this.squat1 %}{{this.squat1}}{% else %}{{this.squat}}{% endif %}</td>
+            <td>{% if this.squat1 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
             <td>{{this.squat2}}</td>
             <td>{{this.squat3}}</td>
             <td>{{this.squat4}}</td>
-            <td>{% if this.bench1 %}{{this.bench1}}{% else %}{{this.bench}}{% endif %}</td>
+            <td>{% if this.bench1 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
             <td>{{this.bench2}}</td>
             <td>{{this.bench3}}</td>
             <td>{{this.bench4}}</td>
-            <td>{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.deadlift}}{% endif %}</td>
+            <td>{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
             <td>{{this.deadlift2}}</td>
             <td>{{this.deadlift3}}</td>
             <td>{{this.deadlift4}}</td>
