@@ -333,8 +333,12 @@ impl MetaFederation {
                         && meet.federation.home_country() == Some(Country::Switzerland))
             }
             MetaFederation::AllUK => {
-                // UK lifters can set UK records abroad, except in Ireland.
-                if meet.country == Country::Ireland {
+                // UK lifters sometimes switch country affiliation from UK to Ireland
+                // when they compete IrishPF.
+                //
+                // Assume that all IrishPF lifting is done for Ireland,
+                // even if the lifter is marked as UK.
+                if meet.federation == Federation::IrishPF {
                     false
                 } else {
                     entry.lifter_country.map_or(false, |c| c.is_in_uk())
