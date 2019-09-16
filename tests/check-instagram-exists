@@ -4,6 +4,7 @@
 
 import urllib.request
 import sys
+import time
 import os
 
 try:
@@ -51,6 +52,7 @@ def main(filename):
         if (not valid):
             errors += 1
         total += 1
+        time.sleep(1)
 
     print("{0} / {1} errors".format(errors, total))
     return 0
