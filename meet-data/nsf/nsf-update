@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Automatic updating for NSF.
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "$($SCRIPTDIR/nsf-probe)" | grep http | cut -f 2 -d ' ' | while read i; do
+	$SCRIPTDIR/nsf-import "$i"
+done
