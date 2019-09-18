@@ -118,10 +118,12 @@ pub enum MetaFederation {
 
     /// GPC-AUS, but excluding non-Australian lifters.
     #[strum(to_string = "gpc-aus")]
+    #[serde(rename = "GPC-AUS")]
     GPCAUS,
 
     /// GPC-WUAP-CRO, but including HPO results and excluding non-Croatians.
     #[strum(to_string = "gpc-wuap-cro")]
+    #[serde(rename = "GPC-WUAP-CRO")]
     GPCWUAPCRO,
 
     /// HPLS, but excluding non-Croatian lifters.
