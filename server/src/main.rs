@@ -214,6 +214,14 @@ fn lifter(
     }
 }
 
+/// Exports single-lifter data as a CSV file.
+#[get("/u/<username>/csv")]
+fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<String> {
+    let lifter_id = opldb.get_lifter_id(&username)?;
+    let entry_filter = None;
+    pages::lifter_csv::export_csv(&opldb, lifter_id, entry_filter).ok()
+}
+
 #[get("/mlist/<mselections..>?<lang>")]
 fn meetlist(
     mselections: Option<PathBuf>,
@@ -512,6 +520,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 records,
                 records_default,
                 lifter,
+                lifter_csv,
                 meetlist,
                 meetlist_default,
                 meet,
@@ -558,6 +567,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::records,
                 dist::openipf::records_default,
                 dist::openipf::lifter,
+                dist::openipf::lifter_csv,
                 dist::openipf::meet,
                 dist::openipf::faq,
             ],

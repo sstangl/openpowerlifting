@@ -10,7 +10,7 @@ coefficients = { version = "0.1", path = "../modules/coefficients/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 usernames = { version = "0.1", path = "../modules/usernames/" }
 accept-language = "2.0"
-csv = "1.0"
+csv = "1.1"
 dotenv = "0.14"
 itertools = "0.8"
 serde = "1.0"

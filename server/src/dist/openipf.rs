@@ -282,6 +282,12 @@ pub fn lifter(
     }
 }
 
+#[get("/u/<username>/csv")]
+pub fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<String> {
+    let lifter_id = opldb.get_lifter_id(&username)?;
+    pages::lifter_csv::export_csv(&opldb, lifter_id, Some(ipf_only_filter)).ok()
+}
+
 #[get("/m/<meetpath..>?<lang>")]
 pub fn meet(
     meetpath: PathBuf,

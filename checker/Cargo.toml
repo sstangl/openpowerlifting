@@ -13,7 +13,7 @@ usernames = { version = "0.1", path = "../modules/usernames/" }
 chrono = "0.4"
 clap = "2.33"
 colored = "1.8"
-csv = "1.0"
+csv = "1.1"
 hashbrown = "0.6"
 rayon = "1.0"
 serde = "1.0"

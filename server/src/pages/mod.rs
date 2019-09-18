@@ -10,6 +10,7 @@ pub mod data;
 pub mod disambiguation;
 pub mod faq;
 pub mod lifter;
+pub mod lifter_csv;
 pub mod meet;
 pub mod meetlist;
 pub mod rankings;

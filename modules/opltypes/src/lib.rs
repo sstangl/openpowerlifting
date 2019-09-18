@@ -26,6 +26,8 @@ mod equipment;
 pub use self::equipment::Equipment;
 mod event;
 pub use self::event::Event;
+mod export;
+pub use self::export::ExportRow;
 mod federation;
 pub use self::federation::Federation;
 mod place;
