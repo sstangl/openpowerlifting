@@ -272,6 +272,13 @@
   background-image: linear-gradient(to right, $purple, $silver);
 }
 
+.purple_to_teal {
+  $purple: #AE76FF;
+  $teal: #01ECE3;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to right, $purple, $teal);
+}
+
 .purple_to_turquoise {
   $purple: #AE76FF;
   $turquoise: #40E0D0;
