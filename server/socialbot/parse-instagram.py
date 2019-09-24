@@ -8,9 +8,6 @@ URL = "https://www.instagram.com/openpowerlifting/"
 
 
 def get_html(url):
-    with open("test.html") as f:
-        return f.read()
-
     with urllib.request.urlopen(url) as fp:
         html = fp.read().decode("utf-8")
     return html
