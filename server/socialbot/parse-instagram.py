@@ -3,8 +3,13 @@
 
 import datetime
 import urllib.request
+import random
 
 URL = "https://www.instagram.com/openpowerlifting/"
+
+LABELS = [
+    "graph enthusiasts"
+]
 
 
 def get_html(url):
@@ -29,7 +34,8 @@ def main():
     html = get_html(URL)
     followers = get_followers(html)
     date = get_date()
-    print(date + ": **" + '{:,}'.format(followers) + "** graph enthusiasts")
+    label = random.choice(LABELS)
+    print(date + ": **" + '{:,}'.format(followers) + "** " + label)
 
 
 if __name__ == "__main__":
