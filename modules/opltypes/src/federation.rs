@@ -961,6 +961,10 @@ pub enum Federation {
     #[strum(to_string = "WPF", serialize = "wpf")]
     WPF,
 
+    /// World Police and Fire Games.
+    #[strum(to_string = "WPFG", serialize = "wpfg")]
+    WPFG,
+
     /// World Powerlifting League.
     #[strum(to_string = "WPLeague", serialize = "wpleague")]
     WPLeague,
@@ -1309,6 +1313,7 @@ impl Federation {
             Federation::WPCSA => false,
             Federation::WPCUKR => false,
             Federation::WPF => false,
+            Federation::WPFG => false,
             Federation::WPLeague => false,
             Federation::WPNZ => true,
             Federation::WPRO => false,
@@ -1562,6 +1567,7 @@ impl Federation {
             Federation::WPCSA => Some(Country::SouthAfrica),
             Federation::WPCUKR => Some(Country::Ukraine),
             Federation::WPF => None,
+            Federation::WPFG => None,
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPRO => Some(Country::Ukraine),
@@ -1822,6 +1828,7 @@ impl Federation {
             Federation::WPCSA => Some(Federation::WPC),
             Federation::WPCUKR => Some(Federation::WPC),
             Federation::WPF => None,
+            Federation::WPFG => None,
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPRO => None,
@@ -2087,6 +2094,7 @@ impl Federation {
             Federation::WPCSA => PointsSystem::Glossbrenner,
             Federation::WPCUKR => PointsSystem::Glossbrenner,
             Federation::WPF => PointsSystem::Wilks,
+            Federation::WPFG => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPRO => PointsSystem::Wilks,
