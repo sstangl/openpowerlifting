@@ -21,8 +21,8 @@ except ImportError:
     import oplprobe
 
 
-MEETSURL = "http://usapl.liftingdatabase.com/competitions"
-BASEURL = "http://usapl.liftingdatabase.com/"
+MEETSURL = "https://usapl.liftingdatabase.com/competitions"
+BASEURL = "https://usapl.liftingdatabase.com/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
