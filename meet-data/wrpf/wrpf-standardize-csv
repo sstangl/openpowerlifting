@@ -401,8 +401,8 @@ def parse_sheet(sheet):
         return csv  # "Power sport", overhead-press + bicep-curl
     elif 'roll' in title or 'ролл' in title:
         return csv
-    elif 'командный зачет' in title:
-        return csv  # Team original
+    elif 'командный зачет' in title or 'комндное первенство' in title:  # Team points
+        return csv
     elif 'командное первенство' in title:
         return csv
     elif 'apollo' in title or 'appol' in title or 'аполл' in title:

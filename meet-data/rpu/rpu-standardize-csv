@@ -126,7 +126,7 @@ def parse_sheetname(s):
                       'экип'] and equipment == 'Single-ply':
             continue
         elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
-                      'многопетельная']:
+                      'многопетельная', 'многопетельный']:
             equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
