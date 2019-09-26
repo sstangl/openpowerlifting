@@ -1,7 +1,12 @@
+# Configuration for WPC South Africa.
+
 [divisions]
     mor = {name ="MO", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     moe = {name ="MOE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem1 = {name ="MEM1", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem2 = {name ="MEM2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem3 = {name ="MEM3", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem4 = {name ="MEM4", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem5 = {name ="MEM5", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
     for = {name ="FO", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mt1r = {name ="MT1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
