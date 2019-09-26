@@ -342,6 +342,26 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
     let lifterdata = result.map;
 
+    // Check for username errors.
+    // FIXME: This adds a whole second to the checker time.
+    // FIXME: Lifetimes are really making this harder than it should be.
+    // FIXME: Otherwise we could just do the checking in create_liftermap().
+    let liftermap = meetdata.create_liftermap();
+    for lifter_indices in liftermap.values() {
+        let first = &meetdata.get_entry(lifter_indices[0]).name;
+        for index in lifter_indices.iter().skip(1) {
+            let entry = &meetdata.get_entry(*index);
+            if first != &entry.name {
+                let msg = format!(
+                    "Conflict for {}: '{}' vs '{}'",
+                    entry.username, first, entry.name
+                );
+                println!(" {}", msg.bold().red());
+                error_count += 1;
+            }
+        }
+    }
+
     print_summary(error_count + internal_error_count, warning_count);
 
     if error_count > 0 || internal_error_count > 0 {
@@ -350,8 +370,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // The default mode without arguments just performs data checks.
     if is_compiling || is_debugging {
-        let liftermap = meetdata.create_liftermap();
-
         // Perform country interpolation.
         if let Some(u) = debug_country_username {
             compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, u);

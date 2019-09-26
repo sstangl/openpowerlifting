@@ -147,26 +147,6 @@ def check_social_media(names):
                    % (filename, row[nameidx]))
 
 
-# Check (Name => Username) automatic compilation for duplicate entries.
-# Duplicates need to be eliminated by forcibly overriding a name.
-def check_usernames(names):
-    usernames = dict()
-    for name in names:
-        username = get_username(name)
-        if not username:
-            pwarning('No username generated for Name "%s".' % name)
-        elif not username[0].isalpha():
-            perror('Username "%s" must start with a letter.' % username)
-        elif not is_ascii(username):
-            perror("Username is not ASCII: '%s'. Teach scripts/username.py." % username)
-
-        if username in usernames:
-            perror('Multiple users with username %s: "%s", "%s".'
-                   % (username, name, usernames[username]))
-        else:
-            usernames[username] = name
-
-
 def check_name_corrections(names):
     filename = 'name-corrections.dat'
     seenset = set()  # Names seen in the file so far.
@@ -271,7 +251,6 @@ def main():
     names = get_database_nameset()
 
     check_social_media(names)
-    check_usernames(names)
     check_name_corrections(names)
     check_name_disambiguation(names)
 
