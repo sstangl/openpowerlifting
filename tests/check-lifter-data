@@ -110,7 +110,7 @@ def check_social_media(names):
     except ValueError:
         return 1
 
-    allowed_dups = ["mr_mrs_alaniz", "ek_power923"]
+    allowed_dups = ["mr_mrs_alaniz", "ek_power923", "wellsstrength"]
 
     # Check rows.
     for row in csv.rows:
