@@ -35,3 +35,6 @@ geckodriver.log
 *.retry
 .DS_Store
 .gitkeep
+.exe
+.stackdump
+.exe.stackdump
