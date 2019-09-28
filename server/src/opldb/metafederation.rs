@@ -142,6 +142,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-internationals")]
     IPFInternationals,
 
+    /// IrishPF, but with international results also.
+    #[strum(to_string = "irishpf")]
+    IrishPF,
+
     /// IrishPO, excluding non-Irish lifters and including WPC results.
     #[strum(to_string = "irishpo")]
     IrishPO,
@@ -436,6 +440,16 @@ impl MetaFederation {
                 | Federation::NAPF
                 | Federation::ORPF
                 | Federation::CommonwealthPF => true,
+                _ => false,
+            },
+            MetaFederation::IrishPF => match meet.federation {
+                Federation::IrishPF => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Ireland)
+                }
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Ireland)
+                }
                 _ => false,
             },
             MetaFederation::IrishPO => {
