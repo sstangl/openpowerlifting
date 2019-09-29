@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Counts how many lifters competed under a given federation by year.
+#
+# Usage: ./tally-federation USAPL openpowerlifting.csv
+#
+# Outputs to stdout.
+#
+
+from oplcsv import Csv
+import sys
+
+
+def main(fed, oplcsv):
+    csv = Csv(oplcsv)
+
+    nameidx = csv.index('Name')
+    fedidx = csv.index('Federation')
+    dateidx = csv.index('Date')
+
+    # Filter.
+    csv.rows = list(filter(lambda row: row[fedidx] == fed, csv.rows))
+
+    # Map from Year to (Name set).
+    year_map = dict()
+
+    # Collect data per-year.
+    for row in csv.rows:
+        name = row[nameidx]
+        year = row[dateidx].split('-')[0]
+
+        if year not in year_map:
+            year_map[year] = set()
+
+        lifter_set = year_map[year]
+        lifter_set.add(name)
+
+    # Pretty-print the data.
+    for year in sorted(year_map.keys()):
+        lifter_set = year_map[year]
+        count = len(lifter_set)
+
+        print("%s: %u" % (year, count))
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: %s <federation> <openpowerlifting.csv>" % sys.argv[0])
+        sys.exit(1)
+
+    main(sys.argv[1], sys.argv[2])
