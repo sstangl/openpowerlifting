@@ -1,3 +1,5 @@
+# Configuration for the NIPF.
+
 [divisions]
     #Men's divisions
     mcopen = {name ="M-C-Open",min=0,max=999,equipment="Raw"}
@@ -85,4 +87,3 @@
     sex = "F"
 
 [exemptions]
-  
