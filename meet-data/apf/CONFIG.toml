@@ -544,6 +544,7 @@
     myesawpc = {name ="M_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment="Multi-ply",sex="M",tested="Yes"} #Youth
     mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
+    fpfemawpc = {name ="F_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="F",tested="Yes"} #Police/Fire
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
@@ -615,6 +616,7 @@
     fsmawpc = {name ="F_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
     fyrawpc = {name ="F_YR_AWPC",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesawpc = {name ="F_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
+    fyemawpc = {name ="F_YEM_AWPC",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
 
     #Misc
     m4049 = {name ="M 40-49",min=40,max=49}
@@ -680,3 +682,4 @@
     1016 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Missing weightclasses & division
     1020 = ["ExemptWeightClassConsistency"] # Missing weightclass
     1028 = ["ExemptWeightClassConsistency"] # Missing weightclass
+    1030 = ["ExemptDivision"] # Missing divisions
