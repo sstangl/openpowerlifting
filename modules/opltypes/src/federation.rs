@@ -263,6 +263,10 @@ pub enum Federation {
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
 
+    /// Elite Powerlifting Canada, IPL-affiliated prior to 2018.
+    #[strum(to_string = "EPC", serialize = "epc")]
+    EPC,
+
     /// Unaffiliated meets held in England.
     #[serde(rename = "England-UA")]
     #[strum(to_string = "England-UA", serialize = "england-ua")]
@@ -1147,6 +1151,7 @@ impl Federation {
             Federation::DBKV => false,
             Federation::CzechiaUA => false,
             Federation::DSF => true,
+            Federation::EPC => false,
             Federation::EnglandUA => false,
             Federation::EPA => true,
             Federation::EPF => true,
@@ -1402,6 +1407,7 @@ impl Federation {
             Federation::DBKV => Some(Country::Germany),
             Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
+            Federation::EPC => Some(Country::Canada),
             Federation::EnglandUA => Some(Country::England),
             Federation::EPA => Some(Country::England),
             Federation::EPF => None,
@@ -1656,6 +1662,14 @@ impl Federation {
             Federation::DBKV => None,
             Federation::CzechiaUA => None,
             Federation::DSF => Some(Federation::IPF),
+            Federation::EPC => {
+                // The EPC was IPL-affiliated until 2018.
+                if date.year() >= 2018 {
+                    None
+                } else {
+                    Some(Federation::IPL)
+                }
+            },
             Federation::EnglandUA => None,
             Federation::EPA => Some(Federation::IPF),
             Federation::EPF => Some(Federation::IPF),
@@ -1738,8 +1752,8 @@ impl Federation {
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
             Federation::ParaPL => None,
-            // PA lost IPF affiliation in 2018, replaced by the APU.
             Federation::PA => {
+                // PA lost IPF affiliation in 2018, replaced by the APU.
                 if date.year() >= 2018 {
                     Some(Federation::WP)
                 } else {
@@ -1929,6 +1943,7 @@ impl Federation {
             Federation::DBKV => PointsSystem::Wilks,
             Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
+            Federation::EPC => PointsSystem::Wilks,
             Federation::EnglandUA => PointsSystem::Wilks,
             Federation::EPA => Federation::ipf_rules_on(date),
             Federation::EPF => Federation::ipf_rules_on(date),
