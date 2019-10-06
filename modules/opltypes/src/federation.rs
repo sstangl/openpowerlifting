@@ -853,6 +853,12 @@ pub enum Federation {
     #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
 
+    /// Warrior Powerlifting Federation, the continuation of Son Light Power.
+    ///
+    /// The federation renamed itself to WarriorPLF around August 2019.
+    #[strum(to_string = "WarriorPLF", serialize = "warriorplf")]
+    WarriorPLF,
+
     /// Not sure what this stands for, Anthony Clark set a bench record in this fed.
     #[strum(to_string = "WBC", serialize = "wbc")]
     WBC,
@@ -1294,6 +1300,7 @@ impl Federation {
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
             Federation::WABDL => true,
+            Federation::WarriorPLF => false,
             Federation::WDFPF => true,
             Federation::WelshPA => true,
             Federation::WNPF => true,
@@ -1550,6 +1557,7 @@ impl Federation {
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
             Federation::WABDL => Some(Country::USA),
+            Federation::WarriorPLF => Some(Country::USA),
             Federation::WBC => Some(Country::USA),
             Federation::WDFPF => None,
             Federation::WelshPA => Some(Country::Wales),
@@ -1819,6 +1827,7 @@ impl Federation {
             Federation::VietnamPA => None,
             Federation::Vityaz => None,
             Federation::WABDL => None,
+            Federation::WarriorPLF => None,
             Federation::WBC => None,
             Federation::WDFPF => None,
             Federation::WelshPA => Some(Federation::IPF),
@@ -2086,6 +2095,7 @@ impl Federation {
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::WABDL => PointsSystem::Wilks,
+            Federation::WarriorPLF => PointsSystem::Wilks,
             Federation::WBC => PointsSystem::Wilks,
             Federation::WDFPF => PointsSystem::Wilks,
             Federation::WelshPA => Federation::ipf_rules_on(date),
