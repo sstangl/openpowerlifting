@@ -105,6 +105,7 @@ DIVISION_MAP = {
     "Jr 16-17": "Juniors 16-17",
     "Jr 18-19": "Juniors 18-19",
     "Jr 20-23": "Juniors 20-23",
+    "Junior 20-23": "Juniors 20-23",
     "Open": "Open",
     "Submaster": "Submasters 35-39",
     "Master 40-44": "Masters 40-44",
@@ -180,6 +181,9 @@ def integrate_stateful_data(csv):
             else:
                 # It's a division row. Ignore the weightclass.
                 division = stateinfo[stateinfo.index(' ')+1:].strip()
+                # Sometimes the "kg" might be its own word.
+                if division.startswith("kg "):
+                    division = division[3:].strip()
                 state_division = DIVISION_MAP[division]
 
         # Handle rows with lifter information.
