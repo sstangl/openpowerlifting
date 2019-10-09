@@ -107,7 +107,7 @@ pub enum MetaFederation {
     /// but people expect to see them all lumped together.
     #[strum(to_string = "all-bp")]
     AllBP,
-    
+
     /// BDFPA, but with international results also.
     #[strum(to_string = "bdfpa")]
     BDFPA,
@@ -396,13 +396,11 @@ impl MetaFederation {
                         (meet.federation == Federation::IPF
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
-                         
             }
             MetaFederation::BDFPA => {
                 meet.federation == Federation::BDFPA
                     || (meet.federation == Federation::WDFPF
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
-            
             }
             MetaFederation::BPU => {
                 meet.federation == Federation::BPU

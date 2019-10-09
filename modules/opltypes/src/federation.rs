@@ -1650,10 +1650,24 @@ impl Federation {
             Federation::BelPF => Some(Federation::IPF),
             Federation::BenchAmerica => None,
             Federation::BP => Some(Federation::IPF),
-            Federation::BPC => None,
-            Federation::BPF => None,
+            Federation::BPC => {
+                // The BPC was WPC-affiliated until 2012.
+                if date.year() >= 2012 {
+                    None
+                } else {
+                    Some(Federation::WPC)
+                }
+            }
+            Federation::BPF => Some(Federation::WPF),
             Federation::BPO => None,
-            Federation::BPU => Some(Federation::WPC),
+            Federation::BPU => {
+                // The BPU has been WPC-affiliated since 2013.
+                if date.year() >= 2013 {
+                    Some(Federation::WPC)
+                } else {
+                    None
+                }
+            }
             Federation::BVDG => None,
             Federation::BVDK => Some(Federation::IPF),
             Federation::CanadaUA => None,
@@ -1683,7 +1697,7 @@ impl Federation {
                 } else {
                     Some(Federation::IPL)
                 }
-            },
+            }
             Federation::EnglandUA => None,
             Federation::EPA => Some(Federation::IPF),
             Federation::EPF => Some(Federation::IPF),
@@ -1936,7 +1950,7 @@ impl Federation {
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
-            Federation::BPU => PointsSystem::Wilks,
+            Federation::BPU => PointsSystem::Glossbrenner,
             Federation::BVDG => PointsSystem::Wilks,
             Federation::BVDK => Federation::ipf_rules_on(date),
             Federation::CanadaUA => PointsSystem::Wilks,
