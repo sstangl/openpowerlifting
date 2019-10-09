@@ -551,6 +551,10 @@ pub enum Federation {
     #[strum(to_string = "NASA", serialize = "nasa")]
     NASA,
 
+    /// Natural Powerlifting Assocation, early 80's Drug Free Fed
+    #[strum(to_string = "NaturalPA", serialize = "naturalpa")]
+    NaturalPA,
+
     /// Nauru Powerlifting Federation, IPF.
     #[strum(to_string = "NauruPF", serialize = "naurupf")]
     NauruPF,
@@ -1226,6 +1230,7 @@ impl Federation {
             Federation::NAP => false,
             Federation::NAPF => true,
             Federation::NASA => true,
+            Federation::NaturalPA => true,
             Federation::NauruPF => true,
             Federation::NextGenPF => false,
             Federation::NIPF => true,
@@ -1483,6 +1488,7 @@ impl Federation {
             Federation::NAP => Some(Country::Russia),
             Federation::NAPF => None,
             Federation::NASA => Some(Country::USA),
+            Federation::NaturalPA => Some(Country::USA),
             Federation::NauruPF => Some(Country::Nauru),
             Federation::NextGenPF => Some(Country::USA),
             Federation::NORCAL => Some(Country::USA),
@@ -1746,6 +1752,7 @@ impl Federation {
             Federation::NAP => None,
             Federation::NAPF => Some(Federation::IPF),
             Federation::NASA => None,
+            Federation::NaturalPA => None,
             Federation::NauruPF => Some(Federation::IPF),
             Federation::NextGenPF => None,
             Federation::NORCAL => None,
@@ -2021,6 +2028,7 @@ impl Federation {
             Federation::NAP => PointsSystem::Wilks,
             Federation::NAPF => Federation::ipf_rules_on(date),
             Federation::NASA => PointsSystem::NASA,
+            Federation::NaturalPA => PointsSystem::Wilks,
             Federation::NauruPF => Federation::ipf_rules_on(date),
             Federation::NextGenPF => PointsSystem::Wilks,
             Federation::NORCAL => PointsSystem::Wilks,
