@@ -167,7 +167,7 @@ pub enum GermanyState {
     /// Lower Saxony.
     NI,
     /// North Rhine-Westphalia.
-    NW,
+    NRW,
     /// Rhineland-Palatinate.
     RP,
     /// Schleswig-Holstein.
