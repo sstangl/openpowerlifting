@@ -11,10 +11,10 @@ coefficients = { version = "0.1", path = "../modules/coefficients/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 usernames = { version = "0.1", path = "../modules/usernames/" }
 chrono = "0.4"
-clap = "2.33"
 colored = "1.8"
 csv = "1.1"
 hashbrown = "0.6"
+pico-args = "0.3.0"
 rayon = "1.0"
 serde = "1.0"
 serde_derive = "1.0"
