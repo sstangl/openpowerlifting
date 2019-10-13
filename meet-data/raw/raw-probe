@@ -70,7 +70,6 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[RAW]'), unentered)
-    print(color('[RAW] ') + "Continue working through archive.")
 
 
 if __name__ == '__main__':

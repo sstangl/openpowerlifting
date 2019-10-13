@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 http://url/to/results/pdf"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Download the website to original.html.
+wget --output-document=original.pdf "$1"
+
+# Save the website URL for future use, since it's pretty hard to tell
+# what meets on the site are tracked and which aren't.
+echo "$1" > URL
+
+cp ${SCRIPTDIR}/../meet.template meet.csv
+
+pdftotext -layout original.pdf
+cp original.txt entries.csv
