@@ -37,6 +37,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         equipment: entry.equipment,
         age: entry.age,
         ageclass: entry.ageclass,
+        birthyearclass: entry.birthyearclass,
         division: &entry.division,
         bodyweightkg: entry.bodyweightkg,
         weightclasskg: entry.weightclasskg,

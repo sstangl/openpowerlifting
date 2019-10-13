@@ -738,6 +738,15 @@ pub enum AgeClassSelection {
     Masters7579,
 
     MastersOver80,
+
+    // BirthYear-based classes.
+    SubJuniorsY14Y18,
+    JuniorsY19Y23,
+    SeniorsY24Y39,
+    MastersY40Y49,
+    MastersY50Y59,
+    MastersY60Y69,
+    MastersOverY70,
 }
 
 impl FromStr for AgeClassSelection {
@@ -766,6 +775,16 @@ impl FromStr for AgeClassSelection {
             "65-69" => Ok(AgeClassSelection::Masters6569),
             "70-74" => Ok(AgeClassSelection::Masters7074),
             "75-79" => Ok(AgeClassSelection::Masters7579),
+
+            // BirthYear-based classes.
+            "y14-y18" => Ok(AgeClassSelection::SubJuniorsY14Y18),
+            "y19-y23" => Ok(AgeClassSelection::JuniorsY19Y23),
+            "y24-y39" => Ok(AgeClassSelection::SeniorsY24Y39),
+            "y40-y49" => Ok(AgeClassSelection::MastersY40Y49),
+            "y50-y59" => Ok(AgeClassSelection::MastersY50Y59),
+            "y60-y69" => Ok(AgeClassSelection::MastersY60Y69),
+            "over-y70" => Ok(AgeClassSelection::MastersOverY70),
+
             _ => Err(()),
         }
     }

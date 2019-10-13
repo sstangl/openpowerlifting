@@ -67,6 +67,8 @@ struct EntriesRow<'d> {
     age: Age,
     #[serde(rename = "AgeClass")]
     ageclass: AgeClass,
+    #[serde(rename = "BirthYearClass")]
+    birthyearclass: BirthYearClass,
     #[serde(rename = "Division")]
     division: &'d str,
     #[serde(rename = "BodyweightKg")]
@@ -148,6 +150,7 @@ impl<'d> EntriesRow<'d> {
             equipment: entry.equipment,
             age: entry.age,
             ageclass: entry.ageclass,
+            birthyearclass: entry.birthyearclass,
             division: &entry.division,
             bodyweightkg: entry.bodyweightkg,
             weightclasskg: entry.weightclasskg,

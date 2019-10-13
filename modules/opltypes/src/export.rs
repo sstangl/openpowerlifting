@@ -20,6 +20,8 @@ pub struct ExportRow<'d> {
     pub age: Age,
     #[serde(rename = "AgeClass")]
     pub ageclass: AgeClass,
+    #[serde(rename = "BirthYearClass")]
+    pub birthyearclass: BirthYearClass,
     #[serde(rename = "Division")]
     pub division: &'d str,
     #[serde(rename = "BodyweightKg")]

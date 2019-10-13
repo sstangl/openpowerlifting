@@ -34,6 +34,7 @@ fn make_export_row<'a>(
         equipment: entry.equipment,
         age: entry.age,
         ageclass: entry.ageclass,
+        birthyearclass: entry.birthyearclass,
         division,
         bodyweightkg: entry.bodyweightkg,
         weightclasskg: entry.weightclasskg,

@@ -436,12 +436,6 @@ fn infer_from_range(
             Age::None => (),
         };
 
-        // Update the lifter's BirthYear.
-        if entry.birthyear.is_none() && birthyear.is_some() {
-            trace_inference(debug, "BirthYear", &birthyear, mdate);
-            entry.birthyear = birthyear;
-        }
-
         // Update the AgeClass to match the Age, if applicable.
         //
         // If the entry initially had an Age::Approximate, the AgeClass matched
@@ -462,6 +456,35 @@ fn infer_from_range(
             entry.ageclass = AgeClass::from_range(age_min, age_max);
             if entry.ageclass != AgeClass::None {
                 trace_inference(debug, "AgeClass (via Range)", &entry.ageclass, mdate);
+            }
+        }
+
+        // Update the lifter's BirthYear.
+        if entry.birthyear.is_none() && birthyear.is_some() {
+            trace_inference(debug, "BirthYear", &birthyear, mdate);
+            entry.birthyear = birthyear;
+        }
+
+        // Update the BirthYearClass to match the BirthYear, if applicable.
+        if entry.birthyearclass == BirthYearClass::None {
+            if let Some(year) = entry.birthyear {
+                entry.birthyearclass = BirthYearClass::from_birthyear(year, mdate.year());
+                if entry.birthyearclass != BirthYearClass::None {
+                    let message = "BirthYearClass (via BirthYear)";
+                    trace_inference(debug, message, &entry.birthyearclass, mdate);
+                }
+            }
+        }
+
+        // If no specific BirthYear is known, maybe Division information
+        // can be used to at least find a range.
+        if entry.birthyearclass == BirthYearClass::None {
+            let miny = range.min.year();
+            let maxy = range.max.year();
+            entry.birthyearclass = BirthYearClass::from_range(miny, maxy, mdate.year());
+            if entry.birthyearclass != BirthYearClass::None {
+                let message = "BirthYearClass (via Range)";
+                trace_inference(debug, message, &entry.birthyearclass, mdate);
             }
         }
     }

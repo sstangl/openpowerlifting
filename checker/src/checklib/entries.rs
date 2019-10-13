@@ -111,6 +111,7 @@ pub struct Entry {
     // Optional age information.
     pub age: Age,
     pub ageclass: AgeClass,
+    pub birthyearclass: BirthYearClass,
     pub birthyear: Option<u32>,
     pub birthdate: Option<Date>,
     /// Minimum Age associated with the Division per the CONFIG, inclusive.
@@ -2088,11 +2089,28 @@ where
             }
         }
 
+        // If the BirthYear wasn't assigned yet, infer it from any surrounding info.
+        if entry.birthyear.is_none() {
+            if let Some(birthdate) = entry.birthdate {
+                entry.birthyear = Some(birthdate.year());
+            }
+        }
+
         // Assign the AgeClass based on Age.
         entry.ageclass = AgeClass::from_age(entry.age);
         // Or assign the AgeClass based on Division information.
         if entry.ageclass == AgeClass::None {
             entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
+        }
+
+        // Assign the BirthYearClass based on BirthYear.
+        if entry.birthyearclass == BirthYearClass::None {
+            if let Some(meet) = meet {
+                if let Some(year) = entry.birthyear {
+                    let meet = meet.date.year();
+                    entry.birthyearclass = BirthYearClass::from_birthyear(year, meet);
+                }
+            }
         }
 
         // Calculate points (except for McCulloch, which is Age-dependent).
