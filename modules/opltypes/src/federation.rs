@@ -300,6 +300,11 @@ pub enum Federation {
     #[strum(to_string = "FCST", serialize = "fcst")]
     FCST,
 
+    /// Federation Camerounaise de Powerlifting et Disciplines Affinitaires.
+    /// Cameroon IPF and WDFPF affiliate.
+    #[strum(to_string = "FECAPOLIF", serialize = "fecapolif")]
+    FECAPOLIF,
+
     /// Federación Mexicana de Powerlifting A.C., IPF.
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
@@ -1170,6 +1175,7 @@ impl Federation {
             Federation::FBPD => false,
             Federation::FCA => false,
             Federation::FCST => false,
+            Federation::FECAPOLIF => true,
             Federation::FEMEPO => true,
             Federation::FEPOA => false,
             Federation::FESUPO => true,
@@ -1428,6 +1434,7 @@ impl Federation {
             Federation::FBPD => Some(Country::Russia),
             Federation::FCA => Some(Country::USA),
             Federation::FCST => Some(Country::Czechia),
+            Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
@@ -1706,6 +1713,7 @@ impl Federation {
             Federation::FBPD => None,
             Federation::FCA => None,
             Federation::FCST => None,
+            Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FEMEPO => Some(Federation::IPF),
             Federation::FEPOA => None,
             Federation::FESUPO => Some(Federation::IPF),
@@ -1982,6 +1990,7 @@ impl Federation {
             Federation::FBPD => PointsSystem::Wilks,
             Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
+            Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
