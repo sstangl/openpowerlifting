@@ -1,3 +1,5 @@
+# Configuration for the USAPL.
+
 [divisions]
     # Official division names are as described in an email from the USAPL
     # National Office (nationaloffice@usapowerlifting.com), sent 2018-02-22.
@@ -15,7 +17,7 @@
     mrt3 = {name="MR-T3", min=17.5, max=18.5, sex="M", equipment="Raw"}
     mrtj = {name="MR-TJ", min=13.5, max=22.5, sex="M", equipment="Raw"}
     mrsj = {name="MR-SJ", min=13.5, max=17.5, sex="M", equipment="Raw"}
-    mrjr = {name="MR-Jr", min=19.5, max=22.5, sex="M", equipment="Raw"}
+    mrjr = {name="MR-Jr", min=18.5, max=22.5, sex="M", equipment="Raw"}
     mrm1a = {name="MR-M1a", min=39.5, max=43.5, sex="M", equipment="Raw"}
     mrm1b = {name="MR-M1b", min=44.5, max=48.5, sex="M", equipment="Raw"}
     mrm2a = {name="MR-M2a", min=49.5, max=53.5, sex="M", equipment="Raw"}
@@ -50,7 +52,7 @@
     frt3 = {name="FR-T3", min=17.5, max=18.5, sex="F", equipment="Raw"}
     frtj = {name="FR-TJ", min=13.5, max=22.5, sex="F", equipment="Raw"}
     frsj = {name="FR-SJ", min=13.5, max=17.5, sex="F", equipment="Raw"}
-    frjr = {name="FR-Jr", min=19.5, max=22.5, sex="F", equipment="Raw"}
+    frjr = {name="FR-Jr", min=18.5, max=22.5, sex="F", equipment="Raw"}
     frm1a = {name="FR-M1a", min=39.5, max=43.5, sex="F", equipment="Raw"}
     frm1b = {name="FR-M1b", min=44.5, max=48.5, sex="F", equipment="Raw"}
     frm2a = {name="FR-M2a", min=49.5, max=53.5, sex="F", equipment="Raw"}
@@ -85,7 +87,7 @@
     mt3 = {name="M-T3", min=17.5, max=18.5, sex="M", equipment="Single-ply"}
     mtj = {name="M-TJ", min=13.5, max=22.5, sex="M", equipment="Single-ply"}
     msj = {name="M-SJ", min=13.5, max=17.5, sex="M", equipment="Single-ply"}
-    mjr = {name="M-Jr", min=19.5, max=22.5, sex="M", equipment="Single-ply"}
+    mjr = {name="M-Jr", min=18.5, max=22.5, sex="M", equipment="Single-ply"}
     mm1a = {name="M-M1a", min=39.5, max=43.5, sex="M", equipment="Single-ply"}
     mm1b = {name="M-M1b", min=44.5, max=48.5, sex="M", equipment="Single-ply"}
     mm2a = {name="M-M2a", min=49.5, max=53.5, sex="M", equipment="Single-ply"}
@@ -120,7 +122,7 @@
     ft3 = {name="F-T3", min=17.5, max=18.5, sex="F", equipment="Single-ply"}
     ftj = {name="F-TJ", min=13.5, max=22.5, sex="F", equipment="Single-ply"}
     fsj = {name="F-SJ", min=13.5, max=17.5, sex="F", equipment="Single-ply"}
-    fjr = {name="F-Jr", min=19.5, max=22.5, sex="F", equipment="Single-ply"}
+    fjr = {name="F-Jr", min=18.5, max=22.5, sex="F", equipment="Single-ply"}
     fm1a = {name="F-M1a", min=39.5, max=43.5, sex="F", equipment="Single-ply"}
     fm1b = {name="F-M1b", min=44.5, max=48.5, sex="F", equipment="Single-ply"}
     fm2a = {name="F-M2a", min=49.5, max=53.5, sex="F", equipment="Single-ply"}
