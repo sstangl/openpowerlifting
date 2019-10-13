@@ -1,3 +1,5 @@
+# Configuration for RhinoPC
+
 [divisions]
     mo = {name ="M-O", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     fo = {name ="F-O", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
