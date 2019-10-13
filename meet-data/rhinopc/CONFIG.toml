@@ -8,6 +8,8 @@
     mt1 = {name ="M-T1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
     mt2 = {name ="M-T2", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
     mt3 = {name ="M-T3", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
+    my = {name ="M-Y", min=0, max=12, sex="M", equipment=["Raw","Wraps"]}
+    fy = {name ="F-Y", min=0, max=12, sex="F", equipment=["Raw","Wraps"]}
     ft = {name ="F-T", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
     ft1 = {name ="F-T1", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
     ft2 = {name ="F-T2", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
