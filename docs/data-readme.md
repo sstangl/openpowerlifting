@@ -68,11 +68,19 @@ The `Age` column is defined by [modules/opltypes/src/age.rs](https://gitlab.com/
 
 ### AgeClass
 
-Optional. The age class in which the filter falls, for example `40-45`.
+Optional. The age class in which the filter falls, for example `40-45`. These classes are based on exact age of the lifter on the day of competition.
 
 AgeClass is mostly useful because sometimes a federation will report that a lifter competed in the 50-54 divison without providing any further age information. This way, we can still tag them as 50-54, even if the `Age` column is empty.
 
 The full range available to `AgeClass` is defined by [modules/opltypes/src/ageclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/ageclass.rs). 
+
+### BirthYearClass
+
+Optional. The birth year class in which the filter falls, for example `40-49`. The ages in the range are the oldest possible ages for the lifter that year. For example, `40-49` means "the year the lifters turns 40 through the full year in which the lifter turns 49."
+
+`BirthYearClass` is used primarily by the IPF and by IPF affiliates. Non-IPF federations tend to use `AgeClass` instead.
+
+The full range available to `BirthYearClass` is defined by [modules/opltypes/src/birthyearclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/birthyearclass.rs). 
 
 ### Division
 
