@@ -37,6 +37,8 @@ def load_names(datafilepath):
 
 def correct_names(namehash, cyrhash, entriespath):
     csv = oplcsv.Csv(entriespath)
+    if 'Name' not in csv.fieldnames:
+        print(entriespath)
     assert 'Name' in csv.fieldnames
 
     nameidx = csv.index('Name')
