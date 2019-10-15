@@ -132,7 +132,7 @@ Optional. Fourth attempts for each of squat, bench, and deadlift, respectively. 
 
 Negative values indicate failed attempts.
 
-Fourth attempts are special, in that they do not count toward the `Best3TotalKg`. They are used for recording single-lift records.
+Fourth attempts are special, in that they do not count toward the `TotalKg`. They are used for recording single-lift records.
 
 ### Best3SquatKg, Best3BenchKg, Best3DeadliftKg
 
