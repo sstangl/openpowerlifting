@@ -686,3 +686,4 @@
     1030 = ["ExemptDivision"] # Missing divisions
     1033 = ["ExemptWeightClassConsistency"] # Missing weightclass
     1034 = ["ExemptWeightClassConsistency"] # Missing weightclass
+    1044 = ["ExemptWeightClassConsistency", "ExemptDivision"] # High school stuff
