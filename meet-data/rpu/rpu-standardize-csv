@@ -343,7 +343,7 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['сумма', 'total', 'result', 'сумма баллов', 'резульат',
-                      'результат bp', 'результат', 'итог']:
+                      'результат bp', 'результат', 'итог', 'рзультат']:
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
