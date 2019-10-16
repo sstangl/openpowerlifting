@@ -158,6 +158,10 @@ pub enum MetaFederation {
     #[strum(to_string = "npb")]
     NPB,
 
+    /// NZPF, but with international results also.
+    #[strum(to_string = "nzpf")]
+    NZPF,
+
     /// OEVK, but with international results also.
     #[strum(to_string = "oevk")]
     OEVK,
@@ -472,6 +476,19 @@ impl MetaFederation {
                 Federation::NPB => true,
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Netherlands)
+                }
+                _ => false,
+            },
+            MetaFederation::NZPF => match meet.federation {
+                Federation::NZPF => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::NewZealand)
+                }
+                Federation::IPF
+                | Federation::EPF
+                | Federation::OceaniaPF
+                | Federation::CommonwealthPF => {
+                    entry.lifter_country == Some(Country::NewZealand)
                 }
                 _ => false,
             },
