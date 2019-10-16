@@ -485,7 +485,6 @@ impl MetaFederation {
                         || entry.lifter_country == Some(Country::NewZealand)
                 }
                 Federation::IPF
-                | Federation::EPF
                 | Federation::OceaniaPF
                 | Federation::CommonwealthPF => {
                     entry.lifter_country == Some(Country::NewZealand)
