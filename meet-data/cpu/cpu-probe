@@ -43,7 +43,7 @@ def getmeetlist(html):
     urls = []
     for a in soup.find_all("a"):
         url = a['href']
-        if '/contest_results.php?' not in url:
+        if '/contest-results' not in url:
             continue
 
         if url not in urls:
