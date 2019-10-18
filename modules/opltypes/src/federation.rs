@@ -620,6 +620,10 @@ pub enum Federation {
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
 
+    /// Police Athletic League, defunct US Fed
+    #[strum(to_string = "PAL", serialize = "pal")]
+    PAL,
+
     /// Powerlifting Association of the Philippines, IPF.
     #[strum(to_string = "PAP", serialize = "pap")]
     PAP,
@@ -1252,6 +1256,7 @@ impl Federation {
             Federation::OEVK => true,
             Federation::ParaPL => true,
             Federation::PA => true,
+            Federation::PAL => false,
             Federation::PAP => true,
             Federation::PHPL => false,
             Federation::PLSS => true,
@@ -1511,6 +1516,7 @@ impl Federation {
             Federation::OEVK => Some(Country::Austria),
             Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
+            Federation::PAL => Some(Country::USA),
             Federation::PAP => Some(Country::Philippines),
             Federation::PHPL => Some(Country::Philippines),
             Federation::PLSS => Some(Country::Serbia),
@@ -1797,6 +1803,7 @@ impl Federation {
                     Some(Federation::IPF)
                 }
             }
+            Federation::PAL => None,
             Federation::PAP => Some(Federation::IPF),
             Federation::PHPL => Some(Federation::GPA),
             Federation::PLSS => Some(Federation::IPF),
@@ -2067,6 +2074,7 @@ impl Federation {
             Federation::OEVK => Federation::ipf_rules_on(date),
             Federation::ParaPL => PointsSystem::AH,
             Federation::PA => PointsSystem::Wilks,
+            Federation::PAL => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PLSS => Federation::ipf_rules_on(date),
