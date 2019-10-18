@@ -620,10 +620,6 @@ pub enum Federation {
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
 
-    /// Police Athletic League, a defunct US Fed.
-    #[strum(to_string = "PoliceAL", serialize = "policeal")]
-    PoliceAL,
-
     /// Powerlifting Association of the Philippines, IPF.
     #[strum(to_string = "PAP", serialize = "pap")]
     PAP,
@@ -643,6 +639,10 @@ pub enum Federation {
     /// Papua New Guinea Powerlifting Federation, IPF.
     #[strum(to_string = "PNGPF", serialize = "pngpf")]
     PNGPF,
+
+    /// Police Athletic League, a defunct US Fed.
+    #[strum(to_string = "PoliceAL", serialize = "policeal")]
+    PoliceAL,
 
     /// A defunct stand-alone US federation.
     #[strum(to_string = "PRIDE", serialize = "pride")]
