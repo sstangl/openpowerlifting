@@ -282,12 +282,33 @@ pub enum MexicoState {
     QR, SL, SI, SO, TB, TM, TL, VE, YU, ZA
 }
 
-/// A state in the Netherlands
-#[rustfmt::skip]
+/// A state in the Netherlands.
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum NetherlandsState {
-    DR, FL, FR, GE, GR, LI, NB, NH, OV, UT, ZE,
-    ZH
+    /// Drenthe.
+    DR,
+    /// Flevoland.
+    FL,
+    /// Friesland / Fryslân.
+    FR,
+    /// Gelderland.
+    GE,
+    /// Groningen.
+    GR,
+    /// Limburg.
+    LI,
+    /// North Brabant / Noord-Brabant.
+    NB,
+    /// North Holland / Noord-Holland.
+    NH,
+    /// Overijssel / Overissel.
+    OV,
+    /// Utrecht.
+    UT,
+    /// Zeeland.
+    ZE,
+    /// South Holland / Zuid-Holland.
+    ZH,
 }
 
 /// A state in New Zealand.
