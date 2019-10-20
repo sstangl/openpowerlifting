@@ -124,10 +124,26 @@ pub enum ArgentinaState {
 }
 
 /// A state in Australia.
-#[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum AustraliaState {
-    ACT, NSW, NT, QLD, SA, TAS, VIC, WA
+    /// Australian Capital Territory.
+    ACT,
+    /// Jervis Bay Territory.
+    JBT,
+    /// New South Wales.
+    NSW,
+    /// Northern Territory.
+    NT,
+    /// Queensland.
+    QLD,
+    /// South Australia.
+    SA,
+    /// Tasmania.
+    TAS,
+    /// Victoria.
+    VIC,
+    /// Western Australia.
+    WA,
 }
 
 /// A state in Brazil.
@@ -183,12 +199,78 @@ pub enum GermanyState {
 }
 
 /// A state in India.
-#[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum IndiaState {
-    AP, AR, AS, BR, CG, GA, GJ, HR, HP, JK, JH, KA,
-    KL, MP, MH, MN, ML, MZ, NL, OR, PB, RJ, SK, TN,
-    TR, UK, UP, WB, AN, CH, DH, DD, DL, LD, PY
+    /// Andaman and Nicobar Islands.
+    AN,
+    /// Andhra Pradesh.
+    AP,
+    /// Arunachal Pradesh.
+    AR,
+    /// Assam.
+    AS,
+    /// Bihar.
+    BR,
+    /// Chhattisgarh.
+    CG,
+    /// Chandigarh.
+    CH,
+    /// Daman and Diu.
+    DD,
+    /// Dadra and Nagar Haveli.
+    DH,
+    /// Delhi.
+    DL,
+    /// Goa.
+    GA,
+    /// Gujarat.
+    GJ,
+    /// Haryana.
+    HR,
+    /// Himachal Pradesh.
+    HP,
+    /// Jammu and Kashmir.
+    JK,
+    /// Jharkhand.
+    JH,
+    /// Karnataka.
+    KA,
+    /// Kerala.
+    KL,
+    /// Lakshadweep.
+    LD,
+    /// Madhya Pradesh.
+    MP,
+    /// Maharashtra.
+    MH,
+    /// Manipur.
+    MN,
+    /// Meghalaya.
+    ML,
+    /// Mizoram.
+    MZ,
+    /// Nagaland.
+    NL,
+    /// Orissa.
+    OR,
+    /// Punjab.
+    PB,
+    /// Pondicherry / Puducherry.
+    PY,
+    /// Rajasthan.
+    RJ,
+    /// Sikkim.
+    SK,
+    /// Tamil Nadu.
+    TN,
+    /// Tripura.
+    TR,
+    /// Uttarakhand.
+    UK,
+    /// Uttar Pradesh.
+    UP,
+    /// West Bengal.
+    WB,
 }
 
 /// A state in Mexico.
