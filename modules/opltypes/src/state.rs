@@ -17,6 +17,7 @@ pub enum State {
     InMexico(MexicoState),
     InNetherlands(NetherlandsState),
     InNewZealand(NewZealandState),
+    InRomania(RomaniaState),
     InRussia(RussiaState),
     InUSA(USAState),
 }
@@ -42,6 +43,7 @@ impl State {
             Country::Mexico => Ok(State::InMexico(s.parse::<MexicoState>()?)),
             Country::Netherlands => Ok(State::InNetherlands(s.parse::<NetherlandsState>()?)),
             Country::NewZealand => Ok(State::InNewZealand(s.parse::<NewZealandState>()?)),
+            Country::Romania => Ok(State::InRomania(s.parse::<RomaniaState>()?)),
             Country::Russia => Ok(State::InRussia(s.parse::<RussiaState>()?)),
             Country::USA => Ok(State::InUSA(s.parse::<USAState>()?)),
             _ => Err(ParseError::VariantNotFound),
@@ -64,6 +66,7 @@ impl Serialize for State {
             State::InMexico(s) => s.serialize(serializer),
             State::InNetherlands(s) => s.serialize(serializer),
             State::InNewZealand(s) => s.serialize(serializer),
+            State::InRomania(s) => s.serialize(serializer),
             State::InRussia(s) => s.serialize(serializer),
             State::InUSA(s) => s.serialize(serializer),
         }
@@ -317,6 +320,95 @@ pub enum NetherlandsState {
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
     TAS, NSN, MBH, WTC, CAN, OTA, STL
+}
+
+/// A county in Romania.
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+pub enum RomaniaState {
+    /// Alba.
+    AB,
+    /// Argeș.
+    AG,
+    /// Arad.
+    AR,
+    /// Bucharest.
+    B,
+    /// Bacău.
+    BC,
+    /// Bihor.
+    BH,
+    /// Bistrița-Năsăud.
+    BN,
+    /// Brăila.
+    BR,
+    /// Botoșani.
+    BT,
+    /// Brașov.
+    BV,
+    /// Buzău.
+    BZ,
+    /// Cluj.
+    CJ,
+    /// Călărași.
+    CL,
+    /// Caraș-Severin.
+    CS,
+    /// Constanța.
+    CT,
+    /// Covasna.
+    CV,
+    /// Dâmbovița.
+    DB,
+    /// Dolj.
+    DJ,
+    /// Gorj.
+    GJ,
+    /// Galați.
+    GL,
+    /// Giurgiu.
+    GR,
+    /// Hunedoara.
+    HD,
+    /// Harghita.
+    HR,
+    /// Ilfov.
+    IF,
+    /// Ialomița.
+    IL,
+    /// Iași.
+    IS,
+    /// Mehedinți.
+    MH,
+    /// Maramureș.
+    MM,
+    /// Mureș.
+    MS,
+    /// Neamț.
+    NT,
+    /// Olt.
+    OT,
+    /// Prahova.
+    PH,
+    /// Sibiu.
+    SB,
+    /// Sălaj.
+    SJ,
+    /// Satu Mare.
+    SM,
+    /// Suceava.
+    SV,
+    /// Tulcea.
+    TL,
+    /// Timiș.
+    TM,
+    /// Teleorman.
+    TR,
+    /// Vâlcea.
+    VL,
+    /// Vrancea.
+    VN,
+    /// Vaslui.
+    VS,
 }
 
 /// A state in Russia.

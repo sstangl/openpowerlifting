@@ -341,6 +341,10 @@ pub enum Federation {
     #[strum(to_string = "FPR", serialize = "fpr")]
     FPR,
 
+    /// Federatia Romana de Powerlifting, Romanian IPF affiliate.
+    #[strum(to_string = "FRPL", serialize = "frpl")]
+    FRPL,
+
     /// Unaffiliated meets held in Germany.
     #[serde(rename = "Germany-UA")]
     #[strum(to_string = "Germany-UA", serialize = "germany-ua")]
@@ -1189,6 +1193,7 @@ impl Federation {
             Federation::FIPL => true,
             Federation::FPO => false,
             Federation::FPR => true,
+            Federation::FRPL => true,
             Federation::GermanyUA => false,
             Federation::GlobalPU => false,
             Federation::GPA => false,
@@ -1449,6 +1454,7 @@ impl Federation {
             Federation::FIPL => Some(Country::Italy),
             Federation::FPO => Some(Country::Finland),
             Federation::FPR => Some(Country::Russia),
+            Federation::FRPL => Some(Country::Romania),
             Federation::GermanyUA => Some(Country::Germany),
             Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
@@ -1729,6 +1735,7 @@ impl Federation {
             Federation::FIPL => Some(Federation::IPF),
             Federation::FPO => None,
             Federation::FPR => Some(Federation::IPF),
+            Federation::FRPL => Some(Federation::IPF),
             Federation::GermanyUA => None,
             Federation::GlobalPU => None,
             Federation::GPA => Some(Federation::GPA),
@@ -2007,6 +2014,7 @@ impl Federation {
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPR => Federation::ipf_rules_on(date),
+            Federation::FRPL => Federation::ipf_rules_on(date),
             Federation::GermanyUA => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
