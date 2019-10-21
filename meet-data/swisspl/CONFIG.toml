@@ -48,3 +48,5 @@
     sex = "F"
 
 [exemptions]
+    # Limited weightclasses. Juniors and Sub-Juniors combined.
+    1902 = ["ExemptWeightClassConsistency", "ExemptDivision"]
