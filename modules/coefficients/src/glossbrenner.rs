@@ -53,7 +53,7 @@ mod tests {
     #[test]
     fn coefficients() {
         // Coefficients taken verbatim from the old Python implementation.
-        assert_eq!(glossbrenner_coefficient_men(100.0), 0.5848996767118151);
+        assert_eq!(glossbrenner_coefficient_men(100.0), 0.5812707859533182);
         assert_eq!(glossbrenner_coefficient_women(100.0), 0.7152488066040255);
     }
 
@@ -62,7 +62,7 @@ mod tests {
         // Point values taken (rounded) from the old Python implementation.
         assert_eq!(
             glossbrenner(Sex::M, WeightKg::from_i32(100), WeightKg::from_i32(1000)),
-            Points::from(584.89967)
+            Points::from(581.27)
         );
         assert_eq!(
             glossbrenner(Sex::F, WeightKg::from_i32(60), WeightKg::from_i32(500)),

@@ -2,17 +2,52 @@
 
 use opltypes::*;
 
-/// Calculated the Schwartz coefficient, used for men.
+/// Calculates the Schwartz coefficient, used for men.
+///
+/// The exact formula was found in the magazine Powerlifting USA,
+/// Vol.6, No.2, August 1982, on page 61. That text is reproduced below:
+///
+/// Computerized Schwartz Formula...Dr. Lyle Schwartz has often been
+/// asked for a means by which the formula he has given Powerlifting can be
+/// programmed into a computer or a hand held calculator with sufficient
+/// memory. To obtain the Schwartz Formula (SF) for bodyweights (BW) bet-
+/// ween 40 and 126 kg, the expression is: SF = 0.631926 exp(+01) -
+/// 0.262349 exp(+00) (BW) + 0.511550 exp(-02) (BW)^2 - 0.519738
+/// exp(-04) (BW)^3 + 0.267626 exp(-06) (BW)^4 - 0.540132 exp(-09)
+/// (BW)^5 - 0.728875 exp(-13) (BW)^6. For higher bodyweights, the follow-
+/// ing simple formulae are used: for BW 126-136, SF = 0.5210-0.0012
+/// (BW - 125), for BW 136-146, SF = 0.5090-0011 (BW - 135), for BW
+/// 146-156, SF = 0.4980-0.0010 (BW - 145), and for BW 156-166, SF =
+/// 0.4880-0.0090 (BW - 156)
 pub fn schwartz_coefficient(bodyweightkg: f64) -> f64 {
-    // Values calculated by fitting to coefficient tables.
-    const A: f64 = 3565.902903983125;
-    const B: f64 = -2.244917050872728;
-    const C: f64 = 0.445775838479913;
+    let adjusted = bodyweightkg.max(40.0).min(166.0);
 
-    // Arbitrary choice of lower bound.
-    let adjusted = bodyweightkg.max(40.0);
-
-    A * adjusted.powf(B) + C
+    if adjusted <= 126.0 {
+        let x0 = 0.631926 * 10_f64;
+        let x1 = 0.262349 * adjusted;
+        let x2 = 0.511550 * 10_f64.powi(-2) * adjusted.powi(2);
+        let x3 = 0.519738 * 10_f64.powi(-4) * adjusted.powi(3);
+        let x4 = 0.267626 * 10_f64.powi(-6) * adjusted.powi(4);
+        let x5 = 0.540132 * 10_f64.powi(-9) * adjusted.powi(5);
+        let x6 = 0.728875 * 10_f64.powi(-13) * adjusted.powi(6);
+        x0 - x1 + x2 - x3 + x4 - x5 - x6
+    } else if adjusted <= 136.0 {
+        0.5210 - 0.0012 * (adjusted - 125.0)
+    } else if adjusted <= 146.0 {
+        0.5090 - 0.0011 * (adjusted - 135.0)
+    } else if adjusted <= 156.0 {
+        0.4980 - 0.0010 * (adjusted - 145.0)
+    } else {
+        // The final formula as published for this piece does not match
+        // the coefficient tables.
+        //
+        // From the tables, the step is exactly 0.0004 per pound, which
+        // has been converted to kg below.
+        //
+        // For reference, the published original is:
+        //   0.4880 - 0.0090 * (adjusted - 156.0)
+        0.4879 - 0.00088185 * (adjusted - 155.0)
+    }
 }
 
 /// Calculates the Malone coefficient, used for women.
@@ -46,11 +81,53 @@ pub fn schwartzmalone(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points
 mod tests {
     use super::*;
 
+    /// Tests whether two floating-point numbers are equal to 4 decimal places,
+    /// as published in the official Schwartz coefficient tables.
+    fn matches_table(a: f64, b: f64) -> bool {
+        const FIGS: f64 = 10000.0;
+        (a * FIGS).round() == (b * FIGS).round()
+    }
+
     #[test]
     fn coefficients() {
         // Coefficients taken verbatim from the old Python implementation.
-        assert_eq!(schwartz_coefficient(100.0), 0.5612102815169793);
         assert_eq!(malone_coefficient(100.0), 0.597914296471229);
+    }
+
+    /// Test whether the Schwartz coefficient calculation matches the
+    /// officially-published tables.
+    ///
+    /// The official tables are published with bodyweights in pounds.
+    #[test]
+    fn schwartz_coefficient_table() {
+        // The conversion factor that Schwartz used.
+        let kg = 2.20462262;
+
+        // Test the polynomial.
+        assert!(matches_table(schwartz_coefficient(94.0 / kg), 1.2124));
+        assert!(matches_table(schwartz_coefficient(110.0 / kg), 0.9991));
+        assert!(matches_table(schwartz_coefficient(162.0 / kg), 0.6753));
+        assert!(matches_table(schwartz_coefficient(220.0 / kg), 0.5545));
+
+        // Test the second piece (bounded by 136kg).
+        // Note that 286 and 287 fail due to rounding.
+        assert!(matches_table(schwartz_coefficient(288.0 / kg), 0.5142));
+
+        // Test the third piece (bounded by 146kg).
+        // Note that 315 fails due to rounding.
+        assert!(matches_table(schwartz_coefficient(316.0 / kg), 0.4998));
+
+        // Test the fourth piece (bounded by 156kg).
+        assert!(matches_table(schwartz_coefficient(337.0 / kg), 0.4901));
+        assert!(matches_table(schwartz_coefficient(343.0 / kg), 0.4874));
+
+        // Test the final piece (bounded by 166kg).
+        // Note that some later values fail due to rounding.
+        assert!(matches_table(schwartz_coefficient(344.0 / kg), 0.4870));
+        assert!(matches_table(schwartz_coefficient(345.0 / kg), 0.4866));
+        assert!(matches_table(schwartz_coefficient(346.0 / kg), 0.4862));
+        assert!(matches_table(schwartz_coefficient(347.0 / kg), 0.4858));
+        assert!(matches_table(schwartz_coefficient(348.0 / kg), 0.4854));
     }
 
     #[test]
@@ -58,7 +135,7 @@ mod tests {
         // Points taken verbatim from the old Python implementation.
         assert_eq!(
             schwartzmalone(Sex::M, WeightKg::from_i32(93), WeightKg::from_i32(500)),
-            Points::from(290.82)
+            Points::from(287.15)
         );
         assert_eq!(
             schwartzmalone(Sex::F, WeightKg::from_i32(74), WeightKg::from_i32(500)),
