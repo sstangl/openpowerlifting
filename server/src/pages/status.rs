@@ -290,6 +290,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
+    let email_mbeelen = "<a href=\"mailto:mbeelen@openpowerlifting.org\">mbeelen@</a>";
     let email_milena = "<a href=\"mailto:milena@openpowerlifting.org\">milena@</a>";
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_romi = "<a href=\"mailto:romi@openpowerlifting.org\">Romi@</a>";
@@ -331,6 +332,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
+    statuses[NPB as usize].maintainers = email_mbeelen;
     statuses[NZPF as usize].maintainers = email_matt;
     statuses[OceaniaPF as usize].maintainers = email_matt;
     statuses[OEVK as usize].maintainers = email_milena;
