@@ -19,6 +19,17 @@ use opltypes::*;
 /// (BW - 125), for BW 136-146, SF = 0.5090-0011 (BW - 135), for BW
 /// 146-156, SF = 0.4980-0.0010 (BW - 145), and for BW 156-166, SF =
 /// 0.4880-0.0090 (BW - 156)
+///
+/// Schwartz is quoted as saying about the formula's development,
+///
+/// "Since powerlifting was still a young sport in the early 1970s
+/// there was uneven development in the three lifts on the part of most
+/// self-trained athletes. I compensated for such unevenness by creating
+/// artificial 'best' totals by adding together the current records in the
+/// individual lifts. A 'best' total would have been achieved by that ideal
+/// lifter who could match the best performances to date in all three
+/// powerlifts. Then I fitted these data to an artificial curve and picked
+/// off numbers from the curve."
 pub fn schwartz_coefficient(bodyweightkg: f64) -> f64 {
     let adjusted = bodyweightkg.max(40.0).min(166.0);
 
