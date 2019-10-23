@@ -37,7 +37,7 @@
 
 {% block body %}
   <div class="mixed-content-with-controls">
-    <h1 id="meet">{{meet.federation}} {{meet.name}}</h1>
+    <h1 id="meet">{{year}} {{meet.federation}} {{meet.name}}</h1>
     <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}</p>
 
     <table>

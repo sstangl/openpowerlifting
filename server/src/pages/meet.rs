@@ -39,6 +39,9 @@ pub struct Context<'db> {
     pub has_age_data: bool,
     pub sortselection: MeetSortSelection,
 
+    /// Year of competition, used in the heading.
+    pub year: u32,
+
     /// List of tables, to be printed one after the other.
     pub tables: Vec<Table<'db>>,
 }
@@ -644,6 +647,7 @@ impl<'db> Context<'db> {
                 },
             },
             meet: MeetInfo::from(&meet, locale.strings),
+            year: meet.date.year(),
             has_age_data: true, // TODO: Maybe use again?
             tables,
             use_rank_column: sort != MeetSortSelection::ByDivision,
