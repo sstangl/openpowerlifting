@@ -245,7 +245,7 @@
   <option value="wpc-latvia" {% if selection.federation == "WPC-Latvia" %}selected{% endif %}>WPC Latvia</option>
 </optgroup>
 <optgroup label="{{strings.country.lithuania}}">
-  <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>Lietuvos Jėgos Trikovės Federacija [IPF]</option>
+  <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>LJTF - Lietuvos Jėgos Trikovės Federacija [IPF]</option>
   <option value="wrpf-lithuania" {% if selection.federation == "WRPF-Lithuania" %}selected{% endif %}>WRPF Lithuania</option>
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
