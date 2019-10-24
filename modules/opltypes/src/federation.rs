@@ -532,6 +532,10 @@ pub enum Federation {
     #[strum(to_string = "LHSPLA", serialize = "lhspla")]
     LHSPLA,
 
+    /// Lietuvos Jėgos Trikovės Federacija, Lithuanian IPF affiliate.
+    #[strum(to_string = "LJTF", serialize = "ljtf")]
+    LJTF,
+
     /// Latvian IPF affiliate.
     #[strum(to_string = "LPF", serialize = "lpf")]
     LPF,
@@ -1238,6 +1242,7 @@ impl Federation {
             Federation::KRAFT => true,
             Federation::KuwaitPL => false,
             Federation::LHSPLA => false,
+            Federation::LJTF => true,
             Federation::LPF => true,
             Federation::MHSPLA => false,
             Federation::MM => false,
@@ -1499,6 +1504,7 @@ impl Federation {
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KuwaitPL => Some(Country::Kuwait),
             Federation::LHSPLA => Some(Country::USA),
+            Federation::LJTF => Some(Country::Lithuania),
             Federation::LPF => Some(Country::Latvia),
             Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
@@ -1780,6 +1786,7 @@ impl Federation {
             Federation::KRAFT => Some(Federation::IPF),
             Federation::KuwaitPL => None,
             Federation::LHSPLA => None,
+            Federation::LJTF => Some(Federation::IPF),
             Federation::LPF => Some(Federation::IPF),
             Federation::MHSPLA => None,
             Federation::MM => None,
@@ -2059,6 +2066,7 @@ impl Federation {
             Federation::KRAFT => Federation::ipf_rules_on(date),
             Federation::KuwaitPL => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
+            Federation::LJTF => Federation::ipf_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MHSPLA => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,

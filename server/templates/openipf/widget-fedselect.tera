@@ -39,6 +39,7 @@
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA / {{strings.country.japan}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF / {{strings.country.kazakhstan}}</option>
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT / {{strings.country.iceland}}</option>
+  <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>LJTF / {{strings.country.lithuania}}</option>
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF / {{strings.country.latvia}}</option>
   <option value="naurupf" {% if selection.federation == "NauruPF" %}selected{% endif %}>NauruPF / {{strings.country.nauru}}</option>
   <option value="npb" {% if selection.federation == "NPB" %}selected{% endif %}>NPB / {{strings.country.netherlands}}</option>

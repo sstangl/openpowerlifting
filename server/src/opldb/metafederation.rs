@@ -158,6 +158,10 @@ pub enum MetaFederation {
     #[strum(to_string = "irishpo")]
     IrishPO,
 
+    /// LJTF, but with international results also.
+    #[strum(to_string = "ljtf")]
+    LJTF,
+
     /// NPB, but with international results also.
     #[strum(to_string = "npb")]
     NPB,
@@ -486,6 +490,16 @@ impl MetaFederation {
                     || (meet.federation == Federation::WPC
                         && entry.lifter_country == Some(Country::Ireland))
             }
+            MetaFederation::LJTF => match meet.federation {
+                Federation::LJTF => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Lithuania)
+                }
+                Federation::IPF | Federation::EPF => {
+                    entry.lifter_country == Some(Country::Lithuania)
+                }
+                _ => false,
+            },
             MetaFederation::NPB => match meet.federation {
                 Federation::NPB => true,
                 Federation::IPF | Federation::EPF => {
