@@ -1,3 +1,5 @@
+# Configuration for the AEP.
+
 [divisions]
     open = {name ="SNR",min=0,max=999}
     juniors = {name = "JUN",min=0,max=22.5}
