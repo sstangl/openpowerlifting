@@ -13,6 +13,7 @@ use walkdir::{DirEntry, WalkDir};
 use std::collections::BTreeMap;
 use std::env;
 use std::error::Error;
+use std::fs;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process;
@@ -381,13 +382,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
 
+    // The default mode without arguments just performs data checks.
     print_summary(error_count + internal_error_count, warning_count);
-
     if error_count > 0 || internal_error_count > 0 {
         process::exit(1);
     }
 
-    // The default mode without arguments just performs data checks.
+    // Perform cross-Entry data interpolation.
     if is_compiling || is_debugging {
         // Perform country interpolation.
         if let Some(u) = args.debug_country_username {
@@ -402,14 +403,19 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         compiler::interpolate_age(&mut meetdata, &liftermap);
+    }
 
-        // Perform final compilation if requested.
+    // Perform final compilation if requested.
+    if is_compiling {
+        let buildpath = project_root.join("build");
+        if !buildpath.exists() {
+            fs::create_dir(&buildpath)?;
+        }
+
         if args.compile {
-            let buildpath = project_root.join("build");
             compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
         }
         if args.compile_onefile {
-            let buildpath = project_root.join("build");
             compiler::make_onefile_csv(&meetdata, &buildpath)?;
         }
     }

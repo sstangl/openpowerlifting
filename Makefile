@@ -1,4 +1,4 @@
-.PHONY: builddir datadist sqlite check probe-quick probe deploy clean
+.PHONY: datadist sqlite check probe-quick probe deploy clean
 
 MEETDATADIR := meet-data
 BUILDDIR := build
@@ -12,18 +12,15 @@ DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}
 
 all: csv server
 
-builddir:
-	mkdir -p '${BUILDDIR}'
-
 # Cram all the data into huge CSV files. New hotness.
-csv: builddir
+csv:
 	cargo run --bin checker -- --compile
 
 # Build the CSV file hosted on the Data page for use by humans.
 # The intention is to make it easy to use for people on Windows.
-data: builddir
-	mkdir -p "${DATADIR}"
+data:
 	cargo run --bin checker -- --compile-onefile
+	mkdir -p "${DATADIR}"
 	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
 	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
 	cp docs/data-readme.md '${DATADIR}/README.txt'
