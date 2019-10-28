@@ -1,3 +1,5 @@
+# Configuration for Raw United (RAWU).
+
 [divisions]
     #Current divisions
     snr = {name ="SNR",min=0,max=999}
@@ -6,6 +8,7 @@
     youth8_9 = {name = "8-9",min=8,max=9}
     youth10_11 = {name = "10-11",min=10,max=11}
     teen12_13 = {name = "12-13",min=12,max=13}
+    youth13_u = {name = "13-U",min=4,max=13}
     teen13_14 = {name = "13-14",min=13,max=14}
     teen14_15 = {name = "14-15",min=14,max=15}
     teen16_17 = {name = "16-17",min=16,max=17}
