@@ -10,6 +10,7 @@
     teenage_13_15 = {name = "Teenage 13-15", min = 13, max = 15}
     teenage_16_17 = {name = "Teenage 16-17", min = 16, max = 17}
     teenage_18_19 = {name = "Teenage 18-19", min = 18, max = 19}
+    teenage = {name = "Teenage", min = 13, max = 19} # Unspecified age.
     junior_20_23 = {name = "Juniors", min = 20, max = 23}
     submaster = {name = "Submasters", min = 33, max = 39}
     masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
