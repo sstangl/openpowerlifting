@@ -600,13 +600,14 @@ pub enum Federation {
     #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
 
-    /// New Zealand Open competition, standalone.
-    #[strum(to_string = "NZOpen", serialize = "nzopen")]
-    NZOpen,
-
     /// New Zealand Powerlifting Federation, IPF.
     #[strum(to_string = "NZPF", serialize = "nzpf")]
     NZPF,
+
+    /// Unaffiliated meets held in NZ.
+    #[serde(rename = "NZ-UA")]
+    #[strum(to_string = "NZ-UA", serialize = "nz-ua")]
+    NZUA,
 
     /// Oceania Powerlifting Federation, WP.
     #[strum(to_string = "OceaniaPF", serialize = "oceaniapf")]
@@ -1259,8 +1260,8 @@ impl Federation {
             Federation::NPA => false,
             Federation::NPB => true,
             Federation::NSF => true,
-            Federation::NZOpen => false,
             Federation::NZPF => true,
+            Federation::NZUA => false,
             Federation::OceaniaPF => true,
             Federation::ORPF => true,
             Federation::OEVK => true,
@@ -1521,8 +1522,8 @@ impl Federation {
             Federation::NPA => Some(Country::Israel),
             Federation::NPB => Some(Country::Netherlands),
             Federation::NSF => Some(Country::Norway),
-            Federation::NZOpen => Some(Country::NewZealand),
             Federation::NZPF => Some(Country::NewZealand),
+            Federation::NZUA => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::ORPF => None,
             Federation::OEVK => Some(Country::Austria),
@@ -1803,8 +1804,8 @@ impl Federation {
             Federation::NPA => None,
             Federation::NPB => None,
             Federation::NSF => Some(Federation::IPF),
-            Federation::NZOpen => None,
             Federation::NZPF => Some(Federation::IPF),
+            Federation::NZUA => None,
             Federation::OceaniaPF => None,
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
@@ -2083,8 +2084,8 @@ impl Federation {
             Federation::NPA => PointsSystem::Wilks,
             Federation::NPB => PointsSystem::Wilks,
             Federation::NSF => Federation::ipf_rules_on(date),
-            Federation::NZOpen => PointsSystem::Wilks,
             Federation::NZPF => Federation::ipf_rules_on(date),
+            Federation::NZUA => PointsSystem::Wilks,
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
