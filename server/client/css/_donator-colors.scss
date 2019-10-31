@@ -215,6 +215,13 @@
   background-image: linear-gradient(to right, $limegreen, $lightgray);
 }
 
+.limegreen_to_green {
+  $limegreen: #32CD32;
+  $green: #51DA27;
+  @include gradient-prereqs($limegreen);
+  background-image: linear-gradient(to right, $limegreen, $green);
+}
+
 .neongreen_to_white {
   $neongreen: #39ff14;
   $white: #EDF2F4;
