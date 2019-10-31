@@ -18,9 +18,9 @@ wget --output-document=original.html "$1"
 echo "$1" > URL
 
 # Sometimes the documents are encoded in ISO-8859-1.
-file original.html | grep Non-ISO && iconv -f  ISO-8859-1 -t UTF-8 original.html > original.html
-if [ -f original.html ]; then
-    mv original.html original.html
+file original.html | grep Non-ISO && iconv -f  ISO-8859-1 -t UTF-8 original.html > original2.html
+if [ -f original2.html ]; then
+    mv original2.html original.html
 fi
 
 mv original.html original.xls
