@@ -21,6 +21,7 @@ except ImportError:
 FIELDNAME_MAP = {
     "": "",
     "Name": "Name",
+    "Country": "Country",
     "State": "State",
     "Class": "WeightClassKg",
     "Weight": "BodyweightKg",
@@ -106,6 +107,7 @@ DIVISION_MAP = {
     "Jr 18-19": "Juniors 18-19",
     "Jr 20-23": "Juniors 20-23",
     "Junior 20-23": "Juniors 20-23",
+    "Jr 15-19": "Juniors 15-19",
     "Open": "Open",
     "Submaster": "Submasters 35-39",
     "Master 40-44": "Masters 40-44",
