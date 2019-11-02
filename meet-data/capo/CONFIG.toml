@@ -51,6 +51,7 @@
     mm5r   = {name ="MM5-R",min=60,max=64,sex="M", equipment="Raw"}
     mm5rp  = {name ="MM5-RP",min=60,max=64,sex="M", equipment="Wraps"}
     mm5sp  = {name ="MM5-SP",min=60,max=64,sex="M", equipment="Single-ply"}
+    mm5mp  = {name ="MM5-MP",min=60,max=64,sex="M", equipment="Multi-ply"}
     mm6r   = {name ="MM6-R",min=65,max=69,sex="M", equipment="Raw"}
     mm7r   = {name ="MM7-R",min=70,max=74,sex="M", equipment="Raw"}
     mm8r   = {name ="MM8-R",min=75,max=79,sex="M", equipment="Raw"}
