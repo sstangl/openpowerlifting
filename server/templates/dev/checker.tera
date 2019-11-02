@@ -1,0 +1,50 @@
+{% import "static-asset-map" as statics %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OPL Checker</title>
+
+  <style>
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+  </style>
+
+  <script defer src="/static/scripts/{{statics::checker_js()}}"></script>
+</head>
+<body>
+  <h2>OpenPowerlifting Online Checker: "Finally" Edition</h2>
+  <div>This is the first version of the online checker. Note that it doesn't check everything yet: it doesn't know about CONFIG.toml files, and it doesn't cross-reference with the rest of the DB. The nice thing is that it responds immediately. Please let me know if you find this useful and would like to see it improved! There are lots of obvious things to do to make this tool really pleasant.</div>
+  <br/>
+
+  <button id="checkButton">Check</button>
+
+  <br/><br/>
+
+  <pre id="ioErrorPre"></pre>
+  <pre id="meetErrorPre"></pre>
+  <label for="meet">meet.csv:</label>
+  <textarea id="meetTextArea" name="meet" rows="2" cols="80">Federation,Date,MeetCountry,MeetState,MeetTown,MeetName</textarea>
+
+  <br/><br/>
+
+  <pre id="entriesErrorPre"></pre>
+  <label for="entries">entries.csv:</label>
+  <textarea id="entriesTextArea" name="entries" rows="16" cols="120"></textarea>
+</body>
+</html>

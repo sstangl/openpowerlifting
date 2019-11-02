@@ -85,7 +85,7 @@ impl HeaderIndexMap {
     }
 }
 
-pub struct CheckResult {
+pub struct EntriesCheckResult {
     pub report: Report,
     pub entries: Option<Vec<Entry>>,
 }
@@ -1822,7 +1822,7 @@ pub fn do_check<R>(
     meet: Option<&Meet>,
     config: Option<&Config>,
     mut report: Report,
-) -> Result<CheckResult, Box<dyn Error>>
+) -> Result<EntriesCheckResult, Box<dyn Error>>
 where
     R: io::Read,
 {
@@ -1846,7 +1846,7 @@ where
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
     if !report.messages.is_empty() {
-        return Ok(CheckResult {
+        return Ok(EntriesCheckResult {
             report,
             entries: None,
         });
@@ -2147,10 +2147,25 @@ where
         entries.push(entry);
     }
 
-    Ok(CheckResult {
+    Ok(EntriesCheckResult {
         report,
         entries: Some(entries),
     })
+}
+
+/// Checks a single entries.csv string, used by the server.
+pub fn check_entries_from_string(
+    entries_csv: &str,
+    meet: Option<&Meet>,
+) -> Result<EntriesCheckResult, Box<dyn Error>> {
+    let report = Report::new(PathBuf::from("uploaded/content"));
+
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .terminator(csv::Terminator::Any(b'\n'))
+        .from_reader(entries_csv.as_bytes());
+
+    Ok(do_check(&mut rdr, meet, None, report)?)
 }
 
 /// Checks a single entries.csv file by path.
@@ -2158,14 +2173,14 @@ pub fn check_entries(
     entries_csv: PathBuf,
     meet: Option<&Meet>,
     config: Option<&Config>,
-) -> Result<CheckResult, Box<dyn Error>> {
+) -> Result<EntriesCheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
 
     // The entries.csv file must exist.
     if !report.path.exists() {
         report.error("File does not exist");
-        return Ok(CheckResult {
+        return Ok(EntriesCheckResult {
             report,
             entries: None,
         });

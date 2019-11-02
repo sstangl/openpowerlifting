@@ -26,10 +26,12 @@ use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{Form, Request};
 use rocket::response::{NamedFile, Redirect, Responder, Response};
 use rocket::State;
+use rocket_contrib::json::Json;
 use rocket_contrib::templates::Template;
 
 use strum::IntoEnumIterator;
 
+use std::collections::HashMap;
 use std::env;
 use std::error::Error;
 use std::fs::File;
@@ -424,6 +426,20 @@ fn default_search_rankings_api(
     search_rankings_api(None, query, opldb)
 }
 
+// Renders the development environment.
+#[get("/")]
+fn dev_main() -> Template {
+    let dummy: HashMap<String, String> = HashMap::new();
+    Template::render("dev/checker", dummy)
+}
+
+/// Handles POST requests for getting data checked.
+#[post("/checker", data = "<input>")]
+fn dev_checker_post(input: Json<pages::checker::CheckerInput>) -> Option<JsonString> {
+    let output = pages::checker::check(&input);
+    Some(JsonString(serde_json::to_string(&output).ok()?))
+}
+
 #[get("/lifters.html?<q>")]
 fn old_lifters(opldb: State<ManagedOplDb>, q: String) -> Option<Redirect> {
     let name = &q;
@@ -470,6 +486,7 @@ fn robots_txt() -> &'static str {
     // Allow robots full site access except for JSON endpoints.
     r#"User-agent: *
 Disallow: /api/
+Disallow: /dev/
 
 # Disallow bots from marketing and SEO companies.
 User-agent: AhrefsBot
@@ -534,6 +551,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 robots_txt,
             ],
         )
+        .mount("/dev/", routes![dev_main, dev_checker_post])
         .mount(
             "/",
             routes![

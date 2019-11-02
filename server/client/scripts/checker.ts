@@ -1,0 +1,93 @@
+// vim: set ts=4 sts=4 sw=4 et:
+//
+// Interfaces with the in-server checker, mounted at /dev.
+
+'use strict';
+
+let checkButton: HTMLButtonElement;
+let meetTextArea: HTMLTextAreaElement;
+let entriesTextArea: HTMLTextAreaElement;
+
+// Simple way to report errors until we make something pretty and colorful.
+let ioErrorPre: HTMLElement;
+let meetErrorPre: HTMLElement;
+let entriesErrorPre: HTMLElement;
+
+// The checker::Message type is an object that distinguishes between
+// "Error" type messages and "Warning" type messages.
+//
+// It's defined in Rust, in checker/src/lib.rs.
+interface Message {
+  Error?: string;
+  Warning?: string;
+};
+
+// Converts a Message object to a simple, uncolored string, for the moment.
+function msg2str(msg: Message): string {
+    if (msg.hasOwnProperty("Error")) {
+        return "Error: " + msg["Error"];
+    }
+    return "Warning: " + msg["Warning"];
+}
+
+function runChecker(): void {
+    let handle = new XMLHttpRequest();
+    handle.open("POST", "/dev/checker");
+    handle.responseType = "text";
+    handle.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    // Clear the error reporting sections.
+    // This causes relayout and therefore flickering, but makes it clear
+    // when the server misses a response.
+    ioErrorPre.innerText = null;
+    meetErrorPre.innerText = null;
+    entriesErrorPre.innerText = null;
+
+    handle.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Get the CheckerOutput (defined in server/src/pages/context.rs).
+            let output = JSON.parse(this.responseText);
+
+            ioErrorPre.innerText = output.io_error;
+
+            if (output.meet_messages.length > 0) {
+                meetErrorPre.innerText = output.meet_messages.map(msg2str).join("\n");
+            } else {
+                meetErrorPre.innerText = "Pass! :)";
+            }
+
+            if (output.entries_messages.length > 0) {
+                entriesErrorPre.innerText = output.entries_messages.map(msg2str).join("\n");
+            } else if (output.meet_messages.length === 0) {
+                // The entries.csv is only checked if the meet.csv passes.
+                entriesErrorPre.innerText = "Pass! :)";
+            }
+        }
+    };
+
+    // Serialization of server/src/pages/checker.rs' CheckerInput.
+    let checkerInput = {
+        "meet": meetTextArea.value,
+        "entries": entriesTextArea.value
+    };
+
+    handle.send(JSON.stringify(checkerInput));
+}
+
+function initializeEventListeners() {
+    checkButton = document.getElementById("checkButton") as HTMLButtonElement;
+    meetTextArea = document.getElementById("meetTextArea") as HTMLTextAreaElement;
+    entriesTextArea = document.getElementById("entriesTextArea") as HTMLTextAreaElement;
+
+    ioErrorPre = document.getElementById("ioErrorPre");
+    meetErrorPre = document.getElementById("meetErrorPre");
+    entriesErrorPre = document.getElementById("entriesErrorPre");
+
+    checkButton.addEventListener("click", runChecker, false);
+}
+
+function checkerOnLoad() {
+    initializeEventListeners();
+}
+
+document.addEventListener("DOMContentLoaded", checkerOnLoad);

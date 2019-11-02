@@ -40,7 +40,7 @@ impl Meet {
     }
 }
 
-pub struct CheckResult {
+pub struct MeetCheckResult {
     pub report: Report,
     pub meet: Option<Meet>,
 }
@@ -336,7 +336,7 @@ pub fn do_check<R>(
     config: Option<&Config>,
     mut report: Report,
     meetpath: String,
-) -> Result<CheckResult, Box<dyn Error>>
+) -> Result<MeetCheckResult, Box<dyn Error>>
 where
     R: io::Read,
 {
@@ -347,14 +347,14 @@ where
     // Verify column headers. Only continue if they're valid.
     check_headers(rdr.headers()?, &mut report);
     if !report.messages.is_empty() {
-        return Ok(CheckResult { report, meet: None });
+        return Ok(MeetCheckResult { report, meet: None });
     }
 
     // Read a single row.
     let mut record = csv::StringRecord::new();
     if !rdr.read_record(&mut record)? {
         report.error("The second row is missing");
-        return Ok(CheckResult { report, meet: None });
+        return Ok(MeetCheckResult { report, meet: None });
     }
 
     // Check the required columns.
@@ -400,27 +400,39 @@ where
             name: name.unwrap(),
             ruleset: ruleset,
         };
-        Ok(CheckResult {
+        Ok(MeetCheckResult {
             report,
             meet: Some(meet),
         })
     } else {
-        Ok(CheckResult { report, meet: None })
+        Ok(MeetCheckResult { report, meet: None })
     }
+}
+
+/// Checks a single meet.csv string, used by the server.
+pub fn check_meet_from_string(meet_csv: &str) -> Result<MeetCheckResult, Box<dyn Error>> {
+    let report = Report::new(PathBuf::from("uploaded/content"));
+
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .terminator(csv::Terminator::Any(b'\n'))
+        .from_reader(meet_csv.as_bytes());
+
+    Ok(do_check(&mut rdr, None, report, "upload".to_string())?)
 }
 
 /// Checks a single meet.csv file by path.
 pub fn check_meet(
     meet_csv: PathBuf,
     config: Option<&Config>,
-) -> Result<CheckResult, Box<dyn Error>> {
+) -> Result<MeetCheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(meet_csv);
 
     // The meet.csv file must exist.
     if !report.path.exists() {
         report.error("File does not exist");
-        return Ok(CheckResult { report, meet: None });
+        return Ok(MeetCheckResult { report, meet: None });
     }
 
     let meetpath = check_meetpath(&mut report);

@@ -15,11 +15,15 @@ extern crate toml; // Knows how to read the CONFIG.toml format.
 
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};
-pub use crate::checklib::entries::{check_entries, Entry};
+pub use crate::checklib::entries::{
+    check_entries, check_entries_from_string, EntriesCheckResult, Entry,
+};
 pub use crate::checklib::lifterdata::{
     check_lifterdata, LifterData, LifterDataCheckResult, LifterDataMap,
 };
-pub use crate::checklib::meet::{check_meet, Meet};
+pub use crate::checklib::meet::{
+    check_meet, check_meet_from_string, Meet, MeetCheckResult,
+};
 pub use crate::checklib::CheckResult;
 
 pub mod compiler;
@@ -32,14 +36,14 @@ use std::error::Error;
 use std::path::{Path, PathBuf};
 
 /// A data error or warning message that should be reported.
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub enum Message {
     Error(String),
     Warning(String),
 }
 
 /// Accumulates messages that should be reported as a single batch.
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct Report {
     pub path: PathBuf,
     pub messages: Vec<Message>,

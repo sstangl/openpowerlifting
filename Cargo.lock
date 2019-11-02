@@ -1141,6 +1141,7 @@ name = "server"
 version = "0.1.0"
 dependencies = [
  "accept-language 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "checker 0.1.0",
  "coefficients 0.1.0",
  "csv 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "dotenv 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)",

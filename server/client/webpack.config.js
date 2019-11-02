@@ -9,7 +9,8 @@ module.exports = {
     rankings: "./scripts/rankings.ts",
     records: "./scripts/records.ts",
     meet: "./scripts/meet.ts",
-    meetlist: "./scripts/meetlist.ts"
+    meetlist: "./scripts/meetlist.ts",
+    checker: "./scripts/checker.ts"
   },
 
   output: {
