@@ -89,6 +89,7 @@
     mgrapf = {name ="M_GR_APF",min=0,max=999,equipment="Raw",sex="M",place="G"} #Guest
     mgemapf = {name ="M_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="M",place="G"} #Guest
     mgmem2apf = {name ="M_GMEM_2_APF",min=45,max=49,equipment="Multi-ply",sex="M",place="G"} #Guest
+    mramapf = {name="M_RAM_APF", min=0, max=999, equipment="Multi-ply", sex="M"} # Soft Equipment.
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -168,6 +169,7 @@
     fsorapf = {name ="F_SOR_APF",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
     fgrapf = {name ="F_GR_APF",min=0,max=999,equipment="Raw",sex="F",place="G"} #Guest
     fgemapf = {name ="F_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="F",place="G"} #Guest
+    framapf = {name="F_RAM_APF", min=0, max=999, equipment="Multi-ply", sex="F"} # Soft Equipment.
 
     # AAPF Divisions.
     moraapf = {name ="M_OR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
