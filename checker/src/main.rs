@@ -117,7 +117,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
     // Build a list of every CONFIG.toml.
     let configs = WalkDir::new(&meet_data_root)
         .min_depth(1)
-        .max_depth(1) // Grab each federation's folder.
+        .max_depth(2) // Allow apf/CONFIG.toml or mags/plusa/CONFIG.toml.
         .into_iter()
         .filter_map(|entry| {
             entry.ok().and_then(|e| {
