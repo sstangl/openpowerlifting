@@ -4,10 +4,11 @@ use itertools::Itertools;
 use opltypes::*;
 
 use std::cmp::Ordering;
+use std::collections::HashMap;
 use std::ops::Deref;
 
 use crate::opldb::algorithms::*;
-use crate::opldb::{Entry, Meet};
+use crate::opldb::{Entry, Lifter, Meet};
 
 /// List of indices into the opldb.entries vector,
 /// in no particular order, but such that entries from the same
@@ -226,19 +227,29 @@ impl NonSortedNonUnique {
 
 /// Owning structure of all precomputed data.
 pub struct StaticCache {
+    // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
     pub linear_time: LinearTimeCache,
     pub log_linear_time: LogLinearTimeCache,
+
+    /// Precalculated map of Lifter Username to Lifter ID.
+    pub username_map: HashMap<String, u32>,
 }
 
 impl StaticCache {
-    pub fn new(meets: &[Meet], entries: &[Entry]) -> StaticCache {
+    pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
+        let mut username_map = HashMap::new();
+        for (i, lifter) in lifters.iter().enumerate() {
+            username_map.insert(lifter.username.to_string(), i as u32);
+        }
+
         let loglin = LogLinearTimeCache::new(meets, entries);
 
         StaticCache {
             constant_time: ConstantTimeCache::new(&loglin, meets, entries),
             linear_time: LinearTimeCache::new(),
             log_linear_time: loglin,
+            username_map,
         }
     }
 }
