@@ -268,7 +268,7 @@ pub fn check_meetname(
 
     for c in s.chars() {
         // Non-ASCII characters are allowed.
-        if !c.is_alphanumeric() && !" -&.'/".contains(c) {
+        if !c.is_alphanumeric() && !" -&.'/:".contains(c) {
             report.error(format!("Illegal character in MeetName '{}'", s));
             break;
         }
