@@ -39,7 +39,7 @@ label {
 </head>
 <body>
   <h2>OpenPowerlifting Online Checker: "Finally" Edition</h2>
-  <div>This is the first version of the online checker. Note that it doesn't check everything yet: it doesn't know about CONFIG.toml files, and it doesn't cross-reference with the rest of the DB. The nice thing is that it responds immediately. Please let me know if you find this useful and would like to see it improved! There are lots of obvious things to do to make this tool really pleasant.</div>
+  <div>This is the first version of the online checker. Note that it doesn't check everything yet: it doesn't know about CONFIG.toml files, for example. The nice thing is that it responds immediately. Please let me know if you find this useful and would like to see it improved! There are lots of obvious things to do to make this tool really pleasant.</div>
   <br/>
 
   <button id="checkButton">Check</button>

@@ -1,5 +1,7 @@
 //! Logic for the checker page.
 
+use crate::opldb::OplDb;
+
 use checker::{EntriesCheckResult, Meet, MeetCheckResult, Message};
 use std::error::Error;
 
@@ -54,14 +56,41 @@ fn check_meet(input: &CheckerInput) -> Result<MeetCheckResult, Box<dyn Error>> {
 
 /// Checks an entries.csv encoded as a string.
 fn check_entries(
+    opldb: &OplDb,
     input: &CheckerInput,
     meet: Option<Meet>,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
-    checker::check_entries_from_string(&input.entries, meet.as_ref())
+    let EntriesCheckResult {
+        mut report,
+        entries,
+    } = checker::check_entries_from_string(&input.entries, meet.as_ref())?;
+
+    match entries {
+        Some(entries) => {
+            // Ensure that the username and name do not introduce a conflict.
+            for entry in entries.iter() {
+                if let Some(id) = opldb.get_lifter_id(&entry.username) {
+                    let lifter = opldb.get_lifter(id);
+                    if lifter.name != entry.name {
+                        report.error(format!(
+                            "Conflict for {}: '{}' vs '{}'",
+                            &entry.username, lifter.name, &entry.name
+                        ));
+                    }
+                }
+            }
+
+            Ok(EntriesCheckResult {
+                report,
+                entries: Some(entries),
+            })
+        }
+        None => Ok(EntriesCheckResult { report, entries }),
+    }
 }
 
 /// Checks a CheckerInput, returning a JSON-serializable CheckerOutput.
-pub fn check(input: &CheckerInput) -> CheckerOutput {
+pub fn check(opldb: &OplDb, input: &CheckerInput) -> CheckerOutput {
     // First check the meet.csv, because entries.csv date checking is dependent.
     match check_meet(input) {
         Ok(MeetCheckResult { report, meet }) => {
@@ -69,7 +98,7 @@ pub fn check(input: &CheckerInput) -> CheckerOutput {
 
             // If the meet.csv parsed successfully, also parse the entries.csv.
             if meet.is_some() {
-                match check_entries(input, meet) {
+                match check_entries(opldb, input, meet) {
                     Ok(EntriesCheckResult { report, .. }) => {
                         output.entries_messages = report.messages;
                     }

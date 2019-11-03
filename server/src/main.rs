@@ -435,8 +435,11 @@ fn dev_main() -> Template {
 
 /// Handles POST requests for getting data checked.
 #[post("/checker", data = "<input>")]
-fn dev_checker_post(input: Json<pages::checker::CheckerInput>) -> Option<JsonString> {
-    let output = pages::checker::check(&input);
+fn dev_checker_post(
+    opldb: State<ManagedOplDb>,
+    input: Json<pages::checker::CheckerInput>,
+) -> Option<JsonString> {
+    let output = pages::checker::check(&opldb, &input);
     Some(JsonString(serde_json::to_string(&output).ok()?))
 }
 
