@@ -7,17 +7,27 @@
   <title>OPL Checker</title>
 
   <style>
+body {
+    background-color: #272727;
+    color: #EDF2F4;
+}
+h2 {
+    color: #FB3640;
+}
 label,
 textarea {
     font-size: .8rem;
     letter-spacing: 1px;
 }
 textarea {
+    background-color: #333333;
+    color: #EDF2F4;
+
     padding: 10px;
     line-height: 1.5;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+    border: 1px solid #444;
+    box-shadow: 1px 1px 1px #222;
 }
 label {
     display: block;
