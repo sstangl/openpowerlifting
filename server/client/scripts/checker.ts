@@ -48,7 +48,11 @@ function runChecker(): void {
             // Get the CheckerOutput (defined in server/src/pages/context.rs).
             let output = JSON.parse(this.responseText);
 
-            ioErrorPre.innerText = output.io_error;
+            // I/O errors take precedence.
+            if (output.io_error !== null) {
+                ioErrorPre.innerText = output.io_error;
+                return;
+            }
 
             if (output.meet_messages.length > 0) {
                 meetErrorPre.innerText = output.meet_messages.map(msg2str).join("\n");
