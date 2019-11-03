@@ -27,8 +27,8 @@
     "babel-loader": "^7.1.5",
     "babel-plugin-minify-constant-folding": "^0.2.0",
     "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.12.0",
-    "typescript": "2.8.3",
+    "node-sass": "^4.13.0",
+    "typescript": "^3.6.4",
     "webpack": "^3.11.0"
   }
 }
