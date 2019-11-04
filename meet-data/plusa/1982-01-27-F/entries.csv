@@ -1,53 +1,80 @@
-Name,WeightClassKg,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-Heinz-Dieter Westerhold,52,Open,M,115,95,160,370,SBD,Single-ply,1
-Günther Hammerschmidt,56,Open,M,130,75,170,375,SBD,Single-ply,1
-Günter Icks,60,Open,M,205,105,210,520,SBD,Single-ply,1
-Josef Slany,60,Open,M,155,97.5,185,437.5,SBD,Single-ply,2
-German Prado,60,Open,M,150,80,150,380,SBD,Single-ply,3
-Walter Schleich,67.5,Open,M,165,130,232.5,527.5,SBD,Single-ply,1
-Gary Dix,67.5,Open,M,170,107.5,215,492.5,SBD,Single-ply,2
-Helmut Wolff,67.5,Open,M,155,95,190,440,SBD,Single-ply,3
-Johannes Zavaza,67.5,Open,M,105,87.5,142.5,335,SBD,Single-ply,4
-Manfred Gros,75,Open,M,190,150,250,590,SBD,Single-ply,1
-Josef Fuhrmann,75,Open,M,195,145,235,575,SBD,Single-ply,2
-Václav Dlask,75,Open,M,215,132.5,225,572.5,SBD,Single-ply,3
-Uwe Schmidt,75,Open,M,182.5,127.5,230,540,SBD,Single-ply,4
-Manfred Hain,75,Open,M,180,130,215,525,SBD,Single-ply,5
-Holger Heide,75,Open,M,182.5,115,225,522.5,SBD,Single-ply,6
-Engelbert Bittner,75,Open,M,180,140,200,520,SBD,Single-ply,7
-Johann Oberhauser,82.5,Open,M,215,135,260,610,SBD,Single-ply,1
-Ulrich Steinacker,82.5,Open,M,215,135,240,590,SBD,Single-ply,2
-Rainer Griebl,82.5,Open,M,210,140,235,585,SBD,Single-ply,3
-Angel Prado,82.5,Open,M,220,130,230,580,SBD,Single-ply,4
-Manfred Jenke,82.5,Open,M,200,130,235,565,SBD,Single-ply,5
-Werner Herrmann,82.5,Open,M,197.5,125,242.5,565,SBD,Single-ply,6
-Josef Bamesreiter,82.5,Open,M,177.5,147.5,240,565,SBD,Single-ply,7
-Jurgen Wegel,82.5,Open,M,215,150,200,565,SBD,Single-ply,8
-Manfred Grobmann,82.5,Open,M,200,130,230,560,SBD,Single-ply,9
-Peter Rose,82.5,Open,M,190,120,215,525,SBD,Single-ply,10
-Max Stamm,90,Open,M,305,175,305,785,SBD,Single-ply,1
-Berud Oppitz,90,Open,M,250,155,280,685,SBD,Single-ply,2
-Petr Schafer,90,Open,M,222.5,145,262.5,630,SBD,Single-ply,3
-Manfred Werra,90,Open,M,220,150,260,630,SBD,Single-ply,4
-Wolfgang Schober,90,Open,M,215,155,240,610,SBD,Single-ply,5
-Siegfried Henke,90,Open,M,230,135,240,605,SBD,Single-ply,6
-Petr Leykam,90,Open,M,205,160,220,585,SBD,Single-ply,7
-Kai Schussler,90,Open,M,200,125,250,575,SBD,Single-ply,8
-Thomas Bartsch,90,Open,M,175,137.5,222.5,535,SBD,Single-ply,9
-Klaus Fink,100,Open,M,295,165,260,720,SBD,Single-ply,1
-Olaf Peters,100,Open,M,250,130,312.5,692.5,SBD,Single-ply,2
-Uwe Strohrmann,100,Open,M,240,150,302.5,692.5,SBD,Single-ply,3
-Luciano Amadei,100,Open,M,250,170,270,690,SBD,Single-ply,4
-Hermann Fuchs,100,Open,M,225,175,250,650,SBD,Single-ply,5
-Bernhard Schmidt,100,Open,M,205,150,240,595,SBD,Single-ply,6
-Conny De Blois,110,Open,M,270,185,310,765,SBD,Single-ply,1
-Georg Vogel,110,Open,M,260,185,270,715,SBD,Single-ply,2
-Dietrich Pietsch,110,Open,M,275,130,220,625,SBD,Single-ply,3
-Rolf Grube,110,Open,M,200,180,230,610,SBD,Single-ply,4
-Fritz Seese,125,Open,M,320,190,280,790,SBD,Single-ply,1
-Hans-Otto Wöhrle,125,Open,M,285,200.5,285,770.5,SBD,Single-ply,2
-Herrmann Blank,125,Open,M,280,160,285,725,SBD,Single-ply,3
-Miroslav Kliment,125,Open,M,230,165,300.5,695.5,SBD,Single-ply,4
-Peter Morgan,125,Open,M,240,155,260,655,SBD,Single-ply,5
-Rudolf Küster,125+,Open,M,260,165,322.5,747.5,SBD,Single-ply,1
-Ludwig Frey,125+,Open,M,260,165,280,705,SBD,Single-ply,2
+Name,WeightClassKg,BodyweightKg,Division,Sex,Team,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+Edith Scherpf,48,47.5,Open,F,ETSU Wurzburg,65,70,75,75,42.5,47.5,-50,47.5,82.5,87.5,92.5,92.5,215,SBD,Single-ply,G
+Heinz-Dieter Westerhold,52,51.2,Open,M,SG Schweinfurt,95,110,115,115,90,95,-97.5,95,150,155,160,160,370,SBD,Single-ply,1
+Günther Hammerschmidt,56,54.7,Open,M,TSG Augsburg,125,130,-145,130,70,75,-80,75,160,165,170,170,375,SBD,Single-ply,1
+Günter Icks,60,59.5,Open,M,FTG Frankfurt,190,200,205,205,100,-105,105,105,200,205,210,210,520,SBD,Single-ply,1
+Josef Slany,60,59.4,Open,M,ASU Neumarkt,147.5,152.5,155,155,90,95,97.5,97.5,175,185,-190,185,437.5,SBD,Single-ply,2
+German Prado,60,59.3,Open,M,TSG Augsburg,140,150,-162.5,150,-75,80,-85,80,140,150,-160,150,380,SBD,Single-ply,3
+Walter Schleich,67.5,67,Open,M,SSV Hagen,160,165,-170,165,125,130,-135,130,232.5,-237.5,-237.5,232.5,527.5,SBD,Single-ply,1
+Gary Dix,67.5,66.8,Open,M,AG Dormstadt,170,-177.5,-177.5,170,102.5,107.5,-112.5,107.5,200,210,215,215,492.5,SBD,Single-ply,2
+Helmut Wolff,67.5,67.5,Open,M,ASV Goblenz,155,-160,-160,155,85,90,95,95,175,190,-200,190,440,SBD,Single-ply,3
+Johannes Zavaza,67.5,64.8,Open,M,SPV Westerhoen,130,140,-145,140,85,90,-92.5,90,130,140,-150,140,370,SBD,Single-ply,4
+Gerd Miethe,67.5,64.4,Open,M,AC Marburg,100,-105,105,105,82.5,-87.5,87.5,87.5,135,140,142.5,142.5,335,SBD,Single-ply,5
+Andrea Weidner,67.5,66.5,Open,F,ETSU Wurzburg,-90,90,100,100,45,50,-55,50,120,-125,-125,120,270,SBD,Single-ply,G
+Manfred Gros,75,73.8,Open,M,TSV Eisendorg,180,190,-200,190,140,147.5,150,150,240,250,,250,590,SBD,Single-ply,1
+Josef Fuhrmann,75,74.3,Open,M,Bujawaren Fitness Club Munchen,180,190,195,195,140,145,-147.5,145,220,230,235,235,575,SBD,Single-ply,2
+Václav Dlask,75,74.8,Open,M,Bavaria 20 Landshut,200,210,215,215,132.5,-137.5,-137.5,132.5,225,-230,-230,225,572.5,SBD,Single-ply,3
+Uwe Schmidt,75,75,Open,M,SSV Hagen eV,160,175,182.5,182.5,120,125,127.5,127.5,210,220,230,230,540,SBD,Single-ply,4
+Manfred Hain,75,74.2,Open,M,ETSV Wurzburg,180,-185,-185,180,130,-135,-135,130,200,-210,215,215,525,SBD,Single-ply,5
+Holger Heide,75,74.3,Open,M,SV-Polizei Hamburg,170,182.5,-190,182.5,115,-120,-120,115,210,225,-242.5,225,522.5,SBD,Single-ply,6
+Engelbert Bittner,75,73.9,Open,M,PSV Blau Gelb Fuldu,-175,180,-185,180,135,140,-145,140,190,200,,200,520,SBD,Single-ply,7
+Harald Keck,75,72.2,Open,M,Heilbrown,-160,160,-170,160,-105,105,,105,180,190,200,200,465,SBD,Single-ply,8
+Willi Lampe,75,73.1,Open,M,Sportverein Weskeholt,130,-135,-135,130,90,97.5,100,100,170,180,190,190,420,SBD,Single-ply,9
+Eugen Obach,75,75,Open,M,PSV Phouix-Kassel,130,140,145,145,-90,90,-100,90,170,-180,-180,170,405,SBD,Single-ply,10
+Paul Lux,75,73,Open,M,AC Bavaria Forchheim,160,165,170,170,-110,-110,,,220,,,220,,SBD,Single-ply,DQ
+Ludwig Festl,75,74.9,Open,M,Bujawaren Fitness Club Munchen,-185,190,200,200,115,-120,-120,115,,,,,,SBD,Single-ply,DQ
+Peter Cihla,75,73.2,Open,M,ETSV Wurzburg,202.5,-210,210,210,100,-105,105,105,-200,,,,,SBD,Single-ply,DQ
+Johann Oberhauser,82.5,82.5,Open,M,Bavaria 20 Landshut,200,210,215,215,125,130,135,135,252.5,260,-265,260,610,SBD,Single-ply,1
+Ulrich Steinacker,82.5,81.4,Open,M,PSV Blau Gelb Fuldu,210,215,-217.5,215,-135,135,-140,135,230,240,-250,240,590,SBD,Single-ply,2
+Rainer Griebl,82.5,82,Open,M,Rainer Griebl,200,-210,210,210,135,140,-142.5,140,220,235,-242.5,235,585,SBD,Single-ply,3
+Angel Prado,82.5,78.9,Open,M,FTG Frankfurt,210,220,-230,220,130,-135,-135,130,205,215,,215,565,SBD,Single-ply,4
+Manfred Jenke,82.5,81.7,Open,M,Bajuwaren Fitnes Club,185,-195,200,200,120,127.5,130,130,210,225,235,235,565,SBD,Single-ply,5
+Werner Herrmann,82.5,81.7,Open,M,AC 1888 Marburg,190,195,197.5,197.5,117.5,122.5,125,125,235,242.5,-250,242.5,565,SBD,Single-ply,6
+Josef Bamesreiter,82.5,81.8,Open,M,Bavaria 20 Landshut,170,177.5,-182.5,177.5,-142.5,142.5,147.5,147.5,230,240,-242.5,240,565,SBD,Single-ply,7
+Jurgen Wegel,82.5,82.5,Open,M,VFL Wolfsburg,200,210,215,215,135,145,150,150,200,-210,,200,565,SBD,Single-ply,8
+Manfred Grobmann,82.5,82.2,Open,M,KSV 98 Bochum,200,-210,-210,200,130,-137.5,-137.5,130,-220,230,-240,230,560,SBD,Single-ply,9
+Peter Rose,82.5,81.7,Open,M,KTV-Spartu Berlin,185,190,-195,190,-115,120,-125,120,210,215,-220,215,525,SBD,Single-ply,10
+Haitmut York,82.5,82.5,Open,M,VFL Wolfsburg,165,170,-175,170,110,-115,-115,110,190,195,200,200,480,SBD,Single-ply,11
+Markus Osterberger,82.5,80,Open,M,TSV Heimsheim,140,150,155,155,105,110,-115,110,180,190,195,195,460,SBD,Single-ply,12
+Ludger Olejnik,82.5,81.2,Open,M,Sportverein Weskeholt,150,155,-160,155,-110,110,-117.5,110,160,167.5,-172.5,167.5,432.5,SBD,Single-ply,13
+Rudiger Bielecki,82.5,78,Open,M,AC 1888 Marburg,180,-185,,180,,,,,,,,,,SBD,Single-ply,DQ
+Gerhard Sturm,82.5,78.9,Open,M,AC Neulußheim,210,215,-220,215,-107.5,-107.5,,,,,,,,SBD,Single-ply,DQ
+Max Stamm,90,83.6,Open,M,Bavaria 20 Landshut,290,305,,305,165,175,-180,175,290,305,,305,785,SBD,Single-ply,1
+Berud Oppitz,90,89.5,Open,M,KTV Spartu-Berlin,240,250,-255,250,150,155,-157.5,155,270,280,-285,280,685,SBD,Single-ply,2
+Petr Schafer,90,87.7,Open,M,ETSV Wurzburg,200,215,222.5,222.5,-135,135,145,145,235,250,262.5,262.5,630,SBD,Single-ply,3
+Manfred Werra,90,89.3,Open,M,HV Groß-Zimmern,210,220,-225,220,-145,145,150,150,250,260,-265,260,630,SBD,Single-ply,4
+Wolfgang Schober,90,89.7,Open,M,AC Soest,215,-220,-225,215,145,150,155,155,230,240,-245,240,610,SBD,Single-ply,5
+Siegfried Henke,90,86.2,Open,M,PSG Stuttgart,230,-240,-240,230,130,135,-140,135,230,240,-247.5,240,605,SBD,Single-ply,6
+Petr Leykam,90,88.8,Open,M,Fitness-Centrer Amburg,200,205,-210,205,160,-165,,160,220,-225,,220,585,SBD,Single-ply,7
+Kai Schussler,90,88.7,Open,M,PSG Stuttgart,190,200,-202.5,200,125,-135,-135,125,240,250,-255,250,575,SBD,Single-ply,8
+Detler Albrings,90,86.6,Open,M,PSG Stuttgart,-180,180,190,190,120,127.5,130,130,200,220,-230,220,540,SBD,Single-ply,9
+Thomas Bartsch,90,86.5,Open,M,AC Harburg,170,175,-180,175,132.5,-137.5,137.5,137.5,210,220,222.5,222.5,535,SBD,Single-ply,10
+Rüdiger Pfeiffer,90,89.7,Open,M,Haluburg,-160,160,180,180,130,140,-145,140,180,200,,200,520,SBD,Single-ply,11
+Wolfgang Tuclisi,90,83.6,Open,M,Fitness-Centrer Amburg,150,155,-160,155,120,125,-130,125,200,215,220,220,500,SBD,Single-ply,12
+Erwin Gersternberger,90,89.3,Open,M,Bavaria 20 Landshut,170,175,177.5,177.5,105,110,-120,110,195,-205,-205,195,482.5,SBD,Single-ply,13
+Frank-Ulrich Scroder,90,89.4,Open,M,VFL Wolfsburg,170,180,-185,180,-155,155,-160,155,190,205,210,210,545,SBD,Single-ply,14
+Wolfgang Gleicli,90,89.2,Open,M,SG Kirchheim,180,-190,-190,180,120,-130,130,130,,,,,,SBD,Single-ply,DQ
+Klaus Fink,100,99.8,Open,M,Bavaria 20 Landshut,295,-305,-305,295,157.5,162.5,165,165,250,257.5,260,260,720,SBD,Single-ply,1
+Olaf Peters,100,98,Open,M,AC Berlin,230,240,250,250,130,-140,-140,130,290,312.5,,312.5,692.5,SBD,Single-ply,2
+Uwe Strohrmann,100,100,Open,M,Freier Turner Blumenthal,220,230,240,240,150,-160,-160,150,285,295,302.5,302.5,692.5,SBD,Single-ply,3
+Luciano Amadei,100,97.8,Open,M,AC 1892 Hutterstadt,-240,240,250,250,-155,165,170,170,250,262.5,270,270,690,SBD,Single-ply,4
+Hermann Fuchs,100,99.9,Open,M,Fitness-Centrer Amburg,225,,,225,170,175,-180,175,240,250,-262.5,250,650,SBD,Single-ply,5
+Bernhard Schmidt,100,94.8,Open,M,Bavaria 20 Landshut,190,-205,205,205,150,-160,-160,150,230,240,-245,240,595,SBD,Single-ply,6
+Georg Schweitzer,100,92,Open,M,SSV Hagen eV,180,190,-200,190,150,165,-170,165,190,195,-200,195,550,SBD,Single-ply,7
+Anton Stark,100,96,Open,M,Siegfried Nordwest Berlin,-150,150,-155,150,172.5,-180,-180,172.5,175,200,-205,200,522.5,SBD,Single-ply,8
+Jorg Rode,100,95.5,Open,M,SSV Hagen eV,125,135,140,140,130,-140,145,145,180,190,195,195,480,SBD,Single-ply,9
+Heinz Vierthaler,100,99.9,Open,M,ESV Neuabiug,220,230,240,240,-152.5,-152.5,-152.5,,,,,,,SBD,Single-ply,DQ
+Conny De Blois,110,103.6,Open,M,VFL Wolfsburg,260,270,-280,270,175,185,-190,185,280,295,310,310,765,SBD,Single-ply,1
+Georg Vogel,110,107.7,Open,M,Fitness Center Sudst Hannover,240,250,260,260,175,185,-190,185,270,-292.5,,270,715,SBD,Single-ply,2
+Dietrich Pietsch,110,106.9,Open,M,PSV Hamburg,275,-292.5,-295,275,130,-137.5,-137.5,130,220,-230,-230,220,625,SBD,Single-ply,3
+Rolf Grube,110,101.7,Open,M,Olympia Studio Gummers-bach,180,190,200,200,180,-190,-190,180,200,220,230,230,610,SBD,Single-ply,4
+Reiner Ritler,110,100.9,Open,M,FTG Frankfurt,135,140,150,150,115,125,132.5,132.5,170,180,185,185,467.5,SBD,Single-ply,5
+Fritz Seese,125,117.5,Open,M,Bavaria 20 Landshut,300,320,-330,320,180,185,190,190,270,280,-290,280,790,SBD,Single-ply,1
+Hans-Otto Wöhrle,125,113.1,Open,M,ETSV Wurzburg,260,270,285,285,180,190,200.5,200.5,-250,285,-305,285,770.5,SBD,Single-ply,2
+Herrmann Blank,125,114.9,Open,M,Heuger Sportverin,260,270,280,280,160,-170,-170,160,260,275,285,285,725,SBD,Single-ply,3
+Miroslav Kliment,125,111,Open,M,AC 1888 Marburg,220,230,-240,230,165,-170,-170,165,280,300.5,,300.5,695.5,SBD,Single-ply,4
+Peter Morgan,125,115,Open,M,Bavaria 20 Landshut,230,-240,240,240,150,155,-162.5,155,240,250,260,260,655,SBD,Single-ply,5
+Richard Heiden,125,116,Open,M,TSV Katzwaug 05 KSP,-200,200,215,215,135,140,-145,140,-200,200,-210,200,555,SBD,Single-ply,6
+Stefan Faulstich,125,113,Open,M,PSV Blau-Gelb Fuldu,155,160,-165,160,130,-135,-135,130,240,-250,,240,530,SBD,Single-ply,7
+Rudolf Küster,125+,126.7,Open,M,PSV Phouix-Kassel eV,240,260,-270,260,157.5,165,-170,165,280,300,322.5,322.5,747.5,SBD,Single-ply,1
+Ludwig Frey,125+,125.4,Open,M,Haldeuwaug,220,-230,235,235,140,-150,-150,140,265,280,-300,280,655,SBD,Single-ply,2
