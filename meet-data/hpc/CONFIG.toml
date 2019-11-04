@@ -40,6 +40,8 @@
     mem4 = {name ="MEM4", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem5 = {name ="MEM5", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem6 = {name ="MEM6", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem7 = {name ="MEM7", min=70, max=74, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem8 = {name ="MEM8", min=75, max=79, sex="M", equipment=["Single-ply","Multi-ply"]}
 
     foe = {name ="FOE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
     fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
@@ -53,6 +55,11 @@
     fem5 = {name ="FEM5", min=60, max=64, sex="F", equipment=["Single-ply","Multi-ply"]}
     fem6 = {name ="FEM6", min=65, max=69, sex="F", equipment=["Single-ply","Multi-ply"]}
 
+    # Disabled bench
+    momozg = {name ="MO-MOZG", min=0, max=999, sex="M", equipment="Raw"}
+    mm1mozg = {name ="MM1-MOZG", min=40, max=44, sex="M", equipment="Raw"}
+    mt2mozg = {name ="MT2-MOZG", min=16, max=17, sex="M", equipment="Raw"}    
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
     date_range = ["0000-01-01","9999-01-01"]
@@ -64,3 +71,5 @@
     sex = "F"
 
 [exemptions]
+   1401 = ["ExemptWeightClassConsistency","ExemptDivision"] # Janky Weightclasses, Elite Division
+   1303 = ["ExemptWeightClassConsistency"] # No Weightclasses for Multi-ply
