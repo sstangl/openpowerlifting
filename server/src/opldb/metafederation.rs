@@ -129,6 +129,11 @@ pub enum MetaFederation {
     #[serde(rename = "GPC-AUS")]
     GPCAUS,
 
+    /// GPC-GB, but with international results also.
+    #[strum(to_string = "gpc-gb")]
+    #[serde(rename = "GPC-GB")]
+    GPCGB,
+
     /// GPC-WUAP-CRO, but including HPO results and excluding non-Croatians.
     #[strum(to_string = "gpc-wuap-cro")]
     #[serde(rename = "GPC-WUAP-CRO")]
@@ -445,6 +450,18 @@ impl MetaFederation {
                     && (entry.lifter_country == None
                         || entry.lifter_country == Some(Country::Australia))
             }
+            MetaFederation::GPCGB => match meet.federation {
+                Federation::GPCGB => true,
+                fed => {
+                    if let Some(country) = entry.lifter_country {
+                        country.is_in_uk()
+                            && country != Country::NorthernIreland
+                            && fed.sanctioning_body(meet.date) == Some(Federation::GPC)
+                    } else {
+                        false
+                    }
+                }
+            },
             MetaFederation::GPCWUAPCRO => {
                 (meet.federation == Federation::GPCWUAPCRO
                     || meet.federation == Federation::HPO)
