@@ -78,6 +78,12 @@ function runChecker(): void {
     handle.send(JSON.stringify(checkerInput));
 }
 
+// Spreadsheet applications use tab separators when copy/pasting.
+// This translates "\t" to "," for use in a timeout created by an onPaste handler.
+function replaceTabs(elem: HTMLTextAreaElement) {
+    elem.value = elem.value.replace(/\t/g, ",");
+}
+
 function initializeEventListeners() {
     checkButton = document.getElementById("checkButton") as HTMLButtonElement;
     meetTextArea = document.getElementById("meetTextArea") as HTMLTextAreaElement;
@@ -88,6 +94,14 @@ function initializeEventListeners() {
     entriesErrorPre = document.getElementById("entriesErrorPre");
 
     checkButton.addEventListener("click", runChecker, false);
+
+    // Allow pasting from spreadsheet software by converting tabs to commas.
+    meetTextArea.addEventListener("paste", e => {
+        setTimeout(function() { replaceTabs(e.target as HTMLTextAreaElement) }, 0);
+    }, false);
+    entriesTextArea.addEventListener("paste", e => {
+        setTimeout(function() { replaceTabs(e.target as HTMLTextAreaElement) }, 0);
+    }, false);
 }
 
 function checkerOnLoad() {
