@@ -61,6 +61,10 @@
   @include name-color(#556B2F);
 }
 
+.lightazure {
+  @include name-color(#00AEFF);
+}
+
 .lightblue {
   @include name-color(#43D1FF);
 }
