@@ -88,53 +88,26 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
 }
 
 /// Checks that the MeetPath contains only characters valid in a URL.
-pub fn check_meetpath(report: &mut Report) -> String {
-    // Because the report owns the path, we can't call mutable methods
-    // like error() and warning() until the path reference is dropped.
-    // Instead of allocating a heap-vec, just remember what errors occurred.
-    let mut ascii_error = false;
-    let mut parent_error = false;
-    let mut utf8_error = false;
-
-    // The original Path is to the file, so get the parent directory.
-    if let Some(parent) = report.path.parent() {
-        if let Some(s) = parent.to_str() {
-            // The MeetPath is just the stuff after "meet-data/".
-            let meetpath: String = match s.rfind("meet-data") {
-                Some(i) => s.chars().skip(i + "meet-data".len() + 1).collect(),
-                None => s.to_string(),
-            };
-
-            // Each character may only be alphanumeric ASCII or "/".
-            for c in meetpath.chars() {
-                if !c.is_ascii_alphanumeric() && c != '/' && c != '-' {
-                    ascii_error = true;
-                    break;
-                }
-            }
-
-            if !ascii_error {
-                return meetpath;
-            }
-        } else {
-            utf8_error = true;
+pub fn check_meetpath(report: &mut Report) -> Option<String> {
+    match opltypes::file_to_meetpath(&report.path) {
+        Ok(s) => Some(s),
+        Err(MeetPathError::NonAsciiError) => {
+            report.error("Path must only contain alphanumeric ASCII or '/-' characters");
+            None
         }
-    } else {
-        parent_error = true;
+        Err(MeetPathError::FilesystemUTF8Error) => {
+            report.error("Path contains non-UTF8 characters");
+            None
+        }
+        Err(MeetPathError::ParentLookupError) => {
+            report.error("Path had insufficient parent directories");
+            None
+        }
+        Err(MeetPathError::MeetDataDirNotFoundError) => {
+            report.error("Could not find the meet data directory");
+            None
+        }
     }
-
-    // With the reference to report.path dropped, report any errors.
-    if utf8_error {
-        report.error("Path contains non-UTF8 characters");
-    }
-    if ascii_error {
-        report.error("Path must only contain alphanumeric ASCII or '/-' characters");
-    }
-    if parent_error {
-        report.error("Path had insufficient parent directories");
-    }
-
-    String::new()
 }
 
 /// Checks the Federation column.
@@ -435,7 +408,7 @@ pub fn check_meet(
         return Ok(MeetCheckResult { report, meet: None });
     }
 
-    let meetpath = check_meetpath(&mut report);
+    let meetpath = check_meetpath(&mut report).unwrap_or_else(|| String::new());
 
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)

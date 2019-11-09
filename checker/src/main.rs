@@ -2,6 +2,7 @@
 
 extern crate checker; // The "src/lib.rs" module.
 extern crate colored; // Allows outputting pretty terminal colors.
+extern crate opltypes; // Used for determining MeetPath for CONFIG.toml files.
 extern crate rayon; // A work-stealing auto-parallelism library.
 extern crate walkdir; // Allows walking through a directory, looking at files.
 
@@ -154,9 +155,15 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
 
                 // Add the Config to the map.
                 if let Some(config) = result.config {
-                    // This has to be safe if the config parsed correctly.
-                    let feddir = sourcefile.parent().and_then(Path::file_name).unwrap();
-                    configmap.insert(feddir.to_str().unwrap().to_string(), config);
+                    match opltypes::file_to_meetpath(&sourcefile) {
+                        Ok(configpath) => {
+                            configmap.insert(configpath, config);
+                        }
+                        Err(e) => {
+                            println!(" Internal Error: {}", e.to_string().bold().red());
+                            return Err((error_count + 1, warning_count));
+                        }
+                    };
                 }
             }
             Err(e) => {
@@ -276,13 +283,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         .into_par_iter()
         .filter_map(|dir| {
             // Determine the appropriate Config for this meet.
-            let feddir = dir
-                .path()
-                .parent()
-                .and_then(Path::file_name)
-                .and_then(std::ffi::OsStr::to_str)
-                .unwrap();
-            let config = configmap.get(feddir);
+            // The CONFIG.toml used is always in the parent directory.
+            let meetpath = opltypes::file_to_meetpath(dir.path()).unwrap();
+            let config = configmap.get(&meetpath);
 
             // Check the meet.
             match checker::check(dir.path(), config) {
