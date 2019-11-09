@@ -4,6 +4,8 @@
 
 'use strict';
 
+import { Csv } from "./csv";
+
 let checkButton: HTMLButtonElement;
 let meetTextArea: HTMLTextAreaElement;
 let entriesTextArea: HTMLTextAreaElement;

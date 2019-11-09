@@ -10,7 +10,7 @@ module.exports = {
     records: "./scripts/records.ts",
     meet: "./scripts/meet.ts",
     meetlist: "./scripts/meetlist.ts",
-    checker: "./scripts/checker.ts"
+    checker: "./scripts/checker/checker.ts"
   },
 
   output: {
