@@ -1,6 +1,6 @@
 // vim: set ts=2 sts=2 sw=2 et:
 //
-// This file is part of OpenLifter, simple Powerlifting meet software.
+// This file is part of OpenPowerlifting, an open archive of powerlifting data.
 // Copyright (C) 2019 The OpenPowerlifting Project.
 //
 // This program is free software: you can redistribute it and/or modify
