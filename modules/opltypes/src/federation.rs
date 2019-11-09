@@ -823,6 +823,10 @@ pub enum Federation {
     #[strum(to_string = "UPL", serialize = "upl")]
     UPL,
 
+    /// United States Association of Blind Athletes, IBSA.
+    #[strum(to_string = "USABA", serialize = "usaba")]
+    USABA,
+
     /// USA Bench Press Association, unaffiliated.
     #[strum(to_string = "USABPA", serialize = "usabpa")]
     USABPA,
@@ -1314,6 +1318,7 @@ impl Federation {
             Federation::UPCGermany => false,
             Federation::UkrainePF => true,
             Federation::UPL => false,
+            Federation::USABA => true,
             Federation::USABPA => false,
             Federation::USAUA => false,
             Federation::USAPL => true,
@@ -1576,6 +1581,7 @@ impl Federation {
             Federation::UPCGermany => Some(Country::Germany),
             Federation::UkrainePF => Some(Country::Ukraine),
             Federation::UPL => Some(Country::Ukraine),
+            Federation::USABA => Some(Country::USA),
             Federation::USABPA => Some(Country::USA),
             Federation::USAUA => Some(Country::USA),
             Federation::USAPL => Some(Country::USA),
@@ -1865,6 +1871,7 @@ impl Federation {
             Federation::UPCGermany => Some(Federation::UPC),
             Federation::UkrainePF => Some(Federation::IPF),
             Federation::UPL => Some(Federation::IPL),
+            Federation::USABA => Some(Federation::IBSA),
             Federation::USABPA => None,
             Federation::USAUA => None,
             Federation::USAPL => Some(Federation::IPF),
@@ -2138,6 +2145,7 @@ impl Federation {
             Federation::UPCGermany => PointsSystem::Glossbrenner,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
             Federation::UPL => PointsSystem::Wilks,
+            Federation::USABA => PointsSystem::Wilks,
             Federation::USABPA => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
             Federation::USAPL => Federation::ipf_rules_on(date),
