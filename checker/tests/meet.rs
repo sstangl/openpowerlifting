@@ -19,18 +19,6 @@ fn check(csv: &str) -> usize {
     checkresult.report.count_errors()
 }
 
-/// Helper for calling check_meet::check_meetpath(). Returns number of errors.
-fn check_meetpath(s: &str) -> usize {
-    // Although the tests use the final MeetPath, the library code expects
-    // the full path to the meet.csv, and derives the MeetPath from that.
-    let mut path = PathBuf::from(s);
-    path.push("meet.csv");
-
-    let mut report = Report::new(path);
-    checker::checklib::meet::check_meetpath(&mut report);
-    report.count_errors()
-}
-
 #[test]
 fn test_empty_file() {
     assert!(check("") > 0);
@@ -126,30 +114,6 @@ fn test_reordered_headers() {
     let data = "Federation,Date,MeetState,MeetCountry,MeetTown,MeetName\n\
                 WRPF,2016-08-19,CA,USA,Mountain View,Boss of Bosses 3";
     assert!(check(data) > 0);
-}
-
-#[test]
-fn test_meetpath_successes() {
-    assert_eq!(check_meetpath("/wrpf/bob3"), 0);
-    assert_eq!(check_meetpath("/uspa/0302"), 0);
-    assert_eq!(check_meetpath("/cpu/2013-11-02-81b29779"), 0);
-}
-
-#[test]
-fn test_meetpath_failures() {
-    // Underscore is disallowed: use '-' instead.
-    assert_eq!(check_meetpath("/dsf/welt_kampf"), 1);
-
-    // Non-alphanemuric ASCII is disallowed.
-    assert_eq!(check_meetpath("/dsf/welt:kampf"), 1);
-    assert_eq!(check_meetpath("/dsf/welt\"kampf"), 1);
-
-    // Spacing is disallowed.
-    assert_eq!(check_meetpath("/dsf/welt kampf"), 1);
-    assert_eq!(check_meetpath("/dsf/weltkampf "), 1);
-
-    // Non-ASCII UTF-8 is disallowed.
-    assert_eq!(check_meetpath("/wrpf/белкинасила"), 1);
 }
 
 #[test]
