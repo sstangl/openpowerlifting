@@ -50,8 +50,13 @@ def getunenteredurls(meetlist, enteredmeets):
 
     unentered = []
     for m in meetlist:
+        # Skip any results that list us as the authoritatize source.
+        if 'www.openpowerlifting.org' in m:
+            continue
+
         if m not in enteredmeets:
             unentered.append(m)
+
     return unentered
 
 
