@@ -1,37 +1,55 @@
-Name,WeightClassKg,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-Günther Hammerschmidt,60,Open,M,135,80,165,380,SBD,Single-ply,1
-Ulrich Mielich,60,Open,M,110,90,160,360,SBD,Single-ply,2
-Günter Icks,67.5,Open,M,200,110,210,520,SBD,Single-ply,1
-Josef Slany,67.5,Open,M,157.5,95,187.5,440,SBD,Single-ply,2
-Erich Hess,67.5,Open,M,155,85,175,415,SBD,Single-ply,3
-Peter Cihla,75,Open,M,215,107.5,212.5,535,SBD,Single-ply,1
-Michael Bogner,75,Open,M,145,90,195,430,SBD,Single-ply,2
-Günther Mittermeier,75,Open,M,130,100,160,390,SBD,Single-ply,3
-Johann Oberhauser,82.5,Open,M,220,127.5,252.5,600,SBD,Single-ply,1
-Manfred Jenke,82.5,Open,M,215,132.5,250,597.5,SBD,Single-ply,2
-Ludwig Festl,82.5,Open,M,202.5,130,252.5,585,SBD,Single-ply,3
-Max Stamm,90,Open,M,300,182.5,300,782.5,SBD,Single-ply,1
-Rainer Griebl,90,Open,M,225,140,245,610,SBD,Single-ply,2
-Petr Leykam,90,Open,M,210,162.5,230,602.5,SBD,Single-ply,3
-Klaus Fink,100,Open,M,290,165,260,715,SBD,Single-ply,1
-Bernhard Schmidt,100,Open,M,225,145,235,605,SBD,Single-ply,2
-Erwin Gerstenberger,100,Open,M,220,125,220,565,SBD,Single-ply,3
-Dieter Waibler,110,Open,M,300,180,250,730,SBD,Single-ply,1
-Andreas Ehl,110,Open,M,200,140,230,570,SBD,Single-ply,2
-Hans-Otto Wöhrle,125,Open,M,280,202.5,270,752.5,SBD,Single-ply,1
-Ludwig Frey,125,Open,M,242.5,135,265,642.5,SBD,Single-ply,2
-Richard Heiden,125,Open,M,210,150,210,570,SBD,Single-ply,3
-Carol Santandrea,48,Open,F,90,47.5,117.5,255,SBD,Single-ply,1
-Elly Gelbfarb,48,Open,F,75,45,115,235,SBD,Single-ply,2
-Edith Scherpf,48,Open,F,82.5,47.5,102.5,232.5,SBD,Single-ply,3
-Elke Mack,56,Open,F,97.5,50,110,257.5,SBD,Single-ply,1
-Manvela Beck,56,Open,F,80,47.5,100,227.5,SBD,Single-ply,2
-Birgit Durl,56,Open,F,72.5,40,100,212.5,SBD,Single-ply,3
-Birgit Semeneth,60,Open,F,77.5,47.5,105,230,SBD,Single-ply,1
-Christine Mai,60,Open,F,65,40,100,205,SBD,Single-ply,2
-Regine Hunsinger,67.5,Open,F,100,60,115,275,SBD,Single-ply,1
-Aziza Abdul Razik,67.5,Open,F,80,50,105,235,SBD,Single-ply,2
-Johanna Przyklenk,67.5,Open,F,80,35,120,235,SBD,Single-ply,3
-Angie Dusie,75,Open,F,110,80,130,320,SBD,Single-ply,1
-Silvia Hofmann,75,Open,F,60,40,95,195,SBD,Single-ply,2
-Rebecca Waibler,90,Open,F,172.5,110,200,482.5,SBD,Single-ply,1
+Name,WeightClassKg,Division,Sex,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+Günther Hammerschmidt,60,Open,M,TSG Augsburg,56.1,130,135,-140,135,72.5,77.5,80,80,160,165,-170,165,380,SBD,Single-ply,1
+Ulrich Mielich,60,Open,M,ESV Regensburg,59.4,95,105,110,110,82.5,87.5,90,90,140,150,160,160,360,SBD,Single-ply,2
+Günter Icks,67.5,Open,M,ASV Nevmarkt,60.6,180,200,-210,200,105,110,-112.5,110,190,200,210,210,520,SBD,Single-ply,1
+Josef Slany,67.5,Open,M,TSG Augsburg,60.4,150,157.5,-160,157.5,90,95,-97.5,95,175,182.5,187.5,187.5,440,SBD,Single-ply,2
+Erich Kess,67.5,Open,M,TSV Katzwang,66,145,150,155,155,80,85,-90,85,165,170,175,175,415,SBD,Single-ply,3
+Joachim Hofmann,67.5,Open,M,TUS Raubling,64.6,-115,115,122.5,122.5,90,95,-100,95,170,-177.5,177.5,177.5,395,SBD,Single-ply,4
+Vitus Sachenbacher,67.5,Open,M,ETSV Regensburg,67,110,115,-120,115,-80,80,82.5,82.5,150,155,165,165,362.5,SBD,Single-ply,5
+Sebastian Balk,67.5,Open,M,ESV Regensburg,65.8,110,115,120,120,75,80,-82.5,80,145,152.5,157.5,157.5,357.5,SBD,Single-ply,6
+Thomas Schäfer,67.5,Open,M,AC Bajuwaren Munchen,65.9,110,115,120,120,-72.5,77.5,-82.5,77.5,140,145,150,150,347.5,SBD,Single-ply,7
+Peter Cihla,75,Open,M,ETSV Wurzburg,74.6,205,215,-230.5,215,95,102.5,107.5,107.5,190,205,212.5,212.5,535,SBD,Single-ply,1
+Michael Bogner,75,Open,M,AC Bajuwaren Munchen,71,130,140,145,145,85,90,-92.5,90,180,190,195,195,430,SBD,Single-ply,2
+Günther Mittermeier,75,Open,M,AC Bajuwaren Munchen,74.2,120,130,-140,130,95,100,-102.5,100,-150,150,160,160,390,SBD,Single-ply,3
+Gerald Baptist,75,Open,M,TSV Kriegshaber Augsburg,71.8,-110,110,-120,110,75,80,82.5,82.5,150,160,165,165,357.5,SBD,Single-ply,4
+Johann Oberhauser,82.5,Open,M,SC Bavaria Landshut,82.5,202.5,210,220,220,122.5,-127.5,127.5,127.5,240,250,252.5,252.5,600,SBD,Single-ply,1
+Manfred Jenke,82.5,Open,M,AC Bajuwaren Munchen,82.5,-190,200,215,215,120,127.5,132.5,132.5,220,235,250,250,597.5,SBD,Single-ply,2
+Ludwig Festl,82.5,Open,M,AC Bajuwaren Munchen,81.4,-202.5,202.5,-215,202.5,122.5,127.5,130,130,245,252.5,-260,252.5,585,SBD,Single-ply,3
+Josef Fuhrmann,82.5,Open,M,AC Bajuwaren Munchen,75.8,185,-190,,185,145,150,-152.5,150,225,235,245,245,580,SBD,Single-ply,4
+Václav Dlask,82.5,Open,M,SC Bavaria Landshut,78,210,-217.5,-217.5,210,110,120,-125,120,210,220,-225,220,550,SBD,Single-ply,5
+Josef Dallmeier,82.5,Open,M,TV Immerstadt,82.5,160,165,-170,165,92.5,100,-102.5,100,190,200,205,205,470,SBD,Single-ply,6
+Reinhold Fechtmeier,82.5,Open,M,SC Bavaria Landshut,75.4,-150,150,155,155,-85,95,100,100,180,190,200,200,455,SBD,Single-ply,7
+Alfred Poth,82.5,Open,M,TSV Kriegshaber Augsburg,79.7,145,155,160,160,-120,120,127.5,127.5,145,155,-165,155,442.5,SBD,Single-ply,8
+Rolf Schumann,82.5,Open,M,TSV Kriegshaber Augsburg,76.1,145,155,165,165,-70,-80,-80,,130,145,155,155,,SBD,Single-ply,DQ
+Max Stamm,90,Open,M,SC Bavaria Landshut,84,-290,-290,300,300,170,180,182.5,182.5,290,300,-307.5,300,782.5,SBD,Single-ply,1
+Rainer Griebl,90,Open,M,ETSV Wurzburg,83,200,215,225,225,-137.5,137.5,140,140,230,240,245,245,610,SBD,Single-ply,2
+Petr Leykam,90,Open,M,SV Gostenhof 03,88.4,205,210,,210,155,-162.5,162.5,162.5,220,230,,230,602.5,SBD,Single-ply,3
+Josef Geier,90,Open,M,AC Bajuwaren Munchen,89.4,200,-215,-220,200,130,135,137.5,137.5,230,245,255,255,592.5,SBD,Single-ply,4
+Jakob Kastenmeier,90,Open,M,AC Bajuwaren Munchen,88.2,-200,200,-205,200,135,-140,-140,135,240,250,255,255,590,SBD,Single-ply,5
+Erich Schwarz,90,Open,M,AC Bajuwaren Munchen,88.6,165,175,182.5,182.5,122.5,127.5,132.5,132.5,230,250,255,255,570,SBD,Single-ply,6
+Herbert Wanninger,90,Open,M,SG Raudersacker,86.4,195,205,-220,205,115,-120,120,120,-210,210,225,225,550,SBD,Single-ply,7
+Peter Volpert,90,Open,M,ETSV Wurzburg,88,175,180,-187.5,180,127.5,132.5,-137.5,132.5,220,-240,-240,220,532.5,SBD,Single-ply,8
+Klaus Fink,100,Open,M,SC Bavaria Landshut,98.4,280,290,-300,290,155,160,165,165,245,255,260,260,715,SBD,Single-ply,1
+Bernhard Schmidt,100,Open,M,SC Bavaria Landshut,96.3,210,220,225,225,145,-155,-155,145,220,230,235,235,605,SBD,Single-ply,2
+Erwin Gerstenberger,100,Open,M,SC Bavaria Landshut,95.2,210,220,-225,220,-125,125,-130,125,210,220,-225,220,565,SBD,Single-ply,3
+Arnold Dittmeier,100,Open,M,SG Raudersacker,95,-170,170,,170,-90,95,-100,95,190,200,205,205,470,SBD,Single-ply,4
+Dieter Waibler,110,Open,M,AC Bajuwaren Munchen,108,280,300,-310,300,170,180,-185,180,230,250,,250,730,SBD,Single-ply,1
+Andreas Ehl,110,Open,M,AC Bajuwaren Munchen,101.6,200,-230,,200,120,130,140,140,200,220,230,230,570,SBD,Single-ply,2
+Manfred Eidenberger,110,Open,M,ESV Regensburg,105.2,110,130,150,150,70,80,90,90,160,180,200,200,440,SBD,Single-ply,3
+Hans-Otto Wöhrle,125,Open,M,ETSV Regensburg,112.1,260,270,280,280,195,202.5,,202.5,260,270,,270,752.5,SBD,Single-ply,1
+Ludwig Frey,125,Open,M,TV Haldenwang,118.6,220,235,242.5,242.5,135,-142.5,-142.5,135,265,-285,-285,265,642.5,SBD,Single-ply,2
+Richard Heiden,125,Open,M,TSV Katzwang,119.8,200,210,-220,210,140,-150,150,150,200,210,,210,570,SBD,Single-ply,3
+Carol Santandrea,48,Open,F,SV Stuttgart,46.8,80,85,90,90,42.5,47.5,-50,47.5,110,117.5,-120,117.5,255,SBD,Single-ply,1
+Elly Gelbfarb,48,Open,F,ETSV Wurzburg,47.6,67.5,72.5,75,75,40,45,-47.5,45,105,110,115,115,235,SBD,Single-ply,2
+Edith Scherpf,48,Open,F,KSV Schweimfurt,46.2,72.5,77.5,82.5,82.5,-47.5,47.5,-52.5,47.5,92.5,97.5,102.5,102.5,232.5,SBD,Single-ply,3
+Elke Mack,56,Open,F,KSV Schweimfurt,55.4,90,95,97.5,97.5,-45,-50,50,50,105,110,-112.5,110,257.5,SBD,Single-ply,1
+Manvela Beck,56,Open,F,KSV Schweimfurt,52.6,72.5,77.5,80,80,42.5,47.5,-50,47.5,-100,-100,100,100,227.5,SBD,Single-ply,2
+Birgit Durl,56,Open,F,KSV Schweimfurt,53,67.5,-72.5,72.5,72.5,35,40,-42.5,40,92.5,97.5,100,100,212.5,SBD,Single-ply,3
+Birgit Semeneth,60,Open,F,KSV Schweimfurt,57.4,70,75,77.5,77.5,40,45,47.5,47.5,95,100,105,105,230,SBD,Single-ply,1
+Christine Mai,60,Open,F,KSV Schweimfurt,57.2,65,-70,-70,65,35,40,-42.5,40,95,-100,100,100,205,SBD,Single-ply,2
+Regine Hunsinger,67.5,Open,F,AC Darmstadt,67.5,95,100,-102.5,100,60,-65,-65,60,110,115,-120,115,275,SBD,Single-ply,1
+Aziza Abdul Razik,67.5,Open,F,KSV Schweimfurt,61.8,-80,80,-85,80,45,50,-55,50,90,105,-115,105,235,SBD,Single-ply,2
+Johanna Przyklenk,67.5,Open,F,KSV Schweimfurt,62.6,72.5,77.5,80,80,30,35,-37.5,35,110,115,120,120,235,SBD,Single-ply,3
+Angie Dusie,75,Open,F,AC Bajuwaren Munchen,70.2,100,105,110,110,70,75,80,80,-120,125,130,130,320,SBD,Single-ply,1
+Silvia Hofmann,75,Open,F,KSV Schweimfurt,72.2,55,60,-65,60,35,-40,40,40,95,-100,-100,95,195,SBD,Single-ply,2
+Rebecca Waibler,90,Open,F,AC Bajuwaren Munchen,88.6,155,165,173,173,100,105,110,110,180,190,200,200,483,SBD,Single-ply,1
