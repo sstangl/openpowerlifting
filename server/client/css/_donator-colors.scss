@@ -435,6 +435,12 @@
   letter-spacing: 1px;
 }
 
+// Designed by Laura Kelly.
+.laura_kelly {
+  @include gradient-prereqs(#00f2ff);
+  background-image: linear-gradient(to right, #00f2ff, #ae76ff);
+}
+
 .fire_animation {
   animation: fire_animation 0.75s infinite linear alternate;
 }
