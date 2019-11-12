@@ -260,6 +260,8 @@
 [exemptions]
     1606 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
     1707 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
+    1708 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
     1803 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
     1811 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
+    1812 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
     1908 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
