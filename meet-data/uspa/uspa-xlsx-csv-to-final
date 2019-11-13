@@ -237,10 +237,10 @@ def main(filename):
     fixup_weightclasskg(csv)
 
     # Add an empty BirthDate column to reduce future git churn.
+    csv.remove_empty_columns()
     csv.insert_column(csv.index('Age'), 'BirthDate')
 
     # Output.
-    csv.remove_empty_columns()
     while 'DELETEME' in csv.fieldnames:
         csv.remove_column_by_name('DELETEME')
     csv.write(sys.stdout)
