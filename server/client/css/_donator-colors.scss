@@ -97,6 +97,11 @@
   @include name-color(#FFFC00);
 }
 
+// A nice yellow that isn't so bright.
+.solidyellow {
+  @include name-color(#FD3);
+}
+
 .gold {
   @include name-color(#FFD700);
 }
