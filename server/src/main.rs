@@ -216,12 +216,25 @@ fn lifter(
     }
 }
 
+/// Wrapper for a CSV file as a String, to give it a Responder impl.
+struct CsvFile(String);
+
+impl Responder<'static> for CsvFile {
+    fn respond_to(self, req: &Request) -> Result<Response<'static>, Status> {
+        let mut r = self.0.respond_to(req)?;
+        r.set_header(ContentType::CSV);
+        Ok(r)
+    }
+}
+
 /// Exports single-lifter data as a CSV file.
 #[get("/u/<username>/csv")]
-fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<String> {
+fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.get_lifter_id(&username)?;
     let entry_filter = None;
-    pages::lifter_csv::export_csv(&opldb, lifter_id, entry_filter).ok()
+    Some(CsvFile(
+        pages::lifter_csv::export_csv(&opldb, lifter_id, entry_filter).ok()?,
+    ))
 }
 
 #[get("/mlist/<mselections..>?<lang>")]
