@@ -501,6 +501,11 @@ def main(filename):
         calc_best_lift(csv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
+    if 'BirthDate' not in csv.fieldnames:
+        csv.insert_column(csv.index('BirthYear'), 'BirthDate')
+    if 'Division' not in csv.fieldnames:
+        csv.insert_column(csv.index('BodyweightKg'), 'Division')
+
     csv.write(sys.stdout)
 
 
