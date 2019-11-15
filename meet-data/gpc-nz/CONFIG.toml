@@ -5,21 +5,45 @@
     date_range = ["0000-01-01", "9999-01-01"]
 
 [divisions]
-    open = {name ="Open",min=0,max=999}
-    submasters = {name ="Submasters",min=33,max=39}
-    teen1315 = {name ="Teen 1",min=13,max=15}
-    teen1617 = {name ="Teen 2",min=16,max=17}
-    teen1819 = {name ="Teen 3",min=18,max=19}
-    juniors2023 = {name ="Juniors",min=20,max=23}
-    masters1 = {name ="Masters 1",min=40,max=44}
-    masters2 = {name ="Masters 2",min=45,max=49}
-    masters3 = {name ="Masters 3",min=50,max=54}
-    masters4 = {name ="Masters 4",min=55,max=59}
-    masters5 = {name ="Masters 5",min=60,max=64}
-    masters6 = {name ="Masters 6",min=65,max=69}
-    masters7 = {name ="Masters 7",min=70,max=74}
-    masters8 = {name ="Masters 8",min=75,max=79}
-    masters9 = {name ="Masters 9",min=80,max=999}
+   mor = {name ="M-OR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    for = {name ="F-OR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mgr = {name ="M-GR", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
+    fgr = {name ="F-GR", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
+    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
+    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    mtr = {name ="M-TR", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
+    mt1r = {name ="M-T1R", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
+    mt2r = {name ="M-T2R", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
+    mt3r = {name ="M-T3R", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
+    ftr = {name ="F-TR", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
+    ft1r = {name ="F-T1R", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
+    ft2r = {name ="F-T2R", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
+    ft3r = {name ="F-T3R", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
+    mjr = {name ="M-JR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
+    fjr = {name ="F-JR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+    msr = {name ="M-SR", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
+    fsr = {name ="F-SR", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
+    mm1r = {name ="M-M1R", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
+    mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
+    fm1r = {name ="F-M1R", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
+    mm2r = {name ="M-M2R", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
+    mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
+    fm2r = {name ="F-M2R", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
+    mm3r = {name ="M-M3R", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
+    fm3r = {name ="F-M3R", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
+    mm4r = {name ="M-M4R", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
+    fm4r = {name ="F-M4R", min=55, max=59, sex="F", equipment=["Raw","Wraps"]}
+    mm5r = {name ="M-M5R", min=60, max=64, sex="M", equipment=["Raw","Wraps"]}
+    fm5r = {name ="F-M5R", min=60, max=64, sex="F", equipment=["Raw","Wraps"]}
+    mm6r = {name ="M-M6R", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
+    fm6r = {name ="F-M6R", min=65, max=69, sex="F", equipment=["Raw","Wraps"]}
+    mm7r = {name ="M-M7R", min=70, max=74, sex="M", equipment=["Raw","Wraps"]}
+    fm7r = {name ="F-M7R", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
+    mm8r = {name ="M-M8R", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
+    fm8r = {name ="F-M8R", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
+    mm9r = {name ="M-M9R", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
+    fm9r = {name ="F-M9R", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
 
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
