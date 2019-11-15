@@ -1,3 +1,5 @@
+# Configuration for NZPF.
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     novice = {name ="Novice",min=0,max=999}
