@@ -105,7 +105,7 @@
 
     # Adaptive divisions. Not sure what these are.
     adaptive_open= {name = "Adaptive Open", min = 0, max = 999}
-
+    adaptive_juniors = {name = "Adaptive Juniors 20-23", min=20, max=23}
 
     # Miscellaneous divisions.
     crossfit = {name = "Crossfit", min = 0, max = 999}
