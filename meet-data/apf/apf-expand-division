@@ -6,8 +6,15 @@
 # This works for APF meets that use classes that look like "M_OCR_AAPF".
 #
 
-from oplcsv import Csv
+import os
 import sys
+
+try:
+    from oplcsv import Csv
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
 
 
 def main(filename):

@@ -6,9 +6,16 @@
 # future results.
 
 from bs4 import BeautifulSoup
+import os
 import sys
 import urllib.request
-from oplcsv import Csv
+
+try:
+    from oplcsv import Csv
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from oplcsv import Csv
 
 
 def gethtml(url):
