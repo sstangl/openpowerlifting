@@ -11,7 +11,6 @@ import sys
 import urllib.request
 import re
 import urllib.parse
-import subprocess
 
 try:
     from oplcsv import Csv
@@ -572,6 +571,9 @@ def main(url):
     # Figure out event information.
     markevent(entriescsv)
 
+    if 'BirthDate' not in entriescsv.fieldnames:
+        entriescsv.insert_column(entriescsv.index('BirthYear'), 'BirthDate')
+
     try:
         os.makedirs(dirname)
     except OSError as exception:
@@ -580,16 +582,10 @@ def main(url):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
-        entriescsv.write(fd)
-
-    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
-        meetcsv.write(fd)
+    entriescsv.write_filename(dirname + os.sep + 'entries.csv')
+    meetcsv.write_filename(dirname + os.sep + 'meet.csv')
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
-
-    subprocess.run(['..'+os.sep+'..'+os.sep+'tests'+os.sep +
-                    'check', dirname + os.sep + 'entries.csv'])
 
     print("Imported into %s." % dirname)
 
