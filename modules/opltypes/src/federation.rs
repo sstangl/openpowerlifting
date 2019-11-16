@@ -437,6 +437,10 @@ pub enum Federation {
     #[strum(to_string = "HERC", serialize = "herc")]
     HERC,
 
+    /// Hong Kong Weightlifting and Powerlifting, IPF.
+    #[strum(to_string = "HKWPA", serialize = "hkwpa")]
+    HKWPA,
+
     /// Hungarian Powerlifting Congress, WPC.
     #[strum(to_string = "HPC", serialize = "hpc")]
     HPC,
@@ -1223,6 +1227,7 @@ impl Federation {
             Federation::Hardcore => false,
             Federation::HERC => false,
             Federation::CroatiaUA => false,
+            Federation::HKWPA => true,
             Federation::HPC => false,
             Federation::HPLS => true,
             Federation::HPLSUA => false,
@@ -1487,6 +1492,7 @@ impl Federation {
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
             Federation::CroatiaUA => Some(Country::Croatia),
+            Federation::HKWPA => Some(Country::HongKong),
             Federation::HPC => Some(Country::Hungary),
             Federation::HPLS => Some(Country::Croatia),
             Federation::HPLSUA => Some(Country::Croatia),
@@ -1770,6 +1776,7 @@ impl Federation {
             Federation::Hardcore => None,
             Federation::HERC => None,
             Federation::CroatiaUA => None,
+            Federation::HKWPA => Some(Federation::IPF),
             Federation::HPC => None,
             Federation::HPLS => Some(Federation::IPF),
             Federation::HPLSUA => None,
@@ -2051,6 +2058,7 @@ impl Federation {
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
+            Federation::HKWPA => Federation::ipf_rules_on(date),
             Federation::HPC => PointsSystem::Wilks,
             Federation::HPLS => Federation::ipf_rules_on(date),
             Federation::HPLSUA => PointsSystem::Wilks,
