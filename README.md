@@ -7,6 +7,10 @@ Presentation of this data is available at [OpenPowerlifting.org](https://www.ope
 
 **Powerlifting to the People.**
 
+## Development Chat
+
+Project development is discussed in the [OpenPowerlifting Zulip Chat](https://openpl.zulipchat.com/). Everyone is welcome to join.
+
 ## Licensing
 
 ### Code Licensing
