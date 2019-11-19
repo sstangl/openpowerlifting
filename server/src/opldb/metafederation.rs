@@ -89,6 +89,8 @@ pub enum MetaFederation {
     AllUKTested,
     #[strum(to_string = "all-ukraine")]
     AllUkraine,
+    #[strum(to_string = "all-vietnam")]
+    AllVietnam,
     #[strum(to_string = "all-usa")]
     AllUSA,
 
@@ -388,6 +390,11 @@ impl MetaFederation {
                 entry.lifter_country == Some(Country::USA)
                     || (entry.lifter_country == None
                         && meet.federation.home_country() == Some(Country::USA))
+            }
+            MetaFederation::AllVietnam => {
+                entry.lifter_country == Some(Country::Vietnam)
+                    || (entry.lifter_country == None
+                        && meet.federation.home_country() == Some(Country::Vietnam))
             }
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => {
