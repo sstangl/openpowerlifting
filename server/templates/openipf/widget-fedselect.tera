@@ -59,5 +59,6 @@
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF / {{strings.country.thailand}}</option>
   <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>UkrainePF / {{strings.country.ukraine}}</option>
   <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL / {{strings.country.usa}}</option>
+  <option value="vpf" {% if selection.federation == "VPF" %}selected{% endif %}>VPF / {{strings.country.vietnam}}</option>
 </optgroup>
 </select>

@@ -879,6 +879,10 @@ pub enum Federation {
     #[strum(to_string = "Vityaz", serialize = "vityaz")]
     Vityaz,
 
+    /// Vietnam Powerlifting Federation, IPF.
+    #[strum(to_string = "VPF", serialize = "vpf")]
+    VPF,
+
     /// World Association of Bench Pressers and Deadlifters.
     #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
@@ -1336,6 +1340,7 @@ impl Federation {
             Federation::USSports => false,
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
+            Federation::VPF => true,
             Federation::WABDL => true,
             Federation::WarriorPLF => false,
             Federation::WDFPF => true,
@@ -1600,6 +1605,7 @@ impl Federation {
             Federation::USSports => Some(Country::USA),
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
+            Federation::VPF => Some(Country::Vietnam),
             Federation::WABDL => Some(Country::USA),
             Federation::WarriorPLF => Some(Country::USA),
             Federation::WBC => Some(Country::USA),
@@ -1891,6 +1897,7 @@ impl Federation {
             Federation::USSports => None,
             Federation::VietnamPA => None,
             Federation::Vityaz => None,
+            Federation::VPF => Some(Federation::IPF),
             Federation::WABDL => None,
             Federation::WarriorPLF => None,
             Federation::WBC => None,
@@ -2166,6 +2173,7 @@ impl Federation {
             Federation::USSports => PointsSystem::Wilks,
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
+            Federation::VPF => Federation::ipf_rules_on(date),
             Federation::WABDL => PointsSystem::Wilks,
             Federation::WarriorPLF => PointsSystem::Wilks,
             Federation::WBC => PointsSystem::Wilks,
