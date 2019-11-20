@@ -244,6 +244,14 @@ pub enum MetaFederation {
     ThaiPF,
 }
 
+/// Helper function for MetaFederation::contains() for AllCountry meta-feds.
+#[inline]
+fn is_from(country: Country, entry: &Entry, meet: &Meet) -> bool {
+    entry.lifter_country == Some(country)
+        || (entry.lifter_country == None
+            && meet.federation.home_country() == Some(country))
+}
+
 impl MetaFederation {
     /// Defines whether a given `Entry` is part of the MetaFederation.
     ///
@@ -259,262 +267,64 @@ impl MetaFederation {
                 entry.tested && meet.federation.is_fully_tested()
             }
             MetaFederation::AllTested => entry.tested,
-            MetaFederation::AllArgentina => {
-                entry.lifter_country == Some(Country::Argentina)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Argentina))
-            }
-            MetaFederation::AllAustralia => {
-                entry.lifter_country == Some(Country::Australia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Australia))
-            }
-            MetaFederation::AllAustria => {
-                entry.lifter_country == Some(Country::Austria)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Austria))
-            }
-            MetaFederation::AllBelarus => {
-                entry.lifter_country == Some(Country::Belarus)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Belarus))
-            }
-            MetaFederation::AllBrazil => {
-                entry.lifter_country == Some(Country::Brazil)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Brazil))
-            }
+            MetaFederation::AllArgentina => is_from(Country::Argentina, entry, meet),
+            MetaFederation::AllAustralia => is_from(Country::Australia, entry, meet),
+            MetaFederation::AllAustria => is_from(Country::Austria, entry, meet),
+            MetaFederation::AllBelarus => is_from(Country::Belarus, entry, meet),
+            MetaFederation::AllBrazil => is_from(Country::Brazil, entry, meet),
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)
                     || (entry.lifter_country == None
                         && (meet.federation.home_country() == Some(Country::Canada)
                             || MetaFederation::IPACAN.contains(entry, meets)))
             }
-            MetaFederation::AllChile => {
-                entry.lifter_country == Some(Country::Chile)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Chile))
-            }
-            MetaFederation::AllChina => {
-                entry.lifter_country == Some(Country::China)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::China))
-            }
-            MetaFederation::AllColombia => {
-                entry.lifter_country == Some(Country::Colombia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Colombia))
-            }
-            MetaFederation::AllCroatia => {
-                entry.lifter_country == Some(Country::Croatia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Croatia))
-            }
-            MetaFederation::AllCzechia => {
-                entry.lifter_country == Some(Country::Czechia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Czechia))
-            }
-            MetaFederation::AllDenmark => {
-                entry.lifter_country == Some(Country::Denmark)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Czechia))
-            }
-            MetaFederation::AllFinland => {
-                entry.lifter_country == Some(Country::Finland)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Finland))
-            }
-            MetaFederation::AllFrance => {
-                entry.lifter_country == Some(Country::France)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::France))
-            }
-            MetaFederation::AllGermany => {
-                entry.lifter_country == Some(Country::Germany)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Germany))
-            }
-            MetaFederation::AllGreece => {
-                entry.lifter_country == Some(Country::Greece)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Greece))
-            }
-            MetaFederation::AllHongKong => {
-                entry.lifter_country == Some(Country::HongKong)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::HongKong))
-            }
-            MetaFederation::AllHungary => {
-                entry.lifter_country == Some(Country::Hungary)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Hungary))
-            }
-            MetaFederation::AllIceland => {
-                entry.lifter_country == Some(Country::Iceland)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Iceland))
-            }
-            MetaFederation::AllIndonesia => {
-                entry.lifter_country == Some(Country::Indonesia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Indonesia))
-            }
-            MetaFederation::AllIreland => {
-                entry.lifter_country == Some(Country::Ireland)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Ireland))
-            }
-            MetaFederation::AllIsrael => {
-                entry.lifter_country == Some(Country::Israel)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Israel))
-            }
-            MetaFederation::AllItaly => {
-                entry.lifter_country == Some(Country::Italy)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Italy))
-            }
-            MetaFederation::AllJapan => {
-                entry.lifter_country == Some(Country::Japan)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Japan))
-            }
-            MetaFederation::AllKazakhstan => {
-                entry.lifter_country == Some(Country::Kazakhstan)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Kazakhstan))
-            }
-            MetaFederation::AllKuwait => {
-                entry.lifter_country == Some(Country::Kuwait)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Kuwait))
-            }
-            MetaFederation::AllKyrgyzstan => {
-                entry.lifter_country == Some(Country::Kyrgyzstan)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Kyrgyzstan))
-            }
-            MetaFederation::AllLatvia => {
-                entry.lifter_country == Some(Country::Latvia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Latvia))
-            }
-            MetaFederation::AllLithuania => {
-                entry.lifter_country == Some(Country::Lithuania)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Lithuania))
-            }
-            MetaFederation::AllMalaysia => {
-                entry.lifter_country == Some(Country::Malaysia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Malaysia))
-            }
-            MetaFederation::AllMexico => {
-                entry.lifter_country == Some(Country::Mexico)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Mexico))
-            }
-            MetaFederation::AllMoldova => {
-                entry.lifter_country == Some(Country::Moldova)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Moldova))
-            }
-            MetaFederation::AllNauru => {
-                entry.lifter_country == Some(Country::Nauru)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Nauru))
-            }
-            MetaFederation::AllNetherlands=> {
-                entry.lifter_country == Some(Country::Netherlands)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Netherlands))
-            }
-            MetaFederation::AllNewZealand => {
-                entry.lifter_country == Some(Country::NewZealand)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::NewZealand))
-            }
-            MetaFederation::AllNorway => {
-                entry.lifter_country == Some(Country::Norway)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Norway))
-            }
+            MetaFederation::AllChile => is_from(Country::Chile, entry, meet),
+            MetaFederation::AllChina => is_from(Country::China, entry, meet),
+            MetaFederation::AllColombia => is_from(Country::Colombia, entry, meet),
+            MetaFederation::AllCroatia => is_from(Country::Croatia, entry, meet),
+            MetaFederation::AllCzechia => is_from(Country::Czechia, entry, meet),
+            MetaFederation::AllDenmark => is_from(Country::Denmark, entry, meet),
+            MetaFederation::AllFinland => is_from(Country::Finland, entry, meet),
+            MetaFederation::AllFrance => is_from(Country::France, entry, meet),
+            MetaFederation::AllGermany => is_from(Country::Germany, entry, meet),
+            MetaFederation::AllGreece => is_from(Country::Greece, entry, meet),
+            MetaFederation::AllHongKong => is_from(Country::HongKong, entry, meet),
+            MetaFederation::AllHungary => is_from(Country::Hungary, entry, meet),
+            MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
+            MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
+            MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
+            MetaFederation::AllIsrael => is_from(Country::Israel, entry, meet),
+            MetaFederation::AllItaly => is_from(Country::Italy, entry, meet),
+            MetaFederation::AllJapan => is_from(Country::Japan, entry, meet),
+            MetaFederation::AllKazakhstan => is_from(Country::Kazakhstan, entry, meet),
+            MetaFederation::AllKuwait => is_from(Country::Kuwait, entry, meet),
+            MetaFederation::AllKyrgyzstan => is_from(Country::Kyrgyzstan, entry, meet),
+            MetaFederation::AllLatvia => is_from(Country::Latvia, entry, meet),
+            MetaFederation::AllLithuania => is_from(Country::Lithuania, entry, meet),
+            MetaFederation::AllMalaysia => is_from(Country::Malaysia, entry, meet),
+            MetaFederation::AllMexico => is_from(Country::Mexico, entry, meet),
+            MetaFederation::AllMoldova => is_from(Country::Moldova, entry, meet),
+            MetaFederation::AllNauru => is_from(Country::Nauru, entry, meet),
+            MetaFederation::AllNetherlands => is_from(Country::Netherlands, entry, meet),
+            MetaFederation::AllNewZealand => is_from(Country::NewZealand, entry, meet),
+            MetaFederation::AllNorway => is_from(Country::Norway, entry, meet),
             MetaFederation::AllPapuaNewGuinea => {
-                entry.lifter_country == Some(Country::PapuaNewGuinea)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::PapuaNewGuinea))
+                is_from(Country::PapuaNewGuinea, entry, meet)
             }
-            MetaFederation::AllPhilippines => {
-                entry.lifter_country == Some(Country::Philippines)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Philippines))
-            }
-            MetaFederation::AllPoland => {
-                entry.lifter_country == Some(Country::Poland)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Poland))
-            }
-            MetaFederation::AllPortugal => {
-                entry.lifter_country == Some(Country::Portugal)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Portugal))
-            }
-            MetaFederation::AllRomania => {
-                entry.lifter_country == Some(Country::Romania)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Romania))
-            }
-            MetaFederation::AllRussia => {
-                entry.lifter_country == Some(Country::Russia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Russia))
-            }
-            MetaFederation::AllSerbia => {
-                entry.lifter_country == Some(Country::Serbia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Serbia))
-            }
-            MetaFederation::AllSingapore => {
-                entry.lifter_country == Some(Country::Singapore)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Singapore))
-            }
-            MetaFederation::AllSlovakia => {
-                entry.lifter_country == Some(Country::Slovakia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Slovakia))
-            }
-            MetaFederation::AllSlovenia => {
-                entry.lifter_country == Some(Country::Slovenia)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Slovenia))
-            }
-            MetaFederation::AllSpain => {
-                entry.lifter_country == Some(Country::Spain)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Spain))
-            }
-            MetaFederation::AllSouthAfrica => {
-                entry.lifter_country == Some(Country::SouthAfrica)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::SouthAfrica))
-            }
-            MetaFederation::AllSweden => {
-                entry.lifter_country == Some(Country::Sweden)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Sweden))
-            }
-            MetaFederation::AllSwitzerland => {
-                entry.lifter_country == Some(Country::Switzerland)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Switzerland))
-            }
-            MetaFederation::AllThailand => {
-                entry.lifter_country == Some(Country::Thailand)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Thailand))
-            }
+            MetaFederation::AllPhilippines => is_from(Country::Philippines, entry, meet),
+            MetaFederation::AllPoland => is_from(Country::Poland, entry, meet),
+            MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
+            MetaFederation::AllRomania => is_from(Country::Romania, entry, meet),
+            MetaFederation::AllRussia => is_from(Country::Russia, entry, meet),
+            MetaFederation::AllSerbia => is_from(Country::Serbia, entry, meet),
+            MetaFederation::AllSingapore => is_from(Country::Singapore, entry, meet),
+            MetaFederation::AllSlovakia => is_from(Country::Slovakia, entry, meet),
+            MetaFederation::AllSlovenia => is_from(Country::Slovenia, entry, meet),
+            MetaFederation::AllSpain => is_from(Country::Spain, entry, meet),
+            MetaFederation::AllSouthAfrica => is_from(Country::SouthAfrica, entry, meet),
+            MetaFederation::AllSweden => is_from(Country::Sweden, entry, meet),
+            MetaFederation::AllSwitzerland => is_from(Country::Switzerland, entry, meet),
+            MetaFederation::AllThailand => is_from(Country::Thailand, entry, meet),
             MetaFederation::AllUK => {
                 // UK lifters sometimes switch country affiliation from UK to Ireland
                 // when they compete IrishPF.
@@ -535,21 +345,9 @@ impl MetaFederation {
             MetaFederation::AllUKTested => {
                 entry.tested && MetaFederation::AllUK.contains(entry, meets)
             }
-            MetaFederation::AllUkraine => {
-                entry.lifter_country == Some(Country::Ukraine)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Ukraine))
-            }
-            MetaFederation::AllUSA => {
-                entry.lifter_country == Some(Country::USA)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::USA))
-            }
-            MetaFederation::AllVietnam => {
-                entry.lifter_country == Some(Country::Vietnam)
-                    || (entry.lifter_country == None
-                        && meet.federation.home_country() == Some(Country::Vietnam))
-            }
+            MetaFederation::AllUkraine => is_from(Country::Ukraine, entry, meet),
+            MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
+            MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => {
                 entry.tested && MetaFederation::BPU.contains(entry, meets)
