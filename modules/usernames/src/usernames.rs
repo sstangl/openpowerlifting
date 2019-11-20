@@ -15,7 +15,7 @@ fn convert_to_ascii(name: &str) -> Result<String, String> {
         } else {
             ascii_name.push_str(match letter {
                 'á' | 'ä' | 'å' | 'ą' | 'ã' | 'à' | 'â' | 'ā' | 'ắ' | 'ấ' | 'ầ' | 'ặ' | 'ạ'
-                | 'ă' | 'ả' | 'ậ' => "a",
+                | 'ă' | 'ả' | 'ậ' | 'ằ' => "a",
                 'æ' => "ae",
                 'ć' | 'ç' | 'č' | 'ĉ' | 'ċ' => "c",
                 'đ' | 'ð' | 'ď' => "d",
