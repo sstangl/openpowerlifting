@@ -14,6 +14,8 @@
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
 
+    elite_open = {name = "Elite Open", min = 0, max = 999}
+
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
@@ -25,5 +27,4 @@
     sex = "F"
 
 [exemptions]
-    1901 = ["ExemptDivision"] # Elite Open Division
   
