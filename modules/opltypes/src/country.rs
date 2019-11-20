@@ -18,6 +18,7 @@ pub enum Country {
     Austria,
     Bahamas,
     Bahrain,
+    Bangladesh,
     Belarus,
     Belgium,
     Belize,
