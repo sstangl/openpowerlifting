@@ -26,6 +26,7 @@ pub enum PointsSystem {
     IPFPoints,
     NASA,
     Reshel,
+    SchwartzMalone,
     Wilks,
 
     /// Expresses that the meet doesn't use a points system.

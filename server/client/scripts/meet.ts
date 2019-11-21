@@ -27,6 +27,7 @@ declare const path_if_by_glossbrenner: string;
 declare const path_if_by_ipfpoints: string;
 declare const path_if_by_nasa: string;
 declare const path_if_by_reshel: string;
+declare const path_if_by_schwartzmalone: string;
 declare const path_if_by_total: string;
 declare const path_if_by_wilks: string;
 
@@ -53,6 +54,9 @@ function redirect() {
             break;
         case "by-reshel":
             window.location.href = path_if_by_reshel;
+            break;
+        case "by-schwartz-malone":
+            window.location.href = path_if_by_schwartzmalone;
             break;
         case "by-total":
             window.location.href = path_if_by_total;

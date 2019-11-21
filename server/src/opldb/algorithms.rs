@@ -254,6 +254,30 @@ pub fn cmp_reshel(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
 
+/// Defines an `Ordering` of Entries by Schwartz/Malone points.
+///
+/// Because Schwartz/Malone points aren't stored on the Entry, they are
+/// recalculated each comparison. The computation is not particularly expensive,
+/// but does involve powi().
+#[inline]
+pub fn cmp_schwartzmalone(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    let a_points = coefficients::schwartzmalone(a.sex, a.bodyweightkg, a.totalkg);
+    let b_points = coefficients::schwartzmalone(b.sex, b.bodyweightkg, b.totalkg);
+
+    // First sort by Reshel points, higher first.
+    a_points
+        .cmp(&b_points)
+        .reverse()
+        // If equal, sort by Date, earlier first.
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
 /// Defines an `Ordering` of Entries by AH (Haleczko) points.
 ///
 /// Because AH points aren't stored on the Entry, they are recalculated
