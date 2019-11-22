@@ -232,6 +232,7 @@
   <option value="fiap" {% if selection.federation == "FIAP" %}selected{% endif %}>FIAP - Federazione Italiana Atletica Pesante</option>
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL - Federazione Italiana Powerlifting [IPF]</option>
   <option value="wpc-italy" {% if selection.federation == "WPC-Italy" %}selected{% endif %}>WPC Italy</option>
+  <option value="wrpf-italy" {% if selection.federation == "WRPF-Italy" %}selected{% endif %}>WRPF Italy</option>
 </optgroup>
 <optgroup label="{{strings.country.japan}}">
   <option value="all-japan" {% if selection.federation == "AllJapan" %}selected{% endif %}>{{strings.selectors.fed.all_japan}}</option>
