@@ -76,7 +76,7 @@ The full range available to `AgeClass` is defined by [modules/opltypes/src/agecl
 
 ### BirthYearClass
 
-Optional. The birth year class in which the filter falls, for example `40-49`. The ages in the range are the oldest possible ages for the lifter that year. For example, `40-49` means "the year the lifters turns 40 through the full year in which the lifter turns 49."
+Optional. The birth year class in which the filter falls, for example `40-49`. The ages in the range are the oldest possible ages for the lifter that year. For example, `40-49` means "the year the lifter turns 40 through the full year in which the lifter turns 49."
 
 `BirthYearClass` is used primarily by the IPF and by IPF affiliates. Non-IPF federations tend to use `AgeClass` instead.
 
