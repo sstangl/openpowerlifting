@@ -68,6 +68,16 @@ def getmeetlist(html):
         if '/contest-results' not in url:
             continue
 
+        # This happens for national results, like Central Canadians.
+        # The CPU website keeps changing the URLs to these meets.
+        if '../../../index.php' in url:
+            prefix = 'http://powerlifting.ca/cpu/index.php'
+            url = url.replace('../../../index.php', prefix)
+
+        # All the provincial meet results have incorrect URLs...
+        if '/joomla30/' in url:
+            url = url.replace('/joomla30/', '/cpu/')
+
         if url not in urls:
             urls.append(url)
 

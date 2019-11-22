@@ -55,7 +55,14 @@ def parsehtml(html):
 
     # The header looks like "2019 Belle River Open, Belle River, ON".
     header = table.find('font', {'size': '5'}).contents[0].string
+    header = header.strip().replace('  ', ' ')
     split_header = header.split(',')
+    if len(split_header) == 2:
+        by_spaces = split_header[-1].split()
+        province = by_spaces[-1]
+        town = ' '.join(by_spaces[:-1])
+        split_header[1] = town
+        split_header.append(province)
     assert len(split_header) >= 3
 
     province = split_header[-1].strip()
