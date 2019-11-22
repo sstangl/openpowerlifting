@@ -27,6 +27,28 @@ except ImportError:
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 FEDURL = "http://www.powerlifting.ca"
 
+# The CPU website annoyingly posts results on per-province pages,
+# so we have to scan them all individually.
+#
+# List from http://www.powerlifting.ca/cpu/index.php/contests/provincial-results
+# Without "www." to appease the Python style checker due to long strings.
+PROVINCE_URLS = [
+    "http://powerlifting.ca/cpu/index.php/alberta",
+    "http://powerlifting.ca/cpu/index.php/british-columbia",
+    "http://powerlifting.ca/cpu/index.php/manitoba",
+    "http://powerlifting.ca/cpu/index.php/newfoundland",
+    "http://powerlifting.ca/cpu/index.php/new-brunswick",
+    "http://powerlifting.ca/cpu/index.php/nova-scotia",
+    "http://powerlifting.ca/cpu/index.php/ontario",
+    "http://powerlifting.ca/cpu/index.php/prince-edward-island",
+    "http://powerlifting.ca/cpu/index.php/quebec",
+    "http://powerlifting.ca/cpu/index.php/saskatchewan",
+    "http://powerlifting.ca/cpu/index.php/contests/national-results",
+    "http://powerlifting.ca/cpu/index.php/contests/regional-results/eastern-canadians",
+    "http://powerlifting.ca/cpu/index.php/contests/regional-results/western-canadians",
+    "http://powerlifting.ca/cpu/index.php/contests/regional-results/central-canadians"
+]
+
 
 def error(msg):
     print(msg, file=sys.stderr)
@@ -55,8 +77,14 @@ def getmeetlist(html):
 def main():
     meetlist = []
 
+    # Scans from new meets from the homepage, which displays the five most
+    # recent results, sorted by date. This skips old results.
     html = oplprobe.gethtml(FEDURL)
     meetlist = meetlist + getmeetlist(html)
+
+    for url in PROVINCE_URLS:
+        html = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

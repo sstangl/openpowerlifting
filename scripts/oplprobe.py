@@ -54,7 +54,7 @@ def getunenteredurls(meetlist, enteredmeets):
         if 'www.openpowerlifting.org' in m:
             continue
 
-        if m not in enteredmeets:
+        if m not in enteredmeets and m not in unentered:
             unentered.append(m)
 
     return unentered
