@@ -2011,7 +2011,14 @@ impl Federation {
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Glossbrenner,
             Federation::BVDG => PointsSystem::Wilks,
-            Federation::BVDK => Federation::ipf_rules_on(date),
+            Federation::BVDK => {
+                // Federation voted in Nov 2019 to switch to Dots in 2020.
+                if date.year() >= 2020 {
+                    PointsSystem::Dots
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::CanadaUA => PointsSystem::Wilks,
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
@@ -2156,7 +2163,14 @@ impl Federation {
             Federation::SSA => PointsSystem::Wilks,
             Federation::SSF => Federation::ipf_rules_on(date),
             Federation::SVNL => Federation::ipf_rules_on(date),
-            Federation::SwissPL => PointsSystem::Wilks,
+            Federation::SwissPL => {
+                // Federation voted in Nov 2019 to switch to Dots in 2020.
+                if date.year() >= 2020 {
+                    PointsSystem::Dots
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,

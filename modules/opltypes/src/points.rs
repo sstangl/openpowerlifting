@@ -22,6 +22,7 @@ pub struct Points(i32);
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub enum PointsSystem {
     AH,
+    Dots,
     Glossbrenner,
     IPFPoints,
     NASA,
