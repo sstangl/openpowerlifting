@@ -277,12 +277,72 @@ pub enum IndiaState {
 }
 
 /// A state in Mexico.
-#[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum MexicoState {
-    AG, BC, BS, CM, CS, CH, CO, CL, DF, DG, GT,
-    GR, HG, JA, EM, MI, MO, NA, NL, OA, PU, QT,
-    QR, SL, SI, SO, TB, TM, TL, VE, YU, ZA
+    /// Aguascalientes.
+    AG,
+    /// Baja California.
+    BC,
+    /// Baja California Sur.
+    BS,
+    /// Campeche.
+    CM,
+    /// Chiapas.
+    CS,
+    /// Chihuahua.
+    CH,
+    /// Coahuila.
+    CO,
+    /// Colima.
+    CL,
+    /// Mexico City.
+    DF,
+    /// Durango.
+    DG,
+    /// Guanajuato.
+    GT,
+    /// Guerrero.
+    GR,
+    /// Hidalgo.
+    HG,
+    /// Jalisco.
+    JA,
+    /// México.
+    EM,
+    /// Michoacán.
+    MI,
+    /// Morelos.
+    MO,
+    /// Nayarit.
+    NA,
+    /// Nuevo León.
+    NL,
+    /// Oaxaca.
+    OA,
+    /// Puebla.
+    PU,
+    /// Querétaro.
+    QT,
+    /// Quintana Roo.
+    QR,
+    /// San Luis Potosí.
+    SL,
+    /// Sinaloa.
+    SI,
+    /// Sonora.
+    SO,
+    /// Tabasco.
+    TB,
+    /// Tamaulipas.
+    TM,
+    /// Tlaxcala.
+    TL,
+    /// Veracruz.
+    VE,
+    /// Yucatán.
+    YU,
+    /// Zacatecas.
+    ZA,
 }
 
 /// A state in the Netherlands.
