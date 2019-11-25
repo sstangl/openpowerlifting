@@ -321,6 +321,7 @@
     fsmaapf = {name ="F_SEM_AAPF",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
     fyraapf = {name ="F_YR_AAPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesaapf = {name ="F_YES_AAPF",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
+    fyemaapf = {name ="F_YEM_AAPF",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
     fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
     fpfemapf = {name ="F_PFEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="F"} #Police/Fire
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
