@@ -49,6 +49,12 @@
     novice = {name ="Novice",min=0,max=999}
     masters = {name ="Masters",min=40,max=999}
 
+    # Disabled divisions (specifically noted as "amputee or no use of legs".
+    # Used by WPA-Africa.
+    disabled_open = {name="Disabled Open", min=0, max=999}
+    disabled_submasters3339 = {name="Disabled Submasters 33-39", min=33, max=39}
+    disabled_masters4044 = {name="Disabled Masters 40-44", min=40, max=44}
+
 [weightclasses.default_M]
     classes = ["39","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","155","125+","140+","155+"]
     date_range = ["0000-01-01","9999-01-01"]
