@@ -14,7 +14,6 @@ use crate::checklib::config::{Config, Exemption, WeightClassConfig};
 use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
-
 /// List of all plausible weightclasses, for non-configured federations.
 const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 52] = [
     // FIXME: Temporary classes while USPA is unconfigured.
@@ -94,19 +93,21 @@ pub struct EntriesCheckResult {
 
 /// Returns s as a String in Unicode NFKC form.
 ///
-/// Unicode decompositions take 2 forms, canonical equivalence and compatibility.
+/// Unicode decompositions take 2 forms, canonical equivalence and
+/// compatibility.
 ///
-/// Canonical equivalence means that characters or sequences of characters represent
-/// the same written character and should always be displayed the same.
-/// For example Ω and Ω are canonically equivalent, as are Ç and C+◌̧.
+/// Canonical equivalence means that characters or sequences of characters
+/// represent the same written character and should always be displayed the
+/// same. For example Ω and Ω are canonically equivalent, as are Ç and C+◌̧.
 ///
-/// Compatibility means that characters or sequences of characters represent the same
-/// written character but may be displayed differently.
+/// Compatibility means that characters or sequences of characters represent the
+/// same written character but may be displayed differently.
 /// For example ｶ and カ are compatible, as are ℌ and H.
 ///
-/// NFKC form decomposes characters by compatibility and then recomposes by canonical
-/// equivalence. We want NFKC form as half-width characters should display the same as
-/// full width characters on the site, as should font variants.
+/// NFKC form decomposes characters by compatibility and then recomposes by
+/// canonical equivalence. We want NFKC form as half-width characters should
+/// display the same as full width characters on the site, as should font
+/// variants.
 fn canonicalize_name_utf8(s: &str) -> String {
     s.nfkc().collect::<String>()
 }

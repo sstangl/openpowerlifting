@@ -68,7 +68,7 @@ pub fn is_japanese(letter: char) -> bool {
         // Some valid punctuation symbols
         12_293..=12_294 => true,
         // Hiragana
-        12_352..=12_447 => true, 
+        12_352..=12_447 => true,
         // CJK Unified Ideographs.
         19_968..=40_959 => true,
         // CJK Compatibility Forms.
