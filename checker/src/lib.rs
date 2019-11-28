@@ -12,6 +12,7 @@ extern crate strum; // Used for iterating over enums.
 #[macro_use]
 extern crate strum_macros; // Used for iterating over enums.
 extern crate toml; // Knows how to read the CONFIG.toml format.
+extern crate unicode_normalization; // Used to normalize the name strings
 
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};

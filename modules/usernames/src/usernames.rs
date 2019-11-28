@@ -61,12 +61,14 @@ fn is_exception(letter: char) -> bool {
     }
 }
 
-/// Checks if the given character is Chinese/Japanese/Korean.
-fn is_eastasian(letter: char) -> bool {
+/// Checks if the given character is Japanese.
+pub fn is_japanese(letter: char) -> bool {
     let ord: u32 = letter as u32;
     match ord {
-        // CJK Compatibility.
-        13_056..=13_311 => true,
+        // Some valid punctuation symbols
+        12_293..=12_294 => true,
+        // Hiragana
+        12_352..=12_447 => true, 
         // CJK Unified Ideographs.
         19_968..=40_959 => true,
         // CJK Compatibility Forms.
@@ -111,7 +113,7 @@ pub fn make_username(name: &str) -> Result<String, String> {
         return Ok(String::default());
     }
 
-    if name.chars().any(is_eastasian) {
+    if name.chars().any(is_japanese) {
         let ea_id: String = name
             .chars()
             .map(|letter| (letter as u32).to_string())

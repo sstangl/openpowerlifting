@@ -4,6 +4,7 @@ use coefficients::{glossbrenner, ipf, wilks};
 use csv;
 use opltypes::*;
 use strum::IntoEnumIterator;
+use unicode_normalization::UnicodeNormalization;
 
 use std::error::Error;
 use std::io;
@@ -12,6 +13,7 @@ use std::path::PathBuf;
 use crate::checklib::config::{Config, Exemption, WeightClassConfig};
 use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
+
 
 /// List of all plausible weightclasses, for non-configured federations.
 const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 52] = [
@@ -90,6 +92,25 @@ pub struct EntriesCheckResult {
     pub entries: Option<Vec<Entry>>,
 }
 
+/// Returns s as a String in Unicode NFKC form.
+///
+/// Unicode decompositions take 2 forms, canonical equivalence and compatibility.
+///
+/// Canonical equivalence means that characters or sequences of characters represent
+/// the same written character and should always be displayed the same.
+/// For example Ω and Ω are canonically equivalent, as are Ç and C+◌̧.
+///
+/// Compatibility means that characters or sequences of characters represent the same
+/// written character but may be displayed differently.
+/// For example ｶ and カ are compatible, as are ℌ and H.
+///
+/// NFKC form decomposes characters by compatibility and then recomposes by canonical
+/// equivalence. We want NFKC form as half-width characters should display the same as
+/// full width characters on the site, as should font variants.
+fn canonicalize_name_utf8(s: &str) -> String {
+    s.nfkc().collect::<String>()
+}
+
 /// Stores parsed data for a single row.
 ///
 /// The intention is for each field to only be parsed once, after
@@ -99,6 +120,7 @@ pub struct Entry {
     pub name: String,
     pub username: String,
     pub cyrillicname: Option<String>,
+    pub japanesename: Option<String>,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -471,8 +493,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
             format!("Name '{}' must have suffix fully-capitalized", name),
         );
     }
-
-    name.to_string()
+    canonicalize_name_utf8(name)
 }
 
 const CYRILLIC_CHARACTERS: &str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
@@ -492,7 +513,22 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<
         }
     }
 
-    Some(s.to_string())
+    Some(canonicalize_name_utf8(s))
+}
+
+fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
+    for c in s.chars() {
+        if !usernames::is_japanese(c) && c != ' ' {
+            let msg = format!(
+                "JapaneseName '{}' contains non-Japanese character '{}'",
+                s, c
+            );
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+
+    Some(canonicalize_name_utf8(s))
 }
 
 fn check_column_birthyear(
@@ -2028,6 +2064,10 @@ where
         if let Some(idx) = headers.get(Header::CyrillicName) {
             entry.cyrillicname =
                 check_column_cyrillicname(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::JapaneseName) {
+            entry.japanesename =
+                check_column_japanesename(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
             entry.birthyear =
