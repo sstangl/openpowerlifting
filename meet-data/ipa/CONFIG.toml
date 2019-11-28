@@ -67,10 +67,10 @@
 
     # Some Russian meets disregarded the rulebook and just used standard divisions.
     # These contain age information, so we might as well interpret them.
-    ama_masters_40_49 = {name="Amateur Masters 40-49", min=40, max=49}
-    ama_masters_50_59 = {name="Amateur Masters 50-59", min=50, max=59}
-    ama_masters_60_69 = {name="Amateur Masters 60-69", min=60, max=69}
-    ama_masters_70_79 = {name="Amateur Masters 70-79", min=70, max=79}
+    ama_masters_40_49 = {name="Amateur Masters 40-49", min=40, max=49, tested="Yes"}
+    ama_masters_50_59 = {name="Amateur Masters 50-59", min=50, max=59, tested="Yes"}
+    ama_masters_60_69 = {name="Amateur Masters 60-69", min=60, max=69, tested="Yes"}
+    ama_masters_70_79 = {name="Amateur Masters 70-79", min=70, max=79, tested="Yes"}
     pro_masters_40_49 = {name="Pro Masters 40-49", min=40, max=49}
     pro_masters_50_59 = {name="Pro Masters 50-59", min=50, max=59}
     pro_masters_60_69 = {name="Pro Masters 60-69", min=60, max=69}
