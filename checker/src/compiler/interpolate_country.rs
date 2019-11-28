@@ -67,7 +67,7 @@ fn get_consistent_country(
     indices: &[EntryIndex],
     debug: bool,
 ) -> Option<Country> {
-    let mut country = None;
+    let mut acc: Option<Country> = None;
 
     for &index in indices {
         // Get the MeetPath for more helpful debugging output.
@@ -78,21 +78,30 @@ fn get_consistent_country(
         };
 
         let entry = meetdata.get_entry(index);
-        if entry.country.is_some() {
-            if country.is_some() {
-                if country != entry.country {
-                    trace_conflict(debug, entry.country.unwrap(), &path);
-                    return None;
+
+        if let Some(country) = entry.country {
+            if let Some(acc_country) = acc {
+                if country != acc_country {
+                    // Countries within the UK are compatible with Country::UK.
+                    if country == Country::UK && acc_country.is_in_uk() {
+                        trace_matched(debug, country, &path);
+                    } else if acc_country == Country::UK && country.is_in_uk() {
+                        acc = Some(country);
+                        trace_matched(debug, country, &path);
+                    } else {
+                        trace_conflict(debug, country, &path);
+                        return None;
+                    }
                 } else {
-                    trace_matched(debug, entry.country.unwrap(), &path);
+                    trace_matched(debug, country, &path);
                 }
             } else {
-                trace_found_initial(debug, entry.country.unwrap(), &path);
-                country = entry.country;
+                trace_found_initial(debug, country, &path);
+                acc = Some(country);
             }
         }
     }
-    country
+    acc
 }
 
 /// Country interpolation for a single lifter's entries.
@@ -203,5 +212,28 @@ mod tests {
         assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::USA));
         assert_eq!(meetdata.get_entry_at(0, 2).country, None);
         assert_eq!(meetdata.get_entry_at(0, 3).country, Some(Country::Russia));
+    }
+
+    /// Countries within the UK are compatible with Country:UK.
+    #[test]
+    fn uk_subsets() {
+        let uk = Entry {
+            country: Some(Country::UK),
+            ..Entry::default()
+        };
+        let scotland = Entry {
+            country: Some(Country::Scotland),
+            ..Entry::default()
+        };
+
+        let mut meetdata =
+            meetdata_from_vec(vec![Entry::default(), uk, Entry::default(), scotland]);
+        let liftermap = meetdata.create_liftermap();
+        interpolate_country(&mut meetdata, &liftermap);
+
+        assert_eq!(meetdata.get_entry_at(0, 0).country, Some(Country::Scotland));
+        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::Scotland));
+        assert_eq!(meetdata.get_entry_at(0, 2).country, Some(Country::Scotland));
+        assert_eq!(meetdata.get_entry_at(0, 3).country, Some(Country::Scotland));
     }
 }
