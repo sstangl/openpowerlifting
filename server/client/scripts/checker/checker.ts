@@ -57,9 +57,9 @@ function runChecker(): void {
     // Clear the error reporting sections.
     // This causes relayout and therefore flickering, but makes it clear
     // when the server misses a response.
-    ioErrorPre.innerText = null;
-    meetErrorPre.innerText = null;
-    entriesErrorPre.innerText = null;
+    ioErrorPre.innerText = "";
+    meetErrorPre.innerText = "";
+    entriesErrorPre.innerText = "";
 
     handle.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
@@ -107,9 +107,9 @@ function initializeEventListeners() {
     meetTextArea = document.getElementById("meetTextArea") as HTMLTextAreaElement;
     entriesTextArea = document.getElementById("entriesTextArea") as HTMLTextAreaElement;
 
-    ioErrorPre = document.getElementById("ioErrorPre");
-    meetErrorPre = document.getElementById("meetErrorPre");
-    entriesErrorPre = document.getElementById("entriesErrorPre");
+    ioErrorPre = document.getElementById("ioErrorPre") as HTMLElement;
+    meetErrorPre = document.getElementById("meetErrorPre") as HTMLElement;
+    entriesErrorPre = document.getElementById("entriesErrorPre") as HTMLElement;
 
     checkButton.addEventListener("click", runChecker, false);
 

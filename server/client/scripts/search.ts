@@ -40,10 +40,10 @@ export interface SearchWorkItem {
 export function RankingsSearcher() {
     const AJAX_TIMEOUT = 50;  // Milliseconds before making AJAX request.
 
-    let activeTimeout: number = null;  // Timeout before making AJAX request.
-    let activeAjaxRequest: XMLHttpRequest = null;
+    let activeTimeout: number | null = null;  // Timeout before making AJAX request.
+    let activeAjaxRequest: XMLHttpRequest | null = null;
 
-    let pendingItem: SearchWorkItem = null;
+    let pendingItem: SearchWorkItem | null = null;
 
     const onSearchFound = new Slick.Event();
     const onSearchNotFound = new Slick.Event();
@@ -73,6 +73,11 @@ export function RankingsSearcher() {
         // This function was called by the timeout handler.
         activeTimeout = null;
 
+        // Can't happen: appeases TypeScript.
+        if (pendingItem === null) {
+            return;
+        }
+
         // Pop the pendingItem.
         const item = pendingItem;
         pendingItem = null;
@@ -81,6 +86,11 @@ export function RankingsSearcher() {
         handle.open("GET", makeApiUrl(item));
         handle.responseType = "json";
         handle.addEventListener("load", function(e) {
+            // Can't happen, but just to appease TypeScript.
+            if (activeAjaxRequest === null) {
+                return;
+            }
+
             const index = activeAjaxRequest.response.next_index;
             activeAjaxRequest = null;
 

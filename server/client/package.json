@@ -2,11 +2,11 @@
   "name": "openpowerlifting-client",
   "version": "0.0.1",
   "description": "The OpenPowerlifting website frontend.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "sass": "node-sass --output-style compressed css/style.scss build/css/style.css",
     "sass-openipf": "node-sass --output-style compressed css/openipf.scss build/css/openipf.css",
-    "webpack": "webpack --env.prod --display-error-details --optimize-minimize"
+    "webpack": "webpack --display-error-details --optimize-minimize"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,14 @@
     "slickgrid": "^2.4.13"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^3.5.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-minify-constant-folding": "^0.2.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@types/slickgrid": "^2.1.29",
+    "babel-loader": "^8.0.6",
     "node-sass": "^4.13.0",
-    "typescript": "^3.6.4",
-    "webpack": "^3.11.0"
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

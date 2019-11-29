@@ -164,7 +164,7 @@ export class Csv {
     const fieldnames = lines[0].split(",").map(x => x.trim());
 
     // Any rows after the first contain data.
-    let rows = [];
+    const rows: string[][] = [];
     for (let i = 1; i < lines.length; ++i) {
       const row = lines[i].split(",").map(x => x.trim());
       rows.push(row);

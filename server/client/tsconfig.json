@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+
+    "target": "ES2015"
+  },
+  "include": [
+    "scripts"
+  ],
+  "types": [
+    "slickgrid"
+  ]
+}

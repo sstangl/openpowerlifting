@@ -24,8 +24,6 @@
 
 'use strict';
 
-declare var Slick;
-
 // Provided by the rankings template.
 declare const urlprefix: string;
 
@@ -89,13 +87,13 @@ export function RemoteCache(
     let length: number = 0;
     let hadFirstLoad = false;
 
-    let activeTimeout: number = null;  // Timeout before making AJAX request.
-    let activeAjaxRequest: AjaxRequest = null;
+    let activeTimeout: number | null = null;  // Timeout before making AJAX request.
+    let activeAjaxRequest: AjaxRequest | null = null;
 
     // The viewport can update while the AJAX request is still ongoing.
     // The request is still allowed to finish, but it might have to
     // make another request with the pendingItem upon completion.
-    let pendingItem: WorkItem = null;
+    let pendingItem: WorkItem | null = null;
 
     const onDataLoading = new Slick.Event();  // Data is currently loading.
     const onDataLoaded = new Slick.Event();  // Data has finished loading.
@@ -190,6 +188,11 @@ export function RemoteCache(
         handle.open("GET", makeApiUrl(item));
         handle.responseType = "json";
         handle.addEventListener("load", function(e) {
+            // Can't happen: appeases TypeScript.
+            if (activeAjaxRequest === null) {
+                return;
+            }
+
             addRows(activeAjaxRequest.handle.response);
             activeAjaxRequest = null;
             if (hadFirstLoad === true) {

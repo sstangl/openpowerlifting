@@ -48,11 +48,11 @@ function reload() {
     }
 }
 
-function addSelectorListeners(selector) {
+function addSelectorListeners(selector: HTMLSelectElement): void {
     selector.addEventListener("change", reload);
 }
 
-function addEventListeners() {
+function addEventListeners(): void {
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
 

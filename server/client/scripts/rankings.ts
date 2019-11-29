@@ -23,11 +23,8 @@
 import { RemoteCache, WorkItem, Column } from './remotecache';
 import { SearchRankingsResult, SearchWorkItem, RankingsSearcher } from './search';
 
-// Appease the TypeScript compiler.
-declare var Slick;
-
 // Variables provided by the server.
-declare const initial_data;
+declare const initial_data: Object[];
 declare const urlprefix: string; // For navigation only, not for API calls.
 
 declare const default_equipment: string;
@@ -403,7 +400,7 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
         // Move the grid into position.
         global_grid.scrollRowToTop(args.startRow);
         global_grid.render();
-    });
+    } as any);
 
     // Data loads after the first should let the grid know that new
     // data is available by invalidating the current empty rows.
@@ -413,7 +410,7 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
         }
         global_grid.updateRowCount();
         global_grid.render();
-    });
+    } as any);
 
     return cache;
 }
@@ -471,7 +468,7 @@ function onLoad() {
     }
 
     global_cache = makeRemoteCache(selection_to_path(), true);
-    global_grid = new Slick.Grid("#theGrid", makeDataProvider(), columns, options);
+    global_grid = new Slick.Grid("#theGrid", makeDataProvider() as any, columns, options);
 
     // Hook up the cache.
     global_grid.onViewportChanged.subscribe(function (e, args) {

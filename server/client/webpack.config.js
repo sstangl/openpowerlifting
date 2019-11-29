@@ -1,8 +1,13 @@
 // vim: set ts=2 sts=2 sw=2 et:
 const path = require('path');
-const webpack = require('webpack')
 
-const BabelMinifyConstantFolding = require('babel-plugin-minify-constant-folding');
+var babelOptions = {
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": false
+    }]
+  ]
+};
 
 module.exports = {
   entry: {
@@ -18,38 +23,32 @@ module.exports = {
     filename: "[name].js",
   },
 
+  mode: "production",
+
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env'],
-          plugins: [BabelMinifyConstantFolding]
-        }
-      },
-      {
-        test: /\.ts$/,
-        // The loader array executes right-to-left.
-        loaders: [
+        exclude: /node_modules/,
+        use: [
           {
             loader: 'babel-loader',
-            query: {
-              presets: ['env'],
-              plugins: [BabelMinifyConstantFolding]
-            }
+            options: babelOptions
+          }
+        ]
+      },
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: babelOptions
           },
           {
-            loader: 'awesome-typescript-loader',
-            options: {
-              // Setting to "true" causes the loader to consult the build/
-              // directory, where it tries to load the openpowerlifting.js
-              // and OOMs.
-              allowJs: false
-            }
+            loader: 'ts-loader'
           }
-        ],
-        exclude: /node_modules/,
+        ]
       }
     ]
   },
