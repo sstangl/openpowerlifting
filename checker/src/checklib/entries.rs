@@ -494,6 +494,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
             format!("Name '{}' must have suffix fully-capitalized", name),
         );
     }
+
     canonicalize_name_utf8(name)
 }
 
@@ -503,33 +504,39 @@ const CYRILLIC_CHARACTERS: &str = "абвгдеёжзийклмнопрстуф�
                                    -' .";
 
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
-    for c in s.chars() {
-        if !CYRILLIC_CHARACTERS.contains(c) {
-            let msg = format!(
-                "CyrillicName '{}' contains non-Cyrillic character '{}'",
-                s, c
-            );
-            report.error_on(line, msg);
-            return None;
+    if s.is_empty() {
+        None
+    } else {
+        for c in s.chars() {
+            if !CYRILLIC_CHARACTERS.contains(c) {
+                let msg = format!(
+                    "CyrillicName '{}' contains non-Cyrillic character '{}'",
+                    s, c
+                );
+                report.error_on(line, msg);
+                return None;
+            }
         }
+        Some(canonicalize_name_utf8(s))
     }
-
-    Some(canonicalize_name_utf8(s))
 }
 
 fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
-    for c in s.chars() {
-        if !usernames::is_japanese(c) && c != ' ' {
-            let msg = format!(
-                "JapaneseName '{}' contains non-Japanese character '{}'",
-                s, c
-            );
-            report.error_on(line, msg);
-            return None;
+    if s.is_empty() {
+        None
+    } else {
+        for c in s.chars() {
+            if !usernames::is_japanese(c) && c != ' ' {
+                let msg = format!(
+                    "JapaneseName '{}' contains non-Japanese character '{}'",
+                    s, c
+                );
+                report.error_on(line, msg);
+                return None;
+            }
         }
+        Some(canonicalize_name_utf8(s))
     }
-
-    Some(canonicalize_name_utf8(s))
 }
 
 fn check_column_birthyear(

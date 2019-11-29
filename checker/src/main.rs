@@ -371,16 +371,39 @@ fn main() -> Result<(), Box<dyn Error>> {
     // FIXME: Otherwise we could just do the checking in create_liftermap().
     let liftermap = meetdata.create_liftermap();
     for lifter_indices in liftermap.values() {
-        let first = &meetdata.get_entry(lifter_indices[0]).name;
+        let name = &meetdata.get_entry(lifter_indices[0]).name;
+        let mut japanesename = &meetdata.get_entry(lifter_indices[0]).japanesename;
+
         for index in lifter_indices.iter().skip(1) {
             let entry = &meetdata.get_entry(*index);
-            if first != &entry.name {
+
+            // The Name field must exactly match for the same username.
+            if name != &entry.name {
                 let msg = format!(
                     "Conflict for {}: '{}' vs '{}'",
-                    entry.username, first, entry.name
+                    entry.username, name, entry.name
                 );
                 println!(" {}", msg.bold().red());
                 error_count += 1;
+            }
+
+            // If this is the first time seeing a JapaneseName, remember it.
+            if japanesename.is_none() && entry.japanesename.is_some() {
+                japanesename = &entry.japanesename;
+            }
+
+            // Otherwise, they should match.
+            if let Some(jp_name) = japanesename {
+                if let Some(entry_jp_name) = &entry.japanesename {
+                    if jp_name != entry_jp_name {
+                        let msg = format!(
+                            "Conflict for {}: '{}' vs '{}'",
+                            entry.username, jp_name, entry_jp_name
+                        );
+                        println!(" {}", msg.bold().red());
+                        error_count += 1;
+                    }
+                }
             }
         }
     }

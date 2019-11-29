@@ -193,6 +193,8 @@ struct LiftersRow<'md, 'ld> {
     name: &'md str,
     #[serde(rename = "CyrillicName")]
     cyrillicname: Option<&'md str>,
+    #[serde(rename = "JapaneseName")]
+    japanesename: Option<&'md str>,
     #[serde(rename = "Username")]
     username: &'md str,
     #[serde(rename = "Instagram")]
@@ -214,6 +216,7 @@ impl<'md, 'ld> LiftersRow<'md, 'ld> {
             id: entrydata.id,
             name: entrydata.name,
             cyrillicname: entrydata.cyrillicname,
+            japanesename: entrydata.japanesename,
             username: entrydata.username,
             instagram: lifterdata.instagram.as_deref(),
             vkontakte: lifterdata.vkontakte.as_deref(),
@@ -229,6 +232,7 @@ struct EntryLifterData<'md> {
     name: &'md str,
     username: &'md str, // Stored again for simplicity of iteration.
     cyrillicname: Option<&'md str>,
+    japanesename: Option<&'md str>,
 }
 
 impl<'md> EntryLifterData<'md> {
@@ -238,6 +242,7 @@ impl<'md> EntryLifterData<'md> {
             name: &entry.name,
             username: &entry.username,
             cyrillicname: entry.cyrillicname.as_deref(),
+            japanesename: entry.japanesename.as_deref(),
         }
     }
 
@@ -249,6 +254,7 @@ impl<'md> EntryLifterData<'md> {
             name: "Sean Stangl",
             username: "seanstangl",
             cyrillicname: Some("Шон Стангл"),
+            japanesename: Some("ショーン・スタングル"),
         }
     }
 }
@@ -302,6 +308,9 @@ pub fn make_csv(
                     // has more information that could be attributed.
                     if data.cyrillicname.is_none() && entry.cyrillicname.is_some() {
                         data.cyrillicname = entry.cyrillicname.as_deref();
+                    }
+                    if data.japanesename.is_none() && entry.japanesename.is_some() {
+                        data.japanesename = entry.japanesename.as_deref();
                     }
                     data.id
                 }
