@@ -107,27 +107,27 @@ def fixcolnames(columns):
             columns[i] = 'Age'
         elif low == 'squat':
             columns[i] = 'Best3SquatKg'
-        elif low == 'squat, kg':
+        elif low == 'squat, kg' or low == 'sq kg':
             columns[i] = 'Best3SquatKg'
         elif low == 'squat kg':
             columns[i] = 'Best3SquatKg'
-        elif low == 'squat lbs':
+        elif low == 'squat lbs' or low == 'sq lbs':
             columns[i] = 'Best3SquatLBS'
         elif low == 'bench':
             columns[i] = 'Best3BenchKg'
-        elif low == 'bench, kg':
+        elif low == 'bench, kg' or low == 'bp kg':
             columns[i] = 'Best3BenchKg'
         elif low == 'bench kg':
             columns[i] = 'Best3BenchKg'
-        elif low == 'bench lbs':
+        elif low == 'bench lbs' or low == 'bp lbs':
             columns[i] = 'Best3BenchLBS'
         elif low == 'deadlift':
             columns[i] = 'Best3DeadliftKg'
-        elif low == 'deadlift, kg':
+        elif low == 'deadlift, kg' or low == 'dl kg':
             columns[i] = 'Best3DeadliftKg'
         elif low == 'deadlift kg':
             columns[i] = 'Best3DeadliftKg'
-        elif low == 'deadlift lbs':
+        elif low == 'deadlift lbs' or low == 'dl lbs':
             columns[i] = 'Best3DeadliftLBS'
         elif low == 'total':
             columns[i] = 'TotalKg'
@@ -161,7 +161,7 @@ def fixcolnames(columns):
             columns[i] = 'Best3BenchKg'
         elif low == 'dl':
             columns[i] = 'Best3DeadliftKg'
-        elif low == 'mcc':
+        elif low == 'mcc' or low == 'mcc total':
             columns[i] = 'McCulloch'
         elif low == 'lbs':
             columns[i] = 'DELETEME'
