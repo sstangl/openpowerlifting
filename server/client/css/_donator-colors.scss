@@ -289,6 +289,13 @@
   background-image: linear-gradient(to right, $pink, $white);
 }
 
+.purple_to_hotpink {
+  $purple: #AE76FF;
+  $hotpink: #F442B0;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to right, $purple, $hotpink);
+}
+
 .purple_to_green {
   $purple: #AE76FF;
   $green: #51DA27;
