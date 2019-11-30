@@ -1,3 +1,5 @@
+# Configuration for the USPF.
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     policefire = {name ="Police/Fire",min=0,max=999}
