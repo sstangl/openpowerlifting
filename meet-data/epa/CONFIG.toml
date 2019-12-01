@@ -1,3 +1,5 @@
+# Configuration for the EPA.
+
 [divisions]
     #Men's divisions old style
     mcopen = {name ="M-C-Open",min=0,max=999,equipment="Raw"}
@@ -132,5 +134,6 @@
     0605 = ["ExemptDivision"]
     0606 = ["ExemptDivision"]
     1215 = ["ExemptDivision"]
+    1753 = ["ExemptDivision"] # One joker wore sleeves in the Equipped division.
     1930 = ["ExemptWeightClassConsistency"] #53Kg in open
     1958 = ["ExemptDivision"] # Lifters in equipped divisions competed raw.
