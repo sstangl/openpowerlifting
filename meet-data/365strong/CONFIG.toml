@@ -85,7 +85,10 @@
     mnsrx = {name = "M-NS-R-X", min=0, max=999, sex="M", equipment="Raw"}
 
     # Miscellaneous divisions that haven't been fully expanded yet.
+    mybrx = {name = "M-YB-R-X", min=4, max=12, sex="M", equipment="Raw"}
+    mt1brx = {name = "M-T1B-R-X", min=13, max=15, sex="M", equipment="Raw"}
     mt2frx = {name = "M-T2F-R-X", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
+    mt2brx = {name = "M-T2B-R-X", min=16, max=17, sex="M", equipment="Raw"}
     mt3frx = {name = "M-T3F-R-X", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
     mt3frcx = {name = "M-T3F-RC-X", min=18, max=19, sex="M", equipment="Wraps"}
     mt3prx = {name = "M-T3P-R-X", min=18, max=19, sex="M", equipment="Raw"}
@@ -102,8 +105,9 @@
     mm3frcx = {name = "M-M3F-RC-X", min=50, max=54, sex="M", equipment="Wraps"}
     mm2prx = {name = "M-M2P-R-X", min=45, max=49, sex="M", equipment="Raw"}
     mm3prx = {name = "M-M3P-R-X", min=50, max=54, sex="M", equipment="Raw"}
+    mm3brx = {name = "M-M3B-R-X", min=50, max=54, sex="M", equipment="Raw"}
     mm3bspx = {name = "M-M3B-SP-X", min=50, max=54, sex="M", equipment="Single-ply"}
-    mm3brx = {name = "M-M3B-MP-X", min=50, max=54, sex="M", equipment="Multi-ply"}
+    mm3bmpx = {name = "M-M3B-MP-X", min=50, max=54, sex="M", equipment="Multi-ply"}
     mm4frx = {name = "M-M4F-R-X", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
     mm4frcx = {name = "M-M4F-RC-X", min=55, max=59, sex="M", equipment="Wraps"}
     mm4brx = {name = "M-M4B-R-X", min=55, max=59, sex="M", equipment="Raw"}
