@@ -393,7 +393,7 @@ def fixclass(csv):
             x = 'Police-Fire'
         elif s == 'crossfit am':
             x = 'Crossfit Amateur'
-        elif s == 'adaptive athlete':
+        elif s == 'adaptive athlete' or s == 'aai':
             x = "Adaptive"
 
         elif s == '' and i > 0:
