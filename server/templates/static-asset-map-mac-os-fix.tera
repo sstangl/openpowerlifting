@@ -1,0 +1,12 @@
+{% macro style_css() %}../css/style.1aec188d07defb7b0208c7ed55ca1c27.css{% endmacro style_css %}
+{% macro openipf_css() %}../openipf.cb368112262bd66c7fa54e2af12ddad5.css{% endmacro openipf_css %}
+{% macro logo_on_black_svg() %}../images/logo-on-black.17d515a77384c7754613eacf16cc1474.svg{% endmacro logo_on_black_svg %}
+{% macro logo_compressed_svg() %}../images/logo-compressed.e87731f9ce53411287c05e88356bf68e.svg{% endmacro logo_compressed_svg %}
+{% macro rankings_js() %}../scripts/rankings.3f9efb6f7cf7eb81006d25ef106998fa.js{% endmacro rankings_js %}
+{% macro records_js() %}../scripts/records.afec05207ead6e06e0b5057c759f6013.js{% endmacro records_js %}
+{% macro meet_js() %}../scripts/meet.ed01efd6e1b85b3dca40e41f32b7ff8b.js{% endmacro meet_js %}
+{% macro slickgrid_min_js() %}../scripts/slickgrid.56667b6059ce7a004e34aeccd81093a0.min.js{% endmacro slickgrid_min_js %}
+{% macro checker_js() %}../scripts/checker.28b4ee9ac4db1137821e6335f0c89340.js{% endmacro checker_js %}
+{% macro meetlist_js() %}../scripts/meetlist.21710c21df5cf49186973c5898feca3b.js{% endmacro meetlist_js %}
+{% macro git_head() %}../scripts/93c1a4b405de9d92487811da3ed0f5b304a6f7b4{% endmacro git_head %}
+{% macro git_head_short() %}../scripts/93c1a4b4{% endmacro git_head_short %}
