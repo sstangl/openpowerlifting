@@ -143,13 +143,9 @@ pub enum Federation {
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
 
-    // Belarus Powerlifting Federation, IPF.
+    /// Belarus Powerlifting Federation, IPF.
     #[strum(to_string = "BelPF", serialize = "belpf")]
     BelPF,
-
-    /// Bench America, short lived Bench invitiational meet.
-    #[strum(to_string = "BenchAmerica", serialize = "benchamerica")]
-    BenchAmerica,
 
     /// British Powerlifting, IPF. Formerly named GBPF.
     #[strum(to_string = "BP", serialize = "bp")]
@@ -1173,7 +1169,6 @@ impl Federation {
             Federation::BB => false,
             Federation::BDFPA => true,
             Federation::BelPF => true,
-            Federation::BenchAmerica => false,
             Federation::BP => true,
             Federation::BPC => false,
             Federation::BPF => false,
@@ -1439,7 +1434,6 @@ impl Federation {
             Federation::BB => Some(Country::Russia),
             Federation::BDFPA => Some(Country::UK),
             Federation::BelPF => Some(Country::Belarus),
-            Federation::BenchAmerica => Some(Country::USA),
             Federation::BP => Some(Country::UK),
             Federation::BPC => Some(Country::UK),
             Federation::BPF => Some(Country::UK),
@@ -1706,7 +1700,6 @@ impl Federation {
             Federation::BB => None,
             Federation::BDFPA => None,
             Federation::BelPF => Some(Federation::IPF),
-            Federation::BenchAmerica => None,
             Federation::BP => Some(Federation::IPF),
             Federation::BPC => {
                 // The BPC was WPC-affiliated until 2012.
@@ -2012,7 +2005,6 @@ impl Federation {
             Federation::BB => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
             Federation::BelPF => Federation::ipf_rules_on(date),
-            Federation::BenchAmerica => PointsSystem::Wilks,
             Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
