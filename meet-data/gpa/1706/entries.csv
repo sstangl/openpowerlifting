@@ -12,8 +12,8 @@ Place,Sex,WeightClassKg,Event,Equipment,Tested,Division,Name,CyrillicName,BirthD
 2,M,100,SBD,Wraps,No,Juniors 20-23,Nicalai Colta,,1995-11-27,98.8,-215,215,-225,215,170,175,-177.5,175,,245,250,255,,255,645,Moldova
 1,M,100,SBD,Wraps,No,Open,Mikhaylo Zhelyazkov,Михайло Желязков,1980-09-12,98.4,315,325,335,335,180,185,,185,,320,330,-340,,330,850,Ukraine
 2,M,100,SBD,Wraps,No,Open,Sergiy Plotnikov,Сергій Плотніков,1995-01-08,99.5,250,265,277.5,277.5,165,175,180,180,,245,262.5,267.5,,267.5,725,Ukraine
-3,M,100,SBD,Wraps,No,Open,Viktor Rublov,Віктор Рубльов,1975-10-26,98.65,-265,270,280,280,-175,175,-182.5,175,,255,-265,265,,265,720,Ukraine
-1,M,100,SBD,Wraps,No,Masters 40-44,Viktor Rublov,Віктор Рубльов,1975-10-26,98.65,-265,270,280,280,-175,175,-182.5,175,,255,-265,265,,265,720,Ukraine
+3,M,100,SBD,Wraps,No,Open,Viktor Rublyov,Віктор Рубльов,1975-10-26,98.65,-265,270,280,280,-175,175,-182.5,175,,255,-265,265,,265,720,Ukraine
+1,M,100,SBD,Wraps,No,Masters 40-44,Viktor Rublyov,Віктор Рубльов,1975-10-26,98.65,-265,270,280,280,-175,175,-182.5,175,,255,-265,265,,265,720,Ukraine
 1,M,110,SBD,Wraps,No,Open,Mikita Eyrushevich,Микита Ейрушевич,1989-06-30,109.3,290,-310,310,310,185,-190,,185,,-270,285,-307.5,,285,780,Ukraine
 2,M,110,SBD,Wraps,No,Open,Evgeniy Rudnik,Євгеній Руднік,1978-03-01,106.95,240,-280,280,280,180,-200,,180,,280,-310,,,280,740,Ukraine
 DQ,M,110,SBD,Wraps,No,Open,Igor Emelianov,,1993-08-15,107.5,-220,,,,,,,,,,,,,,,Moldova
@@ -48,7 +48,7 @@ DQ,M,90,B,Raw,No,Open,Vitaliy Gonetskiy,Віталій Гонецький,1978-0
 3,M,100,B,Raw,No,Open,Igor Danilov,Игорь Данилов,1985-11-27,95.35,,,,,-200,-205,205,205,,,,,,,205,Ukraine
 4,M,100,B,Raw,No,Open,Andrey Zemlyakov,,1991-06-24,98.05,,,,,175,180,185,185,,,,,,,185,Belarus
 1,M,100,B,Raw,No,Masters 45-49,Yuriy Kostenko,Юрій Костенко,1971-07-28,99,,,,,175,182.5,-185,182.5,,,,,,,182.5,Ukraine
-2,M,100,B,Raw,No,Masters 40-44,Viktor Rublov,Віктор Рубльов,1975-10-26,98.65,,,,,-175,175,-182.5,175,,,,,,,175,Ukraine
+2,M,100,B,Raw,No,Masters 40-44,Viktor Rublyov,Віктор Рубльов,1975-10-26,98.65,,,,,-175,175,-182.5,175,,,,,,,175,Ukraine
 1,M,110,B,Raw,No,Open,Andriy Romanko,Андрій Романко,1975-08-24,100.35,,,,,200,220,225,225,,,,,,,225,Ukraine
 2,M,110,B,Raw,No,Open,Dmitro Berest,Дмитро Берест,1985-07-02,106.5,,,,,-195,215,222.5,222.5,,,,,,,222.5,Ukraine
 3,M,110,B,Raw,No,Open,Sergiy Shepel,Сергій Шепель,1983-03-28,104,,,,,170,185,-195,185,,,,,,,185,Ukraine
@@ -76,7 +76,7 @@ DQ,M,100,B,Multi-ply,No,Masters 40-44,Vitaliy Popov,,1977-10-30,97.35,,,,,-260,-
 1,M,100,D,Raw,No,Open,Mikhaylo Zhelyazkov,Михайло Желязков,1980-09-12,98.4,,,,,,,,,,320,330,-340,,330,330,Ukraine
 2,M,100,D,Raw,No,Open,Oleg Yanovich,Олег Янович,1992-05-05,94.15,,,,,,,,,,270,-285,292.5,,292.5,292.5,Ukraine
 DQ,M,100,D,Raw,No,Open,Evgeniy Yakovlev,Евгений Яковлев,1975-11-12,96.8,,,,,,,,,,-300,-300,-300,,,,Ukraine
-1,M,100,D,Raw,No,Masters 40-44,Viktor Rublov,Віктор Рубльов,1975-10-26,98.65,,,,,,,,,,255,-265,265,,265,265,Ukraine
+1,M,100,D,Raw,No,Masters 40-44,Viktor Rublyov,Віктор Рубльов,1975-10-26,98.65,,,,,,,,,,255,-265,265,,265,265,Ukraine
 1,M,110,D,Raw,No,Open,Zhorzh Seydu Togola,Жорж Сейду Тогола,1989-04-05,105.2,,,,,,,,,,320,327.5,-332.5,,327.5,327.5,Ukraine
 2,M,110,D,Raw,No,Open,Evgeniy Rudnik,Євгеній Руднік,1978-03-01,106.95,,,,,,,,,,280,-310,,,280,280,Ukraine
 1,M,110,D,Raw,No,Masters 50-54,Vladimir Lukyanov,,1966-02-18,101.45,,,,,,,,,,250,260,270,,270,270,Belarus
