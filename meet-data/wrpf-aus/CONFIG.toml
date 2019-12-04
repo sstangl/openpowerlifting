@@ -21,6 +21,9 @@
     fr_m = {name = "FR-M", min=40, max=999, equipment = ["Raw","Wraps"], sex="F"}
 
     msp_o = {name = "MSP-O", min=0, max=999, equipment = "Single-ply", sex = "M"}
+    me_o = {name = "ME-O", min=0, max=999, equipment = ["Single-ply","Multi-ply"], sex="M"}
+    fe_o = {name = "FE-O", min=0, max=999, equipment = ["Single-ply","Multi-ply"], sex="F"}
+    me_m = {name = "ME-M", min=40, max=999, equipment = ["Single-ply","Multi-ply"], sex="M"}
 
 
 [weightclasses.M]
