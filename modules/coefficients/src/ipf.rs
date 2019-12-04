@@ -14,12 +14,18 @@ fn get_parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
         Equipment::Single | Equipment::Multi => Equipment::Single,
     };
 
+    // IPF Points are only specified for Sex::M and Sex::F.
+    let dichotomous_sex = match sex {
+        Sex::M | Sex::Mx => Sex::M,
+        Sex::F => Sex::F,
+    };
+
     const SBD: Event = Event::sbd();
     const S: Event = Event::s();
     const B: Event = Event::b();
     const D: Event = Event::d();
 
-    match (event, sex, equipment) {
+    match (event, dichotomous_sex, equipment) {
         (SBD, Sex::M, Equipment::Raw) => (310.67, 857.785, 53.216, 147.0835),
         (SBD, Sex::M, Equipment::Single) => (387.265, 1121.28, 80.6324, 222.4896),
         (SBD, Sex::F, Equipment::Raw) => (125.1435, 228.03, 34.5246, 86.8301),

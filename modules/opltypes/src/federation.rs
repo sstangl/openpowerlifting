@@ -487,7 +487,6 @@ pub enum Federation {
     #[strum(to_string = "ILPA", serialize = "ilpa")]
     ILPA,
 
-
     /// International Powerlifting Association.
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,

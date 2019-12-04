@@ -85,7 +85,7 @@ pub fn schwartzmalone(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points
         return Points::from_i32(0);
     }
     let coefficient: f64 = match sex {
-        Sex::M => schwartz_coefficient(f64::from(bodyweight)),
+        Sex::M | Sex::Mx => schwartz_coefficient(f64::from(bodyweight)),
         Sex::F => malone_coefficient(f64::from(bodyweight)),
     };
     Points::from(coefficient * f64::from(total))

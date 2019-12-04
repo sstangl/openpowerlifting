@@ -171,6 +171,7 @@ pub struct EquipmentTranslations {
 pub struct SexTranslations {
     pub m: String,
     pub f: String,
+    pub mx: String,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -682,6 +683,7 @@ impl Translations {
         match sex {
             Sex::M => &self.sex.m,
             Sex::F => &self.sex.f,
+            Sex::Mx => &self.sex.mx,
         }
     }
 

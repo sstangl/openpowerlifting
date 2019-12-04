@@ -49,7 +49,7 @@ pub fn dots(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
         return Points::from_i32(0);
     }
     let coefficient: f64 = match sex {
-        Sex::M => dots_coefficient_men(f64::from(bodyweight)),
+        Sex::M | Sex::Mx => dots_coefficient_men(f64::from(bodyweight)),
         Sex::F => dots_coefficient_women(f64::from(bodyweight)),
     };
     Points::from(coefficient * f64::from(total))

@@ -260,6 +260,7 @@ fn order_by_sex(a: Sex) -> u32 {
     match a {
         Sex::F => 0,
         Sex::M => 1,
+        Sex::Mx => 2,
     }
 }
 
@@ -374,6 +375,7 @@ fn finish_table<'db>(
     let sex: &str = match entries[0].sex {
         Sex::M => &locale.strings.selectors.sex.m,
         Sex::F => &locale.strings.selectors.sex.f,
+        Sex::Mx => "Mx",
     };
 
     let equip: &str = if ruleset.contains(Rule::CombineAllEquipment) {

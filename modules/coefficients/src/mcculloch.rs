@@ -169,7 +169,7 @@ pub fn mcculloch(sex: Sex, bodyweight: WeightKg, total: WeightKg, age: Age) -> P
     }
     // Wilks coefficients are used directly to avoid Points boxing/unboxing overhead.
     let wilks_coefficient: f64 = match sex {
-        Sex::M => wilks_coefficient_men(f64::from(bodyweight)),
+        Sex::M | Sex::Mx => wilks_coefficient_men(f64::from(bodyweight)),
         Sex::F => wilks_coefficient_women(f64::from(bodyweight)),
     };
 
