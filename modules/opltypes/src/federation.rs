@@ -541,6 +541,10 @@ pub enum Federation {
     #[strum(to_string = "KuwaitPL", serialize = "kuwaitpl")]
     KuwaitPL,
 
+    /// LGBT Powerlifting.
+    #[strum(to_string = "LGBT", serialize = "lgbt")]
+    LGBT,
+
     /// Louisiana High School Powerlifting Association.
     #[strum(to_string = "LHSPLA", serialize = "lhspla")]
     LHSPLA,
@@ -1276,6 +1280,7 @@ impl Federation {
             Federation::KPF => true,
             Federation::KRAFT => true,
             Federation::KuwaitPL => false,
+            Federation::LGBT => false,
             Federation::LHSPLA => false,
             Federation::LJTF => true,
             Federation::LPF => true,
@@ -1545,6 +1550,7 @@ impl Federation {
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KuwaitPL => Some(Country::Kuwait),
+            Federation::LGBT => None,
             Federation::LHSPLA => Some(Country::USA),
             Federation::LJTF => Some(Country::Lithuania),
             Federation::LPF => Some(Country::Latvia),
@@ -1834,6 +1840,7 @@ impl Federation {
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
             Federation::KuwaitPL => None,
+            Federation::LGBT => None,
             Federation::LHSPLA => None,
             Federation::LJTF => Some(Federation::IPF),
             Federation::LPF => Some(Federation::IPF),
@@ -2128,6 +2135,7 @@ impl Federation {
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => Federation::ipf_rules_on(date),
             Federation::KuwaitPL => PointsSystem::Wilks,
+            Federation::LGBT => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
             Federation::LJTF => Federation::ipf_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
