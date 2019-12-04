@@ -387,6 +387,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-IRL", serialize = "gpc-irl")]
     GPCIRL,
 
+    /// Israeli branch of the GPC.
+    #[serde(rename = "GPC-ISR")]
+    #[strum(to_string = "GPC-ISR", serialize = "gpc-isr")]
+    GPCISR,
+
     /// Latvian branch of the GPC.
     #[serde(rename = "GPC-LAT")]
     #[strum(to_string = "GPC-LAT", serialize = "gpc-lat")]
@@ -477,6 +482,11 @@ pub enum Federation {
     /// Islenska Kraftlyfingafelagid, Icelandic GPC? affiliate.
     #[strum(to_string = "IKF", serialize = "ikf")]
     IKF,
+
+    /// Israel Powerlifting Federation.
+    #[strum(to_string = "ILPA", serialize = "ilpa")]
+    ILPA,
+
 
     /// International Powerlifting Association.
     #[strum(to_string = "IPA", serialize = "ipa")]
@@ -1229,6 +1239,7 @@ impl Federation {
             Federation::GPCAUS => false,
             Federation::GPCGB => false,
             Federation::GPCIRL => false,
+            Federation::GPCISR => false,
             Federation::GPCLAT => false,
             Federation::GPCNZ => false,
             Federation::GPCUSA => false,
@@ -1252,6 +1263,7 @@ impl Federation {
             Federation::IDFPF => true,
             Federation::IKF => false,
             Federation::GPCCAN => false,
+            Federation::ILPA => false,
             Federation::IPA => false,
             Federation::IPC => false,
             Federation::IPF => true,
@@ -1497,6 +1509,7 @@ impl Federation {
             Federation::GPCCAN => Some(Country::Canada),
             Federation::GPCGB => Some(Country::UK),
             Federation::GPCIRL => Some(Country::Ireland),
+            Federation::GPCISR => Some(Country::Israel),
             Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCUSA => Some(Country::USA),
@@ -1519,6 +1532,7 @@ impl Federation {
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
             Federation::IKF => Some(Country::Iceland),
+            Federation::ILPA => Some(Country::Israel),
             Federation::IPA => Some(Country::USA),
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
@@ -1784,6 +1798,7 @@ impl Federation {
             Federation::GPCCAN => Some(Federation::GPC),
             Federation::GPCGB => Some(Federation::GPC),
             Federation::GPCIRL => Some(Federation::GPC),
+            Federation::GPCISR => Some(Federation::GPC),
             Federation::GPCLAT => Some(Federation::GPC),
             Federation::GPCNZ => Some(Federation::GPC),
             Federation::GPCUSA => Some(Federation::GPC),
@@ -1806,6 +1821,7 @@ impl Federation {
             Federation::IDFPA => None,
             Federation::IDFPF => None,
             Federation::IKF => None,
+            Federation::ILPA => Some(Federation::GPA),
             Federation::IPA => None,
             Federation::IPC => None,
             Federation::IPF => Some(Federation::IPF),
@@ -2076,6 +2092,7 @@ impl Federation {
             Federation::GPCCAN => PointsSystem::Glossbrenner,
             Federation::GPCGB => PointsSystem::Glossbrenner,
             Federation::GPCIRL => PointsSystem::Glossbrenner,
+            Federation::GPCISR => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
             Federation::GPCNZ => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
@@ -2098,6 +2115,7 @@ impl Federation {
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::Wilks,
             Federation::IKF => PointsSystem::Wilks,
+            Federation::ILPA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
