@@ -349,6 +349,7 @@
 <optgroup label="{{strings.country.slovakia}}">
   <option value="all-slovakia" {% if selection.federation == "AllSlovakia" %}selected{% endif %}>{{strings.selectors.fed.all_slovakia}}</option>
   <option value="sast" {% if selection.federation == "SAST" %}selected{% endif %}>SAST - Slovenská asociásia silového trojboja [GPC]</option>
+  <option value="wrpf-svk" {% if selection.federation == "WRPF-SVK" %}selected{% endif %}>WRPF Slovakia</option>
   <option value="wuap-svk" {% if selection.federation == "WUAP-SVK" %}selected{% endif %}>WUAP-SVK - WUAP Slovakia</option>
 </optgroup>
 <optgroup label="{{strings.country.slovenia}}">
