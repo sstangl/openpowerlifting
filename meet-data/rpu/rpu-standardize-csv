@@ -101,7 +101,7 @@ def parse_sheetname(s):
             event = 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word in ['тяга', 'dl', 'тяге']:
+        elif word in ['тяга', 'dl', 'тяге', 'становая']:
             assert not event
             event = 'D'
             if equipment == 'Wraps':
@@ -194,6 +194,7 @@ def parse_sheetname(s):
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+
     assert event
 
     obj['federation'] = federation
@@ -269,7 +270,7 @@ def parse_fieldnames(sheet):
     # Name all the columns.
     iterable = iter(range(len(header)))
     for i in iterable:
-        text = header[i].lower().replace('.', '')
+        text = header[i].lower().replace('.', '').replace('/ ', '/')
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
@@ -301,7 +302,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
             fieldnames.append('IGNORE')
-        elif text in ['сountry/city/state', 'страна/город/область']:
+        elif text in ['сountry/city/state', 'страна/город/область', 'город/страна']:
             fieldnames.append('Country/City/State')
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
                       'приседания 1']:
