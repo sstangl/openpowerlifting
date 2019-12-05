@@ -449,7 +449,7 @@ def parse_sheet(sheet):
         return csv
     elif 'isf' in title:  # Some kind of calesthetics competition
         return csv
-    elif 'спр' in title:  # Strongman
+    elif 'спр' in title or 'wsf' in title:  # Strongman
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
