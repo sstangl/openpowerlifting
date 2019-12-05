@@ -18,7 +18,9 @@ Lifters who share the same name are distinguished by use of a `#` symbol followe
 
 ### Sex
 
-Mandatory. The sex category in which the lifter competed, `M` or `F`.
+Mandatory. The sex category in which the lifter competed, `M`, `F`, or `Mx`.
+
+Mx (pronounced *Muks*) is a gender-neutral title — like Mr and Ms — originating from the UK. It is a catch-all sex category that is particularly appropriate for non-binary lifters.
 
 The `Sex` column is defined by [modules/opltypes/src/sex.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/sex.rs).
 
