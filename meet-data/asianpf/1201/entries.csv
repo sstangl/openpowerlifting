@@ -31,7 +31,7 @@ Place,Name,WeightClassKg,Division,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2
 1,Ekka Mela,72,Juniors,Indonesia,1990,66.4,190,-205,205,205,80,90,100,100,170,190,-200,190,495,SBD,Single-ply,F
 2,Alka Swami,72,Juniors,India,1990,71.1,130,145,155,155,82.5,-90,90,90,135,-140,,135,380,SBD,Single-ply,F
 1,Choudhary Roy,72,Masters 2,India,1955,66.9,70,80,85,85,50,55,-57.5,55,70,80,90,90,230,SBD,Single-ply,F
-1,Yekaterina Kryokova,72,Open,Kazakhstan,1985,69.6,180,190,200,200,120,130,135,135,180,190,200,200,535,SBD,Single-ply,F
+1,Yekaterina Kryukova,72,Open,Kazakhstan,1985,69.6,180,190,200,200,120,130,135,135,180,190,200,200,535,SBD,Single-ply,F
 2,Jumaniyazova,72,Open,Turkey,1988,70.8,140,-150,150,150,70,80,-85,80,110,120,130,130,360,SBD,Single-ply,F
 3,Mirinalini Saikia,72,Open,India,1980,71.5,110,120,-127.5,120,65,72.5,77.5,77.5,-110,110,115,115,312.5,SBD,Single-ply,F
 1,Rahayu Sri,84,Juniors,Indonesia,1992,83.3,220,232.5,-247.5,232.5,110,125,127.5,127.5,185,202.5,207.5,207.5,567.5,SBD,Single-ply,F
@@ -40,17 +40,17 @@ Place,Name,WeightClassKg,Division,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2
 4,Vidhya Shree,84,Juniors,India,1992,74.2,80,87.5,95,95,25,32.5,-35,32.5,80,100,105,105,232.5,SBD,Single-ply,F
 1,Sujata Bhagat,84,Masters 1,India,1966,78.4,110,120,-130,120,62.5,67.5,70,70,110,130,140,140,330,SBD,Single-ply,F
 1,Nar Vijaya,84,Masters 2,India,1957,77.9,60,70,80,80,25,30,32.5,32.5,60,85,95,95,207.5,SBD,Single-ply,F
-1,V. Shevchenko,84,Open,Kazakhstan,1990,78.35,190,205,-215,205,105,112.5,117.5,117.5,190,200,216,216,538.5,SBD,Single-ply,F
+1,Valeriya Shevchenko,84,Open,Kazakhstan,1990,78.35,190,205,-215,205,105,112.5,117.5,117.5,190,200,216,216,538.5,SBD,Single-ply,F
 2,Min-Chu Hung,84,Open,Taiwan,1983,82.7,-200,200,-210,200,130,145,155,155,140,152.5,-157.5,152.5,507.5,SBD,Single-ply,F
 3,Apara Ghate,84,Open,India,1983,83.5,170,190,202.5,202.5,85,92.5,100,100,155,172.5,182.5,182.5,485,SBD,Single-ply,F
 4,Najoo Arora,84,Open,India,1987,77.55,160,172.5,180,180,85,92.5,-95,92.5,170,177.5,-180,177.5,450,SBD,Single-ply,F
 1,Jr-Ting Hung,84+,Sub-Juniors,Taiwan,1994,90.15,210,230,240,240,85,95,100,100,165,175,180,180,520,SBD,Single-ply,F
 2,Ch Heminta,84+,Sub-Juniors,India,1998,103.95,70,80,-100,80,40,-45,,40,60,-80,80,80,200,SBD,Single-ply,F
 1,Jie-Wen Chen,84+,Juniors,Taiwan,1990,100.25,200,235,252.5,252.5,130,137.5,142.5,142.5,155,167.5,177.5,177.5,572.5,SBD,Single-ply,F
-2,A. Abduraimova,84+,Juniors,Kazakhstan,1989,88.5,170,180,-200,180,100,110,115,115,150,165,177.5,177.5,472.5,SBD,Single-ply,F
+2,Aziza Abduraimova,84+,Juniors,Kazakhstan,1989,88.5,170,180,-200,180,100,110,115,115,150,165,177.5,177.5,472.5,SBD,Single-ply,F
 3,Neha Huderi,84+,Juniors,India,1993,106.3,160,170,180,180,60,70,-75,70,135,145,-150,145,395,SBD,Single-ply,F
 1,Ya-Wen Chang,84+,Open,Taiwan,1984,87.95,245,257.5,265,265,-125,125,130,130,215,225,230,230,625,SBD,Single-ply,F
-2,Elea Telichko,84+,Open,Kazakhstan,1992,86.3,210,220,230,230,95,100,105,105,190,205,217.5,217.5,552.5,SBD,Single-ply,F
+2,Elena Telichko,84+,Open,Kazakhstan,1992,86.3,210,220,230,230,95,100,105,105,190,205,217.5,217.5,552.5,SBD,Single-ply,F
 3,Maisuri Rini,84+,Open,Indonesia,1985,99.1,220,-250,-250,220,130,140,-147.5,140,160,180,192.5,192.5,552.5,SBD,Single-ply,F
 4,Sangeeta Singh,84+,Open,India,1988,84.7,165,185,-200,185,77.5,82.5,87.5,87.5,140,155,160,160,432.5,SBD,Single-ply,F
 1,Uulu Akzhol Alymbek,53,Sub-Juniors,Kyrgyzstan,1994,52.8,150,170,186,186,80,90,-101,90,160,187.5,196,196,472,SBD,Single-ply,M
@@ -107,7 +107,7 @@ DQ,Mohammed Aulad Thani,74,Juniors,Oman,1990,72.7,-245,-245,,,115,130,135,135,24
 1,You-Si Jhang,83,Sub-Juniors,Taiwan,1994,81.9,265,275,280,280,135,147.5,157.5,157.5,270,290,-302.5,290,727.5,SBD,Single-ply,M
 2,Omid Yosufi,83,Sub-Juniors,Afghanistan,,81.15,-220,240,250,250,100,150,165,165,200,240,,240,655,SBD,Single-ply,M
 3,A Ashwin,83,Sub-Juniors,India,1995,81.7,150,170,180,180,90,95,-100,95,190,205,210,210,485,SBD,Single-ply,M
-1,Alymbek Rahimov,83,Masters 1,Kyrgyzstan,,81.1,250,260,270,270,170,177.5,182.5,182.5,245,260,270,270,722.5,SBD,Single-ply,M
+1,Alimbek Rakhimov,83,Masters 1,Kyrgyzstan,,81.1,250,260,270,270,170,177.5,182.5,182.5,245,260,270,270,722.5,SBD,Single-ply,M
 2,Makoto Yamaguchi,83,Masters 1,Japan,1963,81.6,270.5,280,285,285,155,-160,160,160,230,247.5,-255,247.5,692.5,SBD,Single-ply,M
 1,Surender Singh,83,Masters 2,India,1957,82.9,160,170,185,185,100,110,115,115,160,170,180,180,480,SBD,Single-ply,M
 2,Waghmare Sudesh,83,Masters 2,India,1956,82.25,160,180,-190,180,90,-100,-100,90,170,185,-192.5,185,455,SBD,Single-ply,M
