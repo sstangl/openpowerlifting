@@ -65,6 +65,8 @@ pub enum MetaFederation {
     AllIceland,
     #[strum(to_string = "all-indonesia")]
     AllIndonesia,
+    #[strum(to_string = "all-iran")]
+    AllIran,
     #[strum(to_string = "all-ireland")]
     AllIreland,
     #[strum(to_string = "all-israel")]
@@ -294,6 +296,7 @@ impl MetaFederation {
             MetaFederation::AllHungary => is_from(Country::Hungary, entry, meet),
             MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
             MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
+            MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
             MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
             MetaFederation::AllIsrael => is_from(Country::Israel, entry, meet),
             MetaFederation::AllItaly => is_from(Country::Italy, entry, meet),

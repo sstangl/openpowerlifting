@@ -214,6 +214,9 @@
   <option value="all-indonesia" {% if selection.federation == "AllIndonesia" %}selected{% endif %}>{{strings.selectors.fed.all_indonesia}}</option>
   <option value="aiwbpa" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA - All Indonesia Weightlifting, Bodybuilding & Powerlifting Association [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.iran}}">
+  <option value="all-iran" {% if selection.federation == "AllIran" %}selected{% endif %}>{{strings.selectors.fed.all_iran}}</option>
+</optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>{{strings.selectors.fed.all_ireland}}</option>
   <option value="gpc-irl" {% if selection.federation == "GPC-IRL" %}selected{% endif %}>GPC-IRL - GPC Ireland [GPC]</option>
