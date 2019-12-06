@@ -123,6 +123,68 @@
     fscrbpu = {name ="F_S_CR_BPU",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="No"}
     fssbpu = {name ="F_S_S_BPU",min=33,max=39,equipment="Single-ply",sex="F",tested="No"}
     fsmbpu = {name ="F_S_M_BPU",min=33,max=39,equipment="Multi-ply",sex="F",tested="No"}
+
+    mxorbpu = {name ="Mx_O_R_BPU",min=0,max=999,equipment="Raw",sex="Mx",tested="No"}
+    mxocrbpu = {name ="Mx_O_CR_BPU",min=0,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxosbpu = {name ="Mx_O_S_BPU",min=0,max=999,equipment="Single-ply",sex="Mx",tested="No"}
+    mxombpu = {name ="Mx_O_M_BPU",min=0,max=999,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm1rbpu = {name ="Mx_M1_R_BPU",min=40,max=44,equipment="Raw",sex="Mx",tested="No"}
+    mxm1crbpu = {name ="Mx_M1_CR_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm1sbpu = {name ="Mx_M1_S_BPU",min=40,max=44,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm1mbpu = {name ="Mx_M1_M_BPU",min=40,max=44,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm2rbpu = {name ="Mx_M2_R_BPU",min=45,max=49,equipment="Raw",sex="Mx",tested="No"}
+    mxm2crbpu = {name ="Mx_M2_CR_BPU",min=45,max=49,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm2sbpu = {name ="Mx_M2_S_BPU",min=45,max=49,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm2mbpu = {name ="Mx_M2_M_BPU",min=45,max=49,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm3rbpu = {name ="Mx_M3_R_BPU",min=50,max=54,equipment="Raw",sex="Mx",tested="No"}
+    mxm3crbpu = {name ="Mx_M3_CR_BPU",min=50,max=54,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm3sbpu = {name ="Mx_M3_S_BPU",min=50,max=54,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm3mbpu = {name ="Mx_M3_M_BPU",min=50,max=54,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm4rbpu = {name ="Mx_M4_R_BPU",min=55,max=59,equipment="Raw",sex="Mx",tested="No"}
+    mxm4crbpu = {name ="Mx_M4_CR_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm4sbpu = {name ="Mx_M4_S_BPU",min=55,max=59,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm4mbpu = {name ="Mx_M4_M_BPU",min=55,max=59,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm5rbpu = {name ="Mx_M5_R_BPU",min=60,max=64,equipment="Raw",sex="Mx",tested="No"}
+    mxm5crbpu = {name ="Mx_M5_CR_BPU",min=60,max=64,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm5sbpu = {name ="Mx_M5_S_BPU",min=60,max=64,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm5mbpu = {name ="Mx_M5_M_BPU",min=60,max=64,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm6rbpu = {name ="Mx_M6_R_BPU",min=65,max=69,equipment="Raw",sex="Mx",tested="No"}
+    mxm6crbpu = {name ="Mx_M6_CR_BPU",min=65,max=69,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm6sbpu = {name ="Mx_M6_S_BPU",min=65,max=69,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm6mbpu = {name ="Mx_M6_M_BPU",min=65,max=69,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm7rbpu = {name ="Mx_M7_R_BPU",min=70,max=74,equipment="Raw",sex="Mx",tested="No"}
+    mxm7crbpu = {name ="Mx_M7_CR_BPU",min=70,max=74,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm7sbpu = {name ="Mx_M7_S_BPU",min=70,max=74,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm7mbpu = {name ="Mx_M7_M_BPU",min=70,max=74,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm8rbpu = {name ="Mx_M8_CR_BPU",min=75,max=79,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm8crbpu = {name ="Mx_M8_R_BPU",min=75,max=79,equipment="Raw",sex="Mx",tested="No"}
+    mxm8sbpu = {name ="Mx_M8_S_BPU",min=75,max=79,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm8mbpu = {name ="Mx_M8_M_BPU",min=75,max=79,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm9rbpu = {name ="Mx_M9_R_BPU",min=80,max=999,equipment="Raw",sex="Mx",tested="No"}
+    mxm9crbpu = {name ="Mx_M9_CR_BPU",min=80,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm9sbpu = {name ="Mx_M9_S_BPU",min=80,max=999,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm9mbpu = {name ="Mx_M9_M_BPU",min=80,max=999,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt1rbpu = {name ="Mx_T1_R_BPU",min=13,max=15,equipment="Raw",sex="Mx",tested="No"}
+    mxmt1crbpu = {name ="Mx_T1_CR_BPU",min=13,max=15,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt1sbpu = {name ="Mx_T1_S_BPU",min=13,max=15,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt1mbpu = {name ="Mx_T1_M_BPU",min=13,max=15,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt2rbpu = {name ="Mx_T2_R_BPU",min=16,max=17,equipment="Raw",sex="Mx",tested="No"}
+    mxmt2crbpu = {name ="Mx_T2_CR_BPU",min=16,max=17,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt2sbpu = {name ="Mx_T2_S_BPU",min=16,max=17,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt2mbpu = {name ="Mx_T2_M_BPU",min=16,max=17,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt3rbpu = {name ="Mx_T3_R_BPU",min=18,max=19,equipment="Raw",sex="Mx",tested="No"}
+    mxmt3crbpu = {name ="Mx_T3_CR_BPU",min=18,max=19,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt3sbpu = {name ="Mx_T3_S_BPU",min=18,max=19,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt3mbpu = {name ="Mx_T3_M_BPU",min=18,max=19,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxjrbpu = {name ="Mx_J_R_BPU",min=20,max=23,equipment="Raw",sex="Mx",tested="No"}
+    mxjcrbpu = {name ="Mx_J_CR_BPU",min=20,max=23,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxjsbpu = {name ="Mx_J_S_BPU",min=20,max=23,equipment="Single-ply",sex="Mx",tested="No"}
+    mxjmbpu = {name ="Mx_J_M_BPU",min=20,max=23,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxsrbpu = {name ="Mx_S_R_BPU",min=33,max=39,equipment="Raw",sex="Mx",tested="No"}
+    mxscrbpu = {name ="Mx_S_CR_BPU",min=33,max=39,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxssbpu = {name ="Mx_S_S_BPU",min=33,max=39,equipment="Single-ply",sex="Mx",tested="No"}
+    mxsmbpu = {name ="Mx_S_M_BPU",min=33,max=39,equipment="Multi-ply",sex="Mx",tested="No"}
+
     
     # ABPU Divisions
     morabpu = {name ="M_O_R_ABPU",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -247,6 +309,68 @@
     fssabpu = {name ="F_S_S_ABPU",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmabpu = {name ="F_S_M_ABPU",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
 
+	mxorabpu = {name ="Mx_O_R_ABPU",min=0,max=999,equipment="Raw",sex="Mx",tested="No"}
+    mxocrabpu = {name ="Mx_O_CR_ABPU",min=0,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxosabpu = {name ="Mx_O_S_ABPU",min=0,max=999,equipment="Single-ply",sex="Mx",tested="No"}
+    mxomabpu = {name ="Mx_O_M_ABPU",min=0,max=999,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm1rabpu = {name ="Mx_M1_R_ABPU",min=40,max=44,equipment="Raw",sex="Mx",tested="No"}
+    mxm1crabpu = {name ="Mx_M1_CR_ABPU",min=40,max=44,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm1sabpu = {name ="Mx_M1_S_ABPU",min=40,max=44,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm1mabpu = {name ="Mx_M1_M_ABPU",min=40,max=44,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm2rabpu = {name ="Mx_M2_R_ABPU",min=45,max=49,equipment="Raw",sex="Mx",tested="No"}
+    mxm2crabpu = {name ="Mx_M2_CR_ABPU",min=45,max=49,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm2sabpu = {name ="Mx_M2_S_ABPU",min=45,max=49,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm2mabpu = {name ="Mx_M2_M_ABPU",min=45,max=49,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm3rabpu = {name ="Mx_M3_R_ABPU",min=50,max=54,equipment="Raw",sex="Mx",tested="No"}
+    mxm3crabpu = {name ="Mx_M3_CR_ABPU",min=50,max=54,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm3sabpu = {name ="Mx_M3_S_ABPU",min=50,max=54,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm3mabpu = {name ="Mx_M3_M_ABPU",min=50,max=54,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm4rabpu = {name ="Mx_M4_R_ABPU",min=55,max=59,equipment="Raw",sex="Mx",tested="No"}
+    mxm4crabpu = {name ="Mx_M4_CR_ABPU",min=55,max=59,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm4sabpu = {name ="Mx_M4_S_ABPU",min=55,max=59,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm4mabpu = {name ="Mx_M4_M_ABPU",min=55,max=59,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm5rabpu = {name ="Mx_M5_R_ABPU",min=60,max=64,equipment="Raw",sex="Mx",tested="No"}
+    mxm5crabpu = {name ="Mx_M5_CR_ABPU",min=60,max=64,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm5sabpu = {name ="Mx_M5_S_ABPU",min=60,max=64,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm5mabpu = {name ="Mx_M5_M_ABPU",min=60,max=64,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm6rabpu = {name ="Mx_M6_R_ABPU",min=65,max=69,equipment="Raw",sex="Mx",tested="No"}
+    mxm6crabpu = {name ="Mx_M6_CR_ABPU",min=65,max=69,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm6sabpu = {name ="Mx_M6_S_ABPU",min=65,max=69,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm6mabpu = {name ="Mx_M6_M_ABPU",min=65,max=69,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm7rabpu = {name ="Mx_M7_R_ABPU",min=70,max=74,equipment="Raw",sex="Mx",tested="No"}
+    mxm7crabpu = {name ="Mx_M7_CR_ABPU",min=70,max=74,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm7sabpu = {name ="Mx_M7_S_ABPU",min=70,max=74,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm7mabpu = {name ="Mx_M7_M_ABPU",min=70,max=74,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm8rabpu = {name ="Mx_M8_CR_ABPU",min=75,max=79,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm8crabpu = {name ="Mx_M8_R_ABPU",min=75,max=79,equipment="Raw",sex="Mx",tested="No"}
+    mxm8sabpu = {name ="Mx_M8_S_ABPU",min=75,max=79,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm8mabpu = {name ="Mx_M8_M_ABPU",min=75,max=79,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxm9rabpu = {name ="Mx_M9_R_ABPU",min=80,max=999,equipment="Raw",sex="Mx",tested="No"}
+    mxm9crabpu = {name ="Mx_M9_CR_ABPU",min=80,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxm9sabpu = {name ="Mx_M9_S_ABPU",min=80,max=999,equipment="Single-ply",sex="Mx",tested="No"}
+    mxm9mabpu = {name ="Mx_M9_M_ABPU",min=80,max=999,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt1rabpu = {name ="Mx_T1_R_ABPU",min=13,max=15,equipment="Raw",sex="Mx",tested="No"}
+    mxmt1crabpu = {name ="Mx_T1_CR_ABPU",min=13,max=15,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt1sabpu = {name ="Mx_T1_S_ABPU",min=13,max=15,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt1mabpu = {name ="Mx_T1_M_ABPU",min=13,max=15,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt2rabpu = {name ="Mx_T2_R_ABPU",min=16,max=17,equipment="Raw",sex="Mx",tested="No"}
+    mxmt2crabpu = {name ="Mx_T2_CR_ABPU",min=16,max=17,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt2sabpu = {name ="Mx_T2_S_ABPU",min=16,max=17,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt2mabpu = {name ="Mx_T2_M_ABPU",min=16,max=17,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxmt3rabpu = {name ="Mx_T3_R_ABPU",min=18,max=19,equipment="Raw",sex="Mx",tested="No"}
+    mxmt3crabpu = {name ="Mx_T3_CR_ABPU",min=18,max=19,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxmt3sabpu = {name ="Mx_T3_S_ABPU",min=18,max=19,equipment="Single-ply",sex="Mx",tested="No"}
+    mxmt3mabpu = {name ="Mx_T3_M_ABPU",min=18,max=19,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxjrabpu = {name ="Mx_J_R_ABPU",min=20,max=23,equipment="Raw",sex="Mx",tested="No"}
+    mxjcrabpu = {name ="Mx_J_CR_ABPU",min=20,max=23,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxjsabpu = {name ="Mx_J_S_ABPU",min=20,max=23,equipment="Single-ply",sex="Mx",tested="No"}
+    mxjmabpu = {name ="Mx_J_M_ABPU",min=20,max=23,equipment="Multi-ply",sex="Mx",tested="No"}
+    mxsrabpu = {name ="Mx_S_R_ABPU",min=33,max=39,equipment="Raw",sex="Mx",tested="No"}
+    mxscrabpu = {name ="Mx_S_CR_ABPU",min=33,max=39,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
+    mxssabpu = {name ="Mx_S_S_ABPU",min=33,max=39,equipment="Single-ply",sex="Mx",tested="No"}
+    mxsmabpu = {name ="Mx_S_M_ABPU",min=33,max=39,equipment="Multi-ply",sex="Mx",tested="No"}
+
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["0000-01-01","9999-01-01"]
@@ -256,6 +380,12 @@
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
     date_range = ["0000-01-01","9999-01-01"]
     sex = "F"
+
+[weightclasses.default_Mx]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "Mx"
+
 
 [exemptions]
     1606 = ["ExemptWeightClassConsistency"]  # Some lifters missing weight info.
