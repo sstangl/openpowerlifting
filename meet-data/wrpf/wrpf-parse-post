@@ -31,4 +31,4 @@ echo "WRPF,,Russia,,," >> meet.csv
 # Show any warnings.
 ${REPOTESTSDIR}/check
 
-echo "Done! Don't forget about meet.csv!"
+echo "Done! Remember to check the Raw vs Wraps text for carefully in original.csv!"
