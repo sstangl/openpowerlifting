@@ -44,7 +44,9 @@
 [exemptions]
     0901 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
     1001 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
+    1002 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
     1101 = ["ExemptWeightClassConsistency"] # Mismatched female classes.
+    1102 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
     1401 = ["ExemptWeightClassConsistency"] # Lower SHW classes for some divisions.
     1402 = ["ExemptWeightClassConsistency"] # Mismatched female classes.
     1501 = ["ExemptWeightClassConsistency"] # Lower SHW classes for some divisions.
