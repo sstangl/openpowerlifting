@@ -196,12 +196,11 @@ def parse_sheetname(s):
             pass
         elif word == 'женщины':  # Women
             pass
-        elif word in ['сотрудники', 'сотрудн', 'клиенты']: # Employees/Members
+        elif word in ['сотрудники', 'сотрудн', 'клиенты']:  # Employees/Members
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
     assert event
-
 
     obj['federation'] = federation
     obj['event'] = event
