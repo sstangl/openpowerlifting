@@ -14,18 +14,18 @@ use crate::{AllMeetData, SingleMeetData};
 fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
     // McCulloch points are calculated as late as possible because they are
     // Age-dependent, and the lifter's Age may be inferred by post-checker phases.
-    // TODO: Share this code with make_csv.rs.
     let est_age = if !entry.age.is_none() {
         entry.age
     } else {
-        // From known bounds, choose the one that's closest to Senior (~30).
-        entry.ageclass.to_range().map_or(Age::None, |(min, max)| {
-            if max < Age::Exact(30) {
-                max
-            } else {
-                min
-            }
-        })
+        // Round toward Senior (~30).
+        let (min, max) = (entry.agerange.min, entry.agerange.max);
+        if max.is_some() && max < Age::Exact(30) {
+            max
+        } else if min.is_some() && min > Age::Exact(30) {
+            min
+        } else {
+            Age::None
+        }
     };
 
     let mcculloch = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, est_age);
@@ -36,7 +36,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         event: entry.event,
         equipment: entry.equipment,
         age: entry.age,
-        ageclass: entry.ageclass,
+        ageclass: AgeClass::from_range(entry.agerange.min, entry.agerange.max),
         birthyearclass: entry.birthyearclass,
         division: &entry.division,
         bodyweightkg: entry.bodyweightkg,

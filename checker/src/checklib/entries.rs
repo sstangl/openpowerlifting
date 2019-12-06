@@ -133,14 +133,12 @@ pub struct Entry {
 
     // Optional age information.
     pub age: Age,
-    pub ageclass: AgeClass,
+    /// May be explicitly specified, or inferred by other age information.
+    /// Division age ranges are carried here (possibly after further narrowing).
+    pub agerange: AgeRange,
     pub birthyearclass: BirthYearClass,
     pub birthyear: Option<u32>,
     pub birthdate: Option<Date>,
-    /// Minimum Age associated with the Division per the CONFIG, inclusive.
-    pub division_age_min: Age,
-    /// Maximum Age associated with the Division per the CONFIG, inclusive.
-    pub division_age_max: Age,
 
     pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
@@ -257,7 +255,7 @@ enum Header {
     BirthYear,
     BirthDate,
     Tested,
-    AgeClass,
+    AgeRange,
     Country,
 
     WeightClassKg,
@@ -738,35 +736,62 @@ fn check_column_age(s: &str, exempt_age: bool, line: u64, report: &mut Report) -
     }
 }
 
-fn check_column_ageclass(s: &str, line: u64, report: &mut Report) {
+fn check_column_agerange(
+    s: &str,
+    inferred_agerange: AgeRange,
+    line: u64,
+    report: &mut Report,
+) -> AgeRange {
     if s.is_empty() {
-        return;
+        return inferred_agerange;
     }
 
     // Ensure that there is a dash, or the split below can panic.
     if s.chars().filter(|c| *c == '-').count() != 1 {
         report.error_on(
             line,
-            format!("AgeClass '{}' must be a range of two Ages", s),
+            format!("AgeRange '{}' must be a range of two Ages", s),
         );
-        return;
+        return inferred_agerange;
     }
 
     // Knowing that there is one dash, split into two parts.
     let (left, right_with_dash) = s.split_at(s.find('-').unwrap());
     let right = &right_with_dash[1..];
 
-    if left.parse::<Age>().is_err() {
+    // Parse the two Ages into an AgeRange.
+    let lower: Age = left.parse::<Age>().unwrap_or(Age::None);
+    let upper: Age = right.parse::<Age>().unwrap_or(Age::None);
+    if lower.is_none() {
         report.error_on(
             line,
-            format!("Lower bound of AgeClass '{}' looks invalid", s),
+            format!("Lower bound of AgeRange '{}' looks invalid", s),
         );
     }
-    if right.parse::<Age>().is_err() {
+    if upper.is_none() {
         report.error_on(
             line,
-            format!("Upper bound of AgeClass '{}' looks invalid", s),
+            format!("Upper bound of AgeRange '{}' looks invalid", s),
         );
+    }
+    let explicit_agerange = AgeRange::from((lower, upper));
+
+    // Return the most meaningful AgeRange possible.
+    match (inferred_agerange.is_some(), explicit_agerange.is_some()) {
+        (false, false) => AgeRange::default(),
+        (true, false) => inferred_agerange,
+        (false, true) => explicit_agerange,
+        (true, true) => {
+            // If both are defined, narrow to the intersection.
+            let intersection = inferred_agerange.intersect(explicit_agerange);
+            if intersection.is_none() {
+                report.error_on(
+                    line,
+                    format!("AgeRange value '{}' doesn't agree with AgeRange '{}' inferred from other age data", explicit_agerange, inferred_agerange)
+                );
+            }
+            intersection
+        }
     }
 }
 
@@ -2085,9 +2110,6 @@ where
             entry.birthdate =
                 check_column_birthdate(&record[idx], meet, line, &mut report);
         }
-        if let Some(idx) = headers.get(Header::AgeClass) {
-            check_column_ageclass(&record[idx], line, &mut report);
-        }
 
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
@@ -2110,8 +2132,6 @@ where
             line,
             &mut report,
         );
-        entry.division_age_min = division_age_min;
-        entry.division_age_max = division_age_max;
 
         check_division_sex_consistency(&entry, config, line, &mut report);
         check_division_place_consistency(&entry, config, line, &mut report);
@@ -2137,18 +2157,26 @@ where
             }
         }
 
+        // Infer the AgeRange based on Age or Division.
+        let range_from_age = AgeRange::from(entry.age);
+        let inferred_agerange = if range_from_age.is_some() {
+            range_from_age
+        } else {
+            // Fall back to Division-based ranges if the exact Age isn't specified.
+            AgeRange::from((division_age_min, division_age_max))
+        };
+
+        // The AgeRange can also be specified explicitly in an optional column.
+        if let Some(idx) = headers.get(Header::AgeRange) {
+            entry.agerange =
+                check_column_agerange(&record[idx], inferred_agerange, line, &mut report);
+        }
+
         // If the BirthYear wasn't assigned yet, infer it from any surrounding info.
         if entry.birthyear.is_none() {
             if let Some(birthdate) = entry.birthdate {
                 entry.birthyear = Some(birthdate.year());
             }
-        }
-
-        // Assign the AgeClass based on Age.
-        entry.ageclass = AgeClass::from_age(entry.age);
-        // Or assign the AgeClass based on Division information.
-        if entry.ageclass == AgeClass::None {
-            entry.ageclass = AgeClass::from_range(division_age_min, division_age_max);
         }
 
         // Assign the BirthYearClass based on BirthYear.

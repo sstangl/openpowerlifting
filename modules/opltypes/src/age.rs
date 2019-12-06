@@ -203,6 +203,11 @@ impl Age {
     pub fn is_none(self) -> bool {
         self == Age::None
     }
+
+    /// Whether the given Age is not an Age::None.
+    pub fn is_some(self) -> bool {
+        self != Age::None
+    }
 }
 
 impl Default for Age {

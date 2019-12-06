@@ -20,6 +20,8 @@ mod age;
 pub use self::age::{Age, PrettyAge};
 mod ageclass;
 pub use self::ageclass::AgeClass;
+mod agerange;
+pub use self::agerange::AgeRange;
 mod birthyearclass;
 pub use self::birthyearclass::BirthYearClass;
 mod country;

@@ -58,21 +58,6 @@ enum NarrowResult {
     Conflict,
 }
 
-/// Helper struct for Division AgeClass ranges.
-///
-/// This mostly exists to have something to pretty-print for errors.
-struct AgeRange {
-    pub min: Age,
-    pub max: Age,
-}
-
-impl fmt::Display for AgeRange {
-    /// Used for --debug-age output.
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}-{}", self.min, self.max)
-    }
-}
-
 /// Helper function: increments a Date by a single day.
 ///
 /// For simplicity, because it doesn't matter in this context, every month
@@ -199,13 +184,8 @@ impl BirthDateRange {
         }
     }
 
-    /// Narrows the range by a known Division Age range on a specific Date.
-    pub fn narrow_by_division(
-        &mut self,
-        min: Age,
-        max: Age,
-        on_date: Date,
-    ) -> NarrowResult {
+    /// Narrows the range by a known AgeRange on a specific Date.
+    pub fn narrow_by_range(&mut self, min: Age, max: Age, on_date: Date) -> NarrowResult {
         let (year, monthday) = (on_date.year(), on_date.monthday());
 
         // Determine the maximum BirthDate from the lower Age (they are younger).
@@ -359,24 +339,15 @@ fn get_birthdate_range(
             trace_integrated(debug, &range, "Age", &entry.age, &path);
         }
 
-        // Narrow by Division Age.
-        if entry.division_age_min != Age::None || entry.division_age_max != Age::None {
-            // Struct to get debugging pretty-printing.
-            let agerange = AgeRange {
-                min: entry.division_age_min,
-                max: entry.division_age_max,
-            };
-
-            if range.narrow_by_division(
-                entry.division_age_min,
-                entry.division_age_max,
-                mdate,
-            ) == NarrowResult::Conflict
+        // Narrow by AgeRange.
+        if entry.agerange.min.is_some() || entry.agerange.max.is_some() {
+            if range.narrow_by_range(entry.agerange.min, entry.agerange.max, mdate)
+                == NarrowResult::Conflict
             {
-                trace_conflict(debug, &range, mdate, "Division", &agerange, &path);
+                trace_conflict(debug, &range, mdate, "AgeRange", &entry.agerange, &path);
                 return unknown;
             }
-            trace_integrated(debug, &range, "Division", &agerange, &path);
+            trace_integrated(debug, &range, "AgeRange", &entry.agerange, &path);
         }
     }
 
@@ -436,26 +407,26 @@ fn infer_from_range(
             Age::None => (),
         };
 
-        // Update the AgeClass to match the Age, if applicable.
+        // Update the AgeRange to match the Age, if applicable.
         //
-        // If the entry initially had an Age::Approximate, the AgeClass matched
+        // If the entry initially had an Age::Approximate, the AgeRange matched
         // by previous information (and set by the checker) may be different
         // than the current best match.
-        if entry.ageclass == AgeClass::None || !entry_had_exact_age {
-            entry.ageclass = AgeClass::from_age(age_on_date);
-            if entry.ageclass != AgeClass::None {
-                trace_inference(debug, "AgeClass (via Age)", &entry.ageclass, mdate);
+        if entry.agerange.is_none() || !entry_had_exact_age {
+            entry.agerange = AgeRange::from(age_on_date);
+            if !entry.agerange.is_none() {
+                trace_inference(debug, "AgeRange (via Age)", &entry.agerange, mdate);
             }
         }
 
         // If no specific Age is known, maybe Division information
         // can be used to at least find a range.
-        if entry.ageclass == AgeClass::None {
+        if entry.agerange.is_none() {
             let age_min = range.min.age_on(mdate).unwrap_or(Age::None);
             let age_max = range.max.age_on(mdate).unwrap_or(Age::None);
-            entry.ageclass = AgeClass::from_range(age_min, age_max);
-            if entry.ageclass != AgeClass::None {
-                trace_inference(debug, "AgeClass (via Range)", &entry.ageclass, mdate);
+            entry.agerange = AgeRange::from((age_min, age_max));
+            if !entry.agerange.is_none() {
+                trace_inference(debug, "AgeRange (via Range)", &entry.agerange, mdate);
             }
         }
 
@@ -630,12 +601,12 @@ mod tests {
     }
 
     #[test]
-    fn range_narrow_by_division() {
+    fn range_narrow_by_range() {
         // Basic sanity test.
         let mut bdr = BirthDateRange::default();
         let date = Date::from_u32(2019_01_04);
         let (min, max) = (Age::Exact(30), Age::Exact(34));
-        assert_eq!(bdr.narrow_by_division(min, max, date), Integrated);
+        assert_eq!(bdr.narrow_by_range(min, max, date), Integrated);
         assert_eq!(bdr.min, Date::from_u32(1984_01_05));
         assert_eq!(bdr.max, Date::from_u32(1989_01_04));
 
@@ -644,6 +615,6 @@ mod tests {
         let mut bdr = BirthDateRange::at(Some(1983_03_16), Some(1983_03_16));
         let date = Date::from_u32(2001_07_26);
         let (min, max) = (Age::Exact(0), Age::Approximate(17));
-        assert_eq!(bdr.narrow_by_division(min, max, date), Integrated);
+        assert_eq!(bdr.narrow_by_range(min, max, date), Integrated);
     }
 }
