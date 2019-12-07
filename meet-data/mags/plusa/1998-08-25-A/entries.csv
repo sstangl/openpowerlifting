@@ -1,4 +1,4 @@
-Name,WeightClassKg,Division,AgeClass,Equipment,Sex,Best3BenchKg,Bench4Kg,TotalKg,Event,Age,BodyweightKg,Place
+Name,WeightClassKg,Division,AgeRange,Equipment,Sex,Best3BenchKg,Bench4Kg,TotalKg,Event,Age,BodyweightKg,Place
 Helen Balmania,44,Open,,Raw,F,32.5,,32.5,B,,,1
 Patricia Ewing,48,Masters 45-49,45-49,Raw,F,62.5,,62.5,B,,,1
 Laurie Watson,48,Open,,Raw,F,62.5,65,62.5,B,,,1
@@ -10,7 +10,7 @@ Connie Eisenburn,60,Physically Challenged,,Single-ply,F,67.5,,67.5,B,,,1
 Cathy Marshall,67.5,Masters 40-44,40-44,Raw,F,75,,75,B,,,1
 Bobette Burdick,67.5,Military,,Single-ply,F,97.5,,97.5,B,,,1
 Bobette Burdick,67.5,Open,,Single-ply,F,97.5,,97.5,B,,,1
-Joanna Perez Negron,67.5,School,13-19,Raw,F,42.5,,42.5,B,11,,1
+Joanna Perez Negron,67.5,School,0-12,Raw,F,42.5,,42.5,B,11,,1
 Joanna Perez Negron,67.5,Youth,0-12,Raw,F,42.5,,42.5,B,11,,1
 Susan Mazze,75,Open,,Raw,F,95,97.5,95,B,,,1
 Michelline Smith,82.5,Masters 60-64,60-64,Raw,F,37.5,,37.5,B,,,1
@@ -25,7 +25,7 @@ Corey Lee,60,Junior,20-23,Raw,M,145,147.5,145,B,,,1
 Chris Ortiz,60,Novice,,Raw,M,120,,120,B,,,1
 Scott Rebhun,60,Novice,,Raw,M,65,,65,B,,,2
 Chris Ortiz,60,Open,,Raw,M,120,,120,B,,,1
-Jordan Indivino,60,School,13-19,Raw,M,35,,35,B,8,,1
+Jordan Indivino,60,School,,Raw,M,35,,35,B,8,,1
 Juan Cervantes,60,Teen 16-17,16-17,Single-ply,M,92.5,95,92.5,B,,,1
 Jordan Indivino,60,Youth,0-12,Raw,M,35,,35,B,8,,1
 Mac Scott,67.5,Masters 45-49,45-49,Single-ply,M,85,,85,B,,,1

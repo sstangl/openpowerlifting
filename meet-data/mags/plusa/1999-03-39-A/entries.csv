@@ -1,4 +1,4 @@
-Name,BodyweightKg,Age,WeightClassKg,Division,AgeClass,Equipment,Sex,Best3BenchKg,Bench4Kg,TotalKg,Event,Place
+Name,BodyweightKg,Age,WeightClassKg,Division,AgeRange,Equipment,Sex,Best3BenchKg,Bench4Kg,TotalKg,Event,Place
 Alice Hill,,,44,Open,,Raw,F,52.5,,52.5,B,1
 A. Lee,,18,60,Teen,13-19,Raw,F,,,,B,DQ
 Dana Hart,,18,75,Teen,13-19,Raw,F,120,,120,B,1
@@ -31,7 +31,7 @@ Vicki LaCasella,,,60,Open,,Single-ply,F,77.5,,77.5,B,1
 Yvonne Warfield,,41,60,Masters,40-999,Single-ply,F,77.5,,77.5,B,2
 Kathy Marshall,,44,67.5,Masters,40-999,Raw,F,80,,80,B,1
 Kelly Hale,,,67.5,Open,,Single-ply,F,95,,95,B,1
-Kelly Hale,,30,67.5,Submasters,35-39,Single-ply,F,95,,95,B,1
+Kelly Hale,,,67.5,Submasters,35-39,Single-ply,F,95,,95,B,1
 Mary Jacobson,,43,75,Masters,40-999,Single-ply,F,77.5,,77.5,B,1
 Mary Jacobson,,,75,Open,,Single-ply,F,77.5,,77.5,B,1
 Corrine Sandfry,,,75,Open,,Raw,F,100,,100,B,1
@@ -43,7 +43,7 @@ J. Constente,,9,52,Youth,0-12,Raw,M,,,,B,DQ
 Michael Booker #1,,17,52,Open,,Raw,M,132.5,,132.5,B,1
 Johs Harrison,,22,56,Juniors,20-23,Raw,M,122.5,,122.5,B,1
 M. Nurshatov,,,56,Open,,Raw,M,,,,B,DQ
-Michael Weinstock,,13,56,Youth,0-12,Raw,M,,,,B,DQ
+Michael Weinstock,,13,56,Youth,,Raw,M,,,,B,DQ
 T. England,,11,56,Youth,0-12,Raw,M,,,,B,DQ
 Corey Lee,,23,60,Lifetime,,Raw,M,145,,145,B,1
 Corey Lee,,23,60,Juniors,20-23,Raw,M,145,,145,B,1
@@ -174,7 +174,7 @@ Melvin Smith,,,125,Military,,Raw,M,172.5,,172.5,B,1
 Lance McCullough,,,125,Open,,Raw,M,210,,210,B,1
 Lance McCullough,,,125,Submasters,35-39,Raw,M,210,,210,B,1
 Robert Homesely,,19,125,Teen,13-19,Raw,M,162.5,,162.5,B,2
-Tim Bryant,,35,125,Teen,13-19,Raw,M,197.5,,197.5,B,1
+Tim Bryant,,35,125,Submasters,35-39,Raw,M,197.5,,197.5,B,1
 Paul Brown,,43,145,Masters,40-999,Single-ply,M,265,,265,B,1
 Ron Surabian,,51,145,Masters,40-999,Single-ply,M,185,,185,B,3
 Robert O. Smith,,56,145,Masters,40-999,Single-ply,M,195,,195,B,2

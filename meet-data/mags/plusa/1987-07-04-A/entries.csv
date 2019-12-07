@@ -1,4 +1,4 @@
-Name,Age,WeightClassKg,Division,AgeClass,Sex,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+Name,Age,WeightClassKg,Division,AgeRange,Sex,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
 Don Moore,,56,Masters 40-44,40-44,M,-160,-160,-160,,,,,,,,,,,SBD,Single-ply,DQ
 Gerald Ringi,,60,Masters 40-44,40-44,M,172.5,185,197.5,197.5,105,112.5,120,120,172.5,-185,187.5,187.5,505,SBD,Single-ply,1
 Gordon Santee,40,67.5,Masters 40-44,40-44,M,200,215,225,225,140,150,157.5,157.5,220,240,-250,240,622.5,SBD,Single-ply,1
@@ -117,7 +117,7 @@ Francis Barrett,,90,Masters 65-69,65-69,M,-150,150,-177.5,150,105,115,-122.5,115
 S. Robak,,100,Masters 65-69,65-69,M,-122.5,122.5,140,140,107.5,115,-120,115,160,185,,185,440,SBD,Single-ply,1
 Jack van Sise,,67.5,Masters 70-74,70-74,M,75,85,-95,85,50,55,60,60,112.5,127.5,137.5,137.5,282.5,SBD,Single-ply,1
 Bernard Brand,,75,Masters 70-74,70-74,M,-130,130,140,140,70,77.5,82.5,82.5,167.5,-177.5,-177.5,167.5,390,SBD,Single-ply,1
-Joe Kurpiel,67,90,Masters 70-74,70-74,M,130,147.5,155,155,87.5,95,102.5,102.5,177.5,197.5,-205,197.5,455,SBD,Single-ply,1
+Joe Kurpiel,67,90,Masters 65-69,65-69,M,130,147.5,155,155,87.5,95,102.5,102.5,177.5,197.5,-205,197.5,455,SBD,Single-ply,1
 George Stevens,,90,Masters 70-74,70-74,M,82.5,97.5,102.5,102.5,50,57.5,62.5,62.5,120,130,-135,130,295,SBD,Single-ply,2
 Sage Pendley,70,100,Masters 70-74,70-74,M,-65,65,77.5,77.5,77.5,85,92.5,92.5,112.5,122.5,132.5,132.5,302.5,SBD,Single-ply,1
 Jim Messer,81,75,Masters 80+,80-999,M,-60,60,70,70,25,30,-35,30,100,110,-120,110,210,SBD,Single-ply,1
