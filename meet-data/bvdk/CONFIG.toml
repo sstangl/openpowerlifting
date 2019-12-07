@@ -54,3 +54,5 @@
     1929 = ["ExemptDivision"] # ~12 Year old in Youth B.
     1931 = ["ExemptWeightClassConsistency"] # DOTS team meet, no weightclasses.
     1937 = ["ExemptDivision"] # ~12 Year old in Youth.
+    # Some divisions labeled "BEST LIFTER" didn't use divisions or weightclasses.
+    1939 = ["ExemptWeightClassConsistency", "ExemptDivision"]
