@@ -23,7 +23,7 @@
 
 {% block body %}
   <div class="content">
-    <table>
+    <table id="meetListTable">
       <thead><tr>
         <th>{{strings.columns.federation}}</th>
         <th>{{strings.columns.date}}</th>
@@ -35,9 +35,9 @@
       {% for meet in meets %}
         <tr>
           <td>{{meet.federation}}</td>
-          <td>{{meet.date}}</td>
+          <td class="meet-list-date">{{meet.date}}</td>
           <td>{{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}</td>
-          <td><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
+          <td class="meet-list-name"><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
           <td>{{meet.num_lifters}}</td>
         </tr>
       {% endfor %}
