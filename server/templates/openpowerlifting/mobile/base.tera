@@ -1,0 +1,45 @@
+{% import "static-asset-map" as statics %}
+
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+  {# Static header parts. #}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+  <meta name="application-name" content="OpenPowerlifting">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  {# Dynamic header parts. #}
+  <title>{{page_title}}</title>
+
+  {# External sources -- these should be self-hosted eventually. #}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {# Internal sources. #}
+  <link rel="stylesheet" type="text/css" href="/static/css/{{statics::style_css()}}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="OpenPowerlifting">
+
+  {% block includes %}
+  {% endblock includes %}
+
+  {# Communicates to the JS code that this is the mobile version. #}
+  <script type="text/javascript">
+    const IS_MOBILE = true;
+  </script>
+
+  {# Main script, capable of initializing every kind of page. #}
+  {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
+  {# If the page kind is unspecified, it just loads locale scripts. #}
+  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
+</head>
+<body>
+  <div id="mobile-wrapper">
+    <div id="mobile-content">
+      {% block body %}{% endblock body %}
+    </div>
+    {% include "openpowerlifting/mobile/footer" %}
+  </div>
+</body>
+</html>

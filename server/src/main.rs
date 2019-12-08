@@ -340,11 +340,15 @@ fn faq(
     lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::faq::Context::new(&locale);
-    Some(Template::render("openpowerlifting/desktop/faq", &context))
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/faq", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/faq", &context),
+    })
 }
 
 #[get("/contact?<lang>")]

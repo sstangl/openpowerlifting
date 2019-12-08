@@ -42,3 +42,6 @@ $mobile-cutoff: 600px;
 @import "records-columns";
 @import "donator-colors";
 @import "layout";
+
+// Mobile stuff gets included too!
+@import "mobile-footer";

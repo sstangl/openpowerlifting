@@ -1,0 +1,113 @@
+{% extends "openpowerlifting/mobile/base" %}
+
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block body %}
+  <div class="mixed-content">
+
+    <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</h1>
+
+    <h2>{{strings.lifter_page.personal_bests}}</h2>
+
+    <table>
+      <thead><tr>
+        <th style="width: 80px;">{{strings.columns.equipment}}</th>
+        <th style="width: 80px;">{{strings.columns.squat}}</th>
+        <th style="width: 80px;">{{strings.columns.bench}}</th>
+        <th style="width: 80px;">{{strings.columns.deadlift}}</th>
+        <th style="width: 80px;">{{strings.columns.total}}</th>
+        <th style="width: 80px;">{{strings.columns.wilks}}</th>
+        <th></th>{# Intentionally-blank filler column. #}
+      </tr></thead>
+      <tbody>
+        {% for this in bests %}
+          <tr>
+            <td>{{this.equipment}}</td>
+            <td>{% if this.squat %}{{this.squat}}{% endif %}</td>
+            <td>{% if this.bench %}{{this.bench}}{% endif %}</td>
+            <td>{% if this.deadlift %}{{this.deadlift}}{% endif %}</td>
+            <td>{% if this.total %}{{this.total}}{% endif %}</td>
+            <td>{% if this.wilks %}{{this.wilks}}{% endif %}</td>
+            <td></td>{# Intentionally-blank filler column. #}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>{{strings.lifter_page.competition_results}} <a href="/u/{{lifter.username}}/csv" style="float: right; margin-right: 20px;"><button style="width: 120px">Download as CSV</button></a></h2>
+
+    <table>
+      <thead><tr>
+        <th>{{strings.columns.place}}</th>
+        <th>{{strings.columns.federation}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.location}}</th>
+        <th>{{strings.columns.meetname}}</th>
+        <th>{{strings.columns.division}}</th>
+        {% if show_sex_column %}
+          <th>{{strings.columns.sex}}</th>
+        {% endif %}
+        <th>{{strings.columns.age}}</th>
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        {% if show_attempts %}
+          <th colspan="4">{{strings.columns.squat}}</th>
+          <th colspan="4">{{strings.columns.bench}}</th>
+          <th colspan="4">{{strings.columns.deadlift}}</th>
+        {% else %}
+          <th>{{strings.columns.squat}}</th>
+          <th>{{strings.columns.bench}}</th>
+          <th>{{strings.columns.deadlift}}</th>
+        {% endif %}
+        <th>{{strings.columns.total}}</th>
+        <th>{{strings.columns.wilks}}</th>
+      </tr></thead>
+      <tbody>
+      {% for this in meet_results %}
+        <tr>
+          <td>{{this.place}}</td>
+          <td>{{this.federation}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
+          <td><a href="{{urlprefix | safe}}m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
+          <td>{{this.division}}</td>
+          {% if show_sex_column %}
+            <td>{{this.sex}}</td>
+          {% endif %}
+          <td>{{this.age}}</td>
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclass}}</td>
+          <td>{{this.bodyweight}}</td>
+          {% if show_attempts %}
+            <td>{% if this.squat1 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
+            <td>{{this.squat2}}</td>
+            <td>{{this.squat3}}</td>
+            <td>{{this.squat4}}</td>
+            <td>{% if this.bench1 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
+            <td>{{this.bench2}}</td>
+            <td>{{this.bench3}}</td>
+            <td>{{this.bench4}}</td>
+            <td>{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
+            <td>{{this.deadlift2}}</td>
+            <td>{{this.deadlift3}}</td>
+            <td>{{this.deadlift4}}</td>
+          {% else %}
+            <td>{{this.squat}}</td>
+            <td>{{this.bench}}</td>
+            <td>{{this.deadlift}}</td>
+          {% endif %}
+          <td>{{this.total}}</td>
+          <td>{{this.wilks}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock body %}

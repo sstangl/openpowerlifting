@@ -1,0 +1,41 @@
+{% extends "openpowerlifting/mobile/base" %}
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block body %}
+<center>
+  <div class="text-content">
+
+    <h1>Contact Information</h1>
+
+<h2>Filing an Issue</h2>
+
+<p>The <a href="https://gitlab.com/openpowerlifting/opl-data/issues">Issue Tracker</a> is used for tracking items of work. If you would like for us to take an action in response to your message, please file the message as an issue in the tracker.</p>
+
+<p>This is explicitly appropriate for reporting data corrections and requests to add new meets, but it is never incorrect to file an issue on the tracker. If you want to send us spreadsheets, please do so through an issue so that your request can be tracked.</p>
+
+<p>For your convenience, you can also file an issue by sending an e-mail to <a href="mailto:issues@openpowerlifting.org">issues@openpowerlifting.org</a>.</p>
+
+<p>For corrections to data, please include a link to the corrections, preferably from a federation-linked source. Video evidence is also acceptable in the case of federation error or omission.</p>
+
+<h2>E-Mail</h2>
+
+<p>Please address all issue requests to: <a href="mailto:issues@openpowerlifting.org">issues@openpowerlifting.org</a>.</p>
+
+<p>If you would just like to talk with us, please address all other inquiries to: <a href="mailto:updates@openpowerlifting.org">updates@openpowerlifting.org</a>.</p>
+
+<p>If you would like to contribute to the project, please send an email for an invite to the team chat. Help is always appreciated. Every meet requires manual work, and there's more than enough to go around.</p>
+
+<p>
+  <a href="https://instagram.com/openpowerlifting"><i class="fa fa-instagram fa-2x"></i></a>
+  <span>&nbsp;&nbsp;&nbsp;</span>
+  <a href="https://facebook.com/openpowerlifting"><i class="fa fa-facebook fa-2x"></i></a>
+</p>
+  </div>
+</center>
+{% endblock body %}

@@ -1,0 +1,112 @@
+{% extends "openpowerlifting/mobile/base" %}
+
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block includes %}
+  <script type="text/javascript">
+    const PAGE_KIND = "meet";
+    const path_if_by_ah = "{{urlprefix | safe}}{{path_if_by_ah | safe}}";
+    const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
+    const path_if_by_dots = "{{urlprefix | safe}}{{path_if_by_dots | safe}}";
+    const path_if_by_glossbrenner = "{{urlprefix | safe}}{{path_if_by_glossbrenner | safe}}";
+    const path_if_by_ipfpoints = "{{urlprefix | safe}}{{path_if_by_ipfpoints | safe}}";
+    const path_if_by_nasa = "{{urlprefix | safe}}{{path_if_by_nasa | safe}}";
+    const path_if_by_reshel = "{{urlprefix | safe}}{{path_if_by_reshel | safe}}";
+    const path_if_by_schwartzmalone = "{{urlprefix | safe}}{{path_if_by_schwartzmalone | safe}}";
+    const path_if_by_total = "{{urlprefix | safe}}{{path_if_by_total | safe}}";
+    const path_if_by_wilks = "{{urlprefix | safe}}{{path_if_by_wilks | safe}}";
+  </script>
+{% endblock includes %}
+
+{% block controls %}
+  <div id="controls">
+    <div id="controls-left">
+      <select id="sortselect">
+        <optgroup label="{{strings.selectors.sort.weight}}">
+          <option value="by-division" {% if sortselection == "ByDivision" %}selected{% endif %}>{{strings.selectors.sort.by_division}}</option>
+          <option value="by-total" {% if sortselection == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
+        </optgroup>
+        <optgroup label="{{strings.selectors.sort.points}}">
+          <option value="by-ah" {% if sortselection == "ByAH" %}selected{% endif %}>{{strings.selectors.sort.by_ah}}</option>
+          <option value="by-dots" {% if sortselection == "ByDots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
+          <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
+          <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
+          <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>
+          <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
+          <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
+          <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+        </optgroup>
+      </select>
+    </div>
+    <div id="controls-right">
+      <button onclick="location.href='https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}'" type="button">Edit Meet</button>
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="mixed-content-with-controls">
+    <h1 id="meet">{{year}} {{meet.federation}} {{meet.name}}</h1>
+    <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}</p>
+
+    <table>
+      <thead><tr>
+        {% if use_rank_column %}
+          <th>{{strings.columns.formulaplace}}</th>
+        {% else %}
+          <th>{{strings.columns.place}}</th>
+        {% endif %}
+        <th>{{strings.columns.liftername}}</th>
+        <th>{{strings.columns.sex}}</th>
+        {% if has_age_data %}
+          <th>{{strings.columns.age}}</th>
+        {% endif %}
+        <th>{{strings.columns.equipment}}</th>
+        <th>{{strings.columns.weightclass}}</th>
+        <th>{{strings.columns.bodyweight}}</th>
+        <th>{{strings.columns.squat}}</th>
+        <th>{{strings.columns.bench}}</th>
+        <th>{{strings.columns.deadlift}}</th>
+        <th>{{strings.columns.total}}</th>
+        <th>{{points_column_title}}</th>
+      </tr></thead>
+      <tbody>
+      {% for table in tables %}
+        {% if table.title %}
+          <td colspan="12" class="divheader">{{table.title}}</td>
+        {% endif %}
+      {% for this in table.rows %}
+        <tr>
+          {% if use_rank_column %}
+            <td>{{this.rank}}</td>
+          {% else %}
+            <td>{{this.place}}</td>
+          {% endif %}
+          <td>
+            <a class="{{this.lifter.color}}" href="{{urlprefix | safe}}u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}
+          </td>
+          <td>{{this.sex}}</td>
+          {% if has_age_data %}
+            <td>{{this.age}}</td>
+          {% endif %}
+          <td>{{this.equipment}}</td>
+          <td>{{this.weightclass}}</td>
+          <td>{{this.bodyweight}}</td>
+          <td>{{this.squat}}</td>
+          <td>{{this.bench}}</td>
+          <td>{{this.deadlift}}</td>
+          <td>{{this.total}}</td>
+          <td>{{this.points}}</td>
+        </tr>
+      {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock body %}

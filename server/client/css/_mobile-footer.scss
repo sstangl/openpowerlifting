@@ -1,0 +1,34 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// The mobile version uses a footer instead of a header.
+
+$footer-height: 60px;
+
+// This includes both the content and the footer.
+#mobile-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+// The contents of the wrapper that aren't the footer.
+#mobile-content {
+  padding-bottom: $footer-height;
+}
+
+// The footer with controls fixed at the bottom of the screen.
+footer {
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  bottom: 0;
+
+  height: $footer-height;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $header-color;
+  background-color: $header-background-color;
+}

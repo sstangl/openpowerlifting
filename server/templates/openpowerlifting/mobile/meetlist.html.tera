@@ -1,0 +1,50 @@
+{% extends "openpowerlifting/mobile/base" %}
+
+{% block includes %}
+  <script type="text/javascript">
+    const PAGE_KIND = "meetlist";
+  </script>
+{% endblock includes %}
+
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block controls %}
+  <div id="controls">
+    {% include "openpowerlifting/widget-fedselect" %}
+    {% include "widget-yearselect" %}
+  </div>
+{% endblock controls %}
+
+{% block body %}
+  <div class="content">
+    <table>
+      <thead><tr>
+        <th>{{strings.columns.federation}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.location}}</th>
+        <th>{{strings.columns.meetname}}</th>
+        <th>{{strings.columns.num_lifters}}</th>
+      </tr></thead>
+      <tbody>
+      {% for meet in meets %}
+        <tr>
+          <td>{{meet.federation}}</td>
+          <td>{{meet.date}}</td>
+          <td>{{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}</td>
+          <td><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
+          <td>{{meet.num_lifters}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% if theres_more %}
+      <p>Some more meets not shown (yet, beta!).</p>
+    {% endif %}
+  </div>
+{% endblock body %}
