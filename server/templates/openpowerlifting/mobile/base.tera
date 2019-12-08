@@ -39,7 +39,10 @@
     <div id="mobile-content">
       {% block body %}{% endblock body %}
     </div>
-    {% include "openpowerlifting/mobile/footer" %}
+    <footer id="mobile-footer">
+      {% include "openpowerlifting/mobile/footer" %}
+      {% block controls %}{% endblock controls %}
+    </footer>
   </div>
 </body>
 </html>

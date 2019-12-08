@@ -108,16 +108,18 @@ fn rankings(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let default = pages::selection::Selection::default();
     let selection = pages::selection::Selection::from_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
-    Some(Template::render(
-        "openpowerlifting/desktop/rankings",
-        &context,
-    ))
+    let cx = pages::rankings::Context::new(&opldb, &locale, &selection)?;
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/rankings", &cx),
+    })
 }
 
 #[get("/rankings")]
@@ -132,6 +134,7 @@ fn records(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let default = pages::records::RecordsSelection::default();
@@ -147,10 +150,11 @@ fn records(
         &selection,
         &pages::selection::Selection::default(),
     );
-    Some(Template::render(
-        "openpowerlifting/desktop/records",
-        &context,
-    ))
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/records", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/records", &context),
+    })
 }
 
 #[get("/records?<lang>")]
@@ -159,9 +163,10 @@ fn records_default(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    records(None, lang, opldb, langinfo, languages, cookies)
+    records(None, lang, opldb, langinfo, languages, device, cookies)
 }
 
 #[get("/u/<username>?<lang>")]
@@ -171,6 +176,7 @@ fn lifter(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Result<Template, Redirect>> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
@@ -204,26 +210,31 @@ fn lifter(
 
         // If a specific lifter was referenced, return the lifter's unique page.
         1 => {
-            let context =
-                pages::lifter::Context::new(&opldb, &locale, lifter_ids[0], None);
-            Some(Ok(Template::render(
-                "openpowerlifting/desktop/lifter",
-                &context,
-            )))
+            let cx = pages::lifter::Context::new(&opldb, &locale, lifter_ids[0], None);
+            Some(Ok(match device {
+                Device::Desktop => {
+                    Template::render("openpowerlifting/desktop/lifter", cx)
+                }
+                Device::Mobile => Template::render("openpowerlifting/mobile/lifter", cx),
+            }))
         }
 
         // If multiple lifters were referenced, return a disambiguation page.
         _ => {
-            let context = pages::disambiguation::Context::new(
+            let cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
                 &username,
                 &lifter_ids,
             );
-            Some(Ok(Template::render(
-                "openpowerlifting/desktop/disambiguation",
-                &context,
-            )))
+            Some(Ok(match device {
+                Device::Desktop => {
+                    Template::render("openpowerlifting/desktop/disambiguation", cx)
+                }
+                Device::Mobile => {
+                    Template::render("openpowerlifting/mobile/disambiguation", cx)
+                }
+            }))
         }
     }
 }
@@ -256,6 +267,7 @@ fn meetlist(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let mselection = match mselections {
@@ -263,11 +275,12 @@ fn meetlist(
         Some(p) => pages::meetlist::MeetListSelection::from_path(&p).ok()?,
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::meetlist::Context::new(&opldb, &locale, &mselection);
-    Some(Template::render(
-        "openpowerlifting/desktop/meetlist",
-        &context,
-    ))
+    let cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/meetlist", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/meetlist", &cx),
+    })
 }
 
 #[get("/mlist?<lang>")]
@@ -276,9 +289,10 @@ fn meetlist_default(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    meetlist(None, lang, opldb, langinfo, languages, cookies)
+    meetlist(None, lang, opldb, langinfo, languages, device, cookies)
 }
 
 #[get("/m/<meetpath..>?<lang>")]
@@ -288,6 +302,7 @@ fn meet(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let mut meetpath_str: &str = meetpath.to_str()?;
@@ -304,7 +319,11 @@ fn meet(
     let meet_id = opldb.get_meet_id(meetpath_str)?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
-    Some(Template::render("openpowerlifting/desktop/meet", &context))
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/meet", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/meet", &context),
+    })
 }
 
 #[get("/status?<lang>")]
@@ -313,14 +332,16 @@ fn status(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::status::Context::new(&opldb, &locale);
-    Some(Template::render(
-        "openpowerlifting/desktop/status",
-        &context,
-    ))
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/status", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/status", &context),
+    })
 }
 
 #[get("/data?<lang>")]
@@ -328,11 +349,16 @@ fn data(
     lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::data::Context::new(&locale);
-    Some(Template::render("openpowerlifting/desktop/data", &context))
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/data", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/data", &context),
+    })
 }
 
 #[get("/faq?<lang>")]
@@ -345,6 +371,7 @@ fn faq(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::faq::Context::new(&locale);
+
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/faq", &context),
         Device::Mobile => Template::render("openpowerlifting/mobile/faq", &context),
@@ -356,14 +383,16 @@ fn contact(
     lang: Option<String>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::contact::Context::new(&locale);
-    Some(Template::render(
-        "openpowerlifting/desktop/contact",
-        &context,
-    ))
+
+    Some(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/contact", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/contact", &context),
+    })
 }
 
 #[derive(Responder)]
@@ -379,6 +408,7 @@ fn index(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
     languages: AcceptLanguage,
+    device: Device,
     cookies: Cookies,
 ) -> Option<IndexReturn> {
     // Handle old-style URLs. Hopefully we can remove this code one day.
@@ -391,11 +421,12 @@ fn index(
     // Otherwise, render the main rankings template.
     let selection = pages::selection::Selection::default();
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::rankings::Context::new(&opldb, &locale, &selection);
-    Some(IndexReturn::Template(Template::render(
-        "openpowerlifting/desktop/rankings",
-        &context,
-    )))
+    let cx = pages::rankings::Context::new(&opldb, &locale, &selection);
+
+    Some(IndexReturn::Template(match device {
+        Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/rankings", &cx),
+    }))
 }
 
 /// API endpoint for fetching a slice of rankings data as JSON.
