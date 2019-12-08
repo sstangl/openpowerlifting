@@ -20,8 +20,9 @@
 
 'use strict';
 
-import { RemoteCache, WorkItem, Column } from './remotecache';
-import { RankingsSearcher } from './search';
+import { RemoteCache, WorkItem, Column } from "./remotecache";
+import { RankingsSearcher } from "./search";
+import { isMobile } from "./mobile";
 
 // Variables provided by the server.
 declare const initial_data: Object[];
@@ -154,7 +155,7 @@ function searchOnEnter(keyevent: any) {
     }
 }
 
-function search() {
+function search(): void {
     const query = searchField.value;
     if (!query) {
         return;
@@ -298,6 +299,11 @@ function changeSelection() {
     }
     pending_cache = cache;
 
+    // On mobile, the columns may change if the sort selector changes.
+    if (isMobile() && global_grid instanceof Slick.Grid) {
+        renderGridTable(); // Cause a re-render, changing columns.
+    }
+
 }
 
 function addSelectorListeners(selector: HTMLElement) {
@@ -416,19 +422,11 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
     return cache;
 }
 
-function onLoad() {
-    initializeEventListeners();
-
-    // Make sure that selector state is provided for each entry in history.
-    if (history.state !== null) {
-        // The page was loaded by navigating backwards from an external page.
-        restoreSelectionState(history.state);
-    } else {
-        // This is the first load of this page, navigating forwards:
-        // stash the current selection state in the history.
-        history.replaceState(saveSelectionState(), "", undefined);
-    }
-
+// (Re-)Renders the Grid.
+//
+// Mobile devices use a different grid ordering for different kinds of selections.
+// For simplicity, when the selectors are changed, the Grid is just re-rendered.
+function renderGridTable(): void {
     // Check templates/rankings.html.tera.
     const nameWidth = 200;
     const shortWidth = 40;
@@ -438,6 +436,8 @@ function onLoad() {
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
     }
+
+    const mobile: boolean = isMobile();
 
     let columns = [
         {id: "filler", width: 20, minWidth: 20, focusable: false,
@@ -459,16 +459,63 @@ function onLoad() {
         {id: "points", name: selection_to_points_title(), field: "points", width: numberWidth}
     ];
 
-    let options = {
-        enableColumnReorder: false,
-        forceSyncScrolling: false,
-        forceFitColumns: true,
-        rowHeight: 23,
-        topPanelHeight: 23,
-        cellFlashingCssClass: "searchflashing"
+    // Mobile screens are tiny.
+    // To make this usable, we intend to place the information most relevant
+    // to the current selection as left as possible (to the Name).
+    if (mobile) {
+        // Helper function to select a column by "id" property.
+        function col(id: string): Object {
+            return columns.find(c => c.id === id) || columns[0];
+        }
+
+        // The first three columns are fixed.
+        const acc: Array<any> = [];
+        acc.push(col("filler"), col("rank"), col("name"));
+
+        // The S/B/D/T/P columns change order based on the sorting.
+        // The general idea is to place the most relevant information as close
+        // to the left as possible, but Points is always to the right of Total.
+        switch (selSort.value) {
+            case "by-squat":
+                acc.push(col("squat"), col("total"), col("points"));
+                break;
+
+            case "by-bench":
+                acc.push(col("bench"), col("total"), col("points"));
+                break;
+
+            case "by-deadlift":
+                acc.push(col("deadlift"), col("total"), col("points"));
+                break;
+
+            default: // Handles "by-total" and the various by-points sortings.
+                acc.push(col("total"), col("points"));
+                acc.push(col("squat"), col("bench"), col("deadlift"));
+                break;
+        }
+
+        // The final columns are fixed, the order not being particularly important.
+        // Just tried to guess what people might be most likely to look for.
+        acc.push(col("sex"), col("age"));
+        acc.push(col("equipment"), col("weightclass"), col("bodyweight"));
+        acc.push(col("fed"), col("date"), col("location"));
+
+        // Use these new columns instead.
+        columns = acc;
     }
 
-    global_cache = makeRemoteCache(selection_to_path(), true);
+    const options = {
+        enableColumnReorder: false,
+        forceSyncScrolling: false,
+        rowHeight: 23,
+        topPanelHeight: 23,
+        cellFlashingCssClass: "searchflashing",
+
+        // On mobile, columns need their full width for visibility.
+        // The user can scroll horizontally.
+        forceFitColumns: (mobile ? false : true)
+    }
+
     global_grid = new Slick.Grid("#theGrid", makeDataProvider() as any, columns, options);
 
     // Hook up the cache.
@@ -480,6 +527,24 @@ function onLoad() {
     setSortColumn();
     global_grid.resizeCanvas();
     global_grid.onViewportChanged.notify();
+}
+
+function initRankings(): void {
+    initializeEventListeners();
+
+    // Make sure that selector state is provided for each entry in history.
+    if (history.state !== null) {
+        // The page was loaded by navigating backwards from an external page.
+        restoreSelectionState(history.state);
+    } else {
+        // This is the first load of this page, navigating forwards:
+        // stash the current selection state in the history.
+        history.replaceState(saveSelectionState(), "", undefined);
+    }
+
+    // Hook up the SlickGrid.
+    global_cache = makeRemoteCache(selection_to_path(), true);
+    renderGridTable();
 
     // Hook up the searcher.
     searcher = RankingsSearcher();
@@ -490,10 +555,6 @@ function onLoad() {
             global_grid.flashCell(next_index, i, 100);
         }
     });
-}
-
-function initRankings(): void {
-    onLoad();
 }
 
 export {
