@@ -1,4 +1,4 @@
-{% extends "desktop-base" %}
+{% extends "openpowerlifting/desktop/base" %}
 
 {% block includes %}
   <script type="text/javascript">
@@ -24,8 +24,8 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      {% include "widget-fedselect" %}
-      {% include "widget-equipmentselect" %}
+      {% include "openpowerlifting/widget-fedselect" %}
+      {% include "openpowerlifting/widget-equipmentselect" %}
       <select id="classkindselect">
         <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
         <option value="ipf-classes" {% if selection.classkind == "IPF" %}selected{% endif %}>IPF</option>
@@ -36,8 +36,8 @@
         <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "widget-ageselect" %}
-      {% include "common/widget-yearselect" %}
+      {% include "openpowerlifting/widget-ageselect" %}
+      {% include "widget-yearselect" %}
     </div>
   </div>
 {% endblock controls %}

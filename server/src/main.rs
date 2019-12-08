@@ -114,7 +114,10 @@ fn rankings(
     let selection = pages::selection::Selection::from_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
-    Some(Template::render("rankings", &context))
+    Some(Template::render(
+        "openpowerlifting/desktop/rankings",
+        &context,
+    ))
 }
 
 #[get("/rankings")]
@@ -144,7 +147,10 @@ fn records(
         &selection,
         &pages::selection::Selection::default(),
     );
-    Some(Template::render("records", &context))
+    Some(Template::render(
+        "openpowerlifting/desktop/records",
+        &context,
+    ))
 }
 
 #[get("/records?<lang>")]
@@ -200,7 +206,10 @@ fn lifter(
         1 => {
             let context =
                 pages::lifter::Context::new(&opldb, &locale, lifter_ids[0], None);
-            Some(Ok(Template::render("lifter", &context)))
+            Some(Ok(Template::render(
+                "openpowerlifting/desktop/lifter",
+                &context,
+            )))
         }
 
         // If multiple lifters were referenced, return a disambiguation page.
@@ -211,7 +220,10 @@ fn lifter(
                 &username,
                 &lifter_ids,
             );
-            Some(Ok(Template::render("disambiguation", &context)))
+            Some(Ok(Template::render(
+                "openpowerlifting/desktop/disambiguation",
+                &context,
+            )))
         }
     }
 }
@@ -252,7 +264,10 @@ fn meetlist(
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::meetlist::Context::new(&opldb, &locale, &mselection);
-    Some(Template::render("meetlist", &context))
+    Some(Template::render(
+        "openpowerlifting/desktop/meetlist",
+        &context,
+    ))
 }
 
 #[get("/mlist?<lang>")]
@@ -289,7 +304,7 @@ fn meet(
     let meet_id = opldb.get_meet_id(meetpath_str)?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
-    Some(Template::render("meet", &context))
+    Some(Template::render("openpowerlifting/desktop/meet", &context))
 }
 
 #[get("/status?<lang>")]
@@ -302,7 +317,10 @@ fn status(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::status::Context::new(&opldb, &locale);
-    Some(Template::render("status", &context))
+    Some(Template::render(
+        "openpowerlifting/desktop/status",
+        &context,
+    ))
 }
 
 #[get("/data?<lang>")]
@@ -314,7 +332,7 @@ fn data(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::data::Context::new(&locale);
-    Some(Template::render("data", &context))
+    Some(Template::render("openpowerlifting/desktop/data", &context))
 }
 
 #[get("/faq?<lang>")]
@@ -326,7 +344,7 @@ fn faq(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::faq::Context::new(&locale);
-    Some(Template::render("faq", &context))
+    Some(Template::render("openpowerlifting/desktop/faq", &context))
 }
 
 #[get("/contact?<lang>")]
@@ -338,7 +356,10 @@ fn contact(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::contact::Context::new(&locale);
-    Some(Template::render("contact", &context))
+    Some(Template::render(
+        "openpowerlifting/desktop/contact",
+        &context,
+    ))
 }
 
 #[derive(Responder)]
@@ -368,7 +389,8 @@ fn index(
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let context = pages::rankings::Context::new(&opldb, &locale, &selection);
     Some(IndexReturn::Template(Template::render(
-        "rankings", &context,
+        "openpowerlifting/desktop/rankings",
+        &context,
     )))
 }
 

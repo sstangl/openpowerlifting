@@ -1,4 +1,5 @@
-{% extends "desktop-base" %}
+{% extends "openpowerlifting/desktop/base" %}
+
 {% block topbar_hack %}
   <div class="topbar">
 {% endblock topbar_hack %}

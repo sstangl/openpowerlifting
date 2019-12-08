@@ -1,4 +1,4 @@
-{% extends "desktop-base" %}
+{% extends "openpowerlifting/desktop/base" %}
 
 {% block includes %}
   <script type="text/javascript">
@@ -50,18 +50,18 @@
 {% block controls %}
   <div id="controls">
     <div id="controls-left">
-      {% include "widget-fedselect" %}
-      {% include "widget-equipmentselect" %}
-      {% include "widget-weightclass" %}
+      {% include "openpowerlifting/widget-fedselect" %}
+      {% include "openpowerlifting/widget-equipmentselect" %}
+      {% include "openpowerlifting/widget-weightclass" %}
       <select id="sexselect">
         <option value="all"{% if selection.sex == "AllSexes" %} selected{% endif %}>{{strings.selectors.sex.all}}</option>
         <option value="men"{% if selection.sex == "Men" %} selected{% endif %}>{{strings.selectors.sex.m}}</option>
         <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
       </select>
-      {% include "widget-ageselect" %}
-      {% include "common/widget-yearselect" %}
-      {% include "widget-eventselect" %}
-      {% include "widget-sortselect" %}
+      {% include "openpowerlifting/widget-ageselect" %}
+      {% include "widget-yearselect" %}
+      {% include "openpowerlifting/widget-eventselect" %}
+      {% include "openpowerlifting/widget-sortselect" %}
     </div>
     <div id="controls-right">
       <input type="text" id="searchfield" autofocus/>

@@ -1,4 +1,4 @@
-{% extends "desktop-base" %}
+{% extends "openpowerlifting/desktop/base" %}
 
 {% block includes %}
   <script type="text/javascript">
@@ -16,8 +16,8 @@
 
 {% block controls %}
   <div id="controls">
-    {% include "widget-fedselect" %}
-    {% include "common/widget-yearselect" %}
+    {% include "openpowerlifting/widget-fedselect" %}
+    {% include "widget-yearselect" %}
   </div>
 {% endblock controls %}
 
