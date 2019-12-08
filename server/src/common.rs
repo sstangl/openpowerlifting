@@ -47,6 +47,34 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptEncoding {
     }
 }
 
+/// Request guard for determining whether the client is on a mobile device.
+///
+/// In order for "Request Desktop Site" to work, mobile detection is done
+/// by User-Agent instead of by viewport size.
+#[derive(Copy, Clone, Debug, Eq, PartialEq)]
+pub enum Device {
+    Desktop,
+    Mobile,
+}
+
+impl<'a, 'r> FromRequest<'a, 'r> for Device {
+    type Error = ();
+
+    fn from_request(request: &'a Request<'r>) -> request::Outcome<Device, ()> {
+        let keys: Vec<_> = request.headers().get("User-Agent").collect();
+        match keys.len() {
+            1 => {
+                if keys[0].contains("Mobile") {
+                    Outcome::Success(Device::Mobile)
+                } else {
+                    Outcome::Success(Device::Desktop)
+                }
+            }
+            _ => Outcome::Success(Device::Desktop),
+        }
+    }
+}
+
 /// Request guard for reading the "Accept-Language" HTTP header.
 pub struct AcceptLanguage(pub Option<String>);
 
