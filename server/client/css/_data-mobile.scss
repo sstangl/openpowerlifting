@@ -1,0 +1,16 @@
+@media (max-width: $breakpoint-tablet) {
+  .text-content {
+    pre {
+      overflow-x: scroll;
+    }
+
+    .downloadbar {
+      flex-direction: column;
+
+      .downloaditem {
+        margin-right: 0px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

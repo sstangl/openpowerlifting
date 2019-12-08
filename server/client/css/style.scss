@@ -5,6 +5,7 @@
 $background-color: #272727;
 $header-color: #4A4A50;
 $header-background-color: #F3F3F3;
+$header-background-color-mobile: white;
 
 $default-color: #EDF2F4;
 $primary-color: #FB3640;
@@ -21,6 +22,10 @@ $control-background-color: #F4F4F4;
 $control-hover-color: #FFFFFF;
 $control-active-color: #D8D8D8;
 $control-selector-image: "/static/images/select_dropdown_red.png";
+$control-mobile-filter-icon: "/static/images/mobile_filter.svg";
+$mobile-grid-name-show-more-icon: "/static/images/more_icon.png";
+$mobile-search-icon: "/static/images/search.png";
+$mobile-search-background: transparent;
 
 // Height definitions.
 $control-bar-height: 36px;
@@ -31,6 +36,7 @@ $table-row-height: 18px;
 
 // Definitions for media queries.
 $mobile-cutoff: 600px;
+$breakpoint-tablet: 767px;
 
 // External things that are hopefully pretty small.
 @import "../node_modules/slickgrid/slick.grid";
@@ -40,8 +46,15 @@ $mobile-cutoff: 600px;
 @import "tables";
 @import "controls";
 @import "records-columns";
-@import "donator-colors";
 @import "layout";
+@import "donator-colors";
 
 // Mobile stuff gets included too!
 @import "mobile-footer";
+@import "controls-mobile";
+@import "data-mobile";
+@import "lifter-mobile";
+@import "records-mobile";
+@import "meet-mobile";
+@import "meet-list-mobile";
+@import "status-mobile";
