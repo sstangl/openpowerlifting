@@ -19,6 +19,7 @@
 // Common entrance point to initialization code, valid on every page.
 
 import { initLocaleEventListeners } from "./locale";
+import { initMobileFooter, isMobile } from "./mobile";
 
 import { initMeet } from "./meet";
 import { initMeetList } from "./meetlist";
@@ -32,6 +33,11 @@ declare const PAGE_KIND: string | undefined;
 function main() {
     // Initializes the "Change Language" and "Change Units" selectors, if present.
     initLocaleEventListeners();
+
+    // If on mobile, add handlers for the navigational footer.
+    if (isMobile()) {
+        initMobileFooter();
+    }
 
     if (typeof PAGE_KIND === "string") {
         switch (PAGE_KIND) {

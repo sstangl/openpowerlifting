@@ -1,8 +1,6 @@
 // vim: set ts=8 sts=2 et sw=2 tw=99:
 // The mobile version uses a footer instead of a header.
 
-$footer-height: 40px;
-
 // This includes both the content and the footer.
 #mobile-wrapper {
   min-height: 100%;
@@ -82,14 +80,19 @@ footer > #headerSearchContainer {
   }
 }
 
-footer > #header-mobile-menu {
+#mobile-menu-popup {
+  position: fixed;
+  bottom: $footer-height;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  position: fixed;
-  width: 100%;
-  height: 100%;
   background-color: $background-color;
+
+  overflow-y: scroll;
 
   #header-mobile-menu-selectors {
     text-align: center;

@@ -7,6 +7,9 @@
   </footer>
 {% endblock footer_hack_end %}
 
+{% block controlsbutton %}
+{% endblock controlsbutton %}
+
 {% block body %}
 <center>
   <div class="text-content">
