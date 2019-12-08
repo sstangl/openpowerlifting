@@ -44,6 +44,7 @@
 {% endblock mobilecontent %}
 
 {% block flexbox_hack %}
+  <div id="selectedFilters"></div>
   <div class="flexbox">
     <div id="theGrid"></div>
 {% endblock flexbox_hack %}

@@ -240,6 +240,56 @@ function selection_to_path(): string {
     return url;
 }
 
+// Render the selected filters into the header, for use on mobile devices.
+//
+// On desktop, the selected filters are visually obvious, because they're
+// always on the screen. On mobile, the filters are hidden in a menu.
+// So instead we show breadcrumbs for filters that differ from the defaults.
+function renderSelectedFilters(): void {
+    const div = document.getElementById("selectedFilters");
+    if (div === null) return;
+
+    // Clear old filters.
+    div.innerHTML = "";
+
+    // Helper function to create a new filter breadcrumb.
+    function newFilter(parent: HTMLElement, label: string): void {
+        const item = document.createElement("span");
+        item.setAttribute("class", "selected-filter");
+        item.innerHTML = label;
+        parent.appendChild(item);
+    }
+
+    // Create new filters.
+    newFilter(div, selEquipment.selectedOptions[0].label);
+    if (selWeightClass.value !== default_weightclass) {
+        newFilter(div, selWeightClass.selectedOptions[0].label);
+    }
+    if (selFed.value !== default_fed) {
+        let label = selFed.selectedOptions[0].label;
+
+        // If there is " - " in the label, then it's the federation acronym
+        // followed by the expansion. Just include the acronym.
+        label = label.split(" - ")[0];
+        newFilter(div, label);
+    }
+    if (selSex.value !== default_sex) {
+        newFilter(div, selSex.selectedOptions[0].label);
+    }
+    if (selAgeClass.value !== default_ageclass) {
+        newFilter(div, selAgeClass.selectedOptions[0].label);
+    }
+    if (selYear.value !== default_year) {
+        newFilter(div, selYear.selectedOptions[0].label);
+    }
+    if (selEvent.value !== default_event) {
+        newFilter(div, selEvent.selectedOptions[0].label);
+    }
+    if (selSort.value !== default_sort) {
+        newFilter(div, selSort.selectedOptions[0].label);
+    }
+}
+
 // Save the current selection, for use with pushing history state.
 function saveSelectionState() {
     return {
@@ -302,6 +352,7 @@ function changeSelection() {
     // On mobile, the columns may change if the sort selector changes.
     if (isMobile() && global_grid instanceof Slick.Grid) {
         renderGridTable(); // Cause a re-render, changing columns.
+        renderSelectedFilters(); // Update the selection indicators.
     }
 
 }
@@ -545,6 +596,7 @@ function initRankings(): void {
     // Hook up the SlickGrid.
     global_cache = makeRemoteCache(selection_to_path(), true);
     renderGridTable();
+    renderSelectedFilters();
 
     // Hook up the searcher.
     searcher = RankingsSearcher();
