@@ -59,7 +59,7 @@ In the `server/` directory, run
 In the `server/` directory, run
 
   ```bash
-  cargo run --release
+  cargo run
   ```
 
 The project should now be viewable at the default location of `localhost:8000`

@@ -21,7 +21,7 @@
 'use strict';
 
 import { RemoteCache, WorkItem, Column } from './remotecache';
-import { SearchRankingsResult, SearchWorkItem, RankingsSearcher } from './search';
+import { RankingsSearcher } from './search';
 
 // Variables provided by the server.
 declare const initial_data: Object[];
@@ -55,8 +55,8 @@ declare const translation_column_mcculloch: string;
 declare const translation_column_glossbrenner: string;
 declare const translation_column_ipfpoints: string;
 
-let global_grid;  // The SlickGrid.
-let global_cache;  // The active RemoteCache rendered in the SlickGrid.
+let global_grid: any;  // The SlickGrid.
+let global_cache: any;  // The active RemoteCache rendered in the SlickGrid.
 
 // A RemoteCache in line to replace the global_cache, but which hasn't
 // had its initial data loaded yet, and is still waiting on an AJAX response.
@@ -64,13 +64,13 @@ let global_cache;  // The active RemoteCache rendered in the SlickGrid.
 // The pending_cache is swapped to overwrite the global_cache when its onFirstLoad
 // event fires, by the event handler. Swapping only when data is available avoids
 // flickering. The concept is similar to the double-sided OpenGL framebuffer.
-let pending_cache;
+let pending_cache: any;
 
 // Tells an event handler to not create a new history state.
 // Used when navigating backwards/forwards, instead of by changing a selector.
 let global_suppress_history_changes: boolean = false;
 
-let searcher;
+let searcher: any;
 let searchInfo = {laststr: ''};
 
 let selEquipment: HTMLSelectElement;
@@ -91,7 +91,7 @@ let searchButton: HTMLButtonElement;
 function makeDataProvider() {
     return {
         getLength: function() { return global_cache.getLength(); },
-        getItem: function(idx) {
+        getItem: function(idx: number) {
             let entry: (string | number)[] = global_cache.rows[idx];
             if (entry === undefined) {
                 return;
@@ -137,16 +137,17 @@ function makeDataProvider() {
                 deadlift: entry[Column.Deadlift],
                 total: entry[Column.Total],
                 points: entry[Column.Points],
+                idx: idx
             };
         }
     }
 }
 
-function onResize(evt) {
+function onResize() {
     global_grid.resizeCanvas();
 }
 
-function searchOnEnter(keyevent) {
+function searchOnEnter(keyevent: any) {
     // keyCode is deprecated, but non-Firefox-desktop doesn't support key.
     if (keyevent.keyCode === 13 || keyevent.key === "Enter") {
         search();
@@ -253,7 +254,7 @@ function saveSelectionState() {
 }
 
 // Load the current selection, for use with popping history state.
-function restoreSelectionState(state) {
+function restoreSelectionState(state: any) {
     // Although the selectors are being changed in this function,
     // we don't want the changeSelection() event handler to have any effect.
     removeAllSelectorListeners();
@@ -299,13 +300,13 @@ function changeSelection() {
 
 }
 
-function addSelectorListeners(selector) {
+function addSelectorListeners(selector: HTMLElement) {
     selector.addEventListener("change", changeSelection);
 }
 
 // Used when navigating through history: otherwise navigation
 // would add more history events.
-function removeSelectorListeners(selector) {
+function removeSelectorListeners(selector: HTMLElement) {
     selector.removeEventListener("change", changeSelection);
 }
 
@@ -349,7 +350,7 @@ function initializeEventListeners() {
     searchButton.addEventListener("click", search, false);
 
     window.addEventListener("resize", onResize, false);
-    window.onpopstate = function(event) {
+    window.onpopstate = function(event: any) {
         restoreSelectionState(event.state);
         global_suppress_history_changes = true;
         changeSelection();

@@ -27,9 +27,6 @@
 // Provided by the rankings template.
 declare const urlprefix: string;
 
-let langselect;
-let weightunits;
-
 // Column mapping for the server rankings JSON.
 // This should match with the serialization of the JsEntryRow
 // in the Rust server source.
@@ -113,10 +110,12 @@ export function RemoteCache(
     // Given more JSON data, add it to the rows array.
     function addRows(json): void {
         length = json.total_length;
-        for (let i = 0; i < json.rows.length; ++i) {
-            const source: (string | number)[] = json.rows[i];
-            const index = source[Column.SortedIndex] as number;
-            rows[index] = source;
+        if (json.rows instanceof Array) {
+            for (let i = 0; i < json.rows.length; ++i) {
+                const source: (string | number)[] = json.rows[i];
+                const index = source[Column.SortedIndex] as number;
+                rows[index] = source;
+            }
         }
     }
 

@@ -74,7 +74,7 @@ function records_reload() {
     }
 }
 
-function records_addSelectorListeners(selector) {
+function records_addSelectorListeners(selector?: HTMLSelectElement) {
     if (selector) {
         selector.addEventListener("change", records_reload);
     }
