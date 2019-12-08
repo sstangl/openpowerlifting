@@ -52,7 +52,7 @@ function addSelectorListeners(selector: HTMLSelectElement): void {
     selector.addEventListener("change", reload);
 }
 
-function addEventListeners(): void {
+function initMeetList(): void {
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
 
@@ -60,4 +60,6 @@ function addEventListeners(): void {
     addSelectorListeners(selYear);
 }
 
-document.addEventListener("DOMContentLoaded", addEventListeners);
+export {
+    initMeetList
+}

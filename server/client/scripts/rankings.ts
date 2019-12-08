@@ -492,4 +492,10 @@ function onLoad() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", onLoad);
+function initRankings(): void {
+    onLoad();
+}
+
+export {
+    initRankings
+}

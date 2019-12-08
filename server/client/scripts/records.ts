@@ -80,7 +80,7 @@ function records_addSelectorListeners(selector?: HTMLSelectElement) {
     }
 }
 
-function records_addEventListeners() {
+function initRecords() {
     selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
     selClassKind = document.getElementById("classkindselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
@@ -96,4 +96,6 @@ function records_addEventListeners() {
     records_addSelectorListeners(selRecordsYear);
 }
 
-document.addEventListener("DOMContentLoaded", records_addEventListeners);
+export {
+    initRecords
+}

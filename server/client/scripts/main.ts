@@ -20,8 +20,28 @@
 
 import { initLocaleEventListeners } from "./locale";
 
+import { initMeet } from "./meet";
+import { initMeetList } from "./meetlist";
+import { initRankings } from "./rankings";
+import { initRecords } from "./records";
+
+// Optionally provided by each template to allow main() to select the proper
+// entrance point for the current page.
+declare const PAGE_KIND: string | undefined;
+
 function main() {
+    // Initializes the "Change Language" and "Change Units" selectors, if present.
     initLocaleEventListeners();
+
+    if (typeof PAGE_KIND === "string") {
+        switch (PAGE_KIND) {
+            case "meet": initMeet(); break;
+            case "meetlist": initMeetList(); break;
+            case "records": initRecords(); break;
+            case "rankings": initRankings(); break;
+            default: break; // Some pages (like the FAQ) have no scripts attached.
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", main);

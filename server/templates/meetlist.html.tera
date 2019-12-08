@@ -1,7 +1,9 @@
 {% extends "desktop-base" %}
 
 {% block includes %}
-  <script defer src="/static/scripts/{{statics::meetlist_js()}}"></script>
+  <script type="text/javascript">
+    const PAGE_KIND = "meetlist";
+  </script>
 {% endblock includes %}
 
 {% block topbar_hack %}

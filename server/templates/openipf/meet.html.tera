@@ -9,6 +9,7 @@
 
 {% block includes %}
   <script type="text/javascript">
+    const PAGE_KIND = "meet";
     const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
     const path_if_by_dots = "{{urlprefix | safe}}{{path_if_by_dots | safe}}";
     const path_if_by_glossbrenner = "{{urlprefix | safe}}{{path_if_by_glossbrenner | safe}}";
@@ -17,7 +18,6 @@
     const path_if_by_total = "{{urlprefix | safe}}{{path_if_by_total | safe}}";
     const path_if_by_wilks = "{{urlprefix | safe}}{{path_if_by_wilks | safe}}";
   </script>
-  <script defer src="/static/scripts/{{statics::meet_js()}}"></script>
 {% endblock includes %}
 
 {% block controls %}

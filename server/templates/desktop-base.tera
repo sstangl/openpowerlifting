@@ -19,6 +19,11 @@
 
   {% block includes %}
   {% endblock includes %}
+
+  {# Main script, capable of initializing every kind of page. #}
+  {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
+  {# If the page kind is unspecified, it just loads locale scripts. #}
+  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
 </head>
 <body>
   {# This isn't great. The Rankings page wants one huge Flexbox, and the other
@@ -30,7 +35,5 @@
     {% block topbar_hack_end %}{% endblock topbar_hack_end %}
     {% block body %}{% endblock body %}
   {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
-
-  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
 </body>
 </html>
