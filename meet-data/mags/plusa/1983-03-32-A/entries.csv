@@ -1,52 +1,52 @@
-Name,WeightClassKg,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-J. Chamberlin,52,High School,M,122.5,67.5,122.5,312.5,SBD,Single-ply,1
-J. Craine,56,High School,M,97.5,80,162.5,340,SBD,Single-ply,1
-D. Craine,60,High School,M,140,92.5,192.5,425,SBD,Single-ply,1
-T. Taken,60,High School,M,117,75,145,337,SBD,Single-ply,2
-L. Cochran,67.5,High School,M,137.5,105,182.5,425,SBD,Single-ply,1
-D. Johnson,67.5,High School,M,150,92.5,152.5,395,SBD,Single-ply,2
-S. Johnson,67.5,High School,M,122.5,92.5,150,365,SBD,Single-ply,3
-J. Norris,75,High School,M,167.5,97.5,192.5,457.5,SBD,Single-ply,1
-M. Lobaugh,75,High School,M,142.5,110,190,442.5,SBD,Single-ply,2
-D. Maloney,75,High School,M,160,90,175,425,SBD,Single-ply,3
-A. Phillips,75,High School,M,130,90,200,420,SBD,Single-ply,4
-L. Bowerman,75,High School,M,140,92.5,170,402.5,SBD,Single-ply,5
-T. Martin,75,High School,M,125,75,182.5,382.5,SBD,Single-ply,6
-J. Tolleson,82.5,High School,M,192.5,100,227.5,520,SBD,Single-ply,1
-B. Bumpass,82.5,High School,M,182.5,105,227.5,515,SBD,Single-ply,2
-B. Beall,82.5,High School,M,170,110,160,440,SBD,Single-ply,3
-B. Escoe,82.5,High School,M,122.5,82.5,160,365,SBD,Single-ply,4
-M. Stephens,90,High School,M,162.5,95,212.5,470,SBD,Single-ply,1
-E. Fowlkes,100,High School,M,227.5,115,207.5,550,SBD,Single-ply,1
-M. Kolb,100,High School,M,160,80,192.5,432.5,SBD,Single-ply,2
-T. Kuhlman,110,High School,M,170,112.5,185,467.5,SBD,Single-ply,1
-K. Irwin,52,Collegiate,M,127.5,70,95,292.5,SBD,Single-ply,1
-J. Rogers,52,Collegiate,M,65,47.5,92.5,205,SBD,Single-ply,2
-S. Gonzalez,60,Collegiate,M,172.5,90,182.5,445,SBD,Single-ply,1
-M. King,60,Collegiate,M,95,50,117.5,262.5,SBD,Single-ply,2
-S. Ventress,67.5,Collegiate,M,212.5,122.5,205,540,SBD,Single-ply,1
-M. Butler,67.5,Collegiate,M,187.5,97.5,210,495,SBD,Single-ply,2
-R. Johnston,67.5,Collegiate,M,137.5,80,170,387.5,SBD,Single-ply,3
-K. Reed,75,Collegiate,M,227.5,165,250,642.5,SBD,Single-ply,1
-M. Payne,75,Collegiate,M,250,125,240,615,SBD,Single-ply,2
-L. Johnson,75,Collegiate,M,175,135,207.5,517.5,SBD,Single-ply,3
-B. Evans,75,Collegiate,M,185,137.5,192.5,515,SBD,Single-ply,4
-P. DeLesDernier,75,Collegiate,M,147.5,95,185,427.5,SBD,Single-ply,5
-T. Polworth,82.5,Collegiate,M,230,140,272.5,642.5,SBD,Single-ply,1
-T. Kreight,82.5,Collegiate,M,182.5,115,230,527.5,SBD,Single-ply,2
-K. Moody,82.5,Collegiate,M,175,117.5,215,507.5,SBD,Single-ply,3
-R. Daniels,82.5,Collegiate,M,175,125,205,505,SBD,Single-ply,4
-M. Dyer,82.5,Collegiate,M,172.5,120,195,487.5,SBD,Single-ply,5
-R. Villareal,82.5,Collegiate,M,157.5,92.5,192.5,442.5,SBD,Single-ply,6
-S. Pebswith,90,Collegiate,M,227.5,182.5,250,660,SBD,Single-ply,1
-K. Gray,90,Collegiate,M,197.5,140,205,542.5,SBD,Single-ply,2
-S. Hardin,100,Collegiate,M,257.5,170,272.5,700,SBD,Single-ply,1
-C. Wallen,100,Collegiate,M,237.5,137.5,245,620,SBD,Single-ply,2
-B. Hale,110,Collegiate,M,187.5,165,240,592.5,SBD,Single-ply,1
-G. Howard,110,Collegiate,M,170,155,192.5,517.5,SBD,Single-ply,2
-R. Allgood,125,Collegiate,M,320,160,277.5,757.5,SBD,Single-ply,1
-M. Fuitado,125,Collegiate,M,170,140,220,530,SBD,Single-ply,2
-Linda Bertrem,,Collegiate,F,95,47.5,122.5,265,SBD,Single-ply,1
-S. Littleton,,Collegiate,F,85,65,100,250,SBD,Single-ply,2
-T. Phillips,,High School,F,62.5,40,82.5,185,SBD,Single-ply,1
-C. Johnson,,High School,F,42.5,30,65,137.5,SBD,Single-ply,2
+Name,WeightClassKg,Division,AgeRange,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+J. Chamberlin,52,High School,13-19,M,122.5,67.5,122.5,312.5,SBD,Single-ply,1
+J. Craine,56,High School,13-19,M,97.5,80,162.5,340,SBD,Single-ply,1
+Darrel Craine,60,High School,13-19,M,140,92.5,192.5,425,SBD,Single-ply,1
+T. Taken,60,High School,13-19,M,117,75,145,337,SBD,Single-ply,2
+L. Cochran,67.5,High School,13-19,M,137.5,105,182.5,425,SBD,Single-ply,1
+D. Johnson,67.5,High School,13-19,M,150,92.5,152.5,395,SBD,Single-ply,2
+S. Johnson,67.5,High School,13-19,M,122.5,92.5,150,365,SBD,Single-ply,3
+J. Norris,75,High School,13-19,M,167.5,97.5,192.5,457.5,SBD,Single-ply,1
+M. Lobaugh,75,High School,13-19,M,142.5,110,190,442.5,SBD,Single-ply,2
+D. Maloney,75,High School,13-19,M,160,90,175,425,SBD,Single-ply,3
+A. Phillips,75,High School,13-19,M,130,90,200,420,SBD,Single-ply,4
+L. Bowerman,75,High School,13-19,M,140,92.5,170,402.5,SBD,Single-ply,5
+T. Martin,75,High School,13-19,M,125,75,182.5,382.5,SBD,Single-ply,6
+J. Tolleson,82.5,High School,13-19,M,192.5,100,227.5,520,SBD,Single-ply,1
+B. Bumpass,82.5,High School,13-19,M,182.5,105,227.5,515,SBD,Single-ply,2
+B. Beall,82.5,High School,13-19,M,170,110,160,440,SBD,Single-ply,3
+B. Escoe,82.5,High School,13-19,M,122.5,82.5,160,365,SBD,Single-ply,4
+M. Stephens,90,High School,13-19,M,162.5,95,212.5,470,SBD,Single-ply,1
+E. Fowlkes,100,High School,13-19,M,227.5,115,207.5,550,SBD,Single-ply,1
+M. Kolb,100,High School,13-19,M,160,80,192.5,432.5,SBD,Single-ply,2
+T. Kuhlman,110,High School,13-19,M,170,112.5,185,467.5,SBD,Single-ply,1
+K. Irwin,52,Collegiate,,M,127.5,70,95,292.5,SBD,Single-ply,1
+J. Rogers,52,Collegiate,,M,65,47.5,92.5,205,SBD,Single-ply,2
+S. Gonzalez,60,Collegiate,,M,172.5,90,182.5,445,SBD,Single-ply,1
+M. King,60,Collegiate,,M,95,50,117.5,262.5,SBD,Single-ply,2
+S. Ventress,67.5,Collegiate,,M,212.5,122.5,205,540,SBD,Single-ply,1
+M. Butler,67.5,Collegiate,,M,187.5,97.5,210,495,SBD,Single-ply,2
+R. Johnston,67.5,Collegiate,,M,137.5,80,170,387.5,SBD,Single-ply,3
+K. Reed,75,Collegiate,,M,227.5,165,250,642.5,SBD,Single-ply,1
+M. Payne,75,Collegiate,,M,250,125,240,615,SBD,Single-ply,2
+L. Johnson,75,Collegiate,,M,175,135,207.5,517.5,SBD,Single-ply,3
+B. Evans,75,Collegiate,,M,185,137.5,192.5,515,SBD,Single-ply,4
+P. DeLesDernier,75,Collegiate,,M,147.5,95,185,427.5,SBD,Single-ply,5
+T. Polworth,82.5,Collegiate,,M,230,140,272.5,642.5,SBD,Single-ply,1
+T. Kreight,82.5,Collegiate,,M,182.5,115,230,527.5,SBD,Single-ply,2
+K. Moody,82.5,Collegiate,,M,175,117.5,215,507.5,SBD,Single-ply,3
+R. Daniels,82.5,Collegiate,,M,175,125,205,505,SBD,Single-ply,4
+M. Dyer,82.5,Collegiate,,M,172.5,120,195,487.5,SBD,Single-ply,5
+R. Villareal,82.5,Collegiate,,M,157.5,92.5,192.5,442.5,SBD,Single-ply,6
+S. Pebswith,90,Collegiate,,M,227.5,182.5,250,660,SBD,Single-ply,1
+K. Gray,90,Collegiate,,M,197.5,140,205,542.5,SBD,Single-ply,2
+S. Hardin,100,Collegiate,,M,257.5,170,272.5,700,SBD,Single-ply,1
+C. Wallen,100,Collegiate,,M,237.5,137.5,245,620,SBD,Single-ply,2
+B. Hale,110,Collegiate,,M,187.5,165,240,592.5,SBD,Single-ply,1
+G. Howard,110,Collegiate,,M,170,155,192.5,517.5,SBD,Single-ply,2
+R. Allgood,125,Collegiate,,M,320,160,277.5,757.5,SBD,Single-ply,1
+M. Fuitado,125,Collegiate,,M,170,140,220,530,SBD,Single-ply,2
+Linda Bertrem,,Collegiate,,F,95,47.5,122.5,265,SBD,Single-ply,1
+S. Littleton,,Collegiate,,F,85,65,100,250,SBD,Single-ply,2
+T. Phillips,,High School,13-19,F,62.5,40,82.5,185,SBD,Single-ply,1
+C. Johnson,,High School,13-19,F,42.5,30,65,137.5,SBD,Single-ply,2
