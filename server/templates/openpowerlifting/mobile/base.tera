@@ -60,20 +60,32 @@
       {% endblock controls %}
     </div>
 
+    {# The Rankings page inserts a <div> here. #}
+    {% block flexbox_hack %}{% endblock flexbox_hack %}
+
+    {# This is defined as a block so that the Rankings page can hide it. #}
+    {% block mobilecontent %}
     <div id="mobile-content">
       {% block body %}{% endblock body %}
     </div>
+    {% endblock mobilecontent %}
 
     <footer id="mobile-footer">
       <a href="javascript:void(0)" class="header-hamburger" id="mobileMenuToggler">&#9776;</a>
-      <span id="headerSearchContainer" class="hide"></span>
-      <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
-        <img class="header-logo" src="/static/images/{{statics::logo_compressed_svg()}}" alt="OpenPowerlifting"/>
-      </a>
+
+      {% block footer_middle_content %}
+        <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
+          <img class="header-logo" src="/static/images/{{statics::logo_compressed_svg()}}" alt="OpenPowerlifting"/>
+        </a>
+      {% endblock footer_middle_content %}
+
       {% block controlsbutton %}
         <button id="controls-mobile-toggle-button"></button>
       {% endblock controlsbutton %}
     </footer>
+
+    {# The Rankings page inserts a </div> here. #}
+    {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
   </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 // This includes both the content and the footer.
 #mobile-wrapper {
-  min-height: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -14,6 +14,10 @@
 
 // The footer with controls fixed at the bottom of the screen.
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin: 0;
   padding: 0;
 
@@ -22,6 +26,9 @@ footer {
 
   height: $footer-height;
   width: 100%;
+
+  // This is a hack to get the footer to always be above the SlickGrid.
+  z-index: 1;
 
   color: $header-color;
   background-color: $header-background-color;
