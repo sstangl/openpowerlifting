@@ -2,6 +2,7 @@
 
 use super::dotenv;
 use super::rocket;
+use super::Device;
 
 use server::langpack::{LangInfo, Language};
 use server::opldb::OplDb;
@@ -56,27 +57,44 @@ fn test_db_loads() {
     langinfo();
 }
 
+/// Simulates a GET request to a url from a specific device.
+fn get(client: &Client, device: Device, url: &str) -> Status {
+    match device {
+        Device::Desktop => client.get(url).dispatch().status(),
+        Device::Mobile => {
+            let mut req = client.get(url);
+            req.add_header(Header::new("User-Agent", "Mobile"));
+            req.dispatch().status()
+        }
+    }
+}
+
 #[test]
 fn test_pages_load() {
     let client = client();
-    assert_eq!(client.get("/").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/rankings/uspa").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/records").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/records/uspa").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/u/seanstangl").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/mlist").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/m/uspa/0485").dispatch().status(), Status::Ok);
-    assert_eq!(
-        client.get("/m/gpc-aus/1827").dispatch().status(),
-        Status::Ok
-    );
-    assert_eq!(client.get("/status").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/data").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/faq").dispatch().status(), Status::Ok);
-    assert_eq!(client.get("/contact").dispatch().status(), Status::Ok);
 
-    // Test a disambiguation page.
-    assert_eq!(client.get("/u/joshsmith").dispatch().status(), Status::Ok);
+    // Ensure that pages load on every kind of supported device.
+    // Internally, these share contexts, but have different templates.
+    for device in vec![Device::Desktop, Device::Mobile] {
+        assert_eq!(get(&client, device, "/"), Status::Ok);
+        assert_eq!(get(&client, device, "/rankings/uspa"), Status::Ok);
+        assert_eq!(get(&client, device, "/records"), Status::Ok);
+        assert_eq!(get(&client, device, "/records/uspa"), Status::Ok);
+        assert_eq!(get(&client, device, "/u/seanstangl"), Status::Ok);
+        assert_eq!(get(&client, device, "/mlist"), Status::Ok);
+        assert_eq!(get(&client, device, "/m/uspa/0485"), Status::Ok);
+        assert_eq!(get(&client, device, "/m/gpc-aus/1827"), Status::Ok);
+        assert_eq!(get(&client, device, "/status"), Status::Ok);
+        assert_eq!(get(&client, device, "/data"), Status::Ok);
+        assert_eq!(get(&client, device, "/faq"), Status::Ok);
+        assert_eq!(get(&client, device, "/contact"), Status::Ok);
+
+        // Test a disambiguation page.
+        assert_eq!(get(&client, device, "/u/joshsmith"), Status::Ok);
+
+        // Test statics.
+        assert_eq!(get(&client, device, "/robots.txt"), Status::Ok);
+    }
 }
 
 /// Some rankings pages that contain only a few entries have
@@ -86,34 +104,28 @@ fn test_pages_load() {
 fn test_small_rankings_pages() {
     let client = client();
     // The BB federation is small and defunct, therefore good for testing.
-    assert_eq!(
-        client.get("/rankings/44/bb").dispatch().status(),
-        Status::Ok
-    );
+    assert_eq!(get(&client, Device::Desktop, "/rankings/44/bb"), Status::Ok);
 }
 
 /// Test that meet pages load with different sorts.
 #[test]
 fn test_meet_pages_with_explicit_sorts() {
     let client = client();
-    assert_eq!(client.get("/m/wrpf/bob4").dispatch().status(), Status::Ok);
+    assert_eq!(get(&client, Device::Desktop, "/m/wrpf/bob4"), Status::Ok);
     assert_eq!(
-        client
-            .get("/m/wrpf/bob4/by-glossbrenner")
-            .dispatch()
-            .status(),
+        get(&client, Device::Desktop, "/m/wrpf/bob4/by-glossbrenner"),
         Status::Ok
     );
     assert_eq!(
-        client.get("/m/wrpf/bob4/by-ipf-points").dispatch().status(),
+        get(&client, Device::Desktop, "/m/wrpf/bob4/by-ipf-points"),
         Status::Ok
     );
     assert_eq!(
-        client.get("/m/wrpf/bob4/by-division").dispatch().status(),
+        get(&client, Device::Desktop, "/m/wrpf/bob4/by-division"),
         Status::Ok
     );
     assert_eq!(
-        client.get("/m/wrpf/bob4/by-total").dispatch().status(),
+        get(&client, Device::Desktop, "/m/wrpf/bob4/by-total"),
         Status::Ok
     );
 }
@@ -279,10 +291,7 @@ fn test_language_getparam_nonsense() {
 fn test_rankings_nonsense() {
     let client = client();
     assert_eq!(
-        client
-            .get("/rankings/push-pull/by-squat")
-            .dispatch()
-            .status(),
+        get(&client, Device::Desktop, "/rankings/push-pull/by-squat"),
         Status::Ok
     );
 }
