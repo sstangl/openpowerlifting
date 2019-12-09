@@ -39,9 +39,19 @@ impl From<Age> for AgeRange {
 impl From<(Age, Age)> for AgeRange {
     /// Create an AgeRange based on a range of Ages.
     fn from(range: (Age, Age)) -> AgeRange {
+        let min_age = match range.0 {
+            Age::Exact(0) => Age::None,
+            _ => range.0,
+        };
+
+        let max_age = match range.1 {
+            Age::Exact(255) => Age::None,
+            _ => range.1,
+        };
+
         AgeRange {
-            min: range.0,
-            max: range.1,
+            min: min_age,
+            max: max_age,
         }
     }
 }

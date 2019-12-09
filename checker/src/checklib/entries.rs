@@ -2170,6 +2170,8 @@ where
         if let Some(idx) = headers.get(Header::AgeRange) {
             entry.agerange =
                 check_column_agerange(&record[idx], inferred_agerange, line, &mut report);
+        } else {
+            entry.agerange = inferred_agerange;
         }
 
         // If the BirthYear wasn't assigned yet, infer it from any surrounding info.
