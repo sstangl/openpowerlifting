@@ -1,4 +1,9 @@
 @media (max-width: $breakpoint-tablet) {
+  #mobile-content {
+    .content {
+      padding: 0px 10px 0px 10px;
+    }
+  }
   #meetListTable {
     display: block;
     width: 100%;

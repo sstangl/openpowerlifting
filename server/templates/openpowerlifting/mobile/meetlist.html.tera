@@ -15,10 +15,12 @@
 {% endblock footer_hack_end %}
 
 {% block controls %}
-  <div id="controls">
+<div id="controls-mobile-menu">
+  <div id="controls-mobile-filters">
     {% include "openpowerlifting/widget-fedselect" %}
     {% include "widget-yearselect" %}
   </div>
+</div>
 {% endblock controls %}
 
 {% block body %}
