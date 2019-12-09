@@ -258,17 +258,18 @@
     sex = "F"
 
 [exemptions]
+    1305 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass.
+    1510 = ["ExemptWeightClassConsistency"]
+    1512 = ["ExemptWeightClassConsistency"]
+    1626 = ["ExemptWeightClassConsistency"]
+    1632 = ["ExemptWeightClassConsistency"]
+    1706 = ["ExemptWeightClassConsistency"]
+    1712 = ["ExemptWeightClassConsistency"]
+    1715 = ["ExemptWeightClassConsistency"]
     1716 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
+    1723 = ["ExemptWeightClassConsistency"]
+    1815 = ["ExemptWeightClassConsistency"]
     1824 = ["ExemptWeightClassConsistency"]  # Guest lifters with unrecorded weights.
     1828 = ["ExemptWeightClassConsistency"]
-    1723 = ["ExemptWeightClassConsistency"]
-    1626 = ["ExemptWeightClassConsistency"]
-    1510 = ["ExemptWeightClassConsistency"]
-    1706 = ["ExemptWeightClassConsistency"]
-    1815 = ["ExemptWeightClassConsistency"]
-    1512 = ["ExemptWeightClassConsistency"]
-    1632 = ["ExemptWeightClassConsistency"]
-    1715 = ["ExemptWeightClassConsistency"]
-    1712 = ["ExemptWeightClassConsistency"]
     1911 = ["ExemptDivision"] # Such a mess, doesn't seem fixable.
-    1305 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass
+    1923 = ["ExemptWeightClassConsistency"] # Most weightclasses not reported.
