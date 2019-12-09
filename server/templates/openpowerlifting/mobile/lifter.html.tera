@@ -14,11 +14,25 @@
 {% block body %}
   <div class="mixed-content">
 
-    <h1><span class="{{lifter.color}}">{{localized_name}}</span> ({{lifter_sex}}){% if lifter.instagram %}<a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if lifter.vkontakte %}<a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}</h1>
+  <h1>
+    <span class="{{lifter.color}}">{{localized_name}} ({{lifter_sex}})</span>
+    <span class="lifter-social-media">
+    {% if lifter.instagram %}
+      <a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank">
+        <i class="fa fa-instagram fa-resize"></i>
+      </a>
+    {% endif %}
+    {% if lifter.vkontakte %}
+      <a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank">
+        <i class="fa fa-vk fa-resize"></i>
+      </a>
+    {% endif %}
+    </span>
+  </h1>
 
-    <h2>{{strings.lifter_page.personal_bests}}</h2>
+  <h2>{{strings.lifter_page.personal_bests}}</h2>
 
-    <table>
+    <table id="lifterTopTable">
       <thead><tr>
         <th style="width: 80px;">{{strings.columns.equipment}}</th>
         <th style="width: 80px;">{{strings.columns.squat}}</th>
@@ -45,7 +59,7 @@
 
     <h2>{{strings.lifter_page.competition_results}} <a href="/u/{{lifter.username}}/csv" style="float: right; margin-right: 20px;"><button style="width: 120px">Download as CSV</button></a></h2>
 
-    <table>
+    <table id="lifterCompetitionTable">
       <thead><tr>
         <th>{{strings.columns.place}}</th>
         <th>{{strings.columns.federation}}</th>
@@ -77,9 +91,9 @@
         <tr>
           <td>{{this.place}}</td>
           <td>{{this.federation}}</td>
-          <td>{{this.date}}</td>
+          <td class="meet-list-date">{{this.date}}</td>
           <td>{{this.country}}{% if this.state %}-{{this.state}}{% endif %}</td>
-          <td><a href="{{urlprefix | safe}}m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
+          <td class="meet-list-name"><a href="{{urlprefix | safe}}m/{{this.meet_path | safe}}">{{this.meet_name}}</a></td>
           <td>{{this.division}}</td>
           {% if show_sex_column %}
             <td>{{this.sex}}</td>
