@@ -49,7 +49,7 @@
       <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
       <a href="https://instagram.com/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank"><i class="fa fa-instagram"></i></a>
 
-      <div id="header-mobile-menu-selectors">
+      <div id="footer-mobile-menu-selectors">
         {% include "widget-weightunits" %}
         {% include "widget-langselect" %}
       </div>
@@ -71,7 +71,7 @@
     {% endblock mobilecontent %}
 
     <footer id="mobile-footer">
-      <a href="javascript:void(0)" class="header-hamburger" id="mobileMenuToggler">&#9776;</a>
+      <a href="javascript:void(0)" class="footer-hamburger" id="mobileMenuToggler">&#9776;</a>
 
       {% block footer_middle_content %}
         <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">

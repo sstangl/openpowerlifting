@@ -70,7 +70,7 @@
 {% endblock controls %}
 
 {% block footer_middle_content %}
-  <div id="headerSearchContainer">
+  <div id="footerSearchContainer">
     <input id="searchfield" type="text"></input>
     <button id="searchbutton"></button>
   </div>

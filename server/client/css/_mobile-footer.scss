@@ -36,7 +36,7 @@ footer {
 
 $footer-icon-size: 40px;
 
-footer > .header-hamburger {
+footer > .footer-hamburger {
   display: block;
   width: $footer-icon-size;
   height: $footer-icon-size;
@@ -72,7 +72,7 @@ footer > .mobile-header-logo-link {
   }
 }
 
-footer > #headerSearchContainer {
+footer > #footerSearchContainer {
   display: flex;
   align-items: center;
   width: 240px;
@@ -106,16 +106,14 @@ footer > #headerSearchContainer {
   bottom: $footer-height;
   left: 0;
   z-index: 2;
-
   width: 100%;
-
   display: flex;
   flex-direction: column;
   background-color: $background-color;
-
+  padding-bottom: 10px;
   overflow-y: scroll;
 
-  #header-mobile-menu-selectors {
+  #footer-mobile-menu-selectors {
     text-align: center;
   }
 

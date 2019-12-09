@@ -489,9 +489,10 @@ function renderGridTable(): void {
     }
 
     const mobile: boolean = isMobile();
+    const fillerWidth = mobile ? 10 : 20;
 
     let columns = [
-        {id: "filler", width: 20, minWidth: 20, focusable: false,
+        {id: "filler", width: fillerWidth, minWidth: fillerWidth, focusable: false,
             selectable: false, resizable: false},
         {id: "rank", name: translation_column_formulaplace, field: "rank", width: 40},
         {id: "name", name: translation_column_liftername, field: "name", width: nameWidth, formatter: urlformatter},
