@@ -30,8 +30,8 @@ footer {
   // This is a hack to get the footer to always be above the SlickGrid.
   z-index: 1;
 
-  color: $header-color;
-  background-color: $header-background-color;
+  color: $control-text-color;
+  background-color: $control-bar-background-color;
 }
 
 $footer-icon-size: 40px;
@@ -46,7 +46,7 @@ footer > .header-hamburger {
   padding: 0px;
   text-align: center;
   text-decoration: none;
-  color: $background-color;
+  color: $control-text-color;
 }
 
 footer > #controls-mobile-toggle-button {
@@ -57,7 +57,7 @@ footer > #controls-mobile-toggle-button {
   right: 8px;
   padding: 0px;
   border: none;
-  background: url($control-mobile-filter-icon) 96% no-repeat $control-background-color;
+  background: url($control-mobile-filter-icon) 96% no-repeat $control-text-color;
   background-color: transparent;
   background-size: 100%;
 }
@@ -85,14 +85,14 @@ footer > #headerSearchContainer {
     outline: none;
 
     &:focus {
-      box-shadow: 0 0 5px $primary-color;
-      border: 1px solid $primary-color;
+      box-shadow: 0 0 5px $control-border-color;
+      border: 1px solid $control-border-color;
     }
   }
 
   #searchbutton {
-    background: url($mobile-search-icon) 96% no-repeat $control-background-color;
-    background-color: $mobile-search-background;
+    background: url($mobile-search-icon) 96% no-repeat $control-text-color;
+    background-color: $control-background-color;
     background-size: 61%;
     width: 35px;
     height: 35px;
