@@ -1,15 +1,3 @@
-#controls-mobile-toggle-button {
-  background: url($control-mobile-filter-icon) 96% no-repeat $control-background-color;
-  background-color: transparent;
-  background-size: 100%;
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  right: 5px;
-  top: 2px;
-  border: none;
-}
-
 #controls-mobile-menu {
   position: fixed;
   bottom: $footer-height;

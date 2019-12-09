@@ -34,17 +34,32 @@ footer {
   background-color: $header-background-color;
 }
 
+$footer-icon-size: 40px;
+
 footer > .header-hamburger {
   display: block;
-  width: 35px;
-  height: 35px;
+  width: $footer-icon-size;
+  height: $footer-icon-size;
   position: absolute;
   left: 5px;
-  font-size: 18pt;
+  font-size: 20pt;
   padding: 0px;
   text-align: center;
   text-decoration: none;
   color: $background-color;
+}
+
+footer > #controls-mobile-toggle-button {
+  display: block;
+  width: $footer-icon-size;
+  height: $footer-icon-size;
+  position: absolute;
+  right: 8px;
+  padding: 0px;
+  border: none;
+  background: url($control-mobile-filter-icon) 96% no-repeat $control-background-color;
+  background-color: transparent;
+  background-size: 100%;
 }
 
 footer > .mobile-header-logo-link {
@@ -60,14 +75,14 @@ footer > .mobile-header-logo-link {
 
 footer > #headerSearchContainer {
   display: flex;
-  width: 200px;
+  align-items: center;
+  width: 240px;
   margin: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
 
   #searchfield {
-    width: 150px;
-    height: 15px;
+    font-size: 14pt;
+    width: 180px;
+    height: 20px;
     outline: none;
 
     &:focus {
@@ -80,8 +95,8 @@ footer > #headerSearchContainer {
     background: url($mobile-search-icon) 96% no-repeat $control-background-color;
     background-color: $mobile-search-background;
     background-size: 61%;
-    width: 26%;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     display: block;
     background-position: center;
   }
