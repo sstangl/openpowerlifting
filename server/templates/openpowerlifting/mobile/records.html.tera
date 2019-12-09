@@ -22,8 +22,8 @@
 {% endblock footer_hack_end %}
 
 {% block controls %}
-  <div id="controls">
-    <div id="controls-left">
+  <div id="controls-mobile-menu">
+    <div id="controls-mobile-filters">
       {% include "openpowerlifting/widget-fedselect" %}
       {% include "openpowerlifting/widget-equipmentselect" %}
       <select id="classkindselect">
@@ -43,7 +43,9 @@
 {% endblock controls %}
 
 {% block body %}
+
   <div class="mixed-content-with-controls">
+    <div id="selectedFilters"></div>
     {% for table in tables %}
 
     {% if loop.index is odd %}

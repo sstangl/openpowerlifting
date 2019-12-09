@@ -3,7 +3,9 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-
+  div.mixed-content-with-controls {
+    padding-top: 0px;
+  }
   #selectedFilters {
     display: block;
 
@@ -19,6 +21,9 @@
   }
 
   .records-col {
+    h2 {
+      margin-top: 5px; 
+    }
     table {
       display: block;
       overflow-x: scroll;
