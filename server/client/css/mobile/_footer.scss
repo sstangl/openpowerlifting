@@ -1,0 +1,161 @@
+// The footer with controls fixed at the bottom of the screen.
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  bottom: 0;
+
+  height: $footer-height;
+  width: 100%;
+
+  // This is a hack to get the footer to always be above the SlickGrid.
+  z-index: 3;
+
+  color: $control-text-color;
+  background-color: $control-bar-background-color;
+}
+
+$footer-icon-size: 40px;
+
+footer > .footer-hamburger {
+  display: block;
+  width: $footer-icon-size;
+  height: $footer-icon-size;
+  position: absolute;
+  left: 5px;
+  font-size: 20pt;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  color: $control-text-color;
+  background: url($mobile-burger-menu-icon) no-repeat;
+  background-size: 90%;
+  background-position: center;
+
+  &.active {
+    background: url($mobile-close-icon) no-repeat;
+    background-size: 50%;
+    background-position: center;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+footer > #controls-mobile-toggle-button {
+  display: block;
+  width: $footer-icon-size;
+  height: $footer-icon-size;
+  position: absolute;
+  right: 8px;
+  padding: 0px;
+  border: none;
+  background: url($control-mobile-filter-icon) no-repeat;
+  background-color: transparent;
+  background-size: 100%;
+
+  &.active {
+    background: url($mobile-close-icon) no-repeat;
+    background-size: 50%;
+    background-position: center;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+footer > .mobile-header-logo-link {
+  display: block;
+  width: 100px;
+  margin: auto;
+
+  .header-logo {
+    width: 100%;
+  }
+}
+
+#footerSearchContainer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  background: $mobile-search-active-color;
+  align-items: center;
+  padding: 7px 0px;
+  justify-content: center;
+  transition: bottom 0.3s; // slide out the menu
+  visibility: hidden;
+  z-index: 2;
+
+  &.open {
+    bottom: $footer-height;
+    visibility: unset;
+  }
+
+  #searchbutton {
+    background: $table-header-background-color;
+    cursor: pointer;
+    color: white;
+    border-radius: 0;
+    font-size: 14pt;
+    margin: 0;
+    border: 0;
+    display: block;
+    width: 20%;
+    height: 30px;
+  }
+
+  #searchfield {
+    font-size: 14pt;
+    outline: none;
+    margin: 0;
+    display: block;
+    width: 70%;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+
+    &:focus {
+      box-shadow: 0 0 5px $control-border-color;
+      border: 1px solid $control-border-color;
+    }
+  }
+}
+
+#footerSearchToggler {
+  background: url($mobile-search-icon) no-repeat;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  border-radius: 0;
+  background-size: 50%;
+  width: $footer-height;
+  height: $footer-height;
+  display: block;
+  background-position: center;
+  position: fixed;
+  right: 60px;
+  bottom: 0px;
+  z-index: 4;
+  padding: 0;
+  margin: 0;
+
+  &.active {
+    background: url($mobile-close-icon) no-repeat;
+    background-color: $mobile-search-active-color;
+    background-size: 50%;
+    background-position: center;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

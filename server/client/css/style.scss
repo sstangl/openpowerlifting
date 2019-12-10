@@ -25,6 +25,8 @@ $control-selector-image: "/static/images/select_dropdown_red.png";
 $control-mobile-filter-icon: "/static/images/mobile_filter.svg";
 $mobile-grid-name-show-more-icon: "/static/images/more_icon.png";
 $mobile-search-icon: "/static/images/search.png";
+$mobile-close-icon: "/static/images/close_icon.png";
+$mobile-burger-menu-icon: "/static/images/burger_menu.png";
 $mobile-search-background: transparent;
 
 // Height definitions.
@@ -53,11 +55,4 @@ $breakpoint-tablet: 767px;
 @import "donator-colors";
 
 // Mobile stuff gets included too!
-@import "mobile-footer";
-@import "controls-mobile";
-@import "data-mobile";
-@import "lifter-mobile";
-@import "records-mobile";
-@import "meet-mobile";
-@import "meet-list-mobile";
-@import "status-mobile";
+@import "mobile/style";

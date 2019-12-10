@@ -1,0 +1,19 @@
+#meetListTable {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 0;
+
+  .meet-list-date {
+    display: inline-block;
+    width: 75px;
+    line-height: 21px;
+  }
+
+  .meet-list-name {
+    width: 200px;
+    display: inline-block;
+    line-height: 21px;
+    height: auto;
+  }
+}

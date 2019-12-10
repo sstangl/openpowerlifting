@@ -22,7 +22,7 @@
 {% endblock footer_hack_end %}
 
 {% block controls %}
-  <div id="controls-mobile-menu">
+
     <div id="controls-mobile-filters">
       {% include "openpowerlifting/widget-fedselect" %}
       {% include "openpowerlifting/widget-equipmentselect" %}
@@ -39,7 +39,7 @@
       {% include "openpowerlifting/widget-ageselect" %}
       {% include "widget-yearselect" %}
     </div>
-  </div>
+
 {% endblock controls %}
 
 {% block body %}

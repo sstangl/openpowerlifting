@@ -30,6 +30,8 @@ images: builddir
 	cp images/mobile_filter.svg "${BUILDDIR}/images/"
 	cp images/mobile_filter_white.svg "${BUILDDIR}/images/"
 	cp images/search.png "${BUILDDIR}/images/"
+	cp images/close_icon.png "${BUILDDIR}/images/"
+	cp images/burger_menu.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
 	cp ${PROJECTDATA}/apple-touch-icon.png "${BUILDDIR}/images/"
 

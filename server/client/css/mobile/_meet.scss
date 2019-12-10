@@ -1,0 +1,29 @@
+
+#controls-edit-meet-button-container {
+  display: flex;
+  padding-bottom: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#meetTable {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 0;
+
+  .meet-list-place-header,
+  .meet-list-sex-header,
+  .meet-list-class-header,{
+    max-width: 30px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .meet-list-name {
+    width: 200px;
+    display: inline-block;
+    line-height: 21px;
+    height: auto;
+  }
+}

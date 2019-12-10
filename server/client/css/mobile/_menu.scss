@@ -1,0 +1,34 @@
+#mobile-menu-popup {
+  position: fixed;
+  left: -#{$slideout-menu-width};
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: $table-header-background-color;
+  overflow-y: scroll;
+  height: calc(100% - #{$footer-height});
+  transition: left 0.3s; // slide out the menu
+  font-size: 14pt;
+  width: $slideout-menu-width;
+
+  &.open {
+    left: 0;
+    width: $slideout-menu-width;
+  }
+
+  #footer-mobile-menu-selectors {
+    padding: 10px 0px 20px 28px;
+
+    select {
+      font-size: 12pt;
+    }
+  }
+
+  .nav__link_mobile {
+    display: block;
+    width: 100%;
+    padding: 10px 0px 10px 30px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+}

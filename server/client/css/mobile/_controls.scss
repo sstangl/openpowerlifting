@@ -1,0 +1,39 @@
+#controls-mobile-menu {
+  position: fixed;
+  right: calc(-100% + -#{$slideout-menu-width});
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: $table-header-background-color;
+  overflow-y: scroll;
+  height: calc(100% - #{$footer-height});
+  transition: right 0.3s; // slide out the menu
+  font-size: 14pt;
+  width: $slideout-menu-width;
+
+  &.open {
+    right: 0;
+    width: $slideout-menu-width;
+  }
+
+  .controls-mobile-menu-wrapper {
+    padding-bottom: 20px;
+  }
+
+  #controls-mobile-filters {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+
+    select {
+      width: 93%;
+      margin: 10px 0px;
+      margin-top: 10px;
+      align-self: center;
+      background-size: 4%;
+      font-size: 12pt;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+  }
+}

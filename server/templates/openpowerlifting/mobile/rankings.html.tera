@@ -50,6 +50,12 @@
 {% endblock flexbox_hack %}
 {% block flexbox_hack_end %}
   </div>
+  <div id="footerSearchContainer">
+    <input id="searchfield" type="text"></input>
+    <button id="searchbutton">search</button>
+  </div>
+  <button id="footerSearchToggler"></button>
+  
 {% endblock flexbox_hack_end %}
 
 {% block controls %}
@@ -68,10 +74,3 @@
     {% include "openpowerlifting/widget-sortselect" %}
   </div>
 {% endblock controls %}
-
-{% block footer_middle_content %}
-  <div id="footerSearchContainer">
-    <input id="searchfield" type="text"></input>
-    <button id="searchbutton"></button>
-  </div>
-{% endblock footer_middle_content %}
