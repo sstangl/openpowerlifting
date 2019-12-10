@@ -386,8 +386,7 @@ impl MetaFederation {
             }
             MetaFederation::BPU => {
                 meet.federation == Federation::BPU
-                    || (meet.federation.sanctioning_body(meet.date)
-                        == Some(Federation::WPC)
+                    || (meet.federation == Some(Federation::WPC)
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
             }
             MetaFederation::BVDK => match meet.federation {
