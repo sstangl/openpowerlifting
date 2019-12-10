@@ -43,7 +43,7 @@
       </optgroup>
     </select>
   </div>
-  <div id="controls-mobile-search-button">
+  <div id="controls-edit-meet-button-container">
     <button onclick="location.href='https://gitlab.com/openpowerlifting/opl-data/tree/master/meet-data/{{meet.path}}'" type="button">Edit Meet</button>
   </div>
 {% endblock controls %}
@@ -56,17 +56,17 @@
     <table id="meetTable">
       <thead><tr>
         {% if use_rank_column %}
-          <th>{{strings.columns.formulaplace}}</th>
+          <th class="meet-list-place-header">{{strings.columns.formulaplace}}</th>
         {% else %}
-          <th>{{strings.columns.place}}</th>
+          <th class="meet-list-place-header">{{strings.columns.place}}</th>
         {% endif %}
         <th>{{strings.columns.liftername}}</th>
-        <th>{{strings.columns.sex}}</th>
+        <th class="meet-list-sex-header">{{strings.columns.sex}}</th>
         {% if has_age_data %}
           <th>{{strings.columns.age}}</th>
         {% endif %}
         <th>{{strings.columns.equipment}}</th>
-        <th>{{strings.columns.weightclass}}</th>
+        <th class="meet-list-class-header">{{strings.columns.weightclass}}</th>
         <th>{{strings.columns.bodyweight}}</th>
         <th>{{strings.columns.squat}}</th>
         <th>{{strings.columns.bench}}</th>
