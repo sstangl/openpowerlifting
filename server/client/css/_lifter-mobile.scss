@@ -4,6 +4,11 @@
   }
 }
 
+.download-lifter-meets {
+  float: right;
+  margin-right: 20px;
+}
+
 @media (max-width: $breakpoint-tablet) {
   div.mixed-content {
     padding-top: 0;
@@ -16,6 +21,10 @@
     }
     h2 {
       font-size: 18px;
+
+      a.download-lifter-meets {
+        margin-right: 0px;
+      }
     }
   }
 
