@@ -1,5 +1,20 @@
 //! Implements Name to Username conversion logic.
 
+/// Writing systems for characters, for categorization.
+#[derive(Copy, Clone, Debug, PartialEq)]
+pub enum WritingSystem {
+    Cyrillic,
+    Greek,
+    Japanese,
+    Latin,
+}
+
+impl Default for WritingSystem {
+    fn default() -> WritingSystem {
+        WritingSystem::Latin
+    }
+}
+
 /// Calculates the ASCII equivalent of a Name.
 fn convert_to_ascii(name: &str) -> Result<String, String> {
     let mut ascii_name = String::with_capacity(name.len());
@@ -87,39 +102,57 @@ fn hira_to_kata(name: &str) -> String {
     name.chars().map(|c| hira_to_kata_char(c)).collect()
 }
 
-/// Checks if the given character is Japanese.
-pub fn is_japanese(letter: char) -> bool {
-    let ord: u32 = letter as u32;
-    match ord {
-        // Some valid punctuation symbols
-        12_293..=12_294 => true,
-        // Hiragana
-        12_352..=12_447 => true,
+/// Get the WritingSystem for the current character.
+///
+/// Returns `Latin` if unknown.
+pub fn get_writing_system(c: char) -> WritingSystem {
+    match c as u32 {
+        // Cyrillic.
+        0x400..=0x4FF => WritingSystem::Cyrillic,
+        // Greek.
+        0x370..=0x3FF => WritingSystem::Greek,
+        // Some valid punctuation symbols.
+        0x3005..=0x3006 => WritingSystem::Japanese,
+        // Hiragana.
+        0x3040..=0x309F => WritingSystem::Japanese,
         // CJK Unified Ideographs.
-        19_968..=40_959 => true,
+        0x4E00..=0x9FFF => WritingSystem::Japanese,
         // CJK Compatibility Forms.
-        65_072..=65_103 => true,
+        0xFE30..=0xFE4F => WritingSystem::Japanese,
         // CJK Compatibility Ideographs.
-        63_744..=64_255 => true,
+        0xF900..=0xFAFF => WritingSystem::Japanese,
         // CJK Compatibility Ideographs Supplement.
-        194_560..=195_103 => true,
+        0x2F800..=0x2FA1F => WritingSystem::Japanese,
         // Katakana.
-        12_448..=12_543 => true,
+        0x30A0..=0x30FF => WritingSystem::Japanese,
         // CJK Radicals Supplement.
-        11_904..=12_031 => true,
+        0x2E80..=0x2EFF => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension A.
-        13_312..=19_903 => true,
+        0x3400..=0x4DBF => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension B.
-        131_072..=173_791 => true,
+        0x20000..=0x2A6DF => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension C.
-        173_824..=177_983 => true,
+        0x2A700..=0x2B73F => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension D.
-        177_984..=178_207 => true,
+        0x2B740..=0x2B81F => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension E.
-        178_208..=183_983 => true,
-        // Non East-Asian.
-        _ => false,
+        0x2B820..=0x2CEAF => WritingSystem::Japanese,
+        // Character is either Latin or not a letter.
+        _ => WritingSystem::Latin,
     }
+}
+
+/// Returns the likely writing system of a string.
+///
+/// The first non-Latin character encountered is considered representative.
+pub fn infer_writing_system(s: &str) -> WritingSystem {
+    for c in s.chars() {
+        let system = get_writing_system(c);
+        if system != WritingSystem::Latin {
+            return system;
+        }
+    }
+    WritingSystem::Latin
 }
 
 /// Given a UTF-8 Name, create the corresponding ASCII Username.
@@ -137,7 +170,7 @@ pub fn is_japanese(letter: char) -> bool {
 pub fn make_username(name: &str) -> Result<String, String> {
     if name.is_empty() {
         Ok(String::default())
-    } else if name.chars().any(is_japanese) {
+    } else if infer_writing_system(name) == WritingSystem::Japanese {
         let kata_name = hira_to_kata(name);
         let ea_id: String = kata_name
             .chars()

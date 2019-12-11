@@ -1,6 +1,6 @@
 //! Implements the /api/search endpoints.
 
-use usernames::make_username;
+use usernames::*;
 
 use crate::opldb::{algorithms, OplDb};
 use crate::pages::selection::Selection;
@@ -12,21 +12,40 @@ pub struct SearchRankingsResult {
     pub next_index: Option<usize>,
 }
 
+impl SearchRankingsResult {
+    pub fn index(n: usize) -> SearchRankingsResult {
+        SearchRankingsResult {
+            next_index: Some(n),
+        }
+    }
+}
+
 pub fn search_rankings<'db>(
     opldb: &'db OplDb,
     selection: &Selection,
     start_row: usize, // Inclusive.
     query: &str,
 ) -> SearchRankingsResult {
+    // FIXME: Hacky solution to "#" ,"'"" & "." being replaced by underscores
+    // in the query string. The client code makes that replacement in order
+    // to ensure that the URL is valid, since this is accessed via a GET parameter.
+    // We could do something craftier, like base-64 encode it.
+    let query = query.replace("_", "");
+
+    let system = infer_writing_system(&query);
+
     // Convert the query string to a normalized form.
     // This tries to make it look like a username, since we're
     // just doing comparisons on the username.
-    let normalized: String = match make_username(query) {
+    let normalized_latin: String = match make_username(&query) {
         Ok(s) => s,
-        Err(_) => {
-            return SearchRankingsResult { next_index: None };
-        }
+        Err(_) => String::new(),
     };
+
+    // Disallow bogus queries.
+    if normalized_latin.is_empty() && system == WritingSystem::Latin {
+        return SearchRankingsResult { next_index: None };
+    }
 
     let backwards: String = query
         .to_ascii_lowercase()
@@ -35,10 +54,11 @@ pub fn search_rankings<'db>(
         .collect::<Vec<&str>>()
         .join("");
 
-    // Disallow bogus searches.
-    if normalized.is_empty() {
-        return SearchRankingsResult { next_index: None };
-    }
+    let backwards_with_space: String = query
+        .split_whitespace()
+        .rev()
+        .collect::<Vec<&str>>()
+        .join(" ");
 
     // TODO: Use a better algorithm, don't generate everything.
     let list = algorithms::get_full_sorted_uniqued(selection, opldb);
@@ -53,16 +73,30 @@ pub fn search_rankings<'db>(
         let entry = opldb.get_entry(list.0[i]);
         let lifter = opldb.get_lifter(entry.lifter_id);
 
-        if lifter.username.contains(&normalized)
-            || lifter.username.contains(&backwards)
-            || lifter
-                .instagram
-                .as_ref()
-                .map_or(false, |ig| ig.contains(&normalized))
+        // First, check if there's a match based on the username or IG.
+        if !normalized_latin.is_empty()
+            && (lifter.username.contains(&normalized_latin)
+                || lifter.username.contains(&backwards)
+                || lifter
+                    .instagram
+                    .as_ref()
+                    .map_or(false, |ig| ig.contains(&normalized_latin)))
         {
-            return SearchRankingsResult {
-                next_index: Some(i),
-            };
+            return SearchRankingsResult::index(i);
+        }
+
+        // Otherwise, check based on the writing system.
+        let localized_name: Option<&String> = match system {
+            WritingSystem::Cyrillic => lifter.cyrillic_name.as_ref(),
+            WritingSystem::Greek => lifter.greek_name.as_ref(),
+            WritingSystem::Japanese => lifter.japanese_name.as_ref(),
+            WritingSystem::Latin => Some(&lifter.name),
+        };
+
+        if let Some(name) = localized_name {
+            if name.contains(&query) || name.contains(&backwards_with_space) {
+                return SearchRankingsResult::index(i);
+            }
         }
     }
 

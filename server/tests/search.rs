@@ -55,3 +55,19 @@ fn instagram_search() {
     let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
+
+/// Checks that basic searching in Cyrillic works.
+#[test]
+fn cyrillic_search() {
+    let db = common::db();
+    let selection = Selection::default();
+
+    // Perform the search.
+    let res = search_rankings(&db, &selection, 0, "Шон Стангл");
+    let row = res.next_index.unwrap();
+
+    // Check that the result is for the specified lifter.
+    let list = algorithms::get_full_sorted_uniqued(&selection, &db);
+    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    assert_eq!(lifter.name, "Sean Stangl");
+}

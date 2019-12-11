@@ -122,6 +122,7 @@ pub struct Entry {
     pub username: String,
     pub cyrillicname: Option<String>,
     pub japanesename: Option<String>,
+    pub greekname: Option<String>,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -243,6 +244,7 @@ enum Header {
     CyrillicName,
     JapaneseName,
     ChineseName,
+    GreekName,
     Sex,
     Age,
     Place,
@@ -286,7 +288,6 @@ enum Header {
     #[strum(serialize = "College/University")]
     CollegeUniversity,
     School,
-    GreekName,
 }
 
 /// Checks that the headers are valid.
@@ -497,17 +498,14 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
     canonicalize_name_utf8(name)
 }
 
-const CYRILLIC_CHARACTERS: &str = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя\
-                                   АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\
-                                   ҐґЄєЖжІіЇї\
-                                   -' .";
-
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
         None
     } else {
         for c in s.chars() {
-            if !CYRILLIC_CHARACTERS.contains(c) {
+            if usernames::get_writing_system(c) != usernames::WritingSystem::Cyrillic
+                && !"-' .".contains(c)
+            {
                 let msg = format!(
                     "CyrillicName '{}' contains non-Cyrillic character '{}'",
                     s, c
@@ -525,11 +523,31 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
         None
     } else {
         for c in s.chars() {
-            if !usernames::is_japanese(c) && c != ' ' {
+            if usernames::get_writing_system(c) != usernames::WritingSystem::Japanese
+                && c != ' '
+            {
                 let msg = format!(
                     "JapaneseName '{}' contains non-Japanese character '{}'",
                     s, c
                 );
+                report.error_on(line, msg);
+                return None;
+            }
+        }
+        Some(canonicalize_name_utf8(s))
+    }
+}
+
+fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<String> {
+    if s.is_empty() {
+        None
+    } else {
+        for c in s.chars() {
+            if usernames::get_writing_system(c) != usernames::WritingSystem::Greek
+                && !"-' .".contains(c)
+            {
+                let msg =
+                    format!("GreekName '{}' contains non-Greek character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
             }
@@ -2102,6 +2120,9 @@ where
         if let Some(idx) = headers.get(Header::JapaneseName) {
             entry.japanesename =
                 check_column_japanesename(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::GreekName) {
+            entry.greekname = check_column_greekname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
             entry.birthyear =
