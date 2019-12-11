@@ -1,21 +1,21 @@
-Name,BirthDate,WeightClassKg,Division,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Place
-Lorentzo Popa,1992-12-13,67.5,Open,,,,,80,85,-90,85,,,,,85,B,Raw,M,1
-Dionysis Kouniakis,1990-10-15,75,Open,150,-155,,150,120,150,155,155,160,-165,-165,160,465,SBD,Wraps,M,1
-Anastasios Svolis,1994-03-17,75,Juniors,150,157.5,-165,157.5,80,87.5,-90,87.5,180,-190,190,190,435,SBD,Wraps,M,1
-Dimitrios Soupoulis,1981-10-26,75,Open,130,137.5,-140,137.5,80,90,-95,90,130,150,165,165,392.5,SBD,Wraps,M,2
-Ioannis Stratakis,1990-12-20,82.5,Open,170,180,-190,180,125,135,,135,215,225,235,235,550,SBD,Wraps,M,1
-Giannis Mitsiadis,1986-03-13,82.5,Open,180,185,190,190,140,147.5,152.5,152.5,190,200,205,205,547.5,SBD,Wraps,M,2
-Igor Kosovych,1996-10-03,82.5,Teen,165,-175,175,175,120,127.5,-130,127.5,190,200,-205,200,502.5,SBD,Wraps,M,1
-Parthenon Delialis,1996-05-04,82.5,Teen,170,175,-180,175,115,120,125,125,190,197.5,-202.5,197.5,497.5,SBD,Wraps,M,2
-Panagiotis Perentis,1993-10-26,82.5,Juniors,150,160,170,170,80,90,100,100,190,205,215,215,485,SBD,Wraps,M,1
-Ioannis Vatistas,1987-11-21,82.5,Open,120,-130,-130,120,85,92.5,-100,92.5,140,155,-165,155,367.5,SBD,Wraps,M,3
-Efthimios Tserepas,1983-04-22,90,Open,160,-165,-165,160,120,127.5,135,135,155,165,172.5,172.5,467.5,SBD,Wraps,M,1
-Simos Karvounis,1990-05-22,90,Open,,,,,130,-135,-135,130,140,160,175,175,305,BD,Raw,M,1
-Aris Hadjigiannakis,1987-08-08,100,Open,180,195,205,205,130,140,-145,140,200,220,235,235,580,SBD,Wraps,M,1
-Alexander Kolyvas,1986-12-22,100,Open,180,200,210,210,115,120,-130,120,200,230,-250,230,560,SBD,Wraps,M,2
-Nikos Triantafyllou,1996-07-11,110,Teen,205,217.5,227.5,227.5,-100,105,-112.5,105,195,207.5,220,220,552.5,SBD,Wraps,M,1
-Christopher Patsis,1985-03-28,110,Open,200,210,,210,,,,,,,,,210,S,Wraps,M,1
-Panagiotis Sarantis,1985-02-02,110,Open,180,185,-190,185,165,-170,-170,165,165,175,190,190,540,SBD,Wraps,M,1
-Chrysovalantis Tasiopoulos,1975-05-15,125,Open,,,,,140,160,170,170,,,,,170,B,Raw,M,1
-Vangelis Kois,1978-10-15,140,Open,220,240,-250,240,190,200,-210,200,230,250,260,260,700,SBD,Wraps,M,1
-Christos Foukas,1987-08-18,140,Open,220,240,-250,240,165,-175,,165,240,260,-280,260,665,SBD,Wraps,M,2
+Name,GreekName,BirthDate,WeightClassKg,Division,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Place
+Lorentzo Popa,,1992-12-13,67.5,Open,,,,,80,85,-90,85,,,,,85,B,Raw,M,1
+Dionysis Kouniakis,Διονύσης Κουνιάκης,1990-10-15,75,Open,150,-155,,150,120,150,155,155,160,-165,-165,160,465,SBD,Wraps,M,1
+Anastasios Svolis,Αναστάσιος Σβόλης,1994-03-17,75,Juniors,150,157.5,-165,157.5,80,87.5,-90,87.5,180,-190,190,190,435,SBD,Wraps,M,1
+Dimitrios Soupoulis,Δημήτριος Σούπουλης,1981-10-26,75,Open,130,137.5,-140,137.5,80,90,-95,90,130,150,165,165,392.5,SBD,Wraps,M,2
+Ioannis Stratakis,Ιωάννης Στρατάκης,1990-12-20,82.5,Open,170,180,-190,180,125,135,,135,215,225,235,235,550,SBD,Wraps,M,1
+Giannis Mitsiadis,Γιάννης Μιτσιάδης,1986-03-13,82.5,Open,180,185,190,190,140,147.5,152.5,152.5,190,200,205,205,547.5,SBD,Wraps,M,2
+Igor Kosovych,Igor Kosovych,1996-10-03,82.5,Teen,165,-175,175,175,120,127.5,-130,127.5,190,200,-205,200,502.5,SBD,Wraps,M,1
+Parthenon Delialis,Παρμενίων Δελιάλης,1996-05-04,82.5,Teen,170,175,-180,175,115,120,125,125,190,197.5,-202.5,197.5,497.5,SBD,Wraps,M,2
+Panagiotis Perentis,Παναγιώτης Περεντής,1993-10-26,82.5,Juniors,150,160,170,170,80,90,100,100,190,205,215,215,485,SBD,Wraps,M,1
+Ioannis Vatistas,Ιωάννης Βατίστας,1987-11-21,82.5,Open,120,-130,-130,120,85,92.5,-100,92.5,140,155,-165,155,367.5,SBD,Wraps,M,3
+Efthimios Tserepas,Ευθύμιος Τσερέπας,1983-04-22,90,Open,160,-165,-165,160,120,127.5,135,135,155,165,172.5,172.5,467.5,SBD,Wraps,M,1
+Simos Karvounis,Σίμος Καρβούνης,1990-05-22,90,Open,,,,,130,-135,-135,130,140,160,175,175,305,BD,Raw,M,1
+Aris Hadjigiannakis,Άρης Χατζηγιαννάκης,1987-08-08,100,Open,180,195,205,205,130,140,-145,140,200,220,235,235,580,SBD,Wraps,M,1
+Alexander Kolyvas,Αλέξανδρος Κολυβάς,1986-12-22,100,Open,180,200,210,210,115,120,-130,120,200,230,-250,230,560,SBD,Wraps,M,2
+Nikos Triantafyllou,Νίκος Τριανταφύλλου,1996-07-11,110,Teen,205,217.5,227.5,227.5,-100,105,-112.5,105,195,207.5,220,220,552.5,SBD,Wraps,M,1
+Christopher Patsis,Χριστόφορος Πάτσης,1985-03-28,110,Open,200,210,,210,,,,,,,,,210,S,Wraps,M,1
+Panagiotis Sarantis,Παναγιώτης Σαράντης,1985-02-02,110,Open,180,185,-190,185,165,-170,-170,165,165,175,190,190,540,SBD,Wraps,M,1
+Chrysovalantis Tasiopoulos,Χρυσοβαλάντης Τασιόπουλος,1975-05-15,125,Open,,,,,140,160,170,170,,,,,170,B,Raw,M,1
+Vangelis Kois,Βαγγέλης Κόης,1978-10-15,140,Open,220,240,-250,240,190,200,-210,200,230,250,260,260,700,SBD,Wraps,M,1
+Christos Foukas,Χρήστος Φούκας,1987-08-18,140,Open,220,240,-250,240,165,-175,,165,240,260,-280,260,665,SBD,Wraps,M,2
