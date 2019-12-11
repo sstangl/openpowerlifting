@@ -16,8 +16,8 @@ footer {
   // This is a hack to get the footer to always be above the SlickGrid.
   z-index: 3;
 
-  color: $control-text-color;
-  background-color: $control-bar-background-color;
+  color: $header-color;
+  background-color: $header-background-color;
 }
 
 $footer-icon-size: 40px;
@@ -115,6 +115,7 @@ footer > .mobile-header-logo-link {
 
   #searchfield {
     font-size: 14pt;
+    font-variant: smallcaps;
     outline: none;
     margin: 0;
     display: block;

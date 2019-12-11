@@ -51,8 +51,8 @@
 {% block flexbox_hack_end %}
   </div>
   <div id="footerSearchContainer">
-    <input id="searchfield" type="text"></input>
-    <button id="searchbutton">search</button>
+    <input type="text" id="searchfield"/>
+    <button id="searchbutton">{{strings.buttons.search}}</button>
   </div>
   <button id="footerSearchToggler"></button>
   
