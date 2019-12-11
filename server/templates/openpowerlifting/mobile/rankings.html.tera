@@ -51,7 +51,7 @@
 {% block flexbox_hack_end %}
   </div>
   <div id="footerSearchContainer">
-    <input type="text" id="searchfield"/>
+    <input type="text" id="searchfield" autocomplete="off"/>
     <button id="searchbutton">{{strings.buttons.search}}</button>
   </div>
   <button id="footerSearchToggler"></button>
