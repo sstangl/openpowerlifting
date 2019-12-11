@@ -65,9 +65,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for Device {
         match keys.len() {
             1 => {
                 if keys[0].contains("Mobile") {
-                    // TODO XXX FIXME: Pref-off mobile by default.
-                    // Outcome::Success(Device::Mobile)
-                    Outcome::Success(Device::Desktop)
+                    Outcome::Success(Device::Mobile)
                 } else {
                     Outcome::Success(Device::Desktop)
                 }

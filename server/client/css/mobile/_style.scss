@@ -1,7 +1,14 @@
+// vim: set ts=8 sts=2 et sw=2 tw=99:
+// The mobile version uses a footer instead of a header.
+
 $slideout-menu-width: 80%;
 $mobile-search-active-color: #C4C4C4;
 
-@media (max-width: $breakpoint-tablet) {
+// This includes both the content and the footer.
+#mobile-wrapper {
+  height: 100%;
+  position: relative;
+
   @import "layout";
   @import "footer";
   @import "menu";

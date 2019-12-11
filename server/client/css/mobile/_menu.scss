@@ -11,6 +11,10 @@
   font-size: 14pt;
   width: $slideout-menu-width;
 
+  .mobile-menu-popup-menu-wrapper {
+    min-height: 0;
+  }
+
   &.open {
     left: 0;
     width: $slideout-menu-width;
@@ -18,6 +22,7 @@
 
   #footer-mobile-menu-selectors {
     padding: 10px 0px 20px 28px;
+    min-height: 0;
 
     select {
       font-size: 12pt;
@@ -30,5 +35,6 @@
     padding: 10px 0px 10px 30px;
     text-decoration: none;
     box-sizing: border-box;
+    min-height: 0;
   }
 }
