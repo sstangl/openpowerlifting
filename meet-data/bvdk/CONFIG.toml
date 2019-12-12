@@ -56,3 +56,4 @@
     1937 = ["ExemptDivision"] # ~12 Year old in Youth.
     # Some divisions labeled "BEST LIFTER" didn't use divisions or weightclasses.
     1939 = ["ExemptWeightClassConsistency", "ExemptDivision"]
+    1954 = ["ExemptWeightClassConsistency"] # No weightclasses.
