@@ -55,11 +55,14 @@
     <button id="searchbutton">{{strings.buttons.search}}</button>
   </div>
   <button id="footerSearchToggler"></button>
-  
+
 {% endblock flexbox_hack_end %}
 
 {% block controls %}
   <div id="controls-mobile-filters">
+    Sort:
+    {% include "openpowerlifting/widget-sortselect" %}
+    Filters:
     {% include "openpowerlifting/widget-fedselect" %}
     {% include "openpowerlifting/widget-equipmentselect" %}
     {% include "openpowerlifting/widget-weightclass" %}
@@ -71,6 +74,6 @@
     {% include "openpowerlifting/widget-ageselect" %}
     {% include "widget-yearselect" %}
     {% include "openpowerlifting/widget-eventselect" %}
-    {% include "openpowerlifting/widget-sortselect" %}
+
   </div>
 {% endblock controls %}
