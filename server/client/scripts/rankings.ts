@@ -478,23 +478,26 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
 // Mobile devices use a different grid ordering for different kinds of selections.
 // For simplicity, when the selectors are changed, the Grid is just re-rendered.
 function renderGridTable(): void {
+    const mobile: boolean = isMobile();
     // Check templates/rankings.html.tera.
     const nameWidth = 200;
+    const rowHeight = mobile ? 26 : 23;
+    const rankWidth = 45; // five digit numbers should be fully visible
     const shortWidth = 40;
-    const dateWidth = 70;
+    const dateWidth = mobile ? 80 : 70;
     const numberWidth = 55;
 
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
     }
 
-    const mobile: boolean = isMobile();
+
     const fillerWidth = mobile ? 10 : 20;
 
     let columns = [
         {id: "filler", width: fillerWidth, minWidth: fillerWidth, focusable: false,
             selectable: false, resizable: false},
-        {id: "rank", name: translation_column_formulaplace, field: "rank", width: 40},
+        {id: "rank", name: translation_column_formulaplace, field: "rank", width: rankWidth},
         {id: "name", name: translation_column_liftername, field: "name", width: nameWidth, formatter: urlformatter},
         {id: "fed", name: translation_column_federation, field: "fed", width: numberWidth},
         {id: "date", name: translation_column_date, field: "date", width: dateWidth, formatter: urlformatter},
@@ -559,7 +562,7 @@ function renderGridTable(): void {
     const options = {
         enableColumnReorder: false,
         forceSyncScrolling: false,
-        rowHeight: 23,
+        rowHeight: rowHeight,
         topPanelHeight: 23,
         cellFlashingCssClass: "searchflashing",
 

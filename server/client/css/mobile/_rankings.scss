@@ -6,8 +6,7 @@
   display: flex;
   background: $table-header-background-color;
   border: none;
-  height: auto;
-  justify-content: center;
+  height: 26px;
 
   .selected-filter {
     display: inline-block;
@@ -15,7 +14,7 @@
     border-radius: 4px;
     font-size: 11px;
     text-align: center;
-    padding: 2px 5px 4px 5px;
+    padding: 0px 5px 0px 5px;
     background: $row-alt-background-color;
   }
 }
