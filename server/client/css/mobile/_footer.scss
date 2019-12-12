@@ -123,6 +123,7 @@ footer > .mobile-header-logo-link {
     height: 30px;
     box-sizing: border-box;
     border: none;
+    border-radius: 0; // set this specifically for mobile browsers
 
     &:focus {
       box-shadow: 0 0 5px $control-border-color;
