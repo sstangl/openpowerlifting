@@ -1,24 +1,27 @@
-#selectedFilters {
+#selectedFilters.records-selected-filters {
   display: none;
 }
 
-#selectedFilters {
-  display: block;
+#selectedFilters.records-selected-filters {
+  display: flex;
+  border: none;
+  height: auto;
+  background: transparent;
+  justify-content: center;
 
   .selected-filter {
     display: inline-block;
-    background: $table-header-background-color;
-    margin: 8px;
-    border-radius: 23px;
+    margin: 5px 1px 5px 2px;
+    border-radius: 4px;
     font-size: 11px;
     text-align: center;
-    padding: 1px 3px 4px 3px;
+    padding: 2px 5px 4px 5px;
+    background: $table-header-background-color;
   }
 }
-
 .records-col {
   h2 {
-    margin-top: 5px;
+    margin-top: 0px;
   }
   table {
     display: block;

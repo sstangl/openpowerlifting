@@ -45,7 +45,7 @@
 {% block body %}
 
   <div class="mixed-content-with-controls">
-    <div id="selectedFilters"></div>
+    <div id="selectedFilters" class="records-selected-filters"></div>
     {% for table in tables %}
 
     {% if loop.index is odd %}

@@ -1,0 +1,21 @@
+#selectedFilters {
+  display: none;
+}
+
+#selectedFilters {
+  display: flex;
+  background: $table-header-background-color;
+  border: none;
+  height: auto;
+  justify-content: center;
+
+  .selected-filter {
+    display: inline-block;
+    margin: 5px 1px 5px 2px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    padding: 2px 5px 4px 5px;
+    background: $row-alt-background-color;
+  }
+}
