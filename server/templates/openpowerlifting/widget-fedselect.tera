@@ -150,7 +150,7 @@
 </optgroup>
 <optgroup label="{{strings.country.colombia}}">
   <option value="all-colombia" {% if selection.federation == "AllColombia" %}selected{% endif %}>{{strings.selectors.fed.all_colombia}}</option>
-  <option value="colpa" {% if selection.federation == "ColPA" %}selected{% endif %}>ColPA - Colombian Powerlifting Federation [IPF]</option>>
+  <option value="colpf" {% if selection.federation == "ColPF" %}selected{% endif %}>ColPF - Colombian Powerlifting Federation [IPF]</option>>
 </optgroup>
 <optgroup label="{{strings.country.croatia}}">
   <option value="all-croatia" {% if selection.federation == "AllCroatia" %}selected{% endif %}>{{strings.selectors.fed.all_croatia}}</option>
