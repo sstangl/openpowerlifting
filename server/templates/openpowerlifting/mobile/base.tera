@@ -19,6 +19,8 @@
   {# Internal sources. #}
   <link rel="stylesheet" type="text/css" href="/static/css/{{statics::style_css()}}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  {# Preload close icon to prevent blinking on mobile #}
+  <link rel="preload" as="image" href="/static/images/close_icon.png">
   <meta name="apple-mobile-web-app-title" content="OpenPowerlifting">
 
   {% block includes %}
