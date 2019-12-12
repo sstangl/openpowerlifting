@@ -60,9 +60,9 @@
 
 {% block controls %}
   <div id="controls-mobile-filters">
-    Sort:
+    Sort
     {% include "openpowerlifting/widget-sortselect" %}
-    Filters:
+    Category
     {% include "openpowerlifting/widget-fedselect" %}
     {% include "openpowerlifting/widget-equipmentselect" %}
     {% include "openpowerlifting/widget-weightclass" %}
