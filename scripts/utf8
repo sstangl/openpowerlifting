@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Script that converts ISO-8859 text files to UTF-8.
+# This seems to mostly occur for meet results coming from Germany.
+
+TMPFILE=$(mktemp)
+
+iconv --from-code ISO-8859-1 --to-code UTF-8 --output "$TMPFILE" "$1"
+mv "$TMPFILE" "$1"
