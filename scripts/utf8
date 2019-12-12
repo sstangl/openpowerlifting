@@ -3,9 +3,20 @@
 # Script that converts ISO-8859 text files to UTF-8.
 # This seems to mostly occur for meet results coming from Germany.
 
+# Default to ISO-8859-1 since that shows up most frequently.
+ENCODING="ISO-8859-1"
+
+# macOS produces files labeled "Non-ISO extended-ASCII text."
+# Accept a --mac argument to switch to the MACINTOSH encoding.
+if [[ "$1" = "--mac" ]]; then
+	ENCODING="MACINTOSH"
+	shift
+fi
+
+# Convert all the remaining arguments.
 while (( "$#" )); do
 	TMPFILE=$(mktemp)
-	iconv --from-code ISO-8859-1 --to-code UTF-8 --output "$TMPFILE" "$1"
+	iconv --from-code "${ENCODING}" --to-code UTF-8 --output "$TMPFILE" "$1"
 	mv "$TMPFILE" "$1"
 	shift
 done
