@@ -13,11 +13,15 @@
 
   .mobile-menu-popup-menu-wrapper {
     min-height: 0;
+    display: flex; // this is to have children with flex: 1 to fit in every screen
+    flex-direction: column;
+    overflow-y: scroll;
   }
 
   &.open {
     left: 0;
     width: $slideout-menu-width;
+    overflow-y: scroll;
   }
 
   #footer-mobile-menu-selectors {
@@ -36,5 +40,6 @@
     text-decoration: none;
     box-sizing: border-box;
     min-height: 0;
+    flex: 1; // this will give equal size to each menu item so they fit in all screens
   }
 }

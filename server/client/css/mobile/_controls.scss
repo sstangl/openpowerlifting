@@ -18,6 +18,7 @@
 
   .controls-mobile-menu-wrapper {
     padding-bottom: 20px;
+    overflow-y: scroll;
   }
 
   #controls-mobile-filters {
@@ -26,6 +27,7 @@
     padding: 0px 20px;
 
     select {
+      flex: 1;
       width: 93%;
       margin: 10px 0px;
       margin-top: 10px;

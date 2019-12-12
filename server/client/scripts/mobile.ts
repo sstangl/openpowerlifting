@@ -20,14 +20,44 @@
 // Mobile pages have a footer with pop-ups for controls, due to limited space.
 
 // Called when the filters button is pressed. Not every page has one.
+let mobileMenu: HTMLDivElement;
+let controlsMenu: HTMLDivElement;
+let mobileControlsBtn: HTMLElement;
+let mobileMenuToggler: HTMLElement;
+
+function showMobileMenu(): void {
+  if (mobileMenu && mobileMenu.classList) {
+    mobileMenu.classList.add("open");
+  }
+}
+function hideMobileMenu(): void {
+  if (mobileMenu && mobileMenu.classList) {
+    mobileMenu.classList.remove("open");
+  }
+}
+
+function showMobileControls(): void {
+  if (controlsMenu && controlsMenu.classList) {
+    controlsMenu.classList.add("open");
+  }
+}
+function hideMobileControls(): void {
+  if (controlsMenu && controlsMenu.classList) {
+    controlsMenu.classList.remove("open");
+  }
+}
+
+function removeClassFromBody(): void {
+  const body = document.body;
+  body.classList.remove("menu-open");
+}
+// this class will disable scrolling of the content when mobile menu is open
+function addClassToBody(): void {
+  const body = document.body;
+  body.classList.add("menu-open");
+}
+
 function toggleMobileFilters(): void {
-    const mobileMenu = document.getElementById("mobile-menu-popup") as HTMLDivElement;
-    const filtersMobileMenu = document.getElementById("controls-mobile-menu") as HTMLDivElement;
-    const mobileControlsBtn = document.getElementById("controls-mobile-toggle-button") as HTMLButtonElement;
-    const mobileMenuToggler = document.getElementById("mobileMenuToggler") as HTMLButtonElement;
-
-    hideSearch();
-
     // If the navigation menu is open, reset its icon.
     if (mobileMenuToggler && mobileMenuToggler.classList) {
       mobileMenuToggler.classList.remove("active");
@@ -38,26 +68,20 @@ function toggleMobileFilters(): void {
       mobileControlsBtn.classList.toggle("active");
     }
 
-    // Hides the mobile menu when the user clicks on the filters menu.
-    if (mobileMenu && mobileMenu.classList) {
-      mobileMenu.classList.remove("open");
-    }
+    hideMobileMenu();
 
-    // Toggle the filters menu.
-    if (filtersMobileMenu && filtersMobileMenu.classList) {
-      filtersMobileMenu.classList.toggle("open");
+    if (controlsMenu.classList.contains('open')) {
+      hideMobileControls();
+      removeClassFromBody();
+    } else {
+      hideSearch();
+      showMobileControls();
+      addClassToBody();
     }
 }
 
 // Called when the hamburger menu is pressed.
 function toggleMobileMenu(): void {
-    const filtersMobileMenu = document.getElementById("controls-mobile-menu") as HTMLDivElement;
-    const mobileMenu = document.getElementById("mobile-menu-popup") as HTMLDivElement;
-    const mobileMenuToggler = document.getElementById("mobileMenuToggler") as HTMLButtonElement;
-    const mobileControlsBtn = document.getElementById("controls-mobile-toggle-button") as HTMLButtonElement;
-
-    hideSearch();
-
     // If the controls menu is open, reset its icon.
     if (mobileControlsBtn && mobileControlsBtn.classList) {
       mobileControlsBtn.classList.remove("active");
@@ -68,23 +92,20 @@ function toggleMobileMenu(): void {
       mobileMenuToggler.classList.toggle("active");
     }
 
-    // Hide the filters menu when the user clicks on the main menu.
-    if (filtersMobileMenu && filtersMobileMenu.classList) {
-      filtersMobileMenu.classList.remove("open");
+    hideMobileControls();
+
+    if (mobileMenu.classList.contains('open')) {
+      hideMobileMenu();
+      removeClassFromBody();
+    } else {
+      hideSearch();
+      showMobileMenu();
+      addClassToBody();
     }
 
-    // Toggle the mobile menu.
-    if (mobileMenu && mobileMenu.classList) {
-      mobileMenu.classList.toggle("open");
-    }
 }
 
 function hideMenus():void {
-  const filtersMobileMenu = document.getElementById("controls-mobile-menu") as HTMLDivElement;
-  const mobileMenu = document.getElementById("mobile-menu-popup") as HTMLDivElement;
-  const mobileControlsBtn = document.getElementById("controls-mobile-toggle-button") as HTMLButtonElement;
-  const mobileMenuToggler = document.getElementById("mobileMenuToggler") as HTMLButtonElement;
-
   // If the navigation menu is open, reset its icon.
   if (mobileMenuToggler && mobileMenuToggler.classList) {
     mobileMenuToggler.classList.remove("active");
@@ -95,15 +116,9 @@ function hideMenus():void {
     mobileControlsBtn.classList.remove("active");
   }
 
-  // If the navigation menu is open, close it.
-  if (mobileMenu && mobileMenu.classList) {
-    mobileMenu.classList.remove("open");
-  }
-
-  // If the controls menu is open, close it.
-  if (filtersMobileMenu && filtersMobileMenu.classList) {
-    filtersMobileMenu.classList.remove("open");
-  }
+  hideMobileMenu();
+  hideMobileControls()
+  removeClassFromBody();
 }
 
 function hideSearch(): void {
@@ -135,8 +150,11 @@ function toggleSearch(): void {
 }
 
 function initMobileFooter(): void {
-  const mobileControlsBtn = document.getElementById("controls-mobile-toggle-button") as HTMLButtonElement;
-  const mobileMenuToggler = document.getElementById("mobileMenuToggler") as HTMLButtonElement;
+  controlsMenu = document.getElementById("controls-mobile-menu") as HTMLDivElement;
+  mobileMenu = document.getElementById("mobile-menu-popup") as HTMLDivElement;
+  mobileControlsBtn = document.getElementById("controls-mobile-toggle-button") as HTMLButtonElement;
+  mobileMenuToggler = document.getElementById("mobileMenuToggler") as HTMLButtonElement;
+
   const mobileMenuLinks = document.getElementsByClassName("nav__link_mobile") as HTMLCollection;
   const searchField = document.getElementById("searchfield") as HTMLInputElement;
   const searchToggler = document.getElementById("footerSearchToggler") as HTMLButtonElement;
