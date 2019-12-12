@@ -102,6 +102,7 @@ footer > .mobile-header-logo-link {
 
   #searchbutton {
     background: $table-header-background-color;
+    font-variant: small-caps;
     cursor: pointer;
     color: white;
     border-radius: 0;
@@ -115,7 +116,6 @@ footer > .mobile-header-logo-link {
 
   #searchfield {
     font-size: 14pt;
-    font-variant: smallcaps;
     outline: none;
     margin: 0;
     display: block;
