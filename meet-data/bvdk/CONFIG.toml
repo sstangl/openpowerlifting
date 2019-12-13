@@ -57,3 +57,4 @@
     # Some divisions labeled "BEST LIFTER" didn't use divisions or weightclasses.
     1939 = ["ExemptWeightClassConsistency", "ExemptDivision"]
     1954 = ["ExemptWeightClassConsistency"] # No weightclasses.
+    1966 = ["ExemptWeightClassConsistency"] # DOTS team meet, no weightclasses.
