@@ -23,6 +23,7 @@
 
 {% block body %}
   <div class="content">
+      <div id="selectedFilters" class="records-selected-filters"></div>
     <table id="meetListTable">
       <thead><tr>
         <th>{{strings.columns.federation}}</th>

@@ -48,6 +48,41 @@ function reload() {
     }
 }
 
+// Render the selected filters into the header, for use on mobile devices.
+//
+// On desktop, the selected filters are visually obvious, because they're
+// always on the screen. On mobile, the filters are hidden in a menu.
+// So instead we show breadcrumbs for filters that differ from the defaults.
+function renderSelectedFilters(): void {
+    const div = document.getElementById("selectedFilters");
+    if (div === null) return;
+
+    // Clear old filters.
+    div.innerHTML = "";
+
+    // Helper function to create a new filter breadcrumb.
+    function newFilter(parent: HTMLElement, label: string): void {
+        const item = document.createElement("span");
+        item.setAttribute("class", "selected-filter");
+        item.innerHTML = label;
+        parent.appendChild(item);
+    }
+
+    if (selFed.value !== 'all') {
+        let label = selFed.selectedOptions[0].label;
+
+        // If there is " - " in the label, then it's the federation acronym
+        // followed by the expansion. Just include the acronym.
+        label = label.split(" - ")[0];
+        newFilter(div, label);
+    }
+
+    if (selYear.value !== 'all') {
+        newFilter(div, selYear.selectedOptions[0].label);
+    }
+}
+
+
 function addSelectorListeners(selector: HTMLSelectElement): void {
     selector.addEventListener("change", reload);
 }
@@ -58,6 +93,8 @@ function initMeetList(): void {
 
     addSelectorListeners(selFed);
     addSelectorListeners(selYear);
+
+    renderSelectedFilters();
 }
 
 export {
