@@ -164,6 +164,7 @@ pub struct Entry {
 
     pub tested: bool,
     pub country: Option<Country>,
+    pub state: Option<State>,
 
     // Points are always recalculated, never taken from the data.
     //
@@ -968,9 +969,39 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) -> Option<Count
     }
 }
 
-fn check_column_state(s: &str, line: u64, report: &mut Report) {
-    if !s.is_empty() && !s.is_ascii() {
-        report.error_on(line, format!("State '{}' must be ASCII", s));
+/// Checks the "State" column.
+///
+/// If the lifter's Country is explicitly specified, the State is checked
+/// against that. Otherwise, the State is checked against the MeetCountry.
+fn check_column_state(
+    s: &str,
+    lifter_country: Option<Country>,
+    meet: Option<&Meet>,
+    line: u64,
+    report: &mut Report,
+) -> Option<State> {
+    if s.is_empty() {
+        return None;
+    }
+
+    // Get the country either from the Country column or from the MeetCountry.
+    match lifter_country.or(meet.and_then(|m| Some(m.country))) {
+        Some(country) => {
+            let state = State::from_str_and_country(s, country).ok();
+            if state.is_none() {
+                let c = country.to_string();
+                let msg = format!("Unknown State '{}' for Country '{}'", s, c,);
+                report.error_on(line, msg);
+            }
+            state
+        }
+        None => {
+            // At the least, make sure it's ASCII.
+            if !s.is_ascii() {
+                report.error_on(line, format!("State '{}' must be ASCII", s));
+            }
+            None
+        }
     }
 }
 
@@ -2104,12 +2135,21 @@ where
         // Assign the Tested column if it's configured for the Division.
         entry.tested = get_tested_from_division_config(&entry, config);
 
+        // Check the Country and State information.
         if let Some(idx) = headers.get(Header::Country) {
             entry.country = check_column_country(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::State) {
-            check_column_state(&record[idx], line, &mut report);
+            let c = entry.country;
+            entry.state = check_column_state(&record[idx], c, meet, line, &mut report);
+
+            // If the Country was not explicitly specified, but the State was,
+            // the lifter's Country is inferrable from the MeetCountry.
+            if entry.country.is_none() {
+                entry.country = entry.state.and_then(|state| Some(state.to_country()));
+            }
         }
+
         if let Some(idx) = headers.get(Header::Tested) {
             entry.tested = check_column_tested(&record[idx], line, &mut report);
         }

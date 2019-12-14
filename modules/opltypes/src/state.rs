@@ -31,8 +31,8 @@ impl State {
     ///
     /// ```
     /// # use opltypes::{Country, State, USAState};
-    /// let state = State::from_str_and_country("NY", Country::USA).unwrap();
-    /// assert_eq!(state, State::InUSA(USAState::NY));
+    /// let state = State::from_str_and_country("NY", Country::USA);
+    /// assert_eq!(state.unwrap(), State::InUSA(USAState::NY));
     /// ```
     pub fn from_str_and_country(s: &str, country: Country) -> Result<State, ParseError> {
         match country {
