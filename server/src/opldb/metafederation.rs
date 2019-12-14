@@ -554,11 +554,11 @@ impl MetaFederation {
                 _ => false,
             },
             MetaFederation::WRPFUSA => match meet.federation {
-                Federation::WRPF => {
-                    meet.country == Country::USA
-                        && (entry.lifter_country == None
-                            || entry.lifter_country == Some(Country::USA))
-                }
+                Federation::WRPF => match entry.lifter_country {
+                    Some(Country::USA) => true,
+                    None => meet.country == Country::USA,
+                    _ => false,
+                },
                 _ => false,
             },
         }
