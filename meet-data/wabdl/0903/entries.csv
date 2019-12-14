@@ -65,7 +65,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,Best3BenchKg,Best3DeadliftKg,Tot
 140+,B,M,Single-ply,Open,James Crawford III,345,,345,WA,USA,,,1
 140+,B,M,Single-ply,Open,James Mersberg,312.5,,312.5,HI,USA,,,2
 60,B,M,Single-ply,Open,Carlos Daniel Escobedo,95,,95,CA,USA,,,2
-67.5,B,M,Single-ply,Open,Mathieu Coudriaud,145,,145,France,USA,,,3
+67.5,B,M,Single-ply,Open,Mathieu Coudriaud,145,,145,,,,,3
 75,B,M,Single-ply,Open,Aramiq Amirchian,167.5,,167.5,AZ,USA,,,3
 75,B,M,Single-ply,Open,Jed Lee,162.5,,162.5,OH,USA,,,5
 75,B,M,Single-ply,Open,Dan Hanson,155,,155,MN,USA,,,6
@@ -140,7 +140,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,Best3BenchKg,Best3DeadliftKg,Tot
 60,B,M,Single-ply,Juniors 20-25,Robert Nguyen,112.5,,112.5,TX,USA,,,3
 67.5,B,M,Single-ply,Juniors 20-25,Nick Lenhart,173,,173,UT,USA,,,1
 67.5,B,M,Single-ply,Juniors 20-25,Joel Frank,166,,166,NV,USA,,,2
-67.5,B,M,Single-ply,Juniors 20-25,Mathieu Coudriaud,150,,150,France,USA,,,3
+67.5,B,M,Single-ply,Juniors 20-25,Mathieu Coudriaud,150,,150,,France,,,3
 67.5,B,M,Single-ply,Juniors 20-25,Nick Buck,,,,WI,USA,,,DQ
 67.5,B,M,Single-ply,Juniors 20-25,Cormac Moore,,,,MT,USA,,,DQ
 75,B,M,Single-ply,Juniors 20-25,Jeff Button,183,,183,TX,USA,,,1
@@ -249,7 +249,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,Best3BenchKg,Best3DeadliftKg,Tot
 140+,B,M,Single-ply,Masters 47-53,James Mersberg,312.5,,312.5,HI,USA,,,1
 140+,B,M,Single-ply,Masters 47-53,Gary Gertner,222.5,,222.5,CO,USA,,,2
 140+,B,M,Single-ply,Masters 47-53,Keith Sayles,150,,150,TX,USA,,,3
-60,B,M,Single-ply,Masters 54-60,Michel Jean Moreiro,105,,105,France,USA,107.5,,1
+60,B,M,Single-ply,Masters 54-60,Michel Jean Moreiro,105,,105,,France,107.5,,1
 75,B,M,Single-ply,Masters 54-60,Al Nebo,165,,165,CA,USA,,,1
 75,B,M,Single-ply,Masters 54-60,Perry Plush,150,,150,WA,USA,,,2
 75,B,M,Single-ply,Masters 54-60,Gary Miller #2,,,,NV,USA,,,DQ
@@ -277,7 +277,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,Best3BenchKg,Best3DeadliftKg,Tot
 67.5,B,M,Single-ply,Masters 61-67,Bryan Yager,142.5,,142.5,CA,USA,147.5,,1
 75,B,M,Single-ply,Masters 61-67,Ron White,107.5,,107.5,WA,USA,,,1
 82.5,B,M,Single-ply,Masters 61-67,Michael Minietta,160,,160,NV,USA,,,1
-82.5,B,M,Single-ply,Masters 61-67,Michel Rioland,132.5,,132.5,France,USA,,,2
+82.5,B,M,Single-ply,Masters 61-67,Michel Rioland,132.5,,132.5,,France,,,2
 82.5,B,M,Single-ply,Masters 61-67,Gary Witzel,127.5,,127.5,WA,USA,,,3
 82.5,B,M,Single-ply,Masters 61-67,Daniel Hofeditz,115,,115,AZ,USA,,,4
 90,B,M,Single-ply,Masters 61-67,Dan Swift,220,,220,IL,USA,,,1
@@ -316,7 +316,7 @@ WeightClassKg,Event,Sex,Equipment,Division,Name,Best3BenchKg,Best3DeadliftKg,Tot
 117.5,B,M,Single-ply,Masters 68-74,Mike Bonifield,150,,150,CA,USA,,,1
 60,B,M,Single-ply,Masters 75-79,Steve Smith,80,,80,FL,USA,,,1
 75,B,M,Single-ply,Masters 75-79,Ron Goodman,102.5,,102.5,CA,USA,,,1
-75,B,M,Single-ply,Masters 75-79,Andre Charbit,100,,100,France,USA,,,2
+75,B,M,Single-ply,Masters 75-79,Andre Charbit,100,,100,,France,,,2
 82.5,B,M,Single-ply,Masters 75-79,Charles Vause,92.5,,92.5,HI,USA,,,1
 82.5,B,M,Single-ply,Masters 75-79,David Boyes,57.5,,57.5,LA,USA,,,2
 90,B,M,Single-ply,Masters 75-79,Nick Di Liddo,117.5,,117.5,CA,USA,,,1
