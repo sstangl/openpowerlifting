@@ -12,6 +12,7 @@ pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
     InCanada(CanadaState),
+    InEngland(EnglandState),
     InGermany(GermanyState),
     InIndia(IndiaState),
     InMexico(MexicoState),
@@ -19,6 +20,7 @@ pub enum State {
     InNewZealand(NewZealandState),
     InRomania(RomaniaState),
     InRussia(RussiaState),
+    InSouthAfrica(SouthAfricaState),
     InUSA(USAState),
 }
 
@@ -38,6 +40,7 @@ impl State {
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),
             Country::Brazil => Ok(State::InBrazil(s.parse::<BrazilState>()?)),
             Country::Canada => Ok(State::InCanada(s.parse::<CanadaState>()?)),
+            Country::England => Ok(State::InEngland(s.parse::<EnglandState>()?)),
             Country::Germany => Ok(State::InGermany(s.parse::<GermanyState>()?)),
             Country::India => Ok(State::InIndia(s.parse::<IndiaState>()?)),
             Country::Mexico => Ok(State::InMexico(s.parse::<MexicoState>()?)),
@@ -45,8 +48,29 @@ impl State {
             Country::NewZealand => Ok(State::InNewZealand(s.parse::<NewZealandState>()?)),
             Country::Romania => Ok(State::InRomania(s.parse::<RomaniaState>()?)),
             Country::Russia => Ok(State::InRussia(s.parse::<RussiaState>()?)),
+            Country::SouthAfrica => Ok(State::InSouthAfrica(s.parse::<SouthAfricaState>()?)),
             Country::USA => Ok(State::InUSA(s.parse::<USAState>()?)),
             _ => Err(ParseError::VariantNotFound),
+        }
+    }
+
+    /// Returns the Country for the given State.
+    pub fn to_country(self) -> Country {
+        match self {
+            State::InArgentina(_) => Country::Argentina,
+            State::InAustralia(_) => Country::Australia,
+            State::InBrazil(_) => Country::Brazil,
+            State::InCanada(_) => Country::Canada,
+            State::InEngland(_) => Country::England,
+            State::InGermany(_) => Country::Germany,
+            State::InIndia(_) => Country::India,
+            State::InMexico(_) => Country::Mexico,
+            State::InNetherlands(_) => Country::Netherlands,
+            State::InNewZealand(_) => Country::NewZealand,
+            State::InRomania(_) => Country::Romania,
+            State::InRussia(_) => Country::Russia,
+            State::InSouthAfrica(_) => Country::SouthAfrica,
+            State::InUSA(_) => Country::USA,
         }
     }
 }
@@ -61,6 +85,7 @@ impl Serialize for State {
             State::InAustralia(s) => s.serialize(serializer),
             State::InBrazil(s) => s.serialize(serializer),
             State::InCanada(s) => s.serialize(serializer),
+            State::InEngland(s) => s.serialize(serializer),
             State::InGermany(s) => s.serialize(serializer),
             State::InIndia(s) => s.serialize(serializer),
             State::InMexico(s) => s.serialize(serializer),
@@ -68,6 +93,7 @@ impl Serialize for State {
             State::InNewZealand(s) => s.serialize(serializer),
             State::InRomania(s) => s.serialize(serializer),
             State::InRussia(s) => s.serialize(serializer),
+            State::InSouthAfrica(s) => s.serialize(serializer),
             State::InUSA(s) => s.serialize(serializer),
         }
     }
@@ -162,6 +188,32 @@ pub enum BrazilState {
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
+}
+
+/// A region in England, ill-defined and used only by BP.
+///
+/// This omits other divisions not in England: Scotland, N.Ireland, and Wales.
+#[rustfmt::skip]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+pub enum EnglandState {
+    /// East Midlands.
+    EM,
+    /// Greater London.
+    GL,
+    /// North Midlands.
+    NM,
+    /// North West.
+    NW,
+    /// South East.
+    SE,
+    /// South West.
+    SW,
+    /// South Midlands.
+    SM,
+    /// West Midlands.
+    WM,
+    /// Yorkshire North East.
+    YNE,
 }
 
 /// A state in Germany.
@@ -471,7 +523,7 @@ pub enum RomaniaState {
     VS,
 }
 
-/// A state in Russia.
+/// An oblast in Russia.
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
 pub enum RussiaState {
@@ -481,6 +533,29 @@ pub enum RussiaState {
     LIP, MAG, MOS, MUR, NIZ, NGR, NVS, OMS, ORE, ORL, PNZ, PSK, ROS, RYA, 
     SAK, SAM, SAR, SMO, SVE, TAM, TOM, TUL, TVE, TYE, TYU, ULY, VLA, VGG,
     VLG, VOR, YAR, MOW, SPE, YEV, CHU, KHM, NEN, YAN
+}
+
+/// A province in South Africa, using conventional acronyms (non-ISO).
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+pub enum SouthAfricaState {
+    /// Eastern Cape.
+    EC,
+    /// Free State.
+    FS,
+    /// Gauteng.
+    GT,
+    /// KwaZulu-Natal (ISO: NL).
+    KZN,
+    /// Limpopo.
+    LP,
+    /// Mpumalanga.
+    MP,
+    /// Northern Cape.
+    NC,
+    /// North-West.
+    NW,
+    /// Western Cape.
+    WC,
 }
 
 /// A state in the USA.
