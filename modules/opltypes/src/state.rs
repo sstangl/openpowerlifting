@@ -1,7 +1,10 @@
 //! Defines valid entries in the MeetState column.
 
+use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 use strum::ParseError;
+
+use std::fmt;
 
 use crate::Country;
 
@@ -26,6 +29,8 @@ pub enum State {
 
 impl State {
     /// Constructs a State for a specific Country.
+    ///
+    /// This is how the checker interprets the State column.
     ///
     /// # Examples
     ///
@@ -54,6 +59,29 @@ impl State {
         }
     }
 
+    /// Constructs a State given a full, unambiguous code like "USA-NY".
+    ///
+    /// This is how the server interprets the State column.
+    /// Codes of this format are the result of serializing a State value.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::{Country, State, USAState};
+    /// let state = State::from_full_code("USA-NY");
+    /// assert_eq!(state.unwrap(), State::InUSA(USAState::NY));
+    /// ```
+    pub fn from_full_code(s: &str) -> Result<State, ParseError> {
+        // The codes are of the form "{Country}-{State}".
+        let parts: Vec<&str> = s.split('-').collect();
+        if parts.len() != 2 {
+            return Err(ParseError::VariantNotFound);
+        }
+
+        let country: Country = parts[0].parse::<Country>()?;
+        Self::from_str_and_country(parts[1], country)
+    }
+
     /// Returns the Country for the given State.
     pub fn to_country(self) -> Country {
         match self {
@@ -76,31 +104,65 @@ impl State {
 }
 
 impl Serialize for State {
+    /// Serialization for the server. The checker uses from_str_and_country().
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: serde::Serializer,
     {
-        match self {
-            State::InArgentina(s) => s.serialize(serializer),
-            State::InAustralia(s) => s.serialize(serializer),
-            State::InBrazil(s) => s.serialize(serializer),
-            State::InCanada(s) => s.serialize(serializer),
-            State::InEngland(s) => s.serialize(serializer),
-            State::InGermany(s) => s.serialize(serializer),
-            State::InIndia(s) => s.serialize(serializer),
-            State::InMexico(s) => s.serialize(serializer),
-            State::InNetherlands(s) => s.serialize(serializer),
-            State::InNewZealand(s) => s.serialize(serializer),
-            State::InRomania(s) => s.serialize(serializer),
-            State::InRussia(s) => s.serialize(serializer),
-            State::InSouthAfrica(s) => s.serialize(serializer),
-            State::InUSA(s) => s.serialize(serializer),
-        }
+        let state: String = match self {
+            State::InArgentina(s) => s.to_string(),
+            State::InAustralia(s) => s.to_string(),
+            State::InBrazil(s) => s.to_string(),
+            State::InCanada(s) => s.to_string(),
+            State::InEngland(s) => s.to_string(),
+            State::InGermany(s) => s.to_string(),
+            State::InIndia(s) => s.to_string(),
+            State::InMexico(s) => s.to_string(),
+            State::InNetherlands(s) => s.to_string(),
+            State::InNewZealand(s) => s.to_string(),
+            State::InRomania(s) => s.to_string(),
+            State::InRussia(s) => s.to_string(),
+            State::InSouthAfrica(s) => s.to_string(),
+            State::InUSA(s) => s.to_string(),
+        };
+
+        let country = self.to_country().to_string();
+        format!("{}-{}", country, state).serialize(serializer)
+    }
+}
+
+/// Helper struct for State deserialization.
+///
+/// This is only used by the server, not by the checker.
+/// The checker uses from_str_and_country().
+struct StateVisitor;
+
+impl<'de> Visitor<'de> for StateVisitor {
+    type Value = State;
+
+    fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+        formatter.write_str("A Country-State code like USA-NY")
+    }
+
+    fn visit_str<E>(self, value: &str) -> Result<State, E>
+    where
+        E: de::Error,
+    {
+        State::from_full_code(value).map_err(E::custom)
+    }
+}
+
+impl<'de> Deserialize<'de> for State {
+    fn deserialize<D>(deserializer: D) -> Result<State, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        deserializer.deserialize_str(StateVisitor)
     }
 }
 
 /// A state in Argentina.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum ArgentinaState {
     /// Ciudad Autónoma de Buenos Aires.
     CA,
@@ -153,7 +215,7 @@ pub enum ArgentinaState {
 }
 
 /// A state in Australia.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum AustraliaState {
     /// Australian Capital Territory.
     ACT,
@@ -177,7 +239,7 @@ pub enum AustraliaState {
 
 /// A state in Brazil.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum BrazilState {
     AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA,
     PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
@@ -185,7 +247,7 @@ pub enum BrazilState {
 
 /// A state in Canada.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
@@ -194,7 +256,7 @@ pub enum CanadaState {
 ///
 /// This omits other divisions not in England: Scotland, N.Ireland, and Wales.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum EnglandState {
     /// East Midlands.
     EM,
@@ -217,7 +279,7 @@ pub enum EnglandState {
 }
 
 /// A state in Germany.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum GermanyState {
     /// Baden-Württemberg.
     BW,
@@ -254,7 +316,7 @@ pub enum GermanyState {
 }
 
 /// A state in India.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum IndiaState {
     /// Andaman and Nicobar Islands.
     AN,
@@ -329,7 +391,7 @@ pub enum IndiaState {
 }
 
 /// A state in Mexico.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum MexicoState {
     /// Aguascalientes.
     AG,
@@ -398,7 +460,7 @@ pub enum MexicoState {
 }
 
 /// A state in the Netherlands.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum NetherlandsState {
     /// Drenthe.
     DR,
@@ -428,14 +490,14 @@ pub enum NetherlandsState {
 
 /// A state in New Zealand.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum NewZealandState {
     NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
     TAS, NSN, MBH, WTC, CAN, OTA, STL
 }
 
 /// A county in Romania.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum RomaniaState {
     /// Alba.
     AB,
@@ -525,7 +587,7 @@ pub enum RomaniaState {
 
 /// An oblast in Russia.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum RussiaState {
     AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
     SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRO, STA, ZAB, AMU, ARK,
@@ -536,7 +598,7 @@ pub enum RussiaState {
 }
 
 /// A province in South Africa, using conventional acronyms (non-ISO).
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum SouthAfricaState {
     /// Eastern Cape.
     EC,
@@ -560,7 +622,7 @@ pub enum SouthAfricaState {
 
 /// A state in the USA.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum USAState {
     AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,
     KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC,

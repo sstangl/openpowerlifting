@@ -141,6 +141,8 @@ pub struct Entry {
     pub birthyearclass: BirthYearClass,
     #[serde(rename(deserialize = "Country"))]
     pub lifter_country: Option<Country>,
+    #[serde(rename(deserialize = "State"))]
+    pub lifter_state: Option<State>,
 }
 
 impl Entry {

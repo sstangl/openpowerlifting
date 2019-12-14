@@ -121,6 +121,8 @@ struct EntriesRow<'d> {
     tested: &'static str,
     #[serde(rename = "Country")]
     country: Option<Country>,
+    #[serde(rename = "State")]
+    state: Option<State>,
 }
 
 impl<'d> EntriesRow<'d> {
@@ -178,6 +180,7 @@ impl<'d> EntriesRow<'d> {
             ipfpoints: entry.ipfpoints,
             tested: if entry.tested { "Yes" } else { "" },
             country: entry.country,
+            state: entry.state,
         }
     }
 }
