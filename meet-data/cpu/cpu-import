@@ -319,6 +319,21 @@ def canonicalize_divisions(csv):
             row[dividx] = 'Sub-Juniors'
 
 
+def canonicalize_state(csv):
+    if 'State' not in csv.fieldnames:
+        return
+
+    stateidx = csv.index('State')
+    for row in csv.rows:
+        state = row[stateidx]
+        if state == "QU":
+            row[stateidx] = "QC"
+        elif state == "NF":
+            row[stateidx] = "NL"
+        elif state == "PEI":
+            row[stateidx] = "PE"
+
+
 def get_dirname(meetcsv):
     date = meetcsv.rows[0][meetcsv.index('Date')]
     assert len(date) == 10
@@ -334,6 +349,7 @@ def main(url):
     make_best_columns(entriescsv)
     infer_sex_from_weightclass(entriescsv)
     canonicalize_divisions(entriescsv)
+    canonicalize_state(entriescsv)
 
     # Write out the files.
     dirname = get_dirname(meetcsv)
