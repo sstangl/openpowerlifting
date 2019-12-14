@@ -69,8 +69,9 @@
   <option value="uspf" {% if selection.federation == "USPF" %}selected{% endif %}>USPF - United States Powerlifting Federation</option>
   <option value="ussf" {% if selection.federation == "USSF" %}selected{% endif %}>USSF - United States Strengthlifting Federation</option>
   <option value="ussports" {% if selection.federation == "USSports" %}selected{% endif %}>USSports - Unified Strength Sports Federation</option>
-  <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
+  <option value="wrpf-usa" {% if selection.federation == "WRPF-USA" %}selected{% endif %}>WRPF USA</option>
+  <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">
   <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>{{strings.selectors.fed.all_uk}}</option>
