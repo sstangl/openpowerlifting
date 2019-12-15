@@ -1,3 +1,5 @@
+# Configuration for WRPF-AUS (Australia).
+
 [divisions]
     mr_o = {name = "MR-O", min=0, max=999, equipment = ["Raw","Wraps"], sex="M"}
     mr_t = {name = "MR-T", min=14, max=16, equipment = ["Raw","Wraps"], sex="M"}
