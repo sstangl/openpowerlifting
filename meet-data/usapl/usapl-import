@@ -345,6 +345,11 @@ def markdqs(csv):
             row[totalidx] = ''
             row[placeidx] = 'DQ'
 
+        # It also sometimes uses dashes to mark DQ.
+        if row[placeidx] == '-':
+            # Don't change the total: sometimes this is an error.
+            row[placeidx] = 'DQ'
+
 
 # Some sex information can be inferred from weightclass information.
 def infersex(csv):
