@@ -4,14 +4,20 @@
     ruleset = ["CombineRawAndWraps"]
     date_range = ["0000-01-01", "9999-01-01"]
 
-
 [divisions]
     open = {name="Open", min=0, max=999}
+
+    # New-style divisions (used with OpenLifter).
+    submaster = {name="Sub Master", min=33, max=39}
+    master1 = {name="Master 1", min=40, max=49}
+    master2 = {name="Master 2", min=50, max=59}
+    novice = {name="Novice", min=0, max=999}
+
+    # Old-style divisions.
     teen = {name="Teen", min=13, max=19}
     sm = {name="SM", min=33, max=39}
     m1 = {name="M1", min=40, max=49}
     m2 = {name="M2", min=50, max=59}
-
     nov = {name="Nov", min=0, max=999} # Novice
     int = {name="Int", min=0, max=999} # Intermediate
     fr = {name="FR", min=0, max=999} # First Responders (Police/Fire/EMS)
