@@ -25,7 +25,7 @@ struct MeetsRow<'d> {
     #[serde(rename = "MeetCountry")]
     pub country: Country,
     #[serde(rename = "MeetState")]
-    pub state: Option<State>,
+    pub state: Option<String>,
     #[serde(rename = "MeetTown")]
     pub town: Option<&'d str>,
     #[serde(rename = "MeetName")]
@@ -42,7 +42,7 @@ impl<'d> MeetsRow<'d> {
             federation: meet.federation,
             date: meet.date,
             country: meet.country,
-            state: meet.state,
+            state: meet.state.and_then(|s| Some(s.to_state_string())),
             town: meet.town.as_deref(),
             name: &meet.name,
             ruleset: meet.ruleset,

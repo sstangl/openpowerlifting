@@ -36,8 +36,8 @@ impl State {
     ///
     /// ```
     /// # use opltypes::{Country, State, USAState};
-    /// let state = State::from_str_and_country("NY", Country::USA);
-    /// assert_eq!(state.unwrap(), State::InUSA(USAState::NY));
+    /// let state = State::from_str_and_country("NY", Country::USA).unwrap();
+    /// assert_eq!(state, State::InUSA(USAState::NY));
     /// ```
     pub fn from_str_and_country(s: &str, country: Country) -> Result<State, ParseError> {
         match country {
@@ -68,8 +68,8 @@ impl State {
     ///
     /// ```
     /// # use opltypes::{Country, State, USAState};
-    /// let state = State::from_full_code("USA-NY");
-    /// assert_eq!(state.unwrap(), State::InUSA(USAState::NY));
+    /// let state = State::from_full_code("USA-NY").unwrap();
+    /// assert_eq!(state, State::InUSA(USAState::NY));
     /// ```
     pub fn from_full_code(s: &str) -> Result<State, ParseError> {
         // The codes are of the form "{Country}-{State}".
@@ -83,6 +83,14 @@ impl State {
     }
 
     /// Returns the Country for the given State.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::{Country, State, USAState};
+    /// let state = State::from_full_code("USA-NY").unwrap();
+    /// assert_eq!(state.to_country(), Country::USA);
+    /// ```
     pub fn to_country(self) -> Country {
         match self {
             State::InArgentina(_) => Country::Argentina,
@@ -101,15 +109,18 @@ impl State {
             State::InUSA(_) => Country::USA,
         }
     }
-}
 
-impl Serialize for State {
-    /// Serialization for the server. The checker uses from_str_and_country().
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
-        let state: String = match self {
+    /// Returns a String describing just the given State (no Country).
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::{Country, State, USAState};
+    /// let state = State::from_full_code("USA-NY").unwrap();
+    /// assert_eq!(state.to_state_string(), "NY");
+    /// ```
+    pub fn to_state_string(self) -> String {
+        match self {
             State::InArgentina(s) => s.to_string(),
             State::InAustralia(s) => s.to_string(),
             State::InBrazil(s) => s.to_string(),
@@ -124,9 +135,18 @@ impl Serialize for State {
             State::InRussia(s) => s.to_string(),
             State::InSouthAfrica(s) => s.to_string(),
             State::InUSA(s) => s.to_string(),
-        };
+        }
+    }
+}
 
+impl Serialize for State {
+    /// Serialization for the server. The checker uses from_str_and_country().
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
         let country = self.to_country().to_string();
+        let state = self.to_state_string();
         format!("{}-{}", country, state).serialize(serializer)
     }
 }

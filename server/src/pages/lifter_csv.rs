@@ -13,13 +13,6 @@ fn make_export_row<'a>(
     entry: &'a Entry,
     meet: &'a Meet,
 ) -> opltypes::ExportRow<'a> {
-    // Convert from Option<String> to Option<State>.
-    let meet_state: Option<State> = if let Some(s) = &meet.state {
-        State::from_str_and_country(&s, meet.country).ok()
-    } else {
-        None
-    };
-
     // Convert from Option<String> to Option<&'a str> while hardcoding &'static "".
     let division: &'a str = if let Some(div) = &entry.division {
         div
@@ -64,7 +57,7 @@ fn make_export_row<'a>(
         federation: meet.federation,
         date: meet.date,
         meet_country: meet.country,
-        meet_state: meet_state,
+        meet_state: meet.state.clone(),
         meet_name: &meet.name,
     }
 }

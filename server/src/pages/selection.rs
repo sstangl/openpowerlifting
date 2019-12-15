@@ -20,6 +20,7 @@ pub struct Selection {
     pub year: YearSelection,
     pub event: EventSelection,
     pub sort: SortSelection,
+    pub state: Option<State>,
 }
 
 impl Default for Selection {
@@ -33,6 +34,7 @@ impl Default for Selection {
             year: YearSelection::AllYears,
             event: EventSelection::AllEvents,
             sort: SortSelection::ByWilks,
+            state: None,
         }
     }
 }
@@ -60,6 +62,7 @@ impl Selection {
         let mut parsed_year: bool = false;
         let mut parsed_sort: bool = false;
         let mut parsed_event: bool = false;
+        let mut parsed_state: bool = false;
 
         // Iterate over each path component, attempting to determine
         // what kind of data it is.
@@ -123,6 +126,13 @@ impl Selection {
                 }
                 ret.event = e;
                 parsed_event = true;
+            // Check whether this is a Country-State code.
+            } else if let Ok(s) = State::from_full_code(segment) {
+                if parsed_state {
+                    return Err(());
+                }
+                ret.state = Some(s);
+                parsed_state = true;
             // Unknown string, therefore malformed URL.
             } else {
                 return Err(());

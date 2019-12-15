@@ -81,7 +81,7 @@ pub struct ExportRow<'d> {
     #[serde(rename = "MeetCountry")]
     pub meet_country: Country,
     #[serde(rename = "MeetState")]
-    pub meet_state: Option<State>,
+    pub meet_state: Option<String>,
     #[serde(rename = "MeetName")]
     pub meet_name: &'d str,
 }

@@ -38,6 +38,7 @@ fn default_openipf_selection() -> pages::selection::Selection {
         year: YearSelection::AllYears,
         event: EventSelection::FullPower,
         sort: SortSelection::ByIPFPoints,
+        state: None,
     }
 }
 

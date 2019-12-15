@@ -394,6 +394,22 @@ pub fn get_entry_indices_for<'db>(
         }
     };
 
+    // Filter by State manually.
+    if selection.state.is_some() {
+        let filter = NonSortedNonUnique(
+            cur.0
+                .iter()
+                .filter_map(|&i| {
+                    match opldb.get_entry(i).lifter_state == selection.state {
+                        true => Some(i),
+                        false => None,
+                    }
+                })
+                .collect(),
+        );
+        cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+    }
+
     // Filter by federation manually.
     if selection.federation != FederationSelection::AllFederations {
         if let FederationSelection::One(fed) = selection.federation {
@@ -561,6 +577,7 @@ pub fn get_full_sorted_uniqued<'db>(
         && selection.year == YearSelection::AllYears
         && selection.ageclass == AgeClassSelection::AllAges
         && selection.event == EventSelection::AllEvents
+        && selection.state.is_none()
     {
         let by_sort = match selection.sort {
             SortSelection::BySquat => &cache.constant_time.squat,

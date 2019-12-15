@@ -67,7 +67,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         federation: meet.federation,
         date: meet.date,
         meet_country: meet.country,
-        meet_state: meet.state,
+        meet_state: meet.state.and_then(|s| Some(s.to_state_string())),
         meet_name: &meet.name,
     }
 }
