@@ -8,6 +8,7 @@ use opltypes;
 pub struct Context<'a> {
     pub urlprefix: &'static str,
     pub page_title: &'a str,
+    pub page_description: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: opltypes::WeightUnits,
@@ -18,6 +19,7 @@ impl<'a> Context<'a> {
         Context {
             urlprefix: "/",
             page_title: &locale.strings.header.data,
+            page_description: &locale.strings.html_header.description,
             strings: locale.strings,
             language: locale.language,
             units: locale.units,

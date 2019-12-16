@@ -5,9 +5,12 @@
 <head>
   {# Static header parts. #}
   <meta charset="utf-8" />
+  {# suggest a color that browsers should use to customize the display of the page or of the surrounding user interface. #}
+  <meta name="theme-color" content="#272727">
 
   {# Dynamic header parts. #}
   <title>{{page_title}}</title>
+  <meta name="description" content="{{page_description}}">
 
   {# External sources -- these should be self-hosted eventually. #}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

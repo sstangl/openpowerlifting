@@ -15,6 +15,7 @@ use crate::opldb::{self, algorithms, Entry};
 pub struct Context<'db> {
     pub urlprefix: &'static str,
     pub page_title: String,
+    pub page_description: &'db str,
     pub meet: MeetInfo<'db>,
     pub language: Language,
     pub strings: &'db langpack::Translations,
@@ -671,6 +672,7 @@ impl<'db> Context<'db> {
         Context {
             urlprefix: "/",
             page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
+            page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

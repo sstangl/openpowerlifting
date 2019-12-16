@@ -10,6 +10,7 @@ use crate::opldb::{self, Entry};
 pub struct Context<'a> {
     pub urlprefix: &'static str,
     pub page_title: &'a str,
+    pub page_description: &'a str,
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub lifter_sex: &'a str,
@@ -463,6 +464,7 @@ impl<'a> Context<'a> {
         Context {
             urlprefix: "/",
             page_title: get_localized_name(&lifter, locale.language),
+            page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

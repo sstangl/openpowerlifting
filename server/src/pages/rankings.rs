@@ -3,7 +3,7 @@
 use opltypes;
 use serde_json;
 
-use crate::langpack::{self, Language, Locale};
+use crate::langpack::{self, Language};
 use crate::opldb;
 use crate::pages::api_rankings::get_slice;
 use crate::pages::selection::Selection;
@@ -23,6 +23,7 @@ pub struct Context<'db, 'a> {
     pub urlprefix: &'static str,
 
     pub page_title: String,
+    pub page_description: &'a str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: opltypes::WeightUnits,
@@ -33,7 +34,7 @@ pub struct Context<'db, 'a> {
 impl<'db, 'a> Context<'db, 'a> {
     pub fn new(
         opldb: &'db opldb::OplDb,
-        locale: &'db Locale,
+        locale: &'db langpack::Locale<'a>,
         selection: &'a Selection,
     ) -> Option<Context<'db, 'a>> {
         // Inline the top 100 to avoid another round-trip.
@@ -42,6 +43,7 @@ impl<'db, 'a> Context<'db, 'a> {
         Some(Context {
             urlprefix: "/",
             page_title: "Rankings".to_string(),
+            page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

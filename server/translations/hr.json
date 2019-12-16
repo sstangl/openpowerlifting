@@ -15,7 +15,10 @@
     "sex": {
         "m": "M",
         "f": "Ž",
-	"mx": "Mx"
+        "mx": "Mx"
+    },
+    "html_header": {
+      "description": "The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data."
     },
     "header": {
         "rankings": "Rang lista",
@@ -66,7 +69,7 @@
         "azerbaijan": "Azerbajdžan",
         "bahamas": "Bahami",
         "bahrain": "Bahrein",
-	"bangladesh": "Bangladesh",
+        "bangladesh": "Bangladesh",
         "belarus": "Bjelorusija",
         "belgium": "Belgija",
         "belize": "Belize",
@@ -260,13 +263,13 @@
             "by_total": "Po totalu",
             "by_allometric": "Po Alometričkoj skali",
             "by_ah": "Po AH (Haleczko)",
-	    "by_dots": "By Dots",
+            "by_dots": "By Dots",
             "by_glossbrenner": "Po Glossbrenner",
             "by_ipfpoints": "Po IPF bodovima",
             "by_mcculloch": "Po McCulloch",
             "by_nasa": "Po NASA bodovima",
             "by_reshel": "Po Reshel",
-	    "by_schwartzmalone": "By Schwartz/Malone",
+            "by_schwartzmalone": "By Schwartz/Malone",
             "by_wilks": "Po Wilks",
             "by_division": "Po dobnim kategorijama",
             "weight": "Težinska sortiranja",
@@ -338,7 +341,7 @@
             "all_portugal": "Svi portugalski natjecatelji",
             "all_romania": "All Romanian Lifters",
             "all_russia": "Svi ruski natjecatelji",
-	    "all_scotland": "All Scottish Lifters",
+            "all_scotland": "All Scottish Lifters",
             "all_serbia": "Svi srbijanski natjecatelji",
             "all_singapore": "All Singaporean Lifters",
             "all_slovakia": "Svi slovački natjecatelji",

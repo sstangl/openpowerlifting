@@ -119,6 +119,7 @@ impl<'db> MeetInfo<'db> {
 pub struct Context<'db> {
     pub urlprefix: &'static str,
     pub page_title: &'db str,
+    pub page_description: &'db str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: WeightUnits,
@@ -191,6 +192,7 @@ impl<'db> Context<'db> {
         Context {
             urlprefix: "/",
             page_title: &locale.strings.header.meets,
+            page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

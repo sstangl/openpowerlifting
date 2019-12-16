@@ -11,6 +11,7 @@ use crate::opldb;
 pub struct Context<'a> {
     pub urlprefix: &'static str,
     pub page_title: &'a str,
+    pub page_description: &'a str,
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: WeightUnits,
@@ -429,6 +430,7 @@ impl<'a> Context<'a> {
         Context {
             urlprefix: "/",
             page_title: &locale.strings.header.status,
+            page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
