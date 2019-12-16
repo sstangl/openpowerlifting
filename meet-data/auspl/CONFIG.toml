@@ -74,6 +74,9 @@
     fm9cr = {name = "F-M9CR", min = 80, max = 999, sex='F',equipment = 'Wraps'}
 
     mosp = {name = "M-OSP", min=0, max=999, sex="M", equipment="Single-ply"}
+    mj2sp = {name = "M-J2SP", min=20, max=23, sex="M", equipment="Single-ply"}
+
+    momp = {name = "M-OMP", min=0, max=999, sex="M", equipment="Multi-ply"}
     fm1mp = {name = "F-M1MP", min = 40, max = 44, sex='F', equipment = 'Multi-ply'}
 
 [weightclasses.default_M]
