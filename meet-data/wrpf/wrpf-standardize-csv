@@ -450,6 +450,8 @@ def parse_sheet(sheet):
         return csv
     elif 'спр' in title or 'wsf' in title:  # Strongman
         return csv
+    elif 'лямках' in title:  # Straps
+        return csv
 
     # Figure out event, equipment, etc., and store in obj.
     obj = parse_sheetname(sheet[0][0].split(':')[1])
