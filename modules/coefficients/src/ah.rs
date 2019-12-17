@@ -1,4 +1,4 @@
-//! Definition of the AH Formula, also called Haleczko. Used by ParaPL.
+//! Definition of the AH Formula, also called Haleczko. Used by WPPO.
 
 use opltypes::*;
 
@@ -40,7 +40,7 @@ pub fn ah_coefficient_women(bodyweightkg: f64) -> f64 {
     AG1 / adjusted.log10().powf(AG10)
 }
 
-/// Calculates AH points, used by ParaPL for bench-only competitions.
+/// Calculates AH points, used by WPPO for bench-only competitions.
 ///
 /// https://www.paralympic.org/sites/default/files/document/130801141325417_Appendix_2_AH_Haleczko_Formula.pdf
 pub fn ah(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {

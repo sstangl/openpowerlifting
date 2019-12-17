@@ -638,10 +638,6 @@ pub enum Federation {
     #[strum(to_string = "OEVK", serialize = "oevk")]
     OEVK,
 
-    /// World Paralympic Powerlifting.
-    #[strum(to_string = "ParaPL", serialize = "parapl")]
-    ParaPL,
-
     /// Powerlifting Australia, formerly IPF, now WP.
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
@@ -1027,6 +1023,10 @@ pub enum Federation {
     #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
     WPNZ,
 
+    /// World Paralympic Powerlifting (formerly ParaPL).
+    #[strum(to_string = "WPPO", serialize = "wppo")]
+    WPPO,
+
     /// World Powerlifting Raw Organisation.
     #[strum(to_string = "WPRO", serialize = "wpro")]
     WPRO,
@@ -1305,7 +1305,6 @@ impl Federation {
             Federation::OceaniaPF => true,
             Federation::ORPF => true,
             Federation::OEVK => true,
-            Federation::ParaPL => true,
             Federation::PA => true,
             Federation::PoliceAL => false,
             Federation::PAP => true,
@@ -1397,6 +1396,7 @@ impl Federation {
             Federation::WPFG => false,
             Federation::WPLeague => false,
             Federation::WPNZ => true,
+            Federation::WPPO => true,
             Federation::WPRO => false,
             Federation::WPU => false,
             Federation::WPUF => false,
@@ -1575,7 +1575,6 @@ impl Federation {
             Federation::OceaniaPF => None,
             Federation::ORPF => None,
             Federation::OEVK => Some(Country::Austria),
-            Federation::ParaPL => None,
             Federation::PA => Some(Country::Australia),
             Federation::PoliceAL => Some(Country::USA),
             Federation::PAP => Some(Country::Philippines),
@@ -1666,6 +1665,7 @@ impl Federation {
             Federation::WPFG => None,
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
+            Federation::WPPO => None,
             Federation::WPRO => Some(Country::Ukraine),
             Federation::WPU => None,
             Federation::WPUF => Some(Country::Ukraine),
@@ -1865,7 +1865,6 @@ impl Federation {
             Federation::OceaniaPF => Some(Federation::WP),
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
-            Federation::ParaPL => None,
             Federation::PA => {
                 // PA lost IPF affiliation in 2018, replaced by the APU.
                 if date.year() >= 2018 {
@@ -1970,6 +1969,7 @@ impl Federation {
             Federation::WPFG => None,
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
+            Federation::WPPO => None,
             Federation::WPRO => None,
             Federation::WPU => None,
             Federation::WPUF => None,
@@ -2167,7 +2167,6 @@ impl Federation {
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
-            Federation::ParaPL => PointsSystem::AH,
             Federation::PA => PointsSystem::Wilks,
             Federation::PoliceAL => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
@@ -2265,6 +2264,7 @@ impl Federation {
             Federation::WPFG => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
+            Federation::WPPO => PointsSystem::AH,
             Federation::WPRO => PointsSystem::Wilks,
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,
