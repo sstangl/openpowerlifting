@@ -370,6 +370,7 @@ pub struct HeaderTranslations {
     pub records: String,
     pub meets: String,
     pub data: String,
+    pub apps: String,
     pub status: String,
     pub faq: String,
     pub contact: String,
