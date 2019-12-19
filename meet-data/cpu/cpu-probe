@@ -65,7 +65,7 @@ def getmeetlist(html):
     urls = []
     for a in soup.find_all("a"):
         url = a['href']
-        if '/contest-results' not in url:
+        if 'contest-results' not in url:
             continue
 
         # This happens for national results, like Central Canadians.
@@ -77,6 +77,10 @@ def getmeetlist(html):
         # All the provincial meet results have incorrect URLs...
         if '/joomla30/' in url:
             url = url.replace('/joomla30/', '/cpu/')
+
+        # Some URLs are unfortunately relative to an index.php.
+        if url.startswith("contest-results?"):
+            url = "http://www.powerlifting.ca/cpu/index.php/" + url
 
         if url not in urls:
             urls.append(url)
