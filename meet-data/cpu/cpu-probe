@@ -80,7 +80,7 @@ def getmeetlist(html):
 
         # Some URLs are unfortunately relative to an index.php.
         if url.startswith("contest-results?"):
-            url = "http://www.powerlifting.ca/cpu/index.php/" + url
+            url = "http://powerlifting.ca/cpu/index.php/" + url
 
         if url not in urls:
             urls.append(url)
@@ -101,6 +101,14 @@ def main():
         meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
+
+    # The CPU keeps changing where they put the contest_results script.
+    for m in list(entered):
+        if "/lifter_database/contest_results.php?" in m:
+            url_from = "/lifter_database/contest_results.php?"
+            url_to = "/cpu/index.php/contest-results?"
+            entered.add(m.replace(url_from, url_to))
+
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[CPU]'), unentered)
