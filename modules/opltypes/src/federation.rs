@@ -662,6 +662,11 @@ pub enum Federation {
     #[strum(to_string = "PNGPF", serialize = "pngpf")]
     PNGPF,
 
+    /// Unaffiliated meets held in Poland.
+    #[serde(rename = "Poland-UA")]
+    #[strum(to_string = "Poland-UA", serialize = "poland-ua")]
+    PolandUA,
+
     /// Police Athletic League, a defunct US Fed.
     #[strum(to_string = "PoliceAL", serialize = "policeal")]
     PoliceAL,
@@ -1312,6 +1317,7 @@ impl Federation {
             Federation::PLSS => true,
             Federation::PLZS => true,
             Federation::PNGPF => true,
+            Federation::PolandUA => false,
             Federation::PRIDE => false,
             Federation::ProRaw => false,
             Federation::PRPA => false,
@@ -1582,6 +1588,7 @@ impl Federation {
             Federation::PLSS => Some(Country::Serbia),
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PNGPF => Some(Country::PapuaNewGuinea),
+            Federation::PolandUA => Some(Country::Poland),
             Federation::PRIDE => Some(Country::USA),
             Federation::ProRaw => Some(Country::Australia),
             Federation::PRPA => Some(Country::USA),
@@ -1878,6 +1885,7 @@ impl Federation {
             Federation::PLSS => Some(Federation::IPF),
             Federation::PLZS => Some(Federation::IPF),
             Federation::PNGPF => Some(Federation::IPF),
+            Federation::PolandUA => None,
             Federation::PoliceAL => None,
             Federation::PRIDE => None,
             Federation::ProRaw => None,
@@ -2174,6 +2182,7 @@ impl Federation {
             Federation::PLSS => Federation::ipf_rules_on(date),
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),
+            Federation::PolandUA => PointsSystem::Wilks,
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
