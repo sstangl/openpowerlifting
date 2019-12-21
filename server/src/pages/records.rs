@@ -88,7 +88,10 @@ impl RecordsSelection {
                 ret.equipment = e;
                 parsed_equipment = true;
             // Check whether this is federation information.
-            } else if let Ok(f) = segment.parse::<FederationSelection>() {
+            } else if let Ok(f) = FederationSelection::from_str_preferring(
+                segment,
+                FedPreference::PreferMetaFederation,
+            ) {
                 if parsed_federation {
                     return Err(());
                 }

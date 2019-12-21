@@ -78,7 +78,10 @@ impl Selection {
                 ret.equipment = e;
                 parsed_equipment = true;
             // Check whether this is federation information.
-            } else if let Ok(f) = segment.parse::<FederationSelection>() {
+            } else if let Ok(f) = FederationSelection::from_str_preferring(
+                segment,
+                FedPreference::PreferMetaFederation,
+            ) {
                 if parsed_federation {
                     return Err(());
                 }
@@ -176,22 +179,50 @@ pub enum FederationSelection {
     Meta(MetaFederation),
 }
 
-impl FromStr for FederationSelection {
-    type Err = ();
+/// Controls whether to first try parsing as a MetaFederation or as a
+/// Federation.
+///
+/// The FederationSelection is overloaded and can parse as either a
+/// MetaFederation or as a Federation. Unfortunately, in different contexts,
+/// different options are preferred.
+///
+/// For example, the USPA is parseable as both Federation::USPA and
+/// MetaFederation::USPA. The MetaFederation includes Federation::IPL events,
+/// allowing USPA records and rankings to be set in their international
+/// affiliate.
+///
+/// 1. When showing rankings and records, we want the MetaFederation::USPA.
+/// 2. When showing the meet list, we want the Federation::USPA. Otherwise, it
+/// gets cluttered with international events. This is particularly bad for
+/// IPF affiliates.
+#[derive(Copy, Clone, PartialEq)]
+pub enum FedPreference {
+    PreferMetaFederation,
+    PreferFederation,
+}
 
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        // Try to parse a MetaFederation first.
-        // A MetaFederation with the same name as a Federation
-        // may override the interpretation of that federation.
-        if let Ok(meta) = s.parse::<MetaFederation>() {
-            return Ok(FederationSelection::Meta(meta));
+impl FederationSelection {
+    pub fn from_str_preferring(s: &str, preference: FedPreference) -> Result<Self, ()> {
+        match preference {
+            FedPreference::PreferMetaFederation => {
+                if let Ok(meta) = s.parse::<MetaFederation>() {
+                    return Ok(FederationSelection::Meta(meta));
+                }
+                if let Ok(fed) = s.parse::<Federation>() {
+                    return Ok(FederationSelection::One(fed));
+                }
+                Err(())
+            }
+            FedPreference::PreferFederation => {
+                if let Ok(fed) = s.parse::<Federation>() {
+                    return Ok(FederationSelection::One(fed));
+                }
+                if let Ok(meta) = s.parse::<MetaFederation>() {
+                    return Ok(FederationSelection::Meta(meta));
+                }
+                Err(())
+            }
         }
-
-        if let Ok(fed) = s.parse::<Federation>() {
-            return Ok(FederationSelection::One(fed));
-        }
-
-        Err(())
     }
 }
 

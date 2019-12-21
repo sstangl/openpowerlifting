@@ -7,7 +7,7 @@ use std::path;
 
 use crate::langpack::{self, Language, Locale};
 use crate::opldb::{self, Meet};
-use crate::pages::selection::{FederationSelection, YearSelection};
+use crate::pages::selection::{FedPreference, FederationSelection, YearSelection};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///
@@ -54,7 +54,10 @@ impl MeetListSelection {
             .filter_map(|a| a.file_name().and_then(OsStr::to_str))
         {
             // Check whether this is federation information.
-            if let Ok(f) = segment.parse::<FederationSelection>() {
+            if let Ok(f) = FederationSelection::from_str_preferring(
+                segment,
+                FedPreference::PreferFederation,
+            ) {
                 if parsed_federation {
                     return Err(());
                 }
