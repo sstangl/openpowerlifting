@@ -25,6 +25,7 @@ pub enum PointsSystem {
     Dots,
     Glossbrenner,
     IPFPoints,
+    McCulloch,
     NASA,
     Reshel,
     SchwartzMalone,
