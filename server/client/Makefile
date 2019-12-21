@@ -3,7 +3,7 @@
 BUILDDIR := build
 PROJECTDATA := "../../project-data"
 
-all: rebuild-clean css scripts images package-for-server
+all: rebuild-clean css scripts html images package-for-server
 
 # Node v8.7.0 fails on redundant `npm install` due to package error.
 npminit:
@@ -38,6 +38,9 @@ images: builddir
 scripts: builddir npminit slickgrid
 	npm run webpack
 
+html: builddir
+	cp html/* "${BUILDDIR}/"
+
 SLICKGRID := "node_modules/slickgrid"
 slickgrid: builddir
 	cat "${SLICKGRID}/lib/jquery-1.11.2.min.js" \
@@ -48,7 +51,7 @@ slickgrid: builddir
 	    | ./try-uglify "${BUILDDIR}/scripts/slickgrid.min.js"
 
 package-for-server:
-	# Rewrite all the filenames to contain their hash.
+	# Rewrite some filenames to contain their hash.
 	./apply-md5
 	# Gzip the contents. The hashed filename is not the hash of the gzip,
 	# but the hash of the gzip's contents when decompressed.
