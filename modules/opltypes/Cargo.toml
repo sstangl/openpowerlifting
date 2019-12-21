@@ -11,8 +11,8 @@ edition = "2018"
 [dependencies]
 serde = "1.0"
 serde_derive = "1.0"
-strum = "0.16"
-strum_macros = "0.16"
+strum = "0.17"
+strum_macros = "0.17"
 
 [dev-dependencies]
 serde_json = "1.0"
