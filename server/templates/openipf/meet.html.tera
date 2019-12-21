@@ -65,14 +65,14 @@
       <tbody>
       {% for table in tables %}
         {% if table.title %}
-	  <td colspan="12" class="divheader">{{table.title}}</td>
+          <td colspan="12" class="divheader">{{table.title}}</td>
         {% endif %}
       {% for this in table.rows %}
         <tr>
-          {% if use_rank_column %}
-            <td>{{this.rank}}</td>
-          {% else %}
+          {% if use_rank_column == false or this.place == "DQ" or this.place == "DD" %}
             <td>{{this.place}}</td>
+          {% else %}
+            <td>{{this.rank}}</td>
           {% endif %}
           <td>
             <a class="{{this.lifter.color}}" href="{{urlprefix | safe}}u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}
