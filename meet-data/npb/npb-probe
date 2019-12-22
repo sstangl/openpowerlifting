@@ -20,6 +20,9 @@ FEDDIR = os.path.dirname(os.path.realpath(__file__))
 URL = "https://knkf-sectiepowerliften.nl/resultaten/uitslagen/"
 BASEURL = "https://knkf-sectiepowerliften.nl/"
 
+# A special URL just for OpenLifter-style results.
+OPLURL = "https://knkf-sectiepowerliften.nl/t/opl/"
+
 
 def error(msg):
     print(msg, file=sys.stderr)
@@ -30,9 +33,9 @@ def color(s):
     return "\033[1;31m" + s + "\033[0;m"
 
 
-def getmeetlist(html):
+def getmeetlist_uitslagen(html):
+    '''Parses the main NPB results page.'''
     soup = BeautifulSoup(html, 'html.parser')
-
     results = soup.find_all("div", {"class": "col-md-12"})[1]
 
     urls = []
@@ -45,6 +48,29 @@ def getmeetlist(html):
         if 'http' not in url:
             url = BASEURL + url.replace('../../', '')
 
+        url = url.replace('.nl//downloads', '.nl/downloads')
+
+        if url not in urls:
+            urls.append(url)
+
+    return urls
+
+
+def getmeetlist_oplcsv(html):
+    '''Parses the OpenLifter-specific NPB results page.'''
+    soup = BeautifulSoup(html, 'html.parser')
+    results = soup.find_all("table")[0]
+
+    urls = []
+    for a in results.find_all('a'):
+        url = a['href']
+
+        if "csv" not in url.lower():
+            continue
+
+        if "http" not in url:
+            url = OPLURL + url
+
         if url not in urls:
             urls.append(url)
 
@@ -55,7 +81,10 @@ def main():
     meetlist = []
 
     html = oplprobe.gethtml(URL)
-    meetlist = getmeetlist(html)
+    meetlist = getmeetlist_uitslagen(html)
+
+    html = oplprobe.gethtml(OPLURL)
+    meetlist = meetlist + getmeetlist_oplcsv(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
