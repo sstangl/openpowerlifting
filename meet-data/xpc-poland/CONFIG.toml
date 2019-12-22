@@ -18,7 +18,7 @@
     masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
     submasters_33_39 = {name = "Submasters 33-39", min = 33, max = 39}
 
-    disabled = {name = "Disabled", min = 0, max = 999}
+    paralympic = {name = "Paralympic", min = 0, max = 999}
 
     mil_open = {name = "Military Open", min = 0, max = 999}
     mil_masters_40_49 = {name = "Military Masters 40-49", min = 40, max = 49}

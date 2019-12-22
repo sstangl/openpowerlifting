@@ -392,6 +392,7 @@
 <optgroup label="{{strings.country.ukraine}}">
   <option value="all-ukraine" {% if selection.federation == "AllUkraine" %}selected{% endif %}>{{strings.selectors.fed.all_ukraine}}</option>
   <option value="globalpu" {% if selection.federation == "GlobalPU" %}selected{% endif %}>GlobalPU - Global Powerlifting Union [GPC]</option>
+  <option value="gpc-ukr" {% if selection.federation == "GPC-UKR" %}selected{% endif %}>GPC-UKR - GPC Ukraine</option>
   <option value="raw-ukr" {% if selection.federation == "RAW-UKR" %}selected{% endif %}>RAW-UKR - 100% RAW Powerlifting Federation Ukraine</option>
   <option value="udfpf" {% if selection.federation == "UDFPF" %}selected{% endif %}>Ukrainian Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="ukrpa" {% if selection.federation == "UkrainePA" %}selected{% endif %}>Ukraine Powerlifting Association</option>

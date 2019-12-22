@@ -402,6 +402,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
 
+    /// Ukrainian branch of the GPC.
+    #[serde(rename = "GPC-UKR")]
+    #[strum(to_string = "GPC-UKR", serialize = "gpc-ukr")]
+    GPCUKR,
+
     /// USA branch of the GPC.
     #[serde(rename = "GPC-USA")]
     #[strum(to_string = "GPC-USA", serialize = "gpc-usa")]
@@ -1255,6 +1260,7 @@ impl Federation {
             Federation::GPCISR => false,
             Federation::GPCLAT => false,
             Federation::GPCNZ => false,
+            Federation::GPCUKR => false,
             Federation::GPCUSA => false,
             Federation::GPCRUS => false,
             Federation::GPCWUAPCRO => false,
@@ -1528,6 +1534,7 @@ impl Federation {
             Federation::GPCISR => Some(Country::Israel),
             Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
+            Federation::GPCUKR => Some(Country::Ukraine),
             Federation::GPCUSA => Some(Country::USA),
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPCWUAPCRO => Some(Country::Croatia),
@@ -1820,6 +1827,7 @@ impl Federation {
             Federation::GPCISR => Some(Federation::GPC),
             Federation::GPCLAT => Some(Federation::GPC),
             Federation::GPCNZ => Some(Federation::GPC),
+            Federation::GPCUkraine => Some(Federation::GPC),
             Federation::GPCUSA => Some(Federation::GPC),
             Federation::GPCRUS => Some(Federation::GPC),
             Federation::GPCWUAPCRO => Some(Federation::GPC),
@@ -2124,6 +2132,7 @@ impl Federation {
             Federation::GPCISR => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
             Federation::GPCNZ => PointsSystem::Glossbrenner,
+            Federation::GPCUkraine => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPCWUAPCRO => PointsSystem::Wilks,
