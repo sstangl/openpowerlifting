@@ -553,6 +553,10 @@ pub enum Federation {
     #[strum(to_string = "LJTF", serialize = "ljtf")]
     LJTF,
 
+    /// Liga Mexicana de Powerlifting, Mexican IPL affiliate.
+    #[strum(to_string = "LMP", serialize = "lmp")]
+    LMP,
+
     /// Latvian IPF affiliate.
     #[strum(to_string = "LPF", serialize = "lpf")]
     LPF,
@@ -1289,6 +1293,7 @@ impl Federation {
             Federation::LGBT => false,
             Federation::LHSPLA => false,
             Federation::LJTF => true,
+            Federation::LMP => false,
             Federation::LPF => true,
             Federation::MHSPLA => false,
             Federation::MM => false,
@@ -1560,6 +1565,7 @@ impl Federation {
             Federation::LGBT => None,
             Federation::LHSPLA => Some(Country::USA),
             Federation::LJTF => Some(Country::Lithuania),
+            Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
             Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
@@ -1851,6 +1857,7 @@ impl Federation {
             Federation::LGBT => None,
             Federation::LHSPLA => None,
             Federation::LJTF => Some(Federation::IPF),
+            Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
             Federation::MHSPLA => None,
             Federation::MM => None,
@@ -2154,6 +2161,7 @@ impl Federation {
             Federation::LGBT => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
             Federation::LJTF => Federation::ipf_rules_on(date),
+            Federation::LMP => PointsSystem::Wilks,
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MHSPLA => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
