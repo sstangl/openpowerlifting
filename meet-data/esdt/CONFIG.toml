@@ -6,6 +6,7 @@
     juniors = {name ="Juniors", min=20, max=23}
     masters = {name ="Masters", min=40, max=999}
 
+    masters_40_44 = {name ="Masters 40-44", min=40, max=44}
     masters_45_49 = {name ="Masters 45-49", min=45, max=49}
     masters_50_59 = {name ="Masters 50-59", min=50, max=59}
 
