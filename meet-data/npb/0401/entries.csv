@@ -1,7 +1,7 @@
 Place,BodyweightKg,Name,Country,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event,Sex,Division
 2,71.8,Bianca Roos,Netherlands,107.5,112.5,117.5,117.5,65.0,67.5,70.0,70.0,115.0,125.0,130.0,130.0,317.5,Single-ply,SBD,F,Open
 2,63.3,Judith Overbeek,Netherlands,100.0,110.0,115.0,115.0,-70.0,70.0,72.5,72.5,110.0,115.0,120.0,120.0,307.5,Single-ply,SBD,F,Open
-1,66.2,Abbey Heinzman,Great Britain,-110.0,115.0,122.5,122.5,75.0,80.0,82.5,82.5,120.0,135.0,142.5,142.5,347.5,Single-ply,SBD,F,Open
+1,66.2,Abbey Heinzman,UK,-110.0,115.0,122.5,122.5,75.0,80.0,82.5,82.5,120.0,135.0,142.5,142.5,347.5,Single-ply,SBD,F,Open
 2,77.9,Mandeep Kailey,Netherlands,130.0,150.0,160.0,160.0,115.0,125.0,132.5,132.5,140.0,160.0,170.0,170.0,462.5,Single-ply,SBD,M,Open
 2,77.1,Pardeep Kailey,Netherlands,170.0,182.5,-190.0,182.5,110.0,122.5,-127.5,122.5,215.0,225.0,230.0,230.0,535.0,Single-ply,SBD,M,Open
 2,83.1,John Slooten,Netherlands,180.0,190.0,197.5,197.5,132.5,140.0,-142.5,140.0,190.0,210.0,217.5,217.5,555.0,Single-ply,SBD,M,Open
@@ -10,11 +10,11 @@ Place,BodyweightKg,Name,Country,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg
 2,109.9,Jan Bijker,Netherlands,225.0,245.0,-250.0,245.0,160.0,167.5,-170.0,167.5,240.0,260.0,267.5,267.5,680.0,Single-ply,SBD,M,Open
 2,116.2,Gerrit Vos,Netherlands,245.0,257.5,260.0,260.0,195.0,205.0,207.5,207.5,245.0,262.5,267.5,267.5,735.0,Single-ply,SBD,M,Open
 2,116.6,Ylke Vaassen,Netherlands,310.0,-325.0,325.0,325.0,175.0,-185.0,185.0,185.0,310.0,325.0,335.0,335.0,845.0,Single-ply,SBD,M,Open
-1,56.4,Richard Banhan,Great Britain,140.0,150.0,-160.0,150.0,70.0,75.0,80.0,80.0,160.0,175.0,180.0,180.0,410.0,Single-ply,SBD,M,Open
-1,75.6,Gurbhej Singh Nijar,Great Britain,150.0,160.0,-170.0,160.0,120.0,130.0,-140.0,130.0,170.0,182.5,200.0,200.0,490.0,Single-ply,SBD,M,Open
-1,73.4,Alan Taylor,Great Britain,170.0,180.0,190.0,190.0,125.0,135.0,-152.5,135.0,150.0,165.0,180.0,180.0,505.0,Single-ply,SBD,M,Open
-1,56.5,Chad Mitchell,Great Britain,180.0,195.0,205.0,205.0,95.0,-102.5,105.0,105.0,170.0,177.5,-185.0,177.5,487.5,Single-ply,SBD,M,Open
-1,81.3,Mark Lee,Great Britain,200.0,210.0,220.0,220.0,125.0,135.0,137.5,137.5,220.0,230.0,-235.0,230.0,587.5,Single-ply,SBD,M,Open
-1,88.5,Tom Gee,Great Britain,210.0,220.0,230.0,230.0,145.0,155.0,-162.5,155.0,220.0,235.0,-245.0,235.0,620.0,Single-ply,SBD,M,Open
-1,88.3,Michael Hart,Great Britain,-280.0,280.0,-290.0,280.0,175.0,180.0,-182.5,180.0,270.0,285.0,-290.0,285.0,745.0,Single-ply,SBD,M,Open
-1,140.1,Paul Doherty,Great Britain,290.0,-305.0,315.0,315.0,200.0,215.0,225.0,225.0,230.0,245.0,-260.0,245.0,785.0,Single-ply,SBD,M,Open
+1,56.4,Richard Banhan,UK,140.0,150.0,-160.0,150.0,70.0,75.0,80.0,80.0,160.0,175.0,180.0,180.0,410.0,Single-ply,SBD,M,Open
+1,75.6,Gurbhej Singh Nijar,UK,150.0,160.0,-170.0,160.0,120.0,130.0,-140.0,130.0,170.0,182.5,200.0,200.0,490.0,Single-ply,SBD,M,Open
+1,73.4,Alan Taylor,UK,170.0,180.0,190.0,190.0,125.0,135.0,-152.5,135.0,150.0,165.0,180.0,180.0,505.0,Single-ply,SBD,M,Open
+1,56.5,Chad Mitchell,UK,180.0,195.0,205.0,205.0,95.0,-102.5,105.0,105.0,170.0,177.5,-185.0,177.5,487.5,Single-ply,SBD,M,Open
+1,81.3,Mark Lee,UK,200.0,210.0,220.0,220.0,125.0,135.0,137.5,137.5,220.0,230.0,-235.0,230.0,587.5,Single-ply,SBD,M,Open
+1,88.5,Tom Gee,UK,210.0,220.0,230.0,230.0,145.0,155.0,-162.5,155.0,220.0,235.0,-245.0,235.0,620.0,Single-ply,SBD,M,Open
+1,88.3,Michael Hart,UK,-280.0,280.0,-290.0,280.0,175.0,180.0,-182.5,180.0,270.0,285.0,-290.0,285.0,745.0,Single-ply,SBD,M,Open
+1,140.1,Paul Doherty,UK,290.0,-305.0,315.0,315.0,200.0,215.0,225.0,225.0,230.0,245.0,-260.0,245.0,785.0,Single-ply,SBD,M,Open
