@@ -114,6 +114,7 @@
     mm4bmpx = {name = "M-M4B-MP-X", min=55, max=59, sex="M", equipment="Multi-ply"}
     mm5brx = {name = "M-M5B-R-X", min=60, max=64, sex="M", equipment="Raw"}
     mm5bmpx = {name = "M-M5B-MP-X", min=60, max=64, sex="M", equipment="Multi-ply"}
+    mm6brx = {name = "M-M6B-R-X", min=65, max=69, sex="M", equipment="Raw"}
     mm6frx = {name = "M-M6F-R-X", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
     mm7bspx = {name = "M-M7B-SP-X", min=70, max=74, sex="M", equipment="Single-ply"}
     mm8dspx = {name = "M-M8D-SP-X", min=75, max=79, sex="M", equipment="Single-ply"}
