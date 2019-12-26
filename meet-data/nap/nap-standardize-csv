@@ -79,6 +79,7 @@ def parse_sheetname(s):
     s = s.replace('1 слой', '1-слой')
     s = s.replace('мн слой', 'мн-слой')
     s = s.replace('bench press', 'bench-press')
+    s = s.replace('классический жим', 'жим')
 
     for word in s.split():
         # Federations
@@ -110,12 +111,13 @@ def parse_sheetname(s):
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
-                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг']:
+                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг', 'троеборье']:
             assert not event or event == 'SBD'
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
+            equipment = 'Wraps'
         elif word in ['жим', 'bp', 'bench', 'жд', 'bench-press', 'жимовое']:
             assert not event or event == 'B'
             event = 'B'
@@ -140,7 +142,7 @@ def parse_sheetname(s):
             event = 'B'
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
-                      'одн', 'однос', 'однослойн', 'однопетельная', '1-софт', '1-слой']:
+                      'одн', 'однос', 'однослойн', 'однопетельная', '1-софт', '1-слой', '1сл']:
             if equipment != 'Multi-ply':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -152,7 +154,7 @@ def parse_sheetname(s):
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
                       'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая', 'жест',
-                      '1-пет', 'мн-пет', '1-петельная', 'мн-петельная']:
+                      '1-пет', 'мн-пет', '1-петельная', 'мн-петельная', '2сл']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
@@ -162,7 +164,7 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Booleans.
-        elif word in (['люб.', 'любители', 'амт']):
+        elif word in (['люб.', 'любители', 'амт', 'amt']):
             amateur = 'Amateur'
         elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф']):
             assert amateur == 'Pro'
@@ -286,7 +288,8 @@ def parse_fieldnames(sheet):
     iterable = iter(range(len(header)))
 
     for i in iterable:
-        text = header[i].lower().replace('.', '').replace('/ ', '/')
+        text = header[i].lower().replace(
+            '.', '').replace('/ ', '/').replace('- ', '-')
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
@@ -316,7 +319,7 @@ def parse_fieldnames(sheet):
         elif text == 'team':
             fieldnames.append('Team')
         elif any(x in text for x in ['gloss', 'коэф', 'resh', 'залуцкий', 'рейшел',
-                                     'залутский', 'reichel', 'shv/mel']):
+                                     'залутский', 'reichel', 'shv/mel', 'к-нт ш/м']):
             # This is not the Wilks, but the WilksCoefficient.
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
@@ -324,9 +327,9 @@ def parse_fieldnames(sheet):
         elif text in ['сountry/city/state', 'страна/город/область', 'город/страна']:
             fieldnames.append('Country/City/State')
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
-                      'приседания 1']:
-            assert header[i + 1].lower() in ['2', 'sq2']
-            assert header[i + 2].lower() in ['3', 'sq3']
+                      'приседания 1', 'п1', 'присед со штангой 1']:
+            assert header[i + 1].lower() in ['2', 'sq2', 'п2']
+            assert header[i + 2].lower() in ['3', 'sq3', 'п3']
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
@@ -336,12 +339,15 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
+            if header[i+4].lower() == 'рез-тат':
+                fieldnames.append('Best3SquatKg')
+                next(iterable)
 
         elif text in ['жим', 'жим 1', 'benchpress 1', 'жим макс кг 1',
                       'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1',
-                      'жим лёжа 1', 'жим лёжа 2', 'жим лёжа 3']:
-            assert header[i + 1].lower() in ['2', 'bp2']
-            assert header[i + 2].lower() in ['3', 'bp3']
+                      'жим лёжа 1', 'жим лёжа 2', 'жим лёжа 3', 'ж1']:
+            assert header[i + 1].lower() in ['2', 'bp2', 'ж2']
+            assert header[i + 2].lower() in ['3', 'bp3', 'ж3']
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
@@ -351,10 +357,13 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
+            if header[i+4].lower() == 'рез-тат':
+                fieldnames.append('Best3BenchKg')
+                next(iterable)
 
-        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1']:
-            assert header[i + 1].lower() in ['2', 'dl2']
-            assert header[i + 2].lower() in ['3', 'dl3']
+        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1', 'т1']:
+            assert header[i + 1].lower() in ['2', 'dl2', 'т2']
+            assert header[i + 2].lower() in ['3', 'dl3', 'т3']
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
@@ -364,14 +373,17 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
+            if header[i+4].lower() == 'рез-тат':
+                fieldnames.append('Best3DeadliftKg')
+                next(iterable)
 
         elif text in ['сумма', 'total', 'result', 'сумма баллов', 'резульат',
-                      'результат bp', 'результат', 'итог', 'рзультат']:
+                      'результат bp', 'результат', 'итог', 'рзультат', 'общий результат']:
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
         elif text in['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
-                     'вилкс', 'абс', 'шварц']:
+                     'вилкс', 'абс', 'шварц', 'мэлоун', 'общий шварц']:
             fieldnames.append('IGNORE')
 
         elif text == 'тренер':
@@ -381,6 +393,11 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'страна':
             fieldnames.append('Country')
+        elif text == 'дк':
+            fieldnames.append('Tested')
+        elif text == 'воз-раст':
+            fieldnames.append('Age')
+
         elif text == 'норматив спр':  # Not sure what this is
             fieldnames.append('IGNORE')
         elif text == '':
@@ -391,9 +408,16 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'абсолютное первенство':  # Overall Place
             fieldnames.append('IGNORE')
-        elif text == 'регион':
-            fieldnames.append('IGNORE')  # Region
-
+        elif text == 'регион':  # Region
+            fieldnames.append('IGNORE')
+        elif text == 'разряд (звание)' or text == 'вып разряд':  # Rank
+            fieldnames.append('IGNORE')
+        elif text == 'возр к-нт':
+            fieldnames.append('IGNORE')
+        elif text == 'общий к-нт':
+            fieldnames.append('IGNORE')
+        elif text == 'сумма с к-нтом':
+            fieldnames.append('IGNORE')
         else:
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
@@ -477,8 +501,11 @@ def parse_sheet(sheet):
         return csv
     elif 'saxon' in title:
         return csv
-    elif any(x in title for x in ['лист54', 'лист65', 'Лист2', 'лист43',
-                                  'лист4', 'лист56', 'лист29', 'лист75']):  # Blank sheet
+    elif 'лист' in title:  # Blank sheet
+        return csv
+    elif 'коэффициенты' in title:  # Coefficients
+        return csv
+    elif 'стритлифтинг' in title:  # Streetlifting
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
