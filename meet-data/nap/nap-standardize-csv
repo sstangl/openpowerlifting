@@ -164,7 +164,7 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Booleans.
-        elif word in (['люб.', 'любители', 'амт', 'amt']):
+        elif word in (['люб', 'любители', 'амт', 'amt']):
             amateur = 'Amateur'
         elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф']):
             assert amateur == 'Pro'
@@ -634,6 +634,7 @@ def standardize_division_age(csv):
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
     bdidx = csv.index('BirthDate')
+    amidx = csv.index('Amateur')
 
     for row in csv.rows:
         # Fill in the Age.
@@ -699,7 +700,7 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = division
+        division = row[amidx] + division
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
