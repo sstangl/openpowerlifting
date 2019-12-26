@@ -78,6 +78,7 @@ def parse_sheetname(s):
     s = s.replace('мн пет', 'мн-пет')
     s = s.replace('1 слой', '1-слой')
     s = s.replace('мн слой', 'мн-слой')
+    s = s.replace('bench press', 'bench-press')
 
     for word in s.split():
         # Federations
@@ -115,7 +116,7 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'bench-press', 'жимовое']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
@@ -206,8 +207,6 @@ def parse_sheetname(s):
         elif word == 'мужчины':  # Men
             pass
         elif word == 'воен':  # Military
-            pass
-        elif word == 'лежа-народные':  # Something to do with amateur bench, not sure
             pass
         elif word == 'забавы':  # Fun? Maybe amateurs
             pass
@@ -312,7 +311,7 @@ def parse_fieldnames(sheet):
                       'соб вес', 'собстввес', 'вага', 'св', 'собствственный',
                       'собственнный вес', 'собственныйвес']:
             fieldnames.append('BodyweightKg')
-        elif text == 'весовая категория':
+        elif text == 'весовая категория' or text == 'в/к':
             fieldnames.append('WeightClassKg')
         elif text == 'team':
             fieldnames.append('Team')
@@ -467,7 +466,7 @@ def parse_sheet(sheet):
         return csv
     elif 'saxon' in title:
         return csv
-    elif 'лист65' in title:  # Blank sheet
+    elif any(x in title for x in ['лист54', 'лист65', 'Лист2']):  # Blank sheet
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
