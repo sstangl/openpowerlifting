@@ -584,10 +584,10 @@ def get_division(age_str, currdiv):
     if age_str == '':
         return currdiv
     age = int(age_str)
-    if age < 13:
-        return 'Youth'
+    if age <= 13:
+        return 'Teen 13'
     elif age <= 15:
-        return 'Teen 13-15'
+        return 'Teen 14-15'
     elif age <= 17:
         return 'Teen 16-17'
     elif age <= 19:

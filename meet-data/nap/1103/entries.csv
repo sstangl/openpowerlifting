@@ -9,7 +9,7 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 52,B,Raw,Amateur Open,F,Yes,Nonna Starostina,Нонна Старостина,50.75,,37.5,,37.5,1
 60,SBD,Multi-ply,Pro Open,F,No,Kseniya Baskakova,Ксения Баскакова,59.8,,,,375,1
 75,SBD,Wraps,Pro Teen 14-15,F,No,Olga Gerasimyuk,Ольга Герасимюк,72.1,,,,237.5,1
-67.5,SBD,Wraps,Pro Juniors,F,No,Tatyana Puntusenko,Татьяна Пунтусенко,65,,,,270,1
+67.5,SBD,Wraps,Pro Juniors 20-23,F,No,Tatyana Puntusenko,Татьяна Пунтусенко,65,,,,270,1
 48,SBD,Wraps,Pro Open,F,No,Anna Fedorova,Анна Федорова,48,,,,180,1
 56,SBD,Wraps,Pro Open,F,No,Alina Dubrovina,Алина Дубровина,55.7,,,,227.5,1
 60,SBD,Wraps,Pro Open,F,No,Yuliya Dubrovina,Юлия Дубровина,59.1,,,,205,2
@@ -21,13 +21,13 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 67.5,SBD,Wraps,Pro Masters 40-44,F,No,Svetlana Dubrovina,Светлана Дубровина,64.3,,,,222.5,1
 56,SBD,Wraps,Amateur Teen 16-17,F,Yes,Nastya Travnitskaya,Настя Травницкая,56,,,,190,1
 60,SBD,Wraps,Amateur Teen 18-19,F,Yes,Trishch Olga,Трищ Ольга,57.5,,,,195,1
-60,SBD,Wraps,Amateur Juniors,F,Yes,Natalya Anosova,Наталья Аносова,59.3,,,,275,1
+60,SBD,Wraps,Amateur Juniors 20-23,F,Yes,Natalya Anosova,Наталья Аносова,59.3,,,,275,1
 60,SBD,Wraps,Amateur Open,F,Yes,Natalya Anosova,Наталья Аносова,59.3,,,,275,1
 60,SBD,Wraps,Amateur Open,F,Yes,Larisa Popova,Лариса Попова,58.3,,,,180,3
 67.5,B,Multi-ply,Pro Teen 18-19,M,No,Konstantin Nikolchenko,Константин Никольченко,66,,155,,155,1
 67.5,B,Multi-ply,Pro Teen 18-19,M,No,Evgeniy Gansh,Евгений Ганш,67,,,,,DQ
-82.5,B,Multi-ply,Pro Juniors,M,No,Ivan Kosyakin,Иван Косякин,81.6,,180,,180,1
-100,B,Multi-ply,Pro Juniors,M,No,Ivanov Aleksey,Иванов Алексей,95.7,,227.5,,227.5,1
+82.5,B,Multi-ply,Pro Juniors 20-23,M,No,Ivan Kosyakin,Иван Косякин,81.6,,180,,180,1
+100,B,Multi-ply,Pro Juniors 20-23,M,No,Ivanov Aleksey,Иванов Алексей,95.7,,227.5,,227.5,1
 67.5,B,Multi-ply,Pro Open,M,No,Evgeniy Gansh,Евгений Ганш,67,,,,,DQ
 75,B,Multi-ply,Pro Open,M,No,Aleksandr Abramov,Александр Абрамов,75,,210,,210,1
 90,B,Multi-ply,Pro Open,M,No,Sergey Konovalov,Сергей Коновалов,89,,310,,310,1
@@ -38,10 +38,10 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 75,B,Raw,Pro Teen,M,No,Artem Dyakov,Артем Дьяков,73.85,,110,,110,2
 90,B,Raw,Pro Teen,M,No,Denis Zenin,Денис Зенин,88.8,,170,,170,1
 100,B,Raw,Pro Teen,M,No,Maksim Nechaev,Максим Нечаев,97.7,,150,,150,1
-82.5,B,Raw,Pro Juniors,M,No,Artur Lapshin,Артур Лапшин,77.4,,165,,165,2
-82.5,B,Raw,Pro Juniors,M,No,Aleksey Mosin,Алексей Мосин,81.8,,120,,120,5
-90,B,Raw,Pro Juniors,M,No,Aleksandr Smirnov,Александр Смирнов,88.9,,170,,170,1
-100,B,Raw,Pro Juniors,M,No,Pavel Zavyalov,Павел Завьялов,94.3,,145,,145,1
+82.5,B,Raw,Pro Juniors 20-23,M,No,Artur Lapshin,Артур Лапшин,77.4,,165,,165,2
+82.5,B,Raw,Pro Juniors 20-23,M,No,Aleksey Mosin,Алексей Мосин,81.8,,120,,120,5
+90,B,Raw,Pro Juniors 20-23,M,No,Aleksandr Smirnov,Александр Смирнов,88.9,,170,,170,1
+100,B,Raw,Pro Juniors 20-23,M,No,Pavel Zavyalov,Павел Завьялов,94.3,,145,,145,1
 67.5,B,Raw,Pro Open,M,No,Aleksey Krestinin,Алексей Крестинин,66.1,,95,,95,3
 75,B,Raw,Pro Open,M,No,Danil Lamanov,Данил Ламанов,71.75,,152.5,,152.5,1
 75,B,Raw,Pro Open,M,No,Anton Panasyuk,Антон Панасюк,73.3,,152.5,,152.5,2
@@ -66,9 +66,9 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 60,B,Multi-ply,Amateur Teen 16-17,M,Yes,Vladimir Zhikan,Владимир Жикан,57.4,,110,,110,1
 67.5,B,Multi-ply,Amateur Teen 16-17,M,Yes,Vladimir Lobov,Владимир Лобов,67.05,,105,,105,1
 100,B,Multi-ply,Amateur Teen 18-19,M,Yes,Danila Fomenko,Данила Фоменко,97.2,,185,,185,1
-75,B,Multi-ply,Amateur Juniors,M,Yes,Andrey Pshenin,Андрей Пшенин,72.7,,,,,DQ
-90,B,Multi-ply,Amateur Juniors,M,Yes,Evgeniy Barinov,Евгений Баринов,89.3,,170,,170,1
-125,B,Multi-ply,Amateur Juniors,M,Yes,Pavel Loman,Павел Ломан,116.6,,190,,190,1
+75,B,Multi-ply,Amateur Juniors 20-23,M,Yes,Andrey Pshenin,Андрей Пшенин,72.7,,,,,DQ
+90,B,Multi-ply,Amateur Juniors 20-23,M,Yes,Evgeniy Barinov,Евгений Баринов,89.3,,170,,170,1
+125,B,Multi-ply,Amateur Juniors 20-23,M,Yes,Pavel Loman,Павел Ломан,116.6,,190,,190,1
 75,B,Multi-ply,Amateur Open,M,Yes,Aleksandr Sorokin,Александр Сорокин,71.6,,182.5,,182.5,2
 75,B,Multi-ply,Amateur Open,M,Yes,Andrey Pshenin,Андрей Пшенин,72.7,,,,,DQ
 90,B,Multi-ply,Amateur Open,M,Yes,Sergey Boldin,Сергей Болдин,86.1,,160,,160,3
@@ -85,14 +85,14 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 56,B,Raw,Amateur Teen 18-19,M,Yes,Konstantin Morev,Константин Морев,55.6,,65,,65,2
 75,B,Raw,Amateur Teen 18-19,M,Yes,Petr Makhov,Петр Махов,73.7,,130,,130,1
 90,B,Raw,Amateur Teen 18-19,M,Yes,Maksim Sivtsov,Максим Сивцов,88.3,,120,,120,1
-67.5,B,Raw,Amateur Juniors,M,Yes,Evgeniy Derbenev,Евгений Дербенев,65.7,,,,,DQ
-67.5,B,Raw,Amateur Juniors,M,Yes,Aleksky Shatilov,Алекскй Шатилов,67,,,,,DQ
-67.5,B,Raw,Amateur Juniors,M,Yes,Aleksey Shatilov,Алексей Шатилов,67,,,,,DQ
-82.5,B,Raw,Amateur Juniors,M,Yes,Aleksandr Runov,Александр Рунов,78.5,,170,,170,1
-82.5,B,Raw,Amateur Juniors,M,Yes,Mikhail Shpagin,Михаил Шпагин,82.5,,160,,160,3
-82.5,B,Raw,Amateur Juniors,M,Yes,Aleksandr Shchelkov,Александр Щелков,80,,150,,150,4
-82.5,B,Raw,Amateur Juniors,M,Yes,Anton Cherkashin,Антон Черкашин,81.5,,85,,85,6
-140,B,Raw,Amateur Juniors,M,Yes,Artem Karakulov,Артем Каракулов,140,,145,,145,1
+67.5,B,Raw,Amateur Juniors 20-23,M,Yes,Evgeniy Derbenev,Евгений Дербенев,65.7,,,,,DQ
+67.5,B,Raw,Amateur Juniors 20-23,M,Yes,Aleksky Shatilov,Алекскй Шатилов,67,,,,,DQ
+67.5,B,Raw,Amateur Juniors 20-23,M,Yes,Aleksey Shatilov,Алексей Шатилов,67,,,,,DQ
+82.5,B,Raw,Amateur Juniors 20-23,M,Yes,Aleksandr Runov,Александр Рунов,78.5,,170,,170,1
+82.5,B,Raw,Amateur Juniors 20-23,M,Yes,Mikhail Shpagin,Михаил Шпагин,82.5,,160,,160,3
+82.5,B,Raw,Amateur Juniors 20-23,M,Yes,Aleksandr Shchelkov,Александр Щелков,80,,150,,150,4
+82.5,B,Raw,Amateur Juniors 20-23,M,Yes,Anton Cherkashin,Антон Черкашин,81.5,,85,,85,6
+140,B,Raw,Amateur Juniors 20-23,M,Yes,Artem Karakulov,Артем Каракулов,140,,145,,145,1
 60,B,Raw,Amateur Open,M,Yes,Nikolay Kazarik,Николай Казарик,57.2,,115,,115,1
 67.5,B,Raw,Amateur Open,M,Yes,Dmitriy Kaygorodov,Дмитрий Кайгородов,65.8,,147.5,,147.5,1
 67.5,B,Raw,Amateur Open,M,Yes,Evgeniy Sinko,Евгений Синько,66.5,,130,,130,2
@@ -122,10 +122,10 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 90,SBD,Multi-ply,Pro Teen 18-19,M,No,Aleksanzhr Kurmashov,Алексанжр Курмашов,86.2,,,,630,1
 90,SBD,Multi-ply,Pro Teen 18-19,M,No,Stanislav Shishkin,Станислав Шишкин,85.7,,,,485,2
 90,SBD,Multi-ply,Pro Teen 18-19,M,No,Vlad Kosachev,Влад Косачев,87.8,,,,467.5,3
-100,SBD,Multi-ply,Pro Juniors,M,No,Aleksandr Gorelko,Александр Горелко,96.85,,,,415,2
-75,SBD,Multi-ply,Pro Juniors,M,No,Mark Spitsin,Марк Спицин,74.8,,,,625,1
-82.5,SBD,Multi-ply,Pro Juniors,M,No,Danil Bobryashov,Данил Бобряшов,80.8,,,,560,1
-90,SBD,Multi-ply,Pro Juniors,M,No,Aleksandr Druzhinin,Александр Дружинин,89.2,,,,825,1
+100,SBD,Multi-ply,Pro Juniors 20-23,M,No,Aleksandr Gorelko,Александр Горелко,96.85,,,,415,2
+75,SBD,Multi-ply,Pro Juniors 20-23,M,No,Mark Spitsin,Марк Спицин,74.8,,,,625,1
+82.5,SBD,Multi-ply,Pro Juniors 20-23,M,No,Danil Bobryashov,Данил Бобряшов,80.8,,,,560,1
+90,SBD,Multi-ply,Pro Juniors 20-23,M,No,Aleksandr Druzhinin,Александр Дружинин,89.2,,,,825,1
 75,SBD,Multi-ply,Pro Open,M,No,Mark Spitsin,Марк Спицин,74.8,,,,625,1
 75,SBD,Multi-ply,Pro Open,M,No,Konstantin Polyakov,Константин Поляков,73.8,,,,615,2
 75,SBD,Multi-ply,Pro Open,M,No,Pavel Evtushenko,Павел Евтушенко,70.3,,,,575,3
@@ -145,13 +145,13 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 75,SBD,Raw,Pro Teen 18-19,M,No,Slava Sokolov,Слава Соколов,74.1,,,,462.5,1
 82.5,SBD,Raw,Pro Teen 18-19,M,No,Vadim Vandakhurov,Вадим Вандахуров,82.5,,,,617.5,1
 100,SBD,Raw,Pro Teen 18-19,M,No,Georgiy Usov,Георгий Усов,99.6,,,,585,1
-56,SBD,Raw,Pro Juniors,M,No,Denis Korobko,Денис Коробко,54.2,,,,280,1
-67.5,SBD,Raw,Pro Juniors,M,No,Mikhail Zaytsev,Михаил Зайцев,66.9,,,,385,1
-67.5,SBD,Raw,Pro Juniors,M,No,Aleksandr Chernov,Александр Чернов,65.55,,,,347.5,2
-67.5,SBD,Raw,Pro Juniors,M,No,Grigoriy Rupp,Григорий Рупп,66.2,,,,330,3
-82.5,SBD,Raw,Pro Juniors,M,No,Vadim Vandakurov,Вадим Вандакуров,82.5,,,,617.5,1
-82.5,SBD,Raw,Pro Juniors,M,No,Ivan Kotin,Иван Котин,81,,,,450,2
-90,SBD,Raw,Pro Juniors,M,No,Valentin Vasilchenko,Валентин Васильченко,89,,,,625,1
+56,SBD,Raw,Pro Juniors 20-23,M,No,Denis Korobko,Денис Коробко,54.2,,,,280,1
+67.5,SBD,Raw,Pro Juniors 20-23,M,No,Mikhail Zaytsev,Михаил Зайцев,66.9,,,,385,1
+67.5,SBD,Raw,Pro Juniors 20-23,M,No,Aleksandr Chernov,Александр Чернов,65.55,,,,347.5,2
+67.5,SBD,Raw,Pro Juniors 20-23,M,No,Grigoriy Rupp,Григорий Рупп,66.2,,,,330,3
+82.5,SBD,Raw,Pro Juniors 20-23,M,No,Vadim Vandakurov,Вадим Вандакуров,82.5,,,,617.5,1
+82.5,SBD,Raw,Pro Juniors 20-23,M,No,Ivan Kotin,Иван Котин,81,,,,450,2
+90,SBD,Raw,Pro Juniors 20-23,M,No,Valentin Vasilchenko,Валентин Васильченко,89,,,,625,1
 75,SBD,Raw,Pro Open,M,No,Denis Grishin,Денис Гришин,74.1,,,,540,1
 75,SBD,Raw,Pro Open,M,No,Slava Sokolov,Слава Соколов,74.1,,,,462.5,2
 75,SBD,Raw,Pro Open,M,No,Aleksandr Zyryanov,Александр Зырянов,68.9,,,,415,3
@@ -176,7 +176,7 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 67.5,SBD,Multi-ply,Amateur Teen 16-17,M,Yes,Vladimir Lobov,Владимир Лобов,67.05,,,,435,1
 75,SBD,Multi-ply,Amateur Teen 16-17,M,Yes,Aleksandr Zhurov,Александр Журов,74.5,,,,505,1
 82.5,SBD,Multi-ply,Amateur Teen 16-17,M,Yes,Kirill Shein,Кирилл Шеин,81.5,,,,467.5,1
-100,SBD,Multi-ply,Amateur Juniors,M,Yes,Mikhail Mikhaylov,Михаил Михайлов,99.8,,,,600,1
+100,SBD,Multi-ply,Amateur Juniors 20-23,M,Yes,Mikhail Mikhaylov,Михаил Михайлов,99.8,,,,600,1
 52,SBD,Multi-ply,Amateur Open,M,Yes,Aleksandr Krestinin,Александр Крестинин,49.9,,,,422.5,1
 56,SBD,Wraps,Amateur Teen 14-15,M,Yes,Timur Tashtemirov,Тимур Таштемиров,54.6,,,,267.5,1
 60,SBD,Wraps,Amateur Teen 14-15,M,Yes,Vitaliy Redkin,Виталий Редькин,58.7,,,,315,1
@@ -189,12 +189,12 @@ WeightClassKg,Event,Equipment,Division,Sex,Tested,Name,CyrillicName,BodyweightKg
 75,SBD,Wraps,Amateur Teen 16-17,M,Yes,Vyacheslav Grachev,Вячеслав Грачев,73.9,,,,355,2
 75,SBD,Wraps,Amateur Teen 16-17,M,Yes,Maksim Dakilov,Максим Дакилов,71,,,,310,3
 90,SBD,Wraps,Amateur Teen 16-17,M,Yes,Yaroslav Ivanov,Ярослав Иванов,84.9,,,,307.5,1
-75,SBD,Wraps,Amateur Juniors,M,Yes,Mstislav Vrublevskiy,Мстислав Врублевский,74.5,,,,525,1
-82.5,SBD,Wraps,Amateur Juniors,M,Yes,Andrey Syunkov,Андрей Сюньков,82.35,,,,562.5,1
-90,SBD,Wraps,Amateur Juniors,M,Yes,Yuriy Rybalkin,Юрий Рыбалкин,84,,,,522.5,1
-110,SBD,Wraps,Amateur Juniors,M,Yes,Roman Yatsenko,Роман Яценко,108.8,,,,480,1
-125,SBD,Wraps,Amateur Juniors,M,Yes,Pavel Loman,Павел Ломан,116.9,,,,530,1
-125,SBD,Wraps,Amateur Juniors,M,Yes,Leontiy Yatsenko,Леонтий Яценко,121.4,,,,485,2
+75,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Mstislav Vrublevskiy,Мстислав Врублевский,74.5,,,,525,1
+82.5,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Andrey Syunkov,Андрей Сюньков,82.35,,,,562.5,1
+90,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Yuriy Rybalkin,Юрий Рыбалкин,84,,,,522.5,1
+110,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Roman Yatsenko,Роман Яценко,108.8,,,,480,1
+125,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Pavel Loman,Павел Ломан,116.9,,,,530,1
+125,SBD,Wraps,Amateur Juniors 20-23,M,Yes,Leontiy Yatsenko,Леонтий Яценко,121.4,,,,485,2
 82.5,SBD,Wraps,Amateur Open,M,Yes,Andrey Syunkov,Андрей Сюньков,82.35,,,,562.5,1
 82.5,SBD,Wraps,Amateur Open,M,Yes,Aleksandr Anosov,Александр Аносов,80.75,,,,460,2
 82.5,SBD,Wraps,Amateur Open,M,Yes,Vitaliy Drozdov,Виталий Дроздов,76.2,,,,415,3
