@@ -48,6 +48,7 @@
     ama_teen_17_19 = {name="Amateur Teen 17-19", min=17, max=19, tested="Yes"}
     pro_teen_17_19 = {name="Pro Teen 17-19", min=17, max=19}
     pro_teen = {name="Pro Teen", min=13, max=19}
+    pro_masters = {name="Pro Masters", min=40, max=999}
 
     # Some Russian meets disregarded the rulebook and just used standard divisions.
     # These contain age information, so we might as well interpret them.
@@ -106,3 +107,4 @@
     1701 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
     1801 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
     1914 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1944 = ["ExemptWeightClassConsistency"] # Non standard WCs
