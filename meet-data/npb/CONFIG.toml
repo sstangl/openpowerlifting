@@ -9,6 +9,8 @@
     masters3 = {name="Masters 3", min=59.5, max=68.5}
     masters4 = {name="Masters 4", min=69.5, max=999}
 
+    disabled = {name = "Disabled", min=0, max=999}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range = ["2011-01-01","9999-01-01"]
@@ -40,5 +42,11 @@
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
+
+[weightclasses.disabled_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","100+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+    divisions = ["Disabled"]
 
 [exemptions]
