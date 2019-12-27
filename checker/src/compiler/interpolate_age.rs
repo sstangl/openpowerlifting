@@ -422,8 +422,9 @@ fn infer_from_range(
         // If no specific Age is known, maybe Division information
         // can be used to at least find a range.
         if entry.agerange.is_none() {
-            let age_min = range.min.age_on(mdate).unwrap_or(Age::None);
-            let age_max = range.max.age_on(mdate).unwrap_or(Age::None);
+            // The minimum age is from the maximum BirthDate.
+            let age_min = range.max.age_on(mdate).unwrap_or(Age::None);
+            let age_max = range.min.age_on(mdate).unwrap_or(Age::None);
             entry.agerange = AgeRange::from((age_min, age_max));
             if !entry.agerange.is_none() {
                 trace_inference(debug, "AgeRange (via Range)", &entry.agerange, mdate);
