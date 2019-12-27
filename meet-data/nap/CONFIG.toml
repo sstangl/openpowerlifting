@@ -47,6 +47,7 @@
     pro_teen_14_16 = {name="Pro Teen 14-16", min=14, max=16}
     ama_teen_17_19 = {name="Amateur Teen 17-19", min=17, max=19, tested="Yes"}
     pro_teen_17_19 = {name="Pro Teen 17-19", min=17, max=19}
+    pro_teen = {name="Pro Teen", min=13, max=19}
 
     # Some Russian meets disregarded the rulebook and just used standard divisions.
     # These contain age information, so we might as well interpret them.
@@ -60,13 +61,30 @@
     pro_masters_70_79 = {name="Pro Masters 70-79", min=70, max=79}
 
     dis_open = {name="Disabled Open", min=0, max=999}
+    dis_teen_13 = {name="Disabled Teen 13", min=0, max=13}
+    dis_teen_14_15 = {name="Disabled Teen 14-15", min=14, max=15}
+    dis_teen_14_16 = {name="Disabled Teen 14-16", min=14, max=16}
+    dis_teen_16_17 = {name="Disabled Teen 16-17", min=16, max=17}
+    dis_teen_17_19 = {name="Disabled Teen 17-19", min=17, max=19}
+    dis_teen_18_19 = {name="Disabled Teen 18-19", min=18, max=19}
+    dis_juniors = {name="Disabled Juniors 20-23", min=20, max=23}
+    dis_masters_40_44 = {name="Disabled Masters 40-44", min=40, max=44}
+    dis_masters_45_49 = {name="Disabled Masters 45-49", min=45, max=49}
+    dis_masters_40_49 = {name="Disabled Masters 40-49", min=40, max=49}
+    dis_masters_50_54 = {name="Disabled Masters 50-54", min=50, max=54}
+    dis_masters_55_59 = {name="Disabled Masters 55-59", min=55, max=59}
+    dis_masters_60_64 = {name="Disabled Masters 60-64", min=60, max=64}
+    dis_masters_65_69 = {name="Disabled Masters 65-69", min=65, max=69}
 
 
     elite_open = {name="Elite Open", min=0, max=999}
     elite_teen_16_17 = {name="Elite Teen 16-17", min=16, max=17}
     elite_juniors = {name="Elite Juniors 20-23", min=20, max=23}
+    elite_masters_40_44 = {name="Elite Masters 40-44", min=40, max=44}
     elite_masters_45_49 = {name="Elite Masters 45-49", min=45, max=49}
-
+    elite_masters_50_54 = {name="Elite Masters 50-54", min=50, max=54}
+    elite_masters_55_59 = {name="Elite Masters 55-59", min=55, max=59}
+    elite_masters_65_69 = {name="Elite Masters 65-69", min=65, max=69}
 
 
 [weightclasses.default_M]
@@ -80,3 +98,11 @@
     sex = "F"
 
 [exemptions]
+    1303 = ["ExemptWeightClassConsistency"] # Elite lifters with no WC
+    1401 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
+    1402 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes & Elite lifters with no WC
+    1501 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
+    1602 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
+    1701 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
+    1801 = ["ExemptWeightClassConsistency"] # Boys in 44 & 48 classes
+    1914 = ["ExemptWeightClassConsistency"] # Non standard WCs

@@ -2,11 +2,11 @@ Place,WeightClassKg,Event,Equipment,Tested,Sex,Name,CyrillicName,BirthDate,Divis
 1,60,B,Raw,No,F,Irina Pilipishko,Ирина Пилипишко,1957-02-28,Pro Masters 50-59,59,,,,,,50,-52.5,-52.5,,50,,,,,,50
 1,60,B,Raw,No,F,Larisa Gvozdeva,Лариса Гвоздева,1965-06-25,Pro Open,59.95,,,,,,-95,95,,,95,,,,,,95
 1,75,B,Raw,No,F,Marina Khodunova,Марина Ходунова,1973-08-05,Pro Masters 40-49,71.03,,,,,,-47.5,47.5,-55,,47.5,,,,,,47.5
-1,44,B,Raw,No,M,Makar Perminov,Макар Перминов,2002-08-08,Pro Teen 14-15,40.7,,,,,,32.5,37.5,-45,,37.5,,,,,,37.5
-2,44,B,Raw,No,M,Roman Berdinskikh,Роман Бердинских,2005-08-25,Pro Teen 14-15,29,,,,,,20,22.5,-25,,22.5,,,,,,22.5
-1,48,B,Raw,No,M,Artem Pantyukhin,Артем Пантюхин,2000-11-23,Pro Teen 14-15,45.95,,,,,,42.5,45,50,,50,,,,,,50
-1,56,B,Raw,No,M,Nikita Koposov,Никита Копосов,2000-08-21,Pro Teen 14-15,53,,,,,,40,50,57.5,,57.5,,,,,,57.5
-2,56,B,Raw,No,M,Mikhail Mikhaylov,Михаил Михайлов,2001-01-14,Pro Teen 14-15,56,,,,,,45,50,-55,,50,,,,,,50
+1,44,B,Raw,No,M,Makar Perminov,Макар Перминов,2002-08-08,Pro Teen 13,40.7,,,,,,32.5,37.5,-45,,37.5,,,,,,37.5
+2,44,B,Raw,No,M,Roman Berdinskikh,Роман Бердинских,2005-08-25,Pro Teen 13,29,,,,,,20,22.5,-25,,22.5,,,,,,22.5
+1,48,B,Raw,No,M,Artem Pantyukhin,Артем Пантюхин,2000-11-23,Pro Teen 13,45.95,,,,,,42.5,45,50,,50,,,,,,50
+1,56,B,Raw,No,M,Nikita Koposov,Никита Копосов,2000-08-21,Pro Teen 13,53,,,,,,40,50,57.5,,57.5,,,,,,57.5
+2,56,B,Raw,No,M,Mikhail Mikhaylov,Михаил Михайлов,2001-01-14,Pro Teen 13,56,,,,,,45,50,-55,,50,,,,,,50
 DQ,56,B,Raw,No,M,Evgeniy Nazukin,Евгений Назукин,1999-07-01,Pro Teen 14-15,55.8,,,,,,-90,-90,-95,,,,,,,,
 1,75,B,Raw,No,M,Mikhail Lokhmotkin,Михаил Лохмоткин,1989-01-24,Pro Open,74.15,,,,,,150,160,170,,170,,,,,,170
 1,75,B,Raw,No,M,Vyacheslav Zorin,Вячеслав Зорин,1997-10-25,Pro Teen 16-17,74.65,,,,,,100,105,112.5,,112.5,,,,,,112.5
@@ -34,7 +34,7 @@ DQ,82.5,B,Raw,No,M,Kamil Gafarov,Камиль Гафаров,1984-03-23,Pro Open
 2,100,B,Raw,No,M,Ivan Solntsev,Иван Солнцев,1974-03-25,Pro Open,98.65,,,,,,195,-202.5,-205,,195,,,,,,195
 3,100,B,Raw,No,M,Nikolay Kuprichenkov,Николай Куприченков,1979-09-20,Pro Open,99,,,,,,180,190,-200,,190,,,,,,190
 1,110,B,Raw,No,M,Igor Kushin,Игорь Кушин,1966-01-30,Pro Masters 40-49,108.6,,,,,,235,-240,,,235,,,,,,235
-1,110,B,Raw,No,M,Vladimir Petrov,Владимир Петров,1968-06-17,Pro Masters 50-59,103,,,,,,190,-195,195,,195,,,,,,195
+1,110,B,Raw,No,M,Vladimir Petrov,Владимир Петров,1968-06-17,Pro Masters 45-49,103,,,,,,190,-195,195,,195,,,,,,195
 2,110,B,Raw,No,M,Valeriy Akentyev,Валерий Акентьев,1958-03-13,Pro Masters 50-59,101,,,,,,155,162.5,,,162.5,,,,,,162.5
 1,110,B,Raw,No,M,Grigoriy Slipchenko,Григорий Слипченко,1982-11-16,Pro Open,103.5,,,,,,250,260,,,260,,,,,,260
 2,110,B,Raw,No,M,Igor Kushin,Игорь Кушин,1966-01-30,Pro Open,108.6,,,,,,235,-240,,,235,,,,,,235
@@ -75,11 +75,11 @@ DQ,100,B,Multi-ply,No,M,Valeriy Akentyev,Валерий Акентьев,1958-03
 2,140,B,Multi-ply,No,M,Aleksey Shlykov,Алексей Шлыков,1984-08-13,Pro Open,125.1,,,,,,-280,285,,,285,,,,,,285
 1,140+,B,Multi-ply,No,M,Valeriy Abiyan,Валерий Абиян,1979-06-02,Pro Open,173,,,,,,220,-230,-230,,220,,,,,,220
 1,44,B,Raw,Yes,F,Evgeniya Chistik,Евгения Чистик,1984-11-14,Amateur Open,42.1,,,,,,45,-50,-50,,45,,,,,,45
-1,44,B,Raw,Yes,F,Anna Bibanaeva,Анна Бибанаева,2002-04-25,Amateur Teen 14-15,40.1,,,,,,37.5,40,-42.5,,40,,,,,,40
+1,44,B,Raw,Yes,F,Anna Bibanaeva,Анна Бибанаева,2002-04-25,Amateur Teen 13,40.1,,,,,,37.5,40,-42.5,,40,,,,,,40
 1,48,B,Raw,Yes,F,Yakha Yusupkhadzhieva,Яха Юсупхаджиева,1990-07-03,Amateur Juniors 20-23,47.8,,,,,,-45,45,50,,50,,,,,,50
 DQ,48,B,Raw,Yes,F,Elena Kovalenko,Елена Коваленко,1972-06-15,Amateur Masters 40-49,47.95,,,,,,-50,-50,-50,,,,,,,,
 1,48,B,Raw,Yes,F,Yakha Yusupkhadzhieva,Яха Юсупхаджиева,1990-07-03,Amateur Open,47.8,,,,,,-45,45,50,,50,,,,,,50
-1,48,B,Raw,Yes,F,Mariya Zavarukhina,Мария Заварухина,2000-08-15,Amateur Teen 14-15,48,,,,,,47.5,-52.5,-52.5,,47.5,,,,,,47.5
+1,48,B,Raw,Yes,F,Mariya Zavarukhina,Мария Заварухина,2000-08-15,Amateur Teen 13,48,,,,,,47.5,-52.5,-52.5,,47.5,,,,,,47.5
 1,52,B,Raw,Yes,F,Oksana Danilyuk,Оксана Данилюк,1979-08-29,Amateur Open,51.1,,,,,,35,40,-42.5,,40,,,,,,40
 1,56,B,Raw,Yes,F,Irina Egikyan,Ирина Егикян,1988-04-03,Amateur Open,52.1,,,,,,-30,30,-35,,30,,,,,,30
 1,56,B,Raw,Yes,F,Alina Andriyashchenko,Алина Андриященко,1999-01-01,Amateur Teen 14-15,56,,,,,,35,42.5,-47.5,,42.5,,,,,,42.5
@@ -116,7 +116,7 @@ DQ,48,B,Raw,Yes,F,Elena Kovalenko,Елена Коваленко,1972-06-15,Amate
 2,75,B,Raw,Yes,M,Daur Chanturiya,Даур Чантурия,1999-12-23,Amateur Teen 14-15,74.3,,,,,,60,67.5,75,,75,,,,,,75
 1,75,B,Raw,Yes,M,Alias Gvindzhiya,Алиас Гвинджия,1997-04-09,Amateur Teen 16-17,74.2,,,,,,100,110,120,,120,,,,,,120
 1,82.5,B,Raw,Yes,M,Rishat Fattakhov,Ришат Фаттахов,1967-05-08,Amateur Masters 40-49,82.1,,,,,,140,150,160,-171,160,,,,,,160
-2,82.5,B,Raw,Yes,M,Andrey Maleshin,Андрей Малешин,1964-01-01,Amateur Masters 40-49,79.35,,,,,,110,120,125,,125,,,,,,125
+2,82.5,B,Raw,Yes,M,Andrey Maleshin,Андрей Малешин,1964-01-01,Amateur Masters 50-59,79.35,,,,,,110,120,125,,125,,,,,,125
 1,82.5,B,Raw,Yes,M,Sergey Rudenko,Сергей Руденко,1959-07-11,Amateur Masters 50-59,80.2,,,,,,147.5,155,-162.5,,155,,,,,,155
 2,82.5,B,Raw,Yes,M,Igor Volodin,Игорь Володин,1962-12-28,Amateur Masters 50-59,82,,,,,,137.5,-147.5,-147.5,,137.5,,,,,,137.5
 1,82.5,B,Raw,Yes,M,Vladimir Rybalko,Владимир Рыбалко,1987-05-04,Amateur Open,82,,,,,,155,162.5,-170,,162.5,,,,,,162.5
@@ -283,8 +283,8 @@ DQ,125,SBD,Wraps,No,M,Maksim Pogas,Максим Погас,1985-03-10,Pro Open,1
 1,67.5,D,Raw,Yes,F,Tatyana Ukhlina,Татьяна Ухлина,1971-07-19,Amateur Masters 40-49,60.7,,,,,,,,,,,110,120,-125,,120,120
 1,67.5,D,Raw,Yes,F,Tatyana Ukhlina,Татьяна Ухлина,1971-07-19,Amateur Open,60.7,,,,,,,,,,,110,120,-125,,120,120
 1,75,D,Raw,Yes,F,Alesya Semenina,Алеся Семенина,1988-01-21,Amateur Open,68,,,,,,,,,,,80,90,-100,,90,90
-1,44,D,Raw,Yes,M,Saveliy Kusmartsev,Савелий Кусмарцев,2001-12-24,Amateur Teen 14-15,39,,,,,,,,,,,80,85,90,,90,90
-1,67.5,D,Raw,Yes,M,Ramazan Rakhimyanov,Рамазан Рахимьянов,2001-05-06,Amateur Teen 14-15,64.6,,,,,,,,,,,80,85,87.5,,87.5,87.5
+1,44,D,Raw,Yes,M,Saveliy Kusmartsev,Савелий Кусмарцев,2001-12-24,Amateur Teen 13,39,,,,,,,,,,,80,85,90,,90,90
+1,67.5,D,Raw,Yes,M,Ramazan Rakhimyanov,Рамазан Рахимьянов,2001-05-06,Amateur Teen 13,64.6,,,,,,,,,,,80,85,87.5,,87.5,87.5
 1,82.5,D,Raw,Yes,M,Armen Khachaturyan,Армен Хачатурян,1978-07-18,Amateur Open,78.45,,,,,,,,,,,-190,190,200,,200,200
 1,90,D,Raw,Yes,M,Aleksandr Sytnikov,Александр Сытников,1978-08-11,Amateur Open,89.2,,,,,,,,,,,215,-225,225,,225,225
 1,100,D,Raw,Yes,M,Kyamran Ali-Zade,Кямран Али-Заде,1964-12-01,Amateur Masters 40-49,94.9,,,,,,,,,,,160,180,190,,190,190
@@ -309,7 +309,7 @@ DQ,56,SBD,Wraps,Yes,F,Veronika Liberman,Вероника Либерман,1986-0
 1,67.5,SBD,Wraps,Yes,F,Yuliya Pilipchatina,Юлия Пилипчатина,1984-09-29,Amateur Open,67.4,110,120,-125,,120,55,60,65,,65,140,160,-170,,160,345
 2,67.5,SBD,Wraps,Yes,F,Tatyana Ukhlina,Татьяна Ухлина,1971-07-19,Amateur Open,60.7,110,-117.5,-117.5,,110,50,60,-62.5,,60,110,120,-125,,120,290
 1,75,SBD,Wraps,Yes,F,Olga Kazankova,Ольга Казанкова,1979-06-26,Amateur Open,72.6,130,140,145,148,145,90,92.5,95,,95,160,165,-170.5,,165,405
-1,44,SBD,Wraps,Yes,M,Saveliy Kusmartsev,Савелий Кусмарцев,2001-12-24,Amateur Teen 14-15,39,42.5,47.5,52.5,,52.5,40,45,-47.5,,45,80,85,90,,90,187.5
+1,44,SBD,Wraps,Yes,M,Saveliy Kusmartsev,Савелий Кусмарцев,2001-12-24,Amateur Teen 13,39,42.5,47.5,52.5,,52.5,40,45,-47.5,,45,80,85,90,,90,187.5
 1,60,SBD,Wraps,Yes,M,Artem Basistov,Артем Басистов,1997-09-09,Amateur Teen 16-17,59.1,80,90,100,,100,50,57.5,60,,60,100,110,120,,120,280
 1,67.5,SBD,Wraps,Yes,M,Ivan Tashlykov,Иван Ташлыков,1997-06-03,Amateur Teen 16-17,61.75,80,90,-105,,90,80,92.5,97.5,,97.5,70,105,120,,120,307.5
 1,75,SBD,Wraps,Yes,M,Nikita Paltsev,Никита Пальцев,1992-02-21,Amateur Juniors 20-23,69.95,160,175,-180,,175,100,115,122.5,,122.5,200,220,-225,,220,517.5

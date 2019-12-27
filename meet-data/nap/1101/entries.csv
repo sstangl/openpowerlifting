@@ -10,7 +10,7 @@ Place,WeightClassKg,Name,Event,Equipment,Sex,Tested,Country,BirthDate,Division,B
 DQ,75,Inna Bessonova,SBD,Wraps,F,Yes,Russia,1988-10-25,Amateur Juniors 20-23,73.71,-105,-110,-110,,,-47.5,,,,,-115,,,,,
 1,52,Shamil Batyrkhanov,SBD,Wraps,M,Yes,Russia,1996-04-19,Amateur Teen 14-15,52,-90,90,-100,,90,55,60,-65,,60,110,120,122.5,,122.5,272.5
 2,52,Nikita Kavardin,SBD,Wraps,M,Yes,Russia,1997-04-10,Amateur Teen 14-15,48.61,70,80,82.5,,82.5,45,50,55,,55,95,105,-110,,105,242.5
-3,52,Grigory Belonosov,SBD,Wraps,M,Yes,Russia,1999-10-27,Amateur Teen 14-15,41.21,40,50,55,,55,25,27.5,30,,30,55,60,65,,65,150
+3,52,Grigory Belonosov,SBD,Wraps,M,Yes,Russia,1999-10-27,Amateur Teen 13,41.21,40,50,55,,55,25,27.5,30,,30,55,60,65,,65,150
 1,52,Denis Matveev,SBD,Wraps,M,Yes,Russia,1992-12-24,Amateur Teen 18-19,50.01,110,115,117.5,,117.5,67.5,70,72.5,,72.5,130,135,-140,,135,325
 1,56,Oleg Barskov,SBD,Wraps,M,Yes,Russia,1996-10-19,Amateur Teen 14-15,53.61,80,90,-100,,90,55,60,65,,65,125,135,142.5,,142.5,297.5
 2,56,Roman Gavrilov #2,SBD,Wraps,M,Yes,Russia,1995-10-15,Amateur Teen 14-15,53.81,90,-100,102.5,,102.5,52.5,60,65,,65,105,115,120,,120,287.5
@@ -106,14 +106,14 @@ DQ,82.5,Mikhail Evdokimov,SBD,Wraps,M,Yes,Russia,1987-10-31,Amateur Juniors 20-2
 2,67.5,Yury Kiselev,SBD,Single-ply,M,Yes,Russia,1937-11-12,Amateur Masters 70-74,64.01,100,120,,,120,60,-70,70,,70,125,150,170,,170,360
 1,67.5,Rustam Musaev,SBD,Single-ply,M,Yes,Azerbaijan,1978-09-08,Amateur Open,67.5,230,240,250,,250,60,,,,60,190,210,225,-240,225,535
 1,67.5,Alexandr Rubets,SBD,Single-ply,M,Yes,Ukraine,1996-05-11,Amateur Teen 14-15,67.41,125,132.5,140,,140,107.5,-112.5,112.5,,112.5,140,150,157.5,,157.5,410
-2,67.5,Vadim Panyakin,SBD,Single-ply,M,Yes,Russia,1997-11-19,Amateur Teen 14-15,66.51,145,155,160,,160,85,90,92.5,,92.5,140,150,-155,,150,402.5
+2,67.5,Vadim Panyakin,SBD,Single-ply,M,Yes,Russia,1997-11-19,Amateur Teen 13,66.51,145,155,160,,160,85,90,92.5,,92.5,140,150,-155,,150,402.5
 3,67.5,Alexey Krevsky,SBD,Single-ply,M,Yes,Russia,1996-02-23,Amateur Teen 14-15,66.41,-100,100,-115,,100,70,75,-80,,75,120,130,135,,135,310
 1,75,Evgeny Baranov,SBD,Single-ply,M,Yes,Russia,1972-12-03,Amateur Open,75,260,280,-300,,280,-170,170,-180,,170,230,250,,,250,700
 1,75,Mikhail Vysotsky,SBD,Single-ply,M,Yes,Russia,1996-05-24,Amateur Teen 14-15,74.91,175,190,200,,200,85,90,92.5,,92.5,145,155,165,,165,457.5
 1,82.5,Konstantin Bazhin,SBD,Single-ply,M,Yes,Russia,1967-07-26,Amateur Masters 40-44,78.21,-170,170,190,,190,117.5,-125,-125,,117.5,200,210,-215,,210,517.5
 1,82.5,Vyacheslav Piskalov,SBD,Single-ply,M,Yes,Russia,1958-10-23,Amateur Masters 50-54,81.52,260,275,285,,285,125,130,135,,135,230,240,-245,,240,660
 2,82.5,Andrey Marmoza,SBD,Single-ply,M,Yes,Russia,1959-12-12,Amateur Masters 50-54,80.51,210,225,230,,230,90,95,100,,100,180,200,205,,205,535
-1,82.5,Georgiy Lazaridi,SBD,Single-ply,M,Yes,Russia,1933-08-18,Amateur Masters 75-59,81.71,-170,170,,,170,85,90,,,90,170,180,187.5,,187.5,447.5
+1,82.5,Georgiy Lazaridi,SBD,Single-ply,M,Yes,Russia,1933-08-18,Amateur Masters 75-79,81.71,-170,170,,,170,85,90,,,90,170,180,187.5,,187.5,447.5
 1,82.5,Rinat Galeev,SBD,Single-ply,M,Yes,Russia,1974-03-28,Amateur Open,80.41,185,200,220,,220,-120,120,132.5,,132.5,150,180,,,180,532.5
 1,82.5,Kirill Shein,SBD,Single-ply,M,Yes,Russia,1994-03-13,Amateur Teen 16-17,82.31,170,190,200,,200,100,-115,-115,,100,170,185,192.5,,192.5,492.5
 1,82.5,Shukhrat Daraev,SBD,Single-ply,M,Yes,Kyrgyzstan,1993-03-03,Amateur Teen 18-19,81.61,170,,,,170,115,-130,-135,,115,150,-210,,,150,435
@@ -131,7 +131,7 @@ DQ,82.5,Mikhail Evdokimov,SBD,Wraps,M,Yes,Russia,1987-10-31,Amateur Juniors 20-2
 1,125,Vladimir Blinkov,SBD,Single-ply,M,Yes,Russia,1978-11-03,Amateur Open,117.52,340,360,380,,380,225,-232.5,232.5,,232.5,290,310,317.5,,317.5,930
 1,48,Maryana Naumova,B,Raw,F,Yes,Russia,1999-04-22,Amateur Open,47.61,,,,,,65,70,72.5,73,72.5,,,,,,72.5
 2,48,Natalya Shmakova,B,Raw,F,Yes,Russia,1987-08-25,Amateur Open,46.91,,,,,,32.5,37.5,-40,,37.5,,,,,,37.5
-1,48,Maryana Naumova,B,Raw,F,Yes,Russia,1999-04-22,Amateur Teen 14-15,47.61,,,,,,65,70,72.5,73,72.5,,,,,,72.5
+1,48,Maryana Naumova,B,Raw,F,Yes,Russia,1999-04-22,Amateur Teen 13,47.61,,,,,,65,70,72.5,73,72.5,,,,,,72.5
 1,52,Ekaterina Bulakova,B,Raw,F,Yes,Russia,1993-12-17,Amateur Teen 16-17,52,,,,,,45,50,-52.5,,50,,,,,,50
 1,56,Ziliya Chayka,B,Raw,F,Yes,Russia,1985-10-19,Amateur Open,55.91,,,,,,60,-67.5,-67.5,,60,,,,,,60
 2,56,Evgeniya Skakunova,B,Raw,F,Yes,Russia,1980-04-08,Amateur Open,55.21,,,,,,30,35,37.5,,37.5,,,,,,37.5
@@ -142,8 +142,8 @@ DQ,60,Olga Malkova,B,Raw,F,Yes,Russia,1983-07-21,Amateur Open,57.91,,,,,,-55,-55
 1,82.5,Larisa Semenova,B,Raw,F,Yes,Russia,1962-01-31,Amateur Masters 45-49,81.61,,,,,,60,70,80,,80,,,,,,80
 1,90+,Svetlana Kabaeva,B,Raw,F,Yes,Russia,1965-05-25,Amateur Masters 45-49,111.02,,,,,,80,85,87.5,90,87.5,,,,,,87.5
 1,90+,Svetlana Kabaeva,B,Raw,F,Yes,Russia,1965-05-25,Amateur Open,111.02,,,,,,80,85,87.5,90,87.5,,,,,,87.5
-1,52,Pavel Nekrasov,B,Raw,M,Yes,Russia,2001-07-22,Amateur Teen 14-15,32.8,,,,,,32.5,-35,35,,35,,,,,,35
-2,52,Georgy Glushko,B,Raw,M,Yes,Russia,2000-12-04,Amateur Teen 14-15,35.81,,,,,,20,22.5,25,,25,,,,,,25
+1,52,Pavel Nekrasov,B,Raw,M,Yes,Russia,2001-07-22,Amateur Teen 13,32.8,,,,,,32.5,-35,35,,35,,,,,,35
+2,52,Georgy Glushko,B,Raw,M,Yes,Russia,2000-12-04,Amateur Teen 13,35.81,,,,,,20,22.5,25,,25,,,,,,25
 1,52,Alexandr Galkin,B,Raw,M,Yes,Russia,1992-05-02,Amateur Teen 18-19,51.21,,,,,,75,-82.5,-82.5,,75,,,,,,75
 1,56,Ivan Trefilov,B,Raw,M,Yes,Russia,1988-09-30,Amateur Juniors 20-23,54.91,,,,,,75,80,-85,,80,,,,,,80
 1,56,Sergey Konovalov,B,Raw,M,Yes,Russia,1987-05-28,Amateur Open,54.81,,,,,,70,-72.5,72.5,,72.5,,,,,,72.5
@@ -423,7 +423,7 @@ DQ,110,Dmitry Ionov,B,Single-ply,M,Yes,Russia,1981-05-07,Amateur Open,107.42,,,,
 2,125,Stanislav Mordvinov,SBD,Wraps,M,No,Russia,1983-11-04,Pro Open,120.02,280,300,310,,310,190,200,-205,,200,290,312.5,-320,,312.5,822.5
 3,125,Alexey Yurchenko,SBD,Wraps,M,No,Russia,1988-08-19,Pro Open,117.02,-230,250,270,,270,170,180,190,,190,260,270,280,,280,740
 4,125,Shakhin Ayvazov,SBD,Wraps,M,No,Azerbaijan,1982-02-03,Pro Open,116.02,230,240,-250,,240,170,-182.5,185,,185,275,295,-315,,295,720
-1,44,Vladislava Dluzhnevskaya,B,Raw,F,No,Russia,2000-06-10,Pro Teen 14-15,44,,,,,,52.5,-57.5,57.5,-60,57.5,,,,,,57.5
+1,44,Vladislava Dluzhnevskaya,B,Raw,F,No,Russia,2000-06-10,Pro Teen 13,44,,,,,,52.5,-57.5,57.5,-60,57.5,,,,,,57.5
 1,56,Natalya Konovalova,B,Raw,F,No,Russia,1988-09-14,Pro Open,54.61,,,,,,95,102.5,-107.5,,102.5,,,,,,102.5
 2,56,Yuliya Tatyanina,B,Raw,F,No,Russia,1989-02-13,Pro Open,55.91,,,,,,82.5,87.5,90,,90,,,,,,90
 1,67.5,Evgeniya Volkova,B,Raw,F,No,Russia,1987-05-15,Pro Open,67.11,,,,,,85,90,-92.5,,90,,,,,,90
@@ -553,11 +553,11 @@ DQ,82.5,Ruslan Togoev,B,Single-ply,M,No,Russia,1993-12-01,Pro Teen 16-17,79.32,,
 1,110,Alexandr Smirnov,B,Single-ply,M,No,Russia,1982-04-14,Pro Open,105.42,,,,,,120,142.5,-145,,142.5,,,,,,142.5
 2,110,Evgeny Pastukhov,B,Single-ply,M,No,Russia,1985-05-24,Pro Open,102.02,,,,,,125,132.5,-135,,132.5,,,,,,132.5
 1,48,Darya Ulanova,B,Single-ply,F,No,Russia,1992-04-26,Pro Teen 18-19,47.61,,,,,,65,70,75,,75,,,,,,75
-1,56,Tatyana Janpoladova,B,Single-ply,F,No,Russia,1984-09-15,Pro Open,51.61,,,,,,75,82.5,-87.5,,82.5,,,,,,82.5
+1,52,Tatyana Janpoladova,B,Single-ply,F,No,Russia,1984-09-15,Pro Open,51.61,,,,,,75,82.5,-87.5,,82.5,,,,,,82.5
 1,60,Kristina Gafanova,B,Single-ply,F,No,Russia,1992-02-08,Pro Teen 18-19,56.01,,,,,,60,72.5,-75,,72.5,,,,,,72.5
 1,82.5,Irina Nikulna,B,Single-ply,F,No,Russia,1988-03-29,Pro Juniors 20-23,81.61,,,,,,120,130,135,,135,,,,,,135
 1,90+,Ame Rychlak,B,Single-ply,F,No,USA,1976-02-23,Pro Open,124.02,,,,,,125,-130,-130,,125,,,,,,125
-1,56,Semen Paley,B,Single-ply,M,No,Russia,1999-04-14,Pro Teen 14-15,44.81,,,,,,50,-53,53,55,53,,,,,,53
+1,52,Semen Paley,B,Single-ply,M,No,Russia,1999-04-14,Pro Teen 13,44.81,,,,,,50,-53,53,55,53,,,,,,53
 1,67.5,Ruslan Korotkov,B,Single-ply,M,No,Kazakhstan,1980-12-19,Pro Open,67.41,,,,,,170,180,185,,185,,,,,,185
 2,67.5,Dmitry Ovsyannikov,B,Single-ply,M,No,Russia,1981-07-24,Pro Open,66.01,,,,,,135,150,-162.5,,150,,,,,,150
 1,67.5,Vladimir Ubeyvolk,B,Single-ply,M,No,Russia,1992-08-12,Pro Teen 18-19,65.71,,,,,,150,162.5,175,,175,,,,,,175
@@ -682,6 +682,6 @@ DQ,90,Andrey Solovyev,SBD,Single-ply,M,No,Russia,1972-11-05,Pro Open,87.32,-250,
 1,110,Andrey Ayvazov,SBD,Single-ply,M,No,Russia,1982-11-07,Pro Open,105.92,-380,-410,410,,410,220,235,-240,,235,340,360,-390,,360,1005
 2,110,Alexandr Korotych,SBD,Single-ply,M,No,Ukraine,1983-07-04,Pro Open,101.22,360,370,-375,,370,255,265,270,,270,320,-345,-345,,320,960
 DQ,110,Vüsal Mardanov,SBD,Single-ply,M,No,Azerbaijan,1985-02-18,Pro Open,107.82,-320,320,335,,335,-300,300,-315,,300,-350,-371,-371,,,
-1,125,Alexandr Fedulov,SBD,Single-ply,M,No,Russia,1966-10-01,Pro Masters 45-49,113.22,265,275,280,,280,195,205,,,205,250,260,270,,270,755
+1,125,Alexandr Fedulov,SBD,Single-ply,M,No,Russia,1966-10-01,Pro Masters 40-44,113.22,265,275,280,,280,195,205,,,205,250,260,270,,270,755
 1,125,Alexandr Fedulov,SBD,Single-ply,M,No,Russia,1966-10-01,Pro Open,113.22,265,275,280,,280,195,205,,,205,250,260,270,,270,755
 DQ,140,Oleg Kuzmenko,SBD,Single-ply,M,No,Russia,1971-06-27,Pro Masters 40-44,134.62,-315,-315,-315,,,-200,,,,,-280,,,,,

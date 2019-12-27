@@ -196,7 +196,7 @@ WeightClassKg,Event,Equipment,Tested,Sex,Name,CyrillicName,BirthDate,Division,Bo
 82.5,D,Multi-ply,Yes,M,Sergey Fedoseev,Сергей Федосеев,1982-01-18,Amateur Open,77.4,,,,,,,,,,,160,170,-177.5,,170,170,1
 52,B,Raw,Yes,M,Aleksey Parfenov,Алексей Парфенов,2000-10-28,Amateur Teen 14-16,51.7,,,,,,60,65,-72.5,,65,,,,,,65,1
 56,B,Raw,Yes,M,Andrey Borodenko,Андрей Бороденко,1996-02-26,Amateur Teen 17-19,53.75,,,,,,77.5,-82.5,-82.5,,77.5,,,,,,77.5,1
-60,B,Raw,Yes,M,Dmitriy Damer,Дмитрий Дамер,2004-04-28,Amateur Teen 13-,59.25,,,,,,-45,-45,45,,45,,,,,,45,1
+60,B,Raw,Yes,M,Dmitriy Damer,Дмитрий Дамер,2004-04-28,Amateur Teen 13,59.25,,,,,,-45,-45,45,,45,,,,,,45,1
 60,B,Raw,Yes,M,Vladislav Salnikov,Владислав Сальников,2000-10-31,Amateur Teen 14-16,59.5,,,,,,-55,-60,-60,,,,,,,,,DQ
 60,B,Raw,Yes,M,Vadim Okul,Вадим Окул,1997-06-13,Amateur Teen 17-19,59.45,,,,,,97.5,-107.5,-115,,97.5,,,,,,97.5,1
 60,B,Raw,Yes,M,Denis Migachev,Денис Мигачев,1998-09-04,Amateur Teen 17-19,59.25,,,,,,90,-100,-100,,90,,,,,,90,2
@@ -326,7 +326,7 @@ WeightClassKg,Event,Equipment,Tested,Sex,Name,CyrillicName,BirthDate,Division,Bo
 52,B,Raw,Yes,F,Elena Diss,Елена Дисс,1972-01-10,Amateur Masters 40-49,50.45,,,,,,55,-60,60,,60,,,,,,60,1
 52,B,Raw,Yes,F,Natalya Melnikova,Наталья Мельникова,1979-05-24,Amateur Open,51.85,,,,,,47.5,-52.5,-52.5,,47.5,,,,,,47.5,1
 52,B,Raw,Yes,F,Elena Russkikh,Елена Русских,1986-06-09,Amateur Open,48.35,,,,,,35,37.5,40,,40,,,,,,40,2
-52,B,Raw,Yes,F,Ulyana Lukyanenko,Ульяна Лукьяненко,1999-03-02,Amateur Teen 17-19,51.75,,,,,,-52.5,-52.5,52.5,-60.5,52.5,,,,,,52.5,1
+52,B,Raw,Yes,F,Ulyana Lukyanenko,Ульяна Лукьяненко,1999-03-02,Amateur Teen 14-16,51.75,,,,,,-52.5,-52.5,52.5,-60.5,52.5,,,,,,52.5,1
 52,B,Raw,Yes,F,Svetlana Tolosheva,Светлана Толошева,1998-06-30,Amateur Teen 17-19,51,,,,,,-45,-45,-45,,,,,,,,,DQ
 56,B,Raw,Yes,F,Alena Prosunchenko,Алена Просунченко,1993-08-04,Amateur Juniors 20-23,56,,,,,,65,70,-72.5,,70,,,,,,70,1
 56,B,Raw,Yes,F,Alina Gagarina,Алина Гагарина,1995-06-14,Amateur Juniors 20-23,55.9,,,,,,57.5,60,-65,,60,,,,,,60,2
@@ -353,13 +353,13 @@ WeightClassKg,Event,Equipment,Tested,Sex,Name,CyrillicName,BirthDate,Division,Bo
 100,B,Multi-ply,Yes,M,Vladislav Mikhaylov,Владислав Михайлов,1997-07-12,Amateur Teen 17-19,98.65,,,,,,155,170,-192.5,,170,,,,,,170,2
 125,B,Multi-ply,Yes,M,Vladimir Samoylov,Владимир Самойлов,1991-05-09,Amateur Open,120.9,,,,,,210,220,-240,,220,,,,,,220,1
 67.5,B,Multi-ply,Yes,F,Darya Garaeva,Дарья Гараева,1999-10-07,Amateur Teen 14-16,61.1,,,,,,-75,-75,-75,,,,,,,,,DQ
-67.5,B,Raw,Yes,M,Ivan Revenko,Иван Ревенко,1986-04-12,Amateur Disabled Open,61.2,,,,,,82.5,90,-100,,90,,,,,,90,1
-75,B,Raw,Yes,M,Sergey Zavarukhin,Сергей Заварухин,1973-11-03,Amateur Disabled Open,70.2,,,,,,110,120,127.5,,127.5,,,,,,127.5,1
-82.5,B,Raw,Yes,M,Nikolay Vishnyakov,Николай Вишняков,1988-04-24,Amateur Disabled Open,81.55,,,,,,160,170,,,170,,,,,,170,1
-90,B,Raw,Yes,M,Nikolay Leshchenko,Николай Лещенко,1966-02-20,Amateur Disabled Masters 40-49,88.85,,,,,,150,160,,,160,,,,,,160,1
-125,B,Raw,Yes,M,Anton Ponomarev,Антон Пономарев,1992-02-12,Amateur Disabled Juniors 20-23,110.9,,,,,,170,185,-190,,185,,,,,,185,1
-125,B,Raw,Yes,M,Denis Gayduchenya,Денис Гайдученя,1980-01-19,Amateur Disabled Open,114,,,,,,130,137.5,-157.2,,137.5,,,,,,137.5,1
-52,SBD,Wraps,No,M,Sergey Kungurtsev,Сергей Кунгурцев,2002-07-27,Pro Teen 13-,51.85,80,87.5,-95,,87.5,65,70,-75,,70,100,110,117.5,,117.5,275,1
+67.5,B,Raw,Yes,M,Ivan Revenko,Иван Ревенко,1986-04-12,Disabled Open,61.2,,,,,,82.5,90,-100,,90,,,,,,90,1
+75,B,Raw,Yes,M,Sergey Zavarukhin,Сергей Заварухин,1973-11-03,Disabled Open,70.2,,,,,,110,120,127.5,,127.5,,,,,,127.5,1
+82.5,B,Raw,Yes,M,Nikolay Vishnyakov,Николай Вишняков,1988-04-24,Disabled Open,81.55,,,,,,160,170,,,170,,,,,,170,1
+90,B,Raw,Yes,M,Nikolay Leshchenko,Николай Лещенко,1966-02-20,Disabled Masters 40-49,88.85,,,,,,150,160,,,160,,,,,,160,1
+125,B,Raw,Yes,M,Anton Ponomarev,Антон Пономарев,1992-02-12,Disabled Juniors 20-23,110.9,,,,,,170,185,-190,,185,,,,,,185,1
+125,B,Raw,Yes,M,Denis Gayduchenya,Денис Гайдученя,1980-01-19,Disabled Open,114,,,,,,130,137.5,-157.2,,137.5,,,,,,137.5,1
+52,SBD,Wraps,No,M,Sergey Kungurtsev,Сергей Кунгурцев,2002-07-27,Pro Teen 13,51.85,80,87.5,-95,,87.5,65,70,-75,,70,100,110,117.5,,117.5,275,1
 60,SBD,Wraps,No,M,Anton Smirnov,Антон Смирнов,1986-03-04,Pro Open,57.9,-75,75,-85,,75,55,60,65,,65,110,120,-127.5,,120,260,1
 67.5,SBD,Wraps,No,M,Klim Markelov,Клим Маркелов,1995-01-06,Pro Juniors 20-23,64,-140,145,155,,155,95,102.5,-107.5,,102.5,190,210,,,210,467.5,1
 67.5,SBD,Wraps,No,M,Anton Koropets,Антон Коропец,1988-04-30,Pro Open,67.3,145,160,165,,165,100,110,-115,,110,180,-200,-200,,180,455,2
