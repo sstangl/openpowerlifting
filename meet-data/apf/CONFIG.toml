@@ -246,6 +246,8 @@
     msoemaapf = {name ="M_SOEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Special Olympics
     msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
     mpfraapf = {name ="M_PFR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Police/Fire
+    mpfcraapf = {name ="M_PFCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Police/Fire
+    mpfesaapf = {name ="M_PFES_AAPF",min=0,max=999,equipment="Single-ply",sex="M",tested="Yes"} #Police/Fire
     mpfemaapf = {name ="M_PFEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
     mnemaapf = {name ="M_NEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Novice
     mnraapf = {name ="M_NR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Novice
