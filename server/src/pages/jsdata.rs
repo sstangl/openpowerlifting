@@ -142,6 +142,7 @@ impl<'db> JsEntryRow<'db> {
                     entry.glossbrenner.in_format(number_format)
                 }
                 SortSelection::ByIPFPoints => entry.ipfpoints.in_format(number_format),
+                SortSelection::ByDots => entry.dots.in_format(number_format),
             },
         }
     }

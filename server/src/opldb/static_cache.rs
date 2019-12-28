@@ -300,6 +300,7 @@ pub struct ConstantTimeCache {
     pub mcculloch: ConstantTimeBy,
     pub glossbrenner: ConstantTimeBy,
     pub ipfpoints: ConstantTimeBy,
+    pub dots: ConstantTimeBy,
 }
 
 impl ConstantTimeCache {
@@ -341,6 +342,7 @@ impl ConstantTimeCache {
                 &cmp_ipfpoints,
                 &filter_ipfpoints,
             ),
+            dots: ConstantTimeBy::new(loglin, mv, ev, &cmp_dots, &filter_dots),
         }
     }
 }

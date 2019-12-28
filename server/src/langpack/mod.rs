@@ -401,6 +401,7 @@ pub struct ColumnTranslations {
     pub mcculloch: String,
     pub glossbrenner: String,
     pub ipfpoints: String,
+    pub dots: String,
     pub num_lifters: String,
 }
 

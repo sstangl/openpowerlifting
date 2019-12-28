@@ -6,6 +6,7 @@
     <option value="by-total" {% if selection.sort == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.sort.points}}">
+    <option value="by-dots" {% if selection.sort == "ByDots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
     <option value="by-glossbrenner" {% if selection.sort == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
     <option value="by-ipf-points" {% if selection.sort == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
     <option value="by-mcculloch" {% if selection.sort == "ByMcCulloch" %}selected{% endif %}>{{strings.selectors.sort.by_mcculloch}}</option>
