@@ -170,6 +170,10 @@ pub enum MetaFederation {
     #[strum(to_string = "bvdk")]
     BVDK,
 
+    /// CPU, but with international results also.
+    #[strum(to_string = "cpu")]
+    CPU,
+
     /// FRPL, but with international results also.
     #[strum(to_string = "frpl")]
     FRPL,
@@ -402,6 +406,16 @@ impl MetaFederation {
                 }
                 Federation::IPF | Federation::EPF => {
                     entry.lifter_country == Some(Country::Germany)
+                }
+                _ => false,
+            },
+            MetaFederation::CPU => match meet.federation {
+                Federation::CPU => {
+                    entry.lifter_country == None
+                        || entry.lifter_country == Some(Country::Canada)
+                }
+                Federation::IPF | Federation::NAPF | Federation::CommonwealthPF => {
+                    entry.lifter_country == Some(Country::Canada)
                 }
                 _ => false,
             },
