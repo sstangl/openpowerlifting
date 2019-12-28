@@ -95,10 +95,7 @@ const weightClassToKg = (wtcls: string, csv: Csv, rowIndex: number): string | un
 // On success, returns the new Csv.
 // On failure, returns a string describing the error.
 export const csvToKg = (source: Csv): Csv | string => {
-  // Make a shallow copy of the source CSV.
-  const csv = new Csv();
-  csv.fieldnames = source.fieldnames.slice();
-  csv.rows = source.rows.slice();
+  const csv = source.shallowClone();
 
   // Check for prerequisites.
   if (csv.index("Sex") < 0) {

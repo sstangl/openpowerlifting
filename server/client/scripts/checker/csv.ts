@@ -77,6 +77,13 @@ export class Csv {
     this.rows = [];
   }
 
+  shallowClone(): Csv {
+    let csv = new Csv();
+    csv.fieldnames = this.fieldnames.slice();
+    csv.rows = this.rows.slice();
+    return csv;
+  }
+
   length(): number {
     return this.rows.length;
   }
