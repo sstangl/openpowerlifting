@@ -183,6 +183,10 @@
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
   <option value="wpc-france" {% if selection.federation == "WPC-France" %}selected{% endif %}>WPC France</option>
 </optgroup>
+<optgroup label="{{strings.country.georgia}}">
+  <option value="all-georgia" {% if selection.federation == "AllGeorgia" %}selected{% endif %}>{{strings.selectors.fed.all_georgia}}</option>
+  <option value="wpa-geo" {% if selection.federation == "WPA-GEO" %}selected{% endif %}>WPA-GEO - WPA Georgia</option>
+</optgroup>
 <optgroup label="{{strings.country.germany}}">
   <option value="all-germany" {% if selection.federation == "AllGermany" %}selected{% endif %}>{{strings.selectors.fed.all_germany}}</option>
   <option value="bvdk" {% if selection.federation == "BVDK" %}selected{% endif %}>BVDK - Bundesverband Deutscher Kraftdreikämpf [IPF]</option>

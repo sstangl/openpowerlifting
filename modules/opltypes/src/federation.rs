@@ -937,6 +937,11 @@ pub enum Federation {
     #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
 
+    /// World Powerlifting Alliance Georgia.
+    #[serde(rename = "WPA-GEO")]
+    #[strum(to_string = "WPA-GEO", serialize = "wpa-geo")]
+    WPAGEO,
+
     /// World Powerlifting Alliance Russia.
     #[serde(rename = "WPA-RUS")]
     #[strum(to_string = "WPA-RUS", serialize = "wpa-rus")]
@@ -1393,6 +1398,7 @@ impl Federation {
             Federation::WNPF => FULLY_TESTED,
             Federation::WP => FULLY_TESTED,
             Federation::WPA => false,
+            Federation::WPAGEO => false,
             Federation::WPARUS => false,
             Federation::WPAU => false,
             Federation::WBC => false,
@@ -1666,6 +1672,7 @@ impl Federation {
             Federation::WelshPA => Some(Country::Wales),
             Federation::WP => None,
             Federation::WPA => None,
+            Federation::WPAGEO => Some(Country::Georgia),
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
@@ -1973,6 +1980,7 @@ impl Federation {
             Federation::WelshPA => Some(Federation::IPF),
             Federation::WP => Some(Federation::WP),
             Federation::WPA => None,
+            Federation::WPAGEO => Some(Federation::WPA),
             Federation::WPARUS => Some(Federation::WPA),
             Federation::WPAU => None,
             Federation::WPC => Some(Federation::WPC),
@@ -2271,6 +2279,7 @@ impl Federation {
             Federation::WelshPA => Federation::ipf_rules_on(date),
             Federation::WP => PointsSystem::Wilks,
             Federation::WPA => PointsSystem::Wilks,
+            Federation::WPAGEO => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,
             Federation::WPAU => PointsSystem::Wilks,
             Federation::WPC => PointsSystem::Glossbrenner,
