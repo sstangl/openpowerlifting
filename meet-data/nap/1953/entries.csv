@@ -1,0 +1,72 @@
+Sex,Name,CyrillicName,Event,Equipment,WeightClassKg,Tested,Division,Squat1Kg,Squat2Kg,Squat3Kg,Bench1Kg,Bench2Kg,Bench3Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
+F,Ekaterina Udovenko,Екатерина Удовенко,SBD,Wraps,75,Yes,Amateur Teen 14-15,80,85,90,37.5,40,42.5,70,75,80,90,42.5,80,212.5,1
+F,Olga Gusakova,Ольга Гусакова,SBD,Raw,56,Yes,Amateur Open,80,-85,-85,40,-50,50,85,90,-92.5,80,50,90,220,1
+F,Aleksandra Nikitina,Александра Никитина,SBD,Raw,60,Yes,Amateur Open,-80,80,-90,50,-60,-60,90,100,112.5,80,50,112.5,242.5,1
+F,Natik Ilgar Ogly Dzhafarov,Натик Ильгар Оглы Джафаров,SBD,Raw,82.5,Yes,Amateur Teen 16-17,-80,85,-95,65,70,-75,100,115,122.5,85,70,122.5,277.5,1
+M,Andrey Katanov,Андрей Катанов,SBD,Raw,60,Yes,Amateur Teen 16-17,90,95,97.5,65,70,75,120,125,127.5,97.5,75,127.5,300,2
+M,Matvey Burdastov,Матвей Бурдастов,SBD,Raw,90,Yes,Amateur Teen 14-15,90,100,105,65,70,72.5,110,117.5,125,105,72.5,125,302.5,1
+M,Viktor Sharabarin,Виктор Шарабарин,SBD,Raw,60,Yes,Amateur Teen 16-17,100,110,120,80,87.5,90,120,135,-140,120,90,135,345,1
+M,Kirill Sergeev,Кирилл Сергеев,SBD,Raw,82.5,Yes,Amateur Teen 18-19,-135,135,147.5,97.5,102.5,-107.5,135,145,-152.5,147.5,102.5,145,395,1
+M,Ivan Dobromil,Иван Добромиль,SBD,Raw,82.5,Yes,Amateur Teen 14-15,150,160,170,105,110,-115,155,165,170,170,110,170,450,1
+M,Aleksandr Taraev,Александр Тараев,SBD,Raw,75,Yes,Amateur Juniors 20-23,160,-170,-170,110,120,-130,190,-200,200,160,120,200,480,1
+M,Aleksandr Li,Александр Ли,SBD,Raw,67.5,Yes,Amateur Open,180,190,-202.5,120,130,140,190,210,-237.5,190,140,210,540,1
+M,Artem Dovzhenko,Артем Довженко,SBD,Raw,110,Yes,Amateur Teen 16-17,185,192.5,-200,125,132.5,140,190,200,210,192.5,140,210,542.5,1
+F,Aleksandra Nikitina,Александра Никитина,S,Raw,60,Yes,Amateur Open,-80,80,-90,,,,,,,80,,,80,2
+F,Kristina Konyushenko,Кристина Конюшенко,S,Raw,60,Yes,Amateur Open,85,92.5,95,,,,,,,95,,,95,1
+M,Aleksey Starkov,Алексей Старков,SBD,Raw,75,No,Pro Open,155,165,-170,130,-135,-135,200,207.5,212.5,165,130,212.5,507.5,1
+M,Vyacheslav Goncharov,Вячеслав Гончаров,SBD,Single-ply,90,No,Pro Juniors 20-23,200,220,230,155,-165,-165,190,210,-230,230,155,210,595,1
+M,Mikhail Sizykh,Михаил Сизых,SBD,Multi-ply,100,No,Pro Open,230,240,-250,210,220,230,240,-250,,240,230,240,710,2
+M,Stanislav Ovcharov,Станислав Овчаров,SBD,Multi-ply,100,No,Pro Open,270,300,-305,230,250,255,260,-270,-270,300,255,260,815,1
+M,Vadim Rukavishnikov,Вадим Рукавишников,SBD,Single-ply,100,No,Pro Open,-250,-250,250,-175,175,180,240,250,260,250,180,260,690,1
+F,Aleksandra Nikitina,Александра Никитина,D,Raw,60,Yes,Amateur Open,,,,,,,90,100,112.5,,,112.5,112.5,3
+F,Elena Balabanova,Елена Балабанова,D,Raw,60,Yes,Amateur Open,,,,,,,-80,90,105,,,105,105,4
+F,Tatyana Sorina,Татьяна Сорина,D,Raw,52,Yes,Amateur Open,,,,,,,85,90,,,,90,90,1
+F,Yuliya Dmitrieva,Юлия Дмитриева,D,Raw,60,Yes,Amateur Open,,,,,,,102.5,-112.5,-112.5,,,102.5,102.5,5
+F,Yuliya Grigoreva,Юлия Григорьева,D,Raw,67.5,Yes,Amateur Teen 18-19,,,,,,,90,105,-120,,,105,105,1
+F,Anzhelika Khozyaykina,Анжелика Хозяйкина,D,Raw,56,Yes,Amateur Masters 45-49,,,,,,,105,115,-117.5,,,115,115,1
+F,Anna Populova,Анна Популова,D,Raw,60,Yes,Amateur Juniors 20-23,,,,,,,-100,100,-107.5,,,100,100,1
+F,Kristina Konyushenko,Кристина Конюшенко,D,Raw,60,Yes,Amateur Open,,,,,,,105,112.5,120,,,120,120,2
+F,Elizaveta Likhovod,Елизавета Лиховод,D,Raw,60,Yes,Amateur Open,,,,,,,100,-107.5,-107.5,,,100,100,6
+M,Vladimir Gorbunov,Владимир Горбунов,D,Raw,60,Yes,Amateur Teen 16-17,,,,,,,110,120,-125,,,120,120,1
+F,Vera Moskvitina,Вера Москвитина,D,Raw,60,Yes,Amateur Open,,,,,,,120,130,-132.5,,,130,130,1
+F,Vera Moskvitina,Вера Москвитина,D,Raw,60,Yes,Amateur Teen 18-19,,,,,,,120,130,-132.5,,,130,130,1
+M,Danil Starovoytov,Данил Старовойтов,D,Raw,75,Yes,Amateur Teen 16-17,,,,,,,130,140,150,,,150,150,1
+M,Anatoliy Lonki,Анатолий Лонки,D,Raw,90,Yes,Amateur Juniors 20-23,,,,,,,-200,225,-245,,,225,225,1
+M,Anatoliy Lonki,Анатолий Лонки,D,Raw,90,Yes,Amateur Open,,,,,,,-200,225,-245,,,225,225,1
+M,Sergey Glebov,Сергей Глебов,D,Raw,75,Yes,Amateur Open,,,,,,,205,-210,-212.5,,,205,205,1
+M,Eduard Dolgopolov,Эдуард Долгополов,D,Raw,82.5,Yes,Amateur Masters 40-44,,,,,,,220,230,-240,,,230,230,1
+M,Eduard Dolgopolov,Эдуард Долгополов,D,Raw,82.5,Yes,Amateur Open,,,,,,,220,230,-240,,,230,230,1
+M,Aleksey Polyakov,Алексей Поляков,D,Raw,90,Yes,Amateur Masters 40-44,,,,,,,225,235,-242.5,,,235,235,1
+M,Konstantin Dzyuba,Константин Дзюба,D,Raw,75,No,Pro Open,,,,,,,220,230,-235,,,230,230,1
+F,Viktoriya Protsenko,Виктория Проценко,B,Raw,48,Yes,Amateur Open,,,,42.5,47.5,-52.5,,,,,47.5,,47.5,1
+M,Danil Georgievskiy,Данил Георгиевский,B,Raw,56,Yes,Amateur Teen 14-15,,,,45,-55,55,,,,,55,,55,1
+F,Anzhelika Khozyaykina,Анжелика Хозяйкина,B,Raw,56,Yes,Amateur Masters 45-49,,,,50,55,-57.5,,,,,55,,55,1
+F,Aleksandra Nikitina,Александра Никитина,B,Raw,60,Yes,Amateur Open,,,,50,-60,-60,,,,,50,,50,1
+F,Vera Moskvitina,Вера Москвитина,B,Raw,60,Yes,Amateur Teen 18-19,,,,60,-65,-65,,,,,60,,60,1
+M,Aleksey Teslenko,Алексей Тесленко,B,Raw,82.5,Yes,Amateur Masters 40-44,,,,-85,-85,85,,,,,85,,85,1
+M,Nikolay Rachuk,Николай Рачук,B,Raw,82.5,Yes,Amateur Juniors 20-23,,,,115,-125,-125,,,,,115,,115,1
+M,Viktor Solovev,Виктор Соловьев,B,Raw,82.5,Yes,Amateur Open,,,,125,130,-132.5,,,,,130,,130,4
+M,Nikita Shalamov,Никита Шаламов,B,Raw,67.5,Yes,Amateur Open,,,,135,-140,140,,,,,140,,140,1
+M,Sergey Kovalenko,Сергей Коваленко,B,Raw,90,Yes,Amateur Juniors 20-23,,,,135,140,145,,,,,145,,145,1
+M,Andrey Nezhinskiy,Андрей Нежинский,B,Raw,82.5,Yes,Amateur Open,,,,142.5,150,155,,,,,155,,155,2
+M,Vitaliy Kravchenko,Виталий Кравченко,B,Raw,90,Yes,Amateur Open,,,,145,150,155,,,,,155,,155,1
+M,Maksim Simkachev,Максим Симкачев,B,Raw,100,Yes,Amateur Masters 40-44,,,,150,160,-167.5,,,,,160,,160,1
+M,Aleksandr Mun,Александр Мун,B,Raw,82.5,Yes,Amateur Open,,,,155,-167.5,-167.5,,,,,155,,155,3
+M,Petr Nazarenko,Петр Назаренко,B,Raw,82.5,Yes,Amateur Open,,,,165,170,175,,,,,175,,175,1
+M,Radislav Revutskiy,Радислав Ревуцкий,B,Single-ply,90,Yes,Amateur Open,,,,-170,170,-177.5,,,,,170,,170,1
+M,Denis Posazhennikov,Денис Посаженников,B,Single-ply,100,Yes,Amateur Masters 40-44,,,,205,-207.5,-210,,,,,205,,205,1
+M,Elmin Elgar Ogly Mustafaev,Эльмин Эльгар Оглы Мустафаев,B,Multi-ply,82.5,Yes,Amateur Open,,,,170,200,-210,,,,,200,,200,1
+M,Yuriy Shatalov,Юрий Шаталов,B,Multi-ply,75,Yes,Amateur Open,,,,-210,-210,-210,,,,,,,,DQ
+M,Nshan Agababyan,Ншан Агабабян,B,Multi-ply,110,Yes,Amateur Open,,,,280,-300,325,,,,,325,,325,1
+M,Ivan Demchenko,Іван Демченко,B,Raw,56,No,Pro Open,,,,110,-117.5,,,,,,110,,110,1
+M,Artur Vlasov,Артур Власов,B,Raw,75,No,Pro Teen 16-17,,,,75,80,-85,,,,,80,,80,1
+M,Aleksandr Kozlovskiy,Александр Козловский,B,Raw,90,No,Pro Open,,,,140,145,-152.5,,,,,145,,145,2
+M,Vyacheslav Goncharov,Вячеслав Гончаров,B,Raw,90,No,Pro Juniors 20-23,,,,155,-165,-165,,,,,155,,155,1
+M,Aleksandr Kutuzov,Александр Кутузов,B,Raw,125,No,Pro Open,,,,192.5,200,-205,,,,,200,,200,1
+M,Anton Terentev,Антон Терентьев,B,Raw,110,No,Pro Open,,,,200,-205,-210,,,,,200,,200,3
+M,Vadim Bogdanov,Вадим Богданов,B,Raw,82.5,No,Pro Open,,,,230,250,-267.5,,,,,250,,250,1
+M,Ivan Klimenko,Иван Клименко,B,Raw,100,No,Pro Open,,,,250,-280,-280,,,,,250,,250,1
+M,Khurshed Khochiboev,Хуршед Хочибоев,B,Raw,110,No,Pro Open,,,,250,270,290,,,,,290,,290,2
+M,Yaroslav Fedorchak,Ярослав Федорчак,B,Raw,110,No,Pro Masters 50-54,,,,270,-290,300,,,,,300,,300,1
+M,Yaroslav Fedorchak,Ярослав Федорчак,B,Raw,110,No,Pro Open,,,,270,-290,300,,,,,300,,300,1
+M,Ivan Troyanov,Иван Троянов,B,Raw,90,No,Pro Open,,,,300,-330,-330,,,,,300,,300,1

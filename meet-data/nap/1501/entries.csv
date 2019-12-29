@@ -2,7 +2,7 @@ Place,WeightClassKg,Name,CyrillicName,Sex,Event,Equipment,Country,BirthDate,Divi
 1,90+,Svetlana Kostareva,Светлана Костарева,F,D,Raw,Russia,1979-08-20,Disabled Open,101.05,,,,,,,,,,,70,80,85,90,85,85
 1,75,Anna Tupitsyna,Анна Тупицына,F,SBD,Wraps,Russia,1992-12-06,Disabled Juniors 20-23,72.55,35,55,60,,60,40,50,52.5,55,52.5,65,75,90,92.5,90,202.5
 1,90+,Irina Rusakova,Ирина Русакова,F,SBD,Wraps,Russia,1996-06-07,Disabled Teen 18-19,97.15,25,30,35,,35,30,-35,35,,35,50,60,65,70,65,135
-1,44,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,D,Raw,Russia,2001-07-29,Disabled Teen 14-15,42.85,,,,,,,,,,,65,75,85,,85,85
+1,52,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,D,Raw,Russia,2001-07-29,Disabled Teen 14-15,42.85,,,,,,,,,,,65,75,85,,85,85
 2,44,Aleksey Semyannikov,Алексей Семянников,M,D,Raw,Russia,2001-12-04,Disabled Teen 13,39.3,,,,,,,,,,,70,75,82.5,,82.5,82.5
 1,48,Aleksandr Usorov,Александр Усоров,M,D,Raw,Russia,2001-11-14,Disabled Teen 13,46.35,,,,,,,,,,,75,85,90,,90,90
 1,52,Dmitriy Kochiev,Дмитрий Кочиев,M,D,Raw,Russia,1992-05-23,Disabled Juniors 20-23,51.6,,,,,,,,,,,137.5,145,152.5,155,152.5,152.5
@@ -32,7 +32,7 @@ DQ,52,Oleg Nesterov,Олег Нестеров,M,D,Raw,Russia,1992-11-12,Disabled
 1,100,Andrey Ladeyshchikov,Андрей Ладейщиков,M,D,Raw,Russia,1984-10-27,Disabled Open,97,,,,,,,,,,,225,-240,-240,,225,225
 2,100,Kirill Isaev,Кирилл Исаев,M,D,Raw,Russia,1987-06-01,Disabled Open,92.45,,,,,,,,,,,170,182.5,190,,190,190
 1,110,Sergey Mikushin,Сергей Микушин,M,D,Raw,Russia,1984-01-20,Disabled Open,104.8,,,,,,,,,,,195,-207.5,-207.5,,195,195
-1,44,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,SBD,Wraps,Russia,2001-07-29,Disabled Teen 14-15,42.85,45,55,60,,60,25,35,-40,,35,65,75,85,,85,180
+1,52,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,SBD,Wraps,Russia,2001-07-29,Disabled Teen 14-15,42.85,45,55,60,,60,25,35,-40,,35,65,75,85,,85,180
 2,44,Aleksey Semyannikov,Алексей Семянников,M,SBD,Wraps,Russia,2001-12-04,Disabled Teen 13,39.3,50,-60,60,,60,30,35,-45,,35,70,75,82.5,,82.5,177.5
 1,48,Aleksandr Usorov,Александр Усоров,M,SBD,Wraps,Russia,2001-11-14,Disabled Teen 13,46.35,50,-65,-65,,50,40,50,-55,,50,75,85,90,,90,190
 1,52,Dmitriy Kochiev,Дмитрий Кочиев,M,SBD,Wraps,Russia,1992-05-23,Disabled Juniors 20-23,51.6,92.5,100,105,-107.5,105,71,-75,-75,,71,137.5,145,152.5,155,152.5,328.5
@@ -64,13 +64,13 @@ DQ,52,Oleg Nesterov,Олег Нестеров,M,D,Raw,Russia,1992-11-12,Disabled
 1,90+,Svetlana Kabaeva,Светлана Кабаева,F,B,Raw,Russia,1965-05-25,Disabled Masters 50-54,100,,,,,,45,60,67.5,72.5,67.5,,,,,,67.5
 1,90+,Svetana Kostareva,Светана Костарева,F,B,Raw,Russia,1979-08-20,Disabled Open,101.05,,,,,,30,35,45,47.5,45,,,,,,45
 1,44,Aleksey Semyannikov,Алексей Семянников,M,B,Raw,Russia,2001-12-04,Disabled Teen 13,39.3,,,,,,30,35,-45,,35,,,,,,35
-2,44,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,B,Raw,Russia,2001-07-29,Disabled Teen 14-15,42.85,,,,,,25,35,-40,,35,,,,,,35
-1,48,Arsentiy Belnitskiy,Арсентий Бельницкий,M,B,Raw,Russia,1991-05-21,Disabled Open,46.85,,,,,,75,77.5,80,-82.5,80,,,,,,80
+2,52,Vadim Nigamatzyanov,Вадим Нигаматзянов,M,B,Raw,Russia,2001-07-29,Disabled Teen 14-15,42.85,,,,,,25,35,-40,,35,,,,,,35
+1,52,Arsentiy Belnitskiy,Арсентий Бельницкий,M,B,Raw,Russia,1991-05-21,Disabled Open,46.85,,,,,,75,77.5,80,-82.5,80,,,,,,80
 1,48,Aleksandr Usorov,Александр Усоров,M,B,Raw,Russia,2001-11-14,Disabled Teen 13,46.35,,,,,,40,50,-55,,50,,,,,,50
-DQ,48,Oleg Nesterov,Олег Нестеров,M,B,Raw,Russia,1992-11-12,Disabled Juniors 20-23,47,,,,,,-70,,,,,,,,,,
-DQ,48,Aleksandr Khudyakov,Александр Худяков,M,B,Raw,Russia,1998-09-25,Disabled Teen 16-17,48,,,,,,-37.5,,,,,,,,,,
-DQ,48,Aleksandr Semyonov,Александр Семёнов,M,B,Raw,Russia,1997-03-22,Disabled Teen 18-19,47.5,,,,,,-45,,,,,,,,,,
-1,48,Pavel Evstefeev,Павел Евстефеев,M,B,Raw,Russia,1997-05-16,Disabled Teen 18-19,44.35,,,,,,60,-65,65,-73,65,,,,,,65
+DQ,52,Oleg Nesterov,Олег Нестеров,M,B,Raw,Russia,1992-11-12,Disabled Juniors 20-23,47,,,,,,-70,,,,,,,,,,
+DQ,52,Aleksandr Khudyakov,Александр Худяков,M,B,Raw,Russia,1998-09-25,Disabled Teen 16-17,48,,,,,,-37.5,,,,,,,,,,
+DQ,52,Aleksandr Semyonov,Александр Семёнов,M,B,Raw,Russia,1997-03-22,Disabled Teen 18-19,47.5,,,,,,-45,,,,,,,,,,
+1,52,Pavel Evstefeev,Павел Евстефеев,M,B,Raw,Russia,1997-05-16,Disabled Teen 18-19,44.35,,,,,,60,-65,65,-73,65,,,,,,65
 1,52,Dmitriy Kochiev,Дмитрий Кочиев,M,B,Raw,Russia,1992-05-23,Disabled Juniors 20-23,51.6,,,,,,71,-75,-75,,71,,,,,,71
 1,56,Nikita Smyshlyaev,Никита Смышляев,M,B,Raw,Russia,1995-05-17,Disabled Juniors 20-23,56,,,,,,95,-100,100,,100,,,,,,100
 2,56,Dmitriy Finogenov,Дмитрий Финогенов,M,B,Raw,Russia,1993-08-22,Disabled Juniors 20-23,55.2,,,,,,45,50,57.5,,57.5,,,,,,57.5
@@ -83,7 +83,7 @@ DQ,48,Aleksandr Semyonov,Александр Семёнов,M,B,Raw,Russia,1997-0
 1,60,Vitaliy Zhuravlev,Виталий Журавлев,M,B,Raw,Russia,1992-11-12,Disabled Juniors 20-23,57.2,,,,,,85,92.5,95,,95,,,,,,95
 1,60,Eduard Aleksanov,Эдуард Алексанов,M,B,Raw,Russia,1973-06-15,Disabled Masters 40-44,56.85,,,,,,50,52.5,-55,,52.5,,,,,,52.5
 1,60,Aleksandr Trikin,Александр Трикин,M,B,Raw,Russia,1983-09-07,Disabled Open,58.5,,,,,,95,-100,-100,,95,,,,,,95
-2,60,Igor Simanov,Игорь Симанов,M,B,Raw,Russia,1980-07-17,Disabled Open,55.9,,,,,,-85,85,90,,90,,,,,,90
+2,56,Igor Simanov,Игорь Симанов,M,B,Raw,Russia,1980-07-17,Disabled Open,55.9,,,,,,-85,85,90,,90,,,,,,90
 3,60,Vladimir Sergeev,Владимир Сергеев,M,B,Raw,Russia,1985-10-15,Disabled Open,58.75,,,,,,65,70,-72.5,,70,,,,,,70
 4,60,Ivan Trifanov,Иван Трифанов,M,B,Raw,Russia,1990-01-02,Disabled Open,58.45,,,,,,55,65,-75,,65,,,,,,65
 5,60,Aleksandr Zdravomyslov,Александр Здравомыслов,M,B,Raw,Russia,1980-04-16,Disabled Open,57.4,,,,,,-60,60,62.5,,62.5,,,,,,62.5
@@ -875,8 +875,8 @@ DQ,60,Elena Shirokova,Елена Широкова,F,B,Raw,Russia,,Amateur Open,5
 2,75,Elena Chepkaya,Елена Чепкая,F,B,Raw,Russia,,Amateur Open,72.2,,,,,,75,77.5,80,,80,,,,,,80
 1,82.5,Valeriya Artemchuk,Валерия Артемчук,F,B,Raw,Russia,,Amateur Open,78.1,,,,,,60,-62.5,-62.5,,60,,,,,,60
 1,90,Gulbanu Shaymardanova,Гульбану Шаймарданова,F,B,Raw,Russia,,Amateur Masters 45-49,84.65,,,,,,47.5,52.5,57.5,,57.5,,,,,,57.5
-1,44,Artem Sultanov,Артем Султанов,M,B,Raw,Russia,,Amateur Teen 14-15,22.5,,,,,,30,-32.5,-32.5,,30,,,,,,30
-2,44,Nikita Korobenikov,Никита Коробеников,M,B,Raw,Russia,,Amateur Teen 14-15,27.3,,,,,,20,22.5,25,,25,,,,,,25
+1,52,Artem Sultanov,Артем Султанов,M,B,Raw,Russia,,Amateur Teen 14-15,22.5,,,,,,30,-32.5,-32.5,,30,,,,,,30
+2,52,Nikita Korobenikov,Никита Коробеников,M,B,Raw,Russia,,Amateur Teen 14-15,27.3,,,,,,20,22.5,25,,25,,,,,,25
 1,52,Daniil Semerkov,Даниил Семерков,M,B,Raw,Russia,,Amateur Juniors 20-23,51.7,,,,,,62,67.5,-70,,67.5,,,,,,67.5
 1,52,Denis Gnezdilov,Денис Гнездилов,M,B,Raw,Russia,,Amateur Open,52,,,,,,130,-135,135,,135,,,,,,135
 1,52,Dmitriy Lebedev,Дмитрий Лебедев,M,B,Raw,Russia,,Amateur Teen 14-15,51.35,,,,,,60,65,67.5,,67.5,,,,,,67.5
