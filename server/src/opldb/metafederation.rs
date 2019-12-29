@@ -301,7 +301,7 @@ impl MetaFederation {
             MetaFederation::AllDenmark => is_from(Country::Denmark, entry, meet),
             MetaFederation::AllFinland => is_from(Country::Finland, entry, meet),
             MetaFederation::AllFrance => is_from(Country::France, entry, meet),
-            MetaFederation::AllGeorgia => is_from(Country::Germany, entry, meet),
+            MetaFederation::AllGeorgia => is_from(Country::Georgia, entry, meet),
             MetaFederation::AllGermany => is_from(Country::Germany, entry, meet),
             MetaFederation::AllGreece => is_from(Country::Greece, entry, meet),
             MetaFederation::AllHongKong => is_from(Country::HongKong, entry, meet),
