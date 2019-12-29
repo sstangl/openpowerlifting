@@ -108,7 +108,6 @@ export const csvToKg = (source: Csv): Csv | string => {
       continue;
     }
 
-
     // Convert all the rows.
     if (lower.includes("weightclass")) {
       // Weightclasses get special handling.

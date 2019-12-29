@@ -44,6 +44,7 @@ label {
   <br/>
   <div><b>NEW!</b> Copy/pasting works from spreadsheet software.</div>
   <div><b>NEW!</b> There's a handy button to auto-convert to Kg.</div>
+  <div><b>NEW!</b> There's a button that auto-(re)calculates the Place column.</div>
   <br/>
 
   <button id="checkButton">Check</button>
@@ -59,6 +60,7 @@ label {
 
   <pre id="entriesErrorPre"></pre>
   <button id="toKgButton">Convert to Kg</button>
+  <button id="calcPlaceButton">Calculate Place</button>
   <label for="entries">entries.csv:</label>
   <textarea id="entriesTextArea" name="entries" rows="16" cols="120"></textarea>
 </body>
