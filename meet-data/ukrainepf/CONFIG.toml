@@ -1,3 +1,5 @@
+# Configuration for UkrainePF
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     disabled = {name ="Disabled",min=0,max=999}
@@ -119,6 +121,7 @@
     1603 = ["ExemptWeightClassConsistency"]
     1604 = ["ExemptWeightClassConsistency"]
     1010 = ["ExemptWeightClassConsistency"]
+    1012 = ["ExemptWeightClassConsistency"] # Didn't use 52kg class.
     1003 = ["ExemptWeightClassConsistency"]
     1210 = ["ExemptWeightClassConsistency"]
     1411 = ["ExemptWeightClassConsistency"]
