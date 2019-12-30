@@ -321,6 +321,9 @@ def consume_first_column(csv):
                 event = 'BD'
             elif row[0] == "DEADLIFT ONLY":
                 event = 'D'
+            elif row[0] == "EQUIPPED BENCH PRESS":
+                event = 'B'
+                equipment = 'Single-ply'
             else:
                 error("Unknown state change in first column: \"%s\"" % row[0])
 
