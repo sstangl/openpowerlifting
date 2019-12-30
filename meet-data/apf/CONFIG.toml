@@ -653,7 +653,7 @@
     1758 = ["ExemptAge"] # Guest lifter of age 4.
     1914 = ["ExemptWeightClassConsistency"] # Some ages were entered as bodyweights.
     1702 = ["ExemptDivision"] # Different High School divisions
-    1847 = ["ExemptDivision"] # WPO
+    1847 = ["ExemptWeightClassConsistency", "ExemptDivision"] # WPO, light, middle, and heavyweight classes.
     0701 = ["ExemptWeightClassConsistency"] # Missing weightclasses
     1101 = ["ExemptWeightClassConsistency"] # Missing weightclasses
     1401 = ["ExemptWeightClassConsistency"] # Missing weightclasses
