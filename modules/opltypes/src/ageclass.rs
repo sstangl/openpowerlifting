@@ -1,6 +1,6 @@
 //! Defines the `AgeClass` field for the `entries` table.
 
-use crate::Age;
+use crate::{Age, AgeRange};
 
 /// The AgeClass used by the server for partitioning into age categories.
 #[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
@@ -58,11 +58,11 @@ pub enum AgeClass {
     None,
 }
 
-impl AgeClass {
+impl From<Age> for AgeClass {
     /// Assign an AgeClass based on Age.
     ///
     /// Ambiguous cases get assigned to the pessimal class (closest to Senior).
-    pub fn from_age(age: Age) -> AgeClass {
+    fn from(age: Age) -> AgeClass {
         let (min, max) = match age {
             Age::Exact(n) => (n, n),
             Age::Approximate(n) => (n, n + 1),
@@ -99,20 +99,72 @@ impl AgeClass {
             }
         }
     }
+}
 
-    /// Assign an AgeClass based on a range of Ages.
-    ///
-    /// The range generally comes from a configured Division.
-    ///
-    /// TODO: Note that because of the limitation in AgeClass, this cannot
-    /// TODO: handle Divisions like 40-49.
-    pub fn from_range(min: Age, max: Age) -> AgeClass {
-        let class_min = AgeClass::from_age(min);
-        let class_max = AgeClass::from_age(max);
+impl From<AgeRange> for AgeClass {
+    /// Assign an AgeClass based on a known AgeRange.
+    fn from(range: AgeRange) -> AgeClass {
+        let class_min = AgeClass::from(range.min);
+        let class_max = AgeClass::from(range.max);
+
+        // If both ends of the range agree, return that AgeClass.
         if class_min == class_max {
-            class_min
-        } else {
-            AgeClass::None
+            return class_min;
         }
+
+        // If the lower range is unbounded, don't guess.
+        // An unbounded upper range can be OK for "Masters 40+".
+        if range.min.is_none() {
+            return AgeClass::None;
+        }
+
+        // If the distance between the max and min is smallish, round toward 30.
+        if range.distance().unwrap_or(100) <= 4 {
+            // Safe because distance() is only well-defined if not Age::None.
+            if range.max.to_u8_option().unwrap_or(30) < 30 {
+                return AgeClass::from(range.max);
+            }
+            return AgeClass::from(range.min);
+        }
+
+        AgeClass::None
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Simple helper function for making an AgeRange.
+    fn range(min: u8, max: u8) -> AgeRange {
+        AgeRange::from((Age::Exact(min), Age::Exact(max)))
+    }
+
+    /// Approximate ages should round toward 30.
+    #[test]
+    fn from_approximate() {
+        // Round up.
+        assert_eq!(AgeClass::from(Age::Approximate(18)), AgeClass::Class18_19);
+        assert_eq!(AgeClass::from(Age::Approximate(19)), AgeClass::Class20_23);
+
+        // Round down.
+        assert_eq!(AgeClass::from(Age::Approximate(44)), AgeClass::Class40_44);
+        assert_eq!(AgeClass::from(Age::Approximate(45)), AgeClass::Class45_49);
+    }
+
+    /// We should allow a bit of fuzziness and round "close enough" AgeRanges
+    /// toward 30.
+    #[test]
+    fn fuzzy_ranges() {
+        // Check ranges where both ends fall in the same class.
+        assert_eq!(AgeClass::from(range(40, 41)), AgeClass::Class40_44);
+        assert_eq!(AgeClass::from(range(40, 44)), AgeClass::Class40_44);
+
+        // An AgeRange from an Approximate age that straddles a boundary should
+        // round toward 30.
+        assert_eq!(AgeClass::from(range(44, 45)), AgeClass::Class40_44);
+
+        // Bigger ranges
+        assert_eq!(AgeClass::from(range(44, 48)), AgeClass::Class40_44);
     }
 }

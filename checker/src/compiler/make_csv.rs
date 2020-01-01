@@ -154,7 +154,7 @@ impl<'d> EntriesRow<'d> {
             event: entry.event,
             equipment: entry.equipment,
             age: entry.age,
-            ageclass: AgeClass::from_range(entry.agerange.min, entry.agerange.max),
+            ageclass: AgeClass::from(entry.agerange),
             birthyearclass: entry.birthyearclass,
             division: &entry.division,
             bodyweightkg: entry.bodyweightkg,
