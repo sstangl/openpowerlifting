@@ -411,6 +411,12 @@ pub struct ButtonTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct LabelTranslations {
+    pub sort: String,
+    pub category: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct SelectorTranslations {
     pub equipment: EquipmentSelectorTranslations,
     pub weightclass: WeightClassSelectorTranslations,
@@ -575,6 +581,7 @@ pub struct Translations {
     pub columns: ColumnTranslations,
     pub country: CountryTranslations,
     pub buttons: ButtonTranslations,
+    pub labels: LabelTranslations,
     pub selectors: SelectorTranslations,
     pub lifter_page: LifterPageTranslations,
 }

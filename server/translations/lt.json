@@ -25,7 +25,7 @@
         "records": "Rekordai",
         "meets": "Varžybos",
         "data": "Data",
-	"apps": "Apps",
+        "apps": "Apps",
         "status": "Būsena",
         "faq": "DUK",
         "contact": "Kontaktai",
@@ -54,7 +54,7 @@
         "mcculloch": "McCulloch",
         "glossbrenner": "Gloss",
         "ipfpoints": "IPF",
-	"dots": "Dots",
+        "dots": "Dots",
         "num_lifters": "Atletai"
     },
     "country": {
@@ -239,6 +239,10 @@
     },
     "buttons": {
         "search": "Paieška"
+    },
+    "labels": {
+        "sort": "Sort",
+        "category": "Category"
     },
     "selectors": {
         "equipment": {

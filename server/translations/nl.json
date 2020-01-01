@@ -15,17 +15,17 @@
     "sex": {
         "m": "M",
         "f": "F",
-	      "mx": "Mx"
+              "mx": "Mx"
     },
     "html_header": {
       "description": "The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data."
-  	},
+        },
     "header": {
         "rankings": "Rangorde",
         "records": "Records",
         "meets": "Wedstrijden",
         "data": "Data",
-	"apps": "Apps",
+        "apps": "Apps",
         "status": "Status",
         "faq": "FAQ",
         "contact": "Contact",
@@ -54,7 +54,7 @@
         "mcculloch": "McCulloch",
         "glossbrenner": "Gloss",
         "ipfpoints": "IPF",
-	"dots": "Dots",
+        "dots": "Dots",
         "num_lifters": "Atleten"
     },
     "country": {
@@ -71,7 +71,7 @@
         "azerbaijan": "Azerbeidzjan",
         "bahamas": "Bahama's",
         "bahrain": "Bahrein",
-	"bangladesh": "Bangladesh",
+        "bangladesh": "Bangladesh",
         "belarus": "Wit-Rusland",
         "belgium": "België",
         "belize": "Belize",
@@ -240,6 +240,10 @@
     "buttons": {
         "search": "Zoeken"
     },
+    "labels": {
+        "sort": "Sort",
+        "category": "Category"
+    },
     "selectors": {
         "equipment": {
             "raw": "Raw",
@@ -265,13 +269,13 @@
             "by_total": "Op Totaal",
             "by_allometric": "Op Allometrische schaling",
             "by_ah": "Op AH (Haleczko)",
-	    "by_dots": "By Dots",
+            "by_dots": "By Dots",
             "by_glossbrenner": "Op Glosbrenner",
             "by_ipfpoints": "Op IPF Punten",
             "by_mcculloch": "Op McCulloch",
             "by_nasa": "Op NASA Punten",
             "by_reshel": "Op Reshel",
-	    "by_schwartzmalone": "By Schwartz/Malone",
+            "by_schwartzmalone": "By Schwartz/Malone",
             "by_wilks": "Op Wilks",
             "by_division": "Op Divisie",
             "weight": "Gewicht sorteren",
@@ -344,7 +348,7 @@
             "all_portugal": "Alle Portugese atleten",
             "all_romania": "All Romanian Lifters",
             "all_russia": "Alle Russische atleten",
-	    "all_scotland": "All Scottish Lifters",
+            "all_scotland": "All Scottish Lifters",
             "all_serbia": "Alle Servische atleten",
             "all_singapore": "All Singaporean Lifters",
             "all_slovakia": "Alle Slowaakse atleten",

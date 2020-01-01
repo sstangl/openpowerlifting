@@ -25,7 +25,7 @@
         "records": "Records",
         "meets": "Natjecanja",
         "data": "Podaci",
-	"apps": "Apps",
+        "apps": "Apps",
         "status": "Status Projekta",
         "faq": "ČPP",
         "contact": "Kontakt",
@@ -54,7 +54,7 @@
         "mcculloch": "McCulloch",
         "glossbrenner": "Gloss",
         "ipfpoints": "IPF",
-	"dots": "Dots",
+    "dots": "Dots",
         "num_lifters": "Broj natjecatelja"
     },
     "country": {
@@ -239,6 +239,10 @@
     },
     "buttons": {
         "search": "Pretraži"
+    },
+    "labels": {
+        "sort": "Sort",
+        "category": "Category"
     },
     "selectors": {
         "equipment": {

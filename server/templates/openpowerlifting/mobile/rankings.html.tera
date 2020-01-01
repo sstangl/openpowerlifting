@@ -61,9 +61,9 @@
 
 {% block controls %}
   <div id="controls-mobile-filters">
-    Sort
+    {{strings.labels.sort}}
     {% include "openpowerlifting/widget-sortselect" %}
-    Category
+    {{strings.labels.category}}
     {% include "openpowerlifting/widget-fedselect" %}
     {% include "openpowerlifting/widget-equipmentselect" %}
     {% include "openpowerlifting/widget-weightclass" %}
