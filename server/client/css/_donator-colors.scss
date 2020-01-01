@@ -85,6 +85,11 @@
   @include name-color(#9C0045);
 }
 
+// Color used in the DOTS formula application. A dark red.
+.dots_red {
+  @include name-color(#84000E);
+}
+
 .orange {
   @include name-color(#FFA200);
 }
