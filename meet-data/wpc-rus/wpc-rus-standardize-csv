@@ -95,6 +95,7 @@ def parse_sheetname(s):
     s = s.replace('s ply', 's-ply')
     s = s.replace('bench press', 'bench-press')
     s = s.replace('классический жим', 'жим')
+    s = s.replace('жим леж', 'жим-леж')
 
     for word in s.split():
         # Federations
@@ -124,13 +125,13 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд', 'press', 'benchpress', 'лёжа']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'press', 'benchpress', 'лёжа', 'жим-леж', 'жим-лежа']:
             assert not event or event == 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
             event = 'B'
-        elif word in ['тяга', 'dl', 'deadlift']:
-            assert not event
+        elif word in ['тяга', 'dl', 'deadlift', 'тя', 'станова', 'становая', 'стан']:
+            assert not event or event == 'D'
             event = 'D'
             if equipment == 'Wraps':
                 equipment = 'Raw'
@@ -166,7 +167,7 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 'однослойной', '1ой', '1ply',
                       'однослойная', 'однослойный', 'однолойной', '1сл', 'односл',
                       '1слой', 'односло', 'однослойно', 'sply', 'singleply', 'одн',
-                      'stdeq', 'standart', 'st', 'sp', 'single', 's-ply']:
+                      'stdeq', 'standart', 'st', 'sp', 'single', 's-ply', '1-слойная', '1-слойный']:
             equipment = 'Single-ply'
         elif word in ['экипировке', 'm-ply', 'eq', 'многослой', 'экипировка', 'мн',
                       'эипировке', 'эк', '2ply', 'мнслой', 'эки', 'multiply',
@@ -188,7 +189,7 @@ def parse_sheetname(s):
             amateur = 'Amateur'
         elif word == 'pro' or word == 'pro' or word == 'pr':
             assert amateur == 'Pro'
-        elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
+        elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc', 'любители', 'любит', 'люб']:
             tested = 'Yes'
             amateur = 'Amateur'
 
@@ -209,8 +210,6 @@ def parse_sheetname(s):
         # Other ignorables.
         elif word == 'сфо':  # Not sure.
             pass
-        elif word == 'становая' or word == 'стан':  # First word in 'deadlift'.
-            pass
         elif 'экип' in word:  # Equipment
             pass
         # We don't seperately track Paralympic bench right now
@@ -220,8 +219,6 @@ def parse_sheetname(s):
         elif word in ['spr', 'ultra', 'стандарт', 'ультра', 'шоте', 'жесткая', 'std']:
             pass
         elif word == 'фжд':  # Don't know what this means
-            pass
-        elif word == 'любители' or word == 'любит' or word == 'люб':  # Amateur /Fan?
             pass
         elif word.strip() == 'макс' or word == 'максимум':  # Maximum
             pass
