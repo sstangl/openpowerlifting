@@ -139,7 +139,7 @@ def parse_sheetname(s):
         # Equipment
         elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
                       'облегченная', 'облегченной', 'слинг', 'софстанд',
-                      'соф', 'cофт', 'мн-слой', '3сл']:
+                      'соф', 'cофт', 'мн-слой', '3сл', 'eq']:
             equipment = 'Multi-ply'
             event = 'B'
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
@@ -422,6 +422,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'сумма с к-нтом':
             fieldnames.append('IGNORE')
+        elif text == 'сумма subtotal': # Subtotal:
+            fieldnames.append('IGNORE')            
         else:
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 
