@@ -17,6 +17,11 @@
     masters_70_74 = {name = "Masters 70-74", min = 70, max = 74}
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
 
+    teen = {name = "Teen", min = 13, max = 19}
+    masters = {name = "Masters", min = 40, max = 999}
+    
+    PFM = {name = "PFM", min = 0, max = 999}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
