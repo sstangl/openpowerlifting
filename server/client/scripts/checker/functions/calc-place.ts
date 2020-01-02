@@ -20,7 +20,7 @@
 
 'use strict';
 
-import { Csv, csvString } from "./csv";
+import { Csv, csvString } from "../csv";
 
 
 // Get a unique string for the lifter's category.

@@ -21,7 +21,7 @@
 
 'use strict';
 
-import { Csv, csvString } from "./csv";
+import { Csv, csvString } from "../csv";
 
 
 // Converts a weight in pounds to Kg, as a string with a maximum of 2 decimal places.

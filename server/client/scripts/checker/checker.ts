@@ -22,8 +22,8 @@
 
 import { Csv } from "./csv";
 
-import { csvToKg } from "./function-tokg";
-import { csvCalcPlace } from "./function-calc-place";
+import { csvToKg } from "./functions/tokg";
+import { csvCalcPlace } from "./functions/calc-place";
 
 let checkButton: HTMLButtonElement;
 let toKgButton: HTMLButtonElement;
