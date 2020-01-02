@@ -77,29 +77,24 @@ def parse_sheetname(s):
         s = s.replace('без э', '')
         equipment = 'Raw'
 
-    if '1 слой' in s:
-        s = s.replace('1 слой', '1слой')
-
-    if '1 ply' in s:
-        s = s.replace('1 ply', '1ply')
-
-    if 's ply' in s:
-        s = s.replace('s ply', 'sply')
-
-    if '2 ply' in s:
-        s = s.replace('2 ply', '2ply')
-
-    if 'мн слой' in s:
-        s = s.replace('мн слой', 'мнслой')
-
-    if 'std eq' in s:
-        s = s.replace('std eq', 'stdeq')
-
-    if 'soft equip' in s:
-        s = s.replace('soft equip', 'softequip')
-
     if 'без дк' in s:  # Do 'Without drug test' seperately
         s = s.replace('без дк', '')
+
+    s = s.replace('.', ' ').replace('"', ' ').replace(
+        '_', ' ').replace('(', ' ').replace(')', ' ')
+    s = s.replace(' & ', '&')
+    s = s.replace('б э ', 'бэ')
+    if len(s) > 3 and s[-3:] == 'д к':
+        s = s.replace('д к', 'дк')  # Drug tested
+
+    s = s.replace('1 пет', '1-пет')
+    s = s.replace('мн пет', 'мн-пет')
+    s = s.replace('m ply', 'm-ply')
+    s = s.replace('мн слой', 'мн-слой')
+    s = s.replace('1 слой', '1-слой')
+    s = s.replace('s ply', 's-ply')
+    s = s.replace('bench press', 'bench-press')
+    s = s.replace('классический жим', 'жим')
 
     for word in s.split():
         # Federations
@@ -124,7 +119,7 @@ def parse_sheetname(s):
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
                       'чапл', 'капл', 'паурлифтинг', 'пауэрлифинг', 'powerlifting']:
-            assert not event
+            assert not event or event == 'SBD'
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
             assert not event
@@ -171,9 +166,9 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 'однослойной', '1ой', '1ply',
                       'однослойная', 'однослойный', 'однолойной', '1сл', 'односл',
                       '1слой', 'односло', 'однослойно', 'sply', 'singleply', 'одн',
-                      'stdeq', 'standart', 'st', 'sp', 'single']:
+                      'stdeq', 'standart', 'st', 'sp', 'single', 's-ply']:
             equipment = 'Single-ply'
-        elif word in ['экипировке', 'm ply', 'eq', 'многослой', 'экипировка', 'мн',
+        elif word in ['экипировке', 'm-ply', 'eq', 'многослой', 'экипировка', 'мн',
                       'эипировке', 'эк', '2ply', 'мнслой', 'эки', 'multiply',
                       'multyply', 'multi', 'mylti', 'mply', 'mp', 'multy']:
             if equipment != 'Single-ply':  # Avoid accidently marking single as multi
@@ -181,7 +176,6 @@ def parse_sheetname(s):
         elif word in ['slinghot', 'slingshot', 'СПР', 'облегченная', 'облегченной',
                       'слинг', 'softequipment', 'soft', 'softequip', 'софт']:
             equipment = 'Multi-ply'
-            event = 'B'
         elif word in ['бинт', 'wraps', 'classic', 'класс', 'класичесский',
                       'классический', 'cl']:
             equipment = 'Wraps'
@@ -223,7 +217,7 @@ def parse_sheetname(s):
         elif word in ['handicaped', 'пода', 'disabled']:
             pass
         # Extra terms for slingshot bench
-        elif word in ['spr', 'ultra', 'стандарт', 'ультра', 'шоте', 'жесткая']:
+        elif word in ['spr', 'ultra', 'стандарт', 'ультра', 'шоте', 'жесткая', 'std']:
             pass
         elif word == 'фжд':  # Don't know what this means
             pass
@@ -343,7 +337,7 @@ def parse_fieldnames(sheet):
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
         elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион',
-                                    'возр груп', 'age categoty', 'год р']):
+                                    'возр груп', 'age categoty', 'год р', 'age class']):
             fieldnames.append('Division-Age')
         elif 'div' in text:
             fieldnames.append('Division')

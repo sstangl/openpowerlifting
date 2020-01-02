@@ -76,6 +76,7 @@ def parse_sheetname(s):
 
     s = s.replace('1 пет', '1-пет')
     s = s.replace('мн пет', 'мн-пет')
+    s = s.replace('m ply', 'м-ply')
     s = s.replace('1 слой', '1-слой')
     s = s.replace('мн слой', 'мн-слой')
     s = s.replace('bench press', 'bench-press')
@@ -150,7 +151,7 @@ def parse_sheetname(s):
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
-        elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
+        elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный']:
             equipment = 'Multi-ply'
         # Extra terms for slingshot bench
