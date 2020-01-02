@@ -29,21 +29,21 @@ do
 	EXTENSION="${!ii##*.}"
 
 	# Download the results page.
-	wget --output-document="results${r_nums[$((ii-2))]}.${EXTENSION}"  ${!ii}
+	wget --output-document="original${r_nums[$((ii-2))]}.${EXTENSION}"  ${!ii}
 
 	# Save the website URL for future use, since it's pretty hard to tell
 	# what meets on the site are tracked and which aren't.
 	echo ${!ii}  >> URL
 
-	mapfile -t sheet_names < <( ${SCRIPTDIR}/get-sheet-names "results${r_nums[$((ii-2))]}.${EXTENSION}" )
+	mapfile -t sheet_names < <( ${SCRIPTDIR}/get-sheet-names "original${r_nums[$((ii-2))]}.${EXTENSION}" )
 
 	# Convert the spreadsheet to HTML.
 	# The spreadsheet will have multiple pages -- these will all be added to one document.
-	libreoffice --headless --convert-to html "results${r_nums[$((ii-2))]}.${EXTENSION}"
+	libreoffice --headless --convert-to html "original${r_nums[$((ii-2))]}.${EXTENSION}"
 
-	# Move the results.html to tmp.xls -- newer versions of LibreOffice don't
+	# Move the original.html to tmp.xls -- newer versions of LibreOffice don't
 	# understand how to convert HTML -> CSV, but do understand XLS -> CSV.
-	mv "results${r_nums[$((ii-2))]}.html" tmp.xls
+	mv "original${r_nums[$((ii-2))]}.html" tmp.xls
 
 
 	#Remove red font colour in front of <s> tags
@@ -68,23 +68,23 @@ do
 	# the encoding as ISO-8859-1, and preserve the UTF8 encoding.
 	# See https://bugs.documentfoundation.org/show_bug.cgi?id=36313#c17.
 	libreoffice --headless --convert-to csv --infilter=CSV:44,34,UTF8 tmp.xls
-	mv tmp.csv "results${r_nums[$((ii-2))]}.csv"
+	mv tmp.csv "original${r_nums[$((ii-2))]}.csv"
 
 
 	#If there was only one sheet we will have lost the sheet name, so add it back
 	if [ ${#sheet_names[*]} == 1 ]; then
-		echo -e 'Sheet 1: '$sheet_names'\n' | cat - "results${r_nums[$((ii-2))]}.csv" > temp && mv temp "results${r_nums[$((ii-2))]}.csv"
+		echo -e 'Sheet 1: '$sheet_names'\n' | cat - "original${r_nums[$((ii-2))]}.csv" > temp && mv temp "original${r_nums[$((ii-2))]}.csv"
 	fi
 
 
 	# Remove some dash-only columns from the CSV.
-	sed -i -e 's/,-,/,,/g' "results${r_nums[$((ii-2))]}.csv"
-	sed -i -e 's/,-,/,,/g' "results${r_nums[$((ii-2))]}.csv"
+	sed -i -e 's/,-,/,,/g' "original${r_nums[$((ii-2))]}.csv"
+	sed -i -e 's/,-,/,,/g' "original${r_nums[$((ii-2))]}.csv"
 
 
 	# Clean up.
-	if [ -f "results${r_nums[$((ii-2))]}.csv" ]; then
-		rm tmp.xls "results${r_nums[$((ii-2))]}.${EXTENSION}"
+	if [ -f "original${r_nums[$((ii-2))]}.csv" ]; then
+		rm tmp.xls "original${r_nums[$((ii-2))]}.${EXTENSION}"
 		rm -f *.png #FPR results have embedded images which we don't want
 	fi
 done

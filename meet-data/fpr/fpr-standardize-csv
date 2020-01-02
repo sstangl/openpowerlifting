@@ -95,7 +95,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('CyrillicName')
             elif 'год родж' in text or 'год рожд' in text:
                 fieldnames.append('BirthYear')
-            elif 'разряд' in text or 'вып разр' in text:  # Rank
+            elif 'разряд' in text or 'вып разр' in text or 'звание' in text:  # Rank
                 fieldnames.append('IGNORE')
             elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
