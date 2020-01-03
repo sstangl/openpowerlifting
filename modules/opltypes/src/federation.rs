@@ -526,6 +526,10 @@ pub enum Federation {
     #[strum(to_string = "IrishPO", serialize = "irishpo")]
     IrishPO,
 
+    /// Iron Boy Powerlifting
+    #[strum(to_string = "IronBoy", serialize = "ironboy")]
+    IronBoy,
+
     /// International RAW Powerlifting.
     #[strum(to_string = "IRP", serialize = "irp")]
     IRP,
@@ -1298,6 +1302,7 @@ impl Federation {
             Federation::IrelandUA => false,
             Federation::IrishPF => FULLY_TESTED,
             Federation::IrishPO => false,
+            Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
             Federation::JPA => FULLY_TESTED,
             Federation::KPF => FULLY_TESTED,
@@ -1572,6 +1577,7 @@ impl Federation {
             Federation::IrelandUA => Some(Country::Ireland),
             Federation::IrishPF => Some(Country::Ireland),
             Federation::IrishPO => Some(Country::Ireland),
+            Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
             Federation::KPF => Some(Country::Kazakhstan),
@@ -1866,6 +1872,7 @@ impl Federation {
             Federation::IrelandUA => None,
             Federation::IrishPF => Some(Federation::IPF),
             Federation::IrishPO => Some(Federation::IPL),
+            Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::JPA => Some(Federation::IPF),
             Federation::KPF => Some(Federation::IPF),
@@ -2172,6 +2179,7 @@ impl Federation {
             Federation::IrelandUA => PointsSystem::Wilks,
             Federation::IrishPF => Federation::ipf_rules_on(date),
             Federation::IrishPO => PointsSystem::Wilks,
+            Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
             Federation::KPF => Federation::ipf_rules_on(date),
