@@ -1,4 +1,4 @@
-{% import "static-asset-map" as statics %}
+{% import "build/static-asset-map" as statics %}
 
 <!DOCTYPE html>
 <html lang="{{language}}">

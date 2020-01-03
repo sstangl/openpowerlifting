@@ -19,7 +19,9 @@ binary: builddir
 devdocs:
 	cargo rustdoc --open -- --no-defaults --passes collapse-docs --passes unindent-comments --passes strip-priv-imports
 
-data: builddir
+# Depends on the client: the "static-asset-map.tera" template is built into
+# templates/build/ by the client Makefile.
+data: builddir client
 	mkdir -p "${BUILDDIR}/data/templates"
 	cp -r templates/* "${BUILDDIR}/data/templates/"
 	mkdir -p "${BUILDDIR}/data/translations"
@@ -41,8 +43,6 @@ client:
 clientstatics: client
 	mkdir -p "${BUILDDIR}/data/static"
 	cp -r client/build/* "${BUILDDIR}/data/static"
-	rm "${BUILDDIR}/data/templates/static-asset-map.tera"
-	cp client/build/static-asset-map.tera "${BUILDDIR}/data/templates/"
 
 release: rebuild-clean binary data config oldstatics clientstatics
 	echo "Good luck!"

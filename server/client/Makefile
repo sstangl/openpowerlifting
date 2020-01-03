@@ -2,6 +2,7 @@
 
 BUILDDIR := build
 PROJECTDATA := "../../project-data"
+SERVERDIR := ".."
 
 all: rebuild-clean css scripts html images package-for-server
 
@@ -56,7 +57,9 @@ package-for-server:
 	# Gzip the contents. The hashed filename is not the hash of the gzip,
 	# but the hash of the gzip's contents when decompressed.
 	./apply-gzip
-
+	# Copy asset map file to server templates folder (ignored by git).
+	mkdir -p "${SERVERDIR}/templates/build"
+	cp "${BUILDDIR}/static-asset-map.tera" "${SERVERDIR}/templates/build/"
 
 # Cleans files that may cause `make` to be non-idempotent.
 rebuild-clean:
