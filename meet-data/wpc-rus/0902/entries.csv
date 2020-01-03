@@ -13,15 +13,15 @@ Place,Name,CyrillicName,Sex,Event,Equipment,WeightClassKg,Tested,Division,BirthD
 1,Vladimir Ustinov,Владимир Устинов,M,SBD,Wraps,67.5,No,Pro Juniors 20-23,1986-03-16,67.45,180,190,200,,200,125,130,135,,135,190,200,210,,210,545
 2,Sergey Sokolov,Сергей Соколов,M,SBD,Wraps,67.5,No,Pro Juniors 20-23,1988-07-21,63.5,140,150,-155,,150,85,95,-100,,95,170,180,190,,190,435
 1,Vyacheslav Yurov,Вячеслав Юров,M,SBD,Wraps,67.5,No,Pro Teen 18-19,1991-02-17,66.65,140,-150,160,,160,95,102.5,-110,,102.5,155,-165,,,155,417.5
-3,Vyacheslav Yurov,Вячеслав Юров,M,SBD,Wraps,67.5,No,Pro Juniors 20-23,1991-02-17,66.65,140,-150,160,,160,95,102.5,-110,,102.5,155,-165,,,155,417.5
+3,Vyacheslav Yurov,Вячеслав Юров,M,SBD,Wraps,67.5,No,Pro Teen 18-19,1991-02-17,66.65,140,-150,160,,160,95,102.5,-110,,102.5,155,-165,,,155,417.5
 1,Filipp Kozyrkin,Филипп Козыркин,M,SBD,Wraps,67.5,No,Pro Teen 13-15,1993-05-25,64.2,-100,-100,100,,100,70,75,-80,,75,140,150,160,,160,335
 1,Igor Fedorov,Игорь Федоров,M,SBD,Wraps,67.5,No,Pro Teen 16-17,1991-07-13,63.3,120,130,-135,,130,77.5,80,-82.5,,80,145,155,160,,160,370
 1,Pavel Muratov,Павел Муратов,M,SBD,Wraps,75,No,Pro Juniors 20-23,1985-09-09,74.35,200,215,-222.5,,215,130,137.5,-140,,137.5,230,250,,,250,602.5
 1,Evgeniy Dekkert,Евгений Деккерт,M,SBD,Wraps,75,No,Pro Teen 18-19,1989-08-22,74.15,-160,160,-170,,160,120,130,135,,135,200,,,,200,495
-2,Evgeniy Dekkert,Евгений Деккерт,M,SBD,Wraps,75,No,Pro Juniors 20-23,1989-08-22,74.15,-160,160,-170,,160,120,130,135,,135,200,,,,200,495
+2,Evgeniy Dekkert,Евгений Деккерт,M,SBD,Wraps,75,No,Pro Teen 18-19,1989-08-22,74.15,-160,160,-170,,160,120,130,135,,135,200,,,,200,495
 3,Sergey Lvov,Сергей Львов,M,SBD,Wraps,75,No,Pro Juniors 20-23,1986-05-08,72.9,130,150,-170,,150,100,115,120,,120,160,-180,190,,190,460
 1,Nikita Katrakov,Никита Катраков,M,SBD,Wraps,75,No,Pro Teen 16-17,1991-10-19,73.3,110,120,130,,130,85,92.5,100,,100,120,130,-140,,130,360
-4,Nikita Katrakov,Никита Катраков,M,SBD,Wraps,75,No,Pro Juniors 20-23,1991-10-19,73.3,110,120,130,,130,85,92.5,100,,100,120,130,-140,,130,360
+4,Nikita Katrakov,Никита Катраков,M,SBD,Wraps,75,No,Pro Teen 16-17,1991-10-19,73.3,110,120,130,,130,85,92.5,100,,100,120,130,-140,,130,360
 1,Ilya Kramor,Илья Крамор,M,SBD,Wraps,75,No,Pro Teen 13-15,1994-08-02,70.9,100,110,115,,115,70,80,87.5,,87.5,130,150,162.5,,162.5,365
 2,Aleksey Shapkin,Алексей Шапкин,M,SBD,Wraps,75,No,Pro Teen 18-19,1990-09-15,72.15,120,130,-140,,130,100,105,,,105,150,160,,,160,395
 1,Ruslan Chelebadze,Руслан Челебадзе,M,SBD,Wraps,82.5,No,Pro Open,1981-02-09,81.5,160,-170,175,,175,-140,140,-150,,140,190,200,,,200,515
@@ -48,7 +48,7 @@ Place,Name,CyrillicName,Sex,Event,Equipment,WeightClassKg,Tested,Division,BirthD
 1,Natalya Starygina,Наталья Старыгина,F,B,Raw,60,No,Pro Open,1986-07-10,58.8,,,,,,65,75,,,75,,,,,,75
 1,Natalya Starygina,Наталья Старыгина,F,B,Raw,60,No,Pro Juniors 20-23,1986-07-10,58.8,,,,,,65,75,,,75,,,,,,75
 1,Mariya Shmyrina,Мария Шмырина,F,B,Raw,75,No,Pro Teen 18-19,1990-09-19,69.68,,,,,,52.5,57.5,,,57.5,,,,,,57.5
-1,Semen Paley,Семен Палей,M,B,Raw,52,No,Pro Teen 13-15,1999-04-14,33.4,,,,,,30,-35,-35,,30,,,,,,30
+1,Semen Paley,Семен Палей,M,B,Raw,52,No,Pro Youth,1999-04-14,33.4,,,,,,30,-35,-35,,30,,,,,,30
 1,Vitaliy Abashev,Виталий Абашев,M,B,Raw,67.5,No,Pro Open,1983-07-07,65.75,,,,,,100,-105,-105,,100,,,,,,100
 1,Vladimir Ustinov,Владимир Устинов,M,B,Raw,67.5,No,Pro Juniors 20-23,1986-03-16,67.5,,,,,,125,130,135,,135,,,,,,135
 2,Dmitriy Kelin,Дмитрий Келин,M,B,Raw,67.5,No,Pro Juniors 20-23,1988-05-05,67.5,,,,,,-115,115,,,115,,,,,,115
@@ -61,8 +61,8 @@ Place,Name,CyrillicName,Sex,Event,Equipment,WeightClassKg,Tested,Division,BirthD
 1,Aleksandr Rode,Александр Роде,M,B,Raw,75,No,Pro Open,1981-04-14,72.05,,,,,,-135,140,145,,145,,,,,,145
 2,Sergey Stakheev,Сергей Стахеев,M,B,Raw,75,No,Pro Open,1984-11-22,72.95,,,,,,135,-140,145,,145,,,,,,145
 2,Evgeniy Dekkert,Евгений Деккерт,M,B,Raw,75,No,Pro Teen 18-19,1989-08-22,73.9,,,,,,125,135,-145,,135,,,,,,135
-1,Evgeniy Dekkert,Евгений Деккерт,M,B,Raw,75,No,Pro Juniors 20-23,1989-08-22,73.9,,,,,,125,135,-145,,135,,,,,,135
-2,Nikita Katrakov,Никита Катраков,M,B,Raw,75,No,Pro Juniors 20-23,1991-10-19,73.1,,,,,,85,92.5,100,,100,,,,,,100
+1,Evgeniy Dekkert,Евгений Деккерт,M,B,Raw,75,No,Pro Teen 18-19,1989-08-22,73.9,,,,,,125,135,-145,,135,,,,,,135
+2,Nikita Katrakov,Никита Катраков,M,B,Raw,75,No,Pro Teen 16-17,1991-10-19,73.1,,,,,,85,92.5,100,,100,,,,,,100
 2,Nikita Katrakov,Никита Катраков,M,B,Raw,75,No,Pro Teen 16-17,1991-10-19,73.1,,,,,,85,92.5,100,,100,,,,,,100
 1,Evgeniy Gorshkov,Евгений Горшков,M,B,Raw,75,No,Pro Teen 13-15,1993-04-23,74.3,,,,,,90,-100,-100,,90,,,,,,90
 1,Ivan Iznov,Иван Изнов,M,B,Raw,75,No,Pro Teen 16-17,1991-09-04,72.4,,,,,,110,-112.5,-112.5,,110,,,,,,110
@@ -241,7 +241,7 @@ DQ,Irina Pilipishko,Ирина Пилипишко,F,B,Multi-ply,67.5,No,Pro Mast
 1,Sergey Ladyzhnikov,Сергей Ладыжников,M,B,Multi-ply,67.5,No,Pro Juniors 20-23,,66.6,,,,,,-170,-170,170,,170,,,,,,170
 2,Vyacheslav Yurov,Вячеслав Юров,M,B,Multi-ply,67.5,No,Pro Juniors 20-23,,67.5,,,,,,125,-130,130,,130,,,,,,130
 DQ,Dmitriy Kelin,Дмитрий Келин,M,B,Multi-ply,67.5,No,Pro Juniors 20-23,,67.5,,,,,,-145,-145,-145,,,,,,,,
-1,Yuriy Kiselev,Юрий Киселев,M,B,Multi-ply,67.5,No,Pro M70-74,,65.8,,,,,,75,85,,,85,,,,,,85
+1,Yuriy Kiselev,Юрий Киселев,M,B,Multi-ply,67.5,No,Pro Masters 70-74,,65.8,,,,,,75,85,,,85,,,,,,85
 DQ,Denis Perminov,Денис Перминов,M,B,Multi-ply,67.5,No,Pro Open,,67.5,,,,,,-180,-180,-180,,,,,,,,
 1,Vyacheslav Yurov,Вячеслав Юров,M,B,Multi-ply,67.5,No,Pro Teen 18-19,,67.5,,,,,,130,,,,130,,,,,,130
 1,Aleksey Lazarev,Алексей Лазарев,M,B,Multi-ply,75,No,Pro Juniors 20-23,,73.8,,,,,,190,202.5,205,,205,,,,,,205
@@ -387,8 +387,8 @@ DQ,Alena Sokolova,Алена Соколова,F,SBD,Wraps,67.5,Yes,Amateur Open,
 1,Oleg Dvoynikov,Олег Двойников,M,SBD,Wraps,60,Yes,Amateur Masters 45-49,,59,125,-130,132.5,,132.5,92.5,97.5,100,,100,170,180,185,,185,417.5
 1,Nail Mukhaev,Наиль Мухаев,M,SBD,Wraps,60,Yes,Amateur Teen 13-15,,59.1,65,70,80,,80,45,50,-55,,50,85,95,110,,110,240
 1,Albert Nabatchikov,Альберт Набатчиков,M,SBD,Wraps,67.5,Yes,Amateur Open,,65.1,140,-155,-162.5,,140,85,92.5,97.5,,97.5,150,162.5,170,,170,407.5
-DQ,Yuriy Kiselev,Юрий Киселев,M,SBD,Wraps,67.5,Yes,Amateur M70-74,,66.1,-105,-105,-105,,,,,,,,,,,,,
-1,Anatoliy Chistyakov,Анатолий Чистяков,M,SBD,Wraps,67.5,Yes,Amateur M65-69,,61.75,85,95,-100,,95,65,-70,-70,,65,110,120,125,,125,285
+DQ,Yuriy Kiselev,Юрий Киселев,M,SBD,Wraps,67.5,Yes,Amateur Masters 70-74,,66.1,-105,-105,-105,,,,,,,,,,,,,
+1,Anatoliy Chistyakov,Анатолий Чистяков,M,SBD,Wraps,67.5,Yes,Amateur Masters 65-69,,61.75,85,95,-100,,95,65,-70,-70,,65,110,120,125,,125,285
 1,Denis Neverov,Денис Неверов,M,SBD,Wraps,67.5,Yes,Amateur Teen 16-17,,66.6,-115,-120,120,,120,77.5,-82.5,85,,85,145,-155,-155,,145,350
 1,Pavel Shvetsov,Павел Швецов,M,SBD,Wraps,67.5,Yes,Amateur Teen 18-19,,66.1,-165,165,-170,,165,115,-120,-120,,115,210,220,-230,,220,500
 2,Nichad Mamedov,Ничад Мамедов,M,SBD,Wraps,67.5,Yes,Amateur Teen 18-19,,60.85,100,-110,-120,,100,75,80,-82.5,,80,-175,175,-177.5,,175,355
@@ -456,7 +456,7 @@ DQ,Andrey Bakulev,Андрей Бакулев,M,SBD,Wraps,100,Yes,Amateur Open,,
 1,Ivan Repnitsyn,Иван Репницын,M,B,Raw,52,Yes,Amateur Teen 13-15,,42.5,,,,,,20,-25,-25,,20,,,,,,20
 1,Nikita Menshchikov,Никита Меньщиков,M,B,Raw,56,Yes,Amateur Open,,53.95,,,,,,105,122.5,-125,,122.5,,,,,,122.5
 1,Ivan Kudryavtsev,Иван Кудрявцев,M,B,Raw,56,Yes,Amateur Teen 13-15,,55,,,,,,85,92.5,-100,,92.5,,,,,,92.5
-2,Aleksandr Silantev,Александр Силантьев,M,B,Raw,56,Yes,Amateur Teen 13-15,,35,,,,,,35,42,47.5,,47.5,,,,,,47.5
+2,Aleksandr Silantev,Александр Силантьев,M,B,Raw,52,Yes,Amateur Teen 13-15,,35,,,,,,35,42,47.5,,47.5,,,,,,47.5
 1,Vladislav Trubin,Владислав Трубин,M,B,Raw,56,Yes,Amateur Teen 16-17,,52.55,,,,,,60,-70,-70,,60,,,,,,60
 1,Oleg Dvoynikov,Олег Двойников,M,B,Raw,60,Yes,Amateur Masters 45-49,,59.85,,,,,,95,100,102.5,,102.5,,,,,,102.5
 1,Aleksandr Ivankin,Александр Иванкин,M,B,Raw,60,Yes,Amateur Open,,57.6,,,,,,100,-115,-115,,100,,,,,,100
@@ -601,7 +601,7 @@ DQ,Evgeniy Krayukhin,Евгений Краюхин,M,B,Raw,100,Yes,Amateur Open,
 2,Maksim Shvarts,Максим Шварц,M,SBD,Multi-ply,60,Yes,Amateur Teen 18-19,,59.65,195,210,-215,,210,95,105,-110,,105,185,-195,195,,195,510
 1,Zaur Gusenov,Заур Гусейнов,M,SBD,Multi-ply,67.5,Yes,Amateur Open,,67.5,216,-230,-230,,216,135,-142.5,-142.5,,135,175,185,,,185,536
 1,Zaur Gusenov,Заур Гусейнов,M,SBD,Multi-ply,67.5,Yes,Amateur Juniors 20-23,,67.5,216,-230,-230,,216,135,-142.5,-142.5,,135,175,185,,,185,536
-1,Yuriy Kiselev,Юрий Киселев,M,SBD,Multi-ply,67.5,Yes,Amateur M70-74,,66,100,120,140,,140,75,85,-90,,85,150,165,180,,180,405
+1,Yuriy Kiselev,Юрий Киселев,M,SBD,Multi-ply,67.5,Yes,Amateur Masters 70-74,,66,100,120,140,,140,75,85,-90,,85,150,165,180,,180,405
 2,Yaroslav Markov,Ярослав Марков,M,SBD,Multi-ply,67.5,Yes,Amateur Open,,65.15,185,200,-210,,200,-110,110,120,,120,190,200,210,,210,530
 1,Radik Rakhimov,Радик Рахимов,M,SBD,Multi-ply,67.5,Yes,Amateur Teen 16-17,,64.05,230,240,245,,245,-130,135,140,,140,200,210,220,,220,605
 1,Sergey Lyubimov,Сергей Любимов,M,SBD,Multi-ply,67.5,Yes,Amateur Teen 18-19,,64.4,120,145,165,,165,100,110,-115,,110,145,160,-170,,160,435

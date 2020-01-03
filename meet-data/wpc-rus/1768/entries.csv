@@ -1,23 +1,23 @@
 Place,Name,CyrillicName,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Equipment,Tested,Division,Age
 1,Artur Arutyunyan,Артур Арутюнян,M,75,71.3,115,120,127.5,127.5,,-87.5,87.5,-90,87.5,,120,130,135,135,,350,SBD,Raw,Yes,Amateur Teen 16-17,17
-1,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,-140,140,-150,140,,130,-137.5,,130,,200,210,,210,,480,SBD,Raw,Yes,Amateur Juniors 20-23,24
+1,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,-140,140,-150,140,,130,-137.5,,130,,200,210,,210,,480,SBD,Raw,Yes,Amateur Open,24
 1,Sergey Sitalo,Сергей Ситало,M,90,86.5,150,160,165,165,,120,127.5,130,130,,180,185,190,190,,485,SBD,Raw,Yes,Amateur Open,35
 1,Armen Vardanyan,Армен Варданян,M,100,98,-240,240,250,250,,145,150,-155,150,,220,235,-250,235,,635,SBD,Raw,Yes,Amateur Open,33
 2,Aleksandr Loskutov,Александр Лоскутов,M,100,98.8,-220,220,-225,220,,150,-155,-155,150,,240,250,-260,250,,620,SBD,Raw,Yes,Amateur Open,34
 1,Armen Vardanyan,Армен Варданян,M,100,98,-240,240,250,250,,145,150,-155,150,,220,235,-250,235,,635,SBD,Wraps,Yes,Amateur Open,33
-1,Irina Karpunenko,Ирина Карпуненко,F,60,60,120,130,-135,130,,70,75,77.5,77.5,,-130,130,140,140,,347.5,SBD,Wraps,No,Pro Masters 40-44,45
+1,Irina Karpunenko,Ирина Карпуненко,F,60,60,120,130,-135,130,,70,75,77.5,77.5,,-130,130,140,140,,347.5,SBD,Wraps,No,Pro Masters 45-49,45
 DQ,Alexander Karpenko,Александр Карпенко,M,82.5,82.3,300,-320,-320,300,,170,177.5,-180,177.5,,-322.5,,,,,,SBD,Wraps,No,Pro Open,25
 1,Valeriy Tatarenko,Валерий Татаренко,M,100,98.3,170,-180,-180,170,,130,-140,-140,130,,190,200,-210,200,,500,SBD,Wraps,No,Pro Masters 50-54,51
 1,Andrey Chernenko,Андрей Черненко,M,110,107.9,-340,340,-350,340,,205,215,222.5,222.5,,325,345,352.5,352.5,,915,SBD,Wraps,No,Pro Open,24
 1,Aleksandr Podnebennyy,Александр Поднебенный,M,125,121.8,260,-280,-280,260,,135,145,150,150,,235,250,-257.5,250,,660,SBD,Wraps,No,Pro Juniors 20-23,23
-1,Aleksandr Belykh,Александр Белых,M,125,92.1,180,-200,200,200,,140,160,,160,,-200,200,-255,200,,560,SBD,Raw,No,Pro Open,29
+1,Aleksandr Belykh,Александр Белых,M,100,92.1,180,-200,200,200,,140,160,,160,,-200,200,-255,200,,560,SBD,Raw,No,Pro Open,29
 1,Yashar Shavoev,Яшар Шавоев,M,125,121.4,285,-300,,285,,160,170,180,180,,285,300,,300,,765,SBD,Raw,No,Pro Open,31
 1,Anatoliy Prodan,Анатолий Продан,M,125,115.9,260,280,-300,280,,170,180,-200,180,,220,240,,240,,700,SBD,Multi-ply,No,Pro Masters 55-59,56
 1,Marina Vishnyakova,Марина Вишнякова,F,52,50.9,,,,,,47.5,52.5,-55,52.5,,,,,,,52.5,B,Raw,Yes,Amateur Open,37
-1,Aleksey Kolisnichenko,Алексей Колисниченко,M,48,47.9,,,,,,97.5,100,-102.5,100,,,,,,,100,B,Raw,Yes,Amateur Juniors 20-23,23
+1,Aleksey Kolisnichenko,Алексей Колисниченко,M,52,47.9,,,,,,97.5,100,-102.5,100,,,,,,,100,B,Raw,Yes,Amateur Juniors 20-23,23
 1,Aleksandr Komarov,Александр Комаров,M,75,72.5,,,,,,112.5,115,-117.5,115,,,,,,,115,B,Raw,Yes,Amateur Masters 60-64,61
 1,Aleksandr Podkopaev,Александр Подкопаев,M,82.5,79.4,,,,,,-145,-150,155,155,,,,,,,155,B,Raw,Yes,Amateur Juniors 20-23,21
-2,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,,,,,,130,135,-140,135,,,,,,,135,B,Raw,Yes,Amateur Juniors 20-23,24
+2,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,,,,,,130,135,-140,135,,,,,,,135,B,Raw,Yes,Amateur Open,24
 1,Vladimir Rybalko,Владимир Рыбалко,M,82.5,82.5,,,,,,165,170,172.5,172.5,,,,,,,172.5,B,Raw,Yes,Amateur Open,30
 2,Evgeniy Chistyakov,Евгений Чистяков,M,82.5,80.4,,,,,,115,-127.5,-127.5,115,,,,,,,115,B,Raw,Yes,Amateur Open,24
 1,Nelson Gosyan,Нельсон Госян,M,90,89.8,,,,,,152.5,155,157.5,157.5,,,,,,,157.5,B,Raw,Yes,Amateur Masters 40-44,41
@@ -27,7 +27,7 @@ DQ,Alexander Karpenko,Александр Карпенко,M,82.5,82.3,300,-320,-
 1,Vladimir Chubarov,Владимир Чубаров,M,125,124,,,,,,167.5,172.5,177.5,177.5,,,,,,,177.5,B,Raw,Yes,Amateur Masters 50-54,53
 1,Svetlana Lavrova,Светлана Лаврова,F,56,56,,,,,,,,,,,95,100,107.5,107.5,,107.5,D,Raw,Yes,Amateur Open,33
 1,Artem Ershov,Артем Ершов,M,67.5,65,,,,,,,,,,,165,175,-190,175,,175,D,Raw,Yes,Amateur Juniors 20-23,22
-1,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,,,,,,,,,,,-215,215,,215,,215,D,Raw,Yes,Amateur Juniors 20-23,24
+1,Eduard Aydinyan,Эдуард Айдинян,M,82.5,81.5,,,,,,,,,,,-215,215,,215,,215,D,Raw,Yes,Amateur Open,24
 1,Gegam Khamoyan,Гегам Хамоян,M,82.5,79.5,,,,,,,,,,,200,210,215,215,,215,D,Raw,Yes,Amateur Masters 50-54,52
 1,Sergey Sitalo,Сергей Ситало,M,90,86.5,,,,,,,,,,,180,192.5,,192.5,,192.5,D,Raw,Yes,Amateur Open,35
 1,Igor Grinku,Игорь Гринку,M,100,98.1,,,,,,,,,,,-260,262.5,-267.5,262.5,,262.5,D,Raw,Yes,Amateur Open,36

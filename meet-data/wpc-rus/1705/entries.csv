@@ -50,7 +50,7 @@ Place,Name,CyrillicName,Sex,Division,BirthYear,BodyweightKg,WeightClassKg,Squat1
 1,Ekaterina Bogoslavskaya,Екатерина Богославская,F,Pro Juniors 20-23,1997,59,60,55,65,-70,65,-30,30,-42.5,30,55,65,70,70,165,SBD,Raw
 1,Svetlana Kufeld,Светлана Куфельд,F,Pro Open,1968,59,60,90,-95,-95,90,62.5,65,67.5,67.5,100,110,120,120,277.5,SBD,Raw
 1,Irina Vysotskaya,Ирина Высоцкая,F,Pro Masters 45-49,1970,59,60,-70,70,75,75,50,55,57.5,57.5,100,-110,-110,100,232.5,SBD,Raw
-1,Vladislav Khristov,Владислав Христов,M,Pro Teen 13-15,2003,48,48,50,60,-70,60,40,45,50,50,60,70,80,80,190,SBD,Raw
+1,Vladislav Khristov,Владислав Христов,M,Pro Teen 13-15,2003,48,52,50,60,-70,60,40,45,50,50,60,70,80,80,190,SBD,Raw
 1,Mikhail Belousov,Михаил Белоусов,M,Pro Teen 13-15,2003,53,56,50,60,70,70,40,45,-50,45,60,70,80,80,195,SBD,Raw
 2,Gleb Protopopov,Глеб Протопопов,M,Pro Teen 13-15,2004,56,56,40,-50,60,60,35,40,-45,40,55,-65,65,65,165,SBD,Raw
 1,Ilya Kovalevskiy,Илья Ковалевский,M,Pro Teen 16-17,2000,56,56,60,70,-80,70,40,50,-60,50,90,100,110,110,230,SBD,Raw
@@ -155,18 +155,18 @@ DQ,Denis Romanov,Денис Романов,M,Pro Open,1994,99.9,100,,,,,-220,-22
 2,Igor Altshuler,Игорь Альтшулер,M,Pro Open,1974,119.4,125,,,,,-200,200,-207.5,200,,,,,200,B,Raw
 1,Nadezhda Ponomareva,Надежда Пономарева,F,Pro Open,1987,59,60,,,,,95,100,105,105,,,,,105,B,Multi-ply
 1,Vladislav Noskovets,Владислав Носковец,M,Pro Juniors 20-23,1994,75,75,,,,,187.5,200,215,215,,,,,215,B,Multi-ply
-1,Danil Ogly,Данил Оглы,M,Pro Open,1991,75,82.5,,,,,165,180,187.5,187.5,,,,,187.5,B,Multi-ply
-1,Mikhail Gutikov,Михаил Гутиков,M,Open,1987,77.5,82.5,,,,,205,215,225,225,,,,,225,B,Multi-ply
-2,Ivan Semenov,Иван Семенов,M,Open,1992,80.5,82.5,,,,,220,-230,-230,220,,,,,220,B,Multi-ply
-3,Vladimir Pushkarev,Владимир Пушкарев,M,Open,1986,82,82.5,,,,,120,130,140,140,,,,,140,B,Multi-ply
-1,Dmitriy Yakovlev,Дмитрий Яковлев,M,Open,1992,88,90,,,,,235,250,-255,250,,,,,250,B,Multi-ply
-2,Maksim Shashel,Максим Шашель,M,Open,1992,90,90,,,,,210,-220,220,220,,,,,220,B,Multi-ply
-3,Dmitriy Savchenko,Дмитрий Савченко,M,Open,1981,87,90,,,,,200,210,-220,210,,,,,210,B,Multi-ply
-4,Stepan Pakhomov,Степан Пахомов,M,Open,1991,88,90,,,,,185,200,210,210,,,,,210,B,Multi-ply
-1,Sergey Boldin,Сергей Болдин,M,M45-49,1971,88.5,90,,,,,165,175,182.5,182.5,,,,,182.5,B,Multi-ply
-1,Nikita Korablyov,Никита Кораблёв,M,Open,1983,93,100,,,,,170,190,-200,190,,,,,190,B,Multi-ply
-DQ,Artem Azaryan,Артем Азарян,M,Open,1990,96,100,,,,,-210,-220,,,,,,,,B,Multi-ply
-1,Konstantin Pleshkov,Константин Плешков,M,M40-44,1974,96.3,100,,,,,200,220,-230,220,,,,,220,B,Multi-ply
+1,Danil Ogly,Данил Оглы,M,Pro Open,1991,75.01,82.5,,,,,165,180,187.5,187.5,,,,,187.5,B,Multi-ply
+1,Mikhail Gutikov,Михаил Гутиков,M,Pro Open,1987,77.5,82.5,,,,,205,215,225,225,,,,,225,B,Multi-ply
+2,Ivan Semenov,Иван Семенов,M,Pro Open,1992,80.5,82.5,,,,,220,-230,-230,220,,,,,220,B,Multi-ply
+3,Vladimir Pushkarev,Владимир Пушкарев,M,Pro Open,1986,82,82.5,,,,,120,130,140,140,,,,,140,B,Multi-ply
+1,Dmitriy Yakovlev,Дмитрий Яковлев,M,Pro Open,1992,88,90,,,,,235,250,-255,250,,,,,250,B,Multi-ply
+2,Maksim Shashel,Максим Шашель,M,Pro Open,1992,90,90,,,,,210,-220,220,220,,,,,220,B,Multi-ply
+3,Dmitriy Savchenko,Дмитрий Савченко,M,Pro Open,1981,87,90,,,,,200,210,-220,210,,,,,210,B,Multi-ply
+4,Stepan Pakhomov,Степан Пахомов,M,Pro Open,1991,88,90,,,,,185,200,210,210,,,,,210,B,Multi-ply
+1,Sergey Boldin,Сергей Болдин,M,Pro Masters 45-49,1971,88.5,90,,,,,165,175,182.5,182.5,,,,,182.5,B,Multi-ply
+1,Nikita Korablyov,Никита Кораблёв,M,Pro Open,1983,93,100,,,,,170,190,-200,190,,,,,190,B,Multi-ply
+DQ,Artem Azaryan,Артем Азарян,M,Pro Open,1990,96,100,,,,,-210,-220,,,,,,,,B,Multi-ply
+1,Konstantin Pleshkov,Константин Плешков,M,Pro Masters 40-44,1974,96.3,100,,,,,200,220,-230,220,,,,,220,B,Multi-ply
 1,Ekaterina Malinskaya,Екатерина Малинская,F,Amateur Open,1980,48,48,,,,,,,,,107.5,115,122.5,122.5,122.5,D,Raw
 1,Elena Gryaznova,Елена Грязнова,F,Amateur Masters 45-49,1971,81.5,82.5,,,,,,,,,120,-130,,120,120,D,Raw
 1,Yuliya Kholibaeva,Юлия Холибаева,F,Amateur Open,1986,85.7,90,,,,,,,,,100,-102.5,-102.5,100,100,D,Raw

@@ -4,18 +4,18 @@ Place,Name,Division,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3Bench
 1,Alina Fadeeva,Pro Open,1988,73,90,95,-100,95,75,F,Алина Фадеева,B,95,Multi-ply
 2,Elena Davydova,Pro Open,1973,75,55,-57.5,-57.5,55,75,F,Елена Давыдова,B,55,Multi-ply
 1,Larisa Bezhan,Pro Open,1982,81.5,45,50,-52.5,50,82.5,F,Лариса Бежан,B,50,Multi-ply
-DQ,Andrey Stepanov,Pro Juniors 20-23,1995,56.8,-50,,,,60,M,Андрей Степанов,B,,Multi-ply
+DQ,Andrey Stepanov,Pro Teen,1995,56.8,-50,,,,60,M,Андрей Степанов,B,,Multi-ply
 1,Aleksey Zhizhin,Pro Juniors 20-23,1992,74.3,125,-132.5,132.5,132.5,75,M,Алексей Жижин,B,132.5,Multi-ply
 2,Nikolay Silin,Pro Juniors 20-23,1991,72,117.5,125,127.5,127.5,75,M,Николай Силин,B,127.5,Multi-ply
 3,Vasiliy Aseev,Pro Juniors 20-23,1989,74.6,105,-107.5,-107.5,105,75,M,Василий Асеев,B,105,Multi-ply
 DQ,Vitaliy Politaev,Pro Juniors 20-23,1992,69.6,-110,-115,-115,,75,M,Виталий Политаев,B,,Multi-ply
-DQ,Kirill Timofeev,Pro Juniors 20-23,1995,71.7,-65,,,,75,M,Кирилл Тимофеев,B,,Multi-ply
+DQ,Kirill Timofeev,Pro Teen,1995,71.7,-65,,,,75,M,Кирилл Тимофеев,B,,Multi-ply
 1,Roman Eremashvili,Pro Open,1981,71.1,-190,,200,200,75,M,,B,200,Single-ply
 2,Anton Gorshkov,Pro Open,1988,72.4,125,-130,130,130,75,M,Антон Горшков,B,130,Multi-ply
 3,Dmitriy Borobov,Pro Open,1986,72.6,120,125,-127.5,125,75,M,Дмитрий Боробов,B,125,Multi-ply
 DQ,Konstantin Borisov,Pro Open,1977,73.1,-95,-95,-95,,75,M,,B,,Multi-ply
 1,Sergey Parshikov,Pro Juniors 20-23,1990,78.8,120,-125,-127.5,120,82.5,M,Сергей Паршиков,B,120,Multi-ply
-2,Vitaliy Ignatov,Pro Juniors 20-23,1995,80.4,95,102.5,-105,102.5,82.5,M,Виталий Игнатов,B,102.5,Multi-ply
+2,Vitaliy Ignatov,Pro Teen,1995,80.4,95,102.5,-105,102.5,82.5,M,Виталий Игнатов,B,102.5,Multi-ply
 1,Ilya Pankratov,Pro Open,1986,81.7,190,-200,-200,190,82.5,M,Илья Панкратов,B,190,Multi-ply
 2,Matvey Scherbinin,Pro Open,1979,81.2,160,-170,,160,82.5,M,Матвей Щербинин,B,160,Multi-ply
 3,Kirill Dergunov,Pro Open,1986,79.6,135,145,147.5,147.5,82.5,M,Кирилл Дергунов,B,147.5,Multi-ply
@@ -36,8 +36,8 @@ DQ,Konstantin Gausman,Pro Open,1973,77.4,-195,,,,82.5,M,Константин Г�
 5,Stanislav Trusof,Pro Open,1985,85.9,150,-165,-165,150,90,M,Станислав Трусов,B,150,Multi-ply
 6,Sergey Gorishnin,Pro Open,1988,88.5,115,120,125,125,90,M,Сергей Горишнин,B,125,Multi-ply
 DQ,Nikita Skripko,Pro Open,1988,87.4,-130,-140,-140,,90,M,Никита Скрипко,B,,Multi-ply
-1,Gennadiy Obmelyukhin,M6,1948,86.3,97.5,102.5,-107.5,102.5,90,M,Геннадий Обмелюхин,B,102.5,Multi-ply
-1,Maksim Popkov,Pro Juniors 20-23,1994,92.8,145,155,160,160,100,M,Максим Попков,B,160,Multi-ply
+1,Gennadiy Obmelyukhin,Pro Masters 65-69,1948,86.3,97.5,102.5,-107.5,102.5,90,M,Геннадий Обмелюхин,B,102.5,Multi-ply
+1,Maksim Popkov,Pro Teen,1994,92.8,145,155,160,160,100,M,Максим Попков,B,160,Multi-ply
 2,Kirill Baranenko,Pro Juniors 20-23,1990,94.4,145,155,-165,155,100,M,Кирилл Бараненко,B,155,Multi-ply
 1,Pavel Kreynis,Pro Open,1988,99.1,220,230,240,240,100,M,,B,240,Multi-ply
 2,Mikhail Konoplev,Pro Open,1988,91.1,155,165,170,170,100,M,Михаил Коноплев,B,170,Multi-ply
@@ -45,9 +45,9 @@ DQ,Nikita Skripko,Pro Open,1988,87.4,-130,-140,-140,,90,M,Никита Скри�
 4,Sergey Skidan,Pro Open,1985,96.9,-110,115,120,120,100,M,Сергей Скидан,B,120,Multi-ply
 DQ,Bogdan Loboda,Pro Open,1987,98.8,-190,-190,,,100,M,Богдан Лобода,B,,Multi-ply
 DQ,Stanislav Yagunov,Pro Open,1983,94.2,-160,,,,100,M,Станислав Ягунов,B,,Multi-ply
-1,Igor Solomichev,Pro Masters 40-44,1967,95.5,147.5,152.5,-157.5,152.5,100,M,Игорь Соломичев,B,152.5,Multi-ply
+1,Igor Solomichev,Pro Masters 45-49,1967,95.5,147.5,152.5,-157.5,152.5,100,M,Игорь Соломичев,B,152.5,Multi-ply
 2,Yuriy Verchenko,Pro Masters 40-44,1969,99.9,150,-160,-160,150,100,M,Юрий Верченко,B,150,Multi-ply
-3,Sergey Dyakonov,Pro Masters 40-44,1957,98.7,-135,140,-145,140,100,M,Сергей Дьяконов,B,140,Multi-ply
+3,Sergey Dyakonov,Pro Masters 55-59,1957,98.7,-135,140,-145,140,100,M,Сергей Дьяконов,B,140,Multi-ply
 1,Dmitriy Rogatin,Pro Open,1984,106,200,212.5,217.5,217.5,110,M,Дмитрий Рогатин,B,217.5,Multi-ply
 2,Aleksey Kovrigin,Pro Open,1975,106,165,175,180,180,110,M,Алексей Ковригин,B,180,Multi-ply
 1,Pavel Myasoedko,Pro Open,1977,112.8,257.5,265,,265,125,M,,B,265,Multi-ply
