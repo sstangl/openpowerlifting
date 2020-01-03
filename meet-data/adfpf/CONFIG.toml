@@ -1,10 +1,74 @@
+# Configuration for the ADFPA
+
 [divisions]
+    # New-style divisions, Raw.
+    mo = {name="M-O", min=0, max=999, sex="M", equipment="Raw"}
+    mt1 = {name="M-T1", min=14, max=15, sex="M", equipment="Raw"}
+    mt2 = {name="M-T2", min=16, max=17, sex="M", equipment="Raw"}
+    mt3 = {name="M-T3", min=18, max=19, sex="M", equipment="Raw"}
+    mju = {name="M-JU", min=20, max=23, sex="M", equipment="Raw"}
+    mm1 = {name="M-M1", min=40, max=44, sex="M", equipment="Raw"}
+    mm2 = {name="M-M2", min=45, max=49, sex="M", equipment="Raw"}
+    mm3 = {name="M-M3", min=50, max=54, sex="M", equipment="Raw"}
+    mm4 = {name="M-M4", min=55, max=59, sex="M", equipment="Raw"}
+    mm5 = {name="M-M5", min=60, max=64, sex="M", equipment="Raw"}
+    mm6 = {name="M-M6", min=65, max=69, sex="M", equipment="Raw"}
+    mm7 = {name="M-M7", min=70, max=74, sex="M", equipment="Raw"}
+    mm8 = {name="M-M8", min=75, max=79, sex="M", equipment="Raw"}
+    mpmf = {name="M-PMF", min=0, max=999, sex="M", equipment="Raw"}
+
+    fo = {name="F-O", min=0, max=999, sex="F", equipment="Raw"}
+    ft1 = {name="F-T1", min=14, max=15, sex="F", equipment="Raw"}
+    ft2 = {name="F-T2", min=16, max=17, sex="F", equipment="Raw"}
+    ft3 = {name="F-T3", min=18, max=19, sex="F", equipment="Raw"}
+    fju = {name="F-JU", min=20, max=23, sex="F", equipment="Raw"}
+    fm1 = {name="F-M1", min=40, max=44, sex="F", equipment="Raw"}
+    fm2 = {name="F-M2", min=45, max=49, sex="F", equipment="Raw"}
+    fm3 = {name="F-M3", min=50, max=54, sex="F", equipment="Raw"}
+    fm4 = {name="F-M4", min=55, max=59, sex="F", equipment="Raw"}
+    fm5 = {name="F-M5", min=60, max=64, sex="F", equipment="Raw"}
+    fm6 = {name="F-M6", min=65, max=69, sex="F", equipment="Raw"}
+    fm7 = {name="F-M7", min=70, max=74, sex="F", equipment="Raw"}
+    fm8 = {name="F-M8", min=75, max=79, sex="F", equipment="Raw"}
+    fpmf = {name="F-PMF", min=0, max=999, sex="F", equipment="Raw"}
+
+    # New-style divisions, Equipped.
+    meo = {name="M-EO", min=0, max=999, sex="M", equipment="Single-ply"}
+    met1 = {name="M-ET1", min=14, max=15, sex="M", equipment="Single-ply"}
+    met2 = {name="M-ET2", min=16, max=17, sex="M", equipment="Single-ply"}
+    met3 = {name="M-ET3", min=18, max=19, sex="M", equipment="Single-ply"}
+    meju = {name="M-EJU", min=20, max=23, sex="M", equipment="Single-ply"}
+    mem1 = {name="M-EM1", min=40, max=44, sex="M", equipment="Single-ply"}
+    mem2 = {name="M-EM2", min=45, max=49, sex="M", equipment="Single-ply"}
+    mem3 = {name="M-EM3", min=50, max=54, sex="M", equipment="Single-ply"}
+    mem4 = {name="M-EM4", min=55, max=59, sex="M", equipment="Single-ply"}
+    mem5 = {name="M-EM5", min=60, max=64, sex="M", equipment="Single-ply"}
+    mem6 = {name="M-EM6", min=65, max=69, sex="M", equipment="Single-ply"}
+    mem7 = {name="M-EM7", min=70, max=74, sex="M", equipment="Single-ply"}
+    mem8 = {name="M-EM8", min=75, max=79, sex="M", equipment="Single-ply"}
+    mepmf = {name="M-EPMF", min=0, max=999, sex="M", equipment="Single-ply"}
+
+    feo = {name="F-EO", min=0, max=999, sex="F", equipment="Single-ply"}
+    fet1 = {name="F-ET1", min=14, max=15, sex="F", equipment="Single-ply"}
+    fet2 = {name="F-ET2", min=16, max=17, sex="F", equipment="Single-ply"}
+    fet3 = {name="F-ET3", min=18, max=19, sex="F", equipment="Single-ply"}
+    feju = {name="F-EJU", min=20, max=23, sex="F", equipment="Single-ply"}
+    fem1 = {name="F-EM1", min=40, max=44, sex="F", equipment="Single-ply"}
+    fem2 = {name="F-EM2", min=45, max=49, sex="F", equipment="Single-ply"}
+    fem3 = {name="F-EM3", min=50, max=54, sex="F", equipment="Single-ply"}
+    fem4 = {name="F-EM4", min=55, max=59, sex="F", equipment="Single-ply"}
+    fem5 = {name="F-EM5", min=60, max=64, sex="F", equipment="Single-ply"}
+    fem6 = {name="F-EM6", min=65, max=69, sex="F", equipment="Single-ply"}
+    fem7 = {name="F-EM7", min=70, max=74, sex="F", equipment="Single-ply"}
+    fem8 = {name="F-EM8", min=75, max=79, sex="F", equipment="Single-ply"}
+    fepmf = {name="F-EPMF", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    # Old-style divisions.
     open = {name ="Open",min=14,max=999}
     t1415 = {name ="Teen 14-15",min=14,max=15}
     t1617 = {name ="Teen 16-17",min=16,max=17}
     t1819 = {name ="Teen 18-19",min=18,max=19}
     j2023 = {name ="Juniors 20-23",min=20,max=23}
-
     m4044 = {name ="Masters 40-44",min=40,max=44}
     m4549 = {name ="Masters 45-49",min=45,max=49}
     m5054 = {name ="Masters 50-54",min=50,max=54}
@@ -14,6 +78,7 @@
     m7074 = {name ="Masters 70-74",min=70,max=74}
     m7579 = {name ="Masters 75-79",min=75,max=79}
     m8084 = {name ="Masters 80-84",min=80,max=84}
+    pfm = {name = "PFM",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
