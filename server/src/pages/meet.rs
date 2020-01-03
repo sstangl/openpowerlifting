@@ -1,6 +1,5 @@
 //! Logic for each meet's individual results page.
 
-use coefficients;
 use itertools::Itertools;
 use opltypes::*;
 
@@ -93,6 +92,81 @@ impl FromStr for MeetSortSelection {
             "by-total" => Ok(MeetSortSelection::ByTotal),
             "by-wilks" => Ok(MeetSortSelection::ByWilks),
             _ => Err(()),
+        }
+    }
+}
+
+impl From<PointsSystem> for MeetSortSelection {
+    fn from(system: PointsSystem) -> Self {
+        match system {
+            PointsSystem::AH => MeetSortSelection::ByAH,
+            PointsSystem::Dots => MeetSortSelection::ByDots,
+            PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
+            PointsSystem::IPFPoints => MeetSortSelection::ByIPFPoints,
+            PointsSystem::McCulloch => MeetSortSelection::ByMcCulloch,
+            PointsSystem::Reshel => MeetSortSelection::ByReshel,
+            PointsSystem::SchwartzMalone => MeetSortSelection::BySchwartzMalone,
+            PointsSystem::NASA => MeetSortSelection::ByNASA,
+            PointsSystem::Total => MeetSortSelection::ByTotal,
+            PointsSystem::Wilks => MeetSortSelection::ByWilks,
+        }
+    }
+}
+
+impl MeetSortSelection {
+    /// Converts to a PointsSystem.
+    pub fn as_points_system(self, default_points: PointsSystem) -> PointsSystem {
+        match self {
+            // Default sort.
+            MeetSortSelection::ByFederationDefault => default_points,
+
+            // Specifically-requested point sorts.
+            MeetSortSelection::ByAH => PointsSystem::AH,
+            MeetSortSelection::ByDots => PointsSystem::Dots,
+            MeetSortSelection::ByGlossbrenner => PointsSystem::Glossbrenner,
+            MeetSortSelection::ByIPFPoints => PointsSystem::IPFPoints,
+            MeetSortSelection::ByMcCulloch => PointsSystem::McCulloch,
+            MeetSortSelection::ByNASA => PointsSystem::NASA,
+            MeetSortSelection::ByReshel => PointsSystem::Reshel,
+            MeetSortSelection::BySchwartzMalone => PointsSystem::SchwartzMalone,
+            MeetSortSelection::ByWilks => PointsSystem::Wilks,
+
+            // Specifically-requested weight sorts.
+            MeetSortSelection::ByDivision | MeetSortSelection::ByTotal => default_points,
+        }
+    }
+
+    /// Gets the title of the column to show for the given selection.
+    pub fn column_title<'db>(
+        self,
+        locale: &'db Locale,
+        default_points: PointsSystem,
+    ) -> &'db str {
+        match self.as_points_system(default_points) {
+            PointsSystem::AH => "AH",
+            PointsSystem::Dots => &locale.strings.columns.dots,
+            PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
+            PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
+            PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
+            PointsSystem::NASA => "NASA",
+            PointsSystem::Reshel => "Reshel",
+            PointsSystem::SchwartzMalone => "S/Malone",
+            PointsSystem::Wilks => &locale.strings.columns.wilks,
+
+            // This occurs if the federation default is ByTotal.
+            PointsSystem::Total => "Points",
+        }
+    }
+
+    /// Resolves ByFederationDefault to the actual default.
+    ///
+    /// This is used to get the "real" MeetSortSelection, to be passed to the
+    /// templates.
+    pub fn resolve_fed_default(self, default_points: PointsSystem) -> Self {
+        if self == MeetSortSelection::ByFederationDefault {
+            MeetSortSelection::from(default_points)
+        } else {
+            self
         }
     }
 }
@@ -191,47 +265,7 @@ impl<'a> ResultsRow<'a> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
-            points: match points_system {
-                PointsSystem::AH => {
-                    let points =
-                        coefficients::ah(entry.sex, entry.bodyweightkg, entry.totalkg);
-                    points.in_format(number_format)
-                }
-                PointsSystem::Dots => {
-                    let points =
-                        coefficients::dots(entry.sex, entry.bodyweightkg, entry.totalkg);
-                    points.in_format(number_format)
-                }
-                PointsSystem::Glossbrenner => entry.glossbrenner.in_format(number_format),
-                PointsSystem::IPFPoints => entry.ipfpoints.in_format(number_format),
-                PointsSystem::McCulloch => entry.mcculloch.in_format(number_format),
-                PointsSystem::NASA => {
-                    let points = coefficients::nasa(entry.bodyweightkg, entry.totalkg);
-                    points.in_format(number_format)
-                }
-                PointsSystem::Reshel => {
-                    let points = coefficients::reshel(
-                        entry.sex,
-                        entry.bodyweightkg,
-                        entry.totalkg,
-                    );
-                    points.in_format(number_format)
-                }
-                PointsSystem::SchwartzMalone => {
-                    let points = coefficients::schwartzmalone(
-                        entry.sex,
-                        entry.bodyweightkg,
-                        entry.totalkg,
-                    );
-                    points.in_format(number_format)
-                }
-                PointsSystem::Total => entry
-                    .totalkg
-                    .as_type(units)
-                    .as_points()
-                    .in_format(number_format),
-                PointsSystem::Wilks => entry.wilks.in_format(number_format),
-            },
+            points: entry.points(points_system, units).in_format(number_format),
         }
     }
 }
@@ -565,12 +599,6 @@ impl<'db> Context<'db> {
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
 
         let tables: Vec<Table> = match sort {
-            MeetSortSelection::ByAH => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::AH, meet_id)
-            }
-            MeetSortSelection::ByDots => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::Dots, meet_id)
-            }
             MeetSortSelection::ByDivision => make_tables_by_division(
                 &opldb,
                 &locale,
@@ -578,68 +606,10 @@ impl<'db> Context<'db> {
                 meet_id,
                 meet.ruleset,
             ),
-            MeetSortSelection::ByGlossbrenner => make_tables_by_points(
-                &opldb,
-                &locale,
-                PointsSystem::Glossbrenner,
-                meet_id,
-            ),
-            MeetSortSelection::ByIPFPoints => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::IPFPoints, meet_id)
+            _ => {
+                let system = sort.as_points_system(default_points);
+                make_tables_by_points(&opldb, &locale, system, meet_id)
             }
-            MeetSortSelection::ByMcCulloch => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::McCulloch, meet_id)
-            }
-            MeetSortSelection::ByNASA => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::NASA, meet_id)
-            }
-            MeetSortSelection::ByReshel => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::Reshel, meet_id)
-            }
-            MeetSortSelection::BySchwartzMalone => make_tables_by_points(
-                &opldb,
-                &locale,
-                PointsSystem::SchwartzMalone,
-                meet_id,
-            ),
-            MeetSortSelection::ByTotal => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::Total, meet_id)
-            }
-            MeetSortSelection::ByWilks => {
-                make_tables_by_points(&opldb, &locale, PointsSystem::Wilks, meet_id)
-            }
-            MeetSortSelection::ByFederationDefault => {
-                make_tables_by_points(&opldb, &locale, default_points, meet_id)
-            }
-        };
-
-        let points_column_title = match sort {
-            MeetSortSelection::ByDivision | MeetSortSelection::ByFederationDefault => {
-                match default_points {
-                    PointsSystem::AH => "AH",
-                    PointsSystem::Dots => "Dots",
-                    PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
-                    PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
-                    PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
-                    PointsSystem::NASA => "NASA",
-                    PointsSystem::Reshel => "Reshel",
-                    PointsSystem::SchwartzMalone => "S/Malone",
-                    // FIXME: Total actually uses the meet default.
-                    PointsSystem::Total => "Points",
-                    PointsSystem::Wilks => &locale.strings.columns.wilks,
-                }
-            }
-            MeetSortSelection::ByAH => "AH",
-            MeetSortSelection::ByDots => "Dots",
-            MeetSortSelection::ByGlossbrenner => &locale.strings.columns.glossbrenner,
-            MeetSortSelection::ByIPFPoints => &locale.strings.columns.ipfpoints,
-            MeetSortSelection::ByMcCulloch => &locale.strings.columns.mcculloch,
-            MeetSortSelection::ByNASA => "NASA",
-            MeetSortSelection::ByReshel => "Reshel",
-            MeetSortSelection::BySchwartzMalone => "S/Malone",
-            // FIXME: Total actually uses the meet default.
-            MeetSortSelection::ByTotal => "Points",
-            MeetSortSelection::ByWilks => &locale.strings.columns.wilks,
         };
 
         // Paths do not include the urlprefix, which defaults to "/".
@@ -692,34 +662,8 @@ impl<'db> Context<'db> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            points_column_title,
-            sortselection: match sort {
-                MeetSortSelection::ByAH => MeetSortSelection::ByAH,
-                MeetSortSelection::ByDivision => MeetSortSelection::ByDivision,
-                MeetSortSelection::ByDots => MeetSortSelection::ByDots,
-                MeetSortSelection::ByGlossbrenner => MeetSortSelection::ByGlossbrenner,
-                MeetSortSelection::ByIPFPoints => MeetSortSelection::ByIPFPoints,
-                MeetSortSelection::ByMcCulloch => MeetSortSelection::ByMcCulloch,
-                MeetSortSelection::ByReshel => MeetSortSelection::ByReshel,
-                MeetSortSelection::BySchwartzMalone => {
-                    MeetSortSelection::BySchwartzMalone
-                }
-                MeetSortSelection::ByNASA => MeetSortSelection::ByNASA,
-                MeetSortSelection::ByTotal => MeetSortSelection::ByTotal,
-                MeetSortSelection::ByWilks => MeetSortSelection::ByWilks,
-                MeetSortSelection::ByFederationDefault => match default_points {
-                    PointsSystem::AH => MeetSortSelection::ByAH,
-                    PointsSystem::Dots => MeetSortSelection::ByDots,
-                    PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
-                    PointsSystem::IPFPoints => MeetSortSelection::ByIPFPoints,
-                    PointsSystem::McCulloch => MeetSortSelection::ByMcCulloch,
-                    PointsSystem::Reshel => MeetSortSelection::ByReshel,
-                    PointsSystem::SchwartzMalone => MeetSortSelection::BySchwartzMalone,
-                    PointsSystem::NASA => MeetSortSelection::ByNASA,
-                    PointsSystem::Total => MeetSortSelection::ByTotal,
-                    PointsSystem::Wilks => MeetSortSelection::ByWilks,
-                },
-            },
+            points_column_title: sort.column_title(&locale, default_points),
+            sortselection: sort.resolve_fed_default(default_points),
             meet: MeetInfo::from(&meet, locale.strings),
             year: meet.date.year(),
             has_age_data: true, // TODO: Maybe use again?

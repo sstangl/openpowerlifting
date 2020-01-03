@@ -4,6 +4,7 @@
 //! better than a "real" database like SQLite3 or PostgreSQL. Additionally,
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
+use coefficients;
 use csv;
 use itertools::Itertools;
 use opltypes::*;
@@ -170,6 +171,26 @@ impl Entry {
     #[inline]
     pub fn get_division(&self) -> Option<&str> {
         self.division.as_ref().map(|s| s.as_str())
+    }
+
+    /// Calculate points.
+    pub fn points(&self, system: PointsSystem, units: WeightUnits) -> Points {
+        let sex = self.sex;
+        let bw = self.bodyweightkg;
+        let total = self.totalkg;
+
+        match system {
+            PointsSystem::AH => coefficients::ah(sex, bw, total),
+            PointsSystem::Dots => self.dots,
+            PointsSystem::Glossbrenner => self.glossbrenner,
+            PointsSystem::IPFPoints => self.ipfpoints,
+            PointsSystem::McCulloch => self.mcculloch,
+            PointsSystem::NASA => coefficients::nasa(bw, total),
+            PointsSystem::Reshel => coefficients::reshel(sex, bw, total),
+            PointsSystem::SchwartzMalone => coefficients::schwartzmalone(sex, bw, total),
+            PointsSystem::Total => self.totalkg.as_type(units).as_points(),
+            PointsSystem::Wilks => self.wilks,
+        }
     }
 }
 
