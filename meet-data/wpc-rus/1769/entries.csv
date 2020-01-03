@@ -3,7 +3,7 @@ Place,Name,Sex,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 1,Roksana Grigoryan,F,52,51.7,72.5,77.5,-85,77.5,,35,40,-42.5,40,,85,92.5,100,100,,217.5,SBD,Raw,Yes,Amateur Open,28
 2,Yuliya Makhankova,F,52,50.6,72.5,75,-80,75,,37.5,-40,-42.5,37.5,,85,92.5,100,100,,212.5,SBD,Raw,Yes,Amateur Open,32
 1,Valeriya Dolgoreva,F,56,55.7,70,-77.5,77.5,77.5,,35,37.5,40,40,,80,85,90,90,,207.5,SBD,Raw,Yes,Amateur Teen 16-17,17
-1,Anna Musagaliyeva,F,56,55.1,77.5,-87.5,-87.5,77.5,,45,50,-55,50,,90,-105,105,105,,232.5,SBD,Raw,Yes,Amateur Open 20-23,22
+1,Anna Musagaliyeva,F,56,55.1,77.5,-87.5,-87.5,77.5,,45,50,-55,50,,90,-105,105,105,,232.5,SBD,Raw,Yes,Amateur Juniors 20-23,22
 DQ,Irina Gegelskaya,F,56,55.2,-85,-85,-85,,,,,,,,,,,,,,SBD,Raw,Yes,Amateur Open,34
 1,Elina Ovchinnikova,F,60,57.8,-87.5,87.5,-92.5,87.5,,47.5,52.5,-57.5,52.5,,110,122.5,132.5,132.5,,272.5,SBD,Raw,Yes,Amateur Open,18
 1,Aleksey Veshkurtsev,M,52,51.3,-125,127.5,132.5,132.5,,90,95,,95,,175,182.5,-187.5,182.5,,410,SBD,Raw,Yes,Amateur Open,35
@@ -26,7 +26,7 @@ DQ,Irina Gegelskaya,F,56,55.2,-85,-85,-85,,,,,,,,,,,,,,SBD,Raw,Yes,Amateur Open,
 1,Dmitriy Kabakov,M,67.5,66.8,125,140,145,145,,75,80,-87.5,80,,140,150,160,160,,385,SBD,Wraps,Yes,Amateur Teen 13-15,14
 1,Aleksey Komarov,M,67.5,63.5,165,-175,185,185,,87.5,97.5,-102.5,97.5,,150,160,-167.5,160,,442.5,SBD,Wraps,Yes,Amateur Teen 18-19,19
 2,Konstantin Misyuk,M,67.5,67.2,150,160,167.5,167.5,,105,110,112.5,112.5,,145,155,,155,,435,SBD,Wraps,Yes,Amateur Teen 18-19,18
-1,Rustam Medzhidov,M,67.5,65.6,-160,-160,160,160,,117.5,-122.5,-122.5,117.5,,170,180,-187.5,180,,457.5,SBD,Wraps,Yes,Amateur Open 20-23,23
+1,Rustam Medzhidov,M,67.5,65.6,-160,-160,160,160,,117.5,-122.5,-122.5,117.5,,170,180,-187.5,180,,457.5,SBD,Wraps,Yes,Amateur Juniors 20-23,23
 1,Kirill Akushevich,M,75,71.8,115,-122.5,122.5,122.5,,80,87.5,-95,87.5,,115,125,135,135,,345,SBD,Wraps,Yes,Amateur Teen 16-17,16
 1,Kostas Telidis,M,75,74.9,235,247.5,255,255,,145,152.5,158,158,160,220,232.5,240,240,,652.5,SBD,Wraps,Yes,Amateur Open,28
 2,Andrey Zakharenko,M,75,72.5,-150,-150,160,160,,100,-105,-105,100,,180,-190,190,190,,450,SBD,Wraps,Yes,Amateur Open,31
@@ -46,19 +46,19 @@ DQ,Irina Gegelskaya,F,56,55.2,-85,-85,-85,,,,,,,,,,,,,,SBD,Raw,Yes,Amateur Open,
 1,Maksim Demochkin,M,110,105.6,210,-220,220,220,,130,140,-147.5,140,,210,220,230,230,,590,SBD,Wraps,Yes,Amateur Open,31
 1,Arbi Israilov,M,125,111.4,170,180,190,190,195.5,120,127.5,,127.5,,195,205,,205,,522.5,SBD,Wraps,Yes,Amateur Masters 45-49,49
 1,Veronika Uporova,F,48,47.6,-105,105,115,115,,60,-67.5,67.5,67.5,,100,-120,-120,100,,282.5,SBD,Single-ply,Yes,Amateur Open,27
-1,Polina Goryachkina,F,52,50.4,-115,115,-120,115,,45,50,60,60,,110,120,130,130,,305,SBD,Single-ply,Yes,Amateur Open 20-23,21
+1,Polina Goryachkina,F,52,50.4,-115,115,-120,115,,45,50,60,60,,110,120,130,130,,305,SBD,Single-ply,Yes,Amateur Juniors 20-23,21
 1,Polina Goryachkina,F,52,50.4,-115,115,-120,115,,45,50,60,60,,110,120,130,130,,305,SBD,Single-ply,Yes,Amateur Open,21
 2,Yelena Paneva,F,52,50.5,90,95,100,100,,45,-50,-50,45,,90,100,-107.5,100,,245,SBD,Single-ply,Yes,Amateur Open,25
 1,Yekaterina Cherdantseva,F,56,54.3,-120,120,-130,120,,55,-60,-62.5,55,,100,120,-130,120,,295,SBD,Single-ply,Yes,Amateur Teen 16-17,17
 1,Lyubov Marochenko,M,60,59.1,137.5,145,150,150,,70,-75,75,75,,137.5,145,-152.5,145,,370,SBD,Single-ply,Yes,Amateur Open,21
-1,Stanislav Trubin,M,52,50,175,-182.5,185,185,,105,112.5,120,120,,-140,145,160,160,,465,SBD,Single-ply,Yes,Amateur Open 20-23,21
+1,Stanislav Trubin,M,52,50,175,-182.5,185,185,,105,112.5,120,120,,-140,145,160,160,,465,SBD,Single-ply,Yes,Amateur Juniors 20-23,21
 1,Nikita Sokolenko,M,75,73.8,125,130,135,135,,87.5,-90,90,90,,115,120,130,130,,355,SBD,Single-ply,Yes,Amateur Teen 16-17,16
 1,Maksim Balanev,M,82.5,81.6,180,190,200,200,,-100,100,110,110,,170,180,190,190,,500,SBD,Single-ply,Yes,Amateur Teen 18-19,18
 1,Grigoriy Ovchinnikov,M,82.5,81.6,200,215,225,225,,150,160,170,170,,200,215,222.5,222.5,,617.5,SBD,Single-ply,Yes,Amateur Open,35
 2,Yevgeniy Vdovin,M,82.5,81.9,-200,210,-220,210,,130,-135,135,135,,210,215,-220,215,,560,SBD,Single-ply,Yes,Amateur Open,38
 1,Yevgeniy Svoboda,M,90,87.8,225,245,,245,,160,170,,170,,210,240,265,265,,680,SBD,Multi-ply,Yes,Amateur Open,45
 1,Yevgeniy Svoboda,M,90,87.8,225,245,,245,,160,170,,170,,210,240,265,265,,680,SBD,Multi-ply,Yes,Amateur Masters 45-49,45
-1,Aleksandr Krivoruchko,M,90,81.6,130,140,150,150,,100,110,-117.5,110,,150,170,190,190,,450,SBD,Raw,No,Pro Open 20-23,20
+1,Aleksandr Krivoruchko,M,90,81.6,130,140,150,150,,100,110,-117.5,110,,150,170,190,190,,450,SBD,Raw,No,Pro Juniors 20-23,20
 1,Maksim Povalyayev,M,100,96.3,220,235,245,245,,170,180,185,185,,210,230,240,240,,670,SBD,Raw,No,Pro Open,23
 2,Yevgeniy Kozlov,M,100,97.8,230,240,250,250,,-140,-150,150,150,,-250,250,-282.5,250,,650,SBD,Raw,No,Pro Open,42
 1,Igor Luzin,M,100,98.2,200,220,-230,220,,135,142.5,-150,142.5,,200,215,-222.5,215,,577.5,SBD,Raw,No,Pro Masters 45-49,47
@@ -103,12 +103,12 @@ DQ,Enver Niyaziyev,M,110,107.7,375,-390,-390,375,,280,290,-300,290,,-275,-275,-2
 1,Oleg Solonenko,M,75,74.8,,,,,,120,125,,125,,,,,,,125,B,Raw,No,Pro Masters 45-49,46
 1,Sergey Fedorov,M,75,75,,,,,,160,170,-175,170,,,,,,,170,B,Raw,No,Pro Masters 55-59,55
 1,Nail Faizov,M,75,72,,,,,,50,55,62.5,62.5,,,,,,,62.5,B,Raw,No,Pro Masters,76
-1,Yegor Kolesnikov,M,82.5,82.5,,,,,,170,180,-185,180,,,,,,,180,B,Raw,No,Pro Open 20-23,22
+1,Yegor Kolesnikov,M,82.5,82.5,,,,,,170,180,-185,180,,,,,,,180,B,Raw,No,Pro Juniors 20-23,22
 1,Yegor Kolesnikov,M,82.5,82.5,,,,,,170,180,-185,180,,,,,,,180,B,Raw,No,Pro Open,22
 2,Nikolay Gudkov,M,82.5,81.7,,,,,,150,-155,155,155,,,,,,,155,B,Raw,No,Pro Open,28
 1,Andrey Shchur,M,82.5,79,,,,,,155,165,170,170,,,,,,,170,B,Raw,No,Pro Masters 40-44,44
 1,Aleksandr Tsmyg,M,82.5,80.5,,,,,,135,140,145,145,,,,,,,145,B,Raw,No,Pro Masters 50-54,53
-1,Dmitriy Polyakov,M,90,88.9,,,,,,27.5,,,27.5,,,,,,,27.5,B,Raw,No,Pro Open 20-23,21
+1,Dmitriy Polyakov,M,90,88.9,,,,,,27.5,,,27.5,,,,,,,27.5,B,Raw,No,Pro Juniors 20-23,21
 1,Sergey Kultashov,M,90,89.1,,,,,,220,-235,-235,220,,,,,,,220,B,Raw,No,Pro Open,38
 2,Albert Archvava,M,90,89,,,,,,-187.5,-187.5,187.5,187.5,,,,,,,187.5,B,Raw,No,Pro Open,28
 3,Mikhail Zaychikov,M,90,89.9,,,,,,165,-172.5,-172.5,165,,,,,,,165,B,Raw,No,Pro Open,31
@@ -155,7 +155,7 @@ DQ,Enver Niyaziyev,M,110,107.7,375,-390,-390,375,,280,290,-300,290,,-275,-275,-2
 2,Oleg Solonenko,M,75,74.8,,,,,,,,,,,180,200,,200,,200,D,Raw,No,Pro Open,46
 1,Oleg Solonenko,M,75,74.8,,,,,,,,,,,180,200,,200,,200,D,Raw,No,Pro Masters 45-49,46
 1,Yevgeniy Arest,M,82.5,77.7,,,,,,,,,,,205,215,220,220,,220,D,Raw,No,Pro Open,37
-1,Nikita Krasnobryzhiy,M,90,87.8,,,,,,,,,,,200,205,-210,205,,205,D,Raw,No,Pro Open 20-23,20
+1,Nikita Krasnobryzhiy,M,90,87.8,,,,,,,,,,,200,205,-210,205,,205,D,Raw,No,Pro Juniors 20-23,20
 1,Denis Pazhitnov,M,90,88,,,,,,,,,,,300,-312.5,-312.5,300,,300,D,Raw,No,Pro Open,28
 1,Aleksandr Ryabov,M,90,85.7,,,,,,,,,,,125,135,140,140,,140,D,Raw,No,Pro Masters,80
 1,Yuriy Katanov,M,100,98.2,,,,,,,,,,,300,-310,,300,,300,D,Raw,No,Pro Open,37
@@ -172,7 +172,7 @@ DQ,Enver Niyaziyev,M,110,107.7,375,-390,-390,375,,280,290,-300,290,,-275,-275,-2
 3,Yelena Borilko,F,48,47.9,,,,,,45,50,-52.5,50,,,,,,,50,B,Raw,Yes,Amateur Open,35
 4,Olga Shishkina,F,48,47,,,,,,40,42.5,-45,42.5,,,,,,,42.5,B,Raw,Yes,Amateur Open,32
 1,Irina Kravtsova,F,52,48.5,,,,,,45,50,-52.5,50,,,,,,,50,B,Raw,Yes,Amateur Teen 18-19,18
-1,Yelizaveta Shityagina,F,52,52,,,,,,55,-57.5,57.5,57.5,,,,,,,57.5,B,Raw,Yes,Amateur Open 20-23,21
+1,Yelizaveta Shityagina,F,52,52,,,,,,55,-57.5,57.5,57.5,,,,,,,57.5,B,Raw,Yes,Amateur Juniors 20-23,21
 1,Aleksandra Kirilyuk,F,52,51.9,,,,,,57.5,60,-62.5,60,,,,,,,60,B,Raw,Yes,Amateur Open,30
 DQ,Yelena Vorotnikova,F,52,51.1,,,,,,-47.5,-50,-50,,,,,,,,,B,Raw,Yes,Amateur Open,34
 1,Valeriya Dolgoreva,F,56,55.7,,,,,,35,40,42.5,42.5,,,,,,,42.5,B,Raw,Yes,Amateur Teen 16-17,17
@@ -184,18 +184,18 @@ DQ,Yelena Vorotnikova,F,52,51.1,,,,,,-47.5,-50,-50,,,,,,,,,B,Raw,Yes,Amateur Ope
 1,Yuliya Tyutereva,F,67.5,67.5,,,,,,-87.5,90,-95,90,,,,,,,90,B,Raw,Yes,Amateur Open,37
 2,Natalya Tsivileva,F,67.5,66.5,,,,,,60,67.5,-70,67.5,,,,,,,67.5,B,Raw,Yes,Amateur Open,24
 3,Kseniya Glinkina,F,67.5,60.8,,,,,,-65,65,-67.5,65,,,,,,,65,B,Raw,Yes,Amateur Open,29
-1,Aleksey Kolisnichenko,M,52,48.4,,,,,,95,97.5,-100,97.5,,,,,,,97.5,B,Raw,Yes,Amateur Open 20-23,23
+1,Aleksey Kolisnichenko,M,52,48.4,,,,,,95,97.5,-100,97.5,,,,,,,97.5,B,Raw,Yes,Amateur Juniors 20-23,23
 1,Aleksey Veshkurtsev,M,52,51.3,,,,,,92.5,95,-97.5,95,,,,,,,95,B,Raw,Yes,Amateur Open,35
 1,Andrey Petukhov,M,56,55.8,,,,,,85,-92.5,92.5,92.5,,,,,,,92.5,B,Raw,Yes,Amateur Teen 16-17,16
 1,Yuriy Murzin,M,60,59.5,,,,,,-110,115,120,120,-120.5,,,,,,120,B,Raw,Yes,Amateur Teen 16-17,17
 1,Ruslan Rzayev,M,60,58.1,,,,,,87.5,97.5,112.5,112.5,,,,,,,112.5,B,Raw,Yes,Amateur Open,25
 1,Artur Gazizullin,M,67.5,66.8,,,,,,107.5,125,-132.5,125,,,,,,,125,B,Raw,Yes,Amateur Teen 18-19,19
-1,Rustam Medzhidov,M,67.5,65.6,,,,,,117.5,120,-125,120,,,,,,,120,B,Raw,Yes,Amateur Open 20-23,23
+1,Rustam Medzhidov,M,67.5,65.6,,,,,,117.5,120,-125,120,,,,,,,120,B,Raw,Yes,Amateur Juniors 20-23,23
 1,Aleksandr Kotlyarskiy,M,75,71,,,,,,140,-145,145,145,150,,,,,,145,B,Raw,Yes,Amateur Teen 13-15,15
 2,Mikhail Vyunov,M,75,70.2,,,,,,75,-82.5,-85,75,,,,,,,75,B,Raw,Yes,Amateur Teen 13-15,15
 1,Danila Moseyev,M,75,74.7,,,,,,112.5,117.5,120,120,,,,,,,120,B,Raw,Yes,Amateur Teen 16-17,16
 1,Arseniy Rogozin,M,75,71.3,,,,,,145,-150,150,150,,,,,,,150,B,Raw,Yes,Amateur Teen 18-19,18
-DQ,Anton Pankevich,M,75,68.5,,,,,,-110,-110,-110,,,,,,,,,B,Raw,Yes,Amateur Open 20-23,23
+DQ,Anton Pankevich,M,75,68.5,,,,,,-110,-110,-110,,,,,,,,,B,Raw,Yes,Amateur Juniors 20-23,23
 1,Sergey Grigoryants,M,75,73.5,,,,,,140,145,-150,145,,,,,,,145,B,Raw,Yes,Amateur Open,34
 2,Valentin Gruzdev,M,75,74.7,,,,,,125,130,-135,130,,,,,,,130,B,Raw,Yes,Amateur Open,27
 3,Maksim Malyshkin,M,75,74.8,,,,,,120,130,-135,130,,,,,,,130,B,Raw,Yes,Amateur Open,35
@@ -213,9 +213,9 @@ DQ,Anton Pankevich,M,75,68.5,,,,,,-110,-110,-110,,,,,,,,,B,Raw,Yes,Amateur Open 
 1,Anatoliy Kabanchenko,M,82.5,81.2,,,,,,110,115,120,120,,,,,,,120,B,Raw,Yes,Amateur Masters 60-64,64
 1,Danila Amanbayev,M,90,88.4,,,,,,105,115,117.5,117.5,,,,,,,117.5,B,Raw,Yes,Amateur Teen 16-17,16
 1,Maksim Stavitskiy,M,90,87.9,,,,,,127.5,132.5,137.5,137.5,,,,,,,137.5,B,Raw,Yes,Amateur Teen 18-19,18
-1,Sergey Chmil,M,90,87.9,,,,,,147.5,152.5,-157.5,152.5,,,,,,,152.5,B,Raw,Yes,Amateur Open 20-23,23
-2,Aleksandr Sivayev,M,90,86.5,,,,,,135,140,145,145,,,,,,,145,B,Raw,Yes,Amateur Open 20-23,22
-3,Pavel Mikholap,M,90,88.5,,,,,,120,-132.5,132.5,132.5,,,,,,,132.5,B,Raw,Yes,Amateur Open 20-23,23
+1,Sergey Chmil,M,90,87.9,,,,,,147.5,152.5,-157.5,152.5,,,,,,,152.5,B,Raw,Yes,Amateur Juniors 20-23,23
+2,Aleksandr Sivayev,M,90,86.5,,,,,,135,140,145,145,,,,,,,145,B,Raw,Yes,Amateur Juniors 20-23,22
+3,Pavel Mikholap,M,90,88.5,,,,,,120,-132.5,132.5,132.5,,,,,,,132.5,B,Raw,Yes,Amateur Juniors 20-23,23
 1,Yevgeniy Matskevich,M,90,87.9,,,,,,152.5,157.5,-160,157.5,,,,,,,157.5,B,Raw,Yes,Amateur Open,30
 2,Vladimir Kustov,M,90,88.9,,,,,,140,145,-152.5,145,,,,,,,145,B,Raw,Yes,Amateur Open,40
 3,Lev Gamayev,M,90,88.9,,,,,,135,-145,-145,135,,,,,,,135,B,Raw,Yes,Amateur Open,27
@@ -256,7 +256,7 @@ DQ,Anton Pankevich,M,75,68.5,,,,,,-110,-110,-110,,,,,,,,,B,Raw,Yes,Amateur Open 
 1,Arbi Israilov,M,125,111.4,,,,,,,,,,,180,190,,190,,190,D,Single-ply,Yes,Amateur Masters 45-49,49
 1,Yuliya Koval,F,44,43.2,,,,,,,,,,,-107.5,107.5,-115,107.5,,107.5,D,Raw,Yes,Amateur Open,26
 1,Mariya Yekimova,F,48,47.8,,,,,,,,,,,-100,107.5,-115,107.5,,107.5,D,Raw,Yes,Amateur Open,27
-1,Larisa Nedogovor,F,52,50.8,,,,,,,,,,,107.5,-110,,107.5,,107.5,D,Raw,Yes,Amateur Open 20-23,22
+1,Larisa Nedogovor,F,52,50.8,,,,,,,,,,,107.5,-110,,107.5,,107.5,D,Raw,Yes,Amateur Juniors 20-23,22
 1,Svetlana Tolstova,F,52,51.6,,,,,,,,,,,105,110,115,115,,115,D,Raw,Yes,Amateur Open,30
 DD,Valeriya Dolgoreva,F,56,56,,,,,,,,,,,80,87.5,92.5,92.5,,,D,Raw,Yes,Amateur Teen 16-17,17
 1,Irina Gegelskaya,F,56,55.9,,,,,,,,,,,105,-115,117.5,117.5,,117.5,D,Raw,Yes,Amateur Open,34
@@ -270,7 +270,7 @@ DD,Valeriya Dolgoreva,F,56,56,,,,,,,,,,,80,87.5,92.5,92.5,,,D,Raw,Yes,Amateur Te
 1,Vyacheslav Tebenkov,M,56,55.2,,,,,,,,,,,130,145,147.5,147.5,,147.5,D,Raw,Yes,Amateur Teen 13-15,15
 1,Zakhar Korshunov,M,60,59.4,,,,,,,,,,,150,165,-172.5,165,,165,D,Raw,Yes,Amateur Teen 16-17,16
 1,Aleksandr Serkov,M,67.5,65.3,,,,,,,,,,,-155,-160,160,160,,160,D,Raw,Yes,Amateur Teen 18-19,18
-1,Rustam Medzhidov,M,67.5,67.4,,,,,,,,,,,170,180,-185,180,,180,D,Raw,Yes,Amateur Open 20-23,23
+1,Rustam Medzhidov,M,67.5,67.4,,,,,,,,,,,170,180,-185,180,,180,D,Raw,Yes,Amateur Juniors 20-23,23
 1,Aleksey Yevsyukov,M,75,70.7,,,,,,,,,,,180,205,215,215,-220,215,D,Raw,Yes,Amateur Teen 13-15,15
 1,Rafik Ayvazyan,M,75,73.8,,,,,,,,,,,220,232.5,242.5,242.5,,242.5,D,Raw,Yes,Amateur Open,24
 2,Aleksey Kotov,M,75,73.7,,,,,,,,,,,210,-215,-215,210,,210,D,Raw,Yes,Amateur Open,29
