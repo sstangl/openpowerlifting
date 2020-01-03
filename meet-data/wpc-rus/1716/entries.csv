@@ -1,7 +1,7 @@
 Name,CyrillicName,Sex,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Division,Age,Place
 Tatyana Ponomareva,Татьяна Пономарева,F,43,50,-60,-60,50,,32.5,35,-40,35,,-70,70,85,85,,170,44,SBD,Raw,Yes,Amateur Juniors 20-23,23,1
 Aurika Gavrilova,Аурика Гаврилова,F,47.3,87.5,-95,-95,87.5,,47.5,-52.5,-52.5,47.5,,97.5,110,-112.5,110,,245,48,SBD,Raw,Yes,Amateur Open,29,1
-Viktoriya Malechkina,Виктория Малечкина,F,66.3,-100,-100,100,100,,42.5,-45,-45,42.5,,100,-102.5,-102.5,100,,242.5,67.5,SBD,Raw,Yes,Amateur Teen 16-17,18,1
+Viktoriya Malechkina,Виктория Малечкина,F,66.3,-100,-100,100,100,,42.5,-45,-45,42.5,,100,-102.5,-102.5,100,,242.5,67.5,SBD,Raw,Yes,Amateur Teen 18-19,18,1
 Viktoriya Malechkina,Виктория Малечкина,F,66.3,-100,-100,100,100,,42.5,-45,-45,42.5,,100,-102.5,-102.5,100,,242.5,67.5,SBD,Raw,Yes,Amateur Open,18,1
 Tatyana Vasileva,Татьяна Васильева,F,62.7,55,60,65,65,,32.5,35,37.5,37.5,,85,92.5,-100,92.5,,195,67.5,SBD,Raw,Yes,Amateur Open,36,2
 Varvara Yanova,Варвара Янова,F,73.2,95,-100,-100,95,,65,67.5,-70,67.5,,135,140,142.5,142.5,,305,75,SBD,Raw,Yes,Amateur Juniors 20-23,22,1
@@ -26,7 +26,7 @@ Aleksandr Yastrebov,Александр Ястребов,M,63.7,,,,,,57.5,60,62.5
 David Petrosyan,Давид Петросян,M,66.7,,,,,,125,130,-135,130,,,,,,,130,67.5,B,Raw,Yes,Amateur Juniors 20-23,22,1
 Aleksandr Antropov,Александр Антропов,M,67.2,,,,,,140,145,147.5,147.5,,,,,,,147.5,67.5,B,Raw,Yes,Amateur Open,48,1
 Aleksandr Antropov,Александр Антропов,M,67.2,,,,,,140,145,147.5,147.5,,,,,,,147.5,67.5,B,Raw,Yes,Amateur Masters 45-49,48,1
-Nikita Markov,Никита Марков,M,73.5,,,,,,-135,135,-145,135,,,,,,,135,75,B,Raw,Yes,Amateur Teen 18-19,20,1
+Nikita Markov,Никита Марков,M,73.5,,,,,,-135,135,-145,135,,,,,,,135,75,B,Raw,Yes,Amateur Juniors 20-23,20,1
 Igor Kukartsev,Игорь Кукарцев,M,74.7,,,,,,-145,145,150,150,,,,,,,150,75,B,Raw,Yes,Amateur Open,31,1
 Roman Kolmykov,Роман Колмыков,M,74.1,,,,,,135,140,145,145,,,,,,,145,75,B,Raw,Yes,Amateur Open,30,2
 Andrey Plotnikov,Андрей Плотников,M,73.7,,,,,,125,135,-140,135,,,,,,,135,75,B,Raw,Yes,Amateur Open,31,3
@@ -36,7 +36,7 @@ Ivan Krasnikov,Иван Красников,M,74.3,,,,,,-117.5,117.5,-135,117.5,,
 Georgiy Sukachev,Георгий Сукачев,M,75,,,,,,120,130,132.5,132.5,,,,,,,132.5,75,B,Raw,Yes,Amateur Masters 40-44,44,1
 Sergei Ljadov,,M,75,,,,,,87.5,-90,,87.5,,,,,,,87.5,75,B,Raw,Yes,Amateur Masters 60-64,61,1
 Boris Laishin,,M,68.8,,,,,,107.5,110,-112.5,110,,,,,,,110,75,B,Raw,Yes,Amateur Masters 65-69,67,1
-Kirill Gorbunov,Кирилл Горбунов,M,80.5,,,,,,125,135,-145,135,,,,,,,135,82.5,B,Raw,Yes,Amateur Juniors 20-23,24,1
+Kirill Gorbunov,Кирилл Горбунов,M,80.5,,,,,,125,135,-145,135,,,,,,,135,82.5,B,Raw,Yes,Amateur Open,24,1
 Sergey Abrosimov,Сергей Абросимов,M,81.5,,,,,,127.5,130,-132.5,130,,,,,,,130,82.5,B,Raw,Yes,Amateur Open,32,1
 Konstantin Sokolov,Константин Соколов,M,78.3,,,,,,117.5,-125,-127.5,117.5,,,,,,,117.5,82.5,B,Raw,Yes,Amateur Open,31,2
 Egor Egorov,Егор Егоров,M,87.2,,,,,,127.5,132.5,135,135,,,,,,,135,90,B,Raw,Yes,Amateur Juniors 20-23,23,1
@@ -69,7 +69,7 @@ Yuliya Abramova,Юлия Абрамова,F,55.4,,,,,,,,,,,135,-137.5,,135,,135,
 Olga Nikolaeva,Ольга Николаева,F,62.6,,,,,,,,,,,-92.5,92.5,-95,92.5,,92.5,67.5,D,Raw,Yes,Amateur Open,31,1
 Mikhail Gavrilchuk,Михаил Гаврильчук,M,54.9,,,,,,,,,,,150,-170,-170,150,,150,56,D,Raw,Yes,Amateur Masters 40-44,42,1
 Oleg Ammosov,Олег Аммосов,M,65.8,,,,,,,,,,,-165,165,-190,165,,165,67.5,D,Raw,Yes,Amateur Open,30,1
-Nikita Markov,Никита Марков,M,73.5,,,,,,,,,,,202.5,-232.5,232.5,232.5,,232.5,75,D,Raw,Yes,Amateur Teen 18-19,20,1
+Nikita Markov,Никита Марков,M,73.5,,,,,,,,,,,202.5,-232.5,232.5,232.5,,232.5,75,D,Raw,Yes,Amateur Juniors 20-23,20,1
 Evgeniy Abramov,Евгений Абрамов,M,71.8,,,,,,,,,,,155,-160,,155,,155,75,D,Raw,Yes,Amateur Open,34,1
 Gennadiy Filippov,Геннадий Филиппов,M,73.1,,,,,,,,,,,132.5,140,145,145,150,145,75,D,Raw,Yes,Amateur Masters 70-74,70,1
 Mikhail Toaka,Михаил Тоака,M,80.3,,,,,,,,,,,200,215,222.5,222.5,,222.5,82.5,D,Raw,Yes,Amateur Open,31,1
@@ -84,7 +84,7 @@ Evgeniy Sidorov,Евгений Сидоров,M,122.7,,,,,,,,,,,200,215,225,225,
 Natalya Bogacheva,Наталья Богачева,F,47.4,60,70,77.5,77.5,,30,35,37.5,37.5,,85,-95,95,95,,210,48,SBD,Raw,No,Pro Open,32,1
 Irina Lebedinskaya,Ирина Лебединская,F,51.4,80,-90,-90,80,,-50,-52.5,52.5,52.5,,100,110,120,120,,252.5,52,SBD,Raw,No,Pro Open,39,1
 Valeriya Shapovalova,Валерия Шаповалова,F,55.9,112.5,117.5,-121,117.5,,60,65,-67.5,65,,145,155,162.5,162.5,,345,56,SBD,Raw,No,Pro Open,32,1
-Yuliya Filant-Noskova,Юлия Филант-Носкова,F,55.7,67.5,-72.5,75,75,,37.5,40,-42.5,40,,95,105,-112.5,105,,220,56,SBD,Raw,No,Pro Masters 45-49,50,1
+Yuliya Filant-Noskova,Юлия Филант-Носкова,F,55.7,67.5,-72.5,75,75,,37.5,40,-42.5,40,,95,105,-112.5,105,,220,56,SBD,Raw,No,Pro Masters 50-54,50,1
 Igor Tomson,Игорь Томсон,M,81.4,200,210,-215,210,,145,150,155,155,,250,260,267.5,267.5,,632.5,82.5,SBD,Raw,No,Pro Open,36,1
 Aleksandr Talerov,Александр Талеров,M,81.4,210,220,-225,220,,127.5,130,-135,130,,230,242.5,-250,242.5,,592.5,82.5,SBD,Raw,No,Pro Open,34,2
 Konstantin Fomichev,Константин Фомичев,M,78.6,190,-200,,190,,130,135,137.5,137.5,,240,255,-260,255,,582.5,82.5,SBD,Raw,No,Pro Open,32,3
@@ -100,7 +100,7 @@ Mariya Yakubovich,Мария Якубович,F,55.8,,,,,,70,72.5,-75,72.5,,,,,,
 Aleksey Kudrin,Алексей Кудрин,M,82.2,,,,,,-160,170,-172.5,170,,,,,,,170,82.5,B,Raw,No,Pro Open,32,1
 Evgeniy Khlyzov,Евгений Хлызов,M,79.9,,,,,,165,-170,-170,165,,,,,,,165,82.5,B,Raw,No,Pro Open,28,2
 Sergey Surikov,Сергей Суриков,M,80.7,,,,,,-135,-135,-135,,,,,,,,,82.5,B,Raw,No,Pro Open,32,DQ
-Nikita Kulpin,Никита Кульпин,M,87.2,,,,,,147.5,155,160,160,,,,,,,160,90,B,Raw,No,Pro Juniors 20-23,24,1
+Nikita Kulpin,Никита Кульпин,M,87.2,,,,,,147.5,155,160,160,,,,,,,160,90,B,Raw,No,Pro Open,24,1
 Stanislav Kandaurov,Станислав Кандауров,M,89.9,,,,,,175,182.5,190,190,,,,,,,190,90,B,Raw,No,Pro Open,27,1
 Sergey Baev,Сергей Баев,M,89.4,,,,,,155,160,162.5,162.5,,,,,,,162.5,90,B,Raw,No,Pro Open,37,2
 Roman Vasilev,Роман Васильев,M,99.2,,,,,,-170,180,-182.5,180,,,,,,,180,100,B,Raw,No,Pro Juniors 20-23,22,1
@@ -120,5 +120,5 @@ Evgeniy Khlyzov,Евгений Хлызов,M,79.9,,,,,,,,,,,235,245,-255,245,,2
 Georgiy Taranukhin,Георгий Таранухин,M,89.6,,,,,,,,,,,245,257.5,-266,257.5,,257.5,90,D,Raw,No,Pro Masters 45-49,49,1
 Anton Rusalenko,Антон Русаленко,M,99.5,,,,,,,,,,,257.5,277.5,282.5,282.5,,282.5,100,D,Raw,No,Pro Open,30,1
 Aleksandr Krutov,Александр Крутов,M,93.9,,,,,,,,,,,220,230,-240,230,,230,100,D,Raw,No,Pro Open,33,2
-Aleksandr Malikov,Александр Маликов,M,98.6,,,,,,,,,,,255,267.5,277.5,277.5,,277.5,100,D,Raw,No,Pro Masters 40-44,45,1
+Aleksandr Malikov,Александр Маликов,M,98.6,,,,,,,,,,,255,267.5,277.5,277.5,,277.5,100,D,Raw,No,Pro Masters 45-49,45,1
 Aleksandr Altukhov,Александр Алтухов,M,100.9,,,,,,,,,,,180,190,200,200,,200,110,D,Raw,No,Pro Open,28,1

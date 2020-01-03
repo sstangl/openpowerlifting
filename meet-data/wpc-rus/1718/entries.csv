@@ -1,7 +1,7 @@
 Name,CyrillicName,Sex,BodyweightKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Division,Age,Place
 Marina Kamyshnikova,Марина Камышникова,F,51.9,135,145,152.5,152.5,,152.5,52,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,38,1
 Igor Filippov,Игорь Филиппов,M,80.8,230,240,250,250,,250,82.5,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,32,1
-Karen Grigoryants,Карен Григорьянц,F,96.9,270,-282.5,-282.5,270,,270,100,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,27,1
+Karen Grigoryants,Карен Григорьянц,F,96.9,270,-282.5,-282.5,270,,270,90+,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,27,1
 Sergey Mishenin,Сергей Мишенин,M,98.9,225,-242.5,242.5,242.5,,242.5,100,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,38,3
 Dmitriy Makovey,Дмитрий Маковей,M,100.1,210,220,230,230,,230,110,D,Single-ply,Yes,,,,,,,,,,,Amateur Open,25,5
 Ekaterina Paufler,Екатерина Пауфлер,F,42.3,-75,75,85,85,,85,44,D,Raw,Yes,,,,,,,,,,,Amateur Open,25,1
@@ -100,7 +100,7 @@ Andrey Burakov,Андрей Бураков,M,104,180,190,-202.5,190,,190,110,D,R
 Yuliya Kuznetsova,Юлия Кузнецова,F,63.6,,,,,,140,67.5,B,Single-ply,Yes,130,140,-145,140,,,,,,,Amateur Open,43,1
 Irina Smolentseva,Ирина Смоленцева,F,64.8,,,,,,90,67.5,B,Single-ply,Yes,-90,90,-95,90,,,,,,,Amateur Open,29,3
 Vladimir Popov,Владимир Попов,M,124.2,,,,,,200,125,B,Raw,Yes,180,190,200,200,,,,,,,Amateur Masters 60-64,61,1
-Sabina Mansurova,Сабина Мансурова,F,40,,,,,,25,44,B,Raw,Yes,22.5,25,-27.5,25,,,,,,,Amateur Teen 13-15,11,1
+Sabina Mansurova,Сабина Мансурова,F,40,,,,,,25,44,B,Raw,Yes,22.5,25,-27.5,25,,,,,,,Amateur Youth,11,1
 Natalya Dyulger,Наталья Дюльгер,F,41.7,,,,,,25,44,B,Raw,Yes,25,-30,-30,25,,,,,,,Amateur Teen 13-15,13,2
 Svetlana Sharynkina,Светлана Шарынкина,F,44,,,,,,52.5,44,B,Raw,Yes,50,-52.5,52.5,52.5,,,,,,,Amateur Juniors 20-23,21,1
 Olga Lvova,Ольга Львова,F,40,,,,,,32.5,44,B,Raw,Yes,27.5,32.5,-35,32.5,,,,,,,Amateur Juniors 20-23,20,2
@@ -141,9 +141,9 @@ Vladislav Sitdikov,Владислав Ситдиков,M,51.4,,,,,,80,52,B,Raw,Y
 Daniil Meshkov,Даниил Мешков,M,54.8,,,,,,65,56,B,Raw,Yes,60,65,-70,65,,,,,,,Amateur Teen 13-15,13,1
 Kirill Kulikov,Кирилл Куликов,M,53.5,,,,,,50,56,B,Raw,Yes,42.5,47.5,50,50,,,,,,,Amateur Teen 13-15,14,2
 Denis Muravshchik,Денис Муравщик,M,58.1,,,,,,110,60,B,Raw,Yes,100,105,110,110,,,,,,,Amateur Open,17,1
-Denis Netochaev,Денис Неточаев,M,65.3,,,,,,85,67.5,B,Raw,Yes,80,-85,85,85,,,,,,,Amateur Teen 13-15,16,1
+Denis Netochaev,Денис Неточаев,M,65.3,,,,,,85,67.5,B,Raw,Yes,80,-85,85,85,,,,,,,Amateur Teen 16-17,16,1
 Sergey Lyashev,Сергей Ляшев,M,64.7,,,,,,100,67.5,B,Raw,Yes,100,-107.5,-107.5,100,,,,,,,Amateur Teen 16-17,16,1
-Viktor Sidorov,Виктор Сидоров,M,67,,,,,,110,67.5,B,Raw,Yes,110,-120,-120,110,,,,,,,Amateur Teen 18-19,20,1
+Viktor Sidorov,Виктор Сидоров,M,67,,,,,,110,67.5,B,Raw,Yes,110,-120,-120,110,,,,,,,Amateur Juniors 20-23,20,1
 Igor Glazunov,Игорь Глазунов,M,66.9,,,,,,125,67.5,B,Raw,Yes,120,-125,125,125,,,,,,,Amateur Juniors 20-23,20,1
 Andrey Molchanov,Андрей Молчанов,M,67.1,,,,,,127.5,67.5,B,Raw,Yes,120,127.5,-130,127.5,,,,,,,Amateur Open,27,1
 Aleksandr Nikolaev,Александр Николаев,M,67.4,,,,,,125,67.5,B,Raw,Yes,120,125,-130,125,,,,,,,Amateur Open,28,2
@@ -410,7 +410,7 @@ Nikolay Petrokovich,Николай Петрокович,M,70,,,,,,115,75,B,Raw,N
 Vladislav Sannikov,Владислав Санников,M,76.6,,,,,,85,82.5,B,Raw,No,80,85,-87.5,85,,,,,,,Pro Open,78,1
 Aleksandr Lisin,Александр Лисин,M,81.6,,,,,,,82.5,B,Raw,No,-162.5,-162.5,,,,,,,,,Pro Open,26,DQ
 Vladislav Sannikov,Владислав Санников,M,76.6,,,,,,85,82.5,B,Raw,No,80,85,-87.5,85,,,,,,,Pro Masters,78,1
-Egor Kiselyov,Егор Киселёв,M,83.5,,,,,,50,90,B,Raw,No,-47.5,47.5,50,50,,,,,,,Pro Teen 13-15,10,1
+Egor Kiselyov,Егор Киселёв,M,83.5,,,,,,50,90,B,Raw,No,-47.5,47.5,50,50,,,,,,,Pro Youth,10,1
 Sergey Timchenko,Сергей Тимченко,M,86.1,,,,,,210,90,B,Raw,No,195,-210,210,210,,,,,,,Pro Open,37,1
 Aleksey Nikolaenko,Алексей Николаенко,M,89.9,,,,,,207.5,90,B,Raw,No,195,205,207.5,207.5,,,,,,,Pro Open,28,2
 Nikolay Kostev,Николай Костев,M,83.4,,,,,,162.5,90,B,Raw,No,150,160,162.5,162.5,,,,,,,Pro Open,57,3
