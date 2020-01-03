@@ -169,7 +169,7 @@ def parse_sheetname(s):
         # Booleans.
         elif word in (['люб', 'любители', 'амт', 'amt']):
             amateur = 'Amateur'
-        elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф']):
+        elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф', 'профи']):
             assert amateur == 'Pro'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Yes'
@@ -382,7 +382,7 @@ def parse_fieldnames(sheet):
 
         elif text in ['сумма', 'total', 'result', 'сумма баллов', 'резульат',
                       'результат bp', 'результат', 'итог', 'рзультат',
-                      'общий результат']:
+                      'общий результат', 'итог сумма']:
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
