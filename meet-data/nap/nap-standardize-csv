@@ -422,8 +422,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'сумма с к-нтом':
             fieldnames.append('IGNORE')
-        elif text == 'сумма subtotal': # Subtotal:
-            fieldnames.append('IGNORE')            
+        elif text == 'сумма subtotal':  # Subtotal:
+            fieldnames.append('IGNORE')
         else:
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
 

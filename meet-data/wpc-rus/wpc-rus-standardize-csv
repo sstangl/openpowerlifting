@@ -125,7 +125,8 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд', 'press', 'benchpress', 'лёжа', 'жим-леж', 'жим-лежа']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'press',
+                      'benchpress', 'лёжа', 'жим-леж', 'жим-лежа']:
             assert not event or event == 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
@@ -167,7 +168,8 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 'однослойной', '1ой', '1ply',
                       'однослойная', 'однослойный', 'однолойной', '1сл', 'односл',
                       '1слой', 'односло', 'однослойно', 'sply', 'singleply', 'одн',
-                      'stdeq', 'standart', 'st', 'sp', 'single', 's-ply', '1-слойная', '1-слойный']:
+                      'stdeq', 'standart', 'st', 'sp', 'single', 's-ply', '1-слойная',
+                      '1-слойный']:
             equipment = 'Single-ply'
         elif word in ['экипировке', 'm-ply', 'eq', 'многослой', 'экипировка', 'мн',
                       'эипировке', 'эк', '2ply', 'мнслой', 'эки', 'multiply',
