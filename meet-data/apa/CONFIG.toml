@@ -70,6 +70,7 @@
     sex = "F"
 
 [exemptions]
+    9712 = ["ExemptWeightClassConsistency"] # Unknown weight for one lifter.
     8701 = ["ExemptWeightClassConsistency"]
     8702 = ["ExemptWeightClassConsistency"]
     8902 = ["ExemptWeightClassConsistency"]  # Unreported.
