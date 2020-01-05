@@ -281,7 +281,10 @@ pub fn lifter(
                 &lifter_ids,
             );
             context.urlprefix = LOCAL_PREFIX;
-            Some(Ok(Template::render("openipf/desktop/disambiguation", &context)))
+            Some(Ok(Template::render(
+                "openipf/desktop/disambiguation",
+                &context,
+            )))
         }
     }
 }
@@ -367,6 +370,29 @@ pub fn meet(
 
     context.urlprefix = LOCAL_PREFIX;
     Some(Template::render("openipf/desktop/meet", &context))
+}
+
+/// Used to show only IPF-sanctioned federations.
+fn ipf_fed_filter(fed: Federation) -> bool {
+    // Using a maximum date causes the sanctioning_body() logic to return the most
+    // current sanctioning information.
+    let latest = Date::from_u32(9999_01_01);
+    fed.sanctioning_body(latest) == Some(Federation::IPF)
+}
+
+#[get("/status?<lang>")]
+pub fn status(
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::status::Context::new(&opldb, &locale, Some(ipf_fed_filter));
+    context.urlprefix = LOCAL_PREFIX;
+
+    Some(Template::render("openipf/desktop/status", &context))
 }
 
 #[get("/faq?<lang>")]

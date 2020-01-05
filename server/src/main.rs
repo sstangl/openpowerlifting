@@ -338,7 +338,7 @@ fn status(
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::status::Context::new(&opldb, &locale);
+    let context = pages::status::Context::new(&opldb, &locale, None);
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/status", &context),
@@ -668,6 +668,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::meetlist,
                 dist::openipf::meetlist_default,
                 dist::openipf::meet,
+                dist::openipf::status,
                 dist::openipf::faq,
             ],
         )

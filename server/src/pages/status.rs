@@ -416,7 +416,11 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
 }
 
 impl<'a> Context<'a> {
-    pub fn new(opldb: &'a opldb::OplDb, locale: &'a Locale) -> Context<'a> {
+    pub fn new(
+        opldb: &'a opldb::OplDb,
+        locale: &'a Locale,
+        fed_filter: Option<fn(Federation) -> bool>,
+    ) -> Context<'a> {
         let mut statuses: Vec<FederationStatus> =
             Federation::iter().map(FederationStatus::new).collect();
 
@@ -426,6 +430,13 @@ impl<'a> Context<'a> {
         }
 
         set_hardcoded_strings(&mut statuses);
+
+        // Apply a filter after hardcoded strings are set.
+        // This changes the indices of each vector, so `federation as usize` logic
+        // is invalid after this point.
+        if let Some(f) = fed_filter {
+            statuses = statuses.into_iter().filter(|s| f(s.fed)).collect();
+        }
 
         Context {
             urlprefix: "/",
