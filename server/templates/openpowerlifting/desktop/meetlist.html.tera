@@ -3,6 +3,9 @@
 {% block includes %}
   <script type="text/javascript">
     const PAGE_KIND = "meetlist";
+    const urlprefix = "{{urlprefix | safe}}";
+    const default_fed = "all";
+    const default_year = "all";
   </script>
 {% endblock includes %}
 

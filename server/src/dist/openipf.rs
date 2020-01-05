@@ -292,6 +292,43 @@ pub fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<String
     pages::lifter_csv::export_csv(&opldb, lifter_id, Some(ipf_only_filter)).ok()
 }
 
+#[get("/mlist/<mselections..>?<lang>")]
+pub fn meetlist(
+    mselections: Option<PathBuf>,
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let openipf_defaults = default_openipf_selection();
+    let defaults = pages::meetlist::MeetListSelection {
+        federation: openipf_defaults.federation,
+        year: openipf_defaults.year,
+    };
+
+    let mselection = match mselections {
+        None => defaults,
+        Some(p) => pages::meetlist::MeetListSelection::from_path(&p, defaults).ok()?,
+    };
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
+
+    cx.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/meetlist", &cx))
+}
+
+#[get("/mlist?<lang>")]
+pub fn meetlist_default(
+    lang: Option<String>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    meetlist(None, lang, opldb, langinfo, languages, cookies)
+}
+
 #[get("/m/<meetpath..>?<lang>")]
 pub fn meet(
     meetpath: PathBuf,

@@ -14,7 +14,7 @@ use crate::pages::selection::{FedPreference, FederationSelection, YearSelection}
 /// For code reuse, this is a subset of the Selection struct
 /// used by the rankings page. It needs to serialize to a structure
 /// that has the same fields, so the templates can share code.
-#[derive(PartialEq, Serialize)]
+#[derive(Copy, Clone, PartialEq, Serialize)]
 pub struct MeetListSelection {
     pub federation: FederationSelection,
     pub year: YearSelection,
@@ -30,8 +30,8 @@ impl Default for MeetListSelection {
 }
 
 impl MeetListSelection {
-    pub fn from_path(p: &path::Path) -> Result<Self, ()> {
-        let mut ret = MeetListSelection::default();
+    pub fn from_path(p: &path::Path, defaults: MeetListSelection) -> Result<Self, ()> {
+        let mut ret = defaults.clone();
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

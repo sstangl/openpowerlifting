@@ -271,9 +271,10 @@ fn meetlist(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
+    let defaults = pages::meetlist::MeetListSelection::default();
     let mselection = match mselections {
-        None => pages::meetlist::MeetListSelection::default(),
-        Some(p) => pages::meetlist::MeetListSelection::from_path(&p).ok()?,
+        None => defaults,
+        Some(p) => pages::meetlist::MeetListSelection::from_path(&p, defaults).ok()?,
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
@@ -664,6 +665,8 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
                 dist::openipf::records_default,
                 dist::openipf::lifter,
                 dist::openipf::lifter_csv,
+                dist::openipf::meetlist,
+                dist::openipf::meetlist_default,
                 dist::openipf::meet,
                 dist::openipf::faq,
             ],

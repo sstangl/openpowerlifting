@@ -1,33 +1,32 @@
-{% extends "openpowerlifting/mobile/base" %}
+{% extends "openipf/desktop-base" %}
 
 {% block includes %}
   <script type="text/javascript">
     const PAGE_KIND = "meetlist";
     const urlprefix = "{{urlprefix | safe}}";
-    const default_fed = "all";
+    const default_fed = "ipf-and-affiliates";
     const default_year = "all";
   </script>
 {% endblock includes %}
 
-{% block footer_hack %}
-  <footer>
-{% endblock footer_hack %}
+{% block topbar_hack %}
+  <div class="topbar">
+{% endblock topbar_hack %}
 
-{% block footer_hack_end %}
-  </footer>
-{% endblock footer_hack_end %}
+{% block topbar_hack_end %}
+  </div>
+{% endblock topbar_hack_end %}
 
 {% block controls %}
-<div id="controls-mobile-filters">
-  {% include "openpowerlifting/widget-fedselect" %}
-  {% include "widget-yearselect" %}
-</div>
+  <div id="controls">
+    {% include "openipf/widget-fedselect" %}
+    {% include "widget-yearselect" %}
+  </div>
 {% endblock controls %}
 
 {% block body %}
   <div class="content">
-      <div id="selectedFilters" class="records-selected-filters"></div>
-    <table id="meetListTable">
+    <table>
       <thead><tr>
         <th>{{strings.columns.federation}}</th>
         <th>{{strings.columns.date}}</th>
@@ -39,9 +38,9 @@
       {% for meet in meets %}
         <tr>
           <td>{{meet.federation}}</td>
-          <td class="meet-list-date">{{meet.date}}</td>
+          <td>{{meet.date}}</td>
           <td>{{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}</td>
-          <td class="meet-list-name"><a href="/m/{{meet.path | safe}}">{{meet.name}}</a></td>
+          <td><a href="{{urlprefix | safe}}m/{{meet.path | safe}}">{{meet.name}}</a></td>
           <td>{{meet.num_lifters}}</td>
         </tr>
       {% endfor %}

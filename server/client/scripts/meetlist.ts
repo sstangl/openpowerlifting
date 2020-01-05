@@ -20,6 +20,11 @@
 
 'use strict';
 
+// Variables provided by the server.
+declare const urlprefix: string;
+declare const default_fed: string;
+declare const default_year: string;
+
 let selFed: HTMLSelectElement;
 let selYear: HTMLSelectElement;
 
@@ -27,10 +32,10 @@ let selYear: HTMLSelectElement;
 // for the default selection.
 function selection_to_path(): string {
     let url = "";
-    if (selFed.value !== "all") {
+    if (selFed.value !== default_fed) {
         url += "/" + selFed.value;
     }
-    if (selYear.value !== "all") {
+    if (selYear.value !== default_year) {
         url += "/" + selYear.value;
     }
     return url;
@@ -42,9 +47,9 @@ function reload() {
     let path = selection_to_path();
 
     if (path === "") {
-        window.location.href = "/mlist";
+        window.location.href = urlprefix + "mlist";
     } else {
-        window.location.href = "/mlist" + path;
+        window.location.href = urlprefix + "mlist" + path;
     }
 }
 
