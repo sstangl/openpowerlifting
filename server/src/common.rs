@@ -91,7 +91,10 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     }
 }
 
-pub fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> Language {
+pub fn select_display_language(
+    languages: &AcceptLanguage,
+    cookies: &Cookies,
+) -> Language {
     let default = Language::en;
 
     // The user may explicitly override the language choice by using
@@ -104,7 +107,7 @@ pub fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> 
 
     // If a language was not explicitly selected, the Accept-Language HTTP
     // header is consulted, defaulting to English.
-    match languages.0 {
+    match &languages.0 {
         Some(s) => {
             // TODO: It would be better if this vector was static.
             let known_languages: Vec<String> = Language::string_list();
@@ -122,7 +125,11 @@ pub fn select_display_language(languages: AcceptLanguage, cookies: &Cookies) -> 
     }
 }
 
-pub fn select_weight_units(language: Language, cookies: &Cookies) -> WeightUnits {
+pub fn select_weight_units(
+    languages: &AcceptLanguage,
+    language: Language,
+    cookies: &Cookies,
+) -> WeightUnits {
     // The user may explicitly override the weight unit choice by using
     // a cookie named "units".
     if let Some(cookie) = cookies.get("units") {
@@ -131,8 +138,16 @@ pub fn select_weight_units(language: Language, cookies: &Cookies) -> WeightUnits
         }
     }
 
-    // TODO: Check Accept-Language header for regional variants of English,
-    // for example Australia, to select Kg.
+    // Check the Accept-Language header for regional variants of English,
+    // to decide whether to change from Kg to Lbs.
+    if language == Language::en {
+        if let Some(s) = &languages.0 {
+            // This should handle the majority of pounds-preferring speakers.
+            if s.starts_with("en-US") || s.starts_with("en-CA") {
+                return WeightUnits::Lbs;
+            }
+        }
+    }
 
     // Otherwise, infer based on the language.
     language.default_units()
@@ -148,10 +163,10 @@ pub fn make_locale<'db>(
         // Allow an explicit "lang" GET parameter the "lang" cookie.
         Some(lang) => lang,
         // Otherwise, consult the cookies or defaults.
-        None => select_display_language(languages, &cookies),
+        None => select_display_language(&languages, &cookies),
     };
 
-    let units = select_weight_units(language, &cookies);
+    let units = select_weight_units(&languages, language, &cookies);
     Locale::new(&langinfo, language, units)
 }
 

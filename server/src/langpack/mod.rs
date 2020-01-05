@@ -16,7 +16,7 @@ use crate::opldb;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
-#[derive(Clone, Copy, Debug, EnumIter, EnumString, Serialize)]
+#[derive(Clone, Copy, Debug, EnumIter, EnumString, PartialEq, Serialize)]
 pub enum Language {
     /// Czech.
     cz,
@@ -113,10 +113,8 @@ impl fmt::Display for Language {
 impl Language {
     /// Returns the units associated with the language.
     pub fn default_units(self) -> WeightUnits {
-        match self {
-            Language::en => WeightUnits::Lbs,
-            _ => WeightUnits::Kg,
-        }
+        // English variants are decided by common::select_weight_units().
+        WeightUnits::Kg
     }
 
     /// Returns a list of available languages as strings.
