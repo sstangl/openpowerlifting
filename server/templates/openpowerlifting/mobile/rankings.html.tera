@@ -14,6 +14,7 @@
     const default_year = "all";
     const default_event = "all";
     const default_sort = "by-wilks";
+    const translation_default_sort = "{{strings.columns.wilks}}";
 
     const translation_column_formulaplace = "{{strings.columns.formulaplace}}";
     const translation_column_liftername = "{{strings.columns.liftername}}";

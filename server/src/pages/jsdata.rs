@@ -5,7 +5,6 @@ use serde::ser::{Serialize, SerializeSeq, Serializer};
 
 use crate::langpack::{self, get_localized_name, Locale, LocalizeNumber};
 use crate::opldb::{Entry, OplDb};
-use crate::pages::selection::SortSelection;
 
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,
@@ -85,7 +84,7 @@ impl<'db> JsEntryRow<'db> {
         locale: &'db Locale,
         entry: &'db Entry,
         sorted_index: u32,
-        sort: SortSelection,
+        points_system: PointsSystem,
     ) -> JsEntryRow<'db> {
         let meet = opldb.get_meet(entry.meet_id);
         let lifter = opldb.get_lifter(entry.lifter_id);
@@ -129,21 +128,7 @@ impl<'db> JsEntryRow<'db> {
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
-
-            // This should mirror the logic in pages::rankings::Context::new().
-            points: match sort {
-                SortSelection::BySquat
-                | SortSelection::ByBench
-                | SortSelection::ByDeadlift
-                | SortSelection::ByTotal
-                | SortSelection::ByWilks => entry.wilks.in_format(number_format),
-                SortSelection::ByMcCulloch => entry.mcculloch.in_format(number_format),
-                SortSelection::ByGlossbrenner => {
-                    entry.glossbrenner.in_format(number_format)
-                }
-                SortSelection::ByIPFPoints => entry.ipfpoints.in_format(number_format),
-                SortSelection::ByDots => entry.dots.in_format(number_format),
-            },
+            points: entry.points(points_system, units).in_format(number_format),
         }
     }
 }

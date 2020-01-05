@@ -1,6 +1,8 @@
 //! Implements the /api/rankings endpoint, used for dynamic loading of the
 //! rankings table via AJAX calls. Not intended for external use.
 
+use opltypes::PointsSystem;
+
 use crate::langpack::Locale;
 use crate::opldb::{algorithms, OplDb};
 use crate::pages::jsdata::JsEntryRow;
@@ -18,6 +20,7 @@ pub fn get_slice<'db>(
     opldb: &'db OplDb,
     locale: &'db Locale,
     selection: &Selection,
+    defaults: &Selection,
     start_row: usize, // Inclusive.
     end_row: usize,   // Inclusive. Can be out-of-bounds.
 ) -> RankingsSlice<'db> {
@@ -49,11 +52,19 @@ pub fn get_slice<'db>(
         end_row = start_row + (ROW_LIMIT - 1);
     }
 
+    // Figure out the points system to be used.
+    let points_system = if selection.sort.is_by_points() {
+        PointsSystem::from(selection.sort)
+    } else {
+        // The selection is by-weight, so get the points from the default.
+        PointsSystem::from(defaults.sort)
+    };
+
     let rows: Vec<JsEntryRow> = list.0[start_row..(end_row + 1)]
         .iter()
         .zip(start_row..)
         .map(|(&n, i)| {
-            JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32, selection.sort)
+            JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32, points_system)
         })
         .collect();
 

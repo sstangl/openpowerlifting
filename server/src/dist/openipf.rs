@@ -53,8 +53,8 @@ pub fn index(
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let selection = default_openipf_selection();
-    let mut context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
+    let default = default_openipf_selection();
+    let mut context = pages::rankings::Context::new(&opldb, &locale, &default, &default)?;
     context.urlprefix = LOCAL_PREFIX;
     Some(Template::render("openipf/rankings", &context))
 }
@@ -76,7 +76,8 @@ pub fn rankings(
     let default = default_openipf_selection();
     let selection = pages::selection::Selection::from_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut context = pages::rankings::Context::new(&opldb, &locale, &selection)?;
+    let mut context =
+        pages::rankings::Context::new(&opldb, &locale, &selection, &default)?;
     context.urlprefix = LOCAL_PREFIX;
     Some(Template::render("openipf/rankings", &context))
 }
@@ -103,6 +104,7 @@ pub fn rankings_api(
         &opldb,
         &locale,
         &selection,
+        &default,
         query.start,
         query.end,
     );

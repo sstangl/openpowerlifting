@@ -1092,6 +1092,45 @@ impl FromStr for SortSelection {
     }
 }
 
+impl From<SortSelection> for PointsSystem {
+    fn from(selection: SortSelection) -> PointsSystem {
+        match selection {
+            // Weight sorts convert to Total.
+            SortSelection::BySquat => PointsSystem::Total,
+            SortSelection::ByBench => PointsSystem::Total,
+            SortSelection::ByDeadlift => PointsSystem::Total,
+            SortSelection::ByTotal => PointsSystem::Total,
+
+            // Point sorts are taken directly.
+            SortSelection::ByDots => PointsSystem::Dots,
+            SortSelection::ByGlossbrenner => PointsSystem::Glossbrenner,
+            SortSelection::ByIPFPoints => PointsSystem::IPFPoints,
+            SortSelection::ByMcCulloch => PointsSystem::McCulloch,
+            SortSelection::ByWilks => PointsSystem::Wilks,
+        }
+    }
+}
+
+impl SortSelection {
+    /// Returns true if the SortSelection is by points, instead of by weight.
+    pub fn is_by_points(self) -> bool {
+        match self {
+            // Weight sorts.
+            SortSelection::BySquat => false,
+            SortSelection::ByBench => false,
+            SortSelection::ByDeadlift => false,
+            SortSelection::ByTotal => false,
+
+            // Point sorts.
+            SortSelection::ByDots => true,
+            SortSelection::ByGlossbrenner => true,
+            SortSelection::ByIPFPoints => true,
+            SortSelection::ByMcCulloch => true,
+            SortSelection::ByWilks => true,
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
