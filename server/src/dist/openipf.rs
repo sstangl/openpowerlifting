@@ -395,6 +395,19 @@ pub fn status(
     Some(Template::render("openipf/desktop/status", &context))
 }
 
+#[get("/data?<lang>")]
+pub fn data(
+    lang: Option<String>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::data::Context::new(&locale);
+    context.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/desktop/data", &context))
+}
+
 #[get("/faq?<lang>")]
 pub fn faq(
     lang: Option<String>,
@@ -406,4 +419,17 @@ pub fn faq(
     let mut context = pages::faq::Context::new(&locale);
     context.urlprefix = LOCAL_PREFIX;
     Some(Template::render("openipf/desktop/faq", &context))
+}
+
+#[get("/contact?<lang>")]
+pub fn contact(
+    lang: Option<String>,
+    langinfo: State<ManagedLangInfo>,
+    languages: AcceptLanguage,
+    cookies: Cookies,
+) -> Option<Template> {
+    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let mut context = pages::contact::Context::new(&locale);
+    context.urlprefix = LOCAL_PREFIX;
+    Some(Template::render("openipf/desktop/contact", &context))
 }
