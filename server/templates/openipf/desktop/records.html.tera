@@ -1,4 +1,4 @@
-{% extends "openipf/desktop-base" %}
+{% extends "openipf/desktop/base" %}
 
 {% block includes %}
   <script type="text/javascript">

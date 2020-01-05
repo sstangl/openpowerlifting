@@ -56,7 +56,7 @@ pub fn index(
     let default = default_openipf_selection();
     let mut context = pages::rankings::Context::new(&opldb, &locale, &default, &default)?;
     context.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/rankings", &context))
+    Some(Template::render("openipf/desktop/rankings", &context))
 }
 
 /// Defines a Rankings sub-page.
@@ -79,7 +79,7 @@ pub fn rankings(
     let mut context =
         pages::rankings::Context::new(&opldb, &locale, &selection, &default)?;
     context.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/rankings", &context))
+    Some(Template::render("openipf/desktop/rankings", &context))
 }
 
 /// API endpoint for fetching a slice of rankings data as JSON.
@@ -183,7 +183,7 @@ pub fn records(
         &default_openipf_selection(),
     );
     context.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/records", &context))
+    Some(Template::render("openipf/desktop/records", &context))
 }
 
 #[get("/records?<lang>")]
@@ -269,7 +269,7 @@ pub fn lifter(
                 }
             }
 
-            Some(Ok(Template::render("openipf/lifter", &context)))
+            Some(Ok(Template::render("openipf/desktop/lifter", &context)))
         }
 
         // If multiple lifters were referenced, return a disambiguation page.
@@ -281,7 +281,7 @@ pub fn lifter(
                 &lifter_ids,
             );
             context.urlprefix = LOCAL_PREFIX;
-            Some(Ok(Template::render("openipf/disambiguation", &context)))
+            Some(Ok(Template::render("openipf/desktop/disambiguation", &context)))
         }
     }
 }
@@ -315,7 +315,7 @@ pub fn meetlist(
     let mut cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
 
     cx.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/meetlist", &cx))
+    Some(Template::render("openipf/desktop/meetlist", &cx))
 }
 
 #[get("/mlist?<lang>")]
@@ -366,7 +366,7 @@ pub fn meet(
     }
 
     context.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/meet", &context))
+    Some(Template::render("openipf/desktop/meet", &context))
 }
 
 #[get("/faq?<lang>")]
@@ -379,5 +379,5 @@ pub fn faq(
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let mut context = pages::faq::Context::new(&locale);
     context.urlprefix = LOCAL_PREFIX;
-    Some(Template::render("openipf/faq", &context))
+    Some(Template::render("openipf/desktop/faq", &context))
 }
