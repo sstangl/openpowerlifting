@@ -180,6 +180,13 @@
   background-image: linear-gradient(to right, $blue, $gold);
 }
 
+.blue_to_gunmetal {
+  $blue: #507CFF;
+  $gunmetal: #2A3439;
+  @include gradient-prereqs($gunmetal);
+  background-image: linear-gradient(to right, $blue, $gunmetal);
+}
+
 .blue_to_green {
   $blue: #507CFF;
   $green: #51DA27;
@@ -262,6 +269,13 @@
   $lightblue: #43D1FF;
   @include gradient-prereqs($pink);
   background-image: linear-gradient(to right, $pink, $lightblue);
+}
+
+.pink_to_orange {
+  $pink: #FF69B4;
+  $orange: #FFA200;
+  @include gradient-prereqs($pink);
+  background-image: linear-gradient(to right, $pink, $orange);
 }
 
 .pink_to_purple {
