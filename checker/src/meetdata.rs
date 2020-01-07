@@ -1,7 +1,7 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
-use hashbrown::HashMap;
+use std::collections::HashMap;
 
 use crate::checklib::{Entry, Meet};
 

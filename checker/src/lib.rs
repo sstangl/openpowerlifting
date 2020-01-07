@@ -4,7 +4,6 @@ extern crate chrono; // Used to get the current date.
 extern crate coefficients; // Calculates points.
 extern crate colored; // Used to provide pretty output for debug modes.
 extern crate csv; // Provides CSV reading and writing.
-extern crate hashbrown; // A faster hash implementation (will become Rust default).
 extern crate opltypes; // Datatypes common to all OpenPowerlifting projects.
 #[macro_use]
 extern crate serde_derive; // Provides struct serialization and deserialization.

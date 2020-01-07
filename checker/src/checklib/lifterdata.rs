@@ -1,9 +1,9 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
 use csv;
-use hashbrown::HashMap;
 use usernames::make_username;
 
+use std::collections::HashMap;
 use std::error::Error;
 use std::path::Path;
 

@@ -2,9 +2,9 @@
 
 use coefficients::{dots, mcculloch};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
-use hashbrown::HashMap;
 use opltypes::*;
 
+use std::collections::HashMap;
 use std::path::Path;
 
 use crate::checklib::{Entry, LifterData, LifterDataMap, Meet};
