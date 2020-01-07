@@ -25,7 +25,7 @@ use opltypes::*;
 
 /// Calculates the Schwartz coefficient, used for men.
 ///
-/// The Schwartz formula replaced the Hoffinan formula.
+/// The Schwartz formula replaced the Hoffman formula.
 /// Schwartz was proposed around February 1971.
 ///
 /// The exact formula was found in the magazine Powerlifting USA,

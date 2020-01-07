@@ -30,6 +30,9 @@ pub use crate::dots::dots;
 mod glossbrenner;
 pub use crate::glossbrenner::glossbrenner;
 
+mod hoffman;
+pub use crate::hoffman::hoffman;
+
 mod ipf;
 pub use crate::ipf::ipf;
 
