@@ -33,6 +33,8 @@ pub enum MetaFederation {
     AllAustria,
     #[strum(to_string = "all-belarus")]
     AllBelarus,
+    #[strum(to_string = "all-bosnia-and-herzegovina")]
+    AllBosniaAndHerzegovina,
     #[strum(to_string = "all-brazil")]
     AllBrazil,
     #[strum(to_string = "all-canada")]
@@ -286,6 +288,9 @@ impl MetaFederation {
             MetaFederation::AllAustralia => is_from(Country::Australia, entry, meet),
             MetaFederation::AllAustria => is_from(Country::Austria, entry, meet),
             MetaFederation::AllBelarus => is_from(Country::Belarus, entry, meet),
+            MetaFederation::AllBosniaAndHerzegovina => {
+                is_from(Country::BosniaAndHerzegovina, entry, meet)
+            }
             MetaFederation::AllBrazil => is_from(Country::Brazil, entry, meet),
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)

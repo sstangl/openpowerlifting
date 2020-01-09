@@ -122,6 +122,9 @@
   <option value="gsf-belarus" {% if selection.federation == "GSF-Belarus" %}selected{% endif %}>GSF Belarus</option>
   <option value="wrpf-belarus" {% if selection.federation == "WRPF-Belarus" %}selected{% endif %}>WRPF Belarus</option>
 </optgroup>
+<optgroup label="{{strings.country.bosniaandherzegovina}}">
+  <option value="all-bosnia-and-herzegovina" {% if selection.federation == "AllBosniaAndHerzegovina" %}selected{% endif %}>{{strings.selectors.fed.all_bosniaandherzegovina}}</option>
+</optgroup>
 <optgroup label="{{strings.country.brazil}}">
   <option value="all-brazil" {% if selection.federation == "AllBrazil" %}selected{% endif %}>{{strings.selectors.fed.all_brazil}}</option>
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB - Confederação Brasileira de Levantamentos Básicos [IPF]</option>
