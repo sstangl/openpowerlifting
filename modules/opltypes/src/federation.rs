@@ -475,7 +475,7 @@ pub enum Federation {
     /// Magyar Erőemelő Szövetség, Hungarian IPF affiliate.
     ///
     /// They call themselves "Hunpower" for short.
-    #[strum(to_string = "Hunpower", serialize = "Hunpower")]
+    #[strum(to_string = "Hunpower", serialize = "hunpower")]
     Hunpower,
 
     /// International Blind Sport Assocation.
