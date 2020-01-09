@@ -36,6 +36,7 @@
   <option value="frpl" {% if selection.federation == "FRPL" %}selected{% endif %}>FRPL / {{strings.country.romania}}</option>
   <option value="hkwpa" {% if selection.federation == "HKWPA" %}selected{% endif %}>HKWPA / {{strings.country.hongkong}}</option>
   <option value="hpls" {% if selection.federation == "HPLS" %}selected{% endif %}>HPLS / {{strings.country.croatia}}</option>
+  <option value="hunpower" {% if selection.federation == "Hunpower" %}selected{% endif %}>Hunpower / {{strings.country.hungary}}</option>
   <option value="irishpf" {% if selection.federation == "IrishPF" %}selected{% endif %}>IrishPF / {{strings.country.ireland}}</option>
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA / {{strings.country.japan}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF / {{strings.country.kazakhstan}}</option>

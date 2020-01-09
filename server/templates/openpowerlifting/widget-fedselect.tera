@@ -206,6 +206,7 @@
 <optgroup label="{{strings.country.hungary}}">
   <option value="all-hungary" {% if selection.federation == "AllHungary" %}selected{% endif %}>{{strings.selectors.fed.all_hungary}}</option>
   <option value="hpc" {% if selection.federation == "HPC" %}selected{% endif %}>HPC - Hungarian Powerlifting Congress [WPC]</option>
+  <option value="hunpower" {% if selection.federation == "Hunpower" %}selected{% endif %}>Hunpower - Magyar Erőemelő Szövetség [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="all-iceland" {% if selection.federation == "AllIceland" %}selected{% endif %}>{{strings.selectors.fed.all_iceland}}</option>
