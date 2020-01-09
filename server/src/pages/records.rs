@@ -480,9 +480,17 @@ fn find_records<'db>(
     sel: &RecordsSelection,
     default: &Selection,
 ) -> Vec<RecordCollector<'db>> {
+    // The Records page already breaks entries up by Event, so include all Events.
+    // This fixes a bug where OpenIPF defaulted to FullPower, and so single-lift
+    // records would be incorrect.
+    let default: Selection = Selection {
+        event: EventSelection::AllEvents,
+        ..*default
+    };
+
     // Get a list of all entries corresponding to the selection.
     let indices =
-        algorithms::get_entry_indices_for(&sel.to_full_selection(default), opldb);
+        algorithms::get_entry_indices_for(&sel.to_full_selection(&default), opldb);
 
     // Build a vector of structs that can remember records.
     let mut collectors = make_collectors(sel.sex, sel.classkind);

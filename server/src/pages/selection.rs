@@ -10,7 +10,7 @@ use std::str::FromStr;
 use crate::opldb::MetaFederation;
 
 /// Query selection descriptor, corresponding to HTML widgets.
-#[derive(Copy, Clone, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
 pub struct Selection {
     pub equipment: EquipmentSelection,
     pub federation: FederationSelection,
@@ -195,7 +195,7 @@ pub enum FederationSelection {
 /// 2. When showing the meet list, we want the Federation::USPA. Otherwise, it
 /// gets cluttered with international events. This is particularly bad for
 /// IPF affiliates.
-#[derive(Copy, Clone, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum FedPreference {
     PreferMetaFederation,
     PreferFederation,
@@ -242,7 +242,7 @@ impl Serialize for FederationSelection {
 }
 
 /// The weight class selector widget.
-#[derive(Copy, Clone, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
 pub enum WeightClassSelection {
     AllClasses,
 
