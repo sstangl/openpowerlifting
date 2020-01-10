@@ -157,14 +157,14 @@ pub enum MetaFederation {
     #[strum(to_string = "aep")]
     AEP,
 
-    /// The BP federation is made up of smaller divisional federations,
-    /// but people expect to see them all lumped together.
-    #[strum(to_string = "all-bp")]
-    AllBP,
-
     /// BDFPA, but with international results also.
     #[strum(to_string = "bdfpa")]
     BDFPA,
+
+    /// The BP federation is made up of smaller divisional federations,
+    /// but people expect to see them all lumped together.
+    #[strum(to_string = "bp")]
+    BP,
 
     /// BPU, but with international results also.
     #[strum(to_string = "bpu")]
@@ -382,7 +382,7 @@ impl MetaFederation {
                 }
                 _ => false,
             },
-            MetaFederation::AllBP => {
+            MetaFederation::BP => {
                 meet.federation == Federation::BAWLA
                     || meet.federation == Federation::BP
                     || meet.federation == Federation::EPA
