@@ -26,6 +26,7 @@ css: builddir npminit
 images: builddir
 	cp ${PROJECTDATA}/logo-on-white.svg "${BUILDDIR}/images/logo-compressed.svg"
 	cp ${PROJECTDATA}/logo-on-black.svg "${BUILDDIR}/images/logo-on-black.svg"
+	cp ${PROJECTDATA}/logo-gold-on-black.svg "${BUILDDIR}/images/logo-gold-on-black.svg"
 	cp images/select_dropdown_red.png "${BUILDDIR}/images/"
 	cp images/select_dropdown_gold.png "${BUILDDIR}/images/"
 	cp images/mobile_filter.svg "${BUILDDIR}/images/"
