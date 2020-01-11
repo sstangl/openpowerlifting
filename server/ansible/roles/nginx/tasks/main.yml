@@ -11,6 +11,24 @@
     dest: /etc/nginx/nginx.conf
   notify: restart nginx
 
+- name: copy openpowerlifting.org.conf
+  template:
+    src: openpowerlifting.org.conf
+    dest: /etc/nginx/conf.d/openpowerlifting.org.conf
+  notify: restart nginx
+
+- name: copy beta.openpowerlifting.org.conf
+  template:
+    src: beta.openpowerlifting.org.conf
+    dest: /etc/nginx/conf.d/beta.openpowerlifting.org.conf
+  notify: restart nginx
+
+- name: copy shop.openpowerlifting.org.conf
+  template:
+    src: shop.openpowerlifting.org.conf
+    dest: /etc/nginx/conf.d/shop.openpowerlifting.org.conf
+  notify: restart nginx
+
 - name: make sure selinux will let nginx proxy_pass
   seboolean:
     name: httpd_can_network_connect
