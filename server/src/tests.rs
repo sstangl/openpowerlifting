@@ -97,6 +97,45 @@ fn test_pages_load() {
     }
 }
 
+#[test]
+fn test_pages_load_for_openipf() {
+    let client = client();
+
+    // Ensure that pages load on every kind of supported device.
+    // Internally, these share contexts, but have different templates.
+    for device in vec![Device::Desktop, Device::Mobile] {
+        assert_eq!(get(&client, device, "/dist/openipf/"), Status::Ok);
+        assert_eq!(
+            get(&client, device, "/dist/openipf/rankings/uspa"),
+            Status::Ok
+        );
+        assert_eq!(get(&client, device, "/dist/openipf/records"), Status::Ok);
+        assert_eq!(
+            get(&client, device, "/dist/openipf/records/uspa"),
+            Status::Ok
+        );
+        assert_eq!(
+            get(&client, device, "/dist/openipf/u/seanstangl"),
+            Status::Ok
+        );
+        assert_eq!(get(&client, device, "/dist/openipf/mlist"), Status::Ok);
+        assert_eq!(
+            get(&client, device, "/dist/openipf/m/usapl/CA-2019-04"),
+            Status::Ok
+        );
+        assert_eq!(get(&client, device, "/dist/openipf/status"), Status::Ok);
+        assert_eq!(get(&client, device, "/dist/openipf/data"), Status::Ok);
+        assert_eq!(get(&client, device, "/dist/openipf/faq"), Status::Ok);
+        assert_eq!(get(&client, device, "/dist/openipf/contact"), Status::Ok);
+
+        // Test a disambiguation page.
+        assert_eq!(
+            get(&client, device, "/dist/openipf/u/joshsmith"),
+            Status::Ok
+        );
+    }
+}
+
 /// Some rankings pages that contain only a few entries have
 /// historically produced crashes, when the context-generating
 /// code assumes a minimum entry count.
