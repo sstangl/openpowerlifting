@@ -1,0 +1,50 @@
+{% extends "openipf/mobile/base" %}
+
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block controlsbutton %}
+{% endblock controlsbutton %}
+
+{% block body %}
+<center>
+  <div class="text-content">
+    <h1>{{page_title}}</h1>
+    <h2>Server Version</h2>
+        <p>The server is currently on revision <a href="https://gitlab.com/openpowerlifting/opl-data/commit/{{statics::git_head()}}">{{statics::git_head_short()}}</a>. The next server update will include <a href="https://gitlab.com/openpowerlifting/opl-data/commits/master">the changes in this activity stream</a>.</p>
+    <h2>Meets</h2>
+        Tracking {{num_entries}} entries for {{num_lifters}} lifters from {{num_meets}} meets.
+
+    <h2>Federations</h2>
+    <table id="statusTable">
+      <thead><tr>
+        <th>Name</th>
+        <th>Meets Entered</th>
+        <th>Status</th>
+	<th>New Meet Detection</th>
+	<th>Results Format</th>
+	<th>Ease of Import</th>
+        <th>Maintainers</th>
+      </tr></thead>
+      <tbody>
+      {% for this in fed_statuses %}
+        <tr>
+          <td>{{this.fed}}{% if this.instagram %}<a href="https://instagram.com/{{this.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}</td>
+          <td>{{this.meet_count}}</td>
+          <td>{{this.status}}</td>
+	  <td>{{this.has_probe}}</td>
+	  <td>{{this.format}}</td>
+	  <td>{{this.ease}}</td>
+          <td>{{this.maintainers | safe}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</center>
+{% endblock body %}

@@ -1,0 +1,100 @@
+{% import "build/static-asset-map" as statics %}
+
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+  {# Static header parts. #}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+  <meta name="application-name" content="OpenIPF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  {# suggest a color that browsers should use to customize the display of the page or of the surrounding user interface. #}
+  <meta name="theme-color" content="#272727">
+
+  {# Dynamic header parts. #}
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{page_description}}">
+
+  {# External sources -- these should be self-hosted eventually. #}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {# Internal sources. #}
+  <link rel="stylesheet" type="text/css" href="/static/css/{{statics::openipf_css()}}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  {# Preload close icon to prevent blinking on mobile #}
+  <link rel="preload" as="image" href="/static/images/close_icon.png">
+  <meta name="apple-mobile-web-app-title" content="OpenIPF">
+
+  {% block includes %}
+  {% endblock includes %}
+
+  {# Communicates to the JS code that this is the mobile version. #}
+  <script type="text/javascript">
+    const IS_MOBILE = true;
+  </script>
+
+  {# Main script, capable of initializing every kind of page. #}
+  {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
+  {# If the page kind is unspecified, it just loads locale scripts. #}
+  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
+</head>
+<body>
+  <div id="mobile-wrapper">
+    <div id="mobile-menu-popup">
+      <div class="mobile-menu-popup-menu-wrapper">
+        <a href="{{urlprefix | safe}}" class="nav__link_mobile">{{strings.header.rankings}}</a>
+        <a href="{{urlprefix | safe}}records" class="nav__link_mobile">{{strings.header.records}}</a>
+        <a href="{{urlprefix | safe}}mlist" class="nav__link_mobile">{{strings.header.meets}}</a>
+        <a href="{{urlprefix | safe}}status" class="nav__link_mobile">{{strings.header.status}}</a>
+        <a href="{{urlprefix | safe}}faq" class="nav__link_mobile">{{strings.header.faq}}</a>
+        <a href="{{urlprefix | safe}}data" class="nav__link_mobile">{{strings.header.data}}</a>
+        <a href="https://www.plsource.org" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.apps}}</a>
+        <a href="https://openpowerlifting.bigcartel.com" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.shop}}</a>
+        <a href="{{urlprefix | safe}}contact" class="nav__link_mobile">{{strings.header.contact}}</a>
+        <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
+        <a href="https://instagram.com/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank"><i class="fa fa-instagram"></i></a>
+
+        <div id="footer-mobile-menu-selectors">
+          {% include "widget-weightunits" %}
+          {% include "widget-langselect" %}
+        </div>
+      </div>
+    </div>
+
+    <div id="controls-mobile-menu">
+      <div class="controls-mobile-menu-wrapper">
+        {% block controls %}
+        {% endblock controls %}
+      </div>
+    </div>
+
+    {# The Rankings page inserts a <div> here. #}
+    {% block flexbox_hack %}{% endblock flexbox_hack %}
+
+    {# This is defined as a block so that the Rankings page can hide it. #}
+    {% block mobilecontent %}
+    <div id="mobile-content">
+      {% block body %}{% endblock body %}
+    </div>
+    {% endblock mobilecontent %}
+
+    <footer id="mobile-footer">
+      <a href="javascript:void(0)" class="footer-hamburger" id="mobileMenuToggler"></a>
+
+      {% block footer_middle_content %}
+        <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
+          <img class="header-logo" src="/static/images/{{statics::logo_gold_on_black_svg()}}" alt="OpenPowerlifting"/>
+        </a>
+      {% endblock footer_middle_content %}
+
+      {% block controlsbutton %}
+        <button id="controls-mobile-toggle-button"></button>
+      {% endblock controlsbutton %}
+    </footer>
+
+    {# The Rankings page inserts a </div> here. #}
+    {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
+  </div>
+</body>
+</html>

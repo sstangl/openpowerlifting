@@ -1,0 +1,81 @@
+{% extends "openipf/mobile/base" %}
+
+{% block includes %}
+  <script type="text/javascript">
+    const PAGE_KIND = "rankings";
+    const initial_data = {{data | safe}};
+    const urlprefix = "{{urlprefix | safe}}";
+
+    const default_equipment = "raw";
+    const default_weightclass = "all";
+    const default_fed = "ipf-and-affiliates";
+    const default_sex = "all";
+    const default_ageclass = "all";
+    const default_year = "all";
+    const default_event = "full-power";
+    const default_sort = "by-ipf-points";
+    const translation_default_sort = "{{strings.columns.ipfpoints}}";
+
+    const translation_column_formulaplace = "{{strings.columns.formulaplace}}";
+    const translation_column_liftername = "{{strings.columns.liftername}}";
+    const translation_column_federation = "{{strings.columns.federation}}";
+    const translation_column_date = "{{strings.columns.date}}";
+    const translation_column_location = "{{strings.columns.location}}";
+    const translation_column_division = "{{strings.columns.division}}";
+    const translation_column_sex = "{{strings.columns.sex}}";
+    const translation_column_age = "{{strings.columns.age}}";
+    const translation_column_equipment = "{{strings.columns.equipment}}";
+    const translation_column_weightclass = "{{strings.columns.weightclass}}";
+    const translation_column_bodyweight = "{{strings.columns.bodyweight}}";
+    const translation_column_squat = "{{strings.columns.squat}}";
+    const translation_column_bench = "{{strings.columns.bench}}";
+    const translation_column_deadlift = "{{strings.columns.deadlift}}";
+    const translation_column_total = "{{strings.columns.total}}";
+    const translation_column_wilks = "{{strings.columns.wilks}}";
+    const translation_column_mcculloch = "{{strings.columns.mcculloch}}";
+    const translation_column_glossbrenner = "{{strings.columns.glossbrenner}}";
+    const translation_column_ipfpoints = "{{strings.columns.ipfpoints}}";
+    const translation_column_dots = "{{strings.columns.dots}}";
+  </script>
+
+  <script defer src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
+{% endblock includes %}
+
+{# Zero out the mobile-content div. It's not used for Rankings. #}
+{% block mobilecontent %}
+{% endblock mobilecontent %}
+
+{% block flexbox_hack %}
+  <div id="selectedFilters"></div>
+  <div class="flexbox">
+    <div id="theGrid"></div>
+{% endblock flexbox_hack %}
+{% block flexbox_hack_end %}
+  </div>
+  <div id="footerSearchContainer">
+    <input type="text" id="searchfield" autocomplete="off"/>
+    <button id="searchbutton">{{strings.buttons.search}}</button>
+  </div>
+  <button id="footerSearchToggler"></button>
+
+{% endblock flexbox_hack_end %}
+
+{% block controls %}
+  <div id="controls-mobile-filters">
+    {{strings.labels.sort}}
+    {% include "openipf/widget-sortselect" %}
+    {{strings.labels.category}}
+    {% include "openipf/widget-fedselect" %}
+    {% include "openipf/widget-equipmentselect" %}
+    {% include "openipf/widget-weightclass" %}
+    <select id="sexselect">
+      <option value="all"{% if selection.sex == "AllSexes" %} selected{% endif %}>{{strings.selectors.sex.all}}</option>
+      <option value="men"{% if selection.sex == "Men" %} selected{% endif %}>{{strings.selectors.sex.m}}</option>
+      <option value="women"{% if selection.sex == "Women" %} selected{% endif %}>{{strings.selectors.sex.f}}</option>
+    </select>
+    {% include "openipf/widget-ageselect" %}
+    {% include "widget-yearselect" %}
+    {% include "openipf/widget-eventselect" %}
+
+  </div>
+{% endblock controls %}

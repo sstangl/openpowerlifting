@@ -1,0 +1,83 @@
+{% extends "openipf/mobile/base" %}
+
+{% block includes %}
+  <script type="text/javascript">
+    const PAGE_KIND = "records";
+    const urlprefix = "{{urlprefix | safe }}";
+    const default_equipment = "raw";
+    const default_classkind = "ipf-classes";
+    const default_fed = "ipf-and-affiliates";
+    const default_sex = "men";
+    const default_ageclass = "all";
+    const default_year = "all";
+  </script>
+{% endblock includes %}
+
+{% block footer_hack %}
+  <footer>
+{% endblock footer_hack %}
+
+{% block footer_hack_end %}
+  </footer>
+{% endblock footer_hack_end %}
+
+{% block controls %}
+
+    <div id="controls-mobile-filters">
+      {% include "openipf/widget-fedselect" %}
+      {% include "openipf/widget-equipmentselect" %}
+      <select id="sexselect">
+        <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>
+        <option value="women" {% if selection.sex == "Women" %}selected{% endif %}>{{strings.selectors.sex.f}}</option>
+      </select>
+      {% include "openipf/widget-ageselect" %}
+      {% include "widget-yearselect" %}
+    </div>
+
+{% endblock controls %}
+
+{% block body %}
+
+  <div class="mixed-content-with-controls">
+    <div id="selectedFilters" class="records-selected-filters"></div>
+    {% for table in tables %}
+
+    {% if loop.index is odd %}
+      <div class="records-section records-group">
+    {% endif %}
+
+    <div class="records-col">
+    <h2>{{table.title}}</h2>
+    <table>
+      <thead><tr>
+        <th class="weight-class-header">{{strings.columns.weightclass}}</th>
+        <th class="weight-class-place">{{strings.columns.formulaplace}}</th>
+        <th>{{strings.columns.liftername}}</th>
+        <th>{{table.weight_column_label}}</th>
+        <th>{{strings.columns.date}}</th>
+        <th>{{strings.columns.federation}}</th>
+      </tr></thead>
+      <tbody>
+      {% for this in table.rows %}
+      <tr>
+        <td>{{this.weightclass}}</td>
+        <td>{{this.rank}}</td>
+        <td class="lifter-name-link">{% if this.lifter %}<a class="{{this.lifter.color}}" href="{{urlprefix | safe}}u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-instagram fa-resize"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="fa fa-vk fa-resize"></i></a>{% endif %}{% endif %}</td>
+        <td>{{this.weight_lifted}}</td>
+        <td class="lifter-date-link">{% if this.date %}<a href="{{urlprefix | safe}}m/{{this.path | safe}}">{{this.date}}</a>{% endif %}</td>
+        <td>{{this.federation}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    {% if loop.index is even %}
+      </div>
+    {% elif loop.last %}
+      </div>
+    {% endif %}
+
+    {% endfor %}
+  </div>
+{% endblock body %}
