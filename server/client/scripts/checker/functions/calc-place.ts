@@ -58,7 +58,10 @@ export const csvCalcPlace = (source: Csv): Csv | string => {
   if (csv.index("Place") >= 0) {
     const idx = csv.index("Place");
     for (let i = 0; i < csv.rows.length; ++i) {
-      csv.rows[i][idx] = "";
+      // But, preserve Guest if manually specified.
+      if (csv.rows[i][idx] !== "G") {
+        csv.rows[i][idx] = "";
+      }
     }
   } else {
     csv.appendColumn("Place");
@@ -76,6 +79,11 @@ export const csvCalcPlace = (source: Csv): Csv | string => {
   // Group rows in a Map by their category.
   let categories = new Map();
   for (let i = 0; i < csv.rows.length; ++i) {
+    // Skip guests: leave them in-place.
+    if (csv.rows[i][placeIndex] === "G") {
+      continue;
+    }
+
     const category = getCategory(csv, csv.rows[i]);
     if (categories.has(category)) {
       categories.get(category).push(csv.rows[i]);
