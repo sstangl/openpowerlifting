@@ -50,3 +50,5 @@
     divisions = ["Disabled"]
 
 [exemptions]
+    0206 = ["ExemptLiftOrder"]
+    0103 = ["ExemptWeightClassConsistency"]
