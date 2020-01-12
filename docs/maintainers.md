@@ -59,6 +59,70 @@ Maintainers will make mistakes. The good news is that with git, it is very easy 
 1. Is there some way we could add tests or other systems that would prevent the mistake again in the future?
 2. Could we add checklist-style documentation somewhere to make sure that we remember to avoid the cause of the mistake?
 
+## How-To: Review Merge Requests
+
+Pending merge requests can be found [on the Merge Requests page](https://gitlab.com/openpowerlifting/opl-data/merge_requests).
+
+The general workflow is:
+
+1. Pick a merge request.
+2. Select the "Changes" tab.
+3. Read through the whole merge request and make sure it makes sense. Please check every file, even the originals!
+4. Leave a review, comments, or give approval.
+5. If approved, wait for tests to pass (near-mandatory)!
+6. If tests pass, rebase (if necessary) and merge.
+7. Add a thank-you comment :-).
+
+This will be explained in greater detail below.
+
+### Reviewing Changes
+
+In the "Changes" tab, you will see all the changes that the patch author is proposing. Please read through all of them and make sure that they are correct and intentional.
+
+You can leave comments on specific lines. To do that, hover your mouse cursor over the line in question. A speech bubble will appear to the left of the line. If you click it, a text area will appear for you to leave a comment.
+
+There are two ways to leave a comment: "Start a review" and "Add comment now." Please use "Start a review" -- it will tie all of your comments together into one bundle. The "Add comment now" is intended more for throwaway comments, whereas "reviews" are for requesting changes.
+
+#### Common errors to look for
+
+There are several common errors that tests don't catch, that are worth checking for:
+
+1. Sometimes the `original.txt` contains thousands of lines of nothing but commas. Please look to make sure that the file doesn't do that.
+2. Sometimes the `meet.csv` year doesn't match the year implied by the folder name. For example, `1801` but the `meet.csv` says `2003-12-02`.
+
+### Merging a Valid Request
+
+On a high level, the way to merge a merge request is:
+
+1. Click the blue "Approve" button.
+2. Click the green "Rebase" button. (There may also just be a green "Merge" button: if so, click that and you're done!)
+3. Wait for a message about "added commits" to appear in the team chat.
+4. Refresh the merge request page.
+5. A blue button will appear near where the "Rebase" button was. Click the arrow to the right of it, and select "Merge Immediately".
+
+#### What's Rebasing?
+
+In git, every change (called a "commit") remembers its history, which is an ordered list of all the commits that preceded it. So for example, if you make a change `A`, then a change `B`, then `C`, the change `C` remembers that its parent is `B`, and `B` remembers that its parent is `A`.
+
+That looks like this, as a list: `A <= B <= C`. We call `C` the "head" of the "branch".
+
+Now suppose someone made a merge request, and that merge request is `C` like above. Merge requests take a while to have tests run. In the meantime, I come along and I make some changes to the master branch, and I push a commit named `D`.
+
+Because `C` wasn't merged yet, the most recent commit on the master branch was `B`. So `D` remembers that its parent was `B`. On the master branch, that looks like: `A <= B <= D`.
+
+So now we have a conflict: you can't have both `A <= B <= C` and `A <= B <= D`!
+
+There are two ways to solve this. The way we use is called "rebasing", which means that we rewrite the history of the merge request to basically lie about where it came from, so that it makes sense linearly.
+
+So when you hit that green "Rebase" button, what it's doing is telling `C` that its parent is now actually `D`. It does that by replaying the changes on top of the master branch.
+
+So when you hit the Rebase button, the merge request changes to `A <= B <= D <= C`.
+
+At that point, GitLab recognizes that the merge request (`A <= B <= D <= C`) is linearly compatible with the master branch (`A <= B <= D`), and so it gives you an option to do a "fast-forward merge", which just means that it adds `C` to the master branch.
+
+Sometimes the green "Rebase" button can fail. That happens mostly if the merge request is old (like, a day) -- which is why we try to get to them quickly. Sometimes also people forget to give you the ability to click that button, and then it's just missing and has to be resolved on the command-line.
+
+
 ## Using Git
 
 It is not necessary for maintainers to be familiar with the git command-line, although unfortunately it is necessary in certain circumstances to resolve merge request conflicts.
@@ -84,7 +148,7 @@ If you then use `git merge` on a branch that isn't just a fast-forward of the ma
 
 You can use `git fetch` to also fetch all merge requests. Then you can check them out directly using `git checkout origin/merge-requests/5000`, for example. This is a very, very handy shorthand.
 
-To get that set up, add the `merge-requests` line to your `git/config` in the `[remote "origin"]` section:
+To get that set up, add the `merge-requests` line to your `.git/config` in the `[remote "origin"]` section:
 
 ```
 [remote "origin"]
