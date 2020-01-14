@@ -113,6 +113,34 @@ impl From<PointsSystem> for MeetSortSelection {
     }
 }
 
+/// Gets the title of a column displaying a certain points system.
+fn points_column_title<'db>(
+    system: PointsSystem,
+    locale: &'db Locale,
+    default_points: PointsSystem,
+) -> &'db str {
+    match system {
+        PointsSystem::AH => "AH",
+        PointsSystem::Dots => &locale.strings.columns.dots,
+        PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
+        PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
+        PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
+        PointsSystem::NASA => "NASA",
+        PointsSystem::Reshel => "Reshel",
+        PointsSystem::SchwartzMalone => "S/Malone",
+        PointsSystem::Wilks => &locale.strings.columns.wilks,
+
+        // This occurs if the federation default is ByTotal.
+        PointsSystem::Total => {
+            if default_points != PointsSystem::Total {
+                points_column_title(default_points, locale, default_points)
+            } else {
+                &locale.strings.columns.total
+            }
+        }
+    }
+}
+
 impl MeetSortSelection {
     /// Converts to a PointsSystem.
     pub fn as_points_system(self, default_points: PointsSystem) -> PointsSystem {
@@ -132,7 +160,8 @@ impl MeetSortSelection {
             MeetSortSelection::ByWilks => PointsSystem::Wilks,
 
             // Specifically-requested weight sorts.
-            MeetSortSelection::ByDivision | MeetSortSelection::ByTotal => default_points,
+            MeetSortSelection::ByDivision => default_points,
+            MeetSortSelection::ByTotal => PointsSystem::Total,
         }
     }
 
@@ -142,20 +171,8 @@ impl MeetSortSelection {
         locale: &'db Locale,
         default_points: PointsSystem,
     ) -> &'db str {
-        match self.as_points_system(default_points) {
-            PointsSystem::AH => "AH",
-            PointsSystem::Dots => &locale.strings.columns.dots,
-            PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
-            PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
-            PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
-            PointsSystem::NASA => "NASA",
-            PointsSystem::Reshel => "Reshel",
-            PointsSystem::SchwartzMalone => "S/Malone",
-            PointsSystem::Wilks => &locale.strings.columns.wilks,
-
-            // This occurs if the federation default is ByTotal.
-            PointsSystem::Total => "Points",
-        }
+        let system = self.as_points_system(default_points);
+        points_column_title(system, locale, default_points)
     }
 
     /// Resolves ByFederationDefault to the actual default.
