@@ -632,7 +632,7 @@ pub enum Federation {
     #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
 
-    /// National Powerlifting Association of the Netherlands.
+    /// Nederlandse Powerlifting Bond, IPF.
     #[strum(to_string = "NPB", serialize = "npb")]
     NPB,
 
@@ -1918,7 +1918,7 @@ impl Federation {
             Federation::NORCAL => None,
             Federation::NordicPF => Some(Federation::IPF),
             Federation::NPA => None,
-            Federation::NPB => None,
+            Federation::NPB => Some(Federation::IPF),
             Federation::NSF => Some(Federation::IPF),
             Federation::NZPF => Some(Federation::IPF),
             Federation::NZAWLA => Some(Federation::IPF),
@@ -2235,7 +2235,7 @@ impl Federation {
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
             Federation::NPA => PointsSystem::Wilks,
-            Federation::NPB => PointsSystem::Wilks,
+            Federation::NPB => Federation::ipf_rules_on(date),
             Federation::NSF => Federation::ipf_rules_on(date),
             Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::NZAWLA => Federation::ipf_rules_on(date),
