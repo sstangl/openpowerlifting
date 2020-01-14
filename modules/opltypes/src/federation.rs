@@ -1916,7 +1916,14 @@ impl Federation {
             Federation::NZPF => Some(Federation::IPF),
             Federation::NZAWLA => Some(Federation::IPF),
             Federation::NZUA => None,
-            Federation::OceaniaPF => Some(Federation::WP),
+            Federation::OceaniaPF => {
+                // PA lost IPF affiliation in 2018, replaced by the ORPF.
+                if date.year() >= 2018 {
+                    Some(Federation::WP)
+                } else {
+                    Some(Federation::IPF)
+                }
+            }
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
             Federation::PA => {
