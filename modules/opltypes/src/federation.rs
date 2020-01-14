@@ -636,6 +636,10 @@ pub enum Federation {
     #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
 
+    /// New Zealand Amateur Weightlifting Association, IPF. (NPZF Precursor)
+    #[strum(to_string = "NZAWLA", serialize = "nzawla")]
+    NZAWLA,
+
     /// New Zealand Powerlifting Federation, IPF.
     #[strum(to_string = "NZPF", serialize = "nzpf")]
     NZPF,
@@ -1336,6 +1340,7 @@ impl Federation {
             Federation::NPB => FULLY_TESTED,
             Federation::NSF => FULLY_TESTED,
             Federation::NZPF => FULLY_TESTED,
+            Federation::NZAWLA => FULLY_TESTED,
             Federation::NZUA => false,
             Federation::OceaniaPF => FULLY_TESTED,
             Federation::ORPF => FULLY_TESTED,
@@ -1612,6 +1617,7 @@ impl Federation {
             Federation::NPB => Some(Country::Netherlands),
             Federation::NSF => Some(Country::Norway),
             Federation::NZPF => Some(Country::NewZealand),
+            Federation::NZAWLA => Some(Country::NewZealand),
             Federation::NZUA => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::ORPF => None,
@@ -1908,6 +1914,7 @@ impl Federation {
             Federation::NPB => None,
             Federation::NSF => Some(Federation::IPF),
             Federation::NZPF => Some(Federation::IPF),
+            Federation::NZAWLA => Some(Federation::IPF),
             Federation::NZUA => None,
             Federation::OceaniaPF => Some(Federation::WP),
             Federation::ORPF => Some(Federation::IPF),
@@ -2216,6 +2223,7 @@ impl Federation {
             Federation::NPB => PointsSystem::Wilks,
             Federation::NSF => Federation::ipf_rules_on(date),
             Federation::NZPF => Federation::ipf_rules_on(date),
+            Federation::NZAWLA => Federation::ipf_rules_on(date),
             Federation::NZUA => PointsSystem::Wilks,
             Federation::OceaniaPF => PointsSystem::Wilks,
             Federation::ORPF => Federation::ipf_rules_on(date),
