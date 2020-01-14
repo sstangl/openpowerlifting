@@ -281,7 +281,7 @@
     MS-2014-12-13 = ["ExemptWeightClassConsistency"] #New weightclasses
     NS-2003-07-19 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     NS-2002-11-02 = ["ExemptWeightClassConsistency"] #Missing weightclasses
-    NS-2010-06-20 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+    NS-2010-06-20 = ["ExemptWeightClassConsistency","ExemptDivision"] #Missing weightclasses, Bryce Lewis was Raw but in the equipped division.
     NS-2001-08-26 = ["ExemptWeightClassConsistency"] #Has 140 & 140+
     NS-1998-12-05 = ["ExemptWeightClassConsistency"] #Missing weightclasses & 140kg class
     NS-2004-12-11 = ["ExemptWeightClassConsistency"] #Has 44kg and 48kg men's classes
