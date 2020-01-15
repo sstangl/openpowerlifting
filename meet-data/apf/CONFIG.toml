@@ -327,6 +327,7 @@
     fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
     fpfemapf = {name ="F_PFEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="F"} #Police/Fire
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
+    fsoemaapf = {name ="F_SOEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="F",tested="Yes"} #Special Olympics
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
