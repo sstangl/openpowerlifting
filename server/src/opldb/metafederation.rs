@@ -203,6 +203,10 @@ pub enum MetaFederation {
     #[strum(to_string = "dsf")]
     DSF,
 
+    /// EPA, but with BP and international results also.
+    #[strum(to_string = "epa")]
+    EPA,
+
     /// FALPO, but with international results also.
     #[strum(to_string = "falpo")]
     FALPO,
@@ -299,8 +303,12 @@ pub enum MetaFederation {
     LPF,
 
     /// NauruPF, but with international results also.
-    #[strum(to_string = "nAURUpf")]
+    #[strum(to_string = "naurupf")]
     NauruPF,
+
+    /// NIPF, but with BP and international results also.
+    #[strum(to_string = "nipf")]
+    NIPF,
 
     /// NPB, but with international results also.
     #[strum(to_string = "npb")]
@@ -346,6 +354,10 @@ pub enum MetaFederation {
     #[strum(to_string = "sapf")]
     SAPF,
 
+    /// ScottishPL, but with BP and international results also.
+    #[strum(to_string = "scottishpl")]
+    ScottishPL,
+
     /// SSF, but with international results also.
     #[strum(to_string = "ssf")]
     SSF,
@@ -381,6 +393,10 @@ pub enum MetaFederation {
     /// VPF, but with international results also.
     #[strum(to_string = "vpf")]
     VPF,
+
+    /// WelshPA, but with BP and international results also.
+    #[strum(to_string = "welshpa")]
+    WelshPA,
 
     /// WRPF-USA.
     #[strum(to_string = "wrpf-usa")]
@@ -568,6 +584,7 @@ impl MetaFederation {
             }
             MetaFederation::CSST => affiliation!(meet, entry, CSST, IPF, EPF),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
+            MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
             MetaFederation::FECAPOLIF => {
                 affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF)
@@ -624,6 +641,7 @@ impl MetaFederation {
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
+            MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
             MetaFederation::NPB => affiliation!(meet, entry, NPB, IPF, EPF),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
@@ -639,6 +657,9 @@ impl MetaFederation {
             MetaFederation::SAPF => {
                 affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF)
             }
+            MetaFederation::ScottishPL => {
+                affiliation!(meet, entry, ScottishPL, IPF, EPF, BP)
+            }
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
             MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
@@ -650,6 +671,7 @@ impl MetaFederation {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
             }
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
+            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {
                     Some(Country::USA) => true,
