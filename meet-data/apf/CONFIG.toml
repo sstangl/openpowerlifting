@@ -252,6 +252,7 @@
     mnemaapf = {name ="M_NEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Novice
     mnraapf = {name ="M_NR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Novice
     mgraapf = {name ="M_GR_AAPF",min=0,max=999,equipment="Raw",sex="M",place="G",tested="Yes"} #Guest
+    mgemaapf = {name ="M_GEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",place="G",tested="Yes"} #Guest
 
     foraapf = {name ="F_OR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focraapf = {name ="F_OCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
