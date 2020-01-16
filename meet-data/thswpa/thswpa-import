@@ -251,6 +251,7 @@ def fix_dqs(csv):
     for row in csv.rows:
         if row[placeidx] == 'DQ':
             row[totalidx] = ''
+            event = 'SBD'
         else:
             event = ''
             if row[bsqidx] != '':
