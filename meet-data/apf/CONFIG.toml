@@ -710,3 +710,4 @@
     0828 = ["ExemptWeightClassConsistency"] # Missing weightclass
     0834 = ["ExemptDivision"] # Non-standard divisions (Russia).
     9101 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Old meet.
+    0736 = ["ExemptWeightClassConsistency"] # Missing weightclass
