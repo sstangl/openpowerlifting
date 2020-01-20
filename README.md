@@ -43,12 +43,12 @@ the changes back so the entire powerlifting community may benefit.
 
 ## Development Installation
 
-### Fedora 29
+### Fedora 31
 
 First, install the "nightly" version of the Rust programming language using `rustup`:
 
 ```bash
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 When a menu appears, choose "Customize installation".<br/>
@@ -60,7 +60,7 @@ Log out and log back in to allow `~/.cargo/bin` to be part of your default shell
 Install dependencies:
 
 ```bash
-sudo dnf install make npm python3-toml python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js
+sudo dnf install make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js
 ```
 
 Build the project and run the server:
