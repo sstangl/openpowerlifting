@@ -294,6 +294,7 @@ enum Header {
 /// Checks that the headers are valid.
 fn check_headers(
     headers: &csv::StringRecord,
+    meet: Option<&Meet>,
     config: Option<&Config>,
     report: &mut Report,
 ) -> HeaderIndexMap {
@@ -374,6 +375,18 @@ fn check_headers(
         // But only if the configuration file actually specifies divisions!
         if !header_map.has(Header::Division) && !config.divisions.is_empty() {
             report.error("Configured federations require a 'Division' column");
+        }
+    }
+
+    // We commonly add lifter BirthDates when lifters ask us to fix their age data.
+    // Unfortunately, since git is text-oriented, adding a column is significantly
+    // more costly than changing just one row.
+    //
+    // To avoid excessive version-control churn, the BirthDate column is mandatory
+    // (even if totally blank) for all meets since 2020.
+    if let Some(meet) = meet {
+        if meet.date.year() >= 2020 && !header_map.has(Header::BirthDate) {
+            report.error("The BirthDate column is mandatory for all meets since 2020");
         }
     }
 
@@ -1963,7 +1976,8 @@ where
     let exempt_age: bool =
         exemptions.map_or(false, |el| el.iter().any(|&e| e == Exemption::ExemptAge));
 
-    let headers: HeaderIndexMap = check_headers(rdr.headers()?, config, &mut report);
+    let headers: HeaderIndexMap =
+        check_headers(rdr.headers()?, meet, config, &mut report);
     if !report.messages.is_empty() {
         return Ok(EntriesCheckResult {
             report,

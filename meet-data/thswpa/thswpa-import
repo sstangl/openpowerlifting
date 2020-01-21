@@ -342,6 +342,7 @@ def main(url):
         enterdivision(entriescsv, divurl)
 
     removeemptycolumns(entriescsv)
+    entriescsv.append_column('BirthDate')
 
     fix_dqs(entriescsv)
     fix_noshows(entriescsv)
