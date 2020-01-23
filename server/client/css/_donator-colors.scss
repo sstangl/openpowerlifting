@@ -222,6 +222,13 @@
   background-image: linear-gradient(to right, $green, $white);
 }
 
+.lightblue_to_purple {
+  $lightblue: #43D1FF;
+  $purple: #AE76FF;
+  @include gradient-prereqs($lightblue);
+  background-image: linear-gradient(to right, $lightblue, $purple);
+}
+
 .lightblue_to_white {
   $lightblue: #43D1FF;
   $white: #EDF2F4;
