@@ -95,6 +95,51 @@ impl Date {
         (self.0 % 10000)
     }
 
+    /// Determines whether a date exists in the Gregorian calendar.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Date;
+    /// let date = "2000-02-29".parse::<Date>().unwrap();
+    /// assert_eq!(date.is_valid(), true);
+    ///
+    /// let date = "2018-04-31".parse::<Date>().unwrap();
+    /// assert_eq!(date.is_valid(), false);
+    /// ```
+    pub fn is_valid(self) -> bool {
+        // The array has 13 elements so the month (starting from 1) can be an index.
+        let days_in_month: [u8; 13] = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        let month = self.month();
+        let day = self.day();
+
+        // Ensure that the month is usable as an index into days_in_month (1-indexed).
+        if month > 12 {
+            return false;
+        }
+
+        let mut max_days = u32::from(days_in_month[month as usize]);
+
+        // February is a special case based on leap year logic.
+        if month == 2 {
+            let year = self.year();
+
+            // Quoth Wikipedia:
+            //  Every year that is exactly divisible by four is a leap year,
+            //  except for years that are exactly divisible by 100,
+            //  but these centurial years are leap years if they are exactly
+            //  divisible by 400.
+            let is_leap = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
+
+            if is_leap {
+                max_days += 1;
+            }
+        }
+
+        day > 0 && day <= max_days
+    }
+
     /// Calculates the Age of a lifter on a given date,
     /// where `self` is the lifter's BirthDate.
     ///

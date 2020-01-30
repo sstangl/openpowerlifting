@@ -151,6 +151,12 @@ pub fn check_date(s: &str, report: &mut Report) -> Option<Date> {
         report.error(format!("Meet occurs in the future in '{}'", s));
     }
 
+    // The date should exist in the Gregorian calendar.
+    if !date.is_valid() {
+        let msg = format!("Date '{}' does not exist in the Gregorian calendar", s);
+        report.error(msg);
+    }
+
     Some(date)
 }
 

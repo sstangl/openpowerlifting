@@ -631,6 +631,13 @@ fn check_column_birthdate(
                 }
             }
 
+            // Ensure that the BirthDate exists in the Gregorian calendar.
+            if !bd.is_valid() {
+                let msg =
+                    format!("BirthDate '{}' does not exist in the Gregorian calendar", s);
+                report.error_on(line, msg);
+            }
+
             Some(bd)
         }
         Err(e) => {
