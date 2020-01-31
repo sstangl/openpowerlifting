@@ -405,7 +405,7 @@ pub fn meet(
 fn ipf_fed_filter(fed: Federation) -> bool {
     // Using a maximum date causes the sanctioning_body() logic to return the most
     // current sanctioning information.
-    let latest = Date::from_u32(9999_01_01);
+    let latest = Date::from_parts(9999, 01, 01);
     fed.sanctioning_body(latest) == Some(Federation::IPF)
 }
 

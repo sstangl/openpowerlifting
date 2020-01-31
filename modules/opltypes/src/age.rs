@@ -73,7 +73,7 @@ impl Age {
     ///
     /// ```
     /// # use opltypes::{Age, Date};
-    /// let date = Date::from_u32(2019_02_16);
+    /// let date = Date::from_parts(2019, 02, 16);
     /// assert_eq!(Age::from_birthyear_on_date(1988, date), Age::Approximate(30));
     /// ```
     pub fn from_birthyear_on_date(birthyear: u32, on_date: Date) -> Self {

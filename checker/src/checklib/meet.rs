@@ -30,7 +30,7 @@ impl Meet {
         Meet {
             path: "test/1901".to_string(),
             federation: Federation::WRPF,
-            date: Date::from_u32(2019_03_01),
+            date: Date::from_parts(2019, 03, 01),
             country: opltypes::Country::USA,
             state: None,
             town: None,

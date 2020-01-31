@@ -22,9 +22,9 @@ struct BirthDateRange {
 }
 
 /// An unrealistically low Date for use as a default minimum.
-const BDR_DEFAULT_MIN: Date = Date::from_u32(1100_01_01);
+const BDR_DEFAULT_MIN: Date = Date::from_parts(1100, 01, 01);
 /// An unrealistically high Date for use as a default maximum.
-const BDR_DEFAULT_MAX: Date = Date::from_u32(9997_06_15);
+const BDR_DEFAULT_MAX: Date = Date::from_parts(9997, 06, 15);
 
 impl Default for BirthDateRange {
     fn default() -> Self {
@@ -73,17 +73,22 @@ fn next_day(date: Date) -> Date {
         month = 1;
         year += 1;
     }
-    Date::from_u32(year * 1_00_00 + month * 1_00 + day)
+    Date::from_parts(year, month, day)
 }
 
 impl BirthDateRange {
     /// Shorthand constructor for use in test code.
     #[cfg(test)]
-    pub fn at(min: Option<u32>, max: Option<u32>) -> BirthDateRange {
+    pub fn at(
+        min: Option<(u32, u32, u32)>,
+        max: Option<(u32, u32, u32)>,
+    ) -> BirthDateRange {
         let default = BirthDateRange::default();
         BirthDateRange::new(
-            min.map(|x| Date::from_u32(x)).unwrap_or(default.min),
-            max.map(|x| Date::from_u32(x)).unwrap_or(default.max),
+            min.map(|(y, m, d)| Date::from_parts(y, m, d))
+                .unwrap_or(default.min),
+            max.map(|(y, m, d)| Date::from_parts(y, m, d))
+                .unwrap_or(default.max),
         )
     }
 
@@ -144,9 +149,8 @@ impl BirthDateRange {
 
     /// Narrows the range by a known BirthYear.
     pub fn narrow_by_birthyear(&mut self, birthyear: u32) -> NarrowResult {
-        let year_in_date: u32 = birthyear * 1_00_00;
-        let min_yeardate = Date::from_u32(year_in_date + 01_01); // Jan 1.
-        let max_yeardate = Date::from_u32(year_in_date + 12_31); // Dec 31.
+        let min_yeardate = Date::from_parts(birthyear, 01, 01); // Jan 1.
+        let max_yeardate = Date::from_parts(birthyear, 12, 31); // Dec 31.
 
         let birthyear_range = BirthDateRange::new(min_yeardate, max_yeardate);
         self.intersect(&birthyear_range)
@@ -154,16 +158,16 @@ impl BirthDateRange {
 
     /// Narrows the range by a known Age on a specific Date.
     pub fn narrow_by_age(&mut self, age: Age, on_date: Date) -> NarrowResult {
-        let (year, monthday) = (on_date.year(), on_date.monthday());
+        let (year, month, day) = (on_date.year(), on_date.month(), on_date.day());
         match age {
             Age::Exact(age) => {
                 let age = u32::from(age);
 
                 // The greatest possible BirthDate is if their birthday is that day.
-                let max = Date::from_u32((year - age) * 1_00_00 + monthday);
+                let max = Date::from_parts(year - age, month, day);
 
                 // The least possible BirthDate is if their birthday is the next day.
-                let min = next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday));
+                let min = next_day(Date::from_parts(year - age - 1, month, day));
 
                 self.intersect(&BirthDateRange::new(min, max))
             }
@@ -172,11 +176,11 @@ impl BirthDateRange {
 
                 // The greatest possible BirthDate is if the lifter is younger,
                 // and that day is their birthday.
-                let max = Date::from_u32((year - age) * 1_00_00 + monthday);
+                let max = Date::from_parts(year - age, month, day);
 
                 // The least possible BirthDate is if the lifter is older,
                 // and their birthday is the next day.
-                let min = next_day(Date::from_u32((year - age - 2) * 1_00_00 + monthday));
+                let min = next_day(Date::from_parts(year - age - 2, month, day));
 
                 self.intersect(&BirthDateRange::new(min, max))
             }
@@ -186,14 +190,14 @@ impl BirthDateRange {
 
     /// Narrows the range by a known AgeRange on a specific Date.
     pub fn narrow_by_range(&mut self, min: Age, max: Age, on_date: Date) -> NarrowResult {
-        let (year, monthday) = (on_date.year(), on_date.monthday());
+        let (year, month, day) = (on_date.year(), on_date.month(), on_date.day());
 
         // Determine the maximum BirthDate from the lower Age (they are younger).
         let birthdate_max = match min {
             Age::Exact(age) | Age::Approximate(age) => {
                 // The greatest possible BirthDate is if their birthday is that day.
                 // In the case of an Approximate, the lifter is the younger option.
-                Date::from_u32((year - u32::from(age)) * 1_00_00 + monthday)
+                Date::from_parts(year - u32::from(age), month, day)
             }
             Age::None => BDR_DEFAULT_MAX,
         };
@@ -203,13 +207,13 @@ impl BirthDateRange {
             Age::Exact(age) => {
                 let age = u32::from(age);
                 // The least possible BirthDate is if their birthday is the next day.
-                next_day(Date::from_u32((year - age - 1) * 1_00_00 + monthday))
+                next_day(Date::from_parts(year - age - 1, month, day))
             }
             Age::Approximate(age) => {
                 let age = u32::from(age);
                 // The least possible BirthDate is if their birthday is the next day,
                 // assuming that they are as old as allowed.
-                next_day(Date::from_u32((year - age - 2) * 1_00_00 + monthday))
+                next_day(Date::from_parts(year - age - 2, month, day))
             }
             Age::None => BDR_DEFAULT_MIN,
         };
@@ -507,7 +511,7 @@ mod tests {
 
     #[test]
     fn range_narrow_by_birthdate() {
-        let birthdate = Date::from_u32(1967_02_03);
+        let birthdate = Date::from_parts(1967, 02, 03);
 
         // Test a BirthDate against unknown bounds.
         let mut bdr = BirthDateRange::default();
@@ -516,27 +520,27 @@ mod tests {
         assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that narrows an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some(2019_04_24));
+        let mut bdr = BirthDateRange::at(None, Some((2019, 04, 24)));
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
         assert_eq!(bdr.min, birthdate);
         assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that conflicts with an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some(1967_02_02));
+        let mut bdr = BirthDateRange::at(None, Some((1967, 02, 02)));
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Conflict);
 
         // Test a BirthDate that narrows a lower bound.
-        let mut bdr = BirthDateRange::at(Some(1955_02_03), None);
+        let mut bdr = BirthDateRange::at(Some((1955, 02, 03)), None);
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
         assert_eq!(bdr.min, birthdate);
         assert_eq!(bdr.max, birthdate);
 
         // Test a BirthDate that conflicts with a lower bound.
-        let mut bdr = BirthDateRange::at(Some(1967_02_04), None);
+        let mut bdr = BirthDateRange::at(Some((1967, 02, 04)), None);
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Conflict);
 
         // Test a BirthDate that provides no additional new information.
-        let mut bdr = BirthDateRange::at(Some(1967_02_03), Some(1967_02_03));
+        let mut bdr = BirthDateRange::at(Some((1967, 02, 03)), Some((1967, 02, 03)));
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
         assert_eq!(bdr.min, birthdate);
         assert_eq!(bdr.max, birthdate);
@@ -547,74 +551,74 @@ mod tests {
         // Test a BirthYear against unknown bounds.
         let mut bdr = BirthDateRange::default();
         assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
-        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
+        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
 
         // Test a BirthYear that narrows an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some(1983_04_24));
+        let mut bdr = BirthDateRange::at(None, Some((1983, 04, 24)));
         assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
-        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
+        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
 
         // Test a BirthYear that conflicts with an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some(1981_01_01));
+        let mut bdr = BirthDateRange::at(None, Some((1981, 01, 01)));
         assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
 
         // Test a BirthYear that narrows a lower bound.
-        let mut bdr = BirthDateRange::at(Some(1981_01_01), None);
+        let mut bdr = BirthDateRange::at(Some((1981, 01, 01)), None);
         assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1982_01_01));
-        assert_eq!(bdr.max, Date::from_u32(1982_12_31));
+        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
+        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
 
         // Test a BirthYear that conflicts with a lower bound.
-        let mut bdr = BirthDateRange::at(Some(1983_01_01), None);
+        let mut bdr = BirthDateRange::at(Some((1983, 01, 01)), None);
         assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
 
         // Test a BirthYear that entirely contains the known range.
-        let mut bdr = BirthDateRange::at(Some(1982_03_04), Some(1982_05_06));
+        let mut bdr = BirthDateRange::at(Some((1982, 03, 04)), Some((1982, 05, 06)));
         assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1982_03_04));
-        assert_eq!(bdr.max, Date::from_u32(1982_05_06));
+        assert_eq!(bdr.min, Date::from_parts(1982, 03, 04));
+        assert_eq!(bdr.max, Date::from_parts(1982, 05, 06));
     }
 
     #[test]
     fn range_narrow_by_age() {
         // Test an Age::Exact against unknown bounds.
         let mut bdr = BirthDateRange::default();
-        let date = Date::from_u32(2019_01_04);
+        let date = Date::from_parts(2019, 01, 04);
         assert_eq!(bdr.narrow_by_age(Age::Exact(30), date), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1988_01_05));
-        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
+        assert_eq!(bdr.min, Date::from_parts(1988, 01, 05));
+        assert_eq!(bdr.max, Date::from_parts(1989, 01, 04));
 
         // Test an Age::Approximate against unknown bounds.
         let mut bdr = BirthDateRange::default();
-        let date = Date::from_u32(2019_01_04);
+        let date = Date::from_parts(2019, 01, 04);
         assert_eq!(bdr.narrow_by_age(Age::Approximate(30), date), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1987_01_05));
-        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
+        assert_eq!(bdr.min, Date::from_parts(1987, 01, 05));
+        assert_eq!(bdr.max, Date::from_parts(1989, 01, 04));
 
         // Test December 31st roll-over.
         let mut bdr = BirthDateRange::default();
-        let date = Date::from_u32(2018_12_31);
+        let date = Date::from_parts(2018, 12, 31);
         assert_eq!(bdr.narrow_by_age(Age::Exact(30), date), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1988_01_01));
-        assert_eq!(bdr.max, Date::from_u32(1988_12_31));
+        assert_eq!(bdr.min, Date::from_parts(1988, 01, 01));
+        assert_eq!(bdr.max, Date::from_parts(1988, 12, 31));
     }
 
     #[test]
     fn range_narrow_by_range() {
         // Basic sanity test.
         let mut bdr = BirthDateRange::default();
-        let date = Date::from_u32(2019_01_04);
+        let date = Date::from_parts(2019, 01, 04);
         let (min, max) = (Age::Exact(30), Age::Exact(34));
         assert_eq!(bdr.narrow_by_range(min, max, date), Integrated);
-        assert_eq!(bdr.min, Date::from_u32(1984_01_05));
-        assert_eq!(bdr.max, Date::from_u32(1989_01_04));
+        assert_eq!(bdr.min, Date::from_parts(1984, 01, 05));
+        assert_eq!(bdr.max, Date::from_parts(1989, 01, 04));
 
         // Regression test from Andrey Malanichev.
         // The Division is 0-17~, and Andrey was 18.
-        let mut bdr = BirthDateRange::at(Some(1983_03_16), Some(1983_03_16));
-        let date = Date::from_u32(2001_07_26);
+        let mut bdr = BirthDateRange::at(Some((1983, 03, 16)), Some((1983, 03, 16)));
+        let date = Date::from_parts(2001, 07, 26);
         let (min, max) = (Age::Exact(0), Age::Approximate(17));
         assert_eq!(bdr.narrow_by_range(min, max, date), Integrated);
     }

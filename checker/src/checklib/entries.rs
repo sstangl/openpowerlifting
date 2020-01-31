@@ -1479,7 +1479,7 @@ fn check_weightclass_consistency(
 
     // The no-config case was handled above, so the config can be known here.
     let config = config.unwrap();
-    let date = meet.map_or(Date::from_u32(2016_01_01), |m| m.date);
+    let date = meet.map_or(Date::from_parts(2016, 01, 01), |m| m.date);
 
     // Attempt to find out what weightclass group this row is a member of.
     //

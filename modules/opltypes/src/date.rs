@@ -33,7 +33,7 @@ impl Date {
     const YEAR_SHIFT: usize = 5 + 4;
     const YEAR_MASK: u32 = 0x3fff;
 
-    /// Creates a Date object from its exact internal representation.
+    /// Creates a Date object from parts.
     ///
     /// FIXME: Using this constructor bypasses error checks.
     ///
@@ -41,16 +41,13 @@ impl Date {
     ///
     /// ```
     /// # use opltypes::Date;
-    /// let date = Date::from_u32(1988_02_16);
+    /// let date = Date::from_parts(1988, 02, 16);
     /// assert_eq!(date.year(), 1988);
     /// assert_eq!(date.month(), 2);
     /// assert_eq!(date.day(), 16);
     /// ```
     #[inline]
-    pub const fn from_u32(u: u32) -> Date {
-        let year = u / 10_000;
-        let month = (u / 100) % 100;
-        let day = u % 100;
+    pub const fn from_parts(year: u32, month: u32, day: u32) -> Date {
         Date(year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT)
     }
 
@@ -64,7 +61,7 @@ impl Date {
     /// assert_eq!(date.year(), 1988);
     /// ```
     #[inline]
-    pub fn year(self) -> u32 {
+    pub const fn year(self) -> u32 {
         (self.0 >> Self::YEAR_SHIFT) & Self::YEAR_MASK
     }
 
@@ -78,7 +75,7 @@ impl Date {
     /// assert_eq!(date.month(), 2);
     /// ```
     #[inline]
-    pub fn month(self) -> u32 {
+    pub const fn month(self) -> u32 {
         (self.0 >> Self::MONTH_SHIFT) & Self::MONTH_MASK
     }
 
@@ -92,7 +89,7 @@ impl Date {
     /// assert_eq!(date.day(), 16);
     /// ```
     #[inline]
-    pub fn day(self) -> u32 {
+    pub const fn day(self) -> u32 {
         (self.0 >> Self::DAY_SHIFT) & Self::DAY_MASK
     }
 
@@ -109,7 +106,7 @@ impl Date {
     /// assert_eq!(date.monthday(), 0216);
     /// ```
     #[inline]
-    pub fn monthday(self) -> u32 {
+    pub const fn monthday(self) -> u32 {
         let month = self.month();
         let day = self.day();
         month * 100 + day
@@ -131,10 +128,8 @@ impl Date {
         // The array has 13 elements so the month (starting from 1) can be an index.
         let days_in_month: [u8; 13] = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-        let month = self.month();
-        let day = self.day();
-
         // Ensure that the month is usable as an index into days_in_month (1-indexed).
+        let month = self.month();
         if month > 12 {
             return false;
         }
@@ -157,6 +152,7 @@ impl Date {
             }
         }
 
+        let day = self.day();
         day > 0 && day <= max_days
     }
 
@@ -259,9 +255,7 @@ impl FromStr for Date {
             return Err(ParseDateError::DayError);
         }
 
-        Ok(Date(
-            year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT,
-        ))
+        Ok(Date::from_parts(year, month, day))
     }
 }
 
