@@ -12,12 +12,27 @@ use crate::Age;
 
 /// Our data uses imprecise dates in the "YYYY-MM-DD" format,
 /// with no timezone or time data.
-/// Dates in this format can be stored as a `u32` with value YYYYMMDD.
-/// This format is compact and remains human-readable.
+///
+/// Dates are stored as a packed `u32` with 23 bits in use:
+///  (YYYY << YEAR_SHIFT) | (MM << MONTH_SHIFT) | (DD << DAY_SHIFT).
+///
+/// YEAR_SHIFT > MONTH_SHIFT > DAY_SHIFT, so that dates are properly ordered.
 #[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct Date(u32);
 
 impl Date {
+    // The day occupies the rightmost 5 bits: ceil(log2(31)) = 5.
+    const DAY_SHIFT: usize = 0;
+    const DAY_MASK: u32 = 0x1f;
+
+    // The month occupies the next 4 bits: ceil(log2(12)) = 4.
+    const MONTH_SHIFT: usize = 5;
+    const MONTH_MASK: u32 = 0xf;
+
+    // The year occupies the next 14 bits: ceil(log2(9999)) = 14.
+    const YEAR_SHIFT: usize = 5 + 4;
+    const YEAR_MASK: u32 = 0x3fff;
+
     /// Creates a Date object from its exact internal representation.
     ///
     /// FIXME: Using this constructor bypasses error checks.
@@ -33,7 +48,10 @@ impl Date {
     /// ```
     #[inline]
     pub const fn from_u32(u: u32) -> Date {
-        Date(u)
+        let year = u / 10_000;
+        let month = (u / 100) % 100;
+        let day = u % 100;
+        Date(year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT)
     }
 
     /// Returns the year as an integer.
@@ -47,7 +65,7 @@ impl Date {
     /// ```
     #[inline]
     pub fn year(self) -> u32 {
-        self.0 / 10_000
+        (self.0 >> Self::YEAR_SHIFT) & Self::YEAR_MASK
     }
 
     /// Returns the month as an integer.
@@ -61,7 +79,7 @@ impl Date {
     /// ```
     #[inline]
     pub fn month(self) -> u32 {
-        (self.0 / 100) % 100
+        (self.0 >> Self::MONTH_SHIFT) & Self::MONTH_MASK
     }
 
     /// Returns the day as an integer.
@@ -75,7 +93,7 @@ impl Date {
     /// ```
     #[inline]
     pub fn day(self) -> u32 {
-        self.0 % 100
+        (self.0 >> Self::DAY_SHIFT) & Self::DAY_MASK
     }
 
     /// Returns the month and day as a combined integer.
@@ -92,7 +110,9 @@ impl Date {
     /// ```
     #[inline]
     pub fn monthday(self) -> u32 {
-        (self.0 % 10000)
+        let month = self.month();
+        let day = self.day();
+        month * 100 + day
     }
 
     /// Determines whether a date exists in the Gregorian calendar.
@@ -239,9 +259,9 @@ impl FromStr for Date {
             return Err(ParseDateError::DayError);
         }
 
-        let value = (year * 10_000) + (month * 100) + day;
-
-        Ok(Date(value))
+        Ok(Date(
+            year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT,
+        ))
     }
 }
 
