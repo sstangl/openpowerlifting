@@ -6,7 +6,7 @@ use std::ffi::OsStr;
 use std::path;
 
 use crate::langpack::{self, Language, Locale};
-use crate::opldb::{self, Meet};
+use crate::opldb::{self, Meet, MetaFederation};
 use crate::pages::selection::{FedPreference, FederationSelection, YearSelection};
 
 /// Query selection descriptor, corresponding to HTML widgets.
@@ -61,7 +61,19 @@ impl MeetListSelection {
                 if parsed_federation {
                     return Err(());
                 }
-                ret.federation = f;
+
+                // Even though we requested PreferFederation, in the case of
+                // British Powerlifting, forcibly assign the MetaFederation.
+                //
+                // BP is a special case here because it's a country-level federation
+                // that includes other countries. Lifters in, e.g., the EPA call
+                // their federation "BP" and therefore expect results to show up there.
+                if f == FederationSelection::One(Federation::BP) {
+                    ret.federation = FederationSelection::Meta(MetaFederation::BP);
+                } else {
+                    ret.federation = f;
+                }
+
                 parsed_federation = true;
             // Check whether this is year information.
             } else if let Ok(y) = segment.parse::<YearSelection>() {
