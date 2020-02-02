@@ -19,19 +19,28 @@ use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process;
 use std::sync::atomic::{AtomicUsize, Ordering};
+use std::time;
 
 /// Stores user-specified arguments from the command line.
 struct Args {
     /// Whether the usage information should be printed.
     help: bool,
+
     /// Prints debug info for a single lifter's Age.
     debug_age_username: Option<String>,
+
     /// Prints debug info for a single lifter's Country.
     debug_country_username: Option<String>,
+
+    /// Prints timing info for various phases of compilation or checking.
+    debug_timing: bool,
+
     /// Whether the database should be compiled for the server.
     compile: bool,
+
     /// Whether the database should be compiled for humans.
     compile_onefile: bool,
+
     /// Any remaining unrecognized arguments.
     free: Vec<String>,
 }
@@ -182,6 +191,22 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
     }
 }
 
+/// If a boolean is true, gathers timing information.
+fn get_instant_if(b: bool) -> Option<time::Instant> {
+    if b {
+        Some(time::Instant::now())
+    } else {
+        None
+    }
+}
+
+/// Prints the elapsed time with the given prefix, if available.
+fn maybe_print_elapsed_for(pass: &str, instant: Option<time::Instant>) {
+    if let Some(instant) = instant {
+        println!(" {}: {:?}", pass, instant.elapsed());
+    }
+}
+
 /// Displays the help message for the CLI argument parser.
 fn display_help_message() {
     println!(
@@ -200,6 +225,7 @@ FLAGS:
 OPTIONS:
         --age <username>        Prints age debug info for the given username
         --country <username>    Prints country debug info for the given username
+        --timing                Prints timing information for compiler phases
 
 ARGS:
     <PATH>    Optionally restricts processing to just this parent directory
@@ -217,6 +243,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         help: args.contains(["-h", "--help"]),
         debug_age_username: args.opt_value_from_str("--age")?,
         debug_country_username: args.opt_value_from_str("--country")?,
+        debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
         free: args.free()?,
@@ -227,6 +254,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         display_help_message();
         return Ok(());
     }
+
+    let program_start = get_instant_if(args.debug_timing);
 
     // Get handles to various parts of the project.
     let project_root = get_project_root()?;
@@ -257,6 +286,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     };
 
+    let timing = get_instant_if(args.debug_timing);
     let configmap = match get_configurations(&meet_data_root) {
         Ok(configmap) => configmap,
         Err((errors, warnings)) => {
@@ -264,8 +294,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(1);
         }
     };
+    maybe_print_elapsed_for("get_configurations()", timing);
 
     // Build a list of every directory containing meet results.
+    let timing = get_instant_if(args.debug_timing);
     let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
         .into_iter()
         .filter_map(Result::ok)
@@ -340,6 +372,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         })
         .collect();
+    maybe_print_elapsed_for("csv checking", timing);
 
     // Give ownership to the permanent data store.
     let mut meetdata = AllMeetData::from(singlemeets);
@@ -350,6 +383,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
 
     // Check the lifter-data/ files.
+    let timing = get_instant_if(args.debug_timing);
     let result = checker::check_lifterdata(&project_root.join("lifter-data"));
     for report in result.reports {
         let (errors, warnings) = report.count_messages();
@@ -364,11 +398,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
     let lifterdata = result.map;
+    maybe_print_elapsed_for("check_lifterdata()", timing);
 
     // Check for username errors.
     // FIXME: This adds a whole second to the checker time.
     // FIXME: Lifetimes are really making this harder than it should be.
     // FIXME: Otherwise we could just do the checking in create_liftermap().
+    let timing = get_instant_if(args.debug_timing);
     let liftermap = meetdata.create_liftermap();
     for lifter_indices in liftermap.values() {
         let name = &meetdata.get_entry(lifter_indices[0]).name;
@@ -407,6 +443,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
     }
+    maybe_print_elapsed_for("liftermap", timing);
 
     // The default mode without arguments just performs data checks.
     print_summary(error_count + internal_error_count, warning_count);
@@ -421,14 +458,18 @@ fn main() -> Result<(), Box<dyn Error>> {
             compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
+        let timing = get_instant_if(args.debug_timing);
         compiler::interpolate_country(&mut meetdata, &liftermap);
+        maybe_print_elapsed_for("interpolate_country", timing);
 
         // Perform age interpolation.
         if let Some(u) = args.debug_age_username {
             compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
+        let timing = get_instant_if(args.debug_timing);
         compiler::interpolate_age(&mut meetdata, &liftermap);
+        maybe_print_elapsed_for("interpolate_age", timing);
     }
 
     // Perform final compilation if requested.
@@ -439,12 +480,17 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
 
         if args.compile {
+            let timing = get_instant_if(args.debug_timing);
             compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
+            maybe_print_elapsed_for("make_csv", timing);
         }
         if args.compile_onefile {
+            let timing = get_instant_if(args.debug_timing);
             compiler::make_onefile_csv(&meetdata, &buildpath)?;
+            maybe_print_elapsed_for("make_onefile_csv", timing);
         }
     }
 
+    maybe_print_elapsed_for("total", program_start);
     Ok(())
 }
