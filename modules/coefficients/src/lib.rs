@@ -50,3 +50,6 @@ pub use crate::schwartzmalone::schwartzmalone;
 
 mod wilks;
 pub use crate::wilks::wilks;
+
+mod wilks2020;
+pub use crate::wilks2020::wilks2020;
