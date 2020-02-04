@@ -20,6 +20,7 @@
     masters8084 = {name="Masters 80-84", min=80, max=84}
     masters8589 = {name="Masters 85-89", min=85, max=89}
     masters90plus = {name="Masters 90", min=90, max=999}
+    masters9094 = {name="Masters 90-94", min=90, max=94}
 
     lawfireopen = {name="Law-Fire Open", min=16, max=999}
     lawfiresubmasters = {name="Law-Fire Submasters", min=33, max=39}
