@@ -3,7 +3,7 @@ Mike Bingham,M,44,M_PFEM_AWPC,,75,,,,,,192.5,202.5,-215,,202.5,,,,,,202.5,B,1,Mu
 Iosif Plagov,M,75,M_MEM_8_AWPC,,67.5,,,,,,80,-87.5,-90,,80,,,,,,80,B,1,Multi-ply,Yes
 Ed Fitzpatrick,M,62,M_MEM_5_AWPC,,125,,,,,,217.5,-222.5,-222.5,,217.5,,,,,,217.5,B,1,Multi-ply,Yes
 Tom Nelson,M,61,M_MEM_5_AWPC,,125,,,,,,190,205,-220,,205,,,,,,205,B,2,Multi-ply,Yes
-Dave Murphy,M,55,M_MEM_4_AWPC,,125,,,,,,-255,255,-280,,255,,,,,,255,B,1,Multi-ply,Yes
+Dave Murphy #1,M,55,M_MEM_4_AWPC,,125,,,,,,-255,255,-280,,255,,,,,,255,B,1,Multi-ply,Yes
 Bruce McIntyre,M,52,M_MEM_3_AWPC,,100,,,,,,227.5,235,-242.5,,235,,,,,,235,B,1,Multi-ply,Yes
 Alberto Suarez,M,54,M_MEM_3_AWPC,,125,,,,,,230,-237.5,-237.5,,230,,,,,,230,B,1,Multi-ply,Yes
 Ashraf Shabana,M,48,M_MEM_2_AWPC,,90,,,,,,140,-180,-180,,140,,,,,,140,B,1,Multi-ply,Yes
@@ -24,7 +24,7 @@ Waleid Mohamed Elgendi,M,29,M_OEM_AWPC,,82.5,,,,,,-170,170,180,,180,,,,,,180,B,2
 Ashraf Shabana,M,48,M_OEM_AWPC,,90,,,,,,140,-180,-180,,140,,,,,,140,B,1,Multi-ply,Yes
 Vitaliy Bobchenko,M,30,M_OEM_AWPC,,100,,,,,,100,110,,,110,,,,,,110,B,1,Multi-ply,Yes
 Eric Hubbs,M,46,M_OEM_AWPC,,125,,,,,,-270,275,-285,,275,,,,,,275,B,1,Multi-ply,Yes
-Dave Murphy,M,55,M_OEM_AWPC,,125,,,,,,-255,255,-280,,255,,,,,,255,B,2,Multi-ply,Yes
+Dave Murphy #1,M,55,M_OEM_AWPC,,125,,,,,,-255,255,-280,,255,,,,,,255,B,2,Multi-ply,Yes
 Alberto Suarez,M,54,M_OEM_AWPC,,125,,,,,,230,-237.5,-237.5,,230,,,,,,230,B,3,Multi-ply,Yes
 Sergiy Oliynyk,M,22,M_OEM_AWPC,,125,,,,,,-210,210,-230,,210,,,,,,210,B,4,Multi-ply,Yes
 Sava Basic,M,25,M_OEM_AWPC,,140,,,,,,262.5,-282.5,-282.5,,262.5,,,,,,262.5,B,1,Multi-ply,Yes
@@ -84,7 +84,7 @@ Jonathon Smith,M,21,M_JEM_AWPC,,100,220,-240,240,,240,100,112.5,-125,,112.5,197.
 Dick Zenzen,M,58,M_PFEM_AWPC,109,110,275,-305,-305,,275,170,-190,-195,,170,202.5,-220,227.5,,227.5,672.5,SBD,1,Multi-ply,Yes
 James Ellis #1,M,72,M_MEM_7_AWPC,91.2,100,200,210,212.5,,212.5,95,117.5,122.5,,122.5,200,215,227.5,,227.5,562.5,SBD,1,Multi-ply,Yes
 Dick Zenzen,M,58,M_MEM_4_AWPC,109,110,275,-305,-305,,275,170,-190,-195,,170,202.5,-220,227.5,,227.5,672.5,SBD,1,Multi-ply,Yes
-Dave Murphy,M,55,M_MEM_4_AWPC,117,125,60,,,,60,245,255,260,-272.5,260,60,,,,60,380,SBD,1,Multi-ply,Yes
+Dave Murphy #1,M,55,M_MEM_4_AWPC,117,125,60,,,,60,245,255,260,-272.5,260,60,,,,60,380,SBD,1,Multi-ply,Yes
 James Dibble,M,49,M_MEM_2_AWPC,108.8,110,-302.5,-327.5,-337.5,,,,,,,,,,,,,,SBD,DQ,Multi-ply,Yes
 Paul Hunt,M,41,M_MEM_1_AWPC,108.2,110,277.5,297.5,-307.5,,297.5,175,182.5,195,,195,237.5,252.5,-257.5,,252.5,745,SBD,1,Multi-ply,Yes
 Kim Young Jun,M,40,M_MEM_1_AWPC,120.4,125,-310,310,-330,,310,200,220,-240,,220,-260,-260,-260,,,,SBD,DQ,Multi-ply,Yes
