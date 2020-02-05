@@ -1,3 +1,5 @@
+# Configuration for THSPA.
+
 [divisions]
     # The main division used for almost everything.
     boys = {name="Boys", min=13, max=19, sex="M", equipment="Single-ply"}
