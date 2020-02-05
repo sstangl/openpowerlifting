@@ -68,6 +68,10 @@ pub enum Country {
     #[serde(rename = "Dominican Republic")]
     #[strum(to_string = "Dominican Republic")]
     DominicanRepublic,
+    /// Existed from 1949-1990.
+    #[serde(rename = "East Germany")]
+    #[strum(to_string = "East Germany")]
+    EastGermany,
     #[serde(rename = "East Timor")]
     #[strum(to_string = "East Timor")]
     EastTimor,
