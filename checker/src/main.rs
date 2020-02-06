@@ -124,22 +124,32 @@ type ConfigMap = BTreeMap<String, checker::Config>;
 fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
     let mut configmap = ConfigMap::new();
 
-    // Build a list of every CONFIG.toml.
-    let configs = WalkDir::new(&meet_data_root)
+    // Look at federation directories at depth 1, like "meet-data/usapl".
+    let fed_iter = WalkDir::new(&meet_data_root)
         .min_depth(1)
-        .max_depth(2) // Allow apf/CONFIG.toml or mags/plusa/CONFIG.toml.
-        .into_iter()
-        .filter_map(|entry| {
-            entry.ok().and_then(|e| {
-                let mut path = e.into_path();
-                path.push("CONFIG.toml");
-                if path.exists() {
-                    Some(path)
-                } else {
-                    None
-                }
-            })
-        });
+        .max_depth(1)
+        .into_iter();
+
+    // Look at meet-data/mags specially, allowing CONFIG.toml files in
+    // subdirectories.
+    let mags_data_root = meet_data_root.join("mags");
+    let mags_iter = WalkDir::new(&mags_data_root)
+        .min_depth(1)
+        .max_depth(1)
+        .into_iter();
+
+    // Build a list of every CONFIG.toml.
+    let configs = fed_iter.chain(mags_iter).filter_map(|entry| {
+        entry.ok().and_then(|e| {
+            let mut path = e.into_path();
+            path.push("CONFIG.toml");
+            if path.is_file() {
+                Some(path)
+            } else {
+                None
+            }
+        })
+    });
 
     let stdout = io::stdout();
     let mut handle = stdout.lock();
