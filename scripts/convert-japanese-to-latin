@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Simple script that uses a list of names and their misspellings
+# to run over the Name column of all entries.csv files under the cwd,
+# correcting names as it goes.
+#
+# Each data file is formatted with one lifter per line, with the first name being
+# the Japanese form and the second the Latin.
+
+import oplcsv
+import os
+
+
+# Creates a hashmap keyed on misspellings.
+def load_names(datafilepath):
+    h = {}
+    with open(datafilepath, 'r', encoding='utf-8') as fd:
+        for line in fd.readlines():
+            names = line.split(',')
+            assert len(names) == 2
+
+            latin_name = names[1].strip()
+            assert latin_name
+
+            japanese_name = names[0].strip()
+            assert japanese_name
+
+            h[japanese_name] = latin_name
+
+    return h
+
+
+def correct_names(namehash, entriespath):
+    csv = oplcsv.Csv(entriespath)
+
+    if 'JapaneseName' not in csv.fieldnames:
+        return
+
+    if 'Name' not in csv.fieldnames:
+        print(entriespath)
+    assert 'Name' in csv.fieldnames
+
+    nameidx = csv.index('Name')
+    jpidx = csv.index('JapaneseName')
+
+    changed = False
+    for row in csv.rows:
+        if row[jpidx] in namehash:
+            changed = True
+            row[nameidx] = namehash[row[jpidx]]
+
+    if changed:
+        with open(entriespath, 'w', encoding='utf-8') as fd:
+            csv.write(fd)
+
+
+def main():
+    scriptsdir = os.path.dirname(os.path.realpath(__file__))
+    projectdir = os.path.dirname(scriptsdir)
+    liftersdir = projectdir + os.sep + "lifter-data"
+    meetsdir = projectdir + os.sep + "meet-data"
+
+    namehash = load_names(liftersdir + os.sep + "japanese_latin_translations.dat")
+
+    for dirname, subdirs, files in os.walk(meetsdir):
+        if "meet-data" in subdirs:
+            subdirs[:] = ['meet-data']
+        if 'entries.csv' in files:
+            entriespath = dirname + os.sep + 'entries.csv'
+            correct_names(namehash, entriespath)
+
+
+if __name__ == '__main__':
+    main()
