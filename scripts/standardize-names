@@ -9,6 +9,9 @@
 # separated by commas, the first spelling being the 'correct' one.
 #
 # NEW! Now handles CyrillicName.
+# NEW! If $CWD is a subdirectory of meet-data, it only standardizes files
+#      contained within that subdirectory. This is because recursing through
+#      a directory is *extremely* slow on Windows Subsystem for Linux.
 #
 
 import oplcsv
@@ -62,12 +65,17 @@ def main():
     scriptsdir = os.path.dirname(os.path.realpath(__file__))
     projectdir = os.path.dirname(scriptsdir)
     liftersdir = projectdir + os.sep + "lifter-data"
-    meetsdir = projectdir + os.sep + "meet-data"
 
     namehash = load_names(liftersdir + os.sep + "name-corrections.dat")
     cyrhash = load_names(liftersdir + os.sep + "cyrillic-name-corrections.dat")
 
-    for dirname, subdirs, files in os.walk(meetsdir):
+    # Standardize names only for files under the current subtree.
+    #
+    # This is a performance optimization for people adding new meets while
+    # running on Windows Subsystem for Linux, which has very slow file operations.
+    recursedir = os.getcwd()
+
+    for dirname, subdirs, files in os.walk(recursedir):
         if "meet-data" in subdirs:
             subdirs[:] = ['meet-data']
         if 'entries.csv' in files:
