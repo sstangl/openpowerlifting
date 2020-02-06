@@ -48,7 +48,7 @@ BD,M,Law-Fire 48-55,140,432.5,227.5,205,,,Darren Kaleleiki,HI,USA,Single-ply,1
 BD,M,Law-Fire 48-55,140+,275,124.5,150.5,,,Scott Von Bargen,CA,USA,Raw,1
 BD,M,Law-Fire 56-63,90,355,110,245,,,Dan Guches,OR,USA,Raw,1
 BD,M,Law-Fire 56-63,90,350,135,215,,,Scott Sciaretta,MT,USA,Raw,2
-BD,M,Law-Fire 64,60,220.5,95.5,125,,,Gary Miller,NV,USA,Raw,1
+BD,M,Law-Fire 64,60,220.5,95.5,125,,,Gary Miller #2,NV,USA,Raw,1
 BD,M,Law-Fire 64,82.5,357.5,125,232.5,,,Charles McFarland,OR,USA,Raw,1
 BD,M,Law-Fire Open,90,355,110,245,,,Dan Guches,OR,USA,Raw,1
 BD,M,Law-Fire Open,90,350,135,215,,,Scott Sciaretta,MT,USA,Raw,2
@@ -109,7 +109,7 @@ BD,M,Masters 61-67,110,314,97.5,216.5,,,Eugene Merrill,AR,USA,Raw,5
 BD,M,Masters 61-67,110,360.5,178,182.5,,,Tom Gonnering,AL,USA,Raw,1
 BD,M,Masters 61-67,117.5,395,137.5,257.5,,,Eddie Morgan,AR,USA,Single-ply,1
 BD,M,Masters 61-67,140+,472.5,227.5,245,,,Joe Mickelson,WA,USA,Single-ply,1
-BD,M,Masters 68-74,60,220.5,95.5,125,,,Gary Miller,NV,USA,Raw,1
+BD,M,Masters 68-74,60,220.5,95.5,125,,,Gary Miller #2,NV,USA,Raw,1
 BD,M,Masters 68-74,75,,,152.5,,,Gary Witzel,WA,USA,Multi-ply,DQ
 BD,M,Masters 68-74,82.5,270,92.5,177.5,,,Mark Clark,OR,USA,Raw,2
 BD,M,Masters 68-74,82.5,275,80,195,,,Robert Batko,MI,USA,Raw,1
@@ -363,7 +363,7 @@ D,M,Law-Fire 56-63,82.5,200,,200,,,Larry Esquivel,CA,USA,Single-ply,1
 D,M,Law-Fire 56-63,90,245,,245,,,Dan Guches,OR,USA,Raw,1
 D,M,Law-Fire 56-63,90,215,,215,,,Scott Sciaretta,MT,USA,Raw,2
 D,M,Law-Fire 56-63,125,147.5,,147.5,,,Michal Johnson,CA,USA,Multi-ply,1
-D,M,Law-Fire 64,60,125,,125,,,Gary Miller,NV,USA,Raw,1
+D,M,Law-Fire 64,60,125,,125,,,Gary Miller #2,NV,USA,Raw,1
 D,M,Law-Fire 64,82.5,232.5,,232.5,,,Charles McFarland,OR,USA,Raw,1
 D,M,Law-Fire 64,110,215,,215,,,Greg Prothman,WA,USA,Single-ply,1
 D,M,Law-Fire Open,82.5,265,,265,,272.5,Marcelo Lobo,,Argentina,Raw,1
@@ -436,7 +436,7 @@ D,M,Masters 54-60,75,230.5,,230.5,,,Keith Cunningham,WA,USA,Multi-ply,1
 D,M,Masters 54-60,82.5,205,,205,,,David Brekke,CO,USA,Single-ply,1
 D,M,Masters 54-60,82.5,187.5,,187.5,,,Rudy Lopez,CA,USA,Raw,1
 D,M,Masters 54-60,90,190,,190,,,Bryan Vandiver,OK,USA,Single-ply,1
-D,M,Masters 54-60,100,215,,215,,,Jim Williams,MN,USA,Raw,1
+D,M,Masters 54-60,100,215,,215,,,Jim Williams #4,MN,USA,Raw,1
 D,M,Masters 54-60,100,167.5,,167.5,,,Gene A Wenzel,OH,USA,Raw,2
 D,M,Masters 54-60,100,,,,,,Percy Taylor,TX,USA,Multi-ply,DQ
 D,M,Masters 54-60,110,275,,275,,,Bob Miller,MN,USA,Raw,1
@@ -445,7 +445,7 @@ D,M,Masters 54-60,110,222.5,,222.5,,227.5,Jim Presley,CA,USA,Multi-ply,1
 D,M,Masters 54-60,117.5,295,,295,,,Terry Putman,OK,USA,Single-ply,1
 D,M,Masters 54-60,125,297.5,,297.5,,,Tom Pennella,WA,USA,Single-ply,1
 D,M,Masters 54-60,125,173,,173,,,Don Miskinis,OH,USA,Raw,1
-D,M,Masters 54-60,140,207.5,,207.5,,,Steve Johnson,MN,USA,Single-ply,1
+D,M,Masters 54-60,140,207.5,,207.5,,,Steve Johnson #1,MN,USA,Single-ply,1
 D,M,Masters 54-60,140,252.5,,252.5,,,George Strutzel,MT,USA,Raw,1
 D,M,Masters 54-60,140,210,,210,,,Ray Gandeza Jr,HI,USA,Raw,2
 D,M,Masters 54-60,140+,205,,205,,,James Mersberg,HI,USA,Multi-ply,1
@@ -474,7 +474,7 @@ D,M,Masters 61-67,110,182.5,,182.5,,,Tom Gonnering,AL,USA,Raw,7
 D,M,Masters 61-67,117.5,257.5,,257.5,,,Eddie Morgan,AR,USA,Single-ply,1
 D,M,Masters 61-67,140+,245,,245,,,Joe Mickelson,WA,USA,Single-ply,1
 D,M,Masters 68-74,56,122.5,,122.5,,,Frank Principati,AZ,USA,Raw,1
-D,M,Masters 68-74,60,125,,125,,,Gary Miller,NV,USA,Raw,1
+D,M,Masters 68-74,60,125,,125,,,Gary Miller #2,NV,USA,Raw,1
 D,M,Masters 68-74,75,160,,160,,,James Christian,TX,USA,Single-ply,1
 D,M,Masters 68-74,75,152.5,,152.5,,,Gary Witzel,WA,USA,Multi-ply,1
 D,M,Masters 68-74,82.5,195,,195,,,Robert Batko,MI,USA,Raw,1
@@ -804,7 +804,7 @@ B,M,Law-Fire 56-63,117.5,137.5,137.5,,,,Donald Bryant,WA,USA,Raw,1
 B,M,Law-Fire 56-63,125,177.5,177.5,,,,Rudolf Schaap,CA,USA,Raw,1
 B,M,Law-Fire 56-63,125,87.5,87.5,,92.5,,Michal Johnson,CA,USA,Raw,2
 B,M,Law-Fire 56-63,140,182.5,182.5,,183,,Eric Jones,MI,USA,Raw,1
-B,M,Law-Fire 64,60,95.5,95.5,,,,Gary Miller,NV,USA,Raw,1
+B,M,Law-Fire 64,60,95.5,95.5,,,,Gary Miller #2,NV,USA,Raw,1
 B,M,Law-Fire 64,82.5,125,125,,,,Charles McFarland,OR,USA,Raw,1
 B,M,Law-Fire 64,100,125,125,,,,David Martinez,CA,USA,Raw,1
 B,M,Law-Fire 64,117.5,140,140,,,,Ken Tawzer,CA,USA,Raw,1
@@ -919,7 +919,7 @@ B,M,Masters 61-67,110,87.5,87.5,,,,William B Caughey,UT,USA,Multi-ply,1
 B,M,Masters 61-67,140,200,200,,210.5,,Forest Hofer,WA,USA,Raw,1
 B,M,Masters 61-67,140+,227.5,227.5,,,,Joe Mickelson,WA,USA,Single-ply,1
 B,M,Masters 61-67,140+,147.5,147.5,,,,Joe Morales,AZ,USA,Raw,1
-B,M,Masters 68-74,60,95.5,95.5,,,,Gary Miller,NV,USA,Raw,1
+B,M,Masters 68-74,60,95.5,95.5,,,,Gary Miller #2,NV,USA,Raw,1
 B,M,Masters 68-74,75,132.5,132.5,,,,Keith Ha,HI,USA,Raw,1
 B,M,Masters 68-74,75,,,,,,Gary Witzel,WA,USA,Multi-ply,DQ
 B,M,Masters 68-74,82.5,120,120,,,,Ed Regua,NM,USA,Raw,1
