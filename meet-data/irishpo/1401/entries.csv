@@ -2,7 +2,7 @@ Name,Equipment,Age,Sex,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Ben
 Kate Ring,Raw,22,F,F-J,55.42,56,,,,,,80,92.5,95,97.5,95,95,1,,D
 Janice Cregan,Raw,47,F,FM-2,53.58,56,,,,,,75,85,90,-95,90,90,1,LPC,D
 Marie Walker,Raw,30,F,FN,54.3,56,,,,,,105,-115,-115,,105,105,1,,D
-Sophie Pauzin,Raw,,F,F-J,58.3,60,,,,,,75,82.5,-90,,82.5,82.5,1,,D
+Sophia Pauzin,Raw,,F,F-J,58.3,60,,,,,,75,82.5,-90,,82.5,82.5,1,,D
 Kim Allister,Raw,30,F,FN,57.8,60,,,,,,90,100,-110,,100,100,1,,D
 Ciara Fagan,Raw,,F,FO,60,60,,,,,,80,87.5,95,,95,95,1,Boyneside,D
 Tara Gibson,Raw,45,F,FM-2,61.8,67.5,,,,,,105,115,120,125,120,120,1,,D
@@ -19,7 +19,7 @@ Ruairi McCann,Raw,,M,MO,67.32,67.5,,,,,,220,235,-240,,235,235,1,Omeath,D
 Seán Cregan,Raw,,M,M-1,74.7,75,,,,,,200,212.5,217.5,-225,217.5,217.5,1,,D
 Mark Ennis,Raw,27,M,MN,73.9,75,,,,,,140,150,155,,155,155,5,,D
 Carlos Pérez #1,Raw,29,M,MN,74.9,75,,,,,,175,190,200,,200,200,4,LPC,D
-Emman Baggott,Raw,,M,MN,72.7,75,,,,,,180,195,205,,205,205,3,Westside,D
+Eamonn Baggott,Raw,,M,MN,72.7,75,,,,,,180,195,205,,205,205,3,Westside,D
 Kieran Slattery,Raw,,M,MN,74.8,75,,,,,,190,200,210,,210,210,2,LPC,D
 Ryan Finlay,Raw,25,M,MN,74.1,75,,,,,,200,215,-225,,215,215,1,Body H & Fitness,D
 Billy Hutchinson,Raw,,M,MO,75,75,,,,,,235,-250,-262.5,,235,235,2,Alpha PLC,D
@@ -32,10 +32,10 @@ Stephen Casey,Raw,,M,M-J,82.12,82.5,,,,,,237.5,250,260,265,260,260,1,LPC,D
 Seán Burke #1,Raw,,M,MN,79.8,82.5,,,,,,150,160,175,,175,175,3,LPC,D
 Ian Reilly,Raw,,M,MN,80.5,82.5,,,,,,180,190,205,,205,205,2,,D
 Richard Keatley,Raw,30,M,MN,81.4,82.5,,,,,,200,215,-225,,215,215,1,BH & F,D
-Finbarr O'Riordan,Raw,,M,MO,81.9,82.5,,,,,,200,215,-230,,215,215,3,Hercs,D
+Finny O'Riordan,Raw,,M,MO,81.9,82.5,,,,,,200,215,-230,,215,215,3,Hercs,D
 Pat McNamara,Raw,34,M,MO,82.4,82.5,,,,,,230,240,-245,,240,240,2,,D
 Ben Kelly,Raw,,M,MO,81.1,82.5,,,,,,220,241,-252.5,,241,241,1,Hercs,D
-Jason B Lynch,Raw,14,M,MT-1,80.84,82.5,,,,,,80,95,105,110,105,105,1,LPC,D
+Jason Brodie Lynch,Raw,14,M,MT-1,80.84,82.5,,,,,,80,95,105,110,105,105,1,LPC,D
 Andy Moony,Raw,19,M,MT-2,82.2,82.5,,,,,,200,210,-212.5,,210,210,1,Hercs,D
 Kieran Dillon,Raw,23,M,M-J,86.3,90,,,,,,200,220,230,,230,230,2,Boyneside,D
 Josh Lennon,Raw,22,M,M-J,83.4,90,,,,,,220,230,235,,235,235,1,Vitality,D
@@ -77,7 +77,7 @@ Niamh Herrity,Raw,,F,FO,99.3,90+,60,-65,67.5,-70,67.5,,,,,,67.5,1,,B
 David McMahon,Raw,23,M,M-J,60,60,-85,85,-86,,85,,,,,,85,1,Unique Physic,B
 Rainer Altmäe,Raw,,M,MO,67,67.5,120,127.5,-130,,127.5,,,,,,127.5,2,LPC,B
 Ruairi McCann,Raw,,M,MO,67.32,67.5,130,140,-145,,140,,,,,,140,1,,B
-Emmon Baggott,Raw,,M,MN,72.7,75,100,110,120,,120,,,,,,120,1,,B
+Eamonn Baggott,Raw,,M,MN,72.7,75,100,110,120,,120,,,,,,120,1,,B
 Mark Ennis,Raw,27,M,MN,73.9,75,105,110,-115,,110,,,,,,110,2,,B
 Carlos Pérez #1,Raw,29,M,MN,74.9,75,-90,95,-105,,95,,,,,,95,3,,B
 Olegs Sukrus,Raw,,M,MO,73.42,75,150,160,165,,165,,,,,,165,1,,B
@@ -86,10 +86,10 @@ Kieran Benett,Raw,18,M,MT-2,74.92,75,80,-87.5,-87.5,,80,,,,,,80,1,,B
 Thomas Dillon,Raw,71,M,M-7,79.4,82.5,90,95,-100,,95,,,,,,95,1,,B
 Stephen Casey,Raw,,M,M-J,82.12,82.5,-135,140,-142.5,,140,,,,,,140,1,LPC,B
 Ian Reilly,Raw,,M,MN,80.5,82.5,120,130,-137.5,,130,,,,,,130,1,,B
-Finbarr O'Riordan,Raw,,M,MO,81.98,82.5,97.5,107.5,-117.5,,107.5,,,,,,107.5,2,Hercs,B
+Finny O'Riordan,Raw,,M,MO,81.98,82.5,97.5,107.5,-117.5,,107.5,,,,,,107.5,2,Hercs,B
 Luke Kelly,Raw,,M,MO,82.4,82.5,-125,-130,-130,,,,,,,,,DQ,,B
 Pat McNamara,Raw,34,M,MO,82.4,82.5,140,-150,-150,,140,,,,,,140,1,,B
-Jason B Lynch,Raw,14,M,MT-1,80.84,82.5,35,40,45,-47.5,45,,,,,,45,1,LPC,B
+Jason Brodie Lynch,Raw,14,M,MT-1,80.84,82.5,35,40,45,-47.5,45,,,,,,45,1,LPC,B
 Andy Moony,Raw,19,M,MT-2,82.26,82.5,85,90,91,,91,,,,,,91,1,Hercs,B
 Jude Bedford,Raw,,M,M-1,86.54,90,132.5,-140,140,145,140,,,,,,140,1,LPC,B
 Patrick Gormley,Raw,,M,M-4,89.9,90,120,130,-135,,130,,,,,,130,1,,B
@@ -106,14 +106,14 @@ Ian Phelan,Raw,38,M,MN,98.78,100,120,130,145,,145,,,,,,145,2,,B
 Jay Farrant,Raw,27,M,MO,92.2,100,137.5,142.5,145,,145,,,,,,145,2,,B
 Shane Nugent,Raw,,M,MO,98.4,100,140,145,-147.5,,145,,,,,,145,3,Boyneside,B
 Mark Linehan,Raw,,M,MO,99.5,100,160,170,-175,,170,,,,,,170,1,,B
-Thomas Caulfield,Raw,,M,M-1,105.9,110,160,177.5,-185,,177.5,,,,,,177.5,1,Keataly,B
-Ruairi Keehan,Raw,22,M,M-J,108.2,110,170,-175,-175,,170,,,,,,170,1,Muscle Works,B
+Tommy Caulfield,Raw,,M,M-1,105.9,110,160,177.5,-185,,177.5,,,,,,177.5,1,Keataly,B
+Ruairí Keenan,Raw,22,M,M-J,108.2,110,170,-175,-175,,170,,,,,,170,1,Muscle Works,B
 Gheorghe Birligea,Raw,28,M,MN,102.2,110,120,130,-135,,130,,,,,,130,1,,B
 Tony Clancy,Raw,,M,MO,105.9,110,125,132,140,,140,,,,,,140,1,LPC,B
 Tony O'Rourke,Raw,30,M,MN,117.9,125,150,160,-167.5,,160,,,,,,160,1,,B
 Loan Majeri,Raw,29,M,MO,122.8,125,200,-210,-210,,200,,,,,,200,1,,B
 Pawel Stachurski,Raw,,M,MO,124.86,125,180,195,-205,,195,,,,,,195,2,,B
-Thomas Drzewiecki,Raw,41,M,M-1,132.3,140,205,212.5,220,,220,,,,,,220,1,,B
+Tomasz Drzewiecki,Raw,41,M,M-1,132.3,140,205,212.5,220,,220,,,,,,220,1,,B
 Lukasz Polak,Raw,34,M,MO,129.7,140,-190,-200,,,,,,,,,,DQ,,B
 John Lane #1,Raw,37,M,MO,141.1,140+,210,-215,-215,,210,,,,,,210,3,,B
 Intars Stepanovics,Raw,36,M,MO,151,140+,212.5,217.5,-225,,217.5,,,,,,217.5,2,,B
