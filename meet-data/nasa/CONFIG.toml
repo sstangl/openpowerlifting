@@ -15,7 +15,7 @@
     m2 = {name="m2", min=50, max=59, sex='M'}
     m3 = {name="m3", min=60, max=69, sex='M'}
     m4 = {name="m4", min=70, max=999, sex='M'}
-    m5 = {name="m5", min=40, max=999, sex='M'} 
+    m5 = {name="m5", min=40, max=999, sex='M'}
     nov = {name="nov", min=0, max=999, sex='M'}
     pf = {name="p+f", min=0, max=999, sex='M'}
     pure = {name="pure", min=0, max=999, sex='M'}
