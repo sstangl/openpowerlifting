@@ -153,6 +153,5 @@ mod tests {
         // Out of the table.
         assert!(matches_table(wilks2020_coefficient_women(151.0), 0.9796));
         assert!(matches_table(wilks2020_coefficient_women(200.0), 0.9796));
-
     }
 }
