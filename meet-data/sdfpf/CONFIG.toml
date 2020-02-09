@@ -35,6 +35,9 @@
     mm10 = {name="M-M10", min=85, max=89, sex="M"}
     mm11 = {name="M-M11", min=90, max=94, sex="M"}
     mm12 = {name="M-M12", min=95, max=99, sex="M"}
+    
+    beginner = {name = "Beginner",min=0,max=999}
+    elite = {name = "Elite",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
@@ -48,3 +51,4 @@
 
 [exemptions]
     1504 = ["ExemptWeightClassConsistency", "ExemptLiftOrder"] # Lifter was allowed to compete in wrong weightclass.
+	
