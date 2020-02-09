@@ -176,7 +176,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
                 if let Some(config) = result.config {
                     match opltypes::file_to_meetpath(&sourcefile) {
                         Ok(configpath) => {
-                            configmap.insert(configpath, config);
+                            configmap.insert(configpath.to_string(), config);
                         }
                         Err(e) => {
                             println!(" Internal Error: {}", e.to_string().bold().red());
@@ -327,7 +327,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             // Determine the appropriate Config for this meet.
             // The CONFIG.toml used is always in the parent directory.
             let meetpath = opltypes::file_to_meetpath(dir.path()).unwrap();
-            let config = configmap.get(&meetpath);
+            let config = configmap.get(meetpath);
 
             // Check the meet.
             match checker::check(dir.path(), config) {

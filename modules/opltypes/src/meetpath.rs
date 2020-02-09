@@ -35,29 +35,23 @@ pub enum MeetPathError {
 /// let file = PathBuf::from("/home/opl-data/meet-data/rps/1924/meet.csv");
 /// assert_eq!(file_to_meetpath(&file).unwrap(), "rps/1924");
 /// ```
-pub fn file_to_meetpath(filepath: &Path) -> Result<String, MeetPathError> {
-    if let Some(parent) = filepath.parent() {
-        if let Some(s) = parent.to_str() {
-            let meetpath: String = match s.rfind(&MEETDATADIR) {
-                // Look up the path relative to the last occurrence of MEETDATADIR.
-                Some(i) => s.chars().skip(i + MEETDATADIR.len() + 1).collect(),
-                None => {
-                    return Err(MeetPathError::MeetDataDirNotFoundError);
-                }
-            };
+pub fn file_to_meetpath<'a>(filepath: &'a Path) -> Result<&'a str, MeetPathError> {
+    let parent = filepath.parent().ok_or(MeetPathError::ParentLookupError)?;
+    let parent_str = parent.to_str().ok_or(MeetPathError::FilesystemUTF8Error)?;
 
-            // Each character may only be alphanumeric ASCII or "/".
-            for c in meetpath.chars() {
-                if !c.is_ascii_alphanumeric() && c != '/' && c != '-' {
-                    return Err(MeetPathError::NonAsciiError);
-                }
-            }
+    // Index from the last occurrence of MEETDATADIR in the path string.
+    let index = parent_str
+        .rfind(&MEETDATADIR)
+        .ok_or(MeetPathError::MeetDataDirNotFoundError)?;
 
-            Ok(meetpath)
-        } else {
-            Err(MeetPathError::FilesystemUTF8Error)
+    let meetpath = &parent_str[index..];
+
+    // Each character must be alphanumeric ASCII, a UNIX path separator, or a dash.
+    for c in meetpath.chars() {
+        if !c.is_ascii_alphanumeric() && c != '/' && c != '-' {
+            return Err(MeetPathError::NonAsciiError);
         }
-    } else {
-        Err(MeetPathError::ParentLookupError)
     }
+
+    Ok(meetpath)
 }

@@ -90,7 +90,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
 /// Checks that the MeetPath contains only characters valid in a URL.
 pub fn check_meetpath(report: &mut Report) -> Option<String> {
     match opltypes::file_to_meetpath(&report.path) {
-        Ok(s) => Some(s),
+        Ok(s) => Some(s.to_string()),
         Err(MeetPathError::NonAsciiError) => {
             report.error("Path must only contain alphanumeric ASCII or '/-' characters");
             None
