@@ -107,36 +107,35 @@ fn hira_to_kata(name: &str) -> String {
 /// Returns `Latin` if unknown.
 pub fn get_writing_system(c: char) -> WritingSystem {
     match c as u32 {
-        // Cyrillic.
-        0x400..=0x4FF => WritingSystem::Cyrillic,
+        // ASCII. Checking the common case first improves performance.
+        0x0..=0x7F => WritingSystem::Latin,
         // Greek.
         0x370..=0x3FF => WritingSystem::Greek,
+        // Cyrillic.
+        0x400..=0x4FF => WritingSystem::Cyrillic,
+        // CJK Radicals Supplement.
+        0x2E80..=0x2EFF => WritingSystem::Japanese,
         // Some valid punctuation symbols.
         0x3005..=0x3006 => WritingSystem::Japanese,
         // Hiragana.
         0x3040..=0x309F => WritingSystem::Japanese,
-        // CJK Unified Ideographs.
-        0x4E00..=0x9FFF => WritingSystem::Japanese,
-        // CJK Compatibility Forms.
-        0xFE30..=0xFE4F => WritingSystem::Japanese,
-        // CJK Compatibility Ideographs.
-        0xF900..=0xFAFF => WritingSystem::Japanese,
-        // CJK Compatibility Ideographs Supplement.
-        0x2F800..=0x2FA1F => WritingSystem::Japanese,
         // Katakana.
         0x30A0..=0x30FF => WritingSystem::Japanese,
-        // CJK Radicals Supplement.
-        0x2E80..=0x2EFF => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension A.
         0x3400..=0x4DBF => WritingSystem::Japanese,
+        // CJK Unified Ideographs.
+        0x4E00..=0x9FFF => WritingSystem::Japanese,
+        // CJK Compatibility Ideographs.
+        0xF900..=0xFAFF => WritingSystem::Japanese,
+        // CJK Compatibility Forms.
+        0xFE30..=0xFE4F => WritingSystem::Japanese,
         // CJK Unified Ideographs Extension B.
         0x20000..=0x2A6DF => WritingSystem::Japanese,
-        // CJK Unified Ideographs Extension C.
-        0x2A700..=0x2B73F => WritingSystem::Japanese,
-        // CJK Unified Ideographs Extension D.
-        0x2B740..=0x2B81F => WritingSystem::Japanese,
-        // CJK Unified Ideographs Extension E.
-        0x2B820..=0x2CEAF => WritingSystem::Japanese,
+        // CJK Unified Ideographs Extensions C, D, and E.
+        0x2A700..=0x2CEAF => WritingSystem::Japanese,
+        // CJK Compatibility Ideographs Supplement.
+        0x2F800..=0x2FA1F => WritingSystem::Japanese,
+
         // Character is either Latin or not a letter.
         _ => WritingSystem::Latin,
     }
@@ -146,13 +145,12 @@ pub fn get_writing_system(c: char) -> WritingSystem {
 ///
 /// The first non-Latin character encountered is considered representative.
 pub fn infer_writing_system(s: &str) -> WritingSystem {
-    for c in s.chars() {
-        let system = get_writing_system(c);
-        if system != WritingSystem::Latin {
-            return system;
-        }
-    }
-    WritingSystem::Latin
+    s.chars()
+        .find_map(|c| match get_writing_system(c) {
+            WritingSystem::Latin => None,
+            other => Some(other),
+        })
+        .unwrap_or(WritingSystem::Latin)
 }
 
 /// Given a UTF-8 Name, create the corresponding ASCII Username.
