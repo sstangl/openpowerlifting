@@ -98,6 +98,9 @@ fn hira_to_kata_char(c: char) -> char {
 }
 
 /// Gives the equivalent Katakana for a Hiragana String.
+///
+/// Currently only used for testing.
+#[cfg(test)]
 fn hira_to_kata(name: &str) -> String {
     name.chars().map(|c| hira_to_kata_char(c)).collect()
 }
@@ -169,11 +172,11 @@ pub fn make_username(name: &str) -> Result<String, String> {
     if name.is_empty() {
         Ok(String::default())
     } else if infer_writing_system(name) == WritingSystem::Japanese {
-        let kata_name = hira_to_kata(name);
-        let ea_id: String = kata_name
+        let ea_id: String = name
             .chars()
-            .filter(|letter| !letter.is_whitespace())
-            .map(|letter| (letter as u32).to_string())
+            .filter(|c| !c.is_whitespace())
+            .map(|c| hira_to_kata_char(c))
+            .map(|c| (c as u32).to_string())
             .collect();
         Ok(format!("ea-{}", ea_id))
     } else {
