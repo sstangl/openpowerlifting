@@ -77,6 +77,7 @@
     lm9599 = {name ="LM 95-99",min=95,max=99}
 
     #Raw Lifetime
+    rlsub = {name ="RL Sub",min=35,max=39}
     rlm4044 = {name ="RLM 40-44",min=40,max=44,equipment="Raw"}
     rlm4549 = {name ="RLM 45-49",min=45,max=49,equipment="Raw"}
     rlm5054 = {name ="RLM 50-54",min=50,max=54,equipment="Raw"}
@@ -92,6 +93,7 @@
 
     # Law/Mil
     law_mil = {name ="Law/Mil",min=0,max=999}
+    law_mil_sub = {name ="Law/Mil Sub",min=35,max=39}
     law_mil4044 = {name ="Law/Mil 40-44",min=40,max=44}
     law_mil4549 = {name ="Law/Mil 45-49",min=45,max=49}
     law_mil5054 = {name ="Law/Mil 50-54",min=50,max=54}
@@ -107,6 +109,7 @@
 
     # Raw Law/Mil
     rlaw_mil = {name ="R Law/Mil",min=0,max=999,equipment="Raw"}
+    rlaw_mil_sub = {name ="R Law/Mil Sub",min=35,max=39,equipment="Raw"}
     rlaw_mil4044 = {name ="R Law/Mil 40-44",min=40,max=44,equipment="Raw"}
     rlaw_mil4549 = {name ="R Law/Mil 45-49",min=45,max=49,equipment="Raw"}
     rlaw_mil5054 = {name ="R Law/Mil 50-54",min=50,max=54,equipment="Raw"}
@@ -119,6 +122,13 @@
     rlaw_mil8589 = {name ="R Law/Mil 85-89",min=85,max=89,equipment="Raw"}
     rlaw_mil9094 = {name ="R Law/Mil 90-94",min=90,max=94,equipment="Raw"}
     rlaw_mil9599 = {name ="R Law/Mil 95-99",min=95,max=99,equipment="Raw"}
+
+    # Special Olympics
+    rso = {name ="RSO",min=0,max=999,equipment="Raw"}
+    rso_jr = {name ="RSO Jr",min=20,max=23,equipment="Raw"}
+    rso_sub = {name ="RSO Sub",min=35,max=39,equipment="Raw"}
+    rso_4044 = {name ="RSO 40-44",min=40,max=44,equipment="Raw"}
+    rso_4549 = {name ="RSO 45-49",min=45,max=49,equipment="Raw"}
 
     llaw_mil = {name ="L Law/Mil",min=0,max=999}
     life = {name ="Life",min=0,max=999}
@@ -168,3 +178,4 @@
     0402 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
+    0701 = ["ExemptWeightClassConsistency"] # Uses 140 & 140+
