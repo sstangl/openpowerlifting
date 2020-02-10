@@ -44,7 +44,7 @@ pub fn file_to_meetpath<'a>(filepath: &'a Path) -> Result<&'a str, MeetPathError
         .rfind(&MEETDATADIR)
         .ok_or(MeetPathError::MeetDataDirNotFoundError)?;
 
-    let meetpath = &parent_str[index..];
+    let meetpath = &parent_str[(index + MEETDATADIR.len() + 1)..];
 
     // Each character must be alphanumeric ASCII, a UNIX path separator, or a dash.
     for c in meetpath.chars() {
