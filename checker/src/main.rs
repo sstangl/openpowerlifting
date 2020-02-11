@@ -213,7 +213,7 @@ fn get_instant_if(b: bool) -> Option<time::Instant> {
 /// Prints the elapsed time with the given prefix, if available.
 fn maybe_print_elapsed_for(pass: &str, instant: Option<time::Instant>) {
     if let Some(instant) = instant {
-        println!(" {}: {:?}", pass, instant.elapsed());
+        println!(" {}: {:?}", pass.bold().cyan(), instant.elapsed());
     }
 }
 
