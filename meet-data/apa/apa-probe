@@ -6,7 +6,6 @@
 
 
 from bs4 import BeautifulSoup
-import datetime
 import os
 import sys
 
@@ -64,6 +63,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[APA]'), unentered)
+
 
 if __name__ == '__main__':
     main()
