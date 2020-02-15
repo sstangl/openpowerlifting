@@ -41,13 +41,13 @@ def getmeetlist(html):
     urls = []
     for a in entry_content.find_all('a'):
         url = a['href']
-        if 'http://' not in url:
+        if 'http://' not in url and 'https://www.apa-wpa.com/' not in url:
             if url.startswith('/'):
                 url = BASEURL + url[1:]
             else:
                 url = BASEURL + url
 
-        if url not in urls:
+        if url not in urls and 'wpa-ukraine.com' not in url:
             urls.append(url)
 
     return urls
