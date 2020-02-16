@@ -2209,7 +2209,14 @@ impl Federation {
             Federation::IPL => PointsSystem::Wilks,
             Federation::IPLNZ => PointsSystem::Wilks,
             Federation::IrelandUA => PointsSystem::Wilks,
-            Federation::IrishPF => Federation::ipf_rules_on(date),
+            Federation::IrishPF => {
+                // On 2020-02-16, IrishPF voted to immediately switch to Dots.
+                if date > Date::from_parts(2020, 02, 16) {
+                    PointsSystem::Dots
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::IrishPO => PointsSystem::Wilks,
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
