@@ -111,6 +111,10 @@
   @include name-color(#FFD700);
 }
 
+.forestgreen {
+  @include name-color(#006400);
+}
+
 // Rainbow with light colors, to be readable against a dark background.
 .rainbow {
   @include gradient-prereqs(#FF80AB);
