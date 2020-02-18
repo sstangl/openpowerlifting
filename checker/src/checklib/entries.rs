@@ -1952,6 +1952,19 @@ fn get_tested_from_division_config(entry: &Entry, config: Option<&Config>) -> bo
     }
 }
 
+/// Determines whether this meet falls in the valid range for a
+/// partially-configured federation.
+fn should_ignore_config(meet: Option<&Meet>, config: Option<&Config>) -> bool {
+    if let Some(config) = config {
+        if let Some(meet) = meet {
+            if let Some(valid_since) = config.valid_since() {
+                return meet.date < valid_since;
+            }
+        }
+    }
+    false
+}
+
 /// Checks a single entries.csv file from an open `csv::Reader`.
 ///
 /// Extracting this out into a `Reader`-specific function is useful
@@ -1965,6 +1978,14 @@ pub fn do_check<R>(
 where
     R: io::Read,
 {
+    // If the federation is only partially configured and this meet doesn't fall in
+    // the valid range, ignore the config by reassigning it.
+    let config = if should_ignore_config(meet, config) {
+        None
+    } else {
+        config
+    };
+
     // Scan for check exemptions.
     let exemptions = {
         let parent_folder = &report.get_parent_folder()?;

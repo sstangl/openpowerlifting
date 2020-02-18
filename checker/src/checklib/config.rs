@@ -18,10 +18,18 @@ pub struct CheckResult {
 
 #[derive(Debug)]
 pub struct Config {
+    pub options: Option<OptionConfig>,
     pub divisions: Vec<DivisionConfig>,
     pub weightclasses: Vec<WeightClassConfig>,
     pub exemptions: Vec<ExemptionConfig>,
     pub rulesets: Vec<RuleSetConfig>,
+}
+
+#[derive(Debug, Default)]
+pub struct OptionConfig {
+    /// Option that specifies the config only affects meets after a certain
+    /// Date, allowing for partial federation configuration.
+    pub valid_since: Option<Date>,
 }
 
 #[derive(Debug)]
@@ -108,6 +116,35 @@ impl Config {
             .find(|ec| ec.meet_folder == meet_folder)
             .map(|ec| ec.exemptions.as_slice())
     }
+
+    /// Returns the valid_since option, if present.
+    pub fn valid_since(&self) -> Option<Date> {
+        self.options.as_ref()?.valid_since
+    }
+}
+
+fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
+    let table = match value.as_table() {
+        Some(t) => t,
+        None => {
+            report.error("Section 'options' must be a Table");
+            return None;
+        }
+    };
+
+    let valid_since: Option<Date> = if let Some(v) = table.get("valid_since") {
+        match v.as_str().and_then(|s| s.parse::<Date>().ok()) {
+            Some(date) => Some(date),
+            None => {
+                report.error("Value 'valid_since' must be a Date, like '1999-02-24'");
+                None
+            }
+        }
+    } else {
+        None
+    };
+
+    Some(OptionConfig { valid_since })
 }
 
 fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
@@ -566,6 +603,11 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn
         }
     };
 
+    // Parse the "options" table.
+    let options = table
+        .get("options")
+        .and_then(|v| parse_options(v, &mut report));
+
     // Parse the "divisions" table.
     let divisions = match table.get("divisions") {
         Some(v) => parse_divisions(v, &mut report),
@@ -611,7 +653,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn
     // Detect unknown sections.
     for key in table.keys() {
         match key.as_str() {
-            "divisions" | "exemptions" | "rulesets" | "weightclasses" => (),
+            "options" | "divisions" | "exemptions" | "rulesets" | "weightclasses" => (),
             _ => {
                 report.error(format!("Unknown section '{}'", key));
             }
@@ -621,6 +663,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn
     Ok(CheckResult {
         report,
         config: Some(Config {
+            options,
             divisions,
             weightclasses,
             exemptions,

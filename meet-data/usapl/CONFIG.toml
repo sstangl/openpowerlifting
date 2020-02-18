@@ -1,5 +1,9 @@
 # Configuration for the USAPL.
 
+# The USAPL is in such a bad state that it makes sense to partially-configure it.
+[options]
+    valid_since = "2020-02-10"
+
 [divisions]
     # Official division names are as described in an email from the USAPL
     # National Office (nationaloffice@usapowerlifting.com), sent 2018-02-22.
