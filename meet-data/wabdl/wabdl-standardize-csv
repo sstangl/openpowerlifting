@@ -69,6 +69,8 @@ def standardize_column_equipment(csv):
             row[ei] = 'Single-ply'
         elif row[ei].lower() == 'double':
             row[ei] = 'Multi-ply'
+        elif row[ei] == '':
+            row[ei] = 'Multi-ply'
         else:
             error("Unknown Equipment '%s'" % row[csv.index('Equipment')])
 
@@ -97,7 +99,11 @@ def find_lift_for(csv, idx, name, equipment):
 
 def integrate_lifts(csv):
     lift = csv.index('LIFT')
-    fourth = csv.index('4TH')
+    if '4TH' in csv.fieldnames:
+        fourth = csv.index('4TH')
+    elif 'LIFT-4' in csv.fieldnames:
+        fourth = csv.index('LIFT-4')
+
 
     bench = csv.index('Best3BenchLBS')
     bench4 = csv.index('Bench4LBS')
@@ -151,18 +157,24 @@ def main():
         lower = line.lower()
 
         # Detect the fieldnames line.
-        if not found_fieldnames and 'type,' in lower:
+        if not found_fieldnames and 'type,' in lower and 'sorted' not in lower:
             found_fieldnames = True
             csv.fieldnames = line.strip().split(',')
 
         # Data lines contain sex information.
         elif 'men,' in lower or 'women,' in lower:
             csv.rows.append(line.strip().split(','))
+        # Data lines contain sex information.
+        elif ' men ' in lower or ' women ' in lower:
+            csv.rows.append(line.strip().split(','))
 
     # Remove unnecessary columns.
     csv.remove_column_by_name("SR")  # "State Record"
+    csv.remove_column_by_name("RECORD-STATE")  # "State Record"
     csv.remove_column_by_name("NR")  # "National Record"
+    csv.remove_column_by_name("RECORD-NAT'L")  # "National Record"
     csv.remove_column_by_name("WR")  # "World Record"
+    csv.remove_column_by_name("RECORD-WORLD")  # "World Record"
 
     # "World" meets don't have sex columns,
     # but that can be derived from the Division.
@@ -180,8 +192,14 @@ def main():
     # The current columns are: "TYPE,SEX,DIV,CLS,PLY,LIFT,4TH,NAME,STATE".
     csv.fieldnames[csv.index('TYPE')] = "Event"
     csv.fieldnames[csv.index('DIV')] = "Division"
-    csv.fieldnames[csv.index('CLS')] = "WeightClassLBS"
-    csv.fieldnames[csv.index('PLY')] = "Equipment"
+    if 'CLS' in csv.fieldnames:
+        csv.fieldnames[csv.index('CLS')] = "WeightClassLBS"
+    elif 'CLASS' in csv.fieldnames:
+        csv.fieldnames[csv.index('CLASS')] = "WeightClassLBS"
+    if 'PLY' in csv.fieldnames:
+        csv.fieldnames[csv.index('PLY')] = "Equipment"
+    else:
+        csv.append_column('Equipment')
     csv.fieldnames[csv.index('NAME')] = "Name"
     csv.fieldnames[csv.index('STATE')] = "State"
 
@@ -193,7 +211,10 @@ def main():
     standardize_column_equipment(csv)
     standardize_column_name(csv)
     remove_zeros(csv, csv.index('LIFT'))
-    remove_zeros(csv, csv.index('4TH'))
+    if '4TH' in csv.fieldnames:
+      remove_zeros(csv, csv.index('4TH'))
+    elif 'LIFT-4' in csv.fieldnames:
+      remove_zeros(csv, csv.index('LIFT-4'))
 
     # Move the lifting data into the right columns.
     csv.insert_column(csv.index('LIFT'), "Best3BenchLBS")
@@ -206,6 +227,7 @@ def main():
     # Remove unused columns.
     csv.remove_column_by_name('LIFT')
     csv.remove_column_by_name('4TH')
+    csv.remove_column_by_name('LIFT-4')
     remove_column_if_empty(csv, csv.index('Bench4LBS'))
     remove_column_if_empty(csv, csv.index('Deadlift4LBS'))
 
