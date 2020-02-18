@@ -177,6 +177,12 @@
       $ireland-orange 67%, $ireland-orange);
 }
 
+//Red, black, white and green.
+.palestine {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #CE1126, #000000, #FFFFFF, #007A3D);
+}
+
 .blue_to_gold {
   $blue: #507CFF;
   $gold: #FFD700;
