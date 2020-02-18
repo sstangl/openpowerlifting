@@ -2,7 +2,7 @@
 
 # The USAPL is in such a bad state that it makes sense to partially-configure it.
 [options]
-    valid_since = "2019-12-01"
+    valid_since = "2019-06-01"
 
 [divisions]
     # Official division names are as described in an email from the USAPL
@@ -308,3 +308,5 @@
     NS-2015-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     NS-2018-01 = ["ExemptDivision"] # Ashton Rouska wore Wraps in Single-ply.
     2019-03-03 = ["ExemptDivision"] # Amanda Lawrence was Raw in Single-ply.
+    GA-2019-05 = ["ExemptDivision"] # Heavyweight/Lightweight.
+    NS-2019-02 = ["ExemptDivision"] # Jennifer Thompson benched Raw in Single-ply.
