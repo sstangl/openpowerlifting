@@ -52,8 +52,6 @@ mod weightkg;
 pub use self::weightkg::{WeightAny, WeightKg};
 mod weightclasskg;
 pub use self::weightclasskg::{WeightClassAny, WeightClassKg};
-mod yesno;
-pub use self::yesno::deserialize_yes_no;
 
 /// Units of weight.
 #[derive(Copy, Clone, Debug, EnumString, Serialize)]

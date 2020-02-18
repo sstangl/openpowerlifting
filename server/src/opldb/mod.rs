@@ -18,6 +18,8 @@ mod metafederation;
 pub use self::metafederation::*;
 mod static_cache;
 pub use self::static_cache::*;
+mod yesno;
+pub use self::yesno::deserialize_yes_no;
 
 /// The definition of a Lifter in the database.
 #[derive(Serialize, Deserialize)]
