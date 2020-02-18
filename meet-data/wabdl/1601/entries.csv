@@ -79,13 +79,13 @@ Single-ply,D,Law-Fire 56-63,90,,,212.5,,212.5,David Edborg,,NY,M,1
 Single-ply,B,Law-Fire 56-63,110,273,,,,273,Mike Frizzell,,IL,M,1
 Single-ply,D,Law-Fire 56-63,110,,,278,,278,Mike Frizzell,,IL,M,1
 Single-ply,B,Law-Fire 56-63,117.5,135,,,,135,Donald Bryant,,WA,M,1
-Single-ply,B,Law-Fire 64,82.5,140,147.5,,,140,Bruce Begue,,OH,M,1
-Single-ply,B,Law-Fire 64,100,167.5,,,,167.5,Jon Wolbers,Canada,,M,1
-Single-ply,B,Law-Fire 64,110,147.5,,,,147.5,Howard Lavin,,LA,M,1
-Single-ply,B,Law-Fire 64,117.5,135,,,,135,Paul Goodwin,,CA,M,2
-Single-ply,B,Law-Fire 64,117.5,155,,,,155,Ed Acey,,UT,M,1
-Single-ply,D,Law-Fire 64,117.5,,,160,,160,Paul Goodwin,,CA,M,1
-Single-ply,B,Law-Fire 64,125,137.5,,,,137.5,John von Rohr,,SC,M,1
+Single-ply,B,Law-Fire 64+,82.5,140,147.5,,,140,Bruce Begue,,OH,M,1
+Single-ply,B,Law-Fire 64+,100,167.5,,,,167.5,Jon Wolbers,Canada,,M,1
+Single-ply,B,Law-Fire 64+,110,147.5,,,,147.5,Howard Lavin,,LA,M,1
+Single-ply,B,Law-Fire 64+,117.5,135,,,,135,Paul Goodwin,,CA,M,2
+Single-ply,B,Law-Fire 64+,117.5,155,,,,155,Ed Acey,,UT,M,1
+Single-ply,D,Law-Fire 64+,117.5,,,160,,160,Paul Goodwin,,CA,M,1
+Single-ply,B,Law-Fire 64+,125,137.5,,,,137.5,John von Rohr,,SC,M,1
 Single-ply,B,Law-Fire Open,100,197.5,,,,197.5,Jordan Rodriguez,,CA,M,1
 Single-ply,D,Law-Fire Open,100,,,262.5,,262.5,Jordan Rodriguez,,CA,M,1
 Single-ply,B,Law-Fire Open,110,257.5,,,,257.5,Freddy Crosby,,IL,M,1
@@ -196,8 +196,8 @@ Multi-ply,B,Law-Fire 56-63,125,207.5,,,,207.5,Jay Simmons,,TX,M,1
 Multi-ply,D,Law-Fire 56-63,125,,,211.5,,211.5,Jay Simmons,,TX,M,1
 Multi-ply,B,Law-Fire 56-63,140,125,,,,125,Michal Johnson,,CA,M,1
 Multi-ply,D,Law-Fire 56-63,140,,,212.5,,212.5,Michal Johnson,,CA,M,1
-Multi-ply,B,Law-Fire 64,67.5,160,,,,160,Gary Miller #2,,NV,M,1
-Multi-ply,D,Law-Fire 64,67.5,,,175.5,,175.5,Gary Miller #2,,NV,M,1
+Multi-ply,B,Law-Fire 64+,67.5,160,,,,160,Gary Miller #2,,NV,M,1
+Multi-ply,D,Law-Fire 64+,67.5,,,175.5,,175.5,Gary Miller #2,,NV,M,1
 Multi-ply,D,Law-Fire Open,90,,,240,,240,Dan Guches,,OR,M,1
 Multi-ply,B,Law-Fire Open,140,283,295,,,283,William Lee,,TX,M,1
 Multi-ply,D,Law-Fire Open,140,,,275,,275,William Lee,,TX,M,1
@@ -446,7 +446,7 @@ Single-ply,BD,Law-Fire 48-55,117.5,210,,245,,455,JC Tolle,,CA,M,1
 Single-ply,BD,Law-Fire 48-55,125,247.5,,207.5,,455,Darren Kaleleiki,,HI,M,1
 Single-ply,BD,Law-Fire 56-63,82.5,132.5,,247.5,,380,Charles McFarland,,OR,M,1
 Single-ply,BD,Law-Fire 56-63,110,273,,278,,551,Mike Frizzell,,IL,M,1
-Single-ply,BD,Law-Fire 64,117.5,135,,160,,295,Paul Goodwin,,CA,M,1
+Single-ply,BD,Law-Fire 64+,117.5,135,,160,,295,Paul Goodwin,,CA,M,1
 Single-ply,BD,Law-Fire Open,100,197.5,,262.5,,459.5,Jordan Rodriguez,,CA,M,1
 Single-ply,BD,Law-Fire Open,110,257.5,,242.5,,500,Freddy Crosby,,IL,M,1
 Single-ply,BD,Law-Fire Open,125,167.5,,250,,417.5,Marcus Ellison,,,M,1
@@ -462,7 +462,7 @@ Single-ply,BD,Open,140,292.5,,287.5,,580,Dave Forstner,,,M,1
 Single-ply,BD,Open,140,227.5,,227.5,,455,Brian Vickers,,TX,M,2
 Multi-ply,BD,Class 1,90,145,,227.5,,372.5,Percy Taylor,,,M,1
 Multi-ply,BD,Law-Fire 56-63,125,207.5,,211.5,,419,Jay Simmons,,TX,M,1
-Multi-ply,BD,Law-Fire 64,67.5,160,,175.5,,335.5,Gary Miller #2,,NV,M,1
+Multi-ply,BD,Law-Fire 64+,67.5,160,,175.5,,335.5,Gary Miller #2,,NV,M,1
 Multi-ply,BD,Law-Fire Open,140,283,295,275,,558,William Lee,,TX,M,1
 Multi-ply,BD,Law-Fire Submasters,140,283,295,275,,558,William Lee,,TX,M,1
 Multi-ply,BD,Open,75,200,,237.5,,437.5,Alfredo Evangelista,,OR,M,1
