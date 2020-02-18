@@ -933,13 +933,14 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Weight
     }
 }
 
-fn check_column_tested(s: &str, line: u64, report: &mut Report) -> bool {
+fn check_column_tested(s: &str, line: u64, report: &mut Report) -> Option<bool> {
     match s {
-        "Yes" => true,
-        "" | "No" => false,
+        "Yes" => Some(true),
+        "No" => Some(false),
+        "" => None,
         _ => {
             report.error_on(line, format!("Unknown Tested value '{}'", s));
-            false
+            None
         }
     }
 }
@@ -2193,7 +2194,10 @@ where
         }
 
         if let Some(idx) = headers.get(Header::Tested) {
-            entry.tested = check_column_tested(&record[idx], line, &mut report);
+            // Blank "Tested" columns default to the federation configuration.
+            if let Some(tested) = check_column_tested(&record[idx], line, &mut report) {
+                entry.tested = tested;
+            }
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
             entry.cyrillicname =
