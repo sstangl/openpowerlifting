@@ -104,7 +104,6 @@ def integrate_lifts(csv):
     elif 'LIFT-4' in csv.fieldnames:
         fourth = csv.index('LIFT-4')
 
-
     bench = csv.index('Best3BenchLBS')
     bench4 = csv.index('Bench4LBS')
     dl = csv.index('Best3DeadliftLBS')
@@ -124,7 +123,8 @@ def integrate_lifts(csv):
         elif event == 'BD':
             row[total] = row[lift]
         else:
-            error("Unknown Event (in integrate_lifts) '%s'" % row[csv.index('Event')])
+            error("Unknown Event (in integrate_lifts) '%s'" %
+                  row[csv.index('Event')])
 
     # Push-Pull lifters don't have their Best3BenchLBS and Best3DeadliftLBS.
     # See if we can derive those from the other entries -- usually, yes.
@@ -212,9 +212,9 @@ def main():
     standardize_column_name(csv)
     remove_zeros(csv, csv.index('LIFT'))
     if '4TH' in csv.fieldnames:
-      remove_zeros(csv, csv.index('4TH'))
+        remove_zeros(csv, csv.index('4TH'))
     elif 'LIFT-4' in csv.fieldnames:
-      remove_zeros(csv, csv.index('LIFT-4'))
+        remove_zeros(csv, csv.index('LIFT-4'))
 
     # Move the lifting data into the right columns.
     csv.insert_column(csv.index('LIFT'), "Best3BenchLBS")
