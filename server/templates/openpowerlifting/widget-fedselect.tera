@@ -120,6 +120,7 @@
   <option value="all-belarus" {% if selection.federation == "AllBelarus" %}selected{% endif %}>{{strings.selectors.fed.all_belarus}}</option>
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF - Belarus Powerlifting Federation [IPF]</option>
   <option value="gsf-belarus" {% if selection.federation == "GSF-Belarus" %}selected{% endif %}>GSF Belarus</option>
+  <option value="wpsf-belarus" {% if selection.federation == "WPSF-Belarus" %}selected{% endif %}>WPSF Belarus</option>
   <option value="wrpf-belarus" {% if selection.federation == "WRPF-Belarus" %}selected{% endif %}>WRPF Belarus</option>
 </optgroup>
 <optgroup label="{{strings.country.bosniaandherzegovina}}">

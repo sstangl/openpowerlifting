@@ -1072,6 +1072,15 @@ pub enum Federation {
     #[strum(to_string = "WPRO", serialize = "wpro")]
     WPRO,
 
+    /// World Power Sport Federation.
+    #[strum(to_string = "WPSF", serialize = "wpsf")]
+    WPSF,
+
+    /// World Power Sport Federation, Belarus.
+    #[serde(rename = "WPSF-Belarus")]
+    #[strum(to_string = "WPSF-Belarus", serialize = "wpsf-belarus")]
+    WPSFBelarus,
+
     /// World Powerlifting Union.
     #[strum(to_string = "WPU", serialize = "wpu")]
     WPU,
@@ -1450,6 +1459,8 @@ impl Federation {
             Federation::WPNZ => FULLY_TESTED,
             Federation::WPPO => FULLY_TESTED,
             Federation::WPRO => false,
+            Federation::WPSF => false,
+            Federation::WPSFBelarus => false,
             Federation::WPU => false,
             Federation::WPUF => false,
             Federation::WPURUS => false,
@@ -1728,6 +1739,8 @@ impl Federation {
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPPO => None,
             Federation::WPRO => Some(Country::Ukraine),
+            Federation::WPSF => None,
+            Federation::WPSFBelarus => Some(Country::Belarus),
             Federation::WPU => None,
             Federation::WPUF => Some(Country::Ukraine),
             Federation::WPURUS => Some(Country::Russia),
@@ -2048,6 +2061,8 @@ impl Federation {
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPPO => None,
             Federation::WPRO => None,
+            Federation::WPSF => Some(Federation::WPSF),
+            Federation::WPSFBelarus => Some(Federation::WPSF),
             Federation::WPU => None,
             Federation::WPUF => None,
             Federation::WPURUS => None,
@@ -2359,6 +2374,8 @@ impl Federation {
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPPO => PointsSystem::AH,
             Federation::WPRO => PointsSystem::Wilks,
+            Federation::WPSF => PointsSystem::Wilks,
+            Federation::WPSFBelarus => PointsSystem::Wilks,
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,
             Federation::WPURUS => PointsSystem::Wilks,
