@@ -54,7 +54,7 @@ label {
   <pre id="ioErrorPre"></pre>
   <pre id="meetErrorPre"></pre>
   <label for="meet">meet.csv:</label>
-  <textarea id="meetTextArea" name="meet" rows="2" cols="80">Federation,Date,MeetCountry,MeetState,MeetTown,MeetName</textarea>
+  <textarea id="meetTextArea" name="meet" rows="2" cols="80">Federation,Date,MeetCountry,MeetState,MeetTown,MeetName&#13;&#10;</textarea>
 
   <br/><br/>
 
