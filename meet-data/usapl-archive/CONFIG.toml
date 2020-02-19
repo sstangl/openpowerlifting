@@ -1,23 +1,26 @@
-# Configuration for old USAPL meets.
+# Configuration for the USAPL.
 
 [divisions]
     # Official division names are as described in an email from the USAPL
     # National Office (nationaloffice@usapowerlifting.com), sent 2018-02-22.
     # With additions as provided to Michael Sampson, author of LiftingCast.
+
+    # Non-Masters divisions are based on Age.
+    # Masters divisions are based on BirthYear.
     
     # Official divisions, Raw Men.
-    mro = {name="MR-O", min=0, max=999, sex="M", equipment="Raw"}
+    mro = {name="MR-O", min=14, max=999, sex="M", equipment="Raw"}
     mry = {name="MR-Y", min=8, max=13, sex="M", equipment="Raw"}
     mry1 = {name="MR-Y1", min=8, max=9, sex="M", equipment="Raw"}
     mry2 = {name="MR-Y2", min=10, max=11, sex="M", equipment="Raw"}
     mry3 = {name="MR-Y3", min=12, max=13, sex="M", equipment="Raw"}
     mrt = {name="MR-T", min=14, max=19, sex="M", equipment="Raw"}
     mrt1 = {name="MR-T1", min=14, max=15, sex="M", equipment="Raw"}
-    mrt2 = {name="MR-T2", min=15, max=17, sex="M", equipment="Raw"}
+    mrt2 = {name="MR-T2", min=16, max=17, sex="M", equipment="Raw"}
     mrt3 = {name="MR-T3", min=18, max=19, sex="M", equipment="Raw"}
-    mrtj = {name="MR-TJ", min=14, max=22.5, sex="M", equipment="Raw"}
-    mrsj = {name="MR-SJ", min=14, max=17.5, sex="M", equipment="Raw"}
-    mrjr = {name="MR-Jr", min=18.5, max=22.5, sex="M", equipment="Raw"}
+    mrtj = {name="MR-TJ", min=14, max=23, sex="M", equipment="Raw"}
+    mrsj = {name="MR-SJ", min=14, max=19, sex="M", equipment="Raw"}
+    mrjr = {name="MR-Jr", min=20, max=23, sex="M", equipment="Raw"}
     mrm1a = {name="MR-M1a", min=39.5, max=43.5, sex="M", equipment="Raw"}
     mrm1b = {name="MR-M1b", min=44.5, max=48.5, sex="M", equipment="Raw"}
     mrm2a = {name="MR-M2a", min=49.5, max=53.5, sex="M", equipment="Raw"}
@@ -41,7 +44,7 @@
     mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
 
     # Official divisions, Raw Women.
-    fro = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
+    fro = {name="FR-O", min=14, max=999, sex="F", equipment="Raw"}
     fry = {name="FR-Y", min=8, max=13, sex="F", equipment="Raw"}
     fry1 = {name="FR-Y1", min=8, max=9, sex="F", equipment="Raw"}
     fry2 = {name="FR-Y2", min=10, max=11, sex="F", equipment="Raw"}
@@ -50,9 +53,9 @@
     frt1 = {name="FR-T1", min=14, max=15, sex="F", equipment="Raw"}
     frt2 = {name="FR-T2", min=16, max=17, sex="F", equipment="Raw"}
     frt3 = {name="FR-T3", min=18, max=19, sex="F", equipment="Raw"}
-    frtj = {name="FR-TJ", min=14, max=22.5, sex="F", equipment="Raw"}
-    frsj = {name="FR-SJ", min=14, max=17.5, sex="F", equipment="Raw"}
-    frjr = {name="FR-Jr", min=18.5, max=22.5, sex="F", equipment="Raw"}
+    frtj = {name="FR-TJ", min=14, max=23, sex="F", equipment="Raw"}
+    frsj = {name="FR-SJ", min=14, max=19, sex="F", equipment="Raw"}
+    frjr = {name="FR-Jr", min=20, max=23, sex="F", equipment="Raw"}
     frm1a = {name="FR-M1a", min=39.5, max=43.5, sex="F", equipment="Raw"}
     frm1b = {name="FR-M1b", min=44.5, max=48.5, sex="F", equipment="Raw"}
     frm2a = {name="FR-M2a", min=49.5, max=53.5, sex="F", equipment="Raw"}
@@ -76,7 +79,7 @@
     frg = {name="FR-G", min=0, max=999, sex="F", equipment="Raw", place="G"}
 
     # Official divisions, Equipped Men.
-    mo = {name="M-O", min=0, max=999, sex="M", equipment="Single-ply"}
+    mo = {name="M-O", min=14, max=999, sex="M", equipment="Single-ply"}
     my = {name="M-Y", min=8, max=13, sex="M", equipment="Single-ply"}
     my1 = {name="M-Y1", min=8, max=9, sex="M", equipment="Single-ply"}
     my2 = {name="M-Y2", min=10, max=11, sex="M", equipment="Single-ply"}
@@ -85,9 +88,9 @@
     mt1 = {name="M-T1", min=14, max=15, sex="M", equipment="Single-ply"}
     mt2 = {name="M-T2", min=16, max=17, sex="M", equipment="Single-ply"}
     mt3 = {name="M-T3", min=18, max=19, sex="M", equipment="Single-ply"}
-    mtj = {name="M-TJ", min=14, max=22.5, sex="M", equipment="Single-ply"}
-    msj = {name="M-SJ", min=14, max=17.5, sex="M", equipment="Single-ply"}
-    mjr = {name="M-Jr", min=18.5, max=22.5, sex="M", equipment="Single-ply"}
+    mtj = {name="M-TJ", min=14, max=23, sex="M", equipment="Single-ply"}
+    msj = {name="M-SJ", min=14, max=19, sex="M", equipment="Single-ply"}
+    mjr = {name="M-Jr", min=20, max=23, sex="M", equipment="Single-ply"}
     mm1a = {name="M-M1a", min=39.5, max=43.5, sex="M", equipment="Single-ply"}
     mm1b = {name="M-M1b", min=44.5, max=48.5, sex="M", equipment="Single-ply"}
     mm2a = {name="M-M2a", min=49.5, max=53.5, sex="M", equipment="Single-ply"}
@@ -111,7 +114,7 @@
     mg = {name="M-G", min=0, max=999, sex="M", equipment="Single-ply", place="G"}
 
     # Official divisions, Equipped Women.
-    fo = {name="F-O", min=0, max=999, sex="F", equipment="Single-ply"}
+    fo = {name="F-O", min=14, max=999, sex="F", equipment="Single-ply"}
     fy = {name="F-Y", min=8, max=13, sex="F", equipment="Single-ply"}
     fy1 = {name="F-Y1", min=8, max=9, sex="F", equipment="Single-ply"}
     fy2 = {name="F-Y2", min=10, max=11, sex="F", equipment="Single-ply"}
@@ -120,9 +123,9 @@
     ft1 = {name="F-T1", min=14, max=15, sex="F", equipment="Single-ply"}
     ft2 = {name="F-T2", min=16, max=17, sex="F", equipment="Single-ply"}
     ft3 = {name="F-T3", min=18, max=19, sex="F", equipment="Single-ply"}
-    ftj = {name="F-TJ", min=14, max=22.5, sex="F", equipment="Single-ply"}
-    fsj = {name="F-SJ", min=14, max=17.5, sex="F", equipment="Single-ply"}
-    fjr = {name="F-Jr", min=18.5, max=22.5, sex="F", equipment="Single-ply"}
+    ftj = {name="F-TJ", min=14, max=23, sex="F", equipment="Single-ply"}
+    fsj = {name="F-SJ", min=14, max=19, sex="F", equipment="Single-ply"}
+    fjr = {name="F-Jr", min=20, max=23, sex="F", equipment="Single-ply"}
     fm1a = {name="F-M1a", min=39.5, max=43.5, sex="F", equipment="Single-ply"}
     fm1b = {name="F-M1b", min=44.5, max=48.5, sex="F", equipment="Single-ply"}
     fm2a = {name="F-M2a", min=49.5, max=53.5, sex="F", equipment="Single-ply"}
@@ -158,10 +161,10 @@
     fv = {name="F-V", min=0, max=999, sex="F", equipment="Single-ply"}
 
     # High School.
-    mrhs = {name="MR-HS", min=13, max=19, sex="M", equipment="Raw"}
-    frhs = {name="FR-HS", min=13, max=19, sex="F", equipment="Raw"}
-    mhs = {name="M-HS", min=13, max=19, sex="M", equipment="Single-ply"}
-    fhs = {name="F-HS", min=13, max=19, sex="F", equipment="Single-ply"}
+    mrhs = {name="MR-HS", min=0, max=999, sex="M", equipment="Raw"}
+    frhs = {name="FR-HS", min=0, max=999, sex="F", equipment="Raw"}
+    mhs = {name="M-HS", min=0, max=999, sex="M", equipment="Single-ply"}
+    fhs = {name="F-HS", min=0, max=999, sex="F", equipment="Single-ply"}
 
     # Collegiate.
     mrc = {name="MR-C", min=0, max=999, sex="M", equipment="Raw"}
@@ -210,7 +213,6 @@
     frsm = {name="FR-SM", min=35, max=38.5, sex="F", equipment="Raw"}
     msm = {name="M-SM", min=35, max=38.5, sex="M", equipment="Single-ply"}
     fsm = {name="F-SM", min=35, max=38.5, sex="F", equipment="Single-ply"}
-
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
