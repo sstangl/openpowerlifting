@@ -17,6 +17,7 @@ builddir:
 	mkdir -p '${BUILDDIR}'
 	mkdir -p '${BUILDDIR}/css'
 	mkdir -p '${BUILDDIR}/images'
+	mkdir -p '${BUILDDIR}/images/openipf'
 	mkdir -p '${BUILDDIR}/scripts'
 
 css: builddir npminit
@@ -38,6 +39,8 @@ images: builddir
 	cp images/burger_menu_white.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"
 	cp ${PROJECTDATA}/apple-touch-icon.png "${BUILDDIR}/images/"
+	cp ${PROJECTDATA}/favicon-32x32-gold.ico "${BUILDDIR}/images/openipf/favicon.ico"
+	cp ${PROJECTDATA}/apple-touch-icon-gold.png "${BUILDDIR}/images/openipf/apple-touch-icon.png"
 
 scripts: builddir npminit slickgrid
 	npm run webpack
