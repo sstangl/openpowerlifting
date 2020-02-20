@@ -1,4 +1,5 @@
 <select id="eventselect">
   <option value="full-power"{% if selection.event == "FullPower" %} selected{% endif %}>{{strings.selectors.event.full_power}}</option>
   <option value="bench-only"{% if selection.event == "BenchOnly" %} selected{% endif %}>{{strings.selectors.event.bench_only}}</option>
+  <option value="deadlift-only"{% if selection.event == "DeadliftOnly" %} selected{% endif %}>{{strings.selectors.event.deadlift_only}}</option>
 </select>
