@@ -403,6 +403,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WPPO as usize].instagram = "parapowerlifting";
     statuses[WPCFinland as usize].instagram = "wpcfinland";
     statuses[WPCSA as usize].instagram = "wpc_powerlifting_cpt";
+    statuses[WPSFBelarus as usize].instagram = "wpro_wpsf_belarus";
     statuses[WRPF as usize].instagram = "wrp_official";
     statuses[WRPFAUS as usize].instagram = "wrpfaustralia";
     statuses[WRPFBelarus as usize].instagram = "wrpf_belarus";
