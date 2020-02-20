@@ -115,7 +115,8 @@ fn rankings(
     let selection =
         pages::selection::Selection::from_path(&selections, &defaults).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let cx = pages::rankings::Context::new(&opldb, &locale, &selection, &defaults)?;
+    let cx =
+        pages::rankings::Context::new(&opldb, &locale, &selection, &defaults, false)?;
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
@@ -423,7 +424,7 @@ fn index(
     // Otherwise, render the main rankings template.
     let defaults = pages::selection::Selection::default();
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let cx = pages::rankings::Context::new(&opldb, &locale, &defaults, &defaults);
+    let cx = pages::rankings::Context::new(&opldb, &locale, &defaults, &defaults, false);
 
     Some(IndexReturn::Template(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),

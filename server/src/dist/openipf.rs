@@ -71,7 +71,8 @@ pub fn index(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let default = default_openipf_selection();
-    let mut cx = pages::rankings::Context::new(&opldb, &locale, &default, &default)?;
+    let mut cx =
+        pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -99,7 +100,8 @@ pub fn rankings(
     let default = default_openipf_selection();
     let selection = pages::selection::Selection::from_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::rankings::Context::new(&opldb, &locale, &selection, &default)?;
+    let mut cx =
+        pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -126,7 +128,7 @@ pub fn rankings_api(
     let units = query.units.parse::<WeightUnits>().ok()?;
     let locale = Locale::new(&langinfo, language, units);
 
-    let slice = pages::api_rankings::get_slice(
+    let mut slice = pages::api_rankings::get_slice(
         &opldb,
         &locale,
         &selection,
@@ -134,6 +136,15 @@ pub fn rankings_api(
         query.start,
         query.end,
     );
+
+    for row in &mut slice.rows {
+        if row.equipment == &locale.strings.equipment.raw {
+            row.equipment = &locale.strings.equipment.classic;
+        }
+        if row.equipment == &locale.strings.equipment.single {
+            row.equipment = &locale.strings.equipment.equipped;
+        }
+    }
 
     // TODO: Maybe we can use rocket_contrib::Json, but the lifetimes
     // of the values in `slice` outlive this function, which doesn't work.
