@@ -35,6 +35,7 @@ images: builddir
 	cp images/search.png "${BUILDDIR}/images/"
 	cp images/search_white.png "${BUILDDIR}/images/"
 	cp images/close_icon.png "${BUILDDIR}/images/"
+	cp images/close_icon_white.png "${BUILDDIR}/images/"
 	cp images/burger_menu.png "${BUILDDIR}/images/"
 	cp images/burger_menu_white.png "${BUILDDIR}/images/"
 	cp ${PROJECTDATA}/favicon-32x32.ico "${BUILDDIR}/images/favicon.ico"

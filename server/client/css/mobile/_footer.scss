@@ -38,7 +38,7 @@ footer > .footer-hamburger {
   background-position: center;
 
   &.active {
-    background: url($mobile-close-icon) no-repeat;
+    background: url($mobile-close-icon-side-menu) no-repeat;
     background-size: 50%;
     background-position: center;
   }
@@ -61,7 +61,7 @@ footer > #controls-mobile-toggle-button {
   background-size: 100%;
 
   &.active {
-    background: url($mobile-close-icon) no-repeat;
+    background: url($mobile-close-icon-side-menu) no-repeat;
     background-size: 50%;
     background-position: center;
   }
@@ -151,7 +151,7 @@ footer > .mobile-header-logo-link {
   margin: 0;
 
   &.active {
-    background: url($mobile-close-icon) no-repeat;
+    background: url($mobile-close-icon-search) no-repeat;
     background-color: $mobile-search-active-color;
     background-size: 50%;
     background-position: center;
