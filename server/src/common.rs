@@ -22,6 +22,31 @@ pub type ManagedLangInfo = langpack::LangInfo;
 #[cfg(test)]
 pub type ManagedLangInfo = &'static langpack::LangInfo;
 
+/// Request guard for reading the "Host" HTTP header.
+pub struct Host(pub Option<String>);
+
+impl Host {
+    pub fn served_from_openipf_org(&self) -> bool {
+        match &self.0 {
+            None => false,
+            Some(s) => s.contains("openipf.org"),
+        }
+    }
+}
+
+impl<'a, 'r> FromRequest<'a, 'r> for Host {
+    type Error = ();
+
+    fn from_request(request: &'a Request<'r>) -> request::Outcome<Host, ()> {
+        let keys: Vec<_> = request.headers().get("Host").collect();
+        match keys.len() {
+            0 => Outcome::Success(Host(None)),
+            1 => Outcome::Success(Host(Some(keys[0].to_string()))),
+            _ => Outcome::Failure((Status::BadRequest, ())),
+        }
+    }
+}
+
 /// Request guard for reading the "Accept-Encoding" HTTP header.
 pub struct AcceptEncoding(pub Option<String>);
 
