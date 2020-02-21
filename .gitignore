@@ -2,6 +2,7 @@
 build/
 node_modules/
 target/
+public/
 
 # Temporary fetch directories.
 /meet-data/**/fetch/
