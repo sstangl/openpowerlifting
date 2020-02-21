@@ -414,6 +414,9 @@
   <option value="wpc-ukr" {% if selection.federation == "WPC-UKR" %}selected{% endif %}>WPC-UKR - WPC Ukraine</option>
   <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>
 </optgroup>
+<optgroup label="{{strings.country.usvirginislands}}">
+  <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF - US Virgin Islands Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.vietnam}}">
   <option value="all-vietnam" {% if selection.federation == "AllVietnam" %}selected{% endif %}>{{strings.selectors.fed.all_vietnam}}</option>
   <option value="vietnampa" {% if selection.federation == "VietnamPA" %}selected{% endif %}>VietnamPA - Vietnam Powerlifting Alliance [GPA]</option>

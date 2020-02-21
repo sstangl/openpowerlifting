@@ -917,6 +917,10 @@ pub enum Federation {
     #[strum(to_string = "USSports", serialize = "ussports")]
     USSports,
 
+    /// US Virgin Islands Powerlifting Federation, IPF.
+    #[strum(to_string = "USVIPF", serialize = "usvipf")]
+    USVIPF,
+
     /// Vietnam Powerlifting Alliance, GPA.
     #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
     VietnamPA,
@@ -1424,6 +1428,7 @@ impl Federation {
             Federation::USPA => false,
             Federation::USSF => false,
             Federation::USSports => false,
+            Federation::USVIPF => FULLY_TESTED,
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
             Federation::VPF => FULLY_TESTED,
@@ -1705,6 +1710,7 @@ impl Federation {
             Federation::USPA => Some(Country::USA),
             Federation::USSF => Some(Country::USA),
             Federation::USSports => Some(Country::USA),
+            Federation::USVIPF => Some(Country::USVirginIslands),
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
             Federation::VPF => Some(Country::Vietnam),
@@ -2027,6 +2033,7 @@ impl Federation {
             Federation::USPA => Some(Federation::IPL),
             Federation::USSF => None,
             Federation::USSports => None,
+            Federation::USVIPF => Some(Federation::IPF),
             Federation::VietnamPA => Some(Federation::GPA),
             Federation::Vityaz => None,
             Federation::VPF => Some(Federation::IPF),
@@ -2340,6 +2347,7 @@ impl Federation {
             Federation::USPA => PointsSystem::Wilks,
             Federation::USSF => PointsSystem::Wilks,
             Federation::USSports => PointsSystem::Wilks,
+            Federation::USVIPF => Federation::ipf_rules_on(date),
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::VPF => Federation::ipf_rules_on(date),
