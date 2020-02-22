@@ -5,7 +5,7 @@ Place,Name,Division,Equipment,Event,BirthDate,BirthYear,Age,Sex,BodyweightKg,Wei
 1,Véronique Descours,Masters 1,Single-ply,SBD,,1971,48,F,61.24,63,125,140,-147.5,140,87.5,95,-100,95,135,150,157.5,157.5,392.5
 1,Sylvie Benlabidi,Masters 1,Single-ply,SBD,,1977,42,F,83,84,107.5,117.5,-120,117.5,72.5,77.5,-80.5,77.5,135,145,-150,145,340
 1,Nathalie Feraud,Masters 2,Single-ply,SBD,,1967,52,F,50.33,52,125,138,142.5,142.5,-90,-92.5,92.5,92.5,120,135,-148.5,135,370
-1,Marie France Cabos,Masters 2,Single-ply,SBD,,1967,52,F,58.27,63,130.5,-135,,130.5,90,95,,95,-135,135,-148,135,360.5
+1,Marie-France Cabos,Masters 2,Single-ply,SBD,,1967,52,F,58.27,63,130.5,-135,,130.5,90,95,,95,-135,135,-148,135,360.5
 2,Florence Leccese,Masters 2,Single-ply,SBD,,1969,51,F,60.92,63,-115,120,130,130,65,70,-75,70,112.5,-120,120,120,320
 1,Lydie Grouet,Masters 3,Single-ply,SBD,,1960,59,F,56.48,57,107.5,112.5,115,115,67.5,75,,75,120,127.5,132.5,132.5,322.5
 2,Martine Parfait,Masters 3,Single-ply,SBD,,1957,63,F,56.13,57,105,110,112.5,112.5,60,-67.5,67.5,67.5,120,127.5,-132.5,127.5,307.5
@@ -13,7 +13,7 @@ Place,Name,Division,Equipment,Event,BirthDate,BirthYear,Age,Sex,BodyweightKg,Wei
 1,Antoni Mastrolorenzo,Open,Single-ply,SBD,,1982,38,M,75.99,83,290,-305,-305,290,205,212.5,,212.5,-260,260,-275,260,762.5
 1,Eddy Bernou,Open,Single-ply,SBD,,1998,22,M,91.23,93,275,-295,-300,275,130,-190,190,190,225,255,-275,255,720
 1,Ugo Masarotti,Open,Single-ply,SBD,,1987,32,M,122.48,120+,300,-320,,300,170,180,,180,290,310.5,-325,310.5,790.5
-1,Marc Olivier Huchet,Masters 1,Single-ply,SBD,,1974,45,M,65.78,66,195,205,212.5,212.5,125,130,135,135,180,195,205,205,552.5
+1,Marc-Olivier Huchet,Masters 1,Single-ply,SBD,,1974,45,M,65.78,66,195,205,212.5,212.5,125,130,135,135,180,195,205,205,552.5
 1,David Perrodou,Masters 1,Single-ply,SBD,,1974,45,M,73.26,74,210,215,220,220,170,172.5,175,175,210,220,-225,220,615
 1,Mickael Colmard,Masters 1,Single-ply,SBD,,1971,48,M,82.7,83,195,-205,205,205,175,182.5,-198,182.5,200,207.5,212.5,212.5,600
 2,Bertrand Couvercelle,Masters 1,Single-ply,SBD,,1977,42,M,79.65,83,227.5,240,-250,240,120,125,127.5,127.5,205,220,-232.5,220,587.5
@@ -24,7 +24,7 @@ Place,Name,Division,Equipment,Event,BirthDate,BirthYear,Age,Sex,BodyweightKg,Wei
 1,Christophe Cherel,Masters 2,Single-ply,SBD,,1967,52,M,72.75,74,-200,200,205,205,110,115,-120,115,-220,220,240,240,560
 2,Philippe Courtois,Masters 2,Single-ply,SBD,,1964,55,M,73.05,74,175,185,190,190,127.5,-132.5,132.5,132.5,-200,200,-210,200,522.5
 3,Bruno Bastien,Masters 2,Single-ply,SBD,,1965,54,M,73.16,74,-160,160,165,165,150,-158,-158,150,170,180,-190,180,495
-1,Jean Hugues Monique,Masters 2,Single-ply,SBD,,1969,50,M,81.4,83,215,225,-235,225,-145,145,150,150,220,230,237.5,237.5,612.5
+1,Jean-Hugues Monique,Masters 2,Single-ply,SBD,,1969,50,M,81.4,83,215,225,-235,225,-145,145,150,150,220,230,237.5,237.5,612.5
 2,Georges Mingot,Masters 2,Single-ply,SBD,,1964,55,M,81.34,83,212.5,-220,222.5,222.5,162.5,-167.5,167.5,167.5,205,212.5,-217.5,212.5,602.5
 3,Stéphane Barataud,Masters 2,Single-ply,SBD,,1969,51,M,78.9,83,235,-242.5,-242.5,235,-140,140,145,145,-205,215,-222.5,215,595
 1,Gemel Boughamdouz,Masters 2,Single-ply,SBD,,1963,56,M,91.43,93,240,-250,-255,240,200,,,200,207.5,217.5,-227.5,217.5,657.5
@@ -40,7 +40,7 @@ DQ,Bruno Delepaut,Masters 2,Single-ply,SBD,,1964,55,M,89.63,93,220,-225,-225,220
 1,Patrick Mathias,Masters 3,Single-ply,SBD,,1957,62,M,81.6,83,160,170,180,180,120,-127.5,127.5,127.5,170,-180,,170,477.5
 1,Julio Garcia,Masters 3,Single-ply,SBD,,1957,62,M,92.96,93,-200,-200,200,200,110,117.5,-122.5,117.5,190,-200,-200,190,507.5
 1,Pascal Merlier,Masters 3,Single-ply,SBD,,1959,60,M,107.09,120,230,240,-250,240,160,185,195,195,220,-230,230,230,665
-1,Gerard Dufour,Masters 4,Single-ply,SBD,,1949,71,M,73.49,74,130,143,150,150,100,107.5,110,110,-170,170,-191,170,430
+1,Gérard Dufour,Masters 4,Single-ply,SBD,,1949,71,M,73.49,74,130,143,150,150,100,107.5,110,110,-170,170,-191,170,430
 2,Jacques Beauverger,Masters 4,Single-ply,SBD,,1946,73,M,72.95,74,120,130,-137.5,130,80,85,87.5,87.5,172.5,180,-187.5,180,397.5
 3,Guy Fourniez,Masters 4,Single-ply,SBD,,1948,71,M,72.05,74,127.5,135,-140,135,87.5,92.5,-97.5,92.5,-147.5,155,-160,155,382.5
 1,Yvelise Martin,Open,Single-ply,B,,1982,37,F,56.85,57,,,,,87.5,92.5,-97.5,92.5,,,,,92.5
@@ -52,7 +52,7 @@ DQ,Bruno Delepaut,Masters 2,Single-ply,SBD,,1964,55,M,89.63,93,220,-225,-225,220
 2,Géraldine Verlaine,Masters 2,Single-ply,B,,1970,49,F,51.78,52,,,,,70,72.5,-75,72.5,,,,,72.5
 3,Brigitte Landon,Masters 2,Single-ply,B,,1961,58,F,49.21,52,,,,,67.5,-70,70,70,,,,,70
 1,Béatrice Russic,Masters 2,Single-ply,B,,1969,51,F,52.86,57,,,,,77.5,80,-82.5,80,,,,,80
-1,Marie France Cabos,Masters 2,Single-ply,B,,1967,52,F,58.37,63,,,,,90,95,-100,95,,,,,95
+1,Marie-France Cabos,Masters 2,Single-ply,B,,1967,52,F,58.37,63,,,,,90,95,-100,95,,,,,95
 2,Florence Leccese,Masters 2,Single-ply,B,,1969,51,F,61.44,63,,,,,40,45,50,50,,,,,50
 1,Patricia Maciejewski,Masters 2,Single-ply,B,,1961,58,F,71.03,72,,,,,82.5,87.5,-90,87.5,,,,,87.5
 1,Nathalie Gransard,Masters 2,Single-ply,B,,1964,55,F,96.62,84+,,,,,117.5,122.5,-127.5,122.5,,,,,122.5
@@ -67,7 +67,7 @@ DQ,Bruno Delepaut,Masters 2,Single-ply,SBD,,1964,55,M,89.63,93,220,-225,-225,220
 1,Daniel Pires,Open,Single-ply,B,,1971,48,M,91.46,93,,,,,175,200,-205,200,,,,,200
 1,Allan Grenier,Open,Single-ply,B,,1990,29,M,101.6,105,,,,,-280,290,-300,290,,,,,290
 1,Jérome Guidez,Open,Single-ply,B,,1974,45,M,141.22,120+,,,,,270,285,300,300,,,,,300
-1,Marc Olivier Huchet,Masters 1,Single-ply,B,,1974,45,M,65.88,66,,,,,122.5,132.5,-137.5,132.5,,,,,132.5
+1,Marc-Olivier Huchet,Masters 1,Single-ply,B,,1974,45,M,65.88,66,,,,,122.5,132.5,-137.5,132.5,,,,,132.5
 1,David Perrodou,Masters 1,Single-ply,B,,1974,45,M,73.15,74,,,,,170,175,177.5,177.5,,,,,177.5
 2,Vincent Eldin,Masters 1,Single-ply,B,,1972,47,M,73.67,74,,,,,155,162.5,-167.5,162.5,,,,,162.5
 1,Cyril Pinguet,Masters 1,Single-ply,B,,1972,47,M,82.01,83,,,,,210,,,210,,,,,210
@@ -102,7 +102,7 @@ DQ,Eric Bar,Masters 2,Single-ply,B,,1969,50,M,119.89,120,,,,,-210,-210,-212.5,,,
 1,Alain Riviere,Masters 3,Single-ply,B,,1960,59,M,79.35,83,,,,,165,-167.5,-170,165,,,,,165
 2,Gérard Leiterer,Masters 3,Single-ply,B,,1954,66,M,79.7,83,,,,,140,145,150,150,,,,,150
 3,Alain Collard,Masters 3,Single-ply,B,,1952,67,M,81.39,83,,,,,130,140,-145,140,,,,,140
-4,Jean Marc Linant,Masters 3,Single-ply,B,,1960,59,M,81.46,83,,,,,130,137.5,-140,137.5,,,,,137.5
+4,Jean-Marc Linant,Masters 3,Single-ply,B,,1960,59,M,81.46,83,,,,,130,137.5,-140,137.5,,,,,137.5
 5,Michel Naty,Masters 3,Single-ply,B,,1954,65,M,82.22,83,,,,,137.5,-145,-150,137.5,,,,,137.5
 6,Patrick Mathias,Masters 3,Single-ply,B,,1957,62,M,81.92,83,,,,,120,125,130,130,,,,,130
 1,Erick Deconinck,Masters 3,Single-ply,B,,1956,63,M,87.31,93,,,,,170,-185,190.5,190.5,,,,,190.5
