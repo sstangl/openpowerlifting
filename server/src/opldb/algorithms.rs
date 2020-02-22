@@ -492,9 +492,9 @@ pub fn get_entry_indices_for<'db>(
                         SubJuniorsY14Y18 => byclass == BirthYearClass::ClassY14Y18,
                         JuniorsY19Y23 => byclass == BirthYearClass::ClassY19Y23,
                         SeniorsY24Y39 => byclass == BirthYearClass::ClassY24Y39,
-                        MastersY40Y49 => byclass == BirthYearClass::ClassY40Y49,
-                        MastersY50Y59 => byclass == BirthYearClass::ClassY50Y59,
-                        MastersY60Y69 => byclass == BirthYearClass::ClassY60Y69,
+                        MastersOverY40 => byclass >= BirthYearClass::ClassY40Y49,
+                        MastersOverY50 => byclass >= BirthYearClass::ClassY50Y59,
+                        MastersOverY60 => byclass >= BirthYearClass::ClassY60Y69,
                         MastersOverY70 => byclass == BirthYearClass::ClassY70Y999,
                     };
                     if matches {

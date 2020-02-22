@@ -4,8 +4,15 @@ use crate::Age;
 
 /// A BirthYearClass is similar to an AgeClass: instead of being based off Age,
 /// it is based off the BirthYear. This is primarily used by IPF federations.
-#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
+///
+/// The order of the definitions matters: OpenIPF uses >= comparisons for class matching.
+#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq, PartialOrd)]
 pub enum BirthYearClass {
+    /// No assignable BirthYearClass.
+    #[serde(rename = "")]
+    #[strum(serialize = "")]
+    None,
+
     /// From the year the lifter turns 14 and throughout the year the lifter turns 18.
     /// This is IPF "Sub-Juniors".
     #[serde(rename = "14-18")]
@@ -47,11 +54,6 @@ pub enum BirthYearClass {
     #[serde(rename = "70-999")]
     #[strum(serialize = "70-999")]
     ClassY70Y999,
-
-    /// No assignable BirthYearClass.
-    #[serde(rename = "")]
-    #[strum(serialize = "")]
-    None,
 }
 
 impl Default for BirthYearClass {
@@ -120,5 +122,24 @@ impl BirthYearClass {
     /// ```
     pub fn is_none(self) -> bool {
         self == BirthYearClass::None
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use BirthYearClass::*;
+
+    /// OpenIPF selectors use 40+, 50+, 60+, and 70+ for Masters.
+    /// This is implemented using ordered comparison, asserted here.
+    #[test]
+    fn test_openipf_class_ranges() {
+        assert!(None < ClassY14Y18);
+        assert!(ClassY14Y18 < ClassY19Y23);
+        assert!(ClassY19Y23 < ClassY24Y39);
+        assert!(ClassY24Y39 < ClassY40Y49);
+        assert!(ClassY40Y49 < ClassY50Y59);
+        assert!(ClassY50Y59 < ClassY60Y69);
+        assert!(ClassY60Y69 < ClassY70Y999);
     }
 }
