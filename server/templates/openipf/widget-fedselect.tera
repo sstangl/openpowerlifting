@@ -1,22 +1,22 @@
 <select id="fedselect">
-<option value="ipf-and-affiliates" {% if selection.federation == "IPFAndAffiliates" %}selected{% endif %}>All Affiliates</option>
-<option value="ipf-internationals" {% if selection.federation == "IPFInternationals" %}selected{% endif %}>All Internationals</option>
+<option value="ipf-and-affiliates" {% if selection.federation == "IPFAndAffiliates" %}selected{% endif %}>{{strings.selectors.fed.all_affiliates}}</option>
+<option value="ipf-internationals" {% if selection.federation == "IPFInternationals" %}selected{% endif %}>{{strings.selectors.fed.all_internationals}}</option>
 <optgroup label="{{strings.selectors.fed.international}}">
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF</option>
 </optgroup>
-<optgroup label="Continents">
-  <option value="africanpf" {% if selection.federation == "AfricanPF" %}selected{% endif %}>AfricanPF / Africa</option>
-  <option value="asianpf" {% if selection.federation == "AsianPF" %}selected{% endif %}>AsianPF / Asia</option>
-  <option value="epf" {% if selection.federation == "EPF" %}selected{% endif %}>EPF / Europe</option>
-  <option value="fesupo" {% if selection.federation == "FESUPO" %}selected{% endif %}>FESUPO / South America</option>
-  <option value="napf" {% if selection.federation == "NAPF" %}selected{% endif %}>NAPF / North America</option>
-  <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF / Oceania</option>
+<optgroup label="{{strings.selectors.fed.continents}}">
+  <option value="africanpf" {% if selection.federation == "AfricanPF" %}selected{% endif %}>AfricanPF / {{strings.country.africa}}</option>
+  <option value="asianpf" {% if selection.federation == "AsianPF" %}selected{% endif %}>AsianPF / {{strings.country.asia}}</option>
+  <option value="epf" {% if selection.federation == "EPF" %}selected{% endif %}>EPF / {{strings.country.europe}}</option>
+  <option value="fesupo" {% if selection.federation == "FESUPO" %}selected{% endif %}>FESUPO / {{strings.country.south_america}}</option>
+  <option value="napf" {% if selection.federation == "NAPF" %}selected{% endif %}>NAPF / {{strings.country.north_america}}</option>
+  <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF / {{strings.country.oceania}}</option>
 </optgroup>
 <optgroup label="{{strings.selectors.fed.regional}}">
   <option value="commonwealthpf" {% if selection.federation == "CommonwealthPF" %}selected{% endif %}>CommonwealthPF</option>
   <option value="nordicpf" {% if selection.federation == "NordicPF" %}selected{% endif %}>NordicPF</option>
 </optgroup>
-<optgroup label="Countries">
+<optgroup label="{{strings.selectors.fed.countries}}">
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP / {{strings.country.spain}}</option>
   <option value="aiwbpa" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA / {{strings.country.indonesia}}</option>
   <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU / {{strings.country.australia}}</option>

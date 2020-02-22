@@ -59,6 +59,13 @@
 		"num_lifters": "Lifters"
 	},
 	"country": {
+	    "africa": "Africa",
+	    "antarctica": "Antarctica",
+	    "asia": "Asia",
+	    "europe": "Europe",
+	    "south_america": "South America",
+	    "north_america": "North America",
+	    "oceania": "Oceania",
 	    "afghanistan": "Αφγανιστάν",
             "albania": "Αλβανία",
 	    "algeria": "Αλγερία",
@@ -305,6 +312,8 @@
 			"all_tested": "All Tested Lifters",
 			"international": "Διεθνείς",
 			"regional": "Τοπικές",
+			"continents": "Continents",
+			"countries": "Countries",
 			"all_usa": "Όλοι οι αθλητές των Ηνωμένων πολιτειών",
 			"all_argentina": " Όλοι οι αθλητές της Αργεντινής ",
 			"all_australia": " Όλοι οι αθλητές της Αυστραλίας",
@@ -364,10 +373,20 @@
 			"all_uk": " Όλοι οι αθλητές της Αγγλίας",
 			"all_uk_tested": "All Tested UK Lifters",
 			"all_ukraine": " Όλοι οι αθλητές της Ουκρανίας",
-			"all_vietnam": "All Vietnamese Lifters"
+			"all_vietnam": "All Vietnamese Lifters",
+			"all_affiliates": "All Affiliates",
+			"all_internationals": "All Internationals"
 		},
 		"ageclass": {
-			"all": "Όλες οι ηλικίες"
+			"all": "Όλες οι ηλικίες",
+			"ipf_open": "Open",
+			"ipf_subjunior": "Sub-Junior",
+			"ipf_junior": "Junior",
+			"ipf_senior": "Senior",
+			"ipf_master1": "Master I",
+			"ipf_master2": "Master II",
+			"ipf_master3": "Master III",
+			"ipf_master4": "Master IV"
 		}
 	},
 	"lifter_page": {

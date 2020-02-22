@@ -55,6 +55,13 @@
         "num_lifters": "选手"
     },
     "country": {
+	       "africa": "Africa",
+	       "antarctica": "Antarctica",
+	       "asia": "Asia",
+	       "europe": "Europe",
+	       "south_america": "South America",
+	       "north_america": "North America",
+	       "oceania": "Oceania",
         "afghanistan": "阿富汗",
         "albania": "阿尔巴尼亚",
         "algeria": "阿尔及利亚",
@@ -301,6 +308,8 @@
             "all_tested": "所有被药检选手",
             "international": "国际组织",
             "regional": "区域组织",
+	    "continents": "Continents",
+	    "countries": "Countries",
             "all_usa": "所有美国选手",
             "all_argentina": "所有阿根廷选手",
             "all_australia": "所有澳大利亚选手",
@@ -360,10 +369,20 @@
             "all_singapore": "所有新加坡选手",
             "all_thailand": "所有泰国选手",
             "all_vietnam": "所有越南选手",
+	    "all_affiliates": "All Affiliates",
+	    "all_internationals": "All Internationals",
             "all_iran": "所有伊朗选手"
         },
         "ageclass": {
-            "all": "所有年龄"
+            "all": "所有年龄",
+	    "ipf_open": "Open",
+	    "ipf_subjunior": "Sub-Junior",
+	    "ipf_junior": "Junior",
+	    "ipf_senior": "Senior",
+	    "ipf_master1": "Master I",
+	    "ipf_master2": "Master II",
+	    "ipf_master3": "Master III",
+	    "ipf_master4": "Master IV"
         }
     },
     "lifter_page": {

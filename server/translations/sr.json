@@ -58,6 +58,13 @@
 		"num_lifters": "Broj takmičara"
 	},
 	"country": {
+	    "africa": "Africa",
+	    "antarctica": "Antarctica",
+	    "asia": "Asia",
+	    "europe": "Europe",
+	    "south_america": "South America",
+	    "north_america": "North America",
+	    "oceania": "Oceania",
 	    "afghanistan": "Afghanistan",
             "albania": "Albania",
 	    "algeria": "Algeria",
@@ -304,6 +311,8 @@
 			"all_tested": "All Tested Lifters",
 			"international": "Međunarodno",
 			"regional": "Regionalno",
+			"continents": "Continents",
+			"countries": "Countries",
 			"all_usa": "Svi američki takmičari",
 			"all_argentina": "Svi argentinski takmičari",
 			"all_australia": "Svi australski takmičari",
@@ -363,10 +372,20 @@
 			"all_uk": "Svi britanski takmičari",
 			"all_uk_tested": "All Tested UK Lifters",
 			"all_ukraine": "Svi ukrajinski takmičari",
-			"all_vietnam": "All Vietnamese Lifters"
+			"all_vietnam": "All Vietnamese Lifters",
+			"all_affiliates": "All Affiliates",
+			"all_internationals": "All Internationals"
 		},
 		"ageclass": {
-			"all": "All Ages"
+			"all": "All Ages",
+			"ipf_open": "Open",
+			"ipf_subjunior": "Sub-Junior",
+			"ipf_junior": "Junior",
+			"ipf_senior": "Senior",
+			"ipf_master1": "Master I",
+			"ipf_master2": "Master II",
+			"ipf_master3": "Master III",
+			"ipf_master4": "Master IV"
 		}
 	},
 	"lifter_page": {

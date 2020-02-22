@@ -55,6 +55,13 @@
         "dots": "Dots"
     },
     "country": {
+	       "africa": "Africa",
+	       "antarctica": "Antarctica",
+	       "asia": "Asia",
+	       "europe": "Europe",
+	       "south_america": "South America",
+	       "north_america": "North America",
+	       "oceania": "Oceania",
         "afghanistan": "Afghanistan",
         "albania": "Albanien",
         "algeria": "Algerien",
@@ -297,6 +304,8 @@
             "all_tested": "Alle getesteten Starter",
             "international": "International",
             "regional": "Regional",
+	    "continents": "Continents",
+	    "countries": "Countries",
             "all_usa": "Alle US Starter",
             "all_argentina": "Alle argentinischen Starter",
             "all_australia": "Alle australischen Starter",
@@ -354,12 +363,22 @@
             "all_singapore": "Alle singapurischen Starter",
             "all_thailand": "Alle thailändischen Starter",
             "all_vietnam": "Alle vietnamesischen Starter",
+	    "all_affiliates": "All Affiliates",
+	    "all_internationals": "All Internationals",
             "all_iran": "Alle iranischen Starter",
             "all_georgia": "Alle georgischen Starter",
             "all_bosniaandherzegovina": "Alle Bosnien-Herzegowina"
         },
         "ageclass": {
-            "all": "Alle Altersklasse"
+            "all": "Alle Altersklasse",
+	    "ipf_open": "Open",
+	    "ipf_subjunior": "Sub-Junior",
+	    "ipf_junior": "Junior",
+	    "ipf_senior": "Senior",
+	    "ipf_master1": "Master I",
+	    "ipf_master2": "Master II",
+	    "ipf_master3": "Master III",
+	    "ipf_master4": "Master IV"
         }
     },
     "lifter_page": {

@@ -58,6 +58,13 @@
 		"num_lifters": "Kiom"
 	},
 	"country": {
+	    "africa": "Africa",
+	    "antarctica": "Antarctica",
+	    "asia": "Asia",
+	    "europe": "Europe",
+	    "south_america": "South America",
+	    "north_america": "North America",
+	    "oceania": "Oceania",
 	    "afghanistan": "Afganio",
             "albania": "Albanio",
 	    "algeria": "Alĝerio",
@@ -304,6 +311,8 @@
 			"all_tested": "Ĉiuj Forteguloj Kontraŭ-Drogaĉaj",
 			"international": "Internaciaj Federacioj",
 			"regional": "Regionaj Federacioj",
+			"continents": "Continents",
+			"countries": "Countries",
 			"all_usa": "Ĉiuj Usonaj Forteguloj",
 			"all_argentina": "Ĉiuj Argentinaj Forteguloj",
 			"all_australia": "Ĉiuj Aŭstraliaj Forteguloj",
@@ -363,10 +372,20 @@
 			"all_uk": "Ĉiuj Unuiĝinto-Reĝlandaj Forteguloj",
 			"all_uk_tested": "All Tested UK Lifters",
 			"all_ukraine": "Ĉiuj Ukrainiaj Forteguloj",
-			"all_vietnam": "All Vietnamese Lifters"
+			"all_vietnam": "All Vietnamese Lifters",
+			"all_affiliates": "All Affiliates",
+			"all_internationals": "All Internationals"
 		},
 		"ageclass": {
-			"all": "Ĉiuj Aĝoj"
+			"all": "Ĉiuj Aĝoj",
+			"ipf_open": "Open",
+			"ipf_subjunior": "Sub-Junior",
+			"ipf_junior": "Junior",
+			"ipf_senior": "Senior",
+			"ipf_master1": "Master I",
+			"ipf_master2": "Master II",
+			"ipf_master3": "Master III",
+			"ipf_master4": "Master IV"
 		}
 	},
 	"lifter_page": {
