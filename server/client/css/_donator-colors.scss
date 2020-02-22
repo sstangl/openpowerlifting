@@ -65,8 +65,14 @@
   @include name-color(#00AEFF);
 }
 
+// Like a baby blue.
 .lightblue {
   @include name-color(#43D1FF);
+}
+
+// A pleasant blue you'd find on a menu screen button.
+.waterblue {
+  @include name-color(#3B72FF);
 }
 
 .royalblue {
