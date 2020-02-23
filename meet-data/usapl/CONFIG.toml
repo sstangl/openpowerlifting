@@ -2,7 +2,7 @@
 
 # The USAPL is in such a bad state that it makes sense to partially-configure it.
 [options]
-    valid_since = "2018-01-01"
+    valid_since = "2017-12-01"
 
 [divisions]
     # Official division names are as described in an email from the USAPL
@@ -306,6 +306,7 @@
     IA-2014-01 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     IA-2015-02 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     NS-2015-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
+    NS-2017-04 = ["ExemptDivision"] # USAPL let a 38.5 lifter compete M1 (39.5-48.5).
     NS-2018-01 = ["ExemptDivision"] # Ashton Rouska wore Wraps in Single-ply.
     2019-03-03 = ["ExemptDivision"] # Amanda Lawrence was Raw in Single-ply.
     GA-2019-05 = ["ExemptDivision"] # Heavyweight/Lightweight.
