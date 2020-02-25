@@ -38,7 +38,7 @@
     wm2 = {name="wm2", min=50, max=59, sex='F'}
     wm3 = {name="wm3", min=60, max=69, sex='F'}
     wm4 = {name="wm4", min=70, max=999, sex='F'}
-    wm5 = {name="wm5", min=80, max=999, sex='F'}
+    wm5 = {name="wm5", min=40, max=999, sex='F'}
     wnov = {name="wnov", min=0, max=999, sex='F'}
     wpf = {name="wp+f", min=0, max=999, sex='F'}
     wpure = {name="wpure", min=0, max=999, sex='F'}
