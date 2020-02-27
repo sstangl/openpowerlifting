@@ -61,6 +61,7 @@ label {
   <pre id="entriesErrorPre"></pre>
   <button id="toKgButton">Convert to Kg</button>
   <button id="calcPlaceButton">Calculate Place</button>
+  <button id="standardiseCountriesButton">Standardise Countries</button>
   <label for="entries">entries.csv:</label>
   <textarea id="entriesTextArea" name="entries" rows="16" cols="120"></textarea>
 </body>
