@@ -214,6 +214,12 @@
     msm = {name="M-SM", min=35, max=38.5, sex="M", equipment="Single-ply"}
     fsm = {name="F-SM", min=35, max=38.5, sex="F", equipment="Single-ply"}
 
+    # Novice
+    mrnov = {name="MR-Nov", min=0, max=999, sex="M", equipment="Raw"}
+    frnov = {name="FR-Nov", min=0, max=999, sex="F", equipment="Raw"}
+    mnov = {name="M-Nov", min=0, max=999, sex="M", equipment="Single-ply"}
+    fnov = {name="F-Nov", min=0, max=999, sex="F", equipment="Single-ply"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2015-01-01","9999-01-01"]
@@ -291,3 +297,4 @@
     CO-2004-12-11 = ["ExemptWeightClassConsistency"] #Has 44kg and 48kg men's classes
     NS-2003-03-21 = ["ExemptDivision", "ExemptWeightClassConsistency"] #More specific HS divisions
     NS-2012-05-06 = ["ExemptWeightClassConsistency"] #Uses new weightclasses
+    SD-2001-03-03 = ["ExemptWeightClassConsistency"] #Has 145 & 145+
