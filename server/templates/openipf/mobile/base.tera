@@ -84,8 +84,11 @@
       <a href="javascript:void(0)" class="footer-hamburger" id="mobileMenuToggler"></a>
 
       {% block footer_middle_content %}
-        <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
+        <a class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
           <img class="header-logo" src="/static/images/{{statics::logo_gold_on_black_svg()}}" alt="OpenPowerlifting"/>
+        </a>
+        <a id="ipfMobileLogo" class="mobile-header-logo-link-openipf" href="https://www.powerlifting.sport">
+          <img class="header-logo" src="/static/images/{{statics::x_ipf_gold_svg()}}" alt="IPF"/>
         </a>
       {% endblock footer_middle_content %}
 
