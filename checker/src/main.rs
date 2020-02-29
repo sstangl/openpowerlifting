@@ -306,6 +306,34 @@ fn main() -> Result<(), Box<dyn Error>> {
     };
     maybe_print_elapsed_for("get_configurations()", timing);
 
+    let error_count = AtomicUsize::new(0);
+    let warning_count = AtomicUsize::new(0);
+
+    // Unexpected errors that occurred while reading files.
+    let internal_error_count = AtomicUsize::new(0);
+
+    // Check the lifter-data/ files.
+    let timing = get_instant_if(args.debug_timing);
+    let result = checker::check_lifterdata(&project_root.join("lifter-data"));
+    for report in result.reports {
+        let (errors, warnings) = report.count_messages();
+        if errors > 0 {
+            error_count.fetch_add(errors, Ordering::SeqCst);
+        }
+        if warnings > 0 {
+            warning_count.fetch_add(warnings, Ordering::SeqCst);
+        }
+
+        // Pretty-print any messages.
+        if report.has_messages() {
+            let stdout = io::stdout();
+            let mut handle = stdout.lock();
+            write_report(&mut handle, report);
+        }
+    }
+    let lifterdata = result.map;
+    maybe_print_elapsed_for("check_lifterdata()", timing);
+
     // Build a list of every directory containing meet results.
     let timing = get_instant_if(args.debug_timing);
     let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
@@ -313,12 +341,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         .filter_map(Result::ok)
         .filter(|entry| is_meetdir(entry))
         .collect();
-
-    let error_count = AtomicUsize::new(0);
-    let warning_count = AtomicUsize::new(0);
-
-    // Unexpected errors that occurred while reading files.
-    let internal_error_count = AtomicUsize::new(0);
 
     // Iterate in parallel over each meet directory and apply checks.
     let singlemeets: Vec<SingleMeetData> = meetdirs
@@ -330,7 +352,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             let config = configmap.get(meetpath);
 
             // Check the meet.
-            match checker::check(dir.path(), config) {
+            match checker::check(dir.path(), config, Some(&lifterdata)) {
                 Ok(checkresult) => {
                     let reports = checkresult.reports;
                     // Count how many new errors and warnings were generated.
@@ -389,26 +411,8 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Move out of atomics.
     let mut error_count = error_count.load(Ordering::SeqCst);
-    let mut warning_count = warning_count.load(Ordering::SeqCst);
+    let warning_count = warning_count.load(Ordering::SeqCst);
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
-
-    // Check the lifter-data/ files.
-    let timing = get_instant_if(args.debug_timing);
-    let result = checker::check_lifterdata(&project_root.join("lifter-data"));
-    for report in result.reports {
-        let (errors, warnings) = report.count_messages();
-        error_count += errors;
-        warning_count += warnings;
-
-        // Pretty-print any messages.
-        if report.has_messages() {
-            let stdout = io::stdout();
-            let mut handle = stdout.lock();
-            write_report(&mut handle, report);
-        }
-    }
-    let lifterdata = result.map;
-    maybe_print_elapsed_for("check_lifterdata()", timing);
 
     // Check for username errors.
     // FIXME: This adds a whole second to the checker time.

@@ -30,6 +30,10 @@ pub struct OptionConfig {
     /// Option that specifies the config only affects meets after a certain
     /// Date, allowing for partial federation configuration.
     pub valid_since: Option<Date>,
+
+    /// If set to true, pending disambiguations governed by this configuration
+    /// become errors.
+    pub require_manual_disambiguation: bool,
 }
 
 #[derive(Debug)]
@@ -121,6 +125,16 @@ impl Config {
     pub fn valid_since(&self) -> Option<Date> {
         self.options.as_ref()?.valid_since
     }
+
+    /// Returns options.require_manual_disambiguation if present, defaulting to
+    /// false.
+    pub fn does_require_manual_disambiguation(&self) -> bool {
+        if let Some(options) = &self.options {
+            options.require_manual_disambiguation
+        } else {
+            false
+        }
+    }
 }
 
 fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
@@ -144,7 +158,22 @@ fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
         None
     };
 
-    Some(OptionConfig { valid_since })
+    let mut require_manual_disambiguation = false;
+    if let Some(v) = table.get("require_manual_disambiguation") {
+        match v.as_bool() {
+            Some(b) => {
+                require_manual_disambiguation = b;
+            }
+            None => {
+                report.error("Value 'require_manual_disambiguation' must be a boolean");
+            }
+        }
+    }
+
+    Some(OptionConfig {
+        valid_since,
+        require_manual_disambiguation,
+    })
 }
 
 fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {

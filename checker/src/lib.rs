@@ -126,6 +126,7 @@ impl Report {
 pub fn check(
     meetdir: &Path,
     config: Option<&Config>,
+    lifterdata: Option<&LifterDataMap>,
 ) -> Result<CheckResult, Box<dyn Error>> {
     let mut acc = Vec::new();
 
@@ -140,6 +141,7 @@ pub fn check(
         meetdir.join("entries.csv"),
         meetresult.meet.as_ref(),
         config,
+        lifterdata,
     )?;
     if !entriesresult.report.messages.is_empty() {
         acc.push(entriesresult.report);

@@ -11,6 +11,7 @@ use std::io;
 use std::path::PathBuf;
 
 use crate::checklib::config::{Config, Exemption, WeightClassConfig};
+use crate::checklib::lifterdata::LifterDataMap;
 use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
@@ -1974,6 +1975,7 @@ pub fn do_check<R>(
     rdr: &mut csv::Reader<R>,
     meet: Option<&Meet>,
     config: Option<&Config>,
+    lifterdata: Option<&LifterDataMap>,
     mut report: Report,
 ) -> Result<EntriesCheckResult, Box<dyn Error>>
 where
@@ -1986,6 +1988,10 @@ where
     } else {
         config
     };
+
+    // Should pending disambiguations be errors?
+    let report_disambiguations =
+        config.map_or(false, |c| c.does_require_manual_disambiguation());
 
     // Scan for check exemptions.
     let exemptions = {
@@ -2326,6 +2332,27 @@ where
             }
         }
 
+        // If requested, report if the username requires disambiguation.
+        if report_disambiguations && !entry.username.is_empty() {
+            if let Some(datamap) = lifterdata {
+                match datamap.get(&entry.username) {
+                    Some(lifterdata) => {
+                        if lifterdata.disambiguation_count > 0 {
+                            let url = format!(
+                                "https://www.openpowerlifting.org/u/{}",
+                                entry.username
+                            );
+                            report.error_on(
+                                line,
+                                format!("Disambiguate {} ({})", entry.name, url),
+                            );
+                        }
+                    }
+                    None => {}
+                }
+            }
+        }
+
         if entry.name.is_empty() {
             report.error_on(line, "No Name was given or could be inferred");
         }
@@ -2351,7 +2378,7 @@ pub fn check_entries_from_string(
         .terminator(csv::Terminator::Any(b'\n'))
         .from_reader(entries_csv.as_bytes());
 
-    Ok(do_check(&mut rdr, meet, None, report)?)
+    Ok(do_check(&mut rdr, meet, None, None, report)?)
 }
 
 /// Checks a single entries.csv file by path.
@@ -2359,6 +2386,7 @@ pub fn check_entries(
     entries_csv: PathBuf,
     meet: Option<&Meet>,
     config: Option<&Config>,
+    lifterdata: Option<&LifterDataMap>,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);
@@ -2377,5 +2405,5 @@ pub fn check_entries(
         .terminator(csv::Terminator::Any(b'\n'))
         .from_path(&report.path)?;
 
-    Ok(do_check(&mut rdr, meet, config, report)?)
+    Ok(do_check(&mut rdr, meet, config, lifterdata, report)?)
 }

@@ -1,4 +1,8 @@
 # USPA uses exact birthdays for their age classes.
+
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
