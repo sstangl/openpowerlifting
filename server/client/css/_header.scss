@@ -9,10 +9,11 @@
   background-color: $header-background-color;
   color: $header-color;
 
-  padding-left: 8px;
   height: $header-height;
-  width: 100%;
   overflow: hidden;
+
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #header a.nav__link {
@@ -45,9 +46,6 @@
   align-items: center;
   margin-left: auto;
   height: $header-height;
-
-  /* Push it away from the top-right corner just a little. */
-  padding-right: 8px;
 }
 
 #header img.header-logo {
