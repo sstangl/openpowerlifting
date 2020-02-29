@@ -1,3 +1,5 @@
+# Configuration for the BPF.
+
 [divisions]
     m_open_raw = {name = "MOpe-Ra", min = 0, max = 999,sex='M',equipment='Raw'}
     m_t1_raw = {name = "MT-1-Ra", min = 13, max = 15,sex='M',equipment='Raw'}
