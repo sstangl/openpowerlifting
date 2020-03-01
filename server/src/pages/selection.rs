@@ -1049,6 +1049,7 @@ impl FromStr for EventSelection {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
+            "all-events" => Ok(EventSelection::AllEvents),
             "full-power" => Ok(EventSelection::FullPower),
             "push-pull" => Ok(EventSelection::PushPull),
             "squat-only" => Ok(EventSelection::SquatOnly),
