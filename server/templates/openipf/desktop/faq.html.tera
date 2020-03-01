@@ -17,13 +17,17 @@
 
 <p>This site is an IPF-specific frontend for the OpenPowerlifting database. The backend is exactly the same as OpenPowerlifting.</p>
 
+<h2>What's this site's relationship with the IPF?</h2>
+
+<p>OpenIPF is an official collaboration between OpenPowerlifting and the IPF.</p>
+
+<p>OpenPowerlifting is responsible for the content of this website, not the IPF. Although this site is IPF approved, we are not IPF officials and cannot speak on their behalf. The choices we make while developing this website do not imply that each choice carries IPF endorsement. We have pinky-sworn to not do silly things.</p>
+
 <h2>Why did you make an IPF-specific frontend?</h2>
 
-<p>Top IPF lifters did not interact much with the OpenPowerlifting website. That is problematic for us, because our accuracy depends on lifters using the database and reporting errors.</p>
+<p>The main OpenPowerlifting website is difficult to use for IPF lifters due to different rules. Because of that difficulty, not many IPF lifters interacted with our database. That is a problem for us, because we can't be accurate unless lifters are interacting with the database and reporting errors and omissions.</p>
 
-<p>We suspect this is because OpenPowerlifting's homepage uses defaults that are not applicable for the IPF. Although the IPF's categories can be selected by the website's controls, that takes a significant number of clicks and is a bad user experience. So we think the main site was just too difficult for IPF lifters to use, in a way that was not true for lifters from other federations.</p>
-
-<p>This site is set up so the defaults are what IPF lifters expect. We hope that by doing this, IPF lifters engage more with the data, and IPF affiliates get more motivated to work with us on archiving results.</p>
+<p>This site is set up so the defaults are what IPF lifters expect. We hope that by doing this, IPF lifters engage more with the data, and IPF affiliates get more motivated to work with us on archiving their results.</p>
 
 <h2>How do I send in my meet results?</h2>
 
