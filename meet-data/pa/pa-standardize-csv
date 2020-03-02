@@ -81,7 +81,10 @@ def remove_bottom_meet_info(csv):
         idx = getemptyidx(csv)
         if idx == -1:
             return
-        del csv.rows[idx]
+
+        # Delete everything after and including row `idx`.
+        while len(csv.rows) > idx:
+            del csv.rows[idx]
 
 
 # Some meets have "x" or "X" when lifts are missed or not taken.
@@ -266,7 +269,7 @@ def consume_first_column(csv):
 
     # Walk down the rows, storing and writing state from the first column.
     # Nuke the stateful rows as they're walked, for remove_empty_rows() later.
-    equipment = None
+    equipment = 'Raw'  # PA stopped supplying equipment info by default.
     weightclasskg = None
     event = 'SBD'
 
