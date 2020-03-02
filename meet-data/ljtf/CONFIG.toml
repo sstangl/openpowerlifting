@@ -10,6 +10,14 @@
     mrm3 = {name="MR-M3", min=59.5, max=68.5, sex="M", equipment="Raw"}
     mrm4 = {name="MR-M4", min=69.5, max=999, sex="M", equipment="Raw"}
 
+    mo = {name="M-O", min=0, max=999, sex="M", equipment="Single-ply"}
+    msj = {name="M-Sj", min=0, max=17.5, sex="M", equipment="Single-ply"}
+    mjr = {name="M-Jr", min=0, max=22.5, sex="M", equipment="Single-ply"}
+    mm1 = {name="M-M1", min=39.5, max=48.5, sex="M", equipment="Single-ply"}
+    mm2 = {name="M-M2", min=49.5, max=58.5, sex="M", equipment="Single-ply"}
+    mm3 = {name="M-M3", min=59.5, max=68.5, sex="M", equipment="Single-ply"}
+    mm4 = {name="M-M4", min=69.5, max=999, sex="M", equipment="Single-ply"}
+
     # USAPL-style divisions, women.
     fro = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
     frsj = {name="FR-Sj", min=0, max=17.5, sex="F", equipment="Raw"}
@@ -18,6 +26,14 @@
     frm2 = {name="FR-M2", min=49.5, max=58.5, sex="F", equipment="Raw"}
     frm3 = {name="FR-M3", min=59.5, max=68.5, sex="F", equipment="Raw"}
     frm4 = {name="FR-M4", min=69.5, max=999, sex="F", equipment="Raw"}
+
+    fo = {name="F-O", min=0, max=999, sex="F", equipment="Single-ply"}
+    fsj = {name="F-Sj", min=0, max=17.5, sex="F", equipment="Single-ply"}
+    fjr = {name="F-Jr", min=0, max=22.5, sex="F", equipment="Single-ply"}
+    fm1 = {name="F-M1", min=39.5, max=48.5, sex="F", equipment="Single-ply"}
+    fm2 = {name="F-M2", min=49.5, max=58.5, sex="F", equipment="Single-ply"}
+    fm3 = {name="F-M3", min=59.5, max=68.5, sex="F", equipment="Single-ply"}
+    fm4 = {name="F-M4", min=69.5, max=999, sex="F", equipment="Single-ply"}
 
     # Old-style divisions.
     open = {name ="Open",min=0,max=999}
@@ -42,13 +58,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["MR-Sj", "MR-Jr", "Junior", "Sub-Junior"]
+    divisions = ["MR-Sj", "MR-Jr", "M-Sj", "M-Jr", "Junior", "Sub-Junior"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["FR-Sj", "FR-Jr", "Junior", "Sub-Junior"]
+    divisions = ["FR-Sj", "FR-Jr", "F-Sj", "F-Jr", "Junior", "Sub-Junior"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
