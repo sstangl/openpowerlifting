@@ -55,13 +55,6 @@
         "dots": "Dots"
     },
     "country": {
-	       "africa": "Africa",
-	       "antarctica": "Antarctica",
-	       "asia": "Asia",
-	       "europe": "Europe",
-	       "south_america": "South America",
-	       "north_america": "North America",
-	       "oceania": "Oceania",
         "afghanistan": "Afghanistan",
         "albania": "Albanien",
         "algeria": "Algerien",
@@ -187,9 +180,9 @@
         "portugal": "Portugal",
         "puertorico": "Puerto Rico",
         "qatar": "Katar",
-        "romania": "Rumänien ",
+        "romania": "Rumänien",
         "russia": "Russland",
-        "rwanda": "Ruanda ",
+        "rwanda": "Ruanda",
         "samoa": "Samoa",
         "saudiarabia": "Saudi Arabien",
         "scotland": "Schottland",
@@ -198,7 +191,7 @@
         "singapore": "Singapur",
         "slovakia": "Slowakei",
         "slovenia": "Slowenien",
-        "solomonislands": "Salomoninseln ",
+        "solomonislands": "Salomoninseln",
         "southafrica": "Südafrika",
         "southkorea": "Südkorea",
         "spain": "Spanien",
@@ -238,9 +231,16 @@
         "westgermany": "Bundesrepublik Deutschland",
         "yugoslavia": "Jugoslawien",
         "zambia": "Sambia",
-        "zimbabwe": "Simbabwe ",
+        "zimbabwe": "Simbabwe",
         "bangladesh": "Bangladesch",
-        "eastgermany": "DDR"
+        "eastgermany": "DDR",
+        "africa": "Afrika",
+        "antarctica": "Antarktis",
+        "asia": "Asien",
+        "europe": "Europa",
+        "south_america": "Südamerika",
+        "north_america": "Nordamerika",
+        "oceania": "Ozeanien"
     },
     "buttons": {
         "search": "Suche"
@@ -304,8 +304,6 @@
             "all_tested": "Alle getesteten Starter",
             "international": "International",
             "regional": "Regional",
-	    "continents": "Continents",
-	    "countries": "Countries",
             "all_usa": "Alle US Starter",
             "all_argentina": "Alle argentinischen Starter",
             "all_australia": "Alle australischen Starter",
@@ -363,22 +361,24 @@
             "all_singapore": "Alle singapurischen Starter",
             "all_thailand": "Alle thailändischen Starter",
             "all_vietnam": "Alle vietnamesischen Starter",
-	    "all_affiliates": "All Affiliates",
-	    "all_internationals": "All Internationals",
             "all_iran": "Alle iranischen Starter",
             "all_georgia": "Alle georgischen Starter",
-            "all_bosniaandherzegovina": "Alle Bosnien-Herzegowina"
+            "all_bosniaandherzegovina": "Alle Bosnien-Herzegowina",
+            "continents": "Kontinente",
+            "countries": "Länder",
+            "all_affiliates": "Alle Verbände",
+            "all_internationals": "Alle internationalen Wettkämpfe"
         },
         "ageclass": {
-            "all": "Alle Altersklasse",
-	    "ipf_open": "Open",
-	    "ipf_subjunior": "Sub-Junior",
-	    "ipf_junior": "Junior",
-	    "ipf_senior": "Senior",
-	    "ipf_master1": "Master I",
-	    "ipf_master2": "Master II",
-	    "ipf_master3": "Master III",
-	    "ipf_master4": "Master IV"
+            "all": "Alle Altersklassen",
+            "ipf_open": "Alle Altersklassen",
+            "ipf_subjunior": "Jugend",
+            "ipf_junior": "Junioren",
+            "ipf_senior": "Aktive",
+            "ipf_master1": "AK I",
+            "ipf_master2": "AK II",
+            "ipf_master3": "AK III",
+            "ipf_master4": "AK IV"
         }
     },
     "lifter_page": {
@@ -386,7 +386,7 @@
         "competition_results": "Wettkampfsergebnisse"
     },
     "html_header": {
-        "description": "Das Ziel des OpenPowerlifting Projekt ist es ein nachhaltiges, korrektes, bequemes, leicht zugängliches und offenes Archiv von Kraftdreikampf Daten aus aller Welt zu schaffen. "
+        "description": "Das Ziel des OpenPowerlifting Projekt ist es ein nachhaltiges, korrektes, bequemes, leicht zugängliches und offenes Archiv von Kraftdreikampf Daten aus aller Welt zu schaffen."
     },
     "labels": {
         "sort": "sortieren",
