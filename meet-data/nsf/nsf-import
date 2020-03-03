@@ -355,6 +355,10 @@ def main(url):
         calc_best_lift(entriescsv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
+    if 'BirthDate' not in entriescsv.fieldnames:
+        index = entriescsv.index('Name') + 1
+        entriescsv.insert_column(index, 'BirthDate')
+
     # Figure out event information.
     markevent(entriescsv)
 
