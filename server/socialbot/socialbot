@@ -25,8 +25,14 @@ function send_message {
                 --data-urlencode "content=${2}"
 }
 
-# Update Instagram stats.
-INSTAGRAM_MESSAGE=$(python3 "${SCRIPTDIR}/parse-instagram.py")
-if [[ ! -z "$INSTAGRAM_MESSAGE" ]]; then
-	send_message "Instagram Stats" "$INSTAGRAM_MESSAGE"
-fi
+# Posts follower counts to the Zulip chat for the IG account in "$1".
+function post_for {
+	INSTAGRAM_MESSAGE=$(python3 "${SCRIPTDIR}/parse-instagram.py" "$1")
+	if [[ ! -z "$INSTAGRAM_MESSAGE" ]]; then
+		send_message "Instagram Stats" "$INSTAGRAM_MESSAGE"
+	fi
+}
+
+# Post all our accounts into chat.
+post_for "openpowerlifting"
+post_for "openipf"

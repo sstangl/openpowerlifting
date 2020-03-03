@@ -5,7 +5,7 @@ import datetime
 import urllib.request
 import random
 
-URL = "https://www.instagram.com/openpowerlifting/"
+URL_BASE = "https://www.instagram.com/"
 
 LABELS = [
     "graph enthusiasts"
@@ -30,13 +30,14 @@ def get_date():
     return str(today)
 
 
-def main():
-    html = get_html(URL)
+def main(ig_account):
+    html = get_html(URL_BASE + ig_account)
     followers = get_followers(html)
     date = get_date()
     label = random.choice(LABELS)
-    print(date + ": **" + '{:,}'.format(followers) + "** " + label)
+    print(date + ": (@" + ig_account + ") **" + '{:,}'.format(followers) + "** " + label)
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(sys.argv[1])
