@@ -2251,7 +2251,14 @@ impl Federation {
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
             Federation::KPF => Federation::ipf_rules_on(date),
-            Federation::KRAFT => Federation::ipf_rules_on(date),
+            Federation::KRAFT => {
+                // On 2020-03-04, KRAFT announced that they voted for Dots since 02-29.
+                if date >= Date::from_parts(2020, 02, 29) {
+                    PointsSystem::Dots
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::KuwaitPL => PointsSystem::Wilks,
             Federation::LGBT => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
