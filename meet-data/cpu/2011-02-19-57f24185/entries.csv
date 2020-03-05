@@ -1,25 +1,30 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,William Bolduc,QC,88.9,93,Sub-Juniors,152.5,70.0,185.0,407.5,Single-ply,1
-SBD,M,Dereck Tremblay,QC,76.2,83,Sub-Juniors,240.0,132.5,240.0,612.5,Single-ply,1
-SBD,M,Nicolas Rioux,QC,52.9,53,Sub-Juniors,85.0,45.0,120.0,250.0,Single-ply,1
-SBD,M,Jean-François Caron #1,QC,108.7,120,Sub-Juniors,227.5,105.0,227.5,560.0,Single-ply,1
-SBD,M,J-Philippe Lachance,QC,92.1,93,Open,200.0,147.5,242.5,590.0,Single-ply,1
-SBD,M,Alexandre Girard,QC,90.7,93,Open,165.0,150.0,200.0,515.0,Single-ply,3
-SBD,M,Alan Boudreault,QC,84.5,93,Open,182.5,132.5,205.0,520.0,Single-ply,2
-SBD,M,Stéphane Chiquette,QC,79.3,83,Open,210.0,155.0,215.0,580.0,Single-ply,1
-SBD,F,Jessica Benedetto,QC,54.1,57,Open,125.0,85.0,120.0,330.0,Single-ply,1
-SBD,M,Michel Lebrun,QC,107.3,120,Open,237.5,187.5,275.0,700.0,Single-ply,1
-SBD,M,Olivier André,QC,103.5,105,Open,265.0,227.5,255.0,747.5,Single-ply,1
-SBD,M,Jonathan Gilbert,QC,98.6,105,Open,240.0,150.0,265.0,655.0,Single-ply,2
-SBD,M,Raymond White,QC,99.4,105,Masters 2,182.5,147.5,150.0,480.0,Single-ply,1
-SBD,M,Francis Rousseau,QC,122.3,120+,Masters 1,330.0,247.5,287.5,865.0,Single-ply,1
-SBD,M,Jacques Potvin,QC,97.5,105,Masters 1,230.0,197.5,250.0,677.5,Single-ply,1
-SBD,M,Benoît Leboeuf,QC,89.4,93,Juniors,162.5,102.5,227.5,492.5,Single-ply,1
-SBD,M,Yann Tremblay,QC,81.5,83,Juniors,182.5,132.5,210.0,525.0,Single-ply,1
-SBD,F,Jessica Thériault,QC,58.9,63,Juniors,125.0,55.0,115.0,295.0,Single-ply,1
-SBD,M,Pierre-Luc Bouchard,QC,98.8,105,Juniors,182.5,112.5,275.0,570.0,Single-ply,2
-SBD,M,Francis Claveau,QC,98.4,105,Juniors,292.5,210.0,282.5,785.0,Single-ply,1
-B,M,Jonathan Simard,QC,81.7,83,Open,,175.0,,175.0,Single-ply,1
-B,M,Alexandre Gagné,QC,82.2,83,Open,,122.5,,122.5,Single-ply,2
-B,M,Richard Lapointe,QC,75.2,83,Masters 3,,120.0,,120.0,Single-ply,1
-B,M,Dale B. Bouffard,QC,81.0,83,Juniors,,205.0,,205.0,Single-ply,1
+Sex,Name,BirthDate,BodyweightKg,Equipment,Division,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Place
+F,Jessica Benedetto,,54.1,Single-ply,Open,57,125,-135,-135,125,85,-93,-93,85,-97.5,97.5,120,120,330,SBD,1
+F,Jessica Thériault,,58.9,Single-ply,Juniors,63,110,-125,125,125,52.5,55,-57.5,55,115,-135,-142.5,115,295,SBD,1
+F,Savanah Porzuczek,,57.3,Single-ply,Juniors,63,-120,-135,-140,,57.5,62.5,-65,62.5,,,,,,SBD,DQ
+F,Geneviève Brassard,,68.6,Single-ply,Juniors,72,-120,-120,-135,,42.5,-47.5,-47.5,42.5,102.5,125,-137.5,125,,SBD,DQ
+M,Nicolas Rioux,,52.9,Single-ply,Sub-Juniors,53,77.5,80,85,85,42.5,45,-47.5,45,105,115,120,120,250,SBD,1
+M,Alexandre Gilbert,,53.1,Single-ply,Sub-Juniors,59,80,85,-97.5,85,-52.5,-57.5,-57.5,,92.5,115,135,135,,SBD,DQ
+M,Simon Miller,,58.6,Single-ply,Sub-Juniors,59,115,122.5,-125,122.5,-95,-100,-100,,,,,,,SBD,DQ
+M,Alexandre Tremblay,,69.1,Single-ply,Sub-Juniors,74,-175,-175,-192.5,,,,,,,,,,,SBD,DQ
+M,Dereck Tremblay,,76.2,Single-ply,Sub-Juniors,83,-220,230,240,240,122.5,132.5,-142.5,132.5,230,240,-265,240,612.5,SBD,1
+M,Yann Tremblay,,81.5,Single-ply,Juniors,83,165,175,182.5,182.5,132.5,-142.5,-147.5,132.5,210,-227.5,,210,525,SBD,1
+M,Stéphane Chiquette,,79.3,Single-ply,Open,83,192.5,200,210,210,147.5,155,-167.5,155,200,215,-230,215,580,SBD,1
+M,William Bolduc,,88.9,Single-ply,Sub-Juniors,93,80,135,152.5,152.5,45,70,-85,70,100,160,185,185,407.5,SBD,1
+M,Jean-Philippe Lachance,,92.1,Single-ply,Open,93,185,195,200,200,132.5,142.5,147.5,147.5,225,235,242.5,242.5,590,SBD,1
+M,Alan Boudreault,,84.5,Single-ply,Open,93,182.5,-192.5,-200,182.5,125,132.5,-142.5,132.5,205,-215,-215,205,520,SBD,2
+M,Alexandre Girard,,90.7,Single-ply,Open,93,142.5,150,165,165,142.5,150,-157.5,150,185,192.5,200,200,515,SBD,3
+M,Francis Claveau,,98.4,Single-ply,Juniors,105,-292.5,292.5,-317.5,292.5,210,-227.5,-227.5,210,265,-280,282.5,282.5,785,SBD,1
+M,Pierre-Luc Bouchard,,98.8,Single-ply,Juniors,105,182.5,-190,-192.5,182.5,102.5,105,112.5,112.5,250,265,275,275,570,SBD,2
+M,Olivier André,,103.5,Single-ply,Open,105,265,-272.5,-277.5,265,-227.5,227.5,-232.5,227.5,235,-245,255,255,747.5,SBD,1
+M,Jonathan Gilbert,,98.6,Single-ply,Open,105,215,230,240,240,150,-165,,150,250,265,-272.5,265,655,SBD,2
+M,Jacques Potvin,,97.5,Single-ply,Masters 1,105,230,-237.5,-250,230,185,195,197.5,197.5,232.5,237.5,250,250,677.5,SBD,1
+M,Rémy Dufour,,103,Single-ply,Masters 1,105,-180,-180,-180,,155,165,170,170,220,230,240,240,,SBD,DQ
+M,Raymond White,,99.4,Single-ply,Masters 2,105,182.5,-195,-195,182.5,145,-147.5,147.5,147.5,150,-152.5,-152.5,150,480,SBD,1
+M,Jean-François Caron,,108.7,Single-ply,Sub-Juniors,120,205,215,227.5,227.5,85,-100,105,105,182.5,210,227.5,227.5,560,SBD,1
+M,Michel Lebrun,,107.5,Single-ply,Open,120,210,-227.5,237.5,237.5,170,182.5,187.5,187.5,247.5,262.5,275,275,700,SBD,1
+M,Francis Rousseau,,122.3,Single-ply,Masters 1,120+,305,330,-347.5,330,227.5,237.5,247.5,247.5,272.5,285,287.5,287.5,865,SBD,1
+M,Richard Lapointe,,72.5,Single-ply,Masters 3,74,,,,,110,120,-130,120,,,,,120,B,1
+M,Dale Bélanger-Bouffard,,81,Single-ply,Juniors,83,,,,,195,205,-210,205,,,,,205,B,1
+M,Jonathan Simard,,81.7,Single-ply,Open,83,,,,,175,-182.5,-185,175,,,,,175,B,1
+M,Alexandre Gagné,,82.2,Single-ply,Open,83,,,,,112.5,122.5,-137.5,122.5,,,,,122.5,B,2

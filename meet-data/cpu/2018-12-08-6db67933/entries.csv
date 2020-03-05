@@ -1,28 +1,31 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Gabriel Leclerc,QC,57.7,59,Sub-Juniors,125,82.5,165,372.5,Raw,1
-SBD,F,Marie-Li Dion,QC,57,57,Sub-Juniors,105,78,125,308,Raw,1
-SBD,M,Samuel Proulx,QC,89.5,93,Open,177.5,100,227.5,505,Raw,4
-SBD,M,Nicolas Ghantous,QC,89.1,93,Open,207.5,122.5,217.5,547.5,Raw,3
-SBD,M,Maxime Simard,QC,84.7,93,Open,175,125,192.5,492.5,Raw,5
-SBD,M,Léon-Pierre Dufour,QC,93,93,Open,195,135,227.5,557.5,Raw,2
-SBD,M,Francois Watts,QC,91.7,93,Open,195,137.5,230,562.5,Raw,1
-SBD,F,Klarisse Carbon,QC,94.1,84+,Open,142.5,77.5,170,390,Raw,1
-SBD,F,Audrey Picard-Lafond,QC,109.1,84+,Open,107.5,55,127.5,290,Raw,2
-SBD,M,Jonathan Dupuis,QC,82.4,83,Open,217.5,167.5,250,635,Raw,1
-SBD,M,Jason Latulippe,QC,79.2,83,Open,200,125,235,560,Raw,3
-SBD,M,David Tremblay,QC,79.9,83,Open,202.5,155,215,572.5,Raw,2
-SBD,F,Julie Bourgeault,QC,69,72,Open,105,67.5,122.5,295,Raw,1
-SBD,M,Joan Qendro,QC,112.1,120,Open,262.5,167.5,317.5,747.5,Raw,1
-SBD,M,Guillaume Vallières,QC,97.7,105,Open,215,145,235,595,Raw,1
-SBD,M,David Stephen,QC,95.6,105,Open,185,105,217.5,507.5,Raw,2
-SBD,F,Josee Rodrigue,QC,69.6,72,Masters 2,80,40,100,220,Raw,1
-SBD,M,Pyoter Radishevsky,QC,72.6,74,Masters 1,175,120,195,490,Raw,1
-SBD,M,Thomas Laliberté,QC,87.9,93,Juniors,160,132.5,207.5,500,Raw,2
-SBD,M,Guillaume Audet-Fortin,QC,89.9,93,Juniors,202.5,135,202.5,540,Raw,1
-SBD,M,Matteo Fiasconaro,QC,79.2,83,Juniors,160,110,202.5,472.5,Raw,2
-SBD,M,Alexandre Girard,QC,81,83,Juniors,175,117.5,217.5,510,Raw,1
-SBD,M,Charles Dumont,QC,71.5,74,Juniors,125,90,160,375,Raw,1
-B,F,Karyne Turcotte,QC,64.7,72,Open,,55,,55,Raw,1
-B,M,Gregory Tabone,QC,99.3,105,Open,,145,,145,Raw,1
-B,M,Alexandre Consigny,QC,102.1,105,Open,,140,,140,Raw,2
-B,M,Marc-Antoine Michaud,QC,59,59,Juniors,,92.5,,92.5,Raw,1
+Sex,Name,BirthDate,BodyweightKg,Equipment,Division,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Place
+F,Marie-Li Dion,,57,Raw,Sub-Juniors,57,95,100,105,105,72.5,76,78,78,125,-132.5,,125,308,SBD,1
+F,Julie Bourgeault,,69,Raw,Open,72,100,105,-110,105,62.5,67.5,-75,67.5,107.5,117.5,122.5,122.5,295,SBD,1
+F,Josee Rodrigue,,69.6,Raw,Masters 2,72,70,-75,80,80,32.5,37.5,40,40,85,95,100,100,220,SBD,1
+F,Klarisse Carbon,,94.1,Raw,Open,84+,-135,-137.5,142.5,142.5,67.5,72.5,77.5,77.5,150,160,170,170,390,SBD,1
+F,Audrey Picard-Lafond,,109.1,Raw,Open,84+,97.5,-105,107.5,107.5,50,52.5,55,55,127.5,-132.5,-132.5,127.5,290,SBD,2
+M,Gabriel Leclerc,,57.7,Raw,Sub-Juniors,59,-125,125,-135,125,-72.5,82.5,-92.5,82.5,142.5,157.5,165,165,372.5,SBD,1
+M,Charles Dumont,,71.5,Raw,Juniors,74,110,-117.5,125,125,85,90,-95,90,-142.5,150,160,160,375,SBD,1
+M,Antoine-Pierre Hainault,,71.35,Raw,Open,74,170,-185,-185,170,-135,-135,-137.5,,-215,215,-217.5,215,,SBD,DQ
+M,Pyoter Radishevsky,,72.55,Raw,Masters 1,74,155,165,175,175,110,115,120,120,175,185,195,195,490,SBD,1
+M,Alexandre Girard,,81,Raw,Juniors,83,162.5,175,-185,175,117.5,-127.5,-132.5,117.5,202.5,217.5,-227.5,217.5,510,SBD,1
+M,Matteo Fiasconaro,,79.2,Raw,Juniors,83,155,160,-172.5,160,105,110,-117.5,110,190,197.5,202.5,202.5,472.5,SBD,2
+M,Jonathan Dupuis,,82.35,Raw,Open,83,205,-217.5,217.5,217.5,160,167.5,-172.5,167.5,235,245,250,250,635,SBD,1
+M,David Tremblay,,79.85,Raw,Open,83,187.5,-195,202.5,202.5,140,150,155,155,192.5,205,215,215,572.5,SBD,2
+M,Jason Latulippe,,79.2,Raw,Open,83,185,195,200,200,115,120,125,125,225,235,-245,235,560,SBD,3
+M,Guillaume Audet-Fortin,,89.9,Raw,Juniors,93,190,-202.5,202.5,202.5,125,132.5,135,135,180,190,202.5,202.5,540,SBD,1
+M,Thomas Laliberté,,87.9,Raw,Juniors,93,152.5,160,-170,160,117.5,125,132.5,132.5,175,195,207.5,207.5,500,SBD,2
+M,Rahim Dad Ahmad Zaki,,87.3,Raw,Juniors,93,-140,-140,-140,,90,95,105,105,175,-185,-185,175,,SBD,DQ
+M,Francois Watts,,91.7,Raw,Open,93,175,185,195,195,122.5,130,137.5,137.5,210,220,230,230,562.5,SBD,1
+M,Léon-Pierre Dufour,,93,Raw,Open,93,177.5,187.5,195,195,122.5,130,135,135,200,215,227.5,227.5,557.5,SBD,2
+M,Nicolas Ghantous,,89.1,Raw,Open,93,195,200,207.5,207.5,117.5,122.5,-132.5,122.5,195,210,217.5,217.5,547.5,SBD,3
+M,Samuel Proulx,,89.45,Raw,Open,93,167.5,177.5,-187.5,177.5,95,100,-105,100,205,215,227.5,227.5,505,SBD,4
+M,Maxime Simard,,84.7,Raw,Open,93,165,175,-185,175,107.5,115,125,125,182.5,192.5,-215,192.5,492.5,SBD,5
+M,Gabriel Landry,,88.7,Raw,Open,93,170,185,-190,185,-115,-130,-130,,170,190,-210,190,,SBD,DQ
+M,Guillaume Vallières,,97.65,Raw,Open,105,195,210,215,215,135,145,-150,145,225,230,235,235,595,SBD,1
+M,David Stephen,,95.55,Raw,Open,105,-172.5,172.5,185,185,105,-110,-110,105,207.5,217.5,-227.5,217.5,507.5,SBD,2
+M,Joan Qendro,,112.1,Raw,Open,120,245,-260,262.5,262.5,155,160,167.5,167.5,285,305,317.5,317.5,747.5,SBD,1
+F,Karyne Turcotte,,64.7,Raw,Open,72,,,,,45,50,55,55,,,,,55,B,1
+M,Marc-Antoine Michaud,,59,Raw,Juniors,59,,,,,92.5,-103,-103,92.5,,,,,92.5,B,1
+M,Gregory Tabone,,99.3,Raw,Open,105,,,,,130,140,145,145,,,,,145,B,1
+M,Alexandre Consigny,,102.1,Raw,Open,105,,,,,125,135,140,140,,,,,140,B,2

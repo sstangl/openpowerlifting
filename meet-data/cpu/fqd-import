@@ -154,6 +154,7 @@ def parsehtml(html):
                 idx = entriescsv.index(colkind)
 
                 text = td.text.strip()
+                text = text.replace('\nNovice', '')
                 if text == '-':
                     continue  # Leave missing fields blank (skipped lifts, etc).
 
