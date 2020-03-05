@@ -1,5 +1,8 @@
 # Configuration for NZPF.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     novice = {name ="Novice",min=0,max=999}
