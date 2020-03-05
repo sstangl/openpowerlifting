@@ -1,4 +1,9 @@
 # AusPL uses exact birthdays for their age classes.
+
+[options]
+    require_manual_disambiguation = true
+
+
 [divisions]
     # IPL-style divisions (2019+)
     open = {name = "Open", min = 0, max = 999}

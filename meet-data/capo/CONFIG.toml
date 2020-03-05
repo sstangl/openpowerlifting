@@ -1,5 +1,9 @@
 # Configuration for CAPO.
 
+[options]
+    require_manual_disambiguation = true
+
+
 [divisions]
     mor    = {name ="MO-R",min=0,max=999,sex="M", equipment="Raw"}
     morp   = {name ="MO-RP",min=0,max=999,sex="M", equipment="Wraps"}
