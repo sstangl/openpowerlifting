@@ -298,4 +298,5 @@
     NS-2003-03-21 = ["ExemptDivision", "ExemptWeightClassConsistency"] #More specific HS divisions
     NS-2012-05-06 = ["ExemptWeightClassConsistency"] #Uses new weightclasses
     SD-2001-03-03 = ["ExemptWeightClassConsistency"] #Has 145 & 145+
-    MI-2001-02-10 = ["ExemptWeightClassConsistency"] #Has 145 & 145+
+    MI-2001-02-10-A = ["ExemptWeightClassConsistency"] #Has 145 & 145+
+    MI-2001-02-10-B = ["ExemptWeightClassConsistency"] #Has 145
