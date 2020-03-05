@@ -344,6 +344,8 @@ def main(url):
     # Figure out event information.
     markevent(entriescsv)
 
+    entriescsv.append_column('BirthDate')
+
     try:
         os.makedirs(dirname)
     except OSError as exception:
