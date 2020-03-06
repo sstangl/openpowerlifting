@@ -1,6 +1,6 @@
 JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,BirthYear,Team,Division,Event,Equipment,Place
 藤田 海斗,Kaito Fujita,53,M,52.15,75,80,-85,80,80,2001,浦和学院高校パワーリフティング部,Sub-Juniors,B,Raw,1
-平山 秋繁,,53,M,53,75,80,-85,80,80,2001,厚木商業高校,Sub-Juniors,B,Raw,2
+平山 秋繁,Akito Hirayama,53,M,53,75,80,-85,80,80,2001,厚木商業高校,Sub-Juniors,B,Raw,2
 久米 亮平,Ryohei Kume,59,M,58.65,157.5,162.5,167.5,167.5,167.5,1988,S.O.L,Open,B,Raw,1
 森木 翼,Tsubasa Moriki,59,M,58.05,150,160,165,165,165,1999,マッスルプロダクション,Juniors,B,Raw,1
 井上 卓,,59,M,58.05,155,160,162.5,162.5,162.5,1985,個人,Open,B,Raw,2
@@ -61,7 +61,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 浜山 久雄,Hisao Hamayama,59,M,58.5,105,-110,-112.5,105,105,1947,新日鐵住金名古屋,Masters 4,B,Raw,2
 信野 守彦,,59,M,54.85,-90,90,-100,90,90,1946,個人,Masters 4,B,Raw,3
 竹井 保満,Yasumitsu Takei,59,M,57.4,55,60,-62.5,60,60,1928,烈剛河内,Masters 4,B,Raw,4
-齊藤 敬太,Keita Seito,66,M,65.95,167.5,175,182.5,182.5,182.5,1982,BURST LIMIT,Open,B,Raw,1
+齊藤 敬太,Keita Saito,66,M,65.95,167.5,175,182.5,182.5,182.5,1982,BURST LIMIT,Open,B,Raw,1
 福田 将志,Masashi Fukuda,66,M,66,162.5,170,-177.5,170,170,1984,ストロングライン,Open,B,Raw,2
 山村 喜代将,,66,M,65.45,165,-170,-170,165,165,1991,チーム愛媛,Open,B,Raw,3
 髙橋 勇二,,66,M,65.6,165,-172.5,-172.5,165,165,1983,帝京平成大学千葉ベンチプレスサークル,Open,B,Raw,4
@@ -76,7 +76,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 川上 薫寛,,66,M,65.05,117.5,122.5,125,125,125,1993,チームみそカツ,Open,B,Raw,13
 佐藤 駿之介,,66,M,63.6,110,120,-125,120,120,1994,B.A.D.,Open,B,Raw,14
 藤井 宏介,,66,M,65.5,120,-125,-127.5,120,120,1985,BTC,Open,B,Raw,15
-亀谷 充男,,66,M,65.5,-157.5,-157.5,-157.5,,,1971,広島県 瀬野川トレーニングクラブ 失格,Masters 1,B,Raw,DQ
+亀谷 充男,Mitsuo Kametani,66,M,65.5,-157.5,-157.5,-157.5,,,1971,広島県 瀬野川トレーニングクラブ 失格,Masters 1,B,Raw,DQ
 鈴木 康太,,66,M,65.35,-142.5,-142.5,-142.5,,,1982,THE CHAMPIONS,Open,B,Raw,DQ
 本堂 正達,Masatatsu Hondo,66,M,65.4,-180,-180,-180,,,1995,個人,Open,B,Raw,DQ
 宮田 匡人,,66,M,,,,,,,1981,フジモトジム,Open,B,Raw,DQ
@@ -84,7 +84,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 牛山 恭太,Kyota Ushiyama,66,M,65.7,140,145,-150,145,145,1997,ハイテク,Juniors,B,Raw,2
 宮本 佳樹,,66,M,65.9,135,142.5,-147.5,142.5,142.5,1999,個人,Juniors,B,Raw,3
 三井 靖也,,66,M,65.5,125,-135,135,135,135,1996,関東学連・国際武道大学,Juniors,B,Raw,4
-鈴木 武虎,,66,M,65.8,127.5,-135,135,135,135,1999,ストロングライン,Juniors,B,Raw,5
+鈴木 武虎,Taketora Suzuki,66,M,65.8,127.5,-135,135,135,135,1999,ストロングライン,Juniors,B,Raw,5
 菱沼 駿,,66,M,64.95,117.5,125,-130,125,125,1997,宮城県 仙台市体育館パワーリフティングクラブ,Juniors,B,Raw,6
 松浦 一樹,,66,M,65.6,122.5,-130,-130,122.5,122.5,1998,帝京平成大学千葉ベンチプレスサークル,Juniors,B,Raw,7
 名城 幸也,,66,M,66,110,115,-117.5,115,115,1996,ACTOR,Juniors,B,Raw,8
@@ -221,7 +221,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 下山 洋二,,74,M,71.85,110,117.5,-122.5,117.5,117.5,1951,横濱ベンチラバーズ Masters 3,Open,B,Raw,26
 勝又 秀夫,,74,M,71.6,-90,90,95,95,95,1950,ストロングライン,Masters 3,B,Raw,7
 鷹野 和美,,74,M,72.2,80,85,-90,85,85,1957,Ｉ．Ｗ．ＧＧ,Masters 3,B,Raw,8
-林 靖弘,,74,M,73.1,-140,-145,-149,,,1956,石川県 マッスルプロダクション石川,Masters 3,B,Raw,DQ
+林 靖弘,Yasuhiro Hayashi,74,M,73.1,-140,-145,-149,,,1956,石川県 マッスルプロダクション石川,Masters 3,B,Raw,DQ
 山本 茂樹,Shigeki Yamamoto,74,M,72.1,117.5,122.5,127.5,127.5,127.5,1943,ストロングライン,Masters 4,B,Raw,1
 諸星 孝夫,,74,M,72.9,105,110,-117.5,110,110,1945,湘南BP,Masters 4,B,Raw,2
 三木 宣彦,,74,M,72.7,90,-95,95,95,95,1939,チトフナ パワークラブ Masters 4,Open,B,Raw,31
@@ -261,7 +261,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 酒井 康行,Yasuyuki Sakai,83,M,82.8,177.5,-185,187.5,187.5,187.5,1973,フジモトジム,Masters 1,B,Raw,1
 高取 征爾,,83,M,82.75,182.5,-187.5,-187.5,182.5,182.5,1975,ゴールドジム名古屋金山 Masters 1,Open,B,Raw,7
 清水 達也,,83,M,82.1,170,180,-185,180,180,1971,サン笠寺,Masters 1,B,Raw,3
-安江 三千夫,,83,M,82.2,180,-185,-185,180,180,1970,THE STRONGEST WARRIORS Masters 1,Open,B,Raw,9
+安江 三千夫,Michio Yasue,83,M,82.2,180,-185,-185,180,180,1970,THE STRONGEST WARRIORS Masters 1,Open,B,Raw,9
 久保田 淳,,83,M,82.5,172.5,177.5,-180,177.5,177.5,1976,個人,Masters 1,B,Raw,4
 齋藤 大介,,83,M,82.7,160,-165,-165,160,160,1970,TETSUBEYA,Masters 1,B,Raw,5
 渡邊 勝也,,83,M,82.75,150,155,160,160,160,1973,TXP,Masters 1,B,Raw,6
@@ -298,7 +298,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 岡本 弘行,,83,M,82.3,100,-107.5,107.5,107.5,107.5,1969,個人,Masters 2,B,Raw,13
 軽部 敏浩,,83,M,,,,,,,1965,港腕パワークラブ,Masters 2,B,Raw,DQ
 猪須 純一,Junichi Isu,83,M,81.7,157.5,166,-170,166,166,1954,トレーニングジムフリーウエイト Masters 3,Open,B,Raw,12
-飯島 修,,83,M,81.4,145,147.5,-150,147.5,147.5,1954,大谷塾,Masters 3,B,Raw,1
+飯島 修,Osamu Iijima,83,M,81.4,145,147.5,-150,147.5,147.5,1954,大谷塾,Masters 3,B,Raw,1
 信原 英之,Hideyuki Nobuhara,83,M,79.15,140,145,-150,145,145,1952,パワーハウス赤穂 Masters 3,Open,B,Raw,21
 大谷 進,Susumi Otani,83,M,81.45,135,145,-150,145,145,1952,大谷塾,Masters 3,B,Raw,2
 井上 謙一,,83,M,79.9,-130,135,-142.5,135,135,1957,個人,Masters 3,B,Raw,3
@@ -414,7 +414,7 @@ JapaneseName,Name,WeightClassKg,Sex,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best
 日垣 宏章,,120,M,,,,,,,1981,ノーリミッツ,Open,B,Raw,DQ
 武田 裕介,Yusuke Takeda,120,M,,,,,,,1985,TXP,Open,B,Raw,DQ
 名越 勇樹,Yuki Nagoshi,120,M,108.55,200,-210,210,210,210,1998,茨城県 BIG GUNS,Juniors,B,Raw,1
-柏木 悠太郎,,120,M,,,,,,,1997,ストロングライン,Juniors,B,Raw,DQ
+柏木 悠太郎,Yutaro Kashiwagi,120,M,,,,,,,1997,ストロングライン,Juniors,B,Raw,DQ
 中村 敏雄,,120,M,113.8,170,180,-185,180,180,1970,TXP,Masters 1,B,Raw,4
 山森 智行,Tomoyuki Yamamori,120,M,110,175,-182.5,-185,175,175,1972,K's GYM,Masters 1,B,Raw,6
 安井 篤史,,120,M,118.55,160,167.5,172.5,172.5,172.5,1972,シロクマパワージム,Masters 1,B,Raw,8
