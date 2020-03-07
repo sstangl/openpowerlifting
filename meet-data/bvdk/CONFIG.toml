@@ -1,5 +1,9 @@
 # Configuration for the BVDK.
 
+[options]
+    require_manual_disambiguation = true
+
+
 [divisions]
     open = {name = "Open", min=0, max=999}
     disabled = {name = "Disabled", min=0, max=999}
