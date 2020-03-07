@@ -189,20 +189,14 @@ function setSortColumn(): void {
 }
 
 function selection_to_points_title(): string {
-    let sort = selSort.value;
-    if (sort === "by-mcculloch") {
-        return translation_column_mcculloch;
+    switch (selSort.value) {
+        case "by-dots": return translation_column_dots;
+        case "by-glossbrenner": return translation_column_glossbrenner;
+        case "by-ipf-points": return translation_column_ipfpoints;
+        case "by-mcculloch": return translation_column_mcculloch;
+        case "by-wilks": return translation_column_wilks;
+        default: return translation_default_sort;
     }
-    if (sort === "by-glossbrenner") {
-        return translation_column_glossbrenner;
-    }
-    if (sort === "by-ipf-points") {
-        return translation_column_ipfpoints;
-    }
-    if (sort === "by-dots") {
-        return translation_column_dots;
-    }
-    return translation_default_sort;
 }
 
 // Returns a string like "/raw/uspa", or the empty string

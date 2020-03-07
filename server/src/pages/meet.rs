@@ -114,7 +114,7 @@ impl From<PointsSystem> for MeetSortSelection {
 }
 
 /// Gets the title of a column displaying a certain points system.
-fn points_column_title<'db>(
+pub fn points_column_title<'db>(
     system: PointsSystem,
     locale: &'db Locale,
     default_points: PointsSystem,

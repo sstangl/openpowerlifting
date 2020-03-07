@@ -13,8 +13,8 @@
     const default_ageclass = "all";
     const default_year = "all";
     const default_event = "all";
-    const default_sort = "by-wilks";
-    const translation_default_sort = "{{strings.columns.wilks}}";
+    const default_sort = "by-dots";
+    const translation_default_sort = "{{strings.columns.dots}}";
 
     const translation_column_formulaplace = "{{strings.columns.formulaplace}}";
     const translation_column_liftername = "{{strings.columns.liftername}}";

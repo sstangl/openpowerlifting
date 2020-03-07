@@ -33,7 +33,7 @@ impl Default for Selection {
             ageclass: AgeClassSelection::AllAges,
             year: YearSelection::AllYears,
             event: EventSelection::AllEvents,
-            sort: SortSelection::ByWilks,
+            sort: SortSelection::ByDots,
             state: None,
         }
     }

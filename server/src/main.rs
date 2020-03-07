@@ -212,7 +212,13 @@ fn lifter(
 
         // If a specific lifter was referenced, return the lifter's unique page.
         1 => {
-            let cx = pages::lifter::Context::new(&opldb, &locale, lifter_ids[0], None);
+            let cx = pages::lifter::Context::new(
+                &opldb,
+                &locale,
+                lifter_ids[0],
+                opltypes::PointsSystem::from(pages::selection::Selection::default().sort),
+                None,
+            );
             Some(Ok(match device {
                 Device::Desktop => {
                     Template::render("openpowerlifting/desktop/lifter", cx)
@@ -226,6 +232,7 @@ fn lifter(
             let cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
+                opltypes::PointsSystem::from(pages::selection::Selection::default().sort),
                 &username,
                 &lifter_ids,
             );

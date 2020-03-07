@@ -302,6 +302,7 @@ pub fn lifter(
                 &opldb,
                 &locale,
                 lifter_ids[0],
+                PointsSystem::from(default_openipf_selection().sort),
                 Some(ipf_only_filter),
             );
             cx.urlprefix = get_local_prefix(&host);
@@ -335,6 +336,7 @@ pub fn lifter(
             let mut cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
+                PointsSystem::from(default_openipf_selection().sort),
                 &username,
                 &lifter_ids,
             );

@@ -4,6 +4,7 @@ use opltypes::*;
 
 use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use crate::opldb::{self, Entry};
+use crate::pages::meet::points_column_title; // FIXME: This should not be defined there.
 
 /// The context object passed to `templates/lifter.tera`
 #[derive(Serialize)]
@@ -19,6 +20,7 @@ pub struct Context<'a> {
     pub language: Language,
     pub strings: &'a langpack::Translations,
     pub units: WeightUnits,
+    pub points_column_title: &'a str,
 
     pub bests: Vec<PersonalBestsRow<'a>>,
     pub meet_results: Vec<MeetResultsRow<'a>>,
@@ -32,8 +34,7 @@ pub struct PersonalBestsRow<'db> {
     pub bench: Option<langpack::LocalizedWeightAny>,
     pub deadlift: Option<langpack::LocalizedWeightAny>,
     pub total: Option<langpack::LocalizedWeightAny>,
-    pub wilks: Option<langpack::LocalizedPoints>,
-    pub ipfpoints: Option<langpack::LocalizedPoints>,
+    pub points: Option<langpack::LocalizedPoints>,
 }
 
 impl<'db> PersonalBestsRow<'db> {
@@ -44,8 +45,7 @@ impl<'db> PersonalBestsRow<'db> {
         bench: Option<WeightKg>,
         deadlift: Option<WeightKg>,
         total: Option<WeightKg>,
-        wilks: Option<Points>,
-        ipfpoints: Option<Points>,
+        points: Option<Points>,
     ) -> PersonalBestsRow<'db> {
         let units = locale.units;
         let format = locale.number_format;
@@ -56,8 +56,7 @@ impl<'db> PersonalBestsRow<'db> {
             bench: bench.map(|kg| kg.as_type(units).in_format(format)),
             deadlift: deadlift.map(|kg| kg.as_type(units).in_format(format)),
             total: total.map(|kg| kg.as_type(units).in_format(format)),
-            wilks: wilks.map(|pt| pt.in_format(format)),
-            ipfpoints: ipfpoints.map(|pt| pt.in_format(format)),
+            points: points.map(|pt| pt.in_format(format)),
         }
     }
 }
@@ -111,14 +110,14 @@ pub struct MeetResultsRow<'a> {
     pub deadlift4: langpack::LocalizedWeightAny,
 
     // Points.
-    pub wilks: langpack::LocalizedPoints,
-    pub ipfpoints: langpack::LocalizedPoints,
+    pub points: langpack::LocalizedPoints,
 }
 
 impl<'a> MeetResultsRow<'a> {
     pub fn from(
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
+        points_system: PointsSystem,
         entry: &'a opldb::Entry,
     ) -> MeetResultsRow<'a> {
         let meet: &'a opldb::Meet = opldb.get_meet(entry.meet_id);
@@ -182,8 +181,7 @@ impl<'a> MeetResultsRow<'a> {
             deadlift3: entry.deadlift3kg.as_type(units).in_format(number_format),
             deadlift4: entry.deadlift4kg.as_type(units).in_format(number_format),
 
-            wilks: entry.wilks.in_format(number_format),
-            ipfpoints: entry.ipfpoints.in_format(number_format),
+            points: entry.points(points_system, units).in_format(number_format),
         }
     }
 }
@@ -191,6 +189,7 @@ impl<'a> MeetResultsRow<'a> {
 /// Helper function to isolate all the best-calculation logic.
 fn calculate_bests<'db>(
     locale: &'db Locale,
+    points_system: PointsSystem,
     entries: &[&Entry],
 ) -> Vec<PersonalBestsRow<'db>> {
     // Best lifts must ignore disqualified entries.
@@ -221,16 +220,10 @@ fn calculate_bests<'db>(
         .map(|e| e.totalkg)
         .max();
 
-    let raw_wilks: Option<Points> = non_dq
+    let raw_points: Option<Points> = non_dq
         .iter()
         .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Raw)
-        .map(|e| e.wilks)
-        .max();
-
-    let raw_ipfpoints: Option<Points> = non_dq
-        .iter()
-        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Raw)
-        .map(|e| e.ipfpoints)
+        .map(|e| e.points(points_system, locale.units))
         .max();
 
     let wraps_squat: Option<WeightKg> = non_dq
@@ -245,16 +238,10 @@ fn calculate_bests<'db>(
         .map(|e| e.totalkg)
         .max();
 
-    let wraps_wilks: Option<Points> = non_dq
+    let wraps_points: Option<Points> = non_dq
         .iter()
         .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Wraps)
-        .map(|e| e.wilks)
-        .max();
-
-    let wraps_ipfpoints: Option<Points> = non_dq
-        .iter()
-        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Wraps)
-        .map(|e| e.ipfpoints)
+        .map(|e| e.points(points_system, locale.units))
         .max();
 
     let single_squat: Option<WeightKg> = non_dq
@@ -281,16 +268,10 @@ fn calculate_bests<'db>(
         .map(|e| e.totalkg)
         .max();
 
-    let single_wilks: Option<Points> = non_dq
+    let single_points: Option<Points> = non_dq
         .iter()
         .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Single)
-        .map(|e| e.wilks)
-        .max();
-
-    let single_ipfpoints: Option<Points> = non_dq
-        .iter()
-        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Single)
-        .map(|e| e.ipfpoints)
+        .map(|e| e.points(points_system, locale.units))
         .max();
 
     let multi_squat: Option<WeightKg> = non_dq
@@ -317,16 +298,10 @@ fn calculate_bests<'db>(
         .map(|e| e.totalkg)
         .max();
 
-    let multi_wilks: Option<Points> = non_dq
+    let multi_points: Option<Points> = non_dq
         .iter()
         .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Multi)
-        .map(|e| e.wilks)
-        .max();
-
-    let multi_ipfpoints: Option<Points> = non_dq
-        .iter()
-        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Multi)
-        .map(|e| e.ipfpoints)
+        .map(|e| e.points(points_system, locale.units))
         .max();
 
     let mut rows = Vec::with_capacity(4);
@@ -343,8 +318,7 @@ fn calculate_bests<'db>(
             raw_bench,
             raw_deadlift,
             raw_total,
-            raw_wilks,
-            raw_ipfpoints,
+            raw_points,
         ));
     }
 
@@ -356,8 +330,7 @@ fn calculate_bests<'db>(
             None,
             None,
             wraps_total,
-            wraps_wilks,
-            wraps_ipfpoints,
+            wraps_points,
         ));
     }
 
@@ -373,8 +346,7 @@ fn calculate_bests<'db>(
             single_bench,
             single_deadlift,
             single_total,
-            single_wilks,
-            single_ipfpoints,
+            single_points,
         ));
     }
 
@@ -390,8 +362,7 @@ fn calculate_bests<'db>(
             multi_bench,
             multi_deadlift,
             multi_total,
-            multi_wilks,
-            multi_ipfpoints,
+            multi_points,
         ));
     }
 
@@ -403,6 +374,7 @@ impl<'a> Context<'a> {
         opldb: &'a opldb::OplDb,
         locale: &'a Locale,
         lifter_id: u32,
+        points_system: PointsSystem,
         entry_filter: Option<fn(&'a opldb::OplDb, &'a Entry) -> bool>, /* For use by
                                                                         * distributions.
                                                                         */
@@ -432,7 +404,7 @@ impl<'a> Context<'a> {
         }
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
-        let bests = calculate_bests(&locale, &entries);
+        let bests = calculate_bests(&locale, points_system, &entries);
 
         // Determine if any of the entries have attempt information.
         // If a federation only reports Bests, we don't want lots of empty columns.
@@ -457,7 +429,7 @@ impl<'a> Context<'a> {
         // Display the meet results, most recent first.
         let meet_results = entries
             .into_iter()
-            .map(|e| MeetResultsRow::from(opldb, locale, e))
+            .map(|e| MeetResultsRow::from(opldb, locale, points_system, e))
             .rev()
             .collect();
 
@@ -473,6 +445,11 @@ impl<'a> Context<'a> {
             lifter_sex,
             show_sex_column: !consistent_sex,
             show_attempts: has_attempts,
+            points_column_title: points_column_title(
+                points_system,
+                &locale,
+                points_system,
+            ),
             bests,
             meet_results,
         }
