@@ -1,5 +1,5 @@
 <div id="header">
-  <a href="https://www.openpowerlifting.org"><img class="header-logo" src="/static/images/{{statics::logo_gold_on_black_svg()}}" alt="OpenPowerlifting"/></a>
+  <a href="https://www.openipf.org"><img class="header-logo" src="/static/images/{{statics::logo_gold_on_black_svg()}}" alt="OpenPowerlifting"/></a>
   <a href="https://www.powerlifting.sport"><img class="header-logo pad" src="/static/images/{{statics::x_ipf_gold_svg()}}" alt="IPF"/></a>
   <a href="{{urlprefix | safe}}" class="nav__link">{{strings.header.rankings}}</a>
   <a href="{{urlprefix | safe}}records" class="nav__link">{{strings.header.records}}</a>
