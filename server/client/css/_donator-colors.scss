@@ -331,6 +331,14 @@
   background-image: linear-gradient(to right, $pink, $white);
 }
 
+
+.lightpink_to_darkpink {
+  $lightpink: #FFB6C1;
+  $darkpink: #E75480;
+  @include gradient-prereqs($lightpink);
+  background-image: linear-gradient(to right, $lightpink, $darkpink);
+}
+
 .purple_to_hotpink {
   $purple: #AE76FF;
   $hotpink: #F442B0;
