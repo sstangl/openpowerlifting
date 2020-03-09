@@ -301,6 +301,11 @@
     WI-2018-01 = ["ExemptWeightClassConsistency"]
     WI-2018-09 = ["ExemptWeightClassConsistency"]
 
+    # 2020 exemptions.
+    USAPL-2020-02 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    USAPL-2020-04 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    USAPL-2020-06 = ["ExemptWeightClassConsistency"] # No weight classes used.
+
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     IA-2014-01 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
