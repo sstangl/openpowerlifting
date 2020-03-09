@@ -39,6 +39,7 @@
     disabled24059 = {name="Disabled 2 40-59", min=40, max=59}
     disabled260 = {name="Disabled 2 60", min=60, max=999}
 
+    youth = {name="Youth", min=4, max=12}
     teen1315 = {name="Teen 13-15", min=13, max=15}
     teen1619 = {name="Teen 16-19", min=16, max=19}
     submasters3439 = {name="Submasters 34-39", min=34, max=39}
