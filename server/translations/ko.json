@@ -1,14 +1,14 @@
 {
     "units": {
-        "lbs": "파운드",
-        "kg": "킬로그램"
+        "lbs": "lbs",
+        "kg": "kg"
     },
     "equipment": {
-        "raw": "Raw",
-        "wraps": "Wraps",
+        "raw": "무장비",
+        "wraps": "니랩",
         "single": "Single",
         "multi": "Multi",
-        "straps": "Straps",
+        "straps": "스트랩",
         "classic": "Classic",
         "equipped": "Equipped"
     },
@@ -32,21 +32,21 @@
     "columns": {
         "place": "Place",
         "formulaplace": "Rank",
-        "liftername": "Lifter",
+        "liftername": "선수",
         "federation": "Fed",
         "date": "날짜",
         "location": "Location",
-        "meetname": "Competition",
+        "meetname": "대회이름",
         "division": "Division",
-        "sex": "Sex",
-        "age": "Age",
+        "sex": "성별",
+        "age": "나이",
         "equipment": "Equip",
         "weightclass": "Class",
         "bodyweight": "Weight",
         "squat": "스쿼트",
         "bench": "벤치",
         "deadlift": "데드리프트",
-        "total": "Total",
+        "total": "토탈",
         "wilks": "Wilks",
         "mcculloch": "McCulloch",
         "glossbrenner": "Gloss",
