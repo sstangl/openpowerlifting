@@ -29,30 +29,35 @@ fn wilks2020_coefficient(a: f64, b: f64, c: f64, d: f64, e: f64, f: f64, x: f64)
 }
 
 fn wilks2020_coefficient_men(bodyweightkg: f64) -> f64 {
-    const A: f64 = -99.22855411;
-    const B: f64 = 14.40581421;
-    const C: f64 = -0.015415771;
-    const D: f64 = -769734E-09;
-    const E: f64 = 497549E-11;
-    const F: f64 = -9.35418E-09;
+    const A: f64 = 47.4617885411949;
+    const B: f64 = 8.47206137941125;
+    const C: f64 = 0.073694103462609;
+    const D: f64 = -0.00139583381094385;
+    const E: f64 = 0.00000707665973070743;
+    const F: f64 = -0.0000000120804336482315;
 
     let adjusted = bodyweightkg.max(40.0).min(200.95);
     wilks2020_coefficient(A, B, C, D, E, F, adjusted)
 }
 
 fn wilks2020_coefficient_women(bodyweightkg: f64) -> f64 {
-    const A: f64 = -219.6791486;
-    const B: f64 = 19.55345493;
-    const C: f64 = -0.167792909;
-    const D: f64 = 406937E-09;
-    const E: f64 = 184095E-11;
-    const F: f64 = -8.31427E-09;
+    const A: f64 = -125.425539779509;
+    const B: f64 = 13.7121941940668;
+    const C: f64 = -0.0330725063103405;
+    const D: f64 = -0.0010504000506583;
+    const E: f64 = 0.00000938773881462799;
+    const F: f64 = -0.000000023334613884954;
 
     let adjusted = bodyweightkg.max(40.0).min(150.95);
     wilks2020_coefficient(A, B, C, D, E, F, adjusted)
 }
 
 /// Calculates Wilks2020 points.
+///
+/// This formula was updated as of 2020-03-09. The USPA provided us with a formula
+/// definition directly sent to them by Robert Wilks. That definition does not match
+/// the previously-published Wilks2020 coefficient tables. We assume that Robert Wilks
+/// silently updated them.
 ///
 /// In 2020, Robert Wilks announced that he was updating his formula based on new data.
 /// He published large coefficient tables, and apparently refused to tell anyone the
@@ -101,57 +106,55 @@ mod tests {
     #[test]
     fn coefficients_men() {
         // Check below the table (not well-defined).
-        assert!(matches_table(wilks2020_coefficient_men(20.0), 1.4463));
+        assert!(matches_table(wilks2020_coefficient_men(20.0), 1.3895));
 
         // Check exact table values.
-        assert!(matches_table(wilks2020_coefficient_men(40.0), 1.4463));
-        assert!(matches_table(wilks2020_coefficient_men(50.0), 1.1662));
-        assert!(matches_table(wilks2020_coefficient_men(60.0), 0.9991));
-        assert!(matches_table(wilks2020_coefficient_men(70.0), 0.8911));
-        assert!(matches_table(wilks2020_coefficient_men(80.0), 0.8179));
-        assert!(matches_table(wilks2020_coefficient_men(90.0), 0.7668));
-        assert!(matches_table(wilks2020_coefficient_men(100.0), 0.7304));
-        assert!(matches_table(wilks2020_coefficient_men(120.0), 0.6847));
-        assert!(matches_table(wilks2020_coefficient_men(140.0), 0.6582));
-        assert!(matches_table(wilks2020_coefficient_men(160.0), 0.6396));
-        assert!(matches_table(wilks2020_coefficient_men(180.0), 0.6245));
-        assert!(matches_table(wilks2020_coefficient_men(200.0), 0.6155));
+        assert!(matches_table(wilks2020_coefficient_men(40.0), 1.3895));
+        assert!(matches_table(wilks2020_coefficient_men(50.0), 1.1510));
+        assert!(matches_table(wilks2020_coefficient_men(60.0), 0.9968));
+        assert!(matches_table(wilks2020_coefficient_men(70.0), 0.8923));
+        assert!(matches_table(wilks2020_coefficient_men(80.0), 0.8191));
+        assert!(matches_table(wilks2020_coefficient_men(90.0), 0.7670));
+        assert!(matches_table(wilks2020_coefficient_men(100.0), 0.7294));
+        assert!(matches_table(wilks2020_coefficient_men(120.0), 0.6817));
+        assert!(matches_table(wilks2020_coefficient_men(140.0), 0.6546));
+        assert!(matches_table(wilks2020_coefficient_men(160.0), 0.6361));
+        assert!(matches_table(wilks2020_coefficient_men(180.0), 0.6213));
 
         // Check the upper boundary of the table.
-        assert!(matches_table(wilks2020_coefficient_men(200.0), 0.6155));
-        assert!(matches_table(wilks2020_coefficient_men(200.95), 0.6153));
+        assert!(matches_table(wilks2020_coefficient_men(200.0), 0.6123));
+        assert!(matches_table(wilks2020_coefficient_men(200.95), 0.6122));
 
         // Out of the table.
-        assert!(matches_table(wilks2020_coefficient_men(201.0), 0.6153));
-        assert!(matches_table(wilks2020_coefficient_men(400.0), 0.6153));
+        assert!(matches_table(wilks2020_coefficient_men(201.0), 0.6122));
+        assert!(matches_table(wilks2020_coefficient_men(400.0), 0.6122));
     }
 
     /// Test that the coefficients match the published tables, for women.
     #[test]
     fn coefficients_women() {
         // Check below the table (not well-defined).
-        assert!(matches_table(wilks2020_coefficient_women(20.0), 1.8524));
+        assert!(matches_table(wilks2020_coefficient_women(20.0), 1.8486));
 
         // Check exact table values.
-        assert!(matches_table(wilks2020_coefficient_women(40.0), 1.8524));
-        assert!(matches_table(wilks2020_coefficient_women(50.0), 1.5065));
-        assert!(matches_table(wilks2020_coefficient_women(60.0), 1.3194));
-        assert!(matches_table(wilks2020_coefficient_women(70.0), 1.208));
-        assert!(matches_table(wilks2020_coefficient_women(80.0), 1.138));
-        assert!(matches_table(wilks2020_coefficient_women(90.0), 1.0922));
-        assert!(matches_table(wilks2020_coefficient_women(100.0), 1.0608));
-        assert!(matches_table(wilks2020_coefficient_women(110.0), 1.0378));
-        assert!(matches_table(wilks2020_coefficient_women(120.0), 1.0194));
-        assert!(matches_table(wilks2020_coefficient_women(130.0), 1.0038));
-        assert!(matches_table(wilks2020_coefficient_women(140.0), 0.9905));
+        assert!(matches_table(wilks2020_coefficient_women(40.0), 1.8486));
+        assert!(matches_table(wilks2020_coefficient_women(50.0), 1.5091));
+        assert!(matches_table(wilks2020_coefficient_women(60.0), 1.3190));
+        assert!(matches_table(wilks2020_coefficient_women(70.0), 1.2042));
+        assert!(matches_table(wilks2020_coefficient_women(80.0), 1.1318));
+        assert!(matches_table(wilks2020_coefficient_women(90.0), 1.0846));
+        assert!(matches_table(wilks2020_coefficient_women(100.0), 1.0525));
+        assert!(matches_table(wilks2020_coefficient_women(110.0), 1.0286));
+        assert!(matches_table(wilks2020_coefficient_women(120.0), 1.0089));
+        assert!(matches_table(wilks2020_coefficient_women(130.0), 0.9912));
+        assert!(matches_table(wilks2020_coefficient_women(140.0), 0.9753));
 
         // Check the upper boundary of the table.
-        // Note: 150.0 does not exactly match (returns 0.9803 instead of 0.9804).
-        assert!(matches_table(wilks2020_coefficient_women(150.05), 0.9803));
-        assert!(matches_table(wilks2020_coefficient_women(150.95), 0.9796));
+        assert!(matches_table(wilks2020_coefficient_women(150.0), 0.9635));
+        assert!(matches_table(wilks2020_coefficient_women(150.95), 0.9627));
 
         // Out of the table.
-        assert!(matches_table(wilks2020_coefficient_women(151.0), 0.9796));
-        assert!(matches_table(wilks2020_coefficient_women(200.0), 0.9796));
+        assert!(matches_table(wilks2020_coefficient_women(151.0), 0.9627));
+        assert!(matches_table(wilks2020_coefficient_women(200.0), 0.9627));
     }
 }
