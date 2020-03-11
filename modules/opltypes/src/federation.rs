@@ -131,6 +131,10 @@ pub enum Federation {
     #[strum(to_string = "AWF", serialize = "awf")]
     AWF,
 
+    /// Bahamas Powerlifting Federation, IPF.
+    #[strum(to_string = "BahamasPF", serialize = "bahamasPF")]
+    BahamasPF,
+
     /// British Amateur Weightlifting Association, predecessor to BP.
     #[strum(to_string = "BAWLA", serialize = "bawla")]
     BAWLA,
@@ -1240,6 +1244,7 @@ impl Federation {
             Federation::AusPF => false,
             Federation::AusPL => false,
             Federation::AWF => false,
+            Federation::BahamasPF => FULLY_TESTED,
             Federation::BAWLA => FULLY_TESTED,
             Federation::BB => false,
             Federation::BDFPA => FULLY_TESTED,
@@ -1521,6 +1526,7 @@ impl Federation {
             Federation::AusPF => Some(Country::Australia),
             Federation::AusPL => Some(Country::Australia),
             Federation::AWF => Some(Country::Australia),
+            Federation::BahamasPF => Some(Country::Bahamas),
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
             Federation::BDFPA => Some(Country::UK),
@@ -1803,6 +1809,7 @@ impl Federation {
             Federation::AusPF => Some(Federation::IPF),
             Federation::AusPL => Some(Federation::IPL),
             Federation::AWF => None,
+            Federation::BahamasPF => Some(Federation::IPF),
             Federation::BAWLA => Some(Federation::IPF),
             Federation::BB => None,
             Federation::BDFPA => Some(Federation::WDFPF),
@@ -2138,6 +2145,7 @@ impl Federation {
             Federation::AusPF => PointsSystem::Wilks,
             Federation::AusPL => PointsSystem::Wilks,
             Federation::AWF => PointsSystem::Wilks,
+            Federation::BahamasPF => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
