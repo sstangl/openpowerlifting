@@ -6,11 +6,11 @@
     "equipment": {
         "raw": "무장비",
         "wraps": "니랩",
-        "single": "Single",
-        "multi": "Multi",
+        "single": "싱글플라이",
+        "multi": "멀티플라이",
         "straps": "스트랩",
-        "classic": "Classic",
-        "equipped": "Equipped"
+        "classic": "클래식",
+        "equipped": "장비대회"
     },
     "sex": {
         "m": "남",
@@ -18,47 +18,47 @@
         "mx": "Mx"
     },
     "header": {
-        "rankings": "Rankings",
-        "records": "Records",
-        "meets": "Meets",
-        "data": "Data",
-        "status": "Status",
+        "rankings": "순위",
+        "records": "기록",
+        "meets": "대회",
+        "data": "자료",
+        "status": "정보출처",
         "faq": "자주하는 질문",
-        "contact": "Contact",
+        "contact": "고객센터",
         "shop": "상점",
-        "supportus": "Support Us",
-        "apps": "앱"
+        "supportus": "후원",
+        "apps": "어플"
     },
     "columns": {
         "place": "Place",
-        "formulaplace": "Rank",
+        "formulaplace": "순위",
         "liftername": "선수",
-        "federation": "Fed",
+        "federation": "협회",
         "date": "날짜",
-        "location": "Location",
+        "location": "장소",
         "meetname": "대회이름",
-        "division": "Division",
+        "division": "디비젼",
         "sex": "성별",
         "age": "나이",
-        "equipment": "Equip",
-        "weightclass": "Class",
-        "bodyweight": "Weight",
+        "equipment": "장비",
+        "weightclass": "체급",
+        "bodyweight": "체중",
         "squat": "스쿼트",
         "bench": "벤치",
         "deadlift": "데드리프트",
         "total": "토탈",
-        "wilks": "Wilks",
-        "mcculloch": "McCulloch",
-        "glossbrenner": "Gloss",
+        "wilks": "윌크스",
+        "mcculloch": "McCulloch 계산법",
+        "glossbrenner": "글로스",
         "ipfpoints": "IPF",
-        "num_lifters": "Lifters",
-        "dots": "도트"
+        "num_lifters": "선수",
+        "dots": "Dots"
     },
     "country": {
         "afghanistan": "아프가니스탄",
         "albania": "알바니아",
         "algeria": "알제리",
-        "americansamoa": "American Samoa",
+        "americansamoa": "아메리칸사모아",
         "angola": "앙골라",
         "argentina": "아르헨티나",
         "armenia": "아르메니아",
@@ -76,7 +76,7 @@
         "bosniaandherzegovina": "보스니아 헤르체고비나",
         "botswana": "보츠와나",
         "brazil": "브라질",
-        "britishvirginislands": "British Virgin Islands",
+        "britishvirginislands": "영국령 버진아일랜드",
         "brunei": "브루나이",
         "bulgaria": "불가리아",
         "burkinafaso": "부키 나 파소",
@@ -187,13 +187,13 @@
         "saudiarabia": "사우디 아라비아",
         "scotland": "스코틀랜드",
         "serbia": "세르비아",
-        "serbiaandmontenegro": "Serbia and Montenegro",
+        "serbiaandmontenegro": "세르비아-몬테네그로",
         "singapore": "싱가포르",
         "slovakia": "슬로바키아",
         "slovenia": "슬로베니아",
         "solomonislands": "솔로몬 제도",
         "southafrica": "남아프리카",
-        "southkorea": "남한",
+        "southkorea": "대한민국",
         "spain": "스페인",
         "srilanka": "스리랑카",
         "sudan": "수단",
@@ -208,8 +208,8 @@
         "thailand": "태국",
         "togo": "토고",
         "tonga": "통가",
-        "transnistria": "Transnistria",
-        "trinidadandtobago": "Trinidad and Tobago",
+        "transnistria": "트란스니스트리아",
+        "trinidadandtobago": "트리니다드토바고",
         "tunisia": "튀니지",
         "turkey": "터키",
         "turkmenistan": "투르크 메니스탄",
@@ -221,13 +221,13 @@
         "uruguay": "우루과이",
         "usa": "미국",
         "ussr": "소련",
-        "usvirginislands": "US Virgin Islands",
+        "usvirginislands": "미국령 버진아일랜드",
         "uzbekistan": "우즈베키스탄",
         "vanuatu": "바누아투",
         "venezuela": "베네수엘라",
         "vietnam": "베트남",
         "wales": "웨일즈",
-        "wallisandfutuna": "Wallis and Futuna",
+        "wallisandfutuna": "월리스푸투나제도",
         "westgermany": "서독",
         "yugoslavia": "유고슬라비아",
         "zambia": "잠비아",
@@ -243,69 +243,69 @@
         "oceania": "오세아니아"
     },
     "buttons": {
-        "search": "Search"
+        "search": "검색"
     },
     "selectors": {
         "equipment": {
-            "raw": "Raw",
-            "wraps": "Wraps",
-            "raw_wraps": "Raw+Wraps",
-            "single": "Single-ply",
-            "multi": "Multi-ply"
+            "raw": "무장비",
+            "wraps": "니랩",
+            "raw_wraps": "무장비 + 니랩",
+            "single": "싱글플라이",
+            "multi": "멀티플라이"
         },
         "weightclass": {
-            "all": "All Classes",
+            "all": "전체 체급",
             "traditional": "Traditional",
-            "ipfmen": "IPF Men",
-            "ipfwomen": "IPF Women",
-            "para_men": "Para Men",
-            "para_women": "Para Women",
-            "wp_men": "WP Men",
-            "wp_women": "WP Women"
+            "ipfmen": "IPF 남성",
+            "ipfwomen": "IPF 여성",
+            "para_men": "Para 남성",
+            "para_women": "Para 여성",
+            "wp_men": "WP 남성",
+            "wp_women": "WP 여성"
         },
         "sort": {
-            "by_squat": "By Squat",
-            "by_bench": "By Bench",
-            "by_deadlift": "By Deadlift",
-            "by_total": "By Total",
-            "by_allometric": "By Allometric Scaling",
-            "by_ah": "By AH (Haleczko)",
-            "by_glossbrenner": "By Glossbrenner",
-            "by_ipfpoints": "By IPF Points",
-            "by_mcculloch": "By McCulloch",
-            "by_nasa": "By NASA Points",
-            "by_reshel": "By Reshel",
-            "by_wilks": "By Wilks",
-            "by_division": "By Division",
-            "weight": "Weight Sorts",
-            "points": "Point Sorts",
-            "by_dots": "By Dots",
-            "by_schwartzmalone": "By Schwartz/Malone"
+            "by_squat": "스쿼트",
+            "by_bench": "벤치프레스",
+            "by_deadlift": "데드리프트",
+            "by_total": "종합",
+            "by_allometric": "알로메트릭 계산법",
+            "by_ah": "AH (Haleczko) 계산법",
+            "by_glossbrenner": "글로스브레너 계산법",
+            "by_ipfpoints": "IPF 포인트",
+            "by_mcculloch": "McCulloch 포인트",
+            "by_nasa": "NASA 포인트",
+            "by_reshel": "Reshel 포인트",
+            "by_wilks": "Wilks 포인트",
+            "by_division": "디비젼",
+            "weight": "체급 종류",
+            "points": "포인트 종류",
+            "by_dots": "Dots 계산법",
+            "by_schwartzmalone": "Schwartz/Malone 계산법"
         },
         "year": {
-            "all": "All Years"
+            "all": "전체년도"
         },
         "sex": {
-            "all": "All Sexes",
-            "m": "Men",
-            "f": "Women"
+            "all": "남녀종합",
+            "m": "남성",
+            "f": "여성"
         },
         "event": {
-            "all": "All Events",
-            "full_power": "Full Power",
-            "push_pull": "Push-Pull",
+            "all": "전체대회",
+            "full_power": "3대종합",
+            "push_pull": "벤치데드",
             "squat_only": "스쿼트 만",
             "bench_only": "벤치 만",
             "deadlift_only": "데드리프트 만"
         },
         "fed": {
-            "all": "All Feds",
-            "fully_tested": "All Fully-Tested Feds",
-            "all_tested": "All Tested Lifters",
-            "international": "International",
-            "regional": "Regional",
-            "all_usa": "All United States Lifters",
-            "all_argentina": "All Argentinian Lifters",
+            "all": "협회종합",
+            "fully_tested": "도핑테스트협회",
+            "all_tested": "도핑테스트 통과 선수",
+            "international": "국제협회",
+            "regional": "지방협회",
+            "all_usa": "미국선수",
+            "all_argentina": "아르헨티나선수",
             "all_australia": "All Australian Lifters",
             "all_belarus": "All Belarusian Lifters",
             "all_brazil": "All Brazilian Lifters",
@@ -366,30 +366,30 @@
             "all_bosniaandherzegovina": "All Lifters from Bosnia and Herzegovina",
             "continents": "대륙",
             "countries": "국가",
-            "all_affiliates": "All Affiliates",
-            "all_internationals": "All Internationals"
+            "all_affiliates": "계열종합",
+            "all_internationals": "국제협회종합"
         },
         "ageclass": {
-            "all": "All Ages",
-            "ipf_open": "Open",
-            "ipf_subjunior": "Sub-Junior",
-            "ipf_junior": "Junior",
-            "ipf_senior": "Senior",
-            "ipf_master1": "Master I",
-            "ipf_master2": "Master II",
-            "ipf_master3": "Master III",
-            "ipf_master4": "Master IV"
+            "all": "나이종합",
+            "ipf_open": "오픈",
+            "ipf_subjunior": "서브주니어",
+            "ipf_junior": "주니어",
+            "ipf_senior": "시니어",
+            "ipf_master1": "마스터 1",
+            "ipf_master2": "마스터 2",
+            "ipf_master3": "마스터 3",
+            "ipf_master4": "마스터 4"
         }
     },
     "lifter_page": {
-        "personal_bests": "Personal Bests",
-        "competition_results": "Competition Results"
+        "personal_bests": "개인최고기록",
+        "competition_results": "대회기록"
     },
     "html_header": {
-        "description": "The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data."
+        "description": "OpenPowerlifting 프로젝트는 전 세계의 파워리프팅 데이터를 공개적으로 지속적이고 정확하며 편리한 접근이 가능하게 보관하는 것을 목표로 합니다."
     },
     "labels": {
-        "sort": "Sort",
-        "category": "Category"
+        "sort": "종류",
+        "category": "카테고리"
     }
 }
