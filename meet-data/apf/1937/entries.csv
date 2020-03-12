@@ -30,7 +30,7 @@ Place,Name,Sex,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,S
 1,Trent Sabo,M,37,,,Raw,M_SR_AWPC,100,100,167.5,-177.5,187.5,187.5,120,130,137.5,,137.5,215,227.5,-242.5,,227.5,552.5,SBD,Yes
 1,Matt Slate,M,38,USA,NV,Raw,M_SR_AWPC,140,140,265,272.5,,272.5,195,207.5,215,,215,265,275,-280,,275,762.5,SBD,Yes
 1,Akeem McDaniel,M,22,USA,UT,Wraps,M_JCR_AWPC,97,100,215,-235,235,235,175,-185.5,-185.5,,175,260,-280,-280,,260,670,SBD,Yes
-1,Michael Coleman,M,40,USA,ID,Wraps,M_MCR_1_AWPC,74.6,75,127.5,137.5,-145,137.5,115,120,-122.5,,120,177.5,195,-210,,195,452.5,SBD,Yes
+1,Michael Coleman #1,M,40,USA,ID,Wraps,M_MCR_1_AWPC,74.6,75,127.5,137.5,-145,137.5,115,120,-122.5,,120,177.5,195,-210,,195,452.5,SBD,Yes
 1,Brian Higginson,M,53,USA,ID,Wraps,M_MCR_3_AWPC,81.5,82.5,105,115,130,130,100,115,-120,,115,137.5,152.5,170,192.5,170,415,SBD,Yes
 1,Dennis Weathers,M,67,USA,OR,Wraps,M_MCR_6_WPC,86.1,90,150,172.5,,172.5,137.5,142.5,150,157.5,150,152.5,175,185,192.5,185,507.5,SBD,
 1,Saul Ivan Badillo,M,34,Mexico,,Wraps,M_OCR_WPC,73.8,75,180,-190,-190,180,95,-102.5,-102.5,,95,210,225,-240.5,,225,500,SBD,
@@ -55,7 +55,7 @@ DQ,Mike Brownfield,M,46,USA,OR,Raw,M_MR_2_WPC,115.4,125,,,,,-210,-210,,,,,,,,,,B
 DQ,Mike Brownfield,M,46,USA,OR,Raw,M_OR_WPC,115.4,125,,,,,-210,-210,,,,,,,,,,B,
 1,Matt Slate,M,38,USA,NV,Raw,M_OR_AWPC,140,140,,,,,195,207.5,215,,215,,,,,,215,B,Yes
 1,Matt Slate,M,38,USA,NV,Raw,M_SR_AWPC,140,140,,,,,195,207.5,215,,215,,,,,,215,B,Yes
-1,Michael Coleman,M,40,USA,ID,Raw,M_MR_1_AWPC,74.6,75,,,,,115,120,-122.5,,120,,,,,,120,B,Yes
+1,Michael Coleman #1,M,40,USA,ID,Raw,M_MR_1_AWPC,74.6,75,,,,,115,120,-122.5,,120,,,,,,120,B,Yes
 1,Thomas Ponzio,M,49,USA,UT,Single-ply,M_MES_2_WPC,97.6,100,,,,,242.5,250,260,272.5,260,,,,,,260,B,
 1,Jay Bakke,M,62,USA,MT,Single-ply,M_MES_5_WPC,98.9,100,,,,,150,162.5,167.5,-182.5,167.5,,,,,,167.5,B,
 1,Jay Bakke,M,62,USA,MT,Single-ply,M_MES_5_AWPC,98.9,100,,,,,150,162.5,167.5,-182.5,167.5,,,,,,167.5,B,Yes
@@ -74,7 +74,7 @@ DQ,River Newman,M,30,USA,MT,Multi-ply,M_OEM_WPC,129,140,,,,,-280,-280,-280,,,,,,
 1,Taryn Reader,M,6,USA,ID,Raw,M_YR_AWPC,28.9,52,,,,,,,,,,35,40,-45,,40,40,D,Yes
 1,Kai Kobashigawa,M,10,,,Raw,M_YR_AWPC,33,52,,,,,,,,,,37.5,42.5,47.5,,47.5,47.5,D,Yes
 2,Gralson Kobashigawa,M,7,,,Raw,M_YR_AWPC,26.3,52,,,,,,,,,,20,32.5,37.5,,37.5,37.5,D,Yes
-1,Michael Coleman,M,40,USA,ID,Raw,M_MR_1_AWPC,74.6,75,,,,,,,,,,177.5,195,-210,,195,195,D,Yes
+1,Michael Coleman #1,M,40,USA,ID,Raw,M_MR_1_AWPC,74.6,75,,,,,,,,,,177.5,195,-210,,195,195,D,Yes
 1,Jay Bakke,M,62,USA,MT,Single-ply,M_MES_5_WPC,98.9,100,,,,,,,,,,215,240,252.5,-265.5,252.5,252.5,D,
 1,Jay Bakke,M,62,USA,MT,Single-ply,M_MES_5_AWPC,98.9,100,,,,,,,,,,215,240,252.5,-265.5,252.5,252.5,D,Yes
 1,Luke Shawver,M,37,USA,ID,Single-ply,M_OES_AWPC,74.5,75,,,,,,,,,,200,217.5,230,-235,230,230,D,Yes
