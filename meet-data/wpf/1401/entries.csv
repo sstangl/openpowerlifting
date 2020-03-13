@@ -1,67 +1,67 @@
 Sex,Event,Equipment,WeightClassKg,BodyweightKg,Name,Age,Country,Division,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place
-F,SBD,Single-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,90,105,110,110,35,40.5,42.5,42.5,85,100,110,110,262.5,1
-F,SBD,Single-ply,60,59.4,Allison Hough,48,UK,Masters 45-49,130,140,148,148,86,90,-92.5,90,130,140,-145,140,378,1
-F,SBD,Single-ply,60,58.3,Blythe Edgar,16,UK,Teen 15-19,90,100,110,110,50,55,60,60,90,100,110,110,280,1
-F,SBD,Single-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,115,128,137.5,137.5,77.5,85,-90,85,125,135,145,145,367.5,1
-F,SBD,Single-ply,67.5,65.4,Samantha Wills,31,UK,Open,160,175,-185,175,82.5,87.5,90,90,140,150,165,165,430,1
-F,SBD,Single-ply,75,70,Andrea Beers,36,UK,Open,140,-147.5,147.5,147.5,85,90,95,95,120,132.5,137.5,137.5,380,2
-F,SBD,Single-ply,75,74.9,Lisa James,29,UK,Open,195,205,210.5,210.5,105,110,-115,110,190,200,-205,200,520.5,1
-F,SBD,Single-ply,75,73.2,Audra Corbett,47,UK,Masters 45-49,-140,140,-150,140,85,-92.5,-92.5,85,110,125,135,135,360,1
-F,SBD,Single-ply,82.5,78.6,Ruth Drury,50,UK,Masters 50-54,70,80,90,90,30,37.5,42.5,42.5,80,92.5,105,105,237.5,1
-F,SBD,Single-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,-190,-190,-190,-190,,,,,,,,,,DQ
-F,SBD,Single-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,80,-100,100,100,72.5,77.5,-80.5,77.5,150,160,170,170,347.5,1
-F,SBD,Single-ply,90+,,Nwamaka Nklamkpa,27,Nigeria,Open,,,,,,,,,,,,,,NS
-F,B,Single-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,,,,,35,40.5,42.5,42.5,,,,,42.5,1
-F,B,Single-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,,,,,77.5,85,-90,85,,,,,85,1
-F,B,Single-ply,75,70,Andrea Beers,36,UK,Open,,,,,85,90,95,95,,,,,95,1
-F,B,Single-ply,82.5,78.5,Maria Helgesson,26,Sweden,Open,,,,,107.5,115,120,120,,,,,120,2
-F,B,Single-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,,,,,125,-127.5,127.5,127.5,,,,,127.5,1
-F,B,Single-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,,,,,72.5,77.5,-80.5,77.5,,,,,77.5,1
-F,D,Single-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,,,,,,,,,85,100,110,110,110,1
-F,D,Single-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,,,,,,,,,125,135,145,145,145,1
-F,D,Single-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,,,,,,,,,180,-193,193,193,193,1
-F,D,Single-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,,,,,,,,,150,160,170,170,170,1
-F,D,Single-ply,90+,,Nwamaka Nklamkpa,27,Nigeria,Open,,,,,,,,,,,,,,NS
-M,SBD,Single-ply,125,123.1,Aaron Hosking,31,UK,Open,335,365,375,375,215,-225,-225,215,260,275,,275,865,1
-M,SBD,Single-ply,125,,Jerome Reslinger,33,France,Open,,,,,,,,,,,,,,NS
-M,SBD,Single-ply,125,125,Eric Bar,45,France,Masters 45-49,210,225,-232.5,225,200,205,-210,205,245,-255,-255,245,675,2
-M,SBD,Single-ply,125,112.2,Darren McCarroll,48,UK,Masters 45-49,300,325,345,345,160,-170,170,170,270,285,-295,285,800,1
-M,SBD,Single-ply,125,114.5,Stuart Murray,53,UK,Masters 50-54,280,300,-315,300,120,135,140,140,250,280,,280,720,1
-M,SBD,Single-ply,140,128.7,David Carter,67,UK,Masters 65-69,235,-255,-255,235,-155,155,-160.5,155,242.5,262.5,,262.5,652.5,1
-M,SBD,Single-ply,140,134.3,Andrew Cairney,35,UK,Open,370,390,400,400,180,240,260,260,325,340,-352.5,340,1000,1
-M,SBD,Single-ply,125,111.5,Herve Phinera,,France,Masters 40-44,220,235,-245,235,160,170,-180,170,260,-282.5,-290,260,665,1
-M,B,Single-ply,125,123.1,Arron Hosking,31,UK,Open,,,,,215,-225,-225,215,,,,,215,1
-M,B,Single-ply,125,117.2,Tony Keetch,41,UK,Masters 40-44,,,,,197.5,-202.5,-202.5,197.5,,,,,197.5,1
-M,B,Single-ply,125,,James Bougault,52,USA,Masters 50-54,,,,,,,,,,,,,,NS
-M,B,Single-ply,125,113,Alain Devins,52,France,Masters 50-54,,,,,95,-105,105,105,,,,,105,1
-M,B,Single-ply,140,128.7,David Carter,67,UK,Masters 65-69,,,,,-155,155,-160.5,155,,,,,155,1
-M,B,Single-ply,140,134.3,Andrew Cairney,35,UK,Open,,,,,180,240,260,260,,,,,260,1
-M,B,Single-ply,140,125.3,Matthew Doughty,,UK,Open,,,,,180,190,-200,190,,,,,190,2
-M,B,Single-ply,140+,153.5,Julio Garcia,50,Spain,Masters 50-54,,,,,230,260,-270,260,,,,,260,1
-M,D,Single-ply,125,117.2,Tony Keetch,41,UK,Masters 40-44,,,,,,,,,220,240,,240,240,1
-M,D,Single-ply,125,114.5,Stuart Murray,53,UK,Masters 50-54,,,,,,,,,250,280,,280,280,1
-M,D,Single-ply,125,113,Alain Devins,52,France,Masters 50-54,,,,,,,,,150,157.5,160,160,160,2
-M,D,Single-ply,140,128.7,David Carter,67,UK,Masters 65-69,,,,,,,,,242.5,262.5,,262.5,262.5,1
-M,D,Single-ply,140,134.3,Andrew Cairney,35,UK,Open,,,,,,,,,325,340,-352.5,340,340,1
-M,SBD,Single-ply,100,97.8,Samuel Boys,22,UK,Juniors 20-23,-240,240,272.5,272.5,165,175,-185,175,280,295,-302.5,295,742.5,1
-M,SBD,Single-ply,100,99.9,Frédéric Buttigieg,50,France,Open,-315,315,-332.5,315,235,245.5,-257.5,245.5,260,275,290,290,850.5,1
-M,SBD,Single-ply,100,98,Wes Fish,35,UK,Open,290,300,-315,300,185,-195,200,200,270,285,,285,785,2
-M,SBD,Single-ply,100,96.6,Henrik Häger,30,Sweden,Open,170,190,210,210,160,-170,170,170,190,200,210,210,590,7
-M,SBD,Single-ply,100,99.2,Matthew Hardy,24,UK,Open,250,270,-282.5,270,-175,180,190,190,265,287.5,295,295,755,5
-M,SBD,Single-ply,100,97.7,Matthew Jenkins,37,UK,Open,240,-260,-260,240,215,220,222.5,222.5,245,255,265,265,727.5,6
-M,SBD,Single-ply,100,100,Marin McCallum,28,UK,Open,275,295,310,310,182.5,190,195,195,270,285,290,290,795,3
-M,SBD,Single-ply,100,100,Steven Murray,26,UK,Open,300,340,366,366,120,135,150,150,240,260,272.5,272.5,788.5,4
-M,SBD,Single-ply,100,99.7,Steven Knight,40,UK,Masters 40-44,300,320,340.5,340.5,215,225,230,230,240,255,270,270,840.5,1
-M,SBD,Single-ply,100,100,Paul Brooke,48,USA,Masters 45-49,182.5,192.5,205,205,137.5,-160,,137.5,282.5,-297.5,297.5,297.5,640,1
-M,SBD,Single-ply,100,97.9,Don Coates,53,UK,Masters 50-54,240,270,290,290,190,200,-205,200,270,-292.5,-292.5,270,760,1
-M,SBD,Single-ply,100,96.8,Rob Todd,68,UK,Masters 65-69,150,165,170,170,90,100,105,105,160,180,200,200,475,1
-M,B,Single-ply,100,99.9,Frédéric Buttigieg,50,France,Open,,,,,235,245.5,-257.5,245.5,,,,,245.5,1
-M,B,Single-ply,100,97.2,François Kalic,48,France,Masters 45-49,,,,,180,190,-200,190,,,,,190,1
-M,B,Single-ply,100,97.9,Don Coates,53,UK,Masters 50-54,,,,,190,200,-205,200,,,,,200,1
-M,D,Single-ply,100,97.9,Samual Boys,22,UK,Juniors 20-23,,,,,,,,,280,295,-302.5,295,295,1
-M,D,Single-ply,100,99.9,Frédéric Buttigieg,50,France,Open,,,,,,,,,260,275,290,290,290,2
-M,D,Single-ply,100,99.2,Matthew Hardy,24,UK,Open,,,,,,,,,265,287.5,295,295,295,1
-M,D,Single-ply,100,,Ogochukwu Opra,30,Nigeria,Open,,,,,,,,,,,,,,NS
-M,D,Single-ply,100,,Nnanyereugo Madumere Henry,44,Nigeria,Masters 40-44,,,,,,,,,,,,,,NS
-M,D,Single-ply,100,100,Paul Brooke,48,USA,Masters 45-49,,,,,,,,,282.5,-297.5,297.5,297.5,297.5,1
-M,D,Single-ply,100,97.9,Don Coates,53,UK,Masters 50-54,,,,,,,,,270,-292.5,,270,270,1
+F,SBD,Multi-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,90,105,110,110,35,40.5,42.5,42.5,85,100,110,110,262.5,1
+F,SBD,Multi-ply,60,59.4,Allison Hough,48,UK,Masters 45-49,130,140,148,148,86,90,-92.5,90,130,140,-145,140,378,1
+F,SBD,Multi-ply,60,58.3,Blythe Edgar,16,UK,Teen 15-19,90,100,110,110,50,55,60,60,90,100,110,110,280,1
+F,SBD,Multi-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,115,128,137.5,137.5,77.5,85,-90,85,125,135,145,145,367.5,1
+F,SBD,Multi-ply,67.5,65.4,Samantha Wills,31,UK,Open,160,175,-185,175,82.5,87.5,90,90,140,150,165,165,430,1
+F,SBD,Multi-ply,75,70,Andrea Beers,36,UK,Open,140,-147.5,147.5,147.5,85,90,95,95,120,132.5,137.5,137.5,380,2
+F,SBD,Multi-ply,75,74.9,Lisa James,29,UK,Open,195,205,210.5,210.5,105,110,-115,110,190,200,-205,200,520.5,1
+F,SBD,Multi-ply,75,73.2,Audra Corbett,47,UK,Masters 45-49,-140,140,-150,140,85,-92.5,-92.5,85,110,125,135,135,360,1
+F,SBD,Multi-ply,82.5,78.6,Ruth Drury,50,UK,Masters 50-54,70,80,90,90,30,37.5,42.5,42.5,80,92.5,105,105,237.5,1
+F,SBD,Multi-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,-190,-190,-190,-190,,,,,,,,,,DQ
+F,SBD,Multi-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,80,-100,100,100,72.5,77.5,-80.5,77.5,150,160,170,170,347.5,1
+F,SBD,Multi-ply,90+,,Nwamaka Nklamkpa,27,Nigeria,Open,,,,,,,,,,,,,,NS
+F,B,Multi-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,,,,,35,40.5,42.5,42.5,,,,,42.5,1
+F,B,Multi-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,,,,,77.5,85,-90,85,,,,,85,1
+F,B,Multi-ply,75,70,Andrea Beers,36,UK,Open,,,,,85,90,95,95,,,,,95,1
+F,B,Multi-ply,82.5,78.5,Maria Helgesson,26,Sweden,Open,,,,,107.5,115,120,120,,,,,120,2
+F,B,Multi-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,,,,,125,-127.5,127.5,127.5,,,,,127.5,1
+F,B,Multi-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,,,,,72.5,77.5,-80.5,77.5,,,,,77.5,1
+F,D,Multi-ply,48,46.8,Jacqueline Challonder,47,UK,Masters 45-49,,,,,,,,,85,100,110,110,110,1
+F,D,Multi-ply,67.5,65,Danielle Folland,23,UK,Juniors 20-23,,,,,,,,,125,135,145,145,145,1
+F,D,Multi-ply,82.5,78.9,Fridriksdottir Halla Run,42,Iceland,Open,,,,,,,,,180,-193,193,193,193,1
+F,D,Multi-ply,90,83.9,Charlotte Wareing,52,UK,Masters 50-54,,,,,,,,,150,160,170,170,170,1
+F,D,Multi-ply,90+,,Nwamaka Nklamkpa,27,Nigeria,Open,,,,,,,,,,,,,,NS
+M,SBD,Multi-ply,125,123.1,Aaron Hosking,31,UK,Open,335,365,375,375,215,-225,-225,215,260,275,,275,865,1
+M,SBD,Multi-ply,125,,Jerome Reslinger,33,France,Open,,,,,,,,,,,,,,NS
+M,SBD,Multi-ply,125,125,Eric Bar,45,France,Masters 45-49,210,225,-232.5,225,200,205,-210,205,245,-255,-255,245,675,2
+M,SBD,Multi-ply,125,112.2,Darren McCarroll,48,UK,Masters 45-49,300,325,345,345,160,-170,170,170,270,285,-295,285,800,1
+M,SBD,Multi-ply,125,114.5,Stuart Murray,53,UK,Masters 50-54,280,300,-315,300,120,135,140,140,250,280,,280,720,1
+M,SBD,Multi-ply,140,128.7,David Carter,67,UK,Masters 65-69,235,-255,-255,235,-155,155,-160.5,155,242.5,262.5,,262.5,652.5,1
+M,SBD,Multi-ply,140,134.3,Andrew Cairney,35,UK,Open,370,390,400,400,180,240,260,260,325,340,-352.5,340,1000,1
+M,SBD,Multi-ply,125,111.5,Herve Phinera,,France,Masters 40-44,220,235,-245,235,160,170,-180,170,260,-282.5,-290,260,665,1
+M,B,Multi-ply,125,123.1,Arron Hosking,31,UK,Open,,,,,215,-225,-225,215,,,,,215,1
+M,B,Multi-ply,125,117.2,Tony Keetch,41,UK,Masters 40-44,,,,,197.5,-202.5,-202.5,197.5,,,,,197.5,1
+M,B,Multi-ply,125,,James Bougault,52,USA,Masters 50-54,,,,,,,,,,,,,,NS
+M,B,Multi-ply,125,113,Alain Devins,52,France,Masters 50-54,,,,,95,-105,105,105,,,,,105,1
+M,B,Multi-ply,140,128.7,David Carter,67,UK,Masters 65-69,,,,,-155,155,-160.5,155,,,,,155,1
+M,B,Multi-ply,140,134.3,Andrew Cairney,35,UK,Open,,,,,180,240,260,260,,,,,260,1
+M,B,Multi-ply,140,125.3,Matthew Doughty,,UK,Open,,,,,180,190,-200,190,,,,,190,2
+M,B,Multi-ply,140+,153.5,Julio Garcia,50,Spain,Masters 50-54,,,,,230,260,-270,260,,,,,260,1
+M,D,Multi-ply,125,117.2,Tony Keetch,41,UK,Masters 40-44,,,,,,,,,220,240,,240,240,1
+M,D,Multi-ply,125,114.5,Stuart Murray,53,UK,Masters 50-54,,,,,,,,,250,280,,280,280,1
+M,D,Multi-ply,125,113,Alain Devins,52,France,Masters 50-54,,,,,,,,,150,157.5,160,160,160,2
+M,D,Multi-ply,140,128.7,David Carter,67,UK,Masters 65-69,,,,,,,,,242.5,262.5,,262.5,262.5,1
+M,D,Multi-ply,140,134.3,Andrew Cairney,35,UK,Open,,,,,,,,,325,340,-352.5,340,340,1
+M,SBD,Multi-ply,100,97.8,Samuel Boys,22,UK,Juniors 20-23,-240,240,272.5,272.5,165,175,-185,175,280,295,-302.5,295,742.5,1
+M,SBD,Multi-ply,100,99.9,Frédéric Buttigieg,50,France,Open,-315,315,-332.5,315,235,245.5,-257.5,245.5,260,275,290,290,850.5,1
+M,SBD,Multi-ply,100,98,Wes Fish,35,UK,Open,290,300,-315,300,185,-195,200,200,270,285,,285,785,2
+M,SBD,Multi-ply,100,96.6,Henrik Häger,30,Sweden,Open,170,190,210,210,160,-170,170,170,190,200,210,210,590,7
+M,SBD,Multi-ply,100,99.2,Matthew Hardy,24,UK,Open,250,270,-282.5,270,-175,180,190,190,265,287.5,295,295,755,5
+M,SBD,Multi-ply,100,97.7,Matthew Jenkins,37,UK,Open,240,-260,-260,240,215,220,222.5,222.5,245,255,265,265,727.5,6
+M,SBD,Multi-ply,100,100,Marin McCallum,28,UK,Open,275,295,310,310,182.5,190,195,195,270,285,290,290,795,3
+M,SBD,Multi-ply,100,100,Steven Murray,26,UK,Open,300,340,366,366,120,135,150,150,240,260,272.5,272.5,788.5,4
+M,SBD,Multi-ply,100,99.7,Steven Knight,40,UK,Masters 40-44,300,320,340.5,340.5,215,225,230,230,240,255,270,270,840.5,1
+M,SBD,Multi-ply,100,100,Paul Brooke,48,USA,Masters 45-49,182.5,192.5,205,205,137.5,-160,,137.5,282.5,-297.5,297.5,297.5,640,1
+M,SBD,Multi-ply,100,97.9,Don Coates,53,UK,Masters 50-54,240,270,290,290,190,200,-205,200,270,-292.5,-292.5,270,760,1
+M,SBD,Multi-ply,100,96.8,Rob Todd,68,UK,Masters 65-69,150,165,170,170,90,100,105,105,160,180,200,200,475,1
+M,B,Multi-ply,100,99.9,Frédéric Buttigieg,50,France,Open,,,,,235,245.5,-257.5,245.5,,,,,245.5,1
+M,B,Multi-ply,100,97.2,François Kalic,48,France,Masters 45-49,,,,,180,190,-200,190,,,,,190,1
+M,B,Multi-ply,100,97.9,Don Coates,53,UK,Masters 50-54,,,,,190,200,-205,200,,,,,200,1
+M,D,Multi-ply,100,97.9,Samual Boys,22,UK,Juniors 20-23,,,,,,,,,280,295,-302.5,295,295,1
+M,D,Multi-ply,100,99.9,Frédéric Buttigieg,50,France,Open,,,,,,,,,260,275,290,290,290,2
+M,D,Multi-ply,100,99.2,Matthew Hardy,24,UK,Open,,,,,,,,,265,287.5,295,295,295,1
+M,D,Multi-ply,100,,Ogochukwu Opra,30,Nigeria,Open,,,,,,,,,,,,,,NS
+M,D,Multi-ply,100,,Nnanyereugo Madumere Henry,44,Nigeria,Masters 40-44,,,,,,,,,,,,,,NS
+M,D,Multi-ply,100,100,Paul Brooke,48,USA,Masters 45-49,,,,,,,,,282.5,-297.5,297.5,297.5,297.5,1
+M,D,Multi-ply,100,97.9,Don Coates,53,UK,Masters 50-54,,,,,,,,,270,-292.5,,270,270,1
