@@ -90,6 +90,7 @@ pub fn search_rankings<'db>(
             WritingSystem::Cyrillic => lifter.cyrillic_name.as_ref(),
             WritingSystem::Greek => lifter.greek_name.as_ref(),
             WritingSystem::Japanese => lifter.japanese_name.as_ref(),
+            WritingSystem::Korean => lifter.korean_name.as_ref(),
             WritingSystem::Latin => Some(&lifter.name),
         };
 

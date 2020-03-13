@@ -6,6 +6,7 @@ pub enum WritingSystem {
     Cyrillic,
     Greek,
     Japanese,
+    Korean,
     Latin,
 }
 
@@ -116,6 +117,7 @@ pub fn get_writing_system(c: char) -> WritingSystem {
         0x370..=0x3FF => WritingSystem::Greek,
         // Cyrillic.
         0x400..=0x4FF => WritingSystem::Cyrillic,
+
         // CJK Radicals Supplement.
         0x2E80..=0x2EFF => WritingSystem::Japanese,
         // Some valid punctuation symbols.
@@ -138,6 +140,17 @@ pub fn get_writing_system(c: char) -> WritingSystem {
         0x2A700..=0x2CEAF => WritingSystem::Japanese,
         // CJK Compatibility Ideographs Supplement.
         0x2F800..=0x2FA1F => WritingSystem::Japanese,
+
+        // Hangul Syllables.
+        0xAC00..=0xD7AF => WritingSystem::Korean,
+        // Hangul Jamo.
+        0x1100..=0x11FF => WritingSystem::Korean,
+        // Hangul Compatibility Jamo.
+        0x3130..=0x318F => WritingSystem::Korean,
+        // Hangul Jamo Extended-A.
+        0xA960..=0xA97F => WritingSystem::Korean,
+        // Hangul Jamo Extended B.
+        0xD7B0..=0xD7FF => WritingSystem::Korean,
 
         // Character is either Latin or not a letter.
         _ => WritingSystem::Latin,

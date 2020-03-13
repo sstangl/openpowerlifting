@@ -200,10 +200,12 @@ struct LiftersRow<'md, 'ld> {
     name: &'md str,
     #[serde(rename = "CyrillicName")]
     cyrillicname: Option<&'md str>,
-    #[serde(rename = "JapaneseName")]
-    japanesename: Option<&'md str>,
     #[serde(rename = "GreekName")]
     greekname: Option<&'md str>,
+    #[serde(rename = "JapaneseName")]
+    japanesename: Option<&'md str>,
+    #[serde(rename = "KoreanName")]
+    koreanname: Option<&'md str>,
     #[serde(rename = "Username")]
     username: &'md str,
     #[serde(rename = "Instagram")]
@@ -225,8 +227,9 @@ impl<'md, 'ld> LiftersRow<'md, 'ld> {
             id: entrydata.id,
             name: entrydata.name,
             cyrillicname: entrydata.cyrillicname,
-            japanesename: entrydata.japanesename,
             greekname: entrydata.greekname,
+            japanesename: entrydata.japanesename,
+            koreanname: entrydata.koreanname,
             username: entrydata.username,
             instagram: lifterdata.instagram.as_deref(),
             vkontakte: lifterdata.vkontakte.as_deref(),
@@ -242,8 +245,9 @@ struct EntryLifterData<'md> {
     name: &'md str,
     username: &'md str, // Stored again for simplicity of iteration.
     cyrillicname: Option<&'md str>,
-    japanesename: Option<&'md str>,
     greekname: Option<&'md str>,
+    japanesename: Option<&'md str>,
+    koreanname: Option<&'md str>,
 }
 
 impl<'md> EntryLifterData<'md> {
@@ -253,8 +257,9 @@ impl<'md> EntryLifterData<'md> {
             name: &entry.name,
             username: &entry.username,
             cyrillicname: entry.cyrillicname.as_deref(),
-            japanesename: entry.japanesename.as_deref(),
             greekname: entry.greekname.as_deref(),
+            japanesename: entry.japanesename.as_deref(),
+            koreanname: entry.koreanname.as_deref(),
         }
     }
 
@@ -266,8 +271,9 @@ impl<'md> EntryLifterData<'md> {
             name: "Sean Stangl",
             username: "seanstangl",
             cyrillicname: Some("Шон Стангл"),
-            japanesename: Some("ショーン・スタングル"),
             greekname: Some("Σόν Στένγλ"),
+            japanesename: Some("ショーン・スタングル"),
+            koreanname: Some("숀 스탄글"),
         }
     }
 }
@@ -322,11 +328,14 @@ pub fn make_csv(
                     if data.cyrillicname.is_none() && entry.cyrillicname.is_some() {
                         data.cyrillicname = entry.cyrillicname.as_deref();
                     }
+                    if data.greekname.is_none() && entry.greekname.is_some() {
+                        data.greekname = entry.greekname.as_deref();
+                    }
                     if data.japanesename.is_none() && entry.japanesename.is_some() {
                         data.japanesename = entry.japanesename.as_deref();
                     }
-                    if data.greekname.is_none() && entry.greekname.is_some() {
-                        data.greekname = entry.greekname.as_deref();
+                    if data.koreanname.is_none() && entry.koreanname.is_some() {
+                        data.koreanname = entry.koreanname.as_deref();
                     }
                     data.id
                 }

@@ -123,6 +123,7 @@ pub struct Entry {
     pub username: String,
     pub cyrillicname: Option<String>,
     pub japanesename: Option<String>,
+    pub koreanname: Option<String>,
     pub greekname: Option<String>,
     pub sex: Sex,
     pub place: Place,
@@ -245,6 +246,7 @@ enum Header {
     Name,
     CyrillicName,
     JapaneseName,
+    KoreanName,
     ChineseName,
     GreekName,
     Sex,
@@ -563,6 +565,24 @@ fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Str
             {
                 let msg =
                     format!("GreekName '{}' contains non-Greek character '{}'", s, c);
+                report.error_on(line, msg);
+                return None;
+            }
+        }
+        Some(canonicalize_name_utf8(s))
+    }
+}
+
+fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<String> {
+    if s.is_empty() {
+        None
+    } else {
+        for c in s.chars() {
+            if usernames::get_writing_system(c) != usernames::WritingSystem::Korean
+                && !"-' .".contains(c)
+            {
+                let msg =
+                    format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
             }
@@ -2216,6 +2236,9 @@ where
         if let Some(idx) = headers.get(Header::GreekName) {
             entry.greekname = check_column_greekname(&record[idx], line, &mut report);
         }
+        if let Some(idx) = headers.get(Header::KoreanName) {
+            entry.koreanname = check_column_koreanname(&record[idx], line, &mut report);
+        }
         if let Some(idx) = headers.get(Header::BirthYear) {
             entry.birthyear =
                 check_column_birthyear(&record[idx], meet, line, &mut report);
@@ -2320,6 +2343,11 @@ where
         }
         if entry.name.is_empty() {
             if let Some(idx) = headers.get(Header::ChineseName) {
+                entry.name = record[idx].to_string();
+            }
+        }
+        if entry.name.is_empty() {
+            if let Some(idx) = headers.get(Header::KoreanName) {
                 entry.name = record[idx].to_string();
             }
         }
