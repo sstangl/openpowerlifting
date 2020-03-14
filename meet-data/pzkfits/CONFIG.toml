@@ -2,14 +2,17 @@
 
 [divisions]
     open = {name = "Open",min=0,max=999}
+    juniors16 = {name = "Juniors Under 16",min=0,max=15.5}
+    juniors18 = {name = "Juniors Under 18",min=0,max=27.5}
+    juniors20 = {name = "Juniors Under 20",min=0,max=19.5}
+    juniors23 = {name = "Juniors Under 23",min=0,max=22.5}
+    masters4049 = {name = "Masters 40-49",min=39.5,max=48.5}
+    masters5059 = {name = "Masters 50-59",min=49.5,max=58.5}
+    masters6069 = {name = "Masters 60-69",min=59.5,max=68.5}
+    masters70p = {name = "Masters 70+",min=69.5,max=999}
 
-    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
-    juniors = {name = "Juniors",min=0,max=22.5}
-    masters1 = {name = "Masters 1",min=39.5,max=48.5}
-    masters2 = {name = "Masters 2",min=49.5,max=58.5}
-    masters3 = {name = "Masters 3",min=59.5,max=68.5}
-    masters4 = {name = "Masters 4",min=69.5,max=999}
-
+    masters40p = {name = "Masters 40+",min=39.5,max=999}
+    masters50p = {name = "Masters 50+",min=49.5,max=999}
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -24,13 +27,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors Under 23","Juniors Under 20","Juniors Under 18","Juniors Under 16"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors Under 23","Juniors Under 20","Juniors Under 18","Juniors Under 16"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
@@ -44,5 +47,6 @@
 
 [exemptions]
     1501 = ["ExemptWeightClassConsistency"]  # Uses 93+.
-    1701 = ["ExemptDivision"]  # Made up their own Juniors divisions.
     1901 = ["ExemptWeightClassConsistency"]  # Lowest Juniors class was -52kg.
+    1902 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs
+    1903 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
