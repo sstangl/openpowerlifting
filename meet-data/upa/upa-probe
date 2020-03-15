@@ -3,7 +3,7 @@
 #
 # Probes for new event results from the UPA.
 # Because of the content system they're using, only the last
-# NUMPAGES event pages are checked (10 results per page), so if
+# NUMPAGES event pages are checked (6 results per page), so if
 # checking isn't done often enough, things might get lost.
 # Uses a similar system as the SPF (WordPress, Tribe).
 
@@ -22,13 +22,13 @@ except ImportError:
 
 
 # If NUMPAGES is very large, iteration stops at the first 404.
-NUMPAGES = 2  # Number of pages to go through, 10 results per page.
+NUMPAGES = 4  # Number of pages to go through, 6 results per page.
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-FEDURL = "http://www.upapower.com/development/?cat=52"
+FEDURL = "https://www.upapower.com/category/eventresults/"
 
 
 def getpageurl(n):
-    return FEDURL + "&paged=" + str(n)
+    return FEDURL + "page/" + str(n)
 
 
 def error(msg):
@@ -43,7 +43,7 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    events = soup.find_all("p", {"class": "read-more"})
+    events = soup.find_all("h2", {"class": "entry-title"})
 
     urls = []
     for e in events:
