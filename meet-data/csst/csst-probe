@@ -16,7 +16,7 @@ except ImportError:
     import oplprobe
 
 # Local & national results
-URLS = ["http://www.powerlifting-csst.cz/cz/vysledky-2018.html"]
+URLS = ["https://www.powerlifting-csst.cz/cze/results"]
 BASEURL = "http://www.powerlifting-csst.cz"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -33,10 +33,10 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    clanky = soup.find('div', {'class': 'cont-clanky'})
+    cldetail = soup.find('div', {'class': 'clanek-detail'})
 
     urls = []
-    for a in clanky.find_all('a'):
+    for a in cldetail.find_all('a'):
         url = a['href']
 
         if 'http' not in url:
