@@ -75,15 +75,18 @@ def getresults(soup, meetcsv):
 
     subtables = results_table.findAll('div', {'class', 'sutable'})
 
+    hasAbsoluteRankings = False
+    if results_table.find('h2'):
+        hasAbsoluteRankings = True
+
     descriptors = results_table.find_all('div', {'class': 'table-title'})
    # tables = subtables.find_all('table')
-
     for ii in range(0, len(subtables)):
         curr_table = subtables[ii]
         curr_descriptor = descriptors[ii]
 
         # Need to break when we hit the Absolute rankings section
-        if curr_table.findNext('h2') is None:
+        if hasAbsoluteRankings and curr_table.findNext('h2') is None:
             break
 
         data = curr_table.find('tbody')
@@ -144,6 +147,8 @@ def getresults(soup, meetcsv):
         wcstate = ''
         divstate = 'Open'
         sexstate = ''
+        isTeamMeet = False
+        team = ''
 
         # Extract sex information.
         div_text = curr_descriptor.text.lower()
@@ -151,7 +156,7 @@ def getresults(soup, meetcsv):
         if 'ženy' in div_text:
             sexstate = 'F'
             div_text = div_text.replace('ženy', '').strip()
-        elif 'muži ' in div_text:
+        elif 'muži' in div_text:
             sexstate = 'M'
             div_text = div_text.replace('muži', '').strip()
 
@@ -176,10 +181,22 @@ def getresults(soup, meetcsv):
             divstate = 'Masters 3'
         elif 'm4' in div_text:
             divstate = 'Masters 4'
+
+        # Team meet
+        elif re.search('\d{1}\. |\d{2}\. ', div_text):
+            team = re.sub('\d{1}\. |\d{2}\. ', '', div_text)
+            place = re.search('\d{1}\.|\d{2}\.', div_text).group(0)
+            divstate = 'Open'
+            sexstate = 'M'
+            isTeamMeet = True
         else:
             divstate = 'Open'
 
-        for tr in data.find_all('tr'):
+        if isTeamMeet and 'Team' not in csv.fieldnames:
+            csv.fieldnames += ['Team']
+            csv.fieldnames += ['Place']
+
+        for tr in data.findAll('tr'):
             row = [x.text for x in tr.find_all('td')]
 
             # Weightclass descriptor
@@ -226,6 +243,8 @@ def getresults(soup, meetcsv):
                     row.append(text.strip())
 
             row = row + [divstate, sexstate, wcstate]
+            if isTeamMeet:
+                row = row + [team, place]
             if len(row) > 5:
                 csv.rows += [row]
 
@@ -336,7 +355,7 @@ def addtotals(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             total = 0
-            if row[placeidx] not in ['DQ', 'DD']:
+            if row[placeidx] not in ['DQ', 'DD', 'DSQ']:
                 if ('Best3SquatKg' in csv.fieldnames and
                         row[csv.index('Best3SquatKg')] != ''):
                     total += float(row[csv.index('Best3SquatKg')])
