@@ -64,7 +64,6 @@ def getmeetinfo(soup):
 
 def getresults(soup, meetcsv):
     csv = Csv()
-    meetname = meetcsv.rows[0][meetcsv.index('MeetName')].lower()
 
     cl_detail = soup.find('div', {'class': 'clanek-detail'})
 
@@ -80,7 +79,6 @@ def getresults(soup, meetcsv):
         hasAbsoluteRankings = True
 
     descriptors = results_table.find_all('div', {'class': 'table-title'})
-   # tables = subtables.find_all('table')
     for ii in range(0, len(subtables)):
         curr_table = subtables[ii]
         curr_descriptor = descriptors[ii]
@@ -183,9 +181,9 @@ def getresults(soup, meetcsv):
             divstate = 'Masters 4'
 
         # Team meet
-        elif re.search('\d{1}\. |\d{2}\. ', div_text):
-            team = re.sub('\d{1}\. |\d{2}\. ', '', div_text)
-            place = re.search('\d{1}\.|\d{2}\.', div_text).group(0)
+        elif re.search(r'\d{1}\. |\d{2}\. ', div_text):
+            team = re.sub(r'\d{1}\. |\d{2}\. ', '', div_text)
+            place = re.search(r'\d{1}\.|\d{2}\.', div_text).group(0)
             divstate = 'Open'
             sexstate = 'M'
             isTeamMeet = True
@@ -293,8 +291,8 @@ def addequipment(csv, meetcsv):
     meet_name = meetcsv.rows[0][5]
 
     raw_meet = False
-    if any(classic in meet_name.lower() for classic in ['klassisk', 'klbp', 'klsl',
-                                                        'kl. sl', 'kl. bp', 'klasickém']):
+    classic_divs = ['klassisk', 'klbp', 'klsl', 'kl. sl', 'kl. bp', 'klasickém']
+    if any(classic in meet_name.lower() for classic in classic_divs):
         raw_meet = True
 
     if 'Equipment' not in csv.fieldnames:
