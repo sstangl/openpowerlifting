@@ -10,6 +10,8 @@
     ft3r = {name="FT3R", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
     mtxr = {name="MTXR", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
     ftxr = {name="FTXR", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
+	mtjr = {name="MTJR", min=13, max=23, sex="M", equipment=["Raw","Wraps"]}
+	ftjr = {name="FTJR", min=13, max=23, sex="F", equipment=["Raw","Wraps"]}
     mjr = {name="MJR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
     fjr = {name="FJR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
     mor = {name="MOR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
