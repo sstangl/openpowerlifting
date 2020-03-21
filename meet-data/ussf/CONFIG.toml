@@ -1,3 +1,5 @@
+# Configuration for the USSF.
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     light = {name = "Light", min = 0, max = 999}
@@ -14,3 +16,4 @@
     sex = "F"
 
 [exemptions]
+    1901 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
