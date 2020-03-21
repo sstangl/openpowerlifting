@@ -63,6 +63,8 @@ pub enum Country {
     Cuba,
     Cyprus,
     Czechia,
+    /// Existed from 1918-1993.
+    Czechoslovakia,
     Denmark,
     Djibouti,
     #[serde(rename = "Dominican Republic")]
