@@ -377,6 +377,13 @@
       #b387b7, #b580b1, #b678ab);
 }
 
+.red_to_orange {
+  $red: #FB3640;
+  $orange: #FFA200;
+  @include gradient-prereqs($red);
+  background-image: linear-gradient(to right, $red, $orange);
+}
+
 .red_to_purple {
   $red: #FB3640;
   $purple: #AE76FF;
