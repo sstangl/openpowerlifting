@@ -718,3 +718,4 @@
     0747 = ["ExemptWeightClassConsistency"] # Youth weightclass
     0618 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Missing weightclasses & division
     0621 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Missing weightclasses & division
+    2007 = ["ExemptDivision"] # WPO, no divisions.
