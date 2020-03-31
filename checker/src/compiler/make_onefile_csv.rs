@@ -65,6 +65,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         tested: if entry.tested { "Yes" } else { "" },
         country: entry.country,
         federation: meet.federation,
+        parent_federation: meet.federation.sanctioning_body(meet.date),
         date: meet.date,
         meet_country: meet.country,
         meet_state: meet.state.and_then(|s| Some(s.to_state_string())),

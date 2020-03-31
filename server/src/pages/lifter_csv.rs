@@ -55,6 +55,7 @@ fn make_export_row<'a>(
         tested: if entry.tested { "Yes" } else { "" },
         country: entry.lifter_country,
         federation: meet.federation,
+        parent_federation: meet.federation.sanctioning_body(meet.date),
         date: meet.date,
         meet_country: meet.country,
         meet_state: meet.state.clone(),

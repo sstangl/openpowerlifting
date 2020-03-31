@@ -76,6 +76,8 @@ pub struct ExportRow<'d> {
     pub country: Option<Country>,
     #[serde(rename = "Federation")]
     pub federation: Federation,
+    #[serde(rename = "ParentFederation")]
+    pub parent_federation: Option<Federation>,
     #[serde(rename = "Date")]
     pub date: Date,
     #[serde(rename = "MeetCountry")]

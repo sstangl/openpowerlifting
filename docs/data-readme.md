@@ -215,6 +215,12 @@ Note that this may be different than the international federation that provided 
 
 The full list of valid Federation values is defined by [modules/opltypes/src/federation.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/federation.rs). Comments in that file help explain what each federation value means.
 
+### ParentFederation
+
+Optional. The topmost federation that sanctioned the meet, usually the international body.
+
+For example, the `ParentFederation` for the `USAPL` and `EPA` is `IPF`.
+
 ### Date
 
 Mandatory. The start date of the meet in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601). ISO 8601 looks like `YYYY-MM-DD`: as an example, `1996-12-04` would be December 4th, 1996.
