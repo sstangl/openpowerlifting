@@ -25,7 +25,7 @@ pub enum MeetPathError {
     MeetDataDirNotFoundError,
 }
 
-/// Gets the MeetPath from a string representing a filesystem path.
+/// Gets the MeetPath from a string representing a filepath.
 ///
 /// # Examples
 ///
@@ -37,14 +37,28 @@ pub enum MeetPathError {
 /// ```
 pub fn file_to_meetpath<'a>(filepath: &'a Path) -> Result<&'a str, MeetPathError> {
     let parent = filepath.parent().ok_or(MeetPathError::ParentLookupError)?;
-    let parent_str = parent.to_str().ok_or(MeetPathError::FilesystemUTF8Error)?;
+    dir_to_meetpath(parent)
+}
+
+/// Gets the MeetPath from a string representing a directory.
+///
+/// # Examples
+///
+/// ```
+/// # use std::path::PathBuf;
+/// # use opltypes::dir_to_meetpath;
+/// let file = PathBuf::from("/home/opl-data/meet-data/rps/1924");
+/// assert_eq!(file_to_meetpath(&file).unwrap(), "rps/1924");
+/// ```
+pub fn dir_to_meetpath<'a>(dirpath: &'a Path) -> Result<&'a str, MeetPathError> {
+    let dir_str = dirpath.to_str().ok_or(MeetPathError::FilesystemUTF8Error)?;
 
     // Index from the last occurrence of MEETDATADIR in the path string.
-    let index = parent_str
+    let index = dir_str
         .rfind(&MEETDATADIR)
         .ok_or(MeetPathError::MeetDataDirNotFoundError)?;
 
-    let meetpath = &parent_str[(index + MEETDATADIR.len() + 1)..];
+    let meetpath = &dir_str[(index + MEETDATADIR.len() + 1)..];
 
     // Each character must be alphanumeric ASCII, a UNIX path separator, or a dash.
     for c in meetpath.chars() {

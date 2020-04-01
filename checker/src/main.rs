@@ -87,7 +87,7 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 }
 
 /// Outputs a final summary line.
-fn print_summary(error_count: usize, warning_count: usize) {
+fn print_summary(error_count: usize, warning_count: usize, search_root: &Path) {
     let error_str = format!(
         "{} error{}",
         error_count,
@@ -111,7 +111,16 @@ fn print_summary(error_count: usize, warning_count: usize) {
         warning_str.bold().green().to_string()
     };
 
-    println!("Summary: {}, {}", error_str, warning_str);
+    // If the search_root is not the 'meet-data' folder, then the search was
+    // partial. We add some text to make that obvious to the user.
+    let partial_str = if !search_root.ends_with("meet-data") {
+        let meetpath = opltypes::dir_to_meetpath(search_root).unwrap();
+        format!(" for {}", meetpath.bold().purple())
+    } else {
+        String::new()
+    };
+
+    println!("Summary: {}, {}{}", error_str, warning_str, partial_str);
 }
 
 /// Map of federation folder, e.g., "ipf", to Config.
@@ -300,7 +309,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let configmap = match get_configurations(&meet_data_root) {
         Ok(configmap) => configmap,
         Err((errors, warnings)) => {
-            print_summary(errors, warnings);
+            print_summary(errors, warnings, &search_root);
             process::exit(1);
         }
     };
@@ -460,7 +469,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     maybe_print_elapsed_for("liftermap", timing);
 
     // The default mode without arguments just performs data checks.
-    print_summary(error_count + internal_error_count, warning_count);
+    print_summary(
+        error_count + internal_error_count,
+        warning_count,
+        &search_root,
+    );
     if error_count > 0 || internal_error_count > 0 {
         process::exit(1);
     }

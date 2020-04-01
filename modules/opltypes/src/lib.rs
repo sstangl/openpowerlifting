@@ -37,7 +37,7 @@ pub use self::export::ExportRow;
 mod federation;
 pub use self::federation::Federation;
 mod meetpath;
-pub use self::meetpath::{file_to_meetpath, MeetPathError};
+pub use self::meetpath::{dir_to_meetpath, file_to_meetpath, MeetPathError};
 mod place;
 pub use self::place::Place;
 mod points;
