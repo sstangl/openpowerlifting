@@ -775,6 +775,11 @@ pub enum Federation {
     #[strum(to_string = "Russia-UA", serialize = "russia-ua")]
     RussiaUA,
 
+    /// Slovenská Asociácia Fitnes, Kulturistiky a Silového Trojboja.
+    /// Slovakian IPF Affilate.
+    #[strum(to_string = "SAFKST", serialize = "safkst")]
+    SAFKST,
+
     /// South African Powerlifting Federation, IPF.
     #[strum(to_string = "SAPF", serialize = "sapf")]
     SAPF,
@@ -1402,6 +1407,7 @@ impl Federation {
             Federation::RPU => false,
             Federation::RUPC => false,
             Federation::RussiaUA => false,
+            Federation::SAFKST => FULLY_TESTED,
             Federation::SAPF => FULLY_TESTED,
             Federation::SAST => false,
             Federation::ScottishPL => FULLY_TESTED,
@@ -1686,6 +1692,7 @@ impl Federation {
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
             Federation::RussiaUA => Some(Country::Russia),
+            Federation::SAFKST => Some(Country::Slovakia),
             Federation::SAPF => Some(Country::SouthAfrica),
             Federation::SAST => Some(Country::Slovakia),
             Federation::ScottishPL => Some(Country::Scotland),
@@ -2004,6 +2011,7 @@ impl Federation {
             Federation::RPU => None,
             Federation::RUPC => None,
             Federation::RussiaUA => None,
+            Federation::SAFKST => Some(Federation::IPF),
             Federation::SAPF => Some(Federation::IPF),
             Federation::SAST => Some(Federation::GPC),
             Federation::ScottishPL => Some(Federation::IPF),
@@ -2327,6 +2335,7 @@ impl Federation {
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
             Federation::RussiaUA => PointsSystem::Wilks,
+            Federation::SAFKST => Federation::ipf_rules_on(date),
             Federation::SAPF => Federation::ipf_rules_on(date),
             Federation::SAST => PointsSystem::Glossbrenner,
             Federation::ScottishPL => Federation::ipf_rules_on(date),

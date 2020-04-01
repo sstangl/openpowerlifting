@@ -55,6 +55,7 @@
   <option value="plzs" {% if selection.federation == "PLZS" %}selected{% endif %}>PLZS / {{strings.country.slovenia}}</option>
   <option value="pngpf" {% if selection.federation == "PNGPF" %}selected{% endif %}>PNGPF / {{strings.country.papuanewguinea}}</option>
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS / {{strings.country.poland}}</option>
+  <option value="safkst" {% if selection.federation == "SAFKST" %}selected{% endif %}>SAFKST / {{strings.country.slovakia}}</option>
   <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF / {{strings.country.southafrica}}</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL / {{strings.country.scotland}}</option>
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF / {{strings.country.sweden}}</option>
