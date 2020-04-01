@@ -48,7 +48,7 @@ pub fn file_to_meetpath<'a>(filepath: &'a Path) -> Result<&'a str, MeetPathError
 /// # use std::path::PathBuf;
 /// # use opltypes::dir_to_meetpath;
 /// let file = PathBuf::from("/home/opl-data/meet-data/rps/1924");
-/// assert_eq!(file_to_meetpath(&file).unwrap(), "rps/1924");
+/// assert_eq!(dir_to_meetpath(&file).unwrap(), "rps/1924");
 /// ```
 pub fn dir_to_meetpath<'a>(dirpath: &'a Path) -> Result<&'a str, MeetPathError> {
     let dir_str = dirpath.to_str().ok_or(MeetPathError::FilesystemUTF8Error)?;
