@@ -7,7 +7,7 @@
 
 - name: make sure server binary is latest
   copy:
-    src: build/server
+    src: ../build/server
     dest: "{{ openpl_app_binary_path }}"
     mode: 0755
     owner: root
@@ -15,7 +15,7 @@
 
 - name: make sure server data is latest
   synchronize:
-    src: build/data/
+    src: ../build/data/
     dest: "{{ openpl_app_data_path }}/"
     archive: no
     recursive: yes
