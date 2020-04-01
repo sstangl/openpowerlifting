@@ -584,6 +584,11 @@ pub enum Federation {
     #[strum(to_string = "LPF", serialize = "lpf")]
     LPF,
 
+    /// Unaffiliated meets held in Malaysia.
+    #[serde(rename = "Malaysia-UA")]
+    #[strum(to_string = "Malaysia-UA", serialize = "malaysia-ua")]
+    MalaysiaUA,
+
     /// Mississippi High School Athletic Association.
     #[strum(to_string = "MHSAA", serialize = "mhsaa")]
     MHSAA,
@@ -1351,6 +1356,7 @@ impl Federation {
             Federation::LJTF => FULLY_TESTED,
             Federation::LMP => false,
             Federation::LPF => FULLY_TESTED,
+            Federation::MalaysiaUA => false,
             Federation::MHSAA => false,
             Federation::MHSPLA => false,
             Federation::MM => false,
@@ -1634,6 +1640,7 @@ impl Federation {
             Federation::LJTF => Some(Country::Lithuania),
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
+            Federation::MalaysiaUA => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
             Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
@@ -1937,6 +1944,7 @@ impl Federation {
             Federation::LJTF => Some(Federation::IPF),
             Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
+            Federation::MalaysiaUA => None,
             Federation::MHSAA => None,
             Federation::MHSPLA => None,
             Federation::MM => None,
@@ -2273,6 +2281,7 @@ impl Federation {
             Federation::LJTF => Federation::ipf_rules_on(date),
             Federation::LMP => PointsSystem::Wilks,
             Federation::LPF => Federation::ipf_rules_on(date),
+            Federation::MalaysiaUA => PointsSystem::Wilks,
             Federation::MHSAA => PointsSystem::Wilks,
             Federation::MHSPLA => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
