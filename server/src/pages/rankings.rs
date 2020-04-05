@@ -29,7 +29,7 @@ pub struct Context<'db, 'a> {
     pub units: opltypes::WeightUnits,
     pub selection: &'a Selection,
     pub default_selection: &'a Selection,
-    pub data: String,
+    pub initial_data: String,
 }
 
 impl<'db, 'a> Context<'db, 'a> {
@@ -64,7 +64,7 @@ impl<'db, 'a> Context<'db, 'a> {
             units: locale.units,
             selection,
             default_selection: defaults,
-            data: serde_json::to_string(&slice).ok()?,
+            initial_data: serde_json::to_string(&slice).ok()?,
         })
     }
 }

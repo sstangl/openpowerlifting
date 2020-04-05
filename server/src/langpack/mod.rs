@@ -1013,6 +1013,93 @@ impl Serialize for LocalizedPoints {
     }
 }
 
+/// Type that gets serialized into a localized ordinal.
+///
+/// This is useful for Spanish and Portuguese, which use a special
+/// notation for ordinal numbers (dependent on the lifter's `Sex`).
+#[derive(Copy, Clone)]
+pub enum LocalizedOrdinal {
+    /// Renders `1` as `1`.
+    NumberOnly(u32),
+
+    /// Renders `1` as `1º`, for men.
+    SpanishMasculine(u32),
+
+    /// Renders `1` as `1ª`, for women.
+    SpanishFeminine(u32),
+}
+
+impl LocalizedOrdinal {
+    pub fn from(n: u32, language: Language, sex: Sex) -> LocalizedOrdinal {
+        match language {
+            Language::es | Language::pt => match sex {
+                Sex::M | Sex::Mx => LocalizedOrdinal::SpanishMasculine(n),
+                Sex::F => LocalizedOrdinal::SpanishFeminine(n),
+            },
+            _ => LocalizedOrdinal::NumberOnly(n),
+        }
+    }
+}
+
+impl Serialize for LocalizedOrdinal {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match *self {
+            Self::NumberOnly(n) => serializer.serialize_u32(n),
+            Self::SpanishMasculine(n) => {
+                let s = format!("{}º", n);
+                serializer.serialize_str(&s)
+            }
+            Self::SpanishFeminine(n) => {
+                let s = format!("{}ª", n);
+                serializer.serialize_str(&s)
+            }
+        }
+    }
+}
+
+/// Type that gets serialized into a localized `Place`.
+#[derive(Copy, Clone)]
+pub enum LocalizedPlace {
+    P(LocalizedOrdinal),
+    G,
+    DQ,
+    DD,
+    NS,
+}
+
+impl LocalizedPlace {
+    pub fn from(place: Place, language: Language, sex: Sex) -> LocalizedPlace {
+        match place {
+            Place::P(n) => {
+                let p = u8::from(n) as u32;
+                LocalizedPlace::P(LocalizedOrdinal::from(p, language, sex))
+            }
+            Place::G => LocalizedPlace::G,
+            Place::DQ => LocalizedPlace::DQ,
+            Place::DD => LocalizedPlace::DD,
+            Place::NS => LocalizedPlace::NS,
+        }
+    }
+}
+
+impl Serialize for LocalizedPlace {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match *self {
+            LocalizedPlace::P(ord) => ord.serialize(serializer),
+            LocalizedPlace::G => serializer.serialize_str("G"),
+            LocalizedPlace::DQ => serializer.serialize_str("DQ"),
+            LocalizedPlace::DD => serializer.serialize_str("DD"),
+            LocalizedPlace::NS => serializer.serialize_str("NS"),
+        }
+    }
+}
+
 /// Type that gets serialized into a localized `WeightClassAny`.
 #[derive(Copy, Clone)]
 pub struct LocalizedWeightClassAny {

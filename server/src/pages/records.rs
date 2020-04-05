@@ -7,7 +7,9 @@ use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
 
-use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use crate::langpack::{
+    self, get_localized_name, Language, Locale, LocalizeNumber, LocalizedOrdinal,
+};
 use crate::opldb::{algorithms, Entry, Lifter, Meet, OplDb};
 use crate::pages::selection::*;
 
@@ -552,7 +554,7 @@ impl<'db> Table<'db> {
 
             let row = match record {
                 None => RecordsRow {
-                    rank,
+                    rank: LocalizedOrdinal::from(rank, locale.language, Sex::default()),
                     weightclass: weightclass_display,
                     weight_lifted: None,
                     date: None,
@@ -566,7 +568,7 @@ impl<'db> Table<'db> {
                     let lifter = opldb.get_lifter(entry.lifter_id);
 
                     RecordsRow {
-                        rank,
+                        rank: LocalizedOrdinal::from(rank, locale.language, entry.sex),
                         weightclass: weightclass_display,
                         weight_lifted: Some(
                             lift_selector(entry)
@@ -593,7 +595,7 @@ impl<'db> Table<'db> {
 /// A row in a records table.
 #[derive(Serialize)]
 pub struct RecordsRow<'db> {
-    pub rank: u32,
+    pub rank: langpack::LocalizedOrdinal,
     pub weightclass: Option<langpack::LocalizedWeightClassAny>,
     pub weight_lifted: Option<langpack::LocalizedWeightAny>,
 

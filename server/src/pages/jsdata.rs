@@ -3,11 +3,18 @@
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use crate::langpack::{self, get_localized_name, Locale, LocalizeNumber};
+use crate::langpack::{
+    self, get_localized_name, Locale, LocalizeNumber, LocalizedOrdinal,
+};
 use crate::opldb::{Entry, OplDb};
 
+/// Represents one row of JS data.
+///
+/// This struct is manually serialized. When adding members to this struct,
+/// also remember to update the Serialize implementation.
 pub struct JsEntryRow<'db> {
     pub sorted_index: u32,
+    pub rank: langpack::LocalizedOrdinal,
 
     pub name: &'db str,
     pub username: &'db str,
@@ -48,6 +55,7 @@ impl<'db> Serialize for JsEntryRow<'db> {
         let mut seq = serializer.serialize_seq(None)?;
 
         seq.serialize_element(&self.sorted_index)?;
+        seq.serialize_element(&self.rank)?;
 
         seq.serialize_element(&self.name)?;
         seq.serialize_element(&self.username)?;
@@ -95,6 +103,8 @@ impl<'db> JsEntryRow<'db> {
 
         JsEntryRow {
             sorted_index,
+
+            rank: LocalizedOrdinal::from(sorted_index + 1, locale.language, entry.sex),
 
             name: get_localized_name(lifter, locale.language),
             username: &lifter.username,

@@ -125,7 +125,7 @@ function makeDataProvider() {
                 entry[Column.Date] + '</a>';
 
             return {
-                rank: (entry[Column.SortedIndex] as number) + 1,
+                rank: entry[Column.Rank],
                 name: name,
                 fed: entry[Column.Federation],
                 date: date,

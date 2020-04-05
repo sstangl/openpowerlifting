@@ -32,6 +32,7 @@ declare const urlprefix: string;
 // in the Rust server source.
 export const enum Column {
     SortedIndex,
+    Rank,
     Name,
     Username,
     Instagram,

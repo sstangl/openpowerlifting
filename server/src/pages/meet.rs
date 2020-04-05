@@ -6,7 +6,10 @@ use opltypes::*;
 use std::cmp;
 use std::str::FromStr;
 
-use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
+use crate::langpack::{
+    self, get_localized_name, Language, Locale, LocalizeNumber, LocalizedOrdinal,
+    LocalizedPlace,
+};
 use crate::opldb::{self, algorithms, Entry};
 
 /// The context object passed to `templates/meet.html.tera`
@@ -226,9 +229,9 @@ impl<'a> MeetInfo<'a> {
 #[derive(Serialize)]
 pub struct ResultsRow<'a> {
     /// The Place given by the federation.
-    pub place: String,
+    pub place: langpack::LocalizedPlace,
     /// The rank in the ranking-by-points view (by Wilks).
-    pub rank: u32,
+    pub rank: langpack::LocalizedOrdinal,
     pub localized_name: &'a str,
     pub lifter: &'a opldb::Lifter,
     pub sex: &'a str,
@@ -259,8 +262,8 @@ impl<'a> ResultsRow<'a> {
         let units = locale.units;
 
         ResultsRow {
-            place: format!("{}", &entry.place),
-            rank,
+            place: LocalizedPlace::from(entry.place, locale.language, entry.sex),
+            rank: LocalizedOrdinal::from(rank, locale.language, entry.sex),
             localized_name: get_localized_name(&lifter, locale.language),
             lifter,
             sex: strings.translate_sex(entry.sex),
