@@ -3,9 +3,7 @@
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
 
-use crate::langpack::{
-    self, get_localized_name, Locale, LocalizeNumber, LocalizedOrdinal,
-};
+use crate::langpack::{self, get_localized_name, Locale, LocalizeNumber};
 use crate::opldb::{Entry, OplDb};
 
 /// Represents one row of JS data.
@@ -104,7 +102,7 @@ impl<'db> JsEntryRow<'db> {
         JsEntryRow {
             sorted_index,
 
-            rank: LocalizedOrdinal::from(sorted_index + 1, locale.language, entry.sex),
+            rank: locale.ordinal(sorted_index + 1, entry.sex),
 
             name: get_localized_name(lifter, locale.language),
             username: &lifter.username,

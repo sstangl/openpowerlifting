@@ -149,6 +149,21 @@ impl<'a> Locale<'a> {
             units,
         }
     }
+
+    /// Localizes an arbitrary ordinal number.
+    ///
+    /// The Sex refers to either the sex of the lifter or the grammatical
+    /// gender.
+    pub fn ordinal(&self, n: u32, sex: Sex) -> LocalizedOrdinal {
+        LocalizedOrdinal::from(n, self.language, sex)
+    }
+
+    /// Localizes a `Place`.
+    ///
+    /// Sex refers to the sex of the lifter.
+    pub fn place(&self, place: Place, sex: Sex) -> LocalizedPlace {
+        LocalizedPlace::from(place, self.language, sex)
+    }
 }
 
 #[derive(Serialize, Deserialize)]

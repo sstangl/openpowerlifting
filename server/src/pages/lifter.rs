@@ -2,9 +2,7 @@
 
 use opltypes::*;
 
-use crate::langpack::{
-    self, get_localized_name, Language, Locale, LocalizeNumber, LocalizedPlace,
-};
+use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use crate::opldb::{self, Entry};
 use crate::pages::meet::points_column_title; // FIXME: This should not be defined there.
 
@@ -66,7 +64,7 @@ impl<'db> PersonalBestsRow<'db> {
 /// A row in the meet results table.
 #[derive(Serialize)]
 pub struct MeetResultsRow<'a> {
-    pub place: LocalizedPlace,
+    pub place: langpack::LocalizedPlace,
     pub federation: &'a Federation,
     pub date: String,
     pub country: &'a str,
@@ -129,7 +127,7 @@ impl<'a> MeetResultsRow<'a> {
         let units = locale.units;
 
         MeetResultsRow {
-            place: LocalizedPlace::from(entry.place, locale.language, entry.sex),
+            place: locale.place(entry.place, entry.sex),
             federation: &meet.federation,
             date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),

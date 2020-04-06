@@ -6,10 +6,7 @@ use opltypes::*;
 use std::cmp;
 use std::str::FromStr;
 
-use crate::langpack::{
-    self, get_localized_name, Language, Locale, LocalizeNumber, LocalizedOrdinal,
-    LocalizedPlace,
-};
+use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use crate::opldb::{self, algorithms, Entry};
 
 /// The context object passed to `templates/meet.html.tera`
@@ -262,8 +259,8 @@ impl<'a> ResultsRow<'a> {
         let units = locale.units;
 
         ResultsRow {
-            place: LocalizedPlace::from(entry.place, locale.language, entry.sex),
-            rank: LocalizedOrdinal::from(rank, locale.language, entry.sex),
+            place: locale.place(entry.place, entry.sex),
+            rank: locale.ordinal(rank, entry.sex),
             localized_name: get_localized_name(&lifter, locale.language),
             lifter,
             sex: strings.translate_sex(entry.sex),
