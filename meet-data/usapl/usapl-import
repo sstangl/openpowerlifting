@@ -177,6 +177,7 @@ def makeentriescsv(soup):
     csv.append_column('TotalKg')
 
     table = soup.find("table", {"id": "competition_view_results"})
+    print(soup)
     table = table.find("tbody")
 
     state_sex = ''
