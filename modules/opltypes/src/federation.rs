@@ -951,6 +951,10 @@ pub enum Federation {
     #[strum(to_string = "WABDL", serialize = "wabdl")]
     WABDL,
 
+    /// World Association of Iron Athletes, a local USA federation.
+    #[strum(to_string = "WAIA", serialize = "waia")]
+    WAIA,
+
     /// Warrior Powerlifting Federation, the continuation of Son Light Power.
     ///
     /// The federation renamed itself to WarriorPLF around August 2019.
@@ -1450,6 +1454,7 @@ impl Federation {
             Federation::Vityaz => false,
             Federation::VPF => FULLY_TESTED,
             Federation::WABDL => FULLY_TESTED,
+            Federation::WAIA => false,
             Federation::WarriorPLF => false,
             Federation::WDFPF => FULLY_TESTED,
             Federation::WelshPA => FULLY_TESTED,
@@ -1735,6 +1740,7 @@ impl Federation {
             Federation::Vityaz => Some(Country::Russia),
             Federation::VPF => Some(Country::Vietnam),
             Federation::WABDL => Some(Country::USA),
+            Federation::WAIA => Some(Country::USA),
             Federation::WarriorPLF => Some(Country::USA),
             Federation::WBC => Some(Country::USA),
             Federation::WDFPF => None,
@@ -2061,6 +2067,7 @@ impl Federation {
             Federation::Vityaz => None,
             Federation::VPF => Some(Federation::IPF),
             Federation::WABDL => None,
+            Federation::WAIA => None,
             Federation::WarriorPLF => None,
             Federation::WBC => None,
             Federation::WDFPF => Some(Federation::WDFPF),
@@ -2385,6 +2392,7 @@ impl Federation {
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::VPF => Federation::ipf_rules_on(date),
             Federation::WABDL => PointsSystem::Wilks,
+            Federation::WAIA => PointsSystem::Wilks,
             Federation::WarriorPLF => PointsSystem::Wilks,
             Federation::WBC => PointsSystem::Wilks,
             Federation::WDFPF => PointsSystem::Wilks,
