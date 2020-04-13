@@ -30,6 +30,7 @@ pub enum PointsSystem {
     Reshel,
     SchwartzMalone,
     Wilks,
+    Wilks2020,
 
     /// Expresses that the meet doesn't use a points system.
     Total,

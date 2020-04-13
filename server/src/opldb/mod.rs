@@ -194,6 +194,7 @@ impl Entry {
             PointsSystem::SchwartzMalone => coefficients::schwartzmalone(sex, bw, total),
             PointsSystem::Total => self.totalkg.as_type(units).as_points(),
             PointsSystem::Wilks => self.wilks,
+            PointsSystem::Wilks2020 => coefficients::wilks2020(sex, bw, total),
         }
     }
 }

@@ -32,6 +32,7 @@ declare const path_if_by_reshel: string;
 declare const path_if_by_schwartzmalone: string;
 declare const path_if_by_total: string;
 declare const path_if_by_wilks: string;
+declare const path_if_by_wilks2020: string;
 
 let selSort: HTMLSelectElement;
 
@@ -71,6 +72,9 @@ function redirect() {
             break;
         case "by-wilks":
             window.location.href = path_if_by_wilks;
+            break;
+        case "by-wilks2020":
+            window.location.href = path_if_by_wilks2020;
             break;
     }
 }

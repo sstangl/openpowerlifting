@@ -2141,6 +2141,19 @@ impl Federation {
         }
     }
 
+    /// Helper function for specifying the PointsSystem of federations under IPL rules.
+    #[inline]
+    fn ipl_rules_on(date: Date) -> PointsSystem {
+        // The IPL silently switched from Wilks to Wilks2020 on 2020-03-04.
+        // The change was implemented only by notifying their meet directors
+        // and requiring use of an upgraded version of  their IronComp meet software.
+        if date >= Date::from_parts(2020, 03, 04) {
+            PointsSystem::Wilks2020
+        } else {
+            PointsSystem::Wilks
+        }
+    }
+
     /// Which points system is default for a federation's meet.
     pub fn default_points(self, date: Date) -> PointsSystem {
         match self {
@@ -2166,7 +2179,7 @@ impl Federation {
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPF => PointsSystem::Wilks,
-            Federation::AusPL => PointsSystem::Wilks,
+            Federation::AusPL => Federation::ipl_rules_on(date),
             Federation::AWF => PointsSystem::Wilks,
             Federation::BahamasPF => PointsSystem::Wilks,
             Federation::BAWLA => PointsSystem::Wilks,
@@ -2199,7 +2212,7 @@ impl Federation {
             Federation::CPA => PointsSystem::Wilks,
             Federation::CPC => PointsSystem::Wilks,
             Federation::CPF => PointsSystem::Wilks,
-            Federation::CPL => PointsSystem::Wilks,
+            Federation::CPL => Federation::ipl_rules_on(date),
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => Federation::ipf_rules_on(date),
             Federation::CRPEBA => PointsSystem::Wilks,
@@ -2266,8 +2279,8 @@ impl Federation {
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
-            Federation::IPL => PointsSystem::Wilks,
-            Federation::IPLNZ => PointsSystem::Wilks,
+            Federation::IPL => Federation::ipl_rules_on(date),
+            Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IrelandUA => PointsSystem::Wilks,
             Federation::IrishPF => {
                 // On 2020-02-16, IrishPF voted to immediately switch to Dots.
@@ -2277,7 +2290,7 @@ impl Federation {
                     Federation::ipf_rules_on(date)
                 }
             }
-            Federation::IrishPO => PointsSystem::Wilks,
+            Federation::IrishPO => Federation::ipl_rules_on(date),
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
@@ -2290,11 +2303,11 @@ impl Federation {
                     Federation::ipf_rules_on(date)
                 }
             }
-            Federation::KuwaitPL => PointsSystem::Wilks,
+            Federation::KuwaitPL => Federation::ipl_rules_on(date),
             Federation::LGBT => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
             Federation::LJTF => Federation::ipf_rules_on(date),
-            Federation::LMP => PointsSystem::Wilks,
+            Federation::LMP => Federation::ipl_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MalaysiaUA => PointsSystem::Wilks,
             Federation::MHSAA => PointsSystem::Wilks,
@@ -2375,7 +2388,7 @@ impl Federation {
             Federation::UPC => PointsSystem::Wilks,
             Federation::UPCGermany => PointsSystem::Glossbrenner,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
-            Federation::UPL => PointsSystem::Wilks,
+            Federation::UPL => Federation::ipl_rules_on(date),
             Federation::USABA => PointsSystem::Wilks,
             Federation::USABPA => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
@@ -2384,7 +2397,7 @@ impl Federation {
             Federation::USMilAbroad => PointsSystem::Wilks,
             Federation::USPS => PointsSystem::Wilks,
             Federation::USPF => PointsSystem::Wilks,
-            Federation::USPA => PointsSystem::Wilks,
+            Federation::USPA => Federation::ipl_rules_on(date),
             Federation::USSF => PointsSystem::Wilks,
             Federation::USSports => PointsSystem::Wilks,
             Federation::USVIPF => Federation::ipf_rules_on(date),

@@ -261,6 +261,26 @@ pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.totalkg.cmp(&b.totalkg).reverse())
 }
 
+/// Defines an `Ordering` of Entries by Wilks2020 Points.
+#[inline]
+pub fn cmp_wilks2020(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    let a_points = coefficients::wilks2020(a.sex, a.bodyweightkg, a.totalkg);
+    let b_points = coefficients::wilks2020(b.sex, b.bodyweightkg, b.totalkg);
+
+    // First sort by points, higher first.
+    a_points
+        .cmp(&b_points)
+        .reverse()
+        // If equal, sort by Date, earlier first.
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
 /// Defines an `Ordering` of Entries by Reshel points.
 ///
 /// Because Reshel points aren't stored on the Entry, they are recalculated

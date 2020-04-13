@@ -37,6 +37,7 @@ pub struct Context<'db> {
     pub path_if_by_schwartzmalone: String,
     pub path_if_by_total: String,
     pub path_if_by_wilks: String,
+    pub path_if_by_wilks2020: String,
 
     /// True iff the meet reported any age data.
     pub has_age_data: bool,
@@ -70,6 +71,7 @@ pub enum MeetSortSelection {
     BySchwartzMalone,
     ByTotal,
     ByWilks,
+    ByWilks2020,
 
     /// Special value that resolves to one of the others after lookup.
     ByFederationDefault,
@@ -91,6 +93,7 @@ impl FromStr for MeetSortSelection {
             "by-schwartz-malone" => Ok(MeetSortSelection::BySchwartzMalone),
             "by-total" => Ok(MeetSortSelection::ByTotal),
             "by-wilks" => Ok(MeetSortSelection::ByWilks),
+            "by-wilks2020" => Ok(MeetSortSelection::ByWilks2020),
             _ => Err(()),
         }
     }
@@ -109,6 +112,7 @@ impl From<PointsSystem> for MeetSortSelection {
             PointsSystem::NASA => MeetSortSelection::ByNASA,
             PointsSystem::Total => MeetSortSelection::ByTotal,
             PointsSystem::Wilks => MeetSortSelection::ByWilks,
+            PointsSystem::Wilks2020 => MeetSortSelection::ByWilks2020,
         }
     }
 }
@@ -129,6 +133,7 @@ pub fn points_column_title<'db>(
         PointsSystem::Reshel => "Reshel",
         PointsSystem::SchwartzMalone => "S/Malone",
         PointsSystem::Wilks => &locale.strings.columns.wilks,
+        PointsSystem::Wilks2020 => &locale.strings.columns.wilks2020,
 
         // This occurs if the federation default is ByTotal.
         PointsSystem::Total => {
@@ -158,6 +163,7 @@ impl MeetSortSelection {
             MeetSortSelection::ByReshel => PointsSystem::Reshel,
             MeetSortSelection::BySchwartzMalone => PointsSystem::SchwartzMalone,
             MeetSortSelection::ByWilks => PointsSystem::Wilks,
+            MeetSortSelection::ByWilks2020 => PointsSystem::Wilks2020,
 
             // Specifically-requested weight sorts.
             MeetSortSelection::ByDivision => default_points,
@@ -552,6 +558,7 @@ fn make_tables_by_points<'db>(
         .into_iter()
         .group_by(|e| e.lifter_id);
 
+    // FIXME: This should use the current PointsSystem, not Wilks.
     let mut entries: Vec<&opldb::Entry> = groups
         .into_iter()
         .map(|(_key, group)| group.max_by_key(|x| x.wilks).unwrap())
@@ -593,6 +600,9 @@ fn make_tables_by_points<'db>(
         }
         PointsSystem::Wilks => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_wilks(&meets, a, b));
+        }
+        PointsSystem::Wilks2020 => {
+            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks2020(&meets, a, b));
         }
     };
 
@@ -671,6 +681,10 @@ impl<'db> Context<'db> {
             PointsSystem::Wilks => format!("m/{}", meet.path),
             _ => format!("m/{}/by-wilks", meet.path),
         };
+        let path_if_by_wilks2020 = match default_points {
+            PointsSystem::Wilks2020 => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-wilks2020", meet.path),
+        };
 
         Context {
             urlprefix: "/",
@@ -697,6 +711,7 @@ impl<'db> Context<'db> {
             path_if_by_schwartzmalone,
             path_if_by_total,
             path_if_by_wilks,
+            path_if_by_wilks2020,
         }
     }
 }

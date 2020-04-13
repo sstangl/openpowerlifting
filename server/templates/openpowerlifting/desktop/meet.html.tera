@@ -21,6 +21,7 @@
     const path_if_by_schwartzmalone = "{{urlprefix | safe}}{{path_if_by_schwartzmalone | safe}}";
     const path_if_by_total = "{{urlprefix | safe}}{{path_if_by_total | safe}}";
     const path_if_by_wilks = "{{urlprefix | safe}}{{path_if_by_wilks | safe}}";
+    const path_if_by_wilks2020 = "{{urlprefix | safe}}{{path_if_by_wilks2020 | safe}}";
   </script>
 {% endblock includes %}
 
@@ -42,6 +43,7 @@
           <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
           <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
           <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+          <option value="by-wilks2020" {% if sortselection == "ByWilks2020" %}selected{% endif %}>{{strings.selectors.sort.by_wilks2020}}</option>
         </optgroup>
       </select>
     </div>
