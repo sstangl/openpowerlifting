@@ -2,17 +2,17 @@
 //
 // This provides the theming for the main OpenPowerlifting site.
 
-$background-color: #FDE4EF;
+$background-color: #272727;
 $header-color: #4A4A50;
 $header-background-color: #F3F3F3;
 
-$default-color: #120D0B;
-$primary-color: #FFBCD9;
+$default-color: #EDF2F4;
+$primary-color: #FB3640;
 
 // A slightly mellowed-out red compared to the red for fonts.
-$table-header-background-color: $primary-color;
-$row-alt-background-color: #FBCFE2; // Every even-numbered row.
-$row-hover-background-color: $primary-color;
+$table-header-background-color: #BF262B;
+$row-alt-background-color: #333333; // Every even-numbered row.
+$row-hover-background-color: #484848;
 
 $control-bar-background-color: #C2C2C2;
 $control-text-color: #4A4A50;
