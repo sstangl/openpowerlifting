@@ -3,6 +3,7 @@
 
 #theGrid {
   flex: 1;
+  transform: rotate(1deg);
 }
 
 .slick-cell {
@@ -69,6 +70,7 @@ table {
   padding-bottom: 12px;
   border-spacing: 0px;
   border: none;
+  transform: rotate(1deg);
 }
 
 thead {
