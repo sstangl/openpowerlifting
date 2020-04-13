@@ -33,7 +33,7 @@ PRETTY_DATE=$(date -d "yesterday 13:00" "+%A, %B %-d")
 #
 # The "-" after goaccess is critical: it's required for systemd,
 # otherwise goaccess doesn't realize that it's supposed to read from stdin.
-grep "${YESTERDAY}" "${LOGFILE}" | goaccess - --ignore-crawlers -o "${TEMPFILE}"
+grep "${YESTERDAY}" "${LOGFILE}" | goaccess - --ignore-crawlers --config-file="/etc/goaccess.conf" -o "${TEMPFILE}"
 
 # The ${TEMPFILE} now contains a bunch of lines that look like the lines below:
 #  "0",,"general",,,,,,,,"2019-03-15 17:37:28 +0000","date_time"
