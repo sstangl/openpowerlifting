@@ -25,6 +25,7 @@ declare const path_if_by_ah: string;
 declare const path_if_by_division: string;
 declare const path_if_by_dots: string;
 declare const path_if_by_glossbrenner: string;
+declare const path_if_by_goodlift: string;
 declare const path_if_by_ipfpoints: string;
 declare const path_if_by_mcculloch: string;
 declare const path_if_by_nasa: string;
@@ -51,6 +52,9 @@ function redirect() {
             break;
         case "by-glossbrenner":
             window.location.href = path_if_by_glossbrenner;
+            break;
+        case "by-goodlift":
+            window.location.href = path_if_by_goodlift;
             break;
         case "by-ipf-points":
             window.location.href = path_if_by_ipfpoints;

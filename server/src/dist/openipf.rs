@@ -52,7 +52,7 @@ fn default_openipf_selection() -> pages::selection::Selection {
         ageclass: AgeClassSelection::AllAges,
         year: YearSelection::AllYears,
         event: EventSelection::FullPower,
-        sort: SortSelection::ByIPFPoints,
+        sort: SortSelection::ByGoodlift,
         state: None,
     }
 }

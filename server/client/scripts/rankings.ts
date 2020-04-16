@@ -54,6 +54,7 @@ declare const translation_column_total: string;
 declare const translation_column_wilks: string;
 declare const translation_column_mcculloch: string;
 declare const translation_column_glossbrenner: string;
+declare const translation_column_goodlift: string;
 declare const translation_column_ipfpoints: string;
 declare const translation_column_dots: string;
 declare const translation_default_sort: string;
@@ -192,6 +193,7 @@ function selection_to_points_title(): string {
     switch (selSort.value) {
         case "by-dots": return translation_column_dots;
         case "by-glossbrenner": return translation_column_glossbrenner;
+        case "by-goodlift": return translation_column_goodlift;
         case "by-ipf-points": return translation_column_ipfpoints;
         case "by-mcculloch": return translation_column_mcculloch;
         case "by-wilks": return translation_column_wilks;

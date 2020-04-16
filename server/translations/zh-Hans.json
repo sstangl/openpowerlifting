@@ -53,6 +53,7 @@
         "glossbrenner": "格洛斯系数（Gloss）",
         "ipfpoints": "IPF系数",
         "dots": "Dots",
+        "goodlift": "GL",
         "num_lifters": "选手"
     },
     "country": {
@@ -287,6 +288,7 @@
             "weight": "体重分类",
             "points": "系数分类",
             "by_dots": "根据道茨系数(Dots)",
+            "by_goodlift": "By GL Points",
             "by_schwartzmalone": "根据施瓦茨/马龙系数(Schwartz/Malone)"
         },
         "year": {

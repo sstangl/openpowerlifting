@@ -53,7 +53,8 @@
         "glossbrenner": "글로스",
         "ipfpoints": "IPF",
         "num_lifters": "선수",
-        "dots": "Dots"
+        "dots": "Dots",
+        "goodlift": "GL"
     },
     "country": {
         "afghanistan": "아프가니스탄",
@@ -283,6 +284,7 @@
             "weight": "체급 종류",
             "points": "포인트 종류",
             "by_dots": "Dots 계산법",
+            "by_goodlift": "By GL Points",
             "by_schwartzmalone": "Schwartz/Malone 계산법"
         },
         "year": {

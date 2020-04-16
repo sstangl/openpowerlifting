@@ -57,6 +57,13 @@ pub fn filter_glossbrenner(entry: &Entry) -> bool {
     entry.glossbrenner > Points::from_i32(0)
 }
 
+/// Whether an `Entry` should be part of `ByGoodlift` rankings and records.
+#[inline]
+pub fn filter_goodlift(entry: &Entry) -> bool {
+    // Goodlift Points are defined to be zero if DQ.
+    entry.goodlift > Points::from_i32(0)
+}
+
 /// Whether an `Entry` should be part of `ByIPFPoints` rankings and records.
 #[inline]
 pub fn filter_ipfpoints(entry: &Entry) -> bool {
@@ -209,6 +216,23 @@ pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     // First sort by Glossbrenner, higher first.
     a.glossbrenner
         .cmp(&b.glossbrenner)
+        .reverse()
+        // If equal, sort by Date, earlier first.
+        .then(
+            meets[a.meet_id as usize]
+                .date
+                .cmp(&meets[b.meet_id as usize].date),
+        )
+        // If that's equal too, sort by Total, highest first.
+        .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
+/// Defines an `Ordering` of Entries by Goodlift.
+#[inline]
+pub fn cmp_goodlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    // First sort by points, higher first.
+    a.goodlift
+        .cmp(&b.goodlift)
         .reverse()
         // If equal, sort by Date, earlier first.
         .then(
@@ -616,6 +640,7 @@ pub fn get_full_sorted_uniqued<'db>(
             SortSelection::ByTotal => &cache.constant_time.total,
             SortSelection::ByDots => &cache.constant_time.dots,
             SortSelection::ByGlossbrenner => &cache.constant_time.glossbrenner,
+            SortSelection::ByGoodlift => &cache.constant_time.goodlift,
             SortSelection::ByIPFPoints => &cache.constant_time.ipfpoints,
             SortSelection::ByMcCulloch => &cache.constant_time.mcculloch,
             SortSelection::ByWilks => &cache.constant_time.wilks,
@@ -681,6 +706,9 @@ pub fn get_full_sorted_uniqued<'db>(
             cmp_glossbrenner,
             filter_glossbrenner,
         ),
+        SortSelection::ByGoodlift => {
+            cur.sort_and_unique_by(&entries, &meets, cmp_goodlift, filter_goodlift)
+        }
         SortSelection::ByIPFPoints => {
             cur.sort_and_unique_by(&entries, &meets, cmp_ipfpoints, filter_ipfpoints)
         }

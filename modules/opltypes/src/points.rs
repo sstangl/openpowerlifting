@@ -24,6 +24,7 @@ pub enum PointsSystem {
     AH,
     Dots,
     Glossbrenner,
+    Goodlift,
     IPFPoints,
     McCulloch,
     NASA,

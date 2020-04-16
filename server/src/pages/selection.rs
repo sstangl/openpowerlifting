@@ -1069,6 +1069,7 @@ pub enum SortSelection {
     ByTotal,
     ByDots,
     ByGlossbrenner,
+    ByGoodlift,
     ByIPFPoints,
     ByMcCulloch,
     ByWilks,
@@ -1086,6 +1087,7 @@ impl FromStr for SortSelection {
             "by-dots" => Ok(SortSelection::ByDots),
             "by-ipf-points" => Ok(SortSelection::ByIPFPoints),
             "by-glossbrenner" => Ok(SortSelection::ByGlossbrenner),
+            "by-goodlift" => Ok(SortSelection::ByGoodlift),
             "by-mcculloch" => Ok(SortSelection::ByMcCulloch),
             "by-wilks" => Ok(SortSelection::ByWilks),
             _ => Err(()),
@@ -1105,6 +1107,7 @@ impl From<SortSelection> for PointsSystem {
             // Point sorts are taken directly.
             SortSelection::ByDots => PointsSystem::Dots,
             SortSelection::ByGlossbrenner => PointsSystem::Glossbrenner,
+            SortSelection::ByGoodlift => PointsSystem::Goodlift,
             SortSelection::ByIPFPoints => PointsSystem::IPFPoints,
             SortSelection::ByMcCulloch => PointsSystem::McCulloch,
             SortSelection::ByWilks => PointsSystem::Wilks,
@@ -1125,6 +1128,7 @@ impl SortSelection {
             // Point sorts.
             SortSelection::ByDots => true,
             SortSelection::ByGlossbrenner => true,
+            SortSelection::ByGoodlift => true,
             SortSelection::ByIPFPoints => true,
             SortSelection::ByMcCulloch => true,
             SortSelection::ByWilks => true,

@@ -30,6 +30,7 @@ pub struct Context<'db> {
     pub path_if_by_division: String,
     pub path_if_by_dots: String,
     pub path_if_by_glossbrenner: String,
+    pub path_if_by_goodlift: String,
     pub path_if_by_ipfpoints: String,
     pub path_if_by_mcculloch: String,
     pub path_if_by_nasa: String,
@@ -64,6 +65,7 @@ pub enum MeetSortSelection {
     ByDivision,
     ByDots,
     ByGlossbrenner,
+    ByGoodlift,
     ByIPFPoints,
     ByMcCulloch,
     ByNASA,
@@ -86,6 +88,7 @@ impl FromStr for MeetSortSelection {
             "by-division" => Ok(MeetSortSelection::ByDivision),
             "by-dots" => Ok(MeetSortSelection::ByDots),
             "by-glossbrenner" => Ok(MeetSortSelection::ByGlossbrenner),
+            "by-goodlift" => Ok(MeetSortSelection::ByGoodlift),
             "by-ipf-points" => Ok(MeetSortSelection::ByIPFPoints),
             "by-mcculloch" => Ok(MeetSortSelection::ByMcCulloch),
             "by-nasa" => Ok(MeetSortSelection::ByNASA),
@@ -105,6 +108,7 @@ impl From<PointsSystem> for MeetSortSelection {
             PointsSystem::AH => MeetSortSelection::ByAH,
             PointsSystem::Dots => MeetSortSelection::ByDots,
             PointsSystem::Glossbrenner => MeetSortSelection::ByGlossbrenner,
+            PointsSystem::Goodlift => MeetSortSelection::ByGoodlift,
             PointsSystem::IPFPoints => MeetSortSelection::ByIPFPoints,
             PointsSystem::McCulloch => MeetSortSelection::ByMcCulloch,
             PointsSystem::Reshel => MeetSortSelection::ByReshel,
@@ -127,6 +131,7 @@ pub fn points_column_title<'db>(
         PointsSystem::AH => "AH",
         PointsSystem::Dots => &locale.strings.columns.dots,
         PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
+        PointsSystem::Goodlift => &locale.strings.columns.goodlift,
         PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
         PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
         PointsSystem::NASA => "NASA",
@@ -157,6 +162,7 @@ impl MeetSortSelection {
             MeetSortSelection::ByAH => PointsSystem::AH,
             MeetSortSelection::ByDots => PointsSystem::Dots,
             MeetSortSelection::ByGlossbrenner => PointsSystem::Glossbrenner,
+            MeetSortSelection::ByGoodlift => PointsSystem::Goodlift,
             MeetSortSelection::ByIPFPoints => PointsSystem::IPFPoints,
             MeetSortSelection::ByMcCulloch => PointsSystem::McCulloch,
             MeetSortSelection::ByNASA => PointsSystem::NASA,
@@ -578,6 +584,9 @@ fn make_tables_by_points<'db>(
         PointsSystem::Glossbrenner => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
         }
+        PointsSystem::Goodlift => {
+            entries.sort_unstable_by(|a, b| algorithms::cmp_goodlift(&meets, a, b));
+        }
         PointsSystem::IPFPoints => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_ipfpoints(&meets, a, b));
         }
@@ -653,6 +662,10 @@ impl<'db> Context<'db> {
             PointsSystem::Glossbrenner => format!("m/{}", meet.path),
             _ => format!("m/{}/by-glossbrenner", meet.path),
         };
+        let path_if_by_goodlift = match default_points {
+            PointsSystem::Goodlift => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-goodlift", meet.path),
+        };
         let path_if_by_ipfpoints = match default_points {
             PointsSystem::IPFPoints => format!("m/{}", meet.path),
             _ => format!("m/{}/by-ipf-points", meet.path),
@@ -704,6 +717,7 @@ impl<'db> Context<'db> {
             path_if_by_division,
             path_if_by_dots,
             path_if_by_glossbrenner,
+            path_if_by_goodlift,
             path_if_by_ipfpoints,
             path_if_by_mcculloch,
             path_if_by_nasa,

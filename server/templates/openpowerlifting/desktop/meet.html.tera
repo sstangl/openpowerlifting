@@ -14,6 +14,7 @@
     const path_if_by_division = "{{urlprefix | safe}}{{path_if_by_division | safe}}";
     const path_if_by_dots = "{{urlprefix | safe}}{{path_if_by_dots | safe}}";
     const path_if_by_glossbrenner = "{{urlprefix | safe}}{{path_if_by_glossbrenner | safe}}";
+    const path_if_by_goodlift = "{{urlprefix | safe}}{{path_if_by_goodlift | safe}}";
     const path_if_by_ipfpoints = "{{urlprefix | safe}}{{path_if_by_ipfpoints | safe}}";
     const path_if_by_mcculloch = "{{urlprefix | safe}}{{path_if_by_mcculloch | safe}}";
     const path_if_by_nasa = "{{urlprefix | safe}}{{path_if_by_nasa | safe}}";
@@ -37,6 +38,7 @@
           <option value="by-ah" {% if sortselection == "ByAH" %}selected{% endif %}>{{strings.selectors.sort.by_ah}}</option>
           <option value="by-dots" {% if sortselection == "ByDots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
           <option value="by-glossbrenner" {% if sortselection == "ByGlossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
+          <option value="by-goodlift" {% if sortselection == "ByGoodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
           <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
           <option value="by-mcculloch" {% if sortselection == "ByMcCulloch" %}selected{% endif %}>{{strings.selectors.sort.by_mcculloch}}</option>
           <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>

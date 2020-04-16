@@ -2132,9 +2132,12 @@ impl Federation {
     /// Helper function for specifying the PointsSystem of federations under IPF rules.
     #[inline]
     fn ipf_rules_on(date: Date) -> PointsSystem {
-        // The IPF and their affiliates developed a new federation-specific
-        // formula beginning in 2019.
-        if date.year() >= 2019 {
+        if date >= Date::from_parts(2020, 05, 01) {
+            // The IPF switched to Goodlift Points from 2020-05-01 onward.
+            PointsSystem::Goodlift
+        } else if date.year() >= 2019 {
+            // The IPF and their affiliates developed a new federation-specific
+            // formula beginning in 2019.
             PointsSystem::IPFPoints
         } else {
             PointsSystem::Wilks

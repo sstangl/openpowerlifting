@@ -133,6 +133,8 @@ pub struct Entry {
     pub mcculloch: Points,
     #[serde(rename(deserialize = "Glossbrenner"))]
     pub glossbrenner: Points,
+    #[serde(rename(deserialize = "Goodlift"))]
+    pub goodlift: Points,
     #[serde(rename(deserialize = "IPFPoints"))]
     pub ipfpoints: Points,
     #[serde(rename(deserialize = "Dots"))]
@@ -187,6 +189,7 @@ impl Entry {
             PointsSystem::AH => coefficients::ah(sex, bw, total),
             PointsSystem::Dots => self.dots,
             PointsSystem::Glossbrenner => self.glossbrenner,
+            PointsSystem::Goodlift => self.goodlift,
             PointsSystem::IPFPoints => self.ipfpoints,
             PointsSystem::McCulloch => self.mcculloch,
             PointsSystem::NASA => coefficients::nasa(bw, total),
