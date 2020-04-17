@@ -1,6 +1,6 @@
 //! Transforms `AllMeetData` into the final CSV files.
 
-use coefficients::{dots, goodlift, mcculloch};
+use coefficients::{dots, goodlift, ipf, mcculloch};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use opltypes::*;
 
@@ -188,7 +188,13 @@ impl<'d> EntriesRow<'d> {
                 entry.bodyweightkg,
                 entry.totalkg,
             ),
-            ipfpoints: entry.ipfpoints,
+            ipfpoints: ipf(
+                entry.sex,
+                entry.equipment,
+                entry.event,
+                entry.bodyweightkg,
+                entry.totalkg,
+            ),
             dots: dots(entry.sex, entry.bodyweightkg, entry.totalkg),
             tested: if entry.tested { "Yes" } else { "" },
             country: entry.country,

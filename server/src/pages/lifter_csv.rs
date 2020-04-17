@@ -51,7 +51,7 @@ fn make_export_row<'a>(
         wilks: entry.wilks,
         mcculloch: mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, entry.age),
         glossbrenner: entry.glossbrenner,
-        ipfpoints: entry.ipfpoints,
+        goodlift: entry.goodlift,
         tested: if entry.tested { "Yes" } else { "" },
         country: entry.lifter_country,
         federation: meet.federation,

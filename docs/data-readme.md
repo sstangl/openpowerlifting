@@ -186,14 +186,15 @@ Glossbrenner was created by Herb Glossbrenner as an update of the Wilks formula.
 
 The calculation of Glossbrenner points is defined by [modules/coefficients/src/glossbrenner.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/glossbrenner.rs).
 
-### IPFPoints
+### Goodlift
 
-Optional. A positive number if IPF Points could be calculated, empty if the lifter was disqualified or IPF Points were undefined for the Event type.
+IPF GL Points. The successor to IPF Points (2019-01-01 through 2020-04-30).
 
-The IPF formula is a normal distribution with a mean of 500 and a standard
-deviation of 100. The IPF adopted it beginning in 2019 to replace the Wilks formula.
+Optional. A positive number if IPF GL Points could be calculated, empty if the lifter was disqualified or IPF GL Points were undefined for the Event type.
 
-The calculation of IPF points is defined by [modules/coefficients/src/ipf.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/ipf.rs).
+IPF GL Points roughly express relative performance to the expected performance of that weight class at an IPF World Championship event, as a percentage.
+
+The calculation of IPF GL points is defined by [modules/coefficients/src/goodlift.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/goodlift.rs).
 
 ### Tested
 

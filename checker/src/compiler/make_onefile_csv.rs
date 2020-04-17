@@ -2,7 +2,7 @@
 //! offered on the website's Data page. Unlike the other CSV files, which are
 //! intended for use by the server, this variant is intended for use by humans.
 
-use coefficients::mcculloch;
+use coefficients::{goodlift, mcculloch};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use opltypes::*;
 
@@ -61,7 +61,13 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         wilks: entry.wilks,
         mcculloch,
         glossbrenner: entry.glossbrenner,
-        ipfpoints: entry.ipfpoints,
+        goodlift: goodlift(
+            entry.sex,
+            entry.equipment,
+            entry.event,
+            entry.bodyweightkg,
+            entry.totalkg,
+        ),
         tested: if entry.tested { "Yes" } else { "" },
         country: entry.country,
         federation: meet.federation,

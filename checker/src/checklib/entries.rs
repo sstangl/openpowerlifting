@@ -1,6 +1,6 @@
 //! Checks for entries.csv files.
 
-use coefficients::{glossbrenner, ipf, wilks};
+use coefficients::{glossbrenner, wilks};
 use csv;
 use opltypes::*;
 use strum::IntoEnumIterator;
@@ -175,7 +175,6 @@ pub struct Entry {
     // McCulloch calculation is left to a later phase.
     pub wilks: Points,
     pub glossbrenner: Points,
-    pub ipfpoints: Points,
 
     /// The index of this `Entry` in the `AllMeetData`.
     ///
@@ -2332,7 +2331,6 @@ where
         let bw = entry.bodyweightkg;
         entry.wilks = wilks(entry.sex, bw, entry.totalkg);
         entry.glossbrenner = glossbrenner(entry.sex, bw, entry.totalkg);
-        entry.ipfpoints = ipf(entry.sex, entry.equipment, entry.event, bw, entry.totalkg);
 
         // If the Name isn't provided, but there is an international name,
         // just use the international name.

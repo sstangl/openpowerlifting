@@ -68,8 +68,8 @@ pub struct ExportRow<'d> {
     pub mcculloch: Points,
     #[serde(rename = "Glossbrenner")]
     pub glossbrenner: Points,
-    #[serde(rename = "IPFPoints")]
-    pub ipfpoints: Points,
+    #[serde(rename = "Goodlift")]
+    pub goodlift: Points,
     #[serde(rename = "Tested")]
     pub tested: &'static str,
     #[serde(rename = "Country")]
