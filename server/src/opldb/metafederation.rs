@@ -294,6 +294,10 @@ pub enum MetaFederation {
     #[strum(to_string = "kraft")]
     KRAFT,
 
+    /// LFPH, but with international results also.
+    #[strum(to_string = "lfph")]
+    LFPH,
+
     /// LJTF, but with international results also.
     #[strum(to_string = "ljtf")]
     LJTF,
@@ -389,6 +393,10 @@ pub enum MetaFederation {
     /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
+
+    /// VGPF, but with international results also.
+    #[strum(to_string = "vgpf")]
+    VGPF,
 
     /// VPF, but with international results also.
     #[strum(to_string = "vpf")]
@@ -636,6 +644,7 @@ impl MetaFederation {
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
+            MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF),
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
@@ -670,6 +679,7 @@ impl MetaFederation {
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
             }
+            MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
             MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
             MetaFederation::WRPFUSA => match meet.federation {

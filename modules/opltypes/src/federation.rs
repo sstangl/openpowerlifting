@@ -564,6 +564,11 @@ pub enum Federation {
     #[strum(to_string = "KuwaitPL", serialize = "kuwaitpl")]
     KuwaitPL,
 
+    /// Ligue Francophone des Poids & Haltères,
+    /// the Walloon Belgian IPF affiliate.
+    #[strum(to_string = "LFPH", serialize = "lfph")]
+    LFPH,
+
     /// LGBT Powerlifting.
     #[strum(to_string = "LGBT", serialize = "lgbt")]
     LGBT,
@@ -934,6 +939,11 @@ pub enum Federation {
     /// US Virgin Islands Powerlifting Federation, IPF.
     #[strum(to_string = "USVIPF", serialize = "usvipf")]
     USVIPF,
+
+    /// Vlaamse Gewichtheffers en Powerlifting Federatie,
+    /// the Flemish Belgian IPF affiliate.
+    #[strum(to_string = "VGPF", serialize = "vgpf")]
+    VGPF,
 
     /// Vietnam Powerlifting Alliance, GPA.
     #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
@@ -1360,6 +1370,7 @@ impl Federation {
             Federation::KPF => FULLY_TESTED,
             Federation::KRAFT => FULLY_TESTED,
             Federation::KuwaitPL => false,
+            Federation::LFPH => FULLY_TESTED,
             Federation::LGBT => false,
             Federation::LHSPLA => false,
             Federation::LJTF => FULLY_TESTED,
@@ -1450,6 +1461,7 @@ impl Federation {
             Federation::USSF => false,
             Federation::USSports => false,
             Federation::USVIPF => FULLY_TESTED,
+            Federation::VGPF => FULLY_TESTED,
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
             Federation::VPF => FULLY_TESTED,
@@ -1646,6 +1658,7 @@ impl Federation {
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KuwaitPL => Some(Country::Kuwait),
+            Federation::LFPH => Some(Country::Belgium),
             Federation::LGBT => None,
             Federation::LHSPLA => Some(Country::USA),
             Federation::LJTF => Some(Country::Lithuania),
@@ -1736,6 +1749,7 @@ impl Federation {
             Federation::USSF => Some(Country::USA),
             Federation::USSports => Some(Country::USA),
             Federation::USVIPF => Some(Country::USVirginIslands),
+            Federation::VGPF => Some(Country::Belgium),
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
             Federation::VPF => Some(Country::Vietnam),
@@ -1952,6 +1966,7 @@ impl Federation {
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
             Federation::KuwaitPL => Some(Federation::IPL),
+            Federation::LFPH => Some(Federation::IPF),
             Federation::LGBT => None,
             Federation::LHSPLA => None,
             Federation::LJTF => Some(Federation::IPF),
@@ -2063,6 +2078,7 @@ impl Federation {
             Federation::USSF => None,
             Federation::USSports => None,
             Federation::USVIPF => Some(Federation::IPF),
+            Federation::VGPF => Some(Federation::IPF),
             Federation::VietnamPA => Some(Federation::GPA),
             Federation::Vityaz => None,
             Federation::VPF => Some(Federation::IPF),
@@ -2307,6 +2323,7 @@ impl Federation {
                 }
             }
             Federation::KuwaitPL => Federation::ipl_rules_on(date),
+            Federation::LFPH => Federation::ipf_rules_on(date),
             Federation::LGBT => PointsSystem::Wilks,
             Federation::LHSPLA => PointsSystem::Wilks,
             Federation::LJTF => Federation::ipf_rules_on(date),
@@ -2404,6 +2421,7 @@ impl Federation {
             Federation::USSF => PointsSystem::Wilks,
             Federation::USSports => PointsSystem::Wilks,
             Federation::USVIPF => Federation::ipf_rules_on(date),
+            Federation::VGPF => Federation::ipf_rules_on(date),
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::VPF => Federation::ipf_rules_on(date),
