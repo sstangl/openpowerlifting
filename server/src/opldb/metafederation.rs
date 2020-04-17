@@ -645,7 +645,7 @@ impl MetaFederation {
             MetaFederation::NPB => affiliation!(meet, entry, NPB, IPF, EPF),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
-                affiliation!(meet, entry, NZPF, IPF, OceaniaPF, CommonwealthPF)
+                affiliation!(meet, entry, NZPF, IPF, ORPF, CommonwealthPF)
             }
             MetaFederation::OEVK => affiliation!(meet, entry, OEVK, IPF, EPF),
             MetaFederation::PA => affiliation!(meet, entry, PA, WP),
