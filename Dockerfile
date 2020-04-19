@@ -2,7 +2,7 @@
 FROM rustlang/rust:nightly
 
 # Install our box dependencies in one, easily-cached layer image
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get update -qq && \
     apt-get install -y nodejs python3-pip && \
     pip3 install toml flake8
