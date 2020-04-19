@@ -1,4 +1,4 @@
-//! A collection of datatypes used in the OpenPowerlifting database.
+//! A collection of data types used in the OpenPowerlifting database.
 
 #![feature(const_fn)]
 
@@ -46,8 +46,7 @@ mod ruleset;
 pub use self::ruleset::{Rule, RuleSet};
 mod sex;
 pub use self::sex::Sex;
-mod state;
-pub use self::state::*;
+pub mod states;
 mod weightkg;
 pub use self::weightkg::{WeightAny, WeightKg};
 mod weightclasskg;

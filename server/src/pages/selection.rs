@@ -1,5 +1,6 @@
 //! Logic for efficiently selecting a subset of the database.
 
+use opltypes::states::*;
 use opltypes::*;
 use serde::{self, Serialize};
 

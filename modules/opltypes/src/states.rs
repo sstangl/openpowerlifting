@@ -1,4 +1,4 @@
-//! Defines valid entries in the MeetState column.
+//! Data types for the MeetState column.
 
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
@@ -35,7 +35,8 @@ impl State {
     /// # Examples
     ///
     /// ```
-    /// # use opltypes::{Country, State, USAState};
+    /// # use opltypes::Country;
+    /// # use opltypes::states::{State, USAState};
     /// let state = State::from_str_and_country("NY", Country::USA).unwrap();
     /// assert_eq!(state, State::InUSA(USAState::NY));
     /// ```
@@ -67,7 +68,8 @@ impl State {
     /// # Examples
     ///
     /// ```
-    /// # use opltypes::{Country, State, USAState};
+    /// # use opltypes::Country;
+    /// # use opltypes::states::{State, USAState};
     /// let state = State::from_full_code("USA-NY").unwrap();
     /// assert_eq!(state, State::InUSA(USAState::NY));
     /// ```
@@ -87,7 +89,8 @@ impl State {
     /// # Examples
     ///
     /// ```
-    /// # use opltypes::{Country, State, USAState};
+    /// # use opltypes::Country;
+    /// # use opltypes::states::{State, USAState};
     /// let state = State::from_full_code("USA-NY").unwrap();
     /// assert_eq!(state.to_country(), Country::USA);
     /// ```
@@ -115,7 +118,8 @@ impl State {
     /// # Examples
     ///
     /// ```
-    /// # use opltypes::{Country, State, USAState};
+    /// # use opltypes::Country;
+    /// # use opltypes::states::{State, USAState};
     /// let state = State::from_full_code("USA-NY").unwrap();
     /// assert_eq!(state.to_state_string(), "NY");
     /// ```

@@ -7,6 +7,7 @@
 use coefficients;
 use csv;
 use itertools::Itertools;
+use opltypes::states::*;
 use opltypes::*;
 
 use std::error::Error;

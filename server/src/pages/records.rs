@@ -1,5 +1,6 @@
 //! Logic for the display of the records page, like a rankings summary.
 
+use opltypes::states::*;
 use opltypes::*;
 
 use std::cmp::Ordering;

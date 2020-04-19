@@ -2,6 +2,7 @@
 
 use coefficients::{glossbrenner, wilks};
 use csv;
+use opltypes::states::*;
 use opltypes::*;
 use strum::IntoEnumIterator;
 use unicode_normalization::UnicodeNormalization;

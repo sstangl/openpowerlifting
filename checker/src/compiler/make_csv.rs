@@ -2,6 +2,7 @@
 
 use coefficients::{dots, goodlift, ipf, mcculloch};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
+use opltypes::states::*;
 use opltypes::*;
 
 use std::collections::HashMap;

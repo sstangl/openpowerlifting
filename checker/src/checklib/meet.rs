@@ -2,6 +2,7 @@
 
 use chrono::{self, Datelike};
 use csv;
+use opltypes::states::*;
 use opltypes::*;
 
 use std::error::Error;
