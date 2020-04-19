@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Probes for new event results from the NPB.
+# Probes for new event results from the KNKF-SP.
 
 
 from bs4 import BeautifulSoup
@@ -34,7 +34,7 @@ def color(s):
 
 
 def getmeetlist_uitslagen(html):
-    '''Parses the main NPB results page.'''
+    '''Parses the main KNKF-SP results page.'''
     soup = BeautifulSoup(html, 'html.parser')
     results = soup.find_all("div", {"class": "col-md-12"})[1]
 
@@ -57,7 +57,7 @@ def getmeetlist_uitslagen(html):
 
 
 def getmeetlist_oplcsv(html):
-    '''Parses the OpenLifter-specific NPB results page.'''
+    '''Parses the OpenLifter-specific KNKF-SP results page.'''
     soup = BeautifulSoup(html, 'html.parser')
     results = soup.find_all("table")[0]
 
@@ -89,7 +89,7 @@ def main():
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
-    oplprobe.print_meets(color('[NPB]'), unentered)
+    oplprobe.print_meets(color('[KNKF-SP]'), unentered)
 
 
 if __name__ == '__main__':
