@@ -1,7 +1,8 @@
 # Configuration for the AEP.
 
 [divisions]
-    open = {name ="SNR",min=0,max=999}
+	open = {name="Open", min=0, max=999}
+    seniors = {name ="SNR",min=0,max=999}
     juniors = {name = "JUN",min=0,max=22.5}
     subjuniors = {name = "SBJ",min=0,max=17.5}
     masters1 = {name = "M1",min=39.5,max=999}

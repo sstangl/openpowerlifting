@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+#
+# Parses a list of AEP HTML files into the OPL format.
+#
+# The AEP files we're looking for start with "Clasificacion",
+#  for example http://www.powerhispania.net/Resultados/2019/Masters_Power_Mas_Leon_2019.htm.
+#
+# AEP files may be computer-generated, but they're not in a consistent format.
+# So instead of postprocessing, we finish it up by hand.
+#
+# Usage: ./aep-parse <url1> <url2> ...
+#
+
+set -e
+
+if [ $# -lt 1 ]; then
+	echo " Usage: $0 <url1> <url2> ..."
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# Parses the HTML file in "$1", where it occurred in "$2"nd argument position.
+function parse_html {
+	# Download the results page (encoded in WINDOWS-1252).
+	XLS="original${2}.xls"
+	wget --output-document="${XLS}" "${1}"
+
+	# Replace any commas in the xls file with periods.
+	# Commas are used as decimal points in the European style.
+	sed -i -e 's/,/\./g' "${XLS}"
+
+	# Failed lifts are red and have a strikethrough effect.
+	sed -i -e 's/<s>/-/g' "${XLS}"
+
+	# Use LibreOffice to automatically convert to a CSV file.
+	CSV="original${2}.csv"
+	libreoffice --headless --convert-to csv "${XLS}"
+	rm "${XLS}"
+
+	# LibreOffice has now encoded the file in ISO-8859-1. Convert to UTF-8.
+	TMP="tmp.csv"
+	iconv -f ISO-8859-1 -t UTF-8 "${CSV}" > "${TMP}"
+	mv "${TMP}" "${CSV}"
+
+	# No preprocessing yet: just append onto the eventual entries.csv.
+	cat "${CSV}" >> entries.csv
+}
+
+ARGNUM=0
+for URL in "$@"; do
+	ARGNUM=$((ARGNUM + 1))
+	parse_html "${URL}" "${ARGNUM}"
+done
