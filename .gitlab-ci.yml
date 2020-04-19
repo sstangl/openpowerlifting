@@ -30,7 +30,8 @@ pages:
   stage: deploy
   script:
     - cargo doc --no-deps  # Builds into target/doc.
-    - mv target/doc public  # GitLab Pages always deploys from a folder named "public".
+    - mv docs public  # GitLab Pages always deploys from a folder named "public".
+    - mv target/doc public/rust  # Rust documentation.
   artifacts:
     paths:
       - public
