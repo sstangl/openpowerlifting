@@ -73,7 +73,7 @@ fn check_entries(
                     let lifter = opldb.get_lifter(id);
                     if lifter.name != entry.name {
                         report.error(format!(
-                            "Conflict for {}: '{}' vs '{}'",
+                            "Conflict for '{}': '{}' vs '{}'",
                             &entry.username, lifter.name, &entry.name
                         ));
                     }

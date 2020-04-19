@@ -439,7 +439,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             // The Name field must exactly match for the same username.
             if name != &entry.name {
                 let msg = format!(
-                    "Conflict for {}: '{}' vs '{}'",
+                    "Conflict for '{}': '{}' vs '{}'",
                     entry.username, name, entry.name
                 );
                 println!(" {}", msg.bold().red());
