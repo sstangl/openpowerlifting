@@ -655,6 +655,7 @@ impl MetaFederation {
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
                 meet.federation == Federation::NZPF
+                    || meet.federation == Federation::NZAWLA
                     // New Zealand lifters expect their international results included.
                     || is_from(Country::NewZealand, entry, meet) &&
                         (meet.federation == Federation::IPF
