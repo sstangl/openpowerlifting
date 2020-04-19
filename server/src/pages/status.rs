@@ -125,6 +125,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IPF as usize].has_probe = yes;
     statuses[IrishPF as usize].has_probe = yes;
     statuses[IrishPO as usize].has_probe = yes;
+    statuses[KNKFSP as usize].has_probe = yes;
     statuses[KRAFT as usize].has_probe = yes;
     statuses[LPF as usize].has_probe = yes;
     statuses[NAPF as usize].has_probe = yes;
@@ -334,6 +335,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IPLNZ as usize].maintainers = email_matt;
     statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
+    statuses[KNKFSP as usize].maintainers = email_mbeelen;
     statuses[LGBT as usize].maintainers = email_gem;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
@@ -384,6 +386,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IPL as usize].instagram = "iplpowerlifting";
     statuses[IrishPF as usize].instagram = "irishpowerliftingfederation";
     statuses[IrishPO as usize].instagram = "ipoaipowpc";
+    statuses[KNKFSP as usize].instagram = "powerliften";
     statuses[NPB as usize].instagram = "powerliften";
     statuses[NIPF as usize].instagram = "nipowerlifting";
     statuses[NZPF as usize].instagram = "newzealandpowerlifting";

@@ -286,6 +286,11 @@ pub enum MetaFederation {
     #[strum(to_string = "jpa")]
     JPA,
 
+    /// KNKFSP, but with international results also.
+    #[strum(to_string = "knkf-sp")]
+    #[serde(rename = "KNKF-SP")]
+    KNKFSP,
+
     /// KPF, but with international results also.
     #[strum(to_string = "kpf")]
     KPF,
@@ -313,10 +318,6 @@ pub enum MetaFederation {
     /// NIPF, but with BP and international results also.
     #[strum(to_string = "nipf")]
     NIPF,
-
-    /// NPB, but with international results also.
-    #[strum(to_string = "npb")]
-    NPB,
 
     /// NSF, but with international results also.
     #[strum(to_string = "nsf")]
@@ -644,6 +645,7 @@ impl MetaFederation {
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
+            MetaFederation::KNKFSP => affiliation!(meet, entry, KNKFSP, NPB, IPF, EPF),
             MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF),
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
@@ -651,7 +653,6 @@ impl MetaFederation {
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
             MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
-            MetaFederation::NPB => affiliation!(meet, entry, NPB, IPF, EPF),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
                 meet.federation == Federation::NZPF

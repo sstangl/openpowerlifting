@@ -552,6 +552,11 @@ pub enum Federation {
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
 
+    /// Dutch IPF affiliate (Netherlands)
+    #[serde(rename = "KNKF-SP")]
+    #[strum(to_string = "KNKF-SP", serialize = "KNKF-SP")]
+    KNKFSP,
+
     /// Kazakhstan IPF affiliate.
     #[strum(to_string = "KPF", serialize = "kpf")]
     KPF,
@@ -1367,6 +1372,7 @@ impl Federation {
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
             Federation::JPA => FULLY_TESTED,
+            Federation::KNKFSP => FULLY_TESTED,
             Federation::KPF => FULLY_TESTED,
             Federation::KRAFT => FULLY_TESTED,
             Federation::KuwaitPL => false,
@@ -1655,6 +1661,7 @@ impl Federation {
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
+            Federation::KNKFSP => Some(Country::Netherlands),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KuwaitPL => Some(Country::Kuwait),
@@ -1963,6 +1970,7 @@ impl Federation {
             Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::JPA => Some(Federation::IPF),
+            Federation::KNKFSP => Some(Federation::IPF),
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
             Federation::KuwaitPL => Some(Federation::IPL),
@@ -2313,6 +2321,7 @@ impl Federation {
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
+            Federation::KNKFSP => Federation::ipf_rules_on(date),
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => {
                 // On 2020-03-04, KRAFT announced that they voted for Dots since 02-29.

@@ -300,7 +300,7 @@
 </optgroup>
 <optgroup label="{{strings.country.netherlands}}">
   <option value="all-netherlands" {% if selection.federation == "AllNetherlands" %}selected{% endif %}>{{strings.selectors.fed.all_netherlands}}</option>
-  <option value="npb" {% if selection.federation == "NPB" %}selected{% endif %}>NPB - Nederlandse Powerlifting Bond [IPF]</option>
+  <option value="knkf-sp" {% if selection.federation == "KNKF-SP" %}selected{% endif %}>KNKF-SP - Sectie Powerliften [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.newzealand}}">
   <option value="all-newzealand" {% if selection.federation == "AllNewZealand" %}selected{% endif %}>{{strings.selectors.fed.all_newzealand}}</option>
