@@ -263,7 +263,7 @@ def parse_sheet(sheet):
             continue
 
         # Detect lines that set sex
-        if 'mужчины' in text.lower():
+        if 'mужчины' in text.lower() or 'мужчины' in text.lower():
             sex = 'M'
             continue
         elif 'женщины' in text.lower() or 'жюри' in text.lower():
@@ -462,14 +462,17 @@ def assign_total(csv):
             if 'Best3DeadliftKg' in csv.fieldnames:
                 total += weight(row[csv.index('Best3DeadliftKg')])
 
-            if (weight(row[csv.index('Best3SquatKg')]) < 0 or
-                    row[csv.index('Best3SquatKg')] == ''):
+            if ('Best3SquatKg' in csv.fieldnames and
+                (weight(row[csv.index('Best3SquatKg')]) < 0 or
+                    row[csv.index('Best3SquatKg')] == '')):
                 total = 0.0
-            elif (weight(row[csv.index('Best3BenchKg')]) < 0 or
-                    row[csv.index('Best3BenchKg')] == ''):
+            elif ('Best3BenchKg' in csv.fieldnames and
+                    (weight(row[csv.index('Best3BenchKg')]) < 0 or
+                     row[csv.index('Best3BenchKg')] == '')):
                 total = 0.0
-            elif (weight(row[csv.index('Best3DeadliftKg')]) < 0 or
-                    row[csv.index('Best3DeadliftKg')] == ''):
+            elif ('Best3DeadliftKg' in csv.fieldnames and
+                    (weight(row[csv.index('Best3DeadliftKg')]) < 0 or
+                     row[csv.index('Best3DeadliftKg')] == '')):
                 total = 0.0
 
             if total != 0.0:
@@ -505,6 +508,8 @@ def main(filename):
     cleanup_names(csv)
     cleanup_weightclass(csv)
     cleanup_bodyweight(csv)
+
+    csv.append_columns(['BirthDate'])
 
     csv.write(sys.stdout)
     return 0
