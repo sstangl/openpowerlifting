@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     blind = {name ="Blind",min=0,max=999}
