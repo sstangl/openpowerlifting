@@ -312,7 +312,7 @@ def parse_fieldnames(sheet):
         elif 'город' in text or 'регіон' in text:
             # We don't care about city-level information.
             fieldnames.append('IGNORE')
-        elif text == 'разряд/звание':  # Rank
+        elif text in ['разряд/звание', 'разряд']:  # Rank
             fieldnames.append('IGNORE')
 
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
