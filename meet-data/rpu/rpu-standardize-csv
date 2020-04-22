@@ -126,7 +126,7 @@ def parse_sheetname(s):
                       'экип'] and equipment == 'Single-ply':
             continue
         elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
-                      'многопетельная', 'многопетельный']:
+                      'многопетельная', 'многопетельный', 'трехпетельном', 'двухпетельном']:
             equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
@@ -180,7 +180,7 @@ def parse_sheetname(s):
             pass
         elif word == 'двоеб':  # Double
             pass
-        elif word == 'дивизион':  # Division
+        elif word in ['дивизион', 'дивизи']:  # Division
             pass
         elif word == 'мужчины':  # Men
             pass
@@ -445,6 +445,8 @@ def parse_sheet(sheet):
     elif 'стоя' in title:  # Overhead Press
         return csv
     elif 'saxon' in title:
+        return csv
+    elif 'wsf' in title: # Strongman
         return csv
 
     # Figure out event, equipment, etc., and store in obj.
