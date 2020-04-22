@@ -123,6 +123,10 @@
   <option value="wpsf-belarus" {% if selection.federation == "WPSF-Belarus" %}selected{% endif %}>WPSF Belarus</option>
   <option value="wrpf-belarus" {% if selection.federation == "WRPF-Belarus" %}selected{% endif %}>WRPF Belarus</option>
 </optgroup>
+<optgroup label="{{strings.country.belgium}}">
+  <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH - Ligue Francophone des Poids & Haltères [IPF]</option>
+  <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF - Vlaamse Gewichtheffers en Powerlifting Federatie [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.bosniaandherzegovina}}">
   <option value="all-bosnia-and-herzegovina" {% if selection.federation == "AllBosniaAndHerzegovina" %}selected{% endif %}>{{strings.selectors.fed.all_bosniaandherzegovina}}</option>
 </optgroup>
