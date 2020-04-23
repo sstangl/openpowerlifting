@@ -19,4 +19,5 @@
     sex = "F"
 
 [exemptions]
+    1801 = ["ExemptWeightClassConsistency","ExemptDivision"] # No Junior/Master WC, strange divisions
     1901 = ["ExemptWeightClassConsistency","ExemptDivision"] # No Junior/Master WC, strange divisions

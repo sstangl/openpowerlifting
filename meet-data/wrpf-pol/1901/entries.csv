@@ -1,155 +1,186 @@
-Place,Name,WeightClassKg,Division,AgeRange,Sex,BirthYear,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Event,Equipment
-1,Patryk Wójcik,60,Open,,M,2000,59.7,110,112.5,115,115,115,B,Raw
-1,Marcin Kosowski,67.5,Open,,M,1990,63.8,130,140,-145,140,140,B,Raw
-2,Marcin Górski,67.5,Open,,M,1977,60.9,115,117.5,120,120,120,B,Raw
-3,Sebastian Wiśniewski,67.5,Open,,M,1984,62.7,85,90,95,95,95,B,Raw
-4,Jakub Koeijvoets,67.5,Open,,M,2000,66.1,90,-95,95,95,95,B,Raw
-1,Sebastian Żurawski,75,Open,,M,1997,71,155,165,-172.5,165,165,B,Raw
-2,Łukasz Kozłowski,75,Open,,M,1982,72.2,140,145,152.5,152.5,152.5,B,Raw
-3,Piotr Przybecki,75,Open,,M,1979,74.9,140,145,-150,145,145,B,Raw
-4,Przemysław Ponikowski,75,Open,,M,1988,75,120,125,-130,125,125,B,Raw
-5,Adam Staszak,75,Open,,M,1998,72.2,122.5,-127.5,-127.5,122.5,122.5,B,Raw
-6,Krystian Pawlak,75,Open,,M,1993,72,100,-102.5,-102.5,100,100,B,Raw
-1,Artur Miksa,82.5,Open,,M,1983,82.5,215,225,230,230,230,B,Raw
-2,Patryk Popiołek,82.5,Open,,M,1991,78.6,180,187.5,190,190,190,B,Raw
-3,Marcin Dulko,82.5,Open,,M,1993,79.9,180,-187.5,187.5,187.5,187.5,B,Raw
-4,Marcin Bała,82.5,Open,,M,1995,81.6,165,170,175,175,175,B,Raw
-5,Radosław Kubacki,82.5,Open,,M,1995,77.9,147.5,150,152.5,152.5,152.5,B,Raw
-6,Łukasz Tymoszuk,82.5,Open,,M,1986,82.3,135,140,147.5,147.5,147.5,B,Raw
-7,Damian Kasza,82.5,Open,,M,1993,81.5,-140,-140,140,140,140,B,Raw
-8,Kamil Jakoniuk,82.5,Open,,M,2001,76.8,115,125,132.5,132.5,132.5,B,Raw
-9,Łukasz Lisiecki,82.5,Open,,M,1977,81,130,132.5,-135,132.5,132.5,B,Raw
-10,Waldemar Woźniak,82.5,Open,,M,1961,81.6,127.5,130,132.5,132.5,132.5,B,Raw
-11,Karol Kowalczyk,82.5,Open,,M,1997,81.9,125,132.5,-137.5,132.5,132.5,B,Raw
-12,Adam Fabisiewicz,82.5,Open,,M,1987,76.4,90,-95,-95,90,90,B,Raw
-13,Mateusz Michalski,82.5,Open,,M,2002,78.7,52.5,57.5,-60,57.5,57.5,B,Raw
-DQ,Maciej Blajer,82.5,Open,,M,1975,81.6,-145,-145,-145,,,B,Raw
-1,Jarosłw Buczko,90,Open,,M,1990,90,215,-222.5,222.5,222.5,222.5,B,Raw
-2,Dawid Trzciński,90,Open,,M,1990,89,175,182.5,190,190,190,B,Raw
-3,Zbigniew Boczar,90,Open,,M,1985,86.2,185,-195,-195,185,185,B,Raw
-4,Mateusz Czarnecki,90,Open,,M,1998,86.7,165,175,182.5,182.5,182.5,B,Raw
-5,Piotr Kandefer,90,Open,,M,1981,89.7,170,180,182.5,182.5,182.5,B,Raw
-6,Grzegorz Joka,90,Open,,M,1987,86.2,167.5,172.5,177.5,177.5,177.5,B,Raw
-7,Jacek Krysiuk,90,Open,,M,1973,88.3,170,-180,-180,170,170,B,Raw
-8,Marcin Pujan,90,Open,,M,1980,88.3,147.5,155,157.5,157.5,157.5,B,Raw
-9,Kazimierz Tamiłowski,90,Open,,M,1948,83.7,127.5,132.5,135,135,135,B,Raw
-10,Paweł Jabłoński,90,Open,,M,1961,86.7,105,112.5,-117.5,112.5,112.5,B,Raw
-11,Michał Czamara,90,Open,,M,1998,90,105,-107.5,-107.5,105,105,B,Raw
-1,Marek Sadowski,100,Open,,M,1979,97.5,195,200,202.5,202.5,202.5,B,Raw
-2,Przemysław Dobrowolski,100,Open,,M,1986,98.6,190,195,202.5,202.5,202.5,B,Raw
-3,Krzysztof Traczyk,100,Open,,M,1974,92.5,175,180,-185,180,180,B,Raw
-4,Grzegorz Gapiński,100,Open,,M,1958,91.7,165,-170,-172.5,165,165,B,Raw
-5,Mateusz Rosiński,100,Open,,M,1999,95,160,165,-170,165,165,B,Raw
-6,Mateusz Siemionek,100,Open,,M,1991,91,-160,160,-165,160,160,B,Raw
-7,Adam Wieczorek,100,Open,,M,1983,99.2,150,160,-165,160,160,B,Raw
-8,Michał Pranschke,100,Open,,M,1990,95.4,135,142.5,147.5,147.5,147.5,B,Raw
-9,Piotr Kręgiel,100,Open,,M,1978,93.9,137.5,142.5,145,145,145,B,Raw
-10,Jacek Leszczyński,100,Open,,M,1966,100,140,-150,-155,140,140,B,Raw
-11,Karol Bikowski,100,Open,,M,1987,97.9,130,135,137.5,137.5,137.5,B,Raw
-1,Andrzej Kocyła,110,Open,,M,1976,108.9,242.5,252.5,-260,252.5,252.5,B,Raw
-2,Tadeusz Serafin,110,Open,,M,1973,103.4,210,215,-217.5,215,215,B,Raw
-3,Radosław Borowy,110,Open,,M,1995,101,-205,205,210,210,210,B,Raw
-4,Dawid Górzyński,110,Open,,M,1986,106.7,195,-200,202,202,202,B,Raw
-5,Mariusz Kowalik,110,Open,,M,1989,109.4,182.5,190,-192.5,190,190,B,Raw
-6,Laszek Pasieka,110,Open,,M,1955,102.3,175,180,187.5,187.5,187.5,B,Raw
-7,Szymon Tabaczka,110,Open,,M,1996,106.1,175,180,182.5,182.5,182.5,B,Raw
-8,Dawid Sęk,110,Open,,M,1994,102.2,170,175,-177.5,175,175,B,Raw
-9,Robert Kozłowski,110,Open,,M,1973,107.2,160,175,-190,175,175,B,Raw
-10,Kamil Zdziebłowski,110,Open,,M,1986,102.5,167.5,172.5,-175,172.5,172.5,B,Raw
-11,Ryszard Wilczak,110,Open,,M,1955,103.1,140,145,150,150,150,B,Raw
-12,Patryk Szpakowski,110,Open,,M,1992,107.8,-150,150,-152.5,150,150,B,Raw
-13,Jakub Drozdowski,110,Open,,M,2000,103.1,135,142.5,-147.5,142.5,142.5,B,Raw
-14,Krzysztof Karwowski,110,Open,,M,1976,101.5,130,-140,-140,130,130,B,Raw
-15,Wojciech Nitecki,110,Open,,M,1955,107.4,120,130,-135,130,130,B,Raw
-16,Ryszard Wasiak,110,Open,,M,1950,106.6,-115,-115,115,115,115,B,Raw
-17,Szymon Matuszewski,110,Open,,M,1988,104.8,75,80,87,87,87,B,Raw
-1,Artur Kabza,125,Open,,M,1990,113.6,230,235,-240,235,235,B,Raw
-2,Robert Dudek,125,Open,,M,1987,117.5,190,197.5,202.5,202.5,202.5,B,Raw
-3,Adam Hajman,125,Open,,M,1994,117.1,190,-200,-200,190,190,B,Raw
-4,Bartosz Fortini,125,Open,,M,1987,114,170,175,180,180,180,B,Raw
-5,Marcin Skowroński,125,Open,,M,1990,121,170,-177.5,-177.5,170,170,B,Raw
-6,Krystian Ludkowski,125,Open,,M,1998,113.6,162.5,-165,-165,162.5,162.5,B,Raw
-1,Waldemar Nacewicz,140,Open,,M,1963,134,230,235,242.5,242.5,242.5,B,Raw
-2,Konrad Fornalczyk,140,Open,,M,1985,135.4,230,235,240,240,240,B,Raw
-3,Krzysztof Drozdowski,140,Open,,M,1983,127.9,220,230,-242.5,230,230,B,Raw
-4,Maciej Knap,140,Open,,M,1975,129.6,205,215,220,220,220,B,Raw
-5,Jarosław Nalewajk,140,Open,,M,1981,131.7,220,-227.5,-230,220,220,B,Raw
-1,Marcin Karkula,140+,Open,,M,1982,150.9,255,262.5,-265,262.5,262.5,B,Raw
-2,Tomasz Węgliński,140+,Open,,M,1978,140.3,200,210,220,220,220,B,Raw
-1,Kamil Jakoniuk,,Teen 16-17,16-17,M,2001,76.8,115,125,132.5,132.5,132.5,B,Raw
-2,Mateusz Michalski,,Teen 16-17,16-17,M,2002,78.7,52.5,57.5,-60,57.5,57.5,B,Raw
-1,Mateusz Rosiński,,Teen 18-19,18-19,M,1999,95,160,165,-170,165,165,B,Raw
-2,Patryk Wójcik,,Teen 18-19,18-19,M,2000,59.7,110,112.5,115,115,115,B,Raw
-3,Jakub Drozdowski,,Teen 18-19,18-19,M,2000,103.1,135,142.5,-147.5,142.5,142.5,B,Raw
-4,Jakub Koeijvoets,,Teen 18-19,18-19,M,2000,66.1,90,-95,95,95,95,B,Raw
-1,Sebastian Żurawski,,Juniors 20-21,20-21,M,1997,71,155,165,-172.5,165,165,B,Raw
-2,Mateusz Czarnecki,,Juniors 20-21,20-21,M,1998,86.7,165,175,182.5,182.5,182.5,B,Raw
-3,Krystian Ludkowski,,Juniors 20-21,20-21,M,1998,113.6,162.5,-165,-165,162.5,162.5,B,Raw
-4,Adam Staszak,,Juniors 20-21,20-21,M,1998,72.2,122.5,-127.5,-127.5,122.5,122.5,B,Raw
-5,Karol Kowalczyk,,Juniors 20-21,20-21,M,1997,81.9,125,132.5,-137.5,132.5,132.5,B,Raw
-6,Michał Czamara,,Juniors 20-21,20-21,M,1998,90,105,-107.5,-107.5,105,105,B,Raw
-1,Radosław Borowy,,Juniors 22-23,22-23,M,1995,101,-205,205,210,210,210,B,Raw
-2,Marcin Bała,,Juniors 22-23,22-23,M,1995,81.6,165,170,175,175,175,B,Raw
-4,Radosław Kubacki,,Juniors 22-23,22-23,M,1995,77.9,147.5,150,152.5,152.5,152.5,B,Raw
-3,Szymon Tabaczka,,Juniors 22-23,22-23,M,1996,106.1,175,180,182.5,182.5,182.5,B,Raw
-1,Andrzej Kocyła,,Masters 40-49,40-49,M,1976,108.9,242.5,252.5,-260,252.5,252.5,B,Raw
-2,Tadeusz Serafin,,Masters 40-49,40-49,M,1973,103.4,210,215,-217.5,215,215,B,Raw
-3,Maciej Knap,,Masters 40-49,40-49,M,1975,129.6,205,215,220,220,220,B,Raw
-4,Tomasz Węgliński,,Masters 40-49,40-49,M,1978,140.3,200,210,220,220,220,B,Raw
-5,Krzysztof Traczyk,,Masters 40-49,40-49,M,1974,92.5,175,180,-185,180,180,B,Raw
-6,Jacek Krysiuk,,Masters 40-49,40-49,M,1973,88.3,170,-180,-180,170,170,B,Raw
-7,Robert Kozłowski,,Masters 40-49,40-49,M,1973,107.2,160,175,-190,175,175,B,Raw
-8,Piotr Plesiewicz,,Masters 40-49,40-49,M,1977,49.7,87,92.5,100,100,100,B,Raw
-9,Marcin Górski,,Masters 40-49,40-49,M,1977,60.9,115,117.5,120,120,120,B,Raw
-10,Piotr Kręgiel,,Masters 40-49,40-49,M,1978,93.9,137.5,142.5,145,145,145,B,Raw
-11,Łukasz Lisiecki,,Masters 40-49,40-49,M,1977,81,130,132.5,-135,132.5,132.5,B,Raw
-12,Krzysztof Karwowski,,Masters 40-49,40-49,M,1976,101.5,130,-140,-140,130,130,B,Raw
-DQ,Maciej Blajer,,Masters 40-49,40-49,M,1975,81.6,-145,-145,-145,,,B,Raw
-1,Waldemar Nacewicz,,Masters 50-59,50-59,M,1963,134,230,235,242.5,242.5,242.5,B,Raw
-2,Waldemar Woźniak,,Masters 50-59,50-59,M,1961,81.6,127.5,130,132.5,132.5,132.5,B,Raw
-3,Jacek Leszczyński,,Masters 50-59,50-59,M,1966,100,140,-150,-155,140,140,B,Raw
-4,Paweł Jabłoński,,Masters 50-59,50-59,M,1961,86.7,105,112.5,-117.5,112.5,112.5,B,Raw
-1,Laszek Pasieka,,Masters 60-69,60-69,M,1955,102.3,175,180,187.5,187.5,187.5,B,Raw
-2,Grzegorz Gapiński,,Masters 60-69,60-69,M,1958,91.7,165,-170,-172.5,165,165,B,Raw
-3,Ryszard Wilczak,,Masters 60-69,60-69,M,1955,103.1,140,145,150,150,150,B,Raw
-4,Wojciech Nitecki,,Masters 60-69,60-69,M,1955,107.4,120,130,-135,130,130,B,Raw
-5,Ryszard Wasiak,,Masters 60-69,60-69,M,1950,106.6,-115,-115,115,115,115,B,Raw
-1,Kazimierz Tamiłowski,,Masters 70-79,70-79,M,1948,83.7,127.5,132.5,135,135,135,B,Raw
-1,Piotr Plesiewicz,,Disabled Open,,M,1977,49.7,87,92.5,100,100,100,B,Raw
-2,Marcin Górski,,Disabled Open,,M,1977,60.9,115,117.5,120,120,120,B,Raw
-3,Sebastian Wiśniewski,,Disabled Open,,M,1984,62.7,85,90,95,95,95,B,Raw
-4,Adam Fabisiewicz,,Disabled Open,,M,1987,76.4,90,-95,-95,90,90,B,Raw
-5,Szymon Matuszewski,,Disabled Open,,M,1988,104.8,75,80,87,87,87,B,Raw
-1,Andrzej Kocyła,,Military Open,,M,1976,108.9,242.5,252.5,-260,252.5,252.5,B,Raw
-2,Patryk Popiołek,,Military Open,,M,1991,78.6,180,187.5,190,190,190,B,Raw
-3,Krzysztof Drozdowski,,Military Open,,M,1983,127.9,220,230,-242.5,230,230,B,Raw
-4,Marek Sadowski,,Military Open,,M,1979,97.5,195,200,202.5,202.5,202.5,B,Raw
-5,Zbigniew Boczar,,Military Open,,M,1985,86.2,185,-195,-195,185,185,B,Raw
-6,Grzegorz Joka,,Military Open,,M,1987,86.2,167.5,172.5,177.5,177.5,177.5,B,Raw
-7,Jacek Krysiuk,,Military Open,,M,1973,88.3,170,-180,-180,170,170,B,Raw
-8,Marcin Skowroński,,Military Open,,M,1990,121,170,-177.5,-177.5,170,170,B,Raw
-9,Karol Bikowski,,Military Open,,M,1987,97.9,130,135,137.5,137.5,137.5,B,Raw
-1,Katarzyna Kaplińska,48,Open,,F,1987,45.9,42.5,-45,45,45,45,B,Raw
-2,Wiktoria Lisiecka,48,Open,,F,2003,42.4,32.5,35,37.5,37.5,37.5,B,Raw
-1,Ewelina Kodytek,52,Open,,F,1986,50.3,50,52.5,-55,52.5,52.5,B,Raw
-1,Jolanta Anasiewicz,60,Open,,F,1969,59.8,97.5,100,-105,100,100,B,Raw
-2,Daria Walczykiewicz,60,Open,,F,1982,59.4,70,72.5,-75,72.5,72.5,B,Raw
-3,Karolina Smarc,60,Open,,F,1992,59.1,50,52.5,-55,52.5,52.5,B,Raw
-1,Justyna Stankowska,67.5,Open,,F,1977,61.5,-60,62.5,-65,62.5,62.5,B,Raw
-2,Ewa Nikonowicz,67.5,Open,,F,1980,64.6,55,57.5,60,60,60,B,Raw
-3,Emila Truszkowska,67.5,Open,,F,1994,63.3,47.5,52.5,-55,52.5,52.5,B,Raw
-4,Oleksandra Fedorowa,67.5,Open,,F,1989,64.6,40,50,-60,50,50,B,Raw
-1,Marta Chachuła,75,Open,,F,1987,70.3,100,105,-107.5,105,105,B,Raw
-2,Marta Zawadzka,75,Open,,F,1996,69.5,90,95,100,100,100,B,Raw
-3,Agata Kowalczyk,75,Open,,F,1992,72.2,-65,65,-70,65,65,B,Raw
-4,Kaja Kwiatkowska,75,Open,,F,1974,74.8,32.5,35,37.5,37.5,37.5,B,Raw
-1,Iwona Poniatowska,82.5,Open,,F,1990,81.9,50,55,60,60,60,B,Raw
-1,Wiktoria Lisiecka,,Teen 16-17,16-17,F,2003,42.4,32.5,35,37.5,37.5,37.5,B,Raw
-1,Marta Zawadzka,,Juniors 22-23,22-23,F,1996,69.5,90,95,100,100,100,B,Raw
-1,Justyna Stankowska,,Masters 40-49,40-49,F,1977,61.5,-60,62.5,-65,62.5,62.5,B,Raw
-2,Kaja Kwiatkowska,,Masters 40-49,40-49,F,1974,74.8,32.5,35,37.5,37.5,37.5,B,Raw
-1,Jolanta Anasiewicz,,Masters 50-59,50-59,F,1969,59.8,97.5,100,-105,100,100,B,Raw
-1,Ewa Nikonowicz,,Military Open,,F,1980,64.6,55,57.5,60,60,60,B,Raw
-2,Katarzyna Kaplińska,,Military Open,,F,1987,45.9,42.5,-45,45,45,45,B,Raw
-3,Emila Truszkowska,,Military Open,,F,1994,63.3,47.5,52.5,-55,52.5,52.5,B,Raw
-4,Iwona Poniatowska,,Military Open,,F,1990,81.9,50,55,60,60,60,B,Raw
+Place,Name,WeightClassKg,Sex,Division,AgeRange,BirthYear,Team,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Event,Equipment
+1,Artur Świercz,56,M,Open,,1991,Pruszków,51.1,100,110,-130,110,110,B,Raw
+2,Piotr Plesiewicz,56,M,Open,,1977,Warka,47.3,85,92.5,97.5,97.5,97.5,B,Raw
+3,Yurii Babenko,56,M,Open,,1989,Ukraina,51.9,50,60,-67.5,60,60,B,Raw
+1,Patryk Wójcik,60,M,Open,,2000,Breń,58.6,110,117.5,-120,117.5,117.5,B,Raw
+1,Rafał Nazaruk,67.5,M,Open,,1997,Białystok,66.8,127.5,135,-142.5,135,135,B,Raw
+2,Damian Matusiak,67.5,M,Open,,1983,Ciechanów,66.6,115,120,122.5,122.5,122.5,B,Raw
+3,Sebastian Wiśniewski,67.5,M,Open,,1984,Jasieniec,65.5,95,100,105,105,105,B,Raw
+4,Ireneusz Rosak,67.5,M,Open,,1970,Gniew,66.5,100,105,-110,105,105,B,Raw
+5,Grzegorz Bartkowiak,67.5,M,Open,,1998,Środa Wlkp.,66.4,95,-100,-100,95,95,B,Raw
+DQ,Adrian Skubisz,67.5,M,Open,,1991,Komarno Gm.Konstantynów,65.2,-120,-120,-120,,,B,Raw
+1,Jakub Chrzanowski,75,M,Open,,1997,Przasnysz,72.6,190,-200,200,200,200,B,Raw
+2,Adam Kawka,75,M,Open,,1997,Radzyń Podlaski,74.9,150,155,162.5,162.5,162.5,B,Raw
+3,Mateusz Osemka,75,M,Open,,1991,Łochów,72.5,150,-160,-160,150,150,B,Raw
+4,Łukasz Kozłowski,75,M,Open,,1982,Chruszczewo,73.2,140,145,-147.5,145,145,B,Raw
+5,Paweł Osemka,75,M,Open,,1998,Łochów,70.1,130,-137.5,-137.5,130,130,B,Raw
+6,Kamil Jakoniuk,75,M,Open,,2001,Komarno Gm.Konstantynów,74.3,130,-137.5,-137.5,130,130,B,Raw
+7,Piotr Przybecki,75,M,Open,,1979,Elbląg,73.9,120,127.5,-132.5,127.5,127.5,B,Raw
+8,Olaf Ludwiczak,75,M,Open,,2001,Wałcz,72.9,120,125,-130,125,125,B,Raw
+9,Jakub Rura,75,M,Open,,2002,Wałcz,69.6,92.5,100,-102.5,100,100,B,Raw
+DQ,Paweł Bartkowiak,75,M,Open,,2001,Środa Wlkp.,73.2,-95,-95,-95,,,B,Raw
+DQ,Przemysław Ponikowski,75,M,Open,,1988,Pruszków,74.8,-130,-130,-130,,,B,Raw
+1,Artur Miksa,82.5,M,Open,,1983,Szczecin,81.6,215,220,-225,220,220,B,Raw
+2,Marcin Dulko,82.5,M,Open,,1983,Bytom,82.1,180,190,-197.5,190,190,B,Raw
+3,Zbigniew Boczar,82.5,M,Open,,1985,Lwówek Śląski,79.9,170,180,-192.5,180,180,B,Raw
+4,Michał Krętosz,82.5,M,Open,,1993,Leszczyny,80.3,170,-180,-180,170,170,B,Raw
+5,Damian Kasza,82.5,M,Open,,1993,Grabina Radziwiłowska,81.7,150,155,160,160,160,B,Raw
+6,Michał Smoleński,82.5,M,Open,,1992,Ciechanów,81.9,155,160,-165,160,160,B,Raw
+7,Beniamin Zabłocki,82.5,M,Open,,1992,Żyrardów,82.1,142.5,150,-157.5,150,150,B,Raw
+8,Łukasz Tymoszuk,82.5,M,Open,,1986,Wojcieszków,82.5,140,147.5,150,150,150,B,Raw
+9,Hubert Raniszewski,82.5,M,Open,,1992,Ciechanów,78.9,137.5,142.5,145,145,145,B,Raw
+10,Sebastian Cyganek,82.5,M,Open,,1996,Kraków,81.6,130,135,-145,135,135,B,Raw
+11,Łukasz Lisiecki,82.5,M,Open,,1977,Łódź,81.9,132.5,135,-137.5,135,135,B,Raw
+12,Karol Kowalczyk,82.5,M,Open,,1997,Szczytno,82.2,127.5,132.5,-137.5,132.5,132.5,B,Raw
+13,Wiesław Ostrowski,82.5,M,Open,,1948,Szczecin,81.6,112.5,122.5,130,130,130,B,Raw
+14,Paweł Just,82.5,M,Open,,1999,Elbląg,79.1,112.5,117.5,-120,117.5,117.5,B,Raw
+15,Hubert Antoszewski,82.5,M,Open,,1999,Wałcz,79.6,-110,115,-120,115,115,B,Raw
+16,Tomasz Cyganek,82.5,M,Open,,1995,Katowice,80.1,100,107.5,115,115,115,B,Raw
+17,Dariusz Kołodziejczyk,82.5,M,Open,,1955,Siedlce,80.6,100,-110,-110,100,100,B,Raw
+DQ,Mateusz Tchorek,82.5,M,Open,,1999,Skrzatusz,82.5,-160,-165,-165,,,B,Raw
+1,Michał Kocknecht,90,M,Open,,1987,Gniew,89.9,175,180,-185,180,180,B,Raw
+2,Daniel Cieplak,90,M,Open,,1973,Nowe Miasto Lubawskie,89.2,162.5,170,175,175,175,B,Raw
+3,Jacek Krysiuk,90,M,Open,,1973,Giżycko,87.4,155,160,167.5,167.5,167.5,B,Raw
+4,Paweł Pruszyński,90,M,Open,,1988,Hajnówka,89.6,150,160,167.5,167.5,167.5,B,Raw
+5,Krzysztof Matejko,90,M,Open,,1989,Węgorzewo,88,145,155,162.5,162.5,162.5,B,Raw
+6,Marcin Pujan,90,M,Open,,1980,Konin,87.7,160,-165,-165,160,160,B,Raw
+7,Emil Kapuściński,90,M,Open,,1997,Suwałki,88.8,137.5,142.5,145,145,145,B,Raw
+8,Kazimierz Tamiłowski,90,M,Open,,1948,Łąsin,86,130,135,140,140,140,B,Raw
+9,Piotr Leszczyński,90,M,Open,,1988,Sochaczew,89.5,120,130,-135,130,130,B,Raw
+10,Paweł Jabłoński,90,M,Open,,1961,Ożarów Mazowiecki,85.8,100,107.5,-112.5,107.5,107.5,B,Raw
+1,Przemysław Dobrowolski,100,M,Open,,1986,Konin,99.4,202.5,207.5,210,210,210,B,Raw
+2,Mateusz Czarnecki,100,M,Open,,1998,Kutno,99.1,185,202.5,-210,202.5,202.5,B,Raw
+3,Robert Kanclerz,100,M,Open,,1978,Biała Podlaska,95.3,190,200,-202.5,200,200,B,Raw
+4,Krzysztof Traczyk,100,M,Open,,1974,Brwinów,94.1,180,190,-202.5,190,190,B,Raw
+5,Mateusz Siemionek,100,M,Open,,1991,Turze Rogi,92.3,170,180,-185,180,180,B,Raw
+6,Mateusz Rosiński,100,M,Open,,1999,Pilichono,98.7,175,-182.5,-182.5,175,175,B,Raw
+7,Mieczysław Pawlukiewicz,100,M,Open,,1954,Nowa Wieś Lęborska,98.9,160,170,175,175,175,B,Raw
+8,Piotr Gęsiak,100,M,Open,,1996,Jedlicze,99.3,165,-172.5,-172.5,165,165,B,Raw
+9,Ryszard Sobierajski,100,M,Open,,1977,Szczecin,97.3,160,-170,-170,160,160,B,Raw
+10,Maciej Bartosiewicz,100,M,Open,,1986,Żyrardów,96.9,147.5,155,-165,155,155,B,Raw
+11,Kamil Dębczak,100,M,Open,,1999,Konin,95.8,125,130,-132.5,130,130,B,Raw
+12,Rafał Jaśkowiak,100,M,Open,,1987,Winna Góra,93.8,120,-125,-125,120,120,B,Raw
+13,Paweł Tempczyk,100,M,Open,,1947,Warszawa,92.2,100,105,110,110,110,B,Raw
+14,Kamil Bańkowski,100,M,Open,,1993,Katowice,95.4,70,85,-100,85,85,B,Raw
+DQ,Tobiasz Gauden,100,M,Open,,1985,Bochnia,100,-195,-200,-205,,,B,Raw
+1,Tobiasz Minkowski,110,M,Open,,1994,Inowrocław,106.3,210,215,220,220,220,B,Raw
+2,Marcin Gołębiewski,110,M,Open,,1991,Mińsk Mazowiecki,101.3,210,217.5,-220,217.5,217.5,B,Raw
+3,Tadeusz Serafin,110,M,Open,,1973,Warszawa,106.4,210,215,-220,215,215,B,Raw
+4,Marek Sadowski,110,M,Open,,1979,Wrocław,102.2,195,202.5,207.5,207.5,207.5,B,Raw
+5,Mariusz Bartołowicz,110,M,Open,,1979,Ciechanów,109,190,200,205,205,205,B,Raw
+6,Mariusz Kowalik,110,M,Open,,1989,Zawadzkie,105.1,190,195,200,200,200,B,Raw
+7,Kamil Bałdyga,110,M,Open,,1988,Warszawa,108,200,-205,-205,200,200,B,Raw
+8,Krzysztof Grzemiński,110,M,Open,,1987,Ciechanów,101.2,185,195,-200,195,195,B,Raw
+9,Patryk Jędrzejczak,110,M,Open,,1988,Czerwionka-Leszczyny,105,170,-180,182.5,182.5,182.5,B,Raw
+10,Leszek Pasieka,110,M,Open,,1955,Występ,101.7,177.5,182.5,-185,182.5,182.5,B,Raw
+11,Robert Kozłowski,110,M,Open,,1973,Domaniewek,107.2,170,180,-190,180,180,B,Raw
+12,Dawid Sęk,110,M,Open,,1994,Tomaszów Mazowiecki,102.6,175,180,-185,180,180,B,Raw
+13,Dawid Górzyński,110,M,Open,,1986,Konin,106.8,-175,180,-185,180,180,B,Raw
+14,Łukasz Klonowski,110,M,Open,,2000,Elbląg,103.6,165,170,-175,170,170,B,Raw
+15,Jan Pastuszek,110,M,Open,,2002,Tarnawatka,107.5,145,152.5,157.5,157.5,157.5,B,Raw
+16,Jacek Leszczyński,110,M,Open,,1966,Pruszków,107.7,145,155,-160,155,155,B,Raw
+17,Kamil Kamiński,110,M,Open,,1991,Gniew,103.1,145,150,-155,150,150,B,Raw
+18,Adam Urbański,110,M,Open,,1962,Koszalin,104.2,125,135,140,140,140,B,Raw
+19,Marcel Sobkowiak,110,M,Open,,2003,Winna Góra,109.9,130,137.5,-145,137.5,137.5,B,Raw
+DQ,Patryk Nowacki,110,M,Open,,1985,Warszawa,103.2,-175,-175,-175,,,B,Raw
+1,Rafał Śrutkowski,125,M,Open,,1982,Węgorzewo,121.1,225,230,240,240,240,B,Raw
+2,Rafał Niedźwiecki,125,M,Open,,1984,Łomża,111.4,217.5,-220,-220,217.5,217.5,B,Raw
+3,Robert Dudek,125,M,Open,,1987,Bytom,114.7,200,210,215,215,215,B,Raw
+4,Tomasz Weltrowski,125,M,Open,,1984,Gdańsk,119.5,200,207.5,212.5,212.5,212.5,B,Raw
+5,Sebastian Bojdoł,125,M,Open,,1981,Czerwionka-Leszczyny,111.1,200,210,-215,210,210,B,Raw
+6,Jakub Elgert,125,M,Open,,2000,Kartuzy,124.6,200,210,-215,210,210,B,Raw
+7,Krystian Ludkowski,125,M,Open,,1998,Konin,123.2,165,172.5,177.5,177.5,177.5,B,Raw
+1,Konrad Fornanczyk,140,M,Open,,1985,Turek,125.2,220,230,-235,230,230,B,Raw
+2,Kamil Jarota,140,M,Open,,1991,Warszawa,129.5,220,230,-235,230,230,B,Raw
+3,Maciej Knap,140,M,Open,,1975,Pruszków,136.4,220,225,-232.5,225,225,B,Raw
+4,Waldemar Nacewicz,140,M,Open,,1963,Pruszków,136.6,-220,220,-232.5,220,220,B,Raw
+5,Robert Drozdowski,140,M,Open,,1979,Gąsocin,133,210,220,-230,220,220,B,Raw
+6,Krzysztof Cieślak,140,M,Open,,1984,Nowy Sącz,125.7,207.5,-215,-215,207.5,207.5,B,Raw
+1,Dawid Elgert,140+,M,Open,,1988,Kartuzy,158.3,240,250,-260,250,250,B,Raw
+2,Marcin Karkula,140+,M,Open,,1982,Pruszków,146.9,230,-242.5,242.5,242.5,242.5,B,Raw
+3,Tomasz Węgliński,140+,M,Open,,1978,Łódź,140.1,210,215,220,220,220,B,Raw
+4,Bartosz Smykla,140+,M,Open,,1996,Szczecin,154.8,200,202.5,-207.5,202.5,202.5,B,Raw
+5,Maciej Lament,140+,M,Open,,1990,Nowy Staw,152.6,192.5,-200,-200,192.5,192.5,B,Raw
+1,Jan Pastuszek,,M,Teen 14-16,14-16,2002,Tarnawatka,107.5,145,152.5,157.5,157.5,157.5,B,Raw
+2,Marcel Sobkowiak,,M,Teen 14-16,14-16,2003,Winna Góra,109.9,130,137.5,-145,137.5,137.5,B,Raw
+3,Jakub Rura,,M,Teen 14-16,14-16,2002,Wałcz,69.6,92.5,100,-102.5,100,100,B,Raw
+1,Jakub Elgert,,M,Sub-Juniors 17-19,17-19,2000,Kartuzy,124.6,200,210,-215,210,210,B,Raw
+2,Patryk Wójcik,,M,Sub-Juniors 17-19,17-19,2000,Breń,58.6,110,117.5,-120,117.5,117.5,B,Raw
+3,Łukasz Klonowski,,M,Sub-Juniors 17-19,17-19,2000,Elbląg,103.6,165,170,-175,170,170,B,Raw
+4,Kamil Jakoniuk,,M,Sub-Juniors 17-19,17-19,2001,Komarno Gm.Konstantynów,74.3,130,-137.5,-137.5,130,130,B,Raw
+5,Olaf Ludwiczak,,M,Sub-Juniors 17-19,17-19,2001,Wałcz,72.9,120,125,-130,125,125,B,Raw
+DQ,Paweł Bartkowiak,,M,Sub-Juniors 17-19,17-19,2001,Środa Wlkp.,73.2,-95,-95,-95,,,B,Raw
+1,Mateusz Czarnecki,,M,Juniors 20-21,20-21,1998,Kutno,99.1,185,202.5,-210,202.5,202.5,B,Raw
+2,Mateusz Rosiński,,M,Juniors 20-21,20-21,1999,Pilichono,98.7,175,-182.5,-182.5,175,175,B,Raw
+3,Krystian Ludkowski,,M,Juniors 20-21,20-21,1998,Konin,123.2,165,172.5,177.5,177.5,177.5,B,Raw
+4,Paweł Osemka,,M,Juniors 20-21,20-21,1998,Łochów,70.1,130,-137.5,-137.5,130,130,B,Raw
+5,Paweł Just,,M,Juniors 20-21,20-21,1999,Elbląg,79.1,112.5,117.5,-120,117.5,117.5,B,Raw
+6,Kamil Dębczak,,M,Juniors 20-21,20-21,1999,Konin,95.8,125,130,-132.5,130,130,B,Raw
+7,Hubert Antoszewski,,M,Juniors 20-21,20-21,1999,Wałcz,79.6,-110,115,-120,115,115,B,Raw
+8,Grzegorz Bartkowiak,,M,Juniors 20-21,20-21,1998,Środa Wlkp.,66.4,95,-100,-100,95,95,B,Raw
+DQ,Mateusz Tchorek,,M,Juniors 20-21,20-21,1999,Skrzatusz,82.5,-160,-165,-165,,,B,Raw
+1,Jakub Chrzanowski,,M,Juniors 22-23,22-23,1997,Przasnysz,72.6,190,-200,200,200,200,B,Raw
+2,Adam Kawka,,M,Juniors 22-23,22-23,1997,Radzyń Podlaski,74.9,150,155,162.5,162.5,162.5,B,Raw
+3,Bartosz Smykla,,M,Juniors 22-23,22-23,1996,Szczecin,154.8,200,202.5,-207.5,202.5,202.5,B,Raw
+4,Rafał Nazaruk,,M,Juniors 22-23,22-23,1997,Białystok,66.8,127.5,135,-142.5,135,135,B,Raw
+5,Piotr Gęsiak,,M,Juniors 22-23,22-23,1996,Jedlicze,99.3,165,-172.5,-172.5,165,165,B,Raw
+6,Emil Kapuściński,,M,Juniors 22-23,22-23,1997,Suwałki,88.8,137.5,142.5,145,145,145,B,Raw
+7,Sebastian Cyganek,,M,Juniors 22-23,22-23,1996,Kraków,81.6,130,135,-145,135,135,B,Raw
+8,Karol Kowalczyk,,M,Juniors 22-23,22-23,1997,Szczytno,82.2,127.5,132.5,-137.5,132.5,132.5,B,Raw
+1,Tadeusz Serafin,,M,Masters 40-49,40-49,1973,Warszawa,106.4,210,215,-220,215,215,B,Raw
+2,Maciej Knap,,M,Masters 40-49,40-49,1975,Pruszków,136.4,220,225,-232.5,225,225,B,Raw
+3,Marek Sadowski,,M,Masters 40-49,40-49,1979,Wrocław,102.2,195,202.5,207.5,207.5,207.5,B,Raw
+4,Robert Kanclerz,,M,Masters 40-49,40-49,1978,Biała Podlaska,95.3,190,200,-202.5,200,200,B,Raw
+5,Robert Drozdowski,,M,Masters 40-49,40-49,1979,Gąsocin,133,210,220,-230,220,220,B,Raw
+6,Tomasz Węgliński,,M,Masters 40-49,40-49,1978,Łódź,140.1,210,215,220,220,220,B,Raw
+7,Mariusz Bartołowicz,,M,Masters 40-49,40-49,1979,Ciechanów,109,190,200,205,205,205,B,Raw
+8,Krzysztof Traczyk,,M,Masters 40-49,40-49,1974,Brwinów,94.1,180,190,-202.5,190,190,B,Raw
+9,Daniel Cieplak,,M,Masters 40-49,40-49,1973,Nowe Miasto Lubawskie,89.2,162.5,170,175,175,175,B,Raw
+10,Jacek Krysiuk,,M,Masters 40-49,40-49,1973,Giżycko,87.4,155,160,167.5,167.5,167.5,B,Raw
+11,Robert Kozłowski,,M,Masters 40-49,40-49,1973,Domaniewek,107.2,170,180,-190,180,180,B,Raw
+12,Piotr Plesiewicz,,M,Masters 40-49,40-49,1977,Warka,47.3,85,92.5,97.5,97.5,97.5,B,Raw
+13,Ryszard Sobierajski,,M,Masters 40-49,40-49,1977,Szczecin,97.3,160,-170,-170,160,160,B,Raw
+14,Piotr Przybecki,,M,Masters 40-49,40-49,1979,Elbląg,73.9,120,127.5,-132.5,127.5,127.5,B,Raw
+15,Łukasz Lisiecki,,M,Masters 40-49,40-49,1977,Łódź,81.9,132.5,135,-137.5,135,135,B,Raw
+16,Ireneusz Rosak,,M,Masters 40-49,40-49,1970,Gniew,66.5,100,105,-110,105,105,B,Raw
+1,Waldemar Nacewicz,,M,Masters 50-59,50-59,1963,Pruszków,136.6,-220,220,-232.5,220,220,B,Raw
+2,Jacek Leszczyński,,M,Masters 50-59,50-59,1966,Pruszków,107.7,145,155,-160,155,155,B,Raw
+3,Adam Urbański,,M,Masters 50-59,50-59,1962,Koszalin,104.2,125,135,140,140,140,B,Raw
+4,Paweł Jabłoński,,M,Masters 50-59,50-59,1961,Ożarów Mazowiecki,85.8,100,107.5,-112.5,107.5,107.5,B,Raw
+1,Leszek Pasieka,,M,Masters 60-69,60-69,1955,Występ,101.7,177.5,182.5,-185,182.5,182.5,B,Raw
+2,Mieczysław Pawlukiewicz,,M,Masters 60-69,60-69,1954,Nowa Wieś Lęborska,98.9,160,170,175,175,175,B,Raw
+3,Dariusz Kołodziejczyk,,M,Masters 60-69,60-69,1955,Siedlce,80.6,100,-110,-110,100,100,B,Raw
+1,Kazimierz Tamiłowski,,M,Masters 70-79,70-79,1948,Łąsin,86,130,135,140,140,140,B,Raw
+2,Wiesław Ostrowski,,M,Masters 70-79,70-79,1948,Szczecin,81.6,112.5,122.5,130,130,130,B,Raw
+3,Paweł Tempczyk,,M,Masters 70-79,70-79,1947,Warszawa,92.2,100,105,110,110,110,B,Raw
+1,Artur Świercz,,M,Disabled,,1991,Pruszków,51.1,100,110,-130,110,110,B,Raw
+2,Piotr Plesiewicz,,M,Disabled,,1977,Warka,47.3,85,92.5,97.5,97.5,97.5,B,Raw
+3,Sebastian Wiśniewski,,M,Disabled,,1984,Jasieniec,65.5,95,100,105,105,105,B,Raw
+1,Trang Sam Thu,48,F,Open,,1995,Katowice,48,55,60,-62.5,60,60,B,Raw
+2,Wiktoria Lisiecka,48,F,Open,,2003,Łódź,44.8,42.5,45,47.5,47.5,47.5,B,Raw
+1,Ewelina Kodytek,52,F,Open,,1986,Konin,51.3,52.5,55,-57.5,55,55,B,Raw
+1,Aleksandra Szymczykowska,56,F,Open,,1998,Dąbrowa Górnicza,55.4,75,80,85,85,85,B,Raw
+1,Emilia Sobiech-Konopa,60,F,Open,,1989,Józefów,59.3,70,75,77.5,77.5,77.5,B,Raw
+2,Justyna Stankowska,60,F,Open,,1977,Konin,59.3,62.5,65,-67.5,65,65,B,Raw
+3,Beata Bogucka,60,F,Open,,1988,Myszczyn,58,-40,42.5,-45,42.5,42.5,B,Raw
+1,Honorata Kaczorowska,67.5,F,Open,,1985,Biała Podlaska,64.2,112.5,117.5,122.5,122.5,122.5,B,Raw
+2,Jolanta Anasiewicz,67.5,F,Open,,1969,Bolesławiec,62.9,105,110,-112.5,110,110,B,Raw
+3,Marta Zawadzka,67.5,F,Open,,1996,Szczecin,67,90,100,102.5,102.5,102.5,B,Raw
+4,Magdalena Siemieńska,67.5,F,Open,,1999,Zawidz,62,70,77.5,-82.5,77.5,77.5,B,Raw
+5,Wiktoria Paga,67.5,F,Open,,1995,Rzeszów,61.1,65,67.5,72.5,72.5,72.5,B,Raw
+6,Aleksandra Okoń,67.5,F,Open,,1979,Tomaszów Lubelski,67.3,60,65,67.5,67.5,67.5,B,Raw
+7,Agnieszka Pawlak,67.5,F,Open,,1993,Błonie,63.7,60,-62.5,62.5,62.5,62.5,B,Raw
+8,Monika Balcewicz,67.5,F,Open,,1979,Szczecin,66.5,57.5,62.5,-67.5,62.5,62.5,B,Raw
+9,Emilia Truszkowska,67.5,F,Open,,1994,Ełk,66,55,-60,60,60,60,B,Raw
+10,Ewa Nikonowicz,67.5,F,Open,,1980,Lipowo,64.6,55,60,-62.5,60,60,B,Raw
+11,Ewa Garbala,67.5,F,Open,,1981,Giżycko,62.9,-55,55,-57.5,55,55,B,Raw
+1,Irena Witek,75,F,Open,,1983,Ząbkowice Śląskie,72.4,75,82.5,-85,82.5,82.5,B,Raw
+2,Agata Marczak,75,F,Open,,1982,Giżycko,71.6,65,70,-75,70,70,B,Raw
+1,Wiktoria Lisiecka,,F,Teen 14-16,14-16,2003,Łódź,44.8,42.5,45,47.5,47.5,47.5,B,Raw
+1,Aleksandra Szymczykowska,,F,Juniors 20-21,20-21,1998,Dąbrowa Górnicza,55.4,75,80,85,85,85,B,Raw
+2,Magdalena Siemieńska,,F,Juniors 20-21,20-21,1999,Zawidz,62,70,77.5,-82.5,77.5,77.5,B,Raw
+1,Marta Zawadzka,,F,Juniors 22-23,22-23,1996,Szczecin,67,90,100,102.5,102.5,102.5,B,Raw
+1,Justyna Stankowska,,F,Masters 40-49,40-49,1977,Konin,59.3,62.5,65,-67.5,65,65,B,Raw
+2,Aleksandra Okoń,,F,Masters 40-49,40-49,1979,Tomaszów Lubelski,67.3,60,65,67.5,67.5,67.5,B,Raw
+3,Monika Balcewicz,,F,Masters 40-49,40-49,1979,Szczecin,66.5,57.5,62.5,-67.5,62.5,62.5,B,Raw
+1,Jolanta Anasiewicz,,F,Masters 50-59,50-59,1969,Bolesławiec,62.9,105,110,-112.5,110,110,B,Raw
