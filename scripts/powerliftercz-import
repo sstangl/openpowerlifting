@@ -119,21 +119,22 @@ def get_subtable_results(soup, tabname, tablename, enclosing_soup):
     results = trs[1:]
 
     for header in headers:
-        if header in ['Poradie', 'Por.', 'Pl.']:
+        if header in ['Poradie', 'Por.', 'Pl.', '.сеМ']:
             csv.fieldnames += ['Place']
-        elif header in ['/ RN / TH / Lot icaižaťúS', '/ BY / BW / LotLifter']:
+        elif header in ['/ RN / TH / Lot icaižaťúS', '/ BY / BW / LotLifter',
+                        '/ RN / TH / Lot ícížětuoS']:
             csv.fieldnames += ['Name', 'BirthYear-BodyweightKg-IGNORE']
-        elif header in ['Oddiel, klub, krajina', 'Club name, nation']:
+        elif header in ['Oddiel, klub, krajina', 'Club name, nation', 'анартс ,maeT']:
             csv.fieldnames += ['Country-IGNORE-Team']
         elif header in ['DR', 'SQ']:
             csv.fieldnames += ['Best3SquatKg']
-        elif header == 'BP':
+        elif header in ['BP', 'Ж']:
             csv.fieldnames += ['Best3BenchKg']
         elif header in ['ŤM', 'DL']:
             csv.fieldnames += ['Best3DeadliftKg']
-        elif header in ['Trojboj', 'Total']:
+        elif header in ['Trojboj', 'Total', 'аммуС']:
             csv.fieldnames += ['TotalKg']
-        elif header in ['R+F/MC', 'R+MC']:
+        elif header in ['R+F/MC', 'R+MC', 'W+MCr']:
             csv.fieldnames += ['IGNORE']
         elif header in ['VT', 'PC']:
             csv.fieldnames += ['IGNORE']
