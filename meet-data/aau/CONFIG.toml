@@ -133,6 +133,7 @@
     # Disabled
     rdisabled = {name ="R Disabled",min=0,max=999,equipment="Raw"}
     rdisabled_18_19 = {name ="R Disabled 18-19",min=18,max=19,equipment="Raw"}
+    rdisabled_sub = {name ="R Disabled Sub",min=35,max=39,equipment="Raw"}
 
     llaw_mil = {name ="L Law/Mil",min=0,max=999}
     life = {name ="Life",min=0,max=999}
