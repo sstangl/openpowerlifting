@@ -404,6 +404,9 @@
   <option value="all-thailand" {% if selection.federation == "AllThailand" %}selected{% endif %}>{{strings.selectors.fed.all_thailand}}</option>
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.turkey}}">
+  <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.ukraine}}">
   <option value="all-ukraine" {% if selection.federation == "AllUkraine" %}selected{% endif %}>{{strings.selectors.fed.all_ukraine}}</option>
   <option value="globalpu" {% if selection.federation == "GlobalPU" %}selected{% endif %}>GlobalPU - Global Powerlifting Union [GPC]</option>

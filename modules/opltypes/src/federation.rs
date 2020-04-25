@@ -863,6 +863,11 @@ pub enum Federation {
     #[strum(to_string = "THSWPA", serialize = "thswpa")]
     THSWPA,
 
+    /// Powerlifting Strongman ve Streetworkout Federasyonu,
+    /// the Turkish IPF affiliate.
+    #[strum(to_string = "TPSSF", serialize = "tpssf")]
+    TPSSF,
+
     /// Ukrainian Drug-Free Powerlifting Federation
     #[strum(to_string = "UDFPF", serialize = "udfpf")]
     UDFPF,
@@ -1447,6 +1452,7 @@ impl Federation {
             Federation::ThaiPF => FULLY_TESTED,
             Federation::THSPA => FULLY_TESTED,
             Federation::THSWPA => FULLY_TESTED,
+            Federation::TPSSF => FULLY_TESTED,
             Federation::UDFPF => FULLY_TESTED,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
@@ -1736,6 +1742,7 @@ impl Federation {
             Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
             Federation::THSWPA => Some(Country::USA),
+            Federation::TPSSF => Some(Country::Turkey),
             Federation::UDFPF => Some(Country::Ukraine),
             Federation::UkrainePA => Some(Country::Ukraine),
             Federation::UkrainePO => Some(Country::Ukraine),
@@ -2066,6 +2073,7 @@ impl Federation {
             Federation::ThaiPF => Some(Federation::IPF),
             Federation::THSPA => None,
             Federation::THSWPA => None,
+            Federation::TPSSF => Some(Federation::IPF),
             Federation::UDFPF => Some(Federation::WDFPF),
             Federation::UkrainePA => None,
             Federation::UkrainePO => None,
@@ -2410,6 +2418,7 @@ impl Federation {
             Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,
+            Federation::TPSSF => Federation::ipf_rules_on(date),
             Federation::UDFPF => PointsSystem::Wilks,
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,

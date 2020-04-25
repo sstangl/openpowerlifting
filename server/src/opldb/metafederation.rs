@@ -379,6 +379,10 @@ pub enum MetaFederation {
     #[strum(to_string = "thaipf")]
     ThaiPF,
 
+    /// TPSSF, but with international results also.
+    #[strum(to_string = "tpssf")]
+    TPSSF,
+
     /// UkrainePF, but with international results also.
     #[strum(to_string = "ukrainepf")]
     UkrainePF,
@@ -681,6 +685,7 @@ impl MetaFederation {
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
             MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
+            MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
             MetaFederation::USAPL => affiliation!(meet, entry, USAPL, IPF, NAPF),
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
