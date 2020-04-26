@@ -680,6 +680,10 @@ pub enum Federation {
     #[strum(to_string = "OceaniaPF", serialize = "oceaniapf")]
     OceaniaPF,
 
+    /// Oceania Powerlifting Organisation, WPC.
+    #[strum(to_string = "OceaniaPO", serialize = "oceaniapo")]
+    OceaniaPO,
+
     /// Oceania Regional Powerlifting Federation, IPF.
     #[strum(to_string = "ORPF", serialize = "orpf")]
     ORPF,
@@ -1408,6 +1412,7 @@ impl Federation {
             Federation::NZAWLA => FULLY_TESTED,
             Federation::NZUA => false,
             Federation::OceaniaPF => FULLY_TESTED,
+            Federation::OceaniaPO => false,
             Federation::ORPF => FULLY_TESTED,
             Federation::OEVK => FULLY_TESTED,
             Federation::PA => FULLY_TESTED,
@@ -1698,6 +1703,7 @@ impl Federation {
             Federation::NZAWLA => Some(Country::NewZealand),
             Federation::NZUA => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
+            Federation::OceaniaPO => Some(Country::Australia),
             Federation::ORPF => None,
             Federation::OEVK => Some(Country::Austria),
             Federation::PA => Some(Country::Australia),
@@ -2015,6 +2021,7 @@ impl Federation {
                     Some(Federation::IPF)
                 }
             }
+            Federation::OceaniaPO => Some(Federation::WPC),
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
             Federation::PA => {
@@ -2367,6 +2374,7 @@ impl Federation {
             Federation::NZAWLA => Federation::ipf_rules_on(date),
             Federation::NZUA => PointsSystem::Wilks,
             Federation::OceaniaPF => PointsSystem::Wilks,
+            Federation::OceaniaPO => PointsSystem::Glossbrenner,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
             Federation::PA => PointsSystem::Wilks,

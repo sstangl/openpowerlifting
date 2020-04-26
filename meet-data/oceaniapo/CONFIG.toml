@@ -1,0 +1,161 @@
+# Configuration for the OPO
+
+# OPO specifies equipment in the division.
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
+[divisions]
+    # OPO Divisions.
+    moropo = {name ="M_OR_OPO",min=0,max=999,equipment="Raw",sex="M"}
+    mocropo = {name ="M_OCR_OPO",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
+    mosopo = {name ="M_OES_OPO",min=0,max=999,equipment="Single-ply",sex="M"}
+    momopo = {name ="M_OEM_OPO",min=0,max=999,equipment="Multi-ply",sex="M"}
+    mmr1opo = {name ="M_MR_1_OPO",min=40,max=44,equipment="Raw",sex="M"}
+    mmcr1opo = {name ="M_MCR_1_OPO",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
+    mms1opo = {name ="M_MES_1_OPO",min=40,max=44,equipment="Single-ply",sex="M"}
+    mmm1opo = {name ="M_MEM_1_OPO",min=40,max=44,equipment="Multi-ply",sex="M"}
+    mmr2opo = {name ="M_MR_2_OPO",min=45,max=49,equipment="Raw",sex="M"}
+    mmcr2opo = {name ="M_MCR_2_OPO",min=45,max=49,equipment=["Raw","Wraps"],sex="M"}
+    mms2opo = {name ="M_MES_2_OPO",min=45,max=49,equipment="Single-ply",sex="M"}
+    mmm2opo = {name ="M_MEM_2_OPO",min=45,max=49,equipment="Multi-ply",sex="M"}
+    mmr3opo = {name ="M_MR_3_OPO",min=50,max=54,equipment="Raw",sex="M"}
+    mmcr3opo = {name ="M_MCR_3_OPO",min=50,max=54,equipment=["Raw","Wraps"],sex="M"}
+    mms3opo = {name ="M_MES_3_OPO",min=50,max=54,equipment="Single-ply",sex="M"}
+    mmm3opo = {name ="M_MEM_3_OPO",min=50,max=54,equipment="Multi-ply",sex="M"}
+    mmr4opo = {name ="M_MR_4_OPO",min=55,max=59,equipment="Raw",sex="M"}
+    mmcr4opo = {name ="M_MCR_4_OPO",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
+    mms4opo = {name ="M_MES_4_OPO",min=55,max=59,equipment="Single-ply",sex="M"}
+    mmm4opo = {name ="M_MEM_4_OPO",min=55,max=59,equipment="Multi-ply",sex="M"}
+    mmr5opo = {name ="M_MR_5_OPO",min=60,max=64,equipment="Raw",sex="M"}
+    mmcr5opo = {name ="M_MCR_5_OPO",min=60,max=64,equipment=["Raw","Wraps"],sex="M"}
+    mms5opo = {name ="M_MES_5_OPO",min=60,max=64,equipment="Single-ply",sex="M"}
+    mmm5opo = {name ="M_MEM_5_OPO",min=60,max=64,equipment="Multi-ply",sex="M"}
+    mmr6opo = {name ="M_MR_6_OPO",min=65,max=69,equipment="Raw",sex="M"}
+    mmcr6opo = {name ="M_MCR_6_OPO",min=65,max=69,equipment=["Raw","Wraps"],sex="M"}
+    mms6opo = {name ="M_MES_6_OPO",min=65,max=69,equipment="Single-ply",sex="M"}
+    mmm6opo = {name ="M_MEM_6_OPO",min=65,max=69,equipment="Multi-ply",sex="M"}
+    mmr7opo = {name ="M_MR_7_OPO",min=70,max=74,equipment="Raw",sex="M"}
+    mmcr7opo = {name ="M_MCR_7_OPO",min=70,max=74,equipment=["Raw","Wraps"],sex="M"}
+    mms7opo = {name ="M_MES_7_OPO",min=70,max=74,equipment="Single-ply",sex="M"}
+    mmm7opo = {name ="M_MEM_7_OPO",min=70,max=74,equipment="Multi-ply",sex="M"}
+    mmr8opo = {name ="M_MR_8_OPO",min=75,max=79,equipment="Raw",sex="M"}
+    mmcr8opo = {name ="M_MCR_8_OPO",min=75,max=79,equipment=["Raw","Wraps"],sex="M"}
+    mms8opo = {name ="M_MES_8_OPO",min=75,max=79,equipment="Single-ply",sex="M"}
+    mmm8opo = {name ="M_MEM_8_OPO",min=75,max=79,equipment="Multi-ply",sex="M"}
+    mmr9opo = {name ="M_MR_9_OPO",min=80,max=999,equipment="Raw",sex="M"}
+    mmcr9opo = {name ="M_MCR_9_OPO",min=80,max=999,equipment=["Raw","Wraps"],sex="M"}
+    mms9opo = {name ="M_MES_9_OPO",min=80,max=999,equipment="Single-ply",sex="M"}
+    mmm9opo = {name ="M_MEM_9_OPO",min=80,max=999,equipment="Multi-ply",sex="M"}
+    mmrxopo = {name ="M_MR_X_OPO",min=40,max=999,equipment="Raw",sex="M"}
+    mmcrxopo = {name ="M_MCR_X_OPO",min=40,max=999,equipment=["Raw","Wraps"],sex="M"}
+    mmsxopo = {name ="M_MES_X_OPO",min=40,max=999,equipment="Single-ply",sex="M"}
+    mmmxopo = {name ="M_MEM_X_OPO",min=40,max=999,equipment="Multi-ply",sex="M"}
+    mmtr1opo = {name ="M_TR_1_OPO",min=13,max=15,equipment="Raw",sex="M"}
+    mmtcr1opo = {name ="M_TCR_1_OPO",min=13,max=15,equipment=["Raw","Wraps"],sex="M"}
+    mmts1opo = {name ="M_TES_1_OPO",min=13,max=15,equipment="Single-ply",sex="M"}
+    mmtm1opo = {name ="M_TEM_1_OPO",min=13,max=15,equipment="Multi-ply",sex="M"}
+    mmtr2opo = {name ="M_TR_2_OPO",min=16,max=17,equipment="Raw",sex="M"}
+    mmtcr2opo = {name ="M_TCR_2_OPO",min=16,max=17,equipment=["Raw","Wraps"],sex="M"}
+    mmts2opo = {name ="M_TES_2_OPO",min=16,max=17,equipment="Single-ply",sex="M"}
+    mmtm2opo = {name ="M_TEM_2_OPO",min=16,max=17,equipment="Multi-ply",sex="M"}
+    mmtr3opo = {name ="M_TR_3_OPO",min=18,max=19,equipment="Raw",sex="M"}
+    mmtcr3opo = {name ="M_TCR_3_OPO",min=18,max=19,equipment=["Raw","Wraps"],sex="M"}
+    mmts3opo = {name ="M_TES_3_OPO",min=18,max=19,equipment="Single-ply",sex="M"}
+    mmtm3opo = {name ="M_TEM_3_OPO",min=18,max=19,equipment="Multi-ply",sex="M"}
+    mmtrxopo = {name ="M_TR_X_OPO",min=13,max=19,equipment="Raw",sex="M"}
+    mmtcrxopo = {name ="M_TCR_X_OPO",min=13,max=19,equipment=["Raw","Wraps"],sex="M"}
+    mmtsxopo = {name ="M_TES_X_OPO",min=13,max=19,equipment="Single-ply",sex="M"}
+    mmtmxopo = {name ="M_TEM_X_OPO",min=13,max=19,equipment="Multi-ply",sex="M"}
+    mjropo = {name ="M_JR_OPO",min=20,max=23,equipment="Raw",sex="M"}
+    mjcropo = {name ="M_JCR_OPO",min=20,max=23,equipment=["Raw","Wraps"],sex="M"}
+    mjsopo = {name ="M_JES_OPO",min=20,max=23,equipment="Single-ply",sex="M"}
+    mjmopo = {name ="M_JEM_OPO",min=20,max=23,equipment="Multi-ply",sex="M"}
+    msropo = {name ="M_SR_OPO",min=33,max=39,equipment="Raw",sex="M"}
+    mscropo = {name ="M_SCR_OPO",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
+    mssopo = {name ="M_SES_OPO",min=33,max=39,equipment="Single-ply",sex="M"}
+    msmopo = {name ="M_SEM_OPO",min=33,max=39,equipment="Multi-ply",sex="M"}
+
+
+    foropo = {name ="F_OR_OPO",min=0,max=999,equipment="Raw",sex="F"}
+    focropo = {name ="F_OCR_OPO",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
+    fosopo = {name ="F_OES_OPO",min=0,max=999,equipment="Single-ply",sex="F"}
+    fomopo = {name ="F_OEM_OPO",min=0,max=999,equipment="Multi-ply",sex="F"}
+    fmr1opo = {name ="F_MR_1_OPO",min=40,max=44,equipment="Raw",sex="F"}
+    fmcr1opo = {name ="F_MCR_1_OPO",min=40,max=44,equipment=["Raw","Wraps"],sex="F"}
+    fms1opo = {name ="F_MES_1_OPO",min=40,max=44,equipment="Single-ply",sex="F"}
+    fmm1opo = {name ="F_MEM_1_OPO",min=40,max=44,equipment="Multi-ply",sex="F"}
+    fmr2opo = {name ="F_MR_2_OPO",min=45,max=49,equipment="Raw",sex="F"}
+    fmcr2opo = {name ="F_MCR_2_OPO",min=45,max=49,equipment=["Raw","Wraps"],sex="F"}
+    fms2opo = {name ="F_MES_2_OPO",min=45,max=49,equipment="Single-ply",sex="F"}
+    fmm2opo = {name ="F_MEM_2_OPO",min=45,max=49,equipment="Multi-ply",sex="F"}
+    fmr3opo = {name ="F_MR_3_OPO",min=50,max=54,equipment="Raw",sex="F"}
+    fmcr3opo = {name ="F_MCR_3_OPO",min=50,max=54,equipment=["Raw","Wraps"],sex="F"}
+    fms3opo = {name ="F_MES_3_OPO",min=50,max=54,equipment="Single-ply",sex="F"}
+    fmm3opo = {name ="F_MEM_3_OPO",min=50,max=54,equipment="Multi-ply",sex="F"}
+    fmr4opo = {name ="F_MR_4_OPO",min=55,max=59,equipment="Raw",sex="F"}
+    fmcr4opo = {name ="F_MCR_4_OPO",min=55,max=59,equipment=["Raw","Wraps"],sex="F"}
+    fms4opo = {name ="F_MES_4_OPO",min=55,max=59,equipment="Single-ply",sex="F"}
+    fmm4opo = {name ="F_MEM_4_OPO",min=55,max=59,equipment="Multi-ply",sex="F"}
+    fmr5opo = {name ="F_MR_5_OPO",min=60,max=64,equipment="Raw",sex="F"}
+    fmcr5opo = {name ="F_MCR_5_OPO",min=60,max=64,equipment=["Raw","Wraps"],sex="F"}
+    fms5opo = {name ="F_MES_5_OPO",min=60,max=64,equipment="Single-ply",sex="F"}
+    fmm5opo = {name ="F_MEM_5_OPO",min=60,max=64,equipment="Multi-ply",sex="F"}
+    fmr6opo = {name ="F_MR_6_OPO",min=65,max=69,equipment="Raw",sex="F"}
+    fmcr6opo = {name ="F_MCR_6_OPO",min=65,max=69,equipment=["Raw","Wraps"],sex="F"}
+    fms6opo = {name ="F_MES_6_OPO",min=65,max=69,equipment="Single-ply",sex="F"}
+    fmm6opo = {name ="F_MEM_6_OPO",min=65,max=69,equipment="Multi-ply",sex="F"}
+    fmr7opo = {name ="F_MR_7_OPO",min=70,max=74,equipment="Raw",sex="F"}
+    fmcr7opo = {name ="F_MCR_7_OPO",min=70,max=74,equipment=["Raw","Wraps"],sex="F"}
+    fms7opo = {name ="F_MES_7_OPO",min=70,max=74,equipment="Single-ply",sex="F"}
+    fmm7opo = {name ="F_MEM_7_OPO",min=70,max=74,equipment="Multi-ply",sex="F"}
+    fmr8opo = {name ="F_MR_8_OPO",min=75,max=79,equipment="Raw",sex="F"}
+    fmcr8opo = {name ="F_MCR_8_OPO",min=75,max=79,equipment=["Raw","Wraps"],sex="F"}
+    fms8opo = {name ="F_MES_8_OPO",min=75,max=79,equipment="Single-ply",sex="F"}
+    fmm8opo = {name ="F_MEM_8_OPO",min=75,max=79,equipment="Multi-ply",sex="F"}
+    fmr9opo = {name ="F_MR_9_OPO",min=80,max=999,equipment="Raw",sex="F"}
+    fmcr9opo = {name ="F_MCR_9_OPO",min=80,max=999,equipment=["Raw","Wraps"],sex="F"}
+    fms9opo = {name ="F_MES_9_OPO",min=80,max=999,equipment="Single-ply",sex="F"}
+    fmm9opo = {name ="F_MEM_9_OPO",min=80,max=999,equipment="Multi-ply",sex="F"}
+    fmrxopo = {name ="F_MR_X_OPO",min=40,max=999,equipment="Raw",sex="F"}
+    fmcrxopo = {name ="F_MCR_X_OPO",min=40,max=999,equipment=["Raw","Wraps"],sex="F"}
+    fmsxopo = {name ="F_MES_X_OPO",min=40,max=999,equipment="Single-ply",sex="F"}
+    fmmxopo = {name ="F_MEM_X_OPO",min=40,max=999,equipment="Multi-ply",sex="F"}
+    fmtr1opo = {name ="F_TR_1_OPO",min=13,max=15,equipment="Raw",sex="F"}
+    fmtcr1opo = {name ="F_TCR_1_OPO",min=13,max=15,equipment=["Raw","Wraps"],sex="F"}
+    fmts1opo = {name ="F_TES_1_OPO",min=13,max=15,equipment="Single-ply",sex="F"}
+    fmtm1opo = {name ="F_TEM_1_OPO",min=13,max=15,equipment="Multi-ply",sex="F"}
+    fmtr2opo = {name ="F_TR_2_OPO",min=16,max=17,equipment="Raw",sex="F"}
+    fmtcr2opo = {name ="F_TCR_2_OPO",min=16,max=17,equipment=["Raw","Wraps"],sex="F"}
+    fmts2opo = {name ="F_TES_2_OPO",min=16,max=17,equipment="Single-ply",sex="F"}
+    fmtm2opo = {name ="F_TEM_2_OPO",min=16,max=17,equipment="Multi-ply",sex="F"}
+    fmtr3opo = {name ="F_TR_3_OPO",min=18,max=19,equipment="Raw",sex="F"}
+    fmtcr3opo = {name ="F_TCR_3_OPO",min=18,max=19,equipment=["Raw","Wraps"],sex="F"}
+    fmts3opo = {name ="F_TES_3_OPO",min=18,max=19,equipment="Single-ply",sex="F"}
+    fmtm3opo = {name ="F_TEM_3_OPO",min=18,max=19,equipment="Multi-ply",sex="F"}
+    fmtrxopo = {name ="F_TR_X_OPO",min=13,max=19,equipment="Raw",sex="F"}
+    fmtcrxopo = {name ="F_TCR_X_OPO",min=13,max=19,equipment=["Raw","Wraps"],sex="F"}
+    fmtsxopo = {name ="F_TES_X_OPO",min=13,max=19,equipment="Single-ply",sex="F"}
+    fmtmxopo = {name ="F_TEM_X_OPO",min=13,max=19,equipment="Multi-ply",sex="F"}
+    fjropo = {name ="F_JR_OPO",min=20,max=23,equipment="Raw",sex="F"}
+    fjcropo = {name ="F_JCR_OPO",min=20,max=23,equipment=["Raw","Wraps"],sex="F"}
+    fjsopo = {name ="F_JES_OPO",min=20,max=23,equipment="Single-ply",sex="F"}
+    fjmopo = {name ="F_JEM_OPO",min=20,max=23,equipment="Multi-ply",sex="F"}
+    fsropo = {name ="F_SR_OPO",min=33,max=39,equipment="Raw",sex="F"}
+    fscropo = {name ="F_SCR_OPO",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
+    fssopo = {name ="F_SES_OPO",min=33,max=39,equipment="Single-ply",sex="F"}
+    fsmopo = {name ="F_SEM_OPO",min=33,max=39,equipment="Multi-ply",sex="F"}
+
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]
+ 
