@@ -152,12 +152,18 @@ pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .then(a.bodyweightkg.cmp(&b.bodyweightkg))
 }
 
-/// Defines an `Ordering` of Entries by McCulloch points.
-#[inline]
-pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    // First sort by McCulloch, higher first.
-    a.mcculloch
-        .cmp(&b.mcculloch)
+/// Defines a generic `Ordering` of Entries by some points.
+#[inline(always)]
+fn cmp_generic_points(
+    meets: &[Meet],
+    a: &Entry,
+    b: &Entry,
+    a_points: Points,
+    b_points: Points,
+) -> cmp::Ordering {
+    // First sort by points, higher first.
+    a_points
+        .cmp(&b_points)
         .reverse()
         // If equal, sort by Date, earlier first.
         .then(
@@ -167,122 +173,50 @@ pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         )
         // If that's equal too, sort by Total, highest first.
         .then(a.totalkg.cmp(&b.totalkg).reverse())
+}
+
+/// Defines an `Ordering` of Entries by McCulloch points.
+#[inline]
+pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
+    cmp_generic_points(meets, a, b, a.mcculloch, b.mcculloch)
 }
 
 /// Defines an `Ordering` of Entries by Wilks.
 #[inline]
 pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    // First sort by Wilks, higher first.
-    a.wilks
-        .cmp(&b.wilks)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a.wilks, b.wilks)
 }
 
 /// Defines an `Ordering` of Entries by Dots points.
-///
-/// Because Dots points aren't stored on the Entry, they are recalculated
-/// each comparison. The computation is not particularly expensive,
-/// but does involve powi().
 #[inline]
 pub fn cmp_dots(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::dots(a.sex, a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::dots(b.sex, b.bodyweightkg, b.totalkg);
-
-    // First sort by Dots points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a.dots, b.dots)
 }
 
 /// Defines an `Ordering` of Entries by Glossbrenner.
 #[inline]
 pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    // First sort by Glossbrenner, higher first.
-    a.glossbrenner
-        .cmp(&b.glossbrenner)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a.glossbrenner, b.glossbrenner)
 }
 
 /// Defines an `Ordering` of Entries by Goodlift.
 #[inline]
 pub fn cmp_goodlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    // First sort by points, higher first.
-    a.goodlift
-        .cmp(&b.goodlift)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a.goodlift, b.goodlift)
 }
 
 /// Defines an `Ordering` of Entries by IPF Points.
 #[inline]
 pub fn cmp_ipfpoints(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    // First sort by IPF Points, higher first.
-    a.ipfpoints
-        .cmp(&b.ipfpoints)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a.ipfpoints, b.ipfpoints)
 }
 
 /// Defines an `Ordering` of Entries by NASA Points.
-///
-/// Because NASA points aren't stored on the Entry, they are recalculated
-/// each comparison. The computation is not particularly expensive,
-/// but does involve floating-point division.
 #[inline]
 pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     let a_points = coefficients::nasa(a.bodyweightkg, a.totalkg);
     let b_points = coefficients::nasa(b.bodyweightkg, b.totalkg);
-
-    // First sort by NASA Points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a_points, b_points)
 }
 
 /// Defines an `Ordering` of Entries by Wilks2020 Points.
@@ -290,91 +224,31 @@ pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 pub fn cmp_wilks2020(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     let a_points = coefficients::wilks2020(a.sex, a.bodyweightkg, a.totalkg);
     let b_points = coefficients::wilks2020(b.sex, b.bodyweightkg, b.totalkg);
-
-    // First sort by points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a_points, b_points)
 }
 
 /// Defines an `Ordering` of Entries by Reshel points.
-///
-/// Because Reshel points aren't stored on the Entry, they are recalculated
-/// each comparison. The computation is not particularly expensive,
-/// but does involve powf().
 #[inline]
 pub fn cmp_reshel(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     let a_points = coefficients::reshel(a.sex, a.bodyweightkg, a.totalkg);
     let b_points = coefficients::reshel(b.sex, b.bodyweightkg, b.totalkg);
-
-    // First sort by Reshel points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a_points, b_points)
 }
 
 /// Defines an `Ordering` of Entries by Schwartz/Malone points.
-///
-/// Because Schwartz/Malone points aren't stored on the Entry, they are
-/// recalculated each comparison. The computation is not particularly expensive,
-/// but does involve powi().
 #[inline]
 pub fn cmp_schwartzmalone(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     let a_points = coefficients::schwartzmalone(a.sex, a.bodyweightkg, a.totalkg);
     let b_points = coefficients::schwartzmalone(b.sex, b.bodyweightkg, b.totalkg);
-
-    // First sort by Reshel points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a_points, b_points)
 }
 
 /// Defines an `Ordering` of Entries by AH (Haleczko) points.
-///
-/// Because AH points aren't stored on the Entry, they are recalculated
-/// each comparison. The computation is not particularly expensive,
-/// but does involve powf().
 #[inline]
 pub fn cmp_ah(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
     let a_points = coefficients::ah(a.sex, a.bodyweightkg, a.totalkg);
     let b_points = coefficients::ah(b.sex, b.bodyweightkg, b.totalkg);
-
-    // First sort by AH points, higher first.
-    a_points
-        .cmp(&b_points)
-        .reverse()
-        // If equal, sort by Date, earlier first.
-        .then(
-            meets[a.meet_id as usize]
-                .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
-        // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+    cmp_generic_points(meets, a, b, a_points, b_points)
 }
 
 /// Gets a list of all entry indices matching the given selection.
