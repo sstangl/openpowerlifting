@@ -1,37 +1,46 @@
-Name,WeightClassKg,Sex,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Event,Equipment,Division
-M. Flores,56,M,54.25,105,65,165,335,1,SBD,Single-ply,M-E-Open
-Michael Hunnam Jr,56,M,55,120,75,127.5,322.5,2,SBD,Single-ply,M-E-Open
-J. Callan,60,M,59.2,170,100,185,455,1,SBD,Single-ply,M-E-Open
-R. Hlalo,60,M,59.1,150,85,162.5,397.5,2,SBD,Single-ply,M-E-Open
-C. Bryant,60,M,58.5,102.5,50,90,242.5,3,SBD,Single-ply,M-E-Open
-P. Newton,67.5,M,66.3,247.5,130,242.5,620,1,SBD,Single-ply,M-E-Open
-N. Childs,67.5,M,61.4,155,95,175,425,2,SBD,Single-ply,M-E-Open
-A. Morris,67.5,M,64,150,90,170,410,3,SBD,Single-ply,M-E-Open
-M. Baxter,67.5,M,67.4,130,95,177.5,402.5,4,SBD,Single-ply,M-E-Open
-B. Wilkinson,67.5,M,65,140,75,165,380,5,SBD,Single-ply,M-E-Open
-J. Garrett,67.5,M,60.3,115,72.5,170,357.5,6,SBD,Single-ply,M-E-Open
-A. Freeman,75,M,74,202.5,120,230,552.5,1,SBD,Single-ply,M-E-Open
-J. Urwin,75,M,74.5,182.5,137.5,185,505,2,SBD,Single-ply,M-E-Open
-P. Edwards,75,M,71.7,167.5,92.5,215,475,3,SBD,Single-ply,M-E-Open
-R. Smith,75,M,69.75,170,90,210,470,4,SBD,Single-ply,M-E-Open
-C. Nicholson,75,M,72.2,165,95,185,445,5,SBD,Single-ply,M-E-Open
-R. Leah,75,M,71.1,145,100,170,415,6,SBD,Single-ply,M-E-Open
-N. Batey,75,M,72.5,135,100,175,410,7,SBD,Single-ply,M-E-Open
-D. Mackell,75,M,72.6,125,,,,DQ,SBD,Single-ply,M-E-Open
-Mick Hunnam,82.5,M,77.6,245,160,240,645,1,SBD,Single-ply,M-E-Open
-M. Murphy,82.5,M,80.75,180,115,245,540,2,SBD,Single-ply,M-E-Open
-A. Cunningham,82.5,M,80,155,100,205,460,3,SBD,Single-ply,M-E-Open
-B. Harle,82.5,M,78.25,210,110,235,555,G,SBD,Single-ply,M-E-Guest
-Neil Quinn,90,M,84,250,157.5,260,667.5,1,SBD,Single-ply,M-E-Open
-G. Walker,90,M,83.5,227.5,127.5,245,600,2,SBD,Single-ply,M-E-Open
-N. Wood,90,M,89.5,225,140,235,600,3,SBD,Single-ply,M-E-Open
-G. Hancock,90,M,88.3,170,130,270,570,4,SBD,Single-ply,M-E-Open
-N. Hewison,90,M,88.5,200,125,235,560,5,SBD,Single-ply,M-E-Open
-N. Wood,100,M,94.6,335,180,290,805,1,SBD,Single-ply,M-E-Open
-K. Hartley,100,M,94.2,195,120,255,570,2,SBD,Single-ply,M-E-Open
-C. Sumpton,100,M,92,195,115,235,545,3,SBD,Single-ply,M-E-Open
-D. Mannion,100,M,94.5,190,105,202.5,497.5,4,SBD,Single-ply,M-E-Open
-R. Sample,100,M,95,160,110,220,490,5,SBD,Single-ply,M-E-Open
-T. Waugh,100,M,95,,,,,DQ,SBD,Single-ply,M-E-Open
-P. Gordon,125,M,119.5,235,145,290,670,1,SBD,Single-ply,M-E-Open
-T. Holland,125,M,112.3,205,140,195,540,2,SBD,Single-ply,M-E-Open
+Name,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,BodyweightKg,Sex,Event,Equipment,Division
+Garvey,56,90,70,115,275,1,,M,SBD,Single-ply,M-E-Open
+Lunt,56,117.5,100,157.5,375,1,,M,SBD,Single-ply,M-E-Open
+Gilsenan,56,115,72.5,162.5,350,2,,M,SBD,Single-ply,M-E-Open
+Wilkes,60,120,72.5,135,327.5,3,,M,SBD,Single-ply,M-E-Open
+Singh,60,175,97.5,180,452.5,1,,M,SBD,Single-ply,M-E-Open
+Hunter,67.5,110,90,150,350,2,,M,SBD,Single-ply,M-E-Open
+Stan Macrow,67.5,217.5,125,227.5,570,1,,M,SBD,Single-ply,M-E-Open
+Bickley,67.5,187.5,130,220,537.5,2,,M,SBD,Single-ply,M-E-Open
+Ray Ricketts,67.5,185,112.5,240,537.5,3,,M,SBD,Single-ply,M-E-Open
+Auerbach,67.5,170,97.5,192.5,460,4,,M,SBD,Single-ply,M-E-Open
+Rogers,67.5,150,90,205,445,5,,M,SBD,Single-ply,M-E-Open
+Smith,67.5,140,77.5,167.5,385,6,,M,SBD,Single-ply,M-E-Open
+Cookson,67.5,110,70,137.5,317.5,7,,M,SBD,Single-ply,M-E-Open
+Powell,75,250,127.5,245,622.5,1,,M,SBD,Single-ply,M-E-Open
+Forrester,75,210,120,275,605,2,,M,SBD,Single-ply,M-E-Open
+Kirten,75,180,150,245,575,3,,M,SBD,Single-ply,M-E-Open
+Moore,75,200,110,210,520,4,,M,SBD,Single-ply,M-E-Open
+Tweed,75,185,105,227.5,517.5,5,,M,SBD,Single-ply,M-E-Open
+Burton,75,165,120,210,495,6,,M,SBD,Single-ply,M-E-Open
+Santuz,75,180,90,200,470,7,,M,SBD,Single-ply,M-E-Open
+Mitchell,82.5,265,150,247.5,662.5,1,,M,SBD,Single-ply,M-E-Open
+Howells,82.5,257.5,130,250,637.5,2,,M,SBD,Single-ply,M-E-Open
+Elliott,82.5,225,157.5,245,627.5,3,,M,SBD,Single-ply,M-E-Guest
+Forrester,82.5,215,142.5,240,597.5,4,,M,SBD,Single-ply,M-E-Open
+Steadman,82.5,215,137.5,225,577.5,5,,M,SBD,Single-ply,M-E-Open
+Jeffers,82.5,215,115,245,575,6,,M,SBD,Single-ply,M-E-Open
+Rogers,82.5,205,125,230,560,7,,M,SBD,Single-ply,M-E-Open
+Byrne,82.5,155,105,230,490,8,,M,SBD,Single-ply,M-E-Open
+Stone,82.5,190,110,215,515,9,,M,SBD,Single-ply,M-E-Open
+Wargent,90,217.5,130,245,592.5,1,,M,SBD,Single-ply,M-E-Open
+A. Nedjat,90,210,150,230,590,2,,M,SBD,Single-ply,M-E-Open
+M. Nedhat,90,200,157.5,180,537.5,3,,M,SBD,Single-ply,M-E-Open
+McManus,90,180,107.5,210,497.5,4,,M,SBD,Single-ply,M-E-Open
+Hunt,90,155,100,200,455,5,,M,SBD,Single-ply,M-E-Open
+Ralph Farquharson,100,285,172.5,290,747.5,1,,M,SBD,Single-ply,M-E-Open
+Dagnan,100,220,150,280,650,2,,M,SBD,Single-ply,M-E-Open
+Marson,100,252.5,147.5,245,645,3,,M,SBD,Single-ply,M-E-Open
+Kempson,100,227.5,140,255,622.5,4,,M,SBD,Single-ply,M-E-Open
+T. Nedjat,100,215,160,235,610,5,,M,SBD,Single-ply,M-E-Open
+Wilkes,100,200,100,230,530,6,,M,SBD,Single-ply,M-E-Open
+Numford,110,275,162.5,260,697.5,1,,M,SBD,Single-ply,M-E-Open
+Wadrup,110,220,130,240,590,2,,M,SBD,Single-ply,M-E-Open
+Higgins,125,262.5,152.5,295,710,1,,M,SBD,Single-ply,M-E-Open
+Smith,125,185,95,220,500,2,,M,SBD,Single-ply,M-E-Open
+Tuffin,125+,245,145,255,645,1,,M,SBD,Single-ply,M-E-Open
