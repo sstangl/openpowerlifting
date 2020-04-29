@@ -17,6 +17,7 @@
     masters3 = {name = "Masters 3", min=59.5, max=999}
     masters4 = {name = "Masters 4", min=69.5, max=999}
     masters5 = {name = "Masters 5", min=79.5, max=999}
+	special_olympics = {name="Special Olympics", min=0, max=999}
 
 
 [weightclasses.default_M]
@@ -52,9 +53,10 @@
     sex = "F"
 
 [exemptions]
+    0305 = ["ExemptWeightClassConsistency"] # No weightclasses.
     0901 = ["ExemptWeightClassConsistency"]
     1003 = ["ExemptDivision"] # 13 year olds in Youth.
-    1311 = ["ExemptWeightClassConsistency"] #Used a reduced number of weightclasses
+    1311 = ["ExemptWeightClassConsistency"] # Used a reduced number of weightclasses
     1923 = ["ExemptWeightClassConsistency"] # Lifter didn't have a reported BW.
     1929 = ["ExemptDivision"] # ~12 Year old in Youth B.
     1931 = ["ExemptWeightClassConsistency"] # DOTS team meet, no weightclasses.
@@ -63,4 +65,3 @@
     1939 = ["ExemptWeightClassConsistency", "ExemptDivision"]
     1954 = ["ExemptWeightClassConsistency"] # No weightclasses.
     1966 = ["ExemptWeightClassConsistency"] # DOTS team meet, no weightclasses.
-    0305 = ["ExemptWeightClassConsistency"] # No weightclasses.
