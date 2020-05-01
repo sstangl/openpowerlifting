@@ -110,6 +110,10 @@ pub enum Federation {
     #[strum(to_string = "APU", serialize = "apu")]
     APU,
 
+    /// Argentinia Powerlifting League, IPL.
+    #[strum(to_string = "ArgentinaPL", serialize = "argentinapl")]
+    ArgentinaPL,
+
     /// Asian Powerlifting Federation, IPF.
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
@@ -1277,6 +1281,7 @@ impl Federation {
             Federation::APC => false,
             Federation::APF => false,
             Federation::APU => FULLY_TESTED,
+            Federation::ArgentinaPL => false,
             Federation::AsianPF => FULLY_TESTED,
             Federation::AusDFPF => FULLY_TESTED,
             Federation::AusPF => false,
@@ -1567,6 +1572,7 @@ impl Federation {
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
             Federation::APU => Some(Country::Australia),
+            Federation::ArgentinaPL => Some(Country::Argentina),
             Federation::AsianPF => None,
             Federation::AusDFPF => Some(Country::Australia),
             Federation::AusPF => Some(Country::Australia),
@@ -1858,6 +1864,7 @@ impl Federation {
             Federation::APC => Some(Federation::WUAP),
             Federation::APF => Some(Federation::WPC),
             Federation::APU => Some(Federation::IPF),
+            Federation::ArgentinaPL => Some(Federation::IPL),
             Federation::AsianPF => Some(Federation::IPF),
             Federation::AusDFPF => Some(Federation::WDFPF),
             Federation::AusPF => Some(Federation::IPF),
@@ -2218,6 +2225,7 @@ impl Federation {
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APU => Federation::ipf_rules_on(date),
+            Federation::ArgentinaPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::Wilks,
             Federation::AusPF => PointsSystem::Wilks,
