@@ -71,6 +71,24 @@ cd server
 cargo run --release
 ```
 
+### Windows 10 (Native)
+
+1. Download and install the [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+    * When the installation menu appears, under the "Workloads" tab, select "C++ build tools" and press Install. A reboot will be required.
+
+2. Install the [Rust language for Windows](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe).
+
+    * When a menu appears, choose "Customize installation".
+    * Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.
+    * Continue pressing Enter at the remaining prompts until Rust is installed.
+
+3. To clone this repository locally, [install GitHub Desktop](https://desktop.github.com/). When given the option, select "Clone from URL" and enter `https://gitlab.com/openpowerlifting/opl-data.git` or the address to a personal fork.
+
+4. In the Start Menu, open the Command Prompt.
+
+    * Navigate to the repository directory. If you used GitHub Desktop, the command is `cd Documents\GitHub\opl-data`.
+    * Run the checker: `cargo run --bin checker`.
+
 ### Docker
 
 To run the server using Docker, simply build and run:

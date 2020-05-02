@@ -35,22 +35,25 @@ pub enum MeetPathError {
 /// let file = PathBuf::from("/home/opl-data/meet-data/rps/1924/meet.csv");
 /// assert_eq!(file_to_meetpath(&file).unwrap(), "rps/1924");
 /// ```
-pub fn file_to_meetpath<'a>(filepath: &'a Path) -> Result<&'a str, MeetPathError> {
+pub fn file_to_meetpath(filepath: &Path) -> Result<String, MeetPathError> {
     let parent = filepath.parent().ok_or(MeetPathError::ParentLookupError)?;
     dir_to_meetpath(parent)
 }
 
 /// Gets the MeetPath from a string representing a directory.
 ///
+/// Returns a String for the benefit of Windows, which requires
+/// changing the path separator.
+///
 /// # Examples
 ///
 /// ```
 /// # use std::path::PathBuf;
 /// # use opltypes::dir_to_meetpath;
-/// let file = PathBuf::from("/home/opl-data/meet-data/rps/1924");
-/// assert_eq!(dir_to_meetpath(&file).unwrap(), "rps/1924");
+/// let dir = PathBuf::from("/home/opl-data/meet-data/rps/1924");
+/// assert_eq!(dir_to_meetpath(&dir).unwrap(), "rps/1924");
 /// ```
-pub fn dir_to_meetpath<'a>(dirpath: &'a Path) -> Result<&'a str, MeetPathError> {
+pub fn dir_to_meetpath(dirpath: &Path) -> Result<String, MeetPathError> {
     let dir_str = dirpath.to_str().ok_or(MeetPathError::FilesystemUTF8Error)?;
 
     // Index from the last occurrence of MEETDATADIR in the path string.
@@ -58,7 +61,10 @@ pub fn dir_to_meetpath<'a>(dirpath: &'a Path) -> Result<&'a str, MeetPathError> 
         .rfind(&MEETDATADIR)
         .ok_or(MeetPathError::MeetDataDirNotFoundError)?;
 
-    let meetpath = &dir_str[(index + MEETDATADIR.len() + 1)..];
+    let meetpath = dir_str[(index + MEETDATADIR.len() + 1)..].to_string();
+
+    #[cfg(target_family = "windows")]
+    let meetpath = meetpath.replace("\\", "/");
 
     // Each character must be alphanumeric ASCII, a UNIX path separator, or a dash.
     for c in meetpath.chars() {
@@ -68,4 +74,17 @@ pub fn dir_to_meetpath<'a>(dirpath: &'a Path) -> Result<&'a str, MeetPathError> 
     }
 
     Ok(meetpath)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::PathBuf;
+
+    #[cfg(target_family = "windows")]
+    #[test]
+    fn windows_meet_path() {
+        let file = PathBuf::from("C:\\meet-data\\mags\\aus-assorted\\CONFIG.toml");
+        assert_eq!(file_to_meetpath(&file).unwrap(), "mags/aus-assorted");
+    }
 }
