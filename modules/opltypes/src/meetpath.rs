@@ -76,12 +76,12 @@ pub fn dir_to_meetpath(dirpath: &Path) -> Result<String, MeetPathError> {
     Ok(meetpath)
 }
 
+#[cfg(target_family = "windows")]
 #[cfg(test)]
-mod tests {
+mod windows_tests {
     use super::*;
     use std::path::PathBuf;
 
-    #[cfg(target_family = "windows")]
     #[test]
     fn windows_meet_path() {
         let file = PathBuf::from("C:\\meet-data\\mags\\aus-assorted\\CONFIG.toml");
