@@ -1,17 +1,17 @@
-Name,Sex,Age,BodyweightKg,WeightClassKg,Division,Equipment,Event,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place
-Claire Young,F,24,74.8,75,F-O,Wraps,SBD,90,100,110,,110,40,50,-52.5,,50,-110,110,120,,120,280,1
-Zakk Kelly,M,21,81.3,82.5,M-J,Wraps,SBD,170,180,-185,,180,95,102.5,107.5,,107.5,170,185,195,,195,482.5,1
-Samuel Collins,M,15,71,75,M-T1,Wraps,SBD,70,75,80,,80,50,55,60,,60,90,100,110,,110,250,1
-Paul Collins,M,47,101.9,110,M-M2,Wraps,SBD,170,177.5,182.5,,182.5,125,130,132.5,,132.5,230,240,247.5,,247.5,562.5,1
-Marc Keys,M,33,109.9,110,M-O,Wraps,SBD,240,260,272.5,,272.5,200,212.5,-220,,212.5,280,300,-307.5,,300,785,1
-Jack Pursey,M,24,127.7,140,M-O,Wraps,SBD,250,265,275,,275,200,215,220,,220,270,290,-310,,290,785,1
-Robert Hazelton,M,35,89.2,90,M-O,Wraps,SBD,245,-260,-260,,245,162.5,172.5,-180,,172.5,255,270,-280,,270,687.5,1
-Steven Wylie,M,29,90,90,M-O,Wraps,SBD,230,-245,-245,,230,135,-140,-140,,135,255,272.5,-285,,272.5,637.5,2
-Samuel Colgan,M,26,108.1,110,M-O,Wraps,SBD,245,260,-272.5,,260,170,180,-182.5,,180,210,225,-235,,225,665,1
-Darren Addidle,M,28,90,90,M-O,Wraps,SBD,205,220,-230,,220,130,140,145,,145,225,240,-250,,240,605,3
-Rodney McKnight,M,26,96.8,100,M-O,Wraps,SBD,210,225,235,,235,125,135,140,,140,220,240,-250,,240,615,1
-Damien St Ledger,M,36,79.6,82.5,M-O,Wraps,SBD,170,-180,190,,190,95,100,105,,105,190,200,210,,210,505,1
-Leah Riches,F,16,62.2,67.5,F-T2,Wraps,S,60,65,70,,70,,,,,,,,,,,70,1
-Austin Hickey,M,39,103.4,110,M-O,Wraps,S,230,250,270.5,,270.5,,,,,,,,,,,270.5,1
-Andrew Burrows,M,28,85,90,M-O,Raw,B,,,,,,130,135,140,,140,,,,,,140,1
-Laura Patton,F,22,57.5,60,F-J,Raw,D,,,,,,,,,,,70,80,90,,90,90,1
+Name,Sex,Age,BodyweightKg,WeightClassKg,Division,Equipment,Event,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Country
+Claire Young,F,24,74.8,75,F-O,Wraps,SBD,90,100,110,,110,40,50,-52.5,,50,-110,110,120,,120,280,1,
+Zakk Kelly,M,21,81.3,82.5,M-J,Wraps,SBD,170,180,-185,,180,95,102.5,107.5,,107.5,170,185,195,,195,482.5,1,
+Samuel Collins,M,15,71,75,M-T1,Wraps,SBD,70,75,80,,80,50,55,60,,60,90,100,110,,110,250,1,
+Paul Collins,M,47,101.9,110,M-M2,Wraps,SBD,170,177.5,182.5,,182.5,125,130,132.5,,132.5,230,240,247.5,,247.5,562.5,1,
+Marc Keys,M,33,109.9,110,M-O,Wraps,SBD,240,260,272.5,,272.5,200,212.5,-220,,212.5,280,300,-307.5,,300,785,1,Scotland
+Jack Pursey,M,24,127.7,140,M-O,Wraps,SBD,250,265,275,,275,200,215,220,,220,270,290,-310,,290,785,1,
+Robert Hazelton,M,35,89.2,90,M-O,Wraps,SBD,245,-260,-260,,245,162.5,172.5,-180,,172.5,255,270,-280,,270,687.5,1,
+Steven Wylie,M,29,90,90,M-O,Wraps,SBD,230,-245,-245,,230,135,-140,-140,,135,255,272.5,-285,,272.5,637.5,2,
+Samuel Colgan,M,26,108.1,110,M-O,Wraps,SBD,245,260,-272.5,,260,170,180,-182.5,,180,210,225,-235,,225,665,1,
+Darren Addidle,M,28,90,90,M-O,Wraps,SBD,205,220,-230,,220,130,140,145,,145,225,240,-250,,240,605,3,
+Rodney McKnight,M,26,96.8,100,M-O,Wraps,SBD,210,225,235,,235,125,135,140,,140,220,240,-250,,240,615,1,
+Damien St Ledger,M,36,79.6,82.5,M-O,Wraps,SBD,170,-180,190,,190,95,100,105,,105,190,200,210,,210,505,1,
+Leah Riches,F,16,62.2,67.5,F-T2,Wraps,S,60,65,70,,70,,,,,,,,,,,70,1,
+Austin Hickey,M,39,103.4,110,M-O,Wraps,S,230,250,270.5,,270.5,,,,,,,,,,,270.5,1,
+Andrew Burrows,M,28,85,90,M-O,Raw,B,,,,,,130,135,140,,140,,,,,,140,1,
+Laura Patton,F,22,57.5,60,F-J,Raw,D,,,,,,,,,,,70,80,90,,90,90,1,
