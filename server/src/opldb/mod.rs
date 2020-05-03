@@ -4,8 +4,6 @@
 //! better than a "real" database like SQLite3 or PostgreSQL. Additionally,
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
 
-use coefficients;
-use csv;
 use itertools::Itertools;
 use opltypes::states::*;
 use opltypes::*;
@@ -177,7 +175,7 @@ impl Entry {
     /// Borrows the Division string.
     #[inline]
     pub fn get_division(&self) -> Option<&str> {
-        self.division.as_ref().map(|s| s.as_str())
+        self.division.as_deref()
     }
 
     /// Calculate points.
@@ -531,7 +529,7 @@ impl OplDb {
     /// so they are found using a linear scan.
     pub fn get_entries_for_meet<'a>(&'a self, meet_id: u32) -> Vec<&'a Entry> {
         self.get_entries()
-            .into_iter()
+            .iter()
             .filter(|&e| e.meet_id == meet_id)
             .collect()
     }

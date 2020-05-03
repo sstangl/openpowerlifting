@@ -1,6 +1,5 @@
 //! CSV data export for the Lifter page.
 
-use csv;
 use std::error;
 
 use coefficients::mcculloch;

@@ -22,7 +22,7 @@ use crate::common::*;
 
 /// URL prefix used when accessing OpenIPF through OpenPowerlifting.org or
 /// localhost.
-pub const LOCAL_PREFIX: &'static str = "/dist/openipf/";
+pub const LOCAL_PREFIX: &str = "/dist/openipf/";
 
 /// Assigns the local prefix based on the Host HTTP header.
 ///
@@ -144,10 +144,10 @@ pub fn rankings_api(
     );
 
     for row in &mut slice.rows {
-        if row.equipment == &locale.strings.equipment.raw {
+        if row.equipment == locale.strings.equipment.raw {
             row.equipment = &locale.strings.equipment.classic;
         }
-        if row.equipment == &locale.strings.equipment.single {
+        if row.equipment == locale.strings.equipment.single {
             row.equipment = &locale.strings.equipment.equipped;
         }
     }
@@ -168,7 +168,7 @@ pub fn default_rankings_api(
 
 /// API endpoint for rankings search.
 #[get("/api/search/rankings/<selections..>?<query..>")]
-pub fn search_rankings_api<'db>(
+pub fn search_rankings_api(
     selections: Option<PathBuf>,
     query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
@@ -309,18 +309,18 @@ pub fn lifter(
 
             // Change the equipment terminology to be IPF-specific.
             for best in &mut cx.bests {
-                if best.equipment == &locale.strings.equipment.raw {
+                if best.equipment == locale.strings.equipment.raw {
                     best.equipment = &locale.strings.equipment.classic;
                 }
-                if best.equipment == &locale.strings.equipment.single {
+                if best.equipment == locale.strings.equipment.single {
                     best.equipment = &locale.strings.equipment.equipped;
                 }
             }
             for result in &mut cx.meet_results {
-                if result.equipment == &locale.strings.equipment.raw {
+                if result.equipment == locale.strings.equipment.raw {
                     result.equipment = &locale.strings.equipment.classic;
                 }
-                if result.equipment == &locale.strings.equipment.single {
+                if result.equipment == locale.strings.equipment.single {
                     result.equipment = &locale.strings.equipment.equipped;
                 }
             }
@@ -432,10 +432,10 @@ pub fn meet(
     // Change the equipment terminology to be IPF-specific.
     for table in &mut cx.tables {
         for row in &mut table.rows {
-            if row.equipment == &locale.strings.equipment.raw {
+            if row.equipment == locale.strings.equipment.raw {
                 row.equipment = &locale.strings.equipment.classic;
             }
-            if row.equipment == &locale.strings.equipment.single {
+            if row.equipment == locale.strings.equipment.single {
                 row.equipment = &locale.strings.equipment.equipped;
             }
         }

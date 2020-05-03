@@ -2362,20 +2362,17 @@ where
         // If requested, report if the username requires disambiguation.
         if report_disambiguations && !entry.username.is_empty() {
             if let Some(datamap) = lifterdata {
-                match datamap.get(&entry.username) {
-                    Some(lifterdata) => {
-                        if lifterdata.disambiguation_count > 0 {
-                            let url = format!(
-                                "https://www.openpowerlifting.org/u/{}",
-                                entry.username
-                            );
-                            report.error_on(
-                                line,
-                                format!("Disambiguate {} ({})", entry.name, url),
-                            );
-                        }
+                if let Some(lifterdata) = datamap.get(&entry.username) {
+                    if lifterdata.disambiguation_count > 0 {
+                        let url = format!(
+                            "https://www.openpowerlifting.org/u/{}",
+                            entry.username
+                        );
+                        report.error_on(
+                            line,
+                            format!("Disambiguate {} ({})", entry.name, url),
+                        );
                     }
-                    None => {}
                 }
             }
         }

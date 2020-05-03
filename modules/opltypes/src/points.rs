@@ -1,6 +1,5 @@
 //! Defines fields that represent points.
 
-use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 

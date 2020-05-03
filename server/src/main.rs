@@ -472,7 +472,7 @@ fn rankings_api(
 }
 
 #[get("/api/rankings?<query..>")]
-fn default_rankings_api<'db>(
+fn default_rankings_api(
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
@@ -482,7 +482,7 @@ fn default_rankings_api<'db>(
 
 /// API endpoint for rankings search.
 #[get("/api/search/rankings/<selections..>?<query..>")]
-fn search_rankings_api<'db>(
+fn search_rankings_api(
     selections: Option<PathBuf>,
     query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,

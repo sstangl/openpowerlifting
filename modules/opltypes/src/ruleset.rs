@@ -1,6 +1,5 @@
 //! Defines the `RuleSet` field for the `meets` table and CONFIG files.
 
-use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 

@@ -139,27 +139,31 @@ impl NonSortedNonUnique {
         let mut b = other.0[other_index];
 
         loop {
-            if a == b {
-                acc.push(a);
-                self_index += 1;
-                other_index += 1;
-                if self_index == self.0.len() || other_index == other.0.len() {
-                    break;
+            match a.cmp(&b) {
+                Ordering::Equal => {
+                    acc.push(a);
+                    self_index += 1;
+                    other_index += 1;
+                    if self_index == self.0.len() || other_index == other.0.len() {
+                        break;
+                    }
+                    a = self.0[self_index];
+                    b = other.0[other_index];
                 }
-                a = self.0[self_index];
-                b = other.0[other_index];
-            } else if a < b {
-                self_index += 1;
-                if self_index == self.0.len() {
-                    break;
+                Ordering::Less => {
+                    self_index += 1;
+                    if self_index == self.0.len() {
+                        break;
+                    }
+                    a = self.0[self_index];
                 }
-                a = self.0[self_index];
-            } else {
-                other_index += 1;
-                if other_index == other.0.len() {
-                    break;
+                Ordering::Greater => {
+                    other_index += 1;
+                    if other_index == other.0.len() {
+                        break;
+                    }
+                    b = other.0[other_index];
                 }
-                b = other.0[other_index];
             }
         }
 

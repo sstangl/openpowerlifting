@@ -1,6 +1,5 @@
 //! Defines the `Date` field for the `meets` table.
 
-use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 

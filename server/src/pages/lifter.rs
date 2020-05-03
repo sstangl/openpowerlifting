@@ -410,7 +410,7 @@ impl<'a> Context<'a> {
         // If a federation only reports Bests, we don't want lots of empty columns.
         let has_attempts = entries
             .iter()
-            .find(|&e| {
+            .any(|&e| {
                 e.squat1kg.is_non_zero()
                     || e.squat2kg.is_non_zero()
                     || e.squat3kg.is_non_zero()
@@ -423,8 +423,7 @@ impl<'a> Context<'a> {
                     || e.deadlift2kg.is_non_zero()
                     || e.deadlift3kg.is_non_zero()
                     || e.deadlift4kg.is_non_zero()
-            })
-            .is_some();
+            });
 
         // Display the meet results, most recent first.
         let meet_results = entries

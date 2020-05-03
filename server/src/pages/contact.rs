@@ -1,7 +1,5 @@
 //! Logic for the contact page.
 
-use opltypes;
-
 use crate::langpack::{self, Locale};
 
 /// The context object passed to `templates/contact.html.tera`

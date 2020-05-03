@@ -31,7 +31,7 @@ impl Default for MeetListSelection {
 
 impl MeetListSelection {
     pub fn from_path(p: &path::Path, defaults: MeetListSelection) -> Result<Self, ()> {
-        let mut ret = defaults.clone();
+        let mut ret = defaults;
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

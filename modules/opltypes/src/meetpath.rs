@@ -3,7 +3,7 @@
 use std::path::Path;
 
 /// The name of the folder in which meet data resides.
-const MEETDATADIR: &'static str = "meet-data";
+const MEETDATADIR: &str = "meet-data";
 
 /// Possible failures when constructing a MeetPath.
 #[derive(Debug, Eq, PartialEq, ToString)]

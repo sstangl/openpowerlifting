@@ -1,6 +1,5 @@
 //! Shared algorithms that operate on StaticCache data.
 
-use coefficients;
 use opltypes::*;
 use std::cmp;
 

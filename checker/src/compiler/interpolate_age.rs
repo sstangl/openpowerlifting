@@ -280,7 +280,7 @@ fn trace_conflict<T>(
             },
             if age_on.is_some() { "Age " } else { "" },
             if let Some(age) = age_on {
-                format!("{}", age)
+                age.to_string()
             } else {
                 "".to_string()
             }
@@ -496,7 +496,7 @@ pub fn interpolate_age_debug_for(
 /// Attempts to infer BirthDate range for each lifter, used to assign Age
 /// values.
 pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
-    for (_username, indices) in liftermap {
+    for indices in liftermap.values() {
         // Interpolation requires multiple entries.
         if indices.len() >= 2 {
             interpolate_age_single_lifter(meetdata, indices, false);

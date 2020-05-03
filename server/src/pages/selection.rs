@@ -42,7 +42,7 @@ impl Default for Selection {
 
 impl Selection {
     pub fn from_path(p: &path::Path, default: &Selection) -> Result<Self, ()> {
-        let mut ret: Selection = default.clone();
+        let mut ret: Selection = *default;
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {

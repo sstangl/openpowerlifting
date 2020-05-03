@@ -1,6 +1,5 @@
 //! Defines the `WeightClassKg` field for the `entries` table.
 
-use serde;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 

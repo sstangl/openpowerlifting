@@ -1,6 +1,5 @@
 //! Defines the `Place` field for the `entries` table.
 
-use serde;
 use serde::de::{self, Deserialize, Visitor};
 
 use std::error::Error;

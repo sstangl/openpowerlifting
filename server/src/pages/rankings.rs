@@ -1,8 +1,5 @@
 //! Logic for the display of the rankings page.
 
-use opltypes;
-use serde_json;
-
 use crate::langpack::{self, Language};
 use crate::opldb;
 use crate::pages::api_rankings::get_slice;
@@ -46,10 +43,10 @@ impl<'db, 'a> Context<'db, 'a> {
         // If this is for the IPF, use different names for some equipment.
         if use_ipf_equipment {
             for row in &mut slice.rows {
-                if row.equipment == &locale.strings.equipment.raw {
+                if row.equipment == locale.strings.equipment.raw {
                     row.equipment = &locale.strings.equipment.classic;
                 }
-                if row.equipment == &locale.strings.equipment.single {
+                if row.equipment == locale.strings.equipment.single {
                     row.equipment = &locale.strings.equipment.equipped;
                 }
             }

@@ -1,9 +1,7 @@
 //! Internationalization facilities.
 
 use opltypes::*;
-use serde;
 use serde::ser::Serialize;
-use serde_json;
 use strum::IntoEnumIterator;
 
 use std::error::Error;

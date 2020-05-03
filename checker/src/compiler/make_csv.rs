@@ -43,7 +43,7 @@ impl<'d> MeetsRow<'d> {
             federation: meet.federation,
             date: meet.date,
             country: meet.country,
-            state: meet.state.and_then(|s| Some(s.to_state_string())),
+            state: meet.state.map(|s| s.to_state_string()),
             town: meet.town.as_deref(),
             name: &meet.name,
             ruleset: meet.ruleset,

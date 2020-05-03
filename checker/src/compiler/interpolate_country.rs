@@ -139,7 +139,7 @@ pub fn interpolate_country_debug_for(
 
 /// Attempts to infer a Country for a lifter from surrounding Entry data.
 pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
-    for (_username, indices) in liftermap {
+    for indices in liftermap.values() {
         // Interpolation requires multiple entries.
         if indices.len() >= 2 {
             interpolate_country_single_lifter(meetdata, indices, false);

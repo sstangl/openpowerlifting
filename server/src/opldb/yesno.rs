@@ -1,6 +1,5 @@
 //! Implementation of the YesNo deserializer.
 
-use serde;
 use serde::de::{self, Visitor};
 
 use std::fmt;

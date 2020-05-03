@@ -91,7 +91,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
 /// Checks that the MeetPath contains only characters valid in a URL.
 pub fn check_meetpath(report: &mut Report) -> Option<String> {
     match opltypes::file_to_meetpath(&report.path) {
-        Ok(s) => Some(s.to_string()),
+        Ok(s) => Some(s),
         Err(MeetPathError::NonAsciiError) => {
             report.error("Path must only contain alphanumeric ASCII or '/-' characters");
             None
@@ -352,10 +352,11 @@ where
 
     // Check the optional columns.
     // The RuleSet is set to the federation default, unless it's overridden.
-    let mut ruleset = get_configured_ruleset(config, date);
-    if record.len() > REQUIRED_HEADERS.len() {
-        ruleset = check_ruleset(record.get(REQUIRED_HEADERS.len()).unwrap(), &mut report);
-    }
+    let ruleset = if record.len() > REQUIRED_HEADERS.len() {
+        check_ruleset(record.get(REQUIRED_HEADERS.len()).unwrap(), &mut report)
+    } else {
+        get_configured_ruleset(config, date)
+    };
 
     // Attempt to read another row -- but there shouldn't be one.
     if rdr.read_record(&mut record)? {
@@ -415,7 +416,7 @@ pub fn check_meet(
         return Ok(MeetCheckResult { report, meet: None });
     }
 
-    let meetpath = check_meetpath(&mut report).unwrap_or_else(|| String::new());
+    let meetpath = check_meetpath(&mut report).unwrap_or_else(String::new);
 
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
