@@ -2,6 +2,7 @@
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=23}
     teen = {name = "Teen",min=0,max=19}
+    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
     masters1 = {name = "Masters 1",min=39.5,max=999}
     masters2 = {name = "Masters 2",min=49.5,max=999}
     masters3 = {name = "Masters 3",min=59.5,max=999}
@@ -25,10 +26,10 @@
     divisions = ["Juniors"]
 
 [weightclasses.teen_M]
-    classes = ["32","36","40","44","48","53","59","66","74","83","93","105","120","120+"]
+    classes = ["48","53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Teen"]
+    divisions = ["Teen","Sub-Juniors"]
 
 [weightclasses.junior_F]
     classes = ["40","43","47","52","57","63","72","84","84+"]
@@ -37,10 +38,10 @@
     divisions = ["Juniors"]
 
 [weightclasses.teen_F]
-    classes = ["32","36","40","43","47","52","57","63","72","84","84+"]
+    classes = ["40","43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Teen"]
+    divisions = ["Teen","Sub-Juniors"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
@@ -54,7 +55,6 @@
 
 [exemptions]
     1201 = ["ExemptWeightClassConsistency","ExemptDivision"]
-    1202 = ["ExemptWeightClassConsistency"]
     1203 = ["ExemptDivision"]
     1302 = ["ExemptWeightClassConsistency"]
     1303 = ["ExemptWeightClassConsistency"]
@@ -63,13 +63,11 @@
     1503 = ["ExemptWeightClassConsistency","ExemptDivision"]
     1601 = ["ExemptWeightClassConsistency"]
     1602 = ["ExemptWeightClassConsistency"]
+    1603 = ["ExemptWeightClassConsistency"]
     1604 = ["ExemptWeightClassConsistency"]
     1605 = ["ExemptWeightClassConsistency"]
     1606 = ["ExemptWeightClassConsistency"]
     1607 = ["ExemptWeightClassConsistency"]
-    1705 = ["ExemptWeightClassConsistency"]
-    1704 = ["ExemptWeightClassConsistency"]
     1702 = ["ExemptWeightClassConsistency"]
-    1801 = ["ExemptWeightClassConsistency"]
-    1802 = ["ExemptWeightClassConsistency"]
-    1803 = ["ExemptWeightClassConsistency"]
+    1703 = ["ExemptWeightClassConsistency"]
+    1901 = ["ExemptWeightClassConsistency"]
