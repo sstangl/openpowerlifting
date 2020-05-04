@@ -1,3 +1,5 @@
+# Configuration for WPC-RUS
+
 [divisions]
     am_open = {name = "Amateur Open", min = 0, max = 999,tested="Yes"}
     am_youth = {name = "Amateur Youth", min = 5, max = 12,tested="Yes"}
@@ -77,3 +79,4 @@
     1001 = ["ExemptWeightClassConsistency"]
     1720 = ["ExemptWeightClassConsistency"]
     1738 = ["ExemptWeightClassConsistency"]
+    1774 = ["ExemptWeightClassConsistency"] # Youth weight classes.
