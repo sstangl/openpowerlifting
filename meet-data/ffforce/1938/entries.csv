@@ -1,9 +1,9 @@
 Place,Name,Division,Equipment,Event,BirthDate,BirthYear,Age,Sex,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
 1,Bilal Chougui,Sub-Juniors,Raw,B,,2002,17,M,70.2,74,,,,,100,105,110,110,,,,,110
-3,Julien Vincent,Masters 1,Raw,B,,1979,40,M,81.7,83,,,,,130,135,-140,135,,,,,135
-3,Martial Larbre,Masters 1,Raw,B,,1973,46,M,83.8,93,,,,,102.5,,,102.5,,,,,102.5
+1,Julien Vincent,Masters 1,Raw,B,,1979,40,M,81.7,83,,,,,130,135,-140,135,,,,,135
+1,Martial Larbre,Masters 1,Raw,B,,1973,46,M,83.8,93,,,,,102.5,,,102.5,,,,,102.5
 1,Pascal Oliveira,Masters 1,Raw,B,,1976,43,M,102,105,,,,,150,-155,-160,150,,,,,150
-3,Joel Dubreuil,Masters 2,Raw,B,,1967,52,M,73.5,74,,,,,115,,,115,,,,,115
+1,Joel Dubreuil,Masters 2,Raw,B,,1967,52,M,73.5,74,,,,,115,,,115,,,,,115
 1,Rolland Pimenta,Masters 3,Raw,B,,1958,61,M,65,66,,,,,77.5,-82.5,-82.5,77.5,,,,,77.5
 1,Jean Martin,Masters 3,Raw,B,,1959,60,M,92,93,,,,,105,110,115,115,,,,,115
 G,Philippe Desmontais,Masters 3,Raw,B,,1958,60,M,89.3,93,,,,,100,105,-107.5,105,,,,,105
@@ -11,7 +11,7 @@ G,Philippe Desmontais,Masters 3,Raw,B,,1958,60,M,89.3,93,,,,,100,105,-107.5,105,
 1,Jean-Charles Marchadier,Masters 2,Single-ply,B,,1962,57,M,81.6,83,,,,,150,-155,155,155,,,,,155
 1,Véronique Descours,Masters 1,Raw,B,,1971,48,F,56.9,57,,,,,65,,,65,,,,,65
 1,Mickael Lager,Masters 1,Raw,B,,1971,48,M,71.1,74,,,,,125,135,140,140,,,,,140
-2,Alain Collard,Masters 3,Raw,B,,1952,67,M,81,83,,,,,110,,,110,,,,,110
+1,Alain Collard,Masters 3,Raw,B,,1952,67,M,81,83,,,,,110,,,110,,,,,110
 1,Didier Egels,Masters 4,Raw,B,,1950,69,M,93.9,105,,,,,105,,,105,,,,,105
 1,Véronique Descours,Masters 1,Single-ply,B,,1971,48,F,56.9,57,,,,,,82.5,-87.5,82.5,,,,,82.5
 1,Alain Collard,Masters 3,Single-ply,B,,1952,67,M,81,83,,,,,,120,127.5,127.5,,,,,127.5
@@ -21,7 +21,7 @@ G,Philippe Desmontais,Masters 3,Raw,B,,1958,60,M,89.3,93,,,,,100,105,-107.5,105,
 1,Jordan Grenier,Seniors,Raw,B,,1993,26,M,74,74,,,,,110,115,-120,115,,,,,115
 1,Antoine Baggioni,Seniors,Raw,B,,1994,24,M,79.4,83,,,,,110,117.5,120,120,,,,,120
 1,Gianni Pani,Seniors,Raw,B,,1989,30,M,93,93,,,,,175,180,,180,,,,,180
-2,Stéphane Brechet,Masters 1,Raw,B,,1972,47,M,73.3,74,,,,,-125,125,130,130,,,,,130
+1,Stéphane Brechet,Masters 1,Raw,B,,1972,47,M,73.3,74,,,,,-125,125,130,130,,,,,130
 1,Laurent Plancon,Masters 1,Raw,B,,1976,43,M,82.2,83,,,,,142.5,-150,-150,142.5,,,,,142.5
 2,Mickael Colmard,Masters 1,Raw,B,,1971,48,M,82.5,83,,,,,135,140,-145,140,,,,,140
 1,Stéphane Coudoux,Masters 1,Raw,B,,1975,44,M,91,93,,,,,152.5,157.5,-160,157.5,,,,,157.5
@@ -32,7 +32,7 @@ G,Philippe Desmontais,Masters 3,Raw,B,,1958,60,M,89.3,93,,,,,100,105,-107.5,105,
 1,Bernard Petit,Masters 2,Raw,B,,1966,53,M,93.11,105,,,,,115,120,-125,120,,,,,120
 1,Pascal Siroux,Masters 2,Raw,B,,1964,55,M,118.9,120,,,,,145,150,-155,150,,,,,150
 1,Serge D'Aguanno,Masters 3,Raw,B,,1958,61,M,82.3,83,,,,,105,112.5,-115,112.5,,,,,112.5
-3,Jean-Yves Vazeille,Masters 3,Raw,B,,1959,60,M,82.6,83,,,,,105,-107.5,,105,,,,,105
+2,Jean-Yves Vazeille,Masters 3,Raw,B,,1959,60,M,82.6,83,,,,,105,-107.5,,105,,,,,105
 G,Clémentine Gerard,Juniors,Raw,B,,1998,21,F,47,47,,,,,45,50,-57.5,50,,,,,50
 G,Lyla Karz,Juniors,Raw,B,,2001,18,F,71,72,,,,,65,-70,-75,65,,,,,65
 G,Axel Lajarrige,Juniors,Raw,B,,1998,21,M,81.3,83,,,,,95,100,105,105,,,,,105
