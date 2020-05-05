@@ -5,16 +5,16 @@ Place,Name,Sex,BirthDate,BirthYear,Equipment,Division,Country,BodyweightKg,Weigh
 1,Klomkliang Phattarapon Ye,F,,,Raw,Juniors,Belgium,87.5,84+,140,80,145,365,SBD
 1,Stefanie Verhulst,F,,,Raw,Open,Belgium,51.6,52,87.5,52.5,115,255,SBD
 1,Elise Rummens,F,,,Raw,Open,Belgium,55.94,57,100,62.5,132.5,295,SBD
-2,Eleonora Stanciu,F,,,Raw,Open,Moldova,53.52,57,110,52.5,115,277.5,SBD
-3,Jella Troch,F,,,Raw,Open,Belgium,55.7,57,90,65,115,270,SBD
-4,Annelies Van De Velde,F,,,Raw,Open,Belgium,56.46,57,85,60.5,112.5,258,SBD
-5,Michelle Finel,F,,,Raw,Open,Belgium,56.5,57,77.5,45,90,212.5,SBD
-1,Sahyuri Lalime,F,,,Raw,Open,USA,62.5,63,150,77.5,182.5,410,SBD
-2,Hanne Wouters,F,,,Raw,Open,Belgium,62.7,63,142.5,62.5,190,395,SBD
-3,Jessica DeSousa,F,,,Raw,Open,Belgium,62.05,63,122.5,75,147.5,345,SBD
-4,Catherine Defraey,F,,,Raw,Open,Belgium,62.4,63,105,60,130,295,SBD
-1,Beatrice Narizzano,F,,,Raw,Open,Italy,71.25,72,115,75,155,345,SBD
-2,Elisa Obbers,F,,,Raw,Open,Belgium,67.45,72,118,42.5,133,293.5,SBD
+G,Eleonora Stanciu,F,,,Raw,Open,Moldova,53.52,57,110,52.5,115,277.5,SBD
+2,Jella Troch,F,,,Raw,Open,Belgium,55.7,57,90,65,115,270,SBD
+3,Annelies Van De Velde,F,,,Raw,Open,Belgium,56.46,57,85,60.5,112.5,258,SBD
+4,Michelle Finel,F,,,Raw,Open,Belgium,56.5,57,77.5,45,90,212.5,SBD
+G,Sahyuri Lalime,F,,,Raw,Open,USA,62.5,63,150,77.5,182.5,410,SBD
+1,Hanne Wouters,F,,,Raw,Open,Belgium,62.7,63,142.5,62.5,190,395,SBD
+2,Jessica DeSousa,F,,,Raw,Open,Belgium,62.05,63,122.5,75,147.5,345,SBD
+3,Catherine Defraey,F,,,Raw,Open,Belgium,62.4,63,105,60,130,295,SBD
+G,Beatrice Narizzano,F,,,Raw,Open,Italy,71.25,72,115,75,155,345,SBD
+1,Elisa Obbers,F,,,Raw,Open,Belgium,67.45,72,118,42.5,133,293.5,SBD
 1,Marie Feyaerts,F,,,Raw,Open,Belgium,83.8,84,132.5,70,145,347.5,SBD
 2,Lien Van Buggenhout,F,,,Raw,Open,Belgium,73.8,84,110,62.5,132.5,305,SBD
 1,Klomkliang Phattarapon Ye,F,,,Raw,Open,Belgium,87.55,84+,140,80,145,365,SBD
@@ -23,7 +23,7 @@ Place,Name,Sex,BirthDate,BirthYear,Equipment,Division,Country,BodyweightKg,Weigh
 1,Niels Ceuppens,M,,,Raw,Sub-Juniors,Belgium,82.6,83,185,140,205,530,SBD
 2,Robert Ivanoushkin,M,,,Raw,Sub-Juniors,Belgium,79.3,83,160,115,190,465,SBD
 1,Nour Kuru,M,,,Raw,Sub-Juniors,Belgium,96.2,105,197.5,95,245,537.5,SBD
-1,Andrei Anghel Ciprian,M,,,Raw,Sub-Juniors,Romania,110.5,120,160,102.5,190,452.5,SBD
+G,Andrei Anghel Ciprian,M,,,Raw,Sub-Juniors,Romania,110.5,120,160,102.5,190,452.5,SBD
 1,Hans Van der Staak,M,,,Raw,Juniors,Belgium,58.38,59,120,85,160,365,SBD
 1,Cedrick Hayen,M,,,Raw,Juniors,Belgium,64.9,66,169,122,205,496,SBD
 2,Bjorn Marien,M,,,Raw,Juniors,Belgium,65.65,66,160,110,220,490,SBD
@@ -118,9 +118,9 @@ DQ,Alexander Janssen,M,,,Raw,Open,Belgium,65.5,66,,,,,SBD
 3,Niko Van den Brande,M,,,Raw,Open,Belgium,115.9,120,252.5,157.5,270,680,SBD
 4,Maarten Terryn,M,,,Raw,Open,Belgium,117.8,120,220,160,261,641,SBD
 5,Jean-Luc Collart,M,,,Raw,Open,Belgium,117.55,120,236,160,240,636,SBD
-6,Issa Chikhou,M,,,Raw,Open,Italy,111.5,120,215,155,240,610,SBD
-7,Kevin François,M,,,Raw,Open,Belgium,116.9,120,215,137.5,230,582.5,SBD
-8,Joris De Saedeleer,M,,,Raw,Open,Belgium,106.2,120,187.5,145,237.5,570,SBD
+G,Issa Chikhou,M,,,Raw,Open,Italy,111.5,120,215,155,240,610,SBD
+6,Kevin François,M,,,Raw,Open,Belgium,116.9,120,215,137.5,230,582.5,SBD
+7,Joris De Saedeleer,M,,,Raw,Open,Belgium,106.2,120,187.5,145,237.5,570,SBD
 1,Steve Ringoot,M,,,Raw,Open,Belgium,145,120+,320,210,330,860,SBD
 2,Johan Kerremans,M,,,Raw,Open,Belgium,135.55,120+,240,170,300,710,SBD
 3,David De Vos,M,,,Raw,Open,Belgium,164,120+,230,180,240,650,SBD
