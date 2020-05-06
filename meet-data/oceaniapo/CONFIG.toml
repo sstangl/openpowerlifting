@@ -1,4 +1,6 @@
 # Configuration for the OPO
+[options]
+    require_manual_disambiguation = true
 
 # OPO specifies equipment in the division.
 [rulesets.default]

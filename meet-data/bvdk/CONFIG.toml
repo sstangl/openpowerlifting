@@ -12,13 +12,14 @@
     youth = {name = "Youth", min=14, max=18}
     youthA = {name = "Youth A", min=16, max=18}
     youthB = {name = "Youth B", min=14, max=16}
-    masters1 = {name = "Masters 1", min=39.5, max=999}
-    masters2 = {name = "Masters 2", min=49.5, max=999}
-    masters3 = {name = "Masters 3", min=59.5, max=999}
+    masters1 = {name = "Masters 1", min=39.5, max=48.5}
+    masters2 = {name = "Masters 2", min=49.5, max=58.5}
+    masters3 = {name = "Masters 3", min=59.5, max=68.5}
     masters4 = {name = "Masters 4", min=69.5, max=999}
     masters5 = {name = "Masters 5", min=79.5, max=999}
 	special_olympics = {name="Special Olympics", min=0, max=999}
 
+    masters = {name = "Masters", min=39.5, max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -66,3 +67,7 @@
     1939 = ["ExemptWeightClassConsistency", "ExemptDivision"]
     1954 = ["ExemptWeightClassConsistency"] # No weightclasses.
     1966 = ["ExemptWeightClassConsistency"] # DOTS team meet, no weightclasses.
+    0805 = ["ExemptDivision"] # 70 Year old in Masters 3.
+    1223 = ["ExemptDivision"] # Non standard masters divisions.
+    1867 = ["ExemptDivision"] # Non standard masters divisions.
+    1754 = ["ExemptDivision"] # Non standard masters divisions.

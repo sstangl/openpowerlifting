@@ -3,8 +3,8 @@ Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BirthYear,BodyweightKg,Tea
 1,Tamara Meyer,F,SBD,Open,72,Raw,1982,67.2,FSV Sarstedt,112.5,117.5,-125,117.5,62.5,-67.5,-67.5,62.5,130,140,147.5,147.5,327.5
 2,Andrea Röhricht,F,SBD,Open,72,Raw,1978,67.7,AC Rüdersdorf,90,97.5,-105,97.5,65,70,-72.5,70,110,120,125,125,292.5
 3,Helga Mey,F,SBD,Open,72,Raw,1980,65.9,AC Heros Berlin,70,80,85,85,42.5,-47.5,47.5,47.5,70,80,87.5,87.5,220
-1,Ana Geitner,F,SBD,Masters 1,47,Raw,1967,42.7,USV TU Dresden,82.5,90,95,95,37.5,42.5,45,45,132.5,140,142.5,142.5,282.5
-2,Catrin Resch,F,SBD,Masters 1,47,Raw,1965,46.55,HAV 77,80,87.5,95,95,60,65,70,70,90,105,115,115,280
+1,Ana Geitner,F,SBD,Masters,47,Raw,1967,42.7,USV TU Dresden,82.5,90,95,95,37.5,42.5,45,45,132.5,140,142.5,142.5,282.5
+2,Catrin Resch,F,SBD,Masters,47,Raw,1965,46.55,HAV 77,80,87.5,95,95,60,65,70,70,90,105,115,115,280
 1,Sibylle Berndt,F,SBD,Masters 2,84,Raw,1958,79.9,AC Lauchhammer,90,95,100,100,50,55,60,60,95,100,110,110,270
 1,Krystian Kleszczewski,M,SBD,Youth B,66,Raw,1997,61.85,AC Rüdersdorf,85,90,95,95,55,60,-62.5,60,100,110,125,125,280
 1,Eric Völkel,M,SBD,Youth B,93,Raw,1996,87.8,AC Rüdersdorf,85,92.5,100,100,62.5,65,-70,65,120,130,-135,130,295
@@ -40,21 +40,21 @@ DQ,Marco Seibel,M,SBD,Youth B,74,Raw,1995,72.9,AC Lauchhammer,110,117.5,125,125,
 1,Oliver Zamzow,M,SBD,Open,120,Raw,1978,109.9,SV Großräschen,240,250,255,255,150,155,-160,155,270,280,290,290,700
 1,Wulf Kronemann,M,SBD,Open,120+,Raw,1967,138.1,FSV Sarstedt,270,290,305,305,220,-230,,220,270,295,305,305,830
 2,Jewgenij Kondraschow,M,SBD,Open,120+,Raw,1978,139.85,SC Oberölsbach,255,275,282.5,282.5,175,187.5,200,200,275,297.5,325,325,807.5
-1,Jörg Müller,M,SBD,Masters 1,74,Raw,1966,72.8,Powerl. Lauchhammer,200,215,222.5,222.5,127.5,-132.5,132.5,132.5,230,245,-257.5,245,600
-2,Frank Schönnerstedt,M,SBD,Masters 1,74,Raw,1966,72.55,AC Gräfenhainichen,150,160,170,170,80,87.5,-90,87.5,-165,165,180,180,437.5
-1,Thomas Schulz,M,SBD,Masters 1,93,Raw,1962,86.9,AC Rüdersdorf,170,180,-190,180,117.5,-122.5,,117.5,170,,,170,467.5
-2,Thomas Zobjack,M,SBD,Masters 1,93,Raw,1969,86.4,USV TU Dresden,105,112.5,120,120,75,82.5,85,85,140,147.5,,147.5,352.5
-1,Andreas Walter,M,SBD,Masters 1,105,Raw,1964,95.85,SV Motor Barth,170,187.5,200,200,135,142.5,-150,142.5,185,200,210,210,552.5
-1,Martin Fischer,M,SBD,Masters 1,120,Raw,1966,113.2,AC Heros Berlin,215,230,-240,230,145,155,160,160,265,-285,,265,655
-2,Hendrik Pflug,M,SBD,Masters 1,120,Raw,1971,113.15,AC Heros Berlin,170,185,200,200,115,125,135,135,210,230,237.5,237.5,572.5
-1,Norbert Rosenkranz,M,SBD,Masters 1,120+,Raw,1968,127.45,SV 1919 Grimma,210,220,-230,220,145,152.5,155,155,210,230,240,240,615
-2,Matthias Friese,M,SBD,Masters 1,120+,Raw,1964,127.6,SV Motor Eberswalde,210,220,225,225,135,140,142.5,142.5,210,220,230,230,597.5
+1,Jörg Müller,M,SBD,Masters,74,Raw,1966,72.8,Powerl. Lauchhammer,200,215,222.5,222.5,127.5,-132.5,132.5,132.5,230,245,-257.5,245,600
+2,Frank Schönnerstedt,M,SBD,Masters,74,Raw,1966,72.55,AC Gräfenhainichen,150,160,170,170,80,87.5,-90,87.5,-165,165,180,180,437.5
+1,Thomas Schulz,M,SBD,Masters,93,Raw,1962,86.9,AC Rüdersdorf,170,180,-190,180,117.5,-122.5,,117.5,170,,,170,467.5
+2,Thomas Zobjack,M,SBD,Masters,93,Raw,1969,86.4,USV TU Dresden,105,112.5,120,120,75,82.5,85,85,140,147.5,,147.5,352.5
+1,Andreas Walter,M,SBD,Masters,105,Raw,1964,95.85,SV Motor Barth,170,187.5,200,200,135,142.5,-150,142.5,185,200,210,210,552.5
+1,Martin Fischer,M,SBD,Masters,120,Raw,1966,113.2,AC Heros Berlin,215,230,-240,230,145,155,160,160,265,-285,,265,655
+2,Hendrik Pflug,M,SBD,Masters,120,Raw,1971,113.15,AC Heros Berlin,170,185,200,200,115,125,135,135,210,230,237.5,237.5,572.5
+1,Norbert Rosenkranz,M,SBD,Masters,120+,Raw,1968,127.45,SV 1919 Grimma,210,220,-230,220,145,152.5,155,155,210,230,240,240,615
+2,Matthias Friese,M,SBD,Masters,120+,Raw,1964,127.6,SV Motor Eberswalde,210,220,225,225,135,140,142.5,142.5,210,220,230,230,597.5
 1,Roland Asmus,M,SBD,Masters 2,74,Raw,1960,72.75,SV Motor Eberswalde,197.5,-205,-205,197.5,-105,105,110,110,210,220,230,230,537.5
 2,Rudolf Berndt,M,SBD,Masters 2,74,Raw,1953,73.8,AC Lauchhammer,120,130,-135,130,85,90,95,95,120,140,150,150,375
 1,Wolf-Peter Springstein,M,SBD,Masters 3,93,Raw,1951,83.4,SV Großräschen,-160,160,170,170,120,130,-135,130,180,190,-200,190,490
 1,Hans-Peter Falk,M,SBD,Masters 3,120,Raw,1951,112,HAV 77,190,200,-210,200,160,170,-180,170,200,220,-225,220,590
 1,Klaus Feldmann,M,SBD,Masters 4,105,Raw,1936,99.8,SV Siegreid Nordwest,95,105,,105,100,-110,-110,100,140,150,155,155,360
-1,Petra Hoene,F,B,Masters 1,63,Raw,1960,62.3,SV Motor Eberswalde,,,,,42.5,-45,-45,42.5,,,,,42.5
+1,Petra Hoene,F,B,Masters,63,Raw,1960,62.3,SV Motor Eberswalde,,,,,42.5,-45,-45,42.5,,,,,42.5
 1,Emre Kula,M,B,Youth B,83,Raw,1995,82.1,KTV Sparta Berlin,,,,,95,102.5,-105,102.5,,,,,102.5
 1,Patrick Hartung,M,B,Youth A,59,Raw,1994,58.05,AC Rüdersdorf,,,,,90,95,-97.5,95,,,,,95
 1,Eugen Pabst,M,B,Youth A,74,Raw,1993,68.35,AC Rüdersdorf,,,,,95,-100,-100,95,,,,,95
@@ -72,10 +72,10 @@ DQ,Marco Seibel,M,SBD,Youth B,74,Raw,1995,72.9,AC Lauchhammer,110,117.5,125,125,
 3,Mathias Krüger,M,B,Open,105,Raw,1976,102.25,AC Beeskow,,,,,-135,135,-140,135,,,,,135
 1,Jörn Pisorius,M,B,Open,120,Raw,1977,118.55,SC Elite Hannover,,,,,185,-190,190,190,,,,,190
 1,Kevin Koch,M,B,Open,120+,Raw,1979,163.1,FSV Sarstedt,,,,,230,-240,240,240,,,,,240
-1,Heiko Sackretz,M,B,Masters 1,66,Raw,1968,62.7,AC Rüdersdorf,,,,,97.5,102.5,-105,102.5,,,,,102.5
-1,Steffen Richter,M,B,Masters 1,74,Raw,1965,73.35,AC Heros Berlin,,,,,100,105,,105,,,,,105
-1,Olaf Meurer,M,B,Masters 1,83,Raw,1965,81.75,SV Motor Eberswalde,,,,,142.5,147.5,-150,147.5,,,,,147.5
-1,Thomas Schmidl,M,B,Masters 1,105,Raw,1971,97.8,KKC Bodyfit,,,,,165,175,-180,175,,,,,175
+1,Heiko Sackretz,M,B,Masters,66,Raw,1968,62.7,AC Rüdersdorf,,,,,97.5,102.5,-105,102.5,,,,,102.5
+1,Steffen Richter,M,B,Masters,74,Raw,1965,73.35,AC Heros Berlin,,,,,100,105,,105,,,,,105
+1,Olaf Meurer,M,B,Masters,83,Raw,1965,81.75,SV Motor Eberswalde,,,,,142.5,147.5,-150,147.5,,,,,147.5
+1,Thomas Schmidl,M,B,Masters,105,Raw,1971,97.8,KKC Bodyfit,,,,,165,175,-180,175,,,,,175
 1,Joachim Pippig,M,B,Masters 2,83,Raw,1953,79.7,KTV Sparta Berlin,,,,,100,-105,,100,,,,,100
 1,Werner Wieninger,M,B,Masters 2,120,Raw,1957,105.15,KKC Bodyfit,,,,,167.5,-175,-175,167.5,,,,,167.5
 2,Harald Paul,M,B,Masters 2,120,Raw,1954,112.7,FSV Blau Weiß Bergen,,,,,140,-147.5,-147.5,140,,,,,140
