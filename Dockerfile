@@ -41,9 +41,6 @@ RUN make
 # Move to our server
 WORKDIR /opt/openpowerlifting/server
 
-# Overwrite the symlink'd map with the real built item
-RUN cp client/build/static-asset-map.tera templates
-
 # Expose our port so we can access it from our host machine
 EXPOSE 8000
 
