@@ -8,7 +8,19 @@ import random
 URL_BASE = "https://www.instagram.com/"
 
 LABELS = [
-    "graph enthusiasts"
+    "graph enthusiasts",
+    "human souls",
+    "followers",
+    "casual acquaintances",
+    "good friends",
+    "influencers",
+    "enthusiasts",
+    "powerlifters",
+    "lifters taking a 20-minute break between sets",
+    "real human people who are definitely not dogs",
+    "potential SBD athletes",
+    "responsible adults",
+    "irresponsible children"
 ]
 
 
