@@ -550,6 +550,21 @@
   animation: glow3 3s linear infinite;
 }
 
+@keyframes scroll_gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// Gradients can't really be scrolled.
+// The way this works is by making the gradient's background-image much larger
+// than the text, and changing the position of that image over time so it scrolls
+// through the gradient back and forth.
+.scroll_gradient {
+  background-size: 200% 200%;
+  animation: scroll_gradient 3s ease infinite;
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
