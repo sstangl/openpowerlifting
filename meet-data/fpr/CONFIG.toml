@@ -13,6 +13,7 @@
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
     paralympics = {name = "Paralympics",min=0,max=999}
+    youth = {name = "Youth", min=5, max=16}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -120,3 +121,5 @@
     1607 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1804 = ["ExemptWeightClassConsistency"]
+    1922 = ["ExemptWeightClassConsistency"]
+    1919 = ["ExemptWeightClassConsistency"]
