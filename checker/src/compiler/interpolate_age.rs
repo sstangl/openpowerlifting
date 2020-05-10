@@ -116,13 +116,11 @@ impl BirthDateRange {
         Age::None
     }
 
-    /// Returns the BirthYear for the known range, if possible.
-    pub fn birthyear(&self) -> Option<u32> {
-        let known_year = self.min.year();
-        if known_year == self.max.year() {
-            Some(known_year)
-        } else {
-            None
+    /// Interprets the BirthDateRange as a BirthYearRange.
+    pub fn as_birthyearrange(&self) -> BirthYearRange {
+        BirthYearRange {
+            min_year: self.min.year() as _,
+            max_year: self.max.year() as _,
         }
     }
 
@@ -148,9 +146,9 @@ impl BirthDateRange {
     }
 
     /// Narrows the range by a known BirthYear.
-    pub fn narrow_by_birthyear(&mut self, birthyear: u32) -> NarrowResult {
-        let min_yeardate = Date::from_parts(birthyear, 01, 01); // Jan 1.
-        let max_yeardate = Date::from_parts(birthyear, 12, 31); // Dec 31.
+    pub fn narrow_by_birthyear_range(&mut self, range: BirthYearRange) -> NarrowResult {
+        let min_yeardate = Date::from_parts(range.min_year as u32, 01, 01); // Jan 1.
+        let max_yeardate = Date::from_parts(range.max_year as u32, 12, 31); // Dec 31.
 
         let birthyear_range = BirthDateRange::new(min_yeardate, max_yeardate);
         self.intersect(&birthyear_range)
@@ -325,13 +323,14 @@ fn get_birthdate_range(
             trace_integrated(debug, &range, "BirthDate", &birthdate, &path);
         }
 
-        // Narrow by BirthYear.
-        if let Some(birthyear) = entry.birthyear {
-            if range.narrow_by_birthyear(birthyear) == NarrowResult::Conflict {
-                trace_conflict(debug, &range, mdate, "BirthYear", &birthyear, &path);
+        // Narrow by BirthYearRange.
+        if !entry.birthyearrange.is_default() {
+            let byr = entry.birthyearrange;
+            if range.narrow_by_birthyear_range(byr) == NarrowResult::Conflict {
+                trace_conflict(debug, &range, mdate, "BirthYearRange", &byr, &path);
                 return unknown;
             }
-            trace_integrated(debug, &range, "BirthYear", &birthyear, &path);
+            trace_integrated(debug, &range, "BirthYearRange", &byr, &path);
         }
 
         // Narrow by Age.
@@ -397,7 +396,6 @@ fn infer_from_range(
 
         let entry_had_exact_age = entry.age.is_exact();
         let age_on_date = range.age_on(mdate);
-        let birthyear: Option<u32> = range.birthyear();
 
         // Update the lifter's Age.
         match age_on_date {
@@ -435,31 +433,15 @@ fn infer_from_range(
             }
         }
 
-        // Update the lifter's BirthYear.
-        if entry.birthyear.is_none() && birthyear.is_some() {
-            trace_inference(debug, "BirthYear", &birthyear, mdate);
-            entry.birthyear = birthyear;
-        }
+        // Update the BirthYearRange.
+        entry.birthyearrange = entry.birthyearrange.intersect(range.as_birthyearrange());
 
-        // Update the BirthYearClass to match the BirthYear, if applicable.
+        // Update the BirthYearClass from the BirthYearRange, if possible.
         if entry.birthyearclass == BirthYearClass::None {
-            if let Some(year) = entry.birthyear {
-                entry.birthyearclass = BirthYearClass::from_birthyear(year, mdate.year());
-                if entry.birthyearclass != BirthYearClass::None {
-                    let message = "BirthYearClass (via BirthYear)";
-                    trace_inference(debug, message, &entry.birthyearclass, mdate);
-                }
-            }
-        }
-
-        // If no specific BirthYear is known, maybe Division information
-        // can be used to at least find a range.
-        if entry.birthyearclass == BirthYearClass::None {
-            let miny = range.min.year();
-            let maxy = range.max.year();
-            entry.birthyearclass = BirthYearClass::from_range(miny, maxy, mdate.year());
+            let byr = range.as_birthyearrange();
+            entry.birthyearclass = BirthYearClass::from_range(byr, mdate.year());
             if entry.birthyearclass != BirthYearClass::None {
-                let message = "BirthYearClass (via Range)";
+                let message = "BirthYearClass (via BirthYearRange)";
                 trace_inference(debug, message, &entry.birthyearclass, mdate);
             }
         }
@@ -544,41 +526,6 @@ mod tests {
         assert_eq!(bdr.narrow_by_birthdate(birthdate), Integrated);
         assert_eq!(bdr.min, birthdate);
         assert_eq!(bdr.max, birthdate);
-    }
-
-    #[test]
-    fn range_narrow_by_birthyear() {
-        // Test a BirthYear against unknown bounds.
-        let mut bdr = BirthDateRange::default();
-        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
-        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
-
-        // Test a BirthYear that narrows an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some((1983, 04, 24)));
-        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
-        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
-
-        // Test a BirthYear that conflicts with an upper bound.
-        let mut bdr = BirthDateRange::at(None, Some((1981, 01, 01)));
-        assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
-
-        // Test a BirthYear that narrows a lower bound.
-        let mut bdr = BirthDateRange::at(Some((1981, 01, 01)), None);
-        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_parts(1982, 01, 01));
-        assert_eq!(bdr.max, Date::from_parts(1982, 12, 31));
-
-        // Test a BirthYear that conflicts with a lower bound.
-        let mut bdr = BirthDateRange::at(Some((1983, 01, 01)), None);
-        assert_eq!(bdr.narrow_by_birthyear(1982), Conflict);
-
-        // Test a BirthYear that entirely contains the known range.
-        let mut bdr = BirthDateRange::at(Some((1982, 03, 04)), Some((1982, 05, 06)));
-        assert_eq!(bdr.narrow_by_birthyear(1982), Integrated);
-        assert_eq!(bdr.min, Date::from_parts(1982, 03, 04));
-        assert_eq!(bdr.max, Date::from_parts(1982, 05, 06));
     }
 
     #[test]

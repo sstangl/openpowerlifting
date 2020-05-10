@@ -24,6 +24,8 @@ mod agerange;
 pub use self::agerange::AgeRange;
 mod birthyearclass;
 pub use self::birthyearclass::BirthYearClass;
+mod birthyearrange;
+pub use self::birthyearrange::BirthYearRange;
 mod country;
 pub use self::country::Country;
 mod date;

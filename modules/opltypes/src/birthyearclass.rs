@@ -1,5 +1,7 @@
 //! Defines the `BirthYearClass` field for the `entries` table.
 
+use crate::BirthYearRange;
+
 /// A BirthYearClass is similar to an AgeClass: instead of being based off Age,
 /// it is based off the BirthYear. This is primarily used by IPF federations.
 ///
@@ -84,7 +86,10 @@ impl BirthYearClass {
     /// Assign a BirthYearClass based on a range of BirthYears.
     ///
     /// The range generally comes from a configured Division.
-    pub fn from_range(min_year: u32, max_year: u32, meet_year: u32) -> BirthYearClass {
+    pub fn from_range(range: BirthYearRange, meet_year: u32) -> BirthYearClass {
+        let min_year = range.min_year as u32;
+        let max_year = range.max_year as u32;
+
         let class_min = BirthYearClass::from_birthyear(min_year, meet_year);
         let class_max = BirthYearClass::from_birthyear(max_year, meet_year);
         if class_min == class_max {

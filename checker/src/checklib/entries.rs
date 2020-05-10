@@ -140,8 +140,10 @@ pub struct Entry {
     /// May be explicitly specified, or inferred by other age information.
     /// Division age ranges are carried here (possibly after further narrowing).
     pub agerange: AgeRange,
+    pub birthyearrange: BirthYearRange,
+    // The BirthYearClass is kept on the entry because the CSV exporting functions
+    // do not have the ability to look up the meet date.
     pub birthyearclass: BirthYearClass,
-    pub birthyear: Option<u32>,
     pub birthdate: Option<Date>,
 
     pub weightclasskg: WeightClassKg,
@@ -231,7 +233,7 @@ impl Entry {
         }
 
         // If the BirthYear is provided, calculate an approximate age.
-        if let Some(birthyear) = self.birthyear {
+        if let Some(birthyear) = self.birthyearrange.exact_birthyear() {
             if date.year() >= birthyear {
                 return Age::from_birthyear_on_date(birthyear, date);
             }
@@ -1667,12 +1669,13 @@ fn check_division_age_consistency(
         Some(birthdate.age_on(meet_date).unwrap())
     });
 
+    let birthyear: Option<u32> = entry.birthyearrange.exact_birthyear();
+
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
-    let age_from_birthyear: Option<Age> = entry
-        .birthyear
+    let age_from_birthyear: Option<Age> = birthyear
         .and_then(|birthyear| Some(Age::from_birthyear_on_date(birthyear, meet_date)));
-    if let Some(birthyear) = entry.birthyear {
+    if let Some(birthyear) = birthyear {
         let approx_age = age_from_birthyear.unwrap();
 
         // Pairwise check BirthYear and Age.
@@ -2240,8 +2243,10 @@ where
             entry.koreanname = check_column_koreanname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
-            entry.birthyear =
-                check_column_birthyear(&record[idx], meet, line, &mut report);
+            if let Some(y) = check_column_birthyear(&record[idx], meet, line, &mut report)
+            {
+                entry.birthyearrange = BirthYearRange::from_birthyear(y);
+            }
         }
         if let Some(idx) = headers.get(Header::BirthDate) {
             entry.birthdate =
@@ -2288,7 +2293,7 @@ where
                 }
             }
             if entry.age == Age::None {
-                if let Some(birthyear) = entry.birthyear {
+                if let Some(birthyear) = entry.birthyearrange.exact_birthyear() {
                     entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
                 }
             }
@@ -2311,21 +2316,28 @@ where
             entry.agerange = inferred_agerange;
         }
 
-        // If the BirthYear wasn't assigned yet, infer it from any surrounding info.
-        if entry.birthyear.is_none() {
-            if let Some(birthdate) = entry.birthdate {
-                entry.birthyear = Some(birthdate.year());
-            }
+        // Try narrowing the BirthYearRange based on surrounding information.
+        if let Some(birthdate) = entry.birthdate {
+            entry.birthyearrange = BirthYearRange::from_birthyear(birthdate.year());
+        } else if let Some(meet) = meet {
+            // Try using the AgeRange.
+            entry.birthyearrange =
+                entry.birthyearrange.intersect(BirthYearRange::from_range(
+                    entry.agerange.min,
+                    entry.agerange.max,
+                    meet.date,
+                ));
+
+            // Try using division information.
+            entry.birthyearrange = entry.birthyearrange.intersect(
+                BirthYearRange::from_range(division_age_min, division_age_max, meet.date),
+            );
         }
 
-        // Assign the BirthYearClass based on BirthYear.
-        if entry.birthyearclass == BirthYearClass::None {
-            if let Some(meet) = meet {
-                if let Some(year) = entry.birthyear {
-                    let meet = meet.date.year();
-                    entry.birthyearclass = BirthYearClass::from_birthyear(year, meet);
-                }
-            }
+        // Infer the BirthYearClass.
+        if let Some(meet) = meet {
+            entry.birthyearclass =
+                BirthYearClass::from_range(entry.birthyearrange, meet.date.year());
         }
 
         // Calculate points (except for McCulloch, which is Age-dependent).
