@@ -1,7 +1,5 @@
 //! Defines the `BirthYearClass` field for the `entries` table.
 
-use crate::Age;
-
 /// A BirthYearClass is similar to an AgeClass: instead of being based off Age,
 /// it is based off the BirthYear. This is primarily used by IPF federations.
 ///
@@ -80,21 +78,6 @@ impl BirthYearClass {
             60..=69 => BirthYearClass::ClassY60Y69,
             70..=255 => BirthYearClass::ClassY70Y999,
             _ => BirthYearClass::None,
-        }
-    }
-
-    /// Returns a tuple of the inclusive Age range bounds for the AgeClass.
-    pub fn to_range(self) -> Option<(Age, Age)> {
-        use Age::Approximate as Turning;
-        match self {
-            BirthYearClass::ClassY14Y18 => Some((Turning(14), Turning(18))),
-            BirthYearClass::ClassY19Y23 => Some((Turning(19), Turning(23))),
-            BirthYearClass::ClassY24Y39 => Some((Turning(24), Turning(39))),
-            BirthYearClass::ClassY40Y49 => Some((Turning(40), Turning(49))),
-            BirthYearClass::ClassY50Y59 => Some((Turning(50), Turning(59))),
-            BirthYearClass::ClassY60Y69 => Some((Turning(60), Turning(69))),
-            BirthYearClass::ClassY70Y999 => Some((Turning(70), Turning(255))),
-            BirthYearClass::None => None,
         }
     }
 
