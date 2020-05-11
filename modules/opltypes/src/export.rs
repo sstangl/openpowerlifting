@@ -62,10 +62,10 @@ pub struct ExportRow<'d> {
     pub totalkg: WeightKg,
     #[serde(rename = "Place")]
     pub place: Place,
+    #[serde(rename = "Dots")]
+    pub dots: Points,
     #[serde(rename = "Wilks")]
     pub wilks: Points,
-    #[serde(rename = "McCulloch")]
-    pub mcculloch: Points,
     #[serde(rename = "Glossbrenner")]
     pub glossbrenner: Points,
     #[serde(rename = "Goodlift")]

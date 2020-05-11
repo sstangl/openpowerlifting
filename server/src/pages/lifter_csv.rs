@@ -2,7 +2,6 @@
 
 use std::error;
 
-use coefficients::mcculloch;
 use opltypes::*;
 
 use crate::opldb::{self, Entry, Lifter, Meet};
@@ -47,8 +46,8 @@ fn make_export_row<'a>(
         best3deadliftkg: entry.best3deadliftkg,
         totalkg: entry.totalkg,
         place: entry.place,
+        dots: entry.dots,
         wilks: entry.wilks,
-        mcculloch: mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, entry.age),
         glossbrenner: entry.glossbrenner,
         goodlift: entry.goodlift,
         tested: if entry.tested { "Yes" } else { "" },

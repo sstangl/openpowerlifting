@@ -2,7 +2,7 @@
 //! offered on the website's Data page. Unlike the other CSV files, which are
 //! intended for use by the server, this variant is intended for use by humans.
 
-use coefficients::{goodlift, mcculloch};
+use coefficients::{dots, goodlift};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use opltypes::*;
 
@@ -12,24 +12,6 @@ use crate::checklib::{Entry, Meet};
 use crate::{AllMeetData, SingleMeetData};
 
 fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
-    // McCulloch points are calculated as late as possible because they are
-    // Age-dependent, and the lifter's Age may be inferred by post-checker phases.
-    let est_age = if !entry.age.is_none() {
-        entry.age
-    } else {
-        // Round toward Senior (~30).
-        let (min, max) = (entry.agerange.min, entry.agerange.max);
-        if max.is_some() && max < Age::Exact(30) {
-            max
-        } else if min.is_some() && min > Age::Exact(30) {
-            min
-        } else {
-            Age::None
-        }
-    };
-
-    let mcculloch = mcculloch(entry.sex, entry.bodyweightkg, entry.totalkg, est_age);
-
     ExportRow {
         name: &entry.name,
         sex: entry.sex,
@@ -58,8 +40,8 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         best3deadliftkg: entry.best3deadliftkg,
         totalkg: entry.totalkg,
         place: entry.place,
+        dots: dots(entry.sex, entry.bodyweightkg, entry.totalkg),
         wilks: entry.wilks,
-        mcculloch,
         glossbrenner: entry.glossbrenner,
         goodlift: goodlift(
             entry.sex,
