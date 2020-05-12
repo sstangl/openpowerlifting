@@ -28,7 +28,7 @@ def filter_category(csv):
         if weight <= 82.5 or weight > 90:
             return False
 
-        if row[evt] not in ["SBD"]:
+        if row[evt] not in ["SBD", "SD", "S", "SB"]:
             return False
 
         if row[plc] in ["DQ", "DD", "NS"]:
