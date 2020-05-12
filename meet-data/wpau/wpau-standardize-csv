@@ -452,8 +452,8 @@ def parse_sheet(sheet):
             continue
 
         # Sex and division are given between lifter rows
-        if any(search_str in text for search_str in['жен. (', 'woman (', 'female',
-                                                    'women.', 'женщины', 'women']):
+        if any(search_str in text for search_str in ['жен. (', 'woman (', 'female',
+                                                     'women.', 'женщины', 'women']):
             sex = 'F'
             if '(' in text or '\\' in text:
                 division = ''.join(re.findall(

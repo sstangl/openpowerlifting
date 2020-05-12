@@ -98,9 +98,9 @@ def getmeetlist(html):
     for a in table.find_all('a'):
         url = a['href']
 
-        if any(int_str in a.text for int_str in['IPF ', 'NPF ', 'EPF ', 'DM ', 'GBPF ',
-                                                'Nordic', 'International', 'Arnold',
-                                                'World', 'European']):
+        if any(int_str in a.text for int_str in ['IPF ', 'NPF ', 'EPF ', 'DM ', 'GBPF ',
+                                                 'Nordic', 'International', 'Arnold',
+                                                 'World', 'European']):
             continue
 
         if 'gallery' in url:

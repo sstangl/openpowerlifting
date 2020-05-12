@@ -102,7 +102,7 @@ def getmeetlist(html, main_url):
 
         # Non relative links are meet photos and international meets, mir
         # =Worlds,evr =Euros
-            if not any(test_str in url for test_str in['http', 'mir', 'arnold', 'evr']):
+            if not any(test_str in url for test_str in ['http', 'mir', 'arnold', 'evr']):
                 url = base_url + "/" + url
                 url = url.replace('.com//', '/')
                 if url not in urls:

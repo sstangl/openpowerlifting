@@ -396,7 +396,7 @@ def fixtotals(csv):
         bpidx = -1
         dlidx = -1
 
-        if 'Best3SquatKg'in csv.fieldnames:
+        if 'Best3SquatKg' in csv.fieldnames:
             sqidx = csv.index('Best3SquatKg')
 
         if 'Best3BenchKg' in csv.fieldnames:
@@ -430,7 +430,7 @@ def fixtotals(csv):
         bpidx = -1
         dlidx = -1
 
-        if 'Best3SquatKg'in csv.fieldnames:
+        if 'Best3SquatKg' in csv.fieldnames:
             sqidx = csv.index('Best3SquatKg')
 
         if 'Best3BenchKg' in csv.fieldnames:

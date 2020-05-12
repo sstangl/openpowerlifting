@@ -283,7 +283,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
-        elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион']):
+        elif any(x in text for x in ['возра', 'возро', 'категорія', 'дивизион']):
             fieldnames.append('Division-Age')
         # Catch all for birthyear if this isn't a division-age column
         elif 'дата' in text or 'год рождения' in text:
@@ -349,8 +349,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
-        elif text in['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
-                     'вилкс', 'абс']:
+        elif text in ['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
+                      'вилкс', 'абс']:
             fieldnames.append('IGNORE')
 
         elif text == 'тренер':

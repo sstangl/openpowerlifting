@@ -296,7 +296,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif text in(['фио', 'имя', 'прізвище', 'вес спортсм', 'фамилия имя']):
+        elif text in (['фио', 'имя', 'прізвище', 'вес спортсм', 'фамилия имя']):
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -386,8 +386,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
-        elif text in['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
-                     'вилкс', 'абс', 'шварц', 'мэлоун', 'общий шварц']:
+        elif text in ['wilks', 'wpoints', 'willks', 'очки', 'points', 'vilks',
+                      'вилкс', 'абс', 'шварц', 'мэлоун', 'общий шварц']:
             fieldnames.append('IGNORE')
 
         elif text == 'тренер':
