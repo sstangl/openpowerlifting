@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+#
+# Outputs the history of a record over time.
+# Change the filters in matches_category() to select the record category.
+
+import oplcsv
+import sys
+
+
+RECORD_FIELDS = ["Best3SquatKg", "Squat4Kg"]
+
+
+def filter_category(csv):
+    sex = csv.index("Sex")
+    eqp = csv.index("Equipment")
+    bwt = csv.index("BodyweightKg")
+    evt = csv.index("Event")
+    plc = csv.index("Place")
+
+    def matches_category(row):
+        if row[sex] not in ["M"]:
+            return False
+
+        if row[eqp] not in ["Raw", "Wraps"]:
+            return False
+
+        weight = float(row[bwt] or 0)
+        if weight <= 82.5 or weight > 90:
+            return False
+
+        if row[evt] not in ["SBD"]:
+            return False
+
+        if row[plc] in ["DQ", "DD", "NS"]:
+            return False
+
+        return True
+
+    csv.rows = list(filter(matches_category, csv.rows))
+
+
+def sort_by_date(csv):
+    date = csv.index("Date")
+    csv.rows = sorted(csv.rows, key=lambda row: row[date])
+
+
+def main(csvfile):
+    csv = oplcsv.Csv(csvfile)
+
+    filter_category(csv)
+    sort_by_date(csv)
+
+    best = 0.0
+    for row in csv.rows:
+        lifter_best = max(map(lambda f: float(row[csv.index(f)] or 0), RECORD_FIELDS))
+        if lifter_best > best:
+            best = lifter_best
+
+            date = row[csv.index("Date")]
+            name = row[csv.index("Name")]
+            print("%s %s - %s" % (date, name, str(lifter_best)))
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: %s openpowerlifting.csv" % sys.argv[0])
+        sys.exit(1)
+    main(sys.argv[1])
