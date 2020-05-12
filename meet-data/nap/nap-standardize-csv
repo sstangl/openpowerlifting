@@ -304,7 +304,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
-        elif any(x in text for x in['возра', 'возро', 'категорія', 'дивизион']):
+        elif any(x in text for x in ['возра', 'возро', 'категорія', 'дивизион']):
             # Happens when name and place are combined
             if 'CyrillicName' not in fieldnames:
                 fieldnames.append('CyrillicName')
