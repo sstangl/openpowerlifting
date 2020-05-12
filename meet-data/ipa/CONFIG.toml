@@ -1,4 +1,7 @@
 # Divisions are specified here: https://www.ipapower.com/pdf/2017/IPA%20GENERAL%20RULES%2011_2017.pdf
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # Note that the Open division is disallowed for lifters under age 20,
     # but meet directors don't seem to have consistently known that.

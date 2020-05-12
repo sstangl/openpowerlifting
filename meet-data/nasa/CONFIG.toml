@@ -1,5 +1,8 @@
 # Configuration for NASA.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # Full Power
     open = {name="open", min=0, max=999, sex='M'}
@@ -231,3 +234,4 @@
 
 [exemptions]
     0301 = ["ExemptWeightClassConsistency"]  # Uses strange weightclasses.
+    0904 = ["ExemptDivision"]  # Non-standard divisions.
