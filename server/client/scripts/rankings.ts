@@ -113,7 +113,7 @@ function makeDataProvider() {
             if (entry[Column.Instagram]) {
                 name += '<a href="https://www.instagram.com/' + entry[Column.Instagram] +
                         '" class="instagram" rel="noopener" target="_blank">' +
-                        '<i class="fa fa-instagram fa-resize"></i></a>';
+                        '<i class="iglogo"></i></a>';
             }
 
             if (entry[Column.Vkontakte]) {

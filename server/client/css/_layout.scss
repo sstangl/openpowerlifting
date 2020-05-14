@@ -82,6 +82,9 @@ li {
 
 .instagram {
   margin-left: 6px;
+
+  // Causes the container <i> to center with respect to the surrounding text.
+  display: inline-flex;
   vertical-align: middle;
 }
 

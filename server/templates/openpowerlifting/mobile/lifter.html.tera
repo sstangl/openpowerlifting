@@ -19,7 +19,7 @@
     <span class="lifter-social-media">
     {% if lifter.instagram %}
       <a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank">
-        <i class="fa fa-instagram fa-resize"></i>
+        <i class="iglogo"></i>
       </a>
     {% endif %}
     {% if lifter.vkontakte %}

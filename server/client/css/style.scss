@@ -55,3 +55,6 @@ $mobile-cutoff: 600px;
 
 // Mobile stuff gets included too!
 @import "mobile/style";
+
+// Embed SVG logos inside the CSS to download everything at once.
+@import "logos/instagram-openpowerlifting";
