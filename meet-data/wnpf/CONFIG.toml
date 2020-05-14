@@ -1,5 +1,8 @@
 # Configuration for the WNPF.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # Current divisions.
     open = {name="O", min=0, max=999}

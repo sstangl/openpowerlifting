@@ -118,6 +118,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Division')
             elif text == 'вуз':
                 fieldnames.append('Team')
+            elif text == 'мст':
+                fieldnames.append('IGNORE')
 
             elif text in ['жим 1']:
                 assert header[i + 3].lower() in ['жим 2']
