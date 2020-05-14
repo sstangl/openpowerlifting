@@ -24,7 +24,7 @@
     {% endif %}
     {% if lifter.vkontakte %}
       <a href="https://vk.com/{{lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank">
-        <i class="fa fa-vk fa-resize"></i>
+        <i class="vklogo"></i>
       </a>
     {% endif %}
     </span>

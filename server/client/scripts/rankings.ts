@@ -119,7 +119,7 @@ function makeDataProvider() {
             if (entry[Column.Vkontakte]) {
                 name += '<a href="https://vk.com/' + entry[Column.Vkontakte] +
                         '" class="instagram" rel="noopener" target="_blank">' +
-                        '<i class="fa fa-vk fa-resize"></i></a>';
+                        '<i class="vklogo"></i></a>';
             }
 
             const date = '<a href="' + urlprefix + 'm/' + entry[Column.Path] + '">' +
