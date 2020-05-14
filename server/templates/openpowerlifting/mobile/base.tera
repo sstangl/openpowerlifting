@@ -16,9 +16,6 @@
   <title>{{page_title}}</title>
   <meta name="description" content="{{page_description}}">
 
-  {# External sources -- these should be self-hosted eventually. #}
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   {# Internal sources. #}
   <link rel="stylesheet" type="text/css" href="/static/css/{{statics::style_css()}}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
