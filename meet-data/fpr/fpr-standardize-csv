@@ -89,7 +89,7 @@ def parse_fieldnames(sheet):
 
             if '№' in text or 'номер' in text:
                 fieldnames.append('IGNORE')
-            elif 'место' in text:
+            elif 'место' in text or 'мес то' in text:
                 fieldnames.append('Place')
             elif 'фамилия имя' in text:
                 fieldnames.append('CyrillicName')
@@ -116,7 +116,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif text == 'возраст кат':
                 fieldnames.append('Division')
-            elif text == 'вуз':
+            elif text in ['вуз', 'команда (во / род войск)', 'спортивная школа']:
                 fieldnames.append('Team')
             elif text == 'мст':
                 fieldnames.append('IGNORE')
@@ -137,7 +137,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
-            elif 'рез-т присед' in text or text == 'прис' or text == 'резт присед':
+            elif text == 'прис' or any(x in text for x in ['рез-т присед', 'резт присед',
+                                                           'результат присед']):
                 fieldnames.append('Best3SquatKg')
             elif 'рез-т жим' in text or text == 'жим' or text == 'резт жим':
                 fieldnames.append('Best3BenchKg')

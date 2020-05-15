@@ -1,5 +1,8 @@
 # Configuration for the CPU.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     junior = {name = "Juniors",min=0,max=22.5}
