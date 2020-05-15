@@ -116,7 +116,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif text == 'возраст кат':
                 fieldnames.append('Division')
-            elif text in ['вуз', 'команда (во / род войск)', 'спортивная школа']:
+            elif text in ['вуз', 'команда (во / род войск)', 'спортивная школа',
+                          'команда']:
                 fieldnames.append('Team')
             elif text == 'мст':
                 fieldnames.append('IGNORE')
