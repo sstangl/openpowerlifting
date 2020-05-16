@@ -89,35 +89,38 @@ def parse_fieldnames(sheet):
 
             if '№' in text or 'номер' in text:
                 fieldnames.append('IGNORE')
-            elif 'место' in text or 'мес то' in text:
+            elif 'место' in text or 'мес то' in text or text == 'зан м':
                 fieldnames.append('Place')
             elif 'фамилия имя' in text:
                 fieldnames.append('CyrillicName')
-            elif 'год родж' in text or 'год рожд' in text:
+            elif 'год родж' in text or 'год рожд' in text or 'грожд' in text:
                 fieldnames.append('BirthYear')
-            elif 'разряд' in text or 'вып разр' in text or 'звание' in text:  # Rank
+            elif any(x in text for x in ['разряд', 'вып разр', 'звание',
+                                         'раз ряд']):  # Rank
                 fieldnames.append('IGNORE')
             elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
-            elif 'город' in text or 'субьект рф' in text:  # City
+            elif ('город' in text or 'субьект рф' in text
+                  or 'область' in text):  # City/Region
                 fieldnames.append('IGNORE')
             elif 'вес' in text:
                 fieldnames.append('BodyweightKg')
             elif 'ком очки' in text:
                 fieldnames.append('IGNORE')
             # Wilks/IPF Points
-            elif 'очки по вилксу' in text or 'коэф виллс' in text or 'очки ipf' in text:
+            elif any(x in text for x in ['очки ipf', 'вилкс']):
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
-            elif 'жре бий' in text or 'оч ки' in text:  # Individual points
+            elif ('жре бий' in text or 'оч ки' in text or 'вып рд' in text or
+                    text == 'очки'):  # Individual points
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
             elif text == 'возраст кат':
                 fieldnames.append('Division')
-            elif text in ['вуз', 'команда (во / род войск)', 'спортивная школа',
-                          'команда']:
+            elif any(x in text for x in ['вуз', 'команда (во / род войск)',
+                                         'спортивная школа', 'команда']):
                 fieldnames.append('Team')
             elif text == 'мст':
                 fieldnames.append('IGNORE')
@@ -139,11 +142,14 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(9)]
 
             elif text == 'прис' or any(x in text for x in ['рез-т присед', 'резт присед',
-                                                           'результат присед']):
+                                                           'результат присед',
+                                                           'прис резт']):
                 fieldnames.append('Best3SquatKg')
-            elif 'рез-т жим' in text or text == 'жим' or text == 'резт жим':
+            elif text == 'жим' or any(x in text for x in ['рез-т жим', 'резт жим',
+                                                          'жим резт']):
                 fieldnames.append('Best3BenchKg')
-            elif 'рез-т тяга' in text or text == 'тяга' or text == 'резт тяга':
+            elif text == 'тяга' or any(x in text for x in ['рез-т тяга', 'резт тяга',
+                                                           'тяга резт']):
                 fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
