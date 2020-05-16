@@ -5,22 +5,22 @@
 	date_range = ["0000-01-01", "9999-01-01"]
 
 [divisions]
-    open = {name ="Open",min=0,max=999}
-    juniors = {name = "Juniors",min=0,max=22.5}
-    groupa = {name = "Group A", min=0, max=999}
-    groupb = {name = "Group B", min=0, max=999}
-    groupc = {name = "Group C", min=0, max=999}
-    lw = {name = "Lightweight", min=0, max=999}
-    hw = {name = "Heavyweight", min=0, max=999}
+    open = {name="Open", min=0, max=999, equipment="Raw"}
+    juniors = {name="Juniors", min=0, max=22.5, equipment="Raw"}
+    groupa = {name="Group A", min=0, max=999, equipment="Raw"}
+    groupb = {name="Group B", min=0, max=999, equipment="Raw"}
+    groupc = {name="Group C", min=0, max=999, equipment="Raw"}
+    lw = {name="Lightweight", min=0, max=999, equipment="Raw"}
+    hw = {name="Heavyweight", min=0, max=999, equipment="Raw"}
 
 [weightclasses.default_M]
     classes = ["49","54","59","65","72","80","88","97","107","107+"]
-    date_range=["2013-01-01","9999-01-01"]
+    date_range = ["2013-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.default_F]
     classes = ["41","45","50","55","61","67","73","79","86","86+"]
-    date_range=["2013-01-01","9999-01-01"]
+    date_range = ["2013-01-01","9999-01-01"]
     sex = "F"
 
 [weightclasses.old_M]
