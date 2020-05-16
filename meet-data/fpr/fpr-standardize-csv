@@ -245,7 +245,7 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Division')
     csv.fieldnames.append('Sex')
 
-    weightclass = None
+    weightclass = ''
     event = None
     equipment = get_equipment(sheet)
     division = get_division(sheet)
