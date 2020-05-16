@@ -19,6 +19,9 @@ pub enum Rule {
 
     /// There was no equipment category: everyone competed together.
     CombineAllEquipment,
+
+    /// Fourth attempts can be lower than other attempts.
+    FourthAttemptsMayLower,
 }
 
 /// Packed storage for all active RuleSet.

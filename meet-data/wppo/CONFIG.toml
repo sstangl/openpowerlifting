@@ -1,5 +1,9 @@
 # Configuration for World Para Powerlifting.
 
+[rulesets.default]
+	ruleset = ["FourthAttemptsMayLower"]
+	date_range = ["0000-01-01", "9999-01-01"]
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=22.5}
@@ -30,6 +34,4 @@
     sex = "F"
 
 [exemptions]
-    1001 = ["ExemptLiftOrder"]
-    1601 = ["ExemptLiftOrder"]
     8401 = ["ExemptWeightClassConsistency"]

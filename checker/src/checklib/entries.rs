@@ -1249,6 +1249,7 @@ fn check_attempt_consistency_helper(
     attempt4: WeightKg,
     best3lift: WeightKg,
     exempt_lift_order: bool,
+    fourths_may_lower: bool,
     line: u64,
     report: &mut Report,
 ) {
@@ -1271,15 +1272,17 @@ fn check_attempt_consistency_helper(
         line,
         report,
     );
-    process_attempt_pair(
-        lift,
-        4,
-        maxweight,
-        attempt4,
-        exempt_lift_order,
-        line,
-        report,
-    );
+    if fourths_may_lower == false {
+        process_attempt_pair(
+            lift,
+            4,
+            maxweight,
+            attempt4,
+            exempt_lift_order,
+            line,
+            report,
+        );
+    }
 
     // Check the Best3Lift validity.
     let best = attempt1.max(attempt2.max(attempt3));
@@ -1311,6 +1314,7 @@ fn check_attempt_consistency_helper(
 fn check_attempt_consistency(
     entry: &Entry,
     exempt_lift_order: bool,
+    fourths_may_lower: bool,
     line: u64,
     report: &mut Report,
 ) {
@@ -1323,6 +1327,7 @@ fn check_attempt_consistency(
         entry.squat4kg,
         entry.best3squatkg,
         exempt_lift_order,
+        fourths_may_lower,
         line,
         report,
     );
@@ -1336,6 +1341,7 @@ fn check_attempt_consistency(
         entry.bench4kg,
         entry.best3benchkg,
         exempt_lift_order,
+        fourths_may_lower,
         line,
         report,
     );
@@ -1349,6 +1355,7 @@ fn check_attempt_consistency(
         entry.deadlift4kg,
         entry.best3deadliftkg,
         exempt_lift_order,
+        fourths_may_lower,
         line,
         report,
     );
@@ -2016,6 +2023,9 @@ where
     let report_disambiguations =
         config.map_or(false, |c| c.does_require_manual_disambiguation());
 
+    let fourths_may_lower: bool =
+        meet.map_or(false, |m| m.ruleset.contains(Rule::FourthAttemptsMayLower));
+
     // Scan for check exemptions.
     let exemptions = {
         let parent_folder = &report.get_parent_folder()?;
@@ -2255,7 +2265,13 @@ where
 
         // Check consistency across fields.
         check_event_and_total_consistency(&entry, line, &mut report);
-        check_attempt_consistency(&entry, exempt_lift_order, line, &mut report);
+        check_attempt_consistency(
+            &entry,
+            exempt_lift_order,
+            fourths_may_lower,
+            line,
+            &mut report,
+        );
         check_equipment_year(&entry, meet, line, &mut report);
         check_weightclass_consistency(
             &entry,
