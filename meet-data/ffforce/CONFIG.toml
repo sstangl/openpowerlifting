@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
 
     # The min for age categories is set to 1 lower than expected
