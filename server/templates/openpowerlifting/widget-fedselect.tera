@@ -227,6 +227,10 @@
   <option value="wpc-iceland" {% if selection.federation == "WPC-Iceland" %}selected{% endif %}>WPC Iceland</option>
   <option value="wrpf-iceland" {% if selection.federation == "WRPF-Iceland" %}selected{% endif %}>WRPF Iceland</option>
 </optgroup>
+<optgroup label="{{strings.country.india}}">
+  <option value="all-india" {% if selection.federation == "AllIndia" %}selected{% endif %}>{{strings.selectors.fed.all_india}}</option>
+  <option value="pi" {% if selection.federation == "PI" %}selected{% endif %}>PI - Powerlifting India [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.indonesia}}">
   <option value="all-indonesia" {% if selection.federation == "AllIndonesia" %}selected{% endif %}>{{strings.selectors.fed.all_indonesia}}</option>
   <option value="aiwbpa" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA - All Indonesia Weightlifting, Bodybuilding & Powerlifting Association [IPF]</option>

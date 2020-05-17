@@ -553,6 +553,7 @@ pub struct FedSelectorTranslations {
     pub all_hongkong: String,
     pub all_hungary: String,
     pub all_iceland: String,
+    pub all_india: String,
     pub all_indonesia: String,
     pub all_iran: String,
     pub all_ireland: String,

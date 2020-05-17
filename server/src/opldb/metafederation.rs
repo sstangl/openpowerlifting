@@ -67,6 +67,8 @@ pub enum MetaFederation {
     AllHungary,
     #[strum(to_string = "all-iceland")]
     AllIceland,
+    #[strum(to_string = "all-india")]
+    AllIndia,
     #[strum(to_string = "all-indonesia")]
     AllIndonesia,
     #[strum(to_string = "all-iran")]
@@ -339,6 +341,10 @@ pub enum MetaFederation {
     #[strum(to_string = "pap")]
     PAP,
 
+    /// PI, but with international results also.
+    #[strum(to_string = "pi")]
+    PI,
+
     /// PLSS, but with international results also.
     #[strum(to_string = "plss")]
     PLSS,
@@ -489,6 +495,7 @@ impl MetaFederation {
             MetaFederation::AllHongKong => is_from(Country::HongKong, entry, meet),
             MetaFederation::AllHungary => is_from(Country::Hungary, entry, meet),
             MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
+            MetaFederation::AllIndia => is_from(Country::India, entry, meet),
             MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
             MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
             MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
@@ -671,6 +678,7 @@ impl MetaFederation {
             MetaFederation::OEVK => affiliation!(meet, entry, OEVK, IPF, EPF),
             MetaFederation::PA => affiliation!(meet, entry, PA, WP),
             MetaFederation::PAP => affiliation!(meet, entry, PAP, IPF, AsianPF),
+            MetaFederation::PI => affiliation!(meet, entry, PI, IPF, AsianPF),
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
