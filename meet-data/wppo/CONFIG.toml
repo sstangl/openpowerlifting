@@ -35,3 +35,4 @@
 
 [exemptions]
     8401 = ["ExemptWeightClassConsistency"]
+    1908 = ["ExemptWeightClassConsistency"] # Used old weightclasses.

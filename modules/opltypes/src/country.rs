@@ -88,11 +88,16 @@ pub enum Country {
     Fiji,
     Finland,
     France,
+    Gabon,
     Georgia,
     Ghana,
     Germany,
     Greece,
     Guatemala,
+    Guinea,
+    #[serde(rename = "Guinea-Bissau")]
+    #[strum(to_string = "Guinea-Bissau")]
+    GuineaBissau,
     Guyana,
     Haiti,
     Honduras,
@@ -140,6 +145,7 @@ pub enum Country {
     Mongolia,
     Montenegro,
     Morocco,
+    Myanmar,
     Namibia,
     Nauru,
     Nepal,
@@ -191,6 +197,9 @@ pub enum Country {
     #[serde(rename = "Serbia and Montenegro")]
     #[strum(to_string = "Serbia and Montenegro")]
     SerbiaAndMontenegro,
+    #[serde(rename = "Sierra Leone")]
+    #[strum(to_string = "Sierra Leone")]
+    SierraLeone,
     Singapore,
     Slovakia,
     Slovenia,
@@ -217,6 +226,9 @@ pub enum Country {
     Tajikistan,
     Tanzania,
     Thailand,
+    #[serde(rename = "The Gambia")]
+    #[strum(to_string = "The Gambia")]
+    TheGambia,
     Togo,
     Tonga,
     /// Unrecognized state. UN recognizes as part of Moldova.
@@ -251,6 +263,7 @@ pub enum Country {
     #[serde(rename = "West Germany")]
     #[strum(to_string = "West Germany")]
     WestGermany,
+    Yemen,
     /// Existed from 1945-1992.
     Yugoslavia,
     Zambia,
