@@ -264,6 +264,7 @@ enum Header {
     Tested,
     AgeRange,
     Country,
+    EntryDate,
 
     WeightClassKg,
     BodyweightKg,
@@ -1007,6 +1008,20 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) -> Option<Count
         Ok(c) => Some(c),
         Err(_) => {
             report.error_on(line, format!("Unknown Country '{}'", s));
+            None
+        }
+    }
+}
+
+fn check_column_entrydate(s: &str, line: u64, report: &mut Report) -> Option<Date> {
+    if s.is_empty() {
+        return None;
+    }
+
+    match s.parse::<Date>() {
+        Ok(d) => Some(d),
+        Err(_) => {
+            report.error_on(line, format!("Invalid EntryDate '{}'", s));
             None
         }
     }
@@ -2219,6 +2234,9 @@ where
         // Check the Country and State information.
         if let Some(idx) = headers.get(Header::Country) {
             entry.country = check_column_country(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::EntryDate) {
+            check_column_entrydate(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::State) {
             let c = entry.country;
