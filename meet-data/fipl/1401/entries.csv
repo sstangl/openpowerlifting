@@ -21,15 +21,15 @@ Place,Name,WeightClassKg,Event,Equipment,Sex,Division,Team,BirthYear,BodyweightK
 3,Chiara Federico,72,D,Single-ply,F,Open,Forma Club Monza,1995,68.34,130,140,150,150,150
 1,Maria Pia Moscianese,84,D,Single-ply,F,Open,Lazio Powerlifting,1963,77,180,190.5,-200,190.5,190.5
 2,Glenda Castronovo,84,D,Single-ply,F,Open,Bulls Powerlifting Torino,1989,81.07,110,125,-140,125,125
-1,Monica Magnani,57,D,Raw,F,Open,Se At Pe Roma,1966,46.19,107.5,115,120,120,120
-2,Tessa Hart,57,D,Raw,F,Open,Tudor Bompa Prato,1986,50.52,115,122.5,-127.5,122.5,122.5
-3,Marzia Ghirardi,57,D,Raw,F,Open,Asd Atlantide R.del Garda,1963,47.59,100,112.5,-122.5,112.5,112.5
-4,Katia Mattei,57,D,Raw,F,Open,Power Star Trento,1971,56.35,85,100,120,120,120
-5,Cristina Albrito,57,D,Raw,F,Open,Virtus Gallarate,1962,48.39,90,100,-105,100,100
-1,Carlotta Piga,57+,D,Raw,F,Open,Tudor Bompa Prato,1989,58.76,-115,120,-130,120,120
-2,Vanessa Pizzato,57+,D,Raw,F,Open,Tudor Bompa Prato,1991,67.14,127.5,-135,-135,127.5,127.5
-3,Stefania Spezzani,57+,D,Raw,F,Open,New Rage Powerlifting,1974,65.78,100,107.5,115,115,115
-4,Valentina Barbieri,57+,D,Raw,F,Open,New Rage Powerlifting,1989,71.59,105,115,-135,115,115
+1,Monica Magnani,47,D,Raw,F,Open,Se At Pe Roma,1966,46.19,107.5,115,120,120,120
+1,Tessa Hart,52,D,Raw,F,Open,Tudor Bompa Prato,1986,50.52,115,122.5,-127.5,122.5,122.5
+2,Marzia Ghirardi,52,D,Raw,F,Open,Asd Atlantide R.del Garda,1963,47.59,100,112.5,-122.5,112.5,112.5
+1,Katia Mattei,57,D,Raw,F,Open,Power Star Trento,1971,56.35,85,100,120,120,120
+3,Cristina Albrito,52,D,Raw,F,Open,Virtus Gallarate,1962,48.39,90,100,-105,100,100
+1,Carlotta Piga,63,D,Raw,F,Open,Tudor Bompa Prato,1989,58.76,-115,120,-130,120,120
+1,Vanessa Pizzato,72,D,Raw,F,Open,Tudor Bompa Prato,1991,67.14,127.5,-135,-135,127.5,127.5
+2,Stefania Spezzani,72,D,Raw,F,Open,New Rage Powerlifting,1974,65.78,100,107.5,115,115,115
+3,Valentina Barbieri,72,D,Raw,F,Open,New Rage Powerlifting,1989,71.59,105,115,-135,115,115
 1,Valerio Oldani,59,D,Single-ply,M,Open,Toplifters Milano,1986,56.01,200,210,214,214,214
 2,Franco Giummarra,59,D,Single-ply,M,Open,Forma Club Monza,1950,57.35,185,195,-200,195,195
 3,Mouchine El Boujaoudi,59,D,Single-ply,M,Open,Body Planet Trento,1991,57.87,185,195,-200,195,195
@@ -101,7 +101,7 @@ DQ,Michele Degiampietro,83,D,Single-ply,M,Open,Toplifters Milano,1969,82.33,-230
 14,Claudio D'Alessandro,93,D,Single-ply,M,Open,Se At Pe Roma,1968,90.3,200,210,-220,210,210
 15,Federico Nannini,93,D,Single-ply,M,Open,Bologna Powerlifting,1995,85.69,190,200,-210,200,200
 16,Alberto Famiano,93,D,Single-ply,M,Open,Barbarian's Parma,1986,85.61,190,-202.5,-205,190,190
-DD,Gabriele Calista,93,D,Single-ply,M,Open,Pescara Powerlifting,1979,89.32,290,310,317.5,317.5,
+DQ,Gabriele Calista,93,D,Single-ply,M,Open,Pescara Powerlifting,1979,89.32,290,310,317.5,317.5,
 1,Alberto Garofalo,105,D,Single-ply,M,Open,Power Gym Vittoria,1986,95.79,280,300,310,310,310
 2,Riccardo Arestia,105,D,Single-ply,M,Open,Barbarian's Parma,1985,103.28,310,-317.5,-317.5,310,310
 3,Marco Bianchi,105,D,Single-ply,M,Open,Barbarian's Parma,1988,101.32,280,-290,-302.5,280,280
@@ -117,27 +117,27 @@ DQ,Antonio Russo,120,D,Single-ply,M,Open,Power Star Trento,1958,116.97,-330,-340
 4,Marco Monti,120+,D,Single-ply,M,Open,Barbarian's Parma,1979,123.05,265,282.5,-295,282.5,282.5
 5,Massimo Conti,120+,D,Single-ply,M,Open,Toplifters Milano,1974,125.9,215,230,-240,230,230
 1,Nicola Porcu,74,D,Raw,M,Open,Tudor Bompa Prato,1973,68.57,200,220,230,230,230
-2,Mouchine El Boujaoudi,74,D,Raw,M,Open,Body Planet Trento,1991,57.15,175,187.5,192.5,192.5,192.5
-3,Biagio Savasta,74,D,Raw,M,Open,Power Gym Vittoria,1990,62.87,190,210,-215,210,210
-4,Roberto Giacchero,74,D,Raw,M,Open,Roma Natural Power,1978,72.5,220,227.5,-235,227.5,227.5
-5,Rocco Ciancia Pino,74,D,Raw,M,Open,Underground Pl Toscana,1989,70.97,205,215,222.5,222.5,222.5
-6,Mirko Calisai,74,D,Raw,M,Open,Semiramide Team,1980,60.88,180,190.5,196,196,196
-7,Simone Carli,74,D,Raw,M,Open,Iron Fist Torino,1984,73.93,200,215,225,225,225
+1,Mouchine El Boujaoudi,59,D,Raw,M,Open,Body Planet Trento,1991,57.15,175,187.5,192.5,192.5,192.5
+1,Biagio Savasta,66,D,Raw,M,Open,Power Gym Vittoria,1990,62.87,190,210,-215,210,210
+2,Roberto Giacchero,74,D,Raw,M,Open,Roma Natural Power,1978,72.5,220,227.5,-235,227.5,227.5
+4,Rocco Ciancia Pino,74,D,Raw,M,Open,Underground Pl Toscana,1989,70.97,205,215,222.5,222.5,222.5
+2,Mirko Calisai,66,D,Raw,M,Open,Semiramide Team,1980,60.88,180,190.5,196,196,196
+3,Simone Carli,74,D,Raw,M,Open,Iron Fist Torino,1984,73.93,200,215,225,225,225
 8,Davide Giannini,74,D,Raw,M,Open,Tudor Bompa Prato,1987,67.42,200,207.5,-215,207.5,207.5
-9,Alessio Concettoni,74,D,Raw,M,Open,Power Team Ancona,1990,73.34,210,220,-230,220,220
-10,Simone Ferazzoli,74,D,Raw,M,Open,Se At Pe Roma,1991,71.26,180,195,210,210,210
-11,Rosario Cilia,74,D,Raw,M,Open,Power Gym Vittoria,1986,71.3,210,-230,,210,210
-12,Giuseppe De Marco,74,D,Raw,M,Open,Se At Pe Roma,1979,71.55,185,200,-210,200,200
-13,Emanuele Caratelli,74,D,Raw,M,Open,Tudor Bompa Prato,1979,72.18,190,200,-212.5,200,200
-14,Francesco Rettondini,74,D,Raw,M,Open,Body Planet Trento,1992,72.77,-180,190,200,200,200
-15,Andrea Rogolino,74,D,Raw,M,Open,Toplifters Milano,1988,70.4,182.5,195,-205,195,195
-16,Marco Baglio,74,D,Raw,M,Open,Tudor Bompa Prato,1987,62.86,170,-185,-185,170,170
-17,Giulio Franciaresi,74,D,Raw,M,Open,Nirvana Club Senigallia,1991,69.3,160,170,180,180,180
-18,Dario Lo Presti,74,D,Raw,M,Open,Iron Fist Torino,1990,73.56,180,-195,-195,180,180
-19,Stefano Canicattì,74,D,Raw,M,Open,Tudor Bompa Prato,1989,65.19,-150,-160,160,160,160
-20,David Braga,74,D,Raw,M,Open,Cocoon Ferrara,1989,70.35,155,170,-180,170,170
-21,Marco Tomasi,74,D,Raw,M,Open,Power Star Trento,1993,71.5,165,-175,-175,165,165
-22,Federico Ottazzi,74,D,Raw,M,Open,Millennium Genova,1990,69.2,140,150,160,160,160
+5,Alessio Concettoni,74,D,Raw,M,Open,Power Team Ancona,1990,73.34,210,220,-230,220,220
+6,Simone Ferazzoli,74,D,Raw,M,Open,Se At Pe Roma,1991,71.26,180,195,210,210,210
+7,Rosario Cilia,74,D,Raw,M,Open,Power Gym Vittoria,1986,71.3,210,-230,,210,210
+9,Giuseppe De Marco,74,D,Raw,M,Open,Se At Pe Roma,1979,71.55,185,200,-210,200,200
+10,Emanuele Caratelli,74,D,Raw,M,Open,Tudor Bompa Prato,1979,72.18,190,200,-212.5,200,200
+11,Francesco Rettondini,74,D,Raw,M,Open,Body Planet Trento,1992,72.77,-180,190,200,200,200
+12,Andrea Rogolino,74,D,Raw,M,Open,Toplifters Milano,1988,70.4,182.5,195,-205,195,195
+3,Marco Baglio,66,D,Raw,M,Open,Tudor Bompa Prato,1987,62.86,170,-185,-185,170,170
+13,Giulio Franciaresi,74,D,Raw,M,Open,Nirvana Club Senigallia,1991,69.3,160,170,180,180,180
+14,Dario Lo Presti,74,D,Raw,M,Open,Iron Fist Torino,1990,73.56,180,-195,-195,180,180
+4,Stefano Canicattì,66,D,Raw,M,Open,Tudor Bompa Prato,1989,65.19,-150,-160,160,160,160
+15,David Braga,74,D,Raw,M,Open,Cocoon Ferrara,1989,70.35,155,170,-180,170,170
+16,Marco Tomasi,74,D,Raw,M,Open,Power Star Trento,1993,71.5,165,-175,-175,165,165
+17,Federico Ottazzi,74,D,Raw,M,Open,Millennium Genova,1990,69.2,140,150,160,160,160
 1,Andrea La Rocca,83,D,Raw,M,Open,Underground Pl Toscana,1985,82.6,260,270,-275,270,270
 2,Massimo Giacomelli,83,D,Raw,M,Open,Tudor Bompa Prato,1979,80.2,240,260,-270,260,260
 3,Carlo Princic,83,D,Raw,M,Open,Lazio Powerlifting,1981,81.3,230,245,260,260,260
@@ -145,57 +145,57 @@ DQ,Antonio Russo,120,D,Single-ply,M,Open,Power Star Trento,1958,116.97,-330,-340
 5,Juan Carlos Pereyra,83,D,Raw,M,Open,Asd Atlantide R.del Garda,1991,80.9,240,250,-260,250,250
 6,Claudio Calvisi,83,D,Raw,M,Open,Pescara Powerlifting,1981,79.2,235,245,-255,245,245
 7,Donato Albano,83,D,Raw,M,Open,Bologna Powerlifting,1988,79.6,225,240,-260,240,240
-8,Emanuele Tiofilo,83,D,Raw,M,Open,Power Team Ancona,1986,74.3,205,225,-240,225,225
-9,Fabio Galbusera,83,D,Raw,M,Open,Forma Club Monza,1978,79.9,220,230,-240,230,230
+9,Emanuele Tiofilo,83,D,Raw,M,Open,Power Team Ancona,1986,74.3,205,225,-240,225,225
+8,Fabio Galbusera,83,D,Raw,M,Open,Forma Club Monza,1978,79.9,220,230,-240,230,230
 10,Marco Saitta,83,D,Raw,M,Open,New Rage Powerlifting,1979,77.91,200,210,225,225,225
 11,Charlie Ferron,83,D,Raw,M,Open,Tudor Bompa Prato,1984,79.9,210,-220,220,220,220
 12,Michele Rancini,83,D,Raw,M,Open,Tudor Bompa Prato,1992,80.2,200,210,220,220,220
-13,Claudio Guerrieri,83,D,Raw,M,Open,Matrix Genzano,1986,76.2,195,205,212.5,212.5,212.5
-14,Fabio Merlo,83,D,Raw,M,Open,Toplifters Milano,1982,77.6,187.5,197.5,210,210,210
-15,Rossano Di Pietro,83,D,Raw,M,Open,Pescara Powerlifting,1977,80.7,200,210,215,215,215
-16,Marco Vecchio,83,D,Raw,M,Open,Toplifters Milano,1980,80.2,210,-222.5,-230,210,210
-17,Mattia Flaborea,83,D,Raw,M,Open,Tudor Bompa Prato,1991,82.6,185,195,212.5,212.5,212.5
+14,Claudio Guerrieri,83,D,Raw,M,Open,Matrix Genzano,1986,76.2,195,205,212.5,212.5,212.5
+16,Fabio Merlo,83,D,Raw,M,Open,Toplifters Milano,1982,77.6,187.5,197.5,210,210,210
+13,Rossano Di Pietro,83,D,Raw,M,Open,Pescara Powerlifting,1977,80.7,200,210,215,215,215
+17,Marco Vecchio,83,D,Raw,M,Open,Toplifters Milano,1980,80.2,210,-222.5,-230,210,210
+15,Mattia Flaborea,83,D,Raw,M,Open,Tudor Bompa Prato,1991,82.6,185,195,212.5,212.5,212.5
 18,Cristian Rossato,83,D,Raw,M,Open,Tudor Bompa Prato,1976,82.6,190,210,-220,210,210
 19,Aldo Rushani,83,D,Raw,M,Open,Nirvana Club Senigallia,1990,81.4,185,200,205,205,205
 20,Gianluca Martino,83,D,Raw,M,Open,Tudor Bompa Prato,1991,81.4,200,-215,-220,200,200
 21,Marco Redaelli,83,D,Raw,M,Open,Forma Club Monza,1989,81.8,-200,200,-210,200,200
-22,Nico Carrara,83,D,Raw,M,Open,Power Team Ancona,1992,76.4,180,190,-210,190,190
-23,Daniele Baioletti,83,D,Raw,M,Open,Tudor Bompa Prato,1984,79.9,180,195,-202.5,195,195
-24,Nicolò Cosentino,83,D,Raw,M,Open,Power Star Trento,1987,74.8,170,185,-205,185,185
-25,Marco Zanotti,83,D,Raw,M,Open,Asd Atlantide R.del Garda,1989,79.8,170,180,190,190,190
+23,Nico Carrara,83,D,Raw,M,Open,Power Team Ancona,1992,76.4,180,190,-210,190,190
+22,Daniele Baioletti,83,D,Raw,M,Open,Tudor Bompa Prato,1984,79.9,180,195,-202.5,195,195
+25,Nicolò Cosentino,83,D,Raw,M,Open,Power Star Trento,1987,74.8,170,185,-205,185,185
+24,Marco Zanotti,83,D,Raw,M,Open,Asd Atlantide R.del Garda,1989,79.8,170,180,190,190,190
 26,Riccardo Socci,83,D,Raw,M,Open,Sport & Salute Ancona,1985,74.6,-165,170,177.5,177.5,177.5
 27,Giorgio Pierotti,83,D,Raw,M,Open,Joy Powerlifting,1990,78.4,145,165,175,175,175
-28,Simone Nicolai,83,D,Raw,M,Open,Tudor Bompa Prato,1982,77.7,160,170,-172.5,170,170
-29,Thomas Gambella,83,D,Raw,M,Open,Sport & Salute Ancona,1985,82.2,165,175,-190,175,175
+29,Simone Nicolai,83,D,Raw,M,Open,Tudor Bompa Prato,1982,77.7,160,170,-172.5,170,170
+28,Thomas Gambella,83,D,Raw,M,Open,Sport & Salute Ancona,1985,82.2,165,175,-190,175,175
 1,Tom Martin #1,93,D,Raw,M,Open,Tudor Bompa Prato,1987,91.91,335,352.5,,352.5,352.5
 2,Achille Marrone,93,D,Raw,M,Open,Pescara Powerlifting,1962,91.23,260,-270,-270,260,260
 3,Emiliano De Paulis,93,D,Raw,M,Open,Matrix Genzano,1980,89.46,230,-240,245,245,245
 4,Luigi Durastanti,93,D,Raw,M,Open,Forma Club Monza,1982,86.28,220,232.5,240,240,240
 5,Gabriele Fioletti,93,D,Raw,M,Open,Underground Pl Toscana,1993,83.7,205,220.5,227.5,227.5,227.5
 6,Rocco Grillo,93,D,Raw,M,Open,Millennium Genova,1994,91.96,-200,210,222.5,222.5,222.5
-7,Andrea Mondo,93,D,Raw,M,Open,Barbarian's Parma,1976,85.77,190,-200,205,205,205
-8,Andrea Brugnone,93,D,Raw,M,Open,Roma Natural Power,1985,86.46,185,195,205,205,205
-9,Mattia Tralli,93,D,Raw,M,Open,Iron Fist Torino,1992,89.55,190,200,-207.5,200,200
-10,Marco Bastianelli,93,D,Raw,M,Open,Power Team Ancona,1968,90.27,185,200,-210,200,200
-11,Matteo Della Santa,93,D,Raw,M,Open,Joy Powerlifting,1990,89.01,-170,185,195,195,195
-12,Alberto Famiano,93,D,Raw,M,Open,Barbarian's Parma,1986,84.6,175,180,-185,180,180
-13,Filippo Palmesino,93,D,Raw,M,Open,Iron Fist Torino,1992,85.89,155,165,-170,165,165
-14,Antonio De Marco,93,D,Raw,M,Open,Pescara Powerlifting,1991,92.18,140,-155,165,165,165
-1,Massimo Pinzari,93+,D,Raw,M,Open,Matrix Genzano,1969,108.2,295,310,-315,310,310
-2,Giovanpaolo Sandolini,93+,D,Raw,M,Open,Forma Club Monza,1979,112.3,255,265,280,280,280
-3,Marco Lambardi,93+,D,Raw,M,Open,Tudor Bompa Prato,1980,95.36,250,260,-265,260,260
-4,Ruben Manenti,93+,D,Raw,M,Open,Forma Club Monza,1976,100.12,260,-270,-272.5,260,260
-5,Paolo Pollastri,93+,D,Raw,M,Open,Athletic Center Cigole,1963,119.41,230,250,270,270,270
-6,Giuseppe Amendolara,93+,D,Raw,M,Open,Underground Pl Toscana,1976,96,-220,230,250,250,250
-7,Matthew Pearce,93+,D,Raw,M,Open,Tudor Bompa Prato,1988,140.88,275,-300,-302.5,275,275
-8,Salvatore Lauretta,93+,D,Raw,M,Open,Power Gym Vittoria,1993,94,210,230,242.5,242.5,242.5
-9,Maurizio Straccamore,93+,D,Raw,M,Open,Se At Pe Roma,1959,95.5,215,230,240,240,240
-10,Boris Urciuoli,93+,D,Raw,M,Open,Iron Fist Torino,1973,95.74,225,240,-252.5,240,240
-11,Mansour Ibrahim,93+,D,Raw,M,Open,Tudor Bompa Prato,1974,106,215,230,-245,230,230
-12,Roberto Rossi,93+,D,Raw,M,Open,Iron Fist Torino,1986,99.22,200,210,217.5,217.5,217.5
-13,Giovanni Bonfiglio,93+,D,Raw,M,Open,Toplifters Milano,1973,98.72,190,205,215,215,215
-14,Alberto Vai,93+,D,Raw,M,Open,Toplifters Milano,1964,95.91,180,200,210,210,210
-15,Alessandro Artuso,93+,D,Raw,M,Open,New Rage Powerlifting,1988,103.5,195,207.5,215,215,215
-16,Stanislv Venhrynovych,93+,D,Raw,M,Open,Asd Atlantide R.del Garda,1994,99.1,190,205,-220,205,205
-17,Sergio Tuninetti,93+,D,Raw,M,Open,Iron Fist Torino,1964,105.21,170,182.5,195,195,195
-18,Andrea Chiama,93+,D,Raw,M,Open,Millennium Genova,1980,103.17,170,180,-190,180,180
+8,Andrea Mondo,93,D,Raw,M,Open,Barbarian's Parma,1976,85.77,190,-200,205,205,205
+9,Andrea Brugnone,93,D,Raw,M,Open,Roma Natural Power,1985,86.46,185,195,205,205,205
+10,Mattia Tralli,93,D,Raw,M,Open,Iron Fist Torino,1992,89.55,190,200,-207.5,200,200
+11,Marco Bastianelli,93,D,Raw,M,Open,Power Team Ancona,1968,90.27,185,200,-210,200,200
+12,Matteo Della Santa,93,D,Raw,M,Open,Joy Powerlifting,1990,89.01,-170,185,195,195,195
+13,Alberto Famiano,93,D,Raw,M,Open,Barbarian's Parma,1986,84.6,175,180,-185,180,180
+14,Filippo Palmesino,93,D,Raw,M,Open,Iron Fist Torino,1992,85.89,155,165,-170,165,165
+15,Antonio De Marco,93,D,Raw,M,Open,Pescara Powerlifting,1991,92.18,140,-155,165,165,165
+1,Massimo Pinzari,120,D,Raw,M,Open,Matrix Genzano,1969,108.2,295,310,-315,310,310
+2,Giovanpaolo Sandolini,120,D,Raw,M,Open,Forma Club Monza,1979,112.3,255,265,280,280,280
+1,Marco Lambardi,105,D,Raw,M,Open,Tudor Bompa Prato,1980,95.36,250,260,-265,260,260
+2,Ruben Manenti,105,D,Raw,M,Open,Forma Club Monza,1976,100.12,260,-270,-272.5,260,260
+3,Paolo Pollastri,120,D,Raw,M,Open,Athletic Center Cigole,1963,119.41,230,250,270,270,270
+3,Giuseppe Amendolara,105,D,Raw,M,Open,Underground Pl Toscana,1976,96,-220,230,250,250,250
+1,Matthew Pearce,120+,D,Raw,M,Open,Tudor Bompa Prato,1988,140.88,275,-300,-302.5,275,275
+4,Salvatore Lauretta,105,D,Raw,M,Open,Power Gym Vittoria,1993,94,210,230,242.5,242.5,242.5
+5,Maurizio Straccamore,105,D,Raw,M,Open,Se At Pe Roma,1959,95.5,215,230,240,240,240
+6,Boris Urciuoli,105,D,Raw,M,Open,Iron Fist Torino,1973,95.74,225,240,-252.5,240,240
+4,Mansour Ibrahim,120,D,Raw,M,Open,Tudor Bompa Prato,1974,106,215,230,-245,230,230
+7,Roberto Rossi,105,D,Raw,M,Open,Iron Fist Torino,1986,99.22,200,210,217.5,217.5,217.5
+8,Giovanni Bonfiglio,105,D,Raw,M,Open,Toplifters Milano,1973,98.72,190,205,215,215,215
+7,Alberto Vai,93,D,Raw,M,Open,Toplifters Milano,1964,95.91,180,200,210,210,210
+9,Alessandro Artuso,105,D,Raw,M,Open,New Rage Powerlifting,1988,103.5,195,207.5,215,215,215
+10,Stanislv Venhrynovych,105,D,Raw,M,Open,Asd Atlantide R.del Garda,1994,99.1,190,205,-220,205,205
+5,Sergio Tuninetti,120,D,Raw,M,Open,Iron Fist Torino,1964,105.21,170,182.5,195,195,195
+11,Andrea Chiama,105,D,Raw,M,Open,Millennium Genova,1980,103.17,170,180,-190,180,180
