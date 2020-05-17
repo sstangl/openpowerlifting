@@ -379,7 +379,7 @@ where
             state,
             town,
             name: name.unwrap(),
-            ruleset: ruleset,
+            ruleset,
         };
         Ok(MeetCheckResult {
             report,

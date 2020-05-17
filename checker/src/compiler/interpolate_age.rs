@@ -277,11 +277,7 @@ fn trace_conflict<T>(
                 "".red()
             },
             if age_on.is_some() { "Age " } else { "" },
-            if let Some(age) = age_on {
-                age.to_string()
-            } else {
-                "".to_string()
-            }
+            age_on.unwrap_or_default()
         );
     }
 }

@@ -1,7 +1,6 @@
 //! Checks for entries.csv files.
 
 use coefficients::{glossbrenner, wilks};
-use csv;
 use opltypes::states::*;
 use opltypes::*;
 use strum::IntoEnumIterator;
@@ -1029,7 +1028,7 @@ fn check_column_state(
     }
 
     // Get the country either from the Country column or from the MeetCountry.
-    match lifter_country.or(meet.and_then(|m| Some(m.country))) {
+    match lifter_country.or(meet.map(|m| m.country)) {
         Some(country) => {
             let state = State::from_str_and_country(s, country).ok();
             if state.is_none() {
@@ -1272,7 +1271,7 @@ fn check_attempt_consistency_helper(
         line,
         report,
     );
-    if fourths_may_lower == false {
+    if !fourths_may_lower {
         process_attempt_pair(
             lift,
             4,
@@ -1377,7 +1376,7 @@ fn check_equipment_year(
     }
 
     // Inelegant unwrapping.
-    let date = match meet.and_then(|m| Some(&m.date)) {
+    let date = match meet.map(|m| &m.date) {
         Some(d) => d,
         None => {
             return;
@@ -1578,7 +1577,7 @@ fn check_weightclass_consistency(
         .iter()
         .enumerate()
         .find(|&(_, w)| *w == entry.weightclasskg)
-        .and_then(|(i, _)| Some(i));
+        .map(|(i, _)| i);
 
     if index.is_none() {
         // Try to make a helpful suggestion about the most likely candidate.
@@ -1671,17 +1670,17 @@ fn check_division_age_consistency(
 
     // Since it will be needed a bunch below, if there's a BirthDate,
     // figure out how old the lifter would be on the meet date.
-    let age_from_birthdate: Option<Age> = entry.birthdate.and_then(|birthdate| {
+    let age_from_birthdate: Option<Age> = entry.birthdate.map(|birthdate| {
         // Unwrapping is safe: the BirthDate column check already validated.
-        Some(birthdate.age_on(meet_date).unwrap())
+        birthdate.age_on(meet_date).unwrap()
     });
 
     let birthyear: Option<u32> = entry.birthyearrange.exact_birthyear();
 
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
-    let age_from_birthyear: Option<Age> = birthyear
-        .and_then(|birthyear| Some(Age::from_birthyear_on_date(birthyear, meet_date)));
+    let age_from_birthyear: Option<Age> =
+        birthyear.map(|birthyear| Age::from_birthyear_on_date(birthyear, meet_date));
     if let Some(birthyear) = birthyear {
         let approx_age = age_from_birthyear.unwrap();
 
@@ -2228,7 +2227,7 @@ where
             // If the Country was not explicitly specified, but the State was,
             // the lifter's Country is inferrable from the MeetCountry.
             if entry.country.is_none() {
-                entry.country = entry.state.and_then(|state| Some(state.to_country()));
+                entry.country = entry.state.map(|s| s.to_country());
             }
         }
 

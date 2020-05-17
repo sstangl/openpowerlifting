@@ -54,7 +54,7 @@ impl RecordsSelection {
 
     /// Translates a URL path to a RecordSelection.
     pub fn from_path(p: &path::Path, default: &RecordsSelection) -> Result<Self, ()> {
-        let mut ret = default.clone();
+        let mut ret = *default;
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {
