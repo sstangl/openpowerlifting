@@ -78,12 +78,10 @@ impl Age {
     pub fn from_birthyear_on_date(birthyear: u32, on_date: Date) -> Self {
         let on_year = on_date.year();
 
-        if on_year < birthyear {
-            Age::None
-        } else if on_year == birthyear {
-            Age::Approximate(0)
-        } else {
-            Age::Approximate((on_year - birthyear - 1) as u8)
+        match on_year.cmp(&birthyear) {
+            Ordering::Less => Age::None,
+            Ordering::Greater => Age::Approximate((on_year - birthyear - 1) as u8),
+            Ordering::Equal => Age::Approximate(0),
         }
     }
 

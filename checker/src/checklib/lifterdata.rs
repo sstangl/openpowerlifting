@@ -1,6 +1,5 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
-use csv;
 use usernames::make_username;
 
 use std::collections::HashMap;

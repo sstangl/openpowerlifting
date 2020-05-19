@@ -1,7 +1,6 @@
 //! Checks for meet.csv files.
 
 use chrono::{self, Datelike};
-use csv;
 use opltypes::states::*;
 use opltypes::*;
 

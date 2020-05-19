@@ -79,16 +79,12 @@ impl AgeRange {
     pub fn intersect(self, other: AgeRange) -> AgeRange {
         let mut acc = self;
 
-        if other.min.is_some() {
-            if acc.min.is_none() || other.min > acc.min {
-                acc.min = other.min;
-            }
+        if other.min.is_some() && (acc.min.is_none() || other.min > acc.min) {
+            acc.min = other.min;
         }
 
-        if other.max.is_some() {
-            if acc.max.is_none() || other.max < acc.max {
-                acc.max = other.max;
-            }
+        if other.max.is_some() && (acc.max.is_none() || other.max < acc.max) {
+            acc.max = other.max;
         }
 
         if acc.min.is_some() && acc.max.is_some() && acc.min.is_definitely_greater_than(acc.max) {
