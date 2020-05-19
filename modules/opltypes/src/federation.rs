@@ -1858,7 +1858,14 @@ impl Federation {
             Federation::ACHIPO => Some(Federation::GPA),
             Federation::ACPA => Some(Federation::WPA),
             Federation::ADAU => None,
-            Federation::ADFPA => None,
+            Federation::ADFPA => {
+                // The ADFPA replaced the USPF as IPF affiliate in late 1997.
+                if date >= Date::from_parts(1997, 12, 05) {
+                    Some(Federation::IPF)
+                } else {
+                    None
+                }
+            }
             Federation::ADFPF => Some(Federation::WDFPF),
             Federation::AEP => Some(Federation::IPF),
             Federation::AFPF => None,
@@ -2110,7 +2117,14 @@ impl Federation {
             Federation::USARawBP => None,
             Federation::USMilAbroad => None,
             Federation::USPS => None,
-            Federation::USPF => None,
+            Federation::USPF => {
+                // The USPF was an IPF affiliate until late 1997, replaced by ADFPA.
+                if date >= Date::from_parts(1997, 12, 05) {
+                    None
+                } else {
+                    Some(Federation::IPF)
+                }
+            }
             Federation::USPA => Some(Federation::IPL),
             Federation::USSF => None,
             Federation::USSports => None,
