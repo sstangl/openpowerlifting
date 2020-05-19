@@ -1,36 +1,36 @@
-Name,BirthDate,Sex,BodyweightKg,WeightClassKg,Event,Equipment,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
-Kathy Wetenhall,,F,81.65,82.5,B,Single-ply,F_MES_6_APF,,104.33,,104.33,1
-Kathy Wetenhall,,F,81.65,82.5,B,Single-ply,F_OES_APF,,104.33,,104.33,1
-Devon Pastircak,,M,88,90,B,Raw,M_OR_APF,,113.4,,113.4,1
-Wally Stamper,,M,106.59,110,B,Raw,M_MR_4_APF,,113.4,,113.4,1
-Frank Schuetz,,M,122.47,125,B,Raw,M_MR_1_APF,,208.65,,208.65,1
-Jim Wetenhall,,M,130.63,140,B,Single-ply,M_MES_6_APF,,181.44,,181.44,1
-Robert Gregory,,M,71.67,75,D,Multi-ply,M_MEM_2_APF,,,235.87,235.87,1
-Tom Chatamara,,M,83.01,90,D,Raw,M_TR_1_APF,,,219.99,219.99,1
-Aaron Moon,,M,94.8,100,D,Raw,M_OR_APF,,,249.48,249.48,1
-Erika Crist,,F,54.43,56,SBD,Raw,F_OR_APF,124.74,68.04,124.74,317.51,1
-Maria Biedenbach,,F,69.85,75,SBD,Raw,F_JR_APF,115.67,54.43,136.08,306.17,1
-Joy Ellis,,F,70.31,75,SBD,Wraps,F_OCR_APF,97.52,61.23,142.88,301.64,1
-Michelle Lewis #1,,F,78.47,82.5,SBD,Wraps,F_OCR_APF,136.08,79.38,140.61,356.07,1
-Claire Showman,,F,82.1,82.5,SBD,Wraps,F_OCR_APF,117.93,79.38,151.95,349.27,2
-Teresa Collins,,F,81.65,82.5,SBD,Wraps,F_OCR_APF,113.4,79.38,140.61,333.39,3
-Tracy Brown #2,,F,100.24,90+,SBD,Wraps,F_MCR_1_APF,136.08,74.84,147.42,358.34,1
-Maggie Keeran,,F,143.56,90+,SBD,Wraps,F_OCR_APF,238.14,102.06,219.99,560.19,1
-Trevor Thomas,,M,73.71,75,SBD,Wraps,M_OCR_APF,197.31,124.74,233.6,555.65,1
-Greyson Loweecy,,M,95.25,100,SBD,Wraps,M_OCR_APF,240.4,149.69,281.23,671.32,1
-Josh Hachat,,M,108.41,110,SBD,Wraps,M_OCR_APF,249.48,161.03,263.08,673.58,1
-Rick Snyder,,M,130.18,140,SBD,Wraps,M_OCR_APF,240.4,122.47,254.01,616.89,1
-Keith Peters,,M,143.34,140+,SBD,Wraps,M_OCR_APF,195.04,117.93,204.12,517.1,1
-Chris Andrix,,M,82.1,82.5,SBD,Multi-ply,M_OEM_APF,319.78,210.92,272.16,802.86,1
-Brandon Bergen,,M,97.52,100,SBD,Multi-ply,M_OEM_APF,367.41,238.14,301.64,907.18,1
-Mike Vazquez,,M,98.43,100,SBD,Multi-ply,M_OEM_APF,344.73,238.14,274.42,857.29,2
-Matt Crist,,M,107.95,110,SBD,Multi-ply,M_OEM_APF,70.31,204.12,319.78,594.21,1
-Devon Patterson,,M,124.06,125,SBD,Multi-ply,M_JEM_APF,367.41,147.42,297.1,811.93,1
-Jeff McDowell,,M,123.83,125,SBD,Multi-ply,M_OEM_APF,419.57,288.03,319.78,1027.39,1
-Trey Duncan,,M,121.56,125,SBD,Multi-ply,M_OEM_APF,317.51,217.72,249.48,784.71,2
-Bobby Allen,,M,132,140,SBD,Multi-ply,M_OEM_APF,258.55,244.94,254.01,757.5,1
-Haithem Kefi,,M,137.44,140,SBD,Multi-ply,M_OEM_APF,294.84,163.29,294.84,752.96,2
-Joseph Biedenbach,,M,73.48,75,SBD,Raw,M_TR_2_APF,147.42,113.4,181.44,442.25,1
-Edward Betza,,M,98.88,100,SBD,Raw,M_MR_3_APF,204.12,149.69,249.48,603.28,1
-Kevin McLeod,,M,94.8,100,SBD,Raw,M_OR_APF,231.33,129.27,249.48,610.08,1
-Cody Siddle,,M,95.93,100,SBD,Raw,M_OR_APF,181.44,147.42,249.48,578.33,2
+Name,BirthDate,Age,Sex,BodyweightKg,WeightClassKg,Event,Equipment,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
+Kathy Wetenhall,,,F,81.65,82.5,B,Single-ply,F_MES_6_APF,,104.33,,104.33,1
+Kathy Wetenhall,,,F,81.65,82.5,B,Single-ply,F_OES_APF,,104.33,,104.33,1
+Devon Pastircak,,,M,88,90,B,Raw,M_OR_APF,,113.4,,113.4,1
+Wally Stamper,,,M,106.59,110,B,Raw,M_MR_4_APF,,113.4,,113.4,1
+Frank Schuetz,,,M,122.47,125,B,Raw,M_MR_1_APF,,208.65,,208.65,1
+Jim Wetenhall,,,M,130.63,140,B,Single-ply,M_MES_6_APF,,181.44,,181.44,1
+Robert Gregory,,,M,71.67,75,D,Multi-ply,M_MEM_2_APF,,,235.87,235.87,1
+Tom Chatamra,,15,M,83.01,90,D,Raw,M_TR_1_APF,,,219.99,219.99,1
+Aaron Moon,,,M,94.8,100,D,Raw,M_OR_APF,,,249.48,249.48,1
+Erika Crist,,,F,54.43,56,SBD,Raw,F_OR_APF,124.74,68.04,124.74,317.51,1
+Maria Biedenbach,,,F,69.85,75,SBD,Raw,F_JR_APF,115.67,54.43,136.08,306.17,1
+Joy Ellis,,,F,70.31,75,SBD,Wraps,F_OCR_APF,97.52,61.23,142.88,301.64,1
+Michelle Lewis #1,,,F,78.47,82.5,SBD,Wraps,F_OCR_APF,136.08,79.38,140.61,356.07,1
+Claire Showman,,,F,82.1,82.5,SBD,Wraps,F_OCR_APF,117.93,79.38,151.95,349.27,2
+Teresa Collins,,,F,81.65,82.5,SBD,Wraps,F_OCR_APF,113.4,79.38,140.61,333.39,3
+Tracy Brown #2,,,F,100.24,90+,SBD,Wraps,F_MCR_1_APF,136.08,74.84,147.42,358.34,1
+Maggie Keeran,,,F,143.56,90+,SBD,Wraps,F_OCR_APF,238.14,102.06,219.99,560.19,1
+Trevor Thomas,,,M,73.71,75,SBD,Wraps,M_OCR_APF,197.31,124.74,233.6,555.65,1
+Greyson Loweecy,,,M,95.25,100,SBD,Wraps,M_OCR_APF,240.4,149.69,281.23,671.32,1
+Josh Hachat,,,M,108.41,110,SBD,Wraps,M_OCR_APF,249.48,161.03,263.08,673.58,1
+Rick Snyder,,,M,130.18,140,SBD,Wraps,M_OCR_APF,240.4,122.47,254.01,616.89,1
+Keith Peters,,,M,143.34,140+,SBD,Wraps,M_OCR_APF,195.04,117.93,204.12,517.1,1
+Chris Andrix,,,M,82.1,82.5,SBD,Multi-ply,M_OEM_APF,319.78,210.92,272.16,802.86,1
+Brandon Bergen,,,M,97.52,100,SBD,Multi-ply,M_OEM_APF,367.41,238.14,301.64,907.18,1
+Mike Vazquez,,,M,98.43,100,SBD,Multi-ply,M_OEM_APF,344.73,238.14,274.42,857.29,2
+Matt Crist,,,M,107.95,110,SBD,Multi-ply,M_OEM_APF,70.31,204.12,319.78,594.21,1
+Devon Patterson,,,M,124.06,125,SBD,Multi-ply,M_JEM_APF,367.41,147.42,297.1,811.93,1
+Jeff McDowell,,,M,123.83,125,SBD,Multi-ply,M_OEM_APF,419.57,288.03,319.78,1027.39,1
+Trey Duncan,,,M,121.56,125,SBD,Multi-ply,M_OEM_APF,317.51,217.72,249.48,784.71,2
+Bobby Allen,,,M,132,140,SBD,Multi-ply,M_OEM_APF,258.55,244.94,254.01,757.5,1
+Haithem Kefi,,,M,137.44,140,SBD,Multi-ply,M_OEM_APF,294.84,163.29,294.84,752.96,2
+Joseph Biedenbach,,,M,73.48,75,SBD,Raw,M_TR_2_APF,147.42,113.4,181.44,442.25,1
+Edward Betza,,,M,98.88,100,SBD,Raw,M_MR_3_APF,204.12,149.69,249.48,603.28,1
+Kevin McLeod,,,M,94.8,100,SBD,Raw,M_OR_APF,231.33,129.27,249.48,610.08,1
+Cody Siddle,,,M,95.93,100,SBD,Raw,M_OR_APF,181.44,147.42,249.48,578.33,2
