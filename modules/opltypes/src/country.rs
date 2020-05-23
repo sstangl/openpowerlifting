@@ -142,6 +142,7 @@ pub enum Country {
     Mauritius,
     Mexico,
     Moldova,
+    Monaco,
     Mongolia,
     Montenegro,
     Morocco,
