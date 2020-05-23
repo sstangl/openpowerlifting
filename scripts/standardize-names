@@ -57,7 +57,7 @@ def correct_names(namehash, cyrhash, entriespath):
             row[cyridx] = cyrhash[row[cyridx]]
 
     if changed:
-        with open(entriespath, 'w', encoding='utf-8') as fd:
+        with open(entriespath, 'w', encoding='utf-8', newline='\n') as fd:
             csv.write(fd)
 
 
