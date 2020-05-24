@@ -185,6 +185,11 @@ pub enum Country {
     #[strum(to_string = "Puerto Rico")]
     PuertoRico,
     Qatar,
+    /// Existed from 1965-1979.
+    ///
+    /// Preceded by the British colony of Southern Rhodesia.
+    /// Succeeded by Zimbabwe.
+    Rhodesia,
     Romania,
     Russia,
     Rwanda,

@@ -16,6 +16,10 @@
     lw = {name="Lightweight", min=0, max=999, equipment="Raw"}
     hw = {name="Heavyweight", min=0, max=999, equipment="Raw"}
 
+	# Old divisions.
+	paraplegic = {name="Paraplegic", min=0, max=999, equipment="Raw"}
+	amputee = {name="Amputee", min=0, max=999, equipment="Raw"}
+
 [weightclasses.default_M]
     classes = ["49","54","59","65","72","80","88","97","107","107+"]
     date_range = ["2013-01-01","9999-01-01"]
@@ -37,5 +41,10 @@
     sex = "F"
 
 [exemptions]
+	6401 = ["ExemptWeightClassConsistency"] # Very old weightclasses.
+	6801 = ["ExemptWeightClassConsistency"] # Very old weightclasses.
+	7201 = ["ExemptWeightClassConsistency"] # Very old weightclasses.
+	7601 = ["ExemptWeightClassConsistency"] # Very old weightclasses.
+	8001 = ["ExemptWeightClassConsistency"] # Very old weightclasses.
     8401 = ["ExemptWeightClassConsistency"]
     1908 = ["ExemptWeightClassConsistency"] # Used old weightclasses.
