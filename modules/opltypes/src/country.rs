@@ -52,6 +52,8 @@ pub enum Country {
     Chile,
     China,
     Colombia,
+    /// Union of the Comoros.
+    Comoros,
     Congo,
     #[serde(rename = "Cook Islands")]
     #[strum(to_string = "Cook Islands")]
@@ -127,6 +129,7 @@ pub enum Country {
     Laos,
     Latvia,
     Lebanon,
+    Lesotho,
     Liberia,
     Libya,
     Lithuania,
@@ -198,6 +201,7 @@ pub enum Country {
     #[strum(to_string = "Saudi Arabia")]
     SaudiArabia,
     Scotland,
+    Senegal,
     Serbia,
     /// Existed from 1992-2006.
     #[serde(rename = "Serbia and Montenegro")]
