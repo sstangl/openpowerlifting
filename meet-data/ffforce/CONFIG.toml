@@ -25,6 +25,11 @@
     masters = {name = "Masters",min=38.5,max=999}
     seniors = {name = "Seniors",min=22.5,max=38.5}
 
+    # Challenge Villenave
+    elite = {name = "Elite", min=0, max=999}
+    jeunes = {name = "Jeunes", min=0, max=22.5}
+    horsmatch = {name = "Hors Match", min=0, max=999, place="G"}
+
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
@@ -62,4 +67,7 @@
     1803 = ["ExemptWeightClassConsistency"] #83+ class
     1802 = ["ExemptWeightClassConsistency"] #83+ class
     1703 = ["ExemptWeightClassConsistency"] #83+ class
-    1808 = ["ExemptWeightClassConsistency"] #No weightclasses
+
+    # Challenge Villenave (no weight classes)
+    1808 = ["ExemptWeightClassConsistency"]
+    2022 = ["ExemptWeightClassConsistency"]
