@@ -36,6 +36,7 @@ use std::env;
 use std::error::Error;
 use std::fs::File;
 use std::path::{Path, PathBuf};
+use std::time;
 
 extern crate server;
 use server::langpack::{self, LangInfo, Language, Locale};
@@ -718,11 +719,16 @@ fn main() -> Result<(), Box<dyn Error>> {
     env::var("STATICDIR").expect("STATICDIR envvar not set");
 
     // Load the OplDb.
+    let start = time::Instant::now();
     let lifters_csv = env::var("LIFTERS_CSV").expect("LIFTERS_CSV not set");
     let meets_csv = env::var("MEETS_CSV").expect("MEETS_CSV not set");
     let entries_csv = env::var("ENTRIES_CSV").expect("ENTRIES_CSV not set");
     let opldb = opldb::OplDb::from_csv(&lifters_csv, &meets_csv, &entries_csv)?;
-    println!("OplDb loaded in {}MB.", opldb.size_bytes() / 1024 / 1024);
+    println!(
+        "DB loaded in {}MB and {:#?}.",
+        opldb.size_bytes() / 1024 / 1024,
+        start.elapsed()
+    );
 
     #[allow(unused_variables)]
     let langinfo = load_langinfo()?;
