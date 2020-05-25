@@ -7,7 +7,7 @@ import sys
 
 def getSheetName(file_name):
     names = []
-    Workbook = xlrd.open_workbook(file_name)
+    Workbook = xlrd.open_workbook(file_name, encoding_override="cp1252")
     names = Workbook.sheet_names()
 
     for name in names:

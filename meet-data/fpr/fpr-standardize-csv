@@ -100,8 +100,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
-            elif ('город' in text or 'субьект рф' in text
-                  or 'область' in text):  # City/Region
+            elif any(x in text for x in ['город', 'субьект рф',
+                                         'область', 'субъект рф']):  # City/Region
                 fieldnames.append('IGNORE')
             elif 'вес' in text:
                 fieldnames.append('BodyweightKg')
@@ -112,8 +112,9 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
-            elif ('жре бий' in text or 'оч ки' in text or 'вып рд' in text or
-                    text == 'очки'):  # Individual points
+            # Individual points
+            elif text == 'очки' or any(x in text for x in ['оч кт', 'жре бий',
+                                                           'оч ки', 'вып рд']):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
@@ -125,10 +126,10 @@ def parse_fieldnames(sheet):
             elif text == 'мст':
                 fieldnames.append('IGNORE')
 
-            elif text in ['жим 1']:
-                assert header[i + 3].lower() in ['жим 2']
-                assert header[i + 6].lower() in ['жим 3']
-                assert header[i + 9].lower() in ['рез-т жим']
+            elif text in ['жим 1', '1']:
+                assert header[i + 3].lower() in ['жим 2', '2']
+                assert header[i + 6].lower() in ['жим 3', '3']
+                assert header[i + 9].lower() in ['рез-т жим', 'рез-т']
                 fieldnames.append('Bench1Kg')
                 fieldnames.append('IGNORE')
                 fieldnames.append('IGNORE')
