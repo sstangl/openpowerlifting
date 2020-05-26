@@ -86,6 +86,8 @@ pub enum Country {
     ElSalvador,
     England,
     Estonia,
+    /// Previously Swaziland: renamed itself in 2018.
+    Eswatini,
     Ethiopia,
     Fiji,
     Finland,
@@ -227,7 +229,6 @@ pub enum Country {
     #[strum(to_string = "Sri Lanka")]
     SriLanka,
     Sudan,
-    Swaziland,
     Sweden,
     Syria,
     Switzerland,

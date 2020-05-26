@@ -243,7 +243,7 @@ const COUNTRY_MAP = {
     "SVK": "Slovakia",
     "SWE": "Sweden",
     "SVE": "Sweden",
-    "SWZ": "Swaziland",
+    "SWZ": "Eswatini",
     "SYR": "Syria",
     "TAH": "Tahiti",
     "TAN": "Tanzania",
