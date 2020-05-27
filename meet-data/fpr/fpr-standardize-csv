@@ -108,7 +108,8 @@ def parse_fieldnames(sheet):
             elif 'ком очки' in text:
                 fieldnames.append('IGNORE')
             # Wilks/IPF Points
-            elif any(x in text for x in ['очки ipf', 'вилкс', 'абс кооф', 'очки абс']):
+            elif any(x in text for x in ['очки ipf', 'вилкс', 'абс кооф',
+                                         'очки абс', 'виллк', 'коэф виллс']):
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')

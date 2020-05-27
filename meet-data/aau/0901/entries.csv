@@ -13,9 +13,9 @@ F,Cierra Boykin,USA,VA,32,67.5,B,R Law/Mil,Raw,,,52.5,,,,52.5,1
 F,Madison James,USA,CA,14,67.5,B,T 14-15,Single-ply,,,67.5,,,,67.5,1
 F,Keri Williams,USA,NV,37,75,B,R Life,Raw,,,52.5,,,,52.5,1
 F,Keri Williams,USA,NV,37,75,B,R Sub,Raw,,,52.5,,,,52.5,1
-F,Shawn Edwards,USA,VA,45,75,B,RM 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,B,RM 45-49,Raw,,,,,,,,DQ
 F,June Hunt,USA,VA,46,75,B,R Law/Mil 45-49,Raw,,,47.5,,,,47.5,1
-F,Shawn Edwards,USA,VA,45,75,B,R Law/Mil 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,B,R Law/Mil 45-49,Raw,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,B,RM 55-59,Raw,,,65,,,,65,1
 F,Tish Henderson,USA,VA,42,82.5,B,R Law/Mil 40-44,Raw,,,60,,,,60,1
 M,Rakim Weddington,USA,CA,11,52,B,RY 10-11,Raw,,,52.5,,,,52.5,1
@@ -144,7 +144,7 @@ F,Brenda Herman,USA,WI,44,75,B,Open,Single-ply,,,75,,,,75,1
 F,Keri Williams,USA,NV,37,75,B,Open,Single-ply,,,52.5,,,,52.5,2
 F,June Hunt,USA,VA,46,75,B,Open,Single-ply,,,47.5,,,,47.5,3
 F,Debbie Selby,USA,CA,53,75,B,Open,Single-ply,,,42.5,,,,42.5,4
-F,Shawn Edwards,USA,VA,45,75,B,Open,Single-ply,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,B,Open,Single-ply,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,B,Open,Single-ply,,,65,,,,65,1
 F,Tish Henderson,USA,VA,42,82.5,B,Open,Single-ply,,,60,,,,60,2
 F,Diana Lopez,Mexico,,,82.5,B,Open,Single-ply,,,,,,,,DQ
@@ -278,7 +278,7 @@ F,Brenda Herman,USA,WI,44,75,B,R Open,Raw,,,75,,,,75,1
 F,Keri Williams,USA,NV,37,75,B,R Open,Raw,,,52.5,,,,52.5,2
 F,June Hunt,USA,VA,46,75,B,R Open,Raw,,,47.5,,,,47.5,3
 F,Debbie Selby,USA,CA,53,75,B,R Open,Raw,,,42.5,,,,42.5,4
-F,Shawn Edwards,USA,VA,45,75,B,R Open,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,B,R Open,Raw,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,B,R Open,Raw,,,65,,,,65,1
 F,Tish Henderson,USA,VA,42,82.5,B,R Open,Raw,,,60,,,,60,2
 F,Diana Lopez,Mexico,,,82.5,B,R Open,Raw,,,,,,,,DQ
@@ -444,7 +444,7 @@ F,Donna Tanney,USA,CA,58,67.5,D,Open,Single-ply,,,,,82.5,85,82.5,5
 F,Brenda Herman,USA,WI,44,75,D,Open,Single-ply,,,,,140,142.5,140,1
 F,Keri Williams,USA,NV,37,75,D,Open,Single-ply,,,,,127.5,,127.5,2
 F,Debbie Selby,USA,CA,53,75,D,Open,Single-ply,,,,,115,,115,3
-F,Shawn Edwards,USA,VA,45,75,D,Open,Single-ply,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,D,Open,Single-ply,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,D,Open,Single-ply,,,,,122.5,131,122.5,1
 F,Diana Lopez,Mexico,,,82.5,D,Open,Single-ply,,,,,,,,DQ
 F,Lucy Hawkins,USA,VA,54,90,D,Open,Single-ply,,,,,92.5,,92.5,1
@@ -531,8 +531,8 @@ F,Keri Williams,USA,NV,37,75,SBD,R Sub,Raw,75,,52.5,,127.5,,255,1
 F,Brenda Herman,USA,WI,44,75,SBD,RLM 40-44,Raw,125,,75,,140,142.5,340,1
 F,Brenda Herman,USA,WI,44,75,SBD,RM 40-44,Raw,125,,75,,140,142.5,340,1
 F,May Rodgers,USA,CA,,75,SBD,RM 45-49,Raw,57.5,,37.5,,90,,185,1
-F,Shawn Edwards,USA,VA,45,75,SBD,RM 45-49,Raw,,,,,,,,DQ
-F,Shawn Edwards,USA,VA,45,75,SBD,R Law/Mil 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,SBD,RM 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,SBD,R Law/Mil 45-49,Raw,,,,,,,,DQ
 F,Diana Lopez,Mexico,,,82.5,SBD,Open,Single-ply,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,SBD,RM 55-59,Raw,75,,65,,122.5,131,262.5,1
 F,Tish Henderson,USA,VA,42,82.5,SBD,R Law/Mil 40-44,Raw,132.5,,60,,140,147.5,332.5,1
@@ -600,8 +600,8 @@ F,Bridgette Perkins,USA,,48,56,BD,R Law/Mil 45-49,Raw,,,,,,,,DQ
 F,Vickie Brown,USA,AZ,49,60,BD,M 45-49,Raw,,,52.5,,110,,162.5,1
 F,Vickie Brown,USA,AZ,49,60,BD,R Law/Mil 45-49,Raw,,,52.5,,110,,162.5,1
 F,Debbie Selby,USA,CA,53,75,BD,RLM 50-54,Raw,,,42.5,,115,,157.5,1
-F,Shawn Edwards,USA,VA,45,75,BD,RM 45-49,Raw,,,,,,,,DQ
-F,Shawn Edwards,USA,VA,45,75,BD,R Law/Mil 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,BD,RM 45-49,Raw,,,,,,,,DQ
+F,Shawn Edwards #1,USA,VA,45,75,BD,R Law/Mil 45-49,Raw,,,,,,,,DQ
 F,Diana Lopez,Mexico,,,82.5,BD,Open,Raw,,,,,,,,DQ
 F,Avis Henderson,USA,VA,58,82.5,BD,RM 55-59,Raw,,,65,,122.5,131,187.5,1
 F,Tish Henderson,USA,VA,42,82.5,BD,R Law/Mil 40-44,Raw,,,60,,140,147.5,200,1
