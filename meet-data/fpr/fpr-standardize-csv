@@ -114,8 +114,9 @@ def parse_fieldnames(sheet):
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
             # Individual points
-            elif text == 'очки' or any(x in text for x in ['оч кт', 'жре бий',
-                                                           'оч ки', 'вып рд']):
+            elif text in ['очки', 'оч'] or any(x in text for x in ['оч кт',
+                                                                   'жре бий', 'оч ки',
+                                                                   'вып рд']):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
@@ -145,7 +146,8 @@ def parse_fieldnames(sheet):
 
             elif text == 'прис' or any(x in text for x in ['рез-т присед', 'резт присед',
                                                            'результат присед',
-                                                           'прис резт', 'присед итог']):
+                                                           'прис резт', 'присед итог',
+                                                           'присед']):
                 fieldnames.append('Best3SquatKg')
             elif text == 'жим' or any(x in text for x in ['рез-т жим', 'резт жим',
                                                           'жим резт', 'жим итог']):
