@@ -44,27 +44,47 @@
     c_special = {name = "Classic Special Olympics", min = 0, max = 999, equipment="Raw"}
     c_handicapped = {name = "Classic Handicapped", min = 0, max = 999, equipment="Raw"}
 
+    # "Equipped" divisions, which permit the use of single-ply only.
+    open = {name = "Open", min = 14, max = 999, equipment="Single-ply"}
+    teen_14 = {name = "T1 14-15", min = 14, max = 15, equipment="Single-ply"}
+    teen_16 = {name = "T2 16-17", min = 16, max = 17, equipment="Single-ply"}
+    teen_18 = {name = "T3 18-19", min = 18, max = 19, equipment="Single-ply"}
+    junior = {name = "Juniors 20-23", min = 20, max = 23, equipment="Single-ply"}
+    master_40 = {name = "Masters 40-44", min = 40, max = 44, equipment="Single-ply"}
+    master_45 = {name = "Masters 45-49", min = 45, max = 49, equipment="Single-ply"}
+    master_50 = {name = "Masters 50-54", min = 50, max = 54, equipment="Single-ply"}
+    master_55 = {name = "Masters 55-59", min = 55, max = 59, equipment="Single-ply"}
+    master_60 = {name = "Masters 60-64", min = 60, max = 64, equipment="Single-ply"}
+    master_65 = {name = "Masters 65-69", min = 65, max = 69, equipment="Single-ply"}
+    master_70 = {name = "Masters 70-74", min = 70, max = 74, equipment="Single-ply"}
+    master_75 = {name = "Masters 75-79", min = 75, max = 79, equipment="Single-ply"}
+    master_80 = {name = "Masters 80+", min = 80, max = 999, equipment="Single-ply"}
+    lfm = {name = "Law/Fire/Military", min = 0, max = 999, equipment="Single-ply"}
+    special = {name = "Special Olympics", min = 0, max = 999, equipment="Single-ply"}
+    handicapped = {name = "Handicapped", min = 0, max = 999, equipment="Single-ply"}
+
+
 [weightclasses.current_M]
     classes = ["48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
-    date_range = ["2013-01-01", "9999-01-01"]
+    date_range = ["2016-08-01", "9999-01-01"]
     sex = "M"
 
 [weightclasses.current_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["2013-01-01", "9999-01-01"]
+    date_range = ["2016-08-01", "9999-01-01"]
     sex = "F"
 
 
-# From https://web.archive.org/web/20100331160114/http://www.rawpowerlifting.com:80/pdf/GeneralRules.pdf
-# End date is a guess -- the 2015 classes are same as the 2018 classes, though.
+# From https://www.slideshare.net/peterlucey/rulebook-2013
+# IDFPA was affiliated to WDFPF up to July 2016.
 [weightclasses.old_M]
-    classes = ["30","35","40","44.5","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
-    date_range = ["1990-01-01", "2013-01-01"]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["0000-01-01", "2016-07-31"]
     sex = "M"
 
 [weightclasses.old_F]
-    classes = ["30","35","40","44.5","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["1990-01-01", "2013-01-01"]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
+    date_range = ["0000-01-01", "2016-07-31"]
     sex = "F"
 
 [exemptions]
