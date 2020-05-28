@@ -116,7 +116,8 @@ def parse_fieldnames(sheet):
             # Individual points
             elif text in ['очки', 'оч'] or any(x in text for x in ['оч кт',
                                                                    'жре бий', 'оч ки',
-                                                                   'вып рд']):
+                                                                   'вып рд',
+                                                                   'очки ком']):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
