@@ -3,12 +3,9 @@
 //! Not sure how to break this up across files for the moment,
 //! so just keeping with a super-generic name.
 
-extern crate opltypes;
-extern crate server;
-
+use opldb::algorithms;
+use opldb::selection::*;
 use opltypes::*;
-use server::opldb::algorithms;
-use server::pages::selection::*;
 
 mod common;
 

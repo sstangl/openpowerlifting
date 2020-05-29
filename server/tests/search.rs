@@ -1,10 +1,8 @@
 //! Suite of tests for the search function on the compiled database.
 
-extern crate server;
-
-use server::opldb::algorithms;
+use opldb::algorithms;
+use opldb::selection::*;
 use server::pages::api_search::*;
-use server::pages::selection::*;
 
 mod common;
 

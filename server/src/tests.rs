@@ -1,11 +1,10 @@
 //! Tests for the Rocket code in main.rs.
 
-use super::dotenv;
 use super::rocket;
 use super::Device;
 
+use opldb::OplDb;
 use server::langpack::{LangInfo, Language};
-use server::opldb::OplDb;
 
 use rocket::http::{Cookie, Header, Status};
 use rocket::local::Client;

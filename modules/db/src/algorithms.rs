@@ -3,11 +3,11 @@
 use opltypes::*;
 use std::cmp;
 
+use crate::cache::NonSortedNonUnique;
+use crate::cache::PossiblyOwnedNonSortedNonUnique;
+use crate::cache::PossiblyOwnedSortedUnique;
+use crate::cache::SortedUnique;
 use crate::selection::*;
-use crate::static_cache::NonSortedNonUnique;
-use crate::static_cache::PossiblyOwnedNonSortedNonUnique;
-use crate::static_cache::PossiblyOwnedSortedUnique;
-use crate::static_cache::SortedUnique;
 use crate::{Entry, Meet, OplDb};
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
@@ -255,7 +255,7 @@ pub fn get_entry_indices_for<'db>(
     selection: &Selection,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedNonSortedNonUnique<'db> {
-    let cache = opldb.get_static_cache();
+    let cache = opldb.get_cache();
 
     // Use the NonSortedNonUnique cached data.
     let equipment: &NonSortedNonUnique = match selection.equipment {
@@ -493,7 +493,7 @@ pub fn get_full_sorted_uniqued<'db>(
     selection: &Selection,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedSortedUnique<'db> {
-    let cache = opldb.get_static_cache();
+    let cache = opldb.get_cache();
 
     // First, try to use the constant-time cache.
     if selection.federation == FederationSelection::AllFederations

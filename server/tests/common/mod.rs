@@ -1,6 +1,6 @@
 //! Common code for database integration tests.
 
-use server::opldb::OplDb;
+use opldb::OplDb;
 
 use std::sync::Once;
 

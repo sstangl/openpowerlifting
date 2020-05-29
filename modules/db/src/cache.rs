@@ -25,15 +25,6 @@ use crate::{Entry, Lifter, Meet};
 pub struct NonSortedNonUnique(pub Vec<u32>);
 
 /// List of indices into the opldb.entries vector,
-/// in some sorted order, but with each lifter potentially
-/// occurring multiple times.
-///
-/// This is useful to get `O(n)` lookup, since it stores
-/// the filter/sort algorithm in an intermediate output,
-/// where further filtering and uniqueness can be applied.
-pub struct SortedNonUnique(pub Vec<u32>);
-
-/// List of indices into the opldb.entries vector,
 /// in some sorted order, with each lifter occurring at
 /// most once.
 ///
@@ -228,7 +219,7 @@ impl NonSortedNonUnique {
 }
 
 /// Owning structure of all precomputed data.
-pub struct StaticCache {
+pub(crate) struct StaticCache {
     // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
     pub linear_time: LinearTimeCache,
