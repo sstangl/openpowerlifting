@@ -56,7 +56,7 @@
     sex = "M"
 
 [weightclasses.old_subjunior_M]
-    classes = ["48","52","56","60","67.5","75","82.5","90","100","110","110+"]
+    classes = ["48","52","56","60","67.5","75","82.5","90","100","110","125","125+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
     divisions = ["Sub-Juniors"]
@@ -86,6 +86,7 @@
 
 [exemptions]
     9001 = ["ExemptDivision"]
+    0103 = ["ExemptWeightClassConsistency"] # Top SJ class is 110
     0207 = ["ExemptWeightClassConsistency"]
     0310 = ["ExemptWeightClassConsistency"]
     0804 = ["ExemptWeightClassConsistency"]
@@ -102,6 +103,7 @@
     0914 = ["ExemptWeightClassConsistency"] #Fewer weight classes
     0916 = ["ExemptWeightClassConsistency"] #Fewer weight classes
     0923 = ["ExemptWeightClassConsistency"] #Fewer weight classes
+    0931 = ["ExemptWeightClassConsistency"] #No men's 52
     1001 = ["ExemptWeightClassConsistency"]
     1002 = ["ExemptWeightClassConsistency"]
     1005 = ["ExemptWeightClassConsistency"] #Fewer weight classes
