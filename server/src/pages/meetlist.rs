@@ -1,13 +1,13 @@
 //! Logic for the page that lists meets.
 
+use opldb::selection::{FedPreference, FederationSelection, YearSelection};
+use opldb::{self, Meet, MetaFederation};
 use opltypes::*;
 
 use std::ffi::OsStr;
 use std::path;
 
 use crate::langpack::{self, Language, Locale};
-use crate::opldb::{self, Meet, MetaFederation};
-use crate::pages::selection::{FedPreference, FederationSelection, YearSelection};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///

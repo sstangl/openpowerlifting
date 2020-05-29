@@ -1,12 +1,12 @@
 //! Implements the /api/rankings endpoint, used for dynamic loading of the
 //! rankings table via AJAX calls. Not intended for external use.
 
+use opldb::selection::Selection;
+use opldb::{algorithms, OplDb};
 use opltypes::PointsSystem;
 
 use crate::langpack::Locale;
-use crate::opldb::{algorithms, OplDb};
 use crate::pages::jsdata::JsEntryRow;
-use crate::pages::selection::Selection;
 
 #[derive(Serialize)]
 pub struct RankingsSlice<'db> {

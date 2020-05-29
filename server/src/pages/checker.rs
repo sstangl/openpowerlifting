@@ -1,6 +1,6 @@
 //! Logic for the checker page.
 
-use crate::opldb::OplDb;
+use opldb::OplDb;
 
 use checker::{EntriesCheckResult, Meet, MeetCheckResult, Message};
 use std::error::Error;

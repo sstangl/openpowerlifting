@@ -4,6 +4,7 @@
 //! The openipf.org site works by using the same server as openpowerlifting.org,
 //! with Nginx rewriting URLs based on domain.
 
+use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
 use rocket::http::Cookies;
@@ -13,7 +14,6 @@ use rocket::State;
 use rocket_contrib::templates::Template;
 
 use server::langpack::{Language, Locale};
-use server::opldb::{self, Entry, MetaFederation};
 use server::pages;
 
 use std::path::PathBuf;
@@ -42,8 +42,8 @@ fn get_local_prefix(host: &Host) -> &'static str {
 /// Default selections used in the OpenIPF rankings.
 ///
 /// This information is also hardcoded in the rankings template.
-fn default_openipf_selection() -> pages::selection::Selection {
-    use pages::selection::*;
+fn default_openipf_selection() -> opldb::selection::Selection {
+    use opldb::selection::*;
     Selection {
         equipment: EquipmentSelection::Raw,
         federation: FederationSelection::Meta(MetaFederation::IPFAndAffiliates),
@@ -101,7 +101,7 @@ pub fn rankings(
     cookies: Cookies,
 ) -> Option<Template> {
     let default = default_openipf_selection();
-    let selection = pages::selection::Selection::from_path(&selections, &default).ok()?;
+    let selection = opldb::selection::Selection::from_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let mut cx =
         pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
@@ -127,7 +127,7 @@ pub fn rankings_api(
     let default = default_openipf_selection();
     let selection = match selections {
         None => default,
-        Some(path) => pages::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -176,7 +176,7 @@ pub fn search_rankings_api(
     let default = default_openipf_selection();
     let selection = match selections {
         None => default,
-        Some(path) => pages::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
     };
 
     let result =
@@ -208,7 +208,7 @@ pub fn records(
     let default = pages::records::RecordsSelection {
         equipment: default_rankings.equipment,
         federation: default_rankings.federation,
-        sex: pages::selection::SexSelection::Men,
+        sex: opldb::selection::SexSelection::Men,
         classkind: pages::records::ClassKindSelection::IPF,
         ageclass: default_rankings.ageclass,
         year: default_rankings.year,

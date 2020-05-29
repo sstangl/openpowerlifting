@@ -1,9 +1,9 @@
 //! Logic for the display of the rankings page.
 
+use opldb::selection::Selection;
+
 use crate::langpack::{self, Language};
-use crate::opldb;
 use crate::pages::api_rankings::get_slice;
-use crate::pages::selection::Selection;
 
 /// The context object passed to `templates/rankings.html.tera`.
 #[derive(Serialize)]

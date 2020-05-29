@@ -1,9 +1,8 @@
 //! Implements the /api/search endpoints.
 
+use opldb::selection::Selection;
+use opldb::{algorithms, OplDb};
 use usernames::*;
-
-use crate::opldb::{algorithms, OplDb};
-use crate::pages::selection::Selection;
 
 /// JSON return from the /api/search/rankings/ endpoint.
 #[derive(Serialize)]

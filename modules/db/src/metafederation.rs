@@ -4,7 +4,7 @@ use itertools::Itertools;
 use opltypes::*;
 use strum::IntoEnumIterator;
 
-use crate::opldb::{Entry, Meet};
+use crate::{Entry, Meet};
 
 /// Enum of MetaFederations. These are the entries in the federation selector
 /// that don't correspond neatly to just a single federation value.
@@ -13,9 +13,7 @@ use crate::opldb::{Entry, Meet};
 ///
 /// A MetaFederation may override handling of a Federation by sharing its
 /// to_string.
-#[derive(
-    Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString,
-)]
+#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString)]
 pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
     #[strum(to_string = "fully-tested")]
@@ -427,8 +425,7 @@ pub enum MetaFederation {
 #[inline]
 fn is_from(country: Country, entry: &Entry, meet: &Meet) -> bool {
     entry.lifter_country == Some(country)
-        || (entry.lifter_country == None
-            && meet.federation.home_country() == Some(country))
+        || (entry.lifter_country == None && meet.federation.home_country() == Some(country))
 }
 
 /// Helper macro for specifying a country-based federation that allows lifters
@@ -514,9 +511,7 @@ impl MetaFederation {
             MetaFederation::AllNetherlands => is_from(Country::Netherlands, entry, meet),
             MetaFederation::AllNewZealand => is_from(Country::NewZealand, entry, meet),
             MetaFederation::AllNorway => is_from(Country::Norway, entry, meet),
-            MetaFederation::AllPapuaNewGuinea => {
-                is_from(Country::PapuaNewGuinea, entry, meet)
-            }
+            MetaFederation::AllPapuaNewGuinea => is_from(Country::PapuaNewGuinea, entry, meet),
             MetaFederation::AllPhilippines => is_from(Country::Philippines, entry, meet),
             MetaFederation::AllPoland => is_from(Country::Poland, entry, meet),
             MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
@@ -556,9 +551,7 @@ impl MetaFederation {
             MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
             MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
-            MetaFederation::ABPU => {
-                entry.tested && MetaFederation::BPU.contains(entry, meets)
-            }
+            MetaFederation::ABPU => entry.tested && MetaFederation::BPU.contains(entry, meets),
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
             MetaFederation::APU => affiliation!(meet, entry, APU, IPF, ORPF),
@@ -590,25 +583,18 @@ impl MetaFederation {
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
                 Federation::BVDG | Federation::BVDK => {
-                    entry.lifter_country == None
-                        || entry.lifter_country == Some(Country::Germany)
+                    entry.lifter_country == None || entry.lifter_country == Some(Country::Germany)
                 }
-                Federation::IPF | Federation::EPF => {
-                    entry.lifter_country == Some(Country::Germany)
-                }
+                Federation::IPF | Federation::EPF => entry.lifter_country == Some(Country::Germany),
                 _ => false,
             },
             MetaFederation::CBLB => affiliation!(meet, entry, CBLB, IPF, FESUPO),
-            MetaFederation::CPU => {
-                affiliation!(meet, entry, CPU, IPF, NAPF, CommonwealthPF)
-            }
+            MetaFederation::CPU => affiliation!(meet, entry, CPU, IPF, NAPF, CommonwealthPF),
             MetaFederation::CSST => affiliation!(meet, entry, CSST, IPF, EPF),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
-            MetaFederation::FECAPOLIF => {
-                affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF)
-            }
+            MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
             MetaFederation::FFForce => affiliation!(meet, entry, FFForce, IPF, EPF),
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
@@ -628,8 +614,7 @@ impl MetaFederation {
                 }
             },
             MetaFederation::GPCWUAPCRO => {
-                (meet.federation == Federation::GPCWUAPCRO
-                    || meet.federation == Federation::HPO)
+                (meet.federation == Federation::GPCWUAPCRO || meet.federation == Federation::HPO)
                     && (entry.lifter_country == None
                         || entry.lifter_country == Some(Country::Croatia))
             }
@@ -683,12 +668,8 @@ impl MetaFederation {
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
-            MetaFederation::SAPF => {
-                affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF)
-            }
-            MetaFederation::ScottishPL => {
-                affiliation!(meet, entry, ScottishPL, IPF, EPF, BP)
-            }
+            MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
+            MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
             MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
@@ -753,8 +734,7 @@ impl MetaFederationCache {
         let mut last_meet_id = 0;
 
         // Iterate by grouping entries from the same Meet.
-        for (meet_id, meet_entries) in entries.iter().group_by(|e| e.meet_id).into_iter()
-        {
+        for (meet_id, meet_entries) in entries.iter().group_by(|e| e.meet_id).into_iter() {
             // Sanity checking that the entries argument is sorted by meet_id.
             assert!(last_meet_id <= meet_id);
             last_meet_id = meet_id;

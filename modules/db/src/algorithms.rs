@@ -3,12 +3,12 @@
 use opltypes::*;
 use std::cmp;
 
-use crate::opldb::static_cache::NonSortedNonUnique;
-use crate::opldb::static_cache::PossiblyOwnedNonSortedNonUnique;
-use crate::opldb::static_cache::PossiblyOwnedSortedUnique;
-use crate::opldb::static_cache::SortedUnique;
-use crate::opldb::{Entry, Meet, OplDb};
-use crate::pages::selection::*;
+use crate::selection::*;
+use crate::static_cache::NonSortedNonUnique;
+use crate::static_cache::PossiblyOwnedNonSortedNonUnique;
+use crate::static_cache::PossiblyOwnedSortedUnique;
+use crate::static_cache::SortedUnique;
+use crate::{Entry, Meet, OplDb};
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
 #[inline]
@@ -270,47 +270,45 @@ pub fn get_entry_indices_for<'db>(
     // Apply the Sex filter.
     cur = match selection.sex {
         SexSelection::AllSexes => cur,
-        SexSelection::Men => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.male),
-        ),
-        SexSelection::Women => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.female),
-        ),
+        SexSelection::Men => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.male))
+        }
+        SexSelection::Women => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.female))
+        }
     };
 
     // Apply the Year filter.
     cur = match selection.year {
         YearSelection::AllYears => cur,
-        YearSelection::Year2020 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2020),
-        ),
-        YearSelection::Year2019 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2019),
-        ),
-        YearSelection::Year2018 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2018),
-        ),
-        YearSelection::Year2017 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2017),
-        ),
-        YearSelection::Year2016 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2016),
-        ),
-        YearSelection::Year2015 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2015),
-        ),
-        YearSelection::Year2014 => PossiblyOwnedNonSortedNonUnique::Owned(
-            cur.intersect(&cache.log_linear_time.year2014),
-        ),
+        YearSelection::Year2020 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2020))
+        }
+        YearSelection::Year2019 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2019))
+        }
+        YearSelection::Year2018 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2018))
+        }
+        YearSelection::Year2017 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2017))
+        }
+        YearSelection::Year2016 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2016))
+        }
+        YearSelection::Year2015 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2015))
+        }
+        YearSelection::Year2014 => {
+            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2014))
+        }
         _ => {
             let year = selection.year.as_u32().unwrap(); // Safe if not AllYears.
             let filter = NonSortedNonUnique(
                 cur.0
                     .iter()
                     .filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).date.year()
-                            == year
-                        {
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
                             true => Some(i),
                             false => None,
                         }
@@ -326,12 +324,12 @@ pub fn get_entry_indices_for<'db>(
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
-                .filter_map(|&i| {
-                    match opldb.get_entry(i).lifter_state == selection.state {
+                .filter_map(
+                    |&i| match opldb.get_entry(i).lifter_state == selection.state {
                         true => Some(i),
                         false => None,
-                    }
-                })
+                    },
+                )
                 .collect(),
         );
         cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
@@ -344,8 +342,7 @@ pub fn get_entry_indices_for<'db>(
                 cur.0
                     .iter()
                     .filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed
-                        {
+                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed {
                             true => Some(i),
                             false => None,
                         }
@@ -558,27 +555,16 @@ pub fn get_full_sorted_uniqued<'db>(
 
     // TODO: Common out sort code with ConstantTimeCache::new()
     PossiblyOwnedSortedUnique::Owned(match selection.sort {
-        SortSelection::BySquat => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat)
-        }
-        SortSelection::ByBench => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench)
-        }
+        SortSelection::BySquat => cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat),
+        SortSelection::ByBench => cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench),
         SortSelection::ByDeadlift => {
             cur.sort_and_unique_by(&entries, &meets, cmp_deadlift, filter_deadlift)
         }
-        SortSelection::ByTotal => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total)
+        SortSelection::ByTotal => cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total),
+        SortSelection::ByDots => cur.sort_and_unique_by(&entries, &meets, cmp_dots, filter_dots),
+        SortSelection::ByGlossbrenner => {
+            cur.sort_and_unique_by(&entries, &meets, cmp_glossbrenner, filter_glossbrenner)
         }
-        SortSelection::ByDots => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_dots, filter_dots)
-        }
-        SortSelection::ByGlossbrenner => cur.sort_and_unique_by(
-            &entries,
-            &meets,
-            cmp_glossbrenner,
-            filter_glossbrenner,
-        ),
         SortSelection::ByGoodlift => {
             cur.sort_and_unique_by(&entries, &meets, cmp_goodlift, filter_goodlift)
         }
@@ -588,8 +574,6 @@ pub fn get_full_sorted_uniqued<'db>(
         SortSelection::ByMcCulloch => {
             cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
         }
-        SortSelection::ByWilks => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks)
-        }
+        SortSelection::ByWilks => cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks),
     })
 }

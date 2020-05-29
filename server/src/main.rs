@@ -40,7 +40,6 @@ use std::time;
 
 extern crate server;
 use server::langpack::{self, LangInfo, Language, Locale};
-use server::opldb;
 use server::pages;
 
 /// A file served from /static.
@@ -112,9 +111,9 @@ fn rankings(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let defaults = pages::selection::Selection::default();
+    let defaults = opldb::selection::Selection::default();
     let selection =
-        pages::selection::Selection::from_path(&selections, &defaults).ok()?;
+        opldb::selection::Selection::from_path(&selections, &defaults).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx =
         pages::rankings::Context::new(&opldb, &locale, &selection, &defaults, false)?;
@@ -151,7 +150,7 @@ fn records(
         &opldb,
         &locale,
         &selection,
-        &pages::selection::Selection::default(),
+        &opldb::selection::Selection::default(),
     );
 
     Some(match device {
@@ -217,7 +216,7 @@ fn lifter(
                 &opldb,
                 &locale,
                 lifter_ids[0],
-                opltypes::PointsSystem::from(pages::selection::Selection::default().sort),
+                opltypes::PointsSystem::from(opldb::selection::Selection::default().sort),
                 None,
             );
             Some(Ok(match device {
@@ -233,7 +232,7 @@ fn lifter(
             let cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
-                opltypes::PointsSystem::from(pages::selection::Selection::default().sort),
+                opltypes::PointsSystem::from(opldb::selection::Selection::default().sort),
                 &username,
                 &lifter_ids,
             );
@@ -430,7 +429,7 @@ fn index(
     }
 
     // Otherwise, render the main rankings template.
-    let defaults = pages::selection::Selection::default();
+    let defaults = opldb::selection::Selection::default();
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx = pages::rankings::Context::new(&opldb, &locale, &defaults, &defaults, false);
 
@@ -448,10 +447,10 @@ fn rankings_api(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
-    let defaults = pages::selection::Selection::default();
+    let defaults = opldb::selection::Selection::default();
     let selection = match selections {
         None => defaults,
-        Some(path) => pages::selection::Selection::from_path(&path, &defaults).ok()?,
+        Some(path) => opldb::selection::Selection::from_path(&path, &defaults).ok()?,
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -488,10 +487,10 @@ fn search_rankings_api(
     query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
-    let default = pages::selection::Selection::default();
+    let default = opldb::selection::Selection::default();
     let selection = match selections {
         None => default,
-        Some(path) => pages::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
     };
 
     let result =

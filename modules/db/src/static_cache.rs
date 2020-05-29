@@ -7,8 +7,8 @@ use std::cmp::Ordering;
 use std::collections::HashMap;
 use std::ops::Deref;
 
-use crate::opldb::algorithms::*;
-use crate::opldb::{Entry, Lifter, Meet};
+use crate::algorithms::*;
+use crate::{Entry, Lifter, Meet};
 
 /// List of indices into the opldb.entries vector,
 /// in no particular order, but such that entries from the same
@@ -200,9 +200,7 @@ impl NonSortedNonUnique {
             // `min_by()` takes the best entry due to comparator ordering.
             .map(|(_key, group)| {
                 *group
-                    .min_by(|&a, &b| {
-                        compare(meets, &entries[*a as usize], &entries[*b as usize])
-                    })
+                    .min_by(|&a, &b| compare(meets, &entries[*a as usize], &entries[*b as usize]))
                     .unwrap()
             })
             .collect();
@@ -309,30 +307,14 @@ pub struct ConstantTimeCache {
 }
 
 impl ConstantTimeCache {
-    pub fn new(
-        loglin: &LogLinearTimeCache,
-        mv: &[Meet],
-        ev: &[Entry],
-    ) -> ConstantTimeCache {
+    pub fn new(loglin: &LogLinearTimeCache, mv: &[Meet], ev: &[Entry]) -> ConstantTimeCache {
         ConstantTimeCache {
             squat: ConstantTimeBy::new(loglin, mv, ev, &cmp_squat, &filter_squat),
             bench: ConstantTimeBy::new(loglin, mv, ev, &cmp_bench, &filter_bench),
-            deadlift: ConstantTimeBy::new(
-                loglin,
-                mv,
-                ev,
-                &cmp_deadlift,
-                &filter_deadlift,
-            ),
+            deadlift: ConstantTimeBy::new(loglin, mv, ev, &cmp_deadlift, &filter_deadlift),
             total: ConstantTimeBy::new(loglin, mv, ev, &cmp_total, &filter_total),
             wilks: ConstantTimeBy::new(loglin, mv, ev, &cmp_wilks, &filter_wilks),
-            mcculloch: ConstantTimeBy::new(
-                loglin,
-                mv,
-                ev,
-                &cmp_mcculloch,
-                &filter_mcculloch,
-            ),
+            mcculloch: ConstantTimeBy::new(loglin, mv, ev, &cmp_mcculloch, &filter_mcculloch),
             glossbrenner: ConstantTimeBy::new(
                 loglin,
                 mv,
@@ -340,20 +322,8 @@ impl ConstantTimeCache {
                 &cmp_glossbrenner,
                 &filter_glossbrenner,
             ),
-            goodlift: ConstantTimeBy::new(
-                loglin,
-                mv,
-                ev,
-                &cmp_goodlift,
-                &filter_goodlift,
-            ),
-            ipfpoints: ConstantTimeBy::new(
-                loglin,
-                mv,
-                ev,
-                &cmp_ipfpoints,
-                &filter_ipfpoints,
-            ),
+            goodlift: ConstantTimeBy::new(loglin, mv, ev, &cmp_goodlift, &filter_goodlift),
+            ipfpoints: ConstantTimeBy::new(loglin, mv, ev, &cmp_ipfpoints, &filter_ipfpoints),
             dots: ConstantTimeBy::new(loglin, mv, ev, &cmp_dots, &filter_dots),
         }
     }

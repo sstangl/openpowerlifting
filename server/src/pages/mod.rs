@@ -2,7 +2,6 @@
 
 // Common objects.
 pub mod jsdata;
-pub mod selection;
 
 // Template context providers.
 pub mod contact;

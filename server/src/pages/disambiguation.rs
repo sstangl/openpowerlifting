@@ -6,7 +6,6 @@
 use opltypes::*;
 
 use crate::langpack::{self, get_localized_name, Language, Locale};
-use crate::opldb;
 use crate::pages::lifter::MeetResultsRow;
 use crate::pages::meet::points_column_title;
 

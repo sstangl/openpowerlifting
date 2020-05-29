@@ -1,7 +1,6 @@
 //! Implementation of server functionality.
 
 // External dependencies.
-extern crate csv;
 extern crate itertools;
 extern crate serde;
 #[macro_use]
@@ -19,5 +18,4 @@ extern crate usernames;
 
 // Exported modules.
 pub mod langpack;
-pub mod opldb;
 pub mod pages;

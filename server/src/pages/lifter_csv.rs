@@ -1,10 +1,9 @@
 //! CSV data export for the Lifter page.
 
-use std::error;
-
+use opldb::{self, Entry, Lifter, Meet};
 use opltypes::*;
 
-use crate::opldb::{self, Entry, Lifter, Meet};
+use std::error;
 
 fn make_export_row<'a>(
     lifter: &'a Lifter,

@@ -1,8 +1,13 @@
-//! An in-memory data store for OpenPowerlifting data.
+//! The OpenPowerlifting in-memory database.
 //!
 //! Because our data is read-only at runtime, we can lay out data structures
 //! better than a "real" database like SQLite3 or PostgreSQL. Additionally,
 //! by storing all the data in formats native to Rust, we avoid copy overhead.
+
+#[macro_use]
+extern crate serde_derive;
+#[macro_use]
+extern crate strum_macros;
 
 use itertools::Itertools;
 use opltypes::states::*;
@@ -14,11 +19,12 @@ use std::mem;
 // Exports.
 pub mod algorithms;
 mod metafederation;
-pub use self::metafederation::*;
+pub use metafederation::*;
+pub mod selection;
 mod static_cache;
-pub use self::static_cache::*;
+pub use static_cache::*;
 mod yesno;
-pub use self::yesno::deserialize_yes_no;
+pub use yesno::deserialize_yes_no;
 
 /// The definition of a Lifter in the database.
 #[derive(Serialize, Deserialize)]

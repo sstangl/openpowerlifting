@@ -8,7 +8,6 @@ use rocket::Outcome;
 use opltypes::WeightUnits;
 
 use server::langpack::{self, LangInfo, Language, Locale};
-use server::opldb;
 
 // Use a single static database when testing.
 #[cfg(not(test))]
