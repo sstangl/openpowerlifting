@@ -1,15 +1,9 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
-extern crate accept_language;
-extern crate dotenv;
-extern crate opltypes;
 use opltypes::{Federation, WeightUnits};
+
 #[macro_use]
 extern crate rocket;
-extern crate rocket_contrib;
-extern crate serde;
-extern crate serde_json;
-extern crate strum;
 
 // Distributions, like OpenIPF.
 mod dist;
