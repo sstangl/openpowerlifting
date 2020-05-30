@@ -407,6 +407,20 @@ impl LogLinearTimeCache {
             }),
         }
     }
+
+    /// Looks up a year cache by integer.
+    pub fn get_year_cache(&self, year: u32) -> Option<&NonSortedNonUnique> {
+        match year {
+            2020 => Some(&self.year2020),
+            2019 => Some(&self.year2019),
+            2018 => Some(&self.year2018),
+            2017 => Some(&self.year2017),
+            2016 => Some(&self.year2016),
+            2015 => Some(&self.year2015),
+            2014 => Some(&self.year2014),
+            _ => None,
+        }
+    }
 }
 
 #[cfg(test)]

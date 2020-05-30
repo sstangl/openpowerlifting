@@ -281,41 +281,24 @@ pub fn get_entry_indices_for<'db>(
     // Apply the Year filter.
     cur = match selection.year {
         YearSelection::AllYears => cur,
-        YearSelection::Year2020 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2020))
-        }
-        YearSelection::Year2019 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2019))
-        }
-        YearSelection::Year2018 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2018))
-        }
-        YearSelection::Year2017 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2017))
-        }
-        YearSelection::Year2016 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2016))
-        }
-        YearSelection::Year2015 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2015))
-        }
-        YearSelection::Year2014 => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.year2014))
-        }
-        _ => {
-            let year = selection.year.as_u32().unwrap(); // Safe if not AllYears.
-            let filter = NonSortedNonUnique(
-                cur.0
-                    .iter()
-                    .filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
-                            true => Some(i),
-                            false => None,
-                        }
-                    })
-                    .collect(),
-            );
-            PossiblyOwnedNonSortedNonUnique::Owned(filter)
+        YearSelection::OneYear(year) => {
+            if let Some(year_cache) = cache.log_linear_time.get_year_cache(year as u32) {
+                PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(year_cache))
+            } else {
+                let year = year as u32;
+                let filter = NonSortedNonUnique(
+                    cur.0
+                        .iter()
+                        .filter_map(|&i| {
+                            match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
+                                true => Some(i),
+                                false => None,
+                            }
+                        })
+                        .collect(),
+                );
+                PossiblyOwnedNonSortedNonUnique::Owned(filter)
+            }
         }
     };
 
