@@ -53,12 +53,23 @@ def getmeetinfo(soup):
     fed = fed[fed.find("(")+1:fed.find(")")]
 
     # Correct fed names to the form that we use
-    if fed in ['RPF', 'SPPF', 'MPF']:
+    if fed in ['RPF', 'SPPF', 'MPF', 'FPVO', 'FPIO', 'FPYNAO']:
         fed = 'FPR'
     elif fed in ['UPF']:
         fed = 'UkrainePF'
     elif fed == 'ROP':
         fed = 'RPU'
+
+    # A list of Russian cities and their states as a timesaver
+
+    state_dict = {'Izhevsk': 'UD', 'St. Petersburg,': 'LEN', 'Khanty-Mansiysk': 'KHM',
+                  'Sochi': 'KDA', 'Blagoveshchensk': 'AMU', 'Moscow': 'MOW',
+                  'Belogorsk': 'AMU', 'Cherepovets ': 'VLG', 'Perm': 'PER',
+                  'Kostroma': 'KOS', 'Samara': 'SAM', 'Zelenogorsk': 'LEN',
+                  'Berdsk': 'NVS', 'Vologda': 'VLG', 'Irkutsk': 'IRK',
+                  'Noyabrsk': 'YAN'}
+
+    town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling()
@@ -73,6 +84,13 @@ def getmeetinfo(soup):
     else:
         country = venue
         town = ''
+
+    if town in town_aliases:
+        town = town_aliases[town]
+
+    state = ''
+    if town in state_dict:
+        state = state_dict[town]
 
     # Get the date.
     daterow = venuerow.find_next_sibling()
@@ -100,8 +118,6 @@ def getmeetinfo(soup):
     if len(h1) != 1:
         error("Couldn't find the competition name.")
     name = h1.text.replace(';', '').replace(',', '')
-
-    state = ''
 
     row = [fed, date, country, state, town, name]
     for i, r in enumerate(row):

@@ -665,7 +665,7 @@ pub enum RomaniaState {
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum RussiaState {
     AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
-    SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRO, STA, ZAB, AMU, ARK,
+    SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRI, STA, ZAB, AMU, ARK,
     AST, BEL, BRY, CHE, IRK, IVA, KGD, KLU, KEM, KIR, KOS, KGN, KRS, LEN,
     LIP, MAG, MOS, MUR, NIZ, NGR, NVS, OMS, ORE, ORL, PNZ, PSK, ROS, RYA, 
     SAK, SAM, SAR, SMO, SVE, TAM, TOM, TUL, TVE, TYE, TYU, ULY, VLA, VGG,
