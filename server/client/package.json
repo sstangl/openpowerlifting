@@ -22,8 +22,8 @@
     "slickgrid": "^2.4.24"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
     "@types/slickgrid": "^2.1.30",
     "babel-loader": "^8.1.0",
     "node-sass": "^4.14.1",
