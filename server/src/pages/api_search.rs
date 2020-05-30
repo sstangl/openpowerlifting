@@ -1,6 +1,6 @@
 //! Implements the /api/search endpoints.
 
-use opldb::selection::Selection;
+use opldb::query::direct::RankingsQuery;
 use opldb::{algorithms, OplDb};
 use usernames::*;
 
@@ -21,7 +21,7 @@ impl SearchRankingsResult {
 
 pub fn search_rankings<'db>(
     opldb: &'db OplDb,
-    selection: &Selection,
+    selection: &RankingsQuery,
     start_row: usize, // Inclusive.
     query: &str,
 ) -> SearchRankingsResult {

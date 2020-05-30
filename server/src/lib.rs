@@ -9,3 +9,6 @@ extern crate strum_macros;
 // Exported modules.
 pub mod langpack;
 pub mod pages;
+
+mod query_parser;
+pub use query_parser::*;

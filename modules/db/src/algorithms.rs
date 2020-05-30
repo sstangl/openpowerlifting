@@ -7,7 +7,7 @@ use crate::cache::NonSortedNonUnique;
 use crate::cache::PossiblyOwnedNonSortedNonUnique;
 use crate::cache::PossiblyOwnedSortedUnique;
 use crate::cache::SortedUnique;
-use crate::selection::*;
+use crate::query::direct::*;
 use crate::{Entry, Meet, OplDb};
 
 /// Whether an `Entry` should be part of `BySquat` rankings and records.
@@ -252,36 +252,36 @@ pub fn cmp_ah(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Gets a list of all entry indices matching the given selection.
 pub fn get_entry_indices_for<'db>(
-    selection: &Selection,
+    selection: &EntryFilter,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedNonSortedNonUnique<'db> {
     let cache = opldb.get_cache();
 
     // Use the NonSortedNonUnique cached data.
     let equipment: &NonSortedNonUnique = match selection.equipment {
-        EquipmentSelection::Raw => &cache.log_linear_time.raw,
-        EquipmentSelection::Wraps => &cache.log_linear_time.wraps,
-        EquipmentSelection::RawAndWraps => &cache.log_linear_time.raw_wraps,
-        EquipmentSelection::Single => &cache.log_linear_time.single,
-        EquipmentSelection::Multi => &cache.log_linear_time.multi,
+        EquipmentFilter::Raw => &cache.log_linear_time.raw,
+        EquipmentFilter::Wraps => &cache.log_linear_time.wraps,
+        EquipmentFilter::RawAndWraps => &cache.log_linear_time.raw_wraps,
+        EquipmentFilter::Single => &cache.log_linear_time.single,
+        EquipmentFilter::Multi => &cache.log_linear_time.multi,
     };
     let mut cur = PossiblyOwnedNonSortedNonUnique::Borrowed(equipment);
 
     // Apply the Sex filter.
     cur = match selection.sex {
-        SexSelection::AllSexes => cur,
-        SexSelection::Men => {
+        SexFilter::AllSexes => cur,
+        SexFilter::Men => {
             PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.male))
         }
-        SexSelection::Women => {
+        SexFilter::Women => {
             PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.female))
         }
     };
 
     // Apply the Year filter.
     cur = match selection.year {
-        YearSelection::AllYears => cur,
-        YearSelection::OneYear(year) => {
+        YearFilter::AllYears => cur,
+        YearFilter::OneYear(year) => {
             if let Some(year_cache) = cache.log_linear_time.get_year_cache(year as u32) {
                 PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(year_cache))
             } else {
@@ -319,8 +319,8 @@ pub fn get_entry_indices_for<'db>(
     }
 
     // Filter by federation manually.
-    if selection.federation != FederationSelection::AllFederations {
-        if let FederationSelection::One(fed) = selection.federation {
+    if selection.federation != FederationFilter::AllFederations {
+        if let FederationFilter::One(fed) = selection.federation {
             let filter = NonSortedNonUnique(
                 cur.0
                     .iter()
@@ -333,7 +333,7 @@ pub fn get_entry_indices_for<'db>(
                     .collect(),
             );
             cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
-        } else if let FederationSelection::Meta(metafed) = selection.federation {
+        } else if let FederationFilter::Meta(metafed) = selection.federation {
             let meets = opldb.get_meets();
             let filter = NonSortedNonUnique(
                 cur.0
@@ -349,13 +349,13 @@ pub fn get_entry_indices_for<'db>(
     }
 
     // Filter by AgeClass manually.
-    if selection.ageclass != AgeClassSelection::AllAges {
+    if selection.ageclass != AgeClassFilter::AllAges {
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
                 .filter_map(|&i| {
                     use AgeClass::*;
-                    use AgeClassSelection::*;
+                    use AgeClassFilter::*;
 
                     let class = opldb.get_entry(i).ageclass;
                     let byclass = opldb.get_entry(i).birthyearclass;
@@ -407,19 +407,19 @@ pub fn get_entry_indices_for<'db>(
     }
 
     // Filter by event manually.
-    if selection.event != EventSelection::AllEvents {
+    if selection.event != EventFilter::AllEvents {
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
                 .filter_map(|&i| {
                     let ev = opldb.get_entry(i).event;
                     let matches: bool = match selection.event {
-                        EventSelection::AllEvents => true,
-                        EventSelection::FullPower => ev.is_full_power(),
-                        EventSelection::PushPull => ev.is_push_pull(),
-                        EventSelection::SquatOnly => ev.is_squat_only(),
-                        EventSelection::BenchOnly => ev.is_bench_only(),
-                        EventSelection::DeadliftOnly => ev.is_deadlift_only(),
+                        EventFilter::AllEvents => true,
+                        EventFilter::FullPower => ev.is_full_power(),
+                        EventFilter::PushPull => ev.is_push_pull(),
+                        EventFilter::SquatOnly => ev.is_squat_only(),
+                        EventFilter::BenchOnly => ev.is_bench_only(),
+                        EventFilter::DeadliftOnly => ev.is_deadlift_only(),
                     };
                     if matches {
                         Some(i)
@@ -434,7 +434,7 @@ pub fn get_entry_indices_for<'db>(
     }
 
     // Filter by weight class manually.
-    if selection.weightclasses != WeightClassSelection::AllClasses {
+    if selection.weightclasses != WeightClassFilter::AllClasses {
         let (lower, upper) = selection.weightclasses.to_bounds();
 
         let filter = NonSortedNonUnique(
@@ -473,51 +473,51 @@ pub fn get_entry_indices_for<'db>(
 /// In almost every case it's not necessary to generate the full list,
 /// but doing so can be useful for debugging.
 pub fn get_full_sorted_uniqued<'db>(
-    selection: &Selection,
+    query: &RankingsQuery,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedSortedUnique<'db> {
     let cache = opldb.get_cache();
 
     // First, try to use the constant-time cache.
-    if selection.federation == FederationSelection::AllFederations
-        && selection.weightclasses == WeightClassSelection::AllClasses
-        && selection.year == YearSelection::AllYears
-        && selection.ageclass == AgeClassSelection::AllAges
-        && selection.event == EventSelection::AllEvents
-        && selection.state.is_none()
+    if query.filter.federation == FederationFilter::AllFederations
+        && query.filter.weightclasses == WeightClassFilter::AllClasses
+        && query.filter.year == YearFilter::AllYears
+        && query.filter.ageclass == AgeClassFilter::AllAges
+        && query.filter.event == EventFilter::AllEvents
+        && query.filter.state.is_none()
     {
-        let by_sort = match selection.sort {
-            SortSelection::BySquat => &cache.constant_time.squat,
-            SortSelection::ByBench => &cache.constant_time.bench,
-            SortSelection::ByDeadlift => &cache.constant_time.deadlift,
-            SortSelection::ByTotal => &cache.constant_time.total,
-            SortSelection::ByDots => &cache.constant_time.dots,
-            SortSelection::ByGlossbrenner => &cache.constant_time.glossbrenner,
-            SortSelection::ByGoodlift => &cache.constant_time.goodlift,
-            SortSelection::ByIPFPoints => &cache.constant_time.ipfpoints,
-            SortSelection::ByMcCulloch => &cache.constant_time.mcculloch,
-            SortSelection::ByWilks => &cache.constant_time.wilks,
+        let by_sort = match query.order_by {
+            OrderBy::Squat => &cache.constant_time.squat,
+            OrderBy::Bench => &cache.constant_time.bench,
+            OrderBy::Deadlift => &cache.constant_time.deadlift,
+            OrderBy::Total => &cache.constant_time.total,
+            OrderBy::Dots => &cache.constant_time.dots,
+            OrderBy::Glossbrenner => &cache.constant_time.glossbrenner,
+            OrderBy::Goodlift => &cache.constant_time.goodlift,
+            OrderBy::IPFPoints => &cache.constant_time.ipfpoints,
+            OrderBy::McCulloch => &cache.constant_time.mcculloch,
+            OrderBy::Wilks => &cache.constant_time.wilks,
         };
 
-        let sorted_uniqued = match selection.equipment {
-            EquipmentSelection::Raw => &by_sort.raw,
-            EquipmentSelection::Wraps => &by_sort.wraps,
-            EquipmentSelection::RawAndWraps => &by_sort.raw_wraps,
-            EquipmentSelection::Single => &by_sort.single,
-            EquipmentSelection::Multi => &by_sort.multi,
+        let sorted_uniqued = match query.filter.equipment {
+            EquipmentFilter::Raw => &by_sort.raw,
+            EquipmentFilter::Wraps => &by_sort.wraps,
+            EquipmentFilter::RawAndWraps => &by_sort.raw_wraps,
+            EquipmentFilter::Single => &by_sort.single,
+            EquipmentFilter::Multi => &by_sort.multi,
         };
 
         // Since each lifter is only one sex, sex selections
         // can just be an O(n) filter.
-        if selection.sex != SexSelection::AllSexes {
+        if query.filter.sex != SexFilter::AllSexes {
             return PossiblyOwnedSortedUnique::Owned(SortedUnique(
                 sorted_uniqued
                     .0
                     .iter()
                     .filter_map(|&n| {
                         let sex = opldb.get_entry(n).sex;
-                        match (selection.sex == SexSelection::Men && sex == Sex::M)
-                            || (selection.sex == SexSelection::Women && sex == Sex::F)
+                        match (query.filter.sex == SexFilter::Men && sex == Sex::M)
+                            || (query.filter.sex == SexFilter::Women && sex == Sex::F)
                         {
                             true => Some(n),
                             false => None,
@@ -531,32 +531,32 @@ pub fn get_full_sorted_uniqued<'db>(
     }
 
     // If the ConstantTime cache fails, use the NonSortedNonUnique cache data.
-    let cur = get_entry_indices_for(selection, opldb);
+    let cur = get_entry_indices_for(&query.filter, opldb);
 
     let entries = opldb.get_entries();
     let meets = opldb.get_meets();
 
     // TODO: Common out sort code with ConstantTimeCache::new()
-    PossiblyOwnedSortedUnique::Owned(match selection.sort {
-        SortSelection::BySquat => cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat),
-        SortSelection::ByBench => cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench),
-        SortSelection::ByDeadlift => {
+    PossiblyOwnedSortedUnique::Owned(match query.order_by {
+        OrderBy::Squat => cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat),
+        OrderBy::Bench => cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench),
+        OrderBy::Deadlift => {
             cur.sort_and_unique_by(&entries, &meets, cmp_deadlift, filter_deadlift)
         }
-        SortSelection::ByTotal => cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total),
-        SortSelection::ByDots => cur.sort_and_unique_by(&entries, &meets, cmp_dots, filter_dots),
-        SortSelection::ByGlossbrenner => {
+        OrderBy::Total => cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total),
+        OrderBy::Dots => cur.sort_and_unique_by(&entries, &meets, cmp_dots, filter_dots),
+        OrderBy::Glossbrenner => {
             cur.sort_and_unique_by(&entries, &meets, cmp_glossbrenner, filter_glossbrenner)
         }
-        SortSelection::ByGoodlift => {
+        OrderBy::Goodlift => {
             cur.sort_and_unique_by(&entries, &meets, cmp_goodlift, filter_goodlift)
         }
-        SortSelection::ByIPFPoints => {
+        OrderBy::IPFPoints => {
             cur.sort_and_unique_by(&entries, &meets, cmp_ipfpoints, filter_ipfpoints)
         }
-        SortSelection::ByMcCulloch => {
+        OrderBy::McCulloch => {
             cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
         }
-        SortSelection::ByWilks => cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks),
+        OrderBy::Wilks => cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks),
     })
 }

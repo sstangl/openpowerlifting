@@ -1,7 +1,7 @@
 //! Implements the /api/rankings endpoint, used for dynamic loading of the
 //! rankings table via AJAX calls. Not intended for external use.
 
-use opldb::selection::Selection;
+use opldb::query::direct::RankingsQuery;
 use opldb::{algorithms, OplDb};
 use opltypes::PointsSystem;
 
@@ -19,8 +19,8 @@ pub struct RankingsSlice<'db> {
 pub fn get_slice<'db>(
     opldb: &'db OplDb,
     locale: &'db Locale,
-    selection: &Selection,
-    defaults: &Selection,
+    selection: &RankingsQuery,
+    defaults: &RankingsQuery,
     start_row: usize, // Inclusive.
     end_row: usize,   // Inclusive. Can be out-of-bounds.
 ) -> RankingsSlice<'db> {
@@ -53,11 +53,11 @@ pub fn get_slice<'db>(
     }
 
     // Figure out the points system to be used.
-    let points_system = if selection.sort.is_by_points() {
-        PointsSystem::from(selection.sort)
+    let points_system = if selection.order_by.is_by_points() {
+        PointsSystem::from(selection.order_by)
     } else {
         // The selection is by-weight, so get the points from the default.
-        PointsSystem::from(defaults.sort)
+        PointsSystem::from(defaults.order_by)
     };
 
     let rows: Vec<JsEntryRow> = list.0[start_row..(end_row + 1)]

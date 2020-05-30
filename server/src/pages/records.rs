@@ -1,6 +1,6 @@
 //! Logic for the display of the records page, like a rankings summary.
 
-use opldb::selection::*;
+use opldb::query::direct::*;
 use opldb::{algorithms, Entry, Lifter, Meet, OplDb};
 
 use opltypes::states::*;
@@ -15,46 +15,49 @@ use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber
 
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(Copy, Clone, PartialEq, Serialize)]
-pub struct RecordsSelection {
-    pub equipment: EquipmentSelection,
-    pub federation: FederationSelection,
-    pub sex: SexSelection,
-    pub classkind: ClassKindSelection,
-    pub ageclass: AgeClassSelection,
-    pub year: YearSelection,
+pub struct RecordsQuery {
+    pub equipment: EquipmentFilter,
+    pub federation: FederationFilter,
+    pub sex: SexFilter,
+    pub classkind: ClassKind,
+    pub ageclass: AgeClassFilter,
+    pub year: YearFilter,
     pub state: Option<State>,
 }
 
-impl Default for RecordsSelection {
-    fn default() -> RecordsSelection {
-        RecordsSelection {
-            equipment: EquipmentSelection::RawAndWraps,
-            federation: FederationSelection::AllFederations,
-            sex: SexSelection::Men,
-            classkind: ClassKindSelection::Traditional,
-            ageclass: AgeClassSelection::AllAges,
-            year: YearSelection::AllYears,
+impl Default for RecordsQuery {
+    fn default() -> RecordsQuery {
+        RecordsQuery {
+            equipment: EquipmentFilter::RawAndWraps,
+            federation: FederationFilter::AllFederations,
+            sex: SexFilter::Men,
+            classkind: ClassKind::Traditional,
+            ageclass: AgeClassFilter::AllAges,
+            year: YearFilter::AllYears,
             state: None,
         }
     }
 }
 
-impl RecordsSelection {
-    /// Converts a RecordSelection to a Selection.
-    pub fn to_full_selection(&self, default: &Selection) -> Selection {
-        Selection {
-            equipment: self.equipment,
-            federation: self.federation,
-            sex: self.sex,
-            ageclass: self.ageclass,
-            year: self.year,
-            state: self.state,
+impl RecordsQuery {
+    /// Converts a RecordQuery to a RankingsQuery.
+    pub fn to_full_selection(&self, default: &RankingsQuery) -> RankingsQuery {
+        RankingsQuery {
+            filter: EntryFilter {
+                equipment: self.equipment,
+                federation: self.federation,
+                sex: self.sex,
+                ageclass: self.ageclass,
+                year: self.year,
+                state: self.state,
+                ..default.filter
+            },
             ..*default
         }
     }
 
-    /// Translates a URL path to a RecordSelection.
-    pub fn from_path(p: &path::Path, default: &RecordsSelection) -> Result<Self, ()> {
+    /// Translates a URL path to a RecordQuery.
+    pub fn from_path(p: &path::Path, default: &RecordsQuery) -> Result<Self, ()> {
         let mut ret = *default;
 
         // Disallow empty path components.
@@ -83,14 +86,14 @@ impl RecordsSelection {
             .filter_map(|a| a.file_name().and_then(OsStr::to_str))
         {
             // Check whether this is equipment information.
-            if let Ok(e) = segment.parse::<EquipmentSelection>() {
+            if let Ok(e) = segment.parse::<EquipmentFilter>() {
                 if parsed_equipment {
                     return Err(());
                 }
                 ret.equipment = e;
                 parsed_equipment = true;
             // Check whether this is federation information.
-            } else if let Ok(f) = FederationSelection::from_str_preferring(
+            } else if let Ok(f) = FederationFilter::from_str_preferring(
                 segment,
                 FedPreference::PreferMetaFederation,
             ) {
@@ -100,28 +103,28 @@ impl RecordsSelection {
                 ret.federation = f;
                 parsed_federation = true;
             // Check whether this is sex information.
-            } else if let Ok(s) = segment.parse::<SexSelection>() {
+            } else if let Ok(s) = segment.parse::<SexFilter>() {
                 if parsed_sex {
                     return Err(());
                 }
                 ret.sex = s;
                 parsed_sex = true;
             // Check whether this is class kind information.
-            } else if let Ok(k) = segment.parse::<ClassKindSelection>() {
+            } else if let Ok(k) = segment.parse::<ClassKind>() {
                 if parsed_classkind {
                     return Err(());
                 }
                 ret.classkind = k;
                 parsed_classkind = true;
             // Check whether this is age class information.
-            } else if let Ok(c) = segment.parse::<AgeClassSelection>() {
+            } else if let Ok(c) = segment.parse::<AgeClassFilter>() {
                 if parsed_ageclass {
                     return Err(());
                 }
                 ret.ageclass = c;
                 parsed_ageclass = true;
             // Check whether this is year information.
-            } else if let Ok(y) = segment.parse::<YearSelection>() {
+            } else if let Ok(y) = segment.parse::<YearFilter>() {
                 if parsed_year {
                     return Err(());
                 }
@@ -146,22 +149,22 @@ impl RecordsSelection {
 /// Selects what kind of weight classes to use, as opposed to which specific
 /// class.
 #[derive(Copy, Clone, PartialEq, Serialize)]
-pub enum ClassKindSelection {
+pub enum ClassKind {
     Traditional,
     IPF,
     Para,
     WP,
 }
 
-impl FromStr for ClassKindSelection {
+impl FromStr for ClassKind {
     type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             // No parsing for Traditional: it's the default.
-            "ipf-classes" => Ok(ClassKindSelection::IPF),
-            "para-classes" => Ok(ClassKindSelection::Para),
-            "wp-classes" => Ok(ClassKindSelection::WP),
+            "ipf-classes" => Ok(ClassKind::IPF),
+            "para-classes" => Ok(ClassKind::Para),
+            "wp-classes" => Ok(ClassKind::WP),
             _ => Err(()),
         }
     }
@@ -176,7 +179,7 @@ pub struct Context<'db> {
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: WeightUnits,
-    pub selection: RecordsSelection,
+    pub selection: RecordsQuery,
     pub tables: Vec<Table<'db>>,
 }
 
@@ -344,125 +347,125 @@ impl<'db> RecordCollector<'db> {
 }
 
 fn make_collectors<'db>(
-    sex: SexSelection,
-    classkind: ClassKindSelection,
+    sex: SexFilter,
+    classkind: ClassKind,
 ) -> Vec<RecordCollector<'db>> {
     let classes = match classkind {
         // Traditional classes.
-        ClassKindSelection::Traditional => {
-            if sex == SexSelection::Men {
+        ClassKind::Traditional => {
+            if sex == SexFilter::Men {
                 vec![
-                    WeightClassSelection::T52,
-                    WeightClassSelection::T56,
-                    WeightClassSelection::T60,
-                    WeightClassSelection::T67_5,
-                    WeightClassSelection::T75,
-                    WeightClassSelection::T82_5,
-                    WeightClassSelection::T90,
-                    WeightClassSelection::T100,
-                    WeightClassSelection::T110,
-                    WeightClassSelection::T125,
-                    WeightClassSelection::T140,
-                    WeightClassSelection::TOver140,
+                    WeightClassFilter::T52,
+                    WeightClassFilter::T56,
+                    WeightClassFilter::T60,
+                    WeightClassFilter::T67_5,
+                    WeightClassFilter::T75,
+                    WeightClassFilter::T82_5,
+                    WeightClassFilter::T90,
+                    WeightClassFilter::T100,
+                    WeightClassFilter::T110,
+                    WeightClassFilter::T125,
+                    WeightClassFilter::T140,
+                    WeightClassFilter::TOver140,
                 ]
             } else {
                 vec![
-                    WeightClassSelection::T44,
-                    WeightClassSelection::T48,
-                    WeightClassSelection::T52,
-                    WeightClassSelection::T56,
-                    WeightClassSelection::T60,
-                    WeightClassSelection::T67_5,
-                    WeightClassSelection::T75,
-                    WeightClassSelection::T82_5,
-                    WeightClassSelection::T90,
-                    WeightClassSelection::TOver90,
+                    WeightClassFilter::T44,
+                    WeightClassFilter::T48,
+                    WeightClassFilter::T52,
+                    WeightClassFilter::T56,
+                    WeightClassFilter::T60,
+                    WeightClassFilter::T67_5,
+                    WeightClassFilter::T75,
+                    WeightClassFilter::T82_5,
+                    WeightClassFilter::T90,
+                    WeightClassFilter::TOver90,
                 ]
             }
         }
 
         // IPF new-fangled classes.
-        ClassKindSelection::IPF => {
-            if sex == SexSelection::Men {
+        ClassKind::IPF => {
+            if sex == SexFilter::Men {
                 vec![
-                    WeightClassSelection::IpfM53,
-                    WeightClassSelection::IpfM59,
-                    WeightClassSelection::IpfM66,
-                    WeightClassSelection::IpfM74,
-                    WeightClassSelection::IpfM83,
-                    WeightClassSelection::IpfM93,
-                    WeightClassSelection::IpfM105,
-                    WeightClassSelection::IpfM120,
-                    WeightClassSelection::IpfMOver120,
+                    WeightClassFilter::IpfM53,
+                    WeightClassFilter::IpfM59,
+                    WeightClassFilter::IpfM66,
+                    WeightClassFilter::IpfM74,
+                    WeightClassFilter::IpfM83,
+                    WeightClassFilter::IpfM93,
+                    WeightClassFilter::IpfM105,
+                    WeightClassFilter::IpfM120,
+                    WeightClassFilter::IpfMOver120,
                 ]
             } else {
                 vec![
-                    WeightClassSelection::IpfF43,
-                    WeightClassSelection::IpfF47,
-                    WeightClassSelection::IpfF52,
-                    WeightClassSelection::IpfF57,
-                    WeightClassSelection::IpfF63,
-                    WeightClassSelection::IpfF72,
-                    WeightClassSelection::IpfF84,
-                    WeightClassSelection::IpfFOver84,
+                    WeightClassFilter::IpfF43,
+                    WeightClassFilter::IpfF47,
+                    WeightClassFilter::IpfF52,
+                    WeightClassFilter::IpfF57,
+                    WeightClassFilter::IpfF63,
+                    WeightClassFilter::IpfF72,
+                    WeightClassFilter::IpfF84,
+                    WeightClassFilter::IpfFOver84,
                 ]
             }
         }
 
         // Para Powerlifting classes.
-        ClassKindSelection::Para => {
-            if sex == SexSelection::Men {
+        ClassKind::Para => {
+            if sex == SexFilter::Men {
                 vec![
-                    WeightClassSelection::ParaM49,
-                    WeightClassSelection::ParaM54,
-                    WeightClassSelection::ParaM59,
-                    WeightClassSelection::ParaM65,
-                    WeightClassSelection::ParaM72,
-                    WeightClassSelection::ParaM80,
-                    WeightClassSelection::ParaM88,
-                    WeightClassSelection::ParaM97,
-                    WeightClassSelection::ParaM107,
-                    WeightClassSelection::ParaMOver107,
+                    WeightClassFilter::ParaM49,
+                    WeightClassFilter::ParaM54,
+                    WeightClassFilter::ParaM59,
+                    WeightClassFilter::ParaM65,
+                    WeightClassFilter::ParaM72,
+                    WeightClassFilter::ParaM80,
+                    WeightClassFilter::ParaM88,
+                    WeightClassFilter::ParaM97,
+                    WeightClassFilter::ParaM107,
+                    WeightClassFilter::ParaMOver107,
                 ]
             } else {
                 vec![
-                    WeightClassSelection::ParaF41,
-                    WeightClassSelection::ParaF45,
-                    WeightClassSelection::ParaF50,
-                    WeightClassSelection::ParaF55,
-                    WeightClassSelection::ParaF61,
-                    WeightClassSelection::ParaF67,
-                    WeightClassSelection::ParaF73,
-                    WeightClassSelection::ParaF79,
-                    WeightClassSelection::ParaF86,
-                    WeightClassSelection::ParaFOver86,
+                    WeightClassFilter::ParaF41,
+                    WeightClassFilter::ParaF45,
+                    WeightClassFilter::ParaF50,
+                    WeightClassFilter::ParaF55,
+                    WeightClassFilter::ParaF61,
+                    WeightClassFilter::ParaF67,
+                    WeightClassFilter::ParaF73,
+                    WeightClassFilter::ParaF79,
+                    WeightClassFilter::ParaF86,
+                    WeightClassFilter::ParaFOver86,
                 ]
             }
         }
 
         // World Powerlifting's not-IPF classes.
-        ClassKindSelection::WP => {
-            if sex == SexSelection::Men {
+        ClassKind::WP => {
+            if sex == SexFilter::Men {
                 vec![
-                    WeightClassSelection::WpM62,
-                    WeightClassSelection::WpM69,
-                    WeightClassSelection::WpM77,
-                    WeightClassSelection::WpM85,
-                    WeightClassSelection::WpM94,
-                    WeightClassSelection::WpM105,
-                    WeightClassSelection::WpM120,
-                    WeightClassSelection::WpMOver120,
+                    WeightClassFilter::WpM62,
+                    WeightClassFilter::WpM69,
+                    WeightClassFilter::WpM77,
+                    WeightClassFilter::WpM85,
+                    WeightClassFilter::WpM94,
+                    WeightClassFilter::WpM105,
+                    WeightClassFilter::WpM120,
+                    WeightClassFilter::WpMOver120,
                 ]
             } else {
                 vec![
-                    WeightClassSelection::WpF48,
-                    WeightClassSelection::WpF53,
-                    WeightClassSelection::WpF58,
-                    WeightClassSelection::WpF64,
-                    WeightClassSelection::WpF72,
-                    WeightClassSelection::WpF84,
-                    WeightClassSelection::WpF100,
-                    WeightClassSelection::WpFOver100,
+                    WeightClassFilter::WpF48,
+                    WeightClassFilter::WpF53,
+                    WeightClassFilter::WpF58,
+                    WeightClassFilter::WpF64,
+                    WeightClassFilter::WpF72,
+                    WeightClassFilter::WpF84,
+                    WeightClassFilter::WpF100,
+                    WeightClassFilter::WpFOver100,
                 ]
             }
         }
@@ -479,20 +482,23 @@ fn make_collectors<'db>(
 
 fn find_records<'db>(
     opldb: &'db OplDb,
-    sel: &RecordsSelection,
-    default: &Selection,
+    sel: &RecordsQuery,
+    default: &RankingsQuery,
 ) -> Vec<RecordCollector<'db>> {
     // The Records page already breaks entries up by Event, so include all Events.
     // This fixes a bug where OpenIPF defaulted to FullPower, and so single-lift
     // records would be incorrect.
-    let default: Selection = Selection {
-        event: EventSelection::AllEvents,
+    let default: RankingsQuery = RankingsQuery {
+        filter: EntryFilter {
+            event: EventFilter::AllEvents,
+            ..default.filter
+        },
         ..*default
     };
 
     // Get a list of all entries corresponding to the selection.
     let indices =
-        algorithms::get_entry_indices_for(&sel.to_full_selection(&default), opldb);
+        algorithms::get_entry_indices_for(&sel.to_full_selection(&default).filter, opldb);
 
     // Build a vector of structs that can remember records.
     let mut collectors = make_collectors(sel.sex, sel.classkind);
@@ -708,8 +714,8 @@ impl<'db> Context<'db> {
     pub fn new(
         opldb: &'db OplDb,
         locale: &'db Locale,
-        selection: &RecordsSelection,
-        default: &Selection,
+        selection: &RecordsQuery,
+        default: &RankingsQuery,
     ) -> Context<'db> {
         let records = find_records(opldb, selection, default);
         let tables = prettify_records(records, opldb, locale);

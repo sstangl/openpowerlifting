@@ -15,6 +15,7 @@ use rocket_contrib::templates::Template;
 
 use server::langpack::{Language, Locale};
 use server::pages;
+use server::FromUrlPath;
 
 use std::path::PathBuf;
 
@@ -42,18 +43,20 @@ fn get_local_prefix(host: &Host) -> &'static str {
 /// Default selections used in the OpenIPF rankings.
 ///
 /// This information is also hardcoded in the rankings template.
-fn default_openipf_selection() -> opldb::selection::Selection {
-    use opldb::selection::*;
-    Selection {
-        equipment: EquipmentSelection::Raw,
-        federation: FederationSelection::Meta(MetaFederation::IPFAndAffiliates),
-        weightclasses: WeightClassSelection::AllClasses,
-        sex: SexSelection::AllSexes,
-        ageclass: AgeClassSelection::AllAges,
-        year: YearSelection::AllYears,
-        event: EventSelection::FullPower,
-        sort: SortSelection::ByGoodlift,
-        state: None,
+fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
+    use opldb::query::direct::*;
+    RankingsQuery {
+        filter: EntryFilter {
+            equipment: EquipmentFilter::Raw,
+            federation: FederationFilter::Meta(MetaFederation::IPFAndAffiliates),
+            weightclasses: WeightClassFilter::AllClasses,
+            sex: SexFilter::AllSexes,
+            ageclass: AgeClassFilter::AllAges,
+            year: YearFilter::AllYears,
+            event: EventFilter::FullPower,
+            state: None,
+        },
+        order_by: OrderBy::Goodlift,
     }
 }
 
@@ -70,7 +73,7 @@ pub fn index(
     cookies: Cookies,
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let default = default_openipf_selection();
+    let default = default_openipf_rankings_query();
     let mut cx =
         pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
@@ -100,8 +103,9 @@ pub fn rankings(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let default = default_openipf_selection();
-    let selection = opldb::selection::Selection::from_path(&selections, &default).ok()?;
+    let default = default_openipf_rankings_query();
+    let selection =
+        opldb::query::direct::RankingsQuery::from_url_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let mut cx =
         pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
@@ -124,10 +128,12 @@ pub fn rankings_api(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
-    let default = default_openipf_selection();
+    let default = default_openipf_rankings_query();
     let selection = match selections {
         None => default,
-        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => {
+            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
+        }
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -173,10 +179,12 @@ pub fn search_rankings_api(
     query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
-    let default = default_openipf_selection();
+    let default = default_openipf_rankings_query();
     let selection = match selections {
         None => default,
-        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => {
+            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
+        }
     };
 
     let result =
@@ -204,19 +212,19 @@ pub fn records(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let default_rankings = default_openipf_selection();
-    let default = pages::records::RecordsSelection {
-        equipment: default_rankings.equipment,
-        federation: default_rankings.federation,
-        sex: opldb::selection::SexSelection::Men,
-        classkind: pages::records::ClassKindSelection::IPF,
-        ageclass: default_rankings.ageclass,
-        year: default_rankings.year,
+    let default_rankings = default_openipf_rankings_query();
+    let default = pages::records::RecordsQuery {
+        equipment: default_rankings.filter.equipment,
+        federation: default_rankings.filter.federation,
+        sex: opldb::query::direct::SexFilter::Men,
+        classkind: pages::records::ClassKind::IPF,
+        ageclass: default_rankings.filter.ageclass,
+        year: default_rankings.filter.year,
         state: None,
     };
 
     let selection = if let Some(sel) = selections {
-        pages::records::RecordsSelection::from_path(&sel, &default).ok()?
+        pages::records::RecordsQuery::from_path(&sel, &default).ok()?
     } else {
         default
     };
@@ -225,7 +233,7 @@ pub fn records(
         &opldb,
         &locale,
         &selection,
-        &default_openipf_selection(),
+        &default_openipf_rankings_query(),
     );
     cx.urlprefix = get_local_prefix(&host);
 
@@ -302,7 +310,7 @@ pub fn lifter(
                 &opldb,
                 &locale,
                 lifter_ids[0],
-                PointsSystem::from(default_openipf_selection().sort),
+                PointsSystem::from(default_openipf_rankings_query().order_by),
                 Some(ipf_only_filter),
             );
             cx.urlprefix = get_local_prefix(&host);
@@ -336,7 +344,7 @@ pub fn lifter(
             let mut cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
-                PointsSystem::from(default_openipf_selection().sort),
+                PointsSystem::from(default_openipf_rankings_query().order_by),
                 &username,
                 &lifter_ids,
             );
@@ -367,15 +375,15 @@ pub fn meetlist(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let openipf_defaults = default_openipf_selection();
-    let defaults = pages::meetlist::MeetListSelection {
-        federation: openipf_defaults.federation,
-        year: openipf_defaults.year,
+    let openipf_defaults = default_openipf_rankings_query();
+    let defaults = pages::meetlist::MeetListQuery {
+        federation: openipf_defaults.filter.federation,
+        year: openipf_defaults.filter.year,
     };
 
     let mselection = match mselections {
         None => defaults,
-        Some(p) => pages::meetlist::MeetListSelection::from_path(&p, defaults).ok()?,
+        Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let mut cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);

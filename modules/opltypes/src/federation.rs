@@ -711,7 +711,7 @@ pub enum Federation {
     /// Powerlifting India, IPF
     #[strum(to_string = "PI", serialize = "pi")]
     PI,
-    
+
     /// Powerlifting Holland, WPF.
     #[strum(to_string = "PLH", serialize = "plh")]
     PLH,

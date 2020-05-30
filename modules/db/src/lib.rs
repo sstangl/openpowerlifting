@@ -21,7 +21,7 @@ pub mod algorithms;
 mod cache;
 mod data;
 mod metafederation;
-pub mod selection;
+pub mod query;
 mod yesno;
 
 // Re-exports.

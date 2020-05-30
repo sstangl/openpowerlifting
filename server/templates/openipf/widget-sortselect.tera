@@ -1,12 +1,12 @@
 <select id="sortselect">
   <optgroup label="{{strings.selectors.sort.weight}}">
-    <option value="by-squat" {% if selection.sort == "BySquat" %}selected{% endif %}>{{strings.selectors.sort.by_squat}}</option>
-    <option value="by-bench" {% if selection.sort == "ByBench" %}selected{% endif %}>{{strings.selectors.sort.by_bench}}</option>
-    <option value="by-deadlift" {% if selection.sort == "ByDeadlift" %}selected{% endif %}>{{strings.selectors.sort.by_deadlift}}</option>
-    <option value="by-total" {% if selection.sort == "ByTotal" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
+    <option value="by-squat" {% if selection.sort == "Squat" %}selected{% endif %}>{{strings.selectors.sort.by_squat}}</option>
+    <option value="by-bench" {% if selection.sort == "Bench" %}selected{% endif %}>{{strings.selectors.sort.by_bench}}</option>
+    <option value="by-deadlift" {% if selection.sort == "Deadlift" %}selected{% endif %}>{{strings.selectors.sort.by_deadlift}}</option>
+    <option value="by-total" {% if selection.sort == "Total" %}selected{% endif %}>{{strings.selectors.sort.by_total}}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.sort.points}}">
-    <option value="by-goodlift" {% if selection.sort == "ByGoodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
-    <option value="by-ipf-points" {% if selection.sort == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
+    <option value="by-goodlift" {% if selection.sort == "Goodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
+    <option value="by-ipf-points" {% if selection.sort == "IPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
   </optgroup>
 </select>

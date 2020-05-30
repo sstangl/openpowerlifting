@@ -1,9 +1,42 @@
 //! Logic for the display of the rankings page.
 
-use opldb::selection::Selection;
+use opldb::query::direct::*;
+use opltypes::states::State;
 
 use crate::langpack::{self, Language};
 use crate::pages::api_rankings::get_slice;
+
+/// Flattened version of the RankingsQuery database object.
+///
+/// This is parsed by the JS code to determine the active widget status.
+#[derive(Serialize)]
+pub struct RankingsWidgets {
+    pub equipment: EquipmentFilter,
+    pub federation: FederationFilter,
+    pub weightclasses: WeightClassFilter,
+    pub sex: SexFilter,
+    pub ageclass: AgeClassFilter,
+    pub year: YearFilter,
+    pub event: EventFilter,
+    pub state: Option<State>,
+    pub sort: OrderBy,
+}
+
+impl From<&RankingsQuery> for RankingsWidgets {
+    fn from(q: &RankingsQuery) -> Self {
+        Self {
+            equipment: q.filter.equipment,
+            federation: q.filter.federation,
+            weightclasses: q.filter.weightclasses,
+            sex: q.filter.sex,
+            ageclass: q.filter.ageclass,
+            year: q.filter.year,
+            event: q.filter.event,
+            state: q.filter.state,
+            sort: q.order_by,
+        }
+    }
+}
 
 /// The context object passed to `templates/rankings.html.tera`.
 #[derive(Serialize)]
@@ -24,8 +57,8 @@ pub struct Context<'db, 'a> {
     pub language: Language,
     pub strings: &'db langpack::Translations,
     pub units: opltypes::WeightUnits,
-    pub selection: &'a Selection,
-    pub default_selection: &'a Selection,
+    pub selection: RankingsWidgets,
+    pub default_selection: &'a RankingsQuery,
     pub initial_data: String,
 }
 
@@ -33,8 +66,8 @@ impl<'db, 'a> Context<'db, 'a> {
     pub fn new(
         opldb: &'db opldb::OplDb,
         locale: &'db langpack::Locale<'a>,
-        selection: &'a Selection,
-        defaults: &'a Selection,
+        selection: &'a RankingsQuery,
+        defaults: &'a RankingsQuery,
         use_ipf_equipment: bool,
     ) -> Option<Context<'db, 'a>> {
         // Inline the top 100 to avoid another round-trip.
@@ -59,7 +92,7 @@ impl<'db, 'a> Context<'db, 'a> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            selection,
+            selection: RankingsWidgets::from(selection),
             default_selection: defaults,
             initial_data: serde_json::to_string(&slice).ok()?,
         })

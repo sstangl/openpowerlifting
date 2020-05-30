@@ -4,7 +4,7 @@
 //! so just keeping with a super-generic name.
 
 use opldb::algorithms;
-use opldb::selection::*;
+use opldb::query::direct::*;
 use opltypes::*;
 
 mod common;
@@ -16,50 +16,50 @@ fn sorts_only_include_valid_entries() {
     let db = common::db();
 
     // Use a sort that isn't fully pre-cached.
-    let mut selection = Selection::default();
-    selection.federation = FederationSelection::One(Federation::RPS);
-    selection.sort = SortSelection::BySquat;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    let mut query = RankingsQuery::default();
+    query.filter.federation = FederationFilter::One(Federation::RPS);
+    query.order_by = OrderBy::Squat;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::default();
-    selection.federation = FederationSelection::One(Federation::RPS);
-    selection.sort = SortSelection::ByBench;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.filter.federation = FederationFilter::One(Federation::RPS);
+    query.order_by = OrderBy::Bench;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_benchkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::default();
-    selection.federation = FederationSelection::One(Federation::RPS);
-    selection.sort = SortSelection::ByDeadlift;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.filter.federation = FederationFilter::One(Federation::RPS);
+    query.order_by = OrderBy::Deadlift;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_deadliftkg() > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::default();
-    selection.federation = FederationSelection::One(Federation::RPS);
-    selection.sort = SortSelection::ByTotal;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.filter.federation = FederationFilter::One(Federation::RPS);
+    query.order_by = OrderBy::Total;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.totalkg > WeightKg::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::default();
-    selection.federation = FederationSelection::One(Federation::RPS);
-    selection.sort = SortSelection::ByWilks;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.filter.federation = FederationFilter::One(Federation::RPS);
+    query.order_by = OrderBy::Wilks;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.wilks > Points::from_i32(0));
@@ -67,18 +67,18 @@ fn sorts_only_include_valid_entries() {
     }
 
     // Also test the fully-statically-cached variants.
-    selection = Selection::default();
-    selection.sort = SortSelection::ByWilks;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.order_by = OrderBy::Wilks;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.wilks > Points::from_i32(0));
         assert!(!entry.place.is_dq());
     }
 
-    selection = Selection::default();
-    selection.sort = SortSelection::BySquat;
-    let rankings = algorithms::get_full_sorted_uniqued(&selection, &db);
+    query = RankingsQuery::default();
+    query.order_by = OrderBy::Squat;
+    let rankings = algorithms::get_full_sorted_uniqued(&query, &db);
     for idx in rankings.0.iter() {
         let entry = db.get_entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg::from_i32(0));

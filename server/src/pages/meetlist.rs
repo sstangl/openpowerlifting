@@ -1,6 +1,6 @@
 //! Logic for the page that lists meets.
 
-use opldb::selection::{FedPreference, FederationSelection, YearSelection};
+use opldb::query::direct::*;
 use opldb::{self, Meet, MetaFederation};
 use opltypes::*;
 
@@ -11,26 +11,26 @@ use crate::langpack::{self, Language, Locale};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///
-/// For code reuse, this is a subset of the Selection struct
+/// For code reuse, this is a subset of the Query struct
 /// used by the rankings page. It needs to serialize to a structure
 /// that has the same fields, so the templates can share code.
 #[derive(Copy, Clone, PartialEq, Serialize)]
-pub struct MeetListSelection {
-    pub federation: FederationSelection,
-    pub year: YearSelection,
+pub struct MeetListQuery {
+    pub federation: FederationFilter,
+    pub year: YearFilter,
 }
 
-impl Default for MeetListSelection {
-    fn default() -> MeetListSelection {
-        MeetListSelection {
-            federation: FederationSelection::AllFederations,
-            year: YearSelection::AllYears,
+impl Default for MeetListQuery {
+    fn default() -> MeetListQuery {
+        MeetListQuery {
+            federation: FederationFilter::AllFederations,
+            year: YearFilter::AllYears,
         }
     }
 }
 
-impl MeetListSelection {
-    pub fn from_path(p: &path::Path, defaults: MeetListSelection) -> Result<Self, ()> {
+impl MeetListQuery {
+    pub fn from_path(p: &path::Path, defaults: MeetListQuery) -> Result<Self, ()> {
         let mut ret = defaults;
 
         // Disallow empty path components.
@@ -54,7 +54,7 @@ impl MeetListSelection {
             .filter_map(|a| a.file_name().and_then(OsStr::to_str))
         {
             // Check whether this is federation information.
-            if let Ok(f) = FederationSelection::from_str_preferring(
+            if let Ok(f) = FederationFilter::from_str_preferring(
                 segment,
                 FedPreference::PreferFederation,
             ) {
@@ -68,15 +68,15 @@ impl MeetListSelection {
                 // BP is a special case here because it's a country-level federation
                 // that includes other countries. Lifters in, e.g., the EPA call
                 // their federation "BP" and therefore expect results to show up there.
-                if f == FederationSelection::One(Federation::BP) {
-                    ret.federation = FederationSelection::Meta(MetaFederation::BP);
+                if f == FederationFilter::One(Federation::BP) {
+                    ret.federation = FederationFilter::Meta(MetaFederation::BP);
                 } else {
                     ret.federation = f;
                 }
 
                 parsed_federation = true;
             // Check whether this is year information.
-            } else if let Ok(y) = segment.parse::<YearSelection>() {
+            } else if let Ok(y) = segment.parse::<YearFilter>() {
                 if parsed_year {
                     return Err(());
                 }
@@ -139,7 +139,7 @@ pub struct Context<'db> {
     pub strings: &'db langpack::Translations,
     pub units: WeightUnits,
 
-    pub selection: &'db MeetListSelection,
+    pub selection: &'db MeetListQuery,
     pub meets: Vec<MeetInfo<'db>>,
 
     /// Temporary crutch until we figure out how to show
@@ -151,7 +151,7 @@ impl<'db> Context<'db> {
     pub fn new(
         opldb: &'db opldb::OplDb,
         locale: &'db Locale,
-        mselection: &'db MeetListSelection,
+        mselection: &'db MeetListQuery,
     ) -> Context<'db> {
         // Maximum number of meets to send at once. ~200kb HTML.
         const PAGE_SIZE: usize = 1000;
@@ -160,7 +160,7 @@ impl<'db> Context<'db> {
 
         // TODO: Move this selection logic into the opldb.
         let mut meets: Vec<&Meet> = match mselection.federation {
-            FederationSelection::AllFederations => opldb
+            FederationFilter::AllFederations => opldb
                 .get_meets()
                 .iter()
                 .filter(|m| match year {
@@ -168,7 +168,7 @@ impl<'db> Context<'db> {
                     None => true,
                 })
                 .collect(),
-            FederationSelection::One(fed) => {
+            FederationFilter::One(fed) => {
                 opldb
                     .get_meets()
                     .iter()
@@ -184,7 +184,7 @@ impl<'db> Context<'db> {
                     })
                     .collect()
             }
-            FederationSelection::Meta(meta) => opldb
+            FederationFilter::Meta(meta) => opldb
                 .get_metafed_cache()
                 .get_meet_ids_for(meta)
                 .iter()

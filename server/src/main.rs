@@ -32,9 +32,9 @@ use std::fs::File;
 use std::path::{Path, PathBuf};
 use std::time;
 
-extern crate server;
 use server::langpack::{self, LangInfo, Language, Locale};
 use server::pages;
+use server::FromUrlPath;
 
 /// A file served from /static.
 enum StaticFile {
@@ -105,9 +105,10 @@ fn rankings(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let defaults = opldb::selection::Selection::default();
+    let defaults = opldb::query::direct::RankingsQuery::default();
     let selection =
-        opldb::selection::Selection::from_path(&selections, &defaults).ok()?;
+        opldb::query::direct::RankingsQuery::from_url_path(&selections, &defaults)
+            .ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx =
         pages::rankings::Context::new(&opldb, &locale, &selection, &defaults, false)?;
@@ -133,9 +134,9 @@ fn records(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let default = pages::records::RecordsSelection::default();
+    let default = pages::records::RecordsQuery::default();
     let selection = if let Some(sel) = selections {
-        pages::records::RecordsSelection::from_path(&sel, &default).ok()?
+        pages::records::RecordsQuery::from_path(&sel, &default).ok()?
     } else {
         default
     };
@@ -144,7 +145,7 @@ fn records(
         &opldb,
         &locale,
         &selection,
-        &opldb::selection::Selection::default(),
+        &opldb::query::direct::RankingsQuery::default(),
     );
 
     Some(match device {
@@ -210,7 +211,9 @@ fn lifter(
                 &opldb,
                 &locale,
                 lifter_ids[0],
-                opltypes::PointsSystem::from(opldb::selection::Selection::default().sort),
+                opltypes::PointsSystem::from(
+                    opldb::query::direct::RankingsQuery::default().order_by,
+                ),
                 None,
             );
             Some(Ok(match device {
@@ -226,7 +229,9 @@ fn lifter(
             let cx = pages::disambiguation::Context::new(
                 &opldb,
                 &locale,
-                opltypes::PointsSystem::from(opldb::selection::Selection::default().sort),
+                opltypes::PointsSystem::from(
+                    opldb::query::direct::RankingsQuery::default().order_by,
+                ),
                 &username,
                 &lifter_ids,
             );
@@ -273,10 +278,10 @@ fn meetlist(
     device: Device,
     cookies: Cookies,
 ) -> Option<Template> {
-    let defaults = pages::meetlist::MeetListSelection::default();
+    let defaults = pages::meetlist::MeetListQuery::default();
     let mselection = match mselections {
         None => defaults,
-        Some(p) => pages::meetlist::MeetListSelection::from_path(&p, defaults).ok()?,
+        Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
@@ -423,7 +428,7 @@ fn index(
     }
 
     // Otherwise, render the main rankings template.
-    let defaults = opldb::selection::Selection::default();
+    let defaults = opldb::query::direct::RankingsQuery::default();
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let cx = pages::rankings::Context::new(&opldb, &locale, &defaults, &defaults, false);
 
@@ -441,10 +446,12 @@ fn rankings_api(
     opldb: State<ManagedOplDb>,
     langinfo: State<ManagedLangInfo>,
 ) -> Option<JsonString> {
-    let defaults = opldb::selection::Selection::default();
+    let defaults = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
         None => defaults,
-        Some(path) => opldb::selection::Selection::from_path(&path, &defaults).ok()?,
+        Some(path) => {
+            opldb::query::direct::RankingsQuery::from_url_path(&path, &defaults).ok()?
+        }
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -481,10 +488,12 @@ fn search_rankings_api(
     query: Form<SearchRankingsApiQuery>,
     opldb: State<ManagedOplDb>,
 ) -> Option<JsonString> {
-    let default = opldb::selection::Selection::default();
+    let default = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
         None => default,
-        Some(path) => opldb::selection::Selection::from_path(&path, &default).ok()?,
+        Some(path) => {
+            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
+        }
     };
 
     let result =
