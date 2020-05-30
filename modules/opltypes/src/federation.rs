@@ -2418,7 +2418,7 @@ impl Federation {
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PI => Federation::ipf_rules_on(date),
-            Federation::PHL => PointsSystem::Reshel,
+            Federation::PLH => PointsSystem::Reshel,
             Federation::PLSS => Federation::ipf_rules_on(date),
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),
