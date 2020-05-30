@@ -11,6 +11,10 @@
     div2 = {name="Div 2", min=0, max=999, sex="F", equipment="Single-ply"}
     div3 = {name="Div 3", min=0, max=999, sex="F", equipment="Single-ply"}
 
+    # Sometimes boys are listed in THSWPA for some reason...
+    boys = {name="Boys", min=13, max=19, sex="M", equipment="Single-ply"}
+
+
 # THSWPA uses pounds classes with exact pound values.
 #
 # Although the classes appear as "181", "198" etc., the rulebook specifies that the
@@ -19,5 +23,10 @@
     classes = ["44.23","47.85","51.94","56.02","60.1","67.36","75.07","82.33","90.04","100.02","117.71","100.02+","117.71+"]
     date_range=["0000-01-01","9999-01-01"]
     sex = "F"
+
+[weightclasses.default_M]
+    classes = ["51.71","55.79","59.87","67.13","74.84","82.1","89.81","99.79","109.77","124.74","124.74+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
 
 [exemptions]
