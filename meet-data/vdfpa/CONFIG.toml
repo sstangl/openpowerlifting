@@ -1,0 +1,98 @@
+# Configuration for the VDFPA.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+
+    # WDFPF
+
+    # From http://www.idfpf.com/docs/rules/WDFPF_RULEBOOK_Book3_V1_Main_Fundamentals.pdf
+
+    fo = {name="F-O", min=14, max=999, sex="F"}
+    ft1 = {name="F-T1", min=14, max=15, sex="F"}
+    ft2 = {name="F-T2", min=16, max=17, sex="F"}
+    ft3 = {name="F-T3", min=18, max=19, sex="F"}
+    fjr = {name="F-JR", min=20, max=23, sex="F"}
+    fsr = {name="F-SR", min=24, max=39, sex="F"}
+    fm1 = {name="F-M1", min=40, max=44, sex="F"}
+    fm2 = {name="F-M2", min=45, max=49, sex="F"}
+    fm3 = {name="F-M3", min=50, max=54, sex="F"}
+    fm4 = {name="F-M4", min=55, max=59, sex="F"}
+    fm5 = {name="F-M5", min=60, max=64, sex="F"}
+    fm6 = {name="F-M6", min=65, max=69, sex="F"}
+    fm7 = {name="F-M7", min=70, max=74, sex="F"}
+    fm8 = {name="F-M8", min=75, max=79, sex="F"}
+    fm9 = {name="F-M9", min=80, max=84, sex="F"}
+    fm10 = {name="F-M10", min=85, max=89, sex="F"}
+    fm11 = {name="F-M11", min=90, max=94, sex="F"}
+    fm12 = {name="F-M12", min=95, max=99, sex="F"}
+
+    mo = {name="M-O", min=14, max=999, sex="M"}
+    mt1 = {name="M-T1", min=14, max=15, sex="M"}
+    mt2 = {name="M-T2", min=16, max=17, sex="M"}
+    mt3 = {name="M-T3", min=18, max=19, sex="M"}
+    mjr = {name="M-JR", min=20, max=23, sex="M"}
+    msr = {name="M-SR", min=24, max=39, sex="M"}
+    mm1 = {name="M-M1", min=40, max=44, sex="M"}
+    mm2 = {name="M-M2", min=45, max=49, sex="M"}
+    mm3 = {name="M-M3", min=50, max=54, sex="M"}
+    mm4 = {name="M-M4", min=55, max=59, sex="M"}
+    mm5 = {name="M-M5", min=60, max=64, sex="M"}
+    mm6 = {name="M-M6", min=65, max=69, sex="M"}
+    mm7 = {name="M-M7", min=70, max=74, sex="M"}
+    mm8 = {name="M-M8", min=75, max=79, sex="M"}
+    mm9 = {name="M-M9", min=80, max=84, sex="M"}
+    mm10 = {name="M-M10", min=85, max=89, sex="M"}
+    mm11 = {name="M-M11", min=90, max=94, sex="M"}
+    mm12 = {name="M-M12", min=95, max=99, sex="M"}
+
+    # 100% Raw
+
+    # Age in 100% RAW is determined by exact age on date of meet.
+    open = {name = "Open", min = 0, max = 999, equipment="Raw"}
+    youth = {name = "Youth", min = 0, max = 11, equipment="Raw"}
+    teen_12 = {name = "Teen 12-13", min = 12, max = 13, equipment="Raw"}
+    teen_14 = {name = "Teen 14-15", min = 14, max = 15, equipment="Raw"}
+    teen_16 = {name = "Teen 16-17", min = 16, max = 17, equipment="Raw"}
+    teen_18 = {name = "Teen 18-19", min = 18, max = 19, equipment="Raw"}
+    junior = {name = "Juniors 20-24", min = 20, max = 24, equipment="Raw"}
+    submaster = {name = "Submasters 35-39", min = 35, max = 39, equipment="Raw"}
+    master_40 = {name = "Masters 40-44", min = 40, max = 44, equipment="Raw"}
+    master_45 = {name = "Masters 45-49", min = 45, max = 49, equipment="Raw"}
+    master_50 = {name = "Masters 50-54", min = 50, max = 54, equipment="Raw"}
+    master_55 = {name = "Masters 55-59", min = 55, max = 59, equipment="Raw"}
+    master_60 = {name = "Masters 60-64", min = 60, max = 64, equipment="Raw"}
+    master_65 = {name = "Masters 65-69", min = 65, max = 69, equipment="Raw"}
+    master_70 = {name = "Masters 70-74", min = 70, max = 74, equipment="Raw"}
+    master_75 = {name = "Masters 75-79", min = 75, max = 79, equipment="Raw"}
+    master_80 = {name = "Masters 80+", min = 80, max = 999, equipment="Raw"}
+    lfm = {name = "Law/Fire/Military", min = 0, max = 999, equipment="Raw"}
+    special = {name = "Special Olympics", min = 0, max = 999, equipment="Raw"}
+    handicapped = {name = "Handicapped", min = 0, max = 999, equipment="Raw"}
+
+[weightclasses.WDFPF_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["1900-01-01", "2017-03-05"]
+    sex = "M"
+    divisions = ["M-O","M-T1","M-T2","M-T3","M-JR","M-SR","M-M1","M-M2","M-M3","M-M4","M-M5","M-M6","M-M7","M-M8","M-M9","M-M10","M-M11","M-M12"]
+
+[weightclasses.WDFPF_F]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
+    date_range = ["1900-01-01", "2017-03-05"]
+    sex = "F"
+    divisions = ["F-O","F-T1","F-T2","F-T3","F-JR","F-SR","F-M1","F-M2","F-M3","F-M4","F-M5","F-M6","F-M7","F-M8","F-M9","F-M10","F-M11","F-M12"]
+
+[weightclasses.RAW_M]
+    classes = ["48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2017-03-05", "9999-01-01"]
+    sex = "M"
+    divisions = ["Open","Youth","Teen 12-13","Teen 14-15","Teen 16-17","Teen 18-19","Juniors 20-24","Submasters 35-39","Masters 40-44","Masters 45-49","Masters 50-54","Masters 55-59","Masters 60-64","Masters 65-69","Masters 70-74","Masters 75-79","Masters 80+","Law/Fire/Military","Special Olympics","Handicapped"]
+
+[weightclasses.RAW_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["2017-03-05", "9999-01-01"]
+    sex = "F"
+    divisions = ["Open","Youth","Teen 12-13","Teen 14-15","Teen 16-17","Teen 18-19","Juniors 20-24","Submasters 35-39","Masters 40-44","Masters 45-49","Masters 50-54","Masters 55-59","Masters 60-64","Masters 65-69","Masters 70-74", "Masters 75-79","Masters 80+","Law/Fire/Military","Special Olympics","Handicapped"]
+
+[exemptions]

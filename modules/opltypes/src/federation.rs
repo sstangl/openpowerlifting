@@ -966,6 +966,12 @@ pub enum Federation {
     #[strum(to_string = "USVIPF", serialize = "usvipf")]
     USVIPF,
 
+    /// Victorian Drug-Free Powerlifting Association, WDFPF (via ADFPF)
+    /// 1986-2014, independent (but WDFPF rules)
+    /// 2015-2016, 100% Raw 2017, defunct post-2017.
+    #[strum(to_string = "VDFPA", serialize = "vdfpa")]
+    VDFPA,
+
     /// Vlaamse Gewichtheffers en Powerlifting Federatie,
     /// the Flemish Belgian IPF affiliate.
     #[strum(to_string = "VGPF", serialize = "vgpf")]
@@ -1493,6 +1499,7 @@ impl Federation {
             Federation::USSF => false,
             Federation::USSports => false,
             Federation::USVIPF => FULLY_TESTED,
+            Federation::VDFPA => FULLY_TESTED,
             Federation::VGPF => FULLY_TESTED,
             Federation::VietnamPA => false,
             Federation::Vityaz => false,
@@ -1787,6 +1794,7 @@ impl Federation {
             Federation::USSF => Some(Country::USA),
             Federation::USSports => Some(Country::USA),
             Federation::USVIPF => Some(Country::USVirginIslands),
+            Federation::VDFPA => Some(Country::Australia),
             Federation::VGPF => Some(Country::Belgium),
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
@@ -2136,6 +2144,15 @@ impl Federation {
             Federation::USSF => None,
             Federation::USSports => None,
             Federation::USVIPF => Some(Federation::IPF),
+            Federation::VDFPA => {
+                if date < Date::from_parts(2015, 01, 01) {
+                    Some(Federation::WDFPF)
+                } else if date < Date::from_parts(2017, 03, 05) {
+                    None
+                } else {
+                    Some(Federation::RAW)
+                }
+            }
             Federation::VGPF => Some(Federation::IPF),
             Federation::VietnamPA => Some(Federation::GPA),
             Federation::Vityaz => None,
@@ -2485,6 +2502,7 @@ impl Federation {
             Federation::USSF => PointsSystem::Wilks,
             Federation::USSports => PointsSystem::Wilks,
             Federation::USVIPF => Federation::ipf_rules_on(date),
+            Federation::VDFPA => PointsSystem::SchwartzMalone,
             Federation::VGPF => Federation::ipf_rules_on(date),
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::Vityaz => PointsSystem::Wilks,
