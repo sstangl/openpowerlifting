@@ -310,7 +310,7 @@ impl OplDb {
             .binary_search_by_key(&lifter_id, |e| e.lifter_id)
             .unwrap();
 
-        // All entries for a lifter are contiguous, so scan linearly to find the first.
+        // All entries for a lifter are contiguous, so scan backwards to find the first.
         let mut first_index = found_index;
         for index in (0..found_index).rev() {
             if self.get_entry(index as u32).lifter_id == lifter_id {
@@ -320,9 +320,9 @@ impl OplDb {
             }
         }
 
-        // Scan to find the last.
+        // Scan forwards to find the last.
         let mut last_index = found_index;
-        for index in found_index..self.get_entries().len() {
+        for index in (found_index + 1)..self.get_entries().len() {
             if self.get_entry(index as u32).lifter_id == lifter_id {
                 last_index = index;
             } else {
@@ -332,7 +332,7 @@ impl OplDb {
         assert!(first_index <= last_index);
 
         // Collect entries between first_index and last_index, inclusive.
-        (first_index..last_index + 1)
+        (first_index..=last_index)
             .map(|i| self.get_entry(i as u32))
             .collect()
     }
