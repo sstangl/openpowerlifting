@@ -529,9 +529,8 @@ fn dev_checker_post(
 
 #[get("/lifters.html?<q>")]
 fn old_lifters(opldb: State<ManagedOplDb>, q: String) -> Option<Redirect> {
-    let name = &q;
-    let id = opldb.get_lifter_id_by_name(name)?;
-    let username = &opldb.get_lifter(id).username;
+    let username: String = usernames::make_username(&q).ok()?;
+    opldb.get_lifter_id(&username)?; // Ensure username exists.
     Some(Redirect::permanent(format!("/u/{}", username)))
 }
 

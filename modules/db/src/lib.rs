@@ -155,7 +155,7 @@ fn precompute_num_unique_lifters(entries: &[Entry], meet_id: u32) -> u32 {
 }
 
 impl OplDb {
-    /// Constructs the `OplDb` from CSV files produces by the project
+    /// Constructs the `OplDb` from CSV files produced by the project
     /// build script.
     pub fn from_csv(
         lifters_csv: &str,
@@ -285,19 +285,6 @@ impl OplDb {
             }
         }
         acc
-    }
-
-    /// Look up the lifter_id by Name.
-    ///
-    /// This function exists for compatibility for the old site.
-    /// Outside of that, usernames or id numbers should be used.
-    pub fn get_lifter_id_by_name(&self, name: &str) -> Option<u32> {
-        for i in 0..self.lifters.len() {
-            if self.lifters[i].name == name {
-                return Some(i as u32);
-            }
-        }
-        None
     }
 
     /// Look up the meet_id by MeetPath.

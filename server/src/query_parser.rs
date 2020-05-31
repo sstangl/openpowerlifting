@@ -143,7 +143,10 @@ mod tests {
         assert_eq!(s.filter.sex, SexFilter::Women);
 
         let s = RankingsQuery::from_url_path(Path::new("/uspa/raw"), &d).unwrap();
-        assert_eq!(s.filter.federation, FederationFilter::Meta(MetaFederation::USPA));
+        assert_eq!(
+            s.filter.federation,
+            FederationFilter::Meta(MetaFederation::USPA)
+        );
         assert_eq!(s.filter.equipment, EquipmentFilter::Raw);
     }
 
@@ -155,7 +158,10 @@ mod tests {
         assert!(RankingsQuery::from_url_path(Path::new("/raw/raw"), &d).is_err());
         assert!(RankingsQuery::from_url_path(Path::new("/wraps/raw"), &d).is_err());
         assert!(RankingsQuery::from_url_path(Path::new("/women/men"), &d).is_err());
-        assert!(RankingsQuery::from_url_path(Path::new("/women/women/women/raw"), &d).is_err());
+        assert!(
+            RankingsQuery::from_url_path(Path::new("/women/women/women/raw"), &d)
+                .is_err()
+        );
 
         // Disallow stupid URLs that would ordinarily work fine.
         assert!(RankingsQuery::from_url_path(Path::new("/raw///////"), &d).is_err());
