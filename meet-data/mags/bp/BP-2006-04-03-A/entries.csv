@@ -2,10 +2,10 @@ Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipm
 C. Beaglehole,M-C-U20,M,65,37.5,90,192.5,SBD,Raw,1,51.8,52
 Steven Tyers,M-C-U20,M,95,65,167.5,327.5,SBD,Raw,1,53.3,56
 A. Kendal,M-C-U20,M,75,55,97.5,227.5,SBD,Raw,2,57.9,60
-S. Beaglehole,M-C-U20,M,102.5,72.5,145,320,SBD,Raw,1,59,60
+Sam Beaglehole,M-C-U20,M,102.5,72.5,145,320,SBD,Raw,1,59,60
 Darren Bell,M-C-U20,M,105,67.5,145,317.5,SBD,Raw,2,58.1,60
 H. Jones,M-C-U20,M,103,55,145,303,SBD,Raw,3,59.2,60
-R. Lambeth,M-C-U20,M,122.5,87.5,167.5,377.5,SBD,Raw,1,64.2,67.5
+Robert Lambeth,M-C-U20,M,122.5,87.5,167.5,377.5,SBD,Raw,1,64.2,67.5
 Sam Bolton,M-C-U20,M,152.5,90,187.5,430,SBD,Raw,1,77.4,82.5
 Stephen Manuel,M-C-U20,M,185,122.5,250,557.5,SBD,Raw,1,88.9,90
 A. McCutchion,M-C-U20,M,140,110,180,430,SBD,Raw,1,95.8,100
@@ -15,14 +15,14 @@ J. White,M-C-U23,M,140,115,230,485,SBD,Raw,1,71.9,75
 M. Triggs,M-C-U23,M,130,130,190,450,SBD,Raw,1,81.5,82.5
 Allen Ottolangui,M-C-M1,M,190,112.5,215,517.5,SBD,Raw,1,74.4,75
 P. Maton,M-C-M1,M,170,90,205,465,SBD,Raw,2,73.8,75
-D. Carter,M-C-M1,M,180,140,230,550,SBD,Raw,1,82,82.5
+David Carter #2,M-C-M1,M,180,140,230,550,SBD,Raw,1,82,82.5
 Chris Cooper,M-C-M1,M,157.5,142.5,205,505,SBD,Raw,2,81.9,82.5
 I. Johnston,M-C-M1,M,165,112.5,225,502.5,SBD,Raw,3,80.4,82.5
 Doug D'Gama,M-C-M1,M,180,145,235,560,SBD,Raw,1,88.2,90
 J. Banks,M-C-M1,M,190,125,232.5,547.5,SBD,Raw,2,89.25,90
-P. Coke,M-C-M1,M,160,107.5,220,487.5,SBD,Raw,3,83.9,90
-P. Hooker,M-C-M1,M,240,165,272.5,677.5,SBD,Raw,1,98.4,100
-J. Mitchell,M-C-M1,M,260,157.5,260,677.5,SBD,Raw,2,99,100
+Paul Coke,M-C-M1,M,160,107.5,220,487.5,SBD,Raw,3,83.9,90
+Paul Hooker,M-C-M1,M,240,165,272.5,677.5,SBD,Raw,1,98.4,100
+John Mitchell,M-C-M1,M,260,157.5,260,677.5,SBD,Raw,2,99,100
 Bob Sadler,M-C-M1,M,220,140,240,600,SBD,Raw,1,121.1,125
 T. White,M-C-M2,M,170,125,220,515,SBD,Raw,1,80.3,82.5
 Mick Amey,M-C-M2,M,170,105,200,475,SBD,Raw,2,80.5,82.5
@@ -32,9 +32,9 @@ C. Booth,M-C-M2,M,230,160,260,650,SBD,Raw,1,106,110
 Alex Lee,M-C-M3,M,150,140,160,450,SBD,Raw,1,74.4,75
 C. Gibbs,M-C-M3,M,115,75,210,400,SBD,Raw,2,71.7,75
 A. Baker,M-C-M3,M,105,80,170,355,SBD,Raw,3,74.2,75
-Mick Hunnam,M-C-M3,M,180,130,215,525,SBD,Raw,1,82.5,82.5
-H. Clark,M-C-M3,M,157.5,75,175,407.5,SBD,Raw,2,79.5,82.5
-D. Battison,M-C-M3,M,190,145,240,575,SBD,Raw,1,92.5,100
+Michael Hunnam,M-C-M3,M,180,130,215,525,SBD,Raw,1,82.5,82.5
+Henry Clark,M-C-M3,M,157.5,75,175,407.5,SBD,Raw,2,79.5,82.5
+Dave Battison,M-C-M3,M,190,145,240,575,SBD,Raw,1,92.5,100
 L. McConnell,M-C-M3,M,205,130,230,565,SBD,Raw,2,96.1,100
 John Gavin Walker,M-C-M3,M,195,120,232.5,547.5,SBD,Raw,3,96.7,100
 Roger Powell,M-C-M4,M,130,80,170,380,SBD,Raw,1,66.8,67.5
@@ -48,7 +48,7 @@ Pat Reeves,F-C-M3,F,37.5,30,97.5,165,SBD,Raw,1,43.1,44
 D. Hawker,F-C-Open,F,60,47.5,100,207.5,SBD,Raw,1,50,52
 R. Morris,F-C-Open,F,75,45,110,230,SBD,Raw,1,58.6,60
 N. Payne,F-C-Open,F,105,65,160,330,SBD,Raw,1,61.8,67.5
-J. Adriaanse,F-C-Open,F,90,55,100,245,SBD,Raw,2,65.6,67.5
+Jay Adriaanse,F-C-Open,F,90,55,100,245,SBD,Raw,2,65.6,67.5
 Mary Anderson,F-C-Open,F,130,80,165,375,SBD,Raw,1,73.3,75
 B. Brown,F-C-Open,F,85,60,105,250,SBD,Raw,1,80.2,82.5
 L. Pennell,F-C-Open,F,77.5,47.5,115,240,SBD,Raw,1,88.1,90
@@ -57,10 +57,10 @@ David Carter #2,M-C-Open,M,221,150,270,641,SBD,Raw,1,82.1,82.5
 S. Gates,M-C-Open,M,197.5,122.5,247.5,567.5,SBD,Raw,2,81.5,82.5
 Robert Palmer #2,M-C-Open,M,195,145,225,565,SBD,Raw,3,79,82.5
 Joe Bullock,M-C-Open,M,207.5,153,250,610.5,SBD,Raw,1,89.6,90
-S. Bright,M-C-Open,M,220,140,240,600,SBD,Raw,2,89.2,90
-A. Howard,M-C-Open,M,202.5,145,252.5,600,SBD,Raw,3,89.4,90
+Steve Bright,M-C-Open,M,220,140,240,600,SBD,Raw,2,89.2,90
+Andy Howard,M-C-Open,M,202.5,145,252.5,600,SBD,Raw,3,89.4,90
 Ian Shaw,M-C-Open,M,200,115,272.5,587.5,SBD,Raw,4,84.7,90
-R. Glasscock,M-C-Open,M,185,142.5,220,547.5,SBD,Raw,5,88.5,90
+Russell Glasscock,M-C-Open,M,185,142.5,220,547.5,SBD,Raw,5,88.5,90
 Joe Lampshire,M-C-Open,M,265,180,290,735,SBD,Raw,1,98.5,100
 Mark Bagwell,M-C-Open,M,230,205,260,695,SBD,Raw,2,99.3,100
 R. Stone,M-C-Open,M,180,125,210,515,SBD,Raw,3,97.7,100
