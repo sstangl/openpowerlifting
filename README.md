@@ -76,7 +76,7 @@ cargo run --release
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo apt-get install curl make npm python3-bs4 python3-flake8 ansible parallel uglifyjs
+sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs
 ```
 
 
