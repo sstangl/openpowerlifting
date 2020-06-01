@@ -2230,8 +2230,10 @@ impl Federation {
             // The IPF and their affiliates developed a new federation-specific
             // formula beginning in 2019.
             PointsSystem::IPFPoints
-        } else {
+        } else if date.year() >= 1997 {
             PointsSystem::Wilks
+        } else {
+            PointsSystem::SchwartzMalone
         }
     }
 
@@ -2253,13 +2255,13 @@ impl Federation {
         match self {
             Federation::_365Strong => PointsSystem::Wilks,
             Federation::AAP => PointsSystem::Wilks,
-            Federation::AAPLF => PointsSystem::Wilks,
+            Federation::AAPLF => PointsSystem::SchwartzMalone,
             Federation::AAU => PointsSystem::Wilks,
             Federation::ACHIPO => PointsSystem::Wilks,
             Federation::ACPA => PointsSystem::Wilks,
             Federation::ADAU => PointsSystem::Wilks,
-            Federation::ADFPA => PointsSystem::Wilks,
-            Federation::ADFPF => PointsSystem::Wilks,
+            Federation::ADFPA => PointsSystem::SchwartzMalone,
+            Federation::ADFPF => PointsSystem::SchwartzMalone,
             Federation::AEP => Federation::ipf_rules_on(date),
             Federation::AFPF => PointsSystem::Wilks,
             Federation::AfricanPF => Federation::ipf_rules_on(date),
@@ -2272,7 +2274,7 @@ impl Federation {
             Federation::APU => Federation::ipf_rules_on(date),
             Federation::ArgentinaPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
-            Federation::AusDFPF => PointsSystem::Wilks,
+            Federation::AusDFPF => PointsSystem::SchwartzMalone,
             Federation::AusPF => PointsSystem::Wilks,
             Federation::AusPL => Federation::ipl_rules_on(date),
             Federation::AWF => PointsSystem::Wilks,
@@ -2368,7 +2370,7 @@ impl Federation {
             Federation::Hunpower => Federation::ipf_rules_on(date),
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
-            Federation::IDFPF => PointsSystem::Wilks,
+            Federation::IDFPF => PointsSystem::SchwartzMalone,
             Federation::IKF => PointsSystem::Wilks,
             Federation::ILPA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
@@ -2430,7 +2432,13 @@ impl Federation {
             Federation::OceaniaPO => PointsSystem::Glossbrenner,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
-            Federation::PA => PointsSystem::Wilks,
+            Federation::PA => {
+                if date.year() >= 1997 {
+                    PointsSystem::Wilks
+                } else {
+                    PointsSystem::SchwartzMalone
+                }
+            }
             Federation::PoliceAL => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
@@ -2444,7 +2452,7 @@ impl Federation {
             Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
             Federation::PZKFiTS => Federation::ipf_rules_on(date),
-            Federation::RAW => PointsSystem::Wilks,
+            Federation::RAW => PointsSystem::SchwartzMalone,
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
             Federation::RawIronPL => PointsSystem::Wilks,
