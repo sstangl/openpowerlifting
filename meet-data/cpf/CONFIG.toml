@@ -220,6 +220,7 @@
     mssacpf = {name ="M_SES_ACPF",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmacpf = {name ="M_SEM_ACPF",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
     myrcapf = {name ="M_YR_ACPF",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
+    mpracpf = {name ="M_PR_ACPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} # Police/Military
 
     foracpf = {name ="F_OR_ACPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focracpf = {name ="F_OCR_ACPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
