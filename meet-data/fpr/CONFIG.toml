@@ -88,6 +88,11 @@
     9001 = ["ExemptDivision"]
     0103 = ["ExemptWeightClassConsistency"] # Top SJ class is 110
     0207 = ["ExemptWeightClassConsistency"]
+    0208 = ["ExemptWeightClassConsistency"] # Women's 82.5+
+    0209 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0210 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0211 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0212 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
     0310 = ["ExemptWeightClassConsistency"]
     0311 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
     0314 = ["ExemptWeightClassConsistency"] # Fewer weightclasses for Women
