@@ -554,7 +554,13 @@ impl MetaFederation {
             MetaFederation::ABPU => entry.tested && MetaFederation::BPU.contains(entry, meets),
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
-            MetaFederation::APU => affiliation!(meet, entry, APU, IPF, ORPF),
+
+            //APU only formed 2018 and became IPF/ORPF affiliate at this time, without checking
+            //date we also get PA, AusPF, and AAPLF lifters in IPF/ORPF comps
+            MetaFederation::APU => {
+                affiliation!(meet, entry, APU, IPF, ORPF) && meet.date.year() >= 2018
+            }
+
             MetaFederation::BelPF => affiliation!(meet, entry, BelPF, IPF, EPF),
             MetaFederation::BP => {
                 meet.federation == Federation::BAWLA
