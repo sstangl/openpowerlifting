@@ -699,6 +699,10 @@ pub enum Federation {
     /// Powerlifting Australia, formerly IPF, now WP.
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
+    
+    /// Powerlifting Association Germany eV, WPF.
+    #[strum(to_string = "PAG", serialize = "pag")]
+    PAP,
 
     /// Powerlifting Association of the Philippines, IPF.
     #[strum(to_string = "PAP", serialize = "pap")]
@@ -1436,6 +1440,7 @@ impl Federation {
             Federation::OEVK => FULLY_TESTED,
             Federation::PA => FULLY_TESTED,
             Federation::PoliceAL => false,
+            Federation::PAG => false,
             Federation::PAP => FULLY_TESTED,
             Federation::PHPL => false,
             Federation::PI => FULLY_TESTED,
@@ -1731,6 +1736,7 @@ impl Federation {
             Federation::OEVK => Some(Country::Austria),
             Federation::PA => Some(Country::Australia),
             Federation::PoliceAL => Some(Country::USA),
+            Federation::PAG => Some(Country::Germany),
             Federation::PAP => Some(Country::Philippines),
             Federation::PHPL => Some(Country::Philippines),
             Federation::PI => Some(Country::India),
@@ -2066,6 +2072,7 @@ impl Federation {
                     Some(Federation::IPF)
                 }
             }
+            Federation::PAG => Some(Federation::WPF),
             Federation::PAP => Some(Federation::IPF),
             Federation::PHPL => Some(Federation::GPA),
             Federation::PI => Some(Federation::IPF),
@@ -2439,6 +2446,7 @@ impl Federation {
                     PointsSystem::SchwartzMalone
                 }
             }
+            Federation::PAG => PointsSystem::Wilks,
             Federation::PoliceAL => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
