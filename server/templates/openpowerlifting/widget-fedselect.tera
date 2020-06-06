@@ -204,7 +204,7 @@
   <option value="gdfpf" {% if selection.federation == "GDFPF" %}selected{% endif %}>GDFPF - German Drug-Free Powerlifting Federation [WDFPF]</option>
   <option value="gpu" {% if selection.federation == "GPU" %}selected{% endif %}>GPU - German Powerlifting Union [WPU]</option>
   <option value="grawa" {% if selection.federation == "GRAWA" %}selected{% endif %}>GRAWA - German RAW Association [IRP]</option>
-  <option value="pag" {% if selection.federation == "PAG" %}selected{% endif %}>PAG - Powerlifting Association Germany eV [WPF]</option>
+  <option value="pagermany" {% if selection.federation == "PAGermany" %}selected{% endif %}>PAGermany - Powerlifting Association Germany eV [WPF]</option>
   <option value="upc-germany" {% if selection.federation == "UPC-Germany" %}selected{% endif %}>UPC-Germany - United Powerlifting Congress [WPC/GPC/WUAP]</option>
   <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC Germany</option>
 </optgroup>
