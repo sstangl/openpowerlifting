@@ -85,7 +85,18 @@
     divisions = ["Paralympics"]
 
 [exemptions]
+    8803 = ["ExemptWeightClassConsistency"] # Men's 110+
+    8902 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
     9001 = ["ExemptDivision"]
+    9104 = ["ExemptWeightClassConsistency"] # No 48kg SJ men
+    9403 = ["ExemptWeightClassConsistency"] # No weightclasses
+    9503 = ["ExemptDivision"] # Only Masters 1 and Masters 2
+    9905 = ["ExemptDivision"] # Only Masters 1 and Masters 2
+    0004 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0006 = ["ExemptWeightClassConsistency"] # Women's 82.5+, Men's 110+
+    0007 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0008 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
+    0011 = ["ExemptDivision"] # Only Masters 1 and Masters 2
     0103 = ["ExemptWeightClassConsistency"] # Top SJ class is 110
     0109 = ["ExemptWeightClassConsistency"] # No weightclasses for Women
     0110 = ["ExemptWeightClassConsistency"] # No weightclasses for Women

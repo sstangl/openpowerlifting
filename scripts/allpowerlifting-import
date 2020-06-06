@@ -67,10 +67,19 @@ def getmeetinfo(soup):
                   'Belogorsk': 'AMU', 'Cherepovets ': 'VLG', 'Perm': 'PER',
                   'Kostroma': 'KOS', 'Samara': 'SAM', 'Zelenogorsk': 'LEN',
                   'Berdsk': 'NVS', 'Vologda': 'VLG', 'Irkutsk': 'IRK',
-                  'Noyabrsk': 'YAN'}
+                  'Noyabrsk': 'YAN', 'Krasnoyarsk': 'KYA', 'Kaluga': 'KLU',
+                  'Sayansk': 'IRK', 'Leninsk-Kuznetsky': 'KEM', 'Gai': 'ORE',
+                  'Chelyabinsk': 'CHE', 'Bogotol': 'KYA', 'Ruzayevka': 'MO',
+                  'Oryol': 'ORL', 'Yekaterinburg': 'SVE', 'Ukhta': 'KO',
+                  'Yoshkar-Ola': 'ME', 'Yaroslavl': 'YAR', 'Voskresensk': 'MOW',
+                  'Novgorod': 'NOV', 'Surgut': 'KHM', 'Myski': 'KEM',
+                  'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
-                    'Saint Petersburg': 'St. Petersburg'}
+                    'Saint Petersburg': 'St. Petersburg',
+                    'Leninsk-Kuznetskiy': 'Leninsk-Kuznetsky',
+                    'Ruzaevka': 'Ruzayevka',
+                    'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling()
