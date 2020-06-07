@@ -179,6 +179,10 @@ pub enum MetaFederation {
     #[strum(to_string = "bp")]
     BP,
 
+    /// BPC, but with international results also.
+    #[strum(to_string = "bpc")]
+    BPC,
+
     /// BPU, but with international results also.
     #[strum(to_string = "bpu")]
     BPU,
@@ -581,10 +585,17 @@ impl MetaFederation {
                     || (meet.federation == Federation::WDFPF
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
             }
+            MetaFederation::BPC => {
+                meet.federation == Federation::BPC
+                    || (meet.federation == Federation::WPC
+                        && entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                        && meet.date.year() <= 2012)
+            }
             MetaFederation::BPU => {
                 meet.federation == Federation::BPU
                     || (meet.federation == Federation::WPC
-                        && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
+                        && entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                        && meet.date.year() >= 2013)
             }
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
@@ -683,14 +694,13 @@ impl MetaFederation {
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
 
-            // Only include USA entries for meets directly affiliated with USAPL at any time, 
-            // or USA entries for NAPF/IPF meets after USAPL became IPF affiliate on 5 Dec 1997 
+            // Only include USA entries for meets directly affiliated with USAPL at any time,
+            // or USA entries for NAPF/IPF meets after USAPL became IPF affiliate on 5 Dec 1997
             MetaFederation::USAPL => {
-                is_from(Country::USA, entry, meet) && 
-                    (
-                        meet.federation == Federation::USAPL || 
-                        ((meet.federation == NAPF || meet.federation == IPF) && meet.date >= Date::from_parts(1997, 12, 05))
-                    )
+                is_from(Country::USA, entry, meet)
+                    && (meet.federation == Federation::USAPL
+                        || ((meet.federation == NAPF || meet.federation == IPF)
+                            && meet.date >= Date::from_parts(1997, 12, 05)))
             }
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {

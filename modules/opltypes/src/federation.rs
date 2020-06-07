@@ -699,7 +699,7 @@ pub enum Federation {
     /// Powerlifting Australia, formerly IPF, now WP.
     #[strum(to_string = "PA", serialize = "pa")]
     PA,
-    
+
     /// Powerlifting Association Germany eV, WPF.
     #[strum(to_string = "PAGermany", serialize = "pagermany")]
     PAGermany,
