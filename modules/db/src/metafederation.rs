@@ -682,7 +682,16 @@ impl MetaFederation {
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
-            MetaFederation::USAPL => affiliation!(meet, entry, USAPL, IPF, NAPF),
+
+            // Only include USA entries for meets directly affiliated with USAPL at any time, 
+            // or USA entries for NAPF/IPF meets after USAPL became IPF affiliate on 5 Dec 1997 
+            MetaFederation::USAPL => {
+                is_from(Country::USA, entry, meet) && 
+                    (
+                        meet.federation == Federation::USAPL || 
+                        ((meet.federation == NAPF || meet.federation == IPF) && meet.date >= Date::from_parts(1997, 12, 05))
+                    )
+            }
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
