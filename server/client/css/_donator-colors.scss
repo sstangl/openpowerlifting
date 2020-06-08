@@ -129,6 +129,11 @@
   @include name-color(#006400);
 }
 
+// Strong Geelong's orange shade, for James W
+.strong_geelong_orange {
+  @include name-color(#FF6900);
+}
+
 // Rainbow with light colors, to be readable against a dark background.
 .rainbow {
   @include gradient-prereqs(#FF80AB);
