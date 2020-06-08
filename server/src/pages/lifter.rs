@@ -392,17 +392,19 @@ impl<'a> Context<'a> {
                 break;
             }
         }
-        let lifter_sex = if !entries.is_empty() && consistent_sex {
-            locale.strings.translate_sex(entries[0].sex)
-        } else {
-            "?"
-        };
 
         // Filter and sort the entries, oldest entries first.
         if let Some(f) = entry_filter {
             entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
         }
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+
+
+        // Display sex information from the most recent meet.
+        let lifter_sex = match entries.last() {
+            Some(entry) => locale.strings.translate_sex(entry.sex),
+            None => "?",
+        };
 
         let bests = calculate_bests(&locale, points_system, &entries);
 

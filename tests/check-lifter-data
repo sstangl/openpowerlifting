@@ -244,6 +244,37 @@ def check_name_disambiguation(names):
                        " but only %s variants are known." % (filename, name, count))
 
 
+def check_sex_exemptions(all_names):
+
+    filename = 'sex-exemptions.csv'
+
+    # currently only one column but leaving csv logic in place
+    # so more can be added
+    csv = oplcsv.Csv(os.path.join('lifter-data', filename))
+
+    if ','.join(csv.fieldnames) != "Name":
+        perror("%s: CSV column names are wrong" % filename)
+        return
+
+    # sets match fastest in python
+    seenset = set()
+    all_name_set = set(all_names)
+
+    for (name,) in csv.rows:
+
+        # check for names in this file that aren't in the DB
+        if name not in all_name_set:
+            perror("%s: Name '%s' seen, but is not in database" % (filename, name))
+            continue
+
+        # each name can only occur once
+        if name in seenset:
+            perror("%s: Name '%s' occurs more than once." % (filename, name))
+
+        else:
+            seenset.add(name)
+
+
 def main():
     global hitError
 
@@ -253,6 +284,7 @@ def main():
     check_social_media(names)
     check_name_corrections(names)
     check_name_disambiguation(names)
+    check_sex_exemptions(names)
 
     if hitError:
         return 1
