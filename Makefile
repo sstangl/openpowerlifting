@@ -36,11 +36,13 @@ server: csv
 	$(MAKE) -C server
 
 # Make sure that all the fields in the CSV files are in expected formats.
-check:
+check-data:
 	cargo run --bin checker
 	tests/check-sex-consistency
 	tests/check-lifter-data
 	tests/check-duplicates
+
+check: check-data
 	tests/check-python-style
 
 # Run all probes in a quick mode that only shows a few pending meets.
