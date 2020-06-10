@@ -5,6 +5,10 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
+# on Ubuntu:
+# sudo apt-get install python3-pip firefox-geckodriver
+# sudo pip3 install selenium
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -68,7 +72,7 @@ def getmeetinfo(soup):
 
     name = soup.find('h1', {'class': 'entry-title'}).text
     state = soup.find('span', {'class': 'meta-category'}).a['class'][0].upper()
-    date = soup.find('span', {'class': 'meta-date date updated'}).text
+    date = soup.find('span', {'class': 'meta-date date published'}).text
 
     if state == 'NATIONAL':
         state = ''
