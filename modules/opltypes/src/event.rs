@@ -51,9 +51,9 @@ impl Event {
     ///
     /// ```
     /// # use opltypes::Event;
-    /// assert!(Event::sb().has_squat());
-    /// assert!(Event::sb().has_bench());
-    /// assert!(!Event::sb().has_deadlift());
+    /// assert_eq!(Event::sb().has_squat(), true);
+    /// assert_eq!(Event::sb().has_bench(), true);
+    /// assert_eq!(Event::sb().has_deadlift(), false);
     /// ```
     #[inline(always)]
     pub const fn sb() -> Event {
@@ -66,9 +66,9 @@ impl Event {
     ///
     /// ```
     /// # use opltypes::Event;
-    /// assert!(Event::sd().has_squat());
-    /// assert!(!Event::sd().has_bench());
-    /// assert!(Event::sd().has_deadlift());
+    /// assert_eq!(Event::sd().has_squat(), true);
+    /// assert_eq!(Event::sd().has_bench(), false);
+    /// assert_eq!(Event::sd().has_deadlift(), true);
     /// ```
     #[inline(always)]
     pub const fn sd() -> Event {
@@ -120,9 +120,9 @@ impl Event {
     ///
     /// ```
     /// # use opltypes::Event;
-    /// assert!(Event::sbd().has_push_pull());
-    /// assert!(Event::bd().has_push_pull());
-    /// assert!(!Event::d().has_push_pull());
+    /// assert_eq!(Event::sbd().has_push_pull(), true);
+    /// assert_eq!(Event::bd().has_push_pull(), true);
+    /// assert_eq!(Event::d().has_push_pull(), false);
     /// ```
     #[inline]
     pub fn has_push_pull(self) -> bool {
