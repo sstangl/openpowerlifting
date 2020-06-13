@@ -273,6 +273,7 @@
     sex = "F"
 
 [exemptions]
+    LA-2010-01-16 = ["ExemptWeightClassConsistency"] #LW,MW,HW for women
     NS-1997-04-26 = ["ExemptWeightClassConsistency"] #Uses ADFPA weightclasses
     WA-2013-02-23 = ["ExemptWeightClassConsistency"] #New weightclasses
     OH-2015-03-08 = ["ExemptWeightClassConsistency"] #New weightclasses
