@@ -431,6 +431,38 @@ fn main() -> Result<(), Box<dyn Error>> {
     let liftermap = meetdata.create_liftermap();
     for lifter_indices in liftermap.values() {
         let name = &meetdata.get_entry(lifter_indices[0]).name;
+
+        // Check for sex errors.
+        //
+        // Skip over users with lastname-only or initial-plus-lastname.
+        if name.contains(' ')
+            && name.chars().skip(1).take(1).collect::<Vec<char>>() != ['.']
+        {
+            let expected_sex = meetdata.get_entry(lifter_indices[0]).sex;
+            for index in lifter_indices.iter().skip(1) {
+                let sex = meetdata.get_entry(*index).sex;
+                if sex != expected_sex {
+                    let mut suppress_error = false;
+
+                    let username = &meetdata.get_entry(*index).username;
+                    if let Some(data) = lifterdata.get(username) {
+                        if data.exempt_sex {
+                            suppress_error = true;
+                        }
+                    }
+
+                    if !suppress_error {
+                        let url =
+                            format!("https://www.openpowerlifting.org/u/{}", username);
+                        let msg = format!("Sex conflict for '{}' - {}", name, url);
+                        println!(" {}", msg.bold().red());
+                        error_count += 1;
+                    }
+                    break;
+                }
+            }
+        }
+
         let mut japanesename = &meetdata.get_entry(lifter_indices[0]).japanesename;
 
         for index in lifter_indices.iter().skip(1) {

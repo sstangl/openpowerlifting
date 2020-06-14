@@ -37,6 +37,12 @@ pub struct LifterData {
 
     /// Number of known lifters sharing the same username.
     pub disambiguation_count: u32,
+
+    /// True iff a sex conflict with this username is expected.
+    ///
+    /// This is used to suppress errors where one lifter is marked as two
+    /// conflicting sexes, in cases where we know that the data is correct.
+    pub exempt_sex: bool,
 }
 
 /// Helper function to look for common whitespace errors.
@@ -158,6 +164,58 @@ fn check_flair(
             None => {
                 let mut data = LifterData::default();
                 data.flair = Some(row.flair);
+                map.insert(username, data);
+            }
+        }
+    }
+
+    Ok(())
+}
+
+/// Specifies lifters for whom sex conflict errors should be suppressed.
+///
+/// The data exists in `lifter-data/sex-exemptions.csv`.
+#[derive(Deserialize)]
+struct SexExemptionsRow {
+    #[serde(rename = "Name")]
+    pub name: String,
+}
+
+/// Checks `lifter-data/sex-exemptions.csv`, mutating the LifterDataMap.
+fn check_sex_exemptions(
+    report: &mut Report,
+    map: &mut LifterDataMap,
+) -> Result<(), Box<dyn Error>> {
+    if !report.path.exists() {
+        report.error("File does not exist");
+        return Ok(());
+    }
+
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .terminator(csv::Terminator::Any(b'\n'))
+        .from_path(&report.path)?;
+
+    for (rownum, result) in rdr.deserialize().enumerate() {
+        // Text editors are one-indexed, and the header line was skipped.
+        let line = (rownum as u64) + 2;
+
+        let row: SexExemptionsRow = result?;
+        let username = match make_username(&row.name) {
+            Ok(s) => s,
+            Err(s) => {
+                report.error_on(line, s);
+                continue;
+            }
+        };
+
+        match map.get_mut(&username) {
+            Some(data) => {
+                data.exempt_sex = true;
+            }
+            None => {
+                let mut data = LifterData::default();
+                data.exempt_sex = true;
                 map.insert(username, data);
             }
         }
@@ -379,6 +437,18 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
     // Check flair.csv.
     let mut report = Report::new(lifterdir.join("flair.csv"));
     match check_flair(&mut report, &mut map) {
+        Ok(()) => (),
+        Err(e) => {
+            report.error(e);
+        }
+    }
+    if report.has_messages() {
+        reports.push(report)
+    }
+
+    // Check sex-exemptions.csv.
+    let mut report = Report::new(lifterdir.join("sex-exemptions.csv"));
+    match check_sex_exemptions(&mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

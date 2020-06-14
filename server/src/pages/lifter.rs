@@ -399,7 +399,6 @@ impl<'a> Context<'a> {
         }
         entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
 
-
         // Display sex information from the most recent meet.
         let lifter_sex = match entries.last() {
             Some(entry) => locale.strings.translate_sex(entry.sex),
