@@ -91,6 +91,7 @@ def check_duplicates(entriespath, meetpath):
             left = prettify_path(MeetHash[name_date][2])
             right = prettify_path(entriespath)
             pwarning("Duplicate meets: %s, %s." % (left, right))
+            print(name_date)
             break
 
 
