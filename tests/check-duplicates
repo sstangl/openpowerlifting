@@ -74,20 +74,24 @@ def check_duplicates(entriespath, meetpath):
 
     nameidx = entriescsv.index('Name')
     totalidx = entriescsv.index('TotalKg')
+    eventidx = entriescsv.index('Event')
 
     for row in entriescsv.rows:
         name = row[nameidx]
         total = row[totalidx]
+        event = row[eventidx]
 
         name_date = name + meetdate
 
         if name_date not in MeetHash:
-            MeetHash[name_date] = (total, entriespath)
+            MeetHash[name_date] = (total, event, entriespath)
         elif (total != '' and MeetHash[name_date][0] == total and
-                MeetHash[name_date][1] != entriespath):
-            left = prettify_path(MeetHash[name_date][1])
+                MeetHash[name_date][1] == event and
+                MeetHash[name_date][2] != entriespath):
+            left = prettify_path(MeetHash[name_date][2])
             right = prettify_path(entriespath)
             pwarning("Duplicate meets: %s, %s." % (left, right))
+            print(name_date)
             break
 
 
