@@ -1,514 +1,249 @@
-Place,Name,BirthDate,BirthYear,Team,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Sex,Division,Event,Equipment
-1,Chhaya,1999-06-30,,DEL,47,44.3,50,-55,-57.5,50,50,F,Open,B,Raw
-2,Fatema Dhoondia,1989-02-19,,MAH,47,45.3,40,42.5,45,45,45,F,Open,B,Raw
-3,Manisha Sharma,1994-08-01,,UP,47,44.5,35,37.5,-40,37.5,37.5,F,Open,B,Raw
-4,N. Sunita Devi,1980-09-17,,MNP,47,44.1,25,27.5,-35,27.5,27.5,F,Open,B,Raw
-DQ,Radha Kumari,1987-02-05,,J & K,47,47,,,,,,F,Open,B,Raw
-1,Akshatha Poojarthy,1986-06-01,,KTK,52,52,65,67.5,70,70,70,F,Open,B,Raw
-2,Shrvari Inamdar,1983-02-21,,MAH,52,51.7,55,60,-67.5,60,60,F,Open,B,Raw
-3,Deeksha Sharma,1991-12-21,,UP,52,48,40,-42.5,-42.5,40,40,F,Open,B,Raw
-1,Sudha Kumari,1979-01-06,,BIH,57,55.1,75,82.5,85,85,85,F,Open,B,Raw
-2,Nidhi Singh Patel,1990-07-07,,UP,57,56.7,70,75,-80,75,75,F,Open,B,Raw
-3,Rajani Upadhayay,1979-08-11,,RAJ,57,55.9,65,70,72.5,72.5,72.5,F,Open,B,Raw
-4,Sargam Chouhan,1997-06-15,,MP,57,55.7,62.5,67.5,-70,67.5,67.5,F,Open,B,Raw
-5,Apoorvi Sharma,1994-06-07,,J & K,57,55.3,55,60,-62.5,60,60,F,Open,B,Raw
-6,Trupti Sawant,1985-05-03,,MAH,57,54.7,40,45,47.5,47.5,47.5,F,Open,B,Raw
-7,Moirangthem Anupama Devi,1994-05-01,,MNP,57,53.9,30,,,30,30,F,Open,B,Raw
-1,Chandra Badani Mohanta,1993-06-23,,ODI,63,63,70,77.5,80,80,80,F,Open,B,Raw
-2,Kulwinder Kaur,1982-05-15,,PUN,63,59.2,62.5,-72.5,77.5,77.5,77.5,F,Open,B,Raw
-3,Anjali Sharma,1999-05-25,,RAJ,63,62.8,65,70,-75,70,70,F,Open,B,Raw
-4,Tapasi Chakraborty,1985-12-04,,WB,63,60.2,50,57.5,,57.5,57.5,F,Open,B,Raw
-5,Gauri Shinde,1991-05-17,,MAH,63,59.6,-50,50,-55,50,50,F,Open,B,Raw
-6,Pallavi Thakur,1993-10-19,,MAH,63,59.6,42.5,-47.5,47.5,47.5,47.5,F,Open,B,Raw
-7,Monika Sharma,1986-02-02,,J & K,63,61.2,40,,,40,40,F,Open,B,Raw
-8,Savita Nirmalkar,1985-05-06,,CHT,63,62.1,20,25,27.5,27.5,27.5,F,Open,B,Raw
-1,Bithika Mondal,1992-09-12,,WB,72,68.3,70,72.5,-75,72.5,72.5,F,Open,B,Raw
-2,Iti Sehgal,1983-09-02,,DEL,72,71.5,62.5,65,67.5,67.5,67.5,F,Open,B,Raw
-3,Prajakta Bhosale,1997-03-21,,MAH,72,71.5,57.5,62.5,65,65,65,F,Open,B,Raw
-4,Sonia Sharma,1985-02-26,,HAR,72,66.9,57.5,-60,-62.5,57.5,57.5,F,Open,B,Raw
-5,Malvi Gupta,1990-02-28,,J & K,72,68.2,47.5,52.5,-57.5,52.5,52.5,F,Open,B,Raw
-6,Meghna Gore,1993-07-23,,MP,72,69.9,-30,30,42.5,42.5,42.5,F,Open,B,Raw
-1,Juhi Gupta,1993-10-05,,J & K,84,76.5,60,65,-70,65,65,F,Open,B,Raw
-2,Nileema Minz,1993-09-28,,JHR,84,83,65,-70,-70,65,65,F,Open,B,Raw
-3,Raj Kumari Yadav,1981-08-15,,RAJ,84,79.4,55,60,62.5,62.5,62.5,F,Open,B,Raw
-4,Libas P. Bava,1984-02-27,,KER,84,80.7,55,60,-67.5,60,60,F,Open,B,Raw
-5,Chaitali Bar,1986-10-05,,WB,84,84,55,60,-62.5,60,60,F,Open,B,Raw
-6,Sneha Shinde,1996-03-14,,MAH,84,72.9,52.5,55,-60,55,55,F,Open,B,Raw
-7,Sathi Bharathi,1980-08-29,,KTK,84,79.5,42.5,47.5,-50,47.5,47.5,F,Open,B,Raw
-8,Manisha Grover,1984-08-04,,DEL,84,75.8,40,42.5,45,45,45,F,Open,B,Raw
-9,Manisha Girap,1981-12-30,,GOA,84,78,35,40,-45,40,40,F,Open,B,Raw
-1,Beuty Bhattacharjee,1987-07-26,,JHR,84+,92.7,65,70,-72.5,70,70,F,Open,B,Raw
-2,Saswati Behera,1985-03-03,,DEL,84+,86.9,45,50,52.5,52.5,52.5,F,Open,B,Raw
-3,Upasana Mahajan,1989-08-15,,J & K,84+,122,50,-52.5,-52.5,50,50,F,Open,B,Raw
-1,Humanshi Gurjar,2003-09-06,,RAJ,43,42.3,45,47.5,50,50,50,F,Sub-Juniors,B,Raw
-2,Rohini Modak,2002-11-01,,MAH,43,41.5,30,32.5,-35,32.5,32.5,F,Sub-Juniors,B,Raw
-3,Vipasha Dadhich,2004-01-14,,RAJ,43,40,22.5,25,-30,25,25,F,Sub-Juniors,B,Raw
-1,Sayma,2001-04-23,,DEL,47,45,40,42.5,-45,42.5,42.5,F,Sub-Juniors,B,Raw
-2,Mahi Chouhan,2004-04-30,,RAJ,47,45.3,35,42.5,-45,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Vaishnavi Chavan,2002-11-13,,MAH,47,47,35,-40,-40,35,35,F,Sub-Juniors,B,Raw
-4,Tabassum Mansuri,2000-12-07,,MP,47,46,-32.5,32.5,-37.5,32.5,32.5,F,Sub-Juniors,B,Raw
-DQ,Jai Shree,2001-09-26,,RAJ,47,44.7,-20,-20,-20,,,F,Sub-Juniors,B,Raw
-1,Mamta Choudhary,2000-10-06,,RAJ,52,49.9,45,47.5,-50,47.5,47.5,F,Sub-Juniors,B,Raw
-2,Priyal Rathod,2004-12-06,,MAH,52,51,40,42.5,-45,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Adity Khurana,2004-10-20,,J&K,52,49.4,35,37.5,40,40,40,F,Sub-Juniors,B,Raw
-4,Sanasam Chaoba Devi,2004-10-20,,MNP,52,51.6,37.5,-40,40,40,40,F,Sub-Juniors,B,Raw
-5,Rishitaa Jain,2003-04-19,,DEL,52,51.3,30,-35,-35,30,30,F,Sub-Juniors,B,Raw
-6,Mahek,2006-10-17,,DEL,52,48.6,25,27.5,-30,27.5,27.5,F,Sub-Juniors,B,Raw
-DQ,Ritu Sharma,2001-05-17,,HAR,52,50.2,-20,,,,,F,Sub-Juniors,B,Raw
-1,Vaishnavi D K,2000-10-30,,KTK,57,57,45,50,-52.5,50,50,F,Sub-Juniors,B,Raw
-2,Niketa,2002-02-11,,DEL,57,55.5,40,42.5,-50,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Ajnu,2000-01-01,,RAJ,57,54.1,35,40,-42.5,40,40,F,Sub-Juniors,B,Raw
-4,Archita Sidhant Shirodkar,2004-02-10,,GOA,57,54.6,40,-42.5,-45,40,40,F,Sub-Juniors,B,Raw
-5,Riya Kaushal,2006-01-01,,MP,57,53.4,30,-35,-35,30,30,F,Sub-Juniors,B,Raw
-6,Prerna Rawane,2003-06-07,,MAH,57,53.6,30,-32.5,-35,30,30,F,Sub-Juniors,B,Raw
-7,Simran Mujawar,2000-11-24,,GOA,57,56.4,25,27.5,-30,27.5,27.5,F,Sub-Juniors,B,Raw
-1,Venizeia Carlo,2000-07-02,,KTK,63,62.2,55,62.5,-67.5,62.5,62.5,F,Sub-Juniors,B,Raw
-2,Celestina Antoniette Rebello,2000-06-23,,KER,63,61.1,40,42.5,-45,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Prashnthi Moodamanasu,2000-03-30,,MAH,63,61.2,32.5,35,37.5,37.5,37.5,F,Sub-Juniors,B,Raw
-4,Muskan,2000-09-26,,DEL,63,61.1,30,-35,-37.5,30,30,F,Sub-Juniors,B,Raw
-1,Palak Chhangani,2000-08-31,,MP,72,66.1,37.5,42.5,-45,42.5,42.5,F,Sub-Juniors,B,Raw
-2,Anjali Pawde,2000-05-31,,MAH,72,68.4,40,42.5,-47.5,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Nikita Rajput,2001-08-15,,MP,72,70.1,30,35,-40,35,35,F,Sub-Juniors,B,Raw
-4,Pratibha Prajapat,2003-02-24,,RAJ,72,71.6,30,32.5,-37.5,32.5,32.5,F,Sub-Juniors,B,Raw
-5,Varsha,2004-05-20,,DEL,72,67.1,25,-27.5,27.5,27.5,27.5,F,Sub-Juniors,B,Raw
-1,Diksha Sain,2000-03-30,,DEL,84,82.2,77.5,85,95,95,95,F,Sub-Juniors,B,Raw
-2,Disha N,2000-09-14,,KTK,84,75.3,30,-40,,30,30,F,Sub-Juniors,B,Raw
-1,Malvika Sahane,2002-03-26,,MAH,84+,99.4,37.5,42.5,45,45,45,F,Sub-Juniors,B,Raw
-2,Panchami,2004-02-25,,KTK,84+,103,40,42.5,-47.5,42.5,42.5,F,Sub-Juniors,B,Raw
-3,Purvi Sharma,2002-08-24,,MP,84+,95.2,-25,25,35,35,35,F,Sub-Juniors,B,Raw
-4,Anuradha,2000-08-10,,HAR,84+,85,25,30,-35,30,30,F,Sub-Juniors,B,Raw
-1,Sehej Maini,1997-04-25,,MAH,43,43,40,42.5,-45,42.5,42.5,F,Juniors,B,Raw
-2,Priti Yadav,1998-01-04,,UP,43,42.2,30,35,-37.5,35,35,F,Juniors,B,Raw
-3,Sushmitha G,1997-08-28,,KTK,43,40.1,27.5,32.5,-35,32.5,32.5,F,Juniors,B,Raw
-4,Sushmitha D,1997-11-09,,KTK,43,43,25,27.5,-30,27.5,27.5,F,Juniors,B,Raw
-1,Sushmita Deshmukh,1996-11-06,,MAH,47,46.6,55,57.5,-60,57.5,57.5,F,Juniors,B,Raw
-2,Chhaya,1999-06-30,,DEL,47,44.3,50,-55,-57.5,50,50,F,Juniors,B,Raw
-3,Sakshi,1998-03-02,,UP,47,44.2,42.5,45,-50,45,45,F,Juniors,B,Raw
-4,Aayushi Yadav,1999-03-31,,MP,47,45,32.5,37.5,-42.5,37.5,37.5,F,Juniors,B,Raw
-5,Anjali P. Sangle,1999-07-08,,GUJ,47,43.5,30,35,-40,35,35,F,Juniors,B,Raw
-6,Bindu J R,1998-04-01,,KTK,47,47,25,35,-37.5,35,35,F,Juniors,B,Raw
-7,Sanasam Sonia,1998-12-25,,MNP,47,45,25,,,25,25,F,Juniors,B,Raw
-1,Kajal.B.Vaghela,1996-08-11,,GUJ,52,52,45,50,55,55,55,F,Juniors,B,Raw
-2,Bharosa Ved,1996-07-20,,RAJ,52,50,42.5,45,52.5,52.5,52.5,F,Juniors,B,Raw
-3,Neema Kumari,1997-01-06,,KTK,52,49,45,50,-55,50,50,F,Juniors,B,Raw
-4,Kriti Kumari,1998-11-07,,KER,52,49.9,50,-52.5,-52.5,50,50,F,Juniors,B,Raw
-5,Anjani Bari,1998-06-19,,JHR,52,52,45,-47.5,-47.5,45,45,F,Juniors,B,Raw
-6,Renuka Gautam,1998-08-05,,UP,52,51.1,40,-45,-45,40,40,F,Juniors,B,Raw
-7,Mamta Mallah,1999-12-12,,MAH,52,51.5,30,32.5,-37.5,32.5,32.5,F,Juniors,B,Raw
-1,Jyoti Singh,1997-01-01,,UP,57,56.2,45,47.5,50,50,50,F,Juniors,B,Raw
-2,Swathi. U.K,1997-03-27,,KTK,57,56.2,40,45,-50,45,45,F,Juniors,B,Raw
-3,Aishwarya Bodke,1999-03-16,,MAH,57,56,40,-42.5,-42.5,40,40,F,Juniors,B,Raw
-4,Nirma Mali,1997-01-01,,RAJ,57,52.1,30,35,-40,35,35,F,Juniors,B,Raw
-5,Dimple Parihar,1999-09-07,,RAJ,57,55.4,32.5,-40,-42.5,32.5,32.5,F,Juniors,B,Raw
-6,Sahiba,1999-06-19,,HAR,57,52.3,20,,,20,20,F,Juniors,B,Raw
-1,Madhavi Bilochan,1996-05-21,,JHR,63,57.3,65,75,-77.5,75,75,F,Juniors,B,Raw
-2,Anjali Sharma,1999-05-25,,RAJ,63,,65,70,-75,70,70,F,Juniors,B,Raw
-3,Aditi Parshetty,2002-03-26,,MAH,63,60.6,45,50,52.5,52.5,52.5,F,Juniors,B,Raw
-4,Aakansha Sahu,1995-06-23,,MP,63,61.4,25,35,40,40,40,F,Juniors,B,Raw
-5,Kriti,1995-11-01,,HAR,63,60.9,25,27.5,-30,27.5,27.5,F,Juniors,B,Raw
-1,Prajkta Bhosle,1997-03-21,,MAH,72,71.5,57.5,62.5,65,65,65,F,Juniors,B,Raw
-2,Chandrakala Salvi,1999-08-31,,MAH,72,67.7,50,52.5,-55,52.5,52.5,F,Juniors,B,Raw
-3,Monalisa Sardar,1999-01-05,,WB,72,72,45,50,-52.5,50,50,F,Juniors,B,Raw
-4,Priya Patel,1999-02-24,,MP,72,70.1,30,35,-37.5,35,35,F,Juniors,B,Raw
-5,Renu Sharma,1999-09-15,,HAR,72,64.2,25,27.5,-32.5,27.5,27.5,F,Juniors,B,Raw
-1,Manisha Ekka,1995-10-25,,JHR,84,80.4,67.5,-75,75,75,75,F,Juniors,B,Raw
-2,Sneha Shinde,1996-03-14,,MAH,84,72.9,52.5,55,-60,55,55,F,Juniors,B,Raw
-3,Mahima Bhati,1997-08-02,,MP,84,74.9,45,47.5,50,50,50,F,Juniors,B,Raw
-1,Jagrati Junaniya,1998-08-06,,MP,84+,87.4,52.5,57.5,-62.5,57.5,57.5,F,Juniors,B,Raw
-2,Rachael Noranha,1999-12-08,,KTK,84+,109.3,40,-47.5,47.5,47.5,47.5,F,Juniors,B,Raw
-1,Irom Premabati Devi,1974-08-15,,MNP,47,47,-20,20,-25,20,20,F,Masters 1,B,Raw
-1,Archana Jain,1974-04-10,,DEL,52,51.5,42.5,45,-47.5,45,45,F,Masters 1,B,Raw
-1,Ng. Tombi Devi,1969-01-01,,MNP,57,57,35,42.5,-45,42.5,42.5,F,Masters 1,B,Raw
-2,Suvarna Shinde,1976-10-05,,MAH,57,52.9,35,40,-42.5,40,40,F,Masters 1,B,Raw
-1,Faye Cummings,1972-03-25,,MAH,63,60.7,45,-47.5,47.5,47.5,47.5,F,Masters 1,B,Raw
-2,Vilma Saldanha,1970-12-02,,MAH,63,60.4,45,-50,-50,45,45,F,Masters 1,B,Raw
-3,M. Ibemcha Devi,1976-01-01,,MNP,63,62.5,27.5,32.5,-37.5,32.5,32.5,F,Masters 1,B,Raw
-1,Rohini Bansal,1976-07-05,,MAH,72,69.9,62.5,65,67.5,67.5,67.5,F,Masters 1,B,Raw
-2,Ranjita Mishra,1972-03-23,,MAH,72,70.2,57.5,62.5,-70,62.5,62.5,F,Masters 1,B,Raw
-3,Deepa K S,1978-03-28,,KTK,72,69.8,40,45,-47.5,45,45,F,Masters 1,B,Raw
-4,Aarti Jain,1976-11-06,,DEL,72,69.5,37.5,40,42.5,42.5,42.5,F,Masters 1,B,Raw
-5,Manisha Shukla,1978-11-29,,UP,72,66.6,30,-35,,30,30,F,Masters 1,B,Raw
-6,N. Ibechaobi Devi,1974-03-01,,MNP,72,64.4,25,27.5,-35,27.5,27.5,F,Masters 1,B,Raw
-1,Rohini Gohri,1977-04-01,,DEL,84,77.1,55,57.5,-62.5,57.5,57.5,F,Masters 1,B,Raw
-2,Disha Sahani,1976-10-18,,MAH,84,84,22.5,25,27.5,27.5,27.5,F,Masters 1,B,Raw
-1,Poonam Duneja,1974-12-08,,DEL,84+,90.2,-50,50,55,55,55,F,Masters 1,B,Raw
-1,Seema Verma,1966-06-01,,MP,57,57,60,65,-67.5,65,65,F,Masters 2,B,Raw
-2,Vinutha Raghunath,1968-04-22,,MAH,57,55,45,47.5,50,50,50,F,Masters 2,B,Raw
-3,Regina Dourado,1965-02-03,,GOA,57,53,25,30,-32.5,30,30,F,Masters 2,B,Raw
-DQ,W. Ibemhal Devi,1962-02-01,,MNP,63,57.8,-20,-20,-20,,,F,Masters 2,B,Raw
-1,Gayatri Tomar,1966-11-04,,MP,84,82.1,50,55,-60,55,55,F,Masters 2,B,Raw
-2,H. Ibempishak Devi,1965-03-01,,MNP,84,84,20,-25,-25,20,20,F,Masters 2,B,Raw
-1,Purna Bharde,1958-07-28,,MAH,72,65.9,20,30,32.5,32.5,32.5,F,Masters 3,B,Raw
-1,Sushila Devi,1950-12-10,,RAJ,84,82.4,30,35,-40,35,35,F,Masters 3,B,Raw
-1,Anuja Tendolkar,1958-01-10,,MAH,84+,101.2,52.5,60,65,65,65,F,Masters 3,B,Raw
-1,Manish Gupta,1990-05-11,,UP,59,57.9,120,127.5,130,130,130,M,Open,B,Raw
-2,Sawan Kumar,1995-05-02,,J&K,59,58.2,122.5,127.5,130,130,130,M,Open,B,Raw
-3,Chandrashekara S K,1983-05-22,,KTK,59,58.9,120,125,-130,125,125,M,Open,B,Raw
-4,Thirthesha M.K,1992-10-15,,KTK,59,58.3,100,105,107.5,107.5,107.5,M,Open,B,Raw
-5,Rajesh Richhariya,1998-07-12,,MP,59,58.5,90,95,-100,95,95,M,Open,B,Raw
-6,Ranjeet Kumar,1991-06-07,,JHR,59,52.8,85,-90,-90,85,85,M,Open,B,Raw
-7,Parmar Ashok Kumar.K,1986-09-20,,GUJ,59,57.2,75,85,-90,85,85,M,Open,B,Raw
-1,Bichitra Nayak,1993-07-07,,ODI,66,65.1,135,-140,140,140,140,M,Open,B,Raw
-2,Nilesh Patil,1993-03-23,,MAH,66,65,122.5,130,-135,130,130,M,Open,B,Raw
-4,Priyarenjan P,1990-05-02,,KER,66,63.8,115,125,-130,125,125,M,Open,B,Raw
-3,Vimlesh Sonkar,1990-03-10,,UP,66,64.6,110,120,125,125,125,M,Open,B,Raw
-5,Mohammad Abid,1993-05-02,,ODI,66,66,112.5,120,-127.5,120,120,M,Open,B,Raw
-6,Solanki Kailash.A,1994-10-15,,GUJ,66,65.1,85,102.5,110,110,110,M,Open,B,Raw
-7,V.M.Gangadhar,1989-06-01,,AP,66,64.3,85,-95,95,95,95,M,Open,B,Raw
-8,Alipeer,1988-06-02,,AP,66,65.2,80,87.5,92.5,92.5,92.5,M,Open,B,Raw
-1,Md. Harish Tausif,1994-06-24,,BIH,74,72.8,147.5,150,-152.5,150,150,M,Open,B,Raw
-2,Akshay Shanmughan,1992-03-23,,MAH,74,70,140,145,-147.5,145,145,M,Open,B,Raw
-3,P. Ramesh,1984-06-04,,TN,74,72.5,145,-150,-150,145,145,M,Open,B,Raw
-4,Pradeep Kumar,1988-05-04,,KTK,74,74,142.5,-145,-147.5,142.5,142.5,M,Open,B,Raw
-5,Pankaj Chib,1994-06-10,,J&K,74,73.7,137.5,-145,-150,137.5,137.5,M,Open,B,Raw
-6,Sunil Nagori,1976-02-07,,RAJ,74,67.8,110,117.5,130,130,130,M,Open,B,Raw
-7,Abdul Salam K,1990-03-31,,KER,74,68.9,130,-145,,130,130,M,Open,B,Raw
-8,Aslam Khan,1993-06-20,,MP,74,71.7,125,130,-132.5,130,130,M,Open,B,Raw
-9,Rakesh Singh,1999-10-10,,UP,74,70.8,120,122.5,125,125,125,M,Open,B,Raw
-10,Naresh Kumar,1999-10-15,,HAR,74,71.3,110,-112.5,-112.5,110,110,M,Open,B,Raw
-11,Shaik Allah Bakshi,1991-02-23,,AP,74,72.5,110,-117.5,-117.5,110,110,M,Open,B,Raw
-12,C. Venkata Anand,1997-09-21,,AP,74,72.8,90,92.5,95,95,95,M,Open,B,Raw
-1,Rakesh Kumar Satapathy,1987-07-04,,ODI,83,82.5,150,160,165,165,165,M,Open,B,Raw
-2,Sajad Hussain,1986-11-12,,J&K,83,82.3,145,152.5,157.5,157.5,157.5,M,Open,B,Raw
-3,Mahendar Kumar Singh,1989-11-23,,JHR,83,81.9,150,155,-160,155,155,M,Open,B,Raw
-4,Hement Kumar Mohnot,1988-11-28,,RAJ,83,82.2,145,-152.5,-152.5,145,145,M,Open,B,Raw
-5,Shivam Yadav,1993-01-01,,MP,83,80.3,127.5,135,-140,135,135,M,Open,B,Raw
-6,Kannan.K,1985-05-23,,KER,83,81.2,125,135,-145,135,135,M,Open,B,Raw
-7,Jibin Verghese,1986-03-31,,KTK,83,82.5,130,135,-150,135,135,M,Open,B,Raw
-8,Chand Singh,1989-02-13,,PUN,83,81.8,132.5,-137.5,-140,132.5,132.5,M,Open,B,Raw
-9,Dora Konda Gori,1991-12-10,,ODI,83,82.7,120,130,-135,130,130,M,Open,B,Raw
-10,Sk. Nazeer,,1998,AP,83,81.1,115,-125,125,125,125,M,Open,B,Raw
-11,B. Kumar,1990-06-01,,AP,83,74.3,90,-100,100,100,100,M,Open,B,Raw
-12,Dhaud Sangam,1992-05-15,,GOA,83,79.7,60,80,-95,80,80,M,Open,B,Raw
-13,Chetan Bhim Rao Gouda,1993-03-20,,GOA,83,75.1,60,70,-80,70,70,M,Open,B,Raw
-1,Parul Kumar,1986-02-06,,UP,93,88.3,175,180,-185,180,180,M,Open,B,Raw
-2,Amandeep Bassan,1996-09-23,,J&K,93,89.6,150,155,157.5,157.5,157.5,M,Open,B,Raw
-3,Samir Dalvi,1973-11-29,,MAH,93,90.7,140,152.5,157.5,157.5,157.5,M,Open,B,Raw
-4,Katara Kalpesh.R,1981-05-12,,GUJ,93,86.5,110,130,152.5,152.5,152.5,M,Open,B,Raw
-5,Mohd. Imran Khan,1992-05-15,,MP,93,85.7,125,135,140,140,140,M,Open,B,Raw
-6,M. Veeranna,1992-07-01,,AP,93,83.1,100,120,130,130,130,M,Open,B,Raw
-7,Pinal.J.Mahla,1983-10-13,,GUJ,93,87.8,100,110,115,115,115,M,Open,B,Raw
-8,Sushant Kumar,1986-03-17,,GUJ,93,90.3,90,100,-107.5,100,100,M,Open,B,Raw
-DQ,Arshad Ulla,1993-06-11,,KTK,93,93,,,,,,M,Open,B,Raw
-1,Rajinder Kumar,1988-04-18,,PUN,105,103.3,180,187.5,-192.5,187.5,187.5,M,Open,B,Raw
-2,Pradeep Kumar,1986-07-15,,DEL,105,96,170,182.5,-192.5,182.5,182.5,M,Open,B,Raw
-3,Rhubham Sharma,1995-11-06,,J&K,105,102.34,170,177.5,182.5,182.5,182.5,M,Open,B,Raw
-4,Vijaya Kanchan,1968-07-24,,KTK,105,104.5,170,177.5,-182.5,177.5,177.5,M,Open,B,Raw
-5,Rakesh Bhukta,1995-07-04,,ODI,105,102.5,150,170,-177.5,170,170,M,Open,B,Raw
-6,Gurdeep Singh Bakshi,1982-09-07,,HAR,105,102.9,155,160,-162.5,160,160,M,Open,B,Raw
-7,Satyendra Singh Rathore,1975-07-15,,RAJ,105,104.8,150,157.5,-165,157.5,157.5,M,Open,B,Raw
-8,G Mohan Raj,1991-12-26,,TN,105,97.37,145,-152.5,,145,145,M,Open,B,Raw
-9,Shahbaj Khan,1993-01-01,,MP,105,100.36,135,142.5,-147.5,142.5,142.5,M,Open,B,Raw
-10,Sanjay Yadav,1992-03-03,,MAH,105,100.5,130,135,140,140,140,M,Open,B,Raw
-11,Viraj V Borkar,1991-03-22,,GOA,105,100.2,-125,-125,125,125,125,M,Open,B,Raw
-12,Manojit Chakraboty,1977-05-25,,WB,105,93.6,-125,125,-127.5,125,125,M,Open,B,Raw
-13,Praful Sharma,1992-01-01,,GUJ,105,98.4,90,97.5,102.5,102.5,102.5,M,Open,B,Raw
-1,Md. Jawed Arshad,1994-05-26,,ODI,120,117.1,145,165,167.5,167.5,167.5,M,Open,B,Raw
-2,Babuji.R.K,1992-09-07,,KER,120,117.5,155,162.5,167.5,167.5,167.5,M,Open,B,Raw
-3,Amol Kaduskar,1985-07-01,,MAH,120,115.2,150,-162.5,162.5,162.5,162.5,M,Open,B,Raw
-4,Kuntal Das,1984-07-26,,WB,120,108.6,155,-160,160,160,160,M,Open,B,Raw
-5,Laxminarayana T,1989-11-19,,KTK,120,112.46,147.5,-157.5,157.5,157.5,157.5,M,Open,B,Raw
-6,Dharam Veer Shilu,1981-07-06,,RAJ,120,112.7,140,-155,-157.5,140,140,M,Open,B,Raw
-DQ,Suraj Yadav,1992-11-01,,GOA,120,112.9,-170,-170,-170,,,M,Open,B,Raw
-DQ,Jagbir Singh Bhav,1992-02-14,,J&K,120,112.7,,,,,,M,Open,B,Raw
-1,Ajay Gogna,,,PUN,120+,137.96,-170,170,,170,170,M,Open,B,Raw
-2,Ankit Khatri,1996-12-19,,DEL,120+,136.12,152.5,160,-170,160,160,M,Open,B,Raw
-3,Abhishek Rane,1984-10-18,,MAH,120+,137.54,127.5,135,140,140,140,M,Open,B,Raw
-4,Sarvesh Kauthanker,1992-10-09,,GOA,120+,120.1,127.5,137.5,-142.5,137.5,137.5,M,Open,B,Raw
-5,Yogendra Hardiya,1983-08-17,,MP,120+,122.4,-125,125,130,130,130,M,Open,B,Raw
-6,Paritesh Pal,1999-09-13,,MP,120+,123.9,110,125,130,130,130,M,Open,B,Raw
-DQ,Vikram Jeet Singh,1996-04-06,,J&K,120+,151,-160,,,,,M,Open,B,Raw
-1,Dhiraj Kinger,2000-11-15,,JHR,53,51.5,85,92.5,97.5,97.5,97.5,M,Sub-Juniors,B,Raw
-2,Munna Kumar,2001-06-15,,BIH,53,47.7,-90,90,95,95,95,M,Sub-Juniors,B,Raw
-3,Arindam Das,2001-04-19,,WB,53,51.4,87.5,92.5,-97.5,92.5,92.5,M,Sub-Juniors,B,Raw
-4,Devendra Vyas,2000-08-10,,RAJ,53,50.8,75,82.5,-92.5,82.5,82.5,M,Sub-Juniors,B,Raw
-5,Dhruv Raj Kure,2002-06-02,,MP,53,52.4,75,82.5,-87.5,82.5,82.5,M,Sub-Juniors,B,Raw
-6,Thongam Rakesh,2000-01-18,,MNP,53,50.9,70,72.5,-82.5,72.5,72.5,M,Sub-Juniors,B,Raw
-7,Abhay Tripathi,2002-01-04,,UP,53,52.1,70,72.5,-77.5,72.5,72.5,M,Sub-Juniors,B,Raw
-8,Ronit Raj Munda,2001-03-28,,JHR,53,51.1,-65,65,70,70,70,M,Sub-Juniors,B,Raw
-9,Abhishek Kadam,2000-03-08,,MAH,53,48.4,55,65,-72.5,65,65,M,Sub-Juniors,B,Raw
-10,Arjun Kumar,2001-02-26,,J&K,53,48.8,60,-70,,60,60,M,Sub-Juniors,B,Raw
-11,Kishenjeet Kangjam,2000-03-23,,MNP,53,46.1,50,55,-60,55,55,M,Sub-Juniors,B,Raw
-12,Akashdeep,2002-11-25,,PUN,53,51.9,50,52.5,-67.5,52.5,52.5,M,Sub-Juniors,B,Raw
-13,Mohammed Zuber,2000-05-27,,GOA,53,47.7,40,50,-65,50,50,M,Sub-Juniors,B,Raw
-1,Shahil Hussain,2000-04-22,,KER,59,57.5,85,90,95,95,95,M,Sub-Juniors,B,Raw
-2,Raviraj Ghadage,2000-03-24,,MAH,59,57.8,80,90,92.5,92.5,92.5,M,Sub-Juniors,B,Raw
-3,Sourabh Dhanware,2004-07-16,,MP,59,59,-80,80,85,85,85,M,Sub-Juniors,B,Raw
-4,Lalit Jat,2000-04-06,,MP,59,57,70,-80,80,80,80,M,Sub-Juniors,B,Raw
-5,Pavan Kumar,2001-01-08,,UP,59,58.8,-70,75,-82.5,75,75,M,Sub-Juniors,B,Raw
-6,M.Thulasiram,2000-07-31,,TN,59,55.2,70,-75,-75,70,70,M,Sub-Juniors,B,Raw
-7,Amandeep Singh Dhillon,2001-01-19,,PUN,59,57.9,70,-80,-80,70,70,M,Sub-Juniors,B,Raw
-8,Maibam Loveson,2001-07-12,,MNP,59,59,60,67.5,-72.5,67.5,67.5,M,Sub-Juniors,B,Raw
-9,Suraj,2001-02-05,,DEL,59,53.6,65,-77.5,-80,65,65,M,Sub-Juniors,B,Raw
-10,Nikhil Tripathi,2002-02-08,,UP,59,56.7,-65,-65,65,65,65,M,Sub-Juniors,B,Raw
-11,K. Yaswanth,2000-02-11,,AP,59,57.1,45,55,-60,55,55,M,Sub-Juniors,B,Raw
-1,Rambir Singh,2000-09-13,,JHR,66,65.2,-105,105,110,110,110,M,Sub-Juniors,B,Raw
-2,Tourangbam Satish Meitei,2001-03-02,,MNP,66,65.9,95,100,-102.5,100,100,M,Sub-Juniors,B,Raw
-3,Harshdeep Singh,2000-10-29,,J&K,66,64.4,92.5,97.5,-100,97.5,97.5,M,Sub-Juniors,B,Raw
-4,Pranav Kumar Gahlot,2002-05-05,,RAJ,66,64.5,90,97.5,-100,97.5,97.5,M,Sub-Juniors,B,Raw
-5,Akib Khan,2000-05-01,,MAH,66,64.9,90,97.5,-102.5,97.5,97.5,M,Sub-Juniors,B,Raw
-6,Lav Mali,2001-01-11,,MP,66,65.6,90,97.5,-102.5,97.5,97.5,M,Sub-Juniors,B,Raw
-7,T Netaji,2003-04-20,,AP,66,64.9,87.5,90,-95,90,90,M,Sub-Juniors,B,Raw
-8,Timanshu Mehra,2000-07-06,,PUN,66,66,80,87.5,-95,87.5,87.5,M,Sub-Juniors,B,Raw
-9,Altab Khan,2000-09-05,,WB,66,61,80,-85,-85,80,80,M,Sub-Juniors,B,Raw
-10,Khushal Samriya,2001-04-24,,RAJ,66,63.6,70,80,-90,80,80,M,Sub-Juniors,B,Raw
-11,Ashraf Umar Sharif,2000-10-14,,GOA,66,64.2,50,60,-70,60,60,M,Sub-Juniors,B,Raw
-12,Prem Pralhad Girap,2002-01-05,,GOA,66,61.8,50,55,-60,55,55,M,Sub-Juniors,B,Raw
-13,G. Suresh,2000-07-12,,AP,66,65.2,35,45,55,55,55,M,Sub-Juniors,B,Raw
-1,B.Mohammed Asif,2000-09-12,,TN,74,73.2,112.5,117.5,120,120,120,M,Sub-Juniors,B,Raw
-2,Soram Sunil Singh,2002-03-25,,MNP,74,72.5,105,110,,110,110,M,Sub-Juniors,B,Raw
-3,Haroon Choudhary,2001-07-15,,J&K,74,73.3,95,102.5,-107.5,102.5,102.5,M,Sub-Juniors,B,Raw
-4,Aman Khan,2001-06-08,,MP,74,68,95,100,-105,100,100,M,Sub-Juniors,B,Raw
-5,Sandeep Rutudi,2000-04-20,,MAH,74,69.3,85,95,-102.5,95,95,M,Sub-Juniors,B,Raw
-6,Lakhwinder Singh,2000-04-23,,PUN,74,68.9,87.5,92.5,-97.5,92.5,92.5,M,Sub-Juniors,B,Raw
-7,S. Vivek,2000-07-31,,AP,74,67.2,80,85,90,90,90,M,Sub-Juniors,B,Raw
-8,Ch. Rakeshwar,2000-10-27,,AP,74,69.9,75,85,90,90,90,M,Sub-Juniors,B,Raw
-9,Jaskaran Singh,2000-05-16,,PUN,74,73.9,80,85,-87.5,85,85,M,Sub-Juniors,B,Raw
-10,Darrel A Tholado,2000-02-24,,KTK,74,68.1,70,80,-85,80,80,M,Sub-Juniors,B,Raw
-11,Sunny Kewat,2002-03-13,,GOA,74,66.6,-65,65,-70,65,65,M,Sub-Juniors,B,Raw
-12,Akashmuttappa Harijan,2000-12-24,,GOA,74,66.7,45,47.5,-60,47.5,47.5,M,Sub-Juniors,B,Raw
-1,Tejas Rajaputran,2000-03-23,,MAH,83,82.4,115,125,135,135,135,M,Sub-Juniors,B,Raw
-2,Harshit Yadav,2001-10-13,,UP,83,79.5,-110,110,-112.5,110,110,M,Sub-Juniors,B,Raw
-3,Sumit Rathore,2001-01-01,,MP,83,77.4,90,100,107.5,107.5,107.5,M,Sub-Juniors,B,Raw
-4,Updesh Tiwari,2001-11-08,,UP,83,77.7,100,107.5,-112.5,107.5,107.5,M,Sub-Juniors,B,Raw
-5,U Mahesh Rao,2001-04-25,,AP,83,81,90,100,-112.5,100,100,M,Sub-Juniors,B,Raw
-6,G. Shyam Prakash,2001-10-02,,AP,83,79,87.5,92.5,-97.5,92.5,92.5,M,Sub-Juniors,B,Raw
-7,Mirza Abdul Ali. M,2000-03-06,,WB,83,80.5,87.5,90,-95,90,90,M,Sub-Juniors,B,Raw
-8,Rithvik K V,2001-09-20,,KTK,83,82.3,60,62.5,72.5,72.5,72.5,M,Sub-Juniors,B,Raw
-9,Rutvik Shashikant Gaonkar,2000-11-23,,GOA,83,76.1,70,-85,-85,70,70,M,Sub-Juniors,B,Raw
-10,Shreyas S,2000-11-08,,KTK,83,74.9,45,52.5,-57.5,52.5,52.5,M,Sub-Juniors,B,Raw
-1,Mukesh Kumar Singh,2000-10-05,,JHR,93,90.1,125,132.5,137.5,137.5,137.5,M,Sub-Juniors,B,Raw
-2,Varshith S. Rao,2002-02-25,,KTK,93,88.8,110,120,-125,120,120,M,Sub-Juniors,B,Raw
-3,Akash Tyagi,2001-03-04,,UP,93,90.7,-110,110,112.5,112.5,112.5,M,Sub-Juniors,B,Raw
-4,Sanskar Singh,2000-11-07,,MP,93,90.2,90,102.5,-110,102.5,102.5,M,Sub-Juniors,B,Raw
-5,Adithya Kiran.P,2000-08-20,,KER,93,85,92.5,-100,-100,92.5,92.5,M,Sub-Juniors,B,Raw
-6,R.Ruban Daniel,2000-08-11,,TN,93,85,87.5,92.5,-100,92.5,92.5,M,Sub-Juniors,B,Raw
-7,Daksh Singh Chouhan,2004-04-19,,RAJ,93,84,75,85,-87.5,85,85,M,Sub-Juniors,B,Raw
-1,Sidharth Khatri,2001-09-23,,DEL,105,99.24,130,-140,-140,130,130,M,Sub-Juniors,B,Raw
-2,Hanuman Ojha,2002-10-10,,RAJ,105,101.9,105,115,-132.5,115,115,M,Sub-Juniors,B,Raw
-3,Gourav Sharma,2000-09-11,,J&K,105,102.8,87.5,92.5,-95,92.5,92.5,M,Sub-Juniors,B,Raw
-4,Sourav Gurung,2000-02-28,,CHT,105,93.6,80,90,-92.5,90,90,M,Sub-Juniors,B,Raw
-5,Pritam Bagkar,2000-01-22,,MAH,105,95.92,80,-87.5,-92.5,80,80,M,Sub-Juniors,B,Raw
-1,Sarwar Patil,2000-01-07,,MAH,120,105.74,107.5,110,112.5,112.5,112.5,M,Sub-Juniors,B,Raw
-2,Suryakant Patel,2000-02-29,,MP,120,106.2,90,-97.5,97.5,97.5,97.5,M,Sub-Juniors,B,Raw
-3,Prathvi. P. Kumar,2001-05-10,,KTK,120,118.4,90,95,97.5,97.5,97.5,M,Sub-Juniors,B,Raw
-4,Nikhil Saini,2000-12-29,,RAJ,120,116.9,80,87.5,-92.5,87.5,87.5,M,Sub-Juniors,B,Raw
-5,Jai Shankar Ojha,2000-12-20,,RAJ,120,105.5,65,-75,-80,65,65,M,Sub-Juniors,B,Raw
-1,Rohit Ojha,2002-10-07,,RAJ,120+,127.4,70,85,92.5,92.5,92.5,M,Sub-Juniors,B,Raw
-2,Sinoj Mathew,2001-11-28,,MAH,120+,133.1,70,75,-92.5,75,75,M,Sub-Juniors,B,Raw
-1,A.Shajith Husan,1997-05-21,,TN,53,47.9,90,95,97.5,97.5,97.5,M,Juniors,B,Raw
-2,Sunil B,1998-03-09,,KTK,53,51.5,-85,90,92.5,92.5,92.5,M,Juniors,B,Raw
-3,Nilesh Kadam,1995-02-13,,MAH,53,46.9,82.5,90,-95,90,90,M,Juniors,B,Raw
-4,Sujit Kumar Yadav,1999-10-16,,UP,53,52.3,82.5,87.5,-92.5,87.5,87.5,M,Juniors,B,Raw
-5,Tamnesh Bhomkar,1995-06-10,,GOA,53,51.8,75,85,-92.5,85,85,M,Juniors,B,Raw
-6,Himanshu Kure,1998-11-11,,MP,53,52.5,77.5,85,-95,85,85,M,Juniors,B,Raw
-7,Sankha Suvra Das,1998-12-01,,WB,53,50,65,-70,70,70,70,M,Juniors,B,Raw
-8,Arijit Dawn,1998-06-25,,WB,53,50.4,67.5,-72.5,-72.5,67.5,67.5,M,Juniors,B,Raw
-9,Ganpat,1997-01-01,,RAJ,53,51.8,65,67.5,-82.5,67.5,67.5,M,Juniors,B,Raw
-10,Sunil Nayak,1996-10-13,,ODI,53,51.9,55,57.5,-70,57.5,57.5,M,Juniors,B,Raw
-1,Yadnesh V. Raut,1998-08-29,,KTK,59,59,97.5,100,107.5,107.5,107.5,M,Juniors,B,Raw
-2,M.Kannan,1996-04-10,,TN,59,57.9,100,-105,105,105,105,M,Juniors,B,Raw
-3,Nishanth.A,1995-08-24,,PUD,59,58.8,95,-102.5,102.5,102.5,102.5,M,Juniors,B,Raw
-4,Varun Gupta,1996-09-05,,J&K,59,58.3,87.5,95,97.5,97.5,97.5,M,Juniors,B,Raw
-5,Ch. Ramesh,1996-02-09,,AP,59,58,85,90,-95,90,90,M,Juniors,B,Raw
-6,Alok Kumar Yadav,1998-12-18,,UP,59,58,80,87.5,-92.5,87.5,87.5,M,Juniors,B,Raw
-7,Bimal Thapa,1998-07-21,,MAH,59,54.6,85,-97.5,-102.5,85,85,M,Juniors,B,Raw
-8,Aditya Sharma,1996-03-20,,J&K,59,54.8,77.5,85,-95,85,85,M,Juniors,B,Raw
-9,Md Fahim,1996-02-19,,CHT,59,58.7,80,-90,-90,80,80,M,Juniors,B,Raw
-10,Kailash Chandrakant Girap,1995-11-30,,GOA,59,56.1,65,-70,-70,65,65,M,Juniors,B,Raw
-11,Vijay A Parmar,1997-03-05,,GUJ,59,57.5,60,65,-72.5,65,65,M,Juniors,B,Raw
-DQ,Jatinder Kumar,1995-10-04,,PUN,59,58.1,-92.5,-95,-102.5,,,M,Juniors,B,Raw
-1,Gurpreet Singh,1995-07-13,,PUN,66,63.7,125,135,-140,135,135,M,Juniors,B,Raw
-2,Dibakar Gochhayat,1996-10-15,,ODI,66,66,120,-130,132.5,132.5,132.5,M,Juniors,B,Raw
-3,Biswajeet Jena,1995-06-15,,ODI,66,65.8,127.5,130,-135,130,130,M,Juniors,B,Raw
-4,Pawan Kumar,1997-07-06,,DEL,66,66,115,-120,-120,115,115,M,Juniors,B,Raw
-5,Akhilesh Kamble,1999-12-31,,MAH,66,61,105,112.5,-117.5,112.5,112.5,M,Juniors,B,Raw
-6,Pawan Joshi,1995-07-01,,RAJ,66,65.6,105,-112.5,-120,105,105,M,Juniors,B,Raw
-7,Abhishek Bharti,1998-03-05,,MP,66,66,100,-115,-120,100,100,M,Juniors,B,Raw
-8,M.Kamalakannan,1996-08-01,,TN,66,62.5,95,-102.5,-102.5,95,95,M,Juniors,B,Raw
-9,M. Ashok Kumar,1998-07-14,,AP,66,63.7,80,90,95,95,95,M,Juniors,B,Raw
-10,Vishwakarma Paswan,1995-02-07,,BIH,66,64.7,85,-92.5,-92.5,85,85,M,Juniors,B,Raw
-11,Naveen Kherde,1999-02-04,,CHT,66,65,70,80,85,85,85,M,Juniors,B,Raw
-12,Brijesh D. Patel,1997-07-19,,GUJ,66,65.2,75,80,82.5,82.5,82.5,M,Juniors,B,Raw
-13,Narayan Shantaram Pednekar,1997-04-26,,GOA,66,64.6,-70,-70,80,80,80,M,Juniors,B,Raw
-14,P.V.V. Anjaneyulu,1996-09-02,,AP,66,65.2,60,70,77.5,77.5,77.5,M,Juniors,B,Raw
-15,Vinay Kumar Sahu,1998-06-30,,CHT,66,63.7,45,50,52.5,52.5,52.5,M,Juniors,B,Raw
-1,Jogendar Tiwari,1997-11-11,,MP,74,69.2,135,137.5,142.5,142.5,142.5,M,Juniors,B,Raw
-2,Maumin Khan,1997-01-11,,UP,74,71.8,130,137.5,142.5,142.5,142.5,M,Juniors,B,Raw
-3,Abishek Chawla,1999-02-02,,J&K,74,73.9,135,-137.5,-140,135,135,M,Juniors,B,Raw
-4,Rajvardhan Singh,1996-06-01,,MP,74,69.7,125,127.5,-135,127.5,127.5,M,Juniors,B,Raw
-5,Sachin Kumar,1995-10-04,,DEL,74,73.2,125,127.5,-137.5,127.5,127.5,M,Juniors,B,Raw
-6,Mohammed Rameezraza Akram Khan,1995-07-01,,MAH,74,71.6,107.5,117.5,-135,117.5,117.5,M,Juniors,B,Raw
-7,Harsh Kumar,1997-09-28,,PUN,74,71.8,110,117.5,-120,117.5,117.5,M,Juniors,B,Raw
-8,Sudama Singh,1997-05-11,,ODI,74,68.2,-105,105,-120,105,105,M,Juniors,B,Raw
-9,Kori Jitendra.K,1996-05-15,,GUJ,74,72.2,90,105,-115,105,105,M,Juniors,B,Raw
-10,Arjun. K,1997-11-25,,KER,74,69.7,90,100,-105,100,100,M,Juniors,B,Raw
-11,Gaurav Kumar,1998-11-09,,CHT,74,68.6,80,87.5,90,90,90,M,Juniors,B,Raw
-12,Aditya Mishra,1998-04-20,,CHT,74,69.9,80,82.5,85,85,85,M,Juniors,B,Raw
-13,Harshad Ram Parab,1998-12-12,,GOA,74,72.1,80,85,-87.5,85,85,M,Juniors,B,Raw
-14,Tejas.V.Gite,1997-10-06,,GUJ,74,67.8,65,75,77.5,77.5,77.5,M,Juniors,B,Raw
-15,D. Salman Raju,1998-06-10,,AP,74,73.2,65,70,-75,70,70,M,Juniors,B,Raw
-1,Mohit Srivastava,1996-03-11,,UP,83,81.4,130,140,142.5,142.5,142.5,M,Juniors,B,Raw
-2,Aniket Dhamal,1997-09-26,,MAH,83,83,130,137.5,-142.5,137.5,137.5,M,Juniors,B,Raw
-3,Sushil Goswami,1996-10-12,,DEL,83,81.1,127.5,135,-140,135,135,M,Juniors,B,Raw
-4,Dhaneswar Sahu,1998-12-10,,JHR,83,82.9,125,127.5,-130,127.5,127.5,M,Juniors,B,Raw
-5,Anubhav Pandey,1997-09-20,,MP,83,79.5,115,125,-127.5,125,125,M,Juniors,B,Raw
-6,Naveen Kadam,1998-03-01,,MAH,83,76.3,110,120,-130,120,120,M,Juniors,B,Raw
-7,Sohan Lal,1995-12-01,,RAJ,83,77.5,100,110,115,115,115,M,Juniors,B,Raw
-8,Ashish Mallia,1997-07-08,,ODI,83,75.5,105,-112.5,112.5,112.5,112.5,M,Juniors,B,Raw
-9,Ganseh M,1996-02-18,,KER,83,77.6,95,105,-110,105,105,M,Juniors,B,Raw
-10,Arjun Gadewadar,1998-02-07,,GOA,83,77.7,90,100,-110,100,100,M,Juniors,B,Raw
-11,U.Leela Sagar,1997-06-11,,AP,83,75.3,70,75,-80,75,75,M,Juniors,B,Raw
-12,T. Krupa Kumar,1999-06-15,,AP,83,76.8,55,60,65,65,65,M,Juniors,B,Raw
-DQ,Vishal Singh,1997-03-04,,J&K,83,81.3,-135,-135,-140,,,M,Juniors,B,Raw
-1,Vijay Goswami,1998-01-12,,DEL,93,91.9,150,155,157.5,157.5,157.5,M,Juniors,B,Raw
-2,Md. Faizan Reza,1997-01-10,,WB,93,91.3,140,-147.5,147.5,147.5,147.5,M,Juniors,B,Raw
-3,Arvind Singh Tanwar,1997-07-12,,RAJ,93,88.2,125,135,-140,135,135,M,Juniors,B,Raw
-4,Rahul Sawant,1996-12-26,,MAH,93,88.6,125,-135,-137.5,125,125,M,Juniors,B,Raw
-5,Veeranna Hingani,1997-12-19,,KTK,93,92.3,110,122.5,-142.5,122.5,122.5,M,Juniors,B,Raw
-6,Sunil Singh,1999-03-28,,JK,93,87.1,110,120,-137.5,120,120,M,Juniors,B,Raw
-7,Manoj Harichandra Bhishi,1997-10-20,,GOA,93,87.6,90,100,105,105,105,M,Juniors,B,Raw
-8,Faseeh Kasim.P,1999-11-01,,KER,93,86.8,-90,90,,90,90,M,Juniors,B,Raw
-9,Gauresh Khandolkar,1997-05-07,,GOA,93,87.5,80,90,-107.5,90,90,M,Juniors,B,Raw
-10,Sumit Kumar,1996-02-02,,MP,93,93,-90,90,-95,90,90,M,Juniors,B,Raw
-11,Akshay Panwar,2000-04-01,,RAJ,93,91.3,75,-85,-155,75,75,M,Juniors,B,Raw
-1,Srinivas Kastoori,1995-09-28,,MAH,105,96.82,142.5,147.5,-152.5,147.5,147.5,M,Juniors,B,Raw
-2,Sudarshan Tiwari,1995-08-18,,MP,105,104,135,140,142.5,142.5,142.5,M,Juniors,B,Raw
-3,Raj Prasad Rajak,1997-08-12,,WB,105,101.2,130,-135,135,135,135,M,Juniors,B,Raw
-4,Anant Shripad Bhat,1996-07-10,,KTK,105,93.5,110,120,-130,120,120,M,Juniors,B,Raw
-5,Hashir Ahmad Shah,1997-08-07,,J&K,105,101.1,90,-92.5,92.5,92.5,92.5,M,Juniors,B,Raw
-1,Saurav Bhardwaj,1999-08-22,,DEL,120,112.1,140,145,-147.5,145,145,M,Juniors,B,Raw
-2,Shivaprasad. S. Nair,1995-06-01,,GUJ,120,115.6,120,140,-150,140,140,M,Juniors,B,Raw
-3,Abhishek Vishal,1996-07-07,,BIH,120,115,132.5,135,137.5,137.5,137.5,M,Juniors,B,Raw
-4,Raja Kanchale,1997-11-14,,MP,120,105.1,125,-132.5,-132.5,125,125,M,Juniors,B,Raw
-5,Raman Kumar,1997-03-15,,J&K,120,112.4,120,-127.5,-127.5,120,120,M,Juniors,B,Raw
-6,Rishab R Rao,1999-02-03,,KTK,120,115.36,105,112.5,-120,112.5,112.5,M,Juniors,B,Raw
-7,Shahil.A.Vishwakarm,1998-07-25,,GUJ,120,113.5,100,110,-120,110,110,M,Juniors,B,Raw
-1,Gurkirat Singh,1995-09-03,,PUN,120+,127.12,147.5,155,165,165,165,M,Juniors,B,Raw
-2,Ankit Khatri,1996-12-19,,DEL,120+,136.12,152.5,160,-170,160,160,M,Juniors,B,Raw
-3,Abhishek B. Horkeri,1998-07-06,,KTK,120+,140.3,135,145,157.5,157.5,157.5,M,Juniors,B,Raw
-4,Anil Patel,1995-06-30,,MP,120+,131.8,130,135,-140,135,135,M,Juniors,B,Raw
-5,Urshil Thaker,1995-02-09,,MAH,120+,138.5,55,67.5,72.5,72.5,72.5,M,Juniors,B,Raw
-1,Motiram Dabi,1977-06-30,,MP,59,59,80,90,95,95,95,M,Masters 1,B,Raw
-2,Sujit Kumar Giri,1972-04-15,,ODI,59,58.9,80,87.5,-92.5,87.5,87.5,M,Masters 1,B,Raw
-3,Mahesh Kumar,1975-02-25,,PUN,59,57.6,70,77.5,85,85,85,M,Masters 1,B,Raw
-4,Eshwara N,1970-10-05,,KTK,59,59,70,80,-85,80,80,M,Masters 1,B,Raw
-5,G.Prabhu,1975-08-29,,TN,59,58.3,77.5,-82.5,-85,77.5,77.5,M,Masters 1,B,Raw
-6,Dhananjay Naik,1978-08-18,,GOA,59,56.9,70,75,-80,75,75,M,Masters 1,B,Raw
-7,Girijesh Shandilya,1969-01-01,,DEL,59,59,65,-70,70,70,70,M,Masters 1,B,Raw
-8,Santosh Gawde,,,MAH,59,58.6,60,67.5,-87.5,67.5,67.5,M,Masters 1,B,Raw
-DQ,C. Pullaiah,1973-07-01,,AP,59,58.1,-85,-85,-85,,,M,Masters 1,B,Raw
-1,Hem Singh Baghela,1972-09-02,,RAJ,66,65,125,130,-135,130,130,M,Masters 1,B,Raw
-2,Binod Patra,1969-11-23,,JHR,66,62.6,110,120,127.5,127.5,127.5,M,Masters 1,B,Raw
-3,G. Ram Babu,1975-05-03,,AP,66,64.7,100,105,107.5,107.5,107.5,M,Masters 1,B,Raw
-4,K. Prakash,1975-06-11,,TN,66,66,105,-107.5,-110,105,105,M,Masters 1,B,Raw
-5,Ruben Srivastava,1974-10-07,,DEL,66,65.7,92.5,102.5,-110,102.5,102.5,M,Masters 1,B,Raw
-6,Arvind Shukla,1974-05-22,,MP,66,63.1,-100,100,-115,100,100,M,Masters 1,B,Raw
-7,Mahesh Patil,1975-08-02,,MAH,66,65.3,90,95,-107.5,95,95,M,Masters 1,B,Raw
-8,Kishore J,1972-06-24,,KTK,66,65.2,85,92.5,-100,92.5,92.5,M,Masters 1,B,Raw
-9,Raikumar Naorem,1976-01-02,,MNP,66,65.5,-82.5,82.5,-105,82.5,82.5,M,Masters 1,B,Raw
-1,Sunil Nagouri,1976-02-07,,RAJ,74,67.8,110,117.5,130,130,130,M,Masters 1,B,Raw
-2,Sohan Rana,1975-06-17,,MP,74,72,125,-130,130,130,130,M,Masters 1,B,Raw
-3,P.Mathan,1978-05-23,,TN,74,73.9,112.5,120,-127.5,120,120,M,Masters 1,B,Raw
-4,A.M.Syed Ali,1976-05-31,,TN,74,72.7,110,115,-120,115,115,M,Masters 1,B,Raw
-5,Rajendra Chavan,1970-08-17,,MAH,74,69.5,97.5,-105,105,105,105,M,Masters 1,B,Raw
-6,Bibhuti Bhusan Bhanja,1976-05-12,,ODI,74,72.3,90,-100,-115,90,90,M,Masters 1,B,Raw
-7,Prakash.M.Sangle,1972-01-14,,GUJ,74,72,70,75,80,80,80,M,Masters 1,B,Raw
-DQ,Shibir Das,1977-01-15,,WB,74,72.6,-80,-80,-80,,,M,Masters 1,B,Raw
-1,Raj Kumar,1978-08-01,,PUN,83,81.5,125,132.5,137.5,137.5,137.5,M,Masters 1,B,Raw
-2,Sukhvinder Singh,1978-03-17,,UP,83,79.6,125,132.5,-135,132.5,132.5,M,Masters 1,B,Raw
-3,Vinayagam,1977-05-19,,TN,83,77.4,120,127.5,-132.5,127.5,127.5,M,Masters 1,B,Raw
-4,Sanjeev Sharma,1978-07-19,,PUN,83,81.6,117.5,125,-130,125,125,M,Masters 1,B,Raw
-5,Mukesh Girap,1976-04-01,,GOA,83,81.7,122.5,-127.5,-135,122.5,122.5,M,Masters 1,B,Raw
-6,Anil Bare,1976-02-11,,MAH,83,82.9,115,120,-127.5,120,120,M,Masters 1,B,Raw
-7,Ch. Satya Gangadhara Rao,1978-06-02,,AP,83,75,100,110,115,115,115,M,Masters 1,B,Raw
-8,Atheeq Ahmed,1977-07-05,,KTK,83,76.7,110,-115,115,115,115,M,Masters 1,B,Raw
-9,Dinesh Khanna,1975-10-11,,RAJ,83,75.6,112.5,-120,-127.5,112.5,112.5,M,Masters 1,B,Raw
-10,Ajay Prasad Arya,1976-01-02,,JHR,83,82.3,107.5,112.5,-120,112.5,112.5,M,Masters 1,B,Raw
-11,Rakesh Kumar Nayak,1978-12-31,,CHT,83,76.3,100,-107.5,-107.5,100,100,M,Masters 1,B,Raw
-12,Prafulla Amantya,1975-04-25,,ODI,83,80.5,92.5,100,-107.5,100,100,M,Masters 1,B,Raw
-13,Abdul Fareed,1974-01-01,,MP,83,74.1,95,-100,-100,95,95,M,Masters 1,B,Raw
-1,Pardeep Babbar,1972-07-09,,PUN,93,92,145,152.5,157.5,157.5,157.5,M,Masters 1,B,Raw
-2,Ravinder Singh,1975-12-27,,HAR,93,89.6,140,145,-152.5,145,145,M,Masters 1,B,Raw
-3,Gharjeet Singh,1977-05-07,,J&K,93,91,130,-140,140,140,140,M,Masters 1,B,Raw
-4,A Arun Kumar,1977-01-05,,KTK,93,90.9,135,-137.5,-137.5,135,135,M,Masters 1,B,Raw
-5,Vikram Singh Chouhan,1976-06-08,,RAJ,93,92.7,132.5,-137.5,-137.5,132.5,132.5,M,Masters 1,B,Raw
-6,Jayesh Naik,1978-04-25,,GOA,93,88.2,115,-127.5,-127.5,115,115,M,Masters 1,B,Raw
-7,Santosh Dubey,1975-08-26,,MP,93,89.4,100,110,-117.5,110,110,M,Masters 1,B,Raw
-8,Suresh Jadhav,1971-06-25,,MAH,93,85.1,90,-100,107.5,107.5,107.5,M,Masters 1,B,Raw
-9,Nitin Jadhav,1969-08-22,,MAH,93,83.8,100,107.5,-112.5,107.5,107.5,M,Masters 1,B,Raw
-10,Rajesh Parmar,1970-11-28,,MP,93,89.5,72.5,77.5,82.5,82.5,82.5,M,Masters 1,B,Raw
-DQ,Khursheed,1974-04-11,,UP,93,92.4,-127.5,-127.5,-127.5,,,M,Masters 1,B,Raw
-1,Satyendra Singh,1975-07-15,,RAJ,105,104.8,150,157.5,-165,157.5,157.5,M,Masters 1,B,Raw
-2,Golden Rathore,1978-07-13,,DEL,105,104,145,152.5,155,155,155,M,Masters 1,B,Raw
-3,Shailendra Edwin,1969-09-16,,MP,105,98.1,140,147.5,152.5,152.5,152.5,M,Masters 1,B,Raw
-4,Manojit Chakraboty,1977-05-25,,WB,105,93.6,-125,125,-127.5,125,125,M,Masters 1,B,Raw
-5,M. Sasi Kumar,1974-10-29,,TN,105,101.22,117.5,125,-130,125,125,M,Masters 1,B,Raw
-6,Vinod Kumar Gotherwal,1976-12-25,,RAJ,105,93.95,105,115,120,120,120,M,Masters 1,B,Raw
-7,Rakesh Pardeshi,1975-09-02,,MAH,105,95.8,65,72.5,80,80,80,M,Masters 1,B,Raw
-1,Neeraj Chawla,1976-06-17,,DEL,120,115.4,170,180,-190,180,180,M,Masters 1,B,Raw
-2,Juver Qureshi,1972-02-10,,MP,120,108.45,135,142.5,147.5,147.5,147.5,M,Masters 1,B,Raw
-3,Rajesh G. Sutrave,1976-05-25,,KTK,120,120,135,142.5,145,145,145,M,Masters 1,B,Raw
-4,Younis Ansari,1977-06-26,,J&K,120,110.64,-120,120,-142.5,120,120,M,Masters 1,B,Raw
-5,Ravinder Kumar,1977-02-02,,RAJ,120,117,75,85,-100,85,85,M,Masters 1,B,Raw
-6,Jaison Anthappan,1970-05-16,,MAH,120,116,60,,,60,60,M,Masters 1,B,Raw
-1,B. Ravi,1960-07-17,,TN,59,56.5,87.5,92.5,-95,92.5,92.5,M,Masters 2,B,Raw
-2,Shubhakar Shetty,1967-08-19,,KTK,59,58.8,80,87.5,-95,87.5,87.5,M,Masters 2,B,Raw
-3,Rajendra Mane,,,MAH,59,58.8,55,-60,60,60,60,M,Masters 2,B,Raw
-1,Arun Sharma,1962-10-02,,DEL,66,65.3,105,-112.5,112.5,112.5,112.5,M,Masters 2,B,Raw
-2,Narayan Sethy,1960-04-10,,ODI,66,64.2,-90,-90,95,95,95,M,Masters 2,B,Raw
-3,K Ganesh,1968-07-01,,KTK,66,64.6,80,85,90,90,90,M,Masters 2,B,Raw
-4,Jagdish Junaniya,1961-05-07,,MP,66,62.9,70,75,-77.5,75,75,M,Masters 2,B,Raw
-1,T. Chinnadurai,1960-06-25,,TN,74,68.5,100,105,-107.5,105,105,M,Masters 2,B,Raw
-2,Bhaskara Rao,1965-05-01,,AP,74,73.1,95,100,105,105,105,M,Masters 2,B,Raw
-3,Shashidhar A,1968-10-24,,KTK,74,67.6,-85,85,,85,85,M,Masters 2,B,Raw
-4,Shiv Kumar Soni,1962-08-27,,RAJ,74,71.1,85,-90,-90,85,85,M,Masters 2,B,Raw
-5,Arun Pal Singh,1968-01-22,,DEL,74,73.6,80,85,-92.5,85,85,M,Masters 2,B,Raw
-1,Mujeebulla Khan,1959-05-10,,MP,83,82.4,112.5,117.5,-122.5,117.5,117.5,M,Masters 2,B,Raw
-2,Ajay Taribagil,1967-10-14,,MAH,83,77.2,90,105,115,115,115,M,Masters 2,B,Raw
-3,Pabitra Biswas,1966-02-25,,WB,83,79.4,105,115,-120,115,115,M,Masters 2,B,Raw
-4,B. M. Thakur,1967-05-11,,CHT,83,80.5,95,105,112.5,112.5,112.5,M,Masters 2,B,Raw
-5,Lawrence Martin,1968-08-06,,MP,83,82.1,-110,110,-117.5,110,110,M,Masters 2,B,Raw
-6,Kantilal Takale,1959-05-01,,MAH,83,79.2,85,95,102.5,102.5,102.5,M,Masters 2,B,Raw
-7,Surinder Kumar Kadyan,1968-07-14,,DEL,83,80.2,95,102.5,-107.5,102.5,102.5,M,Masters 2,B,Raw
-8,T. Ramakrishna,1967-01-03,,AP,83,80.5,85,90,95,95,95,M,Masters 2,B,Raw
-9,Blasio Gomes,1965-02-03,,GOA,83,81,90,92.5,-122.5,92.5,92.5,M,Masters 2,B,Raw
-10,Sadashiva Shetty,1961-08-01,,KTK,83,80.6,80,87.5,-92.5,87.5,87.5,M,Masters 2,B,Raw
-1,Nikhil.D.Maheswari,1967-08-03,,GUJ,93,93,140,147.5,152.5,152.5,152.5,M,Masters 2,B,Raw
-2,Bimal Indu Sharma,1964-12-16,,J&K,93,90.2,135,145,-152.5,145,145,M,Masters 2,B,Raw
-3,Shashidar,1967-01-20,,KTK,93,90.6,110,120,-125,120,120,M,Masters 2,B,Raw
-4,Arun A Kharat,1963-10-10,,MAH,93,90.1,92.5,102.5,-110,102.5,102.5,M,Masters 2,B,Raw
-5,E. Sanyasi Rao,1964-05-25,,AP,93,90.8,95,100,-102.5,100,100,M,Masters 2,B,Raw
-6,Lalit Daddee,1966-12-24,,MAH,93,84.5,85,92.5,-95,92.5,92.5,M,Masters 2,B,Raw
-7,Harvindey Kumar Bharwaj,1961-08-28,,PUN,93,92.4,75,80,-82.5,80,80,M,Masters 2,B,Raw
-8,Rajiv Chauhan,1965-05-28,,MP,93,92.5,70,75,,75,75,M,Masters 2,B,Raw
-9,Basanth Kumar Swain,1966-06-26,,AP,93,89.8,70,-85,-85,70,70,M,Masters 2,B,Raw
-1,Surinderpal,1962-08-15,,PUN,105,98.1,120,-127.5,132.5,132.5,132.5,M,Masters 2,B,Raw
-2,G. Ramaswamy,1968-03-02,,AP,105,94.9,117.5,125,130,130,130,M,Masters 2,B,Raw
-3,Karambir,1968-02-05,,DEL,105,103.4,110,120,-122.5,120,120,M,Masters 2,B,Raw
-4,R.Veeraraghavan,1961-06-15,,TN,105,95.1,110,115,-120,115,115,M,Masters 2,B,Raw
-1,Ronald Lobo,1965-10-22,,KTK,120,105.6,90,95,100,100,100,M,Masters 2,B,Raw
-1,Gautam Banerjee,1961-07-04,,WB,120+,138.4,100,115,,115,115,M,Masters 2,B,Raw
-1,Srinivasan K.C,1950-08-28,,KER,59,57,77.5,80,82.5,82.5,82.5,M,Masters 3,B,Raw
-2,Sunder Raj. I,1949-10-24,,TN,59,59,60,70,-72.5,70,70,M,Masters 3,B,Raw
-3,Brijbhooshan Ladiya,1958-02-02,,MP,59,58.7,50,57.5,60,60,60,M,Masters 3,B,Raw
-1,Sadanand Amin,1956-10-24,,KTK,66,64.9,50,60,70,70,70,M,Masters 3,B,Raw
-1,Jyotirmoy Barman,1956-12-30,,WB,74,74,95,102.5,107.5,107.5,107.5,M,Masters 3,B,Raw
-2,B Ravi Kumar,1955-09-16,,KTK,74,73.9,95,100,-107.5,100,100,M,Masters 3,B,Raw
-3,Satpal,1958-07-06,,DEL,74,73,90,-100,-100,90,90,M,Masters 3,B,Raw
-4,Anoop Sharma,1955-07-19,,MP,74,71.7,75,82.5,-87.5,82.5,82.5,M,Masters 3,B,Raw
-5,Jayachandran.G,1950-05-24,,KER,74,71,55,62.5,-70,62.5,62.5,M,Masters 3,B,Raw
-6,Gurdev Singh,1955-12-07,,PUN,74,72.5,52.5,-57.5,57.5,57.5,57.5,M,Masters 3,B,Raw
-1,Inderjit Singh,1954-02-07,,JHR,83,80.9,110,120,-125,120,120,M,Masters 3,B,Raw
-2,Yadav Suvarna,1950-05-08,,KTK,83,77,82.5,87.5,90,90,90,M,Masters 3,B,Raw
-3,Om Prakash Chouhan,1954-06-10,,RAJ,83,80.5,70,82.5,85,85,85,M,Masters 3,B,Raw
-4,Subhash Shelwale,1958-06-01,,MAH,83,80.1,75,80,-85,80,80,M,Masters 3,B,Raw
-5,Bhaskar Behera,1957-08-05,,ODI,83,81.1,70,80,-90,80,80,M,Masters 3,B,Raw
-6,Bir Parkash,1957-11-18,,PUN,83,81.7,60,67.5,70,70,70,M,Masters 3,B,Raw
-1,Suresh Bansode,1952-04-01,,MAH,93,88.7,60,65,-75,65,65,M,Masters 3,B,Raw
-1,Joydeb Ghosh,1957-09-02,,WB,105,96.9,100,102.5,110,110,110,M,Masters 3,B,Raw
-2,Manjunath Mallya,1956-05-08,,KTK,105,96.72,100,105,107.5,107.5,107.5,M,Masters 3,B,Raw
-3,Mahesh Chandra Mahatma,1957-07-19,,RAJ,105,104.5,100,107.5,-112.5,107.5,107.5,M,Masters 3,B,Raw
-4,Sayad Salim,1955-05-20,,MAH,105,99.21,65,-75,-75,65,65,M,Masters 3,B,Raw
-1,Anil Kumthekar,1941-06-26,,MAH,59,54.4,50,55,-57.5,55,55,M,Masters 4,B,Raw
-1,A.S.Xavier,1943-09-03,,MP,74,68.8,-45,45,50,50,50,M,Masters 4,B,Raw
+Place,Name,BirthDate,Team,BodyweightKg,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Division,Event,Equipment
+1,Divya Jyoti Francis,1996-07-06,KTK,42.6,43,72.5,40,90,202.5,F,Juniors,SBD,Single-ply
+2,K. Sree Lakshmi,1996-10-11,AP,42.7,43,70,37.5,87.5,195,F,Juniors,SBD,Single-ply
+3,Rohini Modak,2002-11-03,MAH,41.2,43,57.5,27.5,90,175,F,Juniors,SBD,Single-ply
+4,Bagyalaxmi V,2000-04-23,TEL,41.2,43,55,30,87.5,172.5,F,Juniors,SBD,Single-ply
+1,K Kamali,1996-07-10,T N,46.8,47,160,77.5,157.5,395,F,Juniors,SBD,Single-ply
+2,Savita Kumari,1999-09-24,HAR,46.3,47,172.5,57.5,155,385,F,Juniors,SBD,Single-ply
+3,Anitta Joseph,1997-07-13,KER,45.6,47,155,80,145,380,F,Juniors,SBD,Single-ply
+4,Laxmi Mani Singh,1997-05-01,ORI,45.8,47,115,70,135,320,F,Juniors,SBD,Single-ply
+5,Ashi Mol,1997-05-27,KER,46,47,120,67.5,125,312.5,F,Juniors,SBD,Single-ply
+6,Sita,1997-01-28,HAR,46.2,47,130,42.5,120,292.5,F,Juniors,SBD,Single-ply
+7,Priya A,1995-11-08,PUD,46.2,47,100,35,110,245,F,Juniors,SBD,Single-ply
+8,Anjali P Shangle,1999-07-08,GUJ,46.1,47,85,47.5,110,242.5,F,Juniors,SBD,Single-ply
+9,Aruna Bharti,1994-06-03,UTK,46.4,47,85,47.5,105,237.5,F,Juniors,SBD,Single-ply
+10,Sonam,1994-01-01,DEL,46,47,90,45,100,235,F,Juniors,SBD,Single-ply
+11,Priya,2003-02-24,CHAT,46.2,47,85,37.5,107.5,230,F,Juniors,SBD,Single-ply
+12,Himabindu K,1998-05-30,A P,46.4,47,80,30,90,200,F,Juniors,SBD,Single-ply
+DQ,Srivani M,1994-01-01,TEL,46.4,47,,,,,F,Juniors,SBD,Single-ply
+1,Devi Singh,1999-02-08,ORI,50.85,52,165,80,155,400,F,Juniors,SBD,Single-ply
+2,Suman Devi,1997-06-20,HAR,51.3,52,150,77.5,147.5,375,F,Juniors,SBD,Single-ply
+3,Dipali Pawar,1998-10-06,MAH,51,52,155,72.5,140,367.5,F,Juniors,SBD,Single-ply
+4,Poorna R,1998-12-18,A P,51.5,52,145,62.5,140,347.5,F,Juniors,SBD,Single-ply
+5,Harinipriya D,1994-01-08,T N,51.4,52,147.5,45,132.5,325,F,Juniors,SBD,Single-ply
+6,Mamta Rajak,1999-10-04,CHAT,51.2,52,140,50,127.5,317.5,F,Juniors,SBD,Single-ply
+7,Akshaya I,1998-06-05,PUD,51.6,52,110,42.5,117.5,270,F,Juniors,SBD,Single-ply
+8,Jaspreet Kaur,1994-05-04,PUN,52,52,95,45,110,250,F,Juniors,SBD,Single-ply
+9,Poonam,1994-01-01,PUN,50.2,52,90,35,90,215,F,Juniors,SBD,Single-ply
+DQ,Divya Prajapat,1998-01-05,M P,48.1,52,55,,,,F,Juniors,SBD,Single-ply
+DQ,Chinki,1994-01-01,DEL,51.1,52,120,60,,,F,Juniors,SBD,Single-ply
+1,Aswini Suresh T,1997-05-23,KER,56,57,162.5,72.5,165,400,F,Juniors,SBD,Single-ply
+2,Monali Pawar,1996-10-06,MAH,54.5,57,167.5,77.5,150,395,F,Juniors,SBD,Single-ply
+3,Sonal Sawant,1998-10-01,MAH,55.7,57,167.5,90,137.5,395,F,Juniors,SBD,Single-ply
+4,Bijilee Bag,1995-08-13,CHAT,53.8,57,150,85,145,380,F,Juniors,SBD,Single-ply
+5,Sandeep Kaur,1994-01-01,PUN,54.75,57,150,65,160,375,F,Juniors,SBD,Single-ply
+6,Neenu Varghese,1995-06-18,KER,56.2,57,157.5,57.5,152.5,367.5,F,Juniors,SBD,Single-ply
+7,Bharathi K,1997-07-23,T N,53.3,57,145,70,150,365,F,Juniors,SBD,Single-ply
+8,Preeti,1995-12-27,DEL,55,57,150,70,145,365,F,Juniors,SBD,Single-ply
+9,Neetu Baludi,1997-04-26,UTK,55.7,57,120,77.5,145,342.5,F,Juniors,SBD,Single-ply
+10,Priyanka K,1998-01-03,TEL,56.2,57,130,50,115,295,F,Juniors,SBD,Single-ply
+11,Ch Soniya Devi,1998-02-02,MANI,56.5,57,105,47.5,80,232.5,F,Juniors,SBD,Single-ply
+12,N Kunjarani Devi,1995-03-31,MANI,56,57,85,50,95,230,F,Juniors,SBD,Single-ply
+DQ,Manisha,1997-12-19,HAR,54.7,57,,,,,F,Juniors,SBD,Single-ply
+DQ,Sargam Chouhan,1997-06-15,M P,55.2,57,,,,,F,Juniors,SBD,Single-ply
+1,Riya T C,1994-05-26,KER,61.35,63,197.5,102.5,182.5,482.5,F,Juniors,SBD,Single-ply
+2,Lavanya Vemula,1996-06-04,TEL,62.4,63,192.5,105,165,462.5,F,Juniors,SBD,Single-ply
+3,Annu,1997-08-08,DEL,60,63,205,80,170,455,F,Juniors,SBD,Single-ply
+4,Jasvinder Kaur,1997-06-07,UTK,62.7,63,165,75,165,405,F,Juniors,SBD,Single-ply
+5,Muskan Vatsas,1998-11-12,RAJ,62.1,63,170,90,140,400,F,Juniors,SBD,Single-ply
+6,Priya M,1996-07-12,T N,61.1,63,175,90,130,395,F,Juniors,SBD,Single-ply
+7,Shanmugapriya P K,1995-03-31,T N,60.6,63,165,70,150,385,F,Juniors,SBD,Single-ply
+8,Kavitha Devi,1998-01-08,HAR,60.9,63,150,62.5,147.5,360,F,Juniors,SBD,Single-ply
+9,Priyanka Devi,1995-06-16,HAR,57.7,63,147.5,70,140,357.5,F,Juniors,SBD,Single-ply
+10,Akshaya Shedge,1995-05-13,MAH,61.75,63,160,52.5,140,352.5,F,Juniors,SBD,Single-ply
+11,Soanm,1995-03-30,U P,60.7,63,165,55,130,350,F,Juniors,SBD,Single-ply
+12,Jyoti Vibhar,1997-04-24,CHAT,57.3,63,135,65,137.5,337.5,F,Juniors,SBD,Single-ply
+13,Narmadha R,1994-06-20,PUD,62.1,63,100,42.5,90,232.5,F,Juniors,SBD,Single-ply
+1,Rashmi,1998-10-15,HAR,71.2,72,217.5,117.5,175,510,F,Juniors,SBD,Single-ply
+2,Priyadarshini Bisoi,1997-09-25,ORI,69.2,72,200,110,180,490,F,Juniors,SBD,Single-ply
+3,Sana Malagi,1994-03-04,KTK,71.2,72,187.5,95,162.5,445,F,Juniors,SBD,Single-ply
+4,Vishnu Priya Murukesan,1996-06-15,KER,71.5,72,190,85,162.5,437.5,F,Juniors,SBD,Single-ply
+5,Ruby Sindu,1998-06-03,PUN,68,72,140,70,130,340,F,Juniors,SBD,Single-ply
+6,Tejaswini Sawant,1997-01-24,MAH,71.1,72,152.5,62.5,120,335,F,Juniors,SBD,Single-ply
+7,Pranitha R,2000-01-19,TEL,68.2,72,140,40,130,310,F,Juniors,SBD,Single-ply
+8,Nandhini R,1995-11-02,PUD,71.6,72,145,40,120,305,F,Juniors,SBD,Single-ply
+9,Kavitha,1999-09-12,HAR,63.1,72,100,60,112.5,272.5,F,Juniors,SBD,Single-ply
+10,Kesham Linda Manang,1998-03-27,MANI,68.7,72,90,42.5,100,232.5,F,Juniors,SBD,Single-ply
+DQ,Santosh Kaur,1995-08-02,UTK,71.45,72,,,,,F,Juniors,SBD,Single-ply
+DQ,Sunny Sharma,1994-09-08,U P,71.9,72,187.5,,,,F,Juniors,SBD,Single-ply
+1,Abhirami M. V,2000-02-13,KER,82.9,84,242.5,92.5,170,505,F,Juniors,SBD,Single-ply
+2,Ramya Pandian,1996-03-04,T N,83.8,84,187.5,85,167.5,440,F,Juniors,SBD,Single-ply
+3,Vasuki N,1995-03-25,T N,79,84,155,70,165,390,F,Juniors,SBD,Single-ply
+4,Shamal Shingade,1998-04-24,MAH,84,84,170,55,165,390,F,Juniors,SBD,Single-ply
+5,Kiran,1994-06-15,U P,76.6,84,165,87.5,162.5,415,F,Juniors,SBD,Single-ply
+6,Neha Mishra,1999-07-07,M P,82.6,84,160,75,135,370,F,Juniors,SBD,Single-ply
+7,Harpreet Kaur,1994-11-04,PUN,83.9,84,162.5,65,135,362.5,F,Juniors,SBD,Single-ply
+8,Usha. R,1997-09-27,KTK,83.9,84,150,80,120,350,F,Juniors,SBD,Single-ply
+9,Arya Goswami,1999-11-20,CHAT,72.35,84,105,65,105,275,F,Juniors,SBD,Single-ply
+10,Ch Nirupama,1997-11-10,A P,72.85,84,110,40,100,250,F,Juniors,SBD,Single-ply
+11,Sanasam Yasana,1998-03-03,MANI,72.1,84,90,35,90,215,F,Juniors,SBD,Single-ply
+DQ,N Jina Devi,1995-03-01,MANI,72.35,84,65,,,,F,Juniors,SBD,Single-ply
+DQ,Sowmiya S,1994-09-23,PUD,72.9,84,65,,,,F,Juniors,SBD,Single-ply
+DQ,Anjali Rautela,1995-06-02,M P,84,84,140,,,,F,Juniors,SBD,Single-ply
+1,Revathi Prakash,1996-12-19,KER,107.9,84+,242.5,107.5,162.5,512.5,F,Juniors,SBD,Single-ply
+2,Rajpreet Kaur,1994-01-17,PUN,92.9,84+,205,100,170,475,F,Juniors,SBD,Single-ply
+3,Nishanthi P,2001-06-05,T N,93.3,84+,190,50,212.5,452.5,F,Juniors,SBD,Single-ply
+4,Mousumi Borah,1996-01-07,ASM,98.4,84+,187.5,97.5,167.5,452.5,F,Juniors,SBD,Single-ply
+5,D Anusha Gowda,1995-04-30,A P,103.4,84+,175,80,152.5,407.5,F,Juniors,SBD,Single-ply
+6,Aparna Ghate,1983-10-29,MAH,110,84+,165,75,140,380,F,Juniors,SBD,Single-ply
+7,Murchana Saharia H,1997-01-07,ASM,102.2,84+,165,77.5,130,372.5,F,Juniors,SBD,Single-ply
+8,Swati Sahu,1998-08-15,U P,84.1,84+,140,85,135,360,F,Juniors,SBD,Single-ply
+9,Bhavika D,2000-02-02,CHAT,88.6,84+,130,52.5,120,302.5,F,Juniors,SBD,Single-ply
+DQ,Jagrati Junaniya,1998-08-06,M P,86.7,84+,,,,,F,Juniors,SBD,Single-ply
+DQ,Neha Singh,1996-03-02,RAJ,101.7,84+,,,,,F,Juniors,SBD,Single-ply
+1,Bimal Thapa,1998-07-21,MAH,51.85,53,210,107.5,190,507.5,M,Juniors,SBD,Single-ply
+2,Noble P S,1994-06-10,KER,52.9,53,202.5,107.5,177.5,487.5,M,Juniors,SBD,Single-ply
+3,Gultan Rabani,1994-01-01,JHK,52,53,170,92.5,182.5,445,M,Juniors,SBD,Single-ply
+4,Himadri Shekhar Chakroborty,1997-05-29,ASM,53,53,167.5,92.5,150,410,M,Juniors,SBD,Single-ply
+5,Rajkumar Yadav,1995-08-09,M P,52.4,53,145,87.5,150,382.5,M,Juniors,SBD,Single-ply
+6,Narendra K,1998-02-11,A P,53,53,135,87.5,160,382.5,M,Juniors,SBD,Single-ply
+7,Khushal Patel,2002-02-11,CHAT,52.7,53,125,55,140,320,M,Juniors,SBD,Single-ply
+8,Kamalnath V,1998-01-30,PUD,51.5,53,130,60,110,300,M,Juniors,SBD,Single-ply
+DQ,Irikhomba Elangbam,1994-01-01,MANI,42,53,,,,,M,Juniors,SBD,Single-ply
+DQ,Dishant Choudhary,1998-11-22,H P,51.8,53,,,,,M,Juniors,SBD,Single-ply
+DQ,Deepak Kumar Verma,2000-02-05,U P,53,53,,,,,M,Juniors,SBD,Single-ply
+DQ,Devendra Vyas,2000-08-10,RAJ,53,53,,,,,M,Juniors,SBD,Single-ply
+1,Kannan Vijayan,1994-11-08,KER,58.9,59,265,137.5,220,622.5,M,Juniors,SBD,Single-ply
+2,Sharad Yadav,1995-12-18,MAH,58.2,59,205,105,192.5,502.5,M,Juniors,SBD,Single-ply
+3,J Bhagavath Rao,1995-07-14,CHAT,59,59,190,117.5,185,492.5,M,Juniors,SBD,Single-ply
+4,Yashwanth K,1998-06-30,A P,,59,185,105,182.5,472.5,M,Juniors,SBD,Single-ply
+5,U Praveen Kumar,1996-05-04,A P,58.5,59,175,82.5,210,467.5,M,Juniors,SBD,Single-ply
+6,Sandeep Kumar,1997-10-15,HAR,59,59,140,80,150,370,M,Juniors,SBD,Single-ply
+7,Mohammed Faraque,1995-04-02,MANI,59,59,110,70,130,310,M,Juniors,SBD,Single-ply
+DQ,Santane Banerjee,1996-03-12,W B,56.6,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Raghunandan,2000-07-11,H P,56.6,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Yadnesh V. Raut,1998-08-29,KTK,57.2,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Puviarasan K,1994-04-01,PUD,57.7,59,180,70,,,M,Juniors,SBD,Single-ply
+DQ,Chanchal Gottya,1999-07-06,M P,58.5,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Karthik B,1995-06-28,T N,58.7,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Dev Singh,1996-06-04,UTK,58.7,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Niraj Kr,1998-04-15,BIH,58.9,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Kailash Baruah,1997-06-03,ASM,59,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Manish Kr,1998-04-17,BIH,59,59,,,,,M,Juniors,SBD,Single-ply
+DQ,Dharmendra Yadav,1993-10-01,MAH,58.1,59,230,152.5,207.5,,M,Juniors,SBD,Single-ply
+1,Bibin Joy,1996-03-19,KER,65.1,66,280,160,232.5,672.5,M,Juniors,SBD,Single-ply
+2,Shailendra Sevetiya,1995-02-02,M P,64.9,66,250,150,250,650,M,Juniors,SBD,Single-ply
+3,Tralukya Gogoi,1996-06-18,ASM,65.2,66,267.5,132.5,235,635,M,Juniors,SBD,Single-ply
+4,Sahil Utekar,1996-10-21,MAH,64.5,66,250,130,225,605,M,Juniors,SBD,Single-ply
+5,Swapnil Patil,1995-08-13,MAH,65.4,66,237.5,125,220,582.5,M,Juniors,SBD,Single-ply
+6,Sunny Kr,1994-06-22,BIH,65.6,66,220,152.5,190,562.5,M,Juniors,SBD,Single-ply
+7,Kamalapriyan S,1996-06-27,PUD,66,66,240,112.5,210,562.5,M,Juniors,SBD,Single-ply
+8,Tanish Chaturvedi,1996-10-03,U P,66,66,200,142.5,220,562.5,M,Juniors,SBD,Single-ply
+9,Vithesh Vithesh,1996-12-03,KTK,65.7,66,225,125,210,560,M,Juniors,SBD,Single-ply
+10,Apurba Kumar Das,1999-11-09,ASM,63.7,66,227.5,110,197.5,535,M,Juniors,SBD,Single-ply
+11,D. Praveen Yadav,1994-01-01,TEL,66,66,210,100,225,535,M,Juniors,SBD,Single-ply
+12,Saravan Kumar P,1996-09-03,TEL,65.9,66,205,127.5,200,532.5,M,Juniors,SBD,Single-ply
+13,Shubham Sharma,1996-02-20,J & K,62,66,130,92.5,155,377.5,M,Juniors,SBD,Single-ply
+14,D. Bhavika,2000-02-02,MANI,65.3,66,135,80,160,375,M,Juniors,SBD,Single-ply
+15,M Ronaldo Singh,2000-04-02,MANI,63.7,66,140,70,160,370,M,Juniors,SBD,Single-ply
+16,Rittick Hazra,1999-08-31,W B,64,66,115,70,162.5,347.5,M,Juniors,SBD,Single-ply
+17,Sahil Dhiman,1996-12-04,H P,65,66,87.5,65,140,292.5,M,Juniors,SBD,Single-ply
+DQ,Sudipt Rana,1994-01-01,JHK,65.4,66,210,,,,M,Juniors,SBD,Single-ply
+DQ,Govindasamy B,1994-03-16,T N,65.5,66,265,137.5,,,M,Juniors,SBD,Single-ply
+DQ,Shivam,1996-11-08,BIH,65.8,66,,,,,M,Juniors,SBD,Single-ply
+DQ,Vijendra Kumar,1996-04-07,UTK,66,66,,,,,M,Juniors,SBD,Single-ply
+1,Vinoth Kumar,1996-11-24,T N,74,74,290,145,275,710,M,Juniors,SBD,Single-ply
+2,M Janaki Ram,1994-05-29,TEL,73.1,74,287.5,162.5,250,700,M,Juniors,SBD,Single-ply
+3,Durai K,1996-10-12,T N,73.3,74,295,182.5,220,697.5,M,Juniors,SBD,Single-ply
+4,Ashish,1995-04-16,HAR,73.8,74,275,140,272.5,687.5,M,Juniors,SBD,Single-ply
+5,Kuldeep Dagar,1994-01-01,DEL,73.9,74,255,172.5,257.5,685,M,Juniors,SBD,Single-ply
+6,Jaspal Singh,1997-04-05,UTK,73.2,74,260,145,255,660,M,Juniors,SBD,Single-ply
+7,Balakrishna A,1994-01-01,AP,72.6,74,260,160,230,650,M,Juniors,SBD,Single-ply
+8,Kiran B. Thundil,1994-02-18,KER,73.5,74,290,130,230,650,M,Juniors,SBD,Single-ply
+9,Praveen P,1996-10-05,KER,70.4,74,262.5,130,242.5,635,M,Juniors,SBD,Single-ply
+10,Swaminathan A,1994-03-02,PUD,74,74,260,130,230,620,M,Juniors,SBD,Single-ply
+11,Puneet Kumar,1998-09-28,PUN,74,74,250,130,225,605,M,Juniors,SBD,Single-ply
+12,Dipanshu,1997-01-08,HAR,73,74,220,170,200,590,M,Juniors,SBD,Single-ply
+13,Japjeet Singh,1995-05-14,CHND,72.8,74,212.5,120,240,572.5,M,Juniors,SBD,Single-ply
+14,K Sai Charan,1997-09-14,AP,72.9,74,200,115,210,525,M,Juniors,SBD,Single-ply
+15,Chandan Das,1997-01-14,CHAT,72.1,74,200,110,200,510,M,Juniors,SBD,Single-ply
+16,Sumit Saini,1996-09-07,J&K,73.1,74,150,95,182.5,427.5,M,Juniors,SBD,Single-ply
+17,Akshay Gupta,1996-08-19,J&K,71.2,74,140,102.5,170,412.5,M,Juniors,SBD,Single-ply
+18,Th Suraj Kumar,1999-03-07,MANI,73.3,74,140,110,150,400,M,Juniors,SBD,Single-ply
+19,Th Arun Kumar,1999-06-02,MANI,66.2,74,130,90,165,385,M,Juniors,SBD,Single-ply
+DQ,Mohit Thakur,1999-07-05,HP,67.1,74,92.5,,,,M,Juniors,SBD,Single-ply
+DQ,Yashvardhan Dinde,1997-07-24,MAH,72.15,74,262.5,155,,,M,Juniors,SBD,Single-ply
+DQ,Nagateja M,1995-12-10,TEL,73.2,74,,,,,M,Juniors,SBD,Single-ply
+DQ,Akash Sharma,1999-06-20,RAJ,73.3,74,,,,,M,Juniors,SBD,Single-ply
+DQ,Vivek Kumar Gupta,1995-12-05,BIH,73.9,74,265,165,,,M,Juniors,SBD,Single-ply
+DQ,Sonu,1996-07-10,UP,73.9,74,,,,,M,Juniors,SBD,Single-ply
+1,Thiyagarajan,1994-05-25,TN,81.1,83,302.5,170,290,762.5,M,Juniors,SBD,Single-ply
+2,Lakhveer Singh,1996-01-10,UTK,81.6,83,297.5,162.5,275,735,M,Juniors,SBD,Single-ply
+3,Dilshad Hussain,1996-04-10,UTK,83,83,260,160,310,730,M,Juniors,SBD,Single-ply
+4,Vijay Singh,1995-08-22,HAR,83,83,280,170,260,710,M,Juniors,SBD,Single-ply
+5,Jitender,1995-12-28,HAR,77.1,83,260,180,260,700,M,Juniors,SBD,Single-ply
+6,Vikas Chouhan,1995-07-07,UP,82.8,83,280,155,255,690,M,Juniors,SBD,Single-ply
+7,Mandeep,1994-01-01,DEL,81.4,83,265,145,250,660,M,Juniors,SBD,Single-ply
+8,Ravi Kumar Yadav,1997-07-22,MP,81.7,83,245,160,240,645,M,Juniors,SBD,Single-ply
+9,Gyansuddin Dasdiya,1997-05-15,MAH,77.9,83,230,172.5,240,642.5,M,Juniors,SBD,Single-ply
+10,B. Harish Kumar,1997-06-12,AP,82.1,83,250,140,245,635,M,Juniors,SBD,Single-ply
+11,Manish Dutta,1998-07-01,PUN,82.1,83,270,135,230,635,M,Juniors,SBD,Single-ply
+12,M Chandra Jith,1995-02-06,TEL,81.9,83,267.5,125,240,632.5,M,Juniors,SBD,Single-ply
+13,Sheikh Sharuk Khan,1996-02-01,MANI,83,83,210,100,180,490,M,Juniors,SBD,Single-ply
+14,Prasanthkumar D,1994-09-20,PUD,77.5,83,140,95,175,410,M,Juniors,SBD,Single-ply
+DQ,Vikas Khajuria,1999-01-10,J&K,76.9,83,100,95,,,M,Juniors,SBD,Single-ply
+DQ,Biswajit Dihingia,1996-02-20,ASM,80.9,83,297.5,170,,,M,Juniors,SBD,Single-ply
+DQ,Deepak Joyce,1996-12-27,KER,81.5,83,,,,,M,Juniors,SBD,Single-ply
+DQ,Srinu Kevat,1999-11-11,CHAT,81.6,83,220,120,,,M,Juniors,SBD,Single-ply
+DQ,Sakthivel,1995-06-24,TN,81.75,83,,,,,M,Juniors,SBD,Single-ply
+DQ,Faizan Reza,1997-01-10,WB,82.3,83,215,,,,M,Juniors,SBD,Single-ply
+1,Madyam Singh,1994-04-28,M P,92.5,93,277.5,160,275,712.5,M,Juniors,SBD,Single-ply
+2,R Arun Sai Kumar,1995-05-25,A P,89.1,93,265,142.5,302.5,710,M,Juniors,SBD,Single-ply
+3,Tarun Jangra,1997-09-06,PUN,90,93,270,180,255,705,M,Juniors,SBD,Single-ply
+4,Sachin,1998-04-30,HAR,92.5,93,270,152.5,275,697.5,M,Juniors,SBD,Single-ply
+5,Rishabh Mudliyar,1995-11-17,M P,92.5,93,280,152.5,257.5,690,M,Juniors,SBD,Single-ply
+6,Ulaganathan T,1994-07-26,T N,92.5,93,312.5,167.5,210,690,M,Juniors,SBD,Single-ply
+7,Kuldeep Gurjar,1994-06-12,U P,86.6,93,290,145,245,680,M,Juniors,SBD,Single-ply
+8,Trilok Singh,1996-06-23,UTK,88,93,270,155,250,675,M,Juniors,SBD,Single-ply
+9,Bharath Yadav B,1995-09-16,TEL,91.4,93,260,130,240,630,M,Juniors,SBD,Single-ply
+10,Ibrahim Hassan,1998-11-15,ASM,91,93,215,185,222.5,622.5,M,Juniors,SBD,Single-ply
+11,Krison Barman,1997-10-23,ASM,91.3,93,210,125,240,575,M,Juniors,SBD,Single-ply
+12,Naveen L,1995-10-26,PUD,92.4,93,235,110,210,555,M,Juniors,SBD,Single-ply
+13,Gautam Kumar Jha,1995-11-05,JHK,91.4,93,175,137.5,160,472.5,M,Juniors,SBD,Single-ply
+14,Shankhadip Mondal,2001-04-17,W B,93,93,170,80,202.5,452.5,M,Juniors,SBD,Single-ply
+DQ,Laksay Wadhwal,1996-01-02,J & K,86.5,93,,,,,M,Juniors,SBD,Single-ply
+DQ,Ranajith Paul,1997-08-03,W B,88.5,93,240,150,,,M,Juniors,SBD,Single-ply
+DQ,Prajwal Mahjan,1998-07-29,CHND,89.8,93,185,122.5,,,M,Juniors,SBD,Single-ply
+DQ,Mohan C,1996-05-26,CHAT,90.1,93,302.5,165,,,M,Juniors,SBD,Single-ply
+DQ,Baldev Singh,1996-05-07,UTK,91.2,93,,,,,M,Juniors,SBD,Single-ply
+DQ,Elavarasan T,1996-06-18,T N,92.7,93,,,,,M,Juniors,SBD,Single-ply
+DQ,Kuldeep,1994-01-01,DEL,93,93,,,,,M,Juniors,SBD,Single-ply
+DD,Rakesh Kc,1995-07-25,TEL,91.5,93,282.5,190,240,,M,Juniors,SBD,Single-ply
+1,Raman Mathur,1994-01-01,DEL,102,105,302.5,200,252.5,755,M,Juniors,SBD,Single-ply
+2,Vikas,1994-01-01,DEL,98.5,105,295,187.5,270,752.5,M,Juniors,SBD,Single-ply
+3,Inderjeet Singh,1998-09-25,PUN,104.3,105,290,192.5,260,742.5,M,Juniors,SBD,Single-ply
+4,Hari Narayan Dubey,1994-07-22,U P,104.3,105,310,165,265,740,M,Juniors,SBD,Single-ply
+5,Vishal Khatavkar,1997-04-30,MAH,103.6,105,302.5,165,265,732.5,M,Juniors,SBD,Single-ply
+6,Mahaboobkhan N,1997-07-21,T N,104.2,105,312.5,172.5,240,725,M,Juniors,SBD,Single-ply
+7,Swarn Singh,1995-07-30,UTK,93.2,105,280,150,250,680,M,Juniors,SBD,Single-ply
+8,Viram Singh Dhurve,1996-06-15,CHAT,104,105,240,200,225,665,M,Juniors,SBD,Single-ply
+9,Manoj Kumar Yadav,1995-12-14,TEL,98.8,105,265,157.5,230,652.5,M,Juniors,SBD,Single-ply
+10,Pradyumna Holla,1998-06-19,KTK,99.9,105,272.5,152.5,225,650,M,Juniors,SBD,Single-ply
+11,Jayaganesh J,1996-01-20,PUD,102.1,105,232.5,90,200,522.5,M,Juniors,SBD,Single-ply
+12,Akhil Suman,1998-03-06,A P,100.5,105,200,100,200,500,M,Juniors,SBD,Single-ply
+13,Saurav Dey,1994-01-01,JHK,94.1,105,165,85,175,425,M,Juniors,SBD,Single-ply
+DQ,Utsav Singh Sisodiya,1994-04-06,M P,97.5,105,272.5,172.5,,,M,Juniors,SBD,Single-ply
+DQ,Biswajit Gogoi,1995-12-01,ASM,97.6,105,302.5,197.5,,,M,Juniors,SBD,Single-ply
+DQ,Ravindra Suthar,1997-01-15,RAJ,98.3,105,262.5,,212.5,,M,Juniors,SBD,Single-ply
+DQ,Deepak,1996-12-13,HAR,103.3,105,290,,,,M,Juniors,SBD,Single-ply
+DQ,Navneet Singh,1997-02-15,PUN,104.3,105,,,,,M,Juniors,SBD,Single-ply
+DQ,Mudasar Khan,1995-12-01,UTK,105,105,315,,,,M,Juniors,SBD,Single-ply
+1,Mukesh Tripathi,1995-01-05,M P,116.1,120,337.5,195,260,792.5,M,Juniors,SBD,Single-ply
+2,Sreeraj Ps,1995-11-07,KER,106.6,120,300,175,312.5,787.5,M,Juniors,SBD,Single-ply
+3,Pradeep Sharma,1995-12-20,U P,118.3,120,325,185,277.5,787.5,M,Juniors,SBD,Single-ply
+4,Vivek,1998-06-10,DEL,105.9,120,240,170,240,650,M,Juniors,SBD,Single-ply
+5,S. D. Akbar Salem,1995-01-15,A P,105.8,120,240,115,210,565,M,Juniors,SBD,Single-ply
+6,Ganesh Rathod,1998-09-23,VID,113.7,120,260,105,200,565,M,Juniors,SBD,Single-ply
+7,Rohan Laishram,1998-07-30,MANI,119.7,120,200,110,190,500,M,Juniors,SBD,Single-ply
+8,Ramkumar T,1997-10-29,PUD,112.7,120,140,75,192.5,407.5,M,Juniors,SBD,Single-ply
+DQ,Yogesh,1994-01-01,DEL,106.1,120,270,,,,M,Juniors,SBD,Single-ply
+1,Ashraf Ali Kittur,1997-07-05,KTK,134,120+,365,202.5,305,872.5,M,Juniors,SBD,Single-ply
+2,Gagan Kwatra,1997-09-14,PUN,120.1,120+,330,160,270,760,M,Juniors,SBD,Single-ply
+3,Ankit Khatri,1994-01-01,DEL,132.1,120+,270,195,220,685,M,Juniors,SBD,Single-ply
+4,Nitish Raj E,1994-10-07,PUD,125.7,120+,255,120,210,585,M,Juniors,SBD,Single-ply
+5,Dibyansu Anand,2001-08-08,JHK,121.7,120+,190,97.5,175,462.5,M,Juniors,SBD,Single-ply
+DQ,Deepak Patil,1996-09-29,MAH,120.3,120+,,,,,M,Juniors,SBD,Single-ply
+DQ,Asif Ali B S,1994-07-31,KER,125,120+,340,,,,M,Juniors,SBD,Single-ply
+DQ,Asif Ali Khan,1994-09-06,CHAT,126.1,120+,,,,,M,Juniors,SBD,Single-ply
+DQ,Syed Rabban Quadri,1996-08-21,TEL,127.3,120+,,,,,M,Juniors,SBD,Single-ply
+DQ,Sreenath G,1997-08-04,KER,140.5,120+,310,235,,,M,Juniors,SBD,Single-ply
