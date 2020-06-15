@@ -43,10 +43,10 @@ PROVINCE_URLS = [
     "http://powerlifting.ca/cpu/index.php/prince-edward-island",
     "http://powerlifting.ca/cpu/index.php/quebec",
     "http://powerlifting.ca/cpu/index.php/saskatchewan",
-    "http://powerlifting.ca/cpu/index.php/contests/national-results",
-    "http://powerlifting.ca/cpu/index.php/contests/regional-results/eastern-canadians",
-    "http://powerlifting.ca/cpu/index.php/contests/regional-results/western-canadians",
-    "http://powerlifting.ca/cpu/index.php/contests/regional-results/central-canadians"
+    "http://powerlifting.ca/cpu/index.php/events/national-results",
+    "http://powerlifting.ca/cpu/index.php/events/regional-results/eastern-canadians",
+    "http://powerlifting.ca/cpu/index.php/events/regional-results/western-canadians",
+    "http://powerlifting.ca/cpu/index.php/events/regional-results/central-canadians"
 ]
 
 
