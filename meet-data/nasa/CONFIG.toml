@@ -22,7 +22,7 @@
     nov = {name="nov", min=0, max=999, sex='M'}
     pf = {name="p+f", min=0, max=999, sex='M'}
     pure = {name="pure", min=0, max=999, sex='M'}
-    smp = {name="smp", min=40, max=999, sex='M'} # Submasters Pure?   
+    smp = {name="smp", min=30, max=39, sex='M'} # Submasters Pure?   
     mp = {name="mp", min=40, max=999, sex='M'} # Masters Pure?
     so = {name="so", min=0, max=999, sex='M'} # Special olympics
     hc = {name="hc", min=0, max=999, sex='M'} # Handicapped
