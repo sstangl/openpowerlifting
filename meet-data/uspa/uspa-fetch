@@ -245,7 +245,11 @@ def writemeetcsv(meet):
     country = 'USA'
     name = meet.name.replace(',', '')
 
-    (town, state) = [x.strip() for x in meet.location.split(',')]
+    town = ""
+    state = ""
+    if meet.location.count(',') == 1:
+        (town, state) = [x.strip() for x in meet.location.split(',')]
+
     if len(state) > 2:
         if state == 'Canada':
             country = 'Canada'
