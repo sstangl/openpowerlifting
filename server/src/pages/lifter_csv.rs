@@ -56,6 +56,7 @@ fn make_export_row<'a>(
         date: meet.date,
         meet_country: meet.country,
         meet_state: meet.state.clone(),
+        meet_town: meet.town.as_deref(),
         meet_name: &meet.name,
     }
 }
