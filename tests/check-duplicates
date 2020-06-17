@@ -80,7 +80,7 @@ def check_duplicates(entriespath, meetpath):
 
     for row in entriescsv.rows:
         name = row[nameidx]
-        if name == '' :
+        if name == '':
             name = row[jpidx]
 
         total = row[totalidx]
