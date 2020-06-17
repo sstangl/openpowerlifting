@@ -75,9 +75,14 @@ def check_duplicates(entriespath, meetpath):
     nameidx = entriescsv.index('Name')
     totalidx = entriescsv.index('TotalKg')
     eventidx = entriescsv.index('Event')
+    if 'JapaneseName' in entriescsv.fieldnames:
+        jpidx = entriescsv.index('JapaneseName')
 
     for row in entriescsv.rows:
         name = row[nameidx]
+        if name == '' :
+            name = row[jpidx]
+
         total = row[totalidx]
         event = row[eventidx]
 
