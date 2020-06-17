@@ -48,6 +48,8 @@ pub enum Language {
     pl,
     /// Portuguese.
     pt,
+    /// Slovak.
+    sk,
     /// Slovenian.
     sl,
     /// Serbian,
@@ -95,6 +97,7 @@ impl fmt::Display for Language {
                 Language::nl => "nl",
                 Language::pl => "pl",
                 Language::pt => "pt",
+                Language::sk => "sk",
                 Language::sl => "sl",
                 Language::sr => "sr",
                 Language::sv => "sv",
@@ -660,6 +663,7 @@ pub struct LangInfo {
     nl: Option<Translations>,
     pl: Option<Translations>,
     pt: Option<Translations>,
+    sk: Option<Translations>,
     sl: Option<Translations>,
     sr: Option<Translations>,
     sv: Option<Translations>,
@@ -702,6 +706,7 @@ impl LangInfo {
             Language::nl => self.nl = trans,
             Language::pl => self.pl = trans,
             Language::pt => self.pt = trans,
+            Language::sk => self.sk = trans,
             Language::sl => self.sl = trans,
             Language::sr => self.sr = trans,
             Language::sv => self.sv = trans,
@@ -735,6 +740,7 @@ impl LangInfo {
             Language::nl => self.nl.as_ref().unwrap(),
             Language::pl => self.pl.as_ref().unwrap(),
             Language::pt => self.pt.as_ref().unwrap(),
+            Language::sk => self.sk.as_ref().unwrap(),
             Language::sl => self.sl.as_ref().unwrap(),
             Language::sr => self.sr.as_ref().unwrap(),
             Language::sv => self.sv.as_ref().unwrap(),
@@ -997,6 +1003,7 @@ impl Language {
             Language::nl => NumberFormat::ArabicComma,
             Language::pl => NumberFormat::ArabicComma,
             Language::pt => NumberFormat::ArabicComma,
+            Language::sk => NumberFormat::ArabicComma,
             Language::sl => NumberFormat::ArabicComma,
             Language::sr => NumberFormat::ArabicComma,
             Language::sv => NumberFormat::ArabicComma,

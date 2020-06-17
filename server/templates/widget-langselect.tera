@@ -14,6 +14,7 @@
   <option value="pl" {% if language == "pl" %}selected{% endif %}>Polski</option>
   <option value="pt" {% if language == "pt" %}selected{% endif %}>Português</option>
   <option value="ru" {% if language == "ru" %}selected{% endif %}>Русский</option>
+  <option value="sk" {% if language == "sk" %}selected{% endif %}>Slovenčina</option>
   <option value="sl" {% if language == "sl" %}selected{% endif %}>Slovenščina</option>
   <option value="sr" {% if language == "sr" %}selected{% endif %}>Srpski</option>
   <option value="fi" {% if language == "fi" %}selected{% endif %}>Suomi</option>
