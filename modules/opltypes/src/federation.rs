@@ -229,7 +229,11 @@ pub enum Federation {
     #[strum(to_string = "CPC", serialize = "cpc")]
     CPC,
 
-    /// Canadian Powerlifting Federation, WPF.
+    /// Canadian Powerlifting Federation, GPA/IPO.
+    ///
+    /// * 2020-06-17: the CPF dropped their WPC affiliation over WPC's continued
+    ///   acceptance of Metal gear despite the Metal owner's racism.
+    ///
     #[strum(to_string = "CPF", serialize = "cpf")]
     CPF,
 
@@ -1940,7 +1944,7 @@ impl Federation {
             Federation::CONBRAP => Some(Federation::GPC),
             Federation::CPA => Some(Federation::WPA),
             Federation::CPC => Some(Federation::WPC),
-            Federation::CPF => Some(Federation::WPF),
+            Federation::CPF => Some(Federation::GPA),
             Federation::CPL => Some(Federation::IPL),
             Federation::CPO => Some(Federation::WPC),
             Federation::CPU => Some(Federation::IPF),
