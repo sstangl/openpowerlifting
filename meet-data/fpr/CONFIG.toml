@@ -13,6 +13,7 @@
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
     paralympics = {name = "Paralympics",min=0,max=999}
+    paralympic_jr = {name = "Paralympic Juniors",min=0,max=22.5}
     youth = {name = "Youth", min=5, max=16}
 
 [weightclasses.default_M]
@@ -191,11 +192,11 @@
     1621 = ["ExemptWeightClassConsistency"] # Youth Classes
     1705 = ["ExemptWeightClassConsistency"]
     1804 = ["ExemptWeightClassConsistency"]
+    1920 = ["ExemptWeightClassConsistency"] # Masters have no weight class
     1922 = ["ExemptWeightClassConsistency"]
     1919 = ["ExemptWeightClassConsistency"]
     1924 = ["ExemptWeightClassConsistency"]
     1937 = ["ExemptWeightClassConsistency"]
     1956 = ["ExemptWeightClassConsistency"]
     1961 = ["ExemptWeightClassConsistency"] # Masters have no weight class
-    1962 = ["ExemptWeightClassConsistency"] # Masters have no weight class
     1813 = ["ExemptWeightClassConsistency"] # 53s in Open
