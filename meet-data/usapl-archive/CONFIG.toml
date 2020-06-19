@@ -272,11 +272,17 @@
     date_range = ["0000-01-01","2014-12-31"]
     sex = "F"
 
+[weightclasses.old_youth_F]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2014-12-31"]
+    sex = "F"
+    divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
+
 [exemptions]
     LA-2010-01-16 = ["ExemptWeightClassConsistency"] #LW,MW,HW for women
     NS-1997-04-26 = ["ExemptWeightClassConsistency"] #Uses ADFPA weightclasses
     WA-2013-02-23 = ["ExemptWeightClassConsistency"] #New weightclasses
-    OH-2015-03-08 = ["ExemptWeightClassConsistency"] #New weightclasses
+    OH-2015-03-08 = ["ExemptWeightClassConsistency"] #New weightclassesw
     NS-2013-06-24 = ["ExemptWeightClassConsistency"] #New weightclasses
     NS-2012-06-22 = ["ExemptWeightClassConsistency"] #New weightclasses
     NS-2011-09-02 = ["ExemptWeightClassConsistency"] #New weightclasses
@@ -290,6 +296,7 @@
     MS-2014-12-13 = ["ExemptWeightClassConsistency"] #New weightclasses
     NS-2003-07-19 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     NS-2002-11-02 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+    NS-2007-02-16 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     NS-2010-06-20 = ["ExemptWeightClassConsistency","ExemptDivision"] #Missing weightclasses, Bryce Lewis was Raw but in the equipped division.
     NS-2001-08-26 = ["ExemptWeightClassConsistency"] #Has 140 & 140+
     NS-1998-12-05 = ["ExemptWeightClassConsistency"] #Missing weightclasses & 140kg class
@@ -301,3 +308,4 @@
     SD-2001-03-03 = ["ExemptWeightClassConsistency"] #Has 145 & 145+
     MI-2001-02-10-A = ["ExemptWeightClassConsistency"] #Has 145 & 145+
     MI-2001-02-10-B = ["ExemptWeightClassConsistency"] #Has 145
+    TX-2012-11-03 = ["ExemptWeightClassConsistency"] #Youth that could be in 35kg class is in 44

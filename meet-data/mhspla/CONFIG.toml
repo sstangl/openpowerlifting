@@ -1,7 +1,7 @@
 [divisions]
-    jv = {name="Junior Varsity", min=13, max=19, equipment="Raw"}
-    v = {name="Varsity", min=13, max=19, equipment="Raw"}
-    o = {name="Open", min=13, max=19, equipment="Raw"}
+    jv = {name="Junior Varsity", min=13, max=19}
+    v = {name="Varsity", min=13, max=19}
+    o = {name="Open", min=13, max=19}
 
 # MHPLA uses pounds classes with exact pound values.
 [weightclasses.default_M]
@@ -13,5 +13,7 @@
     date_range=["0000-01-01","9999-01-01"]
     sex = "F"
 [exemptions]
+    0501 = ["ExemptWeightClassConsistency"]
+    0601 = ["ExemptWeightClassConsistency"]
     1501 = ["ExemptWeightClassConsistency"]
     1601 = ["ExemptWeightClassConsistency"]
