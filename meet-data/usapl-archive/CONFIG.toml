@@ -220,6 +220,12 @@
     mnov = {name="M-Nov", min=0, max=999, sex="M", equipment="Single-ply"}
     fnov = {name="F-Nov", min=0, max=999, sex="F", equipment="Single-ply"}
 
+    # Blind
+    mrblind = {name="MR-Blind", min=0, max=999, sex="M", equipment="Raw"}
+    frblind = {name="FR-Blind", min=0, max=999, sex="F", equipment="Raw"}
+    mblind = {name="M-Blind", min=0, max=999, sex="M", equipment="Single-ply"}
+    fblind = {name="F-Blind", min=0, max=999, sex="F", equipment="Single-ply"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2015-01-01","9999-01-01"]
