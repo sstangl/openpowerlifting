@@ -1,31 +1,52 @@
-Place,Sex,Name,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear
-1,M,Jim Campell,B,MR-M1b,125,Raw,124.4,,175,,175,
-1,M,Scott Danberg,B,MR-M2a,60,Raw,59.3,,120,,120,1962
-1,M,Sonny Russell,B,MR-M2b,82.5,Raw,79.5,,135,,135,1955
-1,M,Logan Morrison,SBD,MR-T1,82.5,Raw,80.7,120,77.5,130,327.5,1999
-1,M,Nick Loiacano,SBD,MR-T3,125+,Raw,133,190,75,215,480,1996
-1,M,Jonathan Romanes,SBD,MR-Jr,67.5,Raw,65.6,150,125,200,475,1991
-2,M,Justin Romanes,SBD,MR-Jr,67.5,Raw,65.4,152.5,127.5,192.5,472.5,1991
-1,M,Eric Martinez,SBD,MR-Jr,75,Raw,70.9,25,102.5,175,302.5,1990
-1,M,Jason Yontef,SBD,MR-Jr,82.5,Raw,82.4,177.5,97.5,187.5,462.5,1994
-1,M,Greg Phelps,SBD,MR-Jr,90,Raw,85.8,227.5,150,280,657.5,
-2,M,Elliott Flignor,BD,MR-Jr,90,Raw,86.7,,107.5,165,272.5,1992
-1,M,Justin Stine,SBD,MR-Jr,125+,Raw,153.4,270,197.5,295,762.5,1992
-1,M,Benjamin Giddens,SBD,MR-O,75,Raw,70.6,150,112.5,180,442.5,1989
-1,M,Tom Gormely,SBD,MR-O,90,Raw,88.3,217.5,145,242.5,605,
-2,M,Lee Cessna,SBD,MR-O,90,Raw,87.1,165,125,205,495,1987
-1,M,Robbie Dixon,SBD,MR-O,110,Raw,109.2,147.5,77.5,155,380,1988
-1,M,Ken Morris,SBD,MR-O,125+,Raw,131.2,272.5,205,300,777.5,1985
-1,M,Brian Morrison,SBD,MR-M1a,82.5,Raw,77.9,172.5,130,197.5,500,1973
-2,M,Jason Logan,SD,MR-M1a,82.5,Raw,78.1,172.5,,202.5,375,1972
-1,M,Marvin Wheeler,SBD,MR-M2a,82.5,Raw,80.4,140,80,115,335,1963
-1,M,Gary Levenson,SBD,MR-M2a,90,Raw,84.8,172.5,120,205,497.5,1964
-1,M,Michael Bitting,SBD,MR-M2b,110,Raw,108.3,180,140,200,520,1956
-1,F,Maria Yannie,SBD,FR-O,52,Raw,49.8,87.5,47.5,120,255,1981
-1,F,Ashley Porter,SBD,FR-O,56,Raw,54.4,100,50,137.5,287.5,1987
-1,F,Sara Flanagan,SBD,FR-O,67.5,Raw,64.5,120,57.5,157.5,335,1988
-2,F,Nicole Hastings,SBD,FR-O,67.5,Raw,62.1,110,62.5,117.5,290,1986
-1,F,Ann Marie Casey,SBD,FR-O,75,Raw,71.1,90,45,110,245,
-1,F,Marrietta B. Roberts,SBD,FR-M4a,75,Raw,68.8,47.5,40,85,172.5,
-1,M,Jordan Hagopian,BD,MR-O,125,Raw,119.7,,112.5,227.5,340,1989
-1,F,Helen Hankerson,BD,F-M3a,82.5,Single-ply,80.4,,105,157.5,262.5,1953
+Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BirthYear,Team,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Age,BirthDate
+1,Cheryl Edelstein,F,D,F-O,52,Single-ply,1975,MN,47.7,,,,,150,160,-165,160,160,,
+1,Sebrina Davis,F,D,F-O,84,Single-ply,1970,TX,76.1,,,,,217.5,-235,-237.5,217.5,217.5,,
+1,Marcia Darbouze,F,D,FR-O,84+,Raw,1969,FL,86,,,,,180,197.5,-200,197.5,197.5,,
+1,Mitchell Edelstein,M,D,M-M2,93,Single-ply,1962,MN,90,,,,,227.5,255,260,260,260,,
+1,Eric Pauli,M,D,M-M2,120+,Single-ply,1959,FL,123,,,,,200,205,210,210,210,,
+1,Bryan Dermody,M,D,M-O,120,Single-ply,1979,IA,117.2,,,,,325,345,355,355,355,,
+1,Doug Harney,M,D,MR-M1,83,Raw,1962,FL,81.8,,,,,205,215,-227.5,215,215,,
+1,Deron Rogers,M,D,MR-M1,120,Raw,1965,TN,107.7,,,,,280,-295,,280,280,,
+2,James Dundon,M,D,MR-M1,120,Raw,1965,FL,105.8,,,,,210,225,235,235,235,,
+1,William Hennessey,M,D,MR-M2,74,Raw,1963,FL,69,,,,,125,137.5,-140,137.5,137.5,,
+2,Gary Nishizaki,M,D,MR-M2,74,Raw,1959,FL,73.1,,,,,117.5,125,132.5,132.5,132.5,,
+1,Doug Harney,M,D,MR-M2,83,Raw,1962,FL,81.8,,,,,205,215,-227.5,215,215,,
+1,Tyler Mohamed,M,D,MR-O,66,Raw,,FL,61.1,,,,,227.5,-235,-235,227.5,227.5,,
+2,Bliss Chang,M,D,MR-O,66,Raw,1993,,65.5,,,,,172.5,190,200,200,200,,
+1,Kyle Jones,M,D,MR-O,93,Raw,1989,FL,88,,,,,205,215,227.5,227.5,227.5,,
+1,Mike Hedlesky,M,D,MR-O,120,Raw,1969,MD,115.9,,,,,317.5,342.5,-355,342.5,342.5,,
+1,Jonathan Mayes,M,D,MR-O,120+,Raw,1984,FL,127.5,,,,,182.5,217.5,-240,217.5,217.5,,
+1,Ethen Norton,M,D,MR-PF,120,Raw,1982,FL,109.3,,,,,185,217.5,-240,217.5,217.5,,
+1,Roman Fronzaglia,M,D,MR-T1,59,Raw,1995,FL,57.5,,,,,140,150,160,160,160,,
+1,Peters Cao,M,D,M-T1,66,Single-ply,,FL,64.4,,,,,125,130,137.5,137.5,137.5,,
+1,Michael Megler,M,D,M-T1,74,Single-ply,1998,FL,70.3,,,,,165,175,185,185,185,,
+1,Alejandro Ruiz,M,D,M-T1,105,Single-ply,1999,FL,95.7,,,,,200,-205,,200,200,,
+1,Neil Blake,M,D,M-T2,66,Single-ply,1997,FL,64.4,,,,,180,195,-200,195,195,,
+1,Hao Yang Sun,M,D,M-T2,120,Single-ply,,FL,118.6,,,,,175,190,200,200,200,,
+1,Mylene Silva,F,BD,FR-O,57,Raw,1984,FL,57,82.5,-90,-90,82.5,130,-140,-140,130,212.5,,
+1,Juan Pablo Acosta,M,BD,M-Jr,74,Single-ply,,FL,66.2,-107.5,107.5,-125,107.5,137.5,-142.5,142.5,142.5,250,,
+1,Brian Highnote,M,BD,M-M1,93,Single-ply,1973,FL,88.4,170,182.5,-187.5,182.5,250,265,-275,265,447.5,,
+1,Eric Pauli,M,BD,M-M2,120+,Single-ply,1959,FL,123,175,182.5,187.5,187.5,200,205,210,210,397.5,,
+1,Steve Ritucci,M,BD,M-O,83,Single-ply,,FL,74.3,160,-172.5,172.5,172.5,220,-232.5,-232.5,220,392.5,,
+1,Brian Highnote,M,BD,M-O,93,Single-ply,1973,FL,88.4,170,182.5,-187.5,182.5,250,265,-275,265,447.5,,
+1,Donald Lynn,M,BD,M-O,120,Single-ply,1994,FL,107,132.5,142.5,150,150,245,265,-272.5,265,415,,
+1,Morgan Mann,M,BD,M-O,120+,Single-ply,1983,FL,121.2,-217.5,217.5,232.5,232.5,245,265,-275,265,497.5,,
+1,Bliss Chang,M,BD,MR-Jr,66,Raw,1993,,65.5,102.5,-110,110,110,172.5,190,200,200,310,,
+1,Brian Morrison,M,BD,MR-M1,83,Raw,1973,FL,78.4,115,127.5,-135,127.5,175,195,202.5,202.5,330,,
+1,William Hennessey,M,BD,MR-M2,74,Raw,1963,FL,69,82.5,87.5,90,90,125,137.5,-140,137.5,227.5,,
+2,Gary Nishizaki,M,BD,MR-M2,74,Raw,1959,FL,73.1,80,85,90,90,117.5,125,132.5,132.5,222.5,,
+1,Marvin Wheeler,M,BD,MR-M2,83,Raw,1963,FL,80.7,85,90,92.5,92.5,140,150,162.5,162.5,255,,
+1,Romeo Lavarias,M,BD,MR-M2,105,Raw,1964,FL,97,102.5,107.5,112.5,112.5,102.5,115,137.5,137.5,250,,
+1,Bliss Chang,M,BD,MR-O,66,Raw,1993,,65.5,102.5,-110,110,110,172.5,190,200,200,310,,
+1,Arian Khamesi,M,BD,MR-O,93,Raw,1988,FL,92.1,127.5,135,142.5,142.5,227.5,242.5,255,255,397.5,,
+2,Kyle Jones,M,BD,MR-O,93,Raw,1989,TX,88,125,137.5,-147.5,137.5,205,215,227.5,227.5,365,,
+1,John Tong,M,BD,MR-O,105,Raw,1982,FL,99.9,100,115,130,130,182.5,225,255,255,385,,
+2,Danny J. Pate,M,BD,MR-O,105,Raw,,FL,97.1,125,-137.5,-137.5,125,245,-255,-255,245,370,,
+1,Mike Hedlesky,M,BD,MR-O,120,Raw,1969,MD,115.9,175,187.5,-192.5,187.5,317.5,342.5,-355,342.5,530,,
+1,Logan Morrison,M,BD,MR-T1,83,Raw,1999,FL,80.8,65,72.5,-82.5,72.5,102.5,117.5,137.5,137.5,210,,
+1,Peters Cao,M,BD,M-T1,66,Single-ply,,FL,64.4,67.5,-72.5,-72.5,67.5,125,130,137.5,137.5,205,,
+1,Michael Megler,M,BD,M-T1,74,Single-ply,1998,FL,70.3,80,92.5,97.5,97.5,165,175,185,185,282.5,,
+1,Alejandro Ruiz,M,BD,M-T1,105,Single-ply,1999,FL,95.7,115,120,125,125,200,-205,,200,325,,
+1,Neil Blake,M,BD,M-T2,66,Single-ply,1997,FL,64.4,72.5,75,77.5,77.5,180,195,-200,195,272.5,,
+1,Hao Yang Sun,M,BD,M-T2,120,Single-ply,,FL,118.6,-137.5,147.5,-152.5,147.5,175,190,200,200,347.5,,
+1,Spencer Stokes,M,BD,M-T3,120+,Single-ply,1996,WI,148.5,192.5,200,-227.5,200,220,227.5,-272.5,227.5,427.5,,
