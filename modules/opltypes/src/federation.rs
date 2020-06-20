@@ -775,7 +775,10 @@ pub enum Federation {
     #[strum(to_string = "RAW-Iceland", serialize = "raw-iceland")]
     RAWIceland,
 
-    /// Raw Iron Powerlifting League, an independent tested Texas federation.
+    /// Raw Iron Powerlifting League, an independent Texas federation.
+    ///
+    /// * On 2020-06-20, they switched from tested to untested.
+    ///
     #[strum(to_string = "RawIronPL", serialize = "rawironpl")]
     RawIronPL,
 
@@ -1280,7 +1283,7 @@ pub enum Federation {
 
 impl Federation {
     /// True iff every division in the federation is drug-tested.
-    pub fn is_fully_tested(self) -> bool {
+    pub fn is_fully_tested(self, date: Date) -> bool {
         const FULLY_TESTED: bool = true;
 
         match self {
@@ -1460,7 +1463,14 @@ impl Federation {
             Federation::RAW => FULLY_TESTED,
             Federation::RAWCAN => FULLY_TESTED,
             Federation::RAWIceland => false,
-            Federation::RawIronPL => FULLY_TESTED,
+            Federation::RawIronPL => {
+                // RawIronPL switched to untested in 2020.
+                if date >= Date::from_parts(2020, 06, 20) {
+                    false
+                } else {
+                    FULLY_TESTED
+                }
+            }
             Federation::RAWUKR => FULLY_TESTED,
             Federation::RAWU => false,
             Federation::RhinoPC => false,

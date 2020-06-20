@@ -2213,7 +2213,7 @@ where
         // Set the Tested column early for federations that are fully-Tested.
         // This allows check_column_tested() to override it later if needed.
         if let Some(meet) = meet {
-            entry.tested = meet.federation.is_fully_tested();
+            entry.tested = meet.federation.is_fully_tested(meet.date);
         }
 
         // Check optional fields.

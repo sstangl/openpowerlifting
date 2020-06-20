@@ -465,7 +465,7 @@ impl MetaFederation {
             MetaFederation::FullyTested => {
                 // Still check entry.tested: some fully-tested federations
                 // existed before drug-testing was available.
-                entry.tested && meet.federation.is_fully_tested()
+                entry.tested && meet.federation.is_fully_tested(meet.date)
             }
             MetaFederation::AllTested => entry.tested,
             MetaFederation::AllArgentina => is_from(Country::Argentina, entry, meet),
