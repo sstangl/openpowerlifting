@@ -55,7 +55,10 @@ def main():
         if m not in known:
             count += 1
             if not summarize:
-                print(color('[USAPL Archive] ') + m)
+                try:
+                    print(color('[USAPL Archive] ') + m)
+                except BrokenPipeError:
+                    return
 
     if count > 0:
         print(color('[USAPL Archive] ') + "%d meets remaining." % count)
