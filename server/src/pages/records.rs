@@ -722,7 +722,7 @@ impl<'db> Context<'db> {
 
         Context {
             urlprefix: "/",
-            page_title: "Powerlifting Records",
+            page_title: &locale.strings.page_titles.records,
             page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,

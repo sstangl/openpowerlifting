@@ -399,6 +399,13 @@ pub struct CountryTranslations {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct PageTitleTranslations {
+    pub rankings: String,
+    pub records: String,
+    pub meets: String,
+}
+
+#[derive(Serialize, Deserialize)]
 pub struct HTMLHeaderTranslations {
     pub description: String,
 }
@@ -633,6 +640,7 @@ pub struct Translations {
     pub units: UnitsTranslations,
     pub equipment: EquipmentTranslations,
     pub sex: SexTranslations,
+    pub page_titles: PageTitleTranslations,
     pub header: HeaderTranslations,
     pub html_header: HTMLHeaderTranslations,
     pub columns: ColumnTranslations,

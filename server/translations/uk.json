@@ -20,6 +20,11 @@
         "html_header": {
                 "description": "Проект OpenPowerlifting займається створенням постійної, точної, надійної та доступної бази данних світового пауерліфтінгу"
         },
+		"page_titles": {
+			"rankings": "Powerlifting Rankings",
+			"records": "Powerlifting Records",
+			"meets": "Powerlifting Competitions"
+		},
         "header": {
                 "rankings": "Ренкінг",
                 "records": "Рекорди",

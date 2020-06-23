@@ -78,9 +78,6 @@ pub fn index(
         pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
-    // FIXME: Hack for launch day.
-    cx.page_title = format!("IPF {}", locale.strings.header.rankings);
-
     Some(match device {
         Device::Desktop => Template::render("openipf/desktop/rankings", &cx),
         Device::Mobile => Template::render("openipf/mobile/rankings", &cx),
@@ -110,9 +107,6 @@ pub fn rankings(
     let mut cx =
         pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
-
-    // FIXME: Hack for launch day.
-    cx.page_title = format!("IPF {}", locale.strings.header.rankings);
 
     Some(match device {
         Device::Desktop => Template::render("openipf/desktop/rankings", &cx),

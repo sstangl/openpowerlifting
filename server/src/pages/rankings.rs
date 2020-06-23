@@ -52,7 +52,7 @@ pub struct Context<'db, 'a> {
     /// For local development of OpenIPF.org, the prefix is "/dist/openipf/".
     pub urlprefix: &'static str,
 
-    pub page_title: String,
+    pub page_title: &'a str,
     pub page_description: &'a str,
     pub language: Language,
     pub strings: &'db langpack::Translations,
@@ -87,7 +87,7 @@ impl<'db, 'a> Context<'db, 'a> {
 
         Some(Context {
             urlprefix: "/",
-            page_title: "Rankings".to_string(),
+            page_title: &locale.strings.page_titles.rankings,
             page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
