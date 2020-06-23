@@ -22,6 +22,8 @@
     nov = {name="nov", min=0, max=999, sex='M'}
     pf = {name="p+f", min=0, max=999, sex='M'}
     pure = {name="pure", min=0, max=999, sex='M'}
+    nat = {name="nat", min=0, max=999, sex='M'}
+    pn = {name="pn", min=0, max=999, sex='M'} #Pure novice
     smp = {name="smp", min=30, max=39, sex='M'} # Submasters Pure?   
     mp = {name="mp", min=40, max=999, sex='M'} # Masters Pure?
     so = {name="so", min=0, max=999, sex='M'} # Special olympics
@@ -45,6 +47,8 @@
     wnov = {name="wnov", min=0, max=999, sex='F'}
     wpf = {name="wp+f", min=0, max=999, sex='F'}
     wpure = {name="wpure", min=0, max=999, sex='F'}
+    wpn = {name="wpn", min=0, max=999, sex='F'}
+    wnat = {name="wnat", min=0, max=999, sex='F'}
     wsmp = {name="wsmp", min=40, max=999, sex='F'} # Submasters Pure?
     wmp = {name="wmp", min=40, max=999, sex='F'} # Masters Pure?
     wso = {name="wso", min=0, max=999, sex='F'} # Special olympics
@@ -67,12 +71,14 @@
     bpnov = {name="bpnov", min=0, max=999, sex='M'}
     bppf = {name="bpp+f", min=0, max=999, sex='M'}
     bppure = {name="bppure", min=0, max=999, sex='M'}
+    bpnat = {name="bpnat", min=0, max=999, sex='M'}
     bpsmp = {name="bpsmp", min=40, max=999, sex='M'} # Submasters Pure?   
     bpmp = {name="bpmp", min=40, max=999, sex='M'} # Masters Pure?
     bpso = {name="bpso", min=0, max=999, sex='M'} # Special olympics
     bphc = {name="bphc", min=0, max=999, sex='M'} # Handicapped
 
     wbpopen = {name="wbpopen", min=0, max=999, sex='F'}
+    wbpyouth = {name="wbpyouth", min=5, max=12, sex='F'}
     wbphs = {name="wbphs", min=13, max=19, sex='F'}
     wbpteen = {name="wbpteen", min=13, max=19, sex='F'}
     wbpjr = {name="wbpjr", min=20, max=23, sex='F'}
@@ -224,14 +230,17 @@
     classes = ["40", "44", "48", "52", "56", "60", "67.5", "75", "82.5", "90", "100", "110", "125", "140", "140+"]
     date_range = ["1900-01-01", "9999-01-01"]
     sex = "M"
-    divisions = ["youth", "bpyouth"]
+    divisions = ["youth", "bpyouth", "dlyouth"]
 
 [weightclasses.youth_F]
     classes = ["40", "44", "48", "52", "56", "60", "67.5", "75", "82.5", "90", "90+"]
     date_range = ["1900-01-01", "9999-01-01"]
     sex = "F"
-    divisions = ["wyouth"]
+    divisions = ["wyouth", "wbpyouth"]
 
 [exemptions]
+    9801 = ["ExemptWeightClassConsistency"]  # Old weightclasses
+    9802 = ["ExemptWeightClassConsistency"]  # Old weightclasses
+    9803 = ["ExemptWeightClassConsistency"]  # Old weightclasses
     0301 = ["ExemptWeightClassConsistency"]  # Uses strange weightclasses.
     0904 = ["ExemptDivision"]  # Non-standard divisions.
