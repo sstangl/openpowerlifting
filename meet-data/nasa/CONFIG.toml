@@ -72,6 +72,7 @@
     bppf = {name="bpp+f", min=0, max=999, sex='M'}
     bppure = {name="bppure", min=0, max=999, sex='M'}
     bpnat = {name="bpnat", min=0, max=999, sex='M'}
+    bppn = {name="bppn", min=0, max=999, sex='M'} #Pure novice
     bpsmp = {name="bpsmp", min=40, max=999, sex='M'} # Submasters Pure?   
     bpmp = {name="bpmp", min=40, max=999, sex='M'} # Masters Pure?
     bpso = {name="bpso", min=0, max=999, sex='M'} # Special olympics
@@ -113,6 +114,7 @@
     dlnov = {name="dlnov", min=0, max=999, sex='M'}
     dlpf = {name="dlp+f", min=0, max=999, sex='M'}
     dlpure = {name="dlpure", min=0, max=999, sex='M'}
+    dlnat = {name="dlnat", min=0, max=999, sex='M'} # Natural
     dlsmp = {name="dlsmp", min=40, max=999, sex='M'} # Submasters Pure?   
     dlmp = {name="dlmp", min=40, max=999, sex='M'} # Masters Pure?
 
@@ -239,8 +241,13 @@
     divisions = ["wyouth", "wbpyouth"]
 
 [exemptions]
+    9701 = ["ExemptWeightClassConsistency"]  # Old weightclasses
+    9702 = ["ExemptWeightClassConsistency"]  # Old weightclasses
+    9703 = ["ExemptWeightClassConsistency"]  # Old weightclasses
     9801 = ["ExemptWeightClassConsistency"]  # Old weightclasses
     9802 = ["ExemptWeightClassConsistency"]  # Old weightclasses
     9803 = ["ExemptWeightClassConsistency"]  # Old weightclasses
-    0301 = ["ExemptWeightClassConsistency"]  # Uses strange weightclasses.
+    9804 = ["ExemptWeightClassConsistency"]  # Old weightclasses
+    0301 = ["ExemptWeightClassConsistency"]  # Old weightclasses
     0904 = ["ExemptDivision"]  # Non-standard divisions.
+    1005 = ["ExemptDivision"]  # LW, HW
